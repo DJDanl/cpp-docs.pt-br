@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - applications [MFC], managing
 ms.assetid: b72f4154-24db-4e75-bca3-6873e2459c15
-ms.openlocfilehash: 9d5216cd399943cda67bc9387ea37c938e5cab48
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: c1e742d3320dae4140cc4886c47d34dbe9b6071f
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694323"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178337"
 ---
 # <a name="application-information-and-management"></a>Informações e gerenciamento do aplicativo
 
@@ -164,7 +164,7 @@ Exclui o objeto de thread da memória.
 
 Deve ser chamado de dentro do thread ser encerrada.
 
-Para obter mais informações sobre `AfxEndThread`, consulte o artigo [Multithreading: encerrando Threads](../../parallel/multithreading-terminating-threads.md).
+Para obter mais informações sobre `AfxEndThread`, consulte o artigo [Multithreading: Encerrando Threads](../../parallel/multithreading-terminating-threads.md).
 
 ### <a name="requirements"></a>Requisitos
 
@@ -567,9 +567,9 @@ Se não for especificado um caminho e a extensão de nome de arquivo for omitida
 
 - O diretório atual.
 
-- **Windows 95 98:** o diretório de sistema do Windows. **Windows NT:** o diretório de sistema do Windows de 32 bits. O nome desse diretório é SYSTEM32.
+- **Windows 95 98:** O diretório de sistema do Windows. **Windows NT:** O diretório de sistema do Windows 32 bits. O nome desse diretório é SYSTEM32.
 
-- **Somente para o Windows NT:** diretório de sistema do Windows a 16 bits. Não há nenhuma função do Win32 que obtém o caminho desse diretório, mas ele é pesquisado. O nome desse diretório é o sistema.
+- **Somente Windows NT:** O diretório de sistema do Windows de 16 bits. Não há nenhuma função do Win32 que obtém o caminho desse diretório, mas ele é pesquisado. O nome desse diretório é o sistema.
 
 - O diretório do Windows.
 
@@ -715,7 +715,7 @@ O nome registrado para uma classe por `AfxRegisterWndClass` depende exclusivamen
 
 Se você chamar `AfxRegisterWndClass` para várias classes derivadas de CWnd com parâmetros idênticos, em vez de obter uma classe de janela separada para cada classe, cada classe compartilha a mesma classe de janela. Isso pode causar problemas se o estilo de classe CS_CLASSDC é usado. Em vez de várias classes de janela CS_CLASSDC, você acaba com uma classe de janela CS_CLASSDC e todas as janelas de C++ que usam esse compartilhamento de classe mesmo controlador de domínio. Para evitar esse problema, chame [AfxRegisterClass](#afxregisterclass) para registrar a classe.
 
-Consulte a nota técnica [TN001: registro da classe Window](../../mfc/tn001-window-class-registration.md) para obter mais informações sobre o registro de classe de janela e o `AfxRegisterWndClass` função.
+Consulte a nota técnica [TN001: Registro da classe Window](../../mfc/tn001-window-class-registration.md) para obter mais informações sobre o registro de classe de janela e o `AfxRegisterWndClass` função.
 
 ### <a name="example"></a>Exemplo
 
@@ -802,7 +802,7 @@ BOOL AfxSocketInit(WSADATA* lpwsaData = NULL);
 ### <a name="parameters"></a>Parâmetros
 
 *lpwsaData*<br/>
-Um ponteiro para um [WSADATA](../../mfc/reference/wsadata-structure.md) estrutura. Se *lpwsaData* não é igual a NULL, em seguida, o endereço do `WSADATA` estrutura é preenchida pela chamada para `WSAStartup`. Essa função também garante que `WSACleanup` é chamado para você antes que o aplicativo seja encerrado.
+Um ponteiro para um [WSADATA](/windows/desktop/api/winsock2/ns-winsock2-wsadata) estrutura. Se *lpwsaData* não é igual a NULL, em seguida, o endereço do `WSADATA` estrutura é preenchida pela chamada para `WSAStartup`. Essa função também garante que `WSACleanup` é chamado para você antes que o aplicativo seja encerrado.
 
 ### <a name="return-value"></a>Valor de retorno
 

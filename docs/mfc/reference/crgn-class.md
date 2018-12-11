@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CRgn [MFC], RectInRegion
 - CRgn [MFC], SetRectRgn
 ms.assetid: d904da84-76aa-481e-8780-b09485f49e64
-ms.openlocfilehash: 9c08b679f1423b499a5b95b260fd0fac9ddeaf9d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 74ee046e81e0f55e5550220166c957317c2bf6cd
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467971"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178545"
 ---
 # <a name="crgn-class"></a>Classe CRgn
 
@@ -78,13 +78,13 @@ class CRgn : public CGdiObject
 |[CRgn::CombineRgn](#combinergn)|Define uma `CRgn` para que ele é equivalente a união de dois especificado do objeto `CRgn` objetos.|
 |[CRgn::CopyRgn](#copyrgn)|Define uma `CRgn` para que ele seja uma cópia de um especificado do objeto `CRgn` objeto.|
 |[CRgn::CreateEllipticRgn](#createellipticrgn)|Inicializa um `CRgn` objeto com uma região elíptico.|
-|[CRgn::CreateEllipticRgnIndirect](#createellipticrgnindirect)|Inicializa uma `CRgn` objeto com uma região elíptico definida por um [RECT](../../mfc/reference/rect-structure1.md) estrutura.|
+|[CRgn::CreateEllipticRgnIndirect](#createellipticrgnindirect)|Inicializa uma `CRgn` objeto com uma região elíptico definida por um [RECT](/windows/desktop/api/windef/ns-windef-tagrect) estrutura.|
 |[CRgn::CreateFromData](#createfromdata)|Cria uma região dos dados determinados região e a transformação.|
 |[CRgn::CreateFromPath](#createfrompath)|Cria uma região do caminho que está selecionado no contexto de determinado dispositivo.|
 |[CRgn::CreatePolygonRgn](#createpolygonrgn)|Inicializa um `CRgn` objeto com uma região em forma de polígono. O sistema fecha o polígono automaticamente, se necessário, desenhando uma linha do último vértice ao primeiro.|
 |[CRgn::CreatePolyPolygonRgn](#createpolypolygonrgn)|Inicializa um `CRgn` objeto com uma região consiste em uma série de polígonos fechados. Os polígonos podem ser não contíguos, ou eles podem se sobrepor.|
 |[CRgn::CreateRectRgn](#createrectrgn)|Inicializa um `CRgn` objeto com uma região retangular.|
-|[CRgn::CreateRectRgnIndirect](#createrectrgnindirect)|Inicializa uma `CRgn` objeto com uma região retangular definida por um [RECT](../../mfc/reference/rect-structure1.md) estrutura.|
+|[CRgn::CreateRectRgnIndirect](#createrectrgnindirect)|Inicializa uma `CRgn` objeto com uma região retangular definida por um [RECT](/windows/desktop/api/windef/ns-windef-tagrect) estrutura.|
 |[CRgn::CreateRoundRectRgn](#createroundrectrgn)|Inicializa um `CRgn` objeto com uma região retangular com cantos arredondados.|
 |[CRgn::EqualRgn](#equalrgn)|Verifica se dois `CRgn` objetos para determinar se eles são equivalentes.|
 |[CRgn::FromHandle](#fromhandle)|Retorna um ponteiro para um `CRgn` objeto quando recebe um identificador para uma região do Windows.|
@@ -297,13 +297,13 @@ BOOL CreateFromData(
 ### <a name="parameters"></a>Parâmetros
 
 *lpXForm*<br/>
-Aponta para um [XFORM](../../mfc/reference/xform-structure.md) estrutura de dados que define a transformação a ser executada na região. Se esse ponteiro seja NULL, a transformação de identidade será usada.
+Aponta para um [XFORM](/windows/desktop/api/wingdi/ns-wingdi-tagxform) estrutura de dados que define a transformação a ser executada na região. Se esse ponteiro seja NULL, a transformação de identidade será usada.
 
 *nCount*<br/>
 Especifica o número de bytes apontados por *pRgnData*.
 
 *pRgnData*<br/>
-Aponta para um [RGNDATA](../../mfc/reference/rgndata-structure.md) estrutura de dados que contém os dados da região.
+Aponta para um [RGNDATA](/windows/desktop/api/wingdi/ns-wingdi-_rgndata) estrutura de dados que contém os dados da região.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -631,7 +631,7 @@ int GetRegionData(
 ### <a name="parameters"></a>Parâmetros
 
 *lpRgnData*<br/>
-Aponta para um [RGNDATA](../../mfc/reference/rgndata-structure.md) estrutura de dados que recebe as informações. Se esse parâmetro for NULL, o valor de retorno contém o número de bytes necessários para os dados da região.
+Aponta para um [RGNDATA](/windows/desktop/api/wingdi/ns-wingdi-_rgndata) estrutura de dados que recebe as informações. Se esse parâmetro for NULL, o valor de retorno contém o número de bytes necessários para os dados da região.
 
 *nCount*<br/>
 Especifica o tamanho, em bytes, do *lpRgnData* buffer.

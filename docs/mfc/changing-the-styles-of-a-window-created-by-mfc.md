@@ -21,12 +21,12 @@ helpviewer_keywords:
 - CMainFrame class [MFC]
 - styles [MFC], windows
 ms.assetid: 77fa4f03-96b4-4687-9ade-41e46f7e4b0a
-ms.openlocfilehash: ebef671a34d2b50bd547a2fd9e484581df8ee3e8
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 19ff4e41f3b8c73e7ae62fbf264ea955b42bbc1a
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693212"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53177896"
 ---
 # <a name="changing-the-styles-of-a-window-created-by-mfc"></a>Alternando os estilos de uma janela criada por MFC
 
@@ -46,7 +46,7 @@ Para janelas de quadro principal, você também pode especificar se a janela tem
 
 Se você estiver alterando atributos de janela em um aplicativo existente, siga as instruções no restante deste artigo, em vez disso.
 
-Para alterar os atributos de janela padrão usados por um aplicativo de framework criado com o Assistente de aplicativo, substitua a janela [PreCreateWindow](../mfc/reference/cwnd-class.md#precreatewindow) função membro virtual. `PreCreateWindow` permite que um aplicativo acessar o processo de criação normalmente gerenciado internamente pelo [CDocTemplate](../mfc/reference/cdoctemplate-class.md) classe. A estrutura chama `PreCreateWindow` antes de criar a janela. Modificando o [CREATESTRUCT](../mfc/reference/createstruct-structure.md) estrutura passada para `PreCreateWindow`, seu aplicativo pode alterar os atributos usados para criar a janela. Por exemplo, para garantir que uma janela não usa uma legenda, use a seguinte operação bit a bit:
+Para alterar os atributos de janela padrão usados por um aplicativo de framework criado com o Assistente de aplicativo, substitua a janela [PreCreateWindow](../mfc/reference/cwnd-class.md#precreatewindow) função membro virtual. `PreCreateWindow` permite que um aplicativo acessar o processo de criação normalmente gerenciado internamente pelo [CDocTemplate](../mfc/reference/cdoctemplate-class.md) classe. A estrutura chama `PreCreateWindow` antes de criar a janela. Modificando o [CREATESTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcreatestructa) estrutura passada para `PreCreateWindow`, seu aplicativo pode alterar os atributos usados para criar a janela. Por exemplo, para garantir que uma janela não usa uma legenda, use a seguinte operação bit a bit:
 
 [!code-cpp[NVC_MFCDocView#15](../mfc/codesnippet/cpp/changing-the-styles-of-a-window-created-by-mfc_1.cpp)]
 

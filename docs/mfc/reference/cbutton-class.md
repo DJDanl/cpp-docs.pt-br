@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CButton [MFC], SetState
 - CButton [MFC], SetTextMargin
 ms.assetid: cdc76d5b-31da-43c5-bc43-fde4cb39de5b
-ms.openlocfilehash: 745b04751c96e79c6bfa332ebdde15b254578137
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 26dcf50cc3dc48fec5d6e4957ffd1ef340ad1dbf
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694797"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178637"
 ---
 # <a name="cbutton-class"></a>Classe CButton
 
@@ -265,7 +265,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ### <a name="parameters"></a>Parâmetros
 
 *lpDrawItemStruct*<br/>
-Um ponteiro longo para um [DRAWITEMSTRUCT](../../mfc/reference/drawitemstruct-structure.md) estrutura. A estrutura contém informações sobre o item a ser desenhado e o tipo de desenho necessárias.
+Um ponteiro longo para um [DRAWITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct) estrutura. A estrutura contém informações sobre o item a ser desenhado e o tipo de desenho necessárias.
 
 ### <a name="remarks"></a>Comentários
 
@@ -532,7 +532,7 @@ BOOL GetSplitSize(LPSIZE pSize) const;
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|*pSize*|[out] Ponteiro para um [tamanho](https://msdn.microsoft.com/library/windows/desktop/dd145106) estrutura que recebe a descrição de um retângulo.|
+|*pSize*|[out] Ponteiro para um [tamanho](/windows/desktop/api/windef/ns-windef-tagsize) estrutura que recebe a descrição de um retângulo.|
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -1006,7 +1006,7 @@ BOOL SetSplitSize(LPSIZE pSize);
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|*pSize*|[in] Ponteiro para um [tamanho](https://msdn.microsoft.com/library/windows/desktop/dd145106) estrutura que descreve um retângulo delimitador.|
+|*pSize*|[in] Ponteiro para um [tamanho](/windows/desktop/api/windef/ns-windef-tagsize) estrutura que descreve um retângulo delimitador.|
 
 ### <a name="return-value"></a>Valor de retorno
 

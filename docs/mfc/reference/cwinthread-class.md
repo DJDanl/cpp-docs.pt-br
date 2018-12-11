@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CWinThread [MFC], m_pActiveWnd
 - CWinThread [MFC], m_pMainWnd
 ms.assetid: 10cdc294-4057-4e76-ac7c-a8967a89af0b
-ms.openlocfilehash: 0f6c41b3675251df6b07e44003215fa67fb7e795
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 9c2b393354f65195e0d0060a08b83e321e3d5b1d
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694186"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178415"
 ---
 # <a name="cwinthread-class"></a>Classe CWinThread
 
@@ -126,7 +126,7 @@ Para criar um thread, chame [AfxBeginThread](application-information-and-managem
 
 Em vez de chamar `AfxBeginThread`, você pode construir uma `CWinThread`-derivados do objeto e, em seguida, chamada `CreateThread`. Esse método de construção de dois estágios é útil se você quiser reutilizar o `CWinThread` objeto entre criação sucessiva e encerramentos de execuções de thread.
 
-Para obter mais informações sobre `CWinThread`, consulte os artigos [Multithreading com C++ e MFC](../../parallel/multithreading-with-cpp-and-mfc.md), [Multithreading: Criando Threads de Interface do usuário](../../parallel/multithreading-creating-user-interface-threads.md), [Multithreading: Criando o trabalho Threads](../../parallel/multithreading-creating-worker-threads.md), e [Multithreading: como usar as Classes de sincronização](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).
+Para obter mais informações sobre `CWinThread`, consulte os artigos [Multithreading com C++ e MFC](../../parallel/multithreading-with-cpp-and-mfc.md), [Multithreading: Criando Threads de Interface do usuário](../../parallel/multithreading-creating-user-interface-threads.md), [Multithreading: Criando Threads de trabalho](../../parallel/multithreading-creating-worker-threads.md), e [Multithreading: Como usar as Classes de sincronização](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -458,7 +458,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ### <a name="parameters"></a>Parâmetros
 
 *pMsg*<br/>
-Aponta para um [estrutura MSG](../../mfc/reference/msg-structure1.md) que contém a mensagem para processar.
+Aponta para um [estrutura MSG](/windows/desktop/api/winuser/ns-winuser-tagmsg) que contém a mensagem para processar.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -484,7 +484,7 @@ virtual BOOL ProcessMessageFilter(
 Especifica um código de gancho. Essa função membro usa o código para determinar como processar *lpMsg.*
 
 *lpMsg*<br/>
-Um ponteiro para um Windows [estrutura MSG](../../mfc/reference/msg-structure1.md).
+Um ponteiro para um Windows [estrutura MSG](/windows/desktop/api/winuser/ns-winuser-tagmsg).
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -512,7 +512,7 @@ virtual LRESULT ProcessWndProcException(
 Aponta para uma exceção sem tratamento.
 
 *pMsg*<br/>
-Aponta para um [estrutura MSG](../../mfc/reference/msg-structure1.md) que contém informações sobre a mensagem do windows que causou a estrutura lançar uma exceção.
+Aponta para um [estrutura MSG](/windows/desktop/api/winuser/ns-winuser-tagmsg) que contém informações sobre a mensagem do windows que causou a estrutura lançar uma exceção.
 
 ### <a name="return-value"></a>Valor de retorno
 

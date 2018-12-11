@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CStatic [MFC], SetEnhMetaFile
 - CStatic [MFC], SetIcon
 ms.assetid: e7c94cd9-5ebd-428a-aa30-b3e51f8efb95
-ms.openlocfilehash: 622172d369818a7a503945bcd3cf064662f38266
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ab25cad77ee0f11167661bb27b408dd5e92b51f9
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50576703"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178688"
 ---
 # <a name="cstatic-class"></a>Classe CStatic
 
@@ -177,7 +177,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ### <a name="parameters"></a>Parâmetros
 
 *lpDrawItemStruct*<br/>
-Um ponteiro para um [DRAWITEMSTRUCT](../../mfc/reference/drawitemstruct-structure.md) estrutura. A estrutura contém informações sobre o item a ser desenhado e o tipo de desenho necessárias.
+Um ponteiro para um [DRAWITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct) estrutura. A estrutura contém informações sobre o item a ser desenhado e o tipo de desenho necessárias.
 
 ### <a name="remarks"></a>Comentários
 

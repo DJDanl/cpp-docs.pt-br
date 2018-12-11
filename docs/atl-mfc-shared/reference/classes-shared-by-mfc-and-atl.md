@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - shared classes, classes
 ms.assetid: ca8b4b6b-744d-430b-b31f-d5b2f17bf210
-ms.openlocfilehash: 6e63664020508252a61682c46439af85033cf068
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9943a9b56b660165f8ecfd46f0a69107ecaa632c
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50583866"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53177897"
 ---
 # <a name="classes-shared-by-mfc-and-atl"></a>Classes compartilhadas por MFC e ATL
 
@@ -23,10 +23,10 @@ A tabela a seguir lista as classes compartilhadas entre MFC e ATL.
 |[CImage](../../atl-mfc-shared/reference/cimage-class.md)|fornece suporte a bitmap aprimorada, incluindo a capacidade de carregar e salvar imagens em formatos GIF, JPEG, BMP e elementos gráficos PNG (Portable Network).|atlimage.h|
 |[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)|Encapsula o tipo de dados de data usado na automação OLE.|atlcomtime|
 |[COleDateTimeSpan](../../atl-mfc-shared/reference/coledatetimespan-class.md)|Representa um tempo relativo, um período de tempo.|atlcomtime|
-|[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)|Uma classe semelhante do Windows [ponto](../../mfc/reference/point-structure.md) estrutura que também inclui funções de membro para manipular `CPoint` e `POINT` estruturas.|atltypes. h|
-|[CRect](../../atl-mfc-shared/reference/crect-class.md)|Uma classe semelhante de um Windows [RECT](../../mfc/reference/rect-structure.md) estrutura que também inclui funções de membro para manipular `CRect` objetos e Windows `RECT` estruturas.|atltypes. h|
+|[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)|Uma classe semelhante do Windows [ponto](/windows/desktop/api/windef/ns-windef-tagpoint) estrutura que também inclui funções de membro para manipular `CPoint` e `POINT` estruturas.|atltypes. h|
+|[CRect](../../atl-mfc-shared/reference/crect-class.md)|Uma classe semelhante de um Windows [RECT](/windows/desktop/api/windef/ns-windef-tagrect) estrutura que também inclui funções de membro para manipular `CRect` objetos e Windows `RECT` estruturas.|atltypes. h|
 |[CSimpleStringT](../../atl-mfc-shared/reference/csimplestringt-class.md)|Representa um `CSimpleStringT` objeto.|atlsimpstr.h|
-|[CSize](../../atl-mfc-shared/reference/csize-class.md)|Uma classe semelhante à estrutura de tamanho do Windows, que implementa uma coordenada ou posição relativa.|atltypes. h|
+|[CSize](../../atl-mfc-shared/reference/csize-class.md)|Uma classe semelhante do Windows [tamanho](/windows/desktop/api/windef/ns-windef-tagsize) estrutura, que implementa uma coordenada ou posição relativa.|atltypes. h|
 |[CStrBufT](../../atl-mfc-shared/reference/cstrbuft-class.md)|Fornece a limpeza de recursos automáticos `GetBuffer` e `ReleaseBuffer` chama um existente `CStringT` objeto.|atlsimpstr.h|
 |[CStringData](../../atl-mfc-shared/reference/cstringdata-class.md)|Representa os dados de um objeto de cadeia de caracteres.|atlsimpstr.h|
 |[CStringT](../../atl-mfc-shared/reference/cstringt-class.md)|Representa um `CStringT` objeto.|cstringt. h (dependente do MFC) atlstr. h (independente do MFC)|

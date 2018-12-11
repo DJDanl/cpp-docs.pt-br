@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CBrush [MFC], FromHandle
 - CBrush [MFC], GetLogBrush
 ms.assetid: e5ef2c62-dd95-4973-9090-f52f605900e1
-ms.openlocfilehash: 4f6b5db22b956584507a2979a517ff26d5364a0c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dbc5e36fdf613f1db2818ac6193709829e3bd001
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50661637"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178701"
 ---
 # <a name="cbrush-class"></a>Classe CBrush
 
@@ -185,7 +185,7 @@ BOOL CreateDIBPatternBrush(
 Identifica um objeto de memória global contendo um compactado independentes de dispositivo DIB (bitmap).
 
 *Nuso*<br/>
-Especifica se o `bmiColors[]` campos do [BITMAPINFO](../../mfc/reference/bitmapinfo-structure.md) a estrutura de dados (parte do "empacotados DIB") contêm explícita de valores RGB ou índices para a paleta lógica realizada no momento. O parâmetro deve ser um dos seguintes valores:
+Especifica se o `bmiColors[]` campos do [BITMAPINFO](/windows/desktop/api/wingdi/ns-wingdi-tagbitmapinfo) a estrutura de dados (parte do "empacotados DIB") contêm explícita de valores RGB ou índices para a paleta lógica realizada no momento. O parâmetro deve ser um dos seguintes valores:
 
 - A tabela de cores DIB_PAL_COLORS consiste em uma matriz de índices de 16 bits.
 

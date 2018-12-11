@@ -1,5 +1,5 @@
 ---
-title: 'Data e hora: suporte a SYSTEMTIME'
+title: 'Data e hora: Suporte a SYSTEMTIME'
 ms.date: 11/04/2016
 f1_keywords:
 - SYSTEMTIME
@@ -11,18 +11,18 @@ helpviewer_keywords:
 - dates [C++], MFC
 - formatting [C++], time
 ms.assetid: 201528e4-2ffa-48fc-af8f-203aa86d942a
-ms.openlocfilehash: 6074eff2db45bfa69f83d7c45be1203dd19cc987
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: db19d236d0f0d8672f08c808237de471bf5bc64d
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50549910"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53177727"
 ---
-# <a name="date-and-time-systemtime-support"></a>Data e hora: suporte a SYSTEMTIME
+# <a name="date-and-time-systemtime-support"></a>Data e hora: Suporte a SYSTEMTIME
 
 O [CTime](../atl-mfc-shared/reference/ctime-class.md) classe tem construtores que aceitam os horários de sistema e o arquivo do Win32. Se você usa objetos `CTime` para esse fim, deve modificar sua inicialização de acordo, conforme descrito neste artigo.
 
-Para obter informações sobre a estrutura SYSTEMTIME, consulte [SYSTEMTIME](../mfc/reference/systemtime-structure.md). Para obter informações sobre a estrutura FILETIME, consulte [FILETIME](../mfc/reference/filetime-structure.md).
+Para obter informações sobre a estrutura SYSTEMTIME, consulte [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950). Para obter informações sobre a estrutura FILETIME, consulte [FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284).
 
 O MFC ainda oferece construtores `CTime` que usam argumentos de tempo no estilo MS-DOS, mas a partir do MFC versão 3.0 a classe `CTime` também oferece suporte a um construtor que usa uma estrutura `SYSTEMTIME` do Win32 e outra que usa uma estrutura `FILETIME` do Win32.
 

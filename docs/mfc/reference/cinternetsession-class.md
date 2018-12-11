@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CInternetSession [MFC], SetCookie
 - CInternetSession [MFC], SetOption
 ms.assetid: ef54feb4-9d0f-4e65-a45d-7a4cf6c40e51
-ms.openlocfilehash: 3b820ea3687fd52947eff48e4814ab4173fd95c7
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 216f3bf0ce62eb6e69ad0650289c4c2d91f95159
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519287"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178155"
 ---
 # <a name="cinternetsession-class"></a>Classe CInternetSession
 
@@ -98,10 +98,10 @@ Se você abre uma URL em um servidor de Internet usando `OpenURL`, você pode le
 
 `CInternetSession` funções de membro [SetCookie](#setcookie), [GetCookie](#getcookie), e [GetCookieLength](#getcookielength) fornecem os meios para gerenciar um banco de dados de cookie do Win32, por meio do qual mantêm servidores e scripts informações de estado sobre a estação de trabalho do cliente.
 
-Para obter mais informações sobre tarefas básicas de programação da Internet, consulte o artigo [primeiras etapas de Internet: WinInet](../../mfc/wininet-basics.md). Para obter informações gerais sobre como usar as classes WinInet do MFC, consulte o artigo [Internet Programando com WinInet](../../mfc/win32-internet-extensions-wininet.md).
+Para obter mais informações sobre tarefas básicas de programação da Internet, consulte o artigo [Internet primeiras etapas: O WinInet](../../mfc/wininet-basics.md). Para obter informações gerais sobre como usar as classes WinInet do MFC, consulte o artigo [Internet Programando com WinInet](../../mfc/win32-internet-extensions-wininet.md).
 
 > [!NOTE]
-> `CInternetSession` lançará uma [AfxThrowNotSupportedException](exception-processing.md#afxthrownotsupportedexception) para tipos de serviço sem suporte. Somente os seguintes tipos de serviço têm suporte atualmente: FTP, HTTP, gopher e arquivo.
+> `CInternetSession` lançará uma [AfxThrowNotSupportedException](exception-processing.md#afxthrownotsupportedexception) para tipos de serviço sem suporte. Somente os seguintes tipos de serviço são atualmente suportados: FTP, HTTP, gopher e arquivo.
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -223,7 +223,7 @@ O aplicativo contexto definido pelo identificador.
 
 [OnStatusCallback](#onstatuscallback) usa a ID do contexto retornada por `GetContext` para relatar o status de um aplicativo específico. Por exemplo, quando um usuário ativa uma solicitação de Internet que envolve a retornar informações de status, o retorno de chamada de status usa a ID de contexto para relatar o status na solicitação específica. Se o usuário ativa dois separado Internet solicita que os dois envolvem a retornar informações de status, `OnStatusCallback` usa os identificadores de contexto para retornar o status sobre suas solicitações correspondentes. Consequentemente, o identificador de contexto é usado para todas as operações de retorno de chamada de status, e ele está associado com a sessão até que a sessão seja encerrada.
 
-Para obter mais informações sobre as operações assíncronas, consulte o artigo [primeiras etapas de Internet: WinInet](../../mfc/wininet-basics.md).
+Para obter mais informações sobre as operações assíncronas, consulte o artigo [Internet primeiras etapas: O WinInet](../../mfc/wininet-basics.md).
 
 ## <a name="getcookie"></a>  CInternetSession::GetCookie
 
@@ -457,7 +457,7 @@ O *dwInternetStatus* parâmetro indica a operação que está sendo executada e 
 |-----------|-------------|
 |INTERNET_STATUS_RESOLVING_NAME|Procurando o endereço IP do nome contido em *lpvStatusInformation*.|
 |INTERNET_STATUS_NAME_RESOLVED|Encontrado com sucesso o endereço IP do nome contido em *lpvStatusInformation*.|
-|INTERNET_STATUS_CONNECTING_TO_SERVER|Conectar-se para o endereço de soquete ([SOCKADDR](../../mfc/reference/sockaddr-structure.md)) apontado por *lpvStatusInformation*.|
+|INTERNET_STATUS_CONNECTING_TO_SERVER|Conectar-se para o endereço de soquete ([SOCKADDR](/windows/desktop/winsock/sockaddr-2)) apontado por *lpvStatusInformation*.|
 |INTERNET_STATUS_CONNECTED_TO_SERVER|Conectado com êxito para o endereço de soquete (SOCKADDR) apontado por *lpvStatusInformation*.|
 |INTERNET_STATUS_SENDING_REQUEST|Enviando a solicitação de informações para o servidor. O *lpvStatusInformation* parâmetro for nulo.|
 |INTERNET_STATUS_ REQUEST_SENT|Enviado com êxito a solicitação de informações para o servidor. O *lpvStatusInformation* parâmetro for nulo.|
@@ -475,7 +475,7 @@ Substitua essa função de membro para exigir alguma ação antes de uma rotina 
 
 [!code-cpp[NVC_MFCHtmlHttp#8](../../mfc/reference/codesnippet/cpp/cinternetsession-class_1.cpp)]
 
-Para obter mais informações sobre as operações assíncronas, consulte o artigo [primeiras etapas de Internet: WinInet](../../mfc/wininet-basics.md).
+Para obter mais informações sobre as operações assíncronas, consulte o artigo [Internet primeiras etapas: O WinInet](../../mfc/wininet-basics.md).
 
 ## <a name="openurl"></a>  CInternetSession::OpenURL
 

@@ -192,12 +192,12 @@ helpviewer_keywords:
 - CWinApp [MFC], m_nAutosaveInterval
 - CWinApp [MFC], m_pDataRecoveryHandler
 ms.assetid: e426a3cd-0d15-40d6-bd55-beaa5feb2343
-ms.openlocfilehash: c25d79dc1fb201d10e090f512a5a96f649efbcfe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3f9afdf18fcaff0d3613b4204d8690f915079e7d
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50542357"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178935"
 ---
 # <a name="cwinapp-class"></a>Classe CWinApp
 
@@ -347,7 +347,7 @@ Além de `CWinApp` funções de membro, a biblioteca Microsoft Foundation Class 
 
 - [AfxGetAppName](application-information-and-management.md#afxgetappname) obtém um ponteiro para uma cadeia de caracteres que contém o nome do aplicativo. Como alternativa, se você tiver um ponteiro para o `CWinApp` do objeto, use `m_pszExeName` para obter o nome do aplicativo.
 
-Ver [CWinApp: A classe de aplicativo](../../mfc/cwinapp-the-application-class.md) para obter mais informações sobre o `CWinApp` classe, incluindo uma visão geral das seguintes opções:
+Consulte [CWinApp: A classe de aplicativo](../../mfc/cwinapp-the-application-class.md) para obter mais informações sobre o `CWinApp` classe, incluindo uma visão geral das seguintes opções:
 
 - `CWinApp`-derivado código escrito pelo Assistente de aplicativo.
 
@@ -1508,7 +1508,7 @@ LPCTSTR m_pszRegistryKey;
 
 Normalmente, este membro de dados é tratado como somente leitura.
 
-- O valor é armazenado para uma chave do registro. O nome para a configuração de perfil de aplicativo é acrescentado à seguinte chave do registro: HKEY_CURRENT_USER/Software/LocalAppWizard-gerados /.
+- O valor é armazenado para uma chave do registro. O nome para a configuração de perfil de aplicativo é anexado à chave do registro a seguir: HKEY_CURRENT_USER/Software/LocalAppWizard-gerados /.
 
 Se você atribuir um valor a ser `m_pszRegistryKey`, ele deve ser dinamicamente alocado no heap. O `CWinApp` chamadas de destruidor **livre**() com este ponteiro. Você pode querer usar o `_tcsdup`função de biblioteca de tempo de execução () para fazer a alocação. Além disso, libere a memória associada com o ponteiro atual antes de atribuir um novo valor. Por exemplo:
 
@@ -1793,7 +1793,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ### <a name="parameters"></a>Parâmetros
 
 *pMsg*<br/>
-Um ponteiro para um [MSG](../../mfc/reference/msg-structure1.md) estrutura que contém a mensagem a ser processada.
+Um ponteiro para um [MSG](/windows/desktop/api/winuser/ns-winuser-tagmsg) estrutura que contém a mensagem a ser processada.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -1815,7 +1815,7 @@ virtual BOOL ProcessMessageFilter(
 Especifica um código de gancho. Essa função membro usa o código para determinar como processar *lpMsg.*
 
 *lpMsg*<br/>
-Um ponteiro para um Windows [MSG](../../mfc/reference/msg-structure1.md) estrutura.
+Um ponteiro para um Windows [MSG](/windows/desktop/api/winuser/ns-winuser-tagmsg) estrutura.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -1886,7 +1886,7 @@ virtual LRESULT ProcessWndProcException(
 Um ponteiro para uma exceção não tratada.
 
 *pMsg*<br/>
-Um [MSG](../../mfc/reference/msg-structure1.md) estrutura que contém informações sobre a mensagem do windows que causou a estrutura lançar uma exceção.
+Um [MSG](/windows/desktop/api/winuser/ns-winuser-tagmsg) estrutura que contém informações sobre a mensagem do windows que causou a estrutura lançar uma exceção.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -2086,7 +2086,7 @@ Diferente de zero se a opção foi encontrada; Caso contrário, 0.
 
 ### <a name="remarks"></a>Comentários
 
-Se estiver presente, a opção é removida da linha de comando. Para obter mais informações sobre inserção, consulte o artigo [servidores: Implementando um servidor](../../mfc/servers-implementing-a-server.md).
+Se estiver presente, a opção é removida da linha de comando. Para obter mais informações sobre inserção, consulte o artigo [servidores: Implementação de um servidor](../../mfc/servers-implementing-a-server.md).
 
 ##  <a name="saveallmodified"></a>  CWinApp::SaveAllModified
 
@@ -2118,7 +2118,7 @@ void SelectPrinter(
 ### <a name="parameters"></a>Parâmetros
 
 *hDevNames*<br/>
-Um identificador para um [DEVNAMES](../../mfc/reference/devnames-structure.md) estrutura que identifica o driver, o dispositivo e nomes de porta de saída de uma determinada impressora.
+Um identificador para um [DEVNAMES](/windows/desktop/api/commdlg/ns-commdlg-tagdevnames) estrutura que identifica o driver, o dispositivo e nomes de porta de saída de uma determinada impressora.
 
 *hDevMode*<br/>
 Um identificador para um [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) estrutura que especifica informações sobre a inicialização do dispositivo e o ambiente de uma impressora.
@@ -2168,7 +2168,7 @@ ID de um recurso de cadeia de caracteres que contém o nome da chave do registro
 
 ### <a name="remarks"></a>Comentários
 
-Essa função definirá *m_pszRegistryKey*, que é usado pelas `GetProfileInt`, `GetProfileString`, `WriteProfileInt`, e `WriteProfileString` funções de membro de `CWinApp`. Se essa função tiver sido chamada, a lista de arquivos usados mais recentemente (MRU) também é armazenada no registro. A chave do registro geralmente é o nome de uma empresa. Ele é armazenado em uma chave da seguinte forma: HKEY_CURRENT_USER\Software\\< nome da empresa\>\\< nome do aplicativo\>\\< nome da seção\>\\< valor nome\>.
+Essa função definirá *m_pszRegistryKey*, que é usado pelas `GetProfileInt`, `GetProfileString`, `WriteProfileInt`, e `WriteProfileString` funções de membro de `CWinApp`. Se essa função tiver sido chamada, a lista de arquivos usados mais recentemente (MRU) também é armazenada no registro. A chave do registro geralmente é o nome de uma empresa. Ele é armazenado em uma chave da seguinte forma: HKEY_CURRENT_USER\Software\\< nome da empresa\>\\< nome do aplicativo\>\\< nome da seção\>\\< nome do valor\>.
 
 ##  <a name="supportsapplicationrecovery"></a>  CWinApp::SupportsApplicationRecovery
 
@@ -2395,4 +2395,4 @@ Especifica a ID de modelo de usuário de aplicativo.
 
 [Classe CWinThread](../../mfc/reference/cwinthread-class.md)<br/>
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
-[Como adicionar suporte ao gerenciador de reinicialização](../../mfc/how-to-add-restart-manager-support.md)
+[Como: Adicionar suporte ao Gerenciador de reinicialização](../../mfc/how-to-add-restart-manager-support.md)

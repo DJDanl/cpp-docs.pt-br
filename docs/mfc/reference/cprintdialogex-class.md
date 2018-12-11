@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CPrintDialogEx [MFC], PrintSelection
 - CPrintDialogEx [MFC], m_pdex
 ms.assetid: 1d506703-ee1c-44cc-b4ce-4e778fec26b8
-ms.openlocfilehash: 79d696f89ca7474220559abbf5464f32b6e684c6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fb88cc39ddaffe51b80484bbe8460507a1d0aecb
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50543319"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178441"
 ---
 # <a name="cprintdialogex-class"></a>Classe CPrintDialogEx
 
@@ -154,7 +154,7 @@ Essa função de membro só constrói o objeto. Use o `DoModal` a função de me
 
 ##  <a name="createprinterdc"></a>  CPrintDialogEx::CreatePrinterDC
 
-Cria um contexto de dispositivo de impressora (DC) a partir de [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) e [DEVNAMES](../../mfc/reference/devnames-structure.md) estruturas.
+Cria um contexto de dispositivo de impressora (DC) a partir de [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) e [DEVNAMES](/windows/desktop/api/commdlg/ns-commdlg-tagdevnames) estruturas.
 
 ```
 HDC CreatePrinterDC();
@@ -216,9 +216,9 @@ TRUE se bem-sucedido, caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-Cria um contexto de dispositivo de impressora (DC) a partir de [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) e [DEVNAMES](../../mfc/reference/devnames-structure.md) estruturas.
+Cria um contexto de dispositivo de impressora (DC) a partir de [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) e [DEVNAMES](/windows/desktop/api/commdlg/ns-commdlg-tagdevnames) estruturas.
 
-`GetDefaults` não exibe a folha de propriedades de impressão. Em vez disso, ele define o `hDevNames` e `hDevMode` membros [m_pdex](#m_pdex) aos identificadores para o [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) e [DEVNAMES](../../mfc/reference/devnames-structure.md) estruturas que são inicializadas para o impressora de padrão do sistema. Ambos `hDevNames` e `hDevMode` deverão ser nulos ou `GetDefaults` falhar.
+`GetDefaults` não exibe a folha de propriedades de impressão. Em vez disso, ele define o `hDevNames` e `hDevMode` membros [m_pdex](#m_pdex) aos identificadores para o [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) e [DEVNAMES](/windows/desktop/api/commdlg/ns-commdlg-tagdevnames) estruturas que são inicializadas para o impressora de padrão do sistema. Ambos `hDevNames` e `hDevMode` deverão ser nulos ou `GetDefaults` falhar.
 
 Se o sinalizador PD_RETURNDC estiver definido, essa função não retornará apenas `hDevNames` e `hDevMode` (localizado em `m_pdex.hDevNames` e `m_pdex.hDevMode`) para o chamador, mas também retornará uma impressora DC no `m_pdex.hDC`. É responsabilidade do chamador para excluir a impressora DC e chamar o Windows [GlobalFree](/windows/desktop/api/winbase/nf-winbase-globalfree) função com os identificadores quando tiver terminado com o `CPrintDialogEx` objeto.
 

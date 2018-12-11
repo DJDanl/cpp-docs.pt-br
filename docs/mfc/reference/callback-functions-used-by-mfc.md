@@ -9,12 +9,12 @@ helpviewer_keywords:
 - functions [MFC], callback
 - callback functions [MFC]
 ms.assetid: b2a6857c-fdd3-45ec-8fd8-2e71fac77582
-ms.openlocfilehash: 17078bd9d916aac2676180f8854d93a4de92aa4a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: acb7b6c677d03ef1320e24373671a7577c2ccda8
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50555604"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178428"
 ---
 # <a name="callback-functions-used-by-mfc"></a>Funções de Retorno de Chamada Usadas pelo MFC
 
@@ -45,7 +45,7 @@ int CALLBACK EXPORT ObjectFunc(
 ### <a name="parameters"></a>Parâmetros
 
 *lpszLogObject*<br/>
-Aponta para um [LOGPEN](../../mfc/reference/logpen-structure.md) ou [LOGBRUSH](../../mfc/reference/logbrush-structure.md) estrutura de dados que contém informações sobre os atributos a lógicas do objeto.
+Aponta para um [LOGPEN](/windows/desktop/api/Wingdi/ns-wingdi-taglogpen) ou [LOGBRUSH](/windows/desktop/api/wingdi/ns-wingdi-taglogbrush) estrutura de dados que contém informações sobre os atributos a lógicas do objeto.
 
 *lpData*<br/>
 Pontos de dados fornecida pelo aplicativo passado para o `EnumObjects` função.

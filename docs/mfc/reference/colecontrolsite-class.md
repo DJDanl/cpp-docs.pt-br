@@ -106,12 +106,12 @@ helpviewer_keywords:
 - COleControlSite [MFC], m_pWndCtrl
 - COleControlSite [MFC], m_rect
 ms.assetid: 43970644-5eab-434a-8ba6-56d144ff1e3f
-ms.openlocfilehash: c9aa5b57b2610dbe0528d99d1c8ad996e1fc4a60
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 26d0f5e875c4f3982705a2cf571b15cd5bfac985
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437798"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178909"
 ---
 # <a name="colecontrolsite-class"></a>Classe COleControlSite
 
@@ -444,7 +444,7 @@ virtual BOOL EnableWindow(BOOL bEnable);
 ### <a name="parameters"></a>Parâmetros
 
 *bAtivar*<br/>
-Especifica se é habilitar ou desabilitar a janela: verdadeiro se a entrada da janela deve ser habilitado, caso contrário, FALSE.
+Especifica se é habilitar ou desabilitar a janela: TRUE se a entrada da janela deve ser habilitado, caso contrário, FALSE.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -1062,7 +1062,7 @@ virtual CWnd* SetFocus(LPMSG lpmsg);
 ### <a name="parameters"></a>Parâmetros
 
 *lpmsg*<br/>
-Um ponteiro para um [estrutura MSG](../../mfc/reference/msg-structure1.md). Essa estrutura contém o disparo de mensagem do Windows a `SetFocus` solicitação para o controle contido no site atual do controle.
+Um ponteiro para um [estrutura MSG](/windows/desktop/api/winuser/ns-winuser-tagmsg). Essa estrutura contém o disparo de mensagem do Windows a `SetFocus` solicitação para o controle contido no site atual do controle.
 
 ### <a name="return-value"></a>Valor de retorno
 

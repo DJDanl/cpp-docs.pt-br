@@ -108,12 +108,12 @@ helpviewer_keywords:
 - CComboBox [MFC], SetTopIndex
 - CComboBox [MFC], ShowDropDown
 ms.assetid: 4e73b5df-0d2e-4658-9706-38133fb10513
-ms.openlocfilehash: 91cf9b2035bf24c16007ed6021772c7d5344fc68
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: e7472b808d8b5d743d884d9e3806df7ffe499836
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51333261"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178767"
 ---
 # <a name="ccombobox-class"></a>Classe CComboBox
 
@@ -331,7 +331,7 @@ virtual int CompareItem(LPCOMPAREITEMSTRUCT lpCompareItemStruct);
 ### <a name="parameters"></a>Parâmetros
 
 *lpCompareItemStruct*<br/>
-Um ponteiro longo para um [COMPAREITEMSTRUCT](../../mfc/reference/compareitemstruct-structure.md) estrutura.
+Um ponteiro longo para um [COMPAREITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcompareitemstruct) estrutura.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -383,7 +383,7 @@ virtual BOOL Create(
 Especifica o estilo da caixa de combinação. Aplicar qualquer combinação de [estilos de caixa de combinação](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) à caixa.
 
 *Rect*<br/>
-Aponta para a posição e tamanho da caixa de combinação. Pode ser um [estrutura RECT](../../mfc/reference/rect-structure1.md) ou um `CRect` objeto.
+Aponta para a posição e tamanho da caixa de combinação. Pode ser um [estrutura RECT](/windows/desktop/api/windef/ns-windef-tagrect) ou um `CRect` objeto.
 
 *pParentWnd*<br/>
 Especifica a janela do pai da caixa de combinação (geralmente um `CDialog`). Ele não deve ser NULL.
@@ -450,7 +450,7 @@ virtual void DeleteItem(LPDELETEITEMSTRUCT lpDeleteItemStruct);
 ### <a name="parameters"></a>Parâmetros
 
 *lpDeleteItemStruct*<br/>
-Um ponteiro longo para um Windows [DELETEITEMSTRUCT](../../mfc/reference/deleteitemstruct-structure.md) estrutura que contém informações sobre o item excluído. Ver [CWnd::OnDeleteItem](../../mfc/reference/cwnd-class.md#ondeleteitem) para obter uma descrição dessa estrutura.
+Um ponteiro longo para um Windows [DELETEITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdeleteitemstruct) estrutura que contém informações sobre o item excluído. Ver [CWnd::OnDeleteItem](../../mfc/reference/cwnd-class.md#ondeleteitem) para obter uma descrição dessa estrutura.
 
 ### <a name="remarks"></a>Comentários
 
@@ -542,7 +542,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ### <a name="parameters"></a>Parâmetros
 
 *lpDrawItemStruct*<br/>
-Um ponteiro para um [DRAWITEMSTRUCT](../../mfc/reference/drawitemstruct-structure.md) estrutura que contém informações sobre o tipo de desenho necessárias.
+Um ponteiro para um [DRAWITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct) estrutura que contém informações sobre o tipo de desenho necessárias.
 
 ### <a name="remarks"></a>Comentários
 
@@ -715,7 +715,7 @@ void GetDroppedControlRect(LPRECT lprect) const;
 ### <a name="parameters"></a>Parâmetros
 
 *lprect*<br/>
-Aponta para o [estrutura RECT](../../mfc/reference/rect-structure1.md) que deve receber as coordenadas.
+Aponta para o [estrutura RECT](/windows/desktop/api/windef/ns-windef-tagrect) que deve receber as coordenadas.
 
 ### <a name="example"></a>Exemplo
 
@@ -1107,7 +1107,7 @@ virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
 ### <a name="parameters"></a>Parâmetros
 
 *lpMeasureItemStruct*<br/>
-Um ponteiro longo para um [MEASUREITEMSTRUCT](../../mfc/reference/measureitemstruct-structure.md) estrutura.
+Um ponteiro longo para um [MEASUREITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagmeasureitemstruct) estrutura.
 
 ### <a name="remarks"></a>Comentários
 

@@ -84,12 +84,12 @@ helpviewer_keywords:
 - CMenu [MFC], TrackPopupMenuEx
 - CMenu [MFC], m_hMenu
 ms.assetid: 40cacfdc-d45c-4ec7-bf28-991c72812499
-ms.openlocfilehash: bcaf24c14938bcf56eb083ad2dd79e4c245c7c84
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2834de457ce9e2a71537e706f0fdf84463b16a8d
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50613675"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178910"
 ---
 # <a name="cmenu-class"></a>Classe CMenu
 
@@ -322,7 +322,7 @@ Especifica como verificar o item de menu e como determinar a posição do item n
 
 ### <a name="return-value"></a>Valor de retorno
 
-O estado anterior do item: MF_CHECKED ou MF_UNCHECKED, ou 0xFFFFFFFF se o item de menu não existia.
+O estado anterior do item: MF_CHECKED ou MF_UNCHECKED ou 0xFFFFFFFF se o item de menu não existia.
 
 ### <a name="remarks"></a>Comentários
 
@@ -551,7 +551,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ### <a name="parameters"></a>Parâmetros
 
 *lpDrawItemStruct*<br/>
-Um ponteiro para um [DRAWITEMSTRUCT](../../mfc/reference/drawitemstruct-structure.md) estrutura que contém informações sobre o tipo de desenho necessárias.
+Um ponteiro para um [DRAWITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct) estrutura que contém informações sobre o tipo de desenho necessárias.
 
 ### <a name="remarks"></a>Comentários
 

@@ -17,12 +17,12 @@ helpviewer_keywords:
 - dialog boxes, ATL
 - CDialogImpl class
 ms.assetid: d430bc7b-8a28-4ad3-9507-277bdd2c2c2e
-ms.openlocfilehash: 04acfb9c653df85be8958d7248bafd93f3e0a30b
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: b4844ed2246b5e700d9dc1895c3292cdde4efe8b
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693644"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178142"
 ---
 # <a name="cdialogimpl-class"></a>Classe CDialogImpl
 
@@ -263,7 +263,7 @@ BOOL MapDialogRect(LPRECT lpRect);
 ### <a name="parameters"></a>Parâmetros
 
 *lpRect*<br/>
-Aponta para um `CRect` objeto ou [RECT](../../mfc/reference/rect-structure.md) estrutura que receberá as coordenadas do cliente da atualização que inclui a região de atualização.
+Aponta para um `CRect` objeto ou [RECT](/windows/desktop/api/windef/ns-windef-tagrect) estrutura que receberá as coordenadas do cliente da atualização que inclui a região de atualização.
 
 ### <a name="return-value"></a>Valor de retorno
 

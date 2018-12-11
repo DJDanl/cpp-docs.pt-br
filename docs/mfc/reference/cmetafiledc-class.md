@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CMetaFileDC [MFC], Create
 - CMetaFileDC [MFC], CreateEnhanced
 ms.assetid: ffce60fa-4181-4d46-9832-25e46fad4db4
-ms.openlocfilehash: 343ab1a5d0c38ab0d17c609fbfc134b144502553
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bfbe03c5c81b2c7d6517dff7ce4e5f88b7c076bc
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471806"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178298"
 ---
 # <a name="cmetafiledc-class"></a>Classe CMetaFileDC
 
@@ -186,7 +186,7 @@ Identifica um dispositivo de referência para o metarquivo avançado.
 Aponta para uma cadeia de caracteres terminada em nulo. Especifica o nome do arquivo para o metarquivo avançado a ser criado. Se esse parâmetro for NULL, o metarquivo avançado é memória com base e seu conteúdo perdido quando o objeto é destruído ou quando o Win32 `DeleteEnhMetaFile` função é chamada.
 
 *lpBounds*<br/>
-Aponta para um [RECT](../../mfc/reference/rect-structure1.md) estrutura de dados ou uma [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto que especifica as dimensões em unidades HIMETRIC (em incrementos de.01 milímetro) da imagem a ser armazenado no metarquivo aprimorado.
+Aponta para um [RECT](/windows/desktop/api/windef/ns-windef-tagrect) estrutura de dados ou uma [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto que especifica as dimensões em unidades HIMETRIC (em incrementos de.01 milímetro) da imagem a ser armazenado no metarquivo aprimorado.
 
 *lpszDescription*<br/>
 Aponta para uma cadeia de caracteres terminada em zero que especifica o nome do aplicativo que criou a imagem, bem como o título da imagem.

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CWinFormsControl [MFC], GetControl
 - CWinFormsControl [MFC], GetControlHandle
 ms.assetid: 6406dd7b-fb89-4a18-ac3a-c010d6b6289a
-ms.openlocfilehash: c27bcfa88ec5ba8b330a62f6ecfbad7e10a54d6a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e8728c876badcf6648740cc842a1f289789bf0f4
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50547479"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178233"
 ---
 # <a name="cwinformscontrol-class"></a>Classe CWinFormsControl
 
@@ -111,10 +111,10 @@ inline BOOL CreateManagedControl(
 O tipo de dados do controle a ser criado. Deve ser um [tipo](https://msdn.microsoft.com/library/system.type) tipo de dados.
 
 *dwStyle*<br/>
-O estilo de janela a ser aplicado ao controle. Especifica uma combinação de [estilos de janela](../../mfc/reference/styles-used-by-mfc.md#window-styles). Atualmente, somente os estilos a seguir têm suporte: WS_TABSTOP, WS_VISIBLE, WS_DISABLED e WS_GROUP.
+O estilo de janela a ser aplicado ao controle. Especifica uma combinação de [estilos de janela](../../mfc/reference/styles-used-by-mfc.md#window-styles). Atualmente, há suporte para apenas os seguintes estilos: WS_TABSTOP, WS_VISIBLE, WS_DISABLED e WS_GROUP.
 
 *Rect*<br/>
-Um [estrutura RECT](../../mfc/reference/rect-structure1.md) que define as coordenadas dos cantos superior esquerdo e direito inferior do controle (primeira sobrecarga apenas).
+Um [estrutura RECT](/windows/desktop/api/windef/ns-windef-tagrect) que define as coordenadas dos cantos superior esquerdo e direito inferior do controle (primeira sobrecarga apenas).
 
 *nPlaceHolderID*<br/>
 O identificador do controle local estático titular colocado no Editor de recursos. O controle de formulários do Windows criado recentemente substitui o controle estático, supondo que sua posição, ordem z e estilos (segunda sobrecarga só).

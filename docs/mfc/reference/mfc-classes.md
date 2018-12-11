@@ -5,12 +5,12 @@ helpviewer_keywords:
 - MFC, classes
 - classes [MFC], MFC
 ms.assetid: 7b6db805-a572-43fd-9046-0fa6e3663e63
-ms.openlocfilehash: c35d7bf16b851fe9a96bdd896babfa450c726374
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: ee64ca259f2466bb02f7dd650a10dc18f8d8f8a1
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51525270"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178948"
 ---
 # <a name="mfc-classes"></a>Classes MFC
 
@@ -1099,7 +1099,7 @@ Representa um conjunto de registros selecionados de uma fonte de dados.
 Uma exibição que exibe registros de banco de dados em controles.
 
 [Classe CRect](../../atl-mfc-shared/reference/crect-class.md)<br/>
-Semelhante a um Windows [estrutura RECT](rect-structure.md).
+Semelhante a um Windows [estrutura RECT](/windows/desktop/api/windef/ns-windef-tagrect).
 
 [Classe CRectTracker](../../mfc/reference/crecttracker-class.md)<br/>
 Permite que um item seja exibido, movido e redimensionado em formas diferentes.
@@ -1165,7 +1165,7 @@ Encapsula uma transição de intervalo sinusoidal que tem um determinado interva
 Encapsula uma transição de velocidade sinusoidal que tem uma amplitude que é determinada pela velocidade inicial da variável de animação.
 
 [Classe CSize](../../atl-mfc-shared/reference/csize-class.md)<br/>
-Semelhante do Windows [tamanho](https://msdn.microsoft.com/library/windows/desktop/dd145106) estrutura, que implementa uma coordenada ou posição relativa.
+Semelhante do Windows [tamanho](/windows/desktop/api/windef/ns-windef-tagsize) estrutura, que implementa uma coordenada ou posição relativa.
 
 [Classe CSliderCtrl](../../mfc/reference/csliderctrl-class.md)<br/>
 Fornece a funcionalidade do controle deslizante Windows comuns.

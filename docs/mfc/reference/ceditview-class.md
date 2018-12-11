@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CEditView [MFC], OnTextNotFound
 - CEditView [MFC], dwStyleDefault
 ms.assetid: bf38255c-fcbe-450c-95b2-3c5e35f86c37
-ms.openlocfilehash: e0095f2c490ebde10d20ec0705b1297b976b76b8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e853a770dd1f98b1e7f06afd814962f3b3805ceb
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528655"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53177869"
 ---
 # <a name="ceditview-class"></a>Classe CEditView
 
@@ -401,7 +401,7 @@ UINT PrintInsideRect(
 Ponteiro para o contexto de dispositivo de impressora.
 
 *rectLayout*<br/>
-Referência a um [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto ou [estrutura RECT](../../mfc/reference/rect-structure1.md) especificando o retângulo no qual o texto deve ser renderizada.
+Referência a um [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto ou [estrutura RECT](/windows/desktop/api/windef/ns-windef-tagrect) especificando o retângulo no qual o texto deve ser renderizada.
 
 *nIndexStart*<br/>
 Indexar dentro do buffer do primeiro caractere a ser renderizado.

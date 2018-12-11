@@ -106,12 +106,12 @@ helpviewer_keywords:
 - CFrameWnd [MFC], m_bAutoMenuEnable
 - CFrameWnd [MFC], rectDefault
 ms.assetid: e2220aba-5bf4-4002-b960-fbcafcad01f1
-ms.openlocfilehash: 2294890ad18d88efaf4d5dd54cad319565a23e02
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3259780d73004c9d1654c26434b55627923cfe23
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481439"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178786"
 ---
 # <a name="cframewnd-class"></a>Classe CFrameWnd
 
@@ -844,7 +844,7 @@ Contém um dos seguintes valores do `enum BorderCmd`:
 - `borderSet` = 3
 
 *lpRectBorder*<br/>
-Ponteiro para um [RECT](../../mfc/reference/rect-structure1.md) estrutura ou um [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto que especifica as coordenadas da borda.
+Ponteiro para um [RECT](/windows/desktop/api/windef/ns-windef-tagrect) estrutura ou um [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto que especifica as coordenadas da borda.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -902,7 +902,7 @@ virtual BOOL OnCreateClient(
 ### <a name="parameters"></a>Parâmetros
 
 *denominado LPC*<br/>
-Um ponteiro para um Windows [CREATESTRUCT](../../mfc/reference/createstruct-structure.md) estrutura.
+Um ponteiro para um Windows [CREATESTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcreatestructa) estrutura.
 
 *pContext*<br/>
 Um ponteiro para um [CCreateContext](../../mfc/reference/ccreatecontext-structure.md) estrutura.

@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CAnimateCtrl [MFC], Seek
 - CAnimateCtrl [MFC], Stop
 ms.assetid: 5e8eb1bd-96b7-47b8-8de2-6bcbb3cc299b
-ms.openlocfilehash: 5bbd59101815d18cae92b9996aff54f0cadaf9ab
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6a22c88e1a19cd1aef1bbfacd7f255adc2b19d0e
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50608423"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178246"
 ---
 # <a name="canimatectrl-class"></a>Classe CAnimateCtrl
 
@@ -152,7 +152,7 @@ virtual BOOL Create(
 Especifica o estilo do controle de animação. Aplicar qualquer combinação das janelas de estilos descritos na seção comentários abaixo e os estilos de controle de animação são descritos em [estilos de controle de animação](/windows/desktop/Controls/animation-control-styles) no SDK do Windows.
 
 *Rect*<br/>
-Especifica a posição e o tamanho do controle de animação. Ela pode ser um [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto ou uma [RECT](../../mfc/reference/rect-structure1.md) estrutura.
+Especifica a posição e o tamanho do controle de animação. Ela pode ser um [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto ou uma [RECT](/windows/desktop/api/windef/ns-windef-tagrect) estrutura.
 
 *pParentWnd*<br/>
 Especifica a janela do pai do controle de animação, geralmente um `CDialog`. Ele não deve ser NULL.

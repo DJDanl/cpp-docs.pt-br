@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CBitmap [MFC], SetBitmapBits
 - CBitmap [MFC], SetBitmapDimension
 ms.assetid: 3980616a-c59d-495a-86e6-62bd3889c84c
-ms.openlocfilehash: 295f61ed120e957bc0d5ec1746e7d3bdfbb6d001
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6722011bf343a391fcc7180558eead5c039afc59
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624595"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178168"
 ---
 # <a name="cbitmap-class"></a>Classe CBitmap
 
@@ -155,7 +155,7 @@ Embora um bitmap não pode ser selecionado diretamente para um dispositivo de v�
 
 Quando você terminar com o `CBitmap` objeto criado pelo `CreateBitmap` funcionar, primeiro selecione o bitmap fora do contexto de dispositivo e excluir o `CBitmap` objeto.
 
-Para obter mais informações, consulte a descrição do `bmBits` campo o `BITMAP` estrutura. O [BITMAP](../../mfc/reference/bitmap-structure.md) estrutura é descrita na [CBitmap::CreateBitmapIndirect](#createbitmapindirect) função de membro.
+Para obter mais informações, consulte a descrição do `bmBits` campo o `BITMAP` estrutura. O [BITMAP](/windows/desktop/api/wingdi/ns-wingdi-tagbitmap) estrutura é descrita na [CBitmap::CreateBitmapIndirect](#createbitmapindirect) função de membro.
 
 ##  <a name="createbitmapindirect"></a>  CBitmap::CreateBitmapIndirect
 
@@ -168,7 +168,7 @@ BOOL CreateBitmapIndirect(LPBITMAP lpBitmap);
 ### <a name="parameters"></a>Parâmetros
 
 *lpBitmap*<br/>
-Aponta para um [BITMAP](../../mfc/reference/bitmap-structure.md) estrutura que contém informações sobre o bitmap.
+Aponta para um [BITMAP](/windows/desktop/api/wingdi/ns-wingdi-tagbitmap) estrutura que contém informações sobre o bitmap.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -286,7 +286,7 @@ int GetBitmap(BITMAP* pBitMap);
 ### <a name="parameters"></a>Parâmetros
 
 *pBitMap*<br/>
-Ponteiro para um [estrutura de BITMAP](../../mfc/reference/bitmap-structure.md) estrutura que receberá as propriedades da imagem. Esse parâmetro não deve ser NULL.
+Ponteiro para um [BITMAP](/windows/desktop/api/wingdi/ns-wingdi-tagbitmap) estrutura que receberá as propriedades da imagem. Esse parâmetro não deve ser NULL.
 
 ### <a name="return-value"></a>Valor de retorno
 

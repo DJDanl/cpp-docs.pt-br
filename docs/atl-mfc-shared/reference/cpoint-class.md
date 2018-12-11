@@ -11,12 +11,12 @@ helpviewer_keywords:
 - POINT structure
 - CPoint class
 ms.assetid: a6d4db93-35cc-444d-9221-c3e160f6edaa
-ms.openlocfilehash: 5df8dbe03a59f899f2157eff842218e91e8f40dc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4f6ab15f80ac448b4e7383e2db92f22262c20d08
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50500614"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178063"
 ---
 # <a name="cpoint-class"></a>Classe CPoint
 
@@ -55,9 +55,9 @@ class CPoint : public tagPOINT
 
 ## <a name="remarks"></a>Comentários
 
-Ele também inclui funções de membro para manipular `CPoint` e [ponto](../../mfc/reference/point-structure.md) estruturas.
+Ele também inclui funções de membro para manipular `CPoint` e [ponto](/windows/desktop/api/windef/ns-windef-tagpoint) estruturas.
 
-Um `CPoint` objeto pode ser usado onde quer que um `POINT` estrutura é usada. Os operadores dessa classe que interagem com um "tamanho" aceitam qualquer um [CSize](../../atl-mfc-shared/reference/csize-class.md) objetos ou [tamanho](https://msdn.microsoft.com/library/windows/desktop/dd145106) estruturas, desde que os dois são intercambiáveis.
+Um `CPoint` objeto pode ser usado onde quer que um `POINT` estrutura é usada. Os operadores dessa classe que interagem com um "tamanho" aceitam qualquer um [CSize](../../atl-mfc-shared/reference/csize-class.md) objetos ou [tamanho](/windows/desktop/api/windef/ns-windef-tagsize) estruturas, desde que os dois são intercambiáveis.
 
 > [!NOTE]
 >  Essa classe é derivada de `tagPOINT` estrutura. (O nome `tagPOINT` é um nome menos usado para o `POINT` estrutura.) Isso significa que os membros de dados do `POINT` estrutura de `x` e `y`, são membros de dados acessíveis de `CPoint`.
@@ -96,10 +96,10 @@ Especifica o valor do membro `x` de `CPoint`.
 Especifica o valor do membro `y` de `CPoint`.
 
 *initPt*<br/>
-[PONTO](../../mfc/reference/point-structure.md) estrutura ou `CPoint` que especifica os valores usados para inicializar `CPoint`.
+[PONTO](/windows/desktop/api/windef/ns-windef-tagpoint) estrutura ou `CPoint` que especifica os valores usados para inicializar `CPoint`.
 
 *initSize*<br/>
-[TAMANHO](https://msdn.microsoft.com/library/windows/desktop/dd145106) estrutura ou [CSize](../../atl-mfc-shared/reference/csize-class.md) que especifica os valores usados para inicializar `CPoint`.
+[TAMANHO](/windows/desktop/api/windef/ns-windef-tagsize) estrutura ou [CSize](../../atl-mfc-shared/reference/csize-class.md) que especifica os valores usados para inicializar `CPoint`.
 
 *dwPoint*<br/>
 Conjuntos a `x` membro para a palavra de ordem baixa *dwPoint* e o `y` membro para a palavra de ordem alta *dwPoint*.
@@ -154,10 +154,10 @@ Especifica a quantidade para deslocar o `x` membro o `CPoint`.
 Especifica a quantidade para deslocar o `y` membro o `CPoint`.
 
 *ponto*<br/>
-Especifica a quantidade ( [ponto](../../mfc/reference/point-structure.md) ou `CPoint`) para deslocar o `CPoint`.
+Especifica a quantidade ( [ponto](/windows/desktop/api/windef/ns-windef-tagpoint) ou `CPoint`) para deslocar o `CPoint`.
 
 *size*<br/>
-Especifica a quantidade ( [tamanho](https://msdn.microsoft.com/library/windows/desktop/dd145106) ou [CSize](../../atl-mfc-shared/reference/csize-class.md)) para deslocar o `CPoint`.
+Especifica a quantidade ( [tamanho](/windows/desktop/api/windef/ns-windef-tagsize) ou [CSize](../../atl-mfc-shared/reference/csize-class.md)) para deslocar o `CPoint`.
 
 ### <a name="example"></a>Exemplo
 
@@ -174,7 +174,7 @@ BOOL operator==(POINT point) const throw();
 ### <a name="parameters"></a>Parâmetros
 
 *ponto*<br/>
-Contém uma [ponto](../../mfc/reference/point-structure.md) estrutura ou `CPoint` objeto.
+Contém uma [ponto](/windows/desktop/api/windef/ns-windef-tagpoint) estrutura ou `CPoint` objeto.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -195,7 +195,7 @@ BOOL operator!=(POINT point) const throw();
 ### <a name="parameters"></a>Parâmetros
 
 *ponto*<br/>
-Contém uma [ponto](../../mfc/reference/point-structure.md) estrutura ou `CPoint` objeto.
+Contém uma [ponto](/windows/desktop/api/windef/ns-windef-tagpoint) estrutura ou `CPoint` objeto.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -217,10 +217,10 @@ void operator+=(POINT point) throw();
 ### <a name="parameters"></a>Parâmetros
 
 *size*<br/>
-Contém uma [tamanho](https://msdn.microsoft.com/library/windows/desktop/dd145106) estrutura ou [CSize](../../atl-mfc-shared/reference/csize-class.md) objeto.
+Contém uma [tamanho](/windows/desktop/api/windef/ns-windef-tagsize) estrutura ou [CSize](../../atl-mfc-shared/reference/csize-class.md) objeto.
 
 *ponto*<br/>
-Contém uma [ponto](../../mfc/reference/point-structure.md) estrutura ou [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objeto.
+Contém uma [ponto](/windows/desktop/api/windef/ns-windef-tagpoint) estrutura ou [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objeto.
 
 ### <a name="remarks"></a>Comentários
 
@@ -246,10 +246,10 @@ void operator-=(POINT point) throw();
 ### <a name="parameters"></a>Parâmetros
 
 *size*<br/>
-Contém uma [tamanho](https://msdn.microsoft.com/library/windows/desktop/dd145106) estrutura ou [CSize](../../atl-mfc-shared/reference/csize-class.md) objeto.
+Contém uma [tamanho](/windows/desktop/api/windef/ns-windef-tagsize) estrutura ou [CSize](../../atl-mfc-shared/reference/csize-class.md) objeto.
 
 *ponto*<br/>
-Contém uma [ponto](../../mfc/reference/point-structure.md) estrutura ou [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objeto.
+Contém uma [ponto](/windows/desktop/api/windef/ns-windef-tagpoint) estrutura ou [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objeto.
 
 ### <a name="remarks"></a>Comentários
 
@@ -276,13 +276,13 @@ CRect operator+(const RECT* lpRect) const throw();
 ### <a name="parameters"></a>Parâmetros
 
 *size*<br/>
-Contém uma [tamanho](https://msdn.microsoft.com/library/windows/desktop/dd145106) estrutura ou [CSize](../../atl-mfc-shared/reference/csize-class.md) objeto.
+Contém uma [tamanho](/windows/desktop/api/windef/ns-windef-tagsize) estrutura ou [CSize](../../atl-mfc-shared/reference/csize-class.md) objeto.
 
 *ponto*<br/>
-Contém uma [ponto](../../mfc/reference/point-structure.md) estrutura ou [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objeto.
+Contém uma [ponto](/windows/desktop/api/windef/ns-windef-tagpoint) estrutura ou [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objeto.
 
 *lpRect*<br/>
-Contém um ponteiro para um [RECT](../../mfc/reference/rect-structure.md) estrutura ou [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto.
+Contém um ponteiro para um [RECT](/windows/desktop/api/windef/ns-windef-tagrect) estrutura ou [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -312,13 +312,13 @@ CPoint operator-() const throw();
 ### <a name="parameters"></a>Parâmetros
 
 *ponto*<br/>
-Um [ponto](../../mfc/reference/point-structure.md) estrutura ou [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objeto.
+Um [ponto](/windows/desktop/api/windef/ns-windef-tagpoint) estrutura ou [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objeto.
 
 *size*<br/>
-Um [tamanho](https://msdn.microsoft.com/library/windows/desktop/dd145106) estrutura ou [CSize](../../atl-mfc-shared/reference/csize-class.md) objeto.
+Um [tamanho](/windows/desktop/api/windef/ns-windef-tagsize) estrutura ou [CSize](../../atl-mfc-shared/reference/csize-class.md) objeto.
 
 *lpRect*<br/>
-Um ponteiro para um [RECT](../../mfc/reference/rect-structure.md) estrutura ou um [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto.
+Um ponteiro para um [RECT](/windows/desktop/api/windef/ns-windef-tagrect) estrutura ou um [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -344,7 +344,7 @@ Use o operador unário para negar a um ponto. Por exemplo, usando o operador un�
 
 [Exemplo MFC MDI](../../visual-cpp-samples.md)<br/>
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
-[Estrutura POINT](../../mfc/reference/point-structure.md)<br/>
+[Estrutura POINT](/windows/desktop/api/windef/ns-windef-tagpoint)<br/>
 [Classe CRect](../../atl-mfc-shared/reference/crect-class.md)<br/>
 [Classe CSize](../../atl-mfc-shared/reference/csize-class.md)
 

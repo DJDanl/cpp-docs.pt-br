@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CImageList [MFC], Write
 - CImageList [MFC], m_hImageList
 ms.assetid: b6d1a704-1c82-4548-8a8f-77972adc98a5
-ms.openlocfilehash: d311c064d9b91967a60823fc3fd0e43f22a119c6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5bcf815fce4123ca1014e1679fd810c1ce321be4
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50500757"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178584"
 ---
 # <a name="cimagelist-class"></a>Classe CImageList
 
@@ -694,7 +694,7 @@ O índice baseado em zero da imagem a ser desenhado.
 Um [ponto](https://msdn.microsoft.com/library/windows/desktop/dd162805) estrutura que contém as coordenadas x e y-onde a imagem será desenhada.
 
 *SZ*<br/>
-Um [tamanho](https://msdn.microsoft.com/library/windows/desktop/dd145106) estrutura que indica o tamanho da imagem a ser desenhado.
+Um [tamanho](/windows/desktop/api/windef/ns-windef-tagsize) estrutura que indica o tamanho da imagem a ser desenhado.
 
 *ptOrigin*<br/>
 Um [ponto](https://msdn.microsoft.com/library/windows/desktop/dd162805) estrutura que contém as coordenadas x e y-especificando o canto superior esquerdo da operação de desenho em relação a própria imagem. Os pixels da imagem à esquerda da coordenada x e superiores a coordenada y não são desenhados.

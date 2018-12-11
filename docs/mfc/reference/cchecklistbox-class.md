@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CCheckListBox [MFC], SetCheck
 - CCheckListBox [MFC], SetCheckStyle
 ms.assetid: 1dd78438-00e8-441c-b36f-9c4f9ac0d019
-ms.openlocfilehash: b3bf93a876f9092d5615b75ca45fea71341d3557
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: b1e64e947f798becef32fa4d99f21e61133cc8fc
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327337"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53177830"
 ---
 # <a name="cchecklistbox-class"></a>Classe CCheckListBox
 
@@ -146,7 +146,7 @@ virtual BOOL Create(
 Especifica o estilo da caixa de lista de verificação. O estilo deve ser LBS_HASSTRINGS e LBS_OWNERDRAWFIXED (todos os itens na lista são da mesma altura) ou LBS_OWNERDRAWVARIABLE (itens da lista são de alturas diferentes). Esse estilo pode ser combinado com outras [estilos de caixa de listagem](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) exceto LBS_USETABSTOPS.
 
 *Rect*<br/>
-Especifica o tamanho da caixa de lista de verificação e a posição. Pode ser um [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto ou uma [RECT](../../mfc/reference/rect-structure1.md) estrutura.
+Especifica o tamanho da caixa de lista de verificação e a posição. Pode ser um [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto ou uma [RECT](/windows/desktop/api/windef/ns-windef-tagrect) estrutura.
 
 *pParentWnd*<br/>
 Especifica a janela do pai da caixa de lista de verificação (geralmente um `CDialog` objeto). Ele não deve ser NULL.
@@ -193,7 +193,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ### <a name="parameters"></a>Parâmetros
 
 *lpDrawItemStruct*<br/>
-Um ponteiro longo para um [DRAWITEMSTRUCT](../../mfc/reference/drawitemstruct-structure.md) estrutura que contém informações sobre o tipo de desenho necessárias.
+Um ponteiro longo para um [DRAWITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct) estrutura que contém informações sobre o tipo de desenho necessárias.
 
 ### <a name="remarks"></a>Comentários
 
@@ -290,7 +290,7 @@ virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
 ### <a name="parameters"></a>Parâmetros
 
 *lpMeasureItemStruct*<br/>
-Um ponteiro longo para um [MEASUREITEMSTRUCT](../../mfc/reference/measureitemstruct-structure.md) estrutura.
+Um ponteiro longo para um [MEASUREITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagmeasureitemstruct) estrutura.
 
 ### <a name="remarks"></a>Comentários
 

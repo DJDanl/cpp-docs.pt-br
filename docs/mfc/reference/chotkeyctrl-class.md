@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CHotKeyCtrl [MFC], SetHotKey
 - CHotKeyCtrl [MFC], SetRules
 ms.assetid: 896f9766-0718-4f58-aab2-20325e118ca6
-ms.openlocfilehash: 3ec5b734b23a27522fe430d24d2a65eebcca3dd3
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 9a06f3bd8a8c5646f384c3f788518078b121bfe1
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694719"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178129"
 ---
 # <a name="chotkeyctrl-class"></a>Classe CHotKeyCtrl
 
@@ -111,7 +111,7 @@ virtual BOOL Create(
 Especifica o estilo do controle de chave ativa. Aplica qualquer combinação de estilos de controle. Ver [estilos de controle comuns](/windows/desktop/Controls/common-control-styles) no SDK do Windows para obter mais informações.
 
 *Rect*<br/>
-Especifica o tamanho e a posição do controle de tecla ativo. Ela pode ser um [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto ou uma [estrutura RECT](../../mfc/reference/rect-structure1.md).
+Especifica o tamanho e a posição do controle de tecla ativo. Ela pode ser um [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto ou uma [estrutura RECT](/windows/desktop/api/windef/ns-windef-tagrect).
 
 *pParentWnd*<br/>
 Especifica o hot chave janela pai do controle, normalmente um [CDialog](../../mfc/reference/cdialog-class.md). Ele não deve ser NULL.

@@ -102,12 +102,12 @@ helpviewer_keywords:
 - CListBox [MFC], SetTopIndex
 - CListBox [MFC], VKeyToItem
 ms.assetid: 7ba3c699-c286-4cd9-9066-532c41ec05d1
-ms.openlocfilehash: 38463d5e7daf86c40cdef429cd80b18598e19025
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ad9f945a91a96c40afe614240a847a028ba5b5d9
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50656086"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178610"
 ---
 # <a name="clistbox-class"></a>Classe CListBox
 
@@ -339,7 +339,7 @@ Um ponteiro longo para um `COMPAREITEMSTRUCT` estrutura.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Indica a posição relativa dos dois itens descrito o [COMPAREITEMSTRUCT](../../mfc/reference/compareitemstruct-structure.md) estrutura. Pode ser qualquer um dos seguintes valores:
+Indica a posição relativa dos dois itens descrito o [COMPAREITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcompareitemstruct) estrutura. Pode ser qualquer um dos seguintes valores:
 
 |Valor|Significado|
 |-----------|-------------|
@@ -426,7 +426,7 @@ virtual void DeleteItem(LPDELETEITEMSTRUCT lpDeleteItemStruct);
 ### <a name="parameters"></a>Parâmetros
 
 *lpDeleteItemStruct*<br/>
-Um ponteiro longo para um Windows [DELETEITEMSTRUCT](../../mfc/reference/deleteitemstruct-structure.md) estrutura que contém informações sobre o item excluído.
+Um ponteiro longo para um Windows [DELETEITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdeleteitemstruct) estrutura que contém informações sobre o item excluído.
 
 ### <a name="remarks"></a>Comentários
 
@@ -511,7 +511,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ### <a name="parameters"></a>Parâmetros
 
 *lpDrawItemStruct*<br/>
-Um ponteiro longo para um [DRAWITEMSTRUCT](../../mfc/reference/drawitemstruct-structure.md) estrutura que contém informações sobre o tipo de desenho necessárias.
+Um ponteiro longo para um [DRAWITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct) estrutura que contém informações sobre o tipo de desenho necessárias.
 
 ### <a name="remarks"></a>Comentários
 
@@ -770,7 +770,7 @@ int GetItemRect(
 Especifica o índice baseado em zero do item.
 
 *lpRect*<br/>
-Especifica um ponteiro longo para um [estrutura RECT](../../mfc/reference/rect-structure1.md) que recebe as coordenadas de cliente de caixa de listagem do item.
+Especifica um ponteiro longo para um [estrutura RECT](/windows/desktop/api/windef/ns-windef-tagrect) que recebe as coordenadas de cliente de caixa de listagem do item.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -1068,7 +1068,7 @@ virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
 ### <a name="parameters"></a>Parâmetros
 
 *lpMeasureItemStruct*<br/>
-Um ponteiro longo para um [MEASUREITEMSTRUCT](../../mfc/reference/measureitemstruct-structure.md) estrutura.
+Um ponteiro longo para um [MEASUREITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagmeasureitemstruct) estrutura.
 
 ### <a name="remarks"></a>Comentários
 

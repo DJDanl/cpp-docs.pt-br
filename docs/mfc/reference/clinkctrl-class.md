@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CLinkCtrl [MFC], SetItemState
 - CLinkCtrl [MFC], SetItemUrl
 ms.assetid: d1cd876a-ecca-42db-8ac4-9cd327df0cd4
-ms.openlocfilehash: 79c6aa9f0448ed399554d634d48f666aaaf60566
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b24b92006b73dff2ae9f091256ef8401efc64fe9
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50597555"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178039"
 ---
 # <a name="clinkctrl-class"></a>Classe CLinkCtrl
 
@@ -134,7 +134,7 @@ Ponteiro para uma cadeia de caracteres terminada em zero que contém a área mar
 Especifica o estilo do controle de link. Aplica qualquer combinação de estilos de controle. Ver [estilos de controle comuns](/windows/desktop/Controls/common-control-styles) no `Windows SDK` para obter mais informações.
 
 *Rect*<br/>
-Especifica o tamanho e a posição do controle de link. Ela pode ser um [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto ou uma [RECT](../../mfc/reference/rect-structure1.md) estrutura.
+Especifica o tamanho e a posição do controle de link. Ela pode ser um [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto ou uma [RECT](/windows/desktop/api/windef/ns-windef-tagrect) estrutura.
 
 *pParentWnd*<br/>
 Especifica a janela pai do controle de link. Ele não deve ser NULL.
@@ -196,7 +196,7 @@ Especifica o estilo estendido do controle de link. Para obter uma lista dos esti
 Especifica o estilo do controle de link. Aplica qualquer combinação de estilos de controle. Para obter mais informações, consulte [estilos de controle comuns](/windows/desktop/Controls/common-control-styles) no SDK do Windows.
 
 *Rect*<br/>
-Especifica o tamanho e a posição do controle de link. Ela pode ser um [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto ou uma [RECT](../../mfc/reference/rect-structure1.md) estrutura.
+Especifica o tamanho e a posição do controle de link. Ela pode ser um [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto ou uma [RECT](/windows/desktop/api/windef/ns-windef-tagrect) estrutura.
 
 *pParentWnd*<br/>
 Especifica a janela pai do controle de link. Ele não deve ser NULL.
@@ -245,7 +245,7 @@ int GetIdealSize(
 |Parâmetro|Descrição|
 |---------------|-----------------|
 |*cxMaxWidth*|[in] A largura máxima do link, em pixels.|
-|[out] \* *pSize*|Um ponteiro para um Windows [tamanho](https://msdn.microsoft.com/library/windows/desktop/dd145106) estrutura. Quando este método retorna, o *cy* membro a `SIZE` estrutura contém a altura do texto do link ideal para a largura do texto de link que é especificada pelo *cxMaxWidth*. O *cx* membro da estrutura contém a largura do texto de link que é realmente necessária.|
+|[out] \* *pSize*|Um ponteiro para um Windows [tamanho](/windows/desktop/api/windef/ns-windef-tagsize) estrutura. Quando este método retorna, o *cy* membro a `SIZE` estrutura contém a altura do texto do link ideal para a largura do texto de link que é especificada pelo *cxMaxWidth*. O *cx* membro da estrutura contém a largura do texto de link que é realmente necessária.|
 
 ### <a name="return-value"></a>Valor de retorno
 
