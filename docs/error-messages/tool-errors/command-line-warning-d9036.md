@@ -1,20 +1,27 @@
 ---
 title: Aviso D9036 (linha de comando)
-ms.date: 11/04/2016
+ms.date: 12/10/2018
 f1_keywords:
 - D9036
 helpviewer_keywords:
 - D9036
 ms.assetid: 68276e84-8d4e-4d4a-a9db-2874c81dfe66
-ms.openlocfilehash: b523413bce941d9721b88c1940739558fa56c753
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2dd6cd528f6a3799176c77435ebd62d103303806
+ms.sourcegitcommit: 6990f842fefc27b522b15cf352f3517b319d78da
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50465215"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53248527"
 ---
 # <a name="command-line-warning-d9036"></a>Aviso D9036 (linha de comando)
 
-option_2 em vez de 'option_1'
+> '*opção\_2*'em vez de'*opção\_1*'
 
-Aviso D9036 é uma continuação do [D9035 de aviso de linha de comando](../../error-messages/tool-errors/command-line-warning-d9035.md).
+## <a name="remarks"></a>Comentários
+
+Aviso D9036 é uma continuação do [D9035 de aviso de linha de comando](../../error-messages/tool-errors/command-line-warning-d9035.md). Se uma opção de compilador é preferencial em vez da opção preterida, ele é listado aqui. Para obter links para obter mais informações, consulte [opções de compilador removidos e preteridos](../../build/reference/compiler-options-listed-by-category.md#deprecated-and-removed-compiler-options).
+
+## <a name="see-also"></a>Consulte também
+
+[Opções do compilador removidos e preteridos](../../build/reference/compiler-options-listed-by-category.md#deprecated-and-removed-compiler-options)<br/>
+[Aviso de linha de comando D9035](command-line-warning-d9035.md)

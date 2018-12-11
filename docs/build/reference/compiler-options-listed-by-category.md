@@ -4,12 +4,12 @@ ms.date: 11/12/2018
 helpviewer_keywords:
 - compiler options, C++
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
-ms.openlocfilehash: aa93158e518950efa9d1f2f8092aeabbc3c7724c
-ms.sourcegitcommit: 99437d7da4528ce72cabe6b6a65a9be5dfd090f8
+ms.openlocfilehash: ef61ebbfad62e6a7bf764bad35204247e47d8ddb
+ms.sourcegitcommit: 6990f842fefc27b522b15cf352f3517b319d78da
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51598815"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53248566"
 ---
 # <a name="compiler-options-listed-by-category"></a>Opções do compilador listadas por categoria
 
@@ -62,7 +62,7 @@ Este artigo contém uma lista categórica de opções do compilador. Para obter 
 |[/homeparams](homeparams-copy-register-parameters-to-stack.md)|Força os parâmetros passados em registros a serem gravados em seus locais na pilha mediante a entrada da função. Essa opção do compilador é apenas para x64 compiladores (native e compilação cruzada).|
 |[/hotpatch](hotpatch-create-hotpatchable-image.md)|Cria uma imagem capaz de aplicar patches sob demanda.|
 |[/Qfast_transcendentals](qfast-transcendentals-force-fast-transcendentals.md)|Gera transcendentais rápidos.|
-|[QIfist](qifist-suppress-ftol.md)|Preterido. Suprime a chamada da função auxiliar `_ftol` quando é necessária uma conversão de um tipo de ponto flutuante para um tipo integral. (apenas x86)|
+|[/QIfist](qifist-suppress-ftol.md)|Preterido. Suprime a chamada da função auxiliar `_ftol` quando é necessária uma conversão de um tipo de ponto flutuante para um tipo integral. (apenas x86)|
 |[/Qimprecise_fwaits](qimprecise-fwaits-remove-fwaits-inside-try-blocks.md)|Remove comandos `fwait` dentro de blocos `try`.|
 |[/Qpar](qpar-auto-parallelizer.md)|Habilita a paralelização automática de loops.|
 |[/Qpar-report](qpar-report-auto-parallelizer-reporting-level.md)|Habilita os níveis de relatório para paralelização automática.|
@@ -207,7 +207,7 @@ Este artigo contém uma lista categórica de opções do compilador. Para obter 
 |[/GZ](gz-enable-stack-frame-run-time-error-checking.md)|Preterido. Habilita as verificações rápidas. Use [/rtc1](rtc-run-time-error-checks.md) em vez disso.|
 |[/H](h-restrict-length-of-external-names.md)|Preterido. Restringe o tamanho de nomes externos (públicos).|
 |[/Og](og-global-optimizations.md)|Preterido. Usa otimizações globais.|
-|[QIfist](qifist-suppress-ftol.md)|Preterido. Uma vez é usado para especificar como converter de um tipo de ponto flutuante para um tipo integral.|
+|[/QIfist](qifist-suppress-ftol.md)|Preterido. Uma vez é usado para especificar como converter de um tipo de ponto flutuante para um tipo integral.|
 |[/V](v-version-number.md)|Preterido. Define a cadeia de caracteres de versão de arquivo. obj.|
 |[/Wp64](wp64-detect-64-bit-portability-issues.md)|Obsoleto. Detecta problemas de portabilidade de 64 bits.|
 |[/Yd](yd-place-debug-information-in-object-file.md)|Preterido. Coloca informações de depuração completas em todos os arquivos de objeto. Use [/Zi](z7-zi-zi-debug-information-format.md) em vez disso.|
