@@ -12,12 +12,12 @@ helpviewer_keywords:
 - TCHAR.H data types, mapping
 - mappings [C++], TCHAR.H
 ms.assetid: 298583c5-22c3-40f6-920e-9ec96d42abd8
-ms.openlocfilehash: 81e51f136a42c0d0db12744735521ae2b3cdb5f6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dcb194c72ca2a64317cddda8a1559e78edc0978f
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50510702"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53626663"
 ---
 # <a name="using-tcharh-data-types-with-mbcs-code"></a>Usando tipos de dados TCHAR.H com código _MBCS
 
@@ -68,4 +68,4 @@ A seguir estão três soluções para evitar esse conflito de tipo (e os avisos 
 
 ## <a name="see-also"></a>Consulte também
 
-[Mapeamentos de texto genéricos em Tchar.h](../text/generic-text-mappings-in-tchar-h.md)
+[Mapeamentos de texto genéricos em TCHAR. h](../text/generic-text-mappings-in-tchar-h.md)

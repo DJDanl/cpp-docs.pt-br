@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Unicode [C++], programming with
 - Unicode [C++], MFC and C run-time functions
 ms.assetid: a4c9770f-6c9c-447c-996b-980920288bed
-ms.openlocfilehash: 01e5866866bfc9cf81b243c569e527ab5019b928
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: df9335fa2fc66ebba73b5c92ecd8007ca435f499
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437918"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53627261"
 ---
 # <a name="unicode-programming-summary"></a>Resumo de programação Unicode
 
@@ -22,7 +22,7 @@ Para aproveitar o suporte de tempo de execução MFC e C para Unicode, você pre
 
 - Especifique o ponto de entrada.
 
-   No **saída** página do **vinculador** pasta do projeto [páginas de propriedades](../ide/property-pages-visual-cpp.md) caixa de diálogo, defina o **ponto de entrada** símbolo a ser `wWinMainCRTStartup`.
+   No **avançado** página do **vinculador** pasta do projeto [páginas de propriedades](../ide/property-pages-visual-cpp.md) caixa de diálogo, defina o **ponto de entrada** símbolo a ser `wWinMainCRTStartup`.
 
 - Use tipos e funções de tempo de execução portátil.
 

@@ -17,12 +17,12 @@ helpviewer_keywords:
 - optimization, linker
 - /OPT linker option
 ms.assetid: 8f229863-5f53-48a8-9478-243a647093ac
-ms.openlocfilehash: ad89dfa29df6e4ef500e01e53f203fa3c401602b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1a6fa8b9c923ff697831c29b8004ce360baf7d77
+ms.sourcegitcommit: ae2f71fe0d64f1a90ef722759fe93c82abc064ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50638224"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53587883"
 ---
 # <a name="opt-optimizations"></a>/OPT (Otimizações)
 
@@ -67,7 +67,7 @@ Por padrão, o **/OPT: lbr** opção é definida quando o vínculo incremental n
 
 ## <a name="remarks"></a>Comentários
 
-Quando usado na linha de comando, o vinculador usa como padrão **/OPT: REF, ICF, LBR**. Se **/Debug** for especificado, o padrão é **/OPT: NOREF, NOICR, NOLBR**.
+Quando usado na linha de comando, o vinculador usa como padrão **/OPT: REF, ICF, LBR**. Se **/Debug** for especificado, o padrão é **/OPT: NOREF, NOICF, NOLBR**.
 
 O **/opt** otimizações de geralmente diminuir o tamanho da imagem e aumentar a velocidade do programa. Esses aprimoramentos podem ser significativas em programas maiores, por isso, elas são habilitadas por padrão para compilações para venda.
 

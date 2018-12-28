@@ -2,12 +2,12 @@
 title: alignof e alignas (C++)
 ms.date: 11/04/2016
 ms.assetid: 1d18aa8a-9621-4fb5-86e5-4cc86d5187f4
-ms.openlocfilehash: e5d023d7969764bdd36030a508abdd94068e48b5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 825df25494497e13d29212f7f951be8247b6f136
+ms.sourcegitcommit: 185b8ee6dd4e10045df730c5b957b9729813da2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50493646"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53411917"
 ---
 # <a name="alignof-and-alignas-c"></a>alignof e alignas (C++)
 
@@ -15,7 +15,7 @@ O **alignas** especificador de tipo é uma maneira padrão de C++ portáteis, pa
 
 ## <a name="example"></a>Exemplo
 
-Você pode usar **alignas** em uma classe, ignorada ou união, ou em membros individuais. Quando vários **alignas** especificadores forem encontrados, o compilador escolherá aquela mais rígida, (aquele com o maior valor).
+Você pode usar **alignas** em uma classe, struct ou união, ou em membros individuais. Quando vários **alignas** especificadores forem encontrados, o compilador escolherá aquela mais rígida, (aquele com o maior valor).
 
 ```cpp
 // alignas_alignof.cpp

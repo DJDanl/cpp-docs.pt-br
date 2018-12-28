@@ -1,48 +1,44 @@
 ---
 title: /homeparams (copiar parâmetros de registro para pilha)
-ms.date: 11/04/2016
+ms.date: 12/17/2018
 f1_keywords:
 - /homeparams
 helpviewer_keywords:
 - /homeparams compiler option [C++]
 - -homeparams compiler option [C++]
 ms.assetid: 51067de4-24f7-436b-b8d9-bc867a7d53aa
-ms.openlocfilehash: 952a38d2ab1268ee3dc1fda0899a3ba047281b44
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ffb5ca602feb7a369bb31d0277834786d66ac12a
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50518450"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53627391"
 ---
 # <a name="homeparams-copy-register-parameters-to-stack"></a>/homeparams (copiar parâmetros de registro para pilha)
 
-Força os parâmetros passados em registros a serem gravados em seus locais na pilha mediante a entrada da função.
+Força os parâmetros passados em registros também ser gravados em seus locais na pilha mediante a entrada da função.
 
 ## <a name="syntax"></a>Sintaxe
 
-```
-/homeparams
-```
+> **/homeparams**
 
 ## <a name="remarks"></a>Comentários
 
-Essa opção do compilador é apenas para x64 compiladores (native e compilação cruzada).
+Essa opção do compilador só está disponível nos compiladores que direcionam x64 e nativo.
 
-Quando os parâmetros são passados em x64 compilação, as convenções de chamada exigem stackspace para parâmetros, mesmo para os parâmetros passados em registros. Para obter mais informações, consulte [passagem de parâmetro](../../build/parameter-passing.md). No entanto, por padrão na compilação de versão, os parâmetros de registro serão não gravados para a pilha, no espaço do que já é fornecido para os parâmetros. Isso torna difícil de depurar uma compilação otimizada (versão) do seu programa.
+A convenção de chamada de x64 requer espaço na pilha a ser alocado para todos os parâmetros, mesmo para os parâmetros passados em registros. Para obter mais informações, consulte [passagem de parâmetro](../../build/x64-calling-convention.md#parameter-passing). Por padrão, os parâmetros de registro não são copiados para o espaço de pilha alocado para eles em compilações de versão. Isso torna difícil de depurar um build de versão otimizada do programa.
 
-Para um build de versão, use **/homeparams** para garantir que você pode depurar seu aplicativo. **/homeparams** implica uma desvantagem de desempenho, porque ele requer um ciclo para carregar os parâmetros de registro na pilha.
+Para builds de versão, você pode usar o **/homeparams** opção para forçar o compilador para copiar registrar parâmetros para a pilha, para garantir que você pode depurar seu aplicativo. **/homeparams** implica uma desvantagem de desempenho, porque ele requer um ciclo extra para carregar os parâmetros de registro para a pilha.
 
-Em uma compilação de depuração, a pilha sempre é preenchida com os parâmetros passados em registros.
+Em compilações de depuração, a pilha sempre é preenchida com os parâmetros passados em registros.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio
 
 1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, confira [Trabalhando com propriedades do projeto](../../ide/working-with-project-properties.md).
 
-1. Clique o **C/C++** pasta.
+1. Abra o **propriedades de configuração** > **C/C++** > **linha de comando** página de propriedades.
 
-1. Clique o **linha de comando** página de propriedades.
-
-1. Digite a opção de compilador na **opções adicionais** caixa.
+1. Insira a opção de compilador na **opções adicionais** caixa.
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Para definir essa opção do compilador via programação
 

@@ -33,12 +33,12 @@ f1_keywords:
 helpviewer_keywords:
 - concurrent_vector class
 ms.assetid: a217b4ac-af2b-4d41-94eb-09a75ee28622
-ms.openlocfilehash: 367a5ed6bf9d42730a309570c93afd1b315bae25
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e8036b0942600e5d47254583e2675c525010a5c1
+ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50501745"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53657559"
 ---
 # <a name="concurrentvector-class"></a>Classe concurrent_vector
 
@@ -121,7 +121,7 @@ O tipo que representa o objeto de alocador armazenado que encapsula detalhes sob
 
 |Nome|Descrição|
 |----------|-----------------|
-|[operator[]](#operator_at)|Sobrecarregado. Fornece acesso ao elemento no índice especificado no vetor simultâneo. Esse método é seguro em simultaneidade para operações de leitura e também ao mesmo tempo, aumentando o vetor, desde que a garantir que o valor `_Index` é menor que o tamanho do vetor simultâneo.|
+|[operator\[\]](#operator_at)|Sobrecarregado. Fornece acesso ao elemento no índice especificado no vetor simultâneo. Esse método é seguro em simultaneidade para operações de leitura e também ao mesmo tempo, aumentando o vetor, desde que a garantir que o valor `_Index` é menor que o tamanho do vetor simultâneo.|
 |[operator=](#operator_eq)|Sobrecarregado. Atribui o conteúdo de outro `concurrent_vector` objeto para esse outro. Esse método não é seguro em simultaneidade.|
 
 ## <a name="remarks"></a>Comentários

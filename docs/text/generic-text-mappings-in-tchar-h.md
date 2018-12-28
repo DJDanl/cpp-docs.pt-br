@@ -1,5 +1,5 @@
 ---
-title: Mapeamentos de texto genéricos em Tchar.h
+title: Mapeamentos de texto genéricos em TCHAR. h
 ms.date: 11/04/2016
 f1_keywords:
 - tchar.h
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - TCHAR.H data types, mapping
 - mappings [C++], TCHAR.H
 ms.assetid: 01e1bb74-5a01-4093-8720-68b6c1fdda80
-ms.openlocfilehash: 969894502689dd5aeeeaa27404bafc3c483c1336
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bf7c5e58b88da4f60d2e784692cb6d4a0ed84970
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50667578"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53627405"
 ---
-# <a name="generic-text-mappings-in-tcharh"></a>Mapeamentos de texto genéricos em Tchar.h
+# <a name="generic-text-mappings-in-tcharh"></a>Mapeamentos de texto genéricos em TCHAR. h
 
 Para simplificar o transporte de código para uso internacional, a biblioteca de tempo de execução da Microsoft fornece mapeamentos de texto genérico de específico da Microsoft para muitos tipos de dados, rotinas e outros objetos. Você pode usar esses mapeamentos, que são definidos em TCHAR. h, para escrever código genérico que pode ser compilado para o byte único, vários bytes, ou conjuntos de caracteres Unicode, dependendo da constante de manifesto que você define usando uma `#define` instrução. Mapeamentos de texto genérico são extensões da Microsoft não compatíveis com ANSI.
 

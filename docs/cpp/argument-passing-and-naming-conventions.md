@@ -1,6 +1,6 @@
 ---
 title: Passagem de argumento e convenções de nomenclatura
-ms.date: 11/04/2016
+ms.date: 12/17/2018
 helpviewer_keywords:
 - argument passing [C++], conventions
 - arguments [C++], widening
@@ -13,12 +13,12 @@ helpviewer_keywords:
 - passing arguments [C++], conventions
 - conventions [C++], argument names
 ms.assetid: de468979-eab8-4158-90c5-c198932f93b9
-ms.openlocfilehash: 735e703e3e7d3ddb55a04fb0d29b3899682fe24e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ca09d31d3d8d50ca94543c5e02262edd7b2deefc
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50473288"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53627235"
 ---
 # <a name="argument-passing-and-naming-conventions"></a>Passagem de argumento e convenções de nomenclatura
 
@@ -31,11 +31,11 @@ Nas plataformas x86, todos os argumentos são ampliados para 32 bits quando pass
 O compilador gera códigos de prólogo e de epílogo para salvar e restaurar os registros de ESI, EDI, EBX e EBP, se eles forem usados na função.
 
 > [!NOTE]
->  Quando um estrutura, união ou classe é retornada de uma função pelo valor, todas as definições de tipo precisam ser iguais, caso contrário, o programa poderá falhar no tempo de execução.
+> Quando um estrutura, união ou classe é retornada de uma função pelo valor, todas as definições de tipo precisam ser iguais, caso contrário, o programa poderá falhar no tempo de execução.
 
 Para obter informações sobre como definir seu próprio código de prólogo e epílogo de função, consulte [chamadas de função Naked](../cpp/naked-function-calls.md).
 
-Para obter informações sobre o padrão de convenções de chamada no código que plataformas x64, consulte [visão geral do x64 convenções de chamada](../build/overview-of-x64-calling-conventions.md). Para obter informações sobre problemas de convenção de chamada no código que se destina a plataformas ARM, consulte [problemas comuns na Visual C++ ARM migração](../build/common-visual-cpp-arm-migration-issues.md).
+Para obter informações sobre o padrão de convenções de chamada no código que plataformas x64, consulte [x64 convenção de chamada](../build/x64-calling-convention.md). Para obter informações sobre problemas de convenção de chamada no código que se destina a plataformas ARM, consulte [problemas comuns na Visual C++ ARM migração](../build/common-visual-cpp-arm-migration-issues.md).
 
 As seguintes convenções de chamada são suportadas pelo compilador visual do C/C++.
 

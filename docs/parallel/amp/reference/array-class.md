@@ -22,12 +22,12 @@ f1_keywords:
 helpviewer_keywords:
 - array class
 ms.assetid: 0832b6c1-40f0-421d-9104-6b1baa0c63a7
-ms.openlocfilehash: 7543249719cd7fab10bac7824e69023fefbc35f1
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 93ef654bb71a342a6215ce5cd60786f36cadedf7
+ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523722"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53657546"
 ---
 # <a name="array-class"></a>Classe array
 
@@ -77,7 +77,7 @@ A classificação da matriz.
 |----------|-----------------|
 |[operador std:: Vector&lt;value_type&gt;](#operator_vec)|Usa `copy(*this, vector)` para converter implicitamente a matriz em um std::[vetor](../../../standard-library/vector-class.md) objeto.|
 |[operator()](#operator_call)|Retorna o valor do elemento que é especificado pelos parâmetros.|
-|[operator[]](#operator_at)|Retorna o elemento que está no índice especificado.|
+|[operator\[\]](#operator_at)|Retorna o elemento que está no índice especificado.|
 |[operator=](#operator_eq)|Copia o conteúdo especificado `array` esse objeto.|
 
 ### <a name="public-constants"></a>Constantes públicas
@@ -121,7 +121,7 @@ O `array<T,N>` tipo é usado em vários cenários:
 
 **Cabeçalho:** amp. h
 
-**Namespace:** Simultaneidade
+**Namespace:** Concorrência
 
 ##  <a name="dtor"></a> ~ array
 

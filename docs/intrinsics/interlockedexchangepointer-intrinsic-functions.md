@@ -1,6 +1,6 @@
 ---
 title: Funções intrínsecas _InterlockedExchangePointer
-ms.date: 11/04/2016
+ms.date: 12/17/2018
 f1_keywords:
 - _InterlockedExchangePointer_cpp
 - _InterlockedExchangePointer_rel
@@ -20,12 +20,12 @@ helpviewer_keywords:
 - InterlockedExchangePointer_acq intrinsic
 - InterlockedExchangePointer intrinsic
 ms.assetid: 0eaca0b0-d79e-406b-892d-b3b462c50bbb
-ms.openlocfilehash: 7599d4221d7dbd0e08585b51982e839aa267a011
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 021c754436d6abe877e6b7dd372ba235869d8975
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50512093"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53627394"
 ---
 # <a name="interlockedexchangepointer-intrinsic-functions"></a>Funções intrínsecas _InterlockedExchangePointer
 
@@ -99,4 +99,4 @@ Essas rotinas somente estão disponíveis como intrínsecos.
 ## <a name="see-also"></a>Consulte também
 
 [Intrínsecos do compilador](../intrinsics/compiler-intrinsics.md)<br/>
-[conflitos com o compilador x86](../build/conflicts-with-the-x86-compiler.md)
+[conflitos com o compilador x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

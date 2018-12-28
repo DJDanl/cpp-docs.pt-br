@@ -7,12 +7,12 @@ helpviewer_keywords:
 - -favor compiler option [C++]
 - /favor compiler option [C++]
 ms.assetid: ad264df2-e30f-4d68-8bd0-10d6bee71a2a
-ms.openlocfilehash: 35a8f36437d14b258273fb637eb6fd8b3c8e3c4b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 63affcced5dfc5bb56b0226021e1c32d93ec5d4f
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50552152"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53626741"
 ---
 # <a name="favor-optimize-for-architecture-specifics"></a>/favor (Otimizar para especificações da arquitetura)
 
@@ -20,9 +20,7 @@ ms.locfileid: "50552152"
 
 ## <a name="syntax"></a>Sintaxe
 
-```
-/favor:{blend | ATOM | AMD64 | INTEL64}
-```
+> **/favor:**{**blend** | **ATOM** | **AMD64** | **INTEL64**}
 
 ## <a name="remarks"></a>Comentários
 
@@ -41,7 +39,7 @@ ms.locfileid: "50552152"
 > [!NOTE]
 > Arquitetura de Intel64 era conhecida como Extended Memory 64 Technology e a opção de compilador correspondente foi **/favor:EM64T**.
 
-Para obter informações sobre como programar para o x64 arquitetura, consulte [x64 convenções de Software](../../build/x64-software-conventions.md).
+Para obter informações sobre como programar para o x64 arquitetura, consulte [x64 convenções de software](../../build/x64-software-conventions.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio
 

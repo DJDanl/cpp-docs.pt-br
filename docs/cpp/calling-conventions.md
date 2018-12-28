@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - calling conventions
 ms.assetid: 11b1e45c-8fd1-420b-bca0-a19e294c1d85
-ms.openlocfilehash: 9aa25598674aa52502d5d3619e5015eb13b6fff8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cc79a0636f900aa49e31f0dc35ee19657c3e1ccb
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532776"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53626728"
 ---
 # <a name="calling-conventions"></a>Convenções de chamada
 
@@ -17,13 +17,13 @@ O compilador Visual C/C++ fornece várias convenções diferentes para chamar fu
 
 Os tópicos neste assunto explicam as diferenças entre as convenções de chamada, como os argumentos são passados, e como os valores são retornados por funções. Também são abordadas chamadas de função naked, um recurso avançado que permite escrever seu próprio código de prólogo e epílogo.
 
-Para obter informações sobre convenções de chamada para x64 processadores, consulte [convenção de chamada](../build/calling-convention.md).
+Para obter informações sobre convenções de chamada para x64 processadores, consulte [convenção de chamada](../build/x64-calling-convention.md).
 
 ## <a name="topics-in-this-section"></a>Tópicos desta seção
 
 - [Passagem de argumento e convenções de nomenclatura](../cpp/argument-passing-and-naming-conventions.md) (`__cdecl`, `__stdcall`, `__fastcall`e outros)
 
-- [Exemplo de chamada: protótipo de função e chamada](../cpp/calling-example-function-prototype-and-call.md)
+- [Exemplo de chamada: Chamada e o protótipo de função](../cpp/calling-example-function-prototype-and-call.md)
 
 - [Usando chamadas de função naked para escrever código de prólogo/epílogo personalizado](../cpp/naked-function-calls.md)
 

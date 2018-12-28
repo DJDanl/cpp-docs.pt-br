@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - concurrent_unordered_map class
 ms.assetid: b2d879dd-87ef-4af9-a266-a5443fd538b8
-ms.openlocfilehash: 31eec71dd134a5c675f70070ce1457462d10b739
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 50868d020224e7bade9766f7307bfcc46ce4be47
+ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509364"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53657585"
 ---
 # <a name="concurrentunorderedmap-class"></a>Classe concurrent_unordered_map
 
@@ -107,7 +107,7 @@ O tipo que representa o objeto de alocador armazenado que encapsula detalhes sob
 
 |Nome|Descrição|
 |----------|-----------------|
-|[operator[]](#operator_at)|Sobrecarregado. Localiza ou insere um elemento com a chave especificada. Esse método é seguro em simultaneidade.|
+|[operator\[\]](#operator_at)|Sobrecarregado. Localiza ou insere um elemento com a chave especificada. Esse método é seguro em simultaneidade.|
 |[operator=](#operator_eq)|Sobrecarregado. Atribui o conteúdo de outro `concurrent_unordered_map` objeto para esse outro. Esse método não é seguro em simultaneidade.|
 
 ## <a name="remarks"></a>Comentários

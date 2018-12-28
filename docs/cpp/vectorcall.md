@@ -1,6 +1,6 @@
 ---
 title: __vectorcall
-ms.date: 10/10/2018
+ms.date: 12/17/2018
 f1_keywords:
 - __vectorcall_cpp
 - __vectorcall
@@ -9,18 +9,18 @@ helpviewer_keywords:
 - __vectorcall keyword
 - __vectorcall
 ms.assetid: 1c95ed59-86c6-4857-b4ed-10519193f851
-ms.openlocfilehash: ab542a7fbae286a7f39b66bb4857cd8e8ff6ab59
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 55c383c4bdf83ddb5fdf1c4990d5f2e47b4d819a
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507218"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53627385"
 ---
 # <a name="vectorcall"></a>__vectorcall
 
 **Seção específica da Microsoft**
 
-O **vectorcall** convenção de chamada especifica que os argumentos para funções devem ser passados em registros, quando possível. **vectorcall** usa mais registros para argumentos que [fastcall](../cpp/fastcall.md) ou o padrão [convenção de chamada de x64](../build/overview-of-x64-calling-conventions.md) usar. O **vectorcall** somente há suporte para a convenção de chamada no código nativo em processadores x86 e x64 que incluem Streaming SIMD Extensions 2 (SSE2) e acima. Use **vectorcall** acelerar a funções que passam vários ponto flutuante ou argumentos de vetor SIMD e executar operações que aproveitam os argumentos carregados em registros. A lista a seguir mostra os recursos que são comuns às implementações de x86 e x64 **vectorcall**. As diferenças são explicadas posteriormente neste artigo.
+O **vectorcall** convenção de chamada especifica que os argumentos para funções devem ser passados em registros, quando possível. **vectorcall** usa mais registros para argumentos que [fastcall](../cpp/fastcall.md) ou o padrão [convenção de chamada de x64](../build/x64-calling-convention.md) usar. O **vectorcall** somente há suporte para a convenção de chamada no código nativo em processadores x86 e x64 que incluem Streaming SIMD Extensions 2 (SSE2) e acima. Use **vectorcall** acelerar a funções que passam vários ponto flutuante ou argumentos de vetor SIMD e executar operações que aproveitam os argumentos carregados em registros. A lista a seguir mostra os recursos que são comuns às implementações de x86 e x64 **vectorcall**. As diferenças são explicadas posteriormente neste artigo.
 
 |Elemento|Implementação|
 |-------------|--------------------|

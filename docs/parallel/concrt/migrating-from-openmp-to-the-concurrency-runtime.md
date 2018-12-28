@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Concurrency Runtime, migrating from OpenMP
 - OpenMP, migrating to the Concurrency Runtime
 ms.assetid: 9bab7bb1-e45d-44b2-8509-3b226be2c93b
-ms.openlocfilehash: 4b70aa57a6485fefe0dbb678e72ba127502c89e3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 78fa83c30bc55d82ffa5d2ba1e7d65472643f86b
+ms.sourcegitcommit: ee0103752884425843556a19cf418a504dc3cd02
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481920"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53737618"
 ---
 # <a name="migrating-from-openmp-to-the-concurrency-runtime"></a>Migrando de OpenMP no Tempo de Execução de Simultaneidade
 
@@ -34,7 +34,7 @@ Ele pode ser vantajoso para migrar o código de OpenMP existente para usar o tem
 |Você precisar de suporte de manipulação de exceção.|O PPL permite capturar exceções dentro e fora de um loop ou uma região paralela. O OpenMP, você deve lidar com a exceção dentro do loop ou região paralela.|
 |Você precisa de um mecanismo de cancelamento.|O PPL permite que os aplicativos cancelar as tarefas individuais e paralelas árvores de trabalho. OpenMP requer que o aplicativo implementar seu próprio mecanismo de cancelamento.|
 |Exigir o código paralelo para terminar em um contexto diferente do qual ele é iniciado.|O tempo de execução de simultaneidade permite que você iniciar uma tarefa em um contexto e, em seguida, aguardar ou cancelar a tarefa em outro contexto. O OpenMP, todo o trabalho paralelo deve terminar no contexto do qual ele é iniciado.|
-|Exigir o suporte avançado a depuração.|O Visual Studio fornece o **pilhas paralelas** e **tarefas paralelas** windows para que você pode depurar mais facilmente aplicativos multithread.<br /><br /> Para obter mais informações sobre a depuração de suporte para o tempo de execução de simultaneidade, consulte [usando a janela tarefas](/visualstudio/debugger/using-the-tasks-window), [usando a janela Parallel Stacks](/visualstudio/debugger/using-the-parallel-stacks-window), e [passo a passo: depurando um paralelo Aplicativo](/visualstudio/debugger/walkthrough-debugging-a-parallel-application).|
+|Exigir o suporte avançado a depuração.|O Visual Studio fornece o **pilhas paralelas** e **tarefas paralelas** windows para que você pode depurar mais facilmente aplicativos multithread.<br /><br /> Para obter mais informações sobre a depuração de suporte para o tempo de execução de simultaneidade, consulte [usando a janela tarefas](/visualstudio/debugger/using-the-tasks-window), [usando a janela Parallel Stacks](/visualstudio/debugger/using-the-parallel-stacks-window), e [passo a passo: Depurando um aplicativo paralelo](/visualstudio/debugger/walkthrough-debugging-a-parallel-application).|
 
 ## <a name="when-not-to-migrate-from-openmp-to-the-concurrency-runtime"></a>Quando não migrar do OpenMP no tempo de execução de simultaneidade
 
@@ -48,17 +48,17 @@ Os casos a seguir descrevem quando pode não ser apropriado migrar o código de 
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-[Como converter um loop OpenMP paralelo para loop para usar o tempo de execução de simultaneidade](../../parallel/concrt/how-to-convert-an-openmp-parallel-for-loop-to-use-the-concurrency-runtime.md)
+[Como: Converter um loop OpenMP paralelo para Loop para usar o tempo de execução de simultaneidade](../../parallel/concrt/how-to-convert-an-openmp-parallel-for-loop-to-use-the-concurrency-runtime.md)
 
 Dado um loop básico que usa o OpenMP [paralelas](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel) e [para](../../parallel/openmp/reference/for-openmp.md) diretivas, demonstra como convertê-lo para usar o tempo de execução de simultaneidade [Concurrency:: parallel_for](reference/concurrency-namespace-functions.md#parallel_for) algoritmo.
 
-[Como converter um loop OpenMP que usa cancelamento para usar o tempo de execução de simultaneidade](../../parallel/concrt/convert-an-openmp-loop-that-uses-cancellation.md)<br/>
+[Como: Converter um Loop OpenMP que usa cancelamento para usar o tempo de execução de simultaneidade](../../parallel/concrt/convert-an-openmp-loop-that-uses-cancellation.md)<br/>
 Dado um OpenMP [paralelas](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)[para](../../parallel/openmp/reference/for-openmp.md) loop que não exige que todas as iterações para executar, demonstra como convertê-lo para usar o mecanismo de cancelamento de tempo de execução de simultaneidade.
 
-[Como converter um loop OpenMP que usa tratamento de exceções para usar o tempo de execução de simultaneidade](../../parallel/concrt/convert-an-openmp-loop-that uses-exception-handling.md)<br/>
+[Como: Converter um Loop OpenMP que usa o tratamento de exceções para usar o tempo de execução de simultaneidade](../../parallel/concrt/convert-an-openmp-loop-that-uses-exception-handling.md)<br/>
 Dado um OpenMP [paralelas](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)[para](../../parallel/openmp/reference/for-openmp.md) loop que executa o tratamento de exceções, demonstra como convertê-lo para usar o mecanismo de tratamento de exceções de tempo de execução de simultaneidade.
 
-[Como converter um loop OpenMP que usa uma variável de redução para usar o tempo de execução de simultaneidade](../../parallel/concrt/convert-an-openmp-loop-that-uses-a-reduction-variable.md)<br/>
+[Como: Converter um Loop OpenMP que usa uma variável de redução para usar o tempo de execução de simultaneidade](../../parallel/concrt/convert-an-openmp-loop-that-uses-a-reduction-variable.md)<br/>
 Dado um OpenMP [paralelas](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)[para](../../parallel/openmp/reference/for-openmp.md) loop que usa o [redução](../../parallel/openmp/reference/reduction.md) cláusula, demonstra como convertê-lo para usar o tempo de execução de simultaneidade.
 
 ## <a name="see-also"></a>Consulte também

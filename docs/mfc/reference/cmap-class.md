@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CMap [MFC], RemoveKey
 - CMap [MFC], SetAt
 ms.assetid: 640a45ab-0993-4def-97ec-42cc78eb10b9
-ms.openlocfilehash: 3991ae4c7455aa8e6eb377112cb89c057e9567e0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 88ca218d4cb4e70dcc46ba04bbdfb7a9d12eb808
+ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50627312"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53657572"
 ---
 # <a name="cmap-class"></a>Classe CMap
 
@@ -106,7 +106,7 @@ Tipo de dados usado para *valor* argumentos; geralmente, uma referência a *valo
 
 |Nome|Descrição|
 |----------|-----------------|
-|[[CMap::operator]](#operator_at)|Insere um elemento no mapa — substituição do operador para `SetAt`.|
+|[CMap::operator \[ \]](#operator_at)|Insere um elemento no mapa — substituição do operador para `SetAt`.|
 
 ## <a name="remarks"></a>Comentários
 
@@ -116,7 +116,7 @@ Uma variável do tipo de que posição é usada para acesso alternativo para ent
 
 Determinadas funções de membro dessa chamada de classe auxiliar global de funções que devem ser personalizadas para a maioria dos usos do `CMap` classe. Ver [auxiliares da classe de coleção](../../mfc/reference/collection-class-helpers.md) na seção de Macros e globais a **referência da MFC**.
 
-`CMap` substitui [CObject::Serialize](../../mfc/reference/cobject-class.md#serialize) para dar suporte à serialização e despejo de seus elementos. Se um mapa é armazenado em um arquivo morto usando `Serialize`, cada elemento do mapa é serializado por vez. A implementação padrão da `SerializeElements` função auxiliar faz uma gravação de bit a bit. Para obter informações sobre a serialização de itens de coleta de ponteiro é derivada de `CObject` ou outros tipos definidos pelo usuário, consulte [como: fazer uma coleção fortemente tipada](../../mfc/how-to-make-a-type-safe-collection.md).
+`CMap` substitui [CObject::Serialize](../../mfc/reference/cobject-class.md#serialize) para dar suporte à serialização e despejo de seus elementos. Se um mapa é armazenado em um arquivo morto usando `Serialize`, cada elemento do mapa é serializado por vez. A implementação padrão da `SerializeElements` função auxiliar faz uma gravação de bit a bit. Para obter informações sobre a serialização de itens de coleta de ponteiro é derivada de `CObject` ou outros tipos definidos pelo usuário, consulte [como: Fazer uma coleção fortemente tipada](../../mfc/how-to-make-a-type-safe-collection.md).
 
 Se você precisar de um despejo de diagnóstico dos elementos individuais no mapa (as chaves e valores), você deve definir a profundidade do contexto de despejo para 1 ou maior.
 

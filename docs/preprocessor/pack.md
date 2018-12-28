@@ -1,6 +1,6 @@
 ---
 title: pack
-ms.date: 09/17/2018
+ms.date: 12/17/2018
 f1_keywords:
 - pack_CPP
 - vc-pragma.pack
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pragmas, pack
 - pack pragma
 ms.assetid: e4209cbb-5437-4b53-b3fe-ac264501d404
-ms.openlocfilehash: 0067b30c5c2eae9391defeea11c722d455ec8f1a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9b959c161a933cc76590cfbd65d295aad36f07d7
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507595"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53627406"
 ---
 # <a name="pack"></a>pack
 Especifica o alinhamento de empacotamento da estrutura, união e membros da classe.
@@ -57,7 +57,7 @@ Para obter mais informações sobre como modificar o alinhamento, consulte estes
 
 - [__unaligned](../cpp/unaligned.md)
 
-- [Exemplos de alinhamento da estrutura](../build/examples-of-structure-alignment.md) (específico para x64)
+- [Exemplos de alinhamento da estrutura](../build/x64-software-conventions.md#examples-of-structure-alignment) (específico para x64)
 
    > [!WARNING]
    > Observe que, no Visual Studio 2015 e posterior pode usar os operadores de alignof e alignas padrão que, diferentemente `__alignof` e `declspec( align )` são portáteis entre os compiladores. O padrão C++ não aborda o empacotamento, portanto, você ainda deve usar **pack** (ou a extensão correspondente nos outros compiladores) para especificar os alinhamentos menores do que o tamanho de palavras da arquitetura de destino.

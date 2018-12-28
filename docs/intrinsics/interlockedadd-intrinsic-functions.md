@@ -1,6 +1,6 @@
 ---
 title: Funções intrínsecas InterlockedAdd
-ms.date: 11/04/2016
+ms.date: 12/17/2018
 f1_keywords:
 - _InterlockedAdd64_acq_cpp
 - _InterlockedAdd64_acq
@@ -26,18 +26,18 @@ helpviewer_keywords:
 - _InterlockedAdd_acq intrinsic
 - _InterlockedAdd64_rel intrinsic
 ms.assetid: 3d319603-ea9c-4fdd-ae61-e52430ccc3b1
-ms.openlocfilehash: 0952a7727a433a718eac2f1873249327647599dc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 473d113ff9af3b009075dfef657082034b1bbcb6
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50461588"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53626900"
 ---
 # <a name="interlockedadd-intrinsic-functions"></a>Funções intrínsecas InterlockedAdd
 
 **Seção específica da Microsoft**
 
-Execute uma adição atômica, que garanta que a operação seja concluída com êxito quando vários threads tiverem acesso a uma variável compartilhada.
+Essas funções executam uma adição atômica, o que torna-se de que a operação for concluída com êxito quando mais de um thread tem acesso a uma variável compartilhada.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -105,13 +105,13 @@ Ambas as funções retornam o resultado da adição.
 
 ## <a name="remarks"></a>Comentários
 
-As versões dessas funções com os sufixos `_acq` ou `_rel` executam uma adição sincronizada após a semântica de aquisição ou liberação. A semântica de aquisição significa que o resultado da operação é visível a todos os threads e processadores antes de quaisquer leituras e gravações na memória subsequente. A semântica de aquisição é útil ao inserir uma seção crítica. A semântica de liberação significa que todas as leituras e gravações na memória são obrigadas a ficar visíveis para todos os threads e processadores antes que o resultado da operação fique visível. A liberação é útil ao sair de uma seção crítica. Os intrínsecos com um sufixo `_nf` ("no fence") não funcionam como uma barreira de memória.
+As versões dessas funções com os sufixos `_acq` ou `_rel` executam uma adição sincronizada após a semântica de aquisição ou liberação. *Semântica de aquisição* significa que o resultado da operação ficam visível para todos os threads e processadores antes que qualquer memória posterior leituras e gravações. A semântica de aquisição é útil ao inserir uma seção crítica. *Versão semântica* significa que toda a memória, leituras e gravações é obrigadas a ficar visível para todos os threads e processadores antes do resultado da operação fique visível. A liberação é útil ao sair de uma seção crítica. Intrínsecos com um `_nf` sufixo ("sem isolamento") não funcionam como uma barreira de memória.
 
 Essas rotinas somente estão disponíveis como intrínsecos.
 
 ## <a name="example"></a>Exemplo
 
-```
+```cpp
 // interlockedadd.cpp
 // Compile with: /Oi /EHsc
 // processor: ARM
@@ -132,13 +132,13 @@ int main()
 
 ## <a name="output"></a>Saída
 
-```
+```Output
 0xffffff00 0xff0000 0xffffff00
 ```
 
 ## <a name="example"></a>Exemplo
 
-```
+```cpp
 // interlockedadd64.cpp
 // compile with: /Oi /EHsc
 // processor: ARM
@@ -162,7 +162,7 @@ int main()
 
 ## <a name="output"></a>Saída
 
-```
+```Output
 ff0000000000 + ff0000ffffffff = ffff00ffffffff
 Return value: ffff00ffffffff
 ```
@@ -172,4 +172,4 @@ Return value: ffff00ffffffff
 ## <a name="see-also"></a>Consulte também
 
 [Intrínsecos do compilador](../intrinsics/compiler-intrinsics.md)<br/>
-[conflitos com o compilador x86](../build/conflicts-with-the-x86-compiler.md)
+[conflitos com o compilador x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)
