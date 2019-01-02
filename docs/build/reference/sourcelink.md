@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - /SOURCELINK linker option
 - /SOURCELINK
-ms.openlocfilehash: 5c742a37803f450aa6084c862800583f70bcedde
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a5a01ca56a49791a608c5c836312c7728e9328c3
+ms.sourcegitcommit: fe1e21df175cd004d21c6e4659082efceb649a8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50480984"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53978277"
 ---
-# <a name="sourcelink-include-sourcelink-file-in-pdb"></a>/ SOURCELINK (Sourcelink incluem arquivos PDB)
+# <a name="sourcelink-include-source-link-file-in-pdb"></a>/ SOURCELINK (Link de origem incluem arquivos PDB)
 
-Especifica um arquivo de configuração SourceLink para incluir no arquivo PDB gerado pelo vinculador.
+Especifica um arquivo de configuração do Link de origem para incluir no arquivo PDB gerado pelo vinculador.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -28,7 +28,7 @@ Especifica um formato JSON arquivo de configuração que contém um mapeamento s
 
 ## <a name="remarks"></a>Comentários
 
-SourceLink é um sistema de controle de origem e de linguagem independente para fornecer a depuração de origem para binários. SourceLink há suporte para binários nativos do C++ a partir do Visual Studio 2017 versão 15,8. Para obter uma visão geral de SourceLink, consulte [vínculo da fonte](https://github.com/dotnet/designs/blob/master/accepted/diagnostics/source-link.md). Para obter informações sobre como usar SourceLink em seus projetos e como gerar o arquivo SourceLink como parte do seu projeto, consulte [SourceLink usando](https://github.com/dotnet/sourcelink#using-sourcelink).
+Link de origem é um sistema de controle de origem e de linguagem independente para fornecer a depuração de origem para binários. Link de origem é compatível com binários nativos do C++ a partir do Visual Studio 2017 versão 15,8. Para uma visão geral do Link de origem, consulte [vínculo da fonte](https://github.com/dotnet/designs/blob/master/accepted/diagnostics/source-link.md). Para obter informações sobre como usar o Link de origem em seus projetos e como gerar o arquivo SourceLink como parte do seu projeto, consulte [usando o Link de origem](https://github.com/dotnet/sourcelink#using-source-link-in-c-projects).
 
 ### <a name="to-set-the-sourcelink-linker-option-in-visual-studio"></a>Para definir a opção de vinculador /SOURCELINK no Visual Studio
 

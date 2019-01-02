@@ -1,5 +1,5 @@
 ---
-title: Como converter entre diversos tipos de cadeia de caracteres
+title: 'Como: Converter entre diversos tipos de cadeia de caracteres'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - string conversion [C++]
 - strings [C++], converting
 ms.assetid: e7e4f741-3c82-45f0-b8c0-1e1e343b0e77
-ms.openlocfilehash: 8ee8790e960c05827404d932a2305a7de79cbced
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 09b211f32ac2eac114245f8e9fcaeae6bebba5a3
+ms.sourcegitcommit: fe1e21df175cd004d21c6e4659082efceb649a8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50443345"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53978264"
 ---
-# <a name="how-to-convert-between-various-string-types"></a>Como converter entre diversos tipos de cadeia de caracteres
+# <a name="how-to-convert-between-various-string-types"></a>Como: Converter entre diversos tipos de cadeia de caracteres
 
 Este tópico demonstra como converter diversos tipos de cadeia de caracteres do Visual C++ em outras cadeias de caracteres. Os tipos de cadeias de caracteres que são abordados incluem `char *`, `wchar_t*`, [bstr_t](../cpp/bstr-t-class.md), [CComBSTR](../atl/reference/ccombstr-class.md), [CString](../atl-mfc-shared/using-cstring.md), [basic_string](../standard-library/basic-string-class.md), e <xref:System.String?displayProperty=fullName>. Em todos os casos, é feita uma cópia da cadeia de caracteres quando convertido para o novo tipo. Todas as alterações feitas à nova cadeia de caracteres não afetará a cadeia de caracteres original e vice-versa.
 
@@ -83,7 +83,7 @@ int main()
         cout << printstr << endl;
     }
 
-    // Convert the C style string to a CstringA and display it.
+    // Convert the C style string to a CStringA and display it.
     CStringA cstringa(orig);
     cstringa += " (CStringA)";
     cout << cstringa << endl;
@@ -736,7 +736,7 @@ int main()
     // while we call native functions.
     pin_ptr<const wchar_t> wch = PtrToStringChars(orig);
 
-    // Make a copy of the system string as a multibyte
+    // Make a copy of the System::String as a multibyte
     // char* string. Allocate two bytes in the multibyte
     // output string for every wide character in the input
     // string, including space for a terminating null.
@@ -747,20 +747,20 @@ int main()
     wcstombs_s(&convertedChars, nstring, newsize, wch, _TRUNCATE);
     cout << nstring << " (char *)" << endl;
 
-    // Convert a wide character system string to a
+    // Convert a wide character System::String to a
     // wide character wchar_t* string.
     const size_t newsizew = origsize;
     wchar_t *wcstring = new wchar_t[newsizew];
     wcscpy_s(wcstring, newsizew, wch);
     wcout << wcstring << _T(" (wchar_t *)") << endl;
 
-    // Convert a wide character system string to a
+    // Convert a wide character System::String to a
     // wide character _bstr_t string.
     _bstr_t bstrt(wch);
     bstrt += " (_bstr_t)";
     cout << bstrt << endl;
 
-    // Convert a wide character system string
+    // Convert a wide character System::String
     // to a wide character CComBSTR string.
     CComBSTR ccombstr(wch);
     if (ccombstr.Append(_T(" (CComBSTR)")) == S_OK)
@@ -808,9 +808,9 @@ Hello, World! (basic_string)
 
 [ATL e Macros de conversão de cadeia de caracteres MFC](../atl/reference/string-conversion-macros.md)<br/>
 [Operações de CString relacionadas a cadeias de caracteres de estilo C](../atl-mfc-shared/cstring-operations-relating-to-c-style-strings.md)<br/>
-[Como converter uma cadeia de caracteres padrão em System::String](../dotnet/how-to-convert-standard-string-to-system-string.md)<br/>
-[Como converter System::String em uma cadeia de caracteres padrão](../dotnet/how-to-convert-system-string-to-standard-string.md)<br/>
-[Como: converter System:: String em wchar_t * ou char\*](../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md)<br/>
+[Como: Converter cadeia de caracteres padrão em System:: String](../dotnet/how-to-convert-standard-string-to-system-string.md)<br/>
+[Como: Converter System:: String em cadeia de caracteres padrão](../dotnet/how-to-convert-system-string-to-standard-string.md)<br/>
+[Como: Converter System:: String em wchar_t * ou char\*](../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md)<br/>
 [Programando com CComBSTR](../atl/programming-with-ccombstr-atl.md)<br/>
 [mbstowcs_s, _mbstowcs_s_l](../c-runtime-library/reference/mbstowcs-s-mbstowcs-s-l.md)<br/>
 [wcstombs_s, _wcstombs_s_l](../c-runtime-library/reference/wcstombs-s-wcstombs-s-l.md)<br/>

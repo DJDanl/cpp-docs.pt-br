@@ -12,18 +12,18 @@ helpviewer_keywords:
 - TCHAR.H data types, mapping
 - mappings [C++], TCHAR.H
 ms.assetid: 01e1bb74-5a01-4093-8720-68b6c1fdda80
-ms.openlocfilehash: bf7c5e58b88da4f60d2e784692cb6d4a0ed84970
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: 59df523cc553881186921a878d131a109ae3cf27
+ms.sourcegitcommit: fe1e21df175cd004d21c6e4659082efceb649a8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627405"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53978290"
 ---
 # <a name="generic-text-mappings-in-tcharh"></a>Mapeamentos de texto genéricos em TCHAR. h
 
 Para simplificar o transporte de código para uso internacional, a biblioteca de tempo de execução da Microsoft fornece mapeamentos de texto genérico de específico da Microsoft para muitos tipos de dados, rotinas e outros objetos. Você pode usar esses mapeamentos, que são definidos em TCHAR. h, para escrever código genérico que pode ser compilado para o byte único, vários bytes, ou conjuntos de caracteres Unicode, dependendo da constante de manifesto que você define usando uma `#define` instrução. Mapeamentos de texto genérico são extensões da Microsoft não compatíveis com ANSI.
 
-Usando o TCHAR. h, você pode criar aplicativos Unicode das mesmas origens de byte único e conjunto de caracteres Multibyte (MBCS). TCHAR. h define as macros (que têm o prefixo `_tcs`) que, com as definições de pré-processador corretas, mapear para `str`, `_mbs`, ou `wcs` funções, conforme apropriado. Para compilar o MBCS, defina o símbolo `_MBCS`. Para compilar o Unicode, defina o símbolo `_UNICODE`. Para criar um aplicativo de byte único, defina nenhum (padrão). Por padrão, `_MBCS` está definido para aplicativos MFC.
+Usando o TCHAR. h, você pode criar aplicativos Unicode das mesmas origens de byte único e conjunto de caracteres Multibyte (MBCS). TCHAR. h define as macros (que têm o prefixo `_tcs`) que, com as definições de pré-processador corretas, mapear para `str`, `_mbs`, ou `wcs` funções, conforme apropriado. Para compilar o MBCS, defina o símbolo `_MBCS`. Para compilar o Unicode, defina o símbolo `_UNICODE`. Para criar um aplicativo de byte único, defina nenhum (padrão). Por padrão, `_UNICODE` está definido para aplicativos MFC.
 
 O `_TCHAR` tipo de dados é definido condicionalmente em TCHAR. h. Se o símbolo `_UNICODE` está definido para a compilação `_TCHAR` é definido como **wchar_t**; caso contrário, para byte e compilações MBCS, ele é definido como **char**. (**wchar_t**, o tipo de dados de caracteres largos Unicode básico, é a contraparte de 16 bits um assinado de 8 bits **char**.) Aplicativos internacionais, use o `_tcs` família de funções, que operam em `_TCHAR` unidades, não em bytes. Por exemplo, `_tcsncpy` cópias `n` `_TCHARs`, e não `n` bytes.
 
