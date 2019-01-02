@@ -25,7 +25,7 @@ As descrições das funções do modelo de algoritmo empregam várias frases abr
 
 - A frase "no intervalo \[ *um*, *B*)" significa que a sequência de zero ou mais valores discretos, começando com o *um* até, mas não incluir *B* . Um intervalo é válido somente se *B* possa ser acessado pela *A;* você pode armazenar *um* em um objeto *N* (*N*  =  *Um*), incrementar o objeto zero ou mais vezes (+ +*N*), e ter o objeto comparados como iguais *B* após um número finito de incrementos (*N*   ==  *B*).
 
-- A frase "cada *N* no intervalo \[ *um*, *B*)" significa que *N* começa com o valor *um*e é incrementado zero ou mais vezes até que ele é igual ao valor *B*. O caso N* == *B* não está no intervalo.
+- A frase "cada *N* no intervalo \[ *um*, *B*)" significa que *N* começa com o valor *um*e é incrementado zero ou mais vezes até que ele é igual ao valor *B*. O caso *N* == *B* não está no intervalo.
 
 - A frase "o menor valor de *N* no intervalo \[ *um*, *B*), de modo que *X*" significa que a condição *X* é determinada para cada *N* no intervalo \[ *um*, *B*) até que a condição *X*for atendida.
 
