@@ -1,0 +1,41 @@
+items:
+- name: C++ no Visual Studio
+  href: index.yml
+  items:
+  - name: Visão geral
+    items:
+    - name: Sobre o Visual Studio 2017
+      href: visual-studio-ide-cpp.md
+    - name: Sobre o editor de código
+      href: /visualstudio/get-started/tutorial-editor
+    - name: Sobre projetos e soluções
+      href: /visualstudio/get-started/tutorial-projects-solutions
+    - name: Mais recursos do Visual Studio
+      href: /visualstudio/ide/advanced-feature-overview?toc=/cpp/get-started/toc.json&bc=/cpp/get-started/breadcrumb/toc.json
+  - name: Tutoriais
+    items:
+    - name: Criar seu primeiro aplicativo em C++
+      href: tutorial-console-cpp.md
+    - name: Criar um aplicativo UWP
+      href: /windows/uwp/cpp-and-winrt-apis/get-started
+    - name: Criar um aplicativo da área de trabalho do Windows
+      href: /windows/desktop/learnwin32/learn-to-program-for-windows
+    - name: Criar um jogo DirectX
+      href: /windows/uwp/gaming/tutorial--create-your-first-uwp-directx-game
+    expanded: true
+  - name: Aprender a usar o Visual Studio
+    items:
+    - name: Escrever e editar o código
+      href: /visualstudio/get-started/tutorial-editor
+    - name: Compilar e criar
+      href: /visualstudio/ide/compiling-and-building-in-visual-studio
+    - name: Depurar seu código
+      href: /visualstudio/debugger/getting-started-with-the-debugger-cpp
+    - name: Implantar o projeto
+      href: /visualstudio/deployment/index
+ms.openlocfilehash: 98c2cd9f86825506fcc8ef44c22188026fda9bea
+ms.sourcegitcommit: 235d974c14ad3ffa7a3b29dec3e320a52fb291b2
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53440273"

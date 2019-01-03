@@ -1,5 +1,5 @@
 ---
-title: 'Instruções passo a passo: implantando o programa (C++)'
+title: 'Passo a passo: Implantando o programa (C++)'
 ms.date: 09/14/2018
 helpviewer_keywords:
 - deploying applications [C++], walkthroughs
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - projects [C++], deploying programs
 - application deployment [C++], walkthroughs
 ms.assetid: 79e6cc4e-dced-419d-aaf7-d62d1367603f
-ms.openlocfilehash: 43e6b9320fb52fc17f65b27b06e2c6f4d4851528
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7170fe3ae058f832e452089021d9f863f1791f14
+ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496423"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53657507"
 ---
-# <a name="walkthrough-deploying-your-program-c"></a>Instruções passo a passo: implantando o programa (C++)
+# <a name="walkthrough-deploying-your-program-c"></a>Passo a passo: Implantando o programa (C++)
 
 Agora que você criou seu aplicativo concluindo os passos a passos anteriormente relacionados, listados em [Usando o IDE do Visual Studio para desenvolvimento para desktop com C++](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md), a última etapa é criar um instalador, de modo que outros usuários possam instalar o programa em seus computadores. Para o instalador, você adicionará um novo projeto à solução existente. A saída desse novo projeto é um arquivo setup.exe que instalará o aplicativo em outro computador.
 
@@ -62,7 +62,7 @@ Este passo a passo mostra como usar o Windows Installer para implantar seu aplic
 
 1. No **Gerenciador de Soluções**, selecione o projeto **Game Installer** e escolha **Exibir** > **Janela Propriedades** ou pressione **F4** para abrir a janela **Propriedades**.
 
-1. Especifique mais detalhes como desejar que eles sejam exibidos no instalador.  Por exemplo, use *Contoso* para **Fabricante**, *Game Installer* para o **Nome do Produto** e *http://www.contoso.com* para **SupportUrl**.
+1. Especifique mais detalhes como desejar que eles sejam exibidos no instalador.  Por exemplo, use *Contoso* para **Fabricante**, *Game Installer* para o **Nome do Produto** e *http\://www.contoso.com* para **SupportUrl**.
 
 1. Na barra de menus, escolha **Build** > **Gerenciador de Configurações**. Na tabela **Projeto**, na coluna **Build**, marque a caixa de **Game Installer**. Clique em **Fechar**.
 
