@@ -26,12 +26,12 @@ helpviewer_keywords:
 - files [C++], translation
 - setmode function
 ms.assetid: 996ff7cb-11d1-43f4-9810-f6097182642a
-ms.openlocfilehash: 887936299dce0a13738f9dd891a168785d17c979
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 67cca27ba03a99d7e192d438a98f1bb3a93845ee
+ms.sourcegitcommit: cce52b2232b94ce8fd8135155b86e2d38a4e4562
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50617432"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54031272"
 ---
 # <a name="setmode"></a>_setmode
 
@@ -66,7 +66,12 @@ Para obter mais informações sobre esses e outros códigos de retorno, consulte
 
 O **setmode** função define como *modo* o modo de conversão do arquivo fornecido pelo *fd*. Passando **o_text** como *modo* define o texto (ou seja, convertido) modo. Combinações de (CR-LF) feeds do carro de retorno de linha são convertidas em uma única linha, caractere de alimentação na entrada. Os caracteres de alimentação de linha são convertidos para combinações CR-LF na saída. Passando **o_binary** conjuntos (não convertido) modo binário, em que essas conversões são suprimidas.
 
-Você também pode passar **_O_U16TEXT**, **_O_U8TEXT**, ou **o_wtext** para habilitar o modo Unicode, conforme demonstrado no segundo exemplo neste documento. **setmode** normalmente é usado para modificar o modo de conversão padrão de **stdin** e **stdout**, mas você pode usá-lo em qualquer arquivo. Se você aplicar **setmode** para o descritor de arquivo para um fluxo, chame **setmode** antes de executar quaisquer operações de entrada ou saídas no fluxo.
+Você também pode passar **_O_U16TEXT**, **_O_U8TEXT**, ou **o_wtext** para habilitar o modo Unicode, conforme demonstrado no segundo exemplo neste documento.
+
+> [!CAUTION]
+> Modo Unicode é para funções de impressão largo (por exemplo, `wprintf`) e não há suporte para funções de impressa estreitas. Uso de uma função de impressão estreito em um fluxo de modo Unicode dispara uma declaração.
+
+**setmode** normalmente é usado para modificar o modo de conversão padrão de **stdin** e **stdout**, mas você pode usá-lo em qualquer arquivo. Se você aplicar **setmode** para o descritor de arquivo para um fluxo, chame **setmode** antes de executar quaisquer operações de entrada ou saídas no fluxo.
 
 > [!CAUTION]
 > Se você gravar dados em um fluxo de arquivos, limpe explicitamente o código por meio [fflush](fflush.md) antes de usar **setmode** para alterar o modo. Se você não limpar o código, pode ocorrer comportamento inesperado. Se você não tiver dados gravados no fluxo, não será preciso limpar o código.
