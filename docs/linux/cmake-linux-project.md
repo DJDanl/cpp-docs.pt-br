@@ -3,12 +3,12 @@ title: Configurar um projeto do Linux CMake no Visual Studio
 description: Como configurar um projeto do Linux CMake no Visual Studio
 ms.date: 07/20/2018
 ms.assetid: f8707b32-f90d-494d-ae0b-1d44425fdc25
-ms.openlocfilehash: 32d69e28c0991adc6117b7f9496eeb1022943ef2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 28902f0a2938fe653eb4dfbb6e512367b1052b8c
+ms.sourcegitcommit: fe1e21df175cd004d21c6e4659082efceb649a8b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50585036"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53978316"
 ---
 # <a name="configure-a-linux-cmake-project"></a>Configurar um projeto do Linux CMake
 
@@ -18,7 +18,7 @@ Quando você instala a carga de trabalho Linux C++ para Visual Studio, o suporte
 Este tópico pressupõe que você tenha uma familiaridade básica com o suporte ao CMake no Visual Studio. Para saber mais, veja [Ferramentas do CMake no Visual C++](../ide/cmake-tools-for-visual-cpp.md). Para obter mais informações sobre o próprio CMake, consulte [Compilar, testar e empacotar seu software com o CMake](https://cmake.org/).
 
 > [!NOTE]
-> O suporte ao CMake no Visual Studio requer o suporte do modo de servidor que foi apresentado no CMake 3.8. Para uma variante CMake fornecida pela Microsoft, baixe os binários predefinidos mais recentes em [https://github.com/Microsoft/CMake/releases](https://github.com/Microsoft/CMake/releases).
+> O suporte ao CMake no Visual Studio requer o suporte do modo de servidor que foi apresentado no CMake 3.8. Para uma variante CMake fornecida pela Microsoft, baixe os binários predefinidos mais recentes em [https://github.com/Microsoft/CMake/releases](https://github.com/Microsoft/CMake/releases). No Visual Studio 2019, os binários predefinidos podem ser implantados automaticamente (confira [Fazer o download de binários predefinidos do CMake](#download-prebuilt-cmake-binaries)).
 
 ## <a name="open-a-folder"></a>Abrir uma pasta
 
@@ -109,6 +109,9 @@ Essas opções permitem que você execute comandos na caixa remota antes e depoi
 ## <a name="download-prebuilt-cmake-binaries"></a>Baixar binários predefinidos do CMake
 
 Sua distribuição Linux pode ter uma versão mais antiga do CMake. O suporte ao CMake no Visual Studio requer o suporte do modo de servidor que foi apresentado no CMake 3.8. Para uma variante CMake fornecida pela Microsoft, baixe os binários predefinidos mais recentes em [https://github.com/Microsoft/CMake/releases](https://github.com/Microsoft/CMake/releases).
+
+**Visual Studio 2019**<br/>
+Se um CMake válido não for encontrado na máquina remota, uma barra de informações aparecerá e fornecerá uma opção para implantar automaticamente os binários predefinidos do CMake. Os binários serão instalados no `~/.vs/cmake`. Depois de implantar os binários, seu projeto será automaticamente regenerado. Se o CMake especificado pelo campo `cmakeExecutable` em `CMakeSettings.json` for inválido (não existir ou for uma versão sem suporte) e os binários predefinidos estiverem presentes, o Visual Studio ignorará `cmakeExecutable` e usará os binários predefinidos.
 
 ## <a name="see-also"></a>Consulte também
 

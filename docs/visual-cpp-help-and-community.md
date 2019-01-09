@@ -6,12 +6,12 @@ ms.technology:
 ms.assetid: 6bc23c18-fcd9-47bc-bff2-17537700be4a
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 5aee74c9fee1480d2bb61c36abba97edc5c5d4cf
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 40983509aa9c97cbbd6b778282720c45416ec525
+ms.sourcegitcommit: fe1e21df175cd004d21c6e4659082efceb649a8b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178090"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53978251"
 ---
 # <a name="visual-c-help-and-community"></a>Ajuda e comunidade do Visual C++
 
@@ -28,7 +28,7 @@ Veja como obter informações sobre como escrever código C++ e usar as ferramen
 |Título|Descrição|
 |-----------|-----------------|
 |[Visual C++](visual-cpp-in-visual-studio.md)|Contém a referência e a documentação conceitual sobre o Visual C++. Parte da Biblioteca MSDN.|
-|[Centro de Desenvolvedores do Windows](https://developer.microsoft.com/windows/)|Contém informações sobre como usar o C++ e outras linguagens para desenvolver aplicativos para Windows 8. Parte do Centro de Desenvolvedores Windows; o conteúdo em C++ está no nó Documentação > Referência da linguagem.|
+|[Centro de Desenvolvedores do Windows](https://developer.microsoft.com/windows/)|Contém informações sobre como usar o C++ e outras linguagens para desenvolver aplicativos para Windows 10. Parte do Centro de Desenvolvedores Windows; o conteúdo em C++ está no nó Documentação > Referência da linguagem.|
 
 ### <a name="online-and-offline-documentation"></a>Documentação online e offline
 
