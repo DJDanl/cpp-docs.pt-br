@@ -3,12 +3,12 @@ title: Tipos de valor (C++ moderno)
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: f63bb62c-60da-40d5-ac14-4366608fe260
-ms.openlocfilehash: 3589541f5b6fca736329e1d6fcb8929418fca132
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 32cdb29ec1c59081ad7e0493888f290f21561d2b
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50628950"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220342"
 ---
 # <a name="value-types-modern-c"></a>Tipos de valor (C++ moderno)
 
@@ -116,7 +116,7 @@ Conteúdo
 
 ## <a name="see-also"></a>Consulte também
 
-[Sistema de tipo C++](../cpp/cpp-type-system-modern-cpp.md)<br/>
-[Bem-vindo outra vez ao C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[Sistema do tipo C++ (C++ moderno)](../cpp/cpp-type-system-modern-cpp.md)<br/>
+[Bem-vindo ao C++ (C++ moderno)](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [Referência da linguagem C++](../cpp/cpp-language-reference.md)<br/>
 [Biblioteca Padrão do C++](../standard-library/cpp-standard-library-reference.md)

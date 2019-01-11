@@ -7,12 +7,12 @@ helpviewer_keywords:
 - nop instruction
 - __nop intrinsic
 ms.assetid: 7a2a938b-87e0-476d-a348-03ea7635b6b9
-ms.openlocfilehash: 25ba27485990ceaae77e1827f0c74680914e2f40
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b0033b0e3a62a16c2856b0e25daeebdb5df0c81f
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50651718"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220381"
 ---
 # <a name="nop"></a>__nop
 
@@ -30,7 +30,7 @@ void __nop();
 
 |Intrínseco|Arquitetura|
 |---------------|------------------|
-|`__nop`|x86, x64|
+|`__nop`|x86, ARM, x64, ARM64|
 
 **Arquivo de cabeçalho** \<intrin. h >
 
@@ -38,7 +38,7 @@ void __nop();
 
 ## <a name="remarks"></a>Comentários
 
-O `__nop` função é equivalente ao `NOP` instruções de máquina. Para obter mais informações, pesquise o documento, "Manual do desenvolvedor de Software de arquitetura Intel, Volume 2: referência de conjunto de instruções," no [Intel Corporation](https://software.intel.com/articles/intel-sdm) site.
+O `__nop` função é equivalente ao `NOP` instruções de máquina. Para obter mais informações sobre o x86 e x64, procure o documento, "Manual do desenvolvedor de Software de arquitetura Intel, Volume 2: Instrução definir Reference"na [Intel Corporation](https://software.intel.com/articles/intel-sdm) site.
 
 ## <a name="see-also"></a>Consulte também
 

@@ -1,17 +1,17 @@
 ---
-title: Como projetar tendo em vista a segurança da exceção
+title: 'Como: Design para segurança de exceção'
 ms.custom: how-to
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 19ecc5d4-297d-4c4e-b4f3-4fccab890b3d
-ms.openlocfilehash: f384da3eee0c7bca80d8d6c61f8d8cf0cfaece92
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 2dada25ea712b7bb6d48d80525c824a0457b18cf
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326999"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220538"
 ---
-# <a name="how-to-design-for-exception-safety"></a>Como projetar tendo em vista a segurança da exceção
+# <a name="how-to-design-for-exception-safety"></a>Como: Design para segurança de exceção
 
 Uma das vantagens do mecanismo de exceção é que a execução, junto com dados sobre a exceção, catch de saltos diretamente da instrução que gerou a exceção para a primeira instrução que lida com isso. O manipulador pode ser qualquer número de níveis para cima na pilha de chamadas. Funções que são chamadas entre a instrução try e a instrução throw não precisarão saber nada sobre a exceção que é lançada.  No entanto, eles precisarão ser projetado para que eles podem ir fora do escopo "inesperadamente" em qualquer ponto em que uma exceção pode propagar-se de abaixo e então, sem deixar atrás de objetos criados parcialmente, vazados memória ou estruturas de dados que estão em estados inutilizável.
 
@@ -95,7 +95,7 @@ Normalmente, a segurança de exceção é discutida em termos de três garantias
 
 A garantia de não falha (ou "no-throw") é a garantia mais forte que uma função pode fornecer. Indica que a função não lançar uma exceção ou permitir que um propagar. No entanto, não poderá fornecer tal uma garantia de forma confiável, a menos que (a) você souber que todas as funções que chama essa função também são não falham, ou (b) você sabe que quaisquer exceções que são geradas são capturadas antes que elas atinjam a essa função, ou (c) você sabe como capturar e tratar corretamente a todas as exceções que podem alcançar essa função.
 
-A garantia de alta segurança e a garantia básica se baseiam na suposição de que os destruidores são não falham. Todos os contêineres e os tipos na biblioteca padrão garantem que os destruidores não geram. Também há um requisito inverso: A biblioteca padrão exige que definidas pelo usuário tipos que recebem a ele — por exemplo, como argumentos de modelo — deve ter os destruidores de não lançamento.
+A garantia de alta segurança e a garantia básica se baseiam na suposição de que os destruidores são não falham. Todos os contêineres e os tipos na biblioteca padrão garantem que os destruidores não geram. Também é um requisito inverso: A biblioteca padrão exige que definidas pelo usuário tipos que recebem a ele — por exemplo, como argumentos de modelo — deve ter os destruidores de não lançamento.
 
 ### <a name="strong-guarantee"></a>Garantia de alta segurança
 
@@ -121,5 +121,5 @@ Tipos internos são todos não falhas e os tipos de biblioteca padrão oferecem 
 
 ## <a name="see-also"></a>Consulte também
 
-[Erros e tratamento de exceções](../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
-[Como realizar a interface entre códigos excepcionais e não excepcionais](../cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md)
+[Erros e tratamento de exceções (C++ moderno)](../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
+[Como: Interface entre códigos excepcionais e não excepcional](../cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md)

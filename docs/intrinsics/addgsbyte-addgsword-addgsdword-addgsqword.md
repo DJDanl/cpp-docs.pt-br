@@ -16,12 +16,12 @@ helpviewer_keywords:
 - __addgsdword intrinsic
 - __addgsbyte intrinsic
 ms.assetid: 4fa03e69-d849-49ed-ba37-1d3aa23c2a21
-ms.openlocfilehash: 76d511b387ce52a6c5127b1e2b1f6051565f4cc6
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 9514c193468d526aa645ea7984691034feebc07a
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51331419"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220459"
 ---
 # <a name="addgsbyte-addgsword-addgsdword-addgsqword"></a>__addgsbyte, __addgsword, __addgsdword, __addgsqword
 
@@ -69,7 +69,7 @@ void __addgsqword(
 
 ## <a name="remarks"></a>Comentários
 
-Esses intrínsecos estão disponíveis no modo de kernel apenas, e essas rotinas somente estão disponíveis como intrínsecos.
+Essas rotinas somente estão disponíveis como um intrínseco.
 
 **Fim da seção específica da Microsoft**
 

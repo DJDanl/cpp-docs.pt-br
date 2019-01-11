@@ -3,12 +3,12 @@ title: Conversões e segurança de tipo (C++ moderno)
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 629b361a-2ce1-4700-8b5d-ab4f57b245d5
-ms.openlocfilehash: 201f09cc9ac17f76634103c9c9b6c0259c8a8637
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 79285e4870b73ff01ed3b230a0162f87c0400aa8
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51332615"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220641"
 ---
 # <a name="type-conversions-and-type-safety-modern-c"></a>Conversões e segurança de tipo (C++ moderno)
 
@@ -178,7 +178,7 @@ O operador de conversão C-style é idêntico para o operador de chamada () e, p
 
 ## <a name="see-also"></a>Consulte também
 
-[Sistema de tipo C++](../cpp/cpp-type-system-modern-cpp.md)<br/>
-[Bem-vindo outra vez ao C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[Sistema do tipo C++ (C++ moderno)](../cpp/cpp-type-system-modern-cpp.md)<br/>
+[Bem-vindo ao C++ (C++ moderno)](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [Referência da linguagem C++](../cpp/cpp-language-reference.md)<br/>
 [Biblioteca Padrão do C++](../standard-library/cpp-standard-library-reference.md)

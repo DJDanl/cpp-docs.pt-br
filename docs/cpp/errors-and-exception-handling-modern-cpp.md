@@ -3,12 +3,12 @@ title: Erros e tratamento de exceções (C++ moderno)
 ms.date: 09/17/2018
 ms.topic: conceptual
 ms.assetid: a6c111d0-24f9-4bbb-997d-3db4569761b7
-ms.openlocfilehash: d6192ab800667ceb35bf2e18dcbdc0be95ec70f5
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: c3def77d8b7a22be05259784e3b80562c8728c15
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523282"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220563"
 ---
 # <a name="errors-and-exception-handling-modern-c"></a>Erros e tratamento de exceções (C++ moderno)
 
@@ -60,7 +60,7 @@ int main()
 }
 ```
 
-Exceções em C++ são semelhantes àquelas em linguagens como c# e Java. No **tente** bloquear, se uma exceção é *lançada* será *capturada* pela primeira associado **catch** bloco cujo tipo corresponde do exceção. Em outras palavras, a execução vai dos **lançar** instrução para o **catch** instrução. Se nenhum bloco catch for encontrado, `std::terminate` é invocado e o programa será encerrado. No C++, qualquer tipo pode ser lançado; No entanto, recomendamos que você lança um tipo que deriva direta ou indiretamente `std::exception`. No exemplo anterior, o tipo de exceção [invalid_argument](../standard-library/invalid-argument-class.md), é definido na biblioteca padrão no [ \<stdexcept >](../standard-library/stdexcept.md) arquivo de cabeçalho. C++ não fornece e não requer uma **finalmente** bloco para certificar-se de que todos os recursos são liberados se uma exceção é lançada. A aquisição de recurso é o idioma de inicialização (RAII), que usa ponteiros inteligentes, oferece a funcionalidade necessária para limpeza de recursos. Para obter mais informações, consulte [como: Design para segurança de exceção](../cpp/how-to-design-for-exception-safety.md). Para obter informações sobre o mecanismo de desenrolamento de pilha do C++, consulte [exceções e desenrolamento de pilha](../cpp/exceptions-and-stack-unwinding-in-cpp.md).
+Exceções em C++ são semelhantes àquelas em linguagens como c# e Java. No **tente** bloquear, se uma exceção é *lançada* será *capturada* pela primeira associado **catch** bloco cujo tipo corresponde do exceção. Em outras palavras, a execução vai dos **lançar** instrução para o **catch** instrução. Se nenhum bloco catch for encontrado, `std::terminate` é invocado e o programa será encerrado. No C++, qualquer tipo pode ser lançado; No entanto, recomendamos que você lança um tipo que deriva direta ou indiretamente `std::exception`. No exemplo anterior, o tipo de exceção [invalid_argument](../standard-library/invalid-argument-class.md), é definido na biblioteca padrão no [ \<stdexcept >](../standard-library/stdexcept.md) arquivo de cabeçalho. C++ não fornece e não requer uma **finalmente** bloco para certificar-se de que todos os recursos são liberados se uma exceção é lançada. A aquisição de recurso é o idioma de inicialização (RAII), que usa ponteiros inteligentes, oferece a funcionalidade necessária para limpeza de recursos. Para obter mais informações, confira [Como: Design para segurança de exceção](../cpp/how-to-design-for-exception-safety.md). Para obter informações sobre o mecanismo de desenrolamento de pilha do C++, consulte [exceções e desenrolamento de pilha](../cpp/exceptions-and-stack-unwinding-in-cpp.md).
 
 ## <a name="basic-guidelines"></a>Diretrizes básicas
 
@@ -70,7 +70,7 @@ Tratamento de erro robusta é desafiadora em qualquer linguagem de programação
 
 - Use as exceções quando o código que trata o erro pode ser separado do código que detecta o erro por um ou mais chamadas de função interveniente. Considere a possibilidade de usar códigos de erro em vez disso, em loops de desempenho crítico quando o código que trata o erro estiver estritamente acoplado ao código que detecta.
 
-- Para cada função que pode lançar ou propagar uma exceção, forneça um dos três garantias de exceção: a garantia de alta segurança, a garantia básica ou a garantia de nothrow (noexcept). Para obter mais informações, consulte [como: Design para segurança de exceção](../cpp/how-to-design-for-exception-safety.md).
+- Para cada função que pode lançar ou propagar uma exceção, forneça um dos três garantias de exceção: a garantia de alta segurança, a garantia básica ou a garantia de nothrow (noexcept). Para obter mais informações, confira [Como: Design para segurança de exceção](../cpp/how-to-design-for-exception-safety.md).
 
 - Lance exceções por valor, capture-as por referência. Você não captura o que você não pode manipular.
 
@@ -100,7 +100,7 @@ Especificações de exceção foram introduzidas no C++ como uma maneira de espe
 
 ## <a name="see-also"></a>Consulte também
 
-[Como realizar a interface entre códigos excepcionais e não excepcionais](../cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md)<br/>
-[Bem-vindo outra vez ao C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[Como: Interface entre códigos excepcionais e não excepcional](../cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md)<br/>
+[Bem-vindo ao C++ (C++ moderno)](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [Referência da linguagem C++](../cpp/cpp-language-reference.md)<br/>
 [Biblioteca Padrão do C++](../standard-library/cpp-standard-library-reference.md)

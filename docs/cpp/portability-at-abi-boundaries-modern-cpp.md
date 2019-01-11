@@ -3,12 +3,12 @@ title: Portabilidade em limites ABI (C++ moderno)
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: abbd405e-3038-427c-8c24-e00598f0936a
-ms.openlocfilehash: 12f60b92e71c15a94546e5b099c3b49e3685b68b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3f72bc32e436c2f7a2f76ed6bbb9553b5e5be6b8
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50549949"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220303"
 ---
 # <a name="portability-at-abi-boundaries-modern-c"></a>Portabilidade em limites ABI (C++ moderno)
 
@@ -34,6 +34,6 @@ extern "C" {        // functions using explicit "this"
 
 ## <a name="see-also"></a>Consulte também
 
-[Bem-vindo outra vez ao C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[Bem-vindo ao C++ (C++ moderno)](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [Referência da linguagem C++](../cpp/cpp-language-reference.md)<br/>
 [Biblioteca Padrão do C++](../standard-library/cpp-standard-library-reference.md)

@@ -3,12 +3,12 @@ title: Cadeia de caracteres e formatação de e / S (C++ moderno)
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 3954e8de-a59b-4175-89c9-4ee842ab89ed
-ms.openlocfilehash: 816eb71dae011f853a6e7ade1a1a2a8144a457c5
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: c051a7d70042456d30bee0ebb2b362c5d05b8e37
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326180"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220498"
 ---
 # <a name="string-and-io-formatting-modern-c"></a>Cadeia de caracteres e formatação de E/S (C++ moderno)
 
@@ -42,7 +42,7 @@ Isso pode ser totalmente inconveniente em muitos casos. Como alternativa, você 
 
 Algumas vantagens de Boost. Format são:
 
-- Segurança: Segurança de tipo e lança uma exceção para erros — por exemplo, a especificação de muitos ou poucos itens.
+- Segurança: Segurança de tipo e gera uma exceção para erros — por exemplo, a especificação de muitos ou poucos itens.
 
 - Extensível: Funciona para qualquer tipo que possa ser transmitido.
 
@@ -64,7 +64,7 @@ O código a seguir demonstra alguns dos recursos de formatação de Boost.
 
 ## <a name="see-also"></a>Consulte também
 
-[Bem-vindo outra vez ao C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[Bem-vindo ao C++ (C++ moderno)](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [Referência da linguagem C++](../cpp/cpp-language-reference.md)<br/>
 [Biblioteca Padrão do C++](../standard-library/cpp-standard-library-reference.md)<br/>
 [\<iostream>](../standard-library/iostream.md)<br/>

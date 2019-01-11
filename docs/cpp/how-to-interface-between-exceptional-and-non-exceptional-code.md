@@ -1,17 +1,17 @@
 ---
-title: Como realizar a interface entre códigos excepcional e não excepcional
+title: 'Como: Interface entre códigos excepcionais e não excepcional'
 ms.custom: how-to
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: fd5bb4af-5665-46a1-a321-614b48d4061e
-ms.openlocfilehash: b6da1142ee04668033a516f2c20c4a2354ff5598
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e8ff92f965f48faa7954ae0364ec7877428e519c
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50576677"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220615"
 ---
-# <a name="how-to-interface-between-exceptional-and-non-exceptional-code"></a>Como realizar a interface entre códigos excepcional e não excepcional
+# <a name="how-to-interface-between-exceptional-and-non-exceptional-code"></a>Como: Interface entre códigos excepcionais e não excepcional
 
 Este artigo descreve como implementar o tratamento de exceções consistente em um módulo de C++ e também como converter bidirecionalmente essas exceções em códigos de erro nos limites da exceção.
 
@@ -236,5 +236,5 @@ Para obter mais informações sobre expressões lambda, consulte [Expressões la
 
 ## <a name="see-also"></a>Consulte também
 
-[Erros e tratamento de exceções](../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
-[Como projetar tendo em vista a segurança de exceção](../cpp/how-to-design-for-exception-safety.md)<br/>
+[Erros e tratamento de exceções (C++ moderno)](../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
+[Como: Design para segurança de exceção](../cpp/how-to-design-for-exception-safety.md)<br/>

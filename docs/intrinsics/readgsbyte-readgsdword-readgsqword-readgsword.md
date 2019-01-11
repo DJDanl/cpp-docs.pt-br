@@ -12,12 +12,12 @@ helpviewer_keywords:
 - __readgsqword intrinsic
 - __readgsbyte intrinsic
 ms.assetid: f822632d-854c-4558-a71b-cdfc3eea2236
-ms.openlocfilehash: 1bc6a3b2ef2d78e5b30ea36149ea691468c9b0ec
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: fee7101ab72b9a0aecffb8ab8365dda1ec52d170
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327506"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220407"
 ---
 # <a name="readgsbyte-readgsdword-readgsqword-readgsword"></a>__readgsbyte, __readgsdword, __readgsqword, __readgsword
 
@@ -64,7 +64,7 @@ O conteúdo da memória do byte, word, palavra dupla ou quadword (conforme indic
 
 ## <a name="remarks"></a>Comentários
 
-Esses intrínsecos só estão disponíveis no modo kernel, e as rotinas somente estão disponíveis como intrínsecos.
+Essas rotinas somente estão disponíveis como um intrínseco.
 
 **Fim da seção específica da Microsoft**
 

@@ -3,12 +3,12 @@ title: Sistema do tipo C++ (C++ moderno)
 ms.date: 11/19/2018
 ms.topic: conceptual
 ms.assetid: 553c0ed6-77c4-43e9-87b1-c903eec53e80
-ms.openlocfilehash: 476ebabc4bfc19f995119649d6f012d4b39d8369
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: ea4d8da9af10df2fb930daaad8374d70b6704d28
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176335"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220667"
 ---
 # <a name="c-type-system-modern-c"></a>Sistema do tipo C++ (C++ moderno)
 
@@ -16,11 +16,11 @@ O conceito de *tipo* é muito importante em C++. Cada variável, argumento de fu
 
 ## <a name="terminology"></a>Terminologia
 
-**Variável**: simbólico nome de uma quantidade de dados para que o nome pode ser usado para acessar os dados que ele se refere em todo o escopo do código onde ele está definido. No C++, *variável* geralmente é usado para se referir a instâncias de tipos de dados escalares, ao passo que instâncias de outros tipos são geralmente chamadas *objetos*.
+**Variável**: Simbólico nome de uma quantidade de dados para que o nome pode ser usado para acessar os dados que ele se refere em todo o escopo do código onde ele está definido. No C++, *variável* geralmente é usado para se referir a instâncias de tipos de dados escalares, ao passo que instâncias de outros tipos são geralmente chamadas *objetos*.
 
-**Objeto**: para manter a simplicidade e consistência, este artigo usa o termo *objeto* para se referir a qualquer instância de uma classe ou estrutura, e quando ele é usado no sentido geral inclui todos os tipos, até mesmo variáveis escalares.
+**Objeto**: Para manter a simplicidade e consistência, este artigo usa o termo *objeto* para se referir a qualquer instância de uma classe ou estrutura, e quando ele é usado no sentido geral inclui todos os tipos, até mesmo variáveis escalares.
 
-**Tipo POD** (dados antigos simples): essa categoria informal de tipos de dados em C++ se refere a tipos escalares (consulte a seção tipos fundamentais) ou estão *2&gt;classes*. Uma classe POD não tem membros de dados estáticos que também não sejam PODs e não tem construtores definidos pelo usuário, destruidores definidos pelo usuário ou operadores de atribuição definidos pelo usuário. Além disso, uma classe POD não tem função virtual, nenhuma classe base e nenhum membro de dados não estático particular ou protegido. Os tipos POD são quase sempre usados para a troca de dados externos, por exemplo, com um módulo escrito na linguagem C (que tem apenas tipos POD).
+**Tipo POD** (dados antigos simples): Essa categoria informal de tipos de dados em C++ se refere a tipos escalares (consulte a seção tipos fundamentais) ou são *2&gt;classes*. Uma classe POD não tem membros de dados estáticos que também não sejam PODs e não tem construtores definidos pelo usuário, destruidores definidos pelo usuário ou operadores de atribuição definidos pelo usuário. Além disso, uma classe POD não tem função virtual, nenhuma classe base e nenhum membro de dados não estático particular ou protegido. Os tipos POD são quase sempre usados para a troca de dados externos, por exemplo, com um módulo escrito na linguagem C (que tem apenas tipos POD).
 
 ## <a name="specifying-variable-and-function-types"></a>Especificando tipos de variável e de função
 
@@ -170,6 +170,6 @@ Para obter mais informações sobre o sistema de tipos C++, consulte os tópicos
 
 ## <a name="see-also"></a>Consulte também
 
-[Bem-vindo outra vez ao C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[Bem-vindo ao C++ (C++ moderno)](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [Referência da linguagem C++](../cpp/cpp-language-reference.md)<br/>
 [Biblioteca Padrão do C++](../standard-library/cpp-standard-library-reference.md)

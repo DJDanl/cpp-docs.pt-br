@@ -1,17 +1,17 @@
 ---
-title: Como criar e usar instâncias weak_ptr
+title: 'Como: Criar e usar instâncias weak_ptr'
 ms.custom: how-to
 ms.date: 07/12/2018
 ms.topic: conceptual
 ms.assetid: 8dd6909b-b070-4afa-9696-f2fc94579c65
-ms.openlocfilehash: c3f788a23acf30fac84757f8cd4430f128df67af
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1a0e2880e97a77a0c9975553631a6024072745f0
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50478189"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220316"
 ---
-# <a name="how-to-create-and-use-weakptr-instances"></a>Como criar e usar instâncias weak_ptr
+# <a name="how-to-create-and-use-weakptr-instances"></a>Como: Criar e usar instâncias weak_ptr
 
 Às vezes, um objeto deve armazenar uma maneira de acessar o objeto subjacente de um `shared_ptr` sem fazer com que a contagem de referência seja incrementada. Normalmente, essa situação ocorre quando você tem referências cíclicas entre `shared_ptr` instâncias.
 
@@ -86,4 +86,4 @@ Para experimentar, modifique o vetor `others` seja um `vector<shared_ptr<Control
 
 ## <a name="see-also"></a>Consulte também
 
-[Ponteiros inteligentes](../cpp/smart-pointers-modern-cpp.md)
+[Ponteiros inteligentes (C++ moderno)](../cpp/smart-pointers-modern-cpp.md)

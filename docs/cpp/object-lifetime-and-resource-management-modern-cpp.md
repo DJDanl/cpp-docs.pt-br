@@ -3,12 +3,12 @@ title: Vida útil do objeto e gerenciamento de recursos (C++ moderno)
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 8aa0e1a1-e04d-46b1-acca-1d548490700f
-ms.openlocfilehash: d7bf45881ef82ecf0d11892e5ddf3d3c16a437cf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5964078960a5b241cb5af369aeddba45a06e48ad
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50609931"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220616"
 ---
 # <a name="object-lifetime-and-resource-management-modern-c"></a>Vida útil do objeto e gerenciamento de recursos (C++ moderno)
 
@@ -22,7 +22,7 @@ Uma coisa importante no gerenciamento de tempo de vida do objeto é o encapsulam
 
 Outro conceito importante no gerenciamento de tempo de vida: destruidores. Os destruidores encapsulam a versão do recurso.  (O mnemônico comumente usado é RRID, o recurso de versão é destruição).  Um recurso é algo que você obtenha do "sistema" e tem que dar novamente mais tarde.  Memória é o recurso mais comuns, mas também há arquivos, soquetes, texturas e outros recursos sem memória. Um recurso de "proprietário" significa que você pode usá-lo quando necessário, mas você também precisará liberá-lo quando tiver terminado com ele.  Quando um objeto é destruído, seu destruidor libera os recursos que ele pertence.
 
-O conceito de final é o DAG (grafo acíclico direcionado).  A estrutura de propriedade em um programa de forma um DAG. Nenhum objeto pode ter em si — que não só é impossível, mas também inerentemente sem sentido. Mas os dois objetos podem compartilhar a propriedade de um terceiro objeto.  Vários tipos de links são possíveis em um DAG como este: A é membro do B (B possui um), C armazena um `vector<D>` (C possui cada elemento D), E armazena um `shared_ptr<F>` (E compartilha a propriedade de F, possivelmente com outros objetos), e assim por diante.  Contanto que não há nenhum ciclo e cada link no DAG é representado por um objeto que tem um destruidor (em vez de um ponteiro bruto, identificadores ou outro mecanismo), em seguida, perda de recursos é impossível porque o idioma impede que eles. Recursos são liberados imediatamente depois que eles não forem mais necessários, sem um coletor de lixo em execução. O tempo de vida de controle é livre de sobrecarga para o escopo de pilha, bases, membros e casos relacionados e baixo custo para `shared_ptr`.
+O conceito de final é o DAG (grafo acíclico direcionado).  A estrutura de propriedade em um programa de forma um DAG. Nenhum objeto pode ter em si — que não só é impossível, mas também inerentemente sem sentido. Mas os dois objetos podem compartilhar a propriedade de um terceiro objeto.  Vários tipos de links são possíveis em um DAG como este: A é membro do B (B possui um), C armazena uma `vector<D>` (C possui cada elemento D), E armazena um `shared_ptr<F>` (E compartilha a propriedade de F, possivelmente com outros objetos), e assim por diante.  Contanto que não há nenhum ciclo e cada link no DAG é representado por um objeto que tem um destruidor (em vez de um ponteiro bruto, identificadores ou outro mecanismo), em seguida, perda de recursos é impossível porque o idioma impede que eles. Recursos são liberados imediatamente depois que eles não forem mais necessários, sem um coletor de lixo em execução. O tempo de vida de controle é livre de sobrecarga para o escopo de pilha, bases, membros e casos relacionados e baixo custo para `shared_ptr`.
 
 ### <a name="heap-based-lifetime"></a>Tempo de vida de heap
 
@@ -85,6 +85,6 @@ Use o tempo de vida estático com moderação (estático global, estática de lo
 
 ## <a name="see-also"></a>Consulte também
 
-[Bem-vindo outra vez ao C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[Bem-vindo ao C++ (C++ moderno)](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [Referência da linguagem C++](../cpp/cpp-language-reference.md)<br/>
 [Biblioteca Padrão do C++](../standard-library/cpp-standard-library-reference.md)

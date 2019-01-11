@@ -3,12 +3,12 @@ title: Algoritmos (C++ moderno)
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 6f758d3c-a7c7-4a50-92bb-97b2f6d4ab27
-ms.openlocfilehash: 7306b28e255d68d68ad137ebedea414f0ac28744
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b972e575c982ae2523ec560a6237eac76ceaf834
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50576508"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220147"
 ---
 # <a name="algorithms-modern-c"></a>Algoritmos (C++ moderno)
 
@@ -75,6 +75,6 @@ Não é segredo que o CRT antigo `rand()` função possui várias falhas, que fo
 
 ## <a name="see-also"></a>Consulte também
 
-[Bem-vindo outra vez ao C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[Bem-vindo ao C++ (C++ moderno)](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [Referência da linguagem C++](../cpp/cpp-language-reference.md)<br/>
 [Biblioteca Padrão do C++](../standard-library/cpp-standard-library-reference.md)<br/>
