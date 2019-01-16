@@ -200,12 +200,12 @@ helpviewer_keywords:
 - std::count_if [C++]
 - std::partition_copy [C++]
 - std::swap [C++]
-ms.openlocfilehash: 5fdb5a89bc475cf2d6a358768b84b8542da5e0e8
-ms.sourcegitcommit: d94714522428834a02ede6e6884572f0f6ca9824
+ms.openlocfilehash: 260b2ee780956550678fcb01b3a018a60fb58deb
+ms.sourcegitcommit: 360b55e89e5954f494e52b1cf989fbaceda06f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51597558"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54334671"
 ---
 # <a name="ltalgorithmgt-functions"></a>Funções &lt;algorithm&gt;
 
@@ -743,7 +743,7 @@ Um iterador de entrada que indica o fim do intervalo.
 *dest*<br/>
 O iterador de saída que indica o destino para os elementos copiados.
 
-*Pred*<br/>
+*_Pred*<br/>
 A condição usada para testar cada elemento no intervalo. Essa condição é fornecida por um objeto de função de predicado definido pelo usuário. Um predicado usa um argumento e retorna **verdadeira** ou **falso**.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -809,7 +809,7 @@ Um iterador de entrada que trata da posição do primeiro elemento no intervalo 
 *last*<br/>
 Um iterador de entrada que trata da posição logo após o elemento final no intervalo a ser percorrido.
 
-*Val*<br/>
+*val*<br/>
 O valor dos elementos a serem contados.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -879,7 +879,7 @@ Um iterador de entrada que aborda a posição do primeiro elemento do intervalo 
 *last*<br/>
 Um iterador de entrada que aborda a posição um após o elemento final do intervalo a ser pesquisado.
 
-*Pred*<br/>
+*_Pred*<br/>
 Objeto de função de predicado definido pelo usuário que define a condição a ser atendida para que um elemento seja contado. Um predicado usa um único argumento e retorna **true** ou **false**.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -973,16 +973,16 @@ bool equal(
 
 ### <a name="parameters"></a>Parâmetros
 
-*first1*<br/>
+*First1*<br/>
 Um iterador de entrada que trata da posição do primeiro elemento no primeiro intervalo a ser testado.
 
-*last1*<br/>
+*Last1*<br/>
 Um iterador de entrada que trata da posição logo após o último elemento no primeiro intervalo a ser testado.
 
-*first2*<br/>
+*First2*<br/>
 Um iterador de entrada que trata da posição do primeiro elemento no segundo intervalo a ser testado.
 
-*first2*<br/>
+*First2*<br/>
 Um iterador de entrada que trata da posição logo após o último elemento no segundo intervalo a ser testado.
 
 *Comp*<br/>
@@ -1060,7 +1060,7 @@ Um iterador de avanço que aborda a posição do primeiro elemento do intervalo 
 *last*<br/>
 Um iterador de avanço que aborda a posição um após o elemento final do intervalo a ser pesquisado.
 
-*Val*<br/>
+*val*<br/>
 O valor que está sendo pesquisado no intervalo ordenado.
 
 *comp*<br/>
@@ -1219,7 +1219,7 @@ Um iterador de avanço que trata da posição do primeiro elemento no intervalo 
 *last*<br/>
 Um iterador de avanço que trata da posição logo após o elemento final no intervalo a ser percorrido.
 
-*Val*<br/>
+*val*<br/>
 O valor a ser atribuído aos elementos no intervalo [ *primeira*, *última*).
 
 ### <a name="remarks"></a>Comentários
@@ -1281,7 +1281,7 @@ OutputIterator fill_n(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Primeiro*<br/>
+*First*<br/>
 Um iterador de saída que trata da posição do primeiro elemento no intervalo a ser atribuído o valor *Val*.
 
 *Contagem*<br/>
@@ -1366,7 +1366,7 @@ Um iterador de entrada que aborda a posição do primeiro elemento do intervalo 
 *last*<br/>
 Um iterador de entrada que aborda a posição um após o elemento final do intervalo a ser pesquisado quanto ao valor especificado.
 
-*Val*<br/>
+*val*<br/>
 O valor a ser procurado.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1402,16 +1402,16 @@ ForwardIterator1 find_end(
 
 ### <a name="parameters"></a>Parâmetros
 
-*first1*<br/>
+*First1*<br/>
 Um iterador de avanço que aborda a posição do primeiro elemento do intervalo a ser pesquisado.
 
-*last1*<br/>
+*Last1*<br/>
 Um iterador de avanço que trata da posição logo após o último elemento no intervalo a ser pesquisado.
 
-*first2*<br/>
+*First2*<br/>
 Um iterador de avanço que trata da posição do primeiro elemento no intervalo a ser pesquisado.
 
-*last2*<br/>
+*Last2*<br/>
 Um iterador de avanço que trata da posição logo após o último elemento no intervalo a ser pesquisado.
 
 *Comp*<br/>
@@ -1690,7 +1690,7 @@ Um iterador de entrada que aborda a posição do primeiro elemento do intervalo 
 *last*<br/>
 Um iterador de entrada que aborda a posição um após o elemento final do intervalo a ser pesquisado.
 
-*Pred*<br/>
+*pred*<br/>
 O objeto de função de predicado definido pelo usuário ou a [expressão lambda](../cpp/lambda-expressions-in-cpp.md) que define a condição a ser atendida pelo elemento que está sendo pesquisado. Um predicado usa único argumento e retorna **verdadeira** (atendido) ou **falso** (não atendido). A assinatura do *pred* deve ser efetivamente `bool pred(const T& arg);`, onde `T` é um tipo ao qual `InputIterator` pode ser convertido implicitamente quando cancelado. O **const** palavra-chave é mostrado apenas para ilustrar que o objeto de função ou lambda não deve modificar o argumento.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1806,7 +1806,7 @@ Um iterador de entrada que aborda a posição do primeiro elemento do intervalo 
 *last*<br/>
 Um iterador de entrada que aborda a posição um após o elemento final do intervalo a ser pesquisado.
 
-*Pred*<br/>
+*pred*<br/>
 O objeto de função de predicado definido pelo usuário ou a [expressão lambda](../cpp/lambda-expressions-in-cpp.md) que define a condição que não deve ser atendida pelo elemento que está sendo pesquisado. Um predicado usa único argumento e retorna **verdadeira** (atendido) ou **falso** (não atendido). A assinatura do *pred* deve ser efetivamente `bool pred(const T& arg);`, onde `T` é um tipo ao qual `InputIterator` pode ser convertido implicitamente quando cancelado. O **const** palavra-chave é mostrado apenas para ilustrar que o objeto de função ou lambda não deve modificar o argumento.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -2055,7 +2055,7 @@ void generate_n(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Primeiro*<br/>
+*First*<br/>
 Um iterador de saída que trata da posição do primeiro elemento no intervalo ao qual os valores são atribuídos.
 
 *Contagem*<br/>
@@ -2344,7 +2344,7 @@ void inplace_merge(
 *first*<br/>
 Um iterador bidirecional que trata da posição do primeiro elemento no primeiro entre dois intervalos classificados consecutivos a serem combinados e classificados em um único intervalo.
 
-*intermediária*<br/>
+*middle*<br/>
 Um iterador bidirecional que trata da posição do primeiro elemento no segundo entre dois intervalos classificados consecutivos a serem combinados e classificados em um único intervalo.
 
 *last*<br/>
@@ -2618,16 +2618,16 @@ bool is_permutation(
 
 ### <a name="parameters"></a>Parâmetros
 
-*first1*<br/>
+*First1*<br/>
 Um iterador de avanço que se refere ao primeiro elemento do intervalo.
 
-*last1*<br/>
+*Last1*<br/>
 Um iterador de avanço que se refere ao elemento logo após o último do intervalo.
 
-*first2*<br/>
+*First2*<br/>
 Um iterador de avanço que se refere ao primeiro elemento de um segundo intervalo, usado para comparação.
 
-*last2*<br/>
+*Last2*<br/>
 Um iterador de avanço que se refere a um elemento logo após o último de um segundo intervalo, usado para comparação.
 
 *Pred*<br/>
@@ -3681,7 +3681,7 @@ Um iterador de entrada que trata da posição do primeiro elemento no segundo en
 *last2*<br/>
 Um iterador de entrada que trata da posição logo após o último elemento no segundo entre dois intervalos de origem classificados consecutivos a serem combinados e classificados em um único intervalo.
 
-*resultado*<br/>
+*result*<br/>
 Um iterador de saída que trata da posição do primeiro elemento no intervalo de destino no qual os dois intervalos de origem devem ser combinados em um único intervalo classificado.
 
 *comp*<br/>
@@ -4310,16 +4310,16 @@ mismatch(
 
 ### <a name="parameters"></a>Parâmetros
 
-*first1*<br/>
+*First1*<br/>
 Um iterador de entrada que trata da posição do primeiro elemento no primeiro intervalo a ser testado.
 
-*last1*<br/>
+*Last1*<br/>
 Um iterador de entrada que trata da posição logo após o último elemento no primeiro intervalo a ser testado.
 
-*first2*<br/>
+*First2*<br/>
 Um iterador de entrada que trata da posição do primeiro elemento no segundo intervalo a ser testado.
 
-*last2*<br/>
+*Last2*<br/>
 Um iterador de entrada que trata da posição logo após o último elemento no segundo intervalo a ser testado.
 
 *Comp*<br/>
@@ -5136,7 +5136,7 @@ Um iterador de saída usado para copiar elementos que retornam valores verdadeir
 *dest2*<br/>
 Um iterador de saída usado para copiar elementos que retornam falsos para uma condição testada usando *Pred*.
 
-*Pred*<br/>
+*_Pred*<br/>
 A condição a ser testada. Ela é fornecida por um objeto de função de predicado definido pelo usuário que define a condição a ser testada. Um predicado usa um único argumento e retorna **true** ou **false**.
 
 ### <a name="remarks"></a>Comentários
@@ -5561,7 +5561,7 @@ int main() {
 
 ## <a name="random_shuffle"></a>  random_shuffle
 
-A função std::random_shuffle() é preterida e substituída por [std:: embaralhar](../standard-library/algorithm-functions.md#shuffle). Para obter um exemplo de código e obter mais informações, consulte [ \<random >](../standard-library/random.md) e a postagem em Stackoverflow [por que os métodos std:: random_shuffle estão sendo preteridos no c++14?](http://go.microsoft.com/fwlink/p/?linkid=397954).
+A função std::random_shuffle() é preterida e substituída por [std:: embaralhar](../standard-library/algorithm-functions.md#shuffle). Para obter um exemplo de código e obter mais informações, consulte [ \<random >](../standard-library/random.md) e a postagem de Stack Overflow [por que os métodos std:: random_shuffle estão sendo preteridos no c++14?](http://go.microsoft.com/fwlink/p/?linkid=397954).
 
 ## <a name="remove"></a>  remove
 
@@ -5580,7 +5580,7 @@ Um iterador de avanço que trata da posição do primeiro elemento no intervalo 
 *last*<br/>
 Um iterador de avanço que da primeira posição após o elemento final no intervalo do qual os elementos estão sendo removidos.
 
-*Val*<br/>
+*val*<br/>
 O valor a ser removido do intervalo.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -5662,10 +5662,10 @@ Um iterador de entrada que trata da posição do primeiro elemento no intervalo 
 *last*<br/>
 Um iterador de entrada que trata da posição logo após o elemento final no intervalo do qual os elementos estão sendo removidos.
 
-*resultado*<br/>
+*result*<br/>
 Um iterador de saída que trata da posição do primeiro elemento no intervalo de destino para o qual os elementos estão sendo removidos.
 
-*Val*<br/>
+*val*<br/>
 O valor a ser removido do intervalo.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -5744,10 +5744,10 @@ Um iterador de entrada que trata da posição do primeiro elemento no intervalo 
 *last*<br/>
 Um iterador de entrada que trata da posição logo após o elemento final no intervalo do qual os elementos estão sendo removidos.
 
-*resultado*<br/>
+*result*<br/>
 Um iterador de saída que trata da posição do primeiro elemento no intervalo de destino para o qual os elementos estão sendo removidos.
 
-*Pred*<br/>
+*_Pred*<br/>
 O predicado unário que deve ser atendido é o valor de um elemento que deve ser substituído.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -5838,7 +5838,7 @@ Um iterador de avanço que aponta para a posição do primeiro elemento no inter
 *last*<br/>
 Um iterador de avanço que aponta para a posição logo após o elemento final no intervalo do qual os elementos estão sendo removidos.
 
-*Pred*<br/>
+*_Pred*<br/>
 O predicado unário que deve ser atendido é o valor de um elemento que deve ser substituído.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -6004,7 +6004,7 @@ Um iterador de entrada que aponta para a posição do primeiro elemento no inter
 *last*<br/>
 Um iterador de entrada que aponta para a posição logo após o elemento final no intervalo cujos elementos estão sendo substituídos.
 
-*resultado*<br/>
+*result*<br/>
 Um iterador de saída que aponta para o primeiro elemento no intervalo de destino para o qual a sequência alterada de elementos está sendo copiada.
 
 *_OldVal*<br/>
@@ -6106,13 +6106,13 @@ Um iterador de entrada que aponta para a posição do primeiro elemento no inter
 *last*<br/>
 Um iterador de entrada que aponta para a posição logo após o elemento final no intervalo cujos elementos estão sendo substituídos.
 
-*resultado*<br/>
+*result*<br/>
 Um iterador de saída que aponta para a posição do primeiro elemento no intervalo de destino para o qual os elementos estão sendo copiados.
 
-*Pred*<br/>
+*_Pred*<br/>
 O predicado unário que deve ser atendido é o valor de um elemento que deve ser substituído.
 
-*Val*<br/>
+*val*<br/>
 O novo valor que está sendo atribuído aos elementos cujos valores anteriores atendem ao predicado.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -6214,10 +6214,10 @@ Um iterador de avanço que aponta para a posição do primeiro elemento no inter
 *last*<br/>
 Um iterador que aponta para a posição logo após o elemento final no intervalo cujos elementos estão sendo substituídos.
 
-*Pred*<br/>
+*_Pred*<br/>
 O predicado unário que deve ser atendido é o valor de um elemento que deve ser substituído.
 
-*Val*<br/>
+*val*<br/>
 O novo valor que está sendo atribuído aos elementos cujos valores anteriores atendem ao predicado.
 
 ### <a name="remarks"></a>Comentários
@@ -6359,7 +6359,7 @@ Um iterador bidirecional que aponta para a posição do primeiro elemento no int
 *last*<br/>
 Um iterador bidirecional que aponta para a posição logo após o elemento final no intervalo de origem no qual os elementos estão sendo permutados.
 
-*resultado*<br/>
+*result*<br/>
 Um iterador de saída que aponta para a posição do primeiro elemento no intervalo de destino para o qual os elementos estão sendo copiados.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -6427,10 +6427,10 @@ void rotate(
 *first*<br/>
 Um iterador de avanço que trata da posição do primeiro elemento do intervalo a ser girado.
 
-*intermediária*<br/>
+*middle*<br/>
 Um iterador de avanço que define o limite dentro do intervalo que trata da posição do primeiro elemento na segunda parte do intervalo cujos elementos devem ser trocados com os que estão na primeira parte do intervalo.
 
-*último*<br/>
+*Last*<br/>
 Um iterador de avanço que trata da posição logo após o elemento final no intervalo a ser girado.
 
 ### <a name="remarks"></a>Comentários
@@ -6532,12 +6532,12 @@ OutputIterator rotate_copy(
 *first*<br/>
 Um iterador de avanço que trata da posição do primeiro elemento do intervalo a ser girado.
 
-*intermediária*<br/>
+*middle*<br/>
 Um iterador de avanço que define o limite dentro do intervalo que trata da posição do primeiro elemento na segunda parte do intervalo cujos elementos devem ser trocados com os que estão na primeira parte do intervalo.
 
 _ *Último* um iterador de avanço que trata da posição logo após o elemento final no intervalo a ser girado.
 
-*resultado*<br/>
+*result*<br/>
 Um iterador de saída que trata da posição do primeiro elemento no intervalo de destino.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -6789,7 +6789,7 @@ Um iterador de avanço que aborda a posição um após o elemento final do inter
 *count*<br/>
 O tamanho da subsequência que está sendo pesquisada.
 
-*Val*<br/>
+*val*<br/>
 O valor dos elementos na sequência que está sendo pesquisada.
 
 *comp*<br/>
@@ -6927,7 +6927,7 @@ Um iterador de entrada que trata da posição do primeiro elemento no segundo en
 *last2*<br/>
 Um iterador de entrada que trata da posição logo após o último elemento no segundo entre dois intervalos de origem classificados consecutivos, a serem unidos e classificados em um único intervalo, representando a diferença entre os dois intervalos de origem.
 
-*resultado*<br/>
+*result*<br/>
 Um iterador de saída que trata da posição do primeiro elemento no intervalo de destino, em que os dois intervalos de origem devem ser unidos em um único intervalo classificado, representando a diferença entre os dois intervalos de origem.
 
 *comp*<br/>
@@ -7601,7 +7601,7 @@ int main()
 }
 ```
 
-## <a name="shuffle"></a>  ordem aleatória
+## <a name="shuffle"></a>  shuffle
 
 Embaralha (reorganiza) elementos para um determinado intervalo usando um gerador de número aleatório.
 
@@ -7620,7 +7620,7 @@ Um iterador para o primeiro elemento no intervalo a ser embaralhado, incluindo-o
 *last*<br/>
 Um iterador para o último elemento no intervalo a ser embaralhado, excluindo-o. Deve atender os requisitos de `RandomAccessIterator` e `ValueSwappable`.
 
-*Gen*<br/>
+*gen*<br/>
 Um gerador de número aleatório que a função `shuffle()` usará para a operação. Deve atender aos requisitos de um `UniformRandomNumberGenerator`.
 
 ### <a name="remarks"></a>Comentários
@@ -7847,7 +7847,7 @@ Um iterador bidirecional que trata da posição do primeiro elemento no interval
 *last*<br/>
 Um iterador bidirecional que trata da posição logo após o elemento final no intervalo a ser particionado.
 
-*Pred*<br/>
+*_Pred*<br/>
 Objeto de função de predicado definido pelo usuário que define a condição a ser atendida se um elemento precisar ser classificado. Um predicado usa um único argumento e retorna **true** ou **false**.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -8215,7 +8215,7 @@ Um iterador de entrada que trata da posição logo após o elemento final no pri
 *first2*<br/>
 Um iterador de entrada que trata da posição do primeiro elemento no segundo intervalo de origem no qual a operação ocorrerá.
 
-*resultado*<br/>
+*result*<br/>
 Um iterador de saída que trata da posição do primeiro elemento no intervalo de destino.
 
 *_Func*<br/>
@@ -8478,7 +8478,7 @@ Um iterador de avanço que trata da posição do primeiro elemento no intervalo 
 *last*<br/>
 Um iterador de avanço que trata da posição logo após o elemento final no intervalo de origem a ser copiado.
 
-*resultado*<br/>
+*result*<br/>
 Um iterador de saída que trata da posição do primeiro elemento no intervalo de destino que está recebendo a cópia com as duplicatas consecutivas removidas.
 
 *comp*<br/>

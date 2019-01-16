@@ -3,12 +3,12 @@ title: Bem-vindo ao C++ (C++ moderno)
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 1cb1b849-ed9c-4721-a972-fd8f3dab42e2
-ms.openlocfilehash: a7d82a65141e402e779a428ba32d15ddd70016c8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 08563f6a67ec7105da688d566d71d8ea15cb8cec
+ms.sourcegitcommit: 360b55e89e5954f494e52b1cf989fbaceda06f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50454620"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54334619"
 ---
 # <a name="welcome-back-to-c-modern-c"></a>Bem-vindo ao C++ (C++ moderno)
 
@@ -125,7 +125,7 @@ Os artigos da documentação sobre esse assunto fornecem diretrizes de alto nív
 
 - [Portabilidade em limites ABI](../cpp/portability-at-abi-boundaries-modern-cpp.md)
 
-Para obter mais informações, consulte o artigo da StackOverflow [quais idiomas C++ foram preteridos no c++11](https://stackoverflow.com/questions/9299101/which-c-idioms-are-deprecated-in-c11).
+Para obter mais informações, consulte o artigo de Stack Overflow [expressões do C++ que foram preteridas no c++11](https://stackoverflow.com/questions/9299101/which-c-idioms-are-deprecated-in-c11).
 
 ## <a name="see-also"></a>Consulte também
 
