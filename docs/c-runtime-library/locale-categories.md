@@ -21,19 +21,18 @@ helpviewer_keywords:
 - LC_NUMERIC constant
 - LC_COLLATE constant
 ms.assetid: 868f1493-fe5d-4722-acab-bfcd374a063a
-ms.openlocfilehash: 4c46f4803c7b6ff226fc41ddce7f8e4493b0db40
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 841ff5a31bfe9ee5513f76970d3b834f698b92cc
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51521343"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220186"
 ---
 # <a name="locale-categories"></a>Categorias de localidade
 
 ## <a name="syntax"></a>Sintaxe
 
 ```
-
 #include <locale.h>
 ```
 
@@ -45,7 +44,7 @@ As categorias de localidade são constantes de manifesto usadas por rotinas de l
 |---------------------|-------------------------------|
 |`LC_ALL`|Todo o comportamento específico da localidade (todas as categorias)|
 |`LC_COLLATE`|Comportamento das funções `strcoll` e `strxfrm`|
-|`LC_CTYPE`|Comportamento das funções de manipulação de caracteres (exceto **isdigit**, `isxdigit`, `mbstowcs` e `mbtowc`, que não são afetadas)|
+|`LC_CTYPE`|Comportamento das funções de manipulação de caracteres (exceto `isdigit`, `isxdigit`, `mbstowcs` e `mbtowc`, que não são afetadas)|
 |`LC_MAX`|Mesmo que `LC_TIME`|
 |`LC_MIN`|Mesmo que `LC_ALL`|
 |`LC_MONETARY`|Informações de formatação monetária retornadas pela função `localeconv`|

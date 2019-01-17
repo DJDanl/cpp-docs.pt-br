@@ -41,19 +41,18 @@ helpviewer_keywords:
 - EXDEV constant
 - EILSEQ constant
 ms.assetid: 47089258-d5a5-4cd8-b193-223894dea0cf
-ms.openlocfilehash: c7c623b81d626b3d653dbd731521ffe2649671ab
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2d092f9c1626f48dcdb006e18ece2a45bfeed36e
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50645595"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220602"
 ---
 # <a name="errno-constants"></a>Constantes errno
 
 ## <a name="syntax"></a>Sintaxe
 
 ```
-
 #include <errno.h>
 ```
 
@@ -73,7 +72,7 @@ Há suporte para os seguintes valores de **errno**:
 |**EAGAIN**|Sem mais processos. Ocorreu uma falha ao tentar criar um novo processo, pois não há mais slot do processo, ou não há mais memória suficiente ou o nível de aninhamento máximo foi atingido.|
 |**E2BIG**|A lista de argumentos é muito longa.|
 |**EACCES**|Permissão negada. A configuração de permissão do arquivo não permite o acesso especificado. Esse erro indica que foi feita uma tentativa de acessar um arquivo (ou, em alguns casos, um diretório) de um modo incompatível com os atributos do arquivo.<br/><br/>Por exemplo, o erro pode ocorrer quando é feita uma tentativa de leitura de um arquivo que não está aberto, de abertura de um arquivo existente somente leitura para gravação ou de abertura de um diretório em vez de um arquivo. Em versões do sistema operacional MS-DOS 3.0 e posteriores, **EACCES** também pode indicar um bloqueio ou violação de compartilhamento.<br/><br/>O erro também pode ocorrer em uma tentativa de renomear um arquivo ou diretório ou remover um diretório existente.|
-|**EBADF**|Número de arquivo incorreto. Há duas causas possíveis: 1) o descritor de arquivo especificado não é um valor válido ou não faz referência a um arquivo aberto. 2) uma tentativa foi feita para gravar em um arquivo ou dispositivo aberto para acesso somente leitura.|
+|**EBADF**|Número de arquivo incorreto. Existem duas causas possíveis: 1) O descritor de arquivo especificado não é um valor válido ou não se refere a um arquivo aberto. 2) uma tentativa foi feita para gravar em um arquivo ou dispositivo aberto para acesso somente leitura.|
 |**EDEADLOCK**|Ocorreria um deadlock de recursos. O argumento para uma função matemática não está no domínio da função.|
 |**EDOM**|Argumento matemático.|
 |**EEXIST**|Há arquivos. Foi feita uma tentativa de criar um arquivo que já existe. Por exemplo, os sinalizadores **_O_CREAT** e **_O_EXCL** são especificados em uma chamada **_open**, mas o arquivo denominado já existe.|
