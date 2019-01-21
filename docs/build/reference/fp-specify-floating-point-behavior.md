@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -fp compiler option [C++]
 - /fp compiler option [C++]
 ms.assetid: 10469d6b-e68b-4268-8075-d073f4f5d57e
-ms.openlocfilehash: 78abe5e3b491ec0d658a40628dadc81e334c212f
-ms.sourcegitcommit: d94714522428834a02ede6e6884572f0f6ca9824
+ms.openlocfilehash: 77e6d0c97f1d0381fe32ae23f8d7e8bd02ddf219
+ms.sourcegitcommit: 22f7c4a9b4fc2158fb5283810f15275803cafe10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51597532"
+ms.lasthandoff: 01/21/2019
+ms.locfileid: "54417636"
 ---
 # <a name="fp-specify-floating-point-behavior"></a>/FP (Especificar comportamento de ponto flutuante)
 
@@ -24,7 +24,7 @@ Especifica como o compilador trata exceções, as otimizações e expressões de
 
 ## <a name="syntax"></a>Sintaxe
 
-> **/FP:**[**preciso** | **estrito** | **rápidas** | **exceto**[ **-**]]
+> **/fp:**[**precise** | **strict** | **fast** | **except**[**-**]]
 
 ### <a name="arguments"></a>Arguments
 
@@ -57,7 +57,7 @@ Sob **Fast**, o compilador gera código devem ser executados no ambiente de pont
 
 **Fast** destina-se para programas que não exigem a ordenação de código fonte estrita e arredondamento de expressões de ponto flutuantes e não contam com as regras padrão para lidar com valores especiais, como NaN. Se seu código de ponto flutuante requer a preservação do código-fonte, ordenação e arredondamento ou depender do comportamento padrão dos valores especiais, use [/fp: preciso](#precise). Se seu código acessa ou modifica o ambiente de ponto flutuante para alterar os modos de arredondamento, remover a máscara das exceções de ponto flutuante, ou verificar o status de ponto flutuante, use [/fp: strict](#strict).
 
-#### <a name="except"></a>Exceto
+#### <a name="except"></a>except
 
 O **/fp: except** opção gera código para garante que todas as exceções de ponto flutuantes sem máscara são acionadas no ponto exato em que eles ocorrem e que nenhuma exceção de ponto flutuante adicionais é acionadas. Por padrão, o **/fp: strict** opção habilita **/fp: exceto**, e **/fp: preciso** não. O **/fp: except** opção não é compatível com **Fast**. A opção pode ser desabilitada explicitamente por nós de **/fp: except-**.
 
@@ -71,13 +71,13 @@ O [/Za](../../build/reference/za-ze-disable-language-extensions.md) opção (com
 
 ### <a name="using-pragmas-to-control-floating-point-behavior"></a>Usando Pragmas para controlar o comportamento de ponto flutuante
 
-O compilador fornece três directivess pragma para substituir o comportamento de ponto flutuante especificado na linha de comando: [float_control](../../preprocessor/float-control.md), [fenv_access](../../preprocessor/fenv-access.md), e [fp_contract](../../preprocessor/fp-contract.md). Você pode usar esses pragmas para controlar o comportamento de ponto flutuante no nível de função, não dentro de uma função. Observe que esses pragmas não correspondem diretamente para o **/fp** opções. Esta tabela mostra como o **/fp** pragmas e opções de mapear entre si. Para obter mais informações, consulte a documentação para os pragmas e opções individuais.
+O compilador fornece três diretivas pragma para substituir o comportamento de ponto flutuante especificado na linha de comando: [float_control](../../preprocessor/float-control.md), [fenv_access](../../preprocessor/fenv-access.md), e [fp_contract](../../preprocessor/fp-contract.md). Você pode usar esses pragmas para controlar o comportamento de ponto flutuante no nível de função, não dentro de uma função. Observe que esses pragmas não correspondem diretamente para o **/fp** opções. Esta tabela mostra como o **/fp** pragmas e opções de mapear entre si. Para obter mais informações, consulte a documentação para os pragmas e opções individuais.
 
-||float_control(precise)|float_control(EXCEPT)|fenv_access|fp_contract|
+||float_control(precise)|float_control(except)|fenv_access|fp_contract|
 |-|-|-|-|-|
-|**Fast**|Desativar|Desativar|Desativar|em|
-|**/FP: preciso**|em|Desativar|Desativar|em|
-|**/FP: except**|em|em|em|Desativar|
+|**/fp:fast**|Desativar|Desativar|Desativar|em|
+|**/fp:precise**|em|Desativar|Desativar|em|
+|**/fp:except**|em|em|em|Desativar|
 
 ### <a name="the-default-floating-point-environment"></a>O ambiente de ponto flutuante padrão
 

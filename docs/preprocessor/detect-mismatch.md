@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pragmas, detect_mismatch
 - detect_mismatch pragma
 ms.assetid: ddb13ac9-0e2f-40ce-be69-7e44c04f5a12
-ms.openlocfilehash: 2973a4738aa54e9f454190b18bcabff92077b284
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fb6f147f1591f010298e84cb28f05b40dafaeb63
+ms.sourcegitcommit: 22f7c4a9b4fc2158fb5283810f15275803cafe10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50633318"
+ms.lasthandoff: 01/21/2019
+ms.locfileid: "54417623"
 ---
 # <a name="detectmismatch"></a>detect_mismatch
 Coloca um registro em um objeto. O vinculador verifica possíveis incompatibilidades nesses registros.
@@ -21,7 +21,7 @@ Coloca um registro em um objeto. O vinculador verifica possíveis incompatibilid
 ## <a name="syntax"></a>Sintaxe
 
 ```
-#pragma detect_mismatch( "name", "value"))
+#pragma detect_mismatch("name", "value")
 ```
 
 ## <a name="remarks"></a>Comentários

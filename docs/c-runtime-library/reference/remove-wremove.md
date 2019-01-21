@@ -30,12 +30,12 @@ helpviewer_keywords:
 - wremove function
 - remove function
 ms.assetid: b6345ec3-3289-4645-93a4-28b9e478cc19
-ms.openlocfilehash: d5636912ea36fd1b1412a556d516ac3e8184e0b4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 05f1c5b6760520e5a982777faa903b3c5116ad05
+ms.sourcegitcommit: 22f7c4a9b4fc2158fb5283810f15275803cafe10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50613961"
+ms.lasthandoff: 01/21/2019
+ms.locfileid: "54417597"
 ---
 # <a name="remove-wremove"></a>remove, _wremove
 
@@ -59,7 +59,7 @@ Caminho do arquivo a ser removido.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Cada uma dessas funções retornará 0 se o arquivo for excluído com êxito. Caso contrário, retornará -1 e define **errno** ao **EACCES** para indicar que o caminho Especifica um arquivo somente leitura ou o arquivo está aberto, ou como **ENOENT** para indicar que o nome de arquivo ou caminho não foi encontrado ou o caminho Especifica um diretório.
+Cada uma dessas funções retornará 0 se o arquivo for excluído com êxito. Caso contrário, retornará -1 e define **errno** ao **EACCES** indicar que o caminho Especifica um arquivo somente leitura, especifica um diretório ou o arquivo está aberto, ou como **ENOENT** para indicar que o nome de arquivo ou caminho não foi encontrado.
 
 Consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obter mais informações sobre esses e outros códigos de retorno.
 
@@ -71,7 +71,7 @@ A função **remove** exclui o arquivo especificado por *path.* **wremove** é u
 
 |Rotina TCHAR.H|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**tremove**|**remove**|**remove**|**_wremove**|
+|**_tremove**|**remove**|**remove**|**_wremove**|
 
 ## <a name="requirements"></a>Requisitos
 

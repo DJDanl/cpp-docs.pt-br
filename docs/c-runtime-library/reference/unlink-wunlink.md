@@ -32,12 +32,12 @@ helpviewer_keywords:
 - files [C++], removing
 - _tunlink function
 ms.assetid: 5e4f5f1b-1e99-4391-9b18-9ac63c32fae8
-ms.openlocfilehash: 7565679c58af83d64fd59419e8e841ee48133edf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ec59a02f1302fe4a2149889cf1b48090d061d6b2
+ms.sourcegitcommit: 22f7c4a9b4fc2158fb5283810f15275803cafe10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544190"
+ms.lasthandoff: 01/21/2019
+ms.locfileid: "54417610"
 ---
 # <a name="unlink-wunlink"></a>_unlink, _wunlink
 
@@ -61,7 +61,7 @@ Nome do arquivo a ser removido.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Cada uma dessas funções retornará 0 em caso de êxito. Caso contrário, a função retornará -1 e define **errno** para **EACCES**, que significa que o caminho Especifica um arquivo somente leitura, ou como **ENOENT**, que significa que o arquivo ou caminho não for encontrado ou o caminho especificado um diretório.
+Cada uma dessas funções retornará 0 em caso de êxito. Caso contrário, a função retornará -1 e define **errno** para **EACCES**, que significa que o caminho Especifica um arquivo somente leitura ou um diretório, ou como **ENOENT**, que significa que o arquivo ou caminho não foi encontrado.
 
 Consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obter mais informações sobre esses e outros códigos de retorno.
 
@@ -73,7 +73,7 @@ O **unlink** função exclui o arquivo especificado por *filename*. **wunlink** 
 
 |Rotina TCHAR.H|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**tunlink**|**_unlink**|**_unlink**|**_wunlink**|
+|**_tunlink**|**_unlink**|**_unlink**|**_wunlink**|
 
 ## <a name="requirements"></a>Requisitos
 
