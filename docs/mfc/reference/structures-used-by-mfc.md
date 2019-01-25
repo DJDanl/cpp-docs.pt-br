@@ -7,12 +7,12 @@ helpviewer_keywords:
 - structures
 - structures, MFC
 ms.assetid: 2168fcc6-e800-4814-aabf-0bca86ff790d
-ms.openlocfilehash: 1b691741338b1fe9ec8296b95ee67f031028d5e3
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 7e531937fc61898a6d2d432f74cb5608ea94fbc9
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178103"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893464"
 ---
 # <a name="structures-used-by-mfc"></a>Estruturas usadas pelo MFC
 
@@ -34,7 +34,7 @@ A tabela a seguir lista as estruturas que são chamadas de várias funções de 
 |[Estrutura CDaoQueryDefInfo](../../mfc/reference/cdaoquerydefinfo-structure.md)|[Estrutura RGNDATA](/windows/desktop/api/wingdi/ns-wingdi-_rgndata)|
 |[Estrutura CDaoRelationFieldInfo](../../mfc/reference/cdaorelationfieldinfo-structure.md)|[Estrutura SOCKADDR](/windows/desktop/winsock/sockaddr-2)|
 |[Estrutura CDaoRelationInfo](../../mfc/reference/cdaorelationinfo-structure.md)|[Estrutura SOCKADDR_IN](/windows/desktop/winsock/sockaddr-2)|
-|[Estrutura CDaoTableDefInfo](../../mfc/reference/cdaotabledefinfo-structure.md)|[Estrutura SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)
+|[Estrutura CDaoTableDefInfo](../../mfc/reference/cdaotabledefinfo-structure.md)|[Estrutura SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime)
 |[Estrutura CDaoWorkspaceInfo](../../mfc/reference/cdaoworkspaceinfo-structure.md)|[Estrutura WINDOWPLACEMENT](/windows/desktop/api/winuser/ns-winuser-tagwindowplacement)|
 |[Estrutura CODBCFieldInfo](../../mfc/reference/codbcfieldinfo-structure.md)|[Estrutura WINDOWPOS](/windows/desktop/api/winuser/ns-winuser-tagwindowpos)
 |[Estrutura COLORADJUSTMENT](/windows/desktop/api/wingdi/ns-wingdi-tagcoloradjustment)|[Estrutura WSADATA](/windows/desktop/api/winsock2/ns-winsock2-wsadata)|
@@ -44,7 +44,7 @@ A tabela a seguir lista as estruturas que são chamadas de várias funções de 
 |[Estrutura DEVNAMES](/windows/desktop/api/commdlg/ns-commdlg-tagdevnames)||
 |[Estrutura DHtmlUrlEventMapEntry](../../mfc/reference/dhtmlurleventmapentry-structure.md)||
 |[Estrutura DRAWITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct)||
-|[Estrutura FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284)||
+|[Estrutura FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime)||
 
 ## <a name="see-also"></a>Consulte também
 

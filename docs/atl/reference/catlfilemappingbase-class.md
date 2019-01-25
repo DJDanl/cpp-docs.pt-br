@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlFileMappingBase class
 ms.assetid: be555723-2790-4f57-a8fb-be4d68460775
-ms.openlocfilehash: 71b3b8621f4148f680337e9bce6ef469b90de746
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 12a8159cbf28c64efe36357761f4f404ccff9541
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614364"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894010"
 ---
 # <a name="catlfilemappingbase-class"></a>Classe CAtlFileMappingBase
 
@@ -43,7 +43,7 @@ class CAtlFileMappingBase
 |Nome|Descrição|
 |----------|-----------------|
 |[CAtlFileMappingBase::CAtlFileMappingBase](#catlfilemappingbase)|O construtor.|
-|[CAtlFileMappingBase:: ~ CAtlFileMappingBase](#dtor)|O destruidor.|
+|[CAtlFileMappingBase::~CAtlFileMappingBase](#dtor)|O destruidor.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
@@ -96,7 +96,7 @@ Cria um novo objeto de mapeamento de arquivo, opcionalmente usando um objeto exi
 
 [!code-cpp[NVC_ATL_Utilities#71](../../atl/codesnippet/cpp/catlfilemappingbase-class_1.cpp)]
 
-##  <a name="dtor"></a>  CAtlFileMappingBase:: ~ CAtlFileMappingBase
+##  <a name="dtor"></a>  CAtlFileMappingBase::~CAtlFileMappingBase
 
 O destruidor.
 
@@ -193,7 +193,7 @@ O deslocamento de arquivo onde o mapeamento deve começar. O valor de deslocamen
 A proteção desejada para o modo de exibição de arquivo quando o arquivo é mapeado. Ver *flProtect* na [CreateFileMapping](/windows/desktop/api/winbase/nf-winbase-createfilemappinga) no SDK do Windows.
 
 *dwViewDesiredAccess*<br/>
-Especifica o tipo de acesso para o modo de exibição de arquivo e, portanto, a proteção das páginas mapeado pelo arquivo. Ver *dwDesiredAccess* na [MapViewOfFileEx](https://msdn.microsoft.com/library/windows/desktop/aa366763) no SDK do Windows.
+Especifica o tipo de acesso para o modo de exibição de arquivo e, portanto, a proteção das páginas mapeado pelo arquivo. Ver *dwDesiredAccess* na [MapViewOfFileEx](/windows/desktop/api/memoryapi/nf-memoryapi-mapviewoffileex) no SDK do Windows.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -201,7 +201,7 @@ Retorna S_OK no êxito ou um erro HRESULT em caso de falha.
 
 ### <a name="remarks"></a>Comentários
 
-Depois que um objeto de mapeamento de arquivos tiver sido criado, o tamanho do arquivo não deve exceder o tamanho do objeto de mapeamento de arquivo; Se isso acontecer, não todo o conteúdo do arquivo estará disponível para o compartilhamento. Para obter mais detalhes, consulte [CreateFileMapping](/windows/desktop/api/winbase/nf-winbase-createfilemappinga) e [MapViewOfFileEx](https://msdn.microsoft.com/library/windows/desktop/aa366763) no SDK do Windows.
+Depois que um objeto de mapeamento de arquivos tiver sido criado, o tamanho do arquivo não deve exceder o tamanho do objeto de mapeamento de arquivo; Se isso acontecer, não todo o conteúdo do arquivo estará disponível para o compartilhamento. Para obter mais detalhes, consulte [CreateFileMapping](/windows/desktop/api/winbase/nf-winbase-createfilemappinga) e [MapViewOfFileEx](/windows/desktop/api/memoryapi/nf-memoryapi-mapviewoffileex) no SDK do Windows.
 
 ### <a name="example"></a>Exemplo
 
@@ -239,7 +239,7 @@ O ponteiro para um `SECURITY_ATTRIBUTES` estrutura que determina se o identifica
 A proteção desejada para o modo de exibição de arquivo, quando o arquivo é mapeado. Ver *flProtect* em `CreateFileMapping` no SDK do Windows.
 
 *dwViewDesiredAccess*<br/>
-Especifica o tipo de acesso para o modo de exibição de arquivo e, portanto, a proteção das páginas mapeado pelo arquivo. Ver *dwDesiredAccess* na [MapViewOfFileEx](https://msdn.microsoft.com/library/windows/desktop/aa366763) no SDK do Windows.
+Especifica o tipo de acesso para o modo de exibição de arquivo e, portanto, a proteção das páginas mapeado pelo arquivo. Ver *dwDesiredAccess* na [MapViewOfFileEx](/windows/desktop/api/memoryapi/nf-memoryapi-mapviewoffileex) no SDK do Windows.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -273,7 +273,7 @@ O tamanho do mapeamento. Se for 0, o tamanho máximo do objeto de mapeamento de 
 O deslocamento de arquivo onde o mapeamento deve começar. O valor de deslocamento deve ser um múltiplo da granularidade de alocação de memória do sistema.
 
 *dwViewDesiredAccess*<br/>
-Especifica o tipo de acesso para o modo de exibição de arquivo e, portanto, a proteção das páginas mapeado pelo arquivo. Ver *dwDesiredAccess* na [MapViewOfFileEx](https://msdn.microsoft.com/library/windows/desktop/aa366763) no SDK do Windows.
+Especifica o tipo de acesso para o modo de exibição de arquivo e, portanto, a proteção das páginas mapeado pelo arquivo. Ver *dwDesiredAccess* na [MapViewOfFileEx](/windows/desktop/api/memoryapi/nf-memoryapi-mapviewoffileex) no SDK do Windows.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -314,7 +314,7 @@ Retorna S_OK no êxito ou um erro HRESULT em caso de falha.
 
 ### <a name="remarks"></a>Comentários
 
-Ver [UnmapViewOfFile](https://msdn.microsoft.com/library/windows/desktop/aa366882) no SDK do Windows para obter mais detalhes.
+Ver [UnmapViewOfFile](/windows/desktop/api/memoryapi/nf-memoryapi-unmapviewoffile) no SDK do Windows para obter mais detalhes.
 
 ## <a name="see-also"></a>Consulte também
 

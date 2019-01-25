@@ -90,12 +90,12 @@ helpviewer_keywords:
 - CMonthCalCtrl [MFC], SizeMinReq
 - CMonthCalCtrl [MFC], SizeRectToMin
 ms.assetid: a42f6bd6-ab5c-4335-82f8-839982fc64a2
-ms.openlocfilehash: 26a0feadfd6603f74ce222e4850f0da9cf71e7d1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 48b02843cc957994aa3f3109a82cb2188dd9acff
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509563"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894192"
 ---
 # <a name="cmonthcalctrl-class"></a>Classe CMonthCalCtrl
 
@@ -226,7 +226,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Especifica a combinação de estilos do Windows aplicada ao controle de calendário mensal. Ver [estilos de controle de calendário do mês](/windows/desktop/Controls/month-calendar-control-styles) no SDK do Windows para obter mais informações sobre os estilos.
 
-*Rect*<br/>
+*rect*<br/>
 Uma referência a um [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura. Contém a posição e o tamanho do controle de calendário mensal.
 
 *pt*<br/>
@@ -412,7 +412,7 @@ BOOL GetCurSel(LPSYSTEMTIME pDateTime) const;
 Uma referência a um [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) objeto ou uma [CTime](../../atl-mfc-shared/reference/ctime-class.md) objeto. Recebe a hora atual.
 
 *pDateTime*<br/>
-Um ponteiro para um [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) estrutura que receberá as informações de data selecionado no momento. Esse parâmetro deve ser um endereço válido e não pode ser NULL.
+Um ponteiro para um [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) estrutura que receberá as informações de data selecionado no momento. Esse parâmetro deve ser um endereço válido e não pode ser NULL.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -579,7 +579,7 @@ Uma referência a um [COleDateTime](../../atl-mfc-shared/reference/coledatetime-
 Uma referência a um `COleDateTime` ou `CTime` objeto que contém a data máxima permitida.
 
 *pMinRange*<br/>
-Um ponteiro para um [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) estrutura que contém a data no final do intervalo mais baixo.
+Um ponteiro para um [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) estrutura que contém a data no final do intervalo mais baixo.
 
 *pMaxRange*<br/>
 Um ponteiro para um `SYSTEMTIME` estrutura que contém a data no final do intervalo mais alto.
@@ -625,10 +625,10 @@ DWORD GetRange(
 ### <a name="parameters"></a>Parâmetros
 
 *pMinRange*<br/>
-Um ponteiro para um `COleDateTime` objeto, um `CTime` objeto, ou [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) estrutura que contém a data no final do intervalo mais baixo.
+Um ponteiro para um `COleDateTime` objeto, um `CTime` objeto, ou [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) estrutura que contém a data no final do intervalo mais baixo.
 
 *pMaxRange*<br/>
-Um ponteiro para um `COleDateTime` objeto, um `CTime` objeto, ou [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) estrutura que contém a data no final do intervalo mais alto.
+Um ponteiro para um `COleDateTime` objeto, um `CTime` objeto, ou [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) estrutura que contém a data no final do intervalo mais alto.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -674,7 +674,7 @@ Uma referência a um [COleDateTime](../../atl-mfc-shared/reference/coledatetime-
 Uma referência a um `COleDateTime` ou `CTime` objeto que contém a data máxima permitida.
 
 *pMinRange*<br/>
-Um ponteiro para um [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) estrutura que contém a data no final do intervalo mais baixo.
+Um ponteiro para um [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) estrutura que contém a data no final do intervalo mais baixo.
 
 *pMaxRange*<br/>
 Um ponteiro para um `SYSTEMTIME` estrutura que contém a data no final do intervalo mais alto.
@@ -705,7 +705,7 @@ BOOL GetToday(LPSYSTEMTIME pDateTime) const;
 Uma referência a um [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) ou [CTime](../../atl-mfc-shared/reference/ctime-class.md) objeto que indica o dia atual.
 
 *pDateTime*<br/>
-Um ponteiro para um [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) estrutura que receberá as informações de data. Esse parâmetro deve ser um endereço válido e não pode ser NULL.
+Um ponteiro para um [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) estrutura que receberá as informações de data. Esse parâmetro deve ser um endereço válido e não pode ser NULL.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -862,7 +862,7 @@ BOOL SetCalID(CALID calid);
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|*CALID*|[in] Um dos [identificador de calendário](/windows/desktop/Intl/calendar-identifiers) constantes.|
+|*calid*|[in] Um dos [identificador de calendário](/windows/desktop/Intl/calendar-identifiers) constantes.|
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -953,7 +953,7 @@ BOOL SetCurrentView(DWORD dwNewView);
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|*dwNewView*|[in] Um dos valores a seguir que especifica um mensal, anual, década ou modo de exibição do século.<br /><br /> MCMV_MONTH: Exibição mensal<br /><br /> MCMV_YEAR: Modo de exibição anual<br /><br /> MCMV_DECADE: Exibição da década<br /><br /> MCMV_CENTURY: Exibição do século|
+|*dwNewView*|[in] Um dos valores a seguir que especifica um mensal, anual, década ou modo de exibição do século.<br /><br /> MCMV_MONTH: Exibição mensal<br /><br /> MCMV_YEAR: Modo de exibição anual<br /><br /> MCMV_DECADE: Modo de exibição da década<br /><br /> MCMV_CENTURY: Modo de exibição do século|
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -979,7 +979,7 @@ BOOL SetCurSel(const CTime& refDateTime);
 Uma referência a um [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) ou [CTime](../../atl-mfc-shared/reference/ctime-class.md) objeto que indica o controle de calendário do mês selecionado no momento.
 
 *pDateTime*<br/>
-Ponteiro para um [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) estrutura que contém a data a ser definido como a seleção atual.
+Ponteiro para um [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) estrutura que contém a data a ser definido como a seleção atual.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -1079,7 +1079,7 @@ BOOL SetMaxSelCount(int nMax);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Nmáx*<br/>
+*nMax*<br/>
 O valor será definido para representar o número máximo de dias selecionáveis.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1104,7 +1104,7 @@ int SetMonthDelta(int iDelta);
 
 ### <a name="parameters"></a>Parâmetros
 
-*idelta enumeração*<br/>
+*iDelta*<br/>
 O número de meses a ser definido como taxa de rolagem do controle. Se esse valor for zero, o delta de mês é redefinido para o padrão, que é o número de meses exibidos no controle.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1164,7 +1164,7 @@ BOOL SetRange(
 ### <a name="parameters"></a>Parâmetros
 
 *pMinRange*<br/>
-Um ponteiro para um `COleDateTime` objeto, um `CTime` objeto, ou [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) estrutura que contém a data no final do intervalo mais baixo.
+Um ponteiro para um `COleDateTime` objeto, um `CTime` objeto, ou [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) estrutura que contém a data no final do intervalo mais baixo.
 
 *pMaxRange*<br/>
 Um ponteiro para um `COleDateTime` objeto, um `CTime` objeto, ou `SYSTEMTIME` estrutura que contém a data no final do intervalo mais alto.
@@ -1202,7 +1202,7 @@ BOOL SetSelRange(
 ### <a name="parameters"></a>Parâmetros
 
 *pMinRange*<br/>
-Um ponteiro para um `COleDateTime` objeto, um `CTime` objeto, ou [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) estrutura que contém a data no final do intervalo mais baixo.
+Um ponteiro para um `COleDateTime` objeto, um `CTime` objeto, ou [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) estrutura que contém a data no final do intervalo mais baixo.
 
 *pMaxRange*<br/>
 Um ponteiro para um `COleDateTime` objeto, um `CTime` objeto, ou `SYSTEMTIME` estrutura que contém a data no final do intervalo mais alto.
@@ -1231,7 +1231,7 @@ void SetToday(const CTime* pDateTime);
 Uma referência a um [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) objeto que contém a data atual.
 
 *pDateTime*<br/>
-Na segunda versão, um ponteiro para um [CTime](../../atl-mfc-shared/reference/ctime-class.md) objeto que contém as informações de data atual. Na terceira versão, um ponteiro para um [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) estrutura que contém as informações de data atual.
+Na segunda versão, um ponteiro para um [CTime](../../atl-mfc-shared/reference/ctime-class.md) objeto que contém as informações de data atual. Na terceira versão, um ponteiro para um [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) estrutura que contém as informações de data atual.
 
 ### <a name="remarks"></a>Comentários
 

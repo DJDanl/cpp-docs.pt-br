@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - struct constructors
 ms.assetid: 3c6ba273-e248-4ff1-8c69-d2abcf1263c6
-ms.openlocfilehash: 9b70a4caea2b9aa5d86c0e97b97eae784594ec87
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 78d3df4a96cb769cb31760c53c8486c86189e00c
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326102"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893334"
 ---
 # <a name="struct-c"></a>struct (C++)
 
@@ -20,7 +20,7 @@ O **struct** palavra-chave define um tipo de estrutura e/ou uma variável de um 
 ## <a name="syntax"></a>Sintaxe
 
 ```
-[template-spec] struct[ms-decl-spec] [tag [: base-list ]]
+[template-spec] struct [ms-decl-spec] [tag [: base-list ]]
 {
    member-list
 } [declarators];
@@ -29,26 +29,26 @@ O **struct** palavra-chave define um tipo de estrutura e/ou uma variável de um 
 
 #### <a name="parameters"></a>Parâmetros
 
-*especificações de modelo*<br/>
+*template-spec*<br/>
 Especificações de modelo opcionais. Para obter mais informações, consulte [especificações de modelo](templates-cpp.md).
 
 *struct*<br/>
 O **struct** palavra-chave.
 
-*MS-decl-spec*<br/>
+*ms-decl-spec*<br/>
 Especificação de classe de armazenamento opcional. Para obter mais informações, consulte o [declspec](../cpp/declspec.md) palavra-chave.
 
-*Marca*<br/>
+*tag*<br/>
 O nome do tipo dado à estrutura. A marca se torna uma palavra reservada no escopo da estrutura. A marca é opcional. Se omitida, uma estrutura anônima será definida. Para obter mais informações, consulte [tipos de classe anônima](../cpp/anonymous-class-types.md).
 
-*Base de dados de lista*<br/>
+*base-list*<br/>
 A lista opcional de classes ou estruturas de que esta estrutura derivará seus membros. Ver [Classes Base](../cpp/base-classes.md) para obter mais informações. Cada nome de classe ou estrutura de base pode ser precedido por um especificador de acesso ([pública](../cpp/public-cpp.md), [privada](../cpp/private-cpp.md), [protegido](../cpp/protected-cpp.md)) e o [virtual](../cpp/virtual-cpp.md) palavra-chave. Consulte a tabela de acesso de membro [controlando o acesso a membros de classe](member-access-control-cpp.md) para obter mais informações.
 
-*lista de membros*<br/>
+*member-list*<br/>
 Lista de membros da estrutura. Consulte a [visão geral de membros de classe](../cpp/class-member-overview.md) para obter mais informações. A única diferença aqui é que **struct** é usado no lugar de **classe**.
 
-*declaradores*<br/>
-Lista de declaradores que especificam os nomes da classe. As listas de declaradores declaram uma ou mais instâncias do tipo de estrutura. Os declaradores podem incluir listas de inicializadores se todos os membros de dados da classe estiverem **público**. Listas de inicializadores são comuns em estruturas porque membros de dados são **pública** por padrão.  Ver [visão geral dos declaradores](../cpp/overview-of-declarators.md) para obter mais informações.
+*declarators*<br/>
+Lista de declaradores que especificam os nomes da estrutura. As listas de declaradores declaram uma ou mais instâncias do tipo de estrutura. Os declaradores podem incluir listas de inicializadores se todos os membros de dados da estrutura são **público**. Listas de inicializadores são comuns em estruturas porque membros de dados são **pública** por padrão.  Ver [visão geral dos declaradores](../cpp/overview-of-declarators.md) para obter mais informações.
 
 ## <a name="remarks"></a>Comentários
 

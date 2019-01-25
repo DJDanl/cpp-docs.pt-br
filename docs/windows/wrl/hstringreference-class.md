@@ -21,12 +21,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HStringReference::operator!= operator
 - Microsoft::WRL::Wrappers::HStringReference::operator< operator
 ms.assetid: 9bf823b1-17eb-4ac4-8c5d-27d27c7a4150
-ms.openlocfilehash: 09bf994a77bb6b7c9c9e97566ae01e02bd5070c0
-ms.sourcegitcommit: 360b55e89e5954f494e52b1cf989fbaceda06f1c
+ms.openlocfilehash: b9d2e49d0a7e1321e2259c06e1313a90d55dc90e
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54335458"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893243"
 ---
 # <a name="hstringreference-class"></a>Classe HStringReference
 
@@ -93,7 +93,7 @@ O HSTRING que recebe a cópia.
 
 ### <a name="remarks"></a>Comentários
 
-Este método chama o [WindowsDuplicateString](https://msdn.microsoft.com/library/br224634.aspx) função.
+Este método chama o [WindowsDuplicateString](/windows/desktop/api/winstring/nf-winstring-windowsduplicatestring) função.
 
 ## <a name="get"></a>HStringReference::Get
 

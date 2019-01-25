@@ -18,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - composite controls, global functions
 ms.assetid: 536884cd-e863-4c7a-ab0a-604dc60a0bbe
-ms.openlocfilehash: 3b4abc1afc99a00d83c25574df06ebfb27141c65
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 26d8d004c933e48833047f85727ae6282c4b43d7
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694173"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893854"
 ---
 # <a name="composite-control-global-functions"></a>Funções globais de controle de composição
 
@@ -77,7 +77,7 @@ ATLAPI_(int) AtlAxDialogBox(
 [in] Identifica a janela que possui a caixa de diálogo.
 
 *lpDialogProc*<br/>
-[in] Aponta para o procedimento de caixa de diálogo. Para obter mais informações sobre o procedimento de caixa de diálogo, consulte [DialogProc](https://msdn.microsoft.com/library/windows/desktop/ms645469).
+[in] Aponta para o procedimento de caixa de diálogo. Para obter mais informações sobre o procedimento de caixa de diálogo, consulte [DialogProc](/windows/desktop/api/winuser/nc-winuser-dlgproc).
 
 *dwInitParam*<br/>
 [in] Especifica o valor para passar para a caixa de diálogo do *lParam* parâmetro da mensagem WM_INITDIALOG.
@@ -95,7 +95,7 @@ CONTROL    "{04FE35E9-ADBC-4f1d-83FE-8FA4D1F71C7F}", IDC_TEST,
     "AtlAxWin80", WS_GROUP | WS_TABSTOP, 0, 0, 100, 100
 ```
 
-Para obter mais informações sobre como editar scripts de recurso, consulte [como: abrir um arquivo de Script de recurso no formato de texto](../../windows/how-to-open-a-resource-script-file-in-text-format.md). Para obter mais informações sobre instruções de definição de recurso de controle, consulte [parâmetros de controle comuns](/windows/desktop/menurc/common-control-parameters) no SDK do Windows: SDK Tools.
+Para obter mais informações sobre como editar scripts de recurso, consulte [como: Abrir um arquivo de Script de recurso no formato de texto](../../windows/how-to-open-a-resource-script-file-in-text-format.md). Para obter mais informações sobre instruções de definição de recurso de controle, consulte [parâmetros de controle comuns](/windows/desktop/menurc/common-control-parameters) no SDK do Windows: SDK Tools.
 
 Para obter mais informações sobre caixas de diálogo em geral, consulte [DialogBox](/windows/desktop/api/winuser/nf-winuser-dialogboxa) e [CreateDialogParam](/windows/desktop/api/winuser/nf-winuser-createdialogparama) no SDK do Windows.
 
@@ -124,7 +124,7 @@ ATLAPI_(HWND) AtlAxCreateDialog(
 [in] Identifica a janela que possui a caixa de diálogo.
 
 *lpDialogProc*<br/>
-[in] Aponta para o procedimento de caixa de diálogo. Para obter mais informações sobre o procedimento de caixa de diálogo, consulte [DialogProc](https://msdn.microsoft.com/library/windows/desktop/ms645469).
+[in] Aponta para o procedimento de caixa de diálogo. Para obter mais informações sobre o procedimento de caixa de diálogo, consulte [DialogProc](/windows/desktop/api/winuser/nc-winuser-dlgproc).
 
 *dwInitParam*<br/>
 [in] Especifica o valor para passar para a caixa de diálogo do *lParam* parâmetro da mensagem WM_INITDIALOG.
@@ -413,7 +413,7 @@ ATLAPI AtlAxGetHost(HWND h, IUnknown** pp);
 *h*<br/>
 [in] Um identificador para a janela que está hospedando o controle.
 
-*PP*<br/>
+*pp*<br/>
 [out] O `IUnknown` do contêiner do controle.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -433,7 +433,7 @@ ATLAPI AtlAxGetControl(HWND h, IUnknown** pp);
 *h*<br/>
 [in] Um identificador para a janela que está hospedando o controle.
 
-*PP*<br/>
+*pp*<br/>
 [out] O `IUnknown` do controle que está sendo hospedado.
 
 ### <a name="return-value"></a>Valor de retorno
