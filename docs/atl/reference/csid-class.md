@@ -21,12 +21,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSid class
 ms.assetid: be58b7ca-5958-49c3-a833-ca341aaaf753
-ms.openlocfilehash: 57edb46047021d0ede04164584e79748028e05b3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6fcff646a577500fd05b7c938b2c336ebe725957
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50465358"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894309"
 ---
 # <a name="csid-class"></a>Classe CSid
 
@@ -54,7 +54,7 @@ class CSid
 |Nome|Descrição|
 |----------|-----------------|
 |[CSid::CSid](#csid)|O construtor.|
-|[CSid:: ~ CSid](#dtor)|O destruidor.|
+|[CSid::~CSid](#dtor)|O destruidor.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
@@ -77,15 +77,15 @@ class CSid
 
 |||
 |-|-|
-|[operador =](#operator_eq)|Operador de atribuição.|
+|[operator =](#operator_eq)|Operador de atribuição.|
 |[operador SID const *](#operator_const_sid__star)|Conversões de um `CSid` objeto em um ponteiro para um `SID` estrutura.|
 
 ### <a name="global-operators"></a>Operadores globais
 
 |||
 |-|-|
-|[operador = =](#operator_eq_eq)|Testa dois objetos do descritor de segurança quanto à igualdade|
-|[operador! =](#operator_neq)|Testa dois objetos do descritor de segurança quanto à desigualdade|
+|[operator ==](#operator_eq_eq)|Testa dois objetos do descritor de segurança quanto à igualdade|
+|[operator !=](#operator_neq)|Testa dois objetos do descritor de segurança quanto à desigualdade|
 |[operador \<](#operator_lt_)|Compara o valor relativo de dois objetos do descritor de segurança.|
 |[operador >](#operator_gt_)|Compara o valor relativo de dois objetos do descritor de segurança.|
 |[operador \<=](#operator_lt__eq)|Compara o valor relativo de dois objetos do descritor de segurança.|
@@ -232,7 +232,7 @@ Retorna verdadeiro em caso de êxito, FALSE em caso de falha.
 
 ### <a name="remarks"></a>Comentários
 
-Ver [EqualPrefixSid](https://msdn.microsoft.com/library/windows/desktop/aa446621) no SDK do Windows para obter mais detalhes.
+Ver [EqualPrefixSid](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-equalprefixsid) no SDK do Windows para obter mais detalhes.
 
 ##  <a name="getlength"></a>  CSid::GetLength
 
@@ -400,7 +400,7 @@ bool operator==(
 
 ### <a name="parameters"></a>Parâmetros
 
-*LHS*<br/>
+*lhs*<br/>
 O `SID` (identificador de segurança) ou `CSid` que aparece no lado esquerdo do operador = =.
 
 *rhs*<br/>
@@ -422,7 +422,7 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parâmetros
 
-*LHS*<br/>
+*lhs*<br/>
 O `SID` (identificador de segurança) ou `CSid` que aparece no lado esquerdo da! = operador.
 
 *rhs*<br/>
@@ -444,7 +444,7 @@ bool operator<(
 
 ### <a name="parameters"></a>Parâmetros
 
-*LHS*<br/>
+*lhs*<br/>
 O `SID` (identificador de segurança) ou `CSid` que aparece no lado esquerdo da! = operador.
 
 *rhs*<br/>
@@ -466,7 +466,7 @@ bool operator<=(
 
 ### <a name="parameters"></a>Parâmetros
 
-*LHS*<br/>
+*lhs*<br/>
 O `SID` (identificador de segurança) ou `CSid` que aparece no lado esquerdo da! = operador.
 
 *rhs*<br/>
@@ -488,7 +488,7 @@ bool operator>(
 
 ### <a name="parameters"></a>Parâmetros
 
-*LHS*<br/>
+*lhs*<br/>
 O `SID` (identificador de segurança) ou `CSid` que aparece no lado esquerdo da! = operador.
 
 *rhs*<br/>
@@ -510,7 +510,7 @@ bool operator>=(
 
 ### <a name="parameters"></a>Parâmetros
 
-*LHS*<br/>
+*lhs*<br/>
 O `SID` (identificador de segurança) ou `CSid` que aparece no lado esquerdo da! = operador.
 
 *rhs*<br/>

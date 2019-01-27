@@ -80,12 +80,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComControlBase class
 ms.assetid: 3d1bf022-acf2-4092-8283-ff8cee6332f3
-ms.openlocfilehash: def8334cf0ed9b6b2ee821e1e0f1a717d90f2163
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 67d2be23aa6209c36b1a72eca3322efd1e977447
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694576"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894426"
 ---
 # <a name="ccomcontrolbase-class"></a>Classe CComControlBase
 
@@ -113,7 +113,7 @@ class ATL_NO_VTABLE CComControlBase
 |Nome|Descrição|
 |----------|-----------------|
 |[CComControlBase::CComControlBase](#ccomcontrolbase)|O construtor.|
-|[CComControlBase:: ~ CComControlBase](#dtor)|O destruidor.|
+|[CComControlBase::~CComControlBase](#dtor)|O destruidor.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
@@ -124,7 +124,7 @@ class ATL_NO_VTABLE CComControlBase
 |[CComControlBase::DoesVerbUIActivate](#doesverbuiactivate)|Verifica se o *iVerb* parâmetro usado pelo `IOleObjectImpl::DoVerb` faz com que a interface do usuário do controle ativar e retorna TRUE.|
 |[CComControlBase::DoVerbProperties](#doverbproperties)|Exibe as páginas de propriedades do controle.|
 |[CComControlBase::FireViewChange](#fireviewchange)|Chame esse método para instruir o contêiner para redesenhar o controle ou notificar os coletores de advise registrado exibição do controle foi alterado.|
-|[CComControlBase::GetAmbientAppearance](#getambientappearance)|Recupera o DISPID_AMBIENT_APPEARANCE, a aparência atual definindo para o controle: 0 para simples e 1 para 3D.|
+|[CComControlBase::GetAmbientAppearance](#getambientappearance)|Recupera o DISPID_AMBIENT_APPEARANCE, a configuração para o controle de aparência atual: 0 para simples e 1 para 3D.|
 |[CComControlBase::GetAmbientAutoClip](#getambientautoclip)|Recupera o DISPID_AMBIENT_AUTOCLIP, um sinalizador que indica se o contêiner dá suporte a recorte automático da área de exibição de controle.|
 |[CComControlBase::GetAmbientBackColor](#getambientbackcolor)|Recupera o DISPID_AMBIENT_BACKCOLOR, a cor da tela de fundo ambiente para todos os controles, definido pelo contêiner.|
 |[CComControlBase::GetAmbientCharSet](#getambientcharset)|Recupera o DISPID_AMBIENT_CHARSET, o caractere de ambiente definidas para todos os controles, definidos pelo contêiner.|
@@ -235,7 +235,7 @@ O identificador para a janela associada ao controle.
 
 Inicializa o tamanho do controle para unidades HIMETRIC de 5080 X 5080 (2x "2") e inicializa o `CComControlBase` valores de membro de dados como NULL ou FALSE.
 
-##  <a name="dtor"></a>  CComControlBase:: ~ CComControlBase
+##  <a name="dtor"></a>  CComControlBase::~CComControlBase
 
 O destruidor.
 
@@ -258,7 +258,7 @@ virtual HRESULT ControlQueryInterface(const IID& iid,
 
 ### <a name="parameters"></a>Parâmetros
 
-*IID*<br/>
+*iid*<br/>
 O GUID da interface que está sendo solicitado.
 
 *ppv*<br/>
@@ -358,7 +358,7 @@ Se o controle está ativo (o membro de dados de classe do controle [CComControlB
 
 ##  <a name="getambientappearance"></a>  CComControlBase::GetAmbientAppearance
 
-Recupera o DISPID_AMBIENT_APPEARANCE, a aparência atual definindo para o controle: 0 para simples e 1 para 3D.
+Recupera o DISPID_AMBIENT_APPEARANCE, a configuração para o controle de aparência atual: 0 para simples e 1 para 3D.
 
 ```
 HRESULT GetAmbientAppearance(short& nAppearance);
@@ -511,7 +511,7 @@ HRESULT GetAmbientFontDisp(IFontDisp** ppFont);
 ### <a name="parameters"></a>Parâmetros
 
 *ppFont*<br/>
-Um ponteiro para o contêiner do ambiente [IFontDisp](https://msdn.microsoft.com/library/windows/desktop/ms692695) interface de expedição.
+Um ponteiro para o contêiner do ambiente [IFontDisp](/windows/desktop/api/ocidl/nn-ocidl-ifontdisp) interface de expedição.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -531,7 +531,7 @@ HRESULT GetAmbientForeColor(OLE_COLOR& ForeColor);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Cor de primeiro plano*<br/>
+*ForeColor*<br/>
 A propriedade DISPID_AMBIENT_FORECOLOR.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -603,7 +603,7 @@ HRESULT GetAmbientProperty(DISPID dispid, VARIANT& var);
 
 ### <a name="parameters"></a>Parâmetros
 
-*DISPID*<br/>
+*dispid*<br/>
 Identificador da propriedade contêiner a ser recuperado.
 
 *var*<br/>
@@ -800,7 +800,7 @@ void GetZoomInfo(ATL_DRAWINFO& di);
 
 ### <a name="parameters"></a>Parâmetros
 
-*injeção de dependência*<br/>
+*di*<br/>
 A estrutura que conterá o numerador e do denominador o fator de zoom. Para obter mais informações, consulte [ATL_DRAWINFO](../../atl/reference/atl-drawinfo-structure.md).
 
 ### <a name="remarks"></a>Comentários
@@ -1217,7 +1217,7 @@ O `m_spInPlaceSite` ponteiro é válido somente se o [m_bNegotiatedWnd](#m_bnego
 
 A tabela a seguir mostra como o `m_spInPlaceSite` depende do tipo de ponteiro a [m_bWndLess](#m_bwndless) e [m_bInPlaceSiteEx](#m_binplacesiteex) sinalizadores de membro de dados:
 
-|Tipo de m_spInPlaceSite|m_bWndLess valor|m_bInPlaceSiteEx valor|
+|Tipo de m_spInPlaceSite|m_bWndLess Value|m_bInPlaceSiteEx Value|
 |---------------------------|-----------------------|-----------------------------|
 |`IOleInPlaceSiteWindowless`|TRUE|VERDADEIRO ou falso|
 |`IOleInPlaceSiteEx`|FALSE|TRUE|
@@ -1249,7 +1249,7 @@ virtual HRESULT OnDraw(ATL_DRAWINFO& di);
 
 ### <a name="parameters"></a>Parâmetros
 
-*injeção de dependência*<br/>
+*di*<br/>
 Uma referência para o [ATL_DRAWINFO](../../atl/reference/atl-drawinfo-structure.md) estrutura que contém informações de desenho, como o aspecto de desenho, os limites do controle, e o desenho otimizado ou não.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1276,7 +1276,7 @@ virtual HRESULT OnDrawAdvanced(ATL_DRAWINFO& di);
 
 ### <a name="parameters"></a>Parâmetros
 
-*injeção de dependência*<br/>
+*di*<br/>
 Uma referência para o [ATL_DRAWINFO](../../atl/reference/atl-drawinfo-structure.md) estrutura que contém informações de desenho, como o aspecto de desenho, os limites do controle, e o desenho otimizado ou não.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1477,7 +1477,7 @@ HRESULT SendOnRename(IMoniker* pmk);
 
 ### <a name="parameters"></a>Parâmetros
 
-*PMK*<br/>
+*pmk*<br/>
 Ponteiro para o novo moniker do controle.
 
 ### <a name="return-value"></a>Valor de retorno

@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CDateTimeCtrl [MFC], SetRange
 - CDateTimeCtrl [MFC], SetTime
 ms.assetid: 7113993b-5d37-4148-939f-500a190c5bdc
-ms.openlocfilehash: 36ef44534803e35d3544b53dbeeca75a7fb3f475
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 5acac454bd0b22b994b74a052bd3cf0b0eee2614
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178519"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894335"
 ---
 # <a name="cdatetimectrl-class"></a>Classe CDateTimeCtrl
 
@@ -157,7 +157,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Especifica a combinação de estilos de controle de tempo de data. Ver [data e hora estilos de controle de seletor](/windows/desktop/Controls/date-and-time-picker-control-styles) no SDK do Windows para obter mais informações sobre estilos de seletor de data e hora.
 
-*Rect*<br/>
+*rect*<br/>
 Uma referência a um [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura, que é a posição e o tamanho do controle de seletor de data e hora.
 
 *pParentWnd*<br/>
@@ -323,7 +323,7 @@ Um valor DWORD que contém sinalizadores que indicam quais intervalos são defin
 
 `return value & GDTR_MAX` == 0
 
-em seguida, o segundo parâmetro é válido. Da mesma forma, se
+em seguida, o segundo parâmetro é válido. Similarly, if
 
 `return value & GDTR_MIN` == 0
 
@@ -353,7 +353,7 @@ DWORD GetTime(LPSYSTEMTIME pTimeDest) const;
 Na primeira versão, uma referência a um [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) objeto que receberá as informações de hora do sistema. Na segunda versão, uma referência a um [CTime](../../atl-mfc-shared/reference/ctime-class.md) objeto que receberá as informações de hora do sistema.
 
 *pTimeDest*<br/>
-Um ponteiro para o [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) estrutura que receberá as informações de hora do sistema. Não deve ser NULL.
+Um ponteiro para o [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) estrutura que receberá as informações de hora do sistema. Não deve ser NULL.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -583,7 +583,7 @@ BOOL SetTime(LPSYSTEMTIME pTimeNew = NULL);
 Uma referência a um [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) objeto contendo o para que o controle será definido.
 
 *pTimeNew*<br/>
-Na segunda versão acima, um ponteiro para um [CTime](../../atl-mfc-shared/reference/ctime-class.md) objeto que contém a hora para o qual o controle será definido. Na terceira versão acima, um ponteiro para um [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) estrutura que contém a hora para o qual o controle será definido.
+Na segunda versão acima, um ponteiro para um [CTime](../../atl-mfc-shared/reference/ctime-class.md) objeto que contém a hora para o qual o controle será definido. Na terceira versão acima, um ponteiro para um [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) estrutura que contém a hora para o qual o controle será definido.
 
 ### <a name="return-value"></a>Valor de retorno
 

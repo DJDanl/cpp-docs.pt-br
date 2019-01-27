@@ -29,12 +29,12 @@ helpviewer_keywords:
 - _beginthreadex function
 - beginthread function
 ms.assetid: 0df64740-a978-4358-a88f-fb0702720091
-ms.openlocfilehash: d7e98ae38d91fbc0c1d428e94c6fa29fd8651e85
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d70d2fb0ecb647d4854a6277d6c69cd9886e072f
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50626778"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894205"
 ---
 # <a name="beginthread-beginthreadex"></a>_beginthread, _beginthreadex
 
@@ -121,7 +121,7 @@ Ele é mais seguro usar **beginthreadex** que **beginthread**. Se o thread que �
 
 Você pode chamar [endthread](endthread-endthreadex.md) ou **endthreadex** explicitamente para terminar um thread; no entanto, **endthread** ou **endthreadex** é chamado automaticamente quando o thread volta da rotina que é passada como um parâmetro. Encerrar um thread com uma chamada para **endthread** ou **endthreadex** ajuda a garantir que a recuperação correta de recursos são alocados para o thread.
 
-**endthread** fecha automaticamente o identificador de thread, enquanto **endthreadex** não faz isso. Portanto, quando você usa **beginthread** e **endthread**, não feche explicitamente o identificador de thread chamando Win32 [CloseHandle](https://msdn.microsoft.com/library/windows/desktop/ms724211.aspx) API. Esse comportamento é diferente do comportamento da API [ExitThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-exitthread) do Win32.
+**endthread** fecha automaticamente o identificador de thread, enquanto **endthreadex** não faz isso. Portanto, quando você usa **beginthread** e **endthread**, não feche explicitamente o identificador de thread chamando Win32 [CloseHandle](/windows/desktop/api/handleapi/nf-handleapi-closehandle) API. Esse comportamento é diferente do comportamento da API [ExitThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-exitthread) do Win32.
 
 > [!NOTE]
 > Arquivos executáveis vinculados a libcmt. lib, não chame Win32 **ExitThread** API para que você não impedir que o sistema de tempo de execução recupere recursos alocados. **endthread** e **endthreadex** recuperar os recursos alocados ao thread e, em seguida, chame **ExitThread**.

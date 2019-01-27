@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CGopherFileFind [MFC], GetScreenName
 - CGopherFileFind [MFC], IsDots
 ms.assetid: 8465a979-6323-496d-ab4b-e81383fb999d
-ms.openlocfilehash: 7d5c8ceeaeb87b2e0f099ac027bbacc744598e8e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dafa313d9d2c7aae13e83a891c79d437ac276e08
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50662404"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894491"
 ---
 # <a name="cgopherfilefind-class"></a>Classe CGopherFileFind
 
@@ -123,7 +123,7 @@ O identificador de contexto para a operação. Ver **Remarks** para obter mais i
 
 ### <a name="remarks"></a>Comentários
 
-O valor padrão para *dwContext* é enviado pelo MFC para o `CGopherFileFind` objeto o [CInternetSession](../../mfc/reference/cinternetsession-class.md) do objeto que criou o `CGopherFileFind` objeto. Quando você constrói um `CGopherFileFind` do objeto, você pode substituir o padrão para definir o identificador de contexto para um valor de sua escolha. O identificador de contexto é retornado ao [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) para fornecer status no objeto com a qual ela é identificada. Consulte o artigo [primeiras etapas de Internet: WinInet](../../mfc/wininet-basics.md) para obter mais informações sobre o identificador de contexto.
+O valor padrão para *dwContext* é enviado pelo MFC para o `CGopherFileFind` objeto o [CInternetSession](../../mfc/reference/cinternetsession-class.md) do objeto que criou o `CGopherFileFind` objeto. Quando você constrói um `CGopherFileFind` do objeto, você pode substituir o padrão para definir o identificador de contexto para um valor de sua escolha. O identificador de contexto é retornado ao [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) para fornecer status no objeto com a qual ela é identificada. Consulte o artigo [Internet primeiras etapas: O WinInet](../../mfc/wininet-basics.md) para obter mais informações sobre o identificador de contexto.
 
 ##  <a name="findfile"></a>  CGopherFileFind::FindFile
 
@@ -191,7 +191,7 @@ virtual BOOL GetCreationTime(CTime& refTime) const;
 ### <a name="parameters"></a>Parâmetros
 
 *pTimeStamp*<br/>
-Um ponteiro para um [FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284) estrutura que contém a hora em que o arquivo foi criado.
+Um ponteiro para um [FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime) estrutura que contém a hora em que o arquivo foi criado.
 
 *refTime*<br/>
 Uma referência a um [CTime](../../atl-mfc-shared/reference/ctime-class.md) objeto.
@@ -222,7 +222,7 @@ virtual BOOL GetLastAccessTime(FILETIME* pTimeStamp) const;
 Uma referência a um [CTime](../../atl-mfc-shared/reference/ctime-class.md) objeto.
 
 *pTimeStamp*<br/>
-Um ponteiro para um [FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284) estrutura que contém a hora em que o arquivo foi acessado pela última vez.
+Um ponteiro para um [FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime) estrutura que contém a hora em que o arquivo foi acessado pela última vez.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -247,7 +247,7 @@ virtual BOOL GetLastWriteTime(CTime& refTime) const;
 ### <a name="parameters"></a>Parâmetros
 
 *pTimeStamp*<br/>
-Um ponteiro para um [FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284) estrutura que contém a hora em que o arquivo foi gravado pela última vez.
+Um ponteiro para um [FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime) estrutura que contém a hora em que o arquivo foi gravado pela última vez.
 
 *refTime*<br/>
 Uma referência a um [CTime](../../atl-mfc-shared/reference/ctime-class.md) objeto.

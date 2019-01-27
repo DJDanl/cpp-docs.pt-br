@@ -153,12 +153,12 @@ f1_keywords:
 helpviewer_keywords:
 - CWindow class
 ms.assetid: fefa00c8-f053-4bcf-87bc-dc84f5386683
-ms.openlocfilehash: 4ce3c93c7cb8c26ae6008516c93faa8c8a5b37fb
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: f420715f0e90cbdf811d9a4f731885bd4f382d11
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694589"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894452"
 ---
 # <a name="cwindow-class"></a>Classe CWindow
 
@@ -349,7 +349,7 @@ class CWindow
 
 |Método CWindow|Função do Win32|
 |--------------------|--------------------|
-|**BOOL ShowWindow (int** `nCmdShow` **);**|**BOOL ShowWindow (HWND** `hWnd` **, int** `nCmdShow` **);**|
+|**BOOL ShowWindow( int** `nCmdShow` **);**|**BOOL ShowWindow( HWND** `hWnd` **, int** `nCmdShow` **);**|
 
 `CWindow::ShowWindow` chama a função Win32 `ShowWindow` passando `CWindow::m_hWnd` como o primeiro parâmetro. Cada `CWindow` método que encapsula diretamente uma função do Win32 passa a `m_hWnd` membro; portanto, grande parte o `CWindow` documentação fará referência ao SDK do Windows.
 
@@ -521,7 +521,7 @@ HWND ChildWindowFromPoint(POINT point, UINT uFlags) const throw();
 
 ### <a name="remarks"></a>Comentários
 
-Ver [ChildWindowFromPointEx](https://msdn.microsoft.com/library/windows/desktop/ms632677) no Windows SDK.
+Ver [ChildWindowFromPointEx](/windows/desktop/api/winuser/nf-winuser-childwindowfrompointex) no Windows SDK.
 
 ##  <a name="clienttoscreen"></a>  CWindow::ClientToScreen
 
@@ -562,7 +562,7 @@ HWND Create(
 *hWndParent*<br/>
 [in] O identificador para a janela pai ou proprietária.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Uma variável do tipo [u_rect](../../atl/reference/u-rect-class.md) especificando a posição da janela. O valor padrão é NULL. Quando esse parâmetro é NULL, o valor de `CWindow::rcDefault` é usado.
 
 *szWindowName*<br/>
@@ -669,7 +669,7 @@ HDWP DeferWindowPos(
 
 ### <a name="remarks"></a>Comentários
 
-Ver [DeferWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms632681) no Windows SDK.
+Ver [DeferWindowPos](/windows/desktop/api/winuser/nf-winuser-deferwindowpos) no Windows SDK.
 
 ##  <a name="destroywindow"></a>  CWindow::DestroyWindow
 
@@ -928,7 +928,7 @@ HRESULT GetDlgControl(
 *nID*<br/>
 [in] A ID de recurso do controle que está sendo recuperado.
 
-*IID*<br/>
+*iid*<br/>
 [in] A ID da interface que você gostaria de obter do controle.
 
 *ppCtrl*<br/>
@@ -970,7 +970,7 @@ HRESULT GetDlgHost(
 *nID*<br/>
 [in] A ID de recurso do controle que está sendo recuperado.
 
-*IID*<br/>
+*iid*<br/>
 [in] A ID da interface que você gostaria de obter do controle.
 
 *ppHost*<br/>
@@ -1456,7 +1456,7 @@ Se o texto é copiado com êxito, o valor retornado será TRUE; Caso contrário,
 
 ### <a name="remarks"></a>Comentários
 
-Ver [GetWindowText](https://msdn.microsoft.com/library/windows/desktop/ms633520) no Windows SDK.
+Ver [GetWindowText](/windows/desktop/api/winuser/nf-winuser-getwindowtexta) no Windows SDK.
 
 A segunda versão desse método permite que você armazene o texto em um BSTR. a terceira versão permite que você armazene o resultado em uma [CString](../../atl-mfc-shared/reference/cstringt-class.md), pois `CSimpleString` é a classe base de `CString`.
 
@@ -1751,7 +1751,7 @@ BOOL LockWindowUpdate(BOOL bLock = TRUE) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*Bloco*<br/>
+*bLock*<br/>
 [in] Se TRUE (o valor padrão), a janela será bloqueada. Caso contrário, ele será desbloqueado.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -2629,7 +2629,7 @@ BOOL SetWindowText(LPCTSTR lpszString) throw();
 
 ### <a name="remarks"></a>Comentários
 
-Ver [SetWindowText](https://msdn.microsoft.com/library/windows/desktop/ms633546) no Windows SDK.
+Ver [SetWindowText](/windows/desktop/api/winuser/nf-winuser-setwindowtexta) no Windows SDK.
 
 ### <a name="example"></a>Exemplo
 

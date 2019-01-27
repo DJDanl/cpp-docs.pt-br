@@ -17,12 +17,12 @@ helpviewer_keywords:
 - CAxDialogImpl class
 - ATL, dialog boxes
 ms.assetid: 817df483-3fa8-44e7-8487-72ba0881cd27
-ms.openlocfilehash: 9cb4ec679e26adc32ffc6d68ebff9b1ed73c2f43
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 852656b33eca1a8c87c6931b58cd49c0c41fe3dc
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694225"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893633"
 ---
 # <a name="caxdialogimpl-class"></a>Classe CAxDialogImpl
 
@@ -43,7 +43,7 @@ class ATL_NO_VTABLE CAxDialogImpl : public CDialogImplBaseT<TBase>
 *T*<br/>
 Sua classe, derivada de `CAxDialogImpl`.
 
-*Tdígitos de base*<br/>
+*TBase*<br/>
 A classe de janela base para `CDialogImplBaseT`.
 
 ## <a name="members"></a>Membros
@@ -255,7 +255,7 @@ BOOL IsDialogMessage(LPMSG pMsg);
 ### <a name="parameters"></a>Parâmetros
 
 *pMsg*<br/>
-Ponteiro para um [MSG](https://msdn.microsoft.com/library/windows/desktop/ms644958) estrutura que contém a mensagem a ser verificado.
+Ponteiro para um [MSG](/windows/desktop/api/winuser/ns-winuser-msg) estrutura que contém a mensagem a ser verificado.
 
 ### <a name="return-value"></a>Valor de retorno
 

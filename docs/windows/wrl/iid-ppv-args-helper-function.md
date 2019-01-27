@@ -7,19 +7,19 @@ f1_keywords:
 helpviewer_keywords:
 - IID_PPV_ARGS_Helper function
 ms.assetid: afee9b23-8df1-4575-903f-e9ba748418f0
-ms.openlocfilehash: cae29c70c551701a351cdcf404342ed1634a0e3b
-ms.sourcegitcommit: 360b55e89e5954f494e52b1cf989fbaceda06f1c
+ms.openlocfilehash: 5ef4dd6c9db2d19e0c8a4143c5b4ed3f0ac75f6a
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54335429"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894114"
 ---
 # <a name="iidppvargshelper-function"></a>Função IID_PPV_ARGS_Helper
 
 Verifica se o tipo do argumento especificado deriva o `IUnknown` interface.
 
 > [!IMPORTANT]
-> Essa especialização de modelo oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código. Use [IID_PPV_ARGS](https://msdn.microsoft.com/library/windows/desktop/ee330727.aspx) em vez disso.
+> Essa especialização de modelo oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código. Use [IID_PPV_ARGS](/windows/desktop/api/combaseapi/nf-combaseapi-iid_ppv_args) em vez disso.
 
 ## <a name="syntax"></a>Sintaxe
 

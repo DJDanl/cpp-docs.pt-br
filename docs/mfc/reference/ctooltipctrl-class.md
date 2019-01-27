@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CToolTipCtrl [MFC], Update
 - CToolTipCtrl [MFC], UpdateTipText
 ms.assetid: 8973f70c-b73a-46c7-908d-758f364b9a97
-ms.openlocfilehash: 808d8b5f023e88b67458c514e871692aac94ccd5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 177f6eeada942440c33f7dd0a0cbc6d9e59d867c
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50500406"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894140"
 ---
 # <a name="ctooltipctrl-class"></a>Classe CToolTipCtrl
 
@@ -203,7 +203,7 @@ BOOL AddTool(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Apropriei*<br/>
+*pWnd*<br/>
 Ponteiro para a janela que contém a ferramenta.
 
 *nIDText*<br/>
@@ -360,7 +360,7 @@ void DelTool(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Apropriei*<br/>
+*pWnd*<br/>
 Ponteiro para a janela que contém a ferramenta.
 
 *nIDTool*<br/>
@@ -498,7 +498,7 @@ void GetText(
 *str*<br/>
 Referência a um `CString` objeto que recebe o texto da ferramenta.
 
-*Apropriei*<br/>
+*pWnd*<br/>
 Ponteiro para a janela que contém a ferramenta.
 
 *nIDTool*<br/>
@@ -586,7 +586,7 @@ BOOL GetToolInfo(
 *ToolInfo*<br/>
 Referência a um `TOOLINFO` objeto que recebe o texto da ferramenta.
 
-*Apropriei*<br/>
+*pWnd*<br/>
 Ponteiro para a janela que contém a ferramenta.
 
 *nIDTool*<br/>
@@ -613,7 +613,7 @@ BOOL HitTest(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Apropriei*<br/>
+*pWnd*<br/>
 Ponteiro para a janela que contém a ferramenta.
 
 *pt*<br/>
@@ -693,7 +693,7 @@ void RelayEvent(LPMSG lpMsg);
 ### <a name="parameters"></a>Parâmetros
 
 *lpMsg*<br/>
-Ponteiro para um [MSG](https://msdn.microsoft.com/library/windows/desktop/ms644958) estrutura que contém a mensagem de retransmissão.
+Ponteiro para um [MSG](/windows/desktop/api/winuser/ns-winuser-msg) estrutura que contém a mensagem de retransmissão.
 
 ### <a name="remarks"></a>Comentários
 
@@ -784,7 +784,7 @@ void SetTipBkColor(COLORREF clr);
 
 ### <a name="parameters"></a>Parâmetros
 
-*CLR*<br/>
+*clr*<br/>
 A nova cor de plano de fundo.
 
 ### <a name="remarks"></a>Comentários
@@ -801,7 +801,7 @@ void SetTipTextColor(COLORREF clr);
 
 ### <a name="parameters"></a>Parâmetros
 
-*CLR*<br/>
+*clr*<br/>
 A nova cor do texto.
 
 ### <a name="remarks"></a>Comentários
@@ -860,7 +860,7 @@ void SetToolRect(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Apropriei*<br/>
+*pWnd*<br/>
 Ponteiro para a janela que contém a ferramenta.
 
 *nIDTool*<br/>
@@ -919,7 +919,7 @@ void UpdateTipText(
 *lpszText*<br/>
 Ponteiro para o texto para a ferramenta.
 
-*Apropriei*<br/>
+*pWnd*<br/>
 Ponteiro para a janela que contém a ferramenta.
 
 *nIDTool*<br/>

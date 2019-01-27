@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - module attributes
 ms.assetid: 02223b2a-62b5-4262-832f-564b1e11e58e
-ms.openlocfilehash: 5692e07e71683b1c24f86a43e989ee3df1fbe904
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bafdb65f255ddf33964d22e5ea80a62446c2ad45
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50570606"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893516"
 ---
 # <a name="module-c"></a>module (C++)
 
@@ -95,19 +95,19 @@ Um bloco de biblioteca é permitido em um arquivo. idl. Várias entradas do mód
 
 Se esse atributo for usado em um projeto que usa ATL, altera o comportamento do atributo. Além do comportamento acima, o atributo também insere um objeto global (chamado `_AtlModule`) do tipo correto e código de suporte adicionais. Se o atributo for autônomo, ele insere uma classe derivada do tipo de módulo correto. Se o atributo é aplicado a uma classe, ele adiciona uma classe base do tipo de módulo correto. O tipo correto é determinado pelo valor de *tipo* parâmetro:
 
-- `type` = **DLL**
+- `type` = **dll**
 
    [CAtlDllModuleT](../../atl/reference/catldllmodulet-class.md) é usado como a classe base e a entrada DLL padrão pontos necessários para um servidor COM. Esses pontos de entrada são [DllMain](/windows/desktop/Dlls/dllmain), [DllRegisterServer](/windows/desktop/api/olectl/nf-olectl-dllregisterserver), [DllUnRegisterServer](/windows/desktop/api/olectl/nf-olectl-dllunregisterserver), [DllCanUnloadNow](/windows/desktop/api/combaseapi/nf-combaseapi-dllcanunloadnow), e [ DllGetClassObject](https://msdn.microsoft.com/library/windows/desktop/dd797891).
 
 - `type` = **exe**
 
-   [CAtlExeModuleT](../../atl/reference/catlexemodulet-class.md) é usado como a classe base e o ponto de entrada executável padrão [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559).
+   [CAtlExeModuleT](../../atl/reference/catlexemodulet-class.md) é usado como a classe base e o ponto de entrada executável padrão [WinMain](/windows/desktop/api/winbase/nf-winbase-winmain).
 
 - `type` = **Serviço**
 
-   [CAtlServiceModuleT](../../atl/reference/catlservicemodulet-class.md) é usado como a classe base e o ponto de entrada executável padrão [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559).
+   [CAtlServiceModuleT](../../atl/reference/catlservicemodulet-class.md) é usado como a classe base e o ponto de entrada executável padrão [WinMain](/windows/desktop/api/winbase/nf-winbase-winmain).
 
-- `type` = **não especificado**
+- `type` = **unspecified**
 
    Desabilita a injeção de código de ATL relacionado ao atributo de módulo.
 
@@ -166,7 +166,7 @@ Para obter mais informações, consulte [contextos de atributo](cpp-attributes-c
 [Atributos independentes](stand-alone-attributes.md)<br/>
 [Atributos Typedef, Enum, Union e Struct](typedef-enum-union-and-struct-attributes.md)<br/>
 [usesgetlasterror](usesgetlasterror.md)<br/>
-[Biblioteca](/windows/desktop/Midl/library)<br/>
+[library](/windows/desktop/Midl/library)<br/>
 [helpcontext](helpcontext.md)<br/>
 [helpstring](helpstring.md)<br/>
 [helpfile](helpfile.md)<br/>

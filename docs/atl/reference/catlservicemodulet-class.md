@@ -35,12 +35,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlServiceModuleT class
 ms.assetid: 8fc753ce-4a50-402b-9b4a-0a4ce5dd496c
-ms.openlocfilehash: b577ee002e34fa051b6e1dd5ffca71f935d93433
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ad682980fbc885d79598b41a5dcc094bb65db8cf
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50619135"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893529"
 ---
 # <a name="catlservicemodulet-class"></a>Classe CAtlServiceModuleT
 
@@ -76,7 +76,7 @@ O identificador de recurso do serviço.
 
 |Nome|Descrição|
 |----------|-----------------|
-|[Catlservicemodulet:: Handler](#handler)|A rotina do manipulador para o serviço.|
+|[CAtlServiceModuleT::Handler](#handler)|A rotina do manipulador para o serviço.|
 |[CAtlServiceModuleT::InitializeSecurity](#initializesecurity)|Fornece o padrão de configurações de segurança para o serviço.|
 |[CAtlServiceModuleT::Install](#install)|Instala e cria o serviço.|
 |[CAtlServiceModuleT::IsInstalled](#isinstalled)|Confirma que o serviço foi instalado.|
@@ -90,10 +90,10 @@ O identificador de recurso do serviço.
 |[CAtlServiceModuleT::ParseCommandLine](#parsecommandline)|Analisa a linha de comando e executa o registro se necessário.|
 |[CAtlServiceModuleT::PreMessageLoop](#premessageloop)|Este método é chamado imediatamente antes de entrar no loop de mensagem.|
 |[CAtlServiceModuleT::RegisterAppId](#registerappid)|Registra o serviço no registro.|
-|[Catlservicemodulet:: Run](#run)|Executa o serviço.|
-|[Catlservicemodulet:: Servicemain](#servicemain)|O método chamado pelo Gerenciador de controle de serviço.|
+|[CAtlServiceModuleT::Run](#run)|Executa o serviço.|
+|[CAtlServiceModuleT::ServiceMain](#servicemain)|O método chamado pelo Gerenciador de controle de serviço.|
 |[CAtlServiceModuleT::SetServiceStatus](#setservicestatus)|Atualiza o status do serviço.|
-|[Catlservicemodulet:: Start](#start)|Chamado pelo `CAtlServiceModuleT::WinMain` quando o serviço é iniciado.|
+|[CAtlServiceModuleT::Start](#start)|Chamado pelo `CAtlServiceModuleT::WinMain` quando o serviço é iniciado.|
 |[CAtlServiceModuleT::Uninstall](#uninstall)|Interrompe e remove o serviço.|
 |[CAtlServiceModuleT::Unlock](#unlock)|Diminui contagem de bloqueio do serviço.|
 |[CAtlServiceModuleT::UnregisterAppId](#unregisterappid)|Remove o serviço do registro.|
@@ -143,7 +143,7 @@ CAtlServiceModuleT() throw();
 
 Inicializa os membros de dados e define o status do serviço inicial.
 
-##  <a name="handler"></a>  Catlservicemodulet:: Handler
+##  <a name="handler"></a>  CAtlServiceModuleT::Handler
 
 A rotina do manipulador para o serviço.
 
@@ -421,7 +421,7 @@ Deve ser true para registrar como um serviço.
 
 Retorna S_OK no êxito ou um erro HRESULT em caso de falha.
 
-##  <a name="run"></a>  Catlservicemodulet:: Run
+##  <a name="run"></a>  CAtlServiceModuleT::Run
 
 Executa o serviço.
 
@@ -432,7 +432,7 @@ HRESULT Run(int nShowCmd = SW_HIDE) throw();
 ### <a name="parameters"></a>Parâmetros
 
 *nShowCmd*<br/>
-Especifica como a janela a ser mostrado. Esse parâmetro pode ser um dos valores discutidos a [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559) seção. O valor padrão é SW_HIDE.
+Especifica como a janela a ser mostrado. Esse parâmetro pode ser um dos valores discutidos a [WinMain](/windows/desktop/api/winbase/nf-winbase-winmain) seção. O valor padrão é SW_HIDE.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -442,7 +442,7 @@ Retorna S_OK no êxito ou um erro HRESULT em caso de falha.
 
 Depois de ser chamado, `Run` chamadas [CAtlServiceModuleT::PreMessageLoop](#premessageloop), [CAtlExeModuleT::RunMessageLoop](../../atl/reference/catlexemodulet-class.md#runmessageloop), e [CAtlExeModuleT::PostMessageLoop](../../atl/reference/catlexemodulet-class.md#postmessageloop).
 
-##  <a name="servicemain"></a>  Catlservicemodulet:: Servicemain
+##  <a name="servicemain"></a>  CAtlServiceModuleT::ServiceMain
 
 Esse método é chamado pelo Gerenciador de controle de serviço.
 
@@ -481,7 +481,7 @@ O novo status. Ver [SetServiceStatus](/windows/desktop/api/winsvc/nf-winsvc-sets
 
 Atualiza as informações de status do Gerenciador de controle de serviço para o serviço. Ele é chamado pelo [catlservicemodulet:: Run](#run), [catlservicemodulet:: Servicemain](#servicemain) e outros métodos de manipulador. O status também é armazenado na variável membro [CAtlServiceModuleT::m_status](#m_status).
 
-##  <a name="start"></a>  Catlservicemodulet:: Start
+##  <a name="start"></a>  CAtlServiceModuleT::Start
 
 Chamado pelo `CAtlServiceModuleT::WinMain` quando o serviço é iniciado.
 
@@ -492,7 +492,7 @@ HRESULT Start(int nShowCmd) throw();
 ### <a name="parameters"></a>Parâmetros
 
 *nShowCmd*<br/>
-Especifica como a janela a ser mostrado. Esse parâmetro pode ser um dos valores discutidos a [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559) seção.
+Especifica como a janela a ser mostrado. Esse parâmetro pode ser um dos valores discutidos a [WinMain](/windows/desktop/api/winbase/nf-winbase-winmain) seção.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -553,7 +553,7 @@ int WinMain(int nShowCmd) throw();
 ### <a name="parameters"></a>Parâmetros
 
 *nShowCmd*<br/>
-Especifica como a janela a ser mostrado. Esse parâmetro pode ser um dos valores discutidos a [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559) seção.
+Especifica como a janela a ser mostrado. Esse parâmetro pode ser um dos valores discutidos a [WinMain](/windows/desktop/api/winbase/nf-winbase-winmain) seção.
 
 ### <a name="return-value"></a>Valor de retorno
 

@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CFindReplaceDialog [MFC], SearchDown
 - CFindReplaceDialog [MFC], m_fr
 ms.assetid: 610f0b5d-b398-4ef6-8c05-e9d6641e50a8
-ms.openlocfilehash: e891a6694f0a85715a7d76d196865e3238695753
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: abf230f8c9e68365f8d1db8b654174ad3e152862
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50571178"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894400"
 ---
 # <a name="cfindreplacedialog-class"></a>Classe CFindReplaceDialog
 
@@ -81,7 +81,7 @@ class CFindReplaceDialog : public CCommonDialog
 
 ## <a name="remarks"></a>Comentários
 
-Ao contrário de outras Windows caixas de diálogo comuns, `CFindReplaceDialog` objetos são sem janela restrita, permitindo que os usuários interajam com outras janelas enquanto eles estão na tela. Há dois tipos de `CFindReplaceDialog` objetos: localizar caixas de diálogo e caixas de diálogo Localizar/Substituir. Embora as caixas de diálogo permitir que o usuário pesquisa inserido e cadeias de caracteres de busca e troca, eles não executam qualquer uma da pesquisa ou substituição de funções. Você deve adicioná-los ao aplicativo.
+Ao contrário de outras Windows caixas de diálogo comuns, `CFindReplaceDialog` objetos são sem janela restrita, permitindo que os usuários interajam com outras janelas enquanto eles estão na tela. Há dois tipos de `CFindReplaceDialog` objetos: Localize caixas de diálogo e caixas de diálogo Localizar/Substituir. Embora as caixas de diálogo permitir que o usuário pesquisa inserido e cadeias de caracteres de busca e troca, eles não executam qualquer uma da pesquisa ou substituição de funções. Você deve adicioná-los ao aplicativo.
 
 Para construir um `CFindReplaceDialog` de objeto, use o construtor fornecido (que não tem argumentos). Como essa é uma caixa de diálogo sem janela restrita, alocar o objeto no heap usando a **novo** operador, em vez de na pilha.
 
@@ -89,7 +89,7 @@ Uma vez um `CFindReplaceDialog` objeto foi construído, você deve chamar o [cri
 
 Use o [m_fr](#m_fr) estrutura para inicializar a caixa de diálogo antes de chamar `Create`. O `m_fr` estrutura é do tipo [FINDREPLACE](/windows/desktop/api/commdlg/ns-commdlg-tagfindreplacea). Para obter mais informações sobre essa estrutura, consulte o SDK do Windows.
 
-Para a janela pai a ser notificado de localizar/substituir solicitações, você deve usar o Windows [RegisterWindowMessage](https://msdn.microsoft.com/library/windows/desktop/ms644947) funcionar e usar o [ON_REGISTERED_MESSAGE](message-map-macros-mfc.md#on_registered_message) macro de mapa de mensagem em seu quadro janela que manipula essa mensagem registrada.
+Para a janela pai a ser notificado de localizar/substituir solicitações, você deve usar o Windows [RegisterWindowMessage](/windows/desktop/api/winuser/nf-winuser-registerwindowmessagea) funcionar e usar o [ON_REGISTERED_MESSAGE](message-map-macros-mfc.md#on_registered_message) macro de mapa de mensagem em seu quadro janela que manipula essa mensagem registrada.
 
 Você pode determinar se o usuário optou por encerrar a caixa de diálogo com o `IsTerminating` função de membro.
 
@@ -175,7 +175,7 @@ Diferente de zero se o objeto de caixa de diálogo foi criado com êxito; Caso c
 
 ### <a name="remarks"></a>Comentários
 
-Para a janela pai a ser notificado de localizar/substituir solicitações, você deve usar o Windows [RegisterWindowMessage](https://msdn.microsoft.com/library/windows/desktop/ms644947) função cujo valor de retorno é um número de mensagem exclusivo a instância do aplicativo. A janela do quadro deve ter uma entrada de mapa de mensagem que declara a função de retorno de chamada ( `OnFindReplace` no exemplo a seguir) que manipula essa mensagem registrada. O fragmento de código a seguir está um exemplo de como fazer isso para uma classe de janela de quadro chamada `CMyRichEditView`:
+Para a janela pai a ser notificado de localizar/substituir solicitações, você deve usar o Windows [RegisterWindowMessage](/windows/desktop/api/winuser/nf-winuser-registerwindowmessagea) função cujo valor de retorno é um número de mensagem exclusivo a instância do aplicativo. A janela do quadro deve ter uma entrada de mapa de mensagem que declara a função de retorno de chamada ( `OnFindReplace` no exemplo a seguir) que manipula essa mensagem registrada. O fragmento de código a seguir está um exemplo de como fazer isso para uma classe de janela de quadro chamada `CMyRichEditView`:
 
 [!code-cpp[NVC_MFCDocView#171](../../mfc/codesnippet/cpp/cfindreplacedialog-class_2.h)]
 

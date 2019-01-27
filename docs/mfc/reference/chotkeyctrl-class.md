@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CHotKeyCtrl [MFC], SetHotKey
 - CHotKeyCtrl [MFC], SetRules
 ms.assetid: 896f9766-0718-4f58-aab2-20325e118ca6
-ms.openlocfilehash: 9a06f3bd8a8c5646f384c3f788518078b121bfe1
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 0b673c873f773844c13894d3f0448536f297dc53
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178129"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894504"
 ---
 # <a name="chotkeyctrl-class"></a>Classe CHotKeyCtrl
 
@@ -67,7 +67,7 @@ Esse controle (e, portanto, o `CHotKeyCtrl` classe) está disponível somente pa
 
 Quando o usuário escolheu uma combinação de teclas, o aplicativo pode recuperar a combinação de chave especificada do controle e usar a mensagem WM_SETHOTKEY para configurar a tecla de acesso no sistema. Sempre que o usuário pressiona a tecla de atalho daí em diante, de qualquer parte do sistema, a janela especificada na mensagem WM_SETHOTKEY recebe uma mensagem WM_SYSCOMMAND especificando SC_HOTKEY. Essa mensagem ativa a janela que recebe a ele. A tecla de acesso permanece válida até o aplicativo que chamou WM_SETHOTKEY sai.
 
-Esse mecanismo é diferente do que o suporte a chaves hot que depende da mensagem WM_HOTKEY e o Windows [RegisterHotKey](https://msdn.microsoft.com/library/windows/desktop/ms646309) e [UnregisterHotKey](/windows/desktop/api/winuser/nf-winuser-unregisterhotkey) funções.
+Esse mecanismo é diferente do que o suporte a chaves hot que depende da mensagem WM_HOTKEY e o Windows [RegisterHotKey](/windows/desktop/api/winuser/nf-winuser-registerhotkey) e [UnregisterHotKey](/windows/desktop/api/winuser/nf-winuser-unregisterhotkey) funções.
 
 Para obter mais informações sobre como usar `CHotKeyCtrl`, consulte [controles](../../mfc/controls-mfc.md) e [usando CHotKeyCtrl](../../mfc/using-chotkeyctrl.md).
 
@@ -110,7 +110,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Especifica o estilo do controle de chave ativa. Aplica qualquer combinação de estilos de controle. Ver [estilos de controle comuns](/windows/desktop/Controls/common-control-styles) no SDK do Windows para obter mais informações.
 
-*Rect*<br/>
+*rect*<br/>
 Especifica o tamanho e a posição do controle de tecla ativo. Ela pode ser um [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto ou uma [estrutura RECT](/windows/desktop/api/windef/ns-windef-tagrect).
 
 *pParentWnd*<br/>
@@ -150,7 +150,7 @@ Especifica o estilo estendido do controle que está sendo criado. Para obter uma
 *dwStyle*<br/>
 Especifica o estilo do controle de chave ativa. Aplica qualquer combinação de estilos de controle. Para obter mais informações, consulte [estilos de controle comuns](/windows/desktop/Controls/common-control-styles) no SDK do Windows.
 
-*Rect*<br/>
+*rect*<br/>
 Uma referência a um [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura que descreve o tamanho e posição da janela a ser criado, em coordenadas do cliente do *pParentWnd*.
 
 *pParentWnd*<br/>
@@ -300,17 +300,17 @@ Matriz de sinalizadores que especifica as combinações de chave inválidas. Ele
 
 - HKCOMB_C CTRL
 
-- CTRL + ALT HKCOMB_CA
+- HKCOMB_CA CTRL+ALT
 
 - Chaves HKCOMB_NONE não modificado
 
 - HKCOMB_S SHIFT
 
-- SHIFT + ALT HKCOMB_SA
+- HKCOMB_SA SHIFT+ALT
 
-- SHIFT + CTRL HKCOMB_SC
+- HKCOMB_SC SHIFT+CTRL
 
-- SHIFT + CTRL + ALT HKCOMB_SCA
+- HKCOMB_SCA SHIFT+CTRL+ALT
 
 *wModifiers*<br/>
 Matriz de sinalizadores que especifica a combinação de teclas para usar quando o usuário insere uma combinação inválida. Para obter mais informações sobre os sinalizadores de modificador, consulte [GetHotKey](#gethotkey).

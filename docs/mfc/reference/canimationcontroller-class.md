@@ -103,12 +103,12 @@ helpviewer_keywords:
 - CAnimationController [MFC], m_pTransitionFactory
 - CAnimationController [MFC], m_pTransitionLibrary
 ms.assetid: ed294c98-695e-40a6-b940-33ef1d40aa6b
-ms.openlocfilehash: bd0bdd1a3f423257b2f73745d7260d1fac12a0d8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 93189c5c9301e513cfbdf110cf7753e211420fef
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50556652"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894127"
 ---
 # <a name="canimationcontroller-class"></a>Classe CAnimationController
 
@@ -127,7 +127,7 @@ class CAnimationController : public CObject;
 |Nome|Descrição|
 |----------|-----------------|
 |[CAnimationController::CAnimationController](#canimationcontroller)|Constrói um controlador de animação.|
-|[CAnimationController:: ~ CAnimationController](#canimationcontroller__~canimationcontroller)|O destruidor. Chamado quando o objeto de controlador de animação está sendo destruído.|
+|[CAnimationController::~CAnimationController](#canimationcontroller__~canimationcontroller)|O destruidor. Chamado quando o objeto de controlador de animação está sendo destruído.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
@@ -363,7 +363,7 @@ virtual BOOL EnableAnimationManagerEvent(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parâmetros
 
-*bAtivar*<br/>
+*bEnable*<br/>
 Especifica se deve definir ou liberar um manipulador.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -386,7 +386,7 @@ virtual BOOL EnableAnimationTimerEventHandler(
 
 ### <a name="parameters"></a>Parâmetros
 
-*bAtivar*<br/>
+*bEnable*<br/>
 Especifica se deve definir ou liberar os manipuladores.
 
 *idleBehavior*<br/>
@@ -419,7 +419,7 @@ TRUE se o manipulador com êxito foi definido ou liberado.
 
 ### <a name="remarks"></a>Comentários
 
-Quando um manipulador é definido (habilitado) animação do Windows chama os seguintes métodos virtuais dependendo dwHandlerType: OnHasPriorityCancel, OnHasPriorityConclude, OnHasPriorityTrim, OnHasPriorityCompress. dwHandler pode ser uma combinação dos seguintes sinalizadores: UI_ANIMATION_PHT_NONE - versão de todos os manipuladores UI_ANIMATION_PHT_CANCEL - definir cancelar o manipulador de comparação UI_ANIMATION_PHT_CONCLUDE - definir o manipulador de comparação Conclude UI_ANIMATION_PHT_COMPRESS - definir Manipulador de comparação Compress UI_ANIMATION_PHT_TRIM - definir o manipulador de comparação de corte UI_ANIMATION_PHT_CANCEL_REMOVE - Remover manipulador de comparação de cancelar UI_ANIMATION_PHT_CONCLUDE_REMOVE - Remover manipulador de comparação de Conclude UI_ANIMATION_PHT_COMPRESS_ Remover - Remover manipulador de comparação Compress UI_ANIMATION_PHT_TRIM_REMOVE - Remover manipulador de comparação de corte
+Quando um manipulador é o conjunto (habilitado) animação do Windows chama os seguintes métodos virtuais dependendo dwHandlerType: OnHasPriorityCancel, OnHasPriorityConclude, OnHasPriorityTrim, OnHasPriorityCompress. dwHandler pode ser uma combinação dos sinalizadores a seguir: UI_ANIMATION_PHT_NONE - versão de todos os manipuladores UI_ANIMATION_PHT_CANCEL - definir cancelar o manipulador de comparação UI_ANIMATION_PHT_CONCLUDE - definir Conclude manipulador comparação UI_ANIMATION_PHT_COMPRESS - definir o manipulador de comparação Compress UI_ANIMATION_PHT_TRIM - definir Cortar o manipulador de comparação UI_ANIMATION_PHT_CANCEL_REMOVE - remove Cancelar comparação manipulador UI_ANIMATION_PHT_CONCLUDE_REMOVE - remove o manipulador de comparação de Conclude UI_ANIMATION_PHT_COMPRESS_REMOVE - Remover manipulador de comparação Compress UI_ANIMATION_PHT _TRIM_REMOVE - Remover manipulador de comparação de corte
 
 ##  <a name="enablestoryboardeventhandler"></a>  CAnimationController::EnableStoryboardEventHandler
 
@@ -436,7 +436,7 @@ virtual BOOL EnableStoryboardEventHandler(
 *nGroupID*<br/>
 Especifica a ID do grupo.
 
-*bAtivar*<br/>
+*bEnable*<br/>
 Especifica se deve definir ou liberar um manipulador.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -871,7 +871,7 @@ Deve retornar TRUE se o storyboard pertencente a pGroupNew tem prioridade. Deve 
 
 ### <a name="remarks"></a>Comentários
 
-Esse método é chamado, se você habilitar os eventos de comparação de prioridade usando CAnimationController::EnablePriorityComparisonHandler e especificar UI_ANIMATION_PHT_CANCEL. Ele pode ser substituído em uma classe derivada para executar ações específicas do aplicativo. Documentação da API de animação do Windows de leitura para obter mais informações sobre [gerenciamento de conflito](https://msdn.microsoft.com/library/dd371759).
+Esse método é chamado, se você habilitar os eventos de comparação de prioridade usando CAnimationController::EnablePriorityComparisonHandler e especificar UI_ANIMATION_PHT_CANCEL. Ele pode ser substituído em uma classe derivada para executar ações específicas do aplicativo. Documentação da API de animação do Windows de leitura para obter mais informações sobre [gerenciamento de conflito](/windows/desktop/api/uianimation/nf-uianimation-iuianimationprioritycomparison-haspriority).
 
 ##  <a name="onhasprioritycompress"></a>  CAnimationController::OnHasPriorityCompress
 
@@ -901,7 +901,7 @@ Deve retornar TRUE se o storyboard pertencente a pGroupNew tem prioridade. Deve 
 
 ### <a name="remarks"></a>Comentários
 
-Esse método é chamado, se você habilitar os eventos de comparação de prioridade usando CAnimationController::EnablePriorityComparisonHandler e especificar UI_ANIMATION_PHT_COMPRESS. Ele pode ser substituído em uma classe derivada para executar ações específicas do aplicativo. Documentação da API de animação do Windows de leitura para obter mais informações sobre [gerenciamento de conflito](https://msdn.microsoft.com/library/dd371759).
+Esse método é chamado, se você habilitar os eventos de comparação de prioridade usando CAnimationController::EnablePriorityComparisonHandler e especificar UI_ANIMATION_PHT_COMPRESS. Ele pode ser substituído em uma classe derivada para executar ações específicas do aplicativo. Documentação da API de animação do Windows de leitura para obter mais informações sobre [gerenciamento de conflito](/windows/desktop/api/uianimation/nf-uianimation-iuianimationprioritycomparison-haspriority).
 
 ##  <a name="onhaspriorityconclude"></a>  CAnimationController::OnHasPriorityConclude
 
@@ -931,7 +931,7 @@ Deve retornar TRUE se o storyboard pertencente a pGroupNew tem prioridade. Deve 
 
 ### <a name="remarks"></a>Comentários
 
-Esse método é chamado, se você habilitar os eventos de comparação de prioridade usando CAnimationController::EnablePriorityComparisonHandler e especificar UI_ANIMATION_PHT_CONCLUDE. Ele pode ser substituído em uma classe derivada para executar ações específicas do aplicativo. Documentação da API de animação do Windows de leitura para obter mais informações sobre [gerenciamento de conflito](https://msdn.microsoft.com/library/dd371759).
+Esse método é chamado, se você habilitar os eventos de comparação de prioridade usando CAnimationController::EnablePriorityComparisonHandler e especificar UI_ANIMATION_PHT_CONCLUDE. Ele pode ser substituído em uma classe derivada para executar ações específicas do aplicativo. Documentação da API de animação do Windows de leitura para obter mais informações sobre [gerenciamento de conflito](/windows/desktop/api/uianimation/nf-uianimation-iuianimationprioritycomparison-haspriority).
 
 ##  <a name="onhasprioritytrim"></a>  CAnimationController::OnHasPriorityTrim
 
@@ -961,7 +961,7 @@ Deve retornar TRUE se o storyboard pertencente a pGroupNew tem prioridade. Deve 
 
 ### <a name="remarks"></a>Comentários
 
-Esse método é chamado, se você habilitar os eventos de comparação de prioridade usando CAnimationController::EnablePriorityComparisonHandler e especificar UI_ANIMATION_PHT_TRIM. Ele pode ser substituído em uma classe derivada para executar ações específicas do aplicativo. Documentação da API de animação do Windows de leitura para obter mais informações sobre [gerenciamento de conflito](https://msdn.microsoft.com/library/dd371759).
+Esse método é chamado, se você habilitar os eventos de comparação de prioridade usando CAnimationController::EnablePriorityComparisonHandler e especificar UI_ANIMATION_PHT_TRIM. Ele pode ser substituído em uma classe derivada para executar ações específicas do aplicativo. Documentação da API de animação do Windows de leitura para obter mais informações sobre [gerenciamento de conflito](/windows/desktop/api/uianimation/nf-uianimation-iuianimationprioritycomparison-haspriority).
 
 ##  <a name="onstoryboardstatuschanged"></a>  CAnimationController::OnStoryboardStatusChanged
 
@@ -1110,7 +1110,7 @@ void SetRelatedWnd(CWnd* pWnd);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Apropriei*<br/>
+*pWnd*<br/>
 Um ponteiro para o objeto de janela a ser definido.
 
 ### <a name="remarks"></a>Comentários

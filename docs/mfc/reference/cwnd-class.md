@@ -818,12 +818,12 @@ helpviewer_keywords:
 - CWnd [MFC], WindowProc
 - CWnd [MFC], m_hWnd
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
-ms.openlocfilehash: 0a27b78d873b0a561b84b13cc16c67aef9ff2e8b
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: ebb0d0abcff069deca4597ffb5a3a2d4e67cab9c
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53179078"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894530"
 ---
 # <a name="cwnd-class"></a>Classe CWnd
 
@@ -1263,7 +1263,7 @@ class CWnd : public CCmdTarget
 |----------|-----------------|
 |[CWnd::operator HWND](#operator_hwnd)|Chamada para obter um identificador para uma janela.|
 |[CWnd::operator! =](#operator_neq)|Determina se uma janela não é o mesmo que a janela cujo identificador é [m_hWnd](#m_hwnd).|
-|[CWnd::operator = =](#operator_eq_eq)|Determina se uma janela é o mesmo que a janela cujo identificador é [m_hWnd](#m_hwnd).|
+|[CWnd::operator ==](#operator_eq_eq)|Determina se uma janela é o mesmo que a janela cujo identificador é [m_hWnd](#m_hwnd).|
 
 ### <a name="public-data-members"></a>Membros de Dados Públicos
 
@@ -1761,7 +1761,7 @@ void CheckDlgButton(
 *nIDButton*<br/>
 Especifica o botão a ser modificado.
 
-*nVerifique*<br/>
+*nCheck*<br/>
 Especifica a ação a ser tomada. Se *nVerifique* for diferente de zero a `CheckDlgButton` função de membro coloca uma marca de seleção ao lado do botão; se for 0, a marca de seleção será removida. Para botões de três estados, se *nVerifique* for 2, o estado do botão é indeterminado.
 
 ### <a name="remarks"></a>Comentários
@@ -1816,7 +1816,7 @@ CWnd* ChildWindowFromPoint(
 
 ### <a name="parameters"></a>Parâmetros
 
-*ponto*<br/>
+*point*<br/>
 Especifica as coordenadas de cliente do ponto a ser testado.
 
 *nflags*<br/>
@@ -1923,7 +1923,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 [in] Combinação bit a bit (OR) de [estilos de janela](styles-used-by-mfc.md#window-styles). A opção WS_POPUP não é um estilo válido.
 
-*Rect*<br/>
+*rect*<br/>
 [in] O tamanho e local da janela em relação ao canto superior esquerdo da janela pai.
 
 *pParentWnd*<br/>
@@ -2060,7 +2060,7 @@ Um ponteiro para o texto a ser exibido no controle. Define o valor da propriedad
 *dwStyle*<br/>
 Estilos do Windows. Os estilos disponíveis são listados sob comentários.
 
-*Rect*<br/>
+*rect*<br/>
 Especifica o tamanho e a posição do controle. Ela pode ser um [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto ou uma [estrutura RECT](/windows/desktop/api/windef/ns-windef-tagrect).
 
 *ppt*<br/>
@@ -2175,7 +2175,7 @@ Para uma janela filho, a ID da janela; Caso contrário, a ID de um menu da janel
 *lpParam*<br/>
 Ponteiro para dados de usuário que são passados para o [CWnd::OnCreate](#oncreate) método o *lpCreateParams* campo.
 
-*Rect*<br/>
+*rect*<br/>
 O tamanho e local da janela em relação à tela ou janela pai.
 
 *pParentWnd*<br/>
@@ -2437,7 +2437,7 @@ Especifica os atributos dos arquivos a serem exibidos. Ele pode ser qualquer com
 
 - Arquivos mortos DDL_ARCHIVE.
 
-- Sinalizador de DDL_POSTMSGS LB_DIR. Se o sinalizador LB_DIR for definido, o Windows coloca as mensagens geradas pelo `DlgDirList` na fila do aplicativo; caso contrário, eles são enviados diretamente para o procedimento de caixa de diálogo.
+- DDL_POSTMSGS LB_DIR flag. Se o sinalizador LB_DIR for definido, o Windows coloca as mensagens geradas pelo `DlgDirList` na fila do aplicativo; caso contrário, eles são enviados diretamente para o procedimento de caixa de diálogo.
 
 - DDL_DRIVES unidades. Se o sinalizador DDL_DRIVES for definido, o sinalizador DDL_EXCLUSIVE é definido automaticamente. Portanto, para criar uma listagem de diretório que inclui unidades e arquivos, você deve chamar `DlgDirList` duas vezes: uma vez com o DDL_DRIVES flag conjunto e uma vez com os sinalizadores para o restante da lista.
 
@@ -2505,7 +2505,7 @@ Especifica DOS atributos de arquivo dos arquivos a serem exibidos. Ele pode ser 
 
 - Arquivos mortos DDL_ARCHIVE.
 
-- Sinalizador de DDL_POSTMSGS CB_DIR. Se o sinalizador CB_DIR for definido, o Windows coloca as mensagens geradas pelo `DlgDirListComboBox` na fila do aplicativo; caso contrário, eles são enviados diretamente para o procedimento de caixa de diálogo.
+- DDL_POSTMSGS CB_DIR flag. Se o sinalizador CB_DIR for definido, o Windows coloca as mensagens geradas pelo `DlgDirListComboBox` na fila do aplicativo; caso contrário, eles são enviados diretamente para o procedimento de caixa de diálogo.
 
 - DDL_DRIVES unidades. Se o sinalizador DDL_DRIVES for definido, o sinalizador DDL_EXCLUSIVE é definido automaticamente. Portanto, para criar uma listagem de diretório que inclui unidades e arquivos, você deve chamar `DlgDirListComboBox` duas vezes: uma vez com o DDL_DRIVES flag conjunto e uma vez com os sinalizadores para o restante da lista.
 
@@ -2766,7 +2766,7 @@ void EnableDynamicLayout(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parâmetros
 
-*bAtivar*<br/>
+*bEnable*<br/>
 TRUE para habilitar o layout dinâmico; FALSE para desabilitar o layout dinâmico.
 
 ### <a name="remarks"></a>Comentários
@@ -2785,7 +2785,7 @@ void EnableD2DSupport(
 
 ### <a name="parameters"></a>Parâmetros
 
-*bAtivar*<br/>
+*bEnable*<br/>
 Especifica se deve ativar, ou desativar o suporte D2D.
 
 *bUseDCRenderTarget*<br/>
@@ -2842,7 +2842,7 @@ void EnableScrollBarCtrl(
 *nBar*<br/>
 O identificador da barra de rolagem.
 
-*bAtivar*<br/>
+*bEnable*<br/>
 Especifica se a barra de rolagem deve ser habilitado ou desabilitado.
 
 ### <a name="remarks"></a>Comentários
@@ -2859,7 +2859,7 @@ BOOL EnableToolTips(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parâmetros
 
-*bAtivar*<br/>
+*bEnable*<br/>
 Especifica se o controle da dica de ferramenta está habilitado ou desabilitado. TRUE permite que o controle; FALSE desabilita o controle.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -2895,7 +2895,7 @@ BOOL EnableTrackingToolTips(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parâmetros
 
-*bAtivar*<br/>
+*bEnable*<br/>
 Especifica se a ferramenta dicas estão habilitadas ou desabilitadas de acompanhamento. Se esse parâmetro for TRUE, a ferramenta de rastreamento dicas serão habilitadas. Se esse parâmetro for FALSE, a ferramenta de rastreamento dicas serão desabilitadas.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -2916,7 +2916,7 @@ BOOL EnableWindow(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parâmetros
 
-*bAtivar*<br/>
+*bEnable*<br/>
 Especifica se a determinada janela deve ser habilitado ou desabilitado. Se esse parâmetro for TRUE, a janela será habilitada. Se esse parâmetro for FALSE, a janela será desabilitada.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -2951,7 +2951,7 @@ virtual void EndModalLoop(int nResult);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Nresultado*<br/>
+*nResult*<br/>
 Contém o valor a ser retornado ao chamador de [RunModalLoop](#runmodalloop).
 
 ### <a name="remarks"></a>Comentários
@@ -3086,7 +3086,7 @@ Identificador da janela pai cujas janelas filho devem ser pesquisados.
 Identificador para uma janela filho. A pesquisa começa com a próxima janela filho na ordem Z. A janela filho deve ser uma janela filho direto do *hwndParent*, não apenas uma janela de descendente.
 
 *lpszClass*<br/>
-Ponteiro para uma cadeia de caracteres terminada em nulo que especifica o nome de classe ou um átomo da classe criada por uma chamada anterior para o [RegisterClass](https://msdn.microsoft.com/library/windows/desktop/ms633586) ou [RegisterClassEx](/windows/desktop/api/winuser/nf-winuser-registerclassexa).
+Ponteiro para uma cadeia de caracteres terminada em nulo que especifica o nome de classe ou um átomo da classe criada por uma chamada anterior para o [RegisterClass](/windows/desktop/api/winuser/nf-winuser-registerclassa) ou [RegisterClassEx](/windows/desktop/api/winuser/nf-winuser-registerclassexa).
 
 *lpszWindow*<br/>
 Ponteiro para uma cadeia de caracteres terminada em nulo que especifica o nome da janela (o título da janela). Se esse parâmetro for NULL, correspondem a todos os nomes de janela.
@@ -4284,7 +4284,7 @@ COleControlSiteOrWnd* GetNextDlgGroupItem(
 *pWndCtl*<br/>
 Identifica o controle a ser usado como o ponto de partida para a pesquisa.
 
-*bversões*<br/>
+*bPrevious*<br/>
 Especifica como a função deve pesquisar o grupo de controles na caixa de diálogo. Se for TRUE, a função de pesquisa para o controle anterior dentro do grupo. Se for FALSE, ele procura o próximo controle no grupo.
 
 *pCurSiteOrWnd*<br/>
@@ -4333,7 +4333,7 @@ Identifica o controle a ser usado como o ponto de partida para a pesquisa.
 *pCurSiteOrWnd*<br/>
 Identifica o `COleControlSiteOrWnd` controle. Para obter mais informações sobre `COleControlSiteOrWnd`, consulte [CWnd::GetNextDlgGroupItem](#getnextdlggroupitem).
 
-*bversões*<br/>
+*bPrevious*<br/>
 Especifica como a função deve pesquisar a caixa de diálogo. Se for TRUE, a função de pesquisa para o controle anterior na caixa de diálogo; Se for FALSE, ele procura o próximo controle.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -4354,7 +4354,7 @@ CWnd* GetNextWindow(UINT nFlag = GW_HWNDNEXT) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*Nalização*<br/>
+*nFlag*<br/>
 Especifica se a função retorna um ponteiro para a próxima janela ou a janela anterior. Ele pode ser qualquer um dos GW_HWNDNEXT, que retorna a janela que segue o `CWnd` objeto na lista o Gerenciador de janelas ou GW_HWNDPREV, que retorna a janela anterior na lista do Gerenciador de janela.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -4741,7 +4741,7 @@ CMenu* GetSystemMenu(BOOL bRevert) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*bReverter*<br/>
+*bRevert*<br/>
 Especifica a ação a ser executada. Se *bReverter* é FALSE, `GetSystemMenu` retorna um identificador para uma cópia do menu de controle atualmente em uso. Essa cópia é inicialmente idêntica ao menu de controle, mas pode ser modificada. Se *bReverter* for TRUE, `GetSystemMenu` redefine o menu de controle para o estado padrão. Anterior, possivelmente modificado, o controle menu, se houver, é destruído. O valor retornado é indefinido neste caso.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -5382,7 +5382,7 @@ BOOL IsChild(const CWnd* pWnd) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*Apropriei*<br/>
+*pWnd*<br/>
 Identifica a janela a ser testado.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -5914,7 +5914,7 @@ afx_msg void OnActivateApp(
 
 ### <a name="parameters"></a>Parâmetros
 
-*bScripts Ativos*<br/>
+*bActive*<br/>
 Especifica se o `CWnd` está sendo ativada ou desativada. TRUE significa que o `CWnd` está sendo ativado. FALSE significa o `CWnd` está sendo desativado.
 
 *dwThreadID*<br/>
@@ -5941,7 +5941,7 @@ virtual BOOL OnAmbientProperty(
 *pSite*<br/>
 Ponteiro para o site do controle que solicitou a propriedade do ambiente.
 
-*DISPID*<br/>
+*dispid*<br/>
 A ID de expedição da propriedade de ambiente solicitada.
 
 *pvar*<br/>
@@ -5971,7 +5971,7 @@ afx_msg void OnAppCommand(
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|*Apropriei*|[in] Ponteiro para um `CWnd` objeto que representa a janela em que o usuário clicou no botão de comando ou pressionou a tecla de comando. Esta janela pode ser uma janela filho da janela de recebimento da mensagem.|
+|*pWnd*|[in] Ponteiro para um `CWnd` objeto que representa a janela em que o usuário clicou no botão de comando ou pressionou a tecla de comando. Esta janela pode ser uma janela filho da janela de recebimento da mensagem.|
 |*nCmd*|[in] Indica que o comando do aplicativo. Para obter uma lista de valores possíveis, consulte os comandos na *cmd* seção o *lParam* parâmetro do [WM_APPCOMMAND](/windows/desktop/inputdev/wm-appcommand).|
 |*nDevice*|[in] O dispositivo de entrada que gerou o evento de entrada. Para obter uma lista de valores possíveis, consulte os dispositivos sob o *uDevice* seção o *lParam* parâmetro do [WM_APPCOMMAND](/windows/desktop/inputdev/wm-appcommand).|
 |*nKey*|[in] Indica as chaves virtuais que estiverem desativados, como a tecla CTRL ou o botão esquerdo do mouse. Para obter uma lista de valores possíveis, consulte as chaves sob a *dwKeys* seção o *lParam* parâmetro do [WM_APPCOMMAND](/windows/desktop/inputdev/wm-appcommand). Para obter mais informações, consulte o subtítulo "Parâmetros de mensagem" em [sobre a entrada do Mouse](/windows/desktop/inputdev/about-mouse-input).|
@@ -6022,7 +6022,7 @@ afx_msg void OnCancelMode();
 
 Se o `CWnd` objeto tem o foco, seu `OnCancelMode` função de membro é chamada quando uma caixa de diálogo ou uma caixa de mensagem é exibida. Isso dá a `CWnd` a oportunidade de cancelar modos como captura do mouse.
 
-A implementação padrão responde chamando o [ReleaseCapture](https://msdn.microsoft.com/library/windows/desktop/ms646261) função do Windows. Substitua essa função de membro em sua classe derivada para lidar com outros modos.
+A implementação padrão responde chamando o [ReleaseCapture](/windows/desktop/api/winuser/nf-winuser-releasecapture) função do Windows. Substitua essa função de membro em sua classe derivada para lidar com outros modos.
 
 ##  <a name="oncapturechanged"></a>  CWnd::OnCaptureChanged
 
@@ -6034,12 +6034,12 @@ afx_msg void OnCaptureChanged(CWnd* pWnd);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Apropriei*<br/>
+*pWnd*<br/>
 Um ponteiro para a janela para obter a captura do mouse
 
 ### <a name="remarks"></a>Comentários
 
-Uma janela recebe essa mensagem, mesmo que ele chama [ReleaseCapture](https://msdn.microsoft.com/library/windows/desktop/ms646261) em si. Um aplicativo não deve tentar definir a captura do mouse em resposta a essa mensagem. Quando ele recebe essa mensagem, uma janela deve ser redesenhado, se necessário, para refletir o novo estado de captura do mouse.
+Uma janela recebe essa mensagem, mesmo que ele chama [ReleaseCapture](/windows/desktop/api/winuser/nf-winuser-releasecapture) em si. Um aplicativo não deve tentar definir a captura do mouse em resposta a essa mensagem. Quando ele recebe essa mensagem, uma janela deve ser redesenhado, se necessário, para refletir o novo estado de captura do mouse.
 
 Consulte o SDK do Windows para obter informações sobre o `ReleaseCapture` função do Windows.
 
@@ -6083,7 +6083,7 @@ afx_msg void OnChangeUIState(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Nação*<br/>
+*nAction*<br/>
 Especifica a ação a ser executada. pode ser um dos seguintes valores:
 
 - Elemento de estado UIS_CLEAR a interface do usuário (especificado por *nUIElement*) deve ser ocultada.
@@ -6388,10 +6388,10 @@ afx_msg void OnContextMenu(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Apropriei*<br/>
+*pWnd*<br/>
 Identificador da janela na qual o usuário com o botão direito clicar o mouse. Isso pode ser uma janela filho da janela de recebimento da mensagem. Para obter mais informações sobre como processar essa mensagem, consulte a seção comentários.
 
-*POS*<br/>
+*pos*<br/>
 Posição do cursor, em coordenadas da tela, no momento do mouse de clique.
 
 ### <a name="remarks"></a>Comentários
@@ -6412,7 +6412,7 @@ afx_msg BOOL OnCopyData(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Apropriei*<br/>
+*pWnd*<br/>
 Um ponteiro para um `CWnd` objeto que está enviando os dados.
 
 *pCopyDataStruct*<br/>
@@ -6479,7 +6479,7 @@ afx_msg HBRUSH OnCtlColor(
 *pDC*<br/>
 Contém um ponteiro para o contexto de exibição para a janela filho. Pode ser temporária.
 
-*Apropriei*<br/>
+*pWnd*<br/>
 Contém um ponteiro para o controle pedindo a cor. Pode ser temporária.
 
 *nCtlColor*<br/>
@@ -6713,7 +6713,7 @@ virtual void OnDrawIconicThumbnailOrLivePreview(
 *dc*<br/>
 Especifica o contexto de dispositivo.
 
-*Rect*<br/>
+*rect*<br/>
 Especifica o retângulo delimitador da área a ser renderizado.
 
 *szRequiredThumbnailSize*<br/>
@@ -6788,7 +6788,7 @@ afx_msg void OnEnable(BOOL bEnable);
 
 ### <a name="parameters"></a>Parâmetros
 
-*bAtivar*<br/>
+*bEnable*<br/>
 Especifica se o `CWnd` objeto foi habilitado ou desabilitado. Esse parâmetro será TRUE se o `CWnd` tiver sido habilitado; é FALSE se o `CWnd` foi desabilitada.
 
 ### <a name="remarks"></a>Comentários
@@ -6808,7 +6808,7 @@ afx_msg void OnEndSession(BOOL bEnding);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Curvatura*<br/>
+*bEnding*<br/>
 Especifica se a sessão está sendo encerrada. Ele será TRUE se a sessão está sendo encerrada; Caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
@@ -6999,7 +6999,7 @@ Um ou mais dos valores a seguir, que indica qual tipo de entrada que os processo
 
 - Todos os DLGC_WANTMESSAGE entrada do teclado. O aplicativo passa essa mensagem para o controle.
 
-- Tecla TAB DLGC_WANTTAB.
+- DLGC_WANTTAB TAB key.
 
 ### <a name="remarks"></a>Comentários
 
@@ -7119,7 +7119,7 @@ afx_msg void OnHotKey(
 
 ### <a name="remarks"></a>Comentários
 
-Esse método recebe o [WM_HOTKEY](/windows/desktop/inputdev/wm-hotkey) notificação, que é descrita no SDK do Windows. Esta mensagem é colocada na parte superior da fila de mensagens associada ao thread que registrou a tecla de atalho. Use o [RegisterHotKey](https://msdn.microsoft.com/library/windows/desktop/ms646309) função para registrar uma tecla de acesso em todo o sistema.
+Esse método recebe o [WM_HOTKEY](/windows/desktop/inputdev/wm-hotkey) notificação, que é descrita no SDK do Windows. Esta mensagem é colocada na parte superior da fila de mensagens associada ao thread que registrou a tecla de atalho. Use o [RegisterHotKey](/windows/desktop/api/winuser/nf-winuser-registerhotkey) função para registrar uma tecla de acesso em todo o sistema.
 
 > [!NOTE]
 > Essa função membro é chamada pelo framework para permitir que seu aplicativo lidar com uma mensagem do Windows. Os parâmetros passados para a função refletem os parâmetros recebidos pelo framework quando a mensagem foi recebida. Se você chamar a implementação de classe base dessa função, o que a implementação usará os parâmetros passados originalmente com a mensagem e não os parâmetros que você fornecer para a função.
@@ -7497,7 +7497,7 @@ Indica se várias chaves virtuais estão inativos. Esse parâmetro pode ser qual
 
 - MK_SHIFT definido se a tecla SHIFT está pressionada.
 
-*ponto*<br/>
+*point*<br/>
 Especifica a coordenada x e y do cursor. Essas coordenadas são sempre relativas ao canto superior esquerdo da janela.
 
 ### <a name="remarks"></a>Comentários
@@ -7532,7 +7532,7 @@ Indica se várias chaves virtuais estão inativos. Esse parâmetro pode ser qual
 
 - MK_SHIFT definido se a tecla SHIFT está pressionada.
 
-*ponto*<br/>
+*point*<br/>
 Especifica a coordenada x e y do cursor. Essas coordenadas são sempre relativas ao canto superior esquerdo da janela.
 
 ### <a name="remarks"></a>Comentários
@@ -7563,7 +7563,7 @@ Indica se várias chaves virtuais estão inativos. Esse parâmetro pode ser qual
 
 - MK_SHIFT definido se a tecla SHIFT está pressionada.
 
-*ponto*<br/>
+*point*<br/>
 Especifica a coordenada x e y do cursor. Essas coordenadas são sempre relativas ao canto superior esquerdo da janela.
 
 ### <a name="remarks"></a>Comentários
@@ -7596,7 +7596,7 @@ Indica se várias chaves virtuais estão inativos. Esse parâmetro pode ser qual
 
 - MK_SHIFT definido se a tecla SHIFT está pressionada.
 
-*ponto*<br/>
+*point*<br/>
 Especifica a coordenada x e y do cursor. Essas coordenadas são sempre relativas ao canto superior esquerdo da janela.
 
 ### <a name="remarks"></a>Comentários
@@ -7631,7 +7631,7 @@ Indica se várias chaves virtuais estão inativos. Esse parâmetro pode ser qual
 
 - MK_SHIFT definido se a tecla SHIFT está pressionada.
 
-*ponto*<br/>
+*point*<br/>
 Especifica a coordenada x e y do cursor. Essas coordenadas são sempre relativas ao canto superior esquerdo da janela.
 
 ### <a name="remarks"></a>Comentários
@@ -7662,7 +7662,7 @@ Indica se várias chaves virtuais estão inativos. Esse parâmetro pode ser qual
 
 - MK_SHIFT definido se a tecla SHIFT está pressionada.
 
-*ponto*<br/>
+*point*<br/>
 Especifica a coordenada x e y do cursor. Essas coordenadas são sempre relativas ao canto superior esquerdo da janela.
 
 ### <a name="remarks"></a>Comentários
@@ -7964,7 +7964,7 @@ afx_msg void OnMouseHover(
 |Parâmetro|Descrição|
 |---------------|-----------------|
 |*nFlags*|[in] Uma combinação bit a bit (OR) de sinalizadores que indicam quais teclas modificadoras são pressionadas. Por exemplo, o sinalizador MK_CONTROL indica que a tecla CTRL está pressionada.|
-|*ponto*|[in] Um [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objeto que especifica a *x* e *y* coordenadas do cursor relativas ao canto superior esquerdo da área de cliente.|
+|*point*|[in] Um [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objeto que especifica a *x* e *y* coordenadas do cursor relativas ao canto superior esquerdo da área de cliente.|
 
 ### <a name="remarks"></a>Comentários
 
@@ -8051,7 +8051,7 @@ Indica se várias chaves virtuais estão inativos. Esse parâmetro pode ser qual
 
 - MK_SHIFT definido se a tecla SHIFT está pressionada.
 
-*ponto*<br/>
+*point*<br/>
 Especifica a coordenada x e y do cursor. Essas coordenadas são sempre relativas ao canto superior esquerdo da janela.
 
 ### <a name="remarks"></a>Comentários
@@ -8145,7 +8145,7 @@ afx_msg void OnMoving(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Xplorando o*<br/>
+*nSide*<br/>
 A borda da janela a ser movido.
 
 *lpRect*<br/>
@@ -8166,7 +8166,7 @@ afx_msg BOOL OnNcActivate(BOOL bActive);
 
 ### <a name="parameters"></a>Parâmetros
 
-*bScripts Ativos*<br/>
+*bActive*<br/>
 Especifica quando um ícone ou uma barra de legenda precisa ser alterado para indicar um estado ativo ou inativo. O *bScripts Ativos* parâmetro será TRUE se uma legenda ativa ou ícone deve ser desenhada. É FALSE para um ícone ou uma legenda inativa.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -8257,7 +8257,7 @@ afx_msg LRESULT OnNcHitTest(CPoint point);
 
 ### <a name="parameters"></a>Parâmetros
 
-*ponto*<br/>
+*point*<br/>
 Contém as coordenadas x e y do cursor. Essas coordenadas são sempre coordenadas da tela.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -8284,7 +8284,7 @@ afx_msg void OnNcLButtonDblClk(
 *nHitTest*<br/>
 Especifica o [código de teste de clique](#onnchittest). Um teste de clique é um teste que determina o local do cursor.
 
-*ponto*<br/>
+*point*<br/>
 Especifica um `CPoint` objeto que contém x e y coordenadas da posição do cursor de tela. Essas coordenadas são sempre relativas ao canto superior esquerdo da tela.
 
 ### <a name="remarks"></a>Comentários
@@ -8309,7 +8309,7 @@ afx_msg void OnNcLButtonDown(
 *nHitTest*<br/>
 Especifica o [código de teste de clique](#onnchittest). Um teste de clique é um teste que determina o local do cursor.
 
-*ponto*<br/>
+*point*<br/>
 Especifica um `CPoint` objeto que contém x e y coordenadas da posição do cursor de tela. Essas coordenadas são sempre relativas ao canto superior esquerdo da tela.
 
 ### <a name="remarks"></a>Comentários
@@ -8334,7 +8334,7 @@ afx_msg void OnNcLButtonUp(
 *nHitTest*<br/>
 Especifica o [código de teste de clique](#onnchittest). Um teste de clique é um teste que determina o local do cursor.
 
-*ponto*<br/>
+*point*<br/>
 Especifica um `CPoint` objeto que contém x e y coordenadas da posição do cursor de tela. Essas coordenadas são sempre relativas ao canto superior esquerdo da tela.
 
 ### <a name="remarks"></a>Comentários
@@ -8359,7 +8359,7 @@ afx_msg void OnNcMButtonDblClk(
 *nHitTest*<br/>
 Especifica o [código de teste de clique](#onnchittest). Um teste de clique é um teste que determina o local do cursor.
 
-*ponto*<br/>
+*point*<br/>
 Especifica um `CPoint` objeto que contém x e y coordenadas da posição do cursor de tela. Essas coordenadas são sempre relativas ao canto superior esquerdo da tela.
 
 ### <a name="remarks"></a>Comentários
@@ -8382,7 +8382,7 @@ afx_msg void OnNcMButtonDown(
 *nHitTest*<br/>
 Especifica o [código de teste de clique](#onnchittest). Um teste de clique é um teste que determina o local do cursor.
 
-*ponto*<br/>
+*point*<br/>
 Especifica um `CPoint` objeto que contém x e y coordenadas da posição do cursor de tela. Essas coordenadas são sempre relativas ao canto superior esquerdo da tela.
 
 ### <a name="remarks"></a>Comentários
@@ -8405,7 +8405,7 @@ afx_msg void OnNcMButtonUp(
 *nHitTest*<br/>
 Especifica o [código de teste de clique](#onnchittest). Um teste de clique é um teste que determina o local do cursor.
 
-*ponto*<br/>
+*point*<br/>
 Especifica um `CPoint` objeto que contém x e y coordenadas da posição do cursor de tela. Essas coordenadas são sempre relativas ao canto superior esquerdo da tela.
 
 ### <a name="remarks"></a>Comentários
@@ -8428,7 +8428,7 @@ afx_msg void OnNcMouseHover(
 |Parâmetro|Descrição|
 |---------------|-----------------|
 |*nHitTest*|[in] O valor de teste de clique retornado pela [CWnd::DefWindowProc](#defwindowproc) funcionar como resultado do processamento de [WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest) mensagem.|
-|*ponto*|[in] Um [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objeto que especifica a *x* e *y* coordenadas do cursor relativas ao canto superior esquerdo da tela.|
+|*point*|[in] Um [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objeto que especifica a *x* e *y* coordenadas do cursor relativas ao canto superior esquerdo da tela.|
 
 ### <a name="remarks"></a>Comentários
 
@@ -8467,7 +8467,7 @@ afx_msg void OnNcMouseMove(
 *nHitTest*<br/>
 Especifica o [código de teste de clique](#onnchittest). Um teste de clique é um teste que determina o local do cursor.
 
-*ponto*<br/>
+*point*<br/>
 Especifica um `CPoint` objeto que contém x e y coordenadas da posição do cursor de tela. Essas coordenadas são sempre relativas ao canto superior esquerdo da tela.
 
 ### <a name="remarks"></a>Comentários
@@ -8506,7 +8506,7 @@ afx_msg void OnNcRButtonDblClk(
 *nHitTest*<br/>
 Especifica o [código de teste de clique](#onnchittest). Um teste de clique é um teste que determina o local do cursor.
 
-*ponto*<br/>
+*point*<br/>
 Especifica um `CPoint` objeto que contém x e y coordenadas da posição do cursor de tela. Essas coordenadas são sempre relativas ao canto superior esquerdo da tela.
 
 ### <a name="remarks"></a>Comentários
@@ -8529,7 +8529,7 @@ afx_msg void OnNcRButtonDown(
 *nHitTest*<br/>
 Especifica o [código de teste de clique](#onnchittest). Um teste de clique é um teste que determina o local do cursor.
 
-*ponto*<br/>
+*point*<br/>
 Especifica um `CPoint` objeto que contém x e y coordenadas da posição do cursor de tela. Essas coordenadas são sempre relativas ao canto superior esquerdo da tela.
 
 ### <a name="remarks"></a>Comentários
@@ -8552,7 +8552,7 @@ afx_msg void OnNcRButtonUp(
 *nHitTest*<br/>
 Especifica o [código de teste de clique](#onnchittest). Um teste de clique é um teste que determina o local do cursor.
 
-*ponto*<br/>
+*point*<br/>
 Especifica um `CPoint` objeto que contém x e y coordenadas da posição do cursor de tela. Essas coordenadas são sempre relativas ao canto superior esquerdo da tela.
 
 ### <a name="remarks"></a>Comentários
@@ -8598,7 +8598,7 @@ void OnNcXButtonDblClk(
 |---------------|-----------------|
 |*nHitTest*|[in] O valor de teste de clique retornado pela [CWnd::DefWindowProc](#defwindowproc) funcionar como resultado do processamento de [WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest) mensagem.|
 |*nButton*|[in] Um valor de XBUTTON1 se o primeiro botão do Microsoft Intellimouse X é clicado duas vezes ou XBUTTON2 se o segundo botão X é clicado duas vezes.|
-|*ponto*|[in] Um [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objeto que especifica a *x* e *y* coordenadas do cursor relativas ao canto superior esquerdo da área de cliente.|
+|*point*|[in] Um [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objeto que especifica a *x* e *y* coordenadas do cursor relativas ao canto superior esquerdo da área de cliente.|
 
 ### <a name="remarks"></a>Comentários
 
@@ -8624,7 +8624,7 @@ afx_msg void OnNcXButtonDown(
 |---------------|-----------------|
 |*nHitTest*|[in] O valor de teste de clique retornado pela [CWnd::DefWindowProc](#defwindowproc) funcionar como resultado do processamento de [WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest) mensagem.|
 |*nButton*|[in] Um valor de XBUTTON1 se o primeiro botão X do mouse é pressionado ou XBUTTON2 se o segundo botão X é pressionado.|
-|*ponto*|[in] Um [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objeto que especifica a *x* e *y* coordenadas do cursor relativas ao canto superior esquerdo da tela.|
+|*point*|[in] Um [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objeto que especifica a *x* e *y* coordenadas do cursor relativas ao canto superior esquerdo da tela.|
 
 ### <a name="remarks"></a>Comentários
 
@@ -8650,7 +8650,7 @@ afx_msg void OnNcXButtonUp(
 |---------------|-----------------|
 |*nHitTest*|[in] O valor de teste de clique retornado pela [CWnd::DefWindowProc](#defwindowproc) funcionar como resultado do processamento de [WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest) mensagem.|
 |*nButton*|[in] Um valor de XBUTTON1 se o primeiro botão X do mouse é liberado, ou XBUTTON2 se o segundo botão X é liberado.|
-|*ponto*|[in] Um [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objeto que especifica a *x* e *y* coordenadas do cursor relativas ao canto superior esquerdo da tela.|
+|*point*|[in] Um [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objeto que especifica a *x* e *y* coordenadas do cursor relativas ao canto superior esquerdo da tela.|
 
 ### <a name="remarks"></a>Comentários
 
@@ -8731,8 +8731,8 @@ afx_msg UINT OnNotifyFormat(
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|*Apropriei*|[in] Um ponteiro para um `CWnd` objeto que representa o envio de janela de [WM_NOTIFY](/windows/desktop/controls/wm-notify) mensagem.<br /><br /> Esse parâmetro é o ponteiro para um controle se o *Ncomando* parâmetro for NF_QUERY ou o ponteiro para a janela pai de um controle se *Ncomando* é NF_REQUERY.|
-|*Ncomando*|[in] Um valor de comando que especializa a mensagem WM_NOTIFY. Os valores possíveis são:<br /><br /> -NF_QUERY-<br />     A mensagem é uma consulta para determinar se as estruturas ANSI ou Unicode devem ser usadas em mensagens WM_NOTIFY. Esta mensagem é enviada de um controle à sua janela pai durante a criação de um controle e, em resposta ao formulário NF_REQUERY desta mensagem.<br />-NF_REQUERY-<br />     A mensagem é uma solicitação para um controle para enviar o formulário NF_QUERY dessa mensagem para sua janela pai. Essa solicitação é enviada a partir da janela pai e solicita que o controle para o pai sobre o tipo de estrutura para usar nas mensagens WM_NOTIFY repetir a consulta. Se o *Ncomando* parâmetro for NF_REQUERY, o valor de retorno é o resultado da operação de repetição da consulta.|
+|*pWnd*|[in] Um ponteiro para um `CWnd` objeto que representa o envio de janela de [WM_NOTIFY](/windows/desktop/controls/wm-notify) mensagem.<br /><br /> Esse parâmetro é o ponteiro para um controle se o *Ncomando* parâmetro for NF_QUERY ou o ponteiro para a janela pai de um controle se *Ncomando* é NF_REQUERY.|
+|*nCommand*|[in] Um valor de comando que especializa a mensagem WM_NOTIFY. Os valores possíveis são:<br /><br /> - NF_QUERY -<br />     A mensagem é uma consulta para determinar se as estruturas ANSI ou Unicode devem ser usadas em mensagens WM_NOTIFY. Esta mensagem é enviada de um controle à sua janela pai durante a criação de um controle e, em resposta ao formulário NF_REQUERY desta mensagem.<br />- NF_REQUERY -<br />     A mensagem é uma solicitação para um controle para enviar o formulário NF_QUERY dessa mensagem para sua janela pai. Essa solicitação é enviada a partir da janela pai e solicita que o controle para o pai sobre o tipo de estrutura para usar nas mensagens WM_NOTIFY repetir a consulta. Se o *Ncomando* parâmetro for NF_REQUERY, o valor de retorno é o resultado da operação de repetição da consulta.|
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -9043,7 +9043,7 @@ Indica se várias chaves virtuais estão inativos. Esse parâmetro pode ser qual
 
 - MK_SHIFT definido se a tecla SHIFT está pressionada.
 
-*ponto*<br/>
+*point*<br/>
 Especifica a x e y coordenadas do cursor. Essas coordenadas são sempre relativas ao canto superior esquerdo da janela.
 
 ### <a name="remarks"></a>Comentários
@@ -9078,7 +9078,7 @@ Indica se várias chaves virtuais estão inativos. Esse parâmetro pode ser qual
 
 - MK_SHIFT definido se a tecla SHIFT está pressionada.
 
-*ponto*<br/>
+*point*<br/>
 Especifica a x e y coordenadas do cursor. Essas coordenadas são sempre relativas ao canto superior esquerdo da janela.
 
 ### <a name="remarks"></a>Comentários
@@ -9108,7 +9108,7 @@ Indica se várias chaves virtuais estão inativos. Esse parâmetro pode ser qual
 
 - MK_SHIFT definido se a tecla SHIFT está pressionada.
 
-*ponto*<br/>
+*point*<br/>
 Especifica a x e y coordenadas do cursor. Essas coordenadas são sempre relativas ao canto superior esquerdo da janela.
 
 ### <a name="remarks"></a>Comentários
@@ -9219,7 +9219,7 @@ afx_msg BOOL OnSetCursor(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Apropriei*<br/>
+*pWnd*<br/>
 Especifica um ponteiro para a janela que contém o cursor. O ponteiro pode ser temporário e não deve ser armazenado para uso posterior.
 
 *nHitTest*<br/>
@@ -9307,7 +9307,7 @@ afx_msg void OnShowWindow(
 
 ### <a name="parameters"></a>Parâmetros
 
-*bMostrar*<br/>
+*bShow*<br/>
 Especifica se uma janela está sendo mostrada. Ele será TRUE se a janela está sendo mostrada; é FALSE se a janela está sendo ocultada.
 
 *nStatus*<br/>
@@ -9350,10 +9350,10 @@ Especifica o tipo do redimensionamento solicitado. Esse parâmetro pode ser um d
 
 - Mensagem de SIZE_MAXSHOW é enviada para todas as janelas pop-up quando alguma outra janela tiver sido restaurada a seu tamanho anterior.
 
-*CX*<br/>
+*cx*<br/>
 Especifica a nova largura da área de cliente.
 
-*Cy*<br/>
+*cy*<br/>
 Especifica a nova altura da área de cliente.
 
 ### <a name="remarks"></a>Comentários
@@ -9406,7 +9406,7 @@ afx_msg void OnSizing(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Xplorando o*<br/>
+*nSide*<br/>
 A borda da janela a ser movido.
 
 *lpRect*<br/>
@@ -9468,7 +9468,7 @@ Especifica se a janela estendidos ou nonextended estilos foram alterados. Esse p
 - Estilos de nonextended da janela do GWL_STYLE foram alterados.
 
 *lpStyleStruct*<br/>
-Aponta para um [STYLESTRUCT](https://msdn.microsoft.com/library/windows/desktop/ms632607) estrutura que contém os novos estilos da janela. Um aplicativo pode examinar os estilos, mas ele não pode alterá-los.
+Aponta para um [STYLESTRUCT](/windows/desktop/api/winuser/ns-winuser-stylestruct) estrutura que contém os novos estilos da janela. Um aplicativo pode examinar os estilos, mas ele não pode alterá-los.
 
 ### <a name="remarks"></a>Comentários
 
@@ -9495,7 +9495,7 @@ Especifica se a janela estendidos ou nonextended estilos foram alterados. Esse p
 - Estilos de nonextended da janela do GWL_STYLE foram alterados.
 
 *lpStyleStruct*<br/>
-Aponta para um [STYLESTRUCT](https://msdn.microsoft.com/library/windows/desktop/ms632607) estrutura que contém os novos estilos da janela. Um aplicativo pode examinar os estilos e alterá-los.
+Aponta para um [STYLESTRUCT](/windows/desktop/api/winuser/ns-winuser-stylestruct) estrutura que contém os novos estilos da janela. Um aplicativo pode examinar os estilos e alterá-los.
 
 ### <a name="remarks"></a>Comentários
 
@@ -9860,7 +9860,7 @@ virtual INT_PTR OnToolHitTest(
 
 ### <a name="parameters"></a>Parâmetros
 
-*ponto*<br/>
+*point*<br/>
 Especifica a coordenada x e y do cursor. Essas coordenadas são sempre relativas ao canto superior esquerdo da janela
 
 *pTI*<br/>
@@ -10006,7 +10006,7 @@ afx_msg void OnUpdateUIState(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Nação*<br/>
+*nAction*<br/>
 Especifica a ação a ser executada. pode ser um dos seguintes valores:
 
 - Elemento de estado UIS_CLEAR a interface do usuário (especificado por *nUIElement*) deve ser ocultada.
@@ -10312,7 +10312,7 @@ afx_msg void OnXButtonDblClk(
 |---------------|-----------------|
 |*nFlags*|[in] Uma combinação bit a bit (OR) de sinalizadores que indicam quais teclas modificadoras são pressionadas. Por exemplo, o sinalizador MK_CONTROL indica que a tecla CTRL está pressionada.|
 |*nButton*|[in] Um valor de XBUTTON1 se o primeiro botão do Microsoft Intellimouse X é clicado duas vezes ou XBUTTON2 se o segundo botão X é clicado duas vezes.|
-|*ponto*|[in] Um [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objeto que especifica a *x* e *y* coordenadas do cursor relativas ao canto superior esquerdo da área de cliente.|
+|*point*|[in] Um [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objeto que especifica a *x* e *y* coordenadas do cursor relativas ao canto superior esquerdo da área de cliente.|
 
 ### <a name="remarks"></a>Comentários
 
@@ -10350,7 +10350,7 @@ afx_msg void OnXButtonDown(
 |---------------|-----------------|
 |*nFlags*|[in] Uma combinação bit a bit (OR) de sinalizadores que indicam quais teclas modificadoras são pressionadas. Por exemplo, o sinalizador MK_CONTROL indica que a tecla CTRL está pressionada.|
 |*nButton*|[in] Um valor de XBUTTON1 se o primeiro botão Microsoft Intellimouse X foi clicado ou XBUTTON2 se o segundo botão X foi clicado.|
-|*ponto*|[in] Um [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objeto que especifica a *x* e *y* coordenadas do cursor relativas ao canto superior esquerdo da área de cliente.|
+|*point*|[in] Um [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objeto que especifica a *x* e *y* coordenadas do cursor relativas ao canto superior esquerdo da área de cliente.|
 
 ### <a name="remarks"></a>Comentários
 
@@ -10388,7 +10388,7 @@ afx_msg void OnXButtonUp(
 |---------------|-----------------|
 |*nFlags*|[in] Uma combinação bit a bit (OR) de sinalizadores que indicam quais teclas modificadoras são pressionadas. Por exemplo, o sinalizador MK_CONTROL indica que a tecla CTRL está pressionada.|
 |*nButton*|[in] Um valor de XBUTTON1 se o primeiro botão Microsoft Intellimouse X foi clicado duas vezes ou XBUTTON2 se o segundo botão X foi clicado duas vezes.|
-|*ponto*|[in] Um [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objeto que especifica a *x* e *y* coordenadas do cursor relativas ao canto superior esquerdo da área de cliente.|
+|*point*|[in] Um [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objeto que especifica a *x* e *y* coordenadas do cursor relativas ao canto superior esquerdo da área de cliente.|
 
 ### <a name="remarks"></a>Comentários
 
@@ -10879,7 +10879,7 @@ A ID da última em um intervalo de barras de controle, reposicionar e redimensio
 *nIDLeftOver*<br/>
 Especifica a ID do painel que preenche o restante da área de cliente.
 
-*Nalização*<br/>
+*nFlag*<br/>
 Pode ter um dos seguintes valores:
 
 - `CWnd::reposDefault` Executa o layout das barras de controle. *lpRectParam* não é usado e pode ser NULL.
@@ -11005,7 +11005,7 @@ int ScrollWindowEx(
 
 ### <a name="parameters"></a>Parâmetros
 
-*DX*<br/>
+*dx*<br/>
 Especifica a quantidade, em unidades de dispositivo de rolagem horizontal. Esse parâmetro deve ter um valor negativo para rolar para a esquerda.
 
 *dy*<br/>
@@ -11044,7 +11044,7 @@ Se [SW_INVALIDATE](/windows/desktop/api/winuser/nf-winuser-scrollwindowex) e [SW
 
 Se a janela tiver o [WS_CLIPCHILDREN](/windows/desktop/api/winuser/nf-winuser-createwindowa) estilo, as áreas retornadas especificadas por *prgnUpdate* e *lpRectUpdate* representam a área total da janela rolada deve ser atualizado, incluindo todas as áreas nas janelas filho que precisam de atualização.
 
-Se o [SW_SCROLLCHILDREN](/windows/desktop/api/winuser/nf-winuser-scrollwindowex) sinalizador for especificado, o Windows não corretamente atualizará a tela se parte de uma janela filho é rolada. A parte da janela filho rolado que se encontra fora do retângulo de origem não será apagada e não será redesenhada corretamente em seu novo destino. Use o [DeferWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms632681) função do Windows para janelas filho de movimentação que não residem completamente dentro de *lpRectScroll* retângulo. O cursor é reposicionado se o sinalizador SW_SCROLLCHILDREN está definido e o retângulo de cursor faz interseção com o retângulo de rolagem.
+Se o [SW_SCROLLCHILDREN](/windows/desktop/api/winuser/nf-winuser-scrollwindowex) sinalizador for especificado, o Windows não corretamente atualizará a tela se parte de uma janela filho é rolada. A parte da janela filho rolado que se encontra fora do retângulo de origem não será apagada e não será redesenhada corretamente em seu novo destino. Use o [DeferWindowPos](/windows/desktop/api/winuser/nf-winuser-deferwindowpos) função do Windows para janelas filho de movimentação que não residem completamente dentro de *lpRectScroll* retângulo. O cursor é reposicionado se o sinalizador SW_SCROLLCHILDREN está definido e o retângulo de cursor faz interseção com o retângulo de rolagem.
 
 Todas as coordenadas de entrada e saídas (para *lpRectScroll*, *lpRectClip*, *lpRectUpdate*, e *prgnUpdate*) são considerados no coordenadas do cliente, independentemente se a janela tiver o estilo de classe CS_OWNDC ou CS_CLASSDC. Use o [LPtoDP](/windows/desktop/api/wingdi/nf-wingdi-lptodp) e [DPtoLP](/windows/desktop/api/wingdi/nf-wingdi-dptolp) funções do Windows para converter em coordenadas lógicas, se necessário.
 
@@ -11247,7 +11247,7 @@ Um ponteiro para o objeto de janela que receberam todas as entradas do mouse. É
 
 ### <a name="remarks"></a>Comentários
 
-Quando `CWnd` não exige mais todas as entradas do mouse, o aplicativo deve chamar o [ReleaseCapture](https://msdn.microsoft.com/library/windows/desktop/ms646261) função para que outras janelas podem receber entrada do mouse.
+Quando `CWnd` não exige mais todas as entradas do mouse, o aplicativo deve chamar o [ReleaseCapture](/windows/desktop/api/winuser/nf-winuser-releasecapture) função para que outras janelas podem receber entrada do mouse.
 
 Enquanto a entrada do mouse é capturada, nenhuma mensagem WM_NCHITTEST ou WM_SETCURSOR é enviadas para a janela ativa.
 
@@ -11261,7 +11261,7 @@ static void PASCAL SetCaretPos(POINT point);
 
 ### <a name="parameters"></a>Parâmetros
 
-*ponto*<br/>
+*point*<br/>
 Especifica o novo x e y coordenadas (nas coordenadas de cliente) do cursor.
 
 ### <a name="remarks"></a>Comentários
@@ -11331,7 +11331,7 @@ void SetDlgItemInt(
 *nID*<br/>
 Especifica a ID de inteiro do controle a ser alterado.
 
-*Nvalor*<br/>
+*nValue*<br/>
 Especifica o valor inteiro usado para gerar o texto do item.
 
 *bSigned*<br/>
@@ -11852,10 +11852,10 @@ Especifica a nova posição do lado esquerdo da janela.
 *y*<br/>
 Especifica a nova posição na parte superior da janela.
 
-*CX*<br/>
+*cx*<br/>
 Especifica a nova largura da janela.
 
-*Cy*<br/>
+*cy*<br/>
 Especifica a nova altura da janela.
 
 *nFlags*<br/>
@@ -12006,7 +12006,7 @@ void ShowOwnedPopups(BOOL bShow = TRUE);
 
 ### <a name="parameters"></a>Parâmetros
 
-*bMostrar*<br/>
+*bShow*<br/>
 Especifica se as janelas pop-up devem ser mostrados ou ocultados. Se esse parâmetro for TRUE, todas as janelas pop-up ocultas são mostradas. Se esse parâmetro for FALSE, todas as janelas pop-up visíveis estão ocultos.
 
 ### <a name="example"></a>Exemplo
@@ -12034,7 +12034,7 @@ Especifica se a barra de rolagem é um controle ou parte da área não cliente d
 
 - SB_VERT Especifica que a janela é uma barra de rolagem vertical.
 
-*bMostrar*<br/>
+*bShow*<br/>
 Especifica se o Windows mostram ou oculta a barra de rolagem. Se esse parâmetro for TRUE, a barra de rolagem é mostrada; Caso contrário, a barra de rolagem está oculto.
 
 ### <a name="remarks"></a>Comentários
@@ -12341,7 +12341,7 @@ static CWnd* PASCAL WindowFromPoint(POINT point);
 
 ### <a name="parameters"></a>Parâmetros
 
-*ponto*<br/>
+*point*<br/>
 Especifica um [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objeto ou [APONTE](/windows/desktop/api/windef/ns-windef-tagpoint) estrutura de dados que define o ponto a ser verificado.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -12416,7 +12416,7 @@ BOOL RegisterTouchWindow(
 
 ### <a name="parameters"></a>Parâmetros
 
-*bRegistre-se participar*<br/>
+*bRegister*<br/>
 VERDADEIRO indica registro Windows touch suporte; FALSE caso contrário.
 
 *ulFlags*<br/>

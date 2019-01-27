@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CCmdTarget [MFC], OnFinalRelease
 - CCmdTarget [MFC], RestoreWaitCursor
 ms.assetid: 8883b132-2057-4ce0-a5f2-88979f8f2b13
-ms.openlocfilehash: 0415fb98cec6b1d92f6a5a43ff705f1b5a7cd348
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 4e93f167b9cb28a83c42220fa58b17d5c4845a75
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523813"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894283"
 ---
 # <a name="ccmdtarget-class"></a>Classe CCmdTarget
 
@@ -163,7 +163,7 @@ BOOL DoOleVerb(
 Identificador numérico do verbo.
 
 *lpMsg*<br/>
-Ponteiro para o [MSG](https://msdn.microsoft.com/library/windows/desktop/ms644958) estrutura que descreve o evento (por exemplo, um clique duplo) que invocou o verbo.
+Ponteiro para o [MSG](/windows/desktop/api/winuser/ns-winuser-msg) estrutura que descreve o evento (por exemplo, um clique duplo) que invocou o verbo.
 
 *hWndParent*<br/>
 Identificador da janela do documento que contém o objeto.
@@ -411,7 +411,7 @@ virtual BOOL IsInvokeAllowed(DISPID dispid);
 
 ### <a name="parameters"></a>Parâmetros
 
-*DISPID*<br/>
+*dispid*<br/>
 Uma ID de expedição.
 
 ### <a name="return-value"></a>Valor de retorno

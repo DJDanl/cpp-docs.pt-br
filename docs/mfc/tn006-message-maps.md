@@ -1,5 +1,5 @@
 ---
-title: 'TN006: mapas de mensagem'
+title: 'TN006: Mapas de mensagem'
 ms.date: 06/25/2018
 f1_keywords:
 - vc.messages.maps
@@ -19,14 +19,14 @@ helpviewer_keywords:
 - ON_COMMAND_EX macro [MFC]
 - message maps [MFC], Windows messaging
 ms.assetid: af4b6794-4b40-4f1e-ad41-603c3b7409bb
-ms.openlocfilehash: ab08476923f253d666e024d8944aec64ed0af8da
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 3536cb215da04fb7114853d3fa5d764585cbb58e
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693638"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894075"
 ---
-# <a name="tn006-message-maps"></a>TN006: mapas de mensagem
+# <a name="tn006-message-maps"></a>TN006: Mapas de mensagem
 
 Essa observação descreve o recurso de mapa de mensagem do MFC.
 
@@ -121,7 +121,7 @@ O intervalo de mensagens definidas pelo usuário que usam essa abordagem deve se
 
 ## <a name="registered-windows-messages"></a>Mensagens do Windows registrados
 
-O [RegisterWindowMessage](https://msdn.microsoft.com/library/windows/desktop/ms644947) função é usada para definir uma nova mensagem de janela que é garantido que seja exclusivo em todo o sistema. A macro ON_REGISTERED_MESSAGE é usada para lidar com essas mensagens. Essa macro aceita um nome de um *UINT quase* variável que contém a ID de mensagem do windows registrados. Por exemplo
+O [RegisterWindowMessage](/windows/desktop/api/winuser/nf-winuser-registerwindowmessagea) função é usada para definir uma nova mensagem de janela que é garantido que seja exclusivo em todo o sistema. A macro ON_REGISTERED_MESSAGE é usada para lidar com essas mensagens. Essa macro aceita um nome de um *UINT quase* variável que contém a ID de mensagem do windows registrados. Por exemplo
 
 ```cpp
 class CMyWnd : public CMyParentWndClass
@@ -213,7 +213,7 @@ Exemplos desses formulários:
     }
     ```
 
-Usuários avançados podem lidar com uma variedade de comandos por meio de um único manipulador de comandos: [ON_COMMAND_RANGE](reference/message-map-macros-mfc.md#on_command_range) ou ON_COMMAND_RANGE_EX. Consulte a documentação do produto para obter mais informações sobre essas macros.
+Os usuários avançados podem lidar com uma variedade de comandos por meio de um único manipulador de comandos: [ON_COMMAND_RANGE](reference/message-map-macros-mfc.md#on_command_range) ou ON_COMMAND_RANGE_EX. Consulte a documentação do produto para obter mais informações sobre essas macros.
 
 > [!NOTE]
 > ClassWizard dá suporte à criação de manipuladores ON_COMMAND e ON_UPDATE_COMMAND_UI, mas não oferece suporte a criação de manipuladores ON_COMMAND_EX ou ON_COMMAND_RANGE. No entanto, o Assistente de classe analisará e permitem que você procure todas as variantes de manipulador de comando de quatro.

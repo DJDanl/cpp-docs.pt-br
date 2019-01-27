@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows applications [C++], Win32
 - Windows Desktop applications [C++]
 - Windows API [C++]
-ms.openlocfilehash: da95b1dac2f058de67719b4754d2df6dbeb6f7f0
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 07da91ea092b4e7bee974b0387e72ea0cacaec8e
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694043"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893893"
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>Passo a passo: Criar um aplicativo tradicional de área de trabalho do Windows (C++)
 
@@ -107,7 +107,7 @@ Em seguida, você aprenderá a criar o código para um aplicativo de desktop do 
    );
    ```
 
-   Para obter informações sobre os parâmetros e o valor de retorno dessa função, consulte [ponto de entrada WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559).
+   Para obter informações sobre os parâmetros e o valor de retorno dessa função, consulte [ponto de entrada WinMain](/windows/desktop/api/winbase/nf-winbase-winmain).
 
    > [!NOTE]
    > Quais são todas essas palavras extras, como `CALLBACK`, ou `HINSTANCE`, ou `_In_`? A API do Windows tradicional usa typedefs e macros de pré-processador extensivamente para abstrair alguns dos detalhes de tipos e específicos da plataforma código, como convenções de chamada, **declspec** declarações e pragmas do compilador. No Visual Studio, você pode usar o IntelliSense [informações rápidas](/visualstudio/ide/using-intellisense#quick-info) recurso para ver o que definem essas typedefs e macros. Passe o mouse sobre a palavra de interesse, ou selecione-o e pressione **Ctrl**+**K**, **Ctrl**+**eu** para um pequena janela pop-up que contém a definição. Para obter mais informações, veja [Usando o IntelliSense](/visualstudio/ide/using-intellisense). Geralmente usam parâmetros e tipos de retorno *anotações de SAL* para ajudá-lo catch erros de programação. Para obter mais informações, consulte [usando as anotações de SAL para reduzir defeitos de código C/C++](/visualstudio/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects).
@@ -136,7 +136,7 @@ Em seguida, você aprenderá a criar o código para um aplicativo de desktop do 
 
 ### <a name="to-add-functionality-to-the-winmain-function"></a>Para adicionar funcionalidade à função WinMain
 
-1. No `WinMain` função, você preencher uma estrutura do tipo [WNDCLASSEX](https://msdn.microsoft.com/library/windows/desktop/ms633577). A estrutura contém informações sobre a janela, por exemplo, o ícone do aplicativo, a cor do plano de fundo da janela, o nome a ser exibido na barra de título e importante, um ponteiro de função para seu procedimento de janela. O exemplo a seguir mostra um típico `WNDCLASSEX` estrutura.
+1. No `WinMain` função, você preencher uma estrutura do tipo [WNDCLASSEX](/windows/desktop/api/winuser/ns-winuser-tagwndclassexa). A estrutura contém informações sobre a janela, por exemplo, o ícone do aplicativo, a cor do plano de fundo da janela, o nome a ser exibido na barra de título e importante, um ponteiro de função para seu procedimento de janela. O exemplo a seguir mostra um típico `WNDCLASSEX` estrutura.
 
    ```cpp
    WNDCLASSEX wcex;
@@ -155,7 +155,7 @@ Em seguida, você aprenderá a criar o código para um aplicativo de desktop do 
    wcex.hIconSm        = LoadIcon(wcex.hInstance, IDI_APPLICATION);
    ```
 
-   Para obter informações sobre os campos da estrutura acima, consulte [WNDCLASSEX](https://msdn.microsoft.com/library/windows/desktop/ms633577).
+   Para obter informações sobre os campos da estrutura acima, consulte [WNDCLASSEX](/windows/desktop/api/winuser/ns-winuser-tagwndclassexa).
 
 1. Registrar o `WNDCLASSEX` com Windows para que ele saiba sobre sua janela e como enviar mensagens para ela. Use o [RegisterClassEx](/windows/desktop/api/winuser/nf-winuser-registerclassexa) de função e passar a estrutura de classe de janela como um argumento. O `_T` macro é usada como usamos o `TCHAR` tipo.
 
@@ -237,7 +237,7 @@ Em seguida, você aprenderá a criar o código para um aplicativo de desktop do 
    return (int) msg.wParam;
    ```
 
-   Para obter mais informações sobre as estruturas e funções no loop de mensagem, consulte [MSG](https://msdn.microsoft.com/library/windows/desktop/ms644958), [GetMessage](/windows/desktop/api/winuser/nf-winuser-getmessage), [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage), e [DispatchMessage ](/windows/desktop/api/winuser/nf-winuser-dispatchmessage).
+   Para obter mais informações sobre as estruturas e funções no loop de mensagem, consulte [MSG](/windows/desktop/api/winuser/ns-winuser-msg), [GetMessage](/windows/desktop/api/winuser/nf-winuser-getmessage), [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage), e [DispatchMessage ](/windows/desktop/api/winuser/nf-winuser-dispatchmessage).
 
    Neste ponto, o `WinMain` função deve se parecer com o código a seguir.
 

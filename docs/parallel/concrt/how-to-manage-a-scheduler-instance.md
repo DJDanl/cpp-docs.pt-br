@@ -1,22 +1,22 @@
 ---
-title: Como gerenciar uma instância de agendador
+title: 'Como: Gerenciar uma instância do Agendador'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - managing a scheduler instance [Concurrency Runtime]
 - scheduler instances, managing [Concurrency Runtime]
 ms.assetid: 2cc804f0-5ff3-498b-97f1-a9f67a005448
-ms.openlocfilehash: 8c19eb801c7761b85580526e1ff8bed89112cc5e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d8e79f7c132abd8e43f661f4dc7c7bb758cb2a6d
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437811"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893984"
 ---
-# <a name="how-to-manage-a-scheduler-instance"></a>Como gerenciar uma instância de agendador
+# <a name="how-to-manage-a-scheduler-instance"></a>Como: Gerenciar uma instância do Agendador
 
 Instâncias de Agendador permitem que você associar políticas de agendamento específicas com vários tipos de cargas de trabalho. Este tópico contém dois exemplos básicos que mostram como criar e gerenciar uma instância do Agendador.
 
-Os exemplos criam agendadores que usam as políticas de agendador padrão. Para um exemplo que cria um agendador que usa uma política personalizada, consulte [como: especificar políticas de Agendador específicas](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md).
+Os exemplos criam agendadores que usam as políticas de agendador padrão. Para um exemplo que cria um agendador que usa uma política personalizada, consulte [como: Especificar políticas de Agendador específicas](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md).
 
 ### <a name="to-manage-a-scheduler-instance-in-your-application"></a>Para gerenciar uma instância do agendador no aplicativo
 
@@ -38,7 +38,7 @@ Os exemplos criam agendadores que usam as políticas de agendador padrão. Para 
 
 1. Passar o identificador para o evento para o [WaitForSingleObject](/windows/desktop/api/synchapi/nf-synchapi-waitforsingleobject) função esperar o Agendador desligar.
 
-1. Chame o [CloseHandle](https://msdn.microsoft.com/library/windows/desktop/ms724211) função para fechar o identificador para o objeto de evento.
+1. Chame o [CloseHandle](/windows/desktop/api/handleapi/nf-handleapi-closehandle) função para fechar o identificador para o objeto de evento.
 
 ## <a name="example"></a>Exemplo
 
@@ -78,5 +78,5 @@ Copie o código de exemplo e cole-o em um projeto do Visual Studio ou colá-lo e
 ## <a name="see-also"></a>Consulte também
 
 [Instâncias de agendador](../../parallel/concrt/scheduler-instances.md)<br/>
-[Como especificar políticas de agendador específicas](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md)
+[Como: Especificar políticas específicas do agendador](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md)
 

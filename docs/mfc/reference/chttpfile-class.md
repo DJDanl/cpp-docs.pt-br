@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CHttpFile [MFC], SendRequest
 - CHttpFile [MFC], SendRequestEx
 ms.assetid: 399e7c68-bbce-4374-8c55-206e9c7baac6
-ms.openlocfilehash: 1fa1b63ed045c176841565473476185bb15999e3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3ee92a6cb627cee701b9b98a8a32666a0877f62c
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50564445"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893646"
 ---
 # <a name="chttpfile-class"></a>Classe CHttpFile
 
@@ -182,7 +182,7 @@ Um ponteiro para um [CHttpConnection](../../mfc/reference/chttpconnection-class.
 
 Você nunca construir uma `CHttpFile` objeto diretamente; em vez disso, chame [CInternetSession::OpenURL](../../mfc/reference/cinternetsession-class.md#openurl) ou [CHttpConnection::OpenRequest](../../mfc/reference/chttpconnection-class.md#openrequest) em vez disso.
 
-O valor padrão para `dwContext` é enviado pelo MFC para o `CHttpFile` objeto o [CInternetSession](../../mfc/reference/cinternetsession-class.md) do objeto que criou o `CHttpFile` objeto. Quando você chama `CInternetSession::OpenURL` ou `CHttpConnection` para construir um `CHttpFile` do objeto, você pode substituir o padrão para definir o identificador de contexto para um valor de sua escolha. O identificador de contexto é retornado ao [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) para fornecer status no objeto com a qual ela é identificada. Consulte o artigo [primeiras etapas de Internet: WinInet](../../mfc/wininet-basics.md) para obter mais informações sobre o identificador de contexto.
+O valor padrão para `dwContext` é enviado pelo MFC para o `CHttpFile` objeto o [CInternetSession](../../mfc/reference/cinternetsession-class.md) do objeto que criou o `CHttpFile` objeto. Quando você chama `CInternetSession::OpenURL` ou `CHttpConnection` para construir um `CHttpFile` do objeto, você pode substituir o padrão para definir o identificador de contexto para um valor de sua escolha. O identificador de contexto é retornado ao [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) para fornecer status no objeto com a qual ela é identificada. Consulte o artigo [Internet primeiras etapas: O WinInet](../../mfc/wininet-basics.md) para obter mais informações sobre o identificador de contexto.
 
 ##  <a name="endrequest"></a>  CHttpFile::EndRequest
 
@@ -212,7 +212,7 @@ Diferente de zero se bem-sucedido; Caso contrário, 0. Se a chamada falhar, dete
 
 ### <a name="remarks"></a>Comentários
 
-O valor padrão para *dwContext* é enviado pelo MFC para o `CHttpFile` objeto o [CInternetSession](../../mfc/reference/cinternetsession-class.md) do objeto que criou o `CHttpFile` objeto. Quando você chama [CInternetSession::OpenURL](../../mfc/reference/cinternetsession-class.md#openurl) ou [CHttpConnection](../../mfc/reference/chttpconnection-class.md) para construir um `CHttpFile` do objeto, você pode substituir o padrão para definir o identificador de contexto para um valor de sua escolha. O identificador de contexto é retornado ao [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) para fornecer status no objeto com a qual ela é identificada. Consulte o artigo [primeiras etapas de Internet: WinInet](../../mfc/wininet-basics.md) para obter mais informações sobre o identificador de contexto.
+O valor padrão para *dwContext* é enviado pelo MFC para o `CHttpFile` objeto o [CInternetSession](../../mfc/reference/cinternetsession-class.md) do objeto que criou o `CHttpFile` objeto. Quando você chama [CInternetSession::OpenURL](../../mfc/reference/cinternetsession-class.md#openurl) ou [CHttpConnection](../../mfc/reference/chttpconnection-class.md) para construir um `CHttpFile` do objeto, você pode substituir o padrão para definir o identificador de contexto para um valor de sua escolha. O identificador de contexto é retornado ao [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) para fornecer status no objeto com a qual ela é identificada. Consulte o artigo [Internet primeiras etapas: O WinInet](../../mfc/wininet-basics.md) para obter mais informações sobre o identificador de contexto.
 
 ##  <a name="getfileurl"></a>  CHttpFile::GetFileURL
 
@@ -293,7 +293,7 @@ Uma combinação do atributo para consultar e os seguintes sinalizadores que esp
 
 - HTTP_QUERY_FLAG_REQUEST_HEADERS normalmente, o aplicativo consulta os cabeçalhos de resposta, mas um aplicativo também pode consultar cabeçalhos de solicitação usando esse sinalizador.
 
-- HTTP_QUERY_FLAG_SYSTEMTIME para os cabeçalhos cujo valor é uma cadeia de caracteres de data/hora, como "Last-Modified-Time," esse sinalizador retorna o valor do cabeçalho como um padrão do Win32 [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) estrutura que não exige que o aplicativo Analise os dados. Se você usar esse sinalizador, você talvez queira usar o `SYSTEMTIME` substituir da função.
+- HTTP_QUERY_FLAG_SYSTEMTIME para os cabeçalhos cujo valor é uma cadeia de caracteres de data/hora, como "Last-Modified-Time," esse sinalizador retorna o valor do cabeçalho como um padrão do Win32 [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) estrutura que não exige que o aplicativo Analise os dados. Se você usar esse sinalizador, você talvez queira usar o `SYSTEMTIME` substituir da função.
 
 - HTTP_QUERY_FLAG_NUMBER para os cabeçalhos cujo valor é um número, como o código de status, esse sinalizador retorna os dados como um número de 32 bits.
 
@@ -315,7 +315,7 @@ Uma referência para o [CString](../../atl-mfc-shared/reference/cstringt-class.m
 Um valor de índice. Ver *lpdwIndex*.
 
 *pSysTime*<br/>
-Um ponteiro para um Win32 [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) estrutura.
+Um ponteiro para um Win32 [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) estrutura.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -506,7 +506,7 @@ Essa função permite que seu aplicativo para enviar dados usando o [escrever](.
 
 Depois que o conteúdo é gravado no arquivo, chame [EndRequest](#endrequest) para encerrar a operação.
 
-O valor padrão para *dwContext* é enviado pelo MFC para o `CHttpFile` objeto o [CInternetSession](../../mfc/reference/cinternetsession-class.md) do objeto que criou o `CHttpFile` objeto. Quando você chama [CInternetSession::OpenURL](../../mfc/reference/cinternetsession-class.md#openurl) ou [CHttpConnection](../../mfc/reference/chttpconnection-class.md) para construir um `CHttpFile` do objeto, você pode substituir o padrão para definir o identificador de contexto para um valor de sua escolha. O identificador de contexto é retornado ao [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) para fornecer status no objeto com a qual ela é identificada. Consulte o artigo [primeiras etapas de Internet: WinInet](../../mfc/wininet-basics.md) para obter mais informações sobre o identificador de contexto.
+O valor padrão para *dwContext* é enviado pelo MFC para o `CHttpFile` objeto o [CInternetSession](../../mfc/reference/cinternetsession-class.md) do objeto que criou o `CHttpFile` objeto. Quando você chama [CInternetSession::OpenURL](../../mfc/reference/cinternetsession-class.md#openurl) ou [CHttpConnection](../../mfc/reference/chttpconnection-class.md) para construir um `CHttpFile` do objeto, você pode substituir o padrão para definir o identificador de contexto para um valor de sua escolha. O identificador de contexto é retornado ao [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) para fornecer status no objeto com a qual ela é identificada. Consulte o artigo [Internet primeiras etapas: O WinInet](../../mfc/wininet-basics.md) para obter mais informações sobre o identificador de contexto.
 
 ### <a name="example"></a>Exemplo
 
