@@ -1,24 +1,24 @@
 ---
 title: B. Stubs para funções da biblioteca em tempo de execução
-ms.date: 11/04/2016
+ms.date: 01/22/2019
 ms.assetid: fdfdabe0-f678-4551-80d5-827b62354427
-ms.openlocfilehash: 3b2d48155a3baf4d317d3114bb5ae5a8ed306bef
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1e8d439eefad005c673cfb6c4ea12399b8236fb5
+ms.sourcegitcommit: 382e247c0f1b4cb7c2dab837b8b6fdff24bff47a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50551444"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087256"
 ---
 # <a name="b-stubs-for-run-time-library-functions"></a>B. Stubs para funções da biblioteca em tempo de execução
 
 Esta seção fornece os stubs para as funções da biblioteca de tempo de execução definidas no OpenMP C e C++ API. Os stubs são fornecidos para habilitar a portabilidade para plataformas que não dão suporte a OpenMP C e C++ API. Nessas plataformas, OpenMP programas devem ser vinculados com uma biblioteca que contém essas funções de stub. As funções de stub assumem que as diretivas no programa OpenMP são ignoradas. Como tal, eles emularem semântica serial.
 
 > [!NOTE]
->  A variável de bloqueio que aparece nas funções de bloqueio deve ser acessada exclusivamente por meio dessas funções. Ele não deve ser inicializado ou caso contrário modificado no programa de usuário. Os usuários não devem fazer suposições sobre os mecanismos usados por implementações de OpenMP C e C++ para implementar bloqueios baseados no esquema usado pelas funções de stub.
+> A variável de bloqueio que aparece nas funções de bloqueio deve ser acessada exclusivamente por meio dessas funções. Ele não deve ser inicializado ou caso contrário modificado no programa de usuário. Os usuários não devem fazer suposições sobre os mecanismos usados por implementações de OpenMP C e C++ para implementar bloqueios baseados no esquema usado pelas funções de stub.
 
-### <a name="code"></a>Código
+## <a name="code"></a>Código
 
-```
+```cpp
 #include <stdio.h>
 #include <stdlib.h>
 #include "omp.h"

@@ -2,12 +2,12 @@
 title: 3. Funções da biblioteca em tempo de execução
 ms.date: 01/17/2019
 ms.assetid: b226e512-6822-4cbe-a2ca-74cc2bb7e880
-ms.openlocfilehash: 7d48338683037c06ca208bff32c5c2e9b546a9fe
-ms.sourcegitcommit: 774db6a005a85e2a1268ca34309b993792701819
+ms.openlocfilehash: 4e72d2d74bb26f8eeeb422881cabf92630cced43
+ms.sourcegitcommit: 382e247c0f1b4cb7c2dab837b8b6fdff24bff47a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55065016"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087308"
 ---
 # <a name="3-run-time-library-functions"></a>3. Funções da biblioteca em tempo de execução
 
@@ -49,7 +49,7 @@ O `omp_set_num_threads` função define o número padrão de threads a serem usa
 void omp_set_num_threads(int num_threads);
 ```
 
-O valor do parâmetro *num_threads* deve ser um inteiro positivo. Seu efeito depende se o ajuste dinâmico do número de threads está habilitado. Para um conjunto abrangente de regras sobre a interação entre o `omp_set_num_threads` função e o ajuste dinâmico de threads, consulte a seção 2.3.
+O valor do parâmetro *num_threads* deve ser um inteiro positivo. Seu efeito depende se o ajuste dinâmico do número de threads está habilitado. Para um conjunto abrangente de regras sobre a interação entre o `omp_set_num_threads` função e o ajuste dinâmico de threads, consulte [seção 2.3](2-directives.md#23-parallel-construct).
 
 Essa função tem os efeitos descritos acima, quando chamado a partir de uma parte do programa em que o `omp_in_parallel` função retorna zero. Se ele é chamado de uma parte do programa em que o `omp_in_parallel` função retorna um valor diferente de zero, o comportamento dessa função é indefinido.
 
@@ -60,7 +60,7 @@ Essa chamada tem precedência sobre o `OMP_NUM_THREADS` variável de ambiente. O
 - [omp_set_dynamic](#317-omp_set_dynamic-function) function
 - [omp_get_dynamic](#318-omp_get_dynamic-function) function
 - [OMP_NUM_THREADS](4-environment-variables.md#42-omp_num_threads) variável de ambiente
-- [num_threads](2-3-parallel-construct.md) cláusula
+- [num_threads](2-directives.md#23-parallel-construct) cláusula
 
 ### <a name="312-ompgetnumthreads-function"></a>3.1.2 função omp_get_num_threads
 
@@ -78,8 +78,8 @@ Se o número de threads não foi explicitamente definido pelo usuário, o padrã
 #### <a name="cross-references"></a>Referências cruzadas
 
 - [OMP_NUM_THREADS](4-environment-variables.md#42-omp_num_threads)
-- [num_threads](2-3-parallel-construct.md)
-- [parallel](2-3-parallel-construct.md)
+- [num_threads](2-directives.md#23-parallel-construct)
+- [parallel](2-directives.md#23-parallel-construct)
 
 ### <a name="313-ompgetmaxthreads-function"></a>3.1.3 função omp_get_max_threads
 
@@ -107,7 +107,7 @@ O `omp_get_max_threads` o valor de retorno da função pode ser usado para aloca
 - [omp_get_num_threads](#312-omp_get_num_threads-function)
 - [omp_set_num_threads](#311-omp_set_num_threads-function)
 - [omp_set_dynamic](#317-omp_set_dynamic-function)
-- [num_threads](2-3-parallel-construct.md)
+- [num_threads](2-directives.md#23-parallel-construct)
 
 ### <a name="314-ompgetthreadnum-function"></a>3.1.4 função omp_get_thread_num
 
