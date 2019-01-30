@@ -2,12 +2,12 @@
 title: Novidades do Visual C++ de 2003 até 2015
 ms.date: 11/04/2016
 ms.assetid: c4afde6f-3d75-40bf-986f-be57e3818e26
-ms.openlocfilehash: 6d79406e07b8839e196f15d9bc3aed96cbc3dca8
-ms.sourcegitcommit: 31a2a9845f5e1d35ab054906d8cdc6582a5220bd
+ms.openlocfilehash: bc0092aeb8910f960befc174c1f71ce05c4eb131
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51520170"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894348"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Novidades do Visual C++ de 2003 até 2015
 
@@ -648,7 +648,7 @@ Embora essas diferenças podem afetar seu código-fonte ou outros artefatos de b
     error C2668: 'function' : ambiguous call to overloaded function.
    ```
 
-   Exemplo 1: chamada ambígua a função sobrecarregada (antes)
+   Exemplo 1: chamada ambígua à função sobrecarregada (antes)
 
    ```cpp
     // In previous versions of the compiler, code written in this way would unambiguously call f(int, Args...)
@@ -1797,7 +1797,7 @@ Um trígrafo consiste em dois pontos de interrogação consecutivos (??) seguido
 
 **Nova opção de CLR (Common Language Runtime) /clr:nostdlib.** Uma nova opção foi adicionada para `/clr` (Compilação do Common Language Runtime). Será emitido um erro de compilação se versões diferentes da mesma biblioteca forem incluídas. A nova opção permite que você exclua as bibliotecas CLR padrão, para que seu programa possa usar uma versão especificada.
 
-**Nova diretiva de pragma detect_mistmatch.** A diretiva de pragma detect_mismatch permite que você coloque uma marca em seus arquivos que seja comparada a outras com o mesmo nome. Se houver diversos valores para o mesmo nome, o vinculador emitirá um erro.
+**Nova diretiva pragma detect_mismatch.** A diretiva de pragma detect_mismatch permite que você coloque uma marca em seus arquivos que seja comparada a outras com o mesmo nome. Se houver diversos valores para o mesmo nome, o vinculador emitirá um erro.
 
 **Intrínsecos de XOP, FMA4 e LWP.** Novas funções intrínsecas foram adicionadas para dar suporte a intrínsecos de XOP adicionados para Visual Studio 2010 SP1, intrínsecos de FMA4 adicionados para Visual Studio 2010 SP1 e intrínsecos de LWP adicionados para tecnologias de processador do Visual Studio 2010 SP1. Use __cpuid, __cpuidex para determinar quais tecnologias de processador são compatíveis com um computador específico.
 
@@ -1836,7 +1836,7 @@ Um trígrafo consiste em dois pontos de interrogação consecutivos (??) seguido
 
 **Reconhecimento de alto DPI.** Por padrão, os aplicativos MFC agora reconhecem DPI alto. Se um aplicativo tiver alto DPI (pontos altos por polegada), o sistema operacional poderá dimensionar janelas, texto e outros elementos de interface do usuário para a resolução da tela atual. Isso significa que uma imagem dimensionada tem mais probabilidade de ser posicionada corretamente e não recortada ou pixelada.
 
-**Gerenciador de reinicialização.** O Gerenciador de reinicialização salva documentos automaticamente e reinicia o aplicativo se ele fecha ou reinicia inesperadamente. Por exemplo, você pode usar o gerenciador de reinicialização para iniciar o aplicativo depois que ele é fechado por uma atualização automática. Para obter mais informações de como configurar seu aplicativo para usar o gerenciador de reinicialização, confira **Como adicionar suporte ao gerenciador de reinicialização**.
+**Gerenciador de reinicialização.** O Gerenciador de reinicialização salva documentos automaticamente e reinicia o aplicativo se ele fecha ou reinicia inesperadamente. Por exemplo, você pode usar o gerenciador de reinicialização para iniciar o aplicativo depois que ele é fechado por uma atualização automática. Para obter mais informações sobre como configurar seu aplicativo para usar o gerenciador de reinicialização, confira **Como adicionar suporte ao gerenciador de reinicialização**.
 
 **CTaskDialog.** A classe `CTaskDialog` pode ser usada em vez da caixa de mensagens `AfxMessageBox` padrão. A classe `CTaskDialog` exibe e reúne mais informações do que a caixa de mensagens padrão.
 
@@ -1854,7 +1854,7 @@ A maioria dos avisos `/analyze` (Análise de Código da Empresa) foi removida da
 
 #### <a name="animation-and-d2d-support"></a>Animação e suporte D2D
 
-O MFC agora é compatível com a animação e elementos gráficos do Direct2D. A biblioteca do MFC tem várias novas classes MFC e funções para dar suporte a essa funcionalidade. Também há dois novos passo a passo que mostram como adicionar um objeto D2D e um objeto de animação a um projeto. Essas instruções são **Passo a passo: adicionando um objeto D2D a um projeto MFC** e **Passo a passo: adicionando animação a um projeto MFC**.
+O MFC agora é compatível com a animação e elementos gráficos do Direct2D. A biblioteca do MFC tem várias novas classes MFC e funções para dar suporte a essa funcionalidade. Também há dois novos passo a passo que mostram como adicionar um objeto D2D e um objeto de animação a um projeto. Estes passo a passos são **Passo a passo: adicionando um objeto D2D a um projeto MFC** e **Passo a passo: adicionando animação a um projeto MFC**.
 
 ### <a name="ide"></a>IDE
 
@@ -2197,7 +2197,7 @@ O compilador tem alterações significativas nesta versão.
 
 - Informações sobre como executar extensões gerenciadas de aplicativo C++ compilado com o compilador da versão atual em uma versão anterior do tempo de execução.
 - Perguntas frequentes sobre extensões gerenciadas para C++.
-- Foi adicionado um passo a passo que mostra como portar um aplicativo nativo, existente, para usar extensões gerenciadas para C++: passo a passo: Portando um aplicativo C++ nativo existente para interoperar com componentes do .NET Framework.
+- Foi adicionado um passo a passo que mostra como portar um aplicativo nativo existente para usar as Managed Extensions for C++: Passo a passo: portando um aplicativo C++ nativo existente para interoperar com componentes do .NET Framework.
 - Agora você pode criar um delegado em um método de um tipo de valor.
 - Conformidade do compilador com o padrão do C++ foi aprimorada significativamente para o Visual C++ .NET 2003.
 - A opção do compilador `/arch` foi adicionada.
