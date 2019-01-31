@@ -8,27 +8,65 @@ helpviewer_keywords:
 - controls [C++], selecting
 - size, controls
 - controls [C++], dominant
+- controls [C++], removing from groups
+- Dialog Editor [C++], dominant control
 ms.assetid: 27f05450-4550-4229-9f4c-2c9e06365596
-ms.openlocfilehash: ccef63ae6388f376c4be96a34f2857fcedde0ea9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.author: Michael.Blome
+ms.topic: tutorial
+ms.service: cpp
+author: mikeblome
+ms.openlocfilehash: 008c99ae4b2cba5ff8f8b9ab069bb1b8085b7524
+ms.sourcegitcommit: b488462a6e035131121e6f32d8f3b108cc798b5e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50637093"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55293631"
 ---
 # <a name="selecting-controls"></a>Selecionando controles
 
-Selecione controles para tamanho, alinhar, mover, copiar, ou excluí-los e, em seguida, executar a operação desejada. Na maioria dos casos, você precisa selecionar mais de um controle para usar as ferramentas de dimensionamento e o alinhamento a [barra de ferramentas do Editor de caixa de diálogo](../windows/showing-or-hiding-the-dialog-editor-toolbar.md).
+Selecione controles para tamanho, alinhar, mover, copiar, ou excluí-los e, em seguida, concluir a operação desejada. Na maioria dos casos, você precisa selecionar mais de um controle para usar as ferramentas de dimensionamento e o alinhamento a [barra de ferramentas do Editor de caixa de diálogo](../windows/showing-or-hiding-the-dialog-editor-toolbar.md).
 
-Quando um controle for selecionado, ele tem uma borda sombreada em torno dele com sólida (ativa) ou vazios (inativo) "alças de dimensionamento" pequenos quadrados que aparecem na borda de seleção. Quando vários controles estiverem selecionados, o controle dominante tem alças de dimensionamento sólida; todos os outros controles selecionados tem alças de dimensionamento vazado.
+Quando um controle for selecionado, ele tem uma borda sombreada em torno dele com sólida (ativa) ou vazios (inativo) "alças de dimensionamento" pequenos quadrados que aparecem na borda de seleção. Quando vários controles estiverem selecionados, o controle dominante tem alças de dimensionamento sólida e todos os outros controles selecionados tem alças de dimensionamento vazado.
 
 Quando você estiver dimensionando ou alinhar vários controles, o **caixa de diálogo** editor usa o "controle dominante" para determinar como os outros controles são dimensionados ou alinhados. Por padrão, o controle dominante é o primeiro controle selecionado.
 
-- [Selecionando vários controles](../windows/selecting-multiple-controls.md)
-
-- [Especificando o controle dominante](../windows/specifying-the-dominant-control.md)
-
 Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) na *guia do desenvolvedor do .NET Framework*. Para obter informações sobre como adicionar manualmente os arquivos de recursos a projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso a propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e Localizando aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).
+
+## <a name="to-select-multiple-controls"></a>Para selecionar vários controles
+
+1. No [janela caixa de ferramentas](/visualstudio/ide/reference/toolbox), selecione o **ponteiro** ferramenta.
+
+1. Arraste o ponteiro para desenhar uma caixa de seleção ao redor dos controles que você deseja selecionar na caixa de diálogo.
+
+   Quando você soltar o botão do mouse, todos os controles internos e interseção a caixa de seleção estiver marcada.
+
+   \- ou -
+
+   Mantenha pressionada a **Shift** da chave e selecione os controles que você deseja incluir na seleção.
+
+   \- ou -
+
+   Mantenha pressionada a **Ctrl** da chave e selecione os controles que você deseja incluir na seleção.
+
+## <a name="to-remove-a-control-from-a-group-of-selected-controls-or-to-add-a-control-to-a-group-of-selected-controls"></a>Para remover um controle de um grupo de controles selecionados ou para adicionar um controle a um grupo de controles selecionados
+
+1. Com um grupo de controles selecionados, mantenha pressionada a **Shift** da chave e selecione o controle que você deseja remover ou adicionar a seleção existente.
+
+   > [!NOTE]
+   > Manter pressionada a **Ctrl** chave e selecionando um controle dentro de uma seleção farão com que controlam o controle dominante nessa seleção.
+
+## <a name="to-specify-the-dominant-control"></a>Para especificar o controle dominante
+
+1. Mantenha pressionada a **Ctrl** da chave e clique no controle que você deseja usar para influenciar o tamanho ou local de outros controles *primeiro*.
+
+> [!NOTE]
+> As alças de dimensionamento do controle dominante são sólidas, enquanto as alças dos controles subordinados são vazadas. Todos os ainda mais o redimensionamento ou alinhamento baseia-se no controle dominante.
+
+## <a name="to-change-the-dominant-control"></a>Para alterar o controle dominante
+
+1. Desmarque a seleção atual clicando fora de todos os controles atualmente selecionados.
+
+1. Repita o procedimento anterior, selecionar um controle diferente pela primeira vez.
 
 ## <a name="requirements"></a>Requisitos
 
