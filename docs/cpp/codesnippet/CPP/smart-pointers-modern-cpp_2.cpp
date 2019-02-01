@@ -8,10 +8,10 @@ public:
 void ProcessaObjetoGrande(const ObjetoGrande& og){}
 void PonteiroInteligenteDemo()
 {    
-    // Cria o objeto e o passo ao ponteiro inteligente.
+    // Cria o objeto e o passo ao ponteiro inteligente
     std::unique_ptr<ObjetoGrande> pGrande(new ObjetoGrande());
 
-    //Chama um método no objeto.
+    //Chama um método no objeto
     pGrande->FacaAlgo();
 
     // Passa uma referência para um método.
