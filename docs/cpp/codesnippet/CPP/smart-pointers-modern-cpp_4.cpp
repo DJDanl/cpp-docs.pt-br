@@ -1,11 +1,11 @@
-void SmartPointerDemo4()
+void PonteiroInteligenteDemo4()
 {
-    // Create the object and pass it to a smart pointer
-    std::unique_ptr<LargeObject> pLarge(new LargeObject());
+    // Cria o objeto e o passo ao ponteiro inteligente
+    std::unique_ptr<ObjetoGrande> pGrande(new ObjetoGrande());
 
-    //Call a method on the object
-    pLarge->DoSomething();
+    //Chama um método no objeto
+    pGrande->FacaAlgo();
 
-    // Pass raw pointer to a legacy API
-    LegacyLargeObjectFunction(pLarge.get());    
+    // Passar ponteiro bruto para uma API legada
+    FuncaoLegadaObjetoGrande(pGrande.get());
 }
