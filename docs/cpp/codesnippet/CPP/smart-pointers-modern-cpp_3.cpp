@@ -1,14 +1,14 @@
-void SmartPointerDemo2()
+void PonteiroInteligenteDemo2()
 {
-    // Create the object and pass it to a smart pointer
-    std::unique_ptr<LargeObject> pLarge(new LargeObject());
+    // Cria um objeto e o passa a um ponteiro inteligent
+    std::unique_ptr<ObjetoGrand> pGrande(new LargeObject());
 
-    //Call a method on the object
-    pLarge->DoSomething();
+    //Chama um método no objeto
+    pGrande->FacaAlgo();
 
-    // Free the memory before we exit function block.
-    pLarge.reset();
+    // Libera a memória antes de sairmos do bloco da função
+    pGrade.reset();
 
-    // Do some other work...
+    // Faça alguma outra coisa...
 
 }
