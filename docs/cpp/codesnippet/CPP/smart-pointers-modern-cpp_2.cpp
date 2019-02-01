@@ -6,7 +6,7 @@ public:
 };
 
 void ProcessaObjetoGrande(const ObjetoGrande& og){}
-void PonteiroInteligentDemo()
+void PonteiroInteligenteDemo()
 {    
     // Cria o objeto e o passo ao ponteiro inteligente.
     std::unique_ptr<ObjetoGrande> pGrande(new ObjetoGrande());
