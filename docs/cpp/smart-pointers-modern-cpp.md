@@ -76,7 +76,7 @@ Use esses ponteiros inteligentes como uma primeira opção para encapsular ponte
 - `weak_ptr`<br/>
     Ponteiro inteligente de casos especiais para uso em conjunto com `shared_ptr`. Um `weak_ptr` fornece acesso a um objeto pertencente a uma ou mais instâncias de `shared_ptr`, mas não participa da contagem de referência. Use quando você quiser observar um objeto, mas sem exigir que ele permaneça ativo. Necessário em alguns casos para interromper referências circulares entre instâncias `shared_ptr`. Arquivo de cabeçalho: `<memory>`. Para obter mais informações, confira [Como: Criar e usar instâncias weak_ptr](../cpp/how-to-create-and-use-weak-ptr-instances.md) e [classe weak_ptr](../standard-library/weak-ptr-class.md).
 
-### <a name="smart-pointers-for-com-objects-classic-windows-programming"></a>&gt;Ponteiros inteligentes para objetos COM (programação clássica do Windows)&lt;
+### <a name="smart-pointers-for-com-objects-classic-windows-programming"></a>Ponteiros inteligentes para objetos COM (programação clássica do Windows)
 
 Ao trabalhar com objetos COM, coloque os ponteiros de interface em um tipo de ponteiro inteligente apropriado. A 
 Active Template Library(ATL) define vários ponteiros inteligentes para várias finalidades. Você também pode usar o tipo de ponteiro inteligente `_com_ptr_t`, que o compilador usa ao criar classes wrapper dos arquivos .tlb. É a melhor opção quando você não quer incluir os arquivos de cabeçalho da ATL.
@@ -96,7 +96,7 @@ Ponteiro inteligente para as interfaces que são obtidas da tabela de interface 
 [Classe _com_ptr_t](../cpp/com-ptr-t-class.md)<br/>
 É semelhante a `CComQIPtr` em funcionalidade, mas não depende de cabeçalhos da ATL.
 
-### <a name="atl-smart-pointers-for-poco-objects"></a>&gt;Ponteiros inteligentes da ATL para objetos POCO&lt;
+### <a name="atl-smart-pointers-for-poco-objects"></a>Ponteiros inteligentes da ATL para objetos POCO
 
 Além de ponteiros inteligentes para objetos COM, a ATL também define ponteiros inteligentes e coleções de ponteiros inteligentes, para objetos C++ simples. Na programação clássica do Windows, esses tipos são alternativas úteis para as coleções de biblioteca padrão C++, especialmente quando a portabilidade do código não é necessária ou quando você não deseja combinar os modelos de programação da STL(biblioteca padrão do C++) e ATL.
 
