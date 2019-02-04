@@ -1,10 +1,11 @@
 ---
-title: _mbclen, mblen, _mblen_l
-ms.date: 11/04/2016
+title: _mbclen, mblen, _mblen_l, _mbclen_l
+ms.date: 01/22/2019
 apiname:
 - _mbclen
 - mblen
 - _mblen_l
+- _mbclen_l
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,6 +24,7 @@ f1_keywords:
 - mblen
 - ftclen
 - _mbclen
+- _mbclen_l
 - tclen
 - _ftclen
 - _tclen
@@ -33,17 +35,18 @@ helpviewer_keywords:
 - _tclen function
 - mblen_l function
 - _mbclen function
+- _mbclen_l function
 - mbclen function
 - mblen function
 ms.assetid: d5eb92a0-b7a3-464a-aaf7-9890a8e3ed70
-ms.openlocfilehash: dddf7d3a1705460d2c8d42cc1b36230d7bdaf942
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b7888b0b8c87a632dcbb63f54ade11080c7a309a
+ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50434380"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55702954"
 ---
-# <a name="mbclen-mblen-mblenl"></a>_mbclen, mblen, _mblen_l
+# <a name="mbclen-mblen-mblenl-mbclenl"></a>_mbclen, mblen, _mblen_l, _mbclen_l
 
 Obtém o comprimento e determina a validade de um caractere multibyte.
 
@@ -55,6 +58,10 @@ Obtém o comprimento e determina a validade de um caractere multibyte.
 ```C
 size_t _mbclen(
    const unsigned char *c
+);
+size_t _mbclen_l(
+   unsigned char const* c,
+   _locale_t locale
 );
 int mblen(
    const char *mbstr,
@@ -83,21 +90,21 @@ Localidade a usar.
 
 ## <a name="return-value"></a>Valor de retorno
 
-**mbclen** retorna 1 ou 2, dependendo do caractere multibyte *c* é 1 ou 2 bytes. Nenhum erro é retornado para **mbclen**. Se *mbstr* não está **nulo**, **mblen** retorna o tamanho, em bytes, do caractere multibyte. Se *mbstr* é **nulo** ou apontar para o caractere nulo de caractere largo **mblen** retornará 0. Se o objeto que *mbstr* aponta não formar um caractere multibyte válido dentro dos primeiros *contagem* caracteres **mblen** retornará -1.
+**mbclen** retorna 1 ou 2, dependendo do caractere multibyte *c* é 1 ou 2 bytes. Nenhum erro é retornado para **mbclen**. Se *mbstr* não está **nulo**, **mblen** retorna o tamanho, em bytes, do caractere multibyte. Se *mbstr* é **nulo** ou apontar para o caractere nulo de caractere largo **mblen** retornará 0. Quando o objeto que *mbstr* aponta não formar um caractere multibyte válido dentro dos primeiros *contagem* caracteres **mblen** retornará -1.
 
 ## <a name="remarks"></a>Comentários
 
-O **mbclen** função retorna o tamanho, em bytes, do caractere multibyte *c*. Se *c* não apontar para o byte inicial de um caractere multibyte conforme determinado por uma chamada implícita para **ismbblead**, o resultado da **mbclen** é imprevisível.
+O **mbclen** função retorna o tamanho, em bytes, do caractere multibyte *c*. Se *c* não aponta para o byte inicial de um caractere multibyte conforme determinado por uma chamada implícita para **ismbblead**, o resultado da **mbclen** é imprevisível.
 
 **mblen** retorna o comprimento em bytes do *mbstr* se ele for um caractere multibyte válido e determina a validade de caracteres multibyte associada com a página de código. **mblen** examina *contagem* ou menos bytes contidos em *mbstr*, mas não mais de **MB_CUR_MAX** bytes.
 
-O valor de saída é afetado pela configuração da categoria **LC_CTYPE** da localidade. Consulte [setlocale](setlocale-wsetlocale.md) para obter mais informações. As versões dessas funções sem o sufixo **_l** usam a localidade atual desse comportamento dependente da localidade. As versões com o sufixo **_l** são idênticas, exceto por usarem o parâmetro de localidade passado em seu lugar. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+O valor de saída é afetado pela **LC_CTYPE** configuração da categoria da localidade; consulte [setlocale](setlocale-wsetlocale.md) para obter mais informações. As versões dessas funções sem o **l** sufixo usam a localidade atual desse comportamento dependente da localidade. O **l** com sufixo versões se comportam da mesma, mas usam o parâmetro de localidade passado em seu lugar. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
 |Rotina Tchar.h|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**tclen**|É mapeado para um macro ou uma função embutida|**_mbclen**|É mapeado para um macro ou uma função embutida|
+|**_tclen**|É mapeado para um macro ou uma função embutida|**_mbclen**|É mapeado para um macro ou uma função embutida|
 
 ## <a name="requirements"></a>Requisitos
 

@@ -32,12 +32,12 @@ helpviewer_keywords:
 - files [C++], opening
 - fopen function
 ms.assetid: e868993f-738c-4920-b5e4-d8f2f41f933d
-ms.openlocfilehash: fb5f78411521dcbaddefda6c621b7fe44ce91736
-ms.sourcegitcommit: cce52b2232b94ce8fd8135155b86e2d38a4e4562
+ms.openlocfilehash: 9c7a7fed8eabc38f1a0a67587d495e75ba8fa3d8
+ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54031285"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55702902"
 ---
 # <a name="fopen-wfopen"></a>fopen, _wfopen
 
@@ -82,7 +82,7 @@ Sempre verifique o valor retornado para ver se o ponteiro é NULL antes de reali
 
 **fopen** dá suporte a fluxos de arquivo Unicode. Para abrir um arquivo Unicode, passe uma **ccs** sinalizador que especifica a codificação desejada para **fopen**, da seguinte maneira.
 
-> **ARQUIVO *fp = fopen ("NewFile", "rt + ccs =**_codificação_**");**
+> **FILE \*fp = fopen("newfile.txt", "rt+, ccs=**_encoding_**");**
 
 Valores de permitidos *codificação* são **UNICODE**, **UTF-8**, e **UTF-16LE**.
 
@@ -111,7 +111,7 @@ Se *modo* é **", ccs =**_codificação_**"**, **fopen** primeiro tenta abrir o 
 
 |Rotina TCHAR.H|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**tfopen**|**fopen**|**fopen**|**_wfopen**|
+|**_tfopen**|**fopen**|**fopen**|**_wfopen**|
 
 A cadeia de caracteres *modo* Especifica o tipo de acesso solicitado para o arquivo, da seguinte maneira.
 
@@ -156,18 +156,18 @@ As opções a seguir podem ser anexadas à *modo* para especificar comportamento
 | **R** | Especifica que o cache é otimizado para acesso aleatório do disco, mas não se restringe a isso. |
 | **T** | Especifica um arquivo como temporário. Se possível, ele não é liberado no disco. |
 | **D** | Especifica um arquivo como temporário. É excluído quando o último ponteiro de arquivo é fechado. |
-| **CCS =**_codificação_ | Especifica o caractere codificado definido para usar (um dos **UTF-8**, **UTF-16LE**, ou **UNICODE**) para esse arquivo. Deixe não especificado se desejar codificação ANSI. |
+| **ccs=**_encoding_ | Especifica o caractere codificado definido para usar (um dos **UTF-8**, **UTF-16LE**, ou **UNICODE**) para esse arquivo. Deixe não especificado se desejar codificação ANSI. |
 
 Caracteres válidos para o *modo* cadeia de caracteres que é usada na **fopen** e **fdopen** correspondem às *oflag* argumentos que são usados no [Open](open-wopen.md) e [sopen](sopen-wsopen.md), da seguinte maneira.
 
 |Caracteres em *modo* cadeia de caracteres|Equivalente *oflag* valor para \_abrir /\_sopen|
 |-------------------------------|----------------------------------------------------|
 |**a**|**\_U\_WRONLY** &#124;  **\_u\_APPEND** (geralmente  **\_s\_WRONLY** &#124;  **\_s\_CRI** &#124;  **\_s\_APPEND**)|
-|**+**|**\_U\_RDWR** &#124;  **\_u\_APPEND** (geralmente  **\_s\_RDWR** &#124;  **\_ U\_APPEND** &#124;  **\_u\_CRI** )|
+|**a+**|**\_U\_RDWR** &#124;  **\_u\_APPEND** (geralmente  **\_s\_RDWR** &#124;  **\_ U\_APPEND** &#124;  **\_u\_CRI** )|
 |**r**|**\_O\_RDONLY**|
-|**r +**|**\_O\_RDWR**|
+|**r+**|**\_O\_RDWR**|
 |**w**|**\_U\_WRONLY** (geralmente  **\_s\_WRONLY** &#124;  **\_s\_CRI** &#124;  **\_s\_TRUNC**)|
-|**w +**|**\_U\_RDWR** (geralmente  **\_s\_RDWR** &#124;  **\_s\_CRI** &#124;  **\_ U\_TRUNC**)|
+|**w+**|**\_U\_RDWR** (geralmente  **\_s\_RDWR** &#124;  **\_s\_CRI** &#124;  **\_ U\_TRUNC**)|
 |**b**|**\_O\_BINARY**|
 |**t**|**\_O\_TEXT**|
 |**c**|Nenhum|
@@ -175,10 +175,10 @@ Caracteres válidos para o *modo* cadeia de caracteres que é usada na **fopen**
 |**S**|**\_O\_SEQUENCIAL**|
 |**R**|**\_O\_RANDOM**|
 |**T**|**\_O\_SHORTLIVED**|
-|**D**|**\_O\_TEMPORÁRIO**|
-|**CCS = UNICODE**|**\_O\_WTEXT**|
-|**CCS = UTF-8**|**\_O\_UTF8**|
-|**CCS = UTF-16LE**|**\_O\_UTF16**|
+|**D**|**\_O\_TEMPORARY**|
+|**ccs=UNICODE**|**\_O\_WTEXT**|
+|**ccs=UTF-8**|**\_O\_UTF8**|
+|**ccs=UTF-16LE**|**\_O\_UTF16**|
 
 Se você estiver usando **rb** modo, você não precisa portar seu código e se você pretende ler a maior parte de um arquivo grande ou não estiver preocupado sobre o desempenho da rede, você também pode considerar se usar memória arquivos Win32 mapeados como uma opção.
 

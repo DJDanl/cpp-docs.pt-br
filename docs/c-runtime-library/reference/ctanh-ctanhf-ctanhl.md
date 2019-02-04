@@ -3,8 +3,8 @@ title: ctanh, ctanhf, ctanhl
 ms.date: 11/04/2016
 apiname:
 - ctanh
-- ctahf
-- ctahl
+- ctanhf
+- ctanhl
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -30,12 +30,12 @@ helpviewer_keywords:
 - ctanhl function
 - ctanhf function
 ms.assetid: 807f2cd1-8740-4988-afff-5911c346385b
-ms.openlocfilehash: e390aceaad2ee82e1fe2a865d3903f5062f52e9d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f63329e45fdcd3a26d613f73cd911fdf6fb10401
+ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50470547"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55702681"
 ---
 # <a name="ctanh-ctanhf-ctanhl"></a>ctanh, ctanhf, ctanhl
 
@@ -83,7 +83,7 @@ Como C++ permite sobrecargas, é possível chamar sobrecargas de **ctanh** que u
 
 |Rotina|Cabeçalho C|Cabeçalho C++|
 |-------------|--------------|------------------|
-|**ctanh**, **ctanhf**, **ctanhl**|\<complex.h>|\<ccomplex>|
+|**ctanh**,               **ctanhf**, **ctanhl**|\<complex.h>|\<ccomplex>|
 
 Para obter informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 

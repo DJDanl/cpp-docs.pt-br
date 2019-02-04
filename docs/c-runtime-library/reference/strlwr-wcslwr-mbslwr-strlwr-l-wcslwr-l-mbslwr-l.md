@@ -20,6 +20,7 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-string-l1-1-0.dll
 apitype: DLLExport
 f1_keywords:
 - _strlwr
@@ -55,12 +56,12 @@ helpviewer_keywords:
 - strings [C++], converting case
 - _mbslwr_l function
 ms.assetid: d279181d-2e7d-401f-ab44-6e7c2786a046
-ms.openlocfilehash: a442afd0ede8d9c6e892f50c12153b22f80733b0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4b4d02c7176c779703e2025cd2ab5f6fa9c3b1db
+ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505684"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55703019"
 ---
 # <a name="strlwr-wcslwr-mbslwr-strlwrl-wcslwrl-mbslwrl"></a>_strlwr, _wcslwr, _mbslwr, _strlwr_l, _wcslwr_l, _mbslwr_l
 
@@ -148,16 +149,16 @@ No C++, essas funções têm sobrecargas de modelo que invocam os equivalentes m
 
 |Rotina TCHAR.H|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**tcslwr**|**_strlwr**|**_mbslwr**|**_wcslwr**|
-|**tcslwr_l**|**_strlwr_l**|**_mbslwr_l**|**_wcslwr_l**|
+|**_tcslwr**|**_strlwr**|**_mbslwr**|**_wcslwr**|
+|**_tcslwr_l**|**_strlwr_l**|**_mbslwr_l**|**_wcslwr_l**|
 
 ## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|
-|**strlwr**, **strlwr_l**|\<string.h>|
-|**wcslwr**, **wcslwr_l**|\<string.h> ou \<wchar.h>|
-|**mbslwr**, **mbslwr_l**|\<mbstring.h>|
+|**_strlwr**, **_strlwr_l**|\<string.h>|
+|**_wcslwr**, **_wcslwr_l**|\<string.h> ou \<wchar.h>|
+|**_mbslwr**, **_mbslwr_l**|\<mbstring.h>|
 
 Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
