@@ -12,6 +12,7 @@ apilocation:
 - msvcr110_clr0400.dll
 - msvcrt.dll
 - msvcr100.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
 apitype: DLLExport
 f1_keywords:
 - _getts
@@ -27,12 +28,12 @@ helpviewer_keywords:
 - gets function
 - standard input, reading from
 ms.assetid: 1ec2dd4b-f801-48ea-97c2-892590f16024
-ms.openlocfilehash: c0133832142f49cfe3674cf651173f1c30dfc0cb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 523a295e088fe692eb9abd8dcca6b3919d432c4e
+ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50662833"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55702733"
 ---
 # <a name="gets-getws"></a>gets, _getws
 
@@ -68,7 +69,7 @@ wchar_t *_getws(
 *buffer*<br/>
 Local de armazenamento para a cadeia de caracteres de entrada.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor de retorno
 
 Retorna o argumento se for bem-sucedido. Um ponteiro **NULL** indica uma condição de erro ou de fim do arquivo. Use [ferror](../c-runtime-library/reference/ferror.md) ou [feof](../c-runtime-library/reference/feof.md) para determinar qual das condições ocorreu. Se `buffer` for **NULL**, essas funções invocarão o manipulador de um parâmetro inválido, conforme descrito em [Validação de parâmetro](../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções retornarão **NULL** e definirão errno como `EINVAL`.
 
