@@ -16,7 +16,7 @@ Na programação do C++ moderna, a biblioteca padrão inclui *ponteiros intelige
 
 ## <a name="uses-for-smart-pointers"></a>Uso de ponteiros inteligentes
 
-Ponteiros inteligentes são definidos na namespace `std` no arquivo de cabeçalho [ \<memory >](../standard-library/memory.md). Eles são essenciais para o [RAII](../cpp/objects-own-resources-raii.md) ou *recursos aquisição é inicialização* linguagem de programação. O objetivo principal dessa linguagem é garantir que a aquisição de recursos ocorra ao mesmo tempo em que o objeto é inicializado, de forma que todos os recursos do objeto sejam criados e preparados em uma linha de código. Em termos práticos, o princípio fundamental da linguagem RAII é fornecer a propriedade de qualquer recurso alocado a heap, por exemplo, memória alocada dinamicamente ou identificadores de objetos do sistema, a um objeto alocado em pilha cujo destrutor contenha o código para excluir ou liberar o recurso e também qualquer código de limpeza associado.
+Ponteiros inteligentes são definidos na namespace `std` no arquivo de cabeçalho [ \<memory >](../standard-library/memory.md). Eles são essenciais para a linguagem de programação [RAII](../cpp/objects-own-resources-raii.md) ou *Aquisição de Recurso é Inicialização*. O objetivo principal dessa linguagem é garantir que a aquisição de recursos ocorra ao mesmo tempo em que o objeto é inicializado, de forma que todos os recursos do objeto sejam criados e preparados em uma linha de código. Em termos práticos, o princípio fundamental da linguagem RAII é fornecer a propriedade de qualquer recurso alocado a heap, por exemplo, memória alocada dinamicamente ou identificadores de objetos do sistema, a um objeto alocado em pilha cujo destrutor contenha o código para excluir ou liberar o recurso e também qualquer código de limpeza associado.
 
 Na maioria dos casos, quando você inicializa um ponteiro bruto ou identificador de recursos para apontar para um recurso real, transforma o ponteiro em ponteiro inteligente imediatamente. Em C++ moderno, os ponteiros brutos são usados somente em pequenos blocos de código de escopo limitado, loops ou funções auxiliares onde o desempenho é essencial e não há possibilidade de confusão sobre a propriedade.
 
@@ -51,7 +51,7 @@ O exemplo demonstra as etapas essenciais a seguir para o uso de ponteiros inteli
 
 Ponteiros inteligentes são criados para terem a maior eficiência possível em termos de memória e de desempenho. Por exemplo, o único membro de dados em `unique_ptr` é o ponteiro encapsulado. Isso significa que `unique_ptr` é exatamente do mesmo tamanho que o ponteiro, com quatro bytes ou com oito bytes. O acesso ao ponteiro encapsulado usando os operadores * e -> sobrecarregados pelo ponteiro inteligente não é significativamente mais lento que o acesso direto aos ponteiros brutos.
 
-Os ponteiros inteligentes têm suas próprias funções membro, que são acessadas usando a notação "ponto final". Por exemplo, alguns ponteiros inteligentes da biblioteca padrão do C++ têm uma função membro de redefinição que libera a propriedade do ponteiro. Isso é útil quando você deseja liberar a memória possuída pelo ponteiro inteligente antes que o ponteiro inteligente saia do escopo, como mostrado no exemplo a seguir.
+Os ponteiros inteligentes têm suas próprias funções membro, que são acessadas usando a notação "ponto final". Por exemplo, alguns ponteiros inteligentes da biblioteca padrão do C++ têm uma função membro de redefinição que libera a propriedade do ponteiro. Isso é útil quando você deseja liberar a memória do ponteiro inteligente antes que o ponteiro inteligente saia do escopo, como mostrado no exemplo a seguir.
 
 [!code-cpp[smart_pointers_intro#3](../cpp/codesnippet/CPP/smart-pointers-modern-cpp_3.cpp)]
 
@@ -68,7 +68,7 @@ A seção a seguir resume os diferentes tipos de ponteiros inteligentes que est�
 Use esses ponteiros inteligentes como uma primeira opção para encapsular ponteiros para objetos C ++ simples (POCO).
 
 - `unique_ptr`<br/>
-   Permite exatamente um proprietário do ponteiro subjacente. Use como a opção padrão para POCO, a menos que você tenha certeza de que precisa de um `shared_ptr`. Pode ser movido para um novo proprietário, mas não copiado ou compartilhado. Substitui `auto_ptr`, que será descontinuada. Compare com `boost::scoped_ptr`. `unique_ptr` é pequeno e eficiente; o tamanho é um ponteiro e ele dá suporte a referências de rvalue para rápida inserção e recuperação das coleções de biblioteca do padrão C++. Arquivo de cabeçalho: `<memory>`. Para obter mais informações, confira [Como: Criar e usar instâncias unique_ptr](../cpp/how-to-create-and-use-unique-ptr-instances.md) e [classe unique_ptr](../standard-library/unique-ptr-class.md).
+   Permite exatamente um proprietário do ponteiro subjacente. Use como a opção padrão para POCO, a menos que você tenha certeza de que precisa de um `shared_ptr`. Pode ser movido para um novo proprietário, mas não copiado ou compartilhado. Substitui `auto_ptr`, que será preterido. Compare com `boost::scoped_ptr`. `unique_ptr` é pequeno e eficiente; o tamanho é um ponteiro e ele dá suporte a referências de rvalue para rápida inserção e recuperação das coleções de biblioteca padrão C++. Arquivo de cabeçalho: `<memory>`. Para obter mais informações, confira [Como: Criar e usar instâncias unique_ptr](../cpp/how-to-create-and-use-unique-ptr-instances.md) e [classe unique_ptr](../standard-library/unique-ptr-class.md)
 
 - `shared_ptr`<br/>
    Ponteiro inteligente contado por referência. Use quando quiser atribuir um ponteiro bruto a vários proprietários, por exemplo, ao retornar uma cópia de um ponteiro de um contêiner, porém mantendo o original. O ponteiro bruto não será excluído até que todos os proprietários de `shared_ptr` tenham saído do escopo ou tenham desistido da propriedade. O tamanho é de dois ponteiros; um para o objeto e um para o bloco de controle compartilhado que contém a contagem de referência. Arquivo de cabeçalho: `<memory>`. Para obter mais informações, confira [Como: Criar e usar instâncias shared_ptr](../cpp/how-to-create-and-use-shared-ptr-instances.md) e [classe shared_ptr](../standard-library/shared-ptr-class.md).
@@ -78,8 +78,7 @@ Use esses ponteiros inteligentes como uma primeira opção para encapsular ponte
 
 ### <a name="smart-pointers-for-com-objects-classic-windows-programming"></a>Ponteiros inteligentes para objetos COM (programação clássica do Windows)
 
-Ao trabalhar com objetos COM, coloque os ponteiros de interface em um tipo de ponteiro inteligente apropriado. A 
-Active Template Library(ATL) define vários ponteiros inteligentes para várias finalidades. Você também pode usar o tipo de ponteiro inteligente `_com_ptr_t`, que o compilador usa ao criar classes wrapper dos arquivos .tlb. É a melhor opção quando você não quer incluir os arquivos de cabeçalho da ATL.
+Ao trabalhar com objetos COM, coloque os ponteiros de interface em um tipo de ponteiro inteligente apropriado. A ATL (Active Template Library) define vários ponteiros inteligentes para várias finalidades. Você também pode usar o tipo de ponteiro inteligente `_com_ptr_t`, que o compilador usa ao criar classes wrapper dos arquivos .tlb. É a melhor opção quando você não quer incluir os arquivos de cabeçalho da ATL.
 
 [Classe CComPtr](../atl/reference/ccomptr-class.md)<br/>
 Use isso a menos que você não possa usar a ATL. Executa a contagem de referência usando os métodos `AddRef` e `Release`. Para obter mais informações, confira [Como: Criar e usar instâncias CComPtr e CComQIPtr](../cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md).
@@ -98,10 +97,10 @@ Ponteiro inteligente para as interfaces que são obtidas da tabela de interface 
 
 ### <a name="atl-smart-pointers-for-poco-objects"></a>Ponteiros inteligentes da ATL para objetos POCO
 
-Além de ponteiros inteligentes para objetos COM, a ATL também define ponteiros inteligentes e coleções de ponteiros inteligentes, para objetos C++ simples. Na programação clássica do Windows, esses tipos são alternativas úteis para as coleções de biblioteca padrão C++, especialmente quando a portabilidade do código não é necessária ou quando você não deseja combinar os modelos de programação da STL(biblioteca padrão do C++) e ATL.
+Além de ponteiros inteligentes para objetos COM, a ATL também define ponteiros inteligentes e coleções de ponteiros inteligentes, para objetos C++ simples. Na programação clássica do Windows, esses tipos são alternativas úteis para as coleções de biblioteca padrão C++, especialmente quando a portabilidade do código não é necessária ou quando você não deseja combinar os modelos de programação da Biblioteca Padrão do C++ e da ATL.
 
 [Classe CAutoPtr](../atl/reference/cautoptr-class.md)<br/>
-Ponteiro inteligente que impõe a propriedade exclusiva transferindo a propriedade na cópia. Comparável à classe obsoleta `std::auto_ptr`.
+Ponteiro inteligente que impõe a propriedade exclusiva transferindo a propriedade na cópia. Comparável à classe `std::auto_ptr` preterida.
 
 [Classe CHeapPtr](../atl/reference/cheapptr-class.md)<br/>
 Ponteiro inteligente para objetos alocados usando o função [malloc](../c-runtime-library/reference/malloc.md) do C.
