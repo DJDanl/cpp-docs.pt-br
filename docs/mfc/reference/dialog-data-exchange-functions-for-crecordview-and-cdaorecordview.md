@@ -20,12 +20,12 @@ helpviewer_keywords:
 - databases [MFC], dialog data exchange (DDX) support
 - DAO [MFC], dialog data exchange (DDX) support
 ms.assetid: 0d8cde38-3a2c-4100-9589-ac80a7b1ce91
-ms.openlocfilehash: 6a4320b1f2c5d0c47dac64c486e7fb70ea5991bb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7a6de35f9e3154b6d182eddcc51fd7a14cbd0dd5
+ms.sourcegitcommit: 63c072f5e941989636f5a2b13800b68bb7129931
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481816"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55764006"
 ---
 # <a name="dialog-data-exchange-functions-for-crecordview-and-cdaorecordview"></a>Funções da troca de dados da caixa de diálogo para CRecordView e CDaoRecordView
 
@@ -144,7 +144,7 @@ Ver [DDX_FieldText](#ddx_fieldtext) para obter um exemplo de DDX_Field geral. O 
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdao.h
+  **Header** afxdao.h
 
 ## <a name="ddx_fieldcbstringexact"></a>  DDX_FieldCBStringExact
 
@@ -192,7 +192,7 @@ Ver [DDX_FieldText](#ddx_fieldtext) para obter um exemplo de DDX_Field geral. Ch
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdao.h
+  **Header** afxdao.h
 
 ##  <a name="ddx_fieldcheck"></a>  DDX_FieldCheck
 
@@ -234,7 +234,7 @@ Para obter mais informações sobre DDX, consulte [troca de dados de caixa de di
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdao.h
+  **Header** afxdao.h
 
 ##  <a name="ddx_fieldlbindex"></a>  DDX_FieldLBIndex
 
@@ -282,7 +282,7 @@ Ver [DDX_FieldText](#ddx_fieldtext) para obter um exemplo de DDX_Field geral.
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdao.h
+  **Header** afxdao.h
 
 ##  <a name="ddx_fieldlbstring"></a>  DDX_FieldLBString
 
@@ -330,7 +330,7 @@ Ver [DDX_FieldText](#ddx_fieldtext) para obter um exemplo de DDX_Field geral. Ch
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdao.h
+  **Header** afxdao.h
 
 ##  <a name="ddx_fieldlbstringexact"></a>  DDX_FieldLBStringExact
 
@@ -378,7 +378,7 @@ Ver [DDX_FieldText](#ddx_fieldtext) para obter um exemplo de DDX_Field geral. Ch
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdao.h
+  **Header** afxdao.h
 
 ##  <a name="ddx_fieldradio"></a>  DDX_FieldRadio
 
@@ -426,7 +426,7 @@ Ver [DDX_FieldText](#ddx_fieldtext) para obter um exemplo de DDX_Field geral. Ch
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdao.h
+  **Header** afxdao.h
 
 ##  <a name="ddx_fieldscroll"></a>  DDX_FieldScroll
 
@@ -474,9 +474,9 @@ Ver [DDX_FieldText](#ddx_fieldtext) para obter um exemplo de DDX_Field geral. Ch
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdao.h
+  **Header** afxdao.h
 
-  ## <a name="nameddxfieldslidera--ddxfieldslider"></a>name="ddx_fieldslider"></a>  DDX_FieldSlider
+  ## <a name="ddx_fieldslider"></a>  DDX_FieldSlider
 O `DDX_FieldSlider` função sincroniza a posição da miniatura de um controle deslizante em uma exibição do registro e um **int** membro de dados do campo de um conjunto de registros associado com a exibição do registro (ou com qualquer variável de inteiro que você escolher para mapeá-lo para).
 
 ### <a name="syntax"></a>Sintaxe
@@ -675,7 +675,7 @@ O seguinte `DoDataExchange` funcionar para um [CRecordView](../../mfc/reference/
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdao.h
+  **Header** afxdao.h
 
 ## <a name="see-also"></a>Consulte também
 

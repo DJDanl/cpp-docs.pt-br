@@ -1,6 +1,6 @@
 ---
 title: Funções &lt;memory&gt;
-ms.date: 11/04/2016
+ms.date: 02/06/2019
 f1_keywords:
 - memory/std::addressof
 - memory/std::align
@@ -74,12 +74,12 @@ helpviewer_keywords:
 - std::uninitialized_copy_n [C++]
 - std::uninitialized_fill [C++]
 - std::uninitialized_fill_n [C++]
-ms.openlocfilehash: e0a62b7afd215a9cad62ba1d0469f68459e6f403
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 71cae7bfbb8bfc0bef79a087d4450505c2880e5c
+ms.sourcegitcommit: 63c072f5e941989636f5a2b13800b68bb7129931
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519172"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55763928"
 ---
 # <a name="ltmemorygt-functions"></a>Funções &lt;memory&gt;
 
@@ -135,7 +135,7 @@ O limite de alinhamento ser tentado.
 *Size*<br/>
 O tamanho em bytes para o armazenamento alinhado.
 
-*PTR*<br/>
+*Ptr*<br/>
 O endereço inicial do pool de armazenamento contíguo disponível a ser usado. Esse parâmetro também é um parâmetro de saída e é definido para conter o novo endereço inicial se o alinhamento for bem-sucedido. Se `align()` for malsucedido, esse parâmetro não será modificado.
 
 *Espaço*<br/>
@@ -261,7 +261,7 @@ void declare_no_pointers(
 |Parâmetro|Descrição|
 |---------------|-----------------|
 |*ptr*|O endereço do primeiro caractere que não contém mais ponteiros rastreáveis.|
-|*Tamanho*|Tamanho de bloco que começa em *ptr* que não contêm ponteiros rastreáveis.|
+|*_Size*|Tamanho de bloco que começa em *ptr* que não contêm ponteiros rastreáveis.|
 
 ### <a name="remarks"></a>Comentários
 
@@ -299,7 +299,7 @@ struct default_delete {
 
 ### <a name="parameters"></a>Parâmetros
 
-*PTR*<br/>
+*Ptr*<br/>
 Ponteiro para o objeto a ser excluído.
 
 *Outros*<br/>
@@ -327,7 +327,7 @@ O tipo controlado pelo ponteiro compartilhado retornado.
 *Outros*<br/>
 O tipo controlado pelo ponteiro compartilhado de argumento.
 
-*SP*<br/>
+*sp*<br/>
 O ponteiro compartilhado de argumento.
 
 ### <a name="remarks"></a>Comentários
@@ -387,7 +387,7 @@ O tipo do agente de exclusão.
 *Ty*<br/>
 O tipo controlado pelo ponteiro compartilhado.
 
-*SP*<br/>
+*sp*<br/>
 O ponteiro compartilhado.
 
 ### <a name="remarks"></a>Comentários
@@ -647,13 +647,13 @@ O número de elementos para os quais alocar espaço na nova matriz.
 
 ### <a name="remarks"></a>Comentários
 
-A primeira sobrecarga é usada para objetos únicos, a segunda sobrecarga é invocada para matrizes e a terceira sobrecarga impede que você especifique um tamanho de matriz no argumento de tipo (make_unique\<T[N]>), não há suporte para essa construção no padrão atual. Quando você usa `make_unique` para criar um `unique_ptr` para uma matriz, é necessário inicializar os elementos da matriz separadamente. Se você estiver considerando essa sobrecarga, talvez a melhor opção seja usar um [std::vector](../standard-library/vector-class.md).
+A primeira sobrecarga é usada para objetos únicos, a segunda sobrecarga é invocada para matrizes e a terceira sobrecarga impede que você especificar um tamanho da matriz no argumento de tipo (make_unique\<T [N] >); essa construção não é suportada pelo atual padrão. Quando você usa `make_unique` para criar um `unique_ptr` para uma matriz, é necessário inicializar os elementos da matriz separadamente. Se você estiver considerando essa sobrecarga, talvez a melhor opção seja usar um [std::vector](../standard-library/vector-class.md).
 
 Como `make_unique` é cuidadosamente implementado para a segurança de exceção, é recomendável usar `make_unique` em vez de chamar diretamente os construtores `unique_ptr`.
 
 ### <a name="example"></a>Exemplo
 
-O exemplo a seguir mostra como usar `make_unique`. Para mais exemplos, consulte [Como criar e usar instâncias unique_ptr](../cpp/how-to-create-and-use-unique-ptr-instances.md).
+O exemplo a seguir mostra como usar `make_unique`. Para ver mais exemplos, confira [Como: Criar e usar instâncias unique_ptr](../cpp/how-to-create-and-use-unique-ptr-instances.md).
 
 [!code-cpp[stl_smart_pointers#214](../cpp/codesnippet/CPP/memory-functions_1.cpp)]
 
@@ -700,7 +700,7 @@ struct owner_less<weak_ptr<Type>>
 
 ### <a name="parameters"></a>Parâmetros
 
-*à esquerda*<br/>
+*_left*<br/>
 Um ponteiro compartilhado ou fraco.
 
 *right*<br/>
@@ -1104,7 +1104,7 @@ Um iterador de avanço que trata o primeiro elemento no intervalo de destino a s
 *last*<br/>
 Um iterador de avanço que trata o último elemento no intervalo de destino a ser iniciado.
 
-*Val*<br/>
+*val*<br/>
 O valor a ser usado para inicializar o intervalo de destino.
 
 ### <a name="remarks"></a>Comentários
@@ -1176,7 +1176,7 @@ Um iterador de avanço que trata o primeiro elemento no intervalo de destino a s
 *count*<br/>
 O número de elementos a ser inicializado.
 
-*Val*<br/>
+*val*<br/>
 O valor a ser usado para inicializar o intervalo de destino.
 
 ### <a name="remarks"></a>Comentários
