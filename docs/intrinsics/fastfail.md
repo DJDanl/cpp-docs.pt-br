@@ -2,12 +2,12 @@
 title: __fastfail
 ms.date: 11/04/2016
 ms.assetid: 9cd32639-e395-4c75-9f3a-ac3ba7f49921
-ms.openlocfilehash: b05c86148014a4a34d852d1a00caeb71ee136548
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e96d981be5c5186d6cc472cc8f4dffcbf1c2b7bf
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50521379"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55849470"
 ---
 # <a name="fastfail"></a>__fastfail
 
@@ -23,7 +23,7 @@ void __fastfail(unsigned int code);
 
 #### <a name="parameters"></a>Parâmetros
 
-*Código*<br/>
+*code*<br/>
 [in] Um `FAST_FAIL_<description>` constante simbólica de Winnt. h ou WDM. h indica o motivo do término do processo.
 
 ## <a name="return-value"></a>Valor de retorno
@@ -41,6 +41,7 @@ Internamente, `__fastfail` é implementado usando diversos mecanismos de arquite
 |x86|int 0x29|ecx|
 |X64|int 0x29|rcx|
 |ARM|Opcode 0xDEFB|r0|
+|ARM64|OpCode 0xF003|x0|
 
 Uma solicitação de falha rápida é independente e normalmente exige apenas dois instruções para executar. Após a execução de uma solicitação de falha rápida, o kernel executa a ação apropriada. No código do modo de usuário, não há nenhuma dependência de memória além do ponteiro de instruções quando um evento de falha rápida é gerado. Isso aumenta sua confiabilidade, mesmo se houver corrupção de memória grave.
 
@@ -56,7 +57,7 @@ Suporte para o mecanismo de falha rápida nativa iniciado no Windows 8. Sistemas
 
 |Intrínseco|Arquitetura|
 |---------------|------------------|
-|`__fastfail`|x86, x64, ARM|
+|`__fastfail`|x86, x64, ARM, ARM64|
 
 **Arquivo de cabeçalho** \<intrin. h >
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - parsing, URLs
 - URLs, parsing
 ms.assetid: 46c6384f-e4a6-4dbd-9196-219c19040ec5
-ms.openlocfilehash: 8765a0712fc79ee60041f9142fbd25f744246ac8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 144ca5cddb70dd04bf25d790c493d15d75b8163a
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50477149"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850128"
 ---
 # <a name="internet-url-parsing-globals-and-helpers"></a>Auxiliares e globais de análise de URL da Internet
 
@@ -102,13 +102,13 @@ Ele analisa uma cadeia de caracteres de URL e retorna o tipo de serviço e seus 
 
 Por exemplo, `AfxParseURL` analisa as URLs no formato *service://server/dir/dir/object.ext:port* e retorna seus componentes armazenados da seguinte maneira:
 
-*strServer* = = "server"
+*strServer* == "server"
 
-*strObject* = = "/ dir/dir/object/object.ext"
+*strObject* == "/dir/dir/object/object.ext"
 
-*nPort* = = #port
+*nPort* == #port
 
-*dwServiceType* = = #service
+*dwServiceType* == #service
 
 > [!NOTE]
 >  Para chamar essa função, seu projeto deve incluir AFXINET. H.
@@ -214,10 +214,6 @@ Ele analisa uma cadeia de caracteres de URL e retorna o tipo de serviço e seus 
 
   **Cabeçalho** afxinet.h
 
-## <a name="see-also"></a>Consulte também
-
-[Macros e globais](../../mfc/reference/mfc-macros-and-globals.md)
-
 ## <a name="afxgetinternethandletype"></a>  AfxGetInternetHandleType
 
 Use essa função global para determinar o tipo de um identificador de Internet.
@@ -274,11 +270,6 @@ A lista a seguir inclui os tipos possíveis de Internet retornados por `AfxGetIn
 
 **Cabeçalho:** afxinet.h
 
-### <a name="see-also"></a>Consulte também
-
-[Macros e globais](mfc-macros-and-globals.md)<br/>
-[AfxParseURL](internet-url-parsing-globals.md#afxparseurl)
-
 ## <a name="afxthrowinternetexception"></a>  AfxThrowInternetException
 
 Gera uma exceção de Internet.
@@ -308,9 +299,9 @@ Você é responsável por determinar a causa, com base no código de erro do sis
 
 **Cabeçalho:** afxinet.h
 
-### <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte também
 
 [Macros e globais](mfc-macros-and-globals.md)<br/>
 [Classe CInternetException](cinternetexception-class.md)<br/>
-[THROW](#throw)
+[AfxParseURL](internet-url-parsing-globals.md#afxparseurl)
 

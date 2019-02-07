@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - applications [MFC], managing
 ms.assetid: b72f4154-24db-4e75-bca3-6873e2459c15
-ms.openlocfilehash: c1e742d3320dae4140cc4886c47d34dbe9b6071f
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 6bdcf97c921dc45939ab9ddf18f1d624c2fd83b8
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178337"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850292"
 ---
 # <a name="application-information-and-management"></a>Informações e gerenciamento do aplicativo
 
@@ -138,10 +138,6 @@ CContextMenuManager* afxContextMenuManager;
 
 **Cabeçalho:** afxcontextmenumanager.h
 
-### <a name="see-also"></a>Consulte também
-
-[Classe CContextMenuManager](ccontextmenumanager-class.md)
-
 ##  <a name="afxendthread"></a>  AfxEndThread
 
 Chame essa função para encerrar o thread em execução no momento.
@@ -210,10 +206,6 @@ Os módulos são pesquisados nesta ordem:
 
 **Cabeçalho:** afxwin. h
 
-### <a name="see-also"></a>Consulte também
-
-[Macros e globais](mfc-macros-and-globals.md)
-
 ##  <a name="afxfreelibrary"></a>  AfxFreeLibrary
 
 Ambos `AfxFreeLibrary` e `AfxLoadLibrary` manter uma contagem de referência para cada módulo carregado de biblioteca.
@@ -247,7 +239,7 @@ Veja o exemplo de [AfxLoadLibrary](#afxloadlibrary).
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdll_.h
+  **Header** afxdll_.h
 
 ##  <a name="afxgetapp"></a>  AfxGetApp
 
@@ -365,7 +357,7 @@ Para alterar se o aplicativo redireciona o acesso ao registro, use [AfxSetPerUse
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxstat_.h
+  **Header** afxstat_.h
 
 ##  <a name="afxgetresourcehandle"></a>  AfxGetResourceHandle
 
@@ -463,7 +455,7 @@ BOOL AFXAPI AfxIsExtendedFrameClass( CWnd* pWnd );
 
 ### <a name="parameters"></a>Parâmetros
 
-*Apropriei*<br/>
+*pWnd*<br/>
 [in] Um ponteiro para um objeto que é derivado de `CWnd`.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -490,11 +482,6 @@ Esse método é útil quando você precisa validar que um parâmetro de função
 
 **Cabeçalho:** afxpriv.h
 
-### <a name="see-also"></a>Consulte também
-
-[Classe CWnd](cwnd-class.md)<br/>
-[Classe CFrameWndEx](cframewndex-class.md)
-
 ## <a name="afxismfctoolbar"></a> AfxIsMFCToolBar
 
 Determina se a determinada janela é um objeto de barra de ferramentas.
@@ -507,7 +494,7 @@ BOOL AFXAPI AfxIsMFCToolBar(CWnd* pWnd);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Apropriei*<br/>
+*pWnd*<br/>
 [in] Um ponteiro para um objeto que é derivado de `CWnd`.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -522,11 +509,6 @@ Esse método retornará `TRUE` se *Apropriei* deriva `CMFCToolBar`. Esse método
 
 **Cabeçalho:** afxpriv.h
 
-### <a name="see-also"></a>Consulte também
-
-[Classe CWnd](cwnd-class.md)<br/>
-[Classe CMFCToolBar](cmfctoolbar-class.md)
-
 ## <a name="afxkeyboardmanager"></a> AfxKeyboardManager
 
 Ponteiro para o global [manager teclado](ckeyboardmanager-class.md).
@@ -540,11 +522,6 @@ CKeyboardManager* afxKeyboardManager;
 ### <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** afxkeyboardmanager.h
-
-### <a name="see-also"></a>Consulte também
-
-[Macros, funções globais e variáveis globais](mfc-macros-and-globals.md)<br/>
-[Classe CKeyboardManager](ckeyboardmanager-class.md)
 
 ##  <a name="afxloadlibrary"></a>  AfxLoadLibrary
 
@@ -567,7 +544,7 @@ Se não for especificado um caminho e a extensão de nome de arquivo for omitida
 
 - O diretório atual.
 
-- **Windows 95 98:** O diretório de sistema do Windows. **Windows NT:** O diretório de sistema do Windows 32 bits. O nome desse diretório é SYSTEM32.
+- **Windows 95/98:** O diretório de sistema do Windows. **Windows NT:** O diretório de sistema do Windows 32 bits. O nome desse diretório é SYSTEM32.
 
 - **Somente Windows NT:** O diretório de sistema do Windows de 16 bits. Não há nenhuma função do Win32 que obtém o caminho desse diretório, mas ele é pesquisado. O nome desse diretório é o sistema.
 
@@ -597,7 +574,7 @@ Usando o `AfxLoadLibrary` em um aplicativo requer que você vincule dinamicament
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdll_.h
+  **Header** afxdll_.h
 
 ## <a name="afxmenutearoffmanager"></a> AfxMenuTearOffManager
 
@@ -613,10 +590,6 @@ CMenuTearOffManager* g_pTearOffMenuManager;
 
 **Cabeçalho:** afxmenutearoffmanager.h
 
-### <a name="see-also"></a>Consulte também
-
-[Classe CMenuTearOffManager](cmenutearoffmanager-class.md)
-
 ## <a name="afxmousemanager"></a>  AfxMouseManager
 
 Ponteiro para o global [manager mouse](cmousemanager-class.md).
@@ -630,10 +603,6 @@ CMouseManager* afxMouseManager;
 ### <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** afxmousemanager.h
-
-### <a name="see-also"></a>Consulte também
-
-[Classe CMouseManager](cmousemanager-class.md)
 
 ##  <a name="afxregisterclass"></a>  AfxRegisterClass
 
@@ -735,7 +704,7 @@ void AFXAPI AfxSetPerUserRegistration(BOOL bEnable);
 
 ### <a name="parameters"></a>Parâmetros
 
-*bAtivar*<br/>
+*bEnable*<br/>
 [in] VERDADEIRO indica que as informações de registro são direcionadas para o nó HKCU; FALSE indica que o aplicativo grava as informações de registro para o nó de padrão. O nó padrão é **HKEY_CLASSES_ROOT** ( **HKCR**).
 
 ### <a name="remarks"></a>Comentários
@@ -750,7 +719,7 @@ A implementação padrão acessa o registro em HKCR.
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxstat_.h
+  **Header** afxstat_.h
 
 ##  <a name="afxsetresourcehandle"></a>  AfxSetResourceHandle
 
@@ -786,10 +755,6 @@ CShellManager* afxShellManager;
 ### <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** afxshellmanager.h
-
-### <a name="see-also"></a>Consulte também
-
-[Classe CShellManager](cshellmanager-class.md)
 
 ##  <a name="afxsocketinit"></a>  AfxSocketInit
 
@@ -829,10 +794,6 @@ CUserToolsManager* afxUserToolsManager;
 ### <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** afxusertoolsmanager.h
-
-### <a name="see-also"></a>Consulte também
-
-[Classe CUserToolsManager](cusertoolsmanager-class.md)
 
 ##  <a name="afxwininit"></a>  AfxWinInit
 
@@ -879,5 +840,14 @@ Se você chamar `AfxWinInit` por conta própria, você deve declarar uma instân
 
 ## <a name="see-also"></a>Consulte também
 
-[Macros e globais](../../mfc/reference/mfc-macros-and-globals.md)<br/>
-[Classe CWinApp](../../mfc/reference/cwinapp-class.md)
+[Macros e globais](mfc-macros-and-globals.md)<br/>
+[Classe CWinApp](cwinapp-class.md)<br/>
+[Classe CContextMenuManager](ccontextmenumanager-class.md)<br/>
+[Classe CWnd](cwnd-class.md)<br/>
+[Classe CFrameWndEx](cframewndex-class.md)<br/>
+[Classe CMFCToolBar](cmfctoolbar-class.md)<br/>
+[Classe CKeyboardManager](ckeyboardmanager-class.md)<br/>
+[Classe CMenuTearOffManager](cmenutearoffmanager-class.md)<br/>
+[Classe CMouseManager](cmousemanager-class.md)<br/>
+[Classe CShellManager](cshellmanager-class.md)<br/>
+[Classe CUserToolsManager](cusertoolsmanager-class.md)

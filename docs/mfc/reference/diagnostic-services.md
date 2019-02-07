@@ -20,12 +20,12 @@ helpviewer_keywords:
 - diagnostics [MFC], diagnostic services
 - diagnostic functions and variables [MFC]
 ms.assetid: 8d78454f-9fae-49c2-88c9-d3fabd5393e8
-ms.openlocfilehash: dbb243453b6d869082a4232b12b27f5510d84aa5
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.openlocfilehash: a4979ab7bbc0e396de5629fba1b86f3bfb602dcf
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657624"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850434"
 ---
 # <a name="diagnostic-services"></a>Serviços de diagnóstico
 
@@ -59,7 +59,7 @@ Além disso, a biblioteca de tempo de execução C também oferece suporte a um 
 |[Certifique-se e ENSURE_VALID](#ensure)|Use para validar a exatidão dos dados.|
 |[THIS_FILE](#this_file)|Expande para o nome do arquivo que está sendo compilado.|
 |[TRACE](#trace)|Fornece `printf`-como recurso na versão de depuração da biblioteca.|
-|[VERIFIQUE SE](#verify)|Semelhante a ASSERT, mas avalia a expressão na versão de lançamento da biblioteca, bem como na versão de depuração.|
+|[VERIFY](#verify)|Semelhante a ASSERT, mas avalia a expressão na versão de lançamento da biblioteca, bem como na versão de depuração.|
 
 ### <a name="mfc-general-diagnostic-variables-and-functions"></a>Funções e variáveis de diagnóstico gerais MFC
 
@@ -70,8 +70,8 @@ Além disso, a biblioteca de tempo de execução C também oferece suporte a um 
 |[AfxCheckError](#afxcheckerror)|Variável global usado para testar o SCODE passado para ver se ele é um erro e, em caso afirmativo, gera o erro apropriado.|
 |[AfxCheckMemory](#afxcheckmemory)|Verifica que a integridade de todos os memória alocada no momento.|
 |[AfxDebugBreak](#afxdebugbreak)|Faz com que uma quebra na execução.|
-|[afxDump](#cdumpcontext_in_mfc)|Se for chamado no depurador, despejos de memória o estado de um objeto durante a depuração.|
-|[afxDump](#afxdump)|Função interna que o estado de um objeto de despejos de memória durante a depuração.|
+|[AfxDump](#cdumpcontext_in_mfc)|Se for chamado no depurador, despejos de memória o estado de um objeto durante a depuração.|
+|[AfxDump](#afxdump)|Função interna que o estado de um objeto de despejos de memória durante a depuração.|
 |[AfxDumpStack](#afxdumpstack)|Gere uma imagem da pilha atual. Essa função é sempre vinculada estaticamente.|
 |[AfxEnableMemoryLeakDump](#afxenablememoryleakdump)|Permite que o despejo de vazamento de memória.|
 |[AfxEnableMemoryTracking](#afxenablememorytracking)|Ativa o acompanhamento de intermitente da memória.|
@@ -320,12 +320,6 @@ Se qualquer um desses testes falhar, uma mensagem de alerta é exibida da mesma 
 
 **Cabeçalho:** AFX. h
 
-### <a name="see-also"></a>Consulte também
-
-[Macros e globais](mfc-macros-and-globals.md)<br/>
-[VERIFIQUE SE](#verify)<br/>
-[ATLENSURE](#altensure)
-
 ## <a name="this_file"></a> THIS_FILE
 
 Expande para o nome do arquivo que está sendo compilado.
@@ -356,13 +350,7 @@ static char THIS_FILE[] = __FILE__;
 
 **Cabeçalho:** AFX. h
 
-### <a name="see-also"></a>Consulte também
-
-[Macros e globais](mfc-macros-and-globals.md)<br/>
-[ASSERT](#assert)<br/>
-[VERIFIQUE SE](#verify)
-
-##  <a name="trace"></a>  RASTREAMENTO
+##  <a name="trace"></a>  TRACE
 
 Envia a cadeia de caracteres especificada para o depurador do aplicativo atual.
 
@@ -383,7 +371,7 @@ Para obter mais informações, consulte [depuração de aplicativos do MFC](/vis
 
 **Cabeçalho:** AFX. h
 
-##  <a name="verify"></a>  VERIFIQUE SE
+##  <a name="verify"></a>  VERIFY
 
 Na versão de depuração do MFC, avalia seu argumento.
 
@@ -440,7 +428,7 @@ Essa variável é definida apenas na versão de depuração do MFC. Para obter m
 
 **Cabeçalho:** AFX. h
 
-## <a name="afxdump"></a> AfxDump (interno)
+## <a name="afxdump"></a> AfxDump (Internal)
 
 Função interna que usa o MFC para despejar o estado de um objeto durante a depuração.
 
@@ -452,7 +440,7 @@ void AfxDump(const CObject* pOb);
 
 ### <a name="parameters"></a>Parâmetros
 
-*caixa postal*<br/>
+*pOb*<br/>
 Um ponteiro para um objeto de uma classe derivada de `CObject`.
 
 ### <a name="remarks"></a>Comentários
@@ -464,10 +452,6 @@ O código do programa não deve chamar `AfxDump`, mas em vez disso, deve chamar 
 ### <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** AFX. h
-
-### <a name="see-also"></a>Consulte também
-
-[CObject::Dump](cobject-class.md#dump)
 
 ##  <a name="afxmemdf"></a>  afxMemDF
 
@@ -569,7 +553,7 @@ void AfxDump(const CObject* pOb);
 
 ### <a name="parameters"></a>Parâmetros
 
-*caixa postal*<br/>
+*pOb*<br/>
 Um ponteiro para um objeto de uma classe derivada de `CObject`.
 
 ### <a name="remarks"></a>Comentários
@@ -581,10 +565,6 @@ O código do programa não deve chamar `AfxDump`, mas em vez disso, deve chamar 
 ### <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** AFX. h
-
-### <a name="see-also"></a>Consulte também
-
-[CObject::Dump](cobject-class.md#dump)
 
 ##  <a name="afxdumpstack"></a>  AfxDumpStack
 
@@ -776,7 +756,7 @@ BOOL AfxIsValidAddress(
 
 ### <a name="parameters"></a>Parâmetros
 
-*LP*<br/>
+*lp*<br/>
 Aponta para o endereço de memória a ser testado.
 
 *nBytes*<br/>
@@ -856,12 +836,12 @@ Diferente de zero se você deseja permitir a alocação; Caso contrário, 0.
 
 O alocador de memória de depuração da biblioteca Microsoft Foundation Class pode chamar uma função de gancho definidas pelo usuário para permitir que o usuário para monitorar uma alocação de memória e para controlar se a alocação é permitida. Funções de gancho de alocação são com protótipo, da seguinte maneira:
 
-**BOOL AFXAPI AllocHook (size_t** `nSize` **, BOOL** `bObject` **longo** `lRequestNumber` **);**
+**BOOL AFXAPI AllocHook( size_t** `nSize`**, BOOL** `bObject`**, LONG** `lRequestNumber` **);**
 
 *nSize*<br/>
 O tamanho da alocação de memória proposto.
 
-*bO*<br/>
+*bObject*<br/>
 TRUE se a alocação é para um `CObject`-objeto derivada; caso contrário, FALSE.
 
 *lRequestNumber*<br/>
@@ -942,4 +922,5 @@ Pilha, global, ou objetos inseridos não são enumeradas. O ponteiro é passado 
 
 ## <a name="see-also"></a>Consulte também
 
-[Macros e globais](../../mfc/reference/mfc-macros-and-globals.md)
+[Macros e globais](mfc-macros-and-globals.md)<br/>
+[CObject::Dump](cobject-class.md#dump)
