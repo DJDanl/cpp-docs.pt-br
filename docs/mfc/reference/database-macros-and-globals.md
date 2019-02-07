@@ -13,12 +13,12 @@ helpviewer_keywords:
 - global functions [MFC], database functions
 - macros [MFC], MFC database
 ms.assetid: 5b9b9e61-1cf9-4345-9f29-3807dd466488
-ms.openlocfilehash: d3df96c92c39b9fdc05a019ed1ada033dc36d05e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a546c821690bcbe1afedd4909810317553e3b283
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50536546"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55849739"
 ---
 # <a name="database-macros-and-globals"></a>Macros e globais de banco de dados
 
@@ -57,11 +57,7 @@ Verifique se essa chamada ocorre antes de qualquer chamada de classe base ou qua
 
 ### <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** \<afxdll_.h >
-
-### <a name="see-also"></a>Consulte também
-
-[Macros e globais](mfc-macros-and-globals.md)
+**Header:** \<afxdll_.h>
 
 ##  <a name="afx_odbc_call"></a>  AFX_ODBC_CALL
 
@@ -104,7 +100,7 @@ AFX_SQL_ASYNC(prs, SQLFunc)
 
 ### <a name="parameters"></a>Parâmetros
 
-*solicitações de pull*<br/>
+*prs*<br/>
 Um ponteiro para um `CRecordset` objeto ou um `CDatabase` objeto. Começando com o MFC 4.2, esse valor de parâmetro é ignorado.
 
 *SQLFunc*<br/>
@@ -119,7 +115,7 @@ Uma função de API do ODBC. Para obter mais informações sobre as funções de
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdb. h
+  **Header** afxdb.h
 
 ##  <a name="afx_sql_sync"></a>  AFX_SQL_SYNC
 
@@ -150,7 +146,7 @@ Você pode simplesmente fazer a atribuição
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdb. h
+  **Header** afxdb.h
 
 ##  <a name="afxgethenv"></a>  AfxGetHENV
 
@@ -166,7 +162,7 @@ O identificador para o ambiente de ODBC atualmente em uso pelo MFC. Pode ser `SQ
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdb. h
+  **Header** afxdb.h
 
 ## <a name="see-also"></a>Consulte também
 

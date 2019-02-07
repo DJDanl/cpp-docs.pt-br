@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - standard dialog, data validation routines
 ms.assetid: 44dbc222-a897-4949-925e-7660e8964ccd
-ms.openlocfilehash: b5813600bbf8eb2a7b25992b3e1b020fcf8dfa02
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dce982f76e25da424c02d621c1b760ec29e88918
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50513939"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850158"
 ---
 # <a name="standard-dialog-data-validation-routines"></a>Rotinas de validação dos dados da caixa de diálogo padrão
 
@@ -522,11 +522,6 @@ Para obter mais informações sobre DDV, consulte [troca de dados de caixa de di
 
   **Cabeçalho** afxdd_.h
 
-## <a name="see-also"></a>Consulte também
-
-[Rotinas de troca dos dados da caixa de diálogo padrão](../../mfc/reference/standard-dialog-data-exchange-routines.md)<br/>
-[Macros e globais](../../mfc/reference/mfc-macros-and-globals.md)
-
 ## <a name="ddvminmaxunsigned"></a>DDV_MinMaxUnsigned
 
 Chame `DDV_MinMaxUnsigned` para verificar que o valor no controle associado *valor* ficar entre *minVal* e *maxVal*.
@@ -563,9 +558,10 @@ Para obter mais informações sobre DDV, consulte [troca de dados de caixa de di
 
 **Cabeçalho:** afxdd_.h
 
-### <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte também
 
+[Rotinas de troca dos dados da caixa de diálogo padrão](standard-dialog-data-exchange-routines.md)<br/>
 [Macros e globais](mfc-macros-and-globals.md)<br/>
-[DDX_Slider](#ddx_slider)<br/>
-[DDX_FieldSlider](#ddx_fieldslider)
+[DDX_Slider](standard-dialog-data-exchange-routines.md#ddx_slider)<br/>
+[DDX_FieldSlider](dialog-data-exchange-functions-for-crecordview-and-cdaorecordview.md#ddx_fieldslider)
 

@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - Object class
 ms.assetid: 709e84a8-0bff-471b-bc14-63e424080b5a
-ms.openlocfilehash: 6d5f3e21e14c34ffbeb335bc1ec4feebd5148c7f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 00f2b57bdf63f9f8bcfd9e544bebab2805ff7f65
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50493607"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850085"
 ---
 # <a name="platformobject-class"></a>Classe Platform::Object
 
@@ -41,7 +41,7 @@ public ref class Object : Object
 
 |Nome|Descrição|
 |----------|-----------------|
-|[Object:: Equals](#equals)|Determina se o objeto especificado é igual ao objeto atual.|
+|[Object::Equals](#equals)|Determina se o objeto especificado é igual ao objeto atual.|
 |[Object::GetHashCode](#gethashcode)|Retorna o código hash para essa instância.|
 |[Object::ReferenceEquals](#referenceequals)|Determina se as instâncias de Object especificadas são a mesma instância.|
 |[ToString](#tostring)|Retorna uma cadeia de caracteres que representa o objeto atual. Pode ser substituído.|
@@ -57,7 +57,7 @@ public ref class Object : Object
 
 **Cabeçalho:** vccorlib.h
 
-**Namespace:** Platform
+**Namespace:** Plataforma
 
 ## <a name="equals"></a> Método Object:: Equals
 
@@ -124,12 +124,6 @@ Use o [typeid](../windows/typeid-cpp-component-extensions.md) operador para reto
 rootFrame->Navigate(TypeName(MainPage::typeid), e->Arguments);
 ```
 
-## <a name="see-also"></a>Consulte também
-
-[Classe Platform::Type](../cppcx/platform-type-class.md)<br/>
-[Namespace Platform](../cppcx/platform-namespace-c-cx.md)<br/>
-[Tipo de sistema] (.. /cppcx/Type-System-c-CX.MD
-
 ## <a name="ctor"></a>  Construtor Object:: Object
 
 Inicializa uma nova instância da classe Object.
@@ -152,10 +146,10 @@ public:static bool ReferenceEquals(  Object^ obj1,   Object^ obj2);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Obj1*<br/>
+*obj1*<br/>
 O primeiro objeto a ser comparado.
 
-*Obj2*<br/>
+*obj2*<br/>
 O segundo objeto a ser comparado.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -191,4 +185,6 @@ public:
 
 ## <a name="see-also"></a>Consulte também
 
-[Namespace de plataforma](platform-namespace-c-cx.md)
+[Namespace de plataforma](platform-namespace-c-cx.md)<br/>
+[Classe Platform::Type](platform-type-class.md)<br/>
+[Sistema de tipos](type-system-c-cx.md)

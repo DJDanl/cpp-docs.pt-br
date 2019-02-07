@@ -13,12 +13,12 @@ helpviewer_keywords:
 - MFC, exceptions
 - exceptions [MFC], MFC throwing functions
 ms.assetid: 26d4457c-8350-48f5-916e-78f919787c30
-ms.openlocfilehash: d44928d9fda20082496df1c475d8b3ab05ba4fc4
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 8b40afbfcc453a4908b434dc53b7b86959673453
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51522060"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55851676"
 ---
 # <a name="exception-processing"></a>Processamento de exceção
 
@@ -40,7 +40,7 @@ Para obter mais detalhes e exemplos, consulte o artigo [exceções](../../mfc/ex
 
 |||
 |-|-|
-|[TENTE](#try)|Designa um bloco de código para o processamento de exceção.|
+|[TRY](#try)|Designa um bloco de código para o processamento de exceção.|
 |[CATCH](#catch)|Designa um bloco de código para capturar uma exceção do anterior **tente** bloco.|
 |[CATCH_ALL](#catch_all)|Designa um bloco de código para capturar todas as exceções de precedente **tente** bloco.|
 |[AND_CATCH](#and_catch)|Designa um bloco de código para capturar tipos adicionais de exceção do anterior **tente** bloco.|
@@ -88,7 +88,7 @@ MFC fornece a seguinte função de encerramento:
 |-|-|
 |[AfxAbort](#afxabort)|Chamado encerrar um aplicativo quando um erro fatal de ocorre.|
 
-##  <a name="try"></a>  TENTE
+##  <a name="try"></a>  TRY
 
 Configura um **tente** bloco.
 
@@ -372,12 +372,6 @@ Essa função é chamada quando os argumentos inválidos são usados.
 
 **Cabeçalho:** AFX. h
 
-### <a name="see-also"></a>Consulte também
-
-[Macros e globais](mfc-macros-and-globals.md)<br/>
-[Classe CInvalidArgException](cinvalidargexception-class.md)<br/>
-[THROW](#throw)
-
 ##  <a name="afxthrowmemoryexception"></a>  AfxThrowMemoryException
 
 Gera uma exceção de memória.
@@ -491,7 +485,7 @@ void AFXAPI AfxThrowOleException(HRESULT hr);
 
 ### <a name="parameters"></a>Parâmetros
 
-*SC*<br/>
+*sc*<br/>
 Um código de status OLE que indica o motivo da exceção.
 
 *hr*<br/>
@@ -503,7 +497,7 @@ A versão que usa HRESULT como um argumento converte esse código de resultado n
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdao.h
+  **Header** afxdao.h
 
 ##  <a name="afxthrowdaoexception"></a>  AfxThrowDaoException
 
@@ -527,11 +521,11 @@ Um código de erro OLE do DAO, do tipo SCODE. Para obter informações, consulte
 
 A estrutura também chama `AfxThrowDaoException`. Em sua chamada, você pode passar um dos parâmetros ou ambos. Por exemplo, se você quiser gerar um dos erros definido em **CDaoException::nAfxDaoError** , mas você não se importam o *scode* parâmetro, passar um código válido no *nAfxDaoError* parâmetro e aceitar o valor padrão para *scode*.
 
-Para obter informações sobre as exceções relacionadas às classes DAO MFC, consulte a classe `CDaoException` este livro e o artigo [exceções: exceções de banco de dados](../../mfc/exceptions-database-exceptions.md).
+Para obter informações sobre as exceções relacionadas às classes DAO MFC, consulte a classe `CDaoException` este livro e o artigo [exceções: Exceções de banco de dados](../../mfc/exceptions-database-exceptions.md).
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdb. h
+  **Header** afxdb.h
 
 ##  <a name="afxthrowdbexception"></a>  AfxThrowDBException
 
@@ -549,10 +543,10 @@ void AfxThrowDBException(
 *nRetCode*<br/>
 Um valor do tipo RETCODE, definindo o tipo de erro que causou a exceção seja lançada.
 
-*PDB*<br/>
+*pdb*<br/>
 Um ponteiro para o `CDatabase` objeto que representa a conexão de fonte de dados ao qual a exceção está associada.
 
-*HSTMT*<br/>
+*hstmt*<br/>
 Um identificador de HSTMT ODBC que especifica o identificador de instrução ao qual a exceção está associada.
 
 ### <a name="remarks"></a>Comentários
@@ -587,5 +581,6 @@ Veja o exemplo de [CATCH](#catch).
 
 ## <a name="see-also"></a>Consulte também
 
-[Macros e globais](../../mfc/reference/mfc-macros-and-globals.md)<br/>
-[Classe CException](../../mfc/reference/cexception-class.md)
+[Macros e globais](mfc-macros-and-globals.md)<br/>
+[Classe CException](cexception-class.md)<br/>
+[Classe CInvalidArgException](cinvalidargexception-class.md)

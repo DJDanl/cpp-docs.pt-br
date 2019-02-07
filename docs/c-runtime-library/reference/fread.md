@@ -24,12 +24,12 @@ helpviewer_keywords:
 - data [C++], reading from input stream
 - streams [C++], reading data from
 ms.assetid: 9a3c1538-93dd-455e-ae48-77c1e23c53f0
-ms.openlocfilehash: 4f9cb6940d1708dffd5d5ca03fac28397f1db846
-ms.sourcegitcommit: 53bfb772c43319d49686c167f492606348ad362b
+ms.openlocfilehash: 7248eb08409b50d855dbb70c7638a856302b345b
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52819690"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55849965"
 ---
 # <a name="fread"></a>fread
 
@@ -57,7 +57,7 @@ Tamanho do item em bytes.
 *count*<br/>
 Número máximo de itens a serem lidos.
 
-*fluxo*<br/>
+*stream*<br/>
 Ponteiro para a estrutura **FILE**.
 
 ## <a name="return-value"></a>Valor de retorno
@@ -135,7 +135,7 @@ Contents of buffer = zyxwvutsrqponmlkjihgfedcb
 ## <a name="see-also"></a>Consulte também
 
 [E/S de fluxo](../../c-runtime-library/stream-i-o.md)<br/>
-[E/s de texto e arquivo binário](../../c-runtime-library/text-and-binary-mode-file-i-o.md)<br />
-[fopen](fopen-wfopen.md)<br />
+[E/s de texto e arquivo binário](../../c-runtime-library/text-and-binary-mode-file-i-o.md)<br/>
+[fopen](fopen-wfopen.md)<br/>
 [fwrite](fwrite.md)<br/>
 [_read](read.md)<br/>

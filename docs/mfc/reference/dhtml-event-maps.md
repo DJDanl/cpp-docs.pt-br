@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DHTML events [MFC], event map
 - DHTML events [MFC]
 ms.assetid: 9a2c8ae7-7216-4a5e-bc60-6b98695be0c6
-ms.openlocfilehash: 75ceaf3d0532a557f5227e64edece2155aacb72f
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 306fb718e7c333e6ff603b7c6c88c10f03f567b5
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519862"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850331"
 ---
 # <a name="dhtml-event-maps"></a>Mapas de evento DHTML
 
@@ -81,7 +81,7 @@ As macros a seguir podem ser usadas para manipular eventos DHTML na [CMultiPageD
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdhtml.h
+  **Header** afxdhtml.h
 
 ##  <a name="begin_dhtml_event_map"></a>  BEGIN_DHTML_EVENT_MAP
 
@@ -93,7 +93,7 @@ BEGIN_DHTML_EVENT_MAP(className)
 
 ### <a name="parameters"></a>Parâmetros
 
-*nome da classe*<br/>
+*className*<br/>
 O nome da classe que contém o mapa de evento DHTML. Essa classe deve derivam direta ou indiretamente [CDHtmlDialog](../../mfc/reference/cdhtmldialog-class.md) e inclua as [DECLARE_DHTML_EVENT_MAP](#declare_dhtml_event_map) macro dentro de sua definição de classe.
 
 ### <a name="remarks"></a>Comentários
@@ -106,7 +106,7 @@ Coloque a macro BEGIN_DHTML_EVENT_MAP no arquivo de implementação (. cpp) da c
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdhtml.h
+  **Header** afxdhtml.h
 
 ##  <a name="begin_dhtml_event_map_inline"></a>  BEGIN_DHTML_EVENT_MAP_INLINE
 
@@ -118,7 +118,7 @@ BEGIN_DHTML_EVENT_MAP_INLINE(className)
 
 ### <a name="parameters"></a>Parâmetros
 
-*nome da classe*<br/>
+*className*<br/>
 O nome da classe que contém o mapa de evento DHTML. Essa classe deve derivam direta ou indiretamente [CDHtmlDialog](../../mfc/reference/cdhtmldialog-class.md) e inclua as [DECLARE_DHTML_EVENT_MAP](#declare_dhtml_event_map) macro dentro de sua definição de classe.
 
 ### <a name="remarks"></a>Comentários
@@ -131,7 +131,7 @@ Coloque a macro BEGIN_DHTML_EVENT_MAP no arquivo de definição (. h) da classe 
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdhtml.h
+  **Header** afxdhtml.h
 
 ##  <a name="declare_dhtml_event_map"></a>  DECLARE_DHTML_EVENT_MAP
 
@@ -153,7 +153,7 @@ Use [BEGIN_DHTML_EVENT_MAP](#begin_dhtml_event_map) ou [BEGIN_DHTML_EVENT_MAP_IN
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdhtml.h
+  **Header** afxdhtml.h
 
 ##  <a name="dhtml_event"></a>  DHTML_EVENT
 
@@ -165,7 +165,7 @@ DHTML_EVENT(dispid, elemName,  memberFxn)
 
 ### <a name="parameters"></a>Parâmetros
 
-*DISPID*<br/>
+*dispid*<br/>
 O DISPID do evento a ser manipulado.
 
 *elemName*<br/>
@@ -180,7 +180,7 @@ Usar essa macro para adicionar uma entrada para o [mapa de evento DHTML](#begin_
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdhtml.h
+  **Header** afxdhtml.h
 
 ##  <a name="dhtml_event_axcontrol"></a>  DHTML_EVENT_AXCONTROL
 
@@ -192,10 +192,10 @@ DHTML_EVENT_AXCONTROL(dispid, controlName,  memberFxn)
 
 ### <a name="parameters"></a>Parâmetros
 
-*DISPID*<br/>
+*dispid*<br/>
 A ID de expedição do evento a ser manipulado.
 
-*nome do controle*<br/>
+*controlName*<br/>
 Um LPCWSTR que contém a ID HTML do controle disparar o evento.
 
 *memberFxn*<br/>
@@ -207,7 +207,7 @@ Usar essa macro para adicionar uma entrada para o [mapa de evento DHTML](#begin_
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdhtml.h
+  **Header** afxdhtml.h
 
 ##  <a name="dhtml_event_class"></a>  DHTML_EVENT_CLASS
 
@@ -219,7 +219,7 @@ DHTML_EVENT_CLASS(dispid, elemName,  memberFxn)
 
 ### <a name="parameters"></a>Parâmetros
 
-*DISPID*<br/>
+*dispid*<br/>
 A ID de expedição do evento a ser manipulado.
 
 *elemName*<br/>
@@ -234,7 +234,7 @@ Usar essa macro para adicionar uma entrada para o [mapa de evento DHTML](#begin_
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdhtml.h
+  **Header** afxdhtml.h
 
 ##  <a name="dhtml_event_element"></a>  DHTML_EVENT_ELEMENT
 
@@ -246,7 +246,7 @@ DHTML_EVENT_ELEMENT(dispid, elemName,  memberFxn)
 
 ### <a name="parameters"></a>Parâmetros
 
-*DISPID*<br/>
+*dispid*<br/>
 A ID de expedição do evento a ser manipulado.
 
 *elemName*<br/>
@@ -265,7 +265,7 @@ Se essa macro é usada para manipular eventos de propagação, o elemento identi
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdhtml.h
+  **Header** afxdhtml.h
 
 ##  <a name="dhtml_event_onafterupdate"></a>  DHTML_EVENT_ONAFTERUPDATE
 
@@ -289,7 +289,7 @@ Usar essa macro para adicionar uma entrada para o [mapa de evento DHTML](#begin_
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdhtml.h
+  **Header** afxdhtml.h
 
 ##  <a name="dhtml_event_onbeforeupdate"></a>  DHTML_EVENT_ONBEFOREUPDATE
 
@@ -313,7 +313,7 @@ Usar essa macro para adicionar uma entrada para o [mapa de evento DHTML](#begin_
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdhtml.h
+  **Header** afxdhtml.h
 
 ##  <a name="dhtml_event_onblur"></a>  DHTML_EVENT_ONBLUR
 
@@ -337,7 +337,7 @@ Usar essa macro para adicionar uma entrada para o [mapa de evento DHTML](#begin_
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdhtml.h
+  **Header** afxdhtml.h
 
 ##  <a name="dhtml_event_onchange"></a>  DHTML_EVENT_ONCHANGE
 
@@ -361,7 +361,7 @@ Usar essa macro para adicionar uma entrada para o [mapa de evento DHTML](#begin_
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdhtml.h
+  **Header** afxdhtml.h
 
 ##  <a name="dhtml_event_onclick"></a>  DHTML_EVENT_ONCLICK
 
@@ -385,7 +385,7 @@ Usar essa macro para adicionar uma entrada para o [mapa de evento DHTML](#begin_
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdhtml.h
+  **Header** afxdhtml.h
 
 ##  <a name="dhtml_event_ondataavailable"></a>  DHTML_EVENT_ONDATAAVAILABLE
 
@@ -409,7 +409,7 @@ Usar essa macro para adicionar uma entrada para o [mapa de evento DHTML](#begin_
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdhtml.h
+  **Header** afxdhtml.h
 
 ##  <a name="dhtml_event_ondatasetchanged"></a>  DHTML_EVENT_ONDATASETCHANGED
 
@@ -433,7 +433,7 @@ Usar essa macro para adicionar uma entrada para o [mapa de evento DHTML](#begin_
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdhtml.h
+  **Header** afxdhtml.h
 
 ##  <a name="dhtml_event_ondatasetcomplete"></a>  DHTML_EVENT_ONDATASETCOMPLETE
 
@@ -457,7 +457,7 @@ Usar essa macro para adicionar uma entrada para o [mapa de evento DHTML](#begin_
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdhtml.h
+  **Header** afxdhtml.h
 
 ##  <a name="dhtml_event_ondblclick"></a>  DHTML_EVENT_ONDBLCLICK
 
@@ -481,7 +481,7 @@ Usar essa macro para adicionar uma entrada para o [mapa de evento DHTML](#begin_
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdhtml.h
+  **Header** afxdhtml.h
 
 ##  <a name="dhtml_event_ondragstart"></a>  DHTML_EVENT_ONDRAGSTART
 
@@ -505,7 +505,7 @@ Usar essa macro para adicionar uma entrada para o [mapa de evento DHTML](#begin_
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdhtml.h
+  **Header** afxdhtml.h
 
 ##  <a name="dhtml_event_onerrorupdate"></a>  DHTML_EVENT_ONERRORUPDATE
 
@@ -529,7 +529,7 @@ Usar essa macro para adicionar uma entrada para o [mapa de evento DHTML](#begin_
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdhtml.h
+  **Header** afxdhtml.h
 
 ##  <a name="dhtml_event_onfilterchange"></a>  DHTML_EVENT_ONFILTERCHANGE
 
@@ -554,7 +554,7 @@ Usar essa macro para adicionar uma entrada para o [mapa de evento DHTML](#begin_
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdhtml.h
+  **Header** afxdhtml.h
 
 ##  <a name="dhtml_event_onfocus"></a>  DHTML_EVENT_ONFOCUS
 
@@ -579,7 +579,7 @@ Usar essa macro para adicionar uma entrada para o [mapa de evento DHTML](#begin_
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdhtml.h
+  **Header** afxdhtml.h
 
 ##  <a name="dhtml_event_onhelp"></a>  DHTML_EVENT_ONHELP
 
@@ -604,7 +604,7 @@ Usar essa macro para adicionar uma entrada para o [mapa de evento DHTML](#begin_
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdhtml.h
+  **Header** afxdhtml.h
 
 ##  <a name="dhtml_event_onkeydown"></a>  DHTML_EVENT_ONKEYDOWN
 
@@ -629,7 +629,7 @@ Usar essa macro para adicionar uma entrada para o [mapa de evento DHTML](#begin_
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdhtml.h
+  **Header** afxdhtml.h
 
 ##  <a name="dhtml_event_onkeypress"></a>  DHTML_EVENT_ONKEYPRESS
 
@@ -654,7 +654,7 @@ Usar essa macro para adicionar uma entrada para o [mapa de evento DHTML](#begin_
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdhtml.h
+  **Header** afxdhtml.h
 
 ##  <a name="dhtml_event_onkeyup"></a>  DHTML_EVENT_ONKEYUP
 
@@ -679,7 +679,7 @@ Usar essa macro para adicionar uma entrada para o [mapa de evento DHTML](#begin_
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdhtml.h
+  **Header** afxdhtml.h
 
 ##  <a name="dhtml_event_onmousedown"></a>  DHTML_EVENT_ONMOUSEDOWN
 
@@ -704,7 +704,7 @@ Usar essa macro para adicionar uma entrada para o [mapa de evento DHTML](#begin_
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdhtml.h
+  **Header** afxdhtml.h
 
 ##  <a name="dhtml_event_onmousemove"></a>  DHTML_EVENT_ONMOUSEMOVE
 
@@ -729,7 +729,7 @@ Usar essa macro para adicionar uma entrada para o [mapa de evento DHTML](#begin_
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdhtml.h
+  **Header** afxdhtml.h
 
 ##  <a name="dhtml_event_onmouseout"></a>  DHTML_EVENT_ONMOUSEOUT
 
@@ -754,7 +754,7 @@ Usar essa macro para adicionar uma entrada para o [mapa de evento DHTML](#begin_
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdhtml.h
+  **Header** afxdhtml.h
 
 ##  <a name="dhtml_event_onmouseover"></a>  DHTML_EVENT_ONMOUSEOVER
 
@@ -779,7 +779,7 @@ Usar essa macro para adicionar uma entrada para o [mapa de evento DHTML](#begin_
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdhtml.h
+  **Header** afxdhtml.h
 
 ##  <a name="dhtml_event_onmouseup"></a>  DHTML_EVENT_ONMOUSEUP
 
@@ -804,7 +804,7 @@ Usar essa macro para adicionar uma entrada para o [mapa de evento DHTML](#begin_
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdhtml.h
+  **Header** afxdhtml.h
 
 ##  <a name="dhtml_event_onresize"></a>  DHTML_EVENT_ONRESIZE
 
@@ -829,7 +829,7 @@ Usar essa macro para adicionar uma entrada para o [mapa de evento DHTML](#begin_
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdhtml.h
+  **Header** afxdhtml.h
 
 ##  <a name="dhtml_event_onrowenter"></a>  DHTML_EVENT_ONROWENTER
 
@@ -854,7 +854,7 @@ Usar essa macro para adicionar uma entrada para o [mapa de evento DHTML](#begin_
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdhtml.h
+  **Header** afxdhtml.h
 
 ##  <a name="dhtml_event_onrowexit"></a>  DHTML_EVENT_ONROWEXIT
 
@@ -879,7 +879,7 @@ Usar essa macro para adicionar uma entrada para o [mapa de evento DHTML](#begin_
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdhtml.h
+  **Header** afxdhtml.h
 
 ##  <a name="dhtml_event_onselectstart"></a>  DHTML_EVENT_ONSELECTSTART
 
@@ -904,7 +904,7 @@ Usar essa macro para adicionar uma entrada para o [mapa de evento DHTML](#begin_
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdhtml.h
+  **Header** afxdhtml.h
 
 ##  <a name="dhtml_event_tag"></a>  DHTML_EVENT_TAG
 
@@ -916,7 +916,7 @@ DHTML_EVENT_TAG(dispid, elemName,  memberFxn)
 
 ### <a name="parameters"></a>Parâmetros
 
-*DISPID*<br/>
+*dispid*<br/>
 A ID de expedição do evento a ser manipulado.
 
 *elemName*<br/>
@@ -931,7 +931,7 @@ Usar essa macro para adicionar uma entrada para o [mapa de evento DHTML](#begin_
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdhtml.h
+  **Header** afxdhtml.h
 
 ##  <a name="end_dhtml_event_map"></a>  END_DHTML_EVENT_MAP
 
@@ -947,7 +947,7 @@ Deve ser usado em conjunto com [BEGIN_DHTML_EVENT_MAP](#begin_dhtml_event_map).
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdhtml.h
+  **Header** afxdhtml.h
 
 ##  <a name="begin_dhtml_url_event_map"></a>  BEGIN_DHTML_URL_EVENT_MAP
 
@@ -967,7 +967,7 @@ Colocar BEGIN_DHTML_URL_EVENT_MAP no arquivo de implementação de sua [CMultiPa
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdhtml.h
+  **Header** afxdhtml.h
 
 ##  <a name="begin_embed_dhtml_event_map"></a>  BEGIN_EMBED_DHTML_EVENT_MAP
 
@@ -979,7 +979,7 @@ BEGIN_EMBED_DHTML_EVENT_MAP(className, mapName)
 
 ### <a name="parameters"></a>Parâmetros
 
-*nome da classe*<br/>
+*className*<br/>
 O nome da classe que contém o mapa de evento. Essa classe deve derivam direta ou indiretamente [CMultiPageDHtmlDialog](../../mfc/reference/cmultipagedhtmldialog-class.md). O mapa de evento DHTML inserido deve estar dentro de um [mapa de evento DHTML e URL](#begin_dhtml_url_event_map)).
 
 *mapName*<br/>
@@ -999,7 +999,7 @@ Consulte o exemplo na [BEGIN_DHTML_URL_EVENT_MAP](#begin_dhtml_url_event_map).
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdhtml.h
+  **Header** afxdhtml.h
 
 ##  <a name="begin_url_entries"></a>  BEGIN_URL_ENTRIES
 
@@ -1011,7 +1011,7 @@ BEGIN_URL_ENTRIES(className)
 
 ### <a name="parameters"></a>Parâmetros
 
-*nome da classe*<br/>
+*className*<br/>
 O nome da classe que contém o mapa de entrada de evento de URL. Essa classe deve derivam direta ou indiretamente [CMultiPageDHtmlDialog](../../mfc/reference/cmultipagedhtmldialog-class.md). Mapa de entrada de evento a URL deve estar dentro de um [mapa de evento DHTML e URL](#begin_dhtml_url_event_map)).
 
 ### <a name="remarks"></a>Comentários
@@ -1024,7 +1024,7 @@ Consulte o exemplo na [BEGIN_DHTML_URL_EVENT_MAP](#begin_dhtml_url_event_map).
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdhtml.h
+  **Header** afxdhtml.h
 
 ##  <a name="declare_dhtml_url_event_map"></a>  DECLARE_DHTML_URL_EVENT_MAP
 
@@ -1042,7 +1042,7 @@ Um mapa de evento DHTML e a URL contém [inseridos mapas de evento DHTML](#begin
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdhtml.h
+  **Header** afxdhtml.h
 
 ##  <a name="end_dhtml_url_event_map"></a>  END_DHTML_URL_EVENT_MAP
 
@@ -1054,7 +1054,7 @@ END_DHTML_URL_EVENT_MAP(className)
 
 ### <a name="parameters"></a>Parâmetros
 
-*nome da classe*<br/>
+*className*<br/>
 O nome da classe que contém o mapa de evento. Essa classe deve derivam direta ou indiretamente [CMultiPageDHtmlDialog](../../mfc/reference/cmultipagedhtmldialog-class.md). Isso deve corresponder ao *className* nas correspondentes [BEGIN_DHTML_URL_EVENT_MAP](#begin_dhtml_url_event_map) macro.
 
 ### <a name="example"></a>Exemplo
@@ -1063,7 +1063,7 @@ Consulte o exemplo na [BEGIN_DHTML_URL_EVENT_MAP](#begin_dhtml_url_event_map).
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdhtml.h
+  **Header** afxdhtml.h
 
 ##  <a name="end_embed_dhtml_event_map"></a>  END_EMBED_DHTML_EVENT_MAP
 
@@ -1079,7 +1079,7 @@ Consulte o exemplo na [BEGIN_DHTML_URL_EVENT_MAP](#begin_dhtml_url_event_map).
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdhtml.h
+  **Header** afxdhtml.h
 
 ##  <a name="end_url_entries"></a>  END_URL_ENTRIES
 
@@ -1095,7 +1095,7 @@ Consulte o exemplo na [BEGIN_DHTML_URL_EVENT_MAP](#begin_dhtml_url_event_map).
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdhtml.h
+  **Header** afxdhtml.h
 
 ##  <a name="url_event_entry"></a>  URL_EVENT_ENTRY
 
@@ -1107,10 +1107,10 @@ URL_EVENT_ENTRY(className, url,  mapName)
 
 ### <a name="parameters"></a>Parâmetros
 
-*nome da classe*<br/>
+*className*<br/>
 O nome da classe que contém o mapa de entrada de evento de URL. Essa classe deve derivam direta ou indiretamente [CMultiPageDHtmlDialog](../../mfc/reference/cmultipagedhtmldialog-class.md). Mapa de entrada de evento a URL deve estar dentro de um [mapa de evento DHTML e URL](#begin_dhtml_url_event_map)).
 
-*URL*<br/>
+*url*<br/>
 O recurso de URL ou HTML da página.
 
 *mapName*<br/>
@@ -1128,7 +1128,7 @@ Consulte o exemplo na [BEGIN_DHTML_URL_EVENT_MAP](#begin_dhtml_url_event_map).
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdhtml.h
+  **Header** afxdhtml.h
 
 ##  <a name="end_dhtml_event_map_inline"></a>END_DHTML_EVENT_MAP_INLINE
 
@@ -1148,6 +1148,6 @@ Deve ser usado em conjunto com [BEGIN_DHTML_EVENT_MAP_INLINE](#begin_dhtml_event
 
 **Cabeçalho:** afxdhtml.h
 
-### <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte também
 
 [Macros e globais](mfc-macros-and-globals.md)

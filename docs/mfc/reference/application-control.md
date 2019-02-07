@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - application control [MFC]
 ms.assetid: c1f69f15-e0fe-4515-9f36-d63d31869deb
-ms.openlocfilehash: 55a5dcad21502e7aff7427dbdad41d25298356e7
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: e4944c1cf1114bbd009ebc62b776628ba86b3b4d
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518912"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850305"
 ---
 # <a name="application-control"></a>Controle do aplicativo
 
@@ -54,7 +54,7 @@ Um aplicativo não é encerrado se houver referências pendentes para seus objet
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho**: afxdisp.h
+**Header**: afxdisp.h
 
 ##  <a name="afxolegetmessagefilter"></a>  AfxOleGetMessageFilter
 
@@ -100,7 +100,7 @@ O usuário está no controle do aplicativo quando o usuário explicitamente abri
 
 ### <a name="requirements"></a>Requisitos
 
-**Cabeçalho**: afxdisp.h
+**Header**: afxdisp.h
 
 ##  <a name="afxolesetuserctrl"></a>  AfxOleSetUserCtrl
 
@@ -123,7 +123,7 @@ Chame essa função se outras ações em seu aplicativo devem colocar o usuário
 
 ### <a name="requirements"></a>Requisitos
 
-**Cabeçalho**: afxdisp.h
+**Header**: afxdisp.h
 
 ##  <a name="afxolelockapp"></a>  AfxOleLockApp
 
@@ -147,7 +147,7 @@ Chamar `AfxOleLockApp` de qualquer objeto que expõe as interfaces do OLE, se el
 
 ### <a name="requirements"></a>Requisitos
 
-**Cabeçalho**: afxdisp.h
+**Header**: afxdisp.h
 
 ##  <a name="afxoleunlockapp"></a>  AfxOleUnlockApp
 
@@ -169,7 +169,7 @@ Veja o exemplo de [AfxOleLockApp](#afxolelockapp).
 
 ### <a name="requirements"></a>Requisitos
 
-**Cabeçalho**: afxdisp.h
+**Header**: afxdisp.h
 
 ## <a name="afxolelockcontrol"></a>AfxOleLockControl
 
@@ -211,11 +211,6 @@ AfxOleLockControl(_T("MSCAL.Calendar"));
 ### <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** afxwin. h
-
-### <a name="see-also"></a>Consulte também
-
-[Macros e globais](mfc-macros-and-globals.md)<br/>
-[AfxOleUnlockControl](#afxoleunlockcontrol)
 
 ##  <a name="afxoleregisterserverclass"></a>  AfxOleRegisterServerClass
 
@@ -285,7 +280,7 @@ Os símbolos são preenchidos da seguinte maneira:
 
 ### <a name="requirements"></a>Requisitos
 
-**Cabeçalho**: afxdisp.h
+**Header**: afxdisp.h
 
 ##  <a name="afxoleseteditmenu"></a>  AfxOleSetEditMenu
 
@@ -327,15 +322,11 @@ Se o servidor reconhece apenas um verbo primário, torna-se o item de menu "verb
 
 Você deve ter a seguinte instrução no script de recurso de aplicativo do seu cliente (. Arquivo RC):
 
-**#include \<afxolecl.rc >**
+**#include \<afxolecl.rc>**
 
 ### <a name="requirements"></a>Requisitos
 
 **Cabeçalho**: afxole.h
-
-## <a name="see-also"></a>Consulte também
-
-[Macros e globais](../../mfc/reference/mfc-macros-and-globals.md)
 
 ## <a name="afxoleunlockcontrol"></a> AfxOleUnlockControl
 
@@ -376,8 +367,6 @@ AfxOleUnlockControl(_T("MSCAL.Calendar"));
 
 **Cabeçalho:** afxwin. h
 
-### <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte também
 
 [Macros e globais](mfc-macros-and-globals.md)<br/>
-[AfxOleLockControl](#afxolelockcontrol)
-

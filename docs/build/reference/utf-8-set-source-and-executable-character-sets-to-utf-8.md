@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - /utf-8 compiler option
 ms.assetid: f0e1f3cb-6cae-46eb-9483-04ed13d9b504
-ms.openlocfilehash: cb71e1846348adf4cf8a8eb385e6c5f7ac2bac74
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: efe37f66790832874f7ff2aa9623b07b5fba5371
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50636513"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55851629"
 ---
 # <a name="utf-8-set-source-and-executable-character-sets-to-utf-8"></a>/UTF-8 (Definir origem e executáveis conjuntos de caracteres UTF-8)
 
@@ -35,9 +35,9 @@ Por padrão, o Visual Studio detecta uma marca de ordem de byte para determinar 
 
 1. Expanda o **propriedades de configuração**, **C/C++**, **linha de comando** pasta.
 
-1. Na **opções avançadas**, adicione o **/utf-8** opção e especifique a codificação preferencial.
+1. Na **opções adicionais**, adicione o **/utf-8** opção para especificar a codificação preferencial.
 
-1. Escolher **Okey** para salvar suas alterações.
+1. Escolha **OK** para salvar suas alterações.
 
 ## <a name="see-also"></a>Consulte também
 

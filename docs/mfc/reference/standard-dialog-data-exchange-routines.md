@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - standard dialog, data exchange routines
 ms.assetid: c6adb7f3-f9af-4cc5-a9ea-315c5b60ad1a
-ms.openlocfilehash: 06153a72ce6ed6e5422022255eec333110709778
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 374618aba297fb2c055ce02f93d0c7c93b38dc06
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618303"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850171"
 ---
 # <a name="standard-dialog-data-exchange-routines"></a>Rotinas de troca dos dados da caixa de diálogo padrão
 
@@ -278,16 +278,11 @@ Uma referência a um [classe CWinFormsControl](cwinformscontrol-class.md) objeto
 
 `DDX_ManagedControl` chamadas [CWinFormsControl::CreateManagedControl](cwinformscontrol-class.md#createmanagedcontrol) para criar um controle que corresponda a ID de controle de recurso. Use `DDX_ManagedControl` para criar controles de IDs de recurso no [CDialog::OnInitDialog](cdialog-class.md#oninitdialog). Troca de dados, você não precisa usar as funções DDX/DDV com controles de Windows Forms.
 
-Para obter mais informações, consulte [como: fazer o associação de dados do DDX/DDV com o Windows Forms](../../dotnet/how-to-do-ddx-ddv-data-binding-with-windows-forms.md).
+Para obter mais informações, confira [Como: Fazer a ligação de dados DDX/DDV com o Windows Forms](../../dotnet/how-to-do-ddx-ddv-data-binding-with-windows-forms.md).
 
 ### <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** afxwinforms.h
-
-### <a name="see-also"></a>Consulte também
-
-[CWinFormsControl::CreateManagedControl](cwinformscontrol-class.md#createmanagedcontrol)<br/>
-[CDialog::OnInitDialog](cdialog-class.md#oninitdialog)
 
 ##  <a name="ddx_ipaddress"></a>  DDX_IPAddress
 
@@ -656,5 +651,7 @@ Para obter mais informações sobre DDX, consulte [troca de dados de caixa de di
 
 ## <a name="see-also"></a>Consulte também
 
-[Rotinas de validação dos dados da caixa de diálogo padrão](../../mfc/reference/standard-dialog-data-validation-routines.md)<br/>
-[Macros e globais](../../mfc/reference/mfc-macros-and-globals.md)
+[Rotinas de validação dos dados da caixa de diálogo padrão](standard-dialog-data-validation-routines.md)<br/>
+[Macros e globais](mfc-macros-and-globals.md)<br/>
+[CWinFormsControl::CreateManagedControl](cwinformscontrol-class.md#createmanagedcontrol)<br/>
+[CDialog::OnInitDialog](cdialog-class.md#oninitdialog)

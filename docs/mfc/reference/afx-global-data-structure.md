@@ -55,12 +55,12 @@ helpviewer_keywords:
 - AFX_GLOBAL_DATA structure [MFC]
 - AFX_GLOBAL_DATA constructor
 ms.assetid: c7abf2fb-ad5e-4336-a01d-260c29ed53a2
-ms.openlocfilehash: 9b6a462cf359bbd31958509c4fe7d0d71e490d11
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 0fd8143564beecccd8943f3ceba531e8697151d1
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694303"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850318"
 ---
 # <a name="afxglobaldata-structure"></a>Estrutura AFX_GLOBAL_DATA
 
@@ -108,7 +108,7 @@ struct AFX_GLOBAL_DATA
 |[AFX_GLOBAL_DATA::OnSettingChange](#onsettingchange)|Detecta o estado atual da animação de menus e a recursos de ocultar automaticamente na barra de tarefas da área de trabalho.|
 |[AFX_GLOBAL_DATA::RegisterWindowClass](#registerwindowclass)|Registra a classe de janela MFC especificada.|
 |[AFX_GLOBAL_DATA::ReleaseTaskBarRefs](#releasetaskbarrefs)|Libera as interfaces obtidas por meio de métodos GetITaskbarList e GetITaskbarList3.|
-|[AFX_GLOBAL_DATA::resume](#resume)|Reinicializa a ponteiros de função interna que pode acessar os métodos que dão suporte ao Windows [temas e estilos visuais](/windows/desktop/Controls/visual-styles-overview).|
+|[AFX_GLOBAL_DATA::Resume](#resume)|Reinicializa a ponteiros de função interna que pode acessar os métodos que dão suporte ao Windows [temas e estilos visuais](/windows/desktop/Controls/visual-styles-overview).|
 |[AFX_GLOBAL_DATA::SetLayeredAttrib](#setlayeredattrib)|Fornece uma maneira simples para chamar o Windows [SetLayeredWindowAttributes](/windows/desktop/api/winuser/nf-winuser-setlayeredwindowattributes) método.|
 |[AFX_GLOBAL_DATA::SetMenuFont](#setmenufont)|Cria a fonte lógica especificada.|
 |[AFX_GLOBAL_DATA::ShellCreateItemFromParsingName](#shellcreateitemfromparsingname)|Cria e inicializa um objeto de item do Shell de um nome de análise.|
@@ -154,11 +154,6 @@ A maioria dos dados no `AFX_GLOBAL_DATA` estrutura é inicializada quando o apli
 
 **Cabeçalho:** afxglobals. h
 
-### <a name="see-also"></a>Consulte também
-
-[Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
-[Estruturas, estilos, retornos de chamada e mapas de mensagem](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)
-
 ## <a name="bisosalphablendingsupport"></a> AFX_GLOBAL_DATA::bIsOSAlphaBlendingSupport
 
 Indica se o sistema operacional dá suporte a combinação alfa.
@@ -192,13 +187,13 @@ HRESULT D2D1MakeRotateMatrix(
 
 ### <a name="parameters"></a>Parâmetros
 
-*ângulo*<br/>
+*angle*<br/>
 O ângulo da rotação no sentido horário, em graus.
 
-*Centro*<br/>
+*center*<br/>
 O ponto sobre qual girar.
 
-*matriz*<br/>
+*matrix*<br/>
 Quando este método retorna, contém a transformação de rotação de novo. Você deve alocar armazenamento para esse parâmetro.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -218,7 +213,7 @@ BOOL DrawParentBackground(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Apropriei*<br/>
+*pWnd*<br/>
 [in] Ponteiro para uma janela do controle.
 
 *pDC*<br/>
@@ -267,7 +262,7 @@ Use o [OpenThemeData](/windows/desktop/api/uxtheme/nf-uxtheme-openthemedata) mé
 *strText*<br/>
 [in] O texto a ser desenhado.
 
-*Rect*<br/>
+*rect*<br/>
 [in] O limite da área na qual o texto especificado é desenhado.
 
 *dwFlags*<br/>
@@ -289,16 +284,6 @@ TRUE se um tema é usado para desenhar o texto especificado; Caso contrário, FA
 
 Um tema define o estilo visual de um aplicativo. Um tema não é usado para desenhar o texto, se o *hTheme* parâmetro for NULL, ou se o [DrawThemeTextEx](/windows/desktop/api/uxtheme/nf-uxtheme-drawthemetextex) não há suporte para o método, ou se [Gerenciador de janelas da área de trabalho](/windows/desktop/dwm/dwm-overview) composição está desabilitado.
 
-### <a name="see-also"></a>Consulte também
-
-[Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
-[COLORREF](/windows/desktop/gdi/colorref)<br/>
-[Partes e Estados](/windows/desktop/controls/parts-and-states)<br/>
-[CDC::DrawText](../../mfc/reference/cdc-class.md#drawtext)<br/>
-[DrawThemeTextEx](/windows/desktop/api/uxtheme/nf-uxtheme-drawthemetextex)<br/>
-[Gerenciador de janelas da área de trabalho](/windows/desktop/dwm/dwm-overview)<br/>
-[Ativar e controlar a composição do DWM](/windows/desktop/dwm/composition-ovw)
-
 ## <a name="enableaccessibilitysupport"></a> AFX_GLOBAL_DATA::EnableAccessibilitySupport
 
 Habilita ou desabilita o suporte do Microsoft Active Accessibility.
@@ -309,7 +294,7 @@ void EnableAccessibilitySupport(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>Parâmetros
 
-*bAtivar*<br/>
+*bEnable*<br/>
 [in] TRUE para habilitar o suporte de acessibilidade; FALSE para desabilitar o suporte de acessibilidade. O valor padrão é TRUE.
 
 ### <a name="remarks"></a>Comentários
@@ -317,11 +302,6 @@ void EnableAccessibilitySupport(BOOL bEnable=TRUE);
 Acessibilidade ativa é uma tecnologia baseada em COM que melhora os maneira como os programas e o trabalho de sistema operacional do Windows junto com produtos de tecnologia assistencial. Ele fornece métodos confiáveis para expor informações sobre os elementos de interface do usuário. No entanto, um modelo de acessibilidade mais recente, chamado de automação de interface do usuário da Microsoft agora está disponível. Para obter uma comparação das duas tecnologias, consulte [automação de interface do usuário e o Microsoft Active Accessibility](/dotnet/framework/ui-automation/ui-automation-and-microsoft-active-accessibility).
 
 Use o [AFX_GLOBAL_DATA::IsAccessibilitySupport](#isaccessibilitysupport) método para determinar se o suporte do Microsoft Active Accessibility está habilitado.
-
-### <a name="see-also"></a>Consulte também
-
-[Automação de interface do usuário e Acessibilidade Ativa da Microsoft](/dotnet/framework/ui-automation/ui-automation-and-microsoft-active-accessibility)<br/>
-[AFX_GLOBAL_DATA::IsAccessibilitySupport](#isaccessibilitysupport)
 
 ## <a name="excludetag"></a> AFX_GLOBAL_DATA::ExcludeTag
 
@@ -361,13 +341,13 @@ Use os símbolos na tabela a seguir para codificar um conjunto de caracteres de 
 
 |Símbolo|Caractere de escape|
 |------------|----------------------|
-|T ("\\\t")|_T("\t")|
-|T ("\\\n")|_T("\n")|
-|T ("\\\r")|_T("\r")|
-|T ("\\\b")|_T("\b")|
-|_T("LT")|T ("\<")|
-|_T("GT")|_T("&GT;")|
-|_T("AMP")|_T("&AMP;")|
+|_T("\\\t")|_T("\t")|
+|_T("\\\n")|_T("\n")|
+|_T("\\\r")|_T("\r")|
+|_T("\\\b")|_T("\b")|
+|_T("LT")|_T("\<")|
+|_T("GT")|_T(">")|
+|_T("AMP")|_T("&")|
 
 ## <a name="getcolor"></a> AFX_GLOBAL_DATA::GetColor
 
@@ -389,12 +369,6 @@ O valor de cor RGB do elemento de interface do usuário especificado. Para obter
 ### <a name="remarks"></a>Comentários
 
 Se o *nColor* parâmetro está fora do intervalo, o valor retornado será zero. Como zero é também um valor válido de RGB, é possível usar esse método para determinar se uma cor do sistema é compatível com o sistema operacional atual. Em vez disso, use o [GetSysColorBrush](/windows/desktop/api/winuser/nf-winuser-getsyscolorbrush) método, que retorna NULL se não há suporte para a cor.
-
-### <a name="see-also"></a>Consulte também
-
-[Função GetSysColor](/windows/desktop/api/winuser/nf-winuser-getsyscolor)<br/>
-[COLORREF](/windows/desktop/gdi/colorref)<br/>
-[GetSysColorBrush](/windows/desktop/api/winuser/nf-winuser-getsyscolorbrush)
 
 ## <a name="getdirect2dfactory"></a> AFX_GLOBAL_DATA::GetDirect2dFactory
 
@@ -430,16 +404,12 @@ BOOL GetNonClientMetrics(NONCLIENTMETRICS& info);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Informações de*<br/>
+*info*<br/>
 [no, out] Um [NONCLIENTMETRICS](/windows/desktop/api/winuser/ns-winuser-tagnonclientmetricsa) estrutura que contém as métricas escalonáveis associadas com a área não cliente de uma janela não minimizada.
 
 ### <a name="return-value"></a>Valor de retorno
 
 TRUE se este método for bem-sucedido; Caso contrário, FALSE.
-
-### <a name="see-also"></a>Consulte também
-
-[Estrutura NONCLIENTMETRICS](/windows/desktop/api/winuser/ns-winuser-tagnonclientmetricsa)
 
 ## <a name="gettextheight"></a> AFX_GLOBAL_DATA::GetTextHeight
 
@@ -538,10 +508,6 @@ Acessibilidade ativa da Microsoft foi a solução anterior para tornar aplicativ
 
 Use o [AFX_GLOBAL_DATA::EnableAccessibilitySupport](#enableaccessibilitysupport) método para habilitar ou desabilitar o suporte à acessibilidade ativa.
 
-### <a name="see-also"></a>Consulte também
-
-[Automação de interface do usuário e Acessibilidade Ativa da Microsoft](/dotnet/framework/ui-automation/ui-automation-and-microsoft-active-accessibility)
-
 ## <a name="isd2dinitialized"></a> AFX_GLOBAL_DATA::IsD2DInitialized
 
 Determina se o D2D foi inicializado
@@ -565,11 +531,6 @@ BOOL IsDwmCompositionEnabled();
 ### <a name="return-value"></a>Valor de retorno
 
 TRUE se [Gerenciador de janelas da área de trabalho](/windows/desktop/dwm/dwm-overview) composição é habilitado; caso contrário, FALSE.
-
-### <a name="see-also"></a>Consulte também
-
-[Gerenciador de janelas da área de trabalho](/windows/desktop/dwm/dwm-overview)<br/>
-[Ativar e controlar a composição do DWM](/windows/desktop/dwm/composition-ovw)
 
 ## <a name="ishighcontrastmode"></a> AFX_GLOBAL_DATA::IsHighContrastMode
 
@@ -743,12 +704,7 @@ O nome qualificado da classe registrado se esse método for bem-sucedida; Caso c
 
 O valor retornado é uma lista delimitada por dois-pontos do *lpszClassNamePrefix* parâmetro de cadeia de caracteres e as representações de texto hexadecimal das alças da instância atual do aplicativo; o cursor de aplicativo, que é a seta cursor cujo identificador é IDC_ARROW; e o pincel do plano de fundo. Para obter mais informações sobre como registrar as classes de janela MFC, consulte [AfxRegisterClass](../../mfc/reference/application-information-and-management.md#afxregisterclass).
 
-### <a name="see-also"></a>Consulte também
-
-[AfxRegisterClass](../../mfc/reference/application-information-and-management.md#afxregisterclass)<br/>
-[AfxThrowResourceException](../../mfc/reference/exception-processing.md#afxthrowresourceexception)
-
-## <a name="resume"></a> AFX_GLOBAL_DATA::resume
+## <a name="resume"></a> AFX_GLOBAL_DATA::Resume
 
 Reinicializa os ponteiros de função interna que pode acessar os métodos que dão suporte a temas do Windows e os estilos visuais.
 
@@ -778,7 +734,7 @@ BOOL SetLayeredAttrib(
 
 ### <a name="parameters"></a>Parâmetros
 
-*HWND*<br/>
+*hwnd*<br/>
 [in] Identificador da janela em camadas.
 
 *crKey*<br/>
@@ -793,11 +749,6 @@ BOOL SetLayeredAttrib(
 ### <a name="return-value"></a>Valor de retorno
 
 TRUE se este método for bem-sucedido; Caso contrário, FALSE.
-
-### <a name="see-also"></a>Consulte também
-
-[COLORREF](/windows/desktop/gdi/colorref)<br/>
-[SetLayeredWindowAttributes](/windows/desktop/api/winuser/nf-winuser-setlayeredwindowattributes)
 
 ## <a name="setmenufont"></a> AFX_GLOBAL_DATA::SetMenuFont
 
@@ -930,7 +881,7 @@ HRESULT ShellCreateItemFromParsingName(
 *pszPath*<br/>
 [in] Um ponteiro para um nome de exibição.
 
-*PBC*<br/>
+*pbc*<br/>
 Um ponteiro para um contexto de associação que controla a operação de análise.
 
 *riid*<br/>
@@ -943,3 +894,20 @@ Uma referência a uma ID de interface.
 
 Retorna S_OK se bem-sucedido; um valor de erro caso contrário.
 
+## <a name="see-also"></a>Consulte também
+
+[Gráfico da hierarquia](../hierarchy-chart.md)<br/>
+[Estruturas, estilos, retornos de chamada e mapas de mensagem](structures-styles-callbacks-and-message-maps.md)<br/>
+[COLORREF](/windows/desktop/gdi/colorref)<br/>
+[Partes e Estados](/windows/desktop/controls/parts-and-states)<br/>
+[CDC::DrawText](cdc-class.md#drawtext)<br/>
+[DrawThemeTextEx](/windows/desktop/api/uxtheme/nf-uxtheme-drawthemetextex)<br/>
+[Gerenciador de janelas da área de trabalho](/windows/desktop/dwm/dwm-overview)<br/>
+[Ativar e controlar a composição do DWM](/windows/desktop/dwm/composition-ovw)<br/>
+[Automação de interface do usuário e Acessibilidade Ativa da Microsoft](/dotnet/framework/ui-automation/ui-automation-and-microsoft-active-accessibility)<br/>
+[Função GetSysColor](/windows/desktop/api/winuser/nf-winuser-getsyscolor)<br/>
+[GetSysColorBrush](/windows/desktop/api/winuser/nf-winuser-getsyscolorbrush)<br/>
+[Estrutura NONCLIENTMETRICS](/windows/desktop/api/winuser/ns-winuser-tagnonclientmetricsa)<br/>
+[AfxRegisterClass](application-information-and-management.md#afxregisterclass)<br/>
+[AfxThrowResourceException](exception-processing.md#afxthrowresourceexception)<br/>
+[SetLayeredWindowAttributes](/windows/desktop/api/winuser/nf-winuser-setlayeredwindowattributes)
