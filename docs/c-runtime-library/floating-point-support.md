@@ -1,6 +1,6 @@
 ---
 title: Suporte matemático e de ponto flutuante
-ms.date: 04/06/2018
+ms.date: 01/31/2019
 f1_keywords:
 - c.math
 helpviewer_keywords:
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - math routines
 - floating-point numbers
 ms.assetid: e4fcaf69-5c8e-4854-a9bb-1f412042131e
-ms.openlocfilehash: 9e1baeb7236e5b1144b52df0bd83cc0f4a4b7796
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1d03333dee12989af5897c34ba96484930a39673
+ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50558230"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55703123"
 ---
 # <a name="math-and-floating-point-support"></a>Suporte matemático e de ponto flutuante
 
@@ -69,7 +69,6 @@ Versões de 16 bits anteriores do Microsoft C/C++ e do Microsoft Visual C++ dava
 [fesetround](../c-runtime-library/reference/fegetround-fesetround2.md)|Define o modo de arredondamento de ponto flutuante especificado
 [fetestexcept](../c-runtime-library/reference/fetestexcept1.md)|Determina quais sinalizadores do status de exceção de ponto flutuante são definidos
 [feupdateenv](../c-runtime-library/reference/feupdateenv.md)|Restaura um ambiente de ponto flutuante, em seguida, aciona exceções anteriores
-[_finite, _finitef](../c-runtime-library/reference/finite-finitef.md)|Determina se um valor é finito
 [floor, floorf, floorl](../c-runtime-library/reference/floor-floorf-floorl.md)|Calcula a base
 [fma, fmaf, fmal](../c-runtime-library/reference/fma-fmaf-fmal.md)|Calcula uma adição múltipla mesclada
 [fmax, fmaxf, fmaxl](../c-runtime-library/reference/fmax-fmaxf-fmaxl.md)|Calcula o máximo de argumentos
@@ -87,7 +86,11 @@ Versões de 16 bits anteriores do Microsoft C/C++ e do Microsoft Visual C++ dava
 [ilogb, ilogbf, ilogbl](../c-runtime-library/reference/ilogb-ilogbf-ilogbl2.md)|Calcula o expoente de base 2 do inteiro
 [imaxabs](../c-runtime-library/reference/imaxabs.md)|Calcula o valor absoluto de um tipo inteiro
 [imaxdiv](../c-runtime-library/reference/imaxdiv.md)|Calcula o quociente e o resto de dois valores inteiros
+[isfinite, _finite, _finitef](../c-runtime-library/reference/finite-finitef.md)|Determina se um valor é finito
+[isgreater, isgreaterequal, isless, islessequal, islessgreater, isunordered](../c-runtime-library/reference/floating-point-ordering.md)|Compara a ordem dos dois valores de ponto flutuante
+[isinf](../c-runtime-library/reference/isinf.md)|Determina se um valor de ponto flutuante é infinito
 [isnan, _isnan, _isnanf](../c-runtime-library/reference/isnan-isnan-isnanf.md)|Testa um valor de ponto flutuante para NaN
+[isnormal](../c-runtime-library/reference/isnormal.md)|Testa se um valor de ponto flutuante é finito e não subnormal
 [_j0, _j1, _jn](../c-runtime-library/reference/bessel-functions-j0-j1-jn-y0-y1-yn.md)|Calcula a função Bessel
 [ldexp, ldexpf, ldexpl](../c-runtime-library/reference/ldexp.md)|Calcula x*2<sup>n</sup>
 [lgamma, lgammaf, lgammal](../c-runtime-library/reference/lgamma-lgammaf-lgammal.md)|Calcula o logaritmo natural do valor absoluto da função gama
@@ -118,6 +121,7 @@ Versões de 16 bits anteriores do Microsoft C/C++ e do Microsoft Visual C++ dava
 [scalbn, scalbnf, scalbnl, scalbln, scalblnf, scalblnl](../c-runtime-library/reference/scalbn-scalbnf-scalbnl-scalbln-scalblnf-scalblnl.md)|Multiplica um número de ponto flutuante por uma potência integral de **FLT_RADIX**
 [_set_controlfp](../c-runtime-library/reference/set-controlfp.md)|Define a palavra de controle de ponto flutuante
 [_set_SSE2_enable](../c-runtime-library/reference/set-sse2-enable.md)|Habilita ou desabilita instruções SSE2
+[signbit](../c-runtime-library/reference/signbit.md)|Testa o bit de sinal de um valor de ponto flutuante
 [sin, sinf, sinl](../c-runtime-library/reference/sin-sinf-sinl.md)|Calcula o seno
 [sinh, sinhf, sinhl](../c-runtime-library/reference/sinh-sinhf-sinhl.md)|Calcula o seno hiperbólico
 [sqrt, sqrtf, sqrtl](../c-runtime-library/reference/sqrt-sqrtf-sqrtl.md)|Calcula a raiz quadrada
@@ -134,3 +138,4 @@ Versões de 16 bits anteriores do Microsoft C/C++ e do Microsoft Visual C++ dava
 ## <a name="see-also"></a>Consulte também
 
 [Rotinas de tempo de execução C universais por categoria](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[Primitivos de ponto flutuante](../c-runtime-library/reference/floating-point-primitives.md)<br/>
