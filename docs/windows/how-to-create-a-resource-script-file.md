@@ -3,6 +3,7 @@ title: 'Como: Criar um arquivo de Script de recurso (C++)'
 ms.date: 11/04/2016
 f1_keywords:
 - vc.editors.resource
+- vc.resvw.add.MFC
 helpviewer_keywords:
 - rc files [C++], creating
 - .rc files [C++], creating
@@ -14,20 +15,24 @@ helpviewer_keywords:
 - resource script files [C++], opening in text format
 - .rc files [C++], opening in text format
 - rc files [C++], opening in text format
+- rc files [C++], adding MFC support
+- .rc files [C++], adding MFC support
+- MFC, adding support to resource scripts files
+- resource script files [C++], adding MFC support
 ms.assetid: 82be732a-cdcd-4a58-8de7-976d1418f86b
-ms.openlocfilehash: f3f0adff256742c98a672e40e6b31de9bd7a84ed
-ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
+ms.openlocfilehash: 9055e0f787c238276d3134c2fa6a8afae0102433
+ms.sourcegitcommit: 5a7dbd640376e13379f5d5b2cf66c4842e5e737b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55849949"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55905674"
 ---
 # <a name="how-to-create-a-resource-script-file-c"></a>Como: Criar um arquivo de Script de recurso (C++)
 
 > [!NOTE]
 > O **Editor de recurso** não está disponível nas edições Express.
 >
-> Este material se aplica a aplicativos de área de trabalho do Windows. Projetos em linguagens .NET não usem arquivos de script de recurso. Para obter mais informações, consulte [arquivos de recurso](../windows/resource-files-visual-studio.md), para obter mais informações.
+> Este material se aplica a aplicativos de área de trabalho do Windows. Projetos em linguagens .NET não usem arquivos de script de recurso. Para obter mais informações, consulte [arquivos de recurso](../windows/resource-files-visual-studio.md).
 
 ## <a name="to-create-a-new-resource-script-rc-file"></a>Para criar um novo arquivo de script (. rc) do recurso
 
@@ -119,6 +124,34 @@ Você pode facilmente abrir o arquivo de recurso no formato de texto para exibir
 1. Na **Gerenciador de soluções**, clique com botão direito no arquivo. rc.
 
 1. No menu de atalho, escolha **abrir com...** , em seguida, selecione **Editor de código-fonte (texto)**.
+
+## <a name="to-add-mfc-support-to-resource-script-files"></a>Para adicionar suporte MFC aos arquivos de script de recurso
+
+Normalmente, quando você cria um aplicativo MFC para Windows usando o [Assistente de aplicativo MFC](../mfc/reference/mfc-application-wizard.md), o assistente gera um conjunto básico de arquivos (incluindo um arquivo de script (. rc) do recurso) que contém os principais recursos do Microsoft Foundation classes (MFC). No entanto, se você estiver editando um arquivo. RC para um aplicativo do Windows que não é baseado no MFC, os seguintes recursos específicos da estrutura MFC não estão disponíveis:
+
+- Assistentes de código do MFC
+
+- Cadeias de caracteres de prompt do menu
+
+- Listar o conteúdo para controles de caixa de combinação
+
+- Hospedagem de controles ActiveX
+
+No entanto, você pode adicionar suporte MFC aos arquivos. rc existentes que não o tiver.
+
+> [!NOTE]
+> Estas etapas exigem o MFC.
+
+### <a name="to-add-mfc-support-to-rc-files"></a>Para adicionar suporte MFC aos arquivos. rc
+
+1. Abra o arquivo de script de recurso.
+
+1. Na [exibição de recurso](../windows/resource-view-window.md), realce a pasta de recursos (por exemplo, RC).
+
+1. No [janela de propriedades](/visualstudio/ide/reference/properties-window), defina o **modo MFC** propriedade a ser **verdadeiro**.
+
+   > [!NOTE]
+   > Além de definir esse sinalizador, o arquivo. rc deve fazer parte de um projeto MFC. Por exemplo, apenas configurando **modo MFC** à **verdadeiro** em um arquivo. rc em Win32 project não dará os recursos do MFC.
 
 ## <a name="requirements"></a>Requisitos
 

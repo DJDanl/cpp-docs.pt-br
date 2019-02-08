@@ -1,5 +1,5 @@
 ---
-title: Criando um Menu (C++)
+title: Criando Menus (C++)
 ms.date: 11/04/2016
 f1_keywords:
 - vc.editors.menu
@@ -10,15 +10,28 @@ helpviewer_keywords:
 - menus [C++], adding items
 - commands [C++], adding to menus
 - menu items, adding to menus
+- submenus
+- submenus [C++], creating
+- menus [C++], creating
+- context menus [C++], Menu Editor
+- pop-up menus [C++], creating
+- menus [C++], pop-up
+- menus [C++], creating
+- shortcut menus [C++], creating
+- pop-up menus [C++], displaying
+- pop-up menus [C++], connecting to applications
+- context menus [C++], connecting to applications
+- shortcut menus [C++], connecting to applications
+- pop-up menus
 ms.assetid: 66f94448-9b97-4b73-bf97-10d4bf87cc65
-ms.openlocfilehash: 438480032f1fe9208e406b4ee499267e42148a48
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
+ms.openlocfilehash: e3b3cc58b82f68c55ac98601fd11775422c901e5
+ms.sourcegitcommit: 5a7dbd640376e13379f5d5b2cf66c4842e5e737b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55702798"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55905765"
 ---
-# <a name="creating-a-menu-c"></a>Criando um Menu (C++)
+# <a name="creating-menus-c"></a>Criando Menus (C++)
 
 > [!NOTE]
 > O **janela recursos** não está disponível nas edições Express.
@@ -45,6 +58,14 @@ Para obter informações sobre como adicionar recursos a projetos gerenciados, c
 
    > [!NOTE]
    > Para criar um único item de menu na barra de menus, defina as **pop-up** propriedade **falso**.
+
+## <a name="to-create-a-submenu"></a>Para criar um submenu
+
+1. Selecione o comando de menu para o qual você deseja criar um submenu.
+
+1. No **Novo Item** caixa que aparece à direita, digite o nome do novo comando de menu. Este novo comando aparecerão primeiro no menu do submenu.
+
+1. Adicione comandos de menu adicionais ao menu do submenu.
 
 ## <a name="to-insert-a-new-menu-between-existing-menus"></a>Para inserir um novo menu entre menus existentes
 
@@ -82,6 +103,53 @@ Clique com botão direito na barra de menus e escolha **Inserir novo** no menu d
 1. Pressione **Enter** para concluir o comando de menu.
 
    A nova caixa de item é selecionada para que você possa criar comandos de menu adicionais.
+
+## <a name="to-create-pop-up-menus"></a>Para criar menus pop-up
+
+[Menus pop-up](../mfc/menus-mfc.md) comandos de exibição usado com frequência. Eles podem ser sensíveis ao contexto para o local do ponteiro. Usando menus pop-up em seu aplicativo requer o próprio menu de criação e, em seguida, conectá-lo ao código do aplicativo.
+
+Depois de criar o recurso de menu, o código do aplicativo precisa carregar o recurso de menu e usar [TrackPopupMenu](/windows/desktop/api/winuser/nf-winuser-trackpopupmenu) para fazer com que o menu seja exibido. Depois que o usuário foi descartado no menu pop-up selecionando fora dela, ou tiver selecionado um comando, o que a função retornará. Se o usuário escolhe um comando, essa mensagem de comando será enviada para a janela cujo identificador foi passado.
+
+### <a name="to-create-a-pop-up-menu"></a>Para criar um menu pop-up
+
+1. [Criar um menu](../windows/creating-a-menu.md) com um título vazio (não fornecem uma **legenda**).
+
+1. [Adicionar um comando de menu ao menu novo](../windows/adding-commands-to-a-menu.md). Mover para o primeiro comando de menu abaixo do título de menu em branco (a legenda temporária diz `Type Here`). Digite um **legenda** e quaisquer outras informações.
+
+   Repita esse processo para quaisquer outros comandos de menu no menu pop-up.
+
+1. Salve o recurso de menu.
+
+### <a name="to-connect-a-pop-up-menu-to-your-application"></a>Para se conectar a um menu pop-up para seu aplicativo
+
+1. Adicione um manipulador de mensagens para WM_CONTEXTMENU (por exemplo). Para obter mais informações, consulte [mapeando mensagens para funções](../mfc/reference/mapping-messages-to-functions.md).
+
+1. Adicione o seguinte código para o manipulador de mensagens:
+
+    ```cpp
+    CMenu menu;
+    VERIFY(menu.LoadMenu(IDR_MENU1));
+    CMenu* pPopup = menu.GetSubMenu(0);
+    ASSERT(pPopup != NULL);
+    pPopup->TrackPopupMenu(TPM_LEFTALIGN | TPM_RIGHTBUTTON, point.x, point.y, AfxGetMainWnd());
+    ```
+
+   > [!NOTE]
+   > O [CPoint](../atl-mfc-shared/reference/cpoint-class.md) passados pela mensagem manipulador está em coordenadas da tela.
+
+   > [!NOTE]
+   > Conectando um menu pop-up ao seu aplicativo requer o MFC.
+
+### <a name="to-view-a-menu-resource-as-a-pop-up-menu"></a>Para exibir um recurso de menu como um menu pop-up
+
+Normalmente, quando você estiver trabalhando na **Menu** editor, um recurso de menu é exibido como uma barra de menus. No entanto, você pode ter recursos de menu que são adicionados à barra de menus do aplicativo enquanto o programa está em execução.
+
+O menu de atalho e escolha **exibir como Popup** no menu de atalho.
+
+   Essa opção é apenas uma preferência de exibição e não modificará seu menu.
+
+   > [!NOTE]
+   > Para alterar de volta para o modo de exibição da barra de menus, clique em **exibir como Popup** novamente (que remove a marca de seleção e retorna o modo de exibição da barra de menus).
 
 ## <a name="requirements"></a>Requisitos
 
