@@ -1,13 +1,13 @@
 ---
 title: Aplicativos UWP, o Windows Runtime e o tempo de execução do C
-ms.date: 11/04/2016
+ms.date: 02/02/2019
 ms.assetid: 356d6d8d-76ee-4181-9ad0-6f24b2fede38
-ms.openlocfilehash: ea6e3e5017fcbef997a1e844e9f84e9c385bd31d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ae57390dc916116b8d799b9f937ff882abaef970
+ms.sourcegitcommit: 63c072f5e941989636f5a2b13800b68bb7129931
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50441126"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55763877"
 ---
 # <a name="uwp-apps-the-windows-runtime-and-the-c-run-time"></a>Aplicativos UWP, o Windows Runtime e o tempo de execução do C
 
@@ -24,10 +24,6 @@ O Windows Runtime não tem suporte para os seguintes recursos de CRT:
 - Maioria das funções de caracteres multibyte e cadeia de caracteres.
 
    No entanto, há suporte para texto ANSI e Unicode.
-
-- Aplicativos de console e argumentos de linha de comando.
-
-   Entretanto, aplicativos de área de trabalho tradicionais ainda dão suporte ao console e a argumentos de linha de comando.
 
 - Variáveis de ambiente.
 
@@ -48,3 +44,4 @@ Para obter uma lista completa das funções do CRT que não estão disponíveis 
 [Compatibilidade](../c-runtime-library/compatibility.md)<br/>
 [Funções CRT sem suporte no Windows Runtime](../c-runtime-library/windows-runtime-unsupported-crt-functions.md)<br/>
 [Rotinas de tempo de execução C universais por categoria](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[Criar um aplicativo de console da Plataforma Universal do Windows](/windows/uwp/launch-resume/console-uwp)
