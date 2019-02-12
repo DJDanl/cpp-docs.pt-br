@@ -1,6 +1,6 @@
 ---
 title: Macros e funções globais para modelos de consumidor de banco de dados OLE
-ms.date: 11/04/2016
+ms.date: 02/11/2019
 f1_keywords:
 - vc.templates.ole
 - ATL.AtlTraceErrorRecords
@@ -100,12 +100,12 @@ helpviewer_keywords:
 - END_PARAM_MAP macro
 - SET_PARAM_TYPE macro
 ms.assetid: 8765eb7b-32dd-407c-bacf-8890ef959837
-ms.openlocfilehash: 4254c2637c4ed937a3196310ffa83c48504911af
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 1826f674e219b850e62fdae07b3a97e8b8cf2d48
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51557109"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56148992"
 ---
 # <a name="macros-and-global-functions-for-ole-db-consumer-templates"></a>Macros e funções globais para modelos de consumidor de banco de dados OLE
 
@@ -198,11 +198,7 @@ inline void AtlTraceErrorRecords(HRESULT hrErr = S_OK);
 
 #### <a name="remarks"></a>Comentários
 
-Se *hErr* não for S_OK, `AtlTraceErrorRecords` Despeja as informações de OLE DB registro de erro para o dispositivo de despejo (o **depurar** guia da janela de saída ou um arquivo). As informações de registro de erro, que são obtidas do provedor, incluem o número de linhas, fonte, descrição, arquivo de Ajuda, contexto e GUID para cada entrada de registro de erro. `AtlTraceErrorRecords` Essas informações apenas em compilações de depuração de despejos de memória. Em compilações de versão, é um stub vazio que é otimizado out.
-
-#### <a name="see-also"></a>Consulte também
-
-[Classe CDBErrorInfo](../../data/oledb/cdberrorinfo-class.md)
+Se *hErr* não for S_OK, `AtlTraceErrorRecords` Despeja as informações de OLE DB registro de erro para o dispositivo de despejo (o **depurar** guia da janela de saída ou um arquivo). As informações de registro de erro, que são obtidas do provedor, incluem o número de linhas, fonte, descrição, arquivo de Ajuda, contexto e GUID para cada entrada de registro de erro. `AtlTraceErrorRecords` Essas informações apenas em compilações de depuração de despejos de memória. Em compilações de versão, é um stub vazio que é otimizado out. Para obter mais informações, consulte [classe CDBErrorInfo](../../data/oledb/cdberrorinfo-class.md).
 
 ### <a name="begin_accessor"></a> BEGIN_ACCESSOR
 
@@ -669,10 +665,7 @@ END_COLUMN_MAP()
 };
 ```
 
-#### <a name="see-also"></a>Consulte também
-
-[Classe CBookmark](../../data/oledb/cbookmark-class.md)<br/>
-[DBPROP_BOOKMARKS](https://docs.microsoft.com/previous-versions/windows/desktop/ms709728(v=vs.85))
+Para obter mais informações, consulte [usando indicadores](using-bookmarks.md) e [classe CBookmark](../../data/oledb/cbookmark-class.md).
 
 ### <a name="column_entry"></a> COLUMN_ENTRY
 
@@ -1071,7 +1064,7 @@ COLUMN_ENTRY_TYPE_SIZE(nOrdinal, wType, nLength, data)
 
 Essa macro é uma variante especializada do [COLUMN_ENTRY](../../data/oledb/column-entry.md) macro que fornece um meio de especificar o tamanho dos dados e o tipo.
 
-### <a name="column_name"></a> NOME DA COLUNA
+### <a name="column_name"></a> COLUMN_NAME
 
 Representa uma associação no conjunto de linhas para a coluna específica no conjunto de linhas. Semelhante ao [COLUMN_ENTRY](../../data/oledb/column-entry.md), a menos que essa macro usa o nome da coluna em vez do número de coluna.
 
