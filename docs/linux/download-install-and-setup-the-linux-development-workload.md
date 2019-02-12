@@ -1,14 +1,14 @@
 ---
 title: Instalar uma carga de trabalho do Linux para C++ no Visual Studio
 description: Descreve como baixar, instalar e configurar a carga de trabalho do Linux para C++ no Visual Studio.
-ms.date: 10/12/2018
+ms.date: 02/06/2019
 ms.assetid: e11b40b2-f3a4-4f06-b788-73334d58dfd9
-ms.openlocfilehash: 2fa4036ece6dd161c73a5176740870c5593f4669
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c01c8ddeeb8439a7610c0f6c7c11b608ab3675d8
+ms.sourcegitcommit: 63c072f5e941989636f5a2b13800b68bb7129931
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50441919"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55763876"
 ---
 # <a name="download-install-and-setup-the-linux-workload"></a>Baixar, instalar e configurar a carga de trabalho do Linux
 
@@ -27,7 +27,7 @@ ms.locfileid: "50441919"
 
 ## <a name="options-for-creating-a-linux-environment"></a>Opções para criar um ambiente Linux
 
-Se você ainda não tem um computador Linux, é possível criar uma máquina virtual do Linux no Azure. Para obter mais informações, consulte [Início Rápido: criar uma máquina virtual Linux no portal do Azure](/azure/virtual-machines/linux/quick-create-portal).
+Se você ainda não tem um computador Linux, é possível criar uma máquina virtual do Linux no Azure. Para obter mais informações, confira [Início Rápido: Criar uma máquina virtual do Linux no portal do Azure](/azure/virtual-machines/linux/quick-create-portal).
 
 Outra opção, no Windows 10, é ativar o Subsistema do Windows para Linux. Para obter informações, consulte [Guia de Instalação do Windows 10](/windows/wsl/install-win10).
 
@@ -53,7 +53,7 @@ O computador de destino que executa o Fedora usa o instalador do pacote **dnf**.
 
 1. Em um prompt de shell no seu computador Linux, execute:
 
-   `sudo dnf install openssh-server g++ gdb gdbserver zip`
+   `sudo dnf install openssh-server gcc-g++ gdb gdb-gdbserver zip`
 
    Sua senha raiz pode ser solicitada devido ao comando sudo.  Nesse caso, insira-a e continue. Depois de concluídos, os serviços e ferramentas necessários são instalados.
 
