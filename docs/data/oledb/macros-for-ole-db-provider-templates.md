@@ -1,6 +1,6 @@
 ---
 title: Macros para modelos de provedor de banco de dados OLE
-ms.date: 11/04/2016
+ms.date: 02/11/2019
 f1_keywords:
 - vc.templates.ole
 - BEGIN_PROPERTY_SET
@@ -51,12 +51,12 @@ helpviewer_keywords:
 - END_SCHEMA_MAP macro
 - SCHEMA_ENTRY macro
 ms.assetid: 909482c5-64ab-4e52-84a9-1c07091db183
-ms.openlocfilehash: 8fbad23d49490f42416dd7e7234776ff1c5ac7bf
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: a2a5bf14da1a39439db67a4fb062fd06763754fc
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51557045"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56151111"
 ---
 # <a name="macros-for-ole-db-provider-templates"></a>Macros para modelos de provedor de banco de dados OLE
 
@@ -359,7 +359,7 @@ PROVIDER_COLUMN_ENTRY (name, ordinal, member)
 *name*<br/>
 [in] O nome da coluna.
 
-*Ordinal*<br/>
+*ordinal*<br/>
 [in] O número da coluna. A menos que a coluna for uma coluna de indicador, o número da coluna não deve ser 0.
 
 *member*<br/>
@@ -380,10 +380,10 @@ PROVIDER_COLUMN_ENTRY_FIXED(name, ordinal, dbtype, member)
 *name*<br/>
 [in] O nome da coluna.
 
-*Ordinal*<br/>
+*ordinal*<br/>
 [in] O número da coluna. A menos que a coluna for uma coluna de indicador, o número da coluna não deve ser 0.
 
-*DbType*<br/>
+*dbtype*<br/>
 [in] O tipo de dados no [DBTYPE](https://docs.microsoft.com/previous-versions/windows/desktop/ms711251(v=vs.85)).
 
 *member*<br/>
@@ -412,7 +412,7 @@ PROVIDER_COLUMN_ENTRY_GN (name, ordinal, flags, colSize, dbtype, precision, scal
 *name*<br/>
 [in] O nome da coluna.
 
-*Ordinal*<br/>
+*ordinal*<br/>
 [in] O número da coluna. A menos que a coluna for uma coluna de indicador, o número da coluna não deve ser 0.
 
 *flags*<br/>
@@ -421,13 +421,13 @@ PROVIDER_COLUMN_ENTRY_GN (name, ordinal, flags, colSize, dbtype, precision, scal
 *colSize*<br/>
 [in] O tamanho da coluna.
 
-*DbType*<br/>
+*dbtype*<br/>
 [in] Indica o tipo de dados do valor. Consulte a `wType` descrição na [estruturas DBBINDING](https://docs.microsoft.com/previous-versions/windows/desktop/ms716845(v=vs.85)).
 
 *precision*<br/>
 [in] Indica a precisão a ser usado ao obter dados, se *dbType* é DBTYPE_NUMERIC ou DBTYPE_DECIMAL. Consulte a `bPrecision` descrição na [estruturas DBBINDING](https://docs.microsoft.com/previous-versions/windows/desktop/ms716845(v=vs.85)).
 
-*Escala*<br/>
+*scale*<br/>
 [in] Indica a escala a ser usado ao obter dados, se o dbType é DBTYPE_NUMERIC ou DBTYPE_DECIMAL. Consulte a `bScale` descrição na [estruturas DBBINDING](https://docs.microsoft.com/previous-versions/windows/desktop/ms716845(v=vs.85)).
 
 *guid*<br/>
@@ -452,7 +452,7 @@ PROVIDER_COLUMN_ENTRY_LENGTH(name, ordinal, size, member)
 *name*<br/>
 [in] O nome da coluna.
 
-*Ordinal*<br/>
+*ordinal*<br/>
 [in] O número da coluna. A menos que a coluna for uma coluna de indicador, o número da coluna não deve ser 0.
 
 *size*<br/>
@@ -484,7 +484,7 @@ PROVIDER_COLUMN_ENTRY_STR(name, ordinal, member)
 *name*<br/>
 [in] O nome da coluna.
 
-*Ordinal*<br/>
+*ordinal*<br/>
 [in] O número da coluna. A menos que a coluna for uma coluna de indicador, o número da coluna não deve ser 0.
 
 *member*<br/>
@@ -513,10 +513,10 @@ PROVIDER_COLUMN_ENTRY_TYPE_LENGTH(name, ordinal, dbtype, size, member)
 *name*<br/>
 [in] O nome da coluna.
 
-*Ordinal*<br/>
+*ordinal*<br/>
 [in] O número da coluna. A menos que a coluna for uma coluna de indicador, o número da coluna não deve ser 0.
 
-*DbType*<br/>
+*dbtype*<br/>
 [in] O tipo de dados no [DBTYPE](https://docs.microsoft.com/previous-versions/windows/desktop/ms711251(v=vs.85)).
 
 *size*<br/>
@@ -544,7 +544,7 @@ PROVIDER_COLUMN_ENTRY_WSTR(name, ordinal, member)
 *name*<br/>
 [in] O nome da coluna.
 
-*Ordinal*<br/>
+*ordinal*<br/>
 [in] O número da coluna. A menos que a coluna for uma coluna de indicador, o número da coluna não deve ser 0.
 
 *member*<br/>
@@ -583,9 +583,9 @@ Indica o fim do mapa de esquema.
 END_SCHEMA_MAP()
 ```
 
-#### <a name="see-also"></a>Consulte também
+#### <a name="remarks"></a>Comentários
 
-[Classe IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md)
+Para obter mais informações, consulte [classe IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md).
 
 ### <a name="schema_entry"></a> SCHEMA_ENTRY
 

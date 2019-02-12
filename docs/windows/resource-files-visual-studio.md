@@ -1,6 +1,8 @@
 ---
 title: Arquivos de recurso (C++)
 ms.date: 11/04/2016
+f1_keywords:
+- vc.editors.resource
 helpviewer_keywords:
 - resources [C++]
 - .rc files [C++]
@@ -14,13 +16,20 @@ helpviewer_keywords:
 - resource files [C++], types of
 - .rct files [C++]
 - resource script files [C++], unsupported types
+- manifest resources [C++]
+- resources [C++], manifest
+- resources [C++], opening
+- file types [C++], for resources
+- resources [C++], editing
+- files [C++], editable types
+- resource editing
 ms.assetid: 4d2b6fcc-07cf-4289-be87-83a60f69533c
-ms.openlocfilehash: 9ad36f19185bc5b3430e7644ef55164d3cb0839a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 65500644b70841f372edcc6911edefc6c7b9f432
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50461685"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56152684"
 ---
 # <a name="resource-files-c"></a>Arquivos de recurso (C++)
 
@@ -41,7 +50,7 @@ O termo "arquivo de recurso" pode se referir a um número de tipos de arquivo, i
 
 - Um arquivo de cabeçalho gerado pelo ambiente de desenvolvimento, por exemplo Resource. h, que é chamado de um arquivo. rc.
 
-Recursos também podem ser encontrados em [outros tipos de arquivo](../windows/editable-file-types-for-resources.md) como arquivos .exe,. dll e. res. Você pode trabalhar com recursos e arquivos de recurso de dentro de seu projeto e com aqueles que não fazem parte do projeto atual. Você também pode trabalhar com arquivos de recurso que não foram criados no ambiente de desenvolvimento do Visual Studio. Por exemplo, você pode:
+Recursos também são encontrados em [outros tipos de arquivo](../windows/editable-file-types-for-resources.md) como arquivos .exe,. dll e. res. Você pode trabalhar com recursos e arquivos de recurso em seu projeto e aqueles que não fazem parte do projeto atual. Você também pode trabalhar com arquivos de recursos que não foram criados no ambiente de desenvolvimento do Visual Studio. Por exemplo, você pode:
 
 - Trabalhar com arquivos de recursos aninhados e incluídas condicionalmente.
 
@@ -51,31 +60,70 @@ Recursos também podem ser encontrados em [outros tipos de arquivo](../windows/e
 
 - Inclua compartilhados ou somente leitura identificadores (símbolos) que não podem ser modificados pelo ambiente de desenvolvimento.
 
-- Inclua recursos em seu arquivo executável (.exe) que não exigem a edição (ou que você não deseja ser editados) durante o seu projeto atual, como recursos que são compartilhados entre vários projetos.
+- Inclua recursos em seu arquivo executável (.exe) que não exigem a edição (ou que não devem ser editados) durante o seu projeto atual, como recursos compartilhados entre vários projetos.
 
 - Inclua tipos de recursos não suportados pelo ambiente de desenvolvimento.
 
-Esta seção abrange:
+Você pode abrir os seguintes tipos de arquivos e editar os recursos que eles contêm:
 
-- [Criando um novo arquivo de Script de recurso](../windows/how-to-create-a-resource-script-file.md)
+|Nome do arquivo|Descrição|
+|---------------|-----------------|
+|.rc|Arquivos de script de recurso.|
+|.rct|Arquivos de modelo de recurso.|
+|.res|Arquivos de recursos.|
+|.resx|Arquivos de recurso gerenciado.|
+|.exe|Arquivos executáveis.|
+|.dll|Arquivos de biblioteca de vínculo dinâmico.|
+|. bmp,. ico,. dib e. cur|Arquivos de bitmap, ícone, barra de ferramentas e cursor.|
 
-- [Criar um novo recurso](../windows/how-to-create-a-resource.md)
+Ambiente do Visual Studio funciona com e afeta os arquivos mostrados na tabela a seguir durante a sessão de edição de recurso:
 
-- [Exibir recursos em um arquivo de Script de recurso](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md)
+|Nome do arquivo|Descrição|
+|---------------|-----------------|
+|Resource.h|Arquivo de cabeçalho gerado pelo ambiente de desenvolvimento. contém definições de símbolo. (Inclui esse arquivo no controle de origem).|
+|Filename.aps|Versão binária do arquivo de script de recurso atual; usado para o carregamento rápido.<br /><br /> Os editores de recursos não lidos diretamente os arquivos. rc ou Resource. h. O compilador de recurso compila-os em arquivos de .aps, que são consumidos pelos editores de recursos. Esse arquivo é uma etapa de compilação e armazena apenas dados simbólicos. Como com um normal de processo de compilação, as informações que não são simbólicas (por exemplo, comentários) serão descartadas durante o processo de compilação. Sempre que o arquivo .aps obtém fora de sincronia com o arquivo. RC, o arquivo. rc for gerado novamente (por exemplo, quando você salva, o editor de recurso substitui o arquivo. RC e o arquivo Resource h). Todas as alterações para os próprios recursos permanecerão incorporadas no arquivo. RC, mas comentários sempre serão perdidos depois que o arquivo. RC é substituído. Para obter informações sobre como preservar comentários, consulte [incluindo recursos em tempo de compilação](../windows/how-to-include-resources-at-compile-time.md). (Normalmente, você não deve incluir o arquivo .aps no controle de origem).|
+|.rc|Arquivo de script de recurso que contém um script para os recursos em seu projeto atual. Esse arquivo é substituído pelo arquivo .aps sempre que você salva. (Inclui esse arquivo no controle de origem).|
 
-- [Abrir um arquivo de Script de recurso no formato de texto](../windows/how-to-open-a-resource-script-file-in-text-format.md)
+Esta seção aborda como:
 
-- [Incluindo recursos em tempo de compilação](../windows/how-to-include-resources-at-compile-time.md)
+- [Criar recursos](../windows/how-to-create-a-resource-script-file.md)
 
-- [Copiando recursos](../windows/how-to-copy-resources.md)
+- [Gerenciar recursos](../windows/how-to-copy-resources.md)
 
-- [Usando modelos de recursos (. rct)](../windows/how-to-use-resource-templates.md)
+- [Incluir recursos em tempo de compilação](../windows/how-to-include-resources-at-compile-time.md)
 
-- [Importar e exportar recursos](../windows/how-to-import-and-export-resources.md)
+## <a name="manifest-resources"></a>Recursos do manifesto
 
-- [Tipos de arquivo editáveis para recursos](../windows/editable-file-types-for-resources.md)
+Em projetos do C++ da área de trabalho, recursos de manifesto são arquivos XML que descrevem as dependências que um aplicativo usa. Por exemplo, no Visual Studio, o arquivo de manifesto gerado pelo assistente MFC define quais do controle comum do Windows DLLs o aplicativo deve usar, versão 5.0 ou 6.0:
 
-- [Arquivos afetados pela edição de recurso](../windows/files-affected-by-resource-editing.md)
+```xml
+<description>Your app description here</description>
+<dependency>
+    <dependentAssembly>
+        <assemblyIdentity
+            type="win32"
+            name="Microsoft.Windows.Common-Controls"
+            version="6.0.0.0"
+            processorArchitecture="X86"
+            publicKeyToken="6595b64144ccf1df"
+            language="*"
+        />
+    </dependentAssembly>
+</dependency>
+```
+
+Para um aplicativo do Windows XP ou Windows Vista, o recurso de manifesto não só especifica que o aplicativo usar a versão mais atual dos controles comuns do Windows, v 6.0, como visto acima, mas ele também dá suporte a [controle Syslink](/windows/desktop/Controls/syslink-overview).
+
+Para exibir a versão e digite as informações contidas em um recurso de manifesto, você pode abrir o arquivo em um visualizador XML ou no editor de texto do Visual Studio. Se você abrir um recurso de manifesto da [exibição de recurso](../windows/resource-view-window.md), o recurso será aberto no formato binário. Para exibir o conteúdo de um recurso de manifesto em um formato mais visível, você deve abrir o recurso a partir **Gerenciador de soluções**.
+
+Para abrir um recurso de manifesto, escolha as seguintes etapas:
+
+- Editor de texto, com o projeto aberto no **Gerenciador de soluções**, expanda o **arquivos de recurso** pasta e clique duas vezes o arquivo. manifest.
+
+- Para outro editor, na **Gerenciador de soluções**, o arquivo. manifest com o botão direito e escolha **abrir com...**  no menu de atalho. No **abrir com** caixa de diálogo, especifique o editor que você gostaria de usar e selecione **abrir**.
+
+> [!NOTE]
+> Você pode ter apenas um recurso de manifesto por módulo.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -85,4 +133,5 @@ Win32
 
 [Editores de recursos](../windows/resource-editors.md)<br/>
 [Trabalhando com arquivos de recurso](../windows/working-with-resource-files.md)<br/>
-[Menus e outros recursos](https://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)
+[Menus e outros recursos](https://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)<br/>
+[Controles](../mfc/controls-mfc.md)<br/>

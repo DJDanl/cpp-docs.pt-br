@@ -20,15 +20,17 @@ helpviewer_keywords:
 - directories [C++], specifying include paths for resources
 - include files [C++], specifying for resources
 - resources [C++], including in projects
+- symbols [C++], finding
+- resources [C++], searching for symbols
 ms.assetid: 357e93c2-0a29-42f9-806f-882f688b8924
-ms.openlocfilehash: 52145d2a656a7cac0d07a43ceaf298fbebb5ad40
-ms.sourcegitcommit: 63c072f5e941989636f5a2b13800b68bb7129931
+ms.openlocfilehash: 8df5a8ee6583b1e9f5c50a428b69babb0d56961b
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55764071"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56152372"
 ---
-# <a name="how-to-include-resources-at-compile-time"></a>Como: Incluir recursos em tempo de compilação
+# <a name="how-to-include-resources-at-compile-time-c"></a>Como: Incluir recursos em tempo de compilação (C++)
 
 Normalmente, é fácil e conveniente para trabalhar com a organização padrão de todos os recursos em um arquivo de script (. rc) do recurso. No entanto, você pode adicionar recursos em outros arquivos ao seu projeto atual em tempo de compilação listando-os no **diretivas de tempo de compilação** caixa de **inclui recursos** caixa de diálogo.
 
@@ -42,7 +44,7 @@ Há várias razões para colocar recursos em um arquivo que não seja o arquivo.
 
 - Para incluir recursos que estão sendo usados por vários projetos diferentes ou que fazem parte de um sistema de controle de versão do código-fonte e, portanto, deve existir em um local central onde as modificações afetará todos os projetos.
 
-- Para incluir recursos (como recursos RCDATA) que estão em um formato personalizado. Recursos RCDATA podem ter requisitos especiais. Por exemplo, você não pode usar uma expressão como um valor para o campo de nameID. Consulte a documentação do SDK do Windows para obter mais informações.
+- Para incluir recursos (como recursos RCDATA) que estão em um formato personalizado. Recursos RCDATA podem ter requisitos especiais. Por exemplo, você não pode usar uma expressão como um valor para o campo de nameID. Para obter mais informações, confira a documentação do SDK do Windows.
 
 Se você tiver seções em seus arquivos. rc existentes que atendem a qualquer uma dessas condições, você deve colocar as seções em um ou mais arquivos. rc separam e incluem-los no seu projeto usando o **inclui recursos** caixa de diálogo. O *Projectname*arquivo .rc2 criado no subdiretório \res de um novo projeto é usado para essa finalidade.
 
@@ -59,7 +61,7 @@ Para abrir o **recurso inclui** do arquivo na caixa de diálogo, clique com bot�
 > [!NOTE]
 > Entradas nessas caixas de texto aparecem no arquivo. rc marcado pelo `TEXTINCLUDE 1`, `TEXTINCLUDE 2`, e `TEXTINCLUDE 3` , respectivamente. Para obter mais informações, consulte [TN035: Usando vários arquivos de recurso e arquivos de cabeçalho com o Visual C++](../mfc/tn035-using-multiple-resource-files-and-header-files-with-visual-cpp.md).
 
-Depois de fazer alterações em seu arquivo de recurso usando o **inclui recursos** caixa de diálogo, você precisa fechar o arquivo. RC e, em seguida, reabri-lo para que as alterações entrem em vigor. Para obter mais informações, consulte [incluindo recursos em tempo de compilação](../windows/how-to-include-resources-at-compile-time.md).
+Depois de fazer alterações em seu arquivo de recurso usando o **inclui recursos** caixa de diálogo, você precisa fechar o arquivo. RC e, em seguida, reabri-lo para que as alterações entrem em vigor.
 
 Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) no guia do desenvolvedor do .NET Framework.
 
@@ -73,11 +75,27 @@ Para obter informações sobre como adicionar recursos a projetos gerenciados, c
 
    Os recursos em arquivos incluídos dessa maneira são feitos uma parte do seu arquivo executável no tempo de compilação. Eles não estão diretamente disponíveis para edição ou modificação quando você estiver trabalhando em um arquivo. rc principal do seu projeto. Abra arquivos. rc incluído separadamente. Todos os arquivos que são incluídos, mas não tem uma extensão. rc não será editáveis por editores de recursos.
 
-## <a name="to-specify-include-directories-for-a-specific-resource-rc-file-c"></a>Para especificar diretórios de inclusão para um recurso específico (arquivo. rc) (C++)
+## <a name="to-specify-include-directories-for-a-specific-resource-rc-file"></a>Para especificar diretórios de inclusão para um recurso específico (arquivo. rc)
 
 1. Clique com botão direito no arquivo. rc no Gerenciador de soluções e selecione **propriedades** no menu de atalho.
 
 1. No **páginas de propriedades** caixa de diálogo, selecione o **recursos** nó no painel esquerdo, em seguida, especificar diretórios de inclusão adicionais a **dediretóriosdeinclusãoadicionais**propriedade.
+
+## <a name="to-find-symbols-in-resources"></a>Para localizar símbolos em recursos
+
+1. Dos **edite** menu, escolha **Localizar símbolo**.
+
+1. No [caixa de diálogo Localizar símbolo](/visualstudio/ide/go-to), no **localizar** caixa, selecione uma cadeia de caracteres de pesquisa anterior na lista suspensa ou digite a tecla de atalho que você deseja localizar (por exemplo, ID_ACCEL1).
+
+   > [!TIP]
+   > Para usar [expressões regulares](/visualstudio/ide/using-regular-expressions-in-visual-studio) para a sua pesquisa, você deve usar o [comando Localizar nos arquivos](/visualstudio/ide/reference/find-command) do **editar** menu, em vez do **Localizar símbolo**comando. Para habilitar a expressões regulares, você deve ter o **uso: Expressões regulares** na caixa de diálogo do [caixa de diálogo Localizar](/visualstudio/ide/finding-and-replacing-text). Em seguida, você pode selecionar o botão de seta para a direita à direita do **localizar** caixa para exibir uma lista de expressões regulares de pesquisa. Quando você seleciona uma expressão dessa lista, ele será substituído como o texto de pesquisa na **localizar** caixa.
+
+1. Selecione qualquer uma da **localizar** opções.
+
+1. Escolha **Localizar Próximo**.
+
+> [!NOTE]
+> Você não pode pesquisar símbolos em recursos binários, acelerador ou cadeia de caracteres.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -87,5 +105,4 @@ Win32
 
 [Arquivos de recurso](../windows/resource-files-visual-studio.md)<br/>
 [Editores de recursos](../windows/resource-editors.md)<br/>
-[TN035: Usando vários arquivos de recurso e arquivos de cabeçalho com o Visual C++](../mfc/tn035-using-multiple-resource-files-and-header-files-with-visual-cpp.md)<br/>
 [Símbolos: identificadores de recursos](../windows/symbols-resource-identifiers.md)<br/>

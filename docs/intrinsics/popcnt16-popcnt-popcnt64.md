@@ -11,18 +11,18 @@ helpviewer_keywords:
 - __popcnt64
 - __popcnt
 ms.assetid: e525b236-adc8-42df-9b9b-8b7d8c245d3b
-ms.openlocfilehash: a0a5a51bfcb5265f7b415433c3f6b64423840ebe
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: a6424f3414d9da17e52c0a9f78290497f5e5e01e
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51522453"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56146886"
 ---
 # <a name="popcnt16-popcnt-popcnt64"></a>__popcnt16, __popcnt, __popcnt64
 
 **Seção específica da Microsoft**
 
-Conta o número de um bits (contagem de população) em um 16, 32 ou inteiro sem sinal de 64 bytes.
+Conta o número de um bits (contagem de população) em um 16, 32 ou inteiro sem sinal de 64 bits.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -59,7 +59,7 @@ O número de bits de um no `value` parâmetro.
 
 ## <a name="remarks"></a>Comentários
 
-Cada um desses intrínsecos gera o `popcnt` instrução.  O tamanho do valor que o `popcnt` instrução retorna é o mesmo que o tamanho do seu argumento.  No modo de 32 bits não há nenhum 64-bit registros de uso geral, portanto, não de 64 bits `popcnt`.
+Cada um desses intrínsecos gera o `popcnt` instrução. No modo de 32 bits não há nenhum 64-bit registros de uso geral, portanto, não de 64 bits `popcnt`.
 
 Para determinar o suporte de hardware para o `popcnt` instrução, a chamada a `__cpuid` intrínseco com `InfoType=0x00000001` e marque pouco 23 de `CPUInfo[2] (ECX)`. Esse bit é 1 se a instrução for compatível e 0, caso contrário. Se você executar o código que usa esse intrínseco no hardware que não oferece suporte a `popcnt` instrução, os resultados serão imprevisíveis.
 
