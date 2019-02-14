@@ -3,6 +3,7 @@ title: Organização de controles em caixas de diálogo (C++) | Microsoft Docs
 ms.date: 11/04/2016
 f1_keywords:
 - vc.editors.dialog.grouping
+- vc.editors.dialog.combo
 helpviewer_keywords:
 - controls [C++], positioning
 - dialog box controls [C++], placement
@@ -57,13 +58,34 @@ helpviewer_keywords:
 - Tabstop property for controls
 - controls [C++], focus
 - dialog box controls [C++], tab order
+- Dialog Editor [C++], selecting controls
+- dominant controls
+- dialog box controls [C++], selecting in editor
+- controls [C++], selecting
+- size, controls
+- controls [C++], dominant
+- controls [C++], removing from groups
+- Dialog Editor [C++], dominant control
+- Size to Content command
+- size, controls
+- text, autosizing controls to fit text
+- controls [C++], sizing
+- Make Same Size command
+- combo boxes, sizing
+- list controls [C++], scroll bar width
+- CListBox::SetHorizontalExtent
+- controls [C++], scroll bar
+- scroll bars [C++], displaying in controls
+- horizontal scroll bar width
+- CListBox class, scroll bar width
+- scroll bars [C++], width
 ms.assetid: 832491cf-98af-42e5-a854-2cb135fd45c6
-ms.openlocfilehash: 210fbf8e062b4dd8c469f9c40a015bbc19bc2843
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.openlocfilehash: 99667898428fe9532d59277bfedafd24927304dc
+ms.sourcegitcommit: eb2b34a24e6edafb727e87b138499fa8945f981e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152736"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56264875"
 ---
 # <a name="arrangement-of-controls-on-dialog-boxes-c"></a>Organização de controles em caixas de diálogo (C++)
 
@@ -116,7 +138,7 @@ As alças de dimensionamento de controles de ajustam-se às guias de quando os c
 
 As marcas de escala em que determinam o espaçamento entre controles e guias de réguas são definidas pelas unidades de caixa de diálogo (DLUs). Um DLU baseia-se no tamanho da fonte de caixa de diálogo, normalmente de 8 pontas MS Shell Dlg. Um DLU horizontal é a largura da média da fonte de caixa de diálogo dividida por quatro. Um DLU vertical é a média altura da fonte dividida por oito.
 
-#### <a name="to-size-a-group-of-controls-with-guides"></a>Para dimensionar um grupo de controles com guias
+Para dimensionar um grupo de controles com guias:
 
 1. Ajuste um dos lados do controle (ou controles) a uma guia.
 
@@ -126,7 +148,7 @@ As marcas de escala em que determinam o espaçamento entre controles e guias de 
 
 1. Mova um guia para dimensionar o controle (ou controles).
 
-#### <a name="to-change-the-intervals-of-the-tick-marks"></a>Alterar os intervalos das marcas de escala
+Para alterar os intervalos das marcas de escala:
 
 1. Dos **formato** menu, escolha **guia de configurações**.
 
@@ -136,32 +158,23 @@ As marcas de escala em que determinam o espaçamento entre controles e guias de 
 
 Você pode usar chaves especiais em conjunto com o mouse para desabilitar o efeito dos guias de ajuste. Usando o **Alt** chave desativa os efeitos de ajuste do guia selecionada. Movendo um guia com o **Shift** chave impede que os controles sem-instantâneo movendo com o guia.
 
-#### <a name="to-disable-the-snapping-effect-of-the-guides"></a>Para desabilitar o efeito dos guias de ajuste
+- Para desabilitar o efeito de ajuste dos guias, arraste o controle enquanto mantém pressionada a **Alt** chave.
 
-Arraste o controle enquanto mantém pressionada a **Alt** chave.
+- Para mover guias sem mover os controles encaixados, arraste o guia enquanto mantém pressionada a **Shift** chave.
 
-#### <a name="to-move-guides-without-moving-the-snapped-controls"></a>Para mover guias sem mover os controles sem-instantâneo
-
-Arraste a guia enquanto mantém pressionada a **Shift** chave.
-
-#### <a name="to-turn-off-the-guides"></a>Para desativar os guias
-
-1. Dos **formato** menu, escolha **guia de configurações**.
-
-1. No **guia de configurações** caixa de diálogo **guias de Layout**, selecione **None**.
+- Para desativar os guias do **formato** menu, escolha **guia de configurações**. Em seguida, nos **guia de configurações** caixa de diálogo **guias de Layout**, selecione **None**.
 
    > [!NOTE]
    > Você também pode clicar duas vezes a barra de régua para acessar o **guia de configurações** caixa de diálogo.
 
-\- ou -
-
-Sobre o **formato** menu, selecione **ativar/desativar guias**.
+> [!TIP]
+> Um atalho para desativar guias é sobre a **formato** menu, selecione **ativar/desativar guias**.
 
 ### <a name="modify-the-layout-grid"></a>Modificar a grade de layout
 
 Quando você está colocando ou Organizando controles em uma caixa de diálogo, você pode usar a grade de layout para um posicionamento mais preciso. Quando a grade é ativada, os controles aparecem para "ajustar-se às" as linhas pontilhadas da grade como se magnetizada. Você pode ativar e desativar a esse recurso de "Ajustar à grade" e alterar o tamanho das células da grade de layout.
 
-#### <a name="to-turn-the-layout-grid-on-or-off"></a>Para ativar ou desativar a grade de layout
+Para ativar ou desativar a grade de layout:
 
 1. Dos **formato** menu, escolha **guia de configurações**.
 
@@ -169,11 +182,120 @@ Quando você está colocando ou Organizando controles em uma caixa de diálogo, 
 
    Você ainda pode controlar a grade no indivíduo **caixa de diálogo** janelas do editor usando o **ativar/desativar grade** botão o [barra de ferramentas do Editor de caixa de diálogo](../windows/showing-or-hiding-the-dialog-editor-toolbar.md).
 
-#### <a name="to-change-the-size-of-the-layout-grid"></a>Para alterar o tamanho da grade de layout
+Para alterar o tamanho da grade de layout:
 
 1. Dos **formato** menu, escolha **guia de configurações**.
 
 1. No **guia de configurações** caixa de diálogo, digite a altura e largura em DLUs para as células na grade. A largura ou altura mínima é 4 DLUs.
+
+## <a name="selecting-controls"></a>Selecionando controles
+
+Selecione controles para tamanho, alinhar, mover, copiar, ou excluí-los e, em seguida, concluir a operação desejada. Na maioria dos casos, você precisa selecionar mais de um controle para usar as ferramentas de dimensionamento e o alinhamento a [barra de ferramentas do Editor de caixa de diálogo](../windows/showing-or-hiding-the-dialog-editor-toolbar.md).
+
+Quando um controle for selecionado, ele tem uma borda sombreada em torno dele com sólida (ativa) ou vazios (inativo) "alças de dimensionamento" pequenos quadrados que aparecem na borda de seleção. Quando vários controles estiverem selecionados, o controle dominante tem alças de dimensionamento sólida e todos os outros controles selecionados tem alças de dimensionamento vazado.
+
+Quando você estiver dimensionando ou alinhar vários controles, o **caixa de diálogo** editor usa o "controle dominante" para determinar como os outros controles são dimensionados ou alinhados. Por padrão, o controle dominante é o primeiro controle selecionado.
+
+### <a name="to-select-multiple-controls"></a>Para selecionar vários controles
+
+1. No [janela caixa de ferramentas](/visualstudio/ide/reference/toolbox), selecione o **ponteiro** ferramenta.
+
+1. Use uma das etapas a seguir para fazer sua seleção:
+
+   - Arraste o ponteiro para desenhar uma caixa de seleção ao redor dos controles que você deseja selecionar na caixa de diálogo. Quando você soltar o botão do mouse, todos os controles internos e interseção a caixa de seleção estiver marcada.
+
+   - Mantenha pressionada a **Shift** da chave e selecione os controles que você deseja incluir na seleção.
+
+   - Mantenha pressionada a **Ctrl** da chave e selecione os controles que você deseja incluir na seleção.
+
+### <a name="to-remove-a-control-from-a-group-of-selected-controls-or-to-add-a-control-to-a-group-of-selected-controls"></a>Para remover um controle de um grupo de controles selecionados ou para adicionar um controle a um grupo de controles selecionados
+
+Com um grupo de controles selecionados, mantenha pressionada a **Shift** da chave e selecione o controle que você deseja remover ou adicionar a seleção existente.
+
+   > [!NOTE]
+   > Manter pressionada a **Ctrl** chave e selecionando um controle dentro de uma seleção farão com que controlam o controle dominante nessa seleção.
+
+### <a name="to-specify-the-dominant-control"></a>Para especificar o controle dominante
+
+Mantenha pressionada a **Ctrl** da chave e selecione o controle que você deseja usar para influenciar o tamanho ou local de outros controles *primeiro*.
+
+> [!NOTE]
+> As alças de dimensionamento do controle dominante são sólidas, enquanto as alças dos controles subordinados são vazadas. Todos os ainda mais o redimensionamento ou alinhamento baseia-se no controle dominante.
+
+### <a name="to-change-the-dominant-control"></a>Para alterar o controle dominante
+
+1. Desmarque a seleção atual clicando fora de todos os controles atualmente selecionados.
+
+1. Repita o procedimento anterior, selecionar um controle diferente pela primeira vez.
+
+## <a name="sizing-controls"></a>Dimensionando controles
+
+Use as alças de dimensionamento para redimensionar um controle. Quando o ponteiro está posicionado em uma alça de dimensionamento, ele muda de forma para indicar as direções em que o controle pode ser redimensionado. Alças de dimensionamento do Active Directory são sólidas; Se uma alça de dimensionamento for vazia, o controle não pode ser redimensionado ao longo desse eixo.
+
+Você também pode alterar o tamanho de um controle, ajuste o controle nas guias ou margens ou movendo um encaixada guia para longe do outro e controle.
+
+### <a name="to-size-an-individual-control"></a>Para dimensionar um controle individual
+
+1. Selecione o controle.
+
+1. Arraste as alças de dimensionamento para alterar o tamanho do controle:
+
+   - Alças de dimensionamento na parte superior e os lados alteram o tamanho horizontal ou vertical.
+
+   - Alças de dimensionamento nos cantos alteram o tamanho horizontal e vertical.
+
+   > [!TIP]
+   > Você pode redimensionar a unidade de uma caixa de diálogo de controle (DLU) por vez, mantendo pressionada a **Shift** chave e usando o **seta para a direita** e **seta para baixo** chaves.
+
+### <a name="to-automatically-size-a-control-to-fit-the-text-within-it"></a>Para dimensionar automaticamente um controle para se ajustar ao texto dentro dele
+
+Escolher **tamanho ao conteúdo** da **formato** menu ou o controle com o botão direito e escolha **tamanho ao conteúdo** no menu de atalho.
+
+### <a name="to-make-controls-the-same-width-height-or-size"></a>Para tornar controla a mesma largura, altura ou tamanho
+
+Você pode redimensionar um grupo de controles com base no tamanho do controle dominante.
+
+1. Selecione os controles que você deseja redimensionar.
+
+   O controle selecionado primeiro da série é o controle dominante. O tamanho final dos controles no grupo depende do tamanho do controle dominante.
+
+1. Dos **formato** menu, escolha **Igualar tamanho**, em seguida, escolha **ambos**, **altura**, ou **largura**.
+
+### <a name="to-set-the-size-of-the-combo-box-and-its-drop-down-list"></a>Para definir o tamanho da caixa de combinação de caixa e sua lista suspensa
+
+Quando você adicioná-lo à caixa de diálogo, você pode dimensionar uma caixa de combinação. Você também pode especificar o tamanho da caixa de listagem suspensa. Para obter mais informações, consulte [adicionando valores a um controle de caixa de combinação](../windows/adding-values-to-a-combo-box-control.md).
+
+#### <a name="to-size-a-combo-box"></a>Para dimensionar uma caixa de combinação
+
+1. Selecione o controle de caixa de combinação na caixa de diálogo.
+
+   Inicialmente, apenas as alças de dimensionamento de direito e esquerdo estão ativos.
+
+1. Use as alças de dimensionamento para definir a largura da caixa de combinação.
+
+Você também pode definir o tamanho vertical da parte suspensa da caixa de combinação.
+
+#### <a name="to-set-the-size-of-the-combo-box-drop-down-list"></a>Para definir o tamanho da caixa de combinação de lista suspensa da caixa
+
+1. Selecione o botão de seta suspensa à direita da caixa de combinação.
+
+   ![Seta em uma caixa de combinação em um projeto MFC](../mfc/media/vccomboboxarrow.gif "vcComboBoxArrow")
+
+   O contorno do controle muda para mostrar o tamanho da caixa de combinação com a área de lista suspensa estendida.
+
+1. Use a alça de dimensionamento inferior para alterar o tamanho inicial da área de lista suspensa.
+
+   ![Caixa de combinação&#45;dimensionamento caixa em um projeto MFC](../mfc/media/vccomboboxsizing.gif "vcComboBoxSizing")
+
+1. Selecione a seta suspensa novamente para fechar a parte da lista suspensa da caixa de combinação.
+
+### <a name="to-set-the-width-of-a-horizontal-scroll-bar-and-make-it-appear"></a>Para definir a largura da barra de rolagem horizontal e fazer com que pareça
+
+Quando você adiciona uma caixa de listagem com uma barra de rolagem horizontal para uma caixa de diálogo usando classes do MFC, a barra de rolagem não aparecerá automaticamente no seu aplicativo.
+
+Definir uma largura máxima para o maior elemento chamando [CListBox::SetHorizontalExtent](../mfc/reference/clistbox-class.md#sethorizontalextent) em seu código.
+
+   Sem este conjunto de valores, a barra de rolagem não aparecerá, até mesmo quando os itens na caixa de listagem são mais largas do que a caixa.
 
 ## <a name="group-radio-buttons-on-a-dialog-box"></a>Grupo de botões de opção em uma caixa de diálogo
 
@@ -208,29 +330,22 @@ Você pode ter mais de um grupo de botões de opção em uma caixa de diálogo, 
 
 1. Agora você pode modificar seu código para especificar qual botão de opção deve aparecer selecionado. Por exemplo, `m_radioBox1 = 0;` seleciona o primeiro botão de opção no grupo.
 
-## <a name="align-groups-of-controls"></a>Alinhar grupos de controles
+## <a name="to-align-groups-of-controls"></a>Alinhar grupos de controles
 
-Os procedimentos a seguir mostram como alinhar controles:
-
-### <a name="to-align-groups-of-controls"></a>Alinhar grupos de controles
-
-1. [Selecione os controles](../windows/selecting-multiple-controls.md) você deseja alinhar. Certifique-se de selecionar o controle que você deseja ser o controle dominante pela primeira vez ou defini-lo para ser o controle dominante antes de executar o alinhamento ou comando de dimensionamento.
+1. Selecione os controles que você deseja alinhar. Certifique-se de selecionar o controle que você deseja ser o controle dominante pela primeira vez ou defini-lo para ser o controle dominante antes de executar o alinhamento ou comando de dimensionamento.
 
    A posição final do grupo de controles depende a posição do controle dominante. Para obter mais informações sobre como selecionar o controle dominante, consulte [especificando o controle dominante](../windows/specifying-the-dominant-control.md).
 
 1. Dos **formato** menu, escolha **alinhar**e, em seguida, escolha uma das alinhamentos a seguir:
 
-   - `Lefts`: alinha os controles selecionados ao longo dos lados esquerdos.
-
-   - `Centers`: alinha os controles selecionados horizontalmente ao longo de seus pontos centrais.
-
-   - `Rights`: alinha os controles selecionados ao longo dos lados direito.
-
-   - `Tops`: alinha os controles selecionados ao longo de suas bordas na parte superior.
-
-   - `Middles`: alinha os controles selecionados verticalmente ao longo de seus pontos intermediários.
-
-   - `Bottoms`: alinha os controles selecionados ao longo de suas bordas inferior.
+   |Valor|Descrição|
+   |-----|-----------|
+   |`Lefts`|Alinha os controles selecionados ao longo dos lados esquerdos.|
+   |`Centers`|Alinha os controles selecionados horizontalmente ao longo de seus pontos centrais.|
+   |`Rights`|Alinha os controles selecionados ao longo dos lados direito.|
+   |`Tops`|Alinha os controles selecionados ao longo de suas bordas na parte superior.|
+   |`Middles`|Alinha os controles selecionados verticalmente ao longo de seus pontos intermediários.|
+   |`Bottoms`|Alinha os controles selecionados ao longo de suas bordas inferior.|
 
 ### <a name="to-even-the-spacing-between-controls"></a>Para até mesmo o espaçamento entre controles
 
@@ -265,55 +380,6 @@ O **caixa de diálogo** editor permite que você espaçar os controles uniformem
    - `Bottom`: alinha os botões de envio por push ao longo da borda inferior da caixa de diálogo.
 
        Se você selecionar um controle que não seja um botão de envio por push, sua posição não é afetada.
-
-## <a name="change-the-tab-order-of-controls"></a>Alterar a ordem de tabulação dos controles
-
-A ordem de tabulação é a ordem na qual o **guia** tecla move o foco de entrada de um controle para o próximo dentro de uma caixa de diálogo. Normalmente, a ordem de tabulação prossegue da esquerda para a direita e de cima para baixo em uma caixa de diálogo. Cada controle tem um **Tabstop** propriedade que determina se um controle recebe foco de entrada.
-
-### <a name="to-set-input-focus-for-a-control"></a>Para definir o foco de entrada para um controle
-
-No [janela de propriedades](/visualstudio/ide/reference/properties-window), selecione **verdadeiro** ou **False** no **Tabstop** propriedade.
-
-Até mesmo os controles que não têm o **Tabstop** propriedade definida como **verdadeiro** precisam fazer parte da ordem de tabulação. Ordem de tabulação é importante, por exemplo, quando você [definir chaves de acesso (mnemônicos)](../windows/defining-mnemonics-access-keys.md) para controles que não têm legendas. Texto estático que contém uma chave de acesso para um controle relacionada deve preceder imediatamente o controle relacionado na ordem de tabulação.
-
-> [!NOTE]
-> Se a caixa de diálogo contém controles sobrepostos, alterando a ordem de tabulação pode alterar a maneira como os controles são exibidos. Controles que acompanham a ordem de tabulação são sempre exibidos na parte superior de todos os controles sobrepostos que precedem-os na ordem de tabulação.
-
-### <a name="to-view-the-current-tab-order-for-all-controls-in-a-dialog-box"></a>Para exibir a ordem de tabulação para todos os controles em uma caixa de diálogo
-
-Sobre o **formato** menu, selecione **ordem de tabulação**.
-
-\- ou -
-
-- Pressione **Ctrl** + **1!d**.
-
-### <a name="to-change-the-tab-order-for-all-controls-in-a-dialog-box"></a>Para alterar a ordem de tabulação para todos os controles em uma caixa de diálogo
-
-1. Sobre o **formato** menu, selecione **ordem de tabulação**.
-
-   Um número no canto superior esquerdo de cada controle mostra seu lugar na ordem de tabulação atual.
-
-1. Definir a ordem de tabulação, clicando em cada controle na ordem em que você deseja que o **guia** chave a seguir.
-
-1. Pressione **Enter** para sair **ordem de tabulação** modo.
-
-   > [!TIP]
-   > Depois de digitar **ordem de tabulação** modo, você pode pressionar **Esc** ou **Enter** para desabilitar a capacidade de alterar a ordem de tabulação.
-
-### <a name="to-change-the-tab-order-for-two-or-more-controls"></a>Para alterar a ordem de tabulação para dois ou mais controles
-
-1. Dos **formato** menu, escolha **ordem de tabulação**.
-
-1. Especifique onde começará a alteração na ordem. Primeiro, mantenha pressionada a **Ctrl** da chave, selecione o controle e selecione aquele em que você deseja a ordem alterada para começar.
-
-   Por exemplo, se você quiser alterar a ordem dos controles `7` por meio `9`, mantenha pressionada **Ctrl**, em seguida, selecione o controle `6` primeiro.
-
-   > [!NOTE]
-   > Para definir um controle específico para número `1` (primeiro na ordem de tabulação), clique duas vezes no controle.
-
-1. Versão de **Ctrl** da chave, em seguida, selecione os controles na ordem em que você deseja que o **guia** chave a serem seguidos a partir desse ponto.
-
-1. Pressione **Enter** para sair **ordem de tabulação** modo.
 
 Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) na *guia do desenvolvedor do .NET Framework*. Para obter informações sobre como adicionar manualmente os arquivos de recursos a projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso a propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e Localizando aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).
 

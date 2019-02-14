@@ -36,13 +36,19 @@ helpviewer_keywords:
 - variables, dialog box control member variables
 - controls [C++], member variables
 - Dialog Editor [C++], defining member variables for controls
+- controls [C++], troubleshooting
+- Dialog Editor [C++], troubleshooting
+- dialog boxes [C++], troubleshooting
+- InitCommonControls
+- RichEdit 1.0 control
+- rich edit controls [C++], RichEdit 1.0
 ms.assetid: 73cef03f-5c8c-456a-87d1-1458dff185cf
-ms.openlocfilehash: b4edb5b7a51e4f6d368759ebc2e05a1cc585f19a
-ms.sourcegitcommit: 52c05e10b503e834c443ef11e7ca1987e332f876
+ms.openlocfilehash: 648ac3329409ba221881f75eaa51e1779091b0f0
+ms.sourcegitcommit: eb2b34a24e6edafb727e87b138499fa8945f981e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55742746"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56264862"
 ---
 # <a name="adding-editing-or-deleting-controls"></a>Adicionando, editando ou excluindo controles
 
@@ -51,44 +57,6 @@ Usando o **caixa de diálogo** editor, você pode adicionar, redimensionar, edit
 O **Editor de caixa de diálogo** guia é exibida na [janela caixa de ferramentas](/visualstudio/ide/reference/toolbox) quando você estiver trabalhando no **caixa de diálogo** editor. Você também pode personalizar o **caixa de ferramentas** janela para facilitar o uso. Para obter mais informações, consulte [usando a caixa de ferramentas](/visualstudio/ide/using-the-toolbox) e [Mostrar ou ocultar a janela da caixa de ferramentas](showing-or-hiding-the-dialog-editor-toolbar.md).
 
 Você pode usar o menu de atalho a **caixa de diálogo** editor para adicionar rapidamente registrado controles ActiveX a uma caixa de diálogo, e você pode adicionar controles ActiveX para o **caixa de ferramentas** para acesso rápido.
-
-Os controles padrão disponíveis na **caixa de ferramentas** padrão eventos são:
-
-|Nome do controle|Evento padrão|
-|---|---|
-|[Controle de botão](../mfc/reference/cbutton-class.md)|BN_CLICKED|
-|[Controle de caixa de seleção](../mfc/reference/styles-used-by-mfc.md#button-styles)|BN_CLICKED|
-|[Controle de caixa de combinação](../mfc/reference/ccombobox-class.md)|CBN_SELCHANGE|
-|[Controle de edição](../mfc/reference/cedit-class.md)|EN_CHANGE|
-|Caixa de grupo|(Não aplicável)|
-|[Controle de caixa de listagem](../mfc/reference/clistbox-class.md)|LBN_SELCHANGE|
-|[Controle de botão de opção](../mfc/reference/styles-used-by-mfc.md#button-styles)|BN_CLICKED|
-|[Controle de texto estático](../mfc/reference/cstatic-class.md)|(Não aplicável)|
-|[Controle de imagem](../mfc/reference/cpictureholder-class.md)|(Não aplicável)|
-|[Controle Rich Editar 2.0](../mfc/using-cricheditctrl.md)|EN_CHANGE|
-|[Controle de barra de rolagem](../mfc/reference/cscrollbar-class.md)|NM_THEMECHANGED|
-
-Para obter mais informações sobre como usar o **RichEdit 1.0** controle com o MFC, consulte [usando o controle RichEdit 1.0 com MFC](../windows/using-the-richedit-1-0-control-with-mfc.md) e [exemplos de controle Editar Rich](../mfc/rich-edit-control-examples.md).
-
-O [controles comuns do Windows](../mfc/controls-mfc.md) disponível na **caixa de ferramentas** fornecer funcionalidade aumentada em seu aplicativo. Entre elas estão:
-
-|Nome do controle|Evento padrão|
-|---|---|
-|[Controle deslizante](../mfc/slider-control-styles.md)|NM_CUSTOMDRAW|
-|[Controle de rotação](../mfc/using-cspinbuttonctrl.md)|UDN_DELTAPOS|
-|[Controle de progresso](../mfc/styles-for-the-progress-control.md)|NM_CUSTOMDRAW|
-|[Controle de tecla de acesso](../mfc/using-a-hot-key-control.md)|NM_OUTOFMEMORY|
-|[Controle de lista](../mfc/list-control-and-list-view.md)|LVN_ITEMCHANGE|
-|[Controle de árvore](../mfc/tree-control-styles.md)|TVN_SELCHANGE|
-|[Controle de guia](../mfc/tab-controls-and-property-sheets.md)|TCN_SELCHANGE|
-|[Controle de animação](../mfc/using-an-animation-control.md)|ACN_START|
-|[Controle de seletor de tempo de data](../mfc/creating-the-date-and-time-picker-control.md)|DTN_DATETIMECHANGE|
-|[Controle de calendário mensal](../mfc/month-calendar-control-examples.md)|MCN_SELCHANGE|
-|[Controle de endereço IP](../mfc/reference/cipaddressctrl-class.md)|IPN_FIELDCHANGED|
-|[Controle de caixa de combinação estendido](../mfc/creating-an-extended-combo-box-control.md)||
-|[Controle personalizado](custom-controls-in-the-dialog-editor.md)|TTN_GETDISPINFO|
-
-Para obter mais informações, consulte [Classes de controle](../mfc/control-classes.md), [Classes da caixa de diálogo](../mfc/dialog-box-classes.md), e [estilos de barra de rolagem](../mfc/reference/styles-used-by-mfc.md#scroll-bar-styles).
 
 Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) na *guia do desenvolvedor do .NET Framework*. Para obter informações sobre como adicionar manualmente os arquivos de recursos a projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso a propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e Localizando aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).
 
@@ -239,14 +207,53 @@ Sobre o **edite** menu, selecione **excluir**.
    > [!TIP]
    > Ao usar o **caixa de diálogo** editor, em muitos casos, você pode clicar no botão direito do mouse para exibir um menu de atalho de comandos usados com frequência.
 
+## <a name="known-issue"></a>Problema conhecido
+
+Depois de adicionar um controle comum ou um controle rich edit para uma caixa de diálogo, ela não aparecerá quando você testa a caixa de diálogo ou a própria caixa de diálogo não aparecerá.
+
+Para ver um exemplo do problema:
+
+1. Crie um projeto do Win32, modificando as configurações do aplicativo, portanto, você cria um aplicativo do Windows (não um aplicativo de console).
+
+1. Na [exibição de recurso](../windows/resource-view-window.md), clique duas vezes no arquivo. rc.
+
+1. Sob a opção de caixa de diálogo, clique duas vezes o **sobre** caixa.
+
+1. Adicionar um **controle de endereço IP** à caixa de diálogo.
+
+1. Salvar e **recompilar tudo**.
+
+1. Execute o programa.
+
+1. Na caixa de diálogo **ajudar** menu, clique no **sobre** comando; nenhuma caixa de diálogo caixa é exibida.
+
+Atualmente, o **caixa de diálogo** editor automaticamente não adiciona código ao seu projeto quando você arrasta e solta os seguintes controles comuns ou controles em uma caixa de diálogo de edição avançada. Nem o Visual Studio fornece um erro ou aviso quando esse problema ocorre. Para corrigir, adicione o código para o controle manualmente.
+
+||||
+|-|-|-|
+|Controle deslizante|Controle de árvore|Seletor de data e hora|
+|Controle de rotação|Controle de guia|Calendário mensal|
+|Controle de progresso|Controle de animação|Controle de endereço IP|
+|Tecla de acesso|Controle de edição avançada|Caixa de combinação estendida|
+|Controle de lista|Controle de edição avançada 2.0|Controle personalizado|
+
+Para usar controles comuns em uma caixa de diálogo, você precisará chamar [InitCommonControlsEx](/windows/desktop/api/commctrl/nf-commctrl-initcommoncontrolsex) ou `AFXInitCommonControls` antes de criar a caixa de diálogo.
+
+Para usar controles RichEdit, você deve chamar `LoadLibrary`. Para obter mais informações, consulte [sobre como editar controles sofisticados](/windows/desktop/Controls/about-rich-edit-controls) no SDK do Windows e [visão geral do controle de edição de Rich](../mfc/overview-of-the-rich-edit-control.md).
+
+> [!NOTE]
+> Para usar um controle RichEdit com MFC, você deve primeiro chamar [AfxInitRichEdit2](../mfc/reference/application-information-and-management.md#afxinitrichedit2) para carregar o controle RichEdit 2.0 (RICHED20. DLL), ou chamar [AfxInitRichEdit](../mfc/reference/application-information-and-management.md#afxinitrichedit) para carregar o controle de 1.0 RichEdit mais antigos (RICHED32. DLL).
+>
+> Você pode usar o atual [CRichEditCtrl](../mfc/reference/cricheditctrl-class.md) classe com o controle RichEdit 1.0 mais antigo, mas `CRichEditCtrl` foi projetado apenas para dar suporte ao controle RichEdit 2.0. Como RichEdit 1.0 e 2.0 de RichEdit são semelhantes, a maioria dos métodos funcionará. No entanto, observe que há algumas diferenças entre os controles de 1.0 e 2.0, portanto, alguns métodos podem funcionar incorretamente ou não funcionar em todos os.
+
 ## <a name="requirements"></a>Requisitos
 
 Win32
 
 ## <a name="see-also"></a>Consulte também
 
+[Editor de caixa de diálogo](../windows/dialog-editor.md)<br/>
 [Controles em caixas de diálogo](controls-in-dialog-boxes.md)<br/>
-[Controles da caixa de diálogo e tipos de variável](../ide/dialog-box-controls-and-variable-types.md)<br/>
 [Arquivos de recurso](../windows/resource-files-visual-studio.md)<br/>
 
 <!-- excluded links
