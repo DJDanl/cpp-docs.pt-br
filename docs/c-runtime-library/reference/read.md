@@ -1,6 +1,6 @@
 ---
 title: _read
-ms.date: 11/04/2016
+ms.date: 02/13/2019
 apiname:
 - _read
 apilocation:
@@ -26,12 +26,12 @@ helpviewer_keywords:
 - reading data [C++]
 - files [C++], reading
 ms.assetid: 2ce9c433-57ad-47fe-9ac1-4a7d4c883d30
-ms.openlocfilehash: 8c43cbbc2681433bda02038ae73a827fad904835
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 40f52ea37ae5419fe986aa505aad4fddfe8403ff
+ms.sourcegitcommit: eb2b34a24e6edafb727e87b138499fa8945f981e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658432"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56264784"
 ---
 # <a name="read"></a>_read
 
@@ -41,9 +41,9 @@ Lê dados de um arquivo.
 
 ```C
 int _read(
-   int fd,
-   void *buffer,
-   unsigned int count
+   int const fd,
+   void * const buffer,
+   unsigned const buffer_size
 );
 ```
 
@@ -55,22 +55,22 @@ Descritor de arquivo que se refere ao arquivo aberto.
 *buffer*<br/>
 Local de armazenamento de dados.
 
-*count*<br/>
-O número máximo de bytes.
+*buffer_size*<br/>
+Número máximo de bytes a serem lidos.
 
 ## <a name="return-value"></a>Valor de retorno
 
-**Read** retorna o número de bytes lidos, que pode ser menor que *contagem* se houver menos *contagem* bytes deixado no arquivo ou se o arquivo foi aberto no modo de texto, caso em que cada carro retorno par '\r\n' de avanço de linha é substituída por um caractere de avanço de linha única '\n'. Apenas o caractere de avanço de linha único é contado no valor retornado. A substituição não afeta o ponteiro do arquivo.
+**Read** retorna o número de bytes lidos, que pode ser menor que *buffer_size* se houver menos *buffer_size* bytes deixado no arquivo, ou se o arquivo foi aberto no modo de texto. No modo de texto de cada retorno de carro – linha feed par `\r\n` é substituído por um caractere de avanço de linha única `\n`. Apenas o caractere de avanço de linha único é contado no valor retornado. A substituição não afeta o ponteiro do arquivo.
 
-Se a função tentar ler o final do arquivo, ela retornará 0. Se *fd* é não é válido, o arquivo não está aberto para leitura, ou o arquivo está bloqueado, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, a função retornará -1 e definirá **errno** à **EBADF**.
+Se a função tentar ler o final do arquivo, ela retornará 0. Se *fd* é inválido, o arquivo não está aberto para leitura, ou o arquivo está bloqueado, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, a função retornará -1 e definirá **errno** à **EBADF**.
 
-Se *buffer* for **NULL**, o manipulador do parâmetro inválido será invocado. Se a execução puder continuar, a função retornará -1 e **errno** é definido como **EINVAL**.
+Se *buffer* é **nulo**, ou se *buffer_size* > **INT_MAX**, o manipulador de parâmetro inválido será invocado. Se a execução puder continuar, a função retornará -1 e **errno** é definido como **EINVAL**.
 
 Para obter mais informações sobre este e outros códigos retornados, consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Comentários
 
-O **Read** função lê um máximo de *contagem* bytes no *buffer* do arquivo associado *fd*. A operação de leitura começa na posição atual do ponteiro de arquivo associado ao arquivo em questão. Após a operação de leitura, o ponteiro do arquivo aponta para o próximo caractere não lido.
+O **Read** função lê um máximo de *buffer_size* bytes no *buffer* do arquivo associado *fd*. A operação de leitura começa na posição atual do ponteiro de arquivo associado ao arquivo em questão. Após a operação de leitura, o ponteiro do arquivo aponta para o próximo caractere não lido.
 
 Se o arquivo foi aberto no modo de texto, a leitura termina quando **Read** encontrar um caractere CTRL + Z, que é tratado como um indicador de final de arquivo. Use [_lseek](lseek-lseeki64.md) para limpar o indicador de fim do arquivo.
 
@@ -106,18 +106,18 @@ char buffer[60000];
 
 int main( void )
 {
-   int fh;
-   unsigned int nbytes = 60000, bytesread;
+   int fh, bytesread;
+   unsigned int nbytes = 60000;
 
    /* Open file for input: */
-   if( _sopen_s( &fh, "crt_read.txt", _O_RDONLY, _SH_DENYNO, 0 ) )
+   if ( _sopen_s( &fh, "crt_read.txt", _O_RDONLY, _SH_DENYNO, 0 ))
    {
       perror( "open failed on input file" );
       exit( 1 );
    }
 
    /* Read in input: */
-   if( ( bytesread = _read( fh, buffer, nbytes ) ) <= 0 )
+   if (( bytesread = _read( fh, buffer, nbytes )) <= 0 )
       perror( "Problem reading file" );
    else
       printf( "Read %u bytes from file\n", bytesread );

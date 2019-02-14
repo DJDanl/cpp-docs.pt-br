@@ -8,15 +8,37 @@ helpviewer_keywords:
 - Dialog Editor [C++], creating dialog boxes
 - modal dialog boxes [C++], logon screens
 - logon screens
+- Test Dialog command
+- testing, dialog boxes
+- dialog boxes [C++], testing
+- dialog boxes [C++], size
+- dialog boxes [C++], positioning
 ms.assetid: 303de801-c4f8-42e1-b622-353f6423f688
-ms.openlocfilehash: 928432000fb9a6347433b78b224e15f07ce810d2
-ms.sourcegitcommit: 52c05e10b503e834c443ef11e7ca1987e332f876
+ms.openlocfilehash: a3b8143d3a70906f910a445816a188913a593e5d
+ms.sourcegitcommit: eb2b34a24e6edafb727e87b138499fa8945f981e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55742642"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56264810"
 ---
 # <a name="creating-a-dialog-box-c"></a>Criando uma caixa de diálogo (C++)
+
+O local e o tamanho de uma caixa de diálogo de C++ e o local e tamanho dos controles dentro dele, são medidos em unidades de diálogo. Os valores para controles individuais e a caixa de diálogo aparecer no canto inferior direito do Visual Studio barra de status quando você seleciona.
+
+Quando você estiver criando uma caixa de diálogo, você também pode simular e testar seu comportamento de tempo de execução sem compilar seu programa. Nesse modo, você pode:
+
+- Digite o texto, selecione nas listas de caixa de combinação, ativar ou desativar as opções e escolha os comandos.
+
+- Teste a ordem de tabulação.
+
+- Teste o agrupamento de controles como botões de opção e caixas de seleção.
+
+- Teste os atalhos de teclado para controles na caixa de diálogo.
+
+   > [!NOTE]
+   > Conexões com o código de caixa de diálogo feito com assistentes não são incluídas na simulação.
+
+Quando você testa uma caixa de diálogo, ele normalmente é exibida em um local relativo à janela principal do programa. Se você tiver definido a caixa de diálogo **alinhamento absoluto** propriedade **verdadeiro**, a caixa de diálogo é exibida em uma posição relativa ao canto superior esquerdo da tela.
 
 Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) na *guia do desenvolvedor do .NET Framework*. Para obter informações sobre como adicionar manualmente os arquivos de recursos a projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso a propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e Localizando aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).
 
@@ -52,7 +74,15 @@ Para habilitar o teste desse tipo de caixa de diálogo, a função de caixa de d
 > [!NOTE]
 > Para aplicativos do MFC para criar uma caixa de diálogo que os usuários não possam sair, você deve substituir o comportamento padrão do `OnOK` e `OnCancel` porque, mesmo se você excluir os botões associados, a caixa de diálogo ainda pode ser descartada, pressionando  **Insira** ou **Esc**.
 
-Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index).
+## <a name="to-specify-the-location-and-size-of-a-dialog-box"></a>Para especificar o local e o tamanho de uma caixa de diálogo
+
+Há três propriedades que podem ser definidas na [janela de propriedades](/visualstudio/ide/reference/properties-window) para especificar onde uma caixa de diálogo será exibida na tela. O **Center** propriedade é booliano; se você definir o valor como **verdadeiro**, a caixa de diálogo será sempre exibido no centro da tela. Se você defini-lo **falso**, em seguida, você pode definir o **XPos** e **YPos** propriedades para definir explicitamente onde na tela de caixa de diálogo será exibida. As propriedades de posição são valores de deslocamento do canto superior esquerdo da área de exibição, que é definida como `{X=0, Y=0}`. A posição também se baseia a **alinhamento absoluto** propriedade: se **verdadeiro**, as coordenadas são em relação à tela; se **False**, as coordenadas são relativas à caixa de diálogo janela do proprietário.
+
+## <a name="to-test-a-dialog-box"></a>Para testar uma caixa de diálogo
+
+1. Quando o **caixa de diálogo** editor é a janela ativa, na barra de menus, escolha **formato** > **caixa de diálogo de teste**.
+
+1. Para encerrar a simulação, pressione **Esc**, ou basta escolher o **fechar** botão na caixa de diálogo que você está testando.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -62,4 +92,5 @@ Win32
 
 [Como: criar um recurso](../windows/how-to-create-a-resource.md)<br/>
 [Arquivos de recurso](../windows/resource-files-visual-studio.md)<br/>
-[Editor de caixa de diálogo](../windows/dialog-editor.md)
+[Editor de caixa de diálogo](../windows/dialog-editor.md)<br/>
+[Controles em caixas de diálogo](../windows/controls-in-dialog-boxes.md)<br/>
