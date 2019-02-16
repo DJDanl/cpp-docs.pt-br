@@ -1,6 +1,6 @@
 ---
-title: 'Símbolos: Identificadores de recursos (C++)'
-ms.date: 11/04/2016
+title: Identificadores de recurso (símbolos) (C++)
+ms.date: 02/14/2019
 f1_keywords:
 - vc.editors.symbol.identifiers
 helpviewer_keywords:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - symbols [C++], editing
 - resource editors [C++], resource symbols
 ms.assetid: 8fccc09a-0237-4a65-b9c4-57d60c59e324
-ms.openlocfilehash: abe6297d74df4941328d3e606fb3b0f646d36265
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7359fdfd1007cb49025908ffea51093622943052
+ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50529994"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56320491"
 ---
-# <a name="symbols-resource-identifiers-c"></a>Símbolos: Identificadores de recursos (C++)
+# <a name="resource-identifiers-symbols-c"></a>Identificadores de recurso (símbolos) (C++)
 
 Um símbolo é um identificador de recurso (ID) que consiste em duas partes: uma cadeia de texto (nome de símbolo) mapeada para um valor inteiro (valor de símbolo). Por exemplo:
 
@@ -36,27 +36,11 @@ Quando você cria um novo recurso ou objeto de recurso, o [editores de recursos]
 
 À medida que seu aplicativo crescer em tamanho e a sofisticação e aumenta seu número de recursos e símbolos. Grande número de símbolos espalhados em vários arquivos de rastreamento pode ser difícil. O [caixa de diálogo símbolos de recurso](../windows/resource-symbols-dialog-box.md) simplifica o gerenciamento de símbolo, oferecendo uma ferramenta central por meio do qual você pode:
 
-- [Símbolos de recurso do modo de exibição](../windows/viewing-resource-symbols.md)
+- [Crie símbolos](../windows/creating-new-symbols.md)
 
-- [Criar novos símbolos](../windows/creating-new-symbols.md)
-
-- [Alterar os símbolos não atribuídos](../windows/changing-unassigned-symbols.md)
-
-- [Excluir símbolos não atribuídos](../windows/deleting-unassigned-symbols.md)
-
-- [Abra o Editor de recurso para um determinado símbolo](../windows/opening-the-resource-editor-for-a-given-symbol.md)
-
-- [Alterar um símbolo ou um nome de símbolo (ID)](../windows/changing-a-symbol-or-symbol-name-id.md)
-
-- [Alterar um valor numérico de símbolo](../windows/changing-a-symbol-s-numeric-value.md)
-
-- [Alterar os nomes dos arquivos de cabeçalho de símbolo](../windows/changing-the-names-of-symbol-header-files.md)
-
-- [Incluir compartilhados (somente leitura) ou calculados símbolos](../windows/including-shared-read-only-or-calculated-symbols.md)
+- [Gerenciar símbolos](../windows/changing-a-symbol-or-symbol-name-id.md)
 
 - [Exibir IDs de símbolos predefinidos](../windows/predefined-symbol-ids.md)
-
-Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) na *guia do desenvolvedor do .NET Framework*. Para obter informações sobre como adicionar manualmente os arquivos de recursos a projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso a propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e Localizando aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -64,6 +48,6 @@ Win32
 
 ## <a name="see-also"></a>Consulte também
 
-[Como pesquisar símbolos em recursos](../windows/how-to-search-for-symbols-in-resources.md)<br/>
+[Trabalhando com arquivos de recurso](../windows/working-with-resource-files.md)<br/>
+[Arquivos de recurso](../windows/resource-files-visual-studio.md)<br/>
 [Editores de recursos](../windows/resource-editors.md)<br/>
-[Arquivos de recurso](../windows/resource-files-visual-studio.md)

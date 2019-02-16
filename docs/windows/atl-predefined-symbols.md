@@ -1,16 +1,16 @@
 ---
 title: Símbolos predefinidos ATL
-ms.date: 11/04/2016
+ms.date: 02/14/2019
 helpviewer_keywords:
 - symbols [C++], ATL predefined
 - ATL symbols
 ms.assetid: 60d8f4e6-6ed9-47f3-9051-e4bf34384456
-ms.openlocfilehash: 37d24dcfb65566b2b13c8b1ba8c826ec68271477
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bb8b0db77b2add584e2fa8716a2d1821f5cae1fc
+ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50654396"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56320452"
 ---
 # <a name="atl-predefined-symbols"></a>Símbolos predefinidos ATL
 
@@ -18,16 +18,16 @@ Esses símbolos são definidos nos arquivos de cabeçalho da ATL, mas eles ofere
 
 |||
 |-|-|
-|IDABORT|Controle: Botão de anulação de caixa de diálogo|
+|IDABORT|Controle: Botão de anulação da caixa de diálogo|
 |IDC_STATIC|Controle: Controle estático|
-|IDCANCEL|Controle: Botão de cancelamento de caixa de diálogo|
+|IDCANCEL|Controle: Botão de cancelamento da caixa de diálogo|
 |IDIGNORE|Controle: Botão de ignorar de caixa de diálogo|
-|IDNO|Controle: não caixa de diálogo nenhum botão|
-|IDOK|Controle: Botão de Okey da caixa de diálogo|
+|IDNO|Controle: Nenhum botão da caixa de diálogo|
+|IDOK|Controle: Botão Okey da caixa de diálogo|
 |IDR_ACCELERATOR1|Recurso: Tabela de aceleradores|
 |IDRETRY|Controle: Botão de repetição de caixa de diálogo|
 |IDS_PROJNAME|Cadeia de caracteres: Nome do aplicativo atual|
-|IDYES|Controle: Caixa de diálogo Sim botão|
+|IDYES|Controle: Botão de Sim da caixa de diálogo|
 
 ## <a name="requirements"></a>Requisitos
 
@@ -36,4 +36,5 @@ ATL
 ## <a name="see-also"></a>Consulte também
 
 [IDs de símbolos predefinidos](../windows/predefined-symbol-ids.md)<br/>
-[Símbolos: identificadores de recursos](../windows/symbols-resource-identifiers.md)
+[Símbolos predefinidos do MFC](../windows/mfc-predefined-symbols.md)<br/>
+[Símbolos predefinidos do Win32](../windows/win32-predefined-symbols.md)<br/>
