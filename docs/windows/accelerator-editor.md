@@ -1,6 +1,6 @@
 ---
 title: Editor de aceleradores (C++)
-ms.date: 11/04/2016
+ms.date: 02/14/2019
 f1_keywords:
 - vc.editors.accelerator.F1
 - vc.editors.accelerator
@@ -33,12 +33,12 @@ helpviewer_keywords:
 - keyboard shortcuts [C++], property changing
 - accelerator tables [C++], changing properties
 ms.assetid: 013c30b6-5d61-4f1c-acef-8bd15bed7060
-ms.openlocfilehash: 5ece5c7e85a3ef59b728474746e9553a751d43c6
-ms.sourcegitcommit: bec1480a03e7b4070b469a6c131a69f516bbac70
+ms.openlocfilehash: 90ef142336cf88c5e40f78f6cc651b2bb35a0f6c
+ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56226339"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56320634"
 ---
 # <a name="accelerator-editor-c"></a>Editor de aceleradores (C++)
 
@@ -55,8 +55,6 @@ Para obter uma lista de teclas de aceleração predefinidas, consulte [teclas de
 
    > [!NOTE]
    > Windows não permitem que você crie tabelas de aceleradores vazio. Se você criar uma tabela de aceleradores sem entradas, ele é excluído automaticamente quando você salva a tabela.
-
-Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) na *guia do desenvolvedor do .NET Framework*. Para obter informações sobre como adicionar manualmente os arquivos de recursos a projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso a propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e Localizando aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).
 
 ## <a name="accelerator-properties"></a>Propriedades do acelerador
 
@@ -123,9 +121,6 @@ O **tipo** propriedade determina se a combinação de teclas de atalho associada
 Em um projeto do C++, você pode editar uma tabela de aceleradores diretamente com a edição in-loco na **Accelerator** editor.
 
 Os procedimentos a seguir se referem ao uso de páginas de propriedades padrão, no entanto, a edição no local e o método de página de propriedade tem o mesmo resultado. As alterações feitas usando páginas de propriedades ou usando a edição in-loco são refletidas imediatamente na tabela de acelerador.
-
-> [!NOTE]
-> Se seu projeto já não contiver um arquivo. RC, consulte [criando um novo arquivo de Script de recurso](../windows/how-to-create-a-resource-script-file.md).
 
 ### <a name="to-edit-in-an-accelerator-table"></a>Para editar em uma tabela de aceleradores
 
@@ -211,7 +206,5 @@ Win32
 
 ## <a name="see-also"></a>Consulte também
 
-[Editores de recursos](../windows/resource-editors.md)
-
-[Editando em uma tabela de aceleradores](../windows/editing-in-an-accelerator-table.md)<br/>
+[Editores de recursos](../windows/resource-editors.md)<br/>
 [Teclas de aceleração predefinidas](../windows/predefined-accelerator-keys.md)<br/>

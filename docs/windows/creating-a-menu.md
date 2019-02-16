@@ -23,13 +23,23 @@ helpviewer_keywords:
 - context menus [C++], connecting to applications
 - shortcut menus [C++], connecting to applications
 - pop-up menus
+- menu commands [C++], selecting
+- menus [C++], selecting
+- commands [C++], menu commands
+- commands [C++], copying on menus
+- menu items, moving
+- commands [C++], moving on menus
+- menu items, copying
+- menu items, deleting
+- commands [C++], deleting from menus
+- menus [C++], deleting
 ms.assetid: 66f94448-9b97-4b73-bf97-10d4bf87cc65
-ms.openlocfilehash: e3b3cc58b82f68c55ac98601fd11775422c901e5
-ms.sourcegitcommit: 5a7dbd640376e13379f5d5b2cf66c4842e5e737b
+ms.openlocfilehash: da5fc355ae11ee5efb1c58be9e33bd4fb8bff02d
+ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55905765"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56320517"
 ---
 # <a name="creating-menus-c"></a>Criando Menus (C++)
 
@@ -38,7 +48,7 @@ ms.locfileid: "55905765"
 
 Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) na *guia do desenvolvedor do .NET Framework*. Para obter informações sobre como adicionar manualmente os arquivos de recursos a projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso a propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e Localizando aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).
 
-## <a name="to-create-a-standard-menu"></a>Criar um menu padrão
+## <a name="create-a-standard-menu"></a>Criar um menu padrão
 
 1. Dos **modo de exibição** menu, selecione **exibição de recurso** e, em seguida, clique duas vezes no **Menu** título e escolha **adicionar recurso**. Escolher **Menu**.
 
@@ -59,7 +69,7 @@ Para obter informações sobre como adicionar recursos a projetos gerenciados, c
    > [!NOTE]
    > Para criar um único item de menu na barra de menus, defina as **pop-up** propriedade **falso**.
 
-## <a name="to-create-a-submenu"></a>Para criar um submenu
+## <a name="create-a-submenu"></a>Criar um submenu
 
 1. Selecione o comando de menu para o qual você deseja criar um submenu.
 
@@ -75,7 +85,7 @@ Selecione um existente nome do menu e pressione a **inserir** chave. O **Novo It
 
 Clique com botão direito na barra de menus e escolha **Inserir novo** no menu de atalho.
 
-## <a name="to-add-commands-to-a-menu"></a>Adicionar comandos a um menu
+## <a name="add-commands-to-a-menu"></a>Adicionar comandos a um menu
 
 1. Crie um menu.
 
@@ -104,7 +114,7 @@ Clique com botão direito na barra de menus e escolha **Inserir novo** no menu d
 
    A nova caixa de item é selecionada para que você possa criar comandos de menu adicionais.
 
-## <a name="to-create-pop-up-menus"></a>Para criar menus pop-up
+## <a name="create-pop-up-menus"></a>Criar menus pop-up
 
 [Menus pop-up](../mfc/menus-mfc.md) comandos de exibição usado com frequência. Eles podem ser sensíveis ao contexto para o local do ponteiro. Usando menus pop-up em seu aplicativo requer o próprio menu de criação e, em seguida, conectá-lo ao código do aplicativo.
 
@@ -150,6 +160,52 @@ O menu de atalho e escolha **exibir como Popup** no menu de atalho.
 
    > [!NOTE]
    > Para alterar de volta para o modo de exibição da barra de menus, clique em **exibir como Popup** novamente (que remove a marca de seleção e retorna o modo de exibição da barra de menus).
+
+## <a name="edit-multiple-menus-or-menu-commands"></a>Editar vários menus ou comandos de menu
+
+### <a name="to-select-multiple-menu-commands"></a>Para selecionar vários comandos de menu
+
+Você pode selecionar vários nomes de menus ou comandos de menu para executar operações em massa como excluindo ou alterando as propriedades.
+
+Enquanto mantém pressionada a **Ctrl** da chave, selecione os menus ou comandos do submenu desejado.
+
+### <a name="to-move-and-copy-menus-and-menu-commands"></a>Mover e copiar os menus e comandos de menu
+
+Você pode mover ou copiar os menus e comandos de menu usando o método de arrastar e soltar ou usando comandos no menu de atalho (menu de atalho).
+
+#### <a name="to-move-or-copy-menus-or-menu-commands-using-the-drag-and-drop-method"></a>Para mover ou copiar menus ou comandos de menu usando o método de arrastar e soltar
+
+1. Arrastar ou copiar o item que você deseja mover para:
+
+   - Um novo local no menu atual.
+
+   - Um menu diferente. (Você pode navegar para outros menus, arrastando o ponteiro do mouse sobre eles.)
+
+1. Cancelar o comando de menu quando o guia de inserção mostra a posição desejada.
+
+#### <a name="to-move-or-copy-menus-or-menu-commands-using-shortcut-menu-commands"></a>Para mover ou copiar menus ou comandos de menu usando comandos de menu de atalho
+
+1. Um ou mais menus ou comandos de menu de atalho.
+
+1. No menu de atalho, escolha **Recortar** (para mover) ou **cópia**.
+
+1. Se você estiver movendo os itens para outro menu recurso ou o arquivo de script de recurso [abri-lo em outra janela](/visualstudio/ide/customizing-window-layouts-in-visual-studio).
+
+1. Selecione a posição do menu ou comando de menu que você deseja mover ou copiar para.
+
+1. No menu de atalho, escolha **colar**. O item movido ou copiado é colocado antes do item selecionado.
+
+   > [!NOTE]
+   > Você também pode arrastar, copie e cole a outros menus em outras janelas do menu.
+
+### <a name="to-delete-a-menu-or-menu-command"></a>Para excluir um menu ou um comando de menu
+
+1. O comando ou o nome do menu de atalho.
+
+1. Escolher **excluir** no menu de atalho.
+
+   > [!NOTE]
+   > Da mesma forma, você pode usar o menu de atalho para realizar outras ações como copiar, recortar, colar, inserir novas, separador de inserir, editar IDs, modo de exibição como pop-up, verificar mnemônicos, etc.
 
 ## <a name="requirements"></a>Requisitos
 
