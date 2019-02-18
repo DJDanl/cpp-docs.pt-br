@@ -1,6 +1,6 @@
 ---
-title: Criando uma caixa de diálogo (C++)
-ms.date: 11/04/2016
+title: 'Como: Criar uma caixa de diálogo (C++)'
+ms.date: 02/15/2019
 f1_keywords:
 - vc.editors.dialog
 helpviewer_keywords:
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - dialog boxes [C++], size
 - dialog boxes [C++], positioning
 ms.assetid: 303de801-c4f8-42e1-b622-353f6423f688
-ms.openlocfilehash: a3b8143d3a70906f910a445816a188913a593e5d
-ms.sourcegitcommit: eb2b34a24e6edafb727e87b138499fa8945f981e
+ms.openlocfilehash: c757c82978a5107374e6de2f8cff24319ed64f9c
+ms.sourcegitcommit: 24592ba0a38c7c996ffd3d55fe1024231a59ccc2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56264810"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56336469"
 ---
-# <a name="creating-a-dialog-box-c"></a>Criando uma caixa de diálogo (C++)
+# <a name="how-to-create-a-dialog-box-c"></a>Como: Criar uma caixa de diálogo (C++)
 
 O local e o tamanho de uma caixa de diálogo de C++ e o local e tamanho dos controles dentro dele, são medidos em unidades de diálogo. Os valores para controles individuais e a caixa de diálogo aparecer no canto inferior direito do Visual Studio barra de status quando você seleciona.
 
@@ -39,8 +39,6 @@ Quando você estiver criando uma caixa de diálogo, você também pode simular e
    > Conexões com o código de caixa de diálogo feito com assistentes não são incluídas na simulação.
 
 Quando você testa uma caixa de diálogo, ele normalmente é exibida em um local relativo à janela principal do programa. Se você tiver definido a caixa de diálogo **alinhamento absoluto** propriedade **verdadeiro**, a caixa de diálogo é exibida em uma posição relativa ao canto superior esquerdo da tela.
-
-Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) na *guia do desenvolvedor do .NET Framework*. Para obter informações sobre como adicionar manualmente os arquivos de recursos a projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso a propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e Localizando aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).
 
 ## <a name="to-create-a-new-dialog-box"></a>Para criar uma nova caixa de diálogo
 
@@ -82,7 +80,7 @@ Há três propriedades que podem ser definidas na [janela de propriedades](/visu
 
 1. Quando o **caixa de diálogo** editor é a janela ativa, na barra de menus, escolha **formato** > **caixa de diálogo de teste**.
 
-1. Para encerrar a simulação, pressione **Esc**, ou basta escolher o **fechar** botão na caixa de diálogo que você está testando.
+1. Para encerrar a simulação, pressione **Esc** ou selecione o **fechar** botão na caixa de diálogo que você está testando.
 
 ## <a name="requirements"></a>Requisitos
 

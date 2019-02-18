@@ -1,6 +1,6 @@
 ---
 title: Definir valores e controlar o acesso
-ms.date: 11/04/2016
+ms.date: 02/15/2019
 f1_keywords:
 - vc.editors.dialog.combo
 helpviewer_keywords:
@@ -22,16 +22,14 @@ helpviewer_keywords:
 - Data property
 - combo boxes [C++], testing values
 ms.assetid: 60a85435-aa30-4c5c-98b6-42fb045b9eb2
-ms.openlocfilehash: 3a885ad57ba05304d51cb45d0b498d81ad37a148
-ms.sourcegitcommit: eb2b34a24e6edafb727e87b138499fa8945f981e
+ms.openlocfilehash: 20319cd08d6d1e77faef1275e63bf3ffd354356b
+ms.sourcegitcommit: 24592ba0a38c7c996ffd3d55fe1024231a59ccc2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56264849"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56336482"
 ---
 # <a name="defining-control-access-and-values"></a>Definir valores e controlar o acesso
-
-Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) na *guia do desenvolvedor do .NET Framework*. Para obter informações sobre como adicionar manualmente os arquivos de recursos a projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso a propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e Localizando aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).
 
 ## <a name="change-the-tab-order-of-controls"></a>Alterar a ordem de tabulação dos controles
 
@@ -48,11 +46,7 @@ Até mesmo os controles que não têm o **Tabstop** propriedade definida como **
 
 ### <a name="to-view-the-current-tab-order-for-all-controls-in-a-dialog-box"></a>Para exibir a ordem de tabulação para todos os controles em uma caixa de diálogo
 
-Sobre o **formato** menu, selecione **ordem de tabulação**.
-
-\- ou -
-
-- Pressione **Ctrl** + **1!d**.
+Vá para o **formato** menu e selecione **ordem de tabulação**, ou pressione **Ctrl** + **1!d**.
 
 ### <a name="to-change-the-tab-order-for-all-controls-in-a-dialog-box"></a>Para alterar a ordem de tabulação para todos os controles em uma caixa de diálogo
 
@@ -60,7 +54,7 @@ Sobre o **formato** menu, selecione **ordem de tabulação**.
 
    Um número no canto superior esquerdo de cada controle mostra seu lugar na ordem de tabulação atual.
 
-1. Definir a ordem de tabulação, clicando em cada controle na ordem em que você deseja que o **guia** chave a seguir.
+1. Definir a ordem de tabulação, selecionando cada controle na ordem em que você deseja que o **guia** chave a seguir.
 
 1. Pressione **Enter** para sair **ordem de tabulação** modo.
 
@@ -90,9 +84,9 @@ Normalmente, os usuários de teclado movem o foco de entrada de um controle para
 
 1. Selecione o controle na caixa de diálogo.
 
-2. No [janela de propriedades](/visualstudio/ide/reference/properties-window), no **legenda** propriedade, digite um novo nome para o controle, digitando um e comercial (`&`) na frente da letra que você deseja como a chave de acesso para o controle. Por exemplo, `&Radio1`.
+1. No [janela de propriedades](/visualstudio/ide/reference/properties-window), no **legenda** propriedade, digite um novo nome para o controle, digitando um e comercial (`&`) na frente da letra que você deseja como a chave de acesso para o controle. Por exemplo, `&Radio1`.
 
-3. Pressione **ENTER**.
+1. Pressione **ENTER**.
 
    Um sublinhado será exibido na legenda exibida para indicar a chave de acesso, por exemplo, **R**adio1.
 
@@ -100,17 +94,14 @@ Normalmente, os usuários de teclado movem o foco de entrada de um controle para
 
 1. Faça uma legenda para o controle, usando um **texto estático** no controlar a [caixa de ferramentas](/visualstudio/ide/reference/toolbox).
 
-2. Na legenda de texto estático, digite um e comercial (`&`) na frente da letra que você deseja como a chave de acesso.
+1. Na legenda de texto estático, digite um e comercial (`&`) na frente da letra que você deseja como a chave de acesso.
 
-3. Verifique se o controle de texto estático que precede o controle rotula na ordem de tabulação.
+1. Verifique se o controle de texto estático que precede o controle rotula na ordem de tabulação.
 
-Todas as chaves de acesso dentro de uma caixa de diálogo devem ser exclusivas.
+> [!NOTE]
+> Todas as chaves de acesso dentro de uma caixa de diálogo devem ser exclusivas. Para verificar as chaves de acesso duplicadas, vá para o **formato** menu e selecione **Verificar mnemônicos**.
 
-### <a name="to-check-for-duplicate-access-keys"></a>Para verificar se há teclas de acesso duplicadas
-
-1. Sobre o **formato** menu, clique em **Verificar mnemônicos**.
-
-## <a name="add-values-to-a-combo-box-control"></a>Adicionar valores a um controle de caixa de combinação
+## <a name="combo-box-values"></a>Valores da caixa de combinação
 
 Você pode adicionar valores a um controle de caixa de combinação, desde que você tenha o **caixa de diálogo** editor aberto.
 
@@ -119,7 +110,7 @@ Você pode adicionar valores a um controle de caixa de combinação, desde que v
 
 ### <a name="to-enter-values-into-a-combo-box-control"></a>Para inserir valores em um controle de caixa de combinação
 
-1. Selecione o controle de caixa de combinação clicando nele.
+1. Escolha a caixa de combinação controle de caixa, selecionando-o.
 
 1. No [janela de propriedades](/visualstudio/ide/reference/properties-window), role para baixo até a **dados** propriedade.
 
@@ -129,7 +120,7 @@ Você pode adicionar valores a um controle de caixa de combinação, desde que v
 1. Selecione a área de valor para o **dados** propriedade e digite os valores de dados, separados por ponto e vírgula.
 
    > [!NOTE]
-   > Não coloque espaços entre os valores como espaços interferem colocando em ordem alfabética na lista suspensa.
+   > Não coloque os espaços entre os valores como espaços interferem colocando em ordem alfabética na lista suspensa.
 
 1. Pressione **Enter** quando tiver terminado de adicionar os valores.
 
@@ -145,6 +136,40 @@ Depois de inserir valores na **dados** propriedade, selecione a **teste** botão
    Tente rolar para baixo na lista de todo o valor. Valores são exibidos exatamente como eles são digitados a **dados** propriedade no **propriedades** janela. Não há nenhum ortografia ou verificação de maiusculas e minúsculas.
 
    Pressione **Esc** para retornar para o **caixa de diálogo** editor.
+
+   Agora você pode modificar seu código para especificar qual botão de opção deve aparecer selecionado. Por exemplo, `m_radioBox1 = 0;` seleciona o primeiro botão de opção no grupo.
+Agora você pode modificar seu código para especificar qual botão de opção deve aparecer selecionado. Por exemplo, `m_radioBox1 = 0;` seleciona o primeiro botão de opção no grupo.
+
+## <a name="radio-button-values"></a>Valores de botão de opção
+
+Quando você adiciona botões de opção para uma caixa de diálogo, tratá-los como um grupo, definindo um **grupo** propriedade no **propriedades** janela para o primeiro botão no grupo. Então, aparecerá uma ID de controle para esse botão de opção na [Assistente para adição de variável de membro](../ide/add-member-variable-wizard.md), permitindo que você adicione uma variável de membro para o grupo de botões de opção.
+
+Você pode ter mais de um grupo de botões de opção em uma caixa de diálogo. Adicione cada grupo usando o procedimento a seguir.
+
+### <a name="to-add-a-group-of-radio-buttons-to-a-dialog-box"></a>Para adicionar um grupo de botões de opção para uma caixa de diálogo
+
+1. Selecione o controle de botão de opção na [janela caixa de ferramentas](/visualstudio/ide/reference/toolbox) e escolha o local na caixa de diálogo onde colocar o controle.
+
+1. Repita a etapa acima para adicionar botões de opção quantas forem necessárias. Verifique se que os botões de opção no grupo são consecutivos na ordem de tabulação.
+
+1. No [janela de propriedades](/visualstudio/ide/reference/properties-window), defina o **grupo** propriedade do *primeiro* botão de opção na ordem de tabulação para **True**.
+
+   Alterando a **grupo** propriedade **verdadeiro** adiciona o estilo WS_GROUP a entrada do botão no objeto de caixa de diálogo do script de recurso e impede que o usuário pode selecionar mais de um botão de opção por vez em o grupo de botões (se o usuário seleciona um botão de opção, os outros no grupo é desmarcado).
+
+   > [!NOTE]
+   > Somente o primeiro botão de opção no grupo deve ter o **grupo** propriedade definida como **verdadeiro**. Se você tiver controles adicionais que não fazem parte do grupo de botões, defina as **grupo** propriedade do primeiro controle *que está fora do grupo* para **verdadeiro** também. Você pode identificar rapidamente o primeiro controle fora do grupo por meio **Ctrl**+**1!d** para exibir a ordem de tabulação.
+
+### <a name="to-add-a-member-variable-for-the-radio-button-group"></a>Para adicionar uma variável de membro para o grupo de botões de opção
+
+1. O primeiro controle de botão de opção na ordem de tabulação com o botão direito (o controle dominante e aquele com o **grupo** propriedade definida como **verdadeiro**) e escolha **Adicionar variável** do menu de atalho.
+
+1. No [assistente Adicionar variável de membro](../ide/add-member-variable-wizard.md), selecione o **variável de controle** caixa de seleção e, em seguida, selecione o **valor** botão de opção.
+
+1. No **nome da variável** , digite um nome para a nova variável de membro.
+
+1. No **tipo de variável** caixa de listagem, selecione **int** ou o tipo *int*.
+
+   Agora você pode modificar seu código para especificar qual botão de opção deve aparecer selecionado. Por exemplo, `m_radioBox1 = 0;` seleciona o primeiro botão de opção no grupo.
 
 ## <a name="requirements"></a>Requisitos
 
