@@ -1,6 +1,6 @@
 ---
-title: Usando uma ferramenta de desenho
-ms.date: 11/04/2016
+title: 'Como: Use uma ferramenta de desenho'
+ms.date: 02/15/2019
 f1_keywords:
 - vc.editors.image.drawing
 helpviewer_keywords:
@@ -16,16 +16,18 @@ helpviewer_keywords:
 - graphics [C++], custom brushes
 - custom brushes
 ms.assetid: 1f8c6eef-7760-45a9-a5cb-9e15c6f91245
-ms.openlocfilehash: 72224581e021a22b31ec5e6fa5940ff5a568a4e0
-ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
+ms.openlocfilehash: 135509626e20044b0d4ec8e63d8916f4c537388e
+ms.sourcegitcommit: 24592ba0a38c7c996ffd3d55fe1024231a59ccc2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56320543"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56336547"
 ---
-# <a name="using-a-drawing-tool"></a>Usando uma ferramenta de desenho
+# <a name="how-to-use-a-drawing-tool"></a>Como: Use uma ferramenta de desenho
 
 O **imagem** do freehand desenhar e apagar todos funcionam da mesma forma de ferramentas editor: selecione a ferramenta e, se necessário, [selecionar cores de primeiro plano e plano de fundo](../windows/selecting-foreground-or-background-colors-image-editor-for-icons.md) e opções de tamanho e forma. Você, em seguida, mova o ponteiro para a imagem e clique ou arraste para desenhar e apagar.
+
+## <a name="drawing-tools"></a>Ferramentas de desenho
 
 Quando você seleciona os **borracha** ferramenta, **pincel** ferramenta, ou **spray** ferramenta, o seletor de opção exibe opções da ferramenta.
 
@@ -34,7 +36,7 @@ Quando você seleciona os **borracha** ferramenta, **pincel** ferramenta, ou **s
 
 Você pode selecionar ferramentas de desenho a **Editor de imagens** barra de ferramentas ou o **imagem** menu.
 
-## <a name="to-select-and-use-a-drawing-tool-from-the-image-editor-toolbar"></a>Para selecionar e usar uma ferramenta de desenho da barra de ferramentas do Editor de imagens
+### <a name="to-select-and-use-a-drawing-tool-from-the-image-editor-toolbar"></a>Para selecionar e usar uma ferramenta de desenho da barra de ferramentas do Editor de imagens
 
 1. Selecione um botão na **Editor de imagens** barra de ferramentas.
 
@@ -65,7 +67,7 @@ Você pode selecionar ferramentas de desenho a **Editor de imagens** barra de fe
 
 1. No submenu em cascata, escolha a ferramenta que você deseja usar.
 
-## <a name="drawing-lines-or-closed-figures"></a>Desenhando linhas ou figuras fechadas
+## <a name="lines-or-closed-figures"></a>Linhas ou figuras fechadas
 
 Ferramentas do editor de imagens para desenhar linhas e de figuras fechadas todos funcionam da mesma forma: colocar o ponto de inserção em um ponto e arraste para outro. Para linhas, esses pontos são os pontos de extremidade. Para figuras fechadas, esses pontos são cantos opostos de um retângulo delimitador a figura.
 
@@ -97,7 +99,7 @@ Linhas são desenhadas em uma determinado pela seleção atual do pincel de larg
 
 1. Arraste o ponteiro para o canto diagonal oposto.
 
-## <a name="create-a-custom-brush"></a>Criar um pincel personalizado
+## <a name="custom-brushes"></a>Pincéis personalizados
 
 Um pincel personalizado é uma parte retangular de uma imagem que você pegue e usar como uma da **imagem** pincéis de prontas para uso do editor. Todas as operações que você pode executar em uma seleção, você pode executar em um pincel personalizado também.
 
@@ -105,11 +107,7 @@ Um pincel personalizado é uma parte retangular de uma imagem que você pegue e 
 
 1. [Selecione a parte da imagem](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md) que você deseja usar para um pincel.
 
-1. Mantendo os **Shift** para baixo da chave, escolha na seleção e arraste-o em toda a imagem.
-
-   \- ou -
-
-1. Dos **imagem** menu, escolha **usar seleção como Pincel**.
+1. Mantenha os **Shift** para baixo da chave, escolha na seleção e arraste-o em toda a imagem. Ou o **imagem** menu, escolha **usar seleção como Pincel**.
 
    Sua seleção torna-se um pincel personalizado que distribui as cores na seleção entre a imagem. Cópias da seleção são deixadas ao longo do caminho de arrastamento. Quanto mais lentamente do que você arrastar, são feitas as cópias mais.
 
@@ -137,8 +135,6 @@ Pressione a **sinal de adição** (**+**) a chave para dobrar o tamanho do pince
 ### <a name="to-cancel-the-custom-brush"></a>Para cancelar o pincel personalizado
 
 Pressione **Esc** ou escolha outra ferramenta de desenho.
-
-Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) na *guia do desenvolvedor do .NET Framework*. Para obter informações sobre como adicionar manualmente os arquivos de recursos a projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso a propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e Localizando aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).
 
 ## <a name="requirements"></a>Requisitos
 

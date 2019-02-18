@@ -1,6 +1,6 @@
 ---
-title: Editor de imagens para ícones
-ms.date: 10/17/2018
+title: Editor de imagens para ícones (C++)
+ms.date: 02/15/2019
 f1_keywords:
 - vc.editors.cursor.F1
 - vc.editors.icon.F1
@@ -42,14 +42,14 @@ helpviewer_keywords:
 - Image editor [C++], grid settings
 - grid settings, Image editor
 ms.assetid: 586d2b8b-0348-4883-a85d-1ff0ddbf14dd
-ms.openlocfilehash: 48b363b7b9021042fe6242be70c74f0daeade0c2
-ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
+ms.openlocfilehash: 782462a4aeba72252c4d6043bd192f6892a3966f
+ms.sourcegitcommit: 24592ba0a38c7c996ffd3d55fe1024231a59ccc2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56320699"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56336573"
 ---
-# <a name="image-editor-for-icons"></a>Editor de imagens para ícones
+# <a name="image-editor-for-icons-c"></a>Editor de imagens para ícones (C++)
 
 Quando você clica em um arquivo de imagem (por exemplo,. ico,. bmp,. png) no Gerenciador de soluções, a imagem é aberto no Editor de imagens da mesma forma que arquivos de código aberto no Editor de códigos. Quando uma guia do Editor de imagem estiver ativa, você verá as barras de ferramentas com várias ferramentas para criar e editar imagens. Além de bitmaps, ícones e cursores, você pode editar imagens no formato GIF ou JPEG usando os comandos a **imagem** menu e as ferramentas na **Editor de imagens** barra de ferramentas.
 
@@ -231,8 +231,6 @@ Você pode fazer o download sem nenhum custo a **biblioteca de imagens do Visual
 ## <a name="managed-resources"></a>Recursos gerenciados
 
 Você pode usar o **imagem** editor e o [editor binário](binary-editor.md) para trabalhar com arquivos de recursos em projetos gerenciados. Todos os recursos gerenciados que você deseja editar devem ser recursos vinculados. Os editores de recursos do Visual Studio não oferecem suporte a edição de recursos inseridos.
-
-Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) na *guia do desenvolvedor do .NET Framework*. Para obter informações sobre como adicionar manualmente os arquivos de recursos a projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso a propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e Localizando aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).
 
 ## <a name="requirements"></a>Requisitos
 

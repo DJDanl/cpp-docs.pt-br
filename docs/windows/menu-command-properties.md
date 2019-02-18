@@ -1,6 +1,6 @@
 ---
-title: Propriedades do comando de menu (C++)
-ms.date: 11/04/2016
+title: Comandos de menu (C++)
+ms.date: 02/15/2019
 helpviewer_keywords:
 - menu items, properties
 - keyboard shortcuts [C++], menu association
@@ -17,14 +17,14 @@ helpviewer_keywords:
 - mnemonics [C++], uniqueness checking
 - Check Mnemonics command
 ms.assetid: 6d308205-3c9e-42f2-ab42-45e656940e45
-ms.openlocfilehash: 8989b96640bbb64eb5dcba09d60363dd0989263f
-ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
+ms.openlocfilehash: 9f91973fdf2d5a45c631f24d3eed41482a91a834
+ms.sourcegitcommit: 24592ba0a38c7c996ffd3d55fe1024231a59ccc2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56320569"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56336599"
 ---
-# <a name="menu-command-properties-c"></a>Propriedades do comando de menu (C++)
+# <a name="menu-commands-c"></a>Comandos de menu (C++)
 
 As informações a seguir são organizadas de acordo com o **menus** as propriedades que aparecem na [janela propriedades](/visualstudio/ide/reference/properties-window) quando você seleciona um comando de menu. Eles estão listados em ordem alfabética, embora a **propriedades** janela também permite que você exibir essas propriedades por categoria.
 
@@ -43,11 +43,9 @@ As informações a seguir são organizadas de acordo com o **menus** as propried
 |**Direita para esquerda ordem**|Permite que os comandos de menu a exibir da direita para a esquerda quando a interface está localizada para qualquer linguagem que lê da direita para a esquerda, como hebraico ou árabe.|
 |**Separador**|Se **verdadeira**, o comando de menu é um separador. Tipo: **Bool**. Padrão: **False**.|
 
-## <a name="associate-menu-commands"></a>Associar comandos de menu
+## <a name="associate-menu-commands"></a>Associar comandos de Menu
 
 Geralmente, há vezes que deseja que um comando de menu e uma combinação de teclado para emitir o mesmo comando do programa. Comandos idênticos são emitidos usando o **Menu** editor para atribuir o mesmo identificador de recurso para o comando de menu e uma entrada na tabela de Aceleradores do seu aplicativo. Você, em seguida, edite o [legenda](../windows/menu-command-properties.md) o comando de menu para mostrar o nome da chave do acelerador.
-
-Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) na *guia do desenvolvedor do .NET Framework*. Para obter informações sobre como adicionar manualmente os arquivos de recursos a projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso a propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e Localizando aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).
 
 ### <a name="to-associate-a-menu-command-with-an-accelerator-key"></a>Para associar um comando de menu com uma tecla de aceleração
 
@@ -59,13 +57,13 @@ Para obter informações sobre como adicionar recursos a projetos gerenciados, c
 
    - Digite o nome da chave de modificador (**Ctrl**, **Alt**, ou **Shift**) seguido por um sinal de adição (**+**) e o nome, uma letra, ou símbolo da chave adicional.
 
-       Por exemplo, para atribuir **Ctrl**+**s** para o **abertos** comando o **arquivo** menu, modificar o comando de menu  **Legenda** para que ele se parece com o seguinte texto:
+   Por exemplo, para atribuir **Ctrl**+**s** para o **abertos** comando o **arquivo** menu, modificar o comando de menu  **Legenda** para que ele se parece com o seguinte texto:
 
-        ```
-        &Open...\tCtrl+O
-        ```
+   ```
+   &Open...\tCtrl+O
+   ```
 
-       O comando de menu na **Menu** editor é atualizado para refletir a nova legenda conforme você o digita.
+   O comando de menu na **Menu** editor é atualizado para refletir a nova legenda conforme você o digita.
 
 1. [Criar a entrada de tabela de aceleradores](../windows/adding-an-entry-to-an-accelerator-table.md) no **Accelerator** editor e atribua a ele o mesmo identificador que o comando de menu. Use uma combinação de teclas que você acha que será fácil de lembrar.
 
@@ -98,5 +96,4 @@ Win32
 ## <a name="see-also"></a>Consulte também
 
 [Editor de Menu](../windows/menu-editor.md)<br/>
-[Adicionando comandos a um menu](../windows/adding-commands-to-a-menu.md)<br/>
 [Cadeias de caracteres (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)<br/>

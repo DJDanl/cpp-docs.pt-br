@@ -1,6 +1,6 @@
 ---
 title: Teclas de aceleração (Editor de C++ imagens para ícones)
-ms.date: 11/04/2016
+ms.date: 02/15/2019
 f1_keywords:
 - vc.editors.bitmap
 - vc.editors.icon
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - accelerator keys
 - Image editor [C++], accelerator keys
 ms.assetid: add37861-3e17-4a6f-89e8-46df12e74a90
-ms.openlocfilehash: 062b860849d968e18657afb66b568a1bf6f2b6d6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 604f97edc8e4e49bad477d76e0e46334b8cf726b
+ms.sourcegitcommit: 24592ba0a38c7c996ffd3d55fe1024231a59ccc2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505099"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56336524"
 ---
 # <a name="accelerator-keys-c-image-editor-for-icons"></a>Teclas de aceleração (Editor de C++ imagens para ícones)
 
@@ -25,44 +25,42 @@ Abaixo estão as teclas de aceleração para os comandos do editor de imagem que
 |Comando|Chaves|Descrição|
 |-------------|----------|-----------------|
 |Image.AirBrushTool|**Ctrl** + **A**|Desenha usando um spray com o tamanho e cor selecionados.|
-|Image.BrushTool|**CTRL** + **B**|Desenha usando um pincel com a forma selecionada, tamanho e cor.|
-|Image.CopyAndOutlineSelection|**CTRL** + **Shift** + **U**|Cria uma cópia da seleção atual e a contorna. Se a cor do plano de fundo estiver contida na seleção atual, ela será excluída se você tiver [transparente](../windows/choosing-a-transparent-or-opaque-background-image-editor-for-icons.md) selecionado.|
+|Image.BrushTool|**Ctrl** + **B**|Desenha usando um pincel com a forma selecionada, tamanho e cor.|
+|Image.CopyAndOutlineSelection|**Ctrl** + **Shift** + **U**|Cria uma cópia da seleção atual e a contorna. Se a cor do plano de fundo estiver contida na seleção atual, ela será excluída se você tiver [transparente](../windows/choosing-a-transparent-or-opaque-background-image-editor-for-icons.md) selecionado.|
 |Image.DrawOpaque|**Ctrl** + **J**|Torna a seleção atual seja [opaca ou transparente](../windows/choosing-a-transparent-or-opaque-background-image-editor-for-icons.md).|
 |Image.EllipseTool|**Ctrl** + **P**|Desenha uma elipse com a cor e largura da linha selecionada.|
 |Image.EraserTool|**Ctrl** + **Shift** + **I**|Apaga uma parte da imagem (com a cor de plano de fundo atual).|
-|Image.FilledEllipseTool|**CTRL** + **Shift** + **Alt** + **P**|Desenha uma elipse preenchida.|
-|Image.FilledRectangleTool|**CTRL** + **Shift** + **Alt** + **R**|Desenha um retângulo preenchido.|
-|Image.FilledRoundRectangleTool|**CTRL** + **Shift** + **Alt** + **W**|Desenha um retângulo arredondado preenchido.|
+|Image.FilledEllipseTool|**Ctrl** + **Shift** + **Alt** + **P**|Desenha uma elipse preenchida.|
+|Image.FilledRectangleTool|**Ctrl** + **Shift** + **Alt** + **R**|Desenha um retângulo preenchido.|
+|Image.FilledRoundRectangleTool|**Ctrl** + **Shift** + **Alt** + **W**|Desenha um retângulo arredondado preenchido.|
 |Image.FillTool|**Ctrl** + **F**|Preenche uma área.|
 |Image.FlipHorizontal|**Ctrl** + **H**|Inverte a imagem ou seleção horizontalmente.|
-|Image.FlipVertical|**SHIFT**+ **Alt** + **H**|Inverte a imagem ou seleção verticalmente.|
-|Image.LargerBrush|**CTRL** + **=**|Aumenta o tamanho do pincel por um pixel em cada direção. Para diminuir o tamanho do pincel, consulte Image. smallerbrush nesta tabela.|
+|Image.FlipVertical|**Shift**+ **Alt** + **H**|Inverte a imagem ou seleção verticalmente.|
+|Image.LargerBrush|**Ctrl** + **=**|Aumenta o tamanho do pincel por um pixel em cada direção. Para diminuir o tamanho do pincel, consulte Image. smallerbrush nesta tabela.|
 |Image.LineTool|**Ctrl** + **L**|Desenha uma linha reta com a forma selecionada, tamanho e cor.|
-|Image.MagnificationTool|**CTRL** + **M**|Ativa a **ampliar** ferramenta, que lhe permite ampliar seções específicas da sua imagem.|
+|Image.MagnificationTool|**Ctrl** + **M**|Ativa a **ampliar** ferramenta, que lhe permite ampliar seções específicas da sua imagem.|
 |Image.Magnify|**Ctrl** + **Shift** + **M**|Alterna entre ampliação atual e a ampliação 1:1.|
 |Image.NewImageType|**Inserir**|Inicia o [New \<dispositivo > caixa de diálogo de tipo de imagem](../windows/new-device-image-type-dialog-box-image-editor-for-icons.md) com o qual você pode criar uma imagem para um tipo de imagem diferente.|
 |Image.NextColor|**Ctrl** + **]**<br /><br /> - ou -<br /><br /> **CTRL** + **seta para a direita**|Altera a cor de primeiro plano de desenho para a próxima cor da paleta.|
 |Image.NextRightColor|**Ctrl** + **Shift** + **]**<br /><br /> - ou -<br /><br /> **SHIFT** + **Ctrl** + **seta para a direita**|Altera o cor do plano de fundo de desenho para a próxima cor da paleta.|
-|Image.OutlinedEllipseTool|**SHIFT** + **Alt** + **P**|Desenha uma elipse preenchida com uma estrutura de tópicos.|
-|Image.OutlinedRectangleTool|**SHIFT** + **Alt** + **R**|Desenha um retângulo preenchido com uma estrutura de tópicos|
-|Image.OutlinedRoundRectangleTool|**SHIFT** + **Alt** + **W**|Desenha um retângulo arredondado preenchido com uma estrutura de tópicos.|
+|Image.OutlinedEllipseTool|**Shift** + **Alt** + **P**|Desenha uma elipse preenchida com uma estrutura de tópicos.|
+|Image.OutlinedRectangleTool|**Shift** + **Alt** + **R**|Desenha um retângulo preenchido com uma estrutura de tópicos|
+|Image.OutlinedRoundRectangleTool|**Shift** + **Alt** + **W**|Desenha um retângulo arredondado preenchido com uma estrutura de tópicos.|
 |Image.PencilTool|**Ctrl** + **I**|Desenha usando um lápis de pixel único.|
 |Image.PreviousColor|**Ctrl** + **[**<br /><br /> - ou -<br /><br /> **CTRL** + **seta para a esquerda**|Altera a cor de primeiro plano de desenho para a cor anterior da paleta.|
 |Image.PreviousRightColor|**Ctrl** + **Shift** + **[**<br /><br /> - ou -<br /><br /> **SHIFT** + **Ctrl** + **seta para a esquerda**|Altera o cor do plano de fundo de desenho para a cor anterior da paleta.|
-|Image.RectangleSelectionTool|**SHIFT** + **Alt** + **S**|Seleciona uma parte retangular da imagem para mover, copiar ou editar.|
+|Image.RectangleSelectionTool|**Shift** + **Alt** + **S**|Seleciona uma parte retangular da imagem para mover, copiar ou editar.|
 |Image.RectangleTool|ATL + R|Desenha um retângulo com a cor e largura da linha selecionada.|
 |Image.Rotate90Degrees|**Ctrl** + **Shift** + **H**|A imagem ou seleção gira 90 graus.|
-|Image.RoundedRectangleTool|**ALT** + **W**|Desenha um retângulo arredondado com a cor e largura da linha selecionada.|
-|Image.ShowGrid|**CTRL** + **Alt** + **S**|Alterna a grade de pixels (seleciona ou desmarca a **grade de pixels** opção a [caixa de diálogo de configurações da grade](../windows/grid-settings-dialog-box-image-editor-for-icons.md)).|
-|Image.ShowTileGrid|**CTRL** + **Shift** + **Alt** + **S**|Alterna a grade lado a lado (seleciona ou desmarca a **grade lado a lado** opção a [caixa de diálogo de configurações da grade](../windows/grid-settings-dialog-box-image-editor-for-icons.md)).|
+|Image.RoundedRectangleTool|**Alt** + **W**|Desenha um retângulo arredondado com a cor e largura da linha selecionada.|
+|Image.ShowGrid|**Ctrl** + **Alt** + **S**|Alterna a grade de pixels (seleciona ou desmarca a **grade de pixels** opção a [caixa de diálogo de configurações da grade](../windows/grid-settings-dialog-box-image-editor-for-icons.md)).|
+|Image.ShowTileGrid|**Ctrl** + **Shift** + **Alt** + **S**|Alterna a grade lado a lado (seleciona ou desmarca a **grade lado a lado** opção a [caixa de diálogo de configurações da grade](../windows/grid-settings-dialog-box-image-editor-for-icons.md)).|
 |Image.SmallBrush|**Ctrl** + **.** (período)|Reduz a **pincel** tamanho a um pixel. (Consulte também largerbrush e smallerbrush nesta tabela.)|
 |Image.SmallerBrush|**CTRL**  +  **-** (menos)|Reduz o tamanho do pincel por um pixel em cada direção. Para expandir o tamanho do pincel novamente, consulte Image. largerbrush nesta tabela.|
 |Image.TextTool|**Ctrl** + **T**|Abre o [caixa de diálogo Ferramenta de texto](../windows/text-tool-dialog-box-image-editor-for-icons.md).|
-|Image.UseSelectionAsBrush|**CTRL** + **U**|Desenha usando a seleção atual como um pincel.|
-|Image.ZoomIn|**CTRL** + **Shift** + **.** (período)<br /><br /> - ou -<br /><br /> **CTRL** + **seta para cima**|Aumenta a ampliação da exibição atual.|
-|Image.ZoomOut|**CTRL** + **,** (vírgula)<br /><br /> - ou -<br /><br /> **CTRL** + **na seta para baixo**|Reduz a ampliação da exibição atual.|
-
-Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) na *guia do desenvolvedor do .NET Framework*. Para obter informações sobre como adicionar manualmente os arquivos de recursos a projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso a propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e Localizando aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).
+|Image.UseSelectionAsBrush|**Ctrl** + **U**|Desenha usando a seleção atual como um pincel.|
+|Image.ZoomIn|**Ctrl** + **Shift** + **.** (período)<br /><br /> - ou -<br /><br /> **CTRL** + **seta para cima**|Aumenta a ampliação da exibição atual.|
+|Image.ZoomOut|**Ctrl** + **,** (comma)<br /><br /> - ou -<br /><br /> **CTRL** + **na seta para baixo**|Reduz a ampliação da exibição atual.|
 
 ## <a name="requirements"></a>Requisitos
 

@@ -1,6 +1,6 @@
 ---
-title: Editando uma imagem
-ms.date: 11/04/2016
+title: 'Como: Editar uma imagem'
+ms.date: 02/15/2019
 f1_keywords:
 - vc.editors.image.editing
 - vc.editors.image.editing
@@ -40,14 +40,14 @@ helpviewer_keywords:
 - Image editor [C++], Properties window
 - Properties window, image editor
 ms.assetid: 8b6ce4ad-eba1-4ece-86ba-cea92c3edff2
-ms.openlocfilehash: 928a37d1b85378c3c50f41dba441259ace2d3af9
-ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
+ms.openlocfilehash: 906244b692253a8423af55eb91d46622087713e3
+ms.sourcegitcommit: 24592ba0a38c7c996ffd3d55fe1024231a59ccc2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56320673"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56336521"
 ---
-# <a name="editing-an-image"></a>Editando uma imagem
+# <a name="how-to-edit-an-image"></a>Como: Editar uma imagem
 
 Você pode usar ferramentas de seleção para definir uma área de uma imagem que você deseja recortar, copiar, limpar, redimensionar, inverter ou mover. Com o **seleção de retângulo** ferramenta você pode definir e selecionar uma região retangular da imagem. Com o **seleção Irregular** ferramenta você pode desenhar um contorno à mão livre da área que você deseja selecionar para o recorte, cópia ou outra operação.
 
@@ -56,9 +56,7 @@ Você pode usar ferramentas de seleção para definir uma área de uma imagem qu
 
 Você também pode criar um pincel personalizado a partir de uma seleção. Para obter mais informações, consulte [criando um pincel personalizado](../windows/creating-a-custom-brush-image-editor-for-icons.md).
 
-Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) na *guia do desenvolvedor do .NET Framework*. Para obter informações sobre como adicionar manualmente os arquivos de recursos a projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso a propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e Localizando aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).
-
-## <a name="selecting-an-image"></a>Selecionar uma imagem
+## <a name="select-an-image"></a>Selecione uma imagem
 
 1. Sobre o **Editor de imagens** barra de ferramentas (ou do **imagem** menu, **ferramentas** comando), escolha a ferramenta de seleção que você deseja.
 
@@ -72,7 +70,7 @@ Para obter informações sobre como adicionar recursos a projetos gerenciados, c
 
 1. Selecione a imagem de fora a seleção atual. A borda de seleção altera o foco e abrange a imagem inteira novamente.
 
-## <a name="editing-parts-of-an-image"></a>Editando partes de uma imagem
+## <a name="edit-parts-of-an-image"></a>Editar as partes de uma imagem
 
 Você pode executar operações de edição padrão — recortar, copiar, limpar e movendo — em uma [seleção](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md), se a seleção é a imagem inteira ou parte dela. Porque o **imagem** editor usa o **área de transferência do Windows**, você pode transferir imagens entre o **imagem** editor e outros aplicativos para Windows.
 
@@ -119,7 +117,7 @@ Dos **edite** menu, escolha **excluir**.
 
 Para obter mais informações sobre desenho com uma seleção, consulte [criando um pincel personalizado](../windows/creating-a-custom-brush-image-editor-for-icons.md).
 
-## <a name="flipping-an-image"></a>Invertendo uma imagem
+## <a name="flip-an-image"></a>Inverter uma imagem
 
 Você pode inverter ou girar uma imagem para criar uma imagem espelhada do original, ative a imagem de cabeça para baixo ou girar a imagem à direita 90 graus por vez.
 
@@ -132,7 +130,7 @@ Você pode inverter ou girar uma imagem para criar uma imagem espelhada do origi
    > [!NOTE]
    > Você também pode usar o [teclas de aceleração (atalho)](../windows/accelerator-keys-image-editor-for-icons.md) para esses comandos ou acessar os comandos no menu de atalho (clique fora da imagem enquanto estiver no editor de imagem).
 
-## <a name="resizing-an-image"></a>Redimensionando uma imagem
+## <a name="resize-an-image"></a>Redimensionar uma imagem
 
 O comportamento do **imagem** editor ao redimensionar uma imagem depende do fato de ter sido [selecionado](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md) a imagem inteira ou apenas uma parte dele.
 
@@ -185,7 +183,7 @@ Normalmente, o **imagem** editor corta ou amplia uma imagem quando você redimen
 
 1. Arraste uma das alças de dimensionamento até que a seleção é o tamanho correto.
 
-## <a name="editing-an-image-outside-of-a-project"></a>Editando uma imagem fora de um projeto
+## <a name="edit-an-image-outside-of-a-project"></a>Editar uma imagem fora de um projeto
 
 Você pode abrir e editar imagens no ambiente de desenvolvimento, assim como faria em qualquer aplicativo de gráficos. Trabalhar com imagens não precisam ser parte de um projeto do Visual Studio para edição autônoma.
 
@@ -197,7 +195,7 @@ Você pode abrir e editar imagens no ambiente de desenvolvimento, assim como far
 
 1. Localize e abra a imagem que você deseja editar.
 
-## <a name="changing-image-properties"></a>Alterando propriedades da imagem
+## <a name="change-image-properties"></a>Alterar propriedades da imagem
 
 Você pode definir ou modificar propriedades de uma imagem usando o [janela de propriedades](/visualstudio/ide/reference/properties-window).
 

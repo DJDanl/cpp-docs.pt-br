@@ -1,6 +1,6 @@
 ---
-title: Criando um ícone ou outra imagem
-ms.date: 11/04/2016
+title: 'Como: Criar um ícone ou outra imagem'
+ms.date: 02/15/2019
 f1_keywords:
 - vc.editors.bitmap
 - vc.editors.icon
@@ -87,14 +87,14 @@ helpviewer_keywords:
 - graphics [C++], converting formats
 - images [C++], converting formats
 ms.assetid: 66db3fb2-cfc1-48a2-9bdd-53f61eb7ee30
-ms.openlocfilehash: 3ce4d10c9ab085973f1ab00dba205c22ff17f42f
-ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
+ms.openlocfilehash: 69fffc71a7b5dfad12e70a9132fc61b11a0914cc
+ms.sourcegitcommit: 24592ba0a38c7c996ffd3d55fe1024231a59ccc2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56320725"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56336586"
 ---
-# <a name="creating-an-icon-or-other-image"></a>Criando um ícone ou outra imagem
+# <a name="how-to-create-an-icon-or-other-image"></a>Como: Criar um ícone ou outra imagem
 
 Você pode criar uma nova imagem (bitmap, ícone, cursor ou barra de ferramentas) e usar o editor de imagens para personalizar sua aparência. Você também pode criar um novo bitmap em conformidade com um [modelo](../windows/how-to-use-resource-templates.md).
 
@@ -133,13 +133,9 @@ Quando você cria um novo ícone ou cursor, o **imagem** editor primeiro cria um
 
 Quando você abre o recurso de ícone ou cursor na [editor de imagens](../windows/image-editor-for-icons.md), a imagem a maioria dos combinar o dispositivo de exibição atual é aberta por padrão.
 
-#### <a name="new-ltdevicegt-image-type-dialog-box"></a>Novos &lt;dispositivo&gt; caixa de diálogo de tipo de imagem
-
 O **New &lt;dispositivo&gt; tipo de imagem** caixa de diálogo permite que você crie uma nova imagem de dispositivo de um tipo especificado. Para abrir o **New \<dispositivo > imagem** caixa de diálogo, selecione **novo tipo de imagem** sobre a **imagem** menu. As seguintes propriedades incluídas estão **tipo de imagem de destino** e **personalizado**.
 
-##### <a name="target-image-type"></a>Tipo de imagem de destino
-
-Lista os tipos de imagem disponível. Selecione o tipo de imagem que você deseja abrir:
+O **tipo de imagem de destino** propriedade lista os tipos de imagem disponível. Selecione o tipo de imagem que você deseja abrir:
 
 ||||
 |-|-|-|
@@ -153,9 +149,7 @@ Lista os tipos de imagem disponível. Selecione o tipo de imagem que você desej
 > [!NOTE]
 > Todas as imagens existentes não serão exibidas nessa lista.
 
-##### <a name="custom"></a>Personalizado
-
-Abre o **imagem personalizada** caixa de diálogo na qual você pode criar uma nova imagem com um tamanho personalizado e o número de cores.
+O **personalizado** propriedade abre o **imagem personalizada** caixa de diálogo na qual você pode criar uma nova imagem com um tamanho personalizado e o número de cores.
 
 O **imagem personalizada** caixa de diálogo permite que você crie uma nova imagem com um tamanho personalizado e o número de cores. As propriedades a seguir incluídas são:
 
@@ -164,8 +158,6 @@ O **imagem personalizada** caixa de diálogo permite que você crie uma nova ima
 |**Largura**|Fornece um espaço para que você insira a largura da imagem personalizada em pixels (1-512, o limite de 2048).|
 |**Altura**|Fornece um espaço para que você insira a altura da imagem personalizada em pixels (1-512, o limite de 2048).|
 |**Cores**|Fornece um espaço para que você escolha o número de cores para a imagem personalizada: 2, 16 ou 256.|
-
-#### <a name="open-ltdevicegt-image-dialog-box"></a>Abra &lt;dispositivo&gt; caixa de diálogo imagem
 
 Use o **abra &lt;dispositivo&gt; imagem** caixa de diálogo para abrir imagens de dispositivo em projetos do C++. Ele lista as imagens de dispositivo existentes no recurso atual (imagens que fazem parte do recurso atual). É a seguinte propriedade incluída:
 
@@ -184,13 +176,13 @@ Use o **abra &lt;dispositivo&gt; imagem** caixa de diálogo para abrir imagens d
 
    Se um sinal de adição (**+**) é exibido ao lado do tipo de recurso de imagem no **inserir recurso** caixa de diálogo, isso significa que os modelos de barra de ferramentas estão disponíveis. Selecione o sinal de adição para expandir a lista de modelos, selecione um modelo e escolha **New**.
 
-### <a name="add-an-image-for-a-different-display-device"></a>Adicionar uma imagem para um dispositivo de exibição diferente
+### <a name="to-add-an-image-for-a-different-display-device"></a>Para adicionar uma imagem para um dispositivo de exibição diferente
 
 1. No **imagem** menu, selecione **nova imagem de dispositivo** (ou clique com botão direito no **Editor de imagens** painel e escolha **nova imagem de dispositivo** da menu de atalho).
 
 1. Selecione o tipo de imagem que você deseja adicionar. Você também pode selecionar **personalizado** para criar um ícone cujo tamanho não está disponível na lista padrão.
 
-### <a name="copy-a-device-image"></a>Copiar uma imagem de dispositivo
+### <a name="to-copy-a-device-image"></a>Para copiar uma imagem de dispositivo
 
 1. Sobre o **imagem** menu, selecione **Abrir imagem do dispositivo** e escolha uma imagem da lista de imagens atual. Por exemplo, escolha 32 × 32, versão de 16 cores de um ícone.
 
@@ -200,14 +192,14 @@ Use o **abra &lt;dispositivo&gt; imagem** caixa de diálogo para abrir imagens d
 
 1. Cole a imagem de ícone (**Ctrl**+**V**) de um **Editor de imagens** janela para outra. Se você estiver colando um tamanho maior em um tamanho menor, você pode usar os identificadores de ícone para redimensionar a imagem.
 
-### <a name="delete-a-device-image"></a>Excluir uma imagem de dispositivo
+### <a name="to-delete-a-device-image"></a>Para excluir uma imagem de dispositivo
 
 Enquanto a imagem do ícone é exibida na **imagem** editor, selecione **excluir imagem do dispositivo** do **imagem** menu. Quando você exclui a última imagem de ícone no recurso, o recurso também é excluído.
 
    > [!NOTE]
    > Quando você pressiona o **/DEL** chave, as imagens e cores que você desenhou em um ícone serão excluídas, mas o ícone permanecerá; agora é possível recriá-lo. Se você pressionar **/DEL** por engano, você pode pressionar **Ctrl**+**Z** desfazer a ação.
 
-### <a name="create-transparent-or-inverse-regions-in-device-images"></a>Criar regiões transparentes ou inversas em imagens de dispositivo
+### <a name="to-create-transparent-or-inverse-regions-in-device-images"></a>Para criar regiões transparentes ou inversas em imagens de dispositivo
 
 No [editor de imagens](../windows/image-editor-for-icons.md), a imagem de ícone ou cursor inicial tem um atributo transparente. Embora as imagens de ícone e cursor são retangulares, muitos não aparecem isso porque as partes da imagem são transparentes; mostra a imagem subjacente na tela por meio do ícone ou cursor. Quando você arrasta um ícone, partes da imagem podem aparecer em uma cor invertida. Criar esse efeito, definindo a cor da tela e as cores invertidas na [janela de cores](../windows/colors-window-image-editor-for-icons.md).
 
@@ -343,8 +335,6 @@ Você pode abrir imagens GIF ou JPEG na **imagem** editor e salvá-los como bitm
 
    > [!NOTE]
    > Todos os recursos gerenciados que você deseja editar devem ser recursos vinculados. Os editores de recursos do Visual Studio não oferecem suporte à edição de recursos inseridos. Para obter mais informações, consulte [criando arquivos de recurso](/dotnet/framework/resources/creating-resource-files-for-desktop-apps) na *guia do desenvolvedor do .NET Framework*.
-
-Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) na *guia do desenvolvedor do .NET Framework*. Para obter informações sobre como adicionar manualmente os arquivos de recursos a projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso a propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e Localizando aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).
 
 ## <a name="requirements"></a>Requisitos
 
