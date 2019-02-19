@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - floating-point numbers, truncation
 ms.assetid: 051a6e22-c636-4af8-9ac4-40160f4affca
-ms.openlocfilehash: 15f3ab62ad89ab5b571c528160b9ccd86ab93c5c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2bc46577c5ab304346d88f8522e584d1e54ca265
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50430784"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56152450"
 ---
 # <a name="truncation-of-floating-point-values"></a>Truncamento de valores de ponto flutuante
 
