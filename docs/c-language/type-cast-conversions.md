@@ -9,12 +9,12 @@ helpviewer_keywords:
 - type casts [C++], about type-cast conversion
 - type-cast conversions [C++]
 ms.assetid: 57ab5902-f12f-4326-a2f6-6282f1d4025a
-ms.openlocfilehash: d2de646d9ad3082c43ce896fdf4bc3c7e55a4405
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d54e4c15f84ccecad629d48341e5d3ae26d8cecf
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505294"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56151644"
 ---
 # <a name="type-cast-conversions"></a>Conversões de conversão de tipo
 
@@ -39,7 +39,7 @@ O *type-name* é um tipo e *cast-expression* é um valor para ser convertido par
 |Ponto flutuante|Qualquer tipo aritmético|
 |Um ponteiro para um objeto ou (**void** <strong>\*</strong>)|Qualquer tipo de inteiro, (**void** <strong>\*</strong>), um ponteiro para um objeto ou um ponteiro de função|
 |Ponteiro de função|Qualquer tipo integral, um ponteiro para um objeto ou um ponteiro de função|
-|Uma estrutura, união ou matriz|Nenhum|
+|Uma estrutura, união ou matriz|Nenhuma|
 |Tipo void|Qualquer tipo|
 
 Qualquer identificador pode ser convertido no tipo `void`. No entanto, se o tipo especificado em uma expressão de conversão de tipo não é `void`, o identificador que está sendo convertido nesse tipo não pode ser uma expressão `void`. Qualquer expressão pode ser convertida em `void`, mas uma expressão do tipo `void` não pode ser convertida em nenhum outro tipo. Por exemplo, uma função com o tipo de retorno `void` não pode ter seu retorno convertido em outro tipo.
