@@ -1,17 +1,17 @@
 ---
 title: / CETCOMPAT (compatível com a tecnologia de imposição de fluxo de controle)
-ms.date: 02/01/2019
+ms.date: 02/19/2019
 f1_keywords:
 - /CETCOMPAT
 helpviewer_keywords:
 - /CETCOMPAT linker option
 - /CETCOMPAT
-ms.openlocfilehash: 3adb147804674b52a5d77030c48567ec04da6aa6
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
+ms.openlocfilehash: 48eb1e2369e54d855bd19bb1d26ad057c903b9d0
+ms.sourcegitcommit: 7cd712176e5bc341b9d8f899d41ad49f02f85e5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55703397"
+ms.lasthandoff: 02/19/2019
+ms.locfileid: "56418686"
 ---
 # <a name="cetcompat-control-flow-enforcement-technology-compatible"></a>/ CETCOMPAT (compatível com a tecnologia de imposição de fluxo de controle)
 
@@ -24,7 +24,7 @@ Especifica se é necessário marcar uma imagem executável como compatível com 
 ## <a name="arguments"></a>Arguments
 
 **NÃO**<br/>
-Especifica que o executalbe deve não ser marcado como compatível com CET.
+Especifica que o executável não deve ser marcados como compatível com CET.
 
 ## <a name="remarks"></a>Comentários
 
@@ -44,7 +44,7 @@ O **/CETCOMPAT** opção está disponível a partir do conjunto de ferramentas d
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Para definir esta opção do vinculador por meio de programação
 
-- Essa opção não tem um equivalente programático.
+Essa opção não tem um equivalente programático.
 
 ## <a name="see-also"></a>Consulte também
 

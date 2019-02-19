@@ -86,12 +86,12 @@ helpviewer_keywords:
 - std::multiset [C++], upper_bound
 - std::multiset [C++], value_comp
 ms.assetid: 630e8c10-0ce9-4ad9-8d79-9e91a600713f
-ms.openlocfilehash: 8d2e298a2e4c6eb16a1851b3a9ce7ddc886a76f2
-ms.sourcegitcommit: d441305fb19131afbd7fc259d8cda63ea26f2343
+ms.openlocfilehash: 3b059db877d24f5e4414745ba6c2f9ee4f6591e7
+ms.sourcegitcommit: 7cd712176e5bc341b9d8f899d41ad49f02f85e5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51678464"
+ms.lasthandoff: 02/19/2019
+ms.locfileid: "56418712"
 ---
 # <a name="multiset-class"></a>Classe multiset
 
@@ -114,7 +114,7 @@ O tipo que fornece um objeto de função que pode comparar dois valores de eleme
 
 No C++ 14, você pode habilitar a pesquisa heterogênea ao especificar o predicado `std::less<>` ou o `std::greater<>`, que não tem nenhum parâmetro de tipo. Para obter mais informações, consulte [Pesquisa heterogênea em contêineres associativos](../standard-library/stl-containers.md#sequence_containers)
 
-*Alocador*<br/>
+*Allocator*<br/>
 O tipo que representa o objeto de alocador armazenado que encapsula detalhes sobre a alocação e a desalocação do multiset da memória. O valor padrão é `allocator<Key>`.
 
 ## <a name="remarks"></a>Comentários
@@ -482,7 +482,7 @@ O número de elementos no multiset cuja chave de classificação corresponde à 
 
 A função membro retorna o número de elementos *x* no intervalo
 
-\[ lower_bound (*chave*), upper_bound (*chave*))
+\[ lower_bound(*key*), upper_bound(*key*) )
 
 ### <a name="example"></a>Exemplo
 
@@ -953,10 +953,10 @@ size_type erase(
 *Where*<br/>
 A posição do elemento a ser removido.
 
-*Primeiro*<br/>
+*First*<br/>
 A posição do primeiro elemento a ser removido.
 
-*último*<br/>
+*Last*<br/>
 A posição logo após o último elemento a ser removido.
 
 *Chave*<br/>
@@ -1171,8 +1171,8 @@ IList);
 |*Val*|O valor de um elemento a ser inserido no multiset.|
 |*Where*|O local a partir do qual se começa a procurar pelo ponto de inserção correto. (Se esse ponto preceder imediatamente *onde*, inserção poderá ocorrer em tempo constante amortizado, em vez de no tempo logarítmico.)|
 |*ValTy*|Parâmetro de modelo que especifica o tipo de argumento que o multiset pode usar para construir um elemento de [value_type](../standard-library/map-class.md#value_type)e perfect-forwards *Val* como um argumento.|
-|*Primeiro*|A posição do primeiro elemento a ser copiado.|
-|*último*|A posição imediatamente após o último elemento a ser copiado.|
+|*First*|A posição do primeiro elemento a ser copiado.|
+|*Last*|A posição imediatamente após o último elemento a ser copiado.|
 |*InputIterator*|Argumento da função de modelo que atende aos requisitos de um [iterador de entrada](../standard-library/input-iterator-tag-struct.md) que aponta para elementos de um tipo que pode ser usado para construir objetos [value_type](../standard-library/map-class.md#value_type).|
 |*IList*|O [initializer_list](../standard-library/initializer-list.md) do qual os elementos serão copiados.|
 
@@ -1567,8 +1567,8 @@ multiset (
 |*Al*|A classe do alocador de armazenamento a ser usado neste objeto multiset, cujo padrão é `Allocator`.|
 |*Comp*|A função de comparação do tipo `const Compare` usada para ordenar os elementos no multiset, cujo padrão é `Compare`.|
 |*Direita*|O multiset da qual o multiset criado é uma cópia.|
-|*Primeiro*|A posição do primeiro elemento no intervalo de elementos a serem copiados.|
-|*último*|A posição do primeiro elemento além do intervalo de elementos a serem copiados.|
+|*First*|A posição do primeiro elemento no intervalo de elementos a serem copiados.|
+|*Last*|A posição do primeiro elemento além do intervalo de elementos a serem copiados.|
 |*IList*|O initializer_list do qual copiar os elementos.|
 
 ### <a name="remarks"></a>Comentários
@@ -1929,7 +1929,7 @@ int main() {
       cout << *ms1_Iter << " ";
    cout << "." << endl;
 
-   // rend can be used to terminate an interation
+   // rend can be used to terminate an iteration
    // through a multiset in a reverse order
    cout << "The reversed multiset is: ";
    for ( ms1_rIter = ms1.rbegin( ) ; ms1_rIter != ms1.rend( ); ms1_rIter++ )
