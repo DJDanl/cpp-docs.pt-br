@@ -9,12 +9,12 @@ helpviewer_keywords:
 - main function
 - programs [C++], terminating
 ms.assetid: 5984f1bd-072d-4e06-8640-122fb1454401
-ms.openlocfilehash: e975f09b62ffbb536790c13eb8614453b1c1e8b0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d16f8a5b7b6b23ad90aad886bbb9654e706549cb
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50610425"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56151033"
 ---
 # <a name="main-function-and-program-execution"></a>Função main e execução do programa
 
@@ -38,5 +38,5 @@ Consulte [Usando wmain](../c-language/using-wmain.md) para obter uma descrição
 
 ## <a name="see-also"></a>Consulte também
 
-[main: inicialização do programa](../cpp/main-program-startup.md)<br/>
+[main: inicialização de programa](../cpp/main-program-startup.md)<br/>
 [Analisando argumentos de linha de comando C](../c-language/parsing-c-command-line-arguments.md)

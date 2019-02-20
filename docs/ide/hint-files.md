@@ -11,18 +11,18 @@ helpviewer_keywords:
 - cpp.stop
 - Class View, hint file
 ms.assetid: 17194f66-cf62-4523-abec-77db0675ab65
-ms.openlocfilehash: 0b3ca7c6b09d85cddb519242e63af0b8097e3fec
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 44566408a3afcfee7a15299a5845b5af385aeef8
+ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50558776"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56320686"
 ---
 # <a name="hint-files"></a>Arquivos de dica
 
 Um *arquivo de dica* ajuda o IDE (ambiente de desenvolvimento integrado) do Visual Studio a interpretar identificadores do Visual C++, como os nomes de funções e macros. Quando você abre um projeto do Visual C++, o *sistema do análise* do IDE analisa o código em cada arquivo de origem no projeto e reúne informações sobre cada identificador. Em seguida, o IDE usa essas informações para dar suporte a funcionalidades como o navegador do **Modo de Exibição de Classe** e a **Barra de Navegação**.
 
-O sistema de análise, que foi introduzido no Visual C++ 2010, reconhece a sintaxe C/C++, mas pode interpretar incorretamente uma instrução que contém uma macro. A instrução poderá ser interpretada incorretamente se a macro fizer com que o código-fonte fique sintaticamente incorreto conforme ele é escrito. A instrução pode se tornar sintaticamente correta quando o código-fonte é compilado e o pré-processador substitui o [identificador de macro](../preprocessor/hash-define-directive-c-cpp.md) por sua definição. O sistema de análise funciona sem a necessidade de compilar o projeto, porque usa os arquivos de dica para interpretar as macros. Portanto, um recurso de navegação, como o **Modo de Exibição de Classe**, está imediatamente disponível.
+O sistema de análise, que foi introduzido no Visual C++ 2010, reconhece a sintaxe C/C++, mas pode interpretar incorretamente uma instrução que contém uma macro. A instrução poderá ser interpretada incorretamente se a macro fizer com que o código-fonte fique sintaticamente incorreto conforme ele é escrito. A instrução pode se tornar sintaticamente correta quando o código-fonte é compilado e o pré-processador substitui o [identificador de macro](../preprocessor/hash-define-directive-c-cpp.md) pela respectiva definição. O sistema de análise funciona sem a necessidade de compilar o projeto, porque usa os arquivos de dica para interpretar as macros. Portanto, um recurso de navegação, como o **Modo de Exibição de Classe**, está imediatamente disponível.
 
 Um arquivo de dica contém *dicas* personalizáveis pelo usuário, que têm a mesma sintaxe das definições de macro do C/C++. O Visual C++ inclui um arquivo de dica interno que é suficiente para a maioria dos projetos, mas você pode criar seus próprios arquivos de dica para melhorar a maneira como o Visual Studio manipula os identificadores.
 
