@@ -4,18 +4,18 @@ ms.date: 11/12/2018
 helpviewer_keywords:
 - compiler options, C++
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
-ms.openlocfilehash: ef61ebbfad62e6a7bf764bad35204247e47d8ddb
-ms.sourcegitcommit: 6990f842fefc27b522b15cf352f3517b319d78da
+ms.openlocfilehash: 63b621bf99a1aeada10706badfe19cde417d7233
+ms.sourcegitcommit: e540706f4e2675e7f597cfc5b4f8dde648b007bb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53248566"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56676494"
 ---
 # <a name="compiler-options-listed-by-category"></a>Opções do compilador listadas por categoria
 
 Este artigo contém uma lista categórica de opções do compilador. Para obter uma lista alfabética, consulte [compilador opções listadas em ordem alfabética](compiler-options-listed-alphabetically.md).
 
-### <a name="optimization"></a>Otimização
+## <a name="optimization"></a>Otimização
 
 |Opção|Finalidade|
 |------------|-------------|
@@ -31,7 +31,7 @@ Este artigo contém uma lista categórica de opções do compilador. Para obter 
 |[/Oy](oy-frame-pointer-omission.md)|Omita o ponteiro do quadro. (apenas x86)|
 |[/favor](favor-optimize-for-architecture-specifics.md)|Produz código otimizado para uma arquitetura específica ou um intervalo de arquiteturas.|
 
-### <a name="code-generation"></a>Geração de código
+## <a name="code-generation"></a>Geração de código
 
 |Opção|Finalidade|
 |------------|-------------|
@@ -72,7 +72,7 @@ Este artigo contém uma lista categórica de opções do compilador. Para obter 
 |[/RTC](rtc-run-time-error-checks.md)|Habilita a verificação de erro em tempo de execução.|
 |[/volatile](volatile-volatile-keyword-interpretation.md)|Seleciona como a palavra-chave volátil é interpretada.|
 
-### <a name="output-files"></a>Arquivos de saída
+## <a name="output-files"></a>Arquivos de saída
 
 |Opção|Finalidade|
 |------------|-------------|
@@ -87,7 +87,7 @@ Este artigo contém uma lista categórica de opções do compilador. Para obter 
 |[/Fp](fp-name-dot-pch-file.md)|Especifica um nome de arquivo de cabeçalho pré-compilado.|
 |[/FR, /Fr](fr-fr-create-dot-sbr-file.md)|Nome gerado. SBR arquivos do navegador.|
 
-### <a name="preprocessor"></a>Pré-processador
+## <a name="preprocessor"></a>Pré-processador
 
 |Opção|Finalidade|
 |------------|-------------|
@@ -105,12 +105,12 @@ Este artigo contém uma lista categórica de opções do compilador. Para obter 
 |[/u](u-u-undefine-symbols.md)|Remove todas as macros predefinidas.|
 |[/X](x-ignore-standard-include-paths.md)|Ignora o diretório de inclusão padrão.|
 
-### <a name="language"></a>Idioma
+## <a name="language"></a>Idioma
 
 |Opção|Finalidade|
 |------------|-------------|
 |[/constexpr](constexpr-control-constexpr-evaluation.md)|Avaliação de constexpr de controle em tempo de compilação.|
-|[/OpenMP](openmp-enable-openmp-2-0-support.md)|Habilita [#pragma omp](../../preprocessor/omp.md) no código-fonte.|
+|[/openmp](openmp-enable-openmp-2-0-support.md)|Habilita [#pragma omp](../../preprocessor/omp.md) no código-fonte.|
 |[/vd](vd-disable-construction-displacements.md)|Suprime ou habilita membros da classe `vtordisp` ocultos.|
 |[/vmb](vmb-vmg-representation-method.md)|Usa a melhor base de ponteiros para membros.|
 |[/vmg](vmb-vmg-representation-method.md)|Usa a generalidade completa de ponteiros para membros.|
@@ -125,11 +125,11 @@ Este artigo contém uma lista categórica de opções do compilador. Para obter 
 |[/ZI](z7-zi-zi-debug-information-format.md)|Inclui informações de depuração em um banco de dados do programa compatível com Editar e Continuar. (apenas x86)|
 |[/Zi](z7-zi-zi-debug-information-format.md)|Gera informações completas de depuração.|
 |[/Zl](zl-omit-default-library-name.md)|Remove o nome da biblioteca padrão do arquivo .obj.|
-|[/ZP](zp-struct-member-alignment.md) *n*|Empacota membros da estrutura.|
+|[/Zp](zp-struct-member-alignment.md) *n*|Empacota membros da estrutura.|
 |[/Zs](zs-syntax-check-only.md)|Verifica apenas a sintaxe.|
 |[/ZW](zw-windows-runtime-compilation.md)|Produz um arquivo de saída para ser executado no tempo de execução do Windows.|
 
-### <a name="linking"></a>Vinculação
+## <a name="linking"></a>Vinculação
 
 |Opção|Finalidade|
 |------------|-------------|
@@ -143,13 +143,13 @@ Este artigo contém uma lista categórica de opções do compilador. Para obter 
 |[/MT](md-mt-ld-use-run-time-library.md)|Compila para criar um arquivo executável com multithread usando LIBCMT.lib.|
 |[/MTd](md-mt-ld-use-run-time-library.md)|Compila para criar um arquivo executável com multithread de depuração usando LIBCMTD.lib.|
 
-### <a name="miscellaneous"></a>Diversos
+## <a name="miscellaneous"></a>Diversos
 
 |Opção|Finalidade|
 |------------|-------------|
 |[/?](help-compiler-command-line-help.md)|Lista as opções do compilador.|
 |[@](at-specify-a-compiler-response-file.md)|Especifica um arquivo de resposta.|
-|[/ANALYZE](analyze-code-analysis.md)|Habilita a análise de código.|
+|[/analyze](analyze-code-analysis.md)|Habilita a análise de código.|
 |[/bigobj](bigobj-increase-number-of-sections-in-dot-obj-file.md)|Aumenta o número de seções endereçáveis em um arquivo .obj.|
 |[/c](c-compile-without-linking.md)|Compila sem vinculação.|
 |[/cgthreads](cgthreads-code-generation-threads.md)|Especifica o número de threads cl.exe a serem usados na otimização e na geração de código.|
@@ -159,7 +159,7 @@ Este artigo contém uma lista categórica de opções do compilador. Para obter 
 |[/H](h-restrict-length-of-external-names.md)|Preterido. Restringe o tamanho de nomes externos (públicos).|
 |[/HELP](help-compiler-command-line-help.md)|Lista as opções do compilador.|
 |[/J](j-default-char-type-is-unsigned.md)|Altera o tipo `char` padrão.|
-|[/ JMC](jmc.md)|Dá suporte à depuração de C++ apenas meu código nativo.|
+|[/JMC](jmc.md)|Dá suporte à depuração de C++ apenas meu código nativo.|
 |[/kernel](kernel-create-kernel-mode-binary.md)|O compilador e o vinculador criará um binário que pode ser executado no kernel do Windows.|
 |[/MP](mp-build-with-multiple-processes.md)|Cria vários arquivos de origem ao mesmo tempo.|
 |[/nologo](nologo-suppress-startup-banner-c-cpp.md)|Suprime a exibição da faixa de logon.|
@@ -195,7 +195,7 @@ Este artigo contém uma lista categórica de opções do compilador. Para obter 
 |[/permissive-](permissive-standards-conformance.md)|Definir o modo de conformidade com o padrão.|
 |[/std](std-specify-language-standard-version.md)|Seletor de compatibilidade de versão padrão do C++.|
 
-### <a name="deprecated-and-removed-compiler-options"></a>Opções do compilador removidos e preteridos
+## <a name="deprecated-and-removed-compiler-options"></a>Opções do compilador removidos e preteridos
 
 |Opção|Finalidade|
 |------------|-------------|
