@@ -1,17 +1,16 @@
 ---
 title: Aprimoramentos de conformidade do C++
 ms.date: 10/31/2018
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: ad34e2721723e113417b45cf7c1da0da4575837f
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 855322f09c9c8f5292c6e299f946c3cec5d9949a
+ms.sourcegitcommit: fbc05d8581913bca6eff664e5ecfcda8e471b8b1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694394"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56809744"
 ---
 # <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-157improvements157-158update158-159update159"></a>Aprimoramentos de conformidade do C++ no Visual Studio 2017 versões 15.0, [15.3](#improvements_153), [15.5](#improvements_155), [15.6](#improvements_156), [15.7](#improvements_157), [15.8](#update_158) e [15.9](#update_159)
 
@@ -790,7 +789,7 @@ void f()
 
 Argumentos padrão não são permitidos em definições fora de linha de funções de membro em classes de modelo. O compilador emitirá um aviso em **/permissive** e um erro de hardware em **/permissive-**.
 
-Nas versões anteriores do Visual Studio, o código malformado a seguir pode causar uma falha de tempo de execução. O Visual Studio 2017 versão 15.3 produz o aviso C5034: 'A\<T>::f': uma definição fora de linha de um membro de um modelo de classe não pode ter argumentos padrão:
+Nas versões anteriores do Visual Studio, o código malformado a seguir pode causar uma falha de tempo de execução. Visual Studio 2017 versão 15.3 produz o aviso C5034: 'A\<T>::f': uma definição fora de linha de um membro de um modelo de classe não pode ter argumentos padrão:
 
 ```cpp
 template <typename T>
@@ -865,7 +864,7 @@ Esse aviso é desativado por padrão na versão 15.3, mas ativado por padrão na
 
 ### <a name="decltype-and-calls-to-deleted-destructors"></a>decltype e chamadas para destruidores excluídos
 
-Nas versões anteriores do Visual Studio, o compilador não detectava quando ocorria uma chamada para um destruidor excluído no contexto de expressão associado 'decltype'. No Visual Studio 2017 versão 15.3, o código a seguir produz o "Erro C2280: 'A\<T>::~A(void)': ao tentar fazer referência a uma função excluída":
+Nas versões anteriores do Visual Studio, o compilador não detectava quando ocorria uma chamada para um destruidor excluído no contexto de expressão associado 'decltype'. No Visual Studio 2017 versão 15.3, o código a seguir produz "erro C2280: 'A\<T>::~A(void)': tentando fazer referência a uma função excluída":
 
 ```cpp
 template<typename T>
@@ -888,7 +887,7 @@ void h()
 
 ### <a name="uninitialized-const-variables"></a>Variáveis constantes não inicializadas
 
-A versão do Visual Studio 2017 RTW tinha uma regressão em que o compilador do C++ não emitia um diagnóstico se uma variável 'const' não fosse inicializada. Essa regressão foi corrigida no Visual Studio 2017 versão 15.3. Agora, o código a seguir produz o "aviso C4132: 'Value': objeto const deve ser inicializado":
+A versão do Visual Studio 2017 RTW tinha uma regressão em que o compilador do C++ não emitia um diagnóstico se uma variável 'const' não fosse inicializada. Essa regressão foi corrigida no Visual Studio 2017 versão 15.3. O código a seguir agora produz "aviso C4132: 'Value': objeto const deve ser inicializado":
 
 ```cpp
 const int Value; //C4132
@@ -961,7 +960,7 @@ Os destruidores particulares fazem com que um tipo não seja construível. `std:
 
 Essa chamada implica em uma chamada de destruidor.
 
-### <a name="c2668-ambiguous-overload-resolution"></a>C2668: resolução de sobrecarga ambígua
+### <a name="c2668-ambiguous-overload-resolution"></a>C2668: Resolução de sobrecarga ambígua
 
 As versões anteriores do compilador falhavam algumas vezes ao detectar ambiguidade quando encontravam vários candidatos, tanto por meio de declarações using quanto de pesquisas dependentes de argumento. Isso poderia levar à escolha errada de sobrecarga e ao comportamento inesperado de tempo de execução. No exemplo a seguir, o Visual Studio 2017 versão 15.3 aciona corretamente o C2668 'f': chamada ambígua à função sobrecarregada:
 
@@ -1532,7 +1531,7 @@ struct D : B<T*> {
 };
 ```
 
-O Visual Studio 2017 versão 15.7, no modo **/std:c++17**, exige a palavra-chave `typename`, na instrução `using` em D. Sem o `typename`, o compilador gerará o aviso C4346: *'B<T\*>::type': o nome dependente não é um tipo* e o erro C2061: *erro de sintaxe: identificador 'type'*:
+O Visual Studio 2017 versão 15.7, no modo **/std:c ++17**, requer a palavra-chave `typename` na instrução `using` em D. Sem `typename`, o compilador gera um aviso C4346: *'B<T\*>::type': o nome dependente não é um tipo*  e erro C2061: *erro de sintaxe: identificador 'type'*:
 
 ```cpp
 template<typename T>
@@ -1563,7 +1562,7 @@ int main() {
 
 Em edições anteriores do Visual Studio, uma lista de inicialização de classe base do construtor de modelo variadic que não continha argumentos de modelos foi erroneamente permitida sem erro. No Visual Studio 2017 versão 15.7 é gerado um erro do compilador.
 
-O seguinte exemplo de código do Visual Studio 2017 versão 15.7 gera o *erro C2614: D\<int>: inicialização de membro inválida: 'B' não é uma base ou membro*
+O exemplo de código a seguir no Visual Studio 2017 versão 15.7 gera *erro C2614: D\<int>: inicialização de membro ilícito: 'B' não é uma base ou um membro*
 
 ```cpp
 template<typename T>
@@ -1677,7 +1676,7 @@ struct S : Base<T> {
 
 Para corrigir o erro, altere a instrução `return` para `return this->base_value;`.
 
-**Observação:** na biblioteca python Boost, já existe há algum tempo uma solução alternativa específica ao MSVC para uma declaração de encaminhamento de modelo no [unwind_type.hpp](https://github.com/boostorg/python/blame/develop/include/boost/python/detail/unwind_type.hpp). No modo [/permissive-](build/reference/permissive-standards-conformance.md), a partir do Visual Studio 2017 versão 15.8 (_MSC_VER=1915), o compilador de MSVC faz a pesquisa de nome dependente de argumento (ADL) corretamente e é consistente com outros compiladores, tornando essa proteção alternativa desnecessária. Para evitar o erro *C3861: 'unwind_type': identificador não encontrado*, confira [PR 229](https://github.com/boostorg/python/pull/229) no repositório Boostorg para atualizar o arquivo de cabeçalho. Já corrigimos o pacote Boost [vcpkg](vcpkg.md), portanto, se você obter ou atualizar suas fontes de Boost do vcpkg, não será necessário aplicar o patch separadamente.
+**Observação:** Na biblioteca python Boost, já existe há algum tempo uma solução alternativa específica ao MSVC para uma declaração de encaminhamento de modelo no [unwind_type.hpp](https://github.com/boostorg/python/blame/develop/include/boost/python/detail/unwind_type.hpp). No modo [/permissive-](build/reference/permissive-standards-conformance.md), a partir do Visual Studio 2017 versão 15.8 (_MSC_VER=1915), o compilador de MSVC faz a pesquisa de nome dependente de argumento (ADL) corretamente e é consistente com outros compiladores, tornando essa proteção alternativa desnecessária. Para evitar o erro *C3861: 'unwind_type': identificador não encontrado*, confira [PR 229](https://github.com/boostorg/python/pull/229) no repositório Boostorg para atualizar o arquivo de cabeçalho. Já corrigimos o pacote Boost [vcpkg](vcpkg.md), portanto, se você obter ou atualizar suas fontes de Boost do vcpkg, não será necessário aplicar o patch separadamente.
 
 ### <a name="forward-declarations-and-definitions-in-namespace-std"></a>Declarações e definições de encaminhamento no namespace std
 
@@ -1701,7 +1700,7 @@ Para corrigir o erro, use uma diretiva **include** em vez de uma declaração de
 
 ### <a name="constructors-that-delegate-to-themselves"></a>Construtores que delegam a si mesmos
 
-O C++ Standard sugere que um compilador deve emitir um diagnóstico quando um construtor de delegação delega a si mesmo. O compilador C++ da Microsoft nos modos [/std:c++17](build/reference/std-specify-language-standard-version.md) e [/std:c++latest](build/reference/std-specify-language-standard-version.md) agora gera C7535: *'X::X': o construtor de delegação chama a si mesmo*.
+O C++ Standard sugere que um compilador deve emitir um diagnóstico quando um construtor de delegação delega a si mesmo. O compilador C++ da Microsoft nos modos [/std:c++17](build/reference/std-specify-language-standard-version.md) e [/std:c++latest](build/reference/std-specify-language-standard-version.md) agora gera C7535: *'X::X': construtor de delegação chama a si próprio*.
 
 Sem esse erro, o programa a seguir será compilado, mas gerará um loop infinito:
 
@@ -1865,9 +1864,9 @@ cl /EHsc /std:c++17 m.ixx /experimental:module
 cl /experimental:module /module:reference m.ifc main.cpp /std:c++14
 ```
 
-O compilador gera C5050 para estes dois casos: *aviso C5050: possível ambiente incompatível durante a importação do módulo 'm': versões do C++ incompatíveis.  Versão do módulo "201402" atual "201703"*.
+O compilador gera C5050 para ambos os casos: *aviso C5050: Possível ambiente incompatível durante a importação do módulo 'm': versões incompatíveis do C++.  Versão do módulo "201402" atual "201703"*.
 
-Além disso, o compilador gera C7536 sempre que o arquivo .ifc é adulterado. O cabeçalho da interface do módulo contém um hash SHA2 do conteúdo abaixo dele. Na importação, o arquivo .ifc é transformado em hash da mesma forma e, em seguida, comparado com o hash fornecido no cabeçalho. Se eles não correspondem, o erro C7536 é gerado: *O ifc não foi aprovado nas verificações de integridade.  SHA2 esperado: '66d5c8154df0c71d4cab7665bab4a125c7ce5cb9a401a4d8b461b706ddd771c6'*.
+Além disso, o compilador gera C7536 sempre que o arquivo .ifc é adulterado. O cabeçalho da interface do módulo contém um hash SHA2 do conteúdo abaixo dele. Na importação, o arquivo .ifc é transformado em hash da mesma forma e, em seguida, comparado com o hash fornecido no cabeçalho. Se eles não correspondem, o erro C7536 é gerado: *O ifc não foi aprovado nas verificações de integridade.  Esperado SHA2: '66d5c8154df0c71d4cab7665bab4a125c7ce5cb9a401a4d8b461b706ddd771c6'*.
 
 ### <a name="partial-ordering-involving-aliases-and-non-deduced-contexts"></a>Ordenação parcial envolvendo aliases e contextos não deduzidos
 
