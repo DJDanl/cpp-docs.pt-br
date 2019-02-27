@@ -3,18 +3,17 @@ title: vcpkg-- um gerenciador de pacotes do C++ para Windows, Linux e MacOS
 description: O vcpkg é um gerenciador de pacote de linha de comando que simplifica bastante a aquisição e instalação de bibliotecas de C++ de software livre no Windows.
 author: mikeblome
 ms.author: mblome
-ms.date: 05/14/2018
-ms.technology:
-- cpp-ide
+ms.date: 02/22/2019
+ms.technology: cpp-ide
 ms.assetid: f50d459a-e18f-4b4e-814b-913e444cedd6
-ms.openlocfilehash: 2f7dc6f1d9c78d894c5cf0e6ba20c8bdfc54e67a
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: dc07086f271c9789629b335b58758b88e8e3d4e8
+ms.sourcegitcommit: fbc05d8581913bca6eff664e5ecfcda8e471b8b1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518678"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56809705"
 ---
-# <a name="vcpkg-a-c-package-manager-for-windows-linux-and-macos"></a>vcpkg: um gerenciador de pacotes do C++ para Windows, Linux e MacOS
+# <a name="vcpkg-a-c-package-manager-for-windows-linux-and-macos"></a>vcpkg: Um gerenciador de pacotes do C++ para Windows, Linux e MacOS
 
 O vcpkg é um gerenciador de pacotes de linha de comando que simplifica bastante a aquisição e instalação de bibliotecas de terceiros no Windows, Linux e MacOS. Se seu projeto usa bibliotecas de terceiros, é recomendável que você use o vcpkg para instalá-las. O vcpkg dá suporte a bibliotecas de software livre e proprietárias. Todas as bibliotecas do catálogo do vcpkg no Windows foram testadas quanto à compatibilidade com o Visual Studio 2015 e Visual Studio 2017. A partir de maio de 2018, há mais de 900 bibliotecas no catálogo do Windows e mais de 350 no catálogo do Linux/MacOS. A comunidade do C++ é adicionando mais bibliotecas a ambos os catálogos de forma contínua.
 
@@ -32,7 +31,7 @@ Se você criar um clone de vcpkg com bibliotecas particulares na coleção de po
 
 ## <a name="installation"></a>Instalação
 
-Clonar o repositório vcpkg do GitHub: https://github.com/Microsoft/vcpkg. Você pode baixar em qualquer local de pasta que você preferir.
+Clonar o repositório vcpkg do GitHub: [https://github.com/Microsoft/vcpkg](https://github.com/Microsoft/vcpkg). Você pode baixar em qualquer local de pasta que você preferir.
 
 Execute o bootstrapper na pasta raiz:
 
