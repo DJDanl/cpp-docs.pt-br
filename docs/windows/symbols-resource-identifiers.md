@@ -10,12 +10,12 @@ helpviewer_keywords:
 - symbols [C++], editing
 - resource editors [C++], resource symbols
 ms.assetid: 8fccc09a-0237-4a65-b9c4-57d60c59e324
-ms.openlocfilehash: 7359fdfd1007cb49025908ffea51093622943052
-ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
+ms.openlocfilehash: c76b870ad1fdfeda7370af03c6396bedba9530ab
+ms.sourcegitcommit: f127b08f114b8d6cab6b684febcb6f2ae0e055ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56320491"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56954855"
 ---
 # <a name="resource-identifiers-symbols-c"></a>Identificadores de recurso (símbolos) (C++)
 
@@ -29,12 +29,12 @@ Nomes de símbolos são geralmente denominados identificadores.
 
 Símbolos fornecem uma maneira descritiva de fazer referência a recursos e objetos de interface do usuário, no seu código-fonte e enquanto estiver trabalhando com eles nos editores de recursos. Você pode exibir e manipular símbolos em um local conveniente usando o [caixa de diálogo símbolos de recurso](../windows/viewing-resource-symbols.md).
 
-Quando você cria um novo recurso ou objeto de recurso, o [editores de recursos](../windows/resource-editors.md) forneça um nome padrão para o recurso, por exemplo, `IDC_RADIO1`e atribuir um valor a ela. A definição de mais valor name é armazenada no arquivo Resource. h.
+Quando você cria um novo recurso ou objeto de recurso, o [editores de recursos](../windows/resource-editors.md) forneça um nome padrão para o recurso, por exemplo, `IDC_RADIO1`e atribuir um valor a ela. A definição de mais valor name é armazenada no `Resource.h` arquivo.
 
 > [!NOTE]
 > Quando você estiver copiando recursos ou objetos de recurso de um arquivo. RC para outro, o Visual C++ pode alterar o recurso transferido símbolo valor, ou o nome do símbolo e, para evitar conflitos com nomes de símbolos ou os valores no arquivo existente.
 
-À medida que seu aplicativo crescer em tamanho e a sofisticação e aumenta seu número de recursos e símbolos. Grande número de símbolos espalhados em vários arquivos de rastreamento pode ser difícil. O [caixa de diálogo símbolos de recurso](../windows/resource-symbols-dialog-box.md) simplifica o gerenciamento de símbolo, oferecendo uma ferramenta central por meio do qual você pode:
+À medida que seu aplicativo crescer em tamanho e a sofisticação e aumenta seu número de recursos e símbolos. Grande número de símbolos espalhados em vários arquivos de rastreamento pode ser difícil. O **símbolos de recurso** caixa de diálogo simplifica o gerenciamento de símbolo, oferecendo uma ferramenta central por meio do qual você pode:
 
 - [Crie símbolos](../windows/creating-new-symbols.md)
 
