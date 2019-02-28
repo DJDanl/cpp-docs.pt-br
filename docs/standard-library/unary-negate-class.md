@@ -1,21 +1,21 @@
 ---
 title: Classe unary_negate
-ms.date: 11/04/2016
+ms.date: 02/21/2019
 f1_keywords:
-- xfunctional/std::unary_negate
+- functional/std::unary_negate
 helpviewer_keywords:
 - unary_negate class
 ms.assetid: e3b86eec-3205-49b9-ab83-f55225af4e0c
-ms.openlocfilehash: b43db182d9274281020d7ce92cfa1b3efe724197
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 96d70a24b87a84275f17813e76473a82fbff90da
+ms.sourcegitcommit: 4299caac2dc9e806c74ac833d856a3838b0f52a1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326011"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "57006702"
 ---
 # <a name="unarynegate-class"></a>Classe unary_negate
 
-Uma classe de modelo que fornece uma função membro que nega o valor retornado de uma função unária especificado.
+Uma classe de modelo que fornece uma função membro que nega o valor retornado de uma função unária especificado. Preterida no c++17 em favor da [not_fn](functional-functions.md#not_fn).
 
 ## <a name="syntax"></a>Sintaxe
 
