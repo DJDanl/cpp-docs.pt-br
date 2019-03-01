@@ -21,6 +21,7 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- ntoskrnl.exe
 apitype: DLLExport
 f1_keywords:
 - _mbstrlen
@@ -48,12 +49,12 @@ helpviewer_keywords:
 - strlen function
 - _mbslen function
 ms.assetid: 16462f2a-1e0f-4eb3-be55-bf1c83f374c2
-ms.openlocfilehash: a2ae174d81ea074f7200461c3f3622501dbc437b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4a12c87f1cff14582e21fbb7d617100fc2853dab
+ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50562065"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57210855"
 ---
 # <a name="strlen-wcslen-mbslen-mbslenl-mbstrlen-mbstrlenl"></a>strlen, wcslen, _mbslen, _mbslen_l, _mbstrlen, _mbstrlen_l
 
@@ -109,7 +110,7 @@ Cada uma dessas funções retorna o número de caracteres em *str*, exceto o nul
 
 |Rotina TCHAR.H|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**tcslen**|**strlen**|**strlen**|**wcslen**|
+|**_tcslen**|**strlen**|**strlen**|**wcslen**|
 |**_tcsclen**|**strlen**|**_mbslen**|**wcslen**|
 |**_tcsclen_l**|**strlen**|**_mbslen_l**|**wcslen**|
 
@@ -123,8 +124,8 @@ O valor de saída é afetado pela configuração da categoria **LC_CTYPE** da lo
 |-------------|---------------------|
 |**strlen**|\<string.h>|
 |**wcslen**|\<string.h> ou \<wchar.h>|
-|**mbslen**, **mbslen_l**|\<mbstring.h>|
-|**mbstrlen**, **mbstrlen_l**|\<stdlib.h>|
+|**_mbslen**, **_mbslen_l**|\<mbstring.h>|
+|**_mbstrlen**, **_mbstrlen_l**|\<stdlib.h>|
 
 Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 

@@ -20,6 +20,7 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- ntoskrnl.exe
 apitype: DLLExport
 f1_keywords:
 - _ftcsnccmp
@@ -48,12 +49,12 @@ helpviewer_keywords:
 - characters [C++], comparing
 - _ftcsnccmp function
 ms.assetid: 2fdbf4e6-77da-4b59-9086-488f6066b8af
-ms.openlocfilehash: b8b5472289bacc940bb0cbea7876f246243660bf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8f022dec6c161814ade5c6be5aaccfcd239a4af4
+ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50523737"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57210907"
 ---
 # <a name="strncmp-wcsncmp-mbsncmp-mbsncmpl"></a>strncmp, wcsncmp, _mbsncmp, _mbsncmp_l
 
@@ -129,8 +130,8 @@ O comportamento da comparação de **mbsncmp** e **mbsncmp_l** é afetada pela c
 
 |Rotina TCHAR.H|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**tcsnccmp**|**strncmp**|**_mbsncmp**|**wcsncmp**|
-|**tcsncmp**|**strncmp**|**_mbsnbcmp**|**wcsncmp**|
+|**_tcsnccmp**|**strncmp**|**_mbsncmp**|**wcsncmp**|
+|**_tcsncmp**|**strncmp**|**_mbsnbcmp**|**wcsncmp**|
 |**_tccmp**|É mapeado para um macro ou uma função embutida|**_mbsncmp**|É mapeado para um macro ou uma função embutida|
 |**não aplicável**|**não aplicável**|**_mbsncmp_l**|**não aplicável**|
 
@@ -140,7 +141,7 @@ O comportamento da comparação de **mbsncmp** e **mbsncmp_l** é afetada pela c
 |-------------|---------------------|
 |**strncmp**|\<string.h>|
 |**wcsncmp**|\<string.h> ou \<wchar.h>|
-|**mbsncmp**, **mbsncmp_l**|\<mbstring.h>|
+|**_mbsncmp**, **_mbsncmp_l**|\<mbstring.h>|
 
 Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 

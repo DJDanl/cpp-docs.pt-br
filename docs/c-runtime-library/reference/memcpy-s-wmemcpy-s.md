@@ -16,6 +16,7 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- ntoskrnl.exe
 apitype: DLLExport
 f1_keywords:
 - wmemcpy_s
@@ -24,12 +25,12 @@ helpviewer_keywords:
 - memcpy_s function
 - wmemcpy_s function
 ms.assetid: 5504e20a-83d9-4063-91fc-3f55f7dabe99
-ms.openlocfilehash: e7d6cc7abdd5f343bf1482f534f5112eabbc96b8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 802d75307096e649df15b1864b99699fba92a3a1
+ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607149"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57210868"
 ---
 # <a name="memcpys-wmemcpys"></a>memcpy_s, wmemcpy_s
 
@@ -77,7 +78,7 @@ Zero se for bem-sucedido; um código de erro em caso de falha.
 |qualquer|qualquer|qualquer|0|0|Não modificado|
 |**NULL**|qualquer|qualquer|diferente de zero|**EINVAL**|Não modificado|
 |qualquer|qualquer|**NULL**|diferente de zero|**EINVAL**|*dest* é zerado|
-|qualquer|< *Contagem*|qualquer|diferente de zero|**ERANGE**|*dest* é zerado|
+|qualquer|< *count*|qualquer|diferente de zero|**ERANGE**|*dest* é zerado|
 
 ## <a name="remarks"></a>Comentários
 

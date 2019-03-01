@@ -19,6 +19,7 @@ apilocation:
 - msvcr120_clr0400.dll
 - ntdll.dll
 - ucrtbase.dll
+- ntoskrnl.exe
 apitype: DLLExport
 f1_keywords:
 - _stprintf_l
@@ -45,12 +46,12 @@ helpviewer_keywords:
 - sprintf_l function
 - formatted text [C++]
 ms.assetid: f6efe66f-3563-4c74-9455-5411ed939b81
-ms.openlocfilehash: 875cd5eca56511c2b421584766584c0c974cd775
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: f32b1622539e73ab04c19d6d46ffdbc58b9961d6
+ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51521863"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57210842"
 ---
 # <a name="sprintf-sprintfl-swprintf-swprintfl-swprintfl"></a>sprintf, _sprintf_l, swprintf, _swprintf_l, __swprintf_l
 
@@ -146,15 +147,15 @@ No C++, essas funções têm sobrecargas de modelo que invocam os equivalentes m
 
 |Rotina TCHAR.H|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**stprintf**|**sprintf**|**sprintf**|**_swprintf**|
-|**stprintf_l**|**_sprintf_l**|**_sprintf_l**|**__swprintf_l**|
+|**_stprintf**|**sprintf**|**sprintf**|**_swprintf**|
+|**_stprintf_l**|**_sprintf_l**|**_sprintf_l**|**__swprintf_l**|
 
 ## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|
-|**sprintf**, **sprintf_l**|\<stdio.h>|
-|**swprintf**, **swprintf_l**|\<stdio.h> ou \<wchar.h>|
+|**sprintf**, **_sprintf_l**|\<stdio.h>|
+|**swprintf**, **_swprintf_l**|\<stdio.h> ou \<wchar.h>|
 
 Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 

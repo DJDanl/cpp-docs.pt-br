@@ -21,6 +21,7 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- ntoskrnl.exe
 apitype: DLLExport
 f1_keywords:
 - _fstrncpy
@@ -61,12 +62,12 @@ helpviewer_keywords:
 - tcsncpy function
 - _strncpy_l function
 ms.assetid: ac4345a1-a129-4f2f-bb8a-373ec58ab8b0
-ms.openlocfilehash: 5260d120fe1e5826bb4b9ebc8410a8bd1040ff3e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 04ca1f0b689e68008b3b5a57d01e626ee92a60b9
+ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507726"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57210426"
 ---
 # <a name="strncpy-strncpyl-wcsncpy-wcsncpyl-mbsncpy-mbsncpyl"></a>strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l
 
@@ -189,8 +190,8 @@ No C++, essas funções têm sobrecargas de modelo que invocam os equivalentes m
 
 |Rotina TCHAR.H|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**tcsncpy**|**strncpy**|**_mbsnbcpy**|**wcsncpy**|
-|**tcsncpy_l**|**_strncpy_l**|**_mbsnbcpy_l**|**_wcsncpy_l**|
+|**_tcsncpy**|**strncpy**|**_mbsnbcpy**|**wcsncpy**|
+|**_tcsncpy_l**|**_strncpy_l**|**_mbsnbcpy_l**|**_wcsncpy_l**|
 
 > [!NOTE]
 > **strncpy_l** e **wcsncpy_l** não ter nenhuma dependência de localidade; eles são fornecidos apenas para **tcsncpy_l** e não se destina a ser chamado diretamente.
@@ -201,13 +202,13 @@ No C++, essas funções têm sobrecargas de modelo que invocam os equivalentes m
 |-------------|---------------------|
 |**strncpy**|\<string.h>|
 |**wcsncpy**|\<string.h> ou \<wchar.h>|
-|**mbsncpy**, **mbsncpy_l**|\<mbstring.h>|
+|**_mbsncpy**, **_mbsncpy_l**|\<mbstring.h>|
 
 Para obter informações adicionais sobre compatibilidade de plataforma, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir demonstra o uso de **strncpy** e como ele pode ser usado indevidamente para causar bugs de programa e problemas de segurança. O compilador gera um aviso para cada chamada para **strncpy** semelhante ao **crt_strncpy_x86.c(15): aviso C4996: 'strncpy': esta função ou variável pode não ser seguro. Ao invés disso, considere usar strncpy_s. Para desabilitar a substituição, use _CRT_SECURE_NO_WARNINGS. Consulte a ajuda online para obter detalhes.**
+O exemplo a seguir demonstra o uso de **strncpy** e como ele pode ser usado indevidamente para causar bugs de programa e problemas de segurança. O compilador gera um aviso para cada chamada para **strncpy** semelhante ao **crt_strncpy_x86.c(15): aviso C4996: 'strncpy': Essa função ou variável pode não ser seguro. Ao invés disso, considere usar strncpy_s. Para desabilitar a substituição, use _CRT_SECURE_NO_WARNINGS. Consulte a ajuda online para obter detalhes.**
 
 ```C
 // crt_strncpy_x86.c
