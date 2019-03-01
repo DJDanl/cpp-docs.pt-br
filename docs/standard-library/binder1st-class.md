@@ -1,21 +1,21 @@
 ---
 title: Classe binder1st
-ms.date: 11/04/2016
+ms.date: 02/21/2019
 f1_keywords:
-- xfunctional/std::binder1st
+- functional/std::binder1st
 helpviewer_keywords:
 - binder1st class
 ms.assetid: 6b8ee343-c82f-48f8-867d-06f9d1d324c0
-ms.openlocfilehash: a8e962e118d162e46e2edfca3ce11e7cbf322e10
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f70a1a4a0903b66edf5f42e59788b9a2d97fc967
+ms.sourcegitcommit: 4299caac2dc9e806c74ac833d856a3838b0f52a1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50439621"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "57006624"
 ---
 # <a name="binder1st-class"></a>Classe binder1st
 
-Uma classe de modelo que fornece um construtor que converte um objeto de função binária em um objeto de função unária, associando o primeiro argumento da função binária a um valor especificado.
+Uma classe de modelo que fornece um construtor que converte um objeto de função binária em um objeto de função unária, associando o primeiro argumento da função binária a um valor especificado. Preterido no c++11 em favor da [associar](functional-functions.md#bind)e removidos em c++17.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -29,7 +29,7 @@ public:
     typedef typename Operation::argument_type argument_type;
     typedef typename Operation::result_type result_type;
     binder1st(
-        const Operation& Func,
+        const Operation& binary_fn,
         const typename Operation::first_argument_type& left);
 
     result_type operator()(const argument_type& right) const;
@@ -43,7 +43,7 @@ protected:
 
 ### <a name="parameters"></a>Parâmetros
 
-*Func*<br/>
+*binary_fn*<br/>
 O objeto de função binária a ser convertido em um objeto de função unária.
 
 *left*<br/>
@@ -58,9 +58,9 @@ O objeto de função unária que resulta da associação o primeiro argumento do
 
 ## <a name="remarks"></a>Comentários
 
-A classe de modelo armazena uma cópia de um objeto de função binária *Func* na `op`e uma cópia de *esquerdo* em `value`. Define sua função membro `operator()` como **op**(**value**, `right`) de retorno.
+A classe de modelo armazena uma cópia de um objeto de função binária *binary_fn* na `op`e uma cópia de *esquerdo* em `value`. Ela define sua função de membro `operator()` como retornando `op( value, right )`.
 
-Se *Func* é um objeto do tipo `Operation` e `c` é uma constante, então [bind1st](../standard-library/functional-functions.md#bind1st) ( `Func`, `c` ) é equivalente ao `binder1st` construtor de classe `binder1st` \< **Operação**> ( `Func`, `c` ) e mais conveniente.
+Se *binary_fn* é um objeto do tipo `Operation` e `c` é uma constante, então `bind1st( binary_fn, c )` é um equivalente mais conveniente para `binder1st<Operation>( binary_fn, c )`. Para obter mais informações, consulte [bind1st](../standard-library/functional-functions.md#bind1st).
 
 ## <a name="example"></a>Exemplo
 
