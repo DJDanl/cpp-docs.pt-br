@@ -1,21 +1,21 @@
 ---
 title: Classe const_mem_fun_t
-ms.date: 11/04/2016
+ms.date: 02/21/2019
 f1_keywords:
-- xfunctional/std::const_mem_fun_t
+- functional/std::const_mem_fun_t
 helpviewer_keywords:
 - const_mem_fun_t class
 ms.assetid: f169d381-019b-4a0e-a9a3-54da6d948270
-ms.openlocfilehash: 16169c094e74178f5a2dd67f70bf75c1f3ee8d87
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 10a39d4b7871e08a5bf3ec56f6d11df5ad8b646c
+ms.sourcegitcommit: 4299caac2dc9e806c74ac833d856a3838b0f52a1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50563586"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "57006455"
 ---
 # <a name="constmemfunt-class"></a>Classe const_mem_fun_t
 
-Uma classe de adaptador que permite que uma função de membro const que não usa argumentos seja chamada como um objeto de função unária quando inicializado com um argumento de referência.
+Uma classe de adaptador que permite que uma função de membro const que não usa argumentos seja chamada como um objeto de função unária quando inicializado com um argumento de referência. Preterido no c++11, removido do c++17.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -30,7 +30,7 @@ class const_mem_fun_t : public unary_function <Type *, Result>
 
 ### <a name="parameters"></a>Parâmetros
 
-*PM*<br/>
+*Pm*<br/>
 Um ponteiro para a função membro da classe `Type` a ser convertida em um objeto de função.
 
 *Pleft*<br/>
