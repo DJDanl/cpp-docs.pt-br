@@ -23,6 +23,7 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- ntoskrnl.exe
 apitype: DLLExport
 f1_keywords:
 - wcsnlen
@@ -57,12 +58,12 @@ helpviewer_keywords:
 - string length
 - strnlen_l function
 ms.assetid: cc05ce1c-72ea-4ae4-a7e7-4464e56e5f80
-ms.openlocfilehash: f7f5050a0ab4ff0f35a28faf039688eedc2f3a8a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 960d57ed8c2b1d1dbc6843932b8c76fef35c34a0
+ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50602560"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57210660"
 ---
 # <a name="strnlen-strnlens-wcsnlen-wcsnlens-mbsnlen-mbsnlenl-mbstrnlen-mbstrnlenl"></a>strnlen, strnlen_s, wcsnlen, wcsnlen_s, _mbsnlen, _mbsnlen_l, _mbstrnlen, _mbstrnlen_l
 
@@ -144,9 +145,9 @@ Cada uma dessas funções retorna o número de caracteres em *str*, não incluin
 
 |Rotina TCHAR.H|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**tcsnlen**|**strnlen**|**strnlen**|**wcsnlen**|
-|**tcscnlen**|**strnlen**|**_mbsnlen**|**wcsnlen**|
-|**tcscnlen_l**|**strnlen**|**_mbsnlen_l**|**wcsnlen**|
+|**_tcsnlen**|**strnlen**|**strnlen**|**wcsnlen**|
+|**_tcscnlen**|**strnlen**|**_mbsnlen**|**wcsnlen**|
+|**_tcscnlen_l**|**strnlen**|**_mbsnlen_l**|**wcsnlen**|
 
 **mbsnlen** e **mbstrnlen** retornam o número de caracteres multibyte em uma cadeia de caracteres multibyte. **mbsnlen** reconhece sequências de caracteres multibyte de acordo com a página de código multibyte que está atualmente em uso ou de acordo com a localidade que é passada; não testa a validade do caractere multibyte. **mbstrnlen** testa a validade de caracteres multibyte e reconhece sequências de caracteres multibyte. Se a cadeia de caracteres que é passada para **mbstrnlen** contém um caractere multibyte inválido **errno** está definido como **EILSEQ**.
 
@@ -158,8 +159,8 @@ O valor de saída é afetado pela configuração da **LC_CTYPE** configuração 
 |-------------|---------------------|
 |**strnlen**, **strnlen_s**|\<string.h>|
 |**wcsnlen**, **wcsnlen_s**|\<string.h> ou \<wchar.h>|
-|**mbsnlen**, **mbsnlen_l**|\<mbstring.h>|
-|**mbstrnlen**, **mbstrnlen_l**|\<stdlib.h>|
+|**_mbsnlen**, **_mbsnlen_l**|\<mbstring.h>|
+|**_mbstrnlen**, **_mbstrnlen_l**|\<stdlib.h>|
 
 Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 

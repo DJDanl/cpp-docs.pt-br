@@ -27,6 +27,7 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- ntoskrnl.exe
 apitype: DLLExport
 f1_keywords:
 - _itoa
@@ -98,12 +99,12 @@ helpviewer_keywords:
 - converting numbers, to strings
 - _itoa function
 ms.assetid: 46592a00-77bb-4e73-98c0-bf629d96cea6
-ms.openlocfilehash: 182e7190554382f56d43f94fefe209fd38a7b78b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 016f3474345b623415be9fe33556bb9f466542ad
+ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50464084"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57210530"
 ---
 # <a name="itoa-itoa-ltoa-ltoa-ultoa-ultoa-i64toa-ui64toa-itow-ltow-ultow-i64tow-ui64tow"></a>itoa, _itoa, ltoa, _ltoa, ultoa, _ultoa, _i64toa, _ui64toa, _itow, _ltow, _ultow, _i64tow, _ui64tow
 
@@ -187,7 +188,7 @@ O **itoa**, **ltoa**, **ultoa**, **_i64toa**, e **_ui64toa** funções convertem
 > [!IMPORTANT]
 > Essas funções podem gravar após o término de um buffer que é muito pequeno. Para evitar estouros de buffer, certifique-se de que *buffer* é grande o suficiente para manter os dígitos convertidos mais o caractere nulo à direita e um caractere de sinal. Uso indevido dessas funções pode causar problemas de segurança grave em seu código.
 
-Devido a seu potencial para problemas de segurança, por padrão, essas funções fazem com que o aviso de reprovação [C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md): **dessa função ou variável pode não ser segura. Considere o uso de** *safe_function* **em vez disso. Para desabilitar a substituição, use crt_secure_no_warnings.** É recomendável que você altere seu código-fonte para usar o *safe_function* sugerido pela mensagem de aviso. As funções mais seguras não escreva mais caracteres do que o tamanho do buffer especificado. Para obter mais informações, consulte [itoa_s, itow_s funções](itoa-s-itow-s.md).
+Devido a seu potencial para problemas de segurança, por padrão, essas funções fazem com que o aviso de reprovação [C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md): **Essa função ou variável pode não ser seguro. Considere o uso de** *safe_function* **em vez disso. Para desabilitar a substituição, use crt_secure_no_warnings.** É recomendável que você altere seu código-fonte para usar o *safe_function* sugerido pela mensagem de aviso. As funções mais seguras não escreva mais caracteres do que o tamanho do buffer especificado. Para obter mais informações, consulte [itoa_s, itow_s funções](itoa-s-itow-s.md).
 
 Para usar essas funções sem o aviso de substituição, defina as **crt_secure_no_warnings** macro do pré-processador antes de incluir cabeçalhos CRT. Você pode fazer isso na linha de comando em um prompt de comando do desenvolvedor, adicionando a **/D_CRT_SECURE_NO_WARNINGS** opção de compilador para o **cl** comando. Caso contrário, defina a macro nos arquivos de origem. Se você usar cabeçalhos pré-compilados, defina a macro na parte superior do cabeçalho pré-compilado incluem o arquivo, normalmente Stdafx. h. Para definir a macro em seu código-fonte, use uma **#define** diretiva antes de incluir qualquer cabeçalho de CRT, como neste exemplo:
 
@@ -198,7 +199,7 @@ Para usar essas funções sem o aviso de substituição, defina as **crt_secure_
 
 No C++, essas funções têm sobrecargas de modelo que invocam suas equivalentes mais seguros. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../../c-runtime-library/secure-template-overloads.md).
 
-Os nomes de Posix **itoa**, **ltoa**, e **ultoa** existir como aliases para o **itoa**, **ltoa**, e **ultoa** funções. Os nomes de Posix foram preteridos porque eles não seguem as convenções de nome de função específicos de implementação de C. ISO Por padrão, essas funções fazem com que o aviso de reprovação [C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md): **nome o POSIX para este item foi preterido. Em vez disso, use o nome compatível com ISO C e C++:** *new_name*. É recomendável que você altere seu código-fonte para usar as versões mais seguras dessas funções **itoa_s**, **ltoa_s**, ou **ultoa_s**. Para obter mais informações, consulte [itoa_s, itow_s funções](itoa-s-itow-s.md).
+Os nomes de Posix **itoa**, **ltoa**, e **ultoa** existir como aliases para o **itoa**, **ltoa**, e **ultoa** funções. Os nomes de Posix foram preteridos porque eles não seguem as convenções de nome de função específicos de implementação de C. ISO Por padrão, essas funções fazem com que o aviso de reprovação [C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md): **O nome do POSIX para este item está obsoleto. Em vez disso, use o nome compatível com ISO C e C++:** *new_name*. É recomendável que você altere seu código-fonte para usar as versões mais seguras dessas funções **itoa_s**, **ltoa_s**, ou **ultoa_s**. Para obter mais informações, consulte [itoa_s, itow_s funções](itoa-s-itow-s.md).
 
 Para fins de portabilidade de código fonte, talvez você prefira manter os nomes de Posix em seu código. Para usar essas funções sem o aviso de substituição, defina ambos os **_CRT_NONSTDC_NO_WARNINGS** e **crt_secure_no_warnings** macros de pré-processador antes de incluir cabeçalhos CRT. Você pode fazer isso na linha de comando em um prompt de comando do desenvolvedor, adicionando a **/D_CRT_SECURE_NO_WARNINGS** e **/D_CRT_NONSTDC_NO_WARNINGS** de opções do compilador para o **cl**comando. Caso contrário, defina as macros nos arquivos de origem. Se você usar cabeçalhos pré-compilados, defina as macros na parte superior do cabeçalho pré-compilado incluem o arquivo, normalmente Stdafx. h. Para definir as macros em seu código-fonte, use **#define** diretivas antes de incluir qualquer cabeçalho de CRT, como neste exemplo:
 
@@ -217,9 +218,9 @@ Para usar uma dessas macros em uma função de conversão de cadeia de caractere
 ||||
 |-|-|-|
 |Funções|radix|Macros|
-|**itoa**, **itow**|16<br/>10<br/>8<br/>2|**_MAX_ITOSTR_BASE16_COUNT**<br/>**_MAX_ITOSTR_BASE10_COUNT**<br/>**_MAX_ITOSTR_BASE8_COUNT**<br/>**_MAX_ITOSTR_BASE2_COUNT**|
-|**ltoa**, **ltow**|16<br/>10<br/>8<br/>2|**_MAX_LTOSTR_BASE16_COUNT**<br/>**_MAX_LTOSTR_BASE10_COUNT**<br/>**_MAX_LTOSTR_BASE8_COUNT**<br/>**_MAX_LTOSTR_BASE2_COUNT**|
-|**ultoa**, **ultow**|16<br/>10<br/>8<br/>2|**_MAX_ULTOSTR_BASE16_COUNT**<br/>**_MAX_ULTOSTR_BASE10_COUNT**<br/>**_MAX_ULTOSTR_BASE8_COUNT**<br/>**_MAX_ULTOSTR_BASE2_COUNT**|
+|**_itoa**, **_itow**|16<br/>10<br/>8<br/>2|**_MAX_ITOSTR_BASE16_COUNT**<br/>**_MAX_ITOSTR_BASE10_COUNT**<br/>**_MAX_ITOSTR_BASE8_COUNT**<br/>**_MAX_ITOSTR_BASE2_COUNT**|
+|**_ltoa**, **_ltow**|16<br/>10<br/>8<br/>2|**_MAX_LTOSTR_BASE16_COUNT**<br/>**_MAX_LTOSTR_BASE10_COUNT**<br/>**_MAX_LTOSTR_BASE8_COUNT**<br/>**_MAX_LTOSTR_BASE2_COUNT**|
+|**_ultoa**, **_ultow**|16<br/>10<br/>8<br/>2|**_MAX_ULTOSTR_BASE16_COUNT**<br/>**_MAX_ULTOSTR_BASE10_COUNT**<br/>**_MAX_ULTOSTR_BASE8_COUNT**<br/>**_MAX_ULTOSTR_BASE2_COUNT**|
 |**_i64toa**, **_i64tow**|16<br/>10<br/>8<br/>2|**_MAX_I64TOSTR_BASE16_COUNT**<br/>**_MAX_I64TOSTR_BASE10_COUNT**<br/>**_MAX_I64TOSTR_BASE8_COUNT**<br/>**_MAX_I64TOSTR_BASE2_COUNT**|
 |**_ui64toa**, **_ui64tow**|16<br/>10<br/>8<br/>2|**_MAX_U64TOSTR_BASE16_COUNT**<br/>**_MAX_U64TOSTR_BASE10_COUNT**<br/>**_MAX_U64TOSTR_BASE8_COUNT**<br/>**_MAX_U64TOSTR_BASE2_COUNT**|
 
@@ -239,9 +240,9 @@ int main()
 
 |Rotina Tchar.h|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**itot**|**_itoa**|**_itoa**|**_itow**|
+|**_itot**|**_itoa**|**_itoa**|**_itow**|
 |**_ltot**|**_ltoa**|**_ltoa**|**_ltow**|
-|**ultot**|**_ultoa**|**_ultoa**|**_ultow**|
+|**_ultot**|**_ultoa**|**_ultoa**|**_ultow**|
 |**_i64tot**|**_i64toa**|**_i64toa**|**_i64tow**|
 |**_ui64tot**|**_ui64toa**|**_ui64toa**|**_ui64tow**|
 
@@ -250,8 +251,8 @@ int main()
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|
 |**itoa**, **ltoa**, **ultoa**|\<stdlib.h>|
-|**itoa**, **ltoa**, **ultoa**, **_i64toa**, **_ui64toa**|\<stdlib.h>|
-|**itow**, **ltow**, **ultow**, **_i64tow**, **_ui64tow**|\<stdlib.h> ou \<wchar.h>|
+|**_itoa**, **_ltoa**, **_ultoa**, **_i64toa**, **_ui64toa**|\<stdlib.h>|
+|**_itow**, **_ltow**, **_ultow**, **_i64tow**, **_ui64tow**|\<stdlib.h> ou \<wchar.h>|
 
 Essas funções e macros são específicas da Microsoft. Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
@@ -335,4 +336,4 @@ base 2: 1111111111111111111111111111111111111111111111111111111111111111 (64 cha
 ## <a name="see-also"></a>Consulte também
 
 [Conversão de Dados](../../c-runtime-library/data-conversion.md)<br/>
-[itoa_s, itow_s funções](itoa-s-itow-s.md)<br/>
+[_itoa_s, _itow_s functions](itoa-s-itow-s.md)<br/>

@@ -21,76 +21,77 @@ helpviewer_keywords:
 - data resources [C++]
 - resources [C++], creating
 ms.assetid: 2483c48b-1252-4dbc-826b-82e6c1a0e9cb
-ms.openlocfilehash: 2a3ff3d89c809f57ea3ddbd70d5664fc8d13cec4
-ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
+ms.openlocfilehash: 420c5ecf44f8e8b264d9eafd93de58c0db3bedf4
+ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56320816"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57210712"
 ---
 # <a name="binary-editor-c"></a>Editor binário (C++)
 
-> [!WARNING]
-> O **Editor binário** não está disponível nas edições Express.
-
-Editor binário permite que você edite qualquer recurso no nível binário em formato hexadecimal ou ASCII. Você também pode usar o [comando Find](/visualstudio/ide/reference/find-command) para pesquisar cadeias de caracteres ASCII ou bytes hexadecimais. Você deve usar o **binário** editor somente quando precisar exibir ou fazer pequenas alterações em recursos personalizados ou tipos de recursos não suportados pelo ambiente do Visual Studio.
-
-Para abrir o **Editor binário**, primeiro escolha **arquivo** > **novo** > **arquivo** no menu principal, selecione o arquivo que deseja editar e, em seguida, selecione a seta suspensa ao lado de **aberto** botão e escolha **abrir com** > **Editor binário**.
-
 > [!CAUTION]
-> Edição de recursos, como caixas de diálogo, imagens ou menus no editor binário é perigoso. A edição incorreta pode corromper o recurso, tornando-a ilegível em seu editor nativo.
+> Edição de recursos, como caixas de diálogo, imagens ou menus na **Editor binário** é perigoso. A edição incorreta pode corromper o recurso, tornando-a ilegível em seu editor nativo.
 
-![Binary Editor](../mfc/media/vcbinaryeditor2.gif "vcBinaryEditor2")<br/>
-Dados binários para uma caixa de diálogo exibida no Editor binário
+O **Editor binário** permite que você edite qualquer recurso no nível binário em formato hexadecimal ou ASCII. Você também pode usar o [comando Find](/visualstudio/ide/reference/find-command) para pesquisar cadeias de caracteres ASCII ou bytes hexadecimais. Use o **Editor binário** somente quando precisar exibir ou fazer pequenas alterações em recursos personalizados ou tipos de recursos não suportados pelo ambiente do Visual Studio.
 
-Apenas determinados valores ASCII são representados no editor binário (0x20 por meio de 0x7E). Caracteres estendidos são exibidos como pontos na seção de valor ASCII do editor binário (painel direito). Os caracteres "imprimíveis" são valores ASCII 32 a 126.
+Para abrir o **Editor binário** em um novo arquivo, vá ao menu **arquivo** > **novo** > **arquivo**, selecione o tipo de arquivo que deseja editar e, em seguida, selecione a seta suspensa ao lado de **aberto** botão e escolha **abrir com** > **Editor binário**.
+
+Para abrir o **Editor binário** em um arquivo existente, vá ao menu **arquivo** > **abrir** > **arquivo**, selecione o arquivo que deseja editar e, em seguida, selecione a seta suspensa ao lado de **aberto** botão e escolha **abrir com** > **Editor binário**.
+
+   ![Binary Editor](../mfc/media/vcbinaryeditor2.gif "vcBinaryEditor2")<br/>
+   Dados binários para uma caixa de diálogo exibida no **Editor binário**
+
+Apenas determinados valores ASCII são representados na **Editor binário** (0x20 por meio de 0x7E). Caracteres estendidos são exibidos como pontos na seção de valor ASCII do painel à direita do **Editor binário**. Os caracteres imprimíveis são valores ASCII 32 a 126.
 
 > [!TIP]
-> Ao usar o **binário** editor, em muitos casos, pode clicar duas vezes para exibir um menu de atalho de comandos específicos ao recurso. Os comandos disponíveis dependem do que o cursor está apontando. Por exemplo, se você clicar em enquanto estiver apontando para o **binário** o menu de atalho do editor com valores hexadecimais selecionados, mostra as **Recortar**, **cópia**, e **colar**  comandos.
+> Ao usar o **Editor binário**, em muitos casos você pode clique com botão direito para exibir um menu de atalho de comandos específicos ao recurso. Os comandos disponíveis dependem do que o cursor está apontando. Por exemplo, se você clicar em enquanto estiver apontando para o **Editor binário** com valores hexadecimais selecionados, mostra o menu de atalho a **Recortar**, **cópia**, e **colar**  comandos.
 
-## <a name="how-to"></a>Como fazer
+O **Editor binário** não está disponível nas edições Express.
 
-O **binário** editor permite que você:
+## <a name="how-to"></a>Como
+
+O **Editor binário** permite que você:
 
 ### <a name="to-open-a-windows-desktop-resource-for-binary-editing"></a>Para abrir um recurso de área de trabalho do Windows para edição binária
 
 1. Na [exibição de recurso](../windows/resource-view-window.md), selecione o arquivo de recurso específico que você deseja editar.
 
-1. O recurso com o botão direito e clique em **abrir dados binários** no menu de atalho.
+1. O recurso com o botão direito e selecione **abrir dados binários**.
 
-   > [!NOTE]
-   > Se você usar o [exibição de recurso](../windows/resource-view-window.md) janela para abrir um recurso com um formato que o Visual Studio não reconhece (como RCDATA ou um recurso personalizado), o recurso é aberta automaticamente na **binário** editor.
+> [!NOTE]
+> Se você usar o [exibição de recurso](../windows/resource-view-window.md) janela para abrir um recurso com um formato que o Visual Studio não reconhece, como RCDATA ou um recurso personalizado, o recurso é aberto automaticamente na **Editor binário**.
 
 ### <a name="to-open-a-managed-resource-for-binary-editing"></a>Para abrir um recurso gerenciado para edição binária
 
 1. Na **Gerenciador de soluções**, selecione o arquivo de recurso específico que você deseja editar.
 
-1. O recurso de atalho e escolha **abrir com** no menu de atalho.
+1. O recurso com o botão direito e selecione **abrir com**.
 
 1. No **abrir com** diálogo caixa, escolha **Editor binário**.
 
-   > [!NOTE]
-   > Você pode usar o [editor de imagens](../windows/image-editor-for-icons.md) e o [editor binário](binary-editor.md) para trabalhar com arquivos de recursos em projetos gerenciados. Todos os recursos gerenciados que você deseja editar devem ser recursos vinculados. Os editores de recursos do Visual Studio não oferecem suporte à edição de recursos inseridos.
-
 > [!NOTE]
-> Se você quiser usar o **binário** editor em um recurso já está sendo editado em outra janela do editor, feche a janela do editor primeiro.
+> Você pode usar o [Editor de imagens](../windows/image-editor-for-icons.md) e o **Editor binário** para trabalhar com arquivos de recursos em projetos gerenciados. Todos os recursos gerenciados que você deseja editar devem ser recursos vinculados. Os editores de recursos do Visual Studio não oferecem suporte à edição de recursos inseridos.
 
 ### <a name="to-edit-a-resource"></a>Para editar um recurso
 
+> [!NOTE]
+> Se você quiser usar o **Editor binário** em um recurso já está sendo editado em outra janela do editor, feche a janela do editor primeiro.
+
 1. Selecione o byte que você deseja editar.
 
-   O **guia** chave move o foco entre hexadecimal e seções ASCII a **binário** editor. Você pode usar o **Page Up** e **Page Down** chaves para mover por meio da tela de um recurso por vez.
+   O **guia** chave move o foco entre hexadecimal e seções ASCII as **Editor binário**. Você pode usar o **Page Up** e **Page Down** chaves para mover por meio da tela de um recurso por vez.
 
 1. Digite o novo valor.
 
    O valor é alterado imediatamente em hexadecimal e seções de ASCII e o foco muda para o próximo valor na linha.
 
-   > [!NOTE]
-   > O **binário** editor aceita alterações automaticamente quando você fecha o editor.
+> [!NOTE]
+> O **Editor binário** aceita alterações automaticamente quando você fecha o editor.
 
 ### <a name="to-find-binary-data"></a>Para localizar dados binários
 
-Você pode procurar cadeias de caracteres ASCII ou bytes hexadecimais. Por exemplo, para localizar o "Hello", você pode pesquisar a cadeia de caracteres "Hello" ou para "48 65 6C 6F de C 6" (o equivalente hexadecimal).
+Você pode procurar cadeias de caracteres ASCII ou bytes hexadecimais. Por exemplo, para encontrar *Hello*, você pode pesquisar a cadeia de caracteres *Hello* ou seu valor hexadecimal, *48 65 6C 6 6F de C*.
 
 1. Dos **edite** menu, escolha [localizar](/visualstudio/ide/reference/find-command).
 
@@ -100,25 +101,25 @@ Você pode procurar cadeias de caracteres ASCII ou bytes hexadecimais. Por exemp
 
 ### <a name="to-create-a-new-custom-or-data-resource"></a>Para criar um novo recurso personalizado ou dados
 
-Você pode criar um novo recurso personalizado ou dados colocando o recurso em um arquivo separado, usando a sintaxe de arquivo de script (. rc) do recurso normal e, em seguida, incluindo o arquivo clicando com o seu projeto no **Gerenciador de soluções** e clicando em  **Inclui recurso** no menu de atalho.
+Você pode criar um novo recurso personalizado ou dados colocando o recurso em um arquivo separado, usando a sintaxe de arquivo de script (. rc) do recurso normal e, em seguida, incluindo o arquivo clicando com o seu projeto no **Gerenciador de soluções** e selecionando  **Inclui recurso**.
 
 1. [Crie um arquivo. rc](../windows/how-to-create-a-resource-script-file.md) que contém o recurso personalizado ou dados.
 
    Você pode digitar os dados personalizados em um arquivo. rc como cadeias de caracteres entre aspas terminada em nulo, ou como números inteiros em formato decimal, hexadecimal ou octal.
 
-1. Na **Gerenciador de soluções**, o arquivo. RC do seu projeto com o botão direito e clique em **recurso inclui** no menu de atalho.
+1. Na **Gerenciador de soluções**, o arquivo. RC do seu projeto com o botão direito e selecione **recurso inclui**.
 
-1. No **diretivas de tempo de compilação** , digite um `#include` instrução que fornece o nome do arquivo que contém o recurso personalizado. Por exemplo:
+1. No **diretivas de tempo de compilação** , digite um `#include` instrução que fornece o nome do arquivo que contém o recurso personalizado, por exemplo:
 
     ```cpp
     #include mydata.rc
     ```
 
-   Verifique se a sintaxe e a ortografia do que você digita estão corretos. O conteúdo a **diretivas de tempo de compilação** caixa são inseridos no arquivo de script de recurso exatamente como você digitou-los.
+   Verifique se a sintaxe e a ortografia do que você digita estão corretos. O conteúdo a **diretivas de tempo de compilação** caixa são inseridos no arquivo de script de recurso exatamente como você os digita.
 
 1. Selecione **Okey** para registrar as alterações.
 
-É outra maneira de criar um recurso personalizado importar um arquivo externo como o recurso personalizado. Para obter mais informações, consulte [importando e exportando recursos](../windows/how-to-import-and-export-resources.md).
+Outra maneira de criar um recurso personalizado é importar um arquivo externo como o recurso personalizado, consulte [como: Gerenciar recursos](../windows/how-to-import-and-export-resources.md).
 
 > [!NOTE]
 > Criação de novos recursos personalizados ou de dados requer Win32.

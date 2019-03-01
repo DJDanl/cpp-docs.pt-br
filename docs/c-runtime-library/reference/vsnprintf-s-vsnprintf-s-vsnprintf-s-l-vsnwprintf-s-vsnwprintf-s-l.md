@@ -19,6 +19,7 @@ apilocation:
 - msvcr120_clr0400.dll
 - ntdll.dll
 - ucrtbase.dll
+- ntoskrnl.exe
 apitype: DLLExport
 f1_keywords:
 - _vsnprintf_s
@@ -39,12 +40,12 @@ helpviewer_keywords:
 - _vsnwprintf_s function
 - formatted text [C++]
 ms.assetid: 147ccfce-58c7-4681-a726-ef54ac1c604e
-ms.openlocfilehash: 6654588754bbd8a8d6f6ac4c5dcd8361e932a5e6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 255c3b760dec1495a4f9a82915878a5504844f24
+ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50480555"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57210699"
 ---
 # <a name="vsnprintfs-vsnprintfs-vsnprintfsl-vsnwprintfs-vsnwprintfsl"></a>vsnprintf_s, _vsnprintf_s, _vsnprintf_s_l, _vsnwprintf_s, _vsnwprintf_s_l
 
@@ -142,7 +143,7 @@ Se *buffer* ou *formato* é um **nulo** ponteiro, ou se *contagem* é menor que 
 |-----------------|------------|-------------|
 |*buffer* é **nulo**|-1|**EINVAL**|
 |*formato* é **nulo**|-1|**EINVAL**|
-|*Contagem de* < = 0|-1|**EINVAL**|
+|*count* <= 0|-1|**EINVAL**|
 |*sizeOfBuffer* muito pequeno (e *contagem* ! = **TRUNCATE**)|-1 (e *buffer* definido como uma cadeia de caracteres vazia)|**ERANGE**|
 
 ## <a name="remarks"></a>Comentários
@@ -165,16 +166,16 @@ Em C++, o uso dessas funções é simplificado pelas sobrecargas de modelo; as s
 
 |Rotina TCHAR.H|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**vsntprintf_s**|**_vsnprintf_s**|**_vsnprintf_s**|**_vsnwprintf_s**|
-|**vsntprintf_s_l**|**_vsnprintf_s_l**|**_vsnprintf_s_l**|**_vsnwprintf_s_l**|
+|**_vsntprintf_s**|**_vsnprintf_s**|**_vsnprintf_s**|**_vsnwprintf_s**|
+|**_vsntprintf_s_l**|**_vsnprintf_s_l**|**_vsnprintf_s_l**|**_vsnwprintf_s_l**|
 
 ## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho necessário|Cabeçalhos opcionais|
 |-------------|---------------------|----------------------|
 |**vsnprintf_s**|\<stdio.h> e \<stdarg.h>|\<varargs.h>*|
-|**vsnprintf_s**, **vsnprintf_s_l**|\<stdio.h> e \<stdarg.h>|\<varargs.h>*|
-|**vsnwprintf_s**, **vsnwprintf_s_l**|\<stdio.h> ou \<wchar.h> e \<stdarg.h>|\<varargs.h>*|
+|**_vsnprintf_s**, **_vsnprintf_s_l**|\<stdio.h> e \<stdarg.h>|\<varargs.h>*|
+|**_vsnwprintf_s**, **_vsnwprintf_s_l**|\<stdio.h> ou \<wchar.h> e \<stdarg.h>|\<varargs.h>*|
 
 \* Necessário para compatibilidade com UNIX V.
 

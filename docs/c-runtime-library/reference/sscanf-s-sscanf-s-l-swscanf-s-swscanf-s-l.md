@@ -17,6 +17,7 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
+- ntoskrnl.exe
 apitype: DLLExport
 f1_keywords:
 - _stscanf_s
@@ -40,12 +41,12 @@ helpviewer_keywords:
 - strings [C++], reading
 - _sscanf_s_l function
 ms.assetid: 956e65c8-00a5-43e8-a2f2-0f547ac9e56c
-ms.openlocfilehash: b1f535ad8a418fa3ce6492f9bdaa6e0299073504
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 07911b7254e74c28310669a697c7492b69567b7f
+ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50538132"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57210894"
 ---
 # <a name="sscanfs-sscanfsl-swscanfs-swscanfsl"></a>sscanf_s, _sscanf_s_l, swscanf_s, _swscanf_s_l
 
@@ -140,15 +141,15 @@ As versões dessas funções que têm o **l** sufixo são idênticas, exceto por
 
 |Rotina TCHAR.H|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**stscanf_s**|**sscanf_s**|**sscanf_s**|**swscanf_s**|
-|**stscanf_s_l**|**_sscanf_s_l**|**_sscanf_s_l**|**_swscanf_s_l**|
+|**_stscanf_s**|**sscanf_s**|**sscanf_s**|**swscanf_s**|
+|**_stscanf_s_l**|**_sscanf_s_l**|**_sscanf_s_l**|**_swscanf_s_l**|
 
 ## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|
-|**sscanf_s**, **sscanf_s_l**|\<stdio.h>|
-|**swscanf_s**, **swscanf_s_l**|\<stdio.h> ou \<wchar.h>|
+|**sscanf_s**, **_sscanf_s_l**|\<stdio.h>|
+|**swscanf_s**, **_swscanf_s_l**|\<stdio.h> ou \<wchar.h>|
 
 Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
