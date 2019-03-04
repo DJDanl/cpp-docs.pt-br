@@ -1,21 +1,21 @@
 ---
 title: Classe const_mem_fun1_ref_t
-ms.date: 11/04/2016
+ms.date: 02/21/2019
 f1_keywords:
-- xfunctional/std::const_mem_fun1_ref_t
+- functional/std::const_mem_fun1_ref_t
 helpviewer_keywords:
 - const_mem_fun1_ref_t class
 ms.assetid: 8220d373-fa1c-44be-a21d-96d49b3ea6bb
-ms.openlocfilehash: e90ac09543c0704cf900e0fc5448e295034dcb66
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 21d53178bf7ed80b5e0b170619e6221826393dab
+ms.sourcegitcommit: 4299caac2dc9e806c74ac833d856a3838b0f52a1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50516435"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "57006442"
 ---
 # <a name="constmemfun1reft-class"></a>Classe const_mem_fun1_ref_t
 
-Uma classe de adaptador que permite que uma função membro **const** que usa um único argumento seja chamada como um objeto de função binária quando inicializado com um argumento de referência.
+Uma classe de adaptador que permite que uma função membro **const** que usa um único argumento seja chamada como um objeto de função binária quando inicializado com um argumento de referência. Preterido no c++11, removido do c++17.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -31,7 +31,7 @@ class const_mem_fun1_ref_t
 
 ### <a name="parameters"></a>Parâmetros
 
-*PM*<br/>
+*Pm*<br/>
 Um ponteiro para a função membro da classe `Type` a ser convertida em um objeto de função.
 
 *left*<br/>
@@ -46,7 +46,7 @@ Uma função binária adaptável.
 
 ## <a name="remarks"></a>Comentários
 
-A classe de modelo armazena uma cópia dos *Pm*, que deve ser um ponteiro para uma função de membro de classe `Type`, em um objeto de membro privado. Ela define sua função membro `operator()` como de retorno ( `left`.\* Pm)( `right`) **const**.
+A classe de modelo armazena uma cópia dos *Pm*, que deve ser um ponteiro para uma função de membro de classe `Type`, em um objeto de membro privado. Ela define sua função membro `operator()` como de retorno ( `left`.\* *Pm*)( `right`) **const**.
 
 ## <a name="example"></a>Exemplo
 
