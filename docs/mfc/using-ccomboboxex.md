@@ -9,12 +9,12 @@ helpviewer_keywords:
 - combo boxes [MFC], CComboBoxEx class
 - CComboBox class [MFC], extended
 ms.assetid: c23cbfe8-75d2-4f98-a753-c942416eda52
-ms.openlocfilehash: 18350a5f4ac8056676eeb275f9fc95478b3a8e10
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e119b41bbca42a1cbc0dbb5e721947c5bd7f1bc8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596632"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288487"
 ---
 # <a name="using-ccomboboxex"></a>Usando CComboBoxEx
 
@@ -35,4 +35,3 @@ Use este controle para fornecer a funcionalidade de uma caixa de combinação se
 ## <a name="see-also"></a>Consulte também
 
 [Controles](../mfc/controls-mfc.md)
-

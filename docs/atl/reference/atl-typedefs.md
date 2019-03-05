@@ -23,12 +23,12 @@ helpviewer_keywords:
 - typedefs
 - ATL, typedefs
 ms.assetid: 7dd05baa-3efb-4e3b-af23-793c610f4560
-ms.openlocfilehash: c723d76f17ad1c74ab98e7348450cea3f03c4d78
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f3db32e85ea9cba1e946db6259c00c621650e969
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429309"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290554"
 ---
 # <a name="atl-typedefs"></a>Definições de tipo ATL
 
@@ -175,7 +175,7 @@ Além `CComGlobalsThreadModel`, a ATL fornece o **typedef** nome [CComObjectThre
 |`CComObjectThreadModel`|S|S|M|
 |`CComGlobalsThreadModel`|S|M|M|
 
-S = `CComSingleThreadModel`; M = `CComMultiThreadModel`
+S= `CComSingleThreadModel`; M= `CComMultiThreadModel`
 
 Use `CComObjectThreadModel` dentro de uma classe de objeto único. Use `CComGlobalsThreadModel` em um objeto que está disponível globalmente para o seu programa, ou quando você deseja proteger recursos do módulo entre vários threads.
 
@@ -215,7 +215,7 @@ Além `CComObjectThreadModel`, a ATL fornece o **typedef** nome [CComGlobalsThre
 |`CComObjectThreadModel`|S|S|M|
 |`CComGlobalsThreadModel`|S|M|M|
 
-S = `CComSingleThreadModel`; M = `CComMultiThreadModel`
+S= `CComSingleThreadModel`; M= `CComMultiThreadModel`
 
 Use `CComObjectThreadModel` dentro de uma classe de objeto único. Use `CComGlobalsThreadModel` em um objeto que está disponível globalmente para seu programa, ou quando você deseja proteger recursos do módulo entre vários threads.
 

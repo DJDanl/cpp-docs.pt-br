@@ -1,18 +1,18 @@
 ---
-title: 'Controles ActiveX MFC: adicionando métodos personalizados'
+title: 'Controles ActiveX MFC: Adicionando métodos personalizados'
 ms.date: 09/12/2018
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], methods
 - PtInCircle custom method [MFC]
 ms.assetid: 8f8dc344-44a0-4021-8db5-4cdd3d700e18
-ms.openlocfilehash: bd67e5f248f389755b1bf25854867322af60878e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4f5a7dc844d80ae94df8af7c0b2eea141376f9e9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50554551"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278841"
 ---
-# <a name="mfc-activex-controls-adding-custom-methods"></a>Controles ActiveX MFC: adicionando métodos personalizados
+# <a name="mfc-activex-controls-adding-custom-methods"></a>Controles ActiveX MFC: Adicionando métodos personalizados
 
 Métodos personalizados são diferentes de métodos de estoque em que eles já não são implementados por `COleControl`. Você deve fornecer a implementação para cada método personalizado que você adiciona ao controle.
 
@@ -26,7 +26,7 @@ Um usuário do controle ActiveX pode chamar um método personalizado a qualquer 
 O procedimento a seguir demonstra como adicionar o método personalizado PtInCircle ao código de esqueleto de um controle ActiveX. PtInCircle determina se as coordenadas passadas para o controle são dentro ou fora do círculo. Esse mesmo procedimento também pode ser usado para adicionar outros métodos personalizados. Substitua o nome do método personalizado e seus parâmetros para os parâmetros e o nome do método PtInCircle.
 
 > [!NOTE]
->  Este exemplo usa o `InCircle` função do artigo eventos. Para obter mais informações sobre esta função, consulte o artigo [controles ActiveX MFC: adicionando eventos de personalizados a um controle ActiveX](../mfc/mfc-activex-controls-adding-custom-events.md).
+>  Este exemplo usa o `InCircle` função do artigo eventos. Para obter mais informações sobre esta função, consulte o artigo [controles ActiveX MFC: Adicionando eventos personalizados a um controle ActiveX](../mfc/mfc-activex-controls-adding-custom-events.md).
 
 #### <a name="to-add-the-ptincircle-custom-method-using-the-add-method-wizard"></a>Para adicionar um método personalizado PtInCircle usando o Assistente para adicionar método
 
@@ -80,4 +80,3 @@ Por fim, o Assistente para adicionar método adiciona a função de stub `CSampl
 
 [Controles ActiveX do MFC](../mfc/mfc-activex-controls.md)<br/>
 [Ícones do Pesquisador de Objetos e do Modo de Exibição de Classe](/visualstudio/ide/class-view-and-object-browser-icons)
-

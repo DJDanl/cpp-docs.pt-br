@@ -1,18 +1,18 @@
 ---
-title: Como usar a classe de contexto para implementar um semáforo cooperativo
+title: 'Como: Use a classe de contexto para implementar um semáforo cooperativo'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - cooperative semaphore implementing
 - context class
 ms.assetid: 22f4b9c0-ca22-4a68-90ba-39e99ea76696
-ms.openlocfilehash: 460a1de03f34cb8ef9753e761aaef37470cd6d0e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 92f77fade972bff1528bc9a22416670354c70f34
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467750"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300759"
 ---
-# <a name="how-to-use-the-context-class-to-implement-a-cooperative-semaphore"></a>Como usar a classe de contexto para implementar um semáforo cooperativo
+# <a name="how-to-use-the-context-class-to-implement-a-cooperative-semaphore"></a>Como: Use a classe de contexto para implementar um semáforo cooperativo
 
 Este tópico mostra como usar a classe concurrency::Context para implementar uma classe de semáforo cooperativo.
 
@@ -90,4 +90,3 @@ O exemplo a seguir modifica o corpo da função de trabalho que é passado para 
 
 [Contextos](../../parallel/concrt/contexts.md)<br/>
 [Contêineres e objetos em paralelo](../../parallel/concrt/parallel-containers-and-objects.md)
-

@@ -17,12 +17,12 @@ helpviewer_keywords:
 - collection classes [MFC], lists
 - collection classes [MFC], shapes
 ms.assetid: 02586e4c-851d-41d0-a722-feb11c17c74c
-ms.openlocfilehash: f7ded70431b80257433058cc9af89bcb137c4247
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5b74ee8a779ad2fffa801749d9818f985bc8c352
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50490851"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273303"
 ---
 # <a name="collections"></a>Coleções
 
@@ -98,7 +98,7 @@ As características das Classes de coleção do MFC na tabela [recomendações p
 
 - [Recomendações para escolher uma classe de coleção](../mfc/recommendations-for-choosing-a-collection-class.md)
 
-- [Como fazer uma coleção fortemente tipada](../mfc/how-to-make-a-type-safe-collection.md)
+- [Como: Fazer uma coleção fortemente tipada](../mfc/how-to-make-a-type-safe-collection.md)
 
 - [Criando coleções de pilhas e filas](../mfc/creating-stack-and-queue-collections.md)
 
@@ -118,4 +118,3 @@ As características das Classes de coleção do MFC na tabela [recomendações p
 
 [Conceitos](../mfc/mfc-concepts.md)<br/>
 [Tópicos gerais do MFC](../mfc/general-mfc-topics.md)
-

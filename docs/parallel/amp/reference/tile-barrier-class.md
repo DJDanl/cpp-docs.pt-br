@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - tile_barrier class
 ms.assetid: b4ccdccb-0032-4e11-b7bd-dc9d43445dee
-ms.openlocfilehash: 7902ba2315fe348789527e755e124e7fc0ba965f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4336a4cc317344c881f60e5ed4c5bdf8328a34b8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509038"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301162"
 ---
 # <a name="tilebarrier-class"></a>Classe tile_barrier
 
@@ -54,7 +54,7 @@ class tile_barrier;
 
 **Cabeçalho:** amp. h
 
-**Namespace:** Simultaneidade
+**Namespace:** Concorrência
 
 ## <a name="tile_barrier__ctor"></a>  Construtor de tile_barrier
 
@@ -69,10 +69,10 @@ tile_barrier(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Outro*<br/>
+*_Other*<br/>
 O `tile_barrier` objeto a ser copiado.
 
-## <a name="wait"></a>  Aguarde
+## <a name="wait"></a>  wait
 
 Instrui a todos os threads no grupo de segmentos (tile) para interromper a execução até que todos os threads no tile terminem de esperar.
 

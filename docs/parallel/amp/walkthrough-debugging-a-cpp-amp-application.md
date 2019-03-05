@@ -1,5 +1,5 @@
 ---
-title: 'Instruções passo a passo: depurando um aplicativo C++ AMP'
+title: 'Passo a passo: Depurando um aplicativo C++ AMP'
 ms.date: 11/19/2018
 helpviewer_keywords:
 - debugging, C++ Accelerated Massive Parallelism
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, debugging
 - debugging, C++ AMP
 ms.assetid: 40e92ecc-f6ba-411c-960c-b3047b854fb5
-ms.openlocfilehash: 610cf317982204715d55d12ece510cb477543f4d
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 5312ba7354c28286cafb092711d66d56a920581a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176686"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57286900"
 ---
-# <a name="walkthrough-debugging-a-c-amp-application"></a>Instruções passo a passo: depurando um aplicativo C++ AMP
+# <a name="walkthrough-debugging-a-c-amp-application"></a>Passo a passo: Depurando um aplicativo C++ AMP
 
 Este tópico demonstra como depurar um aplicativo que usa C++ Accelerated Massive Parallelism (C++ AMP) para aproveitar a unidade de processamento gráfico (GPU). Ele usa um programa de redução em paralelo a soma de uma grande matriz de inteiros. Esta explicação passo a passo ilustra as seguintes tarefas:
 
@@ -36,7 +36,7 @@ Antes de começar este passo a passo:
 
 - Leia [visão geral do C++ AMP](../../parallel/amp/cpp-amp-overview.md).
 
-- Certifique-se de que a linha números são exibidos no editor de texto. Para obter mais informações, consulte [como: exibir números de linha no Editor de](/visualstudio/ide/reference/how-to-display-line-numbers-in-the-editor).
+- Certifique-se de que a linha números são exibidos no editor de texto. Para obter mais informações, confira [Como: Exibir números de linha no Editor de](/visualstudio/ide/reference/how-to-display-line-numbers-in-the-editor).
 
 - Verifique se que você estiver executando o Windows 8 ou Windows Server 2012 para dar suporte à depuração no emulador de software.
 
@@ -220,7 +220,7 @@ Esta seção mostra como depurar o código GPU, que é o código contido no `sum
 
 2. No **páginas de propriedades** caixa de diálogo **propriedades de configuração**, escolha **depuração**.
 
-3. No **depurador a iniciar** lista, selecione **depurador Local do Windows**.
+3. Na lista **Depurador a iniciar**, selecione **Depurador Local do Windows**.
 
 4. No **tipo de depurador** lista, verifique **automático** está selecionado.
 
@@ -335,7 +335,7 @@ Você pode marcar os threads GPU específicos sinalizando-los de **Threads da GP
 
 ## <a name="freezing-and-thawing-gpu-threads"></a>Congelando e Descongelando Threads da GPU
 
-Você pode congelar (Suspender) e descongelar (retomar) GPU threads de qualquer um de **Threads da GPU** janela ou o **inspeção paralela** janela. Você pode congelar e descongelar threads de CPU da mesma forma; Para obter informações, consulte [como: usar a janela Threads](/visualstudio/debugger/how-to-use-the-threads-window).
+Você pode congelar (Suspender) e descongelar (retomar) GPU threads de qualquer um de **Threads da GPU** janela ou o **inspeção paralela** janela. Você pode congelar e descongelar threads de CPU da mesma forma; Para obter informações, consulte [como: Usar a janela Threads](/visualstudio/debugger/how-to-use-the-threads-window).
 
 ### <a name="to-freeze-and-thaw-gpu-threads"></a>Para congelar e descongelar threads da GPU
 
@@ -387,6 +387,6 @@ Executar todos os threads em um determinado bloco para a linha que contém o cur
 
 [Visão geral do C++ AMP](../../parallel/amp/cpp-amp-overview.md)<br/>
 [Depurando código de GPU](/visualstudio/debugger/debugging-gpu-code)<br/>
-[Como usar a janela Threads da GPU](/visualstudio/debugger/how-to-use-the-gpu-threads-window)<br/>
-[Como usar a janela Inspeção Paralela](/visualstudio/debugger/how-to-use-the-parallel-watch-window)<br/>
+[Como: Usar a janela de Threads de GPU](/visualstudio/debugger/how-to-use-the-gpu-threads-window)<br/>
+[Como: Usar a janela Inspeção Paralela](/visualstudio/debugger/how-to-use-the-parallel-watch-window)<br/>
 [Analisando código AMP de C++ com o Visualizador de simultaneidade](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/03/09/analyzing-c-amp-code-with-the-concurrency-visualizer/)

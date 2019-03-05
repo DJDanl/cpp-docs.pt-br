@@ -1,19 +1,19 @@
 ---
-title: 'Exceções: lançando exceções a partir das funções próprias'
+title: 'Exceções: Lançando exceções das suas próprias funções'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - throwing exceptions [MFC], from functions
 - functions [MFC], throwing exceptions
 - exceptions [MFC], throwing
 ms.assetid: 492976e8-8804-4234-8e8f-30dffd0501be
-ms.openlocfilehash: 4d0961bff706ccf86eb09d2dcbe695a13bfa8702
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 030bf3db9ff305f35cbfb0b518c8704114ce083d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50558974"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297938"
 ---
-# <a name="exceptions-throwing-exceptions-from-your-own-functions"></a>Exceções: lançando exceções a partir das funções próprias
+# <a name="exceptions-throwing-exceptions-from-your-own-functions"></a>Exceções: Lançando exceções das suas próprias funções
 
 É possível usar o paradigma de manipulação de exceção MFC exclusivamente para capturar exceções lançadas pelas funções no MFC ou outras bibliotecas. Além de capturar exceções geradas pelo código da biblioteca, você pode gerar exceções de seu próprio código, se você estiver escrevendo funções que podem encontrar condições excepcionais.
 
@@ -43,4 +43,3 @@ Quando uma exceção é lançada, a execução da função atual for interrompid
 ## <a name="see-also"></a>Consulte também
 
 [Tratamento de Exceção](../mfc/exception-handling-in-mfc.md)
-

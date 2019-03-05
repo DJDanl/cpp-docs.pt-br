@@ -11,12 +11,12 @@ helpviewer_keywords:
 - server applications [MFC], vs. client applications on Internet
 - client applications [MFC], vs. server applications on Internet
 ms.assetid: 9b96172c-b4d4-4c69-bfb2-226ce0de6d08
-ms.openlocfilehash: b9b794070d1c4ff4f05f33895a7af5532a524ad1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cdb294e4ab808a7e4cbcec457f6e744eff9f12cb
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50602924"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302800"
 ---
 # <a name="application-design-choices"></a>Opções de design do aplicativo
 
@@ -24,7 +24,7 @@ Este artigo discute alguns dos problemas de design a considerar ao programar par
 
 Os tópicos abordados neste artigo incluem:
 
-- [Intranet em comparação com a Internet](#_core_intranet_versus_internet)
+- [Intranet Versus Internet](#_core_intranet_versus_internet)
 
 - [Aplicativo cliente ou servidor](#_core_client_or_server_application)
 
@@ -38,7 +38,7 @@ Os tópicos abordados neste artigo incluem:
 
 Se você estiver pronto para começar a escrever o seu programa agora, consulte [escrever aplicativos do MFC](../mfc/writing-mfc-applications.md).
 
-##  <a name="_core_intranet_versus_internet"></a> Intranet em comparação com a Internet
+##  <a name="_core_intranet_versus_internet"></a> Intranet Versus Internet
 
 Muitos aplicativos executados na Internet e são acessíveis para qualquer pessoa com um navegador e o acesso à Internet. As empresas também estão implementando intranets, que são redes de toda a empresa usando protocolos TCP/IP e navegadores da Web. Intranets oferecem uma fonte central, pode ser atualizada facilmente para obter informações de toda a empresa. Eles podem ser usados para atualização de software, para entregar e tabulando pesquisas, para suporte ao cliente e para entrega de informações. A tabela a seguir compara os recursos da Internet e intranets.
 
@@ -52,7 +52,7 @@ Muitos aplicativos executados na Internet e são acessíveis para qualquer pesso
 
 Seu aplicativo pode ser executado em um computador servidor ou em um computador cliente. Seu aplicativo pode também ser armazenado em um servidor e, em seguida, baixado da Internet e executar em um computador cliente. Classes WinInet MFC são usadas para aplicativos cliente para baixar arquivos. MFC e classes moniker assíncronas são usadas para baixar arquivos e propriedades do controle. Classes para controles ActiveX e documentos ativos são usadas para aplicativos cliente e para aplicativos que são baixados do servidor para ser executado em um cliente.
 
-##  <a name="_core_the_web_page"></a> A página da Web: HTML, documentos do Active Directory, ActiveX controles
+##  <a name="_core_the_web_page"></a> A página da Web: HTML, documentos do Active Directory, os controles ActiveX
 
 A Microsoft oferece várias maneiras de fornecer conteúdo em uma página da Web. Páginas da Web pode usar o padrão HTML ou HTML extensões, como a marca object, para fornecer conteúdo dinâmico, como controles ActiveX.
 
@@ -92,4 +92,3 @@ A tabela a seguir resume as várias maneiras de usar o MFC para transferir dados
 [Noções básicas de programação da Internet no MFC](../mfc/mfc-internet-programming-basics.md)<br/>
 [Extensões da Internet Win32 (WinInet)](../mfc/win32-internet-extensions-wininet.md)<br/>
 [Monikers assíncronos na Internet](../mfc/asynchronous-monikers-on-the-internet.md)
-

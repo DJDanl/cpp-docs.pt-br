@@ -1,5 +1,5 @@
 ---
-title: 'TN042: recomendações do desenvolvedor de driver ODBC'
+title: 'TN042: Recomendações do desenvolvedor de Driver ODBC'
 ms.date: 11/04/2016
 f1_keywords:
 - vc.odbc
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - databases [MFC], ODBC
 - TN042
 ms.assetid: ecc6b5d9-f480-4582-9e22-8309fe561dad
-ms.openlocfilehash: 2140261c2e90eaee7930d4be3282ec31bda29759
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 462f8229d995add79f48f34b7f81257710b4a8b8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50502031"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276605"
 ---
-# <a name="tn042-odbc-driver-developer-recommendations"></a>TN042: recomendações do desenvolvedor de driver ODBC
+# <a name="tn042-odbc-driver-developer-recommendations"></a>TN042: Recomendações do desenvolvedor de Driver ODBC
 
 > [!NOTE]
 >  A nota técnica a seguir não foi atualizada desde que foi incluído pela primeira vez na documentação online. Como resultado, alguns procedimentos e tópicos podem estar desatualizadas ou incorretas. Para obter as informações mais recentes, é recomendável que você pesquise o tópico de interesse no índice da documentação online.
@@ -108,7 +108,7 @@ Abaixo está o suporte mínimo necessário para abrir um dynaset:
 
 `SQLGetInfo`, **SQL_ODBC_VER** deve retornar > "01".
 
-`SQLGetInfo`, **SQL_SCROLL_OPTIONS** deve dar suporte à **SQL_SO_KEYSET_DRIVEN**.
+`SQLGetInfo`, **SQL_SCROLL_OPTIONS** must support **SQL_SO_KEYSET_DRIVEN**.
 
 `SQLGetInfo`, **SQL_ROW_UPDATES** deve retornar "Y".
 
@@ -120,4 +120,3 @@ Além disso, se o bloqueio pessimista é solicitado, uma chamada para `SQLSetPos
 
 [Observações técnicas por número](../mfc/technical-notes-by-number.md)<br/>
 [Observações técnicas por categoria](../mfc/technical-notes-by-category.md)
-

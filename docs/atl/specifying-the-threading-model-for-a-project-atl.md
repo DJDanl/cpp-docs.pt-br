@@ -8,12 +8,12 @@ helpviewer_keywords:
 - threading [ATL], models
 - _ATL_SINGLE_THREADED macro
 ms.assetid: 6b571078-521c-4f3e-9f08-482aa235a822
-ms.openlocfilehash: 419c9880573c2058b3bb60b9c77e4f3ca065fab7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 69c1c80bba0b09ce69e0b9b9b27296ef2508e60b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50569878"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326056"
 ---
 # <a name="specifying-the-threading-model-for-a-project-atl"></a>Especificando o modelo de threading para um projeto (ATL)
 
@@ -21,9 +21,9 @@ As macros a seguir estão disponíveis para especificar o modelo de threading de
 
 |Macro|Diretrizes para usar|
 |-----------|--------------------------|
-|ATL_SINGLE_THREADED|Defina se todos os seus objetos usam o modelo de threading único.|
-|ATL_APARTMENT_THREADED|Defina se um ou mais dos seus objetos usam apartamento de threading.|
-|ATL_FREE_THREADED|Defina se um ou mais dos seus objetos usam threading livre ou neutra. O código existente pode conter referências à macro equivalente [_ATL_MULTI_THREADED](reference/compiler-options-macros.md#_atl_multi_threaded).|
+|_ATL_SINGLE_THREADED|Defina se todos os seus objetos usam o modelo de threading único.|
+|_ATL_APARTMENT_THREADED|Defina se um ou mais dos seus objetos usam apartamento de threading.|
+|_ATL_FREE_THREADED|Defina se um ou mais dos seus objetos usam threading livre ou neutra. O código existente pode conter referências à macro equivalente [_ATL_MULTI_THREADED](reference/compiler-options-macros.md#_atl_multi_threaded).|
 
 Se você não definir qualquer uma dessas macros para seu projeto, atl_free_threaded estará em vigor.
 
@@ -40,4 +40,3 @@ Ver [opções, ATL Simple Object Wizard](../atl/reference/options-atl-simple-obj
 ## <a name="see-also"></a>Consulte também
 
 [Conceitos](../atl/active-template-library-atl-concepts.md)
-

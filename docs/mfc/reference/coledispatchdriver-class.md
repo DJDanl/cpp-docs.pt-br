@@ -26,12 +26,12 @@ helpviewer_keywords:
 - COleDispatchDriver [MFC], m_bAutoRelease
 - COleDispatchDriver [MFC], m_lpDispatch
 ms.assetid: 3ed98daf-cdc7-4374-8a0c-cf695a8d3657
-ms.openlocfilehash: 9d0ffba2e8b682a33dc435b0968c59844a858c72
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 22ba71bc0abaefd20cb68d82d4fefe06ab7fa929
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524931"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274565"
 ---
 # <a name="coledispatchdriver-class"></a>Classe COleDispatchDriver
 
@@ -97,7 +97,7 @@ Para obter mais informações sobre como usar `COleDispatchDriver`, consulte os 
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** afxdisp.h
+**Header:** afxdisp.h
 
 ##  <a name="attachdispatch"></a>  COleDispatchDriver::AttachDispatch
 

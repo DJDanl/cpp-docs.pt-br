@@ -35,12 +35,12 @@ f1_keywords:
 helpviewer_keywords:
 - CUrl class
 ms.assetid: b3894d34-47b9-4961-9719-4197153793da
-ms.openlocfilehash: ed42461af50fa83ca142127587d334cc7e75d914
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 913365e2b20015b22480dfd364d75b2be3c6355b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471507"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295650"
 ---
 # <a name="curl-class"></a>Classe cUrl
 
@@ -62,7 +62,7 @@ class CUrl
 |Nome|Descrição|
 |----------|-----------------|
 |[CUrl::CUrl](#curl)|O construtor.|
-|[CUrl:: ~ CUrl](#dtor)|O destruidor.|
+|[CUrl::~CUrl](#dtor)|O destruidor.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
@@ -106,7 +106,7 @@ class CUrl
 
 `CUrl` permite que você manipule os campos de uma URL, como o número de porta ou caminho. `CUrl` Entenda as URLs da seguinte forma:
 
-\<Esquema > ://\<nome de usuário >:\<senha >\@\<nome do host >:\<PortNumber > /\<UrlPath >\<ExtraInfo >
+\<Scheme>://\<UserName>:\<Password>\@\<HostName>:\<PortNumber>/\<UrlPath>\<ExtraInfo>
 
 (Alguns campos são opcionais.) Por exemplo, considere esta URL:
 
@@ -116,13 +116,13 @@ class CUrl
 
 - Esquema: "http" ou [ATL_URL_SCHEME_HTTP](atl-url-scheme-enum.md)
 
-- Nome de usuário: "alguém"
+- UserName: "someone"
 
 - Senha: "segredo"
 
 - Nome do host: "`www.microsoft.com`"
 
-- PortNumber: 80
+- Número da porta: 80
 
 - UrlPath: "visualc/stuff.htm"
 
@@ -149,15 +149,15 @@ Os sinalizadores que controlam a conversão em formato canônico. Se nenhum sina
 
 - ATL_URL_BROWSER_MODE: Não codificar ou decodificar os caracteres após o "#" ou "" e não remove o espaço em branco à direita após "". Se esse valor não for especificado, a URL inteira é codificada e espaço em branco à direita é removido.
 
-- ATL_URL _DECODE: converte todas as sequências XX % em caracteres, incluindo sequências de escape, antes que a URL é analisada.
+- ATL_URL _DECODE: Converte todas as sequências XX % em caracteres, incluindo sequências de escape, antes que a URL é analisada.
 
-- ATL_URL _ENCODE_PERCENT: codifica todos os sinais de porcentagem encontrados. Por padrão, os sinais de porcentagem não são codificadas.
+- ATL_URL _ENCODE_PERCENT: Codifica todos os sinais de porcentagem encontrados. Por padrão, os sinais de porcentagem não são codificadas.
 
-- ATL_URL _ENCODE_SPACES_ONLY: codifica apenas espaços.
+- ATL_URL _ENCODE_SPACES_ONLY: Codifica apenas espaços.
 
-- ATL_URL _NO_ENCODE: não converter caracteres não seguros em sequências de escape.
+- ATL_URL _NO_ENCODE: Não converte os caracteres não seguros em sequências de escape.
 
-- ATL_URL _NO_META: não remove as sequências de metadados (como "."e"..") da URL.
+- ATL_URL _NO_META: Não remove as sequências de metadados (como "."e"..") da URL.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -225,7 +225,7 @@ Retorna verdadeiro em caso de êxito, FALSE em caso de falha.
 
 Esse método acrescenta seus campos individuais para construir a cadeia de caracteres de URL completa usando o seguinte formato:
 
-**\<esquema > ://\<usuário >:\<passar >\@\<domínio >:\<porta >\<caminho >\<extra >**
+**\<scheme>://\<user>:\<pass>\@\<domain>:\<port>\<path>\<extra>**
 
 Ao chamar esse método, o *pdwMaxLength* parâmetro deve conter inicialmente o comprimento máximo do buffer de cadeia de caracteres referenciado pela *lpszUrl* parâmetro. O valor de *pdwMaxLength* parâmetro será atualizado com o comprimento real da cadeia de caracteres de URL.
 
@@ -246,10 +246,10 @@ CUrl(const CUrl& urlThat) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*URL*<br/>
+*urlThat*<br/>
 O `CUrl` objeto a ser copiado para criar a URL.
 
-##  <a name="dtor"></a>  CUrl:: ~ CUrl
+##  <a name="dtor"></a>  CUrl::~CUrl
 
 O destruidor.
 
@@ -447,7 +447,7 @@ CUrl& operator= (const CUrl& urlThat) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*URL*<br/>
+*urlThat*<br/>
 O `CUrl` objeto a ser copiado para o objeto atual.
 
 ### <a name="return-value"></a>Valor de retorno

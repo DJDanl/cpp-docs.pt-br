@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - connection maps
 ms.assetid: 1f25a9bc-6d09-4614-99cf-dc38e8ddfa73
-ms.openlocfilehash: 388b3d1961f9c7cf3598db08a986c2205ac34bc5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cbd993e7172ca9a25f25db18d5d0fa042db847b3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624803"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271145"
 ---
 # <a name="connection-maps"></a>Mapas de conexão
 
@@ -64,7 +64,7 @@ No arquivo de declaração (. h) que define as funções de membro para a sua cl
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdisp.h
+  **Header** afxdisp.h
 
 ##  <a name="end_connection_part"></a>  END_CONNECTION_PART
 
@@ -81,7 +81,7 @@ Especifica o nome da classe local que implementa o ponto de conexão.
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdisp.h
+  **Header** afxdisp.h
 
 ##  <a name="connection_iid"></a>  CONNECTION_IID
 
@@ -93,7 +93,7 @@ CONNECTION_IID(iid)
 
 ### <a name="parameters"></a>Parâmetros
 
-*IID*<br/>
+*iid*<br/>
 A ID de interface da interface chamado pelo ponto de conexão.
 
 ### <a name="remarks"></a>Comentários
@@ -106,7 +106,7 @@ Especifica um ponto de conexão que chama o `ISinkInterface` interface.
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdisp.h
+  **Header** afxdisp.h
 
 ##  <a name="declare_connection_map"></a>  DECLARE_CONNECTION_MAP
 
@@ -122,7 +122,7 @@ Se o controle dá suporte a pontos adicionais, use a macro DECLARE_CONNECTION_MA
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdisp.h
+  **Header** afxdisp.h
 
 ##  <a name="begin_connection_map"></a>  BEGIN_CONNECTION_MAP
 
@@ -146,7 +146,7 @@ Na implementação (. Arquivo CPP) que define o membro de funções para sua cla
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdisp.h
+  **Header** afxdisp.h
 
 ##  <a name="end_connection_map"></a>  END_CONNECTION_MAP
 
@@ -158,7 +158,7 @@ END_CONNECTION_MAP()
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdisp.h
+  **Header** afxdisp.h
 
 ##  <a name="connection_part"></a>  CONNECTION_PART
 
@@ -173,7 +173,7 @@ CONNECTION_PART(theClass, iid, localClass)
 *theClass*<br/>
 Especifica o nome da classe do controle cujo conexão ponto, isso é.
 
-*IID*<br/>
+*iid*<br/>
 A ID de interface da interface chamado pelo ponto de conexão.
 
 *localClass*<br/>
@@ -189,7 +189,7 @@ implementa um mapa de conexão, com um ponto de conexão, que chama o `IID_ISink
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdisp.h
+  **Header** afxdisp.h
 
 ##  <a name="afxconnectionadvise"></a>  AfxConnectionAdvise
 
@@ -212,7 +212,7 @@ Um ponteiro para o objeto que chama a interface.
 *pUnkSink*<br/>
 Um ponteiro para o objeto que implementa a interface.
 
-*IID*<br/>
+*iid*<br/>
 A ID de interface da conexão.
 
 *bRefCount*<br/>
@@ -254,7 +254,7 @@ Um ponteiro para o objeto que chama a interface.
 *pUnkSink*<br/>
 Um ponteiro para o objeto que implementa a interface.
 
-*IID*<br/>
+*iid*<br/>
 A ID de interface da interface do ponto de conexão.
 
 *bRefCount*<br/>

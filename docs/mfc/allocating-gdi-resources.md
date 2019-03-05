@@ -6,12 +6,12 @@ helpviewer_keywords:
 - GDI objects [MFC], allocating during printing
 - printing [MFC], allocating GDI resources
 ms.assetid: cef7e94d-5a27-4aea-a9ee-8369fc895d3a
-ms.openlocfilehash: d637d524d37dc466e15aed3b571cccf24c18216d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5f5f6c6585217393a6008fafa875a83e67ab8016
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505701"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304997"
 ---
 # <a name="allocating-gdi-resources"></a>Alocando recursos GDI
 
@@ -32,4 +32,3 @@ Para desalocar esses objetos GDI, substituir os [OnEndPrinting](../mfc/reference
 
 [Imprimindo](../mfc/printing.md)<br/>
 [Como a impressão padrão é feita](../mfc/how-default-printing-is-done.md)
-

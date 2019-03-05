@@ -14,12 +14,12 @@ helpviewer_keywords:
 - printing [MFC], documents
 - writing to files [MFC]
 ms.assetid: f390d6d8-d0e1-4497-9b6a-435f7ce0776c
-ms.openlocfilehash: 1fcdd365bd3744e1a09b768f56c1044696686c73
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fb35d1731912b2e322bc61621f7900e0d98e1e72
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50589717"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294662"
 ---
 # <a name="using-documents"></a>Usando documentos
 
@@ -56,4 +56,3 @@ O documento é particularmente envolvido no gerenciamento de dados. Store seus d
 ## <a name="see-also"></a>Consulte também
 
 [Arquitetura de documento/exibição](../mfc/document-view-architecture.md)
-

@@ -120,12 +120,12 @@ helpviewer_keywords:
 - CDocument [MFC], m_clrRichPreviewTextColor
 - CDocument [MFC], m_lfRichPreviewFont
 ms.assetid: e5a2891d-e1e1-4599-8c7e-afa9b4945446
-ms.openlocfilehash: e84ceb11ad789ef3bd6933292030ef2af6f1d817
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b7358c2206c15660b9ffb283802283ee71e57f03
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50609307"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299069"
 ---
 # <a name="cdocument-class"></a>Classe CDocument
 
@@ -506,7 +506,7 @@ virtual BOOL GetThumbnail(
 
 ### <a name="parameters"></a>Parâmetros
 
-*CX*<br/>
+*cx*<br/>
 Especifica a largura e altura do bitmap.
 
 *phbmp*<br/>
@@ -1073,7 +1073,7 @@ virtual void RemoveChunk(
 *Guid*<br/>
 Especifica o GUID de uma parte a ser removido.
 
-*PID*<br/>
+*Pid*<br/>
 Especifica o PID de uma parte a ser removido.
 
 ### <a name="remarks"></a>Comentários

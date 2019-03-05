@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - CMonthCalCtrl class [MFC], about CMonthCalCtrl class
 ms.assetid: 2be0e8c2-ed03-4853-aea1-4461eba18611
-ms.openlocfilehash: 4a7747b74058ab1d566108c0f834a01d71ab1fa5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f97941bfd8d0a27f640757343cd360a1bec3050c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50461666"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57280807"
 ---
 # <a name="using-cmonthcalctrl"></a>Usando CMonthCalCtrl
 
@@ -33,4 +33,3 @@ O controle de calendário mensal ([CMonthCalCtrl](../mfc/reference/cmonthcalctrl
 ## <a name="see-also"></a>Consulte também
 
 [Controles](../mfc/controls-mfc.md)
-

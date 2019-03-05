@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - scheduler policies
 ms.assetid: 58fb68bd-4a57-40a8-807b-6edb6f083cd9
-ms.openlocfilehash: df045f7df9d0640b96ae1227c65c65aa7e432350
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e2acfc199e7ad9edf3965dc8ccb4103eb615a66b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668735"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298121"
 ---
 # <a name="scheduler-policies"></a>Políticas de agendador
 
@@ -29,7 +29,7 @@ O [concurrency::PolicyElementKey](reference/concurrency-namespace-enums.md#polic
 |Chave de política|Descrição|Valor padrão|
 |----------------|-----------------|-------------------|
 |`SchedulerKind`|Um [concurrency::SchedulerType](reference/concurrency-namespace-enums.md#schedulertype) valor que especifica o tipo de threads a serem usados para agendar tarefas.|`ThreadScheduler` (use threads normais). Isso é o único valor válido para essa chave.|
-|`MaxConcurrency`|Um `unsigned int` valor que especifica o número máximo de recursos de simultaneidade que usa o Agendador.|[Concurrency::MaxExecutionResources](reference/concurrency-namespace-constants1.md#maxexecutionresources)|
+|`MaxConcurrency`|Um `unsigned int` valor que especifica o número máximo de recursos de simultaneidade que usa o Agendador.|[concurrency::MaxExecutionResources](reference/concurrency-namespace-constants1.md#maxexecutionresources)|
 |`MinConcurrency`|Um `unsigned int` valor que especifica o número mínimo de recursos de simultaneidade que usa o Agendador.|`1`|
 |`TargetOversubscriptionFactor`|Um `unsigned int` valor que especifica quantos threads para alocar a cada recurso de processamento.|`1`|
 |`LocalContextCacheSize`|Um `unsigned int` valor que especifica o número máximo de contextos que podem ser armazenados em cache na fila de local de cada processador virtual.|`8`|
@@ -49,11 +49,10 @@ Use o [concurrency::CurrentScheduler::GetPolicy](reference/currentscheduler-clas
 
 ## <a name="example"></a>Exemplo
 
-Para examinar os exemplos que usam políticas de Agendador específicas para controlar o comportamento do Agendador, consulte [como: especificar políticas de Agendador específicas](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md) e [como: criar agentes que usam o Agendador políticas específicas](../../parallel/concrt/how-to-create-agents-that-use-specific-scheduler-policies.md).
+Para examinar os exemplos que usam políticas de Agendador específicas para controlar o comportamento do Agendador, consulte [como: Especificar políticas de Agendador específicas](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md) e [como: Criar agentes que usam políticas de Agendador específicas](../../parallel/concrt/how-to-create-agents-that-use-specific-scheduler-policies.md).
 
 ## <a name="see-also"></a>Consulte também
 
 [Agendador de tarefas](../../parallel/concrt/task-scheduler-concurrency-runtime.md)<br/>
-[Como especificar políticas de agendador específicas](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md)<br/>
-[Como criar agentes que usam políticas de agendador específicas](../../parallel/concrt/how-to-create-agents-that-use-specific-scheduler-policies.md)
-
+[Como: Especificar políticas específicas do agendador](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md)<br/>
+[Como: Criar agentes que usam políticas específicas do agendador](../../parallel/concrt/how-to-create-agents-that-use-specific-scheduler-policies.md)

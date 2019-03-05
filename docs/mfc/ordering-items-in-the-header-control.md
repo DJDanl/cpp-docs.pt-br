@@ -12,12 +12,12 @@ helpviewer_keywords:
 - SetOrderArray method [MFC]
 - header controls [MFC], ordering items
 ms.assetid: 5aaef872-75b5-49c5-8fed-6f9a81fca812
-ms.openlocfilehash: 5c4fef821efa697d41bf02ef1891efcf0fa21d4b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bae351d921c25993d6b7029f9052e1938179673b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50583502"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57282010"
 ---
 # <a name="ordering-items-in-the-header-control"></a>Ordenando itens no controle de cabeçalho
 
@@ -36,4 +36,3 @@ Além das funções de membro anterior, o estilo HDS_DRAGDROP permite ao usuári
 ## <a name="see-also"></a>Consulte também
 
 [Usando CHeaderCtrl](../mfc/using-cheaderctrl.md)
-

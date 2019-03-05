@@ -1,5 +1,5 @@
 ---
-title: 'Instruções passo a passo: usando join para Evitar Deadlock'
+title: 'Passo a passo: Usando join para Evitar Deadlock'
 ms.date: 11/19/2018
 helpviewer_keywords:
 - preventing deadlock with joins [Concurrency Runtime]
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - non-greedy joins, example
 - join class, example
 ms.assetid: d791f697-bb93-463e-84bd-5df1651b7446
-ms.openlocfilehash: b62f4007a79faaff479e4e8ff998a8b48e4d5dd1
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 2f9e0f50866ed0635fbaa4b700dbf522f09458d9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175906"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303047"
 ---
-# <a name="walkthrough-using-join-to-prevent-deadlock"></a>Instruções passo a passo: usando join para Evitar Deadlock
+# <a name="walkthrough-using-join-to-prevent-deadlock"></a>Passo a passo: Usando join para Evitar Deadlock
 
 Este tópico usa o problema de filósofos jantar para ilustrar como usar o [concurrency::join](../../parallel/concrt/reference/join-class.md) classe para evitar deadlocks em seu aplicativo. Em um aplicativo de software, o *deadlock* ocorre quando cada um dos dois ou mais processos mantiver um recurso e mutuamente aguardar até que outro processo libere algum outro recurso.
 
@@ -26,7 +26,7 @@ Leia os tópicos a seguir antes de começar este passo a passo:
 
 - [Agentes assíncronos](../../parallel/concrt/asynchronous-agents.md)
 
-- [Instruções passo a passo: criando um aplicativo com base no agente](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md)
+- [Passo a passo: Criando um aplicativo com base em agente](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md)
 
 - [Blocos de mensagens assíncronos](../../parallel/concrt/asynchronous-message-blocks.md)
 
@@ -52,7 +52,7 @@ O problema de filósofos jantar ilustra como o deadlock ocorre em um aplicativo.
 
 Para comer um filósofo deve conter Pauzinhos dois japoneses. Se cada filósofo contém apenas um chopstick e está aguardando a outra, em seguida, não poderá consumir a nenhum filósofo e sentir falta de todos.
 
-[[Superior](#top)]
+[[Top](#top)]
 
 ##  <a name="deadlock"></a> Uma implementação ingênua
 
@@ -76,9 +76,9 @@ O `pickup_chopsticks` método ilustra onde pode ocorrer deadlock. Se cada `philo
 
 Copie o código de exemplo e cole-o em um projeto do Visual Studio ou colá-lo em um arquivo chamado `philosophers-deadlock.cpp` e, em seguida, execute o seguinte comando em uma janela de Prompt de comando do Visual Studio.
 
-**cl.exe /EHsc filósofos-deadlock.cpp**
+**cl.exe /EHsc philosophers-deadlock.cpp**
 
-[[Superior](#top)]
+[[Top](#top)]
 
 ##  <a name="solution"></a> Usando join para evitar Deadlock
 
@@ -150,7 +150,7 @@ Copie o código de exemplo e cole-o em um projeto do Visual Studio ou colá-lo e
 
 **cl.exe /EHsc filósofos-join.cpp**
 
-[[Superior](#top)]
+[[Top](#top)]
 
 ## <a name="see-also"></a>Consulte também
 

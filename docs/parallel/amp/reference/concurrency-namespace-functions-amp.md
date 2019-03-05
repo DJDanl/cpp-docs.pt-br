@@ -13,12 +13,12 @@ f1_keywords:
 - amp/Concurrency::global_memory_fence
 - amp/Concurrency::tile_static_memory_fence
 ms.assetid: 2bef0985-cb90-4ece-90b9-66529aec73c9
-ms.openlocfilehash: 43be1fc3a5df52f6edcc05b501b1463bd5da7e6c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7baae51480c273ca023856253af7963ac83d7c92
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481790"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284834"
 ---
 # <a name="concurrency-namespace-functions-amp"></a>Funções do namespace de simultaneidade (AMP)
 
@@ -546,7 +546,7 @@ Um `future<void>` que pode ser esperado.
 
 ##  <a name="direct3d_abort"></a>  direct3d_abort
 
-Anula a execução de uma função com o `restrict(amp)` cláusula de restrição. Quando o tempo de execução de AMP detecta a chamada, ele gera uma [runtime_exception](runtime-exception-class.md) exceção com a mensagem de erro "o rasterizador de referência: sombreador anular a ocorrência de instrução".
+Anula a execução de uma função com o `restrict(amp)` cláusula de restrição. Quando o tempo de execução de AMP detecta a chamada, ele gera uma [runtime_exception](runtime-exception-class.md) exceção com a mensagem de erro "o rasterizador de referência: Sombreador de anulação de instrução ocorrências".
 
 ```
 void direct3d_abort() restrict(amp);

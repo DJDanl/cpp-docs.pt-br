@@ -49,12 +49,12 @@ helpviewer_keywords:
 - IOleObject, ATL implementation
 - IOleObjectImpl class
 ms.assetid: 59750b2d-1633-4a51-a4c2-6455b6b90c45
-ms.openlocfilehash: e0ea787f0998a26f67418957584e9d12152aa618
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c228d5030c3577af22feda6a0d03769867b1c5c3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614572"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268454"
 ---
 # <a name="ioleobjectimpl-class"></a>Classe IOleObjectImpl
 
@@ -186,7 +186,7 @@ STDMETHOD(DoVerb)(
 
 Dependendo do valor de `iVerb`, um dos ATL `DoVerb` funções auxiliares é chamado da seguinte maneira:
 
-|*iVerb* valor|Função de auxiliar DoVerb chamada|
+|*iVerb* Value|Função de auxiliar DoVerb chamada|
 |-------------------|-----------------------------------|
 |OLEIVERB_DISCARDUNDOSTATE|[DoVerbDiscardUndo](#doverbdiscardundo)|
 |OLEIVERB_HIDE|[DoVerbHide](#doverbhide)|
@@ -397,7 +397,7 @@ STDMETHOD(GetClipboardData)(
 
 ### <a name="return-value"></a>Valor de retorno
 
-Retornará E_NOTIMPL.
+Returns E_NOTIMPL.
 
 ### <a name="remarks"></a>Comentários
 
@@ -448,7 +448,7 @@ STDMETHOD(GetMoniker)(
 
 ### <a name="return-value"></a>Valor de retorno
 
-Retornará E_NOTIMPL.
+Returns E_NOTIMPL.
 
 ### <a name="remarks"></a>Comentários
 
@@ -495,7 +495,7 @@ STDMETHOD(InitFromData)(
 
 ### <a name="return-value"></a>Valor de retorno
 
-Retornará E_NOTIMPL.
+Returns E_NOTIMPL.
 
 ### <a name="remarks"></a>Comentários
 
@@ -733,7 +733,7 @@ STDMETHOD(SetColorScheme)(LOGPALETTE* /* pLogPal */);
 
 ### <a name="return-value"></a>Valor de retorno
 
-Retornará E_NOTIMPL.
+Returns E_NOTIMPL.
 
 ### <a name="remarks"></a>Comentários
 
@@ -787,7 +787,7 @@ STDMETHOD(SetMoniker)(
 
 ### <a name="return-value"></a>Valor de retorno
 
-Retornará E_NOTIMPL.
+Returns E_NOTIMPL.
 
 ### <a name="remarks"></a>Comentários
 

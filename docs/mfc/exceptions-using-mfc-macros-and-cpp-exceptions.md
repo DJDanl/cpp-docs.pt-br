@@ -1,5 +1,5 @@
 ---
-title: 'Exceções: usando macros MFC e exceções do C++'
+title: 'Exceções: Usando Macros MFC e exceções do C++'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - exception objects [MFC]
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - heap corruption [MFC]
 - nested catch blocks [MFC]
 ms.assetid: d664a83d-879b-44d4-bdf0-029f0aca69e9
-ms.openlocfilehash: 021f80f71a3921ed10b07f481ff7b7ce934d9f7a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 00e88ddabf3a8e8b591bebae7ebc8ced0e1dc637
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50443375"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297704"
 ---
-# <a name="exceptions-using-mfc-macros-and-c-exceptions"></a>Exceções: usando macros MFC e exceções do C++
+# <a name="exceptions-using-mfc-macros-and-c-exceptions"></a>Exceções: Usando Macros MFC e exceções do C++
 
 Este artigo aborda considerações para escrever código que usa as macros de tratamento de exceção do MFC e as palavras-chave de tratamento de exceções C++.
 
@@ -35,7 +35,7 @@ Este artigo aborda os seguintes tópicos:
 
 ##  <a name="_core_mixing_exception_keywords_and_macros"></a> Combinação de Macros e palavras-chave de exceção
 
-Você pode combinar macros de exceção MFC e palavras-chave de exceção de C++ no mesmo programa. Mas você não pode combinar macros MFC com palavras-chave de exceção de C++ no mesmo bloco porque as macros excluir objetos de exceção automaticamente quando eles saem do escopo, enquanto o código usando as palavras-chave de tratamento de exceção não. Para obter mais informações, consulte o artigo [exceções: exceções de detectar e exclua](../mfc/exceptions-catching-and-deleting-exceptions.md).
+Você pode combinar macros de exceção MFC e palavras-chave de exceção de C++ no mesmo programa. Mas você não pode combinar macros MFC com palavras-chave de exceção de C++ no mesmo bloco porque as macros excluir objetos de exceção automaticamente quando eles saem do escopo, enquanto o código usando as palavras-chave de tratamento de exceção não. Para obter mais informações, consulte o artigo [exceções: Obtendo e excluindo exceções](../mfc/exceptions-catching-and-deleting-exceptions.md).
 
 A principal diferença entre as macros e as palavras-chave é que as macros "automaticamente" excluir uma exceção capturada quando a exceção sai do escopo. Código usando as palavras-chave não; as exceções detectadas em um bloco catch devem ser explicitamente excluídas. Combinação de macros e palavras-chave de exceção de C++ pode causar vazamentos de memória quando um objeto de exceção não é excluído ou corrupção de heap quando uma exceção é excluída duas vezes.
 
@@ -53,9 +53,8 @@ Você não pode gerar novamente a exceção atual de dentro um **tente** bloco q
 
 [!code-cpp[NVC_MFCExceptions#12](../mfc/codesnippet/cpp/exceptions-using-mfc-macros-and-cpp-exceptions_3.cpp)]
 
-Para obter mais informações, consulte [exceções: examinando o conteúdo da exceção](../mfc/exceptions-examining-exception-contents.md).
+Para obter mais informações, consulte [exceções: Examinando o conteúdo da exceção](../mfc/exceptions-examining-exception-contents.md).
 
 ## <a name="see-also"></a>Consulte também
 
 [Tratamento de Exceção](../mfc/exception-handling-in-mfc.md)
-

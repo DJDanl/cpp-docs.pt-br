@@ -1,5 +1,5 @@
 ---
-title: 'TN048: escrevendo programas de instalação e administração ODBC para aplicativos de banco de dados MFC'
+title: 'TN048: Escrever programas de administração e a instalação do ODBC para aplicativos de banco de dados MFC'
 ms.date: 11/04/2016
 f1_keywords:
 - vc.mfc.odbc
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - ODBC, and MFC
 - MFC, database applications
 ms.assetid: d456cdd4-0513-4a51-80c0-9132b66115ce
-ms.openlocfilehash: b31ceb8bfc48decb5387d386ee8e8b64822f72ed
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2904ceb626fd1bfad0b24026deb08f2c5dcbcd4a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50584114"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283885"
 ---
-# <a name="tn048-writing-odbc-setup-and-administration-programs-for-mfc-database-applications"></a>TN048: escrevendo programas de instalação e administração ODBC para aplicativos de banco de dados MFC
+# <a name="tn048-writing-odbc-setup-and-administration-programs-for-mfc-database-applications"></a>TN048: Escrever programas de administração e a instalação do ODBC para aplicativos de banco de dados MFC
 
 > [!NOTE]
 >  A nota técnica a seguir não foi atualizada desde que foi incluído pela primeira vez na documentação online. Como resultado, alguns procedimentos e tópicos podem estar desatualizadas ou incorretas. Para obter as informações mais recentes, é recomendável que você pesquise o tópico de interesse no índice da documentação online.
@@ -57,4 +57,3 @@ Para obter mais informações, consulte o SDK do ODBC *referência do programado
 
 [Observações técnicas por número](../mfc/technical-notes-by-number.md)<br/>
 [Observações técnicas por categoria](../mfc/technical-notes-by-category.md)
-

@@ -132,12 +132,12 @@ helpviewer_keywords:
 - CPaneFrameWnd [MFC], OnDrawBorder
 - CPaneFrameWnd [MFC], m_bUseSaveBits
 ms.assetid: ea3423a3-2763-482e-b763-817036ded10d
-ms.openlocfilehash: e31b390d9464b3cbe6babd744e987ce7222e58bf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3172556b3b12141aaae45992dee36061aebf2a15
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50450161"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278815"
 ---
 # <a name="cpaneframewnd-class"></a>Classe CPaneFrameWnd
 
@@ -267,7 +267,7 @@ virtual void AddPane(CBasePane* pWnd);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Apropriei*<br/>
+*pWnd*<br/>
 [in] O painel para adicionar.
 
 ##  <a name="addremovepanefromgloballist"></a>  CPaneFrameWnd::AddRemovePaneFromGlobalList
@@ -282,10 +282,10 @@ static BOOL __stdcall AddRemovePaneFromGlobalList(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Apropriei*<br/>
+*pWnd*<br/>
 [in] O painel para adicionar ou remover.
 
-*bAdicionar*<br/>
+*bAdd*<br/>
 [in] Se diferente de zero, adicione o painel. Se for 0, remova o painel.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -425,7 +425,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 [in] Especifica o estilo da janela. Para obter mais informações, consulte [estilos de janela](../../mfc/reference/styles-used-by-mfc.md#window-styles).
 
-*Rect*<br/>
+*rect*<br/>
 [in] Especifica o tamanho inicial e a posição da janela de miniquadros.
 
 *pParentWnd*<br/>
@@ -467,7 +467,7 @@ virtual BOOL CreateEx(
 *dwStyle*<br/>
 [in] Especifica o estilo da janela. Para obter mais informações, consulte [estilos de janela](../../mfc/reference/styles-used-by-mfc.md#window-styles).
 
-*Rect*<br/>
+*rect*<br/>
 [in] Especifica o tamanho inicial e a posição da janela de miniquadros.
 
 *pParentWnd*<br/>
@@ -731,7 +731,7 @@ virtual LRESULT HitTest(
 
 ### <a name="parameters"></a>Parâmetros
 
-*ponto*<br/>
+*point*<br/>
 [in] Ponto a ser testado.
 
 *bDetectCaption*<br/>
@@ -967,7 +967,7 @@ virtual void OnShowPane(
 *pBar*<br/>
 [in] O painel que está sendo mostrado ou oculto.
 
-*bMostrar*<br/>
+*bShow*<br/>
 [in] TRUE se o painel está sendo mostrado; FALSE se o painel está sendo ocultado.
 
 ### <a name="remarks"></a>Comentários
@@ -999,7 +999,7 @@ virtual CBasePane* PaneFromPoint(
 
 ### <a name="parameters"></a>Parâmetros
 
-*ponto*<br/>
+*point*<br/>
 [in] O ponto que o usuário clicou em coordenadas da tela.
 
 *nSensitivity*<br/>
@@ -1049,7 +1049,7 @@ virtual void RemovePane(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Apropriei*<br/>
+*pWnd*<br/>
 [in] Um ponteiro para o painel a ser removido.
 
 *bDestroy*<br/>

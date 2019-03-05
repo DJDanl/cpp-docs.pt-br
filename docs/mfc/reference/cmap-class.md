@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CMap [MFC], RemoveKey
 - CMap [MFC], SetAt
 ms.assetid: 640a45ab-0993-4def-97ec-42cc78eb10b9
-ms.openlocfilehash: 88ca218d4cb4e70dcc46ba04bbdfb7a9d12eb808
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.openlocfilehash: 81b52d6876b0691c09db0e9dcf7fa7d491f999ca
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657572"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305166"
 ---
 # <a name="cmap-class"></a>Classe CMap
 
@@ -63,7 +63,7 @@ Classe do objeto usado como a chave para o mapa.
 *ARG_KEY*<br/>
 Tipo de dados usado para *chave* argumentos; geralmente, uma referência a *chave*.
 
-*VALOR*<br/>
+*VALUE*<br/>
 Classe do objeto armazenado no mapa.
 
 *ARG_VALUE*<br/>
@@ -229,7 +229,7 @@ Parâmetro de modelo especificando o tipo de chave do mapa.
 *rKey*<br/>
 Especifica a chave retornada do elemento de dados recuperado.
 
-*VALOR*<br/>
+*VALUE*<br/>
 Parâmetro de modelo que especifica o tipo de valor do mapa.
 
 *rValue*<br/>
@@ -341,7 +341,7 @@ Especifica o tipo de parâmetro do modelo de *chave* valor.
 *key*<br/>
 Especifica a chave que identifica o elemento a ser pesquisado.
 
-*VALOR*<br/>
+*VALUE*<br/>
 Especifica o tipo do valor a ser pesquisado.
 
 *rValue*<br/>
@@ -369,7 +369,7 @@ VALUE& operator[](arg_key key);
 
 ### <a name="parameters"></a>Parâmetros
 
-*VALOR*<br/>
+*VALUE*<br/>
 Parâmetro de modelo que especifica o tipo do valor do mapa.
 
 *ARG_KEY*<br/>

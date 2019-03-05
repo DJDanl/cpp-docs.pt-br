@@ -106,12 +106,12 @@ helpviewer_keywords:
 - CFrameWnd [MFC], m_bAutoMenuEnable
 - CFrameWnd [MFC], rectDefault
 ms.assetid: e2220aba-5bf4-4002-b960-fbcafcad01f1
-ms.openlocfilehash: 3259780d73004c9d1654c26434b55627923cfe23
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 7bdb681754a500ab86538f3397b4c07284b850d0
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178786"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300876"
 ---
 # <a name="cframewnd-class"></a>Classe CFrameWnd
 
@@ -329,7 +329,7 @@ Aponta para uma cadeia de caracteres com terminação nula que representa o nome
 *dwStyle*<br/>
 Especifica a janela [estilo](../../mfc/reference/styles-used-by-mfc.md#window-styles) atributos. Inclua o estilo FWS_ADDTOTITLE se desejar que a barra de título para exibir automaticamente o nome do documento representado na janela.
 
-*Rect*<br/>
+*rect*<br/>
 Especifica o tamanho e posição da janela. O *rectDefault* valor permite que o Windows especificar o tamanho e posição da nova janela.
 
 *pParentWnd*<br/>
@@ -475,7 +475,7 @@ void FloatControlBar(
 *pBar*<br/>
 Aponta para a barra de controle para ser flutuante.
 
-*ponto*<br/>
+*point*<br/>
 O local, em coordenadas da tela, onde o canto superior esquerdo da barra de controle será colocado.
 
 *dwStyle*<br/>
@@ -901,7 +901,7 @@ virtual BOOL OnCreateClient(
 
 ### <a name="parameters"></a>Parâmetros
 
-*denominado LPC*<br/>
+*lpcs*<br/>
 Um ponteiro para um Windows [CREATESTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcreatestructa) estrutura.
 
 *pContext*<br/>
@@ -1115,7 +1115,7 @@ virtual void SetMenuBarVisibility(DWORD nStyle);
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|*nStyle*|[in] Especifica se o menu é por padrão, ocultada, ou estiver visível e tem o foco. O *nStyle* parâmetro pode ter os seguintes valores:<br /><br />-AFX_MBV_KEEPVISIBLE (0X01)-<br />     O menu é exibido em todos os momentos e por padrão não tem o foco.<br />-AFX_MBV_DISPLAYONFOCUS (0X02)-<br />     O menu está oculto por padrão. Se o menu estiver oculto, pressione a tecla ALT para exibir o menu e dê a ele o foco. Se o menu é exibido, pressione a tecla ALT ou ESC para ocultar o menu.<br />-AFX_MBV_ DISPLAYONFOCUS (0x02) &#124; AFX_MBV_DISPLAYONF10 (0x04)<br />     (combinação bit a bit (OR)) - menu está oculto por padrão. Se o menu estiver oculto, pressione a tecla F10 para exibir o menu e dê a ele o foco. Se o menu é exibido, pressione a tecla F10 para alternar o foco ou desativar o menu. O menu é exibido até que você pressionar a tecla ALT ou ESC para ocultá-la.|
+|*nStyle*|[in] Especifica se o menu é por padrão, ocultada, ou estiver visível e tem o foco. O *nStyle* parâmetro pode ter os seguintes valores:<br /><br />- AFX_MBV_KEEPVISIBLE (0x01) -<br />     O menu é exibido em todos os momentos e por padrão não tem o foco.<br />-AFX_MBV_DISPLAYONFOCUS (0X02)-<br />     O menu está oculto por padrão. Se o menu estiver oculto, pressione a tecla ALT para exibir o menu e dê a ele o foco. Se o menu é exibido, pressione a tecla ALT ou ESC para ocultar o menu.<br />- AFX_MBV_ DISPLAYONFOCUS (0x02) &#124; AFX_MBV_DISPLAYONF10 (0x04)<br />     (combinação bit a bit (OR)) - menu está oculto por padrão. Se o menu estiver oculto, pressione a tecla F10 para exibir o menu e dê a ele o foco. Se o menu é exibido, pressione a tecla F10 para alternar o foco ou desativar o menu. O menu é exibido até que você pressionar a tecla ALT ou ESC para ocultá-la.|
 
 ### <a name="remarks"></a>Comentários
 
@@ -1254,7 +1254,7 @@ void ShowControlBar(
 *pBar*<br/>
 Ponteiro para a barra de controle para ser mostrado ou ocultado.
 
-*bMostrar*<br/>
+*bShow*<br/>
 Se for TRUE, especifica que a barra de controle deve ser mostrado. Se for FALSE, especifica que a barra de controle deve ser ocultada.
 
 *bDelay*<br/>
@@ -1270,7 +1270,7 @@ void ShowOwnedWindows(BOOL bShow);
 
 ### <a name="parameters"></a>Parâmetros
 
-*bMostrar*<br/>
+*bShow*<br/>
 Especifica se as janelas de propriedade devem ser mostrados ou ocultados.
 
 ## <a name="see-also"></a>Consulte também

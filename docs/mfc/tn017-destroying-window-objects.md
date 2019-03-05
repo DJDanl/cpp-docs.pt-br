@@ -1,5 +1,5 @@
 ---
-title: 'TN017: destruindo objetos de janela'
+title: 'TN017: Destruindo objetos de janela'
 ms.date: 11/04/2016
 f1_keywords:
 - vc.objects
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - TN017
 - PostNcDestroy method [MFC]
 ms.assetid: 5bf208a5-5683-439b-92a1-547c5ded26cd
-ms.openlocfilehash: 06553677e67a4314116077e7942381bd847c64d2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9e52112bed0f583a3f5652f9213bd5049d543a80
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50502226"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294104"
 ---
-# <a name="tn017-destroying-window-objects"></a>TN017: destruindo objetos de janela
+# <a name="tn017-destroying-window-objects"></a>TN017: Destruindo objetos de janela
 
 Essa observação descreve o uso do [CWnd::PostNcDestroy](../mfc/reference/cwnd-class.md#postncdestroy) método. Use esse método se você quiser fazer alocação personalizada de `CWnd`-objetos derivados. Essa observação também explica por que você deve usar [CWnd::DestroyWindow](../mfc/reference/cwnd-class.md#destroywindow) destruir um objeto de C++ Windows em vez da **excluir** operador.
 
@@ -97,4 +97,3 @@ Depois de chamar `DestroyWindow` em um objeto de limpeza não automática, o obj
 
 [Observações técnicas por número](../mfc/technical-notes-by-number.md)<br/>
 [Observações técnicas por categoria](../mfc/technical-notes-by-category.md)
-

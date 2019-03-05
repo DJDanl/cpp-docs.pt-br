@@ -29,12 +29,12 @@ helpviewer_keywords:
 - CComBSTR class
 - CComBSTR
 ms.assetid: 8fea1879-a05e-47a5-a803-8dec60eaa534
-ms.openlocfilehash: 52e8472e315932978af38d405c753b0a62fcbe45
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 48447b9e6a211927d8e729dd761d2e14ecd89615
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50475641"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57282351"
 ---
 # <a name="ccombstr-class"></a>Classe CComBSTR
 
@@ -53,7 +53,7 @@ class CComBSTR
 |Nome|Descrição|
 |----------|-----------------|
 |[CComBSTR::CComBSTR](#ccombstr)|O construtor.|
-|[CComBSTR:: ~ CComBSTR](#dtor)|O destruidor.|
+|[CComBSTR::~CComBSTR](#dtor)|O destruidor.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
@@ -86,10 +86,10 @@ class CComBSTR
 |[CComBSTR::operator!](#operator_not)|Retorna TRUE ou FALSE, dependendo se `m_str`é NULL.|
 |[CComBSTR::operator! =](#operator_neq)|Compara um `CComBSTR` com uma cadeia de caracteres.|
 |[CComBSTR::operator &](#operator_amp)|Retorna o endereço do `m_str`.|
-|[+ CComBSTR::operator =](#operator_add_eq)|Acrescenta um `CComBSTR` ao objeto.|
+|[CComBSTR::operator +=](#operator_add_eq)|Acrescenta um `CComBSTR` ao objeto.|
 |[CComBSTR::operator <](#operator_lt)|Compara um `CComBSTR` com uma cadeia de caracteres.|
 |[CComBSTR::operator =](#operator_eq)|Atribui um valor para `m_str`.|
-|[CComBSTR::operator = =](#operator_eq_eq)|Compara um `CComBSTR` com uma cadeia de caracteres.|
+|[CComBSTR::operator ==](#operator_eq_eq)|Compara um `CComBSTR` com uma cadeia de caracteres.|
 |[CComBSTR::operator >](#operator_gt)|Compara um `CComBSTR` com uma cadeia de caracteres.|
 
 ### <a name="public-data-members"></a>Membros de Dados Públicos
@@ -131,7 +131,7 @@ HRESULT Append(LPCOLESTR lpsz, int nLen) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*1&gt;Operator=(&lt;1}{2&gt;bstrsrc&lt;2}{3&gt;)&lt;3*<br/>
+*bstrSrc*<br/>
 [in] Um `CComBSTR` objeto a ser acrescentado.
 
 *ch*<br/>
@@ -231,7 +231,7 @@ HRESULT AssignBSTR(const BSTR bstrSrc) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*1&gt;Operator=(&lt;1}{2&gt;bstrsrc&lt;2}{3&gt;)&lt;3*<br/>
+*bstrSrc*<br/>
 [in] Um BSTR para atribuir a atual `CComBSTR` objeto.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -320,7 +320,7 @@ CComBSTR(CComBSTR&& src) throw(); // (Visual Studio 2017)
 *nSize*<br/>
 [in] O número de caracteres a serem copiados da *sz* ou o tamanho inicial em caracteres para o `CComBSTR`.
 
-*SZ*<br/>
+*sz*<br/>
 [in] Uma cadeia de caracteres a serem copiados. A versão Unicode Especifica um LPCOLESTR; a versão ANSI Especifica um LPCSTR.
 
 *pSrc*<br/>
@@ -346,7 +346,7 @@ O destruidor libera a cadeia de caracteres apontada por `m_str`.
 
 [!code-cpp[NVC_ATL_Utilities#37](../../atl/codesnippet/cpp/ccombstr-class_6.cpp)]
 
-##  <a name="dtor"></a>  CComBSTR:: ~ CComBSTR
+##  <a name="dtor"></a>  CComBSTR::~CComBSTR
 
 O destruidor.
 
@@ -534,7 +534,7 @@ bool operator!= (int nNull) const throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*1&gt;Operator=(&lt;1}{2&gt;bstrsrc&lt;2}{3&gt;)&lt;3*<br/>
+*bstrSrc*<br/>
 [in] Um `CComBSTR` objeto.
 
 *pszSrc*<br/>
@@ -582,7 +582,7 @@ CComBSTR& operator+= (const LPCOLESTR pszSrc);
 
 ### <a name="parameters"></a>Parâmetros
 
-*1&gt;Operator=(&lt;1}{2&gt;bstrsrc&lt;2}{3&gt;)&lt;3*<br/>
+*bstrSrc*<br/>
 [in] Um `CComBSTR` objeto a ser acrescentado.
 
 *pszSrc*<br/>
@@ -633,7 +633,7 @@ O *pSrc* parâmetro especifica o um LPCOLESTR para versões Unicode ou LPCSTR pa
 
 Veja o exemplo de [CComBSTR::Copy](#copy).
 
-##  <a name="operator_eq_eq"></a>  CComBSTR::operator = =
+##  <a name="operator_eq_eq"></a>  CComBSTR::operator ==
 
 Compara um `CComBSTR` com uma cadeia de caracteres. `CComBSTR`s são comparados textualmente no contexto de localidade padrão do usuário.
 
@@ -646,7 +646,7 @@ bool operator== (int nNull) const throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*1&gt;Operator=(&lt;1}{2&gt;bstrsrc&lt;2}{3&gt;)&lt;3*<br/>
+*bstrSrc*<br/>
 [in] Um `CComBSTR` objeto.
 
 *pszSrc*<br/>

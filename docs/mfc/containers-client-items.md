@@ -1,18 +1,18 @@
 ---
-title: 'Contêineres: itens clientes'
+title: 'Contêineres: Itens de cliente'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - OLE containers [MFC], client items
 - client items and OLE containers
 ms.assetid: 231528b5-0744-4f83-8897-083bf55ed087
-ms.openlocfilehash: e0d56d4a8f25828de954a78e9bafd8df150c7ff9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0c7f4a63cb9a31b52be2d3574ddad29313df6a4d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437005"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298276"
 ---
-# <a name="containers-client-items"></a>Contêineres: itens clientes
+# <a name="containers-client-items"></a>Contêineres: Itens de cliente
 
 Este artigo explica quais são os itens de cliente e de classes de que seu aplicativo deve derivar seus itens de cliente.
 
@@ -27,8 +27,8 @@ Cada aplicativo de contêiner deve derivar de pelo menos uma classe de `COleClie
 ## <a name="see-also"></a>Consulte também
 
 [Contêineres](../mfc/containers.md)<br/>
-[Contêineres: arquivos compostos](../mfc/containers-compound-files.md)<br/>
-[Contêineres: problemas da interface do usuário](../mfc/containers-user-interface-issues.md)<br/>
-[Contêineres: funcionalidades avançadas](../mfc/containers-advanced-features.md)<br/>
+[Contêineres: Composta de arquivos](../mfc/containers-compound-files.md)<br/>
+[Contêineres: Problemas da Interface do usuário](../mfc/containers-user-interface-issues.md)<br/>
+[Contêineres: Recursos avançados](../mfc/containers-advanced-features.md)<br/>
 [Classe COleClientItem](../mfc/reference/coleclientitem-class.md)<br/>
 [Classe COleServerItem](../mfc/reference/coleserveritem-class.md)

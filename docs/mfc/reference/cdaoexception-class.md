@@ -18,12 +18,12 @@ helpviewer_keywords:
 - CDaoException [MFC], m_pErrorInfo
 - CDaoException [MFC], m_scode
 ms.assetid: b2b01fa9-7ce2-42a1-842e-40f13dc50da4
-ms.openlocfilehash: 224ce79094b174d0bd011bd89afbcfe6fb7735d7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8d49291c51f66ee837f9b31a2ade390cec48c51a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50585907"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288994"
 ---
 # <a name="cdaoexception-class"></a>Classe CDaoException
 
@@ -71,7 +71,7 @@ No MFC, todos os erros DAO são expressos como exceções, do tipo `CDaoExceptio
 
 Para códigos de erro do DAO, consulte o arquivo DAOERR. H. Para obter informações relacionadas, consulte o tópico "Dados acesso erros interceptáveis" na Ajuda do DAO.
 
-Para obter mais informações sobre o tratamento de exceção no geral, ou cerca `CDaoException` objetos, consulte os artigos [tratamento de exceção (MFC)](../../mfc/exception-handling-in-mfc.md) e [exceções: exceções de banco de dados](../../mfc/exceptions-database-exceptions.md). O segundo artigo contém código de exemplo que ilustra o tratamento de exceções em DAO.
+Para obter mais informações sobre o tratamento de exceção no geral, ou cerca `CDaoException` objetos, consulte os artigos [tratamento de exceção (MFC)](../../mfc/exception-handling-in-mfc.md) e [exceções: Exceções de banco de dados](../../mfc/exceptions-database-exceptions.md). O segundo artigo contém código de exemplo que ilustra o tratamento de exceções em DAO.
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -113,7 +113,7 @@ No entanto, você talvez queira criar explicitamente um objeto de exceção, se 
 
 1. Se você construiu o objeto de exceção no heap, excluí-la com o **excluir** operador quando terminar.
 
-Para obter mais informações sobre como lidar com erros nas classes DAO MFC, consulte o artigo [exceções: exceções de banco de dados](../../mfc/exceptions-database-exceptions.md).
+Para obter mais informações sobre como lidar com erros nas classes DAO MFC, consulte o artigo [exceções: Exceções de banco de dados](../../mfc/exceptions-database-exceptions.md).
 
 ##  <a name="geterrorcount"></a>  CDaoException::GetErrorCount
 
@@ -163,7 +163,7 @@ Chame essa função de membro para obter os seguintes tipos de informações sob
 
 `GetErrorInfo` armazena as informações no objeto de exceção `m_pErrorInfo` membro de dados. Para obter uma breve descrição das informações retornadas, consulte [m_pErrorInfo](#m_perrorinfo). Se você capturar uma exceção do tipo `CDaoException` gerada pelo MFC, o `m_pErrorInfo` membro já será preenchido. Se você optar por chamar diretamente o DAO, você deve chamar o objeto de exceção `GetErrorInfo` função de membro por conta própria para preencher `m_pErrorInfo`. Para obter uma descrição mais detalhada, consulte o [CDaoErrorInfo](../../mfc/reference/cdaoerrorinfo-structure.md) estrutura.
 
-Para obter informações sobre o código de exemplo e exceções do DAO, consulte o artigo [exceções: exceções de banco de dados](../../mfc/exceptions-database-exceptions.md).
+Para obter informações sobre o código de exemplo e exceções do DAO, consulte o artigo [exceções: Exceções de banco de dados](../../mfc/exceptions-database-exceptions.md).
 
 ##  <a name="m_nafxdaoerror"></a>  CDaoException::m_nAfxDaoError
 

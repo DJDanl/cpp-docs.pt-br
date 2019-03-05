@@ -17,12 +17,12 @@ helpviewer_keywords:
 - aggregation [C++], ATL objects
 - CComAggObject class
 ms.assetid: 7aa90d69-d399-477b-880d-e2cdf0ef7881
-ms.openlocfilehash: 3598e625351f80a1a183b3128bf46a72143a02f6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 52cdddb1d922ca21e24122422ca14d9c12d13a83
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50626831"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301656"
 ---
 # <a name="ccomaggobject-class"></a>Classe CComAggObject
 
@@ -38,7 +38,7 @@ class CComAggObject : public IUnknown,
 
 #### <a name="parameters"></a>Parâmetros
 
-*contido*<br/>
+*contained*<br/>
 Sua classe, derivada de [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) ou [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), como bem como de outras interfaces que você deseja oferecer suporte no objeto.
 
 ## <a name="members"></a>Membros
@@ -48,7 +48,7 @@ Sua classe, derivada de [CComObjectRoot](../../atl/reference/ccomobjectroot-clas
 |Nome|Descrição|
 |----------|-----------------|
 |[CComAggObject::CComAggObject](#ccomaggobject)|O construtor.|
-|[CComAggObject:: ~ CComAggObject](#dtor)|O destruidor.|
+|[CComAggObject::~CComAggObject](#dtor)|O destruidor.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
@@ -109,7 +109,7 @@ CComAggObject(void* pv);
 
 ### <a name="parameters"></a>Parâmetros
 
-*VP*<br/>
+*pv*<br/>
 [in] O externo desconhecido.
 
 ### <a name="remarks"></a>Comentários
@@ -118,7 +118,7 @@ Inicializa o `CComContainedObject` membro, [m_contained](#m_contained)e incremen
 
 O destruidor decrementa a módulo contagem de bloqueio.
 
-##  <a name="dtor"></a>  CComAggObject:: ~ CComAggObject
+##  <a name="dtor"></a>  CComAggObject::~CComAggObject
 
 O destruidor.
 
@@ -142,7 +142,7 @@ static HRESULT WINAPI CreateInstance(
 
 ### <a name="parameters"></a>Parâmetros
 
-*PP*<br/>
+*pp*<br/>
 [out] Um ponteiro para um **CComAggObject\<**<em>contido</em> **>** ponteiro. Se `CreateInstance` não for bem-sucedida, *pp* é definido como NULL.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -185,7 +185,7 @@ CComContainedObject<contained> m_contained;
 
 ### <a name="parameters"></a>Parâmetros
 
-*contido*<br/>
+*contained*<br/>
 [in] Sua classe, derivada de [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) ou [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), como bem como de outras interfaces que você deseja oferecer suporte no objeto.
 
 ### <a name="remarks"></a>Comentários
@@ -204,13 +204,13 @@ HRESULT STDMETHODCALLTYPE QueryInterface(Q** pp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*IID*<br/>
+*iid*<br/>
 [in] O identificador da interface que está sendo solicitado.
 
 *ppvObject*<br/>
 [out] Um ponteiro para o ponteiro de interface identificado pelo *iid*. Se o objeto não dá suporte a essa interface, *ppvObject* é definido como NULL.
 
-*PP*<br/>
+*pp*<br/>
 [out] Um ponteiro para o ponteiro de interface identificado pelo tipo `Q`. Se o objeto não dá suporte a essa interface, *pp* é definido como NULL.
 
 ### <a name="return-value"></a>Valor de retorno

@@ -1,5 +1,5 @@
 ---
-title: 'TN053: rotinas DFX personalizadas para classes de banco de dados DAO'
+title: 'TN053: Rotinas DFX personalizadas para Classes de banco de dados DAO'
 ms.date: 11/04/2016
 f1_keywords:
 - vc.mfc.dfx
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - DFX (DAO record field exchange) [MFC]
 - custom DFX routines [MFC]
 ms.assetid: fdcf3c51-4fa8-4517-9222-58aaa4f25cac
-ms.openlocfilehash: 81529dd1e34d06dd3e5d541d39dbe91bb5eda1b7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b610604c1b7a68128dc9eb6fb5515225ed22b16e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50517761"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57282403"
 ---
-# <a name="tn053-custom-dfx-routines-for-dao-database-classes"></a>TN053: rotinas DFX personalizadas para classes de banco de dados DAO
+# <a name="tn053-custom-dfx-routines-for-dao-database-classes"></a>TN053: Rotinas DFX personalizadas para Classes de banco de dados DAO
 
 > [!NOTE]
 >  Os assistentes e o ambiente do Visual C++ não têm suporte DAO (embora as classes DAO estão incluídas e você ainda pode usá-los). A Microsoft recomenda que você use [modelos OLE DB](../data/oledb/ole-db-templates.md) ou [ODBC e MFC](../data/odbc/odbc-and-mfc.md) para novos projetos. Você só deve usar DAO em manutenção de aplicativos existentes.
@@ -220,4 +220,3 @@ Todas as operações restantes lidam apenas com o uso de cache de dados. O cache
 
 [Observações técnicas por número](../mfc/technical-notes-by-number.md)<br/>
 [Observações técnicas por categoria](../mfc/technical-notes-by-category.md)
-

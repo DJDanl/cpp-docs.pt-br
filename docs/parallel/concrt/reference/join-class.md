@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - join class
 ms.assetid: d2217119-70a1-40b6-809f-c1c13a571c3f
-ms.openlocfilehash: 23fc005a0c679576507c3a39ae37ce6c4545036b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d04ef90750c609d77fc8bf963bb996a90444f079
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668242"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281584"
 ---
 # <a name="join-class"></a>Classe join
 
@@ -162,7 +162,7 @@ join(
 *_NumInputs*<br/>
 O número de entradas isso `join` bloco será permitido.
 
-*Filtro*<br/>
+*_Filter*<br/>
 Uma função de filtro que determina se as mensagens oferecidas devem ser aceitas.
 
 *_PScheduler*<br/>

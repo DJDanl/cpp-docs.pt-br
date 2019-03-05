@@ -25,12 +25,12 @@ helpviewer_keywords:
 - printing [MFC], pagination
 - documents [MFC], paginating
 ms.assetid: 69626b86-73ac-4b74-b126-9955034835ef
-ms.openlocfilehash: b4ec9f456443b9cd180f1558946829281bc10a36
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 81e03657977d31827c5c7c3d3272e3d4255a4a8b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176374"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295000"
 ---
 # <a name="multipage-documents"></a>Documentos multipágina
 
@@ -99,7 +99,7 @@ O [OnPrepareDC](../mfc/reference/cview-class.md#onpreparedc) função de membro 
 
 O [OnPrint](../mfc/reference/cview-class.md#onprint) executa a função de membro a impressão real da página. O artigo [como padrão impressão é feito](../mfc/how-default-printing-is-done.md) mostra como o framework chama [OnDraw](../mfc/reference/cview-class.md#ondraw) com um contexto de dispositivo de impressora para executar a impressão. Mais precisamente, a estrutura chama `OnPrint` com um `CPrintInfo` estrutura e um contexto de dispositivo, e `OnPrint` passa o contexto de dispositivo para `OnDraw`. Substituir `OnPrint` para executar qualquer processamento que deve ser feito somente durante a impressão e não para a exibição de tela. Por exemplo, para imprimir os cabeçalhos ou rodapés de páginas (consulte o artigo [cabeçalhos e rodapés](../mfc/headers-and-footers.md) para obter mais informações). Em seguida, chame `OnDraw` de substituição do `OnPrint` para fazer a renderização comum tanto a exibição de tela e impressão.
 
-O fato de que `OnDraw` faz a renderização para ambos tela de exibição e impressão significa que seu aplicativo é WYSIWYG: "o que você vê é o que você obtém". No entanto, suponha que você não estiver escrevendo um aplicativo WYSIWYG. Por exemplo, considere um texto de editor que usa uma fonte em negrito para impressão, mas exibe códigos de controle para indicar o texto em negrito na tela. Nessa situação, você deve usar `OnDraw` estritamente para exibição na tela. Quando você substitui `OnPrint`, substitua a chamada para `OnDraw` com uma chamada para uma função de desenho separada. Essa função desenha o documento a maneira como ele aparece no papel, usando os atributos que você não são exibidos na tela.
+O fato de que `OnDraw` faz a renderização para ambos tela de exibição e impressão significa que seu aplicativo é WYSIWYG: "O que você vê o que você obterá." No entanto, suponha que você não estiver escrevendo um aplicativo WYSIWYG. Por exemplo, considere um texto de editor que usa uma fonte em negrito para impressão, mas exibe códigos de controle para indicar o texto em negrito na tela. Nessa situação, você deve usar `OnDraw` estritamente para exibição na tela. Quando você substitui `OnPrint`, substitua a chamada para `OnDraw` com uma chamada para uma função de desenho separada. Essa função desenha o documento a maneira como ele aparece no papel, usando os atributos que você não são exibidos na tela.
 
 ##  <a name="_core_printer_pages_vs.._document_pages"></a> Vs de páginas de impressora. Páginas do documento
 

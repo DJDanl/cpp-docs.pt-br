@@ -66,12 +66,12 @@ helpviewer_keywords:
 - CMFCCaptionBar [MFC], m_clrBarBorder
 - CMFCCaptionBar [MFC], m_clrBarText
 ms.assetid: acb54d5f-14ff-4c96-aeb3-7717cf566d9a
-ms.openlocfilehash: 857427c12dd0f763bf88c99a65d5f9cf3eca1270
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1a18e235c9f5875a977f740c26b917a3567a678d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429348"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264983"
 ---
 # <a name="cmfccaptionbar-class"></a>Classe CMFCCaptionBar
 
@@ -233,7 +233,7 @@ void EnableButton(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>Parâmetros
 
-*bAtivar*<br/>
+*bEnable*<br/>
 [in] TRUE para habilitar o botão, FALSE para desabilitar o botão.
 
 ##  <a name="getalignment"></a>  CMFCCaptionBar::GetAlignment
@@ -246,7 +246,7 @@ BarElementAlignment GetAlignment(BarElement elem);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Elem*<br/>
+*elem*<br/>
 [in] Um elemento da barra de legenda para o qual recuperar o alinhamento.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -356,7 +356,7 @@ virtual void OnDrawBackground(
 *pDC*<br/>
 [in] Um ponteiro para o contexto de dispositivo da barra de legenda.
 
-*Rect*<br/>
+*rect*<br/>
 [in] O retângulo delimitador para preencher.
 
 ### <a name="remarks"></a>Comentários
@@ -380,7 +380,7 @@ virtual void OnDrawBorder(
 *pDC*<br/>
 [in] Um contexto de dispositivo que é usado para exibir as bordas.
 
-*Rect*<br/>
+*rect*<br/>
 [in] O retângulo delimitador.
 
 ### <a name="remarks"></a>Comentários
@@ -406,13 +406,13 @@ virtual void OnDrawButton(
 *pDC*<br/>
 [in] Um ponteiro para um contexto de dispositivo que é usado para exibir o botão.
 
-*Rect*<br/>
+*rect*<br/>
 [in] O retângulo delimitador do botão.
 
 *strButton*<br/>
 [in] Rótulo de texto do botão.
 
-*bAtivado*<br/>
+*bEnabled*<br/>
 [in] TRUE se o botão estiver habilitado; FALSE caso contrário.
 
 ### <a name="remarks"></a>Comentários
@@ -434,7 +434,7 @@ virtual void OnDrawImage(
 *pDC*<br/>
 [in] Um ponteiro para um contexto de dispositivo que é usado para exibir a imagem.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Especifica o retângulo delimitador da imagem.
 
 ### <a name="remarks"></a>Comentários
@@ -457,7 +457,7 @@ virtual void OnDrawText(
 *pDC*<br/>
 [in] Um ponteiro para um contexto de dispositivo que é usado para exibir o botão.
 
-*Rect*<br/>
+*rect*<br/>
 [in] O retângulo delimitador do texto.
 
 *strText*<br/>

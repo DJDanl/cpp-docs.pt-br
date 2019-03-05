@@ -1,5 +1,5 @@
 ---
-title: 'Controles ActiveX MFC: distribuindo controles ActiveX'
+title: 'Controles ActiveX MFC: Distribuindo controles ActiveX'
 ms.date: 09/12/2018
 f1_keywords:
 - GetWindowsDirectory
@@ -25,14 +25,14 @@ helpviewer_keywords:
 - registering controls
 - OLEPRO32.DLL
 ms.assetid: cd70ac9b-f613-4879-9e81-6381fdfda2a1
-ms.openlocfilehash: 26ea2cce8891d145740d2f91e06e15c2a1161566
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 409ace2197396cf7adbd330cfbd891745a23cf53
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50513731"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300109"
 ---
-# <a name="mfc-activex-controls-distributing-activex-controls"></a>Controles ActiveX MFC: distribuindo controles ActiveX
+# <a name="mfc-activex-controls-distributing-activex-controls"></a>Controles ActiveX MFC: Distribuindo controles ActiveX
 
 Este artigo aborda vários problemas relacionados à redistribuindo controles ActiveX:
 
@@ -82,4 +82,3 @@ Você deve registrar MFCx0.DLL.
 ## <a name="see-also"></a>Consulte também
 
 [Controles ActiveX do MFC](../mfc/mfc-activex-controls.md)
-

@@ -264,12 +264,12 @@ helpviewer_keywords:
 - CListCtrl [MFC], SubItemHitTest
 - CListCtrl [MFC], Update
 ms.assetid: fe08a1ca-4b05-4ff7-a12a-ee4c765a2197
-ms.openlocfilehash: 4bc50a8a77a4964cf92d003ed1e06213398f401c
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 850c16420606452414cbe284c5f9f25031859c93
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51525542"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304516"
 ---
 # <a name="clistctrl-class"></a>Classe CListCtrl
 
@@ -446,9 +446,9 @@ Controles de exibição de lista podem exibir seu conteúdo de quatro maneiras d
 
 - Exibição de relatório
 
-   Cada item é exibido em sua própria linha, com informações adicionais, organizadas em colunas à direita. A coluna mais à esquerda contém o ícone pequeno e o rótulo e as colunas subsequentes contêm subitens conforme especificado pelo aplicativo. Um controle de cabeçalho incorporado (classe [CHeaderCtrl](../../mfc/reference/cheaderctrl-class.md)) implementa essas colunas. Para obter mais informações sobre o controle de cabeçalho e colunas em uma exibição de relatório, consulte [usando CListCtrl: adicionando colunas ao controle (exibição de relatório)](../../mfc/adding-columns-to-the-control-report-view.md).
+   Cada item é exibido em sua própria linha, com informações adicionais, organizadas em colunas à direita. A coluna mais à esquerda contém o ícone pequeno e o rótulo e as colunas subsequentes contêm subitens conforme especificado pelo aplicativo. Um controle de cabeçalho incorporado (classe [CHeaderCtrl](../../mfc/reference/cheaderctrl-class.md)) implementa essas colunas. Para obter mais informações sobre o controle de cabeçalho e colunas em uma exibição de relatório, consulte [CListCtrl usando: Adicionando colunas ao controle (exibição de relatório)](../../mfc/adding-columns-to-the-control-report-view.md).
 
-O estilo de exibição de lista atual do controle determina o modo de exibição atual. Para obter mais informações sobre esses estilos e seu uso, consulte [usando CListCtrl: alterando estilos de controle de lista](../../mfc/changing-list-control-styles.md).
+O estilo de exibição de lista atual do controle determina o modo de exibição atual. Para obter mais informações sobre esses estilos e seu uso, consulte [CListCtrl usando: Alterando estilos de controle de lista](../../mfc/changing-list-control-styles.md).
 
 ## <a name="extended-styles"></a>Estilos estendidos
 
@@ -460,7 +460,7 @@ Além dos estilos de lista padrão, a classe `CListCtrl` dá suporte a um grande
 
 - Modos de exibição de lista virtual
 
-   Quando habilitada, permite que o controle dar suporte a até itens DWORD. Isso é possível, colocando a sobrecarga de gerenciamento de dados do item no aplicativo. Exceto para as informações de foco e seleção de item, todas as informações do item devem ser gerenciadas pelo aplicativo. Para obter mais informações, consulte [usando CListCtrl: controles de lista Virtual](../../mfc/virtual-list-controls.md).
+   Quando habilitada, permite que o controle dar suporte a até itens DWORD. Isso é possível, colocando a sobrecarga de gerenciamento de dados do item no aplicativo. Exceto para as informações de foco e seleção de item, todas as informações do item devem ser gerenciadas pelo aplicativo. Para obter mais informações, consulte [CListCtrl usando: Controles de lista virtual](../../mfc/virtual-list-controls.md).
 
 - Ativação de um e dois cliques
 
@@ -470,7 +470,7 @@ Além dos estilos de lista padrão, a classe `CListCtrl` dá suporte a um grande
 
    Quando habilitada, permite a reordenação de arrastar e soltar de colunas em um controle de exibição de lista. Disponível somente no modo de exibição de relatório.
 
-Para obter informações sobre como usar esses novos estilos estendidos, consulte [usando CListCtrl: alterando estilos de controle de lista](../../mfc/changing-list-control-styles.md).
+Para obter informações sobre como usar esses novos estilos estendidos, consulte [CListCtrl usando: Alterando estilos de controle de lista](../../mfc/changing-list-control-styles.md).
 
 ## <a name="items-and-subitems"></a>Itens e subitens
 
@@ -478,7 +478,7 @@ Cada item em um controle de exibição de lista consiste em um ícone (de uma li
 
 Classe `CListCtrl` fornece várias funções para inserção, exclusão, localizando e modificando a esses itens. Para obter mais informações, consulte [CListCtrl::GetItem](#getitem), [CListCtrl::InsertItem](#insertitem), e [CListCtrl::FindItem](#finditem), [adicionando itens ao controle](../adding-items-to-the-control.md), e [rolagem, organizando, classificando e localizando em controles de lista](../scrolling-arranging-sorting-and-finding-in-list-controls.md).
 
-Por padrão, o controle de exibição de lista é responsável por armazenar os atributos de ícone e o texto do item. No entanto, esses tipos de item, além de classe `CListCtrl` dá suporte a "itens de retorno de chamada". "Item de retorno de chamada" é um item de exibição de lista para o qual o aplicativo — em vez do controle — armazena o texto, ícone ou ambos. Uma máscara de retorno de chamada é usada para especificar quais atributos de item (texto e/ou ícone) são fornecidos pelo aplicativo. Se um aplicativo usar itens de retorno de chamada, ele deve ser capaz de fornecer os atributos de texto e/ou ícone sob demanda. Itens de retorno de chamada são úteis quando seu aplicativo já mantém algumas dessas informações. Para obter mais informações, consulte [usando CListCtrl: itens de retorno de chamada e a máscara de retorno de chamada](../callback-items-and-the-callback-mask.md).
+Por padrão, o controle de exibição de lista é responsável por armazenar os atributos de ícone e o texto do item. No entanto, esses tipos de item, além de classe `CListCtrl` dá suporte a "itens de retorno de chamada". "Item de retorno de chamada" é um item de exibição de lista para o qual o aplicativo — em vez do controle — armazena o texto, ícone ou ambos. Uma máscara de retorno de chamada é usada para especificar quais atributos de item (texto e/ou ícone) são fornecidos pelo aplicativo. Se um aplicativo usar itens de retorno de chamada, ele deve ser capaz de fornecer os atributos de texto e/ou ícone sob demanda. Itens de retorno de chamada são úteis quando seu aplicativo já mantém algumas dessas informações. Para obter mais informações, consulte [CListCtrl usando: Itens de retorno de chamada e a máscara de retorno de chamada](../callback-items-and-the-callback-mask.md).
 
 ## <a name="image-lists"></a>Listas de imagens
 
@@ -500,7 +500,7 @@ Os ícones, imagens de item de cabeçalho e aplicativo - definido estados para e
 
    Usado no modo de exibição de relatório para imagens pequenas que aparecem em cada item de controle de cabeçalho.
 
-Por padrão, um controle de exibição de lista destrói as listas de imagens atribuídas a ele quando ele for destruído; No entanto, o desenvolvedor pode personalizar esse comportamento com a destruição de cada lista de imagens quando ele não é mais usado, conforme determinado pelo aplicativo. Para obter mais informações, consulte [usando CListCtrl: itens de lista e listas de imagens](../list-items-and-image-lists.md).
+Por padrão, um controle de exibição de lista destrói as listas de imagens atribuídas a ele quando ele for destruído; No entanto, o desenvolvedor pode personalizar esse comportamento com a destruição de cada lista de imagens quando ele não é mais usado, conforme determinado pelo aplicativo. Para obter mais informações, consulte [CListCtrl usando: Itens de lista e listas de imagens](../list-items-and-image-lists.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -529,7 +529,7 @@ CSize ApproximateViewRect(
 
 ### <a name="parameters"></a>Parâmetros
 
-*SZ*<br/>
+*sz*<br/>
 As dimensões propostas de controle, em pixels. Se dimensões não forem especificadas, a estrutura usa os valores atuais de largura ou altura do controle.
 
 *iCount*<br/>
@@ -618,7 +618,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Especifica o estilo do controle de lista. Aplica qualquer combinação de estilos de controle de lista para o controle. Ver [estilos de janela de exibição de lista](/windows/desktop/Controls/list-view-window-styles) no SDK do Windows para obter uma lista completa desses estilos. Conjunto de estilos específicos para um controle usando estendidos [SetExtendedStyle](#setextendedstyle).
 
-*Rect*<br/>
+*rect*<br/>
 Especifica o tamanho e a posição do controle de lista. Ela pode ser um `CRect` objeto ou uma [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura.
 
 *pParentWnd*<br/>
@@ -666,7 +666,7 @@ Especifica o estilo estendido do controle que está sendo criado. Para obter uma
 *dwStyle*<br/>
 Especifica o estilo do controle de lista. Aplica qualquer combinação de estilos de controle de lista para o controle. Para obter uma lista completa desses estilos, consulte [estilos de janela de exibição de lista](/windows/desktop/Controls/list-view-window-styles) no SDK do Windows.
 
-*Rect*<br/>
+*rect*<br/>
 Uma referência a um [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura que descreve o tamanho e posição da janela a ser criado, em coordenadas do cliente do *pParentWnd*.
 
 *pParentWnd*<br/>
@@ -930,7 +930,7 @@ int FindItem(
 *pFindInfo*<br/>
 Um ponteiro para um [LVFINDINFO](/windows/desktop/api/commctrl/ns-commctrl-taglvfindinfoa) estrutura que contém informações sobre o item a ser procurado.
 
-*Ncomeçar*<br/>
+*nStart*<br/>
 Índice do item para iniciar a pesquisa com ou -1 para começar do zero. O item no *Ncomeçar* é excluído da pesquisa se *Ncomeçar* não é igual a -1.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -2116,7 +2116,7 @@ int GetNextSelectedItem(POSITION& pos) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*POS*<br/>
+*pos*<br/>
 Uma referência a um valor de posição retornado por uma chamada anterior a `GetNextSelectedItem` ou `GetFirstSelectedItemPosition`. O valor é atualizado para a próxima posição por essa chamada.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -2556,7 +2556,7 @@ void GetWorkAreas(
 *nWorkAreas*<br/>
 O número de `RECT` estruturas contidas em de *prc* matriz.
 
-*República Popular da China*<br/>
+*prc*<br/>
 Um ponteiro para uma matriz de `RECT` estruturas (ou [CRect](../../atl-mfc-shared/reference/crect-class.md) objetos) que recebem as áreas de trabalho do controle de exibição de lista. Valores essas estruturas são nas coordenadas do cliente.
 
 ### <a name="remarks"></a>Comentários
@@ -2774,7 +2774,7 @@ Ponteiro para um [LVITEM](/windows/desktop/api/commctrl/ns-commctrl-taglvitema) 
 *lpszItem*<br/>
 Endereço de uma cadeia de caracteres que contém o rótulo do item ou LPSTR_TEXTCALLBACK se o item for um item de retorno de chamada. Para obter informações sobre itens de retorno de chamada, consulte [CListCtrl::GetCallbackMask](#getcallbackmask).
 
-*Nimagem*<br/>
+*nImage*<br/>
 Índice da imagem do item ou I_IMAGECALLBACK se o item for um item de retorno de chamada. Para obter informações sobre itens de retorno de chamada, consulte [CListCtrl::GetCallbackMask](#getcallbackmask).
 
 *nMask*<br/>
@@ -3040,10 +3040,10 @@ BOOL RedrawItems(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Nprimeiro*<br/>
+*nFirst*<br/>
 Índice do primeiro item a ser pintada novamente.
 
-*núltima*<br/>
+*nLast*<br/>
 Índice do último item a ser pintada novamente.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -3114,7 +3114,7 @@ BOOL SetBkColor(COLORREF cr);
 
 ### <a name="parameters"></a>Parâmetros
 
-*CR*<br/>
+*cr*<br/>
 Cor do plano de fundo para definir ou o valor CLR_NONE nenhuma cor de fundo. Controles de exibição de lista com cores de plano de fundo redesenhar a mesmos significativamente mais rápido do que aqueles sem cores de plano de fundo. Para obter informações, consulte [COLORREF](/windows/desktop/gdi/colorref) no SDK do Windows.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -3225,7 +3225,7 @@ BOOL SetCheck(
 *nItem*<br/>
 O índice baseado em zero de um item de controle de lista.
 
-*Confira*<br/>
+*fCheck*<br/>
 Especifica se a imagem do estado do item deve estar visível ou não. Por padrão, *Confira* for verdadeiro e a imagem de estado está visível. Se *Confira* é FALSE, ela não estiver visível.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -3320,7 +3320,7 @@ BOOL SetColumnWidth(
 *nCol*<br/>
 Índice da coluna para o qual a largura deve ser definido. Na exibição de lista, esse parâmetro deve ser 0.
 
-*CX*<br/>
+*cx*<br/>
 A nova largura da coluna. Pode ser LVSCW_AUTOSIZE ou LVSCW_AUTOSIZE_USEHEADER, conforme descrito em [LVM_SETCOLUMNWIDTH](/windows/desktop/Controls/lvm-setcolumnwidth) no SDK do Windows.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -3409,7 +3409,7 @@ HCURSOR SetHotCursor(HCURSOR hc);
 
 ### <a name="parameters"></a>Parâmetros
 
-*HC*<br/>
+*hc*<br/>
 Um identificador para um recurso de cursor, usado para representar o cursor a quente.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -3490,10 +3490,10 @@ CSize SetIconSpacing(CSize size);
 
 ### <a name="parameters"></a>Parâmetros
 
-*CX*<br/>
+*cx*<br/>
 A distância (em pixels) entre os ícones no eixo x.
 
-*Cy*<br/>
+*cy*<br/>
 A distância (em pixels) entre os ícones no eixo y.
 
 *size*<br/>
@@ -3598,7 +3598,7 @@ COLORREF SetInsertMarkColor(COLORREF color);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Cor*<br/>
+*color*<br/>
 Um [COLORREF](/windows/desktop/gdi/colorref) estrutura que especifica a cor para definir o ponto de inserção.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -3655,7 +3655,7 @@ Especifica quais atributos devem ser definidos (consulte os comentários).
 *lpszItem*<br/>
 Endereço de uma cadeia de caracteres terminada em nulo, especificando o rótulo do item.
 
-*Nimagem*<br/>
+*nImage*<br/>
 Índice da imagem do item dentro da lista de imagem.
 
 *nState*<br/>
@@ -3955,7 +3955,7 @@ COLORREF SetOutlineColor(COLORREF color);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Cor*<br/>
+*color*<br/>
 O novo [COLORREF](/windows/desktop/gdi/colorref) estrutura que contém a cor do contorno.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -4022,7 +4022,7 @@ BOOL SetTextBkColor(COLORREF cr);
 
 ### <a name="parameters"></a>Parâmetros
 
-*CR*<br/>
+*cr*<br/>
 Um COLORREF especificando a nova cor de plano de fundo do texto. Para obter informações, consulte [COLORREF](/windows/desktop/gdi/colorref) no SDK do Windows.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -4048,7 +4048,7 @@ BOOL SetTextColor(COLORREF cr);
 
 ### <a name="parameters"></a>Parâmetros
 
-*CR*<br/>
+*cr*<br/>
 Um COLORREF especificando a nova cor do texto. Para obter informações, consulte [COLORREF](/windows/desktop/gdi/colorref) no SDK do Windows.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -4426,4 +4426,3 @@ Essa função também organiza o controle de exibição de lista se ele tem o es
 [Classe CWnd](cwnd-class.md)<br/>
 [Gráfico da hierarquia](../hierarchy-chart.md)<br/>
 [Classe CImageList](cimagelist-class.md)
-

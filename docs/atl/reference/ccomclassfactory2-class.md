@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComClassFactory2 class
 ms.assetid: 19b66fd6-b9ed-47a0-822c-8132184f5a3e
-ms.openlocfilehash: ba5bda2e73964e7195c4955806e897f9496c244a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b3b14fa59765aa72a1142e0eef41aa84abea35de
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50460197"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301838"
 ---
 # <a name="ccomclassfactory2-class"></a>Classe CComClassFactory2
 
@@ -34,7 +34,7 @@ class CComClassFactory2 : public IClassFactory2,
 
 #### <a name="parameters"></a>Parâmetros
 
-*licença*<br/>
+*license*<br/>
 Uma classe que implementa as funções estáticas a seguir:
 
 - `static BOOL VerifyLicenseKey( BSTR bstr );`
@@ -132,7 +132,7 @@ STDMETHOD(CreateInstanceLic)(
 [in] Se o objeto está sendo criado como parte de uma agregação, em seguida *pUnkOuter* deve ser o externo desconhecido. Caso contrário, *pUnkOuter* deve ser NULL.
 
 *pUnkReserved*<br/>
-[in] Não usado. Deve ser NULL.
+[in] Não usado. Precisa ser NULL.
 
 *riid*<br/>
 [in] O IID da interface solicitada. Se *pUnkOuter* não for nulo, *riid* deve ser `IID_IUnknown`.
@@ -182,7 +182,7 @@ STDMETHOD(LockServer)(BOOL fLock);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Usam*<br/>
+*fLock*<br/>
 [in] Se for TRUE, a contagem de bloqueio é aumentada. Caso contrário, a contagem de bloqueio é reduzida.
 
 ### <a name="return-value"></a>Valor de retorno

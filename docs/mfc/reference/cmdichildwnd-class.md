@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CMDIChildWnd [MFC], MDIRestore
 - CMDIChildWnd [MFC], SetHandles
 ms.assetid: 6d07f5d4-9a3e-4723-9fa5-e65bb669fdd5
-ms.openlocfilehash: 50fb7da1a59d35d96f1f65428b3a361e3a226607
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: efcf5057481345c001cc48224f53c666623d0780
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694448"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304984"
 ---
 # <a name="cmdichildwnd-class"></a>Classe CMDIChildWnd
 
@@ -150,7 +150,7 @@ Aponta para uma cadeia de caracteres com terminação nula que representa o nome
 *dwStyle*<br/>
 Especifica a janela [estilo](../../mfc/reference/styles-used-by-mfc.md#window-styles) atributos. O estilo WS_CHILD é necessário.
 
-*Rect*<br/>
+*rect*<br/>
 Contém o tamanho e posição da janela. O `rectDefault` valor permite que o Windows especificar o tamanho e a posição do novo `CMDIChildWnd`.
 
 *pParentWnd*<br/>

@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CSpinButtonCtrl [MFC], SetPos
 - CSpinButtonCtrl [MFC], SetRange
 ms.assetid: 509bfd76-1c5a-4af6-973f-e133c0b87734
-ms.openlocfilehash: 8d77175b271d144983aecd1168eb0d66eb46d6ec
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3c973d92550469804a5389b84f53005e4f2c154f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50526354"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290424"
 ---
 # <a name="cspinbuttonctrl-class"></a>Classe CSpinButtonCtrl
 
@@ -119,7 +119,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Especifica o estilo do controle de botão de rotação. Aplica qualquer combinação de estilos de controle de botão de rotação para o controle. Esses estilos são descritos em [estilos de controle para cima para baixo](/windows/desktop/Controls/up-down-control-styles) no SDK do Windows.
 
-*Rect*<br/>
+*rect*<br/>
 Especifica o tamanho e a posição do controle de botão de rotação. Ela pode ser um [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto ou uma [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura
 
 *pParentWnd*<br/>
@@ -159,7 +159,7 @@ Especifica o estilo estendido do controle que está sendo criado. Para obter uma
 *dwStyle*<br/>
 Especifica o estilo do controle de botão de rotação. Aplica qualquer combinação de estilos de controle de botão de rotação para o controle. Esses estilos são descritos em [estilos de controle para cima para baixo](/windows/desktop/Controls/up-down-control-styles) no SDK do Windows.
 
-*Rect*<br/>
+*rect*<br/>
 Uma referência a um [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura que descreve o tamanho e posição da janela a ser criado, em coordenadas do cliente do *pParentWnd*.
 
 *pParentWnd*<br/>
@@ -271,10 +271,10 @@ void GetRange32(
 
 ### <a name="parameters"></a>Parâmetros
 
-*inferior*<br/>
+*lower*<br/>
 Referência a um número inteiro que recebe o limite inferior para o controle.
 
-*superior*<br/>
+*upper*<br/>
 Referência a um número inteiro que recebe o limite superior para o controle.
 
 ### <a name="return-value"></a>Valor de retorno

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CFieldExchange [MFC], IsFieldType
 - CFieldExchange [MFC], SetFieldType
 ms.assetid: 24c5c0b3-06a6-430e-9b6f-005a2c65e29f
-ms.openlocfilehash: e039a2deaf3372af5daac8fddd8f3a0672719f88
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e66b3ed16d4f21d46567c37bfaf7929d32f63b8e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588221"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294974"
 ---
 # <a name="cfieldexchange-class"></a>Classe CFieldExchange
 
@@ -55,7 +55,7 @@ Um `CFieldExchange` objeto fornece as informações de contexto necessárias par
 
 - `CFieldExchange::inoutParam` para membros de dados de parâmetro de entrada/saída.
 
-A maioria dos membros de dados e funções de membro da classe é fornecida para escrever suas próprias rotinas RFX personalizadas. Você usará `SetFieldType` com frequência. Para obter mais informações, consulte os artigos [RFX Record Field Exchange ()](../../data/odbc/record-field-exchange-rfx.md) e [conjunto de registros (ODBC)](../../data/odbc/recordset-odbc.md). Para obter informações sobre a busca de linhas em massa, consulte o artigo [conjunto de registros: buscando registros em massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md). Para obter detalhes sobre as funções globais RFX e RFX em massa, consulte [funções de troca de campo do registro](../../mfc/reference/record-field-exchange-functions.md) na seção de Macros e globais MFC dessa referência.
+A maioria dos membros de dados e funções de membro da classe é fornecida para escrever suas próprias rotinas RFX personalizadas. Você usará `SetFieldType` com frequência. Para obter mais informações, consulte os artigos [RFX Record Field Exchange ()](../../data/odbc/record-field-exchange-rfx.md) e [conjunto de registros (ODBC)](../../data/odbc/recordset-odbc.md). Para obter informações sobre a busca de linhas em massa, consulte o artigo [conjunto de registros: Buscando registros em massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md). Para obter detalhes sobre as funções globais RFX e RFX em massa, consulte [funções de troca de campo do registro](../../mfc/reference/record-field-exchange-functions.md) na seção de Macros e globais MFC dessa referência.
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -124,7 +124,7 @@ Se você parametrizar sua classe de conjunto de registros, você deve chamar `Se
 
 Em geral, cada grupo de chamadas de função RFX associados a membros de dados do campo ou membros de dados do parâmetro deve ser precedido por uma chamada para `SetFieldType`. O *nFieldType* parâmetro de cada `SetFieldType` chamada identifica o tipo dos membros de dados representado pelas chamadas de função RFX que seguem o `SetFieldType` chamar.
 
-Para obter mais informações sobre como lidar com os parâmetros de entrada/saída e saída, consulte o `CRecordset` função de membro [FlushResultSet](../../mfc/reference/crecordset-class.md#flushresultset). Para obter mais informações sobre as funções RFX e RFX em massa, consulte o tópico [funções de troca de campo do registro](../../mfc/reference/record-field-exchange-functions.md). Para obter informações sobre a busca de linhas em massa, consulte o artigo [conjunto de registros: buscando registros em massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+Para obter mais informações sobre como lidar com os parâmetros de entrada/saída e saída, consulte o `CRecordset` função de membro [FlushResultSet](../../mfc/reference/crecordset-class.md#flushresultset). Para obter mais informações sobre as funções RFX e RFX em massa, consulte o tópico [funções de troca de campo do registro](../../mfc/reference/record-field-exchange-functions.md). Para obter informações sobre a busca de linhas em massa, consulte o artigo [conjunto de registros: Buscando registros em massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 ### <a name="example"></a>Exemplo
 

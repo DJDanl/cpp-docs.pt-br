@@ -1,5 +1,5 @@
 ---
-title: 'tela de fundo OLE: implementação MFC'
+title: 'Tela de fundo OLE: Implementação do MFC'
 ms.date: 11/04/2016
 f1_keywords:
 - IMarshall
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - OLE IMoniker interface
 - OLE IUnknown
 ms.assetid: 2b67016a-d78e-4d60-925f-c28ec8fb6180
-ms.openlocfilehash: 6372f28c78be99af9e329ff83ef531d18ad2480f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f793c7d7303a49057e46c32eb658ea7eea8e9ccc
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476668"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267266"
 ---
-# <a name="ole-background-mfc-implementation"></a>tela de fundo OLE: implementação MFC
+# <a name="ole-background-mfc-implementation"></a>Tela de fundo OLE: Implementação do MFC
 
 Devido ao tamanho e da complexidade do OLE API básica, chamá-lo diretamente para escrever aplicativos OLE pode ser muito demorado. O objetivo da implementação da biblioteca Microsoft Foundation Class OLE é reduzir a quantidade de trabalho que você precisa fazer para escrever aplicativos completos, compatíveis com OLE.
 
@@ -35,7 +35,7 @@ IMoniker Interface a `IMoniker` interface é implementada pela biblioteca de cla
 
 IUnknown e Interfaces IMarshal o `IUnknown` interface é implementada pela biblioteca de classes, mas não é exposto para o programador. O `IMarshal` interface não é implementada pela biblioteca de classes, mas é usada internamente. Servidores de automação criados usando a biblioteca de classes de já tem marshaling recursos incorporados.
 
-Arquivos compostos de DOCFILES (arquivos compostos) têm suporte parcial pela biblioteca de classes. Nenhuma das funções que manipulam diretamente os arquivos compostos além da criação têm suporte. Classe do MFC usa `COleFileStream` para dar suporte à manipulação de fluxos com funções de arquivo padrão. Para obter mais informações, consulte o artigo [contêineres: arquivos compostos](../mfc/containers-compound-files.md).
+Arquivos compostos de DOCFILES (arquivos compostos) têm suporte parcial pela biblioteca de classes. Nenhuma das funções que manipulam diretamente os arquivos compostos além da criação têm suporte. Classe do MFC usa `COleFileStream` para dar suporte à manipulação de fluxos com funções de arquivo padrão. Para obter mais informações, consulte o artigo [contêineres: Composta arquivos](../mfc/containers-compound-files.md).
 
 Servidores em processo de servidores em processo e manipuladores de objeto e manipuladores de objeto permitem a implementação de edição visual de dados ou objetos de modelo de objeto de componente (COM) completo em uma biblioteca de vínculo dinâmico (DLL). Para fazer isso, você pode implementar sua DLL chamando a API OLE diretamente. No entanto, se você estiver escrevendo um servidor de automação e o servidor não tem nenhuma interface do usuário, você pode usar o AppWizard para tornar seu servidor de um servidor em processo e coloque-o completamente em uma DLL. Para obter mais informações sobre esses tópicos, consulte [servidores de automação](../mfc/automation-servers.md).
 
@@ -47,5 +47,4 @@ Para obter mais informações sobre como as Microsoft Foundation classes OLE imp
 ## <a name="see-also"></a>Consulte também
 
 [Tela de fundo OLE](../mfc/ole-background.md)<br/>
-[Tela de fundo OLE: estratégias de implementação](../mfc/ole-background-implementation-strategies.md)
-
+[Tela de fundo OLE: Estratégias de implementação](../mfc/ole-background-implementation-strategies.md)

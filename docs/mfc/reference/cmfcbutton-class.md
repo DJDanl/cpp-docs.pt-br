@@ -80,12 +80,12 @@ helpviewer_keywords:
 - CMFCButton [MFC], m_nAlignStyle
 - CMFCButton [MFC], m_nFlatStyle
 ms.assetid: 4b32f57c-7a53-4734-afb9-d47e3359f62e
-ms.openlocfilehash: a82793ce29765bf01e8c52c94257bd3150187505
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 804c3219356d36f6a0a733937c5e354822a4be83
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178454"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269806"
 ---
 # <a name="cmfcbutton-class"></a>Classe CMFCButton
 
@@ -258,7 +258,7 @@ static void EnableWindowsTheming(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parâmetros
 
-*bAtivar*<br/>
+*bEnable*<br/>
 [in] TRUE para usar o tema atual do Windows para desenhar bordas do botão; FALSO para não usar o tema do Windows. O padrão é TRUE.
 
 ### <a name="remarks"></a>Comentários
@@ -511,7 +511,7 @@ Use um dos seguintes `CMFCButton::AlignStyle` valores de enumeração para espec
 
 O `CMFCButton` construtor inicializa este membro para ALIGN_CENTER.
 
-##  <a name="m_bWasDblClk"></a>  CMFCButton::m_bWasDblClk](#m_bWasDblClk) |
+##  <a name="m_bWasDblClk"></a>  CMFCButton::m_bWasDblClk](#m_bWasDblClk)|
 
 Indica se o último clique o evento foi um clique duplo. |
 
@@ -563,7 +563,7 @@ virtual void OnDraw(
 *pDC*<br/>
 [in] Um ponteiro para um contexto de dispositivo.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Uma referência a um retângulo que delimita o botão.
 
 *uiState*<br/>
@@ -639,7 +639,7 @@ virtual void OnDrawText(
 *pDC*<br/>
 [in] Um ponteiro para um contexto de dispositivo.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Uma referência a um retângulo que delimita o botão.
 
 *strText*<br/>

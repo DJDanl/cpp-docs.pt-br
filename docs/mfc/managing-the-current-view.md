@@ -11,12 +11,12 @@ helpviewer_keywords:
 - deactivating views [MFC]
 - current view in frame window [MFC]
 ms.assetid: 0a1cc22d-d646-4536-9ad2-3cb6d7092e4a
-ms.openlocfilehash: c53193a2e8121274246eabd9c7b614ad986146c0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a926a9e31f7c43ab625220a4d759f6d536c2a77f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50575481"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326225"
 ---
 # <a name="managing-the-current-view"></a>Gerenciando a exibição atual
 
@@ -29,4 +29,3 @@ Uma janela de quadro encaminha comandos ao seu modo de exibição atual (ativo),
 ## <a name="see-also"></a>Consulte também
 
 [Usando janelas com moldura](../mfc/using-frame-windows.md)
-

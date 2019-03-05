@@ -7,16 +7,16 @@ helpviewer_keywords:
 - threading [C++], troubleshooting
 - troubleshooting [C++], multithreading
 ms.assetid: 06cc231d-bb5a-409d-8bd3-676c9e2a8c5b
-ms.openlocfilehash: 598758a4ceb0a12640faf2832f9f03cd1e44ef9f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3ceae832599243ffa0aad2b6fa67148e7ea30510
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50461640"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288175"
 ---
 # <a name="avoiding-problem-areas-with-multithread-programs"></a>Evitando áreas de problema com programas multithread
 
-Há vários problemas que podem ser encontradas em criar, vincular ou executar um programa C multithread. Alguns dos problemas mais comuns são descritos na tabela a seguir. (Para obter uma discussão semelhante do ponto de vista do MFC, consulte [Multithreading: dicas de programação](multithreading-programming-tips.md).)
+Há vários problemas que podem ser encontradas em criar, vincular ou executar um programa C multithread. Alguns dos problemas mais comuns são descritos na tabela a seguir. (Para obter uma discussão semelhante do ponto de vista do MFC, consulte [Multithreading: Dicas de programação](multithreading-programming-tips.md).)
 
 |Problema|Causa provável|
 |-------------|--------------------|

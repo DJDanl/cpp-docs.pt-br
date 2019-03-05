@@ -1,18 +1,18 @@
 ---
-title: 'Controles ActiveX MFC: pintando um controle ActiveX'
+title: 'Controles ActiveX MFC: Pintando um controle ActiveX'
 ms.date: 09/12/2018
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], painting
 - MFC ActiveX controls [MFC], optimizing
 ms.assetid: 25fff9c0-4dab-4704-aaae-8dfb1065dee3
-ms.openlocfilehash: 4a7cff57213cf9ba234ead9880207fd93592614f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b90aa331c289caf827785af2eeba037e70f686ab
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50549520"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281924"
 ---
-# <a name="mfc-activex-controls-painting-an-activex-control"></a>Controles ActiveX MFC: pintando um controle ActiveX
+# <a name="mfc-activex-controls-painting-an-activex-control"></a>Controles ActiveX MFC: Pintando um controle ActiveX
 
 Este artigo descreve o processo de pintura do controle ActiveX e como você pode alterar o código de pintura para otimizar o processo. (Consulte [otimizando o desenho de controle](../mfc/optimizing-control-drawing.md) para técnicas sobre como otimizar o desenho por não ter controles individualmente restaurem objetos GDI selecionados anteriormente. Depois que todos os controles desenhados, o contêiner pode restaurar automaticamente os objetos originais.)
 
@@ -31,7 +31,7 @@ Os seguintes tópicos são abordados:
 
 ##  <a name="_core_the_painting_process_of_an_activex_control"></a> O processo de pintura de um controle ActiveX
 
-Quando os controles ActiveX são inicialmente exibidos ou são redesenhados, eles seguem um processo de pintura semelhante a outros aplicativos desenvolvidos usando o MFC, com uma diferença importante: os controles ActiveX podem estar em um ativo ou em um estado inativo.
+Quando os controles ActiveX são inicialmente exibidos ou são redesenhados, elas seguem um processo de pintura semelhante a outros aplicativos desenvolvidos usando o MFC, com uma diferença importante: Controles ActiveX podem estar em um ativo ou em um estado inativo.
 
 Um controle ativo é representado em um contêiner de controle ActiveX por uma janela filho. Como outras janelas, ele é responsável por pintando em si, quando for recebida uma mensagem WM_PAINT. A classe do controle base, [COleControl](../mfc/reference/colecontrol-class.md), manipula essa mensagem em seu `OnPaint` função. Essa implementação padrão chama o `OnDraw` função do seu controle.
 
@@ -71,7 +71,7 @@ Para verificar se que o controle pode ser desenhado na tela e Metarquivo context
 
 Porque a implementação padrão de `OnDrawMetafile` chama o controle `OnDraw` função, use apenas as funções de membro que são adequadas para um metarquivo e um contexto de dispositivo da tela, a menos que você substitua `OnDrawMetafile`. O exemplo a seguir lista o subconjunto de `CDC` funções de membro que podem ser usadas em um metarquivo e um contexto de dispositivo da tela. Para obter mais informações sobre essas funções, consulte a classe [CDC](../mfc/reference/cdc-class.md) na *referência da MFC*.
 
-|Arco|BibBlt|Sequência de teclas|
+|Arc|BibBlt|Chord|
 |---------|------------|-----------|
 |`Ellipse`|`Escape`|`ExcludeClipRect`|
 |`ExtTextOut`|`FloodFill`|`IntersectClipRect`|
@@ -88,9 +88,9 @@ Porque a implementação padrão de `OnDrawMetafile` chama o controle `OnDraw` f
 |`SetViewportOrg`|`SetWindowExt`|`SetWindowORg`|
 |`StretchBlt`|`TextOut`||
 
-Além `CDC` funções de membro, há várias outras funções que são compatíveis em um controlador de domínio do metarquivo. Eles incluem [CPalette::AnimatePalette](../mfc/reference/cpalette-class.md#animatepalette), [CFont::CreateFontIndirect](../mfc/reference/cfont-class.md#createfontindirect)e três funções de membro `CBrush`: [CreateBrushIndirect](../mfc/reference/cbrush-class.md#createbrushindirect), [CreateDIBPatternBrush](../mfc/reference/cbrush-class.md#createdibpatternbrush), e [CreatePatternBrush](../mfc/reference/cbrush-class.md#createpatternbrush).
+Além `CDC` funções de membro, há várias outras funções que são compatíveis em um controlador de domínio do metarquivo. Eles incluem [CPalette::AnimatePalette](../mfc/reference/cpalette-class.md#animatepalette), [CFont::CreateFontIndirect](../mfc/reference/cfont-class.md#createfontindirect)e três funções de membro de `CBrush`: [CreateBrushIndirect](../mfc/reference/cbrush-class.md#createbrushindirect), [CreateDIBPatternBrush](../mfc/reference/cbrush-class.md#createdibpatternbrush), e [CreatePatternBrush](../mfc/reference/cbrush-class.md#createpatternbrush).
 
-Funções que não são registradas em um metarquivo são: [DrawFocusRect](../mfc/reference/cdc-class.md#drawfocusrect), [DrawIcon](../mfc/reference/cdc-class.md#drawicon), [DrawText](../mfc/reference/cdc-class.md#drawtext), [ExcludeUpdateRgn](../mfc/reference/cdc-class.md#excludeupdatergn), [FillRect](../mfc/reference/cdc-class.md#fillrect), [FrameRect](../mfc/reference/cdc-class.md#framerect), [GrayString](../mfc/reference/cdc-class.md#graystring), [InvertRect](../mfc/reference/cdc-class.md#invertrect), [ScrollDC](../mfc/reference/cdc-class.md#scrolldc)e [TabbedTextOut](../mfc/reference/cdc-class.md#tabbedtextout). Como um controlador de domínio de meta-arquivo não é, na verdade, associado um dispositivo, é possível usar SetDIBits, GetDIBits e CreateDIBitmap com um controlador de domínio do metarquivo. Você pode usar SetDIBitsToDevice e StretchDIBits com um metarquivo do controlador de domínio como o destino. [CreateCompatibleDC](../mfc/reference/cdc-class.md#createcompatibledc), [CreateCompatibleBitmap](../mfc/reference/cbitmap-class.md#createcompatiblebitmap), e [CreateDiscardableBitmap](../mfc/reference/cbitmap-class.md#creatediscardablebitmap) não são significativos com um controlador de domínio do metarquivo.
+Funções que não são registradas em um metarquivo são: [DrawFocusRect](../mfc/reference/cdc-class.md#drawfocusrect), [DrawIcon](../mfc/reference/cdc-class.md#drawicon), [DrawText](../mfc/reference/cdc-class.md#drawtext), [ExcludeUpdateRgn](../mfc/reference/cdc-class.md#excludeupdatergn), [FillRect](../mfc/reference/cdc-class.md#fillrect), [FrameRect ](../mfc/reference/cdc-class.md#framerect), [GrayString](../mfc/reference/cdc-class.md#graystring), [InvertRect](../mfc/reference/cdc-class.md#invertrect), [ScrollDC](../mfc/reference/cdc-class.md#scrolldc), e [TabbedTextOut](../mfc/reference/cdc-class.md#tabbedtextout). Como um controlador de domínio de meta-arquivo não é, na verdade, associado um dispositivo, é possível usar SetDIBits, GetDIBits e CreateDIBitmap com um controlador de domínio do metarquivo. Você pode usar SetDIBitsToDevice e StretchDIBits com um metarquivo do controlador de domínio como o destino. [CreateCompatibleDC](../mfc/reference/cdc-class.md#createcompatibledc), [CreateCompatibleBitmap](../mfc/reference/cbitmap-class.md#createcompatiblebitmap), e [CreateDiscardableBitmap](../mfc/reference/cbitmap-class.md#creatediscardablebitmap) não são significativos com um controlador de domínio do metarquivo.
 
 Outro ponto a considerar ao usar um controlador de domínio do metarquivo é que o sistema de coordenadas não pode ser medido em pixels. Por esse motivo, todos os seu código de desenho deve ser ajustado para caber no retângulo passado para `OnDraw` no *rcBounds* parâmetro. Isso impede que a pintura acidental fora do controle porque *rcBounds* representa o tamanho da janela do controle.
 
@@ -111,4 +111,3 @@ Depois que você tiver implementado a renderização de meta-arquivo para o cont
 ## <a name="see-also"></a>Consulte também
 
 [Controles ActiveX do MFC](../mfc/mfc-activex-controls.md)
-

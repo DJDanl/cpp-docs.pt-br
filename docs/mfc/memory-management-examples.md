@@ -1,5 +1,5 @@
 ---
-title: 'Gerenciamento de memória: exemplos'
+title: 'Gerenciamento de memória: Exemplos'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - objects [MFC], memory allocation
@@ -19,14 +19,14 @@ helpviewer_keywords:
 - frame allocation [MFC]
 - memory allocation [MFC], data structures
 ms.assetid: f10240f8-b698-4c83-9288-97a54318930b
-ms.openlocfilehash: a236dbda9baca7bf7e165edf63a61ffb6eb92a2d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5ed50bfba03f29fdd16e6f615b193109656f3ce6
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548116"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294333"
 ---
-# <a name="memory-management-examples"></a>Gerenciamento de memória: exemplos
+# <a name="memory-management-examples"></a>Gerenciamento de memória: Exemplos
 
 Este artigo descreve como o MFC realiza a alocações de quadro e alocações de heap para cada um dos três tipos típicos de alocações de memória:
 
@@ -100,5 +100,4 @@ Este artigo descreve como o MFC realiza a alocações de quadro e alocações de
 
 ## <a name="see-also"></a>Consulte também
 
-[Gerenciamento de memória: alocação do heap](../mfc/memory-management-heap-allocation.md)
-
+[Gerenciamento de memória: Alocação de heap](../mfc/memory-management-heap-allocation.md)

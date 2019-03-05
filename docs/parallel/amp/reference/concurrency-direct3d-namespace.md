@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - direct3d namespace
 ms.assetid: 9566a2f1-4d5f-43e4-a3ac-676643d38420
-ms.openlocfilehash: c99aba319df6f84dbda7b9cf90a1abebdc3757f0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6afbd7b3a3f4280ad658c1cb9d8802cc3251d0ed
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50570346"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291327"
 ---
 # <a name="concurrencydirect3d-namespace"></a>Namespace Concurrency::direct3d
 
@@ -61,7 +61,7 @@ namespace direct3d;
 |[mad](concurrency-direct3d-namespace-functions-amp.md#mad)|Sobrecarregado. Executa uma operação aritmética multiplicação/adição em três argumentos: x \* y + z|
 |[make_array](concurrency-direct3d-namespace-functions-amp.md#make_array)|Crie uma matriz de um ponteiro de interface do buffer D3D.|
 |[noise](concurrency-direct3d-namespace-functions-amp.md#noise)|Gera um valor aleatório usando o algoritmo de ruído de Perlin|
-|[radianos](concurrency-direct3d-namespace-functions-amp.md#radians)|Converte x de graus em radianos|
+|[radians](concurrency-direct3d-namespace-functions-amp.md#radians)|Converte x de graus em radianos|
 |[rcp](concurrency-direct3d-namespace-functions-amp.md#rcp)|Calcula um recíproco rápido e aproximado do argumento|
 |[reversebits](concurrency-direct3d-namespace-functions-amp.md#reversebits)|Inverte a ordem dos bits em x|
 |[saturate](concurrency-direct3d-namespace-functions-amp.md#saturate)|Aperta o x dentro do intervalo de 0 a 1|
@@ -75,7 +75,7 @@ namespace direct3d;
 
 **Cabeçalho:** amp. h
 
-**Namespace:** Simultaneidade
+**Namespace:** Concorrência
 
 ## <a name="see-also"></a>Consulte também
 

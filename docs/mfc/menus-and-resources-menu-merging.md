@@ -1,5 +1,5 @@
 ---
-title: 'Menus e recursos: mescla de menu'
+title: 'Menus e recursos: Mesclagem de menu'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - status bars [MFC], OLE document applications
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - merging toolbar and status bar [MFC]
 - menus [MFC], OLE document applications
 ms.assetid: 80b6bb17-d830-4122-83f0-651fc112d4d1
-ms.openlocfilehash: 30663afae0bfd30b42f99daf95cb8ff35979ee50
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e00464e59de5e20627fd2423c101c23629d7c4d2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50438435"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300343"
 ---
-# <a name="menus-and-resources-menu-merging"></a>Menus e recursos: mescla de menu
+# <a name="menus-and-resources-menu-merging"></a>Menus e recursos: Mesclagem de menu
 
 Este artigo detalha as etapas necessárias para aplicativos de documento OLE tratar a edição visual e ativação in-loco corretamente. Ativação in-loco representa um desafio para o contêiner e o servidor de aplicativos (componentes). O usuário permanece na mesma janela do quadro (dentro do contexto do documento contêiner), mas está realmente executando outro aplicativo (o servidor). Isso exige a coordenação entre os recursos dos aplicativos de contêiner e o servidor.
 
@@ -105,7 +105,7 @@ Quando um item inserido é ativado em vigor, o framework carrega o menu no local
 
 Aplicativos de servidor devem criar uma nova barra de ferramentas e armazenar seu bitmap em um arquivo separado. Os aplicativos gerados pelo Assistente de aplicativo armazenam esse bitmap em um arquivo chamado ITOOLBAR. BMP. A nova barra de ferramentas substitui a barra de ferramentas do aplicativo de contêiner quando o item do seu servidor é ativado em vigor e deve conter os mesmos itens como sua barra de ferramentas normal, mas remova ícones que representam os itens nos menus do arquivo e a janela.
 
-Essa barra de ferramentas é carregada no seu `COleIPFrameWnd`-derivado da classe, criado para você pelo Assistente de aplicativo. A barra de status é tratada pelo aplicativo recipiente. Para obter mais informações sobre a implementação de janelas com moldura no local, consulte [servidores: Implementando um servidor](../mfc/servers-implementing-a-server.md).
+Essa barra de ferramentas é carregada no seu `COleIPFrameWnd`-derivado da classe, criado para você pelo Assistente de aplicativo. A barra de status é tratada pelo aplicativo recipiente. Para obter mais informações sobre a implementação de janelas com moldura no local, consulte [servidores: Implementação de um servidor](../mfc/servers-implementing-a-server.md).
 
 ## <a name="see-also"></a>Consulte também
 
@@ -113,4 +113,3 @@ Essa barra de ferramentas é carregada no seu `COleIPFrameWnd`-derivado da class
 [Ativação](../mfc/activation-cpp.md)<br/>
 [Servidores](../mfc/servers.md)<br/>
 [Contêineres](../mfc/containers.md)
-

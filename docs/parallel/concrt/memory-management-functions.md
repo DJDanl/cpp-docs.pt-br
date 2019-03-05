@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - memory management functions [Concurrency Runtime]
 ms.assetid: d303dd2a-dfa4-4d90-a508-f6aa290bb9ea
-ms.openlocfilehash: d8dfc8bbb200258818c38e931e978cc3be292525
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9a7810267c3eaa11ad7592774440365620e7e8f4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50454074"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276930"
 ---
 # <a name="memory-management-functions"></a>Funções de gerenciamento da memória
 
@@ -30,10 +30,9 @@ Use o `Alloc` e `Free` funciona quando você alocar e liberar um conjunto fixo d
 
 ## <a name="example"></a>Exemplo
 
-Para obter um exemplo que usa o `Alloc` e `Free` funções para melhorar o desempenho de memória, consulte [como: usar Alloc e Free para melhorar o desempenho da memória](../../parallel/concrt/how-to-use-alloc-and-free-to-improve-memory-performance.md).
+Para obter um exemplo que usa o `Alloc` e `Free` funções para melhorar o desempenho de memória, consulte [como: Usar Alloc e Free para melhorar o desempenho de memória](../../parallel/concrt/how-to-use-alloc-and-free-to-improve-memory-performance.md).
 
 ## <a name="see-also"></a>Consulte também
 
 [Agendador de tarefas](../../parallel/concrt/task-scheduler-concurrency-runtime.md)<br/>
-[Como usar Alloc e Free para melhorar o desempenho da memória](../../parallel/concrt/how-to-use-alloc-and-free-to-improve-memory-performance.md)
-
+[Como: Usar Alloc e Free para melhorar o desempenho da memória](../../parallel/concrt/how-to-use-alloc-and-free-to-improve-memory-performance.md)

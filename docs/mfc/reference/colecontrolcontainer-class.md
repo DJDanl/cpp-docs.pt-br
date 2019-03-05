@@ -72,12 +72,12 @@ helpviewer_keywords:
 - COleControlContainer [MFC], m_pWnd
 - COleControlContainer [MFC], m_siteMap
 ms.assetid: f7ce9246-0fb7-4f07-a83a-6c2390d0fdf8
-ms.openlocfilehash: e89096b553814285f61093af81e31b294e3ad2bb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6e97f7ceafb92098d701cba64b4ec01d26d3991a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50603002"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274980"
 ---
 # <a name="colecontrolcontainer-class"></a>Classe COleControlContainer
 
@@ -173,7 +173,7 @@ void AttachControlSite(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Apropriei*<br/>
+*pWnd*<br/>
 Um ponteiro para um `CWnd` objeto.
 
 *nIDC*<br/>
@@ -196,7 +196,7 @@ virtual void BroadcastAmbientPropertyChange(DISPID dispid);
 
 ### <a name="parameters"></a>Parâmetros
 
-*DISPID*<br/>
+*dispid*<br/>
 A ID de expedição da propriedade de ambiente que está sendo alterada.
 
 ### <a name="remarks"></a>Comentários
@@ -218,7 +218,7 @@ virtual void CheckDlgButton(
 *nIDButton*<br/>
 A ID do botão a ser modificado.
 
-*nVerifique*<br/>
+*nCheck*<br/>
 Especifica o estado do botão. Pode ser uma das seguintes opções:
 
 - BST_CHECKED define o estado do botão para verificada.
@@ -259,7 +259,7 @@ explicit COleControlContainer(CWnd* pWnd);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Apropriei*<br/>
+*pWnd*<br/>
 Um ponteiro para a janela pai do contêiner de controle.
 
 ### <a name="remarks"></a>Comentários
@@ -311,7 +311,7 @@ Um ponteiro para o texto a ser exibido no controle. Define o valor da propriedad
 *dwStyle*<br/>
 Estilos do Windows. Os estilos disponíveis são listados sob o **comentários** seção.
 
-*Rect*<br/>
+*rect*<br/>
 Especifica o tamanho e a posição do controle. Ela pode ser um `CRect` objeto ou um `RECT` estrutura.
 
 *nID*<br/>
@@ -419,7 +419,7 @@ virtual BOOL GetAmbientProp(
 *pSite*<br/>
 Um ponteiro para um site de controle do qual a propriedade de ambiente será recuperada.
 
-*DISPID*<br/>
+*dispid*<br/>
 A ID de expedição da propriedade de ambiente desejada.
 
 *pVarResult*<br/>
@@ -737,7 +737,7 @@ virtual void ScrollChildren(
 
 ### <a name="parameters"></a>Parâmetros
 
-*DX*<br/>
+*dx*<br/>
 A quantidade, em pixels, de rolagem ao longo do eixo x.
 
 *dy*<br/>
@@ -785,7 +785,7 @@ virtual void SetDlgItemInt(
 *nID*<br/>
 O identificador do controle.
 
-*Nvalor*<br/>
+*nValue*<br/>
 O valor inteiro a ser exibido.
 
 *bSigned*<br/>

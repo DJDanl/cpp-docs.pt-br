@@ -5,12 +5,12 @@ f1_keywords:
 - amp/Concurrency::access_type
 - amp/Concurrency::queuing_mode
 ms.assetid: 4c87457e-184f-4992-81ab-ca75e7d524ab
-ms.openlocfilehash: d78299a9ce47760e6b1340c69d8be699a5eed8a0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: adfc1743d887f2a670111eff31cf4653d2df1bee
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50433560"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326069"
 ---
 # <a name="concurrency-namespace-enums-amp"></a>Enumerações do namespace de simultaneidade (AMP)
 
@@ -36,7 +36,7 @@ enum access_type;
 |`access_type_read_write`|Compartilhado. A alocação é acessível no Acelerador e é gravável na CPU.|
 |`access_type_write`|Compartilhado. A alocação é acessível no Acelerador e é legível e gravável na CPU.|
 
-##  <a name="queuing_mode"></a>  Enumeração queuing_mode
+##  <a name="queuing_mode"></a>  queuing_mode Enumeration
 
 Especifica os modos de enfileiramento de mensagens que são suportados no acelerador.
 

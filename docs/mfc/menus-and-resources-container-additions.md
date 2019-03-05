@@ -1,5 +1,5 @@
 ---
-title: 'Menus e recursos: adições de contêiner'
+title: 'Menus e recursos: Adições de contêiner'
 ms.date: 11/04/2016
 f1_keywords:
 - IDP_OLE_INIT_FAILED
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - CONTAIN tutorial [MFC]
 - Links menu item [MFC]
 ms.assetid: 425448be-8ca0-412e-909a-a3a9ce845288
-ms.openlocfilehash: ea4159f8eb60f43f60eacd5831ce148c81aeb572
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ad3431f78d3637bcdfdb0266c8abdb43047ca28d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50546608"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279323"
 ---
-# <a name="menus-and-resources-container-additions"></a>Menus e recursos: adições de contêiner
+# <a name="menus-and-resources-container-additions"></a>Menus e recursos: Adições de contêiner
 
 Este artigo explica as alterações que precisam ser feitas para os menus e outros recursos em um aplicativo de contêiner de edição visual.
 
@@ -46,13 +46,13 @@ Você deve adicionar os itens a seguir para o menu Editar:
 |Item|Finalidade|
 |----------|-------------|
 |**Inserir novo objeto**|Abre a caixa de diálogo Inserir objeto OLE para inserir um item vinculado ou inserido no documento.|
-|**Colar vínculo**|Cola um link para o item na área de transferência no documento.|
-|**Verbo OLE**|Chama o verbo de principal do item selecionado. O texto desse item de menu muda para refletir o verbo primário do item selecionado.|
+|**Paste Link**|Cola um link para o item na área de transferência no documento.|
+|**OLE Verb**|Chama o verbo de principal do item selecionado. O texto desse item de menu muda para refletir o verbo primário do item selecionado.|
 |**Links**|Abre a caixa de diálogo Editar Links do OLE para alterar os itens vinculados existentes.|
 
 Além das alterações listadas neste artigo, seu arquivo de origem deve incluir AFXOLECL. RC, que é necessário para a implementação de biblioteca Microsoft Foundation Class. Inserir novo objeto é a adição de apenas menu necessária. Outros itens podem ser adicionados, mas os listados aqui são as mais comuns.
 
-Você deve criar um novo menu para seu aplicativo de contêiner, se você quiser dar suporte à ativação no local de itens contidos. Esse menu consiste no mesmo menu de arquivo e os menus pop-up da janela usadas quando os arquivos estiverem abertos, mas ele tem dois separadores colocadas entre elas. Esses separadores são usados para indicar onde o item do servidor (componente) (aplicativo) deve colocar seus menus quando ativado em vigor. Para obter mais informações sobre essa técnica de mesclagem de menu, consulte [Menus e recursos: mesclagem de Menu](../mfc/menus-and-resources-menu-merging.md).
+Você deve criar um novo menu para seu aplicativo de contêiner, se você quiser dar suporte à ativação no local de itens contidos. Esse menu consiste no mesmo menu de arquivo e os menus pop-up da janela usadas quando os arquivos estiverem abertos, mas ele tem dois separadores colocadas entre elas. Esses separadores são usados para indicar onde o item do servidor (componente) (aplicativo) deve colocar seus menus quando ativado em vigor. Para obter mais informações sobre essa técnica de mesclagem de menu, consulte [Menus e recursos: A mesclagem de menu](../mfc/menus-and-resources-menu-merging.md).
 
 ##  <a name="_core_container_application_accelerator_table_additions"></a> Adições de tabela do acelerador de aplicativo de contêiner
 
@@ -71,7 +71,7 @@ A segunda alteração é criar uma nova tabela do acelerador correspondente para
 |ID_FILE_SAVE|CTRL+S|**VIRTKEY**|
 |ID_FILE_PRINT|CTRL + P|**VIRTKEY**|
 |ID_NEXT_PANE|VK_F6|**VIRTKEY**|
-|ID_PREV_PANE|SHIFT + VK_F6|**VIRTKEY**|
+|ID_PREV_PANE|SHIFT+VK_F6|**VIRTKEY**|
 |ID_CANCEL_EDIT_CNTR|VK_ESCAPE|**VIRTKEY**|
 
 ##  <a name="_core_string_table_additions_for_container_applications"></a> Adições de tabela de cadeia de caracteres para aplicativos de contêiner
@@ -86,5 +86,4 @@ A maioria das alterações às tabelas de cadeia de caracteres para aplicativos 
 ## <a name="see-also"></a>Consulte também
 
 [Menus e recursos (OLE)](../mfc/menus-and-resources-ole.md)<br/>
-[Menus e recursos: adições de servidor](../mfc/menus-and-resources-server-additions.md)
-
+[Menus e recursos: Adições de servidor](../mfc/menus-and-resources-server-additions.md)

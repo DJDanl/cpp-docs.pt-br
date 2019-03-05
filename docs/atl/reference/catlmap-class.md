@@ -37,12 +37,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlMap class
 ms.assetid: 5e2fe028-8e6d-4686-93df-1433d2080ec3
-ms.openlocfilehash: 83ac810538bf189d026c0cb9b2a76ded49fdd86c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 80975047b300f270c0ac58c8b8abfc59ff2b17ef
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50499665"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293778"
 ---
 # <a name="catlmap-class"></a>Classe CAtlMap
 
@@ -101,7 +101,7 @@ O código usado para copiar ou mover elementos de valor.
 |Nome|Descrição|
 |----------|-----------------|
 |[CAtlMap::CAtlMap](#catlmap)|O construtor.|
-|[CAtlMap:: ~ CAtlMap](#dtor)|O destruidor.|
+|[CAtlMap::~CAtlMap](#dtor)|O destruidor.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
@@ -221,7 +221,7 @@ Antes de todos os dados podem ser armazenados, é necessário inicializar a tabe
 
 [!code-cpp[NVC_ATL_Utilities#72](../../atl/codesnippet/cpp/catlmap-class_1.cpp)]
 
-##  <a name="dtor"></a>  CAtlMap:: ~ CAtlMap
+##  <a name="dtor"></a>  CAtlMap::~CAtlMap
 
 O destruidor.
 
@@ -288,7 +288,7 @@ CPair* GetAt(POSITION& pos) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*POS*<br/>
+*pos*<br/>
 O contador de posição, retornado por uma chamada anterior a [CAtlMap::GetNextAssoc](#getnextassoc) ou [CAtlMap::GetStartPosition](#getstartposition).
 
 *key*<br/>
@@ -343,7 +343,7 @@ const K& GetKeyAt(POSITION pos) const throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*POS*<br/>
+*pos*<br/>
 O contador de posição, retornado por uma chamada anterior a [CAtlMap::GetNextAssoc](#getnextassoc) ou [CAtlMap::GetStartPosition](#getstartposition).
 
 ### <a name="return-value"></a>Valor de retorno
@@ -365,7 +365,7 @@ const CPair* GetNext(POSITION& pos) const throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*POS*<br/>
+*pos*<br/>
 O contador de posição, retornado por uma chamada anterior a [CAtlMap::GetNextAssoc](#getnextassoc) ou [CAtlMap::GetStartPosition](#getstartposition).
 
 ### <a name="return-value"></a>Valor de retorno
@@ -385,7 +385,7 @@ void GetNextAssoc(
 
 ### <a name="parameters"></a>Parâmetros
 
-*POS*<br/>
+*pos*<br/>
 O contador de posição, retornado por uma chamada anterior a [CAtlMap::GetNextAssoc](#getnextassoc) ou [CAtlMap::GetStartPosition](#getstartposition).
 
 *key*<br/>
@@ -408,7 +408,7 @@ const K& GetNextKey(POSITION& pos) const throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*POS*<br/>
+*pos*<br/>
 O contador de posição, retornado por uma chamada anterior a [CAtlMap::GetNextAssoc](#getnextassoc) ou [CAtlMap::GetStartPosition](#getstartposition).
 
 ### <a name="return-value"></a>Valor de retorno
@@ -430,7 +430,7 @@ const V& GetNextValue(POSITION& pos) const throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*POS*<br/>
+*pos*<br/>
 O contador de posição, retornado por uma chamada anterior a [CAtlMap::GetNextAssoc](#getnextassoc) ou [CAtlMap::GetStartPosition](#getstartposition).
 
 ### <a name="return-value"></a>Valor de retorno
@@ -479,7 +479,7 @@ const V& GetValueAt(POSITION pos) const throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*POS*<br/>
+*pos*<br/>
 O contador de posição, retornado por uma chamada anterior a [CAtlMap::GetNextAssoc](#getnextassoc) ou [CAtlMap::GetStartPosition](#getstartposition).
 
 ### <a name="return-value"></a>Valor de retorno
@@ -632,7 +632,7 @@ void RemoveAtPos(POSITION pos) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*POS*<br/>
+*pos*<br/>
 O contador de posição, retornado por uma chamada anterior a [CAtlMap::GetNextAssoc](#getnextassoc) ou [CAtlMap::GetStartPosition](#getstartposition).
 
 ### <a name="remarks"></a>Comentários
@@ -728,7 +728,7 @@ void SetValueAt(
 
 ### <a name="parameters"></a>Parâmetros
 
-*POS*<br/>
+*pos*<br/>
 O contador de posição, retornado por uma chamada anterior a [CAtlMap::GetNextAssoc](#getnextassoc) ou [CAtlMap::GetStartPosition](#getstartposition).
 
 *value*<br/>

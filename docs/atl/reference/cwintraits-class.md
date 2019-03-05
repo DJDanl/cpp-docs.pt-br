@@ -13,12 +13,12 @@ helpviewer_keywords:
 - CFrameWinTraits class
 - CControlWinTraits class
 ms.assetid: f78f486e-6d9c-42c6-8e86-371e05aa7e59
-ms.openlocfilehash: 9e60eb773573142d0a4498c42a98f6e9c4c49a7c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 840433ffb325a4f181848371306607b62373e75a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532594"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57280453"
 ---
 # <a name="cwintraits-class"></a>Classe CWinTraits
 

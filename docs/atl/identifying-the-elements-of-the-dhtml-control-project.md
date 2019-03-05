@@ -5,12 +5,12 @@ helpviewer_keywords:
 - HTML controls, ATL support
 - DHTML controls, ATL support
 ms.assetid: b627547a-3768-4346-9900-4b7a21fb8e27
-ms.openlocfilehash: e38b94e200754ce9dd37df2bfb17dfaa32cafe49
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 3cb250c68d5ba36dc3cf502b871f62eec8f1861c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175698"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283872"
 ---
 # <a name="identifying-the-elements-of-the-dhtml-control-project"></a>Identificando os elementos do projeto de controle DHTML
 
@@ -54,4 +54,3 @@ Ver [criando um controle de DHTML da ATL](../atl/creating-an-atl-dhtml-control.m
 ## <a name="see-also"></a>Consulte também
 
 [Suporte para controle DHTML](../atl/atl-support-for-dhtml-controls.md)
-

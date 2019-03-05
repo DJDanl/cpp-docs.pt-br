@@ -8,12 +8,12 @@ helpviewer_keywords:
 - agents, exception handling [Concurrency Runtime]
 - task groups, exception handling [Concurrency Runtime]
 ms.assetid: 4d1494fb-3089-4f4b-8cfb-712aa67d7a7a
-ms.openlocfilehash: 7611e9d3f0bbf961784c9fed23117750a101486f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8239913c369605503134a9ea4c99789528911868
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437863"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272627"
 ---
 # <a name="exception-handling-in-the-concurrency-runtime"></a>Tratamento de exceções no tempo de execução de simultaneidade
 
@@ -79,7 +79,7 @@ O tempo de execução encerra o aplicativo se uma tarefa gera uma exceção, e e
 
 A seção [as exceções geradas pelo tempo de execução](#runtime) este documento descreve como trabalhar com exceções de tempo de execução mais detalhadamente.
 
-[[Superior](#top)]
+[[Top](#top)]
 
 ##  <a name="task_groups"></a> Grupos de tarefas e algoritmos paralelos
 
@@ -102,9 +102,9 @@ Este exemplo gerencia a seguinte saída.
 X = 15, Y = 30Caught exception: point is NULL.
 ```
 
-Para obter um exemplo completo que usa o tratamento de exceções em um grupo de tarefas, consulte [como: usar tratamento de exceções para interromper um loop paralelo](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md).
+Para obter um exemplo completo que usa o tratamento de exceções em um grupo de tarefas, consulte [como: Use o tratamento de exceções para quebra de um loop paralelo](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md).
 
-[[Superior](#top)]
+[[Top](#top)]
 
 ##  <a name="runtime"></a> Exceções geradas pelo tempo de execução
 
@@ -124,7 +124,7 @@ The operation timed out.
 
 Para impedir o encerramento anormal do seu aplicativo, certifique-se de que seu código trate exceções quando chama o tempo de execução. Também manipula exceções ao chamar em código externo que usa o tempo de execução de simultaneidade, por exemplo, uma biblioteca de terceiros.
 
-[[Superior](#top)]
+[[Top](#top)]
 
 ##  <a name="multiple"></a> Várias exceções
 
@@ -140,19 +140,19 @@ O exemplo a seguir mostra a saída de exemplo para este exemplo.
 8293104567Caught exception: -5: the value is less than the minimum.
 ```
 
-[[Superior](#top)]
+[[Top](#top)]
 
 ##  <a name="cancellation"></a> Cancelamento
 
 Nem todas as exceções indicam um erro. Por exemplo, um algoritmo de pesquisa pode usar o tratamento de exceções para interromper a tarefa associada quando ele encontra o resultado. Para obter mais informações sobre como usar o mecanismo de cancelamento em seu código, consulte [cancelamento no PPL](../../parallel/concrt/cancellation-in-the-ppl.md).
 
-[[Superior](#top)]
+[[Top](#top)]
 
 ##  <a name="lwts"></a> Tarefas leves
 
 Uma tarefa leve é uma tarefa agendada diretamente de um [Concurrency:: Scheduler](../../parallel/concrt/reference/scheduler-class.md) objeto. Tarefas leves carregam menos sobrecarga do que as tarefas comuns. No entanto, o tempo de execução não capturará exceções que são geradas por tarefas leves. Em vez disso, a exceção é capturada pelo manipulador de exceção sem tratamento, que, por padrão, encerra o processo. Portanto, use um mecanismo de tratamento de erros apropriado em seu aplicativo. Para obter mais informações sobre tarefas leves, consulte [Agendador de tarefas](../../parallel/concrt/task-scheduler-concurrency-runtime.md).
 
-[[Superior](#top)]
+[[Top](#top)]
 
 ##  <a name="agents"></a> Agentes assíncronos
 
@@ -179,11 +179,11 @@ Este exemplo armazena exceções em um buffer de mensagem para que o outro compo
 
 Para obter mais informações sobre agentes assíncronos, consulte [agentes assíncronos](../../parallel/concrt/asynchronous-agents.md).
 
-[[Superior](#top)]
+[[Top](#top)]
 
 ##  <a name="summary"></a> Resumo
 
-[[Superior](#top)]
+[[Top](#top)]
 
 ## <a name="see-also"></a>Consulte também
 
@@ -193,4 +193,3 @@ Para obter mais informações sobre agentes assíncronos, consulte [agentes ass�
 [Cancelamento no PPL](cancellation-in-the-ppl.md)<br/>
 [Agendador de tarefas](../../parallel/concrt/task-scheduler-concurrency-runtime.md)<br/>
 [Agentes assíncronos](../../parallel/concrt/asynchronous-agents.md)
-

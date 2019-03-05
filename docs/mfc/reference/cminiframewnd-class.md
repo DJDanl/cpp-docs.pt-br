@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CMiniFrameWnd [MFC], Create
 - CMiniFrameWnd [MFC], CreateEx
 ms.assetid: b8f534ed-0532-4d8e-9657-5595cf677749
-ms.openlocfilehash: a6fdef34ba5873718caed509100cbe7e905d880d
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 70f090e2d9830ccfdd98640b54ff07440064d542
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693517"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293258"
 ---
 # <a name="cminiframewnd-class"></a>Classe CMiniFrameWnd
 
@@ -111,7 +111,7 @@ Aponta para uma cadeia de caracteres terminada em nulo que nomeia a classe Windo
 
 - Define a janela para o tamanho padrão e a posição, conforme indicado pelo Windows.
 
-*Sinalizador para liberação final*<br/>
+*lpWindowName*<br/>
 Aponta para uma cadeia de caracteres terminada em nulo que contém o nome da janela.
 
 *dwStyle*<br/>
@@ -129,7 +129,7 @@ Especifica os atributos de estilo de janela. Eles podem incluir os estilos de ja
 
 Ver [CWnd::Create](../../mfc/reference/cwnd-class.md#create) para obter uma descrição dos valores de estilo de janela possível. A combinação de típica usada para janelas com moldura mini é WS_POPUP&#124;WS_CAPTION&#124;WS_SYSMENU.
 
-*Rect*<br/>
+*rect*<br/>
 Um `RECT` especificando as dimensões desejadas da janela de estrutura.
 
 *pParentWnd*<br/>
@@ -169,13 +169,13 @@ Especifica o estilo estendido do `CMiniFrameWnd` que está sendo criado. Aplicar
 *lpClassName*<br/>
 Aponta para uma cadeia de caracteres terminada em nulo que nomeia a classe do Windows (um [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa) estrutura). O nome de classe pode ser qualquer nome registrado com global [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) função ou qualquer um dos nomes predefinidos de classe de controle. Ele não deve ser NULL.
 
-*Sinalizador para liberação final*<br/>
+*lpWindowName*<br/>
 Aponta para uma cadeia de caracteres terminada em nulo que contém o nome da janela.
 
 *dwStyle*<br/>
 Especifica os atributos de estilo de janela. Ver [estilos da janela](../../mfc/reference/styles-used-by-mfc.md#window-styles) e [CWnd::Create](../../mfc/reference/cwnd-class.md#create) para obter uma descrição dos possíveis valores.
 
-*Rect*<br/>
+*rect*<br/>
 O tamanho e posição da janela, em coordenadas do cliente do *pParentWnd*.
 
 *pParentWnd*<br/>

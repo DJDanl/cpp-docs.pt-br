@@ -8,12 +8,12 @@ helpviewer_keywords:
 - combo boxes [MFC], in rebar controls
 - rebar controls
 ms.assetid: 2c0aeec2-ffc3-44b8-97b5-0f56e116a338
-ms.openlocfilehash: 2749e4ec919e2014b3de50f1cd164ef66d2fa0ad
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 5e0a2e9d9eedd99bb2fca39f328c49d27fe7b6ce
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175438"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289163"
 ---
 # <a name="using-crebarctrl"></a>Usando CReBarCtrl
 
@@ -40,4 +40,3 @@ A ilustração a seguir mostra um controle rebar que tem duas faixas. Um contém
 ## <a name="see-also"></a>Consulte também
 
 [Controles](../mfc/controls-mfc.md)
-

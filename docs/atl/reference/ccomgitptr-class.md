@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComGITPtr class
 ms.assetid: af895acb-525a-4555-bb67-b241b7df515b
-ms.openlocfilehash: 36ef105b79da51348a61767117b637992e1f8c47
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bf509d027833610e4251c009d4e444dad3fdd5ce
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50557164"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296027"
 ---
 # <a name="ccomgitptr-class"></a>Classe CComGITPtr
 
@@ -44,7 +44,7 @@ O tipo do ponteiro da interface a ser armazenado no GIT.
 |Nome|Descrição|
 |----------|-----------------|
 |[CComGITPtr::CComGITPtr](#ccomgitptr)|O construtor.|
-|[CComGITPtr:: ~ CComGITPtr](#dtor)|O destruidor.|
+|[CComGITPtr::~CComGITPtr](#dtor)|O destruidor.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
@@ -123,7 +123,7 @@ CComGITPtr(CComGITPtr&& rv);
 *p*<br/>
 [in] Um ponteiro de interface a ser armazenado na tabela de interface global (GIT).
 
-*Git*<br/>
+*git*<br/>
 [in] Uma referência a um existente `CComGITPtr` objeto.
 
 *dwCookie*<br/>
@@ -138,7 +138,7 @@ Cria um novo `CComGITPtr` do objeto, usando opcionalmente uma existente `CComGIT
 
 O construtor utilizando *rv* é um construtor de movimentação. Os dados são movidos da fonte de *rv*e então *rv* está desmarcada.
 
-##  <a name="dtor"></a>  CComGITPtr:: ~ CComGITPtr
+##  <a name="dtor"></a>  CComGITPtr::~CComGITPtr
 
 O destruidor.
 
@@ -160,7 +160,7 @@ HRESULT CopyTo(T** pp) const throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*PP*<br/>
+*pp*<br/>
 O ponteiro que recebe a interface.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -231,7 +231,7 @@ CComGITPtr& operator= (CComGITPtr&& rv);
 *p*<br/>
 [in] Um ponteiro para uma interface.
 
-*Git*<br/>
+*git*<br/>
 [in] Uma referência a um `CComGITPtr` objeto.
 
 *dwCookie*<br/>

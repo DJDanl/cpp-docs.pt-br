@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - ATL projects, MFC support
 ms.assetid: f90b4276-cb98-4c11-902c-9ebcfe6f954b
-ms.openlocfilehash: 21e3305ce2d2968a3809793eb487317e224351f4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0aece6805f1de987b0164f405e50b99fd706fef4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50489382"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297301"
 ---
 # <a name="mfc-support-in-atl-projects"></a>Suporte do MFC em projetos ATL
 
@@ -55,4 +55,3 @@ Você pode exibir a classe de objeto de aplicativo e seu `InitInstance` e `ExitI
 [Adicionando uma classe](../../ide/adding-a-class-visual-cpp.md)<br/>
 [Criando um projeto ATL](../../atl/reference/creating-an-atl-project.md)<br/>
 [Configurações de projeto padrão da ATL](../../atl/reference/default-atl-project-configurations.md)
-

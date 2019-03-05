@@ -27,12 +27,12 @@ f1_keywords:
 helpviewer_keywords:
 - CRBTree class
 ms.assetid: a1b1cb63-38e4-4fc2-bb28-f774d1721760
-ms.openlocfilehash: a0f66e888220fbc5a4a484ddd37a3f28dff66065
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 59416000eecf4be25746d9dedd86ea2af116087a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50583268"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281329"
 ---
 # <a name="crbtree-class"></a>Classe CRBTree
 
@@ -83,7 +83,7 @@ O código usado para copiar ou mover elementos de valor.
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CRBTree:: ~ CRBTree](#dtor)|O destruidor.|
+|[CRBTree::~CRBTree](#dtor)|O destruidor.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
@@ -137,7 +137,7 @@ Os membros são da seguinte maneira:
 |`m_key`|O membro de dados armazenar o elemento-chave.|
 |`m_value`|O membro de dados armazenar o elemento de valor.|
 
-##  <a name="dtor"></a>  CRBTree:: ~ CRBTree
+##  <a name="dtor"></a>  CRBTree::~CRBTree
 
 O destruidor.
 
@@ -182,7 +182,7 @@ void GetAt(POSITION pos, KOUTARGTYPE key, VOUTARGTYPE value) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*POS*<br/>
+*pos*<br/>
 O valor da posição.
 
 *key*<br/>
@@ -239,7 +239,7 @@ const K& GetKeyAt(POSITION pos) const throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*POS*<br/>
+*pos*<br/>
 O valor da posição.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -261,7 +261,7 @@ CPair* GetNext(POSITION& pos) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*POS*<br/>
+*pos*<br/>
 O contador de posição, retornado por uma chamada anterior a métodos como [CRBTree::GetHeadPosition](#getheadposition) ou [CRBTree::FindFirstKeyAfter](#findfirstkeyafter).
 
 ### <a name="return-value"></a>Valor de retorno
@@ -285,7 +285,7 @@ void GetNextAssoc(
 
 ### <a name="parameters"></a>Parâmetros
 
-*POS*<br/>
+*pos*<br/>
 O contador de posição, retornado por uma chamada anterior a métodos como [CRBTree::GetHeadPosition](#getheadposition) ou [CRBTree::FindFirstKeyAfter](#findfirstkeyafter).
 
 *key*<br/>
@@ -308,7 +308,7 @@ const K& GetNextKey(POSITION& pos) const throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*POS*<br/>
+*pos*<br/>
 O contador de posição, retornado por uma chamada anterior a métodos como [CRBTree::GetHeadPosition](#getheadposition) ou [CRBTree::FindFirstKeyAfter](#findfirstkeyafter).
 
 ### <a name="return-value"></a>Valor de retorno
@@ -330,7 +330,7 @@ V& GetNextValue(POSITION& pos) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*POS*<br/>
+*pos*<br/>
 O contador de posição, retornado por uma chamada anterior a métodos como [CRBTree::GetHeadPosition](#getheadposition) ou [CRBTree::FindFirstKeyAfter](#findfirstkeyafter).
 
 ### <a name="return-value"></a>Valor de retorno
@@ -352,7 +352,7 @@ CPair* GetPrev(POSITION& pos) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*POS*<br/>
+*pos*<br/>
 O contador de posição, retornado por uma chamada anterior a métodos como [CRBTree::GetHeadPosition](#getheadposition) ou [CRBTree::FindFirstKeyAfter](#findfirstkeyafter).
 
 ### <a name="return-value"></a>Valor de retorno
@@ -390,7 +390,7 @@ V& GetValueAt(POSITION pos) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*POS*<br/>
+*pos*<br/>
 O contador de posição, retornado por uma chamada anterior a métodos como [CRBTree::GetHeadPosition](#getheadposition) ou [CRBTree::FindFirstKeyAfter](#findfirstkeyafter).
 
 ### <a name="return-value"></a>Valor de retorno
@@ -447,7 +447,7 @@ void RemoveAt(POSITION pos) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*POS*<br/>
+*pos*<br/>
 O contador de posição, retornado por uma chamada anterior a métodos como [CRBTree::GetHeadPosition](#getheadposition) ou [CRBTree::FindFirstKeyAfter](#findfirstkeyafter).
 
 ### <a name="remarks"></a>Comentários
@@ -464,7 +464,7 @@ void SetValueAt(POSITION pos, VINARGTYPE value);
 
 ### <a name="parameters"></a>Parâmetros
 
-*POS*<br/>
+*pos*<br/>
 O contador de posição, retornado por uma chamada anterior a métodos como [CRBTree::GetHeadPosition](#getheadposition) ou [CRBTree::FindFirstKeyAfter](#findfirstkeyafter).
 
 *value*<br/>

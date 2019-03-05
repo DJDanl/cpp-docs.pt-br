@@ -17,12 +17,12 @@ helpviewer_keywords:
 - DDX (dialog data exchange), DHtml helper macros
 - macros [MFC], DDX_DHtml helpers
 ms.assetid: c46302d2-ea43-4fea-bfc2-6f590d99f267
-ms.openlocfilehash: e2deed5e3fb63f46d83cf4c6f0d3c13525e93a2b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 90c80dbc5c8b6788f3afad3cf77d796139fbd946
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50592524"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326641"
 ---
 # <a name="ddxdhtml-helper-macros"></a>Macros auxiliares DDX_DHtml
 
@@ -58,7 +58,7 @@ DDX_DHtml_Anchor_Href(
 
 #### <a name="parameters"></a>Parâmetros
 
-*DX*<br/>
+*dx*<br/>
 Um ponteiro para um [CDataExchange](../../mfc/reference/cdataexchange-class.md) objeto.
 
 *name*<br/>
@@ -84,7 +84,7 @@ DDX_DHtml_Anchor_Target(
 
 #### <a name="parameters"></a>Parâmetros
 
-*DX*<br/>
+*dx*<br/>
 Um ponteiro para um [CDataExchange](../../mfc/reference/cdataexchange-class.md) objeto.
 
 *name*<br/>
@@ -110,7 +110,7 @@ DDX_DHtml_ElementInnerHtml(
 
 #### <a name="parameters"></a>Parâmetros
 
-*DX*<br/>
+*dx*<br/>
 Um ponteiro para um [CDataExchange](../../mfc/reference/cdataexchange-class.md) objeto.
 
 *name*<br/>
@@ -136,7 +136,7 @@ DDX_DHtml_ElementInnerText(
 
 #### <a name="parameters"></a>Parâmetros
 
-*DX*<br/>
+*dx*<br/>
 Um ponteiro para um [CDataExchange](../../mfc/reference/cdataexchange-class.md) objeto.
 
 *name*<br/>
@@ -162,7 +162,7 @@ DDX_DHtml_ElementValue(
 
 #### <a name="parameters"></a>Parâmetros
 
-*DX*<br/>
+*dx*<br/>
 Um ponteiro para um [CDataExchange](../../mfc/reference/cdataexchange-class.md) objeto.
 
 *name*<br/>
@@ -190,7 +190,7 @@ DDX_DHtml_Frame_Src(
 
 #### <a name="parameters"></a>Parâmetros
 
-*DX*<br/>
+*dx*<br/>
 Um ponteiro para um [CDataExchange](../../mfc/reference/cdataexchange-class.md) objeto.
 
 *name*<br/>
@@ -216,7 +216,7 @@ DDX_DHtml_IFrame_Src(
 
 #### <a name="parameters"></a>Parâmetros
 
-*DX*<br/>
+*dx*<br/>
 Um ponteiro para um [CDataExchange](../../mfc/reference/cdataexchange-class.md) objeto.
 
 *name*<br/>
@@ -242,7 +242,7 @@ DDX_DHtml_Img_Src(
 
 #### <a name="parameters"></a>Parâmetros
 
-*DX*<br/>
+*dx*<br/>
 Um ponteiro para um [CDataExchange](../../mfc/reference/cdataexchange-class.md) objeto.
 
 *name*<br/>

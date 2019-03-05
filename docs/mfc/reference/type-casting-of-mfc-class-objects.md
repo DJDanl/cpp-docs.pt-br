@@ -10,12 +10,12 @@ helpviewer_keywords:
 - casting types [MFC]
 - macros [MFC], casting pointers
 ms.assetid: e138465e-c35f-4e84-b788-bd200ccf2f0e
-ms.openlocfilehash: 42b668287905fc5f6e05a09949d53acc51c79026
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3107b860747bc2434ae9afca39b517d8dcc9eb01
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50584119"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299355"
 ---
 # <a name="type-casting-of-mfc-class-objects"></a>Conversão de tipo de objetos de classe MFC
 
@@ -72,7 +72,7 @@ O ponteiro a ser convertido em um ponteiro para um *class_name* objeto.
 
 *pobject* deve ser NULL ou apontar para um objeto de uma classe que deriva diretamente ou indiretamente, de *class_name*. Em compilações do seu aplicativo com o símbolo do pré-processador debug definido, a macro DECLARARÁ se *pobject* não for nulo, ou se ele apontar para um objeto que não é um "tipo de" da classe especificada no *class_name*parâmetro (consulte [CObject::IsKindOf](../../mfc/reference/cobject-class.md#iskindof)). Em não - **Debug** compilações, a macro executa a conversão sem nenhuma verificação de tipo.
 
-A classe especificada na *class_name* parâmetro deve ser derivado de `CObject` e deve usar o DECLARE_DYNAMIC e IMPLEMENT_DYNAMIC, o DECLARE_DYNCREATE e IMPLEMENT_DYNCREATE, ou o DECLARE_SERIAL e IMPLEMENT_ Macros SERIAL como explicado no artigo [classe CObject: derivando uma classe de CObject](../../mfc/deriving-a-class-from-cobject.md).
+A classe especificada na *class_name* parâmetro deve ser derivado de `CObject` e deve usar o DECLARE_DYNAMIC e IMPLEMENT_DYNAMIC, o DECLARE_DYNCREATE e IMPLEMENT_DYNCREATE, ou o DECLARE_SERIAL e IMPLEMENT_ Macros SERIAL como explicado no artigo [classe CObject: Derivando uma classe de CObject](../../mfc/deriving-a-class-from-cobject.md).
 
 Por exemplo, você pode converter um ponteiro para `CMyDoc`, chamado `pMyDoc`, em um ponteiro para `CDocument` usando esta expressão:
 
