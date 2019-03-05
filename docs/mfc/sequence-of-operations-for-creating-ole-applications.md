@@ -7,12 +7,12 @@ helpviewer_keywords:
 - applications [OLE], creating
 - applications [OLE]
 ms.assetid: 84b0f606-36c1-4253-9cea-44427f0074b9
-ms.openlocfilehash: b281cbeb4670af0efd232152010fdc90795af103
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b7fa989d1a3b799cf6b427e27142d4479be900bf
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437343"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57263566"
 ---
 # <a name="sequence-of-operations-for-creating-ole-applications"></a>Sequência de operações para criação de aplicativos OLE
 
@@ -32,4 +32,3 @@ A tabela a seguir mostra a sua função e a função da estrutura na criação d
 [Sequência de operações para compilar aplicativos MFC](../mfc/sequence-of-operations-for-building-mfc-applications.md)<br/>
 [Sequência de operações para criação de controles ActiveX](../mfc/sequence-of-operations-for-creating-activex-controls.md)<br/>
 [Sequência de operações para criação de aplicativos de banco de dados](../mfc/sequence-of-operations-for-creating-database-applications.md)
-

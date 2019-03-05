@@ -17,12 +17,12 @@ helpviewer_keywords:
 - CRecordView [MFC], OnMove
 - CRecordView [MFC], OnMove
 ms.assetid: 9b4b0897-bd50-4d48-a0b4-f3323f5ccc55
-ms.openlocfilehash: c7013fb53562fd76744bff19d1d37ce972a52d52
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a91a9e320b4221b04bbcf996ffa60f1de4b35ec5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50643853"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262461"
 ---
 # <a name="crecordview-class"></a>Classe CRecordView
 
@@ -62,7 +62,7 @@ class AFX_NOVTABLE CRecordView : public CFormView
 A exibição é um modo de exibição de formulário conectado diretamente a um `CRecordset` objeto. O modo de exibição é criado a partir de um recurso de modelo de caixa de diálogo e exibe os campos do `CRecordset` objeto nos controles do modelo de caixa de diálogo. O `CRecordView` objeto usa a troca de dados de caixa de diálogo (DDX) e registrar troca de campos (RFX) para automatizar a movimentação de dados entre os controles no formulário e os campos do conjunto de registros. `CRecordView` também fornece uma implementação padrão para a movimentação para o primeiro, próximo, anterior ou o último registro e uma interface para atualizar o registro no momento no modo de exibição.
 
 > [!NOTE]
->  Se você estiver trabalhando com as classes de objetos de acesso a dados (DAO) em vez das classes de conectividade de banco de dados aberto (ODBC), use a classe [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) em vez disso. Para obter mais informações, consulte o artigo [visão geral: banco de dados de programação](../../data/data-access-programming-mfc-atl.md).
+>  Se você estiver trabalhando com as classes de objetos de acesso a dados (DAO) em vez das classes de conectividade de banco de dados aberto (ODBC), use a classe [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) em vez disso. Para obter mais informações, consulte o artigo [visão geral: Programação de banco de dados](../../data/data-access-programming-mfc-atl.md).
 
 É a maneira mais comum para criar a exibição de registro com o Assistente de aplicativo. Assistente de aplicativo Tge cria a classe de exibição de registro e sua classe de conjunto de registros associado como parte do seu aplicativo de esqueleto starter. Se você não criar a classe de exibição de registro com o Assistente de aplicativo, você pode criá-lo mais tarde com ClassWizard. Se você simplesmente precisa de um único formulário, a abordagem do Assistente de aplicativo é mais fácil. ClassWizard permite que você decida usar uma exibição de registro mais tarde no processo de desenvolvimento. Usar ClassWizard para criar uma exibição de registro e um conjunto de registros separadamente e, em seguida, conectá-los é a abordagem mais flexível porque isso lhe dará mais controle para nomear a classe de conjunto de registros e seu. H /. Arquivos CPP. Essa abordagem também permite que você tenha vários modos de exibição de registro da mesma classe de conjunto de registros.
 
@@ -180,7 +180,7 @@ Um ponteiro para um `CRecordset`-objeto derivado, se o objeto foi criado com êx
 
 Você deve substituir essa função de membro para construir ou obter um objeto de conjunto de registros e retornar um ponteiro para ele. Se você declarar sua classe de exibição de registro com ClassWizard, o assistente grava uma substituição padrão para você. Implementação do padrão do ClassWizard retorna o ponteiro de conjunto de registros armazenado na exibição do registro, se houver. Se não, ele constrói um objeto de conjunto de registros do tipo especificado com ClassWizard e chama seu `Open` membro de função para abrir a tabela ou executar a consulta e, em seguida, retorna um ponteiro para o objeto.
 
-Para obter mais informações e exemplos, consulte o artigo [exibições de registro: usando uma exibição de registro](../../data/using-a-record-view-mfc-data-access.md).
+Para obter mais informações e exemplos, consulte o artigo [exibições de registro: Usando uma exibição de registro](../../data/using-a-record-view-mfc-data-access.md).
 
 ##  <a name="onmove"></a>  CRecordView::OnMove
 

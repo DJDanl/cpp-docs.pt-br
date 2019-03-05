@@ -114,12 +114,12 @@ helpviewer_keywords:
 - CRenderTarget [MFC], m_pRenderTarget
 - CRenderTarget [MFC], m_pTextFormatDefault
 ms.assetid: 30d1607d-68d3-4d14-ac36-fdbd0ef903a1
-ms.openlocfilehash: 3066f3308d0c7e5c9a04f7746585be9a9dd5bc9b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 112bd4422a1fa6b9b97239228dc586a0555ddc96
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588627"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259874"
 ---
 # <a name="crendertarget-class"></a>Classe CRenderTarget
 
@@ -138,7 +138,7 @@ class CRenderTarget : public CObject;
 |Nome|Descrição|
 |----------|-----------------|
 |[CRenderTarget::CRenderTarget](#crendertarget)|Constrói um objeto CRenderTarget.|
-|[CRenderTarget:: ~ CRenderTarget](#crendertarget__~crendertarget)|O destruidor. Chamado quando um objeto de destino de renderização está sendo destruído.|
+|[CRenderTarget::~CRenderTarget](#crendertarget__~crendertarget)|O destruidor. Chamado quando um objeto de destino de renderização está sendo destruído.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
@@ -204,7 +204,7 @@ class CRenderTarget : public CObject;
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CRenderTarget::operator ID2D1RenderTarget *](#operator_id2d1rendertarget_star)|Interface de ID2D1RenderTarget retorna|
+|[CRenderTarget::operator ID2D1RenderTarget*](#operator_id2d1rendertarget_star)|Interface de ID2D1RenderTarget retorna|
 
 ### <a name="protected-data-members"></a>Membros de dados protegidos
 
@@ -224,7 +224,7 @@ class CRenderTarget : public CObject;
 
 **Cabeçalho:** afxrendertarget.h
 
-##  <a name="_dtorcrendertarget"></a>  CRenderTarget:: ~ CRenderTarget
+##  <a name="_dtorcrendertarget"></a>  CRenderTarget::~CRenderTarget
 
 O destruidor. Chamado quando um objeto de destino de renderização está sendo destruído.
 
@@ -263,7 +263,7 @@ void Clear(D2D1_COLOR_F color);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Cor*<br/>
+*color*<br/>
 A cor à qual a área de desenho está desmarcada.
 
 ##  <a name="colorref_to_d2dcolor"></a>  CRenderTarget::COLORREF_TO_D2DCOLOR
@@ -278,14 +278,14 @@ static D2D1_COLOR_F COLORREF_TO_D2DCOLOR(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Cor*<br/>
+*color*<br/>
 Valor RGB.
 
 *nAlpha*
 
 ### <a name="return-value"></a>Valor de retorno
 
-Valor de D2D1_COLOR_F.
+D2D1_COLOR_F value.
 
 ##  <a name="createcompatiblerendertarget"></a>  CRenderTarget::CreateCompatibleRenderTarget
 
@@ -402,7 +402,7 @@ void DrawEllipse(
 
 ### <a name="parameters"></a>Parâmetros
 
-*elipse*<br/>
+*ellipse*<br/>
 A posição e o raio da elipse para desenhar, em pixels independentes de dispositivo.
 
 *pBrush*<br/>
@@ -510,7 +510,7 @@ void DrawRectangle(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Rect*<br/>
+*rect*<br/>
 As dimensões do retângulo a ser desenhada, em pixels independentes de dispositivo
 
 *pBrush*<br/>
@@ -567,13 +567,13 @@ void DrawText(
 *strText*<br/>
 Um ponteiro para uma matriz de caracteres Unicode para desenhar.
 
-*Rect*<br/>
+*rect*<br/>
 O tamanho e posição da área na qual o texto é desenhado.
 
 *pForegroundBrush*<br/>
 O pincel usado para pintar o texto.
 
-*TextFormat*<br/>
+*textFormat*<br/>
 Um objeto que descreve a formatação de detalhes de desenhar o texto, como a fonte, o tamanho da fonte e a direção do fluxo.
 
 *options*<br/>
@@ -632,7 +632,7 @@ void FillEllipse(
 
 ### <a name="parameters"></a>Parâmetros
 
-*elipse*<br/>
+*ellipse*<br/>
 A posição e o radius, em pixels independentes de dispositivo, da elipse para pintar.
 
 *pBrush*<br/>
@@ -720,7 +720,7 @@ void FillRectangle(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Rect*<br/>
+*rect*<br/>
 A dimensão do retângulo para pintar, em pixels independentes de dispositivo.
 
 *pBrush*<br/>
@@ -955,7 +955,7 @@ Um ponteiro para objeto CD2DTextFormat que contém um formato de texto padrão.
 CD2DTextFormat* m_pTextFormatDefault;
 ```
 
-##  <a name="operator_id2d1rendertarget_star"></a>  CRenderTarget::operator ID2D1RenderTarget *
+##  <a name="operator_id2d1rendertarget_star"></a>  CRenderTarget::operator ID2D1RenderTarget*
 
 Interface de ID2D1RenderTarget retorna
 
@@ -1016,7 +1016,7 @@ void PushLayer(
 *layerParameters*<br/>
 O conteúdo limites, máscara geométrica, opacidade, máscara de opacidade e suavização as opções da camada.
 
-*Camada*<br/>
+*layer*<br/>
 A camada que recebe as operações de desenho subsequentes.
 
 ##  <a name="restoredrawingstate"></a>  CRenderTarget::RestoreDrawingState

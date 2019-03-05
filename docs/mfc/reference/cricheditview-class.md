@@ -100,12 +100,12 @@ helpviewer_keywords:
 - CRichEditView [MFC], m_nBulletIndent
 - CRichEditView [MFC], m_nWordWrap
 ms.assetid: bd576b10-4cc0-4050-8f76-e1a0548411e4
-ms.openlocfilehash: 8cfaef2c8b064cb9faa8c0f6bf65a8868eed7cc7
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 9cedcfbfb662d7d4d635a02b82ea45828c54b958
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178734"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259510"
 ---
 # <a name="cricheditview-class"></a>Classe CRichEditView
 
@@ -263,7 +263,7 @@ void DoPaste(
 *dataobj*<br/>
 O [COleDataObject](../../mfc/reference/coledataobject-class.md) que contém os dados para colar.
 
-*CF*<br/>
+*cf*<br/>
 O formato desejado da área de transferência.
 
 *hMetaPict*<br/>
@@ -298,7 +298,7 @@ Indica se a pesquisa diferencia maiusculas de minúsculas.
 *bWord*<br/>
 Indica se a pesquisa deve coincidir palavra inteira, não as partes de palavras.
 
-*bAvançar*<br/>
+*bNext*<br/>
 Indica a direção da pesquisa. Se for TRUE, a direção de pesquisa é na direção do final do buffer. Se for FALSE, a direção de pesquisa é em direção ao início do buffer.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -336,7 +336,7 @@ Indica se a pesquisa diferencia maiusculas de minúsculas.
 *bWord*<br/>
 Indica se a pesquisa deve coincidir palavra inteira, não as partes de palavras.
 
-*bAvançar*<br/>
+*bNext*<br/>
 Indica a direção da pesquisa. Se for TRUE, a direção de pesquisa é na direção do final do buffer. Se for FALSE, a direção de pesquisa é em direção ao início do buffer.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -683,7 +683,7 @@ static BOOL AFX_CDECL IsRichEditFormat(CLIPFORMAT cf);
 
 ### <a name="parameters"></a>Parâmetros
 
-*CF*<br/>
+*cf*<br/>
 O formato da área de transferência de interesse.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -786,7 +786,7 @@ virtual void OnFindNext(
 *lpszFind*<br/>
 A cadeia de caracteres para localizar.
 
-*bAvançar*<br/>
+*bNext*<br/>
 A direção de pesquisa: TRUE indica para baixo; FALSE, para cima.
 
 *bCase*<br/>
@@ -932,7 +932,7 @@ virtual void OnReplaceSel(
 *lpszFind*<br/>
 O texto a ser substituído.
 
-*bAvançar*<br/>
+*bNext*<br/>
 Indica a direção da pesquisa: TRUE se for pressionada; FALSE, para cima.
 
 *bCase*<br/>
@@ -1159,7 +1159,7 @@ void SetCharFormat(CHARFORMAT2 cf);
 
 ### <a name="parameters"></a>Parâmetros
 
-*CF*<br/>
+*cf*<br/>
 [CHARFORMAT2](/windows/desktop/api/richedit/ns-richedit-charformat2a) estrutura que contém o caractere padrão novos atributos de formatação.
 
 ### <a name="remarks"></a>Comentários

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CAnimationVariableChangeHandler [MFC], OnValueChanged
 - CAnimationVariableChangeHandler [MFC], SetAnimationController
 ms.assetid: 2ea4996d-5c04-4dfc-be79-d42d55050795
-ms.openlocfilehash: 589691f8bb2bc14eba46245082ff972ca6b97fcc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 92189ce5ea76811496d4462aa4254bbd03ebb219
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50604347"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57257599"
 ---
 # <a name="canimationvariablechangehandler-class"></a>Classe CAnimationVariableChangeHandler
 

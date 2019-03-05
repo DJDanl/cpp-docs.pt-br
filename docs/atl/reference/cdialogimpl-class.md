@@ -17,12 +17,12 @@ helpviewer_keywords:
 - dialog boxes, ATL
 - CDialogImpl class
 ms.assetid: d430bc7b-8a28-4ad3-9507-277bdd2c2c2e
-ms.openlocfilehash: b4844ed2246b5e700d9dc1895c3292cdde4efe8b
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: f44b7df7f1e4051f3cb07445952620861965f1d2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178142"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57263410"
 ---
 # <a name="cdialogimpl-class"></a>Classe CDialogImpl
 
@@ -44,7 +44,7 @@ template <class T,
 *T*<br/>
 Sua classe, derivada de `CDialogImpl`.
 
-*Tdígitos de base*<br/>
+*TBase*<br/>
 A classe base da sua nova classe. A classe base padrão é [CWindow](../../atl/reference/cwindow-class.md).
 
 ## <a name="members"></a>Membros
@@ -204,7 +204,7 @@ INT_PTR DoModal(
 
 ### <a name="return-value"></a>Valor de retorno
 
-Se for bem-sucedido, o valor de *nRetCode* parâmetro especificado na chamada para [EndDialog](#enddialog). Caso contrário, -1.
+Se for bem-sucedido, o valor de *nRetCode* parâmetro especificado na chamada para [EndDialog](#enddialog). Otherwise, -1.
 
 ### <a name="remarks"></a>Comentários
 
