@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CRecentFileList [MFC], UpdateMenu
 - CRecentFileList [MFC], WriteList
 ms.assetid: a77f0524-7584-4582-849a-7e97b76d186e
-ms.openlocfilehash: e38f63090e3de2a73c60618a36d25a397d595dac
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.openlocfilehash: 30536d91d057de4e551b5a28200dd903e12713b3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657416"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304828"
 ---
 # <a name="crecentfilelist-class"></a>Classe CRecentFileList
 
@@ -115,7 +115,7 @@ Especifica um ponteiro para o Shell do Item a ser adicionado à lista.
 *pLink*<br/>
 Especifica um ponteiro para o Shell do Link a ser adicionado à lista.
 
-*PIDL*<br/>
+*pidl*<br/>
 Especifica o IDLIST para o item de shell que deve ser adicionado à pasta de documentos recentes.
 
 ### <a name="remarks"></a>Comentários
@@ -137,7 +137,7 @@ CRecentFileList(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Ncomeçar*<br/>
+*nStart*<br/>
 Deslocamento para a numeração na tela do menu de lista de arquivos MRU (recentemente usado).
 
 *lpszSection*<br/>
@@ -206,7 +206,7 @@ int GetSize() const;
 
 O número de arquivos atual usados mais recentemente a lista de arquivos (MRU).
 
-##  <a name="operator_at"></a>  [CRecentFileList::operator]
+##  <a name="operator_at"></a>  CRecentFileList::operator [ ]
 
 O subscrito sobrecarregado (`[]`) operador retorna uma única `CString` especificado pelo índice baseado em zero na *nIndex*.
 
@@ -264,4 +264,3 @@ virtual void WriteList();
 ## <a name="see-also"></a>Consulte também
 
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)
-

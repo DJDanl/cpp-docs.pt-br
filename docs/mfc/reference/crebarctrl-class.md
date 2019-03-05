@@ -98,12 +98,12 @@ helpviewer_keywords:
 - CReBarCtrl [MFC], ShowBand
 - CReBarCtrl [MFC], SizeToRect
 ms.assetid: 154570d7-e48c-425d-8c7e-c64542bcb4cc
-ms.openlocfilehash: 072fcec4944088ab087a6a39c7d8b916c3bc80e2
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: f1e9c6e4505c67b881d479817ec8b45e4ae5dc8b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52177024"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304542"
 ---
 # <a name="crebarctrl-class"></a>Classe CReBarCtrl
 
@@ -254,7 +254,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Especifica a combinação de estilos de controle rebar aplicado ao controle. Ver [estilos de controle Rebar](/windows/desktop/Controls/rebar-control-styles) no SDK do Windows para obter uma lista de estilos com suporte.
 
-*Rect*<br/>
+*rect*<br/>
 Uma referência a um [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto ou [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura, que é a posição e o tamanho do controle rebar.
 
 *pParentWnd*<br/>
@@ -302,7 +302,7 @@ Especifica o estilo estendido do controle que está sendo criado. Para obter uma
 *dwStyle*<br/>
 Especifica a combinação de estilos de controle rebar aplicado ao controle. Para obter uma lista de estilos com suporte, consulte [estilos de controle Rebar](/windows/desktop/Controls/rebar-control-styles) no SDK do Windows.
 
-*Rect*<br/>
+*rect*<br/>
 Uma referência a um [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura que descreve o tamanho e posição da janela a ser criado, em coordenadas do cliente do *pParentWnd*.
 
 *pParentWnd*<br/>
@@ -388,7 +388,7 @@ void GetBandBorders(
 *uBand*<br/>
 Índice baseado em zero da faixa para que as bordas serão recuperadas.
 
-*República Popular da China*<br/>
+*prc*<br/>
 Um ponteiro para um [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura que receberá as bordas de banda. Se o controle rebar tem o estilo RBS_BANDBORDERS, cada membro desta estrutura receberá o número de pixels, do lado correspondente de banda, que constituem a borda. Se o controle rebar não tem o estilo RBS_BANDBORDERS, somente o membro à esquerda desta estrutura recebe informações válidas. Para obter uma descrição dos estilos de controle rebar, consulte [estilos de controle Rebar](/windows/desktop/Controls/rebar-control-styles) no SDK do Windows.
 
 ##  <a name="getbandcount"></a>  CReBarCtrl::GetBandCount
@@ -493,7 +493,7 @@ BOOL GetColorScheme(COLORSCHEME* lpcs);
 
 ### <a name="parameters"></a>Parâmetros
 
-*denominado LPC*<br/>
+*lpcs*<br/>
 Um ponteiro para um [COLORSCHEME](/windows/desktop/api/commctrl/ns-commctrl-tagcolorscheme) estrutura, conforme descrito no SDK do Windows.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -583,7 +583,7 @@ BOOL GetRect(
 *uBand*<br/>
 Índice baseado em zero de uma faixa em um controle rebar.
 
-*República Popular da China*<br/>
+*prc*<br/>
 Um ponteiro para um [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura que receberá os limites da faixa de rebar.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -776,7 +776,7 @@ BOOL MoveBand(
 *uFrom*<br/>
 Índice baseado em zero da faixa a ser movido.
 
-*ultar automaticamente*<br/>
+*uTo*<br/>
 Índice baseado em zero da nova posição de banda. Esse valor de parâmetro nunca deve ser maior que o número de faixas menos um. Para obter o número de faixas, chame [GetBandCount](#getbandcount).
 
 ### <a name="return-value"></a>Valor de retorno
@@ -916,7 +916,7 @@ COLORREF SetBkColor(COLORREF clr);
 
 ### <a name="parameters"></a>Parâmetros
 
-*CLR*<br/>
+*clr*<br/>
 O valor COLORREF que representa a nova cor de plano de fundo padrão.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -937,7 +937,7 @@ void SetColorScheme(const COLORSCHEME* lpcs);
 
 ### <a name="parameters"></a>Parâmetros
 
-*denominado LPC*<br/>
+*lpcs*<br/>
 Um ponteiro para um [COLORSCHEME](/windows/desktop/api/commctrl/ns-commctrl-tagcolorscheme) estrutura, conforme descrito no SDK do Windows.
 
 ### <a name="remarks"></a>Comentários
@@ -958,7 +958,7 @@ DWORD SetExtendedStyle(
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|*dwMask*|[in] Uma combinação bit a bit (OR) de sinalizadores que especificam quais sinalizadores na *dwStyleEx* parâmetro se aplica. Use um ou mais dos seguintes valores:<br /><br /> RBS_EX_SPLITTER: Por padrão, mostra o separador na parte inferior no modo horizontal e à direita no modo vertical.<br /><br /> RBS_EX_TRANSPARENT: Encaminhar o [WM_ERASEBKGND](/windows/desktop/winmsg/wm-erasebkgnd) mensagem para a janela pai.|
+|*dwMask*|[in] Uma combinação bit a bit (OR) de sinalizadores que especificam quais sinalizadores na *dwStyleEx* parâmetro se aplica. Use um ou mais dos seguintes valores:<br /><br /> RBS_EX_SPLITTER: Por padrão, mostra o separador na parte inferior no modo horizontal e à direita no modo vertical.<br /><br /> RBS_EX_TRANSPARENT: Encaminhar os [WM_ERASEBKGND](/windows/desktop/winmsg/wm-erasebkgnd) mensagem para a janela pai.|
 |*dwStyleEx*|[in] Uma combinação bit a bit (OR) de sinalizadores que especificam os estilos a ser aplicado. Para definir um estilo, especifique o mesmo sinalizador é usado na *dwMask* parâmetro. Para redefinir um estilo, especifique zero binário.|
 
 ### <a name="return-value"></a>Valor de retorno
@@ -996,7 +996,7 @@ CWnd* SetOwner(CWnd* pWnd);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Apropriei*<br/>
+*pWnd*<br/>
 Um ponteiro para um `CWnd` objeto a ser definido como o proprietário do controle rebar.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1041,7 +1041,7 @@ COLORREF SetTextColor(COLORREF clr);
 
 ### <a name="parameters"></a>Parâmetros
 
-*CLR*<br/>
+*clr*<br/>
 Um valor COLORREF que representa o novo texto cor no `CReBarCtrl` objeto.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1122,7 +1122,7 @@ BOOL SizeToRect(CRect& rect);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Rect*<br/>
+*rect*<br/>
 Uma referência a um [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto que especifica o retângulo que controle rebar deve ser dimensionado para.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1137,4 +1137,3 @@ Observe que essa função membro usa uma `CRect` objeto como um parâmetro, em v
 
 [Classe CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)
-

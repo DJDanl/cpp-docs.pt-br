@@ -47,12 +47,12 @@ helpviewer_keywords:
 - NM_RDBLCLK notification [MFC]
 - TBN_GETBUTTONINFO notification [MFC]
 ms.assetid: 219ea08e-7515-4b98-85cb-47120f08c0a2
-ms.openlocfilehash: f73e6ef070177f39bdf2e0736660f8eb963727ab
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dc34f3eaa4b085b9d8acbaf47b21cf1825627100
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462728"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303638"
 ---
 # <a name="handling-customization-notifications"></a>Manipulando notificações de personalização
 
@@ -120,7 +120,7 @@ typedef struct tagNMHDR {
 
    Identificador do controle que está enviando a notificação.
 
-- **Código**
+- **code**
 
    Código de notificação. Esse membro pode ser um valor específico para um tipo de controle, tal como **TBN_BEGINADJUST** ou **TTN_NEEDTEXT**, ou pode ser um dos valores de notificação comuns listados abaixo:
 
@@ -152,7 +152,7 @@ typedef struct {
 } TBNOTIFY, FAR* LPTBNOTIFY;
 ```
 
-- **HDR**
+- **hdr**
 
    Informações comuns a todos os **WM_NOTIFY** mensagens.
 
@@ -218,4 +218,3 @@ As notificações que envia a barra de ferramentas são da seguinte maneira:
 
 [Usando CToolBarCtrl](../mfc/using-ctoolbarctrl.md)<br/>
 [Controles](../mfc/controls-mfc.md)
-

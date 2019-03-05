@@ -6,12 +6,12 @@ helpviewer_keywords:
 - common controls [MFC]
 - controls [MFC]
 ms.assetid: b2842884-6435-4b8f-933b-21671bf8af95
-ms.openlocfilehash: fe427b2330441b5d9d38a8947ded85dedbb4e086
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c0738128d20839046e0885e7489b494d84349e4d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50472703"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304529"
 ---
 # <a name="controls-mfc"></a>Controles (MFC)
 
@@ -57,19 +57,19 @@ A tabela a seguir descreve resumidamente cada um dos controles comuns do Windows
 |[seletor de data e hora](../mfc/using-cdatetimectrl.md)|[CDateTimeCtrl](../mfc/reference/cdatetimectrl-class.md)|Permite que o usuário escolha uma data específica ou um valor de tempo|Sim|
 |Caixa de edição|[CEdit](../mfc/reference/cedit-class.md)|Caixas para inserir texto|Não|
 |[caixa de combinação estendida](../mfc/using-ccomboboxex.md)|[CComboBoxEx](../mfc/reference/ccomboboxex-class.md)|Um controle de caixa de combinação com a capacidade de exibir imagens|Sim|
-|[Cabeçalho](../mfc/using-cheaderctrl.md)|[CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)|Botão que aparece acima de uma coluna de texto; Controla a largura do texto exibido|Sim|
+|[header](../mfc/using-cheaderctrl.md)|[CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)|Botão que aparece acima de uma coluna de texto; Controla a largura do texto exibido|Sim|
 |[hotkey](../mfc/using-chotkeyctrl.md)|[CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md)|Janela que permite que o usuário crie uma "chave hot" para executar uma ação rapidamente|Sim|
 |[lista de imagens](../mfc/using-cimagelist.md)|[CImageList](../mfc/reference/cimagelist-class.md)|Coleção de imagens usadas para gerenciar grandes conjuntos de ícones ou bitmaps (lista de imagens não é um controle; ele dá suporte a listas usadas por outros controles)|Sim|
 |[list](../mfc/using-clistctrl.md)|[CListCtrl](../mfc/reference/clistctrl-class.md)|Janela que exibe uma lista de texto com ícones|Sim|
 |Caixa de listagem|[CListBox](../mfc/reference/clistbox-class.md)|Caixa que contém uma lista de cadeias de caracteres|Não|
 |[Calendário mensal](../mfc/using-cmonthcalctrl.md)|[CMonthCalCtrl](../mfc/reference/cmonthcalctrl-class.md)|Controle que exibe informações de data|Sim|
-|[Progresso](../mfc/using-cprogressctrl.md)|[CProgressCtrl](../mfc/reference/cprogressctrl-class.md)|Janela que indica o progresso de uma operação longa|Sim|
+|[progress](../mfc/using-cprogressctrl.md)|[CProgressCtrl](../mfc/reference/cprogressctrl-class.md)|Janela que indica o progresso de uma operação longa|Sim|
 |[rebar](../mfc/using-crebarctrl.md)|[CRebarCtrl](../mfc/reference/crebarctrl-class.md)|Barra de ferramentas que pode conter windows filho adicionais na forma de controles|Sim|
 |[Edição avançada](../mfc/using-cricheditctrl.md)|[CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)|Janela em que o usuário pode editar com o caractere e formatação de parágrafo (consulte [Classes relacionadas para os controles de edição de Rich](../mfc/classes-related-to-rich-edit-controls.md))|Sim|
 |barra de rolagem|[CScrollBar](../mfc/reference/cscrollbar-class.md)|Barra de rolagem usada como um controle dentro de uma caixa de diálogo (não em uma janela)|Não|
 |[slider](../mfc/using-csliderctrl.md)|[CSliderCtrl](../mfc/reference/csliderctrl-class.md)|Janela que contém um controle deslizante com marcas de seleção opcionais|Sim|
 |[botão de rotação](../mfc/using-cspinbuttonctrl.md)|[CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md)|Par de usuário de botões de seta pode clicar para incrementar ou decrementar um valor|Sim|
-|texto estático|[CStatic](../mfc/reference/cstatic-class.md)|Texto para outros controles de rotulação|Não|
+|static-text|[CStatic](../mfc/reference/cstatic-class.md)|Texto para outros controles de rotulação|Não|
 |[Barra de status](../mfc/using-cstatusbarctrl.md)|[CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md)|Janela para exibir informações de status, semelhantes à classe do MFC `CStatusBar`|Sim|
 |[tab](../mfc/using-ctabctrl.md)|[CTabCtrl](../mfc/reference/ctabctrl-class.md)|Análogo aos divisores de um bloco de anotações; usado em "caixas de diálogo de guia" ou folhas de propriedades|Sim|
 |[toolbar](../mfc/using-ctoolbarctrl.md)|[CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)|Botões de janela com a geração de comando, semelhante à classe do MFC `CToolBar`|Sim|
@@ -108,4 +108,3 @@ Para obter informações sobre controles comuns do Windows no SDK do Windows, co
 
 [Elementos da Interface do usuário](../mfc/user-interface-elements-mfc.md)<br/>
 [Editor de caixa de diálogo](../windows/dialog-editor.md)
-

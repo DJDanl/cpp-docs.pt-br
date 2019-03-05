@@ -1,5 +1,5 @@
 ---
-title: 'tela de fundo OLE: contêineres e servidores'
+title: 'Tela de fundo OLE: Contêineres e servidores'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - OLE full-server applications [MFC]
@@ -14,16 +14,16 @@ helpviewer_keywords:
 - containers [MFC], OLE container applications
 - server applications [MFC]
 ms.assetid: dafbb31d-096c-4654-b774-12900d832919
-ms.openlocfilehash: 3c696f1e99a73cbce6f1ff749de937297b28d88b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c154562e58cf8f37d77df61556fe25b19ca54c70
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50616919"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304815"
 ---
-# <a name="ole-background-containers-and-servers"></a>tela de fundo OLE: contêineres e servidores
+# <a name="ole-background-containers-and-servers"></a>Tela de fundo OLE: Contêineres e servidores
 
-Um aplicativo de contêiner é um aplicativo que pode incorporar itens inseridos ou vinculados em seus próprios documentos. Os documentos gerenciados por um aplicativo de contêiner devem ser capazes de armazenar e exibir componentes de documento OLE, bem como os dados criados pelo próprio aplicativo. Um aplicativo de contêiner também deve permitir que os usuários a inserir novos itens ou editar itens existentes por meio da ativação de aplicativos de servidor quando necessário. Os requisitos de interface do usuário de um aplicativo de contêiner estão listados no artigo [contêineres: emissões de Interface do usuário](../mfc/containers-user-interface-issues.md).
+Um aplicativo de contêiner é um aplicativo que pode incorporar itens inseridos ou vinculados em seus próprios documentos. Os documentos gerenciados por um aplicativo de contêiner devem ser capazes de armazenar e exibir componentes de documento OLE, bem como os dados criados pelo próprio aplicativo. Um aplicativo de contêiner também deve permitir que os usuários a inserir novos itens ou editar itens existentes por meio da ativação de aplicativos de servidor quando necessário. Os requisitos de interface do usuário de um aplicativo de contêiner estão listados no artigo [contêineres: Problemas da Interface do usuário](../mfc/containers-user-interface-issues.md).
 
 Um servidor de aplicativo ou componente é um aplicativo que pode criar componentes de documento OLE para uso por aplicativos de contêiner. Aplicativos de servidor geralmente oferecem suporte a arrastar e soltar ou copiar seus dados na área de transferência, de modo que um aplicativo de contêiner pode inserir os dados como um item vinculado ou inserido. Um aplicativo pode ser um contêiner e um servidor.
 
@@ -36,9 +36,8 @@ Usando esse meios de comunicação, um contêiner não precisa saber os detalhes
 ## <a name="see-also"></a>Consulte também
 
 [Tela de fundo OLE](../mfc/ole-background.md)<br/>
-[Tela de fundo OLE: implementação de MFC](../mfc/ole-background-mfc-implementation.md)<br/>
+[Tela de fundo OLE: Implementação do MFC](../mfc/ole-background-mfc-implementation.md)<br/>
 [Contêineres](../mfc/containers.md)<br/>
 [Servidores](../mfc/servers.md)<br/>
-[Contêineres: itens clientes](../mfc/containers-client-items.md)<br/>
-[Servidores: itens de servidor](../mfc/servers-server-items.md)
-
+[Contêineres: Itens de cliente](../mfc/containers-client-items.md)<br/>
+[servidores: Itens do servidor](../mfc/servers-server-items.md)
