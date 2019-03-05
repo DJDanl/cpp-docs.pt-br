@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - lightweight tasks
 ms.assetid: b6dcfc7a-9fa9-4144-96a6-2845ea272017
-ms.openlocfilehash: 7e155b82e963e7bf3f19fa44c66e4c22b8c602e6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 19918cf73c2b5b03db895c4751b22b1666ce01de
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481426"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326680"
 ---
 # <a name="lightweight-tasks"></a>Tarefas Leves
 
@@ -26,10 +26,9 @@ Para criar uma tarefa leve, chame o [concurrency::ScheduleGroup::ScheduleTask](r
 
 ## <a name="example"></a>Exemplo
 
-Para obter um exemplo que demonstra como adaptar o código existente para usar uma tarefa leve, consulte [instruções passo a passo: adaptando o código existente para usar tarefas leves](../../parallel/concrt/walkthrough-adapting-existing-code-to-use-lightweight-tasks.md).
+Para obter um exemplo que demonstra como adaptar o código existente para usar uma tarefa leve, consulte [passo a passo: Adaptando um código existente para usar tarefas leves](../../parallel/concrt/walkthrough-adapting-existing-code-to-use-lightweight-tasks.md).
 
 ## <a name="see-also"></a>Consulte também
 
 [Agendador de tarefas](../../parallel/concrt/task-scheduler-concurrency-runtime.md)<br/>
-[Instruções passo a passo: adaptando um código existente para usar tarefas leves](../../parallel/concrt/walkthrough-adapting-existing-code-to-use-lightweight-tasks.md)
-
+[Passo a passo: Adaptando um código existente para usar tarefas leves](../../parallel/concrt/walkthrough-adapting-existing-code-to-use-lightweight-tasks.md)

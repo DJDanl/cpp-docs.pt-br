@@ -166,12 +166,12 @@ helpviewer_keywords:
 - CMFCPropertyGridProperty [MFC], m_strFormatLong
 - CMFCPropertyGridProperty [MFC], m_strFormatShort
 ms.assetid: 36f3fabe-0efe-468b-8a0b-5a7956db38a2
-ms.openlocfilehash: f7a8cca3da85e3ac0b7b7e63e83d394a0e8a9899
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 550f238ae66bcaf7d5afc245b709c42c78769949
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50524717"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305062"
 ---
 # <a name="cmfcpropertygridproperty-class"></a>Classe CMFCPropertyGridProperty
 
@@ -406,7 +406,7 @@ void AllowEdit(BOOL bAllow=TRUE);
 
 ### <a name="parameters"></a>Parâmetros
 
-*bPermitir*<br/>
+*bAllow*<br/>
 [in] TRUE para tornar a propriedade editável; FALSE para tornar a propriedade somente leitura. O valor padrão é TRUE.
 
 ### <a name="remarks"></a>Comentários
@@ -477,7 +477,7 @@ virtual CComboBox* CreateCombo(
 *pWndParent*<br/>
 [in] Ponteiro para a janela pai da caixa de combinação.
 
-*Rect*<br/>
+*rect*<br/>
 [in] O retângulo delimitador da caixa de combinação.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -545,7 +545,7 @@ void Enable(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>Parâmetros
 
-*bAtivar*<br/>
+*bEnable*<br/>
 [in] TRUE para habilitar a propriedade; FALSE para desabilitar a propriedade. Propriedades desabilitadas não respondem ao mouse ou teclado de entrada. O valor padrão é TRUE.
 
 ### <a name="remarks"></a>Comentários
@@ -563,13 +563,13 @@ void EnableSpinControl(
 
 ### <a name="parameters"></a>Parâmetros
 
-*bAtivar*<br/>
+*bEnable*<br/>
 [in] True para habilitar o controle de botão de rotação; FALSE para desabilitar o controle de botão de rotação. O valor padrão é TRUE.
 
-*Nmín*<br/>
+*nMin*<br/>
 [in] O valor mínimo do controle de botão de rotação. O valor padrão é 0.
 
-*Nmáx*<br/>
+*nMax*<br/>
 [in] O valor máximo do controle de botão de rotação. O valor padrão é 0.
 
 ### <a name="remarks"></a>Comentários
@@ -880,7 +880,7 @@ CMFCPropertyGridProperty* HitTest(
 
 ### <a name="parameters"></a>Parâmetros
 
-*ponto*<br/>
+*point*<br/>
 [in] O ponto de teste, nas coordenadas do cliente. Normalmente, esse parâmetro é o local atual do ponteiro do mouse.
 
 *pt*<br/>
@@ -1129,7 +1129,7 @@ virtual void OnClickButton(CPoint point);
 
 ### <a name="parameters"></a>Parâmetros
 
-*ponto*<br/>
+*point*<br/>
 [in] Um ponto, nas coordenadas do cliente.
 
 ### <a name="remarks"></a>Comentários
@@ -1169,7 +1169,7 @@ virtual BOOL OnClickValue(
 *uiMsg*<br/>
 [in] Uma mensagem de mouse.
 
-*ponto*<br/>
+*point*<br/>
 [in] Um ponto, nas coordenadas do cliente.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1224,7 +1224,7 @@ virtual BOOL OnDblClk(CPoint point);
 
 ### <a name="parameters"></a>Parâmetros
 
-*ponto*<br/>
+*point*<br/>
 [in] Um ponto, nas coordenadas do cliente.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1280,7 +1280,7 @@ virtual void OnDrawDescription(
 *pDC*<br/>
 [in] Um ponteiro para um contexto de dispositivo.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Um retângulo delimitador que especifica o local desenhar a descrição da propriedade.
 
 ### <a name="remarks"></a>Comentários
@@ -1324,7 +1324,7 @@ virtual void OnDrawName(
 *pDC*<br/>
 [in] Um ponteiro para um contexto de dispositivo.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Um retângulo delimitador que especifica o local desenhar o nome da propriedade.
 
 ### <a name="remarks"></a>Comentários
@@ -1344,7 +1344,7 @@ virtual void OnDrawValue(
 *pDC*<br/>
 [in] Um ponteiro para um contexto de dispositivo.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Um retângulo delimitador que especifica o local desenhar o valor da propriedade.
 
 ### <a name="remarks"></a>Comentários
@@ -1501,7 +1501,7 @@ TRUE se a propriedade atual é um tipo variante ou uma lista de valores, e esse 
 
 ### <a name="remarks"></a>Comentários
 
-Este método suporta os seguintes tipos de variante: VT_INT, VT_I2, VT_I4, VT_UINT, VT_UI1, VT_UI2, VT_UI4, VT_R4, VT_R8 e VT_BSTR.
+Este método suporta os seguintes tipos de variante: VT_INT, VT_I2, VT_I4, VT_UINT, VT_UI1, VT_UI2, VT_UI4, VT_R4, VT_R8, and VT_BSTR.
 
 ##  <a name="onsetselection"></a>  CMFCPropertyGridProperty::OnSetSelection
 
@@ -1550,7 +1550,7 @@ TRUE se a operação de edição continua; Caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-Esse método dá suporte a uma propriedade que é uma lista de valores ou um dos seguintes tipos de variante: VT_INT, VT_I2, VT_I4, VT_UINT, VT_UI1, VT_UI2, VT_UI4, VT_R4, VT_R8 e VT_BSTR.
+Esse método dá suporte a uma propriedade que é uma lista de valores ou um dos seguintes tipos de variante: VT_INT, VT_I2, VT_I4, VT_UINT, VT_UI1, VT_UI2, VT_UI4, VT_R4, VT_R8, and VT_BSTR.
 
 ##  <a name="redraw"></a>  CMFCPropertyGridProperty::Redraw
 
@@ -1704,7 +1704,7 @@ void Show(
 
 ### <a name="parameters"></a>Parâmetros
 
-*bMostrar*<br/>
+*bShow*<br/>
 [in] TRUE para exibir a propriedade atual e seus subelementos; FALSO para ocultar a propriedade atual e seus subelementos. O valor padrão é TRUE.
 
 *bAdjustLayout*<br/>
