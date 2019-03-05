@@ -112,12 +112,12 @@ helpviewer_keywords:
 - CMDIChildWndEx [MFC], UnregisterTaskbarTab
 - CMDIChildWndEx [MFC], UpdateTaskbarTabIcon
 ms.assetid: d39fec06-0bd6-4271-917d-35aae3b24d8e
-ms.openlocfilehash: 9b92c9689749dca1ab4eebcade1c4f7e71d25a76
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 625104ecddd9e14ac77aa05ac54cb578c4d62f85
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50541538"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293414"
 ---
 # <a name="cmdichildwndex-class"></a>Classe CMDIChildWndEx
 
@@ -201,7 +201,7 @@ Para tirar proveito dos recursos estendidos de encaixe em aplicativos MDI, deriv
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir deriva uma classe de `CMDIChildWndEx`. Este trecho de código é proveniente de [VisualStudioDemo exemplo: aplicativo MFC do Visual Studio](../../visual-cpp-samples.md).
+O exemplo a seguir deriva uma classe de `CMDIChildWndEx`. Este trecho de código é proveniente de [VisualStudioDemo exemplo: Aplicativo do Visual Studio MFC](../../visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#3](../../mfc/codesnippet/cpp/cmdichildwndex-class_1.h)]
 
@@ -431,7 +431,7 @@ Quando o framework está restaurando o estado mais tarde, o nome do documento é
 
 ### <a name="example"></a>Exemplo
 
-O exemplo a seguir demonstra o uso do método `GetDocumentName`. Este trecho de código é proveniente de [VisualStudioDemo exemplo: aplicativo MFC do Visual Studio](../../visual-cpp-samples.md).
+O exemplo a seguir demonstra o uso do método `GetDocumentName`. Este trecho de código é proveniente de [VisualStudioDemo exemplo: Aplicativo do Visual Studio MFC](../../visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#17](../../mfc/codesnippet/cpp/cmdichildwndex-class_2.cpp)]
 
@@ -547,7 +547,7 @@ BOOL InsertPane(
 *pTarget*<br/>
 [in] Um ponteiro para o painel adjacente.
 
-*bDepois*<br/>
+*bAfter*<br/>
 [in] Se for TRUE, *pControlBar* é inserido após *pTarget*. Se for FALSE, *pControlBar* é inserido antes *pTarget*.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -567,7 +567,7 @@ BOOL IsPointNearDockSite(
 
 ### <a name="parameters"></a>Parâmetros
 
-*ponto*<br/>
+*point*<br/>
 [in] O ponto especificado.
 
 *dwBarAlignment*<br/>
@@ -602,7 +602,7 @@ Essa função é usada para evitar salvar documentos como somente leitura.
 
 ### <a name="example"></a>Exemplo
 
-O exemplo a seguir demonstra substituindo o `IsReadOnly` método. Este trecho de código é proveniente de [VisualStudioDemo exemplo: aplicativo MFC do Visual Studio](../../visual-cpp-samples.md).
+O exemplo a seguir demonstra substituindo o `IsReadOnly` método. Este trecho de código é proveniente de [VisualStudioDemo exemplo: Aplicativo do Visual Studio MFC](../../visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#2](../../mfc/codesnippet/cpp/cmdichildwndex-class_3.cpp)]
 
@@ -686,7 +686,7 @@ CBasePane* PaneFromPoint(
 
 ### <a name="parameters"></a>Parâmetros
 
-*ponto*<br/>
+*point*<br/>
 [in] Especifica o ponto em coordenadas da tela, para verificar.
 
 *nSensitivity*<br/>
@@ -828,7 +828,7 @@ virtual BOOL SetTaskbarThumbnailClipRect(CRect rect);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Rect*<br/>
+*rect*<br/>
 Especifica o novo retângulo de recorte. Se o retângulo está vazio ou nulo, o corte é removido.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -920,7 +920,7 @@ Especifica o retângulo de origem.
 
 ### <a name="remarks"></a>Comentários
 
-Requisito: afxmdichildwndex.h
+Requirement : afxmdichildwndex.h
 
 ##  <a name="ontaskbartabthumbnailmouseactivate"></a>  CMDIChildWndEx::OnTaskbarTabThumbnailMouseActivate
 
@@ -1152,7 +1152,7 @@ void EnableTaskbarThumbnailClipRect(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parâmetros
 
-*bAtivar*<br/>
+*bEnable*<br/>
 Especifica se deve ser habilitado (TRUE) ou desabilitar (FALSE) a seleção automática de uma parte da área de cliente de uma janela para exibir.
 
 ### <a name="remarks"></a>Comentários

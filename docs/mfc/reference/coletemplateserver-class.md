@@ -14,12 +14,12 @@ helpviewer_keywords:
 - COleTemplateServer [MFC], Unregister
 - COleTemplateServer [MFC], UpdateRegistry
 ms.assetid: 47a2887d-8162-4993-a842-a784177c7f5c
-ms.openlocfilehash: f66936c597b8c595dc21ae6994d7af0477e8d2aa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bcc79f781be3a0292398e4f211ea55f5403b6b8f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528642"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302872"
 ---
 # <a name="coletemplateserver-class"></a>Classe COleTemplateServer
 
@@ -53,7 +53,7 @@ Essa classe é derivada da classe [COleObjectFactory](../../mfc/reference/coleob
 
 `COleTemplateServer` substitui o `OnCreateInstance` função de membro definida pelo `COleObjectFactory`. Essa função membro é chamada pelo framework para criar um objeto de C++ do tipo adequado.
 
-Para obter mais informações sobre servidores, consulte o artigo [servidores: Implementando um servidor](../../mfc/servers-implementing-a-server.md).
+Para obter mais informações sobre servidores, consulte o artigo [servidores: Implementação de um servidor](../../mfc/servers-implementing-a-server.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -67,7 +67,7 @@ Para obter mais informações sobre servidores, consulte o artigo [servidores: I
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** afxdisp.h
+**Header:** afxdisp.h
 
 ##  <a name="coletemplateserver"></a>  COleTemplateServer::COleTemplateServer
 
@@ -156,7 +156,7 @@ Uma lista de entradas será gravada no registro somente se não existe nenhuma e
 *rglpszOverwrite*<br/>
 Uma lista de entradas que é gravada no registro, independentemente de existirem quaisquer entradas anteriores.
 
-*bRegistre-se participar*<br/>
+*bRegister*<br/>
 Determina se a classe deve ser registrado. Se *bRegistre-se participar* for TRUE, a classe é registrada com o registro do sistema. Caso contrário, ele cancela o registro da classe.
 
 ### <a name="remarks"></a>Comentários

@@ -30,12 +30,12 @@ helpviewer_keywords:
 - COccManager [MFC], SetDefaultButton
 - COccManager [MFC], SplitDialogTemplate
 ms.assetid: 7d47aeed-d1ab-48e3-b4cf-d429718e370a
-ms.openlocfilehash: 804db7be4ba796a67042e6772ae4cb631c0c232b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a83f58b8de2411577d9fc025f7a8f8dc535ea8b3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50440177"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276644"
 ---
 # <a name="coccmanager-class"></a>Classe COccManager
 
@@ -90,7 +90,7 @@ virtual COleControlContainer* CreateContainer(CWnd* pWnd);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Apropriei*<br/>
+*pWnd*<br/>
 Um ponteiro para o objeto de janela associado com o contêiner de site personalizadas.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -168,7 +168,7 @@ static DWORD AFX_CDECL GetDefBtnCode(CWnd* pWnd);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Apropriei*<br/>
+*pWnd*<br/>
 O objeto de janela que contém o controle de botão.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -220,7 +220,7 @@ static BOOL AFX_CDECL IsLabelControl(COleControlSiteOrWnd* pWnd);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Apropriei*<br/>
+*pWnd*<br/>
 Um ponteiro para a janela que contém o controle.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -247,7 +247,7 @@ static BOOL AFX_CDECL IsMatchingMnemonic(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Apropriei*<br/>
+*pWnd*<br/>
 Um ponteiro para a janela que contém o controle.
 
 *lpMsg*<br/>
@@ -352,10 +352,10 @@ static void AFX_CDECL SetDefaultButton(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Apropriei*<br/>
+*pWnd*<br/>
 Um ponteiro para a janela que contém o controle.
 
-*bNível padrão*<br/>
+*bDefault*<br/>
 Diferente de zero se o controle deve se tornar o botão padrão; Caso contrário, zero.
 
 ### <a name="return-value"></a>Valor de retorno

@@ -1,31 +1,31 @@
 ---
-title: 'Controles ActiveX MFC: adicionando métodos de estoque'
+title: 'Controles ActiveX MFC: Adicionando métodos de estoque'
 ms.date: 09/12/2018
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], stock methods
 - MFC ActiveX controls [MFC], methods
 - DoClick method [MFC]
 ms.assetid: bc4fad78-cabd-4cc0-a798-464b1a682f0b
-ms.openlocfilehash: 1e47e45efe27c9562cf8500f8941bcf0e259448a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 29cb0d6f53d4e8fbbce12a83b2eecb8658c82697
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50585023"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305205"
 ---
-# <a name="mfc-activex-controls-adding-stock-methods"></a>Controles ActiveX MFC: adicionando métodos de estoque
+# <a name="mfc-activex-controls-adding-stock-methods"></a>Controles ActiveX MFC: Adicionando métodos de estoque
 
 Um método de estoque difere de um método personalizado em que ele já foi implementado pela classe [COleControl](../mfc/reference/colecontrol-class.md). Por exemplo, `COleControl` contém uma função de membro predefinidas que suporta o método de atualização para o seu controle. A entrada de mapa de expedição para esse método de estoque é DISP_STOCKFUNC_REFRESH.
 
 >[!IMPORTANT]
 > ActiveX é uma tecnologia herdada que não deve ser usada para novos desenvolvimentos. Para obter mais informações sobre tecnologias modernas que substituem o ActiveX, consulte [controles ActiveX](activex-controls.md).
 
-`COleControl` dá suporte a dois métodos de estoque: DoClick e a atualização. Atualizar seja invocado pelo usuário do controle para atualizar imediatamente a aparência do controle; DoClick é chamado para acionar Click do controle eventos.
+`COleControl` dá suporte a dois métodos de estoque: DoClick e atualização. Atualizar seja invocado pelo usuário do controle para atualizar imediatamente a aparência do controle; DoClick é chamado para acionar Click do controle eventos.
 
 |Método|Entrada de mapa de expedição|Comentário|
 |------------|------------------------|-------------|
-|`DoClick`|**(DISP_STOCKPROP_DOCLICK)**|Dispara um evento de clique.|
-|`Refresh`|**(DISP_STOCKPROP_REFRESH)**|Atualiza imediatamente a aparência do controle.|
+|`DoClick`|**DISP_STOCKPROP_DOCLICK( )**|Dispara um evento de clique.|
+|`Refresh`|**DISP_STOCKPROP_REFRESH( )**|Atualiza imediatamente a aparência do controle.|
 
 ##  <a name="_core_adding_a_stock_method_using_classwizard"></a> Adicionar um método de ação usando o Assistente do método de adição
 
@@ -64,4 +64,3 @@ Essa linha atribui o método de atualização de um número de ID específico.
 ## <a name="see-also"></a>Consulte também
 
 [Controles ActiveX do MFC](../mfc/mfc-activex-controls.md)
-

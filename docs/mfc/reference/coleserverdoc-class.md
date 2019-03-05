@@ -82,12 +82,12 @@ helpviewer_keywords:
 - COleServerDoc [MFC], OnSetItemRects
 - COleServerDoc [MFC], OnShowDocument
 ms.assetid: a9cdd96a-e0ac-43bb-9203-2c29237e965c
-ms.openlocfilehash: b9d339b11b3e1fa8452c845cfa8a8f41c5194f8d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3069c5f53b37984cbeae8bee1379bb8b0c36ccc3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50604939"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57285276"
 ---
 # <a name="coleserverdoc-class"></a>Classe COleServerDoc
 
@@ -168,7 +168,7 @@ Para dar suporte a itens vinculados, `COleServerDoc` fornece a [OnGetLinkedItem]
 
 Você precisa de um `COleServerDoc`-classe derivada para cada tipo de servidor de seu aplicativo dá suporte ao documento. Por exemplo, se seu aplicativo de servidor dá suporte a planilhas e gráficos, você precisa de dois `COleServerDoc`-as classes derivadas.
 
-Para obter mais informações sobre servidores, consulte o artigo [servidores: Implementando um servidor](../../mfc/servers-implementing-a-server.md).
+Para obter mais informações sobre servidores, consulte o artigo [servidores: Implementação de um servidor](../../mfc/servers-implementing-a-server.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -811,7 +811,7 @@ virtual void OnShowControlBars(
 *pFrameWnd*<br/>
 Ponteiro para a janela do quadro cujas barras de controle devem ser ocultadas ou exibidas.
 
-*bMostrar*<br/>
+*bShow*<br/>
 Determina se as barras de controle são mostradas ou ocultas.
 
 ### <a name="remarks"></a>Comentários
@@ -828,7 +828,7 @@ virtual void OnShowDocument(BOOL bShow);
 
 ### <a name="parameters"></a>Parâmetros
 
-*bMostrar*<br/>
+*bShow*<br/>
 Especifica se a interface do usuário para o documento deve ser mostrado ou ocultado.
 
 ### <a name="remarks"></a>Comentários

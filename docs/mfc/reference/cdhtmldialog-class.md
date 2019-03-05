@@ -116,12 +116,12 @@ helpviewer_keywords:
 - CDHtmlDialog [MFC], m_strCurrentUrl
 - CDHtmlDialog [MFC], m_szHtmlResID
 ms.assetid: 3f941c85-87e1-4f0f-9cc5-ffee8498b312
-ms.openlocfilehash: 08db42929fb3c6a7feb79abae5110bd88169f11b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9cf01f16fe21d0c5bea34bf168c6ea6bff04c195
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50594955"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57263605"
 ---
 # <a name="cdhtmldialog-class"></a>Classe CDHtmlDialog
 
@@ -140,7 +140,7 @@ class CDHtmlDialog : public CDialog, public CDHtmlEventSink
 |Nome|Descrição|
 |----------|-----------------|
 |[CDHtmlDialog::CDHtmlDialog](#cdhtmldialog)|Constrói um objeto CDHtmlDialog.|
-|[CDHtmlDialog:: ~ CDHtmlDialog](#cdhtmldialog__~cdhtmldialog)|Destrói um objeto CDHtmlDialog.|
+|[CDHtmlDialog::~CDHtmlDialog](#cdhtmldialog__~cdhtmldialog)|Destrói um objeto CDHtmlDialog.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
@@ -370,7 +370,7 @@ Um ponteiro para um [CDataExchange](../../mfc/reference/cdataexchange-class.md) 
 *szId*<br/>
 O valor do parâmetro de ID da marca de objeto na fonte de HTML para o controle ActiveX.
 
-*DISPID*<br/>
+*dispid*<br/>
 A ID de expedição da propriedade com o qual você deseja a troca de dados.
 
 *szPropName*<br/>
@@ -465,7 +465,7 @@ Um ponteiro para um [CDataExchange](../../mfc/reference/cdataexchange-class.md) 
 *szId*<br/>
 O valor especificado para o parâmetro de ID do controle HTML.
 
-*DISPID*<br/>
+*dispid*<br/>
 A ID de expedição do elemento HTML com o qual você deseja a troca de dados.
 
 *value*<br/>
@@ -586,7 +586,7 @@ Ver *fEnable* na [IDocHostUIHandler::EnableModeless](https://msdn.microsoft.com/
 
 ### <a name="return-value"></a>Valor de retorno
 
-Retornará E_NOTIMPL.
+Returns E_NOTIMPL.
 
 ### <a name="remarks"></a>Comentários
 
@@ -669,7 +669,7 @@ O nome de uma propriedade em que a localidade padrão do usuário atual.
 *pdispControl*<br/>
 O `IDispatch` ponteiro de um controle ActiveX.
 
-*DISPID*<br/>
+*dispid*<br/>
 A ID de expedição de uma propriedade.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -729,7 +729,7 @@ Ver *ppDropTarget* em `IDocHostUIHandler::GetDropTarget` no SDK do Windows.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Retornará E_NOTIMPL.
+Returns E_NOTIMPL.
 
 ### <a name="remarks"></a>Comentários
 
@@ -840,7 +840,7 @@ VARIANT GetElementProperty(
 *szElementId*<br/>
 A ID de um elemento HTML.
 
-*DISPID*<br/>
+*dispid*<br/>
 A ID de expedição de uma propriedade.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -947,7 +947,7 @@ Ver *dw* em `IDocHostUIHandler::GetOptionKeyPath` no Windows SDK.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Retornará E_NOTIMPL.
+Returns E_NOTIMPL.
 
 ### <a name="remarks"></a>Comentários
 
@@ -963,7 +963,7 @@ STDMETHOD(HideUI)(void);
 
 ### <a name="return-value"></a>Valor de retorno
 
-Retornará E_NOTIMPL.
+Returns E_NOTIMPL.
 
 ### <a name="remarks"></a>Comentários
 
@@ -1147,7 +1147,7 @@ Ver *fActivate* na [IDocHostUIHandler::OnDocWindowActivate](https://msdn.microso
 
 ### <a name="return-value"></a>Valor de retorno
 
-Retornará E_NOTIMPL.
+Returns E_NOTIMPL.
 
 ### <a name="remarks"></a>Comentários
 
@@ -1168,7 +1168,7 @@ Ver *fActivate* na [IDocHostUIHandler::OnFrameWindowActivate](https://msdn.micro
 
 ### <a name="return-value"></a>Valor de retorno
 
-Retornará E_NOTIMPL.
+Returns E_NOTIMPL.
 
 ### <a name="remarks"></a>Comentários
 
@@ -1236,7 +1236,7 @@ Ver *fFrameWindow* em `IDocHostUIHandler::ResizeBorder` no SDK do Windows.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Retornará E_NOTIMPL.
+Returns E_NOTIMPL.
 
 ##  <a name="setcontrolproperty"></a>  CDHtmlDialog::SetControlProperty
 
@@ -1264,7 +1264,7 @@ void SetControlProperty(
 *szElementId*<br/>
 A ID de HTML de um controle ActiveX.
 
-*DISPID*<br/>
+*dispid*<br/>
 A ID de expedição da propriedade a ser definida.
 
 *pVar*<br/>
@@ -1317,7 +1317,7 @@ void SetElementProperty(
 *szElementId*<br/>
 A ID de um elemento HTML.
 
-*DISPID*<br/>
+*dispid*<br/>
 A ID de expedição da propriedade a ser definida.
 
 *pVar*<br/>
@@ -1516,7 +1516,7 @@ STDMETHOD(UpdateUI)(void);
 
 ### <a name="return-value"></a>Valor de retorno
 
-Retornará E_NOTIMPL.
+Returns E_NOTIMPL.
 
 ### <a name="remarks"></a>Comentários
 
@@ -1527,4 +1527,3 @@ Essa função membro é a implementação do CDHtmlDialog da [IDocHostUIHandler:
 [DHtmlExplore de exemplo do MFC](../../visual-cpp-samples.md)<br/>
 [Macros auxiliares DDX_DHtml](#ddx_dhtml_helper_macros)<br/>
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)
-

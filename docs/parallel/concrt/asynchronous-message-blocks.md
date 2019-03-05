@@ -6,12 +6,12 @@ helpviewer_keywords:
 - asynchronous message blocks
 - greedy join [Concurrency Runtime]
 ms.assetid: 79c456c0-1692-480c-bb67-98f2434c1252
-ms.openlocfilehash: b78b4db4dda33e0a94da3624ea1ffd8748a601f4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: de6a433ab733207d5c56b46e693837056a0cd8b1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50586115"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274153"
 ---
 # <a name="asynchronous-message-blocks"></a>Blocos de mensagens assíncronos
 
@@ -53,7 +53,7 @@ Origens e destinos são dois participantes importantes na transmissão de mensag
 
 A biblioteca de agentes usa duas classes abstratas para representar origens e destinos: [Concurrency:: ISource](../../parallel/concrt/reference/isource-class.md) e [Concurrency:: ITarget](../../parallel/concrt/reference/itarget-class.md). Tipos de bloco de mensagem que atuam como fontes derivam de `ISource`; tipos de bloco de mensagem que atuam como destinos derivam de `ITarget`. Tipos de bloco de mensagem que atuam como origens e destinos derivam `ISource` e `ITarget`.
 
-[[Superior](#top)]
+[[Top](#top)]
 
 ##  <a name="propagation"></a> Propagação de mensagem
 
@@ -65,7 +65,7 @@ A biblioteca de agentes permite que blocos de mensagem de forma assíncrona ou s
 
 Aplicativos conectam origens e destinos juntas para formar redes de mensagens. Normalmente, você vincular a rede e a chamada `send` ou `asend` para passar dados para a rede. Para se conectar a um bloco de mensagem de origem para um destino, chame o [concurrency::ISource::link_target](reference/isource-class.md#link_target) método. Para desconectar um bloco de origem de um destino, chame o [concurrency::ISource::unlink_target](reference/isource-class.md#unlink_target) método. Para desconectar um bloco de origem de todos os seus destinos, chame o [concurrency::ISource::unlink_targets](reference/isource-class.md#unlink_targets) método. Quando um dos tipos predefinidos de mensagem de bloco sai do escopo ou é destruído, ele automaticamente se desconecta próprio qualquer blocos de destino. Alguns tipos de bloco de mensagem restringem o número máximo de destinos que pode gravar. A seção a seguir descreve as restrições que se aplicam a tipos de bloco predefinidos de mensagens.
 
-[[Superior](#top)]
+[[Top](#top)]
 
 ##  <a name="overview"></a> Visão geral dos tipos de bloco de mensagem
 
@@ -92,14 +92,14 @@ Seleciona a primeira mensagem disponível de um conjunto de fontes.
 [junção e junção múltiplo](#join)<br/>
 Aguarde até que todas as mensagens ser recebida de um conjunto de fontes e, em seguida, combinar as mensagens em uma mensagem para outro bloco de mensagem.
 
-[Temporizador](#timer)<br/>
+[timer](#timer)<br/>
 Envia uma mensagem para um bloco de destino em um intervalo regular.
 
 Esses tipos de bloco de mensagens têm características diferentes que os tornam úteis em situações diferentes. Estas são algumas das características:
 
-- *Tipo de propagação*: se o bloco de mensagens atua como uma fonte de dados, um receptor de dados ou ambos.
+- *Tipo de propagação*: Se o bloco de mensagens atua como uma fonte de dados, um receptor de dados ou ambos.
 
-- *Ordenação de mensagens*: se o bloco de mensagem mantém a ordem original na qual as mensagens são enviadas ou recebidas. Cada tipo de bloco predefinidos de mensagens mantém a ordem original em que ele envia ou recebe mensagens.
+- *Classificação de mensagem*: Se o bloco de mensagem mantém a ordem original na qual as mensagens são enviadas ou recebidas. Cada tipo de bloco predefinidos de mensagens mantém a ordem original em que ele envia ou recebe mensagens.
 
 - *Contagem de origem*: O número máximo de fontes que o bloco de mensagens pode ser lido em.
 
@@ -121,7 +121,7 @@ A tabela a seguir mostra como as seguintes características se relacionam com os
 
 As seções a seguir descrevem os tipos de bloco de mensagens em mais detalhes.
 
-[[Superior](#top)]
+[[Top](#top)]
 
 ##  <a name="unbounded_buffer"></a> Classe unbounded_buffer
 
@@ -139,9 +139,9 @@ Este exemplo gera a seguinte saída:
 334455
 ```
 
-Para obter um exemplo completo que mostra como usar o `unbounded_buffer` classe, consulte [como: implementar vários padrões de produtor-consumidor](../../parallel/concrt/how-to-implement-various-producer-consumer-patterns.md).
+Para obter um exemplo completo que mostra como usar o `unbounded_buffer` classe, consulte [como: Implementar vários padrões de produtor-consumidor](../../parallel/concrt/how-to-implement-various-producer-consumer-patterns.md).
 
-[[Superior](#top)]
+[[Top](#top)]
 
 ##  <a name="overwrite_buffer"></a> Classe overwrite_buffer
 
@@ -161,9 +161,9 @@ Este exemplo gera a seguinte saída:
 555555
 ```
 
-Para obter um exemplo completo que mostra como usar o `overwrite_buffer` classe, consulte [como: implementar vários padrões de produtor-consumidor](../../parallel/concrt/how-to-implement-various-producer-consumer-patterns.md).
+Para obter um exemplo completo que mostra como usar o `overwrite_buffer` classe, consulte [como: Implementar vários padrões de produtor-consumidor](../../parallel/concrt/how-to-implement-various-producer-consumer-patterns.md).
 
-[[Superior](#top)]
+[[Top](#top)]
 
 ##  <a name="single_assignment"></a> Classe single_assignment
 
@@ -183,7 +183,7 @@ Este exemplo gera a seguinte saída:
 
 Para obter um exemplo completo que mostra como usar o `single_assignment` classe, consulte [passo a passo: Implementando futuros](../../parallel/concrt/walkthrough-implementing-futures.md).
 
-[[Superior](#top)]
+[[Top](#top)]
 
 ##  <a name="call"></a> Classe da chamada
 
@@ -201,9 +201,9 @@ Este exemplo gera a seguinte saída:
 334455
 ```
 
-Para obter um exemplo completo que mostra como usar o `call` classe, consulte [como: fornecer funções de trabalho para as Classes call e transformer](../../parallel/concrt/how-to-provide-work-functions-to-the-call-and-transformer-classes.md).
+Para obter um exemplo completo que mostra como usar o `call` classe, consulte [como: Fornecer funções de trabalho para as Classes call e transformer](../../parallel/concrt/how-to-provide-work-functions-to-the-call-and-transformer-classes.md).
 
-[[Superior](#top)]
+[[Top](#top)]
 
 ##  <a name="transformer"></a> Classe Transformer
 
@@ -225,9 +225,9 @@ Este exemplo gera a seguinte saída:
 10.8914.5218.15
 ```
 
-Para obter um exemplo completo que mostra como usar o `transformer` classe, consulte [como: usar transformador em um Pipeline de dados](../../parallel/concrt/how-to-use-transformer-in-a-data-pipeline.md).
+Para obter um exemplo completo que mostra como usar o `transformer` classe, consulte [como: Usar transformador em um Pipeline de dados](../../parallel/concrt/how-to-use-transformer-in-a-data-pipeline.md).
 
-[[Superior](#top)]
+[[Top](#top)]
 
 ##  <a name="choice"></a> Classe Choice
 
@@ -255,9 +255,9 @@ Porque a tarefa que computa a 35<sup>ésimo</sup> número Fibonacci não é gara
 
 Este exemplo usa o [Concurrency:: parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke) algoritmo para calcular os números de Fibonacci em paralelo. Para obter mais informações sobre `parallel_invoke`, consulte [algoritmos paralelos](../../parallel/concrt/parallel-algorithms.md).
 
-Para obter um exemplo completo que mostra como usar o `choice` classe, consulte [como: selecionar entre tarefas concluídas](../../parallel/concrt/how-to-select-among-completed-tasks.md).
+Para obter um exemplo completo que mostra como usar o `choice` classe, consulte [como: Selecione entre tarefas concluídas](../../parallel/concrt/how-to-select-among-completed-tasks.md).
 
-[[Superior](#top)]
+[[Top](#top)]
 
 ##  <a name="join"></a> Classes JOIN e multitype_join
 
@@ -287,9 +287,9 @@ fib35 = 9227465fib37 = 24157817half_of_fib42 = 1.33957e+008
 
 Este exemplo usa o [Concurrency:: parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke) algoritmo para calcular os números de Fibonacci em paralelo. Para obter mais informações sobre `parallel_invoke`, consulte [algoritmos paralelos](../../parallel/concrt/parallel-algorithms.md).
 
-Para obter exemplos completos que mostram como usar o `join` classe, consulte [como: selecionar entre tarefas concluídas](../../parallel/concrt/how-to-select-among-completed-tasks.md) e [passo a passo: usando join para evitar Deadlock](../../parallel/concrt/walkthrough-using-join-to-prevent-deadlock.md).
+Para obter exemplos completos que mostram como usar o `join` classe, consulte [como: Selecione entre tarefas concluídas](../../parallel/concrt/how-to-select-among-completed-tasks.md) e [passo a passo: Usando join para evitar Deadlock](../../parallel/concrt/walkthrough-using-join-to-prevent-deadlock.md).
 
-[[Superior](#top)]
+[[Top](#top)]
 
 ##  <a name="timer"></a> Classe Timer
 
@@ -313,9 +313,9 @@ Este exemplo produz a saída de exemplo a seguir:
 Computing fib(42)..................................................result is 267914296
 ```
 
-Para obter um exemplo completo que mostra como usar o `timer` classe, consulte [como: enviar uma mensagem em um intervalo Regular](../../parallel/concrt/how-to-send-a-message-at-a-regular-interval.md).
+Para obter um exemplo completo que mostra como usar o `timer` classe, consulte [como: Enviar uma mensagem em um intervalo Regular](../../parallel/concrt/how-to-send-a-message-at-a-regular-interval.md).
 
-[[Superior](#top)]
+[[Top](#top)]
 
 ##  <a name="filtering"></a> Filtragem de mensagens
 
@@ -340,9 +340,9 @@ bool (T const &)
 
 Para eliminar a cópia desnecessária de dados, use o segundo formulário quando você tem um tipo de agregação que é propagado por valor.
 
-Mensagem filtragem dá suporte a *fluxo de dados* modelo de programação, em que os componentes executam cálculos ao receber dados. Para obter exemplos que usam funções de filtro para controlar o fluxo de dados em uma rede de passagem de mensagem, consulte [como: usar um filtro de bloco de mensagens](../../parallel/concrt/how-to-use-a-message-block-filter.md), [passo a passo: Criando um agente de fluxo de dados](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md), e [ Passo a passo: Criando uma rede de processamento de imagem](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md).
+Mensagem filtragem dá suporte a *fluxo de dados* modelo de programação, em que os componentes executam cálculos ao receber dados. Para obter exemplos que usam funções de filtro para controlar o fluxo de dados em uma rede de passagem de mensagem, consulte [como: Usar um filtro de bloco de mensagens](../../parallel/concrt/how-to-use-a-message-block-filter.md), [passo a passo: Criando um agente de fluxo de dados](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md), e [passo a passo: Criando uma rede de processamento de imagem](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md).
 
-[[Superior](#top)]
+[[Top](#top)]
 
 ##  <a name="reservation"></a> Reserva de mensagem
 
@@ -352,11 +352,10 @@ Considere junções greedy e não greedy. Ambos usam a reserva de mensagem para 
 
 Uma junção greedy, que também lê mensagens de entrada de um número de fontes, usa a reserva de mensagem para ler mensagens adicionais enquanto espera para receber uma mensagem de cada fonte. Por exemplo, considere uma junção greedy que recebe mensagens de blocos de mensagem `A` e `B`. Se a junção greedy recebe duas mensagens de B, mas ainda não recebeu uma mensagem a partir `A`, a junção greedy salva o identificador de mensagem exclusiva para a segunda mensagem de `B`. Depois que a junção greedy recebe uma mensagem a partir `A` e propaga essas mensagens, ele usa o identificador de mensagem salva para ver se a segunda mensagem de `B` ainda está disponível.
 
-Você pode usar a reserva de mensagem quando você implementa seus próprios tipos de bloco de mensagem personalizada. Para obter um exemplo sobre como criar um tipo de bloco de mensagem personalizada, consulte [instruções passo a passo: Criando um bloco de mensagem personalizado](../../parallel/concrt/walkthrough-creating-a-custom-message-block.md).
+Você pode usar a reserva de mensagem quando você implementa seus próprios tipos de bloco de mensagem personalizada. Para obter um exemplo sobre como criar um tipo de bloco de mensagem personalizada, consulte [passo a passo: Criar um bloco de mensagem personalizada](../../parallel/concrt/walkthrough-creating-a-custom-message-block.md).
 
-[[Superior](#top)]
+[[Top](#top)]
 
 ## <a name="see-also"></a>Consulte também
 
 [Biblioteca de agentes assíncronos](../../parallel/concrt/asynchronous-agents-library.md)
-

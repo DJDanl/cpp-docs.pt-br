@@ -7,12 +7,12 @@ helpviewer_keywords:
 - I/O [MFC], vs. serialization
 - databases [MFC], input/output handling
 ms.assetid: f1d23d77-4761-4a52-a7ea-54fc92d347ea
-ms.openlocfilehash: 195d9119ee5dbec3b2bb1cf7b8a816533e56e98b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c4f44f1ac291b2d068ca0525543938331d6e07d6
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50491985"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293154"
 ---
 # <a name="serialization-serialization-vs-database-inputoutput"></a>Serialização: Serialização vs. Banco de dados de entrada/saída
 
@@ -25,4 +25,3 @@ Este artigo explica quando usar a serialização e objetos de documento para bas
 ## <a name="see-also"></a>Consulte também
 
 [Serialização](../mfc/serialization-in-mfc.md)
-

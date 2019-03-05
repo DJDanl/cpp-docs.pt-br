@@ -1,5 +1,5 @@
 ---
-title: Interface IAxWinHostWindow
+title: IAxWinHostWindow Interface
 ms.date: 11/04/2016
 f1_keywords:
 - IAxWinHostWindow
@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - IAxWinHostWindow interface
 ms.assetid: 9821c035-cd52-4c46-b58a-9278064f09b4
-ms.openlocfilehash: 1e389dc253f24eed2fee7e1d552be931a23f5e3f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4bdfdf76b48c1e9f2c06213ee25cd15a113525dd
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50637314"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290151"
 ---
-# <a name="iaxwinhostwindow-interface"></a>Interface IAxWinHostWindow
+# <a name="iaxwinhostwindow-interface"></a>IAxWinHostWindow Interface
 
 Essa interface fornece métodos para manipular um controle e seu objeto de host.
 
@@ -222,4 +222,3 @@ Essa função é usada por controles (como o controle de navegador da Web) que c
 [Interface IAxWinAmbientDispatch](../../atl/reference/iaxwinambientdispatch-interface.md)<br/>
 [CAxWindow::QueryHost](../../atl/reference/caxwindow-class.md#queryhost)<br/>
 [AtlAxGetHost](composite-control-global-functions.md#atlaxgethost)
-

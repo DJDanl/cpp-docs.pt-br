@@ -160,12 +160,12 @@ helpviewer_keywords:
 - CDockingManager [MFC], m_nTimeOutBeforeDockingBarDock
 - CDockingManager [MFC], m_nTimeOutBeforeToolBarDock
 ms.assetid: 98e69c43-55d8-4f43-b861-4fda80ec1e32
-ms.openlocfilehash: e1cc4a4a0d6841523aaafcc1865173ba5402948c
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 268a46e1bdecc1ea468c152fd0ed480873c36591
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519966"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260381"
 ---
 # <a name="cdockingmanager-class"></a>Classe CDockingManager
 
@@ -304,7 +304,7 @@ O exemplo a seguir demonstra como usar vários métodos na `CDockingManager` cla
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** afxDockingManager.h
+**Header:** afxDockingManager.h
 
 ##  <a name="adddocksite"></a>  CDockingManager::AddDockSite
 
@@ -318,7 +318,7 @@ BOOL AddDockSite(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Informações de*<br/>
+*info*<br/>
 [in] Uma referência a uma estrutura de informações que contém encaixar o alinhamento do painel.
 
 *ppDockBar*<br/>
@@ -355,7 +355,7 @@ BOOL AddPane(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Apropriei*<br/>
+*pWnd*<br/>
 [no, out] Especifica o painel para adicionar ao Gerenciador de encaixe.
 
 *bTail*<br/>
@@ -400,7 +400,7 @@ virtual BOOL AddMiniFrame(CPaneFrameWnd* pWnd);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Apropriei*<br/>
+*pWnd*<br/>
 [in] Um ponteiro para um quadro.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -521,7 +521,7 @@ void BuildPanesMenu(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Menu*<br/>
+*menu*<br/>
 [in] Um menu para adicionar os nomes dos painéis de encaixe e barras de ferramentas para.
 
 *bToolbarsOnly*<br/>
@@ -542,7 +542,7 @@ void CalcExpectedDockedRect(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Apropriei*<br/>
+*pWnd*<br/>
 [in] Um ponteiro para a janela encaixar.
 
 *ptMouse*<br/>
@@ -637,7 +637,7 @@ void DisableRestoreDockState(BOOL bDisable = TRUE);
 
 ### <a name="parameters"></a>Parâmetros
 
-*bDesative*<br/>
+*bDisable*<br/>
 [in] True para desabilitar o carregamento do layout de encaixe do registro; Caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
@@ -732,7 +732,7 @@ static void EnableDockSiteMenu(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parâmetros
 
-*bAtivar*<br/>
+*bEnable*<br/>
 [in] TRUE para habilitar o menu de encaixe de site; Caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
@@ -763,7 +763,7 @@ void EnablePaneContextMenu(
 
 ### <a name="parameters"></a>Parâmetros
 
-*bAtivar*<br/>
+*bEnable*<br/>
 [in] Se for TRUE, a biblioteca ativa o suporte para o menu de contexto automático: Se FALSE a biblioteca desativa o suporte para o menu de contexto automática.
 
 *uiCustomizeCmd*<br/>
@@ -1070,7 +1070,7 @@ BOOL InsertDockSite(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Informações de*<br/>
+*info*<br/>
 [in] Uma estrutura que contém as informações de alinhamento sobre o painel de encaixe.
 
 *dwAlignToInsertAfter*<br/>
@@ -1102,7 +1102,7 @@ BOOL InsertPane(
 *pTarget*<br/>
 [in] Um ponteiro para um painel de destino.
 
-*bDepois*<br/>
+*bAfter*<br/>
 [in] TRUE para inserir o painel após a posição do painel de destino; FALSE caso contrário.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1170,7 +1170,7 @@ BOOL IsPointNearDockSite(
 
 ### <a name="parameters"></a>Parâmetros
 
-*ponto*<br/>
+*point*<br/>
 [in] O ponto especificado.
 
 *dwBarAlignment*<br/>
@@ -1227,7 +1227,7 @@ void LockUpdate(BOOL bLock);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Bloco*<br/>
+*bLock*<br/>
 [in] TRUE se a janela está bloqueada; FALSE caso contrário.
 
 ### <a name="remarks"></a>Comentários
@@ -1346,7 +1346,7 @@ void OnPaneContextMenu(CPoint point);
 
 ### <a name="parameters"></a>Parâmetros
 
-*ponto*<br/>
+*point*<br/>
 [in] Especifica o local do menu.
 
 ##  <a name="panefrompoint"></a>  CDockingManager::PaneFromPoint
@@ -1372,7 +1372,7 @@ virtual CBasePane* PaneFromPoint(
 
 ### <a name="parameters"></a>Parâmetros
 
-*ponto*<br/>
+*point*<br/>
 [in] Especifica o ponto em coordenadas da tela, para verificar.
 
 *nSensitivity*<br/>
@@ -1475,7 +1475,7 @@ virtual BOOL RemoveMiniFrame(CPaneFrameWnd* pWnd);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Apropriei*<br/>
+*pWnd*<br/>
 [in] Um ponteiro para um quadro a ser removido.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1497,7 +1497,7 @@ void RemovePaneFromDockManager(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Apropriei*<br/>
+*pWnd*<br/>
 [in] Um ponteiro para um painel a ser removido.
 
 *bDestroy*<br/>
@@ -1639,7 +1639,7 @@ static void SetDockingMode(
 *dockMode*<br/>
 Especifica o novo modo de encaixe. Para obter mais informações, consulte a seção Comentários.
 
-*Tema*<br/>
+*theme*<br/>
 Especifica o tema a ser usado para marcadores inteligentes de encaixe. Ele pode ser um dos seguintes valores enumerados: AFX_SDT_DEFAULT, AFX_SDT_VS2005, AFX_SDT_VS2008.
 
 ### <a name="remarks"></a>Comentários
@@ -1709,7 +1709,7 @@ void ShowDelayShowMiniFrames(BOOL bshow);
 
 ### <a name="parameters"></a>Parâmetros
 
-*bMostrar*<br/>
+*bShow*<br/>
 [in] TRUE para ativar a janela do quadro mostrado; FALSO para ocultar a janela do quadro.
 
 ##  <a name="showpanes"></a>  CDockingManager::ShowPanes
@@ -1722,7 +1722,7 @@ virtual BOOL ShowPanes(BOOL bShow);
 
 ### <a name="parameters"></a>Parâmetros
 
-*bMostrar*<br/>
+*bShow*<br/>
 [in] TRUE para mostrar os painéis; FALSO para ocultar os painéis.
 
 ### <a name="return-value"></a>Valor de retorno

@@ -132,12 +132,12 @@ helpviewer_keywords:
 - CDockablePane [MFC], m_bHideInAutoHideMode
 - CDockablePane [MFC], m_nSlideSteps
 ms.assetid: e2495f4c-765f-48f9-a2e2-e45e47608d91
-ms.openlocfilehash: 657f71e5d89f7d91d8b44836b4d478b41d041f88
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c78634c93bda94940b2834a61d276f63522e4aeb
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50623009"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271899"
 ---
 # <a name="cdockablepane-class"></a>Classe CDockablePane
 
@@ -209,7 +209,7 @@ class CDockablePane : public CPane
 |[CDockablePane::OnAfterDockFromMiniFrame](#onafterdockfromminiframe)|Chamado pelo framework quando uma barra de encaixe flutuante se encaixa em uma janela do quadro.|
 |[CDockablePane::OnBeforeChangeParent](#onbeforechangeparent)|Chamado pelo framework quando o pai do painel está prestes a ser alterada. (Substitui [CPane::OnBeforeChangeParent](../../mfc/reference/cpane-class.md#onbeforechangeparent).)|
 |[CDockablePane::OnBeforeFloat](#onbeforefloat)|Chamado pelo framework quando um painel é sobre em float. (Substitui [CPane::OnBeforeFloat](../../mfc/reference/cpane-class.md#onbeforefloat).)|
-|[Cdockablepane](#removefromdefaultpanedividier)|O framework chama esse método quando um painel é seja desencaixado.|
+|[CDockablePane::RemoveFromDefaultPaneDividier](#removefromdefaultpanedividier)|O framework chama esse método quando um painel é seja desencaixado.|
 |[CDockablePane::ReplacePane](#replacepane)|Substitui o painel com um painel especificado.|
 |[CDockablePane::RestoreDefaultPaneDivider](#restoredefaultpanedivider)|O framework chama esse método como um painel é desserializado para restaurar o divisor do painel padrão.|
 |`CDockablePane::SaveState`|Usado internamente.|
@@ -595,7 +595,7 @@ virtual BOOL Create(
 *pParentWnd*<br/>
 [no, out] Especifica a janela pai.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Especifica o tamanho e posição da janela, em coordenadas do cliente do *pParentWnd*.
 
 *bHasGripper*<br/>
@@ -700,7 +700,7 @@ virtual BOOL CreateEx(
 *pParentWnd*<br/>
 [no, out] Especifica a janela pai.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Especifica o tamanho e posição da janela, em coordenadas do cliente do *pParentWnd*.
 
 *bHasGripper*<br/>
@@ -887,7 +887,7 @@ void EnableAutohideAll(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parâmetros
 
-*bAtivar*<br/>
+*bEnable*<br/>
 [in] TRUE para habilitar o ocultar automaticamente todos os recursos para o painel encaixável; Caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
@@ -906,7 +906,7 @@ virtual void EnableGripper(BOOL bEnable);
 
 ### <a name="parameters"></a>Parâmetros
 
-*bAtivar*<br/>
+*bEnable*<br/>
 [in] TRUE para habilitar a legenda; Caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
@@ -1108,7 +1108,7 @@ virtual int HitTest(
 
 ### <a name="parameters"></a>Parâmetros
 
-*ponto*<br/>
+*point*<br/>
 [in] Especifica o ponto a ser testado.
 
 *bDetectCaption*<br/>
@@ -1434,7 +1434,7 @@ virtual void OnSlide(BOOL bSlideOut);
 
 Substitua este método em uma classe derivada para implementar os efeitos de ocultar automaticamente personalizado.
 
-##  <a name="removefromdefaultpanedividier"></a>  Cdockablepane
+##  <a name="removefromdefaultpanedividier"></a>  CDockablePane::RemoveFromDefaultPaneDividier
 
 O framework chama esse método quando um painel é seja desencaixado.
 
@@ -1612,7 +1612,7 @@ virtual void ShowPane(
 
 ### <a name="parameters"></a>Parâmetros
 
-*bMostrar*<br/>
+*bShow*<br/>
 [in] TRUE para mostrar o painel; FALSO para ocultar o painel.
 
 *bDelay*<br/>

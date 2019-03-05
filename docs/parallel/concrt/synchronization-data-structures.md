@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - synchronization data structures
 ms.assetid: d612757d-e4b7-4019-a627-f853af085b8b
-ms.openlocfilehash: 8c91de87bb5d579916743051d06c15f6df6921bf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f9b949e7782c4b9ca302e9e623ce5f09061c39ef
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50495921"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301877"
 ---
 # <a name="synchronization-data-structures"></a>Estruturas de dados de sincronização
 
@@ -43,7 +43,7 @@ A tabela a seguir mostra os métodos importantes que são definidos pelo `critic
 |[try_lock](reference/critical-section-class.md#try_lock)|Tenta adquirir a seção crítica, mas não bloqueia.|
 |[unlock](reference/critical-section-class.md#unlock)|Libera a seção crítica.|
 
-[[Superior](#top)]
+[[Top](#top)]
 
 ##  <a name="reader_writer_lock"></a> reader_writer_lock
 
@@ -72,7 +72,7 @@ A tabela a seguir mostra os métodos importantes que são definidos pelo `reader
 |[try_lock_read](reference/reader-writer-lock-class.md#try_lock_read)|Tenta adquirir acesso somente leitura ao bloqueio, mas não bloqueia.|
 |[unlock](reference/reader-writer-lock-class.md#unlock)|Libera o bloqueio.|
 
-[[Superior](#top)]
+[[Top](#top)]
 
 ##  <a name="scoped_lock"></a> scoped_lock e scoped_lock_read
 
@@ -106,7 +106,7 @@ A tabela a seguir mostra os vários métodos importantes que são definidos pelo
 
 Para obter um exemplo que mostra como usar o `event` classe, consulte [comparando estruturas de dados de sincronização para a API do Windows](../../parallel/concrt/comparing-synchronization-data-structures-to-the-windows-api.md).
 
-[[Superior](#top)]
+[[Top](#top)]
 
 ## <a name="related-sections"></a>Seções relacionadas
 
@@ -115,4 +115,3 @@ Compara o comportamento das estruturas de dados de sincronização aos fornecido
 
 [Tempo de Execução de Simultaneidade](../../parallel/concrt/concurrency-runtime.md)<br/>
 Descreve o tempo de execução de simultaneidade, que simplifica a programação paralela e contém links para tópicos relacionados.
-

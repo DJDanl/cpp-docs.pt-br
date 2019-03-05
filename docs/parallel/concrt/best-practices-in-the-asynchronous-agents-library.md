@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Asynchronous Agents Library, practices to avoid
 - practices to avoid, Asynchronous Agents Library
 ms.assetid: 85f52354-41eb-4b0d-98c5-f7344ee8a8cf
-ms.openlocfilehash: 70c979be0d37817cf199af0b6a3cbf114fced265
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c61393957a63895a9ecbdaaae8d83a5fbd710de3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50494570"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266413"
 ---
 # <a name="best-practices-in-the-asynchronous-agents-library"></a>Práticas recomendadas na Biblioteca de Agentes Assíncrona
 
@@ -42,9 +42,9 @@ Você normalmente isolar estado em um agente, mantendo os membros de dados do `p
 
 [!code-cpp[concrt-simple-agent#1](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-asynchronous-agents-library_1.cpp)]
 
-Para obter exemplos completos sobre como definir e usar agentes, consulte [instruções passo a passo: Criando um aplicativo baseado em agente](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md) e [passo a passo: Criando um agente de fluxo de dados](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md).
+Para obter exemplos completos sobre como definir e usar agentes, consulte [passo a passo: Criando um aplicativo baseado em agente](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md) e [passo a passo: Criando um agente de fluxo de dados](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md).
 
-[[Superior](#top)]
+[[Top](#top)]
 
 ##  <a name="throttling"></a> Usar um mecanismo de limitação para limitar o número de mensagens em um Pipeline de dados
 
@@ -58,17 +58,17 @@ O `semaphore` objeto limita o pipeline para processar no máximo duas mensagens 
 
 O produtor neste exemplo envia mensagens relativamente poucos para o consumidor. Portanto, este exemplo não demonstra uma possível condição de pouca memória ou a falta de memória. No entanto, esse mecanismo é útil quando um pipeline de dados contém um número relativamente alto de mensagens.
 
-Para obter mais informações sobre como criar a classe semaphore que é usada neste exemplo, consulte [como: usar a classe de contexto para implementar um semáforo cooperativo](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md).
+Para obter mais informações sobre como criar a classe semaphore que é usada neste exemplo, consulte [como: Use a classe de contexto para implementar um semáforo cooperativo](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md).
 
-[[Superior](#top)]
+[[Top](#top)]
 
 ##  <a name="fine-grained"></a> Realizar trabalho granulado em um Pipeline de dados
 
 A biblioteca de agentes é mais útil quando o trabalho executado por um pipeline de dados é bastante alta granularidade. Por exemplo, um componente de aplicativo pode ler dados de um arquivo ou uma conexão de rede e ocasionalmente enviar esses dados para outro componente. O protocolo que a biblioteca de agentes usa para se propagar mensagens faz com que o mecanismo de transmissão de mensagens para ter mais sobrecarga do que as construções de tarefas paralelas que são fornecidos pelo [biblioteca de padrões paralelos](../../parallel/concrt/parallel-patterns-library-ppl.md) (PPL). Portanto, certifique-se de que o trabalho executado por um pipeline de dados é longo o suficiente para essa sobrecarga de deslocamento.
 
-Embora um pipeline de dados é mais eficaz quando suas tarefas são alta granularidade, cada estágio do pipeline de dados pode usar construções PPL, como grupos de tarefas e algoritmos paralelos para realizar mais trabalho Granulado. Para obter um exemplo de uma rede de alta granularidade de dados que usa o paralelismo refinado em cada estágio de processamento, consulte [instruções passo a passo: Criando uma rede de processamento de imagem](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md).
+Embora um pipeline de dados é mais eficaz quando suas tarefas são alta granularidade, cada estágio do pipeline de dados pode usar construções PPL, como grupos de tarefas e algoritmos paralelos para realizar mais trabalho Granulado. Para obter um exemplo de uma rede de alta granularidade de dados que usa o paralelismo refinado em cada estágio de processamento, consulte [passo a passo: Criando uma rede de processamento de imagem](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md).
 
-[[Superior](#top)]
+[[Top](#top)]
 
 ##  <a name="large-payloads"></a> Não passar cargas de mensagem grandes por valor
 
@@ -89,7 +89,7 @@ took 47ms.
 
 A versão que usa ponteiros é melhor porque ele elimina a necessidade de tempo de execução criar uma cópia completa de cada `message_data` objeto que ele passa do produtor para o consumidor.
 
-[[Superior](#top)]
+[[Top](#top)]
 
 ##  <a name="ownership"></a> Usar shared_ptr em uma Data rede quando a propriedade for indefinida
 
@@ -118,9 +118,8 @@ Destroying resource 64...
 
 [Práticas recomendadas do tempo de execução de simultaneidade](../../parallel/concrt/concurrency-runtime-best-practices.md)<br/>
 [Biblioteca de agentes assíncronos](../../parallel/concrt/asynchronous-agents-library.md)<br/>
-[Instruções passo a passo: criando um aplicativo com base no agente](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md)<br/>
-[Instruções passo a passo: criando um agente de fluxo de dados](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md)<br/>
-[Instruções passo a passo: criando uma rede de processamento de imagem](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)<br/>
+[Passo a passo: Criando um aplicativo com base em agente](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md)<br/>
+[Passo a passo: Criando um agente de fluxo de dados](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md)<br/>
+[Passo a passo: Criando uma rede de processamento de imagem](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)<br/>
 [Práticas recomendadas na biblioteca de padrões paralelos](../../parallel/concrt/best-practices-in-the-parallel-patterns-library.md)<br/>
 [Práticas recomendadas gerais no tempo de execução de simultaneidade](../../parallel/concrt/general-best-practices-in-the-concurrency-runtime.md)
-

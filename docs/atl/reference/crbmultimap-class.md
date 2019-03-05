@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - CRBMultiMap class
 ms.assetid: 94d3ec0c-3e30-4ab7-a101-d8da4fb8add3
-ms.openlocfilehash: f421848a87ea3cc38309e85eb39c9453530ce4fa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 03a9639e8b0b3d11a414e5db0ce874d7ca8f2d45
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50659089"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267479"
 ---
 # <a name="crbmultimap-class"></a>Classe CRBMultiMap
 
@@ -55,7 +55,7 @@ O código usado para copiar ou mover elementos de valor.
 |Nome|Descrição|
 |----------|-----------------|
 |[CRBMultiMap::CRBMultiMap](#crbmultimap)|O construtor.|
-|[CRBMultiMap:: ~ CRBMultiMap](#dtor)|O destruidor.|
+|[CRBMultiMap::~CRBMultiMap](#dtor)|O destruidor.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
@@ -114,7 +114,7 @@ Consulte a documentação para a classe base [CRBTree](../../atl/reference/crbtr
 
 [!code-cpp[NVC_ATL_Utilities#85](../../atl/codesnippet/cpp/crbmultimap-class_1.cpp)]
 
-##  <a name="dtor"></a>  CRBMultiMap:: ~ CRBMultiMap
+##  <a name="dtor"></a>  CRBMultiMap::~CRBMultiMap
 
 O destruidor.
 
@@ -170,7 +170,7 @@ V& GetNextValueWithKey(
 
 ### <a name="parameters"></a>Parâmetros
 
-*POS*<br/>
+*pos*<br/>
 O valor da posição, obtido com a chamada para [CRBMultiMap::FindFirstWithKey](#findfirstwithkey) ou [CRBMultiMap::GetNextWithKey](#getnextwithkey), ou uma chamada anterior a `GetNextValueWithKey`.
 
 *key*<br/>
@@ -205,7 +205,7 @@ CPair* GetNextWithKey(
 
 ### <a name="parameters"></a>Parâmetros
 
-*POS*<br/>
+*pos*<br/>
 O valor da posição, obtido com a chamada para [CRBMultiMap::FindFirstWithKey](#findfirstwithkey) ou [CRBMultiMap::GetNextValueWithKey](#getnextvaluewithkey), ou uma chamada anterior a `GetNextWithKey`.
 
 *key*<br/>

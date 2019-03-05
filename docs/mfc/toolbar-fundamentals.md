@@ -20,12 +20,12 @@ helpviewer_keywords:
 - frame window classes [MFC], toolbar embedded in
 - LoadToolBar method [MFC]
 ms.assetid: cc00aaff-8a56-433b-b0c0-b857d76b4ffd
-ms.openlocfilehash: 965842dd42033910366ec4686e7c0abf775f2d5c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 39e790e5152dd07ab40901140ecdd8f8791a446e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50530787"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258392"
 ---
 # <a name="toolbar-fundamentals"></a>Fundamentos da barra de ferramentas
 
@@ -105,4 +105,3 @@ Se você quiser exibir uma barra de ferramentas como o resultado de um comando, 
 ## <a name="see-also"></a>Consulte também
 
 [Implementação da barra de ferramentas do MFC](../mfc/mfc-toolbar-implementation.md)
-

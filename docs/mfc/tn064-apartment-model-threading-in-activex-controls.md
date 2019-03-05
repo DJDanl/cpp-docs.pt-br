@@ -1,5 +1,5 @@
 ---
-title: 'TN064: modelo Apartment Threading em controles ActiveX'
+title: 'TN064: Modelo Apartment Threading em controles ActiveX'
 ms.date: 11/04/2016
 f1_keywords:
 - vc.controls.activex
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - multithread container [MFC]
 - apartment model threading [MFC]
 ms.assetid: b2ab4c88-6954-48e2-9a74-01d4a60df073
-ms.openlocfilehash: 37f8af1e4bd0fedf0b1ab14a90afdda3916c5391
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d6f02b2106693226f6380e935a54e04e10d5b4f8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50665550"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261161"
 ---
-# <a name="tn064-apartment-model-threading-in-activex-controls"></a>TN064: modelo Apartment Threading em controles ActiveX
+# <a name="tn064-apartment-model-threading-in-activex-controls"></a>TN064: Modelo Apartment Threading em controles ActiveX
 
 > [!NOTE]
 >  A nota técnica a seguir não foi atualizada desde que foi incluído pela primeira vez na documentação online. Como resultado, alguns procedimentos e tópicos podem estar desatualizadas ou incorretas. Para obter as informações mais recentes, é recomendável que você pesquise o tópico de interesse no índice da documentação online.
@@ -111,4 +111,3 @@ Se seu controle não segue as regras de modelo-apartamento de threading, você n
 
 [Observações técnicas por número](../mfc/technical-notes-by-number.md)<br/>
 [Observações técnicas por categoria](../mfc/technical-notes-by-category.md)
-

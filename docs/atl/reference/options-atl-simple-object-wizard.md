@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - ATL Simple Object Wizard, options
 ms.assetid: 125fe179-942d-4181-8b82-33e92e1fd779
-ms.openlocfilehash: efd79c877fcf71ae33b1539e41d3d13379b834de
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 327c78b00cbe69fcce4f055b0ae63c4dc2e5a7d9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50650494"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273382"
 ---
 # <a name="options-atl-simple-object-wizard"></a>Opções, ATL Simple Object Wizard
 
@@ -49,7 +49,7 @@ Para obter mais informações sobre projetos ATL e classes COM da ATL, consulte 
 
    |Opção|Descrição|
    |------------|-----------------|
-   |**Duplo**|Especifica que o objeto dá suporte a uma interface dupla (seu vtable tem funções de interface personalizados além de associação tardia `IDispatch` métodos). Permite que ambos os clientes COM e [controladores de automação](../../mfc/automation-clients.md) para acessar o objeto. O padrão.|
+   |**Dual**|Especifica que o objeto dá suporte a uma interface dupla (seu vtable tem funções de interface personalizados além de associação tardia `IDispatch` métodos). Permite que ambos os clientes COM e [controladores de automação](../../mfc/automation-clients.md) para acessar o objeto. O padrão.|
    |**Personalizado**|Especifica que o objeto dá suporte a uma interface personalizada (seu vtable tem funções de interface personalizada). Uma interface personalizada pode ser mais rápida do que uma interface dupla, especialmente entre os limites do processo.<br /><br /> - **Automação compatível** controladores de automação permite acessar um objeto que tem o suporte de interface personalizada.|
 
 - **Suporte**
@@ -68,4 +68,3 @@ Para obter mais informações sobre projetos ATL e classes COM da ATL, consulte 
 [Assistente de objeto simples da ATL](../../atl/reference/atl-simple-object-wizard.md)<br/>
 [Objeto ATL Simples](../../atl/reference/adding-an-atl-simple-object.md)<br/>
 [Problemas de Threading do servidor em processo](/windows/desktop/com/in-process-server-threading-issues)
-

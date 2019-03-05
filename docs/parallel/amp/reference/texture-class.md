@@ -17,12 +17,12 @@ f1_keywords:
 - AMP_GRAPHICS/concurrency::graphics::texture::depth_pitch
 - AMP_GRAPHICS/concurrency::graphics::texture::row_pitch
 ms.assetid: 16e85d4d-e80a-474a-995d-8bf63fbdf34c
-ms.openlocfilehash: 8e427206379f1e7d094362411f074ad9cafb43fd
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.openlocfilehash: cfcb65fa23fe4593e7dcf11da3b5da4b1785ce71
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657533"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279738"
 ---
 # <a name="texture-class"></a>Classe texture
 
@@ -105,7 +105,7 @@ A classificação da textura.
 
 **Namespace:** Concurrency:: Graphics
 
-##  <a name="dtor"></a> ~ textura
+##  <a name="dtor"></a> ~texture
 
 Destrói o `texture` objeto.
 
@@ -173,7 +173,7 @@ const value_type get(const index<_Rank>& _Index) const restrict(amp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Index*<br/>
+*_Index*<br/>
 O índice do elemento.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -216,7 +216,7 @@ unsigned int get_row_pitch() const restrict(cpu);
 
 O número de bytes entre cada linha em uma textura de preparação 2-dimensional, ou entre cada linha de uma fatia de profundidade na textura de preparação de 3-dimensional.
 
-##  <a name="operator_call"></a> Operator)
+##  <a name="operator_call"></a> operator()
 
 Retorna o valor do elemento que é especificado pelos parâmetros.
 
@@ -239,7 +239,7 @@ const value_type operator() (
 
 ### <a name="parameters"></a>Parâmetros
 
-*Index*<br/>
+*_Index*<br/>
 O índice.
 
 *_I0*<br/>
@@ -258,7 +258,7 @@ A classificação do índice.
 
 O valor do elemento que é especificado pelos parâmetros.
 
-##  <a name="operator_at"></a> operador]
+##  <a name="operator_at"></a> operator[]
 
 Retorna o elemento que está no índice especificado.
 
@@ -270,7 +270,7 @@ const value_type operator[] (int _I0) const restrict(amp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Index*<br/>
+*_Index*<br/>
 O índice.
 
 *_I0*<br/>
@@ -280,7 +280,7 @@ O índice.
 
 O elemento que está no índice especificado.
 
-##  <a name="operator_eq"></a> operador =
+##  <a name="operator_eq"></a> operator=
 
 Copia a especificada [textura](texture-class.md) objeto para esse outro.
 
@@ -294,7 +294,7 @@ texture& operator= (
 
 ### <a name="parameters"></a>Parâmetros
 
-*Outro*<br/>
+*_Other*<br/>
 O `texture` objeto do qual copiar.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -317,7 +317,7 @@ Obtém o número de bytes entre cada linha em um 2D ou 3D preparo textura na CPU
 __declspec(property(get= get_row_pitch)) unsigned int row_pitch;
 ```
 
-##  <a name="set"></a> Definir
+##  <a name="set"></a> set
 
 Define o valor do elemento no índice especificado.
 
@@ -329,7 +329,7 @@ void set(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Index*<br/>
+*_Index*<br/>
 O índice do elemento.
 
 *_Rank*<br/>
@@ -588,7 +588,7 @@ Um iterador inicial no contêiner de origem.
 *_Src_last*<br/>
 Um iterador final no contêiner de origem.
 
-*Outro*<br/>
+*_Other*<br/>
 Outra fonte de dados.
 
 *_Rank*<br/>

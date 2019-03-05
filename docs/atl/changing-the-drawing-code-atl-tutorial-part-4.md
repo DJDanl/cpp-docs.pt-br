@@ -5,12 +5,12 @@ ms.date: 09/26/2018
 helpviewer_keywords:
 - _ATL_MIN_CRT macro
 ms.assetid: 08ff14e8-aa49-4139-a110-5d071939cf1e
-ms.openlocfilehash: ce6492eb2e4da04b261c7a88154674d036bb578a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6ea7a0ae0c0a9be87fe507e6b934bd046c9ffe4e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481413"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295858"
 ---
 # <a name="changing-the-drawing-code-atl-tutorial-part-4"></a>Alteração do código de desenho (Tutorial ATL, parte 4)
 
@@ -106,7 +106,7 @@ Recompile o controle. Verifique se o arquivo de Polyctl seja fechado se ele aind
 
 ### <a name="to-use-the-activex-control-test-container"></a>Para usar o contêiner de teste do controle ActiveX
 
-1. Compilar e iniciar o contêiner de teste do controle ActiveX. O [TSTCON exemplo: contêiner de teste do controle ActiveX](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/ole/TstCon) podem ser encontrados no GitHub.
+1. Compilar e iniciar o contêiner de teste do controle ActiveX. O [TSTCON exemplo: Contêiner de teste do controle ActiveX](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/ole/TstCon) podem ser encontrados no GitHub.
 
     > [!NOTE]
     > Para erros que envolvem `ATL::CW2AEX`, em Script.Cpp, substitua a linha `TRACE( "XActiveScriptSite::GetItemInfo( %s )\n", pszNameT );` com `TRACE( "XActiveScriptSite::GetItemInfo( %s )\n", pszNameT.m_psz );`e a linha `TRACE( "Source Text: %s\n", COLE2CT( bstrSourceLineText ) );` com `TRACE( "Source Text: %s\n", bstrSourceLineText );`.<br/>

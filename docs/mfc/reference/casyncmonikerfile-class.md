@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CAsyncMonikerFile [MFC], OnStartBinding
 - CAsyncMonikerFile [MFC], OnStopBinding
 ms.assetid: 17378b66-a49a-4b67-88e3-7756ad26a2fc
-ms.openlocfilehash: 107f791505bc41b8dbf9c0374c5e3821abbc0fe3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 48d7c3b5dd1b43c7a1639c6d5c56979b422d7017
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50669060"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262617"
 ---
 # <a name="casyncmonikerfile-class"></a>Classe CAsyncMonikerFile
 
@@ -87,9 +87,9 @@ Monikers assíncronos são usados principalmente em aplicativos habilitados para
 
 Para obter mais informações sobre como usar controles ActiveX e monikers assíncronos em aplicativos da Internet, consulte os seguintes artigos:
 
-- [Internet primeiras etapas: Monikers assíncronos](../../mfc/asynchronous-monikers-on-the-internet.md)
+- [Primeiras etapas de Internet: Monikers assíncronos](../../mfc/asynchronous-monikers-on-the-internet.md)
 
-- [Internet primeiras etapas: Controles ActiveX](../../mfc/activex-controls-on-the-internet.md)
+- [Primeiras etapas de Internet: Controles ActiveX](../../mfc/activex-controls-on-the-internet.md)
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -330,7 +330,7 @@ virtual void OnStopBinding(HRESULT hresult, LPCTSTR szError);
 
 ### <a name="parameters"></a>Parâmetros
 
-*HRESULT*<br/>
+*hresult*<br/>
 Um HRESULT que é o valor de aviso ou erro.
 
 *szErrort*<br/>

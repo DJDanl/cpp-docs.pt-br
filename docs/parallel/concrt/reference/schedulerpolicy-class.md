@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - SchedulerPolicy class
 ms.assetid: bcebf51a-65f8-45a3-809b-d1ff93527dc4
-ms.openlocfilehash: 0d1c28501abc86d09b683b0ed91f831fe8697306
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2eff40b11e4e9a5981ad85c37c8345abefb13fed
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462045"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57265529"
 ---
 # <a name="schedulerpolicy-class"></a>Classe SchedulerPolicy
 
@@ -86,7 +86,7 @@ Se a chave especificada o `key` parâmetro é suportado, o valor de política pa
 
 O método gerará [invalid_scheduler_policy_key](invalid-scheduler-policy-key-class.md) para uma chave de política inválida.
 
-##  <a name="operator_eq"></a> operador =
+##  <a name="operator_eq"></a> operator=
 
 Atribui a política de Agendador de outra política de Agendador.
 
@@ -138,7 +138,7 @@ O segundo construtor cria uma nova política de agendador que usa um estilo de p
 
 O terceiro construtor é um construtor de cópia. Muitas vezes, a maneira mais conveniente para definir uma nova política de Agendador é copiar uma política existente e modificá-la usando o `SetPolicyValue` ou `SetConcurrencyLimits` métodos.
 
-##  <a name="dtor"></a> ~ SchedulerPolicy
+##  <a name="dtor"></a> ~SchedulerPolicy
 
 Destrói uma política de Agendador.
 
@@ -207,4 +207,3 @@ Observe que esse método não tem permissão para definir a `MinConcurrency` ou 
 [Classe CurrentScheduler](currentscheduler-class.md)<br/>
 [Classe Scheduler](scheduler-class.md)<br/>
 [Agendador de tarefas](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)
-

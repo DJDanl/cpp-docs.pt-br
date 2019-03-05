@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - critical_section class
 ms.assetid: fa3c89d6-be5d-4d1b-bddb-8232814e6cf6
-ms.openlocfilehash: a08cb5049d742a9740361595bd931a2f7a48bd16
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f334b159ae39f48006a135c6e36d413b737a7344
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50498755"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260940"
 ---
 # <a name="criticalsection-class"></a>Classe critical_section
 
@@ -84,7 +84,7 @@ Constrói uma nova seção crítica.
 critical_section();
 ```
 
-##  <a name="dtor"></a> ~ critical_section
+##  <a name="dtor"></a> ~critical_section
 
 Destrói uma seção crítica.
 
@@ -177,7 +177,7 @@ bool try_lock_for(unsigned int _Timeout);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Tempo limite*<br/>
+*_Timeout*<br/>
 O número de milissegundos de espera antes do tempo limite.
 
 ### <a name="return-value"></a>Valor de retorno

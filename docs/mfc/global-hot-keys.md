@@ -7,12 +7,12 @@ helpviewer_keywords:
 - access keys [MFC], hot keys
 - global hot keys [MFC]
 ms.assetid: e0b95d14-c571-4c9a-9cd1-e7fc1f0e278d
-ms.openlocfilehash: 4cafee311f71d8165380b3fb7e192e7032b7941c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: eedeb0547320c8b421fa72647f51b02f834af300
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50529929"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273615"
 ---
 # <a name="global-hot-keys"></a>Teclas de acesso globais
 
@@ -26,4 +26,3 @@ Sempre que o usuário pressiona uma tecla de acesso global, a janela especificad
 
 [Usando CHotKeyCtrl](../mfc/using-chotkeyctrl.md)<br/>
 [Controles](../mfc/controls-mfc.md)
-

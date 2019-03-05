@@ -10,12 +10,12 @@ helpviewer_keywords:
 - map classes [MFC]
 - collection classes [MFC], lists
 ms.assetid: 81a13a7f-0c2c-4efd-b6bb-b4e624a0743d
-ms.openlocfilehash: 0856a9de06d07b3851dc748644e84ba9c4b56c4f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b89b99abb79fe689274f9e0b89a85bb33643d324
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50601039"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274369"
 ---
 # <a name="array-list-and-map-classes"></a>Classes de matriz, lista e mapa
 
@@ -30,4 +30,3 @@ Mapas se relacionam a um valor de chave com um valor de dados. Por exemplo, a ch
 ## <a name="see-also"></a>Consulte também
 
 [Visão geral da classe](../mfc/class-library-overview.md)
-

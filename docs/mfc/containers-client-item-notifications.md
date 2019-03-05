@@ -1,19 +1,19 @@
 ---
-title: 'Contêineres: notificações de item do cliente'
+title: 'Contêineres: Notificações de Item do cliente'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - notifications [MFC], container client item
 - OLE containers [MFC], client-item notifications
 - client items and OLE containers
 ms.assetid: e1f1c427-01f5-45f2-b496-c5bce3d76340
-ms.openlocfilehash: b59ba84c27d9ed4c964bd308cf69f9f729eb3c39
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 583c438820c002a4c192d15358ca98424d02889a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528889"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291048"
 ---
-# <a name="containers-client-item-notifications"></a>Contêineres: notificações de item do cliente
+# <a name="containers-client-item-notifications"></a>Contêineres: Notificações de Item do cliente
 
 Este artigo discute as funções substituíveis que a estrutura MFC chama quando aplicativos de servidor modificarem itens de documento do aplicativo cliente.
 
@@ -49,6 +49,5 @@ Se o tamanho ou a posição do item OLE é alterado durante a edição in-loco, 
 ## <a name="see-also"></a>Consulte também
 
 [Contêineres](../mfc/containers.md)<br/>
-[Contêineres: estados de item do cliente](../mfc/containers-client-item-states.md)<br/>
+[Contêineres: Estados de Item do cliente](../mfc/containers-client-item-states.md)<br/>
 [COleClientItem::OnChangeItemPosition](../mfc/reference/coleclientitem-class.md#onchangeitemposition)
-

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - mutex [C++]
 - threading [C++], thread stacks
 ms.assetid: 1415f47d-417f-4f42-949b-946fb28aab0e
-ms.openlocfilehash: c7d9790cfee39fbddd9ab545d48fa375d56f3a05
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c8536505882ca9a87aec385ca1c42d652ea84ff7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50561324"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326525"
 ---
 # <a name="writing-a-multithreaded-win32-program"></a>Escrevendo um programa Win32 multithread
 
@@ -28,7 +28,7 @@ Quando você escreve um programa com vários threads, você deve coordenar seu c
 ##  <a name="_core_sharing_common_resources_between_threads"></a> Compartilhando recursos comuns entre os Threads
 
 > [!NOTE]
->  Para obter uma discussão semelhante do ponto de vista do MFC, consulte [Multithreading: dicas de programação](multithreading-programming-tips.md) e [Multithreading: quando usar as Classes de sincronização](multithreading-when-to-use-the-synchronization-classes.md).
+>  Para obter uma discussão semelhante do ponto de vista do MFC, consulte [Multithreading: Dicas de programação](multithreading-programming-tips.md) e [Multithreading: Quando usar as Classes de sincronização](multithreading-when-to-use-the-synchronization-classes.md).
 
 Cada thread tem sua própria pilha e registra sua própria cópia da CPU. Outros recursos, como arquivos, dados estáticos e memória heap, são compartilhados por todos os threads no processo. Usando esses recursos comuns de segmentos devem ser sincronizados. O Win32 fornece várias maneiras de recursos, incluindo semáforos e exclusões mútuas, eventos e seções críticas.
 

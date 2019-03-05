@@ -7,12 +7,12 @@ helpviewer_keywords:
 - messages, notification
 - notifications [MFC], CSliderCtrl
 ms.assetid: b9121104-3889-4a10-92bf-f3723f1af9d0
-ms.openlocfilehash: 250170d99bfb73c21c6288e0c2b6c31adf4dcefc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bee2d602512ea1a6af39b0bb218ee7333b399c80
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50656021"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294221"
 ---
 # <a name="slider-notification-messages"></a>Mensagens de notificação do controle deslizante
 
@@ -38,4 +38,3 @@ A tabela a seguir lista as mensagens de notificação do controle deslizante e e
 
 [Usando CSliderCtrl](../mfc/using-csliderctrl.md)<br/>
 [Controles](../mfc/controls-mfc.md)
-

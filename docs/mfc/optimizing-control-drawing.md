@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], optimizing
 ms.assetid: 29ff985d-9bf5-4678-b62d-aad12def75fb
-ms.openlocfilehash: 9096c43088c89ceef9e57d0e3a994340f9115d6b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4d0037ebdfe56690be2f18a2790b2b13967e337c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50487341"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274174"
 ---
 # <a name="optimizing-control-drawing"></a>Otimizando o desenho de controle
 
@@ -44,10 +44,9 @@ Por fim, para eliminar desnecessários `SelectObject` modificar chamadas, `OnDra
 
 ## <a name="see-also"></a>Consulte também
 
-[Controles ActiveX do MFC: otimização](../mfc/mfc-activex-controls-optimization.md)<br/>
+[Controles ActiveX MFC: Otimização](../mfc/mfc-activex-controls-optimization.md)<br/>
 [Classe COleControl](../mfc/reference/colecontrol-class.md)<br/>
 [Controles ActiveX do MFC](../mfc/mfc-activex-controls.md)<br/>
 [Controles ActiveX do MFC](../mfc/mfc-activex-controls.md)<br/>
 [Assistente de controle ActiveX do MFC](../mfc/reference/mfc-activex-control-wizard.md)<br/>
-[Controles ActiveX do MFC: pintando um controle ActiveX](../mfc/mfc-activex-controls-painting-an-activex-control.md)
-
+[Controles ActiveX MFC: Pintando um controle ActiveX](../mfc/mfc-activex-controls-painting-an-activex-control.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Controles ActiveX MFC: eventos'
+title: 'Controles ActiveX MFC: Eventos'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], events
@@ -13,20 +13,20 @@ helpviewer_keywords:
 - events [MFC], ActiveX controls
 - OLE events [MFC]
 ms.assetid: e1e57e0c-206b-4923-a0b5-682c26564f74
-ms.openlocfilehash: 76557e64b5b53c32a7d7f63134085e86bf0138df
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0d8a881d07a3e48673c6dc3298816d165273be0d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50540667"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276761"
 ---
-# <a name="mfc-activex-controls-events"></a>Controles ActiveX MFC: eventos
+# <a name="mfc-activex-controls-events"></a>Controles ActiveX MFC: Eventos
 
 Controles ActiveX usam eventos para notificar um contêiner que algo aconteceu ao controle. Exemplos comuns de eventos incluem cliques no controle, dados inseridos usando o teclado e as alterações no estado do controle. Quando essas ações ocorrem, o controle dispara um evento para alertar o contêiner.
 
 Eventos também são chamados de mensagens.
 
-MFC dá suporte a dois tipos de eventos: estoque e personalizadas. Eventos de estoque são os eventos que a classe [COleControl](../mfc/reference/colecontrol-class.md) manipula automaticamente. Para obter uma lista completa de eventos de estoque, consulte o artigo [controles ActiveX MFC: adicionando eventos de estoque](../mfc/mfc-activex-controls-adding-stock-events-to-an-activex-control.md). Eventos personalizados permitem que um controle a capacidade de notificar o contêiner quando ocorre uma ação específica para esse controle. Alguns exemplos seriam uma alteração no estado interno de um controle ou no recebimento de uma determinada mensagem de janela.
+MFC dá suporte a dois tipos de eventos: estoque e personalizadas. Eventos de estoque são os eventos que a classe [COleControl](../mfc/reference/colecontrol-class.md) manipula automaticamente. Para obter uma lista completa de eventos de estoque, consulte o artigo [controles ActiveX MFC: Adicionando eventos de estoque](../mfc/mfc-activex-controls-adding-stock-events-to-an-activex-control.md). Eventos personalizados permitem que um controle a capacidade de notificar o contêiner quando ocorre uma ação específica para esse controle. Alguns exemplos seriam uma alteração no estado interno de um controle ou no recebimento de uma determinada mensagem de janela.
 
 Para o seu controle disparar eventos corretamente, sua classe de controle deve mapear cada evento do controle para uma função de membro que deve ser chamada quando ocorre o evento relacionado. Esse mecanismo de mapeamento (chamado de um mapa de eventos) centraliza informações sobre o evento e permite que o Visual Studio facilmente acessar e manipular os eventos do controle. Este mapa de evento é declarado com a seguinte macro, localizada no cabeçalho (. H) o arquivo da declaração de classe de controle:
 
@@ -45,10 +45,10 @@ Dois outros artigos abordam eventos detalhadamente:
 
 - [Controles ActiveX MFC: Adicionando eventos de estoque](../mfc/mfc-activex-controls-adding-stock-events-to-an-activex-control.md)
 
-- [Controles ActiveX do MFC: adicionando eventos personalizados](../mfc/mfc-activex-controls-adding-custom-events.md)
+- [Controles ActiveX MFC: Adicionando eventos personalizados](../mfc/mfc-activex-controls-adding-custom-events.md)
 
 ## <a name="see-also"></a>Consulte também
 
 [Controles ActiveX do MFC](../mfc/mfc-activex-controls.md)<br/>
-[Controles ActiveX do MFC: métodos](../mfc/mfc-activex-controls-methods.md)<br/>
+[Controles ActiveX MFC: Métodos](../mfc/mfc-activex-controls-methods.md)<br/>
 [Classe COleControl](../mfc/reference/colecontrol-class.md)

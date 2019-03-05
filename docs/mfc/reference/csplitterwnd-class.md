@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CSplitterWnd [MFC], OnDrawSplitter
 - CSplitterWnd [MFC], OnInvertTracker
 ms.assetid: fd0de258-6dbe-4552-9e47-a39de0471d51
-ms.openlocfilehash: 450699d001ee7246742fe23d9bf89d03c2d61cb8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 42913ddea7818636dce8d630ed2d79d13c19ce81
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50600496"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302098"
 ---
 # <a name="csplitterwnd-class"></a>Classe CSplitterWnd
 
@@ -388,7 +388,7 @@ virtual BOOL CreateView(
 
 ### <a name="parameters"></a>Parâmetros
 
-*linha*<br/>
+*row*<br/>
 Especifica a linha da janela separador no qual colocar a nova exibição.
 
 *col*<br/>
@@ -475,7 +475,7 @@ virtual void DeleteView(
 
 ### <a name="parameters"></a>Parâmetros
 
-*linha*<br/>
+*row*<br/>
 Especifica a linha da janela de divisor na qual se deseja excluir o modo de exibição.
 
 *col*<br/>
@@ -649,7 +649,7 @@ CWnd* GetPane(
 
 ### <a name="parameters"></a>Parâmetros
 
-*linha*<br/>
+*row*<br/>
 Especifica uma linha.
 
 *col*<br/>
@@ -684,7 +684,7 @@ void GetRowInfo(
 
 ### <a name="parameters"></a>Parâmetros
 
-*linha*<br/>
+*row*<br/>
 Especifica uma linha.
 
 *cyCur*<br/>
@@ -727,7 +727,7 @@ int IdFromRowCol(
 
 ### <a name="parameters"></a>Parâmetros
 
-*linha*<br/>
+*row*<br/>
 Especifica a linha de janela do divisor.
 
 *col*<br/>
@@ -758,7 +758,7 @@ BOOL IsChildPane(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Apropriei*<br/>
+*pWnd*<br/>
 Um ponteiro para um [CWnd](../../mfc/reference/cwnd-class.md) objeto a ser testado.
 
 *pRow*<br/>
@@ -818,7 +818,7 @@ Um valor da `enum ESplitType`, que pode ser um dos seguintes:
 
     - `splitBorder` Os limites da janela de divisão.
 
-*Rect*<br/>
+*rect*<br/>
 Uma referência a um [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto que especifica o tamanho e a forma das janelas de divisão.
 
 ### <a name="remarks"></a>Comentários
@@ -837,7 +837,7 @@ virtual void OnInvertTracker(const CRect& rect);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Rect*<br/>
+*rect*<br/>
 Referência a um `CRect` objeto que especifica o retângulo de controle.
 
 ### <a name="remarks"></a>Comentários
@@ -877,13 +877,13 @@ virtual void SetActivePane(
 
 ### <a name="parameters"></a>Parâmetros
 
-*linha*<br/>
+*row*<br/>
 Se *Apropriei* for NULL, que especifica a linha no painel de ativos.
 
 *col*<br/>
 Se *Apropriei* for NULL, que especifica a coluna no painel de ativos.
 
-*Apropriei*<br/>
+*pWnd*<br/>
 Um ponteiro para um `CWnd` objeto. Se for NULL, o painel especificado por *linha* e *col* seja definida como ativa. Se não for NULL, especifica o painel que seja definido como ativo.
 
 ### <a name="remarks"></a>Comentários
@@ -937,7 +937,7 @@ void SetRowInfo(
 
 ### <a name="parameters"></a>Parâmetros
 
-*linha*<br/>
+*row*<br/>
 Especifica uma linha da janela de divisor.
 
 *cyIdeal*<br/>

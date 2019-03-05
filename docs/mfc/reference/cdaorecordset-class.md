@@ -166,12 +166,12 @@ helpviewer_keywords:
 - CDaoRecordset [MFC], m_strFilter
 - CDaoRecordset [MFC], m_strSort
 ms.assetid: 2322067f-1027-4662-a5d7-aa2fc7488630
-ms.openlocfilehash: 6b3e3fac575d6a1308a9f61b3bf827d76785e94d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 96118645aa656e97fcb93a0fd223045208ab03a3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50639316"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273888"
 ---
 # <a name="cdaorecordset-class"></a>Classe CDaoRecordset
 
@@ -250,7 +250,7 @@ class CDaoRecordset : public CObject
 |[CDaoRecordset::MoveLast](#movelast)|Posiciona o registro atual no último registro no conjunto de registros.|
 |[CDaoRecordset::MoveNext](#movenext)|Posiciona o registro atual no próximo registro no conjunto de registros.|
 |[CDaoRecordset::MovePrev](#moveprev)|Posiciona o registro atual no registro anterior no conjunto de registros.|
-|[2&gt;cdaorecordset::Open&lt;2](#open)|Cria um novo conjunto de registros de uma tabela, dynaset ou instantâneo.|
+|[CDaoRecordset::Open](#open)|Cria um novo conjunto de registros de uma tabela, dynaset ou instantâneo.|
 |[CDaoRecordset::Requery](#requery)|Executa a consulta do conjunto de registros novamente para atualizar os registros selecionados.|
 |[CDaoRecordset::Seek](#seek)|Localiza o registro em um objeto de conjunto de registros do tipo de tabela indexada que satisfaz os critérios especificados para o índice atual e torna esse registro o registro atual.|
 |[CDaoRecordset::SetAbsolutePosition](#setabsoluteposition)|Define o número do registro de um conjunto de registros do objeto atual.|
@@ -1122,7 +1122,7 @@ void GetFieldInfo(
 *nIndex*<br/>
 O índice baseado em zero do campo predefinido na coleção de campos do conjunto de registros, para a pesquisa por índice.
 
-*FieldInfo*<br/>
+*fieldinfo*<br/>
 Uma referência a um [CDaoFieldInfo](../../mfc/reference/cdaofieldinfo-structure.md) estrutura.
 
 *dwInfoOptions*<br/>
@@ -1130,9 +1130,9 @@ Opções que especificam quais informações sobre o conjunto de registros a ser
 
 - `AFX_DAO_PRIMARY_INFO` (Padrão) Nome, tipo, tamanho, atributos
 
-- `AFX_DAO_SECONDARY_INFO` Informações principais, além de: posição Ordinal, obrigatório, permitir que a tabela de origem de nome externa, o campo de origem, Zero comprimento, a ordem de agrupamento,
+- `AFX_DAO_SECONDARY_INFO` Informações principais, além de: Posição ordinal, obrigatória, permitir que o comprimento Zero, ordem de agrupamento, nome externa, campo de fonte de tabela de origem
 
-- `AFX_DAO_ALL_INFO` Informações de primárias e secundárias, além de: texto do valor padrão, a regra de validação, de validação
+- `AFX_DAO_ALL_INFO` Informações de primárias e secundárias, além de: Texto de validação de valor, a regra de validação padrão
 
 *lpszName*<br/>
 O nome do campo.
@@ -1237,9 +1237,9 @@ Opções que especificam quais informações sobre o índice a recuperar. As op�
 
 - `AFX_DAO_PRIMARY_INFO` (Padrão) Campos de nome, informações de campo
 
-- `AFX_DAO_SECONDARY_INFO` Informações principais, além de: primário, Unique, Clustered, ignorar, obrigatório, estrangeiro
+- `AFX_DAO_SECONDARY_INFO` Informações principais, além de: Primário, clusterizado, exclusivo, ignorar, obrigatório, externo
 
-- `AFX_DAO_ALL_INFO` Informações de primárias e secundárias, além de: contagem distinta
+- `AFX_DAO_ALL_INFO` Informações de primárias e secundárias, além de: Contagem distinta
 
 *lpszName*<br/>
 Um ponteiro para o nome do objeto index, para a pesquisa por nome.
@@ -1500,9 +1500,9 @@ Esta tabela mostra quais operações de movimentação são permitidas com difer
 
 ||MoveFirst, MoveLast|MovePrev,<br /><br /> Mover < 0|Mover 0|MoveNext,<br /><br /> Mover > 0|
 |------|-------------------------|-----------------------------|------------|-----------------------------|
-|`IsBOF`= diferente de zero,<br /><br /> `IsEOF`=0|Permitido|Exceção|Exceção|Permitido|
-|`IsBOF`=0,<br /><br /> `IsEOF`= diferente de zero|Permitido|Permitido|Exceção|Exceção|
-|Ambos diferente de zero|Exceção|Exceção|Exceção|Exceção|
+|`IsBOF`=nonzero,<br /><br /> `IsEOF`=0|Permitido|Exceção|Exceção|Permitido|
+|`IsBOF`=0,<br /><br /> `IsEOF`=nonzero|Permitido|Permitido|Exceção|Exceção|
+|Both nonzero|Exceção|Exceção|Exceção|Exceção|
 |0|Permitido|Permitido|Permitido|Permitido|
 
 Permitindo que uma operação de movimentação não significa que a operação com êxito será localizar um registro. Ela simplesmente indica que uma tentativa de executar a operação de movimentação especificada é permitida e não gerará uma exceção. O valor de `IsBOF` e `IsEOF` funções de membro podem mudar como resultado da tentativa de movimentação.
@@ -1511,10 +1511,10 @@ O efeito de operações de movimentação que não localize um registro no valor
 
 ||IsBOF|IsEOF|
 |------|-----------|-----------|
-|`MoveFirst`, `MoveLast`|Diferente de zero|Diferente de zero|
+|`MoveFirst`, `MoveLast`|Nonzero|Nonzero|
 |`Move` 0|Nenhuma alteração|Nenhuma alteração|
-|`MovePrev`, `Move` < 0|Diferente de zero|Nenhuma alteração|
-|`MoveNext`, `Move` > 0|Nenhuma alteração|Diferente de zero|
+|`MovePrev`, `Move` < 0|Nonzero|Nenhuma alteração|
+|`MoveNext`, `Move` > 0|Nenhuma alteração|Nonzero|
 
 Para obter informações relacionadas, consulte o tópico "BOF, EOF propriedades" na Ajuda do DAO.
 
@@ -1573,9 +1573,9 @@ Esta tabela mostra quais operações de movimentação são permitidas com difer
 
 ||MoveFirst, MoveLast|MovePrev,<br /><br /> Mover < 0|Mover 0|MoveNext,<br /><br /> Mover > 0|
 |------|-------------------------|-----------------------------|------------|-----------------------------|
-|`IsBOF`= diferente de zero,<br /><br /> `IsEOF`=0|Permitido|Exceção|Exceção|Permitido|
-|`IsBOF`=0,<br /><br /> `IsEOF`= diferente de zero|Permitido|Permitido|Exceção|Exceção|
-|Ambos diferente de zero|Exceção|Exceção|Exceção|Exceção|
+|`IsBOF`=nonzero,<br /><br /> `IsEOF`=0|Permitido|Exceção|Exceção|Permitido|
+|`IsBOF`=0,<br /><br /> `IsEOF`=nonzero|Permitido|Permitido|Exceção|Exceção|
+|Both nonzero|Exceção|Exceção|Exceção|Exceção|
 |0|Permitido|Permitido|Permitido|Permitido|
 
 Permitindo que uma operação de movimentação não significa que a operação com êxito será localizar um registro. Ela simplesmente indica que uma tentativa de executar a operação de movimentação especificada é permitida e não gerará uma exceção. O valor de `IsBOF` e `IsEOF` funções de membro podem mudar como resultado da tentativa de movimentação.
@@ -1584,10 +1584,10 @@ O efeito de operações de movimentação que não localize um registro no valor
 
 ||IsBOF|IsEOF|
 |------|-----------|-----------|
-|`MoveFirst`, `MoveLast`|Diferente de zero|Diferente de zero|
+|`MoveFirst`, `MoveLast`|Nonzero|Nonzero|
 |`Move` 0|Nenhuma alteração|Nenhuma alteração|
-|`MovePrev`, `Move` < 0|Diferente de zero|Nenhuma alteração|
-|`MoveNext`, `Move` > 0|Nenhuma alteração|Diferente de zero|
+|`MovePrev`, `Move` < 0|Nonzero|Nenhuma alteração|
+|`MoveNext`, `Move` > 0|Nenhuma alteração|Nonzero|
 
 Para obter informações relacionadas, consulte o tópico "BOF, EOF propriedades" na Ajuda do DAO.
 
@@ -1601,7 +1601,7 @@ BOOL IsFieldDirty(void* pv);
 
 ### <a name="parameters"></a>Parâmetros
 
-*VP*<br/>
+*pv*<br/>
 Um ponteiro para o membro de dados do campo cujo status você deseja verificar ou nulo para determinar se qualquer um dos campos estão sujos.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1624,7 +1624,7 @@ BOOL IsFieldNull(void* pv);
 
 ### <a name="parameters"></a>Parâmetros
 
-*VP*<br/>
+*pv*<br/>
 Um ponteiro para o membro de dados do campo cujo status você deseja verificar ou nulo para determinar se qualquer um dos campos serão Null.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1653,7 +1653,7 @@ BOOL IsFieldNullable(void* pv);
 
 ### <a name="parameters"></a>Parâmetros
 
-*VP*<br/>
+*pv*<br/>
 Um ponteiro para o membro de dados do campo cujo status você deseja verificar ou nulo para determinar se qualquer um dos campos serão Null.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1908,7 +1908,7 @@ Para mover a posição atual gravar em um objeto de conjunto de registros de um 
 
 Para obter informações relacionadas, consulte os tópicos "Método Move" e "MoveFirst, MoveLast, MoveNext e MovePrevious métodos" na Ajuda do DAO.
 
-##  <a name="open"></a>  2&gt;cdaorecordset::Open&lt;2
+##  <a name="open"></a>  CDaoRecordset::Open
 
 Você deve chamar essa função de membro para recuperar os registros do conjunto de registros.
 
@@ -2261,7 +2261,7 @@ void SetFieldDirty(
 
 ### <a name="parameters"></a>Parâmetros
 
-*VP*<br/>
+*pv*<br/>
 Contém o endereço de um membro de dados do campo no conjunto de registros ou NULL. Se for NULL, todos os membros de dados de campo no conjunto de registros são sinalizados. (C++ nulo não é igual a Null na terminologia de banco de dados, que significa "não tendo nenhum valor.")
 
 *bDirty*<br/>
@@ -2304,7 +2304,7 @@ void SetFieldNull(
 
 ### <a name="parameters"></a>Parâmetros
 
-*VP*<br/>
+*pv*<br/>
 Contém o endereço de um membro de dados do campo no conjunto de registros ou NULL. Se for NULL, todos os membros de dados de campo no conjunto de registros são sinalizados. (C++ nulo não é igual a Null na terminologia de banco de dados, que significa "não tendo nenhum valor.")
 
 *bNull*<br/>

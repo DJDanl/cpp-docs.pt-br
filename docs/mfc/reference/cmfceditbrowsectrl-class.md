@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CMFCEditBrowseCtrl [MFC], OnIllegalFileName
 - CMFCEditBrowseCtrl [MFC], SetBrowseButtonImage
 ms.assetid: 69cfd886-3d35-4bee-8901-7c88fcf9520f
-ms.openlocfilehash: a16d7508f273fc444be65c1e6cc176911fd28e03
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8d1f603f8439815c92360af40ccb807446d0e84a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50643294"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273277"
 ---
 # <a name="cmfceditbrowsectrl-class"></a>Classe CMFCEditBrowseCtrl
 
@@ -88,7 +88,7 @@ O `CMFCEditBrowseCtrl` classe dá suporte a modos a seguir.
 
    Uma caixa de diálogo de seleção de pasta padrão é exibida quando o usuário clica no botão Procurar.
 
-## <a name="how-to-specify-an-edit-browse-control"></a>Como: Especificar um controle de navegação de edição
+## <a name="how-to-specify-an-edit-browse-control"></a>Como: Especifique um controle de navegação de edição
 
 Execute as seguintes etapas para incorporar um controle de edição de procurar em seu aplicativo:
 
@@ -141,7 +141,7 @@ void EnableBrowseButton(
 
 ### <a name="parameters"></a>Parâmetros
 
-*bAtivar*<br/>
+*bEnable*<br/>
 TRUE para exibir o botão de procura; FALSO para não exibir o botão Procurar. O valor padrão é TRUE.
 
 *szLabel*<br/>
@@ -271,7 +271,7 @@ virtual void OnDrawBrowseButton(
 *pDC*<br/>
 Um ponteiro para um contexto de dispositivo.
 
-*Rect*<br/>
+*Retângulo*<br/>
 O retângulo delimitador do botão Procurar.
 
 *bIsButtonPressed*<br/>

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - event sink maps [MFC]
 ms.assetid: a9757eb2-5f4a-45ec-a2cd-ce5eec85b16f
-ms.openlocfilehash: 3e75f1d880ce767b6fdbb61b4877f0748ba779f4
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 8e33636253b269692f87f99980b9da0cd60867ee
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518925"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57285575"
 ---
 # <a name="event-sink-maps"></a>Mapas de coleta de evento
 
@@ -55,7 +55,7 @@ Para obter mais informações sobre mapas de coleta de eventos e os contêineres
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdisp.h
+  **Header** afxdisp.h
 
 ##  <a name="declare_eventsink_map"></a>  DECLARE_EVENTSINK_MAP
 
@@ -85,7 +85,7 @@ END_EVENTSINK_MAP()
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdisp.h
+  **Header** afxdisp.h
 
 ##  <a name="on_event"></a>  ON_EVENT
 
@@ -103,7 +103,7 @@ A classe à qual pertence este mapa de coletor de evento.
 *id*<br/>
 A ID de controle do controle OLE.
 
-*DISPID*<br/>
+*dispid*<br/>
 A ID de expedição do evento disparado pelo controle.
 
 *pfnHandler*<br/>
@@ -124,7 +124,7 @@ Para obter uma lista de **VTS_** constantes, consulte [EVENT_CUSTOM](event-maps.
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdisp.h
+  **Header** afxdisp.h
 
 ##  <a name="on_event_range"></a>  ON_EVENT_RANGE
 
@@ -145,7 +145,7 @@ A ID de controle do primeiro controle OLE no intervalo.
 *idLast*<br/>
 A ID de controle do último controle OLE no intervalo.
 
-*DISPID*<br/>
+*dispid*<br/>
 A ID de expedição do evento disparado pelo controle.
 
 *pfnHandler*<br/>
@@ -176,7 +176,7 @@ O código a seguir é definido no arquivo de implementação da classe de caixa 
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdisp.h
+  **Header** afxdisp.h
 
 ##  <a name="on_event_reflect"></a>  ON_EVENT_REFLECT
 
@@ -191,7 +191,7 @@ ON_EVENT_REFLECT(theClass,  dispid, pfnHandler,  vtsParams)
 *theClass*<br/>
 A classe à qual pertence este mapa de coletor de evento.
 
-*DISPID*<br/>
+*dispid*<br/>
 A ID de expedição do evento disparado pelo controle.
 
 *pfnHandler*<br/>
@@ -214,7 +214,7 @@ Para obter uma lista de **VTS_** constantes, consulte [EVENT_CUSTOM](event-maps.
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdisp.h
+  **Header** afxdisp.h
 
 ##  <a name="on_propnotify"></a>  ON_PROPNOTIFY
 
@@ -232,7 +232,7 @@ A classe à qual pertence este mapa de coletor de evento.
 *id*<br/>
 A ID de controle do controle OLE.
 
-*DISPID*<br/>
+*dispid*<br/>
 A ID de expedição da propriedade envolvida na notificação.
 
 *pfnRequest*<br/>
@@ -271,7 +271,7 @@ A ID de controle do primeiro controle OLE no intervalo.
 *idLast*<br/>
 A ID de controle do último controle OLE no intervalo.
 
-*DISPID*<br/>
+*dispid*<br/>
 A ID de expedição da propriedade envolvida na notificação.
 
 *pfnRequest*<br/>
@@ -282,7 +282,7 @@ Ponteiro para uma função de membro que manipula o `OnChanged` notificação pa
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdisp.h
+  **Header** afxdisp.h
 
 ##  <a name="on_propnotify_reflect"></a>  ON_PROPNOTIFY_REFLECT
 
@@ -298,7 +298,7 @@ ON_PROPNOTIFY_REFLECT(theClass, dispid, pfnRequest, pfnChanged)
 *theClass*<br/>
 A classe à qual pertence este mapa de coletor de evento.
 
-*DISPID*<br/>
+*dispid*<br/>
 A ID de expedição da propriedade envolvida na notificação.
 
 *pfnRequest*<br/>
@@ -309,7 +309,7 @@ Ponteiro para uma função de membro que manipula o `OnChanged` notificação pa
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdisp.h
+  **Header** afxdisp.h
 
 ## <a name="see-also"></a>Consulte também
 

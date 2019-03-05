@@ -58,12 +58,12 @@ helpviewer_keywords:
 - CDaoDatabase [MFC], m_pDAODatabase
 - CDaoDatabase [MFC], m_pWorkspace
 ms.assetid: 8ff5b342-964d-449d-bef1-d0ff56aadf6d
-ms.openlocfilehash: 6bdabafc905b1ae5d6ed9a1fcd83ab1982871c3b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d1e9db1ddebe05d42cbb8c4ba242938d6d86cc81
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50439268"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272888"
 ---
 # <a name="cdaodatabase-class"></a>Classe CDaoDatabase
 
@@ -104,8 +104,8 @@ class CDaoDatabase : public CObject
 |[CDaoDatabase::GetRecordsAffected](#getrecordsaffected)|Retorna o número de registros afetado pela última atualização, editar ou Adicionar operação ou por uma chamada para `Execute`.|
 |[CDaoDatabase::GetRelationCount](#getrelationcount)|Retorna o número de relações definidas entre tabelas no banco de dados.|
 |[CDaoDatabase::GetRelationInfo](#getrelationinfo)|Retorna informações sobre uma relação especificada definida entre tabelas no banco de dados.|
-|[Cdaodatabase:: Gettabledefcount](#gettabledefcount)|Retorna o número de tabelas definidas no banco de dados.|
-|[Cdaodatabase:: Gettabledefinfo](#gettabledefinfo)|Retorna informações sobre uma tabela especificada no banco de dados.|
+|[CDaoDatabase::GetTableDefCount](#gettabledefcount)|Retorna o número de tabelas definidas no banco de dados.|
+|[CDaoDatabase::GetTableDefInfo](#gettabledefinfo)|Retorna informações sobre uma tabela especificada no banco de dados.|
 |[CDaoDatabase::GetVersion](#getversion)|Retorna a versão do mecanismo de banco de dados associado com o banco de dados.|
 |[CDaoDatabase::IsOpen](#isopen)|Retorna se diferente de zero a `CDaoDatabase` objeto está atualmente conectado a um banco de dados.|
 |[CDaoDatabase::Open](#open)|Estabelece uma conexão a um banco de dados.|
@@ -587,9 +587,9 @@ Opções que especificam quais informações sobre o conjunto de registros a ser
 
 - Nome AFX_DAO_PRIMARY_INFO (padrão), digite
 
-- Informações AFX_DAO_SECONDARY_INFO principal adição: data de criação, data da última atualização, retorna registros, atualizável
+- Adição de informações AFX_DAO_SECONDARY_INFO primário: Data de criação, data da última atualização, retorna registros, atualizável
 
-- AFX_DAO_ALL_INFO primário e secundárias informações de adição: SQL, conectar, ODBCTimeout
+- AFX_DAO_ALL_INFO primário e secundárias informações de adição: SQL, Connect, ODBCTimeout
 
 *lpszName*<br/>
 Uma cadeia de caracteres que contém o nome de uma consulta definida no banco de dados, para a pesquisa por nome.
@@ -699,7 +699,7 @@ Duas versões desta função fornecem acesso por índice ou por nome. Para obter
 > [!NOTE]
 >  Se você definir a relação de atributos do objeto para ativar operações cascade (`dbRelationUpdateCascades` ou `dbRelationDeleteCascades`), o mecanismo de banco de dados Microsoft Jet automaticamente atualiza ou exclui registros em um ou mais outras tabelas quando são feitas alterações relacionam a chave primária tabelas. Por exemplo, suponha que você estabelecer uma relação de exclusão em cascata entre uma tabela clientes e uma tabela de pedidos. Quando você exclui registros da tabela de clientes, os registros na tabela de pedidos relacionados a esse cliente também serão excluídos. Além disso, se você estabelecer relações de exclusão em cascata entre a tabela de pedidos e outras tabelas, registros dessas tabelas são excluídos automaticamente quando você exclui registros da tabela Customers.
 
-##  <a name="gettabledefcount"></a>  Cdaodatabase:: Gettabledefcount
+##  <a name="gettabledefcount"></a>  CDaoDatabase::GetTableDefCount
 
 Chame essa função de membro para recuperar o número de tabelas definidas no banco de dados.
 
@@ -715,7 +715,7 @@ O número de tabledefs definidos no banco de dados.
 
 `GetTableDefCount` é útil se você precisar executar um loop por meio de todos os tabledefs na coleção TableDefs do banco de dados. Para obter informações sobre uma determinada tabela na coleção, consulte [GetTableDefInfo](#gettabledefinfo).
 
-##  <a name="gettabledefinfo"></a>  Cdaodatabase:: Gettabledefinfo
+##  <a name="gettabledefinfo"></a>  CDaoDatabase::GetTableDefInfo
 
 Chame essa função de membro para obter vários tipos de informações sobre uma tabela definida no banco de dados.
 
@@ -744,9 +744,9 @@ Opções que especificam quais informações sobre a tabela para recuperar. As o
 
 - Atributos de nome AFX_DAO_PRIMARY_INFO (padrão), atualizável,
 
-- Informações AFX_DAO_SECONDARY_INFO principal adição: data de criação, data da última atualização, nome de tabela de origem, conectar-se
+- Adição de informações AFX_DAO_SECONDARY_INFO primário: Data de criação, data da última atualizada, nome da tabela de origem, conecte-se
 
-- AFX_DAO_ALL_INFO primário e secundárias informações de adição: contagem de registros de regra de validação, o texto de validação
+- AFX_DAO_ALL_INFO primário e secundárias informações de adição: Contagem de registros de regra, o texto de validação de validação
 
 *lpszName*<br/>
 O nome do objeto tabledef, pesquisa por nome.
@@ -882,7 +882,7 @@ void SetQueryTimeout(short nSeconds);
 
 ### <a name="parameters"></a>Parâmetros
 
-*nSegundos*<br/>
+*nSeconds*<br/>
 O número de segundos para permitir que uma tentativa de consulta antes de expirar.
 
 ### <a name="remarks"></a>Comentários

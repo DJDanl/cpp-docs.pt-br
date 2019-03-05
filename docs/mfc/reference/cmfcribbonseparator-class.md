@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CMFCRibbonSeparator [MFC], OnDraw
 - CMFCRibbonSeparator [MFC], OnDrawOnList
 ms.assetid: bedb1a53-cb07-4c3c-be12-698c5409e7cf
-ms.openlocfilehash: 05ac8b26cb6b6e7d8e622ecbaac1d4a81bfd35e1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4806582a226590459a104f64499ab6ae541570e7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50565926"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302761"
 ---
 # <a name="cmfcribbonseparator-class"></a>Classe CMFCRibbonSeparator
 
@@ -235,7 +235,7 @@ virtual void OnDrawOnList(
 |*pDC*|[in] Um ponteiro para um contexto de dispositivo.|
 |*strText*|[in] Texto exibido na lista.|
 |*nTextOffset*|[in] Espaçamento entre o texto e o lado esquerdo do retângulo delimitador.|
-|*Rect*|[in] Especifica o retângulo delimitador.|
+|*rect*|[in] Especifica o retângulo delimitador.|
 |*bIsSelected*|[in] Ignorado.|
 |*bHighlighted*|[in] Ignorado.|
 

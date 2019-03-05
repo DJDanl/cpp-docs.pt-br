@@ -196,12 +196,12 @@ helpviewer_keywords:
 - WS_EX_TRANSPARENT constant [MFC]
 - WS_EX_WINDOWEDGE constant [MFC]
 ms.assetid: d3b9af37-31b5-4c97-a8ad-189fd724b04c
-ms.openlocfilehash: b47fa90fff6753b805d7fd0495050e45bc915d5d
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: eb5123c347fdb847cade54f15764f175ee0ab799
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694771"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304893"
 ---
 # <a name="styles-used-by-mfc"></a>Estilos usados pelo MFC
 
@@ -360,10 +360,10 @@ Os estilos de caixa de mensagem a seguir estão disponíveis.
 
 |Estilo|Descrição|
 |-----------|-----------------|
-|MB_ABORTRETRYIGNORE|A caixa de mensagem contém três comportarem: anular, tentar novamente e ignorar.|
-|MB_OK|A caixa de mensagem contém um botão de ação: Okey.|
+|MB_ABORTRETRYIGNORE|A caixa de mensagem contém três comportarem: Abortar, repetir e ignorar.|
+|MB_OK|A caixa de mensagem contém um botão de ação: OK.|
 |MB_OKCANCEL|A caixa de mensagem contém dois comportarem: Okey e Cancelar.|
-|MB_RETRYCANCEL|A caixa de mensagem contém dois comportarem: Repetir e Cancelar.|
+|MB_RETRYCANCEL|A caixa de mensagem contém dois comportarem: Tente novamente e Cancelar.|
 |MB_YESNO|A caixa de mensagem contém dois comportarem: Sim e não.|
 |MB_YESNOCANCEL|A caixa de mensagem contém três comportarem: Sim, não e Cancelar.|
 

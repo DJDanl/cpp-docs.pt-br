@@ -13,12 +13,12 @@ helpviewer_keywords:
 - stopping threads
 - AfxEndThread method
 ms.assetid: 4c0a8c6d-c02f-456d-bd02-0a8c8d006ecb
-ms.openlocfilehash: 37a7a6fc443e172f80cc7c30c462ec4d69b3e8de
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: dd11f5db646e172d7ea2c2cc646841249d95ef31
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693289"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303625"
 ---
 # <a name="multithreading-terminating-threads-in-mfc"></a>Multithreading: Encerrando Threads no MFC
 
@@ -32,13 +32,13 @@ Duas situações normais fazem com que um thread seja finalizado: a função de 
 
 ##  <a name="_core_normal_thread_termination"></a> Encerramento normal de Thread
 
-Para um thread de trabalho, o encerramento normal de thread é simple: a função de controle de sair e retornar um valor que indica o motivo do encerramento. Você pode usar o [AfxEndThread](../mfc/reference/application-information-and-management.md#afxendthread) função ou um **retornar** instrução. Normalmente, 0 significa conclusão com êxito, mas que cabe a você.
+Para um thread de trabalho, o encerramento normal de thread é simple: A função de controle de sair e retornar um valor que indica o motivo do encerramento. Você pode usar o [AfxEndThread](../mfc/reference/application-information-and-management.md#afxendthread) função ou um **retornar** instrução. Normalmente, 0 significa conclusão com êxito, mas que cabe a você.
 
 Para um thread de interface do usuário, o processo é igualmente simple: de dentro do thread de interface do usuário, chame [PostQuitMessage](/windows/desktop/api/winuser/nf-winuser-postquitmessage) no SDK do Windows. O único parâmetro que `PostQuitMessage` usa é o código de saída do thread. Para threads de trabalho, 0 significa normalmente conclusão com êxito.
 
 ##  <a name="_core_premature_thread_termination"></a> Terminação prematura de Thread
 
-Encerrar um thread prematuramente é quase tão simple: chame [AfxEndThread](../mfc/reference/application-information-and-management.md#afxendthread) de dentro do thread. Passe o código de saída desejado como o único parâmetro. Isso interrompe a execução do thread, desaloca a pilha do thread, dispara todas as DLLs anexadas ao thread e exclui o objeto de thread da memória.
+Encerrar um thread prematuramente é quase tão simple: Chame [AfxEndThread](../mfc/reference/application-information-and-management.md#afxendthread) de dentro do thread. Passe o código de saída desejado como o único parâmetro. Isso interrompe a execução do thread, desaloca a pilha do thread, dispara todas as DLLs anexadas ao thread e exclui o objeto de thread da memória.
 
 `AfxEndThread` Deve ser chamado de dentro do thread ser encerrada. Se você quiser encerrar um thread de outro thread, você deve configurar um método de comunicação entre os dois threads.
 

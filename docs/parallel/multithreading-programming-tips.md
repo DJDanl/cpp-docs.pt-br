@@ -16,12 +16,12 @@ helpviewer_keywords:
 - troubleshooting [C++], multithreading
 - Windows handle maps [C++]
 ms.assetid: ad14cc70-c91c-4c24-942f-13a75e58bf8a
-ms.openlocfilehash: 0fbee2e836c2e898488da348e4dec9ea00ac4370
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e89d0d534638f7216f142bc3f86633a59b8b0ff7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50494272"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290788"
 ---
 # <a name="multithreading-mfc-programming-tips"></a>Multithreading: Dicas de programação do MFC
 
@@ -57,7 +57,7 @@ Para obter mais informações sobre mapas de identificador, consulte [Technical 
 
 ##  <a name="_core_communicating_between_threads"></a> Comunicação entre Threads
 
-MFC fornece várias classes que permitem que os threads sincronizar o acesso a objetos para manter o acesso thread-safe. O uso dessas classes é descrito em [Multithreading: como usar as Classes de sincronização](multithreading-how-to-use-the-synchronization-classes.md) e [Multithreading: quando usar as Classes de sincronização](multithreading-when-to-use-the-synchronization-classes.md). Para obter mais informações sobre esses objetos, consulte [sincronização](/windows/desktop/Sync/synchronization) no SDK do Windows.
+MFC fornece várias classes que permitem que os threads sincronizar o acesso a objetos para manter o acesso thread-safe. O uso dessas classes é descrito em [Multithreading: Como usar as Classes de sincronização](multithreading-how-to-use-the-synchronization-classes.md) e [Multithreading: Quando usar as Classes de sincronização](multithreading-when-to-use-the-synchronization-classes.md). Para obter mais informações sobre esses objetos, consulte [sincronização](/windows/desktop/Sync/synchronization) no SDK do Windows.
 
 ## <a name="see-also"></a>Consulte também
 

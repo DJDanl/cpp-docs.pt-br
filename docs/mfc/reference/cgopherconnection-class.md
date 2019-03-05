@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CGopherConnection [MFC], GetAttribute
 - CGopherConnection [MFC], OpenFile
 ms.assetid: b5b96aea-ac99-430e-bd84-d1372b43f78f
-ms.openlocfilehash: f9c2a99c30213a28f4c20ba0f4a2eebea85bef76
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d960d566a63531af211592a7a8ae8f1cb35c5958
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519659"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300704"
 ---
 # <a name="cgopherconnection-class"></a>Classe CGopherConnection
 
@@ -116,7 +116,7 @@ Um ponteiro para uma cadeia de caracteres terminada em nulo que especifica a sen
 |--------------------|--------------------|---------------------------------|---------------------------------|
 |NULO ou ""|NULO ou ""|"anônimo"|Nome de email do usuário|
 |Cadeia de caracteres não nula|NULO ou ""|*pstrUserName*|" "|
-|Cadeia de caracteres nula não nulo|ERRO|ERRO||
+|Cadeia de caracteres nula não nulo|ERROR|ERROR||
 |Cadeia de caracteres não nula|Cadeia de caracteres não nula|*pstrUserName*|*pstrPassword*|
 
 *nPort*<br/>
@@ -233,7 +233,7 @@ Um ponteiro para o [CGopherFile](../../mfc/reference/cgopherfile-class.md) objet
 
 ### <a name="remarks"></a>Comentários
 
-Substituir a *dwContext* padrão para definir o identificador de contexto para um valor de sua escolha. O identificador de contexto está associado com esta operação específica do `CGopherConnection` objeto criado pelo seu [CInternetSession](../../mfc/reference/cinternetsession-class.md) objeto. O valor é retornado a [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) para fornecer o status sobre a operação com a qual ela é identificada. Consulte o artigo [primeiras etapas de Internet: WinInet](../../mfc/wininet-basics.md) para obter mais informações sobre o identificador de contexto.
+Substituir a *dwContext* padrão para definir o identificador de contexto para um valor de sua escolha. O identificador de contexto está associado com esta operação específica do `CGopherConnection` objeto criado pelo seu [CInternetSession](../../mfc/reference/cinternetsession-class.md) objeto. O valor é retornado a [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) para fornecer o status sobre a operação com a qual ela é identificada. Consulte o artigo [Internet primeiras etapas: O WinInet](../../mfc/wininet-basics.md) para obter mais informações sobre o identificador de contexto.
 
 ## <a name="see-also"></a>Consulte também
 

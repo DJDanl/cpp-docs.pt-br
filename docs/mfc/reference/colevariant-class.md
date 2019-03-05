@@ -20,12 +20,12 @@ helpviewer_keywords:
 - COleVariant [MFC], GetByteArrayFromVariantArray
 - COleVariant [MFC], SetString
 ms.assetid: e1b5cd4a-b066-4b9b-b48b-6215ed52d998
-ms.openlocfilehash: b37105cf1afdcf966176a2e2615f9c141022088d
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 2b2d0935380caed8ad9d6741b9107a5f879f7903
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51520512"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268052"
 ---
 # <a name="colevariant-class"></a>Classe COleVariant
 
@@ -63,8 +63,8 @@ class COleVariant : public tagVARIANT
 |[COleVariant::operator LPCVARIANT](#operator_lpcvariant)|Converte um `COleVariant` de valor em um `LPCVARIANT`.|
 |[COleVariant::operator LPVARIANT](#operator_lpvariant)|Converte um `COleVariant` do objeto em um `LPVARIANT`.|
 |[COleVariant::operator =](#operator_eq)|Copia um `COleVariant` valor.|
-|[COleVariant::operator = =](#operator_eq_eq)|Compara dois `COleVariant` valores.|
-|[COleVariant::operator &lt; &lt;, &gt;&gt;](#operator_lt_lt__gt_gt)|Saídas de um `COleVariant` valor para `CArchive` ou `CDumpContext` e insere um `COleVariant` do objeto de `CArchive`.|
+|[COleVariant::operator ==](#operator_eq_eq)|Compara dois `COleVariant` valores.|
+|[COleVariant::operator &lt;&lt;, &gt;&gt;](#operator_lt_lt__gt_gt)|Saídas de um `COleVariant` valor para `CArchive` ou `CDumpContext` e insere um `COleVariant` do objeto de `CArchive`.|
 
 ## <a name="remarks"></a>Comentários
 
@@ -87,7 +87,7 @@ Para obter mais informações sobre o `COleVariant` classe e seu uso na automaç
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** afxdisp.h
+**Header:** afxdisp.h
 
 ##  <a name="attach"></a>  COleVariant::Attach
 
@@ -146,7 +146,7 @@ Uma cadeia de caracteres terminada em nulo a ser copiado para o novo `COleVarian
 *vtSrc*<br/>
 O `VARTYPE` para o novo `COleVariant` objeto.
 
-*{1&gt;strsrc*<br/>
+*strSrc*<br/>
 Um [CString](../../atl-mfc-shared/reference/cstringt-class.md) objeto a ser copiado para o novo `COleVariant` objeto.
 
 *nSrc*, *lSrc* um valor numérico a ser copiado no novo `COleVariant` objeto.
@@ -157,7 +157,7 @@ O `VARTYPE` para o novo `COleVariant` objeto.
 *curSrc*<br/>
 Um [COleCurrency](../../mfc/reference/colecurrency-class.md) objeto a ser copiado para o novo `COleVariant` objeto.
 
-*{1&gt;fltsrc*, *dblsrc&lt;1}*<br/>
+*fltSrc*, *dblSrc*<br/>
 Um valor numérico a ser copiado no novo objeto `COleVariant`.
 
 *timeSrc*<br/>
@@ -169,7 +169,7 @@ Um [CByteArray](../../mfc/reference/cbytearray-class.md) objeto a ser copiado pa
 *lbSrc*<br/>
 Um [CLongBinary](../../mfc/reference/clongbinary-class.md) objeto a ser copiado para o novo `COleVariant` objeto.
 
-*PIDL*<br/>
+*pidl*<br/>
 Um ponteiro para um [ITEMIDLIST](/windows/desktop/api/shtypes/ns-shtypes-_itemidlist) estrutura a ser copiado para o novo `COleVariant` objeto.
 
 ### <a name="remarks"></a>Comentários
@@ -218,7 +218,7 @@ void ChangeType(VARTYPE vartype, LPVARIANT pSrc = NULL);
 
 ### <a name="parameters"></a>Parâmetros
 
-*VarType*<br/>
+*vartype*<br/>
 O VARTYPE para este `COleVariant` objeto.
 
 *pSrc*<br/>
@@ -346,7 +346,7 @@ Segue uma breve descrição de cada operador:
 
 Para obter mais informações, consulte o [VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagvariant) e [VARENUM](/windows/desktop/api/wtypes/ne-wtypes-varenum) entradas no SDK do Windows.
 
-##  <a name="operator_eq_eq"></a>  COleVariant::operator = =
+##  <a name="operator_eq_eq"></a>  COleVariant::operator ==
 
 Esse operador compara dois valores variantes e retorna não zero, se eles forem iguais; Caso contrário, 0.
 
@@ -355,7 +355,7 @@ BOOL operator==(const VARIANT& varSrc) const;
 BOOL operator==(LPCVARIANT pSrc) const;
 ```
 
-##  <a name="operator_lt_lt__gt_gt"></a>  COleVariant::operator &lt; &lt;, &gt;&gt;
+##  <a name="operator_lt_lt__gt_gt"></a>  COleVariant::operator &lt;&lt;, &gt;&gt;
 
 Saídas de um `COleVariant` valor para `CArchive` ou `CdumpContext` e insere um `COleVariant` do objeto de `CArchive`.
 
@@ -390,7 +390,7 @@ void SetString(LPCTSTR lpszSrc, VARTYPE vtSrc);
 *lpszSrc*<br/>
 Uma cadeia de caracteres terminada em nulo a ser copiado para o novo `COleVariant` objeto.
 
-*vtSrc*<br/>
+*VtSrc*<br/>
 O VARTYPE para o novo `COleVariant` objeto.
 
 ### <a name="remarks"></a>Comentários

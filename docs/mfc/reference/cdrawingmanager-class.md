@@ -56,12 +56,12 @@ helpviewer_keywords:
 - CDrawingManager [MFC], SetPixel
 - CDrawingManager [MFC], SmartMixColors
 ms.assetid: 9e4775ca-101b-4aa9-a85a-4d047c701215
-ms.openlocfilehash: c7295d8003b364b36a84fcb5b2c5921ae9899b51
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a729c8d32c851c4401a0af7dd7323912a476530f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50465982"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293440"
 ---
 # <a name="cdrawingmanager-class"></a>Classe CDrawingManager
 
@@ -213,7 +213,7 @@ void DrawEllipse(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Rect*<br/>
+*rect*<br/>
 [in] O retângulo delimitador para a elipse.
 
 *clrFill*<br/>
@@ -243,7 +243,7 @@ BOOL DrawGradientRing(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Rect*<br/>
+*rect*<br/>
 [in] Um [CRect](../../atl-mfc-shared/reference/crect-class.md) parâmetro que especifica o limite para o anel de gradiente.
 
 *colorStart*<br/>
@@ -299,7 +299,7 @@ void DrawLineA(
 |Parâmetro|Descrição|
 |*x1*|[in] A coordenada x em que a linha começa.|
 |*y1*|[in] A coordenada y em que a linha começa.|
-|*X2*|[in] A coordenada x em que a linha termine.|
+|*x2*|[in] A coordenada x em que a linha termine.|
 |*y2*|[in] A coordenada y em que a linha termine.|
 |*clrLine*|[in] A cor da linha.|
 
@@ -320,7 +320,7 @@ void DrawRect(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Rect*<br/>
+*rect*<br/>
 [in] Os limites do retângulo.
 
 *clrFill*<br/>
@@ -351,7 +351,7 @@ BOOL DrawShadow(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Rect*<br/>
+*rect*<br/>
 [in] Uma área retangular em seu aplicativo. O Gerenciador de desenho será desenhar uma sombra sob essa área.
 
 *nDepth*<br/>
@@ -410,7 +410,7 @@ void Fill4ColorsGradient(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Rect*<br/>
+*rect*<br/>
 [in] Retângulo a ser preenchido.
 
 *colorStart1*<br/>
@@ -453,7 +453,7 @@ void FillGradient(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Rect*<br/>
+*rect*<br/>
 [in] A área retangular para preencher.
 
 *colorStart*<br/>
@@ -491,7 +491,7 @@ void FillGradient2 (
 
 ### <a name="parameters"></a>Parâmetros
 
-*Rect*<br/>
+*rect*<br/>
 [in] A área retangular para preencher.
 
 *colorStart*<br/>
@@ -527,7 +527,7 @@ BOOL GrayRect(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Rect*<br/>
+*rect*<br/>
 [in] A área retangular para preencher.
 
 *nPercentage*<br/>
@@ -564,7 +564,7 @@ BOOL HighlightRect(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Rect*<br/>
+*rect*<br/>
 [in] Uma área retangular para realçar.
 
 *nPercentage*<br/>
@@ -699,10 +699,10 @@ static BYTE __stdcall HueToRGB(
 
 ### <a name="parameters"></a>Parâmetros
 
-*M1*<br/>
+*m1*<br/>
 [in] Consulte os comentários.
 
-*M2*<br/>
+*m2*<br/>
 [in] Consulte os comentários.
 
 *h*<br/>
@@ -714,7 +714,7 @@ static BYTE __stdcall HueToRGB(
 *rm2*<br/>
 [in] Consulte os comentários.
 
-*RH*<br/>
+*rh*<br/>
 [in] Consulte os comentários.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -745,7 +745,7 @@ void MirrorRect(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Rect*<br/>
+*rect*<br/>
 [in] O retângulo delimitador da área a inverter.
 
 *bHorz*<br/>
@@ -781,7 +781,7 @@ static COLORREF __stdcall PixelAlpha(
 *srcPixel*<br/>
 [in] A cor inicial para o pixel.
 
-*Por cento*<br/>
+*percent*<br/>
 [in] Um número entre 0 e 100 que representa a porcentagem de transparência. Um valor de 100 indica que a cor inicial é completamente transparente.
 
 *percentR*<br/>
@@ -921,7 +921,7 @@ static void __stdcall SetAlphaPixel(
 *pBits*<br/>
 [in] Um ponteiro para os valores de bit do bitmap.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Uma área retangular em seu aplicativo. O Gerenciador de desenho desenha uma sombra abaixo e à direita desta área.
 
 *x*<br/>
@@ -930,7 +930,7 @@ static void __stdcall SetAlphaPixel(
 *y*<br/>
 [in] A coordenada vertical do pixel para a cor.
 
-*Por cento*<br/>
+*percent*<br/>
 [in] A porcentagem de transparência.
 
 *iShadowSize*<br/>
@@ -968,11 +968,11 @@ static void __stdcall SetPixel(
 |-|-|
 |Parâmetro|Descrição|
 |*pBits*|[in] Um ponteiro para os valores de bit do bitmap.|
-|*CX*|[in] A largura total do bitmap.|
-|*Cy*|[in] A altura total do bitmap.|
+|*cx*|[in] A largura total do bitmap.|
+|*cy*|[in] A altura total do bitmap.|
 |*x*|[in] A coordenada x do pixel no bitmap para alterar.|
 |*y*|[in] A coordenada y do pixel no bitmap para alterar.|
-|*Cor*|[in] A nova cor para o pixel identificado pelas coordenadas fornecidas.|
+|*color*|[in] A nova cor para o pixel identificado pelas coordenadas fornecidas.|
 
 ##  <a name="smartmixcolors"></a>  CDrawingManager::SmartMixColors
 
@@ -992,11 +992,11 @@ static COLORREF __stdcall SmartMixColors(
 |||
 |-|-|
 |Parâmetro|Descrição|
-|*Color1*|[in] A primeira cor misturar.|
-|*cor2*|[in] A segunda cor misturar.|
+|*color1*|[in] A primeira cor misturar.|
+|*color2*|[in] A segunda cor misturar.|
 |*dblLumRatio*|[in] A razão para a nova luminosidade da cor. `SmartMixColors` Multiplica a luminosidade da cor mista por essa proporção antes de determinar uma cor final.|
-|*K1*|[in] A proporção ponderada para a primeira cor.|
-|*K2*|[in] A proporção ponderada para a segunda cor.|
+|*k1*|[in] A proporção ponderada para a primeira cor.|
+|*k2*|[in] A proporção ponderada para a segunda cor.|
 
 ### <a name="return-value"></a>Valor de retorno
 

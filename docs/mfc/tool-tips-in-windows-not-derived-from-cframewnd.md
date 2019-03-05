@@ -9,12 +9,12 @@ helpviewer_keywords:
 - controls [MFC], tool tips
 - handler functions [MFC], tool tips
 ms.assetid: cad5ef0f-02e3-4151-ad0d-3d42e6932b0e
-ms.openlocfilehash: 2545bda725428835c256ad81edc9070bd004d474
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3d44f2c503b689360f040e6804d319c331d5c0ca
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620292"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260654"
 ---
 # <a name="tool-tips-in-windows-not-derived-from-cframewnd"></a>Dicas de ferramenta no Windows derivadas de CFrameWnd
 
@@ -37,4 +37,3 @@ As dicas de ferramenta padrão fornecidas para o windows por [CWnd::EnableToolTi
 ## <a name="see-also"></a>Consulte também
 
 [Dicas de ferramenta](../mfc/tool-tips.md)
-

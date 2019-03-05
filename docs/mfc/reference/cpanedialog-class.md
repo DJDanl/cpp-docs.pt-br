@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CPaneDialog [MFC], HandleInitDialog
 - CPaneDialog [MFC], SetOccDialogInfo
 ms.assetid: 48a6bb91-4b92-40f5-8907-b3270b146cf6
-ms.openlocfilehash: 95fc66ba55734c415cb41151cdc9b83d1b154898
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 16aa707792cc1289ced380e54abef3f15289e7cf
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50431923"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274551"
 ---
 # <a name="cpanedialog-class"></a>Classe CPaneDialog
 
@@ -46,7 +46,7 @@ class CPaneDialog : public CDockablePane
 |`CPaneDialog::CreateObject`|Usado pelo framework para criar uma instância dinâmica desse tipo de classe.|
 |`CPaneDialog::GetThisClass`|Usado pelo framework para obter um ponteiro para o [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objeto que está associado com esse tipo de classe.|
 |[CPaneDialog::HandleInitDialog](#handleinitdialog)|Manipula o [WM_INITDIALOG](/windows/desktop/dlgbox/wm-initdialog) mensagem. (Redefine `CBasePane::HandleInitDialog`.)|
-|`CPaneDialog::OnEraseBkgnd`|Manipula o [WM_ERASEBKGND](/windows/desktop/winmsg/wm-erasebkgnd) mensagem. (Redefine [CWnd::OnEraseBkgnd](../../mfc/reference/cwnd-class.md#onerasebkgnd).)|
+|`CPaneDialog::OnEraseBkgnd`|Manipula o [WM_ERASEBKGND](/windows/desktop/winmsg/wm-erasebkgnd) mensagem. (Redefines [CWnd::OnEraseBkgnd](../../mfc/reference/cwnd-class.md#onerasebkgnd).)|
 |`CPaneDialog::OnLButtonDblClk`|Manipula o [WM_LBUTTONDBLCLK](/windows/desktop/inputdev/wm-lbuttondblclk) mensagem. (Redefine [CWnd::OnLButtonDblClk](../../mfc/reference/cwnd-class.md#onlbuttondblclk).)|
 |`CPaneDialog::OnLButtonDown`|Manipula o [WM_LBUTTONDOWN](/windows/desktop/inputdev/wm-lbuttondown) mensagem. (Redefine [CWnd::OnLButtonDown](../../mfc/reference/cwnd-class.md#onlbuttondown).)|
 |`CPaneDialog::OnUpdateCmdUI`|Chamado pelo framework para atualizar a janela da caixa de diálogo. (Substitui [CDockablePane::OnUpdateCmdUI](cdockablepane-class.md).)|
@@ -208,4 +208,3 @@ Este método dá suporte a [COccManager](../../mfc/reference/coccmanager-class.m
 [Classes](../../mfc/reference/mfc-classes.md)<br/>
 [Classe CDockablePane](../../mfc/reference/cdockablepane-class.md)<br/>
 [Estilos de janela](../../mfc/reference/styles-used-by-mfc.md#window-styles)
-

@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CAnimationRect [MFC], m_szInitial
 - CAnimationRect [MFC], m_topValue
 ms.assetid: 0294156d-241e-4a57-92b2-31234fe557d6
-ms.openlocfilehash: 4e782a9325360b69e33dfaf6a3b0649d9368b32b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 84c4cf92894a9ece2021417445c9d7ab94ee6bdf
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50540173"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259484"
 ---
 # <a name="canimationrect-class"></a>Classe CAnimationRect
 
@@ -87,7 +87,7 @@ class CAnimationRect : public CAnimationBaseObject;
 |Nome|Descrição|
 |----------|-----------------|
 |[CAnimationRect::operator RECT](#operator_rect)|Converte um CAnimationRect Rect.|
-|[CAnimationRect::operator =](#operator_eq)|Atribui rect a CAnimationRect.|
+|[CAnimationRect::operator=](#operator_eq)|Atribui rect a CAnimationRect.|
 
 ### <a name="public-data-members"></a>Membros de Dados Públicos
 
@@ -183,7 +183,7 @@ CAnimationRect(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Rect*<br/>
+*rect*<br/>
 Especifica o retângulo de padrão.
 
 *nGroupID*<br/>
@@ -198,7 +198,7 @@ Especifica os dados definidos pelo usuário.
 *pt*<br/>
 Coordenadas do canto superior esquerdo.
 
-*SZ*<br/>
+*sz*<br/>
 Tamanho do retângulo.
 
 *nLeft*<br/>
@@ -322,7 +322,7 @@ BOOL GetValue(CRect& rect);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Rect*<br/>
+*rect*<br/>
 Saída. Quando este método retorna, contém o valor atual.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -401,7 +401,7 @@ Valor atual do retângulo de animação como Rect.
 
 Essa função chama internamente GetValue. Se falhar GetValue por algum motivo, o retângulo retornado conterá valores padrão para todas as coordenadas do retângulo.
 
-##  <a name="operator_eq"></a>  CAnimationRect::operator =
+##  <a name="operator_eq"></a>  CAnimationRect::operator=
 
 Atribui rect a CAnimationRect.
 
@@ -411,7 +411,7 @@ void operator=(const RECT& rect);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Rect*<br/>
+*rect*<br/>
 O novo valor do retângulo de animação.
 
 ### <a name="remarks"></a>Comentários
@@ -428,7 +428,7 @@ void SetDefaultValue(const CRect& rect);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Rect*<br/>
+*rect*<br/>
 Especifica novos valores padrão para a esquerda, superior, direita e inferior.
 
 ### <a name="remarks"></a>Comentários

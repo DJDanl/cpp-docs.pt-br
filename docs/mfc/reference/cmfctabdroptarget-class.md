@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CMFCTabDropTarget [MFC], OnDropEx
 - CMFCTabDropTarget [MFC], Register
 ms.assetid: 9777b7b6-10da-4c4b-b1d1-7ea795b0f1cb
-ms.openlocfilehash: bd68179be21fec85c0ebb901c2a8c9a4491ff401
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8b24d7679edfaab4d4eeb6d59770f30cd4253580
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50534817"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303931"
 ---
 # <a name="cmfctabdroptarget-class"></a>Classe CMFCTabDropTarget
 
@@ -77,7 +77,7 @@ O exemplo a seguir demonstra como criar uma `CMFCTabDropTarget` do objeto e usar
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** afxbasetabctrl.h
+**Header:** afxbasetabctrl.h
 
 ##  <a name="ondragenter"></a>  CMFCTabDropTarget::OnDragEnter
 
@@ -96,10 +96,10 @@ virtual DROPEFFECT OnDragEnter(
 |||
 |-|-|
 |Parâmetro|Descrição|
-|*Apropriei*|[in] Não utilizado.|
+|*pWnd*|[in] Não utilizado.|
 |*pDataObject*|[in] Um ponteiro para o objeto que o usuário arrasta.|
 |*dwKeyState*|[in] Contém o estado das teclas modificadoras. Isso é uma combinação de qualquer número das seguintes opções: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON e MK_RBUTTON.|
-|*ponto*|[in] O local do cursor em coordenadas do cliente.|
+|*point*|[in] O local do cursor em coordenadas do cliente.|
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -134,7 +134,7 @@ virtual void OnDragLeave(CWnd* pWnd);
 |||
 |-|-|
 |Parâmetro|Descrição|
-|*Apropriei*|[in] Não utilizado.|
+|*pWnd*|[in] Não utilizado.|
 
 ### <a name="remarks"></a>Comentários
 
@@ -157,10 +157,10 @@ virtual DROPEFFECT OnDragOver(
 |||
 |-|-|
 |Parâmetro|Descrição|
-|*Apropriei*|[in] Não utilizado.|
+|*pWnd*|[in] Não utilizado.|
 |*pDataObject*|[in] Um ponteiro para o objeto que o usuário arrasta.|
 |*dwKeyState*|[in] Contém o estado das teclas modificadoras. Isso é uma combinação de qualquer número das seguintes opções: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON e MK_RBUTTON.|
-|*ponto*|[in] O local do ponteiro do mouse nas coordenadas do cliente.|
+|*point*|[in] O local do ponteiro do mouse nas coordenadas do cliente.|
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -200,11 +200,11 @@ virtual DROPEFFECT OnDropEx(
 |||
 |-|-|
 |Parâmetro|Descrição|
-|*Apropriei*|[in] Não utilizado.|
+|*pWnd*|[in] Não utilizado.|
 |*pDataObject*|[in] Um ponteiro para o objeto que o usuário arrasta.|
 |*dropEffect*|[in] A operação de soltar padrão.|
-|*lista suspensa*|[in] Não utilizado.|
-|*ponto*|[in] O local do ponteiro do mouse nas coordenadas do cliente.|
+|*dropList*|[in] Não utilizado.|
+|*point*|[in] O local do ponteiro do mouse nas coordenadas do cliente.|
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -254,4 +254,3 @@ Este método chama [COleDropTarget::Register](../../mfc/reference/coledroptarget
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)<br/>
 [Arrastar e soltar (OLE)](../../mfc/drag-and-drop-ole.md)
-

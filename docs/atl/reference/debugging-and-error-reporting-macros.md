@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - macros, error reporting
 ms.assetid: 4da9b87f-ec5c-4a32-ab93-637780909b9d
-ms.openlocfilehash: 5de597484db727646b80bd522f11465f442393fd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0f556e64160c61f2fb15c5f5d6f9e170c2008ac8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50522286"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57287317"
 ---
 # <a name="debugging-and-error-reporting-macros"></a>Macros de depuração e relatório de erros
 
@@ -75,7 +75,7 @@ Grava todas as chamadas para `QueryInterface` à janela de saída.
 
 Se uma chamada para `QueryInterface` falhou, a janela de saída será exibida:
 
-*nome da interface* - `failed`
+*interface name* - `failed`
 
 ##  <a name="atlassert"></a>  {1&AMP;GT;ATLASSERT&AMP;LT;1
 
@@ -181,7 +181,7 @@ ATLTRACE(
 *category*<br/>
 [in] Tipo de evento ou método no qual a relatório. Consulte os comentários para obter uma lista de categorias.
 
-*Nível*<br/>
+*level*<br/>
 [in] O nível de rastreamento para o relatório. Consulte os comentários para obter detalhes.
 
 *lpszFormat*<br/>
@@ -212,7 +212,7 @@ ATLTRACE2(
 *category*<br/>
 [in] Tipo de evento ou método no qual a relatório. Consulte os comentários para obter uma lista de categorias.
 
-*Nível*<br/>
+*level*<br/>
 [in] O nível de rastreamento para o relatório. Consulte os comentários para obter detalhes.
 
 *lpszFormat*<br/>

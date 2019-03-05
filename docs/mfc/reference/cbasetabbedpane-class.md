@@ -62,12 +62,12 @@ helpviewer_keywords:
 - CBaseTabbedPane [MFC], SetAutoHideMode
 - CBaseTabbedPane [MFC], ShowTab
 ms.assetid: f22c0080-5b29-4a0a-8f74-8f0a4cd2dbcf
-ms.openlocfilehash: 51344a8cd0e5671f81e608b74363ed06c9200324
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d7ffaa7274a8ed12944cdbc5dcbbdcb8fd3fd2b9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50640889"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259289"
 ---
 # <a name="cbasetabbedpane-class"></a>Classe CBaseTabbedPane
 
@@ -129,7 +129,7 @@ class CBaseTabbedPane : public CDockablePane
 
 Essa classe é uma classe abstrata e não pode ser instanciada. Ele implementa os serviços que são comuns a todos os tipos de painéis com guias.
 
-Atualmente, a biblioteca inclui duas classes derivadas de painel com guias: [classe CTabbedPane](../../mfc/reference/ctabbedpane-class.md) e [classe CMFCOutlookBar](../../mfc/reference/cmfcoutlookbar-class.md).
+Atualmente, a biblioteca inclui duas classes derivadas de painel com guias: [Classe CTabbedPane](../../mfc/reference/ctabbedpane-class.md) e [classe CMFCOutlookBar](../../mfc/reference/cmfcoutlookbar-class.md).
 
 Um `CBaseTabbedPane` objeto encapsula um ponteiro para uma [classe CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) objeto. [Classe CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) , em seguida, torna-se uma janela filho do painel com guias.
 
@@ -299,7 +299,7 @@ virtual void EnableSetCaptionTextToTabName(BOOL bEnable);
 
 ### <a name="parameters"></a>Parâmetros
 
-*bAtivar*<br/>
+*bEnable*<br/>
 [in] TRUE para sincronizar a legenda do painel com guias com a legenda da guia ativa Caso contrário, FALSE.
 
 ##  <a name="filldefaulttabsorderarray"></a>  CBaseTabbedPane::FillDefaultTabsOrderArray
@@ -631,7 +631,7 @@ virtual BOOL ShowTab(
 *pBar*<br/>
 [in] Um ponteiro para o painel para mostrar ou ocultar.
 
-*bMostrar*<br/>
+*bShow*<br/>
 [in] TRUE para mostrar o painel; FALSO para ocultar o painel.
 
 *bDelay*<br/>

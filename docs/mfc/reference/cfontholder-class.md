@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CFontHolder [MFC], SetFont
 - CFontHolder [MFC], m_pFont
 ms.assetid: 728ab472-0c97-440d-889f-1324c6e1b6b8
-ms.openlocfilehash: 24a33aafa279f47bcfabd1ac3f3ee8d4abd4c731
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 623ce5da46716e3f9a562862fc0375fb8704bb21
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50659635"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297873"
 ---
 # <a name="cfontholder-class"></a>Classe CFontHolder
 
@@ -74,7 +74,7 @@ class CFontHolder
 
 `CFontHolder` não tem uma classe base.
 
-Use essa classe para implementar propriedades de fonte personalizado para seu controle. Para obter informações sobre como criar essas propriedades, consulte o artigo [controles ActiveX: usando fontes](../../mfc/mfc-activex-controls-using-fonts.md).
+Use essa classe para implementar propriedades de fonte personalizado para seu controle. Para obter informações sobre como criar essas propriedades, consulte o artigo [controles ActiveX: Usando fontes](../../mfc/mfc-activex-controls-using-fonts.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -162,7 +162,7 @@ Um identificador para o objeto de fonte; Caso contrário, nulo.
 
 A proporção da *cyLogical* e *cyHimetric* é usada para calcular o tamanho de exibição correta, em unidades lógicas, para o tamanho da fonte ponto expressada em unidades de MM_HIMETRIC:
 
-Exibir tamanho = ( *cyLogical* / *cyHimetric*) X tamanho da fonte
+Display size = ( *cyLogical* / *cyHimetric*) X font size
 
 A versão sem parâmetros retorna um identificador para uma fonte dimensionada corretamente para a tela.
 

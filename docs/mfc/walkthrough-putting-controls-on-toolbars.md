@@ -1,18 +1,18 @@
 ---
-title: 'Instruções passo a passo: colocando controles em barras de ferramentas'
+title: 'Passo a passo: Colocando controles em barras de ferramentas'
 ms.date: 09/20/2018
 helpviewer_keywords:
 - Customize dialog box, adding controls
 - toolbars [MFC], adding controls
 ms.assetid: 8fc94bdf-0da7-45d9-8bc4-52b7b1edf205
-ms.openlocfilehash: 3e0cc066e39cc71833e2061a1964619d04a80be3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0b5b8685b3062bf63187a765b7e90e26f8c65681
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50580291"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291377"
 ---
-# <a name="walkthrough-putting-controls-on-toolbars"></a>Instruções passo a passo: colocando controles em barras de ferramentas
+# <a name="walkthrough-putting-controls-on-toolbars"></a>Passo a passo: Colocando controles em barras de ferramentas
 
 Este artigo descreve como adicionar um botão de barra de ferramentas que contém um controle do Windows para uma barra de ferramentas. No MFC, um botão de barra de ferramentas deve ser um [classe CMFCToolBarButton](../mfc/reference/cmfctoolbarbutton-class.md)-derivado de classe, por exemplo [classe CMFCToolBarComboBoxButton](../mfc/reference/cmfctoolbarcomboboxbutton-class.md), [classe CMFCToolBarEditBoxButton](../mfc/reference/cmfctoolbareditboxbutton-class.md), [Classe CMFCDropDownToolbarButton](../mfc/reference/cmfcdropdowntoolbarbutton-class.md), ou [classe CMFCToolBarMenuButton](../mfc/reference/cmfctoolbarmenubutton-class.md).
 

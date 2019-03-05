@@ -1,5 +1,5 @@
 ---
-title: 'Contêineres de controle ActiveX: manipulando eventos a partir de um controle ActiveX'
+title: 'Contêineres de controle ActiveX: Manipulando eventos a partir de um controle ActiveX'
 ms.date: 09/12/2018
 helpviewer_keywords:
 - event handlers [MFC], ActiveX controls
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - events [MFC], ActiveX controls
 - BEGIN_EVENTSINK_MAP macro
 ms.assetid: f9c106db-052f-4e32-82ad-750646aa760b
-ms.openlocfilehash: 5deff0a50de813cc5faa43a86e591d3003a3c03e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8087d84d2203e4f910200acdd1b00e58d14f920e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50659622"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293557"
 ---
-# <a name="activex-control-containers-handling-events-from-an-activex-control"></a>Contêineres de controle ActiveX: manipulando eventos a partir de um controle ActiveX
+# <a name="activex-control-containers-handling-events-from-an-activex-control"></a>Contêineres de controle ActiveX: Manipulando eventos a partir de um controle ActiveX
 
 Este artigo aborda usando a janela Propriedades para instalar os manipuladores de eventos para controles ActiveX em um contêiner de controle ActiveX. Os manipuladores de eventos são usados para receber notificações (de controle) de determinados eventos e realizar alguma ação em resposta. Essa notificação é chamada de "disparo" do evento.
 
@@ -70,4 +70,3 @@ Para obter mais informações sobre as macros de coletor de eventos, consulte [m
 ## <a name="see-also"></a>Consulte também
 
 [Contêineres de controle ActiveX](../mfc/activex-control-containers.md)
-

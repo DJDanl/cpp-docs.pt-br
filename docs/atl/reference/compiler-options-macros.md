@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - compiler options, macros
 ms.assetid: a869adc6-b3de-4299-b040-9ae20b45f82c
-ms.openlocfilehash: d0da6ebcb178735fc25c656241fe23497d941ab6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 79b1cabc0304e905012db5f6dd73ed71073c0c1e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50631147"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258470"
 ---
 # <a name="compiler-options-macros"></a>Macros de opções do compilador
 
@@ -30,16 +30,16 @@ Essas macros controlam os recursos de compilador específica.
 |||
 |-|-|
 |[_ATL_ALL_WARNINGS](#_atl_all_warnings)|Um símbolo que habilita os erros em projetos convertidos de versões anteriores do ATL.|
-|[ATL_APARTMENT_THREADED](#_atl_apartment_threaded)|Defina se um ou mais dos seus objetos usam apartamento de threading.|
+|[_ATL_APARTMENT_THREADED](#_atl_apartment_threaded)|Defina se um ou mais dos seus objetos usam apartamento de threading.|
 |[_ATL_CSTRING_EXPLICIT_CONSTRUCTORS](#_atl_cstring_explicit_constructors)|Faz com que determinados `CString` construtores explícitos, impedindo que as conversões não intencionais.|
 |[_ATL_ENABLE_PTM_WARNING](#_atl_enable_ptm_warning)|Defina essa macro para usar a sintaxe de conformidade padrão C++, que gera o erro do compilador C4867 quando uma sintaxe padrão não é usada para inicializar um ponteiro para uma função de membro.|
-|[ATL_FREE_THREADED](#_atl_free_threaded)|Defina se um ou mais dos seus objetos usam threading livre ou neutra.|
+|[_ATL_FREE_THREADED](#_atl_free_threaded)|Defina se um ou mais dos seus objetos usam threading livre ou neutra.|
 |[_ATL_MULTI_THREADED](#_atl_multi_threaded)|Um símbolo que indica o projeto terá objetos que são marcados como "ambas", gratuito ou neutra. A macro [atl_free_threaded](#_atl_free_threaded) deve ser usado em vez disso.|
 |[_ATL_NO_AUTOMATIC_NAMESPACE](#_atl_no_automatic_namespace)|Um símbolo que impede o uso do padrão de namespace como ATL.|
 |[_ATL_NO_COM_SUPPORT](#_atl_no_com_support)|Um símbolo que impede que o código relacionado ao COM que está sendo compilado com o seu projeto.|
 |[ATL_NO_VTABLE](#atl_no_vtable)|Um símbolo que impede que o ponteiro vtable que está sendo inicializado no construtor e o destruidor da classe.|
 |[ATL_NOINLINE](#atl_noinline)|Um símbolo que indica uma função não deve ser embutido.|
-|[ATL_SINGLE_THREADED](#_atl_single_threaded)|Defina se todos os seus objetos usam o modelo de threading único.|
+|[_ATL_SINGLE_THREADED](#_atl_single_threaded)|Defina se todos os seus objetos usam o modelo de threading único.|
 
 ##  <a name="_atl_all_warnings"></a>  _ATL_ALL_WARNINGS
 
@@ -77,7 +77,7 @@ Se este `#define` é adicionado, os cabeçalhos ATL tenha o cuidado de preservar
 
 Novos projetos tem isso `#define` definido em Stdafx. h, por padrão.
 
-##  <a name="_atl_apartment_threaded"></a>  ATL_APARTMENT_THREADED
+##  <a name="_atl_apartment_threaded"></a>  _ATL_APARTMENT_THREADED
 
 Defina se um ou mais dos seus objetos usam apartamento de threading.
 
@@ -127,7 +127,7 @@ Deve ser alterada para:
 
 Observe que para as macros de mapa que adiciona o caractere '&', você deve não adicioná-lo novamente no seu código.
 
-##  <a name="_atl_free_threaded"></a>  ATL_FREE_THREADED
+##  <a name="_atl_free_threaded"></a>  _ATL_FREE_THREADED
 
 Defina se um ou mais dos seus objetos usam threading livre ou neutra.
 
@@ -201,14 +201,14 @@ Um símbolo que indica uma função não deve ser embutido.
 
 ### <a name="parameters"></a>Parâmetros
 
-*myFunction*<br/>
+*myfunction*<br/>
 A função que não deve ser embutida.
 
 ### <a name="remarks"></a>Comentários
 
 Se você quiser garantir que uma função de não serem embutida pelo compilador, mesmo que ele deve ser declarado como embutido para que ele pode ser colocado em um arquivo de cabeçalho, use este símbolo. Expande para **{1&gt;__declspec(noinline)&lt;1**.
 
-##  <a name="_atl_single_threaded"></a>  ATL_SINGLE_THREADED
+##  <a name="_atl_single_threaded"></a>  _ATL_SINGLE_THREADED
 
 Defina se todos os seus objetos usam o modelo de threading único
 

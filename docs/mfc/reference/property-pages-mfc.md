@@ -7,12 +7,12 @@ helpviewer_keywords:
 - property page data transfer functions in MFC
 - property pages [MFC], global MFC functions
 ms.assetid: 734f88bc-c776-4136-9b0e-f45c761a45c1
-ms.openlocfilehash: 4f8e56ed4be6bf4c7a5283894493ee46c4ed2ff4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e2f75044c7cfbc1f9d2af1d9bda5c108f9afa881
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620903"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269208"
 ---
 # <a name="property-pages-mfc"></a>Páginas de propriedade (MFC)
 
@@ -35,7 +35,7 @@ Esse mecanismo de mapeamento de dados mapeia os controles de página de propried
 |[DDP_Radio](#ddp_radio)|Links de um grupo de botões de opção na página de propriedades do controle com uma propriedade do controle.|
 |[DDP_Text](#ddp_text)|Vincula um controle na página de propriedades do controle com uma propriedade do controle. Essa função manipula vários tipos diferentes de propriedades, tais como **duplas**, **curto**, BSTR, e **longo**.|
 
-Para obter mais informações sobre o `DoDataExchange` páginas de propriedade e de função, consulte o artigo [controles ActiveX: páginas de propriedade](../../mfc/mfc-activex-controls-property-pages.md).
+Para obter mais informações sobre o `DoDataExchange` páginas de propriedade e de função, consulte o artigo [controles ActiveX: Páginas de propriedade](../../mfc/mfc-activex-controls-property-pages.md).
 
 A seguir está uma lista de macros usadas para criar e gerenciar páginas de propriedades para um controle OLE:
 
@@ -79,7 +79,7 @@ Essa função deve ser chamada antes do correspondente `DDX_CBIndex` chamada de 
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxctl. h
+  **Header** afxctl.h
 
 ##  <a name="ddp_cbstring"></a>  DDP_CBString
 
@@ -113,7 +113,7 @@ Essa função deve ser chamada antes do correspondente `DDX_CBString` chamada de
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxctl. h
+  **Header** afxctl.h
 
 ##  <a name="ddp_cbstringexact"></a>  DDP_CBStringExact
 
@@ -147,7 +147,7 @@ Essa função deve ser chamada antes do correspondente `DDX_CBStringExact` chama
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxctl. h
+  **Header** afxctl.h
 
 ##  <a name="ddp_check"></a>  DDP_Check
 
@@ -181,7 +181,7 @@ Essa função deve ser chamada antes do correspondente `DDX_Check` chamada de fu
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxctl. h
+  **Header** afxctl.h
 
 ##  <a name="ddp_lbindex"></a>  DDP_LBIndex
 
@@ -215,7 +215,7 @@ Essa função deve ser chamada antes do correspondente `DDX_LBIndex` chamada de 
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxctl. h
+  **Header** afxctl.h
 
 ##  <a name="ddp_lbstring"></a>  DDP_LBString
 
@@ -249,7 +249,7 @@ Essa função deve ser chamada antes do correspondente `DDX_LBString` chamada de
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxctl. h
+  **Header** afxctl.h
 
 ##  <a name="ddp_lbstringexact"></a>  DDP_LBStringExact
 
@@ -283,7 +283,7 @@ Essa função deve ser chamada antes do correspondente `DDX_LBStringExact` chama
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxctl. h
+  **Header** afxctl.h
 
 ##  <a name="ddp_postprocessing"></a>  DDP_PostProcessing
 
@@ -306,7 +306,7 @@ Essa função deve ser chamada após a conclusão de todas as funções da troca
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxctl. h
+  **Header** afxctl.h
 
 ##  <a name="ddp_radio"></a>  DDP_Radio
 
@@ -340,7 +340,7 @@ Essa função deve ser chamada antes do correspondente `DDX_Radio` chamada de fu
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxctl. h
+  **Header** afxctl.h
 
 ##  <a name="ddp_text"></a>  DDP_Text
 
@@ -416,7 +416,7 @@ Essa função deve ser chamada antes do correspondente `DDX_Text` chamada de fun
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxctl. h
+  **Header** afxctl.h
 
 ##  <a name="begin_proppageids"></a>  BEGIN_PROPPAGEIDS
 
@@ -438,11 +438,11 @@ O número de páginas de propriedade usado pela classe control.
 
 No arquivo de implementação (. cpp) que define as funções de membro para a sua classe, iniciar a lista de páginas de propriedade com a macro BEGIN_PROPPAGEIDS, em seguida, adicione entradas de macro para cada uma das suas páginas de propriedades e concluir a lista de páginas de propriedade com o END_PROPPAGEIDS macro.
 
-Para obter mais informações sobre páginas de propriedades, consulte o artigo [controles ActiveX: páginas de propriedade](../../mfc/mfc-activex-controls-property-pages.md).
+Para obter mais informações sobre páginas de propriedades, consulte o artigo [controles ActiveX: Páginas de propriedade](../../mfc/mfc-activex-controls-property-pages.md).
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxctl. h
+  **Header** afxctl.h
 
 ##  <a name="end_proppageids"></a>  END_PROPPAGEIDS
 
@@ -459,7 +459,7 @@ O nome da classe do controle que possui a página de propriedades.
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxctl. h
+  **Header** afxctl.h
 
 ##  <a name="proppageid"></a>  PROPPAGEID
 
@@ -480,7 +480,7 @@ Todas as macros PROPPAGEID devem ser colocadas entre as macros BEGIN_PROPPAGEIDS
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxctl. h
+  **Header** afxctl.h
 
 ## <a name="see-also"></a>Consulte também
 

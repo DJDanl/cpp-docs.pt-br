@@ -18,14 +18,14 @@ f1_keywords:
 helpviewer_keywords:
 - COM interfaces, COM interface entry macros
 ms.assetid: 19dcb768-2e1f-4b8d-a618-453a01a4bd00
-ms.openlocfilehash: 8341061ba6365beb97f4413aab8bfbbfdc25e035
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: ed2b8445a0f13b82338d2904d43fd17688d05b9e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693914"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276371"
 ---
-# <a name="cominterfaceentry-macros"></a>Macros COM_INTERFACE_ENTRY
+# <a name="cominterfaceentry-macros"></a>COM_INTERFACE_ENTRY Macros
 
 Essas macros inserir interfaces de um objeto em seu mapa COM, para que eles possam ser acessados por `QueryInterface`. A ordem das entradas no mapa de COM é que as interfaces de ordem serão verificadas para um IID correspondente durante `QueryInterface`.
 
@@ -97,7 +97,7 @@ COM_INTERFACE_ENTRY2(x, x2)
 *x*<br/>
 [in] O nome de uma interface que você deseja expor de seu objeto.
 
-*X2*<br/>
+*x2*<br/>
 [in] O nome do branch de herança do qual *x* é exposto.
 
 ### <a name="remarks"></a>Comentários
@@ -118,7 +118,7 @@ COM_INTERFACE_ENTRY_IID(iid, x)
 
 ### <a name="parameters"></a>Parâmetros
 
-*IID*<br/>
+*iid*<br/>
 [in] O GUID da interface exposta.
 
 *x*<br/>
@@ -138,13 +138,13 @@ COM_INTERFACE_ENTRY2_IID(iid, x, x2)
 
 ### <a name="parameters"></a>Parâmetros
 
-*IID*<br/>
+*iid*<br/>
 [in] O GUID que você está especificando para a interface.
 
 *x*<br/>
 [in] O nome de uma interface que seu objeto de classe deriva diretamente.
 
-*X2*<br/>
+*x2*<br/>
 [in] O nome de uma segunda interface que seu objeto de classe deriva diretamente.
 
 ##  <a name="com_interface_entry_aggregate"></a>  COM_INTERFACE_ENTRY_AGGREGATE
@@ -157,7 +157,7 @@ COM_INTERFACE_ENTRY_AGGREGATE(iid, punk)
 
 ### <a name="parameters"></a>Parâmetros
 
-*IID*<br/>
+*iid*<br/>
 [in] O GUID da interface consultado.
 
 *punk*<br/>
@@ -202,7 +202,7 @@ COM_INTERFACE_ENTRY_AUTOAGGREGATE(iid, punk, clsid)
 
 ### <a name="parameters"></a>Parâmetros
 
-*IID*<br/>
+*iid*<br/>
 [in] O GUID da interface consultado.
 
 *punk*<br/>
@@ -268,7 +268,7 @@ COM_INTERFACE_ENTRY_CACHED_TEAR_OFF(iid, x, punk)
 
 ### <a name="parameters"></a>Parâmetros
 
-*IID*<br/>
+*iid*<br/>
 [in] O GUID da interface destacáveis.
 
 *x*<br/>
@@ -295,7 +295,7 @@ COM_INTERFACE_ENTRY_TEAR_OFF(iid, x)
 
 ### <a name="parameters"></a>Parâmetros
 
-*IID*<br/>
+*iid*<br/>
 [in] O GUID da interface destacáveis.
 
 *x*<br/>
@@ -342,7 +342,7 @@ COM_INTERFACE_ENTRY_FUNC(iid, dw, func)
 
 ### <a name="parameters"></a>Parâmetros
 
-*IID*<br/>
+*iid*<br/>
 [in] O GUID da interface exposta.
 
 *dw*<br/>
@@ -397,4 +397,3 @@ COM_INTERFACE_ENTRY_NOINTERFACE(x)
 Você pode usar essa macro para impedir que uma interface que está sendo usado em um caso específico. Por exemplo, você pode inserir esta macro em seu mapa COM logo antes COM_INTERFACE_ENTRY_AGGREGATE_BLIND para impedir que uma consulta para a interface que está sendo encaminhado para desconhecido de interna da agregação.
 
 A interface IID será construída por meio do acréscimo *x* para `IID_`. Por exemplo, se *x* é `IPersistStorage`, será o IID `IID_IPersistStorage`.
-

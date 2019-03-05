@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - registry, ATL macros
 ms.assetid: 3ee041da-c63b-42a4-89cf-2a4b2a6f81ae
-ms.openlocfilehash: bced900cd7bac666daf415d91a4540828c769025
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8e05d6a47ea67138e8d1d456077526dd3178cc44
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50660376"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57292907"
 ---
 # <a name="registry-macros"></a>Macros de registro
 
@@ -61,7 +61,7 @@ DECLARE_LIBID( libid )
 
 ### <a name="parameters"></a>Parâmetros
 
-*ID da biblioteca*<br/>
+*libid*<br/>
 O GUID da biblioteca de tipos.
 
 ### <a name="remarks"></a>Comentários
@@ -104,7 +104,7 @@ DECLARE_REGISTRY(
 *vpid*<br/>
 [in] Um LPCTSTR que é um identificador de programa independente de versão.
 
-*NID*<br/>
+*nid*<br/>
 [in] UINT que é um índice da cadeia de caracteres de recurso no registro para usar como a descrição do programa.
 
 *flags*<br/>
@@ -128,10 +128,10 @@ DECLARE_REGISTRY_APPID_RESOURCEID(
 
 ### <a name="parameters"></a>Parâmetros
 
-*RESID*<br/>
+*resid*<br/>
 A id de recurso do arquivo. rgs que contém informações sobre o *appid*.
 
-*AppID*<br/>
+*appid*<br/>
 Uma GUID.
 
 ### <a name="remarks"></a>Comentários

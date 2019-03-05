@@ -7,12 +7,12 @@ helpviewer_keywords:
 - best practices, Parallel Patterns Library
 - Parallel Patterns Library, best practices
 ms.assetid: e43e0304-4d54-4bd8-a3b3-b8673559a9d7
-ms.openlocfilehash: 153dbf461176ee62f42dbe41a1c426a8c34ae716
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fc120ecc122678b54c7dd27b95445f523bc114a6
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50503271"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293609"
 ---
 # <a name="best-practices-in-the-parallel-patterns-library"></a>Práticas recomendadas na Biblioteca de Padrões Paralelos
 
@@ -52,7 +52,7 @@ A paralelização de corpos de loop relativamente pequeno pode causar o associad
 
 A carga de trabalho para cada iteração do loop paralelo é pequena demais para se beneficiar com a sobrecarga de processamento paralelo. Você pode melhorar o desempenho desse loop, executando mais de trabalho no corpo do loop ou executando o loop em série.
 
-[[Superior](#top)]
+[[Top](#top)]
 
 ##  <a name="highest"></a> Expressar paralelismo no nível mais alto possível
 
@@ -76,9 +76,9 @@ Para reduzir a quantidade de agendamento de sobrecarga neste exemplo, você pode
 
 [!code-cpp[concrt-image-processing-filter#22](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-parallel-patterns-library_5.cpp)]
 
-Para obter um exemplo semelhante que usa um pipeline para executar o processamento de imagens em paralelo, consulte [instruções passo a passo: Criando uma rede de processamento de imagem](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md).
+Para obter um exemplo semelhante que usa um pipeline para executar o processamento de imagens em paralelo, consulte [passo a passo: Criando uma rede de processamento de imagem](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md).
 
-[[Superior](#top)]
+[[Top](#top)]
 
 ##  <a name="divide-and-conquer"></a> Usar parallel_invoke para solucionar problemas de "dividir e conquistar"
 
@@ -90,9 +90,9 @@ O exemplo a seguir ilustra o uso do `parallel_invoke` algoritmo para implementar
 
 Para reduzir a sobrecarga, o `parallel_invoke` algoritmo executa o último da série de tarefas no contexto de chamada.
 
-Para obter a versão completa deste exemplo, consulte [como: usar parallel_invoke para escrever uma rotina de classificação paralela](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md). Para obter mais informações sobre o `parallel_invoke` algoritmo, consulte [algoritmos paralelos](../../parallel/concrt/parallel-algorithms.md).
+Para obter a versão completa deste exemplo, consulte [como: Usar parallel_invoke para escrever uma rotina de classificação paralela](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md). Para obter mais informações sobre o `parallel_invoke` algoritmo, consulte [algoritmos paralelos](../../parallel/concrt/parallel-algorithms.md).
 
-[[Superior](#top)]
+[[Top](#top)]
 
 ##  <a name="breaking-loops"></a> Usar cancelamento ou tratamento de exceções para quebra de um loop paralelo
 
@@ -102,7 +102,7 @@ Quando você trabalha diretamente com um objeto de grupo de tarefas, use o [conc
 
 [!code-cpp[concrt-parallel-array-search#2](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-parallel-patterns-library_7.cpp)]
 
-Como os algoritmos paralelos usam grupos de tarefas, quando uma das iterações paralelas cancela o grupo de tarefas pai, a tarefa geral é cancelada. Para obter a versão completa deste exemplo, consulte [como: Use o cancelamento para interromper um loop paralelo](../../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md).
+Como os algoritmos paralelos usam grupos de tarefas, quando uma das iterações paralelas cancela o grupo de tarefas pai, a tarefa geral é cancelada. Para obter a versão completa deste exemplo, consulte [como: Usar cancelamento para interromper um loop paralelo](../../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md).
 
 Embora o tratamento de exceções é uma maneira menos eficiente para cancelar o trabalho paralelo que o mecanismo de cancelamento, há casos em que a manipulação de exceção é apropriada. Por exemplo, o seguinte método, `for_all`, recursivamente executa uma função de trabalho em cada nó de um `tree` estrutura. Neste exemplo, o `_children` membro de dados é um [std:: List](../../standard-library/list-class.md) que contém `tree` objetos.
 
@@ -112,11 +112,11 @@ O chamador do `tree::for_all` método pode lançar uma exceção se ele não req
 
 [!code-cpp[concrt-task-tree-search#3](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-parallel-patterns-library_9.cpp)]
 
-Para obter a versão completa deste exemplo, consulte [como: usar tratamento de exceções para interromper um loop paralelo](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md).
+Para obter a versão completa deste exemplo, consulte [como: Use o tratamento de exceções para quebra de um loop paralelo](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md).
 
 Para obter mais informações gerais sobre o cancelamento e mecanismos de tratamento de exceções que são fornecidos da PPL, consulte [cancelamento no PPL](cancellation-in-the-ppl.md) e [Exception Handling](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md).
 
-[[Superior](#top)]
+[[Top](#top)]
 
 ##  <a name="object-destruction"></a> Compreender como cancelamento e tratamento de exceção afetam a destruição de objeto
 
@@ -146,7 +146,7 @@ Este exemplo de código contém os seguintes problemas que podem fazer com que e
 
 É recomendável que você não realizar operações críticas, como a liberação de recursos, em tarefas, a menos que você possa garantir que essas tarefas não serão canceladas. Também recomendamos que você não use a funcionalidade de tempo de execução que pode lançar no destruidor de seus tipos.
 
-[[Superior](#top)]
+[[Top](#top)]
 
 ##  <a name="repeated-blocking"></a> Não bloquear repetidamente em um Loop paralelo
 
@@ -162,7 +162,7 @@ Considere o exemplo a seguir que chama o [Concurrency:: Send](reference/concurre
 
 É recomendável que você refatora seu código para evitar esse padrão. Neste exemplo, você pode evitar a criação de threads adicionais, chamando `send` em uma série `for` loop.
 
-[[Superior](#top)]
+[[Top](#top)]
 
 ##  <a name="blocking"></a> Não execute operações de bloqueio ao cancelar o trabalho paralelo
 
@@ -180,7 +180,7 @@ O exemplo a seguir mostra como evitar que o trabalho desnecessário e, assim, me
 
 [!code-cpp[concrt-blocking-cancel#2](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-parallel-patterns-library_14.cpp)]
 
-[[Superior](#top)]
+[[Top](#top)]
 
 ##  <a name="shared-writes"></a> Não gravam dados compartilhados em um Loop paralelo
 
@@ -198,9 +198,9 @@ O exemplo a seguir modifica o exemplo anterior, usando um `combinable` do objeto
 
 [!code-cpp[concrt-parallel-sum-of-primes#3](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-parallel-patterns-library_16.cpp)]
 
-Para obter a versão completa deste exemplo, consulte [como: usar Combinável para melhorar o desempenho](../../parallel/concrt/how-to-use-combinable-to-improve-performance.md). Para obter mais informações sobre o `combinable` classe, consulte [paralela contêineres e objetos](../../parallel/concrt/parallel-containers-and-objects.md).
+Para obter a versão completa deste exemplo, consulte [como: Usar Combinável para melhorar o desempenho](../../parallel/concrt/how-to-use-combinable-to-improve-performance.md). Para obter mais informações sobre o `combinable` classe, consulte [paralela contêineres e objetos](../../parallel/concrt/parallel-containers-and-objects.md).
 
-[[Superior](#top)]
+[[Top](#top)]
 
 ##  <a name="false-sharing"></a> Quando possível, evitar compartilhamento falso
 
@@ -222,7 +222,7 @@ Este exemplo supõe que o tamanho do cache de memória é 64 ou menos bytes.
 
 É recomendável que você use o [concurrency::combinable](../../parallel/concrt/reference/combinable-class.md) classe quando você deve compartilhar dados entre tarefas. O `combinable` classe cria variáveis locais de thread de tal forma que o falso compartilhamento é menos provável. Para obter mais informações sobre o `combinable` classe, consulte [paralela contêineres e objetos](../../parallel/concrt/parallel-containers-and-objects.md).
 
-[[Superior](#top)]
+[[Top](#top)]
 
 ##  <a name="lifetime"></a> Certifique-se de que as variáveis são válidas em todo o tempo de vida de uma tarefa
 
@@ -254,7 +254,7 @@ Você também pode usar um ponteiro para controlar o tempo de vida de um objeto 
 
 Para obter mais informações sobre expressões lambda, consulte [Expressões lambda](../../cpp/lambda-expressions-in-cpp.md).
 
-[[Superior](#top)]
+[[Top](#top)]
 
 ## <a name="see-also"></a>Consulte também
 
@@ -264,10 +264,9 @@ Para obter mais informações sobre expressões lambda, consulte [Expressões la
 [Algoritmos paralelos](../../parallel/concrt/parallel-algorithms.md)<br/>
 [Cancelamento no PPL](cancellation-in-the-ppl.md)<br/>
 [Tratamento de Exceção](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)<br/>
-[Instruções passo a passo: criando uma rede de processamento de imagem](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)<br/>
-[Como usar parallel_invoke para escrever uma rotina de classificação em paralelo](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md)<br/>
-[Como usar cancelamento para interromper um loop paralelo](../../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md)<br/>
-[Como usar combinável para melhorar o desempenho](../../parallel/concrt/how-to-use-combinable-to-improve-performance.md)<br/>
+[Passo a passo: Criando uma rede de processamento de imagem](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)<br/>
+[Como: Usar parallel_invoke para escrever uma rotina de classificação em paralelo](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md)<br/>
+[Como: Usar cancelamento para interromper um loop paralelo](../../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md)<br/>
+[Como: Usar combinável para melhorar o desempenho](../../parallel/concrt/how-to-use-combinable-to-improve-performance.md)<br/>
 [Práticas recomendadas na biblioteca de agentes assíncronos](../../parallel/concrt/best-practices-in-the-asynchronous-agents-library.md)<br/>
 [Práticas recomendadas gerais no tempo de execução de simultaneidade](../../parallel/concrt/general-best-practices-in-the-concurrency-runtime.md)
-

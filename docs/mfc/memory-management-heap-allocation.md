@@ -1,5 +1,5 @@
 ---
-title: 'Gerenciamento de memória: alocação do heap'
+title: 'Gerenciamento de memória: Alocação de heap'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - memory [MFC], detecting leaks
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - heap allocation [MFC]
 - detecting memory leaks [MFC]
 ms.assetid: a5d949c6-1b79-476e-9c66-513a558203d9
-ms.openlocfilehash: 0c669fa611193b9a04e4854c84dec604e585991c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 93eee5cbfe1cd49042a9080f06657e751640de69
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50641149"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281168"
 ---
-# <a name="memory-management-heap-allocation"></a>Gerenciamento de memória: alocação do heap
+# <a name="memory-management-heap-allocation"></a>Gerenciamento de memória: Alocação de heap
 
 O heap é reservado para as necessidades de alocação de memória do programa. É uma área além do código do programa e a pilha. Programas em C típicos usam as funções **malloc** e **livre** para alocar e desalocar a memória de heap. A versão de depuração do MFC fornece versões modificadas dos operadores C++ internos **novos** e **excluir** aloque e desaloque os objetos na memória de heap.
 
@@ -29,4 +29,3 @@ Observe que o tamanho total dos objetos alocados no heap é limitado apenas pela
 ## <a name="see-also"></a>Consulte também
 
 [Gerenciamento de memória](../mfc/memory-management.md)
-

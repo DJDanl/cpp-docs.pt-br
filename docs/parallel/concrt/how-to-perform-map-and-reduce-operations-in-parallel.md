@@ -1,19 +1,19 @@
 ---
-title: Como realizar operações de mapa e redução em paralelo
+title: 'Como: Executar o mapa e reduzir as operações em paralelo'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - parallel_transform function, example
 - parallel map and reduce, example
 - parallel_reduce function, example
 ms.assetid: 9d19fac0-4ab6-4380-a375-3b18eeb87720
-ms.openlocfilehash: b73e46e63fc1b320a84322bf2b0efd7adf244ccb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ba3ffb5cdae7dcc6f108f005fab33f9a1fee6a6f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50651838"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258652"
 ---
-# <a name="how-to-perform-map-and-reduce-operations-in-parallel"></a>Como realizar operações de mapa e redução em paralelo
+# <a name="how-to-perform-map-and-reduce-operations-in-parallel"></a>Como: Executar o mapa e reduzir as operações em paralelo
 
 Este exemplo mostra como usar o [concurrency::parallel_transform](reference/concurrency-namespace-functions.md#parallel_transform) e [concurrency::parallel_reduce](reference/concurrency-namespace-functions.md#parallel_reduce) algoritmos e o [concurrent_unordered_map](../../parallel/concrt/reference/concurrent-unordered-map-class.md)classe para contar as ocorrências de palavras nos arquivos.
 
@@ -29,7 +29,7 @@ O exemplo a seguir conta as ocorrências de palavras nos arquivos. Ele usa [std:
 
 Para compilar o código, copiá-lo e, em seguida, cole-o em um projeto do Visual Studio ou colá-lo em um arquivo chamado `parallel-map-reduce.cpp` e, em seguida, execute o seguinte comando em uma janela de Prompt de comando do Visual Studio.
 
-**cl.exe /EHsc paralelo-map-reduce.cpp**
+**cl.exe /EHsc parallel-map-reduce.cpp**
 
 ## <a name="robust-programming"></a>Programação robusta
 

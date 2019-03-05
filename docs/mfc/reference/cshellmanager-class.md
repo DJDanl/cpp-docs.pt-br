@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CShellManager [MFC], GetParentItem
 - CShellManager [MFC], ItemFromPath
 ms.assetid: f15c4c1a-6fae-487d-9913-9b7369b33da0
-ms.openlocfilehash: 428f64dadb91887c4d076693e5dc939b6aff7680
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3f58492c6adbb6c183d6498e4a58f3ce639d7d18
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50571230"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269377"
 ---
 # <a name="cshellmanager-class"></a>Classe CShellManager
 
@@ -218,7 +218,7 @@ void FreeItem(LPITEMIDLIST pidl);
 
 ### <a name="parameters"></a>Parâmetros
 
-*PIDL*<br/>
+*pidl*<br/>
 [in] Uma lista de itens para excluir.
 
 ##  <a name="getitemcount"></a>  CShellManager::GetItemCount
@@ -231,7 +231,7 @@ UINT GetItemCount(LPCITEMIDLIST pidl);
 
 ### <a name="parameters"></a>Parâmetros
 
-*PIDL*<br/>
+*pidl*<br/>
 [in] Um ponteiro para uma lista de itens.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -248,7 +248,7 @@ UINT GetItemSize(LPCITEMIDLIST pidl);
 
 ### <a name="parameters"></a>Parâmetros
 
-*PIDL*<br/>
+*pidl*<br/>
 [in] Um ponteiro para uma lista de itens.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -265,7 +265,7 @@ LPITEMIDLIST GetNextItem(LPCITEMIDLIST pidl);
 
 ### <a name="parameters"></a>Parâmetros
 
-*PIDL*<br/>
+*pidl*<br/>
 [in] A lista de itens para iterar.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -317,7 +317,7 @@ HRESULT ItemFromPath(
 *lpszPath*<br/>
 [in] Uma cadeia de caracteres que especifica o caminho para o item.
 
-*PIDL*<br/>
+*pidl*<br/>
 [out] Uma referência a um PIDL. O método usa esse PIDL para armazenar o ponteiro para seu valor de retorno.
 
 ### <a name="return-value"></a>Valor de retorno

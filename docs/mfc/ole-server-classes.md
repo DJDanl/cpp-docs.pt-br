@@ -9,12 +9,12 @@ helpviewer_keywords:
 - COM components, classes [MFC]
 - component classes [MFC]
 ms.assetid: 8e9b67a2-c0ff-479c-a8d6-19b36c5e6fc6
-ms.openlocfilehash: 610a69204e5cb66f2129351ab2a04bb0915a1b4c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 99dd7f58b862fadc86ee2515bb8ef2008bc538fa
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50451682"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289567"
 ---
 # <a name="ole-server-classes"></a>Classes de servidor OLE
 
@@ -48,4 +48,3 @@ Uma exceção resultante de uma falha no processamento de OLE. Essa classe é us
 ## <a name="see-also"></a>Consulte também
 
 [Visão geral da classe](../mfc/class-library-overview.md)
-

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - ATL Property Page Wizard, options
 ms.assetid: a7107779-b2ea-4f99-b84b-7f3e0c504bc8
-ms.openlocfilehash: e891bd9e37bbf2fbedcdd71649305cdc366065fd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c92c7a3f03c3ddedbea02647e2317d77a7655609
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50641997"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298978"
 ---
 # <a name="options-atl-property-page-wizard"></a>Opções, Assistente de página de propriedades da ATL
 
@@ -42,4 +42,3 @@ Use esta página do Assistente para definir o nível de agregação e o modelo d
 
 [Assistente de página de propriedades da ATL](../../atl/reference/atl-property-page-wizard.md)<br/>
 [Cadeias de caracteres, o Assistente de página de propriedades ATL](../../atl/reference/strings-atl-property-page-wizard.md)
-

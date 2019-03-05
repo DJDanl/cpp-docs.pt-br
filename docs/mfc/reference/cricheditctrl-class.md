@@ -152,12 +152,12 @@ helpviewer_keywords:
 - CRichEditCtrl [MFC], StreamOut
 - CRichEditCtrl [MFC], Undo
 ms.assetid: 2be52788-822c-4c27-aafd-2471231e74eb
-ms.openlocfilehash: c42f7b77c04b2c94923908fa8b9542bea313b154
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: ca6185e7ee41726c7bf583056cb66eeb1be7021c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178987"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303428"
 ---
 # <a name="cricheditctrl-class"></a>Classe CRichEditCtrl
 
@@ -426,7 +426,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Especifica o estilo do controle de edição. Aplicar uma combinação dos estilos de janela listados na **Remarks** seção a seguir, e [estilos de controle de edição](/windows/desktop/Controls/edit-control-styles), descrito no SDK do Windows.
 
-*Rect*<br/>
+*rect*<br/>
 Especifica o tamanho e a posição do controle de edição. Pode ser um [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto ou [RECT](/windows/desktop/api/windef/ns-windef-tagrect) estrutura.
 
 *pParentWnd*<br/>
@@ -488,7 +488,7 @@ Especifica o estilo estendido do controle que está sendo criado. Para obter uma
 *dwStyle*<br/>
 Especifica o estilo do controle de edição. Aplicar uma combinação dos estilos de janela listados na **comentários** seção [Create](#create) e [estilos de controle de edição](/windows/desktop/Controls/edit-control-styles), descrito no SDK do Windows.
 
-*Rect*<br/>
+*rect*<br/>
 Uma referência a um [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura que descreve o tamanho e posição da janela a ser criado, em coordenadas do cliente do *pParentWnd*.
 
 *pParentWnd*<br/>
@@ -635,7 +635,7 @@ DWORD FindWordBreak(
 *nCode*<br/>
 Indica a ação a ser tomada. Para obter uma lista de valores possíveis, consulte a descrição para o parâmetro *código* em EM_FINDWORDBREAK no SDK do Windows.
 
-*Ncomeçar*<br/>
+*nStart*<br/>
 A posição do caractere baseado em zero do qual iniciar.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -658,7 +658,7 @@ long FormatRange(
 
 ### <a name="parameters"></a>Parâmetros
 
-*PFR*<br/>
+*pfr*<br/>
 Ponteiro para o [FORMATRANGE](/windows/desktop/api/richedit/ns-richedit-_formatrange) estrutura que contém informações sobre o dispositivo de saída. NULL indica que as informações armazenadas em cache dentro do controle de edição rica podem ser liberadas.
 
 *bDisplay*<br/>
@@ -711,7 +711,7 @@ DWORD GetDefaultCharFormat(CHARFORMAT& cf) const;  DWORD GetDefaultCharFormat(CH
 
 ### <a name="parameters"></a>Parâmetros
 
-*CF*<br/>
+*cf*<br/>
 Na primeira versão, um ponteiro para um `CHARFORMAT` estrutura que contém o caractere padrão de atributos de formatação.
 
 Na segunda versão, um ponteiro para um `CHARFORMAT2` estrutura, que é uma extensão de Rich Editar 2.0 para o `CHARFORMAT` estrutura, que contém o caractere padrão de atributos de formatação.
@@ -830,7 +830,7 @@ int GetLine(
 *nIndex*<br/>
 Índice baseado em zero da linha para recuperar.
 
-*lpszbuffer é*<br/>
+*lpszBuffer*<br/>
 Aponta para o buffer para receber o texto. A primeira palavra do buffer deve especificar o número máximo de bytes que pode ser copiado no buffer.
 
 *nMaxLength*<br/>
@@ -1015,7 +1015,7 @@ void GetSel(
 
 ### <a name="parameters"></a>Parâmetros
 
-*CR*<br/>
+*cr*<br/>
 Referência a um [CHARRANGE](/windows/desktop/api/richedit/ns-richedit-_charrange) estrutura que receberá os limites da seleção atual.
 
 *nStartChar*<br/>
@@ -1050,7 +1050,7 @@ DWORD GetSelectionCharFormat(CHARFORMAT& cf) const;  DWORD GetSelectionCharForma
 
 ### <a name="parameters"></a>Parâmetros
 
-*CF*<br/>
+*cf*<br/>
 Na primeira versão, um ponteiro para um [CHARFORMAT](/windows/desktop/api/richedit/ns-richedit-_charformat) estrutura que receberá o atributos da seleção atual de formatação de caractere.
 
 Na segunda versão, um ponteiro para um [CHARFORMAT2](/windows/desktop/api/richedit/ns-richedit-charformat2a) estrutura, que é uma extensão de Rich Editar 2.0 para o `CHARFORMAT` estrutura que receberá o atributos da seleção atual de formatação de caractere.
@@ -1201,10 +1201,10 @@ int GetTextRange(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Nprimeiro*<br/>
+*nFirst*<br/>
 O índice de posição de caractere imediatamente antes do primeiro caractere no intervalo.
 
-*núltima*<br/>
+*nLast*<br/>
 A posição do caractere imediatamente após o último caractere no intervalo.
 
 *refString*<br/>
@@ -1343,7 +1343,7 @@ int LineIndex(int nLine = -1) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*nLinha*<br/>
+*nLine*<br/>
 Contém o valor de índice para a linha desejada no texto do controle de edição ou -1. Se *nLinha* é -1, ele especifica a linha atual, ou seja, a linha que contém o cursor.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1370,7 +1370,7 @@ int LineLength(int nLine = -1) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*nLinha*<br/>
+*nLine*<br/>
 Especifica o índice de caracteres de um caractere na linha cujo comprimento deve ser recuperado. Se esse parâmetro for -1, o comprimento da linha atual (a linha que contém o cursor do sistema) é retornado, não incluindo o comprimento de qualquer texto dentro da linha selecionado. Quando `LineLength` é chamado para um controle de edição de linha única, esse parâmetro será ignorado.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1560,7 +1560,7 @@ BOOL SetAutoURLDetect(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parâmetros
 
-*bAtivar*<br/>
+*bEnable*<br/>
 Especifica se o controle é definido para detectar automaticamente uma URL. Se for TRUE, ele é habilitado. Se for FALSE, ela é desabilitada.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1589,7 +1589,7 @@ COLORREF SetBackgroundColor(
 *bSysColor*<br/>
 Indica se a cor do plano de fundo deve ser definida como o valor do sistema. Se esse valor for TRUE, o *cr* será ignorado.
 
-*CR*<br/>
+*cr*<br/>
 A cor de plano de fundo solicitada. Usado somente se *bSysColor* é FALSE.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1617,7 +1617,7 @@ BOOL SetDefaultCharFormat(CHARFORMAT2& cf);
 
 ### <a name="parameters"></a>Parâmetros
 
-*CF*<br/>
+*cf*<br/>
 Na primeira versão, um ponteiro para um [CHARFORMAT](/windows/desktop/api/richedit/ns-richedit-_charformat) estrutura que contém o caractere padrão novos atributos de formatação.
 
 Na segunda versão, um ponteiro para um [CHARFORMAT2](/windows/desktop/api/richedit/ns-richedit-charformat2a) estrutura, que é uma extensão de Rich Editar 2.0 para o `CHARFORMAT` estrutura, que contém o caractere padrão de atributos de formatação.
@@ -1887,7 +1887,7 @@ void SetSel(CHARRANGE& cr);
 *nEndChar*<br/>
 Índice baseado em zero do último caractere da seleção.
 
-*CR*<br/>
+*cr*<br/>
 [CHARRANGE](/windows/desktop/api/richedit/ns-richedit-_charrange) estrutura que contém os limites da seleção atual.
 
 ### <a name="remarks"></a>Comentários
@@ -1919,7 +1919,7 @@ BOOL SetSelectionCharFormat(CHARFORMAT2& cf);
 
 ### <a name="parameters"></a>Parâmetros
 
-*CF*<br/>
+*cf*<br/>
 Na primeira versão, um ponteiro para um [CHARFORMAT](/windows/desktop/api/richedit/ns-richedit-_charformat) estrutura que contém a formatação de caractere novos atributos para a seleção atual.
 
 Na segunda versão, um ponteiro para um [CHARFORMAT2](/windows/desktop/api/richedit/ns-richedit-charformat2a) estrutura, que é uma extensão de Rich Editar 2.0 para o `CHARFORMAT` estrutura, que contém o caractere de nova atributos para a seleção atual de formatação.
@@ -2032,7 +2032,7 @@ BOOL SetWordCharFormat(CHARFORMAT2& cf);
 
 ### <a name="parameters"></a>Parâmetros
 
-*CF*<br/>
+*cf*<br/>
 Na primeira versão, um ponteiro para um [CHARFORMAT](/windows/desktop/api/richedit/ns-richedit-_charformat) estrutura que contém a formatação de caractere novos atributos para a palavra atualmente selecionada.
 
 Na segunda versão, um ponteiro para um [CHARFORMAT2](/windows/desktop/api/richedit/ns-richedit-charformat2a) estrutura, que é uma extensão de Rich Editar 2.0 para o `CHARFORMAT` estrutura, que contém o caractere de nova formatação atributos para a palavra atualmente selecionada.

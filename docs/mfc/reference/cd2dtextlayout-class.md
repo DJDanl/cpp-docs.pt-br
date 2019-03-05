@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CD2DTextLayout [MFC], SetLocaleName
 - CD2DTextLayout [MFC], m_pTextLayout
 ms.assetid: 724bd13c-f2ef-4e55-a775-8cb04b7b7908
-ms.openlocfilehash: 378c96622144a4acac27785cef844f0c1d21b98b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aa51b050543b6a027e354afa18b5e9c002c6bca1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630939"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283963"
 ---
 # <a name="cd2dtextlayout-class"></a>Classe CD2DTextLayout
 
@@ -52,7 +52,7 @@ class CD2DTextLayout : public CD2DResource;
 |Nome|Descrição|
 |----------|-----------------|
 |[CD2DTextLayout::CD2DTextLayout](#cd2dtextlayout)|Constrói um objeto CD2DTextLayout.|
-|[CD2DTextLayout:: ~ CD2DTextLayout](#cd2dtextlayout__~cd2dtextlayout)|O destruidor. Chamado quando um objeto de layout de texto D2D está sendo destruído.|
+|[CD2DTextLayout::~CD2DTextLayout](#cd2dtextlayout__~cd2dtextlayout)|O destruidor. Chamado quando um objeto de layout de texto D2D está sendo destruído.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
@@ -92,7 +92,7 @@ class CD2DTextLayout : public CD2DResource;
 
 **Cabeçalho:** afxrendertarget.h
 
-##  <a name="_dtorcd2dtextlayout"></a>  CD2DTextLayout:: ~ CD2DTextLayout
+##  <a name="_dtorcd2dtextlayout"></a>  CD2DTextLayout::~CD2DTextLayout
 
 O destruidor. Chamado quando um objeto de layout de texto D2D está sendo destruído.
 
@@ -121,7 +121,7 @@ Um ponteiro para o destino de renderização.
 *strText*<br/>
 Um objeto CString que contém a cadeia de caracteres para criar um novo objeto CD2DTextLayout do.
 
-*TextFormat*<br/>
+*textFormat*<br/>
 Um objeto CString que contém o formato a ser aplicado à cadeia de caracteres.
 
 *sizeMax*<br/>
@@ -177,7 +177,7 @@ CString GetFontFamilyName(
 *currentPosition*<br/>
 A posição do texto para examinar.
 
-*TextRange*<br/>
+*textRange*<br/>
 O intervalo de texto que tem o mesmo de formatação como o texto na posição especificada por currentPosition. Isso significa que a execução não tem a formatação exata como a posição especificada, incluindo mas não limitado ao nome de família da fonte.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -199,7 +199,7 @@ CString GetLocaleName(
 *currentPosition*<br/>
 A posição do texto a ser inspecionado.
 
-*TextRange*<br/>
+*textRange*<br/>
 O intervalo de texto que tem o mesmo de formatação como o texto na posição especificada por currentPosition. Isso significa que a execução não tem a formatação exata como a posição especificada, incluindo, mas sem limitação, o nome da localidade.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -226,7 +226,7 @@ Um ponteiro para um IDWriteTextLayout.
 IDWriteTextLayout* m_pTextLayout;
 ```
 
-##  <a name="operator_idwritetextlayout_star"></a>  CD2DTextLayout::Operator IDWriteTextLayout *
+##  <a name="operator_idwritetextlayout_star"></a>  CD2DTextLayout::operator IDWriteTextLayout*
 
 Interface de IDWriteTextLayout retorna
 
@@ -265,7 +265,7 @@ BOOL SetFontFamilyName(
 *pwzFontFamilyName*<br/>
 O nome da família de fonte aplica-se para a cadeia de caracteres de texto inteiro dentro do intervalo especificado por textRange
 
-*TextRange*<br/>
+*textRange*<br/>
 Intervalo de texto ao qual essa alteração se aplica
 
 ### <a name="return-value"></a>Valor de retorno
@@ -287,7 +287,7 @@ BOOL SetLocaleName(
 *pwzLocaleName*<br/>
 Uma cadeia de caracteres de nome de localidade terminada em nulo
 
-*TextRange*<br/>
+*textRange*<br/>
 Intervalo de texto ao qual essa alteração se aplica
 
 ### <a name="return-value"></a>Valor de retorno

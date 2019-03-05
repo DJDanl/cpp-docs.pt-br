@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - task_completion_event class
 ms.assetid: fb19ed98-f245-48dc-9ba5-487ba879b28a
-ms.openlocfilehash: ae4cce94dd7b36cebadea5f6d05890d979cce474
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9d0ab271b20eb02c1dc4cb8e54cf2632eead4325
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50498950"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293882"
 ---
 # <a name="taskcompletionevent-class"></a>Classe task_completion_event
 
@@ -69,7 +69,7 @@ Se o evento de conclusão de tarefas nunca foi sinalizado, todas as tarefas cria
 
 **Namespace:** simultaneidade
 
-##  <a name="set"></a> Definir
+##  <a name="set"></a> set
 
 Define o evento de conclusão de tarefas.
 
@@ -108,7 +108,7 @@ __declspec(noinline) bool set_exception(std::exception_ptr _ExceptionPtr) const 
 *_E*<br/>
 O tipo de exceção.
 
-*Except*<br/>
+*_Except*<br/>
 A exceção a ser definido.
 
 *_ExceptionPtr*<br/>

@@ -1,19 +1,19 @@
 ---
-title: Como usar a referência cruzada do mapa de mensagem
+title: 'Como: Use a referência cruzada do mapa de mensagem'
 ms.date: 11/04/2016
 f1_keywords:
 - vc.mfc.messages
 helpviewer_keywords:
 - windows [MFC], message maps
 ms.assetid: 2e863d23-9e58-45ba-b5e4-a8ceefccd0c8
-ms.openlocfilehash: 71c46e7c30eab414534012c2fe314999568d2bd8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9467dce943da8c5fb447dcd3c83d044218fa183d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50457792"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326095"
 ---
-# <a name="how-to-use-the-message-map-cross-reference"></a>Como usar a referência cruzada do mapa de mensagem
+# <a name="how-to-use-the-message-map-cross-reference"></a>Como: Use a referência cruzada do mapa de mensagem
 
 Nas entradas de rotulado \<memberFxn >, escrever sua própria função de membro para um derivada [CWnd](../../mfc/reference/cwnd-class.md) classe. Atribuir qualquer nome que desejar de sua função. Outras funções, como `OnActivate`, são funções de membro da classe `CWnd`. Se chamado, eles passam a mensagem para o `DefWindowProc` função do Windows. Para processar mensagens de notificação do Windows, substitua correspondente `CWnd` função em sua classe derivada. Sua função deve chamar a função sobrecarregada em sua classe base para permitir que a classe base e o Windows respondem à mensagem.
 
@@ -30,4 +30,3 @@ Os seguintes termos são usados:
 ## <a name="see-also"></a>Consulte também
 
 [Mapas de mensagens](../../mfc/reference/message-maps-mfc.md)
-

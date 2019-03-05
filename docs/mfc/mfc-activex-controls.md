@@ -15,12 +15,12 @@ helpviewer_keywords:
 - events [MFC], ActiveX controls
 - MFC ActiveX controls [MFC]
 ms.assetid: c911fb74-3afc-4bf3-a0f5-7922b14d9a1b
-ms.openlocfilehash: 10ad0645e873a1a745168be9b839bbf97a1c05a6
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: a33273c46562e8beba12910702d9ddc1a092575d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52174854"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262604"
 ---
 # <a name="mfc-activex-controls"></a>Controles ActiveX MFC
 
@@ -42,7 +42,7 @@ Um controle ActiveX é implementado como um servidor em processo (geralmente um 
 ![Interação de contêiner de controle ActiveX e o controle](../mfc/media/vc37221.gif "contêiner de controle de interação do ActiveX e controle") <br/>
 Interação entre um contêiner de controle ActiveX e o controle ActiveX em janelas
 
-Para obter algumas informações recentes sobre como otimizar seus controles ActiveX, consulte [controles ActiveX MFC: otimização](../mfc/mfc-activex-controls-optimization.md).
+Para obter algumas informações recentes sobre como otimizar seus controles ActiveX, consulte [controles ActiveX MFC: Otimização](../mfc/mfc-activex-controls-optimization.md).
 
 Para criar um controle ActiveX do MFC, consulte [criar um projeto do controle ActiveX](../mfc/reference/mfc-activex-control-wizard.md).
 
@@ -62,9 +62,9 @@ Um controle ActiveX usa vários elementos de programação para interagir com ef
 
 Cada objeto de controle ActiveX que desenvolve herda um poderoso conjunto de recursos de sua classe base do MFC, `COleControl`. Esses recursos incluem ativação in-loco e a lógica de automação. `COleControl` pode fornecer o objeto de controle com a mesma funcionalidade que um objeto de janela MFC, além da capacidade para disparar eventos. `COleControl` também pode fornecer [controles sem janelas](../mfc/providing-windowless-activation.md), que dependem de seu contêiner para obter ajuda com algumas das funcionalidades de uma janela fornece (captura do mouse, o foco do teclado, rolagem), mas oferecem muito mais rápido do vídeo.
 
-Porque a classe control deriva `COleControl`, ele herda o recurso para enviar ou "fire", mensagens, chamadas de eventos, para o contêiner de controle quando determinadas condições forem atendidas. Esses eventos são usados para notificar o contêiner de controle quando algo importante acontece no controle. Você pode enviar informações adicionais sobre um evento para o contêiner de controle anexando parâmetros para o evento. Para obter mais informações sobre eventos de controle ActiveX, consulte o artigo [controles ActiveX MFC: eventos](../mfc/mfc-activex-controls-events.md).
+Porque a classe control deriva `COleControl`, ele herda o recurso para enviar ou "fire", mensagens, chamadas de eventos, para o contêiner de controle quando determinadas condições forem atendidas. Esses eventos são usados para notificar o contêiner de controle quando algo importante acontece no controle. Você pode enviar informações adicionais sobre um evento para o contêiner de controle anexando parâmetros para o evento. Para obter mais informações sobre eventos de controle ActiveX, consulte o artigo [controles ActiveX MFC: Eventos](../mfc/mfc-activex-controls-events.md).
 
-O elemento final é um mapa de expedição, o que é usado para expor um conjunto de funções (chamadas de métodos) e atributos (chamados propriedades) para o usuário do controle. Propriedades permitem que o contêiner de controle ou o usuário do controle para manipular o controle de várias maneiras. O usuário pode alterar a aparência do controle, alterar certos valores de controle ou fazer solicitações do controle, como acessar uma parte específica de dados que mantém o controle. Essa interface é determinada pelo desenvolvedor do controle e é definida usando **modo de exibição de classe**. Para obter mais informações sobre propriedades e métodos do controle ActiveX, consulte os artigos [controles ActiveX MFC: métodos](../mfc/mfc-activex-controls-methods.md) e [propriedades](../mfc/mfc-activex-controls-properties.md).
+O elemento final é um mapa de expedição, o que é usado para expor um conjunto de funções (chamadas de métodos) e atributos (chamados propriedades) para o usuário do controle. Propriedades permitem que o contêiner de controle ou o usuário do controle para manipular o controle de várias maneiras. O usuário pode alterar a aparência do controle, alterar certos valores de controle ou fazer solicitações do controle, como acessar uma parte específica de dados que mantém o controle. Essa interface é determinada pelo desenvolvedor do controle e é definida usando **modo de exibição de classe**. Para obter mais informações sobre propriedades e métodos do controle ActiveX, consulte os artigos [controles ActiveX MFC: Métodos](../mfc/mfc-activex-controls-methods.md) e [propriedades](../mfc/mfc-activex-controls-properties.md).
 
 ##  <a name="_core_interaction_between_controls_with_windows_and_activex_control_containers"></a> Interação entre os controles com o Windows e contêineres de controle ActiveX
 
@@ -92,7 +92,7 @@ Processamento em um controle ActiveX em janelas (ao Active Directory) de mensage
 
 A capacidade de serializar os dados, às vezes chamados de persistência, permite que o controle gravar o valor de suas propriedades para o armazenamento persistente. Controles podem ser recriados, em seguida, lendo o estado do objeto do armazenamento.
 
-Observe que um controle não é responsável por obter acesso à mídia de armazenamento. Em vez disso, o contêiner do controle é responsável por fornecer o controle com uma mídia de armazenamento para usar nos momentos apropriados. Para obter mais informações sobre serialização, consulte o artigo [controles ActiveX MFC: serializando](../mfc/mfc-activex-controls-serializing.md). Para obter informações sobre como otimizar a serialização, consulte [otimizando persistência e inicialização](../mfc/optimizing-persistence-and-initialization.md) em controles ActiveX: otimização.
+Observe que um controle não é responsável por obter acesso à mídia de armazenamento. Em vez disso, o contêiner do controle é responsável por fornecer o controle com uma mídia de armazenamento para usar nos momentos apropriados. Para obter mais informações sobre serialização, consulte o artigo [controles ActiveX MFC: Serializando](../mfc/mfc-activex-controls-serializing.md). Para obter informações sobre como otimizar a serialização, consulte [otimizando persistência e inicialização](../mfc/optimizing-persistence-and-initialization.md) em controles ActiveX: Otimização.
 
 ##  <a name="_core_installing_activex_control_classes_and_tools"></a> Instalando ferramentas e Classes de controle ActiveX
 
@@ -116,7 +116,7 @@ Por padrão, as ferramentas e classes de controle ActiveX são instaladas nos se
 
    Contém as bibliotecas necessárias para desenvolver controles ActiveX com o MFC
 
-Também há exemplos para controles ActiveX do MFC. Para obter mais informações sobre esses exemplos, consulte [exemplos de controles: MFC-Based os controles ActiveX](../visual-cpp-samples.md)
+Também há exemplos para controles ActiveX do MFC. Para obter mais informações sobre esses exemplos, consulte [exemplos de controles: Controles ActiveX com base em MFC](../visual-cpp-samples.md)
 
 ## <a name="see-also"></a>Consulte também
 

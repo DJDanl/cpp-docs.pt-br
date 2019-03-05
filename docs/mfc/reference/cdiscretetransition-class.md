@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CDiscreteTransition [MFC], m_delay
 - CDiscreteTransition [MFC], m_hold
 ms.assetid: b4d84fb3-ccaa-451c-a69b-6b50dcb9b9c8
-ms.openlocfilehash: 6092e805516d242daf6149615a8ef72df334dfd5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dc2311f7dae71f7c3848b7825b297ec5c9747859
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50656697"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262825"
 ---
 # <a name="cdiscretetransition-class"></a>Classe CDiscreteTransition
 
@@ -84,13 +84,13 @@ CDiscreteTransition(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Atraso*<br/>
+*delay*<br/>
 A quantidade de tempo pelo qual atrasar a opção de instantânea para o valor final.
 
 *dblFinalValue*<br/>
 O valor da variável de animação no final da transição.
 
-*Mantenha*<br/>
+*hold*<br/>
 A quantidade de tempo pelo qual armazenar a variável em seu valor final.
 
 ##  <a name="create"></a>  CDiscreteTransition::Create

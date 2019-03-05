@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - overwrite_buffer class
 ms.assetid: 5cc428fe-3697-419c-9fb2-78f6181c9293
-ms.openlocfilehash: 680c07015538a2eacc9480d3cd22da9a36071e32
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: adac6e220a60a49a2b9bfa9463f16f8956b08d2e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50455986"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299303"
 ---
 # <a name="overwritebuffer-class"></a>Classe overwrite_buffer
 
@@ -165,7 +165,7 @@ virtual void link_target_notification(_Inout_ ITarget<T>* _PTarget);
 *_PTarget*<br/>
 Um ponteiro para o destino vinculado recentemente.
 
-##  <a name="dtor"></a> ~ overwrite_buffer
+##  <a name="dtor"></a> ~overwrite_buffer
 
 Destrói o `overwrite_buffer` bloco de mensagem.
 
@@ -200,7 +200,7 @@ overwrite_buffer(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Filtro*<br/>
+*_Filter*<br/>
 Uma função de filtro que determina se as mensagens oferecidas devem ser aceitas.
 
 *_PScheduler*<br/>

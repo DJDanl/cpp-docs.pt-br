@@ -11,18 +11,18 @@ helpviewer_keywords:
 - stack collections
 - collections, queue
 ms.assetid: 3c7bc198-35f0-4fc3-aaed-6005a0f22638
-ms.openlocfilehash: 082308acaeddcb173a0d873c0f50e2e40fd8fe12
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ed0ad9b98a69e56df4e66b25bc6ca08cdaaad413
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50569192"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301461"
 ---
 # <a name="creating-stack-and-queue-collections"></a>Criando coleções de pilhas e filas
 
 Este artigo explica como criar outras estruturas de dados, tais como [pilhas](#_core_stacks) e [filas](#_core_queues), da MFC classes de lista. Os exemplos usam classes derivadas `CList`, mas você pode usar `CList` diretamente, a menos que você precisa adicionar a funcionalidade.
 
-##  <a name="_core_stacks"></a> Pilhas
+##  <a name="_core_stacks"></a> Stacks
 
 Como a coleção de lista padrão tem um cabeçalho e uma cauda, é fácil criar uma coleção de lista derivado que imita o comportamento de uma pilha de último a entrar, primeiro a sair. Uma pilha é como uma pilha de bandejas em uma lanchonete. Como bandejas são adicionadas à pilha, entram no topo da pilha. A bandeja do último adicionada é a primeira a ser removido. As funções de membro da coleção de lista `AddHead` e `RemoveHead` pode ser usado para adicionar e remover elementos especificamente do cabeçalho da lista; portanto, mais recentemente adicionado elemento é o primeiro a ser removido.
 
@@ -51,4 +51,3 @@ Como a coleção de lista padrão tem um cabeçalho e uma cauda, também é fác
 ## <a name="see-also"></a>Consulte também
 
 [Coleções](../mfc/collections.md)
-

@@ -22,12 +22,12 @@ helpviewer_keywords:
 - COleCurrency [MFC], m_cur
 - COleCurrency [MFC], m_status
 ms.assetid: 3a36e345-303f-46fb-a57c-858274378a8d
-ms.openlocfilehash: e3b0a369071571fb343d1b5030eebbf7c471bc81
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 64f2b00c8a5aefe8a39c24d26af2a97625225059
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519185"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273173"
 ---
 # <a name="colecurrency-class"></a>Classe COleCurrency
 
@@ -61,15 +61,15 @@ class COleCurrency
 
 |Nome|Descrição|
 |----------|-----------------|
-|[operador =](#operator_eq)|Copia um `COleCurrency` valor.|
+|[operator =](#operator_eq)|Copia um `COleCurrency` valor.|
 |[operador +, -](#operator_plus_minus)|Adiciona, subtrai e altera o sinal de `COleCurrency` valores.|
-|[Operator + =-=](#operator_plus_minus_eq)|Adiciona e subtrai um `COleCurrency` valor deste `COleCurrency` objeto.|
+|[operator +=, -=](#operator_plus_minus_eq)|Adiciona e subtrai um `COleCurrency` valor deste `COleCurrency` objeto.|
 |[operador * /](#operator_star)|Dimensiona um `COleCurrency` valor por um valor inteiro.|
-|[operador * =, / =](#operator_star_div_eq)|Dimensiona essa `COleCurrency` valor por um valor inteiro.|
+|[operator *=, /=](#operator_star_div_eq)|Dimensiona essa `COleCurrency` valor por um valor inteiro.|
 |[operador <<](#operator_stream)|Saídas de um `COleCurrency` de valor para `CArchive` ou `CDumpContext`.|
 |[operador >>](#operator_stream)|Entradas de um `COleCurrency` do objeto de `CArchive`.|
 |[operador de moeda](#operator_currency)|Converte um `COleCurrency` valor em uma moeda.|
-|[operador = =, <, < =, etc.](#colecurrency_relational_operators)|Compara dois `COleCurrency` valores.|
+|[operator ==, <, <=, etc.](#colecurrency_relational_operators)|Compara dois `COleCurrency` valores.|
 
 ### <a name="public-data-members"></a>Membros de Dados Públicos
 
@@ -92,7 +92,7 @@ MOEDA é implementada como um valor de inteiro de dois complementos dimensionado
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** afxdisp.h
+**Header:** afxdisp.h
 
 ##  <a name="colecurrency"></a>  COleCurrency::COleCurrency
 
@@ -111,7 +111,7 @@ COleCurrency(
 
 ### <a name="parameters"></a>Parâmetros
 
-*1&gt;Operator=(&lt;1}{2&gt;cysrc&lt;2}{3&gt;)&lt;3*<br/>
+*cySrc*<br/>
 Um valor de moeda a ser copiado para o novo `COleCurrency` objeto.
 
 *curSrc*<br/>
@@ -220,13 +220,13 @@ Para obter mais informações sobre as operações que podem definir o status co
 
 - [COleCurrency](#colecurrency)
 
-- [operador =](#operator_eq)
+- [operator =](#operator_eq)
 
 - [operador + -](#operator_plus_minus)
 
 - [Operator + = e =](#operator_plus_minus_eq)
 
-- [operador * /](#operator_star)
+- [operator * /](#operator_star)
 
 - [operador * = e =](#operator_star_div_eq)
 
@@ -281,15 +281,15 @@ Para obter mais informações sobre as operações que podem definir o status co
 
 - [COleCurrency](#colecurrency)
 
-- [operador =](#operator_eq)
+- [operator =](#operator_eq)
 
 - [operador +, -](#operator_plus_minus)
 
-- [Operator + =-=](#operator_plus_minus_eq)
+- [operator +=, -=](#operator_plus_minus_eq)
 
 - [operador * /](#operator_star)
 
-- [operador * =, / =](#operator_star_div_eq)
+- [operator *=, /=](#operator_star_div_eq)
 
 > [!CAUTION]
 >  Este membro de dados é para situações de programação avançadas. Você deve usar as funções de membro embutidas [GetStatus](#getstatus) e [SetStatus](#setstatus). Consulte `SetStatus` para cuidados adicionais em relação à configuração explícita este membro de dados.
@@ -344,7 +344,7 @@ Para obter mais informações sobre os valores de status válidos, inválidas e 
 
 [!code-cpp[NVC_MFCOleContainer#16](../../mfc/codesnippet/cpp/colecurrency-class_5.cpp)]
 
-##  <a name="operator_plus_minus_eq"></a>  + = De COleCurrency::operator-=
+##  <a name="operator_plus_minus_eq"></a>  COleCurrency::operator +=, -=
 
 Permitem que você adicionar e subtrair um `COleCurrency` valor de e para isso `COleCurrency` objeto.
 
@@ -390,7 +390,7 @@ Para obter mais informações sobre os valores de status válidos, inválidas e 
 
 [!code-cpp[NVC_MFCOleContainer#18](../../mfc/codesnippet/cpp/colecurrency-class_7.cpp)]
 
-##  <a name="operator_star_div_eq"></a>  COleCurrency::operator \*=, / =
+##  <a name="operator_star_div_eq"></a>  COleCurrency::operator \*=, /=
 
 Permitem que você dimensioná-lo `COleCurrency` valor por um valor integral.
 
@@ -413,7 +413,7 @@ Para obter mais informações sobre os valores de status válidos, inválidas e 
 
 [!code-cpp[NVC_MFCOleContainer#19](../../mfc/codesnippet/cpp/colecurrency-class_8.cpp)]
 
-##  <a name="operator_stream"></a>  COleCurrency::operator &lt; &lt;, &gt;&gt;
+##  <a name="operator_stream"></a>  COleCurrency::operator &lt;&lt;, &gt;&gt;
 
 Dá suporte a diagnóstico despejar e armazenando em um arquivo morto.
 

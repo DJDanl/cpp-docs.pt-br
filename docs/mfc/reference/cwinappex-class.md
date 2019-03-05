@@ -118,12 +118,12 @@ helpviewer_keywords:
 - CWinAppEx [MFC], StoreWindowPlacement
 - CWinAppEx [MFC], m_bForceImageReset
 ms.assetid: a3d3e053-3e22-463f-9444-c73abb1bb9d7
-ms.openlocfilehash: 57c18ff00cd9e3a1d3156d8214ac78b49ca00c1f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c222567703d0e57480c00f6f2bf9e78f16979150
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544411"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288825"
 ---
 # <a name="cwinappex-class"></a>Classe CWinAppEx
 
@@ -222,7 +222,7 @@ Depende muito da funcionalidade fornecida pela estrutura MFC a `CWinAppEx` class
 
 - Derive a classe principal do aplicativo do `CWinAppEx`.
 
-Depois que você incorporar `CWinAppEx` em seu aplicativo, você pode inicializar qualquer um dos gerenciadores de aplicativo. Antes de usar um Gerenciador de aplicativos, você deve inicializá-lo chamando o método initialize apropriado. Para obter um ponteiro para um determinado gerente, chame o método get associado. O `CWinAppEx` classe gerencia os seguintes gerenciadores de aplicativo: [classe CMouseManager](../../mfc/reference/cmousemanager-class.md), [classe CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md), [classe CKeyboardManager](../../mfc/reference/ckeyboardmanager-class.md), [ Classe CUserToolsManager](../../mfc/reference/cusertoolsmanager-class.md), e [classe CMenuTearOffManager](../../mfc/reference/cmenutearoffmanager-class.md).
+Depois que você incorporar `CWinAppEx` em seu aplicativo, você pode inicializar qualquer um dos gerenciadores de aplicativo. Antes de usar um Gerenciador de aplicativos, você deve inicializá-lo chamando o método initialize apropriado. Para obter um ponteiro para um determinado gerente, chame o método get associado. O `CWinAppEx` classe gerencia os seguintes gerenciadores de aplicativo: [Classe CMouseManager](../../mfc/reference/cmousemanager-class.md), [classe CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md), [classe CKeyboardManager](../../mfc/reference/ckeyboardmanager-class.md), [classe CUserToolsManager](../../mfc/reference/cusertoolsmanager-class.md), e [ Classe CMenuTearOffManager](../../mfc/reference/cmenutearoffmanager-class.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -288,7 +288,7 @@ void EnableLoadWindowPlacement(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parâmetros
 
-*bAtivar*<br/>
+*bEnable*<br/>
 [in] Especifica se o aplicativo carrega o tamanho inicial e o local da janela do quadro principal do registro.
 
 ### <a name="remarks"></a>Comentários
@@ -400,7 +400,7 @@ BOOL GetBinary(
 *ppData*<br/>
 [out] Um ponteiro para o buffer que o método preenche com os dados binários.
 
-*Petabytes*<br/>
+*pBytes*<br/>
 [out] Um ponteiro para um inteiro sem sinal que o método usa para gravar o número de bytes lidos.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -478,7 +478,7 @@ int GetInt(
 *lpszEntry*<br/>
 [in] Uma cadeia de caracteres que contém o nome de uma entrada de registro.
 
-*nConfiguração padrão*<br/>
+*nDefault*<br/>
 [in] O valor padrão que o método retorna, se a entrada do Registro especificada não existe.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -611,7 +611,7 @@ BOOL GetSectionBinary(
 *ppData*<br/>
 [out] Um ponteiro para o buffer no qual o método armazena os dados.
 
-*Petabytes*<br/>
+*pBytes*<br/>
 [out] Um ponteiro para um inteiro sem sinal. O método grava o tamanho de *ppData* para esse parâmetro.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -643,7 +643,7 @@ int GetSectionInt(
 *lpszEntry*<br/>
 [in] Uma cadeia de caracteres que contém o valor a ser lido.
 
-*nConfiguração padrão*<br/>
+*nDefault*<br/>
 [in] O valor padrão para retornar se o valor especificado não existe.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1031,7 +1031,7 @@ virtual void OnAppContextHelp(
 *pWndControl*<br/>
 [in] Um ponteiro para um objeto de janela para o qual o usuário acionasse ajuda de contexto.
 
-*[dwHelpIDArray]*<br/>
+*dwHelpIDArray[]*<br/>
 [in] Um valor reservado.
 
 ### <a name="remarks"></a>Comentários
@@ -1067,7 +1067,7 @@ virtual BOOL OnViewDoubleClick(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Apropriei*<br/>
+*pWnd*<br/>
 [in] Um ponteiro para um objeto derivado de [classe CView](../../mfc/reference/cview-class.md).
 
 *iViewId*<br/>
@@ -1232,10 +1232,10 @@ virtual BOOL ShowPopupMenu(
 *uiMenuResId*<br/>
 [in] Uma ID de recurso de menu.
 
-*ponto*<br/>
+*point*<br/>
 [in] Um [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) que especifica a posição do menu em coordenadas da tela.
 
-*Apropriei*<br/>
+*pWnd*<br/>
 [in] Um ponteiro para a janela que possui um menu pop-up.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1327,7 +1327,7 @@ BOOL WriteInt(
 *lpszEntry*<br/>
 [in] Uma cadeia de caracteres que contém o nome de uma chave do registro.
 
-*Nvalor*<br/>
+*nValue*<br/>
 [in] Os dados serem armazenados.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1421,7 +1421,7 @@ BOOL WriteSectionInt(
 *lpszEntry*<br/>
 [in] Uma cadeia de caracteres que contém o valor a ser definido.
 
-*Nvalor*<br/>
+*nValue*<br/>
 [in] Os dados a gravar no registro.
 
 ### <a name="return-value"></a>Valor de retorno

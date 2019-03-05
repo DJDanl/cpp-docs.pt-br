@@ -182,12 +182,12 @@ helpviewer_keywords:
 - CToolBarCtrl [MFC], SetToolTips
 - CToolBarCtrl [MFC], SetWindowTheme
 ms.assetid: 8f2f8ad2-05d7-4975-8715-3f2eed795248
-ms.openlocfilehash: 9e2df5117f6cbb96c69f54fe9e21f85b45218d6d
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 61cbcbd2a64e8648c6467ebbc0d86d6f89953442
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178974"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302488"
 ---
 # <a name="ctoolbarctrl-class"></a>Classe CToolBarCtrl
 
@@ -579,7 +579,7 @@ BOOL CheckButton(
 *nID*<br/>
 Identificador do botão para marcar ou desmarcar o comando.
 
-*bVerificar*<br/>
+*bCheck*<br/>
 True para seleção do botão, FALSE para limpá-lo.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -626,7 +626,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Especifica o estilo do controle de barra de ferramentas. Barras de ferramentas devem sempre ter o estilo WS_CHILD. Além disso, você pode especificar qualquer combinação de estilos de barra de ferramentas e os estilos de janela conforme descrito em **comentários**.
 
-*Rect*<br/>
+*rect*<br/>
 Opcionalmente, especifica o tamanho e a posição do controle de barra de ferramentas. Ela pode ser um [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto ou uma [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura.
 
 *pParentWnd*<br/>
@@ -680,7 +680,7 @@ Especifica o estilo estendido do controle que está sendo criado. Para obter uma
 *dwStyle*<br/>
 Especifica o estilo do controle de barra de ferramentas. Barras de ferramentas devem sempre ter o estilo WS_CHILD. Além disso, você pode especificar qualquer combinação de estilos de barra de ferramentas e os estilos de janela conforme descrito na **Remarks** seção [criar](#create).
 
-*Rect*<br/>
+*rect*<br/>
 Uma referência a um [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura que descreve o tamanho e posição da janela a ser criado, em coordenadas do cliente do *pParentWnd*.
 
 *pParentWnd*<br/>
@@ -755,7 +755,7 @@ BOOL EnableButton(
 *nID*<br/>
 Identificador do botão Habilitar ou desabilitar o comando.
 
-*bAtivar*<br/>
+*bEnable*<br/>
 TRUE para habilitar o botão; FALSE para desabilitar o botão.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1266,7 +1266,7 @@ int GetString(
 
 ### <a name="parameters"></a>Parâmetros
 
-*ncadeia de caracteres*<br/>
+*nString*<br/>
 Índice da cadeia de caracteres.
 
 *lpstrString*<br/>
@@ -1587,7 +1587,7 @@ ID de um bitmap que contém as imagens a serem carregadas. Para especificar seu 
 |IDB_VIEW_LARGE_COLOR|Bitmaps de modo de exibição de tamanho grande|
 |IDB_VIEW_SMALL_COLOR|Bitmaps de modo de exibição de tamanho pequeno|
 
-*HINST*<br/>
+*hinst*<br/>
 Identificador de instância do programa para o aplicativo de chamada. Esse parâmetro pode ser HINST_COMMCTRL para carregar uma lista de imagens padrão.
 
 ### <a name="remarks"></a>Comentários
@@ -2206,7 +2206,7 @@ void SetOwner(CWnd* pWnd);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Apropriei*<br/>
+*pWnd*<br/>
 Ponteiro para o `CWnd` ou `CWnd`-derivados do objeto que será a nova janela de proprietário para o controle de barra de ferramentas.
 
 ### <a name="remarks"></a>Comentários

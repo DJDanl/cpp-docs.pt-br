@@ -1,18 +1,18 @@
 ---
-title: 'Instruções passo a passo: usando o Tempo de Execução de Simultaneidade em um aplicativo habilitado para COM'
+title: 'Passo a passo: Usando o tempo de execução de simultaneidade em um aplicativo habilitado para COM'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Concurrency Runtime, use with COM
 - COM, use with the Concurrency Runtime
 ms.assetid: a7c798b8-0fc8-4bee-972f-22ef158f7f48
-ms.openlocfilehash: 227d06c74826b8936909b774d1a7e3a222ac8023
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9d306377be4a000c54fb5556b15263a15b2d4618
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50554928"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278191"
 ---
-# <a name="walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application"></a>Instruções passo a passo: usando o Tempo de Execução de Simultaneidade em um aplicativo habilitado para COM
+# <a name="walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application"></a>Passo a passo: Usando o tempo de execução de simultaneidade em um aplicativo habilitado para COM
 
 Este documento demonstra como usar o tempo de execução de simultaneidade em um aplicativo que usa o modelo de objeto de componente (COM).
 
@@ -162,4 +162,3 @@ Copie o código de exemplo e cole-o em um projeto do Visual Studio ou colá-lo e
 [Tratamento de Exceção](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)<br/>
 [Cancelamento no PPL](cancellation-in-the-ppl.md)<br/>
 [Agendador de tarefas](../../parallel/concrt/task-scheduler-concurrency-runtime.md)
-

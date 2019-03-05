@@ -15,12 +15,12 @@ f1_keywords:
 helpviewer_keywords:
 - concurrent_priority_queue class
 ms.assetid: 3e740381-0f4e-41fc-8b66-ad0bb55f17a3
-ms.openlocfilehash: a75d413874056d57f0d474f44e514cf93f273626
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5804675ffdaf6de2e73327103398316566b41627
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492267"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304776"
 ---
 # <a name="concurrentpriorityqueue-class"></a>Classe concurrent_priority_queue
 
@@ -41,7 +41,7 @@ template <typename T,
 *T*<br/>
 O tipo de dados dos elementos a ser armazenado na fila de prioridade.
 
-*Comparar*<br/>
+*_Compare*<br/>
 O tipo do objeto de função que pode comparar dois valores de elemento como chaves de classificação para determinar sua ordem relativa na fila de prioridade. Esse argumento é opcional e o predicado binário `less<T>` é o valor padrão.
 
 *_Ax*<br/>
@@ -97,7 +97,7 @@ Para obter informações detalhadas sobre o `concurrent_priority_queue` classe, 
 
 **Namespace:** simultaneidade
 
-##  <a name="clear"></a> Limpar
+##  <a name="clear"></a> clear
 
 Apaga todos os elementos na ordem de prioridade simultânea. Esse método não é seguro em simultaneidade.
 
@@ -152,10 +152,10 @@ A classe de alocador a ser usada com esse objeto.
 *_Init_capacity*<br/>
 A capacidade inicial do `concurrent_priority_queue` objeto.
 
-*Iniciar*<br/>
+*_Begin*<br/>
 A posição do primeiro elemento no intervalo de elementos a serem copiados.
 
-*Encerrar*<br/>
+*_End*<br/>
 A posição do primeiro elemento além do intervalo de elementos a serem copiados.
 
 *_Src*<br/>
@@ -199,7 +199,7 @@ allocator_type get_allocator() const;
 
 Uma cópia do alocador usado para construir o `concurrent_priority_queue` objeto.
 
-##  <a name="operator_eq"></a> operador =
+##  <a name="operator_eq"></a> operator=
 
 Atribui o conteúdo de outro `concurrent_priority_queue` objeto para esse outro. Esse método não é seguro em simultaneidade.
 
@@ -233,7 +233,7 @@ void push(value_type&& _Elem);
 *_Elem*<br/>
 O elemento a ser adicionado à fila de prioridade simultâneas.
 
-##  <a name="size"></a> Tamanho
+##  <a name="size"></a> size
 
 Retorna o número de elementos na fila de prioridade simultâneas. Esse método é seguro em simultaneidade.
 
@@ -249,7 +249,7 @@ O número de elementos neste `concurrent_priority_queue` objeto.
 
 O tamanho retornado é garantido para incluir todos os elementos adicionados por chamadas para a função `push`. No entanto, ele pode não refletir os resultados de operações simultâneas pendentes.
 
-##  <a name="swap"></a> troca
+##  <a name="swap"></a> swap
 
 Troca o conteúdo de duas filas de prioridade simultâneas. Esse método não é seguro em simultaneidade.
 
@@ -259,7 +259,7 @@ void swap(concurrent_priority_queue& _Queue);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Adresa*<br/>
+*_Queue*<br/>
 O objeto `concurrent_priority_queue` com o qual trocar conteúdo.
 
 ##  <a name="try_pop"></a> try_pop
@@ -283,4 +283,3 @@ Uma referência a uma variável que será preenchida com o elemento de prioridad
 
 [Namespace de simultaneidade](concurrency-namespace.md)<br/>
 [Contêineres e objetos em paralelo](../../../parallel/concrt/parallel-containers-and-objects.md)
-

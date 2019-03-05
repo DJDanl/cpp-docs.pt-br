@@ -307,12 +307,12 @@ helpviewer_keywords:
 - CMenuImages class [MFC]
 - CleanUp method [MFC]
 ms.assetid: 3e2276aa-b02a-4781-97ba-ea074045e9e2
-ms.openlocfilehash: 706ba4cdd1a8f9d77857c52898058aa62fcca8c1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ae35aefefe548990eeb7fbe637839e475036c2bc
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50435484"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300083"
 ---
 # <a name="internal-classes"></a>Classes internas
 
@@ -325,7 +325,7 @@ As classes a seguir são usadas internamente no MFC. Para fins de exatidão, est
 |`CCommandManager Class`|O `CCommandManager` classe gerencia a comandos e sua associação com imagens.|
 |`CDialogImpl Class (MFC)`|Fornece detalhes de implementação para classes com base em caixa de diálogo, como `CDialogEx`.|
 |`CDocumentAdapter Class`|Interface de IDocument implementa necessária para pesquisar e organizar os manipuladores.|
-|`CFrameImpl Class`|O `CFrameImpl` classe manipula a personalização da barra de ferramentas para as seguintes classes de janela de quadro: [classe CFrameWndEx](../../mfc/reference/cframewndex-class.md), [classe CMDIFrameWndEx](../../mfc/reference/cmdiframewndex-class.md), e [classe COleIPFrameWndEx](../../mfc/reference/coleipframewndex-class.md).|
+|`CFrameImpl Class`|O `CFrameImpl` classe manipula a personalização da barra de ferramentas para as seguintes classes de janela de quadro: [Classe CFrameWndEx](../../mfc/reference/cframewndex-class.md), [classe CMDIFrameWndEx](../../mfc/reference/cmdiframewndex-class.md), e [classe COleIPFrameWndEx](../../mfc/reference/coleipframewndex-class.md).|
 |`CFullScreenImpl Class`|Implementa a funcionalidade de tela inteira comum para aplicativos SDI e MDI.|
 |`CMDIClientAreaWnd Class`|O `CMDIClientAreaWnd` classe é uma classe auxiliar que simplifica a implementação de guias MDI e grupos MDI com guias.|
 |`CMemDC Class`|Uma classe auxiliar para um contexto de dispositivo de memória. O contexto de dispositivo de memória oferece suporte a desenho fora da tela.|
@@ -412,4 +412,3 @@ As classes a seguir são usadas internamente no MFC. Para fins de exatidão, est
 ## <a name="see-also"></a>Consulte também
 
 [Aplicativos da área de trabalho MFC](../../mfc/mfc-desktop-applications.md)
-

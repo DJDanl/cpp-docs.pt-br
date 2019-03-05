@@ -1,5 +1,5 @@
 ---
-title: 'TN022: implementação de comandos padrão'
+title: 'TN022: Implementação de comandos padrão'
 ms.date: 11/04/2016
 f1_keywords:
 - vc.commands
@@ -59,14 +59,14 @@ helpviewer_keywords:
 - ID_FILE_NEW command [MFC]
 - ID_INDICATOR_NUM command
 ms.assetid: a7883b46-23f7-4870-ac3a-804aed9258b5
-ms.openlocfilehash: 0f79aaaf59f12e226220e51681f64d0bf1131303
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4c066521ba2b5be9ac24a8abaece42e57b8ad85f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50504332"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279336"
 ---
-# <a name="tn022-standard-commands-implementation"></a>TN022: implementação de comandos padrão
+# <a name="tn022-standard-commands-implementation"></a>TN022: Implementação de comandos padrão
 
 > [!NOTE]
 >  A nota técnica a seguir não foi atualizada desde que foi incluído pela primeira vez na documentação online. Como resultado, alguns procedimentos e tópicos podem estar desatualizadas ou incorretas. Para obter as informações mais recentes, é recomendável que você pesquise o tópico de interesse no índice da documentação online.
@@ -468,30 +468,29 @@ Para cada ID de comando, há uma sequência de prompt de linha de mensagem padr�
 
 Várias IDs de comando padrão são usadas como indicadores em barras de status. Eles usam o mesmo comando de atualização de interface do usuário do mecanismo de tratamento para exibir seu estado atual de visual durante o tempo ocioso do aplicativo. Uma vez que eles não podem ser selecionados pelo usuário (ou seja, não é possível enviar um painel da barra de status), em seguida, ele não faz sentido ter um manipulador ON_COMMAND para essas IDs de comando.
 
-- ID_INDICATOR_CAPS: Indicador de bloqueio de CAP.
+- ID_INDICATOR_CAPS : Indicador de bloqueio de limite.
 
-- ID_INDICATOR_NUM: Indicador de bloqueio.
+- ID_INDICATOR_NUM : Indicador de bloqueio NUM.
 
 - ID_INDICATOR_SCRL: Indicador de bloqueio SCRL.
 
-- ID_INDICATOR_KANA: Indicador de bloqueio KANA (aplicável apenas aos sistemas japonês).
+- ID_INDICATOR_KANA : Indicador (aplicável apenas aos sistemas japonês) de bloqueio de KANA.
 
 Todos os três seguintes são implementadas no `CFrameWnd::OnUpdateKeyIndicator`, um auxiliar de implementação que usa a ID de comando para mapear para a chave Virtual apropriada. Uma implementação comum habilita ou desabilita (para painéis de status desabilitados não = nenhum texto) a `CCmdUI` objeto dependendo se a chave Virtual apropriado está bloqueada no momento.
 
 Não é recomendável a personalização desse manipulador de comando.
 
-- ID_INDICATOR_EXT: Estendido selecionar indicador.
+- ID_INDICATOR_EXT: Selecionar indicador estendido.
 
 - ID_INDICATOR_OVR: Indicador de sobreposição.
 
-- ID_INDICATOR_REC: Indicador de gravação.
+- ID_INDICATOR_REC : Indicador de gravação.
 
 Atualmente, não há nenhuma implementação padrão para esses indicadores.
 
-Se você optar por implementar esses indicadores, recomendamos que você use essas IDs de indicador e manter a ordenação dos indicadores na barra de status (ou seja, nesta ordem: EXT, CAP, NUM, SCRL, se, REC).
+Se você optar por implementar esses indicadores, recomendamos que você use essas IDs de indicador e manter a ordenação dos indicadores na barra de status (ou seja, nesta ordem: EXT, CAP, NUM, SCRL, SE, REC).
 
 ## <a name="see-also"></a>Consulte também
 
 [Observações técnicas por número](../mfc/technical-notes-by-number.md)<br/>
 [Observações técnicas por categoria](../mfc/technical-notes-by-category.md)
-

@@ -13,12 +13,12 @@ f1_keywords:
 - AMP/Concurrency::tiled_extent::tile_dim2
 - AMP/Concurrency::tiled_extent::tile_extent
 ms.assetid: 671ecaf8-c7b0-4ac8-bbdc-e30bd92da7c0
-ms.openlocfilehash: 77d16eefa61fb30614cb6527792014cc8655abe0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 51e7696b8103e81d42beec0987a49f26fe041643
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476889"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264309"
 ---
 # <a name="tiledextent-class"></a>Classe tiled_extent
 
@@ -71,7 +71,7 @@ O comprimento da dimensão menos significativa.
 |----------|-----------------|
 |[get_tile_extent](#get_tile_extent)|Retorna um `extent` que captura os valores do objeto de `tiled_extent` argumentos do modelo `_Dim0`, `_Dim1`, e `_Dim2`.|
 |[pad](#pad)|Retorna um novo `tiled_extent` objeto com as extensões ajustadas para ser igualmente divisível pelas dimensões do bloco.|
-|[Truncar](#truncate)|Retorna um novo `tiled_extent` objeto com as extensões ajustadas para baixo para ser igualmente divisível pelas dimensões do bloco.|
+|[truncate](#truncate)|Retorna um novo `tiled_extent` objeto com as extensões ajustadas para baixo para ser igualmente divisível pelas dimensões do bloco.|
 
 ### <a name="public-operators"></a>Operadores públicos
 
@@ -103,7 +103,7 @@ O comprimento da dimensão menos significativa.
 
 **Cabeçalho:** amp. h
 
-**Namespace:** Simultaneidade
+**Namespace:** Concorrência
 
 ## <a name="ctor"> </a>  Construtor de tiled_extent
 
@@ -123,7 +123,7 @@ tiled_extent(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Outro*<br/>
+*_Other*<br/>
 O `extent` ou `tiled_extent` objeto a ser copiado.
 
 ## <a name="get_tile_extent"> </a>  get_tile_extent
@@ -180,7 +180,7 @@ tiled_extent&  operator= (
 
 ### <a name="parameters"></a>Parâmetros
 
-*Outro*<br/>
+*_Other*<br/>
 O `tiled_index` objeto do qual copiar.
 
 ### <a name="return-value"></a>Valor de retorno

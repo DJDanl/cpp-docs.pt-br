@@ -17,12 +17,12 @@ f1_keywords:
 helpviewer_keywords:
 - agent class
 ms.assetid: 1b09e3d2-5e37-4966-b016-907ef1512456
-ms.openlocfilehash: ad096eea3467346d85ce4249e910915cbd73488d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 98ad5f817361d8410e5a60648fb23baec06c42d7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50560245"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289137"
 ---
 # <a name="agent-class"></a>Classe agente
 
@@ -76,7 +76,7 @@ Para obter mais informações, consulte [agentes assíncronos](../../../parallel
 
 **Namespace:** simultaneidade
 
-##  <a name="ctor"></a> Agente
+##  <a name="ctor"></a> agent
 
 Constrói um agente.
 
@@ -100,7 +100,7 @@ O `ScheduleGroup` do objeto no qual a tarefa de execução do agente é agendada
 
 O tempo de execução usa o agendador padrão, se você não especificar o `_PScheduler` ou `_PGroup` parâmetros.
 
-##  <a name="dtor"></a> ~ agent
+##  <a name="dtor"></a> ~agent
 
 Destrói o agente.
 
@@ -140,7 +140,7 @@ bool done();
 
 Esse método deve ser chamado no final o `run` método, quando você souber que a execução do seu agente foi concluída.
 
-##  <a name="run"></a> executar
+##  <a name="run"></a> run
 
 Representa a tarefa principal de um agente. `run` deve ser substituído em uma classe derivada e especifica que o agente deve fazer depois que ele foi iniciado.
 
@@ -203,7 +203,7 @@ static agent_status __cdecl wait(
 *_PAgent*<br/>
 Um ponteiro para o agente para aguardar.
 
-*Tempo limite*<br/>
+*_Timeout*<br/>
 O tempo máximo para o qual você espera, em milissegundos.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -239,7 +239,7 @@ Uma matriz de ponteiros para os agentes para aguardar.
 *_PStatus*<br/>
 Um ponteiro para uma matriz de status do agente. Cada valor de status representará o status do agente correspondente quando o método retorna.
 
-*Tempo limite*<br/>
+*_Timeout*<br/>
 O tempo máximo para o qual você espera, em milissegundos.
 
 ### <a name="remarks"></a>Comentários
@@ -272,10 +272,10 @@ Uma matriz de ponteiros para os agentes para aguardar.
 *_Status*<br/>
 Uma referência a uma variável em que o status do agente será colocado.
 
-*Index*<br/>
+*_Index*<br/>
 Uma referência a uma variável em que o índice de agente será colocado.
 
-*Tempo limite*<br/>
+*_Timeout*<br/>
 O tempo máximo para o qual você espera, em milissegundos.
 
 ### <a name="remarks"></a>Comentários

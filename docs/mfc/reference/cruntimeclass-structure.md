@@ -9,12 +9,12 @@ helpviewer_keywords:
 - runtime [MFC], class information
 - run-time class [MFC], CRuntimeClass structure
 ms.assetid: de62b6ef-90d4-420f-8c70-f58b36976a2b
-ms.openlocfilehash: 83c10d5a87c7d5782505fcd93e46c678a97b8b5d
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 92979a10c18d9759e0ecc9f0785e56a97c0f0642
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51521952"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274291"
 ---
 # <a name="cruntimeclass-structure"></a>Estrutura CRuntimeClass
 
@@ -88,7 +88,7 @@ Um ponteiro para o objeto recém-criado ou nulo se o nome de classe não for enc
 
 ### <a name="remarks"></a>Comentários
 
-As classes derivadas de `CObject` pode dar suporte a criação dinâmica, que é a capacidade de criar um objeto de uma classe especificada em tempo de execução. Documento, exibição e classes de quadro, por exemplo, devem dar suporte a criação dinâmica. Para obter mais informações sobre a criação dinâmica e o `CreateObject` membro, consulte [classe CObject](../../mfc/using-cobject.md) e [classe CObject: especificar níveis de funcionalidade](../../mfc/specifying-levels-of-functionality.md).
+As classes derivadas de `CObject` pode dar suporte a criação dinâmica, que é a capacidade de criar um objeto de uma classe especificada em tempo de execução. Documento, exibição e classes de quadro, por exemplo, devem dar suporte a criação dinâmica. Para obter mais informações sobre a criação dinâmica e o `CreateObject` membro, consulte [classe CObject](../../mfc/using-cobject.md) e [classe CObject: Especificando níveis de funcionalidade](../../mfc/specifying-levels-of-functionality.md).
 
 ### <a name="example"></a>Exemplo
 
@@ -141,7 +141,7 @@ A relação é determinada pelo "caminhada" da classe do membro, a cadeia de cla
 > [!NOTE]
 >  Para usar o `CRuntimeClass` estrutura, você deve incluir a macro IMPLEMENT_DYNAMIC, IMPLEMENT_DYNCREATE ou IMPLEMENT_SERIAL na implementação da classe para o qual você deseja recuperar informações de objeto de tempo de execução.
 
-Para obter mais informações sobre como usar `CRuntimeClass`, consulte o artigo [classe CObject: acessar informações de classe de tempo de execução](../../mfc/accessing-run-time-class-information.md).
+Para obter mais informações sobre como usar `CRuntimeClass`, consulte o artigo [classe CObject: Acessando informações da classe de tempo de execução](../../mfc/accessing-run-time-class-information.md).
 
 ### <a name="example"></a>Exemplo
 
@@ -224,4 +224,3 @@ Para obter mais informações sobre números de esquema, consulte o [IMPLEMENT_S
 [IMPLEMENT_DYNAMIC](run-time-object-model-services.md#implement_dynamic)<br/>
 [IMPLEMENT_DYNCREATE](run-time-object-model-services.md#implement_dyncreate)<br/>
 [IMPLEMENT_SERIAL](run-time-object-model-services.md#implement_serial)
-

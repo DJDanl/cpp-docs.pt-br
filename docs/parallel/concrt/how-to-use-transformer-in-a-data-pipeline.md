@@ -1,21 +1,21 @@
 ---
-title: Como usar transformador em um pipeline de dados
+title: 'Como: Usar transformador em um Pipeline de dados'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - transformer class, example
 - data pipelines, using transformer [Concurrency Runtime]
 - using transformer in data pipelines [Concurrency Runtime]
 ms.assetid: ca49cb3f-4dab-4b09-a9c9-d3a109ae4c29
-ms.openlocfilehash: b94cf3fb7554ba32c03a404fa6616ef1b187e008
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 59c4854eea985b3c91fad6e7dc6c47ca9b07d333
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50461419"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291464"
 ---
-# <a name="how-to-use-transformer-in-a-data-pipeline"></a>Como usar transformador em um pipeline de dados
+# <a name="how-to-use-transformer-in-a-data-pipeline"></a>Como: Usar transformador em um Pipeline de dados
 
-Este tópico contém um exemplo básico que mostra como usar o [Concurrency:: Transformer](../../parallel/concrt/reference/transformer-class.md) classe em um pipeline de dados. Para obter um exemplo mais completo que usa um pipeline de dados para executar o processamento de imagens, consulte [instruções passo a passo: Criando uma rede de processamento de imagem](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md).
+Este tópico contém um exemplo básico que mostra como usar o [Concurrency:: Transformer](../../parallel/concrt/reference/transformer-class.md) classe em um pipeline de dados. Para obter um exemplo mais completo que usa um pipeline de dados para executar o processamento de imagens, consulte [passo a passo: Criando uma rede de processamento de imagem](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md).
 
 *O pipelining dados* é um padrão comum na programação simultânea. Um pipeline de dados consiste em uma série de estágios, onde cada estágio executa o trabalho e, em seguida, passa o resultado desse trabalho para o próximo estágio. O `transformer` classe pipelines de um componente-chave nos dados, porque ele recebe um valor de entrada, executa o trabalho nesse valor e, em seguida, produz um resultado para outro componente para usar.
 
@@ -58,5 +58,4 @@ Copie o código de exemplo e cole-o em um projeto do Visual Studio ou colá-lo e
 
 [Biblioteca de agentes assíncronos](../../parallel/concrt/asynchronous-agents-library.md)<br/>
 [Blocos de mensagens assíncronos](../../parallel/concrt/asynchronous-message-blocks.md)<br/>
-[Instruções passo a passo: criando uma rede de processamento de imagem](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)
-
+[Passo a passo: Criando uma rede de processamento de imagem](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)

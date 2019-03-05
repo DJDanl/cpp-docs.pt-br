@@ -25,12 +25,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlTransactionManager class
 ms.assetid: b01732dc-1d16-4b42-bfac-b137fca2b740
-ms.openlocfilehash: e69ea2b7446e784bb643050bd122c93ea53a0676
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 031d72903d72af77f6929072e4605d32d81585a3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50463772"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270196"
 ---
 # <a name="catltransactionmanager-class"></a>Classe CAtlTransactionManager
 
@@ -51,7 +51,7 @@ class CAtlTransactionManager;
 
 |Nome|Descrição|
 |----------|-----------------|
-|[~ CAtlTransactionManager](#dtor)|Destruidor CAtlTransactionManager.|
+|[~CAtlTransactionManager](#dtor)|Destruidor CAtlTransactionManager.|
 |[CAtlTransactionManager](#catltransactionmanager)|Construtor CAtlTransactionManager.|
 
 ### <a name="public-methods"></a>Métodos públicos
@@ -92,7 +92,7 @@ class CAtlTransactionManager;
 
 **Cabeçalho:** atltransactionmanager.h
 
-##  <a name="dtor"></a>  ~ CAtlTransactionManager
+##  <a name="dtor"></a>  ~CAtlTransactionManager
 
 Destruidor CAtlTransactionManager.
 
@@ -485,7 +485,7 @@ Se a função for bem-sucedida, o valor de retorno será ERROR_SUCCESS. Se a fun
 
 Este wrapper chama o `RegOpenKeyTransacted` função.
 
-##  <a name="rollback"></a>  Reversão
+##  <a name="rollback"></a>  Rollback
 
 Solicitações que a transação ser revertida.
 

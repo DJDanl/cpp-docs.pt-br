@@ -6,12 +6,12 @@ f1_keywords:
 - atlbase/ATL::AtlMarshalPtrInProc
 - atlbase/ATL::AtlUnmarshalPtr
 ms.assetid: 877100b5-6ad9-44c5-a2e0-09414f1720d0
-ms.openlocfilehash: dadaf119f8f1d0aefb4f5b4b740747a2794d271e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cac6e316ad6b5d3f49c171c940d9129060744aee
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50554393"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271900"
 ---
 # <a name="marshaling-global-functions"></a>Funções globais de marshaling
 
@@ -63,7 +63,7 @@ HRESULT AtlMarshalPtrInProc(
 *pUnk*<br/>
 [in] Um ponteiro para a interface para ser empacotado.
 
-*IID*<br/>
+*iid*<br/>
 [in] O GUID da interface que está sendo empacotado.
 
 *ppStream*<br/>
@@ -101,7 +101,7 @@ HRESULT AtlUnmarshalPtr(
 *pStream*<br/>
 [in] Um ponteiro para o fluxo que está sendo desempacotado.
 
-*IID*<br/>
+*iid*<br/>
 [in] O GUID da interface que está sendo desempacotada.
 
 *ppUnk*<br/>

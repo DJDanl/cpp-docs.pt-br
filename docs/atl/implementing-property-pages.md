@@ -6,12 +6,12 @@ helpviewer_keywords:
 - IPropertyPage class
 - property pages, implementing
 ms.assetid: 62f29440-33a7-40eb-a1ef-3634c95f640c
-ms.openlocfilehash: 415dae4a54b71a901a7976bda92361690c150e5d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0e335c20464d8ea71fd75ce2e67f67ca14edacb0
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50543306"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299316"
 ---
 # <a name="implementing-property-pages"></a>Implementação de páginas de propriedade
 
@@ -37,7 +37,7 @@ Para criar uma página de propriedades usando ATL:
    |------------------------------|----------------------------------|-----------|
    |[SetObjects](../atl/reference/ipropertypageimpl-class.md#setobjects)|Execute as verificações de integridade básicas sobre o número de objetos que estão sendo passados para sua página e as interfaces que dão suporte a eles.|Execute seu próprio código antes de chamar a implementação da classe base. Se os objetos que está sendo definidos não atenderem suas expectativas, você deve fazer a chamada assim que possível.|
    |[Ativar](../atl/reference/ipropertypageimpl-class.md#activate)|Inicialize a interface do usuário da sua página (por exemplo, defina os controles de caixa de diálogo com valores da propriedade atual de objetos, criar controles dinamicamente ou executar outras inicializações).|Chame a implementação de classe base antes de seu código para que a classe base tenha a oportunidade de criar a janela de diálogo e todos os controles, antes de tentar atualizá-los.|
-   |[Aplicar](../atl/reference/ipropertypageimpl-class.md#apply)|Valide as configurações de propriedade e atualize os objetos.|Não é necessário chamar a implementação da classe base, pois ele não faz nada além de rastreamento de chamada.|
+   |[Apply](../atl/reference/ipropertypageimpl-class.md#apply)|Valide as configurações de propriedade e atualize os objetos.|Não é necessário chamar a implementação da classe base, pois ele não faz nada além de rastreamento de chamada.|
    |[Desativar](../atl/reference/ipropertypageimpl-class.md#deactivate)|Limpe itens relacionados a janela.|A implementação da classe base destrói a caixa de diálogo que representa a página de propriedades. Se você precisar limpar antes que a caixa de diálogo é destruída, você deve adicionar seu código antes de chamar a classe base.|
 
 Para uma implementação de página de propriedade de exemplo, consulte [exemplo: Implementando uma página de propriedades](../atl/example-implementing-a-property-page.md).

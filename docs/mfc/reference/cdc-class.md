@@ -402,12 +402,12 @@ helpviewer_keywords:
 - CDC [MFC], m_hAttribDC
 - CDC [MFC], m_hDC
 ms.assetid: 715b3334-cb2b-4c9c-8067-02eb7c66c8b2
-ms.openlocfilehash: 0c8944846e249e4f752183b057bf8d2857022ab5
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: fc5d41221ab0f9679e7d38a399464efc1a38dd52
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53179052"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305075"
 ---
 # <a name="cdc-class"></a>Classe CDC
 
@@ -465,7 +465,7 @@ class CDC : public CObject
 |[CDC::EndDoc](#enddoc)|Termina um trabalho de impressão iniciado pela `StartDoc` função de membro.|
 |[CDC::EndPage](#endpage)|Informa o driver de dispositivo que uma página está terminando.|
 |[CDC::EndPath](#endpath)|Fecha um colchete de caminho e seleciona o caminho definido pelo suporte para o contexto de dispositivo.|
-|[CDC:: enumobjects](#enumobjects)|Enumera as canetas e pincéis disponíveis em um contexto de dispositivo.|
+|[CDC::EnumObjects](#enumobjects)|Enumera as canetas e pincéis disponíveis em um contexto de dispositivo.|
 |[CDC::Escape](#escape)|Permite que aplicativos acessem os recursos que não estão disponíveis diretamente de um determinado dispositivo através de GDI. Também permite o acesso às funções de escape do Windows. Chamadas de escape feitas por um aplicativo sejam convertidas e enviadas para o driver de dispositivo.|
 |[CDC::ExcludeClipRect](#excludecliprect)|Cria uma nova região de recorte que consiste de recorte existente menos o retângulo especificado.|
 |[CDC::ExcludeUpdateRgn](#excludeupdatergn)|Impede que o desenho nas áreas inválidos de uma janela com a exclusão de uma região atualizada na janela de uma região de recorte.|
@@ -661,7 +661,7 @@ Por exemplo, a estrutura usa esses contextos de dispositivo de duas para impleme
 
 Há vezes quando podem precisar de informações de métrica de texto de ambos os `m_hDC` e `m_hAttribDC` contextos de dispositivo. Os seguintes pares de funções fornecem essa funcionalidade:
 
-|Usa m_hAttribDC|Usa m_hDC|
+|Usa m_hAttribDC|Uses m_hDC|
 |-----------------------|-----------------|
 |[GetTextExtent](#gettextextent)|[GetOutputTextExtent](#getoutputtextextent)|
 |[GetTabbedTextExtent](#gettabbedtextextent)|[GetOutputTabbedTextExtent](#getoutputtabbedtextextent)|
@@ -809,7 +809,7 @@ Especifica a largura, em unidades lógicas, do retângulo de origem.
 *nSrcHeight*<br/>
 Especifica a altura, em unidades lógicas, do retângulo de origem.
 
-*Blend*<br/>
+*blend*<br/>
 Especifica um [BLENDFUNCTION](/windows/desktop/api/wingdi/ns-wingdi-_blendfunction) estrutura.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -891,7 +891,7 @@ Especifica a coordenada x do canto superior esquerdo do retângulo delimitador (
 *y1*<br/>
 Especifica a coordenada y do canto superior esquerdo do retângulo delimitador (em unidades lógicas).
 
-*X2*<br/>
+*x2*<br/>
 Especifica a coordenada x do canto inferior direito do retângulo delimitador (em unidades lógicas).
 
 *y2*<br/>
@@ -900,7 +900,7 @@ Especifica a coordenada y do canto inferior direito do retângulo delimitador (e
 *x3*<br/>
 Especifica a coordenada x do ponto que define o arco inicial ponto (em unidades lógicas). Esse ponto não precisa estar exatamente em arco.
 
-*Y3*<br/>
+*y3*<br/>
 Especifica a coordenada y do ponto que define o arco inicial ponto (em unidades lógicas). Esse ponto não precisa estar exatamente em arco.
 
 *x4*<br/>
@@ -961,7 +961,7 @@ Especifica a coordenada x do canto superior esquerdo do retângulo delimitador (
 *y1*<br/>
 Especifica a coordenada y do canto superior esquerdo do retângulo delimitador (em unidades lógicas).
 
-*X2*<br/>
+*x2*<br/>
 Especifica a coordenada x do canto inferior direito do retângulo delimitador (em unidades lógicas).
 
 *y2*<br/>
@@ -970,7 +970,7 @@ Especifica a coordenada y do canto inferior direito do retângulo delimitador (e
 *x3*<br/>
 Especifica a coordenada x do ponto que define o arco inicial ponto (em unidades lógicas). Esse ponto não precisa estar exatamente em arco.
 
-*Y3*<br/>
+*y3*<br/>
 Especifica a coordenada y do ponto que define o arco inicial ponto (em unidades lógicas). Esse ponto não precisa estar exatamente em arco.
 
 *x4*<br/>
@@ -1144,7 +1144,7 @@ Especifica que a coordenada x do canto superior esquerdo da sequência de teclas
 *y1*<br/>
 Especifica que a coordenada y do canto superior esquerdo da sequência de teclas delimitadora do retângulo (em unidades lógicas).
 
-*X2*<br/>
+*x2*<br/>
 Especifica que a coordenada x do canto inferior direito da sequência de teclas delimitadora do retângulo (em unidades lógicas).
 
 *y2*<br/>
@@ -1153,7 +1153,7 @@ Especifica que a coordenada y do canto inferior direito da sequência de teclas 
 *x3*<br/>
 Especifica a coordenada x do ponto que define a sequência de teclas do ponto (em unidades lógicas) inicial.
 
-*Y3*<br/>
+*y3*<br/>
 Especifica a coordenada y do ponto que define a sequência de teclas do ponto (em unidades lógicas) inicial.
 
 *x4*<br/>
@@ -1434,10 +1434,10 @@ Especifica a coordenada x lógica do canto superior esquerdo do retângulo tridi
 *y*<br/>
 Especifica a coordenada y lógica do canto superior esquerdo do retângulo tridimensional.
 
-*CX*<br/>
+*cx*<br/>
 Especifica a largura do retângulo tridimensional.
 
-*Cy*<br/>
+*cy*<br/>
 Especifica a altura do retângulo tridimensional.
 
 ### <a name="remarks"></a>Comentários
@@ -1674,7 +1674,7 @@ Especifica a coordenada y lógica do canto superior esquerdo do ícone.
 *hIcon*<br/>
 Identifica o identificador do ícone a ser desenhado.
 
-*ponto*<br/>
+*point*<br/>
 Especifica a lógica coordenadas x e y-do canto superior esquerdo do ícone. Você pode passar uma [ponto](/windows/desktop/api/windef/ns-windef-tagpoint) estrutura ou um [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objeto para esse parâmetro.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1932,7 +1932,7 @@ Especifica a coordenada x lógica do canto superior esquerdo do retângulo delim
 *y1*<br/>
 Especifica a coordenada y lógica do canto superior esquerdo do retângulo delimitador da elipse.
 
-*X2*<br/>
+*x2*<br/>
 Especifica a coordenada x lógica do canto inferior direito do retângulo delimitador da elipse.
 
 *y2*<br/>
@@ -2015,7 +2015,7 @@ Diferente de zero se a função for bem-sucedida; caso contrário, 0.
 
   Veja o exemplo de [CDC:: beginpath](#beginpath).
 
-##  <a name="enumobjects"></a>  CDC:: enumobjects
+##  <a name="enumobjects"></a>  CDC::EnumObjects
 
 Enumera as canetas e pincéis disponíveis em um contexto de dispositivo.
 
@@ -2168,7 +2168,7 @@ Especifica a coordenada x lógica do canto superior esquerdo do retângulo.
 *y1*<br/>
 Especifica a coordenada y lógica do canto superior esquerdo do retângulo.
 
-*X2*<br/>
+*x2*<br/>
 Especifica a coordenada x lógica do canto inferior direito do retângulo.
 
 *y2*<br/>
@@ -2203,7 +2203,7 @@ int ExcludeUpdateRgn(CWnd* pWnd);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Apropriei*<br/>
+*pWnd*<br/>
 Aponta para o objeto de janela cuja janela está sendo atualizada.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -2429,10 +2429,10 @@ Especifica a coordenada x lógica do canto superior esquerdo do retângulo.
 *y*<br/>
 Especifica a coordenada y lógica do canto superior esquerdo do retângulo de destino.
 
-*CX*<br/>
+*cx*<br/>
 Especifica a largura do retângulo.
 
-*Cy*<br/>
+*cy*<br/>
 Especifica a altura do retângulo.
 
 ### <a name="remarks"></a>Comentários
@@ -2807,7 +2807,7 @@ BOOL GetCharABCWidthsI(
 *giFirst*<br/>
 Especifica o primeiro índice do glifo no grupo de índices de glifo consecutivos da fonte atual. Esse parâmetro é usado somente se o *pgi* parâmetro for nulo.
 
-*CGI*<br/>
+*cgi*<br/>
 Especifica o número de índices de glifo.
 
 *pgi*<br/>
@@ -2883,7 +2883,7 @@ BOOL GetCharWidthI(
 *giFirst*<br/>
 Especifica o primeiro índice do glifo no grupo de índices de glifo consecutivos da fonte atual. Esse parâmetro é usado somente se o *pgi* parâmetro for nulo.
 
-*CGI*<br/>
+*cgi*<br/>
 Especifica o número de índices de glifo.
 
 *pgi*<br/>
@@ -3565,7 +3565,7 @@ Especifica a coordenada x lógica do ponto a ser examinado.
 *y*<br/>
 Especifica a coordenada y lógica do ponto a ser examinado.
 
-*ponto*<br/>
+*point*<br/>
 Especifica a lógica coordenadas x e y-do ponto a ser examinado.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -3828,7 +3828,7 @@ BOOL GetTextExtentExPointI(
 *pgiIn*<br/>
 Um ponteiro para uma matriz de índices de glifo para o qual as extensões devem ser recuperadas.
 
-*CGI*<br/>
+*cgi*<br/>
 Especifica o número de glifos na matriz apontada por *pgiIn*.
 
 *nMaxExtent*<br/>
@@ -3867,7 +3867,7 @@ BOOL GetTextExtentPointI(
 *pgiIn*<br/>
 Um ponteiro para uma matriz de índices de glifo para o qual as extensões devem ser recuperadas.
 
-*CGI*<br/>
+*cgi*<br/>
 Especifica o número de glifos na matriz apontada por *pgiIn*.
 
 *lpSize*<br/>
@@ -4177,7 +4177,7 @@ Especifica a coordenada x lógica do canto superior esquerdo do retângulo.
 *y1*<br/>
 Especifica a coordenada y lógica do canto superior esquerdo do retângulo.
 
-*X2*<br/>
+*x2*<br/>
 Especifica a coordenada x lógica do canto inferior direito do retângulo.
 
 *y2*<br/>
@@ -4278,7 +4278,7 @@ Especifica a coordenada x lógica do ponto de extremidade para a linha.
 *y*<br/>
 Especifica a coordenada y lógica do ponto de extremidade para a linha.
 
-*ponto*<br/>
+*point*<br/>
 Especifica o ponto de extremidade para a linha. Você pode transmitir uma `POINT` estrutura ou um `CPoint` objeto para esse parâmetro.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -4485,7 +4485,7 @@ Especifica a coordenada x lógica da nova posição.
 *y*<br/>
 Especifica a coordenada y lógica da nova posição.
 
-*ponto*<br/>
+*point*<br/>
 Especifica a nova posição. Você pode transmitir uma `POINT` estrutura ou um `CPoint` objeto para esse parâmetro.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -4691,7 +4691,7 @@ Especifica a coordenada x do canto superior esquerdo do retângulo delimitador (
 *y1*<br/>
 Especifica a coordenada y do canto superior esquerdo do retângulo delimitador (em unidades lógicas).
 
-*X2*<br/>
+*x2*<br/>
 Especifica a coordenada x do canto inferior direito do retângulo delimitador (em unidades lógicas).
 
 *y2*<br/>
@@ -4700,7 +4700,7 @@ Especifica a coordenada y do canto inferior direito do retângulo delimitador (e
 *x3*<br/>
 Especifica a coordenada x do ponto de partida do arco (em unidades lógicas). Esse ponto não precisa estar exatamente em arco.
 
-*Y3*<br/>
+*y3*<br/>
 Especifica a coordenada y do ponto de partida do arco (em unidades lógicas). Esse ponto não precisa estar exatamente em arco.
 
 *x4*<br/>
@@ -5115,7 +5115,7 @@ Especifica a coordenada x lógica do ponto.
 *y*<br/>
 Especifica a coordenada y lógica do ponto.
 
-*ponto*<br/>
+*point*<br/>
 Especifica o ponto de verificação em coordenadas lógicas. Você pode transmitir uma `POINT` estrutura ou um `CPoint` objeto para esse parâmetro.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -5176,7 +5176,7 @@ Especifica a coordenada x do canto superior esquerdo do retângulo (em unidades 
 *y1*<br/>
 Especifica a coordenada y do canto superior esquerdo do retângulo (em unidades lógicas).
 
-*X2*<br/>
+*x2*<br/>
 Especifica a coordenada x do canto inferior direito do retângulo (em unidades lógicas).
 
 *y2*<br/>
@@ -5316,7 +5316,7 @@ Especifica a coordenada x do canto superior esquerdo do retângulo (em unidades 
 *y1*<br/>
 Especifica a coordenada y do canto superior esquerdo do retângulo (em unidades lógicas).
 
-*X2*<br/>
+*x2*<br/>
 Especifica a coordenada x do canto inferior direito do retângulo (em unidades lógicas).
 
 *y2*<br/>
@@ -5325,13 +5325,13 @@ Especifica a coordenada y do canto inferior direito do retângulo (em unidades l
 *x3*<br/>
 Especifica a largura da elipse usada para desenhar os cantos arredondados (em unidades lógicas).
 
-*Y3*<br/>
+*y3*<br/>
 Especifica a altura da elipse usada para desenhar os cantos arredondados (em unidades lógicas).
 
 *lpRect*<br/>
 Especifica o retângulo delimitador em unidades lógicas. Você pode transmitir uma `CRect` objeto ou um ponteiro para um `RECT` estrutura para esse parâmetro.
 
-*ponto*<br/>
+*point*<br/>
 A coordenada x do *aponte* Especifica a largura da elipse para desenhar os cantos arredondados (em unidades lógicas). A coordenada y do *aponte* Especifica a altura da elipse para desenhar os cantos arredondados (em unidades lógicas). Você pode transmitir uma `POINT` estrutura ou um `CPoint` objeto para esse parâmetro.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -5462,7 +5462,7 @@ BOOL ScrollDC(
 
 ### <a name="parameters"></a>Parâmetros
 
-*DX*<br/>
+*dx*<br/>
 Especifica o número de unidades de rolagem horizontal.
 
 *dy*<br/>
@@ -5775,7 +5775,7 @@ Especifica a direção do arco antiga, se for bem-sucedido; Caso contrário, 0.
 
 A direção padrão é no sentido anti-horário. O `SetArcDirection` função especifica a direção na qual as funções a seguir desenho:
 
-|Arco|Pizza|
+|Arc|Pizza|
 |---------|---------|
 |`ArcTo`|`Rectangle`|
 |`Chord`|`RoundRect`|
@@ -5908,7 +5908,7 @@ Especifica a coordenada x (em unidades de dispositivo) da nova origem. Esse valo
 *y*<br/>
 Especifica a coordenada y (em unidades de dispositivo) da nova origem. Esse valor deve estar no intervalo de 0 a 7.
 
-*ponto*<br/>
+*point*<br/>
 Especifica as coordenadas x e y da nova origem. Cada valor deve estar no intervalo de 0 a 7. Você pode transmitir uma `POINT` estrutura ou um `CPoint` objeto para esse parâmetro.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -6179,7 +6179,7 @@ Especifica a coordenada y lógica do ponto a ser definido.
 *crColor*<br/>
 Um valor de RGB COLORREF que especifica a cor usada para pintar o ponto. Ver [COLORREF](/windows/desktop/gdi/colorref) no SDK do Windows para obter uma descrição desse valor.
 
-*ponto*<br/>
+*point*<br/>
 Especifica a lógica coordenadas x e y-do ponto a ser definido. Você pode transmitir uma `POINT` estrutura ou um `CPoint` objeto para esse parâmetro.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -6218,7 +6218,7 @@ Especifica a coordenada y, em unidades lógicas, do ponto a ser definido.
 *crColor*<br/>
 Especifica a cor a ser usado para pintar o ponto.
 
-*ponto*<br/>
+*point*<br/>
 Especifica a lógica coordenadas x e y-do ponto a ser definido. Você pode transmitir uma [ponto](/windows/desktop/api/windef/ns-windef-tagpoint) estrutura de dados ou uma [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objeto para esse parâmetro.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -6487,10 +6487,10 @@ CSize SetViewportExt(SIZE size);
 
 ### <a name="parameters"></a>Parâmetros
 
-*CX*<br/>
+*cx*<br/>
 Especifica a extensão de x do visor (em unidades de dispositivo).
 
-*Cy*<br/>
+*cy*<br/>
 Especifica a extensão de y do visor (em unidades de dispositivo).
 
 *size*<br/>
@@ -6537,7 +6537,7 @@ Especifica a coordenada x (em unidades de dispositivo) da origem do visor. O val
 *y*<br/>
 Especifica a coordenada y (em unidades de dispositivo) da origem do visor. O valor deve ser dentro do intervalo de sistema de coordenadas do dispositivo.
 
-*ponto*<br/>
+*point*<br/>
 Especifica a origem do visor. Os valores devem ser dentro do intervalo de sistema de coordenadas do dispositivo. Você pode transmitir uma `POINT` estrutura ou um `CPoint` objeto para esse parâmetro.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -6568,10 +6568,10 @@ CSize SetWindowExt(SIZE size);
 
 ### <a name="parameters"></a>Parâmetros
 
-*CX*<br/>
+*cx*<br/>
 Especifica a extensão x (em unidades lógicas) da janela.
 
-*Cy*<br/>
+*cy*<br/>
 Especifica a extensão y (em unidades lógicas) da janela.
 
 *size*<br/>
@@ -6625,7 +6625,7 @@ Especifica a coordenada x lógica da origem da nova da janela.
 *y*<br/>
 Especifica a coordenada y lógica da origem da nova da janela.
 
-*ponto*<br/>
+*point*<br/>
 Especifica as coordenadas lógicas da origem da nova da janela. Você pode transmitir uma `POINT` estrutura ou um `CPoint` objeto para esse parâmetro.
 
 ### <a name="return-value"></a>Valor de retorno

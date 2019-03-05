@@ -1,5 +1,5 @@
 ---
-title: 'Controles ActiveX MFC: adicionando propriedades de estoque'
+title: 'Controles ActiveX MFC: Adicionando propriedades de estoque'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - BackColor property [MFC]
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - foreground colors, ActiveX controls
 - foreground colors [MFC]
 ms.assetid: 8b98c8c5-5b69-4366-87bf-0e61e6668ecb
-ms.openlocfilehash: b27979b5492ed03b93aa0d8990c9c0b699242c86
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 940f61c9ce6ccb57843333582455e61c1f7ac73b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607825"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289683"
 ---
-# <a name="mfc-activex-controls-adding-stock-properties"></a>Controles ActiveX MFC: adicionando propriedades de estoque
+# <a name="mfc-activex-controls-adding-stock-properties"></a>Controles ActiveX MFC: Adicionando propriedades de estoque
 
 Propriedades de estoque diferem das propriedades personalizadas em que eles já são implementados pela classe `COleControl`. `COleControl` contém funções de membro predefinidas que oferecem suporte a propriedades comuns para o controle. Algumas propriedades comuns incluem a legenda do controle e as cores de primeiro plano e plano de fundo. Para obter informações sobre outras propriedades de estoque, consulte [Stock propriedades suportadas pelo Assistente para adicionar propriedade](#_core_stock_properties_supported_by_classwizard) mais adiante neste artigo. As entradas de mapa de expedição para propriedades sempre são prefixadas por DISP_STOCKPROP de estoque.
 
@@ -75,15 +75,15 @@ O `COleControl` classe fornece nove propriedades de estoque. Você pode adiciona
 
 |Propriedade|Entrada de mapa de expedição|Como acessar o valor|
 |--------------|------------------------|-------------------------|
-|`Appearance`|(DISP_STOCKPROP_APPEARANCE)|Valor acessível como `m_sAppearance`.|
-|`BackColor`|(DISP_STOCKPROP_BACKCOLOR)|Valor acessível por meio da chamada `GetBackColor`.|
+|`Appearance`|DISP_STOCKPROP_APPEARANCE( )|Valor acessível como `m_sAppearance`.|
+|`BackColor`|DISP_STOCKPROP_BACKCOLOR( )|Valor acessível por meio da chamada `GetBackColor`.|
 |`BorderStyle`|(DISP_STOCKPROP_BORDERSTYLE)|Valor acessível como `m_sBorderStyle`.|
-|`Caption`|(DISP_STOCKPROP_CAPTION)|Valor acessível por meio da chamada `InternalGetText`.|
-|`Enabled`|(DISP_STOCKPROP_ENABLED)|Valor acessível como `m_bEnabled`.|
-|`Font`|(DISP_STOCKPROP_FONT)|Consulte o artigo [controles ActiveX MFC: usando fontes](../mfc/mfc-activex-controls-using-fonts.md) para uso.|
-|`ForeColor`|(DISP_STOCKPROP_FORECOLOR)|Valor acessível por meio da chamada `GetForeColor`.|
-|`hWnd`|(DISP_STOCKPROP_HWND)|Valor acessível como `m_hWnd`.|
-|`Text`|(DISP_STOCKPROP_TEXT)|Valor acessível por meio da chamada `InternalGetText`. Essa propriedade é o mesmo que `Caption`, exceto para o nome da propriedade.|
+|`Caption`|DISP_STOCKPROP_CAPTION( )|Valor acessível por meio da chamada `InternalGetText`.|
+|`Enabled`|DISP_STOCKPROP_ENABLED( )|Valor acessível como `m_bEnabled`.|
+|`Font`|DISP_STOCKPROP_FONT( )|Consulte o artigo [controles ActiveX MFC: Usando fontes](../mfc/mfc-activex-controls-using-fonts.md) para uso.|
+|`ForeColor`|DISP_STOCKPROP_FORECOLOR( )|Valor acessível por meio da chamada `GetForeColor`.|
+|`hWnd`|DISP_STOCKPROP_HWND( )|Valor acessível como `m_hWnd`.|
+|`Text`|DISP_STOCKPROP_TEXT( )|Valor acessível por meio da chamada `InternalGetText`. Essa propriedade é o mesmo que `Caption`, exceto para o nome da propriedade.|
 |`ReadyState`|DISP_STOCKPROP_READYSTATE()|Valor acessível como `m_lReadyState` ou `GetReadyState`|
 
 ##  <a name="_core_stock_properties_and_notification"></a> Notificação e propriedades de estoque
@@ -103,6 +103,6 @@ O exemplo a seguir demonstra como usar essas propriedades de duas cores ao pinta
 ## <a name="see-also"></a>Consulte também
 
 [Controles ActiveX do MFC](../mfc/mfc-activex-controls.md)<br/>
-[Controles ActiveX do MFC: propriedades](../mfc/mfc-activex-controls-properties.md)<br/>
-[Controles ActiveX do MFC: métodos](../mfc/mfc-activex-controls-methods.md)<br/>
+[Controles ActiveX MFC: Propriedades](../mfc/mfc-activex-controls-properties.md)<br/>
+[Controles ActiveX MFC: Métodos](../mfc/mfc-activex-controls-methods.md)<br/>
 [Classe COleControl](../mfc/reference/colecontrol-class.md)

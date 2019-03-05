@@ -12,12 +12,12 @@ helpviewer_keywords:
 - upgrading ActiveX controls
 - licensing ActiveX controls
 ms.assetid: 4d12ddfa-b491-4f9f-a0b7-b51458e05651
-ms.openlocfilehash: 18641c6e25aaccd6b5d0bcbbddbf8fc73b2a3c52
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fc7313c862d3536326894c947fa371d833e8fab8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525795"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276961"
 ---
 # <a name="upgrading-an-existing-activex-control"></a>Atualizando um controle ActiveX existente
 
@@ -28,7 +28,7 @@ Controles ActiveX existente (anteriormente conhecido como controles OLE) pode se
 
 Ao usar o controle em uma página da Web, há considerações adicionais. O arquivo. ocx e todos os arquivos de suporte devem ser no computador de destino ou ser baixados da Internet. Isso torna o tamanho do código e uma consideração importante de tempo de download. Downloads podem ser empacotados em um arquivo. cab assinados. Você pode marcar seu controle como seguros para script e como seguro para inicialização.
 
-Este artigo discute os seguintes tópicos:
+Este artigo aborda os seguintes tópicos:
 
 - [Empacotando código para download](#_core_packaging_code_for_downloading)
 
@@ -42,7 +42,7 @@ Este artigo discute os seguintes tópicos:
 
 - [Níveis de segurança de navegador do Internet Explorer e o comportamento de controle](#_core_internet_explorer_browser_safety_levels_and_control_behavior)
 
-Você também pode adicionar as otimizações, conforme descrito em [controles ActiveX: otimização](../mfc/mfc-activex-controls-optimization.md). Identificadores de origem podem ser usados para baixar as propriedades e grandes BLOBs de forma assíncrona, conforme descrito em [controles ActiveX na Internet](../mfc/activex-controls-on-the-internet.md).
+Você também pode adicionar as otimizações, conforme descrito em [controles ActiveX: Otimização](../mfc/mfc-activex-controls-optimization.md). Identificadores de origem podem ser usados para baixar as propriedades e grandes BLOBs de forma assíncrona, conforme descrito em [controles ActiveX na Internet](../mfc/activex-controls-on-the-internet.md).
 
 ##  <a name="_core_packaging_code_for_downloading"></a> Empacotando código para download
 
@@ -220,7 +220,7 @@ Para usar um controle licenciado em uma página HTML em um computador nonlicense
 </OBJECT>
 ```
 
-Para obter mais informações sobre o licenciamento de controle, consulte [controles ActiveX: licenciando um controle ActiveX](../mfc/mfc-activex-controls-licensing-an-activex-control.md).
+Para obter mais informações sobre o licenciamento de controle, consulte [controles ActiveX: Licenciando um controle ActiveX](../mfc/mfc-activex-controls-licensing-an-activex-control.md).
 
 ##  <a name="_core_signing_code"></a> Assinatura de código
 
@@ -274,5 +274,4 @@ Um navegador tem opções para o nível de segurança configurável pelo usuári
 
 [Tarefas de programação da Internet no MFC](../mfc/mfc-internet-programming-tasks.md)<br/>
 [Noções básicas de programação da Internet no MFC](../mfc/mfc-internet-programming-basics.md)<br/>
-[Controles ActiveX do MFC: licenciando um controle ActiveX](../mfc/mfc-activex-controls-licensing-an-activex-control.md)
-
+[Controles ActiveX MFC: Licenciando um controle ActiveX](../mfc/mfc-activex-controls-licensing-an-activex-control.md)

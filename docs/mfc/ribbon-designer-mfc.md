@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Ribbon Designer (MFC)
 - MFC Ribbon Designer
 ms.assetid: 0806dfd6-7d11-471a-99e1-4072852231f9
-ms.openlocfilehash: 903adc96f4c9bc092ac23787781a76c0e7e3714c
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 0972cdfbb80129b0c87c96fa7daf6768d18aa0c4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175828"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288773"
 ---
 # <a name="ribbon-designer-mfc"></a>Designer da faixa de opções (MFC)
 
@@ -56,11 +56,11 @@ Para usar o recurso de faixa de opções em seu aplicativo do MFC, carregue o re
 
 Estas são as duas maneiras de adicionar um recurso de faixa de opções ao seu projeto do MFC:
 
-- Criar um aplicativo do MFC e configurar o Assistente de projeto do MFC para criar a faixa de opções. Para obter mais informações, consulte [instruções passo a passo: Criando uma faixa de opções aplicativos por usando MFC](../mfc/walkthrough-creating-a-ribbon-application-by-using-mfc.md).
+- Criar um aplicativo do MFC e configurar o Assistente de projeto do MFC para criar a faixa de opções. Para obter mais informações, confira [Passo a passo: Criando um aplicativo de faixa de opções usando MFC](../mfc/walkthrough-creating-a-ribbon-application-by-using-mfc.md).
 
-- Em um projeto MFC existente, crie um recurso de faixa de opções e carregá-lo. Para obter mais informações, consulte [instruções passo a passo: atualizando o aplicativo de rabisco MFC (parte 1)](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md).
+- Em um projeto MFC existente, crie um recurso de faixa de opções e carregá-lo. Para obter mais informações, confira [Passo a passo: Atualizando o aplicativo de rabisco MFC (parte 1)](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md).
 
-Se seu projeto já possui uma faixa de opções manualmente codificada, o MFC tem funções que você pode usar para converter a faixa de opções existente a um recurso de faixa de opções. Para obter mais informações, consulte [como: converter uma faixa de opções MFC existente em um recurso de faixa de opções](../mfc/how-to-convert-an-existing-mfc-ribbon-to-a-ribbon-resource.md).
+Se seu projeto já possui uma faixa de opções manualmente codificada, o MFC tem funções que você pode usar para converter a faixa de opções existente a um recurso de faixa de opções. Para obter mais informações, confira [Como: Converter uma faixa de opções MFC existente em um recurso de faixa de opções](../mfc/how-to-convert-an-existing-mfc-ribbon-to-a-ribbon-resource.md).
 
 > [!NOTE]
 >  Faixas de opções não podem ser criadas em aplicativos baseados na caixa de diálogo. Para obter mais informações, consulte [tipo de aplicativo, Assistente de aplicativo MFC](../mfc/reference/application-type-mfc-application-wizard.md).
@@ -73,44 +73,43 @@ A ilustração a seguir mostra os vários componentes no designer de faixa de op
 
 ![Designer de faixa de opções do MFC](../mfc/media/ribbon_designer.png "Designer de faixa de opções do MFC")
 
-- **Caixa de ferramentas:** contém controles que podem ser arrastados para a superfície do designer.
+- **Caixa de ferramentas:** Contém os controles que podem ser arrastados para a superfície do designer.
 
-- **Superfície do Designer:** contém a representação visual do recurso da faixa de opções.
+- **Superfície do Designer:** Contém a representação visual do recurso da faixa de opções.
 
-- **Janela Propriedades:** lista os atributos do item que está selecionado na superfície do designer.
+- **Janela de propriedades:** Lista os atributos do item que está selecionado na superfície do designer.
 
-- **Janela de exibição de recurso:** exibe os recursos que incluem recursos de faixa de opções, no seu projeto.
+- **Janela de exibição de recurso:** Exibe os recursos que incluem recursos de faixa de opções, no seu projeto.
 
-- **Barra de ferramentas do Editor de faixa de opções:** contém comandos que permitem a você visualizar a faixa de opções e alterar seu tema visual.
+- **Barra de ferramentas do Editor de faixa de opções:** Contém comandos que permitem visualizar a faixa de opções e alterar seu tema visual.
 
 Os tópicos a seguir descrevem como usar os recursos no designer de faixa de opções:
 
-- [Como personalizar o botão Aplicativo](../mfc/how-to-customize-the-application-button.md)
+- [Como: Personalizar o botão do aplicativo](../mfc/how-to-customize-the-application-button.md)
 
-- [Como personalizar a barra de ferramentas de acesso rápido](../mfc/how-to-customize-the-quick-access-toolbar.md)
+- [Como: Personalizar a barra de ferramentas de acesso rápido](../mfc/how-to-customize-the-quick-access-toolbar.md)
 
-- [Como adicionar controles de faixa de opções e manipuladores de evento](../mfc/how-to-add-ribbon-controls-and-event-handlers.md)
+- [Como: Adicionar controles de faixa de opções e manipuladores de eventos](../mfc/how-to-add-ribbon-controls-and-event-handlers.md)
 
-- [Como carregar um recurso da faixa de opções de um aplicativo MFC](../mfc/how-to-load-a-ribbon-resource-from-an-mfc-application.md)
+- [Como: Carregar um recurso de faixa de opções de um aplicativo do MFC](../mfc/how-to-load-a-ribbon-resource-from-an-mfc-application.md)
 
 ## <a name="definitions-of-ribbon-elements"></a>Definições de elementos de faixa de opções
 
 ![Faixa de opções do MFC](../mfc/media/ribbon.png "faixa de opções do MFC")
 
-- **Botão do aplicativo:** o botão que aparece no canto superior esquerdo de uma faixa de opções. O botão aplicativo substitui o menu Arquivo e fica visível mesmo quando a fita estiver minimizada. Quando o botão é clicado, é exibido um menu que tem uma lista de comandos.
+- **Botão do aplicativo:** O botão que aparece no canto superior esquerdo de uma faixa de opções. O botão aplicativo substitui o menu Arquivo e fica visível mesmo quando a fita estiver minimizada. Quando o botão é clicado, é exibido um menu que tem uma lista de comandos.
 
-- **Ferramentas de acesso rápido:** comandos usados com uma barra de ferramentas pequeno e personalizável que exibe com frequência.
+- **Barra de ferramentas de acesso rápida:** Comandos usados com uma barra de ferramentas pequeno e personalizável que exibe com frequência.
 
 - **Categoria**: O agrupamento lógico que representa o conteúdo de uma guia de faixa de opções.
 
-- **Botão padrão de categoria:** o botão que aparece na faixa de opções quando a faixa de opções é minimizada. Quando o botão é clicado, a categoria reaparece como um menu.
+- **Botão padrão de categoria:** O botão que aparece na faixa de opções quando a faixa de opções é minimizada. Quando o botão é clicado, a categoria reaparece como um menu.
 
-- **Painel:** uma área da barra de faixa de opções que exibe um grupo de controles relacionados. Cada categoria de faixa de opções contém um ou mais painéis de faixa de opções.
+- **Painel:** Uma área da barra de faixa de opções que exibe um grupo de controles relacionados. Cada categoria de faixa de opções contém um ou mais painéis de faixa de opções.
 
-- **Elementos de faixa de opções:** controles nos painéis, por exemplo, botões e caixas de combinação. Para ver os diversos controles que podem ser hospedados em uma faixa de opções, consulte [exemplo de gadget de fita: aplicativo de gadget de faixa de opções](../visual-cpp-samples.md).
+- **Elementos de faixa de opções:** Controles nos painéis, por exemplo, botões e caixas de combinação. Para ver os diversos controles que podem ser hospedados em uma faixa de opções, consulte [exemplo de gadget de fita: Aplicativo de gadget de faixa de opções](../visual-cpp-samples.md).
 
 ## <a name="see-also"></a>Consulte também
 
 [Elementos da Interface do usuário](../mfc/user-interface-elements-mfc.md)<br/>
 [Trabalhando com arquivos de recurso](../windows/working-with-resource-files.md)
-

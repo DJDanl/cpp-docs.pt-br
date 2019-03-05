@@ -5,18 +5,18 @@ helpviewer_keywords:
 - Apply button in property sheet
 - property sheets, Apply button
 ms.assetid: 7e977015-59b8-406f-b545-aad0bfd8d55b
-ms.openlocfilehash: 7402f99148f20be4ce56c44b5ce7f66f0c24bd36
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: eb438351d273c872def8c98a67b7010cec0b4d76
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50591251"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279439"
 ---
 # <a name="handling-the-apply-button"></a>Manipulando o botão Aplicar
 
-Folhas de propriedade tem um recurso que caixas de diálogo padrão não: eles permitem que o usuário aplicar as alterações feitas antes de fechar a folha de propriedades. Isso é feito usando o botão Aplicar. Este artigo descreve métodos que você pode usar para implementar este recurso corretamente.
+Folhas de propriedade tem um recurso que caixas de diálogo padrão não: Eles permitem que o usuário aplicar as alterações feitas antes de fechar a folha de propriedades. Isso é feito usando o botão Aplicar. Este artigo descreve métodos que você pode usar para implementar este recurso corretamente.
 
-Caixas de diálogo modais geralmente se aplicam as configurações a um objeto externo quando o usuário clica Okey para fechar a caixa de diálogo. O mesmo é verdadeiro para uma folha de propriedades: quando o usuário clica Okey, as novas configurações na folha de propriedades entram em vigor.
+Caixas de diálogo modais geralmente se aplicam as configurações a um objeto externo quando o usuário clica Okey para fechar a caixa de diálogo. O mesmo é verdadeiro para uma folha de propriedades: Quando o usuário clica Okey, as novas configurações na folha de propriedades entram em vigor.
 
 No entanto, você talvez queira permitir que o usuário ao salvar as configurações sem fechar a caixa de diálogo da folha de propriedade. Essa é a função do botão Aplicar. O botão Aplicar aplica as configurações atuais em todas as páginas de propriedade para o objeto externo, em vez de aplicar apenas as configurações atuais da página ativa no momento.
 
@@ -35,4 +35,3 @@ Para obter um exemplo desse processo, consulte o exemplo de MFC geral [PROPDLG](
 ## <a name="see-also"></a>Consulte também
 
 [Folhas de propriedades](../mfc/property-sheets-mfc.md)
-

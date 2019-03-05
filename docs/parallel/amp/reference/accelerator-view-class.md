@@ -21,12 +21,12 @@ f1_keywords:
 helpviewer_keywords:
 - accelerator_view class
 ms.assetid: 9f298c21-bf62-46e0-88b8-01c5c78ef144
-ms.openlocfilehash: e17284ef8652e5d08b2305dc07d27f080ec64239
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6f95efb17b95dc55cb6f6977439760fa7ea1afe9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50568033"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264840"
 ---
 # <a name="acceleratorview-class"></a>Classe accelerator_view
 
@@ -94,7 +94,7 @@ Uma `accelerator_view` objeto pode ter um dos dois [enumeração queuing_mode](c
 
 **Cabeçalho:** amprt. h
 
-**Namespace:** Simultaneidade
+**Namespace:** Concorrência
 
 ## <a name="accelerator"></a> Acelerador
 
@@ -118,7 +118,7 @@ accelerator_view( const accelerator_view & _Other );
 
 ### <a name="parameters"></a>Parâmetros
 
-*Outro*<br/>
+*_Other*<br/>
 O `accelerator_view` objeto a ser copiado.
 
 ## <a name="accelerator_view__create_marker"></a> create_marker
@@ -250,14 +250,14 @@ bool operator!= (    const accelerator_view & _Other ) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*Outro*<br/>
+*_Other*<br/>
 O `accelerator_view` objeto a ser comparado com este.
 
 ### <a name="return-value"></a>Valor de retorno
 
 **False** se os dois objetos forem iguais; caso contrário, **verdadeiro**.
 
-## <a name="accelerator_view__operator_eq"></a> operador =
+## <a name="accelerator_view__operator_eq"></a> operator=
 
 Copia o conteúdo do objeto accelerator_view especificado para esse outro.
 
@@ -269,14 +269,14 @@ accelerator_view & operator= (    const accelerator_view & _Other );
 
 ### <a name="parameters"></a>Parâmetros
 
-*Outro*<br/>
+*_Other*<br/>
 O `accelerator_view` objeto do qual copiar.
 
 ### <a name="return-value"></a>Valor de retorno
 
 Uma referência ao modificado `accelerator_view` objeto.
 
-## <a name="accelerator_view__operator_eq_eq"></a> operador = =
+## <a name="accelerator_view__operator_eq_eq"></a> operator==
 
 Compara este objeto accelerator_view com outro e retorna **verdadeira** se eles forem iguais; caso contrário, retornará **falso**.
 
@@ -288,7 +288,7 @@ bool operator= = (    const accelerator_view & _Other ) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*Outro*<br/>
+*_Other*<br/>
 O `accelerator_view` objeto a ser comparado com este.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -333,7 +333,7 @@ Retorna `void`.
 
 Se o [queuing_mode](concurrency-namespace-enums-amp.md#queuing_mode) é `immediate`, esse método retornará imediatamente sem bloqueio.
 
-##  <a name="dtor"></a> ~ accelerator_view
+##  <a name="dtor"></a> ~accelerator_view
 
 Destrói o objeto accelerator_view.
 

@@ -3,12 +3,12 @@ title: Colocando o controle em uma página da Web (Tutorial ATL, parte 7)
 ms.custom: get-started-article
 ms.date: 09/27/2018
 ms.assetid: 50dc4c95-c95b-4006-b88a-9826f7bdb222
-ms.openlocfilehash: 77d608fddfc63862c81ce7c7d259510fb4784910
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: baf0ca56ae7512ac76f64b29e3060e0749c083c1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50659193"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297444"
 ---
 # <a name="putting-the-control-on-a-web-page-atl-tutorial-part-7"></a>Colocando o controle em uma página da Web (Tutorial ATL, parte 7)
 

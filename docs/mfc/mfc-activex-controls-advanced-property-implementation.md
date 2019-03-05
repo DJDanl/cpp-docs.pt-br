@@ -1,19 +1,19 @@
 ---
-title: 'Controles ActiveX MFC: implementação da propriedade avançada'
+title: 'Controles ActiveX MFC: Implementação da propriedade avançada'
 ms.date: 09/12/2018
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], error codes
 - properties [MFC], ActiveX controls
 - MFC ActiveX controls [MFC], properties
 ms.assetid: ec2e6759-5a8e-41d8-a275-99af8ff6f32e
-ms.openlocfilehash: d26dbcb1c18c3c939214051d9010cb5b6db90929
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 438c95c56961cc587b64e494678ade191f18ab6b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50568019"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266959"
 ---
-# <a name="mfc-activex-controls-advanced-property-implementation"></a>Controles ActiveX MFC: implementação da propriedade avançada
+# <a name="mfc-activex-controls-advanced-property-implementation"></a>Controles ActiveX MFC: Implementação da propriedade avançada
 
 Este artigo descreve os tópicos relacionados à implementação de propriedades em um controle ActiveX avançadas.
 
@@ -62,18 +62,18 @@ Este exemplo de código chama `SetNotSupported` se o `m_bReadOnlyMode` é membro
 
 ##  <a name="_core_returning_error_codes_from_a_property"></a> Retornando códigos de erro de uma propriedade
 
-Para indicar que ocorreu um erro durante a tentativa de obter ou definir uma propriedade, use o `COleControl::ThrowError` função, que leva um SCODE (código de status) como um parâmetro. Você pode usar um SCODE predefinido ou definir um de seus próprios. Para obter uma lista de predefinidos SCODEs e instruções para definir SCODEs personalizados, consulte [Manipulando erros em seu controle de ActiveX](../mfc/mfc-activex-controls-advanced-topics.md) nos controles do ActiveX do artigo: tópicos avançados.
+Para indicar que ocorreu um erro durante a tentativa de obter ou definir uma propriedade, use o `COleControl::ThrowError` função, que leva um SCODE (código de status) como um parâmetro. Você pode usar um SCODE predefinido ou definir um de seus próprios. Para obter uma lista de predefinidos SCODEs e instruções para definir SCODEs personalizados, consulte [Manipulando erros em seu controle de ActiveX](../mfc/mfc-activex-controls-advanced-topics.md) nos controles do ActiveX do artigo: Tópicos avançados.
 
 Funções auxiliares existem para os mais comuns predefinidos SCODEs, tais como [COleControl::SetNotSupported](../mfc/reference/colecontrol-class.md#setnotsupported), [COleControl::GetNotSupported](../mfc/reference/colecontrol-class.md#getnotsupported), e [COleControl::SetNotPermitted](../mfc/reference/colecontrol-class.md#setnotpermitted).
 
 > [!NOTE]
 >  `ThrowError` deve ser usado apenas como um meio de retornar um erro de dentro Get da propriedade ou Set function ou um método de automação. Essas são as únicas vezes que o manipulador de exceção apropriado será presentes na pilha.
 
-Para obter mais informações sobre o relatório de exceções em outras áreas do código, consulte [COleControl::FireError](../mfc/reference/colecontrol-class.md#fireerror) e a seção [Manipulando erros em seu controle de ActiveX](../mfc/mfc-activex-controls-advanced-topics.md) no artigo controles ActiveX: avançado Tópicos.
+Para obter mais informações sobre o relatório de exceções em outras áreas do código, consulte [COleControl::FireError](../mfc/reference/colecontrol-class.md#fireerror) e a seção [Manipulando erros em seu controle de ActiveX](../mfc/mfc-activex-controls-advanced-topics.md) no artigo controles ActiveX: Tópicos avançados.
 
 ## <a name="see-also"></a>Consulte também
 
 [Controles ActiveX do MFC](../mfc/mfc-activex-controls.md)<br/>
-[Controles ActiveX do MFC: propriedades](../mfc/mfc-activex-controls-properties.md)<br/>
-[Controles ActiveX do MFC: métodos](../mfc/mfc-activex-controls-methods.md)<br/>
+[Controles ActiveX MFC: Propriedades](../mfc/mfc-activex-controls-properties.md)<br/>
+[Controles ActiveX MFC: Métodos](../mfc/mfc-activex-controls-methods.md)<br/>
 [Classe COleControl](../mfc/reference/colecontrol-class.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Concurrency Runtime, overview
 - Concurrency Runtime, lambda expressions
 ms.assetid: 56237d96-10b0-494a-9cb4-f5c5090436c5
-ms.openlocfilehash: ffaf560361da2fd54febb5e38af121ad5149f012
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 810d77abd37ff2c6f29e980b84645d16526744d8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176660"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305231"
 ---
 # <a name="overview-of-the-concurrency-runtime"></a>Visão geral do Tempo de Execução de Simultaneidade
 
@@ -52,7 +52,7 @@ O tempo de execução de simultaneidade usa um agendador de tarefas cooperativo 
 
 O tempo de execução de simultaneidade também oferece primitivos de sincronização que usam o bloqueio cooperativo para sincronizar o acesso aos recursos. Por exemplo, considere uma tarefa que deve ter acesso exclusivo a um recurso compartilhado. Ao bloquear cooperativamente, o tempo de execução pode usar o quantum restante para executar outra tarefa, como a primeira tarefa aguarda o recurso. Esse mecanismo promove o uso máximo de recursos de computação.
 
-[[Superior](#top)]
+[[Top](#top)]
 
 ##  <a name="architecture"></a> Arquitetura
 
@@ -101,7 +101,7 @@ Para obter mais informações sobre o Agendador de tarefas, consulte [Agendador 
 
 O Gerenciador de recursos serve como uma abstração sobre os recursos de computação e principalmente interage com o Agendador de tarefas. Embora você pode usar o Gerenciador de recursos para ajustar o desempenho dos seus aplicativos e bibliotecas, você normalmente usa a funcionalidade fornecida pela biblioteca de padrões paralelos, a biblioteca de agentes e o Agendador de tarefas. Essas bibliotecas de usam o Gerenciador de recursos para reequilibrar dinamicamente recursos como alterar as cargas de trabalho.
 
-[[Superior](#top)]
+[[Top](#top)]
 
 ##  <a name="lambda"></a> Expressões Lambda C++
 
@@ -125,7 +125,7 @@ O exemplo a seguir compara a sintaxe de funções lambda, objetos de função e 
 
 Para obter mais informações sobre as funções lambda em C++, consulte [expressões Lambda](../../cpp/lambda-expressions-in-cpp.md).
 
-[[Superior](#top)]
+[[Top](#top)]
 
 ##  <a name="requirements"></a> Requisitos
 
@@ -133,14 +133,13 @@ A tabela a seguir mostra os arquivos de cabeçalho que estão associados a cada 
 
 |Componente|Arquivos de cabeçalho|
 |---------------|------------------|
-|Biblioteca de padrões paralelos (PPL)|PPL.h<br /><br /> concurrent_queue.h<br /><br /> concurrent_vector.h|
+|Biblioteca de padrões paralelos (PPL)|ppl.h<br /><br /> concurrent_queue.h<br /><br /> concurrent_vector.h|
 |Biblioteca de Agentes Assíncronos|agents.h|
-|Agendador de Tarefas|concrt. h|
-|Gerenciador de Recursos|concrtrm. h|
+|Agendador de Tarefas|concrt.h|
+|Gerenciador de Recursos|concrtrm.h|
 
 O tempo de execução de simultaneidade é declarado na [simultaneidade](../../parallel/concrt/reference/concurrency-namespace.md) namespace. (Você também pode usar [simultaneidade](../../parallel/concrt/reference/concurrency-namespace.md), que é um alias para esse namespace.) O `concurrency::details` namespace oferece suporte a estrutura de tempo de execução de simultaneidade e não se destina a ser usado diretamente do seu código.
 
 O tempo de execução de simultaneidade é fornecido como parte da biblioteca de tempo de execução C (CRT). Para obter mais informações sobre como criar um aplicativo que usa o CRT, consulte [recursos da biblioteca CRT](../../c-runtime-library/crt-library-features.md).
 
-[[Superior](#top)]
-
+[[Top](#top)]

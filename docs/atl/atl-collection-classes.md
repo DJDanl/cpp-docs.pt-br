@@ -11,12 +11,12 @@ helpviewer_keywords:
 - CTraits classes
 - collection classes
 ms.assetid: 4d619d46-5b4e-41dd-b9fd-e86b1fbc00b5
-ms.openlocfilehash: f24e5f7dd2ffa4eb5992362aee18a78fb0000aa9
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 11da1dd7d72951d421d2600e3825e7cafe189240
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176699"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272094"
 ---
 # <a name="atl-collection-classes"></a>Classes de coleção ATL
 
@@ -82,7 +82,7 @@ Cada uma das classes de coleção disponíveis oferece diferentes característic
 
 ### <a name="collection-shape-features"></a>Recursos do conjunto de forma
 
-|Forma|Ordenada|Indexado|Inserir um<br /><br /> Elemento|Procurar<br /><br /> elemento especificado|Duplicar<br /><br /> elementos|
+|Forma|Ordenada|Indexado|Inserir um<br /><br /> Elemento |Procurar<br /><br /> elemento especificado|Duplicar<br /><br /> elementos|
 |-----------|--------------|--------------|---------------------------|--------------------------------------|-----------------------------|
 |Lista|Sim|Não|Fast (tempo constante)|Lento (n)|Sim|
 |Matriz|Sim|Por int (tempo constante)|Lento (n), exceto se inserir no final, em qual tempo constante de case|Lento (n)|Sim|

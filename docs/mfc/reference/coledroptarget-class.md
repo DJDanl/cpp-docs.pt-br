@@ -24,12 +24,12 @@ helpviewer_keywords:
 - COleDropTarget [MFC], Register
 - COleDropTarget [MFC], Revoke
 ms.assetid: a58c9a48-6a93-4357-b078-4594df258311
-ms.openlocfilehash: f4294bbbf9563b55f2047f297eac1a33ca55141f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 127245385ebd89e51a1cc77d1efaa16729d73fe7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50502889"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300110"
 ---
 # <a name="coledroptarget-class"></a>Classe COleDropTarget
 
@@ -108,7 +108,7 @@ virtual DROPEFFECT OnDragEnter(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Apropriei*<br/>
+*pWnd*<br/>
 Aponta para a janela que o cursor está entrando.
 
 *pDataObject*<br/>
@@ -117,7 +117,7 @@ Aponta para o objeto de dados que contém os dados que podem ser descartados.
 *dwKeyState*<br/>
 Contém o estado das teclas modificadoras. Isso é uma combinação de qualquer número das seguintes opções: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON e MK_RBUTTON.
 
-*ponto*<br/>
+*point*<br/>
 Contém o local atual do cursor em coordenadas do cliente.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -150,7 +150,7 @@ virtual void OnDragLeave(CWnd* pWnd);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Apropriei*<br/>
+*pWnd*<br/>
 Aponta para a janela que está deixando o cursor.
 
 ### <a name="remarks"></a>Comentários
@@ -173,7 +173,7 @@ virtual DROPEFFECT OnDragOver(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Apropriei*<br/>
+*pWnd*<br/>
 Aponta para a janela que o cursor está sobre.
 
 *pDataObject*<br/>
@@ -182,7 +182,7 @@ Aponta para o objeto de dados que contém os dados a ser removido.
 *dwKeyState*<br/>
 Contém o estado das teclas modificadoras. Isso é uma combinação de qualquer número das seguintes opções: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON e MK_RBUTTON.
 
-*ponto*<br/>
+*point*<br/>
 Contém o local atual do cursor em coordenadas do cliente.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -222,13 +222,13 @@ virtual DROPEFFECT OnDragScroll(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Apropriei*<br/>
+*pWnd*<br/>
 Aponta para a janela que o cursor está atualmente posicionado.
 
 *dwKeyState*<br/>
 Contém o estado das teclas modificadoras. Isso é uma combinação de qualquer número das seguintes opções: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON e MK_RBUTTON.
 
-*ponto*<br/>
+*point*<br/>
 Contém o local do cursor, em pixels, em relação à tela.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -263,7 +263,7 @@ virtual BOOL OnDrop(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Apropriei*<br/>
+*pWnd*<br/>
 Aponta para a janela que o cursor está atualmente posicionado.
 
 *pDataObject*<br/>
@@ -278,7 +278,7 @@ O efeito que o usuário escolheu para a operação de soltar. Ele pode ser um ou
 
 - Link de um DROPEFFECT_LINK dos dados soltos para os dados originais seja estabelecido.
 
-*ponto*<br/>
+*point*<br/>
 Contém o local do cursor, em pixels, em relação à tela.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -308,7 +308,7 @@ virtual DROPEFFECT OnDropEx(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Apropriei*<br/>
+*pWnd*<br/>
 Aponta para a janela que o cursor está atualmente posicionado.
 
 *pDataObject*<br/>
@@ -317,10 +317,10 @@ Aponta para o objeto de dados que contém os dados a ser removido.
 *dropDefault*<br/>
 O efeito que o usuário escolheu para a operação de soltar padrão com base no estado atual da chave. Ele pode ser DROPEFFECT_NONE. Efeitos de soltar são discutidos na seção comentários.
 
-*lista suspensa*<br/>
+*dropList*<br/>
 Uma lista dos efeitos de soltar que ofereça suporte a origem de soltar. Valores de efeito de soltar podem ser combinados usando o OR bit a bit (**&#124;**) operação. Efeitos de soltar são discutidos na seção comentários.
 
-*ponto*<br/>
+*point*<br/>
 Contém o local do cursor, em pixels, em relação à tela.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -357,7 +357,7 @@ BOOL Register(CWnd* pWnd);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Apropriei*<br/>
+*pWnd*<br/>
 Aponta para a janela que deve ser registrado como um destino de soltar.
 
 ### <a name="return-value"></a>Valor de retorno

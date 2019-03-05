@@ -164,12 +164,12 @@ helpviewer_keywords:
 - COleClientItem [MFC], OnScrollBy
 - COleClientItem [MFC], OnShowItem
 ms.assetid: 7f571b7c-2758-4839-847a-0cf1ef643128
-ms.openlocfilehash: 80d28aa6a71adb72b8a3e0f5cd997577d61d0a52
-ms.sourcegitcommit: d441305fb19131afbd7fc259d8cda63ea26f2343
+ms.openlocfilehash: ec3048e7bd033e5c296b558dd2083c648bc377e7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51678581"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295351"
 ---
 # <a name="coleclientitem-class"></a>Classe COleClientItem
 
@@ -627,7 +627,7 @@ BOOL CreateFromClipboard(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Renderizar*<br/>
+*render*<br/>
 Sinalizador que especifica como o servidor processará o item OLE. Para os valores possíveis, consulte [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) no SDK do Windows.
 
 *cfFormat*<br/>
@@ -663,7 +663,7 @@ BOOL CreateFromData(
 *pDataObject*<br/>
 Ponteiro para o [COleDataObject](../../mfc/reference/coledataobject-class.md) objeto do qual o item OLE deve ser criado.
 
-*Renderizar*<br/>
+*render*<br/>
 Sinalizador que especifica como o servidor processará o item OLE. Para os valores possíveis, consulte [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) no SDK do Windows.
 
 *cfFormat*<br/>
@@ -703,7 +703,7 @@ Ponteiro para o nome do arquivo do qual o item OLE é a ser criado.
 *clsid*<br/>
 Reservado para uso futuro.
 
-*Renderizar*<br/>
+*render*<br/>
 Sinalizador que especifica como o servidor processará o item OLE. Para os valores possíveis, consulte [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) no SDK do Windows.
 
 *cfFormat*<br/>
@@ -735,7 +735,7 @@ BOOL CreateLinkFromClipboard(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Renderizar*<br/>
+*render*<br/>
 Sinalizador que especifica como o servidor processará o item OLE. Para os valores possíveis, consulte [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) no SDK do Windows.
 
 *cfFormat*<br/>
@@ -771,7 +771,7 @@ BOOL CreateLinkFromData(
 *pDataObject*<br/>
 Ponteiro para o [COleDataObject](../../mfc/reference/coledataobject-class.md) objeto do qual o item OLE deve ser criado.
 
-*Renderizar*<br/>
+*render*<br/>
 Sinalizador que especifica como o servidor processará o item OLE. Para os valores possíveis, consulte [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) no SDK do Windows.
 
 *cfFormat*<br/>
@@ -807,7 +807,7 @@ BOOL CreateLinkFromFile(
 *lpszFileName*<br/>
 Ponteiro para o nome do arquivo do qual o item OLE é a ser criado.
 
-*Renderizar*<br/>
+*render*<br/>
 Sinalizador que especifica como o servidor processará o item OLE. Para os valores possíveis, consulte [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) no SDK do Windows.
 
 *cfFormat*<br/>
@@ -843,7 +843,7 @@ BOOL CreateNewItem(
 *clsid*<br/>
 ID que identifica exclusivamente o tipo de item OLE para criar.
 
-*Renderizar*<br/>
+*render*<br/>
 Sinalizador que especifica como o servidor processará o item OLE. Para os valores possíveis, consulte [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) no SDK do Windows.
 
 *cfFormat*<br/>
@@ -875,7 +875,7 @@ BOOL CreateStaticFromClipboard(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Renderizar*<br/>
+*render*<br/>
 Sinalizador que especifica como o servidor processará o item OLE. Para os valores possíveis, consulte [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) no SDK do Windows.
 
 *cfFormat*<br/>
@@ -911,7 +911,7 @@ BOOL CreateStaticFromData(
 *pDataObject*<br/>
 Ponteiro para o [COleDataObject](../../mfc/reference/coledataobject-class.md) objeto do qual o item OLE deve ser criado.
 
-*Renderizar*<br/>
+*render*<br/>
 Sinalizador que especifica como o servidor processará o item OLE. Para os valores possíveis, consulte [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) no SDK do Windows.
 
 *cfFormat*<br/>
@@ -1780,7 +1780,7 @@ virtual void OnInsertMenus(
 Aponta para um menu vazio.
 
 *lpMenuWidths*<br/>
-Aponta para uma matriz de seis valores longos indicando quantos menus estão em cada um dos seguintes grupos de menu: arquivo, editar, contêiner, objeto, a janela Ajuda. O aplicativo de contêiner é responsável por grupos de menu Arquivo, o contêiner e a janela, correspondentes aos elementos, 0, 2 e 4 dessa matriz.
+Aponta para uma matriz de seis valores longos indicando quantos menus estão em cada um dos seguintes grupos de menu: Arquivo, editar, contêiner, objeto, a janela Ajuda. O aplicativo de contêiner é responsável por grupos de menu Arquivo, o contêiner e a janela, correspondentes aos elementos, 0, 2 e 4 dessa matriz.
 
 ### <a name="remarks"></a>Comentários
 
@@ -1877,7 +1877,7 @@ virtual BOOL OnShowControlBars(
 *pFrameWnd*<br/>
 Ponteiro para a janela do quadro do aplicativo de contêiner. Isso pode ser uma janela de quadro principal ou em uma janela filho MDI.
 
-*bMostrar*<br/>
+*bShow*<br/>
 Especifica se as barras de controle devem ser mostrados ou ocultados.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -2150,7 +2150,7 @@ BOOL SetPrintDevice(const PRINTDLG* ppd);
 *ptd*<br/>
 Ponteiro para um [DVTARGETDEVICE](/windows/desktop/api/objidl/ns-objidl-tagdvtargetdevice) estrutura de dados, que contém informações sobre o novo dispositivo de destino de impressão. Pode ser NULL.
 
-*PPD*<br/>
+*ppd*<br/>
 Ponteiro para um [PRINTDLG](https://msdn.microsoft.com/library/windows/desktop/ms646940) estrutura de dados, que contém informações sobre o novo dispositivo de destino de impressão. Pode ser NULL.
 
 ### <a name="return-value"></a>Valor de retorno

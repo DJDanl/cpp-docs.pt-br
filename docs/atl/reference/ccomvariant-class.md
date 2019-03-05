@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CComVariant class
 - VARIANT macro, ATL
 ms.assetid: 4d31149c-d005-44b5-a509-10f84afa2b61
-ms.openlocfilehash: 6a6ad49533028dbcb8c45b63c55a51090533137e
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 6be05b52b96ada7871f955c687036a83b4e0b493
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51522475"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281090"
 ---
 # <a name="ccomvariant-class"></a>Classe CComVariant
 
@@ -44,7 +44,7 @@ class CComVariant : public tagVARIANT
 |Nome|Descrição|
 |----------|-----------------|
 |[CComVariant::CComVariant](#ccomvariant)|O construtor.|
-|[CComVariant:: ~ CComVariant](#dtor)|O destruidor.|
+|[CComVariant::~CComVariant](#dtor)|O destruidor.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
@@ -67,9 +67,9 @@ class CComVariant : public tagVARIANT
 |-|-|
 |[CComVariant::operator <](#operator_lt)|Indica se o `CComVariant` objeto é menor que a VARIANTE especificada.|
 |[CComVariant::operator >](#operator_gt)|Indica se o `CComVariant` objeto é maior que a VARIANTE especificada.|
-|[operador! =](#operator_neq)|Indica se o `CComVariant` objeto não é igual a VARIANTE especificada.|
-|[operador =](#operator_eq)|Atribui um valor para o `CComVariant` objeto.|
-|[operador = =](#operator_eq_eq)|Indica se o `CComVariant` objeto é igual a VARIANTE especificada.|
+|[operator !=](#operator_neq)|Indica se o `CComVariant` objeto não é igual a VARIANTE especificada.|
+|[operator =](#operator_eq)|Atribui um valor para o `CComVariant` objeto.|
+|[operator ==](#operator_eq_eq)|Indica se o `CComVariant` objeto é igual a VARIANTE especificada.|
 
 ## <a name="remarks"></a>Comentários
 
@@ -155,13 +155,13 @@ CComVariant(const CComBSTR& bstrSrc);
 *vtSrc*<br/>
 [in] O tipo da variante. Quando o primeiro parâmetro é **int**, os tipos válidos são VT_I4 e VT_INT. Quando o primeiro parâmetro é **longo**, os tipos válidos são VT_I4 e VT_ERROR. Quando o primeiro parâmetro é **duplas**, os tipos válidos são VT_R8 e VT_DATE. Quando o primeiro parâmetro é **unsigned int**, os tipos válidos são VT_UI4 e VT_UINT.
 
-*{1&gt;fltsrc*<br/>
+*fltSrc*<br/>
 [in] O **float** usado para inicializar o `CComVariant` objeto. O tipo do `CComVariant` objeto será VT_R4.
 
-*dblsrc&lt;1}*<br/>
+*dblSrc*<br/>
 [in] O **duplas** usado para inicializar o `CComVariant` objeto. O tipo do `CComVariant` objeto será VT_R8.
 
-*1&gt;Operator=(&lt;1}{2&gt;cysrc&lt;2}{3&gt;)&lt;3*<br/>
+*cySrc*<br/>
 [in] O `CY` usado para inicializar o `CComVariant` objeto. O tipo do `CComVariant` objeto será VT_CY.
 
 *pSrc*<br/>
@@ -172,14 +172,14 @@ Ou, o ponteiro SAFERRAY usado para inicializar o `CComVariant` objeto. Uma cópi
 *cSrc*<br/>
 [in] O **char** usado para inicializar o `CComVariant` objeto. O tipo do `CComVariant` objeto será VT_I1.
 
-*1&gt;Operator=(&lt;1}{2&gt;bstrsrc&lt;2}{3&gt;)&lt;3*<br/>
+*bstrSrc*<br/>
 [in] O BSTR é usado para inicializar o `CComVariant` objeto. O tipo do `CComVariant` objeto será VT_BSTR.
 
 ### <a name="remarks"></a>Comentários
 
 O destruidor gerencia a limpeza chamando [CComVariant::Clear](#clear).
 
-##  <a name="dtor"></a>  CComVariant:: ~ CComVariant
+##  <a name="dtor"></a>  CComVariant::~CComVariant
 
 O destruidor.
 
@@ -344,7 +344,7 @@ CComVariant& operator=(char cSrc) throw();
 *varSrc*<br/>
 [in] O `CComVariant` ou [VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagvariant) a ser atribuído ao `CComVariant` objeto. O conteúdo da variante de fonte é copiado para o destino sem conversão.
 
-*1&gt;Operator=(&lt;1}{2&gt;bstrsrc&lt;2}{3&gt;)&lt;3*<br/>
+*bstrSrc*<br/>
 [in] O BSTR a ser atribuído ao `CComVariant` objeto. O tipo do `CComVariant` objeto será VT_BSTR.
 
 *lpszSrc*<br/>
@@ -356,13 +356,13 @@ CComVariant& operator=(char cSrc) throw();
 *nSrc*<br/>
 [in] O **int**, BYTE, **curto**, **longo**, LONGLONG, ULONGLONG, **unsigned short**, **unsigned long**, ou **int sem sinal** a ser atribuído ao `CComVariant` objeto. O tipo do `CComVariant` objeto será VT_I4, VT_UI1, VT_I2, VT_I4, VT_I8, VT_UI8, VT_UI4, VT_UI2 ou VT_UI4, respectivamente.
 
-*{1&gt;fltsrc*<br/>
+*fltSrc*<br/>
 [in] O **float** a ser atribuído ao `CComVariant` objeto. O tipo do `CComVariant` objeto será VT_R4.
 
-*dblsrc&lt;1}*<br/>
+*dblSrc*<br/>
 [in] O **duplas** a ser atribuído ao `CComVariant` objeto. O tipo do `CComVariant` objeto será VT_R8.
 
-*1&gt;Operator=(&lt;1}{2&gt;cysrc&lt;2}{3&gt;)&lt;3*<br/>
+*cySrc*<br/>
 [in] O `CY` a ser atribuído ao `CComVariant` objeto. O tipo do `CComVariant` objeto será VT_CY.
 
 *pSrc*<br/>
@@ -373,7 +373,7 @@ Ou, um ponteiro SAFEARRAY a ser atribuído ao `CComVariant` objeto. Uma cópia d
 *cSrc*<br/>
 [in] O caractere a ser atribuído ao `CComVariant` objeto. O tipo do `CComVariant` objeto será VT_I1.
 
-##  <a name="operator_eq_eq"></a>  CComVariant::operator = =
+##  <a name="operator_eq_eq"></a>  CComVariant::operator ==
 
 Indica se o `CComVariant` objeto é igual a VARIANTE especificada.
 
@@ -387,7 +387,7 @@ Retorna VERDADEIRO se o valor e o tipo de *1&gt;Operator=(&lt;1}{2&gt;varsrc&lt;
 
 O operador compara apenas o valor dos tipos variantes. Ele compara cadeias de caracteres, inteiros e pontos flutuantes, mas não matrizes ou registros.
 
-##  <a name="operator_neq"></a>  CComVariant::operator! =
+##  <a name="operator_neq"></a>  CComVariant::operator !=
 
 Indica se o `CComVariant` objeto não é igual a VARIANTE especificada.
 

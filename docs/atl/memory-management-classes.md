@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - memory, managing
 ms.assetid: be564a5e-577e-40a7-bfe3-25ad21e57270
-ms.openlocfilehash: 76207259e7a4c769580ff41263642b278ee11f40
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d7e0085d79237b153150297f2a2d00998a93a514
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50545191"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274395"
 ---
 # <a name="memory-management-classes"></a>Classes de gerenciamento de memória
 
@@ -61,4 +61,3 @@ Essas classes fornecem suporte para outras rotinas de alocação de memória, os
 ## <a name="see-also"></a>Consulte também
 
 [Visão geral da classe](../atl/atl-class-overview.md)
-

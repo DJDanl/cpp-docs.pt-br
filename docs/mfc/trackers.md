@@ -11,12 +11,12 @@ helpviewer_keywords:
 - CRectTracker class [MFC], implementing trackers
 - OLE server applications [MFC], trackers
 ms.assetid: dcd09399-6637-4621-80e5-d12670429787
-ms.openlocfilehash: 74e70f989d3803b11f05150f9b55c6dfe79ed876
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6dffb5b4326d08daf59098e1888169c2353dafe2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481946"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262708"
 ---
 # <a name="trackers"></a>Controladores
 
@@ -24,7 +24,7 @@ O [CRectTracker](../mfc/reference/crecttracker-class.md) classe fornece uma inte
 
 O exemplo OLE do MFC [OCLIENT](../visual-cpp-samples.md) demonstra uma interface comum usando controladores e itens de cliente OLE do ponto de vista de um aplicativo de contêiner. Para ver uma demonstração de diferentes estilos e capacidades de um objeto de controlador, consulte o exemplo de geral do MFC [RASTREADOR](../visual-cpp-samples.md).
 
-Para obter mais informações sobre implementando controladores no aplicativo OLE, consulte [controladores: Implementando controladores no seu aplicativo OLE](../mfc/trackers-implementing-trackers-in-your-ole-application.md)
+Para obter mais informações sobre implementando controladores no aplicativo OLE, consulte [rastreadores: Implementando controladores no aplicativo OLE](../mfc/trackers-implementing-trackers-in-your-ole-application.md)
 
 ## <a name="see-also"></a>Consulte também
 

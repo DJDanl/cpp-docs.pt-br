@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - scheduler instances
 ms.assetid: 4819365f-ef99-49cc-963e-50a2a35a8d6b
-ms.openlocfilehash: 370f8a3a8fdcc8e1daaee2d3424f939fb719a449
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 19bd871857dcef6aaef153798388c0272239fa1f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50570164"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301292"
 ---
 # <a name="scheduler-instances"></a>Instâncias de agendador
 
@@ -38,9 +38,9 @@ Um thread que está anexado a um agendador é conhecido como um *contexto de exe
 
 Normalmente, o `CurrentScheduler` classe é usada para acessar o Agendador atual. O `Scheduler` classe é útil quando você precisa gerenciar um agendador que não seja o atual.
 
-As seções a seguir descrevem como criar e gerenciar uma instância do Agendador. Para obter um exemplo completo que ilustra essas tarefas, consulte [como: gerenciar uma instância do Agendador](../../parallel/concrt/how-to-manage-a-scheduler-instance.md).
+As seções a seguir descrevem como criar e gerenciar uma instância do Agendador. Para obter um exemplo completo que ilustra essas tarefas, consulte [como: Gerenciar uma instância do Agendador](../../parallel/concrt/how-to-manage-a-scheduler-instance.md).
 
-[[Superior](#top)]
+[[Top](#top)]
 
 ##  <a name="creating"></a> Criando uma instância do Agendador
 
@@ -54,7 +54,7 @@ Há três maneiras para criar um `Scheduler` objeto:
 
 Permitindo que o tempo de execução criar um agendador padrão permite que todas as tarefas simultâneas compartilhar o mesmo Agendador. Normalmente, a funcionalidade fornecida pelos [biblioteca de padrões paralelos](../../parallel/concrt/parallel-patterns-library-ppl.md) (PPL) ou o [biblioteca de agentes assíncronos](../../parallel/concrt/asynchronous-agents-library.md) é usado para executar o trabalho paralelo. Portanto, você precisa trabalhar diretamente com o Agendador para controlar sua política ou o tempo de vida. Quando você usa o PPL ou a biblioteca de agentes, o tempo de execução cria o agendador padrão, se ele não existe e se torna o Agendador atual para cada contexto. Quando você cria um agendador e defini-lo como o Agendador atual, o tempo de execução usa esse Agendador para agendar tarefas. Crie instâncias de Agendador adicionais somente quando você precisar de uma política de agendamento específica. Para obter mais informações sobre as políticas que estão associados com um agendador, consulte [políticas de Agendador](../../parallel/concrt/scheduler-policies.md).
 
-[[Superior](#top)]
+[[Top](#top)]
 
 ##  <a name="managing"></a> Gerenciar o tempo de vida de uma instância do Agendador
 
@@ -81,7 +81,7 @@ Quando você usa funcionalidade, por exemplo, a PPL, que faz com que o tempo de 
 
 Porque o tempo de execução não destrói um `Scheduler` objeto antes de concluir todas as tarefas, você pode usar o [concurrency::Scheduler::RegisterShutdownEvent](reference/scheduler-class.md#registershutdownevent) método ou o [concurrency::CurrentScheduler:: RegisterShutdownEvent](reference/currentscheduler-class.md#registershutdownevent) método para receber uma notificação quando um `Scheduler` objeto é destruído. Isso é útil quando você deve aguardar todas as tarefas agendadas por um `Scheduler` objeto ao fim.
 
-[[Superior](#top)]
+[[Top](#top)]
 
 ##  <a name="features"></a> Métodos e recursos
 
@@ -116,16 +116,15 @@ A tabela a seguir mostra os métodos importantes que são definidos pelo `Schedu
 |[SetDefaultSchedulerPolicy](reference/scheduler-class.md#setdefaultschedulerpolicy)|Define a política para o tempo de execução usar quando ele cria o agendador padrão.|
 |[ResetDefaultSchedulerPolicy](reference/scheduler-class.md#resetdefaultschedulerpolicy)|Restaura a política padrão para aquela que estava ativa antes de chamar `SetDefaultSchedulerPolicy`. Se o agendador padrão for criado após esta chamada, o tempo de execução usa configurações de política padrão para criar o Agendador.|
 
-[[Superior](#top)]
+[[Top](#top)]
 
 ##  <a name="example"></a> Exemplo
 
-Para obter exemplos básicos de como criar e gerenciar uma instância do Agendador, consulte [como: gerenciar uma instância do Agendador](../../parallel/concrt/how-to-manage-a-scheduler-instance.md).
+Para obter exemplos básicos de como criar e gerenciar uma instância do Agendador, consulte [como: Gerenciar uma instância do Agendador](../../parallel/concrt/how-to-manage-a-scheduler-instance.md).
 
 ## <a name="see-also"></a>Consulte também
 
 [Agendador de tarefas](../../parallel/concrt/task-scheduler-concurrency-runtime.md)<br/>
-[Como gerenciar instâncias de agendador](../../parallel/concrt/how-to-manage-a-scheduler-instance.md)<br/>
+[Como: Gerenciar uma instância de agendador](../../parallel/concrt/how-to-manage-a-scheduler-instance.md)<br/>
 [Políticas de agendador](../../parallel/concrt/scheduler-policies.md)<br/>
 [Grupos Agendados](../../parallel/concrt/schedule-groups.md)
-

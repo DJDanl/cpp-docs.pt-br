@@ -10,12 +10,12 @@ helpviewer_keywords:
 - OLE [MFC], data objects
 - OLE [MFC], data sources
 ms.assetid: 8f68eed8-0ce8-4489-a4cc-f95554f89090
-ms.openlocfilehash: 09e328171657c3c6557a5d77acae0f034e517955
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 485fa5c62aafa4c116a76547238325d2979bfdc4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50612479"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298263"
 ---
 # <a name="data-objects-and-data-sources-ole"></a>Objetos e origens de dados (OLE)
 
@@ -27,9 +27,9 @@ Quando você executa uma transferência de dados usando a área de transferênci
 
 Os artigos a seguir explicam como usar objetos de dados e fontes de dados em seus aplicativos. Essas informações se aplicam a aplicativos de contêiner e o servidor, pois ambos podem ser abertas em copiar e colar dados.
 
-- [Objetos e fontes de dados: criação e destruição](../mfc/data-objects-and-data-sources-creation-and-destruction.md)
+- [Objetos de dados e fontes de dados: Criação e destruição](../mfc/data-objects-and-data-sources-creation-and-destruction.md)
 
-- [Objetos e fontes de dados: manipulação](../mfc/data-objects-and-data-sources-manipulation.md)
+- [Objetos de dados e fontes de dados: Manipulação](../mfc/data-objects-and-data-sources-manipulation.md)
 
 ## <a name="in-this-section"></a>Nesta seção
 

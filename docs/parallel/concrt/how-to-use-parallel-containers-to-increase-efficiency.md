@@ -1,19 +1,19 @@
 ---
-title: Como usar contêineres em paralelo para aumentar a eficiência
+title: 'Como: Usar contêineres em paralelo para aumentar a eficiência'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - increasing efficiency with parallel containers [Concurrency Runtime]
 - concurrent_queue class, examples
 - concurrent_vector class, examples
 ms.assetid: bd00046d-e9b6-4ae1-b661-3995f671b867
-ms.openlocfilehash: a9c428ee54853fbd8106901434823e69b402eace
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2479915b167ee3dbc2ce43d9c2733efc74818bbe
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50439176"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300629"
 ---
-# <a name="how-to-use-parallel-containers-to-increase-efficiency"></a>Como usar contêineres em paralelo para aumentar a eficiência
+# <a name="how-to-use-parallel-containers-to-increase-efficiency"></a>Como: Usar contêineres em paralelo para aumentar a eficiência
 
 Este tópico mostra como usar contêineres em paralelo com eficiência armazenar e acessar dados em paralelo.
 

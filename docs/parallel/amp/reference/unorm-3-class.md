@@ -72,12 +72,12 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::unorm_3::get_yz
 - amp_short_vectors/Concurrency::graphics::unorm_3::rbg
 ms.assetid: ea4e7a17-5256-464c-af28-8b01962564c0
-ms.openlocfilehash: 2ea10af6ffa1c3e4731b889ddec2d6f0c86ec981
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: befbf350bbd591d168f19e87c81370220d29ef9f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50458026"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300902"
 ---
 # <a name="unorm3-class"></a>Classe unorm_3
 
@@ -265,7 +265,7 @@ explicit inline unorm_3(
 *_V0*<br/>
 O valor para inicializar o elemento 0.
 
-*V1*<br/>
+*_V1*<br/>
 O valor para inicializar o elemento 1.
 
 *_V2*<br/>
@@ -274,10 +274,10 @@ O valor para inicializar o elemento 2.
 *_V*<br/>
 O valor para a inicialização.
 
-*Outro*<br/>
+*_Other*<br/>
 O objeto usado para inicializar.
 
-##  <a name="unorm_3__size"></a> Tamanho
+##  <a name="unorm_3__size"></a> size
 
 ```
 static const int size = 3;

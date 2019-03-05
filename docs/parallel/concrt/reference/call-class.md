@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - call class
 ms.assetid: 1521970a-1e9c-4b0c-a681-d18e40976f49
-ms.openlocfilehash: 5164d2787c86e6c909418f353c15c876d1397afe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9651a74fdb07ad96d6f01edb6818ea48d697c37c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50566095"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271951"
 ---
 # <a name="call-class"></a>Classe da chamada
 
@@ -112,7 +112,7 @@ call(
 *_Func*<br/>
 Uma função que será invocada para cada mensagem aceita.
 
-*Filtro*<br/>
+*_Filter*<br/>
 Uma função de filtro que determina se as mensagens oferecidas devem ser aceitas.
 
 *_PScheduler*<br/>
@@ -129,7 +129,7 @@ O tipo `_Call_method` é um funtor com assinatura `void (T const &)` que é invo
 
 O tipo `filter_method` é um funtor com assinatura `bool (T const &)` que é invocado por este `call` bloco de mensagem para determinar se ele deve aceitar uma mensagem oferecida.
 
-##  <a name="dtor"></a> ~ call
+##  <a name="dtor"></a> ~call
 
 Destrói o `call` bloco de mensagem.
 

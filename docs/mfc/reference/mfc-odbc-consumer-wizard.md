@@ -7,12 +7,12 @@ helpviewer_keywords:
 - MFC ODBC Consumer Wizard
 - wizards [MFC]
 ms.assetid: f64a890b-a252-4887-88a1-782a7cd4ff3d
-ms.openlocfilehash: 8b2d554cb6b4eaeb7ee1ddd884aefb3ab6da0f2e
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 75d62eb5ce3d24322d7af5030fb8d723ffa8fedb
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523410"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259926"
 ---
 # <a name="mfc-odbc-consumer-wizard"></a>Assistente de consumidor ODBC MFC
 
@@ -78,4 +78,3 @@ Este assistente configura uma classe de conjunto de registros ODBC e as associa√
 
 [Consumidor ODBC do MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)<br/>
 [Adicionando funcionalidade com assistentes de c√≥digo](../../ide/adding-functionality-with-code-wizards-cpp.md)
-

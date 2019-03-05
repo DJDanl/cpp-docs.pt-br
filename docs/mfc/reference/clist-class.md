@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CList [MFC], RemoveTail
 - CList [MFC], SetAt
 ms.assetid: 6f6273c3-c8f6-47f5-ac2a-0a950379ae5d
-ms.openlocfilehash: 10991745fb5ccdac145f4b1d589e7d59c6ed6f4e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 722c38de100f2f1ff00e6589573a76bcdd9f3e84
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50513952"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297379"
 ---
 # <a name="clist-class"></a>Classe CList
 
@@ -88,7 +88,7 @@ class CList : public CObject
 |[CList::GetCount](#getcount)|Retorna o número de elementos nesta lista.|
 |[CList::GetHead](#gethead)|Retorna o elemento de cabeçalho da lista (não pode estar vazia).|
 |[CList::GetHeadPosition](#getheadposition)|Retorna a posição do elemento de cabeçalho da lista.|
-|[CList::](#getnext)|Obtém o próximo elemento para a iteração.|
+|[CList::GetNext](#getnext)|Obtém o próximo elemento para a iteração.|
 |[CList::GetPrev](#getprev)|Obtém o elemento anterior para a iteração.|
 |[CList::GetSize](#getsize)|Retorna o número de elementos nesta lista.|
 |[CList::GetTail](#gettail)|Retorna o elemento final da lista (não pode estar vazia).|
@@ -291,7 +291,7 @@ const TYPE& GetAt(POSITION position) const;
 *TIPO*<br/>
 Parâmetro de modelo especificando o tipo de objeto na lista.
 
-*posição*<br/>
+*position*<br/>
 A posição na lista do elemento a ser obtido.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -373,7 +373,7 @@ Um valor da posição que pode ser usado para iteração ou recuperação de pon
 
 [!code-cpp[NVC_MFCCollections#42](../../mfc/codesnippet/cpp/clist-class_8.cpp)]
 
-##  <a name="getnext"></a>  CList::
+##  <a name="getnext"></a>  CList::GetNext
 
 Obtém o elemento de lista, identificado pelo *rPosition*, em seguida, define *rPosition* para o valor da posição da próxima entrada na lista.
 
@@ -515,7 +515,7 @@ POSITION InsertAfter(POSITION position, ARG_TYPE newElement);
 
 ### <a name="parameters"></a>Parâmetros
 
-*posição*<br/>
+*position*<br/>
 Um valor de posição retornado por uma anterior `GetNext`, `GetPrev`, ou `Find` chamada de função de membro.
 
 *ARG_TYPE*<br/>
@@ -542,7 +542,7 @@ POSITION InsertBefore(POSITION position, ARG_TYPE newElement);
 
 ### <a name="parameters"></a>Parâmetros
 
-*posição*<br/>
+*position*<br/>
 Um valor de posição retornado por uma anterior `GetNext`, `GetPrev`, ou `Find` chamada de função de membro.
 
 *ARG_TYPE*<br/>
@@ -605,7 +605,7 @@ void RemoveAt(POSITION position);
 
 ### <a name="parameters"></a>Parâmetros
 
-*posição*<br/>
+*position*<br/>
 A posição do elemento a ser removido da lista.
 
 ### <a name="remarks"></a>Comentários
@@ -676,7 +676,7 @@ void SetAt(POSITION pos, ARG_TYPE newElement);
 
 ### <a name="parameters"></a>Parâmetros
 
-*POS*<br/>
+*pos*<br/>
 A posição do elemento a ser definido.
 
 *ARG_TYPE*<br/>

@@ -72,12 +72,12 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::double_3::rbg
 - amp_short_vectors/Concurrency::graphics::double_3::get_yxz
 ms.assetid: baeb3ff0-2862-4c81-857e-b1a4c085be25
-ms.openlocfilehash: 169c9ecb0fe68436a05c6c59a75a80a0d02f411c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6423220d8203b0d0fba73a4888f967e159db26de
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50508908"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326732"
 ---
 # <a name="double3-class"></a>Classe double_3
 
@@ -148,12 +148,12 @@ class double_3;
 
 |Nome|Descrição|
 |----------|-----------------|
-|double_3::Operator-||
+|double_3::operator-||
 |double_3::operator--||
-|double_3::Operator * =||
-|double_3::Operator =||
-|double_3::Operator++||
-|double_3::Operator+ =||
+|double_3::operator*=||
+|double_3::operator/=||
+|double_3::operator++||
+|double_3::operator+=||
 |double_3::operator=||
 |double_3::operator-=||
 
@@ -168,34 +168,34 @@ class double_3;
 |Nome|Descrição|
 |----------|-----------------|
 |double_3::b||
-|double_3::BG||
-|double_3::BGR||
+|double_3::bg||
+|double_3::bgr||
 |double_3::br||
 |double_3::brg||
 |double_3::g||
 |double_3::gb||
 |double_3::gbr||
-|double_3::GR||
+|double_3::gr||
 |double_3::grb||
 |double_3::r||
-|double_3::RB||
+|double_3::rb||
 |double_3::rbg||
-|double_3::RG||
-|double_3::RGB||
+|double_3::rg||
+|double_3::rgb||
 |double_3::x||
 |double_3::xy||
 |double_3::xyz||
-|double_3::XZ||
+|double_3::xz||
 |double_3::xzy||
 |double_3::y||
-|double_3::YX||
+|double_3::yx||
 |double_3::yxz||
-|double_3::YZ||
+|double_3::yz||
 |double_3::yzx||
 |double_3::z||
 |double_3::zx||
 |double_3::zxy||
-|double_3::ZY||
+|double_3::zy||
 |double_3::zyx||
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
@@ -256,7 +256,7 @@ explicit inline double_3(
 *_V0*<br/>
 O valor para inicializar o elemento 0.
 
-*V1*<br/>
+*_V1*<br/>
 O valor para inicializar o elemento 1.
 
 *_V2*<br/>
@@ -265,10 +265,10 @@ O valor para inicializar o elemento 2.
 *_V*<br/>
 O valor para a inicialização.
 
-*Outro*<br/>
+*_Other*<br/>
 O objeto usado para inicializar.
 
-##  <a name="double_3__size"></a> Tamanho
+##  <a name="double_3__size"></a> size
 
 ```
 static const int size = 3;

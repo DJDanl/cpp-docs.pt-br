@@ -18,12 +18,12 @@ helpviewer_keywords:
 - CWindowImpl class
 - subclassing windows, ATL
 ms.assetid: 02eefd45-a0a6-4d1b-99f6-dbf627e2cc2f
-ms.openlocfilehash: 3752e8b58560e522aecc3689e2a5c3be2649b1e1
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 2e4a9b585ed653927c87eaf82dfae8ce8f982dfc
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694160"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290697"
 ---
 # <a name="cwindowimpl-class"></a>Classe CWindowImpl
 
@@ -44,7 +44,7 @@ class ATL_NO_VTABLE CWindowImpl : public CWindowImplBaseT<TBase, TWinTraits>
 *T*<br/>
 Sua nova classe, derivada de `CWindowImpl`.
 
-*Tdígitos de base*<br/>
+*TBase*<br/>
 A classe base da sua classe. Por padrão, é a classe base [CWindow](../../atl/reference/cwindow-class.md).
 
 *TWinTraits*<br/>
@@ -146,7 +146,7 @@ HWND Create(
 *hWndParent*<br/>
 [in] O identificador para a janela pai ou proprietária.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Um [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) especificando a posição da janela de estrutura. O `RECT` pode ser passada por um ponteiro ou referência.
 
 *szWindowName*<br/>

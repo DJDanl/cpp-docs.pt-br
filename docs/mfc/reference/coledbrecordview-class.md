@@ -12,12 +12,12 @@ helpviewer_keywords:
 - COleDBRecordView [MFC], OnGetRowset
 - COleDBRecordView [MFC], OnMove
 ms.assetid: 98612427-c4c9-4760-b7e1-85b17448add9
-ms.openlocfilehash: fbbaaae72c7b58f898735d768c019a02cdb7d7e5
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 1b09599479010f87e396e6f576c9524651923f9f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518574"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57280362"
 ---
 # <a name="coledbrecordview-class"></a>Classe COleDBRecordView
 
@@ -51,7 +51,7 @@ A exibição é um modo de exibição de formulário conectado diretamente a um 
 Você pode usar funções DDX com `COleDbRecordView` obter dados diretamente do conjunto de registros de banco de dados e exibi-lo em um controle de caixa de diálogo. Você deve usar o `DDX_*` métodos (como `DDX_Text`), e não a `DDX_Field*` funções (como `DDX_FieldText`) com `COleDbRecordView`. `DDX_FieldText` não funcionará com `COleDbRecordView` porque `DDX_FieldText` usa um argumento adicional do tipo `CRecordset*` (para `CRecordView`) ou `CDaoRecordset*` (para `CDaoRecordView`).
 
 > [!NOTE]
->  Se você estiver trabalhando com as classes de objetos de acesso a dados (DAO) em vez de OLE DB consumidor classes de modelo, use a classe [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) em vez disso. Para obter mais informações, consulte o artigo [visão geral: banco de dados de programação](../../data/data-access-programming-mfc-atl.md).
+>  Se você estiver trabalhando com as classes de objetos de acesso a dados (DAO) em vez de OLE DB consumidor classes de modelo, use a classe [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) em vez disso. Para obter mais informações, consulte o artigo [visão geral: Programação de banco de dados](../../data/data-access-programming-mfc-atl.md).
 
 `COleDBRecordView` Controla de posição do usuário no conjunto de linhas para que o modo de exibição de registro possa atualizar a interface do usuário. Quando o usuário move para ambas as extremidades do conjunto de linhas, o modo de exibição do registro desabilita os objetos de interface do usuário — como itens de menu ou botões da barra de ferramentas — para a movimentação adicional na mesma direção.
 
@@ -124,7 +124,7 @@ Você deve substituir essa função de membro para construir ou obter um objeto 
 
 [!code-cpp[NVC_MFCDatabase#38](../../mfc/codesnippet/cpp/coledbrecordview-class_1.cpp)]
 
-Para obter mais informações e exemplos, consulte o artigo [exibições de registro: usando uma exibição de registro](../../data/using-a-record-view-mfc-data-access.md).
+Para obter mais informações e exemplos, consulte o artigo [exibições de registro: Usando uma exibição de registro](../../data/using-a-record-view-mfc-data-access.md).
 
 ##  <a name="onmove"></a>  COleDBRecordView::OnMove
 
@@ -164,4 +164,3 @@ Se você mover além do último registro no conjunto de registros, o modo de exi
 ## <a name="see-also"></a>Consulte também
 
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)
-

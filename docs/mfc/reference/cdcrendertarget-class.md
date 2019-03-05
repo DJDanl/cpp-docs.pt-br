@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CDCRenderTarget [MFC], GetDCRenderTarget
 - CDCRenderTarget [MFC], m_pDCRenderTarget
 ms.assetid: aa8059c9-08e6-49e4-9b8c-00fa54077a61
-ms.openlocfilehash: e172d175bba5b4c379f7cd29451d7ad4215d9c68
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 70169d2b89d9ea657898f7a96dea27556023d4e2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50541707"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268272"
 ---
 # <a name="cdcrendertarget-class"></a>Classe CDCRenderTarget
 
@@ -59,7 +59,7 @@ class CDCRenderTarget : public CRenderTarget;
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CDCRenderTarget::operator ID2D1DCRenderTarget *](#operator_id2d1dcrendertarget_star)|Interface de ID2D1DCRenderTarget retorna|
+|[CDCRenderTarget::operator ID2D1DCRenderTarget*](#operator_id2d1dcrendertarget_star)|Interface de ID2D1DCRenderTarget retorna|
 
 ### <a name="protected-data-members"></a>Membros de dados protegidos
 
@@ -107,7 +107,7 @@ BOOL BindDC(
 *dc*<br/>
 O contexto de dispositivo para o qual o destino de renderização emite comandos de desenho
 
-*Rect*<br/>
+*rect*<br/>
 As dimensões do identificador para um contexto de dispositivo (HDC) à qual o destino de renderização está associado
 
 ### <a name="return-value"></a>Valor de retorno
@@ -171,7 +171,7 @@ Um ponteiro para um objeto ID2D1DCRenderTarget.
 ID2D1DCRenderTarget* m_pDCRenderTarget;
 ```
 
-##  <a name="operator_id2d1dcrendertarget_star"></a>  CDCRenderTarget::operator ID2D1DCRenderTarget *
+##  <a name="operator_id2d1dcrendertarget_star"></a>  CDCRenderTarget::operator ID2D1DCRenderTarget*
 
 Interface de ID2D1DCRenderTarget retorna
 

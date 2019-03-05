@@ -42,12 +42,12 @@ helpviewer_keywords:
 - registry, writing to
 - registry, deleting keys
 ms.assetid: 3afce82b-ba2c-4c1a-8404-dc969e1af74b
-ms.openlocfilehash: cf2f97c1c3b389d0ee2b3d4bcdd2d9da2dbb3c8d
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 56a3289d5546db21c42d22b5e8544913bdaa78cf
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694849"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283651"
 ---
 # <a name="cregkey-class"></a>Classe CRegKey
 
@@ -69,7 +69,7 @@ class CRegKey
 |Nome|Descrição|
 |----------|-----------------|
 |[CRegKey::CRegKey](#cregkey)|O construtor.|
-|[CRegKey:: ~ CRegKey](#dtor)|O destruidor.|
+|[CRegKey::~CRegKey](#dtor)|O destruidor.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
@@ -234,7 +234,7 @@ Ponteiro para objeto CAtlTransactionManager
 
 Cria um novo objeto `CRegKey`. O objeto pode ser criado de uma já existente `CRegKey` objeto, ou de um identificador para uma chave do registro.
 
-##  <a name="dtor"></a>  CRegKey:: ~ CRegKey
+##  <a name="dtor"></a>  CRegKey::~CRegKey
 
 O destruidor.
 
@@ -362,7 +362,7 @@ LONG GetKeySecurity(
 *si*<br/>
 O [SECURITY_INFORMATION](/windows/desktop/SecAuthZ/security-information) valor que indica as informações de segurança solicitado.
 
-*PSD*<br/>
+*psd*<br/>
 Um ponteiro para um buffer que recebe uma cópia do descritor de segurança solicitado.
 
 *pnBytes*<br/>
@@ -894,7 +894,7 @@ Especifica os componentes do descritor de segurança para definir. O valor pode 
 |OWNER_SECURITY_INFORMATION|Define o proprietário da chave SID. A chave deve ter acesso WRITE_OWNER ou o processo de chamada deve ser o proprietário do objeto ou ter o privilégio SE_TAKE_OWNERSHIP_NAME habilitado.|
 |SACL_SECURITY_INFORMATION|Define a lista de controle de acesso de sistema da chave (SACL). A chave deve ter acesso ACCESS_SYSTEM_SECURITY. O modo adequado para obter esse acesso é habilitar o SE_SECURITY_NAME [privilégio](/windows/desktop/secauthz/privileges) no token de acesso atual do chamador, abrir o identificador para o acesso ACCESS_SYSTEM_SECURITY e, em seguida, desabilite o privilégio.|
 
-*PSD*<br/>
+*psd*<br/>
 Ponteiro para um [SECURITY_DESCRIPTOR](/windows/desktop/api/winnt/ns-winnt-_security_descriptor) estrutura que especifica os atributos de segurança a ser definido para a chave especificada.
 
 ### <a name="return-value"></a>Valor de retorno

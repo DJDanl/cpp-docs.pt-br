@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CAnimationBaseObject [MFC], m_nObjectID
 - CAnimationBaseObject [MFC], m_pParentController
 ms.assetid: 76b25917-940e-4eba-940f-31d270702603
-ms.openlocfilehash: 6527abf5c91cf440bbbe76d0d5fe49ce2c5dbef7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 18b2319ea3c51edf79b6a90095b8363db830d66c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50430434"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258912"
 ---
 # <a name="canimationbaseobject-class"></a>Classe CAnimationBaseObject
 
@@ -74,7 +74,7 @@ class CAnimationBaseObject : public CObject;
 |Nome|Descrição|
 |----------|-----------------|
 |[CAnimationBaseObject::CAnimationBaseObject](#canimationbaseobject)|Sobrecarregado. Constrói um objeto de animação.|
-|[CAnimationBaseObject:: ~ CAnimationBaseObject](#canimationbaseobject__~canimationbaseobject)|O destruidor. Chamado quando um objeto de animação está sendo destruído.|
+|[CAnimationBaseObject::~CAnimationBaseObject](#canimationbaseobject__~canimationbaseobject)|O destruidor. Chamado quando um objeto de animação está sendo destruído.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
@@ -126,7 +126,7 @@ Essa classe implementa os métodos básicos para todos os objetos de animação.
 
 **Cabeçalho:** afxanimationcontroller.h
 
-##  <a name="_dtorcanimationbaseobject"></a>  CAnimationBaseObject:: ~ CAnimationBaseObject
+##  <a name="_dtorcanimationbaseobject"></a>  CAnimationBaseObject::~CAnimationBaseObject
 
 O destruidor. Chamado quando um objeto de animação está sendo destruído.
 
@@ -269,7 +269,7 @@ virtual void EnableIntegerValueChangedEvent(
 *pController*<br/>
 Um ponteiro para um controlador de pai.
 
-*bAtivar*<br/>
+*bEnable*<br/>
 Especifica se deve habilitar ou desabilitar o evento alterado do valor de inteiro.
 
 ### <a name="remarks"></a>Comentários
@@ -291,7 +291,7 @@ virtual void EnableValueChangedEvent(
 *pController*<br/>
 Um ponteiro para um controlador de pai.
 
-*bAtivar*<br/>
+*bEnable*<br/>
 Especifica se deve habilitar ou desabilitar o evento alterado do valor.
 
 ### <a name="remarks"></a>Comentários

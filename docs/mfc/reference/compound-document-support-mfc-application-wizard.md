@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - vc.appwiz.mfc.exe.compdoc
 ms.assetid: 42e1af83-12c4-438d-92eb-13835afdb148
-ms.openlocfilehash: 97443d4846141f4402e18bb19893fcac9b4f46da
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: b2ff4f312132b690223f124fd8790d0e2c172b7f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524047"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289670"
 ---
 # <a name="compound-document-support-mfc-application-wizard"></a>Suporte a documento composto, Assistente de Aplicativo MFC
 
@@ -21,14 +21,14 @@ Por padrão, o aplicativo não contém nenhum suporte a documentos compostos. Se
 
   Determina se o seu aplicativo oferece suporte a contêiner, o suporte do servidor ou ambos. Para obter mais informações sobre essa área, consulte:
 
-  - [Contêineres: implementando um contêiner](../../mfc/containers-implementing-a-container.md)
+  - [Contêineres: Implementando um contêiner](../../mfc/containers-implementing-a-container.md)
 
-  - [Servidores: implementando um servidor](../../mfc/servers-implementing-a-server.md)
+  - [servidores: Implementação de um servidor](../../mfc/servers-implementing-a-server.md)
 
   |Opção|Descrição|
   |------------|-----------------|
   |**Nenhum**|Indica que não há suporte para vinculação e incorporação (OLE). Por padrão, o Assistente de aplicativo cria um aplicativo sem suporte do ActiveX.|
-  |**Contêiner**|Contém os objetos vinculados e incorporados.|
+  |**Container**|Contém os objetos vinculados e incorporados.|
   |**Minisservidor**|Indica que o aplicativo pode criar e gerenciar objetos de documento composto. Observe que não é possível executar a miniservidores autônomo e só há suporte para itens inseridos.|
   |**Servidor completo**|Indica que o aplicativo pode criar e gerenciar objetos de documento composto. Servidores completos são capazes de executar autônomo e suporte a ambos vinculados e inseridos itens.|
   |**Contêiner/servidor completo**|Indica que o aplicativo pode ser um contêiner e um servidor. Um contêiner é um aplicativo que pode incorporar itens inseridos ou vinculados em seus próprios documentos. Um servidor é um aplicativo que pode criar itens de automação para uso por aplicativos de contêiner.|
@@ -46,4 +46,3 @@ Por padrão, o aplicativo não contém nenhum suporte a documentos compostos. Se
 ## <a name="see-also"></a>Consulte também
 
 [Assistente de aplicativo do MFC](../../mfc/reference/mfc-application-wizard.md)
-

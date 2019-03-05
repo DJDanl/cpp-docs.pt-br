@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAutoPtr class
 ms.assetid: 08988d53-4fb0-4711-bdfc-8ac29c63f410
-ms.openlocfilehash: b328d58116d3b26645a2b3a3981c11fa705878ea
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7f4f446aa97f2bf3843b830bd7fb4c4a5d74ffdb
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50615248"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259783"
 ---
 # <a name="cautoptr-class"></a>Classe CAutoPtr
 
@@ -45,7 +45,7 @@ O tipo de ponteiro.
 |Nome|Descrição|
 |----------|-----------------|
 |[CAutoPtr::CAutoPtr](#cautoptr)|O construtor.|
-|[CAutoPtr:: ~ CAutoPtr](#dtor)|O destruidor.|
+|[CAutoPtr::~CAutoPtr](#dtor)|O destruidor.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
@@ -143,7 +143,7 @@ O `CAutoPtr` objeto pode ser criado usando um ponteiro existente, caso em que el
 
 Consulte o exemplo a [visão geral de CAutoPtr](../../atl/reference/cautoptr-class.md).
 
-##  <a name="dtor"></a>  CAutoPtr:: ~ CAutoPtr
+##  <a name="dtor"></a>  CAutoPtr::~CAutoPtr
 
 O destruidor.
 

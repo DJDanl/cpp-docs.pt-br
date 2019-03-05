@@ -12,12 +12,12 @@ helpviewer_keywords:
 - application-specific events [MFC]
 - command routing [MFC], MFC
 ms.assetid: 39e68189-a580-40d0-9e35-bf5cd24a8ecf
-ms.openlocfilehash: fd9dbc58c4887a1ad62d5690ec38ed96cf77feac
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 81b0749167391a841badff5494023a2ca5d3147e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50444532"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279699"
 ---
 # <a name="how-the-framework-calls-your-code"></a>Como o Framework chama o código
 
@@ -34,4 +34,3 @@ Para obter mais informações, consulte [classe CWinApp: A classe de aplicativo]
 ## <a name="see-also"></a>Consulte também
 
 [Compilando no Framework](../mfc/building-on-the-framework.md)
-

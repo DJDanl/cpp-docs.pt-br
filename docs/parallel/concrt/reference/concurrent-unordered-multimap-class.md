@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - concurrent_unordered_multimap class
 ms.assetid: 4dada5d7-15df-4382-b9c9-348e75b2f3c1
-ms.openlocfilehash: e1a477e278de2e8ba0f1af43dfdb6081206d86e7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 446060656a79380f85d3faac560bd48910bfb2db
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50450902"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294350"
 ---
 # <a name="concurrentunorderedmultimap-class"></a>Classe concurrent_unordered_multimap
 
@@ -163,7 +163,7 @@ const_iterator cend() const;
 
 Um iterador const para o local que sucede o último elemento no contêiner simultâneo.
 
-##  <a name="clear"></a> Limpar
+##  <a name="clear"></a> clear
 
 Apaga todos os elementos no contêiner simultâneo. Essa função não é seguro de simultaneidade.
 
@@ -221,10 +221,10 @@ A função de comparação de igualdade para este multimap não ordenada.
 *_Allocator*<br/>
 O alocador para este multimap não ordenada.
 
-*Iniciar*<br/>
+*_Begin*<br/>
 A posição do primeiro elemento no intervalo de elementos a serem copiados.
 
-*Encerrar*<br/>
+*_End*<br/>
 A posição do primeiro elemento além do intervalo de elementos a serem copiados.
 
 *_Umap*<br/>
@@ -481,7 +481,7 @@ O número máximo de elementos que podem ser inseridas nesse contêiner simultâ
 
 Esse valor de limite superior, na verdade, pode ser maior do que o que o contêiner, na verdade, pode conter.
 
-##  <a name="operator_eq"></a> operador =
+##  <a name="operator_eq"></a> operator=
 
 Atribui o conteúdo de outro `concurrent_unordered_multimap` objeto para esse outro. Esse método não é seguro em simultaneidade.
 
@@ -523,7 +523,7 @@ A função membro altera o número de buckets para que seja pelo menos `_Buckets
 
 Ele gera uma [out_of_range](../../../standard-library/out-of-range-class.md) exceção se o número de buckets é inválido (0 ou maior que o número máximo de buckets).
 
-##  <a name="size"></a> Tamanho
+##  <a name="size"></a> size
 
 Retorna o número de elementos neste contêiner simultâneas. Esse método é seguro de simultaneidade.
 
@@ -539,7 +539,7 @@ O número de itens no contêiner.
 
 Na presença de inserções simultâneas, o número de elementos no contêiner simultâneo pode alterar imediatamente após chamar essa função, antes que o valor retornado ainda seja lido.
 
-##  <a name="swap"></a> troca
+##  <a name="swap"></a> swap
 
 Troca o conteúdo de dois `concurrent_unordered_multimap` objetos. Esse método não é seguro em simultaneidade.
 
@@ -724,4 +724,3 @@ O número máximo de buckets neste contêiner.
 
 [Namespace de simultaneidade](concurrency-namespace.md)<br/>
 [Contêineres e objetos em paralelo](../../../parallel/concrt/parallel-containers-and-objects.md)
-

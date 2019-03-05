@@ -52,12 +52,12 @@ helpviewer_keywords:
 - COleDocument [MFC], OnUpdatePasteLinkMenu
 - COleDocument [MFC], OnUpdatePasteMenu
 ms.assetid: dc2ecb99-03e1-44c7-bb69-48056dd1b672
-ms.openlocfilehash: 2f28178240f7d17e124970d91ec7eb338ef110e6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7f36557a4a993e8abd3004dc59372cc5a089e044
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50452128"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259744"
 ---
 # <a name="coledocument-class"></a>Classe COleDocument
 
@@ -117,7 +117,7 @@ class COleDocument : public CDocument
 
 Se você estiver escrevendo um aplicativo de contêiner simples, derive sua classe de documento da `COleDocument`. Se você estiver escrevendo um aplicativo de contêiner que dá suporte à vinculação aos itens inseridos contidos por seus documentos, derive sua classe de documento da [COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md). Se você estiver escrevendo um servidor de aplicativo ou uma combinação de contêiner/servidor, derive sua classe de documento da [COleServerDoc](../../mfc/reference/coleserverdoc-class.md). `COleLinkingDoc` e `COleServerDoc` derivados `COleDocument`, portanto, essas classes herdam todos os serviços disponíveis no `COleDocument` e `CDocument`.
 
-Para usar `COleDocument`, derive uma classe de-lo e adicionar funcionalidade para gerenciar o aplicativo não são OLE dados, bem como os itens inseridos ou vinculados. Se você definir `CDocItem`-derivadas de classes para armazenar os dados do aplicativo nativo, você pode usar a implementação do padrão definida pelo `COleDocument` para armazenar dados não são OLE e o OLE. Você também pode criar suas próprias estruturas de dados para armazenar dados não são OLE separadamente de itens OLE. Para obter mais informações, consulte o artigo [contêineres: arquivos compostos](../../mfc/containers-compound-files.md)...
+Para usar `COleDocument`, derive uma classe de-lo e adicionar funcionalidade para gerenciar o aplicativo não são OLE dados, bem como os itens inseridos ou vinculados. Se você definir `CDocItem`-derivadas de classes para armazenar os dados do aplicativo nativo, você pode usar a implementação do padrão definida pelo `COleDocument` para armazenar dados não são OLE e o OLE. Você também pode criar suas próprias estruturas de dados para armazenar dados não são OLE separadamente de itens OLE. Para obter mais informações, consulte o artigo [contêineres: Composta arquivos](../../mfc/containers-compound-files.md)...
 
 `CDocument` oferece suporte ao envio seu documento por email se houver suporte mail (MAPI). `COleDocument` atualizou [OnFileSendMail](#onfilesendmail) para manipular documentos compostos corretamente. Para obter mais informações, consulte os artigos [MAPI](../../mfc/mapi.md) e [suporte a MAPI no MFC](../../mfc/mapi-support-in-mfc.md)...
 
@@ -166,7 +166,7 @@ BOOL ApplyPrintDevice(const PRINTDLG* ppd);
 *ptd*<br/>
 Ponteiro para um `DVTARGETDEVICE` estrutura de dados, que contém informações sobre o novo dispositivo de destino de impressão. Pode ser NULL.
 
-*PPD*<br/>
+*ppd*<br/>
 Ponteiro para um `PRINTDLG` estrutura de dados, que contém informações sobre o novo dispositivo de destino de impressão. Pode ser NULL.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -201,12 +201,12 @@ void EnableCompoundFile(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parâmetros
 
-*bAtivar*<br/>
+*bEnable*<br/>
 Especifica se o suporte de arquivo composto é habilitado ou desabilitado.
 
 ### <a name="remarks"></a>Comentários
 
-Isso também é chamado de armazenamento estruturado. Normalmente você chama essa função do construtor de seu `COleDocument`-classe derivada. Para obter mais informações sobre documentos compostos, consulte o artigo [contêineres: arquivos compostos](../../mfc/containers-compound-files.md)...
+Isso também é chamado de armazenamento estruturado. Normalmente você chama essa função do construtor de seu `COleDocument`-classe derivada. Para obter mais informações sobre documentos compostos, consulte o artigo [contêineres: Composta arquivos](../../mfc/containers-compound-files.md)...
 
 Se você não chamar essa função membro, os documentos serão armazenados em um formato de arquivo ("simples") não estruturada.
 
@@ -222,7 +222,7 @@ virtual COleClientItem* GetInPlaceActiveItem(CWnd* pWnd);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Apropriei*<br/>
+*pWnd*<br/>
 Ponteiro para a janela que exibe o documento contêiner.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -239,7 +239,7 @@ COleClientItem* GetNextClientItem(POSITION& pos) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*POS*<br/>
+*pos*<br/>
 Conjunto de valores de uma referência para uma posição por uma chamada anterior a `GetNextClientItem`; o valor inicial é retornado pelo `GetStartPosition` função de membro.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -264,7 +264,7 @@ virtual CDocItem* GetNextItem(POSITION& pos) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*POS*<br/>
+*pos*<br/>
 Conjunto de valores de uma referência para uma posição por uma chamada anterior a `GetNextItem`; o valor inicial é retornado pelo `GetStartPosition` função de membro.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -289,7 +289,7 @@ COleServerItem* GetNextServerItem(POSITION& pos) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*POS*<br/>
+*pos*<br/>
 Conjunto de valores de uma referência para uma posição por uma chamada anterior a `GetNextServerItem`; o valor inicial é retornado pelo `GetStartPosition` função de membro.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -548,4 +548,3 @@ Isso permite que o framework solicitar ao usuário para salvar o documento antes
 [Exemplo MFC MFCBIND](../../visual-cpp-samples.md)<br/>
 [Classe CDocument](../../mfc/reference/cdocument-class.md)<br/>
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)
-

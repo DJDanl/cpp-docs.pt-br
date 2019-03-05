@@ -15,12 +15,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComCurrency class
 ms.assetid: a1c3d10a-bba6-40cc-8bcf-aed9023c8a9e
-ms.openlocfilehash: 5a619eef33a60dc1a34d31c3d51614de20fc8f28
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b2c07bc9c0b1e96f34798b20207dc0eb0362e534
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50451149"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277707"
 ---
 # <a name="ccomcurrency-class"></a>Classe CComCurrency
 
@@ -56,20 +56,20 @@ class CComCurrency
 |Nome|Descrição|
 |----------|-----------------|
 |[CComCurrency::operator-](#operator_-)|Esse operador é usado para realizar a subtração em um `CComCurrency` objeto.|
-|[CComCurrency::operator! =](#operator_neq)|Compara dois objetos `CComCurrency` quanto à desigualdade.|
+|[CComCurrency::operator !=](#operator_neq)|Compara dois objetos `CComCurrency` quanto à desigualdade.|
 |[CComCurrency::operator *](#operator_star)|Esse operador é usado para executar uma multiplicação em um `CComCurrency` objeto.|
 |[CComCurrency::operator * =](#operator_star_eq)|Esse operador é usado para executar uma multiplicação em um `CComCurrency` do objeto e atribui o resultado.|
 |[CComCurrency::operator /](#operator_div)|Esse operador é usado para executar a divisão em um `CComCurrency` objeto.|
-|[CComCurrency::operator / =](#operator_div_eq)|Esse operador é usado para executar a divisão em um `CComCurrency` do objeto e atribui o resultado.|
+|[CComCurrency::operator /=](#operator_div_eq)|Esse operador é usado para executar a divisão em um `CComCurrency` do objeto e atribui o resultado.|
 |[CComCurrency::operator +](#operator_add)|Esse operador é usado para executar uma adição em um `CComCurrency` objeto.|
 |[+ CComCurrency::operator =](#operator_add_eq)|Esse operador é usado para executar uma adição em um `CComCurrency` de objeto e atribuir o resultado para o objeto atual.|
 |[CComCurrency::operator <](#operator_lt)|Esse operador compara dois `CComCurrency` objetos para determinar o menor.|
 |[CComCurrency::operator < =](#operator_lt_eq)|Esse operador compara dois `CComCurrency` objetos para determinar igualdade ou o menor.|
 |[CComCurrency::operator =](#operator_eq)|Esse operador atribui o `CComCurrency` objeto para um novo valor.|
 |[CComCurrency::operator =](#operator_-_eq)|Esse operador é usado para realizar a subtração em um `CComCurrency` do objeto e atribui o resultado.|
-|[CComCurrency::operator = =](#operator_eq_eq)|Esse operador compara dois `CComCurrency` objetos quanto à igualdade.|
+|[CComCurrency::operator ==](#operator_eq_eq)|Esse operador compara dois `CComCurrency` objetos quanto à igualdade.|
 |[CComCurrency::operator >](#operator_gt)|Esse operador compara dois `CComCurrency` objetos para determinar o maior.|
-|[CComCurrency::operator > =](#operator_gt_eq)|Esse operador compara dois `CComCurrency` objetos para determinar igualdade ou maior.|
+|[CComCurrency::operator >=](#operator_gt_eq)|Esse operador compara dois `CComCurrency` objetos para determinar igualdade ou maior.|
 |[CComCurrency::operator moeda](#operator_currency)|Converte um objeto de moeda.|
 
 ### <a name="public-data-members"></a>Membros de Dados Públicos
@@ -128,10 +128,10 @@ explicit CComCurrency(LPCSTR szSrc);
 *curSrc*<br/>
 Um objeto `CComCurrency` existente.
 
-*1&gt;Operator=(&lt;1}{2&gt;cysrc&lt;2}{3&gt;)&lt;3*<br/>
+*cySrc*<br/>
 Uma variável do tipo de moeda.
 
-*bSrc*, *dSrc*, *fSrc*, *lSrc*, *1&gt;Operator=(&lt;1}{2&gt;SSRC&lt;2}{3&gt;)&lt;3*, *ulSrc, usSrc*<br/>
+*bSrc*, *dSrc*, *fSrc*, *lSrc*, *sSrc*, *ulSrc, usSrc*<br/>
 O valor inicial fornecido para a variável de membro `m_currency`.
 
 *cSrc*<br/>
@@ -140,7 +140,7 @@ Um caractere que contém o valor inicial fornecido para a variável de membro `m
 *nInteger*, *nFraction*<br/>
 O número inteiro e componentes fracionários do valor monetário inicial. Consulte a [CComCurrency](../../atl/reference/ccomcurrency-class.md) visão geral para obter mais informações.
 
-*1&gt;Operator=(&lt;1}{2&gt;pdispsrc&lt;2}{3&gt;)&lt;3*<br/>
+*pDispSrc*<br/>
 Um `IDispatch` ponteiro.
 
 *varSrc*<br/>
@@ -217,7 +217,7 @@ CURRENCY m_currency;
 
 Esse membro mantém a moeda acessados e manipulados pelos métodos dessa classe.
 
-##  <a name="operator_-"></a>  CComCurrency::operator-
+##  <a name="operator_-"></a>  CComCurrency::operator -
 
 Esse operador é usado para realizar a subtração em um `CComCurrency` objeto.
 
@@ -331,7 +331,7 @@ Retorna um `CComCurrency` objeto que representa o resultado da divisão. Se o di
 
 [!code-cpp[NVC_ATL_Utilities#59](../../atl/codesnippet/cpp/ccomcurrency-class_7.cpp)]
 
-##  <a name="operator_div_eq"></a>  CComCurrency::operator / =
+##  <a name="operator_div_eq"></a>  CComCurrency::operator /=
 
 Esse operador é usado para executar a divisão em um `CComCurrency` do objeto e atribui o resultado.
 
@@ -459,10 +459,10 @@ const CComCurrency& operator= (DECIMAL dSrc);
 *curSrc*<br/>
 Um objeto `CComCurrency`.
 
-*1&gt;Operator=(&lt;1}{2&gt;cysrc&lt;2}{3&gt;)&lt;3*<br/>
+*cySrc*<br/>
 Uma variável do tipo de moeda.
 
-*1&gt;Operator=(&lt;1}{2&gt;SSRC&lt;2}{3&gt;)&lt;3*, *fSrc*, *lSrc*, *bSrc*, *usSrc*, *dSrc*, *cSrc* , *ulSrc*, *dSrc*<br/>
+*sSrc*, *fSrc*, *lSrc*, *bSrc*, *usSrc*, *dSrc*, *cSrc*, *ulSrc*, *dSrc*<br/>
 O valor numérico para atribuir ao `CComCurrency` objeto.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -473,7 +473,7 @@ Retorna o atualizada `CComCurrency` objeto. Em caso de erro, como um estouro, es
 
 [!code-cpp[NVC_ATL_Utilities#65](../../atl/codesnippet/cpp/ccomcurrency-class_13.cpp)]
 
-##  <a name="operator_-_eq"></a>  CComCurrency::operator =
+##  <a name="operator_-_eq"></a>  CComCurrency::operator -=
 
 Esse operador é usado para realizar a subtração em um `CComCurrency` do objeto e atribui o resultado.
 
@@ -642,5 +642,5 @@ Retorna S_OK no êxito ou um erro HRESULT em caso de falha.
 ## <a name="see-also"></a>Consulte também
 
 [Classe COleCurrency](../../mfc/reference/colecurrency-class.md)<br/>
-[MOEDA](/windows/desktop/api/wtypes/ns-wtypes-tagcy)<br/>
+[CURRENCY](/windows/desktop/api/wtypes/ns-wtypes-tagcy)<br/>
 [Visão geral da classe](../../atl/atl-class-overview.md)

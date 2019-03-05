@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CAnimationVariable [MFC], m_pParentObject
 - CAnimationVariable [MFC], m_variable
 ms.assetid: 506e697e-31a8-4033-a27e-292f4d7b42d9
-ms.openlocfilehash: 1ad14060c7607698cd647ae34fb35b6ea3ae547c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 335d29e1e2e8e5b54ec1434a4c072ff3909b3823
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559556"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269026"
 ---
 # <a name="canimationvariable-class"></a>Classe CAnimationVariable
 
@@ -68,7 +68,7 @@ class CAnimationVariable;
 |Nome|Descrição|
 |----------|-----------------|
 |[CAnimationVariable::CAnimationVariable](#canimationvariable)|Constrói um objeto de variável de animação.|
-|[CAnimationVariable:: ~ CAnimationVariable](#canimationvariable__~canimationvariable)|O destruidor. Chamado quando um objeto CAnimationVariable está sendo destruído.|
+|[CAnimationVariable::~CAnimationVariable](#canimationvariable__~canimationvariable)|O destruidor. Chamado quando um objeto CAnimationVariable está sendo destruído.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
@@ -120,7 +120,7 @@ A classe CAnimationVariable encapsula o objeto COM IUIAnimationVariable. Ele tam
 
 **Cabeçalho:** afxanimationcontroller.h
 
-##  <a name="_dtorcanimationvariable"></a>  CAnimationVariable:: ~ CAnimationVariable
+##  <a name="_dtorcanimationvariable"></a>  CAnimationVariable::~CAnimationVariable
 
 O destruidor. Chamado quando um objeto CAnimationVariable está sendo destruído.
 
@@ -264,7 +264,7 @@ void EnableIntegerValueChangedEvent (
 *pController*<br/>
 Um ponteiro para o controlador de pai.
 
-*bAtivar*<br/>
+*bEnable*<br/>
 TRUE – habilitar eventos, FALSE - desabilitar eventos.
 
 ### <a name="remarks"></a>Comentários
@@ -286,7 +286,7 @@ void EnableValueChangedEvent (
 *pController*<br/>
 Um ponteiro para o controlador de pai.
 
-*bAtivar*<br/>
+*bEnable*<br/>
 TRUE – habilitar eventos, FALSE - desabilitar eventos.
 
 ### <a name="remarks"></a>Comentários
@@ -339,7 +339,7 @@ HRESULT GetValue(INT32& nValue);
 *dblValue*<br/>
 O valor atual da variável de animação.
 
-*Nvalor*<br/>
+*nValue*<br/>
 O valor atual da variável de animação.
 
 ### <a name="return-value"></a>Valor de retorno

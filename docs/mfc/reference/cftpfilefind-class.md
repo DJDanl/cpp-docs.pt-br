@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CFtpFileFind [MFC], FindNextFile
 - CFtpFileFind [MFC], GetFileURL
 ms.assetid: 9667cf01-657f-4b11-b9db-f11e5a7b4e4c
-ms.openlocfilehash: 72d1eb147f8d7387a04f25cc008cc4d4638ba691
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5da739cac1ab852ce64526b24ee2b4f66d40d570
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548220"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284821"
 ---
 # <a name="cftpfilefind-class"></a>Classe CFtpFileFind
 
@@ -93,7 +93,7 @@ O identificador de contexto para o `CFtpFileFind` objeto. Ver **comentários** p
 
 ### <a name="remarks"></a>Comentários
 
-O valor padrão para *dwContext* é enviado pelo MFC para o `CFtpFileFind` objeto o [CInternetSession](../../mfc/reference/cinternetsession-class.md) do objeto que criou o `CFtpFileFind` objeto. Você pode substituir o padrão para definir o identificador de contexto para um valor de sua escolha. O identificador de contexto é retornado ao [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) para fornecer status no objeto com a qual ela é identificada. Consulte o artigo [primeiras etapas de Internet: WinInet](../../mfc/wininet-basics.md) para obter mais informações sobre o identificador de contexto.
+O valor padrão para *dwContext* é enviado pelo MFC para o `CFtpFileFind` objeto o [CInternetSession](../../mfc/reference/cinternetsession-class.md) do objeto que criou o `CFtpFileFind` objeto. Você pode substituir o padrão para definir o identificador de contexto para um valor de sua escolha. O identificador de contexto é retornado ao [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) para fornecer status no objeto com a qual ela é identificada. Consulte o artigo [Internet primeiras etapas: O WinInet](../../mfc/wininet-basics.md) para obter mais informações sobre o identificador de contexto.
 
 ### <a name="example"></a>Exemplo
 

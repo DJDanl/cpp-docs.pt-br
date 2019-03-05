@@ -28,12 +28,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComSafeArray class
 ms.assetid: ee349aef-33db-4c85-bd08-5d86a3c9d53a
-ms.openlocfilehash: 861fdefe19a0c5b78a7874be3386873d6c253a3c
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 0262764c950b01acdb610873a995a9a6fd912997
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51521408"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57280674"
 ---
 # <a name="ccomsafearray-class"></a>Classe CComSafeArray
 
@@ -58,20 +58,20 @@ O tipo de dados a serem armazenados na matriz.
 |Nome|Descrição|
 |----------|-----------------|
 |[CComSafeArray::CComSafeArray](#ccomsafearray)|O construtor.|
-|[CComSafeArray:: ~ CComSafeArray](#dtor)|O destruidor.|
+|[CComSafeArray::~CComSafeArray](#dtor)|O destruidor.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
 |Nome|Descrição|
 |----------|-----------------|
-|[Ccomsafearray:: Add](#add)|Adiciona um ou mais elementos, ou um `SAFEARRAY` estrutura, como um `CComSafeArray`.|
+|[CComSafeArray::Add](#add)|Adiciona um ou mais elementos, ou um `SAFEARRAY` estrutura, como um `CComSafeArray`.|
 |[CComSafeArray::Attach](#attach)|Anexa uma `SAFEARRAY` estrutura para um `CComSafeArray` objeto.|
-|[Ccomsafearray:: CopyFrom](#copyfrom)|Copia o conteúdo de um `SAFEARRAY` estrutura no `CComSafeArray` objeto.|
+|[CComSafeArray::CopyFrom](#copyfrom)|Copia o conteúdo de um `SAFEARRAY` estrutura no `CComSafeArray` objeto.|
 |[CComSafeArray::CopyTo](#copyto)|Cria uma cópia do objeto `CComSafeArray`.|
 |[CComSafeArray::Create](#create)|Cria um objeto `CComSafeArray`.|
 |[CComSafeArray::Destroy](#destroy)|Destrói um objeto `CComSafeArray`.|
-|[Ccomsafearray:: Detach](#detach)|Desanexa um `SAFEARRAY` de um `CComSafeArray` objeto.|
-|[Ccomsafearray:: Getat](#getat)|Recupera um único elemento de uma matriz unidimensional.|
+|[CComSafeArray::Detach](#detach)|Desanexa um `SAFEARRAY` de um `CComSafeArray` objeto.|
+|[CComSafeArray::GetAt](#getat)|Recupera um único elemento de uma matriz unidimensional.|
 |[CComSafeArray::GetCount](#getcount)|Retorna o número de elementos na matriz.|
 |[CComSafeArray::GetDimensions](#getdimensions)|Retorna o número de dimensões na matriz.|
 |[CComSafeArray::GetLowerBound](#getlowerbound)|Retorna o limite inferior de uma determinada dimensão da matriz.|
@@ -82,7 +82,7 @@ O tipo de dados a serem armazenados na matriz.
 |[CComSafeArray::MultiDimGetAt](#multidimgetat)|Recupera um único elemento de uma matriz multidimensional.|
 |[CComSafeArray::MultiDimSetAt](#multidimsetat)|Define o valor de um elemento em uma matriz multidimensional.|
 |[CComSafeArray::Resize](#resize)|Redimensiona um `CComSafeArray` objeto.|
-|[Setat](#setat)|Define o valor de um elemento em uma matriz unidimensional.|
+|[CComSafeArray::SetAt](#setat)|Define o valor de um elemento em uma matriz unidimensional.|
 
 ### <a name="public-operators"></a>Operadores públicos
 
@@ -136,7 +136,7 @@ Um `CComSafeArray` pode conter o seguinte subconjunto dos tipos de dados VARIANT
 
 [!code-cpp[NVC_ATL_Utilities#75](../../atl/codesnippet/cpp/ccomsafearray-class_1.cpp)]
 
-##  <a name="add"></a>  Ccomsafearray:: Add
+##  <a name="add"></a>  CComSafeArray::Add
 
 Adiciona um ou mais elementos, ou um `SAFEARRAY` estrutura, como um `CComSafeArray`.
 
@@ -210,7 +210,7 @@ CComSafeArray(const SAFEARRAY* psaSrc);
 
 ### <a name="parameters"></a>Parâmetros
 
-*associado*<br/>
+*bound*<br/>
 Uma estrutura `SAFEARRAYBOUND`.
 
 *ulCount*<br/>
@@ -235,7 +235,7 @@ Um ponteiro para um `SAFEARRAY` estrutura. O construtor usa esse endereço para 
 
 Cria um objeto `CComSafeArray`.
 
-##  <a name="dtor"></a>  CComSafeArray:: ~ CComSafeArray
+##  <a name="dtor"></a>  CComSafeArray::~CComSafeArray
 
 O destruidor.
 
@@ -247,7 +247,7 @@ O destruidor.
 
 Libera todos os recursos alocados.
 
-##  <a name="copyfrom"></a>  Ccomsafearray:: CopyFrom
+##  <a name="copyfrom"></a>  CComSafeArray::CopyFrom
 
 Copia o conteúdo de um `SAFEARRAY` estrutura no `CComSafeArray` objeto.
 
@@ -336,7 +336,7 @@ Retorna S_OK no êxito ou um erro HRESULT em caso de falha.
 
 Destrói um existente `CComSafeArray` objeto e todos os dados que ele contém.
 
-##  <a name="detach"></a>  Ccomsafearray:: Detach
+##  <a name="detach"></a>  CComSafeArray::Detach
 
 Desanexa um `SAFEARRAY` de um `CComSafeArray` objeto.
 
@@ -352,7 +352,7 @@ Retorna um ponteiro para um `SAFEARRAY` objeto.
 
 Esse método desanexa o `SAFEARRAY` objeto o `CComSafeArray` objeto.
 
-##  <a name="getat"></a>  Ccomsafearray:: Getat
+##  <a name="getat"></a>  CComSafeArray::GetAt
 
 Recupera um único elemento de uma matriz unidimensional.
 
@@ -633,7 +633,7 @@ Retorna S_OK no êxito ou um erro HRESULT em caso de falha.
 
 Esse método só redimensiona a dimensão mais à direita. Ele não será redimensionado que retornam matrizes `IsResizable` como FALSE.
 
-##  <a name="setat"></a>  Setat
+##  <a name="setat"></a>  CComSafeArray::SetAt
 
 Define o valor de um elemento em uma matriz unidimensional.
 

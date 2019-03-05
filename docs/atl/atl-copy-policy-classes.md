@@ -8,12 +8,12 @@ helpviewer_keywords:
 - _Copy class
 - _CopyInterface class
 ms.assetid: 06704b68-d318-4c5d-a65b-71457fe9d00d
-ms.openlocfilehash: 535bd1a3129bab15f546f6a82d77cf4e152fc605
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 24d81506f1518f980576899a4a104bbfdc0a1438
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50452748"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296339"
 ---
 # <a name="atl-copy-policy-classes"></a>Classes de política de cópia da ATL
 
@@ -33,11 +33,11 @@ Encapsulando as informações necessárias para copiar nem converter os dados em
 
 Por definição, uma classe que fornece as seguintes funções estáticas é uma classe de política de cópia:
 
-`static void init(``DestinationType``* p);`
+`static void init(` `DestinationType` `* p);`
 
 `static HRESULT copy(` `DestinationType` `* pTo, const`  `SourceType` `* pFrom);`
 
-`static void destroy(``DestinationType``* p);`
+`static void destroy(` `DestinationType` `* p);`
 
 Você pode substituir os tipos `DestinationType` e *SourceType* com tipos de dados arbitrários para cada política de cópia.
 
@@ -82,4 +82,3 @@ VCUE_Copy.h também contém as seguintes especializações dessa classe: `Generi
 
 [Implementando uma coleção baseada na biblioteca padrão C++](../atl/implementing-an-stl-based-collection.md)<br/>
 [Exemplo de ATLCollections](../visual-cpp-samples.md)
-

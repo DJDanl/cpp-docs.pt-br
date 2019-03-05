@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CEditView [MFC], OnTextNotFound
 - CEditView [MFC], dwStyleDefault
 ms.assetid: bf38255c-fcbe-450c-95b2-3c5e35f86c37
-ms.openlocfilehash: e853a770dd1f98b1e7f06afd814962f3b3805ceb
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: a2ce38dcd8879378f7d0e4ea3f074e461c51db75
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53177869"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269845"
 ---
 # <a name="ceditview-class"></a>Classe CEditView
 
@@ -110,7 +110,7 @@ Cada `CEditView` texto do controle é mantido em seu próprio objeto de memória
 
 Criar objetos do tipo `CEditView` se desejar que uma janela de edição com a funcionalidade adicionada listada acima, ou se desejar a funcionalidade de editor de texto simples. Um `CEditView` objeto pode ocupar toda a área cliente de uma janela. Derivar suas próprias classes de `CEditView` para adicionar ou modificar a funcionalidade básica, ou para declarar classes que podem ser adicionadas a um modelo de documento.
 
-A implementação padrão da classe `CEditView` lida com os seguintes comandos: ID_EDIT_SELECT_ALL, ID_EDIT_FIND, ID_EDIT_REPLACE, ID_EDIT_REPEAT e ID_FILE_PRINT.
+A implementação padrão da classe `CEditView` lida com os seguintes comandos: ID_EDIT_SELECT_ALL, ID_EDIT_FIND, ID_EDIT_REPLACE, ID_EDIT_REPEAT, and ID_FILE_PRINT.
 
 O limite de caracteres padrão para `CEditView` é (1024 \* 1024-1 = 1048575). Isso pode ser alterado, chamando a função EM_LIMITTEXT do controle de edição subjacente. No entanto, os limites são diferentes dependendo do sistema operacional e o tipo de editar o controle (única ou várias linhas). Para obter mais informações sobre esses limites, consulte [EM_LIMITTEXT](/windows/desktop/Controls/em-limittext).
 
@@ -186,7 +186,7 @@ BOOL FindText(
 *lpszFind*<br/>
 O texto a ser encontrado.
 
-*bAvançar*<br/>
+*bNext*<br/>
 Especifica a direção da pesquisa. Se for TRUE, a direção de pesquisa é na direção do final do buffer. Se for FALSE, a direção de pesquisa é em direção ao início do buffer.
 
 *bCase*<br/>
@@ -296,7 +296,7 @@ virtual void OnFindNext(
 *lpszFind*<br/>
 O texto a ser encontrado.
 
-*bAvançar*<br/>
+*bNext*<br/>
 Especifica a direção da pesquisa. Se for TRUE, a direção de pesquisa é na direção do final do buffer. Se for FALSE, a direção de pesquisa é em direção ao início do buffer.
 
 *bCase*<br/>
@@ -355,7 +355,7 @@ virtual void OnReplaceSel(
 *lpszFind*<br/>
 O texto a ser encontrado.
 
-*bAvançar*<br/>
+*bNext*<br/>
 Especifica a direção da pesquisa. Se for TRUE, a direção de pesquisa é na direção do final do buffer. Se for FALSE, a direção de pesquisa é em direção ao início do buffer.
 
 *bCase*<br/>

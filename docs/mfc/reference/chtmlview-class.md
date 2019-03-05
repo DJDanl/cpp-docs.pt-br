@@ -194,12 +194,12 @@ helpviewer_keywords:
 - CHtmlView [MFC], SetWidth
 - CHtmlView [MFC], Stop
 ms.assetid: 904976af-73de-4aba-84ac-cfae8e2be09a
-ms.openlocfilehash: b37cff8bd3eb3bd05bc7030c4cc12b9b84568b1f
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 69a04b49cf82c2b30ece3a32f76fbb2bc9a65f01
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51333635"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295988"
 ---
 # <a name="chtmlview-class"></a>Classe CHtmlView
 
@@ -389,7 +389,7 @@ Aponta para uma cadeia de caracteres com terminação nula que representa o nome
 *dwStyle*<br/>
 Especifica os atributos de estilo de janela. Por padrão, os estilos WS_VISIBLE e WS_CHILD Windows são definidos.
 
-*Rect*<br/>
+*rect*<br/>
 Uma referência a um [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) especificando o tamanho e posição da janela de estrutura. O *rectDefault* valor permite que o Windows especificar o tamanho e posição da nova janela.
 
 *pParentWnd*<br/>
@@ -1171,10 +1171,10 @@ virtual void OnCommandStateChange(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Ncomando*<br/>
+*nCommand*<br/>
 Identificador do comando cujo estado habilitado foi alterado.
 
-*bAtivar*<br/>
+*bEnable*<br/>
 Estado habilitado. Esse parâmetro é diferente de zero se o comando é habilitado, ou zero se ele estiver desabilitado.
 
 ##  <a name="ondocumentcomplete"></a>  CHtmlView::OnDocumentComplete
@@ -1867,7 +1867,7 @@ O novo valor da propriedade.
 *lpszValue*<br/>
 Um ponteiro para uma cadeia de caracteres que contém o novo valor da propriedade.
 
-*Nvalor*<br/>
+*nValue*<br/>
 O novo valor da propriedade.
 
 ### <a name="remarks"></a>Comentários
@@ -2237,4 +2237,3 @@ Aplica-se ao navegador da Web e o Internet Explorer.
 [Classe CFormView](../../mfc/reference/cformview-class.md)<br/>
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
 [IWebBrowser2](https://msdn.microsoft.com/library/aa752127.aspx)
-

@@ -84,12 +84,12 @@ helpviewer_keywords:
 - CMenu [MFC], TrackPopupMenuEx
 - CMenu [MFC], m_hMenu
 ms.assetid: 40cacfdc-d45c-4ec7-bf28-991c72812499
-ms.openlocfilehash: 2834de457ce9e2a71537e706f0fdf84463b16a8d
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: bdc5f2ebf20949f63b3892ee8e8c6eedf05e2838
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178910"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293856"
 ---
 # <a name="cmenu-class"></a>Classe CMenu
 
@@ -309,7 +309,7 @@ UINT CheckMenuItem(
 *nIDCheckItem*<br/>
 Especifica o item de menu a ser verificada, conforme determinado pela *nVerifique*.
 
-*nVerifique*<br/>
+*nCheck*<br/>
 Especifica como verificar o item de menu e como determinar a posição do item no menu. O *nVerifique* parâmetro pode ser uma combinação de MF_CHECKED ou MF_UNCHECKED com MF_BYPOSITION ou MF_BYCOMMAND sinalizadores. Esses sinalizadores podem ser combinados usando o operador OR bit a bit. Elas têm os seguintes significados:
 
 - MF_BYCOMMAND Especifica que o parâmetro fornece a ID de comando do item de menu existente. Esse é o padrão.
@@ -1186,7 +1186,7 @@ BOOL operator!=(const CMenu& menu) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*Menu*<br/>
+*menu*<br/>
 Um `CMenu` objeto para comparação.
 
 ### <a name="remarks"></a>Comentários
@@ -1203,7 +1203,7 @@ BOOL operator==(const CMenu& menu) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*Menu*<br/>
+*menu*<br/>
 Um `CMenu` objeto para comparação.
 
 ### <a name="remarks"></a>Comentários
@@ -1424,7 +1424,7 @@ Especifica a posição horizontal em coordenadas de tela do menu pop-up. Depende
 *y*<br/>
 Especifica a posição vertical em coordenadas de tela da parte superior do menu na tela.
 
-*Apropriei*<br/>
+*pWnd*<br/>
 Identifica a janela que possui um menu pop-up. Esse parâmetro não pode ser NULL, mesmo se o sinalizador TPM_NONOTIFY for especificado. Esta janela recebe todas as mensagens WM_COMMAND no menu. No Windows versões 3.1 e posteriores, a janela não recebe mensagens WM_COMMAND até `TrackPopupMenu` retorna. No Windows 3.0, a janela recebe mensagens WM_COMMAND antes `TrackPopupMenu` retorna.
 
 *lpRect*<br/>
@@ -1466,7 +1466,7 @@ Especifica a posição horizontal em coordenadas de tela do menu pop-up.
 *y*<br/>
 Especifica a posição vertical em coordenadas de tela da parte superior do menu na tela.
 
-*Apropriei*<br/>
+*pWnd*<br/>
 Um ponteiro para a janela proprietária do menu pop-up e recebimento de mensagens do menu criado. Esta janela pode ser qualquer janela do aplicativo atual, mas não pode ser NULL. Se você especificar TPM_NONOTIFY na *fuFlags* parâmetro, a função não envia mensagens a serem *Apropriei*. A função deve retornar para a janela apontada por *Apropriei* para receber a mensagem WM_COMMAND.
 
 *lptpm*<br/>

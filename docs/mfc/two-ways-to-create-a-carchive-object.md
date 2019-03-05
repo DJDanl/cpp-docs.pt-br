@@ -13,12 +13,12 @@ helpviewer_keywords:
 - data storage [MFC], CArchive class
 - CArchive class [MFC], constructor
 ms.assetid: aefa28ce-b55c-40dc-9e42-5f038030985d
-ms.openlocfilehash: a97223602e9994647a8af16cc68de5394494c1ca
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 80e3e73840bce53691c3f5fdafb62c60bdb8f832
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50659916"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273797"
 ---
 # <a name="two-ways-to-create-a-carchive-object"></a>Duas maneiras de criar um objeto CArchive
 
@@ -60,7 +60,7 @@ Além de serializar um documento por meio da estrutura, existem outras ocasiões
 
    O segundo argumento para o `CArchive` construtor é um valor enumerado que especifica se o arquivo será usado para armazenar ou carregamento de dados para ou do arquivo. O `Serialize` função de um objeto verifica esse estado chamando o `IsStoring` função para o objeto de arquivo morto.
 
-Quando tiver terminado de armazenar ou carregamento de dados de ou para o `CArchive` de objeto, fechá-lo. Embora o `CArchive` (e `CFile`) objetos fechará automaticamente o arquivo morto (e o arquivo), ele é uma boa prática fazer isso explicitamente, pois ele facilita a recuperação de erros. Para obter mais informações sobre o tratamento de erro, consulte o artigo [exceções: exceções de detectar e exclua](../mfc/exceptions-catching-and-deleting-exceptions.md).
+Quando tiver terminado de armazenar ou carregamento de dados de ou para o `CArchive` de objeto, fechá-lo. Embora o `CArchive` (e `CFile`) objetos fechará automaticamente o arquivo morto (e o arquivo), ele é uma boa prática fazer isso explicitamente, pois ele facilita a recuperação de erros. Para obter mais informações sobre o tratamento de erro, consulte o artigo [exceções: Obtendo e excluindo exceções](../mfc/exceptions-catching-and-deleting-exceptions.md).
 
 #### <a name="to-close-the-carchive-object"></a>Para fechar o objeto CArchive
 
@@ -70,5 +70,4 @@ Quando tiver terminado de armazenar ou carregamento de dados de ou para o `CArch
 
 ## <a name="see-also"></a>Consulte também
 
-[Serialização: serializando um objeto](../mfc/serialization-serializing-an-object.md)
-
+[Serialização: Serializando um objeto](../mfc/serialization-serializing-an-object.md)

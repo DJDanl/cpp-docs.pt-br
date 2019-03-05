@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSplitterWndEx [MFC], OnDrawSplitter
 ms.assetid: 33e5eef3-05e1-4a07-a968-bf9207ce8598
-ms.openlocfilehash: fa58dbffc3e6416c18b8124f8e5edfe1ce987815
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8dedad4e99a37b13dc618859c8e6d8a83a65ea76
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50538990"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57265139"
 ---
 # <a name="csplitterwndex-class"></a>Classe CSplitterWndEx
 
@@ -80,7 +80,7 @@ virtual void OnDrawSplitter(
 *nType*<br/>
 [in] Um do `CSplitterWnd::ESplitType` valores de enumeração que especifica o elemento de janela divisor para desenhar. Os valores válidos são `splitBox`, `splitBar`, `splitIntersection` e `splitBorder`.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Um retângulo delimitador que especifica as dimensões e o local para desenhar o elemento de janela de divisão especificada.
 
 ### <a name="remarks"></a>Comentários

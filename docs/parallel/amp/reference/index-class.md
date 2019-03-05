@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - index structure
 ms.assetid: cbe79b08-0ba7-474c-9828-f1a71da39eb3
-ms.openlocfilehash: 921d87de72c13e1971d9b40474bf3d91033c0580
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 054db83e4d8e140af37dcff9a7664ffdf7902325
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50529305"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284639"
 ---
 # <a name="index-class"></a>Classe index
 
@@ -71,7 +71,7 @@ O `index` estrutura representa um vetor de coordenadas de *N* inteiros que espec
 
 **Cabeçalho:** amp. h
 
-**Namespace:** Simultaneidade
+**Namespace:** Concorrência
 
 ## <a name="index_ctor"></a> Construtor de índice
 
@@ -106,7 +106,7 @@ explicit index(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Array*<br/>
+*_Array*<br/>
 Uma matriz unidimensional com os valores de classificação.
 
 *_I*<br/>
@@ -121,7 +121,7 @@ O comprimento da dimensão para a maioria-significativos.
 *_I2*<br/>
 O comprimento da dimensão menos significativa.
 
-*Outro*<br/>
+*_Other*<br/>
 Um objeto de índice no qual o novo objeto de índice é baseado.
 
 ## <a name="operator--"></a>  operator--
@@ -139,7 +139,7 @@ index operator--(
 
 Para o operador de prefixo, o objeto de índice (* isso). Para o operador de sufixo, um novo objeto de índice.
 
-## <a name="operator_mod_eq"></a>  Operator(MOD) =
+## <a name="operator_mod_eq"></a>  operator(mod)=
 
 Calcula o módulo (resto) de cada elemento no objeto de índice quando esse elemento é dividido pelo número especificado.
 
@@ -157,7 +157,7 @@ O número a dividir por para localizar o resto.
 ## <a name="return-value"></a>Valor de retorno
 O objeto de índice.
 
-## <a name="operator_star_eq"></a>  operador * =
+## <a name="operator_star_eq"></a>  operator*=
 
 Multiplica cada elemento no objeto de índice pelo número especificado.
 ```
@@ -171,7 +171,7 @@ index<_Rank>& operator*=(
 *_Rhs*<br/>
 O número a multiplicar.
 
-## <a name="operator_div_eq"></a>  operador / =
+## <a name="operator_div_eq"></a>  operator/=
 
 Divide cada elemento no objeto de índice pelo número especificado.
 
@@ -202,7 +202,7 @@ int& operator[] (
 
 ### <a name="parameters"></a>Parâmetros
 
-*Index*<br/>
+*_Index*<br/>
 Um inteiro de 0 até a classificação menos 1.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -220,7 +220,7 @@ std::cout << idx[1] << "\n";
 std::cout << idx[2] << "\n";
 ```
 
-## <a name="operator_add_add"></a>  operador + +
+## <a name="operator_add_add"></a>  operator++
 
 Incrementa cada elemento do objeto index.
 ```
@@ -235,7 +235,7 @@ index<_Rank> operator++(
 
 Para o operador de prefixo, o objeto de índice (* isso). Para o operador de sufixo, um novo objeto de índice.
 
-## <a name="operator_add_eq"></a>  Operator + =
+## <a name="operator_add_eq"></a>  operator+=
 
 Adiciona o número especificado para cada elemento do objeto index.
 ```
@@ -268,7 +268,7 @@ index<_Rank>& operator=(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Outro*<br/>
+*_Other*<br/>
 O objeto de índice para copiar de.
 
 ### <a name="return-value"></a>Valor de retorno

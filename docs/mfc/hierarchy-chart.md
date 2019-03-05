@@ -8,12 +8,12 @@ helpviewer_keywords:
 - classes [MFC], MFC hierarchy
 - MFC, object model
 ms.assetid: 19d70341-e391-4a72-94c6-35755ce975d4
-ms.openlocfilehash: 0af7f6b9e2bb3027287ec33540c51e0784d3c56b
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 4b991c9dab2d3549ac64b5ba0b8689c6fe63f113
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175464"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275275"
 ---
 # <a name="hierarchy-chart"></a>Gráfico da hierarquia
 
@@ -29,7 +29,7 @@ A ilustração a seguir representa as classes MFC não derivadas de `CObject`:
 
 ![Classes não derivadas de CObject](../mfc/media/mfc_hierarchy_chart3of3.png "Classes não derivadas de CObject")
 
-Você pode baixar todo o gráfico do seguinte local: [MFC hierarquia gráficos baixar](https://aka.ms/hxgg8e).
+Você pode baixar todo o gráfico do seguinte local: [Download de gráficos de hierarquia MFC](https://aka.ms/hxgg8e).
 
 ## <a name="see-also"></a>Consulte também
 

@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSimpleArray class
 ms.assetid: ee0c9f39-b61c-4c18-bc43-4eada21dca3a
-ms.openlocfilehash: 6395e324d5efdba208a7f77d86ca466fb7cdbb5a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8c050002549fc6b7a18acb34f0e4f9a2f278db82
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50460457"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57263397"
 ---
 # <a name="csimplearray-class"></a>Classe CSimpleArray
 
@@ -49,7 +49,7 @@ Um objeto de característica, definindo o teste de igualdade para elementos do t
 |Nome|Descrição|
 |----------|-----------------|
 |[CSimpleArray::CSimpleArray](#csimplearray)|O construtor para a matriz simple.|
-|[CSimpleArray:: ~ CSimpleArray](#dtor)|O destruidor para a matriz simple.|
+|[CSimpleArray::~CSimpleArray](#dtor)|O destruidor para a matriz simple.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
@@ -126,7 +126,7 @@ Um objeto `CSimpleArray` existente.
 
 Inicializa os membros de dados, criando um novo vazio `CSimpleArray` objeto ou uma cópia de um existente `CSimpleArray` objeto.
 
-##  <a name="dtor"></a>  CSimpleArray:: ~ CSimpleArray
+##  <a name="dtor"></a>  CSimpleArray::~CSimpleArray
 
 O destruidor.
 

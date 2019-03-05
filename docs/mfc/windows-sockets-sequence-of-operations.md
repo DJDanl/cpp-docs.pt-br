@@ -1,5 +1,5 @@
 ---
-title: 'Windows Sockets: sequência de operações'
+title: 'Windows Sockets: Sequência de operações'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Windows Sockets [MFC], operations
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - sockets [MFC], operations
 - stream sockets [MFC]
 ms.assetid: 43ce76f5-aad3-4247-b8a6-16cc7d012796
-ms.openlocfilehash: 98d06e005a09825d53f22330d6b0b58ccb2069fd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0f9fd339fdbdfee9381ea693568f40473c2397e9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50578627"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57265542"
 ---
-# <a name="windows-sockets-sequence-of-operations"></a>Windows Sockets: sequência de operações
+# <a name="windows-sockets-sequence-of-operations"></a>Windows Sockets: Sequência de operações
 
 Este artigo ilustra, lado a lado, a sequência de operações para um soquete de servidor e um soquete de cliente. Como usam os soquetes `CArchive` objetos, eles são necessariamente [soquetes de fluxo](../mfc/windows-sockets-stream-sockets.md).
 
@@ -36,7 +36,7 @@ Até o ponto de construir um `CSocketFile` do objeto, a sequência a seguir é p
 |`// construct an archive`<br /><br /> `CArchive arIn(&file, CArchive::load);`<br /><br /> -ou-<br /><br /> `CArchive arOut(&file, CArchive::store);`<br /><br /> - ou ambos-|`// construct an archive`<br /><br /> `CArchive arIn(&file, CArchive::load);`<br /><br /> -ou-<br /><br /> `CArchive arOut(&file, CArchive::store);`<br /><br /> - ou ambos-|
 |`// use the archive to pass data:`<br /><br /> `arIn >> dwValue;`<br /><br /> -ou-<br /><br /> `arOut << dwValue;`6|`// use the archive to pass data:`<br /><br /> `arIn >> dwValue;`<br /><br /> -ou-<br /><br /> `arOut << dwValue;`6|
 
-1. Em que *nPort* é um número de porta. Ver [Windows Sockets: portas e endereços de soquete](../mfc/windows-sockets-ports-and-socket-addresses.md) para obter detalhes sobre as portas.
+1. Em que *nPort* é um número de porta. Consulte [Windows Sockets: Portas e endereços de soquete](../mfc/windows-sockets-ports-and-socket-addresses.md) para obter detalhes sobre as portas.
 
 2. O servidor sempre deve especificar uma porta para que os clientes possam se conectar. O `Create` chamada às vezes, também especifica um endereço. No lado do cliente, use os parâmetros padrão, que solicitam o MFC para usar qualquer porta disponível.
 
@@ -56,15 +56,15 @@ A sequência de chamadas mostrada na tabela anterior é para um soquete de fluxo
 
 Para obter mais informações, consulte:
 
-- [Windows Sockets: usando soquetes com arquivos mortos](../mfc/windows-sockets-using-sockets-with-archives.md)
+- [Windows Sockets: Usando soquetes com arquivos mortos](../mfc/windows-sockets-using-sockets-with-archives.md)
 
-- [Windows Sockets: usando a classe CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
+- [Windows Sockets: Usando classe CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
 
-- [Windows Sockets: portas e endereços de soquete](../mfc/windows-sockets-ports-and-socket-addresses.md)
+- [Windows Sockets: Portas e endereços de soquete](../mfc/windows-sockets-ports-and-socket-addresses.md)
 
-- [Windows Sockets: soquetes de fluxo](../mfc/windows-sockets-stream-sockets.md)
+- [Windows Sockets: Stream Sockets](../mfc/windows-sockets-stream-sockets.md)
 
-- [Windows Sockets: soquetes de datagrama](../mfc/windows-sockets-datagram-sockets.md)
+- [Windows Sockets: Soquetes de datagrama](../mfc/windows-sockets-datagram-sockets.md)
 
 ## <a name="see-also"></a>Consulte também
 
@@ -72,4 +72,3 @@ Para obter mais informações, consulte:
 [Classe CSocket](../mfc/reference/csocket-class.md)<br/>
 [CAsyncSocket::Create](../mfc/reference/casyncsocket-class.md#create)<br/>
 [CAsyncSocket::Close](../mfc/reference/casyncsocket-class.md#close)
-

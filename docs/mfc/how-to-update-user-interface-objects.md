@@ -1,5 +1,5 @@
 ---
-title: Como atualizar objetos de interface do usuário
+title: 'Como: Atualizar os objetos de Interface do usuário'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - menus [MFC], updating as context changes
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - commands [MFC], updating UI
 - enabling menus [MFC]
 ms.assetid: 82f09773-c978-427b-b321-05a6143b7369
-ms.openlocfilehash: 2e16d912d0fb9ac195df80846d5bd740d86e30ec
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0dee9bb48c11cf061af60ebaf9a80c0123d339be
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50566056"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289696"
 ---
-# <a name="how-to-update-user-interface-objects"></a>Como atualizar objetos de interface do usuário
+# <a name="how-to-update-user-interface-objects"></a>Como: Atualizar os objetos de Interface do usuário
 
 Normalmente, os itens de menu e botões da barra de ferramentas têm mais de um estado. Por exemplo, um item de menu é cinza (esmaecido) se ele estiver indisponível no presente contexto. Itens de menu também podem ser marcado ou desmarcado. Um botão de barra de ferramentas também pode ser desabilitado se não estiver disponível, ou ele pode ser verificado.
 
@@ -41,4 +41,3 @@ Os tópicos a seguir explicam o uso de manipuladores de atualização:
 ## <a name="see-also"></a>Consulte também
 
 [Menus](../mfc/menus-mfc.md)
-

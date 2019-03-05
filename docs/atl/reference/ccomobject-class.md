@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComObject class
 ms.assetid: e2b6433b-6349-4749-b4bc-acbd7a22c8b0
-ms.openlocfilehash: 57c054915ce98dd8cff6bb772cdd40f4b0f2b768
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 045292e4d06b1e86e991a755b267660b72a178da
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50660467"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299550"
 ---
 # <a name="ccomobject-class"></a>Classe CComObject
 
@@ -32,7 +32,7 @@ class CComObject : public Base
 
 #### <a name="parameters"></a>Parâmetros
 
-*Base de dados de*<br/>
+*Base*<br/>
 Sua classe, derivada de [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) ou [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), como bem como de outras interfaces que você deseja oferecer suporte no objeto.
 
 ## <a name="members"></a>Membros
@@ -100,7 +100,7 @@ O destruidor decrementa-lo.
 
 Se um `CComObject`-objeto derivado com êxito é construído usando o **nova** operador, a contagem de referência inicial é 0. Para definir a contagem de referência para o valor correto (1), fazer uma chamada para o [AddRef](#addref) função.
 
-##  <a name="dtor"></a>  CComObject:: ~ CComObject
+##  <a name="dtor"></a>  CComObject::~CComObject
 
 O destruidor.
 
@@ -122,7 +122,7 @@ static HRESULT WINAPI CreateInstance(CComObject<Base>** pp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*PP*<br/>
+*pp*<br/>
 [out] Um ponteiro para um **CComObject <** `Base` **>** ponteiro. Se `CreateInstance` não for bem-sucedida, *pp* é definido como NULL.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -153,13 +153,13 @@ HRESULT STDMETHODCALLTYPE QueryInterface(Q** pp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*IID*<br/>
+*iid*<br/>
 [in] O identificador da interface que está sendo solicitado.
 
 *ppvObject*<br/>
 [out] Um ponteiro para o ponteiro de interface identificado pelo *iid*. Se o objeto não dá suporte a essa interface, *ppvObject* é definido como NULL.
 
-*PP*<br/>
+*pp*<br/>
 [out] Um ponteiro para o ponteiro de interface identificado pelo tipo `Q`. Se o objeto não dá suporte a essa interface, *pp* é definido como NULL.
 
 ### <a name="return-value"></a>Valor de retorno

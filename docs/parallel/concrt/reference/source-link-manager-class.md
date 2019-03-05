@@ -17,12 +17,12 @@ f1_keywords:
 helpviewer_keywords:
 - source_link_manager class
 ms.assetid: 287487cf-e0fe-4c35-aa3c-24f081d1ddae
-ms.openlocfilehash: 881b4f15c7238e69a91def08e5d20ad8955ec4e6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d4979eaf9065183be646be72cfdd5a94500edf55
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50545984"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295195"
 ---
 # <a name="sourcelinkmanager-class"></a>Classe source_link_manager
 
@@ -56,7 +56,7 @@ O registro de link de rede.
 |Nome|Descrição|
 |----------|-----------------|
 |[source_link_manager](#ctor)|Constrói um objeto `source_link_manager`.|
-|[~ source_link_manager destruidor](#dtor)|Destrói o `source_link_manager` objeto.|
+|[~source_link_manager Destructor](#dtor)|Destrói o `source_link_manager` objeto.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
@@ -64,7 +64,7 @@ O registro de link de rede.
 |----------|-----------------|
 |[add](#add)|Adiciona um link de origem para o `source_link_manager` objeto.|
 |[begin](#begin)|Retorna um iterador para o primeiro elemento no `source_link_manager` objeto.|
-|[Contém](#contains)|Pesquisas de `network_link_registry` dentro desse `source_link_manager` objeto para um bloco especificado.|
+|[contains](#contains)|Pesquisas de `network_link_registry` dentro desse `source_link_manager` objeto para um bloco especificado.|
 |[count](#count)|Conta o número de blocos vinculados a `source_link_manager` objeto.|
 |[reference](#reference)|Adquire uma referência sobre o `source_link_manager` objeto.|
 |[register_target_block](#register_target_block)|Registra o bloco de destino que contenha esse `source_link_manager` objeto.|
@@ -96,7 +96,7 @@ void add(_EType _Link);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Link*<br/>
+*_Link*<br/>
 Um ponteiro para um bloco a ser adicionado.
 
 ##  <a name="begin"></a> começar
@@ -115,7 +115,7 @@ Um iterador que trata o primeiro elemento no `source_link_manager` objeto.
 
 O estado final do iterador é indicado por um `NULL` link.
 
-##  <a name="contains"></a> Contém
+##  <a name="contains"></a> contains
 
 Pesquisas de `network_link_registry` dentro desse `source_link_manager` objeto para um bloco especificado.
 
@@ -125,7 +125,7 @@ bool contains(_EType _Link);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Link*<br/>
+*_Link*<br/>
 Um ponteiro para um bloco que deve ser pesquisado no `source_link_manager` objeto.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -183,7 +183,7 @@ bool remove(_EType _Link);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Link*<br/>
+*_Link*<br/>
 Um ponteiro para um bloco a ser removido, se encontrado.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -211,7 +211,7 @@ Constrói um objeto `source_link_manager`.
 source_link_manager();
 ```
 
-##  <a name="dtor"></a> ~ source_link_manager
+##  <a name="dtor"></a> ~source_link_manager
 
 Destrói o `source_link_manager` objeto.
 

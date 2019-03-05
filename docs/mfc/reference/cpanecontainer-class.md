@@ -120,12 +120,12 @@ helpviewer_keywords:
 - CPaneContainer [MFC], StoreRecentDockSiteInfo
 - CPaneContainer [MFC], StretchPaneContainer
 ms.assetid: beb79e08-f611-4d66-ba04-053baa79bf86
-ms.openlocfilehash: bd0e238dd936dfff0677e41831c72229171cb656
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 099f1cccd178068f9b96bda6193b5ee9df3b66c3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50504371"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274954"
 ---
 # <a name="cpanecontainer-class"></a>Classe CPaneContainer
 
@@ -443,7 +443,7 @@ virtual void GetMinSize(CSize& size) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-[in] *tamanho*<br/>
+[in] *size*<br/>
 
 ### <a name="remarks"></a>Comentários
 
@@ -455,7 +455,7 @@ virtual void GetMinSizeLeft(CSize& size) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-[in] *tamanho*<br/>
+[in] *size*<br/>
 
 ### <a name="remarks"></a>Comentários
 
@@ -467,7 +467,7 @@ virtual void GetMinSizeRight(CSize& size) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-[in] *tamanho*<br/>
+[in] *size*<br/>
 
 ### <a name="remarks"></a>Comentários
 

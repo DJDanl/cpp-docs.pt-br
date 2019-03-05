@@ -66,12 +66,12 @@ helpviewer_keywords:
 - CDaoQueryDef [MFC], m_pDAOQueryDef
 - CDaoQueryDef [MFC], m_pDatabase
 ms.assetid: 9676a4a3-c712-44d4-8c5d-d1cc78288d3a
-ms.openlocfilehash: 07c508dcf4bd57855d09be5a305847d0b2981305
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 08fb2909a4fd2e5bda3dfc63d19224a515c7c699
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50664523"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283638"
 ---
 # <a name="cdaoquerydef-class"></a>Classe CDaoQueryDef
 
@@ -427,7 +427,7 @@ void GetFieldInfo(
 *nIndex*<br/>
 O índice baseado em zero do campo desejado na coleção de campos do querydef, para a pesquisa por índice.
 
-*FieldInfo*<br/>
+*fieldinfo*<br/>
 Uma referência a um `CDaoFieldInfo` objeto que retorna as informações solicitadas.
 
 *dwInfoOptions*<br/>
@@ -435,9 +435,9 @@ Opções que especificam quais informações sobre o campo a recuperar. As opç�
 
 - Tamanho do nome, tipo, AFX_DAO_PRIMARY_INFO (padrão), atributos
 
-- Informações AFX_DAO_SECONDARY_INFO principal adição: posição Ordinal, necessária, Permitir comprimento Zero, campo de origem, nome estrangeira, tabela de origem, a ordem de agrupamento
+- Adição de informações AFX_DAO_SECONDARY_INFO primário: Permitir a posição ordinal, obrigatória, Zero comprimento, o campo de origem, o nome externa, a tabela de origem, ordem de agrupamento
 
-- AFX_DAO_ALL_INFO primário e secundárias informações de adição: regra de validação do valor padrão, o texto de validação
+- AFX_DAO_ALL_INFO primário e secundárias informações de adição: Regra de validação de valor, o texto de validação padrão
 
 *lpszName*<br/>
 Uma cadeia de caracteres que contém o nome do campo desejado, para a pesquisa por nome. Você pode usar um [CString](../../atl-mfc-shared/reference/cstringt-class.md).
@@ -520,7 +520,7 @@ void GetParameterInfo(
 *nIndex*<br/>
 O índice baseado em zero do parâmetro desejado na coleção de parâmetros do querydef, para a pesquisa por índice.
 
-*infoparam*<br/>
+*paraminfo*<br/>
 Uma referência a um [CDaoParameterInfo](../../mfc/reference/cdaoparameterinfo-structure.md) objeto que retorna as informações solicitadas.
 
 *dwInfoOptions*<br/>

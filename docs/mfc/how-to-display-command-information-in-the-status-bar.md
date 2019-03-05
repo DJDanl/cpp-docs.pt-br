@@ -1,5 +1,5 @@
 ---
-title: Como exibir informações do comando na barra de status
+title: 'Como: Exibir informações de comando na barra de Status'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - prompts [MFC]
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - status bars [MFC], message area
 - status bars [MFC], displaying command information
 ms.assetid: de895cbe-61ee-46bf-9787-76b247527d6d
-ms.openlocfilehash: 6da45edf611d70920340d8f9a9c2fd8de5cc0307
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c93787b3799306d6008299e7c1be6e429bc4c2d9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50654097"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57282312"
 ---
-# <a name="how-to-display-command-information-in-the-status-bar"></a>Como exibir informações do comando na barra de status
+# <a name="how-to-display-command-information-in-the-status-bar"></a>Como: Exibir informações de comando na barra de Status
 
 Quando você executa o Assistente de aplicativo para criar o esqueleto do aplicativo, você pode dar suporte a uma barra de ferramentas e uma barra de status. Apenas uma opção no Assistente de aplicativo dá suporte a ambos. Quando uma barra de status estiver presente, o aplicativo fornece automaticamente comentários úteis quando o usuário move o ponteiro sobre os itens nos menus. O aplicativo exibe automaticamente uma cadeia de caracteres de prompt na barra de status quando o item de menu é realçado. Por exemplo, quando o usuário move o ponteiro sobre o **Recortar** comando as **editar** menu, a barra de status pode exibir "Recorta a seleção e a coloca na área de transferência" na área de mensagem da barra de status. O prompt ajuda o usuário a entender a finalidade do item de menu. Isso também funciona quando o usuário clica em um botão de barra de ferramentas.
 
@@ -25,4 +25,3 @@ Por padrão, o Assistente de aplicativo adiciona **AFX_IDS_IDLEMESSAGE**, a ID d
 ## <a name="see-also"></a>Consulte também
 
 [Tratamento e mapeamento de mensagem](../mfc/message-handling-and-mapping.md)
-

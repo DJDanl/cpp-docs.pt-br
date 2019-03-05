@@ -8,12 +8,12 @@ f1_keywords:
 - PPLINTERFACE/concurrency::scheduler_ptr::scheduler_ptr::get
 - PPLINTERFACE/concurrency::scheduler_ptr::scheduler_ptr::operator bool
 ms.assetid: e88c84af-c306-476d-aef1-f42a0fa0a80f
-ms.openlocfilehash: 0da45fa18d12b3f1c93df6b8c8736ed1bfb58ade
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 2373fe3bc8cac501d1b6b32ca66996eff47ba6f3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524988"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295039"
 ---
 # <a name="schedulerptr-structure"></a>Estrutura scheduler_ptr
 
@@ -43,7 +43,7 @@ struct scheduler_ptr;
 
 |Nome|Descrição|
 |----------|-----------------|
-|[scheduler_ptr:: Operator bool](#operator_bool)|Testar se o ponteiro de Agendador é não nulo|
+|[scheduler_ptr::operator bool](#operator_bool)|Testar se o ponteiro de Agendador é não nulo|
 |[scheduler_ptr::operator-&gt;](#operator_ptr)|Atua como um ponteiro|
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
@@ -66,7 +66,7 @@ scheduler_interface* get() const;
 
 ### <a name="return-value"></a>Valor de retorno
 
-##  <a name="operator_bool"></a>  scheduler_ptr:: Operator bool
+##  <a name="operator_bool"></a>  scheduler_ptr::operator bool
 
 Testa se o ponteiro de Agendador é não nulo.
 
@@ -74,7 +74,7 @@ Testa se o ponteiro de Agendador é não nulo.
 operator bool() const;
 ```
 
-##  <a name="operator_ptr"></a>  scheduler_ptr:: Operator-&gt;
+##  <a name="operator_ptr"></a>  scheduler_ptr::operator-&gt;
 
 Se comporta como um ponteiro.
 
