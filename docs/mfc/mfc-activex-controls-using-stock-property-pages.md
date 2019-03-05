@@ -1,5 +1,5 @@
 ---
-title: 'Controles ActiveX MFC: usando páginas de propriedade de estoque'
+title: 'Controles ActiveX MFC: Usando páginas de propriedade de estoque'
 ms.date: 09/12/2018
 f1_keywords:
 - CLSID_CPicturePropPage
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - CLSID_CPicturePropPage [MFC]
 - MFC ActiveX controls [MFC], property pages
 ms.assetid: 22638d86-ff3e-4124-933e-54b7c2a25968
-ms.openlocfilehash: f31bf245e35231b6cc62497e7bbc57ff7f0e6af1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b73a027422cfe9cbf03afece400c1b513cace151
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50545386"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304698"
 ---
-# <a name="mfc-activex-controls-using-stock-property-pages"></a>Controles ActiveX MFC: usando páginas de propriedade de estoque
+# <a name="mfc-activex-controls-using-stock-property-pages"></a>Controles ActiveX MFC: Usando páginas de propriedade de estoque
 
 Este artigo discute as páginas de propriedade de estoque disponíveis para os controles ActiveX e como usá-los.
 
@@ -31,9 +31,9 @@ Este artigo discute as páginas de propriedade de estoque disponíveis para os c
 
 Para obter mais informações sobre como usar páginas de propriedades em um controle ActiveX, consulte os seguintes artigos:
 
-- [Controles ActiveX do MFC: páginas de propriedade](../mfc/mfc-activex-controls-property-pages.md)
+- [Controles ActiveX MFC: Páginas de propriedades](../mfc/mfc-activex-controls-property-pages.md)
 
-- [Controles ActiveX do MFC: adicionando outra página de propriedades personalizada](../mfc/mfc-activex-controls-adding-another-custom-property-page.md)
+- [Controles ActiveX MFC: Adicionando outra página de propriedade personalizada](../mfc/mfc-activex-controls-adding-another-custom-property-page.md)
 
 O MFC fornece três páginas de propriedade de estoque para uso com controles ActiveX: `CLSID_CColorPropPage`, `CLSID_CFontPropPage`, e `CLSID_CPicturePropPage`. Essas páginas exibem uma interface do usuário de estoque cor, fonte e propriedades da imagem, respectivamente.
 
@@ -54,5 +54,4 @@ Depois de fazer essas modificações, recompile o projeto. Agora, o controle tiv
 ## <a name="see-also"></a>Consulte também
 
 [Controles ActiveX do MFC](../mfc/mfc-activex-controls.md)<br/>
-[Controles ActiveX do MFC: adicionando propriedades de estoque](../mfc/mfc-activex-controls-adding-stock-properties.md)
-
+[Controles ActiveX MFC: Adicionando propriedades de estoque](../mfc/mfc-activex-controls-adding-stock-properties.md)
