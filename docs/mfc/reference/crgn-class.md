@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CRgn [MFC], RectInRegion
 - CRgn [MFC], SetRectRgn
 ms.assetid: d904da84-76aa-481e-8780-b09485f49e64
-ms.openlocfilehash: 74ee046e81e0f55e5550220166c957317c2bf6cd
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 54018c3d59fe3d7e3d7a5062cda9b40da4f5d586
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178545"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279340"
 ---
 # <a name="crgn-class"></a>Classe CRgn
 
@@ -232,7 +232,7 @@ Especifica a coordenada x lógica do canto superior esquerdo do retângulo delim
 *y1*<br/>
 Especifica a coordenada y lógica do canto superior esquerdo do retângulo delimitador da elipse.
 
-*X2*<br/>
+*x2*<br/>
 Especifica a coordenada x lógica do canto inferior direito do retângulo delimitador da elipse.
 
 *y2*<br/>
@@ -454,7 +454,7 @@ Especifica a coordenada x lógica do canto superior esquerdo da região.
 *y1*<br/>
 Especifica a coordenada y lógica do canto superior esquerdo da região.
 
-*X2*<br/>
+*x2*<br/>
 Especifica a coordenada x lógica do canto inferior direito da região.
 
 *y2*<br/>
@@ -534,7 +534,7 @@ Especifica a coordenada x lógica do canto superior esquerdo da região.
 *y1*<br/>
 Especifica a coordenada y lógica do canto superior esquerdo da região.
 
-*X2*<br/>
+*x2*<br/>
 Especifica a coordenada x lógica do canto inferior direito da região.
 
 *y2*<br/>
@@ -543,7 +543,7 @@ Especifica a coordenada y lógica do canto inferior direito da região.
 *x3*<br/>
 Especifica a largura da elipse usada para criar cantos arredondados.
 
-*Y3*<br/>
+*y3*<br/>
 Especifica a altura da elipse usada para criar cantos arredondados.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -705,7 +705,7 @@ Especifica o número de unidades para mover para a esquerda ou direita.
 *y*<br/>
 Especifica o número de unidades para mover para cima ou para baixo.
 
-*ponto*<br/>
+*point*<br/>
 A coordenada x do *aponte* Especifica o número de unidades para mover para a esquerda ou direita. A coordenada y do *aponte* Especifica o número de unidades para mover para cima ou para baixo. O *aponte* parâmetro pode ser um `POINT` estrutura ou um `CPoint` objeto.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -768,7 +768,7 @@ Especifica a coordenada x lógica do ponto a ser testado.
 *y*<br/>
 Especifica a coordenada y lógica do ponto a ser testado.
 
-*ponto*<br/>
+*point*<br/>
 As coordenadas x e y do *aponte* especificar as coordenadas x e y do ponto a testar o valor de. O *aponte* parâmetro pode ser um `POINT` estrutura ou um `CPoint` objeto.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -823,7 +823,7 @@ Especifica a coordenada x do canto superior esquerdo da região retangular.
 *y1*<br/>
 Especifica a coordenada y do canto superior esquerdo da região retangular.
 
-*X2*<br/>
+*x2*<br/>
 Especifica a coordenada x do canto inferior direito da região retangular.
 
 *y2*<br/>
@@ -842,4 +842,3 @@ Use essa função em vez do `CreateRectRgn` a função de membro para evitar cha
 
 [Classe CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)
-

@@ -1,5 +1,5 @@
 ---
-title: 'Servidores: implementando janelas de quadro in-loco'
+title: 'servidores: Implementando o Windows de quadro in-loco'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - frame windows [MFC], implementing
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - frame windows [MFC], in-place
 - in-place frame windows
 ms.assetid: 09bde4d8-15e2-4fba-8d14-9b954d926b92
-ms.openlocfilehash: 4973db6274ce800e8e1fc413ffbfd44a107a64b8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 887de747ced25d427b82e528a3b85634fabff4d9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50637626"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278984"
 ---
-# <a name="servers-implementing-in-place-frame-windows"></a>Servidores: implementando janelas de quadro in-loco
+# <a name="servers-implementing-in-place-frame-windows"></a>servidores: Implementando o Windows de quadro in-loco
 
 Este artigo explica o que você deve fazer para implementar janelas com moldura no local em seu aplicativo de servidor de edição visual se você não usar o Assistente de aplicativo para criar seu aplicativo de servidor. Em vez de seguir o procedimento descrito neste artigo, você pode usar uma classe de janela com moldura no local existente de um aplicativo gerado pelo Assistente de aplicativo ou um exemplo fornecido com o Visual C++.
 
@@ -45,14 +45,13 @@ Este artigo explica o que você deve fazer para implementar janelas com moldura 
 
 A série de função chama o **se** instrução cria a barra de ferramentas nos recursos do servidor fornecido. Neste ponto, a barra de ferramentas é parte da hierarquia de janela do contêiner. Porque essa barra de ferramentas é derivada de `CToolBar`, ela passará suas mensagens ao seu proprietário, a janela do quadro do aplicativo de contêiner, a menos que você altere o proprietário. É por isso que a chamada para `SetOwner` é necessário. Essa chamada muda a janela em que os comandos são enviados para ser a janela de quadro no local do servidor, fazendo com que as mensagens a serem passados para o servidor. Isso permite que o servidor reagir às operações na barra de ferramentas que ele oferece.
 
-A ID para o bitmap de barra de ferramentas deve ser o mesmo que os outros recursos no local definidos no seu aplicativo de servidor. Ver [Menus e recursos: adições de servidor](../mfc/menus-and-resources-server-additions.md) para obter detalhes.
+A ID para o bitmap de barra de ferramentas deve ser o mesmo que os outros recursos no local definidos no seu aplicativo de servidor. Consulte [Menus e recursos: Adições de servidor](../mfc/menus-and-resources-server-additions.md) para obter detalhes.
 
 Para obter mais informações, consulte [COleIPFrameWnd](../mfc/reference/coleipframewnd-class.md), [COleResizeBar](../mfc/reference/coleresizebar-class.md), e [CDocTemplate::SetServerInfo](../mfc/reference/cdoctemplate-class.md#setserverinfo) no *referência da biblioteca de classe*.
 
 ## <a name="see-also"></a>Consulte também
 
 [Servidores](../mfc/servers.md)<br/>
-[Servidores: implementando um servidor](../mfc/servers-implementing-a-server.md)<br/>
-[Servidores: implementando documentos de servidor](../mfc/servers-implementing-server-documents.md)<br/>
-[Servidores: itens de servidor](../mfc/servers-server-items.md)
-
+[servidores: Implementação de um servidor](../mfc/servers-implementing-a-server.md)<br/>
+[servidores: Implementando documentos de servidor](../mfc/servers-implementing-server-documents.md)<br/>
+[servidores: Itens do servidor](../mfc/servers-server-items.md)

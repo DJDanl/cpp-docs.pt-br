@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CGopherLocator [MFC], CGopherLocator
 - CGopherLocator [MFC], GetLocatorType
 ms.assetid: 6fcc015f-5ae6-4959-b936-858634c71019
-ms.openlocfilehash: 336997fd4094f4e5e1eb73f467734e40440b63a5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 79adbf126438c7d9f2884987c53b573991f92cf1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50641344"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291373"
 ---
 # <a name="cgopherlocator-class"></a>Classe CGopherLocator
 
@@ -118,7 +118,7 @@ Os possíveis tipos são da seguinte maneira:
 |GOPHER_TYPE_DOS_ARCHIVE|Um arquivo morto DOS.|
 |GOPHER_TYPE_UNIX_UUENCODED|Um arquivo com codificação UU.|
 |GOPHER_TYPE_INDEX_SERVER|Um servidor de índice.|
-|GOPHER_TYPE_TELNET|Um servidor de Telnet.|
+|GOPHER_TYPE_TELNET|A Telnet Server.|
 |GOPHER_TYPE_BINARY|Um arquivo binário.|
 |GOPHER_TYPE_REDUNDANT|Um servidor duplicado. As informações contidas em são uma duplicata do servidor primário. O servidor primário é a última entrada de diretório que não tem um tipo GOPHER_TYPE_REDUNDANT.|
 |GOPHER_TYPE_TN3270|Um servidor TN3270.|

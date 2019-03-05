@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - OLE, about OLE
 ms.assetid: 5f654eb5-66b1-40c9-9215-bb85356a67f8
-ms.openlocfilehash: 5006a648729e1fc561855fcb8cba1d658a9c82cd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2501373c2ff5904343a6522e4fb18663f5de3843
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50619044"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294415"
 ---
 # <a name="ole-background"></a>tela de fundo OLE
 
@@ -26,7 +26,7 @@ OLE incorpora muitos conceitos diferentes que funcionam para atingir a meta de i
 
 - Vinculação e incorporação
 
-   Vinculação e incorporação são os dois métodos para armazenar os itens criados dentro de um documento OLE que foram criados em outro aplicativo. Para obter informações gerais sobre as diferenças entre os dois, consulte o artigo [plano de fundo OLE: vinculando e inserindo](../mfc/ole-background-linking-and-embedding.md). Para obter mais informações, consulte os artigos [recipientes](../mfc/containers.md) e [servidores](../mfc/servers.md).
+   Vinculação e incorporação são os dois métodos para armazenar os itens criados dentro de um documento OLE que foram criados em outro aplicativo. Para obter informações gerais sobre as diferenças entre os dois, consulte o artigo [plano de fundo OLE: Vinculação e incorporação](../mfc/ole-background-linking-and-embedding.md). Para obter mais informações, consulte os artigos [recipientes](../mfc/containers.md) e [servidores](../mfc/servers.md).
 
 - Ativação in-loco (edição Visual)
 
@@ -42,7 +42,7 @@ OLE incorpora muitos conceitos diferentes que funcionam para atingir a meta de i
 
 - Composta de arquivos
 
-   Arquivos compostos fornecem um formato de arquivo padrão que simplifica o armazenamento estruturado de documentos compostos para aplicativos OLE. Dentro de um arquivo composto, armazenamentos tem muitos recursos de diretórios e fluxos têm muitos recursos de arquivos. Essa tecnologia também é chamada de armazenamento estruturado. Para obter mais informações sobre arquivos compostos, consulte o artigo [contêineres: arquivos compostos](../mfc/containers-compound-files.md).
+   Arquivos compostos fornecem um formato de arquivo padrão que simplifica o armazenamento estruturado de documentos compostos para aplicativos OLE. Dentro de um arquivo composto, armazenamentos tem muitos recursos de diretórios e fluxos têm muitos recursos de arquivos. Essa tecnologia também é chamada de armazenamento estruturado. Para obter mais informações sobre arquivos compostos, consulte o artigo [contêineres: Composta arquivos](../mfc/containers-compound-files.md).
 
 - Transferência uniforme de dados
 
@@ -58,17 +58,16 @@ OLE incorpora muitos conceitos diferentes que funcionam para atingir a meta de i
 
 Alguns dos tópicos mais importantes do OLE são abordados nos seguintes artigos:
 
-- [Tela de fundo OLE: vinculando e inserindo](../mfc/ole-background-linking-and-embedding.md)
+- [Tela de fundo OLE: Vinculação e incorporação](../mfc/ole-background-linking-and-embedding.md)
 
-- [Tela de fundo OLE: contêineres e servidores](../mfc/ole-background-containers-and-servers.md)
+- [Tela de fundo OLE: Contêineres e servidores](../mfc/ole-background-containers-and-servers.md)
 
-- [Tela de fundo OLE: estratégias de implementação](../mfc/ole-background-implementation-strategies.md)
+- [Tela de fundo OLE: Estratégias de implementação](../mfc/ole-background-implementation-strategies.md)
 
-- [Tela de fundo OLE: implementação de MFC](../mfc/ole-background-mfc-implementation.md)
+- [Tela de fundo OLE: Implementação do MFC](../mfc/ole-background-mfc-implementation.md)
 
 Para informações gerais de OLE não encontradas nos artigos acima, pesquise por OLE no MSDN.
 
 ## <a name="see-also"></a>Consulte também
 
 [OLE](../mfc/ole-in-mfc.md)
-

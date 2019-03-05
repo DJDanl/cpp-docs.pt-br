@@ -220,12 +220,12 @@ helpviewer_keywords:
 - CHtmlEditCtrlBase [MFC], Unlink
 - CHtmlEditCtrlBase [MFC], UnorderList
 ms.assetid: e0cc74b4-8320-4570-b673-16c03d2ae266
-ms.openlocfilehash: 11bfa8304b51ed25b934a97109db7da7bb39f49a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ebc296c66ee818e5c72207e0ca7b436f386fb68d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50590132"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293934"
 ---
 # <a name="chtmleditctrlbase-class"></a>Classe CHtmlEditCtrlBase
 
@@ -398,7 +398,7 @@ A URL da imagem.
 Tipo de marca: 0 significa que a imagem é para a marca de abertura. 1 significa que a imagem é para a marca de fechamento. 2 significa que a imagem é para as marcas de abertura e fechamento. Marcas únicas como br e comentário devem ser adicionadas com o tipo de marca definido como 0.
 
 *nAlignment*<br/>
-Alinhamento (somente elementos retangulares): esse parâmetro indica que a imagem é para um elemento com um atributo de alinhamento. À esquerda, = 0, center = 1, direita = 2 e undefined = 3. À esquerda, direita ou atributos center devem ser explicitamente definido no elemento.
+Alinhamento (somente elementos retangulares): Esse parâmetro indica que a imagem é para um elemento com um atributo de alinhamento. À esquerda, = 0, center = 1, direita = 2 e undefined = 3. À esquerda, direita ou atributos center devem ser explicitamente definido no elemento.
 
 *nPosInfo*<br/>
 As informações de posicionamento. Determina quais estilos em cascata folhas de valor de posicionamento (CSS) o glifo se aplica, onde estático posicionamento = 0, o posicionamento absoluto = 1, posicionamento relativo = 2 e todos os = 3. Este campo permite que você especifique um glifo de uma marca quando ele não está posicionado e outro glifo para mostrar um ponto de ancoragem, quando a marca é posicionada.
@@ -2566,4 +2566,3 @@ Esse método envia o [ID de comando de IDM UNORDERLIST](https://msdn.microsoft.c
 
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
 [Exemplo de HTMLEdit](../../visual-cpp-samples.md)
-

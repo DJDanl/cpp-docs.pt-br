@@ -1,5 +1,5 @@
 ---
-title: 'Objetos e origens de dados: manipulação'
+title: 'Objetos de dados e fontes de dados: Manipulação'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - data objects [MFC], manipulating
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - delayed rendering [MFC]
 - OLE [MFC], data sources
 ms.assetid: f7f27e77-bb5d-4131-b819-d71bf929ebaf
-ms.openlocfilehash: ee5cb320cb07a656675bd6735d6761cb69573d0f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 81dfe911866c4d1ba1720ee2c9854076c499f0a3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50636144"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57286745"
 ---
-# <a name="data-objects-and-data-sources-manipulation"></a>Objetos e origens de dados: manipulação
+# <a name="data-objects-and-data-sources-manipulation"></a>Objetos de dados e fontes de dados: Manipulação
 
 Depois que um objeto de dados ou fonte de dados tiver sido criado, você pode executar um número de operações comuns em dados, como inserção e remoção de dados, enumerando os formatos de que dados se encontra e muito mais. Este artigo descreve as técnicas necessárias para concluir as operações mais comuns. Os tópicos incluem:
 
@@ -67,7 +67,7 @@ Antes de um aplicativo permite que o usuário cole dados nele, ele precisa saber
 
    - Chamar o objeto de dados `BeginEnumFormats` a função de membro para enumerar os formatos disponíveis na área de transferência. Em seguida, chame `GetNextFormat` até que a área de transferência retorna um formato que o aplicativo tiver suporte ou não há nenhum formato mais.
 
-Se você estiver usando **ON_UPDATE_COMMAND_UI**, agora você pode habilitar a colar e, possivelmente, Colar especial itens no menu Editar. Para fazer isso, chame `CMenu::EnableMenuItem` ou `CCmdUI::Enable`. Para obter mais informações sobre quais contêiner os aplicativos devem fazer com itens de menu e quando, consulte [Menus e recursos: adições de contêiner](../mfc/menus-and-resources-container-additions.md).
+Se você estiver usando **ON_UPDATE_COMMAND_UI**, agora você pode habilitar a colar e, possivelmente, Colar especial itens no menu Editar. Para fazer isso, chame `CMenu::EnableMenuItem` ou `CCmdUI::Enable`. Para obter mais informações sobre quais contêiner os aplicativos devem fazer com itens de menu e quando, consulte [Menus e recursos: Adições de contêiner](../mfc/menus-and-resources-container-additions.md).
 
 ##  <a name="_core_retrieving_data_from_a_data_object"></a> Recuperando dados de um objeto de dados
 

@@ -1,5 +1,5 @@
 ---
-title: 'Controles ActiveX MFC: usando associação de dados em um controle ActiveX'
+title: 'Controles ActiveX MFC: Usando vinculação de dados em um controle ActiveX'
 ms.date: 11/19/2018
 f1_keywords:
 - bindable
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - controls [MFC], data binding
 - bound controls [MFC], MFC ActiveX
 ms.assetid: 476b590a-bf2a-498a-81b7-dd476bd346f1
-ms.openlocfilehash: a5cb73496cd6678e3f45500d9d53c2127b0fb17c
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: e21a31b71e681cdffed555c10079c2598967543f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175792"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57265945"
 ---
-# <a name="mfc-activex-controls-using-data-binding-in-an-activex-control"></a>Controles ActiveX MFC: usando associação de dados em um controle ActiveX
+# <a name="mfc-activex-controls-using-data-binding-in-an-activex-control"></a>Controles ActiveX MFC: Usando vinculação de dados em um controle ActiveX
 
 Um dos usos mais poderosos de controles ActiveX é vinculação de dados, que permite que uma propriedade do controle a ser associado a um campo específico em um banco de dados. Quando um usuário modifica dados nessa propriedade associada, o controle notifica o banco de dados e solicitações que o campo de registro sejam atualizados. O banco de dados, em seguida, notifica o controle do sucesso ou falha da solicitação.
 
@@ -136,4 +136,3 @@ Agora você pode compilar o projeto, que registrará o controle. Quando você in
 ## <a name="see-also"></a>Consulte também
 
 [Controles ActiveX do MFC](../mfc/mfc-activex-controls.md)
-

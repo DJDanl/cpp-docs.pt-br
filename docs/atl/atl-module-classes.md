@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ATL, module classes
 - module classes
 ms.assetid: fd75382d-c955-46ba-a38e-37728b7fa00f
-ms.openlocfilehash: 47ab7f69e5df98dbd9b09adaa2676c22fdf72bed
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2fe659b47893f821aab4cda31ab1a4e9a6788ec6
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505255"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295455"
 ---
 # <a name="atl-module-classes"></a>Classes de módulo ATL
 
@@ -59,4 +59,3 @@ A funcionalidade de `CComModule` foi distribuído em várias classes novas pelos
 
 [Conceitos](../atl/active-template-library-atl-concepts.md)<br/>
 [Visão geral da classe](../atl/atl-class-overview.md)
-

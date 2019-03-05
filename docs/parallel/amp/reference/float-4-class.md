@@ -268,12 +268,12 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::float_4::get_z
 - amp_short_vectors/Concurrency::graphics::float_4::set_xyzw
 ms.assetid: 10f92170-e58c-4afc-8198-fc5778d56038
-ms.openlocfilehash: 97302504303a540eb691f7af15f7d346d0d50ce3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 63dbc38fd4c5c6d668dda525416ec4ff2f05b50f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50459768"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275201"
 ---
 # <a name="float4-class"></a>Classe float_4
 
@@ -446,10 +446,10 @@ class float_4;
 |----------|-----------------|
 |float_4::operator-||
 |float_4::operator--||
-|float_4::Operator * =||
-|float_4::Operator =||
-|float_4::Operator++||
-|float_4::Operator+ =||
+|float_4::operator*=||
+|float_4::operator/=||
+|float_4::operator++||
+|float_4::operator+=||
 |float_4::operator=||
 |float_4::operator-=||
 
@@ -528,7 +528,7 @@ class float_4;
 |float_4::rgb||
 |float_4::rgba||
 |float_4::w||
-|float_4::WX||
+|float_4::wx||
 |float_4::wxy||
 |float_4::wxyz||
 |float_4::wxz||
@@ -570,7 +570,7 @@ class float_4;
 |float_4::yxwz||
 |float_4::yxz||
 |float_4::yxzw||
-|float_4::YZ||
+|float_4::yz||
 |float_4::yzw||
 |float_4::yzwx||
 |float_4::yzx||
@@ -651,7 +651,7 @@ explicit inline float_4(
 *_V0*<br/>
 O valor para inicializar o elemento 0.
 
-*V1*<br/>
+*_V1*<br/>
 O valor para inicializar o elemento 1.
 
 *_V2*<br/>
@@ -663,10 +663,10 @@ O valor para inicializar o elemento 3.
 *_V*<br/>
 O valor para a inicialização.
 
-*Outro*<br/>
+*_Other*<br/>
 O objeto usado para inicializar.
 
-##  <a name="float_4__size"></a> Tamanho
+##  <a name="float_4__size"></a> size
 
 ```
 static const int size = 4;

@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CAnimationValue [MFC], GetAnimationVariableList
 - CAnimationValue [MFC], m_value
 ms.assetid: 78c5ae19-ede5-4f20-bfbe-68b467b603c2
-ms.openlocfilehash: 9a43536e3f9f90b70d5d68eb5ce5d277f9b42e00
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 86a2caa8946bcafeabf85687a24b2430ecefe790
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50613788"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283534"
 ---
 # <a name="canimationvalue-class"></a>Classe CAnimationValue
 
@@ -66,7 +66,7 @@ class CAnimationValue : public CAnimationBaseObject;
 |----------|-----------------|
 |[CAnimationValue::operator dupla](#operator_double)|Fornece a conversão entre CAnimationValue e DOUBLE.|
 |[CAnimationValue::operator INT32](#operator_int32)|Fornece a conversão entre CAnimationValue e INT32.|
-|[CAnimationValue::operator =](#operator_eq)|Sobrecarregado. Atribui um valor INT32 a CAnimationValue.|
+|[CAnimationValue::operator=](#operator_eq)|Sobrecarregado. Atribui um valor INT32 a CAnimationValue.|
 
 ### <a name="protected-data-members"></a>Membros de dados protegidos
 
@@ -168,7 +168,7 @@ BOOL GetValue(INT32& nValue);
 *dblValue*<br/>
 Saída. Quando a função retorna, ele contém um valor atual da variável de animação.
 
-*Nvalor*<br/>
+*nValue*<br/>
 Saída. Quando a função retorna, ele contém um valor atual da variável de animação.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -203,7 +203,7 @@ A variável de animação encapsulada que representa o valor da animação.
 CAnimationVariable m_value;
 ```
 
-##  <a name="operator_double"></a>  CAnimationValue::operator dupla
+##  <a name="operator_double"></a>  CAnimationValue::operator DOUBLE
 
 Fornece a conversão entre CAnimationValue e DOUBLE.
 
@@ -235,7 +235,7 @@ Valor atual do valor da animação como inteiro.
 
 Fornece a conversão entre CAnimationValue e INT32. Internamente, esse método chama GetValue e não verifica se há erros. Se falhar GetValue, o valor retornado conterá um valor padrão definido anteriormente no construtor ou com SetDefaultValue.
 
-##  <a name="operator_eq"></a>  CAnimationValue::operator =
+##  <a name="operator_eq"></a>  CAnimationValue::operator=
 
 Atribui um valor duplo a CAnimationValue.
 

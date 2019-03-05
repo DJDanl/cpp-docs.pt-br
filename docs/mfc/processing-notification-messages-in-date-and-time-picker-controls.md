@@ -14,12 +14,12 @@ helpviewer_keywords:
 - DTN_FORMAT notification [MFC]
 - DateTimePicker control [MFC]
 ms.assetid: ffbe29ab-ff80-4609-89f7-260b404439c4
-ms.openlocfilehash: 6a88e257fa44d16563d090df4f989286dbda0a51
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ce84863744629d30248f94b94448d776177f9841
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607344"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57292881"
 ---
 # <a name="processing-notification-messages-in-date-and-time-picker-controls"></a>Processando mensagens de notificação em controles de seletor de data e hora
 
@@ -47,4 +47,3 @@ A lista a seguir descreve as várias notificações enviadas pelo controle de se
 
 [Usando CDateTimeCtrl](../mfc/using-cdatetimectrl.md)<br/>
 [Controles](../mfc/controls-mfc.md)
-

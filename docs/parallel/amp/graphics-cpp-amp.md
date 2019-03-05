@@ -2,12 +2,12 @@
 title: Elementos gráficos (C++ AMP)
 ms.date: 11/04/2016
 ms.assetid: 190a98a4-5f7d-442e-866b-b374ca74c16f
-ms.openlocfilehash: fcc1f11ff716654aadef91d86137b97e93b0a80f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4a40575d84c9a0efedcb3c7c9717fc310870b530
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50570296"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260875"
 ---
 # <a name="graphics-c-amp"></a>Elementos gráficos (C++ AMP)
 
@@ -31,7 +31,7 @@ A biblioteca de vetor curto fornece algumas das funcionalidades do [tipo de veto
 |-|--------------|--------------|--------------|
 |double|double_2<br /><br /> double2|double_3<br /><br /> double3|double_4<br /><br /> double4|
 |float|float_2<br /><br /> float2|float_3<br /><br /> float3|float_4<br /><br /> float4|
-|int|int_2<br /><br /> int2|int_3<br /><br /> INT3|int_4<br /><br /> int4|
+|int|int_2<br /><br /> int2|int_3<br /><br /> int3|int_4<br /><br /> int4|
 |norm|norm_2<br /><br /> norm2|norm_3<br /><br /> norm3|norm_4<br /><br /> norm4|
 |uint|uint_2<br /><br /> uint2|uint_3<br /><br /> uint3|uint_4<br /><br /> uint4|
 |unorm|unorm_2<br /><br /> unorm2|unorm_3<br /><br /> unorm3|unorm_4<br /><br /> unorm4|
@@ -206,7 +206,7 @@ A tabela a seguir lista os bits válidos por canal para cada tipo de vetor de cl
 |float, float_2, float_4|16, 32|
 |float_3|32|
 |Double, double_2|64|
-|NORM, norm_2, norm_4<br /><br /> unorm, unorm_2, unorm, 4|8, 16|
+|norm, norm_2, norm_4<br /><br /> unorm, unorm_2, unorm, 4|8, 16|
 
 ### <a name="writing-to-texture-objects"></a>Gravando em objetos de textura
 
@@ -344,8 +344,8 @@ O tipo de elemento de um `texture_view`— seu característica const e também o
 
 |Tipo|Componentes|Ler|Write|Amostragem|Acesso de Mipmap|
 |----------|----------------|----------|-----------|--------------|-------------------|
-|texture_view\<const T, N >|1, 2, 4|Sim|Não (1)|Sim|Sim, indexável. Intervalo é determinado na instanciação.|
-|Texture_view\<T, N >|1<br /><br /> 2, 4|Sim<br /><br /> Não (2)|Sim<br /><br /> Sim|Não (1)<br /><br /> Não (1)|Sim, um nível. Nível é determinado na instanciação.<br /><br /> Sim, um nível. Nível é determinado na instanciação.|
+|texture_view\<const T, N>|1, 2, 4|Sim|Não (1)|Sim|Sim, indexável. Intervalo é determinado na instanciação.|
+|Texture_view\<T, N>|1<br /><br /> 2, 4|Sim<br /><br /> Não (2)|Sim<br /><br /> Sim|Não (1)<br /><br /> Não (1)|Sim, um nível. Nível é determinado na instanciação.<br /><br /> Sim, um nível. Nível é determinado na instanciação.|
 
 Nesta tabela, você pode ver que as exibições de textura somente leitura suportam totalmente os novos recursos em troca de não poder gravar no modo de exibição. Visualizações modificáveis de textura são limitadas e só podem acessar um nível de mipmap. Modos de exibição de leitura-gravação da textura são mais especializados que as de gravação, porque adicionam os requisitos que o tipo de elemento de exibição de textura tem somente um componente. Observe que amostragem não é suportada para visualizações modificáveis de textura porque é uma operação orientada à leitura.
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CDocObjectServerItem [MFC], OnHide
 - CDocObjectServerItem [MFC], OnShow
 ms.assetid: 530f7156-50c8-4806-9328-602c9133f622
-ms.openlocfilehash: cecbab366b64c85b39131a13233598abec83d5ab
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f11c202e85453897f6ebf04d8dc165d2b733a406
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50536520"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275253"
 ---
 # <a name="cdocobjectserveritem-class"></a>Classe de CDocObjectServerItem
 
@@ -55,7 +55,7 @@ class CDocObjectServerItem : public COleServerItem
 
 ## <a name="remarks"></a>Comentários
 
-`CDocObjectServerItem` Define as funções de membro substituíveis: [OnHide](#onhide), [OnDoVerb](#ondoverb), e [OnShow](#onshow).
+`CDocObjectServerItem` Define as funções de membro substituível: [OnHide](#onhide), [OnDoVerb](#ondoverb), e [OnShow](#onshow).
 
 Para usar `CDocObjectServerItem`, garantem que o [OnGetEmbeddedItem](../../mfc/reference/coleserverdoc-class.md#ongetembeddeditem) substituir em seu `COleServerDoc`-classe derivada retorna um novo `CDocObjectServerItem` objeto. Se você precisar alterar qualquer funcionalidade no item, você pode criar uma nova instância da sua própria `CDocObjectServerItem`-classe derivada.
 

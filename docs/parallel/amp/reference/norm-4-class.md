@@ -268,12 +268,12 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::norm_4::set_zyx
 - amp_short_vectors/Concurrency::graphics::norm_4::wy
 ms.assetid: d628b2bf-2cdb-4dbb-95c6-cd778f5e991f
-ms.openlocfilehash: ec71019e64046d693aaf96adb81762bfd536ac2f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 06e08c24a92259e34be59a9f021ae13f38e974a5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677214"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297392"
 ---
 # <a name="norm4-class"></a>Classe norm_4
 
@@ -444,12 +444,12 @@ class norm_4;
 
 |Nome|Descrição|
 |----------|-----------------|
-|norm_4::Operator-||
+|norm_4::operator-||
 |norm_4::operator--||
-|norm_4::Operator * =||
-|norm_4::Operator =||
-|norm_4::Operator++||
-|norm_4::Operator+ =||
+|norm_4::operator*=||
+|norm_4::operator/=||
+|norm_4::operator++||
+|norm_4::operator+=||
 |norm_4::operator=||
 |norm_4::operator-=||
 
@@ -469,7 +469,7 @@ class norm_4;
 |norm_4::abgr||
 |norm_4::abr||
 |norm_4::abrg||
-|norm_4::AG||
+|norm_4::ag||
 |norm_4::agb||
 |norm_4::agbr||
 |norm_4::agr||
@@ -512,7 +512,7 @@ class norm_4;
 |norm_4::grb||
 |norm_4::grba||
 |norm_4::r||
-|norm_4::RA||
+|norm_4::ra||
 |norm_4::rab||
 |norm_4::rabg||
 |norm_4::rag||
@@ -522,13 +522,13 @@ class norm_4;
 |norm_4::rbag||
 |norm_4::rbg||
 |norm_4::rbga||
-|norm_4::RG||
+|norm_4::rg||
 |norm_4::rga||
 |norm_4::rgab||
-|norm_4::RGB||
-|norm_4::RGBA||
+|norm_4::rgb||
+|norm_4::rgba||
 |norm_4::w||
-|norm_4::WX||
+|norm_4::wx||
 |norm_4::wxy||
 |norm_4::wxyz||
 |norm_4::wxz||
@@ -536,7 +536,7 @@ class norm_4;
 |norm_4::wy||
 |norm_4::wyx||
 |norm_4::wyxz||
-|norm_4::WYZ||
+|norm_4::wyz||
 |norm_4::wyzx||
 |norm_4::wz||
 |norm_4::wzx||
@@ -565,12 +565,12 @@ class norm_4;
 |norm_4::ywxz||
 |norm_4::ywz||
 |norm_4::ywzx||
-|norm_4::YX||
+|norm_4::yx||
 |norm_4::yxw||
 |norm_4::yxwz||
 |norm_4::yxz||
 |norm_4::yxzw||
-|norm_4::YZ||
+|norm_4::yz||
 |norm_4::yzw||
 |norm_4::yzwx||
 |norm_4::yzx||
@@ -669,7 +669,7 @@ explicit inline norm_4(
 *_V0*<br/>
 O valor para inicializar o elemento 0.
 
-*V1*<br/>
+*_V1*<br/>
 O valor para inicializar o elemento 1.
 
 *_V2*<br/>
@@ -681,10 +681,10 @@ O valor para inicializar o elemento 3.
 *_V*<br/>
 O valor para a inicialização.
 
-*Outro*<br/>
+*_Other*<br/>
 O objeto usado para inicializar.
 
-##  <a name="norm_4__size"></a> Tamanho
+##  <a name="norm_4__size"></a> size
 
 ```
 static const int size = 4;

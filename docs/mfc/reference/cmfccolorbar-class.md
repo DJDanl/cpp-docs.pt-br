@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CMFCColorBar [MFC], SetPropList
 - CMFCColorBar [MFC], ShowCommandMessageString
 ms.assetid: 4756ee40-25a5-4cee-af7f-acab7993d1c7
-ms.openlocfilehash: 6e6ce3f48e2b0a7b0aa8396047eb4a52015f364d
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: f1f7610fc315da65145798058fdcf9752e7873d0
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694836"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283248"
 ---
 # <a name="cmfccolorbar-class"></a>Classe CMFCColorBar
 
@@ -333,7 +333,7 @@ CMFCColorBar(
 *Cores*<br/>
 [in] Uma matriz de cores que o framework exibe no controle de barra de cores.
 
-*Cor*<br/>
+*color*<br/>
 [in] A cor selecionada inicialmente.
 
 *lpszAutoColor*<br/>
@@ -361,7 +361,7 @@ O rótulo padrão do botão automático estiver **automática**.
 *nColDockVert*<br/>
 [in] O número de colunas que a barra de cores tem quando ela estiver encaixada verticalmente.
 
-*automáticaCor*<br/>
+*colorAutomatic*<br/>
 [in] A cor padrão que a estrutura se aplica quando você clicar no botão automático.
 
 *nCommandID*<br/>
@@ -459,7 +459,7 @@ virtual BOOL CreateControl(
 *pParentWnd*<br/>
 [in] Ponteiro para a janela pai. Não pode ser NULL.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Um retângulo delimitador que especifica o local desenhar o controle de barra de cores.
 
 *nID*<br/>
@@ -494,7 +494,7 @@ static BOOL CreatePalette(
 |Parâmetro|Descrição|
 |---------------|-----------------|
 |*arColors*|[in] Uma matriz de cores.|
-|*Paleta*|[in] Uma paleta de cores.|
+|*palette*|[in] Uma paleta de cores.|
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -518,10 +518,10 @@ void EnableAutomaticButton(
 
 O rótulo padrão do botão automático estiver **automática**.
 
-*automáticaCor*<br/>
+*colorAutomatic*<br/>
 [in] A cor padrão que a estrutura se aplica quando você clicar no botão automático.
 
-*bAtivar*<br/>
+*bEnable*<br/>
 [in] TRUE para habilitar o botão automático; FALSE para desabilitar o botão automático. O valor padrão é TRUE.
 
 ### <a name="remarks"></a>Comentários
@@ -549,7 +549,7 @@ O rótulo padrão para este botão é **mais cores...** .
 *bAltColorDlg*<br/>
 [in] True para exibir o [CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md) caixa de diálogo. FALSE para exibir o padrão [CColorDialog](../../mfc/reference/ccolordialog-class.md) caixa de diálogo. O valor padrão é TRUE.
 
-*bAtivar*<br/>
+*bEnable*<br/>
 [in] TRUE para habilitar o botão; FALSE para desabilitar o botão. O valor padrão é TRUE.
 
 ##  <a name="getcolor"></a>  CMFCColorBar::GetColor
@@ -808,7 +808,7 @@ void SetColor(COLORREF color);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Cor*<br/>
+*color*<br/>
 [in] Um valor de cor RGB.
 
 ##  <a name="setcolorname"></a>  CMFCColorBar::SetColorName
@@ -823,7 +823,7 @@ static void SetColorName(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Cor*<br/>
+*color*<br/>
 [in] O valor RGB da cor.
 
 *strName*<br/>

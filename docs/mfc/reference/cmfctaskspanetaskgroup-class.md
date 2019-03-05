@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CMFCTasksPaneTaskGroup [MFC], m_rectGroup
 - CMFCTasksPaneTaskGroup [MFC], m_strName
 ms.assetid: 2111640b-a46e-4b27-b033-29e88632b86a
-ms.openlocfilehash: 2ed50950bc62a0c2f382e42782c58a0d7354116f
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: a28f00fb732727ec1334946a9e752679307cd3a0
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176582"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295221"
 ---
 # <a name="cmfctaskspanetaskgroup-class"></a>Classe CMFCTasksPaneTaskGroup
 
@@ -56,7 +56,7 @@ class CMFCTasksPaneTaskGroup : public CObject
 |----------|-----------------|
 |[CMFCTasksPaneTaskGroup::SetACCData](#setaccdata)|Determina os dados de acessibilidade para o grupo de tarefa atual.|
 
-### <a name="data-members"></a> Membros de Dados
+### <a name="data-members"></a>Membros de Dados
 
 |Nome|Descrição|
 |----------|-----------------|
@@ -124,7 +124,7 @@ Especifica se o grupo é designado como *especial* e, portanto, se a legenda do 
 *bIsCollapsed*<br/>
 Especifica se o grupo é recolhido.
 
-*Página*<br/>
+*pPage*<br/>
 Especifica a página de propriedade pertencente a esse grupo de tarefas.
 
 *hIcon*<br/>

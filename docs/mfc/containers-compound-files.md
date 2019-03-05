@@ -1,5 +1,5 @@
 ---
-title: 'Contêineres: arquivos compostos'
+title: 'Contêineres: Composta de arquivos'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - compound files [MFC]
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - OLE containers [MFC], compound files
 - access modes for files [MFC]
 ms.assetid: 8b83cb3e-76c8-4bbe-ba16-737092b36f49
-ms.openlocfilehash: 5a8ba0821d92ab41a4b95fb7b2a26da63c1df285
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8ae701af3dbf45a1b48ef223f421d17f6abee213
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50643256"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326603"
 ---
-# <a name="containers-compound-files"></a>Contêineres: arquivos compostos
+# <a name="containers-compound-files"></a>Contêineres: Composta de arquivos
 
 Este artigo explica os componentes e a implementação de arquivos compostos e as vantagens e desvantagens de usar arquivos compostos em seus aplicativos OLE.
 
@@ -85,6 +85,6 @@ No *referência do programador OLE*, consulte [IStream](/windows/desktop/api/obj
 ## <a name="see-also"></a>Consulte também
 
 [Contêineres](../mfc/containers.md)<br/>
-[Contêineres: problemas da interface do usuário](../mfc/containers-user-interface-issues.md)<br/>
+[Contêineres: Problemas da Interface do usuário](../mfc/containers-user-interface-issues.md)<br/>
 [Classe COleStreamFile](../mfc/reference/colestreamfile-class.md)<br/>
 [Classe COleDocument](../mfc/reference/coledocument-class.md)

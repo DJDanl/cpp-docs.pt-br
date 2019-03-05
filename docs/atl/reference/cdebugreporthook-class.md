@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - CDebugReportHook class
 ms.assetid: 798076c3-6e63-4286-83b8-aa1bbcd0c20c
-ms.openlocfilehash: 370581effcd7233d0f1f474c80a273809be58551
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a7c5993d1b96daaa73e7fc9509c93e66daed77f3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50551483"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262448"
 ---
 # <a name="cdebugreporthook-class"></a>Classe CDebugReportHook
 
@@ -37,7 +37,7 @@ class CDebugReportHook
 |Nome|Descrição|
 |----------|-----------------|
 |[CDebugReportHook::CDebugReportHook](#cdebugreporthook)|Chamadas [SetPipeName](#setpipename), [SetTimeout](#settimeout), e [SetHook](#sethook).|
-|[CDebugReportHook:: ~ CDebugReportHook](#dtor)|Chamadas [CDebugReportHook::RemoveHook](#removehook).|
+|[CDebugReportHook::~CDebugReportHook](#dtor)|Chamadas [CDebugReportHook::RemoveHook](#removehook).|
 
 ### <a name="public-methods"></a>Métodos públicos
 
@@ -83,7 +83,7 @@ O nome do pipe nomeado para o qual a saída de depuração deve ser enviada.
 *dwTimeout*<br/>
 O tempo em milissegundos que essa classe irá esperar para o pipe nomeado para se tornar disponível.
 
-##  <a name="dtor"></a>  CDebugReportHook:: ~ CDebugReportHook
+##  <a name="dtor"></a>  CDebugReportHook::~CDebugReportHook
 
 Chamadas [CDebugReportHook::RemoveHook](#removehook).
 

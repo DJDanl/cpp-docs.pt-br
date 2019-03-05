@@ -7,12 +7,12 @@ helpviewer_keywords:
 - database applications [MFC], creating
 - MFC, database applications
 ms.assetid: 9371da59-8536-43cd-8314-706ad320e2ec
-ms.openlocfilehash: 0f512408b54d6aa9cc5c2b44dbd359e31e8bc57f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: efd6b12b186ce0ef1c0caf57f313f6aa50425fec
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624894"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283664"
 ---
 # <a name="sequence-of-operations-for-creating-database-applications"></a>Sequência de operações para criação de aplicativos de banco de dados
 
@@ -31,7 +31,7 @@ A tabela a seguir mostra a sua função e a função da estrutura em escrever ap
 |Crie classes de exibição e o conjunto de registros registro adicionais conforme necessário.|Use o modo de exibição de classe para criar as classes e a caixa de diálogo editor para os modos de exibição de design.|Modo de exibição de classe cria arquivos adicionais para as novas classes.|
 |Crie objetos de conjunto de registros, conforme necessário em seu código. Use a cada conjunto de registros para manipular registros...|Conjuntos de registros se baseiam as classes derivadas de [CRecordset](../mfc/reference/crecordset-class.md) com os assistentes.|ODBC usa registrar troca de campos (RFX) para trocar dados entre o banco de dados e membros de dados de campo do seu conjunto de registros. Se você estiver usando uma exibição de registro, a troca de dados de caixa de diálogo (DDX) troca dados entre os controles no modo de exibição de registro e o conjunto de registros.|
 |... ou crie um explícito [CDatabase](../mfc/reference/cdatabase-class.md) em seu código para cada banco de dados que você deseja abrir.|Os objetos de conjunto de registros de base nos objetos de banco de dados.|O objeto de banco de dados fornece uma interface para a fonte de dados.|
-|Associe colunas de dados a seu conjunto de registros dinamicamente.|No ODBC, adicione código à sua classe derivada do conjunto de registros para gerenciar a associação. Consulte o artigo [conjunto de registros: dinamicamente associando dados colunas (ODBC)](../data/odbc/recordset-dynamically-binding-data-columns-odbc.md).||
+|Associe colunas de dados a seu conjunto de registros dinamicamente.|No ODBC, adicione código à sua classe derivada do conjunto de registros para gerenciar a associação. Consulte o artigo [conjunto de registros: Associando dinamicamente colunas de dados (ODBC)](../data/odbc/recordset-dynamically-binding-data-columns-odbc.md).||
 
 ## <a name="see-also"></a>Consulte também
 

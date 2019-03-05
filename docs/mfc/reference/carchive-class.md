@@ -52,12 +52,12 @@ helpviewer_keywords:
 - CArchive [MFC], WriteString
 - CArchive [MFC], m_pDocument
 ms.assetid: 9e950d23-b874-456e-ae4b-fe00781a7699
-ms.openlocfilehash: f1e5701e95ec080845f3d2422da5d6ce4b9c906b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8f169964c6a313f37b5ea50a5105af29af7b59b1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50465605"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266322"
 ---
 # <a name="carchive-class"></a>Classe CArchive
 
@@ -132,7 +132,7 @@ A extração sobrecarregada ( **>>**) e a inserção ( **<<**) operadores são i
 
 `CArchive` também dá suporte à programação com as classes MFC Windows Sockets [CSocket](../../mfc/reference/csocket-class.md) e [CSocketFile](../../mfc/reference/csocketfile-class.md). O [IsBufferEmpty](#isbufferempty) função de membro dá suporte a esse uso.
 
-Para obter mais informações sobre `CArchive`, consulte os artigos [serialização](../../mfc/serialization-in-mfc.md) e [Windows Sockets: usando soquetes com arquivos mortos](../../mfc/windows-sockets-using-sockets-with-archives.md).
+Para obter mais informações sobre `CArchive`, consulte os artigos [serialização](../../mfc/serialization-in-mfc.md) e [Windows Sockets: Usando soquetes com arquivos mortos](../../mfc/windows-sockets-using-sockets-with-archives.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -298,7 +298,7 @@ Essa função é fornecida para dar suporte à programação com a classe do MFC
 
 O motivo para usar `IsBufferEmpty` com um arquivo morto associado com um `CSocketFile` objeto é que o buffer do arquivo morto pode conter mais de uma mensagem ou registro. Depois de receber uma mensagem, você deve usar `IsBufferEmpty` para controlar um loop que continuará a receber dados até que o buffer está vazio. Para obter mais informações, consulte o [Receive](../../mfc/reference/casyncsocket-class.md#receive) função de membro da classe `CAsyncSocket`, que mostra como usar `IsBufferEmpty`.
 
-Para obter mais informações, consulte [Windows Sockets: usando soquetes com arquivos mortos](../../mfc/windows-sockets-using-sockets-with-archives.md).
+Para obter mais informações, consulte [Windows Sockets: Usando soquetes com arquivos mortos](../../mfc/windows-sockets-using-sockets-with-archives.md).
 
 ##  <a name="isloading"></a>  CArchive::IsLoading
 
@@ -352,7 +352,7 @@ void MapObject(const CObject* pOb);
 
 ### <a name="parameters"></a>Parâmetros
 
-*caixa postal*<br/>
+*pOb*<br/>
 Um ponteiro constante para o objeto que está sendo armazenado.
 
 ### <a name="remarks"></a>Comentários
@@ -552,7 +552,7 @@ UINT Read(void* lpBuf, UINT nMax);
 *lpBuf*<br/>
 Um ponteiro para um buffer fornecido pelo usuário que receberá os dados lidos do arquivo morto.
 
-*Nmáx*<br/>
+*nMax*<br/>
 Um inteiro sem sinal especificando o número de bytes a serem lidos do arquivo morto.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -653,7 +653,7 @@ Uma referência a um [CString](../../atl-mfc-shared/reference/cstringt-class.md)
 *lpsz*<br/>
 Especifica um ponteiro para um buffer fornecido pelo usuário que receberá uma cadeia de caracteres de texto terminada em nulo.
 
-*Nmáx*<br/>
+*nMax*<br/>
 Especifica o número máximo de caracteres a serem lidos. Deve ser um menor do que o tamanho do *lpsz* buffer.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -784,7 +784,7 @@ void Write(const void* lpBuf, INT nMax);
 *lpBuf*<br/>
 Um ponteiro para um buffer fornecido pelo usuário que contém os dados a serem gravados para o arquivo morto.
 
-*Nmáx*<br/>
+*nMax*<br/>
 Um inteiro que especifica o número de bytes a serem gravados para o arquivo morto.
 
 ### <a name="remarks"></a>Comentários
@@ -834,7 +834,7 @@ void WriteObject(const CObject* pOb);
 
 ### <a name="parameters"></a>Parâmetros
 
-*caixa postal*<br/>
+*pOb*<br/>
 Um ponteiro constante para o objeto que está sendo armazenado.
 
 ### <a name="remarks"></a>Comentários

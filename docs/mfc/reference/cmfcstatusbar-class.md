@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CMFCStatusBar [MFC], SetTipText
 - CMFCStatusBar [MFC], OnDrawPane
 ms.assetid: f2960d1d-f4ed-41e8-bd99-0382b2f8d88e
-ms.openlocfilehash: c4891c6bb66fe5e4b737ca9b128a01bcedcf39e7
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 94876dcf6549842a5fedbd96a93ef2cc760225ce
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176569"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326745"
 ---
 # <a name="cmfcstatusbar-class"></a>Classe CMFCStatusBar
 
@@ -275,7 +275,7 @@ void EnablePaneDoubleClick(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>Parâmetros
 
-*bAtivar*<br/>
+*bEnable*<br/>
 [in] Se for TRUE, habilite o processamento de mouse clique duas vezes. Caso contrário, desabilite o processamento de mouse clique duas vezes.
 
 ### <a name="remarks"></a>Comentários
@@ -301,7 +301,7 @@ void EnablePaneProgressBar(
 *nIndex*<br/>
 [in] Especifica o índice do painel cuja barra de progresso para habilitar.
 
-*nLargura*<br/>
+*nTotal*<br/>
 [in] Especifica o valor máximo para a barra de progresso.
 
 *bDisplayText*<br/>
@@ -596,7 +596,7 @@ void SetPaneAnimation(
 *nFrameRate*<br/>
 [in] Especifica a taxa de quadros, em milissegundos, para a animação.
 
-*b Update*<br/>
+*bUpdate*<br/>
 [in] Se for TRUE, atualize o conteúdo do painel imediatamente. Caso contrário, o conteúdo do painel é atualizado quando são invalidado.
 
 ### <a name="remarks"></a>Comentários
@@ -622,7 +622,7 @@ void SetPaneBackgroundColor(
 *clrBackground*<br/>
 [in] Especifica a nova cor de plano de fundo.
 
-*b Update*<br/>
+*bUpdate*<br/>
 [in] Se for TRUE, atualize o conteúdo do painel imediatamente. Caso contrário, não atualize o conteúdo do painel até que o painel é invalidado por outro método.
 
 ##  <a name="setpaneicon"></a>  CMFCStatusBar::SetPaneIcon
@@ -650,7 +650,7 @@ void SetPaneIcon(
 *hIcon*<br/>
 [in] Especifica um identificador para o ícone a ser definido como a imagem do painel.
 
-*b Update*<br/>
+*bUpdate*<br/>
 [in] Especifica se deve atualizar o conteúdo do painel imediatamente.
 
 *hBmp*<br/>
@@ -703,7 +703,7 @@ void SetPaneProgress(
 *nCurr*<br/>
 [in] Especifica o valor atual do indicador de progresso.
 
-*b Update*<br/>
+*bUpdate*<br/>
 [in] Especifica se o painel deve ser atualizado imediatamente.
 
 ### <a name="remarks"></a>Comentários
@@ -740,7 +740,7 @@ virtual BOOL SetPaneText(
 
 [in] *nIndex*<br/>
 [in] *lpszNewText*<br/>
-[in] *b Update*<br/>
+[in] *bUpdate*<br/>
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -765,7 +765,7 @@ void SetPaneTextColor(
 *clrText*<br/>
 [in] Especifica a cor do texto.
 
-*b Update*<br/>
+*bUpdate*<br/>
 [in] Se for TRUE, atualize o conteúdo do painel imediatamente. Caso contrário, não atualize o conteúdo do painel até que o painel é invalidado por outro método.
 
 ##  <a name="setpanewidth"></a>  CMFCStatusBar::SetPaneWidth
@@ -783,7 +783,7 @@ void SetPaneWidth(
 *nIndex*<br/>
 [in] O índice do painel de barra de status para o qual definir uma nova largura.
 
-*CX*<br/>
+*cx*<br/>
 [in] A nova largura do painel da barra de status, em pixels.
 
 ##  <a name="settiptext"></a>  CMFCStatusBar::SetTipText

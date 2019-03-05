@@ -28,12 +28,12 @@ helpviewer_keywords:
 - COlePasteSpecialDialog [MFC], GetSelectionType
 - COlePasteSpecialDialog [MFC], m_ps
 ms.assetid: 0e82ef9a-9bbe-457e-8240-42c86a0534f7
-ms.openlocfilehash: 247514c37ef62987baa31be83efc73e05735904a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1d135a2a254f71a4123a8bd338e1d6e9f87b74c2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50530020"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303307"
 ---
 # <a name="colepastespecialdialog-class"></a>Classe COlePasteSpecialDialog
 
@@ -122,7 +122,7 @@ void AddFormat(
 
 ### <a name="parameters"></a>Parâmetros
 
-*FMT*<br/>
+*fmt*<br/>
 Referência para o tipo de dados a ser adicionado.
 
 *lpszFormat*<br/>
@@ -134,10 +134,10 @@ Cadeia de caracteres que descreve o resultado se esse formato for escolhido na c
 *flags*<br/>
 Os diferentes vinculando e inserindo as opções disponíveis para esse formato. Esse sinalizador é uma combinação bit a bit de um ou mais dos valores diferentes no OLEUIPASTEFLAG tipo enumerado.
 
-*CF*<br/>
+*cf*<br/>
 O formato da área de transferência para adicionar.
 
-*TYMED.&lt;1}*<br/>
+*tymed*<br/>
 Os tipos de mídia disponível nesse formato. Isso é uma combinação bit a bit de um ou mais dos valores a TYMED tipo enumerado.
 
 *nFormatID*<br/>
@@ -146,12 +146,12 @@ A ID da cadeia de caracteres que identifica esse formato. O formato dessa cadeia
 *bEnableIcon*<br/>
 Sinalizador que determina se a caixa de seleção Exibir como ícone está habilitada quando esse formato for escolhido na caixa de listagem.
 
-*Intermitência*<br/>
+*bLink*<br/>
 Sinalizador que determina se o botão de opção de colar Link está habilitado quando esse formato for escolhido na caixa de listagem.
 
 ### <a name="remarks"></a>Comentários
 
-Essa função pode ser chamada para adicionar os formatos padrão como CF_TEXT ou CF_TIFF ou formatos personalizados que seu aplicativo foi registrado com o sistema. Para obter mais informações sobre a colagem de objetos de dados em seu aplicativo, consulte o artigo [fontes de dados e objetos de dados: manipulação](../../mfc/data-objects-and-data-sources-manipulation.md).
+Essa função pode ser chamada para adicionar os formatos padrão como CF_TEXT ou CF_TIFF ou formatos personalizados que seu aplicativo foi registrado com o sistema. Para obter mais informações sobre a colagem de objetos de dados em seu aplicativo, consulte o artigo [objetos de dados e fontes de dados: Manipulação](../../mfc/data-objects-and-data-sources-manipulation.md).
 
 Para obter mais informações, consulte o [TYMED](/windows/desktop/api/objidl/ne-objidl-tagtymed) tipo de enumeração e a [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) estrutura no SDK do Windows.
 
@@ -167,7 +167,7 @@ OLEUIPASTEFLAG AddLinkEntry(UINT cf);
 
 ### <a name="parameters"></a>Parâmetros
 
-*CF*<br/>
+*cf*<br/>
 O formato da área de transferência para adicionar.
 
 ### <a name="return-value"></a>Valor de retorno

@@ -28,12 +28,12 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::uint_2::operator++
 - amp_short_vectors/Concurrency::graphics::uint_2::rg
 ms.assetid: 9fcc9129-72b1-4da7-9012-4d3be15f1c52
-ms.openlocfilehash: dc7b00d70a4f816845f5741bf605f1c1bb631ee2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 42c4f238e7277174a5f6b04a9e692f541b32a3e0
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50589352"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296705"
 ---
 # <a name="uint2-class"></a>Classe uint_2
 
@@ -171,16 +171,16 @@ explicit inline uint_2(
 *_V0*<br/>
 O valor para inicializar o elemento 0.
 
-*V1*<br/>
+*_V1*<br/>
 O valor para inicializar o elemento 1.
 
 *_V*<br/>
 O valor para a inicialização.
 
-*Outro*<br/>
+*_Other*<br/>
 O objeto usado para inicializar.
 
-##  <a name="uint_2__size"></a> Tamanho
+##  <a name="uint_2__size"></a> size
 
 ```
 static const int size = 2;

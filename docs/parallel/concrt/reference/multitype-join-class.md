@@ -17,12 +17,12 @@ f1_keywords:
 helpviewer_keywords:
 - multitype_join class
 ms.assetid: 236e87a0-4867-49fd-869a-bef4010e49a7
-ms.openlocfilehash: 2fd94ef072fcab9af076fcdfa1b5c094d77f89c8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7a0c68c2c017eedfa23548bee1d17177e8eaaa1e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50547378"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289020"
 ---
 # <a name="multitypejoin-class"></a>Classe multitype_join
 
@@ -91,7 +91,7 @@ Para obter mais informações, consulte [blocos de mensagens assíncronas](../..
 
 **Namespace:** simultaneidade
 
-##  <a name="accept"></a> Aceitar
+##  <a name="accept"></a> accept
 
 Aceita uma mensagem que era oferecida por este `multitype_join` bloco, transferindo a propriedade para o chamador.
 
@@ -200,7 +200,7 @@ O `Scheduler` objeto dentro do qual a tarefa de propagação para o `multitype_j
 *_PScheduleGroup*<br/>
 O `ScheduleGroup` objeto dentro do qual a tarefa de propagação para o `multitype_join` bloco de mensagem está agendado. O `Scheduler` objeto usado é inferido pelo grupo agendado.
 
-*Juntar*<br/>
+*_Join*<br/>
 Um `multitype_join` copiar do bloco de mensagem. Observe que o objeto original ficar órfão, fazendo de um construtor de movimentação.
 
 ### <a name="remarks"></a>Comentários
@@ -209,7 +209,7 @@ O tempo de execução usa o agendador padrão, se você não especificar o `_PSc
 
 Construção de movimentação não é executada em um bloqueio, o que significa que ele depende do usuário para certificar-se de que não há nenhuma tarefa leve em andamento no momento da movimentação. Caso contrário, corridas inúmeros podem ocorrer, levando a estado inconsistente ou exceções.
 
-##  <a name="dtor"></a> ~ multitype_join
+##  <a name="dtor"></a> ~multitype_join
 
 Destrói o `multitype_join` bloco de mensagem.
 

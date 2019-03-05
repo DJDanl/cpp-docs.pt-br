@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - CString objects [MFC], formatting and message boxes
 ms.assetid: d1068cf4-9cc5-4952-b9e7-d612c53cbc28
-ms.openlocfilehash: b22eea0a20623bb6dfbbf60703b3db25ac4065d5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fee8ba89605e6425b511407dab62be1f32e94a9d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50487926"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272640"
 ---
 # <a name="cstring-formatting-and-message-box-display"></a>Formatação CString e exibição da caixa de mensagem
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CD2DSizeF [MFC], CD2DSizeF
 - CD2DSizeF [MFC], IsNull
 ms.assetid: f486a1e1-997d-4286-8cb9-26369dc82055
-ms.openlocfilehash: e9c8d77a9f84abe9a483a0f100e1f52b8768202b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 09ccd8c4ba6bb0c345adb32bcf22686c485d1184
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50557463"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296586"
 ---
 # <a name="cd2dsizef-class"></a>Classe CD2DSizeF
 
@@ -76,10 +76,10 @@ CD2DSizeF(
 *size*<br/>
 tamanho da fonte
 
-*CX*<br/>
+*cx*<br/>
 largura de origem
 
-*Cy*<br/>
+*cy*<br/>
 altura de origem
 
 ##  <a name="isnull"></a>  CD2DSizeF::IsNull
@@ -94,7 +94,7 @@ BOOL IsNull() const;
 
 TRUE se a largura e altura são vazios. Caso contrário, FALSE.
 
-##  <a name="operator_csize"></a>  CD2DSizeF::Operator CSize
+##  <a name="operator_csize"></a>  CD2DSizeF::operator CSize
 
 Converte CD2DSizeF CSize objeto.
 

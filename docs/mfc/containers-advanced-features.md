@@ -1,5 +1,5 @@
 ---
-title: 'Contêineres: funcionalidades avançadas'
+title: 'Contêineres: Recursos avançados'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - links [MFC], to embedded OLE objects
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - server/container applications [MFC]
 - containers [MFC], container applications
 ms.assetid: 221fd99c-b138-40fa-ad6a-974e3b3ad1f8
-ms.openlocfilehash: 95606818cf5673ef5d4a70361a8e79a9ed28d11b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9d83ba601766f4b6fb84576571239a250169abb1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506074"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278698"
 ---
-# <a name="containers-advanced-features"></a>Contêineres: funcionalidades avançadas
+# <a name="containers-advanced-features"></a>Contêineres: Recursos avançados
 
 Este artigo descreve as etapas necessárias para incorporar recursos avançados opcionais em aplicativos de contêiner existentes. Esses recursos estão:
 
@@ -31,7 +31,7 @@ Este artigo descreve as etapas necessárias para incorporar recursos avançados 
 
 Um aplicativo de contêiner/servidor é um aplicativo que atua como um contêiner e um servidor. Microsoft Word para Windows é um exemplo disso. Você pode inserir documentos do Word para Windows em outros aplicativos, e você também pode inserir itens em documentos do Word para Windows. O processo para modificar o aplicativo de contêiner seja um contêiner e um servidor completo (não é possível criar um aplicativo de contêiner/miniserver combinação) é semelhante ao processo de criação de um servidor completo.
 
-O artigo [servidores: Implementando um servidor](../mfc/servers-implementing-a-server.md) lista um número de tarefas necessárias para implementar um aplicativo de servidor. Se você converter um aplicativo de contêiner para um aplicativo de contêiner/servidor, em seguida, você precisa executar algumas dessas mesmas tarefas, adicionar código para o contêiner. O exemplo a seguir lista os pontos importantes a considerar:
+O artigo [servidores: Implementação de um servidor](../mfc/servers-implementing-a-server.md) lista um número de tarefas necessárias para implementar um aplicativo de servidor. Se você converter um aplicativo de contêiner para um aplicativo de contêiner/servidor, em seguida, você precisa executar algumas dessas mesmas tarefas, adicionar código para o contêiner. O exemplo a seguir lista os pontos importantes a considerar:
 
 - O código do contêiner criado pelo Assistente de aplicativo já inicializa o subsistema OLE. Você não precisará alterar ou adicionar qualquer coisa para que o suporte.
 
@@ -75,4 +75,3 @@ O exemplo OLE do MFC [OCLIENT](../visual-cpp-samples.md) implementa esse recurso
 
 [Contêineres](../mfc/containers.md)<br/>
 [Servidores](../mfc/servers.md)
-

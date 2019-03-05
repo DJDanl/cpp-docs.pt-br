@@ -36,12 +36,12 @@ helpviewer_keywords:
 - CStatusBar [MFC], SetPaneStyle
 - CStatusBar [MFC], SetPaneText
 ms.assetid: a3bde3db-e71c-4881-a3ca-1d5481c345ba
-ms.openlocfilehash: 70d700197e3d249812e8b09a2cba744a0fbc9803
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e7aa577d237c1800ca9df3f0af4c44acdaae9ae2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50649274"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279491"
 ---
 # <a name="cstatusbar-class"></a>Classe CStatusBar
 
@@ -108,7 +108,7 @@ Há três maneiras de atualizar o texto em um painel da barra de status:
 
 Chame [SetPaneStyle](#setpanestyle) para atualizar o estilo de um painel da barra de status.
 
-Para obter mais informações sobre como usar `CStatusBar`, consulte o artigo [implementação da barra de Status no MFC](../../mfc/status-bar-implementation-in-mfc.md) e [31 de observação técnica: barras de controle](../../mfc/tn031-control-bars.md).
+Para obter mais informações sobre como usar `CStatusBar`, consulte o artigo [implementação da barra de Status no MFC](../../mfc/status-bar-implementation-in-mfc.md) e [31 de observação técnica: Barras de controle](../../mfc/tn031-control-bars.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -485,7 +485,7 @@ BOOL SetPaneText(
 *lpszNewText*<br/>
 Ponteiro para o novo texto do painel.
 
-*b Update*<br/>
+*bUpdate*<br/>
 Se for TRUE, o painel é invalidado depois que o texto é definido.
 
 ### <a name="return-value"></a>Valor de retorno

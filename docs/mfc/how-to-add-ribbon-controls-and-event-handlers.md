@@ -1,18 +1,18 @@
 ---
-title: Como adicionar controles de faixa de opções e manipuladores de evento
+title: 'Como: Adicionar controles de faixa de opções e manipuladores de eventos'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - event handlers [MFC], adding
 - ribbon controls [MFC], adding
 ms.assetid: b31f25bc-ede7-49c3-9e3c-dffe4e174a69
-ms.openlocfilehash: 356358e5fd5ac4f3f7511f178ca304e9ab7eff86
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 8a164101dc42241a2cc76c91a3baa66e02e4dc90
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518392"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291126"
 ---
-# <a name="how-to-add-ribbon-controls-and-event-handlers"></a>Como adicionar controles de faixa de opções e manipuladores de evento
+# <a name="how-to-add-ribbon-controls-and-event-handlers"></a>Como: Adicionar controles de faixa de opções e manipuladores de eventos
 
 Controles da faixa de opções são elementos como botões e caixas de combinação, que você adiciona aos painéis. Painéis são áreas da barra de faixa de opções que exibem um grupo de controles relacionados.
 
@@ -42,4 +42,3 @@ Neste tópico, abra o Designer de faixa de opções, adicione um botão e, em se
 
 [Exemplo de gadget de fita: Aplicativo de gadget de faixa de opções](../visual-cpp-samples.md)<br/>
 [Designer da faixa de opções (MFC)](../mfc/ribbon-designer-mfc.md)
-

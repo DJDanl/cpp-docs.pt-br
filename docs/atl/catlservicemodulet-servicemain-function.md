@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - ServiceMain method
 ms.assetid: f21408c1-1919-4dec-88d8-bf5b39ac9808
-ms.openlocfilehash: 3aad67d58ccd4d1d35572542d899c17e0f42902b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 32bdea1eb39c91ddb58def72bd16acc2f16ab936
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471208"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295416"
 ---
 # <a name="catlservicemoduletservicemain-function"></a>Função catlservicemodulet:: Servicemain
 
@@ -30,5 +30,4 @@ Agora, `CAtlServiceModuleT::Run` é chamado para executar o trabalho principal d
 ## <a name="see-also"></a>Consulte também
 
 [Serviços](../atl/atl-services.md)<br/>
-[Catlservicemodulet:: Servicemain](../atl/reference/catlservicemodulet-class.md#servicemain)
-
+[CAtlServiceModuleT::ServiceMain](../atl/reference/catlservicemodulet-class.md#servicemain)

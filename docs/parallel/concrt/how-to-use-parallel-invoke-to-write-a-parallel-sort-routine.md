@@ -1,5 +1,5 @@
 ---
-title: Como usar parallel_invoke para escrever uma rotina de classificação em paralelo
+title: 'Como: Usar parallel_invoke para escrever uma rotina de classificação paralela'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - task_handle class, example
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - structured_task_group class, example
 - improving parallel performance with task groups [Concurrency Runtime]
 ms.assetid: 53979a2a-525d-4437-8952-f1ff85b37673
-ms.openlocfilehash: e72d99cb1b9168e3de1e109d93c163e21cb7fad7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 329cf275f283ba7b57276d06e909905c9a900697
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50440151"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284171"
 ---
-# <a name="how-to-use-parallelinvoke-to-write-a-parallel-sort-routine"></a>Como usar parallel_invoke para escrever uma rotina de classificação em paralelo
+# <a name="how-to-use-parallelinvoke-to-write-a-parallel-sort-routine"></a>Como: Usar parallel_invoke para escrever uma rotina de classificação paralela
 
 Este documento descreve como usar o [parallel_invoke](../../parallel/concrt/parallel-algorithms.md#parallel_invoke) algoritmo para melhorar o desempenho do algoritmo de classificação bitonic. Recursivamente o algoritmo de classificação bitonic divide a sequência de entrada em partições menores de classificados. O algoritmo de classificação bitonic pode executar em paralelo, porque cada operação de partição é independente de todas as outras operações.
 
@@ -38,7 +38,7 @@ O exemplo a seguir mostra a versão serial do algoritmo de classificação biton
 
 [!code-cpp[concrt-parallel-bitonic-sort#1](../../parallel/concrt/codesnippet/cpp/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine_1.cpp)]
 
-[[Superior](#top)]
+[[Top](#top)]
 
 ##  <a name="parallel"></a> Usando parallel_invoke para realizar classificação Bitonic em paralelo
 
@@ -83,13 +83,13 @@ serial time: 4353
 parallel time: 1248
 ```
 
-[[Superior](#top)]
+[[Top](#top)]
 
 ## <a name="compiling-the-code"></a>Compilando o código
 
 Para compilar o código, copiá-lo e, em seguida, cole-o em um projeto do Visual Studio ou colá-lo em um arquivo chamado `parallel-bitonic-sort.cpp` e, em seguida, execute o seguinte comando em uma janela de Prompt de comando do Visual Studio.
 
-**cl.exe /EHsc paralelo-bitonic-sort.cpp**
+**cl.exe /EHsc parallel-bitonic-sort.cpp**
 
 ## <a name="robust-programming"></a>Programação robusta
 
@@ -105,4 +105,3 @@ Assim como acontece com qualquer algoritmo paralelo, recomendamos que você cria
 
 [Paralelismo de tarefas](../../parallel/concrt/task-parallelism-concurrency-runtime.md)<br/>
 [Função parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke)
-

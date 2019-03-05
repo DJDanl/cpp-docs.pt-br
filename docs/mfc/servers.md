@@ -10,12 +10,12 @@ helpviewer_keywords:
 - OLE server applications [MFC], server types
 - server applications [MFC]
 ms.assetid: e45172e8-eae3-400a-8139-0fa009a42fdc
-ms.openlocfilehash: d1e0a8ca85055c289d1ef8e1c36fcd35eab61c91
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7b1eb0df439bcfde3aa295f23a90291e865df3a9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50526487"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290789"
 ---
 # <a name="servers"></a>Servidores
 
@@ -43,22 +43,21 @@ O aplicativo de servidor deve informar as DLLs do sistema OLE o que fazer se uma
 
 Para obter mais detalhes sobre servidores, consulte:
 
-- [Servidores: implementando um servidor](../mfc/servers-implementing-a-server.md)
+- [servidores: Implementação de um servidor](../mfc/servers-implementing-a-server.md)
 
-- [Servidores: implementando documentos de servidor](../mfc/servers-implementing-server-documents.md)
+- [servidores: Implementando documentos de servidor](../mfc/servers-implementing-server-documents.md)
 
-- [Servidores: implementando janelas de quadro in-loco](../mfc/servers-implementing-in-place-frame-windows.md)
+- [servidores: Implementando o Windows de quadro in-loco](../mfc/servers-implementing-in-place-frame-windows.md)
 
-- [Servidores: itens de servidor](../mfc/servers-server-items.md)
+- [servidores: Itens do servidor](../mfc/servers-server-items.md)
 
-- [Servidores: problemas da interface do usuário](../mfc/servers-user-interface-issues.md)
+- [servidores: Problemas da Interface do usuário](../mfc/servers-user-interface-issues.md)
 
 ## <a name="see-also"></a>Consulte também
 
 [OLE](../mfc/ole-in-mfc.md)<br/>
 [Contêineres](../mfc/containers.md)<br/>
-[Contêineres: funcionalidades avançadas](../mfc/containers-advanced-features.md)<br/>
+[Contêineres: Recursos avançados](../mfc/containers-advanced-features.md)<br/>
 [Menus e recursos (OLE)](../mfc/menus-and-resources-ole.md)<br/>
 [Registro](../mfc/registration.md)<br/>
 [Servidores de automação](../mfc/automation-servers.md)
-

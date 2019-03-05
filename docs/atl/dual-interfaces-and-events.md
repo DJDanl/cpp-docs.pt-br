@@ -5,12 +5,12 @@ helpviewer_keywords:
 - events [C++], dual interfaces
 - dual interfaces, events
 ms.assetid: bb382f7c-e885-4274-bf07-83f3602615d2
-ms.openlocfilehash: f94e87f077846af8d61b06145f776f385051e79f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 01233edb63145d69d335349bb9dff91e6a4aca5a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50640590"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57292531"
 ---
 # <a name="dual-interfaces-and-events"></a>Interfaces duplas e eventos
 
@@ -24,4 +24,3 @@ Há mais razões para evitar interfaces de evento dupla; nem o Visual Basic nem 
 ## <a name="see-also"></a>Consulte também
 
 [Interfaces duplas e a ATL](../atl/dual-interfaces-and-atl.md)
-

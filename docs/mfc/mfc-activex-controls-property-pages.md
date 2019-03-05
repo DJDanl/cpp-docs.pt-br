@@ -1,5 +1,5 @@
 ---
-title: 'Controles ActiveX MFC: páginas de propriedade'
+title: 'Controles ActiveX MFC: Páginas de propriedade'
 ms.date: 11/19/2018
 helpviewer_keywords:
 - DDP_ functions [MFC]
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - CPropertyPageDialog class [MFC]
 - MFC ActiveX controls [MFC], property pages
 ms.assetid: 1506f87a-9fd6-4505-8380-0dbc9636230e
-ms.openlocfilehash: 7027a58960e07903c9d774e07379c8050bc489b8
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 3fe092e412cf11f7bf8600e8d0d7d43abb0e11c7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176452"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303892"
 ---
-# <a name="mfc-activex-controls-property-pages"></a>Controles ActiveX MFC: páginas de propriedade
+# <a name="mfc-activex-controls-property-pages"></a>Controles ActiveX MFC: Páginas de propriedade
 
 As páginas de propriedade permitem que um usuário do controle ActiveX exibir e alterar as propriedades do controle ActiveX. Essas propriedades são acessadas pela invocação de uma caixa de diálogo de propriedades de controle, que contém um ou mais páginas de propriedades que fornecem uma interface gráfica personalizada para exibir e editar as propriedades do controle.
 
@@ -45,15 +45,15 @@ Este artigo aborda tópicos relacionados ao uso de páginas de propriedades em u
 
 Para obter mais informações sobre como usar páginas de propriedades em um controle ActiveX, consulte os seguintes artigos:
 
-- [Controles ActiveX do MFC: adicionando outra página de propriedades personalizada](../mfc/mfc-activex-controls-adding-another-custom-property-page.md)
+- [Controles ActiveX MFC: Adicionando outra página de propriedade personalizada](../mfc/mfc-activex-controls-adding-another-custom-property-page.md)
 
-- [Controles ActiveX do MFC: usando páginas de propriedade de estoque](../mfc/mfc-activex-controls-using-stock-property-pages.md)
+- [Controles ActiveX MFC: Usando páginas de propriedade de estoque](../mfc/mfc-activex-controls-using-stock-property-pages.md)
 
 Para obter informações sobre como usar folhas de propriedades em um aplicativo que não seja um controle ActiveX do MFC, consulte [folhas de propriedade](../mfc/property-sheets-mfc.md).
 
 ##  <a name="_core_implementing_the_default_property_page"></a> Implementando a página de propriedade padrão
 
-Se você usar o Assistente de controle ActiveX para criar seu projeto de controle, o Assistente de controle ActiveX fornece uma classe de página de propriedade padrão para o controle derivado de [classe COlePropertyPage](../mfc/reference/colepropertypage-class.md). Inicialmente, esta página de propriedades está em branco, mas você pode adicionar qualquer controle de caixa de diálogo ou um conjunto de controles a ele. Como o Assistente de controle ActiveX cria a classe de página apenas uma propriedade por padrão, as classes de página de propriedades adicionais (também deriva `COlePropertyPage`) deve ser criada usando o modo de exibição de classe. Para obter mais informações sobre esse procedimento, consulte [controles ActiveX MFC: adicionando outra página de propriedade personalizada](../mfc/mfc-activex-controls-adding-another-custom-property-page.md).
+Se você usar o Assistente de controle ActiveX para criar seu projeto de controle, o Assistente de controle ActiveX fornece uma classe de página de propriedade padrão para o controle derivado de [classe COlePropertyPage](../mfc/reference/colepropertypage-class.md). Inicialmente, esta página de propriedades está em branco, mas você pode adicionar qualquer controle de caixa de diálogo ou um conjunto de controles a ele. Como o Assistente de controle ActiveX cria a classe de página apenas uma propriedade por padrão, as classes de página de propriedades adicionais (também deriva `COlePropertyPage`) deve ser criada usando o modo de exibição de classe. Para obter mais informações sobre esse procedimento, consulte [controles ActiveX MFC: Adicionando outra página de propriedade personalizada](../mfc/mfc-activex-controls-adding-another-custom-property-page.md).
 
 Implementando uma propriedade de página (nesse caso, o padrão) é um processo de três etapas:
 

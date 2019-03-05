@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CInternetConnection [MFC], GetServerName
 - CInternetConnection [MFC], GetSession
 ms.assetid: 62a5d1c3-8471-4e36-a064-48831829b2a7
-ms.openlocfilehash: da11f62cfb453e31d3cacc1d4bc5b8a26f5b3764
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9f17c3ade53ec45ddde654e83c77fe1d817d8495
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50564795"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275344"
 ---
 # <a name="cinternetconnection-class"></a>Classe CInternetConnection
 
@@ -107,7 +107,7 @@ Você nunca chame `CInternetConnection` por conta própria; em vez disso, chame 
 
 - [CInternetSession::GetGopherConnection](../../mfc/reference/cinternetsession-class.md#getgopherconnection)
 
-O valor padrão para *dwContext* é enviado pelo MFC para o `CInternetConnection`-objeto derivado dos [CInternetSession](../../mfc/reference/cinternetsession-class.md) do objeto que criou o **InternetConnection**- objeto derivado. O padrão é definido como 1; No entanto, você pode atribuir explicitamente um identificador de contexto específico na [CInternetSession](../../mfc/reference/cinternetsession-class.md#cinternetsession) construtor para a conexão. O objeto e qualquer trabalho que será associados essa ID de contexto. O identificador de contexto é retornado ao [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) para fornecer status no objeto com a qual ela é identificada. Consulte o artigo [primeiras etapas de Internet: WinInet](../../mfc/wininet-basics.md) para obter mais informações sobre o identificador de contexto.
+O valor padrão para *dwContext* é enviado pelo MFC para o `CInternetConnection`-objeto derivado dos [CInternetSession](../../mfc/reference/cinternetsession-class.md) do objeto que criou o **InternetConnection**- objeto derivado. O padrão é definido como 1; No entanto, você pode atribuir explicitamente um identificador de contexto específico na [CInternetSession](../../mfc/reference/cinternetsession-class.md#cinternetsession) construtor para a conexão. O objeto e qualquer trabalho que será associados essa ID de contexto. O identificador de contexto é retornado ao [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) para fornecer status no objeto com a qual ela é identificada. Consulte o artigo [Internet primeiras etapas: O WinInet](../../mfc/wininet-basics.md) para obter mais informações sobre o identificador de contexto.
 
 ##  <a name="getcontext"></a>  CInternetConnection::GetContext
 
@@ -125,7 +125,7 @@ A ID do contexto atribuída pelo aplicativo.
 
 A ID de contexto é especificada originalmente no [CInternetSession](../../mfc/reference/cinternetsession-class.md) e se propaga para `CInternetConnection`- e [CInternetFile](../../mfc/reference/cinternetfile-class.md)-classes derivadas, a menos que especificado de forma diferente na chamada para uma função que é aberta a conexão. A ID de contexto está associada a qualquer operação do objeto especificado e identifica as informações de status da operação retornadas por [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback).
 
-Para obter mais informações sobre como `GetContext` funciona com outras classes WinInet para fornecer as informações de status do usuário, consulte o artigo [Internet primeiras etapas: WinInet](../../mfc/wininet-basics.md) para obter mais informações sobre o identificador de contexto.
+Para obter mais informações sobre como `GetContext` funciona com outras classes WinInet para fornecer as informações de status do usuário, consulte o artigo [Internet primeiras etapas: O WinInet](../../mfc/wininet-basics.md) para obter mais informações sobre o identificador de contexto.
 
 ##  <a name="getservername"></a>  CInternetConnection::GetServerName
 
@@ -163,4 +163,3 @@ operator HINTERNET() const;
 
 [Classe CObject](../../mfc/reference/cobject-class.md)<br/>
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)
-

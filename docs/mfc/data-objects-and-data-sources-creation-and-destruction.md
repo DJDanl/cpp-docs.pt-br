@@ -1,5 +1,5 @@
 ---
-title: 'Objetos e origens de dados: criação e destruição'
+title: 'Objetos de dados e fontes de dados: Criação e destruição'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - destroying data objects [MFC]
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - destruction [MFC], data objects
 - data sources [MFC], creating
 ms.assetid: ac216d54-3ca5-4ce7-850d-cd1f6a90d4f1
-ms.openlocfilehash: a46cc15a101618699b9e7fa988155517de673fdb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 74119d7ea33eef68f0cb4a67c8419514cbb73c10
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614949"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304425"
 ---
-# <a name="data-objects-and-data-sources-creation-and-destruction"></a>Objetos e origens de dados: criação e destruição
+# <a name="data-objects-and-data-sources-creation-and-destruction"></a>Objetos de dados e fontes de dados: Criação e destruição
 
 Conforme explicado no artigo [objetos de dados e fontes de dados (OLE)](../mfc/data-objects-and-data-sources-ole.md), objetos de dados e fontes de dados representam os dois lados de uma transferência de dados. Este artigo explica a quando criar e destruir a esses objetos e fontes para realizar suas transferências de dados corretamente, incluindo:
 

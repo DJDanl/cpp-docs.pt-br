@@ -52,12 +52,12 @@ helpviewer_keywords:
 - CView [MFC], OnPrint
 - CView [MFC], OnUpdate
 ms.assetid: 9cff3c56-7564-416b-b9a4-71a9254ed755
-ms.openlocfilehash: 679cdc5b5a0a85ade09fe1999e8de40300a8ae8e
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: fe9b282fd248f8dd03a6a7f078c03866d1b14b2d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694381"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305010"
 ---
 # <a name="cview-class"></a>Classe CView
 
@@ -90,7 +90,7 @@ class AFX_NOVTABLE CView : public CWnd
 |[CView::OnDragScroll](#ondragscroll)|Chamado para determinar se o cursor é arrastado para a região de rolagem da janela.|
 |[CView::OnDrop](#ondrop)|Chamado quando um item foi descartado para a área de arrastar e soltar de uma exibição, o manipulador padrão.|
 |[CView::OnDropEx](#ondropex)|Chamado quando um item foi descartado para a área de arrastar e soltar de uma exibição, o manipulador primário.|
-|[Cview:: Oninitialupdate](#oninitialupdate)|Chamado depois que uma exibição é anexada primeiro a um documento.|
+|[CView::OnInitialUpdate](#oninitialupdate)|Chamado depois que uma exibição é anexada primeiro a um documento.|
 |[CView::OnPrepareDC](#onpreparedc)|Chamado antes do `OnDraw` função de membro é chamada para exibição na tela ou o `OnPrint` função membro é chamada para impressão ou visualização de impressão.|
 |[CView::OnScroll](#onscroll)|Chamado quando os itens OLE são arrastados além das bordas do modo de exibição.|
 |[CView::OnScrollBy](#onscrollby)|Chamado quando uma exibição que contém itens OLE do Active Directory no local é rolada.|
@@ -336,7 +336,7 @@ Aponta para o [COleDataObject](../../mfc/reference/coledataobject-class.md) que 
 *dwKeyState*<br/>
 Contém o estado das teclas modificadoras. Isso é uma combinação de qualquer número das seguintes opções: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON e MK_RBUTTON.
 
-*ponto*<br/>
+*point*<br/>
 A atual posição do mouse em relação à área de cliente do modo de exibição.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -390,7 +390,7 @@ Aponta para o [COleDataObject](../../mfc/reference/coledataobject-class.md) que 
 *dwKeyState*<br/>
 Contém o estado das teclas modificadoras. Isso é uma combinação de qualquer número das seguintes opções: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON e MK_RBUTTON.
 
-*ponto*<br/>
+*point*<br/>
 A posição atual do mouse em relação à área de cliente de modo de exibição.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -428,7 +428,7 @@ virtual DROPEFFECT OnDragScroll(
 *dwKeyState*<br/>
 Contém o estado das teclas modificadoras. Isso é uma combinação de qualquer número das seguintes opções: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON e MK_RBUTTON.
 
-*ponto*<br/>
+*point*<br/>
 Contém o local do cursor, em pixels, em relação à tela.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -496,7 +496,7 @@ O efeito que o usuário solicitou.
 
 - DROPEFFECT_LINK cria um vínculo entre um objeto de dados e seu servidor.
 
-*ponto*<br/>
+*point*<br/>
 A posição atual do mouse em relação à área de cliente de modo de exibição.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -532,10 +532,10 @@ Aponta para o [COleDataObject](../../mfc/reference/coledataobject-class.md) que 
 *dropDefault*<br/>
 O efeito que o usuário escolheu para a operação de soltar padrão com base no estado atual da chave. Pode ser DROPEFFECT_NONE. Efeitos de soltar são discutidos na seção comentários.
 
-*lista suspensa*<br/>
+*dropList*<br/>
 Uma lista dos efeitos de soltar que ofereça suporte a origem de soltar. Valores de efeito de soltar podem ser combinados usando o OR bit a bit ( **&#124;**) operação. Efeitos de soltar são discutidos na seção comentários.
 
-*ponto*<br/>
+*point*<br/>
 A posição atual do mouse em relação à área de cliente de modo de exibição.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -618,7 +618,7 @@ Aponta para o contexto de dispositivo de impressora.
 *pInfo*<br/>
 Aponta para um [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) estrutura que descreve o trabalho de impressão atual.
 
-*ponto*<br/>
+*point*<br/>
 Especifica o ponto na página que foi exibida pela última vez no modo de visualização.
 
 *pView*<br/>
@@ -630,7 +630,7 @@ A implementação padrão dessa função chama o [OnEndPrinting](#onendprinting)
 
 Sempre chamar a versão da classe base do `OnEndPrintPreview` de sua substituição, normalmente no final da função.
 
-##  <a name="oninitialupdate"></a>  Cview:: Oninitialupdate
+##  <a name="oninitialupdate"></a>  CView::OnInitialUpdate
 
 Chamado pelo framework depois que o modo de exibição é anexado pela primeira vez no documento, mas antes que o modo de exibição é exibido inicialmente.
 

@@ -1,18 +1,18 @@
 ---
-title: 'Área de Transferência: copiando e colando dados'
+title: 'Área de transferência: Copiando e colando dados'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Clipboard, copying data to
 - Clipboard, pasting
 ms.assetid: 580e10be-241f-4f9f-94cf-8302edc5beef
-ms.openlocfilehash: 7f22418b4006bcb9fac1d4430660c8721bc7e903
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: da589743e98b2ac020e006aedb0ccc0415998f17
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437031"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270729"
 ---
-# <a name="clipboard-copying-and-pasting-data"></a>Área de Transferência: copiando e colando dados
+# <a name="clipboard-copying-and-pasting-data"></a>Área de transferência: Copiando e colando dados
 
 Este tópico descreve o trabalho mínimo necessário para implementar para a cópia e colagem da área de transferência no aplicativo OLE. É recomendável que você leia as [objetos de dados e fontes de dados (OLE)](../mfc/data-objects-and-data-sources-ole.md) tópicos antes de continuar.
 
@@ -69,5 +69,4 @@ Para lidar com a opção Colar especial no menu Editar, consulte o tópico [caix
 
 ## <a name="see-also"></a>Consulte também
 
-[Área de transferência: usando o mecanismo de área de transferência do OLE](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)
-
+[Área de transferência: Usando o mecanismo de área de transferência OLE](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)

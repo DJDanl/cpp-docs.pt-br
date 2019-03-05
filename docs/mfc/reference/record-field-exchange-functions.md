@@ -45,12 +45,12 @@ helpviewer_keywords:
 - RFX (record field exchange), data exchange functions [MFC]
 - RFX (record field exchange)
 ms.assetid: 6e4c5c1c-acb7-4c18-bf51-bf7959a696cd
-ms.openlocfilehash: 2970a722f79e9707f8721c1c8595bfd1d133f898
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 865c67b88c37e32ef33fa410ef178b81b7a6ecac
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525938"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297067"
 ---
 # <a name="record-field-exchange-functions"></a>Registrar funções de troca de campos
 
@@ -62,9 +62,9 @@ Se você não tiver implementado a busca de linhas em massa nas classes baseadas
 
 As funções da troca de campos de registro transferir dados cada vez que o framework chama `DoFieldExchange` ou `DoBulkFieldExchange`. Cada função transfere um tipo de dados específico.
 
-Para obter mais informações sobre como essas funções são usadas, consulte os artigos [troca de campos do registro: como RFX funciona (ODBC)](../../data/odbc/record-field-exchange-how-rfx-works.md). Para obter mais informações sobre a busca de linhas em massa, consulte o artigo [conjunto de registros: buscando registros em massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+Para obter mais informações sobre como essas funções são usadas, consulte os artigos [troca de campos do registro: Como a RFX funciona (ODBC)](../../data/odbc/record-field-exchange-how-rfx-works.md). Para obter mais informações sobre a busca de linhas em massa, consulte o artigo [conjunto de registros: Buscando registros em massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
-Para colunas de dados que você associar dinamicamente, você também pode chamar as funções RFX ou DFX por conta própria, conforme explicado nos artigos [conjunto de registros: dinamicamente associando dados colunas (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md). Além disso, você pode escrever suas próprias rotinas RFX ou DFX personalizadas, conforme explicado na Observação técnica [43](../../mfc/tn043-rfx-routines.md) (para ODBC) e a nota técnica [53](../../mfc/tn053-custom-dfx-routines-for-dao-database-classes.md) (para DAO).
+Para colunas de dados que você associar dinamicamente, você também pode chamar as funções RFX ou DFX por conta própria, conforme explicado nos artigos [conjunto de registros: Associando dinamicamente colunas de dados (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md). Além disso, você pode escrever suas próprias rotinas RFX ou DFX personalizadas, conforme explicado na Observação técnica [43](../../mfc/tn043-rfx-routines.md) (para ODBC) e a nota técnica [53](../../mfc/tn053-custom-dfx-routines-for-dao-database-classes.md) (para DAO).
 
 Para obter um exemplo de RFX e RFX em massa as funções como eles aparecem na `DoFieldExchange` e `DoBulkFieldExchange` funções, consulte [RFX_Text](#rfx_text) e [RFX_Text_Bulk] #rfx_text_bulk). Funções DFX são muito semelhantes às funções RFX.
 
@@ -132,7 +132,7 @@ void RFX_Binary(
 ### <a name="parameters"></a>Parâmetros
 
 *pFX*<br/>
-Um ponteiro para um objeto da classe [CFieldExchange](cfieldexchange-class.md). Este objeto contém informações para definir o contexto para cada chamada da função. Para obter mais informações sobre as operações de uma `CFieldExchange` objeto pode especificar, consulte o artigo [registrar troca de campos: como funciona a RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+Um ponteiro para um objeto da classe [CFieldExchange](cfieldexchange-class.md). Este objeto contém informações para definir o contexto para cada chamada da função. Para obter mais informações sobre as operações de uma `CFieldExchange` objeto pode especificar, consulte o artigo [troca de campos do registro: Como funciona RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
 O nome de uma coluna de dados.
@@ -171,7 +171,7 @@ void RFX_Bool(
 ### <a name="parameters"></a>Parâmetros
 
 *pFX*<br/>
-Um ponteiro para um objeto da classe [CFieldExchange](cfieldexchange-class.md). Este objeto contém informações para definir o contexto para cada chamada da função. Para obter mais informações sobre as operações de uma `CFieldExchange` objeto pode especificar, consulte o artigo [registrar troca de campos: como funciona a RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+Um ponteiro para um objeto da classe [CFieldExchange](cfieldexchange-class.md). Este objeto contém informações para definir o contexto para cada chamada da função. Para obter mais informações sobre as operações de uma `CFieldExchange` objeto pode especificar, consulte o artigo [troca de campos do registro: Como funciona RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
 O nome de uma coluna de dados.
@@ -203,7 +203,7 @@ void RFX_Byte(
 ### <a name="parameters"></a>Parâmetros
 
 *pFX*<br/>
-Um ponteiro para um objeto da classe [CFieldExchange](cfieldexchange-class.md). Este objeto contém informações para definir o contexto para cada chamada da função. Para obter mais informações sobre as operações de uma `CFieldExchange` objeto pode especificar, consulte o artigo [registrar troca de campos: como funciona a RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+Um ponteiro para um objeto da classe [CFieldExchange](cfieldexchange-class.md). Este objeto contém informações para definir o contexto para cada chamada da função. Para obter mais informações sobre as operações de uma `CFieldExchange` objeto pode especificar, consulte o artigo [troca de campos do registro: Como funciona RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
 O nome de uma coluna de dados.
@@ -245,7 +245,7 @@ void RFX_Date(
 ### <a name="parameters"></a>Parâmetros
 
 *pFX*<br/>
-Um ponteiro para um objeto da classe [CFieldExchange](cfieldexchange-class.md). Este objeto contém informações para definir o contexto para cada chamada da função. Para obter mais informações sobre as operações de uma `CFieldExchange` objeto pode especificar, consulte o artigo [registrar troca de campos: como funciona a RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+Um ponteiro para um objeto da classe [CFieldExchange](cfieldexchange-class.md). Este objeto contém informações para definir o contexto para cada chamada da função. Para obter mais informações sobre as operações de uma `CFieldExchange` objeto pode especificar, consulte o artigo [troca de campos do registro: Como funciona RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
 O nome de uma coluna de dados.
@@ -285,7 +285,7 @@ void RFX_Double(
 ### <a name="parameters"></a>Parâmetros
 
 *pFX*<br/>
-Um ponteiro para um objeto da classe [CFieldExchange](cfieldexchange-class.md). Este objeto contém informações para definir o contexto para cada chamada da função. Para obter mais informações sobre as operações de uma `CFieldExchange` objeto pode especificar, consulte o artigo [registrar troca de campos: como funciona a RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+Um ponteiro para um objeto da classe [CFieldExchange](cfieldexchange-class.md). Este objeto contém informações para definir o contexto para cada chamada da função. Para obter mais informações sobre as operações de uma `CFieldExchange` objeto pode especificar, consulte o artigo [troca de campos do registro: Como funciona RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
 O nome de uma coluna de dados.
@@ -317,7 +317,7 @@ void RFX_Int(
 ### <a name="parameters"></a>Parâmetros
 
 *pFX*<br/>
-Um ponteiro para um objeto da classe [CFieldExchange](cfieldexchange-class.md). Este objeto contém informações para definir o contexto para cada chamada da função. Para obter mais informações sobre as operações de uma `CFieldExchange` objeto pode especificar, consulte o artigo [registrar troca de campos: como funciona a RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+Um ponteiro para um objeto da classe [CFieldExchange](cfieldexchange-class.md). Este objeto contém informações para definir o contexto para cada chamada da função. Para obter mais informações sobre as operações de uma `CFieldExchange` objeto pode especificar, consulte o artigo [troca de campos do registro: Como funciona RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
 O nome de uma coluna de dados.
@@ -350,7 +350,7 @@ value );
 ### <a name="parameters"></a>Parâmetros
 
 *pFX*<br/>
-Um ponteiro para um objeto da classe [CFieldExchange](cfieldexchange-class.md). Este objeto contém informações para definir o contexto para cada chamada da função. Para obter mais informações sobre as operações de uma `CFieldExchange` objeto pode especificar, consulte o artigo [registrar troca de campos: como funciona a RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+Um ponteiro para um objeto da classe [CFieldExchange](cfieldexchange-class.md). Este objeto contém informações para definir o contexto para cada chamada da função. Para obter mais informações sobre as operações de uma `CFieldExchange` objeto pode especificar, consulte o artigo [troca de campos do registro: Como funciona RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
 O nome de uma coluna de dados.
@@ -382,7 +382,7 @@ void RFX_LongBinary(
 ### <a name="parameters"></a>Parâmetros
 
 *pFX*<br/>
-Um ponteiro para um objeto da classe [CFieldExchange](cfieldexchange-class.md). Este objeto contém informações para definir o contexto para cada chamada da função. Para obter mais informações sobre as operações de uma `CFieldExchange` objeto pode especificar, consulte o artigo [registrar troca de campos: como funciona a RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+Um ponteiro para um objeto da classe [CFieldExchange](cfieldexchange-class.md). Este objeto contém informações para definir o contexto para cada chamada da função. Para obter mais informações sobre as operações de uma `CFieldExchange` objeto pode especificar, consulte o artigo [troca de campos do registro: Como funciona RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
 O nome de uma coluna de dados.
@@ -414,7 +414,7 @@ void RFX_Single(
 ### <a name="parameters"></a>Parâmetros
 
 *pFX*<br/>
-Um ponteiro para um objeto da classe [CFieldExchange](cfieldexchange-class.md). Este objeto contém informações para definir o contexto para cada chamada da função. Para obter mais informações sobre as operações de uma `CFieldExchange` objeto pode especificar, consulte o artigo [registrar troca de campos: como funciona a RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+Um ponteiro para um objeto da classe [CFieldExchange](cfieldexchange-class.md). Este objeto contém informações para definir o contexto para cada chamada da função. Para obter mais informações sobre as operações de uma `CFieldExchange` objeto pode especificar, consulte o artigo [troca de campos do registro: Como funciona RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
 O nome de uma coluna de dados.
@@ -449,7 +449,7 @@ void RFX_Text(
 ### <a name="parameters"></a>Parâmetros
 
 *pFX*<br/>
-Um ponteiro para um objeto da classe `CFieldExchange`. Este objeto contém informações para definir o contexto para cada chamada da função. Para obter mais informações sobre as operações de uma `CFieldExchange` objeto pode especificar, consulte o artigo [registrar troca de campos: como funciona a RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+Um ponteiro para um objeto da classe `CFieldExchange`. Este objeto contém informações para definir o contexto para cada chamada da função. Para obter mais informações sobre as operações de uma `CFieldExchange` objeto pode especificar, consulte o artigo [troca de campos do registro: Como funciona RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
 O nome de uma coluna de dados.
@@ -514,7 +514,7 @@ void RFX_Binary_Bulk(
 ### <a name="parameters"></a>Parâmetros
 
 *pFX*<br/>
-Um ponteiro para um [CFieldExchange](cfieldexchange-class.md) objeto. Este objeto contém informações para definir o contexto para cada chamada da função. Para obter mais informações, consulte o artigo [troca de campos do registro: como funciona a RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+Um ponteiro para um [CFieldExchange](cfieldexchange-class.md) objeto. Este objeto contém informações para definir o contexto para cada chamada da função. Para obter mais informações, consulte o artigo [troca de campos do registro: Como funciona RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
 O nome de uma coluna de dados.
@@ -537,7 +537,7 @@ Se você inicializar *prgByteVals* e *prgLengths* como NULL, e em seguida, as ma
 > [!NOTE]
 >  Troca de campos de registro em massa só transfere dados da fonte de dados para o objeto de conjunto de registros. Para tornar o seu conjunto de registros atualizável, você deve usar a função ODBC API `SQLSetPos`.
 
-Para obter mais informações, consulte os artigos [conjunto de registros: buscando registros em massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) e [Exchange RFX (Record Field)](../../data/odbc/record-field-exchange-rfx.md).
+Para obter mais informações, consulte os artigos [conjunto de registros: Buscando registros em massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) e [registrar troca de campos (RFX)](../../data/odbc/record-field-exchange-rfx.md).
 
 ### <a name="example"></a>Exemplo
 
@@ -564,7 +564,7 @@ void RFX_Bool_Bulk(
 ### <a name="parameters"></a>Parâmetros
 
 *pFX*<br/>
-Um ponteiro para um [CFieldExchange](cfieldexchange-class.md) objeto. Este objeto contém informações para definir o contexto para cada chamada da função. Para obter mais informações, consulte o artigo [troca de campos do registro: como funciona a RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+Um ponteiro para um [CFieldExchange](cfieldexchange-class.md) objeto. Este objeto contém informações para definir o contexto para cada chamada da função. Para obter mais informações, consulte o artigo [troca de campos do registro: Como funciona RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
 O nome de uma coluna de dados.
@@ -584,7 +584,7 @@ Se você inicializar *prgBoolVals* e *prgLengths* como NULL, e em seguida, as ma
 > [!NOTE]
 >  Troca de campos de registro em massa só transfere dados da fonte de dados para o objeto de conjunto de registros. Para tornar o seu conjunto de registros atualizável, você deve usar a função ODBC API `SQLSetPos`.
 
-Para obter mais informações, consulte os artigos [conjunto de registros: buscando registros em massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) e [Exchange RFX (Record Field)](../../data/odbc/record-field-exchange-rfx.md).
+Para obter mais informações, consulte os artigos [conjunto de registros: Buscando registros em massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) e [registrar troca de campos (RFX)](../../data/odbc/record-field-exchange-rfx.md).
 
 ### <a name="example"></a>Exemplo
 
@@ -611,7 +611,7 @@ void RFX_Byte_Bulk(
 ### <a name="parameters"></a>Parâmetros
 
 *pFX*<br/>
-Um ponteiro para um [CFieldExchange](cfieldexchange-class.md) objeto. Este objeto contém informações para definir o contexto para cada chamada da função. Para obter mais informações, consulte o artigo [troca de campos do registro: como funciona a RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+Um ponteiro para um [CFieldExchange](cfieldexchange-class.md) objeto. Este objeto contém informações para definir o contexto para cada chamada da função. Para obter mais informações, consulte o artigo [troca de campos do registro: Como funciona RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
 O nome de uma coluna de dados.
@@ -631,7 +631,7 @@ Se você inicializar *prgByteVals* e *prgLengths* como NULL, e em seguida, as ma
 > [!NOTE]
 >  Troca de campos de registro em massa só transfere dados da fonte de dados para o objeto de conjunto de registros. Para tornar o seu conjunto de registros atualizável, você deve usar a função ODBC API `SQLSetPos`.
 
-Para obter mais informações, consulte os artigos [conjunto de registros: buscando registros em massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) e [Exchange RFX (Record Field)](../../data/odbc/record-field-exchange-rfx.md).
+Para obter mais informações, consulte os artigos [conjunto de registros: Buscando registros em massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) e [registrar troca de campos (RFX)](../../data/odbc/record-field-exchange-rfx.md).
 
 ### <a name="example"></a>Exemplo
 
@@ -658,7 +658,7 @@ void RFX_Date_Bulk(
 ### <a name="parameters"></a>Parâmetros
 
 *pFX*<br/>
-Um ponteiro para um [CFieldExchange](cfieldexchange-class.md) objeto. Este objeto contém informações para definir o contexto para cada chamada da função. Para obter mais informações, consulte o artigo [troca de campos do registro: como funciona a RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+Um ponteiro para um [CFieldExchange](cfieldexchange-class.md) objeto. Este objeto contém informações para definir o contexto para cada chamada da função. Para obter mais informações, consulte o artigo [troca de campos do registro: Como funciona RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
 O nome de uma coluna de dados.
@@ -678,7 +678,7 @@ Se você inicializar *prgTSVals* e *prgLengths* como NULL, e em seguida, as matr
 > [!NOTE]
 >  Troca de campos de registro em massa só transfere dados da fonte de dados para o objeto de conjunto de registros. Para tornar o seu conjunto de registros atualizável, você deve usar a função ODBC API `SQLSetPos`.
 
-Para obter mais informações, consulte os artigos [conjunto de registros: buscando registros em massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) e [Exchange RFX (Record Field)](../../data/odbc/record-field-exchange-rfx.md).
+Para obter mais informações, consulte os artigos [conjunto de registros: Buscando registros em massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) e [registrar troca de campos (RFX)](../../data/odbc/record-field-exchange-rfx.md).
 
 ### <a name="example"></a>Exemplo
 
@@ -705,7 +705,7 @@ void RFX_Double_Bulk(
 ### <a name="parameters"></a>Parâmetros
 
 *pFX*<br/>
-Um ponteiro para um [CFieldExchange](cfieldexchange-class.md) objeto. Este objeto contém informações para definir o contexto para cada chamada da função. Para obter mais informações, consulte o artigo [troca de campos do registro: como funciona a RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+Um ponteiro para um [CFieldExchange](cfieldexchange-class.md) objeto. Este objeto contém informações para definir o contexto para cada chamada da função. Para obter mais informações, consulte o artigo [troca de campos do registro: Como funciona RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
 O nome de uma coluna de dados.
@@ -725,7 +725,7 @@ Se você inicializar *prgDblVals* e *prgLengths* como NULL, e em seguida, as mat
 > [!NOTE]
 >  Troca de campos de registro em massa só transfere dados da fonte de dados para o objeto de conjunto de registros. Para tornar o seu conjunto de registros atualizável, você deve usar a função ODBC API `SQLSetPos`.
 
-Para obter mais informações, consulte os artigos [conjunto de registros: buscando registros em massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) e [Exchange RFX (Record Field)](../../data/odbc/record-field-exchange-rfx.md).
+Para obter mais informações, consulte os artigos [conjunto de registros: Buscando registros em massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) e [registrar troca de campos (RFX)](../../data/odbc/record-field-exchange-rfx.md).
 
 ### <a name="example"></a>Exemplo
 
@@ -751,7 +751,7 @@ void RFX_Int(
 ### <a name="parameters"></a>Parâmetros
 
 *pFX*<br/>
-Um ponteiro para um objeto da classe [CFieldExchange](cfieldexchange-class.md). Este objeto contém informações para definir o contexto para cada chamada da função. Para obter mais informações sobre as operações de uma `CFieldExchange` objeto pode especificar, consulte o artigo [registrar troca de campos: como funciona a RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+Um ponteiro para um objeto da classe [CFieldExchange](cfieldexchange-class.md). Este objeto contém informações para definir o contexto para cada chamada da função. Para obter mais informações sobre as operações de uma `CFieldExchange` objeto pode especificar, consulte o artigo [troca de campos do registro: Como funciona RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
 O nome de uma coluna de dados.
@@ -784,7 +784,7 @@ void RFX_Long_Bulk(
 ### <a name="parameters"></a>Parâmetros
 
 *pFX*<br/>
-Um ponteiro para um [CFieldExchange](cfieldexchange-class.md) objeto. Este objeto contém informações para definir o contexto para cada chamada da função. Para obter mais informações, consulte o artigo [troca de campos do registro: como funciona a RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+Um ponteiro para um [CFieldExchange](cfieldexchange-class.md) objeto. Este objeto contém informações para definir o contexto para cada chamada da função. Para obter mais informações, consulte o artigo [troca de campos do registro: Como funciona RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
 O nome de uma coluna de dados.
@@ -804,7 +804,7 @@ Se você inicializar *prgLongVals* e *prgLengths* como NULL, e em seguida, as ma
 > [!NOTE]
 >  Troca de campos de registro em massa só transfere dados da fonte de dados para o objeto de conjunto de registros. Para tornar o seu conjunto de registros atualizável, você deve usar a função ODBC API `SQLSetPos`.
 
-Para obter mais informações, consulte os artigos [conjunto de registros: buscando registros em massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) e [Exchange RFX (Record Field)](../../data/odbc/record-field-exchange-rfx.md).
+Para obter mais informações, consulte os artigos [conjunto de registros: Buscando registros em massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) e [registrar troca de campos (RFX)](../../data/odbc/record-field-exchange-rfx.md).
 
 ### <a name="example"></a>Exemplo
 
@@ -831,7 +831,7 @@ void RFX_Single_Bulk(
 ### <a name="parameters"></a>Parâmetros
 
 *pFX*<br/>
-Um ponteiro para um [CFieldExchange](cfieldexchange-class.md) objeto. Este objeto contém informações para definir o contexto para cada chamada da função. Para obter mais informações, consulte o artigo [troca de campos do registro: como funciona a RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+Um ponteiro para um [CFieldExchange](cfieldexchange-class.md) objeto. Este objeto contém informações para definir o contexto para cada chamada da função. Para obter mais informações, consulte o artigo [troca de campos do registro: Como funciona RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
 O nome de uma coluna de dados.
@@ -851,7 +851,7 @@ Se você inicializar *prgFltVals* e *prgLengths* como NULL, e em seguida, as mat
 > [!NOTE]
 >  Troca de campos de registro em massa só transfere dados da fonte de dados para o objeto de conjunto de registros. Para tornar o seu conjunto de registros atualizável, você deve usar a função ODBC API `SQLSetPos`.
 
-Para obter mais informações, consulte os artigos [conjunto de registros: buscando registros em massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) e [Exchange RFX (Record Field)](../../data/odbc/record-field-exchange-rfx.md).
+Para obter mais informações, consulte os artigos [conjunto de registros: Buscando registros em massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) e [registrar troca de campos (RFX)](../../data/odbc/record-field-exchange-rfx.md).
 
 ### <a name="example"></a>Exemplo
 
@@ -879,7 +879,7 @@ void RFX_Text_Bulk(
 ### <a name="parameters"></a>Parâmetros
 
 *pFX*<br/>
-Um ponteiro para um [CFieldExchange](cfieldexchange-class.md) objeto. Este objeto contém informações para definir o contexto para cada chamada da função. Para obter mais informações, consulte o artigo [troca de campos do registro: como funciona a RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+Um ponteiro para um [CFieldExchange](cfieldexchange-class.md) objeto. Este objeto contém informações para definir o contexto para cada chamada da função. Para obter mais informações, consulte o artigo [troca de campos do registro: Como funciona RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
 O nome de uma coluna de dados.
@@ -902,7 +902,7 @@ Se você inicializar *prgStrVals* e *prgLengths* como NULL, e em seguida, as mat
 > [!NOTE]
 >  Troca de campos de registro em massa só transfere dados da fonte de dados para o objeto de conjunto de registros. Para tornar o seu conjunto de registros atualizável, você deve usar a função ODBC API `SQLSetPos`.
 
-Para obter mais informações, consulte os artigos [conjunto de registros: buscando registros em massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) e [Exchange RFX (Record Field)](../../data/odbc/record-field-exchange-rfx.md).
+Para obter mais informações, consulte os artigos [conjunto de registros: Buscando registros em massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) e [registrar troca de campos (RFX)](../../data/odbc/record-field-exchange-rfx.md).
 
 ### <a name="example"></a>Exemplo
 
@@ -1440,4 +1440,3 @@ void CCustSet::DoFieldExchange(CDaoFieldExchange* pFX)
 [CRecordset::DoFieldExchange](crecordset-class.md#dofieldexchange)<br/>
 [CRecordset::DoBulkFieldExchange](crecordset-class.md#dobulkfieldexchange)<br/>
 [CDaoRecordset::DoFieldExchange](cdaorecordset-class.md#dofieldexchange)
-

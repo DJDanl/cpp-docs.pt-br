@@ -1,18 +1,18 @@
 ---
-title: Como implementar vários padrões de produtor-consumidor
+title: 'Como: Implementar vários padrões de produtor-consumidor'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - producer-consumer patterns, implementing [Concurrency Runtime]
 - implementing producer-consumer patterns [Concurrency Runtime]
 ms.assetid: 75f2c7cc-5399-49ea-98eb-847fe6747169
-ms.openlocfilehash: 1c543e2c80ff9edea417fe8c1254bf9aa5aa37fd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 113518e97b6715384b5e7b84b0d0eab63dfcfcc7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658283"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296274"
 ---
-# <a name="how-to-implement-various-producer-consumer-patterns"></a>Como implementar vários padrões de produtor-consumidor
+# <a name="how-to-implement-various-producer-consumer-patterns"></a>Como: Implementar vários padrões de produtor-consumidor
 
 Este tópico descreve como implementar o padrão de produtor-consumidor em seu aplicativo. Nesse padrão, o *produtor* envia mensagens a um bloco de mensagens e o *consumidor* lê mensagens nesse bloco.
 
@@ -62,7 +62,7 @@ Ao contrário de com um `unbounded_buffer` objeto, o `receive` função não rem
 
 Copie o código de exemplo e cole-o em um projeto do Visual Studio ou colá-lo em um arquivo chamado `producer-consumer.cpp` e, em seguida, execute o seguinte comando em uma janela de Prompt de comando do Visual Studio.
 
-**cl.exe /EHsc produtor-consumer.cpp**
+**cl.exe /EHsc producer-consumer.cpp**
 
 ## <a name="see-also"></a>Consulte também
 

@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CWinThread [MFC], m_pActiveWnd
 - CWinThread [MFC], m_pMainWnd
 ms.assetid: 10cdc294-4057-4e76-ac7c-a8967a89af0b
-ms.openlocfilehash: 9c2b393354f65195e0d0060a08b83e321e3d5b1d
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 0e02f123580696519e59d828ec590456cbd2a81c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178415"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270118"
 ---
 # <a name="cwinthread-class"></a>Classe CWinThread
 
@@ -91,7 +91,7 @@ class CWinThread : public CCmdTarget
 |[CWinThread::ProcessMessageFilter](#processmessagefilter)|Interceptar determinadas mensagens antes que elas atinjam o aplicativo.|
 |[CWinThread::ProcessWndProcException](#processwndprocexception)|Intercepta todas as exceções sem tratamento lançadas por manipuladores de comandos e de mensagem do thread.|
 |[CWinThread::PumpMessage](#pumpmessage)|contém o loop de mensagens do thread.|
-|[Cwinthread:: ResumeThread](#resumethread)|Contagem de suspensões diminui uma do thread.|
+|[CWinThread::ResumeThread](#resumethread)|Contagem de suspensões diminui uma do thread.|
 |[CWinThread::Run](#run)|Função de controle para threads de uma bomba de mensagem. Substitua para personalizar o loop de mensagem padrão.|
 |[CWinThread::SetThreadPriority](#setthreadpriority)|Define a prioridade do thread atual.|
 |[CWinThread::SuspendThread](#suspendthread)|Contagem de suspensões de incrementos de um thread.|
@@ -480,7 +480,7 @@ virtual BOOL ProcessMessageFilter(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Código*<br/>
+*code*<br/>
 Especifica um código de gancho. Essa função membro usa o código para determinar como processar *lpMsg.*
 
 *lpMsg*<br/>
@@ -547,7 +547,7 @@ virtual BOOL PumpMessage();
 
 Chamar `PumpMessage` diretamente e substituir seu comportamento padrão é recomendado somente para usuários avançados.
 
-##  <a name="resumethread"></a>  Cwinthread:: ResumeThread
+##  <a name="resumethread"></a>  CWinThread::ResumeThread
 
 Chamado para retomar a execução de um thread que foi suspenso pelo [SuspendThread](#suspendthread) função de membro ou um thread criado com o sinalizador CREATE_SUSPENDED.
 

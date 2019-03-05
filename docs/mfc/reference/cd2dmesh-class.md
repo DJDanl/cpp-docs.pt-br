@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CD2DMesh [MFC], Open
 - CD2DMesh [MFC], m_pMesh
 ms.assetid: 11a2c78a-1367-40e8-a34f-44aa0509a4c9
-ms.openlocfilehash: 1cc1769f66b54f2a9a23ef9ad94298687fe4d925
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f4ad6fd054eeb8576c2fdb2dc924f70034b3abad
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445637"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275099"
 ---
 # <a name="cd2dmesh-class"></a>Classe CD2DMesh
 
@@ -48,7 +48,7 @@ class CD2DMesh : public CD2DResource;
 |Nome|Descrição|
 |----------|-----------------|
 |[CD2DMesh::CD2DMesh](#cd2dmesh)|Constrói um objeto CD2DMesh.|
-|[CD2DMesh:: ~ CD2DMesh](#_dtorcd2dmesh)|O destruidor. Chamado quando um objeto de malha D2D está sendo destruído.|
+|[CD2DMesh::~CD2DMesh](#_dtorcd2dmesh)|O destruidor. Chamado quando um objeto de malha D2D está sendo destruído.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
@@ -86,7 +86,7 @@ class CD2DMesh : public CD2DResource;
 
 **Cabeçalho:** afxrendertarget.h
 
-##  <a name="_dtorcd2dmesh"></a>  CD2DMesh:: ~ CD2DMesh
+##  <a name="_dtorcd2dmesh"></a>  CD2DMesh::~CD2DMesh
 
 O destruidor. Chamado quando um objeto de malha D2D está sendo destruído.
 
@@ -206,7 +206,7 @@ ID2D1TessellationSink* Open();
 
 Um ponteiro para um ID2D1TessellationSink que é usado para preencher a malha.
 
-##  <a name="operator_id2d1mesh_star"></a>  CD2DMesh::Operator ID2D1Mesh *
+##  <a name="operator_id2d1mesh_star"></a>  CD2DMesh::operator ID2D1Mesh*
 
 Interface de ID2D1Mesh retorna
 

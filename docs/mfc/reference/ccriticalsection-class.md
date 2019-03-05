@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CCriticalSection [MFC], Unlock
 - CCriticalSection [MFC], m_sect
 ms.assetid: f776f74b-5b0b-4f32-9c13-2b8e4a0d7b2b
-ms.openlocfilehash: 152efe6b1c5e8be67a3c37cc7e56b12c88c1b4dc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2c89647afc8a9a8c6564d25afe20d48818a643f2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50641449"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291035"
 ---
 # <a name="ccriticalsection-class"></a>Classe CCriticalSection
 
@@ -75,7 +75,7 @@ Há dois métodos para usar um `CCriticalSection` objeto: autônomas e inseridas
 
 - Inserido de método, você também pode compartilhar uma classe com vários threads, adicionando um `CCriticalSection`-membro de dados de tipo para a classe e o bloqueio o membro de dados quando necessário.
 
-Para obter mais informações sobre como usar `CCriticalSection` objetos, consulte o artigo [Multithreading: como usar as Classes de sincronização](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).
+Para obter mais informações sobre como usar `CCriticalSection` objetos, consulte o artigo [Multithreading: Como usar as Classes de sincronização](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -147,7 +147,7 @@ Contém um objeto de seção crítica que é usado por todos os `CCriticalSectio
 CRITICAL_SECTION m_sect;
 ```
 
-##  <a name="operator_critical_section_star"></a>  CCriticalSection::operator CRITICAL_SECTION *
+##  <a name="operator_critical_section_star"></a>  CCriticalSection::operator CRITICAL_SECTION*
 
 Recupera um objeto CRITICAL_SECTION.
 

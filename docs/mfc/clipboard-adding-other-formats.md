@@ -1,5 +1,5 @@
 ---
-title: 'Área de Transferência: adicionando outros formatos'
+title: 'Área de transferência: Adicionando outros formatos'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - formats [MFC], Clipboard
@@ -9,16 +9,16 @@ helpviewer_keywords:
 - registering custom Clipboard data formats
 - custom Clipboard data formats
 ms.assetid: aea58159-65ed-4385-aeaa-3d9d5281903b
-ms.openlocfilehash: 991736714d52b4b5fb1a001fb17f1daefed5ddb4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 16e949973ff621b1e4e36475d95763ac47b4a00d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50560557"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57280212"
 ---
-# <a name="clipboard-adding-other-formats"></a>Área de Transferência: adicionando outros formatos
+# <a name="clipboard-adding-other-formats"></a>Área de transferência: Adicionando outros formatos
 
-Este tópico explica como expandir a lista de formatos com suporte, principalmente para suporte ao OLE. O tópico [na área de transferência: copiando e colando dados](../mfc/clipboard-copying-and-pasting-data.md) descreve a implementação mínima necessária para oferecer suporte a cópia e colagem da área de transferência. Se isso é tudo o que você implemente, os únicos formatos colocados na área de transferência são **CF_METAFILEPICT**, **CF_EMBEDSOURCE**, **CF_OBJECTDESCRIPTOR**e possivelmente **CF_LINKSOURCE**. A maioria dos aplicativos será necessário mais formatos na área de transferência que esses três.
+Este tópico explica como expandir a lista de formatos com suporte, principalmente para suporte ao OLE. O tópico [na área de transferência: Copiando e colando dados](../mfc/clipboard-copying-and-pasting-data.md) descreve a implementação mínima necessária para oferecer suporte a cópia e colagem da área de transferência. Se isso é tudo o que você implemente, os únicos formatos colocados na área de transferência são **CF_METAFILEPICT**, **CF_EMBEDSOURCE**, **CF_OBJECTDESCRIPTOR**e possivelmente **CF_LINKSOURCE**. A maioria dos aplicativos será necessário mais formatos na área de transferência que esses três.
 
 ##  <a name="_core_registering_custom_formats"></a> Formatos de registro personalizado
 
@@ -48,5 +48,4 @@ Essa técnica é usada no programa de exemplo OLE do MFC [HIERSVR](../visual-cpp
 
 ## <a name="see-also"></a>Consulte também
 
-[Área de transferência: usando o mecanismo de área de transferência do OLE](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)
-
+[Área de transferência: Usando o mecanismo de área de transferência OLE](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)

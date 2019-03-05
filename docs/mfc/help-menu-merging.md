@@ -6,12 +6,12 @@ helpviewer_keywords:
 - merging Help menus [MFC]
 - Help [MFC], for active document containers
 ms.assetid: 9d615999-79ba-471a-9288-718f0c903d49
-ms.openlocfilehash: 3db635cfdc39f9c4166bbf3d6958f52e535d91f1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e1e8f9af696b6ea4cd485f4215e1c8425098e987
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50578523"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296833"
 ---
 # <a name="help-menu-merging"></a>Mescla do menu Ajuda
 
@@ -37,7 +37,7 @@ Os dois itens de menu são menus em cascata, sob a qual os itens de menu adicion
 
 Para construir este mesclados **ajudar** menu, a arquitetura de confinamento do documento ativo modifica o procedimento de documentos OLE normal. De acordo com a OLE documentos, a barra de menu mesclado pode ter seis grupos de menus, ou seja, **arquivo**, **editar**, **contêiner**, **objeto**,  **Janela**, **ajudar**, nessa ordem. Em cada grupo, pode haver zero ou mais menus. Os grupos **arquivo**, **contêiner**, e **janela** pertencem a grupos e o contêiner **editar**, **Object, o** e **ajudar** pertencem ao objeto. Quando o objeto quer fazer a mesclagem de menu, ele cria uma barra de menus em branco e passa-o para o contêiner. O contêiner, em seguida, insere seus menus, chamando `IOleInPlaceFrame::InsertMenus`. O objeto também passa uma estrutura que é uma matriz de seis valores longos (**OLEMENUGROUPWIDTHS**). Depois de inserir os menus, o contêiner de marca como muitos menus ele adicionado em cada um de seus grupos e, em seguida, retorna. Em seguida, o objeto insere seus menus, prestando atenção à contagem de menus em cada grupo de contêineres. Por fim, o objeto passa a barra de menu mesclado e a matriz (que contém a contagem dos menus em cada grupo) para OLE, que retorna um opaco "descritor de menu" manipular. Mais tarde o objeto passa esse identificador e a barra de menu mesclado ao contêiner, por meio de `IOleInPlaceFrame::SetMenu`. Neste momento, o contêiner exibe a barra de menu mesclado e também passa o identificador para OLE, para que o OLE pode fazer a expedir mensagens de menu.
 
-No procedimento a modificação de documento ativo, o objeto deve ser inicializado pela primeira vez o **OLEMENUGROUPWIDTHS** elementos como zero antes de passá-la para o contêiner. Em seguida, o contêiner executa uma inserção de menu normal com uma exceção: as inserções de contêiner uma **ajudar** menu como o último item e armazena um valor de 1 na última entrada (o sexto) da **OLEMENUGROUPWIDTHS** matriz (ou seja, largura [5], que pertence ao grupo de Ajuda do objeto). Isso **ajudar** menu terá apenas um item que é um submenu, o "**contêiner ajuda** >" menu em cascata conforme descrito anteriormente.
+No procedimento a modificação de documento ativo, o objeto deve ser inicializado pela primeira vez o **OLEMENUGROUPWIDTHS** elementos como zero antes de passá-la para o contêiner. Em seguida, o contêiner executa uma inserção de menu normal com uma exceção: As inserções de contêiner uma **ajudar** menu como o último item e armazena um valor de 1 na última entrada (o sexto) da **OLEMENUGROUPWIDTHS** matriz (ou seja, largura [5], que pertence ao grupo de Ajuda do objeto). Isso **ajudar** menu terá apenas um item que é um submenu, o "**contêiner ajuda** >" menu em cascata conforme descrito anteriormente.
 
 O objeto, em seguida, executa seu código de inserção de menu normal, exceto que, antes de inserir sua **ajudar** menu, ele verifica a entrada de sexta da **OLEMENUGROUPWIDTHS** matriz. Se o valor é 1 e o nome do último menu é **ajudar** (ou cadeia de caracteres localizada apropriado), e em seguida, insere o objeto seu **ajuda** menu como o submenu do contêiner **ajuda** menu.
 
@@ -52,4 +52,3 @@ Por fim, quando é hora de desmontar o menu, o objeto remove inserida **ajudar**
 ## <a name="see-also"></a>Consulte também
 
 [Contêineres de documento ativos](../mfc/active-document-containers.md)
-

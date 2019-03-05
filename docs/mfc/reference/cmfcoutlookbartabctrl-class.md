@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CMFCOutlookBarTabCtrl [MFC], SetToolbarImageList
 - CMFCOutlookBarTabCtrl [MFC], SetVisiblePageButtons
 ms.assetid: b1f2b3f7-cc59-49a3-99d8-7ff9b37c044b
-ms.openlocfilehash: e858d5a481add0f3c6e61175a96a5b27133bf125
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 01effb8cb1142db0bcae6f9c456e4a3b3abd69e8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559712"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269925"
 ---
 # <a name="cmfcoutlookbartabctrl-class"></a>Classe CMFCOutlookBarTabCtrl
 
@@ -128,7 +128,7 @@ O exemplo a seguir demonstra como inicializar uma `CMFCOutlookBarTabCtrl` do obj
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** afxoutlookbartabctrl.h
+**Header:** afxoutlookbartabctrl.h
 
 ##  <a name="addcontrol"></a>  CMFCOutlookBarTabCtrl::AddControl
 
@@ -219,7 +219,7 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Rect*<br/>
+*rect*<br/>
 [in] Especifica o tamanho inicial e a posição, em pixels.
 
 *pParentWnd*<br/>
@@ -246,7 +246,7 @@ static void EnableAnimation(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>Parâmetros
 
-*bAtivar*<br/>
+*bEnable*<br/>
 [in] Especifica se a animação deve ser habilitada ou desabilitada.
 
 ### <a name="remarks"></a>Comentários
@@ -265,7 +265,7 @@ virtual void EnableInPlaceEdit(BOOL bEnable);
 
 ### <a name="parameters"></a>Parâmetros
 
-*bAtivar*<br/>
+*bEnable*<br/>
 Se for TRUE, habilite a edição in-loco do rótulo de texto. Se for FALSE, desabilite a edição in-loco.
 
 ### <a name="remarks"></a>Comentários
@@ -285,7 +285,7 @@ void EnableScrollButtons(
 
 ### <a name="parameters"></a>Parâmetros
 
-*bAtivar*<br/>
+*bEnable*<br/>
 [in] Determina se os botões de rolagem são exibidos.
 
 *bIsUp*<br/>
@@ -476,7 +476,7 @@ BOOL SetToolbarImageList(
 *uiID*<br/>
 [in] Especifica a ID do recurso da imagem para carregar.
 
-*CX*<br/>
+*cx*<br/>
 [in] Especifica a largura de uma imagem na lista de imagens, em pixels.
 
 *clrTransp*<br/>

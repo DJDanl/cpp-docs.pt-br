@@ -7,12 +7,12 @@ helpviewer_keywords:
 - dialog templates [MFC], in memory
 - MFC dialog boxes [MFC], dialog templates
 ms.assetid: edb443bb-e614-4f77-8a3b-74d93871e9bd
-ms.openlocfilehash: 6b241c8dec2daf9a09c3f15456be28e3082e9963
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: de694f6561dfe1423c7758ae572ccf6be1c8fd17
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50604341"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300877"
 ---
 # <a name="using-a-dialog-template-in-memory"></a>Usando um modelo da caixa de diálogo na memória
 
@@ -21,4 +21,3 @@ Em vez de usar os métodos fornecidos na [tabela de criação de caixa de diálo
 ## <a name="see-also"></a>Consulte também
 
 [Ciclo de vida de uma caixa de diálogo](../mfc/life-cycle-of-a-dialog-box.md)
-

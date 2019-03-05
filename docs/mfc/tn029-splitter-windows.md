@@ -1,5 +1,5 @@
 ---
-title: 'TN029: janelas separadoras'
+title: 'TN029: Windows divisor'
 ms.date: 11/04/2016
 f1_keywords:
 - vc.windows.splitter
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - TN029
 - splitter windows [MFC], about splitter windows
 ms.assetid: 2c57ce99-2a3c-4eff-9cea-baccb13af075
-ms.openlocfilehash: 245ad33dd7bc7d3b6365463d4d2ae9538a12bfdc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0c27545c6f425eda952e87c80ed1d37de9e1093a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50501979"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294987"
 ---
-# <a name="tn029-splitter-windows"></a>TN029: janelas separadoras
+# <a name="tn029-splitter-windows"></a>TN029: Windows divisor
 
 Essa observação descreve o MFC [classe CSplitterWnd](../mfc/reference/csplitterwnd-class.md), que fornece a janela divide e gerencia o redimensionamento de outras janelas do painel.
 
@@ -62,7 +62,7 @@ Para usar um `CWnd`-derivado do objeto, passe o RUNTIME_CLASS do objeto para o `
 
 Barra de divisão: Um controle que é colocado entre linhas e colunas de painéis. Ele pode ser usado para ajustar os tamanhos de linhas ou colunas de painéis.
 
-Caixa de divisor: Um controle dinâmico `CSplitterWnd` que você pode usar para criar novas linhas ou colunas de painéis. Ele está localizado na parte superior das barras de rolagem vertical ou à esquerda das barras de rolagem horizontal.
+Caixa de divisor: Um controle em um dinâmico `CSplitterWnd` que você pode usar para criar novas linhas ou colunas de painéis. Ele está localizado na parte superior das barras de rolagem vertical ou à esquerda das barras de rolagem horizontal.
 
 Divisor interseção: A interseção de uma barra divisora vertical e uma barra divisora horizontal. Você pode arrastá-lo para ajustar o tamanho de uma linha e coluna de painéis ao mesmo tempo.
 
@@ -140,4 +140,3 @@ O `CView` classe usa os seguintes comandos de alto níveis para delegar para o `
 
 [Observações técnicas por número](../mfc/technical-notes-by-number.md)<br/>
 [Observações técnicas por categoria](../mfc/technical-notes-by-category.md)
-

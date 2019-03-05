@@ -160,12 +160,12 @@ helpviewer_keywords:
 - CMFCPopupMenu [MFC], OnChangeHot
 - CMFCPopupMenu [MFC], OnChooseItem
 ms.assetid: 9555dca1-8c9c-44c9-af72-0659ddad128e
-ms.openlocfilehash: b52ae91b7ce0111725e5ba21a7f8ca8aaa6779e9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b45ac09ff87c191e55e403951fdff18cae33256d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50517670"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57292270"
 ---
 # <a name="cmfcpopupmenu-class"></a>Classe CMFCPopupMenu
 
@@ -327,7 +327,7 @@ static void AlwaysShowEmptyToolsEntry(BOOL bShow = TRUE);
 
 ### <a name="parameters"></a>Parâmetros
 
-*bMostrar*<br/>
+*bShow*<br/>
 [in] TRUE se o menu pop-up pode exibir entradas vazias; FALSE caso contrário.
 
 ##  <a name="areallcommandsshown"></a>  CMFCPopupMenu::AreAllCommandsShown
@@ -435,7 +435,7 @@ virtual BOOL Create(
 *hMenu*<br/>
 [in] Um identificador para um recurso de menu.
 
-*Bloqueado*<br/>
+*bLocked*<br/>
 [in] Um parâmetro booliano que indica se o menu é personalizável. FALSE indica que o menu pop-up é personalizável.
 
 *bOwnMessage*<br/>
@@ -518,7 +518,7 @@ static void EnableMenuSound(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parâmetros
 
-*bAtivar*<br/>
+*bEnable*<br/>
 [in] TRUE para habilitar o som, caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
@@ -894,7 +894,7 @@ int InsertItem(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Botão*<br/>
+*button*<br/>
 [in] Uma referência ao item de menu para adicionar.
 
 *iInsertAt*<br/>

@@ -1,5 +1,5 @@
 ---
-title: 'TN011: usando MFC como parte de uma DLL'
+title: 'TN011: Usando o MFC como parte de uma DLL'
 ms.date: 11/04/2016
 f1_keywords:
 - vc.mfc.dll
@@ -10,18 +10,18 @@ helpviewer_keywords:
 - DLLs [MFC], linking
 - MFC DLLs [MFC], linking regular MFC DLLs to MFC
 ms.assetid: 76753e9c-59dc-40f6-b6a7-f6bb9a7c4190
-ms.openlocfilehash: f1c98056d5a5e2565e57044b1fb551db4f354f34
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 63e97c3b9260465259d76cf6996d1d389f65ee41
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326193"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326446"
 ---
-# <a name="tn011-using-mfc-as-part-of-a-dll"></a>TN011: usando MFC como parte de uma DLL
+# <a name="tn011-using-mfc-as-part-of-a-dll"></a>TN011: Usando o MFC como parte de uma DLL
 
 Essa observação descreve DLLs normais do MFC, que permitem que você use a biblioteca do MFC como parte de uma biblioteca de vínculo dinâmico (DLL) do Windows. Ele pressupõe que você esteja familiarizado com DLLs do Windows e como criá-los. Para obter informações sobre DLLs de extensão do MFC, com o qual você pode criar extensões para a biblioteca do MFC, consulte [versão de DLL do MFC](../mfc/tn033-dll-version-of-mfc.md).
 
-## <a name="dll-interfaces"></a>Interfaces DLL
+## <a name="dll-interfaces"></a>DLL Interfaces
 
 DLLs MFC regulares pressupõem interfaces entre o aplicativo e a DLL são especificados em C como funções ou classes exportadas explicitamente. Interfaces de classe do MFC não podem ser exportados.
 
@@ -115,4 +115,3 @@ As estruturas usadas pela API não são derivadas de classes do MFC e são defin
 
 [Observações técnicas por número](../mfc/technical-notes-by-number.md)<br/>
 [Observações técnicas por categoria](../mfc/technical-notes-by-category.md)
-

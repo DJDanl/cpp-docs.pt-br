@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CMFCAutoHideButton [MFC], ShowButton
 - CMFCAutoHideButton [MFC], UnSetAutoHideMode
 ms.assetid: c80e6b8b-25ca-4d12-9d27-457731028ab0
-ms.openlocfilehash: 454db8578fd061147948538b8d993205181edcdc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 15b449b4b9f9074966ac269787b1b3ca6f977f48
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50638003"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264580"
 ---
 # <a name="cmfcautohidebutton-class"></a>Classe CMFCAutoHideButton
 
@@ -368,7 +368,7 @@ virtual void OnFillBackground(
 *pDC*<br/>
 [in] Um ponteiro para um contexto de dispositivo.
 
-*Rect*<br/>
+*rect*<br/>
 [in] O retângulo delimitador do botão Ocultar automaticamente.
 
 ### <a name="remarks"></a>Comentários
@@ -385,7 +385,7 @@ void ShowAttachedWindow(BOOL bShow);
 
 ### <a name="parameters"></a>Parâmetros
 
-*bMostrar*<br/>
+*bShow*<br/>
 [in] Um valor booleano que especifica se este método mostra o anexo `CDockablePane`.
 
 ##  <a name="showbutton"></a>  CMFCAutoHideButton::ShowButton
@@ -398,7 +398,7 @@ virtual void ShowButton(BOOL bShow);
 
 ### <a name="parameters"></a>Parâmetros
 
-*bMostrar*<br/>
+*bShow*<br/>
 [in] Um booliano que especifica se deve mostrar o botão Ocultar automaticamente.
 
 ##  <a name="move"></a>  CMFCAutoHideButton::Move

@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CMFCPropertySheet [MFC], SetIconsList
 - CMFCPropertySheet [MFC], SetLook
 ms.assetid: 01d93573-9698-440f-a6a4-5bebbee879dc
-ms.openlocfilehash: 1168375606ef86061269454aa361a076efa331a4
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 7e5b553e6a10bee0e5b05bb32b9af3069269ca91
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176400"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294558"
 ---
 # <a name="cmfcpropertysheet-class"></a>Classe CMFCPropertySheet
 
@@ -148,7 +148,7 @@ void AddPage(CPropertyPage* pPage);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Página*<br/>
+*pPage*<br/>
 [in] Ponteiro para um objeto de página. Esse parâmetro não pode ser NULL.
 
 ### <a name="remarks"></a>Comentários
@@ -174,7 +174,7 @@ void AddPageToTree(
 *pCategory*<br/>
 [in] Ponteiro para um nó de árvore pai ou nulo para associar a página especificada com o nó de nível superior. Chame o [CMFCPropertySheet::AddTreeCategory](#addtreecategory) método para obter esse ponteiro.
 
-*Página*<br/>
+*pPage*<br/>
 [in] Ponteiro para um objeto de página de propriedade.
 
 *nIconNum*<br/>
@@ -360,7 +360,7 @@ virtual void OnActivatePage(CPropertyPage* pPage);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Página*<br/>
+*pPage*<br/>
 [in] Ponteiro para um objeto de página de propriedade que representa a página de propriedade enabled.
 
 ### <a name="remarks"></a>Comentários
@@ -403,7 +403,7 @@ virtual BOOL OnRemoveTreePage(CPropertyPage* pPage);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Página*<br/>
+*pPage*<br/>
 [in] Ponteiro para um objeto de página de propriedade que representa a página de propriedade a ser removido.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -438,7 +438,7 @@ void RemovePage(int nPage);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Página*<br/>
+*pPage*<br/>
 [in] Ponteiro para objeto de página de propriedade que representa a página de propriedade a ser removido. Não pode ser NULL.
 
 *nPage*<br/>
@@ -465,7 +465,7 @@ void SetIconsList(HIMAGELIST hIcons);
 *uiImageListResID*<br/>
 [in] A ID de recurso de uma lista de imagens.
 
-*CX*<br/>
+*cx*<br/>
 [in] A largura, em pixels, dos ícones na lista de imagens.
 
 *clrTransparent*<br/>
@@ -496,7 +496,7 @@ void SetLook(
 
 ### <a name="parameters"></a>Parâmetros
 
-*aparência*<br/>
+*look*<br/>
 [in] Um dos valores de enumeração que especifica a aparência da folha de propriedades. O estilo padrão para uma folha de propriedades é `CMFCPropertySheet::PropSheetLook_Tabs`. Para obter mais informações, consulte a tabela na seção Comentários deste tópico.
 
 *nNavControlWidth*<br/>

@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CAnimationGroup [MFC], m_nGroupID
 - CAnimationGroup [MFC], m_pParentController
 ms.assetid: 8bc18ceb-33a2-41d0-9731-71811adacab7
-ms.openlocfilehash: b05de00697aa019382014402f7701a8341da5198
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9be0a5b76f91ddf4dc3d1c4ff2816b7ffd5a1986
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50512912"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304373"
 ---
 # <a name="canimationgroup-class"></a>Classe CAnimationGroup
 
@@ -70,7 +70,7 @@ class CAnimationGroup;
 |Nome|Descrição|
 |----------|-----------------|
 |[CAnimationGroup::CAnimationGroup](#canimationgroup)|Constrói um grupo de animação.|
-|[CAnimationGroup:: ~ CAnimationGroup](#canimationgroup__~canimationgroup)|O destruidor. Chamado quando um grupo de animação está sendo destruído.|
+|[CAnimationGroup::~CAnimationGroup](#canimationgroup__~canimationgroup)|O destruidor. Chamado quando um grupo de animação está sendo destruído.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
@@ -123,7 +123,7 @@ Grupos de animação são criados automaticamente pelo controlador de animação
 
 **Cabeçalho:** afxanimationcontroller.h
 
-##  <a name="_dtorcanimationgroup"></a>  CAnimationGroup:: ~ CAnimationGroup
+##  <a name="_dtorcanimationgroup"></a>  CAnimationGroup::~CAnimationGroup
 
 O destruidor. Chamado quando um grupo de animação está sendo destruído.
 

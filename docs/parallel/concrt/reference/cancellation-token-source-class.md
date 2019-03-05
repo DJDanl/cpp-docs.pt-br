@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - cancellation_token_source class
 ms.assetid: 3548b1a0-12b0-4334-95db-4bf57141c066
-ms.openlocfilehash: e0b636d22eede9eb6a9d9268241f912bb80fcbf9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 330473db1011af661e2cfa2c5861987bce786e40
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50446742"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296781"
 ---
 # <a name="cancellationtokensource-class"></a>Classe cancellation_token_source
 
@@ -63,7 +63,7 @@ class cancellation_token_source;
 
 **Namespace:** simultaneidade
 
-##  <a name="dtor"></a> ~ cancellation_token_source
+##  <a name="dtor"></a> ~cancellation_token_source
 
 ```
 ~cancellation_token_source();
@@ -114,10 +114,10 @@ Tipo de iterador.
 *_Src*<br/>
 Um token cujo cancelamento causará o cancelamento da origem do token retornado. Observe que a origem do token retornado também pode ser cancelada independentemente da origem contida neste parâmetro.
 
-*Iniciar*<br/>
+*_Begin*<br/>
 O iterador de biblioteca padrão C++ correspondente ao início do intervalo de tokens para escuta do cancelamento.
 
-*Encerrar*<br/>
+*_End*<br/>
 O iterador de biblioteca padrão C++ corresponde ao final do intervalo de tokens para escuta do cancelamento.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -149,7 +149,7 @@ Operando.
 
 ### <a name="return-value"></a>Valor de retorno
 
-##  <a name="operator_eq"></a> operador =
+##  <a name="operator_eq"></a> operator=
 
 ```
 cancellation_token_source& operator= (const cancellation_token_source& _Src);
@@ -164,7 +164,7 @@ Operando.
 
 ### <a name="return-value"></a>Valor de retorno
 
-##  <a name="operator_eq_eq"></a> operador = =
+##  <a name="operator_eq_eq"></a> operator==
 
 ```
 bool operator== (const cancellation_token_source& _Src) const;

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - rich edit controls [MFC], printing
 - CRichEditCtrl class [MFC], printing
 ms.assetid: dbda0e40-018f-424e-b5d8-7b489aaf27af
-ms.openlocfilehash: bf402f5495ad85eb0c5067d60fcedfe29e6350bb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2ddc52e43da2e409117ccc5169442002ac27a315
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50641201"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57263488"
 ---
 # <a name="printing-in-rich-edit-controls"></a>Imprimindo em controles de edição avançada
 
@@ -27,4 +27,3 @@ Você pode usar o [SetTargetDevice](../mfc/reference/cricheditctrl-class.md#sett
 
 [Usando CRichEditCtrl](../mfc/using-cricheditctrl.md)<br/>
 [Controles](../mfc/controls-mfc.md)
-

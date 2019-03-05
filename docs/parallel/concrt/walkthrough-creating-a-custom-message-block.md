@@ -1,18 +1,18 @@
 ---
-title: 'Instruções passo a passo: criando um bloco de mensagens personalizado'
+title: 'Passo a passo: Criar um bloco de mensagem personalizada'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - creating custom message blocks Concurrency Runtime]
 - custom message blocks, creating [Concurrency Runtime]
 ms.assetid: 4c6477ad-613c-4cac-8e94-2c9e63cd43a1
-ms.openlocfilehash: de44a2d01364070318f4d800fc6316c628177178
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e897163a1d394228ac1d8f566e4b0d761fbeeb42
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607123"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272731"
 ---
-# <a name="walkthrough-creating-a-custom-message-block"></a>Instruções passo a passo: criando um bloco de mensagens personalizado
+# <a name="walkthrough-creating-a-custom-message-block"></a>Passo a passo: Criar um bloco de mensagem personalizada
 
 Este documento descreve como criar um tipo de bloco de mensagem personalizado que ordena as mensagens de entrada por prioridade.
 
@@ -58,7 +58,7 @@ O `reserve_message`, `consume_message`, `release_message`, e `resume_propagation
 
 A tempo de execução chama o `propagate_message` método para transferir de forma assíncrona uma mensagem de outro bloco para a atual. O `send_message` é semelhante ao método `propagate_message`, exceto que ele de forma síncrona, em vez de forma assíncrona, envia a mensagem aos blocos de destino. A implementação padrão de `send_message` rejeita todas as mensagens recebidas. O tempo de execução não chamará nenhum desses métodos se a mensagem não passar a função de filtro opcional que está associada com o bloco de destino. Para obter mais informações sobre filtros de mensagem, consulte [blocos de mensagens assíncronas](../../parallel/concrt/asynchronous-message-blocks.md).
 
-[[Superior](#top)]
+[[Top](#top)]
 
 ##  <a name="class"></a> Definindo a classe priority_buffer
 
@@ -176,7 +176,7 @@ O `priority_buffer` classe contém sobrecargas de construtor que são comuns em 
 
 Porque o `priority_buffer` classe ordena as mensagens por prioridade e, em seguida, pela ordem na qual as mensagens são recebidas, essa classe é mais útil quando recebe mensagens de forma assíncrona, por exemplo, quando você chama o [Concurrency:: asend](reference/concurrency-namespace-functions.md#asend)função ou quando o bloco de mensagens está conectado a outros blocos de mensagem.
 
-[[Superior](#top)]
+[[Top](#top)]
 
 ##  <a name="complete"></a> O exemplo completo
 
@@ -198,7 +198,7 @@ Este exemplo produz a saída de exemplo a seguir.
 
 O `priority_buffer` classe ordena as mensagens primeiro por prioridade e, em seguida, pela ordem em que ele recebe mensagens. Neste exemplo, as mensagens com maior prioridade numérica são inseridas à frente da fila.
 
-[[Superior](#top)]
+[[Top](#top)]
 
 ## <a name="compiling-the-code"></a>Compilando o código
 

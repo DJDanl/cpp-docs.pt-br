@@ -7,20 +7,20 @@ helpviewer_keywords:
 - objects [MFC], graphic objects
 - one-stage and two-stage construction of objects [MFC]
 ms.assetid: 5a1c410c-4a4b-4dd9-a2ec-ced831aa7f21
-ms.openlocfilehash: bdfb7879bc926435bdcd72d6776646c449ffef80
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 871db7abd2682d557bf2e80e9cb97624f0dc53a6
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50623308"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57263631"
 ---
 # <a name="one-stage-and-two-stage-construction-of-objects"></a>Construção de objetos em um e dois estágios
 
 Você pode escolher entre duas técnicas para criar objetos gráficos, como canetas e pincéis:
 
-- *Construção de um estágio*: construção e inicializar o objeto em um estágio, tudo isso com o construtor.
+- *Construção de um estágio*: Criar e inicializar o objeto em um estágio, tudo com o construtor.
 
-- *Construção de dois estágios*: construção e inicializar o objeto em duas fases separadas. O construtor cria o objeto e inicializa-o uma função de inicialização.
+- *Construção de dois estágios*: Criar e inicializar o objeto em duas fases separadas. O construtor cria o objeto e inicializa-o uma função de inicialização.
 
 Construção de dois estágios sempre é mais segura. Na construção de um estágio, o construtor pode lançar uma exceção se você fornecer argumentos incorretos ou falha de alocação de memória. Esse problema é evitado com a construção de dois estágios, embora seja necessário que verificar se há falha. Em ambos os casos, destruir o objeto é o mesmo processo.
 
@@ -46,4 +46,3 @@ O exemplo a seguir breve mostra ambos os métodos de construção de um objeto p
 ## <a name="see-also"></a>Consulte também
 
 [Objetos gráficos](../mfc/graphic-objects.md)
-

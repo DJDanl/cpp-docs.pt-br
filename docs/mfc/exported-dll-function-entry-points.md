@@ -6,12 +6,12 @@ helpviewer_keywords:
 - MFC, managing state data
 - state management [MFC], exported DLLs
 ms.assetid: 3268666e-d24b-44f2-80e8-7c80f73b93ca
-ms.openlocfilehash: 8b84209833fee42ec8ebdd1fdea7a9229decad9d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 129defe39a79fd38211a539a4a85d79d9a3c0998
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50463305"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279517"
 ---
 # <a name="exported-dll-function-entry-points"></a>Pontos de entrada da função DLL exportada
 
@@ -34,4 +34,3 @@ Problemas com os recursos em DLLs ocorrerá se o `AFX_MANAGE_STATE` macro não �
 ## <a name="see-also"></a>Consulte também
 
 [Gerenciando os dados de estado dos módulos MFC](../mfc/managing-the-state-data-of-mfc-modules.md)
-

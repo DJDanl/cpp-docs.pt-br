@@ -12,12 +12,12 @@ helpviewer_keywords:
 - '& operator, address-of operator'
 - CAdapt class
 ms.assetid: 0bb695a5-72fe-43d1-8f39-7e4da6e34765
-ms.openlocfilehash: ec42ab7a9dd36648b1405859cf02bc194f75a73c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 39184e952475fa0f05a6fc25c433191ea22b5c16
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614728"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269819"
 ---
 # <a name="cadapt-class"></a>Classe CAdapt
 
@@ -51,7 +51,7 @@ O tipo adaptado.
 |[CAdapt::operator T &](#operator_t_amp)|Retorna uma referência para `m_T`.|
 |[CAdapt::operator <](#operator_lt)|Compara um objeto do tipo adaptado com `m_T`.|
 |[CAdapt::operator =](#operator_eq)|Atribui um objeto do tipo adaptado a `m_T`.|
-|[CAdapt::operator = =](#operator_eq_eq)|Compara um objeto do tipo adaptado com `m_T`.|
+|[CAdapt::operator ==](#operator_eq_eq)|Compara um objeto do tipo adaptado com `m_T`.|
 
 ### <a name="public-data-members"></a>Membros de Dados Públicos
 

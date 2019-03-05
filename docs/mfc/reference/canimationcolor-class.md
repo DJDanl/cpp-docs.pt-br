@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CAnimationColor [MFC], m_gValue
 - CAnimationColor [MFC], m_rValue
 ms.assetid: 88bfabd4-efeb-4652-87e8-304253d8e48c
-ms.openlocfilehash: 6037dd11ddef10500d9468bdf9fa188901aad739
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ee6003a22db78c2a510579c3d717fec887f8a6ad
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50536677"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304322"
 ---
 # <a name="canimationcolor-class"></a>Classe CAnimationColor
 
@@ -78,7 +78,7 @@ class CAnimationColor : public CAnimationBaseObject;
 |Nome|Descrição|
 |----------|-----------------|
 |[CAnimationColor::operator COLORREF](#operator_colorref)||
-|[CAnimationColor::operator =](#operator_eq)|Atribui a cor a CAnimationColor.|
+|[CAnimationColor::operator=](#operator_eq)|Atribui a cor a CAnimationColor.|
 
 ### <a name="protected-data-members"></a>Membros de dados protegidos
 
@@ -146,7 +146,7 @@ CAnimationColor(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Cor*<br/>
+*color*<br/>
 Especifica a cor padrão.
 
 *nGroupID*<br/>
@@ -249,7 +249,7 @@ BOOL GetValue(COLORREF& color);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Cor*<br/>
+*color*<br/>
 Saída. Quando este método retorna, contém o valor atual.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -292,7 +292,7 @@ operator COLORREF();
 
 ### <a name="return-value"></a>Valor de retorno
 
-##  <a name="operator_eq"></a>  CAnimationColor::operator =
+##  <a name="operator_eq"></a>  CAnimationColor::operator=
 
 Atribui a cor a CAnimationColor.
 
@@ -302,7 +302,7 @@ void operator=(COLORREF color);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Cor*<br/>
+*color*<br/>
 Especifica o novo valor de cor de animação.
 
 ### <a name="remarks"></a>Comentários
@@ -319,7 +319,7 @@ void SetDefaultValue(COLORREF color);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Cor*<br/>
+*color*<br/>
 Especifica novos valores padrão para componentes vermelhos, verdes e azuis.
 
 ### <a name="remarks"></a>Comentários

@@ -1,5 +1,5 @@
 ---
-title: 'Área de Transferência: usando a Área de Transferência do Windows'
+title: 'Área de transferência: Usando a área de transferência do Windows'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Clipboard commands
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - Windows Clipboard [MFC]
 - Clipboard [MFC], Windows Clipboard API
 ms.assetid: 24415b42-9301-4a70-b69a-44c97918319f
-ms.openlocfilehash: 67bc337af2cf55a4f39698f730ce14a3369ef742
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 49111e4efd2a12264d61030fe038d80b974514c1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50460691"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264788"
 ---
-# <a name="clipboard-using-the-windows-clipboard"></a>Área de Transferência: usando a Área de Transferência do Windows
+# <a name="clipboard-using-the-windows-clipboard"></a>Área de transferência: Usando a área de transferência do Windows
 
 Este tópico descreve como usar a API de área de transferência do Windows padrão dentro de seu aplicativo do MFC.
 
@@ -30,7 +30,7 @@ A maioria dos aplicativos para Windows dão suporte a recortar ou copiar dados p
 
 Os comandos Recortar, copiar e colar só são úteis em determinados contextos. Os comandos Recortar e a cópia devem ser habilitados apenas quando algo está selecionado e o comando Colar somente quando algo está na área de transferência. Você pode fornecer esse comportamento definindo funções de manipulador de atualização que habilitam ou desabilitam esses comandos, dependendo do contexto. Para obter mais informações, consulte [como objetos de atualização de Interface do usuário](../mfc/how-to-update-user-interface-objects.md).
 
-A biblioteca Microsoft Foundation Class fornece suporte de área de transferência para edição de texto com o `CEdit` e `CEditView` classes. As classes OLE também simplificam a implementação da área de transferência operações que envolvem itens OLE. Para obter mais informações sobre as classes OLE, consulte [na área de transferência: usando o mecanismo de área de transferência OLE](../mfc/clipboard-using-the-ole-clipboard-mechanism.md).
+A biblioteca Microsoft Foundation Class fornece suporte de área de transferência para edição de texto com o `CEdit` e `CEditView` classes. As classes OLE também simplificam a implementação da área de transferência operações que envolvem itens OLE. Para obter mais informações sobre as classes OLE, consulte [na área de transferência: Usando o mecanismo de área de transferência OLE](../mfc/clipboard-using-the-ole-clipboard-mechanism.md).
 
 Implementar outros editar comandos de menu, como desfazer (**ID_EDIT_UNDO**) e Refazer (**ID_EDIT_REDO**), também é deixada para você. Se seu aplicativo não dá suporte a esses comandos, você pode excluí-los facilmente de seu arquivo de recurso usando os editores de recursos do Visual C++.
 
@@ -43,4 +43,3 @@ Implementar outros editar comandos de menu, como desfazer (**ID_EDIT_UNDO**) e R
 ## <a name="see-also"></a>Consulte também
 
 [Área de transferência](../mfc/clipboard.md)
-

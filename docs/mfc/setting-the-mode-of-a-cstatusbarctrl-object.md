@@ -11,12 +11,12 @@ helpviewer_keywords:
 - non-simple mode and status bar controls
 - CStatusBarCtrl class [MFC], simple and nonsimple modes
 ms.assetid: ca6076e5-1501-4e33-8d35-9308941e46c0
-ms.openlocfilehash: 0009f73f11b1a3c57f5001269f34834c22b045c7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a6d1a0edb356f9737aa287809dd8bca4146c1854
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50655242"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57287928"
 ---
 # <a name="setting-the-mode-of-a-cstatusbarctrl-object"></a>Definindo o modo de um objeto CStatusBarCtrl
 
@@ -33,4 +33,3 @@ Você pode usar o [IsSimple](../mfc/reference/cstatusbarctrl-class.md#issimple) 
 
 [Usando CStatusBarCtrl](../mfc/using-cstatusbarctrl.md)<br/>
 [Controles](../mfc/controls-mfc.md)
-

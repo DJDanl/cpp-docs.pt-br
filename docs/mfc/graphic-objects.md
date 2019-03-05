@@ -41,12 +41,12 @@ helpviewer_keywords:
 - painting and device context [MFC]
 - CPalette class [MFC], HPALETTE handle type
 ms.assetid: 41963b25-34b7-4343-8446-34ba516b83ca
-ms.openlocfilehash: 4c4f9a96725e76ff25e21f7923e1b45a6e380ac5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 58ecf680d64f39ab61589a0ad668c15d1a9cd68c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50612752"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279569"
 ---
 # <a name="graphic-objects"></a>Objetos gráficos
 
@@ -105,4 +105,3 @@ O código a seguir converte um `CPen` objeto para um identificador do Windows:
 ## <a name="see-also"></a>Consulte também
 
 [Objetos de janela](../mfc/window-objects.md)
-

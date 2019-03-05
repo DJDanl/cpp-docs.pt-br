@@ -1,5 +1,5 @@
 ---
-title: 'Menus e recursos: adições de servidor'
+title: 'Menus e recursos: Adições de servidor'
 ms.date: 11/04/2016
 f1_keywords:
 - IDP_OLE_INIT_FAILED
@@ -17,14 +17,14 @@ helpviewer_keywords:
 - server applications [MFC], OLE menus and resources
 - OLE initialization failure [MFC]
 ms.assetid: 56ce9e8d-8f41-4db8-8dee-e8b0702d057c
-ms.openlocfilehash: 8b4e7787029fc9401ece02860f09b8159f086afe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0cf5b495ca1e3f6e7b0ae434c09e014a29eadb00
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50592574"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281938"
 ---
-# <a name="menus-and-resources-server-additions"></a>Menus e recursos: adições de servidor
+# <a name="menus-and-resources-server-additions"></a>Menus e recursos: Adições de servidor
 
 Este artigo explica as alterações que precisam ser feitas para os menus e outros recursos em um aplicativo de servidor (componente) de edição visual. Um aplicativo de servidor requer muitas adições à estrutura do menu e outros recursos, porque ele pode ser iniciado em um dos três modos: espera sozinho, incorporado, ou em vigor. Conforme descrito na [Menus e recursos (OLE)](../mfc/menus-and-resources-ole.md) do artigo, há um máximo de quatro conjuntos de menus. Todos os quatro são usados para um aplicativo de servidor completo MDI, enquanto apenas três são usados para um miniserver. O Assistente de aplicativo criará o layout de menu necessários para o tipo de servidor que você deseja. Alguma personalização pode ser necessária.
 
@@ -44,7 +44,7 @@ Os tópicos abordados neste artigo incluem:
 
 Aplicativos de servidor (componente) devem ter recursos de menu adicionados para dar suporte à edição visual do OLE. Os menus usados quando o aplicativo é executado no modo autônomo não precisam ser alteradas, mas você deve adicionar dois novos recursos de menu antes de compilar o aplicativo: uma para dar suporte à ativação no local e outra para suportar o servidor que está sendo totalmente aberta. Ambos os recursos de menu são usados por aplicativos e miniserver de completo.
 
-- Para dar suporte à ativação in-loco, você deve criar um recurso de menu que é muito semelhante ao recurso de menu usado quando executado no modo autônomo. A diferença nesse menu é que os itens de arquivo e a janela (e outros itens de menu que lidam com o aplicativo e não os dados) estão ausentes. O aplicativo de contêiner fornecerá esses itens de menu. Para obter mais informações sobre e um exemplo, essa técnica de mesclagem de menu, consulte o artigo [Menus e recursos: mesclagem de Menu](../mfc/menus-and-resources-menu-merging.md).
+- Para dar suporte à ativação in-loco, você deve criar um recurso de menu que é muito semelhante ao recurso de menu usado quando executado no modo autônomo. A diferença nesse menu é que os itens de arquivo e a janela (e outros itens de menu que lidam com o aplicativo e não os dados) estão ausentes. O aplicativo de contêiner fornecerá esses itens de menu. Para obter mais informações sobre e um exemplo, essa técnica de mesclagem de menu, consulte o artigo [Menus e recursos: A mesclagem de menu](../mfc/menus-and-resources-menu-merging.md).
 
 - Para dar suporte à ativação totalmente aberta, você deve criar um recurso de menu quase idêntico para o recurso de menu usado quando executado no modo autônomo. A única modificação a esse recurso de menu é que alguns itens são reformuladas para refletir o fato de que o servidor está operando em um item inserido em um documento composto.
 
@@ -73,5 +73,4 @@ As adições mesmas se aplicam para miniservers como aqueles listados acima para
 ## <a name="see-also"></a>Consulte também
 
 [Menus e recursos (OLE)](../mfc/menus-and-resources-ole.md)<br/>
-[Menus e recursos: mesclagem de menu](../mfc/menus-and-resources-menu-merging.md)
-
+[Menus e recursos: Mesclagem de menu](../mfc/menus-and-resources-menu-merging.md)

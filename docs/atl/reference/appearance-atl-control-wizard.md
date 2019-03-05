@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - ATL Control Wizard, appearance
 ms.assetid: cc16d7ff-74d7-4c15-9ebd-4b19201ff457
-ms.openlocfilehash: 34c72fa8a2c5108a20065041c5cb7ea461e501a8
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 4d3b0519951636fad4175dc35261ba35b3694ffa
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330587"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57280401"
 ---
 # <a name="appearance-atl-control-wizard"></a>Aparência, o Assistente de controle ATL
 
@@ -23,13 +23,13 @@ Use esta página do Assistente para identificar as opções de elemento de usuá
 
    Define a aparência do controle dentro do contêiner.
 
-   - **Opaco**: define o VIEWSTATUS_OPAQUE bit na [VIEWSTATUS](/windows/desktop/api/ocidl/ne-ocidl-tagviewstatus) enumeração e desenha o retângulo de controle inteiro passado para o [CComControlBase::OnDraw](../../atl/reference/ccomcontrolbase-class.md#ondraw) método. O controle aparece completamente opaco e nenhum contêiner mostra atrás dos limites do controle.
+   - **Opaco**: Define o VIEWSTATUS_OPAQUE bit na [VIEWSTATUS](/windows/desktop/api/ocidl/ne-ocidl-tagviewstatus) enumeração e desenha o retângulo de controle inteiro passado para o [CComControlBase::OnDraw](../../atl/reference/ccomcontrolbase-class.md#ondraw) método. O controle aparece completamente opaco e nenhum contêiner mostra atrás dos limites do controle.
 
       Essa configuração ajuda o contêiner de desenhar o controle mais rapidamente. Se essa opção não for selecionada, o controle pode conter partes transparentes.
 
       Somente um controle opaco pode ter um plano de fundo sólido.
 
-   - **Plano de fundo sólido**: define o VIEWSTATUS_SOLIDBKGND bit na enumeração Exibir status. Plano de fundo do controle é exibido como uma cor sólida com nenhum padrão.
+   - **Plano de fundo sólido**: Define o bit na enumeração Exibir status de VIEWSTATUS_SOLIDBKGND. Plano de fundo do controle é exibido como uma cor sólida com nenhum padrão.
 
       Essa opção está disponível somente se o **opaco** também está selecionada.
 
@@ -73,17 +73,17 @@ Use esta página do Assistente para identificar as opções de elemento de usuá
 
    Define as opções de aparência e comportamento adicionais para o controle.
 
-   - **Invisível em tempo de execução**: define o controle seja invisível em tempo de execução. Você pode usar controles invisíveis para executar operações em segundo plano, como acionar eventos em intervalos regulares.
+   - **Invisível em tempo de execução**: Define o controle seja invisível em tempo de execução. Você pode usar controles invisíveis para executar operações em segundo plano, como acionar eventos em intervalos regulares.
 
-   - **Atua como o botão**: define o OLEMISC_ACTSLIKEBUTTON bit na [OLEMISC](/windows/desktop/api/oleidl/ne-oleidl-tagolemisc) enumeração para ativar um controle atuar como um botão. Se o contêiner foi marcado como site de cliente do controle como um botão padrão, esta opção permite que o controle de botão para exibir a próprio como um botão padrão por desenhar-se com um quadro mais espesso. Ver [CComControlBase::GetAmbientDisplayAsDefault](../../atl/reference/ccomcontrolbase-class.md#getambientdisplayasdefault) para obter mais informações.
+   - **Atua como um botão**: Define o OLEMISC_ACTSLIKEBUTTON bit na [OLEMISC](/windows/desktop/api/oleidl/ne-oleidl-tagolemisc) enumeração para ativar um controle atuar como um botão. Se o contêiner foi marcado como site de cliente do controle como um botão padrão, esta opção permite que o controle de botão para exibir a próprio como um botão padrão por desenhar-se com um quadro mais espesso. Ver [CComControlBase::GetAmbientDisplayAsDefault](../../atl/reference/ccomcontrolbase-class.md#getambientdisplayasdefault) para obter mais informações.
 
-   - **Atua como o rótulo**: define o OLEMISC_ACTSLIKELABEL bit na enumeração OLEMISC para ativar um controle substituir o rótulo de nativa do contêiner. O contêiner determina o que fazer com esse sinalizador, se nada.
+   - **Atua como o rótulo**: Define o OLEMISC_ACTSLIKELABEL bit na enumeração OLEMISC para ativar um controle substituir o rótulo de nativa do contêiner. O contêiner determina o que fazer com esse sinalizador, se nada.
 
 - **Outros**
 
    Define opções de comportamento adicional para o controle.
 
-   - **Normalizados DC**: define o controle para criar um contexto de dispositivo normalizado quando ele é chamado para desenhar a mesmo. Essa ação padroniza a aparência do controle, mas ele torna o desenho menos eficiente.
+   - **Normalizados DC**: Define o controle para criar um contexto de dispositivo normalizado quando ele é chamado para desenhar a mesmo. Essa ação padroniza a aparência do controle, mas ele torna o desenho menos eficiente.
 
    - **Somente a janela**: Especifica que o controle não pode ser sem janelas. Se você não selecionar essa opção, o controle é automaticamente sem janelas em contêineres que dão suporte a objetos sem janelas e é automaticamente em janelas em contêineres que não dão suporte a objetos sem janelas. Selecionar essa opção força o controle ser em janelas, mesmo em contêineres que oferecem suporte a objetos sem janelas.
 
@@ -92,5 +92,4 @@ Use esta página do Assistente para identificar as opções de elemento de usuá
 ## <a name="see-also"></a>Consulte também
 
 [Assistente de Controle da ATL](../../atl/reference/atl-control-wizard.md)<br/>
-[Exemplo de SUBEDIT: Superclassificar um controle padrão do Windows](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/Controls/SubEdit)
-
+[SUBEDIT exemplo: Superclassificar um controle padrão do Windows](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/Controls/SubEdit)

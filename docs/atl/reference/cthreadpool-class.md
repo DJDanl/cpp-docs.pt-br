@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - CThreadPool class
 ms.assetid: 06683718-01b9-413c-9481-2dc1734ec70f
-ms.openlocfilehash: b1cf1dfc623edbb2b6e71aa6476a2fe0cccbc20b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7d363de0d787ecc5015093005b39a379acd82e71
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677182"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262695"
 ---
 # <a name="cthreadpool-class"></a>Classe CThreadPool
 
@@ -53,7 +53,7 @@ A classe que fornece a função usada para criar os threads no pool.
 |Nome|Descrição|
 |----------|-----------------|
 |[CThreadPool::CThreadPool](#cthreadpool)|O construtor para o pool de threads.|
-|[CThreadPool:: ~ CThreadPool](#dtor)|O destruidor para o pool de threads.|
+|[CThreadPool::~CThreadPool](#dtor)|O destruidor para o pool de threads.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
@@ -124,7 +124,7 @@ CThreadPool() throw();
 
 Inicializa o valor de tempo limite para ATLS_DEFAULT_THREADPOOLSHUTDOWNTIMEOUT. O tempo padrão é de 36 segundos. Se necessário, você pode definir seu próprio valor de número inteiro positivo para esse símbolo antes de incluir atlutil.
 
-##  <a name="dtor"></a>  CThreadPool:: ~ CThreadPool
+##  <a name="dtor"></a>  CThreadPool::~CThreadPool
 
 O destruidor para o pool de threads.
 
@@ -254,7 +254,7 @@ BOOL QueueRequest(Worker::RequestType request) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*Solicitação*<br/>
+*request*<br/>
 A solicitação a ser enfileirado.
 
 ### <a name="return-value"></a>Valor de retorno

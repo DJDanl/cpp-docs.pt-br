@@ -19,12 +19,12 @@ f1_keywords:
 helpviewer_keywords:
 - single_assignment class
 ms.assetid: ccc34728-8de9-4e07-b83d-a36a58d9d2b9
-ms.openlocfilehash: 5a27fb6cdc13fbbd3ceb8a85adacf5491ddc3ce1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 436d0d4cc16ee18449178782b775a25bb1d8592a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50593469"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268949"
 ---
 # <a name="singleassignment-class"></a>Classe single_assignment
 
@@ -49,7 +49,7 @@ O tipo de carga da mensagem armazenada e propagada pelo buffer.
 |Nome|Descrição|
 |----------|-----------------|
 |[single_assignment](#ctor)|Sobrecarregado. Constrói um `single_assignment` bloco de mensagem.|
-|[~ single_assignment destruidor](#dtor)|Destrói o `single_assignment` bloco de mensagem.|
+|[~single_assignment Destructor](#dtor)|Destrói o `single_assignment` bloco de mensagem.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
@@ -289,7 +289,7 @@ single_assignment(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Filtro*<br/>
+*_Filter*<br/>
 Uma função de filtro que determina se as mensagens oferecidas devem ser aceitas.
 
 *_PScheduler*<br/>
@@ -304,7 +304,7 @@ O tempo de execução usa o agendador padrão, se você não especificar o `_PSc
 
 O tipo `filter_method` é um funtor com assinatura `bool (T const &)` que é invocado por este `single_assignment` bloco de mensagem para determinar se ele deve aceitar uma mensagem oferecida.
 
-##  <a name="dtor"></a> ~ single_assignment
+##  <a name="dtor"></a> ~single_assignment
 
 Destrói o `single_assignment` bloco de mensagem.
 
@@ -333,4 +333,3 @@ Esse método aguardará até que uma mensagem chega se nenhuma mensagem estiver 
 [Namespace de simultaneidade](concurrency-namespace.md)<br/>
 [Classe overwrite_buffer](overwrite-buffer-class.md)<br/>
 [Classe unbounded_buffer](unbounded-buffer-class.md)
-
