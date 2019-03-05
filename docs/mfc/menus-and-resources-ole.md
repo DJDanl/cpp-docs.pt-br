@@ -18,12 +18,12 @@ helpviewer_keywords:
 - containers [MFC], OLE container applications
 - OLE menus and resources [MFC]
 ms.assetid: 52bfa086-7d3d-466f-94c7-c7061f3bdb3a
-ms.openlocfilehash: 8b8e278564c2c293cabfcd56ab9ce2cdb4807e19
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4e8f8c7fa8e24349a741b99822f13d5473373e17
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50511729"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268519"
 ---
 # <a name="menus-and-resources-ole"></a>Menus e recursos (OLE)
 
@@ -39,7 +39,7 @@ OLE edição visual coloca requisitos adicionais no menu e outros recursos forne
 
 Isso exige três layouts de menu separado, uma para cada modo possíveis do aplicativo. Tabelas de aceleradores também são necessárias para cada novo modo. Um aplicativo de contêiner pode não dar suporte ou ativação in-loco; em caso afirmativo, ele precisa de uma nova estrutura de menu e associados a tabelas de aceleradores.
 
-Ativação in-loco exige que os aplicativos de contêiner e o servidor devem negociar para espaço de barra de menus, barra de ferramentas e status. Todos os recursos devem ser criados com isso em mente. O artigo [Menus e recursos: mesclagem de Menu](../mfc/menus-and-resources-menu-merging.md) aborda esse tópico em detalhes.
+Ativação in-loco exige que os aplicativos de contêiner e o servidor devem negociar para espaço de barra de menus, barra de ferramentas e status. Todos os recursos devem ser criados com isso em mente. O artigo [Menus e recursos: Mesclagem de menu](../mfc/menus-and-resources-menu-merging.md) aborda esse tópico em detalhes.
 
 Devido a esses problemas, aplicativos de documento OLE criados com o Assistente de aplicativo podem ter até quatro separados menus e recursos do acelerador de tabela. Eles são usados pelos seguintes motivos:
 
@@ -47,20 +47,19 @@ Devido a esses problemas, aplicativos de documento OLE criados com o Assistente 
 |-------------------|---------|
 |IDR_MAINFRAME|Usado em um aplicativo MDI, se nenhum arquivo for aberto, ou em um aplicativo SDI, independentemente de arquivos abertos. Esse é o menu padrão usado em aplicativos não são OLE.|
 |IDR\<projeto > tipo|Usado em um aplicativo MDI se arquivos estiverem abertos. Usado quando um aplicativo está em execução autônomo. Esse é o menu padrão usado em aplicativos não são OLE.|
-|IDR\<projeto > TYPE_SRVR_IP|Usado pelo servidor ou contêiner quando um objeto é aberto em vigor.|
+|IDR_\<project>TYPE_SRVR_IP|Usado pelo servidor ou contêiner quando um objeto é aberto em vigor.|
 |IDR\<projeto > TYPE_SRVR_EMB|Usado por um aplicativo de servidor se um objeto é aberto sem usar a ativação in-loco.|
 
 Cada um desses nomes de recurso representa um menu e, geralmente, uma tabela de aceleradores. Um esquema semelhante deve ser usado em aplicativos MFC que não são criados com o Assistente de aplicativo.
 
 Os artigos a seguir abordam tópicos relacionados a contêineres, servidores e o menu de mesclagem necessárias para implementar a ativação no local:
 
-- [Menus e recursos: adições de contêiner](../mfc/menus-and-resources-container-additions.md)
+- [Menus e recursos: Adições de contêiner](../mfc/menus-and-resources-container-additions.md)
 
-- [Menus e recursos: adições de servidor](../mfc/menus-and-resources-server-additions.md)
+- [Menus e recursos: Adições de servidor](../mfc/menus-and-resources-server-additions.md)
 
-- [Menus e recursos: mesclagem de menu](../mfc/menus-and-resources-menu-merging.md)
+- [Menus e recursos: Mesclagem de menu](../mfc/menus-and-resources-menu-merging.md)
 
 ## <a name="see-also"></a>Consulte também
 
 [OLE](../mfc/ole-in-mfc.md)
-

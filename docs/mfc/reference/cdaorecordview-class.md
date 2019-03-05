@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CDaoRecordView [MFC], OnGetRecordset
 - CDaoRecordView [MFC], OnMove
 ms.assetid: 5aa7d0e2-bd05-413e-b216-80c404ce18ac
-ms.openlocfilehash: db1636bebd0cc29124018b5fad2c0535079706d3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f63aa8ed17619a9eef36e36bcc9243a3b973889a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50541200"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277762"
 ---
 # <a name="cdaorecordview-class"></a>Classe CDaoRecordView
 
@@ -173,7 +173,7 @@ Um ponteiro para um `CDaoRecordset`-objeto derivado, se o objeto foi criado com 
 
 Você deve substituir essa função de membro para construir ou obter um objeto de conjunto de registros e retornar um ponteiro para ele. Se você declarar sua classe de exibição de registro com ClassWizard, o assistente grava uma substituição padrão para você. Implementação do padrão do ClassWizard retorna o ponteiro de conjunto de registros armazenado na exibição do registro, se houver. Se não, ele constrói um objeto de conjunto de registros do tipo especificado com ClassWizard e chama seu `Open` membro de função para abrir a tabela ou executar a consulta e, em seguida, retorna um ponteiro para o objeto.
 
-Para obter mais informações e exemplos, consulte o artigo [exibições de registro: usando uma exibição de registro](../../data/using-a-record-view-mfc-data-access.md).
+Para obter mais informações e exemplos, consulte o artigo [exibições de registro: Usando uma exibição de registro](../../data/using-a-record-view-mfc-data-access.md).
 
 ##  <a name="onmove"></a>  CDaoRecordView::OnMove
 

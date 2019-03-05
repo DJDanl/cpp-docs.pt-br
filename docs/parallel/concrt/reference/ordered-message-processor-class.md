@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - ordered_message_processor class
 ms.assetid: 787adfb7-7f79-4a70-864a-80e3b64088cd
-ms.openlocfilehash: c6e09ff862f0725cc508e3e390dbfa3cc12f7daa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b88544f399031a5f770fa39aa1f3300306158511
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50545958"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270742"
 ---
 # <a name="orderedmessageprocessor-class"></a>Classe ordered_message_processor
 
@@ -57,7 +57,7 @@ O tipo de carga de mensagens tratadas pelo processador.
 |Nome|Descrição|
 |----------|-----------------|
 |[async_send](#async_send)|De forma assíncrona Enfileira mensagens e inicia uma tarefa de processamento, se isso não já foi feito. (Substitui [message_processor:: async_send](message-processor-class.md#async_send).)|
-|[inicializar](#initialize)|Inicializa o `ordered_message_processor` objeto com o grupo de função, o Agendador e o agendamento de retorno de chamada apropriados.|
+|[initialize](#initialize)|Inicializa o `ordered_message_processor` objeto com o grupo de função, o Agendador e o agendamento de retorno de chamada apropriados.|
 |[initialize_batched_processing](#initialize_batched_processing)|Inicializar o processamento de mensagens em lote|
 |[sync_send](#sync_send)|Forma síncrona Enfileira mensagens e inicia uma tarefa de processamento, se isso não já foi feito. (Substitui [message_processor:: sync_send](message-processor-class.md#sync_send).)|
 |[wait](#wait)|Uma espera de rotação específico do processador usada em destruidores de blocos de mensagem para certificar-se de que todas as tarefas de processamento assíncrono tem tempo para concluir antes de destruir o bloco. (Substitui [message_processor:: wait](message-processor-class.md#wait).)|
@@ -145,7 +145,7 @@ ordered_message_processor();
 
 Isso `ordered_message_processor` agendará não manipuladores assíncronos ou síncronos até que o `initialize` função é chamada.
 
-##  <a name="dtor"></a> ~ ordered_message_processor
+##  <a name="dtor"></a> ~ordered_message_processor
 
 Destrói o `ordered_message_processor` objeto.
 

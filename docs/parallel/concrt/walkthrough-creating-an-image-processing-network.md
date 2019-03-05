@@ -1,18 +1,18 @@
 ---
-title: 'Instruções passo a passo: criando uma rede de processamento de imagem'
+title: 'Passo a passo: Criando uma rede de processamento de imagem'
 ms.date: 11/19/2018
 helpviewer_keywords:
 - image-processing networks, creating [Concurrency Runtime]
 - creating image-processing networks [Concurrency Runtime]
 ms.assetid: 78ccadc9-5ce2-46cc-bd62-ce0f99d356b8
-ms.openlocfilehash: 93a20ca9967c8730e1563a653c8f4546d94161fb
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 035d73190f3596044a35cbc45681807801385eab
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176166"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262799"
 ---
-# <a name="walkthrough-creating-an-image-processing-network"></a>Instruções passo a passo: criando uma rede de processamento de imagem
+# <a name="walkthrough-creating-an-image-processing-network"></a>Passo a passo: Criando uma rede de processamento de imagem
 
 Este documento demonstra como criar uma rede de blocos de mensagens assíncronas que executam o processamento de imagem.
 
@@ -26,9 +26,9 @@ Leia os documentos a seguir antes de começar este passo a passo:
 
 - [Blocos de mensagens assíncronos](../../parallel/concrt/asynchronous-message-blocks.md)
 
-- [Como usar um filtro de bloco de mensagens](../../parallel/concrt/how-to-use-a-message-block-filter.md)
+- [Como: Usar um filtro de bloco de mensagens](../../parallel/concrt/how-to-use-a-message-block-filter.md)
 
-- [Instruções passo a passo: criando um agente de fluxo de dados](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md)
+- [Passo a passo: Criando um agente de fluxo de dados](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md)
 
 Também recomendamos que você compreenda as Noções básicas do GDI+ antes de começar este passo a passo.
 
@@ -66,7 +66,7 @@ A seguinte função, `GetEncoderClsid`, recupera o identificador de classe para 
 
 [!code-cpp[concrt-image-processing-filter#6](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_5.cpp)]
 
-[[Superior](#top)]
+[[Top](#top)]
 
 ##  <a name="network"></a> Criar a rede de processamento de imagem
 
@@ -142,7 +142,7 @@ A exemplo a seguir mostra o `countdown_event` classe:
 
 [!code-cpp[concrt-image-processing-filter#14](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_13.cpp)]
 
-[[Superior](#top)]
+[[Top](#top)]
 
 ##  <a name="complete"></a> O exemplo completo
 
@@ -156,13 +156,13 @@ A ilustração a seguir mostra um exemplo de saída. Cada imagem de origem é ac
 
 `Lighthouse` é de autoria de Tom Alphin e, portanto, é convertido em escala de cinza. `Chrysanthemum`, `Desert`, `Koala`, e `Tulips` têm vermelho como a cor dominante e, portanto, os componentes de cor azul e verde removidos e são escurecidos. `Hydrangeas`, `Jellyfish`, e `Penguins` correspondem aos critérios padrão e, portanto, sépia toned.
 
-[[Superior](#top)]
+[[Top](#top)]
 
 ### <a name="compiling-the-code"></a>Compilando o código
 
 Copie o código de exemplo e cole-o em um projeto do Visual Studio ou colá-lo em um arquivo chamado `image-processing-network.cpp` e, em seguida, execute o seguinte comando em uma janela de Prompt de comando do Visual Studio.
 
-**cl.exe /DUNICODE /EHsc /link de imagem de processamento de network.cpp gdiplus.lib**
+**cl.exe /DUNICODE /EHsc image-processing-network.cpp /link gdiplus.lib**
 
 ## <a name="see-also"></a>Consulte também
 

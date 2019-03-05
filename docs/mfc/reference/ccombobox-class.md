@@ -108,12 +108,12 @@ helpviewer_keywords:
 - CComboBox [MFC], SetTopIndex
 - CComboBox [MFC], ShowDropDown
 ms.assetid: 4e73b5df-0d2e-4658-9706-38133fb10513
-ms.openlocfilehash: e7472b808d8b5d743d884d9e3806df7ffe499836
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 847927a36bac8540dd95307ae3c0259d0adba12a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178767"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304464"
 ---
 # <a name="ccombobox-class"></a>Classe CComboBox
 
@@ -137,7 +137,7 @@ class CComboBox : public CWnd
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CComboBox:: AddString](#addstring)|Adiciona uma cadeia de caracteres ao final da lista na caixa de listagem de uma caixa de combinação ou na posição classificada das caixas de listagem com o estilo CBS_SORT.|
+|[CComboBox::AddString](#addstring)|Adiciona uma cadeia de caracteres ao final da lista na caixa de listagem de uma caixa de combinação ou na posição classificada das caixas de listagem com o estilo CBS_SORT.|
 |[CComboBox::Clear](#clear)|Exclui (limpa) a seleção atual, se houver, no controle de edição.|
 |[CComboBox::CompareItem](#compareitem)|Chamado pelo framework para determinar a posição relativa de um novo item de lista em uma caixa de combinação classificada desenhado pelo proprietário.|
 |[CComboBox::Copy](#copy)|Copia a seleção atual, se houver, na área de transferência no formato CF_TEXT.|
@@ -147,7 +147,7 @@ class CComboBox : public CWnd
 |[CComboBox::DeleteString](#deletestring)|Exclui uma cadeia de caracteres da caixa de listagem de uma caixa de combinação.|
 |[CComboBox::Dir](#dir)|Adiciona uma lista de nomes de arquivo para a caixa de listagem de uma caixa de combinação.|
 |[CComboBox::DrawItem](#drawitem)|Chamado pelo framework quando um aspecto visual de um alterações de caixa de combinação do desenho proprietário.|
-|[CComboBox:: FindString](#findstring)|Localiza a primeira cadeia de caracteres que contém o prefixo especificado na caixa de listagem de uma caixa de combinação.|
+|[CComboBox::FindString](#findstring)|Localiza a primeira cadeia de caracteres que contém o prefixo especificado na caixa de listagem de uma caixa de combinação.|
 |[CComboBox::FindStringExact](#findstringexact)|Localiza a primeira cadeia de caixa de listagem (em uma caixa de combinação) que corresponde à cadeia de caracteres especificada.|
 |[CComboBox::GetComboBoxInfo](#getcomboboxinfo)|Recupera informações sobre o `CComboBox` objeto.|
 |[CComboBox::GetCount](#getcount)|Recupera o número de itens na caixa de listagem de uma caixa de combinação.|
@@ -208,13 +208,13 @@ Se você quiser manipular mensagens de notificação do Windows enviadas por uma
 
 Cada entrada de mapa de mensagem usa o seguinte formato:
 
-**Diante\_**_notificação_ **(** _id_, _memberFxn_ **)**
+**ON\_**_Notification_ **(** _id_, _memberFxn_ **)**
 
 em que `id` Especifica a ID de janela filho do controle de caixa de combinação enviando a notificação e `memberFxn` é o nome da função de membro pai que você tenha escrito para manipular a notificação.
 
 O protótipo de função do pai é o seguinte:
 
-**afx_msg** `void` `memberFxn` **();**
+**afx_msg** `void` `memberFxn` **( );**
 
 A ordem em que determinadas notificações serão enviadas não pode ser prevista. Em particular, uma notificação CBN_SELCHANGE pode ocorrer antes ou depois de uma notificação CBN_CLOSEUP.
 
@@ -262,7 +262,7 @@ Se você inserir um `CComboBox` objeto dentro de outra janela do objeto, você n
 
 **Cabeçalho:** afxwin. h
 
-##  <a name="addstring"></a>  CComboBox:: AddString
+##  <a name="addstring"></a>  CComboBox::AddString
 
 Adiciona uma cadeia de caracteres para a caixa de listagem de uma caixa de combinação.
 
@@ -382,7 +382,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Especifica o estilo da caixa de combinação. Aplicar qualquer combinação de [estilos de caixa de combinação](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) à caixa.
 
-*Rect*<br/>
+*rect*<br/>
 Aponta para a posição e tamanho da caixa de combinação. Pode ser um [estrutura RECT](/windows/desktop/api/windef/ns-windef-tagrect) ou um `CRect` objeto.
 
 *pParentWnd*<br/>
@@ -554,7 +554,7 @@ Por padrão, essa função membro não faz nada. Substituir essa função de mem
 
 [!code-cpp[NVC_MFC_CComboBox#11](../../mfc/reference/codesnippet/cpp/ccombobox-class_11.cpp)]
 
-##  <a name="findstring"></a>  CComboBox:: FindString
+##  <a name="findstring"></a>  CComboBox::FindString
 
 Encontra, mas não selecionar, a primeira cadeia de caracteres que contém o prefixo especificado na caixa de listagem de uma caixa de combinação.
 
@@ -1227,7 +1227,7 @@ int SetCurSel(int nSelect);
 
 ### <a name="parameters"></a>Parâmetros
 
-*nSelecione*<br/>
+*nSelect*<br/>
 Especifica o índice baseado em zero da cadeia de caracteres para selecionar. Se-1, qualquer seleção atual na caixa de listagem é removida e o controle de edição está desmarcado.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1312,7 +1312,7 @@ int SetExtendedUI(BOOL bExtended = TRUE);
 
 ### <a name="parameters"></a>Parâmetros
 
-*bO*<br/>
+*bExtended*<br/>
 Especifica se a caixa de combinação deve usar a interface do usuário estendida ou a interface do usuário padrão. Um valor TRUE seleciona a interface do usuário estendida; um valor FALSE seleciona a interface de usuário padrão.
 
 ### <a name="return-value"></a>Valor de retorno

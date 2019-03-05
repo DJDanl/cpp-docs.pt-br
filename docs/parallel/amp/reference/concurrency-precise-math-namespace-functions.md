@@ -90,12 +90,12 @@ f1_keywords:
 - amp_math/Concurrency::precise_math::trunc
 - amp_math/Concurrency::precise_math::truncf
 ms.assetid: fae53ab4-d1c5-45bb-a6a0-a74258e9aea3
-ms.openlocfilehash: ccbb9bdda3132626a6bf76161104c9716a9b5c89
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7690c0629e7035d0130f0a7dbdcabf3e959ae7b6
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50469349"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297340"
 ---
 # <a name="concurrencyprecisemath-namespace-functions"></a>Funções do namespace Concurrency:: precise_math
 
@@ -159,7 +159,7 @@ inline double acos(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
 ### <a name="return-value"></a>Valor de retorno
@@ -176,7 +176,7 @@ inline float acosf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
 ### <a name="return-value"></a>Valor de retorno
@@ -195,7 +195,7 @@ inline double acosh(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
 ### <a name="return-value"></a>Valor de retorno
@@ -212,7 +212,7 @@ inline float acoshf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
 ### <a name="return-value"></a>Valor de retorno
@@ -231,7 +231,7 @@ inline double asin(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
 ### <a name="return-value"></a>Valor de retorno
@@ -248,7 +248,7 @@ inline float asinf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
 ### <a name="return-value"></a>Valor de retorno
@@ -267,7 +267,7 @@ inline double asinh(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
 ### <a name="return-value"></a>Valor de retorno
@@ -284,7 +284,7 @@ inline float asinhf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
 ### <a name="return-value"></a>Valor de retorno
@@ -303,7 +303,7 @@ inline double atan(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
 ### <a name="return-value"></a>Valor de retorno
@@ -326,10 +326,10 @@ inline double atan2(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Y*<br/>
+*_Y*<br/>
 Valor de ponto flutuante
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
 ### <a name="return-value"></a>Valor de retorno
@@ -348,10 +348,10 @@ inline float atan2f(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Y*<br/>
+*_Y*<br/>
 Valor de ponto flutuante
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
 ### <a name="return-value"></a>Valor de retorno
@@ -368,7 +368,7 @@ inline float atanf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
 ### <a name="return-value"></a>Valor de retorno
@@ -387,7 +387,7 @@ inline double atanh(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
 ### <a name="return-value"></a>Valor de retorno
@@ -404,7 +404,7 @@ inline float atanhf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
 ### <a name="return-value"></a>Valor de retorno
@@ -423,7 +423,7 @@ inline double cbrt(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
 ### <a name="return-value"></a>Valor de retorno
@@ -440,7 +440,7 @@ inline float cbrtf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
 ### <a name="return-value"></a>Valor de retorno
@@ -459,7 +459,7 @@ inline double ceil(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
 ### <a name="return-value"></a>Valor de retorno
@@ -476,7 +476,7 @@ inline float ceilf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
 ### <a name="return-value"></a>Valor de retorno
@@ -499,10 +499,10 @@ inline double copysign(
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
-*Y*<br/>
+*_Y*<br/>
 Valor de ponto flutuante
 
 ### <a name="return-value"></a>Valor de retorno
@@ -521,10 +521,10 @@ inline float copysignf(
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
-*Y*<br/>
+*_Y*<br/>
 Valor de ponto flutuante
 
 ### <a name="return-value"></a>Valor de retorno
@@ -543,7 +543,7 @@ inline double cos(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
 ### <a name="return-value"></a>Valor de retorno
@@ -560,7 +560,7 @@ inline float cosf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
 ### <a name="return-value"></a>Valor de retorno
@@ -579,7 +579,7 @@ inline double cosh(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
 ### <a name="return-value"></a>Valor de retorno
@@ -596,7 +596,7 @@ inline float coshf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
 ### <a name="return-value"></a>Valor de retorno
@@ -615,7 +615,7 @@ inline double cospi(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
 ### <a name="return-value"></a>Valor de retorno
@@ -632,7 +632,7 @@ inline float cospif(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
 ### <a name="return-value"></a>Valor de retorno
@@ -651,7 +651,7 @@ inline double erf(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
 ### <a name="return-value"></a>Valor de retorno
@@ -670,7 +670,7 @@ inline double erfc(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
 ### <a name="return-value"></a>Valor de retorno
@@ -687,7 +687,7 @@ inline float erfcf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
 ### <a name="return-value"></a>Valor de retorno
@@ -706,7 +706,7 @@ inline double erfcinv(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
 ### <a name="return-value"></a>Valor de retorno
@@ -723,7 +723,7 @@ inline float erfcinvf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
 ### <a name="return-value"></a>Valor de retorno
@@ -740,7 +740,7 @@ inline float erff(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
 ### <a name="return-value"></a>Valor de retorno
@@ -759,7 +759,7 @@ inline double erfinv(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
 ### <a name="return-value"></a>Valor de retorno
@@ -776,7 +776,7 @@ inline float erfinvf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
 ### <a name="return-value"></a>Valor de retorno
@@ -795,7 +795,7 @@ inline double exp10(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
 ### <a name="return-value"></a>Valor de retorno
@@ -812,7 +812,7 @@ inline float exp10f(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
 ### <a name="return-value"></a>Valor de retorno
@@ -831,7 +831,7 @@ inline double expm1(double exponent) restrict(amp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Expoente*<br/>
+*exponent*<br/>
 O termo exponencial *n* da expressão matemática `e` <sup>n</sup>, onde `e` é a base do logaritmo natural.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -848,7 +848,7 @@ inline float expm1f(float exponent) restrict(amp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Expoente*<br/>
+*exponent*<br/>
 O termo exponencial *n* da expressão matemática `e` <sup>n</sup>, onde `e` é a base do logaritmo natural.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -867,7 +867,7 @@ inline double exp(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
 ### <a name="return-value"></a>Valor de retorno
@@ -884,7 +884,7 @@ inline float expf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
 ### <a name="return-value"></a>Valor de retorno
@@ -903,7 +903,7 @@ inline double exp2(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
 ### <a name="return-value"></a>Valor de retorno
@@ -920,7 +920,7 @@ inline float exp2f(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
 ### <a name="return-value"></a>Valor de retorno
@@ -939,7 +939,7 @@ inline double fabs(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
 ### <a name="return-value"></a>Valor de retorno
@@ -956,7 +956,7 @@ inline float fabsf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
 ### <a name="return-value"></a>Valor de retorno
@@ -979,7 +979,7 @@ inline double fdim(
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante *y*<br/>
 Valor de ponto flutuante
 
@@ -999,7 +999,7 @@ inline float fdimf(
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante *y*<br/>
 Valor de ponto flutuante
 
@@ -1019,7 +1019,7 @@ inline double floor(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1036,14 +1036,14 @@ inline float floorf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
 ### <a name="return-value"></a>Valor de retorno
 
 Retorna a base do argumento
 
-## <a name="a-namefma-fma"></a><a name="fma"> FMA
+## <a name="a-namefma-fma"></a><a name="fma"> fma
 
 Calcula o produto dos primeiros e segundo argumentos especificados, em seguida, adiciona o terceiro argumento especificado para o resultado; a computação inteira é executada como uma única operação.
 ```
@@ -1062,11 +1062,11 @@ inline double fma(
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 O primeiro argumento de ponto flutuante.
-*Y*<br/>
+*_Y*<br/>
 O segundo argumento de ponto flutuante.
-*Z*<br/>
+*_Z*<br/>
 O terceiro argumento de ponto flutuante.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1086,11 +1086,11 @@ inline float fmaf(
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 O primeiro argumento de ponto flutuante.
-*Y*<br/>
+*_Y*<br/>
 O segundo argumento de ponto flutuante.
-*Z*<br/>
+*_Z*<br/>
 O terceiro argumento de ponto flutuante.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1113,10 +1113,10 @@ inline double fmax(
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
-*Y*<br/>
+*_Y*<br/>
 Valor de ponto flutuante
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1135,10 +1135,10 @@ inline float fmaxf(
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
-*Y*<br/>
+*_Y*<br/>
 Valor de ponto flutuante
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1161,10 +1161,10 @@ inline double fmin(
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
-*Y*<br/>
+*_Y*<br/>
 Valor de ponto flutuante
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1183,10 +1183,10 @@ inline float fminf(
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
-*Y*<br/>
+*_Y*<br/>
 Valor de ponto flutuante
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1209,10 +1209,10 @@ inline double fmod(
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 O primeiro argumento de ponto flutuante.
 
-*Y*<br/>
+*_Y*<br/>
 O segundo argumento de ponto flutuante.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1231,10 +1231,10 @@ inline float fmodf(
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 O primeiro argumento de ponto flutuante.
 
-*Y*<br/>
+*_Y*<br/>
 O segundo argumento de ponto flutuante.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1253,7 +1253,7 @@ inline int fpclassify(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1276,10 +1276,10 @@ inline double frexp(
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
-*2^_exp*<br/>
+*_Exp*<br/>
 Retorna o expoente inteiro de x no valor de ponto flutuante
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1298,10 +1298,10 @@ inline float frexpf(
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
-*2^_exp*<br/>
+*_Exp*<br/>
 Retorna o expoente inteiro de x no valor de ponto flutuante
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1324,10 +1324,10 @@ inline double hypot(
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
-*Y*<br/>
+*_Y*<br/>
 Valor de ponto flutuante
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1346,10 +1346,10 @@ inline float hypotf(
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
-*Y*<br/>
+*_Y*<br/>
 Valor de ponto flutuante
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1368,7 +1368,7 @@ inline int ilogb(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1385,7 +1385,7 @@ inline int ilogbf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1404,7 +1404,7 @@ inline int isfinite(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1423,14 +1423,14 @@ inline int isinf(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
 ### <a name="return-value"></a>Valor de retorno
 
 Retorna um valor diferente de zero se e somente se o argumento tem um valor infinito
 
-##  <a name="isnan"></a>  isNaN
+##  <a name="isnan"></a>  isnan
 
 Determina se o argumento é um NaN
 
@@ -1442,7 +1442,7 @@ inline int isnan(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1461,7 +1461,7 @@ inline int isnormal(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1484,15 +1484,15 @@ inline double ldexp(
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante, mantissa
 
-*2^_exp*<br/>
+*_Exp*<br/>
 Valor inteiro, expoente
 
 ### <a name="return-value"></a>Valor de retorno
 
-Retorna x \* 2 ^ 2^_exp
+Returns _X \* 2^_Exp
 
 ##  <a name="ldexpf"></a>  ldexpf
 
@@ -1506,15 +1506,15 @@ inline float ldexpf(
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante, mantissa
 
-*2^_exp*<br/>
+*_Exp*<br/>
 Valor inteiro, expoente
 
 ### <a name="return-value"></a>Valor de retorno
 
-Retorna x \* 2 ^ 2^_exp
+Returns _X \* 2^_Exp
 
 ##  <a name="lgamma"></a>  lgamma
 
@@ -1532,7 +1532,7 @@ inline double lgamma(
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
 *_Sign*<br/>
@@ -1554,7 +1554,7 @@ inline float lgammaf(
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
 *_Sign*<br/>
@@ -1576,7 +1576,7 @@ inline double log(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1595,7 +1595,7 @@ inline double log10(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1612,7 +1612,7 @@ inline float log10f(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1631,7 +1631,7 @@ inline double log1p(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1648,7 +1648,7 @@ inline float log1pf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1667,7 +1667,7 @@ inline double log2(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1684,7 +1684,7 @@ inline float log2f(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1703,7 +1703,7 @@ inline double logb(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1720,7 +1720,7 @@ inline float logbf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1737,7 +1737,7 @@ inline float logf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1760,7 +1760,7 @@ inline double modf(
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
 *_Iptr*<br/>
@@ -1782,7 +1782,7 @@ inline float modff(
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
 *_Iptr*<br/>
@@ -1802,7 +1802,7 @@ inline double nan(int _X) restrict(amp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor inteiro
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1819,7 +1819,7 @@ inline float nanf(int _X) restrict(amp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor inteiro
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1838,7 +1838,7 @@ inline double nearbyint(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1855,7 +1855,7 @@ inline float nearbyintf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1878,10 +1878,10 @@ inline double nextafter(
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
-*Y*<br/>
+*_Y*<br/>
 Valor de ponto flutuante
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1900,10 +1900,10 @@ inline float nextafterf(
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
-*Y*<br/>
+*_Y*<br/>
 Valor de ponto flutuante
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1922,7 +1922,7 @@ inline double phi(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1939,7 +1939,7 @@ inline float phif(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1962,10 +1962,10 @@ inline double pow(
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante, base
 
-*Y*<br/>
+*_Y*<br/>
 Valor de ponto flutuante, expoente
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1982,10 +1982,10 @@ inline float powf(
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante, base
 
-*Y*<br/>
+*_Y*<br/>
 Valor de ponto flutuante, expoente
 
 ### <a name="return-value"></a>Valor de retorno
@@ -2002,7 +2002,7 @@ inline double probit(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
 ### <a name="return-value"></a>Valor de retorno
@@ -2019,7 +2019,7 @@ inline float probitf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
 ### <a name="return-value"></a>Valor de retorno
@@ -2038,7 +2038,7 @@ inline double rcbrt(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
 ### <a name="return-value"></a>Valor de retorno
@@ -2055,14 +2055,14 @@ inline float rcbrtf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
 ### <a name="return-value"></a>Valor de retorno
 
 Retorna o recíproco da raiz do cubo do argumento
 
-##  <a name="remainder"></a>  restante
+##  <a name="remainder"></a>  remainder
 
 Calcula o restante: y REM de x
 
@@ -2078,15 +2078,15 @@ inline double remainder(
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
-*Y*<br/>
+*_Y*<br/>
 Valor de ponto flutuante
 
 ### <a name="return-value"></a>Valor de retorno
 
-Retorna y REM de x
+Returns _X REM _Y
 
 ##  <a name="remainderf"></a>  remainderf
 
@@ -2100,15 +2100,15 @@ inline float remainderf(
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
-*Y*<br/>
+*_Y*<br/>
 Valor de ponto flutuante
 
 ### <a name="return-value"></a>Valor de retorno
 
-Retorna y REM de x
+Returns _X REM _Y
 
 ##  <a name="remquo"></a>  remquo
 
@@ -2128,13 +2128,13 @@ inline double remquo(
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 O primeiro argumento de ponto flutuante.
 
-*Y*<br/>
+*_Y*<br/>
 O segundo argumento de ponto flutuante.
 
-*Quo*<br/>
+*_Quo*<br/>
 [out] O endereço de um inteiro que é usado para retornar o quociente dos bits fracionários de `_X` dividido pelos bits fracionários de `_Y`.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -2154,20 +2154,20 @@ inline float remquof(
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 O primeiro argumento de ponto flutuante.
 
-*Y*<br/>
+*_Y*<br/>
 O segundo argumento de ponto flutuante.
 
-*Quo*<br/>
+*_Quo*<br/>
 [out] O endereço de um inteiro que é usado para retornar o quociente dos bits fracionários de `_X` dividido pelos bits fracionários de `_Y`.
 
 ### <a name="return-value"></a>Valor de retorno
 
 Retorna o resto da `_X` dividido por `_Y`.
 
-##  <a name="round"></a>  Arredondar
+##  <a name="round"></a>  round
 
 Arredonda o x para o inteiro mais próximo
 
@@ -2179,7 +2179,7 @@ inline double round(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
 ### <a name="return-value"></a>Valor de retorno
@@ -2196,7 +2196,7 @@ inline float roundf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
 ### <a name="return-value"></a>Valor de retorno
@@ -2215,7 +2215,7 @@ inline double rsqrt(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
 ### <a name="return-value"></a>Valor de retorno
@@ -2232,7 +2232,7 @@ inline float rsqrtf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
 ### <a name="return-value"></a>Valor de retorno
@@ -2255,15 +2255,15 @@ inline double scalb(
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
-*Y*<br/>
+*_Y*<br/>
 Valor de ponto flutuante
 
 ### <a name="return-value"></a>Valor de retorno
 
-Retorna x \* (FLT_RADIX ^ y)
+Returns _X \* (FLT_RADIX ^ _Y)
 
 ##  <a name="scalbf"></a>  scalbf
 
@@ -2277,15 +2277,15 @@ inline float scalbf(
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
-*Y*<br/>
+*_Y*<br/>
 Valor de ponto flutuante
 
 ### <a name="return-value"></a>Valor de retorno
 
-Retorna x \* (FLT_RADIX ^ y)
+Returns _X \* (FLT_RADIX ^ _Y)
 
 ##  <a name="scalbn"></a>  scalbn
 
@@ -2303,15 +2303,15 @@ inline double scalbn(
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
-*Y*<br/>
+*_Y*<br/>
 Valor inteiro
 
 ### <a name="return-value"></a>Valor de retorno
 
-Retorna x \* (FLT_RADIX ^ y)
+Returns _X \* (FLT_RADIX ^ _Y)
 
 ##  <a name="scalbnf"></a>  scalbnf
 
@@ -2325,15 +2325,15 @@ inline float scalbnf(
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
-*Y*<br/>
+*_Y*<br/>
 Valor inteiro
 
 ### <a name="return-value"></a>Valor de retorno
 
-Retorna x \* (FLT_RADIX ^ y)
+Returns _X \* (FLT_RADIX ^ _Y)
 
 ##  <a name="signbit"></a>  signbit
 
@@ -2347,7 +2347,7 @@ inline int signbit(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
 ### <a name="return-value"></a>Valor de retorno
@@ -2364,7 +2364,7 @@ inline int signbitf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
 ### <a name="return-value"></a>Valor de retorno
@@ -2383,7 +2383,7 @@ inline double sin(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
 ### <a name="return-value"></a>Valor de retorno
@@ -2400,7 +2400,7 @@ inline float sinf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
 ### <a name="return-value"></a>Valor de retorno
@@ -2425,13 +2425,13 @@ inline void sincos(
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
-*S*<br/>
+*_S*<br/>
 Retorna o valor do seno de x
 
-*EXTREMIDADE*<br/>
+*_C*<br/>
 Retorna o valor do cosseno de x
 
 ##  <a name="sincosf"></a>  sincosf
@@ -2447,13 +2447,13 @@ inline void sincosf(
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
-*S*<br/>
+*_S*<br/>
 Retorna o valor do seno de x
 
-*EXTREMIDADE*<br/>
+*_C*<br/>
 Retorna o valor do cosseno de x
 
 ##  <a name="sinh"></a>  sinh
@@ -2468,7 +2468,7 @@ inline double sinh(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
 ### <a name="return-value"></a>Valor de retorno
@@ -2485,7 +2485,7 @@ inline float sinhf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
 ### <a name="return-value"></a>Valor de retorno
@@ -2504,7 +2504,7 @@ inline double sinpi(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
 ### <a name="return-value"></a>Valor de retorno
@@ -2521,7 +2521,7 @@ inline float sinpif(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
 ### <a name="return-value"></a>Valor de retorno
@@ -2540,7 +2540,7 @@ inline double sqrt(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
 ### <a name="return-value"></a>Valor de retorno
@@ -2557,7 +2557,7 @@ inline float sqrtf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
 ### <a name="return-value"></a>Valor de retorno
@@ -2576,7 +2576,7 @@ inline double tan(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
 ### <a name="return-value"></a>Valor de retorno
@@ -2593,7 +2593,7 @@ inline float tanf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
 ### <a name="return-value"></a>Valor de retorno
@@ -2612,7 +2612,7 @@ inline double tanh(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
 ### <a name="return-value"></a>Valor de retorno
@@ -2629,7 +2629,7 @@ inline float tanhf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
 ### <a name="return-value"></a>Valor de retorno
@@ -2648,7 +2648,7 @@ inline double tanpi(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
 ### <a name="return-value"></a>Valor de retorno
@@ -2665,7 +2665,7 @@ inline float tanpif(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
 ### <a name="return-value"></a>Valor de retorno
@@ -2684,7 +2684,7 @@ inline double tgamma(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
 ### <a name="return-value"></a>Valor de retorno
@@ -2701,7 +2701,7 @@ inline float tgammaf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
 ### <a name="return-value"></a>Valor de retorno
@@ -2720,7 +2720,7 @@ inline double trunc(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
 ### <a name="return-value"></a>Valor de retorno
@@ -2737,7 +2737,7 @@ inline float truncf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
 ### <a name="return-value"></a>Valor de retorno

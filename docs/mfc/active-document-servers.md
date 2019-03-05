@@ -6,12 +6,12 @@ helpviewer_keywords:
 - servers [MFC], active document
 - active document servers [MFC]
 ms.assetid: 131fec1e-02a0-4305-a7ab-903b911232a7
-ms.openlocfilehash: ad9b43444cfa18698371d93acb858c0d929c30bc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7050b810bb5e1f0c240222cd9b8c4922ced4238a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50657659"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270768"
 ---
 # <a name="active-document-servers"></a>Servidores de documentos ativos
 
@@ -32,4 +32,3 @@ O `COleDocObjectItem` classe permite que um contêiner OLE para se tornar um con
 ## <a name="see-also"></a>Consulte também
 
 [Contenção de documentos ativos](../mfc/active-document-containment.md)
-

@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CD2DLayer [MFC], IsValid
 - CD2DLayer [MFC], m_pLayer
 ms.assetid: 2f96378e-66bb-40d1-9661-6afe324de3c1
-ms.openlocfilehash: cd4452eeb9e600aeabaec1b54fd40217514e02eb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 28ebe19b0f28692116a0b95721ff2e5490ad7e68
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50531710"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270848"
 ---
 # <a name="cd2dlayer-class"></a>Classe CD2DLayer
 
@@ -206,7 +206,7 @@ Armazena um ponteiro para um objeto ID2D1Layer.
 ID2D1Layer* m_pLayer;
 ```
 
-##  <a name="operator_id2d1layer_star"></a>  CD2DLayer::Operator ID2D1Layer *
+##  <a name="operator_id2d1layer_star"></a>  CD2DLayer::operator ID2D1Layer*
 
 Interface de ID2D1Layer retorna
 

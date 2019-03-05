@@ -18,12 +18,12 @@ helpviewer_keywords:
 - CD2DGradientBrush [MFC], m_extendMode
 - CD2DGradientBrush [MFC], m_pGradientStops
 ms.assetid: 5bf133e6-16b7-4e3a-845d-0ce63fafe5ec
-ms.openlocfilehash: bc26dd495fb9bd91aaf5eac192011faad80bc668
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f49a3a1a1aaebed47b05bf003926379c6f0b8102
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506048"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290970"
 ---
 # <a name="cd2dgradientbrush-class"></a>Classe CD2DGradientBrush
 
@@ -73,7 +73,7 @@ class CD2DGradientBrush : public CD2DBrush;
 
 **Cabeçalho:** afxrendertarget.h
 
-##  <a name="_dtorcd2dgradientbrush"></a>  CD2DGradientBrush:: ~ CD2DGradientBrush
+##  <a name="_dtorcd2dgradientbrush"></a>  CD2DGradientBrush::~CD2DGradientBrush
 
 O destruidor. Chamado quando um objeto de pincel de gradiente D2D está sendo destruído.
 

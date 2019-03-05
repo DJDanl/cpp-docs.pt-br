@@ -5,12 +5,12 @@ helpviewer_keywords:
 - spin button control, methods
 - CSpinButtonCtrl class [MFC], methods
 ms.assetid: a08a26fd-b803-4cbe-a509-395fa357d057
-ms.openlocfilehash: ffd07377d54fcfff93ab4ab3771515a90ccf2785
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5ad6f529762e77e1cf1c00f41eea0add5d196fbb
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50542591"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298393"
 ---
 # <a name="spin-button-member-functions"></a>Funções de membro do botão Girar
 
@@ -30,4 +30,3 @@ Há várias funções de membro disponível para o controle de rotação ([CSpin
 
 [Usando CSpinButtonCtrl](../mfc/using-cspinbuttonctrl.md)<br/>
 [Controles](../mfc/controls-mfc.md)
-

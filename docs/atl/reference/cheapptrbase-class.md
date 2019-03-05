@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - CHeapPtrBase class
 ms.assetid: 501ac1b2-fb34-4c72-b7e6-a4f1fc8fda21
-ms.openlocfilehash: f183bb21d6a23b4e8ac4284894cfa2fcc7bb1dfd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 558c9bd78257a06e123d47a0110375e7f448f90d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50538145"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290077"
 ---
 # <a name="cheapptrbase-class"></a>Classe CHeapPtrBase
 
@@ -39,7 +39,7 @@ class CHeapPtrBase
 *T*<br/>
 O tipo de objeto a ser armazenado no heap.
 
-*Alocador*<br/>
+*Allocator*<br/>
 A classe de alocação de memória para usar. Por padrão, as rotinas de CRT são usadas para alocar e liberar memória.
 
 ## <a name="members"></a>Membros
@@ -48,7 +48,7 @@ A classe de alocação de memória para usar. Por padrão, as rotinas de CRT sã
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CHeapPtrBase:: ~ CHeapPtrBase](#dtor)|O destruidor.|
+|[CHeapPtrBase::~CHeapPtrBase](#dtor)|O destruidor.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
@@ -122,7 +122,7 @@ Quando um `CHeapPtrBase` objeto assume a propriedade de um ponteiro, ele automat
 
 Em compilações de depuração, uma falha de asserção ocorrerá se o [CHeapPtrBase::m_pData](#m_pdata) variável de membro atualmente aponta para um valor existente; ou seja, não é igual a NULL.
 
-##  <a name="dtor"></a>  CHeapPtrBase:: ~ CHeapPtrBase
+##  <a name="dtor"></a>  CHeapPtrBase::~CHeapPtrBase
 
 O destruidor.
 

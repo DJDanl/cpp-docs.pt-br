@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CGdiObject [MFC], UnrealizeObject
 - CGdiObject [MFC], m_hObject
 ms.assetid: 1cba3ba5-3d49-4e43-8293-209299f2f6f4
-ms.openlocfilehash: 87545d67addb6a1f0931007d8912989968f7a74a
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 1b2b87173bf504455ba314fdd89ffae298cae6a8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53177843"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301214"
 ---
 # <a name="cgdiobject-class"></a>Classe CGdiObject
 
@@ -74,8 +74,8 @@ class CGdiObject : public CObject
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CGdiObject::operator! =](#operator_neq)|Determina se dois objetos GDI logicamente não são iguais.|
-|[CGdiObject::operator = =](#operator_eq_eq)|Determina se dois objetos GDI são logicamente iguais.|
+|[CGdiObject::operator !=](#operator_neq)|Determina se dois objetos GDI logicamente não são iguais.|
+|[CGdiObject::operator ==](#operator_eq_eq)|Determina se dois objetos GDI são logicamente iguais.|
 |[CGdiObject::operator HGDIOBJ](#operator_hgdiobj)|Recupera um identificador para o objeto Windows GDI anexado.|
 
 ### <a name="public-data-members"></a>Membros de Dados Públicos
@@ -274,7 +274,7 @@ O tipo de objeto, se for bem-sucedido; Caso contrário, 0. O valor pode ser um d
 
 - Pincel OBJ_BRUSH
 
-- Fonte OBJ_FONT
+- OBJ_FONT Font
 
 - Paleta OBJ_PAL
 
@@ -324,7 +324,7 @@ Um identificador que contém o HBITMAP, HRGN, HBRUSH, HPEN, HPALETTE ou HFONT an
 HGDIOBJ m_hObject;
 ```
 
-##  <a name="operator_neq"></a>  CGdiObject::operator! =
+##  <a name="operator_neq"></a>  CGdiObject::operator !=
 
 Determina se dois objetos GDI logicamente não são iguais.
 
@@ -341,7 +341,7 @@ Um ponteiro para um existente `CGdiObject`.
 
 Determina se um objeto GDI no lado esquerdo não é igual ao objeto GDI no lado direito.
 
-##  <a name="operator_eq_eq"></a>  CGdiObject::operator = =
+##  <a name="operator_eq_eq"></a>  CGdiObject::operator ==
 
 Determina se dois objetos GDI são logicamente iguais.
 

@@ -18,12 +18,12 @@ helpviewer_keywords:
 - activation [MFC], embedded OLE items
 - OLE activation [MFC]
 ms.assetid: ed8357d9-e487-4aaa-aa6b-2edc4de25dfa
-ms.openlocfilehash: ba3c705227e6ca189527d29d4f3ae0f21c71eb72
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a6009e5209ce71c6eed28faff2f55792a64de408
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50493503"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276943"
 ---
 # <a name="activation-c"></a>Ativação (C++)
 
@@ -40,11 +40,10 @@ Ativação in-loco promove uma abordagem centrada em documento para a criação 
 
 MFC não oferece suporte a ativação in-loco aninhada. Se você cria um aplicativo de contêiner/servidor e que contêiner/servidor é inserido em outro contêiner e ativado no local, ele não é possível in-loco ativar objetos incorporados nele.
 
-O que acontece com um item inserido quando o usuário clica duas vezes ele depende dos verbos definidos para o item. Para obter informações, consulte [ativação: verbos](../mfc/activation-verbs.md).
+O que acontece com um item inserido quando o usuário clica duas vezes ele depende dos verbos definidos para o item. Para obter informações, consulte [ativação: Verbs](../mfc/activation-verbs.md).
 
 ## <a name="see-also"></a>Consulte também
 
 [OLE](../mfc/ole-in-mfc.md)<br/>
 [Contêineres](../mfc/containers.md)<br/>
 [Servidores](../mfc/servers.md)
-

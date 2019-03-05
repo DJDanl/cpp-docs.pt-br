@@ -8,12 +8,12 @@ helpviewer_keywords:
 - initializing objects [MFC], document objects
 - initializing views [MFC]
 ms.assetid: 33cb8643-8a16-478c-bc26-eccc734e3661
-ms.openlocfilehash: 2fb557d55576678d8c1199bec20e1fa4c849e1b4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0cf9faecbb7e0d74c2199a1a829aa68241e1c019
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50612245"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264086"
 ---
 # <a name="initializing-documents-and-views"></a>Inicializando documentos e exibições
 
@@ -24,4 +24,3 @@ Modos de exibição são criados após a criação de seus documentos. O melhor 
 ## <a name="see-also"></a>Consulte também
 
 [Inicializando e limpando documentos e exibições](../mfc/initializing-and-cleaning-up-documents-and-views.md)
-

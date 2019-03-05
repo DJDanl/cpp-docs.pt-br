@@ -5,12 +5,12 @@ helpviewer_keywords:
 - CHotKeyCtrl class [MFC], using
 - hot key controls
 ms.assetid: cdd6524b-cc43-447f-b151-164273559685
-ms.openlocfilehash: 335489011076b1e30a9c36720a3bf2e94c7918b3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d9178fe989e476111a3da55861642e9aa6311872
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50542188"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260564"
 ---
 # <a name="using-a-hot-key-control"></a>Usando um controle de tecla de acesso
 
@@ -32,4 +32,3 @@ Um uso típico de um controle de acesso de chave segue o padrão abaixo:
 
 [Usando CHotKeyCtrl](../mfc/using-chotkeyctrl.md)<br/>
 [Controles](../mfc/controls-mfc.md)
-

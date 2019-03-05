@@ -140,12 +140,12 @@ helpviewer_keywords:
 - CMFCVisualManagerWindows [MFC], SetOfficeStyleMenus
 - CMFCVisualManagerWindows [MFC], m_b3DTabsXPTheme
 ms.assetid: 568b6e9e-8e67-4477-9a3d-2981cbd09861
-ms.openlocfilehash: e9f083f37c2e92172b05b907d733f9dbdb27ce45
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3219de7f90d76e18b52efab8d8601b848427fca7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559738"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275955"
 ---
 # <a name="cmfcvisualmanagerwindows-class"></a>Classe CMFCVisualManagerWindows
 
@@ -613,7 +613,7 @@ virtual void OnDrawCaptionButton(
 
 [in] *pDC*<br/>
 [in] *pButton*<br/>
-[in] *bScripts Ativos*<br/>
+[in] *bActive*<br/>
 [in] *bHorz*<br/>
 [in] *bMaximized*<br/>
 [in] *bDesabilitado*<br/>
@@ -638,7 +638,7 @@ virtual void OnDrawCaptionButtonIcon(
 [in] *pDC*<br/>
 [in] *pButton*<br/>
 [in] *id*<br/>
-[in] *bScripts Ativos*<br/>
+[in] *bActive*<br/>
 [in] *bDesabilitado*<br/>
 [in] *ptImage*<br/>
 
@@ -932,7 +932,7 @@ virtual COLORREF OnDrawPaneCaption(
 
 [in] *pDC*<br/>
 [in] *pBar*<br/>
-[in] *bScripts Ativos*<br/>
+[in] *bActive*<br/>
 [in] *rectCaption*<br/>
 [in] *rectButtons*<br/>
 
@@ -1185,7 +1185,7 @@ virtual void OnDrawTasksGroupAreaBorder(
 
 [in] *pDC*<br/>
 [in] *rect*<br/>
-[in] *bOpções especiais*<br/>
+[in] *bSpecial*<br/>
 [in] *bNoTitle*<br/>
 
 ### <a name="remarks"></a>Comentários
@@ -1374,7 +1374,7 @@ virtual COLORREF OnFillMiniFrameCaption(
 [in] *pDC*<br/>
 [in] *rectCaption*<br/>
 [in] *pFrameWnd*<br/>
-[in] *bScripts Ativos*<br/>
+[in] *bActive*<br/>
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -1414,7 +1414,7 @@ virtual void OnFillTasksGroupInterior(
 
 [in] *pDC*<br/>
 [in] *rect*<br/>
-[in] *bOpções especiais*<br/>
+[in] *bSpecial*<br/>
 
 ### <a name="remarks"></a>Comentários
 

@@ -64,12 +64,12 @@ helpviewer_keywords:
 - CMFCToolBarComboBoxButton [MFC], SetDropDownHeight
 - CMFCToolBarComboBoxButton [MFC], SetFlatMode
 ms.assetid: 32fa39f7-8e4e-4f0a-a31d-7b540d969a6c
-ms.openlocfilehash: 2dd300e4bbf63ed59554d5722c716f8a3f795570
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fae70e44657023b7a7b93f72599bef4ba6faf307
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50561415"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303164"
 ---
 # <a name="cmfctoolbarcomboboxbutton-class"></a>Classe CMFCToolBarComboBoxButton
 
@@ -132,7 +132,7 @@ Para adicionar um botão da caixa de combinação a uma barra de ferramentas, si
 
 3. No manipulador de mensagens que processa a mensagem AFX_WM_RESETTOOLBAR, substitua o botão fictício com o novo botão de caixa de combinação usando [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton).
 
-Para obter mais informações, consulte [instruções passo a passo: colocando controles em barras de ferramentas](../../mfc/walkthrough-putting-controls-on-toolbars.md). Para obter um exemplo de um botão de barra de ferramentas da caixa de combinação, consulte o projeto de exemplo VisualStudioDemo.
+Para obter mais informações, confira [Passo a passo: Colocando controles em barras de ferramentas](../../mfc/walkthrough-putting-controls-on-toolbars.md). Para obter um exemplo de um botão de barra de ferramentas da caixa de combinação, consulte o projeto de exemplo VisualStudioDemo.
 
 ## <a name="example"></a>Exemplo
 
@@ -327,7 +327,7 @@ virtual CComboBox* CreateCombo(
 *pWndParent*<br/>
 [in] Um ponteiro para a janela pai do botão.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Retângulo delimitador da caixa de combinação.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -350,7 +350,7 @@ virtual CMFCToolBarComboBoxEdit* CreateEdit(
 *pWndParent*<br/>
 [in] Um ponteiro para a janela pai do botão.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Retângulo delimitador da nova caixa de edição.
 
 *dwEditStyle*<br/>
@@ -413,7 +413,7 @@ virtual void EnableWindow(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parâmetros
 
-*bAtivar*<br/>
+*bEnable*<br/>
 [in] TRUE para habilitar as caixas de combinação e de edição; FALSE para desabilitar as caixas de combinação e de edição.
 
 ### <a name="remarks"></a>Comentários
@@ -430,7 +430,7 @@ virtual BOOL ExportToMenuButton(CMFCToolBarMenuButton& menuButton) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*Botão de menu*<br/>
+*menuButton*<br/>
 [out] Referência a um botão de menu.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -825,7 +825,7 @@ virtual BOOL IsOwnerOf(HWND hwnd);
 
 ### <a name="parameters"></a>Parâmetros
 
-*HWND*<br/>
+*hwnd*<br/>
 [in] Um identificador de janela.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -936,7 +936,7 @@ virtual BOOL OnClick(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Apropriei*<br/>
+*pWnd*<br/>
 [in] Ponteiro para a janela pai do botão da caixa de combinação.
 
 *bDelay*<br/>
@@ -990,10 +990,10 @@ virtual void OnDraw(
 
 ### <a name="parameters"></a>Parâmetros
 
-*PDC*<br/>
+*Pdc*<br/>
 [in] O contexto de dispositivo que exibe o botão.
 
-*Rect*<br/>
+*rect*<br/>
 [in] O retângulo delimitador do botão.
 
 *pImages*<br/>
@@ -1030,7 +1030,7 @@ virtual int OnDrawOnCustomizeList(
 *pDC*<br/>
 [in] O contexto de dispositivo que exibe o botão da caixa de combinação.
 
-*Rect*<br/>
+*rect*<br/>
 [in] O retângulo delimitador do botão da caixa de combinação.
 
 *bSelected*<br/>
@@ -1066,7 +1066,7 @@ virtual void OnShow(BOOL bShow);
 
 ### <a name="parameters"></a>Parâmetros
 
-*bMostrar*<br/>
+*bShow*<br/>
 [in] Se deseja ocultar ou exibir o botão da caixa de combinação.
 
 ##  <a name="onsize"></a>  CMFCToolBarComboBoxButton::OnSize
@@ -1335,5 +1335,4 @@ void SetText(LPCTSTR lpszText);
 [Classe CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)<br/>
 [Classe CComboBox](../../mfc/reference/ccombobox-class.md)<br/>
 [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)<br/>
-[Instruções passo a passo: colocando controles em barras de ferramentas](../../mfc/walkthrough-putting-controls-on-toolbars.md)
-
+[Passo a passo: Colocando controles em barras de ferramentas](../../mfc/walkthrough-putting-controls-on-toolbars.md)

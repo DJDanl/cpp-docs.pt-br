@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CSettingsStore [MFC], Read
 - CSettingsStore [MFC], Write
 ms.assetid: 0ea181de-a13e-4b29-b560-7c43838223ff
-ms.openlocfilehash: 7f1ca94423cb1ef269c7556be25b1926fa42d2a5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1de26ceedfd29f276693be512bd41f169fb44b94
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614676"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274538"
 ---
 # <a name="csettingsstore-class"></a>Classe CSettingsStore
 
@@ -124,7 +124,7 @@ CSettingsStore(
 
 ### <a name="parameters"></a>Parâmetros
 
-*bCaminho Admin*<br/>
+*bAdmin*<br/>
 [in] Parâmetro booleano que especifica se o `CSettingsStore` objeto está funcionando no modo de administrador.
 
 *bReadOnly*<br/>
@@ -153,7 +153,7 @@ virtual BOOL DeleteKey(
 *pszPath*<br/>
 [in] O nome da chave a excluir.
 
-*bCaminho Admin*<br/>
+*bAdmin*<br/>
 [in] Opção que especifica o local da chave a excluir.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -299,13 +299,13 @@ virtual BOOL Read(
 *lpPoint*<br/>
 [out] Referência a um ponteiro para um `POINT` ler de estrutura que recebe o valor da chave do registro.
 
-*Rect*<br/>
+*rect*<br/>
 [out] Referência a um [CRect](../../atl-mfc-shared/reference/crect-class.md) ler de variável que recebe o valor da chave do registro.
 
 *ppData*<br/>
 [out] Leitura de ponteiro para um ponteiro para dados que recebe o valor da chave do registro.
 
-*Petabytes*<br/>
+*pBytes*<br/>
 [out] Ponteiro para uma variável de inteiro sem sinal. Essa variável recebe o tamanho do buffer que *ppData* aponta.
 
 *list*<br/>
@@ -417,7 +417,7 @@ virtual BOOL Write(
 *wcArray*<br/>
 [in] Referência a uma variável de matriz de palavras de 16 bits que contém os dados para armazenar.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Referência a um [CRect](../../atl-mfc-shared/reference/crect-class.md) variável que contém os dados serem armazenados.
 
 *lpPoint*<br/>

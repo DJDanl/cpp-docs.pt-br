@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - ScheduleGroup class
 ms.assetid: 86d380ff-f2e8-411c-b1a8-22bd3079824a
-ms.openlocfilehash: 6132ec6623a009c09a37b7d704ce683a58956a04
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ce7734a1330f2d6e495565338879764482439d09
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50518710"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283846"
 ---
 # <a name="schedulegroup-class"></a>Classe ScheduleGroup
 
@@ -40,7 +40,7 @@ class ScheduleGroup;
 
 |Nome|Descrição|
 |----------|-----------------|
-|[Id](#id)|Retorna um identificador para o grupo de agendas que é exclusivo dentro do Agendador ao qual pertence o grupo.|
+|[ID](#id)|Retorna um identificador para o grupo de agendas que é exclusivo dentro do Agendador ao qual pertence o grupo.|
 |[Referência](#reference)|Incrementa a contagem de referência do grupo de agendamento.|
 |[Versão](#release)|Diminui a referência de grupo do Agendador contagem.|
 |[ScheduleTask](#scheduletask)|Agenda uma tarefa leve no grupo.|
@@ -121,7 +121,7 @@ Isso normalmente é usado para gerenciar o tempo de vida do grupo de agendamento
 
 Um grupo de agendamento está associado uma instância de Agendador específico. Você deve garantir que todas as referências para o grupo de agendas são liberadas antes de todas as referências para o Agendador são lançadas, porque a última opção pode resultar no Agendador que está sendo destruído. Fazendo caso contrário, resulta em um comportamento indefinido.
 
-##  <a name="dtor"></a> ~ ScheduleGroup
+##  <a name="dtor"></a> ~ScheduleGroup
 
 ```
 virtual ~ScheduleGroup();
@@ -142,7 +142,7 @@ virtual void ScheduleTask(
 *_Proc*<br/>
 Um ponteiro para a função a ser executada para executar o corpo da tarefa leve.
 
-*Data*<br/>
+*_Data*<br/>
 Um ponteiro nulo para os dados que serão passados como um parâmetro ao corpo da tarefa.
 
 ### <a name="remarks"></a>Comentários
@@ -155,4 +155,3 @@ Chamar o `ScheduleTask` implicitamente o método coloca uma contagem de referên
 [Classe CurrentScheduler](currentscheduler-class.md)<br/>
 [Classe Scheduler](scheduler-class.md)<br/>
 [Agendador de tarefas](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)
-

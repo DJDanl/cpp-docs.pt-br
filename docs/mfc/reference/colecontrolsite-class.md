@@ -106,12 +106,12 @@ helpviewer_keywords:
 - COleControlSite [MFC], m_pWndCtrl
 - COleControlSite [MFC], m_rect
 ms.assetid: 43970644-5eab-434a-8ba6-56d144ff1e3f
-ms.openlocfilehash: 26d0f5e875c4f3982705a2cf571b15cd5bfac985
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 31502f2ecda1c14cb68c83da98cf2b764baba461
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178909"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264125"
 ---
 # <a name="colecontrolsite-class"></a>Classe COleControlSite
 
@@ -325,7 +325,7 @@ Um ponteiro para o texto a ser exibido no controle. Define o valor da propriedad
 *dwStyle*<br/>
 Estilos do Windows. Os estilos disponíveis são listados sob o **comentários** seção.
 
-*Rect*<br/>
+*rect*<br/>
 Especifica o tamanho e a posição do controle. Ela pode ser um `CRect` objeto ou um `RECT` estrutura.
 
 *nID*<br/>
@@ -443,7 +443,7 @@ virtual BOOL EnableWindow(BOOL bEnable);
 
 ### <a name="parameters"></a>Parâmetros
 
-*bAtivar*<br/>
+*bEnable*<br/>
 Especifica se é habilitar ou desabilitar a janela: TRUE se a entrada da janela deve ser habilitado, caso contrário, FALSE.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1023,7 +1023,7 @@ void SetDefaultButton(BOOL bDefault);
 
 ### <a name="parameters"></a>Parâmetros
 
-*bNível padrão*<br/>
+*bDefault*<br/>
 Diferente de zero se o controle deve se tornar o botão padrão; Caso contrário, zero.
 
 ### <a name="remarks"></a>Comentários
@@ -1148,10 +1148,10 @@ A nova posição do lado esquerdo da janela.
 *y*<br/>
 A nova posição na parte superior da janela.
 
-*CX*<br/>
+*cx*<br/>
 A nova largura da janela
 
-*Cy*<br/>
+*cy*<br/>
 A nova altura da janela.
 
 *nFlags*<br/>

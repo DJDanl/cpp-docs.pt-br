@@ -8,12 +8,12 @@ helpviewer_keywords:
 - handlers, command [MFC]
 - command routing
 ms.assetid: 9393a956-bdd4-47c5-9013-dbd680433f93
-ms.openlocfilehash: add047984f5a32e505e8a739922daa137b5e671d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ae9741a66e944b60dc38c1366353e43977e1ee7a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50541694"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278386"
 ---
 # <a name="command-routing"></a>Roteamento de comando
 
@@ -35,7 +35,7 @@ Como esse mecanismo de roteamento comparado ao que faz a seu manipulador em resp
 
 |Quando um objeto desse tipo recebe um comando. . .|Ele oferece a mesmo e outros objetos de destino do comando a oportunidade de manipular o comando nesta ordem:|
 |----------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
-|Janela de quadro MDI (`CMDIFrameWnd`)|1.  Active Directory `CMDIChildWnd`<br />2.  Essa janela de quadro<br />3.  Aplicativo (`CWinApp` objeto)|
+|Janela de quadro MDI (`CMDIFrameWnd`)|1.  Active `CMDIChildWnd`<br />2.  Essa janela de quadro<br />3.  Aplicativo (`CWinApp` objeto)|
 |Janela de quadro do documento (`CFrameWnd`, `CMDIChildWnd`)|1.  Modo de exibição ativo<br />2.  Essa janela de quadro<br />3.  Aplicativo (`CWinApp` objeto)|
 |Exibir|1.  Este modo de exibição<br />2.  Documento anexado para o modo de exibição|
 |Documento|1.  Este documento<br />2.  Modelo de documento anexado ao documento|
@@ -46,4 +46,3 @@ Em que entradas numeradas na segunda coluna da tabela anterior mencionam outros 
 ## <a name="see-also"></a>Consulte também
 
 [Como o Framework chama um manipulador](../mfc/how-the-framework-calls-a-handler.md)
-

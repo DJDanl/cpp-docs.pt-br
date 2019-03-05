@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CMFCColorMenuButton [MFC], OnDraw
 - CMFCColorMenuButton [MFC], OnDrawOnCustomizeList
 ms.assetid: 42685704-e994-4f7b-9553-62283c27b754
-ms.openlocfilehash: adb0cdbdde90ad7bdd6aef42c1e83c7ba3fd28b0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 64d61cc9464ef0877baad33a8685cee1482f240d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624874"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301331"
 ---
 # <a name="cmfccolormenubutton-class"></a>Classe CMFCColorMenuButton
 
@@ -205,10 +205,10 @@ void EnableAutomaticButton(
 *lpszLabel*<br/>
 [in] Especifica o texto do botão que é exibido quando o botão se torna automático.
 
-*automáticaCor*<br/>
+*colorAutomatic*<br/>
 [in] Especifica uma nova cor automática.
 
-*bAtivar*<br/>
+*bEnable*<br/>
 [in] Especifica se o botão é automático ou não.
 
 ### <a name="remarks"></a>Comentários
@@ -230,7 +230,7 @@ void EnableDocumentColors(
 *lpszLabel*<br/>
 [in] Especifica o texto do botão.
 
-*bAtivar*<br/>
+*bEnable*<br/>
 [in] TRUE para exibir cores de documento específico ou falso para exibir cores do sistema.
 
 ### <a name="remarks"></a>Comentários
@@ -256,7 +256,7 @@ void EnableOtherButton(
 *bAltColorDlg*<br/>
 [in] Especifique TRUE para exibir o `CMFCColorDialog` caixa de diálogo, ou falso para exibir a caixa de diálogo de cor padrão do sistema.
 
-*bAtivar*<br/>
+*bEnable*<br/>
 [in] Especifique TRUE para exibir o botão "other"; Caso contrário, FALSE. O padrão é TRUE.
 
 ### <a name="remarks"></a>Comentários
@@ -390,7 +390,7 @@ virtual void OnDraw(
 *pDC*<br/>
 [in] Um ponteiro para um contexto de dispositivo.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Um retângulo que delimita a área a ser redesenhado.
 
 *pImages*<br/>
@@ -429,7 +429,7 @@ virtual int OnDrawOnCustomizeList(
 *pDC*<br/>
 [in] Um ponteiro para um contexto de dispositivo.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Um retângulo que delimita o botão a ser desenhado.
 
 *bSelected*<br/>
@@ -481,7 +481,7 @@ virtual void SetColor(
 
 ### <a name="parameters"></a>Parâmetros
 
-*CLR*<br/>
+*clr*<br/>
 [in] Um valor de cor RGB.
 
 *bNotify*<br/>
@@ -506,7 +506,7 @@ static void SetColorByCmdID(
 *uiCmdID*<br/>
 [in] A ID de recurso de um botão de menu de cor.
 
-*Cor*<br/>
+*color*<br/>
 [in] Um valor de cor RGB.
 
 ##  <a name="setcolorname"></a>  CMFCColorMenuButton::SetColorName
@@ -521,7 +521,7 @@ static void SetColorName(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Cor*<br/>
+*color*<br/>
 [in] O valor RGB da cor cujo nome é alterado.
 
 *strName*<br/>

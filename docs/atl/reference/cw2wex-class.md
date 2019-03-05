@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - CW2WEX class
 ms.assetid: 46262e56-e0d2-41fe-855b-0b67ecc8fcd7
-ms.openlocfilehash: 647d233f25f27c96eeb3281272c1542057cabd4d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d6d68f4f5c0f3532c39fee3f513e7b3102ec075d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50468088"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299472"
 ---
 # <a name="cw2wex-class"></a>Classe CW2WEX
 
@@ -43,7 +43,7 @@ O tamanho do buffer usado no processo de tradução. O comprimento padrão é 12
 |Nome|Descrição|
 |----------|-----------------|
 |[CW2WEX::CW2WEX](#cw2wex)|O construtor.|
-|[CW2WEX:: ~ CW2WEX](#dtor)|O destruidor.|
+|[CW2WEX::~CW2WEX](#dtor)|O destruidor.|
 
 ### <a name="public-operators"></a>Operadores públicos
 
@@ -109,7 +109,7 @@ A página de código. Não usado nessa classe.
 
 Cria o buffer necessário para a tradução.
 
-##  <a name="dtor"></a>  CW2WEX:: ~ CW2WEX
+##  <a name="dtor"></a>  CW2WEX::~CW2WEX
 
 O destruidor...
 
@@ -137,7 +137,7 @@ O buffer estático, usado para armazenar a cadeia de caracteres convertida.
 wchar_t m_szBuffer[t_nBufferLength];
 ```
 
-##  <a name="operator_lpwstr"></a>  CW2WEX::Operator LPWSTR
+##  <a name="operator_lpwstr"></a>  CW2WEX::operator LPWSTR
 
 Operador cast.
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - I/O [MFC], options
 - I/O [MFC], file-based options
 ms.assetid: d664b175-3b4a-40c3-b14b-39de6b12e419
-ms.openlocfilehash: 1144337df9657d63c53a13e03cf31eb487ce4068
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 760c213c3af7f9c75374f04e3dfc6b9499eade5c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50585448"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261958"
 ---
 # <a name="recommendations-for-handling-inputoutput"></a>Recomendações para manusear entrada/saída
 
@@ -27,7 +27,7 @@ Se você usa e/s baseado em arquivo ou não depende de como você responder às 
 
    - Sim: Esse é o caso de documento padrão MFC. Use `CDocument` serialização.
 
-   - Não: Isso geralmente é o caso de atualização do arquivo de baseado em transação. Atualize o arquivo em uma base por transação e não precisa `CDocument` serialização.
+   - Não: Isso normalmente é o caso de atualização do arquivo de baseado em transação. Atualize o arquivo em uma base por transação e não precisa `CDocument` serialização.
 
 - Não, os dados primários não residem em um arquivo de disco:
 

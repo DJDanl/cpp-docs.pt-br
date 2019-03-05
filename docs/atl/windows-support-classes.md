@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ATL, windows
 - windows [C++], ATL
 ms.assetid: 750b14d5-d787-4d2b-9728-ac199ccad489
-ms.openlocfilehash: 9a33136c63c5bdc32dfc882e8c53ab2f5c27eb46
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e7e9e1f4fb94537cdd131e58ef3fc481ee1c012e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50665407"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281025"
 ---
 # <a name="windows-support-classes"></a>Classes de suporte do Windows
 
@@ -58,4 +58,3 @@ As classes a seguir fornecem suporte para windows:
 [Visão geral da classe](../atl/atl-class-overview.md)<br/>
 [Macros de mapa de mensagens](../atl/reference/message-map-macros-atl.md)<br/>
 [Macros de classe de janela](../atl/reference/window-class-macros.md)
-

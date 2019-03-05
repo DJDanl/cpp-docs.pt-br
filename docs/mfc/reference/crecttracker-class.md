@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CRectTracker [MFC], m_rect
 - CRectTracker [MFC], m_sizeMin
 ms.assetid: 99caa7f2-3c0d-4a42-bbee-e5d1d342d4ee
-ms.openlocfilehash: c82b06903f0705a79a15b263b1dbdfc6aee4c8ca
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 1834c378246835314002cdf05fe9a294b609c4e4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176504"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259575"
 ---
 # <a name="crecttracker-class"></a>Classe CRectTracker
 
@@ -210,7 +210,7 @@ Ponteiro para a janela a ser usado no retângulo de recorte.
 *pDC*<br/>
 Ponteiro para o contexto de dispositivo no qual desenhar.
 
-*Apropriei*<br/>
+*pWnd*<br/>
 Ponteiro para a janela na qual o desenho ocorrerá.
 
 ### <a name="remarks"></a>Comentários
@@ -270,7 +270,7 @@ int HitTest(CPoint point) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*ponto*<br/>
+*point*<br/>
 O ponto em coordenadas de dispositivo, para testar.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -393,7 +393,7 @@ BOOL SetCursor(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Apropriei*<br/>
+*pWnd*<br/>
 Aponta para a janela que contém o cursor.
 
 *nHitTest*<br/>
@@ -421,10 +421,10 @@ BOOL Track(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Apropriei*<br/>
+*pWnd*<br/>
 O objeto de janela que contém o retângulo.
 
-*ponto*<br/>
+*point*<br/>
 Coordenadas do dispositivo da posição atual do mouse em relação à área de cliente.
 
 *bAllowInvert*<br/>
@@ -458,10 +458,10 @@ BOOL TrackRubberBand(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Apropriei*<br/>
+*pWnd*<br/>
 O objeto de janela que contém o retângulo.
 
-*ponto*<br/>
+*point*<br/>
 Coordenadas do dispositivo da posição atual do mouse em relação à área de cliente.
 
 *bAllowInvert*<br/>

@@ -28,12 +28,12 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::norm_2
 - amp_short_vectors/Concurrency::graphics::norm_2::operator--
 ms.assetid: 80703f9b-61f4-414a-93fd-bc774f7d3393
-ms.openlocfilehash: ebf1a80a695f1d25652f239f66d8d40c0e1099ec
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c48e6dd573e3303307cc8a0247a955aba62d809e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50542203"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271171"
 ---
 # <a name="norm2-class"></a>Classe norm_2
 
@@ -179,16 +179,16 @@ explicit inline norm_2(
 *_V0*<br/>
 O valor para inicializar o elemento 0.
 
-*V1*<br/>
+*_V1*<br/>
 O valor para inicializar o elemento 1.
 
 *_V*<br/>
 O valor para a inicialização.
 
-*Outro*<br/>
+*_Other*<br/>
 O objeto usado para inicializar.
 
-##  <a name="norm_2__size"></a> Tamanho
+##  <a name="norm_2__size"></a> size
 
 ```
 static const int size = 2;

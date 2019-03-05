@@ -7,12 +7,12 @@ helpviewer_keywords:
 - StringRegister method
 - scripts, invoking registry in ATL
 ms.assetid: eabd41ee-586b-4266-9e92-5aaad04b73a4
-ms.openlocfilehash: 170eb4c29571fcec8797727f54630894c9198442
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6a604b6105612ad89a12026121c464028535d7df
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50650545"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57287811"
 ---
 # <a name="invoking-scripts"></a>Invocando Scripts
 
@@ -20,14 +20,14 @@ ms.locfileid: "50650545"
 
 |Método|Descrição da sintaxe /|
 |------------|-------------------------|
-|**ResourceRegister**|**HRESULT ResourceRegister (LPCOLESTR***resFileName* **, UINT** `nID` **, LPCOLESTR** `szType` **);**<br /><br /> Registra o script contido no recurso de um módulo. *resFileName* indica o caminho UNC para o próprio módulo. *nID* e *szType* contêm a ID do recurso e o tipo, respectivamente.|
-|**ResourceUnregister**|**HRESULT ResourceUnregister (LPCOLESTR***resFileName* **, UINT** `nID` **, LPCOLESTR** `szType` **);**<br /><br /> Cancela o registro o script contido no recurso de um módulo. *resFileName* indica o caminho UNC para o próprio módulo. *nID* e *szType* contêm a ID do recurso e o tipo, respectivamente.|
-|**ResourceRegisterSz**|**HRESULT ResourceRegisterSz (LPCOLESTR***resFileName* **, LPCOLESTR***szID* **, LPCOLESTR** `szType` **);**<br /><br /> Registra o script contido no recurso de um módulo. *resFileName* indica o caminho UNC para o próprio módulo. *szID* e *szType* contêm o tipo e o identificador de cadeia de caracteres do recurso, respectivamente.|
-|**ResourceUnregisterSz**|**HRESULT ResourceUnregisterSz (LPCOLESTR***resFileName* **, LPCOLESTR***szID* **, LPCOLESTR** `szType` **);**<br /><br /> Cancela o registro o script contido no recurso de um módulo. *resFileName* indica o caminho UNC para o próprio módulo. *szID* e *szType* contêm o tipo e o identificador de cadeia de caracteres do recurso, respectivamente.|
-|**FileRegister**|**HRESULT FileRegister (LPCOLESTR***fileName***);**<br /><br /> Registra o script em um arquivo. *nome do arquivo* é um caminho UNC para um arquivo que contém um script de recurso (ou é uma).|
-|**FileUnregister**|**HRESULT FileUnregister (LPCOLESTR***fileName***);**<br /><br /> Cancela o registro o script em um arquivo. *nome do arquivo* é um caminho UNC para um arquivo que contém um script de recurso (ou é uma).|
-|**StringRegister**|**HRESULT StringRegister (LPCOLESTR***dados***);**<br /><br /> Registra o script em uma cadeia de caracteres. *dados* contém o script propriamente dito.|
-|**StringUnregister**|**HRESULT StringUnregister (LPCOLESTR***dados***);**<br /><br /> Cancela o registro de script em uma cadeia de caracteres. *dados* contém o script propriamente dito.|
+|**ResourceRegister**|**HRESULT ResourceRegister( LPCOLESTR**  *resFileName* **, UINT**  `nID` **, LPCOLESTR**  `szType` **);**<br /><br /> Registra o script contido no recurso de um módulo. *resFileName* indica o caminho UNC para o próprio módulo. *nID* e *szType* contêm a ID do recurso e o tipo, respectivamente.|
+|**ResourceUnregister**|**HRESULT ResourceUnregister( LPCOLESTR**  *resFileName* **, UINT**  `nID` **, LPCOLESTR**  `szType` **);**<br /><br /> Cancela o registro o script contido no recurso de um módulo. *resFileName* indica o caminho UNC para o próprio módulo. *nID* e *szType* contêm a ID do recurso e o tipo, respectivamente.|
+|**ResourceRegisterSz**|**HRESULT ResourceRegisterSz( LPCOLESTR**  *resFileName* **, LPCOLESTR**  *szID* **, LPCOLESTR**  `szType` **);**<br /><br /> Registra o script contido no recurso de um módulo. *resFileName* indica o caminho UNC para o próprio módulo. *szID* e *szType* contêm o tipo e o identificador de cadeia de caracteres do recurso, respectivamente.|
+|**ResourceUnregisterSz**|**HRESULT ResourceUnregisterSz( LPCOLESTR**  *resFileName* **, LPCOLESTR**  *szID* **, LPCOLESTR**  `szType` **);**<br /><br /> Cancela o registro o script contido no recurso de um módulo. *resFileName* indica o caminho UNC para o próprio módulo. *szID* e *szType* contêm o tipo e o identificador de cadeia de caracteres do recurso, respectivamente.|
+|**FileRegister**|**HRESULT FileRegister( LPCOLESTR**  *fileName*  **);**<br /><br /> Registra o script em um arquivo. *nome do arquivo* é um caminho UNC para um arquivo que contém um script de recurso (ou é uma).|
+|**FileUnregister**|**HRESULT FileUnregister( LPCOLESTR**  *fileName*  **);**<br /><br /> Cancela o registro o script em um arquivo. *nome do arquivo* é um caminho UNC para um arquivo que contém um script de recurso (ou é uma).|
+|**StringRegister**|**HRESULT StringRegister( LPCOLESTR**  *data*  **);**<br /><br /> Registra o script em uma cadeia de caracteres. *dados* contém o script propriamente dito.|
+|**StringUnregister**|**HRESULT StringUnregister( LPCOLESTR**  *data*  **);**<br /><br /> Cancela o registro de script em uma cadeia de caracteres. *dados* contém o script propriamente dito.|
 
 **ResourceRegisterSz** e **ResourceUnregisterSz**, são semelhantes às **ResourceRegister** e **ResourceUnregister**, mas permitem que você especifique uma cadeia de caracteres identificador.
 
@@ -36,4 +36,3 @@ Os métodos **FileRegister** e **FileUnregister** são úteis se você não quis
 ## <a name="see-also"></a>Consulte também
 
 [Criando scripts do Registrador](../atl/creating-registrar-scripts.md)
-

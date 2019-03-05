@@ -5,12 +5,12 @@ helpviewer_keywords:
 - asynchronous agents
 - agents [Concurrency Runtime]
 ms.assetid: 6cf6ccc6-87f1-4e14-af15-ea8ba58fef1a
-ms.openlocfilehash: a99400e4df49e36e1cddda7068f315485b976cde
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: ff6fa851519066c3c399a28557fd8f103d0e94be
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176530"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268935"
 ---
 # <a name="asynchronous-agents"></a>Agentes Assíncronos
 
@@ -59,9 +59,8 @@ O tempo de execução não gerencia exceções que são geradas por agentes ass�
 
 ## <a name="example"></a>Exemplo
 
-Para obter um exemplo que mostra como criar um aplicativo básico com base em agente, consulte [instruções passo a passo: Criando um aplicativo baseado em agente](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md).
+Para obter um exemplo que mostra como criar um aplicativo básico com base em agente, consulte [passo a passo: Criando um aplicativo baseado em agente](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md).
 
 ## <a name="see-also"></a>Consulte também
 
 [Biblioteca de agentes assíncronos](../../parallel/concrt/asynchronous-agents-library.md)
-

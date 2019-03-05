@@ -8,12 +8,12 @@ f1_keywords:
 - AMP_GRAPHICS/Concurrency::graphics::writeonly_texture_view::set
 - AMP_GRAPHICS/Concurrency::graphics::rank Constant
 ms.assetid: 8d117ad3-0a1c-41ae-b29c-7c95fdd4d04d
-ms.openlocfilehash: 022450469a69e9fe127f23a50b799092e7e057b4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5244ae5df99b06c77f4eb27317e5829b21fabf24
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50524677"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274382"
 ---
 # <a name="writeonlytextureview-class"></a>Classe writeonly_texture_view
 
@@ -89,7 +89,7 @@ A classificação da textura.
 
 **Namespace:** Concurrency:: Graphics
 
-##  <a name="dtor"></a> ~ writeonly_texture_view
+##  <a name="dtor"></a> ~writeonly_texture_view
 
 Destrói o `writeonly_texture_view` objeto.
 
@@ -97,7 +97,7 @@ Destrói o `writeonly_texture_view` objeto.
 ~writeonly_texture_view() restrict(amp,cpu);
 ```
 
-##  <a name="operator_eq"></a> operador =
+##  <a name="operator_eq"></a> operator=
 
 Copia especificado `writeonly_texture_view` objeto para esse outro.
 
@@ -108,7 +108,7 @@ writeonly_texture_view<value_type, _Rank>& operator= (
 
 ### <a name="parameters"></a>Parâmetros
 
-*Outro*<br/>
+*_Other*<br/>
 `writeonly_texture_view` objeto do qual copiar.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -123,7 +123,7 @@ Obtém a classificação do `writeonly_texture_view` objeto.
 static const int rank = _Rank;
 ```
 
-##  <a name="set"></a> Definir
+##  <a name="set"></a> set
 
 Define o valor do elemento no índice especificado.
 
@@ -135,7 +135,7 @@ void set(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Index*<br/>
+*_Index*<br/>
 O índice do elemento.
 
 *value*<br/>

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - thread attribute
 - Thread Local Storage [C++]
 ms.assetid: 80801907-d792-45ca-b776-df0cf2e9f197
-ms.openlocfilehash: 02c699ec64fe03a1f892fc3c7e8bf9f6b9c05dfc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f5a75f7964b0291a980b22d36e7ce6a0a87d3dc3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507582"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293453"
 ---
 # <a name="thread-local-storage-tls"></a>Armazenamento local de thread (TLS)
 
@@ -22,7 +22,7 @@ Armazenamento Local do thread (TLS) é o método pelo qual cada thread em um pro
 
 ##  <a name="_core_compiler_implementation_for_tls"></a> Implementação do compilador para TLS
 
-**C++11:** o `thread_local` especificador de classe de armazenamento é a maneira recomendada para especificar o armazenamento local de thread para objetos e membros de classe. Para obter mais informações, consulte [classes de armazenamento (C++)](../cpp/storage-classes-cpp.md).
+**C++11:**  O `thread_local` especificador de classe de armazenamento é a maneira recomendada para especificar o armazenamento local de thread para objetos e membros de classe. Para obter mais informações, consulte [classes de armazenamento (C++)](../cpp/storage-classes-cpp.md).
 
 O Visual C++ também fornece um atributo específico da Microsoft, [thread](../cpp/thread.md), como o modificador de classe de armazenamento estendido. Use o **declspec** palavra-chave para declarar uma **thread** variável. Por exemplo, o código a seguir declara uma variável local de thread de inteiro e a inicializa com um valor:
 

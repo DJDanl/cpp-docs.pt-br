@@ -21,12 +21,12 @@ f1_keywords:
 - amp/Concurrency::direct3d::step
 - amp/Concurrency::direct3d::umin
 ms.assetid: 28943b62-52c9-42dc-baf1-ca7b095c1a19
-ms.openlocfilehash: b721d19cd51a9eb1d07de8898b18728854decb4e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0a2977faf094aafb6290063e39e062ffaeaaec81
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519724"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281324"
 ---
 # <a name="concurrencydirect3d-namespace-functions-amp"></a>Funções do namespace Concurrency::Direct3D (AMP)
 
@@ -38,13 +38,13 @@ ms.locfileid: "50519724"
 |[firstbitlow](#firstbitlow)|[get_buffer](#get_buffer)|[get_device](#get_device)|
 |[imax](#imax)|[imin](#imin)|[is_timeout_disabled](#is_timeout_disabled)|
 |[mad](#mad)|[make_array](#make_array)|[noise](#noise)|
-|[radianos](#radians)|[rcp](#rcp)|[reversebits](#reversebits)|
+|[radians](#radians)|[rcp](#rcp)|[reversebits](#reversebits)|
 |[saturate](#saturate)|[sign](#sign)|[smoothstep](#smoothstep)|
 |[step](#step)|[umax](#umax)|[umin](#umin)|
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** amp. h **Namespace:** simultaneidade
+**Cabeçalho:** amp. h **Namespace:** Concorrência
 
 ##  <a name="abs"></a>  abs
 
@@ -56,7 +56,7 @@ inline int abs(int _X) restrict(amp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor inteiro
 
 ### <a name="return-value"></a>Valor de retorno
@@ -81,13 +81,13 @@ inline int clamp(
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 O valor a ser apertado
 
-*Min*<br/>
+*_Min*<br/>
 O limite inferior do intervalo de compressão.
 
-*Max*<br/>
+*_Max*<br/>
 O limite superior do intervalo de compressão.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -104,7 +104,7 @@ inline unsigned int countbits(unsigned int _X) restrict(amp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor inteiro sem sinal
 
 ### <a name="return-value"></a>Valor de retorno
@@ -156,7 +156,7 @@ O tempo de execução C++ AMP fornece informações de erro detalhadas no modo d
 
 ##  <a name="d3d_access_lock"></a>  d3d_access_lock
 
-Adquira um bloqueio em um accelerator_view com a finalidade de executar operações de D3D em recursos compartilhados com o accelerator_view de forma segura. O accelerator_view e todos os recursos de C++ AMP associados a esse accelerator_view internamente utilizam esse bloqueio ao executar operações e bloquearão enquanto outro thread mantém o bloqueio de acesso D3D. Esse bloqueio não é recursivo: é um comportamento indefinido para chamar essa função a partir de um thread que já mantém o bloqueio. Ele é um comportamento indefinido executar operações no accelerator_view ou em qualquer contêiner de dados associado ao accelerator_view do thread que mantém o bloqueio de acesso D3D. Consulte também scoped_d3d_access_lock, uma classe de estilo de RAII para um bloqueio de acesso D3D com base no escopo.
+Adquira um bloqueio em um accelerator_view com a finalidade de executar operações de D3D em recursos compartilhados com o accelerator_view de forma segura. O accelerator_view e todos os recursos de C++ AMP associados a esse accelerator_view internamente utilizam esse bloqueio ao executar operações e bloquearão enquanto outro thread mantém o bloqueio de acesso D3D. Esse bloqueio não é recursivo: Ele é um comportamento indefinido para chamar essa função a partir de um thread que já mantém o bloqueio. Ele é um comportamento indefinido executar operações no accelerator_view ou em qualquer contêiner de dados associado ao accelerator_view do thread que mantém o bloqueio de acesso D3D. Consulte também scoped_d3d_access_lock, uma classe de estilo de RAII para um bloqueio de acesso D3D com base no escopo.
 
 ```
 void __cdecl d3d_access_lock(accelerator_view& _Av);
@@ -207,7 +207,7 @@ inline int firstbithigh(int _X) restrict(amp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor inteiro
 
 ### <a name="return-value"></a>Valor de retorno
@@ -224,7 +224,7 @@ inline int firstbitlow(int _X) restrict(amp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor inteiro
 
 ### <a name="return-value"></a>Valor de retorno
@@ -252,7 +252,7 @@ O tipo dos elementos na matriz.
 *_Rank*<br/>
 A classificação da matriz.
 
-*Array*<br/>
+*_Array*<br/>
 Uma matriz em um accelerator_view Direct3D para o qual a interface do buffer Direct3D subjacente é retornada.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -269,7 +269,7 @@ IUnknown* get_device(const accelerator_view Av);
 
 ### <a name="parameters"></a>Parâmetros
 
-*AV*<br/>
+*Av*<br/>
 O accelerator_view de D3D para o qual a interface do dispositivo D3D subjacente é retornada.
 
 ### <a name="return-value"></a>Valor retornado
@@ -288,10 +288,10 @@ inline int imax(
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor inteiro
 
-*Y*<br/>
+*_Y*<br/>
 Valor inteiro
 
 ### <a name="return-value"></a>Valor de retorno
@@ -310,10 +310,10 @@ inline int imin(
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor inteiro
 
-*Y*<br/>
+*_Y*<br/>
 Valor inteiro
 
 ### <a name="return-value"></a>Valor de retorno
@@ -365,13 +365,13 @@ inline unsigned int mad(
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 O primeiro argumento especificado.
 
-*Y*<br/>
+*_Y*<br/>
 O segundo argumento especificado.
 
-*Z*<br/>
+*_Z*<br/>
 O terceiro argumento especificado.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -414,7 +414,7 @@ Ponteiro de interface IUnknown do buffer D3D para criar a matriz.
 
 Uma matriz criada usando o buffer Direct3D fornecido.
 
-##  <a name="noise"></a>  ruído
+##  <a name="noise"></a>  noise
 
 Gera um valor aleatório usando o algoritmo de ruído de Perlin
 
@@ -424,14 +424,14 @@ inline float noise(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante do qual gerar ruído de Perlin
 
 ### <a name="return-value"></a>Valor de retorno
 
 Retorna o valor de ruído de Perlin a dentro de um intervalo entre -1 e 1
 
-##  <a name="radians"></a>  radianos
+##  <a name="radians"></a>  radians
 
 Converte x de graus em radianos
 
@@ -441,7 +441,7 @@ inline float radians(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
 ### <a name="return-value"></a>Valor de retorno
@@ -460,7 +460,7 @@ inline double rcp(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 O valor para o qual calcular o recíproco.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -477,14 +477,14 @@ inline unsigned int reversebits(unsigned int _X) restrict(amp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor inteiro sem sinal
 
 ### <a name="return-value"></a>Valor de retorno
 
 Retorna o valor com a ordem de bit invertida em x
 
-##  <a name="saturate"></a>  saturar
+##  <a name="saturate"></a>  saturate
 
 Aperta o x dentro do intervalo de 0 a 1
 
@@ -494,14 +494,14 @@ inline float saturate(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
 ### <a name="return-value"></a>Valor de retorno
 
 Retorna x fixado dentro do intervalo de 0 a 1
 
-##  <a name="sign"></a>  logon
+##  <a name="sign"></a>  sign
 
 Determina o sinal do argumento especificado.
 
@@ -511,7 +511,7 @@ inline int sign(int _X) restrict(amp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor inteiro
 
 ### <a name="return-value"></a>Valor de retorno
@@ -531,20 +531,20 @@ inline float smoothstep(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Min*<br/>
+*_Min*<br/>
 Valor de ponto flutuante
 
-*Max*<br/>
+*_Max*<br/>
 Valor de ponto flutuante
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
 ### <a name="return-value"></a>Valor de retorno
 
 Retorna 0 se x for menor que min; 1 se x for maior que max; Caso contrário, um valor entre 0 e 1 se x está no intervalo [ min, Max]
 
-##  <a name="step"></a>  Etapa
+##  <a name="step"></a>  step
 
 Compara dois valores, retornando 0 ou 1, com base em qual valor é maior
 
@@ -556,10 +556,10 @@ inline float step(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Y*<br/>
+*_Y*<br/>
 Valor de ponto flutuante
 
-*X*<br/>
+*_X*<br/>
 Valor de ponto flutuante
 
 ### <a name="return-value"></a>Valor de retorno
@@ -578,10 +578,10 @@ inline unsigned int umax(
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor inteiro
 
-*Y*<br/>
+*_Y*<br/>
 Valor inteiro
 
 ### <a name="return-value"></a>Valor de retorno
@@ -600,10 +600,10 @@ inline unsigned int umin(
 
 ### <a name="parameters"></a>Parâmetros
 
-*X*<br/>
+*_X*<br/>
 Valor inteiro
 
-*Y*<br/>
+*_Y*<br/>
 Valor inteiro
 
 ### <a name="return-value"></a>Valor de retorno

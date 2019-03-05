@@ -10,16 +10,16 @@ helpviewer_keywords:
 - collection classes [MFC], helper functions
 - helper functions collection class [MFC]
 ms.assetid: bc3a2368-9edd-4748-9e6a-13cba79517ca
-ms.openlocfilehash: 639c4f7952abcf18c29aa3cb0d9fee45b50430af
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3992e6c0cf25925e01858016e4bac93d5552fe8b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50567460"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266140"
 ---
 # <a name="collection-class-helpers"></a>Auxiliares da classe de coleção
 
-As classes de coleção `CMap`, `CList`, e `CArray` usar funções auxiliares global com modelo para esses fins, como comparação, copiando e serializando elementos. Como parte de sua implementação de classes com base na `CMap`, `CList`, e `CArray`, você deve substituir essas funções conforme necessário com as versões adaptadas para o tipo de dados armazenados no seu mapa, lista ou matriz. Para obter informações sobre substituição de funções auxiliares, como `SerializeElements`, consulte o artigo [coleções: como fazer uma coleção fortemente tipada](../../mfc/how-to-make-a-type-safe-collection.md). Observe que `ConstructElements` e `DestructElements` foram preteridos.
+As classes de coleção `CMap`, `CList`, e `CArray` usar funções auxiliares global com modelo para esses fins, como comparação, copiando e serializando elementos. Como parte de sua implementação de classes com base na `CMap`, `CList`, e `CArray`, você deve substituir essas funções conforme necessário com as versões adaptadas para o tipo de dados armazenados no seu mapa, lista ou matriz. Para obter informações sobre substituição de funções auxiliares, como `SerializeElements`, consulte o artigo [coleções: Como fazer uma coleção fortemente tipada](../../mfc/how-to-make-a-type-safe-collection.md). Observe que `ConstructElements` e `DestructElements` foram preteridos.
 
 A biblioteca Microsoft Foundation Class fornece as seguintes funções globais na afxtempl.h para ajudá-lo a personalizar suas classes de coleção:
 
@@ -105,11 +105,11 @@ Número de elementos a serem copiados.
 
 A implementação padrão usa o operador de atribuição simples ( **=** ) para executar a operação de cópia. Se o tipo que está sendo copiado não tem um operador sobrecarregado =, em seguida, a implementação padrão executa uma cópia bit a bit.
 
-Para obter informações sobre como implementar essas e outras funções de auxiliar, consulte o artigo [coleções: como fazer uma coleção fortemente tipada](../how-to-make-a-type-safe-collection.md).
+Para obter informações sobre como implementar essas e outras funções de auxiliar, consulte o artigo [coleções: Como fazer uma coleção fortemente tipada](../how-to-make-a-type-safe-collection.md).
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxtempl.h
+  **Header** afxtempl.h
 
 ##  <a name="dumpelements"></a>  DumpElements
 
@@ -145,7 +145,7 @@ A implementação padrão não faz nada. Se os elementos de sua coleção deriva
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxtempl.h
+  **Header** afxtempl.h
 
 ##  <a name="hashkey"></a>  HashKey
 
@@ -187,7 +187,7 @@ template <> UINT AFXAPI HashKey(unsigned __int64 key)
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxtempl.h
+  **Header** afxtempl.h
 
 ##  <a name="serializeelements"></a>  SerializeElements
 
@@ -216,15 +216,15 @@ Número de elementos que estão sendo arquivadas
 
 A implementação do padrão faz um bit a bit de leitura ou gravação.
 
-Para obter informações sobre como implementar essas e outras funções de auxiliar, consulte o artigo [coleções: como fazer uma coleção fortemente tipada](../how-to-make-a-type-safe-collection.md).
+Para obter informações sobre como implementar essas e outras funções de auxiliar, consulte o artigo [coleções: Como fazer uma coleção fortemente tipada](../how-to-make-a-type-safe-collection.md).
 
 ### <a name="example"></a>Exemplo
 
-Veja o exemplo neste artigo [coleções: como fazer uma coleção fortemente tipada](../how-to-make-a-type-safe-collection.md).
+Veja o exemplo neste artigo [coleções: Como fazer uma coleção fortemente tipada](../how-to-make-a-type-safe-collection.md).
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxtempl.h
+  **Header** afxtempl.h
 
 ## <a name="see-also"></a>Consulte também
 

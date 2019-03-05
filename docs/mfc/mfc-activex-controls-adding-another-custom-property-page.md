@@ -1,5 +1,5 @@
 ---
-title: 'Controles ActiveX MFC: adicionando outra página de propriedade personalizada'
+title: 'Controles ActiveX MFC: Adicionando outra página de propriedade personalizada'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - property pages [MFC], MFC ActiveX controls
@@ -7,26 +7,26 @@ helpviewer_keywords:
 - ActiveX controls [MFC], property pages
 - MFC ActiveX controls [MFC], property pages
 ms.assetid: fcf7e119-9f29-41a9-908d-e9b1607e08af
-ms.openlocfilehash: ac72258e881d10723a02b5103c602ac5cec6a1f5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 87b71fdddc5b52f66c34cdbcdb234c83616d0850
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50465306"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289540"
 ---
-# <a name="mfc-activex-controls-adding-another-custom-property-page"></a>Controles ActiveX MFC: adicionando outra página de propriedade personalizada
+# <a name="mfc-activex-controls-adding-another-custom-property-page"></a>Controles ActiveX MFC: Adicionando outra página de propriedade personalizada
 
 Ocasionalmente, um controle ActiveX terá mais propriedades que razoavelmente pode caber em uma única página de propriedade. Nesse caso, você pode adicionar páginas de propriedades para o controle ActiveX para exibir essas propriedades.
 
-Este artigo aborda a adição de novas páginas de propriedade para um controle ActiveX que já tem pelo menos uma página de propriedade. Para obter mais informações sobre como adicionar a propriedade de estoque páginas (fonte, imagem ou cor), consulte o artigo [controles ActiveX MFC: usando páginas de propriedades de estoque](../mfc/mfc-activex-controls-using-stock-property-pages.md).
+Este artigo aborda a adição de novas páginas de propriedade para um controle ActiveX que já tem pelo menos uma página de propriedade. Para obter mais informações sobre como adicionar a propriedade de estoque páginas (fonte, imagem ou cor), consulte o artigo [controles ActiveX MFC: Usando páginas de propriedade de estoque](../mfc/mfc-activex-controls-using-stock-property-pages.md).
 
 Os procedimentos a seguir usam uma estrutura de controle de ActiveX de exemplo criada pelo Assistente de controle ActiveX. Portanto, os nomes de classe e os identificadores são exclusivos para esse exemplo.
 
 Para obter mais informações sobre como usar páginas de propriedades em um controle ActiveX, consulte os seguintes artigos:
 
-- [Controles ActiveX do MFC: páginas de propriedade](../mfc/mfc-activex-controls-property-pages.md)
+- [Controles ActiveX MFC: Páginas de propriedades](../mfc/mfc-activex-controls-property-pages.md)
 
-- [Controles ActiveX do MFC: usando páginas de propriedade de estoque](../mfc/mfc-activex-controls-using-stock-property-pages.md)
+- [Controles ActiveX MFC: Usando páginas de propriedade de estoque](../mfc/mfc-activex-controls-using-stock-property-pages.md)
 
     > [!NOTE]
     >  É altamente recomendável essa nova propriedade páginas seguem o tamanho padrão para páginas de propriedades do controle ActiveX. A propriedade de imagem e a cor de estoque páginas unidades de caixa de diálogo de medida 250 x 62 (DLU). A página de propriedades de fonte padrão é 250 x 110 DLUs. A página de propriedades padrão criada pelo Assistente de controle ActiveX usa o padrão DLU de 250 x 62.
@@ -110,4 +110,3 @@ Depois de ter feito as modificações necessárias Recrie seu projeto e usar o c
 ## <a name="see-also"></a>Consulte também
 
 [Controles ActiveX do MFC](../mfc/mfc-activex-controls.md)
-

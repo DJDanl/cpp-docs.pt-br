@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - propagator_block class
 ms.assetid: 86aa75fd-eda5-42aa-aadf-25c0c1c9742d
-ms.openlocfilehash: 38b7c920f8ffcab6d709d9484f308a56cd6b8425
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7f466ad8f474ddb73d2235d9999c3dbeae627672
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50613272"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272939"
 ---
 # <a name="propagatorblock-class"></a>Classe propagator_block
 
@@ -64,7 +64,7 @@ O tipo de processador para processamento de mensagens.
 |Nome|Descrição|
 |----------|-----------------|
 |[propagator_block](#ctor)|Constrói um objeto `propagator_block`.|
-|[~ propagator_block destruidor](#dtor)|Destrói um objeto `propagator_block`.|
+|[~propagator_block Destructor](#dtor)|Destrói um objeto `propagator_block`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
@@ -164,7 +164,7 @@ virtual void process_input_messages(_Inout_ message<_Target_type>* _PMessage);
 *_PMessage*<br/>
 Um ponteiro para a mensagem que deve ser processado.
 
-##  <a name="propagate"></a> Propagar
+##  <a name="propagate"></a> propagate
 
 Passa assincronamente uma mensagem de um bloco de código-fonte para este bloco de destino.
 
@@ -222,7 +222,7 @@ Constrói um objeto `propagator_block`.
 propagator_block();
 ```
 
-##  <a name="dtor"></a> ~ propagator_block
+##  <a name="dtor"></a> ~propagator_block
 
 Destrói um objeto `propagator_block`.
 
@@ -240,7 +240,7 @@ void register_filter(filter_method const& _Filter);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Filtro*<br/>
+*_Filter*<br/>
 O método de filtro.
 
 ##  <a name="remove_network_links"></a> remove_network_links
@@ -251,7 +251,7 @@ Remove todos os de origem e destino links de rede deste `propagator_block` objet
 void remove_network_links();
 ```
 
-##  <a name="send"></a> Enviar
+##  <a name="send"></a> send
 
 Inicia a forma síncrona uma mensagem para esse bloco. Chamado por um `ISource` bloco. Quando essa função é concluída, a mensagem será já ter propagada no bloco.
 

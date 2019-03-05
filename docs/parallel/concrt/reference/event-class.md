@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - event class
 ms.assetid: fba35a53-6568-4bfa-9aaf-07c0928cf73d
-ms.openlocfilehash: 323b9a6e2c46bea8d82f0f589d1174041c1f0780
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aa9d46b868c1a31729a9590db3b3f67179903881
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50480100"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264658"
 ---
 # <a name="event-class"></a>Classe event
 
@@ -76,7 +76,7 @@ _CRTIMP event();
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="dtor"></a> ~ eventos
+##  <a name="dtor"></a> ~event
 
 Destrói um evento.
 
@@ -96,7 +96,7 @@ Redefine o evento para um estado não sinalizado.
 void reset();
 ```
 
-##  <a name="set"></a> Definir
+##  <a name="set"></a> set
 
 Sinaliza o evento.
 
@@ -126,7 +126,7 @@ size_t wait(unsigned int _Timeout = COOPERATIVE_TIMEOUT_INFINITE);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Tempo limite*<br/>
+*_Timeout*<br/>
 Indica o número de milissegundos antes que o tempo limite expirar. O valor `COOPERATIVE_TIMEOUT_INFINITE` significa que não há nenhum tempo limite.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -159,7 +159,7 @@ A contagem de eventos dentro da matriz fornecida no `_PPEvents` parâmetro.
 *_FWaitAll*<br/>
 Se definido como o valor **verdadeira**, o parâmetro especifica que todos os eventos dentro da matriz fornecida no `_PPEvents` parâmetro deve ser assinado para satisfazer a espera. Se definido como o valor **falsos**, ele especifica que qualquer evento dentro da matriz fornecida no `_PPEvents` parâmetro que for assinado satisfará a espera.
 
-*Tempo limite*<br/>
+*_Timeout*<br/>
 Indica o número de milissegundos antes que o tempo limite expirar. O valor `COOPERATIVE_TIMEOUT_INFINITE` significa que não há nenhum tempo limite.
 
 ### <a name="return-value"></a>Valor de retorno

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Agents Library
 - Asynchronous Agents Library
 ms.assetid: d2a72a31-8ba6-4220-ad7a-e403a6acaa42
-ms.openlocfilehash: 8b4e8e6489e98aadb6ea41d32d5a9ba14efe2668
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 39ae785b602b3928f0c32f9fc599527dab5558f5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175854"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268038"
 ---
 # <a name="asynchronous-agents-library"></a>Biblioteca de Agentes Assíncronos
 
@@ -66,22 +66,22 @@ Descreve os vários tipos de bloco de mensagem que são fornecidos pela bibliote
 [Funções de transmissão de mensagem](../../parallel/concrt/message-passing-functions.md)<br/>
 Descreve as várias rotinas de passagem de mensagem que são fornecidas pela biblioteca de agentes.
 
-[Como implementar vários padrões de produtor-consumidor](../../parallel/concrt/how-to-implement-various-producer-consumer-patterns.md)<br/>
+[Como: Implementar vários padrões de produtor-consumidor](../../parallel/concrt/how-to-implement-various-producer-consumer-patterns.md)<br/>
 Descreve como implementar o padrão de produtor-consumidor em seu aplicativo.
 
-[Como fornecer funções de trabalho para as classes call e transformer](../../parallel/concrt/how-to-provide-work-functions-to-the-call-and-transformer-classes.md)<br/>
+[Como: Fornecer funções de trabalho para as classes call e transformer](../../parallel/concrt/how-to-provide-work-functions-to-the-call-and-transformer-classes.md)<br/>
 Ilustra as várias maneiras de fornecer funções de trabalho para o [concurrency::call](../../parallel/concrt/reference/call-class.md) e [Concurrency:: Transformer](../../parallel/concrt/reference/transformer-class.md) classes.
 
-[Como usar transformador em um pipeline de dados](../../parallel/concrt/how-to-use-transformer-in-a-data-pipeline.md)<br/>
+[Como: Usar transformador em um pipeline de dados](../../parallel/concrt/how-to-use-transformer-in-a-data-pipeline.md)<br/>
 Mostra como usar o [Concurrency:: Transformer](../../parallel/concrt/reference/transformer-class.md) classe em um pipeline de dados.
 
-[Como selecionar entre tarefas concluídas](../../parallel/concrt/how-to-select-among-completed-tasks.md)<br/>
+[Como: Selecionar entre tarefas concluídas](../../parallel/concrt/how-to-select-among-completed-tasks.md)<br/>
 Mostra como usar o [concurrency::choice](../../parallel/concrt/reference/choice-class.md) e [concurrency::join](../../parallel/concrt/reference/join-class.md) classes para selecionar a primeira tarefa para concluir um algoritmo de pesquisa.
 
-[Como enviar uma mensagem a um intervalo regular](../../parallel/concrt/how-to-send-a-message-at-a-regular-interval.md)<br/>
+[Como: Enviar uma mensagem a um intervalo regular](../../parallel/concrt/how-to-send-a-message-at-a-regular-interval.md)<br/>
 Mostra como usar o [concurrency::timer](../../parallel/concrt/reference/timer-class.md) classe para enviar uma mensagem em intervalos regulares.
 
-[Como usar um filtro de bloco de mensagens](../../parallel/concrt/how-to-use-a-message-block-filter.md)<br/>
+[Como: Usar um filtro de bloco de mensagens](../../parallel/concrt/how-to-use-a-message-block-filter.md)<br/>
 Demonstra como usar um filtro para habilitar um bloco de mensagem assíncrona aceitar ou rejeitar as mensagens.
 
 [PPL (Biblioteca de Padrões Paralelos)](../../parallel/concrt/parallel-patterns-library-ppl.md)<br/>
@@ -89,4 +89,3 @@ Descreve como usar vários padrões paralelos, como algoritmos paralelos, em seu
 
 [Tempo de Execução de Simultaneidade](../../parallel/concrt/concurrency-runtime.md)<br/>
 Descreve o tempo de execução de simultaneidade, que simplifica a programação paralela e contém links para tópicos relacionados.
-

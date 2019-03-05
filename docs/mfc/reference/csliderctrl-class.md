@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CSliderCtrl [MFC], SetTipSide
 - CSliderCtrl [MFC], SetToolTips
 ms.assetid: dd12b084-4eda-4550-a810-8f3cfb06b871
-ms.openlocfilehash: c8c8971e467b2b8063bb5bb5d8e953fc48bcc42e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3fcdddd27437f57ba800a602873d9bb3ae26e82f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50666096"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283599"
 ---
 # <a name="csliderctrl-class"></a>Classe CSliderCtrl
 
@@ -208,7 +208,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Especifica o estilo do controle deslizante. Aplicar qualquer combinação de [estilos de controle deslizante](/windows/desktop/Controls/trackbar-control-styles), descrito no SDK do Windows, para o controle.
 
-*Rect*<br/>
+*rect*<br/>
 Especifica o tamanho e a posição do controle deslizante. Ela pode ser um [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto ou uma [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura.
 
 *pParentWnd*<br/>
@@ -250,7 +250,7 @@ Especifica o estilo estendido do controle que está sendo criado. Para obter uma
 *dwStyle*<br/>
 Especifica o estilo do controle deslizante. Aplicar qualquer combinação de [estilos de controle deslizante](/windows/desktop/Controls/trackbar-control-styles), descrito no SDK do Windows, para o controle.
 
-*Rect*<br/>
+*rect*<br/>
 Uma referência a um [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura que descreve o tamanho e posição da janela a ser criado, em coordenadas do cliente do *pParentWnd*.
 
 *pParentWnd*<br/>
@@ -385,10 +385,10 @@ void GetRange(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Nmín*<br/>
+*nMin*<br/>
 Referência a um número inteiro que recebe a posição mínima.
 
-*Nmáx*<br/>
+*nMax*<br/>
 Referência a um número inteiro que recebe a posição do máximo.
 
 ### <a name="remarks"></a>Comentários
@@ -431,10 +431,10 @@ void GetSelection(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Nmín*<br/>
+*nMin*<br/>
 Referência a um número inteiro que recebe a posição inicial da seleção atual.
 
-*Nmáx*<br/>
+*nMax*<br/>
 Referência a um número inteiro que recebe a posição final da seleção atual.
 
 ##  <a name="getthumblength"></a>  CSliderCtrl::GetThumbLength
@@ -630,10 +630,10 @@ void SetRange(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Nmín*<br/>
+*nMin*<br/>
 Posição do mínimo para o controle deslizante.
 
-*Nmáx*<br/>
+*nMax*<br/>
 Posição máximo para o controle deslizante.
 
 *bRedraw*<br/>
@@ -651,7 +651,7 @@ void SetRangeMax(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Nmáx*<br/>
+*nMax*<br/>
 Posição máximo para o controle deslizante.
 
 *bRedraw*<br/>
@@ -669,7 +669,7 @@ void SetRangeMin(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Nmín*<br/>
+*nMin*<br/>
 Posição do mínimo para o controle deslizante.
 
 *bRedraw*<br/>
@@ -687,10 +687,10 @@ void SetSelection(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Nmín*<br/>
+*nMin*<br/>
 Posição inicial para o controle deslizante.
 
-*Nmáx*<br/>
+*nMax*<br/>
 Posição final para o controle deslizante.
 
 ##  <a name="setthumblength"></a>  CSliderCtrl::SetThumbLength
@@ -771,7 +771,7 @@ int SetTipSide(int nLocation);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Nlocal*<br/>
+*nLocation*<br/>
 Valor que representa o local no qual exibir o controle de dica de ferramenta. Para obter uma lista de valores possíveis, consulte a mensagem do Win32 [TBM_SETTIPSIDE](/windows/desktop/Controls/tbm-settipside), conforme descrito no SDK do Windows.
 
 ### <a name="return-value"></a>Valor de retorno

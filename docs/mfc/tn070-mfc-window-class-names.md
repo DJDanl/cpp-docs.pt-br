@@ -1,5 +1,5 @@
 ---
-title: 'TN070: nomes de classe da janela MFC'
+title: 'TN070: Nomes de classe de janela MFC'
 ms.date: 11/04/2016
 f1_keywords:
 - vc.mfc.classes
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - window class names [MFC]
 - TN070 [MFC]
 ms.assetid: 90617912-dd58-4a7c-9082-ced71736d7cd
-ms.openlocfilehash: 609cfade60b1b7b51fb2fd5597c4d491d3eb861c
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 8b06f7b3656284de18632185877fdbe382343f95
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51692653"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260563"
 ---
-# <a name="tn070-mfc-window-class-names"></a>TN070: nomes de classe da janela MFC
+# <a name="tn070-mfc-window-class-names"></a>TN070: Nomes de classe de janela MFC
 
 > [!NOTE]
 >  A nota técnica a seguir não foi atualizada desde que foi incluído pela primeira vez na documentação online. Como resultado, alguns procedimentos e tópicos podem estar desatualizadas ou incorretas. Para obter as informações mais recentes, é recomendável que você pesquise o tópico de interesse no índice da documentação online.
@@ -46,5 +46,4 @@ O primeiro formulário (`Afx:%x:%x`) é usado quando **hCursor**, **hbrBackgroun
 
 [Observações técnicas por número](../mfc/technical-notes-by-number.md)<br/>
 [Observações técnicas por categoria](../mfc/technical-notes-by-category.md)<br/>
-[TN020: convenções de nomenclatura e numeração de ID](../mfc/tn020-id-naming-and-numbering-conventions.md)
-
+[TN020: Nomenclatura de ID e numeração convenções](../mfc/tn020-id-naming-and-numbering-conventions.md)

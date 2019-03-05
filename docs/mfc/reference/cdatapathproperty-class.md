@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CDataPathProperty [MFC], SetControl
 - CDataPathProperty [MFC], SetPath
 ms.assetid: 1f96efdb-54e4-460b-862c-eba5d4103488
-ms.openlocfilehash: 1d17b121854623e9919f434a44b6ab40c2db2691
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 61c8dfa85363509ee09eaaccdb6d45d70390c344
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50608176"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262760"
 ---
 # <a name="cdatapathproperty-class"></a>Classe CDataPathProperty
 
@@ -64,9 +64,9 @@ A classe `CDataPathProperty` é derivado de `CAysncMonikerFile`. Para implementa
 
 Para obter mais informações sobre como usar controles ActiveX e monikers assíncronos em aplicativos da Internet, consulte os seguintes artigos:
 
-- [Internet primeiras etapas: Controles ActiveX](../../mfc/activex-controls-on-the-internet.md)
+- [Primeiras etapas de Internet: Controles ActiveX](../../mfc/activex-controls-on-the-internet.md)
 
-- [Internet primeiras etapas: Monikers assíncronos](../../mfc/asynchronous-monikers-on-the-internet.md)
+- [Primeiras etapas de Internet: Monikers assíncronos](../../mfc/asynchronous-monikers-on-the-internet.md)
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 

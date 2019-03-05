@@ -1,19 +1,19 @@
 ---
-title: 'Tela de fundo OLE: estratégias de implementação'
+title: 'Tela de fundo OLE: Estratégias de implementação'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - OLE [MFC], development strategy
 - OLE applications [MFC], implementing OLE
 - applications [OLE], implementing OLE
 ms.assetid: 0875ddae-99df-488c-82c6-164074a81058
-ms.openlocfilehash: a9bcbc16b08f16953df92efe5a83db39f9a33cc5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 40c74d48b76921f770740602a39d28804a7e3c09
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624387"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284808"
 ---
-# <a name="ole-background-implementation-strategies"></a>Tela de fundo OLE: estratégias de implementação
+# <a name="ole-background-implementation-strategies"></a>Tela de fundo OLE: Estratégias de implementação
 
 Dependendo do seu aplicativo, há quatro estratégias de implementação possível para adicionar suporte ao OLE:
 
@@ -38,7 +38,6 @@ Depois de decidir uma estratégia, você deve ler o [recipientes](../mfc/contain
 ## <a name="see-also"></a>Consulte também
 
 [Tela de fundo OLE](../mfc/ole-background.md)<br/>
-[Contêineres: implementando um contêiner](../mfc/containers-implementing-a-container.md)<br/>
-[Servidores: implementando um servidor](../mfc/servers-implementing-a-server.md)<br/>
+[Contêineres: Implementando um contêiner](../mfc/containers-implementing-a-container.md)<br/>
+[servidores: Implementação de um servidor](../mfc/servers-implementing-a-server.md)<br/>
 [Assistente de aplicativo do MFC](../mfc/reference/mfc-application-wizard.md)
-

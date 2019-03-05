@@ -1,18 +1,18 @@
 ---
-title: Como criar uma tarefa que seja concluída após um atraso
+title: 'Como: Criar uma tarefa que termine após um atraso'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - task_completion_event class, example
 - create a task that completes after a delay, example [C++]
 ms.assetid: 3fc0a194-3fdb-4eba-8b8a-b890981a985d
-ms.openlocfilehash: 89564a00dbfde078ef98cd53110853e30e33ad6b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3292043d7900d5dc2bfba0afa5fdc237853a5be0
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50616262"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272251"
 ---
-# <a name="how-to-create-a-task-that-completes-after-a-delay"></a>Como criar uma tarefa que seja concluída após um atraso
+# <a name="how-to-create-a-task-that-completes-after-a-delay"></a>Como: Criar uma tarefa que termine após um atraso
 
 Este exemplo mostra como usar o [Concurrency:: Task](../../parallel/concrt/reference/task-class.md), [Concurrency:: cancellation_token_source](../../parallel/concrt/reference/cancellation-token-source-class.md), [cancellation_token](../../parallel/concrt/reference/cancellation-token-class.md), [ Concurrency:: task_completion_event](../../parallel/concrt/reference/task-completion-event-class.md), [concurrency::timer](../../parallel/concrt/reference/timer-class.md), e [concurrency::call](../../parallel/concrt/reference/call-class.md) classes para criar uma tarefa que termine após um atraso. Você pode usar esse método para compilar os loop que ocasionalmente sondar dados, introduzem tempos limite, atrasar a manipulação de entrada do usuário por um período pré-determinado e assim por diante.
 
@@ -45,7 +45,7 @@ Aqui está o código completo para este exemplo:
 
 Para compilar o código, copiá-lo e, em seguida, cole-o em um projeto do Visual Studio ou colá-lo em um arquivo chamado `task-delay.cpp` e, em seguida, execute o seguinte comando em uma janela de Prompt de comando do Visual Studio.
 
-**tarefa de /EHsc cl.exe-delay.cpp**
+**cl.exe /EHsc task-delay.cpp**
 
 ## <a name="see-also"></a>Consulte também
 
@@ -58,4 +58,3 @@ Para compilar o código, copiá-lo e, em seguida, cole-o em um projeto do Visual
 [Classe call](../../parallel/concrt/reference/call-class.md)<br/>
 [Blocos de mensagens assíncronos](../../parallel/concrt/asynchronous-message-blocks.md)<br/>
 [Cancelamento no PPL](cancellation-in-the-ppl.md)
-

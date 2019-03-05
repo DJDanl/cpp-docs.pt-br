@@ -26,12 +26,12 @@ f1_keywords:
 helpviewer_keywords:
 - array_view class
 ms.assetid: 7e7ec9bc-05a2-4372-b05d-752b50006c5a
-ms.openlocfilehash: d33c54e82e9bc228b97bff4802c9231a98f51033
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.openlocfilehash: e73639ffd11e08edb2fdb03471f2c6c88730f02d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657481"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268460"
 ---
 # <a name="arrayview-class"></a>Classe array_view
 
@@ -80,7 +80,7 @@ A classificação do `array_view` objeto.
 |[get_extent](#get_extent)|Retorna o objeto de extensão do objeto array_view.|
 |[get_ref](#get_ref)|Retorna uma referência ao elemento indexado.|
 |[get_source_accelerator_view](#get_source_accelerator_view)|Retorna o [accelerator_view](accelerator-view-class.md) onde a fonte de dados do `array_view` está localizado.|
-|[atualização](#refresh)|Notifica o `array_view` objeto que sua memória associada foi modificada fora do `array_view` interface. Uma chamada para este método processa todas as informações armazenadas em cache obsoleto.|
+|[refresh](#refresh)|Notifica o `array_view` objeto que sua memória associada foi modificada fora do `array_view` interface. Uma chamada para este método processa todas as informações armazenadas em cache obsoleto.|
 |[reinterpret_as](#reinterpret_as)|Retorna uma matriz unidimensional que contém todos os elementos de `array_view` objeto.|
 |[seção](#section)|Retorna uma subseção do `array_view` objeto que está na origem especificada e, opcionalmente, que tem a extensão especificada.|
 |[synchronize](#synchronize)|Sincroniza qualquer modificação feita para o `array_view` objeto para seus dados de origem.|
@@ -153,7 +153,7 @@ Qualquer ação notifica o `array_view` de objeto que a memória nativa subjacen
 
 **Namespace:** Concorrência
 
-##  <a name="dtor"></a> ~ array_view
+##  <a name="dtor"></a> ~array_view
 
 Destrói o `array_view` objeto.
 
@@ -330,7 +330,7 @@ array_view(
 *_Arr_type*<br/>
 O tipo de elemento de uma matriz C-style do qual os dados são fornecidos.
 
-*Container*<br/>
+*_Container*<br/>
 Um argumento de modelo que deve especificar um contêiner linear que dá suporte a `data()` e `size()` membros.
 
 *_E0*<br/>
@@ -345,10 +345,10 @@ O componente menos significativo da extensão dessa seção.
 *_Extent*<br/>
 A extensão em cada dimensão deste `array_view`.
 
-*Outro*<br/>
+*_Other*<br/>
 Um objeto do tipo `array_view<T,N>` da qual inicializar a nova `array_view`.
 
-*Tamanho*<br/>
+*_Size*<br/>
 O tamanho de uma matriz C-style do qual os dados são fornecidos.
 
 *_Src*<br/>
@@ -395,7 +395,7 @@ Descarta os dados atuais subjacentes nessa exibição. Isso é uma dica de otimi
 void discard_data() const restrict(cpu);
 ```
 
-##  <a name="extent"></a> extensão
+##  <a name="extent"></a> extent
 
 Obtém o `extent` objeto que define a forma do `array_view` objeto.
 
@@ -426,7 +426,7 @@ value_type& get_ref(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Index*<br/>
+*_Index*<br/>
 O índice.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -443,7 +443,7 @@ accelerator_view get_source_accelerator_view() const;
 
 ### <a name="return-value"></a>Valor de retorno
 
-##  <a name="operator_call"></a> Operator)
+##  <a name="operator_call"></a> operator()
 
 Retorna o valor do elemento que é especificado pelo parâmetro ou parâmetros.
 
@@ -469,7 +469,7 @@ typename details::_Projection_result_type<value_type,_Rank>::_Const_result_type 
 
 ### <a name="parameters"></a>Parâmetros
 
-*Index*<br/>
+*_Index*<br/>
 O local do elemento.
 
 *_I0*<br/>
@@ -488,7 +488,7 @@ O local do elemento.
 
 O valor do elemento que é especificado pelo parâmetro ou parâmetros.
 
-##  <a name="operator_at"></a> operador]
+##  <a name="operator_at"></a> operator[]
 
 Retorna o elemento que é especificado pelos parâmetros.
 
@@ -502,7 +502,7 @@ value_type& operator[] (
 
 ### <a name="parameters"></a>Parâmetros
 
-*Index*<br/>
+*_Index*<br/>
 O índice.
 
 *_I*<br/>
@@ -512,7 +512,7 @@ O índice.
 
 O valor do elemento no índice, ou um `array_view` projetados para a dimensão mais significativa.
 
-##  <a name="operator_eq"></a> operador =
+##  <a name="operator_eq"></a> operator=
 
 Copia o conteúdo especificado `array_view` objeto para esse outro.
 
@@ -526,7 +526,7 @@ array_view& operator= (
 
 ### <a name="parameters"></a>Parâmetros
 
-*Outro*<br/>
+*_Other*<br/>
 O `array_view` objeto do qual copiar.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -541,7 +541,7 @@ Armazena a classificação do `array_view` objeto.
 static const int rank = _Rank;
 ```
 
-##  <a name="refresh"></a> atualização
+##  <a name="refresh"></a> refresh
 
 Notifica o `array_view` objeto que sua memória associada foi modificada fora do `array_view` interface. Uma chamada para este método processa todas as informações armazenadas em cache obsoleto.
 
@@ -641,7 +641,7 @@ O componente menos significativo da extensão dessa seção.
 *_Ext*<br/>
 O [extensão](extent-class.md) objeto que especifica a extensão da seção. A origem é 0.
 
-*Idx*<br/>
+*_Idx*<br/>
 O [índice](index-class.md) objeto que especifica o local de origem. A subseção é o resto da extensão.
 
 *_I0*<br/>

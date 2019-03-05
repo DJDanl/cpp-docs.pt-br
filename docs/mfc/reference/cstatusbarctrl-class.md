@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CStatusBarCtrl [MFC], SetText
 - CStatusBarCtrl [MFC], SetTipText
 ms.assetid: 8504ad38-7b91-4746-aede-ac98886eb47b
-ms.openlocfilehash: 71ae39cb62da7938880973dc48b65ed69b9c8b92
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5a5adc5ae6b1981d7f8260d684a33d8bd7918e40
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50569722"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272835"
 ---
 # <a name="cstatusbarctrl-class"></a>Classe CStatusBarCtrl
 
@@ -131,7 +131,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Especifica o estilo do controle de barra de status. Aplicar qualquer combinação de estilos de controle listado da barra de status [estilos de controle comuns](/windows/desktop/Controls/common-control-styles) no SDK do Windows. Esse parâmetro deve incluir o estilo WS_CHILD. Ele também deve incluir o estilo WS_VISIBLE.
 
-*Rect*<br/>
+*rect*<br/>
 Especifica o tamanho e a posição do controle de barra de status. Ela pode ser um [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto ou uma [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura.
 
 *pParentWnd*<br/>
@@ -177,7 +177,7 @@ Especifica o estilo estendido do controle que está sendo criado. Para obter uma
 *dwStyle*<br/>
 Especifica o estilo do controle de barra de status. Aplicar qualquer combinação de estilos de controle listado da barra de status [estilos de controle comuns](/windows/desktop/Controls/common-control-styles) no SDK do Windows. Esse parâmetro deve incluir o estilo WS_CHILD. Ele também deve incluir o estilo WS_VISIBLE.
 
-*Rect*<br/>
+*rect*<br/>
 Uma referência a um [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura que descreve o tamanho e posição da janela a ser criado, em coordenadas do cliente do *pParentWnd*.
 
 *pParentWnd*<br/>
@@ -244,7 +244,7 @@ Endereço de uma matriz de inteiros com três elementos. O primeiro elemento rec
 *nHorz*<br/>
 Referência a um número inteiro que recebe a largura da borda horizontal.
 
-*nverter*<br/>
+*nVert*<br/>
 Referência a um número inteiro que recebe a largura da borda vertical.
 
 *nSpacing*<br/>
@@ -377,7 +377,7 @@ Endereço do buffer que receberá o texto. Esse parâmetro é uma cadeia de cara
 *nPane*<br/>
 Índice baseado em zero da parte da qual recuperar o texto.
 
-*PDigite*<br/>
+*pType*<br/>
 Ponteiro para um inteiro que recebe as informações de tipo. O tipo pode ser um destes valores:
 
 - **0** o texto é desenhado com uma borda deve aparecer menor do que o plano da barra de status.
@@ -411,7 +411,7 @@ int GetTextLength(
 *nPane*<br/>
 Índice baseado em zero da parte da qual recuperar o texto.
 
-*PDigite*<br/>
+*pType*<br/>
 Ponteiro para um inteiro que recebe as informações de tipo. O tipo pode ser um destes valores:
 
 - **0** o texto é desenhado com uma borda deve aparecer menor do que o plano da barra de status.
@@ -481,7 +481,7 @@ COLORREF SetBkColor(COLORREF cr);
 
 ### <a name="parameters"></a>Parâmetros
 
-*CR*<br/>
+*cr*<br/>
 Valor COLORREF que especifica a nova cor de plano de fundo. Especifique o valor CLR_DEFAULT para fazer com que a barra de status usar sua cor de plano de fundo padrão.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -536,7 +536,7 @@ void SetMinHeight(int nMin);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Nmín*<br/>
+*nMin*<br/>
 Altura mínima, em pixels, do controle.
 
 ### <a name="remarks"></a>Comentários

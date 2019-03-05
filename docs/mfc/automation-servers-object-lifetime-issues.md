@@ -1,5 +1,5 @@
 ---
-title: 'Servidores de automação: problemas de tempo de vida do objeto'
+title: 'Servidores de automação: Problemas de tempo de vida do objeto'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - objects [MFC], lifetime
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - Automation servers, object lifetime
 - servers, lifetime of Automation
 ms.assetid: 342baacf-4015-4a0e-be2f-321424f1cb43
-ms.openlocfilehash: 904c3023d7f27bd144c306d9d92810a91a48ecfa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f9dbc6e4f321ba10fdffa013c158d53b84331e30
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50637639"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293570"
 ---
-# <a name="automation-servers-object-lifetime-issues"></a>Servidores de automação: problemas de tempo de vida do objeto
+# <a name="automation-servers-object-lifetime-issues"></a>Servidores de automação: Problemas de tempo de vida do objeto
 
 Quando um cliente de automação cria ou ativa um item OLE, o servidor passa o cliente um ponteiro para esse objeto. O cliente estabelece uma referência ao objeto por meio de uma chamada para a função OLE [IUnknown:: AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref). Essa referência está em vigor até que o cliente chama [IUnknown:: Release](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release). (Os aplicativos cliente escritos com classes OLE da biblioteca Microsoft Foundation Class não precisam fazer essas chamadas; a estrutura faz isso). O sistema OLE e o próprio servidor podem estabelecer referências ao objeto. Um servidor não deve destruir um objeto, desde que as referências externas ao objeto permanecem em vigor.
 
@@ -32,4 +32,3 @@ No SDK do Windows, consulte `IUnknown::AddRef` e `IUnknown::Release`.
 
 [Servidores de automação](../mfc/automation-servers.md)<br/>
 [AfxOleCanExitApp](../mfc/reference/application-control.md#afxolecanexitapp)
-

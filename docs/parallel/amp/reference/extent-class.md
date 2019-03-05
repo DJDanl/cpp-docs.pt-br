@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - extent structure
 ms.assetid: edb5de3d-3935-4dbb-8365-4cc6c4fb0269
-ms.openlocfilehash: 3b6803b0ddfe09feb37a6e0d3072d8afa422de8d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2236b1a1b72f307dae1efa0cfe197e222820c460
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476627"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270183"
 ---
 # <a name="extent-class-c-amp"></a>Classe extent (C++ AMP)
 
@@ -39,7 +39,7 @@ A classificação do `extent` objeto.
 
 **Cabeçalho:** amp. h
 
-**Namespace:** Simultaneidade
+**Namespace:** Concorrência
 
 ## <a name="members"></a>Membros
 
@@ -53,9 +53,9 @@ A classificação do `extent` objeto.
 
 |Nome|Descrição|
 |----------|-----------------|
-|[Contém](#contains)|Verifica se o especificado `extent` objeto tem a ordem especificada.|
+|[contains](#contains)|Verifica se o especificado `extent` objeto tem a ordem especificada.|
 |[size](#size)|Retorna o tamanho total linear da extensão (em unidades de elementos).|
-|[lado a lado](#tile)|Produz um `tiled_extent` dimensões do objeto com as extensões de tile determinadas pelo especificadas.|
+|[tile](#tile)|Produz um `tiled_extent` dimensões do objeto com as extensões de tile determinadas pelo especificadas.|
 
 ### <a name="public-operators"></a>Operadores públicos
 
@@ -83,7 +83,7 @@ A classificação do `extent` objeto.
 
 `extent`
 
-## <a name="contains"></a> Contém
+## <a name="contains"></a> contains
 
 Indica se a especificada [índice](index-class.md) valor está contido dentro do objeto 'extensão'.
 
@@ -95,14 +95,14 @@ bool contains(const index<rank>& _Index) const restrict(amp,cpu);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Index*<br/>
+*_Index*<br/>
 O `index` valor a ser testado.
 
 ### <a name="return-value"></a>Valor de retorno
 
 **Verdadeiro** se especificado *índice* valor está contido no `extent` do objeto; caso contrário, **false**.
 
-##  <a name="ctor"></a> extensão
+##  <a name="ctor"></a> extent
 
 Inicializa uma nova instância da classe 'extensão'.
 
@@ -119,7 +119,7 @@ explicit extent(const int _Array[_Rank])restrict(amp,cpu);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Array*<br/>
+*_Array*<br/>
 Uma matriz de `_Rank` inteiros que é usado para criar o novo `extent` objeto.
 
 *_I*<br/>
@@ -134,7 +134,7 @@ O comprimento da dimensão para a maioria-significativos.
 *_I2*<br/>
 O comprimento da dimensão menos significativa.
 
-*Outro*<br/>
+*_Other*<br/>
 Uma `extent` objeto no qual o novo `extent` com base em objeto.
 
 ## <a name="remarks"></a>Comentários
@@ -215,7 +215,7 @@ extent<_Rank> operator++(int)restrict(amp,cpu);
 
 Para o operador de prefixo, o `extent` objeto (`*this`). Para o operador de sufixo, um novo `extent` objeto.
 
-##  <a name="operator_add_eq"></a> Operator + =
+##  <a name="operator_add_eq"></a> operator+=
 
 Adiciona o número especificado para cada elemento do objeto 'extensão'.
 
@@ -289,7 +289,7 @@ O número pelo qual dividir.
 
 O objeto `extent`.
 
-##  <a name="operator_min_eq"></a> operador =
+##  <a name="operator_min_eq"></a> operator-=
 
 Subtrai o número especificado de cada elemento do objeto 'extensão'.
 
@@ -310,7 +310,7 @@ O número para subtrair.
 
 O tipo do objeto `extent` resultante.
 
-##  <a name="operator_eq"></a> operador =
+##  <a name="operator_eq"></a> operator=
 
 Copia o conteúdo de outro objeto 'extensão' para esse outro.
 
@@ -322,7 +322,7 @@ extent<_Rank>& operator=(const extent<_Rank>& _Other) restrict(amp,cpu);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Outro*<br/>
+*_Other*<br/>
 O `extent` objeto do qual copiar.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -342,7 +342,7 @@ int& operator[](unsigned int _Index) restrict(amp,cpu);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Index*<br/>
+*_Index*<br/>
 Um inteiro de 0 até a classificação menos 1.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -359,7 +359,7 @@ Armazena a classificação do objeto 'extensão'.
 static const int rank = _Rank;
 ```
 
-##  <a name="size"></a> Tamanho
+##  <a name="size"></a> size
 
 Retorna o tamanho total linear do `extent` objeto (em unidades de elementos).
 

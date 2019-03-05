@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CCommandLineInfo [MFC], m_strPrinterName
 - CCommandLineInfo [MFC], m_strRestartIdentifier
 ms.assetid: 3e313ddb-0a82-4991-87ac-a27feff4668c
-ms.openlocfilehash: 60c0ae66234d5fb3be61d9249cf61ee77dff41ad
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6e4b535da00fdcecf4ce52fad696cb5d2bc55efa
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481465"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303021"
 ---
 # <a name="ccommandlineinfo-class"></a>Classe CCommandLineInfo
 
@@ -85,11 +85,11 @@ Você pode usar esse objeto para encapsular os parâmetros e opções de linha d
 |*aplicativo* filename|Abrir o arquivo.|
 |*aplicativo* `/p` nome de arquivo|Arquivo de impressão para a impressora padrão.|
 |*aplicativo* `/pt` porta de driver de impressora do nome de arquivo|Arquivo de impressão para a impressora especificada.|
-|*Aplicativo* `/dde`|Inicie e await comando DDE.|
-|*Aplicativo* `/Automation`|Inicie-o como um servidor de automação OLE.|
-|*Aplicativo* `/Embedding`|Inicie para editar um item OLE inserido.|
-|*Aplicativo* `/Register`<br /><br /> *Aplicativo* `/Regserver`|Informa o aplicativo para executar quaisquer tarefas de registro.|
-|*Aplicativo* `/Unregister`<br /><br /> *Aplicativo* `/Unregserver`|Informa o aplicativo para executar quaisquer tarefas de cancelamento de registro.|
+|*app* `/dde`|Inicie e await comando DDE.|
+|*app* `/Automation`|Inicie-o como um servidor de automação OLE.|
+|*app* `/Embedding`|Inicie para editar um item OLE inserido.|
+|*app* `/Register`<br /><br /> *app* `/Regserver`|Informa o aplicativo para executar quaisquer tarefas de registro.|
+|*app* `/Unregister`<br /><br /> *app* `/Unregserver`|Informa o aplicativo para executar quaisquer tarefas de cancelamento de registro.|
 
 Derive uma nova classe de `CCommandLineInfo` para lidar com outros sinalizadores e valores de parâmetro. Substituir [ParseParam](#parseparam) para lidar com os sinalizadores de novo.
 
@@ -293,7 +293,7 @@ O parâmetro ou o sinalizador.
 *bFlag*<br/>
 Indica se *pszParam* é um parâmetro ou um sinalizador.
 
-*Bombardeio de*<br/>
+*bLast*<br/>
 Indica se este é o último parâmetro ou sinalizador na linha de comando.
 
 ### <a name="remarks"></a>Comentários
@@ -308,11 +308,11 @@ A implementação padrão dessa função reconhece os seguintes sinalizadores: `
 |*aplicativo* filename|Abrir o arquivo.|
 |*aplicativo* `/p` nome de arquivo|Arquivo de impressão para a impressora padrão.|
 |*aplicativo* `/pt` porta de driver de impressora do nome de arquivo|Arquivo de impressão para a impressora especificada.|
-|*Aplicativo* `/dde`|Inicie e await comando DDE.|
-|*Aplicativo* `/Automation`|Inicie-o como um servidor de automação OLE.|
-|*Aplicativo* `/Embedding`|Inicie para editar um item OLE inserido.|
-|*Aplicativo* `/Register`<br /><br /> *Aplicativo* `/Regserver`|Informa o aplicativo para executar quaisquer tarefas de registro.|
-|*Aplicativo* `/Unregister`<br /><br /> *Aplicativo* `/Unregserver`|Informa o aplicativo para executar quaisquer tarefas de cancelamento de registro.|
+|*app* `/dde`|Inicie e await comando DDE.|
+|*app* `/Automation`|Inicie-o como um servidor de automação OLE.|
+|*app* `/Embedding`|Inicie para editar um item OLE inserido.|
+|*app* `/Register`<br /><br /> *app* `/Regserver`|Informa o aplicativo para executar quaisquer tarefas de registro.|
+|*app* `/Unregister`<br /><br /> *app* `/Unregserver`|Informa o aplicativo para executar quaisquer tarefas de cancelamento de registro.|
 
 Essas informações são armazenadas no [m_bRunAutomated](#m_brunautomated), [m_bRunEmbedded](#m_brunembedded), e [m_nShellCommand](#m_nshellcommand). Sinalizadores são marcados por qualquer um, uma barra ' **/**'ou hífen' **-**'.
 
@@ -328,4 +328,3 @@ Substitua essa função em sua classe derivada para lidar com outros valores de 
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
 [CWinApp::ParseCommandLine](../../mfc/reference/cwinapp-class.md#parsecommandline)<br/>
 [CWinApp::ProcessShellCommand](../../mfc/reference/cwinapp-class.md#processshellcommand)
-

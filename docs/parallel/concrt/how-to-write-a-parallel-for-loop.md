@@ -1,18 +1,18 @@
 ---
-title: Como gravar um loop parallel_for
+title: 'Como: Escrever um Loop parallel_for'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - writing a parallel_for loop [Concurrency Runtime]
 - parallel_for function, example
 ms.assetid: adb4d64e-5514-4b70-8dcb-b9210e6b5a1c
-ms.openlocfilehash: 5caba385304e97bf2e1008a44724c792d56124f5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d6ac30a5de0ff45adad1064aeab708e6a84f5e9f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50592690"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283586"
 ---
-# <a name="how-to-write-a-parallelfor-loop"></a>Como gravar um loop parallel_for
+# <a name="how-to-write-a-parallelfor-loop"></a>Como: Escrever um Loop parallel_for
 
 Este exemplo demonstra como usar [Concurrency:: parallel_for](reference/concurrency-namespace-functions.md#parallel_for) para calcular o produto de duas matrizes.
 
@@ -47,10 +47,9 @@ parallel: 1311
 
 Para compilar o código, copiá-lo e, em seguida, cole-o em um projeto do Visual Studio ou colá-lo em um arquivo chamado `parallel-matrix-multiply.cpp` e, em seguida, execute o seguinte comando em uma janela de Prompt de comando do Visual Studio.
 
-**cl.exe /EHsc paralelo-matrix-multiply.cpp**
+**cl.exe /EHsc parallel-matrix-multiply.cpp**
 
 ## <a name="see-also"></a>Consulte também
 
 [Algoritmos paralelos](../../parallel/concrt/parallel-algorithms.md)<br/>
 [Função parallel_for](reference/concurrency-namespace-functions.md#parallel_for)
-

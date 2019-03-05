@@ -1,5 +1,5 @@
 ---
-title: 'TN023: recursos MFC padrão'
+title: 'TN023: Recursos MFC padrão'
 ms.date: 11/04/2016
 f1_keywords:
 - vc.mfc.resources
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - TN023
 - standard resources
 ms.assetid: 60af8415-c576-4c2f-a711-ca5da0b9a1f2
-ms.openlocfilehash: 04789ba85a9f7c193a88ba1a0d097b3671808e9b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b4edc00f77152b8d677f3113e0ed6386569b0988
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559907"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277671"
 ---
-# <a name="tn023-standard-mfc-resources"></a>TN023: recursos MFC padrão
+# <a name="tn023-standard-mfc-resources"></a>TN023: Recursos MFC padrão
 
 Essa observação descreve os recursos padrão fornecido com e necessárias para a biblioteca MFC.
 
@@ -25,7 +25,7 @@ MFC oferece duas categorias de recursos predefinidos que você pode usar em seu 
 
 Clip-arts são recursos adicionais que o framework dependem, mas que talvez você queira adicionar a interface do usuário do seu aplicativo. Os seguintes recursos de clip-arts estão contidos na amostra gerais MFC [clip-art](../visual-cpp-samples.md):
 
-- Common.RC: Um único arquivo de recursos que contém:
+- Common.rc: Um único arquivo de recursos que contém:
 
    - Uma grande coleção de ícones que representam uma variedade de tarefas de processamento de dados e de negócios.
 
@@ -35,23 +35,23 @@ Clip-arts são recursos adicionais que o framework dependem, mas que talvez voc�
 
    - Os recursos de ícone e bitmap que são usados por Commdlg.
 
-- Indicate.RC: Contém recursos de cadeia de caracteres para os indicadores de estado da tecla de barra de status, como "Limite" a tecla Caps Lock.
+- Indicate.rc: Contém recursos de cadeia de caracteres para os indicadores de estado da tecla de barra de status, como "Limite" a tecla Caps Lock.
 
 - Prompts.RC: Contém recursos de cadeia de caracteres de prompt de menu para cada comando predefinido, como "Criar um novo documento" para ID_FILE_NEW.
 
-- Commdlg.RC: Um arquivo. rc compatível do Visual C++ que contém os modelos de caixa de diálogo COMMDLG padrão.
+- Commdlg.rc: Um arquivo. rc compatível do Visual C++ que contém os modelos de caixa de diálogo COMMDLG padrão.
 
 Recursos padrão do framework são recursos com IDs definidos pelo AFX que o framework depende para implementações internas. Raramente, você precisará alterar esses recursos definidos pelo AFX. Se você fizer isso, você deve seguir o procedimento descrito neste tópico.
 
 Os seguintes recursos de estrutura são contidos no diretório MFC\INCLUDE:
 
-- Afxres: Os recursos comuns usados pela estrutura.
+- Afxres.rc: Recursos comuns usados pela estrutura.
 
-- Afxprint: Recursos específicos de impressão.
+- Afxprint.rc: Recursos específicos de impressão.
 
-- Afxolecl.RC: Recursos específicos de aplicativos de cliente OLE.
+- Afxolecl.rc: Recursos específicos de aplicativos de cliente OLE.
 
-- Afxolev.RC: Recursos específicos de aplicativos de servidor completos OLE.
+- Afxolev.rc: Recursos específicos de aplicativos de servidor completos OLE.
 
 ## <a name="using-clip-art-resources"></a>Usando recursos de Clip-Art
 
@@ -103,4 +103,3 @@ Em alguns casos raros, que talvez você queira personalizar o conteúdo de recur
 
 [Observações técnicas por número](../mfc/technical-notes-by-number.md)<br/>
 [Observações técnicas por categoria](../mfc/technical-notes-by-category.md)
-

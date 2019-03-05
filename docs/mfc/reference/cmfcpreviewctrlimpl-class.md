@@ -36,12 +36,12 @@ helpviewer_keywords:
 - CMFCPreviewCtrlImpl [MFC], m_font
 - CMFCPreviewCtrlImpl [MFC], m_pDocument
 ms.assetid: 06257fa0-54c9-478d-9d68-c9698c3f93ed
-ms.openlocfilehash: 3ec1acd1872bc0e51117602ef723116170458afd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f66ed8478023bd42e185da4f21740d1de2536140
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50636729"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295741"
 ---
 # <a name="cmfcpreviewctrlimpl-class"></a>Classe CMFCPreviewCtrlImpl
 
@@ -59,7 +59,7 @@ class CMFCPreviewCtrlImpl : public CWnd;
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CMFCPreviewCtrlImpl:: ~ CMFCPreviewCtrlImpl](#dtor)|Destructs um objeto de controle de versão prévia.|
+|[CMFCPreviewCtrlImpl::~CMFCPreviewCtrlImpl](#dtor)|Destructs um objeto de controle de versão prévia.|
 |[CMFCPreviewCtrlImpl::CMFCPreviewCtrlImpl](#cmfcpreviewctrlimpl)|Constrói um objeto de controle de versão prévia.|
 
 ### <a name="public-methods"></a>Métodos públicos
@@ -136,7 +136,7 @@ virtual BOOL Create(
 *hWndParent*<br/>
 Um identificador para a janela de host fornecido pelo Shell para visualização avançada.
 
-*República Popular da China*<br/>
+*prc*<br/>
 Especifica o tamanho inicial e a posição da janela.
 
 *pContext*<br/>
@@ -319,7 +319,7 @@ virtual void SetRect(
 
 ### <a name="parameters"></a>Parâmetros
 
-*República Popular da China*<br/>
+*prc*<br/>
 Especifica o novo tamanho e posição do controle de versão prévia.
 
 *bRedraw*<br/>
@@ -338,4 +338,3 @@ Destructs um objeto de controle de versão prévia.
 ```
 virtual ~CMFCPreviewCtrlImpl();
 ```
-

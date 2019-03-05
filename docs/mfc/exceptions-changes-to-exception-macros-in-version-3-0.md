@@ -1,5 +1,5 @@
 ---
-title: 'Exceções: alterações feitas em macros de exceção na versão 3.0'
+title: 'Exceções: Alterações feitas em Macros de exceção na versão 3.0'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - C++ exception handling [MFC], upgrade considerations
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - exceptions [MFC], what's changed
 - THROW_LAST macro [MFC]
 ms.assetid: 3aa20d8c-229e-449c-995c-ab879eac84bc
-ms.openlocfilehash: 54826ee7a7ac129ae69715b45770a0a66596a2a3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fb51ad91e001f0ed153bf4fdb5aa598ab5ba5042
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607981"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291217"
 ---
-# <a name="exceptions-changes-to-exception-macros-in-version-30"></a>Exceções: alterações feitas em macros de exceção na versão 3.0
+# <a name="exceptions-changes-to-exception-macros-in-version-30"></a>Exceções: Alterações feitas em Macros de exceção na versão 3.0
 
 Este é um tópico avançado.
 
@@ -58,9 +58,8 @@ Por exemplo, esse código era válido nas versões anteriores, mas terá resulta
 
 Usando o **lançar** em catch bloco faz com que o ponteiro `e` a ser excluído, para que o site externo catch receberá um ponteiro inválido. Use **THROW_LAST** para gerar novamente `e`.
 
-Para obter mais informações, consulte [exceções: exceções de detectar e exclua](../mfc/exceptions-catching-and-deleting-exceptions.md).
+Para obter mais informações, consulte [exceções: Obtendo e excluindo exceções](../mfc/exceptions-catching-and-deleting-exceptions.md).
 
 ## <a name="see-also"></a>Consulte também
 
 [Tratamento de Exceção](../mfc/exception-handling-in-mfc.md)
-

@@ -194,12 +194,12 @@ helpviewer_keywords:
 - CMFCTasksPane [MFC], Update
 - CMFCTasksPane [MFC], OnActivateTasksPanePage
 ms.assetid: b456328e-2525-4642-b78b-9edd1a1a7d3f
-ms.openlocfilehash: aaf0e68391dd1273c3f973315ac58fe0d6bd1c24
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 137f30262ce01ad82c075302b6e85bf67ae7b9be
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176799"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293765"
 ---
 # <a name="cmfctaskspane-class"></a>Classe CMFCTasksPane
 
@@ -404,7 +404,7 @@ int AddGroup(
 *bBottomLocation*<br/>
 [in] TRUE para criar o grupo na parte inferior do controle do painel de tarefas; Caso contrário, FALSE.
 
-*bOpções especiais*<br/>
+*bSpecial*<br/>
 [in] TRUE para marcar esse grupo como uma *especial* grupo; caso contrário, FALSE. Para obter mais informações sobre grupos especiais, consulte a seção comentários do `CMFCTasksPane`.
 
 *hIcon*<br/>
@@ -434,7 +434,7 @@ int AddLabel(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Sagrupar*<br/>
+*nGroup*<br/>
 [in] Especifica o índice do grupo em que o rótulo é adicionado.
 
 *lpszLabelName*<br/>
@@ -466,7 +466,7 @@ int AddMRUFilesList(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Sagrupar*<br/>
+*nGroup*<br/>
 [in] Especifica o índice de um grupo. Este método adiciona a lista de arquivos MRU ao grupo especificado por esse parâmetro.
 
 *nMaxFiles*<br/>
@@ -501,7 +501,7 @@ int AddSeparator(int nGroup);
 
 ### <a name="parameters"></a>Parâmetros
 
-[in] *Sagrupar*<br/>
+[in] *nGroup*<br/>
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -522,7 +522,7 @@ int AddTask(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Sagrupar*<br/>
+*nGroup*<br/>
 [in] Especifica o índice de grupo em que a tarefa é adicionada.
 
 *lpszTaskName*<br/>
@@ -556,7 +556,7 @@ int AddWindow(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Sagrupar*<br/>
+*nGroup*<br/>
 [in] Especifica o índice de grupo em que a janela é adicionada.
 
 *hwndTask*<br/>
@@ -626,7 +626,7 @@ BOOL CollapseGroup(
 *bCollapse*<br/>
 [in] TRUE para recolher o grupo; FALSE para expandir o grupo.
 
-*Sagrupar*<br/>
+*nGroup*<br/>
 [in] Especifica o índice baseado em zero do grupo para recolher a lista interna de grupos.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -679,7 +679,7 @@ void EnableAnimation(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parâmetros
 
-*bAtivar*<br/>
+*bEnable*<br/>
 [in] TRUE para habilitar a animação que ocorre quando um grupo de tarefas expande ou recolhe; Caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
@@ -696,7 +696,7 @@ void EnableGroupCollapse(BOOL bEnable);
 
 ### <a name="parameters"></a>Parâmetros
 
-*bAtivar*<br/>
+*bEnable*<br/>
 [in] TRUE se os usuários podem recolher grupos de tarefas; Caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
@@ -713,7 +713,7 @@ void EnableHistoryMenuButtons(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parâmetros
 
-*bAtivar*<br/>
+*bEnable*<br/>
 [in] True para habilitar suspensa menus na **próxima** e **Previous** botões de navegação; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
@@ -738,7 +738,7 @@ void EnableNavigationToolbar(
 
 ### <a name="parameters"></a>Parâmetros
 
-*bAtivar*<br/>
+*bEnable*<br/>
 [in] TRUE para habilitar a barra de navegação. Caso contrário, FALSE.
 
 *uiToolbarBmpRes*<br/>
@@ -778,7 +778,7 @@ void EnableScrollButtons(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parâmetros
 
-*bAtivar*<br/>
+*bEnable*<br/>
 [in] TRUE para exibir botões de rolagem no painel de tarefas em vez de uma barra de rolagem; Caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
@@ -795,7 +795,7 @@ void EnableWrapLabels(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parâmetros
 
-*bAtivar*<br/>
+*bEnable*<br/>
 [in] True para quebra automática de linha de texto em rótulos que aparecem no painel de tarefas; Caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
@@ -812,7 +812,7 @@ void EnableWrapTasks(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parâmetros
 
-*bAtivar*<br/>
+*bEnable*<br/>
 [in] TRUE para encapsular tarefas no painel de tarefas; Caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
@@ -898,7 +898,7 @@ BOOL GetGroupLocation(
 *pGroup*<br/>
 [in] Especifica o grupo de tarefas cujo local é recuperado.
 
-*Sagrupar*<br/>
+*nGroup*<br/>
 [out] Contém o índice baseado em zero do grupo de tarefas.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -957,7 +957,7 @@ BOOL GetPageByGroup(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Sagrupar*<br/>
+*nGroup*<br/>
 [in] Especifica o índice baseado em zero do grupo de tarefas.
 
 *nPage*<br/>
@@ -1017,7 +1017,7 @@ CMFCTasksPaneTask* GetTask(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Sagrupar*<br/>
+*nGroup*<br/>
 [in] Especifica o índice baseado em zero do grupo que contém a tarefa.
 
 *nTask*<br/>
@@ -1037,7 +1037,7 @@ int GetTaskCount(int nGroup) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*Sagrupar*<br/>
+*nGroup*<br/>
 [in] Especifica o índice do grupo de tarefas.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1054,7 +1054,7 @@ CMFCTasksPaneTaskGroup* GetTaskGroup(int nGroup) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*Sagrupar*<br/>
+*nGroup*<br/>
 [in] Especifica o índice baseado em zero do grupo para recuperar.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1087,7 +1087,7 @@ BOOL GetTaskLocation(
 *uiCommandID*<br/>
 [in] Especifica a ID de comando da tarefa de localizar.
 
-*Sagrupar*<br/>
+*nGroup*<br/>
 [out] Contém o índice do grupo da tarefa.
 
 *nTask*<br/>
@@ -1511,7 +1511,7 @@ void RemoveAllTasks(int nGroup);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Sagrupar*<br/>
+*nGroup*<br/>
 [in] Especifica o índice baseado em zero do grupo.
 
 ##  <a name="removegroup"></a>  CMFCTasksPane::RemoveGroup
@@ -1524,7 +1524,7 @@ void RemoveGroup(int nGroup);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Sagrupar*<br/>
+*nGroup*<br/>
 [in] Especifica o índice baseado em zero do grupo a ser removido.
 
 ### <a name="remarks"></a>Comentários
@@ -1559,7 +1559,7 @@ BOOL RemoveTask(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Sagrupar*<br/>
+*nGroup*<br/>
 [in] Especifica o índice baseado em zero do grupo de tarefas que contém a tarefa a ser removido.
 
 *nTask*<br/>
@@ -1694,7 +1694,7 @@ BOOL SetGroupName(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Sagrupar*<br/>
+*nGroup*<br/>
 [in] Especifica o índice baseado em zero do grupo.
 
 *lpszGroupName*<br/>
@@ -1717,10 +1717,10 @@ BOOL SetGroupTextColor(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Sagrupar*<br/>
+*nGroup*<br/>
 [in] Especifica o índice baseado em zero do grupo.
 
-*Cor*<br/>
+*color*<br/>
 [in] Especifica a cor do texto.
 
 *colorHot*<br/>
@@ -1786,7 +1786,7 @@ void SetIconsList(HIMAGELIST hIcons);
 *uiImageListResID*<br/>
 [in] Especifica a ID do recurso da lista de imagens.
 
-*CX*<br/>
+*cx*<br/>
 [in] Especifica o tamanho dos ícones na lista de imagens.
 
 *clrTransparent*<br/>
@@ -1836,7 +1836,7 @@ BOOL SetTaskName(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Sagrupar*<br/>
+*nGroup*<br/>
 [in] Especifica o índice baseado em zero do grupo de tarefas.
 
 *nTask*<br/>
@@ -1908,13 +1908,13 @@ BOOL SetTaskTextColor(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Sagrupar*<br/>
+*nGroup*<br/>
 [in] Especifica o índice baseado em zero do grupo de tarefas que contém a tarefa.
 
 *nTask*<br/>
 [in] Especifica o índice baseado em zero da tarefa.
 
-*Cor*<br/>
+*color*<br/>
 [in] Especifica a cor do texto para a tarefa.
 
 *colorHot*<br/>
@@ -1960,7 +1960,7 @@ BOOL SetWindowHeight(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Sagrupar*<br/>
+*nGroup*<br/>
 [in] Especifica o índice baseado em zero do grupo que contém o controle de janela.
 
 *hwndTask*<br/>
@@ -2003,13 +2003,13 @@ BOOL ShowTask(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Sagrupar*<br/>
+*nGroup*<br/>
 [in] Especifica o índice baseado em zero do grupo.
 
 *nTask*<br/>
 [in] Especifica o índice baseado em zero da tarefa para mostrar ou ocultar.
 
-*bMostrar*<br/>
+*bShow*<br/>
 [in] TRUE para mostrar a tarefa; FALSO para ocultar a tarefa.
 
 *bRedraw*<br/>
@@ -2039,7 +2039,7 @@ BOOL ShowTaskByCmdId(
 *uiCommandID*<br/>
 [in] Especifica a ID de comando da tarefa para mostrar ou ocultar.
 
-*bMostrar*<br/>
+*bShow*<br/>
 [in] TRUE para mostrar a tarefa; FALSO para ocultar a tarefa.
 
 *bRedraw*<br/>

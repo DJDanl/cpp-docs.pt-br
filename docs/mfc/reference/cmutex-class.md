@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CMutex [MFC], CMutex
 ms.assetid: 6330c050-4f01-4195-a099-2029b92f8cf1
-ms.openlocfilehash: 823f38a6292152774f72c97963b9add5d429d2f7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f85e562af9d048503be20d1ab5d219fe8d2d039f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50508778"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273290"
 ---
 # <a name="cmutex-class"></a>Classe CMutex
 
@@ -43,7 +43,7 @@ Um método alternativo para usar `CMutex` objetos é adicionar uma variável do 
 
 Para acessar os recursos controlados por `CMutex` objetos dessa maneira, primeiro crie uma variável do tipo [CSingleLock](../../mfc/reference/csinglelock-class.md) ou digite [CMultiLock](../../mfc/reference/cmultilock-class.md) na função de membro de acesso do recurso. Em seguida, chamar o objeto de bloqueio `Lock` função de membro (por exemplo, [CSingleLock::Lock](../../mfc/reference/csinglelock-class.md#lock)). Neste ponto, seu thread será a obter acesso ao recurso, aguarde até que o recurso a ser lançado e obter acesso ou aguarde até que o recurso seja liberado e o tempo limite, não consegue obter acesso ao recurso. Em qualquer caso, o recurso tiver sido acessado de forma thread-safe. Para liberar o recurso, use o objeto de bloqueio `Unlock` função de membro (por exemplo, [CSingleLock::Unlock](../../mfc/reference/csinglelock-class.md#unlock)), ou permitir que o objeto de bloqueio sair do escopo.
 
-Para obter mais informações sobre como usar `CMutex` objetos, consulte o artigo [Multithreading: como usar as Classes de sincronização](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).
+Para obter mais informações sobre como usar `CMutex` objetos, consulte o artigo [Multithreading: Como usar as Classes de sincronização](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -90,4 +90,3 @@ Para acessar ou liberar um `CMutex` do objeto, crie um [CMultiLock](../../mfc/re
 
 [Classe CSyncObject](../../mfc/reference/csyncobject-class.md)<br/>
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)
-

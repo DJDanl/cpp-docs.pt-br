@@ -160,12 +160,12 @@ helpviewer_keywords:
 - CMFCToolBarButton [MFC], m_nStyle
 - CMFCToolBarButton [MFC], m_strText
 ms.assetid: 8a6ecffb-86b0-4f5c-8211-a9146b463efd
-ms.openlocfilehash: ec5b6692197dc224f503be050a537e6fa265f6d5
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 94d7ba14e01b2965a0fe788162726d1019e847de
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694654"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275227"
 ---
 # <a name="cmfctoolbarbutton-class"></a>Classe CMFCToolBarButton
 
@@ -390,7 +390,7 @@ CMFCToolBarButton(
 *bUserButton*<br/>
 [in] Um valor booliano que determina se o botão é definida pelo usuário. Se esse parâmetro for TRUE, o botão é definida pelo usuário. Caso contrário, a imagem do botão é carregada de um recurso.
 
-*Bloqueado*<br/>
+*bLocked*<br/>
 [in] Um valor booliano que determina se o botão pode ser personalizado. Se esse parâmetro for TRUE, o botão não pode ser personalizado. Caso contrário, o botão pode ser personalizado.
 
 ##  <a name="comparewith"></a>  CMFCToolBarButton::CompareWith
@@ -462,7 +462,7 @@ virtual void EnableWindow(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parâmetros
 
-*bAtivar*<br/>
+*bEnable*<br/>
 [in] Defina esse parâmetro para True para habilitar entrada ou como FALSE para desabilitar a entrada.
 
 ### <a name="remarks"></a>Comentários
@@ -479,7 +479,7 @@ virtual BOOL ExportToMenuButton(CMFCToolBarMenuButton& menuButton) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*Botão de menu*<br/>
+*menuButton*<br/>
 [in] Uma referência para o botão de menu de destino.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -824,7 +824,7 @@ virtual BOOL IsOwnerOf(HWND hwnd);
 
 ### <a name="parameters"></a>Parâmetros
 
-*HWND*<br/>
+*hwnd*<br/>
 [in] Um identificador de janela.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1146,7 +1146,7 @@ virtual BOOL OnClick(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Apropriei*<br/>
+*pWnd*<br/>
 [in] A janela pai do botão de barra de ferramentas.
 
 *bDelay*<br/>
@@ -1190,7 +1190,7 @@ virtual BOOL OnContextHelp(CWnd* pWnd);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Apropriei*<br/>
+*pWnd*<br/>
 [in] A janela pai do botão de barra de ferramentas.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1201,7 +1201,7 @@ Esse método retornará FALSE.
 
 A implementação padrão desse método não faz nada e retornará FALSE. Substitua este método para retornar um valor diferente de zero se o botão processa a mensagem de Ajuda.
 
-Para obter mais informações sobre a mensagem WM_HELPHITTEST, consulte [TN028: suporte a Ajuda contextual](../../mfc/tn028-context-sensitive-help-support.md).
+Para obter mais informações sobre a mensagem WM_HELPHITTEST, consulte [TN028: Suporte à ajuda contextual](../../mfc/tn028-context-sensitive-help-support.md).
 
 ##  <a name="onctlcolor"></a>  CMFCToolBarButton::OnCtlColor
 
@@ -1264,7 +1264,7 @@ virtual void OnDblClk(CWnd* pWnd);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Apropriei*<br/>
+*pWnd*<br/>
 [in] - a janela pai do botão.
 
 ### <a name="remarks"></a>Comentários
@@ -1294,7 +1294,7 @@ virtual void OnDraw(
 *pDC*<br/>
 [in] O contexto de dispositivo que exibe o botão.
 
-*Rect*<br/>
+*rect*<br/>
 [in] O retângulo delimitador do botão.
 
 *pImages*<br/>
@@ -1335,7 +1335,7 @@ virtual int OnDrawOnCustomizeList(
 *pDC*<br/>
 [in] O contexto de dispositivo que exibe o botão.
 
-*Rect*<br/>
+*rect*<br/>
 [in] O retângulo delimitador do botão.
 
 *bSelected*<br/>
@@ -1410,7 +1410,7 @@ virtual void OnShow(BOOL bShow);
 
 ### <a name="parameters"></a>Parâmetros
 
-*bMostrar*<br/>
+*bShow*<br/>
 [in] Especifica se o botão está visível. Se esse parâmetro for TRUE, o botão está visível. Caso contrário, o botão não está visível.
 
 ### <a name="remarks"></a>Comentários
@@ -1446,7 +1446,7 @@ virtual BOOL OnToolHitTest(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Apropriei*<br/>
+*pWnd*<br/>
 [in] A janela pai do botão. Pode ser NULL.
 
 *pTI*<br/>
@@ -1582,7 +1582,7 @@ virtual void Serialize(CArchive& ar);
 
 Esse método dá suporte a processos de transferência de dados, como a área de transferência ou operações de arrastar e soltar. Ele lê ou grava as propriedades do botão, como a ID, o rótulo de texto e a ID da imagem de ou para fornecido `CArchive` objeto.
 
-Para obter exemplos de serialização, consulte [serialização: serializando um objeto](../../mfc/serialization-serializing-an-object.md).
+Para obter exemplos de serialização, consulte [serialização: Serializando um objeto](../../mfc/serialization-serializing-an-object.md).
 
 ##  <a name="setaccdata"></a>  CMFCToolBarButton::SetACCData
 
@@ -1689,7 +1689,7 @@ void SetRect(const CRect rect);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Rect*<br/>
+*rect*<br/>
 [in] O novo retângulo delimitador do botão.
 
 ### <a name="remarks"></a>Comentários
@@ -1723,7 +1723,7 @@ void SetVisible(BOOL bShow=TRUE);
 
 ### <a name="parameters"></a>Parâmetros
 
-*bMostrar*<br/>
+*bShow*<br/>
 [in] Um valor booliano que especifica se deve mostrar ou ocultar o botão. Se esse parâmetro for TRUE, o botão é mostrado. Se o parâmetro for FALSE, o botão permanece oculto.
 
 ### <a name="remarks"></a>Comentários
@@ -1740,7 +1740,7 @@ void Show(BOOL bShow);
 
 ### <a name="parameters"></a>Parâmetros
 
-*bMostrar*<br/>
+*bShow*<br/>
 [in] Um valor booliano que especifica se deve mostrar ou ocultar o botão. Se esse parâmetro for TRUE, o botão é mostrado. Se o parâmetro for FALSE, o botão permanece oculto.
 
 ### <a name="remarks"></a>Comentários

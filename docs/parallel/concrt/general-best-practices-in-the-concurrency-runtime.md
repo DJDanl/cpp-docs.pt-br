@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Concurrency Runtime, general best practices
 ms.assetid: ce5c784c-051e-44a6-be84-8b3e1139c18b
-ms.openlocfilehash: 445e985117929cae2ec9a26a1e148b3eff55c2a6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e25011e2466d76c946cc55421ed228c8ea174161
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50647688"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57285601"
 ---
 # <a name="general-best-practices-in-the-concurrency-runtime"></a>Práticas recomendadas gerais no Tempo de Execução de Simultaneidade
 
@@ -37,7 +37,7 @@ Este documento contém as seguintes seções:
 
 O tempo de execução de simultaneidade fornece muitas construções de prova de simultaneidade que não exigem um objeto de sincronização externo. Por exemplo, o [concurrency::concurrent_vector](../../parallel/concrt/reference/concurrent-vector-class.md) classe fornece acréscimo protegido contra simultaneidade e operações de acesso de elemento. No entanto, para casos onde você requer acesso exclusivo a um recurso, o tempo de execução fornece o [concurrency::critical_section](../../parallel/concrt/reference/critical-section-class.md), [concurrency::reader_writer_lock](../../parallel/concrt/reference/reader-writer-lock-class.md), e [simultaneidade :: evento](../../parallel/concrt/reference/event-class.md) classes. Esses tipos se comportam de forma cooperativa; Portanto, o Agendador de tarefas pode realocar recursos de processamento para outro contexto, como a primeira tarefa espera por dados. Quando possível, use esses tipos de sincronização em vez de outros mecanismos de sincronização, como as fornecidas pela API do Windows, que não se comportam de forma cooperativa. Para obter mais informações sobre esses tipos de sincronização e um exemplo de código, consulte [estruturas de dados de sincronização](../../parallel/concrt/synchronization-data-structures.md) e [comparando estruturas de dados de sincronização para a API do Windows](../../parallel/concrt/comparing-synchronization-data-structures-to-the-windows-api.md).
 
-[[Superior](#top)]
+[[Top](#top)]
 
 ##  <a name="yield"></a> Evitar tarefas longas que não produzam
 
@@ -72,7 +72,7 @@ O `Context::Yield` método produz apenas outro thread ativo no Agendador ao qual
 
 Há outras maneiras de habilitar a cooperação entre tarefas de longa execução. É possível dividir uma grande tarefa em subtarefas menores. Você também pode habilitar assinaturas em excesso durante uma tarefa demorada. O excesso de assinaturas lhe permite criar mais threads do que o número de threads de hardware disponíveis. Excesso de assinatura é especialmente útil quando uma tarefa demorada contém uma grande quantidade de latência, por exemplo, ler dados do disco ou de uma conexão de rede. Para obter mais informações sobre tarefas leves e excesso de assinatura, consulte [Agendador de tarefas](../../parallel/concrt/task-scheduler-concurrency-runtime.md).
 
-[[Superior](#top)]
+[[Top](#top)]
 
 ##  <a name="oversubscription"></a> Usar excesso de assinatura para deslocar operações que bloqueiam ou têm alta latência
 
@@ -84,17 +84,17 @@ Considere a seguinte função, `download`, que baixa o arquivo na URL fornecida.
 
 [!code-cpp[concrt-download-oversubscription#4](../../parallel/concrt/codesnippet/cpp/general-best-practices-in-the-concurrency-runtime_3.cpp)]
 
-Porque o `GetHttpFile` função executa uma operação potencialmente latente, excesso de assinatura pode habilitar outras tarefas sejam executadas conforme a tarefa atual espera por dados. Para obter a versão completa deste exemplo, consulte [como: usar excesso de assinatura para deslocar latência](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md).
+Porque o `GetHttpFile` função executa uma operação potencialmente latente, excesso de assinatura pode habilitar outras tarefas sejam executadas conforme a tarefa atual espera por dados. Para obter a versão completa deste exemplo, consulte [como: Usar excesso de assinatura para deslocar latência](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md).
 
-[[Superior](#top)]
+[[Top](#top)]
 
 ##  <a name="memory"></a> Usar funções de gerenciamento de memória simultâneas quando possível
 
 Use as funções de gerenciamento de memória [concurrency::Alloc](reference/concurrency-namespace-functions.md#alloc) e [concurrency::Free](reference/concurrency-namespace-functions.md#free), quando você tiver tarefas refinadas que frequentemente alocam pequenos objetos que têm um tempo de vida relativamente curto. O tempo de execução de simultaneidade mantém um cache de memória separados para cada thread em execução. O `Alloc` e `Free` funções alocam e liberam memória a partir desses caches sem o uso de bloqueios ou as barreiras de memória.
 
-Para obter mais informações sobre essas funções de gerenciamento de memória, consulte [Agendador de tarefas](../../parallel/concrt/task-scheduler-concurrency-runtime.md). Para obter um exemplo que usa essas funções, consulte [como: usar Alloc e Free para melhorar o desempenho da memória](../../parallel/concrt/how-to-use-alloc-and-free-to-improve-memory-performance.md).
+Para obter mais informações sobre essas funções de gerenciamento de memória, consulte [Agendador de tarefas](../../parallel/concrt/task-scheduler-concurrency-runtime.md). Para obter um exemplo que usa essas funções, consulte [como: Usar Alloc e Free para melhorar o desempenho de memória](../../parallel/concrt/how-to-use-alloc-and-free-to-improve-memory-performance.md).
 
-[[Superior](#top)]
+[[Top](#top)]
 
 ##  <a name="raii"></a> Usar RAII para gerenciar o tempo de vida de objetos de simultaneidade
 
@@ -124,9 +124,9 @@ Error details:
     negative balance: -76
 ```
 
-Para obter exemplos adicionais que usam o padrão RAII para gerenciar o tempo de vida de objetos de simultaneidade, consulte [instruções passo a passo: Removendo trabalho de um Thread de Interface do usuário](../../parallel/concrt/walkthrough-removing-work-from-a-user-interface-thread.md), [como: usar a classe de contexto para implementar um cooperativo Semáforo](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md), e [como: usar excesso de assinatura para deslocar latência](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md).
+Para obter exemplos adicionais que usam o padrão RAII para gerenciar o tempo de vida de objetos de simultaneidade, consulte [passo a passo: Removendo trabalho de um Thread de Interface do usuário](../../parallel/concrt/walkthrough-removing-work-from-a-user-interface-thread.md), [como: Use a classe de contexto para implementar um semáforo cooperativo](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md), e [como: Usar excesso de assinatura para deslocar latência](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md).
 
-[[Superior](#top)]
+[[Top](#top)]
 
 ##  <a name="global-scope"></a> Não crie objetos de simultaneidade em escopo Global
 
@@ -140,13 +140,13 @@ O exemplo a seguir demonstra a criação de uma global [Concurrency:: Scheduler]
 
 Para obter exemplos de maneira correta de criar `Scheduler` objetos, consulte [Agendador de tarefas](../../parallel/concrt/task-scheduler-concurrency-runtime.md).
 
-[[Superior](#top)]
+[[Top](#top)]
 
 ##  <a name="shared-data"></a> Não Use objetos de simultaneidade em segmentos de dados compartilhados
 
 O tempo de execução de simultaneidade não suporta o uso de objetos de simultaneidade em uma seção de dados compartilhados, por exemplo, uma seção de dados que é criada pela [data_seg](../../preprocessor/data-seg.md) `#pragma` diretiva. Um objeto de simultaneidade que é compartilhado entre os limites do processo pode colocar o tempo de execução em um estado inconsistente ou inválido.
 
-[[Superior](#top)]
+[[Top](#top)]
 
 ## <a name="see-also"></a>Consulte também
 
@@ -156,9 +156,9 @@ O tempo de execução de simultaneidade não suporta o uso de objetos de simulta
 [Agendador de tarefas](../../parallel/concrt/task-scheduler-concurrency-runtime.md)<br/>
 [Estruturas de dados de sincronização](../../parallel/concrt/synchronization-data-structures.md)<br/>
 [Comparando estruturas de dados de sincronização com a API do Windows](../../parallel/concrt/comparing-synchronization-data-structures-to-the-windows-api.md)<br/>
-[Como usar Alloc e Free para melhorar o desempenho da memória](../../parallel/concrt/how-to-use-alloc-and-free-to-improve-memory-performance.md)<br/>
-[Como usar excesso de assinatura para compensar a latência](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md)<br/>
-[Como usar a classe de contexto para implementar um semáforo cooperativo](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md)<br/>
-[Instruções passo a passo: removendo trabalho de um thread de interface de usuário](../../parallel/concrt/walkthrough-removing-work-from-a-user-interface-thread.md)<br/>
+[Como: Usar Alloc e Free para melhorar o desempenho da memória](../../parallel/concrt/how-to-use-alloc-and-free-to-improve-memory-performance.md)<br/>
+[Como: Usar excesso de assinatura para compensar a latência](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md)<br/>
+[Como: Usar a classe de contexto para implementar um semáforo cooperativo](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md)<br/>
+[Passo a passo: Removendo trabalho de um thread de interface de usuário](../../parallel/concrt/walkthrough-removing-work-from-a-user-interface-thread.md)<br/>
 [Práticas recomendadas na biblioteca de padrões paralelos](../../parallel/concrt/best-practices-in-the-parallel-patterns-library.md)<br/>
 [Práticas recomendadas na biblioteca de agentes assíncronos](../../parallel/concrt/best-practices-in-the-asynchronous-agents-library.md)

@@ -19,12 +19,12 @@ f1_keywords:
 - AGENTS/concurrency::unbounded_buffer::send_message
 - AGENTS/concurrency::unbounded_buffer::supports_anonymous_source
 ms.assetid: 6b1a939a-1819-4385-b1d8-708f83d4ec47
-ms.openlocfilehash: b4a54e80067c5bc4cea9cd0dac0e24a66e1858e0
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 1474381a2d1c0947b2428ab4cf0b4683198eef84
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694745"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288136"
 ---
 # <a name="unboundedbuffer-class"></a>classe unbounded_buffer
 
@@ -41,7 +41,7 @@ class unbounded_buffer : public propagator_block<multi_link_registry<ITarget<   
 
 #### <a name="parameters"></a>Parâmetros
 
-*Tipo*<br/>
+*_Type*<br/>
 O tipo de carga das mensagens armazenadas e propagada pelo buffer.
 
 ## <a name="members"></a>Membros
@@ -138,7 +138,7 @@ Um ponteiro para o `message` do objeto que o chamador agora tem a propriedade do
 
 Semelhante ao `accept`, mas sempre é precedido por uma chamada para `reserve`.
 
-##  <a name="dequeue"></a> Remover da fila
+##  <a name="dequeue"></a> dequeue
 
 Remove um item do `unbounded_buffer` bloco de mensagem.
 
@@ -162,7 +162,7 @@ bool enqueue(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Item*<br/>
+*_Item*<br/>
 O item a ser adicionado.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -347,7 +347,7 @@ unbounded_buffer(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Filtro*<br/>
+*_Filter*<br/>
 Uma função de filtro que determina se as mensagens oferecidas devem ser aceitas.
 
 *_PScheduler*<br/>
@@ -362,7 +362,7 @@ O tempo de execução usa o agendador padrão, se você não especificar o `_PSc
 
 O tipo `filter_method` é um funtor com assinatura `bool (_Type const &)` que é invocado por este `unbounded_buffer` bloco de mensagem para determinar se ele deve aceitar uma mensagem oferecida.
 
-##  <a name="dtor"></a> ~ unbounded_buffer
+##  <a name="dtor"></a> ~unbounded_buffer
 
 Destrói o `unbounded_buffer` bloco de mensagem.
 
@@ -375,4 +375,3 @@ Destrói o `unbounded_buffer` bloco de mensagem.
 [Namespace de simultaneidade](concurrency-namespace.md)<br/>
 [Classe overwrite_buffer](overwrite-buffer-class.md)<br/>
 [Classe single_assignment](single-assignment-class.md)
-

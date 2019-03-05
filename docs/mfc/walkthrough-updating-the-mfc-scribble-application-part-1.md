@@ -9,12 +9,12 @@ helpviewer_keywords:
 - MFC Feature Pack, update existing application
 - walkthroughs [MFC], update existing application
 ms.assetid: aa6330d3-6cfc-4c79-8fcb-0282263025f7
-ms.openlocfilehash: 85ff0c17f8ec523fc5cb52101fb44cfc37dd9b50
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 213bc8087b58eac232cc8fcfccc88e13785a807e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481842"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258756"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-1"></a>Passo a passo: Atualizando o aplicativo de rabisco MFC (parte 1)
 
@@ -113,7 +113,7 @@ As próximas quatro etapas deste passo a passo exigem recursos de bitmap. Você 
 
 - Copiar um arquivo de recurso apropriado de outro aplicativo para seu projeto e, em seguida, importe bitmaps desse arquivo.
 
-Este passo a passo copia os arquivos de recurso do exemplo criado na [instruções passo a passo: Criando uma faixa de opções aplicativos por usando MFC](../mfc/walkthrough-creating-a-ribbon-application-by-using-mfc.md).
+Este passo a passo copia os arquivos de recurso do exemplo criado no [passo a passo: Criando um aplicativo de faixa de opções usando MFC](../mfc/walkthrough-creating-a-ribbon-application-by-using-mfc.md).
 
 ### <a name="to-add-bitmaps-to-the-project"></a>Para adicionar os bitmaps ao projeto
 
@@ -169,7 +169,7 @@ Consiste em uma faixa de opções de **aplicativo** botão, que é o botão gran
 
 1. Você pode personalizar o **aplicativo** botão modificando suas propriedades. As IDs de mensagem que são usadas nesse código já estão definidas no menu para o Rabisco 1.0.
 
-1. No modo design, clique o **aplicativo** botão para exibir suas propriedades. Alterar valores de propriedade da seguinte maneira: **imagem** à `IDB_RIBBON_MAIN`, **Prompt** para `File`, **chaves** para `f`, **imagens grandes** ao `IDB_RIBBON_FILELARGE`, e **imagens pequenas** para `IDB_RIBBON_FILESMALL`.
+1. No modo design, clique o **aplicativo** botão para exibir suas propriedades. Altere valores de propriedade da seguinte maneira: **Imagem** à `IDB_RIBBON_MAIN`, **Prompt** para `File`, **chaves** para `f`, **imagens grandes** para `IDB_RIBBON_FILELARGE`e **Imagens pequenas** para `IDB_RIBBON_FILESMALL`.
 
 1. As modificações a seguir cria um menu que aparece quando o usuário clica o **aplicativo** botão. Clique no botão de reticências (**...** ) ao lado **Main itens** para abrir o **Editor itens**.
 
@@ -238,7 +238,7 @@ Agora que você criou o **aplicativo** botão, você pode adicionar elementos à
 
 ### <a name="to-add-a-home-category-and-edit-panel"></a>Para adicionar uma categoria de Home e Editar painel
 
-1. O programa de rabisco requer apenas uma categoria. Na exibição de design, nos **caixa de ferramentas**, clique duas vezes em **categoria** para adicioná-lo e exibir suas propriedades. Alterar valores de propriedade da seguinte maneira: **legenda** à `&Home`, **imagens grandes** para `IDB_RIBBON_HOMELARGE`, **imagens pequenas** para `IDB_RIBBON_HOMESMALL`.
+1. O programa de rabisco requer apenas uma categoria. Na exibição de design, nos **caixa de ferramentas**, clique duas vezes em **categoria** para adicioná-lo e exibir suas propriedades. Altere valores de propriedade da seguinte maneira: **Legenda** à `&Home`, **imagens grandes** para `IDB_RIBBON_HOMELARGE`, **imagens pequenas** para `IDB_RIBBON_HOMESMALL`.
 
 1. Cada categoria de faixa de opções é organizada em painéis nomeados. Cada painel contém um conjunto de controles que operações relacionadas completa. Esta categoria tem um painel. Clique em **painel**e altere **legenda** para `Edit`.
 
@@ -269,4 +269,4 @@ Você modificou o clássico exemplo de rabisco MFC de 1.0 para usar o **Designer
 ## <a name="see-also"></a>Consulte também
 
 [Explicações Passo a Passo](../mfc/walkthroughs-mfc.md)<br/>
-[Instruções passo a passo: atualizando o aplicativo de rabisco MFC (parte 2)](../mfc/walkthrough-updating-the-mfc-scribble-application-part-2.md)
+[Passo a passo: Atualizando o aplicativo de rabisco MFC (parte 2)](../mfc/walkthrough-updating-the-mfc-scribble-application-part-2.md)

@@ -140,12 +140,12 @@ helpviewer_keywords:
 - CMFCToolBarImages [MFC], PreMultiplyAlpha
 - CMFCToolBarImages [MFC], m_bDisableTrueColorAlpha
 ms.assetid: d4e50518-9ffc-406f-9996-f79e5cd38155
-ms.openlocfilehash: 21a8e6ed28498756130e6ddb418e93b0e9ad86cd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bbd2a2d301646b4d3897d9fe4990bdfd1e48325b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50662768"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303325"
 ---
 # <a name="cmfctoolbarimages-class"></a>Classe CMFCToolBarImages
 
@@ -326,7 +326,7 @@ int AddImage(
 *bSetBitPerPixel*<br/>
 [in] TRUE se o `CMFCToolBarImages` objeto usa a intensidade de cor (bits por pixel) da nova imagem. FALSE se o `CMFCToolbarImages` objeto mantém a profundidade de cor atual.
 
-*ImageList*<br/>
+*imageList*<br/>
 [in] Uma referência a um `CMFCToolbarImages` objeto que contém a imagem a ser adicionada.
 
 *nIndex*<br/>
@@ -402,7 +402,7 @@ BOOL CreateFromImageList(const CImageList& imageList);
 
 ### <a name="parameters"></a>Parâmetros
 
-*ImageList*<br/>
+*imageList*<br/>
 [in] A lista de imagens a ser usado como uma fonte para imagens da barra de ferramentas.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -482,7 +482,7 @@ BOOL Draw(
 *bHilite*<br/>
 [in] TRUE se a imagem precisar ser realçado; Caso contrário, FALSE.
 
-*bDesabilitado*<br/>
+*bDisabled*<br/>
 [in] TRUE se a imagem deve ser desenhada no estilo desabilitado; Caso contrário, FALSE.
 
 *bIndeterminate*<br/>
@@ -550,7 +550,7 @@ void EndDrawImage(CAfxDrawState& ds);
 
 ### <a name="parameters"></a>Parâmetros
 
-*DS*<br/>
+*ds*<br/>
 [in] Uma referência para o `CAfxDrawState` objeto que foi passado para o `PrepareDrawImage` método.
 
 ##  <a name="extracticon"></a>  CMFCToolBarImages::ExtractIcon
@@ -585,7 +585,7 @@ static void FillDitheredRect(
 *pDC*<br/>
 [in] Um ponteiro para um contexto de dispositivo.
 
-*Rect*<br/>
+*rect*<br/>
 [in] As coordenadas de um retângulo para preencher.
 
 ### <a name="remarks"></a>Comentários
@@ -893,7 +893,7 @@ BOOL Load(
 *hinstRes*<br/>
 [in] Uma instância da DLL do recurso.
 
-*bAdicionar*<br/>
+*bAdd*<br/>
 [in] TRUE para adicionar o bitmap carregado para o bitmap existente, ou FALSE para substituir o bitmap existente.
 
 *lpszBmpFileName*<br/>
@@ -939,7 +939,7 @@ static COLORREF __stdcall MapFromSysColor(
 
 ### <a name="parameters"></a>Parâmetros
 
-[in] *cor*<br/>
+[in] *color*<br/>
 [in] *bUseRGBQUAD*<br/>
 
 ### <a name="return-value"></a>Valor de retorno
@@ -975,7 +975,7 @@ static COLORREF __stdcall MapToSysColor(
 
 ### <a name="parameters"></a>Parâmetros
 
-[in] *cor*<br/>
+[in] *color*<br/>
 [in] *bUseRGBQUAD*<br/>
 
 ### <a name="return-value"></a>Valor de retorno
@@ -990,7 +990,7 @@ static COLORREF __stdcall MapToSysColorAlpha(COLORREF color);
 
 ### <a name="parameters"></a>Parâmetros
 
-[in] *cor*<br/>
+[in] *color*<br/>
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -1120,7 +1120,7 @@ BOOL PrepareDrawImage(
 
 ### <a name="parameters"></a>Parâmetros
 
-*DS*<br/>
+*ds*<br/>
 [in] Uma referência ao `CAfxDrawState` estrutura, que armazena os recursos alocados entre estágios de processamento de imagem.
 
 *sizeImageDest*<br/>
@@ -1180,7 +1180,7 @@ static void SetDisabledImageAlpha(BYTE nValue);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Nvalor*<br/>
+*nValue*<br/>
 [in] O novo valor do canal alfa.
 
 ### <a name="remarks"></a>Comentários

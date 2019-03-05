@@ -18,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComEnumImpl class
 ms.assetid: cc0d8e76-e608-46db-87cd-4c7161fe32d2
-ms.openlocfilehash: 2104d98cbc068eb5d8f1408cdda0898fd55c9473
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ccd083f3bfd9ae694c97e466fcb40b348fec0c27
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467139"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273758"
 ---
 # <a name="ccomenumimpl-class"></a>Classe CComEnumImpl
 
@@ -39,7 +39,7 @@ class ATL_NO_VTABLE CComEnumImpl : public Base
 
 #### <a name="parameters"></a>Parâmetros
 
-*Base de dados de*<br/>
+*Base*<br/>
 Uma interface de enumerador de COM. Ver [IEnumString](/windows/desktop/api/objidl/nn-objidl-ienumstring) para obter um exemplo.
 
 *piid*<br/>
@@ -58,7 +58,7 @@ Um homogêneos [copie a classe da diretiva](../../atl/atl-copy-policy-classes.md
 |Nome|Descrição|
 |----------|-----------------|
 |[CComEnumImpl::CComEnumImpl](#ccomenumimpl)|O construtor.|
-|[CComEnumImpl:: ~ CComEnumImpl](#dtor)|O destruidor.|
+|[CComEnumImpl::~CComEnumImpl](#dtor)|O destruidor.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
@@ -111,7 +111,7 @@ O construtor.
 CComEnumImpl();
 ```
 
-##  <a name="dtor"></a>  CComEnumImpl:: ~ CComEnumImpl
+##  <a name="dtor"></a>  CComEnumImpl::~CComEnumImpl
 
 O destruidor.
 

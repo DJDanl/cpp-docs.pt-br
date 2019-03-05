@@ -7,12 +7,12 @@ helpviewer_keywords:
 - MFC dialog boxes [MFC], modal
 - modal dialog boxes [MFC]
 ms.assetid: e83df336-5994-4b8f-8233-7942f997315b
-ms.openlocfilehash: 7e1dc9c40f60dc46117ee0673a038d5a63df7680
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c3a5263736324d7fe25066e8879d13b3a41768de
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528356"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268662"
 ---
 # <a name="modal-and-modeless-dialog-boxes"></a>Caixas de diálogo modais e sem janela restrita
 
@@ -38,4 +38,3 @@ Criando uma caixa de diálogo para o seu programa requer as seguintes etapas:
 
 [Caixas de diálogo](../mfc/dialog-boxes.md)<br/>
 [Ciclo de vida de uma caixa de diálogo](../mfc/life-cycle-of-a-dialog-box.md)
-

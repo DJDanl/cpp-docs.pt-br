@@ -1,18 +1,18 @@
 ---
-title: Como usar Alloc e Free para melhorar o desempenho da memória
+title: 'Como: Usar Alloc e Free para melhorar o desempenho de memória'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Alloc and Free, using [Concurrency Runtime]
 - Using Alloc and Free [Concurrency Runtime]
 ms.assetid: e1fab9e8-a97d-4104-bead-e95958db79f9
-ms.openlocfilehash: d91734859cd7d3499979566f427c10a0f026941b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f55bf360ac2b4c7162c1ed2b917ac6ce8c7cd11f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467805"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296118"
 ---
-# <a name="how-to-use-alloc-and-free-to-improve-memory-performance"></a>Como usar Alloc e Free para melhorar o desempenho da memória
+# <a name="how-to-use-alloc-and-free-to-improve-memory-performance"></a>Como: Usar Alloc e Free para melhorar o desempenho de memória
 
 Este documento mostra como usar o [concurrency::Alloc](reference/concurrency-namespace-functions.md#alloc) e [concurrency::Free](reference/concurrency-namespace-functions.md#free) funções para melhorar o desempenho de memória. Ele compara o tempo necessário para reverter os elementos de uma matriz em paralelo para três diferentes tipos que especificam os `new` e `delete` operadores.
 
@@ -63,4 +63,3 @@ Copie o código de exemplo e cole-o em um projeto do Visual Studio ou colá-lo e
 [Funções de gerenciamento da memória](../../parallel/concrt/memory-management-functions.md)<br/>
 [Função ALLOC](reference/concurrency-namespace-functions.md#alloc)<br/>
 [Função Free](reference/concurrency-namespace-functions.md#free)
-

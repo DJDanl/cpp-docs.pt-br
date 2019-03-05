@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CPictureHolder [MFC], SetPictureDispatch
 - CPictureHolder [MFC], m_pPict
 ms.assetid: a4f59775-704a-41dd-b5bd-2e531c95127a
-ms.openlocfilehash: 14ffcbc043d80bfd296bcf52d125d288039f0501
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5386240114550826e4bf557b63310a91590afb55
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509550"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284210"
 ---
 # <a name="cpictureholder-class"></a>Classe CPictureHolder
 
@@ -79,7 +79,7 @@ class CPictureHolder
 
 Com a propriedade de imagem de estoque, o desenvolvedor pode especificar um bitmap, ícone ou meta-arquivo para exibição.
 
-Para obter informações sobre a criação de propriedades da imagem personalizada, consulte o artigo [controles ActiveX MFC: usando imagens em um controle ActiveX](../../mfc/mfc-activex-controls-using-pictures-in-an-activex-control.md).
+Para obter informações sobre a criação de propriedades da imagem personalizada, consulte o artigo [controles ActiveX MFC: Usando imagens em um controle ActiveX](../../mfc/mfc-activex-controls-using-pictures-in-an-activex-control.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 

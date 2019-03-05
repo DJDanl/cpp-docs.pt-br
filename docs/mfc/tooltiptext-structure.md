@@ -7,12 +7,12 @@ helpviewer_keywords:
 - TOOLTIPTEXT structure [MFC]
 - tool tips [MFC], notifications
 ms.assetid: 547591bf-80f5-400e-a2a7-0708cfffbb5d
-ms.openlocfilehash: d184b1d507579309051cd6c70ea6525463c44881
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7d77ca7dc55273e6084e919323ed71e55fa68a2c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50676506"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260589"
 ---
 # <a name="tooltiptext-structure"></a>Estrutura TOOLTIPTEXT
 
@@ -30,7 +30,7 @@ typedef struct {
 } TOOLTIPTEXT, FAR *LPTOOLTIPTEXT;
 ```
 
-*HDR*<br/>
+*hdr*<br/>
 Identifica a ferramenta de que precisa de texto. O único membro dessa estrutura, que talvez seja necessário é a ID de comando. do controle ID de comando do controle estará na *idFrom* membro do **NMHDR** estrutura, acessada com a sintaxe `hdr.idFrom`. Ver [NMHDR](/windows/desktop/api/richedit/ns-richedit-_nmhdr) para uma discussão sobre os membros a **NMHDR** estrutura.
 
 *lpszText*<br/>
@@ -39,7 +39,7 @@ Endereço de uma cadeia de caracteres para receber o texto para uma ferramenta.
 *szText*<br/>
 Buffer que recebe o texto da dica de ferramenta. Um aplicativo pode copiar o texto a esse buffer como uma alternativa para especificar um endereço de cadeia de caracteres.
 
-*HINST*<br/>
+*hinst*<br/>
 Identificador da instância que contém uma cadeia de caracteres a ser usado como o texto da dica de ferramenta. Se *lpszText* é o endereço do texto da dica de ferramenta, esse membro é NULL.
 
 Quando você manipula a `TTN_NEEDTEXT` notificação de mensagem, especifique a cadeia de caracteres a ser exibido em uma das seguintes maneiras:
@@ -53,4 +53,3 @@ Quando você manipula a `TTN_NEEDTEXT` notificação de mensagem, especifique a 
 ## <a name="see-also"></a>Consulte também
 
 [Dicas de ferramenta no Windows não derivadas de CFrameWnd](../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md)
-

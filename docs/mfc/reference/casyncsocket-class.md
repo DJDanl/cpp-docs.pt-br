@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CAsyncSocket [MFC], OnSend
 - CAsyncSocket [MFC], m_hSocket
 ms.assetid: cca4d5a1-aa0f-48bd-843e-ef0e2d7fc00b
-ms.openlocfilehash: b138c4f84a10823d9c340218baefd530c016027a
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: ef486e653eaf78914ea25663e0c1ab744ab30cd4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53179026"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260004"
 ---
 # <a name="casyncsocket-class"></a>Classe CAsyncSocket
 
@@ -160,7 +160,7 @@ Classe `CAsyncSocket` encapsula a API de funções de soquete do Windows, fornec
 
 Essa classe se baseia na suposição de que você compreenda as comunicações de rede. Você é responsável por gerenciar o bloqueio, diferenças de ordem de byte, e as conversões entre Unicode e multibyte character definir cadeias de caracteres (MBCS). Se você quiser uma interface mais conveniente que gerencia esses problemas para você, consulte a classe [CSocket](../../mfc/reference/csocket-class.md).
 
-Usar um `CAsyncSocket` de objeto, chame seu construtor, em seguida, chame o [criar](#create) função para criar o identificador de soquete subjacente (tipo `SOCKET`), exceto em soquetes aceitos. Para uma chamada de soquete de servidor do [escutar](#listen) função de membro e para uma chamada de soquete de cliente a [Connect](#connect) função de membro. O soquete de servidor deve chamar o [Accept](#accept) função ao receber uma solicitação de conexão. Usar o restante `CAsyncSocket` funções realizarem as comunicações entre soquetes. Após a conclusão, destrua o `CAsyncSocket` se ele tiver sido criado no heap de objeto; o destruidor chama automaticamente o [fechar](#close) função. O tipo de dados do soquete é descrito no artigo [Windows Sockets: plano de fundo](../../mfc/windows-sockets-background.md).
+Usar um `CAsyncSocket` de objeto, chame seu construtor, em seguida, chame o [criar](#create) função para criar o identificador de soquete subjacente (tipo `SOCKET`), exceto em soquetes aceitos. Para uma chamada de soquete de servidor do [escutar](#listen) função de membro e para uma chamada de soquete de cliente a [Connect](#connect) função de membro. O soquete de servidor deve chamar o [Accept](#accept) função ao receber uma solicitação de conexão. Usar o restante `CAsyncSocket` funções realizarem as comunicações entre soquetes. Após a conclusão, destrua o `CAsyncSocket` se ele tiver sido criado no heap de objeto; o destruidor chama automaticamente o [fechar](#close) função. O tipo de dados do soquete é descrito no artigo [Windows Sockets: Background](../../mfc/windows-sockets-background.md).
 
 > [!NOTE]
 >  Ao usar soquetes MFC em threads secundários em um aplicativo MFC vinculado estaticamente, você deve chamar `AfxSocketInit` em cada thread que usa soquetes para inicializar as bibliotecas de soquete. Por padrão, `AfxSocketInit` é chamado somente no thread primário.
@@ -1755,11 +1755,11 @@ BOOL ShutDown(int nHow = sends);
 *nHow*<br/>
 Um sinalizador que descreve quais tipos de operação não será permitido, usando os seguintes valores enumerados:
 
-- **recebe = 0**
+- **receives = 0**
 
-- **envia = 1**
+- **sends = 1**
 
-- **tanto = 2**
+- **both = 2**
 
 ### <a name="return-value"></a>Valor de retorno
 

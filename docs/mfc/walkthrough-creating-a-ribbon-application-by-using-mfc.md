@@ -1,18 +1,18 @@
 ---
-title: 'Instruções passo a passo: criando um aplicativo da faixa de opções usando MFC'
+title: 'Passo a passo: Criando um aplicativo de faixa de opções usando MFC'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ribbon application, creating (MFC)
 - creating a ribbon aplication (MFC)
 ms.assetid: e61393e2-1d6b-4594-a7ce-157d3d1b0d9f
-ms.openlocfilehash: 16413b6027a36ec550ae2bf3e04604b32a8454c9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a74e8863c32199d1c0309f70bceae867993ce721
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50557476"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271327"
 ---
-# <a name="walkthrough-creating-a-ribbon-application-by-using-mfc"></a>Instruções passo a passo: criando um aplicativo da faixa de opções usando MFC
+# <a name="walkthrough-creating-a-ribbon-application-by-using-mfc"></a>Passo a passo: Criando um aplicativo de faixa de opções usando MFC
 
 Este passo a passo mostra como usar o **Assistente de aplicativo MFC** para criar um aplicativo que tenha uma faixa de opções por padrão. Em seguida, você pode expandir a faixa de opções adicionando uma **personalizado** categoria de faixa de opções que tem um **Favoritos** painel e, em seguida, adicionando alguns comandos mais usados ao painel de faixa de opções.
 
@@ -83,9 +83,9 @@ Este passo a passo pressupõe que você configurou o Visual Studio para usar **c
 
 ## <a name="next-steps"></a>Próximas etapas
 
-[Como personalizar a barra de ferramentas de acesso rápido](../mfc/how-to-customize-the-quick-access-toolbar.md)
+[Como: Personalizar a barra de ferramentas de acesso rápido](../mfc/how-to-customize-the-quick-access-toolbar.md)
 
-[Como personalizar o botão Aplicativo](../mfc/how-to-customize-the-application-button.md)
+[Como: Personalizar o botão do aplicativo](../mfc/how-to-customize-the-application-button.md)
 
 Para obter exemplos de ponta a ponta, consulte [exemplos (MFC Feature Pack)](../visual-cpp-samples.md).
 

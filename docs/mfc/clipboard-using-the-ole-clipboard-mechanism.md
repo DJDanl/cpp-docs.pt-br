@@ -1,5 +1,5 @@
 ---
-title: 'Área de Transferência: usando o mecanismo Área de Transferência OLE'
+title: 'Área de transferência: Usando o mecanismo de área de transferência OLE'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - applications [OLE], Clipboard
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - OLE Clipboard, formats
 - formats [MFC], Clipboard for OLE
 ms.assetid: 229cc610-5bb1-435e-bd20-2c8b9964d1af
-ms.openlocfilehash: 3dadd2ae6774c684fe751e02fb3a80570accd30a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d8ef93b306c0968adf2c23c841c792d2f7af5de3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50661442"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262246"
 ---
-# <a name="clipboard-using-the-ole-clipboard-mechanism"></a>Área de Transferência: usando o mecanismo Área de Transferência OLE
+# <a name="clipboard-using-the-ole-clipboard-mechanism"></a>Área de transferência: Usando o mecanismo de área de transferência OLE
 
 OLE usa os formatos padrão e alguns formatos específicos de OLE para a transferência de dados por meio da área de transferência.
 
@@ -46,4 +46,3 @@ Por exemplo, para habilitar o comando Recortar, você pode escrever um manipulad
 ## <a name="see-also"></a>Consulte também
 
 [Área de transferência](../mfc/clipboard.md)
-

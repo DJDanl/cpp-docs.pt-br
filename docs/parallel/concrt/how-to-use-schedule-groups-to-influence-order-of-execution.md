@@ -1,18 +1,18 @@
 ---
-title: Como usar grupos de agendas para influenciar a ordem de execução
+title: 'Como: Usar grupos agendados para influenciar a ordem de execução'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - schedule groups, using [Concurrency Runtime]
 - using schedule groups [Concurrency Runtime]
 ms.assetid: 73124194-fc3a-491e-a23f-fbd7b5a4455c
-ms.openlocfilehash: 1117e0d24aae023fbb4dec4fbb9721e6da2ad768
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 99e0383fc8d16f3eeb6e43e59424ab0984ee5c14
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50642285"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284353"
 ---
-# <a name="how-to-use-schedule-groups-to-influence-order-of-execution"></a>Como usar grupos de agendas para influenciar a ordem de execução
+# <a name="how-to-use-schedule-groups-to-influence-order-of-execution"></a>Como: Usar grupos agendados para influenciar a ordem de execução
 
 No tempo de execução de simultaneidade, a ordem na qual as tarefas são agendadas é não determinística. No entanto, você pode usar políticas de agendamento para influenciar a ordem na qual as tarefas são executadas. Este tópico mostra como usar grupos de agendamento junto com o [concurrency::SchedulingProtocol](reference/concurrency-namespace-enums.md#policyelementkey) política de Agendador para influenciar a ordem na qual as tarefas são executadas.
 
@@ -106,10 +106,9 @@ Ambas as políticas produzem a mesma sequência de eventos. No entanto, a polít
 
 Copie o código de exemplo e cole-o em um projeto do Visual Studio ou colá-lo em um arquivo chamado `scheduling-protocol.cpp` e, em seguida, execute o seguinte comando em uma janela de Prompt de comando do Visual Studio.
 
-**/EHsc cl.exe agendamento-protocol.cpp**
+**cl.exe /EHsc scheduling-protocol.cpp**
 
 ## <a name="see-also"></a>Consulte também
 
 [Grupos Agendados](../../parallel/concrt/schedule-groups.md)<br/>
 [Agentes assíncronos](../../parallel/concrt/asynchronous-agents.md)
-

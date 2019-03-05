@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CObject [MFC], IsSerializable
 - CObject [MFC], Serialize
 ms.assetid: 95e9acd3-d9eb-4ac0-b52b-ca4a501a7a3a
-ms.openlocfilehash: eb0580f6fef39df29d66e15cfd051a0460cb8d56
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 515c4e90ee6ab77a6c7c1ae108393ea1aafb7c17
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50584009"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304061"
 ---
 # <a name="cobject-class"></a>Classe CObject
 
@@ -49,7 +49,7 @@ class AFX_NOVTABLE CObject
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CObject:: Assertvalid](#assertvalid)|Valida a integridade desse objeto.|
+|[CObject::AssertValid](#assertvalid)|Valida a integridade desse objeto.|
 |[CObject::Dump](#dump)|Produz um despejo de diagnóstico deste objeto.|
 |[CObject::GetRuntimeClass](#getruntimeclass)|Retorna o `CRuntimeClass` estrutura correspondente à classe do objeto.|
 |[CObject::IsKindOf](#iskindof)|Testa a relação do objeto a uma determinada classe.|
@@ -93,7 +93,7 @@ Para obter informações sobre derivando de classes de C++ e Microsoft Foundatio
 
 **Cabeçalho:** AFX. h
 
-##  <a name="assertvalid"></a>  CObject:: Assertvalid
+##  <a name="assertvalid"></a>  CObject::AssertValid
 
 Valida a integridade desse objeto.
 
@@ -366,7 +366,7 @@ Use [CArchive::IsLoading](../../mfc/reference/carchive-class.md#isloading) ou [C
 
 `Serialize` é chamado pelo [CArchive::ReadObject](../../mfc/reference/carchive-class.md#readobject) e [CArchive::WriteObject](../../mfc/reference/carchive-class.md#writeobject). Essas funções estão associadas a `CArchive` operador de inserção ( **< \<**) e o operador de extração ( **>>**).
 
-Para obter exemplos de serialização, consulte o artigo [serialização: serializando um objeto](../../mfc/serialization-serializing-an-object.md).
+Para obter exemplos de serialização, consulte o artigo [serialização: Serializando um objeto](../../mfc/serialization-serializing-an-object.md).
 
 ### <a name="example"></a>Exemplo
 
@@ -377,4 +377,3 @@ Ver [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) para obter 
 ## <a name="see-also"></a>Consulte também
 
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)
-

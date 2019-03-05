@@ -1,5 +1,5 @@
 ---
-title: Definindo a cor da tela de fundo da caixa de diálogo
+title: Definindo a cor do plano de fundo da caixa de diálogo
 ms.date: 07/12/2018
 helpviewer_keywords:
 - CSS, background attributes in styles [MFC]
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - background colors, dialog boxes
 - MFC dialog boxes [MFC], colors
 ms.assetid: 05ee28a4-f3ae-4203-84ac-022f266ff2ab
-ms.openlocfilehash: 0e5b450e5a09d6551ea49c13ce12a2c02b2323f8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 495ab827d6185826cc4d261a6a990f751e525d22
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50654357"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297431"
 ---
-# <a name="setting-the-dialog-boxs-background-color"></a>Definindo a cor da tela de fundo da caixa de diálogo
+# <a name="setting-the-dialog-boxs-background-color"></a>Definindo a cor do plano de fundo da caixa de diálogo
 
 Você pode definir a cor do plano de fundo de suas caixas de diálogo Manipulando mensagens WM_CTLCOLOR para a janela da caixa de diálogo. A cor que você definir é usada para apenas a caixa de diálogo especificada.
 
@@ -26,4 +26,3 @@ Ver [codexpert blog](http://codexpert.ro/blog/2013/03/13/painting-the-dialog-bac
 
 [Ciclo de vida de uma caixa de diálogo](../mfc/life-cycle-of-a-dialog-box.md)<br/>
 [Tratando mensagens do Windows na caixa de diálogo](../mfc/handling-windows-messages-in-your-dialog-box.md)
-

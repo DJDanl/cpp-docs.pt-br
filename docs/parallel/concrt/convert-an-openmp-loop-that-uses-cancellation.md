@@ -1,18 +1,18 @@
 ---
-title: Como converter um loop OpenMP que usa cancelamento para usar o tempo de execução de simultaneidade
+title: 'Como: Converter um Loop OpenMP que usa cancelamento para usar o tempo de execução de simultaneidade'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - converting from OpenMP to the Concurrency Runtime, cancellation
 - cancellation, converting from OpenMP to the Concurrency Runtime
 ms.assetid: 4b0b3c33-bfa9-4e96-ae08-aef245a39cbb
-ms.openlocfilehash: f3a53113952a12b6b25839deb20548c56a9b7e1c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 618e93c18173bfe3e5f5b5f3058a8bb3d61e98ec
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50569566"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300668"
 ---
-# <a name="how-to-convert-an-openmp-loop-that-uses-cancellation-to-use-the-concurrency-runtime"></a>Como converter um loop OpenMP que usa cancelamento para usar o tempo de execução de simultaneidade
+# <a name="how-to-convert-an-openmp-loop-that-uses-cancellation-to-use-the-concurrency-runtime"></a>Como: Converter um Loop OpenMP que usa cancelamento para usar o tempo de execução de simultaneidade
 
 Alguns loops paralelos não exigem que todas as iterações ser executado. Por exemplo, um algoritmo que procura um valor pode terminar depois que o valor for encontrado. OpenMP não fornece um mecanismo para interromper um loop paralelo. No entanto, você pode usar um valor booliano, ou o sinalizador, para habilitar uma iteração do loop para indicar que a solução foi encontrada. O tempo de execução de simultaneidade fornece a funcionalidade que permite que uma tarefa cancelar a outras tarefas que ainda não iniciaram.
 
@@ -45,11 +45,10 @@ Para obter mais informações sobre `parallel_for_each` e outros algoritmos em p
 
 Copie o código de exemplo e cole-o em um projeto do Visual Studio ou colá-lo em um arquivo chamado `concrt-omp-parallel-any-of.cpp` e, em seguida, execute o seguinte comando em uma janela de Prompt de comando do Visual Studio.
 
-**cl.exe /EHsc /openmp concrt-omp-paralelo-any-of.cpp**
+**cl.exe /EHsc /openmp concrt-omp-parallel-any-of.cpp**
 
 ## <a name="see-also"></a>Consulte também
 
 [Migrando do OpenMP para o tempo de execução de simultaneidade](../../parallel/concrt/migrating-from-openmp-to-the-concurrency-runtime.md)<br/>
 [Cancelamento no PPL](cancellation-in-the-ppl.md)<br/>
 [Algoritmos paralelos](../../parallel/concrt/parallel-algorithms.md)
-

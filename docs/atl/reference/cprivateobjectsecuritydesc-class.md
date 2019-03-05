@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - CPrivateObjectSecurityDesc class
 ms.assetid: 2c4bbb13-bf99-4833-912a-197f6815bb5d
-ms.openlocfilehash: 2617113f2805f8d1c56e7fa6cbebfe669709c100
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 99b47c15af4cdb87fb35d5c7342ea2719d341868
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694030"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284379"
 ---
 # <a name="cprivateobjectsecuritydesc-class"></a>Classe CPrivateObjectSecurityDesc
 
@@ -51,7 +51,7 @@ class CPrivateObjectSecurityDesc : public CSecurityDesc
 
 |||
 |-|-|
-|[operador =](#operator_eq)|Operador de atribuição.|
+|[operator =](#operator_eq)|Operador de atribuição.|
 
 ## <a name="remarks"></a>Comentários
 
@@ -160,7 +160,7 @@ Ponteiro para um descritor de segurança fornecido pelo criador do objeto. Se o 
 *bIsDirectoryObject*<br/>
 Especifica se o novo objeto pode conter outros objetos. Um valor true indica que o novo objeto é um contêiner. Um valor false indica que o novo objeto não é um contêiner.
 
-*token*<br/>
+*Token*<br/>
 Referência para o [CAccessToken](../../atl/reference/caccesstoken-class.md) objeto para o processo do cliente em cujo nome o objeto está sendo criado.
 
 *GenericMapping*<br/>
@@ -261,7 +261,7 @@ Ponteiro para um [CSecurityDesc](../../atl/reference/csecuritydesc-class.md) obj
 *GenericMapping*<br/>
 Ponteiro para um [GENERIC_MAPPING](/windows/desktop/api/winnt/ns-winnt-_generic_mapping) estrutura que especifica o mapeamento de cada direito genérico de direitos específicos para o objeto.
 
-*token*<br/>
+*Token*<br/>
 Referência para o [CAccessToken](../../atl/reference/caccesstoken-class.md) objeto para o processo do cliente em cujo nome o objeto está sendo criado.
 
 *AutoInheritFlags*<br/>

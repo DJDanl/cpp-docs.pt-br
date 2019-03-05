@@ -1,5 +1,5 @@
 ---
-title: Como fazer uma coleção fortemente tipada
+title: 'Como: Fazer uma coleção fortemente tipada'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - type-safe collections [MFC]
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - serialization [MFC], collection classes
 - collection classes [MFC], deriving from nontemplate
 ms.assetid: 7230b2db-4283-4083-b098-eb231bf5b89e
-ms.openlocfilehash: 12ecec7562a9241fab30b859727a22e467e6eeb0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d4241a77184458f5253b6d8987c310604310683c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50581786"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295182"
 ---
-# <a name="how-to-make-a-type-safe-collection"></a>Como fazer uma coleção fortemente tipada
+# <a name="how-to-make-a-type-safe-collection"></a>Como: Fazer uma coleção fortemente tipada
 
 Este artigo explica como criar coleções fortemente tipadas para seus próprios tipos de dados. Os tópicos incluem:
 
@@ -100,4 +100,3 @@ Há duas maneiras de criar coleções fortemente tipadas com as coleções de fo
 ## <a name="see-also"></a>Consulte também
 
 [Coleções](../mfc/collections.md)
-

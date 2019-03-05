@@ -102,12 +102,12 @@ helpviewer_keywords:
 - CListBox [MFC], SetTopIndex
 - CListBox [MFC], VKeyToItem
 ms.assetid: 7ba3c699-c286-4cd9-9066-532c41ec05d1
-ms.openlocfilehash: ad9f945a91a96c40afe614240a847a028ba5b5d9
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 17ff89fde3ef893c2cfcd8beeb8482722af60358
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178610"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57280310"
 ---
 # <a name="clistbox-class"></a>Classe CListBox
 
@@ -139,7 +139,7 @@ class CListBox : public CWnd
 |[CListBox::DeleteString](#deletestring)|Exclui uma cadeia de caracteres de uma caixa de listagem.|
 |[CListBox::Dir](#dir)|Adiciona os nomes de arquivos, unidades ou ambos, do diretório atual para uma caixa de listagem.|
 |[CListBox::DrawItem](#drawitem)|Chamado pelo framework quando um aspecto visual de uma caixa de listagem do desenho proprietário mude.|
-|[CListBox:: FindString](#findstring)|Pesquisa uma cadeia de caracteres em uma caixa de listagem.|
+|[CListBox::FindString](#findstring)|Pesquisa uma cadeia de caracteres em uma caixa de listagem.|
 |[CListBox::FindStringExact](#findstringexact)|Localiza a primeira cadeia de caixa de listagem que corresponde a uma cadeia de caracteres especificada.|
 |[CListBox::GetAnchorIndex](#getanchorindex)|Recupera o índice baseado em zero do item atual da âncora em uma caixa de listagem.|
 |[CListBox::GetCaretIndex](#getcaretindex)|Determina o índice do item que tem o retângulo de foco em uma caixa de listagem de seleção múltipla.|
@@ -374,7 +374,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Especifica o estilo da caixa de listagem. Aplicar qualquer combinação de [estilos de caixa de listagem](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) à caixa.
 
-*Rect*<br/>
+*rect*<br/>
 Especifica o tamanho da caixa de listagem e posição. Pode ser um `CRect` objeto ou um `RECT` estrutura.
 
 *pParentWnd*<br/>
@@ -525,7 +525,7 @@ Ver [CWnd::OnDrawItem](../../mfc/reference/cwnd-class.md#ondrawitem) para obter 
 
 [!code-cpp[NVC_MFC_CListBox#9](../../mfc/codesnippet/cpp/clistbox-class_9.cpp)]
 
-##  <a name="findstring"></a>  CListBox:: FindString
+##  <a name="findstring"></a>  CListBox::FindString
 
 Localiza a primeira cadeia de caracteres em uma caixa de listagem que contém o prefixo especificado sem alterar a seleção da caixa de listagem.
 
@@ -904,7 +904,7 @@ void GetText(
 *nIndex*<br/>
 Especifica o índice baseado em zero da cadeia de caracteres a ser recuperado.
 
-*lpszbuffer é*<br/>
+*lpszBuffer*<br/>
 Aponta para o buffer que recebe a cadeia de caracteres. O buffer deve ter espaço suficiente para a cadeia de caracteres e um caractere nulo de terminação. O tamanho da cadeia de caracteres pode ser determinado antes do tempo chamando o `GetTextLen` função de membro.
 
 *rString*<br/>
@@ -1143,7 +1143,7 @@ int SelItemRange(
 
 ### <a name="parameters"></a>Parâmetros
 
-*bSelecione*<br/>
+*bSelect*<br/>
 Especifica como definir a seleção. Se *bSelecione* for TRUE, a cadeia de caracteres está selecionada e realçada; se FALSE, o realce é removido e a cadeia de caracteres não será mais selecionada.
 
 *nFirstItem*<br/>
@@ -1242,7 +1242,7 @@ int SetCurSel(int nSelect);
 
 ### <a name="parameters"></a>Parâmetros
 
-*nSelecione*<br/>
+*nSelect*<br/>
 Especifica o índice baseado em zero da cadeia de caracteres a ser selecionado. Se *nSelecione* é -1, a caixa de listagem é definida para não ter nenhuma seleção.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1412,7 +1412,7 @@ int SetSel(
 *nIndex*<br/>
 Contém o índice baseado em zero da cadeia de caracteres a ser definido. Se -1, a seleção é adicionada ou removida de todas as cadeias de caracteres, dependendo do valor de *bSelecione*.
 
-*bSelecione*<br/>
+*bSelect*<br/>
 Especifica como definir a seleção. Se *bSelecione* for TRUE, a cadeia de caracteres está selecionada e realçada; se FALSE, o realce é removido e a cadeia de caracteres não será mais selecionada. A cadeia de caracteres especificada está selecionada e realçada por padrão.
 
 ### <a name="return-value"></a>Valor de retorno

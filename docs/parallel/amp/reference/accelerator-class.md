@@ -40,12 +40,12 @@ f1_keywords:
 helpviewer_keywords:
 - accelerator class
 ms.assetid: 37eed593-cf87-4611-9cdc-e98df6c2377a
-ms.openlocfilehash: 2045d2d1c6a848378ac55114b61177d386b14fab
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 31008b398d17ac0c226f9359745067c4fefc08a9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523917"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326604"
 ---
 # <a name="accelerator-class"></a>Classe accelerator
 
@@ -131,7 +131,7 @@ Você pode construir um `accelerator` objeto, enumerando os dispositivos dispon�
 
 **Cabeçalho:** amprt. h
 
-**Namespace:** Simultaneidade
+**Namespace:** Concorrência
 
 ##  <a name="dtor"></a> </a> ~ accelerator
 
@@ -160,7 +160,7 @@ accelerator(const accelerator& _Other);
 *_Device_path*<br/>
 O caminho do dispositivo físico.
 
-*Outro*<br/>
+*_Other*<br/>
 O Acelerador a ser copiado.
 
 ##  <a name="cpu_accelerator"></a> cpu_accelerator
@@ -454,14 +454,14 @@ bool operator!= (const accelerator& _Other) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*Outro*<br/>
+*_Other*<br/>
 O `accelerator` objeto a ser comparado com este.
 
 ### <a name="return-value"></a>Valor de retorno
 
 **False** se os dois `accelerator` objetos forem iguais; caso contrário, **verdadeiro**.
 
-##  <a name="operator_eq"></a> operador =
+##  <a name="operator_eq"></a> operator=
 
 Copia o conteúdo especificado `accelerator` objeto para esse outro.
 
@@ -471,14 +471,14 @@ accelerator& operator= (const accelerator& _Other);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Outro*<br/>
+*_Other*<br/>
 O `accelerator` objeto do qual copiar.
 
 ### <a name="return-value"></a>Valor de retorno
 
 Uma referência a este `accelerator` objeto.
 
-##  <a name="operator_eq_eq"></a> operador = =
+##  <a name="operator_eq_eq"></a> operator==
 
 Compara essa `accelerator` objeto com outro e retorna **verdadeira** se eles forem iguais; caso contrário, retornará **false**.
 
@@ -488,7 +488,7 @@ bool operator== (const accelerator& _Other) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*Outro*<br/>
+*_Other*<br/>
 O `accelerator` objeto a ser comparado com este.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -505,7 +505,7 @@ static inline bool set_default(std::wstring _Path);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Caminho de _*<br/>
+*_Path*<br/>
 O caminho para o acelerador.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -561,7 +561,7 @@ Obtém a versão do `accelerator`.
 __declspec(property(get= get_version)) unsigned int version;
 ```
 
-##  <a name="dtor"></a> </a> ~ accelerator_view
+##  <a name="dtor"></a> </a> ~accelerator_view
 
 Destrói a [accelerator_view](accelerator-view-class.md) objeto.
 
@@ -589,7 +589,7 @@ accelerator_view(const accelerator_view& _Other);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Outro*<br/>
+*_Other*<br/>
 O `accelerator_view` objeto a ser copiado.
 
 ##  <a name="create_marker"></a> create_marker
@@ -702,14 +702,14 @@ bool operator!= (const accelerator_view& _Other) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*Outro*<br/>
+*_Other*<br/>
 O `accelerator_view` objeto a ser comparado com este.
 
 ### <a name="return-value"></a>Valor de retorno
 
 **False** se os dois objetos forem iguais; caso contrário, **verdadeiro**.
 
-##  <a name="operator_eq"></a> operador =
+##  <a name="operator_eq"></a> operator=
 
 Copia o conteúdo do especificado [accelerator_view](accelerator-view-class.md) esse objeto.
 
@@ -719,14 +719,14 @@ accelerator_view& operator= (const accelerator_view& _Other);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Outro*<br/>
+*_Other*<br/>
 O `accelerator_view` objeto do qual copiar.
 
 ### <a name="return-value"></a>Valor de retorno
 
 Uma referência ao modificado `accelerator_view` objeto.
 
-##  <a name="operator_eq_eq"></a> operador = =
+##  <a name="operator_eq_eq"></a> operator==
 
 Compara essa [accelerator_view](accelerator-view-class.md) objeto com outro e retorna **verdadeiro** se eles forem iguais; caso contrário, retornará **false**.
 
@@ -736,7 +736,7 @@ bool operator== (const accelerator_view& _Other) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*Outro*<br/>
+*_Other*<br/>
 O `accelerator_view` objeto a ser comparado com este.
 
 ### <a name="return-value"></a>Valor de retorno

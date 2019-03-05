@@ -7,12 +7,12 @@ helpviewer_keywords:
 - DAO (Data Access Objects), Fields collection
 - CDaoFieldInfo structure [MFC]
 ms.assetid: 91b13e3f-bdb8-440c-86fc-ba4181ea0182
-ms.openlocfilehash: 80a541028a6ba7daf60a8d1afbd6cf7ba3557202
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a5c4013a323c85ad19a3fade20f76852e053362a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50629418"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275136"
 ---
 # <a name="cdaofieldinfo-structure"></a>Estrutura CDaoFieldInfo
 
@@ -50,7 +50,7 @@ Um valor que indica o tipo de dados do campo. Para obter detalhes, consulte o t�
 
 - `dbBoolean` Sim/não igual a verdadeiro/falso
 
-- `dbByte` bytes
+- `dbByte` Byte
 
 - `dbInteger` curto
 
@@ -87,10 +87,10 @@ Um valor que indica o tamanho máximo, em bytes, de um objeto de campo do DAO qu
 |`dbCurrency`|8|Moeda ([COleCurrency](../../mfc/reference/colecurrency-class.md))|
 |`dbSingle`|4|Simples|
 |`dbDouble`|8|Duplo|
-|`dbDate`|8|Data/hora ([COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md))|
+|`dbDate`|8|Date/Time ([COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md))|
 |`dbText`|1 - 255|Texto ([CString](../../atl-mfc-shared/reference/cstringt-class.md))|
 |`dbLongBinary`|0|Binário longo (OLE Object; [CByteArray](../../mfc/reference/cbytearray-class.md); use em vez de `CLongBinary`)|
-|`dbMemo`|0|Memorando ([CString](../../atl-mfc-shared/reference/cstringt-class.md))|
+|`dbMemo`|0|Memo ([CString](../../atl-mfc-shared/reference/cstringt-class.md))|
 |`dbGUID`|16|Um identificador global exclusivo/identificador universal exclusivo usado com chamadas de procedimento remoto.|
 
 *m_lAttributes*<br/>
@@ -160,4 +160,3 @@ As informações recuperadas pelo `GetFieldInfo` função de membro (da classe q
 [CDaoTableDef::GetFieldInfo](../../mfc/reference/cdaotabledef-class.md#getfieldinfo)<br/>
 [CDaoRecordset::GetFieldInfo](../../mfc/reference/cdaorecordset-class.md#getfieldinfo)<br/>
 [CDaoQueryDef::GetFieldInfo](../../mfc/reference/cdaoquerydef-class.md#getfieldinfo)
-
