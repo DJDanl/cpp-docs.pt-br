@@ -38,12 +38,12 @@ helpviewer_keywords:
 - COlePropertyPage [MFC], SetModifiedFlag
 - COlePropertyPage [MFC], SetPageName
 ms.assetid: e9972872-8e6b-4550-905e-d36a274d64dc
-ms.openlocfilehash: 905f92ef7875dac984b6c0d537e4687dcc779f49
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 55f4b7304d0b50004585b55142804e0bb4234c16
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605703"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271249"
 ---
 # <a name="colepropertypage-class"></a>Classe COlePropertyPage
 
@@ -89,7 +89,7 @@ Por exemplo, uma página de propriedades pode incluir um controle de edição qu
 
 Cada propriedade de controle personalizado ou estoque pode ter um controle de caixa de diálogo que permite que o usuário do controle exibir o valor da propriedade atual e modificar esse valor, se necessário.
 
-Para obter mais informações sobre como usar `COlePropertyPage`, consulte o artigo [controles ActiveX: páginas de propriedade](../../mfc/mfc-activex-controls-property-pages.md).
+Para obter mais informações sobre como usar `COlePropertyPage`, consulte o artigo [controles ActiveX: Páginas de propriedade](../../mfc/mfc-activex-controls-property-pages.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -222,7 +222,7 @@ virtual BOOL OnEditProperty(DISPID dispid);
 
 ### <a name="parameters"></a>Parâmetros
 
-*DISPID*<br/>
+*dispid*<br/>
 ID de expedição da propriedade que está sendo editada.
 
 ### <a name="return-value"></a>Valor de retorno

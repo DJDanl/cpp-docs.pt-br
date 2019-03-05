@@ -73,12 +73,12 @@ helpviewer_keywords:
 - CMFCRibbonEdit [MFC], SetTextAlign
 - CMFCRibbonEdit [MFC], SetWidth
 ms.assetid: 9b85f1f2-446b-454e-9af9-104fdad8a897
-ms.openlocfilehash: 094b91bb730f125ee3a159c80626a8724c10f93e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e1a8f601c9f5798494ee34d3c3987222c14ecfa7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50578900"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57292181"
 ---
 # <a name="cmfcribbonedit-class"></a>Classe CMFCRibbonEdit
 
@@ -187,7 +187,7 @@ CMFCRibbonEdit();
 *lpszLabel*<br/>
 [in] O rótulo para o `CMFCRibbonEdit` controle.
 
-*Nimagem*<br/>
+*nImage*<br/>
 [in] Índice da imagem pequena a ser usado para o `CMFCRibbonEdit` controle. A coleção de imagens pequenas é mantida pela categoria pai da faixa de opções.
 
 ### <a name="remarks"></a>Comentários
@@ -283,10 +283,10 @@ void EnableSpinButtons(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Nmín*<br/>
+*nMin*<br/>
 [in] O valor mínimo do botão de rotação.
 
-*Nmáx*<br/>
+*nMax*<br/>
 [in] O valor máximo do botão de rotação.
 
 ### <a name="remarks"></a>Comentários
@@ -532,7 +532,7 @@ virtual void OnDrawOnList(
 *nTextOffset*<br/>
 [in] Distância, em pixels, do lado esquerdo da caixa de listagem para o texto de exibição.
 
-*Rect*<br/>
+*rect*<br/>
 [in] O retângulo de exibição para o `CMFCRibbonEdit` controle.
 
 *bIsSelected*<br/>
@@ -555,7 +555,7 @@ virtual void OnEnable(BOOL bEnable);
 
 ### <a name="parameters"></a>Parâmetros
 
-*bAtivar*<br/>
+*bEnable*<br/>
 [in] TRUE para habilitar o controle; FALSE para desabilitar o controle.
 
 ### <a name="remarks"></a>Comentários
@@ -604,7 +604,7 @@ virtual void OnLButtonDown(CPoint point);
 
 ### <a name="parameters"></a>Parâmetros
 
-*ponto*<br/>
+*point*<br/>
 [in] Esse parâmetro não é usado.
 
 ### <a name="remarks"></a>Comentários
@@ -619,7 +619,7 @@ virtual void OnLButtonUp(CPoint point);
 
 ### <a name="parameters"></a>Parâmetros
 
-*ponto*<br/>
+*point*<br/>
 [in] Esse parâmetro não é usado.
 
 ### <a name="remarks"></a>Comentários
@@ -649,7 +649,7 @@ virtual void OnShow(BOOL bShow);
 
 ### <a name="parameters"></a>Parâmetros
 
-*bMostrar*<br/>
+*bShow*<br/>
 [in] TRUE para mostrar o controle; FALSO para ocultar o controle.
 
 ### <a name="remarks"></a>Comentários

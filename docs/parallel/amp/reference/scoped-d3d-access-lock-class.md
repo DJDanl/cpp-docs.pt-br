@@ -6,12 +6,12 @@ f1_keywords:
 - AMPRT/scoped_d3d_access_lock
 - AMPRT/concurrency::direct3d::scoped_d3d_access_lock::scoped_d3d_access_lock
 ms.assetid: 0ad333e6-9839-4736-a722-16d95d70c4b1
-ms.openlocfilehash: 08b6edc415d08d6dfb863fb90ff27bac6ce0960a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e36c3c2cfa9d1b617e377a7e340f98875457bdf1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50598439"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272458"
 ---
 # <a name="scopedd3daccesslock-class"></a>Classe scoped_d3d_access_lock
 
@@ -69,10 +69,10 @@ scoped_d3d_access_lock(// [3] move constructor
 *_Av*<br/>
 O `accelerator_view` para adotar o bloqueio.
 
-*T*<br/>
+*_T*<br/>
 O objeto `adopt_d3d_access_lock_t`.
 
-*Outro*<br/>
+*_Other*<br/>
 O `scoped_d3d_access_lock` objeto do qual mover um bloqueio existente.
 
 ## <a name="construction"></a>Construção
@@ -91,7 +91,7 @@ Libera o bloqueio de acesso de D3D de associado `accelerator_view` objeto.
 ~scoped_d3d_access_lock();
 ```
 
-## <a name="operator_eq"></a> operador =
+## <a name="operator_eq"></a> operator=
 
 Utiliza a propriedade de um bloqueio de acesso de D3D de outro `scoped_d3d_access_lock` objeto, liberando o bloqueio anterior.
 
@@ -101,7 +101,7 @@ scoped_d3d_access_lock& operator= (scoped_d3d_access_lock&& _Other);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Outro*<br/>
+*_Other*<br/>
 O accelerator_view do qual mover o bloqueio de acesso D3D.
 
 ### <a name="return-value"></a>Valor de retorno
