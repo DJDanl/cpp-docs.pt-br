@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Internet applications [MFC], ActiveX controls
 - networks [MFC], downloading with ActiveX controls
 ms.assetid: 7ab943c8-2022-41df-9065-d629b616eeec
-ms.openlocfilehash: 7becf4d4f579fa4b9b954935f55a06b2fed78593
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c019c922a5690d4ead861c40bed3c0c1c76cea28
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50603704"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57282997"
 ---
 # <a name="activex-controls-on-the-internet"></a>Controles ActiveX na Internet
 
@@ -49,7 +49,7 @@ Criando um controle que funcione bem em um ambiente de Internet requer uma consi
 
 Para melhorar o desempenho de seus controles, siga estas dicas sobre as considerações de eficiência:
 
-- Implementar as técnicas descritas neste artigo [controles ActiveX: otimização](../mfc/mfc-activex-controls-optimization.md).
+- Implementar as técnicas descritas no artigo [controles ActiveX: Otimização](../mfc/mfc-activex-controls-optimization.md).
 
 - Considere como um controle é instanciado.
 
@@ -89,7 +89,7 @@ Ao criar um novo controle usando o Assistente de aplicativo, você pode optar po
 
 1. Sobre o **configurações de controle** página, selecione **carrega as propriedades de forma assíncrona**. Selecionar esta opção define a propriedade de estado pronto e o evento alterado de estado pronto para você.
 
-   Você também pode selecionar outras otimizações, tais como **ativação sem janelas**, que é descrito na [controles ActiveX: otimização](../mfc/mfc-activex-controls-optimization.md).
+   Você também pode selecionar outras otimizações, tais como **ativação sem janelas**, que é descrito na [controles ActiveX: Otimização](../mfc/mfc-activex-controls-optimization.md).
 
 1. Escolher **concluir** para criar o projeto.
 
@@ -183,7 +183,7 @@ Aqui está um exemplo de uma marca de objeto e atributos para a inserção de um
 
 ## <a name="updating-an-existing-ole-control-to-use-new-activex-control-features"></a>Atualizando um controle OLE existente para usar novos recursos de controle ActiveX
 
-Se seu controle OLE foi criado com uma versão do Visual C++ antes do 4.2, há etapas que você pode executar para melhorar seu desempenho e aprimorar sua funcionalidade. Para obter uma discussão detalhada sobre essas alterações, consulte [controles ActiveX: otimização](../mfc/mfc-activex-controls-optimization.md).
+Se seu controle OLE foi criado com uma versão do Visual C++ antes do 4.2, há etapas que você pode executar para melhorar seu desempenho e aprimorar sua funcionalidade. Para obter uma discussão detalhada sobre essas alterações, consulte [controles ActiveX: Otimização](../mfc/mfc-activex-controls-optimization.md).
 
 Se você estiver adicionando suporte à propriedade assíncrona a um controle existente, você precisará adicionar a propriedade de estado pronto e o `ReadyStateChange` eventos por conta própria. No construtor do controle, adicione:
 
@@ -195,4 +195,3 @@ Você atualizará o estado pronto como seu código é baixado, chamando [COleCon
 
 [Tarefas de programação da Internet no MFC](../mfc/mfc-internet-programming-tasks.md)<br/>
 [Noções básicas de programação da Internet no MFC](../mfc/mfc-internet-programming-basics.md)
-

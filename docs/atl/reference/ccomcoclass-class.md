@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CComCoClass class
 - aggregation [C++], aggregation models
 ms.assetid: 67cfefa4-8df9-47fa-ad58-2d1a1ae25762
-ms.openlocfilehash: 51da70cc1972e6a69e28d7699703f803b6fa8701
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c52e1a95483807f9c842b0b904cd2314258f0e26
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630692"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57282632"
 ---
 # <a name="ccomcoclass-class"></a>Classe CComCoClass
 
@@ -87,7 +87,7 @@ A interface COM que deve ser retornada por meio *pp*.
 *punkOuter*<br/>
 [in] O externo desconhecido ou controle desconhecido da agregação.
 
-*PP*<br/>
+*pp*<br/>
 [out] O endereço de uma variável de ponteiro que recebe o ponteiro de interface solicitado, se a criação for bem-sucedida.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -159,7 +159,7 @@ static HRESULT Error(
 *lpszDesc*<br/>
 [in] A cadeia de caracteres que descreve o erro. A versão Unicode `Error` Especifica que *lpszDesc* é do tipo LPCOLESTR; a versão ANSI Especifica um tipo de LPCSTR.
 
-*IID*<br/>
+*iid*<br/>
 [in] O IID da interface definindo a GUID_NULL (o valor padrão) ou um erro se o erro é definido pelo sistema operacional.
 
 *hRes*<br/>

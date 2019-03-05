@@ -33,12 +33,12 @@ f1_keywords:
 helpviewer_keywords:
 - concurrent_vector class
 ms.assetid: a217b4ac-af2b-4d41-94eb-09a75ee28622
-ms.openlocfilehash: e8036b0942600e5d47254583e2675c525010a5c1
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.openlocfilehash: 7c2ca35239dfb3ce4c0f710259f54005ff9f3c94
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657559"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283170"
 ---
 # <a name="concurrentvector-class"></a>Classe concurrent_vector
 
@@ -161,16 +161,16 @@ void assign(_InputIterator _Begin,
 *_InputIterator*<br/>
 O tipo do iterador especificado.
 
-*USO*<br/>
+*_N*<br/>
 O número de itens a serem copiados para o vetor simultâneo.
 
-*Item*<br/>
+*_Item*<br/>
 Referência a um valor usado para preencher o vetor simultâneo.
 
-*Iniciar*<br/>
+*_Begin*<br/>
 Um iterador para o primeiro elemento do intervalo de origem.
 
-*Encerrar*<br/>
+*_End*<br/>
 Um iterador para a posição logo após o último elemento do intervalo de origem.
 
 ### <a name="remarks"></a>Comentários
@@ -189,7 +189,7 @@ const_reference at(size_type _Index) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*Index*<br/>
+*_Index*<br/>
 O índice do elemento a ser recuperado.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -202,7 +202,7 @@ A versão da função `at` que retorna um não - `const` referência não pode s
 
 O método gerará `out_of_range` se `_Index` é maior que ou igual ao tamanho do vetor simultâneo, e `range_error` se o índice é uma parte interrompida do vetor. Para obter detalhes sobre como um vetor pode se tornar quebrado, consulte [paralela contêineres e objetos](../../../parallel/concrt/parallel-containers-and-objects.md).
 
-##  <a name="back"></a> Voltar
+##  <a name="back"></a> back
 
 Retorna uma referência ou uma `const` fazem referência ao último elemento no vetor simultâneo. Se o vetor simultâneo estiver vazio, o valor retornado será indefinido. Esse método é seguro em simultaneidade.
 
@@ -270,7 +270,7 @@ const_iterator cend() const;
 
 Um iterador do tipo `const_iterator` até o final do vetor simultâneo.
 
-##  <a name="clear"></a> Limpar
+##  <a name="clear"></a> clear
 
 Apaga todos os elementos no vetor simultâneo. Esse método não é seguro em simultaneidade.
 
@@ -330,16 +330,16 @@ A classe de alocador a ser usada com esse objeto.
 *_Vector*<br/>
 A fonte `concurrent_vector` objeto para copiar ou mover elementos.
 
-*USO*<br/>
+*_N*<br/>
 A capacidade inicial do `concurrent_vector` objeto.
 
-*Item*<br/>
+*_Item*<br/>
 O valor dos elementos no objeto construído.
 
-*Iniciar*<br/>
+*_Begin*<br/>
 A posição do primeiro elemento no intervalo de elementos a ser copiado.
 
-*Encerrar*<br/>
+*_End*<br/>
 A posição do primeiro elemento após o intervalo de elementos a ser copiado.
 
 ### <a name="remarks"></a>Comentários
@@ -358,7 +358,7 @@ O sexto construtor Especifica uma repetição de ( `_N`) elementos de valor `_It
 
 O último construtor especifica valores fornecidos pelo intervalo do iterador [ `_Begin`, `_End`).
 
-##  <a name="dtor"></a> ~ concurrent_vector
+##  <a name="dtor"></a> ~concurrent_vector
 
 Apaga todos os elementos e destrói esse vetor simultâneo.
 
@@ -460,7 +460,7 @@ iterator grow_by(
 *_Delta*<br/>
 O número de elementos a acrescentar ao objeto.
 
-*Item*<br/>
+*_Item*<br/>
 O valor para inicializar os novos elementos com.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -481,7 +481,7 @@ iterator grow_to_at_least(size_type _N);
 
 ### <a name="parameters"></a>Parâmetros
 
-*USO*<br/>
+*_N*<br/>
 O novo tamanho mínimo para o `concurrent_vector` objeto.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -500,7 +500,7 @@ size_type max_size() const;
 
 O número máximo de elementos a `concurrent_vector` objeto pode conter.
 
-##  <a name="operator_eq"></a> operador =
+##  <a name="operator_eq"></a> operator=
 
 Atribui o conteúdo de outro `concurrent_vector` objeto para esse outro. Esse método não é seguro em simultaneidade.
 
@@ -528,7 +528,7 @@ A fonte `concurrent_vector` objeto.
 
 Uma referência a este `concurrent_vector` objeto.
 
-##  <a name="operator_at"></a> operador]
+##  <a name="operator_at"></a> operator[]
 
 Fornece acesso ao elemento no índice especificado no vetor simultâneo. Esse método é seguro em simultaneidade para operações de leitura e também ao mesmo tempo, aumentando o vetor, desde que a garantir que o valor `_Index` é menor que o tamanho do vetor simultâneo.
 
@@ -540,7 +540,7 @@ const_reference operator[](size_type _index) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*Index*<br/>
+*_Index*<br/>
 O índice do elemento a ser recuperado.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -565,7 +565,7 @@ iterator push_back(T&& _Item);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Item*<br/>
+*_Item*<br/>
 O valor a ser acrescentado.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -610,7 +610,7 @@ void reserve(size_type _N);
 
 ### <a name="parameters"></a>Parâmetros
 
-*USO*<br/>
+*_N*<br/>
 O número de elementos para reservar espaço para.
 
 ### <a name="remarks"></a>Comentários
@@ -632,10 +632,10 @@ void resize(
 
 ### <a name="parameters"></a>Parâmetros
 
-*USO*<br/>
+*_N*<br/>
 O novo tamanho do concurrent_vector.
 
-*Val*<br/>
+*val*<br/>
 O valor de novos elementos adicionados ao vetor se o novo tamanho for maior que o tamanho original. Se o valor for omitido, os novos objetos recebem o valor padrão para seu tipo.
 
 ### <a name="remarks"></a>Comentários
@@ -656,7 +656,7 @@ void shrink_to_fit();
 
 Esse método internamente novamente alocará elementos de movimentação de memória, invalidar todos os iteradores. `shrink_to_fit` não é seguro em simultaneidade. Você deve garantir que nenhum outro thread estiver chamando métodos no vetor simultâneo ao chamar essa função.
 
-##  <a name="size"></a> Tamanho
+##  <a name="size"></a> size
 
 Retorna o número de elementos no vetor simultâneo. Esse método é seguro em simultaneidade.
 
@@ -672,7 +672,7 @@ O número de elementos neste `concurrent_vector` objeto.
 
 O tamanho retornado é garantido para incluir todos os elementos acrescentados por chamadas para a função `push_back`, ou operações que foram concluídos antes de invocar esse método de crescimento. No entanto, ele também pode incluir elementos que são alocados, mas ainda estão em construção por chamadas simultâneas para qualquer um dos métodos de crescimento.
 
-##  <a name="swap"></a> troca
+##  <a name="swap"></a> swap
 
 Troca o conteúdo de dois vetores simultâneas. Esse método não é seguro em simultaneidade.
 
@@ -689,4 +689,3 @@ O objeto `concurrent_vector` com o qual trocar conteúdo.
 
 [Namespace de simultaneidade](concurrency-namespace.md)<br/>
 [Contêineres e objetos em paralelo](../../../parallel/concrt/parallel-containers-and-objects.md)
-
