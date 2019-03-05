@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - class factories [MFC], and licensing
 ms.assetid: 53c4856a-4062-46db-9f69-dd4339f746b3
-ms.openlocfilehash: bfe4957312a3e1f5c08768af6fe96eb0c2e8b1f0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3788d904bf903481d57dd73a28bf6eafadd5f019
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50514386"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289566"
 ---
 # <a name="class-factories-and-licensing"></a>Alocadores de classe e licenciamento
 
 Para criar uma instância do seu controle OLE, um aplicativo de contêiner chama uma função de membro da fábrica de classe do controle. Como o controle é um objeto OLE real, a fábrica de classes é responsável pela criação de instâncias do seu controle. Cada classe de controle OLE deve ter uma fábrica de classes.
 
-Outro recurso importante de controles OLE é sua capacidade de aplicar uma licença. ControlWizard permite incorporar o licenciamento durante a criação de seu projeto de controle. Para obter mais informações sobre o licenciamento de controle, consulte o artigo [controles ActiveX: licenciamento de um controle de ActiveX](../../mfc/mfc-activex-controls-licensing-an-activex-control.md).
+Outro recurso importante de controles OLE é sua capacidade de aplicar uma licença. ControlWizard permite incorporar o licenciamento durante a criação de seu projeto de controle. Para obter mais informações sobre o licenciamento de controle, consulte o artigo [controles ActiveX: Licenciando um controle ActiveX](../../mfc/mfc-activex-controls-licensing-an-activex-control.md).
 
 A tabela a seguir lista várias macros e funções usadas para declarar e implementar a fábrica de classes do seu controle e a licença do seu controle.
 
@@ -54,7 +54,7 @@ Observe que essa macro tem a mesma finalidade como o exemplo de código a seguir
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxctl. h
+  **Header** afxctl.h
 
 ##  <a name="implement_olecreate_ex"></a>  IMPLEMENT_OLECREATE_EX
 
@@ -85,7 +85,7 @@ O nome da classe de página de propriedade do controle.
 *external_name*<br/>
 O nome do objeto exposto a aplicativos.
 
-*l, w1, w2, b1, b2, b3, b4, b5, b6, b7, M8*<br/>
+*l, w1, w2, b1, b2, b3, b4, b5, b6, b7, b8*<br/>
 Componentes de CLSID da classe. Para obter mais informações sobre esses parâmetros, consulte os comentários para [IMPLEMENT_OLECREATE](run-time-object-model-services.md#implement_olecreate).
 
 ### <a name="remarks"></a>Comentários
@@ -94,7 +94,7 @@ Essa macro deve aparecer no arquivo de implementação para qualquer classe de c
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxctl. h
+  **Header** afxctl.h
 
 ##  <a name="begin_olefactory"></a>  BEGIN_OLEFACTORY
 
@@ -115,7 +115,7 @@ As declarações de fábrica de classes, funções de licenciamento devem começ
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxctl. h
+  **Header** afxctl.h
 
 ##  <a name="end_olefactory"></a>  END_OLEFACTORY
 
@@ -132,7 +132,7 @@ O nome da classe do controle cuja fábrica de classes que se trata.
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxctl. h
+  **Header** afxctl.h
 
 ##  <a name="afxverifylicfile"></a>  AfxVerifyLicFile
 
@@ -157,7 +157,7 @@ Aponta para uma cadeia de caracteres com terminação nula que contém o nome do
 *pszLicFileContents*<br/>
 Aponta para uma sequência de bytes que deve corresponder à sequência encontrada no início do arquivo de licença.
 
-*CCH*<br/>
+*cch*<br/>
 Número de caracteres em *pszLicFileContents*.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -172,7 +172,7 @@ Se *cch* é -1, essa função usa:
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxctl. h
+  **Header** afxctl.h
 
 ## <a name="see-also"></a>Consulte também
 

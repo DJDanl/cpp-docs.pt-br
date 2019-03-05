@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - composite controls, macros
 ms.assetid: 17f2dd5e-07e6-4aa6-b965-7a361c78c45e
-ms.openlocfilehash: 10965fed5aac2eb037cf9894998688e3e7c2bffa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2c6d3e350755ef4a0cf4a84561e34619ab3974be
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50498963"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299104"
 ---
 # <a name="composite-control-macros"></a>Macros de controle de composição
 
@@ -43,7 +43,7 @@ BEGIN_SINK_MAP(_class)
 
 ### <a name="parameters"></a>Parâmetros
 
-*classe*<br/>
+*_class*<br/>
 [in] Especifica o controle.
 
 ### <a name="example"></a>Exemplo
@@ -83,10 +83,10 @@ SINK_ENTRY( id, dispid, fn )
 *id*<br/>
 [in] Identifica o controle.
 
-*DISPID*<br/>
+*dispid*<br/>
 [in] Identifica o evento especificado.
 
-*Fn*<br/>
+*fn*<br/>
 [in] Nome da função de manipulador de eventos. Essa função deve usar o `_stdcall` convenção de chamada e ter a assinatura de estilo de dispinterface apropriado.
 
 ### <a name="example"></a>Exemplo
@@ -111,16 +111,16 @@ SINK_ENTRY_EX_P( id, piid, dispid, fn ) // (Visual Studio 2017)
 *id*<br/>
 [in] Identifica o controle.
 
-*IID*<br/>
+*iid*<br/>
 [in] Identifica a interface de expedição.
 
 *piid*<br/>
 [in] Ponteiro para a interface de expedição.
 
-*DISPID*<br/>
+*dispid*<br/>
 [in] Identifica o evento especificado.
 
-*Fn*<br/>
+*fn*<br/>
 [in] Nome da função de manipulador de eventos. Essa função deve usar o `_stdcall` convenção de chamada e ter a assinatura de estilo de dispinterface apropriado.
 
 ### <a name="example"></a>Exemplo
@@ -145,19 +145,19 @@ SINK_ENTRY_INFO_P( id, piid, dispid, fn, info ) // (Visual Studio 2017)
 *id*<br/>
 [in] Inteiro sem sinal de identificar a origem do evento. Esse valor deve corresponder a *nID* parâmetro de modelo usado na relacionado [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md) classe base.
 
-*IID*<br/>
+*iid*<br/>
 [in] IID que identifica a interface de expedição.
 
 *piid*<br/>
 [in] Ponteiro para um IID que identifica a interface de expedição.
 
-*DISPID*<br/>
+*dispid*<br/>
 [in] DISPID identifica o evento especificado.
 
-*Fn*<br/>
+*fn*<br/>
 [in] Nome da função de manipulador de eventos. Essa função deve usar o `_stdcall` convenção de chamada e ter a assinatura de estilo de dispinterface apropriado.
 
-*Informações de*<br/>
+*info*<br/>
 [in] Informações de tipo para a função de manipulador de eventos. Essas informações de tipo são fornecidas na forma de um ponteiro para um `_ATL_FUNC_INFO` estrutura. CC_CDECL é a única opção com suporte no Windows CE para o campo conv do `_ATL_FUNC_INFO` estrutura. Não há suporte para qualquer outro valor, portanto, seu comportamento é indefinido.
 
 ### <a name="remarks"></a>Comentários

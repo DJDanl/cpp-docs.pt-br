@@ -188,12 +188,12 @@ helpviewer_keywords:
 - CMFCRibbonBar [MFC], ToggleMimimizeState
 - CMFCRibbonBar [MFC], TranslateChar
 ms.assetid: a65d06fa-1a28-4cc0-8971-bc9d7c9198fe
-ms.openlocfilehash: 78566eaa15eb695d892471925a9dadcad9655c5f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3656b6a135757a4658f2ef08b80a54efffe89012
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50640239"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288409"
 ---
 # <a name="cmfcribbonbar-class"></a>Classe CMFCRibbonBar
 
@@ -319,7 +319,7 @@ Os elementos que aparecem na expansão de barra de faixa de opções e de contra
 
 Você pode usar o `CMFCRibbonStatusBar` classe para implementar uma barra de status semelhante à usada no Office 2007. Uma categoria de faixa de opções contém (e exibe) um grupo de [painéis de faixa de opções](../../mfc/reference/cmfcribbonpanel-class.md). Cada painel de faixa de opções contém um ou mais elementos de faixa de opções, que são derivados [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md).
 
-Para obter informações sobre como adicionar uma barra de faixa de opções para seu aplicativo MFC existente, consulte [instruções passo a passo: atualizando o aplicativo de rabisco MFC](../../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md).
+Para obter informações sobre como adicionar uma barra de faixa de opções para seu aplicativo MFC existente, consulte [passo a passo: Atualizando o aplicativo de rabisco MFC](../../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -738,7 +738,7 @@ void EnableKeyTips(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parâmetros
 
-*bAtivar*<br/>
+*bEnable*<br/>
 [in] TRUE para habilitar o recurso de dicas de tecla; FALSE para desabilitar o recurso de dicas de tecla.
 
 ### <a name="remarks"></a>Comentários
@@ -755,7 +755,7 @@ void EnablePrintPreview(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parâmetros
 
-*bAtivar*<br/>
+*bEnable*<br/>
 [in] True para habilitar o **Visualizar impressão** de recursos; FALSE para desabilitar o **Visualizar impressão** recurso.
 
 ### <a name="remarks"></a>Comentários
@@ -776,7 +776,7 @@ void EnableToolTips(
 
 ### <a name="parameters"></a>Parâmetros
 
-*bAtivar*<br/>
+*bEnable*<br/>
 [in] TRUE para habilitar dicas de ferramenta na barra de faixa de opções; FALSE para desabilitar as dicas de ferramenta na barra de faixa de opções.
 
 *bEnableDescr*<br/>
@@ -1305,7 +1305,7 @@ virtual CMFCRibbonBaseElement* HitTest(
 
 ### <a name="parameters"></a>Parâmetros
 
-*ponto*<br/>
+*point*<br/>
 [in] Local do ponto em coordenadas da barra de faixa de opções.
 
 *bCheckActiveCategory*<br/>
@@ -1478,7 +1478,7 @@ virtual void OnClickButton(
 *pButton*<br/>
 [in] Ponteiro para o botão que foi clicado.
 
-*ponto*<br/>
+*point*<br/>
 [in] Esse parâmetro não é usado.
 
 ### <a name="remarks"></a>Comentários
@@ -1494,7 +1494,7 @@ virtual void OnEditContextMenu(
 ### <a name="parameters"></a>Parâmetros
 
 [in] *pEdit*<br/>
-[in] *ponto*<br/>
+[in] *point*<br/>
 
 ### <a name="remarks"></a>Comentários
 
@@ -1545,7 +1545,7 @@ virtual BOOL OnShowRibbonContextMenu(
 
 ### <a name="parameters"></a>Parâmetros
 
-[in] *Apropriei*<br/>
+[in] *pWnd*<br/>
 [in] *x*<br/>
 [in] *y*<br/>
 [in] *pHit*<br/>
@@ -1566,7 +1566,7 @@ virtual BOOL OnShowRibbonQATMenu(
 
 ### <a name="parameters"></a>Parâmetros
 
-[in] *Apropriei*<br/>
+[in] *pWnd*<br/>
 [in] *x*<br/>
 [in] *y*<br/>
 [in] *pHit*<br/>
@@ -1755,7 +1755,7 @@ void SetActiveMDIChild(CWnd* pWnd);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Apropriei*<br/>
+*pWnd*<br/>
 [in] Ponteiro para uma janela filho MDI.
 
 ### <a name="remarks"></a>Comentários
@@ -1855,7 +1855,7 @@ void SetMaximizeMode(
 *bMax*<br/>
 [in] TRUE para exibir os botões de sistema para uma janela filho MDI na barra de faixa de opções; FALSE para remover os botões de sistema para uma janela filho MDI na barra de faixa de opções.
 
-*Apropriei*<br/>
+*pWnd*<br/>
 [in] Ponteiro para a janela do quadro principal para a barra de faixa de opções.
 
 ### <a name="remarks"></a>Comentários
@@ -1959,7 +1959,7 @@ void ShowCategory(
 *nIndex*<br/>
 [in] O índice da categoria de faixa de opções.
 
-*bMostrar*<br/>
+*bShow*<br/>
 [in] Se for TRUE, mostrar a categoria de faixa de opções; Caso contrário, oculte a categoria de faixa de opções.
 
 ##  <a name="showcontextcategories"></a>  CMFCRibbonBar::ShowContextCategories
@@ -1977,7 +1977,7 @@ void ShowContextCategories(
 *uiContextID*<br/>
 [in] A ID da categoria de contexto.
 
-*bMostrar*<br/>
+*bShow*<br/>
 [in] Se for TRUE, mostrar as categorias que têm a ID especificada; Caso contrário, ocultar as categorias que têm a ID especificada.
 
 ##  <a name="showkeytips"></a>  CMFCRibbonBar::ShowKeyTips
@@ -2156,4 +2156,3 @@ TRUE recalcula o layout de faixa de opções; FALSE caso contrário.
 [Classe CMFCRibbonPanel](../../mfc/reference/cmfcribbonpanel-class.md)<br/>
 [Classe CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)<br/>
 [Passo a passo: Atualizando o aplicativo de rabisco MFC](../../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md)
-

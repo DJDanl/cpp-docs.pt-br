@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CDBException [MFC], m_strError
 - CDBException [MFC], m_strStateNativeOrigin
 ms.assetid: eb9e1119-89f5-49a7-b9d4-b91cee1ccc82
-ms.openlocfilehash: 6ae0ebb94952408aa2576d4320ce4e00308c458f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e8a5195d4d2a3662d79d515c28dc66d1b0a27b24
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50549507"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295013"
 ---
 # <a name="cdbexception-class"></a>Classe CDBException
 
@@ -44,13 +44,13 @@ class CDBException : public CException
 A classe inclui dois membros de dados públicos, que você pode usar para determinar a causa da exceção ou para exibir uma mensagem de texto que descreve a exceção. `CDBException` objetos são construídos e gerados pelas funções de membro das classes de banco de dados.
 
 > [!NOTE]
->  Essa classe é uma das classes de conectividade de banco de dados aberto (ODBC) do MFC. Se estiver usando as classes de objetos de acesso a dados (DAO) mais recentes em vez disso, use [CDaoException](../../mfc/reference/cdaoexception-class.md) em vez disso. Todos os nomes de classe do DAO têm "CDao" como um prefixo. Para obter mais informações, consulte o artigo [visão geral: banco de dados de programação](../../data/data-access-programming-mfc-atl.md).
+>  Essa classe é uma das classes de conectividade de banco de dados aberto (ODBC) do MFC. Se estiver usando as classes de objetos de acesso a dados (DAO) mais recentes em vez disso, use [CDaoException](../../mfc/reference/cdaoexception-class.md) em vez disso. Todos os nomes de classe do DAO têm "CDao" como um prefixo. Para obter mais informações, consulte o artigo [visão geral: Programação de banco de dados](../../data/data-access-programming-mfc-atl.md).
 
 As exceções são casos de execução anormal que envolvem condições fora do controle do programa, como a fonte de dados ou erros de e/s de rede. Erros que você pode esperar ver no curso normal de seu programa em execução geralmente não são considerados exceções.
 
 Você pode acessar esses objetos dentro do escopo de um **CATCH** expressão. Você também pode lançar `CDBException` objetos do seu próprio código com o `AfxThrowDBException` função global.
 
-Para obter mais informações sobre o tratamento de exceção no geral, ou cerca `CDBException` objetos, consulte os artigos [tratamento de exceção (MFC)](../../mfc/exception-handling-in-mfc.md) e [exceções: exceções de banco de dados](../../mfc/exceptions-database-exceptions.md).
+Para obter mais informações sobre o tratamento de exceção no geral, ou cerca `CDBException` objetos, consulte os artigos [tratamento de exceção (MFC)](../../mfc/exception-handling-in-mfc.md) e [exceções: Exceções de banco de dados](../../mfc/exceptions-database-exceptions.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -144,11 +144,11 @@ Para obter informações adicionais sobre os códigos usados para fazer essa cad
 
 ### <a name="example"></a>Exemplo
 
-  Do ODBC: "Estado: S0022, Native: 207, origem: [Microsoft] [Driver do ODBC SQL Server] [SQL Server] nome de coluna inválido 'ColName'"
+  Do ODBC: "Estado: S0022, Native: 207, origem: [Microsoft] [ODBC Driver do SQL Server] [SQL Server] nome de coluna inválido 'ColName'"
 
-No `m_strStateNativeOrigin`: "estado: S0022, Native: 207, origem: [Microsoft] [Driver do ODBC SQL Server] [SQL Server]"
+No `m_strStateNativeOrigin`: "Estado: S0022, Native: 207, origem: [Microsoft] [Driver do ODBC SQL Server] [SQL Server]"
 
-No `m_strError`: "nome de coluna inválido 'ColName'"
+No `m_strError`: "Nome de coluna inválido 'ColName'"
 
 ## <a name="see-also"></a>Consulte também
 

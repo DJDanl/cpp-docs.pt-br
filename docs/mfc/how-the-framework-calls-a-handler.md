@@ -7,12 +7,12 @@ helpviewer_keywords:
 - command handling [MFC], calling handlers and code in MFC
 - command routing [MFC], MFC
 ms.assetid: d79bceba-4ff6-417a-9d52-6b6af62a909d
-ms.openlocfilehash: 824b646699fbdd416ec81e795560375d60bff97f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b48d8ac93ca33bd80f9a8a8369291f63fc623f5b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50464019"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57285107"
 ---
 # <a name="how-the-framework-calls-a-handler"></a>Como o Framework chama um identificador
 
@@ -33,4 +33,3 @@ Os tópicos a seguir primeiro examinar como o framework roteia comandos, em segu
 ## <a name="see-also"></a>Consulte também
 
 [Tratamento e mapeamento de mensagem](../mfc/message-handling-and-mapping.md)
-

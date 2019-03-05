@@ -37,12 +37,12 @@ f1_keywords:
 - atlwin/ATL::REFLECTED_NOTIFY_RANGE_CODE_HANDLER
 - atlwin/ATL::REFLECTED_NOTIFY_RANGE_HANDLER
 ms.assetid: eefdd546-8934-4a30-b263-9c06a8addcbd
-ms.openlocfilehash: a246e907d401167011b5a3e1306c146a338e233a
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: bedef3a8563e27f72017720530e3b7addb78ec3d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694362"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290372"
 ---
 # <a name="message-map-macros-atl"></a>Macros de mapa de mensagem (ATL)
 
@@ -377,7 +377,7 @@ COMMAND_CODE_HANDLER(code, func)
 
 ### <a name="parameters"></a>Parâmetros
 
-*Código*<br/>
+*code*<br/>
 [in] O código de notificação.
 
 *func*<br/>
@@ -400,7 +400,7 @@ COMMAND_HANDLER(id, code, func)
 *id*<br/>
 [in] O identificador do controle, item de menu ou acelerador.
 
-*Código*<br/>
+*code*<br/>
 [in] O código de notificação.
 
 *func*<br/>
@@ -465,7 +465,7 @@ COMMAND_RANGE_CODE_HANDLER(idFirst, idLast, code, func)
 *idLast*<br/>
 [in] Marca o fim de um intervalo contíguo de identificadores de controle.
 
-*Código*<br/>
+*code*<br/>
 [in] O código de notificação.
 
 *func*<br/>
@@ -652,7 +652,7 @@ NOTIFY_CODE_HANDLER(cd, func)
 
 ### <a name="parameters"></a>Parâmetros
 
-*CD*<br/>
+*cd*<br/>
 [in] O código de notificação.
 
 *func*<br/>
@@ -675,7 +675,7 @@ NOTIFY_HANDLER( id, cd, func )
 *id*<br/>
 [in] O identificador do controle que está enviando a mensagem.
 
-*CD*<br/>
+*cd*<br/>
 [in] O código de notificação.
 
 *func*<br/>
@@ -742,7 +742,7 @@ NOTIFY_RANGE_CODE_HANDLER( idFirst, idLast, cd, func )
 *idLast*<br/>
 [in] Marca o fim de um intervalo contíguo de identificadores de controle.
 
-*CD*<br/>
+*cd*<br/>
 [in] O código de notificação.
 
 *func*<br/>
@@ -809,7 +809,7 @@ REFLECTED_COMMAND_CODE_HANDLER( code, func )
 
 ### <a name="parameters"></a>Parâmetros
 
-*Código*<br/>
+*code*<br/>
 [in] O código de notificação.
 
 *func*<br/>
@@ -832,7 +832,7 @@ REFLECTED_COMMAND_HANDLER( id, code, func )
 *id*<br/>
 [in] O identificador do controle, item de menu ou acelerador.
 
-*Código*<br/>
+*code*<br/>
 [in] O código de notificação.
 
 *func*<br/>
@@ -878,7 +878,7 @@ REFLECTED_COMMAND_RANGE_CODE_HANDLER( idFirst, idLast, code, func )
 *idLast*<br/>
 [in] Marca o fim de um intervalo contíguo de identificadores de controle.
 
-*Código*<br/>
+*code*<br/>
 [in] O código de notificação.
 
 *func*<br/>
@@ -921,7 +921,7 @@ REFLECTED_NOTIFY_CODE_HANDLER_EX( cd, func )
 
 ### <a name="parameters"></a>Parâmetros
 
-*CD*<br/>
+*cd*<br/>
 [in] O código de notificação.
 
 *func*<br/>
@@ -944,7 +944,7 @@ REFLECTED_NOTIFY_HANDLER( id, cd, func )
 *id*<br/>
 [in] O identificador do controle, item de menu ou acelerador.
 
-*CD*<br/>
+*cd*<br/>
 [in] O código de notificação.
 
 *func*<br/>
@@ -990,7 +990,7 @@ REFLECTED_NOTIFY_RANGE_CODE_HANDLER( idFirst, idLast, cd, func )
 *idLast*<br/>
 [in] Marca o fim de um intervalo contíguo de identificadores de controle.
 
-*CD*<br/>
+*cd*<br/>
 [in] O código de notificação.
 
 *func*<br/>

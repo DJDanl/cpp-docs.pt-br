@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - combinable class
 ms.assetid: fe0bfbf6-6250-47da-b8d0-f75369f0b5be
-ms.openlocfilehash: b392a46c3aafac9ab5f3ca2b626f5f78daebc85d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 05256516c0a693a282b8d0de56d6c9e7465f2740
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630744"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299966"
 ---
 # <a name="combinable-class"></a>Classe combinable
 
@@ -73,7 +73,7 @@ Para obter mais informações, consulte [paralela contêineres e objetos](../../
 
 **Namespace:** simultaneidade
 
-##  <a name="clear"></a> Limpar
+##  <a name="clear"></a> clear
 
 Limpa qualquer resultados intermediários de computação com um uso anterior.
 
@@ -102,7 +102,7 @@ O tipo de objeto de inicialização de functor.
 *_FnInitialize*<br/>
 Uma função que será chamada para inicializar cada novo valor de thread e privada do tipo `T`. Ele deve oferecer suporte a um operador de chamada de função com a assinatura `T ()`.
 
-*Copiar*<br/>
+*_Copy*<br/>
 Um existente `combinable` objeto a ser copiado para esse outro.
 
 ### <a name="remarks"></a>Comentários
@@ -113,7 +113,7 @@ O segundo construtor inicializa novos elementos usando o functor de inicializaç
 
 O terceiro construtor é o construtor de cópia.
 
-##  <a name="dtor"></a> ~ combinable
+##  <a name="dtor"></a> ~combinable
 
 Destrói um objeto `combinable`.
 
@@ -178,7 +178,7 @@ Uma referência a um valor booliano. O valor booliano referenciado por esse argu
 
 Uma referência para a computação de thread-private sub.
 
-##  <a name="operator_eq"></a> operador =
+##  <a name="operator_eq"></a> operator=
 
 Atribui a um `combinable` objeto de outro `combinable` objeto.
 
@@ -188,7 +188,7 @@ combinable& operator= (const combinable& _Copy);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Copiar*<br/>
+*_Copy*<br/>
 Um existente `combinable` objeto a ser copiado para esse outro.
 
 ### <a name="return-value"></a>Valor de retorno

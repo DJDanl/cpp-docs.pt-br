@@ -18,12 +18,12 @@ helpviewer_keywords:
 - CBitmapRenderTarget [MFC], GetBitmapRenderTarget
 - CBitmapRenderTarget [MFC], m_pBitmapRenderTarget
 ms.assetid: c89a4437-812e-4943-acb2-b429a04cc4d2
-ms.openlocfilehash: ffead8d1f4a903fba79e4b22eefbf0a2955f56fd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8c110ec8f7c232180bf054e8e4ba90a18f1902c1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50562234"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283547"
 ---
 # <a name="cbitmaprendertarget-class"></a>Classe CBitmapRenderTarget
 
@@ -50,13 +50,13 @@ class CBitmapRenderTarget : public CRenderTarget;
 |[CBitmapRenderTarget::Attach](#attach)|Anexa existente renderizar a interface para o objeto de destino|
 |[CBitmapRenderTarget::Detach](#detach)|Desanexa a interface de destino de renderização do objeto|
 |[CBitmapRenderTarget::GetBitmap](#getbitmap)|Recupera o bitmap para este destino de renderização. O bitmap retornado pode ser usado para operações de desenho.|
-|[CBitmapRenderTarget::GetBitmapRenderTarget](#getbitmaprendertarget)|Interface de ID2D1BitmapRenderTarget retorna|
+|[CBitmapRenderTarget::GetBitmapRenderTarget](#getbitmaprendertarget)|Returns ID2D1BitmapRenderTarget interface|
 
 ### <a name="public-operators"></a>Operadores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CBitmapRenderTarget::operator ID2D1BitmapRenderTarget *](#operator_id2d1bitmaprendertarget_star)|Interface de ID2D1BitmapRenderTarget retorna|
+|[CBitmapRenderTarget::operator ID2D1BitmapRenderTarget*](#operator_id2d1bitmaprendertarget_star)|Returns ID2D1BitmapRenderTarget interface|
 
 ### <a name="protected-data-members"></a>Membros de dados protegidos
 
@@ -128,7 +128,7 @@ Se o método for bem-sucedido, ele retornará TRUE. Caso contrário, retornará 
 
 ##  <a name="getbitmaprendertarget"></a>  CBitmapRenderTarget::GetBitmapRenderTarget
 
-Interface de ID2D1BitmapRenderTarget retorna
+Returns ID2D1BitmapRenderTarget interface
 
 ```
 ID2D1BitmapRenderTarget* GetBitmapRenderTarget();
@@ -146,9 +146,9 @@ Um ponteiro para um objeto ID2D1BitmapRenderTarget.
 ID2D1BitmapRenderTarget* m_pBitmapRenderTarget;
 ```
 
-##  <a name="operator_id2d1bitmaprendertarget_star"></a>  CBitmapRenderTarget::operator ID2D1BitmapRenderTarget *
+##  <a name="operator_id2d1bitmaprendertarget_star"></a>  CBitmapRenderTarget::operator ID2D1BitmapRenderTarget*
 
-Interface de ID2D1BitmapRenderTarget retorna
+Returns ID2D1BitmapRenderTarget interface
 
 ```
 operator ID2D1BitmapRenderTarget*();

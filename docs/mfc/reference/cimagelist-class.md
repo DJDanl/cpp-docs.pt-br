@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CImageList [MFC], Write
 - CImageList [MFC], m_hImageList
 ms.assetid: b6d1a704-1c82-4548-8a8f-77972adc98a5
-ms.openlocfilehash: 5bcf815fce4123ca1014e1679fd810c1ce321be4
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 3e8c524a95730282d0e35e5f791ebf229725e282
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178584"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298913"
 ---
 # <a name="cimagelist-class"></a>Classe CImageList
 
@@ -241,7 +241,7 @@ BOOL BeginDrag(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Nimagem*<br/>
+*nImage*<br/>
 Índice baseado em zero da imagem para arrastar.
 
 *ptHotSpot*<br/>
@@ -348,10 +348,10 @@ BOOL Create(CImageList* pImageList);
 
 ### <a name="parameters"></a>Parâmetros
 
-*CX*<br/>
+*cx*<br/>
 Dimensões de cada imagem, em pixels.
 
-*Cy*<br/>
+*cy*<br/>
 Dimensões de cada imagem, em pixels.
 
 *nFlags*<br/>
@@ -395,7 +395,7 @@ Uma referência a um objeto `CImageList`.
 *nImage2*<br/>
 Índice da segunda imagem existente.
 
-*DX*<br/>
+*dx*<br/>
 Deslocamento do eixo x da segunda imagem em relação à primeira imagem, em pixels.
 
 *dy*<br/>
@@ -479,7 +479,7 @@ static BOOL PASCAL DragEnter(
 *pWndLock*<br/>
 Ponteiro para a janela que possui a imagem de arrastar.
 
-*ponto*<br/>
+*point*<br/>
 Posição na qual exibir a imagem de arrastar. As coordenadas são em relação ao canto superior esquerdo da janela (não a área de cliente).
 
 ### <a name="return-value"></a>Valor de retorno
@@ -554,7 +554,7 @@ static BOOL PASCAL DragShowNolock(BOOL bShow);
 
 ### <a name="parameters"></a>Parâmetros
 
-*bMostrar*<br/>
+*bShow*<br/>
 Especifica se a imagem de arrastar deve ser mostrado.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -582,7 +582,7 @@ BOOL Draw(
 *pDC*<br/>
 Ponteiro para o contexto de dispositivo de destino.
 
-*Nimagem*<br/>
+*nImage*<br/>
 Índice baseado em zero da imagem a ser desenhado.
 
 *pt*<br/>
@@ -594,7 +594,7 @@ Sinalizador que especifica o estilo de desenho. Ele pode ser um ou mais destes v
 |Valor|Significado|
 |-----------|-------------|
 |ILD_BLEND25, ILD_FOCUS|Desenha a imagem, a combinação de 25 por cento, com a cor de realce do sistema. Esse valor não tem efeito se a lista de imagens não contiver uma máscara.|
-|ILD_BLEND50 ILD_SELECTED, ILD_BLEND|Desenha a imagem, 50 por cento, com a cor de realce do sistema de mesclagem. Esse valor não tem efeito se a lista de imagens não contiver uma máscara.|
+|ILD_BLEND50, ILD_SELECTED, ILD_BLEND|Desenha a imagem, 50 por cento, com a cor de realce do sistema de mesclagem. Esse valor não tem efeito se a lista de imagens não contiver uma máscara.|
 |ILD_MASK|Desenha a máscara.|
 |ILD_NORMAL|Desenha a imagem usando a cor do plano de fundo para a lista de imagens. Se a cor do plano de fundo é o valor CLR_NONE, a imagem é desenhada de forma transparente usando a máscara.|
 |ILD_TRANSPARENT|Desenha a imagem de forma transparente usando a máscara, independentemente da cor do plano de fundo.|
@@ -627,13 +627,13 @@ BOOL DrawEx(
 *pDC*<br/>
 Ponteiro para o contexto de dispositivo de destino.
 
-*Nimagem*<br/>
+*nImage*<br/>
 Índice baseado em zero da imagem a ser desenhado.
 
 *pt*<br/>
 Local no qual desenhar dentro do contexto de dispositivo especificado.
 
-*SZ*<br/>
+*sz*<br/>
 Tamanho da parte da imagem a ser desenhado em relação ao canto superior esquerdo da imagem. Ver *dx* e *dy* na [ImageList_DrawEx](/windows/desktop/api/commctrl/nf-commctrl-imagelist_drawex) no SDK do Windows.
 
 *clrBk*<br/>
@@ -687,13 +687,13 @@ Um ponteiro para um [IMAGELISTDRAWPARAMS](/windows/desktop/api/commctrl/ns-commc
 *pDC*<br/>
 Um ponteiro para o contexto de dispositivo de destino. Você deve excluir esse [CDC](../../mfc/reference/cdc-class.md) objeto quando você terminar com ele.
 
-*Nimagem*<br/>
+*nImage*<br/>
 O índice baseado em zero da imagem a ser desenhado.
 
 *pt*<br/>
 Um [ponto](https://msdn.microsoft.com/library/windows/desktop/dd162805) estrutura que contém as coordenadas x e y-onde a imagem será desenhada.
 
-*SZ*<br/>
+*sz*<br/>
 Um [tamanho](/windows/desktop/api/windef/ns-windef-tagsize) estrutura que indica o tamanho da imagem a ser desenhado.
 
 *ptOrigin*<br/>
@@ -780,7 +780,7 @@ HICON ExtractIcon(int nImage);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Nimagem*<br/>
+*nImage*<br/>
 Índice baseado em zero da imagem.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -911,7 +911,7 @@ BOOL GetImageInfo(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Nimagem*<br/>
+*nImage*<br/>
 Índice baseado em zero da imagem.
 
 *pImageInfo*<br/>
@@ -1006,7 +1006,7 @@ BOOL Remove(int nImage);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Nimagem*<br/>
+*nImage*<br/>
 Índice baseado em zero da imagem a ser removida.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1038,7 +1038,7 @@ int Replace(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Nimagem*<br/>
+*nImage*<br/>
 Índice baseado em zero da imagem para substituir.
 
 *pbmImage*<br/>
@@ -1074,7 +1074,7 @@ COLORREF SetBkColor(COLORREF cr);
 
 ### <a name="parameters"></a>Parâmetros
 
-*CR*<br/>
+*cr*<br/>
 Cor do plano de fundo para definir. Ele pode ser CLR_NONE. Nesse caso, imagens são desenhadas de forma transparente usando a máscara.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1097,7 +1097,7 @@ BOOL SetDragCursorImage(
 
 ### <a name="parameters"></a>Parâmetros
 
-*narraste*<br/>
+*nDrag*<br/>
 Índice da nova imagem a ser combinado com a imagem de arrastar.
 
 *ptHotSpot*<br/>
@@ -1150,7 +1150,7 @@ BOOL SetOverlayImage(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Nimagem*<br/>
+*nImage*<br/>
 Índice baseado em zero da imagem para usar como uma máscara de sobreposição.
 
 *nOverlay*<br/>

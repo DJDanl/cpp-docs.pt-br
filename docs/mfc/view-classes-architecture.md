@@ -9,12 +9,12 @@ helpviewer_keywords:
 - control views [MFC]
 - view classes [MFC], architecture
 ms.assetid: 8894579a-1436-441e-b985-83711061e495
-ms.openlocfilehash: 7855f152e340b488d64f01dbf290034e1bdbc9b3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 15b120f0354c483480351b8d3abf995334779411
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50647286"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299407"
 ---
 # <a name="view-classes-architecture"></a>Classes de exibição (arquitetura)
 
@@ -71,4 +71,3 @@ Uma exibição que contém um controle de árvore do Windows (consulte [CTreeCtr
 ## <a name="see-also"></a>Consulte também
 
 [Visão geral da classe](../mfc/class-library-overview.md)
-

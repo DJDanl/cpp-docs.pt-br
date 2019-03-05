@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Create method [MFC], property sheets
 - CPropertyPage class [MFC], styles
 ms.assetid: 240654d4-152b-4e3f-af7b-44234339206e
-ms.openlocfilehash: ac6315d1b450fa41158f1393471d723627ecec24
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 76acbfa9625fe6cb9a575244b0ed6954eeaaf3f2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509377"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301682"
 ---
 # <a name="using-property-sheets-in-your-application"></a>Usando folhas de propriedade no aplicativo
 
@@ -42,7 +42,7 @@ Para usar uma folha de propriedades em seu aplicativo, conclua as seguintes etap
 
 1. Crie variáveis para armazenar os valores para esta página de propriedades de membro. O processo para adicionar variáveis de membro para uma página de propriedades é exatamente o mesmo que adicionar variáveis de membro a uma caixa de diálogo, como uma página de propriedades é uma caixa de diálogo especializado. Para obter mais informações, consulte [definindo variáveis de membro para controles de caixa de diálogo](../windows/defining-member-variables-for-dialog-controls.md).
 
-1. Construir uma [CPropertySheet](../mfc/reference/cpropertysheet-class.md) objeto em seu código-fonte. Normalmente, você constrói o `CPropertySheet` objeto no manipulador para o comando que exibe a folha de propriedades. Este objeto representa a folha de propriedades de inteiro. Se você criar uma folha de propriedades modal com o [DoModal](../mfc/reference/cpropertysheet-class.md#domodal) função, o framework fornece três botões de comando por padrão: Okey, cancelar e aplicar. A estrutura não cria nenhum botão de comando para folhas de propriedades sem janela restrita criadas com o [criar](../mfc/reference/cpropertysheet-class.md#create) função. Não é necessário derivar uma classe de `CPropertySheet` , a menos que você deseja adicionar outros controles (como uma janela de visualização) ou exibir uma folha de propriedades sem janela restrita. Essa etapa é necessária para folhas de propriedades sem janela restrita, porque eles não contêm todos os controles padrão que pode ser usados para fechar a folha de propriedades.
+1. Construir uma [CPropertySheet](../mfc/reference/cpropertysheet-class.md) objeto em seu código-fonte. Normalmente, você constrói o `CPropertySheet` objeto no manipulador para o comando que exibe a folha de propriedades. Este objeto representa a folha de propriedades de inteiro. Se você criar uma folha de propriedades modal com o [DoModal](../mfc/reference/cpropertysheet-class.md#domodal) função, o framework fornece três botões de comando por padrão: Okey, cancelar e se aplicam. A estrutura não cria nenhum botão de comando para folhas de propriedades sem janela restrita criadas com o [criar](../mfc/reference/cpropertysheet-class.md#create) função. Não é necessário derivar uma classe de `CPropertySheet` , a menos que você deseja adicionar outros controles (como uma janela de visualização) ou exibir uma folha de propriedades sem janela restrita. Essa etapa é necessária para folhas de propriedades sem janela restrita, porque eles não contêm todos os controles padrão que pode ser usados para fechar a folha de propriedades.
 
 1. Para cada página a ser adicionado à folha de propriedades, faça o seguinte:
 
@@ -63,4 +63,3 @@ Para obter um exemplo de como usar as folhas de propriedades, consulte o exemplo
 ## <a name="see-also"></a>Consulte também
 
 [Folhas de propriedades](../mfc/property-sheets-mfc.md)
-

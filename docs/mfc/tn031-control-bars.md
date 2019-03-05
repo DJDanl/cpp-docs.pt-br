@@ -1,5 +1,5 @@
 ---
-title: 'TN031: barras de controle'
+title: 'TN031: Barras de controle'
 ms.date: 11/04/2016
 f1_keywords:
 - vc.controls.bars
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - TN031
 - styles [MFC], control bars
 ms.assetid: 8cb895c0-40ea-40ef-90ee-1dd29f34cfd1
-ms.openlocfilehash: 9029b8c0fb6aa20de62dbdf21aedeae6d8a15994
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 07178597e66975a006a0ea5293192ee7ea099e42
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50463293"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57286459"
 ---
-# <a name="tn031-control-bars"></a>TN031: barras de controle
+# <a name="tn031-control-bars"></a>TN031: Barras de controle
 
 > [!NOTE]
 >  A nota técnica a seguir não foi atualizada desde que foi incluído pela primeira vez na documentação online. Como resultado, alguns procedimentos e tópicos podem estar desatualizadas ou incorretas. Para obter as informações mais recentes, é recomendável que você pesquise o tópico de interesse no índice da documentação online.
@@ -110,9 +110,9 @@ As cores usadas na barra de status também são consistentes com a recomendaçã
 |Item|Valor de cor do Windows|Padrão RGB|
 |----------|-------------------------|-----------------|
 |Plano de fundo de barra de status|COLOR_BTNFACE|RGB (192, 192, 192)|
-|Texto da barra de status|COLOR_BTNTEXT|RGB (000 000, 000)|
+|Texto da barra de status|COLOR_BTNTEXT|RGB(000, 000, 000)|
 |Status da barra superior/esquerdo bordas|COLOR_BTNHIGHLIGHT|RGB (255, 255, 255)|
-|Barra bordas direita/bot de status|COLOR_BTNSHADOW|RGB (128, 128, 128)|
+|Barra bordas direita/bot de status|COLOR_BTNSHADOW|RGB(128, 128, 128)|
 
 **Suporte a CCmdUI CStatusBar**
 
@@ -150,8 +150,8 @@ Além disso, os botões de bitmap de barra de ferramentas são recoloridos como 
 
 |Valor RGB|Valor de cor mapeado dinamicamente|
 |---------------|------------------------------------|
-|RGB (000 000, 000)|COLOR_BTNTEXT|
-|RGB (128, 128, 128)|COLOR_BTNSHADOW|
+|RGB(000, 000, 000)|COLOR_BTNTEXT|
+|RGB(128, 128, 128)|COLOR_BTNSHADOW|
 |RGB (192, 192, 192)|COLOR_BTNFACE|
 |RGB (255, 255, 255)|COLOR_BTNHIGHLIGHT|
 
@@ -169,7 +169,7 @@ O manipulador ON_UPDATE_COMMAND_UI pode chamar:
 
 - `SetCheck`: Para definir o estado de seleção de um botão. Chamar isso de um botão de barra de ferramentas, ela se transformará em um botão da caixa de seleção. `SetCheck` usa um parâmetro que pode ser 0 (não marcado), 1 (marcado) ou 2 (indeterminado)
 
-- `SetRadio`: Uma abreviação para `SetCheck`.
+- `SetRadio`: Abreviação para `SetCheck`.
 
 Botões de caixa de seleção são botões de caixa de seleção "AUTO"; ou seja, quando o usuário pressiona-los eles imediatamente estado serão alterado. Verificado é o estado pressionado ou para baixo. Não há nenhuma maneira de interface de usuário internas para alterar um botão no estado "indeterminado"; Isso deve ser feito por meio de código.
 
@@ -179,27 +179,27 @@ Botões da barra de ferramentas enviará mensagens WM_COMMAND como botões norma
 
 Há quatro barra de ferramentas botão estilos (valores TBBS_) usados para os estados de exibição:
 
-- TBBS_CHECKED: caixa de seleção no momento é verificado (para baixo).
+- TBBS_CHECKED:   Atualmente, a caixa de seleção está marcada (para baixo).
 
-- TBBS_INDETERMINATE: caixa de seleção é indeterminado no momento.
+- TBBS_INDETERMINATE:   Caixa de seleção estará desativada no momento.
 
-- TBBS_DISABLED: Botão está desabilitado no momento.
+- TBBS_DISABLED:   Botão está desabilitado no momento.
 
-- TBBS_PRESSED: Botão é pressionado no momento.
+- TBBS_PRESSED:   Botão é pressionado no momento.
 
 Os seis estilos de botão oficiais do guia de Design de aplicativo de Interface do Windows são representados pelos valores TBBS a seguir:
 
-- Até = 0
+- Up = 0
 
 - Mouse para baixo = TBBS_PRESSED (&#124; qualquer outro estilo)
 
-- Desabilitado = TBBS_DISABLED
+- Disabled = TBBS_DISABLED
 
-- Para baixo = TBBS_CHECKED
+- Down = TBBS_CHECKED
 
-- Para baixo desabilitado = TBBS_CHECKED &#124; TBBS_DISABLED
+- Down Disabled = TBBS_CHECKED &#124; TBBS_DISABLED
 
-- Indeterminado = TBBS_INDETERMINATE
+- Indeterminate = TBBS_INDETERMINATE
 
 ##  <a name="_mfcnotes_cdialogbar"></a> CDialogBar
 
@@ -227,4 +227,3 @@ Personalização pode ser feita por meio de APIs do Gerenciador de janela padrã
 
 [Observações técnicas por número](../mfc/technical-notes-by-number.md)<br/>
 [Observações técnicas por categoria](../mfc/technical-notes-by-category.md)
-

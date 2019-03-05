@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CControlBar [MFC], m_bAutoDelete
 - CControlBar [MFC], m_pInPlaceOwner
 ms.assetid: 4d668c55-9b42-4838-97ac-cf2b3000b82c
-ms.openlocfilehash: e9fba929017edfe547f2cc20105ea4f4bcdc9c33
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9ac9ad66a076202113f0c59dafae243b6951ee4c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50644386"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291620"
 ---
 # <a name="ccontrolbar-class"></a>Classe CControlBar
 
@@ -206,7 +206,7 @@ virtual void CalcInsideRect(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Rect*<br/>
+*rect*<br/>
 Contém as dimensões atuais da barra de controle; incluindo as bordas.
 
 *bHorz*<br/>
@@ -260,7 +260,7 @@ virtual void DrawBorders(
 *pDC*<br/>
 Aponta para o contexto de dispositivo a ser usado para renderizar as bordas da barra de controle.
 
-*Rect*<br/>
+*rect*<br/>
 Um `CRect` objeto que contém as dimensões da barra de controle.
 
 ### <a name="remarks"></a>Comentários
@@ -282,7 +282,7 @@ virtual void DrawGripper(
 *pDC*<br/>
 Aponta para o contexto de dispositivo a ser usado para renderizar a alça da barra de controle.
 
-*Rect*<br/>
+*rect*<br/>
 Um `CRect` objeto que contém as dimensões da garra de barra de controle.
 
 ### <a name="remarks"></a>Comentários
@@ -536,7 +536,7 @@ void SetInPlaceOwner(CWnd* pWnd);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Apropriei*<br/>
+*pWnd*<br/>
 Um ponteiro para um `CWnd` objeto.
 
 ### <a name="remarks"></a>Comentários

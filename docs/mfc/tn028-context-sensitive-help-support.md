@@ -1,5 +1,5 @@
 ---
-title: 'TN028: suporte à ajuda contextual'
+title: 'TN028: Suporte à ajuda contextual'
 ms.date: 11/04/2016
 f1_keywords:
 - vc.help
@@ -8,19 +8,19 @@ helpviewer_keywords:
 - TN028
 - resource identifiers, context-sensitive Help
 ms.assetid: 884f1c55-fa27-4d4c-984f-30907d477484
-ms.openlocfilehash: 580046810243593c17dbf7e1c3ca427b37bd14a8
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: e3ac2742f2c57c01c645c72c933234a96ece773a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51520150"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288279"
 ---
-# <a name="tn028-context-sensitive-help-support"></a>TN028: suporte à ajuda contextual
+# <a name="tn028-context-sensitive-help-support"></a>TN028: Suporte à ajuda contextual
 
 Essa observação descreve as regras de atribuição de IDs de contextos de Ajuda e outros problemas de Ajuda no MFC. Suporte à ajuda contextual exige que o compilador de Ajuda que está disponível no Visual C++.
 
 > [!NOTE]
->  Além de implementar usando WinHelp de ajuda contextual, MFC também oferece suporte ao uso Ajuda em HTML. Para obter mais informações sobre esse suporte e a programação com a Ajuda HTML, consulte [Ajuda em HTML: sensível ao contexto de ajuda para seus programas](../mfc/html-help-context-sensitive-help-for-your-programs.md).
+>  Além de implementar usando WinHelp de ajuda contextual, MFC também oferece suporte ao uso Ajuda em HTML. Para obter mais informações sobre esse suporte e a programação com a Ajuda HTML, consulte [Ajuda em HTML: Ajuda contextual para seus programas](../mfc/html-help-context-sensitive-help-for-your-programs.md).
 
 ## <a name="types-of-help-supported"></a>Tipos de ajuda com suporte
 
@@ -180,4 +180,3 @@ No segundo caso, o valor padrão para nIDHelp é -1, que indica que a identifica
 
 [Observações técnicas por número](../mfc/technical-notes-by-number.md)<br/>
 [Observações técnicas por categoria](../mfc/technical-notes-by-category.md)
-

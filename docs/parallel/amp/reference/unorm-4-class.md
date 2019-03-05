@@ -268,12 +268,12 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::unorm_4::rb
 - amp_short_vectors/Concurrency::graphics::unorm_4::get_wzyx
 ms.assetid: dd216a9d-95f7-4978-8e78-6cb9c781a7e9
-ms.openlocfilehash: f8a76e09adf606d9f366e8ed5657791fae497a2a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e4996f65f4b7f707f6b86e05571cacd6987c83a4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50619356"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302491"
 ---
 # <a name="unorm4-class"></a>Classe unorm_4
 
@@ -444,12 +444,12 @@ class unorm_4;
 
 |Nome|Descrição|
 |----------|-----------------|
-|unorm_4::Operator-||
+|unorm_4::operator-||
 |unorm_4::operator--||
 |unorm_4::operator*=||
-|unorm_4::Operator =||
-|unorm_4::Operator++||
-|unorm_4::Operator+ =||
+|unorm_4::operator/=||
+|unorm_4::operator++||
+|unorm_4::operator+=||
 |unorm_4::operator=||
 |unorm_4::operator-=||
 
@@ -480,12 +480,12 @@ class unorm_4;
 |unorm_4::arg||
 |unorm_4::argb||
 |unorm_4::b||
-|unorm_4::bA||
+|unorm_4::ba||
 |unorm_4::bag||
 |unorm_4::bagr||
-|unorm_4::Bar||
+|unorm_4::bar||
 |unorm_4::barg||
-|unorm_4::BG||
+|unorm_4::bg||
 |unorm_4::bga||
 |unorm_4::bgar||
 |unorm_4::bgr||
@@ -512,23 +512,23 @@ class unorm_4;
 |unorm_4::grb||
 |unorm_4::grba||
 |unorm_4::r||
-|unorm_4::RA||
+|unorm_4::ra||
 |unorm_4::rab||
 |unorm_4::rabg||
 |unorm_4::rag||
 |unorm_4::ragb||
-|unorm_4::RB||
+|unorm_4::rb||
 |unorm_4::rba||
 |unorm_4::rbag||
 |unorm_4::rbg||
 |unorm_4::rbga||
-|unorm_4::RG||
+|unorm_4::rg||
 |unorm_4::rga||
 |unorm_4::rgab||
-|unorm_4::RGB||
-|unorm_4::RGBA||
+|unorm_4::rgb||
+|unorm_4::rgba||
 |unorm_4::w||
-|unorm_4::WX||
+|unorm_4::wx||
 |unorm_4::wxy||
 |unorm_4::wxyz||
 |unorm_4::wxz||
@@ -565,12 +565,12 @@ class unorm_4;
 |unorm_4::ywxz||
 |unorm_4::ywz||
 |unorm_4::ywzx||
-|unorm_4::YX||
+|unorm_4::yx||
 |unorm_4::yxw||
 |unorm_4::yxwz||
 |unorm_4::yxz||
 |unorm_4::yxzw||
-|unorm_4::YZ||
+|unorm_4::yz||
 |unorm_4::yzw||
 |unorm_4::yzwx||
 |unorm_4::yzx||
@@ -662,7 +662,7 @@ explicit inline unorm_4(
 *_V0*<br/>
 O valor para inicializar o elemento 0.
 
-*V1*<br/>
+*_V1*<br/>
 O valor para inicializar o elemento 1.
 
 *_V2*<br/>
@@ -674,10 +674,10 @@ O valor para inicializar o elemento 3.
 *_V*<br/>
 O valor para a inicialização.
 
-*Outro*<br/>
+*_Other*<br/>
 O objeto usado para inicializar.
 
-##  <a name="unorm_4__size"></a> Tamanho
+##  <a name="unorm_4__size"></a> size
 
 ```
 static const int size = 4;

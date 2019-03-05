@@ -1,5 +1,5 @@
 ---
-title: 'TN025: documento, exibição e criação de quadro'
+title: 'TN025: Documento, exibição e criação de quadro'
 ms.date: 11/04/2016
 f1_keywords:
 - vc.creation
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - documents [MFC], view and frame creation
 - TN025
 ms.assetid: 09254d72-6e1d-43db-80e9-693887dbeda2
-ms.openlocfilehash: aa8bc305848ce95e0b5bfef1ac6785b18bc84015
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4958e7c4ca2c3cf9eed6420d72d0399fa112098d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50634753"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284678"
 ---
-# <a name="tn025-document-view-and-frame-creation"></a>TN025: documento, exibição e criação de quadro
+# <a name="tn025-document-view-and-frame-creation"></a>TN025: Documento, exibição e criação de quadro
 
 > [!NOTE]
 >  A nota técnica a seguir não foi atualizada desde que foi incluído pela primeira vez na documentação online. Como resultado, alguns procedimentos e tópicos podem estar desatualizadas ou incorretas. Para obter as informações mais recentes, é recomendável que você pesquise o tópico de interesse no índice da documentação online.
@@ -25,7 +25,7 @@ Essa observação descreve os problemas de criação e a propriedade para WINAPP
 
 Há um `CWinApp` objeto no sistema.
 
-Ele estaticamente é criado e inicializado pela implementação interna da estrutura de `WinMain`. Você deve derivar de `CWinApp` fazer alguma coisa útil (exceção: extensão de MFC não deve ter um `CWinApp` instância — é feita na `DllMain` em vez disso).
+Ele estaticamente é criado e inicializado pela implementação interna da estrutura de `WinMain`. Você deve derivar de `CWinApp` fazer alguma coisa útil (exceção: DLLs de extensão do MFC não devem ter uma `CWinApp` instância — que é feita na `DllMain` em vez disso).
 
 Aquele `CWinApp` objeto possui uma lista de modelos de documento (um `CPtrList`). Há um ou mais o modelo de documento por aplicativo. DocTemplates geralmente são carregados do arquivo de recurso (ou seja, uma matriz de cadeia de caracteres) em `CWinApp::InitInstance`.
 
@@ -71,4 +71,3 @@ Para uma janela de quadro MDI, a área de cliente é preenchida com o controle M
 
 [Observações técnicas por número](../mfc/technical-notes-by-number.md)<br/>
 [Observações técnicas por categoria](../mfc/technical-notes-by-category.md)
-

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - MFC DLLs [MFC]
 - DLLs [MFC], creating
 ms.assetid: 4e936031-7e39-4f40-a295-42a09c5ff264
-ms.openlocfilehash: 7cfaa8db9cf550ae118e53a7c70d64261c48a43c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f0fbc0b943865e4c6b4145618689a267224045bb
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50455712"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299277"
 ---
 # <a name="mfc-dll-wizard"></a>Assistente de DLL MFC
 
@@ -46,4 +46,3 @@ Você pode executar as seguintes tarefas e tipos de aprimoramentos para um proje
 [Classe MFC](../../mfc/reference/adding-an-mfc-class.md)<br/>
 [Adicionando uma função de membro](../../ide/adding-a-member-function-visual-cpp.md)<br/>
 [Implementando uma interface](../../ide/implementing-an-interface-visual-cpp.md)<br/>
-

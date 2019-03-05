@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - schedule groups
 ms.assetid: 03523572-5891-4d17-89ce-fa795605f28b
-ms.openlocfilehash: 60d6bdaf863e60fa9923f7d7447309338c5dbed2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: febcc0a9c7af75801962ea6be687ce87cc5501d4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50453515"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295962"
 ---
 # <a name="schedule-groups"></a>Grupos de agendas
 
@@ -20,7 +20,7 @@ Este documento descreve a função de grupos de agendamento no tempo de execuç�
 
 Cada `Scheduler` objeto tem um grupo de agendamento padrão para cada nó de agendamento. Um *agendamento nó* é mapeado para a topologia do sistema subjacente. O tempo de execução cria um nó de agendamento para cada pacote de processador ou nó de arquitetura de memória não uniforme (NUMA), o que for maior. Se você não associar explicitamente uma tarefa com um grupo de agendamento, o agendador escolherá o grupo ao qual a tarefa será adicionada.
 
-O `SchedulingProtocol` política de Agendador influencia a ordem na qual o Agendador executa as tarefas em cada grupo de agendamento. Quando `SchedulingProtocol` é definido como `EnhanceScheduleGroupLocality` (que é o padrão), o Agendador de tarefas escolhe a próxima tarefa a partir do grupo de agendamento que ele está funcionando quando a tarefa atual seja concluída ou cooperativamente produz. O Agendador de tarefas procura o atual grupo de agendas para o trabalho antes de prosseguir para o próximo grupo disponível. Por outro lado, quando `SchedulingProtocol` é definido como `EnhanceForwardProgress`, o Agendador move para o próximo grupo de agendamento depois que cada tarefa seja concluída ou produz. Para obter um exemplo que compara essas políticas, consulte [como: Use grupos de agendamento para a ordem de execução influência](../../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md).
+O `SchedulingProtocol` política de Agendador influencia a ordem na qual o Agendador executa as tarefas em cada grupo de agendamento. Quando `SchedulingProtocol` é definido como `EnhanceScheduleGroupLocality` (que é o padrão), o Agendador de tarefas escolhe a próxima tarefa a partir do grupo de agendamento que ele está funcionando quando a tarefa atual seja concluída ou cooperativamente produz. O Agendador de tarefas procura o atual grupo de agendas para o trabalho antes de prosseguir para o próximo grupo disponível. Por outro lado, quando `SchedulingProtocol` é definido como `EnhanceForwardProgress`, o Agendador move para o próximo grupo de agendamento depois que cada tarefa seja concluída ou produz. Para obter um exemplo que compara essas políticas, consulte [como: Usar grupos agendados para influenciar a ordem de execução](../../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md).
 
 O tempo de execução usa o [Concurrency:: schedulegroup](../../parallel/concrt/reference/schedulegroup-class.md) classe para representar grupos de agendamento. Para criar uma `ScheduleGroup` do objeto, chame o [concurrency::CurrentScheduler::CreateScheduleGroup](reference/currentscheduler-class.md#createschedulegroup) ou [concurrency::Scheduler::CreateScheduleGroup](reference/scheduler-class.md#createschedulegroup) método. O tempo de execução usa um mecanismo de contagem de referência para controlar a vida útil do `ScheduleGroup` objetos, assim como acontece com o `Scheduler` objetos. Quando você cria um `ScheduleGroup` do objeto, o tempo de execução define a referência de contador para um. O [concurrency::ScheduleGroup::Reference](reference/schedulegroup-class.md#reference) método incrementa o contador de referências em um. O [concurrency::ScheduleGroup::Release](reference/schedulegroup-class.md#release) diminui método o contador de referência por um.
 
@@ -30,11 +30,10 @@ Você também pode usar o [concurrency::ScheduleGroup::ScheduleTask](reference/s
 
 ## <a name="example"></a>Exemplo
 
-Para obter um exemplo que usa grupos para controlar a ordem da execução da tarefa de agendamento, consulte [como: Use grupos de agendamento para a ordem de execução influência](../../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md).
+Para obter um exemplo que usa grupos para controlar a ordem da execução da tarefa de agendamento, consulte [como: Usar grupos agendados para influenciar a ordem de execução](../../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md).
 
 ## <a name="see-also"></a>Consulte também
 
 [Agendador de tarefas](../../parallel/concrt/task-scheduler-concurrency-runtime.md)<br/>
 [Instâncias de agendador](../../parallel/concrt/scheduler-instances.md)<br/>
-[Como usar grupos agendados para influenciar a ordem de execução](../../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md)
-
+[Como: Usar grupos agendados para influenciar a ordem de execução](../../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md)

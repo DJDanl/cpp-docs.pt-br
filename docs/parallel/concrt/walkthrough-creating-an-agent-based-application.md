@@ -1,18 +1,18 @@
 ---
-title: 'Instruções passo a passo: criando um aplicativo com base no agente'
+title: 'Passo a passo: Criando um aplicativo baseado em agente'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - asynchronous agents, creating
 - agent class, example
 ms.assetid: 730f42ce-6d58-4753-b948-fd9c9ef2ce6c
-ms.openlocfilehash: 1d5e7ed085481b714423760cebf2984084626645
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1d55c9879a3dd90bb4a40b61a3bf958dbe960bc3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509338"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290049"
 ---
-# <a name="walkthrough-creating-an-agent-based-application"></a>Instruções passo a passo: criando um aplicativo com base no agente
+# <a name="walkthrough-creating-an-agent-based-application"></a>Passo a passo: Criando um aplicativo baseado em agente
 
 Este tópico descreve como criar um aplicativo básico com base em agente. Neste passo a passo, você pode criar um agente que lê dados de um arquivo de texto de forma assíncrona. O aplicativo usa o algoritmo de soma de verificação Adler-32 para calcular a soma de verificação do conteúdo do arquivo.
 
@@ -58,7 +58,7 @@ Esta seção mostra como criar um aplicativo de console do Visual C++ que faz re
 
 1. Verifique se que o aplicativo foi criado com êxito pela criação e executá-lo. Para compilar o aplicativo, na **construir** menu, clique em **compilar solução**. Se o aplicativo for compilado com êxito, execute o aplicativo clicando **iniciar depuração** sobre o **depurar** menu.
 
-[[Superior](#top)]
+[[Top](#top)]
 
 ##  <a name="createagentclass"></a> Criando a classe file_reader
 
@@ -106,7 +106,7 @@ O exemplo a seguir mostra todo o conteúdo do file_reader.h.
 
 [!code-cpp[concrt-basic-agent#7](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_8.h)]
 
-[[Superior](#top)]
+[[Top](#top)]
 
 ##  <a name="useagentclass"></a> Usando a classe file_reader no aplicativo
 
@@ -152,7 +152,7 @@ O exemplo a seguir mostra o arquivo BasicAgent.cpp completo.
 
 [!code-cpp[concrt-basic-agent#16](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_17.cpp)]
 
-[[Superior](#top)]
+[[Top](#top)]
 
 ## <a name="sample-input"></a>Entrada de Exemplo
 
@@ -180,7 +180,7 @@ Sempre chamar o [concurrency::agent:: feito](reference/agent-class.md#done) mét
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Para obter outro exemplo de um aplicativo baseado em agente, consulte [instruções passo a passo: usando join para evitar Deadlock](../../parallel/concrt/walkthrough-using-join-to-prevent-deadlock.md).
+Para obter outro exemplo de um aplicativo baseado em agente, consulte [passo a passo: Usando join para evitar Deadlock](../../parallel/concrt/walkthrough-using-join-to-prevent-deadlock.md).
 
 ## <a name="see-also"></a>Consulte também
 
@@ -188,5 +188,4 @@ Para obter outro exemplo de um aplicativo baseado em agente, consulte [instruç�
 [Blocos de mensagens assíncronos](../../parallel/concrt/asynchronous-message-blocks.md)<br/>
 [Funções de transmissão de mensagem](../../parallel/concrt/message-passing-functions.md)<br/>
 [Estruturas de dados de sincronização](../../parallel/concrt/synchronization-data-structures.md)<br/>
-[Instruções passo a passo: usando unir para evitar deadlock](../../parallel/concrt/walkthrough-using-join-to-prevent-deadlock.md)
-
+[Passo a passo: Usando join para evitar deadlock](../../parallel/concrt/walkthrough-using-join-to-prevent-deadlock.md)

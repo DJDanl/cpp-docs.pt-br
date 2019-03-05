@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - concurrent_unordered_map class
 ms.assetid: b2d879dd-87ef-4af9-a266-a5443fd538b8
-ms.openlocfilehash: 50868d020224e7bade9766f7307bfcc46ce4be47
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.openlocfilehash: 43ad777b0dfb1285a82d662f37329c079410c78d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657585"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284340"
 ---
 # <a name="concurrentunorderedmap-class"></a>Classe concurrent_unordered_map
 
@@ -189,7 +189,7 @@ const_iterator cend() const;
 
 Um iterador const para o local que sucede o último elemento no contêiner simultâneo.
 
-##  <a name="clear"></a> Limpar
+##  <a name="clear"></a> clear
 
 Apaga todos os elementos no contêiner simultâneo. Essa função não é seguro de simultaneidade.
 
@@ -247,10 +247,10 @@ A função de comparação de igualdade para esse mapa não ordenado.
 *_Allocator*<br/>
 O alocador para esse mapa não ordenado.
 
-*Iniciar*<br/>
+*_Begin*<br/>
 A posição do primeiro elemento no intervalo de elementos a serem copiados.
 
-*Encerrar*<br/>
+*_End*<br/>
 A posição do primeiro elemento além do intervalo de elementos a serem copiados.
 
 *_Umap*<br/>
@@ -509,7 +509,7 @@ O número máximo de elementos que podem ser inseridas nesse contêiner simultâ
 
 Esse valor de limite superior, na verdade, pode ser maior do que o que o contêiner, na verdade, pode conter.
 
-##  <a name="operator_at"></a> operador]
+##  <a name="operator_at"></a> operator[]
 
 Localiza ou insere um elemento com a chave especificada. Esse método é seguro em simultaneidade.
 
@@ -538,7 +538,7 @@ Se o valor de chave do argumento não for encontrado, ele será inserido juntame
 
 Ao usar `operator[]` para inserir elementos, a referência retornada não indica se uma inserção está alterando um elemento preexistente ou criando outro. As funções de membro `find` e [inserir](#insert) pode ser usado para determinar se um elemento com uma chave especificada já está presente antes de uma inserção.
 
-##  <a name="operator_eq"></a> operador =
+##  <a name="operator_eq"></a> operator=
 
 Atribui o conteúdo de outro `concurrent_unordered_map` objeto para esse outro. Esse método não é seguro em simultaneidade.
 
@@ -580,7 +580,7 @@ A função membro altera o número de buckets para que seja pelo menos `_Buckets
 
 Ele gera uma [out_of_range](../../../standard-library/out-of-range-class.md) exceção se o número de buckets é inválido (0 ou maior que o número máximo de buckets).
 
-##  <a name="size"></a> Tamanho
+##  <a name="size"></a> size
 
 Retorna o número de elementos neste contêiner simultâneas. Esse método é seguro de simultaneidade.
 
@@ -596,7 +596,7 @@ O número de itens no contêiner.
 
 Na presença de inserções simultâneas, o número de elementos no contêiner simultâneo pode alterar imediatamente após chamar essa função, antes que o valor retornado ainda seja lido.
 
-##  <a name="swap"></a> troca
+##  <a name="swap"></a> swap
 
 Troca o conteúdo de dois `concurrent_unordered_map` objetos. Esse método não é seguro em simultaneidade.
 
@@ -748,10 +748,10 @@ size_type unsafe_erase(
 *_Where*<br/>
 A posição do iterador qual apagar.
 
-*Iniciar*<br/>
+*_Begin*<br/>
 A posição do primeiro elemento no intervalo de elementos a ser apagado.
 
-*Encerrar*<br/>
+*_End*<br/>
 A posição do primeiro elemento além do intervalo de elementos a ser apagado.
 
 *KVal*<br/>
@@ -783,4 +783,3 @@ O número máximo de buckets neste contêiner.
 
 [Namespace de simultaneidade](concurrency-namespace.md)<br/>
 [Contêineres e objetos em paralelo](../../../parallel/concrt/parallel-containers-and-objects.md)
-

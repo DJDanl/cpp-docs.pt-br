@@ -1,18 +1,18 @@
 ---
-title: Como converter uma faixa de opções MFC existente em um recurso da faixa de opções
+title: 'Como: Converter uma faixa de opções MFC existente em um recurso de faixa de opções'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ribbon resource, converting from an MFC ribbon
 - MFC ribbon, converting to a ribbon resource
 ms.assetid: 324b7ff6-58f9-4691-96a9-9836a79d0fb6
-ms.openlocfilehash: 627c50758b10ad18e45fc1432340c0eb2dad7b19
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: b4265a7bf3ebe2c4926f21572d802b75bd525990
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524346"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295481"
 ---
-# <a name="how-to-convert-an-existing-mfc-ribbon-to-a-ribbon-resource"></a>Como converter uma faixa de opções MFC existente em um recurso da faixa de opções
+# <a name="how-to-convert-an-existing-mfc-ribbon-to-a-ribbon-resource"></a>Como: Converter uma faixa de opções MFC existente em um recurso de faixa de opções
 
 Recursos da faixa de opções são mais fáceis de visualizar, modificar e manter que faixas de opções manualmente codificadas. Este tópico descreve como converter uma faixa de opções manualmente codificada em um projeto MFC em um recurso de faixa de opções.
 
@@ -47,4 +47,3 @@ Você deve ter um projeto existente do MFC que tem o código que usa as classes 
 ## <a name="see-also"></a>Consulte também
 
 [Designer da faixa de opções (MFC)](../mfc/ribbon-designer-mfc.md)
-

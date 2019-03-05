@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows 8.x apps, creating C++ async operations
 - Creating C++ async operations
 ms.assetid: a57cecf4-394a-4391-a957-1d52ed2e5494
-ms.openlocfilehash: 59630c7702dffc4b606943e174e44fdba6aecfe8
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 0284970d57cf4cde65b4fb77338423cb81d5d54b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176946"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302267"
 ---
 # <a name="creating-asynchronous-operations-in-c-for-uwp-apps"></a>Criando operações assíncronas em C++ para aplicativos UWP
 
@@ -60,7 +60,7 @@ Representa uma ação assíncrona que relata o progresso.
 [Windows::Foundation::IAsyncOperation\<TResult>](https://msdn.microsoft.com/library/windows/apps/br206598.aspx)<br/>
 Representa uma operação assíncrona que retorna um resultado.
 
-[Windows::Foundation::IAsyncOperationWithProgress\<TResult, TProgress >](https://msdn.microsoft.com/library/windows/apps/br206594.aspx)<br/>
+[Windows::Foundation::IAsyncOperationWithProgress\<TResult, TProgress>](https://msdn.microsoft.com/library/windows/apps/br206594.aspx)<br/>
 Representa uma operação assíncrona que retorna um resultado e relatórios de progresso.
 
 A noção de um *ação* significa que a tarefa assíncrona não produz um valor (pense em uma função que retorna `void`). A noção de um *operação* significa que a tarefa assíncrona produzir um valor. A noção de *andamento* significa que a tarefa possa relatar mensagens de andamento ao chamador. JavaScript, o .NET Framework e Visual C++ fornece sua própria maneira de criar instâncias dessas interfaces para uso pelo limite da ABI. Para o Visual C++, a PPL fornece o [Concurrency:: create_async](reference/concurrency-namespace-functions.md#create_async) função. Essa função cria uma operação que representa a conclusão de uma tarefa ou ação assíncrona do tempo de execução do Windows. O `create_async` função usa uma função de trabalho (normalmente uma expressão lambda), cria internamente uma `task` objeto e o encapsula em uma das quatro interfaces de tempo de execução do Windows assíncronas de tarefa.
@@ -70,7 +70,7 @@ A noção de um *ação* significa que a tarefa assíncrona não produz um valor
 
 O tipo de retorno de `create_async` é determinado pelo tipo dos seus argumentos. Por exemplo, se sua função de trabalho não retorna um valor e não informam o andamento, `create_async` retorna `IAsyncAction`. Se sua função de trabalho não retorna um valor e também relata o andamento, `create_async` retorna `IAsyncActionWithProgress`. Para relatar o andamento, forneça uma [Concurrency:: progress_reporter](../../parallel/concrt/reference/progress-reporter-class.md) objeto como parâmetro para sua função de trabalho. A capacidade de relatar o progresso permite que você relate que quantidade de trabalho foi executada e qual o valor ainda permanece (por exemplo, como uma porcentagem). Ele também permite relatar os resultados conforme eles ficam disponíveis.
 
-As interfaces `IAsyncAction`, `IAsyncActionWithProgress<TProgress>`, `IAsyncOperation<TResult>` e `IAsyncActionOperationWithProgress<TProgress, TProgress>` fornecem um método `Cancel` que permite cancelar a operação assíncrona. O `task` classe funciona com tokens de cancelamento. Quando você usa um token de cancelamento para cancelar o trabalho, o tempo de execução não inicia um novo trabalho assina esse token. Trabalho que já está ativo pode monitorar seu token de cancelamento e interromper quando for possível. Esse mecanismo é descrito mais detalhadamente no documento [cancelamento no PPL](cancellation-in-the-ppl.md). Você pode conectar o cancelamento da tarefa com o tempo de execução do Windows`Cancel` métodos de duas maneiras. Primeiro, você pode definir a função de trabalho que você passa para `create_async` tirar uma [cancellation_token](../../parallel/concrt/reference/cancellation-token-class.md) objeto. Quando o `Cancel` método é chamado, esse token de cancelamento é cancelado, e as regras de cancelamento normais são aplicadas subjacente `task` objeto compatível com o `create_async` chamar. Se você não fornecer um objeto `cancellation_token`, o objeto `task` subjacente define um de forma implícita. Defina um objeto `cancellation_token` quando você precisa responder de forma cooperativa ao cancelamento na sua função de trabalho. A seção [exemplo: controlando a execução em um App do tempo de execução do Windows com C++ e XAML](#example-app) mostra um exemplo de como executar o cancelamento em um aplicativo da plataforma Universal do Windows (UWP) com c# e XAML que usa um C++ personalizado de tempo de execução do Windows componente.
+As interfaces `IAsyncAction`, `IAsyncActionWithProgress<TProgress>`, `IAsyncOperation<TResult>` e `IAsyncActionOperationWithProgress<TProgress, TProgress>` fornecem um método `Cancel` que permite cancelar a operação assíncrona. O `task` classe funciona com tokens de cancelamento. Quando você usa um token de cancelamento para cancelar o trabalho, o tempo de execução não inicia um novo trabalho assina esse token. Trabalho que já está ativo pode monitorar seu token de cancelamento e interromper quando for possível. Esse mecanismo é descrito mais detalhadamente no documento [cancelamento no PPL](cancellation-in-the-ppl.md). Você pode conectar o cancelamento da tarefa com o tempo de execução do Windows`Cancel` métodos de duas maneiras. Primeiro, você pode definir a função de trabalho que você passa para `create_async` tirar uma [cancellation_token](../../parallel/concrt/reference/cancellation-token-class.md) objeto. Quando o `Cancel` método é chamado, esse token de cancelamento é cancelado, e as regras de cancelamento normais são aplicadas subjacente `task` objeto compatível com o `create_async` chamar. Se você não fornecer um objeto `cancellation_token`, o objeto `task` subjacente define um de forma implícita. Defina um objeto `cancellation_token` quando você precisa responder de forma cooperativa ao cancelamento na sua função de trabalho. A seção [exemplo: Controlando a execução em um App do tempo de execução do Windows com C++ e XAML](#example-app) mostra um exemplo de como executar o cancelamento em um aplicativo da plataforma Universal do Windows (UWP) com C# e XAML que usa um componente C++ do tempo de execução Windows personalizado.
 
 > [!WARNING]
 >  Em uma cadeia de continuação de tarefas, sempre Limpar estado e, em seguida, chame [concurrency::cancel_current_task](reference/concurrency-namespace-functions.md#cancel_current_task) quando o token de cancelamento é cancelado. Se você retornar antecipadamente em vez de chamar `cancel_current_task`, as transições de operação para o estado concluído, em vez do estado cancelado.
@@ -90,7 +90,7 @@ O exemplo a seguir mostra várias maneiras de criar um `IAsyncAction` objeto que
 
 [!code-cpp[concrt-windowsstore-primes#100](../../parallel/concrt/codesnippet/cpp/creating-asynchronous-operations-in-cpp-for-windows-store-apps_1.cpp)]
 
-##  <a name="example-component"></a> Exemplo: Criando um componente de tempo de execução do Windows C++ e consumindo-o em c#
+##  <a name="example-component"></a> Exemplo: Criando um componente de tempo de execução do Windows C++ e consumindo-o deC#
 
 Considere um aplicativo que usa XAML e c# para definir a interface do usuário e um componente de tempo de execução do C++ Windows para executar operações de computação intensiva. Neste exemplo, o componente C++ calcula os números em um determinado intervalo são primo. Para ilustrar as diferenças entre as quatro interfaces de tarefa assíncrona do tempo de execução do Windows, começar, no Visual Studio, criando uma **solução em branco** e nomeá-lo `Primes`. Em seguida, adicione à solução um **componente de tempo de execução do Windows** do projeto e nomeá-lo `PrimesLibrary`. Adicione o seguinte código para o arquivo de cabeçalho gerado do C++ (Este exemplo renomeia Class1.h para Primes.h). Cada `public` método define uma das quatro interfaces assíncronas. Os métodos que retornam um valor retornam um [Windows::Foundation::Collections::IVector\<int >](https://msdn.microsoft.com/library/windows/apps/br206631.aspx) objeto. Os métodos que informam o andamento produzem `double` valores que definem a porcentagem do trabalho geral que foi concluída.
 

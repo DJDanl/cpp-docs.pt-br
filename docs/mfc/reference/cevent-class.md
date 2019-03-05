@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CEvent [MFC], SetEvent
 - CEvent [MFC], Unlock
 ms.assetid: df676042-ce27-4702-800a-e73ff4f44395
-ms.openlocfilehash: 883f3065c9d15ad793e6c0d548b911f10d166c0a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d7731c87c6d6b0ebdec9a0c72c24b04334aa0662
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50667890"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300265"
 ---
 # <a name="cevent-class"></a>Classe CEvent
 
@@ -66,7 +66,7 @@ Um método alternativo para usar `CEvent` objetos é adicionar uma variável do 
 
 Para acessar um recurso controlado por um `CEvent` objeto dessa maneira, primeiro crie uma variável do tipo [CSingleLock](../../mfc/reference/csinglelock-class.md) ou o tipo [CMultiLock](../../mfc/reference/cmultilock-class.md) no método de acesso do recurso. Em seguida, chame o `Lock` método do objeto de bloqueio (por exemplo, [CMultiLock::Lock](../../mfc/reference/cmultilock-class.md#lock)). Neste ponto, o thread será obter acesso ao recurso, aguarde até que o recurso a ser lançado e obter acesso ou aguarde até que o recurso seja liberado, tempo limite e não conseguir acessar o recurso. Em qualquer caso, o recurso tiver sido acessado de forma thread-safe. Para liberar o recurso, chame `SetEvent` sinalizar o objeto de evento e, em seguida, usar o `Unlock` método do objeto de bloqueio (por exemplo, [CMultiLock::Unlock](../../mfc/reference/cmultilock-class.md#unlock)), ou permitir que o objeto de bloqueio estão fora de escopo.
 
-Para obter mais informações sobre como usar `CEvent` objetos, consulte [Multithreading: como usar as Classes de sincronização](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).
+Para obter mais informações sobre como usar `CEvent` objetos, consulte [Multithreading: Como usar as Classes de sincronização](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).
 
 ## <a name="example"></a>Exemplo
 
@@ -195,4 +195,3 @@ Essa função de membro é chamada por threads que atualmente possuem um evento 
 
 [Classe CSyncObject](../../mfc/reference/csyncobject-class.md)<br/>
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)
-

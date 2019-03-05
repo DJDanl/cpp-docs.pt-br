@@ -1,5 +1,5 @@
 ---
-title: 'Exceções: obtendo e excluindo exceções'
+title: 'Exceções: Obtendo e excluindo exceções'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - exceptions [MFC], deleting
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - catch blocks [MFC], catching and deleting exceptions
 - execution [MFC], returns from within catch block
 ms.assetid: 7c233ff0-89de-4de0-a68a-9e9cdb164311
-ms.openlocfilehash: 370062d3e17127e711f2b4356cbb133a6c1d20b9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 511850c3c17a4eb70529202f4b0c2b36132fc8ff
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50625896"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57287198"
 ---
-# <a name="exceptions-catching-and-deleting-exceptions"></a>Exceções: obtendo e excluindo exceções
+# <a name="exceptions-catching-and-deleting-exceptions"></a>Exceções: Obtendo e excluindo exceções
 
 As instruções e os exemplos a seguir mostram como detectar e eliminar as exceções. Para obter mais informações sobre o **tente**, **catch**, e **lançar** palavras-chave, consulte [tratamento de exceções de C++](../cpp/cpp-exception-handling.md).
 
@@ -54,4 +54,3 @@ Para obter mais informações, consulte [exceções: Convertendo de Macros de ex
 ## <a name="see-also"></a>Consulte também
 
 [Tratamento de Exceção](../mfc/exception-handling-in-mfc.md)
-

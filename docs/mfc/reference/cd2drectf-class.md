@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CD2DRectF [MFC], CD2DRectF
 - CD2DRectF [MFC], IsNull
 ms.assetid: 87c12d87-9d18-4a19-ba14-0f51d6b6835a
-ms.openlocfilehash: fad906510a111a2132d590d7c221d2484645f044
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8e5c22fe15ce0d930f81dd16673927d5299bf630
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50591198"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290827"
 ---
 # <a name="cd2drectf-class"></a>Classe CD2DRectF
 
@@ -75,7 +75,7 @@ CD2DRectF(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Rect*<br/>
+*rect*<br/>
 retângulo de origem
 
 *fLeft*<br/>
@@ -84,7 +84,7 @@ coordenada esquerda do código-fonte
 *fTop*<br/>
 coordenada superior do código-fonte
 
-*baterão*<br/>
+*fRight*<br/>
 origem de coordenada direita
 
 *fBottom*<br/>
@@ -102,7 +102,7 @@ BOOL IsNull() const;
 
 TRUE se a parte superior, esquerda, inferior e valores corretos do retângulo são todas iguais a 0; Caso contrário, FALSE.
 
-##  <a name="operator_crect"></a>  CD2DRectF::Operator CRect
+##  <a name="operator_crect"></a>  CD2DRectF::operator CRect
 
 Converte CD2DRectF objeto CRect.
 

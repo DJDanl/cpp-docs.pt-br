@@ -31,12 +31,12 @@ helpviewer_keywords:
 - CComModule class
 - DLL modules [C++], ATL
 ms.assetid: f5face2c-8fd8-40e6-9ec3-54ab74701769
-ms.openlocfilehash: 73d25f15aaeed15e3972c48e682c70f0b8c505c8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6d95460902c44ff058a4c7b90c810ab44489d952
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50589443"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298922"
 ---
 # <a name="ccommodule-class"></a>Classe CComModule
 
@@ -61,13 +61,13 @@ class CComModule : public _ATL_MODULE
 |[CComModule::GetModuleInstance](#getmoduleinstance)|Retorna `m_hInst`.|
 |[CComModule::GetResourceInstance](#getresourceinstance)|Retorna `m_hInstResource`.|
 |[CComModule::GetTypeLibInstance](#gettypelibinstance)|Retorna `m_hInstTypeLib`.|
-|[CComModule](#init)|Inicializa os membros de dados.|
+|[CComModule::Init](#init)|Inicializa os membros de dados.|
 |[CComModule::RegisterClassHelper](#registerclasshelper)|Insere um registro de classe padrão de um objeto no registro do sistema.|
 |[CComModule::RegisterClassObjects](#registerclassobjects)|Registra o objeto de classe. Para os EXEs.|
 |[CComModule::RegisterServer](#registerserver)|Atualiza o registro do sistema para cada objeto no mapa de objetos.|
 |[CComModule::RegisterTypeLib](#registertypelib)|Registra uma biblioteca de tipos.|
 |[CComModule::RevokeClassObjects](#revokeclassobjects)|Revoga o objeto de classe. Para os EXEs.|
-|[CComModule:: Term](#term)|Libera os membros de dados.|
+|[CComModule::Term](#term)|Libera os membros de dados.|
 |[CComModule::UnregisterClassHelper](#unregisterclasshelper)|Remove o registro de classe padrão de um objeto do registro do sistema.|
 |[CComModule::UnregisterServer](#unregisterserver)|Cancela o registro de cada objeto no mapa de objetos.|
 |[CComModule::UpdateRegistryClass](#updateregistryclass)|Registra ou cancela o registro de registro de classe padrão do objeto.|
@@ -201,7 +201,7 @@ Um HINSTANCE.
 
 Retorna o [m_hInstTypeLib](#m_hinsttypelib) membro de dados.
 
-##  <a name="init"></a>  CComModule
+##  <a name="init"></a>  CComModule::Init
 
 A partir do ATL 7.0 `CComModule` é obsoleto: ver [Classes de módulo ATL](../../atl/atl-module-classes.md) para obter mais detalhes.
 
@@ -461,7 +461,7 @@ Um valor padrão de HRESULT.
 
 Remove o objeto de classe. Este método só está disponível para os EXEs.
 
-##  <a name="term"></a>  CComModule:: Term
+##  <a name="term"></a>  CComModule::Term
 
 A partir do ATL 7.0 `CComModule` é obsoleto: ver [Classes de módulo ATL](../../atl/atl-module-classes.md) para obter mais detalhes.
 
@@ -576,7 +576,7 @@ Uma cadeia de caracteres que contém a descrição do objeto.
 *dwFlags*<br/>
 Especifica o modelo de threading para entrar no registro. Os valores possíveis são THREADFLAGS_APARTMENT, THREADFLAGS_BOTH ou AUTPRXFLAG.
 
-*bRegistre-se participar*<br/>
+*bRegister*<br/>
 Indica se o objeto deve ser registrado.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -617,7 +617,7 @@ virtual HRESULT UpdateRegistryFromResourceD(
 *nResID*<br/>
 [in] Uma ID de recurso.
 
-*bRegistre-se participar*<br/>
+*bRegister*<br/>
 [in] Indica se o objeto deve ser registrado.
 
 *pMapEntries*<br/>
@@ -667,7 +667,7 @@ virtual HRESULT UpdateRegistryFromResourceS(
 *nResID*<br/>
 [in] Uma ID de recurso.
 
-*bRegistre-se participar*<br/>
+*bRegister*<br/>
 [in] Indica se o script de recurso deve ser registrado.
 
 *pMapEntries*<br/>

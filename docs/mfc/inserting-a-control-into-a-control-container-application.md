@@ -1,18 +1,18 @@
 ---
-title: 'Contêineres de controle ActiveX: inserindo um controle em um aplicativo de contêiner de controle'
+title: 'Contêineres de controle ActiveX: Inserindo um controle em um aplicativo de contêiner de controle'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ActiveX control containers [MFC], inserting controls
 - ActiveX controls [MFC], adding to projects
 ms.assetid: bbb617ff-872f-43d8-b4d6-c49adb16b148
-ms.openlocfilehash: 2ca503119df955e8b76f6f8c131421f3e2d85652
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5f2b964d337ee882bff8acd904ad2fcf64879f88
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50541369"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283625"
 ---
-# <a name="activex-control-containers-inserting-a-control-into-a-control-container-application"></a>Contêineres de controle ActiveX: inserindo um controle em um aplicativo de contêiner de controle
+# <a name="activex-control-containers-inserting-a-control-into-a-control-container-application"></a>Contêineres de controle ActiveX: Inserindo um controle em um aplicativo de contêiner de controle
 
 Antes de poder acessar um controle ActiveX de um aplicativo de contêiner do controle ActiveX, você deve adicionar o controle ActiveX para o aplicativo de contêiner usando o [Inserir controle ActiveX](../windows/insert-activex-control-dialog-box.md) caixa de diálogo.
 
@@ -25,4 +25,3 @@ Depois de adicionar a variável de membro uma classe, conhecida como uma classe 
 ## <a name="see-also"></a>Consulte também
 
 [Contêineres de controle ActiveX](../mfc/activex-control-containers.md)
-

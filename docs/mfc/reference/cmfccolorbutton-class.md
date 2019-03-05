@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CMFCColorButton [MFC], UpdateColor
 - CMFCColorButton [MFC], m_bEnabledInCustomizeMode
 ms.assetid: 9fdf34ae-4cc5-4c5e-9d89-1c50e8a73699
-ms.openlocfilehash: 97012e1d8cdc36f080245243c5f099b340225fc9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 05a4ad17feea20c67069e65c5c5df43d543e2377
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50533855"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293479"
 ---
 # <a name="cmfccolorbutton-class"></a>Classe CMFCColorButton
 
@@ -159,10 +159,10 @@ void EnableAutomaticButton(
 *lpszLabel*<br/>
 [in] Especifica o texto do botão automático.
 
-*automáticaCor*<br/>
+*colorAutomatic*<br/>
 [in] Um valor RGB que especifica a cor do padrão do botão automático.
 
-*bAtivar*<br/>
+*bEnable*<br/>
 [in] Especifica se o botão automático está habilitado ou desabilitado.
 
 ### <a name="remarks"></a>Comentários
@@ -186,7 +186,7 @@ void EnableOtherButton(
 *bAltColorDlg*<br/>
 [in] Especifica se o [CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md) a caixa de diálogo de cor do sistema ou de caixa de diálogo é aberta quando o usuário clica no botão.
 
-*bAtivar*<br/>
+*bEnable*<br/>
 [in] Especifica se o botão "other" está habilitado ou desabilitado.
 
 ### <a name="remarks"></a>Comentários
@@ -263,7 +263,7 @@ virtual void OnDraw(
 *pDC*<br/>
 [in] Aponta para o contexto de dispositivo que é usada para renderizar a imagem do botão.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Um retângulo que delimita o botão.
 
 *uiState*<br/>
@@ -355,7 +355,7 @@ void SetColor(COLORREF color);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Cor*<br/>
+*color*<br/>
 [in] Um valor RGB.
 
 ### <a name="remarks"></a>Comentários
@@ -372,7 +372,7 @@ static void SetColorName(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Cor*<br/>
+*color*<br/>
 [in] O valor da cor RGB.
 
 *strName*<br/>
@@ -465,7 +465,7 @@ virtual void UpdateColor(COLORREF color);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Cor*<br/>
+*color*<br/>
 [in] Cor selecionada pelo usuário.
 
 ### <a name="remarks"></a>Comentários

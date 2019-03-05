@@ -94,12 +94,12 @@ helpviewer_keywords:
 - CEdit [MFC], ShowBalloonTip
 - CEdit [MFC], Undo
 ms.assetid: b1533c30-7f10-4663-88d3-8b7f2c9f7024
-ms.openlocfilehash: f18866dca3610db275c629bbb2ac885c21cbdcb8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6af054ea27233de2cc3b551bbec69c0ab3b4be9e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50455803"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289956"
 ---
 # <a name="cedit-class"></a>Classe CEdit
 
@@ -181,13 +181,13 @@ Se você quiser manipular mensagens de notificação do Windows enviadas por um 
 
 Cada entrada de mapa de mensagem usa o seguinte formato:
 
-  **On _**_notificação_**(** _id_**,** _memberFxn_ **)**
+  **ON_**_NOTIFICATION_**(** _id_**,** _memberFxn_ **)**
 
 em que `id` Especifica a ID de janela filho do controle de edição, enviando a notificação e `memberFxn` é o nome da função de membro pai que você tenha escrito para manipular a notificação.
 
 O protótipo de função do pai é o seguinte:
 
-**afx_msg** memberFxn void **();**
+**afx_msg** void memberFxn **( );**
 
 A seguir está uma lista de entradas de mapa de mensagem potenciais e uma descrição dos casos em que eles seriam enviados ao pai:
 
@@ -348,7 +348,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Especifica o estilo do controle de edição. Aplicar qualquer combinação de [Editar estilos](styles-used-by-mfc.md#edit-styles) ao controle.
 
-*Rect*<br/>
+*rect*<br/>
 Especifica o tamanho e a posição do controle de edição. Pode ser um `CRect` objeto ou `RECT` estrutura.
 
 *pParentWnd*<br/>
@@ -605,7 +605,7 @@ int GetLine(
 *nIndex*<br/>
 Especifica o número de linha para recuperar de várias linhas de controle de edição. Números de linha são baseados em zero; um valor de 0 especifica a primeira linha. Esse parâmetro é ignorado por um controle de edição de linha única.
 
-*lpszbuffer é*<br/>
+*lpszBuffer*<br/>
 Aponta para o buffer que recebe uma cópia da linha. A primeira palavra do buffer deve especificar o número máximo de caracteres que podem ser copiados para o buffer.
 
 *nMaxLength*<br/>
@@ -854,7 +854,7 @@ int LineIndex(int nLine = -1) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*nLinha*<br/>
+*nLine*<br/>
 Contém o valor de índice para a linha desejada no texto do controle de edição ou -1. Se *nLinha* é -1, ele especifica a linha atual, ou seja, a linha que contém o cursor.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -883,7 +883,7 @@ int LineLength(int nLine = -1) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*nLinha*<br/>
+*nLine*<br/>
 O índice baseado em zero de um caractere na linha cujo comprimento deve ser recuperado. O valor padrão é -1.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1117,7 +1117,7 @@ void SetLimitText(UINT nMax);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Nmáx*<br/>
+*nMax*<br/>
 O novo limite de texto, em caracteres.
 
 ### <a name="remarks"></a>Comentários

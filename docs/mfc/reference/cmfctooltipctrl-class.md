@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CMFCToolTipCtrl [MFC], SetLocation
 - CMFCToolTipCtrl [MFC], SetParams
 ms.assetid: 9fbfcfb1-a8ab-417f-ae29-9a9ca85ee58f
-ms.openlocfilehash: e8ab9485cb2613e88ef136b3c470af9915bf7725
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aaf9d9570906b7886d8ec78575c39db5d62099f7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50564860"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293193"
 ---
 # <a name="cmfctooltipctrl-class"></a>Classe CMFCToolTipCtrl
 
@@ -208,7 +208,7 @@ virtual void OnDrawBorder(
 *pDC*<br/>
 [in] Ponteiro para um contexto de dispositivo.
 
-*Rect*<br/>
+*rect*<br/>
 [in] O retângulo delimitador da dica de ferramenta.
 
 *clrLine*<br/>
@@ -279,7 +279,7 @@ virtual CSize OnDrawLabel(
 *pDC*<br/>
 [in] Um ponteiro para um contexto de dispositivo.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Retângulo delimitador da área de rótulo.
 
 *bCalcOnly*<br/>
@@ -313,7 +313,7 @@ virtual void OnDrawSeparator(
 *x1*<br/>
 [in] Coordenada horizontal da extremidade esquerda do separador.
 
-*X2*<br/>
+*x2*<br/>
 [in] Coordenada horizontal da extremidade direita do separador.
 
 *Y*<br/>
@@ -342,7 +342,7 @@ virtual void OnFillBackground(
 *pDC*<br/>
 [in] Um ponteiro para um contexto de dispositivo.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Especifica o retângulo delimitador da área a ser preenchida.
 
 *clrText*<br/>

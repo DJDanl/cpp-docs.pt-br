@@ -7,12 +7,12 @@ helpviewer_keywords:
 - DAO (Data Access Objects), termination
 - DAO (Data Access Objects), initialization
 ms.assetid: a7edf31c-e7c2-4f3e-aada-63c3e48781da
-ms.openlocfilehash: ff924f0e0d599d447ef7dea0039de788d388d759
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8ad0c1df2f5b6a7b1b48d2db119b04e4b3234f10
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50589625"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297626"
 ---
 # <a name="dao-database-engine-initialization-and-termination"></a>Inicialização e término do mecanismo de banco de dados DAO
 
@@ -44,7 +44,7 @@ Para obter informações relacionadas e para obter um exemplo de chamada `AfxDao
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdao.h
+  **Header** afxdao.h
 
 ##  <a name="afxdaoterm"></a>  AfxDaoTerm
 
@@ -65,7 +65,7 @@ Para obter informações relacionadas, consulte [54 de observação técnica](..
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdao.h
+  **Header** afxdao.h
 
 ## <a name="see-also"></a>Consulte também
 

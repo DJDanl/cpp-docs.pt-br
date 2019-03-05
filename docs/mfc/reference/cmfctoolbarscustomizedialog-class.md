@@ -24,18 +24,18 @@ helpviewer_keywords:
 - CMFCToolBarsCustomizeDialog [MFC], OnInitDialog
 - CMFCToolBarsCustomizeDialog [MFC], PostNcDestroy
 ms.assetid: 78e2cddd-4f13-4097-afc3-1ad646a113f1
-ms.openlocfilehash: 026c7392c3eb93b37a712059939683e3e0ab852c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e4aaede3eb2d5c922c196e2bdfbbe533c4e65e47
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50628989"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295026"
 ---
 # <a name="cmfctoolbarscustomizedialog-class"></a>Classe CMFCToolBarsCustomizeDialog
 
 Uma caixa de diálogo de guia sem-modo ( [classe CPropertySheet](../../mfc/reference/cpropertysheet-class.md)) que permite ao usuário personalizar as barras de ferramentas, menus, atalhos de teclado, ferramentas definidas pelo usuário e o estilo visual em um aplicativo. Normalmente, o usuário acessa esta caixa de diálogo, selecionando **personalizar** da **ferramentas** menu.
 
-O **personalizar** caixa de diálogo tem seis guias: **comandos**, **barras de ferramentas**, **ferramentas**, **teclado**,  **Menu**, e **opções**.
+O **personalizar** caixa de diálogo tem seis guias: **Comandos**, **barras de ferramentas**, **ferramentas**, **teclado**, **Menu**, e **opções**.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -137,7 +137,7 @@ void AddButton(
 *uiCategoryId*<br/>
 [in] Especifica a ID da categoria para inserir o botão.
 
-*Botão*<br/>
+*button*<br/>
 [in] Especifica o botão a ser inserido.
 
 *iInsertBefore*<br/>
@@ -357,7 +357,7 @@ void EnableUserDefinedToolbars(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>Parâmetros
 
-*bAtivar*<br/>
+*bEnable*<br/>
 [in] TRUE para habilitar as barras de ferramentas definidas pelo usuário; FALSE para desabilitar as barras de ferramentas.
 
 ### <a name="remarks"></a>Comentários
@@ -716,7 +716,7 @@ void ReplaceButton(
 *uiCmd*<br/>
 [in] Especifica o comando do botão a ser substituído.
 
-*Botão*<br/>
+*button*<br/>
 [in] Um **const** referência para o objeto de botão de barra de ferramentas que substitui o antigo botão.
 
 ### <a name="remarks"></a>Comentários

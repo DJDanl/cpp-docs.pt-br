@@ -1,15 +1,15 @@
 ---
-title: 'Instruções passo a passo: multiplicação de matrizes'
+title: 'Passo a passo: Multiplicação de matriz'
 ms.date: 11/19/2018
 ms.assetid: 61172e8b-da71-4200-a462-ff3a908ab0cf
-ms.openlocfilehash: ae86ff5a111348404616c8bb4fecd3bf22afc90c
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 597ba0f47c7b081f62c82bf8e1ca01c286d35140
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176153"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300967"
 ---
-# <a name="walkthrough-matrix-multiplication"></a>Instruções passo a passo: multiplicação de matrizes
+# <a name="walkthrough-matrix-multiplication"></a>Passo a passo: Multiplicação de matriz
 
 Este passo a passo demonstra como usar o C++ AMP para acelerar a execução de multiplicação de matriz. Dois algoritmos são apresentados, sem lado a lado e outra com lado a lado.
 
@@ -296,4 +296,4 @@ void main() {
 ## <a name="see-also"></a>Consulte também
 
 [C++ AMP (C++ Accelerated Massive Parallelism)](../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)<br/>
-[Passo a passo: depurando um aplicativo C++ AMP](../../parallel/amp/walkthrough-debugging-a-cpp-amp-application.md)
+[Passo a passo: Depurando um aplicativo C++ AMP](../../parallel/amp/walkthrough-debugging-a-cpp-amp-application.md)

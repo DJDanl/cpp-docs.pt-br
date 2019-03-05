@@ -16,12 +16,12 @@ helpviewer_keywords:
 - collection classes [MFC], duplicates allowed
 - collection classes [MFC], shapes
 ms.assetid: a82188cd-443f-40d8-a244-edf292a53db4
-ms.openlocfilehash: 2c8cb323feb44618909895a4ee536ad3b7832173
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c72a57385b0036d98629d1ee24111500b9d2f8ad
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50446729"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288032"
 ---
 # <a name="recommendations-for-choosing-a-collection-class"></a>Recomendações para escolher uma classe de coleção
 
@@ -59,7 +59,7 @@ A tabela a seguir, [características das Classes de coleção MFC](#_core_charac
 
 ### <a name="_core_characteristics_of_mfc_collection_classes"></a>  Características das Classes de coleção MFC
 
-|Classe|Usa C++<br /><br /> modelos|Pode ser<br /><br /> serializado|Pode ser<br /><br /> despejados|É<br /><br /> segurança de tipos|
+|Classe|Usa C++<br /><br /> modelos|Pode ser<br /><br /> serializado|Pode ser<br /><br /> despejados|É<br /><br /> type-safe|
 |-----------|------------------------------|---------------------------|-----------------------|-----------------------|
 |`CArray`|Sim|Sim 1|Sim 1|Não|
 |`CByteArray`|Não|Sim|Sim|Sim 3|
@@ -95,6 +95,5 @@ A tabela a seguir, [características das Classes de coleção MFC](#_core_charac
 
 [Coleções](../mfc/collections.md)<br/>
 [Classes com base no modelo](../mfc/template-based-classes.md)<br/>
-[Como fazer uma coleção fortemente tipada](../mfc/how-to-make-a-type-safe-collection.md)<br/>
+[Como: Fazer uma coleção fortemente tipada](../mfc/how-to-make-a-type-safe-collection.md)<br/>
 [Acessando todos os membros de uma coleção](../mfc/accessing-all-members-of-a-collection.md)
-

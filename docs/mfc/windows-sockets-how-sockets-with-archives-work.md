@@ -1,5 +1,5 @@
 ---
-title: 'Windows Sockets: como funcionam soquetes com arquivos mortos'
+title: 'Windows Sockets: Como funcionam soquetes com arquivos mortos'
 ms.date: 11/19/2018
 helpviewer_keywords:
 - Windows Sockets [MFC], synchronous
@@ -9,18 +9,18 @@ helpviewer_keywords:
 - Windows Sockets [MFC], with archives
 - two-state socket object
 ms.assetid: d8ae4039-391d-44f0-a19b-558817affcbb
-ms.openlocfilehash: f6101193c85e41fbf82681b0b2ae1e09e4162f87
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 3af94bc881276238f1a8d2dbeeee4dca1f173a4b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52174906"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300677"
 ---
-# <a name="windows-sockets-how-sockets-with-archives-work"></a>Windows Sockets: como funcionam soquetes com arquivos mortos
+# <a name="windows-sockets-how-sockets-with-archives-work"></a>Windows Sockets: Como funcionam soquetes com arquivos mortos
 
 Este artigo explica como um [CSocket](../mfc/reference/csocket-class.md) objeto, um [CSocketFile](../mfc/reference/csocketfile-class.md) objeto e uma [CArchive](../mfc/reference/carchive-class.md) objeto são combinadas para simplificar o envio e recebimento de dados por meio de um Windows Soquete.
 
-O artigo [Windows Sockets: exemplo de soquetes usando arquivos mortos](../mfc/windows-sockets-example-of-sockets-using-archives.md) apresenta o `PacketSerialize` função. O objeto de arquivo morto na `PacketSerialize` exemplo funciona bem como um objeto de arquivo morto passado para um MFC [Serialize](../mfc/reference/cobject-class.md#serialize) função. A diferença de essencial é que, para soquetes, o arquivo morto é anexado não a um padrão [CFile](../mfc/reference/cfile-class.md) objeto (normalmente associado a um arquivo de disco), mas para um `CSocketFile` objeto. Em vez de se conectar a um arquivo de disco, o `CSocketFile` objeto se conecta a um `CSocket` objeto.
+O artigo [Windows Sockets: Exemplo de soquetes usando arquivamentos](../mfc/windows-sockets-example-of-sockets-using-archives.md) apresenta o `PacketSerialize` função. O objeto de arquivo morto na `PacketSerialize` exemplo funciona bem como um objeto de arquivo morto passado para um MFC [Serialize](../mfc/reference/cobject-class.md#serialize) função. A diferença de essencial é que, para soquetes, o arquivo morto é anexado não a um padrão [CFile](../mfc/reference/cfile-class.md) objeto (normalmente associado a um arquivo de disco), mas para um `CSocketFile` objeto. Em vez de se conectar a um arquivo de disco, o `CSocketFile` objeto se conecta a um `CSocket` objeto.
 
 Um `CArchive` objeto gerencia um buffer. Quando o buffer de um arquivo de armazenamento (envio) estiver cheio, um associado `CFile` objeto grava o conteúdo do buffer. Liberando o buffer de um arquivo anexado a um soquete é equivalente a enviar uma mensagem. Quando o buffer de um arquivo de carregamento (recebimento) estiver cheio, o `CFile` objeto interromperá a leitura até que o buffer esteja disponível novamente.
 
@@ -46,7 +46,7 @@ Se `CSocket` não foram implementados como um objeto de dois estados, é possív
 
 No modo de "compatível com o arquivo morto", um `CSocketFile` objeto fornece um melhor desempenho e reduz o risco de um "deadlock". Um deadlock ocorre quando os soquetes de envio e recebimento estão aguardando uns aos outros ou aguardando um recurso comum. Essa situação pode ocorrer se o `CArchive` objeto trabalhou com o `CSocketFile` da forma que faz com um `CFile` objeto. Com `CFile`, o arquivo morto pode presumir que se ela recebe menos bytes que ele é solicitado, o final do arquivo foi atingido. Com `CSocketFile`, no entanto, dados for baseado em mensagem; o buffer pode conter várias mensagens, então receber menos do que o número de bytes solicitado não implica o final do arquivo. O aplicativo não bloqueia neste caso, como pode ocorrer com `CFile`, e pode continuar lendo mensagens do buffer até que o buffer está vazio. O [IsBufferEmpty](../mfc/reference/carchive-class.md#isbufferempty) funcionar em `CArchive` é útil para monitorar o estado do buffer do arquivo morto nesse caso.
 
-Para obter mais informações, consulte [Windows Sockets: usando soquetes com arquivos mortos](../mfc/windows-sockets-using-sockets-with-archives.md)
+Para obter mais informações, consulte [Windows Sockets: Usando soquetes com arquivos mortos](../mfc/windows-sockets-using-sockets-with-archives.md)
 
 ## <a name="see-also"></a>Consulte também
 

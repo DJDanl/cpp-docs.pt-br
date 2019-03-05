@@ -16,12 +16,12 @@ helpviewer_keywords:
 - scheduler policies [Concurrency Runtime]
 - task scheduler [Concurrency Runtime], wait function
 ms.assetid: 9aba278c-e0c9-4ede-b7c6-fedf7a365d90
-ms.openlocfilehash: 91ef4ed14fa1ddc25ff494f6666a50f5b39b8a54
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c5d37d320344d2ebf83be2c939f5a7372d4af306
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50676701"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57286803"
 ---
 # <a name="task-scheduler-concurrency-runtime"></a>Agendador de tarefas (Tempo de Execução de Simultaneidade)
 
@@ -57,4 +57,3 @@ O tempo de execução de simultaneidade fornece um agendador padrão para que vo
 |[PPL (Biblioteca de Padrões Paralelos)](../../parallel/concrt/parallel-patterns-library-ppl.md)|Descreve como usar vários padrões paralelos, por exemplo, algoritmos paralelos, em seus aplicativos.|
 |[Biblioteca de agentes assíncronos](../../parallel/concrt/asynchronous-agents-library.md)|Descreve como usar agentes assíncronos em seus aplicativos.|
 |[Tempo de Execução de Simultaneidade](../../parallel/concrt/concurrency-runtime.md)|Descreve o tempo de execução de simultaneidade, que simplifica a programação paralela e contém links para tópicos relacionados.|
-

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CAxWindow class
 - ATL, hosting ActiveX controls
 ms.assetid: 85e79261-43e4-4770-bde0-1ff87f222b0f
-ms.openlocfilehash: f1a1e7fe00218efe7514fe59ea78ea30b33b878f
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 3cf1c773c96a2bf1bc6c67420d72052e68ee2a53
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51329560"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297587"
 ---
 # <a name="caxwindow-class"></a>Classe CAxWindow
 
@@ -56,7 +56,7 @@ class CAxWindow : public CWindow
 
 |||
 |-|-|
-|[operador =](#operator_eq)|Atribui um HWND um existente `CAxWindow` objeto.|
+|[operator =](#operator_eq)|Atribui um HWND um existente `CAxWindow` objeto.|
 
 ## <a name="remarks"></a>Comentários
 
@@ -285,7 +285,7 @@ HRESULT QueryControl(Q** ppUnk);
 
 ### <a name="parameters"></a>Parâmetros
 
-*IID*<br/>
+*iid*<br/>
 [in] Especifica o IID da interface do controle.
 
 *ppUnk*<br/>
@@ -310,7 +310,7 @@ HRESULT QueryHost(Q** ppUnk);
 
 ### <a name="parameters"></a>Parâmetros
 
-*IID*<br/>
+*iid*<br/>
 [in] Especifica o IID da interface do controle.
 
 *ppUnk*<br/>
@@ -372,4 +372,3 @@ O external `IDocHostUIHandlerDispatch` interface é usada por controles que cons
 [Fundamentos do controle composto](../../atl/atl-composite-control-fundamentals.md)<br/>
 [Visão geral da classe](../../atl/atl-class-overview.md)<br/>
 [Perguntas frequentes sobre contenção de controle](../../atl/atl-control-containment-faq.md)
-

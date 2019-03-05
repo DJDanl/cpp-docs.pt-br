@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - delayed loading of DLLs, linker support
 ms.assetid: b2d7e449-2809-42b1-9c90-2c0ca5e31a14
-ms.openlocfilehash: 248a559735750f912030a37aea85a2cb34156887
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2ff5143b8c3850386f73ff713e7986fdc3b59fd1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50664536"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301383"
 ---
 # <a name="linker-support-for-delay-loaded-dlls"></a>Suporte de vinculador para DLLs carregadas com atraso
 
@@ -17,7 +17,7 @@ O vinculador do Visual C++ agora dá suporte o carregamento atrasado de DLLs. Is
 
 Antes do Visual C++ 6.0, a única maneira de carregar uma DLL em tempo de execução era usando **LoadLibrary** e **GetProcAddress**; o sistema operacional carrega a DLL quando o arquivo executável ou DLL usando ele foi carregado.
 
-Começando com o Visual C++ 6.0, ao vincular estaticamente com uma DLL, o vinculador fornece opções para atrasar a carregam a DLL até que o programa chama uma função nessa DLL.
+Começando com o Visual C++ 6.0, quando estiver vinculando implicitamente com uma DLL, o vinculador fornece opções para atrasar a carregam a DLL até que o programa chama uma função nessa DLL.
 
 Um aplicativo pode atrasar a carregar uma DLL usando o [/DELAYLOAD (importação de carga com atraso)](../../build/reference/delayload-delay-load-import.md) opção de vinculador com uma função auxiliar (implementação padrão fornecida pelo Visual C++). A função auxiliar carregará a DLL em tempo de execução chamando **LoadLibrary** e **GetProcAddress** para você.
 

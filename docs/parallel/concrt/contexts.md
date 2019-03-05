@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - contexts [Concurrency Runtime]
 ms.assetid: 10c1d861-8fbb-4ba0-b2ec-61876b11176e
-ms.openlocfilehash: b7d1a5bbc63781e865be8053cb4365d6a8590935
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d511f8fa751d61c3c490a184dae660096dd9f76f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50529162"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57285900"
 ---
 # <a name="contexts"></a>Contextos
 
@@ -26,7 +26,7 @@ Passando 0 (zero) para o `milliseconds` parâmetro faz com que o tempo de execu�
 
 ### <a name="example"></a>Exemplo
 
-Para obter um exemplo que usa o `wait` funcionar para produzir o contexto atual e, portanto, permitem outros contextos de execução, consulte [como: Use grupos de agendamento para a ordem de execução influência](../../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md).
+Para obter um exemplo que usa o `wait` funcionar para produzir o contexto atual e, portanto, permitem outros contextos de execução, consulte [como: Usar grupos agendados para influenciar a ordem de execução](../../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md).
 
 ## <a name="the-context-class"></a>A classe de contexto
 
@@ -46,7 +46,7 @@ O [concurrency::Context::Yield](reference/context-class.md#yield) método produz
 
 #### <a name="example"></a>Exemplo
 
-Para obter um exemplo que usa o `Context::Block`, `Context::Unblock`, e `Context::Yield` métodos para implementar uma classe de semáforo cooperativo, consulte [como: usar a classe de contexto para implementar um semáforo cooperativo](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md).
+Para obter um exemplo que usa o `Context::Block`, `Context::Unblock`, e `Context::Yield` métodos para implementar uma classe de semáforo cooperativo, consulte [como: Use a classe de contexto para implementar um semáforo cooperativo](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md).
 
 ##### <a name="oversubscription"></a>Excesso de assinatura
 
@@ -66,12 +66,11 @@ Você pode habilitar o excesso de assinatura várias vezes do contexto atual, ma
 
 ###### <a name="example"></a>Exemplo
 
-Para obter um exemplo que usa o excesso de assinatura para deslocar a latência causada por leitura de dados de uma conexão de rede, consulte [como: excesso de assinatura de uso à latência de deslocamento](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md).
+Para obter um exemplo que usa o excesso de assinatura para deslocar a latência causada por leitura de dados de uma conexão de rede, consulte [como: Usar excesso de assinatura para deslocar latência](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md).
 
 ## <a name="see-also"></a>Consulte também
 
 [Agendador de tarefas](../../parallel/concrt/task-scheduler-concurrency-runtime.md)<br/>
-[Como usar grupos agendados para influenciar a ordem de execução](../../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md)<br/>
-[Como usar a classe de contexto para implementar um semáforo cooperativo](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md)<br/>
-[Como usar excesso de assinatura para compensar a latência](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md)
-
+[Como: Usar grupos agendados para influenciar a ordem de execução](../../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md)<br/>
+[Como: Usar a classe de contexto para implementar um semáforo cooperativo](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md)<br/>
+[Como: Usar excesso de assinatura para compensar a latência](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md)

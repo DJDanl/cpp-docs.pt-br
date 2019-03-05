@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Concurrency Runtime, compared to other models
 ms.assetid: d8b9a1f4-f15f-43c3-a5b4-c0991edf9c86
-ms.openlocfilehash: 82e1dca1345b909919320b911c4c107e965c9850
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 885cce09707e1c067efdeb0bdc8b7d8a40841c02
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51332667"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57285094"
 ---
 # <a name="comparing-the-concurrency-runtime-to-other-concurrency-models"></a>Comparando o Tempo de Execução de Simultaneidade com outros modelos de simultaneidade
 
@@ -49,7 +49,7 @@ Para um agendador preemptivo, todo o trabalho que tem o mesmo nível de priorida
 
 Agendando cooperativo não resolve todos os problemas de agendamento. Por exemplo, tarefas que não produzam bastante a outras tarefas podem consumir todos os recursos de computação disponíveis e impedir que outras tarefas de progredir. O tempo de execução de simultaneidade usa os benefícios de eficiência do agendamento cooperativo para complementar as garantias de imparcialidade de agendamento preemptivo. Por padrão, o tempo de execução de simultaneidade fornece um agendador cooperativo que usa um algoritmo de roubo de trabalho para distribuir o trabalho entre os recursos de computação com eficiência. No entanto, o Agendador de tempo de execução de simultaneidade também utiliza o Agendador preemptive do sistema operacional para distribuir bastante recursos entre os aplicativos. Você também pode criar políticas de agendador e agendadores personalizados em seus aplicativos para produzir um controle refinado sobre a execução do thread.
 
-[[Superior](#top)]
+[[Top](#top)]
 
 ##  <a name="winapi"></a> Comparando o tempo de execução de simultaneidade para o API do Windows
 
@@ -77,9 +77,9 @@ No Windows XP e no Windows Vista, aplicativos que usam o tempo de execução de 
 
 No Windows 7 e Windows Server 2008 R2, o sistema operacional ainda mais dá suporte à simultaneidade e escalabilidade. Por exemplo, esses sistemas operacionais dão suporte a computadores que têm mais de 64 threads de hardware. Um aplicativo existente que usa a API do Windows deve ser modificado para tirar proveito desses novos recursos. No entanto, um aplicativo que usa o tempo de execução de simultaneidade automaticamente usa esses recursos e não requer modificações.
 
-[base.User mode_scheduling](https://msdn.microsoft.com/library/windows/desktop/dd627187)
+[base.user-mode_scheduling](https://msdn.microsoft.com/library/windows/desktop/dd627187)
 
-[[Superior](#top)]
+[[Top](#top)]
 
 ##  <a name="openmp"></a> Comparando o tempo de execução de simultaneidade para OpenMP
 
@@ -93,7 +93,7 @@ Muitos dos recursos no tempo de execução de simultaneidade podem ser estendido
 
 Para obter mais informações sobre como compara o tempo de execução de simultaneidade para OpenMP e como migrar o código de OpenMP existente para usar o tempo de execução de simultaneidade, consulte [migrando de OpenMP no tempo de execução de simultaneidade](../../parallel/concrt/migrating-from-openmp-to-the-concurrency-runtime.md).
 
-[[Superior](#top)]
+[[Top](#top)]
 
 ## <a name="see-also"></a>Consulte também
 

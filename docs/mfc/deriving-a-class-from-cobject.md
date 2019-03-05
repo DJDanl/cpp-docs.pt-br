@@ -13,12 +13,12 @@ helpviewer_keywords:
 - CObject class [MFC], deriving serializable classes
 - CObject class [MFC], deriving from
 ms.assetid: 5ea4ea41-08b5-4bd8-b247-c5de8c152a27
-ms.openlocfilehash: afaddfcb0a75b7e753897768d993df7ab5d876c0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e2c759dfd308beed0f04b8d8c2868abeeb1cfb45
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50566225"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301240"
 ---
 # <a name="deriving-a-class-from-cobject"></a>Derivando uma classe de CObject
 
@@ -28,7 +28,7 @@ Nas discussões de `CObject`, os termos "interface file" e "arquivo de implement
 
 Você pode escolher entre quatro níveis de funcionalidade ao derivar uma classe de `CObject`:
 
-- Funcionalidade básica: não há suporte para serialização ou informações de classe de tempo de execução, mas inclui gerenciamento de diagnóstico de memória.
+- Funcionalidade básica: Não há suporte para serialização ou informações de classe de tempo de execução, mas inclui gerenciamento de diagnóstico de memória.
 
 - Funcionalidade básica mais suporte para informações de classe de tempo de execução.
 
@@ -59,11 +59,10 @@ A tabela a seguir mostra a relação entre as macros usadas para dar suporte à 
 
    [!code-cpp[NVC_MFCCObjectSample#1](../mfc/codesnippet/cpp/deriving-a-class-from-cobject_1.h)]
 
-Normalmente, no entanto, você talvez queira substituir algumas das `CObject`de funções de membro para manipular as especificidades de sua nova classe. Por exemplo, normalmente, talvez queira substituir a `Dump` função de `CObject` para fornecer saída de depuração para o conteúdo da sua classe. Para obter detalhes sobre como substituir `Dump`, consulte o artigo [diagnóstico: despejar o conteúdo de objeto](/previous-versions/visualstudio/visual-studio-2010/sc15kz85). Você talvez também queira substituir a `AssertValid` função de `CObject` para fornecer teste personalizado para validar a consistência dos membros de dados de objetos de classe. Para obter uma descrição de como substituir `AssertValid`, consulte [MFC ASSERT_VALID e CObject::assertvalid&lt;1}](/previous-versions/visualstudio/visual-studio-2010/38z04tfa).
+Normalmente, no entanto, você talvez queira substituir algumas das `CObject`de funções de membro para manipular as especificidades de sua nova classe. Por exemplo, normalmente, talvez queira substituir a `Dump` função de `CObject` para fornecer saída de depuração para o conteúdo da sua classe. Para obter detalhes sobre como substituir `Dump`, consulte o artigo [diagnóstico: Despejar o conteúdo do objeto](/previous-versions/visualstudio/visual-studio-2010/sc15kz85). Você talvez também queira substituir a `AssertValid` função de `CObject` para fornecer teste personalizado para validar a consistência dos membros de dados de objetos de classe. Para obter uma descrição de como substituir `AssertValid`, consulte [MFC ASSERT_VALID e CObject::assertvalid&lt;1}](/previous-versions/visualstudio/visual-studio-2010/38z04tfa).
 
 O artigo [especificando níveis de funcionalidade](../mfc/specifying-levels-of-functionality.md) descreve como especificar outros níveis de funcionalidade, incluindo informações de classe de tempo de execução, a criação de objeto dinâmico e a serialização.
 
 ## <a name="see-also"></a>Consulte também
 
 [Usando CObject](../mfc/using-cobject.md)
-

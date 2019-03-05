@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - structured_task_group class
 ms.assetid: 742afa8c-c7b6-482c-b0ba-04c809927b22
-ms.openlocfilehash: 486829b7d990aab7860059feed78b26207d0074d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 27610539ab500a113ea41021744c55425fe9cd9b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50600662"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299283"
 ---
 # <a name="structuredtaskgroup-class"></a>Classe structured_task_group
 
@@ -101,7 +101,7 @@ Indica se o `structured_task_group` objeto está no meio de um cancelamento (ou 
 
 Para obter mais informações, consulte [cancelamento](../../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md#cancellation).
 
-##  <a name="run"></a> executar
+##  <a name="run"></a> run
 
 Agenda uma tarefa no `structured_task_group` objeto. O chamador gerencia a vida útil do `task_handle` objeto passado a `_Task_handle` parâmetro. A versão que usa o parâmetro `_Placement` faz com que a tarefa ser mais adequado para a execução no local especificado por esse parâmetro.
 
@@ -124,7 +124,7 @@ O tipo do objeto de função que será chamado para executar o corpo do identifi
 *_Task_handle*<br/>
 Um identificador para o trabalho agendado. Observe que o chamador tem responsabilidade pelo tempo de vida deste objeto. O tempo de execução continuará esperá-lo útil até que o `wait` ou `run_and_wait` método foi chamado neste `structured_task_group` objeto.
 
-*Posicionamento*<br/>
+*_Placement*<br/>
 Uma referência para o local em que a tarefa representada pelo `_Task_handle` parâmetro deve ser executada.
 
 ### <a name="remarks"></a>Comentários
@@ -191,7 +191,7 @@ Um token de cancelamento para associar a esse grupo de tarefas estruturados. O g
 
 O construtor que usa um token de cancelamento cria um `structured_task_group` que serão canceladas quando o código-fonte associado ao token é cancelado. Fornecer um token de cancelamento explícito também isola a esse grupo de tarefas estruturados de participar de um cancelamento implícito de um grupo pai, com um token diferente ou nenhum.
 
-##  <a name="dtor"></a> ~ structured_task_group
+##  <a name="dtor"></a> ~structured_task_group
 
 Destrói um objeto `structured_task_group`. Você deve chamar o `wait` ou `run_and_wait` método no objeto antes de executar o destruidor, a menos que o destruidor está sendo executado como resultado de desenrolamento de pilha devido a uma exceção.
 

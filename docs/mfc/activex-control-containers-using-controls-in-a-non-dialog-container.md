@@ -1,5 +1,5 @@
 ---
-title: 'Contêineres de controle ActiveX: usando controles em um contêiner que não seja da caixa de diálogo'
+title: 'Contêineres de controle ActiveX: Usando controles em um contêiner não da caixa de diálogo'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Create method [MFC], ActiveX controls
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - ActiveX control containers [MFC], non-dialog containers
 - ActiveX control containers [MFC], inserting controls
 ms.assetid: 46f195b0-b8ca-4409-8cca-fbfaf2c9ab9f
-ms.openlocfilehash: b31581b77743104a92236336c4db380f1693ea55
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 70a67a6952d5361177b89e3ba514d7036b5799b6
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50538778"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284236"
 ---
-# <a name="activex-control-containers-using-controls-in-a-non-dialog-container"></a>Contêineres de controle ActiveX: usando controles em um contêiner que não seja da caixa de diálogo
+# <a name="activex-control-containers-using-controls-in-a-non-dialog-container"></a>Contêineres de controle ActiveX: Usando controles em um contêiner não da caixa de diálogo
 
 Em alguns aplicativos, como um SDI ou um aplicativo MDI, você desejará inserir um controle em uma janela do aplicativo. O **criar** função de membro da classe wrapper, inserida pelo Visual C++, pode criar uma instância do controle dinamicamente, sem a necessidade de uma caixa de diálogo.
 
@@ -27,7 +27,7 @@ Um ponteiro para o texto a ser exibido na propriedade de texto ou uma legenda do
 *dwStyle*<br/>
 Estilos do Windows. Para obter uma lista completa, consulte [CWnd::CreateControl](../mfc/reference/cwnd-class.md#createcontrol).
 
-*Rect*<br/>
+*rect*<br/>
 Especifica o tamanho e a posição do controle.
 
 *pParentWnd*<br/>
@@ -64,4 +64,3 @@ Implementar esse recurso é um processo de quatro etapas.
 ## <a name="see-also"></a>Consulte também
 
 [Contêineres de controle ActiveX](../mfc/activex-control-containers.md)
-

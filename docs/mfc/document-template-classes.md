@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - document templates [MFC], classes
 ms.assetid: 901749e9-8048-44a0-b5e2-361554650a73
-ms.openlocfilehash: b15263005f8bd6a8fdc9f9f29ea268fe8a6b95a3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2589bc8f04e791f73529af91ffb148c2c717cd08
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50448068"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294571"
 ---
 # <a name="document-template-classes"></a>Classes de modelo do documento
 
@@ -34,4 +34,3 @@ Uma estrutura é passado por um modelo de documento para as funções de criaç�
 ## <a name="see-also"></a>Consulte também
 
 [Visão geral da classe](../mfc/class-library-overview.md)
-

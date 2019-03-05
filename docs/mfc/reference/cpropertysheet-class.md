@@ -52,12 +52,12 @@ helpviewer_keywords:
 - CPropertySheet [MFC], SetWizardMode
 - CPropertySheet [MFC], m_psh
 ms.assetid: 8461ccff-d14f-46e0-a746-42ad642ef94e
-ms.openlocfilehash: 8ea466abe153bd31ef15c41b277b57f90cd2b50b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c5fd3a682aa649091712a09a9131081c06d29ca6
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50450928"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300616"
 ---
 # <a name="cpropertysheet-class"></a>Classe CPropertySheet
 
@@ -117,7 +117,7 @@ Consiste em uma folha de propriedades de um `CPropertySheet` objeto e um ou mais
 
 Para exibir essas novas imagens automaticamente em seu objeto de planilha de propriedade, passar os valores válidos para as imagens de bitmap e paleta na chamada para [CPropertySheet::Construct](#construct) ou [CPropertySheet::CPropertySheet](#cpropertysheet).
 
-Embora `CPropertySheet` não é derivado de [CDialog](../../mfc/reference/cdialog-class.md), o gerenciamento um `CPropertySheet` objeto é como gerenciar um `CDialog` objeto. Por exemplo, a criação de uma folha de propriedades requer construção de duas partes: chamar o construtor e, em seguida, chame [DoModal](#domodal) para uma folha de propriedades modal ou [criar](#create) para uma folha de propriedades sem janela restrita. `CPropertySheet` tem dois tipos de construtores: [CPropertySheet::Construct](#construct) e [CPropertySheet::CPropertySheet](#cpropertysheet).
+Embora `CPropertySheet` não é derivado de [CDialog](../../mfc/reference/cdialog-class.md), o gerenciamento um `CPropertySheet` objeto é como gerenciar um `CDialog` objeto. Por exemplo, a criação de uma folha de propriedades requer construção de duas partes: chamar o construtor e, em seguida, chame [DoModal](#domodal) para uma folha de propriedades modal ou [criar](#create) para uma folha de propriedades sem janela restrita. `CPropertySheet` tem dois tipos dos construtores: [CPropertySheet::Construct](#construct) e [CPropertySheet::CPropertySheet](#cpropertysheet).
 
 Quando você constrói uma `CPropertySheet` do objeto, algumas [estilos de janela](../../mfc/reference/styles-used-by-mfc.md#window-styles) pode causar uma exceção de primeira chance ocorra. Isso resulta no sistema tentar alterar o estilo da folha de propriedades antes que a planilha é criada. Para evitar essa exceção, certifique-se de que você defina os seguintes estilos quando você cria seu `CPropertySheet`:
 
@@ -171,7 +171,7 @@ void AddPage(CPropertyPage* pPage);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Página*<br/>
+*pPage*<br/>
 Aponta para a página a ser adicionado à folha de propriedades. Não pode ser NULL.
 
 ### <a name="remarks"></a>Comentários
@@ -547,7 +547,7 @@ int GetPageIndex(CPropertyPage* pPage);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Página*<br/>
+*pPage*<br/>
 Aponta para a página com o índice a ser localizada. Não pode ser NULL.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -648,7 +648,7 @@ void PressButton(int nButton);
 ### <a name="parameters"></a>Parâmetros
 
 *nButton*<br/>
-nButton: identifica o botão seja pressionado. Esse parâmetro pode ser um dos seguintes valores:
+nButton: Identifica o botão seja pressionado. Esse parâmetro pode ser um dos seguintes valores:
 
 - PSBTN_BACK escolhe o botão Voltar.
 
@@ -685,7 +685,7 @@ void RemovePage(int nPage);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Página*<br/>
+*pPage*<br/>
 Aponta para a página a ser removido da folha de propriedades. Não pode ser NULL.
 
 *nPage*<br/>
@@ -709,7 +709,7 @@ BOOL SetActivePage(CPropertyPage* pPage);
 *nPage*<br/>
 Índice da página para definir. Ele deve estar entre 0 e um a menos que o número de páginas na folha de propriedades, inclusive.
 
-*Página*<br/>
+*pPage*<br/>
 Aponta para a página para definir na folha de propriedades. Ele não pode ser NULL.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -786,7 +786,7 @@ Um conjunto de sinalizadores que personalizam a função e a aparência dos bot�
 
 - Botão Voltar PSWIZB_BACK
 
-- Botão Avançar PSWIZB_NEXT
+- PSWIZB_NEXT Next button
 
 - Botão Concluir PSWIZB_FINISH
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ATL projects, adding property pages
 - controls [ATL], property pages
 ms.assetid: ddf92b49-42a2-46d2-b6b8-d37baedebeca
-ms.openlocfilehash: ed715cd822aaf0f55b8898efc80b5514938ca8ff
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c61f666865d3e1db4cdcf2dc6d3e07c2113a79c7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668059"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290004"
 ---
 # <a name="adding-an-atl-property-page"></a>Adicionando uma página de propriedades ATL
 
@@ -36,4 +36,4 @@ Depois de criar uma página de propriedades para um controle, você deve fornece
 
 [Páginas de propriedade](../../atl/atl-com-property-pages.md)<br/>
 [Princípios básicos de objetos COM da ATL](../../atl/fundamentals-of-atl-com-objects.md)<br/>
-[Exemplo: implementando uma página de propriedades](../../atl/example-implementing-a-property-page.md)
+[Exemplo: Implementando uma página de propriedades](../../atl/example-implementing-a-property-page.md)

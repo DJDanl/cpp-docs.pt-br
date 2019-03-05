@@ -1,5 +1,5 @@
 ---
-title: 'Arrastar e soltar: implementando uma origem para soltar'
+title: 'Arrastar e soltar: Implementando uma origem para soltar'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - OLE drag and drop [MFC], initiating drag operations
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - drag and drop [MFC], initiating drag operations
 - drag and drop [MFC], drop source
 ms.assetid: 0ed2fda0-63fa-4b1e-b398-f1f142f40035
-ms.openlocfilehash: ac925ac83b5ef019e3140dcc93034ccdf221ed7e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cceed8517c7b63588c7b1b90e3306d90f0921b78
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50586726"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300735"
 ---
-# <a name="drag-and-drop-implementing-a-drop-source"></a>Arrastar e soltar: implementando uma origem para soltar
+# <a name="drag-and-drop-implementing-a-drop-source"></a>Arrastar e soltar: Implementando uma origem para soltar
 
 Este artigo explica como obter seu aplicativo para fornecer dados para uma operação de arrastar e soltar.
 
@@ -42,4 +42,3 @@ Para obter mais informações, consulte:
 [COleDataSource::DoDragDrop](../mfc/reference/coledatasource-class.md#dodragdrop)<br/>
 [COleClientItem::DoDragDrop](../mfc/reference/coleclientitem-class.md#dodragdrop)<br/>
 [CView::OnDragLeave](../mfc/reference/cview-class.md#ondragleave)
-

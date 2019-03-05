@@ -18,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - transformer class
 ms.assetid: eea71925-7043-4a92-bfd4-dbc0ece5d081
-ms.openlocfilehash: cc35a4e2de2b29bb6d437dfcbf48ef361fefdfa3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c07017539bc0125e9e8c27e208480a50ccc7a719
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618277"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299147"
 ---
 # <a name="transformer-class"></a>Classe transformer
 
@@ -42,7 +42,7 @@ class transformer : public propagator_block<single_link_registry<ITarget<_Output
 *_Input*<br/>
 O tipo de carga das mensagens aceitas pelo buffer.
 
-*Saída*<br/>
+*_Output*<br/>
 O tipo de carga das mensagens armazenadas e propagada pelo buffer.
 
 ## <a name="members"></a>Membros
@@ -288,7 +288,7 @@ Uma função que será invocada para cada mensagem aceita.
 *_PTarget*<br/>
 Um ponteiro para um bloco de destino para vincular com o transformador.
 
-*Filtro*<br/>
+*_Filter*<br/>
 Uma função de filtro que determina se as mensagens oferecidas devem ser aceitas.
 
 *_PScheduler*<br/>
@@ -305,7 +305,7 @@ O tipo `_Transform_method` é um funtor com assinatura `_Output (_Input const &)
 
 O tipo `filter_method` é um funtor com assinatura `bool (_Input const &)` que é invocado por este `transformer` bloco de mensagem para determinar se ele deve aceitar uma mensagem oferecida.
 
-##  <a name="dtor"></a> ~ transformer
+##  <a name="dtor"></a> ~transformer
 
 Destrói o `transformer` bloco de mensagem.
 

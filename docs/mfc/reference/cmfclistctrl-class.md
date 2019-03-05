@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CMFCListCtrl [MFC], SetSortColumn
 - CMFCListCtrl [MFC], Sort
 ms.assetid: 50d16aee-138c-4f34-8690-cb75d544ef2e
-ms.openlocfilehash: 7d289dc25dfdb07ae581c4669154517882867f2a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c2434671ecdca4e68f3a83c21f1916b42928ffcd
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50642254"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294220"
 ---
 # <a name="cmfclistctrl-class"></a>Classe CMFCListCtrl
 
@@ -88,7 +88,7 @@ O exemplo a seguir demonstra como usar vários métodos no `CMFCListCtrl` classe
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** afxlistctrl.h
+**Header:** afxlistctrl.h
 
 ##  <a name="enablemarksortedcolumn"></a>  CMFCListCtrl::EnableMarkSortedColumn
 
@@ -122,7 +122,7 @@ void EnableMultipleSort(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parâmetros
 
-*bAtivar*<br/>
+*bEnable*<br/>
 [in] Um booliano que especifica se é necessário habilitar o modo de classificar várias colunas.
 
 ### <a name="remarks"></a>Comentários
@@ -203,7 +203,7 @@ virtual COLORREF OnGetCellBkColor(
 
 ### <a name="parameters"></a>Parâmetros
 
-*funções nRow*<br/>
+*nRow*<br/>
 [in] A linha da célula em questão.
 
 *nColumn*<br/>
@@ -230,7 +230,7 @@ virtual HFONT OnGetCellFont(
 
 ### <a name="parameters"></a>Parâmetros
 
-*funções nRow*<br/>
+*nRow*<br/>
 [in] A linha da célula em questão.
 
 *nColumn*<br/>
@@ -259,7 +259,7 @@ virtual COLORREF OnGetCellTextColor(
 
 ### <a name="parameters"></a>Parâmetros
 
-*funções nRow*<br/>
+*nRow*<br/>
 [in] A linha da célula em questão.
 
 *nColumn*<br/>
@@ -309,7 +309,7 @@ void SetSortColumn(
 *bAscending*<br/>
 [in] Um booliano que especifica a ordem de classificação.
 
-*bAdicionar*<br/>
+*bAdd*<br/>
 [in] Um valor booleano que especifica se o método adiciona a coluna indicada por *iColumn* à lista de colunas de classificação.
 
 ### <a name="remarks"></a>Comentários
@@ -335,7 +335,7 @@ virtual void Sort(
 *bAscending*<br/>
 [in] Um booliano que especifica a ordem de classificação.
 
-*bAdicionar*<br/>
+*bAdd*<br/>
 [in] Um valor booleano que especifica se esse método adiciona a coluna indicada por *iColumn* à lista de colunas de classificação.
 
 ## <a name="see-also"></a>Consulte também

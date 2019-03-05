@@ -1,17 +1,17 @@
 ---
-title: 'Instruções passo a passo: usando os novos controles de shell MFC'
+title: 'Passo a passo: Usando os novos controles de Shell MFC'
 ms.date: 09/20/2018
 helpviewer_keywords:
 - shell controls (MFC)
 ms.assetid: f0015caa-199d-4aaf-9501-5a239fce9095
-ms.openlocfilehash: 4ff585123fb30a4fc31460c95f8960f5cfd7b7bc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9314eec7c02ed0286a7ae3fcf14bae6572dd710c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507556"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288776"
 ---
-# <a name="walkthrough-using-the-new-mfc-shell-controls"></a>Instruções passo a passo: usando os novos controles de shell MFC
+# <a name="walkthrough-using-the-new-mfc-shell-controls"></a>Passo a passo: Usando os novos controles de Shell MFC
 
 Neste passo a passo, você criará um aplicativo que se parece com o Explorador de arquivos. Você cria uma janela que tem dois painéis. O painel à esquerda conterá uma [CMFCShellTreeCtrl](../mfc/reference/cmfcshelltreectrl-class.md) objeto que exibe sua área de trabalho em uma exibição hierárquica. Painel à direita conterá uma [CMFCShellListCtrl](../mfc/reference/cmfcshelllistctrl-class.md) que mostra os arquivos na pasta selecionada no painel esquerdo.
 

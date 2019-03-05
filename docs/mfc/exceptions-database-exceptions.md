@@ -1,5 +1,5 @@
 ---
-title: 'Exceções: exceções de banco de dados'
+title: 'Exceções: Exceções do Banco de Dados'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - DAO [MFC], exceptions
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - databases [MFC], exception handling
 - error codes [MFC], database exception handling
 ms.assetid: 28daf260-f824-4be6-aecc-1f859e6dec26
-ms.openlocfilehash: 17a52787462301e839cb2e960fad8b480380ba49
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2f7f3bff9f28968361ecfa7374a235a727443004
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492788"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57285549"
 ---
-# <a name="exceptions-database-exceptions"></a>Exceções: exceções de banco de dados
+# <a name="exceptions-database-exceptions"></a>Exceções: Exceções do Banco de Dados
 
 Este artigo explica como tratar exceções de banco de dados. A maioria do material neste artigo se aplica se você estiver trabalhando com as classes MFC para conectividade aberta de banco de dados (ODBC) ou as classes MFC para objetos de acesso de dados (DAO). Material específica a um ou outro modelo é marcado explicitamente. Os tópicos incluem:
 
@@ -77,4 +77,3 @@ Quando você estiver trabalhando com bancos de dados Microsoft Jet (. mdb) e na 
 ## <a name="see-also"></a>Consulte também
 
 [Tratamento de Exceção](../mfc/exception-handling-in-mfc.md)
-
