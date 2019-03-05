@@ -1,5 +1,5 @@
 ---
-title: Interface ICommandUI
+title: ICommandUI Interface
 ms.date: 11/04/2016
 f1_keywords:
 - ICommandUI
@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - ICommandUI interface [MFC]
 ms.assetid: 134afe8d-dcdf-47ca-857a-a166a6b665dd
-ms.openlocfilehash: dd5f79b8ecd65428ce1231777fa6632777859a00
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 31157ba2445a432af274650011b839fb3df9b3c2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467087"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268168"
 ---
-# <a name="icommandui-interface"></a>Interface ICommandUI
+# <a name="icommandui-interface"></a>ICommandUI Interface
 
 Gerencia os comandos de interface do usuário.
 
@@ -51,7 +51,7 @@ Essa interface fornece métodos e propriedades que gerenciam os comandos de inte
 
 `ICommandUI` é usado dentro de um manipulador ON_UPDATE_COMMAND_UI em uma [ICommandTarget](../../mfc/reference/icommandtarget-interface.md)-classe derivada. Quando um usuário de um aplicativo ativa (seleciona ou cliques) será exibido um menu, cada item de menu como habilitado ou desabilitado. O destino de cada comando de menu fornece essas informações com a implementação de um manipulador de ON_UPDATE_COMMAND_UI. Para cada um dos objetos de interface do usuário de comando em seu aplicativo, use a janela Propriedades para criar uma entrada de mapa de mensagem e o protótipo de função para cada manipulador.
 
-Para obter mais informações sobre como as `ICommandUI` interface é usada no roteamento de comando, consulte [como: Adicionar roteamento de comando para o controle de formulários do Windows](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md).
+Para obter mais informações sobre como as `ICommandUI` interface é usada no roteamento de comando, consulte [como: Adicionar comando de controle de formulários do roteamento para o Windows](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md).
 
 Para obter mais informações sobre como usar o Windows Forms, consulte [usando um controle de usuário do Windows Form no MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
 
@@ -80,7 +80,7 @@ void ContinueRouting();
 
 ## <a name="remarks"></a>Comentários
 
-Essa é uma função de membro avançado que deve ser usada em conjunto com um manipulador de ON_COMMAND_EX que retorna FALSE. Para obter mais informações, consulte TN006 de observação técnica: mapas de mensagem.
+Essa é uma função de membro avançado que deve ser usada em conjunto com um manipulador de ON_COMMAND_EX que retorna FALSE. Para obter mais informações, consulte TN006 de observação técnica: Mapas de mensagem.
 
 ## <a name="enabled"></a> ICommandUI::Enabled
 

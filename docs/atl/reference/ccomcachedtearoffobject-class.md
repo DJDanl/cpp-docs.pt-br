@@ -15,12 +15,12 @@ helpviewer_keywords:
 - cache, ATL cached tear-off objects
 - CComCachedTearOffObject class
 ms.assetid: ae19507d-a1de-4dbc-a988-da9f75a50c95
-ms.openlocfilehash: 009bc1e20693a9e45490c58ea29ff9d28b6aa6ea
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fb7821da03e1ca69c850fa1a295851faf4af4c5b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50582706"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277528"
 ---
 # <a name="ccomcachedtearoffobject-class"></a>Classe CComCachedTearOffObject
 
@@ -39,7 +39,7 @@ public CComObjectRootEx<contained
 
 #### <a name="parameters"></a>Parâmetros
 
-*contido*<br/>
+*contained*<br/>
 Sua classe destacável, derivada de `CComTearOffObjectBase` e as interfaces que você deseja que o seu objeto destacáveis para dar suporte.
 
 ## <a name="members"></a>Membros
@@ -49,7 +49,7 @@ Sua classe destacável, derivada de `CComTearOffObjectBase` e as interfaces que 
 |Nome|Descrição|
 |----------|-----------------|
 |[CComCachedTearOffObject::CComCachedTearOffObject](#ccomcachedtearoffobject)|O construtor.|
-|[CComCachedTearOffObject:: ~ CComCachedTearOffObject](#dtor)|O destruidor.|
+|[CComCachedTearOffObject::~CComCachedTearOffObject](#dtor)|O destruidor.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
@@ -111,14 +111,14 @@ CComCachedTearOffObject(void* pv);
 
 ### <a name="parameters"></a>Parâmetros
 
-*VP*<br/>
+*pv*<br/>
 [in] Ponteiro para o `IUnknown` do `CComCachedTearOffObject`.
 
 ### <a name="remarks"></a>Comentários
 
 Inicializa o `CComContainedObject` membro, [m_contained](#m_contained).
 
-##  <a name="dtor"></a>  CComCachedTearOffObject:: ~ CComCachedTearOffObject
+##  <a name="dtor"></a>  CComCachedTearOffObject::~CComCachedTearOffObject
 
 O destruidor.
 
@@ -160,7 +160,7 @@ CcomContainedObject <contained> m_contained;
 
 ### <a name="parameters"></a>Parâmetros
 
-*contido*<br/>
+*contained*<br/>
 [in] Sua classe destacável, derivada de `CComTearOffObjectBase` e as interfaces que você deseja que o seu objeto destacáveis para dar suporte.
 
 ### <a name="remarks"></a>Comentários
@@ -177,7 +177,7 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
 
 ### <a name="parameters"></a>Parâmetros
 
-*IID*<br/>
+*iid*<br/>
 [in] O GUID da interface que está sendo solicitado.
 
 *ppvObject*<br/>

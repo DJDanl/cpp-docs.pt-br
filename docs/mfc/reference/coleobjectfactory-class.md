@@ -36,12 +36,12 @@ helpviewer_keywords:
 - COleObjectFactory [MFC], VerifyLicenseKey
 - COleObjectFactory [MFC], VerifyUserLicense
 ms.assetid: ab179c1e-4af2-44aa-a576-37c48149b427
-ms.openlocfilehash: 4aa6d688de59884c7279b441d12dda9dcdf2ff6c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 25dce92f49ba9de08fcf33d54db8e97d520f5ea4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476005"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266374"
 ---
 # <a name="coleobjectfactory-class"></a>Classe COleObjectFactory
 
@@ -68,11 +68,11 @@ class COleObjectFactory : public CCmdTarget
 |[COleObjectFactory::GetClassID](#getclassid)|Retorna a OLE a ID dos objetos que cria esta fábrica de classe.|
 |[COleObjectFactory::IsLicenseValid](#islicensevalid)|Determina se a licença do controle é válida.|
 |[COleObjectFactory::IsRegistered](#isregistered)|Indica se a fábrica do objeto está registrada com as DLLs do sistema OLE.|
-|[COleObjectFactory](#register)|Registra a fábrica de objeto com as DLLs do sistema OLE.|
+|[COleObjectFactory::Register](#register)|Registra a fábrica de objeto com as DLLs do sistema OLE.|
 |[COleObjectFactory::RegisterAll](#registerall)|Registra todas as fábricas de objeto do aplicativo com DLLs do sistema OLE.|
-|[COleObjectFactory:: Revoke](#revoke)|Revoga o registro desta fábrica objeto com as DLLs do sistema OLE.|
+|[COleObjectFactory::Revoke](#revoke)|Revoga o registro desta fábrica objeto com as DLLs do sistema OLE.|
 |[COleObjectFactory::RevokeAll](#revokeall)|Revoga os registros dos fábricas de objeto do aplicativo com as DLLs do sistema OLE.|
-|[COleObjectFactory:: UnregisterAll](#unregisterall)|Cancela o registro de todas as fábricas de objeto do aplicativo.|
+|[COleObjectFactory::UnregisterAll](#unregisterall)|Cancela o registro de todas as fábricas de objeto do aplicativo.|
 |[COleObjectFactory::UpdateRegistry](#updateregistry)|Registra essa fábrica de objeto com o registro do sistema OLE.|
 |[COleObjectFactory::UpdateRegistryAll](#updateregistryall)|Registra todas as fábricas de objeto do aplicativo com o registro do sistema OLE.|
 
@@ -97,7 +97,7 @@ O `COleObjectFactory` classe tem funções de membro para executar as seguintes 
 
 - Registrar fábricas de objeto de controle com o registro do sistema OLE.
 
-Para obter mais informações sobre a criação de objeto, consulte os artigos [objetos de dados e fontes de dados (OLE)](../../mfc/data-objects-and-data-sources-ole.md) e [objetos de dados e fontes de dados: criação e destruição](../../mfc/data-objects-and-data-sources-creation-and-destruction.md). Para obter mais informações sobre o registro, consulte o artigo [registro](../../mfc/registration.md).
+Para obter mais informações sobre a criação de objeto, consulte os artigos [objetos de dados e fontes de dados (OLE)](../../mfc/data-objects-and-data-sources-ole.md) e [objetos de dados e fontes de dados: Criação e destruição](../../mfc/data-objects-and-data-sources-creation-and-destruction.md). Para obter mais informações sobre o registro, consulte o artigo [registro](../../mfc/registration.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -109,7 +109,7 @@ Para obter mais informações sobre a criação de objeto, consulte os artigos [
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** afxdisp.h
+**Header:** afxdisp.h
 
 ##  <a name="coleobjectfactory"></a>  COleObjectFactory::COleObjectFactory
 
@@ -245,7 +245,7 @@ Um ponteiro para o objeto criado. Se ele falhar, ele pode lançar uma exceção 
 
 Substituir essa função para criar o objeto de algo diferente de [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) passado para o construtor.
 
-##  <a name="register"></a>  COleObjectFactory
+##  <a name="register"></a>  COleObjectFactory::Register
 
 Registra a fábrica de objeto com as DLLs do sistema OLE.
 
@@ -277,7 +277,7 @@ Diferente de zero se o fábricas são registradas com êxito; Caso contrário, 0
 
 Esta função geralmente é chamada pelo [CWinApp::InitInstance](../../mfc/reference/cwinapp-class.md#initinstance) quando o aplicativo é iniciado.
 
-##  <a name="revoke"></a>  COleObjectFactory:: Revoke
+##  <a name="revoke"></a>  COleObjectFactory::Revoke
 
 Revoga o registro desta fábrica objeto com as DLLs do sistema OLE.
 
@@ -301,7 +301,7 @@ static void PASCAL RevokeAll();
 
 O framework chama esta função automaticamente antes que o aplicativo seja encerrado. Se necessário, chamá-lo da substituição de [CWinApp::ExitInstance](../../mfc/reference/cwinapp-class.md#exitinstance).
 
-##  <a name="unregisterall"></a>  COleObjectFactory:: UnregisterAll
+##  <a name="unregisterall"></a>  COleObjectFactory::UnregisterAll
 
 Cancela o registro de todas as fábricas de objeto do aplicativo.
 
@@ -327,7 +327,7 @@ virtual BOOL UpdateRegistry(BOOL bRegister);
 *lpszProgID*<br/>
 Ponteiro para uma cadeia de caracteres que contém o identificador de programa legível por humanos, como "Excel.Document.5".
 
-*bRegistre-se participar*<br/>
+*bRegister*<br/>
 Determina se a fábrica do objeto da classe de controle deve ser registrado.
 
 ### <a name="remarks"></a>Comentários
@@ -350,7 +350,7 @@ static BOOL PASCAL UpdateRegistryAll(BOOL bRegister = TRUE);
 
 ### <a name="parameters"></a>Parâmetros
 
-*bRegistre-se participar*<br/>
+*bRegister*<br/>
 Determina se a fábrica do objeto da classe de controle deve ser registrado.
 
 ### <a name="return-value"></a>Valor de retorno

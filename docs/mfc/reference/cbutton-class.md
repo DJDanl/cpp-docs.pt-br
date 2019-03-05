@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CButton [MFC], SetState
 - CButton [MFC], SetTextMargin
 ms.assetid: cdc76d5b-31da-43c5-bc43-fde4cb39de5b
-ms.openlocfilehash: 26dcf50cc3dc48fec5d6e4957ffd1ef340ad1dbf
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: b1a02d995594f5e079359151167ac970a3d1ab37
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178637"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260134"
 ---
 # <a name="cbutton-class"></a>Classe CButton
 
@@ -153,7 +153,7 @@ Se você quiser manipular mensagens de notificação do Windows enviadas por um 
 
 Cada entrada de mapa de mensagem usa o seguinte formato:
 
-**Diante\_**_notificação_ **(** _id_, _memberFxn_ **)**
+**ON\_**_Notification_ **(** _id_, _memberFxn_ **)**
 
 em que *identificação* Especifica a ID de janela filho do controle que está enviando a notificação e *memberFxn* é o nome da função de membro pai que você tenha escrito para manipular a notificação.
 
@@ -219,7 +219,7 @@ Especifica o texto do controle de botão.
 *dwStyle*<br/>
 Especifica o estilo do controle de botão. Aplicar qualquer combinação de [estilos de botão](../../mfc/reference/styles-used-by-mfc.md#button-styles) ao botão.
 
-*Rect*<br/>
+*rect*<br/>
 Especifica o tamanho e a posição do controle button. Ela pode ser um `CRect` objeto ou um `RECT` estrutura.
 
 *pParentWnd*<br/>
@@ -696,7 +696,7 @@ void SetCheck(int nCheck);
 
 ### <a name="parameters"></a>Parâmetros
 
-*nVerifique*<br/>
+*nCheck*<br/>
 Especifica o estado de seleção. Esse parâmetro pode ser um dos seguintes:
 
 |Valor|Significado|

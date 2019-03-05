@@ -1,5 +1,5 @@
 ---
-title: 'TN045: Suporte a MFC-banco de dados para Varchar-Varbinary longo'
+title: 'TN045: Suporte de MFC-banco de dados para Varchar-Varbinary longo'
 ms.date: 11/04/2016
 f1_keywords:
 - vc.mfc.data
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - Varbinary data type
 - Varchar data type
 ms.assetid: cf572c35-5275-45b5-83df-5f0e36114f40
-ms.openlocfilehash: 286ef403ec4bd51b035945f3ca268b59fee4d9d0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d356f094759775f709838de149769b1671fdf9ba
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50567031"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260108"
 ---
-# <a name="tn045-mfcdatabase-support-for-long-varcharvarbinary"></a>TN045: suporte a MFC/banco de dados para Varchar/Varbinary longo
+# <a name="tn045-mfcdatabase-support-for-long-varcharvarbinary"></a>TN045: Suporte a MFC/banco de dados para Varchar/Varbinary longo
 
 > [!NOTE]
 >  A nota técnica a seguir não foi atualizada desde que foi incluído pela primeira vez na documentação online. Como resultado, alguns procedimentos e tópicos podem estar desatualizadas ou incorretas. Para obter as informações mais recentes, é recomendável que você pesquise o tópico de interesse no índice da documentação online.
@@ -101,7 +101,7 @@ Não é necessário entender como atualizar um `CLongBinary` funciona, mas ele p
 
 Ao atualizar uma `CLongBinary` campo, as classes de banco de dados usam do ODBC **DATA_AT_EXEC** mecanismo (consulte a documentação do ODBC no `SQLSetPos`do argumento rgbValue). Quando o framework prepara a instrução insert ou update, em vez de apontar para o `HGLOBAL` que contém os dados, o *endereço* da `CLongBinary` está definido como o *valor* da coluna em vez disso e o indicador de comprimento definido como **SQL_DATA_AT_EXEC**. Posteriormente, quando a instrução update é enviada para a fonte de dados `SQLExecDirect` retornarão **SQL_NEED_DATA**. Isso avisa que a estrutura que o valor do parâmetro para esta coluna é, na verdade, o endereço de um `CLongBinary`. A estrutura chama `SQLGetData` uma vez com um buffer pequeno, esperando que o driver para retornar o comprimento real dos dados. Se o driver retorna o comprimento real do objeto binário grande (BLOB), o MFC Realoca espaço quanto conforme necessário para buscar o BLOB. Se a fonte de dados retorna **SQL_NO_TOTAL**, indicando que não é possível determinar o tamanho do BLOB, a MFC criará blocos menores. O tamanho inicial padrão é 64K e blocos subsequentes serão dobra o tamanho; Por exemplo, a segunda será 128K, o terceiro é 256K e assim por diante. O tamanho inicial é configurável.
 
-## <a name="not-binding-retrievingsending-data-directly-from-odbc-with-sqlgetdata"></a>Não Binding: Recuperando/enviar dados diretamente de ODBC com o SQLGetData
+## <a name="not-binding-retrievingsending-data-directly-from-odbc-with-sqlgetdata"></a>Não de associação: Recuperando/enviar dados diretamente de ODBC com o SQLGetData
 
 Com esse método você completamente ignorar as classes de banco de dados e lida com a coluna de dados longos.
 
@@ -122,4 +122,3 @@ Nesse caso, a coluna de dados long deve estar na lista de seleção do conjunto 
 
 [Observações técnicas por número](../mfc/technical-notes-by-number.md)<br/>
 [Observações técnicas por categoria](../mfc/technical-notes-by-category.md)
-

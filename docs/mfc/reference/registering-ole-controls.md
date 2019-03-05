@@ -7,12 +7,12 @@ helpviewer_keywords:
 - registering OLE controls
 - OLE controls [MFC], registering
 ms.assetid: 73c45b7f-7dbc-43f5-bd17-dd77c6acec72
-ms.openlocfilehash: 08ed3771edbc0ebebfe98643a2651ff10c85d41e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9c480696bdec3591f0509cbad04051a2b3af4070
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544788"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262149"
 ---
 # <a name="registering-ole-controls"></a>Registrando controles OLE
 
@@ -151,7 +151,7 @@ O controle será exibido na caixa de diálogo Inserir objeto para contêineres h
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxctl. h
+  **Header** afxctl.h
 
 ##  <a name="afxoleregisterpropertypageclass"></a>  AfxOleRegisterPropertyPageClass
 
@@ -194,7 +194,7 @@ Isso permite que a página de propriedade a ser usada por contêineres que estã
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxctl. h
+  **Header** afxctl.h
 
 ##  <a name="afxoleregistertypelib"></a>  AfxOleRegisterTypeLib
 
@@ -238,7 +238,7 @@ Essa função atualiza o registro com o nome da biblioteca de tipo e sua localiz
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdisp.h
+  **Header** afxdisp.h
 
 ##  <a name="afxoleunregisterclass"></a>  AfxOleUnregisterClass
 
@@ -262,7 +262,7 @@ Diferente de zero se a classe de página de controle ou uma propriedade foi canc
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxctl. h
+  **Header** afxctl.h
 
 ##  <a name="afxoleunregistertypelib"></a>  AfxOleUnregisterTypeLib
 
@@ -287,7 +287,7 @@ Diferente de zero se a biblioteca de tipos foi cancelada com êxito; Caso contr�
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdisp.h
+  **Header** afxdisp.h
 
 ## <a name="see-also"></a>Consulte também
 

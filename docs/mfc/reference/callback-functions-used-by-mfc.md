@@ -9,12 +9,12 @@ helpviewer_keywords:
 - functions [MFC], callback
 - callback functions [MFC]
 ms.assetid: b2a6857c-fdd3-45ec-8fd8-2e71fac77582
-ms.openlocfilehash: acb7b6c677d03ef1320e24373671a7577c2ccda8
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: e3440530dfe30b6667012c76b2904dbb2786c199
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178428"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262292"
 ---
 # <a name="callback-functions-used-by-mfc"></a>Funções de Retorno de Chamada Usadas pelo MFC
 
@@ -107,7 +107,7 @@ BOOL CALLBACK EXPORT AbortFunc(
 *hPr*<br/>
 Identifica o contexto de dispositivo.
 
-*Código*<br/>
+*code*<br/>
 Especifica se ocorreu um erro. É 0 se nenhum erro tiver ocorrido. É SP_OUTOFDISK se o Gerenciador de impressão está sem espaço em disco e serão disponibilizados mais espaço em disco se o aplicativo espera. Se *código* é SP_OUTOFDISK, o aplicativo não precisa cancelar o trabalho de impressão. Se não existir, ela deverá produzir para o Gerenciador de impressão chamando o `PeekMessage` ou `GetMessage` função do Windows.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -121,7 +121,6 @@ O nome real deve ser exportado, conforme descrito na seção de comentários [CD
 ## <a name="see-also"></a>Consulte também
 
 [Estruturas, estilos, retornos de chamada e mapas de mensagem](structures-styles-callbacks-and-message-maps.md)<br/>
-[CDC:: enumobjects](../../mfc/reference/cdc-class.md#enumobjects)<br/>
+[CDC::EnumObjects](../../mfc/reference/cdc-class.md#enumobjects)<br/>
 [CDC::SetAbortProc](../../mfc/reference/cdc-class.md#setabortproc)<br/>
 [CDC::GrayString](../../mfc/reference/cdc-class.md#graystring)
-

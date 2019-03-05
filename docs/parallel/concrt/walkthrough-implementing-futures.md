@@ -1,18 +1,18 @@
 ---
-title: 'Instruções passo a passo: implementando futuros'
+title: 'Passo a passo: Implementando futuros'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - implementing futures [Concurrency Runtime]
 - futures, implementing [Concurrency Runtime]
 ms.assetid: 82ea75cc-aaec-4452-b10d-8abce0a87e5b
-ms.openlocfilehash: 4c43719199ef4009433ec65d54fcc238d82ac305
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7164919d649751ac11fefa5be3cb2e5b7798ee4f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525630"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262123"
 ---
-# <a name="walkthrough-implementing-futures"></a>Instruções passo a passo: implementando futuros
+# <a name="walkthrough-implementing-futures"></a>Passo a passo: Implementando futuros
 
 Este tópico mostra como implementar futuros em seu aplicativo. O tópico demonstra como combinar a funcionalidade existente no tempo de execução de simultaneidade em algo mais útil.
 

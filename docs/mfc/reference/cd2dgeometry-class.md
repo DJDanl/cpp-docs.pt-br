@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CD2DGeometry [MFC], Widen
 - CD2DGeometry [MFC], m_pGeometry
 ms.assetid: 3f95054b-fdb8-4e87-87f2-9fc3df7279ec
-ms.openlocfilehash: 929926129ddee0efdee4f1b02494b503755811d7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4549b2e7981d5f8493ddf9f24477e75a94ddde8b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50610685"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271223"
 ---
 # <a name="cd2dgeometry-class"></a>Classe CD2DGeometry
 
@@ -234,7 +234,7 @@ BOOL ComputeArea(
 *worldTransform*<br/>
 A transformação para aplicar a esta geometria antes de computar sua área.
 
-*Área*<br/>
+*area*<br/>
 Quando este método retorna, contém um ponteiro para a área da versão dessa geometria transformada, bidimensional. Você deve alocar armazenamento para esse parâmetro.
 
 *flatteningTolerance*<br/>
@@ -291,7 +291,7 @@ A distância ao longo da tangente para localizar e ponto de geometria. Se essa d
 *worldTransform*<br/>
 A transformação a ser aplicada à geometria antes de calcular o ponto especificado e a tangente.
 
-*ponto*<br/>
+*point*<br/>
 O local à distância especificada ao longo da geometria. Se a geometria estiver vazia, esse ponto contém NaN como x e y valores.
 
 *unitTangentVector*<br/>
@@ -338,13 +338,13 @@ BOOL FillContainsPoint(
 
 ### <a name="parameters"></a>Parâmetros
 
-*ponto*<br/>
+*point*<br/>
 Ponto a ser testado.
 
 *worldTransform*<br/>
 A transformação a ser aplicada à geometria antes do teste de confinamento.
 
-*Contém*<br/>
+*contains*<br/>
 Quando este método retorna, contém um valor booliano que será TRUE se a área preenchida pela geometria contém o ponto; Caso contrário, FALSE. Você deve alocar armazenamento para esse parâmetro.
 
 *flatteningTolerance*<br/>
@@ -377,7 +377,7 @@ CD2DRectF& bounds) const;
 ### <a name="parameters"></a>Parâmetros
 
 *worldTransform*<br/>
-*Limites*
+*bounds*
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -405,7 +405,7 @@ O estilo de traço que amplia a geometria.
 *worldTransform*<br/>
 Uma transformação a ser aplicada à geometria, depois que a geometria é transformada e depois a geometria tem sido feita.
 
-*Limites*<br/>
+*bounds*<br/>
 Quando este método retorna, contém os limites da geometria largo. Você deve alocar armazenamento para esse parâmetro.
 
 *flatteningTolerance*<br/>
@@ -435,7 +435,7 @@ Um ponteiro para um ID2D1Geometry.
 ID2D1Geometry* m_pGeometry;
 ```
 
-##  <a name="operator_id2d1geometry_star"></a>  CD2DGeometry::Operator ID2D1Geometry *
+##  <a name="operator_id2d1geometry_star"></a>  CD2DGeometry::operator ID2D1Geometry*
 
 Interface do ID2D1Geometry retorna
 
@@ -519,7 +519,7 @@ BOOL StrokeContainsPoint(
 
 ### <a name="parameters"></a>Parâmetros
 
-*ponto*<br/>
+*point*<br/>
 O ponto a ser testado quanto ao confinamento.
 
 *strokeWidth*<br/>
@@ -531,7 +531,7 @@ O estilo do traço para aplicar.
 *worldTransform*<br/>
 A transformação a ser aplicada à geometria traçada.
 
-*Contém*<br/>
+*contains*<br/>
 Quando este método retorna, contém um valor booliano definido como TRUE se o traço da geometria contém o ponto especificado; Caso contrário, FALSE. Você deve alocar armazenamento para esse parâmetro.
 
 *flatteningTolerance*<br/>

@@ -22,12 +22,12 @@ f1_keywords:
 helpviewer_keywords:
 - array class
 ms.assetid: 0832b6c1-40f0-421d-9104-6b1baa0c63a7
-ms.openlocfilehash: 93ef654bb71a342a6215ce5cd60786f36cadedf7
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.openlocfilehash: 16d18d23c370a8a603ab6150fcee18455ae47c48
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657546"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259016"
 ---
 # <a name="array-class"></a>Classe array
 
@@ -123,7 +123,7 @@ O `array<T,N>` tipo é usado em vários cenários:
 
 **Namespace:** Concorrência
 
-##  <a name="dtor"></a> ~ array
+##  <a name="dtor"></a> ~array
 
 Destrói o `array` objeto.
 
@@ -433,7 +433,7 @@ Um iterador inicial no contêiner de origem.
 *_Src_last*<br/>
 Um iterador final no contêiner de origem.
 
-*Outro*<br/>
+*_Other*<br/>
 Outra fonte de dados.
 
 *_Rank*<br/>
@@ -489,7 +489,7 @@ const value_type* data() const restrict(amp, cpu);
 
 Um ponteiro para os dados brutos da matriz.
 
-##  <a name="extent"></a> extensão
+##  <a name="extent"></a> extent
 
 Obtém o [extent](extent-class.md) objeto que define a forma do `array`.
 
@@ -560,7 +560,7 @@ O tipo de dados dos elementos do vetor.
 
 Um objeto do tipo `vector<T>` que contém uma cópia dos dados que estão contidos na matriz.
 
-##  <a name="operator_call"></a> Operator)
+##  <a name="operator_call"></a> operator()
 
 Retorna o valor do elemento que é especificado pelos parâmetros.
 
@@ -584,7 +584,7 @@ typename details::_Projection_result_type<value_type,_Rank>::_Const_result_type 
 
 ### <a name="parameters"></a>Parâmetros
 
-*Index*<br/>
+*_Index*<br/>
 O local do elemento.
 
 *_I0*<br/>
@@ -603,7 +603,7 @@ O local do elemento.
 
 O valor do elemento especificado pelos parâmetros.
 
-##  <a name="operator_at"></a> operador]
+##  <a name="operator_at"></a> operator[]
 
 Retorna o elemento que está no índice especificado.
 
@@ -620,7 +620,7 @@ typename details::_Projection_result_type<value_type,_Rank>::_Const_result_type 
 
 ### <a name="parameters"></a>Parâmetros
 
-*Index*<br/>
+*_Index*<br/>
 O índice.
 
 *_I*<br/>
@@ -630,7 +630,7 @@ O índice.
 
 O elemento que está no índice especificado.
 
-##  <a name="operator_eq"></a> operador =
+##  <a name="operator_eq"></a> operator=
 
 Copia o conteúdo especificado `array` objeto.
 
@@ -645,7 +645,7 @@ array& operator= (
 
 ### <a name="parameters"></a>Parâmetros
 
-*Outro*<br/>
+*_Other*<br/>
 O `array` objeto do qual copiar.
 
 *_Src*<br/>
@@ -778,7 +778,7 @@ O componente menos significativo da extensão dessa seção.
 *_Ext*<br/>
 O [extensão](extent-class.md) objeto que especifica a extensão da seção. A origem é 0.
 
-*Idx*<br/>
+*_Idx*<br/>
 O [índice](index-class.md) objeto que especifica o local de origem. A subseção é o resto da extensão.
 
 *_I0*<br/>

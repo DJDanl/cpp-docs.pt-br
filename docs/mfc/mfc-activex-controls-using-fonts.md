@@ -1,5 +1,5 @@
 ---
-title: 'Controles ActiveX MFC: usando fontes'
+title: 'Controles ActiveX MFC: Usando fontes'
 ms.date: 11/19/2018
 f1_keywords:
 - OnFontChanged
@@ -19,14 +19,14 @@ helpviewer_keywords:
 - SelectStockFont method [MFC]
 - fonts [MFC], ActiveX controls
 ms.assetid: 7c51d602-3f5a-481d-84d1-a5d8a3a71761
-ms.openlocfilehash: 9fb7668f65b04372b87059034c3ec6cd20abc48d
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: ce1e913bb3bd1c3b74db43dc02d9d360b9cfd00c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175813"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271301"
 ---
-# <a name="mfc-activex-controls-using-fonts"></a>Controles ActiveX MFC: usando fontes
+# <a name="mfc-activex-controls-using-fonts"></a>Controles ActiveX MFC: Usando fontes
 
 Se o seu controle ActiveX exibe o texto, você pode permitir que o usuário do controle alterar a aparência do texto, alterando uma propriedade de fonte. Propriedades de fonte são implementadas como objetos de fonte e pode ser um dos dois tipos: personalizado ou padrão. Propriedades de fonte de estoque são propriedades de fonte preimplemented que você pode adicionar usando o Assistente para adicionar propriedade. Propriedades personalizadas da fonte não são preimplemented e o desenvolvedor do controle determina o comportamento e o uso da propriedade.
 
@@ -42,7 +42,7 @@ Propriedades de fonte de estoque são preimplemented pela classe [COleControl](.
 
 Acessar o objeto de fonte por meio de [GetFont](../mfc/reference/colecontrol-class.md#getfont), [SetFont](../mfc/reference/colecontrol-class.md#setfont), e [InternalGetFont](../mfc/reference/colecontrol-class.md#internalgetfont) funções de `COleControl`. O usuário do controle irá acessar o objeto de fonte por meio de `GetFont` e `SetFont` funções da mesma maneira como qualquer outra propriedade Get/Set. Quando for necessário de dentro de um controle o acesso ao objeto de fonte, use o `InternalGetFont` função.
 
-Conforme discutido em [controles ActiveX MFC: propriedades](../mfc/mfc-activex-controls-properties.md), adicionando propriedades de estoque é fácil com o [Adicionar Assistente de propriedade](../ide/names-add-property-wizard.md). Escolha a propriedade de fonte e o Assistente para adicionar propriedade automaticamente insere a entrada de fonte de estoque no mapa de expedição do controle.
+Conforme discutido em [controles ActiveX MFC: As propriedades](../mfc/mfc-activex-controls-properties.md), adicionando propriedades de estoque é fácil com o [Adicionar Assistente de propriedade](../ide/names-add-property-wizard.md). Escolha a propriedade de fonte e o Assistente para adicionar propriedade automaticamente insere a entrada de fonte de estoque no mapa de expedição do controle.
 
 #### <a name="to-add-the-stock-font-property-using-the-add-property-wizard"></a>Para adicionar a propriedade de fonte de estoque usando o Assistente para adicionar propriedade
 
@@ -236,6 +236,5 @@ Depois que essas alterações foram feitas ao seu projeto, recompile o projeto e
 ## <a name="see-also"></a>Consulte também
 
 [Controles ActiveX do MFC](../mfc/mfc-activex-controls.md)<br/>
-[Controles ActiveX do MFC: usando imagens em um controle ActiveX](../mfc/mfc-activex-controls-using-pictures-in-an-activex-control.md)<br/>
-[Controles ActiveX do MFC: usando páginas de propriedade de estoque](../mfc/mfc-activex-controls-using-stock-property-pages.md)
-
+[Controles ActiveX MFC: Usando imagens em um controle ActiveX](../mfc/mfc-activex-controls-using-pictures-in-an-activex-control.md)<br/>
+[Controles ActiveX MFC: Usando páginas de propriedade de estoque](../mfc/mfc-activex-controls-using-stock-property-pages.md)

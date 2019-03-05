@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CTypedPtrMap [MFC], RemoveKey
 - CTypedPtrMap [MFC], SetAt
 ms.assetid: 9f377385-c6e9-4471-8b40-8fe220c50164
-ms.openlocfilehash: 4c6d20279792788c1013df8540080b2715ade1f2
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.openlocfilehash: 05689001f8c385191057a8dc824a508189a43f05
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657377"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266049"
 ---
 # <a name="ctypedptrmap-class"></a>Classe CTypedPtrMap
 
@@ -40,7 +40,7 @@ Classe base da classe map ponteiro tipado; deve ser uma classe de mapa de pontei
 *KEY*<br/>
 Classe do objeto usado como a chave para o mapa.
 
-*VALOR*<br/>
+*VALUE*<br/>
 Classe do objeto armazenado no mapa.
 
 ## <a name="members"></a>Membros
@@ -100,7 +100,7 @@ Parâmetro de modelo especificando o tipo de chaves do mapa.
 *rKey*<br/>
 Especifica a chave retornada do elemento de dados recuperado.
 
-*VALOR*<br/>
+*VALUE*<br/>
 Parâmetro de modelo que especifica o tipo de valores do mapa.
 
 *rValue*<br/>
@@ -130,7 +130,7 @@ Parâmetro de modelo especificando a classe base da classe deste mapa.
 *key*<br/>
 A chave do elemento a ser pesquisado.
 
-*VALOR*<br/>
+*VALUE*<br/>
 Especifica o tipo de valores armazenados neste mapa de um parâmetro de modelo.
 
 *rValue*<br/>
@@ -144,7 +144,7 @@ Diferente de zero se o elemento foi encontrado; Caso contrário, 0.
 
 Essa função embutida chama `BASE_CLASS` **:: Lookup**.
 
-##  <a name="operator_at"></a>  [CTypedPtrMap::operator]
+##  <a name="operator_at"></a>  CTypedPtrMap::operator [ ]
 
 Esse operador pode ser usado apenas no lado esquerdo de uma instrução de atribuição (um l-value).
 
@@ -154,7 +154,7 @@ VALUE& operator[ ](base_class ::base_arg_key key);
 
 ### <a name="parameters"></a>Parâmetros
 
-*VALOR*<br/>
+*VALUE*<br/>
 Especifica o tipo de valores armazenados neste mapa de um parâmetro de modelo.
 
 *BASE_CLASS*<br/>

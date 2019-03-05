@@ -230,12 +230,12 @@ helpviewer_keywords:
 - CMFCVisualManagerOffice2007 [MFC], OnUpdateSystemColors
 - CMFCVisualManagerOffice2007 [MFC], SetResourceHandle
 ms.assetid: fb687c74-6d08-4c72-8acf-27f75dda6d6b
-ms.openlocfilehash: f26aeb94bdb392040eee1ab4795e580cbce79e69
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 28e0c1f3ca593fed939b0cf3fa0fa3085d79d156
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50660428"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57282429"
 ---
 # <a name="cmfcvisualmanageroffice2007-class"></a>Classe CMFCVisualManagerOffice2007
 
@@ -485,7 +485,7 @@ CMFCRibbonBar* GetRibbonBar(CWnd* pWnd) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-[in] *Apropriei*<br/>
+[in] *pWnd*<br/>
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -700,7 +700,7 @@ virtual BOOL GetToolTipInfo(
 
 ### <a name="parameters"></a>Parâmetros
 
-[in] *param. autom.*<br/>
+[in] *params*<br/>
 [in] *nType*<br/>
 
 ### <a name="return-value"></a>Valor de retorno
@@ -755,7 +755,7 @@ BOOL IsRibbonPresent(CWnd* pWnd) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-[in] *Apropriei*<br/>
+[in] *pWnd*<br/>
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -1193,7 +1193,7 @@ virtual COLORREF OnDrawPaneCaption(
 
 [in] *pDC*<br/>
 [in] *pBar*<br/>
-[in] *bScripts Ativos*<br/>
+[in] *bActive*<br/>
 [in] *rectCaption*<br/>
 [in] *rectButtons*<br/>
 
@@ -2101,7 +2101,7 @@ virtual COLORREF OnFillMiniFrameCaption(
 [in] *pDC*<br/>
 [in] *rectCaption*<br/>
 [in] *pFrameWnd*<br/>
-[in] *bScripts Ativos*<br/>
+[in] *bActive*<br/>
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -2324,8 +2324,8 @@ virtual BOOL OnNcActivate(
 
 ### <a name="parameters"></a>Parâmetros
 
-[in] *Apropriei*<br/>
-[in] *bScripts Ativos*<br/>
+[in] *pWnd*<br/>
+[in] *bActive*<br/>
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -2342,7 +2342,7 @@ virtual BOOL OnNcPaint(
 
 ### <a name="parameters"></a>Parâmetros
 
-[in] *Apropriei*<br/>
+[in] *pWnd*<br/>
 [in] *lstSysButtons*<br/>
 [in] *rectRedraw*<br/>
 
@@ -2360,7 +2360,7 @@ virtual BOOL OnSetWindowRegion(
 
 ### <a name="parameters"></a>Parâmetros
 
-[in] *Apropriei*<br/>
+[in] *pWnd*<br/>
 [in] *sizeWindow*<br/>
 
 ### <a name="return-value"></a>Valor de retorno

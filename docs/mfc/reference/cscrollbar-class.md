@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CScrollBar [MFC], SetScrollRange
 - CScrollBar [MFC], ShowScrollBar
 ms.assetid: f3735ca5-73ea-46dc-918b-4d824c9fe47f
-ms.openlocfilehash: 3b8e7dc78ddfa22097c97fb4e97fff92f0984c07
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d677d72b7e758fcdaa7df0e2918e9bbec3e18ee9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50571256"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57263099"
 ---
 # <a name="cscrollbar-class"></a>Classe CScrollBar
 
@@ -116,7 +116,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Especifica a rolagem estilo da barra. Aplicar qualquer combinação de [estilos de barra de rolagem](../../mfc/reference/styles-used-by-mfc.md#scroll-bar-styles) à barra de rolagem.
 
-*Rect*<br/>
+*rect*<br/>
 Especifica o tamanho da barra de rolagem e a posição. Pode ser um `RECT` estrutura ou um `CRect` objeto.
 
 *pParentWnd*<br/>
@@ -417,7 +417,7 @@ void ShowScrollBar(BOOL bShow = TRUE);
 
 ### <a name="parameters"></a>Parâmetros
 
-*bMostrar*<br/>
+*bShow*<br/>
 Especifica se a barra de rolagem é mostrada ou ocultada. Se esse parâmetro for TRUE, a barra de rolagem é mostrada; Caso contrário, ele está oculto.
 
 ### <a name="remarks"></a>Comentários

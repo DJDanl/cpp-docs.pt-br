@@ -104,12 +104,12 @@ helpviewer_keywords:
 - CMFCTabCtrl [MFC], SynchronizeScrollBar
 - CMFCTabCtrl [MFC], m_bEnableActivate
 ms.assetid: d441385d-2c72-4203-96fa-deae2273da35
-ms.openlocfilehash: 8388a79bf7c85f3d603bd4ef234947e872534cba
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8dc8c51cc1847d29b76e2017db4c1368b35b9a9f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505112"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281675"
 ---
 # <a name="cmfctabctrl-class"></a>Classe CMFCTabCtrl
 
@@ -250,7 +250,7 @@ O exemplo a seguir demonstra como usar vários métodos na `CMFCTabCtrl` classe 
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** afxtabctrl.h
+**Header:** afxtabctrl.h
 
 ##  <a name="activatemditab"></a>  CMFCTabCtrl::ActivateMDITab
 
@@ -313,7 +313,7 @@ BOOL Create(
 *style*<br/>
 [in] O estilo do controle guia. Para obter mais informações, consulte Comentários.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Um retângulo que delimita o controle de guia.
 
 *pParentWnd*<br/>
@@ -322,7 +322,7 @@ BOOL Create(
 *nID*<br/>
 [in] A ID do controle guia.
 
-*Local*<br/>
+*location*<br/>
 [in] O local das guias. O valor padrão é LOCATION_BOTTOM. Para obter mais informações, consulte Comentários.
 
 *bCloseBtn*<br/>
@@ -387,7 +387,7 @@ void EnableActiveTabCloseButton(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>Parâmetros
 
-*bAtivar*<br/>
+*bEnable*<br/>
 [in] TRUE para exibir o botão Fechar na guia ativa. FALSE para exibir o botão Fechar no canto superior direito da área da guia. O valor padrão é TRUE.
 
 ##  <a name="enableinplaceedit"></a>  CMFCTabCtrl::EnableInPlaceEdit
@@ -400,7 +400,7 @@ virtual void EnableInPlaceEdit(BOOL bEnable);
 
 ### <a name="parameters"></a>Parâmetros
 
-*bAtivar*<br/>
+*bEnable*<br/>
 [in] TRUE para ativar rótulos de guia editável; FALSE para desativar os rótulos de guia editável.
 
 ### <a name="remarks"></a>Comentários
@@ -415,7 +415,7 @@ void EnableTabDocumentsMenu(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>Parâmetros
 
-*bAtivar*<br/>
+*bEnable*<br/>
 [in] TRUE para exibir um menu pop-up de rótulos de janela com guias; FALSE para exibir botões de rolagem para frente e para trás. O valor padrão é TRUE.
 
 ### <a name="remarks"></a>Comentários
@@ -564,7 +564,7 @@ virtual void GetTabsRect(CRect& rect) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*Rect*<br/>
+*rect*<br/>
 [out] Quando este método retorna, o *rect* parâmetro contém um retângulo que delimita a área da guia.
 
 ##  <a name="getwndarea"></a>  CMFCTabCtrl::GetWndArea
@@ -577,7 +577,7 @@ void GetWndArea(CRect& rect) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*Rect*<br/>
+*rect*<br/>
 [no, out] Quando este método retorna, este parâmetro conterá um retângulo que delimita o controle de guia atual.
 
 ### <a name="remarks"></a>Comentários
@@ -874,9 +874,9 @@ virtual DROPEFFECT OnDragEnter(
 [in] Aponta para um objeto de dados que contém dados que o usuário arrasta.
 
 *dwKeyState*<br/>
-[in] Contém o estado das teclas modificadoras. Esse parâmetro é uma combinação bit a bit (OR) dos seguintes valores: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON e MK_RBUTTON. Para obter mais informações, consulte o **parâmetros de mensagem** seção [sobre entradas de Mouse](/windows/desktop/inputdev/about-mouse-input).
+[in] Contém o estado das teclas modificadoras. Esse parâmetro é uma combinação bit a bit (OR) dos valores a seguir: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON e MK_RBUTTON. Para obter mais informações, consulte o **parâmetros de mensagem** seção [sobre entradas de Mouse](/windows/desktop/inputdev/about-mouse-input).
 
-*ponto*<br/>
+*point*<br/>
 [in] Contém o local atual do cursor em coordenadas do cliente.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -908,7 +908,7 @@ virtual DROPEFFECT OnDragOver(
 *dwKeyState*<br/>
 [in] O estado das teclas modificadoras, que é uma combinação bit a bit (OR) de MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON e MK_RBUTTON. Para obter mais informações, consulte "Parâmetros de mensagem" em [sobre a entrada do Mouse](/windows/desktop/inputdev/about-mouse-input).
 
-*ponto*<br/>
+*point*<br/>
 [in] A posição atual do mouse.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -929,7 +929,7 @@ virtual void OnShowTabDocumentsMenu(CPoint point);
 
 ### <a name="parameters"></a>Parâmetros
 
-*ponto*<br/>
+*point*<br/>
 [in] As coordenadas do onde exibir o menu pop-up.
 
 ### <a name="remarks"></a>Comentários
@@ -944,7 +944,7 @@ void SetActiveInMDITabGroup(BOOL bActive);
 
 ### <a name="parameters"></a>Parâmetros
 
-*bScripts Ativos*<br/>
+*bActive*<br/>
 [in] TRUE para tornar a guia ativa; a guia atual FALSE para tornar a guia atual inativa.
 
 ### <a name="remarks"></a>Comentários
@@ -1042,7 +1042,7 @@ virtual BOOL SetImageList(HIMAGELIST hImageList);
 *uiID*<br/>
 [in] A ID de um recurso de bitmap que contém a lista de imagens.
 
-*CX*<br/>
+*cx*<br/>
 [in] A largura de cada imagem, em pixels. O valor padrão é 15.
 
 *clrTransp*<br/>
@@ -1111,7 +1111,7 @@ void StopResize(BOOL bCancel);
 
 ### <a name="parameters"></a>Parâmetros
 
-*bCancelar*<br/>
+*bCancel*<br/>
 [in] TRUE para abandonar a operação de redimensionamento atual; FALSE para concluir as operação de redimensionamento atual. Em ambos os casos, o framework para desenhar o retângulo de redimensionamento.
 
 ##  <a name="synchronizescrollbar"></a>  CMFCTabCtrl::SynchronizeScrollBar

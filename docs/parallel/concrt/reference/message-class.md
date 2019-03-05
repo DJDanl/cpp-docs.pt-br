@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - message class
 ms.assetid: 3e1f3505-6c0c-486c-8191-666d0880ec62
-ms.openlocfilehash: 6b0c37f61ef437662a4e624c3a81edb526e7464c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 83cfdb5807581f7092709691a1839052abdd657c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50636846"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57263072"
 ---
 # <a name="message-class"></a>Classe message
 
@@ -111,10 +111,10 @@ message(
 
 ### <a name="parameters"></a>Parâmetros
 
-*P*<br/>
+*_P*<br/>
 A carga da mensagem.
 
-*ID*<br/>
+*_Id*<br/>
 A ID exclusiva dessa mensagem.
 
 *_Msg*<br/>
@@ -124,7 +124,7 @@ Uma referência ou ponteiro para um `message` objeto.
 
 O construtor que usa um ponteiro para um `message` objeto como um argumento lança uma [invalid_argument](../../../standard-library/invalid-argument-class.md) exceção se o parâmetro `_Msg` é `NULL`.
 
-##  <a name="dtor"></a> ~ mensagem
+##  <a name="dtor"></a> ~message
 
 Destrói o `message` objeto.
 

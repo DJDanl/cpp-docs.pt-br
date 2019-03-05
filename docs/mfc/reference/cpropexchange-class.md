@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CPropExchange [MFC], IsAsynchronous
 - CPropExchange [MFC], IsLoading
 ms.assetid: ed872180-e770-4942-892a-92139d501fab
-ms.openlocfilehash: 772388d069bdec274bd396b776d404711b694771
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4210399e32c2bb39008afa75b787c19e3338a7d5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50560356"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276345"
 ---
 # <a name="cpropexchange-class"></a>Classe CPropExchange
 
@@ -68,7 +68,7 @@ A estrutura transmite um ponteiro a este `CPropExchange` objeto ao seu controle 
 
 `CPropExchange` pode ser usado para serializar as propriedades de um controle ou inicializar propriedades de um controle após o carregamento ou a criação de um controle. O `ExchangeProp` e `ExchangeFontProp` funções de membro de `CPropExchange` são capazes de armazenar as propriedades para e carregá-los de mídia diferente.
 
-Para obter mais informações sobre como usar `CPropExchange`, consulte o artigo [controles ActiveX MFC: páginas de propriedade](../../mfc/mfc-activex-controls-property-pages.md).
+Para obter mais informações sobre como usar `CPropExchange`, consulte o artigo [controles ActiveX MFC: Páginas de propriedade](../../mfc/mfc-activex-controls-property-pages.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -127,7 +127,7 @@ virtual BOOL ExchangeFontProp(
 *pszPropName*<br/>
 O nome da propriedade sendo trocado.
 
-*fonte*<br/>
+*font*<br/>
 Uma referência a um [CFontHolder](../../mfc/reference/cfontholder-class.md) objeto que contém a propriedade de fonte.
 
 *pFontDesc*<br/>
@@ -166,7 +166,7 @@ O nome da propriedade sendo trocado.
 *ppUnk*<br/>
 Um ponteiro para uma variável que contém um ponteiro para a propriedade `IUnknown` interface (essa variável normalmente é um membro da sua classe).
 
-*IID*<br/>
+*iid*<br/>
 ID da interface da interface na propriedade que o controle usará.
 
 *pUnkDefault*<br/>
@@ -294,4 +294,3 @@ Diferente de zero se as propriedades estão sendo carregadas; Caso contrário, 0
 
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
 [COleControl::DoPropExchange](../../mfc/reference/colecontrol-class.md#dopropexchange)
-

@@ -1,25 +1,25 @@
 ---
-title: Como fornecer funções de trabalho para as classes call e transformer
+title: 'Como: Fornecer funções de trabalho para as Classes call e transformer'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - call class, example
 - using the transformer class [Concurrency Runtime]
 - using the call class [Concurrency Runtime]
 ms.assetid: df715ce4-8507-41ca-b204-636d11707a73
-ms.openlocfilehash: d9d472ddd8d5c7baf3cb16e1df33a2bdb74c5381
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c41c29dae277105f268171503e662e2a02e3857e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50500991"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277680"
 ---
-# <a name="how-to-provide-work-functions-to-the-call-and-transformer-classes"></a>Como fornecer funções de trabalho para as classes call e transformer
+# <a name="how-to-provide-work-functions-to-the-call-and-transformer-classes"></a>Como: Fornecer funções de trabalho para as Classes call e transformer
 
 Este tópico ilustra várias maneiras de fornecer funções de trabalho para o [concurrency::call](../../parallel/concrt/reference/call-class.md) e [Concurrency:: Transformer](../../parallel/concrt/reference/transformer-class.md) classes.
 
 O primeiro exemplo mostra como passar uma expressão lambda para uma `call` objeto. O segundo exemplo mostra como passar um objeto de função para um `call` objeto. O terceiro exemplo mostra como associar um método de classe para um `call` objeto.
 
-Para fins ilustrativos, todos os exemplos neste tópico usa o `call` classe. Para obter um exemplo que usa o `transformer` classe, consulte [como: usar transformador em um Pipeline de dados](../../parallel/concrt/how-to-use-transformer-in-a-data-pipeline.md).
+Para fins ilustrativos, todos os exemplos neste tópico usa o `call` classe. Para obter um exemplo que usa o `transformer` classe, consulte [como: Usar transformador em um Pipeline de dados](../../parallel/concrt/how-to-use-transformer-in-a-data-pipeline.md).
 
 ## <a name="example"></a>Exemplo
 
@@ -61,6 +61,6 @@ Copie o código de exemplo e cole-o em um projeto do Visual Studio ou colá-lo e
 
 [Biblioteca de agentes assíncronos](../../parallel/concrt/asynchronous-agents-library.md)<br/>
 [Blocos de mensagens assíncronos](../../parallel/concrt/asynchronous-message-blocks.md)<br/>
-[Como usar transformador em um pipeline de dados](../../parallel/concrt/how-to-use-transformer-in-a-data-pipeline.md)<br/>
+[Como: Usar transformador em um pipeline de dados](../../parallel/concrt/how-to-use-transformer-in-a-data-pipeline.md)<br/>
 [Classe call](../../parallel/concrt/reference/call-class.md)<br/>
 [Classe transformer](../../parallel/concrt/reference/transformer-class.md)

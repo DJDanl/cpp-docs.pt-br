@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - frame window classes [MFC], reference
 ms.assetid: 6342ec5f-f922-4da8-a78e-2f5f994c7142
-ms.openlocfilehash: 93df9ce745fc907425f1a840ffb7d16a696831fc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3e56bd0f449992118db75a44c39b6e0e15cb0d86
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50514329"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270989"
 ---
 # <a name="frame-window-classes-windows"></a>Classes de janela com moldura (Windows)
 
@@ -42,4 +42,3 @@ Encapsula um `HMENU` identificador para a barra de menus e menus pop-up do aplic
 ## <a name="see-also"></a>Consulte também
 
 [Visão geral da classe](../mfc/class-library-overview.md)
-

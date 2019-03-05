@@ -9,12 +9,12 @@ helpviewer_keywords:
 - methods [MFC]
 - status bars [MFC], creating
 ms.assetid: 9aeaf290-7099-4762-a5ba-9c26705333c9
-ms.openlocfilehash: 1156f8bdeafb71dc9e6dbd9fc5b85607542918f7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a2301301d0012bd93ffedd0452dec140174402e0
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50587963"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276878"
 ---
 # <a name="methods-of-creating-a-status-bar"></a>Métodos de criação de uma barra de status
 
@@ -34,4 +34,3 @@ Qualquer um dos métodos lhe dará acesso a funções de membro de controle de b
 
 [Usando CStatusBarCtrl](../mfc/using-cstatusbarctrl.md)<br/>
 [Controles](../mfc/controls-mfc.md)
-

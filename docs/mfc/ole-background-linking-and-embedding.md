@@ -1,5 +1,5 @@
 ---
-title: 'tela de fundo OLE: vinculando e inserindo'
+title: 'Tela de fundo OLE: Vinculação e incorporação'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - OLE embedded items [MFC]
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - embedded objects [MFC]
 - OLE items [MFC], types
 ms.assetid: 11107711-eb96-4099-8f5c-7910bb3ecb75
-ms.openlocfilehash: 7595d87ce54b0a34dd4e5f3489dd36e3918fd8a5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 02607df2a8fa086c5751f2b446e349a3efdbcd20
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50465475"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57280960"
 ---
-# <a name="ole-background-linking-and-embedding"></a>tela de fundo OLE: vinculando e inserindo
+# <a name="ole-background-linking-and-embedding"></a>Tela de fundo OLE: Vinculação e incorporação
 
 Usando o comando Colar em um aplicativo de contêiner pode criar um componente incorporado, ou o item inserido. Os dados de origem para um item inserido são armazenados como parte do documento OLE que o contém. Dessa forma, um arquivo de documento para um documento do processador de texto pode conter texto e também pode conter bitmaps, gráficos, fórmulas ou qualquer outro tipo de dados.
 
@@ -30,7 +30,6 @@ Todos os itens OLE, se incorporado ou vinculado, tem um tipo associado a ele com
 ## <a name="see-also"></a>Consulte também
 
 [Tela de fundo OLE](../mfc/ole-background.md)<br/>
-[Tela de fundo OLE: contêineres e servidores](../mfc/ole-background-containers-and-servers.md)<br/>
-[Contêineres: itens clientes](../mfc/containers-client-items.md)<br/>
-[Servidores: itens de servidor](../mfc/servers-server-items.md)
-
+[Tela de fundo OLE: Contêineres e servidores](../mfc/ole-background-containers-and-servers.md)<br/>
+[Contêineres: Itens de cliente](../mfc/containers-client-items.md)<br/>
+[servidores: Itens do servidor](../mfc/servers-server-items.md)

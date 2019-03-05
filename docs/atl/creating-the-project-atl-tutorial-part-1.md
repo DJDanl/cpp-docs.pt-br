@@ -3,12 +3,12 @@ title: Criando o projeto (Tutorial ATL, parte 1)
 ms.custom: get-started-article
 ms.date: 09/26/2018
 ms.assetid: f6b727d1-390a-4b27-b82f-daadcd9fc059
-ms.openlocfilehash: dab9bdab75bb710bf73314aae7283611d9a3b5cc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4a608fb3a096dee2420ef652ba213c534d8fb426
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50539575"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273914"
 ---
 # <a name="creating-the-project-atl-tutorial-part-1"></a>Criando o projeto (Tutorial ATL, parte 1)
 
@@ -56,7 +56,7 @@ O **ATL Project Wizard** criará o projeto por meio da geração de vários arqu
 
 |Arquivo|Descrição|
 |----------|-----------------|
-|Polygon|Contém a implementação do `DllMain`, `DllCanUnloadNow`, `DllGetClassObject`, `DllRegisterServer`, e `DllUnregisterServer`. Também contém o mapa de objeto, que é uma lista dos objetos em seu projeto ATL. Isso é inicialmente em branco.|
+|Polygon.cpp|Contém a implementação do `DllMain`, `DllCanUnloadNow`, `DllGetClassObject`, `DllRegisterServer`, e `DllUnregisterServer`. Também contém o mapa de objeto, que é uma lista dos objetos em seu projeto ATL. Isso é inicialmente em branco.|
 |Polygon.def|Esse arquivo de definição de módulo fornece o vinculador com informações sobre exportações exigida pela sua DLL.|
 |Polygon.idl|O interface arquivo linguagem de definição, que descreve as interfaces específicas para seus objetos.|
 |Polygon.rgs|Esse script de registro contém informações para registrar a DLL do seu programa.|

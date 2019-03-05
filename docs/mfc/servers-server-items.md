@@ -1,5 +1,5 @@
 ---
-title: 'Servidores: itens de servidor'
+title: 'servidores: Itens do servidor'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - server items, implementing
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - server items
 - OLE server applications [MFC], server items
 ms.assetid: 28ba81a1-726a-4728-a52d-68bc7efd5a3c
-ms.openlocfilehash: ea04a3eefff0f127873ffbf67ea39ade3a6b9b85
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0adaea1c4f1dd0525ead82dfffdf267326ac865c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50453684"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262279"
 ---
-# <a name="servers-server-items"></a>Servidores: itens de servidor
+# <a name="servers-server-items"></a>servidores: Itens do servidor
 
 Quando um contêiner inicia um servidor para que um usuário pode editar um item OLE incorporado ou vinculado, o aplicativo de servidor cria um "item de servidor". O item de servidor, que é um objeto de uma classe derivada de `COleServerItem`, fornece uma interface entre o documento de servidor e o aplicativo de contêiner.
 
@@ -52,4 +52,3 @@ Para obter mais informações, consulte [CView::OnDraw](../mfc/reference/cview-c
 ## <a name="see-also"></a>Consulte também
 
 [Servidores](../mfc/servers.md)
-

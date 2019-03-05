@@ -166,12 +166,12 @@ helpviewer_keywords:
 - CBasePane [MFC], UndockPane
 - CBasePane [MFC], DoPaint
 ms.assetid: 8163dd51-d7c7-4def-9c74-61f8ecdfad82
-ms.openlocfilehash: 1de59e4404960ed99dedaadfa576168bc31da444
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 30a5eff8b18df8372c23b5f400c90ff85bdad0eb
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694784"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259804"
 ---
 # <a name="cbasepane-class"></a>Classe CBasePane
 
@@ -699,7 +699,7 @@ virtual BOOL CreateEx(
 *dwStyle*<br/>
 [in] O estilo da janela (consulte [CWnd::CreateEx](../../mfc/reference/cwnd-class.md#createex)).
 
-*Rect*<br/>
+*rect*<br/>
 [in] O retângulo inicial.
 
 *pParentWnd*<br/>
@@ -730,7 +730,7 @@ A biblioteca adiciona vários novos estilos de painéis. A tabela a seguir descr
 |-----------|-----------------|
 |AFX_CBRS_FLOAT|O painel pode flutuar.|
 |AFX_CBRS_AUTOHIDE|O painel dá suporte ao modo de ocultamento automático|
-|AFX_CBRS_RESIZE|O painel pode ser redimensionado. **Importante:** esse estilo não está implementado.|
+|AFX_CBRS_RESIZE|O painel pode ser redimensionado. **Importante:**  Esse estilo não está implementado.|
 |AFX_CBRS_CLOSE|O painel pode ser fechado.|
 |AFX_CBRS_AUTO_ROLLUP|O painel pode ser acumulado quando ela flutua.|
 |AFX_CBRS_REGULAR_TABS|Quando um painel encaixa-se para outro painel com esse estilo, uma janela com guias regular é criada. (Para obter mais informações, consulte [classe CTabbedPane](../../mfc/reference/ctabbedpane-class.md).)|
@@ -895,7 +895,7 @@ virtual void EnableGripper(BOOL bEnable);
 
 ### <a name="parameters"></a>Parâmetros
 
-*bAtivar*<br/>
+*bEnable*<br/>
 [in] TRUE para habilitar a garra; FALSE para desabilitá-lo.
 
 ### <a name="remarks"></a>Comentários
@@ -921,7 +921,7 @@ virtual BOOL FloatPane(
 *dockMethod*<br/>
 [in] Especifica o método de encaixe para usar para o painel de flutuação.
 
-*bMostrar*<br/>
+*bShow*<br/>
 [in] Especifica se o painel flutuante é visível (TRUE) ou oculto (FALSE).
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1275,7 +1275,7 @@ BOOL InsertPane(
 *pTarget*<br/>
 [in] Um ponteiro para o painel adjacente.
 
-*bDepois*<br/>
+*bAfter*<br/>
 [in] Se for TRUE, *pControlBar* é inserido após *pTarget*. Se for FALSE, *pControlBar* é inserido antes *pTarget*.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1427,7 +1427,7 @@ BOOL IsPointNearDockSite(
 
 ### <a name="parameters"></a>Parâmetros
 
-*ponto*<br/>
+*point*<br/>
 [in] O ponto especificado.
 
 *dwBarAlignment*<br/>
@@ -1551,7 +1551,7 @@ virtual HDWP MoveWindow(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Rect*<br/>
+*rect*<br/>
 [in] Um retângulo, especificando o novo local e o tamanho do painel.
 
 *bRepaint*<br/>
@@ -1633,7 +1633,7 @@ virtual void OnMovePaneDivider(CPaneDivider* /* unused */);
 
 ### <a name="parameters"></a>Parâmetros
 
-*não utilizado*<br/>
+*unused*<br/>
 [in] Não usado.
 
 ##  <a name="onpanecontextmenu"></a>  CBasePane::OnPaneContextMenu
@@ -1651,7 +1651,7 @@ virtual void OnPaneContextMenu(
 *pParentFrame*<br/>
 [in] Um ponteiro para o quadro principal.
 
-*ponto*<br/>
+*point*<br/>
 [in] Especifica o local do menu de atalho.
 
 ### <a name="remarks"></a>Comentários
@@ -1712,7 +1712,7 @@ CBasePane* PaneFromPoint(
 
 ### <a name="parameters"></a>Parâmetros
 
-*ponto*<br/>
+*point*<br/>
 [in] Especifica o ponto em coordenadas da tela, para verificar.
 
 *nSensitivity*<br/>
@@ -1925,10 +1925,10 @@ virtual HDWP SetWindowPos(
 *y*<br/>
 [in] Especifica a posição da parte superior da janela.
 
-*CX*<br/>
+*cx*<br/>
 [in] Especifica a largura da janela.
 
-*Cy*<br/>
+*cy*<br/>
 [in] Especifica a altura da janela.
 
 *nFlags*<br/>
@@ -1958,7 +1958,7 @@ virtual void ShowPane(
 
 ### <a name="parameters"></a>Parâmetros
 
-*bMostrar*<br/>
+*bShow*<br/>
 [in] Especifica se deve mostrar (TRUE) ou ocultar (FALSE) um painel.
 
 *bDelay*<br/>

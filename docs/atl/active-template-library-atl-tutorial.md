@@ -9,12 +9,12 @@ helpviewer_keywords:
 - tutorials [ATL]
 - ATL, tutorials
 ms.assetid: f921a121-09c8-4812-9317-e15b2f1471fa
-ms.openlocfilehash: b4a47cd22026663acb1cade6f2b4c098c4887965
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 716818306c751a8d774a8fc6c311694a7932be2c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50570567"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270105"
 ---
 # <a name="active-template-library-atl-tutorial"></a>Tutorial da Biblioteca de Modelo Ativa (ATL)
 
@@ -41,4 +41,3 @@ O tutorial é dividido em sete etapas. Você deve executar cada etapa na ordem c
 ## <a name="see-also"></a>Consulte também
 
 [Conceitos](../atl/active-template-library-atl-concepts.md)
-

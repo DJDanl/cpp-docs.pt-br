@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - multi_link_registry class
 ms.assetid: b2aa73a8-e8a6-4255-b117-d07530c328b2
-ms.openlocfilehash: 6f4e6db693a5839fd3add503bfb9697679a98dd8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 388cc0082f69041368d1a444179855451d552ce6
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50635383"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264750"
 ---
 # <a name="multilinkregistry-class"></a>Classe multi_link_registry
 
@@ -34,7 +34,7 @@ class multi_link_registry : public network_link_registry<_Block>;
 
 #### <a name="parameters"></a>Parâmetros
 
-*Bloco*<br/>
+*_Block*<br/>
 O bloco tipo de dados estão sendo armazenadas em do `multi_link_registry` objeto.
 
 ## <a name="members"></a>Membros
@@ -52,7 +52,7 @@ O bloco tipo de dados estão sendo armazenadas em do `multi_link_registry` objet
 |----------|-----------------|
 |[add](#add)|Adiciona um link para o `multi_link_registry` objeto. (Substitui [network_link_registry:: Add](network-link-registry-class.md#add).)|
 |[begin](#begin)|Retorna um iterador para o primeiro elemento no `multi_link_registry` objeto. (Substitui [network_link_registry:: Begin](network-link-registry-class.md#begin).)|
-|[Contém](#contains)|Pesquisas de `multi_link_registry` objeto para um bloco especificado. (Substitui [network_link_registry:: Contains](network-link-registry-class.md#contains).)|
+|[contains](#contains)|Pesquisas de `multi_link_registry` objeto para um bloco especificado. (Substitui [network_link_registry:: Contains](network-link-registry-class.md#contains).)|
 |[count](#count)|Conta o número de itens no `multi_link_registry` objeto. (Substitui [network_link_registry:: Count](network-link-registry-class.md#count).)|
 |[remove](#remove)|Remove um link do `multi_link_registry` objeto. (Substitui [network_link_registry:: remove](network-link-registry-class.md#remove).)|
 |[set_bound](#set_bound)|Define um limite superior no número de links que o `multi_link_registry` objeto pode conter.|
@@ -79,7 +79,7 @@ virtual void add(_EType _Link);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Link*<br/>
+*_Link*<br/>
 Um ponteiro para um bloco a ser adicionado.
 
 ### <a name="remarks"></a>Comentários
@@ -102,7 +102,7 @@ Um iterador que trata o primeiro elemento no `multi_link_registry` objeto.
 
 O estado final é indicado por um `NULL` link.
 
-##  <a name="contains"></a> Contém
+##  <a name="contains"></a> contains
 
 Pesquisas de `multi_link_registry` objeto para um bloco especificado.
 
@@ -112,7 +112,7 @@ virtual bool contains(_EType _Link);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Link*<br/>
+*_Link*<br/>
 Um ponteiro para um bloco que deve ser pesquisado no `multi_link_registry` objeto.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -139,7 +139,7 @@ Constrói um objeto `multi_link_registry`.
 multi_link_registry();
 ```
 
-##  <a name="dtor"></a> ~ multi_link_registry
+##  <a name="dtor"></a> ~multi_link_registry
 
 Destrói o `multi_link_registry` objeto.
 
@@ -161,7 +161,7 @@ virtual bool remove(_EType _Link);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Link*<br/>
+*_Link*<br/>
 Um ponteiro para um bloco a ser removido, se encontrado.
 
 ### <a name="return-value"></a>Valor de retorno

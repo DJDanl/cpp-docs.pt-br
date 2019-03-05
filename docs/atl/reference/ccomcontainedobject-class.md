@@ -14,12 +14,12 @@ helpviewer_keywords:
 - aggregation [C++], ATL objects
 - CComContainedObject class
 ms.assetid: e8616b41-c200-47b8-bf2c-fb9f713ebdad
-ms.openlocfilehash: 289174fbfc61b0bbca65233fe24d93537627e17d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 15ea9be2a3576081901c9e744d89d33688fe838a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492567"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273576"
 ---
 # <a name="ccomcontainedobject-class"></a>Classe CComContainedObject
 
@@ -37,7 +37,7 @@ class CComContainedObject : public Base
 
 #### <a name="parameters"></a>Parâmetros
 
-*Base de dados de*<br/>
+*Base*<br/>
 Sua classe, derivada de [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) ou [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md).
 
 ## <a name="members"></a>Membros
@@ -47,7 +47,7 @@ Sua classe, derivada de [CComObjectRoot](../../atl/reference/ccomobjectroot-clas
 |Nome|Descrição|
 |----------|-----------------|
 |[CComContainedObject::CComContainedObject](#ccomcontainedobject)|O construtor. Inicializa o ponteiro de membro para o objeto de proprietário `IUnknown`.|
-|[CComContainedObject:: ~ CComContainedObject](#dtor)|O destruidor.|
+|[CComContainedObject::~CComContainedObject](#dtor)|O destruidor.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
@@ -94,14 +94,14 @@ CComContainedObject(void* pv);
 
 ### <a name="parameters"></a>Parâmetros
 
-*VP*<br/>
+*pv*<br/>
 [in] O objeto de proprietário `IUnknown`.
 
 ### <a name="remarks"></a>Comentários
 
 Conjuntos a `m_pOuterUnknown` ponteiro de membro (herdadas por meio de `Base` classe) para *pv*.
 
-##  <a name="dtor"></a>  CComContainedObject:: ~ CComContainedObject
+##  <a name="dtor"></a>  CComContainedObject::~CComContainedObject
 
 O destruidor.
 
@@ -141,13 +141,13 @@ HRESULT STDMETHODCALLTYPE QueryInterface(Q** pp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*IID*<br/>
+*iid*<br/>
 [in] O identificador da interface que está sendo solicitado.
 
 *ppvObject*<br/>
 [out] Um ponteiro para o ponteiro de interface identificado pelo *iid*. Se o objeto não dá suporte a essa interface, *ppvObject* é definido como NULL.
 
-*PP*<br/>
+*pp*<br/>
 [out] Um ponteiro para o ponteiro de interface identificado pelo tipo `Q`. Se o objeto não dá suporte a essa interface, *pp* é definido como NULL.
 
 ### <a name="return-value"></a>Valor de retorno

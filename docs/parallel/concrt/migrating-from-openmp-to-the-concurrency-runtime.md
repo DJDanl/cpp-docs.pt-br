@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Concurrency Runtime, migrating from OpenMP
 - OpenMP, migrating to the Concurrency Runtime
 ms.assetid: 9bab7bb1-e45d-44b2-8509-3b226be2c93b
-ms.openlocfilehash: 78fa83c30bc55d82ffa5d2ba1e7d65472643f86b
-ms.sourcegitcommit: ee0103752884425843556a19cf418a504dc3cd02
+ms.openlocfilehash: 16b0f175867e18e127997749098cce998674b3d2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53737618"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259497"
 ---
 # <a name="migrating-from-openmp-to-the-concurrency-runtime"></a>Migrando de OpenMP no Tempo de Execução de Simultaneidade
 
@@ -48,17 +48,17 @@ Os casos a seguir descrevem quando pode não ser apropriado migrar o código de 
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-[Como: Converter um loop OpenMP paralelo para Loop para usar o tempo de execução de simultaneidade](../../parallel/concrt/how-to-convert-an-openmp-parallel-for-loop-to-use-the-concurrency-runtime.md)
+[Como: Converter um loop OpenMP paralelo para loop para usar o Tempo de Execução de Simultaneidade](../../parallel/concrt/how-to-convert-an-openmp-parallel-for-loop-to-use-the-concurrency-runtime.md)
 
 Dado um loop básico que usa o OpenMP [paralelas](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel) e [para](../../parallel/openmp/reference/for-openmp.md) diretivas, demonstra como convertê-lo para usar o tempo de execução de simultaneidade [Concurrency:: parallel_for](reference/concurrency-namespace-functions.md#parallel_for) algoritmo.
 
-[Como: Converter um Loop OpenMP que usa cancelamento para usar o tempo de execução de simultaneidade](../../parallel/concrt/convert-an-openmp-loop-that-uses-cancellation.md)<br/>
+[Como: Converter um loop OpenMP que usa cancelamento para usar o Tempo de Execução de Simultaneidade](../../parallel/concrt/convert-an-openmp-loop-that-uses-cancellation.md)<br/>
 Dado um OpenMP [paralelas](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)[para](../../parallel/openmp/reference/for-openmp.md) loop que não exige que todas as iterações para executar, demonstra como convertê-lo para usar o mecanismo de cancelamento de tempo de execução de simultaneidade.
 
-[Como: Converter um Loop OpenMP que usa o tratamento de exceções para usar o tempo de execução de simultaneidade](../../parallel/concrt/convert-an-openmp-loop-that-uses-exception-handling.md)<br/>
+[Como: Converter um loop OpenMP que usa tratamento de exceções para usar o Tempo de Execução de Simultaneidade](../../parallel/concrt/convert-an-openmp-loop-that-uses-exception-handling.md)<br/>
 Dado um OpenMP [paralelas](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)[para](../../parallel/openmp/reference/for-openmp.md) loop que executa o tratamento de exceções, demonstra como convertê-lo para usar o mecanismo de tratamento de exceções de tempo de execução de simultaneidade.
 
-[Como: Converter um Loop OpenMP que usa uma variável de redução para usar o tempo de execução de simultaneidade](../../parallel/concrt/convert-an-openmp-loop-that-uses-a-reduction-variable.md)<br/>
+[Como: Converter um loop OpenMP que usa uma variável de redução para usar o Tempo de Execução de Simultaneidade](../../parallel/concrt/convert-an-openmp-loop-that-uses-a-reduction-variable.md)<br/>
 Dado um OpenMP [paralelas](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)[para](../../parallel/openmp/reference/for-openmp.md) loop que usa o [redução](../../parallel/openmp/reference/reduction.md) cláusula, demonstra como convertê-lo para usar o tempo de execução de simultaneidade.
 
 ## <a name="see-also"></a>Consulte também
@@ -67,4 +67,3 @@ Dado um OpenMP [paralelas](../../parallel/concrt/how-to-use-parallel-invoke-to-w
 [OpenMP](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md#openmp)<br/>
 [PPL (Biblioteca de Padrões Paralelos)](../../parallel/concrt/parallel-patterns-library-ppl.md)<br/>
 [Biblioteca de agentes assíncronos](../../parallel/concrt/asynchronous-agents-library.md)
-

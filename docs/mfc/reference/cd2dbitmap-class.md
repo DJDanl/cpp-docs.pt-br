@@ -51,12 +51,12 @@ helpviewer_keywords:
 - CD2DBitmap [MFC], m_strPath
 - CD2DBitmap [MFC], m_uiResID
 ms.assetid: 2b3686f1-812c-462b-b449-9f0cb6949bf6
-ms.openlocfilehash: 869d8c9cffae1a257de04cf82446025be33ef7de
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 288ba5e1503a4e3eefe83624cf9a489274a10823
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605862"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264710"
 ---
 # <a name="cd2dbitmap-class"></a>Classe CD2DBitmap
 
@@ -75,7 +75,7 @@ class CD2DBitmap : public CD2DResource;
 |Nome|Descrição|
 |----------|-----------------|
 |[CD2DBitmap::CD2DBitmap](#cd2dbitmap)|Sobrecarregado. Constrói um objeto CD2DBitmap HBITMAP.|
-|[CD2DBitmap:: ~ CD2DBitmap](#_dtorcd2dbitmap)|O destruidor. Chamado quando um objeto de bitmap D2D está sendo destruído.|
+|[CD2DBitmap::~CD2DBitmap](#_dtorcd2dbitmap)|O destruidor. Chamado quando um objeto de bitmap D2D está sendo destruído.|
 
 ### <a name="protected-constructors"></a>Construtores Protegidos
 
@@ -137,7 +137,7 @@ class CD2DBitmap : public CD2DResource;
 
 **Cabeçalho:** afxrendertarget.h
 
-##  <a name="_dtorcd2dbitmap"></a>  CD2DBitmap:: ~ CD2DBitmap
+##  <a name="_dtorcd2dbitmap"></a>  CD2DBitmap::~CD2DBitmap
 
 O destruidor. Chamado quando um objeto de bitmap D2D está sendo destruído.
 
@@ -260,7 +260,7 @@ HRESULT CopyFromMemory(
 *srcData*<br/>
 Os dados a serem copiados.
 
-*Densidade*<br/>
+*pitch*<br/>
 O stride ou tom, do bitmap de origem armazenado em srcData. O stride é o número de bytes de uma verificação de linha (uma linha de pixels na memória). O stride pode ser computado da seguinte fórmula: largura de pixel \* bytes por pixel + preenchimento de memória.
 
 *destRect*<br/>
@@ -461,7 +461,7 @@ ID do recurso de bitmap.
 UINT m_uiResID;
 ```
 
-##  <a name="operator_id2d1bitmap_star"></a>  CD2DBitmap::Operator ID2D1Bitmap *
+##  <a name="operator_id2d1bitmap_star"></a>  CD2DBitmap::operator ID2D1Bitmap*
 
 Interface de ID2D1Bitmap retorna
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - ATL projects, adding property pages
 - ATL Property Page Wizard
 ms.assetid: 6113e325-facd-4f68-b491-144d75209922
-ms.openlocfilehash: 9b698616dbde06452e9ab08f37c646a2cedbc37c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 791901ab3181ad2c8ac862a970980250693d20f7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50572764"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258275"
 ---
 # <a name="atl-property-page-wizard"></a>Assistente de página de propriedades da ATL
 
@@ -68,5 +68,4 @@ Fornece informações sobre a funcionalidade de COM para o objeto.
 
 [Opções, Assistente de página de propriedades da ATL](../../atl/reference/options-atl-property-page-wizard.md)<br/>
 [Cadeias de caracteres, o Assistente de página de propriedades ATL](../../atl/reference/strings-atl-property-page-wizard.md)<br/>
-[Exemplo: implementando uma página de propriedades](../../atl/example-implementing-a-property-page.md)
-
+[Exemplo: Implementando uma página de propriedades](../../atl/example-implementing-a-property-page.md)

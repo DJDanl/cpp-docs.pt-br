@@ -13,12 +13,12 @@ f1_keywords:
 - AMPRT/Concurrency::completion_future::wait_for
 - AMPRT/Concurrency::completion_future::wait_until
 ms.assetid: 1303c62e-546d-4b02-a578-251ed3fc0b6b
-ms.openlocfilehash: d121477cf63236ee40df826a63dd7c7c9880d142
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 663122c2d8cd430e921773e75dfd7975e4a41516
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50535285"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272913"
 ---
 # <a name="completionfuture-class"></a>Classe completion_future
 
@@ -44,7 +44,7 @@ class completion_future;
 |Nome|Descrição|
 |----------|-----------------|
 |[get](#get)|Aguarda até que a operação assíncrona associada é concluída.|
-|[Em seguida](#then)|Encadeia um objeto de função de retorno de chamada para o `completion_future` objeto a ser executado quando a operação assíncrona associada conclui a execução.|
+|[then](#then)|Encadeia um objeto de função de retorno de chamada para o `completion_future` objeto a ser executado quando a operação assíncrona associada conclui a execução.|
 |[to_task](#to_task)|Retorna um `task` objeto correspondente para a operação assíncrona associada.|
 |[valid](#valid)|Obtém um valor booliano que indica se o objeto está associado uma operação assíncrona.|
 |[wait](#wait)|Bloqueia até que a operação assíncrona associada é concluída.|
@@ -86,7 +86,7 @@ completion_future(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Outro*<br/>
+*_Other*<br/>
 O `completion_future` objeto a ser copiado ou movido.
 
 ### <a name="overloads-list"></a>Lista de sobrecargas
@@ -121,7 +121,7 @@ operator std::shared_future<void>() const;
 
 Um objeto `std::shared_future`.
 
-## <a name="operator_eq"></a> operador =
+## <a name="operator_eq"></a> operator=
 
 Copia o conteúdo especificado `completion_future` esse objeto.
 
@@ -134,7 +134,7 @@ completion_future&  operator= (completion_future&& _Other );
 
 ### <a name="parameters"></a>Parâmetros
 
-*Outro*<br/>
+*_Other*<br/>
 O objeto do qual copiar.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -277,7 +277,7 @@ Retorna:
 
 1. `std::future_status::timeout` Se o período de tempo especificado tiver decorrido.
 
-## <a name="dtor"></a> ~ completion_future
+## <a name="dtor"></a> ~completion_future
 
 Destrói o `completion_future` objeto.
 

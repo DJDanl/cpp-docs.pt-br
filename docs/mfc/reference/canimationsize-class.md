@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CAnimationSize [MFC], m_cxValue
 - CAnimationSize [MFC], m_cyValue
 ms.assetid: ea06d1b5-502c-44a3-82ca-8bd6ba6a9364
-ms.openlocfilehash: ad7200ca53aa99104270209ca253b93d2393d8a8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f52016afe39da900dca4847d29beccb97d829b60
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50448640"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258249"
 ---
 # <a name="canimationsize-class"></a>Classe CAnimationSize
 
@@ -73,7 +73,7 @@ class CAnimationSize : public CAnimationBaseObject;
 |Nome|Descrição|
 |----------|-----------------|
 |[CAnimationSize::operator CSize](#operator_csize)|Converte um CAnimationSize um CSize.|
-|[CAnimationSize::operator =](#operator_eq)|Atribui szSrc a CAnimationSize.|
+|[CAnimationSize::operator=](#operator_eq)|Atribui szSrc a CAnimationSize.|
 
 ### <a name="protected-data-members"></a>Membros de dados protegidos
 
@@ -268,7 +268,7 @@ Valor atual de tamanho de animação como CSize.
 
 Essa função chama internamente GetValue. Se falhar GetValue por algum motivo, o tamanho retornado conterá valores padrão para largura e altura.
 
-##  <a name="operator_eq"></a>  CAnimationSize::operator =
+##  <a name="operator_eq"></a>  CAnimationSize::operator=
 
 Atribui szSrc a CAnimationSize.
 

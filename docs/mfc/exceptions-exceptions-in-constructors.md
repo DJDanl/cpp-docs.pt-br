@@ -1,27 +1,26 @@
 ---
-title: 'Exceções: exceções em construtores'
+title: 'Exceções: Exceções em construtores'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - constructors [MFC], exceptions
 - throwing exceptions [MFC], in constructors
 - exceptions [MFC], in constructors
 ms.assetid: a78eae5a-5821-4b27-9478-1436320ed1e1
-ms.openlocfilehash: 23d1f6a9a3c76cc9c0c1d4aebd5c0b0ea45c3154
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0b11f5be18879d5ad4b9e204bb02e18b4617c6b7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50472261"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271002"
 ---
-# <a name="exceptions-exceptions-in-constructors"></a>Exceções: exceções em construtores
+# <a name="exceptions-exceptions-in-constructors"></a>Exceções: Exceções em construtores
 
-Ao lançar uma exceção em um construtor, limpar quaisquer objetos e as alocações de memória feitas antes de lançar a exceção, conforme explicado em [exceções: Lançando exceções das funções próprias Your](../mfc/exceptions-throwing-exceptions-from-your-own-functions.md).
+Ao lançar uma exceção em um construtor, limpar quaisquer objetos e as alocações de memória feitas antes de lançar a exceção, conforme explicado em [exceções: Lançando exceções das suas próprias funções](../mfc/exceptions-throwing-exceptions-from-your-own-functions.md).
 
 Ao lançar uma exceção em um construtor, a memória para o próprio objeto já foi alocada no momento em que o construtor é chamado. Portanto, o compilador automaticamente será desalocar a memória ocupada pelo objeto depois que a exceção é lançada.
 
-Para obter mais informações, consulte [exceções: liberando objetos em exceções](../mfc/exceptions-freeing-objects-in-exceptions.md).
+Para obter mais informações, consulte [exceções: Liberando objetos em exceções](../mfc/exceptions-freeing-objects-in-exceptions.md).
 
 ## <a name="see-also"></a>Consulte também
 
 [Tratamento de Exceção](../mfc/exception-handling-in-mfc.md)
-

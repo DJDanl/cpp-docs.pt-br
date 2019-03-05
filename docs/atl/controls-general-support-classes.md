@@ -1,5 +1,5 @@
 ---
-title: 'Controles de ATL: Classes de suporte geral'
+title: 'Controles ATL: Classes de suporte geral'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [ATL]
 - general support classes
 ms.assetid: cf73f1d2-7542-48e3-b8c8-9d3abf29f85b
-ms.openlocfilehash: 49b7ff751db33ce2647ea7d4865ebea93949813b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bf5c1b9e2f4fb7414cc34d457bc0d8b1e27dcd91
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50551431"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262994"
 ---
 # <a name="controls-general-support-classes"></a>Controles: Classes de suporte geral
 
@@ -40,4 +40,3 @@ As classes a seguir fornecem suporte geral para controles ATL:
 ## <a name="see-also"></a>Consulte também
 
 [Visão geral da classe](../atl/atl-class-overview.md)
-

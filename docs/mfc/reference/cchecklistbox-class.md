@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CCheckListBox [MFC], SetCheck
 - CCheckListBox [MFC], SetCheckStyle
 ms.assetid: 1dd78438-00e8-441c-b36f-9c4f9ac0d019
-ms.openlocfilehash: b1e64e947f798becef32fa4d99f21e61133cc8fc
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: b34891c4f46679e43aea36a9b52d6399e020ef71
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53177830"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273056"
 ---
 # <a name="cchecklistbox-class"></a>Classe CCheckListBox
 
@@ -80,7 +80,7 @@ Se você quiser manipular mensagens de notificação do Windows enviadas por uma
 
 Cada entrada de mapa de mensagem usa o seguinte formato:
 
-**Diante\_**_notificação_ **(** _id_, _memberFxn_ **)**
+**ON\_**_Notification_ **(** _id_, _memberFxn_ **)**
 
 em que `id` Especifica a ID de janela filho do controle que está enviando a notificação e `memberFxn` é o nome da função de membro pai que você tenha escrito para manipular a notificação.
 
@@ -145,7 +145,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Especifica o estilo da caixa de lista de verificação. O estilo deve ser LBS_HASSTRINGS e LBS_OWNERDRAWFIXED (todos os itens na lista são da mesma altura) ou LBS_OWNERDRAWVARIABLE (itens da lista são de alturas diferentes). Esse estilo pode ser combinado com outras [estilos de caixa de listagem](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) exceto LBS_USETABSTOPS.
 
-*Rect*<br/>
+*rect*<br/>
 Especifica o tamanho da caixa de lista de verificação e a posição. Pode ser um [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto ou uma [RECT](/windows/desktop/api/windef/ns-windef-tagrect) estrutura.
 
 *pParentWnd*<br/>
@@ -220,7 +220,7 @@ void Enable(
 *nIndex*<br/>
 Índice do item da caixa de lista de verificação a ser habilitado.
 
-*bAtivado*<br/>
+*bEnabled*<br/>
 Especifica se o item está habilitado ou desabilitado.
 
 ##  <a name="getcheck"></a>  CCheckListBox::GetCheck
@@ -337,7 +337,7 @@ void SetCheck(
 *nIndex*<br/>
 Índice baseado em zero de uma caixa de seleção que está contido na caixa de listagem.
 
-*nVerifique*<br/>
+*nCheck*<br/>
 O estado do botão para a caixa de seleção especificado. Consulte a seção comentários para os valores possíveis.
 
 ### <a name="remarks"></a>Comentários

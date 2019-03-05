@@ -19,12 +19,12 @@ f1_keywords:
 helpviewer_keywords:
 - tiled_index class
 ms.assetid: 0ce2ae26-f1bb-4436-b473-a9e1b619bb38
-ms.openlocfilehash: 11faec19160ccc6028bdb294f37a51d7fe26dc15
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cea1ac1d500a9cf3bcbdc1f5dde33a0002cbd363
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50619824"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57257898"
 ---
 # <a name="tiledindex-class"></a>Classe tiled_index
 
@@ -108,7 +108,7 @@ O comprimento da dimensão menos significativa.
 
 **Cabeçalho:** amp. h
 
-**Namespace:** Simultaneidade
+**Namespace:** Concorrência
 
 ## <a name="tiled_index__ctor"></a>  Construtor de tiled_index
 
@@ -130,10 +130,10 @@ tiled_index(
 
 #### <a name="parameters"></a>Parâmetros
 
-*Global*<br/>
+*_Global*<br/>
 Global [índice](index-class.md) de construído `tiled_index`.
 
-*Local*<br/>
+*_Local*<br/>
 O local [índice](index-class.md) de construído `tiled_index`
 
 *_Tile*<br/>
@@ -145,7 +145,7 @@ A origem do bloco [índice](index-class.md) de construído `tiled_index`
 *_Barrier*<br/>
 O [tile_barrier](tile-barrier-class.md) objeto de construído `tiled_index`.
 
-*Outro*<br/>
+*_Other*<br/>
 O `tile_index` objeto a ser copiado para construído `tiled_index`.
 
 ## <a name="overloads"></a>Sobrecargas
@@ -210,7 +210,7 @@ Armazena a classificação do `tiled_index` objeto.
 static const int rank = _Rank;
 ```
 
-## <a name="tiled_index__tile"></a>  lado a lado
+## <a name="tiled_index__tile"></a>  tile
 
 Armazena uma [índice](index-class.md) objeto de classificação 1, 2 ou 3 que representa as coordenadas do quadro atual de um [tiled_extent](tiled-extent-class.md) objeto.
 

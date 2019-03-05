@@ -9,12 +9,12 @@ helpviewer_keywords:
 - header controls [MFC]
 - header controls [MFC], list controls used with
 ms.assetid: b20194b1-1a6b-4e2f-b890-1b3cca6650bc
-ms.openlocfilehash: 5e1c5f338ea8626969d426af3ae2b51e8bdc62fa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 934b54de3266138225087d5519af2be51972cf9d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50526786"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266764"
 ---
 # <a name="header-control-and-list-control"></a>Controle de cabeçalho e de lista
 
@@ -39,4 +39,3 @@ O objeto de controle de cabeçalho inseridos pode ser acessado de qualquer uma `
 
 [Usando CHeaderCtrl](../mfc/using-cheaderctrl.md)<br/>
 [Controles](../mfc/controls-mfc.md)
-

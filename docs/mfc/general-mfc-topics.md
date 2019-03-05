@@ -6,12 +6,12 @@ helpviewer_keywords:
 - class libraries [MFC], MFC
 - MFC, application development
 ms.assetid: 617e9945-9bb3-471d-a3ba-e235fcfb55d1
-ms.openlocfilehash: ceedf5c02d92059058bc72942a74852eb8146d38
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a55bfae8599e2b221cb853cb17bd4113839fb9c1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50564717"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270963"
 ---
 # <a name="general-mfc-topics"></a>Tópicos MFC gerais
 
@@ -33,7 +33,7 @@ Estrutura MFC é uma abordagem eficiente que permite que você crie após o trab
 
 [Compilando no Framework](../mfc/building-on-the-framework.md)
 
-[CWinApp: a classe do aplicativo](../mfc/cwinapp-the-application-class.md)
+[CWinApp: A classe do aplicativo](../mfc/cwinapp-the-application-class.md)
 
 [Modelos de documento e o processo de criação de documento/exibição](../mfc/document-templates-and-the-document-view-creation-process.md)
 
@@ -47,7 +47,7 @@ Estrutura MFC é uma abordagem eficiente que permite que você crie após o trab
 
 [Requisitos de build para controles comuns do Windows Vista](../mfc/build-requirements-for-windows-vista-common-controls.md)
 
-[Como adicionar suporte ao gerenciador de reinicialização](../mfc/how-to-add-restart-manager-support.md)
+[Como: Adicionar suporte ao Gerenciador de reinicialização](../mfc/how-to-add-restart-manager-support.md)
 
 [Layout dinâmico](../mfc/dynamic-layout.md)
 
@@ -58,4 +58,3 @@ Para obter informações sobre o ATL, consulte [referência de biblioteca do Act
 ## <a name="see-also"></a>Consulte também
 
 [Trabalhando com objetos de janela](../mfc/working-with-window-objects.md)
-

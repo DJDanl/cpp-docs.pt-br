@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CBaseTransition [MFC], m_transition
 - CBaseTransition [MFC], m_type
 ms.assetid: dfe84007-bbc5-43b7-b5b8-fae9145573bf
-ms.openlocfilehash: b4c15be574700730e847bce06aaa4a6f82aed4b0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1f9bc3708974511506741a35c11676df2b0be592
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50539120"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258366"
 ---
 # <a name="cbasetransition-class"></a>Classe CBaseTransition
 
@@ -74,7 +74,7 @@ class CBaseTransition : public CObject;
 |Nome|Descrição|
 |----------|-----------------|
 |[CBaseTransition::CBaseTransition](#cbasetransition)|Constrói um objeto transtion base.|
-|[CBaseTransition:: ~ CBaseTransition](#cbasetransition__~cbasetransition)|O destruidor. Chamado quando um objeto de transição está sendo destruído.|
+|[CBaseTransition::~CBaseTransition](#cbasetransition__~cbasetransition)|O destruidor. Chamado quando um objeto de transição está sendo destruído.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
@@ -118,7 +118,7 @@ Essa classe encapsula a interface IUIAnimationTransition e serve como uma classe
 
 **Cabeçalho:** afxanimationcontroller.h
 
-##  <a name="_dtorcbasetransition"></a>  CBaseTransition:: ~ CBaseTransition
+##  <a name="_dtorcbasetransition"></a>  CBaseTransition::~CBaseTransition
 
 O destruidor. Chamado quando um objeto de transição está sendo destruído.
 
@@ -385,7 +385,7 @@ void SetKeyframes(
 *pStart*<br/>
 Um quadro-chave que especifica o início da transição.
 
-*Pendente*<br/>
+*pEnd*<br/>
 Um quadro-chave que especifica o final da transição.
 
 ### <a name="remarks"></a>Comentários

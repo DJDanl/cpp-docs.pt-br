@@ -74,12 +74,12 @@ helpviewer_keywords:
 - COleServerItem [MFC], OnShow
 - COleServerItem [MFC], m_sizeExtent
 ms.assetid: 80256df6-3888-4256-944b-787d4b2e6b0d
-ms.openlocfilehash: e0d48d37d8262c4e82a8532333bbd12f193087b5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f774a8db1121dd293db8e58f7cd92aaabaeabada
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50604095"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270547"
 ---
 # <a name="coleserveritem-class"></a>Classe COleServerItem
 
@@ -155,7 +155,7 @@ O `COleServerItem` classe define várias funções de membro substituíveis que 
 
 Para usar `COleServerItem`, derive uma classe dele e implementar o [OnDraw](#ondraw) e [Serialize](../../mfc/reference/cobject-class.md#serialize) funções de membro. O `OnDraw` função fornece a representação meta-arquivo de um item, permitindo que ele seja exibido quando um aplicativo de contêiner é aberto um documento composto. O `Serialize` função de `CObject` fornece a representação nativa de um item, permitindo que um item inserido ser transferido entre os aplicativos de servidor e um contêiner. [OnGetExtent](#ongetextent) fornece o tamanho natural do item a ser o contêiner, habilitando o contêiner para o item de tamanho.
 
-Para obter mais informações sobre servidores e tópicos relacionados, consulte o artigo [servidores: Implementando um servidor](../../mfc/servers-implementing-a-server.md) e "Criando um aplicativo de contêiner/servidor", no artigo [contêineres: recursos avançados](../../mfc/containers-advanced-features.md).
+Para obter mais informações sobre servidores e tópicos relacionados, consulte o artigo [servidores: Implementação de um servidor](../../mfc/servers-implementing-a-server.md) e "Criando um aplicativo de contêiner/servidor", no artigo [contêineres: Recursos avançados de](../../mfc/containers-advanced-features.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 

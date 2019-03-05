@@ -18,12 +18,12 @@ helpviewer_keywords:
 - CStdioFile [MFC], WriteString
 - CStdioFile [MFC], m_pStream
 ms.assetid: 88c2274c-4f0e-4327-882a-557ba4b3ae15
-ms.openlocfilehash: dd1a13e7cef066350f8409782b0efeba11b9d11e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fd42934107591905a1bbc273ee9eec4b37e58ea7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456206"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258782"
 ---
 # <a name="cstdiofile-class"></a>Classe CStdioFile
 
@@ -199,7 +199,7 @@ virtual BOOL ReadString(CString& rString);
 *lpsz*<br/>
 Especifica um ponteiro para um buffer fornecido pelo usuário que receberá uma cadeia de caracteres de texto terminada em nulo.
 
-*Nmáx*<br/>
+*nMax*<br/>
 Especifica o número máximo de caracteres a serem lidos, sem contar o caractere nulo de terminação.
 
 *rString*<br/>
@@ -237,7 +237,7 @@ virtual ULONGLONG Seek(
 *lOff*<br/>
 Número de bytes para mover o ponteiro.
 
-*NDE*<br/>
+*nFrom*<br/>
 Modo de movimentação do ponteiro. Deve ser um dos seguintes valores:
 
 - `CFile::begin`: Mova o ponteiro do arquivo *lOff* bytes encaminham desde o início do arquivo.

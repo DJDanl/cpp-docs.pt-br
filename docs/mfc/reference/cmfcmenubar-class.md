@@ -106,12 +106,12 @@ helpviewer_keywords:
 - CMFCMenuBar [MFC], SetRecentlyUsedMenus
 - CMFCMenuBar [MFC], SetShowAllCommands
 ms.assetid: 8a3ce4c7-b012-4dc0-b4f8-53c10b4b86b8
-ms.openlocfilehash: a15291b49127b6c5f1efd97d8102b272c126cc10
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: e4b1a7eba31ef28578c515c437978bc59cbd08f1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694355"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267362"
 ---
 # <a name="cmfcmenubar-class"></a>Classe CMFCMenuBar
 
@@ -464,7 +464,7 @@ static void EnableMenuShadows(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parâmetros
 
-*bAtivar*<br/>
+*bEnable*<br/>
 [in] Um parâmetro booliano que indica se as sombras devem ser habilitadas para menus pop-up.
 
 ### <a name="remarks"></a>Comentários
@@ -878,7 +878,7 @@ virtual INT_PTR OnToolHitTest(
 
 ### <a name="parameters"></a>Parâmetros
 
-[in] *ponto*<br/>
+[in] *point*<br/>
 
 [in] *pTI*<br/>
 
@@ -997,7 +997,7 @@ void SetMaximizeMode(
 *bMax*<br/>
 [in] Um booliano que especifica o modo. Consulte a seção Comentários para obter mais informações.
 
-*Apropriei*<br/>
+*pWnd*<br/>
 [in] Um ponteiro para a janela filho MDI que está sendo alterada.
 
 *bRecalcLayout*<br/>

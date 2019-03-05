@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CMFCDropDownToolbarButton [MFC], SetDefaultCommand
 - CMFCDropDownToolbarButton [MFC], m_uiShowBarDelay
 ms.assetid: bc9d69e6-bd3e-4c15-9368-e80a504a0ba7
-ms.openlocfilehash: 3544bbd65b5e0c754552f93b45263f768b73fe69
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b33e50328fd3c8997774515f248780edda6bcc75
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50625310"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275487"
 ---
 # <a name="cmfcdropdowntoolbarbutton-class"></a>Classe CMFCDropDownToolbarButton
 
@@ -177,7 +177,7 @@ BOOL DropDownToolbar(CWnd* pWnd);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Apropriei*<br/>
+*pWnd*<br/>
 [in] A janela pai do quadro da lista suspensa, ou nulo para usar a janela pai do botão de barra de ferramentas da lista suspensa.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -202,7 +202,7 @@ virtual BOOL ExportToMenuButton(CMFCToolBarMenuButton& menuButton) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*Botão de menu*<br/>
+*menuButton*<br/>
 [in] Uma referência para o botão de menu de destino.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -334,7 +334,7 @@ virtual BOOL OnClick(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Apropriei*<br/>
+*pWnd*<br/>
 [in] A janela pai do botão de barra de ferramentas.
 
 *bDelay*<br/>
@@ -380,7 +380,7 @@ virtual BOOL OnContextHelp(CWnd* pWnd);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Apropriei*<br/>
+*pWnd*<br/>
 [in] A janela pai do botão de barra de ferramentas.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -391,7 +391,7 @@ Diferente de zero se o botão processa a mensagem de ajuda; Caso contrário, 0.
 
 Este método estende a implementação da classe base ( [CMFCToolBarButton::OnContextHelp](../../mfc/reference/cmfctoolbarbutton-class.md#oncontexthelp)) por meio da chamada a [CMFCDropDownToolbarButton::OnClick](#onclick) método com *bDelay*definido como FALSE. Esse método retorna o valor retornado por [CMFCDropDownToolbarButton::OnClick](#onclick).
 
-Para obter mais informações sobre a mensagem WM_HELPHITTEST, consulte [TN028: suporte a Ajuda contextual](../../mfc/tn028-context-sensitive-help-support.md).
+Para obter mais informações sobre a mensagem WM_HELPHITTEST, consulte [TN028: Suporte à ajuda contextual](../../mfc/tn028-context-sensitive-help-support.md).
 
 ##  <a name="oncustomizemenu"></a>  CMFCDropDownToolbarButton::OnCustomizeMenu
 
@@ -447,7 +447,7 @@ virtual void OnDraw(
 *pDC*<br/>
 [in] O contexto de dispositivo que exibe o botão.
 
-*Rect*<br/>
+*rect*<br/>
 [in] O retângulo delimitador do botão.
 
 *pImages*<br/>
@@ -488,7 +488,7 @@ virtual int OnDrawOnCustomizeList(
 *pDC*<br/>
 [in] O contexto de dispositivo que exibe o botão.
 
-*Rect*<br/>
+*rect*<br/>
 [in] O retângulo delimitador do botão.
 
 *bSelected*<br/>
@@ -545,5 +545,4 @@ Chame esse método para especificar um comando padrão que a estrutura executa q
 [Classe CMFCDropDownToolBar](../../mfc/reference/cmfcdropdowntoolbar-class.md)<br/>
 [Classe CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md)<br/>
 [Classe CMFCToolBarMenuButton](../../mfc/reference/cmfctoolbarmenubutton-class.md)<br/>
-[Instruções passo a passo: colocando controles em barras de ferramentas](../../mfc/walkthrough-putting-controls-on-toolbars.md)
-
+[Passo a passo: Colocando controles em barras de ferramentas](../../mfc/walkthrough-putting-controls-on-toolbars.md)

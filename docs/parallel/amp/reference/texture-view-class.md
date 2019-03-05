@@ -14,12 +14,12 @@ f1_keywords:
 - AMP_GRAPHICS/Concurrency::graphics::texture_view::set
 - AMP_GRAPHICS/Concurrency::graphics::texture_view::value_type
 ms.assetid: 6ec2e289-1626-4727-9592-07981cf1d27d
-ms.openlocfilehash: c76f1f9b00ea6e44f69f98286b83d4a84f12cac1
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.openlocfilehash: 0f2b627afa216f03592fe913afece1a80f5bd5a6
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657494"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275656"
 ---
 # <a name="textureview-class"></a>Classe texture_view
 
@@ -103,7 +103,7 @@ A classificação do `texture_view`.
 
 **Namespace:** Concurrency:: Graphics
 
-##  <a name="dtor"></a> ~ texture_view
+##  <a name="dtor"></a> ~texture_view
 
 Destrói o `texture_view` instância.
 
@@ -150,7 +150,7 @@ texture_view(// [7] copy constructor
 
 [3, 4] Construtor de `texture` em que o não gravável `texture_view` é criado.
 
-*Outro*<br/>
+*_Other*<br/>
 [5] o construtor de cópia o código-fonte gravável `texture_view`.
 
 [6, 7] O código-fonte não gravável do construtor de cópia `texture_view`.
@@ -303,7 +303,7 @@ value_type get(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Index*<br/>
+*_Index*<br/>
 O índice do elemento a ser obtido, possivelmente, multidimensional.
 
 *_Mip_level*<br/>
@@ -313,7 +313,7 @@ O nível de mipmap do qual devemos obter o valor. O valor padrão 0 representa o
 
 O valor do elemento.
 
-##  <a name="operator_eq"></a> operador =
+##  <a name="operator_eq"></a> operator=
 
 Atribui um modo de exibição da mesma textura conforme o especificado `texture_view` a este `texture_view` instância.
 
@@ -330,7 +330,7 @@ texture_view<const value_type, _Rank>& operator= (// [3] copy constructor
 
 ### <a name="parameters"></a>Parâmetros
 
-*Outro*<br/>
+*_Other*<br/>
 [1, 2] Construtor de cópia A gravável `texture_view` objeto.
 
 [3] construtor de cópia um não gravável `texture_view` objeto.
@@ -339,7 +339,7 @@ texture_view<const value_type, _Rank>& operator= (// [3] copy constructor
 
 Uma referência a este `texture_view` instância.
 
-##  <a name="operator_at"></a> operador]
+##  <a name="operator_at"></a> operator[]
 
 Retorna o valor do elemento por índice.
 
@@ -355,7 +355,7 @@ value_type operator[] (int _I0) const restrict(amp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Index*<br/>
+*_Index*<br/>
 O índice, possivelmente, multidimensional.
 
 *_I0*<br/>
@@ -365,7 +365,7 @@ O índice unidimensional.
 
 O valor do elemento indexado por `_Index`.
 
-##  <a name="operator_call"></a> Operator)
+##  <a name="operator_call"></a> operator()
 
 Retorna o valor do elemento por índice.
 
@@ -402,7 +402,7 @@ value_type operator() (
 
 ### <a name="parameters"></a>Parâmetros
 
-*Index*<br/>
+*_Index*<br/>
 O índice, possivelmente, multidimensional.
 
 *_I0*<br/>
@@ -458,7 +458,7 @@ O valor Especifica o nível de mipmap para obter um exemplo. Os valores fracion�
 
 O valor interpolado de exemplo.
 
-##  <a name="set"></a> Definir
+##  <a name="set"></a> set
 
 Define o valor do elemento no índice especificado para o valor especificado.
 
@@ -470,7 +470,7 @@ void set(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Index*<br/>
+*_Index*<br/>
 O índice do elemento a ser definido, possivelmente, multidimensional.
 
 *value*<br/>

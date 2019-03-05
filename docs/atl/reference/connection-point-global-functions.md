@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - connection points [C++], global functions
 ms.assetid: bcb4bf50-2155-4e20-b8bb-f2908b03a6e7
-ms.openlocfilehash: 200300eaea2bc98f1d87e2c1859610df8d0cb03b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0313e93ee82bb96f3bfe08e45f70ccfee30dbee6
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50628924"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57263878"
 ---
 # <a name="connection-point-global-functions"></a>Funções globais de ponto de Conexão
 
@@ -55,10 +55,10 @@ HRESULT    AtlAdvise(
 *pUnk*<br/>
 [in] Um ponteiro para o cliente `IUnknown`.
 
-*IID*<br/>
+*iid*<br/>
 [in] O GUID do ponto de conexão. Normalmente, isso é o mesmo que a interface de saída gerenciada pelo ponto de conexão.
 
-*PDW*<br/>
+*pdw*<br/>
 [out] Um ponteiro para o cookie que identifica exclusivamente a conexão.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -92,7 +92,7 @@ HRESULT    AtlUnadvise(
 *pUnkCP*<br/>
 [in] Um ponteiro para o `IUnknown` do objeto que o cliente está conectado com.
 
-*IID*<br/>
+*iid*<br/>
 [in] O GUID do ponto de conexão. Normalmente, isso é o mesmo que a interface de saída gerenciada pelo ponto de conexão.
 
 *dw*<br/>

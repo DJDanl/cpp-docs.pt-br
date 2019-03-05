@@ -162,12 +162,12 @@ helpviewer_keywords:
 - CTreeCtrl [MFC], SortChildren
 - CTreeCtrl [MFC], SortChildrenCB
 ms.assetid: 96e20031-6161-4143-8c12-8d1816c66d90
-ms.openlocfilehash: cc98a2e24fbb3eaff94e4c941986080d0bdbd7ef
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9bc31cc9cff12146e6f5fe227e0e191d1c555063
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50477942"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271392"
 ---
 # <a name="ctreectrl-class"></a>Classe CTreeCtrl
 
@@ -314,7 +314,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Especifica o estilo do controle de exibição de árvore. Aplicar estilos de janela, descritos em [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa)e qualquer combinação de [estilos de controle de exibição de árvore](/windows/desktop/Controls/tree-view-control-window-styles) conforme descrito no SDK do Windows.
 
-*Rect*<br/>
+*rect*<br/>
 Especifica o tamanho e a posição do controle de exibição de árvore. Ela pode ser um [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto ou uma [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura.
 
 *pParentWnd*<br/>
@@ -360,7 +360,7 @@ Especifica o estilo estendido do controle que está sendo criado. Para obter uma
 *dwStyle*<br/>
 Especifica o estilo do controle de exibição de árvore. Aplicar estilos de janela, descritos em [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa)e qualquer combinação de [estilos de controle de exibição de árvore](/windows/desktop/Controls/tree-view-control-window-styles) conforme descrito no SDK do Windows.
 
-*Rect*<br/>
+*rect*<br/>
 Uma referência a um [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura que descreve o tamanho e posição da janela a ser criado, em coordenadas do cliente do *pParentWnd*.
 
 *pParentWnd*<br/>
@@ -850,7 +850,7 @@ BOOL GetItemImage(
 *hItem*<br/>
 O identificador do item cuja imagem deve ser recuperado.
 
-*Nimagem*<br/>
+*nImage*<br/>
 Um inteiro que recebe o índice da imagem do item na lista de imagens do controle de exibição de árvore.
 
 *nSelectedImage*<br/>
@@ -1427,7 +1427,7 @@ Inteiro que especifica quais atributos a serem definidos. Consulte o `TVITEM` es
 *lpszItem*<br/>
 Endereço de uma cadeia de caracteres que contém o texto do item.
 
-*Nimagem*<br/>
+*nImage*<br/>
 Índice da imagem do item na lista de imagens do controle de exibição de árvore.
 
 *nSelectedImage*<br/>
@@ -1713,7 +1713,7 @@ COLORREF SetBkColor(COLORREF clr);
 
 ### <a name="parameters"></a>Parâmetros
 
-*CLR*<br/>
+*clr*<br/>
 Um valor COLORREF que contém a nova cor de plano de fundo. Se esse valor é -1, o controle voltará a usar a cor do sistema para a cor do plano de fundo.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1739,7 +1739,7 @@ BOOL SetCheck(
 *hItem*<br/>
 HTREEITEM para receber a alteração de estado de seleção.
 
-*Confira*<br/>
+*fCheck*<br/>
 Indica se o item de controle de árvore deve ser marcado ou desmarcado. Por padrão, `SetCheck` define o item a ser verificado.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1925,7 +1925,7 @@ Inteiro que especifica quais atributos a serem definidos. Consulte a `mask` memb
 *lpszItem*<br/>
 Endereço de uma cadeia de caracteres que contém o texto do item.
 
-*Nimagem*<br/>
+*nImage*<br/>
 Índice da imagem do item na lista de imagens do controle de exibição de árvore. Consulte a `iImage` membro o `TVITEM` estrutura.
 
 *nSelectedImage*<br/>
@@ -2054,7 +2054,7 @@ BOOL SetItemImage(
 *hItem*<br/>
 Identificador do item cuja imagem deve ser definido.
 
-*Nimagem*<br/>
+*nImage*<br/>
 Índice da imagem do item na lista de imagens do controle de exibição de árvore.
 
 *nSelectedImage*<br/>
@@ -2229,7 +2229,7 @@ COLORREF SetTextColor(COLORREF clr);
 
 ### <a name="parameters"></a>Parâmetros
 
-*CLR*<br/>
+*clr*<br/>
 Um valor COLORREF que contém a nova cor do texto. Se esse argumento for -1, o controle voltará a usar a cor do sistema para a cor do texto.
 
 ### <a name="return-value"></a>Valor de retorno

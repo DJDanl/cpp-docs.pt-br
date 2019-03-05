@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - IOleControlImpl class
 ms.assetid: 5a4255ad-ede4-49ca-ba9a-07c2e919fa85
-ms.openlocfilehash: 8b84f982d06547dd162da530d326d4cdb92e254a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 50119d21b041f37f03ca416a9a56ca9e29ae3344
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50442153"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57263527"
 ---
 # <a name="iolecontrolimpl-class"></a>Classe IOleControlImpl
 
@@ -92,7 +92,7 @@ Ver [IOleControl:GetControlInfo](/windows/desktop/api/ocidl/nf-ocidl-iolecontrol
 
 ### <a name="return-value"></a>Valor de retorno
 
-Retornará E_NOTIMPL.
+Returns E_NOTIMPL.
 
 ##  <a name="onambientpropertychange"></a>  IOleControlImpl::OnAmbientPropertyChange
 
@@ -120,7 +120,7 @@ HRESULT OnMnemonic(LPMSG pMsg);
 
 ### <a name="return-value"></a>Valor de retorno
 
-Retornará E_NOTIMPL.
+Returns E_NOTIMPL.
 
 ### <a name="remarks"></a>Comentários
 

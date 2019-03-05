@@ -1,5 +1,5 @@
 ---
-title: 'TN035: usando vários arquivos de recurso e arquivos de cabeçalho com o Visual C++'
+title: 'TN035: Usando vários arquivos de recurso e arquivos de cabeçalho com o Visual C++'
 ms.date: 11/04/2016
 f1_keywords:
 - vc.resources
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - resource files, multiple
 - TN035
 ms.assetid: 1f08ce5e-a912-44cc-ac56-7dd93ad73fb6
-ms.openlocfilehash: 6f89e10c2a05d1352dc2347af0aa0215079ea56c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7d97e4536c2a43e7e224e9056aa39df5480daeca
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50567654"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279907"
 ---
-# <a name="tn035-using-multiple-resource-files-and-header-files-with-visual-c"></a>TN035: usando vários arquivos de recurso e arquivos de cabeçalho com o Visual C++
+# <a name="tn035-using-multiple-resource-files-and-header-files-with-visual-c"></a>TN035: Usando vários arquivos de recurso e arquivos de cabeçalho com o Visual C++
 
 > [!NOTE]
 >  A nota técnica a seguir não foi atualizada desde que foi incluído pela primeira vez na documentação online. Como resultado, alguns procedimentos e tópicos podem estar desatualizadas ou incorretas. Para obter as informações mais recentes, é recomendável que você pesquise o tópico de interesse no índice da documentação online.
@@ -111,7 +111,7 @@ AFXRES. H define símbolos padrão, tais como `ID_FILE_NEW`, usado pela estrutur
 
 ## <a name="_mfcnotes_tn035_including"></a> Incluindo arquivos de cabeçalho adicionais
 
-O aplicativo criado por AppWizard inclui apenas dois arquivos de cabeçalho: RESOURCE. H e AFXRES. H. Somente o recurso. H é específico do aplicativo. Talvez seja necessário incluir arquivos de cabeçalho somente leitura adicionais nos seguintes casos:
+O aplicativo criado por AppWizard inclui apenas dois arquivos de cabeçalho: RECURSO. H e AFXRES. H. Somente o recurso. H é específico do aplicativo. Talvez seja necessário incluir arquivos de cabeçalho somente leitura adicionais nos seguintes casos:
 
 O arquivo de cabeçalho é fornecido por uma fonte externa, ou você deseja compartilhar o arquivo de cabeçalho entre vários projetos ou várias partes do mesmo projeto.
 
@@ -383,4 +383,3 @@ END
 
 [Observações técnicas por número](../mfc/technical-notes-by-number.md)<br/>
 [Observações técnicas por categoria](../mfc/technical-notes-by-category.md)
-

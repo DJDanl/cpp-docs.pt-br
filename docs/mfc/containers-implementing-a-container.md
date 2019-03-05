@@ -1,18 +1,18 @@
 ---
-title: 'Contêineres: implementando um contêiner'
+title: 'Contêineres: Implementando um contêiner'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - applications [OLE], OLE container
 - OLE containers [MFC], implementing
 ms.assetid: af1e2079-619a-4eac-9327-985ad875823a
-ms.openlocfilehash: 89bb8b483dba6e635eef5d9857bb558eca8e8fec
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0ab91316c9ee07296fbc46f9f17b3c46c71ee96f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50546699"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271418"
 ---
-# <a name="containers-implementing-a-container"></a>Contêineres: implementando um contêiner
+# <a name="containers-implementing-a-container"></a>Contêineres: Implementando um contêiner
 
 Este artigo resume o procedimento para a implementação de um contêiner e aponta para outros artigos que fornecem a que obter mais explicações sobre a implementação de contêineres. Ela também lista alguns recursos opcionais do OLE, que você talvez queira implementar e os artigos que descrevem esses recursos.
 
@@ -46,7 +46,7 @@ Como a implementação desses recursos varia significativamente de um aplicativo
 
 O Assistente para aplicativo derivará a classe para você, mas você provavelmente precisará substituir `OnChange` e as outras funções são listadas com ele na etapa 2 do procedimento anterior. As implementações de esqueleto precisam ser personalizado para a maioria dos aplicativos, porque essas funções são implementadas de forma diferente de um aplicativo para o próximo. Para obter exemplos de isso, consulte os exemplos MFC [DRAWCLI](../visual-cpp-samples.md) e [CONTÊINER](../visual-cpp-samples.md).
 
-Você deve adicionar um número de itens para a estrutura do menu do aplicativo de contêiner para dar suporte a OLE. Para obter mais informações sobre isso, consulte [Menus e recursos: adições de contêiner](../mfc/menus-and-resources-container-additions.md).
+Você deve adicionar um número de itens para a estrutura do menu do aplicativo de contêiner para dar suporte a OLE. Para obter mais informações sobre isso, consulte [Menus e recursos: Adições de contêiner](../mfc/menus-and-resources-container-additions.md).
 
 Convém também oferecem suporte a alguns dos recursos a seguir em seu aplicativo de contêiner:
 
@@ -60,10 +60,9 @@ Convém também oferecem suporte a alguns dos recursos a seguir em seu aplicativ
 
 - Contém links para os objetos inseridos ou aplicativos de servidor/contêiner de combinação.
 
-   Para obter mais informações, consulte [contêineres: recursos avançados](../mfc/containers-advanced-features.md).
+   Para obter mais informações, consulte [contêineres: Recursos avançados de](../mfc/containers-advanced-features.md).
 
 ## <a name="see-also"></a>Consulte também
 
 [Contêineres](../mfc/containers.md)<br/>
-[Contêineres: itens clientes](../mfc/containers-client-items.md)
-
+[Contêineres: Itens de cliente](../mfc/containers-client-items.md)

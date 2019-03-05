@@ -6,12 +6,12 @@ f1_keywords:
 - AMP_SHORT_VECTORS/norm
 - AMP_SHORT_VECTORS/Concurrency::graphics::norm Constructor
 ms.assetid: 73002f3d-c25e-4119-bcd3-4c46c9b6abf1
-ms.openlocfilehash: 2d37dcb430be9941444a90ac0a4ba34f3ee30515
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 56f879ef2fc0d3010ab4f64fedaf2570dac565d1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630757"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272419"
 ---
 # <a name="norm-class"></a>Classe norm
 
@@ -35,13 +35,13 @@ class norm;
 
 |Nome|Descrição|
 |----------|-----------------|
-|NORM::Operator-||
+|norm::operator-||
 |norm::operator--||
 |NORM::operator float|Operador de conversão. Converter o número de norma para flutuante valor de ponto.|
-|NORM::Operator * =||
-|NORM::Operator =||
-|NORM::Operator + +||
-|+ NORM::Operator =||
+|norm::operator*=||
+|norm::operator/=||
+|norm::operator++||
+|norm::operator+=||
 |norm::operator=||
 |norm::operator-=||
 
@@ -94,7 +94,7 @@ norm(
 *_V*<br/>
 O valor usado para inicializar.
 
-*Outro*<br/>
+*_Other*<br/>
 O objeto usado para inicializar.
 
 ## <a name="see-also"></a>Consulte também

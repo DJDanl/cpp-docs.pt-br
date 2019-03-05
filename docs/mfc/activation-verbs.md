@@ -1,5 +1,5 @@
 ---
-title: 'Ativação: verbos'
+title: 'Ativação: Verbos'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - verbs [MFC]
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - Primary verb [MFC]
 - OLE activation {MFC]
 ms.assetid: eb56ff23-1de8-43ad-abeb-dc7346ba7b70
-ms.openlocfilehash: f6774f1de1e7abd318e5cd38fed1a2c805270c15
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: baf8e0ac3527407b2e5ba77dfdf3921419217fd7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50443313"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267908"
 ---
-# <a name="activation-verbs"></a>Ativação: verbos
+# <a name="activation-verbs"></a>Ativação: Verbos
 
 Este artigo explica a função primária e secundária verbos play em OLE [ativação](../mfc/activation-cpp.md).
 
@@ -29,7 +29,7 @@ Muitos tipos de itens OLE oferecer suporte a apenas um verbo e edição é a mai
 
 Outro verbo usado com frequência é aberto. O verbo Open é idêntico à edição, exceto o aplicativo de servidor é iniciado em uma janela separada. Esse verbo deve ser usado quando o aplicativo de contêiner ou o aplicativo de servidor não dá suporte a ativação in-loco.
 
-Qualquer verbos que não seja o verbo primário devem ser invocados por meio de um comando de submenu quando o item é selecionado. Esse submenu contendo todos os verbos compatíveis com o item e geralmente for atingido, o *typename* **objeto** comando o **editar** menu. Para obter informações sobre o *typename* **objeto** de comando, consulte o artigo [Menus e recursos: adições de contêiner](../mfc/menus-and-resources-container-additions.md).
+Qualquer verbos que não seja o verbo primário devem ser invocados por meio de um comando de submenu quando o item é selecionado. Esse submenu contendo todos os verbos compatíveis com o item e geralmente for atingido, o *typename* **objeto** comando o **editar** menu. Para obter informações sobre o *typename* **objeto** de comando, consulte o artigo [Menus e recursos: Adições de contêiner](../mfc/menus-and-resources-container-additions.md).
 
 Os verbos que dá suporte a um aplicativo de servidor são listados no banco de dados de registro do Windows. Se seu aplicativo de servidor foi escrito com a biblioteca Microsoft Foundation Class, ele registrará automaticamente todos os verbos quando o servidor é iniciado. Caso contrário, você deve registrá-los durante a fase de inicialização do aplicativo de servidor. Para obter mais informações, consulte o artigo [registro](../mfc/registration.md).
 
@@ -38,4 +38,3 @@ Os verbos que dá suporte a um aplicativo de servidor são listados no banco de 
 [Ativação](../mfc/activation-cpp.md)<br/>
 [Contêineres](../mfc/containers.md)<br/>
 [Servidores](../mfc/servers.md)
-

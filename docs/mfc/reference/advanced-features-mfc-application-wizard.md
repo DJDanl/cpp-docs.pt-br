@@ -1,19 +1,19 @@
 ---
-title: Funcionalidades avançadas, Assistente de Aplicativo MFC
+title: Recursos avançados, Assistente de Aplicativo MFC
 ms.date: 11/04/2016
 f1_keywords:
 - vc.appwiz.mfc.exe.advanced
 helpviewer_keywords:
 - MFC Application Wizard, advanced features
 ms.assetid: 8a6681c5-6576-4b12-841a-6862beee76fa
-ms.openlocfilehash: 1af16f7009ceb97ea86d641f47cf56ea5a398c26
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 5643e1e9f4f558163c1c2a3b65070f90afdc7dba
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694284"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278217"
 ---
-# <a name="advanced-features-mfc-application-wizard"></a>Funcionalidades avançadas, Assistente de Aplicativo MFC
+# <a name="advanced-features-mfc-application-wizard"></a>Recursos avançados, Assistente de Aplicativo MFC
 
 Este tópico lista as opções para recursos adicionais para seu aplicativo, como a Ajuda, suporte para impressão e assim por diante. Em cada seção, especifique o suporte adicional para esses recursos avançados.
 
@@ -21,7 +21,7 @@ Este tópico lista as opções para recursos adicionais para seu aplicativo, com
 
    Gera um conjunto de arquivos de ajuda para obter ajuda contextual, disponíveis usando F1 e um menu de Ajuda, ou clicando em um **ajudar** botão em uma caixa de diálogo. O suporte para ajuda requer o compilador de ajuda. Se você não tiver o compilador de ajuda, poderá instalá-lo executando novamente a instalação.
 
-   Ver [Ajuda em HTML: sensível ao contexto de ajuda para seus programas](../../mfc/html-help-context-sensitive-help-for-your-programs.md) e [arquivos de Ajuda (Ajuda HTML)](../../ide/help-files-html-help.md) para obter mais informações.
+   Consulte [Ajuda em HTML: Ajuda contextual para programas Your](../../mfc/html-help-context-sensitive-help-for-your-programs.md) e [arquivos de Ajuda (Ajuda HTML)](../../ide/help-files-html-help.md) para obter mais informações.
 
 - **Impressão e visualização de impressão**
 
@@ -57,7 +57,7 @@ Este tópico lista as opções para recursos adicionais para seu aplicativo, com
 
 - **Suporte ao Gerenciador de reinicialização**
 
-   Adiciona suporte para o [Gerenciador de reinicialização do Windows](/windows/desktop/RstMgr/using-restart-manager). Este vídeo mostra como usar o Gerenciador de reinicialização do MFC: [como fazer: usar o novo Gerenciador de reinicialização](/previous-versions/visualstudio/visual-studio-2010/dd831853(v%3dvs.100)).
+   Adiciona suporte para o [Gerenciador de reinicialização do Windows](/windows/desktop/RstMgr/using-restart-manager). Este vídeo mostra como usar o Gerenciador de reinicialização do MFC: [Como faço Usar o novo Gerenciador de reinicialização](/previous-versions/visualstudio/visual-studio-2010/dd831853(v%3dvs.100)).
 
 - **Painéis de quadros avançados**
 
@@ -76,4 +76,3 @@ Este tópico lista as opções para recursos adicionais para seu aplicativo, com
 ## <a name="see-also"></a>Consulte também
 
 [Assistente de aplicativo do MFC](../../mfc/reference/mfc-application-wizard.md)
-

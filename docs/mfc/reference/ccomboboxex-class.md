@@ -36,12 +36,12 @@ helpviewer_keywords:
 - CComboBoxEx [MFC], SetItem
 - CComboBoxEx [MFC], SetWindowTheme
 ms.assetid: 33ca960a-2409-478c-84a4-a2ee8ecfe8f7
-ms.openlocfilehash: 05545051b145f3beb11e4b48e8f93fd7908a783a
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: d7a39dd19a51bc5bab0f924d360d594bddf89b44
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694238"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57265932"
 ---
 # <a name="ccomboboxex-class"></a>Classe CComboBoxEx
 
@@ -149,7 +149,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Especifica a combinação de estilos de caixa de combinação aplicada à caixa de combinação. Ver **comentários** abaixo para obter mais informações sobre estilos.
 
-*Rect*<br/>
+*rect*<br/>
 Uma referência a um [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto ou [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura, que é a posição e tamanho da caixa de combinação.
 
 *pParentWnd*<br/>
@@ -209,7 +209,7 @@ Especifica o estilo estendido do controle que está sendo criado. Para obter uma
 *dwStyle*<br/>
 Estilo do controle de caixa de combinação. Ver [criar](#create) para obter uma lista de estilos.
 
-*Rect*<br/>
+*rect*<br/>
 Uma referência a um [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura que descreve o tamanho e posição da janela a ser criado, em coordenadas do cliente do *pParentWnd*.
 
 *pParentWnd*<br/>

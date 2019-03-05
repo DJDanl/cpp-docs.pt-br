@@ -92,12 +92,12 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCVisualManagerOffice2003 Class [MFC]
 ms.assetid: 115482cd-e349-450a-8dc4-c6023d092aab
-ms.openlocfilehash: 1b811de23b4a049bd462ddbb3f9b96e80ae25be0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c3b0a031db8ff843bb43f7dfa69f046d6ae99a96
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50558802"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273264"
 ---
 # <a name="cmfcvisualmanageroffice2003-class"></a>Classe CMFCVisualManagerOffice2003
 
@@ -245,10 +245,10 @@ virtual BOOL DrawComboBorderWinXP(
 *pDC*<br/>
 [in] Um ponteiro para um contexto de dispositivo.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Retângulo delimitador da borda da caixa de combinação.
 
-*bDesabilitado*<br/>
+*bDisabled*<br/>
 [in] Especifica se a borda da caixa de combinação está desabilitada.
 
 *bIsDropped*<br/>
@@ -281,10 +281,10 @@ virtual BOOL DrawComboDropButtonWinXP(
 *pDC*<br/>
 [in] Um ponteiro para um contexto de dispositivo.
 
-*Rect*<br/>
+*rect*<br/>
 [in] O retângulo delimitador do botão de lista suspensa da caixa de combinação.
 
-*bDesabilitado*<br/>
+*bDisabled*<br/>
 [in] Especifica se o botão de lista suspensa da caixa de combinação está desabilitado.
 
 *bIsDropped*<br/>
@@ -318,7 +318,7 @@ virtual void DrawCustomizeButton(
 *pDC*<br/>
 [in] Ponteiro para um contexto de exibição.
 
-*Rect*<br/>
+*rect*<br/>
 [in] O retângulo delimitador do botão
 
 *bIsHorz*<br/>
@@ -352,7 +352,7 @@ virtual BOOL DrawPushButtonWinXP(
 *pDC*<br/>
 [in] Um ponteiro para um contexto de dispositivo.
 
-*Rect*<br/>
+*rect*<br/>
 [in] O retângulo delimitador do botão de envio por push.
 
 *pButton*<br/>
@@ -823,7 +823,7 @@ virtual void OnDrawButtonBorder(
 *pButton*<br/>
 [in] Um ponteiro para um botão de barra de ferramentas. A estrutura desenha a borda desse botão.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Um retângulo que especifica os limites do botão de barra de ferramentas.
 
 *state*<br/>
@@ -856,7 +856,7 @@ virtual void OnDrawCaptionBarBorder(
 *pBar*<br/>
 [in] Um ponteiro para um [classe CMFCCaptionBar](../../mfc/reference/cmfccaptionbar-class.md) objeto. A estrutura desenha a barra de legenda.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Um retângulo que especifica os limites da barra de legenda.
 
 *clrBarBorder*<br/>
@@ -888,7 +888,7 @@ virtual void OnDrawCheckBoxEx(
 *pDC*<br/>
 [in] Ponteiro para um contexto de dispositivo.
 
-*Rect*<br/>
+*rect*<br/>
 [in] O retângulo delimitador da caixa de seleção.
 
 *nState*<br/>
@@ -900,7 +900,7 @@ virtual void OnDrawCheckBoxEx(
 *bPressed*<br/>
 [in] TRUE se a caixa de seleção estiver pressionado, ou FALSE se não for.
 
-*bAtivado*<br/>
+*bEnabled*<br/>
 [in] TRUE se a caixa de seleção estiver habilitado, ou FALSE se não.
 
 ### <a name="remarks"></a>Comentários
@@ -924,10 +924,10 @@ virtual void OnDrawComboBorder(
 *pDC*<br/>
 [in] Um ponteiro para o contexto de dispositivo de um botão da caixa de combinação.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Um retângulo que especifica os limites do botão da caixa de combinação.
 
-*bDesabilitado*<br/>
+*bDisabled*<br/>
 [in] Um parâmetro booliano que indica se o botão da caixa de combinação está indisponível.
 
 *bIsDropped*<br/>
@@ -962,10 +962,10 @@ virtual void OnDrawComboDropButton(
 *pDC*<br/>
 [in] Um ponteiro para um contexto de dispositivo.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Um retângulo que especifica os limites do botão suspenso.
 
-*bDesabilitado*<br/>
+*bDisabled*<br/>
 [in] Um parâmetro booliano que indica se o botão de menu está indisponível.
 
 *bIsDropped*<br/>
@@ -1013,7 +1013,7 @@ virtual void OnDrawExpandingBox(
 *pDC*<br/>
 [in] Ponteiro para o contexto de exibição em que a caixa de expansão deve ser desenhada.
 
-*Rect*<br/>
+*rect*<br/>
 [in] O retângulo delimitador da caixa de expansão a ser desenhado.
 
 *bIsOpened*<br/>
@@ -1045,7 +1045,7 @@ virtual void OnDrawHeaderCtrlBorder(
 *pDC*<br/>
 [in] Um ponteiro para um contexto de dispositivo.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Um retângulo que especifica os limites do controle de cabeçalho.
 
 [in] *bIsPressed*<br/>
@@ -1075,7 +1075,7 @@ virtual void OnDrawMenuBorder(
 *pMenu*<br/>
 [in] Um ponteiro para um [classe CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) objeto. A estrutura desenha uma borda ao redor esse menu pop-up.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Um retângulo que especifica os limites do menu pop-up.
 
 ### <a name="remarks"></a>Comentários
@@ -1153,7 +1153,7 @@ virtual void OnDrawPaneBorder(
 *pBar*<br/>
 [in] Um ponteiro para um painel. O Gerenciador visual desenha a borda deste painel.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Um retângulo que indica os limites do painel.
 
 ### <a name="remarks"></a>Comentários
@@ -1181,7 +1181,7 @@ virtual COLORREF OnDrawPaneCaption(
 *pBar*<br/>
 [in] Um ponteiro para um [classe CDockablePane](../../mfc/reference/cdockablepane-class.md) objeto. A estrutura desenha a legenda para esse painel.
 
-*bScripts Ativos*<br/>
+*bActive*<br/>
 [in] Um parâmetro booliano que indica se a barra de controle está ativa.
 
 *rectCaption*<br/>
@@ -1211,7 +1211,7 @@ virtual void OnDrawPopupWindowBorder(
 *pDC*<br/>
 [in] Ponteiro para o contexto de dispositivo da janela pop-up.
 
-*Rect*<br/>
+*rect*<br/>
 [in] O retângulo delimitador da janela pop-up.
 
 ### <a name="remarks"></a>Comentários
@@ -1409,7 +1409,7 @@ virtual void OnDrawRibbonQuickAccessToolBarSeparator(
 *pSeparator*<br/>
 [in] Um ponteiro para um [classe CMFCRibbonSeparator](../../mfc/reference/cmfcribbonseparator-class.md) objeto. A estrutura desenha esse separador de faixa de opções.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Um retângulo que especifica os limites do separador.
 
 ### <a name="remarks"></a>Comentários
@@ -1435,7 +1435,7 @@ virtual void OnDrawRibbonSliderChannel(
 *pSlider*<br/>
 [in] Um ponteiro para um [classe CMFCRibbonSlider](../../mfc/reference/cmfcribbonslider-class.md) objeto. A estrutura desenha o canal para esse controle deslizante de faixa de opções.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Um retângulo que especifica os limites para o canal do controle deslizante da faixa de opções.
 
 ### <a name="remarks"></a>Comentários
@@ -1464,7 +1464,7 @@ virtual void OnDrawRibbonSliderThumb(
 *pSlider*<br/>
 [in] Um ponteiro para um [classe CMFCRibbonSlider](../../mfc/reference/cmfcribbonslider-class.md). A estrutura desenha o elevador para esse controle deslizante de faixa de opções.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Um retângulo que especifica os limites do controle deslizante para o controle deslizante da faixa de opções.
 
 *bIsHighlighted*<br/>
@@ -1503,7 +1503,7 @@ virtual void OnDrawRibbonSliderZoomButton(
 *pSlider*<br/>
 [in] Um ponteiro para um [classe CMFCRibbonSlider](../../mfc/reference/cmfcribbonslider-class.md) objeto. A estrutura desenha esse controle deslizante de faixa de opções.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Um retângulo que especifica os limites dos botões de zoom no controle deslizante da faixa de opções.
 
 *bIsZoomOut*<br/>
@@ -1570,7 +1570,7 @@ virtual void OnDrawScrollButtons(
 *pDC*<br/>
 [in] Ponteiro para um contexto de dispositivo.
 
-*Rect*<br/>
+*rect*<br/>
 [in] O retângulo delimitador dos botões de rolagem.
 
 *nBorderSize*<br/>
@@ -1604,7 +1604,7 @@ virtual void OnDrawSeparator(
 *pBar*<br/>
 [in] Um ponteiro para um painel que contém o separador.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Um retângulo que especifica os limites do separador.
 
 *bIsHoriz*<br/>
@@ -1630,7 +1630,7 @@ virtual void OnDrawShowAllMenuItems(
 *pDC*<br/>
 [in] Ponteiro para um contexto de dispositivo.
 
-*Rect*<br/>
+*rect*<br/>
 [in] O retângulo delimitador do menu a ser desenhado.
 
 *state*<br/>
@@ -1795,7 +1795,7 @@ virtual void OnDrawTabsButtonBorder(
 *pDC*<br/>
 [in] Um ponteiro para um contexto de dispositivo.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Um retângulo que especifica os limites do botão guia.
 
 *pButton*<br/>
@@ -1862,10 +1862,10 @@ virtual void OnDrawTasksGroupAreaBorder(
 *pDC*<br/>
 [in] Um ponteiro para um contexto de dispositivo.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Um retângulo que especifica os limites da área de grupo no painel de tarefas.
 
-*bOpções especiais*<br/>
+*bSpecial*<br/>
 [in] Um parâmetro booliano que especifica se a borda é realçada. Um valor TRUE indica que a borda é realçada.
 
 *bNoTitle*<br/>
@@ -1925,7 +1925,7 @@ virtual void OnDrawTearOffCaption(
 *pDC*<br/>
 [in] Um ponteiro para um contexto de dispositivo.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Um retângulo que especifica os limites da legenda.
 
 *bIsActive*<br/>
@@ -1977,7 +1977,7 @@ virtual void OnEraseTabsArea(
 *pDC*<br/>
 [in] Um ponteiro para um contexto de dispositivo.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Um retângulo que especifica os limites da área da guia.
 
 *pTabWnd*<br/>
@@ -2006,7 +2006,7 @@ virtual void OnEraseTabsButton(
 *pDC*<br/>
 [in] Um ponteiro para um contexto de dispositivo.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Um retângulo que especifica os limites do botão guia.
 
 *pButton*<br/>
@@ -2037,7 +2037,7 @@ virtual BOOL OnEraseTabsFrame(
 *pDC*<br/>
 [in] Um ponteiro para um contexto de dispositivo.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Um retângulo que especifica os limites da janela de guia.
 
 *pTabWnd*<br/>
@@ -2067,7 +2067,7 @@ virtual void OnFillAutoHideButtonBackground(
 *pDC*<br/>
 [in] Um ponteiro para um contexto de dispositivo.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Um retângulo que especifica os limites do botão Ocultar automaticamente.
 
 *pButton*<br/>
@@ -2133,7 +2133,7 @@ virtual void OnFillButtonInterior(
 *pButton*<br/>
 [in] Um ponteiro para o botão para o qual a estrutura é preencher a tela de fundo.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Um retângulo que especifica os limites do botão de barra de ferramentas.
 
 *state*<br/>
@@ -2159,7 +2159,7 @@ virtual COLORREF OnFillCommandsListBackground(
 *pDC*<br/>
 [in] Um ponteiro para um contexto de dispositivo.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Um retângulo que especifica os limites do botão.
 
 *bIsSelected*<br/>
@@ -2192,7 +2192,7 @@ virtual void OnFillHeaderCtrlBackground(
 *pDC*<br/>
 [in] Um ponteiro para um contexto de dispositivo.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Um retângulo que especifica os limites do controle de cabeçalho.
 
 ### <a name="remarks"></a>Comentários
@@ -2216,7 +2216,7 @@ virtual void OnFillHighlightedArea(
 *pDC*<br/>
 [in] Ponteiro para um contexto de dispositivo.
 
-*Rect*<br/>
+*rect*<br/>
 [in] O retângulo delimitador da área realçada para preencher.
 
 *pBrush*<br/>
@@ -2273,7 +2273,7 @@ virtual void OnFillOutlookPageButton(
 *pDC*<br/>
 [in] Um ponteiro para um contexto de dispositivo.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Um retângulo que especifica os limites do botão de página do Outlook.
 
 *bIsHighlighted*<br/>
@@ -2304,7 +2304,7 @@ virtual void OnFillPopupWindowBackground(
 *pDC*<br/>
 [in] Um ponteiro para um contexto de dispositivo.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Um retângulo que especifica os limites da janela pop-up.
 
 ### <a name="remarks"></a>Comentários
@@ -2365,10 +2365,10 @@ virtual void OnFillTasksGroupInterior(
 *pDC*<br/>
 [in] Um ponteiro para um contexto de dispositivo.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Um retângulo que especifica os limites do grupo de tarefas.
 
-*bOpções especiais*<br/>
+*bSpecial*<br/>
 [in] Um booliano que indica se o interior é preenchido com uma cor especial.
 
 ### <a name="remarks"></a>Comentários
@@ -2416,7 +2416,7 @@ virtual void OnHighlightQuickCustomizeMenuButton(
 *pButton*<br/>
 [in] Um ponteiro para o botão.
 
-*Rect*<br/>
+*rect*<br/>
 [in] O retângulo delimitador do botão.
 
 ### <a name="remarks"></a>Comentários

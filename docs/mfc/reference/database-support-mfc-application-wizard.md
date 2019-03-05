@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - MFC Application Wizard, database support
 ms.assetid: 9ddf4558-fd41-4ac7-8d9b-c93d9c68ab59
-ms.openlocfilehash: 9635b7e045812cc90c5d6e9662b8475e411a0b48
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a1e0519e1351a48bbd969168d62f163c9dde7e7e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50654201"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259952"
 ---
 # <a name="database-support-mfc-application-wizard"></a>Suporte ao banco de dados, Assistente de Aplicativo MFC
 
@@ -24,7 +24,7 @@ Esta página fornece opções que permitem que você especifique o nível de ban
    |Opção|Descrição|
    |------------|-----------------|
    |**Nenhum**|Não fornece suporte de nenhum banco de dados. Esta é a opção padrão.|
-   |**Somente os arquivos de cabeçalho**|Fornece o nível básico de suporte do banco de dados para seu aplicativo. Se você selecionar o suporte a ODBC sob **tipo de cliente**, o Assistente de aplicativo do MFC inclui em seu projeto, o arquivo de cabeçalho AFXDB. H. Ele adiciona bibliotecas de vínculo, mas não cria quaisquer classes específicas de banco de dados. Você pode criar conjuntos de registros mais tarde e usá-los para examinar e atualizar registros. Se você selecionar o suporte de OLE DB sob **tipo de cliente**, os arquivos de cabeçalho a seguir estão incluídos: ATLBASE. AFXOLEDB H. ATLPLUS H. H|
+   |**Somente os arquivos de cabeçalho**|Fornece o nível básico de suporte do banco de dados para seu aplicativo. Se você selecionar o suporte a ODBC sob **tipo de cliente**, o Assistente de aplicativo do MFC inclui em seu projeto, o arquivo de cabeçalho AFXDB. H. Ele adiciona bibliotecas de vínculo, mas não cria quaisquer classes específicas de banco de dados. Você pode criar conjuntos de registros mais tarde e usá-los para examinar e atualizar registros. Se você selecionar o suporte de OLE DB sob **tipo de cliente**, os arquivos de cabeçalho a seguir estão incluídos: ATLBASE.H AFXOLEDB.H ATLPLUS.H|
    |**Exibição de banco de dados sem suporte para arquivo**|Inclui arquivos de cabeçalho do banco de dados, bibliotecas de vínculo, uma exibição de registro e um conjunto de registros. (Disponível somente para aplicativos com o **suporte de arquitetura de documento/exibição** opção selecionada na [tipo de aplicativo](../../mfc/reference/application-type-mfc-application-wizard.md) página.) Essa opção inclui suporte a documentos, mas não há suporte de serialização. Se você optar por incluir uma exibição de banco de dados, você deve especificar a fonte de dados.|
    |**Exibição de banco de dados com suporte para arquivo**|Inclui arquivos de cabeçalho do banco de dados, bibliotecas de vínculo, uma exibição de registro e um conjunto de registros. (Disponível somente para aplicativos com o **suporte de arquitetura de documento/exibição** opção selecionada na **tipo de aplicativo** página.) Essa opção dá suporte à serialização do documento, o que você pode usar, por exemplo, para atualizar um arquivo de perfil do usuário. Aplicativos de banco de dados geralmente operam em uma base por registro, em vez de por arquivo base e, portanto, não precisa de serialização. No entanto, você pode ter um uso especial para serialização. Se você optar por incluir uma exibição de banco de dados, você deve especificar a fonte de dados.|
 

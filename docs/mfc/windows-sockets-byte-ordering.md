@@ -1,21 +1,21 @@
 ---
-title: 'Windows Sockets: ordenação de bytes'
+title: 'Windows Sockets: A ordem de bytes'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - byte order issues in sockets programming
 - sockets [MFC], byte order issues
 - Windows Sockets [MFC], byte order issues
 ms.assetid: 8a787a65-f9f4-4002-a02f-ac25a5dace5d
-ms.openlocfilehash: 74d3b53ae3ab476ef1224caed91f31929fcce1ff
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ca572ad32a9a46756cacf0221d80b2953b710723
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50453944"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278087"
 ---
-# <a name="windows-sockets-byte-ordering"></a>Windows Sockets: ordenação de bytes
+# <a name="windows-sockets-byte-ordering"></a>Windows Sockets: A ordem de bytes
 
-Este artigo e dois artigos complementares explicam vários problemas na programação do Windows Sockets. Este artigo aborda a ordem de bytes. Os outros problemas são abordados nos artigos: [Windows Sockets: bloqueando](../mfc/windows-sockets-blocking.md) e [Windows Sockets: Convertendo cadeias de caracteres](../mfc/windows-sockets-converting-strings.md).
+Este artigo e dois artigos complementares explicam vários problemas na programação do Windows Sockets. Este artigo aborda a ordem de bytes. Os outros problemas são abordados nos artigos: [Windows Sockets: Bloqueando](../mfc/windows-sockets-blocking.md) e [Windows Sockets: Convertendo cadeias de caracteres](../mfc/windows-sockets-converting-strings.md).
 
 Se você usar ou derivar da classe [CAsyncSocket](../mfc/reference/casyncsocket-class.md), você precisará gerenciar esses problemas por conta própria. Se você usar ou derivar da classe [CSocket](../mfc/reference/csocket-class.md), gerencia MFC-los para você.
 
@@ -57,7 +57,7 @@ Trabalhando com [CAsyncSocket](../mfc/reference/casyncsocket-class.md), você de
 O caso ideal para usar soquetes MFC é quando você estiver escrevendo ambas as extremidades da comunicação: usando MFC em ambas as extremidades. Se você estiver escrevendo um aplicativo que irá se comunicar com aplicativos não MFC, como um servidor FTP, você provavelmente precisará gerenciar troca de bytes por conta própria antes de passar dados para o objeto de arquivo morto, usando as rotinas de conversão de Windows Sockets **ntohs**, **ntohl**, **htons**, e **htonl**. Um exemplo de como essas funções usadas na comunicação com um aplicativo MFC não aparece mais adiante neste artigo.
 
 > [!NOTE]
->  Quando a outra extremidade da comunicação não é um aplicativo do MFC, você também deve evitar streaming objetos C++ derivados de `CObject` em seu arquivo porque o receptor não será capaz de lidar com eles. Consulte a Observação [Windows Sockets: usando soquetes com arquivos mortos](../mfc/windows-sockets-using-sockets-with-archives.md).
+>  Quando a outra extremidade da comunicação não é um aplicativo do MFC, você também deve evitar streaming objetos C++ derivados de `CObject` em seu arquivo porque o receptor não será capaz de lidar com eles. Consulte a Observação [Windows Sockets: Usando soquetes com arquivos mortos](../mfc/windows-sockets-using-sockets-with-archives.md).
 
 Para obter mais informações sobre ordens de byte, consulte a especificação de soquetes do Windows, disponível no SDK do Windows.
 
@@ -98,15 +98,14 @@ em que `pMsg` é um ponteiro para um objeto C++ derivado da classe `CObject`. Is
 
 Para obter mais informações, consulte:
 
-- [Windows Sockets: usando a classe CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
+- [Windows Sockets: Usando classe CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
 
-- [Windows Sockets: tela de fundo](../mfc/windows-sockets-background.md)
+- [Windows Sockets: Background](../mfc/windows-sockets-background.md)
 
-- [Windows Sockets: soquetes de fluxo](../mfc/windows-sockets-stream-sockets.md)
+- [Windows Sockets: Stream Sockets](../mfc/windows-sockets-stream-sockets.md)
 
-- [Windows Sockets: soquetes de datagrama](../mfc/windows-sockets-datagram-sockets.md)
+- [Windows Sockets: Soquetes de datagrama](../mfc/windows-sockets-datagram-sockets.md)
 
 ## <a name="see-also"></a>Consulte também
 
 [Windows Sockets em MFC](../mfc/windows-sockets-in-mfc.md)
-

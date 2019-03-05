@@ -21,12 +21,12 @@ helpviewer_keywords:
 - DDX (dialog data exchange) [MFC], retrieving data from Dialog object
 - GetWindowText method [MFC]
 ms.assetid: bdca2b61-6b53-4c2e-b426-8712c7a38ec0
-ms.openlocfilehash: 345a2894693eace5aa464ca3940c785b2da08784
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b376edc3ee7d8abbca43da6d823e71abad99bc5d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50615118"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279023"
 ---
 # <a name="retrieving-data-from-the-dialog-object"></a>Recuperando dados a partir do objeto da caixa de diálogo
 
@@ -43,4 +43,3 @@ Para uma caixa de diálogo modal, você pode recuperar os dados que o usuário i
 ## <a name="see-also"></a>Consulte também
 
 [Ciclo de vida de uma caixa de diálogo](../mfc/life-cycle-of-a-dialog-box.md)
-

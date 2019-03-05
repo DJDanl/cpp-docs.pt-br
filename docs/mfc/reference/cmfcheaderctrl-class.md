@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CMFCHeaderCtrl [MFC], OnDrawSortArrow
 - CMFCHeaderCtrl [MFC], OnFillBackground
 ms.assetid: 2f5fbf7b-5c75-42db-9216-640b1628f777
-ms.openlocfilehash: 10d7dda39223e1d6206d2ede96874d9d546c8776
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 86674e086da482e59b2711f5ba9154848ff05a6f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50538496"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269429"
 ---
 # <a name="cmfcheaderctrl-class"></a>Classe CMFCHeaderCtrl
 
@@ -136,7 +136,7 @@ void EnableMultipleSort(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>Parâmetros
 
-*bAtivar*<br/>
+*bEnable*<br/>
 [in] TRUE para habilitar o modo de classificação de coluna vários; FALSE para desabilitar o modo de classificar várias colunas e remover todas as colunas da lista de colunas classificadas. O valor padrão é TRUE.
 
 ### <a name="remarks"></a>Comentários
@@ -249,7 +249,7 @@ virtual void OnDrawItem(
 *iItem*<br/>
 [in] O índice baseado em zero do item a ser desenhado.
 
-*Rect*<br/>
+*rect*<br/>
 [in] O retângulo delimitador do item a ser desenhado.
 
 *bIsPressed*<br/>
@@ -323,7 +323,7 @@ void SetSortColumn(
 *bAscending*<br/>
 [in] Especifica a ordem de classificação da coluna que o *iColumn* parâmetro especifica. TRUE para definir a ordem crescente; FALSE para definir a ordem decrescente. O valor padrão é TRUE.
 
-*bAdicionar*<br/>
+*bAdd*<br/>
 [in] True para definir a ordem de classificação da coluna que o *iColumn* parâmetro especifica.
 
 Se o controle de cabeçalho atual está no *classificação de várias colunas* modo, esse método adiciona a coluna especificada à lista de colunas de classificação. Use [CMFCHeaderCtrl::EnableMultipleSort](#enablemultiplesort) para definir o modo de classificar várias colunas.

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - error handling, classes
 - error information, classes
 ms.assetid: ba40c8fb-81fd-4f61-8f47-fa2cb540e274
-ms.openlocfilehash: 31e14a0177251af891adc1319953be70b72648fe
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 72f119dbd1ce027f3e3bae3c3ce86f48e933c87f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519659"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266439"
 ---
 # <a name="error-information-classes"></a>Classes de informações de erro
 
@@ -25,4 +25,3 @@ A classe a seguir indica como as informações de erro são tratadas:
 ## <a name="see-also"></a>Consulte também
 
 [Visão geral da classe](../atl/atl-class-overview.md)
-

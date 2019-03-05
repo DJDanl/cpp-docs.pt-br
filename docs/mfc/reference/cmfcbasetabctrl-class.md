@@ -238,12 +238,12 @@ helpviewer_keywords:
 - CMFCBaseTabCtrl [MFC], m_bActivateTabOnRightClick
 - CMFCBaseTabCtrl [MFC], m_bAutoDestroyWindow
 ms.assetid: 7270c55f-6f6e-4dd2-b0d2-291afeac3882
-ms.openlocfilehash: d12c7a8c9363e93baf56d53ad7b8d81401984228
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 889bb9c48899691554a22435ffee71d6f68a6409
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51330392"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261850"
 ---
 # <a name="cmfcbasetabctrl-class"></a>Classe CMFCBaseTabCtrl
 
@@ -419,7 +419,7 @@ As dicas a seguir pertencem ao `CMFCBaseTabCtrl Class` e todas as classes que he
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** afxbasetabctrl.h
+**Header:** afxbasetabctrl.h
 
 ##  <a name="addicon"></a>  CMFCBaseTabCtrl::AddIcon
 
@@ -436,7 +436,7 @@ void AddIcon(
 *hIcon*<br/>
 [in] Um identificador para o ícone a ser adicionado.
 
-*Ícone*<br/>
+*iIcon*<br/>
 [in] O índice baseado em zero do ícone no protegido `CImageList m_Images` membro.
 
 ### <a name="remarks"></a>Comentários
@@ -618,7 +618,7 @@ void EnableAutoColor(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parâmetros
 
-*bAtivar*<br/>
+*bEnable*<br/>
 [in] Um parâmetro booliano que determina se a estrutura usa cores automáticas.
 
 ### <a name="remarks"></a>Comentários
@@ -637,7 +637,7 @@ BOOL EnableCustomToolTips(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parâmetros
 
-*bAtivar*<br/>
+*bEnable*<br/>
 [in] Um booliano que determina se deve usar dicas de ferramenta personalizadas.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -658,7 +658,7 @@ virtual void EnableInPlaceEdit(BOOL bEnable) = 0;
 
 ### <a name="parameters"></a>Parâmetros
 
-*bAtivar*<br/>
+*bEnable*<br/>
 [in] Um parâmetro booliano que especifica se deseja habilitar a edição direta dos rótulos de guia.
 
 ### <a name="remarks"></a>Comentários
@@ -684,7 +684,7 @@ virtual BOOL EnableTabDetach(
 *iTab*<br/>
 [in] O índice baseado em zero de uma guia.
 
-*bAtivar*<br/>
+*bEnable*<br/>
 [in] Um booliano que indica se deve ser feita na guia destacável.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -701,7 +701,7 @@ void EnableTabSwap(BOOL bEnable);
 
 ### <a name="parameters"></a>Parâmetros
 
-*bAtivar*<br/>
+*bEnable*<br/>
 [in] Um booliano que indica se é para habilitar a alternância de guia.
 
 ### <a name="remarks"></a>Comentários
@@ -1068,7 +1068,7 @@ virtual int GetTabFromHwnd(HWND hwnd) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*HWND*<br/>
+*hwnd*<br/>
 [in] Um identificador para uma janela.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1204,7 +1204,7 @@ virtual BOOL GetTabRect(
 *iTab*<br/>
 [in] O índice baseado em zero da guia.
 
-*Rect*<br/>
+*rect*<br/>
 [out] Uma referência a um `CRect` objeto. Este método armazena o tamanho e posição da guia nesse parâmetro.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1541,7 +1541,7 @@ BOOL IsIconAdded(
 
 [in] *hIcon*<br/>
 
-[in] *ícone*<br/>
+[in] *iIcon*<br/>
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -1611,7 +1611,7 @@ virtual BOOL IsPtInTabArea(CPoint point) const = 0;
 
 ### <a name="parameters"></a>Parâmetros
 
-*ponto*<br/>
+*point*<br/>
 [in] Ponto a ser testado.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1761,7 +1761,7 @@ virtual void MoveTab(
 
 ### <a name="parameters"></a>Parâmetros
 
-[in] *origem*<br/>
+[in] *nSource*<br/>
 
 [in] *nDest*<br/>
 
@@ -1991,7 +1991,7 @@ virtual void SetActiveTabColor(COLORREF clr);
 
 ### <a name="parameters"></a>Parâmetros
 
-*CLR*<br/>
+*clr*<br/>
 [in] Especifica a nova cor de plano de fundo.
 
 ### <a name="remarks"></a>Comentários
@@ -2008,7 +2008,7 @@ virtual void SetActiveTabTextColor(COLORREF clr);
 
 ### <a name="parameters"></a>Parâmetros
 
-*CLR*<br/>
+*clr*<br/>
 [in] Um [COLORREF](/windows/desktop/gdi/colorref) parâmetro que especifica a cor do texto novo.
 
 ### <a name="remarks"></a>Comentários
@@ -2091,7 +2091,7 @@ virtual BOOL SetImageList(HIMAGELIST hImageList);
 *uiID*<br/>
 [in] Uma ID de recurso de bitmap. `SetImageList` carrega a lista de imagens desse recurso.
 
-*CX*<br/>
+*cx*<br/>
 [in] A largura de cada imagem em pixels.
 
 *clrTransp*<br/>
@@ -2139,7 +2139,7 @@ virtual BOOL SetTabBkColor(
 *iTab*<br/>
 [in] O índice baseado em zero da guia.
 
-*Cor*<br/>
+*color*<br/>
 [in] A cor a ser definido.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -2304,7 +2304,7 @@ virtual BOOL SetTabTextColor(
 *iTab*<br/>
 [in] O índice baseado em zero da guia.
 
-*Cor*<br/>
+*color*<br/>
 [in] Um [COLORREF](/windows/desktop/gdi/colorref) parâmetro que indica a cor do texto novo.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -2328,7 +2328,7 @@ virtual BOOL ShowTab(
 *iTab*<br/>
 [in] O índice da guia que `ShowTab` será mostrar ou ocultar.
 
-*bMostrar*<br/>
+*bShow*<br/>
 [in] Um parâmetro booliano que indica se deve mostrar a guia.
 
 *bRecalcLayout*<br/>

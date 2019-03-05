@@ -6,12 +6,12 @@ helpviewer_keywords:
 - dialog box controls [MFC], common controls
 - Windows common controls [MFC], in dialog boxes
 ms.assetid: 17713caf-09f8-484a-bf54-5f48bf09cce9
-ms.openlocfilehash: a17dac622ce1527a11d02888d6c4ce7905fcf669
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ade1b464d3851fb9294a1ba7180b48771f0468cc
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50458640"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259185"
 ---
 # <a name="using-common-controls-in-a-dialog-box"></a>Usando controles comuns em uma caixa de diálogo
 
@@ -62,4 +62,3 @@ A adição de alguns controles comuns para uma caixa de diálogo fará com que a
 
 [Criando e usando controles](../mfc/making-and-using-controls.md)<br/>
 [Controles](../mfc/controls-mfc.md)
-

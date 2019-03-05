@@ -9,12 +9,12 @@ helpviewer_keywords:
 - stream operations in CRichEditCtrl
 - stream storage and CRichEditCtrl
 ms.assetid: 110b4684-1e76-4ca6-9ef0-5bc8b2d93c78
-ms.openlocfilehash: 099b29a3a3ff1337c71d14d1ae7bfa0a182a6903
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 04cf0b06773937bf66defccbb0e5e880c06e8d88
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50584400"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267973"
 ---
 # <a name="stream-operations-in-rich-edit-controls"></a>Operações de fluxo em controles de edição avançada
 
@@ -28,4 +28,3 @@ Para salvar o conteúdo de uma sofisticada do controle de edição (isto é, tra
 
 [Usando CRichEditCtrl](../mfc/using-cricheditctrl.md)<br/>
 [Controles](../mfc/controls-mfc.md)
-

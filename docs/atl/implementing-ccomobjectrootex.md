@@ -7,12 +7,12 @@ helpviewer_keywords:
 - CComObjectRoot class, implementing
 - CComObjectRootEx class
 ms.assetid: 79630c44-f2df-4e9e-b730-400a0ebfbd2b
-ms.openlocfilehash: c56777034445e89dd86db935fc725755ad43a617
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e533f8809238bc94bc95a689197d56f3c616f736
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50499782"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273823"
 ---
 # <a name="implementing-ccomobjectrootex"></a>Implementando CComObjectRootEx
 
@@ -28,4 +28,3 @@ Você pode inserir interfaces na tabela de mapa COM o [COM_INTERFACE_ENTRY](refe
 
 [Princípios básicos de objetos COM da ATL](../atl/fundamentals-of-atl-com-objects.md)<br/>
 [Macros de mapa COM](../atl/reference/com-map-macros.md)
-

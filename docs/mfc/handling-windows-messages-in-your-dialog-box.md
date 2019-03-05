@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows messages [MFC], handling
 - message handling [MFC], in dialog boxes
 ms.assetid: 4af0c9cb-09da-4b15-97df-a1cfb89def79
-ms.openlocfilehash: 8b167cb44fef11017d7b4e9a0e250f36020a1d72
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6c32f9781913a571464f4627e89d0e9a118ad28e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50602576"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260771"
 ---
 # <a name="handling-windows-messages-in-your-dialog-box"></a>Identificando mensagens do Windows na caixa de diálogo
 
@@ -22,4 +22,3 @@ Ver [mapeando mensagens do Windows à sua classe de caixa de diálogo](../mfc/ma
 ## <a name="see-also"></a>Consulte também
 
 [Ciclo de vida de uma caixa de diálogo](../mfc/life-cycle-of-a-dialog-box.md)
-

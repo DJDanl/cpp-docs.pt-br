@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CProgressCtrl [MFC], SetStep
 - CProgressCtrl [MFC], StepIt
 ms.assetid: 222630f4-1598-4026-8198-51649b1192ab
-ms.openlocfilehash: ba97dd27fbf70c34461d45755fd008e6ad9099b0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a6d5d3becfd1c1ee4a032c74eb116ede82c42bc4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50585894"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260264"
 ---
 # <a name="cprogressctrl-class"></a>Classe CProgressCtrl
 
@@ -148,7 +148,7 @@ Especifica o estilo do controle de barra de progresso. Aplicar qualquer combina�
 
 - Gradual de PBS_SMOOTH exibe, suave de preenchimento no controle de barra de progresso. Sem esse sinalizador, o controle preencherá com blocos.
 
-*Rect*<br/>
+*rect*<br/>
 Especifica o tamanho e a posição do controle de barra de progresso. Ela pode ser um [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto ou uma [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura. Como o controle deve ser uma janela filho, as coordenadas especificadas são em relação à área do cliente do *pParentWnd*.
 
 *pParentWnd*<br/>
@@ -190,7 +190,7 @@ Especifica o estilo estendido do controle que está sendo criado. Para obter uma
 *dwStyle*<br/>
 Especifica o estilo do controle de barra de progresso. Aplicar qualquer combinação de estilos de janela descrito em [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) no SDK do Windows.
 
-*Rect*<br/>
+*rect*<br/>
 Uma referência a um [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura que descreve o tamanho e posição da janela a ser criado, em coordenadas do cliente do *pParentWnd*.
 
 *pParentWnd*<br/>
@@ -442,7 +442,7 @@ BOOL SetMarquee(
 |Parâmetro|Descrição|
 |---------------|-----------------|
 |*fMarqueeMode*|[in] True para ativar modo de marca de seleção em, ou FALSE para desativar o modo de marca de seleção.|
-|*nIntervalo*|[in] Tempo em milissegundos entre as atualizações da animação do letreiro.|
+|*nInterval*|[in] Tempo em milissegundos entre as atualizações da animação do letreiro.|
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -533,7 +533,7 @@ int SetState(int iState);
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|*iState*|[in] O estado para definir a barra de progresso. Use um dos seguintes valores:<br /><br /> -PBST_NORMAL - em andamento<br />-PBST_ERROR - erro<br />-PBST_PAUSED – em pausa|
+|*iState*|[in] O estado para definir a barra de progresso. Use um dos seguintes valores:<br /><br /> -PBST_NORMAL - em andamento<br />-PBST_ERROR - erro<br />- PBST_PAUSED - Paused|
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -607,4 +607,3 @@ O incremento de etapa é definido pelo `CProgressCtrl::SetStep` função de memb
 [CMNCTRL2 de exemplo do MFC](../../visual-cpp-samples.md)<br/>
 [Classe CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)
-

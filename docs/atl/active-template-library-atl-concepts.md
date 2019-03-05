@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - ATL, about ATL
 ms.assetid: a3960991-4d76-4da5-9568-3fa7fde53ff4
-ms.openlocfilehash: 9b8c293bc92071509607e8496a5601d0c6ef2018
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 90fd096f15f185feebc6f6ae8b73b010fe3c1813
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50523728"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57265334"
 ---
 # <a name="active-template-library-atl-concepts"></a>Conceitos da Biblioteca de Modelo Ativa (ATL)
 
@@ -101,4 +101,3 @@ Fornece uma visão geral sobre como usar atributos para simplificar a programaç
 
 [Visão geral de classes da ATL](../atl/atl-class-overview.md)<br/>
 Fornece informações de referência e links para as classes ATL.
-

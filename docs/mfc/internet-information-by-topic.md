@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC, Internet applications
 ms.assetid: 93a8b6c9-d274-492a-90b3-cf43a77edb1d
-ms.openlocfilehash: 909f3b63361580f0540e0b97a3bccabc568d7d7a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7093d2e54a78ba4486ac8f2cb61249cdbcba734b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50574727"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276657"
 ---
 # <a name="internet-information-by-topic"></a>Informações da Internet por tópico
 
@@ -25,4 +25,3 @@ Para obter informações sobre a programação com uma tecnologia de Internet es
 ## <a name="see-also"></a>Consulte também
 
 [Noções básicas de programação da Internet no MFC](../mfc/mfc-internet-programming-basics.md)
-

@@ -1,5 +1,5 @@
 ---
-title: 'Gerenciamento de memória: alocação do quadro'
+title: 'Gerenciamento de memória: Alocação de quadro'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - memory leaks [MFC], frame allocation
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - frame allocation [MFC]
 - frame variables [MFC]
 ms.assetid: 945a211a-6f4f-4679-bb6a-b0f2a0d4a6c1
-ms.openlocfilehash: 45b0242ec8acafa2345482893d14decb02c4a3f9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bcd691f8e99b558fcadfc1cf51990b673c5b760c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50447990"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262201"
 ---
-# <a name="memory-management-frame-allocation"></a>Gerenciamento de memória: alocação do quadro
+# <a name="memory-management-frame-allocation"></a>Gerenciamento de memória: Alocação de quadro
 
 Alocação de quadro recebe seu nome do "quadro de pilha" que é definido sempre que uma função é chamada. O quadro de pilha é uma área de memória que armazena temporariamente os argumentos para a função, bem como todas as variáveis que são definidas locais à função. Variáveis do quadro geralmente são chamadas de variáveis "automáticas" porque o compilador automaticamente aloca o espaço para eles.
 
@@ -42,4 +42,3 @@ A principal vantagem de alocação de objetos no quadro é que eles são excluí
 ## <a name="see-also"></a>Consulte também
 
 [Gerenciamento de memória](../mfc/memory-management.md)
-

@@ -28,12 +28,12 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::unnorm_2::g
 - amp_short_vectors/Concurrency::graphics::unnorm_2::operator++
 ms.assetid: 62e88ea7-e29f-4f62-95ce-61a1f39f5e34
-ms.openlocfilehash: 9647cbb61bfc07ebe11d7d58b64e1fbe884a74bb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 33411511809fc9798f6fdf65f5331e2e587990ef
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658894"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259315"
 ---
 # <a name="unorm2-class"></a>Classe unorm_2
 
@@ -173,16 +173,16 @@ explicit inline unorm_2(
 *_V0*<br/>
 O valor para inicializar o elemento 0.
 
-*V1*<br/>
+*_V1*<br/>
 O valor para inicializar o elemento 1.
 
 *_V*<br/>
 O valor para a inicialização.
 
-*Outro*<br/>
+*_Other*<br/>
 O objeto usado para inicializar.
 
-##  <a name="unorm_2__size"></a> Tamanho
+##  <a name="unorm_2__size"></a> size
 
 ```
 static const int size = 2;

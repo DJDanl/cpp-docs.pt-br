@@ -1,18 +1,18 @@
 ---
-title: Como usar excesso de assinatura para deslocar latência
+title: 'Como: Usar excesso de assinatura para deslocar latência'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - oversubscription, using [Concurrency Runtime]
 - using oversubscription [Concurrency Runtime]
 ms.assetid: a1011329-2f0a-4afb-b599-dd4043009a10
-ms.openlocfilehash: fc16fa5cfeddf82b9fcb0164796fb7f4c90aef15
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d74a081f71f044cab90a8e6fdc64530eaaf87ed8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50653070"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57257937"
 ---
-# <a name="how-to-use-oversubscription-to-offset-latency"></a>Como usar excesso de assinatura para deslocar latência
+# <a name="how-to-use-oversubscription-to-offset-latency"></a>Como: Usar excesso de assinatura para deslocar latência
 
 Excesso de assinatura pode melhorar a eficiência geral de alguns aplicativos que contêm as tarefas que têm uma grande quantidade de latência. Este tópico ilustra como usar excesso de assinatura para deslocar a latência causada por leitura de dados de uma conexão de rede.
 
@@ -82,4 +82,3 @@ O exemplo a seguir modifica o corpo do `download` método usar RAII para garanti
 
 [Contextos](../../parallel/concrt/contexts.md)<br/>
 [Método Context:: oversubscribe](reference/context-class.md#oversubscribe)
-
