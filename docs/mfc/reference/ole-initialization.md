@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - OLE initialization
 ms.assetid: aa8a54a7-24c3-4344-b2c6-dbcf6084fa31
-ms.openlocfilehash: c935dbf88b3c70cdd9ec585685bf6231ded01dde
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3d49b37ffc2561fa9a51463a893ec2ba4f4fb725
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50623321"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304022"
 ---
 # <a name="ole-initialization"></a>Inicialização OLE
 
@@ -41,7 +41,7 @@ Para obter mais informações sobre controles OLE (agora chamado de controles Ac
 
 ### <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** afxdisp.h
+**Header:** afxdisp.h
 
 ##  <a name="afxoleinit"></a>  AfxOleInit
 
@@ -71,7 +71,7 @@ Chame essa função para inicializar o suporte OLE para um aplicativo do MFC. Qu
 
 ### <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** afxdisp.h
+**Header:** afxdisp.h
 
 ## <a name="see-also"></a>Consulte também
 

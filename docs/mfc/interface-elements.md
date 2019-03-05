@@ -5,12 +5,12 @@ helpviewer_keywords:
 - architecture [MFC], MFC Feature Pack
 - MFC Feature Pack, architecture
 ms.assetid: eead6827-9602-40a3-8038-8986e8207385
-ms.openlocfilehash: 9cf38d3d469da181d15a10434525b3aca63969f0
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: fa6dc78c95717f9201e18346f1cbe573fa3c48d2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175893"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262877"
 ---
 # <a name="interface-elements"></a>Elementos da interface
 
@@ -46,7 +46,7 @@ Cada barra de encaixe é dividida em linhas de encaixe. Linhas de encaixe são r
 
 ## <a name="mini-frame-windows"></a>Windows com minimoldura
 
-Um painel flutuante reside em uma janela com minimoldura. Janelas com minisão moldura representadas por duas classes: [classe CMDITabInfo](../mfc/reference/cmditabinfo-class.md) (que pode conter somente um painel) e [classe CMultiPaneFrameWnd](../mfc/reference/cmultipaneframewnd-class.md) (que pode conter vários painéis). Para flutuar um painel em seu código, chame [CBasePane::FloatPane](../mfc/reference/cbasepane-class.md#floatpane). Depois que um painel flutua, o framework cria automaticamente uma janela com minimoldura e essa janela com minimoldura torna-se o pai do painel flutuante. Quando o painel flutuante encaixa, o framework redefine seu pai e o painel flutuante se torna uma barra de encaixe (para barras de ferramentas) ou um local de encaixe (para painéis redimensionáveis).
+Um painel flutuante reside em uma janela com minimoldura. Janelas com minisão moldura representadas por duas classes: [Classe CMDITabInfo](../mfc/reference/cmditabinfo-class.md) (que pode conter somente um painel) e [classe CMultiPaneFrameWnd](../mfc/reference/cmultipaneframewnd-class.md) (que pode conter vários painéis). Para flutuar um painel em seu código, chame [CBasePane::FloatPane](../mfc/reference/cbasepane-class.md#floatpane). Depois que um painel flutua, o framework cria automaticamente uma janela com minimoldura e essa janela com minimoldura torna-se o pai do painel flutuante. Quando o painel flutuante encaixa, o framework redefine seu pai e o painel flutuante se torna uma barra de encaixe (para barras de ferramentas) ou um local de encaixe (para painéis redimensionáveis).
 
 ## <a name="pane-dividers"></a>Divisores de painel
 
@@ -69,4 +69,3 @@ O controle de barra do Outlook também se baseia nas barras com guias. O [classe
 ## <a name="see-also"></a>Consulte também
 
 [Conceitos](../mfc/mfc-concepts.md)
-

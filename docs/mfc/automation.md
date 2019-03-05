@@ -20,12 +20,12 @@ helpviewer_keywords:
 - MFC COM, Automation
 - methods [MFC], Automation
 ms.assetid: 329117f0-c1aa-4680-a901-bfb71277dfba
-ms.openlocfilehash: de376c6c5ab2be0da5f6b9495c6adb61e19d6622
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b26a08bbe9ef9b9151910871201abe05a44d2f6c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50572748"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57265555"
 ---
 # <a name="automation"></a>Automação
 
@@ -49,7 +49,7 @@ Muitos aplicativos comerciais, como o Microsoft Excel e Microsoft Visual C++, pe
 
 ##  <a name="_core_passing_parameters_in_automation"></a> Passando parâmetros na automação
 
-Uma dificuldade na criação de métodos de automação está ajudando a fornecer um mecanismo uniforme "seguro" para passar dados entre clientes e servidores de automação. Automação usa o **VARIANT** tipo para passar dados. O **VARIANT** tipo é uma união com marcas de formatação. Ele tem um membro de dados para o valor (essa é uma união anônima do C++) e um membro de dados que indica o tipo de informações armazenadas na União. O **VARIANT** tipo dá suporte a vários tipos de dados padrão: números de ponto flutuante de 4 e 8 bytes, inteiros de 2 e 4 bytes, cadeias de caracteres e valores boolianos. Além disso, ele dá suporte a **HRESULT** (códigos de erro OLE), **moeda** (um ponto fixo tipo numérico), e **data** tipos (data e hora absolutas), bem como ponteiros para `IUnknown` e `IDispatch` interfaces.
+Uma dificuldade na criação de métodos de automação está ajudando a fornecer um mecanismo uniforme "seguro" para passar dados entre clientes e servidores de automação. Automação usa o **VARIANT** tipo para passar dados. O **VARIANT** tipo é uma união com marcas de formatação. Ele tem um membro de dados para o valor (essa é uma união anônima do C++) e um membro de dados que indica o tipo de informações armazenadas na União. O **VARIANT** tipo dá suporte a vários tipos de dados padrão: inteiros de 2 e 4 bytes, números de ponto flutuante de 4 e 8 bytes, cadeias de caracteres e valores boolianos. Além disso, ele dá suporte a **HRESULT** (códigos de erro OLE), **moeda** (um ponto fixo tipo numérico), e **data** tipos (data e hora absolutas), bem como ponteiros para `IUnknown` e `IDispatch` interfaces.
 
 O **VARIANT** tipo é encapsulado na [COleVariant](../mfc/reference/colevariant-class.md) classe. O suporte a **moeda** e **data** classes são encapsuladas no [COleCurrency](../mfc/reference/colecurrency-class.md) e [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md) classes.
 

@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CKeyboardManager [MFC], TranslateCharToUpper
 - CKeyboardManager [MFC], UpdateAccelTable
 ms.assetid: 4809ece6-89df-4479-8b53-9bf476ee107b
-ms.openlocfilehash: d144731d05e861f4b462c4d58022b5155fdeb79b
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: c953958b3e0112997423376d42b62953b936049a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694264"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303601"
 ---
 # <a name="ckeyboardmanager-class"></a>Classe CKeyboardManager
 
@@ -69,7 +69,7 @@ class CKeyboardManager : public CObject
 |[CKeyboardManager::LoadState](#loadstate)|Carrega as tabelas de teclas de atalho do registro do Windows.|
 |[CKeyboardManager::ResetAll](#resetall)|Recarrega as tabelas de chave de atalho do recurso do aplicativo.|
 |[CKeyboardManager::SaveState](#savestate)|Salva o atalho de tabelas de chave no registro do Windows.|
-|[Ckeyboardmanager](#showallaccelerators)|Especifica se o framework exibe todas as teclas de atalho para todos os comandos ou uma única tecla de atalho para cada comando. Esse método não afeta os comandos que têm apenas uma tecla de atalho associada.|
+|[CKeyboardManager::ShowAllAccelerators](#showallaccelerators)|Especifica se o framework exibe todas as teclas de atalho para todos os comandos ou uma única tecla de atalho para cada comando. Esse método não afeta os comandos que têm apenas uma tecla de atalho associada.|
 |[CKeyboardManager::TranslateCharToUpper](#translatechartoupper)|Converte um caractere em seu registro superior.|
 |[CKeyboardManager::UpdateAccelTable](#updateacceltable)|Atualiza uma tabela de chave de atalho com uma nova tabela de teclas de atalho.|
 
@@ -292,7 +292,7 @@ Se o *lpszProfileName* parâmetro for NULL, esse método gravará os `CKeyboardM
 
 Se você não especificar uma janela padrão, a janela do quadro principal será usada como a janela padrão.
 
-##  <a name="showallaccelerators"></a>  Ckeyboardmanager
+##  <a name="showallaccelerators"></a>  CKeyboardManager::ShowAllAccelerators
 
 Mostra todas as teclas de atalho associadas aos comandos de menu.
 
@@ -382,4 +382,3 @@ Use essa função para substituir a tabela de atalho existente com novas teclas 
 [Classe CWinAppEx](../../mfc/reference/cwinappex-class.md)<br/>
 [CWinAppEx::InitKeyboardManager](../../mfc/reference/cwinappex-class.md#initkeyboardmanager)<br/>
 [Personalização de teclado e mouse](../../mfc/keyboard-and-mouse-customization.md)
-

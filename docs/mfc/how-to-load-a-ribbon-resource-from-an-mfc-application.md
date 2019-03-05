@@ -1,17 +1,17 @@
 ---
-title: Como carregar um recurso da faixa de opções de um aplicativo MFC
+title: 'Como: Carregar um recurso de faixa de opções de um aplicativo do MFC'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ribbon resource [MFC], loading
 ms.assetid: 1c76bb8f-6345-414a-9f3f-128815ceadc5
-ms.openlocfilehash: 14ba37952d6f8849c51b36901a6bc17404f938e2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b7691d4168101209b0e2d2500012a2b4a8e47788
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50515148"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289544"
 ---
-# <a name="how-to-load-a-ribbon-resource-from-an-mfc-application"></a>Como carregar um recurso da faixa de opções de um aplicativo MFC
+# <a name="how-to-load-a-ribbon-resource-from-an-mfc-application"></a>Como: Carregar um recurso de faixa de opções de um aplicativo do MFC
 
 Para usar o recurso de faixa de opções em seu aplicativo, modifique o aplicativo para carregar o recurso de faixa de opções.
 
@@ -40,4 +40,3 @@ Para usar o recurso de faixa de opções em seu aplicativo, modifique o aplicati
 ## <a name="see-also"></a>Consulte também
 
 [Designer da faixa de opções (MFC)](../mfc/ribbon-designer-mfc.md)
-

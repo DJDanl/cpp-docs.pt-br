@@ -29,12 +29,12 @@ helpviewer_keywords:
 - data transfer [C++], asynchronous
 - CBindStatusCallback class
 ms.assetid: 0f5da276-6031-4418-b2a9-a4750ef29e77
-ms.openlocfilehash: 16e97b994ad30fdd4c255dac45e8b56fd04f663a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e8c8d3f170803a792ca2ea8c7a37a18fd2cebd48
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50583307"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259198"
 ---
 # <a name="cbindstatuscallback-class"></a>Classe CBindStatusCallback
 
@@ -67,7 +67,7 @@ Especifica os sinalizadores de associação que são retornados pelo [GetBindInf
 |Nome|Descrição|
 |----------|-----------------|
 |[CBindStatusCallback::CBindStatusCallback](#cbindstatuscallback)|O construtor.|
-|[CBindStatusCallback:: ~ CBindStatusCallback](#dtor)|O destruidor.|
+|[CBindStatusCallback::~CBindStatusCallback](#dtor)|O destruidor.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
@@ -135,7 +135,7 @@ Cria um objeto para receber notificações sobre a transferência de dados assí
 
 O construtor também inicializa [m_pT](#m_pt) e [m_pFunc](#m_pfunc) como NULL.
 
-##  <a name="dtor"></a>  CBindStatusCallback:: ~ CBindStatusCallback
+##  <a name="dtor"></a>  CBindStatusCallback::~CBindStatusCallback
 
 O destruidor.
 
@@ -236,7 +236,7 @@ STDMETHOD(GetPriority)(LONG* pnPriority);
 
 ### <a name="return-value"></a>Valor de retorno
 
-Retornará E_NOTIMPL.
+Returns E_NOTIMPL.
 
 ##  <a name="m_dwavailabletoread"></a>  CBindStatusCallback::m_dwAvailableToRead
 
@@ -469,7 +469,7 @@ STDMETHOD(OnStopBinding)(HRESULT hresult, LPCWSTR /* szError */);
 
 ### <a name="parameters"></a>Parâmetros
 
-*HRESULT*<br/>
+*hresult*<br/>
 Código de status retornado da operação de associação.
 
 *szError*<br/>

@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - Context class
 ms.assetid: c0d553f3-961d-4ecd-9a29-4fa4351673b8
-ms.openlocfilehash: c6b219eabd008114f40401c64465e44607c2ee9b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9074dad572a3a74a5b456e9790dc359ddf8b7c60
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50555071"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293947"
 ---
 # <a name="context-class"></a>Classe Context
 
@@ -54,7 +54,7 @@ class Context;
 |[GetId](#getid)|Retorna um identificador para o contexto que é exclusivo dentro do Agendador ao qual pertence o contexto.|
 |[GetScheduleGroupId](#getschedulegroupid)|Retorna um identificador para o grupo de agendas que o contexto está trabalhando no momento.|
 |[GetVirtualProcessorId](#getvirtualprocessorid)|Retorna um identificador para o processador virtual atualmente em execução no contexto.|
-|[Id](#id)|Retorna um identificador para o contexto atual que é exclusivo dentro do Agendador ao qual pertence o contexto atual.|
+|[ID](#id)|Retorna um identificador para o contexto atual que é exclusivo dentro do Agendador ao qual pertence o contexto atual.|
 |[IsCurrentTaskCollectionCanceling](#iscurrenttaskcollectioncanceling)|Retorna um valor que indica se a coleção de tarefas que atualmente está em execução inline no contexto atual está no meio de um cancelamento ativo (ou estarão em breve).|
 |[IsSynchronouslyBlocked](#issynchronouslyblocked)|Determina se o contexto é bloqueado de forma síncrona. Um contexto é considerado como bloqueado de forma síncrona se executar explicitamente uma ação que resulte em bloqueio.|
 |[Subscrever](#oversubscribe)|Injeta um processador virtual adicional em um agendador para a duração de um bloco de código quando chamado em um contexto de execução em um dos processadores virtuais em que o Agendador.|
@@ -99,7 +99,7 @@ Após o `Block` método foi chamado ou será chamado, ele deve ser emparelhados 
 
 Esse método poderá gerar uma variedade de exceções, incluindo [scheduler_resource_allocation_error](scheduler-resource-allocation-error-class.md).
 
-##  <a name="dtor"></a> ~ Contexto de
+##  <a name="dtor"></a> ~Context
 
 ```
 virtual ~Context();
@@ -308,4 +308,3 @@ Essa função é nova no Visual Studio 2015 e é idêntica do [Yield](#yield) fu
 [Namespace de simultaneidade](concurrency-namespace.md)<br/>
 [Classe Scheduler](scheduler-class.md)<br/>
 [Agendador de tarefas](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)
-

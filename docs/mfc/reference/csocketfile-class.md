@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSocketFile [MFC], CSocketFile
 ms.assetid: 7924c098-5f72-40d6-989d-42800a47958f
-ms.openlocfilehash: f31bbda1bb6428b6bcca25d6eddce98156fac1d6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f3fa73320ae34283b0cdac559111a53a879c031c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588823"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274265"
 ---
 # <a name="csocketfile-class"></a>Classe CSocketFile
 
@@ -50,7 +50,7 @@ No exemplo a seguir, `m_dwExpected` é o número aproximado de bytes que o usuá
 
 [!code-cpp[NVC_MFCSocketThread#4](../../mfc/reference/codesnippet/cpp/csocketfile-class_1.cpp)]
 
-Para obter mais informações, consulte [Windows Sockets em MFC](../../mfc/windows-sockets-in-mfc.md), [Windows Sockets: usando soquetes com arquivos mortos](../../mfc/windows-sockets-using-sockets-with-archives.md), bem como [API do Windows Sockets 2](/windows/desktop/WinSock/windows-sockets-start-page-2).
+Para obter mais informações, consulte [Windows Sockets em MFC](../../mfc/windows-sockets-in-mfc.md), [Windows Sockets: Usando soquetes com arquivos mortos](../../mfc/windows-sockets-using-sockets-with-archives.md), bem como [API do Windows Sockets 2](/windows/desktop/WinSock/windows-sockets-start-page-2).
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -93,7 +93,7 @@ No modo de "compatível com o arquivo morto", um `CSocketFile` objeto fornece um
 
 Com `CSocketFile`, no entanto, dados for baseado em mensagem; o buffer pode conter várias mensagens, então receber menos do que o número de bytes solicitado não implica o final do arquivo. O aplicativo não bloqueia neste caso, como pode ocorrer com `CFile`, e pode continuar lendo mensagens do buffer até que o buffer está vazio. O [CArchive::IsBufferEmpty](../../mfc/reference/carchive-class.md#isbufferempty) função é útil para monitorar o estado do buffer do arquivo morto nesse caso.
 
-Para obter mais informações sobre o uso de `CSocketFile`, consulte os artigos [Windows Sockets: usando soquetes com arquivos mortos](../../mfc/windows-sockets-using-sockets-with-archives.md) e [Windows Sockets: exemplo de soquetes usando arquivos mortos](../../mfc/windows-sockets-example-of-sockets-using-archives.md).
+Para obter mais informações sobre o uso de `CSocketFile`, consulte os artigos [Windows Sockets: Usando soquetes com arquivos mortos](../../mfc/windows-sockets-using-sockets-with-archives.md) e [Windows Sockets: Exemplo de soquetes que usam arquivos mortos](../../mfc/windows-sockets-example-of-sockets-using-archives.md).
 
 ## <a name="see-also"></a>Consulte também
 

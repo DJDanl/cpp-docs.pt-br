@@ -60,12 +60,12 @@ helpviewer_keywords:
 - COleSafeArray [MFC], UnaccessData
 - COleSafeArray [MFC], Unlock
 ms.assetid: f45a5224-5f48-40ec-9ddd-287ef9740150
-ms.openlocfilehash: 07e507f0546849a64625ccd67a0f7463cd510841
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 0833dca9311689063c2ebeadd3942d9f5ce376e2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51525399"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267154"
 ---
 # <a name="colesafearray-class"></a>Classe COleSafeArray
 
@@ -123,7 +123,7 @@ class COleSafeArray : public tagVARIANT
 |[COleSafeArray::operator LPCVARIANT](#operator_lpcvariant)|Acessa subjacente `VARIANT` estrutura do `COleSafeArray` objeto.|
 |[COleSafeArray::operator LPVARIANT](#operator_lpvariant)|Acessa subjacente `VARIANT` estrutura do `COleSafeArray` objeto.|
 |[COleSafeArray::operator =](#operator_eq)|Copia os valores em uma `COleSafeArray` objeto (`SAFEARRAY`, `VARIANT`, `COleVariant`, ou `COleSafeArray` matriz).|
-|[COleSafeArray::operator = =](#operator_eq_eq)|Compara duas matrizes de variante (`SAFEARRAY`, `VARIANT`, `COleVariant`, ou `COleSafeArray` matrizes).|
+|[COleSafeArray::operator ==](#operator_eq_eq)|Compara duas matrizes de variante (`SAFEARRAY`, `VARIANT`, `COleVariant`, ou `COleSafeArray` matrizes).|
 |[COleSafeArray::operator &lt;&lt;](#operator_lt_lt)|Gera o conteúdo de um `COleSafeArray` objeto ao contexto de despejo.|
 
 ## <a name="remarks"></a>Comentários
@@ -138,7 +138,7 @@ class COleSafeArray : public tagVARIANT
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** afxdisp.h
+**Header:** afxdisp.h
 
 ##  <a name="accessdata"></a>  COleSafeArray::AccessData
 
@@ -610,7 +610,7 @@ Segue uma breve descrição de cada operador:
 
 - **operador = (** *pSrc* **)** cópias o `VARIANT` objeto array acessado por *pSrc* para esse objeto.
 
-##  <a name="operator_eq_eq"></a>  COleSafeArray::operator = =
+##  <a name="operator_eq_eq"></a>  COleSafeArray::operator ==
 
 Esse operador compara duas matrizes (`SAFEARRAY`, `VARIANT`, `COleVariant`, ou `COleSafeArray` matrizes) e retorna não zero, se eles forem iguais; caso contrário, 0.
 

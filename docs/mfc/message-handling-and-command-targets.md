@@ -9,12 +9,12 @@ helpviewer_keywords:
 - IOleCommandTarget interface [MFC]
 - command routing [MFC], command targets
 ms.assetid: e45ce14c-e6b6-4262-8f3b-4e891e0ec2a3
-ms.openlocfilehash: f9212e32605a1fed179c931d4f63833e17870b5c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 702cb96da13d6109c17a28e58c08a30af3f77fd4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50442530"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302735"
 ---
 # <a name="message-handling-and-command-targets"></a>Manipulação de mensagem e destinos de comando
 
@@ -52,4 +52,3 @@ O `QueryStatus` método aqui testa se um determinado conjunto de comandos, o con
 ## <a name="see-also"></a>Consulte também
 
 [Contêineres de documento ativos](../mfc/active-document-containers.md)
-

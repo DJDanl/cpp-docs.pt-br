@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - vc.codewiz.class.atl.mts.options
 ms.assetid: 2fbe259c-6be1-4d0e-9cfe-721c75c97cb1
-ms.openlocfilehash: 014193f4017aa47b819558cbd4753e6abcffcaaf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0fa649ba41a684be6ed18bd05d48954503c5db16
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50562052"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295963"
 ---
 # <a name="com-10-atl-com-10-component-wizard"></a>COM+ 1.0, o Assistente de componente ATL COM+ 1.0
 
@@ -23,7 +23,7 @@ Para obter mais informações sobre projetos ATL e classes COM da ATL, consulte 
 
    |Opção|Descrição|
    |------------|-----------------|
-   |**Duplo**|Especifica que o objeto dá suporte a uma interface dupla (seu vtable tem funções de interface personalizada e associação tardia `IDispatch` métodos). Permite que os clientes COM e controladores de automação acessar o objeto.|
+   |**Dual**|Especifica que o objeto dá suporte a uma interface dupla (seu vtable tem funções de interface personalizada e associação tardia `IDispatch` métodos). Permite que os clientes COM e controladores de automação acessar o objeto.|
    |**Personalizado**|Especifica que o objeto dá suporte a uma interface personalizada (seu vtable tem funções de interface personalizada). Uma interface personalizada pode ser mais rápida do que uma interface dupla, especialmente entre os limites do processo.<br /><br /> - **Automação compatível** adiciona suporte de automação para a interface personalizada. Para projetos atribuídos, define o **oleautomation** atributo na coclass.|
 
 - **Passível de enfileiramento**
@@ -37,7 +37,7 @@ Para obter mais informações sobre projetos ATL e classes COM da ATL, consulte 
    |Opção|Descrição|
    |------------|-----------------|
    |**ISupportErrorInfo**|Cria o suporte para o [ISupportErrorInfo](../../atl/reference/isupporterrorinfoimpl-class.md) de interface para que o objeto pode retornar informações de erro para o cliente.|
-   |**IObjectControl**|Fornece o acesso a objetos para os três [IObjectControl](/windows/desktop/api/comsvcs/nn-comsvcs-iobjectcontrol) métodos: [ativar](/windows/desktop/api/comsvcs/nf-comsvcs-iobjectcontrol-activate), [CanBePooled](/windows/desktop/api/comsvcs/nf-comsvcs-iobjectcontrol-canbepooled), e [desativar](/windows/desktop/api/comsvcs/nf-comsvcs-iobjectcontrol-deactivate).|
+   |**IObjectControl**|Fornece o acesso a objetos para os três [IObjectControl](/windows/desktop/api/comsvcs/nn-comsvcs-iobjectcontrol) métodos: [Ativar](/windows/desktop/api/comsvcs/nf-comsvcs-iobjectcontrol-activate), [CanBePooled](/windows/desktop/api/comsvcs/nf-comsvcs-iobjectcontrol-canbepooled), e [desativar](/windows/desktop/api/comsvcs/nf-comsvcs-iobjectcontrol-deactivate).|
    |**IObjectConstruct**|Cria o suporte para o [IObjectConstruct](/windows/desktop/api/comsvcs/nn-comsvcs-iobjectconstruct) interface para gerenciar passando parâmetros de outros métodos ou objetos.|
 
 - **Transação**
@@ -48,11 +48,10 @@ Para obter mais informações sobre projetos ATL e classes COM da ATL, consulte 
    |------------|-----------------|
    |**Com suporte**|Especifica que o objeto nunca é a raiz de um fluxo de transações, adicionando o custom(TLBATTR_TRANS_SUPPORTED,0) de macro do atributo de componente para o arquivo. h (atribuídos projetos) ou ao arquivo. idl (nonattributed projetos).|
    |**Necessária**|Especifica que o objeto pode ou não ser a raiz de um fluxo de transação, adicionando o custom(TLBATTR_TRANS_REQUIRED,0) de macro do atributo de componente para o arquivo. h (atribuídos projetos) ou ao arquivo. idl (nonattributed projetos).|
-   |**Não tem suporte**|Especifica que o objeto exclui as transações. Adiciona o custom(TLBATTR_TRANS_NOTSUPP,0) de macro do atributo de componente para o arquivo. h (atribuídos projetos) ou ao arquivo. idl (nonattributed projetos).|
+   |**Sem suporte**|Especifica que o objeto exclui as transações. Adiciona o custom(TLBATTR_TRANS_NOTSUPP,0) de macro do atributo de componente para o arquivo. h (atribuídos projetos) ou ao arquivo. idl (nonattributed projetos).|
    |**Requer novo**|Especifica que o objeto é sempre a raiz de um fluxo de transações, adicionando o custom(TLBATTR_TRANS_REQNEW,0) de macro do atributo de componente para o arquivo. h (atribuídos projetos) ou ao arquivo. idl (nonattributed projetos).|
 
 ## <a name="see-also"></a>Consulte também
 
 [Assistente de componente de COM+ 1.0 da ATL](../../atl/reference/atl-com-plus-1-0-component-wizard.md)<br/>
 [Componente ATL COM+ 1.0](../../atl/reference/adding-an-atl-com-plus-1-0-component.md)
-

@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CDaoTableDef [MFC], m_pDAOTableDef
 - CDaoTableDef [MFC], m_pDatabase
 ms.assetid: 7c5d2254-8475-43c4-8a6c-2d32ead194c9
-ms.openlocfilehash: b2f431b250da4b791c06a629315d59bbc7935802
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 485fe3533916e5e59bc87084f58acfb37368ac32
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579222"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270222"
 ---
 # <a name="cdaotabledef-class"></a>Classe CDaoTableDef
 
@@ -324,13 +324,13 @@ Um valor que indica o tipo de dados do campo. A configuração pode ser um deste
 |`dbByte`|BYTE|
 |`dbInteger`|2|int|
 |`dbLong`|4|long|
-|`dbCurrency`|8|Moeda ( [COleCurrency](../../mfc/reference/colecurrency-class.md))|
+|`dbCurrency`|8|Currency ( [COleCurrency](../../mfc/reference/colecurrency-class.md))|
 |`dbSingle`|4|float|
 |`dbDouble`|8|double|
-|`dbDate`|8|Data/hora ( [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md))|
-|`dbText`|1 - 255|Texto ( [CString](../../atl-mfc-shared/reference/cstringt-class.md))|
+|`dbDate`|8|Date/Time ( [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md))|
+|`dbText`|1 - 255|Text ( [CString](../../atl-mfc-shared/reference/cstringt-class.md))|
 |`dbLongBinary`|0|Binário longo (objeto OLE), [CLongBinary](../../mfc/reference/clongbinary-class.md) ou [CByteArray](../../mfc/reference/cbytearray-class.md)|
-|`dbMemo`|0|Memorando ( [CString](../../atl-mfc-shared/reference/cstringt-class.md))|
+|`dbMemo`|0|Memo ( [CString](../../atl-mfc-shared/reference/cstringt-class.md))|
 
 *lSize*<br/>
 Um valor que indica o tamanho máximo, em bytes, de um campo que contém texto, ou o tamanho fixo de um campo que contém os valores de texto ou numérica. O *lSize* parâmetro é ignorado para todos, exceto campos de texto.
@@ -346,7 +346,7 @@ Um valor que corresponde às características do campo e que pode ser combinado 
 |`dbUpdatableField`|O valor do campo pode ser alterado.|
 |`dbDescending`|O campo é classificado em decrescente (Z - A ou 0 a 100) ordem (aplica-se somente a um objeto de campo em uma coleção de campos de um objeto de índice). Se você omitir essa constante, o campo será classificado em crescente (A - Z ou 0 – 100) ordem (padrão).|
 
-*FieldInfo*<br/>
+*fieldinfo*<br/>
 Uma referência a um [CDaoFieldInfo](../../mfc/reference/cdaofieldinfo-structure.md) estrutura.
 
 ### <a name="remarks"></a>Comentários
@@ -574,7 +574,7 @@ void GetFieldInfo(
 *nIndex*<br/>
 O índice do objeto de campo na coleção de campos com base em zero da tabela, para a pesquisa por índice.
 
-*FieldInfo*<br/>
+*fieldinfo*<br/>
 Uma referência a um [CDaoFieldInfo](../../mfc/reference/cdaofieldinfo-structure.md) estrutura.
 
 *dwInfoOptions*<br/>
@@ -582,9 +582,9 @@ Opções que especificam quais informações sobre o campo a recuperar. As opç�
 
 - `AFX_DAO_PRIMARY_INFO` (Padrão) Nome, tipo, tamanho, atributos. Use esta opção para desempenho mais rápido.
 
-- `AFX_DAO_SECONDARY_INFO` Informações principais, além de: posição Ordinal, obrigatório, permitir que a tabela de origem de nome externa, o campo de origem, Zero comprimento, a ordem de agrupamento,
+- `AFX_DAO_SECONDARY_INFO` Informações principais, além de: Posição ordinal, obrigatória, permitir que o comprimento Zero, ordem de agrupamento, nome externa, campo de fonte de tabela de origem
 
-- `AFX_DAO_ALL_INFO` Informações de primárias e secundárias, além de: valor de padrão de regra de validação, o texto de validação
+- `AFX_DAO_ALL_INFO` Informações de primárias e secundárias, além de: Valor de padrão de regra, o texto de validação de validação
 
 *lpszName*<br/>
 Um ponteiro para o nome do objeto field, para a pesquisa por nome. O nome é uma cadeia de caracteres com até 64 caracteres que nomeia exclusivamente o campo.
@@ -644,9 +644,9 @@ Opções que especificam quais informações sobre o índice a recuperar. As op�
 
 - `AFX_DAO_PRIMARY_INFO` Campos de nome, informações de campo. Use esta opção para desempenho mais rápido.
 
-- `AFX_DAO_SECONDARY_INFO` Informações principais, além de: primário, Unique, Clustered, ignorar nulos, obrigatórios, estrangeiro
+- `AFX_DAO_SECONDARY_INFO` Informações principais, além de: Primárias e exclusivas, clusterizada, ignorar valores nulos, obrigatório, externos
 
-- `AFX_DAO_ALL_INFO` Informações de primárias e secundárias, além de: contagem distinta
+- `AFX_DAO_ALL_INFO` Informações de primárias e secundárias, além de: Contagem distinta
 
 *lpszName*<br/>
 Um ponteiro para o nome do objeto index, para a pesquisa por nome.
@@ -863,21 +863,21 @@ A tabela a seguir mostra os tipos possíveis de banco de dados e seus correspond
 |Tipo de banco de dados|Especificador|Caminho|
 |-------------------|---------------|----------|
 |Banco de dados usando o mecanismo de banco de dados do Jet|"[ `database`];"|" `drive`:\\\ *caminho*\\\ *filename*. MDB"|
-|dBASE III|"dBASE III;"|" `drive`:\\\ *caminho*"|
-|dBASE IV|"dBASE IV;"|" `drive`:\\\ *caminho*"|
-|dBASE 5|"dBASE 5.0;"|" `drive`:\\\ *caminho*"|
-|Paradox 3. x|"Paradox 3. x;"|" `drive`:\\\ *caminho*"|
-|Paradox 4. x|"Paradox 4. x;"|" `drive`:\\\ *caminho*"|
-|Paradox 5. x|"Paradox 5. x;"|" `drive`:\\\ *caminho*"|
+|dBASE III|"dBASE III;"|" `drive`:\\\ *path*"|
+|dBASE IV|"dBASE IV;"|" `drive`:\\\ *path*"|
+|dBASE 5|"dBASE 5.0;"|" `drive`:\\\ *path*"|
+|Paradox 3.x|"Paradox 3.x;"|" `drive`:\\\ *path*"|
+|Paradox 4.x|"Paradox 4.x;"|" `drive`:\\\ *path*"|
+|Paradox 5.x|"Paradox 5.x;"|" `drive`:\\\ *path*"|
 |Excel 3.0|"Excel 3.0";|" `drive`:\\\ *caminho*\\\ *filename*. XLS"|
 |Excel 4.0|"Excel 4.0;"|" `drive`:\\\ *caminho*\\\ *filename*. XLS"|
 |O Excel 5.0 ou o Excel 95|"Excel 5.0;"|" `drive`:\\\ *caminho*\\\ *filename*. XLS"|
 |Excel 97|"Excel 8.0";|" `drive`:\\\ *caminho*\ *filename*. XLS"|
 |Importação de HTML|"HTML"importação;|" `drive`:\\\ *caminho*\ *filename*"|
-|Exportação de HTML|"Exportação de HTML;"|" `drive`:\\\ *caminho*"|
-|Texto|"Texto";|"unidade:\\\path"|
+|Exportação de HTML|"Exportação de HTML;"|" `drive`:\\\ *path*"|
+|Texto|"Text;"|"drive:\\\path"|
 |ODBC|"ODBC; Banco de dados = `database`; UID = *usuário*; PWD = *senha*; DSN = *datasourcename;* LOGINTIMEOUT = *segundos;*" (Isso pode não ser uma cadeia de caracteres de conexão completa para todos os servidores; ele é apenas um exemplo. É muito importante para não ter espaços entre os parâmetros.)|Nenhum|
-|Exchange|"Exchange;<br /><br /> MAPILEVEL = *folderpath*;<br /><br /> [TABLETYPE = {0 &AMP;#124; 1};]<br /><br /> [Perfil = *perfil*;]<br /><br /> [PWD = *senha*;]<br /><br /> [BANCO DE DADOS = `database`;] "|*"unidade*:\\\ *caminho*\\\ *filename*. MDB"|
+|Exchange|"Exchange;<br /><br /> MAPILEVEL= *folderpath*;<br /><br /> [TABLETYPE={ 0 &#124; 1 };]<br /><br /> [PROFILE= *profile*;]<br /><br /> [PWD= *password*;]<br /><br /> [DATABASE= `database`;]"|*"unidade*:\\\ *caminho*\\\ *filename*. MDB"|
 
 > [!NOTE]
 >  Não há suporte para Btrieve a partir do DAO 3.5.

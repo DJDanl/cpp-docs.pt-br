@@ -156,12 +156,12 @@ helpviewer_keywords:
 - CMDIFrameWndEx [MFC], m_bCanCovertControlBarToMDIChild
 - CMDIFrameWndEx [MFC], m_bDisableSetRedraw
 ms.assetid: dbcafcb3-9a7a-4f11-9dfe-ba57565c81d0
-ms.openlocfilehash: 7ed2d1de2a91f90cd4e7efecac728e66f86d95a6
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 81d227c241adf0ce72ccd4a554134d7d858b4a6d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178624"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275422"
 ---
 # <a name="cmdiframewndex-class"></a>Classe CMDIFrameWndEx
 
@@ -641,7 +641,7 @@ void EnableLoadDockState(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parâmetros
 
-*bAtivar*<br/>
+*bEnable*<br/>
 [in] TRUE para habilitar o carregamento do estado de encaixe, FALSE para desabilitar o carregamento do estado de encaixe.
 
 ### <a name="remarks"></a>Comentários
@@ -658,7 +658,7 @@ void EnableMDITabbedGroups(
 
 ### <a name="parameters"></a>Parâmetros
 
-*bAtivar*<br/>
+*bEnable*<br/>
 [in] Se for TRUE, o recurso de grupos com guias MDI estiver habilitado; Se for FALSE, o recurso de grupos com guias MDI está desabilitado.
 
 *params*<br/>
@@ -707,7 +707,7 @@ void EnableMDITabs(
 
 ### <a name="parameters"></a>Parâmetros
 
-*bAtivar*<br/>
+*bEnable*<br/>
 Especifica se as guias estão habilitadas.
 
 *bIcons*<br/>
@@ -783,7 +783,7 @@ void EnablePaneMenu(
 
 ### <a name="parameters"></a>Parâmetros
 
-*bAtivar*<br/>
+*bEnable*<br/>
 [in] Se for TRUE, a manipulação automática de menu do painel estiver habilitada; Se for FALSE, a manipulação automática está desabilitada.
 
 *uiCustomizeCmd*<br/>
@@ -1047,7 +1047,7 @@ BOOL InsertPane(
 *pTarget*<br/>
 [in] Um ponteiro para o painel antes ou após o qual o painel.
 
-*bDepois*<br/>
+*bAfter*<br/>
 [in] Se for TRUE, *pControlBar* é inserido após *pTarget*. Se for FALSE, *pControlBar* é inserido antes *pTarget*.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1100,7 +1100,7 @@ BOOL IsMemberOfMDITabGroup(CWnd* pWnd);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Apropriei*<br/>
+*pWnd*<br/>
 [in] Um ponteiro para a janela com guias.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1132,7 +1132,7 @@ BOOL IsPointNearDockSite(
 
 ### <a name="parameters"></a>Parâmetros
 
-*ponto*<br/>
+*point*<br/>
 [in] O ponto especificado em coordenadas da tela.
 
 *dwBarAlignment*<br/>
@@ -1238,7 +1238,7 @@ void MDITabMoveToNextGroup(BOOL bNext=TRUE);
 
 ### <a name="parameters"></a>Parâmetros
 
-*bAvançar*<br/>
+*bNext*<br/>
 [in] Se for TRUE, mova guia para o próximo grupo com guias. Se FALSE, mova-o para o grupo de guias anterior.
 
 ##  <a name="mditabnewgroup"></a>  CMDIFrameWndEx::MDITabNewGroup
@@ -1342,7 +1342,7 @@ virtual BOOL OnCloseDockingPane(CDockablePane* pWnd);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Apropriei*<br/>
+*pWnd*<br/>
 [in] Ponteiro para o painel que está sendo fechado.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1365,7 +1365,7 @@ virtual BOOL OnCloseMiniFrame(CPaneFrameWnd*);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Apropriei*<br/>
+*pWnd*<br/>
 [in] Ponteiro para a janela com minimoldura que está sendo fechado.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1592,7 +1592,7 @@ virtual BOOL OnShowMDITabContextMenu(
 
 ### <a name="parameters"></a>Parâmetros
 
-*ponto*<br/>
+*point*<br/>
 [in] O local do menu em coordenadas da tela.
 
 *dwAllowedItems*<br/>
@@ -1635,7 +1635,7 @@ virtual BOOL OnShowPanes(BOOL bShow);
 
 ### <a name="parameters"></a>Parâmetros
 
-*bMostrar*<br/>
+*bShow*<br/>
 [in] TRUE para mostrar painéis, FALSO para ocultar painéis.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1745,7 +1745,7 @@ CBasePane* PaneFromPoint(
 
 ### <a name="parameters"></a>Parâmetros
 
-*ponto*<br/>
+*point*<br/>
 [in] O ponto (nas coordenadas de tela).
 
 *nSensitivity*<br/>
@@ -1870,7 +1870,7 @@ void SetPrintPreviewFrame(CFrameWnd* pWnd);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Apropriei*<br/>
+*pWnd*<br/>
 [in] Ponteiro para uma janela de quadro de visualização de impressão.
 
 ### <a name="remarks"></a>Comentários
@@ -1888,7 +1888,7 @@ void SetupToolbarMenu(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Menu*<br/>
+*menu*<br/>
 [in] Uma referência a um [classe CMenu](../../mfc/reference/cmenu-class.md) objeto a ser modificado.
 
 *uiViewUserToolbarCmdFirst*<br/>
@@ -1924,7 +1924,7 @@ void ShowPane(
 *pBar*<br/>
 [in] Ponteiro para o painel para ser mostrado ou ocultado.
 
-*bMostrar*<br/>
+*bShow*<br/>
 [in] TRUE para mostrar o painel. FALSO para ocultar o painel.
 
 *bDelay*<br/>

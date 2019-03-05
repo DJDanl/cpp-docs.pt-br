@@ -116,12 +116,12 @@ helpviewer_keywords:
 - CTaskDialog [MFC], ShowDialog
 - CTaskDialog [MFC], TaskDialogCallback
 ms.assetid: 1991ec98-ae56-4483-958b-233809c8c559
-ms.openlocfilehash: 7b95252c830e27a0602f149f880258511ec24e64
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 04c8a60f546700be8eeb2ec8a948e0ea321d12f8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52177063"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57265009"
 ---
 # <a name="ctaskdialog-class"></a>Classe CTaskDialog
 
@@ -200,7 +200,7 @@ class CTaskDialog : public CObject
 |[CTaskDialog::ShowDialog](#showdialog)|Cria e exibe um `CTaskDialog`.|
 |[CTaskDialog::TaskDialogCallback](#taskdialogcallback)|O framework chama isso em resposta a várias mensagens do Windows.|
 
-### <a name="data-members"></a> Membros de Dados
+### <a name="data-members"></a>Membros de Dados
 
 |||
 |-|-|
@@ -271,7 +271,7 @@ void AddCommandControl(
 *strCaption*<br/>
 [in] A cadeia de caracteres que o `CTaskDialog` exibe ao usuário. Use essa cadeia de caracteres para explicar a finalidade do comando.
 
-*bAtivado*<br/>
+*bEnabled*<br/>
 [in] Um parâmetro booliano que indica se o novo botão está habilitado ou desabilitado.
 
 *bRequiresElevation*<br/>
@@ -306,7 +306,7 @@ void CTaskDialog::AddRadioButton(
 *strCaption*<br/>
 [in] A cadeia de caracteres que o `CTaskDialog` é exibido ao lado do botão de opção.
 
-*bAtivado*<br/>
+*bEnabled*<br/>
 [in] Um parâmetro booliano que indica se o botão de opção está habilitado.
 
 ### <a name="remarks"></a>Comentários
@@ -489,7 +489,7 @@ int GetCommonButtonId(int nFlag);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Nalização*<br/>
+*nFlag*<br/>
 [in] O tipo de botão comuns associados a `CTaskDialog` classe.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -966,7 +966,7 @@ void SetCommandControlOptions(
 *nCommandControlID*<br/>
 [in] A ID do controle de comando para atualizar.
 
-*bAtivado*<br/>
+*bEnabled*<br/>
 [in] Um parâmetro booliano que indica se o controle de botão de comando especificado está habilitado ou desabilitado.
 
 *bRequiresElevation*<br/>
@@ -1320,7 +1320,7 @@ void SetProgressBarMarquee(
 
 ### <a name="parameters"></a>Parâmetros
 
-*bAtivado*<br/>
+*bEnabled*<br/>
 [in] TRUE para habilitar a barra de marca de seleção. FALSE para desabilitar a barra de marca de seleção e removê-lo do `CTaskDialog`.
 
 *nMarqueeSpeed*<br/>
@@ -1435,7 +1435,7 @@ void SetRadioButtonOptions(
 *nRadioButtonID*<br/>
 [in] A ID do controle de botão de opção.
 
-*bAtivado*<br/>
+*bEnabled*<br/>
 [in] TRUE para habilitar o botão de opção; FALSE para desabilitar o botão de opção.
 
 ### <a name="remarks"></a>Comentários
@@ -1579,7 +1579,7 @@ HRESULT TaskDialogCallback(
 
 ### <a name="parameters"></a>Parâmetros
 
-*HWND*<br/>
+*hwnd*<br/>
 [in] Um identificador para o `m_hWnd` de estrutura para o `CTaskDialog`.
 
 *uNotification*<br/>
@@ -1604,7 +1604,7 @@ A implementação padrão de `TaskDialogCallback` manipula a mensagem específic
 
 Os valores para *wParam* e *lParam* dependem da mensagem gerada específica. É possível que um ou ambos esses valores para ficar vazio. A tabela a seguir lista as notificações padrão que têm suporte e o que os valores de *wParam* e *lParam* representam. Se você substituir esse método em uma classe derivada, você deve implementar o código de retorno de chamada para cada mensagem na tabela a seguir.
 
-|Mensagem de notificação|*wParam* valor|*lParam* valor|
+|Mensagem de notificação|*wParam* valor|*lParam* Value|
 |--------------------------|--------------------|--------------------|
 |TDN_CREATED|Não usado.|Não usado.|
 |TDN_NAVIGATED|Não usado.|Não usado.|
@@ -1623,4 +1623,4 @@ Os valores para *wParam* e *lParam* dependem da mensagem gerada específica. É 
 [Classes](../../mfc/reference/mfc-classes.md)<br/>
 [Classe CObject](../../mfc/reference/cobject-class.md)<br/>
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
-[Instruções passo a passo: adicionando um CTaskDialog a um aplicativo](../../mfc/walkthrough-adding-a-ctaskdialog-to-an-application.md)
+[Passo a passo: Adicionando um CTaskDialog a um aplicativo](../../mfc/walkthrough-adding-a-ctaskdialog-to-an-application.md)

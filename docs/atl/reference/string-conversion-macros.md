@@ -11,12 +11,12 @@ f1_keywords:
 - atlconv/ATL::DEVMODEW2A
 - atlconv/ATL::TEXTMETRICW2A
 ms.assetid: 2ff7c0b6-2bde-45fe-897f-6128e18e0c27
-ms.openlocfilehash: 1cad89fe065c0827169a22cc9699b677323d8594
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 889f8459e81418197420bc2efd410225d4f220bc
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544515"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271756"
 ---
 # <a name="string-conversion-macros"></a>Macros de conversão de cadeia de caracteres
 
@@ -24,7 +24,7 @@ Essas macros fornecem recursos de conversão de cadeia de caracteres.
 
 ##  <a name="atl_and_mfc_string_conversion_macros"></a>  ATL e Macros de conversão de cadeia de caracteres MFC
 
-As macros de conversão de cadeia de caracteres discutidas neste documento são válidas para ATL e MFC. Para obter mais informações sobre conversão de cadeia de caracteres MFC, consulte [TN059: usando Macros de conversão de MBCS/Unicode MFC](../../mfc/tn059-using-mfc-mbcs-unicode-conversion-macros.md) e [Macros e globais MFC](../../mfc/reference/mfc-macros-and-globals.md).
+As macros de conversão de cadeia de caracteres discutidas neste documento são válidas para ATL e MFC. Para obter mais informações sobre conversão de cadeia de caracteres MFC, consulte [TN059: Usando Macros de conversão MBCS/Unicode MFC](../../mfc/tn059-using-mfc-mbcs-unicode-conversion-macros.md) e [Macros e globais MFC](../../mfc/reference/mfc-macros-and-globals.md).
 
 ##  <a name="devmode_and_textmetric_string_conversion_macros"></a>  Macros de conversão de cadeia de caracteres TEXTMETRIC e DEVMODE
 

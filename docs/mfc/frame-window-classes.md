@@ -12,12 +12,12 @@ helpviewer_keywords:
 - MDI [MFC], frame windows
 - classes [MFC], window
 ms.assetid: c27e43a7-8ad0-4759-b1b7-43f4725f4132
-ms.openlocfilehash: ffeb3339eedb9db7108a26ad4a5840e3921df5fb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d42fa475fca7c92e4ba46b164a9beda9869231c4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668943"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279166"
 ---
 # <a name="frame-window-classes"></a>Classes de janela com moldura
 
@@ -42,4 +42,3 @@ Essas classes fornecem a maioria das funcionalidades de janela com moldura que v
 ## <a name="see-also"></a>Consulte também
 
 [Janelas com moldura](../mfc/frame-windows.md)
-

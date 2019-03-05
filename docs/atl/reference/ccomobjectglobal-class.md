@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComObjectGlobal class
 ms.assetid: 79bdee55-66e4-4536-b5b3-bdf09f78b9a6
-ms.openlocfilehash: ebaec439393a67331293cbf47abd08a5e7e416af
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ec3abd04ce72cce98dae72a1ed8cbb8d9fe72079
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50485560"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267427"
 ---
 # <a name="ccomobjectglobal-class"></a>Classe CComObjectGlobal
 
@@ -32,7 +32,7 @@ class CComObjectGlobal : public Base
 
 #### <a name="parameters"></a>Parâmetros
 
-*Base de dados de*<br/>
+*Base*<br/>
 Sua classe, derivada de [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) ou [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), como bem como qualquer outra interface para o qual você deseja dar suporte no objeto.
 
 ## <a name="members"></a>Membros
@@ -42,7 +42,7 @@ Sua classe, derivada de [CComObjectRoot](../../atl/reference/ccomobjectroot-clas
 |Nome|Descrição|
 |----------|-----------------|
 |[CComObjectGlobal::CComObjectGlobal](#ccomobjectglobal)|O construtor.|
-|[CComObjectGlobal:: ~ CComObjectGlobal](#dtor)|O destruidor.|
+|[CComObjectGlobal::~CComObjectGlobal](#dtor)|O destruidor.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
@@ -102,7 +102,7 @@ CComObjectGlobal(void* = NULL));
 
 Se você não tiver derivadas sua classe base a partir [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md), você deve fornecer seu próprio `FinalConstruct` método. O destruidor chama `FinalRelease`.
 
-##  <a name="dtor"></a>  CComObjectGlobal:: ~ CComObjectGlobal
+##  <a name="dtor"></a>  CComObjectGlobal::~CComObjectGlobal
 
 O destruidor.
 
@@ -132,7 +132,7 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
 
 ### <a name="parameters"></a>Parâmetros
 
-*IID*<br/>
+*iid*<br/>
 [in] O GUID da interface que está sendo solicitado.
 
 *ppvObject*<br/>

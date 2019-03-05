@@ -18,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - timer class
 ms.assetid: 4f4dea51-de9f-40f9-93f5-dd724c567b49
-ms.openlocfilehash: beb374efe26c25fed490b7407e087e2cc46043c8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e36441f53c9b53c9826ee92b2892142a522d7243
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50659830"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298146"
 ---
 # <a name="timer-class"></a>Classe timer
 
@@ -47,7 +47,7 @@ O tipo de carga das mensagens de saída desse bloco.
 
 |Nome|Descrição|
 |----------|-----------------|
-|[Temporizador](#ctor)|Sobrecarregado. Constrói um `timer` bloco de mensagem que disparará uma determinada mensagem após um intervalo especificado.|
+|[timer](#ctor)|Sobrecarregado. Constrói um `timer` bloco de mensagem que disparará uma determinada mensagem após um intervalo especificado.|
 |[~ timer destruidor](#dtor)|Destrói um `timer` bloco de mensagem.|
 
 ### <a name="public-methods"></a>Métodos públicos
@@ -139,7 +139,7 @@ virtual void link_target_notification(_Inout_ ITarget<T>* _PTarget);
 *_PTarget*<br/>
 Um ponteiro para o destino vinculado recentemente.
 
-##  <a name="pause"></a> Pausar
+##  <a name="pause"></a> pause
 
 Interrompe o `timer` bloco de mensagem. Se for uma repetição `timer` bloco de mensagens, ele pode ser reiniciado com um subsequentes `start()` chamar. Para não-repetição temporizadores, isso tem o mesmo efeito que uma `stop` chamar.
 

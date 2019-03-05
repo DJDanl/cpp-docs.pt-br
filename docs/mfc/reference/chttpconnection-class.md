@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CHttpConnection [MFC], CHttpConnection
 - CHttpConnection [MFC], OpenRequest
 ms.assetid: a402b662-c445-4988-800d-c8278551babe
-ms.openlocfilehash: 7d11420ca48bfcecbd2534123a36364314b9651c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f7a91454b9a8619cda155f33391e5d02ae7653b5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50610997"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273602"
 ---
 # <a name="chttpconnection-class"></a>Classe CHttpConnection
 
@@ -119,7 +119,7 @@ Um ponteiro para uma cadeia de caracteres terminada em nulo que especifica a sen
 |--------------------|--------------------|---------------------------------|---------------------------------|
 |NULO ou ""|NULO ou ""|"anônimo"|Nome de email do usuário|
 |Cadeia de caracteres não nula|NULO ou ""|*pstrUserName*|" "|
-|Cadeia de caracteres nula não nulo|ERRO|ERRO||
+|Cadeia de caracteres nula não nulo|ERROR|ERROR||
 |Cadeia de caracteres não nula|Cadeia de caracteres não nula|*pstrUserName*|*pstrPassword*|
 
 *dwFlags*<br/>
@@ -179,7 +179,7 @@ Qualquer combinação dos sinalizadores de Internet _ Flag _ *. Consulte a seç�
 *nVerb*<br/>
 Um número associado ao tipo de solicitação HTTP. Pode ser uma das seguintes opções:
 
-|Tipo de solicitação HTTP|*nVerb* valor|
+|Tipo de solicitação HTTP|*nVerb* value|
 |-----------------------|-------------------|
 |HTTP_VERB_POST|0|
 |HTTP_VERB_GET|1|
@@ -205,7 +205,7 @@ Um ponteiro para o [CHttpFile](../../mfc/reference/chttpfile-class.md) objeto so
 |INTERNET_FLAG_SECURE|Usa semântica de transação segura. Isso se traduz em usando SSL/PCT e só é significativo em solicitações HTTP|
 |INTERNET_FLAG_NO_AUTO_REDIRECT|Usado somente com HTTP, especifica que redirecionamentos não devem ser automaticamente tratados na [CHttpFile::SendRequest](../../mfc/reference/chttpfile-class.md#sendrequest).|
 
-Substituir o `dwContext` padrão para definir o identificador de contexto para um valor de sua escolha. O identificador de contexto está associado com esta operação específica do `CHttpConnection` objeto criado pelo seu [CInternetSession](../../mfc/reference/cinternetsession-class.md) objeto. O valor é retornado a [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) para fornecer o status sobre a operação com a qual ela é identificada. Consulte o artigo [primeiras etapas de Internet: WinInet](../../mfc/wininet-basics.md) para obter mais informações sobre o identificador de contexto.
+Substituir o `dwContext` padrão para definir o identificador de contexto para um valor de sua escolha. O identificador de contexto está associado com esta operação específica do `CHttpConnection` objeto criado pelo seu [CInternetSession](../../mfc/reference/cinternetsession-class.md) objeto. O valor é retornado a [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) para fornecer o status sobre a operação com a qual ela é identificada. Consulte o artigo [Internet primeiras etapas: O WinInet](../../mfc/wininet-basics.md) para obter mais informações sobre o identificador de contexto.
 
 Exceções podem ser geradas com essa função.
 

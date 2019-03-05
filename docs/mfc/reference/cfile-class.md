@@ -60,12 +60,12 @@ helpviewer_keywords:
 - CFile [MFC], m_hFile
 - CFile [MFC], m_pTM
 ms.assetid: b2eb5757-d499-4e67-b044-dd7d1abaa0f8
-ms.openlocfilehash: dc0e6f75f4794b94d6e94d77f2e427b9c1df9f06
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f287b04b32b7bc45342ac7248fbe986a3dcf959e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50644139"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289858"
 ---
 # <a name="cfile-class"></a>Classe CFile
 
@@ -98,7 +98,7 @@ class CFile : public CObject
 |[CFile::GetFileTitle](#getfiletitle)|Recupera o título do arquivo selecionado.|
 |[CFile::GetLength](#getlength)|Recupera o tamanho do arquivo.|
 |[CFile::GetPosition](#getposition)|Recupera o ponteiro do arquivo atual.|
-|[Cfile:: getStatus](#getstatus)|Recupera o status do arquivo aberto ou na versão estática, recupera o status do arquivo especificado (função estática e virtual).|
+|[CFile::GetStatus](#getstatus)|Recupera o status do arquivo aberto ou na versão estática, recupera o status do arquivo especificado (função estática e virtual).|
 |[CFile::LockRange](#lockrange)|Bloqueia um intervalo de bytes em um arquivo.|
 |[CFile::Open](#open)|Com segurança abre um arquivo com uma opção de teste de erro.|
 |[CFile::Read](#read)|Leituras de dados (sem buffer) de um arquivo na posição atual do arquivo.|
@@ -422,7 +422,7 @@ O ponteiro do arquivo.
 
 [!code-cpp[NVC_MFCFiles#8](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_5.cpp)]
 
-##  <a name="getstatus"></a>  Cfile:: getStatus
+##  <a name="getstatus"></a>  CFile::GetStatus
 
 Esse método recupera informações de status relacionadas a um determinado `CFile` instância do objeto ou um caminho de arquivo fornecido.
 
@@ -720,7 +720,7 @@ UINT nFrom);
 *lOff*<br/>
 Número de bytes para mover o ponteiro do arquivo. Valores positivos movem o ponteiro do arquivo até o final do arquivo. valores negativos a movem o ponteiro do arquivo para o início do arquivo.
 
-*NDE*<br/>
+*nFrom*<br/>
 Posição para buscar a partir do. Consulte a seção comentários para os valores possíveis.
 
 ### <a name="return-value"></a>Valor de retorno

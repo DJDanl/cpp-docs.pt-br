@@ -33,12 +33,12 @@ f1_keywords:
 - ppltasks/concurrency::when_all
 - ppltasks/concurrency::when_any
 ms.assetid: 520a6dff-9324-4df2-990d-302e3050af6a
-ms.openlocfilehash: 7550e6f0ef44abd19b3fab89127ff898c72738f2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9cb726ccc475d6d08e036229d0d06089e3fac31c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50436173"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278204"
 ---
 # <a name="concurrency-namespace-functions"></a>funções do namespace de simultaneidade
 
@@ -105,7 +105,7 @@ O tipo de dados a serem enviados.
 *_Trg*<br/>
 Um ponteiro ou referência para o destino ao qual os dados são enviados.
 
-*Data*<br/>
+*_Data*<br/>
 Uma referência para os dados a serem enviados.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -224,7 +224,7 @@ O parâmetro do qual a tarefa deve ser construída. Isso pode ser um objeto lamb
 *_TaskOptions*<br/>
 As opções de tarefa.
 
-*Task*<br/>
+*_Task*<br/>
 A tarefa de criar.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -669,10 +669,10 @@ O tipo de um alocador de memória compatível da biblioteca padrão C++.
 *_Function*<br/>
 O tipo de comparador binário.
 
-*Iniciar*<br/>
+*_Begin*<br/>
 Um iterador de acesso aleatório que trata da posição do primeiro elemento no intervalo a ser classificado.
 
-*Encerrar*<br/>
+*_End*<br/>
 Um iterador de acesso aleatório que trata da posição logo após o elemento final no intervalo a ser classificado.
 
 *_Alloc*<br/>
@@ -760,13 +760,13 @@ O primeiro índice a ser incluído na iteração.
 *last*<br/>
 O índice de um após o último índice a ser incluído na iteração.
 
-*Step Field*<br/>
+*_Step*<br/>
 O valor pelo qual a etapa durante a iteração da `first` para `last`. A etapa deve ser positiva. [invalid_argument](../../../standard-library/invalid-argument-class.md) é gerada se a etapa for menor que 1.
 
 *_Func*<br/>
 A função a ser executado em cada iteração. Isso pode ser uma expressão lambda, um ponteiro de função, ou qualquer objeto que dá suporte a uma versão do operador de chamada de função com a assinatura `void operator()(_Index_type)`.
 
-*Part*<br/>
+*_Part*<br/>
 Uma referência ao objeto particionador. O argumento pode ser um dos `const` [auto_partitioner](auto-partitioner-class.md)`&`, `const` [static_partitioner](static-partitioner-class.md)`&`, `const` [simple_ particionador](simple-partitioner-class.md) `&` ou [affinity_partitioner](affinity-partitioner-class.md) `&` se um [affinity_partitioner](affinity-partitioner-class.md) objeto é usado, a referência deve ser um l-value não const fazer referência, para que o algoritmo possa armazenar o estado para futuras loops para reutilização.
 
 ### <a name="remarks"></a>Comentários
@@ -810,7 +810,7 @@ Um iterador que trata da posição logo após o elemento final a ser incluído n
 *_Func*<br/>
 Um objeto de função definida pelo usuário que é aplicado a cada elemento no intervalo.
 
-*Part*<br/>
+*_Part*<br/>
 Uma referência ao objeto particionador. O argumento pode ser um dos `const` [auto_partitioner](auto-partitioner-class.md)`&`, `const` [static_partitioner](static-partitioner-class.md)`&`, `const` [simple_ particionador](simple-partitioner-class.md) `&` ou [affinity_partitioner](affinity-partitioner-class.md) `&` se um [affinity_partitioner](affinity-partitioner-class.md) objeto é usado, a referência deve ser um l-value não const fazer referência, para que o algoritmo possa armazenar o estado para futuras loops para reutilização.
 
 ### <a name="remarks"></a>Comentários
@@ -1078,10 +1078,10 @@ O tipo de um alocador de memória compatível da biblioteca padrão C++.
 *_Function*<br/>
 O tipo de função de projeção.
 
-*Iniciar*<br/>
+*_Begin*<br/>
 Um iterador de acesso aleatório que trata da posição do primeiro elemento no intervalo a ser classificado.
 
-*Encerrar*<br/>
+*_End*<br/>
 Um iterador de acesso aleatório que trata da posição logo após o elemento final no intervalo a ser classificado.
 
 *_Alloc*<br/>
@@ -1147,10 +1147,10 @@ O tipo que reduzirá a entrada, que pode ser diferente do tipo de elemento de en
 *_Range_reduce_fun*<br/>
 O tipo da função de redução de intervalo. Isso deve ser um tipo de função com assinatura `_Reduce_type _Range_fun(_Forward_iterator, _Forward_iterator, _Reduce_type)`, _Reduce_type é o mesmo que o tipo de identidade e o tipo de resultado da redução.
 
-*Iniciar*<br/>
+*_Begin*<br/>
 Um iterador de entrada que trata o primeiro elemento no intervalo a ser reduzido.
 
-*Encerrar*<br/>
+*_End*<br/>
 Um iterador de entrada que trata o elemento que está uma posição além do elemento final no intervalo a ser reduzido.
 
 *_Identity*<br/>
@@ -1202,10 +1202,10 @@ O tipo de iterador do intervalo de entrada.
 *_Function*<br/>
 O tipo de functor a comparação binária.
 
-*Iniciar*<br/>
+*_Begin*<br/>
 Um iterador de acesso aleatório que trata da posição do primeiro elemento no intervalo a ser classificado.
 
-*Encerrar*<br/>
+*_End*<br/>
 Um iterador de acesso aleatório que trata da posição logo após o elemento final no intervalo a ser classificado.
 
 *_Func*<br/>
@@ -1324,7 +1324,7 @@ Um iterador de saída que trata da posição do primeiro elemento no intervalo d
 *_Unary_op*<br/>
 Um objeto de função unário definido pelo usuário que é aplicado a cada elemento no intervalo de origem.
 
-*Part*<br/>
+*_Part*<br/>
 Uma referência ao objeto particionador. O argumento pode ser um dos `const` [auto_partitioner](auto-partitioner-class.md)`&`, `const` [static_partitioner](static-partitioner-class.md)`&`, `const` [simple_ particionador](simple-partitioner-class.md) `&` ou [affinity_partitioner](affinity-partitioner-class.md) `&` se um [affinity_partitioner](affinity-partitioner-class.md) objeto é usado, a referência deve ser um l-value não const fazer referência, para que o algoritmo possa armazenar o estado para futuras loops para reutilização.
 
 *first2*<br/>
@@ -1349,7 +1349,7 @@ As sobrecargas que usam o argumento `_Binary_op` transformar dois intervalos de 
 
 Para obter mais informações, consulte [algoritmos paralelos](../../../parallel/concrt/parallel-algorithms.md).
 
-##  <a name="receive"></a>  Receber
+##  <a name="receive"></a>  receive
 
 Geral receber implementação, permitindo que um contexto de espera para dados de origem exatamente um e filtrar os valores que são aceitos.
 
@@ -1385,7 +1385,7 @@ O tipo de carga.
 *_Src*<br/>
 Um ponteiro ou referência à fonte da qual os dados são esperados.
 
-*Tempo limite*<br/>
+*_Timeout*<br/>
 O tempo máximo para o qual o método deve para os dados, em milissegundos.
 
 *_Filter_proc*<br/>
@@ -1420,7 +1420,7 @@ O tipo do objeto de função que será invocado.
 *_Func*<br/>
 O objeto de função que será executado. Esse objeto deve suportar o operador de chamada de função com uma assinatura de void(void).
 
-*CT*<br/>
+*_Ct*<br/>
 O token de cancelamento que controlará o cancelamento implícito, o objeto de função. Use `cancellation_token::none()` se você quiser que a função é executada sem possibilidade de cancelamento implícito de um grupo de tarefas pai que está sendo cancelado.
 
 ### <a name="remarks"></a>Comentários
@@ -1447,7 +1447,7 @@ O tipo de carga.
 *_Trg*<br/>
 Um ponteiro ou referência para o destino ao qual os dados são enviados.
 
-*Data*<br/>
+*_Data*<br/>
 Uma referência para os dados a serem enviados.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1551,7 +1551,7 @@ task<_TaskType> task_from_exception(
 
 *_ExType*<br/>
 
-*Exception*<br/>
+*_Exception*<br/>
 
 *_TaskOptions*<br/>
 
@@ -1600,7 +1600,7 @@ O tipo do objeto. Normalmente, isso é um bloco de mensagens ou um agente.
 *_PObject*<br/>
 Um ponteiro para o bloco de mensagem ou o agente que está sendo chamado no rastreamento.
 
-*Nome*<br/>
+*_Name*<br/>
 O nome para o objeto fornecido.
 
 ##  <a name="try_receive"></a>  try_receive
@@ -1635,7 +1635,7 @@ O tipo de carga
 *_Src*<br/>
 Um ponteiro ou referência à fonte da qual os dados são esperados.
 
-*Value*<br/>
+*_value*<br/>
 Uma referência a um local onde o resultado será colocado.
 
 *_Filter_proc*<br/>
@@ -1649,7 +1649,7 @@ Um `bool` valor que indica se uma carga foi colocada em `_value`.
 
 Para obter mais informações, consulte [funções de transmissão de mensagens](../../../parallel/concrt/message-passing-functions.md).
 
-##  <a name="wait"></a>  Aguarde
+##  <a name="wait"></a>  wait
 
 Pausa o contexto atual por um período de tempo especificado.
 
@@ -1685,10 +1685,10 @@ auto when_all(
 *_Iterator*<br/>
 O tipo do iterador de entrada.
 
-*Iniciar*<br/>
+*_Begin*<br/>
 A posição do primeiro elemento no intervalo de elementos a ser combinada na tarefa resultante.
 
-*Encerrar*<br/>
+*_End*<br/>
 A posição do primeiro elemento além do intervalo de elementos a ser combinada na tarefa resultante.
 
 *_TaskOptions*<br/>
@@ -1737,10 +1737,10 @@ auto when_any(
 *_Iterator*<br/>
 O tipo do iterador de entrada.
 
-*Iniciar*<br/>
+*_Begin*<br/>
 A posição do primeiro elemento no intervalo de elementos a ser combinada na tarefa resultante.
 
-*Encerrar*<br/>
+*_End*<br/>
 A posição do primeiro elemento além do intervalo de elementos a ser combinada na tarefa resultante.
 
 *_TaskOptions*<br/>

@@ -7,12 +7,12 @@ f1_keywords:
 - PPL/concurrency::task_group::task_group
 helpviewer_keywords:
 - task_group class
-ms.openlocfilehash: 1ba7251afca80c561bd8861968c35e3242c1507a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 545b368b3042da74a42db5a6ea30e97054d5fd03
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588845"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294129"
 ---
 # <a name="taskgroup-class"></a>Classe task_group
 
@@ -87,7 +87,7 @@ Indica se o `task_group` objeto está no meio de um cancelamento (ou é garantid
 
 Para obter mais informações, consulte [cancelamento](../cancellation-in-the-ppl.md).
 
-##  <a name="run"></a> executar
+##  <a name="run"></a> run
 
 Agenda uma tarefa no `task_group` objeto. Se um `task_handle` objeto é passado como um parâmetro para `run`, o chamador é responsável por gerenciar a vida útil do `task_handle` objeto. A versão do método que usa uma referência a um objeto de função como um parâmetro envolve alocação de heap de dentro do tempo de execução que pode ser um desempenho inferior que usar a versão que usa uma referência a um `task_handle` objeto. A versão que usa o parâmetro `_Placement` faz com que a tarefa ser mais adequado para a execução no local especificado por esse parâmetro.
 
@@ -131,7 +131,7 @@ O tipo do objeto de função que será chamado para executar o corpo do identifi
 *_Func*<br/>
 Uma função que será chamada para invocar o corpo da tarefa. Isso pode ser uma expressão lambda ou outro objeto que dá suporte a uma versão do operador de chamada de função com a assinatura `void operator()()`.
 
-*Posicionamento*<br/>
+*_Placement*<br/>
 Uma referência para o local em que a tarefa representada pelo `_Func` parâmetro deve ser executada.
 
 *_Task_handle*<br/>
@@ -211,7 +211,7 @@ Um token de cancelamento para associar a esse grupo de tarefas. O grupo de taref
 
 O construtor que usa um token de cancelamento cria um `task_group` que serão canceladas quando o código-fonte associado ao token é cancelado. Fornecer um token de cancelamento explícito também isola a esse grupo de trabalho da participação em um cancelamento implícito de um grupo pai, com um token diferente ou nenhum.
 
-##  <a name="dtor"></a> ~ task_group
+##  <a name="dtor"></a> ~task_group
 
 Destrói um objeto `task_group`. Você deve chamar o tanto a `wait` ou `run_and_wait` método no objeto antes do destruidor em execução, a menos que o destruidor está sendo executado como resultado da pilha de desenrolamento devido a uma exceção.
 

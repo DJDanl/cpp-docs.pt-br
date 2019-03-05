@@ -1,5 +1,5 @@
 ---
-title: 'TN020: convenções de nomenclatura de ID e numeração'
+title: 'TN020: Nomenclatura de ID e numeração convenções'
 ms.date: 11/04/2016
 f1_keywords:
 - vc.id
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - resource identifiers, naming and numbering
 - resource identifiers
 ms.assetid: aecbd2cf-68b3-47f6-ae21-b1f507917245
-ms.openlocfilehash: 9e575ee99b78b8efa75096cac4559eb9aea7fd21
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: f1cd44ed448cc4c0fc60d490a613f0ad91071376
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518665"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267388"
 ---
-# <a name="tn020-id-naming-and-numbering-conventions"></a>TN020: convenções de nomenclatura de ID e numeração
+# <a name="tn020-id-naming-and-numbering-conventions"></a>TN020: Nomenclatura de ID e numeração convenções
 
 Essa observação descreve a nomenclatura de ID e numeração convenções que usa o MFC 2.0 para recursos, comandos, cadeias de caracteres, controles e janelas filho.
 
@@ -37,19 +37,19 @@ Para indicar uma ID de recurso que se aplica a vários tipos de recurso, o MFC u
 
 |Prefixo|Use|
 |------------|---------|
-|IDR|Para vários tipos de recurso (principalmente usados para menus, aceleradores e faixas de opções).|
-|IDD _|Para recursos de modelo de caixa de diálogo (por exemplo, IDD_DIALOG1).|
-|IDC|Para recursos do cursor.|
+|IDR_|Para vários tipos de recurso (principalmente usados para menus, aceleradores e faixas de opções).|
+|IDD_|Para recursos de modelo de caixa de diálogo (por exemplo, IDD_DIALOG1).|
+|IDC_|Para recursos do cursor.|
 |IDI_|Para recursos de ícone.|
 |IDB_|Para recursos do bitmap.|
-|IDS _|Para recursos de cadeia de caracteres.|
+|IDS_|Para recursos de cadeia de caracteres.|
 
 Dentro de um recurso de caixa de diálogo, o MFC segue as seguintes convenções:
 
 |Prefixo ou rótulo|Use|
 |---------------------|---------|
 |IDOK, IDCANCEL|Para o botão de ação padrão IDs.|
-|IDC|Para outros controles de caixa de diálogo.|
+|IDC_|Para outros controles de caixa de diálogo.|
 
 O prefixo "IDC" também é usado para cursores. Esse conflito de nomeação não é geralmente um problema porque um aplicativo típico terá alguns cursores e muitos controles de caixa de diálogo.
 
@@ -58,7 +58,7 @@ Dentro de um recurso de menu, o MFC segue as seguintes convenções:
 |Prefixo|Use|
 |------------|---------|
 |IDM_|Para itens de menu que não usam a arquitetura de comando do MFC.|
-|ID _|Comandos de menu que usam a arquitetura de comando do MFC.|
+|ID_|Comandos de menu que usam a arquitetura de comando do MFC.|
 
 Comandos a seguir a arquitetura de comando do MFC devem ter um manipulador de comando ON_COMMAND e podem ter um manipulador de ON_UPDATE_COMMAND_UI. Se esses manipuladores de comando seguem a arquitetura de comando do MFC, eles funcionarão corretamente se elas são associadas a um comando de menu, um botão de barra de ferramentas ou um botão de barra da caixa de diálogo. O mesmo prefixo de "ID _" também é usado para uma sequência de prompt de menu é exibida na barra de mensagens do programa. A maioria dos itens de menu em seu aplicativo deve seguir as convenções de comando do MFC. Todas as IDs de comando padrão (por exemplo, ID_FILE_NEW) seguem Esta convenção.
 
@@ -74,12 +74,12 @@ A tabela a seguir lista os intervalos válidos para as IDs dos tipos específico
 
 |Prefixo|Tipo de recurso|Intervalo válido|
 |------------|-------------------|-----------------|
-|IDR|vários|1 a 0x6FFF|
-|IDD _|modelos de caixa de diálogo|1 a 0x6FFF|
-|IDC, IDI_, IDB_|cursores, ícones, bitmaps|1 a 0x6FFF|
-|IDS _, IDP_|cadeias de caracteres gerais|1 a 0x7FFF|
-|ID _|comandos|0x8000 por meio de 0xDFFF|
-|IDC|controles|8 a 0xDFFF|
+|IDR_|vários|1 a 0x6FFF|
+|IDD_|modelos de caixa de diálogo|1 a 0x6FFF|
+|IDC_,IDI_,IDB_|cursores, ícones, bitmaps|1 a 0x6FFF|
+|IDS_, IDP_|cadeias de caracteres gerais|1 a 0x7FFF|
+|ID_|comandos|0x8000 por meio de 0xDFFF|
+|IDC_|controles|8 a 0xDFFF|
 
 Motivos para esses limites de intervalo:
 
@@ -107,4 +107,3 @@ Motivos para esses limites de intervalo:
 
 [Observações técnicas por número](../mfc/technical-notes-by-number.md)<br/>
 [Observações técnicas por categoria](../mfc/technical-notes-by-category.md)
-

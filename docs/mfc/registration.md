@@ -11,12 +11,12 @@ helpviewer_keywords:
 - servers [MFC], installing
 - OLE server applications [MFC], registering servers
 ms.assetid: 991d5684-72c1-4f9e-a09a-9184ed12bbb9
-ms.openlocfilehash: 1c8c0d32db202b8ba26afec708bcc8bab8e3282c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0bc606acfba26d27d0ab36045e4772593e760e98
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50461952"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272159"
 ---
 # <a name="registration"></a>Registro
 
@@ -46,7 +46,7 @@ RegEdit mescla o conteúdo do arquivo de texto. reg para o banco de dados de reg
 
 Quando você cria um aplicativo de servidor com o Assistente de aplicativo, o assistente for concluído todas as tarefas de inicialização para você automaticamente. Esta seção descreve o que você deve fazer se você escrever um aplicativo de servidor manualmente.
 
-Quando um aplicativo de servidor é iniciado por um aplicativo de contêiner, as DLLs do sistema OLE adicionar a opção "/ incorporação" à linha de comando do servidor. Comportamento de um aplicativo de servidor difere dependendo se ele foi iniciado por um contêiner, portanto, a primeira coisa que um aplicativo deve fazer quando ele inicia a execução é a seleção para a "/ incorporação" ou "-incorporação" opção na linha de comando. Se houver essa opção, carregar um conjunto diferente de recursos que mostram o servidor como sendo o ativo no local ou software totalmente livre. Para obter mais informações, consulte [Menus e recursos: adições de servidor](../mfc/menus-and-resources-server-additions.md).
+Quando um aplicativo de servidor é iniciado por um aplicativo de contêiner, as DLLs do sistema OLE adicionar a opção "/ incorporação" à linha de comando do servidor. Comportamento de um aplicativo de servidor difere dependendo se ele foi iniciado por um contêiner, portanto, a primeira coisa que um aplicativo deve fazer quando ele inicia a execução é a seleção para a "/ incorporação" ou "-incorporação" opção na linha de comando. Se houver essa opção, carregar um conjunto diferente de recursos que mostram o servidor como sendo o ativo no local ou software totalmente livre. Para obter mais informações, consulte [Menus e recursos: Adições de servidor](../mfc/menus-and-resources-server-additions.md).
 
 O aplicativo de servidor também deve chamar seu `CWinApp::RunEmbedded` função analisar a linha de comando. Se ela retorna um valor diferente de zero, o aplicativo não deve mostrar sua janela porque ele foi executado de um aplicativo de contêiner, não como um aplicativo autônomo. Essa função atualiza a entrada do servidor no banco de dados de registro de sistema e chama o `RegisterAll` a função de membro para você, executando o registro da instância.
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - OLE controls [MFC], MFC
 - sequence [MFC]
 ms.assetid: 7d868c53-a0af-4ef6-a89c-e1c03c583a53
-ms.openlocfilehash: d9025c2a4192b5a2c08d1af9dc925378cff9f504
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fdfa2333681c988c0e7bceab01eab24b118f1a5a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50632785"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275981"
 ---
 # <a name="sequence-of-operations-for-creating-activex-controls"></a>Sequência de operações para criação de controles ActiveX
 
@@ -35,4 +35,3 @@ A tabela a seguir mostra a sua função e a função da estrutura na criação d
 [Sequência de operações para compilar aplicativos MFC](../mfc/sequence-of-operations-for-building-mfc-applications.md)<br/>
 [Sequência de operações para a criação de aplicativos OLE](../mfc/sequence-of-operations-for-creating-ole-applications.md)<br/>
 [Sequência de operações para criação de aplicativos de banco de dados](../mfc/sequence-of-operations-for-creating-database-applications.md)
-

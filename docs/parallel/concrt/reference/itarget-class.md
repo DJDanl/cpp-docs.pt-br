@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - ITarget class
 ms.assetid: 5678db25-112a-4f72-be13-42e16b67c48b
-ms.openlocfilehash: fed6f6c9b93869602eb43dabfef4743fbce3a3d1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 59a0f66a0ba3b10c3307a835ff6ccaa216596538
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429998"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295316"
 ---
 # <a name="itarget-class"></a>Classe ITarget
 
@@ -81,7 +81,7 @@ Para obter mais informações, consulte [blocos de mensagens assíncronas](../..
 
 **Namespace:** simultaneidade
 
-##  <a name="dtor"></a> ~ ITarget
+##  <a name="dtor"></a> ~ITarget
 
 Destrói o `ITarget` objeto.
 
@@ -106,7 +106,7 @@ O `ISource` bloquear sendo vinculado a este `ITarget` bloco.
 
 Essa função não deve ser chamada diretamente em um `ITarget` bloco. Blocos devem ser conectados usando o `link_target` método no `ISource` blocos, que invocarão o `link_source` método no destino correspondente.
 
-##  <a name="propagate"></a> Propagar
+##  <a name="propagate"></a> propagate
 
 Quando substituído em uma classe derivada, assincronamente transmite uma mensagem de um bloco de código-fonte para este bloco de destino.
 
@@ -132,7 +132,7 @@ Um [message_status](concurrency-namespace-enums.md) indicação de que o destino
 
 O método lança um [invalid_argument](../../../standard-library/invalid-argument-class.md) exceção se o `_PMessage` ou `_PSource` parâmetro é `NULL`.
 
-##  <a name="send"></a> Enviar
+##  <a name="send"></a> send
 
 Quando substituído em uma classe derivada, passa forma síncrona uma mensagem para o bloco de destino.
 

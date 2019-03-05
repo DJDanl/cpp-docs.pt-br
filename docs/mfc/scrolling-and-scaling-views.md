@@ -8,12 +8,12 @@ helpviewer_keywords:
 - scroll bars [MFC], messages
 - scrolling views [MFC]
 ms.assetid: f98a3421-c336-407e-97ee-dbb2ffd76fbd
-ms.openlocfilehash: acef79a89da88773da564fc965a607e2fd5b53f7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2baa89f233eb6df93cde3adbde35ba1e6d35c093
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50626079"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283703"
 ---
 # <a name="scrolling-and-scaling-views"></a>Rolando e colocando exibições em escala
 
@@ -50,4 +50,3 @@ Quando você quiser que o modo de exibição para ajustar automaticamente o tama
 ## <a name="see-also"></a>Consulte também
 
 [Usando exibições](../mfc/using-views.md)
-

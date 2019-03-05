@@ -25,12 +25,12 @@ f1_keywords:
 helpviewer_keywords:
 - target_block class
 ms.assetid: 3ce181b4-b94a-4894-bf7b-64fc09821f9f
-ms.openlocfilehash: cb8880b66ebeef12018ef7449c9c383b99ec396c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6033da1347e116b4b68cf719a461a1cf6ff5d04f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50656879"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269442"
 ---
 # <a name="targetblock-class"></a>Classe target_block
 
@@ -194,7 +194,7 @@ Quando substituído em uma classe derivada, processa uma mensagem que foi aceito
 virtual void process_message(message<_Source_type> *);
 ```
 
-##  <a name="propagate"></a> Propagar
+##  <a name="propagate"></a> propagate
 
 Passa assincronamente uma mensagem de um bloco de código-fonte para este bloco de destino.
 
@@ -252,7 +252,7 @@ void register_filter(filter_method const& _Filter);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Filtro*<br/>
+*_Filter*<br/>
 O método de filtro.
 
 ##  <a name="remove_sources"></a> remove_sources
@@ -267,7 +267,7 @@ void remove_sources();
 
 Todos os blocos de destino devem chamar essa rotina para remover as fontes em seu destruidor.
 
-##  <a name="send"></a> Enviar
+##  <a name="send"></a> send
 
 Passa forma síncrona uma mensagem de um bloco de código-fonte para este bloco de destino.
 
@@ -336,7 +336,7 @@ Constrói um objeto `target_block`.
 target_block();
 ```
 
-##  <a name="dtor"></a> ~ target_block
+##  <a name="dtor"></a> ~target_block
 
 Destrói o `target_block` objeto.
 

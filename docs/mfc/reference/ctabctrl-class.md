@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CTabCtrl [MFC], SetPadding
 - CTabCtrl [MFC], SetToolTips
 ms.assetid: 42e4aff6-46ae-4b2c-beaa-d1dce8d82138
-ms.openlocfilehash: ae3daff2582b9e58cc325304fac449423fb673a0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 62d42995a3d1b4a61dbd3ff38c48d9b300177798
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50621423"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259536"
 ---
 # <a name="ctabctrl-class"></a>Classe CTabCtrl
 
@@ -193,7 +193,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Especifica o estilo do controle guia. Aplicar qualquer combinação de [estilos de controle de guia](/windows/desktop/Controls/tab-control-styles), descrito no SDK do Windows. Ver **comentários** para obter uma lista de estilos de janela que você também pode aplicar ao controle.
 
-*Rect*<br/>
+*rect*<br/>
 Especifica o tamanho e a posição do controle guia. Ela pode ser um [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto ou uma [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura.
 
 *pParentWnd*<br/>
@@ -249,7 +249,7 @@ Especifica o estilo estendido do controle que está sendo criado. Para obter uma
 *dwStyle*<br/>
 Especifica o estilo do controle guia. Aplicar qualquer combinação de [estilos de controle de guia](/windows/desktop/Controls/tab-control-styles), descrito no SDK do Windows. Ver **Remarks** na [criar](#create) para obter uma lista de estilos de janela que você também pode aplicar ao controle.
 
-*Rect*<br/>
+*rect*<br/>
 Uma referência a um [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura que descreve o tamanho e posição da janela a ser criado, em coordenadas do cliente do *pParentWnd*.
 
 *pParentWnd*<br/>
@@ -645,7 +645,7 @@ Ponteiro para um [TCITEM](/windows/desktop/api/commctrl/ns-commctrl-tagtcitema) 
 *lpszItem*<br/>
 Endereço de uma cadeia de caracteres terminada em nulo que contém o texto da guia.
 
-*Nimagem*<br/>
+*nImage*<br/>
 O índice baseado em zero de uma imagem para inserir de uma lista de imagens.
 
 *nMask*<br/>
@@ -688,7 +688,7 @@ void RemoveImage(int nImage);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Nimagem*<br/>
+*nImage*<br/>
 Índice baseado em zero da imagem a ser removida.
 
 ### <a name="remarks"></a>Comentários
@@ -877,7 +877,7 @@ int SetMinTabWidth(int cx);
 
 ### <a name="parameters"></a>Parâmetros
 
-*CX*<br/>
+*cx*<br/>
 Largura mínima a ser definido para um item de controle de guia. Se esse parâmetro for definido como -1, o controle usará a largura de tabulação padrão.
 
 ### <a name="return-value"></a>Valor de retorno

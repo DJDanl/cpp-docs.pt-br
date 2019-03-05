@@ -6,12 +6,12 @@ helpviewer_keywords:
 - CDocument class [MFC], space requirements
 - views [MFC], applications without
 ms.assetid: 2c22f352-a137-45ce-9971-c142173496fb
-ms.openlocfilehash: 7b4da7df691837b47daa35c4b474711062d4e5c7
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 98bb4de2f6d1a43fc1958a0fcbaafa1ac0af82a3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523163"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57282546"
 ---
 # <a name="alternatives-to-the-documentview-architecture"></a>Alternativas à arquitetura de documento/exibição
 
@@ -62,9 +62,8 @@ Como a arquitetura de documento/exibição fornecida pelo MFC é responsável po
 
 - Substitua as partes da estrutura MFC que criar o documento e o modo de exibição para eliminar a criá-los em todos os. O processo de criação de documento começa com uma chamada para `CWinApp::AddDocTemplate`. Eliminar essa chamada de sua classe de aplicativo `InitInstance` membro de função e, em vez disso, criar uma janela do quadro no `InitInstance` por conta própria. Coloque o código de gerenciamento de dados em sua classe de janela do quadro. O processo de criação de documento/exibição é ilustrado na [criação de documento/exibição](../mfc/document-view-creation.md). Isso é mais trabalhoso e requer uma compreensão mais profunda do framework, mas libera você inteiramente da sobrecarga de documento/exibição.
 
-O artigo [MFC: usando Classes de banco de dados sem documentos e exibições](../data/mfc-using-database-classes-without-documents-and-views.md) dá exemplos mais concretos de alternativas de documento/exibição no contexto de aplicativos de banco de dados.
+O artigo [MFC: Usando Classes de banco de dados sem documentos e exibições](../data/mfc-using-database-classes-without-documents-and-views.md) dá exemplos mais concretos de alternativas de documento/exibição no contexto de aplicativos de banco de dados.
 
 ## <a name="see-also"></a>Consulte também
 
 [Arquitetura de documento/exibição](../mfc/document-view-architecture.md)
-

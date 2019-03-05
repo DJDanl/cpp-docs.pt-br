@@ -1,18 +1,18 @@
 ---
-title: 'Instruções passo a passo: removendo trabalho de um thread de interface de usuário'
+title: 'Passo a passo: Removendo trabalho de um Thread de Interface do usuário'
 ms.date: 11/19/2018
 helpviewer_keywords:
 - user-interface threads, removing work from [Concurrency Runtime]
 - removing work from user-interface threads [Concurrency Runtime]
 ms.assetid: a4a65cc2-b3bc-4216-8fa8-90529491de02
-ms.openlocfilehash: 1230cf2b3fa510aeca8516e41cf30f9665987d05
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 1838ad0d6adb146adacb8b3a395f44f76e2a8d3f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176309"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304711"
 ---
-# <a name="walkthrough-removing-work-from-a-user-interface-thread"></a>Instruções passo a passo: removendo trabalho de um thread de interface de usuário
+# <a name="walkthrough-removing-work-from-a-user-interface-thread"></a>Passo a passo: Removendo trabalho de um Thread de Interface do usuário
 
 Este documento demonstra como usar o tempo de execução de simultaneidade para mover o trabalho que é executado pelo thread de interface do usuário (IU) em um aplicativo do Microsoft Foundation Classes (MFC) para um thread de trabalho. Este documento também demonstra como melhorar o desempenho de uma operação demorada de desenho.
 
@@ -112,7 +112,7 @@ A ilustração a seguir mostra os resultados do aplicativo Mandelbrot.
 
 Como a computação para cada pixel é computacionalmente cara, o thread de interface do usuário não pode processar mensagens adicionais até que a computação geral seja concluída. Isso pode reduzir a capacidade de resposta do aplicativo. No entanto, você pode aliviar esse problema removendo o trabalho do thread de interface do usuário.
 
-[[Superior](#top)]
+[[Top](#top)]
 
 ##  <a name="removing-work"></a> Removendo o trabalho do Thread de interface do usuário
 
@@ -150,7 +150,7 @@ Este exemplo também usa um [Concurrency:: unbounded_buffer](reference/unbounded
 
 A interface do usuário agora está mais responsivo, porque o trabalho de desenho está sendo executado em segundo plano.
 
-[[Superior](#top)]
+[[Top](#top)]
 
 ##  <a name="performance"></a> Melhorando o desempenho de desenho
 
@@ -160,7 +160,7 @@ A geração do fractal Mandelbrot é um bom candidato para paralelização porqu
 
 Como a computação de cada elemento de bitmap é independente, não é necessário que sincronizar as operações de desenho que acessam a memória do bitmap. Isso permite que o desempenho de expandir conforme o número de processadores disponíveis aumenta.
 
-[[Superior](#top)]
+[[Top](#top)]
 
 ##  <a name="cancellation"></a> Adicionando suporte a cancelamento
 
@@ -220,7 +220,7 @@ O `CChildView::DrawMandelbrot` método, que executa a tarefa de desenho, deve re
 
 Quando você redimensiona a janela, desenhar o trabalho é executada somente para o tamanho da janela final. Todas as tarefas desenho Active Directory também são canceladas quando a janela é destruída.
 
-[[Superior](#top)]
+[[Top](#top)]
 
 ## <a name="see-also"></a>Consulte também
 

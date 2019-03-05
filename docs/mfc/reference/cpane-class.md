@@ -133,12 +133,12 @@ helpviewer_keywords:
 - CPane [MFC], m_bHandleMinSize
 - CPane [MFC], m_recentDockInfo
 ms.assetid: 5c651a64-3c79-4d94-9676-45f6402a6bc5
-ms.openlocfilehash: 1c485d1b6f2b0557243973774bf9dfb382c2595b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b660d181aada8abeb61b397fb30b097897e74f65
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50550430"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326771"
 ---
 # <a name="cpane-class"></a>Classe CPane
 
@@ -348,7 +348,7 @@ void CalcInsideRect(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Rect*<br/>
+*rect*<br/>
 [out] Contém o tamanho e o deslocamento da área de cliente do painel.
 
 *bHorz*<br/>
@@ -487,7 +487,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 [in] Especifica os atributos de estilo de janela. Para obter mais informações, consulte [estilos de janela](../../mfc/reference/styles-used-by-mfc.md#window-styles).
 
-*Rect*<br/>
+*rect*<br/>
 [in] Especifica o tamanho inicial e a posição do *pParentWnd* janela, em coordenadas de cliente.
 
 *pParentWnd*<br/>
@@ -562,7 +562,7 @@ virtual BOOL CreateEx(
 *dwStyle*<br/>
 [in] Especifica os atributos de estilo de janela. Para obter mais informações, consulte [estilos de janela](../../mfc/reference/styles-used-by-mfc.md#window-styles).
 
-*Rect*<br/>
+*rect*<br/>
 [in] Especifica o tamanho inicial e a posição do *pParentWnd* janela, em coordenadas de cliente.
 
 *pParentWnd*<br/>
@@ -741,7 +741,7 @@ virtual BOOL FloatPane(
 *dockMethod*<br/>
 [in] Especifica o método de encaixe para usar quando o painel é flutuante. Para obter uma lista de valores possíveis, consulte [CPane::DockPane](#dockpane).
 
-*bMostrar*<br/>
+*bShow*<br/>
 [in] TRUE para mostrar o painel quando flutuante; Caso contrário, FALSE.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -976,7 +976,7 @@ bool IsLeftOf(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Rect*<br/>
+*rect*<br/>
 [in] Um `CRect` objeto que é usado para comparação.
 
 *bWindowRect*<br/>
@@ -1299,7 +1299,7 @@ virtual BOOL OnShowControlBarMenu(CPoint point);
 
 ### <a name="parameters"></a>Parâmetros
 
-*ponto*<br/>
+*point*<br/>
 [in] Especifica o local do menu.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1308,7 +1308,7 @@ TRUE se o menu pode ser exibido; Caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-O menu contém vários itens que permitem especificar o comportamento do painel, ou seja: **flutuante**, **encaixe**, **AutoOcultar**, e **ocultar**. Você pode habilitar esse menu para todos os painéis, chamando [CDockingManager::EnableDockSiteMenu](../../mfc/reference/cdockingmanager-class.md#enabledocksitemenu).
+O menu contém vários itens que permitem especificar o comportamento do painel, ou seja: **Flutuante**, **encaixe**, **AutoOcultar**, e **ocultar**. Você pode habilitar esse menu para todos os painéis, chamando [CDockingManager::EnableDockSiteMenu](../../mfc/reference/cdockingmanager-class.md#enabledocksitemenu).
 
 ##  <a name="recalclayout"></a>  CPane::RecalcLayout
 
@@ -1366,7 +1366,7 @@ virtual void SetActiveInGroup(BOOL bActive);
 
 ### <a name="parameters"></a>Parâmetros
 
-*bScripts Ativos*<br/>
+*bActive*<br/>
 [in] Um BOOLIANO que especifica se o painel é sinalizado como ativa.
 
 ### <a name="remarks"></a>Comentários
@@ -1494,7 +1494,7 @@ void SetVirtualRect(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Rect*<br/>
+*rect*<br/>
 [in] Um `CRect` objeto que especifica o retângulo virtual a ser definido.
 
 *bMapToParent*<br/>

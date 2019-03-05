@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CWinFormsControl [MFC], GetControl
 - CWinFormsControl [MFC], GetControlHandle
 ms.assetid: 6406dd7b-fb89-4a18-ac3a-c010d6b6289a
-ms.openlocfilehash: e8728c876badcf6648740cc842a1f289789bf0f4
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 91691203f88f07f597aaad6a5db32b03e7ad11c4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178233"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289306"
 ---
 # <a name="cwinformscontrol-class"></a>Classe CWinFormsControl
 
@@ -107,13 +107,13 @@ inline BOOL CreateManagedControl(
 
 ### <a name="parameters"></a>Parâmetros
 
-*PDigite*<br/>
+*pType*<br/>
 O tipo de dados do controle a ser criado. Deve ser um [tipo](https://msdn.microsoft.com/library/system.type) tipo de dados.
 
 *dwStyle*<br/>
-O estilo de janela a ser aplicado ao controle. Especifica uma combinação de [estilos de janela](../../mfc/reference/styles-used-by-mfc.md#window-styles). Atualmente, há suporte para apenas os seguintes estilos: WS_TABSTOP, WS_VISIBLE, WS_DISABLED e WS_GROUP.
+O estilo de janela a ser aplicado ao controle. Especifica uma combinação de [estilos de janela](../../mfc/reference/styles-used-by-mfc.md#window-styles). Atualmente, há suporte para apenas os seguintes estilos: WS_TABSTOP, WS_VISIBLE, WS_DISABLED and WS_GROUP.
 
-*Rect*<br/>
+*rect*<br/>
 Um [estrutura RECT](/windows/desktop/api/windef/ns-windef-tagrect) que define as coordenadas dos cantos superior esquerdo e direito inferior do controle (primeira sobrecarga apenas).
 
 *nPlaceHolderID*<br/>

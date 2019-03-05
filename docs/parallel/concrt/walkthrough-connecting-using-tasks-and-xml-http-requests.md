@@ -1,19 +1,19 @@
 ---
-title: 'Instruções passo a passo: conexão usando tarefas e solicitações HTTP XML'
+title: 'Passo a passo: Conexão usando tarefas e solicitações HTTP XML'
 ms.date: 11/19/2018
 helpviewer_keywords:
 - connecting to web services, UWP apps [C++]
 - IXMLHTTPRequest2 and tasks, example
 - IXHR2 and tasks, example
 ms.assetid: e8e12d46-604c-42a7-abfd-b1d1bb2ed6b3
-ms.openlocfilehash: dfe4f111e130520f1c4948dc00fdf340e4d3113e
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: f78adda7625d3a3def60de968c5e7be97f282a7f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175841"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266504"
 ---
-# <a name="walkthrough-connecting-using-tasks-and-xml-http-requests"></a>Instruções passo a passo: conexão usando tarefas e solicitações HTTP XML
+# <a name="walkthrough-connecting-using-tasks-and-xml-http-requests"></a>Passo a passo: Conexão usando tarefas e solicitações HTTP XML
 
 Este exemplo mostra como usar o [IXMLHTTPRequest2](/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2) e [IXMLHTTPRequest2Callback](/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2callback) interfaces junto com tarefas enviar solicitações HTTP GET e POST para um serviço web em um Windows UWP (plataforma Universal ) aplicativo. Combinando `IXMLHTTPRequest2` junto com tarefas, você pode escrever código que compõe com outras tarefas. Por exemplo, você pode usar a tarefa de download como parte de uma cadeia de tarefas. A tarefa de download também pode responder quando o trabalho é cancelado.
 
@@ -24,7 +24,7 @@ Para obter mais informações sobre tarefas, consulte [paralelismo de tarefas](.
 
 Primeiro, este documento mostra como criar `HttpRequest` e suas classes de suporte. Ela mostra também como usar essa classe de um aplicativo UWP que usa C++ e XAML.
 
-Para obter um exemplo que usa `IXMLHTTPRequest2` , mas não usa tarefas, consulte [guia de início rápido: conectando-se usando a solicitação de HTTP XML (IXMLHTTPRequest2)](/previous-versions/windows/apps/hh770550\(v=win.10\)).
+Para obter um exemplo que usa `IXMLHTTPRequest2` , mas não usa tarefas, consulte [guia de início rápido: Conectar-se a solicitação de HTTP XML (IXMLHTTPRequest2)](/previous-versions/windows/apps/hh770550\(v=win.10\)).
 
 > [!TIP]
 >  `IXMLHTTPRequest2` e `IXMLHTTPRequest2Callback` são as interfaces que recomendamos para uso em um aplicativo UWP. Você também pode adaptar este exemplo para uso em um aplicativo da área de trabalho.
@@ -112,6 +112,6 @@ Aqui está o aplicativo em execução:
 [Cancelamento no PPL](cancellation-in-the-ppl.md)<br/>
 [Programação assíncrona em C++](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps)<br/>
 [Criando operações assíncronas em C++ para aplicativos UWP](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)<br/>
-[Guia de início rápido: Conectando-se usando a solicitação de HTTP XML (IXMLHTTPRequest2)](/previous-versions/windows/apps/hh770550\(v=win.10\))
+[Início Rápido: Conectar-se a solicitação de HTTP XML (IXMLHTTPRequest2)](/previous-versions/windows/apps/hh770550\(v=win.10\))
 [(tempo de execução de simultaneidade) da classe task](../../parallel/concrt/reference/task-class.md)<br/>
 [Classe task_completion_event](../../parallel/concrt/reference/task-completion-event-class.md)

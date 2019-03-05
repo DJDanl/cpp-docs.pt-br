@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CAnimateCtrl [MFC], Seek
 - CAnimateCtrl [MFC], Stop
 ms.assetid: 5e8eb1bd-96b7-47b8-8de2-6bcbb3cc299b
-ms.openlocfilehash: 6a22c88e1a19cd1aef1bbfacd7f255adc2b19d0e
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 8c8a6d3e83534cd5670e43a9009b8919a2e57f92
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178246"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281367"
 ---
 # <a name="canimatectrl-class"></a>Classe CAnimateCtrl
 
@@ -151,7 +151,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Especifica o estilo do controle de animação. Aplicar qualquer combinação das janelas de estilos descritos na seção comentários abaixo e os estilos de controle de animação são descritos em [estilos de controle de animação](/windows/desktop/Controls/animation-control-styles) no SDK do Windows.
 
-*Rect*<br/>
+*rect*<br/>
 Especifica a posição e o tamanho do controle de animação. Ela pode ser um [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto ou uma [RECT](/windows/desktop/api/windef/ns-windef-tagrect) estrutura.
 
 *pParentWnd*<br/>
@@ -205,7 +205,7 @@ Especifica o estilo estendido do controle que está sendo criado. Para obter uma
 *dwStyle*<br/>
 Especifica o estilo do controle de animação. Aplicar qualquer combinação da janela e estilos de controle de animação descritos em [estilos de controle de animação](/windows/desktop/Controls/animation-control-styles) no SDK do Windows.
 
-*Rect*<br/>
+*rect*<br/>
 Uma referência a um [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura que descreve o tamanho e posição da janela a ser criado, em coordenadas do cliente do *pParentWnd*.
 
 *pParentWnd*<br/>
@@ -288,10 +288,10 @@ BOOL Play(
 
 ### <a name="parameters"></a>Parâmetros
 
-*NDE*<br/>
+*nFrom*<br/>
 Índice baseado em zero do quadro em que a execução começa. Valor deve ser menor que 65.536. Um valor de 0 significa que começa com o primeiro quadro o clipe AVI.
 
-*nPara*<br/>
+*nTo*<br/>
 O índice baseado em zero do quadro no qual a reprodução de extremidades. Valor deve ser menor que 65.536. Um valor de - 1 significa que terminam com o último quadro em que o clipe AVI.
 
 *nRep*<br/>
@@ -319,7 +319,7 @@ BOOL Seek(UINT nTo);
 
 ### <a name="parameters"></a>Parâmetros
 
-*nPara*<br/>
+*nTo*<br/>
 Índice baseado em zero do quadro para exibir. Valor deve ser menor que 65.536. Um valor de 0 significa exibir o primeiro quadro em que o clipe AVI. Um valor -1 significa exibir o último quadro em que o clipe AVI.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -356,4 +356,3 @@ Diferente de zero se bem-sucedido; Caso contrário, zero.
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
 [CAnimateCtrl::Create](#create)<br/>
 [ON_CONTROL](message-map-macros-mfc.md#on_control)
-

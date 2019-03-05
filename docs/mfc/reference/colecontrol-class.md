@@ -334,12 +334,12 @@ helpviewer_keywords:
 - COleControl [MFC], IsInvokeAllowed
 - COleControl [MFC], SetInitialDataFormats
 ms.assetid: 53e95299-38e8-447b-9c5f-a381d27f5123
-ms.openlocfilehash: ef44c917411efefeb6719af95185ddf7993fbab1
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 8587eb76f38c07d54234c810dfd6ab79f487e740
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53179013"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283417"
 ---
 # <a name="colecontrol-class"></a>Classe COleControl
 
@@ -787,7 +787,7 @@ void BoundPropertyChanged(DISPID dispid);
 
 ### <a name="parameters"></a>Parâmetros
 
-*DISPID*<br/>
+*dispid*<br/>
 A ID de expedição de uma propriedade associada do controle.
 
 ### <a name="remarks"></a>Comentários
@@ -804,7 +804,7 @@ BOOL BoundPropertyRequestEdit(DISPID dispid);
 
 ### <a name="parameters"></a>Parâmetros
 
-*DISPID*<br/>
+*dispid*<br/>
 A ID de expedição de uma propriedade associada do controle.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -994,7 +994,7 @@ void DrawContent(
 *pDC*<br/>
 Ponteiro para o contexto de dispositivo.
 
-*RC*<br/>
+*rc*<br/>
 Área retangular a ser desenhada em.
 
 ### <a name="remarks"></a>Comentários
@@ -1016,7 +1016,7 @@ void DrawMetafile(
 *pDC*<br/>
 Ponteiro para o contexto de dispositivo de metarquivo.
 
-*RC*<br/>
+*rc*<br/>
 Área retangular a ser desenhada em.
 
 ##  <a name="enablesimpleframe"></a>  COleControl::EnableSimpleFrame
@@ -1174,7 +1174,7 @@ void AFX_CDECL FireEvent(
 
 ### <a name="parameters"></a>Parâmetros
 
-*DISPID*<br/>
+*dispid*<br/>
 A ID de expedição do evento a ser acionado.
 
 *pbParams*<br/>
@@ -1192,7 +1192,7 @@ O *pbParams* argumento é uma lista separada por espaço **VTS_**. Um ou mais de
 |VTS_FONT|`IFontDisp*`|
 |VTS_HANDLE|HWND|
 |VTS_PICTURE|`IPictureDisp*`|
-|VTS_OPTEXCLUSIVE|OLE_OPTEXCLUSIVE *|
+|VTS_OPTEXCLUSIVE|OLE_OPTEXCLUSIVE*|
 |VTS_TRISTATE|OLE_TRISTATE|
 |VTS_XPOS_HIMETRIC|OLE_XPOS_HIMETRIC|
 |VTS_YPOS_HIMETRIC|OLE_YPOS_HIMETRIC|
@@ -2224,7 +2224,7 @@ BOOL LockInPlaceActive(BOOL bLock);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Bloco*<br/>
+*bLock*<br/>
 TRUE se o estado de Active Directory no local do controle precisar ser bloqueada; FALSE se ele deve ser desbloqueado.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -2614,7 +2614,7 @@ virtual BOOL OnGetDisplayString(
 
 ### <a name="parameters"></a>Parâmetros
 
-*DISPID*<br/>
+*dispid*<br/>
 A ID de expedição de uma propriedade do controle.
 
 *strValue*<br/>
@@ -2714,7 +2714,7 @@ virtual BOOL OnGetPredefinedStrings(
 
 ### <a name="parameters"></a>Parâmetros
 
-*DISPID*<br/>
+*dispid*<br/>
 A ID de expedição de uma propriedade do controle.
 
 *pStringArray*<br/>
@@ -2744,7 +2744,7 @@ virtual BOOL OnGetPredefinedValue(
 
 ### <a name="parameters"></a>Parâmetros
 
-*DISPID*<br/>
+*dispid*<br/>
 A ID de expedição de uma propriedade do controle.
 
 *dwCookie*<br/>
@@ -3012,7 +3012,7 @@ virtual BOOL OnMapPropertyToPage(
 
 ### <a name="parameters"></a>Parâmetros
 
-*DISPID*<br/>
+*dispid*<br/>
 A ID de expedição de uma propriedade do controle.
 
 *lpclsid*<br/>
@@ -3873,10 +3873,10 @@ BOOL SetControlSize(int cx, int cy);
 
 ### <a name="parameters"></a>Parâmetros
 
-*CX*<br/>
+*cx*<br/>
 Especifica a nova largura do controle em pixels.
 
-*Cy*<br/>
+*cy*<br/>
 Especifica a nova altura do controle em pixels.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -3899,7 +3899,7 @@ void SetEnabled(BOOL bEnabled);
 
 ### <a name="parameters"></a>Parâmetros
 
-*bAtivado*<br/>
+*bEnabled*<br/>
 TRUE se o controle deve ser habilitada; Caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
@@ -3978,10 +3978,10 @@ void SetInitialSize(
 
 ### <a name="parameters"></a>Parâmetros
 
-*CX*<br/>
+*cx*<br/>
 A largura inicial do controle OLE em pixels.
 
-*Cy*<br/>
+*cy*<br/>
 A altura inicial do controle OLE em pixels.
 
 ### <a name="remarks"></a>Comentários
@@ -4085,7 +4085,7 @@ void ThrowError(
 
 ### <a name="parameters"></a>Parâmetros
 
-*SC*<br/>
+*sc*<br/>
 O valor do código de status a ser relatado. Para obter uma lista completa de códigos de possíveis, consulte o artigo [controles ActiveX: Tópicos avançados](../../mfc/mfc-activex-controls-advanced-topics.md).
 
 *nDescriptionID*<br/>

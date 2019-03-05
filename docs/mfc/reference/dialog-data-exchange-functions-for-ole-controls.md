@@ -18,12 +18,12 @@ helpviewer_keywords:
 - OLE controls [MFC], DDX functions
 - DDX (dialog data exchange), OLE support
 ms.assetid: 7ef1f288-ff65-40d4-aad2-5497bc00bb27
-ms.openlocfilehash: 5d330d8dd423927a3f4abbe6475a8d6219fa9af2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: df96d44cefeb15d89653538c3006d109a97a21a7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50531242"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298250"
 ---
 # <a name="dialog-data-exchange-functions-for-ole-controls"></a>Funções da troca de dados da caixa de diálogo para controles OLE
 
@@ -66,7 +66,7 @@ Um ponteiro para um `CDataExchange` objeto. A estrutura fornece esse objeto para
 *nIDC*<br/>
 A ID de um controle OLE no objeto de exibição de controle, exibição de formulário ou caixa de diálogo.
 
-*DISPID*<br/>
+*dispid*<br/>
 A ID de expedição de uma propriedade do controle.
 
 *value*<br/>
@@ -78,7 +78,7 @@ Para obter mais informações sobre DDX, consulte [troca de dados de caixa de di
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho:** afxdisp.h
+  **Header:** afxdisp.h
 
 ##  <a name="ddx_ocboolro"></a>  DDX_OCBoolRO
 
@@ -100,7 +100,7 @@ Um ponteiro para um `CDataExchange` objeto. A estrutura fornece esse objeto para
 *nIDC*<br/>
 A ID de um controle OLE no objeto de exibição de controle, exibição de formulário ou caixa de diálogo.
 
-*DISPID*<br/>
+*dispid*<br/>
 A ID de expedição de uma propriedade do controle.
 
 *value*<br/>
@@ -112,7 +112,7 @@ Para obter mais informações sobre DDX, consulte [troca de dados de caixa de di
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdisp.h
+  **Header** afxdisp.h
 
 ##  <a name="ddx_occolor"></a>  DDX_OCColor
 
@@ -134,7 +134,7 @@ Um ponteiro para um `CDataExchange` objeto. A estrutura fornece esse objeto para
 *nIDC*<br/>
 A ID de um controle OLE no objeto de exibição de controle, exibição de formulário ou caixa de diálogo.
 
-*DISPID*<br/>
+*dispid*<br/>
 A ID de expedição de uma propriedade do controle.
 
 *value*<br/>
@@ -146,7 +146,7 @@ Para obter mais informações sobre DDX, consulte [troca de dados de caixa de di
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdisp.h
+  **Header** afxdisp.h
 
 ##  <a name="ddx_occolorro"></a>  DDX_OCColorRO
 
@@ -168,7 +168,7 @@ Um ponteiro para um `CDataExchange` objeto. A estrutura fornece esse objeto para
 *nIDC*<br/>
 A ID de um controle OLE no objeto de exibição de controle, exibição de formulário ou caixa de diálogo.
 
-*DISPID*<br/>
+*dispid*<br/>
 A ID de expedição de uma propriedade do controle.
 
 *value*<br/>
@@ -180,7 +180,7 @@ Para obter mais informações sobre DDX, consulte [troca de dados de caixa de di
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdisp.h
+  **Header** afxdisp.h
 
 ##  <a name="ddx_ocfloat"></a>  DDX_OCFloat
 
@@ -208,7 +208,7 @@ Um ponteiro para um `CDataExchange` objeto. A estrutura fornece esse objeto para
 *nIDC*<br/>
 A ID de um controle OLE no objeto de exibição de controle, exibição de formulário ou caixa de diálogo.
 
-*DISPID*<br/>
+*dispid*<br/>
 A ID de expedição de uma propriedade do controle.
 
 *value*<br/>
@@ -220,7 +220,7 @@ Para obter mais informações sobre DDX, consulte [troca de dados de caixa de di
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdisp.h
+  **Header** afxdisp.h
 
 ##  <a name="ddx_ocfloatro"></a>  DDX_OCFloatRO
 
@@ -248,7 +248,7 @@ Um ponteiro para um `CDataExchange` objeto. A estrutura fornece esse objeto para
 *nIDC*<br/>
 A ID de um controle OLE no objeto de exibição de controle, exibição de formulário ou caixa de diálogo.
 
-*DISPID*<br/>
+*dispid*<br/>
 A ID de expedição de uma propriedade do controle.
 
 *value*<br/>
@@ -260,7 +260,7 @@ Para obter mais informações sobre DDX, consulte [troca de dados de caixa de di
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdisp.h
+  **Header** afxdisp.h
 
 ##  <a name="ddx_ocint"></a>  DDX_OCInt
 
@@ -288,7 +288,7 @@ Um ponteiro para um `CDataExchange` objeto. A estrutura fornece esse objeto para
 *nIDC*<br/>
 A ID de um controle OLE no objeto de exibição de controle, exibição de formulário ou caixa de diálogo.
 
-*DISPID*<br/>
+*dispid*<br/>
 A ID de expedição de uma propriedade do controle.
 
 *value*<br/>
@@ -300,7 +300,7 @@ Para obter mais informações sobre DDX, consulte [troca de dados de caixa de di
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdisp.h
+  **Header** afxdisp.h
 
 ##  <a name="ddx_ocintro"></a>  DDX_OCIntRO
 
@@ -328,7 +328,7 @@ Um ponteiro para um `CDataExchange` objeto. A estrutura fornece esse objeto para
 *nIDC*<br/>
 A ID de um controle OLE no objeto de exibição de controle, exibição de formulário ou caixa de diálogo.
 
-*DISPID*<br/>
+*dispid*<br/>
 A ID de expedição de uma propriedade do controle.
 
 *value*<br/>
@@ -340,7 +340,7 @@ Para obter mais informações sobre DDX, consulte [troca de dados de caixa de di
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdisp.h
+  **Header** afxdisp.h
 
 ##  <a name="ddx_ocshort"></a>  DDX_OCShort
 
@@ -362,7 +362,7 @@ Um ponteiro para um `CDataExchange` objeto. A estrutura fornece esse objeto para
 *nIDC*<br/>
 A ID de um controle OLE no objeto de exibição de controle, exibição de formulário ou caixa de diálogo.
 
-*DISPID*<br/>
+*dispid*<br/>
 A ID de expedição de uma propriedade do controle.
 
 *value*<br/>
@@ -374,7 +374,7 @@ Para obter mais informações sobre DDX, consulte [troca de dados de caixa de di
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdisp.h
+  **Header** afxdisp.h
 
 ##  <a name="ddx_ocshortro"></a>  DDX_OCShortRO
 
@@ -396,7 +396,7 @@ Um ponteiro para um `CDataExchange` objeto. A estrutura fornece esse objeto para
 *nIDC*<br/>
 A ID de um controle OLE no objeto de exibição de controle, exibição de formulário ou caixa de diálogo.
 
-*DISPID*<br/>
+*dispid*<br/>
 A ID de expedição de uma propriedade do controle.
 
 *value*<br/>
@@ -408,7 +408,7 @@ Para obter mais informações sobre DDX, consulte [troca de dados de caixa de di
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdisp.h
+  **Header** afxdisp.h
 
 ##  <a name="ddx_octext"></a>  DDX_OCText
 
@@ -430,7 +430,7 @@ Um ponteiro para um **CDataExchange** objeto. A estrutura fornece esse objeto pa
 *nIDC*<br/>
 A ID de um controle OLE no objeto de exibição de controle, exibição de formulário ou caixa de diálogo.
 
-*DISPID*<br/>
+*dispid*<br/>
 A ID de expedição de uma propriedade do controle.
 
 *value*<br/>
@@ -442,7 +442,7 @@ Para obter mais informações sobre DDX, consulte [troca de dados de caixa de di
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdisp.h
+  **Header** afxdisp.h
 
 ##  <a name="ddx_octextro"></a>  DDX_OCTextRO
 
@@ -464,7 +464,7 @@ Um ponteiro para um `CDataExchange` objeto. A estrutura fornece esse objeto para
 *nIDC*<br/>
 A ID de um controle OLE no objeto de exibição de controle, exibição de formulário ou caixa de diálogo.
 
-*DISPID*<br/>
+*dispid*<br/>
 A ID de expedição de uma propriedade do controle.
 
 *value*<br/>
@@ -476,7 +476,7 @@ Para obter mais informações sobre DDX, consulte [troca de dados de caixa de di
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdisp.h
+  **Header** afxdisp.h
 
 ## <a name="see-also"></a>Consulte também
 

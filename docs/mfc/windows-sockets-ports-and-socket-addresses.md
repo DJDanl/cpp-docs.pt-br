@@ -1,5 +1,5 @@
 ---
-title: 'Windows Sockets: portas e endereços de soquete'
+title: 'Windows Sockets: Portas e endereços de soquete'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ports [MFC], definition
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - sockets [MFC], addresses
 - sockets [MFC], ports
 ms.assetid: e050261a-9285-4f31-a1c5-6c8033af5b4a
-ms.openlocfilehash: d132001cb792877e3d476508a6a5bb456dfb5987
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c33ec1376c1898272cf80e8d77c5cc273e16f9de
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50631348"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277763"
 ---
-# <a name="windows-sockets-ports-and-socket-addresses"></a>Windows Sockets: portas e endereços de soquete
+# <a name="windows-sockets-ports-and-socket-addresses"></a>Windows Sockets: Portas e endereços de soquete
 
 Este artigo explica os termos "port" e "address" como usado com o Windows Sockets.
 
@@ -40,17 +40,16 @@ Quando você tentar criar um soquete, você normalmente não precisará especifi
 
 Para obter mais informações, consulte:
 
-- [Windows Sockets: usando a classe CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
+- [Windows Sockets: Usando classe CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
 
-- [Windows Sockets: usando soquetes com arquivos mortos](../mfc/windows-sockets-using-sockets-with-archives.md)
+- [Windows Sockets: Usando soquetes com arquivos mortos](../mfc/windows-sockets-using-sockets-with-archives.md)
 
-- [Windows Sockets: como funcionam soquetes com arquivos mortos](../mfc/windows-sockets-how-sockets-with-archives-work.md)
+- [Windows Sockets: Como funcionam soquetes com arquivos mortos](../mfc/windows-sockets-how-sockets-with-archives-work.md)
 
-- [Windows Sockets: soquetes de fluxo](../mfc/windows-sockets-stream-sockets.md)
+- [Windows Sockets: Stream Sockets](../mfc/windows-sockets-stream-sockets.md)
 
-- [Windows Sockets: soquetes de datagrama](../mfc/windows-sockets-datagram-sockets.md)
+- [Windows Sockets: Soquetes de datagrama](../mfc/windows-sockets-datagram-sockets.md)
 
 ## <a name="see-also"></a>Consulte também
 
 [Windows Sockets em MFC](../mfc/windows-sockets-in-mfc.md)
-

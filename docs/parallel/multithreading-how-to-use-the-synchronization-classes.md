@@ -13,12 +13,12 @@ helpviewer_keywords:
 - multithreading [C++], synchronization classes
 - threading [C++], thread-safe class design
 ms.assetid: f266d4c6-0454-4bda-9758-26157ef74cc5
-ms.openlocfilehash: 0f8304c3b45f87dadc2317de95a0b30b54baffa0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6115d942abc61fbfc9d60ca1ccf97d4b423ff7c1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50604159"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304646"
 ---
 # <a name="multithreading-how-to-use-the-mfc-synchronization-classes"></a>Multithreading: Como usar as Classes de sincronização do MFC
 
@@ -54,7 +54,7 @@ singleLock.Unlock();
 
 As desvantagens dessa abordagem são que a classe será um pouco mais lenta do que a mesma classe sem os objetos de sincronização adicionados. Além disso, se houver uma chance de que mais de um thread pode excluir o objeto, a abordagem mesclada talvez nem sempre funciona. Nessa situação, é melhor manter objetos de sincronização separado.
 
-Para obter informações sobre como determinar qual classe de sincronização a ser usado em situações diferentes, consulte [Multithreading: quando usar as Classes de sincronização](multithreading-when-to-use-the-synchronization-classes.md). Para obter mais informações sobre a sincronização, consulte [sincronização](/windows/desktop/Sync/synchronization) no SDK do Windows. Para obter mais informações sobre suporte multithreading no MFC, consulte [Multithreading com C++ e MFC](multithreading-with-cpp-and-mfc.md).
+Para obter informações sobre como determinar qual classe de sincronização a ser usado em situações diferentes, consulte [Multithreading: Quando usar as Classes de sincronização](multithreading-when-to-use-the-synchronization-classes.md). Para obter mais informações sobre a sincronização, consulte [sincronização](/windows/desktop/Sync/synchronization) no SDK do Windows. Para obter mais informações sobre suporte multithreading no MFC, consulte [Multithreading com C++ e MFC](multithreading-with-cpp-and-mfc.md).
 
 ## <a name="see-also"></a>Consulte também
 

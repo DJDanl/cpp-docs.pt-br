@@ -22,12 +22,12 @@ helpviewer_keywords:
 - template-based collection classes [MFC]
 - simple list collection classes [MFC]
 ms.assetid: c69fc95b-c8f6-4a99-abed-517c9898ef0c
-ms.openlocfilehash: 8bd64e1c5efd1f80f43cb3460719326f30d5416c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 40633c8b2b09d27e97443364ed3ce711ee217e18
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50557843"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284652"
 ---
 # <a name="template-based-classes"></a>Classes com base no modelo
 
@@ -53,7 +53,7 @@ Para usar os modelos de coleção simples, você precisa saber qual tipo de dado
 
 ###  <a name="_core_simple_array_and_list_usage"></a> Matriz simples e o uso de lista
 
-As classes de lista e uma matriz simples [CArray](../mfc/reference/carray-class.md) e [CList](../mfc/reference/clist-class.md), usam dois parâmetros: *tipo* e `ARG_TYPE`. Essas classes podem armazenar qualquer tipo de dados, que você especificar na *tipo* parâmetro:
+As classes de lista e uma matriz simples [CArray](../mfc/reference/carray-class.md) e [CList](../mfc/reference/clist-class.md), usam dois parâmetros: *TIPO de* e `ARG_TYPE`. Essas classes podem armazenar qualquer tipo de dados, que você especificar na *tipo* parâmetro:
 
 - Tipos de dados fundamental do C++, como **int**, **char**, e **float**
 
@@ -71,7 +71,7 @@ O primeiro exemplo declara uma coleção de matrizes `myArray`, que contém **in
 
 ###  <a name="_core_simple_map_usage"></a> Uso do mapa simples
 
-A classe de mapa simples, [CMap](../mfc/reference/cmap-class.md), assume quatro parâmetros: *chave*, *ARG_KEY*, *valor*, e *ARG_VALUE*. Assim como as classes de matriz e lista, as classes de mapa podem armazenar qualquer tipo de dados. Ao contrário das matrizes e listas, o que o índice e ordem os dados que eles armazenam, mapas de associar as chaves e valores: você acessa um valor armazenado em um mapa especificando de chave associado um valor. O *chave* parâmetro especifica o tipo de dados das chaves usadas para acessar dados armazenados no mapa. Se o tipo de *chave* é uma estrutura ou classe, o *ARG_KEY* parâmetro normalmente é uma referência para o tipo especificado na *chave*. O *valor* parâmetro especifica o tipo dos itens armazenados no mapa. Se o tipo de *ARG_VALUE* é uma estrutura ou classe, o *ARG_VALUE* parâmetro normalmente é uma referência para o tipo especificado na *valor*. Por exemplo:
+A classe de mapa simples, [CMap](../mfc/reference/cmap-class.md), assume quatro parâmetros: *CHAVE*, *ARG_KEY*, *valor*, e *ARG_VALUE*. Assim como as classes de matriz e lista, as classes de mapa podem armazenar qualquer tipo de dados. Ao contrário das matrizes e listas, o que o índice e ordem os dados que eles armazenam, mapas de associar as chaves e valores: Você acessa um valor armazenado em um mapa especificando de chave associado um valor. O *chave* parâmetro especifica o tipo de dados das chaves usadas para acessar dados armazenados no mapa. Se o tipo de *chave* é uma estrutura ou classe, o *ARG_KEY* parâmetro normalmente é uma referência para o tipo especificado na *chave*. O *valor* parâmetro especifica o tipo dos itens armazenados no mapa. Se o tipo de *ARG_VALUE* é uma estrutura ou classe, o *ARG_VALUE* parâmetro normalmente é uma referência para o tipo especificado na *valor*. Por exemplo:
 
 [!code-cpp[NVC_MFCCollections#3](../mfc/codesnippet/cpp/template-based-classes_3.cpp)]
 
@@ -99,7 +99,7 @@ O segundo exemplo declara uma lista de tipo de ponteiro, `myList`, derivado do `
 
 ###  <a name="_core_typed.2d.pointer_map_usage"></a> Uso do mapa de tipo de ponteiro
 
-A classe de mapa de ponteiros tipados, [CTypedPtrMap](../mfc/reference/ctypedptrmap-class.md), usa três parâmetros: *BASE_CLASS*, *chave*, e *valor*. O *BASE_CLASS* parâmetro especifica a classe da qual derivar a nova classe: `CMapPtrToWord`, `CMapPtrToPtr`, `CMapStringToPtr`, `CMapWordToPtr`, `CMapStringToOb`e assim por diante. *CHAVE* equivale a *chave* em `CMap`: Especifica o tipo da chave usada para pesquisas. *VALOR* equivale a *valor* em `CMap`: Especifica o tipo de objeto armazenado no mapa. Por exemplo:
+A classe de mapa de ponteiros tipados, [CTypedPtrMap](../mfc/reference/ctypedptrmap-class.md), usa três parâmetros: *BASE_CLASS*, *chave*, e *valor*. O *BASE_CLASS* parâmetro especifica a classe da qual derivar a nova classe: `CMapPtrToWord`, `CMapPtrToPtr`, `CMapStringToPtr`, `CMapWordToPtr`, `CMapStringToOb`e assim por diante. *CHAVE* equivale a *chave* em `CMap`: Ele especifica o tipo da chave usada para pesquisas. *VALOR* equivale a *valor* em `CMap`: Especifica o tipo de objeto armazenado no mapa. Por exemplo:
 
 [!code-cpp[NVC_MFCCollections#6](../mfc/codesnippet/cpp/template-based-classes_6.cpp)]
 
@@ -115,4 +115,3 @@ Para obter mais informações, consulte [como fazer uma coleção fortemente tip
 ## <a name="see-also"></a>Consulte também
 
 [Coleções](../mfc/collections.md)
-

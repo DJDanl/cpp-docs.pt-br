@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - file classes [C++]
 ms.assetid: 94355eb1-daa3-4825-b183-7392b3899561
-ms.openlocfilehash: 2b5f17a93fdfa885e717314ca5e62a8cfa8db293
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 68b51bfc230930bd8f1e5466fd9826283bc912e7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614208"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290018"
 ---
 # <a name="file-handling-classes"></a>Classes de manipulação de arquivos
 
@@ -27,4 +27,3 @@ Essas classes fornecem métodos para manipular arquivos, arquivos temporários e
 ## <a name="see-also"></a>Consulte também
 
 [Visão geral da classe](../atl/atl-class-overview.md)
-

@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CInternetFile [MFC], WriteString
 - CInternetFile [MFC], m_hFile
 ms.assetid: 96935681-ee71-4a8d-9783-5abc7b3e6f10
-ms.openlocfilehash: 309d4210f72f7ecd83ed6a8eb79874a1c8170d59
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 65bc36856e253d086cc430a600daa9255e21ea75
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50586869"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279972"
 ---
 # <a name="cinternetfile-class"></a>Classe CInternetFile
 
@@ -261,7 +261,7 @@ virtual LPTSTR ReadString(
 *pstr*<br/>
 Um ponteiro para uma cadeia de caracteres que receberão a linha que está sendo lida.
 
-*Nmáx*<br/>
+*nMax*<br/>
 O número máximo de caracteres a ser lido.
 
 *rString*<br/>
@@ -294,7 +294,7 @@ virtual ULONGLONG Seek(
 *lOffset*<br/>
 Deslocamento em bytes para mover o ponteiro de leitura/gravação no arquivo.
 
-*NDE*<br/>
+*nFrom*<br/>
 Referência relativa para o deslocamento. Deve ser um dos seguintes valores:
 
 - `CFile::begin` Mova o ponteiro do arquivo *lOff* bytes encaminham desde o início do arquivo.

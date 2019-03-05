@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Win32 [MFC], Internet classes
 - Windows API [MFC], Internet classes
 ms.assetid: b49601d5-3025-4068-9408-316b54ee4375
-ms.openlocfilehash: a655759e8e1ffdcfe422305cd39623b9d7a6ca4e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c067d0c0067ee13b0e6ce6d84fd97135274c88b5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50486431"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260550"
 ---
 # <a name="win32-internet-classes"></a>Classes de Internet Win32
 
@@ -65,4 +65,3 @@ Representa uma condição de exceção relacionada a uma operação de Internet.
 ## <a name="see-also"></a>Consulte também
 
 [Visão geral da classe](../mfc/class-library-overview.md)
-

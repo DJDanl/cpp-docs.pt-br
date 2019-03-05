@@ -17,12 +17,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComPtrBase class
 ms.assetid: 6dbe9543-dee8-4a97-b02f-dd3a25f4a1a0
-ms.openlocfilehash: 8d7c96ff047a6340511ee1d67f025db0ad7c5368
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5bb599b88671447e219421efacac7a2d8a5f7b06
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50452683"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261694"
 ---
 # <a name="ccomptrbase-class"></a>Classe CComPtrBase
 
@@ -46,7 +46,7 @@ O tipo de objeto a ser referenciado pelo ponteiro inteligente.
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CComPtrBase:: ~ CComPtrBase](#dtor)|O destruidor.|
+|[CComPtrBase::~CComPtrBase](#dtor)|O destruidor.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
@@ -71,7 +71,7 @@ O tipo de objeto a ser referenciado pelo ponteiro inteligente.
 |[CComPtrBase::operator &](#operator_amp)|A & operador.|
 |[CComPtrBase::operator *](#operator_star)|O operador \*.|
 |[CComPtrBase::operator <](#ccomptrbase__operator lt)|O menor-que o operador.|
-|[CComPtrBase::operator = =](#operator_eq_eq)|O operador de igualdade.|
+|[CComPtrBase::operator ==](#operator_eq_eq)|O operador de igualdade.|
 |[CComPtrBase::operator ->](#operator_ptr)|O operador de membros do ponteiro.|
 
 ### <a name="public-data-members"></a>Membros de Dados Públicos
@@ -104,10 +104,10 @@ HRESULT Advise(
 *pUnk*<br/>
 Um ponteiro para o cliente `IUnknown`.
 
-*IID*<br/>
+*iid*<br/>
 O GUID do ponto de conexão. Normalmente, isso é o mesmo que a interface de saída gerenciada pelo ponto de conexão.
 
-*PDW*<br/>
+*pdw*<br/>
 Um ponteiro para o cookie que identifica exclusivamente a conexão.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -128,14 +128,14 @@ void Attach(T* p2) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*P2*<br/>
+*p2*<br/>
 O `CComPtrBase` objeto assumirá a propriedade do ponteiro this.
 
 ### <a name="remarks"></a>Comentários
 
 `Attach` chamadas [CComPtrBase::Release](#release) existente [CComPtrBase::p](#p) variável de membro e, em seguida, atribui *p2* para `CComPtrBase::p`. Quando um `CComPtrBase` objeto assume a propriedade de um ponteiro, ele chamará automaticamente `Release` no ponteiro que excluirá o ponteiro e qualquer alocado dados se a contagem de referência no objeto chega a 0.
 
-##  <a name="dtor"></a>  CComPtrBase:: ~ CComPtrBase
+##  <a name="dtor"></a>  CComPtrBase::~CComPtrBase
 
 O destruidor.
 
@@ -369,7 +369,7 @@ template <class Q> HRESULT QueryInterface(Q
 *Q*<br/>
 O tipo de objeto cujo ponteiro de interface é necessário.
 
-*PP*<br/>
+*pp*<br/>
 Endereço da variável de saída que recebe o ponteiro de interface solicitado.
 
 ### <a name="return-value"></a>Valor de retorno

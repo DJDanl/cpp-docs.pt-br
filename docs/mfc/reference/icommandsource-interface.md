@@ -17,12 +17,12 @@ f1_keywords:
 helpviewer_keywords:
 - ICommandSource interface [MFC]
 ms.assetid: a4b1f698-c09f-4ba8-9b13-0e74a0a4967e
-ms.openlocfilehash: 4fca5a2ffef7e8da4f6dd79fcd99c72e92cfdf6a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 21c4f4544a6ccf2342580bc5859739fc1f50d0c2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50538431"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296014"
 ---
 # <a name="icommandsource-interface"></a>Interface ICommandSource
 
@@ -55,7 +55,7 @@ interface class ICommandSource
 
 Ao hospedar um controle de usuário em uma exibição do MFC [classe CWinFormsView](../../mfc/reference/cwinformsview-class.md) comandos de rotas e atualização de comando mensagens de interface do usuário para o controle de usuário para permitir a manipulação de comandos MFC (por exemplo, itens de menu do quadro e botões da barra de ferramentas). Implementando [ICommandTarget Interface](../../mfc/reference/icommandtarget-interface.md), você fornecer uma referência para o controle de usuário a `ICommandSource` objeto.
 
-Ver [como: Adicionar roteamento de comando para o controle do Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) para obter um exemplo de como usar `ICommandTarget`.
+Confira [Como Adicione o roteamento de comando para o controle do Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) para obter um exemplo de como usar `ICommandTarget`.
 
 Para obter mais informações sobre como usar o Windows Forms, consulte [usando um controle de usuário do Windows Form no MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
 
@@ -82,7 +82,7 @@ Um identificador para o método de manipulador de comando.
 ### <a name="remarks"></a>Comentários
 
 Esse método adiciona o cmdHandler do manipulador de comando para o objeto de fonte de comando e mapeia o manipulador para cmdID.
-Ver [como: Adicionar roteamento de comando para o controle de formulários do Windows](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) para obter um exemplo de como usar AddCommandHandler.
+Confira [Como Adicione o roteamento de comando para o controle de formulários do Windows](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) para obter um exemplo de como usar AddCommandHandler.
 
 ## <a name="addcommandrangehandler"></a> ICommandSource::AddCommandRangeHandler
 
@@ -248,5 +248,5 @@ A ID de comando da mensagem a ser enviada.
 Esse método envia a mensagem mapeada para a ID especificada pelo comando de forma síncrona. Ele chama CWnd::SendMessage para colocar a mensagem na fila de mensagens da janela e aguarda até que esse procedimento de janela processou a mensagem antes de retornar.
 ## <a name="see-also"></a>Consulte também
 
-[Como adicionar roteamento de comando ao controle do Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)<br/>
+[Como: adicionar roteamento de comando ao controle do Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)<br/>
 [Interface ICommandTarget](../../mfc/reference/icommandtarget-interface.md)

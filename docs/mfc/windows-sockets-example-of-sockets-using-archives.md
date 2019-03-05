@@ -1,19 +1,19 @@
 ---
-title: 'Windows Sockets: exemplo de soquetes que usam arquivos mortos'
+title: 'Windows Sockets: Exemplo de soquetes que usam arquivos mortos'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - sockets [MFC], with archives
 - examples [MFC], Windows Sockets
 - Windows Sockets [MFC], with archives
 ms.assetid: 2e3c9bb2-7e7b-4f28-8dc5-6cb7a484edac
-ms.openlocfilehash: 285053c79b13ebea23aedc7dae52eabe85f55a12
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4ea1e2911b156066360da09993fa7302db79f12b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50436264"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295247"
 ---
-# <a name="windows-sockets-example-of-sockets-using-archives"></a>Windows Sockets: exemplo de soquetes que usam arquivos mortos
+# <a name="windows-sockets-example-of-sockets-using-archives"></a>Windows Sockets: Exemplo de soquetes que usam arquivos mortos
 
 Este artigo apresenta um exemplo de como usar a classe [CSocket](../mfc/reference/csocket-class.md). O exemplo utiliza `CArchive` objetos para serializar os dados por meio de um soquete. Observe que isso não é a serialização de documento para ou de um arquivo.
 
@@ -43,15 +43,15 @@ Para recebimento, a função opera da mesma forma, exceto que ele usa o operador
 Nesse modelo de comunicação, a palavra "Recebimento", a mensagem enviada na *strText* variável, é para exibição na outra extremidade da comunicação, portanto, ele especifica para o usuário que um determinado número de pacotes de dados tenha sido recebido. O receptor responde com uma cadeia de caracteres semelhante que diz "Enviado", para exibição na tela do remetente original. Recebimento de ambas as cadeias de caracteres indica que a comunicação bem-sucedida ocorreu.
 
 > [!CAUTION]
->  Se você estiver escrevendo um programa de cliente do MFC para se comunicar com servidores estabelecida (não MFC), não envie objetos C++ por meio do arquivo morto. A menos que o servidor for um aplicativo do MFC que compreende os tipos de objetos que você deseja enviar, ele não será capaz de receber e desserializar os seus objetos. Um exemplo no artigo [Windows Sockets: ordenação de bytes](../mfc/windows-sockets-byte-ordering.md) mostra uma comunicação desse tipo.
+>  Se você estiver escrevendo um programa de cliente do MFC para se comunicar com servidores estabelecida (não MFC), não envie objetos C++ por meio do arquivo morto. A menos que o servidor for um aplicativo do MFC que compreende os tipos de objetos que você deseja enviar, ele não será capaz de receber e desserializar os seus objetos. Um exemplo no artigo [Windows Sockets: Ordenação de bytes](../mfc/windows-sockets-byte-ordering.md) mostra uma comunicação desse tipo.
 
 Para obter mais informações, consulte a especificação do Windows Sockets: **htonl**, **htons**, **ntohl**, **ntohs**. Além disso, para obter mais informações, consulte:
 
-- [Windows Sockets: derivando de classes de soquete](../mfc/windows-sockets-deriving-from-socket-classes.md)
+- [Windows Sockets: Derivando de Classes de soquete](../mfc/windows-sockets-deriving-from-socket-classes.md)
 
-- [Windows Sockets: como funcionam soquetes com arquivos mortos](../mfc/windows-sockets-how-sockets-with-archives-work.md)
+- [Windows Sockets: Como funcionam soquetes com arquivos mortos](../mfc/windows-sockets-how-sockets-with-archives-work.md)
 
-- [Windows Sockets: tela de fundo](../mfc/windows-sockets-background.md)
+- [Windows Sockets: Background](../mfc/windows-sockets-background.md)
 
 ## <a name="see-also"></a>Consulte também
 
@@ -61,4 +61,3 @@ Para obter mais informações, consulte a especificação do Windows Sockets: **
 [CArchive::operator >>](../mfc/reference/carchive-class.md#operator_lt_lt)<br/>
 [CArchive::Flush](../mfc/reference/carchive-class.md#flush)<br/>
 [CObject::Serialize](../mfc/reference/cobject-class.md#serialize)
-

@@ -192,12 +192,12 @@ helpviewer_keywords:
 - CWinApp [MFC], m_nAutosaveInterval
 - CWinApp [MFC], m_pDataRecoveryHandler
 ms.assetid: e426a3cd-0d15-40d6-bd55-beaa5feb2343
-ms.openlocfilehash: 3f9afdf18fcaff0d3613b4204d8690f915079e7d
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 6366638ebfd5e78ad517a8913e4276d5cd820670
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178935"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264660"
 ---
 # <a name="cwinapp-class"></a>Classe CWinApp
 
@@ -269,7 +269,7 @@ class CWinApp : public CWinThread
 |[CWinApp::ReopenPreviousFilesAtRestart](#reopenpreviousfilesatrestart)|Determina se o Gerenciador de reinicialização é reaberto os arquivos que estavam abertos quando o aplicativo foi encerrado inesperadamente.|
 |[CWinApp::RestartInstance](#restartinstance)|Manipula uma reinicialização do aplicativo iniciada pelo Gerenciador de reinicialização.|
 |[CWinApp::RestoreAutosavedFilesAtRestart](#restoreautosavedfilesatrestart)|Determina se o Gerenciador de reinicialização restaura os arquivos de salva automaticamente quando ele reinicia o aplicativo.|
-|[CWinApp:: Run](#run)|Executa o loop de mensagem padrão. Substituição para personalizar o loop de mensagem.|
+|[CWinApp::Run](#run)|Executa o loop de mensagem padrão. Substituição para personalizar o loop de mensagem.|
 |[CWinApp::RunAutomated](#runautomated)|Testes de linha de comando do aplicativo para o **/Automation** opção. Obsoleto. Em vez disso, use o valor em [CCommandLineInfo::m_bRunAutomated](../../mfc/reference/ccommandlineinfo-class.md#m_brunautomated) depois de chamar [ParseCommandLine](#parsecommandline).|
 |[CWinApp::RunEmbedded](#runembedded)|Testes de linha de comando do aplicativo para o **/Embedding** opção. Obsoleto. Em vez disso, use o valor em [CCommandLineInfo::m_bRunEmbedded](../../mfc/reference/ccommandlineinfo-class.md#m_brunembedded) depois de chamar [ParseCommandLine](#parsecommandline).|
 |[CWinApp::SaveAllModified](#saveallmodified)|Solicita ao usuário para salvar os documentos modificados tudo.|
@@ -650,7 +650,7 @@ BOOL EnableTaskbarInteraction(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parâmetros
 
-*bAtivar*<br/>
+*bEnable*<br/>
 Especifica se a interação com a barra de tarefas do Windows 7 deve ser habilitada (TRUE) ou desabilitado (FALSE).
 
 ### <a name="return-value"></a>Valor de retorno
@@ -824,7 +824,7 @@ CDocTemplate* GetNextDocTemplate(POSITION& pos) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*POS*<br/>
+*pos*<br/>
 Uma referência a um valor de posição retornado por uma chamada anterior a `GetNextDocTemplate` ou [GetFirstDocTemplatePosition](#getfirstdoctemplateposition). O valor é atualizado para a próxima posição por essa chamada.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -887,7 +887,7 @@ Aponta para uma cadeia de caracteres terminada em nulo que contém a entrada cuj
 *ppData*<br/>
 Aponta para um ponteiro que receberá o endereço dos dados.
 
-*Petabytes*<br/>
+*pBytes*<br/>
 Aponta para um UINT que receberá o tamanho dos dados (em bytes).
 
 ### <a name="return-value"></a>Valor de retorno
@@ -929,7 +929,7 @@ Aponta para uma cadeia de caracteres terminada em nulo que especifica a seção 
 *lpszEntry*<br/>
 Aponta para uma cadeia de caracteres terminada em nulo que contém a entrada cujo valor deve ser recuperado.
 
-*nConfiguração padrão*<br/>
+*nDefault*<br/>
 Especifica o valor padrão para retornar se a estrutura não é possível localizar a entrada.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1307,15 +1307,15 @@ Para habilitar o Gerenciador de reinicialização, defina `m_dwRestartManagerSup
 |-|-|
 |Sinalizador|Descrição|
 |AFX_RESTART_MANAGER_SUPPORT_RESTART|O aplicativo está registrado usando [CWinApp::RegisterWithRestartManager](#registerwithrestartmanager). O Gerenciador de reinicialização é responsável por reiniciar o aplicativo se ele encerra inesperadamente.|
-|-AFX_RESTART_MANAGER_SUPPORT_RECOVERY|O aplicativo está registrado com o Gerenciador de reinicialização e o Gerenciador de reinicialização chama a função de retorno de chamada de recuperação quando ele reinicia o aplicativo. A função de retorno de chamada de recuperação padrão é [CWinApp::ApplicationRecoveryCallback](#applicationrecoverycallback).|
-|-AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART|Salvamento automático esteja habilitado e o Gerenciador de reinicialização salva automaticamente qualquer abrir documentos quando o aplicativo for reiniciado.|
-|-AFX_RESTART_MANAGER_AUTOSAVE_AT_INTERVAL|Salvamento automático esteja habilitado e o Gerenciador de reinicialização salva automaticamente qualquer abrir documentos em intervalos regulares. O intervalo é definido pela [CWinApp::m_nAutosaveInterval](#m_nautosaveinterval).|
-|-AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES|O Gerenciador de reinicialização abre documentos anteriormente abertos após reiniciar o aplicativo a partir de uma saída inesperada. O [classe CDataRecoveryHandler](../../mfc/reference/cdatarecoveryhandler-class.md) manipula armazenar a lista de documentos abertos e restaurá-los.|
-|-AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES|O Gerenciador de reinicialização solicita ao usuário para restaurar arquivos salva automaticamente depois de reiniciar o aplicativo. O `CDataRecoveryHandler` classe consulta o usuário.|
-|-AFX_RESTART_MANAGER_SUPPORT_NO_AUTOSAVE|A união de AFX_RESTART_MANAGER_SUPPORT_RESTART, AFX_RESTART_MANAGER_SUPPORT_RECOVER e AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES.|
-|-AFX_RESTART_MANAGER_SUPPORT_ALL_ASPECTS|A união de AFX_RESTART_MANAGER_SUPPORT_NO_AUTOSAVE, AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART, AFX_RESTART_MANAGER_AUTOSAVE_AT_INTERVAL e AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES.|
-|-AFX_RESTART_MANAGER_SUPPORT_RESTART_ASPECTS|A união de AFX_RESTART_MANAGER_SUPPORT_RESTART, AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART, AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES e AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES.|
-|-AFX_RESTART_MANAGER_SUPPORT_RECOVERY_ASPECTS|A união ofAFX_RESTART_MANAGER_SUPPORT_RECOVERY, AFX_RESTART_MANAGER_AUTOSAVE_AT_INTERVAL, AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES e AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES.|
+|- AFX_RESTART_MANAGER_SUPPORT_RECOVERY|O aplicativo está registrado com o Gerenciador de reinicialização e o Gerenciador de reinicialização chama a função de retorno de chamada de recuperação quando ele reinicia o aplicativo. A função de retorno de chamada de recuperação padrão é [CWinApp::ApplicationRecoveryCallback](#applicationrecoverycallback).|
+|- AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART|Salvamento automático esteja habilitado e o Gerenciador de reinicialização salva automaticamente qualquer abrir documentos quando o aplicativo for reiniciado.|
+|- AFX_RESTART_MANAGER_AUTOSAVE_AT_INTERVAL|Salvamento automático esteja habilitado e o Gerenciador de reinicialização salva automaticamente qualquer abrir documentos em intervalos regulares. O intervalo é definido pela [CWinApp::m_nAutosaveInterval](#m_nautosaveinterval).|
+|- AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES|O Gerenciador de reinicialização abre documentos anteriormente abertos após reiniciar o aplicativo a partir de uma saída inesperada. O [classe CDataRecoveryHandler](../../mfc/reference/cdatarecoveryhandler-class.md) manipula armazenar a lista de documentos abertos e restaurá-los.|
+|- AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES|O Gerenciador de reinicialização solicita ao usuário para restaurar arquivos salva automaticamente depois de reiniciar o aplicativo. O `CDataRecoveryHandler` classe consulta o usuário.|
+|- AFX_RESTART_MANAGER_SUPPORT_NO_AUTOSAVE|A união de AFX_RESTART_MANAGER_SUPPORT_RESTART, AFX_RESTART_MANAGER_SUPPORT_RECOVER e AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES.|
+|- AFX_RESTART_MANAGER_SUPPORT_ALL_ASPECTS|A união de AFX_RESTART_MANAGER_SUPPORT_NO_AUTOSAVE, AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART, AFX_RESTART_MANAGER_AUTOSAVE_AT_INTERVAL e AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES.|
+|- AFX_RESTART_MANAGER_SUPPORT_RESTART_ASPECTS|A união de AFX_RESTART_MANAGER_SUPPORT_RESTART, AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART, AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES e AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES.|
+|- AFX_RESTART_MANAGER_SUPPORT_RECOVERY_ASPECTS|A união ofAFX_RESTART_MANAGER_SUPPORT_RECOVERY, AFX_RESTART_MANAGER_AUTOSAVE_AT_INTERVAL, AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES e AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES.|
 
 ##  <a name="m_ehelptype"></a>  CWinApp::m_eHelpType
 
@@ -1508,7 +1508,7 @@ LPCTSTR m_pszRegistryKey;
 
 Normalmente, este membro de dados é tratado como somente leitura.
 
-- O valor é armazenado para uma chave do registro. O nome para a configuração de perfil de aplicativo é anexado à chave do registro a seguir: HKEY_CURRENT_USER/Software/LocalAppWizard-gerados /.
+- O valor é armazenado para uma chave do registro. O nome para a configuração de perfil de aplicativo é anexado à chave do registro a seguir: HKEY_CURRENT_USER/Software/LocalAppWizard-Generated/.
 
 Se você atribuir um valor a ser `m_pszRegistryKey`, ele deve ser dinamicamente alocado no heap. O `CWinApp` chamadas de destruidor **livre**() com este ponteiro. Você pode querer usar o `_tcsdup`função de biblioteca de tempo de execução () para fazer a alocação. Além disso, libere a memória associada com o ponteiro atual antes de atribuir um novo valor. Por exemplo:
 
@@ -1811,7 +1811,7 @@ virtual BOOL ProcessMessageFilter(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Código*<br/>
+*code*<br/>
 Especifica um código de gancho. Essa função membro usa o código para determinar como processar *lpMsg.*
 
 *lpMsg*<br/>
@@ -2038,7 +2038,7 @@ virtual BOOL RestoreAutosavedFilesAtRestart() const;
 
 TRUE indica que o Gerenciador de reinicialização restaura arquivos salva automaticamente; FALSE indica que o Gerenciador de reinicialização não.
 
-##  <a name="run"></a>  CWinApp:: Run
+##  <a name="run"></a>  CWinApp::Run
 
 Fornece um loop de mensagem padrão.
 
@@ -2329,7 +2329,7 @@ Aponta para uma cadeia de caracteres terminada em nulo que especifica a seção 
 *lpszEntry*<br/>
 Aponta para uma cadeia de caracteres terminada em nulo que contém a entrada na qual o valor deve ser gravada. Se a entrada não existe na seção especificada, ele é criado.
 
-*Nvalor*<br/>
+*nValue*<br/>
 Contém o valor a ser gravado.
 
 ### <a name="return-value"></a>Valor de retorno

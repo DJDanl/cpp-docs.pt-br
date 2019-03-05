@@ -5,12 +5,12 @@ helpviewer_keywords:
 - managing a scheduler instance [Concurrency Runtime]
 - scheduler instances, managing [Concurrency Runtime]
 ms.assetid: 2cc804f0-5ff3-498b-97f1-a9f67a005448
-ms.openlocfilehash: d8e79f7c132abd8e43f661f4dc7c7bb758cb2a6d
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.openlocfilehash: bc7adfaeb4c96245488bbcb5cd70cdae9daf9e26
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54893984"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276148"
 ---
 # <a name="how-to-manage-a-scheduler-instance"></a>Como: Gerenciar uma instância do Agendador
 
@@ -79,4 +79,3 @@ Copie o código de exemplo e cole-o em um projeto do Visual Studio ou colá-lo e
 
 [Instâncias de agendador](../../parallel/concrt/scheduler-instances.md)<br/>
 [Como: Especificar políticas específicas do agendador](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md)
-

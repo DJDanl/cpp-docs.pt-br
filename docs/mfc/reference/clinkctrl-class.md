@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CLinkCtrl [MFC], SetItemState
 - CLinkCtrl [MFC], SetItemUrl
 ms.assetid: d1cd876a-ecca-42db-8ac4-9cd327df0cd4
-ms.openlocfilehash: b24b92006b73dff2ae9f091256ef8401efc64fe9
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 38f529f46623bc7095879b29fba09427626073ec
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178039"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260394"
 ---
 # <a name="clinkctrl-class"></a>Classe CLinkCtrl
 
@@ -133,7 +133,7 @@ Ponteiro para uma cadeia de caracteres terminada em zero que contém a área mar
 *dwStyle*<br/>
 Especifica o estilo do controle de link. Aplica qualquer combinação de estilos de controle. Ver [estilos de controle comuns](/windows/desktop/Controls/common-control-styles) no `Windows SDK` para obter mais informações.
 
-*Rect*<br/>
+*rect*<br/>
 Especifica o tamanho e a posição do controle de link. Ela pode ser um [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto ou uma [RECT](/windows/desktop/api/windef/ns-windef-tagrect) estrutura.
 
 *pParentWnd*<br/>
@@ -195,7 +195,7 @@ Especifica o estilo estendido do controle de link. Para obter uma lista dos esti
 *dwStyle*<br/>
 Especifica o estilo do controle de link. Aplica qualquer combinação de estilos de controle. Para obter mais informações, consulte [estilos de controle comuns](/windows/desktop/Controls/common-control-styles) no SDK do Windows.
 
-*Rect*<br/>
+*rect*<br/>
 Especifica o tamanho e a posição do controle de link. Ela pode ser um [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto ou uma [RECT](/windows/desktop/api/windef/ns-windef-tagrect) estrutura.
 
 *pParentWnd*<br/>

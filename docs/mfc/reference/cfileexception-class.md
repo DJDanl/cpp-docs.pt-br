@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CFileException [MFC], m_lOsError
 - CFileException [MFC], m_strFileName
 ms.assetid: f6491bb9-bfbc-42fd-a952-b33f9b62323f
-ms.openlocfilehash: e6b1b25f9125701a212f379c925a80ff888d58f3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a3514c76d4136fe2bc0b096cc382e6f7f4dd3392
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50485808"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305114"
 ---
 # <a name="cfileexception-class"></a>Classe CFileException
 
@@ -187,35 +187,35 @@ int m_cause;
 
 Este membro de dados é uma variável pública do tipo **int**. Os enumeradores e seus significados são os seguintes:
 
-- `CFileException::none` 0: nenhum erro tiver ocorrido.
+- `CFileException::none` 0: Nenhum erro tiver ocorrido.
 
 - `CFileException::genericException` 1: Ocorreu um erro não especificado.
 
-- `CFileException::fileNotFound` 2: não foi possível localizar o arquivo.
+- `CFileException::fileNotFound` 2: Não foi possível localizar o arquivo.
 
-- `CFileException::badPath` 3: toda ou parte do caminho é inválido.
+- `CFileException::badPath` 3: Todo ou parte do caminho é inválido.
 
-- `CFileException::tooManyOpenFiles` 4: o número permitido de arquivos abertos foi excedido.
+- `CFileException::tooManyOpenFiles` 4: O número permitido de arquivos abertos foi excedido.
 
-- `CFileException::accessDenied` 5: não foi possível acessar o arquivo.
+- `CFileException::accessDenied` 5: O arquivo não pôde ser acessado.
 
 - `CFileException::invalidFile` 6: Houve uma tentativa de usar um identificador de arquivo inválido.
 
-- `CFileException::removeCurrentDir` 7: o diretório de trabalho atual não pode ser removido.
+- `CFileException::removeCurrentDir` 7: Diretório de trabalho atual não pode ser removido.
 
-- `CFileException::directoryFull` 8: não há mais entradas de diretório.
+- `CFileException::directoryFull` 8: Não há mais entradas de diretório.
 
 - `CFileException::badSeek` 9: Ocorreu um erro ao tentar definir o ponteiro do arquivo.
 
 - `CFileException::hardIO` 10: Ocorreu um erro de hardware.
 
-- `CFileException::sharingViolation` 11: SHARE. EXE não foi carregado ou uma região compartilhada estava bloqueada.
+- `CFileException::sharingViolation` 11: Compartilhar. EXE não foi carregado ou uma região compartilhada estava bloqueada.
 
 - `CFileException::lockViolation` 12: Houve uma tentativa de bloquear uma região que já estava bloqueada.
 
-- `CFileException::diskFull` 14: o disco está cheio.
+- `CFileException::diskFull` 14: O disco está cheio.
 
-- `CFileException::endOfFile` 15: final do arquivo foi atingido.
+- `CFileException::endOfFile` 15: O final do arquivo foi atingido.
 
     > [!NOTE]
     >  Esses enumeradores de causa de `CFileException` são diferentes dos enumeradores de causa de `CArchiveException`.
@@ -313,4 +313,3 @@ Um ponteiro para a cadeia de caracteres que contém o nome do arquivo que causou
 [Classe CException](../../mfc/reference/cexception-class.md)<br/>
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
 [Processamento de exceção](../../mfc/reference/exception-processing.md)
-

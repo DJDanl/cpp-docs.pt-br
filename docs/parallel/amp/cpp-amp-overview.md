@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, overview
 - C++ Accelerated Massive Parallelism
 ms.assetid: 9e593b06-6e3c-43e9-8bae-6d89efdd39fc
-ms.openlocfilehash: 26f24e922769a565c88264032373662116eee290
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: da77e2ba93554cb65d4cc92353d05d54467b50d4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176982"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269637"
 ---
 # <a name="c-amp-overview"></a>Visão geral do C++ AMP
 
@@ -58,7 +58,7 @@ As partes importantes do código são da seguinte maneira:
 
 - Iteração: A primeira `for` loop fornece um mecanismo para iteração através dos elementos nas matrizes. O código que você deseja executar para calcular as somas está contido no primeiro `for` bloco.
 
-- Índice: A `idx` variável acessa os elementos individuais das matrizes.
+- Índice: O `idx` variável acessa os elementos individuais das matrizes.
 
 Usando o C++ AMP, você pode escrever o código a seguir em vez disso.
 
@@ -102,7 +102,7 @@ Os mesmos elementos básicos estão presentes, mas o C++ AMP construções são 
 
 - Iteração: O [função (C++ AMP) parallel_for_each](reference/concurrency-namespace-functions-amp.md#parallel_for_each) fornece um mecanismo para iteração através dos elementos de dados, ou *domínio de cálculo*. Neste exemplo, o domínio de cálculo é especificado pelo `sum.extent`. O código que você deseja executar está contido em uma expressão lambda, ou *função de kernel*. O `restrict(amp)` indica que somente o subconjunto da linguagem C++ que o C++ AMP pode acelerar é usado.
 
-- Índice: A [classe index](../../parallel/amp/reference/index-class.md) variável `idx`, é declarado com a classificação um para coincidir com a classificação do `array_view` objeto. Usando o índice, você pode acessar os elementos individuais do `array_view` objetos.
+- Índice: O [classe index](../../parallel/amp/reference/index-class.md) variável `idx`, é declarado com a classificação um para coincidir com a classificação do `array_view` objeto. Usando o índice, você pode acessar os elementos individuais do `array_view` objetos.
 
 ## <a name="shaping-and-indexing-data-index-and-extent"></a>Modelando e indexando dados: índice e extensão
 
@@ -225,7 +225,7 @@ A tabela a seguir resume as semelhanças e diferenças entre o `array` e `array_
 |-----------------|-----------------|-----------------------|
 |Quando a classificação é determinada|Em tempo de compilação.|Em tempo de compilação.|
 |Quando a extensão é determinada|Em tempo de execução.|Em tempo de execução.|
-|Forma|Retangular.|Retangular.|
+|Forma|Rectangular.|Rectangular.|
 |Armazenamento de dados|É um contêiner de dados.|É um wrapper de dados.|
 |Copiar|Cópia explícita e profunda na definição.|Cópia implícita quando ele é acessado pela função de kernel.|
 |Recuperação de dados|Copiando os dados de matriz de volta a um objeto no thread da CPU.|Por acesso direto do `array_view` do objeto ou chamando o [modo_de_exibição_da_matrix método](reference/array-view-class.md#synchronize) para continuar acessando os dados no contêiner original.|
@@ -457,13 +457,13 @@ void MathExample() {
 
 C++ AMP inclui uma biblioteca de elementos gráficos que se destina a programação acelerada de elementos gráficos. Essa biblioteca é usada somente em dispositivos que dão suporte à funcionalidade de gráficos nativa. Os métodos estão na [Namespace Concurrency:: Graphics](../../parallel/amp/reference/concurrency-graphics-namespace.md) e estão contidos no \<amp_graphics. h > arquivo de cabeçalho. Os principais componentes da biblioteca de elementos gráficos são:
 
-- [Classe Texture](../../parallel/amp/reference/texture-class.md): você pode usar a classe texture para criar texturas da memória ou de um arquivo. As texturas são semelhantes a matrizes porque elas contêm dados e são semelhantes aos recipientes na biblioteca padrão C++ em relação à atribuição e construção de cópia. Para obter mais informações, consulte [Contêineres da biblioteca padrão C++](../../standard-library/stl-containers.md). Os parâmetros de modelo para o `texture` classe são o tipo de elemento e a classificação. A classificação pode ser 1, 2 ou 3. O tipo de elemento pode ser um dos tipos de vetor curto que são descritos mais adiante neste artigo.
+- [Classe Texture](../../parallel/amp/reference/texture-class.md): Você pode usar a classe texture para criar texturas da memória ou de um arquivo. As texturas são semelhantes a matrizes porque elas contêm dados e são semelhantes aos recipientes na biblioteca padrão C++ em relação à atribuição e construção de cópia. Para obter mais informações, consulte [Contêineres da biblioteca padrão C++](../../standard-library/stl-containers.md). Os parâmetros de modelo para o `texture` classe são o tipo de elemento e a classificação. A classificação pode ser 1, 2 ou 3. O tipo de elemento pode ser um dos tipos de vetor curto que são descritos mais adiante neste artigo.
 
-- [Classe writeonly_texture_view](../../parallel/amp/reference/writeonly-texture-view-class.md): fornece acesso somente gravação para qualquer textura.
+- [Classe writeonly_texture_view](../../parallel/amp/reference/writeonly-texture-view-class.md): Fornece acesso somente gravação para qualquer textura.
 
-- Biblioteca de vetor curto: Define um conjunto de tipos de vetor curto de comprimento 2, 3 e 4, que se baseiam **int**, `uint`, **float**, **double**, [norm ](../../parallel/amp/reference/norm-class.md), ou [unorm](../../parallel/amp/reference/unorm-class.md).
+- Biblioteca de vetor curto: Define um conjunto de tipos de vetor curto de comprimento 2, 3 e 4, que se baseiam **int**, `uint`, **float**, **double**, [norma](../../parallel/amp/reference/norm-class.md), ou [unorm](../../parallel/amp/reference/unorm-class.md).
 
-## <a name="universal-windows-platform-uwp-apps"></a>Aplicativos do Universal Windows Platform (UWP)
+## <a name="universal-windows-platform-uwp-apps"></a>Aplicativos da UWP (Plataforma Universal do Windows)
 
 Como em outras bibliotecas de C++, você pode usar o C++ AMP em seus aplicativos UWP. Esses artigos descrevem como incluir código de C++ AMP em aplicativos que é criado usando o C++, c#, Visual Basic ou JavaScript:
 

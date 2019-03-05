@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - CPrintInfo structure [MFC]
 ms.assetid: 0b3de849-d050-4386-9a14-f4c1a25684f7
-ms.openlocfilehash: 259dfd6808a5e975fb22d11d0a8c569237733eae
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: e08885fc9893d175e819c0acbf571d96d425a2c4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524507"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273355"
 ---
 # <a name="cprintinfo-structure"></a>Estrutura CPrintInfo
 
@@ -67,7 +67,7 @@ Um `CPrintInfo` objeto é passado entre a estrutura e sua classe de exibição d
 
 Outro exemplo é o caso em que o tamanho do documento não é conhecido até que ele é impresso. Nessa situação, a classe de exibição testa o final do documento sempre que uma página é impressa. Quando o final for atingido, a classe de exibição define a `m_bContinuePrinting` membro do `CPrintInfo` como falso; isso informa a estrutura para interromper o loop de impressão.
 
-`CPrintInfo` é usado pelas funções membro de `CView` listado em "ver também." Para obter mais informações sobre a arquitetura de impressão fornecida pela biblioteca de classes Microsoft Foundation, consulte [Windows quadro](../../mfc/frame-windows.md) e [arquitetura de documento/exibição](../../mfc/document-view-architecture.md) e os artigos [ Imprimindo](../../mfc/printing.md) e [imprimindo: documentos Multipágina](../../mfc/multipage-documents.md).
+`CPrintInfo` é usado pelas funções membro de `CView` listado em "ver também." Para obter mais informações sobre a arquitetura de impressão fornecida pela biblioteca de classes Microsoft Foundation, consulte [Windows quadro](../../mfc/frame-windows.md) e [arquitetura de documento/exibição](../../mfc/document-view-architecture.md) e os artigos [ Imprimindo](../../mfc/printing.md) e [impressão: Documentos Multipágina](../../mfc/multipage-documents.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -325,4 +325,3 @@ Números de página normalmente começam em 1. Esse valor é armazenado na `CPri
 [CView::OnPrepareDC](../../mfc/reference/cview-class.md#onpreparedc)<br/>
 [CView::OnPreparePrinting](../../mfc/reference/cview-class.md#onprepareprinting)<br/>
 [CView::OnPrint](../../mfc/reference/cview-class.md#onprint)
-

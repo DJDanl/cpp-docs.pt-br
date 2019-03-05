@@ -62,12 +62,12 @@ helpviewer_keywords:
 - CDataRecoveryHandler [MFC], SetShutdownByRestartManager
 - CDataRecoveryHandler [MFC], UpdateDocumentInfo
 ms.assetid: 7794802c-e583-4eba-90b9-2fed1a161f9c
-ms.openlocfilehash: 10107d7b815f8a3c479a28de8ff07439b5da2fda
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 88cc4a433c774dc7767efaaa62edc71ce8b904d9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456037"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273030"
 ---
 # <a name="cdatarecoveryhandler-class"></a>Classe CDataRecoveryHandler
 
@@ -146,7 +146,7 @@ Todos os métodos do `CDataRecoveryHandler` classe são virtuais. Substitua os m
 
 Antes de poder usar um `CDataRecoveryHandler` do objeto, você deve chamar [CDataRecoveryHandler::Initialize](#initialize).
 
-Porque o `CDataRecoveryHandler` classe intimamente está conectado para o Gerenciador de reinicialização `CDataRecoveryHandler` depende o parâmetro global `m_dwRestartManagerSupportFlags`. Esse parâmetro determina quais permissões que tem o Gerenciador de reinicialização e como ele interage com seu aplicativo. Para incorporar o Gerenciador de reinicialização em um aplicativo existente, você precisa atribuir `m_dwRestartManagerSupportFlags` o valor apropriado no construtor do aplicativo principal. Para obter mais informações sobre como usar o Gerenciador de reinicialização, consulte [como: adicionar suporte do Gerenciador de reinicialização](../../mfc/how-to-add-restart-manager-support.md).
+Porque o `CDataRecoveryHandler` classe intimamente está conectado para o Gerenciador de reinicialização `CDataRecoveryHandler` depende o parâmetro global `m_dwRestartManagerSupportFlags`. Esse parâmetro determina quais permissões que tem o Gerenciador de reinicialização e como ele interage com seu aplicativo. Para incorporar o Gerenciador de reinicialização em um aplicativo existente, você precisa atribuir `m_dwRestartManagerSupportFlags` o valor apropriado no construtor do aplicativo principal. Para obter mais informações sobre como usar o Gerenciador de reinicialização, consulte [como: adicionar suporte ao gerenciador de reinicialização](../../mfc/how-to-add-restart-manager-support.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -689,5 +689,4 @@ Para usar esse método, AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES deve ser defin
 [Classes](../../mfc/reference/mfc-classes.md)<br/>
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
 [Classe CObject](../../mfc/reference/cobject-class.md)<br/>
-[Como adicionar suporte ao gerenciador de reinicialização](../../mfc/how-to-add-restart-manager-support.md)
-
+[Como: Adicionar suporte ao Gerenciador de reinicialização](../../mfc/how-to-add-restart-manager-support.md)

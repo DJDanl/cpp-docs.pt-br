@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CMetaFileDC [MFC], Create
 - CMetaFileDC [MFC], CreateEnhanced
 ms.assetid: ffce60fa-4181-4d46-9832-25e46fad4db4
-ms.openlocfilehash: bfbe03c5c81b2c7d6517dff7ce4e5f88b7c076bc
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 95f54f50d7a87e9a2ad4689c14f3b7f8d42ff71e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178298"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276783"
 ---
 # <a name="cmetafiledc-class"></a>Classe CMetaFileDC
 
@@ -217,4 +217,3 @@ O nome do arquivo para o metarquivo avançado deve usar o. Extensão EMF.
 
 [Classe CDC](../../mfc/reference/cdc-class.md)<br/>
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)
-

@@ -52,12 +52,12 @@ helpviewer_keywords:
 - CMFCToolBarEditBoxButton [MFC], SetContextMenuID
 - CMFCToolBarEditBoxButton [MFC], SetFlatMode
 ms.assetid: b21d9b67-6bf7-4ca9-bd62-b237756e0ab3
-ms.openlocfilehash: bf71bb508bf0327a7fdf34b128bdb825323cd3a6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ac07ff4e6bf97518e2c659a9d6df9bd721b6b806
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525705"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291607"
 ---
 # <a name="cmfctoolbareditboxbutton-class"></a>Classe CMFCToolBarEditBoxButton
 
@@ -127,7 +127,7 @@ Para adicionar um botão da caixa de edição para uma barra de ferramentas, sig
 
 3. No manipulador de mensagens que processa a mensagem AFX_WM_RESETTOOLBAR, substitua o botão fictício com o novo botão de caixa de combinação usando [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton).
 
-Para obter mais informações, consulte [instruções passo a passo: colocando controles em barras de ferramentas](../../mfc/walkthrough-putting-controls-on-toolbars.md).
+Para obter mais informações, confira [Passo a passo: Colocando controles em barras de ferramentas](../../mfc/walkthrough-putting-controls-on-toolbars.md).
 
 ## <a name="example"></a>Exemplo
 
@@ -229,7 +229,7 @@ virtual CEdit* CreateEdit(
 *pWndParent*<br/>
 [in] Especifica a janela pai do controle de edição. Ele não deve ser NULL.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Especifica o tamanho e a posição do controle de edição.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -463,7 +463,7 @@ virtual BOOL OnClick(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Apropriei*<br/>
+*pWnd*<br/>
 [in] Não utilizado.
 
 *bDelay*<br/>
@@ -541,7 +541,7 @@ virtual void OnShow(BOOL bShow);
 
 ### <a name="parameters"></a>Parâmetros
 
-*bMostrar*<br/>
+*bShow*<br/>
 [in] Especifica se o botão está visível. Se esse parâmetro for TRUE, o botão está visível. Caso contrário, o botão não está visível.
 
 ### <a name="remarks"></a>Comentários
@@ -692,5 +692,4 @@ Esse método define [CMFCToolBarButton::m_nStyle](../../mfc/reference/cmfctoolba
 [Classe CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)<br/>
 [Classe CEdit](../../mfc/reference/cedit-class.md)<br/>
 [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)<br/>
-[Instruções passo a passo: colocando controles em barras de ferramentas](../../mfc/walkthrough-putting-controls-on-toolbars.md)
-
+[Passo a passo: Colocando controles em barras de ferramentas](../../mfc/walkthrough-putting-controls-on-toolbars.md)

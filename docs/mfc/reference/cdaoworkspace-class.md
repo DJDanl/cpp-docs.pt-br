@@ -62,12 +62,12 @@ helpviewer_keywords:
 - CDaoWorkspace [MFC], SetLoginTimeout
 - CDaoWorkspace [MFC], m_pDAOWorkspace
 ms.assetid: 64f60de6-4df1-4d4a-a65b-c489b5257d52
-ms.openlocfilehash: 92b2827d556583524b46f88f8bd9efeb57a5d83a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6aa404c5eb543db198043dba68d55a4b925739c8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50472859"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57263449"
 ---
 # <a name="cdaoworkspace-class"></a>Classe CDaoWorkspace
 
@@ -454,7 +454,7 @@ void GetDatabaseInfo(
 *nIndex*<br/>
 O índice baseado em zero do objeto de banco de dados na coleção de bancos de dados do espaço de trabalho, para a pesquisa por índice.
 
-*DBINFO*<br/>
+*dbinfo*<br/>
 Uma referência a um [CDaoDatabaseInfo](../../mfc/reference/cdaodatabaseinfo-structure.md) objeto que retorna as informações solicitadas.
 
 *dwInfoOptions*<br/>
@@ -462,9 +462,9 @@ Opções que especificam quais informações sobre o banco de dados para recuper
 
 - Nome AFX_DAO_PRIMARY_INFO (padrão), atualizável, transações
 
-- Informações AFX_DAO_SECONDARY_INFO principal adição: tempo limite de consulta de versão, a ordem de agrupamento,
+- Adição de informações AFX_DAO_SECONDARY_INFO primário: Versão, agrupamento, ordem de tempo limite de consulta
 
-- AFX_DAO_ALL_INFO primário e secundárias informações de adição: conectar-se
+- AFX_DAO_ALL_INFO primário e secundárias informações de adição: Connect
 
 *lpszName*<br/>
 O nome do objeto de banco de dados, para a pesquisa por nome. O nome é uma cadeia de caracteres com até 14 caracteres que nomeia exclusivamente o novo objeto de espaço de trabalho.
@@ -632,9 +632,9 @@ Opções que especificam quais informações sobre o espaço de trabalho para re
 
 - Nome AFX_DAO_PRIMARY_INFO (padrão)
 
-- Informações AFX_DAO_SECONDARY_INFO principal adição: nome de usuário
+- Adição de informações AFX_DAO_SECONDARY_INFO primário: Nome de usuário
 
-- AFX_DAO_ALL_INFO primário e secundárias informações de adição: isolar ODBCTrans
+- AFX_DAO_ALL_INFO primário e secundárias informações de adição: Isolar ODBCTrans
 
 *lpszName*<br/>
 O nome do objeto de espaço de trabalho, para a pesquisa por nome. O nome é uma cadeia de caracteres com até 14 caracteres que nomeia exclusivamente o novo objeto de espaço de trabalho.
@@ -653,7 +653,7 @@ static void PASCAL Idle(int nAction = dbFreeLocks);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Nação*<br/>
+*nAction*<br/>
 Uma ação a ser tomada durante o processamento ocioso. Atualmente, a ação só é válida é `dbFreeLocks`.
 
 ### <a name="remarks"></a>Comentários
@@ -877,7 +877,7 @@ static void PASCAL SetLoginTimeout(short nSeconds);
 
 ### <a name="parameters"></a>Parâmetros
 
-*nSegundos*<br/>
+*nSeconds*<br/>
 O número de segundos antes que um erro ocorre quando você tenta fazer logon um banco de dados ODBC.
 
 ### <a name="remarks"></a>Comentários

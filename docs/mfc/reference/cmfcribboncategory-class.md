@@ -130,12 +130,12 @@ helpviewer_keywords:
 - CMFCRibbonCategory [MFC], SetName
 - CMFCRibbonCategory [MFC], SetTabColor
 ms.assetid: 99ba25b6-d060-4fdd-bfab-3c46c22981bb
-ms.openlocfilehash: 96a3351656807fa841661ec9f082bb4255d5136a
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 14ce057c141f22c14361bafd55fce3ccd345d4dd
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176608"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279465"
 ---
 # <a name="cmfcribboncategory-class"></a>Classe CMFCRibbonCategory
 
@@ -717,7 +717,7 @@ CMFCRibbonPanel* GetPanelFromPoint(CPoint point) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*ponto*<br/>
+*point*<br/>
 [in] As coordenadas x e y do ponteiro, relativa ao canto superior esquerdo da janela.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -909,7 +909,7 @@ CMFCRibbonPanel* HighlightPanel(
 *pHLPanel*<br/>
 [in] Ponteiro para o painel de faixa de opções para realçar.
 
-*ponto*<br/>
+*point*<br/>
 [in] As coordenadas x e y do ponteiro, relativa ao canto superior esquerdo da janela.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -932,7 +932,7 @@ CMFCRibbonBaseElement* HitTest(
 
 ### <a name="parameters"></a>Parâmetros
 
-*ponto*<br/>
+*point*<br/>
 [in] As coordenadas x e y do ponteiro do mouse em relação ao canto superior esquerdo da janela.
 
 *bCheckPanelCaption*<br/>
@@ -956,7 +956,7 @@ int HitTestEx(CPoint point) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*ponto*<br/>
+*point*<br/>
 [in] As coordenadas x e y do ponteiro do mouse em relação ao canto superior esquerdo da janela.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -977,7 +977,7 @@ CMFCRibbonBaseElement* HitTestScrollButtons(CPoint point) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*ponto*<br/>
+*point*<br/>
 [in] Ponto a ser testado.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1108,7 +1108,7 @@ virtual BOOL OnDrawImage(
 *pDC*<br/>
 [in] Ponteiro para um contexto de dispositivo para a imagem.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Retângulo de exibição para a imagem.
 
 *pElement*<br/>
@@ -1176,7 +1176,7 @@ virtual CMFCRibbonBaseElement* OnLButtonDown(CPoint point);
 
 ### <a name="parameters"></a>Parâmetros
 
-*ponto*<br/>
+*point*<br/>
 [in] As coordenadas x e y do ponteiro do mouse em relação ao canto superior esquerdo da janela.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1195,7 +1195,7 @@ virtual void OnLButtonUp(CPoint point);
 
 ### <a name="parameters"></a>Parâmetros
 
-*ponto*<br/>
+*point*<br/>
 [in] As coordenadas x e y do ponteiro, relativa ao canto superior esquerdo da janela.
 
 ### <a name="remarks"></a>Comentários
@@ -1210,7 +1210,7 @@ virtual void OnMouseMove(CPoint point);
 
 ### <a name="parameters"></a>Parâmetros
 
-*ponto*<br/>
+*point*<br/>
 [in] As coordenadas x e y do ponteiro, relativa ao canto superior esquerdo da janela.
 
 ### <a name="remarks"></a>Comentários
@@ -1416,7 +1416,7 @@ void SetTabColor(AFX_RibbonCategoryColor color);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Cor*<br/>
+*color*<br/>
 [in] Especifica a nova cor da categoria de faixa de opções.
 
 ### <a name="remarks"></a>Comentários
