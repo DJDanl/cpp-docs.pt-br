@@ -1,19 +1,19 @@
 ---
-title: Como inserir um manifesto em um aplicativo do C/C++
+title: 'Como: Inserir um manifesto em um aplicativo C/C++'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - manifests [C++]
 - embedding manifests
 - makefiles, updating to embed manifest
 ms.assetid: ec0bac69-2fdc-466c-ab0d-710a22974e5d
-ms.openlocfilehash: c3557d22f51207687c6c0adde80b4cd5b3293afd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b1bff23c91b465d697cc52a2b893ece5be3764b1
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624843"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57412894"
 ---
-# <a name="how-to-embed-a-manifest-inside-a-cc-application"></a>Como inserir um manifesto em um aplicativo do C/C++
+# <a name="how-to-embed-a-manifest-inside-a-cc-application"></a>Como: Inserir um manifesto em um aplicativo C/C++
 
 É recomendável que um aplicativo C/C++ (ou biblioteca) tem seu manifesto inserido no final binário, porque isso garante que o comportamento de tempo de execução correto na maioria dos cenários. Por padrão, o Visual Studio tenta inserir o manifesto quando ele cria um projeto de arquivos de origem; ver [geração de manifesto no Visual Studio](../build/manifest-generation-in-visual-studio.md) para obter mais informações. No entanto se um aplicativo é criado, usando nmake, algumas alterações para o makefile existente são necessárias. Esta seção demonstra como alterar makefiles existentes para inserir automaticamente o manifesto em final binário.
 
@@ -23,11 +23,11 @@ Há duas maneiras de inserir o manifesto dentro de um aplicativo ou uma bibliote
 
 - Se você não estiver fazendo uma compilação incremental, você pode inserir diretamente o manifesto usando uma linha de comando semelhante ao seguinte como uma etapa de pós-compilação:
 
-   **MT.exe-manifest MyApp.exe.manifest-outputresource:MyApp.exe;1**
+   **mt.exe -manifest MyApp.exe.manifest -outputresource:MyApp.exe;1**
 
    ou
 
-   **MT.exe-manifest MyLibrary.dll.manifest-outputresource:MyLibrary.dll;2**
+   **mt.exe -manifest MyLibrary.dll.manifest -outputresource:MyLibrary.dll;2**
 
    (1 para que um EXE, 2 para uma DLL).
 

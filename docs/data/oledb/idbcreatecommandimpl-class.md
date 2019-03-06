@@ -12,16 +12,16 @@ helpviewer_keywords:
 - IDBCreateCommandImpl class
 - CreateCommand method
 ms.assetid: eac4755e-1668-42e1-958e-a35620c385ae
-ms.openlocfilehash: 4b8c713bcf00cd68f9621b8c112d4d6fd27aec01
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: fda12332ef14cb95e9f11f8df0b94ccfffa0303d
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556395"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57425179"
 ---
 # <a name="idbcreatecommandimpl-class"></a>Classe IDBCreateCommandImpl
 
-Fornece uma implementação de [IDBCreateCommand](https://docs.microsoft.com/previous-versions/windows/desktop/ms711625(v=vs.85)) interface.
+Fornece uma implementação de [IDBCreateCommand](/previous-versions/windows/desktop/ms711625(v=vs.85)) interface.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -36,7 +36,7 @@ class ATL_NO_VTABLE IDBCreateCommandImpl
 *T*<br/>
 O objeto de sessão é derivado de `IDBCreateCommandImpl`.
 
-*Pkgmkcampo*<br/>
+*CommandClass*<br/>
 Sua classe de comando.
 
 ## <a name="requirements"></a>Requisitos
@@ -55,7 +55,7 @@ Sua classe de comando.
 
 Uma interface opcional no objeto de sessão para obter um novo comando.
 
-## <a name="createcommand"></a> Idbcreatecommandimpl:: CreateCommand
+## <a name="createcommand"></a> IDBCreateCommandImpl::CreateCommand
 
 Cria um novo comando e retorna a interface solicitada.
 
@@ -69,7 +69,7 @@ STDMETHOD(CreateCommand)(IUnknown * pUnkOuter,
 
 #### <a name="parameters"></a>Parâmetros
 
-Ver [idbcreatecommand:: CreateCommand](https://docs.microsoft.com/previous-versions/windows/desktop/ms709772(v=vs.85)) na *referência do programador do OLE DB*.
+Ver [idbcreatecommand:: CreateCommand](/previous-versions/windows/desktop/ms709772(v=vs.85)) na *referência do programador do OLE DB*.
 
 Alguns parâmetros correspondem aos *referência do programador DB OLE* parâmetros de nomes diferentes, que são descritos em `IDBCreateCommand::CreateCommand`:
 

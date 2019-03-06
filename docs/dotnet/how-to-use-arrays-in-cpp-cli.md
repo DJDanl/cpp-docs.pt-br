@@ -1,17 +1,17 @@
 ---
-title: Como usar matrizes em C++/CLI
+title: 'Como: Usar matrizes no C + + / CLI'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - arrays [C++], single-dimension
 ms.assetid: 301cfb3e-199f-42c8-8151-629dce9e87f3
-ms.openlocfilehash: e38e15cffbf623f629f57243923ddae273801bfc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b0a13441bc3532884dbbd32f28d57c15e352c3ef
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596242"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57414597"
 ---
-# <a name="how-to-use-arrays-in-ccli"></a>Como usar matrizes em C++/CLI
+# <a name="how-to-use-arrays-in-ccli"></a>Como: Usar matrizes no C + + / CLI
 
 Este artigo descreve como usar matrizes no C + + / CLI.
 
@@ -503,7 +503,7 @@ int main() {
 
 Ao contrário das matrizes de C++ padrão, matrizes gerenciadas são implicitamente derivados de uma classe base da matriz da qual eles herdam comportamento comum. Um exemplo é o `Sort` método, que pode ser usado para ordenar os itens em qualquer matriz.
 
-Para matrizes que contêm tipos intrínsecos básicos, você pode chamar o `Sort` método. Você pode substituir os critérios de classificação, e fazer isso é necessário quando você deseja classificar para matrizes de tipos complexos. Nesse caso, o tipo de elemento de matriz deve implementar o [IComparable::CompareTo](https://msdn.microsoft.com/library/system.icomparable.compareto.aspx) método.
+Para matrizes que contêm tipos intrínsecos básicos, você pode chamar o `Sort` método. Você pode substituir os critérios de classificação, e fazer isso é necessário quando você deseja classificar para matrizes de tipos complexos. Nesse caso, o tipo de elemento de matriz deve implementar o <xref:System.IComparable.CompareTo%2A> método.
 
 ```cpp
 // array_sort.cpp
@@ -520,7 +520,7 @@ int main() {
 
 ## <a name="sorting-arrays-by-using-custom-criteria"></a>Classificar matrizes usando critérios personalizados
 
-Para classificar matrizes que contêm tipos intrínsecos básicos, basta chamar o `Array::Sort` método. No entanto, a matrizes de classificação que contêm tipos complexos ou substituir os critérios de classificação padrão, substituem os [IComparable::CompareTo](https://msdn.microsoft.com/library/system.icomparable.compareto.aspx) método.
+Para classificar matrizes que contêm tipos intrínsecos básicos, basta chamar o `Array::Sort` método. No entanto, a matrizes de classificação que contêm tipos complexos ou substituir os critérios de classificação padrão, substituem o <xref:System.IComparable.CompareTo%2A> método.
 
 No exemplo a seguir, uma estrutura denominada `Element` deriva <xref:System.IComparable>e elaborado para fornecer um <xref:System.IComparable.CompareTo%2A> método que usa a média dos dois inteiros como o critério de classificação.
 

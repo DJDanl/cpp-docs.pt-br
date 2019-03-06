@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CImageList [MFC], Write
 - CImageList [MFC], m_hImageList
 ms.assetid: b6d1a704-1c82-4548-8a8f-77972adc98a5
-ms.openlocfilehash: 3e8c524a95730282d0e35e5f791ebf229725e282
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 2fc92858f84826e2b953fcbc9de020741e97b007
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57298913"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57416001"
 ---
 # <a name="cimagelist-class"></a>Classe CImageList
 
@@ -691,13 +691,13 @@ Um ponteiro para o contexto de dispositivo de destino. Você deve excluir esse [
 O índice baseado em zero da imagem a ser desenhado.
 
 *pt*<br/>
-Um [ponto](https://msdn.microsoft.com/library/windows/desktop/dd162805) estrutura que contém as coordenadas x e y-onde a imagem será desenhada.
+Um [ponto](/previous-versions/dd162805\(v=vs.85\)) estrutura que contém as coordenadas x e y-onde a imagem será desenhada.
 
 *sz*<br/>
 Um [tamanho](/windows/desktop/api/windef/ns-windef-tagsize) estrutura que indica o tamanho da imagem a ser desenhado.
 
 *ptOrigin*<br/>
-Um [ponto](https://msdn.microsoft.com/library/windows/desktop/dd162805) estrutura que contém as coordenadas x e y-especificando o canto superior esquerdo da operação de desenho em relação a própria imagem. Os pixels da imagem à esquerda da coordenada x e superiores a coordenada y não são desenhados.
+Um [ponto](/previous-versions/dd162805\(v=vs.85\)) estrutura que contém as coordenadas x e y-especificando o canto superior esquerdo da operação de desenho em relação a própria imagem. Os pixels da imagem à esquerda da coordenada x e superiores a coordenada y não são desenhados.
 
 *fStyle*<br/>
 Sinalizador que especifica o estilo de desenho e, opcionalmente, uma imagem de sobreposição. Consulte a seção comentários para obter informações sobre a imagem de sobreposição. A implementação padrão MFC, ILD_NORMAL, desenha a imagem usando a cor do plano de fundo para a lista de imagens. Se a cor do plano de fundo é o valor CLR_NONE, a imagem é desenhada de forma transparente usando uma máscara.
@@ -874,7 +874,7 @@ static CImageList* PASCAL GetDragImage(
 ### <a name="parameters"></a>Parâmetros
 
 *lpPoint*<br/>
-Endereço de uma [ponto](https://msdn.microsoft.com/library/windows/desktop/dd162805) estrutura que recebe a atual posição de arrastar.
+Endereço de uma [ponto](/previous-versions/dd162805\(v=vs.85\)) estrutura que recebe a atual posição de arrastar.
 
 *lpPointHotSpot*<br/>
 Endereço de um `POINT` estrutura que recebe o deslocamento da imagem de arrastar em relação à posição de arrastar.

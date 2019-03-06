@@ -2,12 +2,12 @@
 title: uso de pilha de x64
 ms.date: 12/17/2018
 ms.assetid: 383f0072-0438-489f-8829-cca89582408c
-ms.openlocfilehash: 3318a3512f83e242496454ffa2dc4aa8d26e1fc3
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: 902e4304ac124be46c6edf0860118dc522b34890
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627313"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57425595"
 ---
 # <a name="x64-stack-usage"></a>uso de pilha de x64
 
@@ -59,6 +59,6 @@ A pilha é alocada precisa incluir o espaço depois dela para parâmetros de fun
 
 ## <a name="see-also"></a>Consulte também
 
-[x64 convenções de software](../build/x64-software-conventions.md)<br/>
+[Convenções de software x64](../build/x64-software-conventions.md)<br/>
 [align](../cpp/align-cpp.md)<br/>
 [__declspec](../cpp/declspec.md)

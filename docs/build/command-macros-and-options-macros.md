@@ -7,12 +7,12 @@ helpviewer_keywords:
 - macros, options macros
 - macros, command macros
 ms.assetid: 50dff03c-0dc3-4a8a-9a17-57e0e4ea9bac
-ms.openlocfilehash: f18cfd6ada235485a5fe47bdc94b49631b9abbbe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: daf8c243f95f7cc12a3d3b1c5cf16f5a384c9671
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50601299"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57418291"
 ---
 # <a name="command-macros-and-options-macros"></a>Macros de comando e opções
 
@@ -20,12 +20,12 @@ Macros de comando são predefinidas para produtos da Microsoft. Macros de opçõ
 
 |Produto da Microsoft|Macro de comando|Definido como|Macro de opções|
 |-----------------------|-------------------|----------------|-------------------|
-|Macro Assembler|**ASSIM COMO ACONTECE**|ml|**AFLAGS**|
-|Compilador básico|**CONTINUIDADE DE NEGÓCIOS**|continuidade de negócios|**BFLAGS**|
-|Compilador C|**CC**|Cl|**CFLAGS**|
-|Compilador C++|**CPP**|Cl|**CPPFLAGS**|
-|Compilador C++|**CXX**|Cl|**CXXFLAGS**|
-|Compilador de Recurso|**RC**|RC|**RFLAGS**|
+|Macro Assembler|**AS**|ml|**AFLAGS**|
+|Compilador básico|**BC**|bc|**BFLAGS**|
+|Compilador C|**CC**|cl|**CFLAGS**|
+|Compilador C++|**CPP**|cl|**CPPFLAGS**|
+|Compilador C++|**CXX**|cl|**CXXFLAGS**|
+|Compilador de Recurso|**RC**|rc|**RFLAGS**|
 
 ## <a name="see-also"></a>Consulte também
 

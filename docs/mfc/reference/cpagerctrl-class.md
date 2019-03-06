@@ -48,12 +48,12 @@ helpviewer_keywords:
 - CPagerCtrl [MFC], SetChild
 - CPagerCtrl [MFC], SetScrollPos
 ms.assetid: 65ac58dd-4f5e-4b7e-b15c-e0d435a7e884
-ms.openlocfilehash: c782d5761323129eccf7ee129d877128c400d93a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 648bc17f0f130b831aa619b90ed13ba6be35b4d4
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270710"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57417563"
 ---
 # <a name="cpagerctrl-class"></a>Classe CPagerCtrl
 
@@ -149,7 +149,7 @@ virtual BOOL Create(
 |Parâmetro|Descrição|
 |---------------|-----------------|
 |*dwStyle*|[in] Uma combinação bit a bit (OR) de [estilos da janela](../../mfc/reference/styles-used-by-mfc.md#window-styles) e [estilos de controle de pager](/windows/desktop/Controls/pager-control-styles) a ser aplicado ao controle.|
-|*rect*|[in] Uma referência a um [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura que contém a posição e tamanho do controle em coordenadas de cliente.|
+|*rect*|[in] Uma referência a um [RECT](/previous-versions/dd162897\(v=vs.85\)) estrutura que contém a posição e tamanho do controle em coordenadas de cliente.|
 |*pParentWnd*|[in] Um ponteiro para um [CWnd](../../mfc/reference/cwnd-class.md) objeto que é a janela pai do controle. Esse parâmetro não pode ser NULL.|
 |*nID*|[in] A ID do controle.|
 
@@ -186,7 +186,7 @@ virtual BOOL CreateEx(
 |---------------|-----------------|
 |*dwExStyle*|[in] Uma combinação bit a bit dos estilos estendidos para ser aplicado ao controle. Para obter mais informações, consulte o *dwExStyle* parâmetro do [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) função.|
 |*dwStyle*|[in] Uma combinação bit a bit (OR) de [estilos da janela](../../mfc/reference/styles-used-by-mfc.md#window-styles) e [estilos de controle de pager](/windows/desktop/Controls/pager-control-styles) a ser aplicado ao controle.|
-|*rect*|[in] Uma referência a um [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura que contém a posição e tamanho do controle em coordenadas de cliente.|
+|*rect*|[in] Uma referência a um [RECT](/previous-versions/dd162897\(v=vs.85\)) estrutura que contém a posição e tamanho do controle em coordenadas de cliente.|
 |*pParentWnd*|[in] Um ponteiro para um [CWnd](../../mfc/reference/cwnd-class.md) objeto que é a janela pai do controle. Esse parâmetro não pode ser NULL.|
 |*nID*|[in] A ID do controle.|
 

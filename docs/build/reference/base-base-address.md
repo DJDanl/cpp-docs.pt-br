@@ -20,12 +20,12 @@ helpviewer_keywords:
 - executable files [C++], base address
 - at sign symbol for base address
 ms.assetid: 00b9f6fe-0bd2-4772-a69c-7365eb199069
-ms.openlocfilehash: 49467b9c59d8f8861011f0f36009f4e3951871f9
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 87fdceea4ac71fe4bf0a53d7ae8e473bc97a01d7
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51329846"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57416742"
 ---
 # <a name="base-base-address"></a>/BASE (endereço básico)
 
@@ -33,7 +33,7 @@ Especifica o endereço base para um programa.
 
 ## <a name="syntax"></a>Sintaxe
 
-> **/ BASE:**{*endereço*[**,**<em>tamanho</em>] | **\@** <em>filename</em>**,**<em>chave</em>}
+> **/BASE:**{*address*[**,**<em>size</em>] | **\@**<em>filename</em>**,**<em>key</em>}
 
 ## <a name="remarks"></a>Comentários
 
@@ -46,7 +46,7 @@ O vinculador emitirá um erro se *endereço* não é um múltiplo de 64 K. Opcio
 
 Na linha de comando, outra maneira de especificar o endereço básico é usando um arquivo de resposta do endereço base. Um arquivo de resposta do endereço base é um arquivo de texto que contém os endereços base e os tamanhos opcionais de todas as DLLs seu programa irá usar e uma chave de texto exclusivo para cada endereço de base. Para especificar um endereço básico usando um arquivo de resposta, use um sinal de arroba (**\@**) seguido do nome de arquivo de resposta *filename*, seguido por uma vírgula, em seguida, a *chave*valor para o endereço básico usar no arquivo. O vinculador procura *filename* no caminho especificado, ou se nenhum caminho for especificado, nos diretórios especificados na variável de ambiente LIB. Cada linha na *filename* representa uma DLL e tem a seguinte sintaxe:
 
-> *chave* *endereço* [*tamanho*] **;** *comentário*
+> *key* *address* [*size*] **;** *comment*
 
 O *chave* é uma cadeia de caracteres alfanuméricos e não diferencia maiusculas de minúsculas. Ele geralmente é o nome de uma DLL, mas ele não precisa ser. O *chave* é seguido por uma base *endereço* na notação decimal, hexadecimal ou de linguagem C e um máximo de opcional *tamanho*. Todos os três argumentos são separados por espaços ou tabulações. O vinculador emitirá um aviso se especificado *tamanho* é menor que o espaço de endereço virtual exigido pelo programa. Um *comentário* é especificado por um ponto e vírgula (**;**) e pode ser na mesma ou em uma linha separada. O vinculador ignora todo o texto da vírgula ao final da linha. Este exemplo mostra parte de um arquivo desse tipo:
 

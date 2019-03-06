@@ -8,12 +8,12 @@ helpviewer_keywords:
 - agility, C++/CX
 - C++/CX, threading issues
 ms.assetid: 83e9ca1d-5107-4194-ae6f-e01bd928c614
-ms.openlocfilehash: faf541a0705de3e0e3d1b795d1abbdc2e9707974
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ddf59e8df82b1ec98f4e1fabe9917027bdf0c75b
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50582621"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57426752"
 ---
 # <a name="threading-and-marshaling-ccx"></a>Threading e marshaling (C++/CX)
 
@@ -61,7 +61,7 @@ Aqui está o aviso que é emitido:
 
 > `Warning 1 warning C4451: 'Platform::Agile<T>::_object' : Usage of ref class 'Windows::Security::Credentials::UI::CredentialPickerOptions' inside this context can lead to invalid marshaling of object across contexts. Consider using 'Platform::Agile<Windows::Security::Credentials::UI::CredentialPickerOptions>' instead`
 
-Quando você adiciona uma referência — no escopo do membro ou no escopo global — a um objeto que tem um comportamento marshaling de "Standard", o compilador emite um aviso que o aconselha a encapsular o tipo em `Platform::Agile<T>`: `Consider using 'Platform::Agile<Windows::Security::Credentials::UI::CredentialPickerOptions>' instead` Se você usar `Agile<T>`, poderá consumir a classe como qualquer outra classe agile. Use `Platform::Agile<T>` nessas circunstâncias:
+Quando você adiciona uma referência — no escopo do membro ou no escopo global — a um objeto que tem um comportamento marshaling de "Standard", o compilador emite um aviso de que o aconselha a encapsular o tipo em `Platform::Agile<T>`: `Consider using 'Platform::Agile<Windows::Security::Credentials::UI::CredentialPickerOptions>' instead` Se você usar `Agile<T>`, você poderá consumir a classe como você pode fazer qualquer outra classe agile. Use `Platform::Agile<T>` nessas circunstâncias:
 
 - A variável não agile é declarada no escopo global.
 
@@ -124,5 +124,5 @@ O threading e marshaling informações necessárias por um componente de tempo d
 
 ## <a name="see-also"></a>Consulte também
 
-[ThreadingModel](https://msdn.microsoft.com/library/windows/apps/xaml/windows.foundation.metadata.threadingmodel.aspx)<br/>
-[MarshallingBehavior](https://msdn.microsoft.com/library/windows/apps/xaml/windows.foundation.metadata.marshalingbehaviorattribute.aspx)
+[ThreadingModel](/uwp/api/Windows.Foundation.Metadata.ThreadingModel)<br/>
+[MarshallingBehavior](/uwp/api/windows.foundation.metadata.marshalingbehaviorattribute)

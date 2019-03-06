@@ -13,12 +13,12 @@ helpviewer_keywords:
 - dependencies [C++], dependency information in linker output
 - VERBOSE linker option
 ms.assetid: 9c347d98-4c37-4724-a39e-0983934693ab
-ms.openlocfilehash: 41a8ee835a65a7c9a17df9bb9c155267cae29baf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 290d2e5c5c5a87042ee805cdaed90cce4418a389
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50575611"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57423742"
 ---
 # <a name="verbose-print-progress-messages"></a>/VERBOSE (imprimir mensagens de progresso)
 
@@ -33,12 +33,12 @@ O vinculador envia informações sobre o progresso da sessão de vinculação pa
 |Opção|Descrição|
 |------------|-----------------|
 |/VERBOSE|Exibe detalhes sobre o processo de vinculação.|
-|/VERBOSE: ICF|Exibir informações sobre a atividade do vinculador que resulta do uso de [/OPT: ICF](../../build/reference/opt-optimizations.md).|
-|/VERBOSE: INCR|Exibe informações sobre o processo de vinculação incremental.|
-|/VERBOSE: LIB|Exibe mensagens de progresso que indicam apenas as bibliotecas pesquisadas.<br /><br /> As informações exibidas inclui o processo de pesquisa de biblioteca e lista cada nome de biblioteca e objeto (com o caminho completo), o símbolo que está sendo resolvido da biblioteca e uma lista de objetos que referenciam o símbolo.|
-|/VERBOSE: REF|Exibe informações sobre a atividade do vinculador que resulta do uso de [/OPT: REF](../../build/reference/opt-optimizations.md).|
-|/VERBOSE: SAFESEH|Exibe informações sobre os módulos que não são compatíveis com tratamento processamento de exceção segura [/SAFESEH](../../build/reference/safeseh-image-has-safe-exception-handlers.md) não for especificado.|
-|/VERBOSE: UNUSEDLIBS|Exibe informações sobre quaisquer arquivos de biblioteca que são usados quando a imagem é criada.|
+|/VERBOSE:ICF|Exibir informações sobre a atividade do vinculador que resulta do uso de [/OPT: ICF](../../build/reference/opt-optimizations.md).|
+|/VERBOSE:INCR|Exibe informações sobre o processo de vinculação incremental.|
+|/VERBOSE:LIB|Exibe mensagens de progresso que indicam apenas as bibliotecas pesquisadas.<br /><br /> As informações exibidas inclui o processo de pesquisa de biblioteca e lista cada nome de biblioteca e objeto (com o caminho completo), o símbolo que está sendo resolvido da biblioteca e uma lista de objetos que referenciam o símbolo.|
+|/VERBOSE:REF|Exibe informações sobre a atividade do vinculador que resulta do uso de [/OPT: REF](../../build/reference/opt-optimizations.md).|
+|/VERBOSE:SAFESEH|Exibe informações sobre os módulos que não são compatíveis com tratamento processamento de exceção segura [/SAFESEH](../../build/reference/safeseh-image-has-safe-exception-handlers.md) não for especificado.|
+|/VERBOSE:UNUSEDLIBS|Exibe informações sobre quaisquer arquivos de biblioteca que são usados quando a imagem é criada.|
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do vinculador no ambiente de desenvolvimento do Visual Studio
 

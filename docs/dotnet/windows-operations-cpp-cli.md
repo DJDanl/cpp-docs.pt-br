@@ -43,12 +43,12 @@ helpviewer_keywords:
 - registry, writing to
 - Visual C++, writing to Windows Registry
 ms.assetid: b9a75cb4-0589-4d5b-92cb-5e8be42b4ac0
-ms.openlocfilehash: d23eef1d48674751a725e076d1b652b304ad40a6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1075c70b10ca8c59272e9a9de8a9a3fd7aa248e6
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50508388"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57415078"
 ---
 # <a name="windows-operations-ccli"></a>Operações do Windows (C++/CLI)
 
@@ -144,7 +144,7 @@ int main( )
 
 O <xref:Microsoft.Win32.Registry> classe é meramente um contêiner para instâncias estáticas de <xref:Microsoft.Win32.RegistryKey>. Cada instância representa um nó raiz do registro. As instâncias estiverem <xref:Microsoft.Win32.Registry.ClassesRoot>, <xref:Microsoft.Win32.Registry.CurrentConfig>, <xref:Microsoft.Win32.Registry.CurrentUser>, <xref:Microsoft.Win32.Registry.LocalMachine>, e <xref:Microsoft.Win32.Registry.Users>.
 
-Além do que está sendo estático, os objetos dentro de <xref:Microsoft.Win32.Registry> classe são somente leitura. Além disso, instâncias da <xref:Microsoft.Win32.RegistryKey> objetos de classe são criadas para acessar o conteúdo do registro também são somente leitura. Para obter um exemplo de como substituir esse comportamento, consulte [como: gravar dados no registro do Windows (C + + / CLI)](../dotnet/how-to-write-data-to-the-windows-registry-cpp-cli.md).
+Além do que está sendo estático, os objetos dentro de <xref:Microsoft.Win32.Registry> classe são somente leitura. Além disso, instâncias da <xref:Microsoft.Win32.RegistryKey> objetos de classe são criadas para acessar o conteúdo do registro também são somente leitura. Para obter um exemplo de como substituir esse comportamento, consulte [como: Gravar dados no registro do Windows (C + + / CLI)](../dotnet/how-to-write-data-to-the-windows-registry-cpp-cli.md).
 
 Há dois objetos adicionais no <xref:Microsoft.Win32.Registry> classe: <xref:Microsoft.Win32.Registry.DynData> e <xref:Microsoft.Win32.Registry.PerformanceData>. Ambos são instâncias do <xref:Microsoft.Win32.RegistryKey> classe. O <xref:Microsoft.Win32.Registry.DynData> objeto contém informações de registro dinâmico, que só são suportadas no Windows 98 e Windows Me. O <xref:Microsoft.Win32.Registry.PerformanceData> objeto pode ser usado para acessar informações do contador de desempenho para aplicativos que usam o sistema de monitoramento de desempenho do Windows. O <xref:Microsoft.Win32.Registry.PerformanceData> nó representa informações que não é realmente armazenadas no registro e, portanto, não podem ser exibidas usando Regedit.exe.
 
@@ -503,7 +503,7 @@ int main()
 
 ### <a name="remarks"></a>Comentários
 
-Você pode usar o .NET Framework para acessar o registro com o <xref:Microsoft.Win32.Registry> e [RegistryKey](https://msdn.microsoft.com/library/microsoft.win32.registrykey.aspx) classes, que são ambos definidos no <xref:Microsoft.Win32> namespace. O **registro** classe é um contêiner para instâncias estáticas do <xref:Microsoft.Win32.RegistryKey> classe. Cada instância representa um nó raiz do registro. As instâncias estiverem <xref:Microsoft.Win32.Registry.ClassesRoot>, <xref:Microsoft.Win32.Registry.CurrentConfig>, <xref:Microsoft.Win32.Registry.CurrentUser>, <xref:Microsoft.Win32.Registry.LocalMachine>, e <xref:Microsoft.Win32.Registry.Users>.
+Você pode usar o .NET Framework para acessar o registro com o <xref:Microsoft.Win32.Registry> e <xref:Microsoft.Win32.RegistryKey> classes, que são ambos definidos no <xref:Microsoft.Win32> namespace. O **registro** classe é um contêiner para instâncias estáticas do <xref:Microsoft.Win32.RegistryKey> classe. Cada instância representa um nó raiz do registro. As instâncias estiverem <xref:Microsoft.Win32.Registry.ClassesRoot>, <xref:Microsoft.Win32.Registry.CurrentConfig>, <xref:Microsoft.Win32.Registry.CurrentUser>, <xref:Microsoft.Win32.Registry.LocalMachine>, e <xref:Microsoft.Win32.Registry.Users>.
 
 ## <a name="related-sections"></a>Seções relacionadas
 

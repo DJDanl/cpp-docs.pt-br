@@ -22,16 +22,16 @@ helpviewer_keywords:
 - m_strCommandText
 - SetCommandText method
 ms.assetid: 9c2715cc-1e55-4468-8327-85341617ed46
-ms.openlocfilehash: d05af932d5f531a4dab02e7e0ca171f4484891a3
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: ee206dd6eb44acc23f30aebadb558d4f72bcd8bf
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556316"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57421123"
 ---
 # <a name="icommandtextimpl-class"></a>Classe ICommandTextImpl
 
-Fornece uma implementação para o [ICommandText](https://docs.microsoft.com/previous-versions/windows/desktop/ms714914(v=vs.85)) interface.
+Fornece uma implementação para o [ICommandText](/previous-versions/windows/desktop/ms714914(v=vs.85)) interface.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -69,7 +69,7 @@ A classe de comando derivada de `ICommandTextImpl`.
 
 Uma interface obrigatória em comandos.
 
-## <a name="getcommandtext"></a> Icommandtextimpl:: Getcommandtext
+## <a name="getcommandtext"></a> ICommandTextImpl::GetCommandText
 
 Retorna o comando de texto definido pela última chamada para [SetCommandText](../../data/oledb/icommandtextimpl-setcommandtext.md).
 
@@ -82,9 +82,9 @@ STDMETHOD(GetCommandText)(GUID * pguidDialect,
 
 #### <a name="parameters"></a>Parâmetros
 
-Ver [ICommandText::GetCommandText](https://docs.microsoft.com/previous-versions/windows/desktop/ms709825(v=vs.85)) na *referência do programador do OLE DB*. O *pguidDialect* parâmetro é ignorado por padrão.
+Ver [ICommandText::GetCommandText](/previous-versions/windows/desktop/ms709825(v=vs.85)) na *referência do programador do OLE DB*. O *pguidDialect* parâmetro é ignorado por padrão.
 
-## <a name="setcommandtext"></a> Icommandtextimpl:: SetCommandText
+## <a name="setcommandtext"></a> ICommandTextImpl::SetCommandText
 
 Define o texto de comando, substituindo o texto de comando existente.
 
@@ -97,9 +97,9 @@ STDMETHOD(SetCommandText)(REFGUID rguidDialect,
 
 #### <a name="parameters"></a>Parâmetros
 
-Ver [ICommandText:: SetCommandText](https://docs.microsoft.com/previous-versions/windows/desktop/ms709757(v=vs.85)) na *referência do programador do OLE DB*.
+Ver [ICommandText:: SetCommandText](/previous-versions/windows/desktop/ms709757(v=vs.85)) na *referência do programador do OLE DB*.
 
-## <a name="strcommandtext"></a> Icommandtextimpl:: M_strcommandtext
+## <a name="strcommandtext"></a> ICommandTextImpl::m_strCommandText
 
 Armazena a cadeia de caracteres de texto de comando.
 

@@ -26,16 +26,16 @@ helpviewer_keywords:
 - GetReferencedRowset method
 - GetSpecification method
 ms.assetid: 9c654155-7727-464e-bd31-143e68391a47
-ms.openlocfilehash: 61544658f2aef4b59b2b70baa310dcc09e2740fe
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: ca22f16cf22cabc4c508df053d49d862fef70bce
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556199"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57414610"
 ---
 # <a name="irowsetinfoimpl-class"></a>Classe IRowsetInfoImpl
 
-Fornece uma implementação para o [IRowsetInfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms724541(v=vs.85)) interface.
+Fornece uma implementação para o [IRowsetInfo](/previous-versions/windows/desktop/ms724541(v=vs.85)) interface.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -72,7 +72,7 @@ Uma classe de propriedade definidos pelo usuário que assume como padrão *T*.
 
 Uma interface obrigatória em conjuntos de linhas. Essa classe implementa as propriedades do conjunto de linhas usando o [mapa de conjunto de propriedade](../../data/oledb/begin-propset-map.md) definidos em sua classe de comando. Embora a classe de conjunto de linhas é exibida para estar usando a propriedade a classe de comando conjuntos, o conjunto de linhas é fornecido com sua própria cópia das propriedades do tempo de execução, quando ele é criado por um objeto de comando ou sessão.
 
-## <a name="getproperties"></a> Irowsetinfoimpl:: GetProperties
+## <a name="getproperties"></a> IRowsetInfoImpl::GetProperties
 
 Retorna as configurações atuais para as propriedades no `DBPROPSET_ROWSET` grupo.
 
@@ -87,9 +87,9 @@ STDMETHOD (GetProperties )(const ULONG cPropertyIDSets,
 
 #### <a name="parameters"></a>Parâmetros
 
-Ver [irowsetinfo:: GetProperties](https://docs.microsoft.com/previous-versions/windows/desktop/ms719611(v=vs.85)) na *referência do programador do OLE DB*.
+Ver [irowsetinfo:: GetProperties](/previous-versions/windows/desktop/ms719611(v=vs.85)) na *referência do programador do OLE DB*.
 
-## <a name="getreferencedrowset"></a> Irowsetinfoimpl:: Getreferencedrowset
+## <a name="getreferencedrowset"></a> IRowsetInfoImpl::GetReferencedRowset
 
 Retorna um ponteiro de interface para o conjunto de linhas ao qual se aplica a um indicador.
 
@@ -103,9 +103,9 @@ STDMETHOD (GetReferencedRowset )(DBORDINAL iOrdinal,
 
 #### <a name="parameters"></a>Parâmetros
 
-Ver [IRowsetInfo::GetReferencedRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms721145(v=vs.85)) na *referência do programador do OLE DB*. O *iOrdinal* parâmetro deve ser uma coluna de indicador.
+Ver [IRowsetInfo::GetReferencedRowset](/previous-versions/windows/desktop/ms721145(v=vs.85)) na *referência do programador do OLE DB*. O *iOrdinal* parâmetro deve ser uma coluna de indicador.
 
-## <a name="getspecification"></a> Irowsetinfoimpl:: Getspecification
+## <a name="getspecification"></a> IRowsetInfoImpl::GetSpecification
 
 Retorna um ponteiro de interface no objeto (comando ou sessão) que criou esse conjunto de linhas.
 
@@ -118,7 +118,7 @@ STDMETHOD (GetSpecification )(REFIID riid,
 
 #### <a name="parameters"></a>Parâmetros
 
-Ver [IRowsetInfo::GetSpecification](https://docs.microsoft.com/previous-versions/windows/desktop/ms716746(v=vs.85)) na *referência do programador do OLE DB*.
+Ver [IRowsetInfo::GetSpecification](/previous-versions/windows/desktop/ms716746(v=vs.85)) na *referência do programador do OLE DB*.
 
 ### <a name="remarks"></a>Comentários
 

@@ -26,12 +26,12 @@ helpviewer_keywords:
 - semicolon, command files
 - / command files
 ms.assetid: d54f5c81-7147-4b2c-a8db-68ce6eb1eabd
-ms.openlocfilehash: 73a259faa57d74fbe535bfa329dfc2a39cb6bbad
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8fdfeb16d41f51262cbd3a3814699a7b8dbc5fe4
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50656970"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413323"
 ---
 # <a name="running-lib"></a>Executando LIB
 
@@ -62,7 +62,7 @@ Uma opção consiste em um especificador de opção, qualquer um traço (**-**) 
 
 As opções a seguir se aplicam a todos os modos de LIB:
 
-> **/ERRORREPORT** [**NONE** &AMP;#124; **PROMPT** &AMP;#124; **FILA** &AMP;#124; **ENVIAR**]
+> **/ERRORREPORT** [**NONE** &#124; **PROMPT** &#124; **QUEUE** &#124; **SEND**]
 
 Se lib.exe falhar em tempo de execução, você pode usar **/ERRORREPORT** para enviar à Microsoft informações sobre esses erros internos.
 
@@ -76,7 +76,7 @@ Para LIB, o **/LTCG** opção especifica que as entradas de cl.exe incluem arqui
 
 No processo de compilação, a saída de LIB é enviada ao LINK. LINK tem seu próprio separado **/LTCG** opção que é usada para executar várias otimizações, incluindo a otimização de programa inteiro e a instrumentação de Otimização Guiada por perfil (PGO). Para obter mais informações sobre a opção de LINK, consulte [/LTCG](ltcg-link-time-code-generation.md).
 
-> **/ COMPUTADOR**
+> **/MACHINE**
 
 Especifica a plataforma de destino para o programa. Normalmente, você não precisa especificar /MACHINE. LIB infere o tipo de máquina de arquivos. obj. No entanto, em algumas circunstâncias, LIB não é possível determinar o tipo de computador e emite uma mensagem de erro. Se ocorrer um erro, especifique /MACHINE. No modo /EXTRACT, essa opção é para apenas da verificação. Use `lib /?` na linha de comando para ver os tipos de máquina disponíveis.
 
@@ -88,7 +88,7 @@ Suprime a exibição do que o número de versão e mensagem de direitos autorais
 
 Exibe detalhes sobre o progresso da sessão, incluindo nomes de arquivos. obj que está sendo adicionados. A informação é enviada para uma saída padrão e pode ser redirecionada para um arquivo.
 
-> **/WX**[**: NENHUMA**]
+> **/WX**[**:NO**]
 
 Trate avisos como erros. Ver [/WX (tratar avisos do vinculador como erros)](../../build/reference/wx-treat-linker-warnings-as-errors.md) para obter mais informações.
 

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Managed Extensions for C++, compiling
 - common language runtime, /clr compiler option
 ms.assetid: fec5a8c0-40ec-484c-a213-8dec918c1d6c
-ms.openlocfilehash: 9e9867e5cea8d45aefa0901798b86557b05693f5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5a908fc49776eaca68d9a79fb679b759155853d9
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528031"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57418848"
 ---
 # <a name="clr-common-language-runtime-compilation"></a>/clr (compilação do Common Language Runtime)
 
@@ -26,7 +26,7 @@ Permite que aplicativos e componentes usem recursos do CLR (Common Language Runt
 
 ## <a name="syntax"></a>Sintaxe
 
-> **/CLR**[**:**_opções_]
+> **/clr**[**:**_options_]
 
 ## <a name="arguments"></a>Arguments
 
@@ -59,7 +59,7 @@ Uma ou mais das seguintes opções, separados por vírgulas.
 
    Permite que um aplicativo do Visual C++ executar a versão 1 do CLR.  Um aplicativo que é compilado usando **initialAppDomain** não deve ser usado por um aplicativo que usa o ASP.NET porque ele não é suportado na versão 1 do CLR.
 
-- **/nostdlib**
+- **nostdlib**
 
    Instrui o compilador para ignorar o diretório de \clr padrão. O compilador produz erros se você estiver incluindo várias versões de uma DLL como System. dll. Usando essa opção permite especificar a estrutura específica para usar durante a compilação.
 

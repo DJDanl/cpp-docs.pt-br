@@ -13,12 +13,12 @@ helpviewer_keywords:
 - -D compiler option [C++]
 - D compiler option [C++]
 ms.assetid: b53fdda7-8da1-474f-8811-ba7cdcc66dba
-ms.openlocfilehash: 21836d2842427581cc5019a42c563a78356d1ec2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 089f34f6daa606ed2869852a04ee76c6bda8fe25
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620500"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57424672"
 ---
 # <a name="d-preprocessor-definitions"></a>/D (definições de pré-processador)
 
@@ -42,11 +42,11 @@ Compilando usando **/D** `name` **=** faz com que o símbolo não tenha nenhum v
 
 Este comando define o símbolo DEBUG em TEST.c:
 
-**TESTE DE /DDEBUG CL. C**
+**CL /DDEBUG  TEST.C**
 
 Esse comando remove todas as ocorrências da palavra-chave `__far` em TEST.c:
 
-**CL /D__far = TEST. C**
+**CL /D__far=  TEST.C**
 
 O **CL** variável de ambiente não pode ser definida como uma cadeia de caracteres que contém o sinal de igual. Para usar **/D** junto com o **CL** ambiente variável, você deve especificar o sinal de número em vez do sinal de igual:
 
@@ -54,7 +54,7 @@ O **CL** variável de ambiente não pode ser definida como uma cadeia de caracte
 SET CL=/DTEST#0
 ```
 
-Quando você definir um símbolo de pré-processamento no prompt de comando, considere as regras de análise do compilador e do shell. Por exemplo, para definir um símbolo de pré-processamento de sinal porcentagem (%) em seu programa, especifique dois caracteres de sinal de porcentagem (%%) no prompt de comando: se você especificar apenas um, um erro de análise será emitido.
+Quando você definir um símbolo de pré-processamento no prompt de comando, considere as regras de análise do compilador e do shell. Por exemplo, para definir um símbolo de pré-processamento de sinal de porcentagem (%) em seu programa, especifique os caracteres de sinal de dois por cento (%) no prompt de comando: Se você especificar apenas um, um erro de análise será emitido.
 
 ```
 CL /DTEST=%% TEST.C
@@ -68,7 +68,7 @@ CL /DTEST=%% TEST.C
 
 1. No painel direito, na coluna à direita do **definições de pré-processador** propriedade, abra o menu suspenso e escolha **editar**.
 
-1. No **definições de pré-processador** caixa de diálogo Adicionar (um por linha), modificar ou excluir uma ou mais definições. Escolher **Okey** para salvar suas alterações.
+1. No **definições de pré-processador** caixa de diálogo Adicionar (um por linha), modificar ou excluir uma ou mais definições. Escolha **OK** para salvar suas alterações.
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Para definir essa opção do compilador via programação
 

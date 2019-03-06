@@ -23,12 +23,12 @@ helpviewer_keywords:
 - line numbers only compiler option [C++]
 - cl.exe compiler, debugging options
 - -Z7 compiler option [C++]
-ms.openlocfilehash: 43ffbe76092b9675be1610e58c65c0034955634f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d8aadca14f52432e3fccb168c213ae566b1baae2
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50479034"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57421426"
 ---
 # <a name="z7-zi-zi-debug-information-format"></a>/Z7, /Zi, /ZI (depurar formato de informações)
 
@@ -83,7 +83,7 @@ O **/ZI** opção força a ambos os [/Gy (habilitar vinculação do nível de fu
 
 1. Abra o **propriedades de configuração** > **C/C++** > **geral** página de propriedades.
 
-1. Modificar a **formato de informações de depuração** propriedade. Escolher **Okey** para salvar suas alterações.
+1. Modificar a **formato de informações de depuração** propriedade. Escolha **OK** para salvar suas alterações.
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Para definir essa opção do compilador via programação
 
@@ -93,4 +93,3 @@ O **/ZI** opção força a ambos os [/Gy (habilitar vinculação do nível de fu
 
 [Opções do Compilador](../../build/reference/compiler-options.md)<br/>
 [Definindo opções do compilador](../../build/reference/setting-compiler-options.md)
-

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - XML documentation, comments in source files
 - -doc compiler option [C++]
 ms.assetid: b54f7e2c-f28f-4f46-9ed6-0db09be2cc63
-ms.openlocfilehash: 39b614b1ab21a654a35e30b0d3acffa15d244fb0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 94d10718ac47c984f8254d2c7b7f32fc6189fee3
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50530033"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57415390"
 ---
 # <a name="doc-process-documentation-comments-cc"></a>/doc (Processar comentários de documentação) (C/C++)
 
@@ -24,7 +24,7 @@ Faz com que o compilador processar comentários de documentação em arquivos de
 
 ## <a name="syntax"></a>Sintaxe
 
-> **/doc**[*nome*]
+> **/doc**[*name*]
 
 ## <a name="arguments"></a>Arguments
 

@@ -90,12 +90,12 @@ helpviewer_keywords:
 - CMonthCalCtrl [MFC], SizeMinReq
 - CMonthCalCtrl [MFC], SizeRectToMin
 ms.assetid: a42f6bd6-ab5c-4335-82f8-839982fc64a2
-ms.openlocfilehash: 9807d45f12b5336ebbb80ea9718af77cf8d38188
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 440d158774a716db9fba351200f2760783925cc6
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57303664"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413921"
 ---
 # <a name="cmonthcalctrl-class"></a>Classe CMonthCalCtrl
 
@@ -227,10 +227,10 @@ virtual BOOL Create(
 Especifica a combinação de estilos do Windows aplicada ao controle de calendário mensal. Ver [estilos de controle de calendário do mês](/windows/desktop/Controls/month-calendar-control-styles) no SDK do Windows para obter mais informações sobre os estilos.
 
 *rect*<br/>
-Uma referência a um [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura. Contém a posição e o tamanho do controle de calendário mensal.
+Uma referência a um [RECT](/previous-versions/dd162897\(v=vs.85\)) estrutura. Contém a posição e o tamanho do controle de calendário mensal.
 
 *pt*<br/>
-Uma referência a um [ponto](https://msdn.microsoft.com/library/windows/desktop/dd162805) estrutura que identifica o local do controle de calendário mensal.
+Uma referência a um [ponto](/previous-versions/dd162805\(v=vs.85\)) estrutura que identifica o local do controle de calendário mensal.
 
 *pParentWnd*<br/>
 Um ponteiro para um [CWnd](../../mfc/reference/cwnd-class.md) objeto que é a janela pai do controle de calendário mensal. Ele não deve ser NULL.
@@ -523,7 +523,7 @@ BOOL GetMinReqRect(RECT* pRect) const;
 ### <a name="parameters"></a>Parâmetros
 
 *pRect*<br/>
-Um ponteiro para um [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura que receberá informações do retângulo delimitador. Esse parâmetro deve ser um endereço válido e não pode ser NULL.
+Um ponteiro para um [RECT](/previous-versions/dd162897\(v=vs.85\)) estrutura que receberá informações do retângulo delimitador. Esse parâmetro deve ser um endereço válido e não pode ser NULL.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -1290,11 +1290,11 @@ LPRECT SizeRectToMin(LPRECT lpRect);
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|*lpRect*|[in] Ponteiro para um [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura que define um retângulo que contém o número desejado de calendários.|
+|*lpRect*|[in] Ponteiro para um [RECT](/previous-versions/dd162897\(v=vs.85\)) estrutura que define um retângulo que contém o número desejado de calendários.|
 
 ### <a name="return-value"></a>Valor de retorno
 
-Ponteiro para um [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura que define um retângulo cujo tamanho é menor ou igual ao retângulo definido pela *lpRect* parâmetro.
+Ponteiro para um [RECT](/previous-versions/dd162897\(v=vs.85\)) estrutura que define um retângulo cujo tamanho é menor ou igual ao retângulo definido pela *lpRect* parâmetro.
 
 ### <a name="remarks"></a>Comentários
 

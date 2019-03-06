@@ -3,12 +3,12 @@ title: Opções do compilador listadas em ordem alfabética
 ms.date: 08/20/2018
 helpviewer_keywords:
 - compiler options, C++
-ms.openlocfilehash: fa5ae089e112c147fb5e18b13af2ef5b95a7fda3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 73236485026b82895426a2651b48a83fc35ce8b7
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50646726"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57415871"
 ---
 # <a name="compiler-options-listed-alphabetically"></a>Opções do compilador listadas em ordem alfabética
 
@@ -19,7 +19,7 @@ Esta é uma lista alfabética abrangente das opções de compilador. Para obter 
 |[@](at-specify-a-compiler-response-file.md)|Especifica um arquivo de resposta.|
 |[/?](help-compiler-command-line-help.md)|Lista as opções do compilador.|
 |[/AI](ai-specify-metadata-directories.md)|Especifica um diretório de pesquisa para resolver referências de arquivo passadas para o [#using](../../preprocessor/hash-using-directive-cpp.md) diretiva.|
-|[/ANALYZE](analyze-code-analysis.md)|Habilita a análise de código.|
+|[/analyze](analyze-code-analysis.md)|Habilita a análise de código.|
 |[/arch](arch-minimum-cpu-architecture.md)|Especifica a arquitetura da geração de código.|
 |[/await](await-enable-coroutine-support.md)|Habilite extensões de co-rotinas (funções retomáveis).|
 |[/bigobj](bigobj-increase-number-of-sections-in-dot-obj-file.md)|Aumenta o número de seções endereçáveis em um arquivo .obj.|
@@ -79,7 +79,7 @@ Esta é uma lista alfabética abrangente das opções de compilador. Para obter 
 |[/hotpatch](hotpatch-create-hotpatchable-image.md)|Cria uma imagem capaz de aplicar patches sob demanda.|
 |[/I](i-additional-include-directories.md)|Pesquisa um diretório para incluir arquivos.|
 |[/J](j-default-char-type-is-unsigned.md)|Altera o tipo `char` padrão.|
-|[/ JMC](jmc.md)|Dá suporte à depuração de C++ apenas meu código nativo.|
+|[/JMC](jmc.md)|Dá suporte à depuração de C++ apenas meu código nativo.|
 |[/kernel](kernel-create-kernel-mode-binary.md)|O compilador e o vinculador criará um binário que pode ser executado no kernel do Windows.|
 |[/LD](md-mt-ld-use-run-time-library.md)|Cria uma biblioteca de vínculo dinâmico.|
 |[/LDd](md-mt-ld-use-run-time-library.md)|Cria uma biblioteca de vínculo dinâmico de depuração.|
@@ -97,7 +97,7 @@ Esta é uma lista alfabética abrangente das opções de compilador. Para obter 
 |[/Od](od-disable-debug.md)|Desabilita a otimização.|
 |[/Og](og-global-optimizations.md)|Preterido. Usa otimizações globais.|
 |[/Oi](oi-generate-intrinsic-functions.md)|Gera funções intrínsecas.|
-|[/OpenMP](openmp-enable-openmp-2-0-support.md)|Habilita [#pragma omp](../../preprocessor/omp.md) no código-fonte.|
+|[/openmp](openmp-enable-openmp-2-0-support.md)|Habilita [#pragma omp](../../preprocessor/omp.md) no código-fonte.|
 |[/Os](os-ot-favor-small-code-favor-fast-code.md)|Favorece código pequeno.|
 |[/Ot](os-ot-favor-small-code-favor-fast-code.md)|Favorece código rápido.|
 |[/Ox](ox-full-optimization.md)|Usa a otimização máxima (/Ob2gity /Gs).|

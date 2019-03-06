@@ -16,12 +16,12 @@ helpviewer_keywords:
 - listing file type
 - assembly-only listing
 ms.assetid: c7507d0e-c69d-44f9-b8e2-d2c398697402
-ms.openlocfilehash: 6bb5e18c5a174c9e48b253031daad195e6132375
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 610c94646b82783a49ca6de6bc443e99a3c137bc
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507284"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57420902"
 ---
 # <a name="fa-fa-listing-file"></a>/FA, /Fa (listando arquivo)
 
@@ -61,16 +61,16 @@ Uma *origem*arquivo. ASM é criado para cada arquivo de código fonte na compila
 *filename*<br/>
 Um arquivo de listagem denominado *filename*. ASM é colocado no diretório atual. Isso só é válido durante a compilação de um arquivo de código fonte único.
 
-*filename.Extension*<br/>
+*filename.extension*<br/>
 Um arquivo de listagem denominado *filename.extension* é colocado no diretório atual. Isso só é válido durante a compilação de um arquivo de código fonte único.
 
-*Diretório*__\\__<br/>
+*directory*__\\__<br/>
 Uma *arquivo_de_origem*arquivo. ASM é criado e colocado no especificado *diretório* para cada arquivo de código do código-fonte na compilação. Observe a barra invertida necessária. São permitidos apenas os caminhos do disco atual.
 
-*diretório*__\\__*nome de arquivo*<br/>
+*directory*__\\__*filename*<br/>
 Um arquivo de listagem chamado *filename*ASM é colocado especificado *diretório*. Isso só é válido durante a compilação de um arquivo de código fonte único.
 
-*diretório*__\\__*filename.extension*<br/>
+*directory*__\\__*filename.extension*<br/>
 Um arquivo de listagem chamado *filename.extension* é colocado no especificado *diretório*. Isso só é válido durante a compilação de um arquivo de código fonte único.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio

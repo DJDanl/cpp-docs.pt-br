@@ -13,12 +13,12 @@ helpviewer_keywords:
 - CTable class
 - Open method
 ms.assetid: f13fdaa3-e198-4557-977d-54b0bbc3454d
-ms.openlocfilehash: 7605d78a140a0f5353a16b9e22d5d618d29ff327
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: ff2a139c16b6678bedf38c64a16dce28fa53c5fe
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556673"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57425192"
 ---
 # <a name="ctable-class"></a>Classe CTable
 
@@ -82,7 +82,7 @@ HRESULT Open(const CSession& session,
 
 #### <a name="parameters"></a>Parâmetros
 
-*Sessão*<br/>
+*session*<br/>
 [in] A sessão para o qual a tabela é aberta.
 
 *wszTableName*<br/>
@@ -95,10 +95,10 @@ HRESULT Open(const CSession& session,
 [in] O `DBID` da tabela para abrir.
 
 *pPropSet*<br/>
-[in] Um ponteiro para uma matriz de [DBPROPSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms714367(v=vs.85)) estruturas que contém as propriedades e valores a serem definidos. Ver [conjuntos de propriedades e grupos de propriedades](https://docs.microsoft.com/previous-versions/windows/desktop/ms713696(v=vs.85)) na *referência do programador do OLE DB* no Windows SDK. O valor padrão de NULL não especifica que nenhuma propriedade.
+[in] Um ponteiro para uma matriz de [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) estruturas que contém as propriedades e valores a serem definidos. Ver [conjuntos de propriedades e grupos de propriedades](/previous-versions/windows/desktop/ms713696(v=vs.85)) na *referência do programador do OLE DB* no Windows SDK. O valor padrão de NULL não especifica que nenhuma propriedade.
 
 *ulPropSets*<br/>
-[in] O número de [DBPROPSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms714367(v=vs.85)) estruturas passada a *pPropSet* argumento.
+[in] O número de [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) estruturas passada a *pPropSet* argumento.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -106,7 +106,7 @@ Um HRESULT padrão.
 
 ### <a name="remarks"></a>Comentários
 
-Para obter mais detalhes, consulte [IOpenRowset:: OPENROWSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms716724(v=vs.85)) na *referência do programador DB OLE*.
+Para obter mais detalhes, consulte [IOpenRowset:: OPENROWSET](/previous-versions/windows/desktop/ms716724(v=vs.85)) na *referência do programador DB OLE*.
 
 ## <a name="see-also"></a>Consulte também
 

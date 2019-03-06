@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -ASSEMBLYDEBUG linker option
 - ASSEMBLYDEBUG linker option
 ms.assetid: 94443af3-470c-41d7-83a0-7434563d7982
-ms.openlocfilehash: e9b39791e6537976be37b942292e1b1d42d5f700
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7e0a2133549a72fa747c67b40f9de1f8f48362b7
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50478644"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57426531"
 ---
 # <a name="assemblydebug-add-debuggableattribute"></a>/ASSEMBLYDEBUG (Adicionar DebuggableAttribute)
 
@@ -54,11 +54,11 @@ Outras opções de vinculador que afetam a geração de assembly são:
 
 - [/ASSEMBLYRESOURCE](../../build/reference/assemblyresource-embed-a-managed-resource.md)
 
-- [/ DELAYSIGN](../../build/reference/delaysign-partially-sign-an-assembly.md)
+- [/DELAYSIGN](../../build/reference/delaysign-partially-sign-an-assembly.md)
 
-- [/ KEYCONTAINER](../../build/reference/keycontainer-specify-a-key-container-to-sign-an-assembly.md)
+- [/KEYCONTAINER](../../build/reference/keycontainer-specify-a-key-container-to-sign-an-assembly.md)
 
-- [/ KEYFILE](../../build/reference/keyfile-specify-key-or-key-pair-to-sign-an-assembly.md)
+- [/KEYFILE](../../build/reference/keyfile-specify-key-or-key-pair-to-sign-an-assembly.md)
 
 - [/NOASSEMBLY](../../build/reference/noassembly-create-a-msil-module.md)
 

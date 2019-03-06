@@ -39,16 +39,16 @@ helpviewer_keywords:
 - m_dwStatus
 - m_pCUtlPropInfo
 ms.assetid: e4182f81-0443-44f5-a0d3-e7e075d6f883
-ms.openlocfilehash: 4d9499262d0b4167d7c3941113f49bfa23e0467b
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 18145f3dc9545f79b08d9d92cacdafad0520c992
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556758"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57418726"
 ---
 # <a name="idbinitializeimpl-class"></a>Classe IDBInitializeImpl
 
-Fornece uma implementação para o [IDBInitialize](https://docs.microsoft.com/previous-versions/windows/desktop/ms713706(v=vs.85)) interface.
+Fornece uma implementação para o [IDBInitialize](/previous-versions/windows/desktop/ms713706(v=vs.85)) interface.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -92,7 +92,7 @@ Sua classe, derivada de `IDBInitializeImpl`.
 
 Uma interface obrigatória em objetos de fonte de dados e interface opcional em enumeradores.
 
-## <a name="idbinitializeimpl"></a> Idbinitializeimpl:: Idbinitializeimpl
+## <a name="idbinitializeimpl"></a> IDBInitializeImpl::IDBInitializeImpl
 
 O construtor.
 
@@ -106,7 +106,7 @@ IDBInitializeImpl();
 
 Inicializa todos os membros de dados.
 
-## <a name="initialize"></a> Idbinitializeimpl:: Initialize
+## <a name="initialize"></a> IDBInitializeImpl::Initialize
 
 Inicializa o objeto de fonte de dados, Preparando seu suporte de propriedade.
 
@@ -118,9 +118,9 @@ STDMETHOD(Initialize)(void);
 
 ### <a name="remarks"></a>Comentários
 
-Ver [IDBInitialize:: Initialize](https://docs.microsoft.com/previous-versions/windows/desktop/ms718026(v=vs.85)) na *referência do programador do OLE DB*.
+Ver [IDBInitialize:: Initialize](/previous-versions/windows/desktop/ms718026(v=vs.85)) na *referência do programador do OLE DB*.
 
-## <a name="uninitialize"></a> Idbinitializeimpl:: Uninitialize
+## <a name="uninitialize"></a> IDBInitializeImpl::Uninitialize
 
 Coloca os dados de objeto em um estado não inicializado da fonte ao liberar os recursos internos, como o suporte da propriedade.
 
@@ -132,9 +132,9 @@ STDMETHOD(Uninitialize)(void);
 
 ### <a name="remarks"></a>Comentários
 
-Ver [IDBInitialize:: Uninitialize](https://docs.microsoft.com/previous-versions/windows/desktop/ms719648(v=vs.85)) na *referência do programador do OLE DB*.
+Ver [IDBInitialize:: Uninitialize](/previous-versions/windows/desktop/ms719648(v=vs.85)) na *referência do programador do OLE DB*.
 
-## <a name="dwstatus"></a> Idbinitializeimpl:: M_dwstatus
+## <a name="dwstatus"></a> IDBInitializeImpl::m_dwStatus
 
 Sinalizadores de fonte de dados.
 
@@ -162,7 +162,7 @@ enum DATASOURCE_FLAGS {
 |`DSF_PERSIST_DIRTY`|Defina se o objeto de fonte de dados requer persistência (ou seja, se houve alterações).|
 |`DSF_INITIALIZED`|Defina se a fonte de dados foi inicializada.|
 
-## <a name="pcutlpropinfo"></a> Idbinitializeimpl:: M_pcutlpropinfo
+## <a name="pcutlpropinfo"></a> IDBInitializeImpl::m_pCUtlPropInfo
 
 Um ponteiro para objeto de implementação para obter informações de propriedades de banco de dados.
 

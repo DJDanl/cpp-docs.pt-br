@@ -5,12 +5,12 @@ helpviewer_keywords:
 - cl.exe compiler
 - cl.exe compiler, setting options
 ms.assetid: f3eef5ab-d0be-4fb2-90f9-927e6ed58736
-ms.openlocfilehash: 4dacbe7979b70edb942d4ed5c6f5f37f6c439a70
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3e3767739c1f08403829c7e9840b51c0b5a19c79
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50502759"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57414506"
 ---
 # <a name="compiling-a-cc-program"></a>Compilando um programa C/C++
 

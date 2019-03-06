@@ -2,12 +2,12 @@
 title: /Qpar-report (nível de relatórios do paralelizador automático)
 ms.date: 11/04/2016
 ms.assetid: 562673b9-02da-4bf8-bb64-70bc25ef4651
-ms.openlocfilehash: 4f3f496deb9f87d4f33f5e36832bd46405a482b0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4ab14f890d888664b2847f3e3d4b193d7c77da1a
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50550027"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57419901"
 ---
 # <a name="qpar-report-auto-parallelizer-reporting-level"></a>/Qpar-report (nível de relatórios do paralelizador automático)
 
@@ -21,10 +21,10 @@ Habilita o recurso de relatório do compilador [Paralelizador automático](../..
 
 ## <a name="remarks"></a>Comentários
 
-**/ Qpar-report: 1**<br/>
+**/Qpar-report:1**<br/>
 Gera uma mensagem informativa para loops que são colocados em paralelo.
 
-**Report:2-2 do relatório:**<br/>
+**/Qpar-report:2**<br/>
 Gera uma mensagem informativa para loops que são colocados em paralelo e também para loops que não são colocados em paralelo, juntamente com um código de motivo.
 
 As mensagens são relatadas para stdout. Se nenhuma mensagem informativa for relatada, o código não contém nenhum loops ou o nível de relatório não foi definido para loops de relatório que não são colocados em paralelo. Para obter mais informações sobre códigos de motivo e mensagens, consulte [mensagens do Vetorizador e Paralelizador](../../error-messages/tool-errors/vectorizer-and-parallelizer-messages.md).

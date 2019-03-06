@@ -1,18 +1,18 @@
 ---
-title: Como criar aplicativos do console CLR (C++/CLI)
+title: 'Como: Criar aplicativos do Console CLR (C + + / CLI)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - console applications, templates
 - CLR console applications, project template
 ms.assetid: e89bce3c-706f-4ae0-8a90-cb1a0f674e70
-ms.openlocfilehash: fa45578b1e773e954fe692bd1c49e311626c35de
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9ce50266eeb17ad858891149489db85b03855aec
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525633"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57426324"
 ---
-# <a name="how-to-create-clr-console-applications-ccli"></a>Como criar aplicativos do console CLR (C++/CLI)
+# <a name="how-to-create-clr-console-applications-ccli"></a>Como: Criar aplicativos do Console CLR (C + + / CLI)
 
 Você pode usar o modelo de aplicativo de Console para criar um projeto de aplicativo de console que já tenha arquivos e as referências de projeto essenciais.
 
@@ -22,7 +22,7 @@ Quando você usa o modelo de aplicativo de Console para criar um projeto, ele au
 
 - Referências a esses namespaces do .NET Framework:
 
-   - [Sistema](https://msdn.microsoft.com/library/system.appdomainmanager.appdomainmanager.aspx)— contém as classes fundamentais e classes base que definem comumente usados valores e tipos de dados de referência, eventos e manipuladores de eventos, interfaces, atributos e exceções de processamento.
+   - <xref:System.AppDomainManager>– Contém as classes fundamentais e classes base que definem os valores usados e os tipos de dados de referência, eventos e manipuladores de eventos, interfaces, atributos e exceções de processamento.
 
    - mscorlib — a DLL que oferece suporte ao desenvolvimento do .NET Framework do assembly.
 

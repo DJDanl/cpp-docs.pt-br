@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CToolTipCtrl [MFC], Update
 - CToolTipCtrl [MFC], UpdateTipText
 ms.assetid: 8973f70c-b73a-46c7-908d-758f364b9a97
-ms.openlocfilehash: 7750b7335b99bbfaa02c1f310c70bb868ef56573
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 6055926e05f8a7f9fbecec113e859d08e6b6e636
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57300954"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57420837"
 ---
 # <a name="ctooltipctrl-class"></a>Classe CToolTipCtrl
 
@@ -210,7 +210,7 @@ Ponteiro para a janela que contém a ferramenta.
 ID do recurso de cadeia de caracteres que contém o texto para a ferramenta.
 
 *lpRectTool*<br/>
-Ponteiro para um [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura que contém as coordenadas da ferramenta do retângulo delimitador. As coordenadas são relativas ao canto superior esquerdo da área de cliente da janela identificada pelo *Apropriei*.
+Ponteiro para um [RECT](/previous-versions/dd162897\(v=vs.85\)) estrutura que contém as coordenadas da ferramenta do retângulo delimitador. As coordenadas são relativas ao canto superior esquerdo da área de cliente da janela identificada pelo *Apropriei*.
 
 *nIDTool*<br/>
 ID da ferramenta.
@@ -248,7 +248,7 @@ BOOL AdjustRect(
 ### <a name="parameters"></a>Parâmetros
 
 *lprc*<br/>
-Ponteiro para um [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura que contém um retângulo de janela de dica de ferramenta ou um retângulo de exibição de texto.
+Ponteiro para um [RECT](/previous-versions/dd162897\(v=vs.85\)) estrutura que contém um retângulo de janela de dica de ferramenta ou um retângulo de exibição de texto.
 
 *bLarger*<br/>
 Se for TRUE, *lprc* é usado para especificar um retângulo de exibição de texto, e ele recebe o retângulo de janela correspondente. Se for FALSE, *lprc* é usado para especificar um retângulo de janela, e ele recebe o retângulo de exibição de texto correspondente.
@@ -453,7 +453,7 @@ void GetMargin(LPRECT lprc) const;
 ### <a name="parameters"></a>Parâmetros
 
 *lprc*<br/>
-Endereço de um `RECT` estrutura que receberá as informações de margem. Os membros de [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura não pode definir um retângulo delimitador. Para fins desta mensagem, os membros da estrutura são interpretados da seguinte maneira:
+Endereço de um `RECT` estrutura que receberá as informações de margem. Os membros de [RECT](/previous-versions/dd162897\(v=vs.85\)) estrutura não pode definir um retângulo delimitador. Para fins desta mensagem, os membros da estrutura são interpretados da seguinte maneira:
 
 |Membro|Representação|
 |------------|--------------------|
@@ -867,7 +867,7 @@ Ponteiro para a janela que contém a ferramenta.
 ID da ferramenta.
 
 *lpRect*<br/>
-Ponteiro para um [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura especificando o novo retângulo delimitador.
+Ponteiro para um [RECT](/previous-versions/dd162897\(v=vs.85\)) estrutura especificando o novo retângulo delimitador.
 
 ##  <a name="setwindowtheme"></a>  CToolTipCtrl::SetWindowTheme
 

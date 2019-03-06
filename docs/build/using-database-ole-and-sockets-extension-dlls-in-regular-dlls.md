@@ -6,18 +6,18 @@ helpviewer_keywords:
 - DLLs [C++], extension
 - DLLs [C++], regular
 ms.assetid: 9f1d14a7-9e2a-4760-b3b6-db014fcdb7ff
-ms.openlocfilehash: 74945f712fed68548e3853d231a586ec0c70d84b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b2d4cc4f3b82bd3082ba3b4eac635ea91c19691f
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50587519"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57421201"
 ---
 # <a name="using-database-ole-and-sockets-mfc-extension-dlls-in-regular-mfc-dlls"></a>Usar DLLs de extensão de banco de dados, OLE e o MFC de soquetes em DLLs MFC regulares
 
 Ao usar uma extensão MFC DLL de uma DLL MFC regular, se a extensão MFC DLL não é conectados com o **CDynLinkLibrary** objeto cadeia da DLL da MFC regular, você pode enfrentar um ou mais de um conjunto de problemas relacionados. Como dar suporte a versões de depuração do banco de dados do MFC, OLE e soquetes DLLs são implementadas como DLLs de extensão do MFC, você poderá ver problemas semelhantes se você estiver usando esses MFC recursos, mesmo se você não estiver explicitamente usando qualquer um dos seus próprios DLLs de extensão do MFC. Alguns sintomas são:
 
-- Quando a tentativa de desserializar um objeto de um tipo de classe definida no MFC DLL de extensão, a mensagem "Aviso: não é possível carregar CYourClass de arquivo morto. Classe não definido". é exibida na janela de depuração de rastreamento e o objeto falhar para serializar.
+- Quando a tentativa de desserializar um objeto de um tipo de classe definida no MFC DLL de extensão, a mensagem "Aviso: Não é possível carregar CYourClass de arquivo morto. Classe não definido". é exibida na janela de depuração de rastreamento e o objeto falhar para serializar.
 
 - Uma exceção que indica a classe incorreta pode ser gerada.
 
