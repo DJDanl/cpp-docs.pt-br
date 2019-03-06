@@ -30,12 +30,12 @@ helpviewer_keywords:
 - OnPropertyChanged method
 - SetPropValue method
 ms.assetid: bb525178-765c-4e23-a110-c0fd70c05437
-ms.openlocfilehash: db0976ecd3e3af76640a56ebc1e07e9ade2e3815
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 1c45e28e0e74d7216023f06ad22896c53c9226b8
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556771"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57423047"
 ---
 # <a name="cutlprops-class"></a>Classe CUtlProps
 
@@ -77,7 +77,7 @@ A maioria dessa classe é um detalhe de implementação.
 
 Para obter mais informações sobre as macros usadas em um mapa de conjunto de propriedade, consulte [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md) e [END_PROPSET_MAP](../../data/oledb/end-propset-map.md).
 
-## <a name="getpropvalue"></a> Cutlprops:: Getpropvalue
+## <a name="getpropvalue"></a> CUtlProps::GetPropValue
 
 Obtém uma propriedade de um conjunto de propriedades.
 
@@ -104,7 +104,7 @@ OUT_OF_LINE HRESULT GetPropValue(const GUID* pguidPropSet,
 
 `Failure` em falha e S_OK se for bem-sucedido.
 
-## <a name="isvalidvalue"></a> Cutlprops:: Isvalidvalue
+## <a name="isvalidvalue"></a> CUtlProps::IsValidValue
 
 Usado para validar um valor antes de definir uma propriedade.
 
@@ -121,7 +121,7 @@ virtual HRESULT CUtlPropsBase::IsValidValue(ULONG /* iCurSet */,
 O índice na matriz de conjunto de propriedades; zero se houver apenas uma propriedade de conjunto.
 
 *pDBProp*<br/>
-A ID de propriedade e o novo valor em uma [DBPROP](https://docs.microsoft.com/previous-versions/windows/desktop/ms717970(v=vs.85)) estrutura.
+A ID de propriedade e o novo valor em uma [DBPROP](/previous-versions/windows/desktop/ms717970(v=vs.85)) estrutura.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -131,7 +131,7 @@ Um HRESULT padrão. O valor de retorno padrão é S_OK.
 
 Se você tiver quaisquer rotinas de validação que você deseja executar em um valor que você está prestes a usar para definir uma propriedade, você deve substituir essa função. Por exemplo, você pode validar DBPROP_AUTH_PASSWORD em uma tabela de senha para determinar um valor válido.
 
-## <a name="oninterfacerequested"></a> Cutlprops:: Oninterfacerequested
+## <a name="oninterfacerequested"></a> CUtlProps::OnInterfaceRequested
 
 Trata solicitações para uma interface opcional quando um consumidor chama um método em um objeto interfaces de criação.
 
@@ -166,7 +166,7 @@ Se um consumidor abre um objeto e solicita uma interface opcional, o provedor de
 
 Se você quiser lidar com outras interfaces, substituem essa função em sua classe de origem, sessão, comando ou conjunto de linhas de dados para funções do processo. Sua substituição deve percorrer as interfaces de propriedades de definir/obter normal para garantir que também definindo propriedades define quaisquer propriedades encadeadas (consulte [OnPropertyChanged](../../data/oledb/cutlprops-onpropertychanged.md)).
 
-## <a name="onpropertychanged"></a> Cutlprops:: OnPropertyChanged
+## <a name="onpropertychanged"></a> CUtlProps::OnPropertyChanged
 
 Chamado depois de definir uma propriedade para lidar com propriedades encadeadas.
 
@@ -183,7 +183,7 @@ virtual HRESULT OnPropertyChanged(ULONG /* iCurSet */,
 O índice na matriz de conjunto de propriedades; zero se houver apenas uma propriedade de conjunto.
 
 *pDBProp*<br/>
-A ID de propriedade e o novo valor em uma [DBPROP](https://docs.microsoft.com/previous-versions/windows/desktop/ms717970(v=vs.85)) estrutura.
+A ID de propriedade e o novo valor em uma [DBPROP](/previous-versions/windows/desktop/ms717970(v=vs.85)) estrutura.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -199,7 +199,7 @@ Nessa função, o usuário obtém a ID de propriedade do `DBPROP*` parâmetro. A
 
 [!code-cpp[NVC_OLEDB_Provider#2](../../data/oledb/codesnippet/cpp/cutlprops-onpropertychanged_1.h)]
 
-## <a name="setpropvalue"></a> Cutlprops:: Setpropvalue
+## <a name="setpropvalue"></a> CUtlProps::SetPropValue
 
 Define uma propriedade em um conjunto de propriedades.
 

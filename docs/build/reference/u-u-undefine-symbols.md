@@ -13,12 +13,12 @@ helpviewer_keywords:
 - /U compiler option [C++]
 - U compiler option [C++]
 ms.assetid: 7bc0474f-6d1f-419b-807d-0d8816763b2a
-ms.openlocfilehash: 1ccda218a2bccc261653016ad6a47d419ddacfd9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 59522b462f2393dd3fd4d8afefe9cbbe0e519203
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624439"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413037"
 ---
 # <a name="u-u-undefine-symbols"></a>/U, /u (indefinir símbolos)
 
@@ -33,7 +33,7 @@ O **/U** remoções de definições de opção de compilador o símbolo do pré-
 
 ## <a name="arguments"></a>Arguments
 
-*Símbolo*<br/>
+*symbol*<br/>
 O símbolo do pré-processador a excluir.
 
 ## <a name="remarks"></a>Comentários
@@ -46,12 +46,12 @@ Por padrão, o compilador define símbolos de específico da Microsoft a seguir.
 
 |Símbolo|Função|
 |------------|--------------|
-|CHAR_UNSIGNED|O tipo char padrão não está assinado. Definido quando o [/J](../../build/reference/j-default-char-type-is-unsigned.md) opção for especificada.|
-|CPPRTTI|Definido para o código compilado com o [/GR](../../build/reference/gr-enable-run-time-type-information.md) opção.|
-|CPPUNWIND|Definido para o código compilado com o [/EHsc](../../build/reference/eh-exception-handling-model.md) opção.|
-|DLL|Definido quando o [/MD](../../build/reference/md-mt-ld-use-run-time-library.md) opção for especificada.|
+|_CHAR_UNSIGNED|O tipo char padrão não está assinado. Definido quando o [/J](../../build/reference/j-default-char-type-is-unsigned.md) opção for especificada.|
+|_CPPRTTI|Definido para o código compilado com o [/GR](../../build/reference/gr-enable-run-time-type-information.md) opção.|
+|_CPPUNWIND|Definido para o código compilado com o [/EHsc](../../build/reference/eh-exception-handling-model.md) opção.|
+|_DLL|Definido quando o [/MD](../../build/reference/md-mt-ld-use-run-time-library.md) opção for especificada.|
 |_M_IX86|Por padrão, definido como 600 para x86 de destinos.|
-|MSC_VER|Para obter mais informações, consulte [Macros predefinidas](../../preprocessor/predefined-macros.md).|
+|_MSC_VER|Para obter mais informações, consulte [Macros predefinidas](../../preprocessor/predefined-macros.md).|
 |_WIN32|Definido para aplicativos WIN32. Sempre definido.|
 |_MT|Definido quando o [/MD ou /MT](../../build/reference/md-mt-ld-use-run-time-library.md) opção for especificada.|
 

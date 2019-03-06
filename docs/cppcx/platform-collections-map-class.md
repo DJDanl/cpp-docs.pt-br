@@ -15,12 +15,12 @@ f1_keywords:
 helpviewer_keywords:
 - Map Class (C++/Cx)
 ms.assetid: 2b8cf968-1167-4898-a149-1195b32c1785
-ms.openlocfilehash: c6edd8cdd089e24011df41db09f3c1bb5d6465f9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a41f2012b4ee5441bcb9aa7d99cd0d0e97b6acc7
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481452"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57423697"
 ---
 # <a name="platformcollectionsmap-class"></a>Classe Platform::Collections::Map
 
@@ -79,7 +79,7 @@ Para obter mais informações, consulte [coleções](../cppcx/collections-c-cx.m
 
 |Nome|Descrição|
 |----------|-----------------|
-|[Map:: Clear](#clear)|Remove todos os pares chave-valor do objeto Map atual.|
+|[Map::Clear](#clear)|Remove todos os pares chave-valor do objeto Map atual.|
 |[Map::First](#first)|Retorna um iterador que especifica o primeiro elemento no mapa.|
 |[Map::GetView](#getview)|Retorna uma exibição somente leitura do Mapa atual; isto é, um [Platform::Collections::MapView Class](../cppcx/platform-collections-mapview-class.md).|
 |[Map::HasKey](#haskey)|Determina se o Map atual contém a chave especificada.|
@@ -148,7 +148,7 @@ Windows::Foundation::Collections::IMapView<K, V>^ GetView();
 
 Um objeto `MapView`.
 
-## <a name="haskey"></a>  Método Map:: haskey
+## <a name="haskey"></a>  Map::HasKey Method
 
 Determina se o Map atual contém a chave especificada.
 
@@ -258,7 +258,7 @@ event Windows::Foundation::Collections::MapChangedEventHandler<K,V>^ MapChanged;
 
 ### <a name="property-valuereturn-value"></a>Valor da propriedade/valor de retorno
 
-Um [MapChangedEventHandler\<K, V >](/uwp/api/windows.foundation.collections.mapchangedeventhandler) que contém informações sobre o objeto que gerou o evento e o tipo de alteração que ocorreu. Consulte também [IMapChangedEventArgs\<K >](https://msdn.microsoft.com/library/windows/apps/br226034.aspx) e [CollectionChange Enumeration](https://msdn.microsoft.com/library/windows/apps/windows.foundation.collections.collectionchange.aspx).
+Um [MapChangedEventHandler\<K, V >](/uwp/api/windows.foundation.collections.mapchangedeventhandler) que contém informações sobre o objeto que gerou o evento e o tipo de alteração que ocorreu. Consulte também [IMapChangedEventArgs\<K >](/uwp/api/Windows.Foundation.Collections.IMapChangedEventArgs_K_) e [CollectionChange Enumeration](/uwp/api/windows.foundation.collections.collectionchange).
 
 ## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework
 
@@ -281,7 +281,7 @@ A porção de chave do par chave-valor. O tipo de *chave* é o typename *K*.
 
 ## <a name="size"></a>  Método Map:: Size
 
-Retorna o número de [ikeyvaluepair\<K, V >](https://msdn.microsoft.com/library/windows/apps/br226031.aspx) elementos no mapa.
+Retorna o número de [ikeyvaluepair\<K, V >](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_) elementos no mapa.
 
 ### <a name="syntax"></a>Sintaxe
 

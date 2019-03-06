@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CProgressCtrl [MFC], SetStep
 - CProgressCtrl [MFC], StepIt
 ms.assetid: 222630f4-1598-4026-8198-51649b1192ab
-ms.openlocfilehash: a6d5d3becfd1c1ee4a032c74eb116ede82c42bc4
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 131bee5f9eae1e6e2be4d48941d148edbde68262
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57260264"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57418757"
 ---
 # <a name="cprogressctrl-class"></a>Classe CProgressCtrl
 
@@ -149,7 +149,7 @@ Especifica o estilo do controle de barra de progresso. Aplicar qualquer combina�
 - Gradual de PBS_SMOOTH exibe, suave de preenchimento no controle de barra de progresso. Sem esse sinalizador, o controle preencherá com blocos.
 
 *rect*<br/>
-Especifica o tamanho e a posição do controle de barra de progresso. Ela pode ser um [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto ou uma [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura. Como o controle deve ser uma janela filho, as coordenadas especificadas são em relação à área do cliente do *pParentWnd*.
+Especifica o tamanho e a posição do controle de barra de progresso. Ela pode ser um [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto ou uma [RECT](/previous-versions/dd162897\(v=vs.85\)) estrutura. Como o controle deve ser uma janela filho, as coordenadas especificadas são em relação à área do cliente do *pParentWnd*.
 
 *pParentWnd*<br/>
 Especifica o barra de progresso da janela do pai do controle, geralmente um `CDialog`. Ele não deve ser NULL.
@@ -191,7 +191,7 @@ Especifica o estilo estendido do controle que está sendo criado. Para obter uma
 Especifica o estilo do controle de barra de progresso. Aplicar qualquer combinação de estilos de janela descrito em [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) no SDK do Windows.
 
 *rect*<br/>
-Uma referência a um [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura que descreve o tamanho e posição da janela a ser criado, em coordenadas do cliente do *pParentWnd*.
+Uma referência a um [RECT](/previous-versions/dd162897\(v=vs.85\)) estrutura que descreve o tamanho e posição da janela a ser criado, em coordenadas do cliente do *pParentWnd*.
 
 *pParentWnd*<br/>
 Um ponteiro para a janela que é o pai do controle.

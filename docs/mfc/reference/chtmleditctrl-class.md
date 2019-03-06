@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CHtmlEditCtrl [MFC], GetDHtmlDocument
 - CHtmlEditCtrl [MFC], GetStartDocument
 ms.assetid: 0fc4a238-b05f-4874-9edc-6a6701f064d9
-ms.openlocfilehash: 6c1447c3157bceb4540007eca5c3eb85e8269bd2
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 6f5c465a8ec9c8f54af5545e66fb849a08d241af
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57285302"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57420915"
 ---
 # <a name="chtmleditctrl-class"></a>Classe CHtmlEditCtrl
 
@@ -45,7 +45,7 @@ class CHtmlEditCtrl: public CWnd,
 |Nome|Descrição|
 |----------|-----------------|
 |[CHtmlEditCtrl::Create](#create)|Cria um controle WebBrowser ActiveX e anexa-o para o `CHtmlEditCtrl` objeto. Essa função automaticamente coloca o controle WebBrowser ActiveX no modo de edição.|
-|[CHtmlEditCtrl::GetDHtmlDocument](#getdhtmldocument)|Recupera o [IHTMLDocument2](https://msdn.microsoft.com/library/aa752574.aspx) interface no documento atualmente carregado no controle WebBrowser independente.|
+|[CHtmlEditCtrl::GetDHtmlDocument](#getdhtmldocument)|Recupera o [IHTMLDocument2](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa752574\(v=vs.85\)) interface no documento atualmente carregado no controle WebBrowser independente.|
 |[CHtmlEditCtrl::GetStartDocument](#getstartdocument)|Recupera a URL para um documento padrão a ser carregado no controle WebBrowser independente.|
 
 ## <a name="remarks"></a>Comentários
@@ -116,7 +116,7 @@ Retorna verdadeiro em caso de êxito, FALSE em caso de falha.
 
 ##  <a name="getdhtmldocument"></a>  CHtmlEditCtrl::GetDHtmlDocument
 
-Recupera o [IHTMLDocument2](https://msdn.microsoft.com/library/aa752574.aspx) interface no documento atualmente carregado no controle WebBrowser independente
+Recupera o [IHTMLDocument2](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa752574\(v=vs.85\)) interface no documento atualmente carregado no controle WebBrowser independente
 
 ```
 BOOL GetDHtmlDocument(IHTMLDocument2** ppDocument) const;

@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CSpinButtonCtrl [MFC], SetPos
 - CSpinButtonCtrl [MFC], SetRange
 ms.assetid: 509bfd76-1c5a-4af6-973f-e133c0b87734
-ms.openlocfilehash: 3c973d92550469804a5389b84f53005e4f2c154f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: ff61fb4f918e25d430fc31ae55c3ad8794ce39f1
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57290424"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57425023"
 ---
 # <a name="cspinbuttonctrl-class"></a>Classe CSpinButtonCtrl
 
@@ -120,7 +120,7 @@ virtual BOOL Create(
 Especifica o estilo do controle de botão de rotação. Aplica qualquer combinação de estilos de controle de botão de rotação para o controle. Esses estilos são descritos em [estilos de controle para cima para baixo](/windows/desktop/Controls/up-down-control-styles) no SDK do Windows.
 
 *rect*<br/>
-Especifica o tamanho e a posição do controle de botão de rotação. Ela pode ser um [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto ou uma [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura
+Especifica o tamanho e a posição do controle de botão de rotação. Ela pode ser um [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto ou uma [RECT](/previous-versions/dd162897\(v=vs.85\)) estrutura
 
 *pParentWnd*<br/>
 Um ponteiro para a janela do pai do controle de botão de rotação, geralmente um `CDialog`. Ele não deve ser NULL.
@@ -160,7 +160,7 @@ Especifica o estilo estendido do controle que está sendo criado. Para obter uma
 Especifica o estilo do controle de botão de rotação. Aplica qualquer combinação de estilos de controle de botão de rotação para o controle. Esses estilos são descritos em [estilos de controle para cima para baixo](/windows/desktop/Controls/up-down-control-styles) no SDK do Windows.
 
 *rect*<br/>
-Uma referência a um [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura que descreve o tamanho e posição da janela a ser criado, em coordenadas do cliente do *pParentWnd*.
+Uma referência a um [RECT](/previous-versions/dd162897\(v=vs.85\)) estrutura que descreve o tamanho e posição da janela a ser criado, em coordenadas do cliente do *pParentWnd*.
 
 *pParentWnd*<br/>
 Um ponteiro para a janela que é o pai do controle.

@@ -7,16 +7,16 @@ helpviewer_keywords:
 - OLE DB providers, schema rowsets
 - OLE DB, schema rowsets
 ms.assetid: 71c5e14b-6e33-4502-a2d9-a1dc6d6e9ba0
-ms.openlocfilehash: 6046bcb1b99e446974a3b4fae11d0021778bf526
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: f8809754cc79d2a8c3d0f7bd32630ad9cab70a43
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556875"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57423099"
 ---
 # <a name="supporting-schema-rowsets"></a>Dando suporte a conjuntos de linhas do esquema
 
-Conjuntos de linhas de esquema permitem que os consumidores obter informações sobre um armazenamento de dados sem saber sua estrutura subjacente ou o esquema. Por exemplo, um armazenamento de dados pode ter tabelas organizadas em uma hierarquia definida pelo usuário, portanto, não haveria nenhuma maneira de garantir o conhecimento do esquema, exceto por leitura. (Como outro exemplo, os assistentes do Visual C++ usam conjuntos de linhas de esquema para gerar acessadores para o consumidor.) Para permitir que o consumidor fazer isso, o objeto de sessão do provedor expõe métodos sobre o [IDBSchemaRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms713686(v=vs.85)) interface. Em aplicativos do Visual C++, você deve usar o [IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md) classe para implementar `IDBSchemaRowset`.
+Conjuntos de linhas de esquema permitem que os consumidores obter informações sobre um armazenamento de dados sem saber sua estrutura subjacente ou o esquema. Por exemplo, um armazenamento de dados pode ter tabelas organizadas em uma hierarquia definida pelo usuário, portanto, não haveria nenhuma maneira de garantir o conhecimento do esquema, exceto por leitura. (Como outro exemplo, os assistentes do Visual C++ usam conjuntos de linhas de esquema para gerar acessadores para o consumidor.) Para permitir que o consumidor fazer isso, o objeto de sessão do provedor expõe métodos sobre o [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) interface. Em aplicativos do Visual C++, você deve usar o [IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md) classe para implementar `IDBSchemaRowset`.
 
 `IDBSchemaRowsetImpl` dá suporte aos seguintes métodos:
 
@@ -86,7 +86,7 @@ class CUpdateSessionTRSchemaRowset :
 
 `CUpdateSession` herda de `IDBSchemaRowsetImpl`, portanto, ele tem todas as a restrição de métodos de manipulação. Usando o `CSchemaRowsetImpl`, declare as três classes filho (listadas no mapa de esquema acima): `CUpdateSessionTRSchemaRowset`, `CUpdateSessionColSchemaRowset`, e `CUpdateSessionPTSchemaRowset`. Cada uma dessas classes filho tem um `Execute` método que manipula seu respectivo conjunto de restrições (critérios de pesquisa). Cada `Execute` método compara os valores da *cRestrictions* e *rgRestrictions* parâmetros. Consulte a descrição desses parâmetros na [SetRestrictions](../../data/oledb/idbschemarowsetimpl-setrestrictions.md).
 
-Para obter mais informações sobre quais restrições correspondem a um conjunto de linhas de esquema específico, consulte a tabela de GUIDs do conjunto de linhas de esquema no [IDBSchemaRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms713686(v=vs.85)) na **referência do programador DB OLE** no SDK do Windows .
+Para obter mais informações sobre quais restrições correspondem a um conjunto de linhas de esquema específico, consulte a tabela de GUIDs do conjunto de linhas de esquema no [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) na **referência do programador DB OLE** no SDK do Windows .
 
 Por exemplo, se você compatível com a restrição TABLE_NAME DBSCHEMA_TABLES, você faria o seguinte:
 
@@ -105,7 +105,7 @@ Por padrão, a implementação retorna 0 (não dá suporte a quaisquer restriç�
 
 ### <a name="example"></a>Exemplo
 
-Esse código é retirado do [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV) exemplo. `UpdatePv` dá suporte a três conjuntos de linhas de esquema obrigatório: DBSCHEMA_TABLES, DBSCHEMA_COLUMNS e DBSCHEMA_PROVIDER_TYPES. Como um exemplo de como implementar o suporte a esquema no seu provedor, este tópico apresenta Implementando o conjunto de linhas DBSCHEMA_TABLE.
+Esse código é retirado do [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV) exemplo. `UpdatePv` oferece suporte os três conjuntos de linhas de esquema obrigatório: DBSCHEMA_TABLES, DBSCHEMA_COLUMNS e DBSCHEMA_PROVIDER_TYPES. Como um exemplo de como implementar o suporte a esquema no seu provedor, este tópico apresenta Implementando o conjunto de linhas DBSCHEMA_TABLE.
 
 > [!NOTE]
 > O código de exemplo pode ser diferente daquele que está listado aqui. Você deve considerar o código de exemplo como a versão mais recente.
@@ -214,7 +214,7 @@ wcspy_s(trData.m_szDesc, OLESTR("The Directory Table"), 19);
 wcsncpy_s(trData.m_szTable, T2OLE(szFile), _TRUNCATE());
 ```
 
-`UpdatePV` Define somente três colunas: TABLE_NAME, TABLE_TYPE e descrição. Tome nota das colunas para as quais você retornar informações, pois você precisará dessas informações quando você implementa `GetDBStatus`:
+`UpdatePV` Define somente três colunas: Table_name, TABLE_TYPE e descrição. Tome nota das colunas para as quais você retornar informações, pois você precisará dessas informações quando você implementa `GetDBStatus`:
 
 ```cpp
     _ATLTRY

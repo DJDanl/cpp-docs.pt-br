@@ -7,18 +7,18 @@ helpviewer_keywords:
 - updating rowsets
 - rowsets
 ms.assetid: 39588758-5c72-4254-a10d-cc2b1f473357
-ms.openlocfilehash: d00b9036b216e3425615478d6bf92d239a3637d1
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: fb915a2f61c2adfedc41630e637f6b5beee30768
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556693"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57424351"
 ---
 # <a name="updating-rowsets"></a>Atualizando conjuntos de linhas
 
 É uma operação de banco de dados básico atualizar ou gravar dados para o armazenamento de dados. No OLE DB, o mecanismo de atualização é simple: seu aplicativo de consumidor define os valores dos membros de dados associados e, em seguida, grava esses valores no conjunto de linhas; o consumidor solicita que o provedor de atualizar o armazenamento de dados.
 
-Os consumidores podem concluir os seguintes tipos de atualizações nos dados do conjunto de linhas: definindo valores de coluna dentro de uma linha, inserindo uma linha e exclusão de uma linha. Para concluir essas operações, a classe de modelo de banco de dados OLE [CRowset](../../data/oledb/crowset-class.md) implementa a [IRowsetChange](https://docs.microsoft.com/previous-versions/windows/desktop/ms715790(v=vs.85)) de interface e substitui os seguintes métodos de interface:
+Os consumidores podem concluir os seguintes tipos de atualizações nos dados do conjunto de linhas: definindo valores de coluna dentro de uma linha, inserindo uma linha e exclusão de uma linha. Para concluir essas operações, a classe de modelo de banco de dados OLE [CRowset](../../data/oledb/crowset-class.md) implementa a [IRowsetChange](/previous-versions/windows/desktop/ms715790(v=vs.85)) de interface e substitui os seguintes métodos de interface:
 
 - [SetData](../../data/oledb/crowset-setdata.md) valores de coluna de alterações em uma linha de um conjunto de linhas; ele equivale ao comando SQL UPDATE.
 
@@ -207,4 +207,4 @@ Por fim, um motivo principal para adiar as alterações é ser capaz de desfazê
 
 [Trabalhando com modelos de consumidor do OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)<br/>
 [Classe CRowset](../../data/oledb/crowset-class.md)<br/>
-[IRowsetChange](https://docs.microsoft.com/previous-versions/windows/desktop/ms715790(v=vs.85))<br/>
+[IRowsetChange](/previous-versions/windows/desktop/ms715790(v=vs.85))<br/>

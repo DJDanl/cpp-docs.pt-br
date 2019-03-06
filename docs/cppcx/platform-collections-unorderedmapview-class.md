@@ -5,12 +5,12 @@ ms.topic: reference
 f1_keywords:
 - collection/Platform::Collections::UnorderedMapView
 ms.assetid: 545a3725-2efd-4cc1-b590-4a7cd2351f61
-ms.openlocfilehash: 9564904fa77ae6a7355119e83bdfa3ac65a4050c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a60d962d79684cb16d8d5a5139b9b65df8148052
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50560830"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57414402"
 ---
 # <a name="platformcollectionsunorderedmapview-class"></a>Classe Platform::Collections::UnorderedMapView
 
@@ -56,7 +56,7 @@ UnorderedMapView é uma implementação concreta de C++ do [3&gt;{4&gt;Windows::
 |[UnorderedMapView::First](#first)|Retorna um iterador que é inicializado para o primeiro elemento na exibição do mapa.|
 |[UnorderedMapView::HasKey](#haskey)|Determina se o UnorderedMapView atual contém a chave especificada.|
 |[UnorderedMapView::Lookup](#lookup)|Recupera o elemento na chave especificada no objeto UnorderedMapView atual.|
-|[Unorderedmapview:: Size](#size)|Retorna o número de elementos no objeto UnorderedMapView atual.|
+|[UnorderedMapView::Size](#size)|Retorna o número de elementos no objeto UnorderedMapView atual.|
 |[UnorderedMapView::Split](#split)|Divide um objeto UnorderedMapView original em dois objetos UnorderedMapView.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
@@ -71,7 +71,7 @@ UnorderedMapView é uma implementação concreta de C++ do [3&gt;{4&gt;Windows::
 
 ## <a name="first"></a>  Método UnorderedMapView::First
 
-Retorna um iterador que especifica o primeiro [ikeyvaluepair\<K, V >](https://msdn.microsoft.com/library/windows/apps/br226031.aspx) elemento no mapa não ordenado.
+Retorna um iterador que especifica o primeiro [ikeyvaluepair\<K, V >](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_) elemento no mapa não ordenado.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -129,7 +129,7 @@ O valor que é emparelhado com `key`. O tipo do valor de retorno é typename *V*
 
 ## <a name="size"></a>  Método UnorderedMapView::Size
 
-Retorna o número de [ikeyvaluepair\<K, V >](https://msdn.microsoft.com/library/windows/apps/br226031.aspx) elementos em UnorderedMapView.
+Retorna o número de [ikeyvaluepair\<K, V >](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_) elementos em UnorderedMapView.
 
 ### <a name="syntax"></a>Sintaxe
 

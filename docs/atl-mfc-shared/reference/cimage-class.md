@@ -54,12 +54,12 @@ helpviewer_keywords:
 - CImage class
 - transparent color
 ms.assetid: 52861e3d-bf7e-481f-a240-90e88f76c490
-ms.openlocfilehash: 0042fffb0eaa383909edd6647bcdb4375341d8dd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a62919ebd6b2aba54aa8003743b0006571cdedf4
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605849"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57419657"
 ---
 # <a name="cimage-class"></a>Classe CImage
 
@@ -258,7 +258,7 @@ Um valor de transparência alfa a ser usado o bitmap de origem inteira. O padrã
 A função de combinação alfa para origem e bitmaps de destino, um valor alfa global a ser aplicada ao bitmap de origem inteira e informações de formato para o bitmap de origem. As funções de mistura de origem e destino estão limitadas a AC_SRC_OVER.
 
 *pointDest*<br/>
-Uma referência a um [ponto](https://msdn.microsoft.com/library/windows/desktop/dd162805) estrutura que identifica o canto superior esquerdo do retângulo de destino, em unidades lógicas.
+Uma referência a um [ponto](/previous-versions/dd162805\(v=vs.85\)) estrutura que identifica o canto superior esquerdo do retângulo de destino, em unidades lógicas.
 
 *nDestWidth*<br/>
 A largura, em unidades lógicas, do retângulo de destino.
@@ -279,7 +279,7 @@ A largura, em unidades lógicas, do retângulo de origem.
 A altura, em unidades lógicas, do retângulo de origem.
 
 *rectDest*<br/>
-Uma referência a um [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura, identificando o destino.
+Uma referência a um [RECT](/previous-versions/dd162897\(v=vs.85\)) estrutura, identificando o destino.
 
 *rectSrc*<br/>
 Uma referência a um `RECT` estrutura, identificando a origem.
@@ -368,7 +368,7 @@ A lógica coordenada y do canto superior esquerdo do retângulo de destino.
 A operação de varredura a ser executada. Códigos de operação de varredura definem como combinar os bits do código-fonte, o destino e o padrão (conforme definido pelo pincel selecionado no momento) para formar o destino. Ver [BitBlt](/windows/desktop/api/wingdi/nf-wingdi-bitblt) no SDK do Windows para obter uma lista de outros códigos de operação de varredura e suas descrições.
 
 *pointDest*<br/>
-Um [ponto](https://msdn.microsoft.com/library/windows/desktop/dd162805) estrutura que indica o canto superior esquerdo do retângulo de destino.
+Um [ponto](/previous-versions/dd162805\(v=vs.85\)) estrutura que indica o canto superior esquerdo do retângulo de destino.
 
 *nDestWidth*<br/>
 A largura, em unidades lógicas, do retângulo de destino.
@@ -383,7 +383,7 @@ A lógica coordenada x do canto superior esquerdo do retângulo de origem.
 A lógica coordenada y do canto superior esquerdo do retângulo de origem.
 
 *rectDest*<br/>
-Um [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura indicando o retângulo de destino.
+Um [RECT](/previous-versions/dd162897\(v=vs.85\)) estrutura indicando o retângulo de destino.
 
 *pointSrc*<br/>
 Um `POINT` estrutura que indica o canto superior esquerdo do retângulo de origem.
@@ -595,13 +595,13 @@ A largura, em unidades lógicas, do retângulo de origem.
 A altura, em unidades lógicas, do retângulo de origem.
 
 *rectDest*<br/>
-Uma referência a um [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura, identificando o destino.
+Uma referência a um [RECT](/previous-versions/dd162897\(v=vs.85\)) estrutura, identificando o destino.
 
 *rectSrc*<br/>
 Uma referência a um `RECT` estrutura, identificando a origem.
 
 *pointDest*<br/>
-Uma referência a um [ponto](https://msdn.microsoft.com/library/windows/desktop/dd162805) estrutura que identifica o canto superior esquerdo do retângulo de destino, em unidades lógicas.
+Uma referência a um [ponto](/previous-versions/dd162805\(v=vs.85\)) estrutura que identifica o canto superior esquerdo do retângulo de destino, em unidades lógicas.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -1259,10 +1259,10 @@ A coordenada x do canto superior esquerdo do bitmap monocromático.
 A coordenada y do canto superior esquerdo do bitmap monocromático.
 
 *rectSrc*<br/>
-Uma referência a um [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura especificando as coordenadas do retângulo de origem.
+Uma referência a um [RECT](/previous-versions/dd162897\(v=vs.85\)) estrutura especificando as coordenadas do retângulo de origem.
 
 *pointMask*<br/>
-Um [ponto](https://msdn.microsoft.com/library/windows/desktop/dd162805) estrutura que indica o canto superior esquerdo do bitmap de máscara.
+Um [ponto](/previous-versions/dd162805\(v=vs.85\)) estrutura que indica o canto superior esquerdo do bitmap de máscara.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -1384,7 +1384,7 @@ O local horizontal do pixel a ser definida.
 *y*<br/>
 O local vertical do pixel a ser definida.
 
-*Cor*<br/>
+*color*<br/>
 A cor que você definiu o pixel.
 
 ### <a name="remarks"></a>Comentários
@@ -1519,7 +1519,7 @@ A altura, em unidades lógicas, do retângulo de destino.
 A operação de varredura a ser executada. Códigos de operação de varredura definem como combinar os bits do código-fonte, o destino e o padrão (conforme definido pelo pincel selecionado no momento) para formar o destino. Ver [BitBlt](/windows/desktop/api/wingdi/nf-wingdi-bitblt) no SDK do Windows para obter uma lista de outros códigos de operação de varredura e suas descrições.
 
 *rectDest*<br/>
-Uma referência a um [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura, identificando o destino.
+Uma referência a um [RECT](/previous-versions/dd162897\(v=vs.85\)) estrutura, identificando o destino.
 
 *xSrc*<br/>
 A coordenada x, em unidades lógicas, do canto superior esquerdo do retângulo de origem.
@@ -1602,7 +1602,7 @@ A altura, em unidades lógicas, do retângulo de destino.
 A cor em que o bitmap de origem a ser tratada como transparente. Por padrão, CLR_INVALID, indicando que a cor atualmente definido como a cor transparente da imagem deve ser usado.
 
 *rectDest*<br/>
-Uma referência a um [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura, identificando o destino.
+Uma referência a um [RECT](/previous-versions/dd162897\(v=vs.85\)) estrutura, identificando o destino.
 
 *xSrc*<br/>
 A coordenada x, em unidades lógicas, do canto superior esquerdo do retângulo de origem.

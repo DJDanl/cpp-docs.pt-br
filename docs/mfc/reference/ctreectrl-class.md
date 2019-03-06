@@ -162,12 +162,12 @@ helpviewer_keywords:
 - CTreeCtrl [MFC], SortChildren
 - CTreeCtrl [MFC], SortChildrenCB
 ms.assetid: 96e20031-6161-4143-8c12-8d1816c66d90
-ms.openlocfilehash: 9bc31cc9cff12146e6f5fe227e0e191d1c555063
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 92666e10d82d96b76ad43b652ed90e0e41b8f853
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57271392"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57418926"
 ---
 # <a name="ctreectrl-class"></a>Classe CTreeCtrl
 
@@ -315,7 +315,7 @@ virtual BOOL Create(
 Especifica o estilo do controle de exibição de árvore. Aplicar estilos de janela, descritos em [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa)e qualquer combinação de [estilos de controle de exibição de árvore](/windows/desktop/Controls/tree-view-control-window-styles) conforme descrito no SDK do Windows.
 
 *rect*<br/>
-Especifica o tamanho e a posição do controle de exibição de árvore. Ela pode ser um [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto ou uma [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura.
+Especifica o tamanho e a posição do controle de exibição de árvore. Ela pode ser um [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto ou uma [RECT](/previous-versions/dd162897\(v=vs.85\)) estrutura.
 
 *pParentWnd*<br/>
 Especifica a janela do pai do controle de exibição de árvore, geralmente um `CDialog`. Ele não deve ser NULL.
@@ -361,7 +361,7 @@ Especifica o estilo estendido do controle que está sendo criado. Para obter uma
 Especifica o estilo do controle de exibição de árvore. Aplicar estilos de janela, descritos em [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa)e qualquer combinação de [estilos de controle de exibição de árvore](/windows/desktop/Controls/tree-view-control-window-styles) conforme descrito no SDK do Windows.
 
 *rect*<br/>
-Uma referência a um [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura que descreve o tamanho e posição da janela a ser criado, em coordenadas do cliente do *pParentWnd*.
+Uma referência a um [RECT](/previous-versions/dd162897\(v=vs.85\)) estrutura que descreve o tamanho e posição da janela a ser criado, em coordenadas do cliente do *pParentWnd*.
 
 *pParentWnd*<br/>
 Um ponteiro para a janela que é o pai do controle.
@@ -887,7 +887,7 @@ BOOL GetItemPartRect(
 |---------------|-----------------|
 |*hItem*|[in] Identificador para um item de controle de exibição de árvore.|
 |*nPart*|[in] Identificador para a parte. Deve ser definido como TVGIPR_BUTTON.|
-|*lpRect*|[out] Ponteiro para um [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura. Se esse método for bem-sucedido, a estrutura recebe as coordenadas do retângulo da parte especificada pelo *hItem* e *nPart*.|
+|*lpRect*|[out] Ponteiro para um [RECT](/previous-versions/dd162897\(v=vs.85\)) estrutura. Se esse método for bem-sucedido, a estrutura recebe as coordenadas do retângulo da parte especificada pelo *hItem* e *nPart*.|
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -928,7 +928,7 @@ BOOL GetItemRect(
 O identificador de um item de controle de exibição de árvore.
 
 *lpRect*<br/>
-Ponteiro para um [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura que recebe o retângulo delimitador. As coordenadas são relativas ao canto superior esquerdo do controle de exibição de árvore.
+Ponteiro para um [RECT](/previous-versions/dd162897\(v=vs.85\)) estrutura que recebe o retângulo delimitador. As coordenadas são relativas ao canto superior esquerdo do controle de exibição de árvore.
 
 *bTextOnly*<br/>
 Se esse parâmetro for diferente de zero, o retângulo delimitador inclui apenas o texto do item. Caso contrário, ele inclui toda a linha que ocupa o item no controle de exibição de árvore.

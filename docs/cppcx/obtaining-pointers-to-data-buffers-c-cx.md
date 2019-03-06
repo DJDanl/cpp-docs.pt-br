@@ -2,24 +2,24 @@
 title: Obtendo ponteiros para buffers de dados (C++/CX)
 ms.date: 11/19/2018
 ms.assetid: db4f9370-dd95-4896-b5b8-4b202284f579
-ms.openlocfilehash: 2cd99019d75272f4362518de78b729cd7a2549f3
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 46a81fa9e3d278645b654dca3c652653f6c21037
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175100"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57426362"
 ---
 # <a name="obtaining-pointers-to-data-buffers-ccx"></a>Obtendo ponteiros para buffers de dados (C++/CX)
 
-No Tempo de Execução do Windows, a interface [Windows::Storage::Streams::IBuffer](https://msdn.microsoft.com/library/windows/apps/windows.storage.streams.ibuffer.aspx) oferece meios baseados em transmissão de linguagem neutra para acessar buffers de dados. Em C++, você pode obter um ponteiro bruto para a matriz de bytes subjacente usando a interface IBufferByteAccess da Biblioteca em Tempo de Execução do Windows definida em robuffer.h. Usando essa abordagem, você pode modificar a matriz de bytes in-loco sem fazer cópias desnecessárias dos dados.
+No Tempo de Execução do Windows, a interface [Windows::Storage::Streams::IBuffer](/uwp/api/windows.storage.streams.ibuffer) oferece meios baseados em transmissão de linguagem neutra para acessar buffers de dados. Em C++, você pode obter um ponteiro bruto para a matriz de bytes subjacente usando a interface IBufferByteAccess da Biblioteca em Tempo de Execução do Windows definida em robuffer.h. Usando essa abordagem, você pode modificar a matriz de bytes in-loco sem fazer cópias desnecessárias dos dados.
 
-O diagrama a seguir mostra um elemento de imagem XAML, cuja origem é um [Windows::UI::Xaml::Media::Imaging WriteableBitmap](https://msdn.microsoft.com/%20library/windows/apps/windows.ui.xaml.media.imaging.writeablebitmap.aspx). Um aplicativo cliente escrito em qualquer linguagem pode transmitir uma referência ao `WriteableBitmap` para o código C++, e o C++ pode usar a referência para obter o buffer subjacente. Em um aplicativo de plataforma Universal do Windows que está escrito em C++, você pode usar a função no exemplo a seguir diretamente no código-fonte sem empacotá-la em um componente de tempo de execução do Windows.
+O diagrama a seguir mostra um elemento de imagem XAML, cuja origem é um [Windows::UI::Xaml::Media::Imaging WriteableBitmap](/uwp/api/Windows.UI.Xaml.Media.Imaging.WriteableBitmap). Um aplicativo cliente escrito em qualquer linguagem pode transmitir uma referência ao `WriteableBitmap` para o código C++, e o C++ pode usar a referência para obter o buffer subjacente. Em um aplicativo de plataforma Universal do Windows que está escrito em C++, você pode usar a função no exemplo a seguir diretamente no código-fonte sem empacotá-la em um componente de tempo de execução do Windows.
 
 ![C&#43; &#43; o código que acessa dados de pixel diretamente](../cppcx/media/ibufferbyteaccessdiagram.png "C&#43; &#43; o código que acessa dados de pixel diretamente")
 
 ## <a name="getpointertopixeldata"></a>GetPointerToPixelData
 
-O método a seguir aceita um [Windows::Storage::Streams::IBuffer](https://msdn.microsoft.com/library/windows/apps/windows.storage.streams.ibuffer.aspx) e retorna um ponteiro bruto à matriz de bytes subjacente. Para chamar a função, transmita a propriedade [WriteableBitmap::PixelBuffer](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.imaging.writeablebitmap.pixelbuffer.aspx) .
+O método a seguir aceita um [Windows::Storage::Streams::IBuffer](/uwp/api/windows.storage.streams.ibuffer) e retorna um ponteiro bruto à matriz de bytes subjacente. Para chamar a função, transmita a propriedade [WriteableBitmap::PixelBuffer](/uwp/api/windows.ui.xaml.media.imaging.writeablebitmap.pixelbuffer) .
 
 ```cpp
 #include <wrl.h>
