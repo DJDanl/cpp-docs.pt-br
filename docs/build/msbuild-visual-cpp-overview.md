@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - MSBuild overview
 ms.assetid: dd258f6f-ab51-48d9-b274-f7ba911d05ca
-ms.openlocfilehash: 0eac756824b3da6352c60ec69e9d6e679732522c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 072bc15cc931c2fd50cf8a2a1ff0c9145da8b7be
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50484793"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57414688"
 ---
 # <a name="msbuild-visual-c-overview"></a>Visão geral de MSBuild (Visual C++)
 
@@ -27,13 +27,13 @@ Leia os documentos a seguir sobre o MSBuild.
 
 - [Referência de linha de comando](/visualstudio/msbuild/msbuild-command-line-reference) descreve os argumentos de linha de comando e opções que você pode usar com msbuild.exe.
 
-- [Referência de tarefa](/visualstudio/msbuild/msbuild-task-reference) tarefas do MSBuild descreve. Observe especialmente estas tarefas, que são específicas para o Visual C++: [tarefa BscMake](/visualstudio/msbuild/bscmake-task), [tarefa CL](/visualstudio/msbuild/cl-task), [tarefa CPPClean](/visualstudio/msbuild/cppclean-task), [tarefa LIB](/visualstudio/msbuild/lib-task), [Vincular tarefas](/visualstudio/msbuild/link-task), [tarefa MIDL](/visualstudio/msbuild/midl-task), [tarefa MT](/visualstudio/msbuild/mt-task), [tarefa RC](/visualstudio/msbuild/rc-task), [tarefa SetEnv](/visualstudio/msbuild/setenv-task), [ Tarefa VCMessage](/visualstudio/msbuild/vcmessage-task), [tarefa XDCMake](/visualstudio/msbuild/xdcmake-task), [tarefa XSD](/visualstudio/msbuild/xsd-task).
+- [Referência de tarefa](/visualstudio/msbuild/msbuild-task-reference) tarefas do MSBuild descreve. Observe especialmente estas tarefas, que são específicas para o Visual C++: [Tarefa BscMake](/visualstudio/msbuild/bscmake-task), [tarefa CL](/visualstudio/msbuild/cl-task), [tarefa CPPClean](/visualstudio/msbuild/cppclean-task), [tarefa LIB](/visualstudio/msbuild/lib-task), [vincular tarefas](/visualstudio/msbuild/link-task), [tarefa MIDL](/visualstudio/msbuild/midl-task), [Tarefa MT](/visualstudio/msbuild/mt-task), [tarefa RC](/visualstudio/msbuild/rc-task), [tarefa SetEnv](/visualstudio/msbuild/setenv-task), [tarefa VCMessage](/visualstudio/msbuild/vcmessage-task), [tarefa XDCMake](/visualstudio/msbuild/xdcmake-task), [Tarefa XSD](/visualstudio/msbuild/xsd-task).
 
 ## <a name="msbuild-on-the-command-line"></a>MSBuild na linha de comando
 
 A instrução a seguir da [referência de linha de comando do MSBuild](/visualstudio/msbuild/msbuild-command-line-reference) ilustra que a ferramenta msbuild.exe leva um implícita ou explícita *project_file* argumento (um arquivo. vcxproj para projetos do Visual C++) e zero ou mais de linha de comando *opções* argumentos.
 
-> **MSBuild.exe** [ *project_file* ] [ *opções* ]
+> **msbuild.exe** [ *project_file* ] [ *options* ]
 
 Use o **/Target** (ou **/t**) e **/p.** (ou **p**) opções de linha de comando para substituir as propriedades específicas e os destinos que estão especificado no arquivo de projeto.
 
@@ -65,9 +65,9 @@ Por padrão, os arquivos de suporte principais do Visual C++ estão localizados 
 
 |Diretório|Descrição|
 |---------------|-----------------|
-|*unidade*: \Program Files *(x86)* \Microsoft Visual Studio\\*ano*\\*edition*\Common7\IDE\VC\VCTargets\ <br /><br />*unidade*: \Program Files *(x86)* \MSBuild\Microsoft.Cpp (x86) \v4.0\\*versão*\ |Contém os arquivos de destino principal (. targets) e arquivos de propriedade (. Props) que são usados pelos destinos. Por padrão, a macro $ (vctargetspath) referencia este diretório.|
+|*unidade*: \Program Files *(x86)* \Microsoft Visual Studio\\*ano*\\*edition*\Common7\IDE\VC\VCTargets\ <br /><br />*drive*:\Program Files *(x86)* \MSBuild\Microsoft.Cpp (x86)\v4.0\\*version*\ |Contém os arquivos de destino principal (. targets) e arquivos de propriedade (. Props) que são usados pelos destinos. Por padrão, a macro $ (vctargetspath) referencia este diretório.|
 |*unidade*: \Program Files *(x86)* \Microsoft Visual Studio\\*ano*\\*edition*\Common7\IDE\VC\VCTargets\ Plataformas\\*plataforma*\ <br /><br />*unidade*: \Program Files *(x86)* \MSBuild\Microsoft.Cpp\v4.0\\*versão*\Platforms\\*plataforma*\ |Contém arquivos de destino e a propriedade específica da plataforma que substituem destinos e propriedades em seu diretório pai. Este diretório também contém uma DLL que define as tarefas que são usadas pelos destinos neste diretório.<br /><br /> O *plataforma* espaço reservado representa o ARM, Win32 ou x64 subdiretório.|
-|*unidade*: \Program Files *(x86)* \Microsoft Visual Studio\\*ano*\\*edition*\Common7\IDE\VC\VCTargets\ Plataformas\\*plataforma*\PlatformToolsets\\*conjunto de ferramentas*\ <br /><br />*unidade*: \Program Files *(x86)* \MSBuild\Microsoft.Cpp\v4.0\\*versão*\Platforms\\*plataforma*\ PlatformToolsets\\*conjunto de ferramentas*\ <br /><br />*unidade*: \Program Files *(x86)* \MSBuild\Microsoft.Cpp\v4.0\Platforms\\*plataforma*\PlatformToolsets\\*conjunto de ferramentas*\ |Contém diretórios que permitem a compilação para gerar aplicativos do Visual C++ usando especificado *conjunto de ferramentas*.<br /><br /> O *ano* e *edition* espaços reservados são usados pelo Visual Studio 2017 e edições posteriores. O *versão* espaço reservado é V110 para Visual Studio 2012, V120 para Visual Studio 2013 ou V140 para Visual Studio 2015. O *plataforma* espaço reservado representa o ARM, Win32 ou x64 subdiretório. O *conjunto de ferramentas* espaço reservado representa o subdiretório do conjunto de ferramentas, por exemplo, v140 para a criação de aplicativos do Windows usando o conjunto de ferramentas do Visual Studio 2015, v120_xp para compilar para o XP do Windows usando o conjunto de ferramentas do Visual Studio 2013 ou v110_wp80 para Crie aplicativos Windows Phone 8.0, usando o conjunto de ferramentas do Visual Studio 2012.<br /><br />O caminho que contém os diretórios que permitem a compilação para gerar aplicativos do Visual C++ 2008 ou o Visual C++ 2010 não inclui o *versão*e o *plataforma* espaço reservado representa o Itanium, Win32 ou x64 subdiretório. O *conjunto de ferramentas* espaço reservado representa o subdiretório do conjunto de ferramentas v90 ou v100.|
+|*unidade*: \Program Files *(x86)* \Microsoft Visual Studio\\*ano*\\*edition*\Common7\IDE\VC\VCTargets\ Plataformas\\*plataforma*\PlatformToolsets\\*conjunto de ferramentas*\ <br /><br />*drive*:\Program Files *(x86)* \MSBuild\Microsoft.Cpp\v4.0\\*version*\Platforms\\*platform*\PlatformToolsets\\*toolset*\ <br /><br />*unidade*: \Program Files *(x86)* \MSBuild\Microsoft.Cpp\v4.0\Platforms\\*plataforma*\PlatformToolsets\\*conjunto de ferramentas*\ |Contém diretórios que permitem a compilação para gerar aplicativos do Visual C++ usando especificado *conjunto de ferramentas*.<br /><br /> O *ano* e *edition* espaços reservados são usados pelo Visual Studio 2017 e edições posteriores. O *versão* espaço reservado é V110 para Visual Studio 2012, V120 para Visual Studio 2013 ou V140 para Visual Studio 2015. O *plataforma* espaço reservado representa o ARM, Win32 ou x64 subdiretório. O *conjunto de ferramentas* espaço reservado representa o subdiretório do conjunto de ferramentas, por exemplo, v140 para a criação de aplicativos do Windows usando o conjunto de ferramentas do Visual Studio 2015, v120_xp para compilar para o XP do Windows usando o conjunto de ferramentas do Visual Studio 2013 ou v110_wp80 para Crie aplicativos Windows Phone 8.0, usando o conjunto de ferramentas do Visual Studio 2012.<br /><br />O caminho que contém os diretórios que permitem a compilação para gerar aplicativos do Visual C++ 2008 ou o Visual C++ 2010 não inclui o *versão*e o *plataforma* espaço reservado representa o Itanium, Win32 ou x64 subdiretório. O *conjunto de ferramentas* espaço reservado representa o subdiretório do conjunto de ferramentas v90 ou v100.|
 
 ### <a name="support-files"></a>Arquivos de suporte
 
@@ -75,9 +75,9 @@ Os diretórios de arquivos de suporte contêm arquivos com essas extensões:
 
 |Extensão|Descrição|
 |---------------|-----------------|
-|. targets|Contém `Target` elementos XML que especificam as tarefas que são executadas pelo destino. Também pode conter `PropertyGroup`, `ItemGroup`, `ItemDefinitionGroup`e definidos pelo usuário `Item` elementos que são usados para atribuir arquivos e opções de linha de comando a parâmetros de tarefa.<br /><br /> Para obter mais informações, consulte [elemento Target (MSBuild)](/visualstudio/msbuild/target-element-msbuild).|
+|.targets|Contém `Target` elementos XML que especificam as tarefas que são executadas pelo destino. Também pode conter `PropertyGroup`, `ItemGroup`, `ItemDefinitionGroup`e definidos pelo usuário `Item` elementos que são usados para atribuir arquivos e opções de linha de comando a parâmetros de tarefa.<br /><br /> Para obter mais informações, consulte [elemento Target (MSBuild)](/visualstudio/msbuild/target-element-msbuild).|
 |. Props|Contém `Property Group` definidas pelo usuário `Property` elementos XML que especificam as configurações de arquivo e de parâmetro que são usadas durante uma compilação.<br /><br /> Também pode conter `ItemDefinitionGroup` definidas pelo usuário `Item` elementos XML que especificam configurações adicionais. Os itens definidos em um grupo de definições de item são semelhantes a propriedades, mas não podem ser acessados a partir da linha de comando. Arquivos de projeto do Visual C++ usa com frequência itens em vez de propriedades para representar configurações.<br /><br /> Para obter mais informações, consulte [elemento ItemGroup (MSBuild)](/visualstudio/msbuild/itemgroup-element-msbuild), [elemento ItemDefinitionGroup (MSBuild)](/visualstudio/msbuild/itemdefinitiongroup-element-msbuild), e [elemento Item (MSBuild)](/visualstudio/msbuild/item-element-msbuild).|
-|. XML|Contém elementos XML que declara e inicializa os elementos de interface de usuário do IDE, como folhas de propriedades e páginas de propriedades e os controles de caixa de lista e de caixa de texto.<br /><br /> Os arquivos. XML suportam diretamente o IDE, não o MSBuild. No entanto, os valores das propriedades do IDE são atribuídos para criar propriedades e itens.<br /><br /> A maioria dos arquivos. XML estão em um subdiretório específico de localidade. Por exemplo, os arquivos para a região de inglês-EUA estão em $(VCTargetsPath) \1033\\.|
+|.xml|Contém elementos XML que declara e inicializa os elementos de interface de usuário do IDE, como folhas de propriedades e páginas de propriedades e os controles de caixa de lista e de caixa de texto.<br /><br /> Os arquivos. XML suportam diretamente o IDE, não o MSBuild. No entanto, os valores das propriedades do IDE são atribuídos para criar propriedades e itens.<br /><br /> A maioria dos arquivos. XML estão em um subdiretório específico de localidade. Por exemplo, os arquivos para a região de inglês-EUA estão em $(VCTargetsPath) \1033\\.|
 
 ## <a name="user-targets-and-properties"></a>Propriedades e destinos de usuário
 
@@ -120,11 +120,11 @@ A tabela a seguir lista vários destinos útil orientado ao usuário.
 |Lib|Executa a ferramenta de Gerenciador de biblioteca da Microsoft de 32 bits, lib.exe.|
 |Link|Executa a ferramenta de vinculador do Visual C++, link.exe.|
 |ManifestResourceCompile|Extrai uma lista de recursos de um manifesto e, em seguida, executa a ferramenta de compilador de recurso do Microsoft Windows, rc.exe.|
-|MIDL|Executa a ferramenta de compilador de linguagem de definição de Interface da Microsoft (MIDL), midl.exe.|
+|Midl|Executa a ferramenta de compilador de linguagem de definição de Interface da Microsoft (MIDL), midl.exe.|
 |Recompilar|Limpa e, em seguida, compila seu projeto.|
 |ResourceCompile|Executa a ferramenta de compilador de recurso do Microsoft Windows, rc.exe.|
 |XdcMake|Executa a ferramenta de documentação XML, xdcmake.exe.|
-|XSD|Executa a ferramenta de definição de esquema XML, xsd.exe. *Consulte a observação abaixo.*|
+|Xsd|Executa a ferramenta de definição de esquema XML, xsd.exe. *Consulte a observação abaixo.*|
 
 > [!NOTE]
 > No Visual Studio 2017, suporte para o projeto C++ **xsd** arquivos foi preterido. Você ainda pode usar **Microsoft.VisualC.CppCodeProvider** adicionando **CppCodeProvider.dll** manualmente ao GAC.

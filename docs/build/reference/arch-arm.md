@@ -2,12 +2,12 @@
 title: /arch (ARM)
 ms.date: 11/04/2016
 ms.assetid: 4f1406ff-f174-487c-a126-8ab06cf447c1
-ms.openlocfilehash: bf12abd140a56b1b914156083ecbbd3e61e7285a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7fd396f4ed9c02daff5363342d7c851d022919ac
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50495543"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57424984"
 ---
 # <a name="arch-arm"></a>/arch (ARM)
 
@@ -21,7 +21,7 @@ Especifica a arquitetura para a geração de código no ARM. Consulte também [/
 
 ## <a name="arguments"></a>Arguments
 
-**arch:armv7ve**<br/>
+**/arch:ARMv7VE**<br/>
 Habilita o uso de instruções de Extensões de Virtualização ARMv7VE.
 
 **/arch:VFPv4**<br/>

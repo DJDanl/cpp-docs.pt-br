@@ -10,12 +10,12 @@ helpviewer_keywords:
 - throwing exceptions, managed exceptions
 - Visual C++, handling managed exceptions
 ms.assetid: 40ce8931-1ecc-491a-815f-733b23fcba35
-ms.openlocfilehash: 45244ace414fc073956684088ac43eb9b92f1e5b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b4eb74fe3e485f12ac7f43b0a8a56800ef0535e7
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588234"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57423840"
 ---
 # <a name="basic-concepts-in-using-managed-exceptions"></a>Conceitos básicos em usar exceções gerenciadas
 
@@ -29,7 +29,7 @@ Este tópico aborda o tratamento de exceções em aplicativos gerenciados. Ou se
 
 ## <a name="remarks"></a>Comentários
 
-Se você compilar com o **/clr** opção, você pode tratar exceções de CLR, bem como standard [tratamento de exceções C++](../cpp/cpp-exception-handling.md) e [manipulação de exceção estruturada](../cpp/structured-exception-handling-c-cpp.md) (SEH). Uma exceção do CLR é qualquer exceção gerada por um tipo gerenciado. O [System:: Exception](https://msdn.microsoft.com/library/system.exception.aspx) classe fornece vários métodos úteis para o processamento de exceções de CLR e é recomendada como uma classe base para classes de exceção definidas pelo usuário.
+Se você compilar com o **/clr** opção, você pode tratar exceções de CLR, bem como standard <xref:System.Exception> classe fornece vários métodos úteis para o processamento de exceções de CLR e é recomendada como uma classe base para exceções definidas pelo usuário classes.
 
 Não há suporte para capturar tipos de exceção derivados de uma interface em **/clr**. Além disso, o common language runtime não permite que você para capturar exceções de estouro de pilha; uma exceção de estouro de pilha, o processo será encerrado.
 
@@ -140,7 +140,7 @@ A ordem de eventos para uma exceção lançada é da seguinte maneira:
 
 ### <a name="catching-unmanaged-types"></a>Capturando tipos não gerenciados
 
-Quando um tipo de objeto não gerenciado é lançado, ela é empacotada com uma exceção do tipo [System::Runtime.InteropServices::SEHException](https://msdn.microsoft.com/library/system.runtime.interopservices.sehexception.aspx). Ao procurar apropriado **catch** cláusula, há duas possibilidades.
+Quando um tipo de objeto não gerenciado é lançado, ela é empacotada com uma exceção do tipo <xref:System.Runtime.InteropServices.SEHException>. Ao procurar apropriado **catch** cláusula, há duas possibilidades.
 
 - Se for encontrado um tipo nativo do C++, a exceção é desempacotada e em comparação com o tipo encontrado. Essa comparação permite que um tipo nativo do C++ ser capturada da maneira normal.
 
@@ -167,5 +167,5 @@ Ao gerar ou capturar exceções for gerenciada, é recomendável que você use o
 ## <a name="see-also"></a>Consulte também
 
 [Tratamento de Exceção](../windows/exception-handling-cpp-component-extensions.md)<br/>
-[Safe_cast](../windows/safe-cast-cpp-component-extensions.md)<br/>
+[safe_cast](../windows/safe-cast-cpp-component-extensions.md)<br/>
 [Tratamento de Exceção](../cpp/exception-handling-in-visual-cpp.md)

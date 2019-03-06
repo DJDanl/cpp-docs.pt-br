@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C++ exception handling, x64
 - exception handling, x64
 ms.assetid: 41fecd2d-3717-4643-b21c-65dcd2f18c93
-ms.openlocfilehash: 33206dfb885239839c3a64436b6b540fc7d4e6e5
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: 7dab7f3b6593bf4eaed1b8c804deb915677ccf5b
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627534"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57422969"
 ---
 # <a name="x64-exception-handling"></a>x64 tratamento de exceção
 
@@ -68,7 +68,7 @@ A estrutura UNWIND_INFO deve ser DWORD alinhado na memória. Aqui está o que si
 
    Número de versão dos dados de desenrolamento, 1 no momento.
 
-- **sinalizadores**
+- **Sinalizadores**
 
    Três sinalizadores são definidos no momento:
 
@@ -182,21 +182,21 @@ O código de operação de desenrolamento é um destes valores:
 
   |||
   |-|-|
-  |RSP + 32|SS|
-  |RSP + 24|RSP antigo|
-  |RSP + 16|EFLAGS|
-  |RSP + 8|CS|
+  |RSP+32|SS|
+  |RSP+24|RSP antigo|
+  |RSP+16|EFLAGS|
+  |RSP+8|CS|
   |RSP|RIP|
 
   Se as informações de operação é igual a 1, em seguida, um desses quadros foi enviado:
 
   |||
   |-|-|
-  |RSP + 40|SS|
-  |RSP + 32|RSP antigo|
-  |RSP + 24|EFLAGS|
-  |RSP + 16|CS|
-  |RSP + 8|RIP|
+  |RSP+40|SS|
+  |RSP+32|RSP antigo|
+  |RSP+24|EFLAGS|
+  |RSP+16|CS|
+  |RSP+8|RIP|
   |RSP|Código de erro|
 
   Esse código de desenrolamento sempre aparece em um prólogo fictício, que, na verdade, nunca é executado, mas em vez disso, é exibido antes do ponto de entrada real de uma rotina de interrupção e existe somente para fornecer um local para simular o envio por push de um quadro de máquina. `UWOP_PUSH_MACHFRAME` registra a simulação, que indica que a máquina conceitualmente fez esta operação:
@@ -329,12 +329,12 @@ Para gravar rotinas de assembly apropriadas, há um conjunto de pseudo-operaçõ
 
 |Operação de pseudo|Descrição|
 |-|-|
-|QUADRO de PROC \[:*ehandler*]|Causas MASM para gerar uma função de tabela de entrada no registro. pData e. XData informações de desenrolamento para uma função do estruturado comportamento de desenrolamento de manipulação de exceção.  Se *ehandler* estiver presente, esse procedimento é inserido no. XData como o manipulador de idioma específico.<br /><br /> Quando o atributo de quadro é usado, ele deve ser seguido por um. Diretiva ENDPROLOG.  Se a função é uma função de folha (conforme definido em [tipos de função](../build/stack-usage.md#function-types)) o atributo de quadro é desnecessário, assim como o restante dessas operações pseudo.|
+|PROC FRAME \[:*ehandler*]|Causas MASM para gerar uma função de tabela de entrada no registro. pData e. XData informações de desenrolamento para uma função do estruturado comportamento de desenrolamento de manipulação de exceção.  Se *ehandler* estiver presente, esse procedimento é inserido no. XData como o manipulador de idioma específico.<br /><br /> Quando o atributo de quadro é usado, ele deve ser seguido por um. Diretiva ENDPROLOG.  Se a função é uma função de folha (conforme definido em [tipos de função](../build/stack-usage.md#function-types)) o atributo de quadro é desnecessário, assim como o restante dessas operações pseudo.|
 |. PUSHREG *registrar*|Gera uma entrada de código de desenrolamento UWOP_PUSH_NONVOL para o número do registro especificado usando as atuais no prólogo de deslocamento.<br /><br /> Isso só deve ser usado com registros inteiros não volátil.  Para envios por push de registros voláteis, use um. 8 ALLOCSTACK, em vez disso|
-|. SETFRAME *registre*, *deslocamento*|Preenchimentos no quadro de registrar o campo e o deslocamento nas informações de desenrolamento usando o registro especificado e o deslocamento. O deslocamento deve ser um múltiplo de 16 e menor ou igual a 240. Essa diretiva também gera uma entrada de código de desenrolamento UWOP_SET_FPREG para o registro especificado usando o deslocamento atual do prólogo.|
-|. ALLOCSTACK *tamanho*|Gera um UWOP_ALLOC_SMALL ou um UWOP_ALLOC_LARGE com o tamanho especificado para o deslocamento atual no prólogo.<br /><br /> O *tamanho* operando deve ser um múltiplo de 8.|
-|. SAVEREG *registre*, *deslocamento*|Gera um UWOP_SAVE_NONVOL ou uma entrada de código de desenrolamento UWOP_SAVE_NONVOL_FAR para o registro especificado e o deslocamento usando o deslocamento atual do prólogo. MASM escolhe a codificação mais eficiente.<br /><br /> *deslocamento* deve ser positivo e um múltiplo de 8. *deslocamento* é relativo a base do quadro do procedimento, que é geralmente em RSP, ou, se usando um ponteiro de quadro, o ponteiro de quadro fora de escala.|
-|. SAVEXMM128 *registre*, *deslocamento*|Gera um UWOP_SAVE_XMM128 ou uma entrada de código de desenrolamento UWOP_SAVE_XMM128_FAR para o registro de registros de MMX especificado e o deslocamento usando o deslocamento atual do prólogo. MASM escolhe a codificação mais eficiente.<br /><br /> *deslocamento* deve ser positivo e um múltiplo de 16.  *deslocamento* é relativo a base do quadro do procedimento, que é geralmente em RSP, ou, se usando um ponteiro de quadro, o ponteiro de quadro fora de escala.|
+|.SETFRAME *register*, *offset*|Preenchimentos no quadro de registrar o campo e o deslocamento nas informações de desenrolamento usando o registro especificado e o deslocamento. O deslocamento deve ser um múltiplo de 16 e menor ou igual a 240. Essa diretiva também gera uma entrada de código de desenrolamento UWOP_SET_FPREG para o registro especificado usando o deslocamento atual do prólogo.|
+|.ALLOCSTACK *size*|Gera um UWOP_ALLOC_SMALL ou um UWOP_ALLOC_LARGE com o tamanho especificado para o deslocamento atual no prólogo.<br /><br /> O *tamanho* operando deve ser um múltiplo de 8.|
+|.SAVEREG *register*, *offset*|Gera um UWOP_SAVE_NONVOL ou uma entrada de código de desenrolamento UWOP_SAVE_NONVOL_FAR para o registro especificado e o deslocamento usando o deslocamento atual do prólogo. MASM escolhe a codificação mais eficiente.<br /><br /> *deslocamento* deve ser positivo e um múltiplo de 8. *deslocamento* é relativo a base do quadro do procedimento, que é geralmente em RSP, ou, se usando um ponteiro de quadro, o ponteiro de quadro fora de escala.|
+|.SAVEXMM128 *register*, *offset*|Gera um UWOP_SAVE_XMM128 ou uma entrada de código de desenrolamento UWOP_SAVE_XMM128_FAR para o registro de registros de MMX especificado e o deslocamento usando o deslocamento atual do prólogo. MASM escolhe a codificação mais eficiente.<br /><br /> *deslocamento* deve ser positivo e um múltiplo de 16.  *deslocamento* é relativo a base do quadro do procedimento, que é geralmente em RSP, ou, se usando um ponteiro de quadro, o ponteiro de quadro fora de escala.|
 |. PUSHFRAME \[ *código*]|Gera uma entrada de código de desenrolamento UWOP_PUSH_MACHFRAME. Se o opcional *código* for especificado, a entrada de código de desenrolamento é fornecida um modificador de 1. Caso contrário, o modificador é 0.|
 |.ENDPROLOG|Sinaliza o término das declarações do prólogo.  Deve ocorrer nos primeiros 255 bytes da função.|
 
@@ -394,11 +394,11 @@ Para simplificar o uso do [brutas operações pseudo](#raw-pseudo-operations), h
 |Macro|Descrição|
 |-|-|
 |alloc_stack(n)|Aloca um quadro de pilha de n bytes (usando `sub rsp, n`) e emite informações (. allocstack n) de desenrolamento apropriado|
-|save_reg *reg*, *loc*|Salva um registro não volátil *reg* na pilha no RSP deslocamento *loc*e emite informações de desenrolamento apropriado. (reg. savereg, loc)|
+|save_reg *reg*, *loc*|Salva um registro não volátil *reg* na pilha no RSP deslocamento *loc*e emite informações de desenrolamento apropriado. (.savereg reg, loc)|
 |push_reg *reg*|Envia por push a um registro não volátil *reg* na pilha e emite informações de desenrolamento apropriado. (reg. pushreg)|
 |rex_push_reg *reg*|Salvar um registro não volátil na pilha usando um envio por push de 2 bytes e emite informações (reg. pushreg), isso deve ser usado se o envio por push for a primeira instrução na função para garantir que a função é para patch a quente de desenrolamento apropriado.|
 |save_xmm128 *reg*, *loc*|Salva um registro não volátil de XMM *reg* na pilha no RSP deslocamento *loc*e emite informações (reg. savexmm128, loc) de desenrolamento apropriado|
-|set_frame *reg*, *deslocamento*|Define o registro de quadro *reg* seja o RSP + *deslocamento* (usando um `mov`, ou um `lea`) e emite informações (reg .set_frame, deslocamento) de desenrolamento apropriado|
+|set_frame *reg*, *offset*|Define o registro de quadro *reg* seja o RSP + *deslocamento* (usando um `mov`, ou um `lea`) e emite informações (reg .set_frame, deslocamento) de desenrolamento apropriado|
 |push_eflags|Envia por push o eflags com um `pushfq` instrução e emite informações (.alloc_stack 8) de desenrolamento apropriado|
 
 Aqui está um prólogo da função de exemplo com o uso correto das macros:
@@ -504,4 +504,4 @@ typedef struct _RUNTIME_FUNCTION {
 
 ## <a name="see-also"></a>Consulte também
 
-[x64 convenções de software](../build/x64-software-conventions.md)
+[Convenções de software x64](../build/x64-software-conventions.md)

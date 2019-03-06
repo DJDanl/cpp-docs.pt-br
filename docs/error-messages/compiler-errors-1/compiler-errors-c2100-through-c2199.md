@@ -7,7 +7,6 @@ f1_keywords:
 - C2125
 - C2126
 - C2127
-- C2131
 - C2136
 - C2176
 - C2187
@@ -24,12 +23,12 @@ helpviewer_keywords:
 - C2187
 - C2189
 ms.assetid: 1ccab076-0954-4386-b959-d3112a6793ae
-ms.openlocfilehash: 98e804b7c53eddf239e752f120854439cc3a0b01
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 31974bb830364b2ef41a7da17cb0ad95d931f771
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50546544"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57423528"
 ---
 # <a name="compiler-errors-c2100-through-c2199"></a>Erros C2100 a C2199 (compilador)
 
@@ -72,7 +71,7 @@ Os artigos nesta seção da documentação explicam um subconjunto das mensagens
 |[Erro do compilador C2128](compiler-error-c2128.md)|'*função*': alloc_text/same_seg aplicável apenas a funções com vínculo a C|
 |[Erro do compilador C2129](compiler-error-c2129.md)|função estática '*identificador*' declarada mas não definida|
 |[Erro do compilador C2130](compiler-error-c2130.md)|#line esperada uma cadeia de caracteres que contém o nome do arquivo, encontrado '*token*'|
-|C2131 de erro do compilador|expressão não foi avaliada como uma constante|
+|[Erro do compilador C2131](compiler-error-c2131.md)|expressão não foi avaliada como uma constante|
 |[Erro do compilador C2132](compiler-error-c2132.md)|Erro de sintaxe: identificador inesperado|
 |[Erro do compilador C2133](compiler-error-c2133.md)|'*identificador*': tamanho desconhecido|
 |[Erro do compilador C2134](compiler-error-c2134.md)|'*função*': chamada não resulta em uma expressão constante|

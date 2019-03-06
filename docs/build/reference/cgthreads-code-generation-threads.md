@@ -9,12 +9,12 @@ helpviewer_keywords:
 - cgthreads compiler option (C++)
 - cgthreads
 ms.assetid: 64bc768c-6caa-4baf-9dea-7cfa1ffb01c2
-ms.openlocfilehash: b06a800fca529a86b393ca00dcffce30ac7a21fe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6c3d3b51691247ddef5614cae113ffa9ded576e9
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50606460"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57425231"
 ---
 # <a name="cgthreads-code-generation-threads"></a>/cgthreads (threads geradoras de código)
 
@@ -28,7 +28,7 @@ Define o número de threads cl.exe usados para otimização e geração de códi
 
 ## <a name="arguments"></a>Arguments
 
-*número*<br/>
+*number*<br/>
 O máximo de threads que podem ser usados por cl.exe, no intervalo de 1 a 8.
 
 ## <a name="remarks"></a>Comentários

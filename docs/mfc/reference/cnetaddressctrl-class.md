@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CNetAddressCtrl [MFC], GetAllowType
 - CNetAddressCtrl [MFC], SetAllowType
 ms.assetid: cb4c6aca-3f49-4b52-b76c-65f57096155b
-ms.openlocfilehash: 51198b44346785369771f63b80164c1a131f6950
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: ec4d7aa6f2a1061e632b81a27a0233cf5fdd1c63
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57279674"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57423554"
 ---
 # <a name="cnetaddressctrl-class"></a>CNetAddressCtrl Class
 
@@ -127,7 +127,7 @@ virtual BOOL Create(
 |Parâmetro|Descrição|
 |---------------|-----------------|
 |*dwStyle*|[in] Uma combinação bit a bit de estilos a serem aplicados ao controle. Para obter mais informações, consulte [Editar estilos](../../mfc/reference/styles-used-by-mfc.md#edit-styles).|
-|*rect*|[in] Uma referência a um [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura que contém a posição e o tamanho do controle.|
+|*rect*|[in] Uma referência a um [RECT](/previous-versions/dd162897\(v=vs.85\)) estrutura que contém a posição e o tamanho do controle.|
 |*pParentWnd*|[in] Um ponteiro não nulo para um [CWnd](../../mfc/reference/cwnd-class.md) objeto que é a janela pai do controle.|
 |*nID*|[in] A ID do controle.|
 
@@ -154,7 +154,7 @@ virtual BOOL CreateEx(
 |---------------|-----------------|
 |*dwExStyle*|[in] Uma combinação bit a bit (OR) dos estilos estendidos para ser aplicado ao controle. Para obter mais informações, consulte o *dwExStyle* parâmetro do [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) função.|
 |*dwStyle*|[in] Uma combinação bit a bit (OR) de estilos a serem aplicados ao controle. Para obter mais informações, consulte [Editar estilos](../../mfc/reference/styles-used-by-mfc.md#edit-styles).|
-|*rect*|[in] Uma referência a um [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura que contém a posição e o tamanho do controle.|
+|*rect*|[in] Uma referência a um [RECT](/previous-versions/dd162897\(v=vs.85\)) estrutura que contém a posição e o tamanho do controle.|
 |*pParentWnd*|[in] Um ponteiro não nulo para um [CWnd](../../mfc/reference/cwnd-class.md) objeto que é a janela pai do controle.|
 |*nID*|[in] A ID do controle.|
 

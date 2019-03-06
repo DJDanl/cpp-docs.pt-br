@@ -9,12 +9,12 @@ helpviewer_keywords:
 - databases [C++], transactions
 - distributed transactions [C++]
 ms.assetid: 3d72e583-ad38-42ff-8f11-e2166d60a5a7
-ms.openlocfilehash: 647112f480f6470f7d893ecd1d5177618dc23708
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 2e3605b636bbcb16a1c6f543bc9090d2b212a60b
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556254"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57418562"
 ---
 # <a name="supporting-transactions-in-ole-db"></a>Dando suporte a transações em banco de dados OLE
 
@@ -22,11 +22,11 @@ Um [transação](../../data/transactions-mfc-data-access.md) é uma maneira de g
 
 OLE DB dá suporte a transações com três métodos a seguir:
 
-- [ITransactionLocal::StartTransaction](https://docs.microsoft.com/previous-versions/windows/desktop/ms709786(v=vs.85))
+- [ITransactionLocal::StartTransaction](/previous-versions/windows/desktop/ms709786(v=vs.85))
 
-- [ITransaction::Commit](https://docs.microsoft.com/previous-versions/windows/desktop/ms713008(v=vs.85))
+- [ITransaction::Commit](/previous-versions/windows/desktop/ms713008(v=vs.85))
 
-- [ITransaction::Abort](https://docs.microsoft.com/previous-versions/windows/desktop/ms709833(v=vs.85))
+- [ITransaction::Abort](/previous-versions/windows/desktop/ms709833(v=vs.85))
 
 ## <a name="relationship-of-sessions-and-transactions"></a>Relação de sessões e transações
 
@@ -48,7 +48,7 @@ Chamando `ITransaction::Commit` ou `ITransaction::Abort` termina a transação. 
 
 ## <a name="nested-transactions"></a>Transações aninhadas
 
-Um [transaction aninhada](https://docs.microsoft.com/previous-versions/windows/desktop/ms716985(v=vs.85)) ocorre quando você inicia uma nova transação local quando uma transação ativa já existe na sessão. A nova transação seja iniciada como uma transação aninhada abaixo da transação atual. Se o provedor não dá suporte a transações aninhadas, chamando `StartTransaction` quando já houver uma transação ativa na sessão retorna XACT_E_XTIONEXISTS.
+Um [transaction aninhada](/previous-versions/windows/desktop/ms716985(v=vs.85)) ocorre quando você inicia uma nova transação local quando uma transação ativa já existe na sessão. A nova transação seja iniciada como uma transação aninhada abaixo da transação atual. Se o provedor não dá suporte a transações aninhadas, chamando `StartTransaction` quando já houver uma transação ativa na sessão retorna XACT_E_XTIONEXISTS.
 
 ## <a name="distributed-transactions"></a>Transações distribuídas
 

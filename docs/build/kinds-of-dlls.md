@@ -6,12 +6,12 @@ helpviewer_keywords:
 - DLLs [C++], types
 - DLLs [C++], MFC
 ms.assetid: f6a30db9-6138-4b2c-90cc-a17855e499a6
-ms.openlocfilehash: daf042f742a9c4b7757813fc73eeb4b6d1a87413
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fb63814161fb72121a34d2857b6fada3866e505a
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50441113"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57424802"
 ---
 # <a name="kinds-of-dlls"></a>Tipos de DLLs
 
@@ -37,7 +37,7 @@ A própria biblioteca do MFC está disponível, em bibliotecas de vínculo está
 
 - [DLLs MFC regulares vinculadas dinamicamente ao MFC](../build/regular-dlls-dynamically-linked-to-mfc.md)
 
-- [DLLs de extensão do MFC: visão geral](../build/extension-dlls-overview.md)
+- [DLLs de extensão de MFC: visão geral](../build/extension-dlls-overview.md)
 
 - [Que tipo de DLL usar](#_core_which_kind_of_dll_to_use)
 
@@ -55,7 +55,7 @@ Se sua DLL for usado somente por executáveis MFC, você tem de escolher entre c
 
 Se a sua DLL se vincula dinamicamente ao MFC, as DLLs do MFC podem ser redistribuídas com sua DLL. Essa arquitetura é particularmente útil para o compartilhamento de biblioteca de classes entre vários arquivos executáveis para economizar espaço em disco e minimizar o uso de memória.
 
-Antes da versão 4.0, os tipos de Visual C++ suporte apenas para dois de DLLs que usavam o MFC: USRDLLs e AFXDLLs. DLLs MFC regulares vinculadas estaticamente ao MFC têm as mesmas características da antiga usrdll. DLLs de extensão MFC têm as mesmas características que o AFXDLLs antigo.
+Antes da versão 4.0, o Visual C++ só tem suporte a dois tipos de DLLs que usavam o MFC: USRDLLs e AFXDLLs. DLLs MFC regulares vinculadas estaticamente ao MFC têm as mesmas características da antiga usrdll. DLLs de extensão MFC têm as mesmas características que o AFXDLLs antigo.
 
 ### <a name="what-do-you-want-to-know-more-about"></a>Que mais você deseja saber?
 
@@ -65,7 +65,7 @@ Antes da versão 4.0, os tipos de Visual C++ suporte apenas para dois de DLLs qu
 
 - [DLLs MFC regulares vinculadas dinamicamente ao MFC](../build/regular-dlls-dynamically-linked-to-mfc.md)
 
-- [DLLs de extensão do MFC: visão geral](../build/extension-dlls-overview.md)
+- [DLLs de extensão de MFC: visão geral](../build/extension-dlls-overview.md)
 
 ## <a name="see-also"></a>Consulte também
 

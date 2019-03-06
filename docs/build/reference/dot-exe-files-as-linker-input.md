@@ -5,12 +5,12 @@ helpviewer_keywords:
 - executable files, as linker output
 - .exe files
 ms.assetid: 73714c30-6f03-4e72-881e-090e5240ba93
-ms.openlocfilehash: 6f80c3b44a3639c14571e282aa264ef0e1fd9d5f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f7a1d3197bbc0ff1990e579a33b56ce4e8f3ec9e
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50454880"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57418861"
 ---
 # <a name="exe-files-as-linker-input"></a>Arquivos .Exe como entrada de vinculador
 

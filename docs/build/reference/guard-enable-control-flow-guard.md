@@ -5,12 +5,12 @@ f1_keywords:
 - /guard
 - VC.Project.VCCLCompilerTool.ControlFlowGuard
 ms.assetid: be495323-f59f-4cf3-a6b6-8ee69e6a19dd
-ms.openlocfilehash: 8b15318ab7ae4233d6cf02a505ffe901bbe1d689
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1d79f4b20499d964d407af61fa498b4579b6794d
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50516051"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57424074"
 ---
 # <a name="guard-enable-control-flow-guard"></a>/guard (habilitar proteção do fluxo de controle)
 
@@ -26,7 +26,7 @@ Habilite a geração de compilador de verificações de segurança de proteção
 
 O **/Guard: CF** opção faz com que o compilador analisar o fluxo de controle para destinos de chamada indireta em tempo de compilação e, em seguida, inserir o código para verificar se os destinos em tempo de execução. Por padrão, **/Guard: CF** está desativado e deve ser habilitado explicitamente. Para desabilitar explicitamente essa opção, use **/guard:cf-**.
 
-**Visual Studio 2017 e posterior**: essa opção adiciona proteções para **alternar** instruções que geram saltar tabelas.
+**Visual Studio 2017 e posterior**: Essa opção adiciona proteções para **alternar** instruções que geram saltar tabelas.
 
 Quando o **/Guard: CF** opção de proteção de fluxo de controle (CFG) for especificada, o compilador e vinculador inserir verificações de segurança de tempo de execução extra para detectar tentativas de comprometer seu código. Durante a compilação e vinculação, todas as chamadas indiretas em seu código são analisadas para localizar todos os locais que o código pode acessar quando ele é executado corretamente. Essas informações são armazenadas em estruturas adicionais nos cabeçalhos de seus binários. O compilador também injeta uma verificação antes de cada chamada indireta em seu código que garante que o destino é um dos locais verificados. Se a verificação falhar em tempo de execução em um sistema operacional com suporte a CFG, o sistema operacional fecha o programa.
 

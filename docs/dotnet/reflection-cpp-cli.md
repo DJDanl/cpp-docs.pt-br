@@ -18,12 +18,12 @@ helpviewer_keywords:
 - data types [C++], enumerating
 - public members [C++]
 ms.assetid: 46b6ff4a-e441-4022-8892-78e69422f230
-ms.openlocfilehash: 9d7d2623608d7dab27de78567582c7043468e98f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 769ba87f64a8096ac8c7f14cc091119345177b3b
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50444012"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57426440"
 ---
 # <a name="reflection-ccli"></a>Reflexão (C++/CLI)
 
@@ -31,12 +31,12 @@ Reflexão permite que os tipos de dados conhecidos ser inspecionado em tempo de 
 
 Observe que o nome do assembly fornecido é o nome forte (consulte [criando e usando Assemblies nomes fortes](/dotnet/framework/app-domains/create-and-use-strong-named-assemblies)), que inclui a versão do assembly, cultura e informações de assinatura. Observe também que o nome do namespace no qual o tipo de dados é definido pode ser recuperado, junto com o nome da classe base.
 
-A maneira mais comum para acessar recursos de reflexão é por meio de <xref:System.Object.GetType%2A> método. Este método é fornecido por [System:: Object](https://msdn.microsoft.com/library/system.object.aspx), da qual derivam todas as classes de coleta de lixo.
+A maneira mais comum para acessar recursos de reflexão é por meio de <xref:System.Object.GetType%2A> método. Este método é fornecido por <xref:System.Object?displayProperty=nameWithType>, da qual derivam todas as classes de coleta de lixo.
 
 > [!NOTE]
 > Reflexão em um .exe criados com o compilador do Visual C++ só será permitido se o .exe baseia-se com o **/clr: pure** ou **/CLR: safe** opções do compilador. O **/clr: pure** e **/CLR: safe** opções do compilador são preteridos no Visual Studio 2015 e não está disponível no Visual Studio 2017. Ver [/clr (compilação de tempo de execução de linguagem comum)](../build/reference/clr-common-language-runtime-compilation.md) para obter mais informações.
 
-Para obter mais informações, consulte [Namespace System. Reflection](https://msdn.microsoft.com/library/system.reflection.aspx)
+Para obter mais informações, consulte <xref:System.Reflection>.
 
 ## <a name="example-gettype"></a>Exemplo: GetType
 
@@ -114,7 +114,7 @@ there are 3 options in enum 'Options'
 value of 'o' is Option2
 ```
 
-## <a name="example-gettype-members-and-properties"></a>Exemplo: GetType membros e propriedades
+## <a name="example-gettype-members-and-properties"></a>Exemplo: Propriedades e membros de GetType
 
 O `GetType` objeto dá suporte a um número de membros e propriedades que podem ser usadas para examinar um tipo. Esse código recupera e exibe algumas dessas informações:
 
@@ -177,9 +177,9 @@ public:
 
 ## <a name="example-inspection-of-assemblies"></a>Exemplo: inspeção de assemblies
 
-Se o código acima é compilado em uma DLL chamada vcpp_reflection_6.dll, você pode usar reflexão para inspecionar o conteúdo desse assembly. Isso envolve o uso a função de API de reflexão estática [Assembly::Load](https://msdn.microsoft.com/library/system.reflection.assembly.load.aspx) para carregar o assembly. Essa função retorna o endereço de um **Assembly** objeto que pode ser consultado, em seguida, sobre os módulos e tipos.
+Se o código acima é compilado em uma DLL chamada vcpp_reflection_6.dll, você pode usar reflexão para inspecionar o conteúdo desse assembly. Isso envolve o uso de reflexão estática API função xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType para carregar o assembly. Essa função retorna o endereço de um **Assembly** objeto que pode ser consultado, em seguida, sobre os módulos e tipos.
 
-Depois que o sistema de reflexão com êxito carrega o assembly, uma matriz de **tipo** objetos é recuperada com o [Assembly::GetTypes](https://msdn.microsoft.com/library/system.reflection.assembly.gettypes.aspx) função. Cada elemento da matriz contém informações sobre um tipo diferente, embora nesse caso, apenas uma classe é definida. Usando um loop, cada **tipo** nessa matriz é consultado sobre os membros de tipo usando o **Type::GetMembers** função. Essa função retorna uma matriz de **MethodInfo** objetos, cada objeto que contém informações sobre a função de membro, um membro de dados ou uma propriedade no tipo.
+Depois que o sistema de reflexão com êxito carrega o assembly, uma matriz de **tipo** objetos é recuperada com o <xref:System.Reflection.Assembly.GetTypes%2A?displayProperty=nameWithType> função. Cada elemento da matriz contém informações sobre um tipo diferente, embora nesse caso, apenas uma classe é definida. Usando um loop, cada **tipo** nessa matriz é consultado sobre os membros de tipo usando o **Type::GetMembers** função. Essa função retorna uma matriz de **MethodInfo** objetos, cada objeto que contém informações sobre a função de membro, um membro de dados ou uma propriedade no tipo.
 
 Observe que a lista de métodos inclui as funções explicitamente definidas em **TestClass** e as funções herdados implicitamente do **System:: Object** classe. Como parte do que está sendo descrito no .NET, em vez de na sintaxe do Visual C++, as propriedades aparecem como o membro de dados subjacente, acessado pelas funções de get/set. As funções get/set aparecem nessa lista como métodos regulares. Reflexão suporte por meio do common language runtime, não o compilador do Visual C++.
 
@@ -232,7 +232,7 @@ int main() {
 }
 ```
 
-## <a name="implement"></a> Como: implementar uma arquitetura de componente de plug-in usando a reflexão
+## <a name="implement"></a> Como: Implementar uma arquitetura de componente de plug-in usando a reflexão
 
 Os exemplos de código a seguir demonstram o uso da reflexão para implementar uma arquitetura de "plug-in" simples. A primeira listagem é o aplicativo e o segundo é o plug-in. O aplicativo é um formulário de vários documentos que popula a mesmo usando qualquer baseado em formulário das classes encontradas na DLL plug-in fornecido como um argumento de linha de comando.
 
@@ -340,7 +340,7 @@ protected:
 };
 ```
 
-## <a name="enumerate"></a> Como: enumerar tipos de dados em Assemblies usando reflexão
+## <a name="enumerate"></a> Como: Enumerar tipos de dados em Assemblies usando reflexão
 
 O código a seguir demonstra a enumeração dos tipos públicos e membros usando <xref:System.Reflection>.
 

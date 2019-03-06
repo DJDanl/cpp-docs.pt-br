@@ -1,19 +1,19 @@
 ---
-title: 'Como: configurar projetos do Visual C++ para ter como destino de 64 bits x64 plataformas'
+title: 'Como: Configurar projetos do Visual C++ para ter como destino de 64 bits x64 plataformas'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - platforms [C++], 64-bit
 - 64-bit programming [C++], configuring projects
 - project configurations [C++]
 ms.assetid: 2b9ae001-df36-4750-83b2-982145d632ad
-ms.openlocfilehash: c0c734648b084c3f58577cb56984e3ea003a6a8e
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 17255a5671880063f030ed0087c1fa839c5a14ef
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523931"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57421358"
 ---
-# <a name="how-to-configure-visual-c-projects-to-target-64-bit-x64-platforms"></a>Como: configurar projetos do Visual C++ para ter como destino de 64 bits x64 plataformas
+# <a name="how-to-configure-visual-c-projects-to-target-64-bit-x64-platforms"></a>Como: Configurar projetos do Visual C++ para ter como destino de 64 bits x64 plataformas
 
 Você pode usar as configurações do projeto no IDE do Visual Studio para configurar plataformas de aplicativos do C++ para ter como destino de 64 bits x64. Também é possível migrar as configurações de projeto do Win32 em uma configuração de projeto de 64 bits.
 
@@ -47,9 +47,9 @@ Você pode usar as configurações do projeto no IDE do Visual Studio para confi
 
   - **Registrar saída** é desativada. Para obter mais informações, consulte [páginas de propriedade do vinculador](../ide/linker-property-pages.md).
 
-  - **Ambiente de destino** é definido como **/env x64**. Para obter mais informações, consulte [páginas de propriedade MDL: geral](../ide/midl-property-pages-general.md).
+  - **Ambiente de destino** é definido como **/env x64**. Para obter mais informações, consulte [páginas de propriedade MIDL: Geral](../ide/midl-property-pages-general.md).
 
-  - **Validar parâmetros** é apagado e redefinido para o valor padrão. Para obter mais informações, consulte [páginas de propriedade MIDL: avançado](../ide/midl-property-pages-advanced.md).
+  - **Validar parâmetros** é apagado e redefinido para o valor padrão. Para obter mais informações, consulte [páginas de propriedade MIDL: Advanced](../ide/midl-property-pages-advanced.md).
 
   - Se **formato de informações de depuração** foi definida como **/ZI** na configuração do projeto do Win32, em seguida, ele é definido como **/Zi** na configuração do projeto de 64 bits. Para obter mais informações, consulte [/Z7, /Zd, /Zi, /ZI (formato de informação de depuração)](../build/reference/z7-zi-zi-debug-information-format.md).
 

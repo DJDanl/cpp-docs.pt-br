@@ -24,12 +24,12 @@ helpviewer_keywords:
 - files [C++], text
 - text files, writing in C++
 ms.assetid: 3296fd59-a83a-40d4-bd4a-6096cc13101b
-ms.openlocfilehash: 8f60ece05443393456693aba3bc674f52822432a
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 332e1d6d292e32dcf129b37c8c4a7857f0b5985f
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693471"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57424308"
 ---
 # <a name="file-handling-and-io-ccli"></a>Tratamento de arquivos e E/S (C++/CLI)
 
@@ -136,7 +136,7 @@ int main()
 
 O exemplo de código a seguir mostra como ler dados binários de um arquivo, usando duas classes a partir de <xref:System.IO?displayProperty=fullName> namespace: <xref:System.IO.FileStream> e <xref:System.IO.BinaryReader>. <xref:System.IO.FileStream> representa o arquivo real. <xref:System.IO.BinaryReader> Fornece uma interface para o fluxo que permite acesso binário.
 
-O exemplo de código lê um arquivo que foi chamado bin e contém números inteiros em formato binário. Para obter informações sobre esse tipo de arquivo, consulte [como: gravar um arquivo binário (C + + / CLI)](../dotnet/how-to-write-a-binary-file-cpp-cli.md).
+O exemplo de código lê um arquivo que foi chamado bin e contém números inteiros em formato binário. Para obter informações sobre esse tipo de arquivo, consulte [como: Escrever um arquivo binário (C + + / CLI)](../dotnet/how-to-write-a-binary-file-cpp-cli.md).
 
 ### <a name="example"></a>Exemplo
 
@@ -177,7 +177,7 @@ int main()
 
 O exemplo de código a seguir demonstra como abrir e ler um arquivo de texto uma linha por vez, usando o <xref:System.IO.StreamReader> classe que é definida no <xref:System.IO?displayProperty=fullName> namespace. Uma instância dessa classe é usada para abrir um arquivo de texto e, em seguida, o <xref:System.IO.StreamReader.ReadLine%2A?displayProperty=fullName> método é usado para recuperar cada linha.
 
-Este exemplo de código lê um arquivo que foi chamado textfile e contém o texto. Para obter informações sobre esse tipo de arquivo, consulte [como: gravar um arquivo de texto (C + + / CLI)](../dotnet/how-to-write-a-text-file-cpp-cli.md).
+Este exemplo de código lê um arquivo que foi chamado textfile e contém o texto. Para obter informações sobre esse tipo de arquivo, consulte [como: Gravar um arquivo de texto (C + + / CLI)](../dotnet/how-to-write-a-text-file-cpp-cli.md).
 
 ### <a name="example"></a>Exemplo
 
@@ -261,7 +261,7 @@ int main()
 
 O exemplo de código a seguir demonstra a gravação de dados binários em um arquivo. Duas classes do <xref:System.IO> namespace são usados: <xref:System.IO.FileStream> e <xref:System.IO.BinaryWriter>. <xref:System.IO.FileStream> representa o arquivo real, enquanto <xref:System.IO.BinaryWriter> fornece uma interface para o fluxo que permite acesso binário.
 
-O exemplo de código a seguir grava um arquivo que contém números inteiros em formato binário. Esse arquivo pode ser lida com o código na [como: ler um arquivo binário (C + + / CLI)](../dotnet/how-to-read-a-binary-file-cpp-cli.md).
+O exemplo de código a seguir grava um arquivo que contém números inteiros em formato binário. Esse arquivo pode ser lido com o código no [como: Ler um arquivo binário (C + + / CLI)](../dotnet/how-to-read-a-binary-file-cpp-cli.md).
 
 ### <a name="example"></a>Exemplo
 
@@ -338,4 +338,4 @@ int main()
 
 [E/S de arquivo e de fluxo](/dotnet/standard/io/index)
 
-[Namespace System.IO](https://msdn.microsoft.com/library/system.io.aspx)
+<xref:System.IO>

@@ -127,12 +127,12 @@ helpviewer_keywords:
 - SetStatus method
 - SetValue method
 ms.assetid: 374b13b7-1f09-457d-9e6b-df260ff4d178
-ms.openlocfilehash: 12953da220016c7f66e9a2f01b4b8860d2e508b8
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: a9e862e9df785a0986d9d75759de85c0c1448912
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51557018"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57423450"
 ---
 # <a name="cdynamicaccessor-class"></a>Classe CDynamicAccessor
 
@@ -156,7 +156,7 @@ class CDynamicAccessor : public CAccessorBase
 |-|-|
 |[AddBindEntry](#addbindentry)|Adiciona uma entrada de associação para as colunas de saída ao substituir o acessador padrão.|
 |[CDynamicAccessor](#cdynamicaccessor)|Cria uma instância e inicializa o `CDynamicAccessor` objeto.|
-|[Fechar](#close)|Desvincula todas as colunas, libera a memória alocada e libera o [IAccessor](https://docs.microsoft.com/previous-versions/windows/desktop/ms719672(v=vs.85)) ponteiro de interface na classe.|
+|[Fechar](#close)|Desvincula todas as colunas, libera a memória alocada e libera o [IAccessor](/previous-versions/windows/desktop/ms719672(v=vs.85)) ponteiro de interface na classe.|
 |[GetBlobHandling](#getblobhandling)|Recupera o BLOB de manipulação de valor para a linha atual.|
 |[GetBlobSizeLimit](#getblobsizelimit)|Recupera o tamanho máximo do BLOB em bytes.|
 |[GetBookmark](#getbookmark)|Recupera o indicador da linha atual.|
@@ -183,7 +183,7 @@ As informações de coluna são armazenadas em um buffer que é criado e gerenci
 
 Para obter uma discussão e exemplos de como usar as classes de acessador dinâmico, consulte [usando acessadores dinâmicos](../../data/oledb/using-dynamic-accessors.md).
 
-## <a name="addbindentry"></a> Cdynamicaccessor:: Addbindentry
+## <a name="addbindentry"></a> CDynamicAccessor::AddBindEntry
 
 Adiciona uma entrada de associação para as colunas de saída.
 
@@ -195,8 +195,8 @@ HRESULT AddBindEntry(const DBCOLUMNINFO& info) throw();
 
 #### <a name="parameters"></a>Parâmetros
 
-*Informações de*<br/>
-[in] Um `DBCOLUMNINFO` estrutura que contém informações de coluna. Consulte "Estruturas DBCOLUMNINFO" na [icolumnsinfo:: Getcolumninfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms722704(v=vs.85)) na *referência do programador do OLE DB*.
+*info*<br/>
+[in] Um `DBCOLUMNINFO` estrutura que contém informações de coluna. Consulte "Estruturas DBCOLUMNINFO" na [icolumnsinfo:: Getcolumninfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) na *referência do programador do OLE DB*.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -233,7 +233,7 @@ Você também pode especificar como `CDynamicAccessor` lida com os dados de colu
 
 ## <a name="close"></a> Cdynamicaccessor:: Close
 
-Desvincula todas as colunas, libera a memória alocada e libera o [IAccessor](https://docs.microsoft.com/previous-versions/windows/desktop/ms719672(v=vs.85)) ponteiro de interface na classe.
+Desvincula todas as colunas, libera a memória alocada e libera o [IAccessor](/previous-versions/windows/desktop/ms719672(v=vs.85)) ponteiro de interface na classe.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -241,7 +241,7 @@ Desvincula todas as colunas, libera a memória alocada e libera o [IAccessor](ht
 void Close() throw();
 ```
 
-## <a name="getblobhandling"></a> Cdynamicaccessor:: Getblobhandling
+## <a name="getblobhandling"></a> CDynamicAccessor::GetBlobHandling
 
 Recupera o BLOB de manipulação de valor para a linha atual.
 
@@ -255,7 +255,7 @@ const DBBLOBHANDLINGENUM GetBlobHandling() const;
 
 Retorna o valor de tratamento de BLOB *eBlobHandling* conforme definido por [SetBlobHandling](../../data/oledb/cdynamicaccessor-setblobhandling.md).
 
-## <a name="getblobsizelimit"></a> Cdynamicaccessor:: Getblobsizelimit
+## <a name="getblobsizelimit"></a> CDynamicAccessor::GetBlobSizeLimit
 
 Recupera o tamanho máximo do BLOB em bytes.
 
@@ -269,7 +269,7 @@ const DBLENGTH GetBlobSizeLimit() const;
 
 Retorna o valor de tratamento de BLOB *nBlobSize* conforme definido por [SetBlobSizeLimit](../../data/oledb/cdynamicaccessor-setblobsizelimit.md).
 
-## <a name="getbookmark"></a> Cdynamicaccessor:: Getbookmark
+## <a name="getbookmark"></a> CDynamicAccessor::GetBookmark
 
 Recupera o indicador da linha atual.
 
@@ -306,7 +306,7 @@ DBORDINAL GetColumnCount() const throw();
 
 O número de colunas recuperadas.
 
-## <a name="getcolumnflags"></a> Cdynamicaccessor:: Getcolumnflags
+## <a name="getcolumnflags"></a> CDynamicAccessor::GetColumnFlags
 
 Recupera as características da coluna.
 
@@ -323,7 +323,7 @@ bool GetColumnFlags(DBORDINAL nColumn,
 [in] O número da coluna. Os números de coluna começam com 1. Um valor de 0 refere-se para a coluna de indicador, se houver.
 
 *pFlags*<br/>
-[out] Um ponteiro para um bitmask que descreve as características da coluna. Consulte o "Tipo enumerado DBCOLUMNFLAGS" na [icolumnsinfo:: Getcolumninfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms722704(v=vs.85)) na *referência do programador do OLE DB*.
+[out] Um ponteiro para um bitmask que descreve as características da coluna. Consulte o "Tipo enumerado DBCOLUMNFLAGS" na [icolumnsinfo:: Getcolumninfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) na *referência do programador do OLE DB*.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -349,13 +349,13 @@ HRESULT GetColumnInfo(IRowset* pRowset,
 #### <a name="parameters"></a>Parâmetros
 
 *pRowset*<br/>
-[in] Um ponteiro para o [IRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms720986(v=vs.85)) interface.
+[in] Um ponteiro para o [IRowset](/previous-versions/windows/desktop/ms720986(v=vs.85)) interface.
 
 *pColumns*<br/>
 [out] Um ponteiro de memória no qual retornar o número de colunas no conjunto de linhas; Esse número inclui a coluna de indicador, se houver um.
 
 *ppColumnInfo*<br/>
-[out] Um ponteiro de memória no qual retornar uma matriz de `DBCOLUMNINFO` estruturas. Consulte "Estruturas DBCOLUMNINFO" na [icolumnsinfo:: Getcolumninfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms722704(v=vs.85)) na *referência do programador do OLE DB*.
+[out] Um ponteiro de memória no qual retornar uma matriz de `DBCOLUMNINFO` estruturas. Consulte "Estruturas DBCOLUMNINFO" na [icolumnsinfo:: Getcolumninfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) na *referência do programador do OLE DB*.
 
 *ppStringsBuffer*<br/>
 [out] Um ponteiro de memória no qual retornar um ponteiro para o armazenamento para todos os valores de cadeia de caracteres (nomes usados dentro *columnid* ou para *pwszName*) dentro de um único bloco de alocação.
@@ -366,9 +366,9 @@ Um dos valores HRESULT padrão.
 
 ### <a name="remarks"></a>Comentários
 
-Ver [icolumnsinfo:: Getcolumninfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms722704(v=vs.85)) na *referência do programador DB OLE* para obter informações sobre os tipos de dados `DBORDINAL`, `DBCOLUMNINFO`, e `OLECHAR`.
+Ver [icolumnsinfo:: Getcolumninfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) na *referência do programador DB OLE* para obter informações sobre os tipos de dados `DBORDINAL`, `DBCOLUMNINFO`, e `OLECHAR`.
 
-## <a name="getcolumnname"></a> Cdynamicaccessor:: Getcolumnname
+## <a name="getcolumnname"></a> CDynamicAccessor::GetColumnName
 
 Recupera o nome da coluna especificada.
 
@@ -403,14 +403,14 @@ bool GetColumnType(DBORDINAL nColumn,
 *nColumn*<br/>
 [in] O número da coluna. Os números de coluna começam com 1. Um valor de 0 refere-se para a coluna de indicador, se houver.
 
-*PDigite*<br/>
+*pType*<br/>
 [out] Um ponteiro para o tipo de dados da coluna especificada.
 
 ### <a name="return-value"></a>Valor de retorno
 
 Retorna **verdadeira** em caso de sucesso ou **falso** em caso de falha.
 
-## <a name="getlength"></a> Cdynamicaccessor:: GetLength
+## <a name="getlength"></a> CDynamicAccessor::GetLength
 
 Recupera o comprimento da coluna especificada.
 
@@ -446,7 +446,7 @@ Retorna **verdadeira** se a coluna especificada for encontrada. Caso contrário,
 
 A primeira substituição usa o número da coluna e as substituições de segunda e terceira aceitar o nome da coluna no formato ANSI ou Unicode, respectivamente.
 
-## <a name="getordinal"></a> Cdynamicaccessor:: Getordinal
+## <a name="getordinal"></a> CDynamicAccessor::GetOrdinal
 
 Recupera o número de coluna recebe um nome de coluna.
 
@@ -472,7 +472,7 @@ bool GetOrdinal(const WCHAR* pColumnName,
 
 Retorna **verdadeira** se uma coluna com o nome especificado for encontrada. Caso contrário, essa função retornará **falsos**.
 
-## <a name="getstatus"></a> Cdynamicaccessor:: getStatus
+## <a name="getstatus"></a> CDynamicAccessor::GetStatus
 
 Recupera o status da coluna especificada.
 
@@ -498,13 +498,13 @@ bool GetStatus(const WCHAR* pColumnName,
 [in] Um ponteiro para uma cadeia de caracteres que contém o nome da coluna.
 
 *pStatus*<br/>
-[out] Um ponteiro para a variável que contém o status da coluna. Ver [DBSTATUS](https://docs.microsoft.com/previous-versions/windows/desktop/ms722617(v=vs.85)) na *referência do programador DB OLE* para obter mais informações.
+[out] Um ponteiro para a variável que contém o status da coluna. Ver [DBSTATUS](/previous-versions/windows/desktop/ms722617(v=vs.85)) na *referência do programador DB OLE* para obter mais informações.
 
 ### <a name="return-value"></a>Valor de retorno
 
 Retorna **verdadeira** se a coluna especificada for encontrada. Caso contrário, essa função retornará **falsos**.
 
-## <a name="getvalue"></a> Cdynamicaccessor:: GetValue
+## <a name="getvalue"></a> CDynamicAccessor::GetValue
 
 Recupera os dados de uma coluna especificada.
 
@@ -553,7 +553,7 @@ Use as versões sem modelo para retornar colunas que contêm cadeias de caracter
 
 No modo de depuração, você obterá uma asserção se o tamanho de *pData* não for igual ao tamanho da coluna à qual ele aponta.
 
-## <a name="setblobhandling"></a> Cdynamicaccessor:: Setblobhandling
+## <a name="setblobhandling"></a> CDynamicAccessor::SetBlobHandling
 
 Define o BLOB de manipulação de valor para a linha atual.
 
@@ -580,7 +580,7 @@ Você deve chamar `SetBlobHandling` antes de chamar `Open`.
 
 O método de construtor [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) define o BLOB de manipulação de valor a ser DBBLOBHANDLING_DEFAULT.
 
-## <a name="setblobsizelimit"></a> Cdynamicaccessor:: Setblobsizelimit
+## <a name="setblobsizelimit"></a> CDynamicAccessor::SetBlobSizeLimit
 
 Define o tamanho máximo do BLOB em bytes.
 
@@ -601,7 +601,7 @@ Define o tamanho máximo do BLOB em bytes. dados de coluna maiores que esse valo
 
 O método de construtor [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) define o tamanho máximo do BLOB como um valor padrão de 8.000 bytes.
 
-## <a name="setlength"></a> Cdynamicaccessor:: SetLength
+## <a name="setlength"></a> CDynamicAccessor::SetLength
 
 Define o comprimento da coluna especificada.
 
@@ -633,7 +633,7 @@ bool SetLength(const WCHAR* pColumnName,
 
 Retorna **verdadeira** se o comprimento da coluna especificada for definido com êxito. Caso contrário, essa função retornará **falsos**.
 
-## <a name="setstatus"></a> Cdynamicaccessor:: SetStatus
+## <a name="setstatus"></a> CDynamicAccessor::SetStatus
 
 Define o status da coluna especificada.
 
@@ -656,7 +656,7 @@ bool SetStatus(const WCHAR* pColumnName,
 [in] O número da coluna. Os números de coluna começam com 1. Um valor de 0 refere-se para a coluna de indicador, se houver.
 
 *status*<br/>
-[in] O status da coluna. Ver [DBSTATUS](https://docs.microsoft.com/previous-versions/windows/desktop/ms722617(v=vs.85)) na *referência do programador DB OLE* para obter mais informações.
+[in] O status da coluna. Ver [DBSTATUS](/previous-versions/windows/desktop/ms722617(v=vs.85)) na *referência do programador DB OLE* para obter mais informações.
 
 *pColumnName*<br/>
 [in] Um ponteiro para uma cadeia de caracteres que contém o nome da coluna.
@@ -665,7 +665,7 @@ bool SetStatus(const WCHAR* pColumnName,
 
 Retorna **verdadeira** se o status de coluna especificada é definido com êxito. Caso contrário, essa função retornará **falsos**.
 
-## <a name="setvalue"></a> Cdynamicaccessor:: SetValue
+## <a name="setvalue"></a> CDynamicAccessor::SetValue
 
 Armazena dados para uma coluna especificada.
 

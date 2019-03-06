@@ -2,12 +2,12 @@
 title: Delegados (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: 3175bf1c-86d8-4eda-8d8f-c5b6753d8e38
-ms.openlocfilehash: 8153ac6ffc48b43fc218ee786cdb3f64504d825e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cb23c5d1ae35a56a827bc2436dbdd81b53dd1224
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50635234"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57415273"
 ---
 # <a name="delegates-ccx"></a>Delegados (C++/CX)
 
@@ -23,7 +23,7 @@ Delegados são mais comumente usados em conjunto com eventos. Um evento tem um t
 event PrimeFoundHandler^ primeFoundEvent;
 ```
 
-Ao declarar representantes que ficarão expostos aos clientes pela interface binária de aplicativo de tempo de execução do Windows, use [Windows::Foundation::TypedEventHandler\<TSender, TResult >](https://msdn.microsoft.com/library/windows/apps/br225997.aspx). Este representante possui proxy predefinido e binários stub que permitem seu consumo por clientes JavaScript.
+Ao declarar representantes que ficarão expostos aos clientes pela interface binária de aplicativo de tempo de execução do Windows, use [Windows::Foundation::TypedEventHandler\<TSender, TResult >](/uwp/api/windows.foundation.typedeventhandler). Este representante possui proxy predefinido e binários stub que permitem seu consumo por clientes JavaScript.
 
 ## <a name="consuming-delegates"></a>Consumindo delegados
 

@@ -1,5 +1,5 @@
 ---
-title: /X (ignorar demarcadores de inclusão padrão)
+title: /X (ignorar caminhos de inclusão padrão)
 ms.date: 11/04/2016
 f1_keywords:
 - /x
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - X compiler option
 - Ignore Standard Include Paths compiler option
 ms.assetid: 16bdf2cc-c8dc-46e4-bdcc-f3caeba5e1ef
-ms.openlocfilehash: 23942803ae0a25aaddd7f5844b303528c2c7ccb9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 615a53a7ad29527187072c3131f551a76bd18969
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50663756"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57421357"
 ---
-# <a name="x-ignore-standard-include-paths"></a>/X (ignorar demarcadores de inclusão padrão)
+# <a name="x-ignore-standard-include-paths"></a>/X (ignorar caminhos de inclusão padrão)
 
 Impede que o compilador procurar pelos arquivos de inclusão em diretórios especificados nas variáveis de ambiente PATH e INCLUDE.
 
