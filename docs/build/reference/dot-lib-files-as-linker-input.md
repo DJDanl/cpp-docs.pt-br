@@ -14,12 +14,12 @@ helpviewer_keywords:
 - defaults [C++], libraries
 - .lib files
 ms.assetid: dc5d2b1c-2487-41fa-aa71-ad1e0647958b
-ms.openlocfilehash: 0bf791d682b66d9d0da968fb0bfd5229e912e84c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f3b2ae0d82e682cc89243b7b527ee6e0b51d4c3d
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505334"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57426765"
 ---
 # <a name="lib-files-as-linker-input"></a>Arquivos .Lib como entrada de vinculador
 
@@ -37,7 +37,7 @@ Uma biblioteca é especificada para LINK como um argumento de nome de arquivo ou
 
 ## <a name="to-programmatically-add-lib-files-as-linker-input"></a>Para adicionar programaticamente arquivos. lib como entrada de vinculador
 
-- Ver [AdditionalDependencies](https://msdn.microsoft.com/library/microsoft.visualstudio.vcprojectengine.vclinkertool.additionaldependencies.aspx).
+- Ver [AdditionalDependencies](/dotnet/api/microsoft.visualstudio.vcprojectengine.vclinkertool.additionaldependencies).
 
 ## <a name="example"></a>Exemplo
 
