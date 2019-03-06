@@ -1,19 +1,19 @@
 ---
-title: Como adicionar uma etapa de build personalizada a projetos MSBuild
+title: 'Como: Adicionar uma etapa de compilação personalizada a projetos MSBuild'
 ms.date: 11/04/2016
 f1_keywords:
 - msbuild.cpp.howto.addcustombuildstep
 helpviewer_keywords:
 - 'msbuild (c++), howto: add a custom build step'
 ms.assetid: a20a0c47-4df4-4754-a1f0-a94a99958916
-ms.openlocfilehash: 7b169bfc6668fc284b45554d08d68880967a7de1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 57b7636c58a245bfea3a71dfb6aa7ee853329f19
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50610971"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413219"
 ---
-# <a name="how-to-add-a-custom-build-step-to-msbuild-projects"></a>Como adicionar uma etapa de build personalizada a projetos MSBuild
+# <a name="how-to-add-a-custom-build-step-to-msbuild-projects"></a>Como: Adicionar uma etapa de compilação personalizada a projetos MSBuild
 
 Uma etapa de compilação personalizada é uma etapa definidos pelo usuário em uma compilação. Uma etapa de compilação personalizada se comporta como qualquer outro *ferramenta de comando* etapa, como a etapa de ferramenta de compilação ou de link padrão.
 
@@ -27,7 +27,7 @@ Etapas de compilação personalizada e ferramentas de build personalizadas compa
 
 ### <a name="to-define-what-is-executed-by-the-custom-build-step"></a>Para definir o que é executado pela etapa de compilação personalizada
 
-1. Adicione um grupo de propriedades para o arquivo de projeto. Nesse grupo de propriedade, especifique o comando, suas entradas e saídas e uma mensagem, conforme mostrado no exemplo a seguir. Este exemplo cria um arquivo. cab do arquivo cpp criado na [instruções passo a passo: usando o MSBuild para criar um projeto do Visual C++](../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md).
+1. Adicione um grupo de propriedades para o arquivo de projeto. Nesse grupo de propriedade, especifique o comando, suas entradas e saídas e uma mensagem, conforme mostrado no exemplo a seguir. Este exemplo cria um arquivo. cab do arquivo cpp criado no [passo a passo: Usando MSBuild para criar um projeto do Visual C++](../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md).
 
     ```
     <ItemDefinitionGroup>
@@ -52,6 +52,6 @@ Etapas de compilação personalizada e ferramentas de build personalizadas compa
 
 ## <a name="see-also"></a>Consulte também
 
-[Instruções passo a passo: usando MSBuild para criar um projeto do Visual C++](../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)<br/>
-[Como usar eventos de build em projetos do MSBuild](../build/how-to-use-build-events-in-msbuild-projects.md)<br/>
-[Como adicionar ferramentas de build personalizadas a projetos MSBuild](../build/how-to-add-custom-build-tools-to-msbuild-projects.md)
+[Passo a passo: Usando o MSBuild para criar um projeto em Visual C++](../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)<br/>
+[Como: Usar eventos de build em projetos do MSBuild](../build/how-to-use-build-events-in-msbuild-projects.md)<br/>
+[Como: Adicionar ferramentas personalizadas de build a projetos do MSBuild](../build/how-to-add-custom-build-tools-to-msbuild-projects.md)

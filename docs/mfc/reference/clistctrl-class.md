@@ -264,12 +264,12 @@ helpviewer_keywords:
 - CListCtrl [MFC], SubItemHitTest
 - CListCtrl [MFC], Update
 ms.assetid: fe08a1ca-4b05-4ff7-a12a-ee4c765a2197
-ms.openlocfilehash: 850c16420606452414cbe284c5f9f25031859c93
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: fdfc0888e7d6213fb7c04a5257358da8f5dae138
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304516"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57425088"
 ---
 # <a name="clistctrl-class"></a>Classe CListCtrl
 
@@ -619,7 +619,7 @@ virtual BOOL Create(
 Especifica o estilo do controle de lista. Aplica qualquer combinação de estilos de controle de lista para o controle. Ver [estilos de janela de exibição de lista](/windows/desktop/Controls/list-view-window-styles) no SDK do Windows para obter uma lista completa desses estilos. Conjunto de estilos específicos para um controle usando estendidos [SetExtendedStyle](#setextendedstyle).
 
 *rect*<br/>
-Especifica o tamanho e a posição do controle de lista. Ela pode ser um `CRect` objeto ou uma [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura.
+Especifica o tamanho e a posição do controle de lista. Ela pode ser um `CRect` objeto ou uma [RECT](/previous-versions/dd162897\(v=vs.85\)) estrutura.
 
 *pParentWnd*<br/>
 Especifica a janela do pai do controle de lista, geralmente um `CDialog`. Ele não deve ser NULL.
@@ -667,7 +667,7 @@ Especifica o estilo estendido do controle que está sendo criado. Para obter uma
 Especifica o estilo do controle de lista. Aplica qualquer combinação de estilos de controle de lista para o controle. Para obter uma lista completa desses estilos, consulte [estilos de janela de exibição de lista](/windows/desktop/Controls/list-view-window-styles) no SDK do Windows.
 
 *rect*<br/>
-Uma referência a um [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura que descreve o tamanho e posição da janela a ser criado, em coordenadas do cliente do *pParentWnd*.
+Uma referência a um [RECT](/previous-versions/dd162897\(v=vs.85\)) estrutura que descreve o tamanho e posição da janela a ser criado, em coordenadas do cliente do *pParentWnd*.
 
 *pParentWnd*<br/>
 Um ponteiro para a janela que é o pai do controle.
@@ -701,7 +701,7 @@ CImageList* CreateDragImage(
 Índice do item cuja lista de imagens de arrastar deve ser criado.
 
 *lpPoint*<br/>
-Endereço de uma [ponto](https://msdn.microsoft.com/library/windows/desktop/dd162805) coordena a estrutura que recebe o local inicial do canto superior esquerdo da imagem, no modo de exibição.
+Endereço de uma [ponto](/previous-versions/dd162805\(v=vs.85\)) coordena a estrutura que recebe o local inicial do canto superior esquerdo da imagem, no modo de exibição.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -1442,7 +1442,7 @@ BOOL GetGroupRect(
 |Parâmetro|Descrição|
 |---------------|-----------------|
 |*iGroupId*|[in] Especifica um grupo.|
-|*lpRect*|[no, out] Ponteiro para um [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura. Se esse método for bem-sucedido, a estrutura recebe as coordenadas do retângulo do grupo especificado por *iGroupId*.|
+|*lpRect*|[no, out] Ponteiro para um [RECT](/previous-versions/dd162897\(v=vs.85\)) estrutura. Se esse método for bem-sucedido, a estrutura recebe as coordenadas do retângulo do grupo especificado por *iGroupId*.|
 |*iCoords*|[in] Especifica as coordenadas do retângulo para recuperar. Use um destes valores:<br /><br /> -LVGGR_GROUP - coordenadas (padrão) de todo o grupo expandido.<br />-LVGGR_HEADER - coordenadas de apenas o cabeçalho (grupo recolhido).<br />-LVGGR_SUBSETLINK - coordenadas do somente o link de subconjunto (subconjunto de marcação).|
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1451,7 +1451,7 @@ TRUE se esse método for bem-sucedida; Caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-O chamador é responsável por alocar o [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura apontada pela *pRect* parâmetro.
+O chamador é responsável por alocar o [RECT](/previous-versions/dd162897\(v=vs.85\)) estrutura apontada pela *pRect* parâmetro.
 
 Esse método envia o [LVM_GETGROUPRECT](/windows/desktop/Controls/lvm-getgrouprect) mensagem, que é descrita no SDK do Windows.
 
@@ -1790,7 +1790,7 @@ BOOL GetItemIndexRect(
 |*pItemIndex*|[in] Ponteiro para um [LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762) estrutura para o item pai do subitem.<br /><br /> O chamador é responsável por alocar e definir os membros de [LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762) estrutura. Esse parâmetro não pode ser NULL.|
 |*iColumn*|[in] Índice baseado em zero de uma coluna no controle.|
 |*rectType*|[in] Parte do subitem de exibição de lista para o qual o retângulo delimitador é recuperado. Especifique um dos seguintes valores:<br /><br /> LVIR_BOUNDS - retorna o retângulo delimitador do subitem inteiro, incluindo o ícone e o rótulo.<br /><br /> LVIR_ICON - retorna o retângulo delimitador do ícone ou ícone pequeno do subitem.<br /><br /> LVIR_LABEL - retorna o retângulo delimitador do texto do subitem.|
-|*pRect*|[out] Ponteiro para um [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura que recebe informações sobre o retângulo delimitador do subitem.<br /><br /> O chamador é responsável por alocar o [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura. Esse parâmetro não pode ser NULL.|
+|*pRect*|[out] Ponteiro para um [RECT](/previous-versions/dd162897\(v=vs.85\)) estrutura que recebe informações sobre o retângulo delimitador do subitem.<br /><br /> O chamador é responsável por alocar o [RECT](/previous-versions/dd162897\(v=vs.85\)) estrutura. Esse parâmetro não pode ser NULL.|
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -1844,7 +1844,7 @@ BOOL GetItemPosition(
 O índice do item cuja posição deve ser recuperado.
 
 *lpPoint*<br/>
-Endereço de uma [ponto](https://msdn.microsoft.com/library/windows/desktop/dd162805) coordena a estrutura que recebe a posição do canto superior esquerdo do item, no modo de exibição.
+Endereço de uma [ponto](/previous-versions/dd162805\(v=vs.85\)) coordena a estrutura que recebe a posição do canto superior esquerdo do item, no modo de exibição.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -1883,7 +1883,7 @@ BOOL GetItemRect(
 O índice do item cuja posição deve ser recuperado.
 
 *lpRect*<br/>
-Endereço de uma [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura que recebe o retângulo delimitador.
+Endereço de uma [RECT](/previous-versions/dd162897\(v=vs.85\)) estrutura que recebe o retângulo delimitador.
 
 *nCode*<br/>
 Parte do item de exibição de lista para o qual recuperar o retângulo delimitador. Ele pode ser um destes valores:
@@ -2220,7 +2220,7 @@ BOOL GetOrigin(LPPOINT lpPoint) const;
 ### <a name="parameters"></a>Parâmetros
 
 *lpPoint*<br/>
-Endereço de uma [ponto](https://msdn.microsoft.com/library/windows/desktop/dd162805) estrutura que recebe a origem de modo de exibição.
+Endereço de uma [ponto](/previous-versions/dd162805\(v=vs.85\)) estrutura que recebe a origem de modo de exibição.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -2531,7 +2531,7 @@ BOOL GetViewRect(LPRECT lpRect) const;
 ### <a name="parameters"></a>Parâmetros
 
 *lpRect*<br/>
-Endereço de uma [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura.
+Endereço de uma [RECT](/previous-versions/dd162897\(v=vs.85\)) estrutura.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -2834,7 +2834,7 @@ int InsertMarkHitTest(
 ### <a name="parameters"></a>Parâmetros
 
 *pPoint*<br/>
-Um ponteiro para um [ponto](https://msdn.microsoft.com/library/windows/desktop/dd162805) coordena a estrutura que contém o teste de clique, em relação à área de cliente do controle de lista.
+Um ponteiro para um [ponto](/previous-versions/dd162805\(v=vs.85\)) coordena a estrutura que contém o teste de clique, em relação à área de cliente do controle de lista.
 
 *lvim*<br/>
 Um ponteiro para um [LVINSERTMARK](/windows/desktop/api/commctrl/ns-commctrl-lvinsertmark) estrutura que especifica o ponto de inserção mais próximo às coordenadas definidas pelo parâmetro de ponto.
@@ -3854,7 +3854,7 @@ BOOL SetItemPosition(
 Índice do item cuja posição deve ser definido.
 
 *pt*<br/>
-Um [ponto](https://msdn.microsoft.com/library/windows/desktop/dd162805) especificando a nova posição no modo de exibição de estrutura as coordenadas do canto superior esquerdo do item.
+Um [ponto](/previous-versions/dd162805\(v=vs.85\)) especificando a nova posição no modo de exibição de estrutura as coordenadas do canto superior esquerdo do item.
 
 ### <a name="return-value"></a>Valor de retorno
 

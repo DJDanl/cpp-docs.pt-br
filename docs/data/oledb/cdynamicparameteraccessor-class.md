@@ -90,12 +90,12 @@ helpviewer_keywords:
 - SetParamStatus method
 - SetParamString method
 ms.assetid: 5f22626e-e80d-491f-8b3b-cedc50331960
-ms.openlocfilehash: c2cc67e6e837844356a071aa362dcca85eca24e4
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: a655d95cf165ab2c5cba3a391b81d6f420f8322f
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556966"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57418510"
 ---
 # <a name="cdynamicparameteraccessor-class"></a>Classe CDynamicParameterAccessor
 
@@ -139,7 +139,7 @@ As informações de parâmetro são armazenadas em um buffer criadas e gerenciad
 
 Para obter um exemplo que demonstra como usar essa classe para executar um procedimento armazenado do SQL Server e obter os valores de parâmetro de saída, consulte o [DynamicConsumer](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/DynamicConsumer) códigos de exemplo de [VCSamples Microsoft](https://github.com/Microsoft/VCSamples) repositório do GitHub.
 
-## <a name="cdynamicparameteraccessor"></a> Cdynamicparameteraccessor:: Cdynamicparameteraccessor
+## <a name="cdynamicparameteraccessor"></a> CDynamicParameterAccessor::CDynamicParameterAccessor
 
 O construtor.
 
@@ -165,7 +165,7 @@ O tamanho máximo do BLOB em bytes. dados da coluna sobre esse valor são tratad
 
 Consulte a [cdynamicaccessor:: Cdynamicaccessor](../../data/oledb/cdynamicaccessor-cdynamicaccessor.md) construtor para obter mais informações sobre manipulação de BLOBs.
 
-## <a name="getparam"></a> Cdynamicparameteraccessor:: Getparam
+## <a name="getparam"></a> CDynamicParameterAccessor::GetParam
 
 Recupera os dados de não cadeia de caracteres para um parâmetro especificado do buffer de parâmetro.
 
@@ -203,7 +203,7 @@ Para versões sem modelo, aponta para a memória que contém os dados recuperado
 
 Use `GetParam` para recuperar dados de parâmetro de não cadeia de caracteres do buffer. Use [GetParamString](../../data/oledb/cdynamicparameteraccessor-getparamstring.md) para recuperar dados de parâmetro de cadeia de caracteres do buffer.
 
-## <a name="getparamcount"></a> Cdynamicparameteraccessor:: Getparamcount
+## <a name="getparamcount"></a> CDynamicParameterAccessor::GetParamCount
 
 Recupera o número de parâmetros armazenados no buffer.
 
@@ -217,7 +217,7 @@ DB_UPARAMS GetParamCount() const throw();
 
 O número de parâmetros.
 
-## <a name="getparamio"></a> Cdynamicparameteraccessor:: Getparamio
+## <a name="getparamio"></a> CDynamicParameterAccessor::GetParamIO
 
 Determina se o parâmetro especificado é um parâmetro de entrada ou saído.
 
@@ -250,7 +250,7 @@ enum DBPARAMIOENUM {
 
 Retorna **verdadeira** em caso de sucesso ou **falso** em caso de falha.
 
-## <a name="getparamlength"></a> Cdynamicparameteraccessor:: Getparamlength
+## <a name="getparamlength"></a> CDynamicParameterAccessor::GetParamLength
 
 Recupera o comprimento do parâmetro especificado armazenado no buffer.
 
@@ -275,7 +275,7 @@ DBLENGTH* GetParamLength(DBORDINAL nParam) const throw();
 
 A primeira substituição retorna **verdadeira** em caso de sucesso ou **falso** em caso de falha. A segunda substituição aponta para a memória que contém o comprimento do parâmetro.
 
-## <a name="getparamname"></a> Cdynamicparameteraccessor:: Getparamname
+## <a name="getparamname"></a> CDynamicParameterAccessor::GetParamName
 
 Recupera o nome do parâmetro especificado.
 
@@ -294,7 +294,7 @@ LPOLESTR GetParamName(DBORDINAL nParam) const throw();
 
 O nome do parâmetro especificado.
 
-## <a name="getparamstatus"></a> Cdynamicparameteraccessor:: Getparamstatus
+## <a name="getparamstatus"></a> CDynamicParameterAccessor::GetParamStatus
 
 Recupera o status do parâmetro especificado armazenado no buffer.
 
@@ -313,13 +313,13 @@ DBSTATUS* GetParamStatus(DBORDINAL nParam) const throw();
 [in] O número do parâmetro (deslocamento de 1). O parâmetro 0 é reservado para valores de retorno. O número do parâmetro é o índice do parâmetro com base em sua ordem no SQL ou chamada de procedimento armazenado. Ver [SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) para obter um exemplo.
 
 *pStatus*<br/>
-[out] Um ponteiro para a variável que contém o status DBSTATUS do parâmetro especificado. Para obter informações sobre valores DBSTATUS, consulte [Status](https://docs.microsoft.com/previous-versions/windows/desktop/ms722617(v=vs.85)) na *referência do programador DB OLE*, ou procurar DBSTATUS no OLEDB.
+[out] Um ponteiro para a variável que contém o status DBSTATUS do parâmetro especificado. Para obter informações sobre valores DBSTATUS, consulte [Status](/previous-versions/windows/desktop/ms722617(v=vs.85)) na *referência do programador DB OLE*, ou procurar DBSTATUS no OLEDB.
 
 ### <a name="remarks"></a>Comentários
 
 A primeira substituição retorna **verdadeira** em caso de sucesso ou **falso** em caso de falha. A segunda substituição aponta para a memória que contém o status do parâmetro especificado.
 
-## <a name="getparamstring"></a> Cdynamicparameteraccessor:: Getparamstring
+## <a name="getparamstring"></a> CDynamicParameterAccessor::GetParamString
 
 Recupera os dados de cadeia de caracteres do parâmetro especificado armazenado no buffer.
 
@@ -367,7 +367,7 @@ Esse método irá falhar se o buffer *pBuffer* não é grande o suficiente para 
 
 Use `GetParamString` para recuperar dados de parâmetro de cadeia de caracteres do buffer. Use [GetParam](../../data/oledb/cdynamicparameteraccessor-getparam.md) para recuperar dados de parâmetro de não cadeia de caracteres do buffer.
 
-## <a name="getparamtype"></a> Cdynamicparameteraccessor:: Getparamtype
+## <a name="getparamtype"></a> CDynamicParameterAccessor::GetParamType
 
 Recupera o tipo de dados de um parâmetro especificado.
 
@@ -383,14 +383,14 @@ bool GetParamType(DBORDINAL nParam,
 *nParam*<br/>
 [in] O número do parâmetro (deslocamento de 1). O parâmetro 0 é reservado para valores de retorno. O número do parâmetro é o índice do parâmetro com base em sua ordem no SQL ou chamada de procedimento armazenado. Ver [SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) para obter um exemplo.
 
-*PDigite*<br/>
+*pType*<br/>
 [out] Um ponteiro para a variável que contém o tipo de dados do parâmetro especificado.
 
 ### <a name="return-value"></a>Valor de retorno
 
 Retorna **verdadeira** em caso de sucesso ou **falso** em caso de falha.
 
-## <a name="setparam"></a> Cdynamicparameteraccessor:: SetParam
+## <a name="setparam"></a> CDynamicParameterAccessor::SetParam
 
 Define o buffer de parâmetro usando os dados (não-cadeia de caracteres) especificados.
 
@@ -425,7 +425,7 @@ Um parâmetro de modelo que é o tipo de dados.
 [in] O ponteiro para a memória que contém os dados a serem gravados no buffer.
 
 *status*<br/>
-[in] O status da coluna DBSTATUS. Para obter informações sobre valores DBSTATUS, consulte [Status](https://docs.microsoft.com/previous-versions/windows/desktop/ms722617(v=vs.85)) na *referência do programador DB OLE*, ou procurar DBSTATUS no OLEDB.
+[in] O status da coluna DBSTATUS. Para obter informações sobre valores DBSTATUS, consulte [Status](/previous-versions/windows/desktop/ms722617(v=vs.85)) na *referência do programador DB OLE*, ou procurar DBSTATUS no OLEDB.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -433,7 +433,7 @@ Retorna **verdadeira** em caso de sucesso ou **falso** em caso de falha.
 
 Use `SetParam` para definir dados de parâmetro de não cadeia de caracteres no buffer. Use [SetParamString](../../data/oledb/cdynamicparameteraccessor-setparamstring.md) para definir dados de parâmetro de cadeia de caracteres no buffer.
 
-## <a name="setparamlength"></a> Cdynamicparameteraccessor:: Setparamlength
+## <a name="setparamlength"></a> CDynamicParameterAccessor::SetParamLength
 
 Define o comprimento do parâmetro especificado armazenado no buffer.
 
@@ -456,7 +456,7 @@ bool SetParamLength(DBORDINAL nParam,
 
 Retorna **verdadeira** em caso de sucesso ou **falso** em caso de falha.
 
-## <a name="setparamstatus"></a> Cdynamicparameteraccessor:: Setparamstatus
+## <a name="setparamstatus"></a> CDynamicParameterAccessor::SetParamStatus
 
 Define o status do parâmetro especificado armazenado no buffer.
 
@@ -473,13 +473,13 @@ bool SetParamStatus(DBORDINAL nParam,
 [in] O número do parâmetro (deslocamento de 1). O parâmetro 0 é reservado para valores de retorno. O número do parâmetro é o índice do parâmetro com base em sua ordem no SQL ou chamada de procedimento armazenado. Ver [SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) para obter um exemplo.
 
 *status*<br/>
-[in] O status DBSTATUS do parâmetro especificado. Para obter informações sobre valores DBSTATUS, consulte [Status](https://docs.microsoft.com/previous-versions/windows/desktop/ms722617(v=vs.85)) na *referência do programador DB OLE*, ou procurar DBSTATUS no OLEDB.
+[in] O status DBSTATUS do parâmetro especificado. Para obter informações sobre valores DBSTATUS, consulte [Status](/previous-versions/windows/desktop/ms722617(v=vs.85)) na *referência do programador DB OLE*, ou procurar DBSTATUS no OLEDB.
 
 ### <a name="remarks"></a>Comentários
 
 Retorna **verdadeira** em caso de sucesso ou **falso** em caso de falha.
 
-## <a name="setparamstring"></a> Cdynamicparameteraccessor:: Setparamstring
+## <a name="setparamstring"></a> CDynamicParameterAccessor::SetParamString
 
 Define os dados de cadeia de caracteres do parâmetro especificado armazenado no buffer.
 
@@ -502,7 +502,7 @@ bool SetParamString(DBORDINAL nParam,
 [in] Um ponteiro para o ANSI (**CHAR**) ou Unicode (**WCHAR**) dados do parâmetro especificado da cadeia de caracteres. Consulte DBSTATUS OLEDB.
 
 *status*<br/>
-[in] O status DBSTATUS do parâmetro especificado. Para obter informações sobre valores DBSTATUS, consulte [Status](https://docs.microsoft.com/previous-versions/windows/desktop/ms722617(v=vs.85)) na *referência do programador DB OLE*, ou procurar DBSTATUS no OLEDB.
+[in] O status DBSTATUS do parâmetro especificado. Para obter informações sobre valores DBSTATUS, consulte [Status](/previous-versions/windows/desktop/ms722617(v=vs.85)) na *referência do programador DB OLE*, ou procurar DBSTATUS no OLEDB.
 
 ### <a name="remarks"></a>Comentários
 

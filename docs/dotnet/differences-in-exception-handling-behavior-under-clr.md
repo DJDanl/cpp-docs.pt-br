@@ -5,12 +5,12 @@ helpviewer_keywords:
 - EXCEPTION_CONTINUE_EXECUTION macro
 - set_se_translator function
 ms.assetid: 2e7e8daf-d019-44b0-a51c-62d7aaa89104
-ms.openlocfilehash: 4898ff7893ec327495e757f2ffa0eb37ae051875
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fea928fc293ef916d560e51ecb27aee452b6a4c3
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50551327"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57414623"
 ---
 # <a name="differences-in-exception-handling-behavior-under-clr"></a>Diferenças no comportamento do tratamento de exceções em /CLR
 
@@ -97,7 +97,7 @@ We should execute this handler if compiled to native
 
 ##  <a name="vccondisassociatedrethrows"></a> Lança novamente desassociado
 
-**/CLR** não oferece suporte a relançar uma exceção fora de um manipulador catch (conhecido como um rethrow desassociado). Exceções desse tipo são tratadas como um rethrow C++ padrão. Se um rethrow desassociado for encontrado quando há uma exceção gerenciada Active Directory, a exceção é empacotada como uma exceção de C++ e, em seguida, gerada novamente. Exceções desse tipo só podem ser capturadas como uma exceção do tipo [System::SEHException](https://msdn.microsoft.com/library/system.runtime.interopservices.sehexception.aspx).
+**/CLR** não oferece suporte a relançar uma exceção fora de um manipulador catch (conhecido como um rethrow desassociado). Exceções desse tipo são tratadas como um rethrow C++ padrão. Se um rethrow desassociado for encontrado quando há uma exceção gerenciada Active Directory, a exceção é empacotada como uma exceção de C++ e, em seguida, gerada novamente. Exceções desse tipo só podem ser capturadas como uma exceção do tipo <xref:System.Runtime.InteropServices.SEHException>.
 
 O exemplo a seguir demonstra uma exceção gerenciada lançada novamente como uma exceção de C++:
 
@@ -278,5 +278,5 @@ Caught an SEH exception with exception code: e0000101
 ## <a name="see-also"></a>Consulte também
 
 [Tratamento de Exceção](../windows/exception-handling-cpp-component-extensions.md)<br/>
-[Safe_cast](../windows/safe-cast-cpp-component-extensions.md)<br/>
+[safe_cast](../windows/safe-cast-cpp-component-extensions.md)<br/>
 [Tratamento de Exceção](../cpp/exception-handling-in-visual-cpp.md)

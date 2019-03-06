@@ -5,12 +5,12 @@ ms.topic: reference
 f1_keywords:
 - collection/Platform::Collections::UnorderedMap
 ms.assetid: dc84f261-b13c-4c0a-9b57-30dcb9e3065e
-ms.openlocfilehash: d3e6069f4bf7b0c23d5db5844821524ee80589da
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7790b363ef3f30b0ad0602568190ab443a2c1401
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50648325"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57423606"
 ---
 # <a name="platformcollectionsunorderedmap-class"></a>Classe Platform::Collections::UnorderedMap
 
@@ -75,7 +75,7 @@ Para obter mais informações, consulte [coleções](../cppcx/collections-c-cx.m
 |[UnorderedMap::Insert](#insert)|Adiciona os pares chave-valor especificados ao objeto Map atual.|
 |[UnorderedMap::Lookup](#lookup)|Recupera o elemento na chave especificada no objeto Map atual.|
 |[UnorderedMap::Remove](#remove)|Exclui os pares chave-valor especificados do objeto Map atual.|
-|[Unorderedmap:: Size](#size)|Retorna o número de elementos no objeto Map atual.|
+|[UnorderedMap::Size](#size)|Retorna o número de elementos no objeto Map atual.|
 
 ### <a name="events"></a>Eventos
 
@@ -106,7 +106,7 @@ virtual void Clear();
 
 ## <a name="first"></a>  Método unorderedmap:: First
 
-Retorna um iterador que especifica o primeiro [ikeyvaluepair\<K, V >](https://msdn.microsoft.com/library/windows/apps/br226031.aspx) elemento no mapa não ordenado.
+Retorna um iterador que especifica o primeiro [ikeyvaluepair\<K, V >](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_) elemento no mapa não ordenado.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -217,7 +217,7 @@ event Windows::Foundation::Collections::MapChangedEventHandler<K,V>^ MapChanged;
 
 ### <a name="property-valuereturn-value"></a>Valor da propriedade/valor de retorno
 
-Um [MapChangedEventHandler\<K, V >](/uwp/api/windows.foundation.collections.mapchangedeventhandler) que contém informações sobre o objeto que gerou o evento e o tipo de alteração que ocorreu. Consulte também [IMapChangedEventArgs\<K >](https://msdn.microsoft.com/library/windows/apps/br226034.aspx) e [CollectionChange Enumeration](https://msdn.microsoft.com/library/windows/apps/windows.foundation.collections.collectionchange.aspx).
+Um [MapChangedEventHandler\<K, V >](/uwp/api/windows.foundation.collections.mapchangedeventhandler) que contém informações sobre o objeto que gerou o evento e o tipo de alteração que ocorreu. Consulte também [IMapChangedEventArgs\<K >](/uwp/api/Windows.Foundation.Collections.IMapChangedEventArgs_K_) e [CollectionChange Enumeration](/uwp/api/windows.foundation.collections.collectionchange).
 
 ## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework
 
@@ -241,7 +241,7 @@ A porção de chave do par chave-valor. O tipo de *chave* é o typename *K*.
 
 ## <a name="size"></a>  Método unorderedmap:: Size
 
-Retorna o número de [ikeyvaluepair\<K, V >](https://msdn.microsoft.com/library/windows/apps/br226031.aspx) elementos em UnorderedMap.
+Retorna o número de [ikeyvaluepair\<K, V >](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_) elementos em UnorderedMap.
 
 ### <a name="syntax"></a>Sintaxe
 

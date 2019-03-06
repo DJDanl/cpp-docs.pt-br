@@ -33,12 +33,12 @@ helpviewer_keywords:
 - SetGUID method
 - AddProperty method
 ms.assetid: 54190149-c277-4679-b81a-ef484d4d1c00
-ms.openlocfilehash: 4b71fc43c3766f9a039d841b8872dee99210fe8c
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 01b9012a2b32c22b86968b1ea0895bdc9ceabb13
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556745"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57417717"
 ---
 # <a name="cdbpropset-class"></a>Classe CDBPropSet
 
@@ -68,13 +68,13 @@ class CDBPropSet : public tagDBPROPSET
 
 |||
 |-|-|
-|[operador =](#op_equal)|Atribui o conteúdo de uma propriedade definida para outro.|
+|[operator =](#op_equal)|Atribui o conteúdo de uma propriedade definida para outro.|
 
 ## <a name="remarks"></a>Comentários
 
 Uso de consumidores e provedores OLE DB `DBPROPSET` passar matrizes de estruturas de `DBPROP` estruturas. Cada `DBPROP` estrutura representa uma única propriedade que pode ser definida.
 
-## <a name="addproperty"></a> Cdbpropset:: AddProperty
+## <a name="addproperty"></a> CDBPropSet::AddProperty
 
 Adiciona uma propriedade ao conjunto de propriedades.
 
@@ -109,7 +109,7 @@ bool AddProperty(DWORD dwPropertyID,
 *bValue*<br/>
 [in] Um `BYTE` ou um valor booliano usado para inicializar o valor da propriedade para o `DBPROP` adicionada ao conjunto de propriedades de estrutura.
 
-*Nvalor*<br/>
+*nValue*<br/>
 [in] Um valor inteiro usado para inicializar o valor da propriedade para o `DBPROP` adicionada ao conjunto de propriedades de estrutura.
 
 *fltValue*<br/>
@@ -127,7 +127,7 @@ bool AddProperty(DWORD dwPropertyID,
 
 ## <a name="cdbpropset"></a> Cdbpropset:: Cdbpropset
 
-O construtor. Inicializa o `rgProperties`, `cProperties`, e `guidPropertySet` campos dos [DBPROPSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms714367(v=vs.85)) estrutura.
+O construtor. Inicializa o `rgProperties`, `cProperties`, e `guidPropertySet` campos dos [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) estrutura.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -147,7 +147,7 @@ CDBPropSet();
 *propset*<br/>
 [in] Outro `CDBPropSet` objeto para a construção da cópia.
 
-## <a name="setguid"></a> Cdbpropset:: Setguid
+## <a name="setguid"></a> CDBPropSet::SetGUID
 
 Define o `guidPropertySet` campo o `DBPROPSET` estrutura.
 
@@ -160,7 +160,7 @@ void SetGUID(const GUID& guid) throw();
 #### <a name="parameters"></a>Parâmetros
 
 *guid*<br/>
-[in] Um GUID usado para definir a `guidPropertySet` campo do [DBPROPSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms714367(v=vs.85)) estrutura.
+[in] Um GUID usado para definir a `guidPropertySet` campo do [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) estrutura.
 
 ### <a name="remarks"></a>Comentários
 
@@ -181,5 +181,5 @@ CDBPropSet& operator =(CDBPropSet& propset) throw();
 [Modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Referência de modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [Classe CDBPropIDSet](../../data/oledb/cdbpropidset-class.md)<br/>
-[Estrutura DBPROPSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms714367(v=vs.85))
-[estrutura DBPROP](https://docs.microsoft.com/previous-versions/windows/desktop/ms717970(v=vs.85))
+[Estrutura DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85))
+[estrutura DBPROP](/previous-versions/windows/desktop/ms717970(v=vs.85))

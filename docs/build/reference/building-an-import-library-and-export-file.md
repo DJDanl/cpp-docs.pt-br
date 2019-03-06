@@ -25,12 +25,12 @@ helpviewer_keywords:
 - .lib files
 - EXP files
 ms.assetid: 2fe4f30a-1dd6-4b05-84b5-0752e1dee354
-ms.openlocfilehash: e5e7a60bf4607be55525b587df4942875126b50e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 31570b1e6680b5af5f0a774c290eba20f3b5fdb0
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50556670"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413180"
 ---
 # <a name="building-an-import-library-and-export-file"></a>Compilando uma biblioteca de importação e um arquivo de exportação
 
@@ -60,7 +60,7 @@ Exporta uma função do seu programa para permitir que outros programas chamar a
 
 O *Nome_da_entrada* é o nome do item de dados ou função como ele deve ser usada pelo programa de chamada. Opcionalmente, você pode especificar o *internalname* como a função conhecida no programa de definição; por padrão, *internalname* é o mesmo que *Nome_da_entrada*. O *ordinal* Especifica um índice na tabela de exportação no intervalo de 1 a 65.535; se você não especificar *ordinal*, LIB atribui um. O **NONAME** palavra-chave exporta a função apenas como um ordinal, sem uma *Nome_da_entrada*. O **dados** palavra-chave é usado para exportar objetos de dados.
 
-> **/ INCLUEM:** *símbolo*
+> **/INCLUDE:** *symbol*
 
 Adiciona o *símbolo* à tabela de símbolos. Essa opção é útil para forçar o uso de um objeto de biblioteca, caso contrário, não poderia ser incluído.
 

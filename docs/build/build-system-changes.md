@@ -1,5 +1,5 @@
 ---
-title: Alterações no sistema de build
+title: Alterações no sistema de compilação
 ms.date: 11/04/2016
 f1_keywords:
 - vc.msbuild.changes
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - Build system changes, $(Inherit)
 - Build system changes, $(NoInherit)
 ms.assetid: e564d95f-a6cc-4d97-b57e-1a71daf66f4a
-ms.openlocfilehash: a7a98c864a1d0bf617ebf4ededea5e1a59a1af31
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 742b018ae96ff706336a81b49e1d8e5fb954d9b7
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437148"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57425439"
 ---
-# <a name="build-system-changes"></a>Alterações no sistema de build
+# <a name="build-system-changes"></a>Alterações no sistema de compilação
 
 O sistema MSBuild é usado para compilar projetos do Visual C++. No entanto, no Visual Studio 2008 e versões anteriores, o sistema de VCBuild foi usado. Determinados tipos de arquivo e conceitos que dependem de VCBuild não existem ou são representados de maneira diferente no sistema atual. Este documento discute as diferenças no sistema de compilação atual.
 
@@ -56,11 +56,11 @@ No exemplo a seguir, uma lista delimitada por ponto e vírgula é atribuída a u
 Property=<value>;$(MyProperty)
 ```
 
-## <a name="vcxprojuser-files"></a>. vcxproj arquivos
+## <a name="vcxprojuser-files"></a>.vcxproj.user Files
 
 Um arquivo de usuário (. vcxproj) armazena as propriedades específicas do usuário, as configurações de exemplo, depuração e implantação. O arquivo vcxproj se aplica a todos os projetos para um usuário específico.
 
-## <a name="vcxprojfilters-file"></a>. vcxproj.filters arquivo
+## <a name="vcxprojfilters-file"></a>.vcxproj.filters File
 
 Quando **Gerenciador de soluções** é usado para adicionar um arquivo a um projeto, o arquivo de filtros (. vcxproj.filters) define onde na **Gerenciador de soluções** com base em sua extensão de nome de arquivo do arquivo for adicionado, exibição de árvore.
 
