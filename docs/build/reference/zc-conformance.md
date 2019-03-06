@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Conformance compiler options
 - Zc compiler options [C++]
 ms.assetid: db1cc175-6e93-4a2e-9396-c3725d2d8f71
-ms.openlocfilehash: b1f612040eea0078b0f27cf72327db94fe9e2939
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 50f3e7a79b80514b6c28bd9aee86c720d6e20cf6
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50665421"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413908"
 ---
 # <a name="zc-conformance"></a>/Zc (conformidade)
 
@@ -34,7 +34,7 @@ Esses são os `/Zc` opções do compilador:
 |---|---|
 |[alignedNew\[-\]](zc-alignednew.md)|Habilitar C + + 17 excessivamente alinhados alocação dinâmica (ativado por padrão no C + + 17).|
 |[auto\[-\]](zc-auto-deduce-variable-type.md)|Impor o novo significado Standard C++ para `auto` (em por padrão).|
-|[cplusplus\[-\]](zc-cplusplus.md)|Habilitar o **cplusplus** macro para relatar o padrão com suporte (desativado por padrão).|
+|[__cplusplus\[-\]](zc-cplusplus.md)|Habilitar o **cplusplus** macro para relatar o padrão com suporte (desativado por padrão).|
 |[externConstexpr\[-\]](zc-externconstexpr.md)|Habilitar vinculação externa para `constexpr` variáveis (desativado por padrão).|
 |[forScope\[-\]](zc-forscope-force-conformance-in-for-loop-scope.md)|Impor Standard C++ `for` regras de escopo (em por padrão).|
 |[implicitNoexcept\[-\]](zc-implicitnoexcept-implicit-exception-specifiers.md)|Habilitar implícita `noexcept` em funções necessárias (em por padrão).|
@@ -44,10 +44,10 @@ Esses são os `/Zc` opções do compilador:
 |[rvalueCast\[-\]](zc-rvaluecast-enforce-type-conversion-rules.md)|Aplicar regras de conversão de tipo explícito do C++ padrão (desativado por padrão).|
 |[sizedDealloc\[-\]](zc-sizeddealloc-enable-global-sized-dealloc-functions.md)|Habilitar funções de desalocação dimensionada global de 14 C + + (em por padrão).|
 |[strictStrings\[-\]](zc-strictstrings-disable-string-literal-type-conversion.md)|Desabilitar o literal de cadeia de caracteres para `char*` ou `wchar_t*` conversão (desativado por padrão).|
-|[Ternário\[-\]](zc-ternary.md)|Impor regras de operador condicional em tipos de operando (desativado por padrão).|
+|[ternary\[-\]](zc-ternary.md)|Impor regras de operador condicional em tipos de operando (desativado por padrão).|
 |[threadSafeInit\[-\]](zc-threadsafeinit-thread-safe-local-static-initialization.md)|Habilitar inicialização estática de local thread-safe (em por padrão).|
 |[throwingNew\[-\]](zc-throwingnew-assume-operator-new-throws.md)|Suponha que `operator new` gera em caso de falha (desativado por padrão).|
-|[trígrafos\[-\]](zc-trigraphs-trigraphs-substitution.md)|Habilite trígrafos (obsoletos, desativado por padrão).|
+|[trigraphs\[-\]](zc-trigraphs-trigraphs-substitution.md)|Habilite trígrafos (obsoletos, desativado por padrão).|
 |[twoPhase-](zc-twophase.md)|Use análise de comportamento (em conformidade com por padrão) do modelo não conformes.|
 |[wchar_t\[-\]](zc-wchar-t-wchar-t-is-native-type.md)|`wchar_t` é um tipo nativo, não é um typedef (em por padrão).|
 

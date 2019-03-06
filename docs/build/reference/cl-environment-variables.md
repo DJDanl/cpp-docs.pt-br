@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LIBPATH environment variable
 - environment variables, CL compiler
 ms.assetid: 2606585b-a681-42ee-986e-1c9a2da32108
-ms.openlocfilehash: 4c9643e977c707f7e7fd99ccc48d0475e2dc7837
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 47d6966cdc821cee4bd9ffd61b36c0c79143b6c2
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50535756"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57412452"
 ---
 # <a name="cl-environment-variables"></a>Variáveis de ambiente CL
 
@@ -42,19 +42,19 @@ Para obter informações relacionadas, consulte [definir variáveis de ambiente]
 
 Este é um exemplo de como definir a variável de ambiente CL:
 
-> Defina CL = / Zp2 /Ox /I\INCLUDE\MYINCLS \LIB\BINMODE. OBJ
+> SET CL=/Zp2 /Ox /I\INCLUDE\MYINCLS \LIB\BINMODE.OBJ
 
 Quando essa variável de ambiente é definida, se você inserir `CL INPUT.C` na linha de comando, isso é o comando efetivo:
 
-> CL /Zp2 /Ox /I\INCLUDE\MYINCLS \LIB\BINMODE. ENTRADA DE OBJ. C
+> CL /Zp2 /Ox /I\INCLUDE\MYINCLS \LIB\BINMODE.OBJ INPUT.C
 
 O exemplo a seguir faz com que um simples comando CL compilar os arquivos de origem FILE1.c e FILE2.c e, em seguida, vincule os arquivos de objeto FILE1.obj, FILE2.obj e FILE3.obj:
 
-> CONJUNTO DE CL = FILE1. ARQUIVO2 C. CONJUNTO DE C \_CL\_= ARQUIVO3. OBJ CL
+> SET CL=FILE1.C FILE2.C SET \_CL\_=FILE3.OBJ CL
 
 Isso tem o mesmo efeito que a linha de comando a seguir:
 
-> CL FILE1. ARQUIVO2 C. ARQUIVO3 C. OBJ
+> CL FILE1.C FILE2.C FILE3.OBJ
 
 ## <a name="see-also"></a>Consulte também
 

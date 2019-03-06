@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - Object class
 ms.assetid: 709e84a8-0bff-471b-bc14-63e424080b5a
-ms.openlocfilehash: 00f2b57bdf63f9f8bcfd9e544bebab2805ff7f65
-ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
+ms.openlocfilehash: 8267d42e67ddf703b4a3a681509b92978e7de8bb
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55850085"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57422764"
 ---
 # <a name="platformobject-class"></a>Classe Platform::Object
 
@@ -96,7 +96,7 @@ Valor numérico que identifica esse objeto de forma exclusiva.
 
 ### <a name="remarks"></a>Comentários
 
-Você pode usar GetHashCode para criar chaves para objetos em mapas. Você pode comparar códigos hash usando [Object:: Equals](#equals). Se o demarcador do código for extremamente crítico e `GetHashCode` e `Equals` não forem suficientemente rápidos, você poderá passar para a camada COM subjacente e fazer comparações do ponteiro `IUnknown` nativo.
+Você pode usar GetHashCode para criar chaves para objetos em mapas. Você pode comparar códigos hash usando [Object:: Equals](#equals). Se o caminho do código for extremamente crítico e `GetHashCode` e `Equals` não forem suficientemente rápidos, você poderá passar para a camada COM subjacente e fazer comparações do ponteiro `IUnknown` nativo.
 
 ## <a name="gettype"></a>  Método Object:: GetType
 
@@ -116,7 +116,7 @@ Um [Platform:: Type](../cppcx/platform-type-class.md) objeto que descreve o tipo
 
 Estático [Type:: GetTypeCode](../cppcx/platform-type-class.md#gettypecode) pode ser usado para obter uma [; enumeração Platform::TypeCode&lt;3](../cppcx/platform-typecode-enumeration.md) valor que representa o tipo atual. Isso é mais útil para tipos internos. O código de tipo para qualquer classe ref além [Platform:: string](../cppcx/platform-string-class.md) é Object (1).
 
-O [Windows::UI::Xaml::Interop::TypeName](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.typename.aspx) classe é usada nas APIs do Windows como uma maneira independente de linguagem de passar informações de tipo entre componentes do Windows e aplicativos. O T[classe Platform:: Type](../cppcx/platform-type-class.md) tem operadores para a conversão entre `Type` e `TypeName`.
+O [Windows::UI::Xaml::Interop::TypeName](/uwp/api/windows.ui.xaml.interop.typename) classe é usada nas APIs do Windows como uma maneira independente de linguagem de passar informações de tipo entre componentes do Windows e aplicativos. O T[classe Platform:: Type](../cppcx/platform-type-class.md) tem operadores para a conversão entre `Type` e `TypeName`.
 
 Use o [typeid](../windows/typeid-cpp-component-extensions.md) operador para retornar um `Platform::Type` objeto para um nome de classe, por exemplo, ao navegar entre páginas XAML:
 

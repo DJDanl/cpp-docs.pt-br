@@ -1,22 +1,22 @@
 ---
-title: Referência da linguagem Visual C++ (C++/CX)
+title: Referência de linguagem Visual C++ (C++/CX)
 ms.date: 09/15/2017
 ms.assetid: 3f6abf92-4e5e-4ed8-8e11-f9252380d30a
-ms.openlocfilehash: e8d73523a2b9ae577125975726f0072503f0e2e0
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 319374447ba08dbf18fba91e4c24c0874d3b6ce2
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330418"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57422956"
 ---
-# <a name="visual-c-language-reference-ccx"></a>Referência da linguagem Visual C++ (C++/CX)
+# <a name="visual-c-language-reference-ccx"></a>Referência de linguagem Visual C++ (C++/CX)
 
 C + + c++ /CX é um conjunto de extensões para a linguagem C++ que permitem a criação de aplicativos do Windows e os componentes de tempo de execução do Windows em um idioma mais próximo possível modernas do C++. Usar C + + c++ /CX para escrever aplicativos do Windows e componentes em código nativo que interajam facilmente com Visual c#, Visual Basic e JavaScript e outras linguagens que dão suporte ao tempo de execução do Windows. Nos raros casos em que exigem acesso direto a interfaces COM brutas, ou um código não excepcional, você pode usar o [biblioteca de modelos em C++ Windows Runtime (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md).
 
 > [!NOTE]
-> **[C + + c++ /CLI WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/index) é a alternativa recomendada para C + + c++ /CX**. É uma nova, o padrão C + + 17 projeção de linguagem para APIs do tempo de execução do Windows, disponível no Windows 10 SDK mais recente da versão 1803 em diante. C + + c++ /CLI WinRT é implementado inteiramente em arquivos de cabeçalho e projetado para fornecer acesso de primeira classe à moderna API do Windows.
+> **[C + + c++ /CLI WinRT](/windows/uwp/cpp-and-winrt-apis/index) é a alternativa recomendada para C + + c++ /CX**. É uma nova, o padrão C + + 17 projeção de linguagem para APIs do tempo de execução do Windows, disponível no Windows 10 SDK mais recente da versão 1803 em diante. C + + c++ /CLI WinRT é implementado inteiramente em arquivos de cabeçalho e projetado para fornecer acesso de primeira classe à moderna API do Windows.
 >
-> Com C + + c++ /CLI WinRT, você pode consumir e criar APIs do Windows Runtime usando qualquer compilador que 17 compatível com os padrões C + +. C + + c++ /CLI WinRT normalmente tem um desempenho melhor e produz binários menores do que qualquer outra opção de idioma para o tempo de execução do Windows. Continuaremos a dar suporte a C + + c++ /CLI CX e WRL, mas altamente recomendável que usem novos aplicativos C + + c++ /CLI WinRT. Para obter mais informações, consulte [C + + c++ /CLI WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/index).
+> Com C + + c++ /CLI WinRT, você pode consumir e criar APIs do Windows Runtime usando qualquer compilador que 17 compatível com os padrões C + +. C + + c++ /CLI WinRT normalmente tem um desempenho melhor e produz binários menores do que qualquer outra opção de idioma para o tempo de execução do Windows. Continuaremos a dar suporte a C + + c++ /CLI CX e WRL, mas altamente recomendável que usem novos aplicativos C + + c++ /CLI WinRT. Para obter mais informações, consulte [C + + c++ /CLI WinRT](/windows/uwp/cpp-and-winrt-apis/index).
 
 Usando C + + c++ /CX, você pode criar:
 
@@ -38,4 +38,4 @@ Usando C + + c++ /CX, você pode criar:
 |[Referência de namespaces](../cppcx/namespaces-reference-c-cx.md)|Consulte a documentação do namespace padrão, do namespace Platform, Platform::Collections e dos namespaces relacionados.|
 |[As funções de CRT não têm suporte em aplicativos da Plataforma Universal do Windows](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)|Relaciona as funções CRT não disponíveis para uso em aplicativos de Tempo de Execução do Windows.|
 |[Manuais de instruções dos aplicativos do Windows 10](https://msdn.microsoft.com/library/windows/apps/xaml/mt244352.aspx)|Fornece instruções de alto nível sobre aplicativos do Windows 10 e links para mais informações.|
-|[C + + c++ /CX parte 0 de \[n\]: uma introdução](https://blogs.msdn.microsoft.com/vcblog/2012/08/29/ccx-part-0-of-n-an-introduction/)<br /><br />[C + + c++ /CX parte 1 de \[n\]: uma classe simples](https://blogs.msdn.microsoft.com/vcblog/2012/09/05/ccx-part-1-of-n-a-simple-class/)<br /><br />[C + + c++ /CX parte 2 de \[n\]: tipos que desempenham funções diferentes](https://blogs.msdn.microsoft.com/vcblog/2012/09/17/ccx-part-2-of-n-types-that-wear-hats/)<br /><br />[C + + c++ /CX parte 3 de \[n\]: em construção](https://blogs.msdn.microsoft.com/vcblog/2012/10/05/ccx-part-3-of-n-under-construction/)<br /><br />[C + + c++ /CX parte 4 de \[n\]: funções membro Static](https://blogs.msdn.microsoft.com/vcblog/2012/10/19/ccx-part-4-of-n-static-member-functions/)|Uma série de blog introdutória do Visual C++ no C + + c++ /CLI CX.|
+|[C + + c++ /CX parte 0 de \[n\]: Uma introdução](https://blogs.msdn.microsoft.com/vcblog/2012/08/29/ccx-part-0-of-n-an-introduction/)<br /><br />[C + + c++ /CX parte 1 de \[n\]: Uma classe simples](https://blogs.msdn.microsoft.com/vcblog/2012/09/05/ccx-part-1-of-n-a-simple-class/)<br /><br />[C + + c++ /CX parte 2 de \[n\]: Tipos que desempenham funções diferentes](https://blogs.msdn.microsoft.com/vcblog/2012/09/17/ccx-part-2-of-n-types-that-wear-hats/)<br /><br />[C + + c++ /CX parte 3 de \[n\]: Em construção](https://blogs.msdn.microsoft.com/vcblog/2012/10/05/ccx-part-3-of-n-under-construction/)<br /><br />[C + + c++ /CX parte 4 de \[n\]: Funções de membro estático](https://blogs.msdn.microsoft.com/vcblog/2012/10/19/ccx-part-4-of-n-static-member-functions/)|Uma série de blog introdutória do Visual C++ no C + + c++ /CLI CX.|

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - executable files [C++], base address
 - /REBASE editbin option [C++]
 ms.assetid: 3f89d874-af5c-485b-974b-fd205f6e1a4b
-ms.openlocfilehash: de8b648c6bca02c71a9cfedd92bfbe7e6ca56b70
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f0b581dfc116e25228a9aa9133c4de027e194799
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50463642"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57422033"
 ---
 # <a name="rebase"></a>/REBASE
 
@@ -34,7 +34,7 @@ Especifique o programa arquivos executáveis e DLLs na *arquivos* argumento na l
 |--------------|------------|
 |**BASE =**<em>endereço</em>|Fornece um endereço de início para reatribuir endereços base para os arquivos. Especificar *endereço* em decimal ou notação de linguagem C. Se a BASE não for especificada, o endereço de base inicial padrão é 0x400000. Se a busca é usado, BASE devem ser especificados, e *endereço* define o final do intervalo de endereços de base.|
 |**BASEFILE**|Cria um arquivo chamado COFFBASE. TXT, que é um arquivo de texto no formato esperado do LINK/opção de BASE.|
-|**PARA BAIXO**|Informa ao EDITBIN reatribuir endereços base para baixo de um endereço final. Os arquivos são reatribuídos na ordem especificada, com o primeiro arquivo localizado no endereço mais alto possível abaixo do final do intervalo de endereços. BASE deve ser usada com baixo para garantir que o espaço de endereço suficiente para basear os arquivos. Para determinar o espaço de endereço necessário para os arquivos especificados, executar EDITBIN com /REBASE em arquivos e adicione a 64 KB para o tamanho total exibido.|
+|**DOWN**|Informa ao EDITBIN reatribuir endereços base para baixo de um endereço final. Os arquivos são reatribuídos na ordem especificada, com o primeiro arquivo localizado no endereço mais alto possível abaixo do final do intervalo de endereços. BASE deve ser usada com baixo para garantir que o espaço de endereço suficiente para basear os arquivos. Para determinar o espaço de endereço necessário para os arquivos especificados, executar EDITBIN com /REBASE em arquivos e adicione a 64 KB para o tamanho total exibido.|
 
 ## <a name="see-also"></a>Consulte também
 

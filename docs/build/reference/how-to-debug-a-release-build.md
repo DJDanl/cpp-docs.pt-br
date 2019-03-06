@@ -1,18 +1,18 @@
 ---
-title: Como depurar um build da versão
+title: 'Como: Depurar um Build de versão'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - debugging [C++], release builds
 - release builds, debugging
 ms.assetid: d333e4d1-4e6c-4384-84a9-cb549702da25
-ms.openlocfilehash: 4ee99bb76d3af4339e065a3ed4d4809acfe23507
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 61baaa827feb1abcc03a0296574e56c993ce1681
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50649248"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57412556"
 ---
-# <a name="how-to-debug-a-release-build"></a>Como depurar um build da versão
+# <a name="how-to-debug-a-release-build"></a>Como: Depurar um Build de versão
 
 Você pode depurar um build de versão de um aplicativo.
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - /ENTRY linker option
 - ENTRY linker option
 ms.assetid: 26c62ba2-4f52-4882-a7bd-7046a0abf445
-ms.openlocfilehash: 21e17d9ec9c4b145af8909730e5f799de9b72ce2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5ebc18d6d895928b1deec392cbb0bd91f48a96ed
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50615521"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57425699"
 ---
 # <a name="entry-entry-point-symbol"></a>/ENTRY (símbolo do ponto de entrada)
 
@@ -40,7 +40,7 @@ Por padrão, o endereço inicial é um nome de função da biblioteca em tempo d
 |-------------------|-----------------|
 |**mainCRTStartup** (ou **wmainCRTStartup**)|Um aplicativo que usa /Subsystem: console; chamadas `main` (ou `wmain`)|
 |**WinMainCRTStartup** (ou **wWinMainCRTStartup**)|Um aplicativo que usa /SUBSYSTEM:**WINDOWS**; chamadas `WinMain` (ou `wWinMain`), que deve ser definido para usar `__stdcall`|
-|**Dllmaincrtstartup**|UMA DLL; chamadas `DllMain` se ele existir, que deve ser definido para usar `__stdcall`|
+|**_DllMainCRTStartup**|UMA DLL; chamadas `DllMain` se ele existir, que deve ser definido para usar `__stdcall`|
 
 Se o [/DLL](../../build/reference/dll-build-a-dll.md) ou [/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md) opção não for especificada, o vinculador seleciona um ponto de entrada e o subsistema, dependendo se `main` ou `WinMain` é definido.
 

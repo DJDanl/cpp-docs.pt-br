@@ -36,12 +36,12 @@ helpviewer_keywords:
 - CComboBoxEx [MFC], SetItem
 - CComboBoxEx [MFC], SetWindowTheme
 ms.assetid: 33ca960a-2409-478c-84a4-a2ee8ecfe8f7
-ms.openlocfilehash: d7a39dd19a51bc5bab0f924d360d594bddf89b44
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 44943803fdb422ccbf77302e7c81f23c34cc7433
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57265932"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57420747"
 ---
 # <a name="ccomboboxex-class"></a>Classe CComboBoxEx
 
@@ -150,7 +150,7 @@ virtual BOOL Create(
 Especifica a combinação de estilos de caixa de combinação aplicada à caixa de combinação. Ver **comentários** abaixo para obter mais informações sobre estilos.
 
 *rect*<br/>
-Uma referência a um [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto ou [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura, que é a posição e tamanho da caixa de combinação.
+Uma referência a um [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto ou [RECT](/previous-versions/dd162897\(v=vs.85\)) estrutura, que é a posição e tamanho da caixa de combinação.
 
 *pParentWnd*<br/>
 Um ponteiro para um [CWnd](../../mfc/reference/cwnd-class.md) objeto que é a janela pai da caixa de combinação (geralmente um `CDialog`). Ele não deve ser NULL.
@@ -210,7 +210,7 @@ Especifica o estilo estendido do controle que está sendo criado. Para obter uma
 Estilo do controle de caixa de combinação. Ver [criar](#create) para obter uma lista de estilos.
 
 *rect*<br/>
-Uma referência a um [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura que descreve o tamanho e posição da janela a ser criado, em coordenadas do cliente do *pParentWnd*.
+Uma referência a um [RECT](/previous-versions/dd162897\(v=vs.85\)) estrutura que descreve o tamanho e posição da janela a ser criado, em coordenadas do cliente do *pParentWnd*.
 
 *pParentWnd*<br/>
 Um ponteiro para a janela que é o pai do controle.

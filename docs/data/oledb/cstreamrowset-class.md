@@ -27,12 +27,12 @@ helpviewer_keywords:
 - CStreamRowset class, constructor
 - Close method
 ms.assetid: a106e953-a38a-464e-8ea5-28963d9e4811
-ms.openlocfilehash: 69844a9048601060a425f7bcf52bc2cf30381227
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 44fb2dab939a0180df2faa1b8b889048619f4c02
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556448"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57412959"
 ---
 # <a name="cstreamrowset-class"></a>Classe CStreamRowset
 
@@ -61,7 +61,7 @@ Uma classe de acessador.
 |||
 |-|-|
 |[CStreamRowset](#cstreamrowset)|Construtor. Cria uma instância e inicializa o `CStreamRowset` objeto.|
-|[Fechar](#close)|Versões do [ISequentialStream](https://docs.microsoft.com/previous-versions/windows/desktop/ms718035(v=vs.85)) ponteiro de interface na classe.|
+|[Fechar](#close)|Versões do [ISequentialStream](/previous-versions/windows/desktop/ms718035(v=vs.85)) ponteiro de interface na classe.|
 
 ## <a name="remarks"></a>Comentários
 
@@ -82,7 +82,7 @@ SQL Server 2000 executa o formatação de XML e retornará todas as colunas e to
 > [!NOTE]
 >  Esse recurso funciona apenas com o SQL Server 2000.
 
-## <a name="cstreamrowset"></a> Cstreamrowset:: Cstreamrowset
+## <a name="cstreamrowset"></a> CStreamRowset::CStreamRowset
 
 Cria uma instância e inicializa o `CStreamRowset` objeto.
 
@@ -92,9 +92,9 @@ Cria uma instância e inicializa o `CStreamRowset` objeto.
 CStreamRowset();
 ```
 
-## <a name="close"></a> Cstreamrowset:: Close
+## <a name="close"></a> CStreamRowset::Close
 
-Versões do [ISequentialStream](https://docs.microsoft.com/previous-versions/windows/desktop/ms718035(v=vs.85)) ponteiro de interface na classe.
+Versões do [ISequentialStream](/previous-versions/windows/desktop/ms718035(v=vs.85)) ponteiro de interface na classe.
 
 ### <a name="syntax"></a>Sintaxe
 

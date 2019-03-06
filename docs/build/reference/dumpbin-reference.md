@@ -10,12 +10,12 @@ helpviewer_keywords:
 - COFF files, displaying information about
 - binary file dumper
 ms.assetid: 4bc06822-5330-44b4-8a3f-6180dfd41dfb
-ms.openlocfilehash: d13ec31de79e15cf4fefce7bb954f488ff8fccb9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b590d852e8139aa7a12d7a7913915cd7a3bdccc6
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50451201"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57416352"
 ---
 # <a name="dumpbin-reference"></a>Referência de DUMPBIN
 
@@ -32,4 +32,4 @@ Somente o [/HEADERS](../../build/reference/headers.md) opção DUMPBIN está dis
 
 ## <a name="see-also"></a>Consulte também
 
-[Ferramentas de build de C/C++](../../build/reference/c-cpp-build-tools.md)
+[Ferramentas de build do C/C++](../../build/reference/c-cpp-build-tools.md)

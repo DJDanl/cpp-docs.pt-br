@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CSplitButton [MFC], SetDropDownMenu
 - CSplitButton [MFC], OnDropDown
 ms.assetid: 6844d0a9-6408-4e44-9b5f-57628ed8bad6
-ms.openlocfilehash: b73e27097a64722afd6bad5b9bc2157655bd9aad
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 70bba379f33be2d4df05f6b96eac14bf248cf356
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57274499"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57414636"
 ---
 # <a name="csplitbutton-class"></a>Classe CSplitButton
 
@@ -97,7 +97,7 @@ virtual BOOL Create(
 |Parâmetro|Descrição|
 |---------------|-----------------|
 |*dwStyle*|[in] Uma combinação bit a bit (OR) de estilos a serem aplicados ao controle. Para obter mais informações, consulte [estilos de botão](../../mfc/reference/styles-used-by-mfc.md#button-styles).|
-|*rect*|[in] Uma referência a um [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura que contém a posição e o tamanho do controle.|
+|*rect*|[in] Uma referência a um [RECT](/previous-versions/dd162897\(v=vs.85\)) estrutura que contém a posição e o tamanho do controle.|
 |*pParentWnd*|[in] Um ponteiro não nulo para um [CWnd](../../mfc/reference/cwnd-class.md) objeto que é a janela pai do controle.|
 |*nID*|[in] A ID do controle.|
 

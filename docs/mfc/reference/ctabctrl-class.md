@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CTabCtrl [MFC], SetPadding
 - CTabCtrl [MFC], SetToolTips
 ms.assetid: 42e4aff6-46ae-4b2c-beaa-d1dce8d82138
-ms.openlocfilehash: 62d42995a3d1b4a61dbd3ff38c48d9b300177798
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: ccf35c7a036a69487d5138baf8c017f9c5995bef
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259536"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57425010"
 ---
 # <a name="ctabctrl-class"></a>Classe CTabCtrl
 
@@ -170,7 +170,7 @@ void AdjustRect(BOOL bLarger,   LPRECT lpRect);
 Indica qual operação executar. Se esse parâmetro for TRUE, o *lpRect* Especifica um retângulo de exibição e recebe o retângulo de janela correspondente. Se esse parâmetro for FALSE, o *lpRect* Especifica um retângulo de janela e recebe o retângulo de exibição correspondente.
 
 *lpRect*<br/>
-Ponteiro para um [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura que especifica o retângulo determinado e recebe o retângulo calculado.
+Ponteiro para um [RECT](/previous-versions/dd162897\(v=vs.85\)) estrutura que especifica o retângulo determinado e recebe o retângulo calculado.
 
 ### <a name="example"></a>Exemplo
 
@@ -194,7 +194,7 @@ virtual BOOL Create(
 Especifica o estilo do controle guia. Aplicar qualquer combinação de [estilos de controle de guia](/windows/desktop/Controls/tab-control-styles), descrito no SDK do Windows. Ver **comentários** para obter uma lista de estilos de janela que você também pode aplicar ao controle.
 
 *rect*<br/>
-Especifica o tamanho e a posição do controle guia. Ela pode ser um [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto ou uma [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura.
+Especifica o tamanho e a posição do controle guia. Ela pode ser um [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto ou uma [RECT](/previous-versions/dd162897\(v=vs.85\)) estrutura.
 
 *pParentWnd*<br/>
 Especifica a janela do pai do controle de guia, geralmente um `CDialog`. Ele não deve ser NULL.
@@ -250,7 +250,7 @@ Especifica o estilo estendido do controle que está sendo criado. Para obter uma
 Especifica o estilo do controle guia. Aplicar qualquer combinação de [estilos de controle de guia](/windows/desktop/Controls/tab-control-styles), descrito no SDK do Windows. Ver **Remarks** na [criar](#create) para obter uma lista de estilos de janela que você também pode aplicar ao controle.
 
 *rect*<br/>
-Uma referência a um [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura que descreve o tamanho e posição da janela a ser criado, em coordenadas do cliente do *pParentWnd*.
+Uma referência a um [RECT](/previous-versions/dd162897\(v=vs.85\)) estrutura que descreve o tamanho e posição da janela a ser criado, em coordenadas do cliente do *pParentWnd*.
 
 *pParentWnd*<br/>
 Um ponteiro para a janela que é o pai do controle.
@@ -485,7 +485,7 @@ BOOL GetItemRect(int nItem,   LPRECT lpRect) const;
 Índice baseado em zero do item de guia.
 
 *lpRect*<br/>
-Ponteiro para um [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura que recebe o retângulo delimitador da guia. Essas coordenadas usam modo de mapeamento do visor atual.
+Ponteiro para um [RECT](/previous-versions/dd162897\(v=vs.85\)) estrutura que recebe o retângulo delimitador da guia. Essas coordenadas usam modo de mapeamento do visor atual.
 
 ### <a name="return-value"></a>Valor de retorno
 

@@ -12,16 +12,16 @@ helpviewer_keywords:
 - IDBCreateSessionImpl class
 - CreateSession method
 ms.assetid: 48c02c5c-8362-45ac-af8e-bb119cf8c5c7
-ms.openlocfilehash: ecc06bf5e3514ea87c86de17dbafd59b9da9f8b6
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 36f5a359051dbd5035a73514f84fb2c61ff13176
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556416"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57412920"
 ---
 # <a name="idbcreatesessionimpl-class"></a>Classe IDBCreateSessionImpl
 
-Fornece uma implementação para o [IDBCreateSession](https://docs.microsoft.com/previous-versions/windows/desktop/ms724076(v=vs.85)) interface.
+Fornece uma implementação para o [IDBCreateSession](/previous-versions/windows/desktop/ms724076(v=vs.85)) interface.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -55,7 +55,7 @@ O objeto de sessão.
 
 Uma interface obrigatória em objetos de fonte de dados.
 
-## <a name="createsession"></a> Idbcreatesessionimpl:: CreateSession
+## <a name="createsession"></a> IDBCreateSessionImpl::CreateSession
 
 Cria uma nova sessão do objeto de fonte de dados e retorna a interface solicitada a sessão recém-criada.
 
@@ -69,7 +69,7 @@ STDMETHOD(CreateSession)(IUnknown * pUnkOuter,
 
 #### <a name="parameters"></a>Parâmetros
 
-Ver [idbcreatesession::](https://docs.microsoft.com/previous-versions/windows/desktop/ms714942(v=vs.85)) na *referência do programador do OLE DB*.
+Ver [idbcreatesession::](/previous-versions/windows/desktop/ms714942(v=vs.85)) na *referência do programador do OLE DB*.
 
 ## <a name="see-also"></a>Consulte também
 

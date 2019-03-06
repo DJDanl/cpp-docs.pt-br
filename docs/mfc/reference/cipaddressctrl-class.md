@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CIPAddressCtrl [MFC], SetFieldFocus
 - CIPAddressCtrl [MFC], SetFieldRange
 ms.assetid: 9764d2f4-cb14-4ba8-b799-7f57a55a47c6
-ms.openlocfilehash: e569829c100a581e24b5ce05df2f90ac7088024b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 5abcf838308d8965f3c55dc7d85dbac974825394
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57266285"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57426388"
 ---
 # <a name="cipaddressctrl-class"></a>Classe CIPAddressCtrl
 
@@ -122,7 +122,7 @@ virtual BOOL Create(
 Estilo do controle de endereço IP. Aplica uma combinação de estilos de janela. Você deve incluir o estilo WS_CHILD porque o controle deve ser uma janela filho. Ver [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) no SDK do Windows para obter uma lista de estilos do windows.
 
 *rect*<br/>
-Uma referência ao tamanho e a posição do controle de endereço IP. Ela pode ser um [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto ou uma [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura.
+Uma referência ao tamanho e a posição do controle de endereço IP. Ela pode ser um [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto ou uma [RECT](/previous-versions/dd162897\(v=vs.85\)) estrutura.
 
 *pParentWnd*<br/>
 Um ponteiro para a janela pai do controle de endereço IP. Ele não deve ser NULL.
@@ -166,7 +166,7 @@ Especifica o estilo estendido do controle que está sendo criado. Para obter uma
 Estilo do controle de endereço IP. Aplica uma combinação de estilos de janela. Você deve incluir o estilo WS_CHILD porque o controle deve ser uma janela filho. Ver [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) no SDK do Windows para obter uma lista de estilos do windows.
 
 *rect*<br/>
-Uma referência a um [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura que descreve o tamanho e posição da janela a ser criado, em coordenadas do cliente do *pParentWnd*.
+Uma referência a um [RECT](/previous-versions/dd162897\(v=vs.85\)) estrutura que descreve o tamanho e posição da janela a ser criado, em coordenadas do cliente do *pParentWnd*.
 
 *pParentWnd*<br/>
 Um ponteiro para a janela que é o pai do controle.

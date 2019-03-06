@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - NMAKE program, options
 ms.assetid: 00ba1aec-ef27-44cf-8d82-c5c095e45bae
-ms.openlocfilehash: 84130afea6cc73c480b46f065d6d85e365101b38
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dca7b94935f385971b8d9bff53ece3b86f2885b8
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50455328"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57417067"
 ---
 # <a name="nmake-options"></a>Opções de NMAKE
 
@@ -18,11 +18,11 @@ Opções de NMAKE são descritas na tabela a seguir. As opções são precedidas
 |Opção|Finalidade|
 |------------|-------------|
 |/A|Compilação de forças de todos os destinos avaliados, mesmo se não desatualizadas em relação a seus dependentes. Não força a compilação de destinos não relacionados.|
-|/ B|Força compilar mesmo que os carimbos de hora são iguais. Recomendado somente para sistemas muito rápidos (resolução de dois segundos ou menos).|
+|/B|Força compilar mesmo que os carimbos de hora são iguais. Recomendado somente para sistemas muito rápidos (resolução de dois segundos ou menos).|
 |/C|Suprime o padrão de saída, incluindo avisos ou erros não fatais de NMAKE, carimbos de hora e mensagem de direitos autorais de NMAKE. Suprime os avisos emitidos pelo /K.|
 |/D|Exibe os carimbos de hora de cada avaliada destino e dependente e uma mensagem quando um destino não existe. Útil com/p para depurar um makefile. Use **! CMDSWITCHES** para definir ou limpar /D para parte de um makefile.|
 |/E|Faz com que as variáveis de ambiente substituir as definições de macro de makefile.|
-|/ERRORREPORT [NONE &AMP;#124; PROMPT &AMP;#124; FILA &AMP;#124; ENVIAR]|Se nmake.exe falhar em tempo de execução, você pode usar /ERRORREPORT para enviar à Microsoft informações sobre esses erros internos.<br /><br /> Para obter mais informações sobre /ERRORREPORT, consulte [/errorReport (relatório de erros do compilador interno)](../build/reference/errorreport-report-internal-compiler-errors.md).|
+|/ERRORREPORT[NONE &#124; PROMPT &#124; QUEUE &#124; SEND ]|Se nmake.exe falhar em tempo de execução, você pode usar /ERRORREPORT para enviar à Microsoft informações sobre esses erros internos.<br /><br /> Para obter mais informações sobre /ERRORREPORT, consulte [/errorReport (relatório de erros do compilador interno)](../build/reference/errorreport-report-internal-compiler-errors.md).|
 |/F *filename*|Especifica *filename* como um makefile. Espaços ou tabulações podem preceder *filename*. Especifica /F uma vez para cada makefile. Para fornecer um makefile da entrada padrão, especifique um traço (-) para *filename*e terminar a entrada de teclado com F6 ou CTRL + Z.|
 |/G|Exibe os makefiles incluídos com o! Diretiva INCLUDE.  Ver [diretivas de pré-processamento de Makefile](../build/makefile-preprocessing-directives.md) para obter mais informações.|
 |/HELP, /?|Exibe um resumo da sintaxe de linha de comando NMAKE.|

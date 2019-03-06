@@ -9,12 +9,12 @@ helpviewer_keywords:
 - cl.exe compiler, precompiling code
 - .pch files, creating
 ms.assetid: e2cdb404-a517-4189-9771-c869c660cb1b
-ms.openlocfilehash: b570b76328ee9824610aac495d97cede19189cf9
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 75ebc466b55cdc2221783531024eefece2e976bb
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176426"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413765"
 ---
 # <a name="creating-precompiled-header-files"></a>Criando arquivos de cabeçalho pré-compilado
 
@@ -151,7 +151,7 @@ As seções anteriores apresentam uma visão geral dos cabeçalhos pré-compilad
 
 Para outra abordagem para usar as opções de cabeçalho pré-compilado manuais em um projeto, estude uma das makefiles localizados no diretório MFC\SRC que é criado durante a configuração padrão do Visual C++. Esses makefiles adotar uma abordagem semelhante ao apresentado nesta seção, mas usar mais de macros do Microsoft programa manutenção Utility (NMAKE) e oferecem maior controle do processo de compilação.
 
-## <a name="pch-files-in-the-build-process"></a>Arquivos PCH no processo de Build
+## <a name="pch-files-in-the-build-process"></a>Arquivos PCH no processo de compilação
 
 A base de código de um projeto de software geralmente está contida em vários C ou C++ arquivos de origem, arquivos de objeto, bibliotecas e arquivos de cabeçalho. Normalmente, um makefile coordena a combinação desses elementos em um arquivo executável. A figura a seguir mostra a estrutura de um makefile que usa um arquivo de cabeçalho pré-compilado. Os nomes de macro NMAKE e os nomes de arquivo nesse diagrama são consistentes com aqueles no código de exemplo encontrado na [Makefile de exemplo para PCH](#sample-makefile-for-pch) e [código de exemplo para PCH](#example-code-for-pch).
 

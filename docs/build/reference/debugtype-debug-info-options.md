@@ -8,12 +8,12 @@ helpviewer_keywords:
 - DEBUGTYPE linker option
 - -DEBUGTYPE linker option
 ms.assetid: 1ddcb718-7fec-4f92-a319-3f70f04fe742
-ms.openlocfilehash: f730e485b7dc29cb8fe98bdcc7ea50f5e8c622d7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c4a24d79295c1f7dbbe645c4a6e52f58b4a08807
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50676987"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57423489"
 ---
 # <a name="debugtype-debug-info-options"></a>/DEBUGTYPE (opções de informações de depuração)
 
@@ -25,13 +25,13 @@ A opção /DEBUGTYPE Especifica os tipos de informações de depuração geradas
 
 ## <a name="arguments"></a>Arguments
 
-**VC**<br/>
+**CV**<br/>
 Informa o vinculador para emitir informações de depuração para símbolos, números de linha e outras informações de compilação do objeto no arquivo PDB. Por padrão, essa opção é habilitada quando **/Debug** for especificado e **/DEBUGTYPE** não for especificado.
 
 **PDATA**<br/>
 Instrui o vinculador a adicionar entradas de registro. pData e. XData para as informações de fluxo de depuração no arquivo PDB. Por padrão, essa opção é habilitada quando tanto o **/Debug** e **/DRIVER** opções forem especificadas. Se **/DEBUGTYPE:PDATA** é especificado por si só, o vinculador inclui automaticamente os símbolos no arquivo PDB de depuração. Se **/DEBUGTYPE:PDATA, correção** for especificado, o vinculador não incluir símbolos no arquivo PDB de depuração.
 
-**CORREÇÃO**<br/>
+**FIXUP**<br/>
 Instrui o vinculador a adicionar entradas de tabela de realocação para as informações de fluxo de depuração no arquivo PDB. Por padrão, essa opção é habilitada quando tanto o **/Debug** e **/Profile** opções forem especificadas. Se **/DEBUGTYPE:FIXUP** ou **/DEBUGTYPE:FIXUP, PDATA** for especificado, o vinculador não incluir símbolos no arquivo PDB de depuração.
 
 Argumentos a serem **/DEBUGTYPE** podem ser combinadas em qualquer ordem, separando-os com uma vírgula. O **/DEBUGTYPE** opção e seus argumentos não diferenciam maiusculas de minúsculas.

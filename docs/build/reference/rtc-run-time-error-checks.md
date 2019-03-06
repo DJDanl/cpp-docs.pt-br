@@ -25,12 +25,12 @@ helpviewer_keywords:
 - RTCc compiler option
 - -RTCc compiler option [C++]
 ms.assetid: 9702c558-412c-4004-acd5-80761f589368
-ms.openlocfilehash: 77dc97ee07499b7df37a115dafafddd71acb7bb1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3ac70904332f5f05463b317f02a2ab8d3bfc7bb3
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50654994"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57424607"
 ---
 # <a name="rtc-run-time-error-checks"></a>/RTC (verificações de erro de tempo de execução)
 
@@ -95,7 +95,7 @@ Se uma variável pode ter sido inicializada, ele não será relatado em tempo de
 
 ## <a name="remarks"></a>Comentários
 
-Verificações de erro em tempo de execução são uma maneira de localizar problemas em seu código em execução; Para obter mais informações, consulte [como: usar verificações de tempo de execução nativo](/visualstudio/debugger/how-to-use-native-run-time-checks).
+Verificações de erro em tempo de execução são uma maneira de localizar problemas em seu código em execução; Para obter mais informações, consulte [como: Usar verificações de tempo de execução nativas](/visualstudio/debugger/how-to-use-native-run-time-checks).
 
 Se você compilar seu programa na linha de comando usando qualquer um dos **/RTC** opções do compilador, qualquer pragma [otimizar](../../preprocessor/optimize.md) instruções em seu código falhará silenciosamente. Isso ocorre porque as verificações de erro em tempo de execução não são válidas em um build de versão (otimizado).
 
@@ -111,7 +111,7 @@ A diretiva de pré-processador msvc_runtime_checks será definida quando você u
 
 1. Clique o **geração de código** página de propriedades.
 
-1. Modificar uma ou ambas das seguintes propriedades: **verificações básicas de tempo de execução** ou **verificação de tipo menor**.
+1. Modifique uma ou ambas as propriedades a seguir: **Verificações de tempo de execução básico** ou **verificação de tipo menor**.
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Para definir essa opção do compilador via programação
 
@@ -121,4 +121,4 @@ A diretiva de pré-processador msvc_runtime_checks será definida quando você u
 
 [Opções do Compilador](../../build/reference/compiler-options.md)<br/>
 [Definindo opções do compilador](../../build/reference/setting-compiler-options.md)<br/>
-[Como usar verificações de tempo de execução nativas](/visualstudio/debugger/how-to-use-native-run-time-checks)
+[Como: Usar verificações de tempo de execução nativas](/visualstudio/debugger/how-to-use-native-run-time-checks)

@@ -2,12 +2,12 @@
 title: /arch (x86)
 ms.date: 11/04/2016
 ms.assetid: 9dd5a75d-06e4-4674-aade-33228486078d
-ms.openlocfilehash: fb115d564ca24ff29e120e0d8c25e0dbe28024cb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e2aba6dc18db621710b5293f9f970fa5f453b8a9
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50549702"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57421801"
 ---
 # <a name="arch-x86"></a>/arch (x86)
 
@@ -21,19 +21,19 @@ Especifica a arquitetura para a geração de código no x86. Consulte também [/
 
 ## <a name="arguments"></a>Arguments
 
-**/ arch:IA32**<br/>
+**/arch:IA32**<br/>
 Não especifica instruções aprimoradas e especifica x87 para cálculos de ponto flutuante.
 
 **/arch:SSE**<br/>
 Habilita o uso de instruções SSE.
 
-**/ arch:SSE2**<br/>
+**/arch:SSE2**<br/>
 Habilita o uso de instruções SSE2. Essa é a instrução padrão em x86 plataformas se nenhum **/arch** opção for especificada.
 
-**/arch: avx**<br/>
+**/arch:AVX**<br/>
 Habilita o uso de instruções Intel Advanced Vector Extensions.
 
-**/ arch:avx2**<br/>
+**/arch:AVX2**<br/>
 Habilita o uso de instruções Intel Advanced Vector Extensions 2.
 
 ## <a name="remarks"></a>Comentários

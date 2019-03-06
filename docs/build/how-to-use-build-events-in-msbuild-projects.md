@@ -1,19 +1,19 @@
 ---
-title: Como usar eventos de build em projetos de MSBuild
+title: 'Como: Usar eventos de Build em projetos do MSBuild'
 ms.date: 11/04/2016
 f1_keywords:
 - msbuild.cpp.howto.usebuildevents
 helpviewer_keywords:
 - 'msbuild (c++), howto: use build events in projects'
 ms.assetid: 2a58dc9d-3d50-4e49-97c1-86c5a05ce218
-ms.openlocfilehash: 60e26b5cab77bb56f0574a91ad69a7df4d73fa1e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ea9ff51066c09e1e4a783b622248d9774a023172
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50570268"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57417564"
 ---
-# <a name="how-to-use-build-events-in-msbuild-projects"></a>Como usar eventos de build em projetos de MSBuild
+# <a name="how-to-use-build-events-in-msbuild-projects"></a>Como: Usar eventos de Build em projetos do MSBuild
 
 Um evento de compilação é um comando que o MSBuild executa em um estágio específico no processo de compilação. O *pré-build* evento ocorre antes do início do build; a *pré-vínculo* evento ocorre antes do início da etapa de link; e o *pós-compilação* evento ocorre após a compilação termina com êxito. Um evento de compilação ocorre apenas se a etapa de compilação associado ocorre. Por exemplo, o evento de pré-vínculo não ocorrer se a etapa de link não é executado.
 
@@ -39,7 +39,7 @@ A tabela a seguir lista cada *uso no build* elemento:
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir pode ser adicionado dentro do elemento de projeto do myproject. vcxproj arquivo criado no [instruções passo a passo: usando o MSBuild para criar um projeto do Visual C++](../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md). Um *pré-Build* evento faz uma cópia de cpp; um *pré-vínculo* evento faz uma cópia de Main; e um *pós-compilação* evento faz uma cópia do myproject.exe. Se o projeto é compilado usando uma configuração de versão, os eventos de build serão executados. Se o projeto é compilado usando uma configuração de depuração, os eventos de build não são executados.
+O exemplo a seguir pode ser adicionado dentro do elemento de projeto do myproject. vcxproj arquivo criado no [passo a passo: Usando MSBuild para criar um projeto do Visual C++](../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md). Um *pré-Build* evento faz uma cópia de cpp; um *pré-vínculo* evento faz uma cópia de Main; e um *pós-compilação* evento faz uma cópia do myproject.exe. Se o projeto é compilado usando uma configuração de versão, os eventos de build serão executados. Se o projeto é compilado usando uma configuração de depuração, os eventos de build não são executados.
 
 ```
 <ItemDefinitionGroup>
@@ -73,4 +73,4 @@ O exemplo a seguir pode ser adicionado dentro do elemento de projeto do myprojec
 ## <a name="see-also"></a>Consulte também
 
 [MSBuild (Visual C++)](../build/msbuild-visual-cpp.md)<br/>
-[Instruções passo a passo: usando MSBuild para criar um projeto do Visual C++](../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)
+[Passo a passo: Usando o MSBuild para criar um projeto em Visual C++](../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)

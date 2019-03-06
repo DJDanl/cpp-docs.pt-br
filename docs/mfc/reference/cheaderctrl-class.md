@@ -64,12 +64,12 @@ helpviewer_keywords:
 - CHeaderCtrl [MFC], SetItem
 - CHeaderCtrl [MFC], SetOrderArray
 ms.assetid: b847ac90-5fae-4a87-88e0-ca45f77b8b3b
-ms.openlocfilehash: a683c877b67f4eae1a7411f5916987c9789b6817
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 51cdfb481892ba5057d4ca26ff4d6e51665557e5
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57261343"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57415611"
 ---
 # <a name="cheaderctrl-class"></a>Classe CHeaderCtrl
 
@@ -231,7 +231,7 @@ virtual BOOL Create(
 Especifica o estilo do controle de cabeçalho. Para obter uma descrição dos estilos de controle de cabeçalho, consulte [estilos de controle de cabeçalho](/windows/desktop/Controls/header-control-styles) no SDK do Windows.
 
 *rect*<br/>
-Especifica o tamanho e a posição do controle de cabeçalho. Ela pode ser um [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto ou uma [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura.
+Especifica o tamanho e a posição do controle de cabeçalho. Ela pode ser um [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto ou uma [RECT](/previous-versions/dd162897\(v=vs.85\)) estrutura.
 
 *pParentWnd*<br/>
 Especifica a janela do pai do controle de cabeçalho, geralmente um `CDialog`. Ele não deve ser NULL.
@@ -301,7 +301,7 @@ Especifica o estilo estendido do controle que está sendo criado. Para obter uma
 Estilo do controle de cabeçalho. Para obter uma descrição dos estilos de controle de cabeçalho, consulte [estilos de controle de cabeçalho](/windows/desktop/Controls/header-control-styles) no SDK do Windows. Ver [criar](#create) para obter uma lista de estilos adicionais.
 
 *rect*<br/>
-Uma referência a um [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura que descreve o tamanho e posição da janela a ser criado, em coordenadas do cliente do *pParentWnd*.
+Uma referência a um [RECT](/previous-versions/dd162897\(v=vs.85\)) estrutura que descreve o tamanho e posição da janela a ser criado, em coordenadas do cliente do *pParentWnd*.
 
 *pParentWnd*<br/>
 Um ponteiro para a janela que é o pai do controle.
@@ -543,7 +543,7 @@ BOOL GetItemDropDownRect(
 |Parâmetro|Descrição|
 |---------------|-----------------|
 |*iItem*|[in] Índice baseado em zero de um item de cabeçalho cujo estilo é HDF_SPLITBUTTON. Para obter mais informações, consulte o `fmt` membro a [HDITEM](/windows/desktop/api/commctrl/ns-commctrl-_hd_itema) estrutura.|
-|*lpRect*|[out] Ponteiro para um [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura que receberá as informações do retângulo delimitador.|
+|*lpRect*|[out] Ponteiro para um [RECT](/previous-versions/dd162897\(v=vs.85\)) estrutura que receberá as informações do retângulo delimitador.|
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -581,7 +581,7 @@ BOOL GetItemRect(
 O índice baseado em zero do item de controle de cabeçalho.
 
 *lpRect*<br/>
-Um ponteiro para o endereço de uma [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura que recebe as informações do retângulo delimitador.
+Um ponteiro para o endereço de uma [RECT](/previous-versions/dd162897\(v=vs.85\)) estrutura que recebe as informações do retângulo delimitador.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -633,7 +633,7 @@ BOOL GetOverflowRect(LPRECT lpRect) const;
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|*lpRect*|[out] Ponteiro para um [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura que recebe as informações do retângulo delimitador.|
+|*lpRect*|[out] Ponteiro para um [RECT](/previous-versions/dd162897\(v=vs.85\)) estrutura que recebe as informações do retângulo delimitador.|
 
 ### <a name="return-value"></a>Valor de retorno
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /FC compiler option [C++]
 - -FC compiler option [C++]
 ms.assetid: 1f11414e-cb42-421b-be68-9d369aab036b
-ms.openlocfilehash: 3629ec35f0be5ebfd384b949acb2910dcbea3318
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 96809f09efd068b80f04a70d4356c1ceaf5f113c
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624900"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57422475"
 ---
 # <a name="fc-full-path-of-source-code-file-in-diagnostics"></a>/FC (demarcador completo do arquivo de código-fonte no diagnóstico)
 
@@ -36,11 +36,11 @@ int main( ) {
 
 Sem **/FC**, o texto de diagnóstico seria semelhante ao seguinte texto de diagnóstico:
 
-- compiler_option_FC.cpp(5): erro C2143: erro de sintaxe: faltando ';' antes '}'
+- compiler_option_FC.cpp(5) : error C2143: syntax error : missing ';' before '}'
 
 Com o **/FC**, o texto de diagnóstico seria semelhante ao seguinte texto de diagnóstico:
 
-- c:\test\compiler_option_fc.cpp(5): erro C2143: erro de sintaxe: faltando ';' antes '}'
+- c:\test\compiler_option_fc.cpp(5) : error C2143: syntax error : missing ';' before '}'
 
 **/FC** também é necessário se você quiser ver o caminho completo de um nome de arquivo ao usar o &#95; &#95;arquivo&#95; &#95; macro. Ver [Macros predefinidas](../../preprocessor/predefined-macros.md) para obter mais informações sobre &#95; &#95;arquivo&#95;&#95;.
 

@@ -22,12 +22,12 @@ helpviewer_keywords:
 - contained windows
 - CContainedWindowT class
 ms.assetid: cde0ca36-9347-4068-995a-d294dae57ca9
-ms.openlocfilehash: 7fd9a941210407edc3424454b3375040717a05a2
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 660c6c047bb700e531fd941ac8ed19d638866070
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57261655"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57421565"
 ---
 # <a name="ccontainedwindowt-class"></a>Classe CContainedWindowT
 
@@ -214,7 +214,7 @@ HWND Create(
 [in] O identificador para a janela pai ou proprietária.
 
 *rect*<br/>
-[in] Um [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) especificando a posição da janela de estrutura. O `RECT` pode ser passada por um ponteiro ou referência.
+[in] Um [RECT](/previous-versions/dd162897\(v=vs.85\)) especificando a posição da janela de estrutura. O `RECT` pode ser passada por um ponteiro ou referência.
 
 *szWindowName*<br/>
 [in] Especifica o nome da janela. O valor padrão é NULL.

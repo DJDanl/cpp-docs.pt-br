@@ -10,12 +10,12 @@ helpviewer_keywords:
 - cl.exe compiler [C++], features that affect linking
 - cl.exe compiler [C++], controlling linker
 ms.assetid: e4c03896-c99c-4599-8502-e0f4bebe69d0
-ms.openlocfilehash: 21d0baccaf74fc08bb110b0ae9f8b7dc108abd6b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3fed75b18ead80b8367eb1254793d632629efeff
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50561558"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57426700"
 ---
 # <a name="compiler-controlled-link-options"></a>Opções LINK controladas por compilador
 
@@ -24,11 +24,11 @@ O compilador CL chama automaticamente o LINK, a menos que você especifique a op
 |Especificação de CL|Ação de CL que afeta o LINK|
 |----------------------|---------------------------------|
 |Qualquer extensão de nome de arquivo diferente. c,. cxx,. cpp ou. def|Passa um nome de arquivo como entrada para o LINK|
-|*nome do arquivo*. def|Passa /DEF:*filename*. def|
-|/F*número*|Passos /STACK:*número*|
-|/FD*filename*|Passa /PDB:*filename*|
-|/FE*nome de arquivo*|Passa /out:*filename*|
-|/FM*nome de arquivo*|Passos /MAP:*filename*|
+|*filename*.def|Passa /DEF:*filename*. def|
+|/F*number*|Passos /STACK:*número*|
+|/Fd*filename*|Passa /PDB:*filename*|
+|/Fe*filename*|Passa /out:*filename*|
+|/Fm*filename*|Passos /MAP:*filename*|
 |/Gy|Cria funções empacotadas (COMDATs); Habilita vinculação em nível de função|
 |/LD|Passa /DLL|
 |/LDd|Passa /DLL|

@@ -52,16 +52,16 @@ helpviewer_keywords:
 - m_bCancelWhenExecuting
 - m_bIsExecuting
 ms.assetid: ef285fef-0d66-45e6-a762-b03357098e3b
-ms.openlocfilehash: c5e599b437f7660801a1eb40618eb49bee84a918
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: e1f461cc850a2122af7902babfad8f1e14ac3e33
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556810"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57424841"
 ---
 # <a name="icommandimpl-class"></a>Classe ICommandImpl
 
-Fornece implementação para o [ICommand](https://docs.microsoft.com/previous-versions/windows/desktop/ms709737(v=vs.85)) interface.
+Fornece implementação para o [ICommand](/previous-versions/windows/desktop/ms709737(v=vs.85)) interface.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -107,7 +107,7 @@ Uma interface de comando. O padrão é `ICommand`.
 
 Uma interface obrigatória no objeto de comando.
 
-## <a name="cancel"></a> Icommandimpl:: Cancel
+## <a name="cancel"></a> ICommandImpl::Cancel
 
 Cancela a execução do comando atual.
 
@@ -119,7 +119,7 @@ STDMETHOD(Cancel)();
 
 ### <a name="remarks"></a>Comentários
 
-Ver [ICommand::Cancel](https://docs.microsoft.com/previous-versions/windows/desktop/ms714402(v=vs.85)) na *referência do programador do OLE DB*.
+Ver [ICommand::Cancel](/previous-versions/windows/desktop/ms714402(v=vs.85)) na *referência do programador do OLE DB*.
 
 ## <a name="cancelexecution"></a> Icommandimpl:: Cancelexecution
 
@@ -131,7 +131,7 @@ Cancela a execução do comando atual.
 HRESULT CancelExecution();
 ```
 
-## <a name="createrowset"></a> Icommandimpl:: Createrowset
+## <a name="createrowset"></a> ICommandImpl::CreateRowset
 
 Chamado pelo [Execute](../../data/oledb/icommandimpl-execute.md) para criar um único conjunto de linhas.
 
@@ -178,7 +178,7 @@ Um valor padrão de HRESULT. Consulte `ICommand::Execute` para obter uma lista d
 
 Para criar mais de um conjunto de linhas, ou para fornecer suas próprias condições para a criação de diferentes conjuntos de linhas, coloque as diferentes chamadas para `CreateRowset` de dentro `Execute`.
 
-Ver [ICommand:: execute](https://docs.microsoft.com/previous-versions/windows/desktop/ms718095(v=vs.85)) no *referência do programador do OLE DB.*
+Ver [ICommand:: execute](/previous-versions/windows/desktop/ms718095(v=vs.85)) no *referência do programador do OLE DB.*
 
 ## <a name="execute"></a> Icommandimpl:: execute
 
@@ -196,7 +196,7 @@ HRESULT Execute(IUnknown* pUnkOuter,
 
 #### <a name="parameters"></a>Parâmetros
 
-Ver [ICommand:: execute](https://docs.microsoft.com/previous-versions/windows/desktop/ms718095(v=vs.85)) na *referência do programador do OLE DB*.
+Ver [ICommand:: execute](/previous-versions/windows/desktop/ms718095(v=vs.85)) na *referência do programador do OLE DB*.
 
 ### <a name="remarks"></a>Comentários
 
@@ -217,13 +217,13 @@ STDMETHOD (GetDBSession) (REFIID riid,
 
 #### <a name="parameters"></a>Parâmetros
 
-Ver [ICommand::GetDBSession](https://docs.microsoft.com/previous-versions/windows/desktop/ms719622(v=vs.85)) na *referência do programador do OLE DB*.
+Ver [ICommand::GetDBSession](/previous-versions/windows/desktop/ms719622(v=vs.85)) na *referência do programador do OLE DB*.
 
 ### <a name="remarks"></a>Comentários
 
 É útil para recuperar as propriedades da sessão.
 
-## <a name="icommandimpl"></a> Icommandimpl:: Icommandimpl
+## <a name="icommandimpl"></a> ICommandImpl::ICommandImpl
 
 O construtor.
 
@@ -233,7 +233,7 @@ O construtor.
 ICommandImpl();
 ```
 
-## <a name="bcancel"></a> Icommandimpl:: M_bcancel
+## <a name="bcancel"></a> ICommandImpl::m_bCancel
 
 Indica se o comando é cancelado.
 
@@ -247,7 +247,7 @@ unsigned m_bCancel:1;
 
 Você pode recuperar essa variável no `Execute` método de sua classe de comando e Cancelar conforme apropriado.
 
-## <a name="bcancelwhenexecuting"></a> Icommandimpl:: M_bcancelwhenexecuting
+## <a name="bcancelwhenexecuting"></a> ICommandImpl::m_bCancelWhenExecuting
 
 Indica se o comando pode ser cancelado durante a execução.
 
@@ -261,7 +261,7 @@ unsigned m_bCancelWhenExecuting:1;
 
 O padrão é **verdadeira** (pode ser cancelada).
 
-## <a name="bisexecuting"></a> Icommandimpl:: M_bisexecuting
+## <a name="bisexecuting"></a> ICommandImpl::m_bIsExecuting
 
 Indica se o comando está em execução.
 

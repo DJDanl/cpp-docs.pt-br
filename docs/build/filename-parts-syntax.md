@@ -6,12 +6,12 @@ helpviewer_keywords:
 - filename-parts syntax in NMAKE
 - NMAKE program, syntax
 ms.assetid: 48fe38e0-3f3b-40e6-894c-330ee775a656
-ms.openlocfilehash: 89869ccaea2a9a5c3d16762fe49b72efc462e0ee
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 159558081fd9884f969ddc66833d927b8569a79b
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50552042"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57417470"
 ---
 # <a name="filename-parts-syntax"></a>Sintaxe de partes do nome de arquivo
 
@@ -27,13 +27,13 @@ Sintaxe de partes de nome de arquivo em comandos representa os componentes do no
 
 Por exemplo, se o nome do arquivo é c:\prog.exe:
 
-- %s será c:\prog.exe
+- %s will be c:\prog.exe
 
-- %&#124;F será c:\prog.exe
+- %&#124;F will be c:\prog.exe
 
 - %&#124;dF será c
 
-- %&#124;pF será c:\
+- %&#124;pF will be c:\
 
 - %&#124;fF será prog
 

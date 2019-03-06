@@ -3,12 +3,12 @@ title: classe Enum (C + + c++ /CLI e c++ /CLI CX)
 ms.date: 10/12/2018
 ms.topic: reference
 ms.assetid: 8010fa8c-bad6-45b4-8214-b4db64d7ffe1
-ms.openlocfilehash: 5bc850831e961a500ae71ce90e3ca39b3aabd159
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aee3d4f44c18074ca536ff028565bbbd0e37d04c
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50592511"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57417418"
 ---
 # <a name="enum-class--ccli-and-ccx"></a>classe Enum (C + + c++ /CLI e c++ /CLI CX)
 
@@ -37,15 +37,15 @@ accessenum structenumeration-identifier[:underlying-type] { enumerator-list } [v
 *access*<br/>
 A acessibilidade de enumeração, que pode ser **pública** ou **privada**.
 
-*Identificador de enumeração*<br/>
+*enumeration-identifier*<br/>
 O nome da enumeração.
 
-*tipo de base*<br/>
+*underlying-type*<br/>
 (Opcional) O tipo subjacente da enumeração.
 
 (Opcional. Runtime do Windows somente) o tipo subjacente da enumeração, que pode ser **bool**, **char**, `char16`, `int16`, `uint16`, **int**, `uint32`, `int64`, ou `uint64`.
 
-*lista de enumerador*<br/>
+*enumerator-list*<br/>
 Uma lista delimitada por vírgulas de nomes de enumeradores.
 
 O valor de cada enumerador é uma expressão de constante ou é definida implicitamente pelo compilador, ou explicitamente a notação *enumerador*`=`*expressão constante*. Por padrão, o valor do primeiro enumerador é zero, se ele é definido implicitamente. O valor de cada enumerador subsequente de implicitamente definido é o valor do enumerador anterior + 1.
@@ -55,7 +55,7 @@ O valor de cada enumerador é uma expressão de constante ou é definida implici
 
 ### <a name="remarks"></a>Comentários
 
-Para obter mais informações e exemplos, consulte [Enums](https://msdn.microsoft.com/%20library/windows/apps/hh755820.aspx).
+Para obter mais informações e exemplos, consulte [Enums](../cppcx/enums-c-cx.md).
 
 Observe que o compilador emite mensagens de erro se a expressão de constante que define o valor de um enumerador não pode ser representada pelo *tipo subjacente*.  No entanto, o compilador não relatará um erro para um valor que não é apropriado para o tipo subjacente. Por exemplo:
 
@@ -85,7 +85,7 @@ accessenum structname [:type] { enumerator-list } var;
 *access*<br/>
 A acessibilidade do enum. Pode ser **pública** ou **privada**.
 
-*lista de enumerador*<br/>
+*enumerator-list*<br/>
 Uma lista separada por vírgula dos identificadores (enumeradores) na enumeração.
 
 *name*<br/>

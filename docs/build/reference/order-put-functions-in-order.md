@@ -12,12 +12,12 @@ helpviewer_keywords:
 - LINK tool [C++], swap tuning
 - paging, optimizing
 ms.assetid: ecf5eb3e-e404-4e86-9a91-4e5ec157261a
-ms.openlocfilehash: dd854b6ea19ee08bf1a375a42466ad7abd13b1ee
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5429876d9bfae7d8b317d52d69f0b21c720b002a
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50480191"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57418068"
 ---
 # <a name="order-put-functions-in-order"></a>/ORDER (colocar funções na ordem)
 
@@ -25,7 +25,7 @@ Especifique a ordem de vinculação para funções de (COMDAT) empacotadas separ
 
 ## <a name="syntax"></a>Sintaxe
 
-> **/Order:\@**<em>nome de arquivo</em>
+> **/ORDER:\@**<em>filename</em>
 
 ### <a name="parameters"></a>Parâmetros
 
