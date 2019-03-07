@@ -5,18 +5,18 @@ helpviewer_keywords:
 - symbols [C++], ATL predefined
 - ATL symbols
 ms.assetid: 60d8f4e6-6ed9-47f3-9051-e4bf34384456
-ms.openlocfilehash: 16991746c5c858310466f7eebd91a8478d2dcc5c
-ms.sourcegitcommit: f127b08f114b8d6cab6b684febcb6f2ae0e055ba
+ms.openlocfilehash: 2abbfb83f6d9b09a1c5dcc2afe1c48a6d2dff79a
+ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "56954842"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57562868"
 ---
 # <a name="atl-predefined-symbols"></a>Símbolos predefinidos ATL
 
 Esses símbolos são definidos nos arquivos de cabeçalho da ATL, mas eles oferecem suporte a ações e funções de aplicativo do Windows padrão. Esses símbolos são usados principalmente com caixas de diálogo.
 
-Quando você estiver trabalhando com caixas de diálogo e controles na [editor de caixa de diálogo](../windows/dialog-editor.md), esses símbolos aparecerá na **propriedades** janela associada com controles comuns. Por exemplo, se a caixa de diálogo tem um **Cancelar** botão, que o comando será associado com o símbolo IDCANCEL na [janela propriedades](/visualstudio/ide/reference/properties-window).
+Quando você estiver trabalhando com caixas de diálogo e controles na [Editor de caixa de diálogo](../windows/dialog-editor.md), esses símbolos aparecerá na [janela propriedades](/visualstudio/ide/reference/properties-window) associados a controles comuns. Por exemplo, se a caixa de diálogo tem um **Cancelar** botão, que o comando será associado com o símbolo IDCANCEL na **propriedades** janela.
 
 |||
 |-|-|

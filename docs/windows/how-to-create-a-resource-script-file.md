@@ -36,32 +36,32 @@ helpviewer_keywords:
 - resources [C++], templates
 - .rct files [C++]
 ms.assetid: 82be732a-cdcd-4a58-8de7-976d1418f86b
-ms.openlocfilehash: 768675a878891ebb75c7f42c12eae8dfcfa3510b
-ms.sourcegitcommit: e540706f4e2675e7f597cfc5b4f8dde648b007bb
+ms.openlocfilehash: a18c24685ff0d5f65970a094730d1587abffb601
+ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56676481"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57563024"
 ---
 # <a name="how-to-create-resources-c"></a>Como: Criar recursos (C++)
 
 Você pode criar recursos para seu projeto por:
 
-- Usando um arquivo de script de recurso. Essa etapa é necessária antes de adicionar recursos.
+- Usando um arquivo de script de recurso.
 
-- Adicionando recursos ao seu projeto. Esta etapa mostra como usar o **exibição de recurso**.
+   > [!NOTE]
+   > Essa etapa é necessária antes de adicionar recursos.
+
+- Adicionando recursos ao seu projeto e usando o **exibição de recurso**.
 
 - Usando um modelo de recurso para criar recursos personalizados.
-
-> [!NOTE]
-> O **Editor de recursos** e **exibição de recurso** não estão disponíveis nas edições Express.
 
 ## <a name="use-resource-script-files"></a>Usar arquivos de Script de recurso
 
 Antes de criar e adicionar novos recursos ao seu projeto, crie primeiro um arquivo de script (. rc) do recurso.
 
 > [!NOTE]
-> Você só pode adicionar um script de recurso a um projeto existente carregado no IDE do Visual Studio. Você não pode criar um script de recurso autônomo fora do projeto, embora os modelos de recursos (arquivos. rct) podem ser criados a qualquer momento.
+> Você só pode adicionar um arquivo de script de recurso a um projeto existente carregado no IDE do Visual Studio. Você não pode criar um script de recurso autônomo fora do projeto, embora os arquivos de modelo (. rct) de recurso podem ser criados a qualquer momento.
 
 ### <a name="to-create-a-resource-script-file"></a>Para criar um arquivo de script de recurso
 
@@ -81,30 +81,26 @@ Antes de criar e adicionar novos recursos ao seu projeto, crie primeiro um arqui
 Você pode exibir recursos em um arquivo de script de recurso sem ter um projeto aberto. O arquivo de script é aberto em uma janela de documento em vez de **exibição de recurso**.
 
 > [!NOTE]
-> Alguns comandos só estarão disponíveis se o arquivo é aberto autônomo, ou seja, fora de um projeto ou sem primeiro carregar o projeto. Por exemplo, para usar o **Salvar como** de comando para salvar um arquivo com um nome de arquivo ou formato diferente, o arquivo deve ser aberto autônomo.
+> Alguns comandos só estarão disponíveis se o arquivo é aberto autônomo, ou seja, fora de um projeto sem primeiro carregar o projeto. Por exemplo, para usar o **Salvar como** de comando e salvar um arquivo com um nome de arquivo ou formato diferente, o arquivo deve ser aberto autônomo.
 
-- Para abrir um arquivo de script de recurso fora de um projeto, no menu, acesse **arquivo** > **abra**e escolha **arquivo**. Em seguida, navegue até o arquivo de script de recurso, realce o arquivo e escolha **aberto**.
-
-  - Para abrir um arquivo de script de recurso no formato de texto, use a seta suspensa no lado direito do **abra** botão na etapa anterior e escolha **abrir com**. Em seguida, selecione **Editor de código-fonte (texto)** e para o **abrir como** lista suspensa, selecione **texto**, e o recurso é aberto no **código-fonte**editor.
+- Para abrir um arquivo de script de recurso fora de um projeto, no menu, acesse **arquivo** > **abra**e escolha **arquivo**. Navegue até o arquivo de script de recurso, realce o arquivo e escolha **aberto**.
 
     > [!NOTE]
     > Pode haver ocasiões em que você deseja exibir o conteúdo do arquivo de script de recurso do seu projeto sem usar os editores de recursos para abrir um recurso. Por exemplo, você talvez queira procurar uma cadeia de caracteres em todas as caixas de diálogo no arquivo de recurso sem precisar abrir cada um deles separadamente. Você pode facilmente abrir o arquivo de recurso no formato de texto para exibir todos os recursos que ele contém e concluir operações globais com suporte pelo editor de texto.
+    >
+    > Para abrir um arquivo de script de recurso no formato de texto, use a seta suspensa no lado direito do **abra** botão na etapa anterior e escolha **abrir com**. Selecione **Editor de código-fonte (texto)** e para o **abrir como** lista suspensa, selecione **texto** e o recurso é aberto no **código-fonte** Editor.
 
-- Para abrir o recurso de vários scripts siga as etapas acima para cada arquivo que você deseja abrir, por exemplo, *Source1.rc* e *Source2.rc*. Em seguida, quando ambos os arquivos. rc estão abertos em janelas de documentos separados, ou use o **janela** menu ou clique em um dos arquivos. RC e escolha **novo grupo de guias horizontais** ou **nova guia Vertical Grupo**. Os windows agora são lado a lado para que você pode exibi-los simultaneamente.
+- Para abrir o recurso de vários scripts seguem a mesma etapa acima para cada arquivo que você deseja abrir, por exemplo, *Source1.rc* e *Source2.rc*. Em seguida, quando ambos os arquivos. rc estão abertos em janelas de documentos separados, ou use o **janela** menu ou clique em um dos arquivos e escolha **novo grupo de guias horizontais** ou **novo grupo de guias verticais** . Os windows agora são lado a lado para que você pode exibi-los simultaneamente.
 
 > [!TIP]
-> Você também pode abrir arquivos de script do recurso clicando com o arquivo. rc no **Gerenciador de soluções**, escolhendo **abrir com...**  e selecionando **Editor de código-fonte (texto)**.
-
-### <a name="to-edit-a-resource-script-file"></a>Para editar um arquivo de script de recurso
-
-- Para converter um arquivo de recurso existente em um modelo, com o arquivo de script de recurso aberto, no menu, vá para **arquivo** > **salvar \< *filename*> como**. Em seguida, especifique um local e escolha **Okey**.
+> Você pode abrir arquivos de script do recurso clicando com o arquivo. rc no **Gerenciador de soluções**, selecionando **abrir com** e selecionando **Editor de código-fonte (texto)**.
 
 Quando você cria um aplicativo do Microsoft Foundation Class (MFC) para Windows usando o [Assistente de aplicativo MFC](../mfc/reference/mfc-application-wizard.md), o assistente gera um conjunto básico de arquivos, incluindo um arquivo de script (. rc) do recurso) que contém os principais recursos do MFC. No entanto, esses recursos específicos do MFC não estão disponíveis ao editar um arquivo. RC para aplicativos do Windows que não se baseia no MFC. Isso inclui assistentes de código, cadeias de caracteres de prompt do menu, Listar conteúdo para controles de caixa de combinação e hospedagem de controles ActiveX.
 
 - Para adicionar suporte MFC, com o arquivo de script de recurso aberto, no **exibição de recurso**, realce a pasta de recursos (por exemplo, *RC*). Em seguida, nos [janela de propriedades](/visualstudio/ide/reference/properties-window), defina **modo MFC** para **verdadeiro**.
 
   > [!NOTE]
-  > Além de configuração **modo MFC**, o arquivo. rc deve fazer parte de um projeto MFC. Apenas configurando **modo MFC** à **verdadeiro** em um. rc arquivo em um projeto do Win32 não dará os recursos do MFC.
+  > Além de configuração **modo MFC**, o arquivo. rc deve fazer parte de um projeto MFC. Apenas definindo **modo MFC** à **verdadeiro** em um. rc arquivo em um projeto do Win32 não dará os recursos do MFC.
 
 ## <a name="create-resources"></a>Criar recursos
 
@@ -115,23 +111,23 @@ Use o **exibição de recurso** janela para exibir os arquivos de recursos inclu
 > [!TIP]
 > Para abrir o **exibição de recurso** janela, vá ao menu **exibição** > **exibição de recurso** ou pressione **Ctrl** +  **SHIFT**+**E**.
 
-Você pode usar o botão direito do mouse no **exibição de recurso** janela para iniciar um menu de atalho de comandos ou clique duas vezes a barra de título para encaixar e desencaixar a janela. Clique com botão direito a barra de título para comandos adicionais que controlam o comportamento da janela. Para obter mais informações, consulte [Windows Management](/visualstudio/ide/customizing-window-layouts-in-visual-studio).
+Você também pode usar o botão direito do mouse no **exibição de recurso** janela para iniciar um menu de atalho de comandos ou clique duas vezes a barra de título para encaixar e desencaixar a janela. Clique com botão direito a barra de título para os comandos que controlam o comportamento da janela. Para obter mais informações, consulte [Windows Management](/visualstudio/ide/customizing-window-layouts-in-visual-studio).
 
 O **exibição de recurso** o windows inclui o **adicionar recurso** caixa de diálogo com as propriedades a seguir para adicionar recursos a um projeto de aplicativo da área de trabalho do Windows C++:
 
 | Propriedade | Descrição |
 |---|---|
-| **Tipo de recurso** | Especifique o tipo de recurso que você deseja criar.<br/><br/>Você pode expandir as categorias de recursos de caixa de cursor e a caixa de diálogo para revelar os recursos adicionais, que estão localizados em ...\Microsoft Visual Studio \<versão\>\VC\VCResourceTemplates\\< LCID\>\mfc.rct. Se você precisar adicionar arquivos. rct, colocá-los aqui ou especificar outro [caminho de inclusão](../windows/how-to-specify-include-directories-for-resources.md).<br/><br/>Recursos mostrados no nível superior no controle de árvore são os recursos padrão fornecidos pelo Visual Studio. Recursos em arquivos. rct aparecem no segundo nível sob a categoria apropriada. Não há nenhum limite predefinido para o número de arquivos. rct que você pode adicionar.<br/><br/> |
-| **Novo** | Criar um recurso com base no tipo selecionado na **tipo de recurso** caixa e abra o recurso no editor apropriado.<br/><br/>Por exemplo, se você criar um recurso de caixa de diálogo, ele abre o recurso nas [editor de caixa de diálogo](../windows/dialog-editor.md). |
+| **Tipo de recurso** | Especifique o tipo de recurso que você deseja criar.<br/><br/>Você pode expandir as categorias de recursos de caixa de cursor e a caixa de diálogo para revelar os recursos adicionais, que estão localizados no *... \Microsoft visual Studio \<versão\>\VC\VCResourceTemplates\\< LCID\>\mfc.rct*. Se você precisar adicionar arquivos. rct, colocá-los aqui ou especificar outro [caminho de inclusão](../windows/how-to-specify-include-directories-for-resources.md). Recursos mostrados no nível superior no controle de árvore são os recursos padrão fornecidos pelo Visual Studio. Recursos em arquivos. rct aparecem no segundo nível sob a categoria apropriada. Não há nenhum limite predefinido para o número de arquivos. rct que você pode adicionar.<br/><br/> |
+| **Novo** | Criar um recurso com base no tipo selecionado na **tipo de recurso** caixa e abra o recurso no editor apropriado.<br/><br/>Por exemplo, se você criar um recurso de caixa de diálogo, ele abre o recurso nas [Editor de caixa de diálogo](../windows/dialog-editor.md). |
 | **Importarar** | Abra o **importação** caixa de diálogo para navegar até o recurso que você deseja importar para seu projeto atual.<br/><br/>Você pode importar um bitmap, ícone, cursor, HTML, som (. WAV) ou arquivo de recurso personalizado. |
-| **Personalizado** | Abra o **novo recurso personalizado** caixa de diálogo para criar um recurso personalizado.<br/><br/>Também inclui um **tipo de recurso** propriedade que fornece uma caixa de texto para que você insira o nome do tipo de recurso personalizado. Visual C++ usa maiuscula automaticamente o nome quando você sair.<br/><br/>Recursos personalizados somente são editados no editor binário. |
+| **Personalizado** | Abra o **novo recurso personalizado** caixa de diálogo para criar um recurso personalizado.<br/><br/>Também inclui um **tipo de recurso** propriedade que fornece uma caixa de texto para que você insira o nome do tipo de recurso personalizado. Visual C++ usa maiuscula automaticamente o nome quando você sair. Recursos personalizados só são editados na [Editor binário](../windows/binary-editor.md). |
 
 Quando você cria um novo recurso, Visual C++ atribui um nome exclusivo a ele, por exemplo, `IDD_Dialog1`. Você pode personalizar essa ID de recurso, editando as propriedades do recurso no editor de recursos associado ou nos [janela de propriedades](/visualstudio/ide/reference/properties-window).
 
 > [!NOTE]
 > Não especifique um nome de recurso ou ID é reservado pelo Visual Studio. Nomes reservados são `DESIGNINFO`, `HWB`, e `TEXTINCLUDE`, e o ID reservado é `255`.
 
-Para criar um recurso, use um dos seguintes:
+### <a name="to-create-a-resource"></a>Para criar um recurso
 
 - Na **exibição de recurso**, selecione o arquivo. RC, em seguida, usar **editar** > **adicionar recurso** e escolha o tipo de recurso a ser adicionado ao seu projeto.
 
@@ -157,31 +153,35 @@ Depois de personalizar um modelo de recursos, salvar suas alterações na pasta 
 > O editor de recursos fornece automaticamente uma ID de recurso exclusivo. Você pode revisar os [propriedades do recurso](../windows/changing-the-properties-of-a-resource.md) conforme necessário.
 
 > [!NOTE]
-> Colocar arquivos de modelo de idioma específico em subdiretórios do diretório modelo principal. Por exemplo, arquivos de modelo somente em inglês entrar... \\< diretório de modelo de recurso\>\1033. Visual Studio procura novos arquivos. rct no Visual Studio de \Program Files\Microsoft \<versão\>\VC\VCResourceTemplates, \Program Files\Microsoft Visual Studio \<versão > \VC\VCResourceTemplates\\< LCID\> (por exemplo, um LCID 1033 para inglês), ou em qualquer lugar a [incluir caminho](../windows/how-to-specify-include-directories-for-resources.md). Se você preferir armazenar seus arquivos. rct em outro local, você deve adicionar o local para o caminho de inclusão.
+> Colocar arquivos de modelo de idioma específico em subdiretórios do diretório modelo principal. Por exemplo, arquivos de modelo somente em inglês entrar *... \\< diretório de modelo de recurso\>\1033*.
+>
+> Visual Studio procura novos arquivos. rct *\Program Files\Microsoft Visual Studio \<versão\>\VC\VCResourceTemplates*, *\Program Files\Microsoft Visual Studio \< versão > \VC\VCResourceTemplates\\< LCID\>*  (por exemplo, um LCID 1033 para inglês), ou em qualquer lugar a [incluir caminho](../windows/how-to-specify-include-directories-for-resources.md). Se você preferir armazenar seus arquivos. rct em outro local, você deve adicionar o local para o caminho de inclusão.
 
 ### <a name="to-create-and-use-a-resource-template"></a>Criar e usar um modelo de recursos
 
-1. Na **Gerenciador de soluções**, clique em seu projeto.
-
-1. No menu de atalho, selecione **Add** > **Adicionar Novo Item**.
+1. Na **Gerenciador de soluções**, clique em seu projeto e selecione **Add** > **Add New Item**.
 
 1. No **modelos:** painel, selecione **arquivo de modelo de recursos (. rct)**.
 
-1. Forneça um nome e local para o novo arquivo. rct e escolha **aberto**.
+1. Forneça um nome e local para seu novo *. rct* do arquivo e escolha **abrir**.
 
-   O novo arquivo. rct é adicionado ao seu projeto e aparece na **Gerenciador de soluções** sob o **recursos** pasta.
+   O novo *. rct* arquivo é adicionado ao seu projeto e aparece na **Gerenciador de soluções** sob o **recursos** pasta.
 
-1. Clique duas vezes no arquivo. rct para abri-lo em uma janela do documento. Para adicionar recursos, o arquivo na janela do documento com o botão direito e escolha **adicionar recurso**.
+1. Clique duas vezes o *. rct* arquivo para abri-lo em uma janela do documento. Para adicionar recursos, o arquivo na janela do documento com o botão direito e escolha **adicionar recurso**.
 
-   Você pode personalizar os recursos adicionados e salve o arquivo. rct.
+   Você pode personalizar os recursos adicionados e salvar a *. rct* arquivo.
 
-1. No **exibição de recurso** painel, clique com botão direito no arquivo. RC e escolha **adicionar recurso**.
+1. No **exibição de recurso** painel, clique com botão direito a *. rc* arquivo e escolha **adicionar recurso**.
 
 1. Selecione o sinal de adição (**+**) ao lado de um recurso para expandir o nó de recursos e exibir os modelos disponíveis para esse recurso.
 
 1. Clique duas vezes o modelo que você deseja usar.
 
    Você pode modificar o recurso adicionado conforme necessário em seu editor de recursos.
+
+### <a name="to-convert-an-existing-resource-file-to-a-template"></a>Para converter um arquivo de recurso existente em um modelo
+
+Com o arquivo de script de recurso aberto, no menu, vá para **arquivo** > **salvar \< *filename*> como**. Especifique um local e escolha **Okey**.
 
 ## <a name="requirements"></a>Requisitos
 

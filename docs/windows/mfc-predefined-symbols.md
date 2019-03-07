@@ -9,12 +9,12 @@ helpviewer_keywords:
 - databases [C++], MFC programming model
 - Windows programming MFC symbols [C++]
 ms.assetid: c1e689c4-45d7-40a3-8ee9-f47676cc3bbb
-ms.openlocfilehash: 329d56f4a8e0e9992cb78987c559f74c7349f681
-ms.sourcegitcommit: f127b08f114b8d6cab6b684febcb6f2ae0e055ba
+ms.openlocfilehash: c60c75275ca565b332c33848d27c134deb90a5c6
+ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "56954946"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57563193"
 ---
 # <a name="mfc-predefined-symbols"></a>Símbolos predefinidos MFC
 
@@ -236,7 +236,7 @@ Os símbolos nesta tabela só aparecem em um projeto MFC quando foi adicionado s
 
 Esses símbolos também são parte dos arquivos de suporte do MFC, mas eles oferecem suporte a ações e funções de aplicativo do Windows padrão. Esses símbolos são usados com os menus.
 
-Quando você estiver trabalhando com menus na **Editor de Menu**, esses símbolos aparecerá na **janela propriedade** associados aos comandos de menu comuns. Por exemplo, se seu aplicativo tiver um **arquivo** menu com um **sair** de comando, que o comando será associado com o símbolo ID_APP_EXIT no [janela propriedades](/visualstudio/ide/reference/properties-window).
+Quando você estiver trabalhando com menus na **Editor de Menu**, esses símbolos aparecerá na **propriedade** janela associada com os comandos de menu comuns. Por exemplo, se seu aplicativo tiver um **arquivo** menu com um **sair** de comando, que o comando será associado com o símbolo ID_APP_EXIT no [janela propriedades](/visualstudio/ide/reference/properties-window).
 
 ||||
 |-|-|-|
