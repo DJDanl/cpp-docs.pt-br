@@ -1,5 +1,5 @@
 ---
-title: Definir valores e controlar o acesso
+title: 'Como: Definir controle de acesso e os valores (C++)'
 ms.date: 02/15/2019
 f1_keywords:
 - vc.editors.dialog.combo
@@ -22,61 +22,42 @@ helpviewer_keywords:
 - Data property
 - combo boxes [C++], testing values
 ms.assetid: 60a85435-aa30-4c5c-98b6-42fb045b9eb2
-ms.openlocfilehash: 20319cd08d6d1e77faef1275e63bf3ffd354356b
-ms.sourcegitcommit: 24592ba0a38c7c996ffd3d55fe1024231a59ccc2
+ms.openlocfilehash: 32c7b121d8c9309d2286158645ee4b6586f1df3b
+ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/18/2019
-ms.locfileid: "56336482"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57563362"
 ---
-# <a name="defining-control-access-and-values"></a>Definir valores e controlar o acesso
+# <a name="how-to-define-control-access-and-values-c"></a>Como: Definir controle de acesso e os valores (C++)
 
-## <a name="change-the-tab-order-of-controls"></a>Alterar a ordem de tabulação dos controles
+## <a name="tab-order"></a>Ordem de tabulação
 
 A ordem de tabulação é a ordem na qual o **guia** tecla move o foco de entrada de um controle para o próximo dentro de uma caixa de diálogo. Normalmente, a ordem de tabulação prossegue da esquerda para a direita e de cima para baixo em uma caixa de diálogo. Cada controle tem um **Tabstop** propriedade que determina se um controle recebe foco de entrada.
 
-### <a name="to-set-input-focus-for-a-control"></a>Para definir o foco de entrada para um controle
+- Para definir o foco de entrada para um controle na [janela propriedades](/visualstudio/ide/reference/properties-window), selecione **verdadeiro** ou **False** no **Tabstop** propriedade.
 
-No [janela de propriedades](/visualstudio/ide/reference/properties-window), selecione **verdadeiro** ou **False** no **Tabstop** propriedade.
-
-Até mesmo os controles que não têm o **Tabstop** propriedade definida como **verdadeiro** precisam fazer parte da ordem de tabulação. Ordem de tabulação é importante, por exemplo, quando você [definir chaves de acesso (mnemônicos)](../windows/defining-mnemonics-access-keys.md) para controles que não têm legendas. Texto estático que contém uma chave de acesso para um controle relacionada deve preceder imediatamente o controle relacionado na ordem de tabulação.
+Até mesmo os controles que não têm o **Tabstop** propriedade definida como **verdadeiro** precisam fazer parte da ordem de tabulação, especialmente para os controles que não têm legendas. Texto estático que contém uma chave de acesso para um controle relacionada deve preceder imediatamente o controle relacionado na ordem de tabulação.
 
 > [!NOTE]
 > Se a caixa de diálogo contém controles sobrepostos, alterando a ordem de tabulação pode alterar a maneira como os controles são exibidos. Controles que acompanham a ordem de tabulação são sempre exibidos na parte superior de todos os controles sobrepostos que precedem-os na ordem de tabulação.
 
-### <a name="to-view-the-current-tab-order-for-all-controls-in-a-dialog-box"></a>Para exibir a ordem de tabulação para todos os controles em uma caixa de diálogo
-
-Vá para o **formato** menu e selecione **ordem de tabulação**, ou pressione **Ctrl** + **1!d**.
-
-### <a name="to-change-the-tab-order-for-all-controls-in-a-dialog-box"></a>Para alterar a ordem de tabulação para todos os controles em uma caixa de diálogo
-
-1. Sobre o **formato** menu, selecione **ordem de tabulação**.
+- Para exibir a ordem de tabulação para todos os controles, vá ao menu **formato** > **ordem de tabulação**, ou pressione **Ctrl** + **1!d**.
 
    Um número no canto superior esquerdo de cada controle mostra seu lugar na ordem de tabulação atual.
 
-1. Definir a ordem de tabulação, selecionando cada controle na ordem em que você deseja que o **guia** chave a seguir.
+- Para alterar a ordem de tabulação para todos os controles, vá ao menu **formato** > **ordem de tabulação** e defina a ordem de tabulação, selecionando cada controle na ordem em que você deseja que o **guia** chave a seguir.
 
-1. Pressione **Enter** para sair **ordem de tabulação** modo.
-
-   > [!TIP]
-   > Depois de digitar **ordem de tabulação** modo, você pode pressionar **Esc** ou **Enter** para desabilitar a capacidade de alterar a ordem de tabulação.
-
-### <a name="to-change-the-tab-order-for-two-or-more-controls"></a>Para alterar a ordem de tabulação para dois ou mais controles
-
-1. Dos **formato** menu, escolha **ordem de tabulação**.
-
-1. Especifique onde começará a alteração na ordem. Primeiro, mantenha pressionada a **Ctrl** da chave, selecione o controle e selecione aquele em que você deseja a ordem alterada para começar.
+- Para alterar a ordem de tabulação para controles de duas ou mais, vá ao menu **formato** > **ordem de tabulação**. Mantenha pressionada a **Ctrl** da chave e selecione o controle em que a alteração na ordem começar e solte o **Ctrl** da chave e selecione os controles na ordem em que você deseja o **guia** chave para Siga a partir desse ponto.
 
    Por exemplo, se você quiser alterar a ordem dos controles `7` por meio `9`, mantenha pressionada **Ctrl**, em seguida, selecione o controle `6` primeiro.
 
-   > [!NOTE]
-   > Para definir um controle específico para número `1` (primeiro na ordem de tabulação), clique duas vezes no controle.
+- Para definir um controle específico para número `1`, ou primeiro na ordem de tabulação, clique duas vezes no controle.
 
-1. Versão de **Ctrl** da chave, em seguida, selecione os controles na ordem em que você deseja que o **guia** chave a serem seguidos a partir desse ponto.
+> [!TIP]
+> Depois de digitar **ordem de tabulação** modo, pressione **Esc** ou **Enter** para sair **ordem de tabulação** modo e desabilitar a capacidade de alterar a ordem de tabulação.
 
-1. Pressione **Enter** para sair **ordem de tabulação** modo.
-
-## <a name="define-mnemonics-access-keys"></a>Definir mnemônica (teclas de acesso)
+## <a name="mnemonics-access-keys"></a>Mnemônica (teclas de acesso)
 
 Normalmente, os usuários de teclado movem o foco de entrada de um controle para outro em uma caixa de diálogo com o **guia** e **seta** chaves. No entanto, você pode definir uma chave de acesso (um nome mnemônico ou fácil de lembrar) que permite aos usuários escolher um controle pressionando uma tecla única.
 
@@ -99,14 +80,14 @@ Normalmente, os usuários de teclado movem o foco de entrada de um controle para
 1. Verifique se o controle de texto estático que precede o controle rotula na ordem de tabulação.
 
 > [!NOTE]
-> Todas as chaves de acesso dentro de uma caixa de diálogo devem ser exclusivas. Para verificar as chaves de acesso duplicadas, vá para o **formato** menu e selecione **Verificar mnemônicos**.
+> Todas as chaves de acesso dentro de uma caixa de diálogo devem ser exclusivas. Para verificar se as chaves de acesso duplicadas, acesse o menu **formato** > **Verificar mnemônicos**.
 
 ## <a name="combo-box-values"></a>Valores da caixa de combinação
 
-Você pode adicionar valores a um controle de caixa de combinação, desde que você tenha o **caixa de diálogo** editor aberto.
+Você pode adicionar valores a um controle de caixa de combinação, desde que você tenha o **Editor de caixa de diálogo** abrir.
 
 > [!TIP]
-> É uma boa ideia adicionar todos os valores à caixa de combinação *antes de* você dimensiona a caixa na **caixa de diálogo** editor, ou você pode truncar o texto que deve aparecer no controle de caixa de combinação.
+> É uma boa ideia adicionar todos os valores à caixa de combinação *antes de* você dimensiona a caixa na **Editor de caixa de diálogo**, ou você pode truncar o texto que deve aparecer no controle de caixa de combinação.
 
 ### <a name="to-enter-values-into-a-combo-box-control"></a>Para inserir valores em um controle de caixa de combinação
 
@@ -131,14 +112,11 @@ Para obter informações sobre como aumentar a parte suspensa de uma caixa de co
 
 ### <a name="to-test-the-appearance-of-values-in-a-combo-box"></a>Para testar a aparência dos valores em uma caixa de combinação
 
-Depois de inserir valores na **dados** propriedade, selecione a **teste** botão o [barra de ferramentas do Editor de caixa de diálogo](../windows/showing-or-hiding-the-dialog-editor-toolbar.md).
+1. Depois de inserir valores na **dados** propriedade, selecione a **teste** botão o [barra de ferramentas do Editor de caixa de diálogo](../windows/showing-or-hiding-the-dialog-editor-toolbar.md).
 
-   Tente rolar para baixo na lista de todo o valor. Valores são exibidos exatamente como eles são digitados a **dados** propriedade no **propriedades** janela. Não há nenhum ortografia ou verificação de maiusculas e minúsculas.
+1. Tente rolar para baixo na lista de todo o valor. Valores são exibidos exatamente como eles são digitados a **dados** propriedade no **propriedades** janela. Não há nenhum ortografia ou verificação de maiusculas e minúsculas.
 
-   Pressione **Esc** para retornar para o **caixa de diálogo** editor.
-
-   Agora você pode modificar seu código para especificar qual botão de opção deve aparecer selecionado. Por exemplo, `m_radioBox1 = 0;` seleciona o primeiro botão de opção no grupo.
-Agora você pode modificar seu código para especificar qual botão de opção deve aparecer selecionado. Por exemplo, `m_radioBox1 = 0;` seleciona o primeiro botão de opção no grupo.
+1. Pressione **Esc** para retornar para o **caixa de diálogo** editor.
 
 ## <a name="radio-button-values"></a>Valores de botão de opção
 
@@ -161,13 +139,13 @@ Você pode ter mais de um grupo de botões de opção em uma caixa de diálogo. 
 
 ### <a name="to-add-a-member-variable-for-the-radio-button-group"></a>Para adicionar uma variável de membro para o grupo de botões de opção
 
-1. O primeiro controle de botão de opção na ordem de tabulação com o botão direito (o controle dominante e aquele com o **grupo** propriedade definida como **verdadeiro**) e escolha **Adicionar variável** do menu de atalho.
+1. O primeiro controle de botão de opção na ordem de tabulação com o botão direito (o controle dominante e aquele com o **grupo** propriedade definida como **verdadeiro**) e escolha **Adicionar variável**.
 
 1. No [assistente Adicionar variável de membro](../ide/add-member-variable-wizard.md), selecione o **variável de controle** caixa de seleção e, em seguida, selecione o **valor** botão de opção.
 
-1. No **nome da variável** , digite um nome para a nova variável de membro.
+   - No **nome da variável** , digite um nome para a nova variável de membro.
 
-1. No **tipo de variável** caixa de listagem, selecione **int** ou o tipo *int*.
+   - No **tipo de variável** caixa de listagem, selecione **int** ou o tipo *int*.
 
    Agora você pode modificar seu código para especificar qual botão de opção deve aparecer selecionado. Por exemplo, `m_radioBox1 = 0;` seleciona o primeiro botão de opção no grupo.
 
@@ -177,5 +155,6 @@ Win32
 
 ## <a name="see-also"></a>Consulte também
 
-[Controles em caixas de diálogo](../windows/controls-in-dialog-boxes.md)<br/>
-[Controles](../mfc/controls-mfc.md)
+[Gerenciar controles de caixa de diálogo](controls-in-dialog-boxes.md)<br/>
+[Como: Adicionar, editar ou excluir controles](adding-editing-or-deleting-controls.md)<br/>
+[Como: Controles de layout](arrangement-of-controls-on-dialog-boxes.md)<br/>

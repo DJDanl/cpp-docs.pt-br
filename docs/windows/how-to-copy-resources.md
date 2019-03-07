@@ -30,20 +30,14 @@ helpviewer_keywords:
 - cursors [C++], importing and exporting
 - images [C++], exporting
 ms.assetid: 65f523e8-017f-4fc6-82d1-083c56d9131f
-ms.openlocfilehash: ce1cf1f6d0010475192ecf7ef3ce2416fac51dfd
-ms.sourcegitcommit: e540706f4e2675e7f597cfc5b4f8dde648b007bb
+ms.openlocfilehash: 28127ea89fdba1b70988ced1d6004c0f914c66e2
+ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56676403"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57563037"
 ---
 # <a name="how-to-manage-resources-c"></a>Como: Gerenciar recursos (C++)
-
-Você pode gerenciar os recursos para seu projeto por:
-
-- Copiar e editar recursos.
-
-- Importar e exportar recursos.
 
 ## <a name="copy-and-edit-resources"></a>Copiar e editar recursos
 
@@ -54,7 +48,7 @@ Você pode facilmente copiar recursos de um recurso existente ou arquivo execut�
 > [!NOTE]
 > O Visual C++ inclui arquivos de recurso de exemplo que você pode usar em seu próprio aplicativo. Para obter mais informações, consulte [clip-art: Recursos comuns](https://github.com/Microsoft/VCSamples).
 
-Você pode usar o método de arrastar e soltar entre arquivos. rc que estão abertos fora do projeto.
+Não é possível arraste e solte, copiar, recortar ou colar entre os arquivos de recurso no projeto (**exibição de recurso**) e arquivos. rc autônomo abertos em janelas de documento. Você pode fazer isso em versões anteriores do produto. Somente use o método de arrastar e soltar entre arquivos. rc que estão abertos fora do projeto.
 
 ### <a name="to-copy-resources"></a>Copiar recursos
 
@@ -78,9 +72,6 @@ Você pode usar o método de arrastar e soltar entre arquivos. rc que estão abe
       1. Clique no arquivo de recurso no qual você deseja colar o recurso (por exemplo, *Source2.rc*) e escolha **colar**.
 
 > [!NOTE]
-> Não é possível arraste e solte, copiar, recortar ou colar entre os arquivos de recurso no projeto (**exibição de recurso**) e arquivos. rc autônomo (aquelas abertos em janelas de documento). Você pode fazer isso em versões anteriores do produto.
-
-> [!NOTE]
 > Para evitar conflitos com nomes de símbolos ou os valores no arquivo existente, Visual C++ pode alterar o valor de símbolo do recurso transferidos ou o nome do símbolo e o valor quando você os copia para o novo arquivo.
 
 Durante a cópia em um recurso, você pode alterar sua propriedade de idioma ou a propriedade de condição ou ambos.
@@ -95,13 +86,13 @@ O idioma e a condição de um recurso são mostrados entre parênteses após o n
 IDD_AboutBox (Finnish - XX33)
 ```
 
-Para copiar um recurso existente e alterar seu idioma ou uma condição
+### <a name="to-copy-an-existing-resource-and-change-its-language-or-condition"></a>Para copiar um recurso existente e alterar seu idioma ou uma condição
 
-1. No arquivo. rc ou nos [exibição de recurso](../windows/resource-view-window.md) janela, com o recurso que você deseja copiar e escolha o botão direito **inserir cópia**. Em seguida, defina o seguinte:
+No *. rc* arquivo ou nos [exibição de recurso](../windows/resource-view-window.md) janela, com o recurso que você deseja copiar e escolha o botão direito **inserir cópia**. Em seguida, defina o seguinte:
 
-   - Para o **linguagem** caixa de listagem, selecione o idioma.
+- Para o **linguagem** caixa de listagem, selecione o idioma.
 
-   - No **condição** , digite a condição.
+- No **condição** , digite a condição.
 
 ### <a name="to-edit-resources"></a>Para editar recursos
 

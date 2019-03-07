@@ -50,12 +50,12 @@ helpviewer_keywords:
 - buttons [C++], tool tips
 - Toolbar editor [C++], creating tool tips
 ms.assetid: aa9f0adf-60f6-4f79-ab05-bc330f15ec43
-ms.openlocfilehash: 5aadb00e6e010467ee9c70dc357916d3c4f81853
-ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
+ms.openlocfilehash: a138eb5aa40429696ca2efa4a67e1a1c5490f4fa
+ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57211076"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57563245"
 ---
 # <a name="toolbar-editor-c"></a>Editor de barra de ferramentas (C++)
 
@@ -103,7 +103,7 @@ O **barra de ferramentas do Editor** permite que você:
 
 ### <a name="to-create-new-toolbars"></a>Para criar novas barras de ferramentas
 
-1. Na **Resource** exibir, clique com botão direito seu arquivo. RC e escolha **adicionar recurso**. Se você tiver uma barra de ferramentas em seu arquivo. RC, você pode clique com botão direito do **barra de ferramentas** pasta e selecione **barra de ferramentas Insert**.
+1. Na **exibição de recurso**, clique com botão direito seu *. rc* arquivo e escolha **adicionar recurso**. Se você tiver uma barra de ferramentas em seu *. rc* arquivo, você pode clique com botão direito do **barra de ferramentas** pasta e selecione **Inserir barra de ferramentas**.
 
 1. No **adicionar recurso** caixa de diálogo, selecione **barra de ferramentas** no **tipo de recurso** lista e, em seguida, escolha **novo**.
 
@@ -111,7 +111,7 @@ O **barra de ferramentas do Editor** permite que você:
 
 ### <a name="to-convert-bitmaps-to-toolbar-resources"></a>Para converter os bitmaps aos recursos da barra de ferramentas
 
-1. Abra um recurso de bitmap existente na [Editor de imagens](../windows/image-editor-for-icons.md). Se o bitmap não estiver em seu arquivo. RC, clique com botão direito no arquivo. RC e escolha **importação**, em seguida, navegue até o bitmap que você deseja adicionar ao seu arquivo. RC e selecione **abrir**.
+1. Abra um recurso de bitmap existente na [Editor de imagens](../windows/image-editor-for-icons.md). Se o bitmap não estiver em seu *. rc* de arquivos, clique com botão direito a *. rc* arquivo e escolha **importação**, em seguida, navegue até o bitmap que você deseja adicionar ao seu *. rc*  do arquivo e selecione **aberto**.
 
 1. Vá ao menu **imagem** > **Editor da barra de ferramentas**.
 
@@ -126,7 +126,7 @@ O **barra de ferramentas do Editor** permite que você:
 
 ### <a name="to-manage-toolbar-buttons"></a>Para gerenciar os botões da barra de ferramentas
 
-Para criar um novo botão de barra de ferramentas:
+#### <a name="to-create-a-new-toolbar-button"></a>Para criar um novo botão de barra de ferramentas
 
 1. Na [exibição de recurso](../windows/resource-view-window.md) expanda a pasta de recurso (por exemplo, *Project1.rc*).
 
@@ -134,36 +134,34 @@ Para criar um novo botão de barra de ferramentas:
 
    - Atribua uma ID para o botão em branco na extremidade direita da barra de ferramentas. Você pode fazer isso editando o **ID** propriedade no [janela propriedades](/visualstudio/ide/reference/properties-window). Por exemplo, você talvez queira dar a mesma ID de uma opção de menu a um botão de barra de ferramentas. Nesse caso, use a caixa de listagem suspensa para selecionar o **ID** da opção de menu.
 
-   - Selecione o botão em branco na extremidade direita da barra de ferramentas (na **modo de exibição da barra de ferramentas** painel) e começar a desenhar. Uma ID de comando do botão padrão é atribuída (ID_BUTTON\<n >).
+   - Selecione o botão em branco na extremidade direita da barra de ferramentas do **modo de exibição da barra de ferramentas** painel e começar a desenhar. Uma ID de comando do botão padrão é atribuída (ID_BUTTON\<n >).
 
-Você pode, também, copiar e colar uma imagem em uma barra de ferramentas, como um novo botão.
-
-Para adicionar uma imagem para uma barra de ferramentas, como um botão:
+#### <a name="to-add-an-image-to-a-toolbar-as-a-button"></a>Para adicionar uma imagem para uma barra de ferramentas, como um botão
 
 1. Na [exibição de recurso](../windows/resource-view-window.md), abra a barra de ferramentas clicando duas vezes nele.
 
 1. Em seguida, abra a imagem que você deseja adicionar à barra de ferramentas.
 
    > [!NOTE]
-   > Se você abrir a imagem no Visual Studio, ele será aberto na **imagem** editor. Você também pode abrir a imagem em outros programas de elementos gráficos.
+   > Se você abrir a imagem no Visual Studio, ele será aberto na **Editor de imagens**. Você também pode abrir a imagem em outros programas de elementos gráficos.
 
-1. Dos **edite** menu, escolha **cópia**.
+1. Vá ao menu **edite** > **cópia**.
 
 1. Alterne para sua barra de ferramentas selecionando seu guia na parte superior da janela de origem.
 
-1. Dos **edite** menu, escolha **colar**.
+1. Vá ao menu **edite** > **colar**.
 
    A imagem será exibida na barra de ferramentas, como um novo botão.
 
-Para mover um botão de barra de ferramentas:
+#### <a name="to-move-a-toolbar-button"></a>Para mover um botão de barra de ferramentas
 
 No **modo de exibição da barra de ferramentas** painel, arraste o botão que você deseja mover para o novo local na barra de ferramentas.
 
-Para copiar os botões da barra de ferramentas, mantenha pressionada a **Ctrl** chave e, na **modo de exibição da barra de ferramentas** painel, arraste o botão para seu novo local na barra de ferramentas ou em um local na barra de ferramentas do outro.
+- Para copiar os botões da barra de ferramentas, mantenha pressionada a **Ctrl** chave e, na **modo de exibição da barra de ferramentas** painel, arraste o botão para seu novo local na barra de ferramentas ou em um local na barra de ferramentas do outro.
 
-Para excluir um botão de barra de ferramentas, selecione o botão de barra de ferramentas e arraste-o da barra de ferramentas.
+- Para excluir um botão de barra de ferramentas, selecione o botão de barra de ferramentas e arraste-o da barra de ferramentas.
 
-Para inserir ou remover o espaço entre botões em uma barra de ferramentas, ou arrastá-los longe ou em direção uma outra na barra de ferramentas.
+- Para inserir ou remover o espaço entre botões em uma barra de ferramentas, ou arrastá-los longe ou em direção uma outra na barra de ferramentas.
 
 |Ação|Etapa|
 |------|------|
@@ -175,19 +173,19 @@ Para inserir ou remover o espaço entre botões em uma barra de ferramentas, ou 
 > [!NOTE]
 > Se não há nenhum espaço no lado do botão que você está arrastando longe do e arrastar o botão metade após o botão adjacente, o **barra de ferramentas do Editor** insere um espaço no lado oposto do botão que você está arrastando.
 
-Para alterar as propriedades de um botão de barra de ferramentas:
+#### <a name="to-change-the-properties-of-a-toolbar-button"></a>Para alterar as propriedades de um botão de barra de ferramentas
 
 1. Em um projeto do C++, selecione o botão de barra de ferramentas.
 
 1. Digite a nova ID na **ID** propriedade no [janela propriedades](/visualstudio/ide/reference/properties-window), ou use a lista suspensa para selecionar um novo **ID**.
 
-Para criar uma dica de ferramenta para um botão de barra de ferramentas:
+#### <a name="to-create-a-tool-tip-for-a-toolbar-button"></a>Para criar uma dica de ferramenta para um botão de barra de ferramentas
 
 1. Selecione o botão de barra de ferramentas.
 
 1. No [janela de propriedades](/visualstudio/ide/reference/properties-window), no **Prompt** campo, adicione uma descrição do botão de barra de status e depois da mensagem, adicione `\n` e o nome de dica de ferramenta.
 
-Por exemplo, consulte a dica de ferramenta para o **Print** botão na **WordPad**:
+Por exemplo, para ver a dica de ferramenta para o **Print** botão na **WordPad**:
 
 1. Abra **WordPad**.
 
