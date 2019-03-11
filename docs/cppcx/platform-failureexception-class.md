@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::FailureException
 ms.assetid: 1729cd07-bfc2-448e-9db5-185d5cbf5b81
-ms.openlocfilehash: b1890fb0649dee779b3851ed9f1fc46a67b2916d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f527271b50382a9aec1585e139a0083135315473
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50472612"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750318"
 ---
 # <a name="platformfailureexception-class"></a>Classe Platform::FailureException
 
@@ -31,11 +31,11 @@ Para obter mais informações, consulte a classe [COMException](../cppcx/platfor
 
 ### <a name="requirements"></a>Requisitos
 
-**Mínimo de cliente com suporte:** Windows 8
+**Cliente com suporte mínimo:** Windows 8
 
-**Mínimo de servidor com suporte:** Windows Server 2012
+**Servidor com suporte mínimo:** Windows Server 2012
 
-**Namespace:** Platform
+**Namespace:** Plataforma
 
 **Metadados:** platform.winmd
 

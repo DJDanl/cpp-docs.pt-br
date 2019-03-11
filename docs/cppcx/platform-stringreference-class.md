@@ -9,12 +9,12 @@ f1_keywords:
 - VCCORLIB/Platform::StringReference::GetHSTRING
 - VCCORLIB/Platform::StringReference::GetString
 ms.assetid: 2d09c7ec-0f16-458e-83ed-7225a1b9221e
-ms.openlocfilehash: 09b15a1530661ce537c9d2aab333a1a17fa52ff9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7b6ab42dc630ce7e0014534064e8f1ce6da00857
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50498378"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750917"
 ---
 # <a name="platformstringreference-class"></a>Classe Platform::StringReference
 
@@ -54,11 +54,11 @@ class StringReference
 
 ### <a name="requirements"></a>Requisitos
 
-**Mínimo de cliente com suporte:** Windows 8
+**Cliente com suporte mínimo:** Windows 8
 
-**Mínimo de servidor com suporte:** Windows Server 2012
+**Servidor com suporte mínimo:** Windows Server 2012
 
-**Namespace:** Platform
+**Namespace:** Plataforma
 
 **Cabeçalho:** vccorlib.h
 
@@ -150,7 +150,7 @@ Referência a um objeto do tipo `StringReference`.
 
 Porque `StringReference` é uma classe C++ padrão e não uma classe ref, ela não aparecer na **Pesquisador de objetos**.
 
-## <a name="operator-call"></a>  Operador Stringreference
+## <a name="operator-call"></a>  StringReference::operator()  Operator
 
 Converte um objeto `StringReference` em um objeto `Platform::String^`.
 

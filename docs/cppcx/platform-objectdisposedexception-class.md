@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::ObjectDisposedException
 ms.assetid: 68506fe4-d09c-4407-999f-1e3edb261d41
-ms.openlocfilehash: 41afe11efa23a3418ec9629a3c6f5a45015e2aa2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 566f8a05a6b81adb78113dd4ba0fb1c47fc65a2f
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50612947"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57749835"
 ---
 # <a name="platformobjectdisposedexception-class"></a>Classe Platform::ObjectDisposedException
 
@@ -31,11 +31,11 @@ Para obter mais informações, consulte [COMException](../cppcx/platform-comexce
 
 ### <a name="requirements"></a>Requisitos
 
-**Mínimo de cliente com suporte:** Windows 8
+**Cliente com suporte mínimo:** Windows 8
 
-**Mínimo de servidor com suporte:** Windows Server 2012
+**Servidor com suporte mínimo:** Windows Server 2012
 
-**Namespace:** Platform
+**Namespace:** Plataforma
 
 **Metadados:** platform.winmd
 

@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - friend assemblies, Visual C++
 ms.assetid: 8d55fee0-b7c2-4fbe-a23b-dfe424dc71cd
-ms.openlocfilehash: 8aa0b47c1de520693f43794df3ee10fea131c963
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0c09e0c29aacbf655652446caf90ab21d92103e8
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50652615"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748198"
 ---
 # <a name="friend-assemblies-c"></a>Assemblies amigáveis (C++)
 
@@ -157,7 +157,7 @@ public:
 
 Observe que o componente deve especificar sua chave pública. Sugerimos que você execute os seguintes comandos em sequência em um prompt de comando para criar um par de chaves e obter a chave pública:
 
-**friend_assemblies.snk de sn -d**
+**sn -d friend_assemblies.snk**
 
 **sn -k friend_assemblies.snk**
 

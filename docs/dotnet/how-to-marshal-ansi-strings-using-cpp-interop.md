@@ -1,5 +1,5 @@
 ---
-title: Como realizar marshaling de cadeias de caracteres ANSI usando interop C++
+title: 'Como: Cadeias de caracteres ANSI marshaling usando Interop do C++'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,20 +9,20 @@ helpviewer_keywords:
 - C++ Interop, strings
 - data marshaling [C++], strings
 ms.assetid: 5eda2eb6-5140-40f0-82cf-7ce171fffb45
-ms.openlocfilehash: 272e64a5dd8faf103daf3ab7fa17449bf3dbb7ee
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b73d8ed403ab0bbad7703f66f0d8d4ac23bb7766
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50570489"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748028"
 ---
-# <a name="how-to-marshal-ansi-strings-using-c-interop"></a>Como realizar marshaling de cadeias de caracteres ANSI usando interop C++
+# <a name="how-to-marshal-ansi-strings-using-c-interop"></a>Como: Cadeias de caracteres ANSI marshaling usando Interop do C++
 
 Este tópico demonstra como cadeias de caracteres ANSI podem ser passados usando Interop do C++, mas o .NET Framework <xref:System.String> representa cadeias de caracteres no formato Unicode, portanto, a conversão em ANSI é uma etapa extra. Para interoperar com outros tipos de cadeia de caracteres, consulte os tópicos a seguir:
 
-- [Como realizar marshaling de cadeias de caracteres Unicode usando interop do C++](../dotnet/how-to-marshal-unicode-strings-using-cpp-interop.md)
+- [Como: realizar marshaling de cadeias de caracteres Unicode usando a interop do C++](../dotnet/how-to-marshal-unicode-strings-using-cpp-interop.md)
 
-- [Como realizar marshaling de cadeias de caracteres COM usando interop do C++](../dotnet/how-to-marshal-com-strings-using-cpp-interop.md)
+- [Como: realizar marshaling de cadeias de caracteres COM usando a interop do C++](../dotnet/how-to-marshal-com-strings-using-cpp-interop.md)
 
 O código a seguir exemplos de uso de [gerenciado, não gerenciado](../preprocessor/managed-unmanaged.md) #pragma diretivas para implementar gerenciados e funções no mesmo arquivo, mas essas funções interoperam da mesma maneira, se definida em arquivos separados. Porque arquivos que contêm apenas as funções não gerenciadas não precisam ser compilados com [/clr (compilação de tempo de execução de linguagem comum)](../build/reference/clr-common-language-runtime-compilation.md), eles podem manter suas características de desempenho.
 

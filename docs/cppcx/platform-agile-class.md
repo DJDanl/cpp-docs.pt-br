@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Agile
 ms.assetid: e34459a9-c429-4c79-97fd-030c43ca4155
-ms.openlocfilehash: 9350d94fdff615056fca193d654b2bb001d78d72
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 86a535bc106e17b276dc5f42a59773aa0de8c361
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471195"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57749264"
 ---
 # <a name="platformagile-class"></a>Classe Platform::Agile
 
@@ -74,11 +74,11 @@ A classe `Agile<T>` é uma classe do C++ nativa e padrão e requer o `agile.h`. 
 
 ### <a name="requirements"></a>Requisitos
 
-**Mínimo de cliente com suporte:** Windows 8
+**Cliente com suporte mínimo:** Windows 8
 
-**Mínimo de servidor com suporte:** Windows Server 2012
+**Servidor com suporte mínimo:** Windows Server 2012
 
-**Namespace:** Platform
+**Namespace:** Plataforma
 
 **Cabeçalho:** agile.h
 
@@ -234,7 +234,7 @@ O tipo especificado pelo typename do modelo.
 *object*<br/>
 O objeto ou o identificador de um objeto que é copiado ou movido para o objeto Agile atual.
 
-*LP*<br/>
+*lp*<br/>
 O ponteiro de interface de IUnknown de um objeto.
 
 ### <a name="return-value"></a>Valor de retorno

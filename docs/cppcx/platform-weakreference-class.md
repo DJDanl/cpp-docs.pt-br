@@ -5,12 +5,12 @@ ms.topic: reference
 f1_keywords:
 - Platform::WeakReference
 ms.assetid: 8cfe1977-a8c7-4b7b-b539-25c77ed4c5f1
-ms.openlocfilehash: 706877843602861d0dcf7f04a18999f30d3b77de
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cadafcc227347bc2f55c8600ae63a5c0996aefae
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50500432"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57742092"
 ---
 # <a name="platformweakreference-class"></a>Classe Platform::WeakReference
 
@@ -49,7 +49,7 @@ class WeakReference
 
 A própria classe WeakReference não é uma classe ref e, portanto, não herda de Platform::Object^ e não pode ser usada na assinatura de um método público.
 
-## <a name="operator-assign"></a> WeakReference::operator =
+## <a name="operator-assign"></a> WeakReference::operator=
 
 Atribui um valor a WeakReference.
 

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - MFC, date and time
 - hour values representation
 ms.assetid: 695853ed-b614-4575-b793-b8c287372038
-ms.openlocfilehash: b8460d50a0c6cbd4b213e45c62d8d6cadae68544
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bd63b400cad6efc3b3899c17a3bf835596b4008c
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548181"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750384"
 ---
 # <a name="date-type"></a>Tipo de data
 
@@ -62,10 +62,9 @@ Os seguintes pontos devem ser observados ao trabalhar com esses formatos de data
 > [!CAUTION]
 >  Observe que, como das 6H sempre é representada por um valor fracionário 0,25, independentemente do inteiro que representa o dia é positivo (após 30 de dezembro de 1899) ou negativo (antes de 30 de dezembro de 1899), uma comparação de ponto flutuante simples seria erroneamente de classificação qualquer data que representa das 6H em um dia anterior ao 30/12/1899 como *posterior* que uma data que representa 7H00 no mesmo dia.
 
-Para obter mais informações sobre os problemas relacionados à data e `COleDateTime` tipos podem ser encontrados sob [classe COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md) e [data e hora: suporte de automação](../atl-mfc-shared/date-and-time-automation-support.md).
+Para obter mais informações sobre os problemas relacionados à data e `COleDateTime` tipos podem ser encontrados sob [classe COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md) e [data e hora: Suporte de automação](../atl-mfc-shared/date-and-time-automation-support.md).
 
 ## <a name="see-also"></a>Consulte também
 
 [Data e hora](../atl-mfc-shared/date-and-time.md)<br/>
 [Classe COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md)
-
