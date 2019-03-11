@@ -11,12 +11,12 @@ helpviewer_keywords:
 - POINT structure
 - CPoint class
 ms.assetid: a6d4db93-35cc-444d-9221-c3e160f6edaa
-ms.openlocfilehash: 4f6ab15f80ac448b4e7383e2db92f22262c20d08
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: cab7aef6fab025174dedb0bf75ee43c49ead0d88
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178063"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740395"
 ---
 # <a name="cpoint-class"></a>Classe CPoint
 
@@ -147,13 +147,13 @@ void Offset(SIZE size) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*deslocamento x*<br/>
+*xOffset*<br/>
 Especifica a quantidade para deslocar o `x` membro o `CPoint`.
 
-*deslocamento y*<br/>
+*yOffset*<br/>
 Especifica a quantidade para deslocar o `y` membro o `CPoint`.
 
-*ponto*<br/>
+*point*<br/>
 Especifica a quantidade ( [ponto](/windows/desktop/api/windef/ns-windef-tagpoint) ou `CPoint`) para deslocar o `CPoint`.
 
 *size*<br/>
@@ -173,7 +173,7 @@ BOOL operator==(POINT point) const throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*ponto*<br/>
+*point*<br/>
 Contém uma [ponto](/windows/desktop/api/windef/ns-windef-tagpoint) estrutura ou `CPoint` objeto.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -194,7 +194,7 @@ BOOL operator!=(POINT point) const throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*ponto*<br/>
+*point*<br/>
 Contém uma [ponto](/windows/desktop/api/windef/ns-windef-tagpoint) estrutura ou `CPoint` objeto.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -219,7 +219,7 @@ void operator+=(POINT point) throw();
 *size*<br/>
 Contém uma [tamanho](/windows/desktop/api/windef/ns-windef-tagsize) estrutura ou [CSize](../../atl-mfc-shared/reference/csize-class.md) objeto.
 
-*ponto*<br/>
+*point*<br/>
 Contém uma [ponto](/windows/desktop/api/windef/ns-windef-tagpoint) estrutura ou [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objeto.
 
 ### <a name="remarks"></a>Comentários
@@ -248,7 +248,7 @@ void operator-=(POINT point) throw();
 *size*<br/>
 Contém uma [tamanho](/windows/desktop/api/windef/ns-windef-tagsize) estrutura ou [CSize](../../atl-mfc-shared/reference/csize-class.md) objeto.
 
-*ponto*<br/>
+*point*<br/>
 Contém uma [ponto](/windows/desktop/api/windef/ns-windef-tagpoint) estrutura ou [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objeto.
 
 ### <a name="remarks"></a>Comentários
@@ -278,7 +278,7 @@ CRect operator+(const RECT* lpRect) const throw();
 *size*<br/>
 Contém uma [tamanho](/windows/desktop/api/windef/ns-windef-tagsize) estrutura ou [CSize](../../atl-mfc-shared/reference/csize-class.md) objeto.
 
-*ponto*<br/>
+*point*<br/>
 Contém uma [ponto](/windows/desktop/api/windef/ns-windef-tagpoint) estrutura ou [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objeto.
 
 *lpRect*<br/>
@@ -311,7 +311,7 @@ CPoint operator-() const throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*ponto*<br/>
+*point*<br/>
 Um [ponto](/windows/desktop/api/windef/ns-windef-tagpoint) estrutura ou [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objeto.
 
 *size*<br/>
@@ -347,4 +347,3 @@ Use o operador unário para negar a um ponto. Por exemplo, usando o operador un�
 [Estrutura POINT](/windows/desktop/api/windef/ns-windef-tagpoint)<br/>
 [Classe CRect](../../atl-mfc-shared/reference/crect-class.md)<br/>
 [Classe CSize](../../atl-mfc-shared/reference/csize-class.md)
-

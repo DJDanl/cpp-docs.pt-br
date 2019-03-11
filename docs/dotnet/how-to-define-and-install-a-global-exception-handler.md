@@ -1,17 +1,17 @@
 ---
-title: Como definir e instalar um identificador de exceção global
+title: 'Como: Definir e instalar um manipulador de exceção Global'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - handlers, global
 ms.assetid: dd88a812-3bc7-4ce8-8283-4b674c246534
-ms.openlocfilehash: 9c6f355bc43fc53d2b8d27a1ee69c059d0f50692
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f6b46de22ad962f6ef7653db0c38447d14ca0b54
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50534531"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739265"
 ---
-# <a name="how-to-define-and-install-a-global-exception-handler"></a>Como definir e instalar um identificador de exceção global
+# <a name="how-to-define-and-install-a-global-exception-handler"></a>Como: Definir e instalar um manipulador de exceção Global
 
 O exemplo de código a seguir demonstra como sem tratamento de exceções podem ser capturadas. O formulário de exemplo contém um botão que, quando pressionadas, executa uma referência nula, causando uma exceção seja lançada. Essa funcionalidade representa uma falha de código típico. A exceção resultante é capturada pelo manipulador de exceção de todo o aplicativo instalado pela função principal.
 

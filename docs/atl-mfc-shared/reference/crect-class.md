@@ -34,12 +34,12 @@ helpviewer_keywords:
 - LPRECT operator
 - RECT structure
 ms.assetid: dee4e752-15d6-4db4-b68f-1ad65b2ed6ca
-ms.openlocfilehash: 5e9d4b5c28adceb52078c13dbf18170e7a2b19e5
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: fadb430d570e516d915d520f06e4c247b131c3db
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178747"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739428"
 ---
 # <a name="crect-class"></a>Classe CRect
 
@@ -97,13 +97,13 @@ class CRect : public tagRECT
 |[CRect::operator! =](#operator_neq)|Determina se `CRect` não é igual a um retângulo.|
 |[CRect::operator &amp;](#operator_amp)|Cria a interseção de `CRect` e um retângulo e retorna resultante `CRect`.|
 |[CRect::operator &amp;=](#operator_amp_eq)|Conjuntos `CRect` igual a interseção de `CRect` e um retângulo.|
-|[CRect::operator&#124;](#operator_or)|Cria a união de `CRect` e um retângulo e retorna resultante `CRect`.|
+|[CRect::operator &#124;](#operator_or)|Cria a união de `CRect` e um retângulo e retorna resultante `CRect`.|
 |[CRect::operator &#124;=](#operator_or_eq)|Conjuntos `CRect` igual a união de `CRect` e um retângulo.|
 |[CRect::operator +](#operator_add)|Adiciona os deslocamentos fornecidos para `CRect` ou infla `CRect` e retorna resultante `CRect`.|
-|[+ CRect::operator =](#operator_add_eq)|Adiciona os deslocamentos especificados a `CRect` ou infla `CRect`.|
+|[CRect::operator +=](#operator_add_eq)|Adiciona os deslocamentos especificados a `CRect` ou infla `CRect`.|
 |[CRect::operator =](#operator_eq)|Copia as dimensões de um retângulo para `CRect`.|
 |[CRect::operator =](#operator_-_eq)|Subtrai os deslocamentos especificados do `CRect` ou compacta os `CRect`.|
-|[CRect::operator = =](#operator_eq_eq)|Determina se `CRect` é igual a um retângulo.|
+|[CRect::operator ==](#operator_eq_eq)|Determina se `CRect` é igual a um retângulo.|
 
 ## <a name="remarks"></a>Comentários
 
@@ -306,7 +306,7 @@ Refere-se para o [RECT](/windows/desktop/api/windef/ns-windef-tagrect) estrutura
 *lpSrcRect*<br/>
 Aponta para o `RECT` estrutura com as coordenadas para `CRect`.
 
-*ponto*<br/>
+*point*<br/>
 Especifica o ponto de origem para o retângulo a ser construído. Corresponde ao canto superior esquerdo.
 
 *size*<br/>
@@ -696,7 +696,7 @@ A absoluta coordenada x para o canto superior esquerdo do retângulo.
 *y*<br/>
 A absoluta coordenada y para o canto superior esquerdo do retângulo.
 
-*ponto*<br/>
+*point*<br/>
 Um `POINT` estrutura especificando o absoluto canto superior esquerdo do retângulo.
 
 ### <a name="example"></a>Exemplo
@@ -776,7 +776,7 @@ Especifica a quantidade para mover para a esquerda ou direita. Ele deve ser nega
 *y*<br/>
 Especifica o valor para mover para cima ou para baixo. Ele deve ser negativo para mover para cima.
 
-*ponto*<br/>
+*point*<br/>
 Contém uma [ponto](/windows/desktop/api/windef/ns-windef-tagpoint) estrutura ou [CPoint](cpoint-class.md) objeto especificando ambas as dimensões pela qual mover.
 
 *size*<br/>
@@ -845,7 +845,7 @@ Refere-se a um retângulo de origem. Pode ser um [RECT](/windows/desktop/api/win
    ASSERT(rect2 == CRect(0, 0, 127, 168));
 ```
 
-##  <a name="operator_eq_eq"></a>  CRect::operator = =
+##  <a name="operator_eq_eq"></a>  CRect::operator ==
 
 Determina se `rect` é igual a `CRect` comparando as coordenadas de seus cantos superior esquerdo e inferior direito.
 
@@ -855,7 +855,7 @@ BOOL operator==(const RECT& rect) const throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*Rect*<br/>
+*rect*<br/>
 Refere-se a um retângulo de origem. Pode ser um [RECT](/windows/desktop/api/windef/ns-windef-tagrect) ou `CRect`.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -895,7 +895,7 @@ BOOL operator!=(const RECT& rect) const throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*Rect*<br/>
+*rect*<br/>
 Refere-se a um retângulo de origem. Pode ser um [RECT](/windows/desktop/api/windef/ns-windef-tagrect) ou `CRect`.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -925,7 +925,7 @@ test.bottom = 25;
 ASSERT(rect3 != test);
 ```
 
-##  <a name="operator_add_eq"></a>  + CRect::operator =
+##  <a name="operator_add_eq"></a>  CRect::operator +=
 
 Mover as duas primeiras sobrecargas `CRect` por deslocamentos especificados.
 
@@ -937,7 +937,7 @@ void operator+=(LPCRECT lpRect) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*ponto*<br/>
+*point*<br/>
 Um [ponto](/windows/desktop/api/windef/ns-windef-tagpoint) estrutura ou [CPoint](cpoint-class.md) objeto que especifica o número de unidades para mover o retângulo.
 
 *size*<br/>
@@ -963,7 +963,7 @@ A terceira sobrecarga infla `CRect` pelo número de unidades especificada em cad
    ASSERT(rect1 == rect2);
 ```
 
-##  <a name="operator_-_eq"></a>  CRect::operator =
+##  <a name="operator_-_eq"></a>  CRect::operator -=
 
 Mover as duas primeiras sobrecargas `CRect` por deslocamentos especificados.
 
@@ -975,7 +975,7 @@ void operator-=(LPCRECT lpRect) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*ponto*<br/>
+*point*<br/>
 Um [ponto](/windows/desktop/api/windef/ns-windef-tagpoint) estrutura ou [CPoint](cpoint-class.md) objeto que especifica o número de unidades para mover o retângulo.
 
 *size*<br/>
@@ -1011,7 +1011,7 @@ void operator&=(const RECT& rect) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*Rect*<br/>
+*rect*<br/>
 Contém uma [RECT](/windows/desktop/api/windef/ns-windef-tagrect) ou `CRect`.
 
 ### <a name="remarks"></a>Comentários
@@ -1035,7 +1035,7 @@ void operator|=(const RECT& rect) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*Rect*<br/>
+*rect*<br/>
 Contém uma `CRect` ou [RECT](/windows/desktop/api/windef/ns-windef-tagrect).
 
 ### <a name="remarks"></a>Comentários
@@ -1068,7 +1068,7 @@ CRect operator+(SIZE size) const throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*ponto*<br/>
+*point*<br/>
 Um [ponto](/windows/desktop/api/windef/ns-windef-tagpoint) estrutura ou [CPoint](cpoint-class.md) objeto que especifica o número de unidades para mover o valor de retorno.
 
 *size*<br/>
@@ -1099,7 +1099,7 @@ A terceira sobrecarga retorna um novo `CRect` que é igual ao `CRect` inflado pe
    ASSERT(rectResult == rect2);
 ```
 
-##  <a name="operator_-"></a>  CRect::operator-
+##  <a name="operator_-"></a>  CRect::operator -
 
 As duas primeiras sobrecargas retornam um `CRect` que é igual ao objeto `CRect` deslocado pelos deslocamentos especificados.
 
@@ -1111,7 +1111,7 @@ CRect operator-(LPCRECT lpRect) const throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*ponto*<br/>
+*point*<br/>
 Um [ponto](/windows/desktop/api/windef/ns-windef-tagpoint) estrutura ou `CPoint` objeto que especifica o número de unidades para mover o valor de retorno.
 
 *size*<br/>
@@ -1225,7 +1225,7 @@ BOOL PtInRect(POINT point) const throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*ponto*<br/>
+*point*<br/>
 Contém uma [ponto](/windows/desktop/api/windef/ns-windef-tagpoint) estrutura ou [CPoint](cpoint-class.md) objeto.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1283,7 +1283,7 @@ Especifica a coordenada x do canto superior esquerdo.
 *y1*<br/>
 Especifica a coordenada y do canto superior esquerdo.
 
-*X2*<br/>
+*x2*<br/>
 Especifica a coordenada x do canto inferior direito.
 
 *y2*<br/>
@@ -1504,4 +1504,3 @@ A largura pode ser negativa.
 [Classe CPoint](cpoint-class.md)<br/>
 [Classe CSize](csize-class.md)<br/>
 [RECT](/windows/desktop/api/windef/ns-windef-tagrect)
-

@@ -1,5 +1,5 @@
 ---
-title: Como realizar marshaling de ponteiros inseridos usando interop C++
+title: 'Como: Marshaling de ponteiros inseridos usando Interop do C++'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - pointers [C++], marshaling
 - data marshaling [C++], embedded pointers
 ms.assetid: 05fb8858-97f2-47aa-86b2-2c0ad713bdb2
-ms.openlocfilehash: d48297118fde98889acc0fd5f4abd29ee177cd8b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 89194dabb4b124aa7cbd4d1d34a74de491fba66f
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50493716"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57738475"
 ---
-# <a name="how-to-marshal-embedded-pointers-using-c-interop"></a>Como realizar marshaling de ponteiros inseridos usando interop C++
+# <a name="how-to-marshal-embedded-pointers-using-c-interop"></a>Como: Marshaling de ponteiros inseridos usando Interop do C++
 
 O código a seguir exemplos de uso de [gerenciado, não gerenciado](../preprocessor/managed-unmanaged.md) #pragma diretivas para implementar gerenciados e funções no mesmo arquivo, mas essas funções interoperam da mesma maneira, se definida em arquivos separados. Arquivos que contêm apenas as funções não gerenciadas não precisa ser compilado com [/clr (compilação de tempo de execução de linguagem comum)](../build/reference/clr-common-language-runtime-compilation.md).
 

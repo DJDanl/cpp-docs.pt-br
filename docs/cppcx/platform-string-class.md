@@ -19,12 +19,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::String
 ms.assetid: 72dd04a4-a694-40d3-b899-eaa0b503eab8
-ms.openlocfilehash: ef9838fa8a6a34eac1d2d3531ff93fb124c81d4b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ac9ee843f5f11d4a42377b16ec77b266238fc461
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607032"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746182"
 ---
 # <a name="platformstring-class"></a>Classe Platform::String
 
@@ -94,11 +94,11 @@ A classe de cadeia de caracteres tem os seguintes operadores.
 
 ### <a name="requirements"></a>Requisitos
 
-**Mínimo de cliente com suporte:** Windows 8
+**Cliente com suporte mínimo:** Windows 8
 
-**Mínimo de servidor com suporte:** Windows Server 2012
+**Servidor com suporte mínimo:** Windows Server 2012
 
-**Namespace:** Platform
+**Namespace:** Plataforma
 
 **Cabeçalho** vccorlib.h (incluído por padrão)
 
@@ -409,7 +409,7 @@ O segundo objeto `String`.
 
 **Verdadeiro** se o valor da `str1` é maior que ou igual ao valor de `str2`; caso contrário, **false**.
 
-## <a name="operator-inequality"></a> String:: Operator! =
+## <a name="operator-inequality"></a> String::operator!=
 
 Indica se dois especificada `String` objetos têm valores diferentes.
 

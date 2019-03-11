@@ -34,12 +34,12 @@ helpviewer_keywords:
 - dates, handling in MFC
 - time, handling in MFC
 ms.assetid: e718f294-16ec-4649-88b6-a4dbae5178fb
-ms.openlocfilehash: a49b886bcf9c25642b1f7b8e843be11baf2d2d00
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.openlocfilehash: 6644e4e10916068a91e48611338d79bbb9d0d75b
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54894101"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740524"
 ---
 # <a name="coledatetime-class"></a>Classe COleDateTime
 
@@ -1231,4 +1231,3 @@ Veja o exemplo de [SetDate](#setdate).
 [Classe CTimeSpan](../../atl-mfc-shared/reference/ctimespan-class.md)<br/>
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
 [Classes compartilhadas ATL/MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)
-

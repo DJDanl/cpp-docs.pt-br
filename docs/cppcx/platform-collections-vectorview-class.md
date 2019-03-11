@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - VectorView Class
 ms.assetid: 05cd461d-dce7-49d3-b0e7-2e5c78ed8192
-ms.openlocfilehash: 4f4a5cbd2f1b6c06b339950307dbb333fc6392ad
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 02b5e15a816ec057bfb0a8201b7591e628c3ea2c
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658179"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57745292"
 ---
 # <a name="platformcollectionsvectorview-class"></a>Classe Platform::Collections::VectorView
 

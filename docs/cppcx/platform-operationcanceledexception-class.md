@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::OperationCanceledException
 ms.assetid: 5351bc20-5408-423a-8169-f09acc8a3fbb
-ms.openlocfilehash: 11a5b6b9886fdf59512446e8f7c3deb5045b7ce3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f129c49077a5c6bde54c5afb0ede2cfd9adf9db2
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506555"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747911"
 ---
 # <a name="platformoperationcanceledexception-class"></a>Classe Platform::OperationCanceledException
 
@@ -31,11 +31,11 @@ Para obter mais informações, consulte a classe [COMException](../cppcx/platfor
 
 ### <a name="requirements"></a>Requisitos
 
-**Mínimo de cliente com suporte:** Windows 8
+**Cliente com suporte mínimo:** Windows 8
 
-**Mínimo de servidor com suporte:** Windows Server 2012
+**Servidor com suporte mínimo:** Windows Server 2012
 
-**Namespace:** Platform
+**Namespace:** Plataforma
 
 **Metadados:** platform.winmd
 

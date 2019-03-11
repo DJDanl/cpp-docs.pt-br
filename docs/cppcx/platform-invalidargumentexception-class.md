@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::InvalidArgumentException
 ms.assetid: 1a8d860b-3bcb-41a9-9346-6610616a0b46
-ms.openlocfilehash: 11b1e0e2166bba2dc366520161729a8d84e865d7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1cc4b87ded26807066c81e5da6935548d1a5ad26
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50643606"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750462"
 ---
 # <a name="platforminvalidargumentexception-class"></a>Classe Platform::InvalidArgumentException
 
@@ -31,11 +31,11 @@ Para obter mais informações, consulte a classe [COMException](../cppcx/platfor
 
 ### <a name="requirements"></a>Requisitos
 
-**Mínimo de cliente com suporte:** Windows 8
+**Cliente com suporte mínimo:** Windows 8
 
-**Mínimo de servidor com suporte:** Windows Server 2012
+**Servidor com suporte mínimo:** Windows Server 2012
 
-**Namespace:** Platform
+**Namespace:** Plataforma
 
 **Metadados:** platform.winmd
 

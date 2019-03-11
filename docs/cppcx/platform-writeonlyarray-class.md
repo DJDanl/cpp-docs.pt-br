@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::WriteOnlyArray Class
 ms.assetid: 92d7dd56-ec58-4b8c-88ba-9c903668b687
-ms.openlocfilehash: ff339bc2b144e22d7177638424dd8e617eecfb3b
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: fb582106fe2f18e939f11180048a125c683ca2f6
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330601"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57744398"
 ---
 # <a name="platformwriteonlyarray-class"></a>Classe Platform::WriteOnlyArray
 
@@ -39,12 +39,12 @@ Esses métodos têm acessibilidade interna — ou seja, eles são acessíveis ap
 
 |Nome|Descrição|
 |----------|-----------------|
-|[Writeonlyarray:: begin](#begin)|Um iterador que aponta para o primeiro elemento da matriz.|
-|[Writeonlyarray:: data](#data)|Um ponteiro para o buffer de dados.|
-|[Writeonlyarray:: end](#end)|Um iterador que aponta para após o último elemento da matriz.|
-|[Writeonlyarray:: Fastpass](#fastpass)|Indica se a matriz pode usar o mecanismo FastPass, que é uma otimização executada pelo sistema de forma transparente. Não use isso em seu código|
-|[Writeonlyarray:: Length](#length)|Retorna o número de elementos na matriz.|
-|[Writeonlyarray:: Set](#set)|Define o elemento especificado para o valor especificado.|
+|[WriteOnlyArray::begin](#begin)|Um iterador que aponta para o primeiro elemento da matriz.|
+|[WriteOnlyArray::Data](#data)|Um ponteiro para o buffer de dados.|
+|[WriteOnlyArray::end](#end)|Um iterador que aponta para após o último elemento da matriz.|
+|[WriteOnlyArray::FastPass](#fastpass)|Indica se a matriz pode usar o mecanismo FastPass, que é uma otimização executada pelo sistema de forma transparente. Não use isso em seu código|
+|[WriteOnlyArray::Length](#length)|Retorna o número de elementos na matriz.|
+|[WriteOnlyArray::set](#set)|Define o elemento especificado para o valor especificado.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -56,7 +56,7 @@ Opção do compilador: **/ZW**
 
 **Metadados:** Platform.winmd
 
-**Namespace:** Platform
+**Namespace:** Plataforma
 
 ## <a name="begin"></a>  Método WriteOnlyArray::begin
 

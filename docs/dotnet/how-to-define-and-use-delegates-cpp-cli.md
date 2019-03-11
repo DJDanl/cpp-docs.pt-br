@@ -1,17 +1,17 @@
 ---
-title: Como definir e usar delegados (C++/CLI)
+title: 'Como: Definir e usar delegados (C + + / CLI)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - delegates
 ms.assetid: 1cdf3420-89c1-47c0-b796-aa984020e0f8
-ms.openlocfilehash: 3254f01a2d6399626ad78bb742a2cfd861d095ba
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4f6b13d2adf9acb17d97876ae2fe5b693f682a5b
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50484754"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748704"
 ---
-# <a name="how-to-define-and-use-delegates-ccli"></a>Como definir e usar delegados (C++/CLI)
+# <a name="how-to-define-and-use-delegates-ccli"></a>Como: Definir e usar delegados (C + + / CLI)
 
 Este artigo mostra como definir e consumir representantes no C + + / CLI.
 

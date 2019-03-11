@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - CFixedStringT class, using a custom string manager
 ms.assetid: 1cf11fd7-51b8-4b94-87af-02bc25f47dd6
-ms.openlocfilehash: d35c4c998a6e5913cd972312c511b2a102480c81
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2b6da5d4166b220ef63500d0154ab32dc72b40f4
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50663148"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740708"
 ---
 # <a name="cfixedstringt-example-of-a-custom-string-manager"></a>CFixedStringT: Exemplo de um Gerenciador de cadeia de caracteres personalizada
 
@@ -17,11 +17,11 @@ A biblioteca ATL para implementar um exemplo de um Gerenciador de cadeia de cara
 
 O construtor para `CFixedStringMgr` usa três parâmetros:
 
-- *pData:* um ponteiro para a correção `CStringData` estrutura a ser usado.
+- *pData:* Um ponteiro para a correção `CStringData` estrutura a ser usado.
 
-- *nChars:* o número máximo de caracteres a `CStringData` estrutura pode conter.
+- *nChars:* O número máximo de caracteres a `CStringData` estrutura pode conter.
 
-- *pMgr:* um ponteiro para o `IAtlStringMgr` interface de um "Gerenciador de backup de cadeia de caracteres".
+- *pMgr:* Um ponteiro para o `IAtlStringMgr` interface de um "Gerenciador de backup de cadeia de caracteres".
 
 O construtor armazena os valores de *pData* e *pMgr* em suas variáveis de membro respectivos (`m_pData` e `m_pMgr`). Em seguida, define o tamanho do buffer como zero, o comprimento disponível igual ao tamanho máximo do buffer fixo e a contagem de referência como -1. O valor de contagem de referência indica que o buffer está bloqueado e usar essa instância de `CFixedStringMgr` como o Gerenciador de cadeia de caracteres.
 
@@ -64,4 +64,3 @@ Sempre que o buffer fixo não está em uso, `CFixedStringMgr` garante que ele é
 ## <a name="see-also"></a>Consulte também
 
 [Gerenciamento de memória com CStringT](../atl-mfc-shared/memory-management-with-cstringt.md)
-

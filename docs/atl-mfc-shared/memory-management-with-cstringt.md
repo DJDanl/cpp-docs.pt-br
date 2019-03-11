@@ -14,12 +14,12 @@ helpviewer_keywords:
 - strings [C++], memory management
 - CStringT class, memory management
 ms.assetid: 88b8342d-19b5-48c4-9cf6-e4c44cece21e
-ms.openlocfilehash: f45aac11f0c42aecf8c72cf6f7d1630d50b780f3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 189d15df17ac28528ebbcc41879871e3426f48fb
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50598008"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748626"
 ---
 # <a name="memory-management-with-cstringt"></a>Gerenciamento de memória com CStringT
 
@@ -31,9 +31,8 @@ Classe [CStringT](../atl-mfc-shared/reference/cstringt-class.md) é uma classe d
 
 - [Implementação de um gerenciador de cadeia de caracteres personalizada (método avançado)](../atl-mfc-shared/implementation-of-a-custom-string-manager-advanced-method.md)
 
-- [CFixedStringT: Exemplo de um Gerenciador de cadeia de caracteres personalizada](../atl-mfc-shared/cfixedstringt-example-of-a-custom-string-manager.md)
+- [CFixedStringT: Um exemplo de um Gerenciador de cadeia de caracteres personalizada](../atl-mfc-shared/cfixedstringt-example-of-a-custom-string-manager.md)
 
 ## <a name="see-also"></a>Consulte também
 
 [Exemplo de CustomString](../visual-cpp-samples.md)
-

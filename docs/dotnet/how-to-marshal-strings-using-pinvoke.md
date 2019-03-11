@@ -1,5 +1,5 @@
 ---
-title: Como realizar marshaling de cadeias de caracteres usando PInvoke
+title: 'Como: Marshaling de cadeias de caracteres usando PInvoke'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - data marshaling [C++], strings
 - platform invoke [C++], strings
 ms.assetid: bcc75733-7337-4d9b-b1e9-b95a98256088
-ms.openlocfilehash: 86ce065da5c214c0da803ad53d19eaec3de5efb4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f316e33f1711ea0053fb68c0af7e89f90b793e05
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50598114"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739252"
 ---
-# <a name="how-to-marshal-strings-using-pinvoke"></a>Como realizar marshaling de cadeias de caracteres usando PInvoke
+# <a name="how-to-marshal-strings-using-pinvoke"></a>Como: Marshaling de cadeias de caracteres usando PInvoke
 
 Este tópico explica como nativas funções que aceitam cadeias de caracteres de estilo C podem ser chamadas usando a cadeia de caracteres CLR digite System:: string usando o suporte de invocação de plataforma do .NET Framework. Programadores de Visual C++ são incentivados a usar os recursos de interoperabilidade C++ em vez disso (quando possível) como P/Invoke oferece pouco tempo de compilação relatório de erro, não é fortemente tipado e pode ser enfadonho implementar. Se a API não gerenciada é empacotada como uma DLL e o código-fonte não está disponível, o P/Invoke é a única opção, mas caso contrário, consulte [usando Interop do C++ (PInvoke implícito)](../dotnet/using-cpp-interop-implicit-pinvoke.md).
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Forms controls [C++], hosting as an MFC view
 - hosting Windows Forms control [C++]
 ms.assetid: 43c02ab4-1366-434c-a980-0b19326d6ea0
-ms.openlocfilehash: c041ae941858184245879ced972c19e6e998b677
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9c59f28739ab94210c16bd800a48997f3f2282df
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544554"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739787"
 ---
 # <a name="hosting-a-windows-forms-user-control-as-an-mfc-view"></a>Hospedando um controle de usuário dos Windows Forms como uma exibição MFC
 
@@ -25,13 +25,13 @@ Para um aplicativo de exemplo que mostra os formulários do Windows usado com o 
 
 ## <a name="in-this-section"></a>Nesta seção
 
-[Como criar o controle de usuário e o host em uma exibição de MDI](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md)
+[Como: criar o controle de usuário e o host em uma exibição de MDI](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md)
 
-[Como adicionar roteamento de comando ao controle do Windows Forms](../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)
+[Como: adicionar roteamento de comando ao controle do Windows Forms](../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)
 
-[Como chamar propriedades e métodos do controle do Windows Forms](../dotnet/how-to-call-properties-and-methods-of-the-windows-forms-control.md)
+[Como: chamar propriedades e métodos do controle do Windows Forms](../dotnet/how-to-call-properties-and-methods-of-the-windows-forms-control.md)
 
 ## <a name="see-also"></a>Consulte também
 
 [Usando um controle de usuário do Windows Form no MFC](../dotnet/using-a-windows-form-user-control-in-mfc.md)<br/>
-[Como criar controles de composição](/dotnet/framework/winforms/controls/how-to-author-composite-controls)
+[Como: Criar controles compostos](/dotnet/framework/winforms/controls/how-to-author-composite-controls)

@@ -23,12 +23,12 @@ helpviewer_keywords:
 - shared classes, CTimeSpan
 - time, elapsed
 ms.assetid: ee1e42f6-1839-477a-8435-fb26ad475140
-ms.openlocfilehash: 6ab22b9a093a1aa9c8ae0249c036ea2bf89065f6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3c80260c1f57e49a34b4e9f3331f4d0d69ab30ce
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50641866"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57752318"
 ---
 # <a name="ctimespan-class"></a>Classe CTimeSpan
 
@@ -68,8 +68,8 @@ class CTimeSpan
 |||
 |-|-|
 |[operador + -](#operator_add_-)|Adiciona e subtrai `CTimeSpan` objetos.|
-|[+ = o operador =](#operator_add_eq_-_eq)|Adiciona e subtrai um `CTimeSpan` objeto e para isso `CTimeSpan`.|
-|[operador = = < etc.](#ctimespan_comparison_operators)|Compara dois valores de tempo relativo.|
+|[operator += -=](#operator_add_eq_-_eq)|Adiciona e subtrai um `CTimeSpan` objeto e para isso `CTimeSpan`.|
+|[operator == < etc.](#ctimespan_comparison_operators)|Compara dois valores de tempo relativo.|
 
 ## <a name="remarks"></a>Comentários
 
@@ -104,7 +104,7 @@ bool operator>=(CTimeSpan span) const throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*SPAN*<br/>
+*span*<br/>
 O objeto a ser comparado.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -345,7 +345,7 @@ CTimeSpan operator-(CTimeSpan span) const throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*SPAN*<br/>
+*span*<br/>
 O valor a ser adicionado para o `CTimeSpan` objeto.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -360,7 +360,7 @@ Esses dois operadores permitem que você adicionar e subtrair `CTimeSpan` objeto
 
 [!code-cpp[NVC_ATLMFC_Utilities#167](../../atl-mfc-shared/codesnippet/cpp/ctimespan-class_7.cpp)]
 
-##  <a name="operator_add_eq_-_eq"></a>  + = De CTimeSpan::operator-=
+##  <a name="operator_add_eq_-_eq"></a>  CTimeSpan::operator +=, -=
 
 Adiciona e subtrai um `CTimeSpan` objeto e para isso `CTimeSpan`.
 
@@ -371,7 +371,7 @@ CTimeSpan& operator-=(CTimeSpan span) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*SPAN*<br/>
+*span*<br/>
 O valor a ser adicionado para o `CTimeSpan` objeto.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -416,4 +416,3 @@ Atualizado `CArchive` objeto.
 [time, _time32, _time64](../../c-runtime-library/reference/time-time32-time64.md)<br/>
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
 [Classes compartilhadas ATL/MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)
-

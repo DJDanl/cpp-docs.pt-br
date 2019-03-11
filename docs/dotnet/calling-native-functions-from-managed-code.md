@@ -9,12 +9,12 @@ helpviewer_keywords:
 - calling native functions from managed code
 - interop [C++], calling native functions from managed code
 ms.assetid: 982cef18-20d9-42b4-8242-a77fa65f2e36
-ms.openlocfilehash: 97b0221a4ec73be41bb5ba052607dfb5ced233c8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 285bfabbd5935df303a39ada11c388713ae24f34
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462032"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743252"
 ---
 # <a name="calling-native-functions-from-managed-code"></a>Chamando funções nativas a partir do código gerenciado
 
@@ -185,10 +185,10 @@ No entanto, você deve realizar marshaling de tipos que não têm o mesmo formul
 |DWORD|unsigned long|unsigned long|UInt32|
 |ULONG|unsigned long|unsigned long|UInt32|
 |CHAR|char|char|Char|
-|LPCSTR|Char \*|Cadeia de caracteres ^ [in], StringBuilder ^ [no, out]|Cadeia de caracteres ^ [in], StringBuilder ^ [no, out]|
+|LPCSTR|char \*|Cadeia de caracteres ^ [in], StringBuilder ^ [no, out]|Cadeia de caracteres ^ [in], StringBuilder ^ [no, out]|
 |LPCSTR|Const char \*|Cadeia de caracteres ^|Cadeia de Caracteres|
 |LPWSTR|wchar_t \*|Cadeia de caracteres ^ [in], StringBuilder ^ [no, out]|Cadeia de caracteres ^ [in], StringBuilder ^ [no, out]|
-|LPCWSTR|Const wchar_t \*|Cadeia de caracteres ^|Cadeia de Caracteres|
+|LPCWSTR|const wchar_t \*|Cadeia de caracteres ^|Cadeia de Caracteres|
 |FLOAT|float|float|Simples|
 |DUPLA|double|double|Duplo|
 

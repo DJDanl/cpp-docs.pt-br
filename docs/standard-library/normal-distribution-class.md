@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::normal_distribution [C++], param_type
 - std::normal_distribution [C++], param_type
 ms.assetid: bf92cdbd-bc72-4d4a-b588-173d748f0d7d
-ms.openlocfilehash: e0df3359a27a216692f0127ab7f17e1e1fce469a
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: d0de31a20e06d9b8ff3789cc7ae1928c9a7b6b7d
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519848"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743071"
 ---
 # <a name="normaldistribution-class"></a>Classe normal_distribution
 
@@ -209,7 +209,7 @@ A estrutura do parâmetro usada para construir a distribuição.
 
 ### <a name="remarks"></a>Comentários
 
-**Pré-condição:** `0.0 ≤ stddev`
+**Pré-condição:** `0.0 < stddev`
 
 O primeiro construtor cria um objeto cujo valor `mean` armazenado contém o valor *mean* e cujo valor armazenado `stddev` contém o valor *stddev*.
 
@@ -244,7 +244,7 @@ A estrutura `param_type` usada para comparar.
 
 ### <a name="remarks"></a>Comentários
 
-**Pré-condição:** `0.0 ≤ stddev`
+**Pré-condição:** `0.0 < stddev`
 
 Essa estrutura pode ser enviada ao construtor de classe de distribuição na instanciação, para a função de membro `param()` para definir os parâmetros armazenados de uma distribuição existente e para `operator()` a ser usado no lugar dos parâmetros armazenados.
 

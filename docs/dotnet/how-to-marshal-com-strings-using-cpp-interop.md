@@ -1,5 +1,5 @@
 ---
-title: Como realizar marshaling de cadeias de caracteres COM usando interop C++
+title: 'Como: Cadeias de caracteres COM marshaling usando Interop do C++'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,20 +9,20 @@ helpviewer_keywords:
 - data marshaling [C++], strings
 - COM [C++], marshaling strings
 ms.assetid: 06590759-bf99-4e34-a3a9-4527ea592cc2
-ms.openlocfilehash: 664c9ed973e2dff4467d13742390da8a944eb87a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: baf3a2e6720cd2f72606cf5089e0409df602fee6
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559114"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751504"
 ---
-# <a name="how-to-marshal-com-strings-using-c-interop"></a>Como realizar marshaling de cadeias de caracteres COM usando interop C++
+# <a name="how-to-marshal-com-strings-using-c-interop"></a>Como: Cadeias de caracteres COM marshaling usando Interop do C++
 
 Este tópico demonstra como um BSTR (o formato de cadeia de caracteres básicas preferido na programação COM) pode ser passados do gerenciado para uma função não gerenciada e vice-versa. Para interoperar com outros tipos de cadeias de caracteres, consulte os tópicos a seguir:
 
-- [Como realizar marshaling de cadeias de caracteres Unicode usando interop do C++](../dotnet/how-to-marshal-unicode-strings-using-cpp-interop.md)
+- [Como: realizar marshaling de cadeias de caracteres Unicode usando a interop do C++](../dotnet/how-to-marshal-unicode-strings-using-cpp-interop.md)
 
-- [Como realizar marshaling de cadeias de caracteres ANSI usando interop do C++](../dotnet/how-to-marshal-ansi-strings-using-cpp-interop.md)
+- [Como: realizar marshaling de cadeias de caracteres ANSI usando a interop do C++](../dotnet/how-to-marshal-ansi-strings-using-cpp-interop.md)
 
 O código a seguir exemplos de uso de [gerenciado, não gerenciado](../preprocessor/managed-unmanaged.md) #pragma diretivas para implementar gerenciados e funções no mesmo arquivo, mas essas funções interoperam da mesma maneira, se definida em arquivos separados. Arquivos que contêm apenas as funções não gerenciadas não precisa ser compilado com [/clr (compilação de tempo de execução de linguagem comum)](../build/reference/clr-common-language-runtime-compilation.md).
 

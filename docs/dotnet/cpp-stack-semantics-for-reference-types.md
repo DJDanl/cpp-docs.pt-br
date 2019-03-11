@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - reference types, C++ stack semantics for
 ms.assetid: 319a1304-f4a4-4079-8b84-01cec847d531
-ms.openlocfilehash: b2d2d5991f7b52727b366214b8ca9ed4d8e14956
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6ba17a56c5274295c44cdc5aa651380d1e6c83d3
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607851"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740931"
 ---
 # <a name="c-stack-semantics-for-reference-types"></a>Semântica da pilha do C++ para tipos de referência
 
@@ -27,7 +27,7 @@ O compilador não gerará um construtor de cópia para um tipo de referência. P
 
 O compilador não irá gerar um operador de atribuição padrão para um tipo de referência. Um operador de atribuição permite que você crie um objeto usando a semântica da pilha e inicializá-lo com um objeto existente criado usando a semântica de pilha. Um operador de atribuição para um tipo de referência tem uma assinatura da seguinte forma: `void operator=( R% ){}`.
 
-Se o destruidor do seu tipo libera recursos críticos e usar semântica de pilha para tipos de referência, você não precisa chamar explicitamente o destruidor (ou chamar `delete`). Para obter mais informações sobre destruidores em tipos de referência, consulte [destruidores e finalizadores em como: definir e consumir classes e estruturas (C + + / CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).
+Se o destruidor do seu tipo libera recursos críticos e usar semântica de pilha para tipos de referência, você não precisa chamar explicitamente o destruidor (ou chamar `delete`). Para obter mais informações sobre destruidores em tipos de referência, consulte [destruidores e finalizadores em como: Definir e consumir classes e structs (C++ /CLI CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).
 
 Um operador de atribuição gerado pelo compilador seguirá as regras padrão de C++ comuns com as seguintes adições:
 

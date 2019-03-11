@@ -21,12 +21,12 @@ f1_keywords:
 helpviewer_keywords:
 - Vector Class (C++/Cx)
 ms.assetid: aee8c076-9700-47c3-99b6-799fd3edb0ca
-ms.openlocfilehash: fb03f7a00dfabe9d082ca761552af99e552d3190
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5466f1d1c8987724aa0768cd8915e06b62b031ad
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50499848"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747119"
 ---
 # <a name="platformcollectionsvector-class"></a>Classe Platform::Collections::Vector
 

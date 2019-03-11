@@ -1,5 +1,5 @@
 ---
-title: Como realizar marshaling de ponteiros inseridos usando PInvoke
+title: 'Como: Marshaling de ponteiros inseridos usando PInvoke'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,16 +9,16 @@ helpviewer_keywords:
 - marshaling [C++], embedded pointers
 - data marshaling [C++], embedded pointers
 ms.assetid: f12c1b9a-4f82-45f8-83c8-3fc9321dbb98
-ms.openlocfilehash: 4f2d37ceb18035747773d307885c8af17d696adc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 943a1a2784a37353157cd38da7ebdc9827006fe5
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50452072"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57738748"
 ---
-# <a name="how-to-marshal-embedded-pointers-using-pinvoke"></a>Como realizar marshaling de ponteiros inseridos usando PInvoke
+# <a name="how-to-marshal-embedded-pointers-using-pinvoke"></a>Como: Marshaling de ponteiros inseridos usando PInvoke
 
-Funções que são implementadas em DLLs não gerenciadas podem ser chamadas de código gerenciado usando a funcionalidade de invocação de plataforma (P/Invoke). Se o código-fonte para a DLL não estiver disponível, o P/Invoke é a única opção para interoperação. No entanto, ao contrário de outras linguagens .NET, Visual C++ fornece uma alternativa para P/Invoke. Para obter mais informações, consulte [usando Interop do C++ (PInvoke implícito)](../dotnet/using-cpp-interop-implicit-pinvoke.md) e [como: empacotar Embedded ponteiros usando Interop do C++](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md).
+Funções que são implementadas em DLLs não gerenciadas podem ser chamadas de código gerenciado usando a funcionalidade de invocação de plataforma (P/Invoke). Se o código-fonte para a DLL não estiver disponível, o P/Invoke é a única opção para interoperação. No entanto, ao contrário de outras linguagens .NET, Visual C++ fornece uma alternativa para P/Invoke. Para obter mais informações, consulte [usando Interop do C++ (PInvoke implícito)](../dotnet/using-cpp-interop-implicit-pinvoke.md) e [como: Marshaling de ponteiros inseridos usando Interop do C++](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md).
 
 ## <a name="example"></a>Exemplo
 

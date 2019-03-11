@@ -1,5 +1,5 @@
 ---
-title: Como determinar se uma imagem é nativa ou CLR
+title: 'Como: Determinar se uma imagem é nativa ou CLR'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,18 +8,18 @@ helpviewer_keywords:
 - /clr compiler option [C++], detecting use in compilation
 - common language runtime, /clr compiler option
 ms.assetid: 5a854822-6172-4b22-b236-320165412568
-ms.openlocfilehash: ad8603827f5d1c951411403a62f8ffff58bfca88
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 541581e0f172c8ce2601e2e476ccd03a49757f80
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50637392"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747223"
 ---
-# <a name="how-to-determine-if-an-image-is-native-or-clr"></a>Como determinar se uma imagem é nativa ou CLR
+# <a name="how-to-determine-if-an-image-is-native-or-clr"></a>Como: Determinar se uma imagem é nativa ou CLR
 
 É uma maneira de determinar se uma imagem foi criada para o common language runtime é usar **dumpbin**[/clrheader](../build/reference/clrheader.md).
 
-Você também pode verificar programaticamente se uma imagem foi criada para o common language runtime. Para obter mais informações, consulte [como: detectar a compilação /clr](../dotnet/how-to-detect-clr-compilation.md).
+Você também pode verificar programaticamente se uma imagem foi criada para o common language runtime. Para obter mais informações, confira [Como: Detectar a compilação /clr](../dotnet/how-to-detect-clr-compilation.md).
 
 ## <a name="example"></a>Exemplo
 

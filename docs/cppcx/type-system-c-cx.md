@@ -2,12 +2,12 @@
 title: Sistema de tipos (C++/CX)
 ms.date: 02/03/2017
 ms.assetid: b67bee8a-b526-4872-969e-ef22724e88fe
-ms.openlocfilehash: 9c8e09dded3743d5928fd1a4db797c6e647ec465
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fbc7a178621624e396c80509703ce1b5b4c19162
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445975"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57745948"
 ---
 # <a name="type-system-ccx"></a>Sistema de tipos (C++/CX)
 
@@ -17,15 +17,15 @@ Para habilitar o suporte para o tempo de execução do Windows em uma linguagem 
 
 Para uma discussão mais profunda da projeção de idioma C++/CX e como ela funciona sob as coberturas, veja estas postagens do blog:
 
-1. [C + + c++ /CX parte 0 de \[n\]: uma introdução](https://blogs.msdn.microsoft.com/vcblog/2012/08/29/ccx-part-0-of-n-an-introduction)
+1. [C + + c++ /CX parte 0 de \[n\]: Uma introdução](https://blogs.msdn.microsoft.com/vcblog/2012/08/29/ccx-part-0-of-n-an-introduction)
 
-1. [C + + c++ /CX parte 1 de \[n\]: uma classe simples](https://blogs.msdn.microsoft.com/vcblog/2012/09/05/ccx-part-1-of-n-a-simple-class)
+1. [C + + c++ /CX parte 1 de \[n\]: Uma classe simples](https://blogs.msdn.microsoft.com/vcblog/2012/09/05/ccx-part-1-of-n-a-simple-class)
 
-1. [C + + c++ /CX parte 2 de \[n\]: tipos que desempenham funções diferentes](https://blogs.msdn.microsoft.com/vcblog/2012/09/17/ccx-part-2-of-n-types-that-wear-hats)
+1. [C + + c++ /CX parte 2 de \[n\]: Tipos que desempenham funções diferentes](https://blogs.msdn.microsoft.com/vcblog/2012/09/17/ccx-part-2-of-n-types-that-wear-hats)
 
-1. [C + + c++ /CX parte 3 de \[n\]: em construção](https://blogs.msdn.microsoft.com/vcblog/2012/10/05/ccx-part-3-of-n-under-construction/)
+1. [C + + c++ /CX parte 3 de \[n\]: Em construção](https://blogs.msdn.microsoft.com/vcblog/2012/10/05/ccx-part-3-of-n-under-construction/)
 
-1. [C + + c++ /CX parte 4 de \[n\]: funções membro Static](https://blogs.msdn.microsoft.com/vcblog/2012/10/19/ccx-part-4-of-n-static-member-functions)
+1. [C + + c++ /CX parte 4 de \[n\]: Funções de membro estático](https://blogs.msdn.microsoft.com/vcblog/2012/10/19/ccx-part-4-of-n-static-member-functions)
 
 ## <a name="windows-metadata-winmd-files"></a>Arquivos de metadados do Windows (.winmd)
 

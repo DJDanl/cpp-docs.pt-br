@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Boolean Struct
 ms.assetid: 8518a1db-7139-4187-9c7a-1ae3943373f2
-ms.openlocfilehash: c2a1db60700f600360942d2e748badf6e932ce72
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c97ce0171fcf8f28254ce3f91b91f4d1711ad813
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548155"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748405"
 ---
 # <a name="platformboolean-value-class"></a>Platform::classe de valor booliano
 
@@ -30,11 +30,11 @@ O booliano possui os métodos Equals(), GetHashCode() e ToString() derivados da 
 
 ### <a name="requirements"></a>Requisitos
 
-**Mínimo de cliente com suporte:** Windows 8
+**Cliente com suporte mínimo:** Windows 8
 
-**Mínimo de servidor com suporte:** Windows Server 2012
+**Servidor com suporte mínimo:** Windows Server 2012
 
-**Namespace:** Platform
+**Namespace:** Plataforma
 
 **Metadados:** platform.winmd
 
