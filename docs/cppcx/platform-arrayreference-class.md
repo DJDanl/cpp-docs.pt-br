@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::ArrayReference Class
 ms.assetid: 9ab3b15e-8a60-4600-8fcb-7d6c86284f4b
-ms.openlocfilehash: 4c297f033b78e1b7f9283f5becb9db974bb2b9ff
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 923f60e90517e377b99d5e29f38c48b2633c3c46
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51522851"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57742981"
 ---
 # <a name="platformarrayreference-class"></a>Classe Platform::ArrayReference
 
@@ -30,7 +30,7 @@ class ArrayReference
 
 |Nome|Descrição|
 |----------|-----------------|
-|[Arrayreference:: Arrayreference](#ctor)|Inicializa uma nova instância da classe `ArrayReference`.|
+|[ArrayReference::ArrayReference](#ctor)|Inicializa uma nova instância da classe `ArrayReference`.|
 
 ### <a name="public-operators"></a>Operadores públicos
 
@@ -47,11 +47,11 @@ Usando `ArrayReference` para preencher uma matriz de estilo C, você evita a ope
 
 ### <a name="requirements"></a>Requisitos
 
-**Mínimo de cliente com suporte:** Windows 8
+**Cliente com suporte mínimo:** Windows 8
 
-**Mínimo de servidor com suporte:** Windows Server 2012
+**Servidor com suporte mínimo:** Windows Server 2012
 
-**Namespace:** Platform
+**Namespace:** Plataforma
 
 **Cabeçalho:** vccorlib.h
 
@@ -102,7 +102,7 @@ Referência a um objeto do tipo `ArrayReference`.
 
 `Platform::ArrayReference` é um modelo de classe C++ padrão, não uma classe de referência.
 
-## <a name="operator-call"></a>  Operador Arrayreference
+## <a name="operator-call"></a>  ArrayReference::operator() Operator
 
 Converte o atual [Platform:: arrayreference](../cppcx/platform-arrayreference-class.md) do objeto para um [Platform:: array](../cppcx/platform-array-class.md) classe.
 

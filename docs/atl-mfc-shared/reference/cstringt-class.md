@@ -80,12 +80,12 @@ helpviewer_keywords:
 - shared classes, CStringT
 - CStringT class
 ms.assetid: 7cacc59c-425f-40f1-8f5b-6db921318ec9
-ms.openlocfilehash: bd8fefd3424ab5ec422adb352972ba846e45139d
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 9566830de4d3af8f34e8efa5e5ef468acae1fba5
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51525490"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750865"
 ---
 # <a name="cstringt-class"></a>Classe CStringT
 
@@ -114,19 +114,19 @@ O tipo de caractere da classe string. Pode ser uma das seguintes opções:
 *StringTraits*<br/>
 Determina se a classe de cadeia de caracteres precisa de suporte de biblioteca de tempo de execução C (CRT) e onde os recursos de cadeia de caracteres estão localizados. Pode ser uma das seguintes opções:
 
-- **StrTraitATL < wchar_t** &#124; **char** &#124; **TCHAR, ChTraitsCRT < wchar_t** &#124; **char** &#124;  **TCHAR >>**
+- **StrTraitATL< wchar_t** &#124; **char** &#124; **TCHAR, ChTraitsCRT< wchar_t** &#124; **char** &#124; **TCHAR > >**
 
    A classe requer suporte de CRT e procura cadeias de caracteres de recurso no módulo especificado por `m_hInstResource` (um membro da classe de módulo do aplicativo).
 
-- **StrTraitATL < wchar_t** &#124; **char** &#124; **TCHAR, ChTraitsOS < wchar_t** &#124; **char** &#124;  **TCHAR >>**
+- **StrTraitATL< wchar_t** &#124; **char** &#124; **TCHAR, ChTraitsOS< wchar_t** &#124; **char** &#124; **TCHAR > >**
 
    A classe não requer suporte de CRT e procura cadeias de caracteres de recurso no módulo especificado por `m_hInstResource` (um membro da classe de módulo do aplicativo).
 
-- **StrTraitMFC < wchar_t** &#124; **char** &#124; **TCHAR, ChTraitsCRT < wchar_t** &#124; **char** &#124;  **TCHAR >>**
+- **StrTraitMFC< wchar_t** &#124; **char** &#124; **TCHAR, ChTraitsCRT< wchar_t** &#124; **char** &#124; **TCHAR > >**
 
    A classe requer suporte de CRT e procura cadeias de caracteres de recurso usando o algoritmo de pesquisa padrão do MFC.
 
-- **StrTraitMFC < wchar_t** &#124; **char** &#124; **TCHAR, ChTraitsOS < wchar_t** &#124; **char** &#124;  **TCHAR >>**
+- **StrTraitMFC< wchar_t** &#124; **char** &#124; **TCHAR, ChTraitsOS< wchar_t** &#124; **char** &#124; **TCHAR > >**
 
    A classe não requer suporte de CRT e procura cadeias de caracteres de recurso usando o algoritmo de pesquisa padrão do MFC.
 
@@ -137,7 +137,7 @@ Determina se a classe de cadeia de caracteres precisa de suporte de biblioteca d
 |Nome|Descrição|
 |----------|-----------------|
 |[CStringT::CStringT](#cstringt)|Constrói um `CStringT` objeto de várias maneiras.|
-|[CStringT:: ~ CStringT](#_dtorcstringt)|Destrói um objeto `CStringT`.|
+|[CStringT::~CStringT](#_dtorcstringt)|Destrói um objeto `CStringT`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
@@ -182,10 +182,10 @@ Determina se a classe de cadeia de caracteres precisa de suporte de biblioteca d
 
 |||
 |-|-|
-|[operador =](#operator_eq)|Atribui um novo valor para um `CStringT` objeto.|
+|[operator =](#operator_eq)|Atribui um novo valor para um `CStringT` objeto.|
 |[CStringT::operator +](#operator_add)|Concatena duas cadeias de caracteres ou um caractere e uma cadeia de caracteres.|
 |[+ CStringT::operator =](#operator_add_eq)|Concatena uma nova cadeia de caracteres ao final de uma cadeia de caracteres existente.|
-|[CStringT::operator = =](#operator_eq_eq)|Determina se duas cadeias de caracteres são logicamente iguais.|
+|[CStringT::operator ==](#operator_eq_eq)|Determina se duas cadeias de caracteres são logicamente iguais.|
 |[CStringT::operator! =](#operator_neq)|Determina se duas cadeias de caracteres logicamente não são iguais.|
 |[CStringT::operator &lt;](#operator_lt)|Determina se a cadeia de caracteres no lado esquerdo do operador é menor que a cadeia de caracteres à direita.|
 |[CStringT::operator &gt;](#operator_gt)|Determina se a cadeia de caracteres no lado esquerdo do operador for maior que a cadeia de caracteres à direita.|
@@ -274,7 +274,7 @@ Porque `CStringT` usa um argumento de modelo para definir o tipo de caractere (a
 |Cabeçalho|Use para|
 |------------|-------------|
 |cstringt.h|Objetos de cadeia de caracteres somente do MFC|
-|atlstr. h|Objetos de cadeia de caracteres não MFC|
+|atlstr.h|Objetos de cadeia de caracteres não MFC|
 
 ##  <a name="allocsysstring"></a>  CStringT::AllocSysString
 
@@ -540,7 +540,7 @@ Uma cadeia de caracteres terminada em nulo a ser copiado para isso `CStringT` ob
 *pStringMgr*<br/>
 Um ponteiro para o Gerenciador de memória para o `CStringT` objeto. Para obter mais informações sobre `IAtlStringMgr` e o gerenciamento de memória para `CStringT`, consulte [gerenciamento de memória com CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).
 
-*{1&gt;strsrc*<br/>
+*strSrc*<br/>
 Um existente `CStringT` o objeto a ser copiado para isso `CStringT` objeto. Para obter mais informações sobre `CThisString` e `CThisSimpleString`, consulte a seção comentários.
 
 *varSrc*<br/>
@@ -570,7 +570,7 @@ Como os construtores copiam os dados de entrada para o novo armazenamento alocad
 
 - `CStringT`( `LPCSTR` `lpsz` ): Constrói um Unicode `CStringT` de uma cadeia de caracteres ANSI. Você também pode usar esse construtor para carregar um recurso de cadeia de caracteres, conforme mostrado no exemplo a seguir.
 
-- `CStringT(` `LPCWSTR` `lpsz` ): Constrói uma `CStringT` de uma cadeia de caracteres Unicode.
+- `CStringT(` `LPCWSTR` `lpsz` ): Constrói um `CStringT` de uma cadeia de caracteres Unicode.
 
 - `CStringT`( `const unsigned char*` `psz` ): Permite que você construa uma `CStringT` de um ponteiro **unsigned char**.
 
@@ -588,7 +588,7 @@ O operador de sobrecarga `CSimpleStringT<>&()` constrói uma `CStringT` do objet
 
 [!code-cpp[NVC_ATLMFC_Utilities#112](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_7.cpp)]
 
-##  <a name="_dtorcstringt"></a>  CStringT:: ~ CStringT
+##  <a name="_dtorcstringt"></a>  CStringT::~CStringT
 
 Destrói o `CStringT` objeto.
 
@@ -1043,7 +1043,7 @@ friend CStringT operator+(wchar_t ch1, const CStringT& str2,);
 *ch1*<br/>
 Um caractere a ser concatenada com uma cadeia de caracteres ANSI ou Unicode.
 
-*Cap2*<br/>
+*ch2*<br/>
 Um caractere a ser concatenada com uma cadeia de caracteres ANSI ou Unicode.
 
 *str1*<br/>
@@ -1109,7 +1109,7 @@ Um caractere a ser concatenada com uma cadeia de caracteres ANSI ou Unicode.
 *pszSrc*<br/>
 Um ponteiro para a cadeia de caracteres original são concatenado.
 
-*{1&gt;strsrc*<br/>
+*strSrc*<br/>
 Um `CStringT` de concatenar a essa cadeia de caracteres.
 
 ### <a name="remarks"></a>Comentários
@@ -1144,7 +1144,7 @@ friend bool operator==(XCHAR ch1, const CStringT& str2,) throw();
 *ch1*<br/>
 Um caractere ANSI ou Unicode para comparação.
 
-*Cap2*<br/>
+*ch2*<br/>
 Um caractere ANSI ou Unicode para comparação.
 
 *str1*<br/>
@@ -1186,7 +1186,7 @@ friend bool operator!=(XCHAR ch1, const CStringT& str2,) throw();
 *ch1*<br/>
 Um caractere a ser concatenada com uma cadeia de caracteres ANSI ou Unicode.
 
-*Cap2*<br/>
+*ch2*<br/>
 Um caractere a ser concatenada com uma cadeia de caracteres ANSI ou Unicode.
 
 *str1*<br/>
@@ -1733,4 +1733,3 @@ O `CStringT& TrimRight()` versão não requer parâmetros. Organizando quaisquer
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
 [Classes compartilhadas ATL/MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)<br/>
 [Classe de CSimpleStringT](../../atl-mfc-shared/reference/csimplestringt-class.md)
-

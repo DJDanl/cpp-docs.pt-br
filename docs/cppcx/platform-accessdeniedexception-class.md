@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::AccessDeniedException
 ms.assetid: 6ae2155b-7b16-4587-8d2d-da05eab4c7e9
-ms.openlocfilehash: 4865492e3b5d8e4acc35e58081a226c9e66ed99f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4abbac977a256ff27f99caaf77393450d3ccf858
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588143"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57752409"
 ---
 # <a name="platformaccessdeniedexception-class"></a>Classe Platform::AccessDeniedException
 
@@ -31,11 +31,11 @@ Se você receber essa exceção, primeiro verifique se solicitou o recurso aprop
 
 ### <a name="requirements"></a>Requisitos
 
-**Mínimo de cliente com suporte:** Windows 8
+**Cliente com suporte mínimo:** Windows 8
 
-**Mínimo de servidor com suporte:** Windows Server 2012
+**Servidor com suporte mínimo:** Windows Server 2012
 
-**Namespace:** Platform
+**Namespace:** Plataforma
 
 **Metadados:** platform.winmd
 

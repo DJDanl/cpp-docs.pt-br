@@ -1,28 +1,28 @@
 ---
-title: Como criar o controle de usuário e hospedar uma exibição MDI
+title: 'Como: Criar o modo de exibição de controle de usuário e o Host MDI'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC [C++], Windows Forms Controls
 - Windows Forms [C++], MFC support
 ms.assetid: 625b5821-f923-4701-aca0-c1a4ceca4f63
-ms.openlocfilehash: c2705ef1938684d8521316436fccaae367629584
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7d535fce47be5504f6f521cda1267344206287da
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509116"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57738764"
 ---
-# <a name="how-to-create-the-user-control-and-host-mdi-view"></a>Como criar o controle de usuário e hospedar uma exibição MDI
+# <a name="how-to-create-the-user-control-and-host-mdi-view"></a>Como: Criar o modo de exibição de controle de usuário e o Host MDI
 
 As etapas a seguir mostram como criar um controle de usuário do .NET Framework, criar o controle de usuário em uma biblioteca de classe de controle (especificamente, um projeto de biblioteca de controle do Windows) e, em seguida, compile o projeto em um assembly. O controle, em seguida, pode ser consumido de um aplicativo do MFC que usa classes derivadas [classe CView](../mfc/reference/cview-class.md) e [classe CWinFormsView](../mfc/reference/cwinformsview-class.md).
 
-Para obter informações sobre como criar um controle de usuário do Windows Forms e criar uma biblioteca de classe de controle, consulte [como: criar controles de usuário](/dotnet/framework/winforms/controls/how-to-author-composite-controls).
+Para obter informações sobre como criar um controle de usuário do Windows Forms e criar uma biblioteca de classe de controle, consulte [como: Criar controles de usuário](/dotnet/framework/winforms/controls/how-to-author-composite-controls).
 
 > [!NOTE]
 >  Em alguns casos, controles de formulários do Windows, como um controle de grade de terceiros, talvez não se comportar confiavelmente quando hospedados em um aplicativo MFC. Uma solução alternativa recomendada é colocar um controle de usuário do Windows Forms no aplicativo MFC e colocar o controle de grade de terceiros dentro do controle de usuário.
 
-Este procedimento pressupõe que você criou um projeto de biblioteca de controles do Windows Forms denominado WindowsFormsControlLibrary1, de acordo com o procedimento [como: criar o controle de usuário e o Host em uma caixa de diálogo](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md).
+Este procedimento pressupõe que você criou um projeto de biblioteca de controles do Windows Forms denominado WindowsFormsControlLibrary1, de acordo com o procedimento em [como: Criar o controle de usuário e o Host em uma caixa de diálogo](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md).
 
 ### <a name="to-create-the-mfc-host-application"></a>Para criar o aplicativo de host do MFC
 

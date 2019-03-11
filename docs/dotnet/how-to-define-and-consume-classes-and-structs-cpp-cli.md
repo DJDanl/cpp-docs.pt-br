@@ -1,18 +1,18 @@
 ---
-title: Como definir e consumir classes e estruturas (C++/CLI)
+title: 'Como: Definir e consumir Classes e Structs (C++ /CLI CLI)'
 ms.date: 09/12/2018
 helpviewer_keywords:
 - structs [C++]
 - classes [C++], instantiating
 ms.assetid: 1c03cb0d-1459-4b5e-af65-97d6b3094fd7
-ms.openlocfilehash: 028e8622c034920e993444458c52536d2e3ec6de
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2c43234ca05c661d8f3d920b1129256a7550a5e2
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50436128"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751824"
 ---
-# <a name="how-to-define-and-consume-classes-and-structs-ccli"></a>Como definir e consumir classes e estruturas (C++/CLI)
+# <a name="how-to-define-and-consume-classes-and-structs-ccli"></a>Como: Definir e consumir Classes e Structs (C++ /CLI CLI)
 
 Este artigo mostra como definir e consumir tipos de referência definidos pelo usuário e tipos de valor no C + + / CLI.
 
@@ -455,7 +455,7 @@ O compilador embutida de uma chamada para um construtor não é possível se a c
 
 Defina um construtor estático como uma função de membro privado, como ele se destina a ser chamado somente pelo CLR.
 
-Para obter mais informações sobre construtores estáticos, consulte [como: definir um construtor estático de Interface (C + + / CLI)](../dotnet/how-to-define-an-interface-static-constructor-cpp-cli.md) .
+Para obter mais informações sobre construtores estáticos, consulte [como: Definir um construtor estático de Interface (C + + / CLI)](../dotnet/how-to-define-an-interface-static-constructor-cpp-cli.md) .
 
 ```cpp
 // compile with: /clr

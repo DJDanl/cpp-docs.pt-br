@@ -15,16 +15,16 @@ helpviewer_keywords:
 - code pages [C++], locales
 - conventions [C++], international character support
 ms.assetid: bd937361-b6d3-4c98-af95-beb7c903187b
-ms.openlocfilehash: 0015e0a7a81abbd3472a8c845a9b8c0d8caf4618
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c0cfc7f192b65738984feb1933ea720fdf18fc6d
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50610530"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750709"
 ---
 # <a name="locales-and-code-pages"></a>Localidades e páginas de código
 
-Uma identificação de localidade reflete as convenções locais e o idioma para uma determinada região geográfica. Um determinado idioma pode ser falado em mais de um país/região; Por exemplo, português é falado no Brasil, bem como em Portugal. Por outro lado, um país/região pode ter mais de uma linguagem oficial. Por exemplo, no Canadá tem dois idiomas: inglês e francês. Portanto, o Canadá possui duas localidades distintas: canadense inglês e francês (Canadá). Algumas categorias de localidade dependentes incluem a formatação de datas e o formato de exibição de valores monetários.
+Uma identificação de localidade reflete as convenções locais e o idioma para uma determinada região geográfica. Um determinado idioma pode ser falado em mais de um país/região; Por exemplo, português é falado no Brasil, bem como em Portugal. Por outro lado, um país/região pode ter mais de uma linguagem oficial. Por exemplo, no Canadá tem dois idiomas: Inglês e francês. Portanto, o Canadá possui duas localidades distintas: Canadá-inglês e francês (Canadá). Algumas categorias de localidade dependentes incluem a formatação de datas e o formato de exibição de valores monetários.
 
 O idioma determina o texto e formatação convenções, enquanto o país/região determina as convenções locais de dados. Cada linguagem tem um mapeamento exclusivo, representado por páginas de código, que inclui caracteres que não seja o alfabeto (por exemplo, sinais de pontuação e números). Uma página de código é um conjunto de caracteres e está relacionada à linguagem. Como tal, um [localidade](../c-runtime-library/locale.md) é uma combinação exclusiva de idioma, país/região e página de código. A configuração de localidade e o código da página pode ser alterada em tempo de execução chamando o [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) função.
 

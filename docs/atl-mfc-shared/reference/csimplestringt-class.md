@@ -36,12 +36,12 @@ helpviewer_keywords:
 - strings [C++], ATL class
 - CSimpleStringT class
 ms.assetid: 15814fcb-5b8f-4425-a97e-3b61fc9b48d8
-ms.openlocfilehash: 93cb3ae0b2f358f64f0d6de26899d1b08f275b7b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1ec28ed5b2f5428cabcf7570c7ac53904e9a64f0
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579277"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748223"
 ---
 # <a name="csimplestringt-class"></a>Classe de CSimpleStringT
 
@@ -79,7 +79,7 @@ O tipo de caractere da classe string. Pode ser uma das seguintes opções:
 |Nome|Descrição|
 |----------|-----------------|
 |[CSimpleStringT::CSimpleStringT](#ctor)|Constrói `CSimpleStringT` objetos de várias maneiras.|
-|[CSimpleStringT:: ~ CSimpleStringT](#dtor)|Destruidor.|
+|[CSimpleStringT::~CSimpleStringT](#dtor)|Destruidor.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
@@ -116,7 +116,7 @@ O tipo de caractere da classe string. Pode ser uma das seguintes opções:
 |----------|-----------------|
 |[CSimpleStringT::operator PCXSTR](#operator_pcxstr)|Acessa diretamente caracteres armazenados em uma `CSimpleStringT` objeto como uma cadeia de caracteres de estilo C.|
 |[CSimpleStringT::operator\[\]](#operator_at)|Retorna o caractere na posição especificada, substituição do operador para `GetAt`.|
-|[+ CSimpleStringT::operator =](#operator_add_eq)|Concatena uma nova cadeia de caracteres ao final de uma cadeia de caracteres existente.|
+|[CSimpleStringT::operator +=](#operator_add_eq)|Concatena uma nova cadeia de caracteres ao final de uma cadeia de caracteres existente.|
 |[CSimpleStringT::operator =](#operator_eq)|Atribui um novo valor para um `CSimpleStringT` objeto.|
 
 ### <a name="remarks"></a>Comentários
@@ -141,7 +141,7 @@ void Append(PCXSTR pszSrc);
 
 #### <a name="parameters"></a>Parâmetros
 
-*{1&gt;strsrc*<br/>
+*strSrc*<br/>
 O `CSimpleStringT` objeto a ser acrescentado.
 
 *pszSrc*<br/>
@@ -272,7 +272,7 @@ explicit CSimpleStringT(IAtlStringMgr* pStringMgr) throw();
 
 #### <a name="parameters"></a>Parâmetros
 
-*{1&gt;strsrc*<br/>
+*strSrc*<br/>
 Um existente `CSimpleStringT` o objeto a ser copiado para isso `CSimpleStringT` objeto.
 
 *pchSrc*<br/>
@@ -322,7 +322,7 @@ void Empty() throw();
 
 ### <a name="remarks"></a>Comentários
 
-Para obter mais informações, consulte [cadeias de caracteres: limpeza de exceção de CString](../cstring-exception-cleanup.md).
+Para obter mais informações, consulte [cadeias de caracteres: Limpeza de exceção de CString](../cstring-exception-cleanup.md).
 
 ### <a name="example"></a>Exemplo
 
@@ -740,7 +740,7 @@ O subscrito sobrecarregado (**[]**) operador retorna um único caractere especif
 > [!NOTE]
 >  Você pode usar o subscrito (**[]**) operador para obter o valor de um caractere em uma `CSimpleStringT`, mas você não pode usá-lo para alterar o valor de um caractere em um `CSimpleStringT`.
 
-##  <a name="operator_add_eq"></a>  + CSimpleStringT::operator =
+##  <a name="operator_add_eq"></a>  CSimpleStringT::operator +=
 
 Une uma nova cadeia de caracteres ou um caractere ao final de uma cadeia de caracteres existente.
 
@@ -761,7 +761,7 @@ CSimpleStringT& operator +=(wchar_t ch);
 *pszSrc*<br/>
 Um ponteiro para uma cadeia de caracteres terminada em nulo.
 
-*{1&gt;strsrc*<br/>
+*strSrc*<br/>
 Um ponteiro para um existente `CSimpleStringT` objeto.
 
 *ch*<br/>
@@ -796,7 +796,7 @@ CSimpleStringT& operator =(const CSimpleStringT& strSrc);
 *pszSrc*<br/>
 Um ponteiro para uma cadeia de caracteres terminada em nulo.
 
-*{1&gt;strsrc*<br/>
+*strSrc*<br/>
 Um ponteiro para um existente `CSimpleStringT` objeto.
 
 ### <a name="remarks"></a>Comentários
@@ -1175,7 +1175,7 @@ Chame esse método para redefinir a contagem de referência da cadeia de caracte
 
 O `CSimpleStringT` destrutor automaticamente chama `UnlockBuffer` para garantir que o buffer não é bloqueado quando o destruidor é chamado. Para obter um exemplo desse método, consulte [LockBuffer](#lockbuffer).
 
-##  <a name="dtor"></a>  CSimpleStringT:: ~ CSimpleStringT
+##  <a name="dtor"></a>  CSimpleStringT::~CSimpleStringT
 
 Destrói um objeto `CSimpleStringT`.
 

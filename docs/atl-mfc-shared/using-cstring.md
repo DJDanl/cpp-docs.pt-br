@@ -6,12 +6,12 @@ helpviewer_keywords:
 - CString objects, reference counting
 - CString class (Visual C++)
 ms.assetid: ed018aaf-8b10-46f9-828c-f9c092dc7609
-ms.openlocfilehash: d6ebc63fdcfa8294bf81aee0ce4df0c2f83af6f2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a84ae21b60d87971cb2f7b758dd369b4078607e6
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50430284"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740295"
 ---
 # <a name="using-cstring"></a>Usando CString
 
@@ -82,4 +82,3 @@ Fornece informações de referência sobre a classe `CSimpleStringT`.
 Contem links para tópicos que descrevem várias maneiras de gerenciar dados da cadeia de caracteres.
 
 [Cadeias de caracteres (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)
-

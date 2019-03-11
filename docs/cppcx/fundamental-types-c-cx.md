@@ -2,12 +2,12 @@
 title: Tipos fundamentais (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: c9f82907-25f2-440b-91d6-afb8dbd46ea6
-ms.openlocfilehash: a6c068d58f0d7c173bff34726873b7a0f4f1d74c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2bd5be01b868fd3086c2064edfd4ca343db425be
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50529123"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57752357"
 ---
 # <a name="fundamental-types-ccx"></a>Tipos fundamentais (C++/CX)
 
@@ -34,8 +34,8 @@ A tabela a seguir lista os tipos numéricos internos. Os tipos numéricos são d
 |uint16|Um inteiro de 16 bits sem sinal.|unsigned short|0 a 65 e 535|
 |int32|Um inteiro com sinal de 32 bits.|int|-2.147.483.648 a 2.147.483.647|
 |uint32|Um inteiro sem sinal de 32 bits.|unsigned int|0 a 4, 294, 967 e 295|
-|int64|Um inteiro com sinal de 64 bits.|long long - ou - __int64|-9,223,372,036,854, 775,808 por meio de 9.223.372.036.854.775.807|
-|uint64|Um inteiro sem sinal de 64 bits.|unsigned __int64 long long - ou - sem sinal|0 a 18, 446, 744, 073, 709, 551 e 615|
+|int64|Um inteiro com sinal de 64 bits.|long long  -or- __int64|-9,223,372,036,854, 775,808 por meio de 9.223.372.036.854.775.807|
+|uint64|Um inteiro sem sinal de 64 bits.|unsigned long long  -or- unsigned __int64|0 a 18, 446, 744, 073, 709, 551 e 615|
 |float32|Um número de ponto flutuante IEEE 754 de 32 bits.|float|3.4E +/- 38 (7 dígitos)|
 |float64|Um número de ponto flutuante IEEE 754 de 64 bits.|double|1.7E +/- 308 (15 dígitos)|
 

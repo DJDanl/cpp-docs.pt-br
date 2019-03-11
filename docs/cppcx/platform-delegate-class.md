@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Delegate Class
 ms.assetid: 82b21271-768f-4193-9ca2-be68ddfd546e
-ms.openlocfilehash: 1b4a4955bbff53e6e0c5606f2900e22cc69146cc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6a509827b3b8e14b6d28995b5b4ca468ee9a662e
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50446222"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57741177"
 ---
 # <a name="platformdelegate-class"></a>Classe Platform::Delegate
 
@@ -34,11 +34,11 @@ Use a palavra-chave [delegate](../windows/delegate-cpp-component-extensions.md) 
 
 ### <a name="requirements"></a>Requisitos
 
-**Mínimo de cliente com suporte:** Windows 8
+**Cliente com suporte mínimo:** Windows 8
 
-**Mínimo de servidor com suporte:** Windows Server 2012
+**Servidor com suporte mínimo:** Windows Server 2012
 
-**Namespace:** Platform
+**Namespace:** Plataforma
 
 **Metadados:** platform.winmd
 

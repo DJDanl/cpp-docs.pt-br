@@ -1,5 +1,5 @@
 ---
-title: Como acessar caracteres em um System::String
+title: 'Como: Caracteres de acesso em um System:: String'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - examples [C++], strings
 - strings [C++], accessing characters
 ms.assetid: cfc89756-aef3-4988-907e-fb236dcb7087
-ms.openlocfilehash: 6ecd3ed09e31e99898143e30ffe70c1c14aea9f0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 68444b337710515ccf8ecb98157d144493978ecd
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50667033"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57738456"
 ---
-# <a name="how-to-access-characters-in-a-systemstring"></a>Como acessar caracteres em um System::String
+# <a name="how-to-access-characters-in-a-systemstring"></a>Como: Caracteres de acesso em um System:: String
 
 Você pode acessar os caracteres de um <xref:System.String> funções de objeto para chamadas de alto desempenho para não gerenciado que usam `wchar_t*` cadeias de caracteres. O método produz um ponteiro interior para o primeiro caractere do <xref:System.String> objeto. Esse ponteiro pode ser manipulado diretamente ou fixado e passado para uma função esperando um comum `wchar_t` cadeia de caracteres.
 

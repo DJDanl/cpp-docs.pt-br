@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::IntPtr Struct
 ms.assetid: 6c0326e8-edfd-4e53-a963-240b845dcde8
-ms.openlocfilehash: eda65255aa76d6a801bdc0f80c437a9dc975d8f1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8101fa2c82a0ac3e3b573384d14d9a7eff6ecf61
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50449134"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747106"
 ---
 # <a name="platformintptr-value-class"></a>Platform::classe de valor IntPtr
 
@@ -38,11 +38,11 @@ IntPtr tem os seguintes membros:
 
 ### <a name="requirements"></a>Requisitos
 
-**Mínimo de cliente com suporte:** Windows 8
+**Cliente com suporte mínimo:** Windows 8
 
-**Mínimo de servidor com suporte:** Windows Server 2012
+**Servidor com suporte mínimo:** Windows Server 2012
 
-**Namespace:** Platform
+**Namespace:** Plataforma
 
 **Metadados:** platform.winmd
 
@@ -73,10 +73,10 @@ static IntPtr::operator IntPtr( void* value1);   static IntPtr::operator IntPtr(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Valor1*<br/>
+*value1*<br/>
 Um ponteiro para um identificador ou IntPtr.
 
-*Value2*<br/>
+*value2*<br/>
 Um número inteiro de 32 bits que pode ser convertido em um IntPtr.
 
 *value3*<br/>

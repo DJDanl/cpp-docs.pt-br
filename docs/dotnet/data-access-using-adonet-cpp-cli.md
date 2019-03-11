@@ -22,12 +22,12 @@ helpviewer_keywords:
 - SAFEARRAY, marshaling
 - ADO.NET [C++], marshaling SAFEARRAY types
 ms.assetid: b0cd987d-1ea7-4f76-ba01-cbd52503d06d
-ms.openlocfilehash: 896cad4d3a679cd1832b073f4b1f355a70a608d5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b258e574b912b1c32e5ffae7ba29cfc5f9903685
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50638471"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57749341"
 ---
 # <a name="data-access-using-adonet-ccli"></a>Acesso a dados usando ADO.NET (C++/CLI)
 
@@ -43,7 +43,7 @@ Demonstra como adicionar uma cadeia de caracteres nativa (`char *`) para um banc
 
 Neste exemplo, a classe DatabaseClass é criada para interagir com o ADO.NET <xref:System.Data.DataTable> objeto. Observe que essa classe é um C++ nativo `class` (em comparação com um `ref class` ou `value class`). Isso é necessário porque queremos usar essa classe de código nativo, e você não pode usar tipos gerenciados em código nativo. Essa classe será compilada para direcionar o CLR, conforme indicado pela `#pragma managed` diretiva anterior a declaração de classe. Para obter mais informações sobre essa diretiva, consulte [gerenciado, não gerenciado](../preprocessor/managed-unmanaged.md).
 
-Observe o membro particular da classe DatabaseClass: `gcroot<DataTable ^> table`. Como tipos nativos não podem conter tipos gerenciados, o `gcroot` palavra-chave é necessária. Para obter mais informações sobre `gcroot`, consulte [como: declarar identificadores em tipos nativos](../dotnet/how-to-declare-handles-in-native-types.md).
+Observe o membro particular da classe DatabaseClass: `gcroot<DataTable ^> table`. Como tipos nativos não podem conter tipos gerenciados, o `gcroot` palavra-chave é necessária. Para obter mais informações sobre `gcroot`, consulte [como: Declarar identificadores em tipos nativos](../dotnet/how-to-declare-handles-in-native-types.md).
 
 O restante do código neste exemplo é o código C++ nativo, conforme indicado pela `#pragma unmanaged` diretiva anterior `main`. Neste exemplo, estamos criando uma nova instância da DatabaseClass e chamando seus métodos para criar uma tabela e preencher algumas linhas na tabela. Observe que as cadeias de caracteres C++ nativas estão sendo passadas como valores para a coluna de banco de dados StringCol. Dentro de DatabaseClass, essas cadeias de caracteres são empacotadas para cadeias de caracteres gerenciadas usando a funcionalidade de marshaling encontrada no <xref:System.Runtime.InteropServices?displayProperty=fullName> namespace. Especificamente, o método <xref:System.Runtime.InteropServices.Marshal.PtrToStringAnsi%2A> é usado para realizar marshaling de uma `char *` para um <xref:System.String>e o método <xref:System.Runtime.InteropServices.Marshal.StringToHGlobalAnsi%2A> é usado para empacotar uma <xref:System.String> para um `char *`.
 
@@ -169,7 +169,7 @@ Demonstra como adicionar uma cadeia de caracteres COM (`BSTR`) para um banco de 
 
 Neste exemplo, a classe DatabaseClass é criada para interagir com o ADO.NET <xref:System.Data.DataTable> objeto. Observe que essa classe é um C++ nativo `class` (em comparação com um `ref class` ou `value class`). Isso é necessário porque queremos usar essa classe de código nativo, e você não pode usar tipos gerenciados em código nativo. Essa classe será compilada para direcionar o CLR, conforme indicado pela `#pragma managed` diretiva anterior a declaração de classe. Para obter mais informações sobre essa diretiva, consulte [gerenciado, não gerenciado](../preprocessor/managed-unmanaged.md).
 
-Observe o membro particular da classe DatabaseClass: `gcroot<DataTable ^> table`. Como tipos nativos não podem conter tipos gerenciados, o `gcroot` palavra-chave é necessária. Para obter mais informações sobre `gcroot`, consulte [como: declarar identificadores em tipos nativos](../dotnet/how-to-declare-handles-in-native-types.md).
+Observe o membro particular da classe DatabaseClass: `gcroot<DataTable ^> table`. Como tipos nativos não podem conter tipos gerenciados, o `gcroot` palavra-chave é necessária. Para obter mais informações sobre `gcroot`, consulte [como: Declarar identificadores em tipos nativos](../dotnet/how-to-declare-handles-in-native-types.md).
 
 O restante do código neste exemplo é o código C++ nativo, conforme indicado pela `#pragma unmanaged` diretiva anterior `main`. Neste exemplo, estamos criando uma nova instância da DatabaseClass e chamando seus métodos para criar uma tabela e preencher algumas linhas na tabela. Observe que as cadeias de caracteres COM estão sendo passadas como valores para a coluna de banco de dados StringCol. Dentro de DatabaseClass, essas cadeias de caracteres são empacotadas para cadeias de caracteres gerenciadas usando a funcionalidade de marshaling encontrada no <xref:System.Runtime.InteropServices?displayProperty=fullName> namespace. Especificamente, o método <xref:System.Runtime.InteropServices.Marshal.PtrToStringBSTR%2A> é usado para realizar marshaling de uma `BSTR` para um <xref:System.String>e o método <xref:System.Runtime.InteropServices.Marshal.StringToBSTR%2A> é usado para empacotar uma <xref:System.String> para um `BSTR`.
 
@@ -303,7 +303,7 @@ Demonstra como adicionar uma cadeia de caracteres Unicode nativa (`wchar_t *`) p
 
 Neste exemplo, a classe DatabaseClass é criada para interagir com o ADO.NET <xref:System.Data.DataTable> objeto. Observe que essa classe é um C++ nativo `class` (em comparação com um `ref class` ou `value class`). Isso é necessário porque queremos usar essa classe de código nativo, e você não pode usar tipos gerenciados em código nativo. Essa classe será compilada para direcionar o CLR, conforme indicado pela `#pragma managed` diretiva anterior a declaração de classe. Para obter mais informações sobre essa diretiva, consulte [gerenciado, não gerenciado](../preprocessor/managed-unmanaged.md).
 
-Observe o membro particular da classe DatabaseClass: `gcroot<DataTable ^> table`. Como tipos nativos não podem conter tipos gerenciados, o `gcroot` palavra-chave é necessária. Para obter mais informações sobre `gcroot`, consulte [como: declarar identificadores em tipos nativos](../dotnet/how-to-declare-handles-in-native-types.md).
+Observe o membro particular da classe DatabaseClass: `gcroot<DataTable ^> table`. Como tipos nativos não podem conter tipos gerenciados, o `gcroot` palavra-chave é necessária. Para obter mais informações sobre `gcroot`, consulte [como: Declarar identificadores em tipos nativos](../dotnet/how-to-declare-handles-in-native-types.md).
 
 O restante do código neste exemplo é o código C++ nativo, conforme indicado pela `#pragma unmanaged` diretiva anterior `main`. Neste exemplo, estamos criando uma nova instância da DatabaseClass e chamando seus métodos para criar uma tabela e preencher algumas linhas na tabela. Observe que as cadeias de caracteres Unicode C++ estão sendo passadas como valores para a coluna de banco de dados StringCol. Dentro de DatabaseClass, essas cadeias de caracteres são empacotadas para cadeias de caracteres gerenciadas usando a funcionalidade de marshaling encontrada no <xref:System.Runtime.InteropServices?displayProperty=fullName> namespace. Especificamente, o método <xref:System.Runtime.InteropServices.Marshal.PtrToStringUni%2A> é usado para realizar marshaling de uma `wchar_t *` para um <xref:System.String>e o método <xref:System.Runtime.InteropServices.Marshal.StringToHGlobalUni%2A> é usado para empacotar uma <xref:System.String> para um `wchar_t *`.
 
@@ -429,7 +429,7 @@ Demonstra como adicionar um nativo `VARIANT` para um banco de dados e como reali
 
 Neste exemplo, a classe DatabaseClass é criada para interagir com o ADO.NET <xref:System.Data.DataTable> objeto. Observe que essa classe é um C++ nativo `class` (em comparação com um `ref class` ou `value class`). Isso é necessário porque queremos usar essa classe de código nativo, e você não pode usar tipos gerenciados em código nativo. Essa classe será compilada para direcionar o CLR, conforme indicado pela `#pragma managed` diretiva anterior a declaração de classe. Para obter mais informações sobre essa diretiva, consulte [gerenciado, não gerenciado](../preprocessor/managed-unmanaged.md).
 
-Observe o membro particular da classe DatabaseClass: `gcroot<DataTable ^> table`. Como tipos nativos não podem conter tipos gerenciados, o `gcroot` palavra-chave é necessária. Para obter mais informações sobre `gcroot`, consulte [como: declarar identificadores em tipos nativos](../dotnet/how-to-declare-handles-in-native-types.md).
+Observe o membro particular da classe DatabaseClass: `gcroot<DataTable ^> table`. Como tipos nativos não podem conter tipos gerenciados, o `gcroot` palavra-chave é necessária. Para obter mais informações sobre `gcroot`, consulte [como: Declarar identificadores em tipos nativos](../dotnet/how-to-declare-handles-in-native-types.md).
 
 O restante do código neste exemplo é o código C++ nativo, conforme indicado pela `#pragma unmanaged` diretiva anterior `main`. Neste exemplo, estamos criando uma nova instância da DatabaseClass e chamando seus métodos para criar uma tabela e preencher algumas linhas na tabela. Observe que nativo `VARIANT` tipos estão sendo passados como valores para a coluna de banco de dados ObjectCol. Dentro de DatabaseClass, eles `VARIANT` tipos são empacotados para objetos gerenciados, usando a funcionalidade de marshaling encontrada no <xref:System.Runtime.InteropServices?displayProperty=fullName> namespace. Especificamente, o método <xref:System.Runtime.InteropServices.Marshal.GetObjectForNativeVariant%2A> é usado para realizar marshaling de uma `VARIANT` para um <xref:System.Object>e o método <xref:System.Runtime.InteropServices.Marshal.GetNativeVariantForObject%2A> é usado para empacotar uma <xref:System.Object> para um `VARIANT`.
 
@@ -570,7 +570,7 @@ Demonstra como adicionar um nativo `SAFEARRAY` para um banco de dados e como rea
 
 Neste exemplo, a classe DatabaseClass é criada para interagir com o ADO.NET <xref:System.Data.DataTable> objeto. Observe que essa classe é um C++ nativo `class` (em comparação com um `ref class` ou `value class`). Isso é necessário porque queremos usar essa classe de código nativo, e você não pode usar tipos gerenciados em código nativo. Essa classe será compilada para direcionar o CLR, conforme indicado pela `#pragma managed` diretiva anterior a declaração de classe. Para obter mais informações sobre essa diretiva, consulte [gerenciado, não gerenciado](../preprocessor/managed-unmanaged.md).
 
-Observe o membro particular da classe DatabaseClass: `gcroot<DataTable ^> table`. Como tipos nativos não podem conter tipos gerenciados, o `gcroot` palavra-chave é necessária. Para obter mais informações sobre `gcroot`, consulte [como: declarar identificadores em tipos nativos](../dotnet/how-to-declare-handles-in-native-types.md).
+Observe o membro particular da classe DatabaseClass: `gcroot<DataTable ^> table`. Como tipos nativos não podem conter tipos gerenciados, o `gcroot` palavra-chave é necessária. Para obter mais informações sobre `gcroot`, consulte [como: Declarar identificadores em tipos nativos](../dotnet/how-to-declare-handles-in-native-types.md).
 
 O restante do código neste exemplo é o código C++ nativo, conforme indicado pela `#pragma unmanaged` diretiva anterior `main`. Neste exemplo, estamos criando uma nova instância da DatabaseClass e chamando seus métodos para criar uma tabela e preencher algumas linhas na tabela. Observe que nativo `SAFEARRAY` tipos estão sendo passados como valores para a coluna de banco de dados ArrayIntsCol. Dentro de DatabaseClass, eles `SAFEARRAY` tipos são empacotados para objetos gerenciados, usando a funcionalidade de marshaling encontrada no <xref:System.Runtime.InteropServices?displayProperty=fullName> namespace. Especificamente, o método <xref:System.Runtime.InteropServices.Marshal.Copy%2A> é usado para realizar marshaling de uma `SAFEARRAY` para uma matriz gerenciada de inteiros e o método <xref:System.Runtime.InteropServices.Marshal.Copy%2A> é usado para realizar marshaling de uma matriz gerenciada de inteiros em uma `SAFEARRAY`.
 

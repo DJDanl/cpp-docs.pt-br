@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - for each keyword [C++]
 ms.assetid: 0c3a364b-2747-43f3-bb8d-b7d3b7023f79
-ms.openlocfilehash: 61ddf4f8dd4042f7be0b892b4fe239caa932a85e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c5ee72e557c62e3db2eeb5dac4811133719183f6
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532723"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746288"
 ---
 # <a name="for-each-in"></a>for each, in
 
@@ -26,7 +26,7 @@ Itera por meio de uma matriz ou coleção. Essa palavra-chave não padrão está
 ### <a name="syntax"></a>Sintaxe
 
 > **para cada (** *tipo* *identificador* **na** *expressão* **) {**<br/>
-> &nbsp;&nbsp;&nbsp;&nbsp;*Instruções*<br/>
+> &nbsp;&nbsp;&nbsp;&nbsp;*statements*<br/>
 > **}**
 
 ### <a name="parameters"></a>Parâmetros
@@ -40,7 +40,7 @@ A variável de iteração que representa o elemento da coleção.  Quando `ident
 *Expressão*<br/>
 Uma expressão ou coleção de matriz. O elemento de coleção deve permitir que o compilador converta-o no tipo `identifier`.
 
-*Instruções*<br/>
+*statements*<br/>
 Uma ou mais instruções a serem executadas.
 
 ### <a name="remarks"></a>Comentários
@@ -55,11 +55,11 @@ Para saber mais:
 
 - [Iterando na coleção da biblioteca padrão C++ usando for each](../dotnet/iterating-over-stl-collection-by-using-for-each.md)
 
-- [Como iterar em matrizes com for each](../dotnet/how-to-iterate-over-arrays-with-for-each.md)
+- [Como: Iterar em matrizes com for each](../dotnet/how-to-iterate-over-arrays-with-for-each.md)
 
-- [Como iterar em uma coleção genérica com for each](../dotnet/how-to-iterate-over-a-generic-collection-with-for-each.md)
+- [Como: Iterar em uma coleção genérica com for each](../dotnet/how-to-iterate-over-a-generic-collection-with-for-each.md)
 
-- [Como iterar em uma coleção definida pelo usuário com for each](../dotnet/how-to-iterate-over-a-user-defined-collection-with-for-each.md)
+- [Como: Iterar em uma coleção definida pelo usuário com for each](../dotnet/how-to-iterate-over-a-user-defined-collection-with-for-each.md)
 
 ## <a name="windows-runtime"></a>Tempo de Execução do Windows
 

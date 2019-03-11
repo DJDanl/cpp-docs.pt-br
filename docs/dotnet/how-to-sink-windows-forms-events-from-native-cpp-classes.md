@@ -1,5 +1,5 @@
 ---
-title: Como coletar eventos dos Windows Forms a partir de classes C++ nativas
+title: 'Como: Coletor de eventos do Windows Forms de Classes C++ nativas'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - event handling, .NET/native interop
 - event handling, Windows Forms in C++
 ms.assetid: 6e30ddee-d058-4c8d-9956-2a43d86f19d5
-ms.openlocfilehash: 1bc601a4dbd7a51695b6964ab4d0ee47531c1b2b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d02bcea4efce03c8fb11650d344468236737cfbd
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50555896"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57738784"
 ---
-# <a name="how-to-sink-windows-forms-events-from-native-c-classes"></a>Como coletar eventos dos Windows Forms a partir de classes C++ nativas
+# <a name="how-to-sink-windows-forms-events-from-native-c-classes"></a>Como: Coletor de eventos do Windows Forms de Classes C++ nativas
 
 Você pode habilitar as classes nativas do C++ receber retornos de chamada de eventos gerenciados gerados a partir de controles dos Windows Forms ou outras formas com o formato de mapa de macro do MFC. Eventos em exibições e caixas de diálogo de coletor é similar ao fazer a mesma tarefa para controles.
 
@@ -25,7 +25,7 @@ Para fazer isso, você precisa:
 
 - Criar um mapa de delegado usando [BEGIN_DELEGATE_MAP](../mfc/reference/delegate-and-interface-maps.md#begin_delegate_map), [END_DELEGATE_MAP](../mfc/reference/delegate-and-interface-maps.md#end_delegate_map), e [EVENT_DELEGATE_ENTRY](../mfc/reference/delegate-and-interface-maps.md#event_delegate_entry).
 
-Este exemplo continua o trabalho feito na [como: fazer o associação de dados do DDX/DDV com o Windows Forms](../dotnet/how-to-do-ddx-ddv-data-binding-with-windows-forms.md).
+Este exemplo continua o trabalho feito em [como: Fazer a ligação de dados DDX/DDV com o Windows Forms](../dotnet/how-to-do-ddx-ddv-data-binding-with-windows-forms.md).
 
 Agora, você associará o controle MFC (`m_MyControl`) com um delegado de manipulador de eventos gerenciado chamado `OnClick` gerenciado <xref:System.Windows.Forms.Control.Click> eventos.
 

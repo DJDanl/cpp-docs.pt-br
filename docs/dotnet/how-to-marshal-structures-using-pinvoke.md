@@ -1,5 +1,5 @@
 ---
-title: Como realizar marshaling de estruturas usando PInvoke
+title: 'Como: Marshaling de estruturas usando PInvoke'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,20 +8,20 @@ helpviewer_keywords:
 - interop [C++], structures
 - marshaling [C++], structures
 ms.assetid: 35997e6f-9251-4af3-8c6e-0712d64d6a5d
-ms.openlocfilehash: e79eb343f81cf2d66e394be7561d2c9727c4c9ed
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d5c64a3e93cd85d7e38bac7c0ea3fa3c3301abc9
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429104"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747989"
 ---
-# <a name="how-to-marshal-structures-using-pinvoke"></a>Como realizar marshaling de estruturas usando PInvoke
+# <a name="how-to-marshal-structures-using-pinvoke"></a>Como: Marshaling de estruturas usando PInvoke
 
 Este documento explica como nativas funções que aceitam a C-style structs podem ser chamados de funções gerenciadas pelo usando P/Invoke. Embora seja recomendável que você use os recursos de interoperabilidade C++ em vez de P/Invoke como P/Invoke oferece pouco tempo de compilação relatório de erro, não é fortemente tipado e pode ser enfadonho implementar, se a API não gerenciada é empacotada como uma DLL e o código-fonte não é disponível, o P/Invoke é a única opção. Caso contrário, consulte os seguintes documentos:
 
 - [Usando interop do C++ (PInvoke implícito)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
 
-- [Como realizar marshaling de cadeias de caracteres usando PInvoke](../dotnet/how-to-marshal-strings-using-pinvoke.md)
+- [Como: realizar marshaling de cadeias de caracteres usando o PInvoke](../dotnet/how-to-marshal-strings-using-pinvoke.md)
 
 Por padrão, nativas e gerenciadas estruturas são dispostas diferente na memória, isso com êxito a passagem de estruturas além do limite gerenciado/requer etapas adicionais para preservar a integridade dos dados.
 

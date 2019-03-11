@@ -1,5 +1,5 @@
 ---
-title: Como realizar marshaling de ponteiros de função usando PInvoke
+title: 'Como: Marshaling de ponteiros de função usando PInvoke'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,20 +8,20 @@ helpviewer_keywords:
 - platform invoke [C++], callbacks and delegates
 - marshaling [C++], callbacks and delegates
 ms.assetid: dcf396fd-a91d-49c0-ab0b-1ea160668a89
-ms.openlocfilehash: 2f12c86b7e32955622a4a2c598d01057e303a329
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 031bda0f93d6a95aa3c774553aefca0647d0518c
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50435601"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57742871"
 ---
-# <a name="how-to-marshal-function-pointers-using-pinvoke"></a>Como realizar marshaling de ponteiros de função usando PInvoke
+# <a name="how-to-marshal-function-pointers-using-pinvoke"></a>Como: Marshaling de ponteiros de função usando PInvoke
 
 Este tópico explica os delegados como gerenciados pode ser usado no lugar de ponteiros de função a interoperação com não gerenciado usando P/Invoke do .NET Framework recursos de funções. No entanto, os programadores de Visual C++ são incentivados a usar os recursos de interoperabilidade C++ em vez disso (quando possível) como P/Invoke oferece pouco tempo de compilação relatório de erro, não é fortemente tipado e pode ser enfadonho implementar. Se a API não gerenciada é empacotada como uma DLL e o código-fonte não estiver disponível, o P/Invoke é a única opção. Caso contrário, consulte os tópicos a seguir:
 
 - [Usando interop do C++ (PInvoke implícito)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
 
-- [Como realizar marshaling de retornos de chamada e delegados usando interop do C++](../dotnet/how-to-marshal-callbacks-and-delegates-by-using-cpp-interop.md)
+- [Como: realizar marshaling de retornos de chamada e delegados usando a interop do C++](../dotnet/how-to-marshal-callbacks-and-delegates-by-using-cpp-interop.md)
 
 APIs não gerenciadas que usam ponteiros de funções como argumentos podem ser chamados no código gerenciado com um representante gerenciado no lugar do ponteiro de função nativo. O compilador automaticamente realiza marshaling o delegado para funções não gerenciadas como um ponteiro de função e insere o código necessário transição gerenciado /.
 
