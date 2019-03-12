@@ -1,5 +1,5 @@
 ---
-title: Como chamar DLLs nativas a partir do código gerenciado usando PInvoke
+title: 'Como: Chamar DLLs nativas de código gerenciado usando PInvoke'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - marshaling [C++], calling native DLLs
 - data marshaling [C++], calling native DLLs
 ms.assetid: 3273eb4b-38d1-4619-92a6-71bda542be72
-ms.openlocfilehash: 921a3504bd4fcb3f8dfe3d6c1a80c69d00298fb4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e51e094cc013250fc254a09e279745f1f9c108ac
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50444402"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748535"
 ---
-# <a name="how-to-call-native-dlls-from-managed-code-using-pinvoke"></a>Como chamar DLLs nativas a partir do código gerenciado usando PInvoke
+# <a name="how-to-call-native-dlls-from-managed-code-using-pinvoke"></a>Como: Chamar DLLs nativas de código gerenciado usando PInvoke
 
 Funções que são implementadas em DLLs não gerenciadas podem ser chamadas de código gerenciado usando a funcionalidade de invocação de plataforma (P/Invoke). Se o código-fonte para a DLL não estiver disponível, o P/Invoke é a única opção para interoperação. No entanto, ao contrário de outras linguagens .NET, Visual C++ fornece uma alternativa para P/Invoke. Para obter mais informações, consulte [usando Interop do C++ (PInvoke implícito)](../dotnet/using-cpp-interop-implicit-pinvoke.md).
 

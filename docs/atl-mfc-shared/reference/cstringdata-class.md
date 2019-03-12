@@ -19,12 +19,12 @@ helpviewer_keywords:
 - CStringData class
 - shared classes, CStringData
 ms.assetid: 4e31b5ca-3dbe-4fd5-b692-8211fbfb2593
-ms.openlocfilehash: 24d1321c66fb6cebbd2e86da3e85fdb8e1a3d33d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5977d26cade89f2e70453d5184323958e99e54c4
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50589506"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748509"
 ---
 # <a name="cstringdata-class"></a>Classe CStringData
 
@@ -48,7 +48,7 @@ struct CStringData
 |[IsShared](#isshared)|Determina se o buffer do objeto de cadeia de caracteres associado no momento é compartilhado.|
 |[Bloqueio](#lock)|Bloqueia o buffer do objeto de cadeia de caracteres associada.|
 |[Versão](#release)|Libera o objeto de cadeia de caracteres especificada.|
-|[desbloquear](#unlock)|Libera o buffer do objeto de cadeia de caracteres associada.|
+|[Unlock](#unlock)|Libera o buffer do objeto de cadeia de caracteres associada.|
 
 ### <a name="data-members"></a>Membros de Dados
 
@@ -253,4 +253,3 @@ Bloqueando e desbloqueando é usado quando o desenvolvedor deve assegurar que os
 
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
 [Classes compartilhadas ATL/MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)
-
