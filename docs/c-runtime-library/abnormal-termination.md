@@ -17,12 +17,12 @@ f1_keywords:
 helpviewer_keywords:
 - _abnormal_termination
 ms.assetid: 952970a4-9586-4c3d-807a-db729448c91c
-ms.openlocfilehash: 231a5a521d9e234d3e31e6ccdbe98b207a89b3eb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 213938fa830f0a924fa954d4a36a39b544473dd4
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50433534"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57741291"
 ---
 # <a name="abnormaltermination"></a>_abnormal_termination
 
@@ -35,7 +35,7 @@ int   _abnormal_termination(
    );
 ```
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor de retorno
 
 **true** se o sistema estiver *desenrolando* a pilha; caso contrário, **false**.
 

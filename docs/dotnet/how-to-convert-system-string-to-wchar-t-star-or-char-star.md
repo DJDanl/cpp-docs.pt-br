@@ -1,5 +1,5 @@
 ---
-title: Como converter System::String em wchar_t* ou char*
+title: 'Como: Converter System:: String em wchar_t * ou char *'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - wchart type, converting System::String
 - char data type, converting System::String to
 ms.assetid: 385da01b-5649-4543-8076-e3e251243ff0
-ms.openlocfilehash: 26e9f5511c0205a3c484b85381fddde802f5469a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c9bf8a6af2d48c4b2624b91e2e85f78c63aee6de
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50550495"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57738812"
 ---
-# <a name="how-to-convert-systemstring-to-wchart-or-char"></a>Como converter System::String em wchar_t* ou char*
+# <a name="how-to-convert-systemstring-to-wchart-or-char"></a>Como: Converter System:: String em wchar_t * ou char *
 
 Você pode usar `PtrToStringChars` em vcclr para converter <xref:System.String> nativo `wchar_t *` ou `char *`.  Sempre retorna um ponteiro de cadeia de caracteres Unicode largo porque as cadeias de caracteres CLR são Unicode internamente. Você pode converter de largo, em seguida, conforme mostrado no exemplo a seguir.
 

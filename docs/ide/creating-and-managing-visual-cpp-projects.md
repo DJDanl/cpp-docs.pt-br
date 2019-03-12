@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Visual C++ projects
 - ATL projects
 ms.assetid: 11003cd8-9046-4630-a189-a32bf3b88047
-ms.openlocfilehash: 2c3722fe9da764a578c255e50120fa2770555665
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e511ef597e64a3782ce7a3ce650db065e9299cdd
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50553173"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57744331"
 ---
 # <a name="creating-and-managing-msbuild-based-visual-c-projects"></a>Criando e gerenciando projetos do Visual C++ baseados no MSBuild
 
@@ -53,7 +53,7 @@ Descreve como usar as Páginas de Propriedades e as Folhas de Propriedades para 
 [Adicionando funcionalidade com assistentes de código](../ide/adding-functionality-with-code-wizards-cpp.md)<br>
 Descreve como adicionar classes, métodos, variáveis e outros elementos ao seu projeto para adicionar funcionalidade.
 
-[Como organizar arquivos de saída do projeto para compilações](../ide/how-to-organize-project-output-files-for-builds.md)<br>
+[Como: Organizar arquivos de saída do projeto para compilações](../ide/how-to-organize-project-output-files-for-builds.md)<br>
 Descreve como organizar arquivos de saída do projeto.
 
 ## <a name="related-sections"></a>Seções relacionadas

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - platform invoke [C++], marshaling in C++
 - data marshaling [C++], platform invoke
 ms.assetid: 18e5218c-6916-48a1-a127-f66e22ef15fc
-ms.openlocfilehash: 8ac9dac3ea90062b632358ade2cd99e9c67e446f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ee9d77920f04f7eba5112c66a906b02b7fc4a658
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588702"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740532"
 ---
 # <a name="using-explicit-pinvoke-in-c-dllimport-attribute"></a>Usando PInvoke explícito em C++ (atributo DllImport)
 
@@ -27,17 +27,17 @@ O resultado é um ponto de entrada gerenciado para cada função DLL nativa que 
 
 - [Chamando funções nativas de código gerenciado](../dotnet/calling-native-functions-from-managed-code.md)
 
-- [Como chamar DLLs nativas de código gerenciado usando PInvoke](../dotnet/how-to-call-native-dlls-from-managed-code-using-pinvoke.md)
+- [Como: chamar DLLs nativas de código gerenciado usando o PInvoke](../dotnet/how-to-call-native-dlls-from-managed-code-using-pinvoke.md)
 
-- [Como realizar marshaling de cadeias de caracteres usando PInvoke](../dotnet/how-to-marshal-strings-using-pinvoke.md)
+- [Como: realizar marshaling de cadeias de caracteres usando o PInvoke](../dotnet/how-to-marshal-strings-using-pinvoke.md)
 
-- [Como realizar marshaling de estruturas usando PInvoke](../dotnet/how-to-marshal-structures-using-pinvoke.md)
+- [Como: realizar marshaling de estruturas usando o PInvoke](../dotnet/how-to-marshal-structures-using-pinvoke.md)
 
-- [Como realizar marshaling de matrizes usando PInvoke](../dotnet/how-to-marshal-arrays-using-pinvoke.md)
+- [Como: realizar marshaling de matrizes usando o PInvoke](../dotnet/how-to-marshal-arrays-using-pinvoke.md)
 
-- [Como realizar marshaling de ponteiros de função usando PInvoke](../dotnet/how-to-marshal-function-pointers-using-pinvoke.md)
+- [Como: realizar marshaling de ponteiros de função usando o PInvoke](../dotnet/how-to-marshal-function-pointers-using-pinvoke.md)
 
-- [Como realizar marshaling de ponteiros inseridos usando PInvoke](../dotnet/how-to-marshal-embedded-pointers-using-pinvoke.md)
+- [Como: realizar marshaling de ponteiros inseridos usando o PInvoke](../dotnet/how-to-marshal-embedded-pointers-using-pinvoke.md)
 
 ## <a name="see-also"></a>Consulte também
 

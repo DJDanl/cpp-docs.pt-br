@@ -17,12 +17,12 @@ helpviewer_keywords:
 - exceptions, diagnosing odd behavior
 - compatibility, between assemblies
 ms.assetid: 679b8ed3-d966-4a0c-b627-2a3f3ec96b74
-ms.openlocfilehash: fe3b5e3a887e4a440c3570750c569ec6c71ea611
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c61f3fdd434a1b746c024b1a98d1d71f04df7e5b
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50595949"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746911"
 ---
 # <a name="managed-types-ccli"></a>Tipos gerenciados (C++/CLI)
 
@@ -58,7 +58,7 @@ A tabela a seguir mostra as palavras-chave para tipos internos do Visual C++, qu
 |**unsigned __int64**|**System.UInt64**|
 |**curto** e **1&gt;signed**|**System.Int16**|
 |**unsigned short**|**System.UInt16**|
-|**void**|**System. void**|
+|**void**|**System.Void**|
 
 ## <a name="version_issues"></a> Problemas de versão para tipos de valor aninhados em tipos nativos
 
@@ -125,7 +125,7 @@ S.i = 11
 
 No entanto, se você adicionar outro membro para `struct S` em nested_value_types.cpp, (por exemplo, `double d;`) e recompilar o componente sem recompilar o cliente, o resultado é uma exceção sem tratamento (do tipo <xref:System.IO.FileLoadException?displayProperty=fullName>).
 
-## <a name="test_equality"></a> Como: teste de igualdade
+## <a name="test_equality"></a> Como: Testar a igualdade
 
 No exemplo a seguir, um teste de igualdade que usa extensões gerenciadas para C++ com base no que se refere os identificadores.
 
@@ -150,7 +150,7 @@ IL_0012:  call       bool [mscorlib]System.String::op_Equality(string,
                                                                string)
 ```
 
-## <a name="diagnose_fix"></a> Como: diagnosticar e corrigir problemas de compatibilidade do Assembly
+## <a name="diagnose_fix"></a> Como: Diagnosticar e corrigir problemas de compatibilidade do Assembly
 
 Este tópico explica o que pode acontecer quando a versão de um assembly referenciado em tempo de compilação não corresponde à versão do assembly referenciado em tempo de execução e como evitar o problema.
 

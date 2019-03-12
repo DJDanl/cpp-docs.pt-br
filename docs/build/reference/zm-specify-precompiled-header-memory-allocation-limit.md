@@ -1,6 +1,6 @@
 ---
 title: /Zm (especificar limite de alocação da memória de cabeçalho pré-compilado)
-ms.date: 11/04/2016
+ms.date: 03/08/2019
 f1_keywords:
 - /zm
 helpviewer_keywords:
@@ -14,12 +14,12 @@ helpviewer_keywords:
 - memory allocation, Memory Allocation Limit compiler option
 - -Zm compiler option [C++]
 ms.assetid: 94c77d5e-6672-46a7-92e0-3f69e277727d
-ms.openlocfilehash: d0f79ed1b38401abbc65898193f2305bd432bb28
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 3c1362479b2068ee8fb527a4ecaac6e203e83cb0
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57419914"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751980"
 ---
 # <a name="zm-specify-precompiled-header-memory-allocation-limit"></a>/Zm (especificar limite de alocação da memória de cabeçalho pré-compilado)
 
@@ -40,9 +40,11 @@ O *fator* argumento é uma porcentagem do tamanho padrão de um buffer de trabal
 
 ## <a name="remarks"></a>Comentários
 
-Em versões anteriores do Visual C++, o compilador usou vários heaps discretos, e cada um tinha um limite finito. Atualmente, o compilador aumenta dinamicamente os heaps conforme necessário até o limite de tamanho total do heap e requer um buffer de tamanho fixo somente para construir cabeçalhos pré-compilados. Consequentemente, o **/Zm** opção de compilador raramente é necessária.
+Nas versões anteriores do Visual Studio 2015, o compilador de C++ usado vários heaps discretos, e cada uma tinha um limite finito. Atualmente, o compilador dinamicamente aumenta os heaps conforme necessário até o limite de tamanho de heap total e permite que o cabeçalho pré-compilado farão parte de vários intervalos de endereços. Consequentemente, o **/Zm** opção de compilador raramente é necessária.
 
-Se o compilador é executado fora do espaço de heap e emite o [C1060](../../error-messages/compiler-errors-1/fatal-error-c1060.md) mensagem de erro quando você usa o **/Zm** opção de compilador, você pode ter muita memória reservada. Considere remover a **/Zm** opção. Se o compilador emite o [C1076](../../error-messages/compiler-errors-1/fatal-error-c1076.md) mensagem de erro, uma que acompanha [C3859](../../error-messages/compiler-errors-2/compiler-error-c3859.md) mensagem especifica o *fator* argumento a ser usado ao recompilar usando o **/Zm** opção de compilador.
+Se o compilador é executado fora do espaço de heap e emite o [C1060](../../error-messages/compiler-errors-1/fatal-error-c1060.md) mensagem de erro quando você usa o **/Zm** opção de compilador, você pode ter muita memória reservada. Considere remover a **/Zm** opção.
+
+Se o compilador emite o [C1076](../../error-messages/compiler-errors-1/fatal-error-c1076.md) mensagem de erro, uma que acompanha [C3859](../../error-messages/compiler-errors-2/compiler-error-c3859.md) mensagem especifica o *fator* argumento a ser usado ao recompilar usando o **/Zm** opção de compilador. Essa mensagem só é significativa quando usa um cabeçalho pré-compilado `#pragma hdrstop`. Em outros casos, é um erro falso causado por problemas de pressão de memória virtual do Windows e a recomendação para usar o **/Zm** opção deve ser ignorada. Em vez disso, considere a redução do número de processos paralelos ao usar o **/maxcpucount** opção para MSBUILD. EXE em conjunto com o **/MP** opção para CL. EXE. Para obter mais informações, consulte [problemas de cabeçalho pré-compilado (PCH) e recomendações](https://devblogs.microsoft.com/cppblog/precompiled-header-pch-issues-and-recommendations/).
 
 A tabela a seguir mostra como o *fator* argumento afeta o limite de alocação de memória se você pressupor que o tamanho do buffer de cabeçalho pré-compilado padrão é 75 MB.
 
@@ -56,15 +58,15 @@ A tabela a seguir mostra como o *fator* argumento afeta o limite de alocação d
 
 ## <a name="other-ways-to-set-the-memory-allocation-limit"></a>Outras maneiras de definir o limite de alocação de memória
 
-#### <a name="to-set-the-zm-compiler-option-in-the-visual-studio-development-environment"></a>Para definir a opção do compilador /Zm no ambiente de desenvolvimento do Visual Studio
+### <a name="to-set-the-zm-compiler-option-in-the-visual-studio-development-environment"></a>Para definir a opção do compilador /Zm no ambiente de desenvolvimento do Visual Studio
 
 1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, confira [Trabalhando com propriedades do projeto](../../ide/working-with-project-properties.md).
 
-1. No painel de navegação, selecione **propriedades de configuração**, **C/C++**, **linha de comando**.
+1. No painel de navegação, selecione **propriedades de configuração** > **C/C++** > **linha de comando**.
 
 1. Insira o **/Zm** opção de compilador na **opções adicionais** caixa.
 
-#### <a name="to-set-the-zm-compiler-option-programmatically"></a>Para definir a opção do compilador /Zm via programação
+### <a name="to-set-the-zm-compiler-option-programmatically"></a>Para definir a opção do compilador /Zm via programação
 
 - Consulte <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
 

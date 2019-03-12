@@ -4,12 +4,12 @@ ms.date: 11/12/2018
 helpviewer_keywords:
 - compiler options, C++
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
-ms.openlocfilehash: 63b621bf99a1aeada10706badfe19cde417d7233
-ms.sourcegitcommit: e540706f4e2675e7f597cfc5b4f8dde648b007bb
+ms.openlocfilehash: 128b477a2c4252c841990e2a2462029abe5a3bbb
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56676494"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746963"
 ---
 # <a name="compiler-options-listed-by-category"></a>Opções do compilador listadas por categoria
 
@@ -118,9 +118,9 @@ Este artigo contém uma lista categórica de opções do compilador. Para obter 
 |[/vms](vmm-vms-vmv-general-purpose-representation.md)|Declara a herança única.|
 |[/vmv](vmm-vms-vmv-general-purpose-representation.md)|Declara a herança virtual.|
 |[/Z7](z7-zi-zi-debug-information-format.md)|Gera C 7.0-compatible informações de depuração.|
-|[/Za](za-ze-disable-language-extensions.md)|Desabilita extensões de linguagem.|
+|[/Za](za-ze-disable-language-extensions.md)|Desabilita extensões de linguagem C89.|
 |[/Zc](zc-conformance.md)|Especifica o comportamento padrão em [/Ze](za-ze-disable-language-extensions.md).|
-|[/Ze](za-ze-disable-language-extensions.md)|Preterido. Habilita extensões de linguagem.|
+|[/Ze](za-ze-disable-language-extensions.md)|Preterido. Permite que extensões de linguagem C89.|
 |[/Zf](zf.md)|Melhora o tempo de geração em compilações paralelas de PDB.|
 |[/ZI](z7-zi-zi-debug-information-format.md)|Inclui informações de depuração em um banco de dados do programa compatível com Editar e Continuar. (apenas x86)|
 |[/Zi](z7-zi-zi-debug-information-format.md)|Gera informações completas de depuração.|
