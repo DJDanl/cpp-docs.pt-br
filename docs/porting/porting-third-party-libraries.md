@@ -5,12 +5,12 @@ helpviewer_keywords:
 - 3rd-party libraries
 - vspkg
 ms.assetid: b055ed20-8a9e-45b2-ac2a-e3d94271c009
-ms.openlocfilehash: 1abd7f05614317237c911ceb69c243211a373e34
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 51c1634aade159e095b5957a15783e40ec0284d0
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658296"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750956"
 ---
 # <a name="porting-third-party-libraries"></a>Portabilidade de bibliotecas de terceiros
 
@@ -18,7 +18,7 @@ Quando você atualiza um projeto para a versão atual do Visual C++, você tamb�
 
 ## <a name="introducing-vcpkg"></a>Introdução a vcpkg
 
-No passado, localizar e atualizar bibliotecas de terceiros era, às vezes, uma tarefa não trivial. Para facilitar a aquisição e recompilação de bibliotecas C++ de software livre de terceiros, a equipe do Visual C++ criou uma ferramenta de linha de comando chamada **Ferramenta de Empacotamento do VC++** ou **vcpkg**. Vcpkg tem um catálogo de muitas bibliotecas C++ de software livre populares. Você pode instalar qualquer biblioteca no catálogo diretamente da linha de comando do vcpkg. Quando você instala uma biblioteca, o Vcpkg cria uma árvore de diretório em seu computador e adiciona o .h, o .lib e os binários nessa pasta. Você pode usar essa pasta em sua linha de comando de compilação ou integrá-la no Visual Studio 2015 ou posterior usando o comando vcpkg integrate install. Depois de você integrar um local de biblioteca, o Visual Studio pode encontrá-lo e adicioná-lo a qualquer novo projeto que você criar. Para usar uma biblioteca, basta incluí-la com `#include` e o Visual Studio adicionará automaticamente o caminho .lib às configurações do projeto e copiará a dll na pasta da solução. Para obter mais informações, consulte [vcpkg: um gerenciador de pacotes para C++](../vcpkg.md).
+No passado, localizar e atualizar bibliotecas de terceiros era, às vezes, uma tarefa não trivial. Para facilitar a aquisição e recompilação de bibliotecas C++ de software livre de terceiros, a equipe do Visual C++ criou uma ferramenta de linha de comando chamada **Ferramenta de Empacotamento do VC++** ou **vcpkg**. Vcpkg tem um catálogo de muitas bibliotecas C++ de software livre populares. Você pode instalar qualquer biblioteca no catálogo diretamente da linha de comando do vcpkg. Quando você instala uma biblioteca, o Vcpkg cria uma árvore de diretório em seu computador e adiciona o .h, o .lib e os binários nessa pasta. Você pode usar essa pasta em sua linha de comando de compilação ou integrá-la no Visual Studio 2015 ou posterior usando o comando vcpkg integrate install. Depois de você integrar um local de biblioteca, o Visual Studio pode encontrá-lo e adicioná-lo a qualquer novo projeto que você criar. Para usar uma biblioteca, basta incluí-la com `#include` e o Visual Studio adicionará automaticamente o caminho .lib às configurações do projeto e copiará a dll na pasta da solução. Para obter mais informações, consulte [vcpkg: Um gerenciador de pacotes para C++](../vcpkg.md).
 
 ## <a name="reporting-issues"></a>Relatando problemas
 

@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - NMake property page
 ms.assetid: bd20cb52-9f1d-4240-b4fc-4f43205ac94b
-ms.openlocfilehash: 7d890794d706a687b9cf945022aa4c230684131d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 18d32dd85c39586576686942968a3f6e1735337d
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50473535"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57749888"
 ---
 # <a name="nmake-property-page"></a>Página de propriedades NMake
 
@@ -73,4 +73,4 @@ Para obter informações sobre como acessar os membros desse objeto de forma pro
 ## <a name="see-also"></a>Consulte também
 
 [Páginas de propriedade](../ide/property-pages-visual-cpp.md)<br>
-[Como habilitar o IntelliSense para projetos makefile](../ide/how-to-enable-intellisense-for-makefile-projects.md)
+[Como: Habilitar o IntelliSense para projetos Makefile](../ide/how-to-enable-intellisense-for-makefile-projects.md)

@@ -29,12 +29,12 @@ helpviewer_keywords:
 - I/O [CRT], port
 - _inpw function
 ms.assetid: 5d9c2e38-fc85-4294-86d5-7282cc02d1b3
-ms.openlocfilehash: 56587455b1b5246be361afc131786d85dbc9a1a6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0915b7a98b10137b37025eb59161bc98c27ae7b3
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50469844"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748340"
 ---
 # <a name="inp-inpw-inpd"></a>_inp, _inpw, _inpd
 
@@ -65,7 +65,7 @@ unsigned long _inpd(
 *port*<br/>
 Número da porta de E/S.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor de retorno
 
 As funções retornam o byte, a palavra, ou as palavras duplas lidas de `port`. Nenhum erro é retornado.
 

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - parsing, numeric strings
 - string conversion, to numeric values
 ms.assetid: 11cbd9ce-033b-4914-bf66-029070e7e385
-ms.openlocfilehash: d3e53c665378efdd63a373027f4edd6b7fb90ad3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3f24b75c2fdb3aa0d84b16874d2d01f1cb96d4b9
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544563"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743891"
 ---
 # <a name="string-to-numeric-value-functions"></a>Funções de valor da cadeia de caracteres para numérico
 

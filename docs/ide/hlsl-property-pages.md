@@ -4,26 +4,26 @@ ms.date: 11/04/2016
 f1_keywords:
 - VC.Project.FXCompilerTool.AdditionalOptionsPage
 ms.assetid: 0c65f5ec-a2a5-4f5b-8d4c-fa57113a5a1d
-ms.openlocfilehash: 74775e34e3f0591457c2ecff6168767d065b916e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 68189d6d4de75e71b5dfe430b870dd37742e934c
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50666551"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57752331"
 ---
 # <a name="hlsl-property-pages"></a>Páginas de propriedade HLSL
 
 Use as páginas de propriedades do compilador HLSL (fxc.exe) para configurar como os arquivos individuais do sombreador HLSL são criados. As propriedades são divididas em três categorias:
 
-- [Páginas de propriedade HLSL: geral](../ide/hlsl-property-pages-general.md)
+- [Páginas de propriedades de HLSL: geral](../ide/hlsl-property-pages-general.md)
 
    Fornece propriedades para especificar as opções geralmente usadas para o compilador HLSL.
 
-- [Páginas de propriedade HLSL: avançado](../ide/hlsl-property-pages-advanced.md)
+- [Páginas de propriedades de HLSL: avançado](../ide/hlsl-property-pages-advanced.md)
 
    Fornece propriedades para especificar opções adicionais para o compilador HLSL.
 
-- [Páginas de propriedades HLSL: arquivos de saída](../ide/hlsl-property-pages-output-files.md)
+- [Páginas de propriedades de HLSL: arquivos de saída](../ide/hlsl-property-pages-output-files.md)
 
    Fornece propriedades para especificar como os arquivos são produzidos pelo compilador HLSL.
 

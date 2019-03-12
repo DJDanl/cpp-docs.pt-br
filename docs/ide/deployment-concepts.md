@@ -8,12 +8,12 @@ helpviewer_keywords:
 - deploying applications [C++], about deploying applications
 - libraries [C++], application deployment issues
 ms.assetid: ebd7f246-ab54-40e8-87fa-dac02c0047b3
-ms.openlocfilehash: ec2fd28aff6e7021ca978ccd0e3af86a6dbd36c6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0111063b3bd280781bcd2aabd51621e1e9ef3ecd
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462680"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57738639"
 ---
 # <a name="deployment-concepts"></a>Conceitos de implantação
 
@@ -51,4 +51,3 @@ Para obter exemplos de implantação e sugestões sobre como solucionar problema
 
 - [Implantando aplicativos da área de trabalho](../ide/deploying-native-desktop-applications-visual-cpp.md)
 - [Noções básicas sobre as dependências de um aplicativo do Visual C++](../ide/understanding-the-dependencies-of-a-visual-cpp-application.md)
-

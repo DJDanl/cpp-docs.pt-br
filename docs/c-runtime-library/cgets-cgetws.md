@@ -27,12 +27,12 @@ helpviewer_keywords:
 - cgetws function
 - cgets function
 ms.assetid: 4d5e134a-58c3-4f62-befd-5d235b0212f4
-ms.openlocfilehash: 1ebb0979e432d7f68d94a01932674fdc30f85972
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ea4d7be7631f22eecbea7c6727295c17d86dba06
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50434262"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750331"
 ---
 # <a name="cgets-cgetws"></a>_cgets, _cgetws
 
@@ -68,7 +68,7 @@ wchar_t *_cgetws(
 *buffer*<br/>
 Local de armazenamento de dados.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor de retorno
 
 `_cgets` e `_cgetws` retornam um ponteiro para o início da cadeia de caracteres, em `buffer[2]`. Se `buffer` for **NULL**, essas funções invocarão o manipulador de parâmetro inválido, conforme descrito em [Validação de parâmetro](../c-runtime-library/parameter-validation.md). Se a execução puder continuar, elas retornarão **NULL** e definirão `errno` como `EINVAL`.
 
