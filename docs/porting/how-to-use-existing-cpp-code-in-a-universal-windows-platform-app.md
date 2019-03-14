@@ -1,15 +1,15 @@
 ---
-title: Como usar o código C++ existente em um aplicativo da Plataforma Universal do Windows
+title: 'Como: Usar o código C++ existente em um aplicativo da Plataforma Universal do Windows'
 ms.date: 08/21/2018
 ms.assetid: 87e5818c-3081-42f3-a30d-3dca2cf0645c
-ms.openlocfilehash: 55fb1f3fa89f192c83effb755966158394d2fbcf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1a4633b74591e16f22def44ff5875557f2909043
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528707"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57745517"
 ---
-# <a name="how-to-use-existing-c-code-in-a-universal-windows-platform-app"></a>Como usar o código C++ existente em um aplicativo da Plataforma Universal do Windows
+# <a name="how-to-use-existing-c-code-in-a-universal-windows-platform-app"></a>Como: Usar o código C++ existente em um aplicativo da Plataforma Universal do Windows
 
 Talvez a maneira mais fácil para que seu programa da área de trabalho seja executado no ambiente UWP seja usar as tecnologias de Ponte de Desktop. Elas incluem o Desktop App Converter, que empacotará o aplicativo existente como um aplicativo UWP sem nenhuma alteração de código necessária. Para saber mais, veja [Ponte de Desktop](/windows/uwp/porting/desktop-to-uwp-root).
 

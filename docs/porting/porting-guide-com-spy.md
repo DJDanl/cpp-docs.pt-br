@@ -2,12 +2,12 @@
 title: 'Guia de portabilidade: COM Spy'
 ms.date: 11/04/2016
 ms.assetid: 24aa0d52-4014-4acb-8052-f4e2e4bbc3bb
-ms.openlocfilehash: 67dbcc815404c26535763239eddb176fcecf03f4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ca81b240a102195109c0ad6ef05bfaed10306704
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50441776"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751681"
 ---
 # <a name="porting-guide-com-spy"></a>Guia de portabilidade: COM Spy
 
@@ -166,6 +166,6 @@ Ele foi executado sem problemas. E com o COM Spy em funcionamento e configurado 
 
 ## <a name="see-also"></a>Consulte também
 
-[Portabilidade e atualização: exemplos e estudos de caso](../porting/porting-and-upgrading-examples-and-case-studies.md)<br/>
+[Portando e atualizando: exemplos e estudos de caso](../porting/porting-and-upgrading-examples-and-case-studies.md)<br/>
 [Próximo exemplo: Spy++](../porting/porting-guide-spy-increment.md)<br/>
-[Exemplo anterior: Scribble do MFC](../porting/porting-guide-mfc-scribble.md)
+[Exemplo anterior: Rabisco do MFC](../porting/porting-guide-mfc-scribble.md)

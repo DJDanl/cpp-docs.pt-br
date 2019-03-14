@@ -4,14 +4,14 @@ ms.date: 09/17/2018
 helpviewer_keywords:
 - deploying Visual C++ applications
 ms.assetid: 47a81c47-9dbe-47c6-96cc-fbb2fda5e6ad
-ms.openlocfilehash: 6715dacf6e00aacf3ba3ef7e6cd3773f48fd8e2f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 33edf4bb736fad62928e11dd0550af6640d411ac
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596905"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746754"
 ---
-# <a name="walkthrough-deploying-a-visual-c-application-to-an-application-local-folder"></a>Instruções passo a passo: implantando um aplicativo do Visual C++ em uma pasta local do aplicativo
+# <a name="walkthrough-deploying-a-visual-c-application-to-an-application-local-folder"></a>Passo a passo: Implantação de um aplicativo em Visual C++ em uma pasta do aplicativo local
 
 Descreve como implantar um aplicativo do Visual C++ copiando arquivos para sua pasta.
 
@@ -23,7 +23,7 @@ Descreve como implantar um aplicativo do Visual C++ copiando arquivos para sua p
 
 ### <a name="to-deploy-an-application-to-an-application-local-folder"></a>Para implantar um aplicativo em uma pasta local do aplicativo
 
-1. Crie e compile um aplicativo MFC seguindo as etapas de [Passo a passo: Implantando um aplicativo do Visual C++ usando um projeto de instalação](walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project.md).
+1. Criar e compilar um aplicativo do MFC, seguindo as etapas em [Passo a passo: Implantando um aplicativo em Visual C++ usando um projeto de instalação](walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project.md).
 
 1. Copie os arquivos de biblioteca MFC e CRT (Tempo de Execução C) do diretório de instalação do Visual Studio na pasta \\VC\\redist\\*versão* e, em seguida, cole-os na pasta \Release\ do seu projeto MFC. Para obter mais informações sobre outros arquivos que talvez você precise copiar, confira [Determinando quais DLLs devem ser redistribuídas](determining-which-dlls-to-redistribute.md).
 

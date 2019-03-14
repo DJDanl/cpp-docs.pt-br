@@ -4,12 +4,12 @@ ms.date: 09/01/2017
 helpviewer_keywords:
 - UNIX [C++]
 ms.assetid: 36108b31-e7fa-49a8-a1f7-7077fcbec873
-ms.openlocfilehash: e930702862149de4dae65aab2f880f35850e0687
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6522461cf1f08eee9187a8f739cb21fe01e755f5
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50597542"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747002"
 ---
 # <a name="introduction-to-visual-c-for-unix-users"></a>Introdução ao Visual C++ para usuários do UNIX
 
@@ -19,7 +19,7 @@ Este tópico fornece informações para usuários do UNIX novatos no Visual Stud
 
 É possível usar o compilador C++ na linha de comando de forma semelhante à que você usaria um ambiente de linha de comando UNIX. A compilação ocorre no prompt de comando usando o compilador C e C++ da linha de comando (CL.EXE), o vinculador (LINK.EXE) e outras ferramentas, incluindo o NMAKE.EXE, a versão da Microsoft do utilitário da marca UNIX.
 
-No UNIX, os comandos são instalados em uma pasta comum, como /usr/bin. No Visual Studio, as ferramentas de linha de comando são instaladas no seu diretório de instalação do Visual Studio no subdiretório VC\bin e seus subdiretórios. Ao contrário do UNIX, essas ferramentas não estão disponíveis em uma janela do prompt de comando simples. Para usar as ferramentas de linha de comando, use um atalho de prompt de comando do desenvolvedor ou execute um arquivo de comando de desenvolvedor, como vcvarsall.bat. Isso configura o caminho e outras variáveis de ambiente necessários para compilar programas do C++ na linha de comando. Para obter mais informações, consulte [Compilar código C/C++ na linha de comando](../build/building-on-the-command-line.md) e [Instruções passo a passo: compilando um programa C++ nativo na linha de comando](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md).
+No UNIX, os comandos são instalados em uma pasta comum, como /usr/bin. No Visual Studio, as ferramentas de linha de comando são instaladas no seu diretório de instalação do Visual Studio no subdiretório VC\bin e seus subdiretórios. Ao contrário do UNIX, essas ferramentas não estão disponíveis em uma janela do prompt de comando simples. Para usar as ferramentas de linha de comando, use um atalho de prompt de comando do desenvolvedor ou execute um arquivo de comando de desenvolvedor, como vcvarsall.bat. Isso configura o caminho e outras variáveis de ambiente necessários para compilar programas do C++ na linha de comando. Para obter mais informações, confira [Compilar código C/C++ na linha de comando](../build/building-on-the-command-line.md) e [Passo a passo: Compilando um programa do C++ nativo na linha de comando](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md).
 
 Para abrir um atalho de prompt de comando do desenvolvedor, digite *prompt de comando do desenvolvedor* no controle de pesquisa de área de trabalho e escolha o resultado **Prompt de comando do desenvolvedor** para a sua versão do Visual Studio. Para escolher um prompt de comando do desenvolvedor pré-configurado para um host e arquitetura de destino específicos, abra o menu **Iniciar** (o ícone do Windows no canto da área de trabalho) e, em seguida, role até a pasta para a sua versão do Visual Studio, como **Visual Studio 2017**. Abra a pasta e escolha o atalho do prompt de comando para a arquitetura preferencial de host e de destino.
 
@@ -37,7 +37,7 @@ Um aplicativo composto por várias bibliotecas e executáveis, cada um deles cri
 
 ## <a name="importing-your-existing-code"></a>Importando seu código existente
 
-Você pode usar o compilador do C++ para compilar o código existente que está configurado para compilar com ou sem um makefile e colocá-lo em um projeto do Visual Studio. Para obter mais informações, consulte [Como criar um projeto do C++ com base no código existente](../ide/how-to-create-a-cpp-project-from-existing-code.md).
+Você pode usar o compilador do C++ para compilar o código existente que está configurado para compilar com ou sem um makefile e colocá-lo em um projeto do Visual Studio. Para obter mais informações, confira [Como: Criar um projeto em C++ de um código existente](../ide/how-to-create-a-cpp-project-from-existing-code.md).
 
 ## <a name="creating-a-new-project"></a>Criando um novo projeto
 

@@ -4,12 +4,12 @@ ms.date: 08/30/2017
 helpviewer_keywords:
 - breaking changes [C++]
 ms.assetid: b38385a9-a483-4de9-99a6-797488bc5110
-ms.openlocfilehash: b1070a330e40c0bf73f3713783b3f126d0848cbc
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: dcae15ade3bd155e16149cc56981f79abb245e16
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51525516"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740379"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Histórico de alterações de 2003 a 2015 do Visual C++
 
@@ -139,11 +139,11 @@ Além disso, aprimoramentos contínuos para a conformidade do compilador podem a
 
    Nas versões anteriores, infinitos e NaNs eram formatados usando um conjunto de cadeias de caracteres de sentinela específico do MSVC.
 
-  - Infinito: 1.#INF
+  - Infinity: 1.#INF
 
   - NaN silencioso: 1.#QNAN
 
-  - NaN sinalizado: 1.#SNAN
+  - Sinalização de NaN: 1.#SNAN
 
   - NaN indefinido: 1.#IND
 
@@ -207,7 +207,7 @@ Além disso, aprimoramentos contínuos para a conformidade do compilador podem a
 
 - **Formatação de expoente**
 
-   Os especificadores formato %e e %E formatam um número de ponto flutuante como uma mantissa e um expoente decimais. Os especificadores de formato %g e %G também formatam números nesse formato em alguns casos. Nas versões anteriores, o CRT sempre geraria cadeias de caracteres com expoentes de três dígitos. Por exemplo, `printf("%e\n", 1.0)` imprimiria 1.000000e+000. Isso era incorreto: o C exige que se o expoente é representável usando apenas um ou dois dígitos, apenas dois dígitos devem ser impressos.
+   Os especificadores formato %e e %E formatam um número de ponto flutuante como uma mantissa e um expoente decimais. Os especificadores de formato %g e %G também formatam números nesse formato em alguns casos. Nas versões anteriores, o CRT sempre geraria cadeias de caracteres com expoentes de três dígitos. Por exemplo, `printf("%e\n", 1.0)` imprimiria 1.000000e+000. Isto estava incorreto: o C exige que se o expoente é representável usando apenas um ou dois dígitos, apenas dois dígitos devem ser impressos.
 
    No Visual Studio 2005 foi adicionada uma opção de conformidade global: [_set_output_format](../c-runtime-library/set-output-format.md). Um programa poderia chamar essa função com o argumento _TWO_DIGIT_EXPONENT, para habilitar a impressão de expoente em conformidade. O comportamento padrão mudou para o modo de impressão expoente em conformidade com padrões.
 
@@ -289,7 +289,7 @@ Além disso, aprimoramentos contínuos para a conformidade do compilador podem a
 
 - **asctime**
 
-   Nas versões anteriores, a função [asctime](../c-runtime-library/reference/asctime-wasctime.md) preencheria dias de dígito único com um zero à esquerda, por exemplo: Sex 06 jun 08:00:00 2014. A especificação exige que esses dias sejam preenchidos com um espaço à esquerda, por exemplo, Sex 6 Jun 08:00:00 2014. Esse problema foi corrigido.
+   Nas versões anteriores, a função [asctime](../c-runtime-library/reference/asctime-wasctime.md) preencheria dias de dígito único com um zero à esquerda, por exemplo: Sex Jun 06 08:00:00 2014. A especificação exige que esses dias sejam preenchidos com um espaço à esquerda, por exemplo, Sex 6 Jun 08:00:00 2014. Esse problema foi corrigido.
 
 - **strftime e wcsftime**
 
@@ -1047,7 +1047,7 @@ Embora essas diferenças possam afetar seu código-fonte ou outros artefatos de 
 
 - **Chamadas ambíguas a funções sobrecarregadas**
 
-   Agora, o código a seguir produz C266: 'N::bind': chamada ambígua para função sobrecarregada
+   Agora, o código a seguir produz C266: 'N::bind': chamada ambígua à função sobrecarregada
 
     ```cpp
     template<typename R, typename T, typename T1, typename A1>
@@ -1190,7 +1190,7 @@ Embora essas diferenças possam afetar seu código-fonte ou outros artefatos de 
 
 - **As exceções de MFC não podem ser detectadas pelo valor porque não podem ser copiadas**
 
-   O código a seguir em um aplicativo MFC agora causa o erro C2316: 'D': não pode ser detectado porque o destruidor e/ou o construtor de cópia está inacessível ou foi excluído
+   O código a seguir em um aplicativo MFC agora causa o erro C2316: 'D': não pode ser detectado porque o destruidor e/ou o construtor de cópia estão inacessíveis ou foram excluídos
 
     ```cpp
     struct B {
@@ -1336,7 +1336,7 @@ Embora essas diferenças possam afetar seu código-fonte ou outros artefatos de 
 
 - **Corrigir a inicialização de cópia inválida na inicialização de membro de dados não estáticos (NSDMI)**
 
-   Agora, o código a seguir produz o erro C2664: 'S1::S1(S1 &&)': não é possível converter o argumento 1 de 'bool' para 'const S1 &':
+   Agora, o código a seguir produz o erro C2664: 'S1::S1(S1 &&)': não é possível converter o argumento 1 de 'bool' em 'const S1 &':
 
     ```cpp
     struct S1 {
@@ -1358,7 +1358,7 @@ Embora essas diferenças possam afetar seu código-fonte ou outros artefatos de 
 
 - **Acesso aos construtores dentro de instruções decltype**
 
-   Agora, o código a seguir produz C2248: 'S::S': não pode acessar o membro de acesso privado declarado na classe 'S':
+   Agora, o código a seguir produz C2248: 'S::S': não pode acessar o membro privado declarado na 'S':
 
     ```cpp
     class S {
@@ -1480,7 +1480,7 @@ Embora essas diferenças possam afetar seu código-fonte ou outros artefatos de 
 
 - **Não é possível chamar um construtor base protegido no corpo do construtor derivado.**
 
-   Agora, o código a seguir produz o erro C2248: 'S1::S1': não é possível acessar o membro protegido declarado na classe 'S1'
+   Agora, o código a seguir produz o erro C2248: 'S1::S1': não é possível acessar membro protegido declarado na classe 'S1'
 
     ```cpp
     struct S1 {
@@ -1838,7 +1838,7 @@ Embora essas diferenças possam afetar seu código-fonte ou outros artefatos de 
     error C2668: 'function' : ambiguous call to overloaded function.
     ```
 
-   Exemplo 1: chamada ambígua a função sobrecarregada (antes)
+   Exemplo 1: chamada ambígua à função sobrecarregada (antes)
 
     ```cpp
     // In previous versions of the compiler, code written in this way would unambiguously call f(int, Args...)
@@ -2899,7 +2899,7 @@ Embora essas diferenças possam afetar seu código-fonte ou outros artefatos de 
     };
     ```
 
-   Antes do Visual Studio 2013, esse código gera esta mensagem: “aviso C4370: 'S2': o layout da classe foi alterado de uma versão anterior do compilador devido a empacotamento melhor”.
+   Antes do Visual Studio 2013, esse código gera esta mensagem: "aviso C4370: 'S2': layout da classe foi alterado de uma versão anterior do compilador devido ao melhor empacotamento".
 
    O compilador x86 tem o mesmo problema de layout de qualidade inferior em todas as versões do compilador. Por exemplo, se este código foi compilado por x86:
 
@@ -2963,7 +2963,7 @@ O compilador C++ no Visual Studio 2013 detecta incompatibilidades em _ITERATOR_D
 
 ### <a name="mfc-and-atl"></a>MFC e ATL
 
-- **Visual Studio 2013 apenas**: a Biblioteca MFC MBCS não está mais incluída no Visual Studio porque o Unicode é muito popular e o uso de MBCS foi significativamente reduzido. Essa alteração também mantém o MFC alinhado de forma mais próxima ao próprio Windows SDK, uma vez que vários dos controles e mensagens novos são somente Unicode. No entanto, se for preciso continuar usando a biblioteca MFC MBCS, você poderá baixá-la no Centro de Download do MSDN em [Multibyte MFC Library for Visual Studio 2013](https://www.microsoft.com/download/details.aspx?id=40770) (Biblioteca MFC multibyte para Visual Studio 2013). O Pacote Redistribuível do Visual C++ ainda inclui esta biblioteca.  (Observação: a DLL do MBCS está incluída nos componentes de instalação do C++ no Visual Studio 2015 e posteriores).
+- **Apenas Visual Studio 2013**: A Biblioteca MFC MBCS não está incluída no Visual Studio porque o Unicode é muito popular e o uso de MBCS foi significativamente reduzido. Essa alteração também mantém o MFC alinhado de forma mais próxima ao próprio Windows SDK, uma vez que vários dos controles e mensagens novos são somente Unicode. No entanto, se for preciso continuar usando a biblioteca MFC MBCS, você poderá baixá-la no Centro de Download do MSDN em [Multibyte MFC Library for Visual Studio 2013](https://www.microsoft.com/download/details.aspx?id=40770) (Biblioteca MFC multibyte para Visual Studio 2013). O Pacote Redistribuível do Visual C++ ainda inclui esta biblioteca.  (Observação: a DLL do MBCS está incluída nos componentes de instalação do C++ no Visual Studio 2015 e posteriores).
 
 - A acessibilidade para a faixa de opções do MFC foi alterada.  Em vez de uma arquitetura de um nível, há agora uma arquitetura hierárquica. Você ainda pode usar o comportamento antigo chamando `CRibbonBar::EnableSingleLevelAccessibilityMode()`.
 
@@ -3091,7 +3091,7 @@ A enumeração `SchedulerType` de `UmsThreadDefault` foi preterida. A especifica
 
 - Foi adicionado um parâmetro ao construtor `CFolderPickerDialog`. (É um parâmetro padrão e, portanto, não causa interrupção de fonte).
 
-- O tamanho da estrutura `CFileStatus` foi alterado: o membro `m_attribute` foi alterado de BYTE para DWORD (para corresponder ao valor retornado de `GetFileAttributes`).
+- O tamanho da estrutura `CFileStatus` mudou: o membro `m_attribute` foi alterado de BYTE para DWORD (para corresponder ao valor retornado de `GetFileAttributes`).
 
 - `CRichEditCtrl` e `CRichEditView` usam MSFTEDIT_CLASS (controle RichEdit 4.1) em vez de RICHEDIT_CLASS (controle RichEdit 3.0) em builds de Unicode.
 
@@ -3405,19 +3405,19 @@ A enumeração `SchedulerType` de `UmsThreadDefault` foi preterida. A especifica
 
 ### <a name="mfc"></a>MFC
 
-- Classe `CTime`: agora, a classe `CTime` aceita datas a partir de 1/1/1900 D.C. em vez de 1/1/1970 D.C.
+- Classe `CTime`: A classe `CTime` agora aceita datas a partir de 1/1/1900 D.C. em vez de 1/1/1970 D.C.
 
-- A ordem de tabulação dos controles em caixas de diálogo do MFC: a ordem de tabulação correta de vários controles em uma caixa de diálogo do MFC será afetada se um controle ActiveX MFC for inserido na ordem de tabulação. Essa alteração corrige esse problema.
+- Ordem de tabulação dos controles em caixas de diálogo do MFC: a ordem de tabulação correta de vários controles em uma caixa de diálogo do MFC será afetada se um controle ActiveX MFC for inserido na ordem de tabulação. Essa alteração corrige esse problema.
 
    Por exemplo, crie um aplicativo de caixa de diálogo do MFC que tem um controle ActiveX e vários controles de edição. Posicione o controle ActiveX no meio da ordem de tabulação dos controles de edição. Inicie o aplicativo, clique em um controle de edição cuja ordem de tabulação é depois do controle ActiveX e, em seguida, TAB. Antes dessa mudança, o foco ia para o controle de edição depois do controle ActiveX em vez do próximo controle de edição na ordem de tabulação.
 
 - Classe `CFileDialog`: os modelos personalizados para a classe `CFileDialog` não podem ser automaticamente transferidos para o Windows Vista. Eles ainda podem ser usados, mas não terão a funcionalidade adicional ou a aparência das caixas de diálogo do estilo Windows Vista.
 
-- Classes `CWnd` e `CFrameWnd`: o `CWnd::GetMenuBarInfo` método foi removido.
+- Classe `CWnd` e classe `CFrameWnd`: o método `CWnd::GetMenuBarInfo` foi removido.
 
    O método `CFrameWnd::GetMenuBarInfo` agora é um método não virtual. Para obter mais informações, consulte **Função GetMenuBarInfo** no SDK do Windows.
 
-- Suporte para ISAPI do MFC: o MFC não dá mais suporte ao build de aplicativos com a ISAPI (interface ISAPI). Se você deseja criar um aplicativo ISAPI, chame diretamente as extensões ISAPI.
+- Suporte a ISAPI do MFC: o MFC não dá mais suporte ao build de aplicativos com a interface ISAPI. Se você deseja criar um aplicativo ISAPI, chame diretamente as extensões ISAPI.
 
 - APIs ANSI preteridas: as versões ANSI de vários métodos MFC foram preteridas. Use as versões Unicode desses métodos em seus aplicativos futuros. Para obter mais informações, consulte **Requisitos de build para controles comuns do Windows Vista**.
 

@@ -3,12 +3,12 @@ title: Conectar-se ao computador Linux remoto no Visual Studio
 description: Como se conectar a um computador Linux remoto de dentro de um projeto do Visual Studio C++.
 ms.date: 07/20/2018
 ms.assetid: 5eeaa683-4e63-4c46-99ef-2d5f294040d4
-ms.openlocfilehash: ce6a3c02846586dbc46b0c9bc0db0d579878c814
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e20714308448349ee5dac8951a7b5d7bfd2f29ef
+ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50575234"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57562842"
 ---
 # <a name="connect-to-your-remote-linux-computer"></a>Conectar-se ao computador Linux remoto
 

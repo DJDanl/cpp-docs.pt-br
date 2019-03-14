@@ -11,12 +11,12 @@ helpviewer_keywords:
 - depends.exe
 - libraries [C++], application deployment issues
 ms.assetid: 62a44c95-c389-4c5f-82fd-07d7ef09dbf9
-ms.openlocfilehash: 8ed340bed62d3b2cfcf32e0b98f032c9146b6bb9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ed510e0d289349b1d7a0129a1c586b0bf1715b7e
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50629262"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751473"
 ---
 # <a name="understanding-the-dependencies-of-a-visual-c-application"></a>Noções básicas sobre as dependências de um aplicativo do Visual C++
 

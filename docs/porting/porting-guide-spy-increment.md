@@ -2,12 +2,12 @@
 title: 'Guia de portabilidade: Spy++'
 ms.date: 11/19/2018
 ms.assetid: e558f759-3017-48a7-95a9-b5b779d5e51d
-ms.openlocfilehash: 5bd69853b13d58ff79910eafcc601b0507d5a9ad
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: b28de2396ba94578a8d06038a1191be42dce49ea
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176998"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751368"
 ---
 # <a name="porting-guide-spy"></a>Guia de portabilidade: Spy++
 
@@ -292,7 +292,7 @@ Após a alteração, temos o seguinte código:
 afx_msg LRESULT OnNcHitTest(CPoint point);
 ```
 
-Como há cerca de dez ocorrências dessa função, todas em diferentes classes derivadas de CWnd, é útil usar **Ir Para Definição** (teclado: **F12**) e **Ir Para Declaração** (teclado: **Ctrl**+**F12**) quando o cursor está sobre a função no editor para localizar essas ocorrências e navegar para elas da janela de ferramentas **Localizar Símbolo**. **Ir Para Definição** é geralmente o mais útil dos dois. **Ir Para Declaração** localizará declarações que não sejam a declaração de classe definidora, assim como declarações de classe friend ou referências de encaminhamento.
+Como há cerca de dez ocorrências dessa função todas em diferentes classes derivadas de CWnd, é útil usar **Ir para Definição** (Teclado: **F12**) e **Ir para Declaração** (Teclado: **CTRL**+**F12**) quando o cursor está na função no editor para localizá-las e navegar para elas da janela de ferramentas **Localizar Símbolo**. **Ir Para Definição** é geralmente o mais útil dos dois. **Ir Para Declaração** localizará declarações que não sejam a declaração de classe definidora, assim como declarações de classe friend ou referências de encaminhamento.
 
 ##  <a name="mfc_changes"></a> Etapa 9. Alterações do MFC
 
@@ -542,7 +542,7 @@ Colocamos \_T em torno do literal de cadeia de caracteres para remover o erro.
 wsprintf(szTmp, _T("%d.%2.2d.%4.4d"), rmj, rmm, rup);
 ```
 
-A macro \_T tem o efeito de fazer com que um literal de cadeia de caracteres seja compilado como uma cadeia de caracteres **char** ou uma cadeia de caracteres **wchar_t**, dependendo da configuração de MBCS ou UNICODE. Para substituir todas as cadeias de caracteres por \_T no Visual Studio, abra primeiro a caixa **Substituição Rápida** (teclado: **Ctrl**+**F**) ou **Substituir nos Arquivos** (teclado: **Ctrl**+**Shift**+**H**), depois escolha a caixa de seleção **Usar Expressões Regulares**. Digite `((\".*?\")|('.+?'))` como o texto de pesquisa e `_T($1)` como o texto de substituição. Se você já tiver a macro \_T em torno de algumas cadeias de caracteres, este procedimento a adicionará novamente; além disso, ele também poderá encontrar casos em que você não deseja \_T, por exemplo, quando usar `#include`, portanto, é melhor usar **Substituir Próximo** em vez de **Substituir Tudo**.
+A macro \_T tem o efeito de fazer com que um literal de cadeia de caracteres seja compilado como uma cadeia de caracteres **char** ou uma cadeia de caracteres **wchar_t**, dependendo da configuração de MBCS ou UNICODE. Para substituir todas as cadeias de caracteres por \_T no Visual Studio, primeiro abra a caixa **Substituição Rápida** (Teclado: **CTRL**+**F**) ou **Substituir nos Arquivos** (Teclado: **CTRL**+**Shift**+**H**), então escolha a caixa de seleção **Usar Expressões Regulares**. Digite `((\".*?\")|('.+?'))` como o texto de pesquisa e `_T($1)` como o texto de substituição. Se você já tiver a macro \_T em torno de algumas cadeias de caracteres, este procedimento a adicionará novamente; além disso, ele também poderá encontrar casos em que você não deseja \_T, por exemplo, quando usar `#include`, portanto, é melhor usar **Substituir Próximo** em vez de **Substituir Tudo**.
 
 Essa função específica, [wsprintf](/windows/desktop/api/winuser/nf-winuser-wsprintfa), na verdade é definida nos cabeçalhos do Windows e a documentação para ela recomenda que ela não seja usada, devido a um possível estouro de buffer. Nenhum tamanho é fornecido para o buffer `szTmp`, portanto, não há nenhuma maneira para a função verificar se o buffer pode conter todos os dados a serem gravados nele. Consulte a próxima seção sobre portabilidade para o CRT Seguro, na qual podemos resolver outros problemas semelhantes. Nós acabamos por substituí-lo por [_stprintf_s](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md).
 
@@ -673,5 +673,5 @@ Portabilidade do Spy++ do código Visual C++ 6.0 original para o compilador mais
 
 ## <a name="see-also"></a>Consulte também
 
-[Portabilidade e atualização: exemplos e estudos de caso](../porting/porting-and-upgrading-examples-and-case-studies.md)<br/>
+[Portando e atualizando: exemplos e estudos de caso](../porting/porting-and-upgrading-examples-and-case-studies.md)<br/>
 [Estudo de caso anterior: COM Spy](../porting/porting-guide-com-spy.md)

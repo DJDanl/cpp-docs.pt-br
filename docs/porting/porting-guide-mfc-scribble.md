@@ -1,15 +1,15 @@
 ---
-title: 'Guia de portabilidade: rabisco do MFC'
+title: 'Guia de portabilidade: Scribble do MFC'
 ms.date: 11/19/2018
 ms.assetid: 8ddb517d-89ba-41a1-ab0d-4d2c6d9047e8
-ms.openlocfilehash: 353dc8fb42b73ec7e0ee748ef9fefd030c073703
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 436dd27d8c2669e21ddc8a9e453f369cdd14f70c
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175646"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57741300"
 ---
-# <a name="porting-guide-mfc-scribble"></a>Guia de portabilidade: rabisco do MFC
+# <a name="porting-guide-mfc-scribble"></a>Guia de portabilidade: Scribble do MFC
 
 Este tópico é o primeiro de vários tópicos que apresentam o procedimento de atualização para projetos do Visual C++ que foram criados em versões anteriores do Visual Studio para Visual Studio 2017. Estes tópicos apresentam o processo de atualização por exemplos, começando com um projeto muito simples e passando para outros um pouco mais complexos. Neste tópico, trabalhamos pelo processo de atualização para um projeto específico, o Scribble do MFC. Ele é adequado como uma introdução básica sobre o processo de atualização para projetos do C++.
 
@@ -87,5 +87,5 @@ O Scribble era um aplicativo de área de trabalho do Windows pequeno e simples e
 
 ## <a name="see-also"></a>Consulte também
 
-[Portabilidade e atualização: exemplos e estudos de caso](../porting/porting-and-upgrading-examples-and-case-studies.md)<br/>
+[Portando e atualizando: exemplos e estudos de caso](../porting/porting-and-upgrading-examples-and-case-studies.md)<br/>
 [Próximo exemplo: COM Spy](../porting/porting-guide-com-spy.md)

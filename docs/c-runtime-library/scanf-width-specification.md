@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - scanf function, width specification
 ms.assetid: 94b4e8fe-c4a2-4799-8b6c-a2cf28ffb09c
-ms.openlocfilehash: e4608d46664dad3e04d37a82368cc6e7173106f4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1431002a7e7d0054ac20c05c76b05cabc96177c5
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445156"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743268"
 ---
 # <a name="scanf-width-specification"></a>Especificação de largura scanf Width
 
@@ -79,7 +79,7 @@ Se estiver usando uma função não segura na família `scanf`, omita o parâmet
 
 ## <a name="reading-undelimited-strings"></a>Leitura de cadeias de caracteres não delimitadas
 
-Para ler cadeias de caracteres não delimitadas por caracteres de espaço em branco, um conjunto de caracteres entre colchetes (**[]**) pode ser substituído pelo caractere de tipo (cadeia de caracteres) **s**. O conjunto de caracteres entre colchetes é chamado de cadeia de caracteres de controle. O campo de entrada correspondente é lido até o primeiro caractere que não aparece na cadeia de caracteres de controle. Se o primeiro caractere no conjunto for um acento circunflexo (**^**), o efeito será inverso: o campo de entrada será lido até o primeiro caractere que aparece no restante do conjunto de caracteres.
+Para ler cadeias de caracteres não delimitadas por caracteres de espaço em branco, um conjunto de caracteres entre colchetes (**[]**) pode ser substituído pelo caractere de tipo (cadeia de caracteres) **s**. O conjunto de caracteres entre colchetes é chamado de cadeia de caracteres de controle. O campo de entrada correspondente é lido até o primeiro caractere que não aparece na cadeia de caracteres de controle. Se o primeiro caractere no conjunto for um acento circunflexo (**^**), o efeito será inverso: O campo de entrada é lido até o primeiro caractere que aparece no restante do conjunto de caracteres.
 
 Observe que **%[a-z]** e **%[z-a]** são interpretados como equivalentes a **%[abcde...z]**. Essa é uma extensão de função `scanf` comum, mas observe que o padrão ANSI não a exige.
 

@@ -4,14 +4,14 @@ ms.date: 09/17/2018
 helpviewer_keywords:
 - deployment for Visual C++
 ms.assetid: 66735cda-8fe3-4211-a19a-2cf717a12a3f
-ms.openlocfilehash: 3dc607ea082e31ba73f34ce1ca8acd3ebc78292a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e2d83d45f1369e250b24708edd17f4004e030a17
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50565588"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57749116"
 ---
-# <a name="walkthrough-deploying-a-visual-c-application-by-using-a-setup-project"></a>Instruções passo a passo: implantando um aplicativo do Visual C++ usando um projeto de instalação
+# <a name="walkthrough-deploying-a-visual-c-application-by-using-a-setup-project"></a>Passo a passo: Implantação de um aplicativo em Visual C++ usando um projeto de instalação
 
 Descreve como usar um projeto de instalação para implantar um aplicativo do Visual C++.
 
@@ -31,8 +31,8 @@ Você precisa dos seguintes componentes para concluir esta instrução passo a p
 
    > [!NOTE]
    > Se o tipo **Aplicativo MFC** estiver ausente:<br/>
-   > **Visual Studio 2017**: selecione **Abrir instalador do Visual Studio** no painel esquerdo da caixa de diálogo **Novo Projeto**. Instale a opção localizada embaixo de **Desenvolvimento para desktop com C++** na seção de componentes **Opcional**, denominada **Visual C++ MFC for x86 e x64**.<br/>
-   > **Visual Studio 2015**: clique no botão Iniciar do Windows e digite **Adicionar ou remover programas**. Abra o programa na lista de resultados e, em seguida, localize a instalação do Microsoft Visual Studio 2015 na lista de programas instalados. Clique duas vezes nele e, em seguida, escolha **Modificar** e selecione o componente **MFC** embaixo de **Visual C++**.
+   > **Visual Studio 2017**: selecione **Abrir o Instalador do Visual Studio** no painel esquerdo da caixa de diálogo **Novo Projeto**. Instale a opção localizada embaixo de **Desenvolvimento para desktop com C++** na seção de componentes **Opcional**, denominada **Visual C++ MFC for x86 e x64**.<br/>
+   > **Visual Studio 2015**: clique no botão Iniciar do Windows e digite **Adicionar ou Remover Programas**. Abra o programa na lista de resultados e, em seguida, localize a instalação do Microsoft Visual Studio 2015 na lista de programas instalados. Clique duas vezes nele e, em seguida, escolha **Modificar** e selecione o componente **MFC** embaixo de **Visual C++**.
 
 1. Altere a configuração da solução ativa para **Versão**. No menu **Build**, selecione **Configuration Manager**. Na caixa de diálogo **Configuration Manager**, selecione **Versão** na caixa suspensa **Configuração da solução ativa**. Clique em **Fechar**.
 

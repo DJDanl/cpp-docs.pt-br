@@ -7,16 +7,16 @@ helpviewer_keywords:
 - run-time error checking
 - run-time errors, checking
 ms.assetid: c965dd01-57ad-4a3c-b1d6-5aa04f920501
-ms.openlocfilehash: 348698faa1f91e4d98acc762538fc1cbdb798e0b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ec07b9b0c6aa52187c3c24bff4cc51712dbf9fc8
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50435641"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746455"
 ---
 # <a name="run-time-error-checking"></a>Verificação de erros de tempo de execução
 
-A biblioteca em tempo de execução C contém as funções que oferecem suporte a verificações de erro em tempo de execução (RTC). Verificação de erros em tempo de execução permite que você compilar o programa, de modo que determinados tipos de erros em tempo de execução são relatados. Especifique como os erros são relatados e quais tipos de erros são relatados. Para saber mais, confira [Como usar verificações de tempo de execução nativas](/visualstudio/debugger/how-to-use-native-run-time-checks).
+A biblioteca em tempo de execução C contém as funções que oferecem suporte a verificações de erro em tempo de execução (RTC). Verificação de erros em tempo de execução permite que você compilar o programa, de modo que determinados tipos de erros em tempo de execução são relatados. Especifique como os erros são relatados e quais tipos de erros são relatados. Para obter mais informações, confira [Como: Usar verificações de tempo de execução nativas](/visualstudio/debugger/how-to-use-native-run-time-checks).
 
 Use as funções a seguir para personalizar a forma como o seu programa faz a verificação de erros em tempo de execução.
 

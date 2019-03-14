@@ -1,17 +1,17 @@
 ---
 title: Configurar um projeto do C++ Linux no Visual Studio
-ms.date: 09/18/2018
+ms.date: 11/12/2018
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
-ms.openlocfilehash: fd87b3d60e6625fb86ad1b494fd878b9b5ca031b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0d0825a3aca8ca03759d7f7b42db90ce9700c10b
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50622489"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57745192"
 ---
 # <a name="configure-a-linux-project"></a>Configurar um projeto do Linux
 
-Este tópico descreve como configurar um projeto do Linux em C++ no Visual Studio. Para obter mais informações sobre Projetos CMake do Linux no Visual Studio, consulte [Configurar um Projeto CMake do Linux ](cmake-linux-project.md).
+Este tópico descreve como configurar um projeto do C++ Linux com base em um modelo de projeto do Linux no Visual Studio. Para obter mais informações sobre Projetos CMake do Linux no Visual Studio, consulte [Configurar um Projeto CMake do Linux ](cmake-linux-project.md).
 
 ## <a name="general-settings"></a>Configurações gerais
 
@@ -90,7 +90,7 @@ Para gerenciar o cache do cabeçalho, navegue até **Ferramentas > Opções, Pla
 ## <a name="see-also"></a>Consulte também
 
 [Trabalhando com Propriedades do Projeto](../ide/working-with-project-properties.md)<br/>
-[Propriedades gerais de C++ (Linux C++)](../linux/prop-pages/general-linux.md)<br/>
-[Diretórios VC++ (Linux C++)](../linux/prop-pages/directories-linux.md)<br/>
-[Copiar fontes de propriedades do projeto (Linux C++)](../linux/prop-pages/copy-sources-project.md)<br/>
-[Propriedades de evento de build (Linux C++)](../linux/prop-pages/build-events-linux.md)
+[Propriedades gerais de C++ (Linux C++)](prop-pages/general-linux.md)<br/>
+[Diretórios VC++ (Linux C++)](prop-pages/directories-linux.md)<br/>
+[Copiar fontes de propriedades do projeto (Linux C++)](prop-pages/copy-sources-project.md)<br/>
+[Propriedades de evento de build (Linux C++)](prop-pages/build-events-linux.md)
