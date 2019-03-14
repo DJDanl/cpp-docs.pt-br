@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - debug executable, preparing a test machine to run
 ms.assetid: f0400989-cc2e-4dce-9788-6bdbe91c6f5a
-ms.openlocfilehash: 95633a9b6b04be7e551934744868e10f60d51fb4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9ae5e0007105cfda233f808bf52d2d81068524be
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509091"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57744867"
 ---
 # <a name="preparing-a-test-machine-to-run-a-debug-executable"></a>Preparando uma máquina de teste para executar um executável de depuração
 
@@ -20,7 +20,7 @@ Para preparar um computador para testar a versão de depuração de um aplicativ
 
 Há três maneiras de implantar versões de depuração de DLLs da biblioteca do Visual C++ junto com a versão de depuração de um aplicativo.
 
-- Use a implantação central para instalar uma versão de depuração de uma DLL específica do Visual C++ no diretório %windir%\system32\ usando um projeto de Instalação que inclua módulos de mesclagem para a versão da biblioteca e a arquitetura corretas do aplicativo. Os módulos de mesclagem são encontrados no diretório Arquivos de Programas ou Arquivos de Programas (x86) em \Common Files\Merge Modules\\. A versão de depuração de um módulo de mesclagem tem Depuração no nome, por exemplo, Microsoft_VC110_DebugCRT_x86.msm. Um exemplo dessa implantação pode ser encontrado no [Passo a passo: Implantando um aplicativo do Visual C++ usando um projeto de instalação](../ide/walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project.md).
+- Use a implantação central para instalar uma versão de depuração de uma DLL específica do Visual C++ no diretório %windir%\system32\ usando um projeto de Instalação que inclua módulos de mesclagem para a versão da biblioteca e a arquitetura corretas do aplicativo. Os módulos de mesclagem são encontrados no diretório Arquivos de Programas ou Arquivos de Programas (x86) em \Common Files\Merge Modules\\. A versão de depuração de um módulo de mesclagem tem Depuração no nome, por exemplo, Microsoft_VC110_DebugCRT_x86.msm. Um exemplo dessa implantação pode ser encontrado em [Passo a passo: Implantando um aplicativo em Visual C++ usando um projeto de instalação](../ide/walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project.md).
 
 - Use a implantação local para instalar uma versão de depuração de uma DLL específica do Visual C++ no diretório de instalação do aplicativo usando os arquivos fornecidos no diretório Arquivos de Programas ou Arquivos de Programas (x86) em \Microsoft Visual Studio \<versão>\VC\redist\Debug_NonRedist\\.
 

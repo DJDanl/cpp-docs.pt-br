@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Visual C++, versions
 - editions [C++]
 ms.assetid: 3d88607b-9cc4-490a-8d4c-31ee7610a26f
-ms.openlocfilehash: 7f40e59ae3e5e883827a212a16d1dd19822dc136
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3d3c6e25594eb3bb01ad3fc995a24cdc723d5726
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50463746"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751889"
 ---
 # <a name="visual-c-tools-and-features-in-visual-studio-editions"></a>Ferramentas e funcionalidades do Visual C++ em edições do Visual Studio
 
@@ -119,7 +119,7 @@ As tabelas a seguir mostram as funcionalidades do Visual C++ disponíveis no Vis
 |Designer/Editor de HTML|X|X|X|X|
 |Editor de XML|X|X|X|X|
 |Editor de Código-fonte|X|X|X|X|
-|Funcionalidades de produtividade: Refatoração, IntelliSense, Formatação de Código C++|X|X|X|X|
+|Recursos de produtividade: Refatoração, IntelliSense, formatação de Código C++|X|X|X|X|
 |Designer de Formulários do Windows||X|X|X|
 |Designer de dados|||X|X|
 |Editor de Recurso Nativo (arquivos .rc)|||X|X|

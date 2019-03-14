@@ -2,12 +2,12 @@
 title: Guia de atualização e portabilidade do Visual C++
 ms.date: 09/18/2018
 ms.assetid: f5fbcc3d-aa72-41a6-ad9a-a706af2166fb
-ms.openlocfilehash: 39b0e716ae6dbc1210130908b27cfa1d06f86ec6
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 1b3f7142b5240d8b4a94040d5cda7d033e50e39d
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556862"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57752422"
 ---
 # <a name="visual-c-porting-and-upgrading-guide"></a>Guia de atualização e portabilidade do Visual C++
 
@@ -81,7 +81,7 @@ Como alternativa, você pode ter novos requisitos ou prever a necessidade de dir
 |[Histórico de alterações de 2003 a 2015 do Visual C++](visual-cpp-change-history-2003-2015.md)|Uma lista de todas as alterações nas bibliotecas e ferramentas de build do Visual C++ do Visual Studio 2003 até 2015 que podem exigir alterações em seu código.|
 |[O que há de novo no Visual C++ de 2003 até 2015](visual-cpp-what-s-new-2003-through-2015.md)|Todas as informações sobre "Novidades" para o Visual C++ do Visual Studio 2003 até o Visual Studio 2015.|
 |[Portabilidade de bibliotecas de terceiros](porting-third-party-libraries.md)|Como usar a ferramenta de linha de comando **vcpkg** para portar bibliotecas de software livre mais antigas para versões compiladas com conjuntos de ferramentas mais recentes do Visual C++.|
-|[Portabilidade e atualização: exemplos e estudos de caso](porting-and-upgrading-examples-and-case-studies.md)|Nessa seção, portamos e atualizamos vários exemplos e aplicativos e discutimos as experiências e os resultados. Ao ler essa seção você pode obter uma noção do que está envolvido no processo de portabilidade e atualização. Durante o processo, discutimos a respeito de dicas e truques para a atualização e mostramos como erros específicos foram corrigidos.|
+|[Portando e atualizando: exemplos e estudos de caso](porting-and-upgrading-examples-and-case-studies.md)|Nessa seção, portamos e atualizamos vários exemplos e aplicativos e discutimos as experiências e os resultados. Ao ler essa seção você pode obter uma noção do que está envolvido no processo de portabilidade e atualização. Durante o processo, discutimos a respeito de dicas e truques para a atualização e mostramos como erros específicos foram corrigidos.|
 |[Portabilidade para a Plataforma Universal do Windows](porting-to-the-universal-windows-platform-cpp.md)|Contém informações sobre como fazer portabilidade de código para o Windows 10|
 |[Introdução ao Visual C++ para usuários do UNIX](introduction-to-visual-cpp-for-unix-users.md)|Fornece informações para usuários do UNIX novatos no Visual C++ e que desejam tornar-se produtivos com ele.|
 |[Portabilidade de UNIX para Win32](porting-from-unix-to-win32.md)|Discute as opções para migrar aplicativos UNIX para o Windows.|

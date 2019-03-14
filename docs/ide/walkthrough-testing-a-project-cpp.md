@@ -1,19 +1,19 @@
 ---
-title: 'Instruções passo a passo: testando um projeto (C++)'
+title: 'Passo a passo: Testando um projeto (C++)'
 ms.date: 09/14/2018
 helpviewer_keywords:
 - project testing [C++]
 - testing projects
 - projects [C++], testing
 ms.assetid: 88cdd377-c5c8-4201-889d-32f5653ebead
-ms.openlocfilehash: a604d8ef0b44db04d9a6da8fdc959d08384f1bf3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e93236f9bd08741bb757e43309cd59281f828da1
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437300"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57744596"
 ---
-# <a name="walkthrough-testing-a-project-c"></a>Instruções passo a passo: testando um projeto (C++)
+# <a name="walkthrough-testing-a-project-c"></a>Passo a passo: Testando um projeto (C++)
 
 Ao executar um programa no modo de Depuração, você pode usar pontos de interrupção para pausar o programa a fim de examinar o estado de variáveis e objetos.
 
@@ -51,14 +51,14 @@ Neste passo a passo, você observará o valor de uma variável durante a execuç
 
 1. Abra o menu de atalho da instrução `return 0;` e, em seguida, escolha **Executar até o Cursor**. A seta amarela à esquerda do código aponta para a próxima instrução a ser executada.
 
-1. O número `Cardgame::totalParticipants` deve diminuir quando um `Cardgame` é encerrado. Neste ponto, `Cardgame::totalParticipants` deve ser igual a 0, porque todas as instâncias de `Cardgame` foram excluídas, mas a janela **Inspeção 1** indica que `Cardgame::totalparticipants` é igual a **18**. A diferença indica que há um bug no código, que pode ser detectado e corrigido concluindo o próximo passo a passo, [Passo a passo: depurando um projeto (C++)](../ide/walkthrough-debugging-a-project-cpp.md).
+1. O número `Cardgame::totalParticipants` deve diminuir quando um `Cardgame` é encerrado. Neste ponto, `Cardgame::totalParticipants` deve ser igual a 0, porque todas as instâncias de `Cardgame` foram excluídas, mas a janela **Inspeção 1** indica que `Cardgame::totalparticipants` é igual a **18**. A diferença indica que há um bug no código, que pode ser detectado e consertado concluindo o próximo passo a passo, [Passo a passo: Depurando um projeto (C++)](../ide/walkthrough-debugging-a-project-cpp.md).
 
 1. Para interromper o programa, na barra de menus, escolha **Depurar** > **Interromper depuração** ou escolha o atalho de teclado **Shift**+**F5**.
 
 ## <a name="next-steps"></a>Próximas etapas
 
-**Anterior:** [Passo a passo: compilando um projeto (C++)](../ide/walkthrough-building-a-project-cpp.md)<br/>
-**Próximo:** [Passo a passo: depurando um projeto (C++)](../ide/walkthrough-debugging-a-project-cpp.md)<br/>
+**Anterior:** [Passo a passo: Compilação de um projeto (C++)](../ide/walkthrough-building-a-project-cpp.md)<br/>
+**Avançar:** [Passo a passo: Depurando um projeto (C++)](../ide/walkthrough-debugging-a-project-cpp.md)<br/>
 
 ## <a name="see-also"></a>Consulte também
 
