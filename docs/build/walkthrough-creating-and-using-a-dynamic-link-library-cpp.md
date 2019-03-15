@@ -6,12 +6,12 @@ helpviewer_keywords:
 - libraries [C++], DLLs
 - DLLs [C++], walkthroughs
 ms.assetid: 3ae94848-44e7-4955-bbad-7d40f493e941
-ms.openlocfilehash: fb77230d5cc27c1fba1f7df1404150fada36d43a
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: c1f59c704e96ade82295f4ae88265f549987e981
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57416443"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57813962"
 ---
 # <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>Passo a passo: Criar e usar sua própria biblioteca de vínculo dinâmico (C++)
 
@@ -29,11 +29,11 @@ Este passo a passo apresenta estas tarefas:
 
 - Execute o aplicativo concluído.
 
-Como uma biblioteca vinculada estaticamente, uma DLL _exporta_ variáveis, funções e recursos por nome e o seu aplicativo _importa_ esses nomes para usar essas variáveis, funções e recursos. Ao contrário de uma biblioteca vinculada estaticamente, o Windows se conecta as importações em seu aplicativo para as exportações em uma DLL em tempo de carga ou em tempo de execução, em vez de conectá-las em tempo de vinculação. Windows requer que informações adicionais que não faz parte do modelo de compilação C++ padrão para fazer essas conexões. O compilador do Visual C++ implementa algumas extensões específicas da Microsoft para C++ para fornecer essas informações extras. À medida que avançarmos, vamos explicar essas extensões.
+Como uma biblioteca vinculada estaticamente, uma DLL _exporta_ variáveis, funções e recursos por nome e o seu aplicativo _importa_ esses nomes para usar essas variáveis, funções e recursos. Ao contrário de uma biblioteca vinculada estaticamente, o Windows se conecta as importações em seu aplicativo para as exportações em uma DLL em tempo de carga ou em tempo de execução, em vez de conectá-las em tempo de vinculação. Windows requer que informações adicionais que não faz parte do modelo de compilação C++ padrão para fazer essas conexões. O compilador MSVC implementa algumas extensões específicas da Microsoft para C++ para fornecer essas informações extras. À medida que avançarmos, vamos explicar essas extensões.
 
 Este passo a passo cria duas soluções do Visual Studio; uma que cria a DLL e outra que compila o aplicativo cliente. A DLL usa a convenção de chamada de C para que ele pode ser chamado de aplicativos criados usando outras linguagens, desde que a plataforma e chamar e convenções de vinculação coincidam. O aplicativo de cliente usa _vinculação implícita_, em que o Windows vincula o aplicativo para a DLL no tempo de carregamento. Essa vinculação permite que o aplicativo chamar as funções fornecidas pelo DLL assim como as funções em uma biblioteca vinculada estaticamente.
 
-Este passo a passo não cobre algumas situações comuns. Ele não mostra o uso de DLLs em C++ por outras linguagens de programação. Ele não mostra como criar uma DLL somente recurso. Ele também não mostra o uso da vinculação explícita para carregar DLLs em tempo de execução em vez de em tempo de carregamento. Fique tranquilo, você pode usar o Visual C++ para fazer todas essas coisas. Para obter links para obter mais informações sobre DLLs, consulte [DLLs no Visual C++](../build/dlls-in-visual-cpp.md). Para obter mais informações sobre vinculação implícita e explícita de vinculação, consulte [determinar qual vincular método Use](../build/linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use). Para obter informações sobre como criar DLLs em C++ para uso com linguagens de programação que usam convenções de vinculação da linguagem C, consulte [exportar funções de C++ para uso em executáveis da linguagem C](../build/exporting-cpp-functions-for-use-in-c-language-executables.md). Para obter informações sobre como criar DLLs para uso com linguagens .NET, consulte [chamando funções de DLL de aplicativos Visual Basic](../build/calling-dll-functions-from-visual-basic-applications.md).
+Este passo a passo não cobre algumas situações comuns. Ele não mostra o uso de DLLs em C++ por outras linguagens de programação. Ele não mostra como criar uma DLL somente recurso. Ele também não mostra o uso da vinculação explícita para carregar DLLs em tempo de execução em vez de em tempo de carregamento. Fique tranquilo, você pode usar o Visual C++ para fazer todas essas coisas. Para obter links para obter mais informações sobre DLLs, consulte [DLLs no Visual C++](dlls-in-visual-cpp.md). Para obter mais informações sobre vinculação implícita e explícita de vinculação, consulte [determinar qual vincular método Use](linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use). Para obter informações sobre como criar DLLs em C++ para uso com linguagens de programação que usam convenções de vinculação da linguagem C, consulte [exportar funções de C++ para uso em executáveis da linguagem C](exporting-cpp-functions-for-use-in-c-language-executables.md). Para obter informações sobre como criar DLLs para uso com linguagens .NET, consulte [chamando funções de DLL de aplicativos Visual Basic](calling-dll-functions-from-visual-basic-applications.md).
 
 Este passo a passo usa o Visual Studio 2017, mas o código e a maioria das instruções é aplicáveis a versões anteriores. As etapas para criar novos projetos alterado a partir do Visual Studio 2017 versão 15.3. Este passo a passo descreve como criar projetos para versões mais recentes e anteriores. Procure as etapas que correspondem à sua versão do Visual Studio.
 
@@ -400,7 +400,4 @@ Quando você implanta seu aplicativo, você também deve implantar as DLLs que e
 
 ## <a name="see-also"></a>Consulte também
 
-[DLLs no Visual C++](../build/dlls-in-visual-cpp.md)<br/>
-[Implantando aplicativos da área de trabalho](../ide/deploying-native-desktop-applications-visual-cpp.md)<br/>
-[Passo a passo: Implantação do programa (C++)](../ide/walkthrough-deploying-your-program-cpp.md)<br/>
-[Chamando funções DLL de aplicativos Visual Basic](../build/calling-dll-functions-from-visual-basic-applications.md)
+[Chamando funções DLL de aplicativos Visual Basic](calling-dll-functions-from-visual-basic-applications.md)

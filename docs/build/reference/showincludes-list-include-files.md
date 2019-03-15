@@ -12,12 +12,12 @@ helpviewer_keywords:
 - -showIncludes compiler option [C++]
 - showIncludes compiler option [C++]
 ms.assetid: 0b74b052-f594-45a6-a7c7-09e1a319547d
-ms.openlocfilehash: 0c968f406043f5c0b5fd04c18e22a77cd640d873
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: d454054c132976a899fcc4a56a63be427e79beec
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424152"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57819227"
 ---
 # <a name="showincludes-list-include-files"></a>/showIncludes (listar arquivos de inclusão)
 
@@ -50,7 +50,7 @@ O **/showIncludes** opção emite para `stderr`, e não `stdout`.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio
 
-1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, confira [Trabalhando com propriedades do projeto](../../ide/working-with-project-properties.md).
+1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [propriedades de compilador e de build definida C++ no Visual Studio](../working-with-project-properties.md).
 
 1. Clique o **C/C++** pasta.
 
@@ -64,5 +64,5 @@ O **/showIncludes** opção emite para `stderr`, e não `stdout`.
 
 ## <a name="see-also"></a>Consulte também
 
-[Opções do Compilador](../../build/reference/compiler-options.md)<br/>
-[Definindo opções do compilador](../../build/reference/setting-compiler-options.md)
+[Opções do compilador MSVC](compiler-options.md)<br/>
+[Sintaxe de linha de comando do compilador MSVC](compiler-command-line-syntax.md)

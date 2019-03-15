@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - /IGNORE linker option
 ms.assetid: 37e77387-8838-4697-898f-d376ac641124
-ms.openlocfilehash: 4826ecae1f16cd3834cb6d47850fc686b3682614
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2b374e0e73f9fc14fa32ea4f63fa71039a5cf3c7
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50479684"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57815834"
 ---
 # <a name="ignore-ignore-specific-warnings"></a>/IGNORE (Ignorar os Avisos Específicos)
 
@@ -54,7 +54,7 @@ Em geral, os avisos do vinculador que não podem ser ignorados representam falha
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do vinculador no ambiente de desenvolvimento do Visual Studio
 
-1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, confira [Trabalhando com propriedades do projeto](../../ide/working-with-project-properties.md).
+1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [propriedades de compilador e de build definida C++ no Visual Studio](../working-with-project-properties.md).
 
 1. No **vinculador** pasta, selecione a **linha de comando** página de propriedades.
 

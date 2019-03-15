@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -SUBSYSTEM linker option
 - subsystem specifications
 ms.assetid: d7b133cf-cf22-4da8-ab46-6552702c0b9b
-ms.openlocfilehash: 0b6a8a841cefcd519cbeeae9f3355d72e1bbf286
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: ecda3443d0422af4d5ceec9282d86590c53af2f5
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57417002"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57821255"
 ---
 # <a name="subsystem-specify-subsystem"></a>/SUBSYSTEM (especificar subsistema)
 
@@ -42,7 +42,7 @@ Aplicativo de modo caractere Win32. O sistema operacional fornece um console par
 Os subsistemas de Interface de Firmware extensível. Consulte a especificação de EFI para obter mais informações. Para obter exemplos, consulte o site da Intel. A versão mínima de versão e o padrão é 1.0.
 
 **NATIVO**<br/>
-Drivers do modo kernel para Windows NT. Essa opção normalmente é reservada para componentes de sistema do Windows. Se [/driver: WDM](../../build/reference/driver-windows-nt-kernel-mode-driver.md) for especificado, NATIVE é o padrão.
+Drivers do modo kernel para Windows NT. Essa opção normalmente é reservada para componentes de sistema do Windows. Se [/driver: WDM](driver-windows-nt-kernel-mode-driver.md) for especificado, NATIVE é o padrão.
 
 **POSIX**<br/>
 Aplicativo que é executado com o subsistema POSIX no Windows NT.
@@ -73,7 +73,7 @@ O mínimo opcional e o padrão *principais* e *secundárias* números de versão
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do vinculador no ambiente de desenvolvimento do Visual Studio
 
-1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [configuração de propriedades do projeto Visual C++](../../ide/working-with-project-properties.md).
+1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [propriedades de compilador e de build definida C++ no Visual Studio](../working-with-project-properties.md).
 
 1. Selecione a pasta do vinculador.
 
@@ -87,5 +87,5 @@ O mínimo opcional e o padrão *principais* e *secundárias* números de versão
 
 ## <a name="see-also"></a>Consulte também
 
-[Definindo opções de vinculador](../../build/reference/setting-linker-options.md)<br/>
-[Opções do vinculador](../../build/reference/linker-options.md)
+[Referência de vinculador MSVC](linking.md)<br/>
+[Opções do vinculador MSVC](linker-options.md)

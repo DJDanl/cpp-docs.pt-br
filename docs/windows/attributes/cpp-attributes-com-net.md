@@ -6,12 +6,12 @@ ms.topic: conceptual
 helpviewer_keywords:
 - attributes [C++/CLI], reference topics
 ms.assetid: 613a3611-b3eb-4347-aa38-99b654600e1c
-ms.openlocfilehash: 4a37542bd69926572e44322c406862117560affe
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: f9d339860e9d2bdb8d66f6b7f8f49d3993b2d5cf
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175763"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820735"
 ---
 # <a name="c-attributes-for-com-and-net"></a>Atributos de C++ para COM e .NET
 
@@ -49,7 +49,7 @@ Você pode configurar o `CMyReceiver` métodos `handler1` e `handler2` para mani
 
 ## <a name="basic-mechanics-of-attributes"></a>Mecânica básica de atributos
 
-Há três maneiras para inserir atributos no seu projeto. Primeiro, você pode inseri-los manualmente no seu código-fonte. Em segundo lugar, você pode inseri-los usando a grade de propriedade de um objeto em seu projeto. Por fim, você pode inseri-los usando vários assistentes. Para obter mais informações sobre como usar o **propriedades** janela e vários assistentes, consulte [criando e gerenciando projetos do Visual C++](../../ide/creating-and-managing-visual-cpp-projects.md).
+Há três maneiras para inserir atributos no seu projeto. Primeiro, você pode inseri-los manualmente no seu código-fonte. Em segundo lugar, você pode inseri-los usando a grade de propriedade de um objeto em seu projeto. Por fim, você pode inseri-los usando vários assistentes. Para obter mais informações sobre como usar o **propriedades** janela e vários assistentes, consulte [criando e gerenciando projetos do Visual C++](../../build/creating-and-managing-visual-cpp-projects.md).
 
 Como antes, quando o projeto é compilado, o compilador analisa cada arquivo de origem C++, produzir um arquivo de objeto. No entanto, quando o compilador encontra um atributo, ele é analisado e sintaticamente verificado. O compilador chama dinamicamente um provedor de atributo para inserir código ou fazer outras modificações em tempo de compilação. A implementação do provedor é diferente dependendo do tipo de atributo. Por exemplo, os atributos relacionados à ATL são implementados por Atlprov.dll.
 
@@ -70,7 +70,7 @@ Depois de você colocar atributos do Visual C++ em seu código-fonte, convém fa
 
 - [/IGNOREIDL](../../build/reference/ignoreidl-don-t-process-attributes-into-midl.md)
 
-- [/ MIDL](../../build/reference/midl-specify-midl-command-line-options.md)
+- [/MIDL](../../build/reference/midl-specify-midl-command-line-options.md)
 
 - [/TLBOUT](../../build/reference/tlbout-name-dot-tlb-file.md)
 
