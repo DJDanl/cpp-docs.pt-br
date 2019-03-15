@@ -29,24 +29,24 @@ helpviewer_keywords:
 - /Es BSCMAKE option
 - Ei BSCMAKE option
 ms.assetid: fa2f1e06-c684-41cf-80dd-6a554835ebd2
-ms.openlocfilehash: 7727f433ae68f26075645b35ff5edad43159ec67
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: bf4c3648079dff16481dbdd56b9a70093fd22d8d
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57415403"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812051"
 ---
 # <a name="bscmake-options"></a>Opções de BSCMAKE
 
 Esta seção descreve as opções disponíveis para controlar o BSCMAKE. Várias opções de controlam o conteúdo do arquivo de informações de procura, excluindo ou incluindo determinadas informações. As opções de exclusão podem permitir BSCMAKE seja executado mais rapidamente e podem resultar em um arquivo. bsc menor. Nomes de opção diferenciam maiusculas de minúsculas (exceto para **/Help** e **/NOLOGO**).
 
-Somente **/NOLOGO** e **/o** estão disponíveis no ambiente de desenvolvimento do Visual Studio.  Ver [configuração de propriedades do projeto Visual C++](../../ide/working-with-project-properties.md) para informações sobre como acessar as páginas de propriedades de um projeto.
+Somente **/NOLOGO** e **/o** estão disponíveis no ambiente de desenvolvimento do Visual Studio.  Ver [propriedades de compilador e de build definida C++ no Visual Studio](../working-with-project-properties.md) para informações sobre como acessar as páginas de propriedades de um projeto.
 
 **/Ei (** *filename*... **)**<br/>
 Exclui o conteúdo dos arquivos de inclusão especificado do arquivo de informações de procura. Para especificar vários arquivos, separe os nomes com um espaço e coloque a lista entre parênteses. Parênteses não são necessários se você especificar apenas um *filename*. Use **/Ei** juntamente com o **/Es** opção para excluir arquivos que não são excluídos pelo **/Es**.
 
 **/El**<br/>
-Exclui os símbolos locais. O padrão é incluir símbolos locais. Para obter mais informações sobre símbolos locais, consulte [criando um arquivo. SBR](../../build/reference/creating-an-dot-sbr-file.md).
+Exclui os símbolos locais. O padrão é incluir símbolos locais. Para obter mais informações sobre símbolos locais, consulte [criando um arquivo. SBR](creating-an-dot-sbr-file.md).
 
 **/Em**<br/>
 Exclui os símbolos no corpo de macros. Use **/Em** para incluir apenas os nomes de macros no arquivo de informações de procura. O padrão é incluir os nomes de macro e o resultado de expansões de macro.
@@ -60,7 +60,7 @@ Exclui o arquivo de informações de procura todos os arquivos de inclusão espe
 **/errorreport:**[**none** &#124; **prompt** &#124; **queue** &#124; **send**]<br/>
 Permite que você enviar à Microsoft informações sobre erros internos no bscmake.exe.
 
-Para obter mais informações sobre **/errorreport**, consulte [/errorReport (relatório de erros do compilador interno)](../../build/reference/errorreport-report-internal-compiler-errors.md).
+Para obter mais informações sobre **/errorreport**, consulte [/errorReport (relatório de erros do compilador interno)](errorreport-report-internal-compiler-errors.md).
 
 **/HELP**<br/>
 Exibe um resumo da sintaxe de linha de comando BSCMAKE.
@@ -69,7 +69,7 @@ Exibe um resumo da sintaxe de linha de comando BSCMAKE.
 Inclui símbolos não referenciados. Por padrão, o BSCMAKE não registra quaisquer símbolos que são definidos, mas não referenciados. Se tiver sido compactado e um arquivo. SBR, essa opção não terá efeito para esse arquivo de entrada porque o compilador já removeu os símbolos não referenciados.
 
 **/n**<br/>
-Ele forçará um build. Use **/n** para forçar uma compilação completa do arquivo de informações de procura se existe ou não um arquivo. bsc e para impedir que arquivos. SBR sejam truncados. Ver [como BSCMAKE compila um arquivo. bsc](../../build/reference/how-bscmake-builds-a-dot-bsc-file.md).
+Ele forçará um build. Use **/n** para forçar uma compilação completa do arquivo de informações de procura se existe ou não um arquivo. bsc e para impedir que arquivos. SBR sejam truncados. Ver [como BSCMAKE compila um arquivo. bsc](how-bscmake-builds-a-dot-bsc-file.md).
 
 **/NOLOGO**<br/>
 Suprime a mensagem de direitos autorais de BSCMAKE.
@@ -94,4 +94,4 @@ BSCMAKE /n /S toolbox.h /o main.bsc file1.sbr file2.sbr file3.sbr
 
 ## <a name="see-also"></a>Consulte também
 
-[Referência de BSCMAKE](../../build/reference/bscmake-reference.md)
+[Referência de BSCMAKE](bscmake-reference.md)

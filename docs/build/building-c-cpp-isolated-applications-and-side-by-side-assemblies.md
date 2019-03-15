@@ -9,12 +9,12 @@ helpviewer_keywords:
 - side-by-side applications [C++]
 - builds [C++], side-by-side assemblies
 ms.assetid: 9465904e-76f7-48bd-bb3f-c55d8f1699b6
-ms.openlocfilehash: 5d487e8a124d2edd7ce5a658d4965f1567756d5a
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: e3c39595008d92b390b03a56bdcf5fc8990b2103
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694147"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807542"
 ---
 # <a name="building-cc-isolated-applications-and-side-by-side-assemblies"></a>Compilando aplicativos isolados do C/C++ e assemblies lado a lado
 
@@ -26,19 +26,19 @@ Esta seção aborda como é possível compilar o aplicativo do C/C++ como um apl
 
 ## <a name="in-this-section"></a>Nesta seção
 
-[Conceitos de aplicativos isolados e assemblies lado a lado](../build/concepts-of-isolated-applications-and-side-by-side-assemblies.md)
+[Conceitos de aplicativos isolados e assemblies lado a lado](concepts-of-isolated-applications-and-side-by-side-assemblies.md)
 
-[Compilando aplicativos isolados do C/C++](../build/building-c-cpp-isolated-applications.md)
+[Compilando aplicativos isolados do C/C++](building-c-cpp-isolated-applications.md)
 
-[Compilando assemblies lado a lado do C/C++](../build/building-c-cpp-side-by-side-assemblies.md)
+[Compilando assemblies lado a lado do C/C++](building-c-cpp-side-by-side-assemblies.md)
 
-[Como compilar componentes COM sem registro](../build/how-to-build-registration-free-com-components.md)
+[Como: Compilar componentes COM sem registro](how-to-build-registration-free-com-components.md)
 
-[Como compilar aplicativos isolados para consumir componentes COM](../build/how-to-build-isolated-applications-to-consume-com-components.md)
+[Como: Compilar aplicativos isolados para consumir componentes COM](how-to-build-isolated-applications-to-consume-com-components.md)
 
-[Noções básicas sobre o Manifest Generation para programas do C/C++](../build/understanding-manifest-generation-for-c-cpp-programs.md)
+[Noções básicas sobre o Manifest Generation para programas do C/C++](understanding-manifest-generation-for-c-cpp-programs.md)
 
-[Solução de problemas de aplicativos isolados e assemblies lado a lado do C/C++](../build/troubleshooting-c-cpp-isolated-applications-and-side-by-side-assemblies.md)
+[Solução de problemas de aplicativos isolados e assemblies lado a lado do C/C++](troubleshooting-c-cpp-isolated-applications-and-side-by-side-assemblies.md)
 
 ## <a name="related-sections"></a>Seções relacionadas
 

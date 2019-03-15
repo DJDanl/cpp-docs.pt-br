@@ -13,12 +13,12 @@ helpviewer_keywords:
 - -LTCG linker option
 - LTCG linker option
 ms.assetid: 788c6f52-fdb8-40c2-90af-4026ea2cf2e2
-ms.openlocfilehash: 68c12cc7666da489870da1cacacc5053aeca5b51
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 40fb591952180735de3a2c226a3953a303c7d90f
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50523208"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810309"
 ---
 # <a name="ltcg-link-time-code-generation"></a>/LTCG (geração de código do tempo de vinculação)
 
@@ -37,64 +37,64 @@ Essas opções são preteridas a partir do Visual Studio 2015:
 **INCREMENTAL**<br/>
 (Opcional) Especifica que o vinculador só se aplica todo o programa otimização ou tempo de vinculação a geração de código (LTCG) ao conjunto de arquivos afetados por uma edição, em vez de todo o projeto. Por padrão, esse sinalizador não é definido quando **/LTCG** for especificado, e todo o projeto está vinculado usando a otimização de programa inteiro.
 
-**NOSTATUS** &AMP;#124; **STATUS**<br/>
+**NOSTATUS** &#124; **STATUS**<br/>
 (Opcional) Especifica se o vinculador exibe um indicador de progresso que mostra qual é a porcentagem do link for concluída. Por padrão, essas informações de status não são exibidas.
 
 **OFF**<br/>
 (Opcional) Desabilita a geração de código para link-time. Esse comportamento é o mesmo que quando **/LTCG** não for especificado na linha de comando.
 
 **PGINSTRUMENT**<br/>
-(Opcional) Essa opção é preterida a partir do Visual Studio 2015. Em vez disso, use **/LTCG** e [/GENPROFILE ou /FASTGENPROFILE](genprofile-fastgenprofile-generate-profiling-instrumented-build.md) para gerar um build instrumentado para Otimização Guiada por perfil. Os dados que são coletados de execuções instrumentadas são usados para criar uma imagem otimizada. Para obter mais informações, consulte [Otimização Guiada por perfil](profile-guided-optimizations.md). A forma abreviada dessa opção é **/ltcg: pgi**.
+(Opcional) Essa opção é preterida a partir do Visual Studio 2015. Em vez disso, use **/LTCG** e [/GENPROFILE ou /FASTGENPROFILE](genprofile-fastgenprofile-generate-profiling-instrumented-build.md) para gerar um build instrumentado para Otimização Guiada por perfil. Os dados que são coletados de execuções instrumentadas são usados para criar uma imagem otimizada. Para obter mais informações, consulte [otimizações guiadas pelo perfil](../profile-guided-optimizations.md). A forma abreviada dessa opção é **/ltcg: pgi**.
 
 **PGOPTIMIZE**<br/>
-(Opcional) Essa opção é preterida a partir do Visual Studio 2015. Em vez disso, use **/LTCG** e [/USEPROFILE](useprofile.md) para criar uma imagem otimizada. Para obter mais informações, consulte [Otimização Guiada por perfil](../../build/reference/profile-guided-optimizations.md). A forma abreviada dessa opção é **/ltcg: PGO**.
+(Opcional) Essa opção é preterida a partir do Visual Studio 2015. Em vez disso, use **/LTCG** e [/USEPROFILE](useprofile.md) para criar uma imagem otimizada. Para obter mais informações, consulte [otimizações guiadas pelo perfil](../profile-guided-optimizations.md). A forma abreviada dessa opção é **/ltcg: PGO**.
 
 **PGUPDATE**<br/>
-(Opcional) Essa opção é preterida a partir do Visual Studio 2015. Em vez disso, use **/LTCG** e **/USEPROFILE** para recriar uma imagem otimizada. Para obter mais informações, consulte [Otimização Guiada por perfil](../../build/reference/profile-guided-optimizations.md). A forma abreviada dessa opção é **/ltcg: pgu**.
+(Opcional) Essa opção é preterida a partir do Visual Studio 2015. Em vez disso, use **/LTCG** e **/USEPROFILE** para recriar uma imagem otimizada. Para obter mais informações, consulte [otimizações guiadas pelo perfil](../profile-guided-optimizations.md). A forma abreviada dessa opção é **/ltcg: pgu**.
 
 ## <a name="remarks"></a>Comentários
 
-O **/LTCG** opção instrui o vinculador para chamar o compilador e executará a otimização de programa inteiro. Você também pode fazer Otimização Guiada por perfil. Para obter mais informações, consulte [Otimização Guiada por perfil](../../build/reference/profile-guided-optimizations.md).
+O **/LTCG** opção instrui o vinculador para chamar o compilador e executará a otimização de programa inteiro. Você também pode fazer Otimização Guiada por perfil. Para obter mais informações, consulte [otimizações guiadas pelo perfil](../profile-guided-optimizations.md).
 
 Com as seguintes exceções, você não pode adicionar opções de vinculador à combinação de PGO **/LTCG** e **/USEPROFILE** que não foram especificadas na combinação de inicialização de PGO anterior dos  **/LTCG** e **/GENPROFILE** opções:
 
-- [/BASE](../../build/reference/base-base-address.md)
+- [/BASE](base-base-address.md)
 
-- [/FIXED](../../build/reference/fixed-fixed-base-address.md)
+- [/FIXED](fixed-fixed-base-address.md)
 
 - **/LTCG**
 
-- [/MAP](../../build/reference/map-generate-mapfile.md)
+- [/MAP](map-generate-mapfile.md)
 
-- [/MAPINFO](../../build/reference/mapinfo-include-information-in-mapfile.md)
+- [/MAPINFO](mapinfo-include-information-in-mapfile.md)
 
-- [/NOLOGO](../../build/reference/nologo-suppress-startup-banner-linker.md)
+- [/NOLOGO](nologo-suppress-startup-banner-linker.md)
 
-- [/ ENTRADA SAÍDA](../../build/reference/out-output-file-name.md)
+- [/OUT](out-output-file-name.md)
 
-- [/PGD](../../build/reference/pgd-specify-database-for-profile-guided-optimizations.md)
+- [/PGD](pgd-specify-database-for-profile-guided-optimizations.md)
 
-- [/PDB](../../build/reference/pdb-use-program-database.md)
+- [/PDB](pdb-use-program-database.md)
 
-- [/PDBSTRIPPED](../../build/reference/pdbstripped-strip-private-symbols.md)
+- [/PDBSTRIPPED](pdbstripped-strip-private-symbols.md)
 
-- [/STUB](../../build/reference/stub-ms-dos-stub-file-name.md)
+- [/STUB](stub-ms-dos-stub-file-name.md)
 
-- [/VERBOSE](../../build/reference/verbose-print-progress-messages.md)
+- [/VERBOSE](verbose-print-progress-messages.md)
 
 Qualquer opção de vinculador que é especificadas junto com o **/LTCG** e **/GENPROFILE** opções para inicializar a PGO não precisa ser especificado quando você compila usando **/LTCG** e **/USEPROFILE**; eles são deduzidos.
 
 O restante deste artigo discute **/LTCG** em termos de geração de código para link-time.
 
-**/LTCG** é implícita com [/GL](../../build/reference/gl-whole-program-optimization.md).
+**/LTCG** é implícita com [/GL](gl-whole-program-optimization.md).
 
-O vinculador invoca geração de código para link-time, se ele é passado um módulo que foi compilado usando **/GL** ou um módulo MSIL (consulte [arquivos. netmodule como entrada de vinculador](../../build/reference/netmodule-files-as-linker-input.md)). Se você não especificar explicitamente **/LTCG** quando você passa **/GL** ou módulos MSIL para o vinculador, eventualmente, o vinculador detecta isso e reinicia o link **/LTCG**. Especificar explicitamente **/LTCG** quando você passa **/GL** e desempenho de compilação de módulos MSIL para o vinculador para o mais rápido possível.
+O vinculador invoca geração de código para link-time, se ele é passado um módulo que foi compilado usando **/GL** ou um módulo MSIL (consulte [arquivos. netmodule como entrada de vinculador](netmodule-files-as-linker-input.md)). Se você não especificar explicitamente **/LTCG** quando você passa **/GL** ou módulos MSIL para o vinculador, eventualmente, o vinculador detecta isso e reinicia o link **/LTCG**. Especificar explicitamente **/LTCG** quando você passa **/GL** e desempenho de compilação de módulos MSIL para o vinculador para o mais rápido possível.
 
 Para desempenho mais rápido, use **/LTCG: INCREMENTAL**. Essa opção instrui o vinculador só otimizar novamente o conjunto de arquivos que é afetado por uma alteração de arquivo de origem, em vez de todo o projeto. Isso pode reduzir significativamente o tempo de link necessário. Isso não é a mesma opção como vinculação incremental.
 
-**/LTCG** não é válido para uso com [/incremental](../../build/reference/incremental-link-incrementally.md).
+**/LTCG** não é válido para uso com [/incremental](incremental-link-incrementally.md).
 
-Quando **/LTCG** é usado para vincular os módulos compilados usando [/Og](../../build/reference/og-global-optimizations.md), [/O1](../../build/reference/o1-o2-minimize-size-maximize-speed.md), [/O2](../../build/reference/o1-o2-minimize-size-maximize-speed.md), ou [/Ox](../../build/reference/ox-full-optimization.md), o as seguintes otimizações são executadas:
+Quando **/LTCG** é usado para vincular os módulos compilados usando [/Og](og-global-optimizations.md), [/O1](o1-o2-minimize-size-maximize-speed.md), [/O2](o1-o2-minimize-size-maximize-speed.md), ou [/Ox](ox-full-optimization.md), o as seguintes otimizações são executadas:
 
 - Inlining entre módulos
 
@@ -130,7 +130,7 @@ Se uma função é chamada por meio de um ponteiro de função, ou se uma funç�
 
 ### <a name="ltcg-and-msil-modules"></a>/LTCG e módulos MSIL
 
-Módulos que são compilados usando [/GL](../../build/reference/gl-whole-program-optimization.md) e [/clr](../../build/reference/clr-common-language-runtime-compilation.md) pode ser usado como entrada para o vinculador quando **/LTCG** for especificado.
+Módulos que são compilados usando [/GL](gl-whole-program-optimization.md) e [/clr](clr-common-language-runtime-compilation.md) pode ser usado como entrada para o vinculador quando **/LTCG** for especificado.
 
 - **/LTCG** pode aceitar arquivos de objeto nativo e arquivos de objeto nativo/gerenciado misto (compiladas usando **/clr**). O **/clr: pure** e **/CLR: safe** opções do compilador são preteridas no Visual Studio 2015 e sem suporte no Visual Studio 2017.
 
@@ -138,7 +138,7 @@ Módulos que são compilados usando [/GL](../../build/reference/gl-whole-program
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio
 
-1. Abra o projeto **páginas de propriedade** caixa de diálogo. Ver [trabalhando com propriedades do projeto](../../ide/working-with-project-properties.md).
+1. Abra o projeto **páginas de propriedade** caixa de diálogo. Ver [propriedades de compilador e de build definida C++ no Visual Studio](../working-with-project-properties.md).
 
 1. Selecione o **propriedades de configuração** > **geral** página de propriedades.
 
@@ -152,5 +152,5 @@ Você também pode aplicar **/LTCG** para compilações específicas, escolhendo
 
 ## <a name="see-also"></a>Consulte também
 
-- [Definindo opções de vinculador](../../build/reference/setting-linker-options.md)
-- [Opções do vinculador](../../build/reference/linker-options.md)
+- [Referência de vinculador MSVC](linking.md)
+- [Opções do vinculador MSVC](linker-options.md)

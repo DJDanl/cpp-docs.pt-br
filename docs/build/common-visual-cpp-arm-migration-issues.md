@@ -2,12 +2,12 @@
 title: Problemas de migração ARM do Visual C++
 ms.date: 11/04/2016
 ms.assetid: 0f4c434e-0679-4331-ba0a-cc15dd435a46
-ms.openlocfilehash: 6aea623bc9f096265decbe91ccdc5d5f1f6ecef1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a39e1d5e26a62cafa093067bb42f33178a1af6af
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618500"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816250"
 ---
 # <a name="common-visual-c-arm-migration-issues"></a>Problemas de migração ARM do Visual C++
 
@@ -92,7 +92,7 @@ E se há uma dependência entre `operator->(memory_handle)` e `operator*(p)`, o 
 
 ### <a name="volatile-keyword-default-behavior"></a>comportamento padrão de palavra-chave volátil
 
-O compilador MSVC dá suporte a dois diversas interpretações do `volatile` qualificador de armazenamento que você pode especificar usando opções do compilador. O [/volatile: MS](../build/reference/volatile-volatile-keyword-interpretation.md) switch seleciona a estendidas semântica volátil que garantem a ordenação de alta segurança, pois foi o caso tradicional para x86 e x64 por causa do modelo de memória alta segurança nessas arquiteturas da Microsoft. O [/volatile: ISO](../build/reference/volatile-volatile-keyword-interpretation.md) switch seleciona a estrito C++ standard semântica volátil que não garante a ordenação de alta segurança.
+O compilador MSVC dá suporte a dois diversas interpretações do `volatile` qualificador de armazenamento que você pode especificar usando opções do compilador. O [/volatile: MS](reference/volatile-volatile-keyword-interpretation.md) switch seleciona a estendidas semântica volátil que garantem a ordenação de alta segurança, pois foi o caso tradicional para x86 e x64 por causa do modelo de memória alta segurança nessas arquiteturas da Microsoft. O [/volatile: ISO](reference/volatile-volatile-keyword-interpretation.md) switch seleciona a estrito C++ standard semântica volátil que não garante a ordenação de alta segurança.
 
 Na arquitetura ARM, o padrão é **/volatile: ISO** como processadores ARM têm um fracamente ordenados de modelo de memória e como software ARM não tem um herdado de contar com a semântica estendida de **/volatile: MS**  e geralmente não tem a interface com o software que faz. No entanto, é conveniente ainda, às vezes, ou até mesmo necessário para compilar um programa ARM, use a semântica estendida. Por exemplo, ele pode ser muito caro portar um programa para usar a semântica do ISO C++ ou talvez seja necessário que o software de driver seguem a semântica tradicional para funcionar corretamente. Nesses casos, você pode usar o **/volatile: MS** comutador; no entanto, para recriar a semântica volátil tradicional em destinos ARM, o compilador deve inserir barreiras de memória em torno de cada leitura ou gravação de um `volatile` variável impor ordenação de alta segurança, que pode ter um impacto negativo no desempenho.
 
@@ -100,4 +100,4 @@ Em arquiteturas x86 e x64, o padrão é **/volatile: MS** porque grande parte do
 
 ## <a name="see-also"></a>Consulte também
 
-[Configurar o Visual C++ para processadores ARM](../build/configuring-programs-for-arm-processors-visual-cpp.md)
+[Configurar o Visual C++ para processadores ARM](configuring-programs-for-arm-processors-visual-cpp.md)

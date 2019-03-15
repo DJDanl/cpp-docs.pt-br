@@ -7,12 +7,12 @@ helpviewer_keywords:
 - browse information files (.bsc)
 - browse information files (.bsc), creating
 ms.assetid: b5c12832-51f6-4953-8044-4264dd0fb242
-ms.openlocfilehash: 02f2107469e2fbbc4ea3591e1211e600d16fb9e9
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 4f12bd25ca3ab718a845dbb04aba3169cc6d4b19
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57413011"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820592"
 ---
 # <a name="building-browse-information-files-overview"></a>Compilando arquivos de informações de navegação: Visão geral
 
@@ -20,18 +20,18 @@ Para criar informações de procura para navegação de símbolo, o compilador c
 
 Gerando arquivos. SBR e. bsc leva tempo, portanto, o Visual C++ desativa a essas funções por padrão. Se você deseja procurar informações atuais, você deve ativar as opções de pesquisa e compile o projeto novamente.
 
-Use [/FR](../../build/reference/fr-fr-create-dot-sbr-file.md) ou [/Fr](../../build/reference/fr-fr-create-dot-sbr-file.md) para indicar ao compilador para criar arquivos. SBR. Para criar arquivos. bsc, você pode chamar [BSCMAKE](../../build/reference/bscmake-command-line.md) da linha de comando. Usar BSCMAKE da linha de comando lhe dá controle mais preciso sobre a manipulação de arquivos de informações de procura. Ver [referência de BSCMAKE](../../build/reference/bscmake-reference.md) para obter mais informações.
+Use [/FR](fr-fr-create-dot-sbr-file.md) ou [/Fr](fr-fr-create-dot-sbr-file.md) para indicar ao compilador para criar arquivos. SBR. Para criar arquivos. bsc, você pode chamar [BSCMAKE](bscmake-command-line.md) da linha de comando. Usar BSCMAKE da linha de comando lhe dá controle mais preciso sobre a manipulação de arquivos de informações de procura. Ver [referência de BSCMAKE](bscmake-reference.md) para obter mais informações.
 
 > [!TIP]
 >  Você pode ativar a geração do arquivo. SBR mas deixe a geração do arquivo. bsc desativada. Isso fornece fast builds, mas também permite que você crie um arquivo. bsc atualizada rapidamente, ativar a geração do arquivo. bsc e compilar o projeto.
 
 Você pode reduzir o tempo, memória e espaço em disco necessário para criar um arquivo. bsc, reduzindo o tamanho do arquivo. bsc.
 
-Ver [página de propriedades gerais (projeto)](../../ide/general-property-page-project.md) para obter informações sobre como criar um arquivo de navegador no ambiente de desenvolvimento.
+Ver [página de propriedades gerais (projeto)](general-property-page-project.md) para obter informações sobre como criar um arquivo de navegador no ambiente de desenvolvimento.
 
 ### <a name="to-create-a-smaller-bsc-file"></a>Para criar um arquivo. bsc menor
 
-1. Use [opções de linha de comando BSCMAKE](../../build/reference/bscmake-options.md) para excluir informações do arquivo de informações de procura.
+1. Use [opções de linha de comando BSCMAKE](bscmake-options.md) para excluir informações do arquivo de informações de procura.
 
 1. Omita símbolos locais em um ou mais arquivos. SBR durante a compilação ou a montagem.
 
@@ -45,5 +45,5 @@ Ver [página de propriedades gerais (projeto)](../../ide/general-property-page-p
 
 ## <a name="see-also"></a>Consulte também
 
-[Ferramentas de build de C/C++](../../build/reference/c-cpp-build-tools.md)<br/>
-[Referência de BSCMAKE](../../build/reference/bscmake-reference.md)
+[Ferramentas de Build do MSVC adicionais](c-cpp-build-tools.md)<br/>
+[Referência de BSCMAKE](bscmake-reference.md)

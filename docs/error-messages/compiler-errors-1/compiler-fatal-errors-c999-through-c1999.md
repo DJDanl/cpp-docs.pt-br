@@ -160,14 +160,13 @@ helpviewer_keywords:
 - C1852
 - C1901
 - C1903
-- C1904
 ms.assetid: 6c8df109-7594-48ed-987a-97d9fe2b04af
-ms.openlocfilehash: edf2227bd0a542ce9ca5e8a6a3f908347bd816e6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1159a635f0c7a61e591b4d96c4e55bd2baf44782
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677325"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57814443"
 ---
 # <a name="compiler-fatal-errors-c999-through-c1999"></a>Erros fatais do compilador C999 até C1999
 
@@ -224,7 +223,7 @@ Os artigos nesta seção da documentação explicam um subconjunto das mensagens
 |Erro fatal C1063|limite do compilador: estouro de pilha do compilador|
 |[Erro fatal C1064](../../error-messages/compiler-errors-1/fatal-error-c1064.md)|limite do compilador: token estourou o buffer interno|
 |[Erro fatal C1065](../../error-messages/compiler-errors-1/fatal-error-c1065.md)|limite do compilador: sem marcas|
-|[Erro fatal C1067](../../error-messages/compiler-errors-1/fatal-error-c1067.md)|limite do compilador: limite de 64 mil em tamanho de um registro de tipo foi excedido|
+|[Erro fatal C1067](../../error-messages/compiler-errors-1/fatal-error-c1067.md)|limite do compilador: Limite de 64 mil em tamanho de um registro de tipo foi excedido|
 |Erro fatal C1068|não é possível abrir o arquivo '*arquivo*'|
 |Erro fatal C1069|não é possível ler a linha de comando do compilador|
 |Erro fatal C1070|incompatíveis #if / #endif emparelhar no arquivo '*arquivo*'|
@@ -234,7 +233,7 @@ Os artigos nesta seção da documentação explicam um subconjunto das mensagens
 |[Erro fatal C1075](../../error-messages/compiler-errors-1/fatal-error-c1075.md)|à esquerda *token* foi sem correspondência no final do arquivo|
 |[Erro fatal C1076](../../error-messages/compiler-errors-1/fatal-error-c1076.md)|limite do compilador: limite de heap interno atingido; Use /Zm para especificar um limite superior|
 |Erro fatal C1077|limite do compilador: não é possível ter mais de *número* opções de linha de comando|
-|[Erro fatal C1079](../../error-messages/compiler-errors-1/fatal-error-c1079.md)|limite do compilador: limite de tamanho de arquivo PCH excedido|
+|[Erro fatal C1079](../../error-messages/compiler-errors-1/fatal-error-c1079.md)|limite do compilador: Limite de tamanho de arquivo PCH excedido|
 |[Erro fatal C1080](../../error-messages/compiler-errors-1/fatal-error-c1080.md)|limite do compilador: limite excedido para a opção de linha de comando do *número* caracteres|
 |[Erro fatal C1081](../../error-messages/compiler-errors-1/fatal-error-c1081.md)|'*arquivo*': nome de arquivo muito longo|
 |Erro fatal C1082|não é possível fechar *tipo* arquivo: '*arquivo*': *mensagem*|
@@ -265,7 +264,7 @@ Os artigos nesta seção da documentação explicam um subconjunto das mensagens
 |Erro fatal C1111|número excessivo de parâmetros de modelo/genérico|
 |Erro fatal C1112|limite do compilador: `'number`' muitos argumentos de macro, apenas *número* permitido|
 |[Erro fatal C1113](../../error-messages/compiler-errors-1/fatal-error-c1113.md)|#using falhou em '*arquivo*'|
-|Erro fatal C1114|'*arquivo*': WinRT não oferece suporte a #using de um assembly gerenciado|
+|Erro fatal C1114|'*file*': WinRT não oferece suporte a #using de um assembly gerenciado|
 |[Erro fatal C1120](../../error-messages/compiler-errors-1/fatal-error-c1120.md)|chamada a GetProcAddress falhou para '*função*'|
 |[Erro fatal C1121](../../error-messages/compiler-errors-1/fatal-error-c1121.md)|chamada a CryptoAPI falhou|
 |[Erro fatal C1126](../../error-messages/compiler-errors-1/fatal-error-c1126.md)|a alocação automática excede *tamanho*|

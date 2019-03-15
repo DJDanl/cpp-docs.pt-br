@@ -2,16 +2,16 @@
 title: Configurando programas para Windows XP
 ms.date: 02/02/2018
 ms.assetid: 1e4487b3-d815-4123-878b-5718b22f0fd5
-ms.openlocfilehash: 73fc66c358f2bfa390177557da2f114f225cec1a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 989a4e2c7e91c05498902bf1c5cb9d838ee47c3b
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50582735"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57814287"
 ---
 # <a name="configuring-programs-for-windows-xp"></a>Configurando programas para Windows XP
 
-Como o Visual Studio oferece suporte a vários conjuntos de ferramentas de plataforma, você pode direcionar os sistemas operacionais e bibliotecas de tempo de execução que não têm suporte pelo conjunto de ferramentas padrão. Por exemplo, alternando o conjunto de ferramentas de plataforma, você pode usar o c++11, c++14 e aprimoramentos de linguagem C + + 17 suportados pelo compilador Visual C++ no Visual Studio para criar aplicativos destinados ao Windows XP e Windows Server 2003. Você pode também usar conjuntos de ferramentas de plataforma mais antigos para manter o código herdado de compatíveis com o binário e ainda aproveitar os recursos mais recentes do IDE do Visual Studio.
+Como o Visual Studio oferece suporte a vários conjuntos de ferramentas de plataforma, você pode direcionar os sistemas operacionais e bibliotecas de tempo de execução que não têm suporte pelo conjunto de ferramentas padrão. Por exemplo, alternando o conjunto de ferramentas de plataforma, você pode usar o c++11, c++14 e aprimoramentos de linguagem C + + 17 suportados pelo compilador MSVC no Visual Studio para criar aplicativos destinados ao Windows XP e Windows Server 2003. Você pode também usar conjuntos de ferramentas de plataforma mais antigos para manter o código herdado de compatíveis com o binário e ainda aproveitar os recursos mais recentes do IDE do Visual Studio.
 
 ## <a name="install-the-windows-xp-platform-toolset"></a>Instalar o conjunto de ferramentas de plataforma do Windows XP
 

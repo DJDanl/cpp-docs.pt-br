@@ -10,12 +10,12 @@ helpviewer_keywords:
 - migration [C++], /clr compiler option
 - /clr compiler option [C++], porting to
 ms.assetid: c9290b8b-436a-4510-8b56-eae51f4a9afc
-ms.openlocfilehash: 02e678f98773f9ae7bb4f611210329a7a1116f17
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 8c4827891799d2c76a344e4c6da8f3d96333826e
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57749107"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816018"
 ---
 # <a name="how-to-migrate-to-clr"></a>Como: Migrar para /clr
 
@@ -98,7 +98,7 @@ Essa etapa tem implicações diferentes para projetos que usam makefiles. Neste 
 **/CLR** podem ser selecionadas no ambiente de desenvolvimento, seguindo as instruções [/clr (compilação de tempo de execução de linguagem comum)](../build/reference/clr-common-language-runtime-compilation.md). Conforme mencionado anteriormente, esta etapa desabilitará automaticamente as configurações conflitantes do projeto.
 
 > [!NOTE]
->  Ao atualizar uma biblioteca gerenciada ou o projeto de serviço web do Visual C++ 2003, o **/Zl** será de opção de compilador adicionado para o **linha de comando** página de propriedades. Isso fará com que LNK2001. Remova **/Zl** da **linha de comando** página de propriedades para resolver. Ver [/Zl (omitir nome da biblioteca padrão)](../build/reference/zl-omit-default-library-name.md) e [trabalhando com propriedades do projeto](../ide/working-with-project-properties.md) para obter mais informações. Ou, adicionar Msvcrt. lib e msvcmrt para o vinculador **dependências adicionais** propriedade.
+>  Ao atualizar uma biblioteca gerenciada ou o projeto de serviço web do Visual C++ 2003, o **/Zl** será de opção de compilador adicionado para o **linha de comando** página de propriedades. Isso fará com que LNK2001. Remova **/Zl** da **linha de comando** página de propriedades para resolver. Ver [/Zl (omitir nome da biblioteca padrão)](../build/reference/zl-omit-default-library-name.md) e [definir compilador e propriedades de compilação](../build/working-with-project-properties.md) para obter mais informações. Ou, adicionar Msvcrt. lib e msvcmrt para o vinculador **dependências adicionais** propriedade.
 
 Para projetos criados com makefiles, opções do compilador incompatível devem estar desabilitadas manualmente uma vez **/clr** é adicionado. Consulte /[/clr restrições](../build/reference/clr-restrictions.md) para obter informações sobre opções de compilador que não são compatíveis com **/clr**.
 

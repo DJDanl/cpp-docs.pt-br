@@ -12,12 +12,12 @@ helpviewer_keywords:
 - LINK tool [C++], options for full linking
 - incremental linking
 ms.assetid: 135656ff-94fa-4ad4-a613-22e1a2a5d16b
-ms.openlocfilehash: 60cec41173afc9955bddf9df0bd6796b5df6285c
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 189affe57694a8369e9cf7ac98815cc5888b69aa
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414077"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816133"
 ---
 # <a name="incremental-link-incrementally"></a>/INCREMENTAL (vincular de maneira incremental)
 
@@ -54,7 +54,7 @@ A maioria dos programas pode ser vinculada incrementalmente. Entretanto, algumas
 
 - /ORDER está selecionado
 
-/INCREMENTAL é inferido quando [/Debug](../../build/reference/debug-generate-debug-info.md) for especificado.
+/INCREMENTAL é inferido quando [/Debug](debug-generate-debug-info.md) for especificado.
 
 Além disso, o LINK executa uma vinculação completa se qualquer uma das seguintes situações ocorrer:
 
@@ -72,7 +72,7 @@ Além disso, o LINK executa uma vinculação completa se qualquer uma das seguin
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do vinculador no ambiente de desenvolvimento do Visual Studio
 
-1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, confira [Trabalhando com propriedades do projeto](../../ide/working-with-project-properties.md).
+1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [propriedades de compilador e de build definida C++ no Visual Studio](../working-with-project-properties.md).
 
 1. Selecione o **vinculador** pasta.
 
@@ -86,5 +86,5 @@ Além disso, o LINK executa uma vinculação completa se qualquer uma das seguin
 
 ## <a name="see-also"></a>Consulte também
 
-[Definindo opções de vinculador](../../build/reference/setting-linker-options.md)<br/>
-[Opções do vinculador](../../build/reference/linker-options.md)
+[Referência de vinculador MSVC](linking.md)<br/>
+[Opções do vinculador MSVC](linker-options.md)

@@ -9,16 +9,16 @@ helpviewer_keywords:
 - debugging [C++], debug information files
 - Yd compiler option [C++]
 ms.assetid: c5a699fe-65ce-461e-964c-7f5eb2a8320a
-ms.openlocfilehash: 55bb8197cd15243f65c90d7fbd2724f91fce23b4
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: e6719226d28088d10da6c4f0e6caf3bdb78bea27
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414870"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820150"
 ---
 # <a name="yd-place-debug-information-in-object-file"></a>/Yd (colocar informações de depuração no arquivo de projeto)
 
-À prova completa de informações em todos os arquivos de objeto de depuração criado de um arquivo de cabeçalho pré-compilado (. pch) quando usado com o [/Yc](../../build/reference/yc-create-precompiled-header-file.md) e [/Z7](../../build/reference/z7-zi-zi-debug-information-format.md) opções. Preterido.
+À prova completa de informações em todos os arquivos de objeto de depuração criado de um arquivo de cabeçalho pré-compilado (. pch) quando usado com o [/Yc](yc-create-precompiled-header-file.md) e [/Z7](z7-zi-zi-debug-information-format.md) opções. Preterido.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -28,9 +28,9 @@ ms.locfileid: "57414870"
 
 ## <a name="remarks"></a>Comentários
 
-**/Yd** foi preterido; Visual C++ agora dá suporte a vários objetos de gravar em um arquivo. PDB única, use **/Zi** em vez disso. Para obter uma lista de opções do compilador preterido, consulte **preteridos e removidos opções do compilador** na [opções de compilador listadas por categoria](../../build/reference/compiler-options-listed-by-category.md).
+**/Yd** foi preterido; Visual C++ agora dá suporte a vários objetos de gravar em um arquivo. PDB única, use **/Zi** em vez disso. Para obter uma lista de opções do compilador preterido, consulte **preteridos e removidos opções do compilador** na [opções de compilador listadas por categoria](compiler-options-listed-by-category.md).
 
-A menos que você precisa distribuir informações de depuração que contém uma biblioteca, use o [/Zi](../../build/reference/z7-zi-zi-debug-information-format.md) opção em vez de **/Z7** e **/Yd**.
+A menos que você precisa distribuir informações de depuração que contém uma biblioteca, use o [/Zi](z7-zi-zi-debug-information-format.md) opção em vez de **/Z7** e **/Yd**.
 
 Armazenar informações de depuração completas em todos os arquivos. obj só é necessário para distribuir as bibliotecas que contêm informações de depuração. Ele reduz a compilação e exige espaço em disco considerável. Quando **/Yc** e **/Z7** são usados sem **/Yd**, o compilador armazena informações de depuração comuns no primeiro arquivo. obj criado a partir do arquivo. pch. O compilador não inserir essas informações em arquivos. obj criados posteriormente do arquivo. pch; ele insere referências cruzadas para as informações. Não importa quantos arquivos. obj usam o arquivo. pch, apenas um arquivo. obj contém as informações de depuração comuns.
 
@@ -38,13 +38,13 @@ Embora essa resultados de comportamento padrão com mais rapidez tempos de build
 
 Para obter mais informações sobre cabeçalhos pré-compilados, consulte:
 
-- [/Y (cabeçalhos pré-compilados)](../../build/reference/y-precompiled-headers.md)
+- [/Y (cabeçalhos pré-compilados)](y-precompiled-headers.md)
 
-- [Criando arquivos de cabeçalho pré-compilado](../../build/reference/creating-precompiled-header-files.md)
+- [Arquivos de cabeçalho pré-compilado](../creating-precompiled-header-files.md)
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio
 
-1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, confira [Trabalhando com propriedades do projeto](../../ide/working-with-project-properties.md).
+1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [propriedades de compilador e de build definida C++ no Visual Studio](../working-with-project-properties.md).
 
 1. Clique o **C/C++** pasta.
 
@@ -83,5 +83,5 @@ Se o cabeçalho pré-compilado não foi compilado com **/Z7**, você ainda pode 
 
 ## <a name="see-also"></a>Consulte também
 
-[Opções do Compilador](../../build/reference/compiler-options.md)<br/>
-[Definindo opções do compilador](../../build/reference/setting-compiler-options.md)
+[Opções do compilador MSVC](compiler-options.md)<br/>
+[Sintaxe de linha de comando do compilador MSVC](compiler-command-line-syntax.md)

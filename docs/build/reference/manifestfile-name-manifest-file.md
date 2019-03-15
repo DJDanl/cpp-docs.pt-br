@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -MANIFESTFILE linker option
 - /MANIFESTFILE linker option
 ms.assetid: befa5ab2-a9cf-4c9b-969a-e7b4a930f08d
-ms.openlocfilehash: b30e0239eaca365e738ae6568f159715673fd139
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: e75c6d8171aae22312ba6aaa2d4304d831ec6d0f
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424542"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57813832"
 ---
 # <a name="manifestfile-name-manifest-file"></a>/MANIFESTFILE (nomear arquivo de manifesto)
 
@@ -25,11 +25,11 @@ ms.locfileid: "57424542"
 
 /MANIFESTFILE permite alterar o nome padrão do arquivo de manifesto.  O nome padrão do arquivo de manifesto é o nome do arquivo. manifest junto.
 
-/MANIFESTFILE não terá efeito se você também vincular [/manifest](../../build/reference/manifest-create-side-by-side-assembly-manifest.md).
+/MANIFESTFILE não terá efeito se você também vincular [/manifest](manifest-create-side-by-side-assembly-manifest.md).
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do vinculador no ambiente de desenvolvimento do Visual Studio
 
-1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, confira [Trabalhando com propriedades do projeto](../../ide/working-with-project-properties.md).
+1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [propriedades de compilador e de build definida C++ no Visual Studio](../working-with-project-properties.md).
 
 1. Expanda o nó **Propriedades de Configuração**.
 
@@ -45,5 +45,5 @@ ms.locfileid: "57424542"
 
 ## <a name="see-also"></a>Consulte também
 
-[Definindo opções de vinculador](../../build/reference/setting-linker-options.md)<br/>
-[Opções do vinculador](../../build/reference/linker-options.md)
+[Referência de vinculador MSVC](linking.md)<br/>
+[Opções do vinculador MSVC](linker-options.md)

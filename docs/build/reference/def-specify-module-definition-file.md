@@ -11,12 +11,12 @@ helpviewer_keywords:
 - module definition files
 - /DEF linker option
 ms.assetid: 6497fa68-65f0-48ca-8f66-b87166fc631a
-ms.openlocfilehash: 4b6490186e2faf289844f7fb6b84f5a1c27b10a5
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: c08412fb50835485e7941b2bb1db088943387b71
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57423490"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807436"
 ---
 # <a name="def-specify-module-definition-file"></a>/DEF (especificar arquivo de definição do módulo)
 
@@ -31,11 +31,11 @@ O nome de um arquivo de definição de módulo (. def) a serem passados para o v
 
 ## <a name="remarks"></a>Comentários
 
-A opção /DEF passa um arquivo de definição de módulo (. def) para o vinculador. Apenas um arquivo. def pode ser especificado para LINK. Para obter detalhes sobre os arquivos. def, consulte [arquivos de definição de módulo](../../build/reference/module-definition-dot-def-files.md).
+A opção /DEF passa um arquivo de definição de módulo (. def) para o vinculador. Apenas um arquivo. def pode ser especificado para LINK. Para obter detalhes sobre os arquivos. def, consulte [arquivos de definição de módulo](module-definition-dot-def-files.md).
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do vinculador no ambiente de desenvolvimento do Visual Studio
 
-1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [configuração de propriedades do projeto Visual C++](../../ide/working-with-project-properties.md).
+1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [propriedades de compilador e de build definida C++ no Visual Studio](../working-with-project-properties.md).
 
 1. Clique o **vinculador** pasta.
 
@@ -51,5 +51,5 @@ Para especificar um arquivo. def de dentro do ambiente de desenvolvimento, você
 
 ## <a name="see-also"></a>Consulte também
 
-[Definindo opções de vinculador](../../build/reference/setting-linker-options.md)<br/>
-[Opções do vinculador](../../build/reference/linker-options.md)
+[Referência de vinculador MSVC](linking.md)<br/>
+[Opções do vinculador MSVC](linker-options.md)

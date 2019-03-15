@@ -14,16 +14,16 @@ helpviewer_keywords:
 - frame window classes [MFC], created by application wizards
 - CMainFrame class [MFC]
 ms.assetid: 9947df73-4470-49a0-ac61-7b6ee401a74e
-ms.openlocfilehash: a0610ae901b817a1c8f7707d9ba87c15d634e134
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 46da8fc0cb98406bdf97285d7c6f824afd61c4bb
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57298055"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57808346"
 ---
 # <a name="frame-window-classes-created-by-the-application-wizard"></a>Classes de janela com moldura criadas pelo Assistente de Aplicativo
 
-Quando você usa o [Assistente para aplicativo](../ide/creating-desktop-projects-by-using-application-wizards.md) para criar um aplicativo de esqueleto, além de aplicativos, documentos e classes de exibição, o Assistente de aplicativo cria uma classe derivada da janela do quadro de janela de quadro principal do seu aplicativo. A classe é chamada `CMainFrame` por padrão e os arquivos que contêm a ele são nomeados MAINFRM. H e MAINFRM. CPP.
+Quando você criar um novo MFC de projeto das **novo projeto** caixa de diálogo, além de aplicativos, documentos e classes de exibição, o Assistente de aplicativo cria uma classe derivada da janela do quadro de janela de quadro principal do seu aplicativo. A classe é chamada `CMainFrame` por padrão e os arquivos que contêm a ele são nomeados MAINFRM. H e MAINFRM. CPP.
 
 Se seu aplicativo SDI, sua `CMainFrame` classe é derivada da classe [CFrameWnd](../mfc/reference/cframewnd-class.md).
 
@@ -36,4 +36,5 @@ Essas classes de janela com moldura funcionam conforme criados, mas para aprimor
 ## <a name="see-also"></a>Consulte também
 
 [Classes de janela com moldura](../mfc/frame-window-classes.md)<br/>
-[Programa MFC ou origem de controle e arquivos de cabeçalho](../ide/mfc-program-or-control-source-and-header-files.md)
+[Programa MFC ou origem de controle e arquivos de cabeçalho](../build/reference/mfc-program-or-control-source-and-header-files.md)
+

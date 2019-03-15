@@ -2,12 +2,12 @@
 title: Definições de estrutura e constante
 ms.date: 11/04/2016
 ms.assetid: 1df7cf46-b853-4788-a257-100d5c37997f
-ms.openlocfilehash: 47ecc8b91492139f3b8295ecabe4662bda5f8e1c
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: ea7aa1ec25bcd0e8531ef63848de26da164da668
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57417041"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57813345"
 ---
 # <a name="structure-and-constant-definitions"></a>Definições de estrutura e constante
 
@@ -71,4 +71,4 @@ typedef struct ImgDelayDescr {
 
 ## <a name="see-also"></a>Consulte também
 
-[Noções básicas sobre a função auxiliar](../../build/reference/understanding-the-helper-function.md)
+[Noções básicas sobre a função auxiliar](understanding-the-helper-function.md)

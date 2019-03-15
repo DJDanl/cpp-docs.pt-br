@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -ZW
 - Windows Runtime compiler option
 ms.assetid: 0fe362b0-9526-498b-96e0-00d7a965a248
-ms.openlocfilehash: 944d66de3c029d9731a225281b4e592c477806e9
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: a16482cf8d21651db9486ab19c347a4ccadf5279
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57417977"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57809425"
 ---
 # <a name="zw-windows-runtime-compilation"></a>/ZW (Compilação de Tempo de Execução do Windows)
 
@@ -34,7 +34,7 @@ Quando você usa **/ZW** para compilar, sempre especifique **/EHsc** também.
 ## <a name="arguments"></a>Arguments
 
 **nostdlib**<br/>
-Indica que Platform.winmd, Windows.Foundation.winmd e outros arquivos padrão de metadados do Windows (.winmd) não são incluídos automaticamente na compilação. Em vez disso, você deve usar o [/FU (nome forçado #using arquivo)](../../build/reference/fu-name-forced-hash-using-file.md) opção de compilador para especificar explicitamente os arquivos de metadados do Windows.
+Indica que Platform.winmd, Windows.Foundation.winmd e outros arquivos padrão de metadados do Windows (.winmd) não são incluídos automaticamente na compilação. Em vez disso, você deve usar o [/FU (nome forçado #using arquivo)](fu-name-forced-hash-using-file.md) opção de compilador para especificar explicitamente os arquivos de metadados do Windows.
 
 ## <a name="remarks"></a>Comentários
 
@@ -44,7 +44,7 @@ Quando você especifica o **/ZW** opção, o compilador dá suporte a esses recu
 
 - Automático-contagem de referência de objetos de tempo de execução do Windows e o descarte automático de um objeto quando sua contagem de referência chega a zero.
 
-Como o vinculador incremental não oferece suporte a metadados do Windows incluídos em arquivos. obj usando a **/ZW** opção, o [/Gm (habilitar recompilação mínima)](../../build/reference/gm-enable-minimal-rebuild.md) opção é incompatível com **/ZW** .
+Como o vinculador incremental não oferece suporte a metadados do Windows incluídos em arquivos. obj usando a **/ZW** opção, o [/Gm (habilitar recompilação mínima)](gm-enable-minimal-rebuild.md) opção é incompatível com **/ZW** .
 
 Para obter mais informações, consulte [referência de linguagem do Visual C++](../../cppcx/visual-c-language-reference-c-cx.md).
 
@@ -52,5 +52,5 @@ Para obter mais informações, consulte [referência de linguagem do Visual C++]
 
 ## <a name="see-also"></a>Consulte também
 
-[Opções do Compilador](../../build/reference/compiler-options.md)<br/>
-[Definindo opções do compilador](../../build/reference/setting-compiler-options.md)
+[Opções do compilador MSVC](compiler-options.md)<br/>
+[Sintaxe de linha de comando do compilador MSVC](compiler-command-line-syntax.md)

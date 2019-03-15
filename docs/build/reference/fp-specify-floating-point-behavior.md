@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -fp compiler option [C++]
 - /fp compiler option [C++]
 ms.assetid: 10469d6b-e68b-4268-8075-d073f4f5d57e
-ms.openlocfilehash: c571bf104fd7e8f6a287c3dd35c444d904b4b7e8
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.openlocfilehash: 616efc0980c6ddadfee078dbe7a382372c5636ec
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54894088"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57818161"
 ---
 # <a name="fp-specify-floating-point-behavior"></a>/FP (Especificar comportamento de ponto flutuante)
 
@@ -51,7 +51,7 @@ Sob **/fp: strict**, o compilador gera código que permite que o programa remove
 
 #### <a name="fast"></a>Rápida
 
-O **Fast** opção permite que o compilador reordenar, combinar ou simplificar as operações de ponto flutuantes para otimizar o código de ponto flutuante para velocidade e espaço. O compilador pode omitir o arredondamento em instruções de atribuição, typecasts ou chamadas de função. Ele pode reordenar operações ou executar transformações algébricas, por exemplo, pelo uso das leis associativas e distributivas, mesmo que essas transformações resultam em comportamento de arredondamento nitidamente diferente. Por causa dessa otimização aprimorada, o resultado de alguns cálculos de ponto flutuante pode ser diferentes das produzidas por outros **/fp** opções. Valores especiais (NaN, + infinity, - infinity, -0,0) não podem ser propagadas ou se comportam estritamente de acordo com o padrão IEEE-754. Contrações de ponto flutuantes podem ser geradas sob **Fast**. O compilador ainda está associado, a arquitetura subjacente sob **Fast**, e as otimizações adicionais podem estar disponíveis por meio do uso das [/arch](../../build/reference/arch-minimum-cpu-architecture.md) opção.
+O **Fast** opção permite que o compilador reordenar, combinar ou simplificar as operações de ponto flutuantes para otimizar o código de ponto flutuante para velocidade e espaço. O compilador pode omitir o arredondamento em instruções de atribuição, typecasts ou chamadas de função. Ele pode reordenar operações ou executar transformações algébricas, por exemplo, pelo uso das leis associativas e distributivas, mesmo que essas transformações resultam em comportamento de arredondamento nitidamente diferente. Por causa dessa otimização aprimorada, o resultado de alguns cálculos de ponto flutuante pode ser diferentes das produzidas por outros **/fp** opções. Valores especiais (NaN, + infinity, - infinity, -0,0) não podem ser propagadas ou se comportam estritamente de acordo com o padrão IEEE-754. Contrações de ponto flutuantes podem ser geradas sob **Fast**. O compilador ainda está associado, a arquitetura subjacente sob **Fast**, e as otimizações adicionais podem estar disponíveis por meio do uso das [/arch](arch-minimum-cpu-architecture.md) opção.
 
 Sob **Fast**, o compilador gera código devem ser executados no ambiente de ponto flutuante padrão e pressupõe que o ambiente de ponto flutuante não é acessado ou modificado em tempo de execução. Ou seja, ele pressupõe que o código não remover a máscara das exceções de ponto flutuante, ler ou gravar os registros de status de ponto flutuante ou alterar modos de arredondamento.
 
@@ -67,7 +67,7 @@ Observe que **/fp: except** não habilita todas as exceções de ponto flutuante
 
 Vários **/fp** opções podem ser especificadas na mesma linha de comando do compilador. Somente um dos **/fp: strict**, **Fast**, e **/fp: preciso** opções podem estar em vigor por vez. Se mais de uma dessas opções for especificada na linha de comando, a opção posterior terá precedência e o compilador gera um aviso. O **/fp: strict** e **/fp: except** opções não são compatíveis com **/clr**.
 
-O [/Za](../../build/reference/za-ze-disable-language-extensions.md) opção (compatibilidade com ANSI) não é compatível com **/fp**.
+O [/Za](za-ze-disable-language-extensions.md) opção (compatibilidade com ANSI) não é compatível com **/fp**.
 
 ### <a name="using-pragmas-to-control-floating-point-behavior"></a>Usando Pragmas para controlar o comportamento de ponto flutuante
 
@@ -256,7 +256,7 @@ Sob **/O2** **Fast** o código gerado seja simplificado, porque todas as convers
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio
 
-1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, confira [Trabalhando com propriedades do projeto](../../ide/working-with-project-properties.md).
+1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [propriedades de compilador e de build definida C++ no Visual Studio](../working-with-project-properties.md).
 
 1. Selecione o **propriedades de configuração** > **C/C++** > **geração de código** página de propriedades.
 
@@ -268,6 +268,6 @@ Sob **/O2** **Fast** o código gerado seja simplificado, porque todas as convers
 
 ## <a name="see-also"></a>Consulte também
 
-[Opções do Compilador](compiler-options.md)<br/>
-[Definindo opções do compilador](setting-compiler-options.md)<br/>
-[Microsoft Visual C++ para otimização de ponto flutuante](floating-point-optimization.md)<br/>
+[Opções do compilador MSVC](compiler-options.md)<br/>
+[Sintaxe de linha de comando do compilador MSVC](compiler-command-line-syntax.md)<br/>
+[Otimização de ponto flutuante MSVC](floating-point-optimization.md)<br/>

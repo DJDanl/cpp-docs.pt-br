@@ -5,12 +5,12 @@ helpviewer_keywords:
 - non-MFC DLLs [C++]
 - DLLs [C++], non-MFC
 ms.assetid: 1ed5d1ee-e20c-47d7-801d-87ea26a73842
-ms.openlocfilehash: 2363d9ab13e120ab72a30628a7c37c411e8de3a2
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 14cbdadd8c66d6fdf282f644102a6d4a783893b5
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414519"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57809282"
 ---
 # <a name="non-mfc-dlls-overview"></a>DLLs não MFC: Visão geral
 
@@ -20,22 +20,22 @@ Para obter mais informações sobre DLLs não MFC, consulte [bibliotecas de vín
 
 ## <a name="what-do-you-want-to-do"></a>O que você deseja fazer?
 
-- [Passo a passo: Criando e usando uma biblioteca de vínculo dinâmico](../build/walkthrough-creating-and-using-a-dynamic-link-library-cpp.md)
+- [Passo a passo: Criando e usando uma biblioteca de vínculo dinâmico](walkthrough-creating-and-using-a-dynamic-link-library-cpp.md)
 
-- [Exportação de uma DLL](../build/exporting-from-a-dll.md)
+- [Exportação de uma DLL](exporting-from-a-dll.md)
 
-- [Vincular um executável a uma DLL](../build/linking-an-executable-to-a-dll.md)
+- [Vincular um executável a uma DLL](linking-an-executable-to-a-dll.md)
 
-- [Inicialize um DLL](../build/run-time-library-behavior.md#initializing-a-dll)
+- [Inicialize um DLL](run-time-library-behavior.md#initializing-a-dll)
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Que mais você deseja saber?
 
-- [DLLs MFC regulares vinculadas estaticamente ao MFC](../build/regular-dlls-statically-linked-to-mfc.md)
+- [DLLs MFC regulares vinculadas estaticamente ao MFC](regular-dlls-statically-linked-to-mfc.md)
 
-- [DLLs MFC regulares vinculadas dinamicamente ao MFC](../build/regular-dlls-dynamically-linked-to-mfc.md)
+- [DLLs MFC regulares vinculadas dinamicamente ao MFC](regular-dlls-dynamically-linked-to-mfc.md)
 
-- [DLLs de extensão de MFC: visão geral](../build/extension-dlls-overview.md)
+- [DLLs de extensão de MFC: visão geral](extension-dlls-overview.md)
 
 ## <a name="see-also"></a>Consulte também
 
-[Tipos de DLLs](../build/kinds-of-dlls.md)
+[Tipos de DLLs](kinds-of-dlls.md)

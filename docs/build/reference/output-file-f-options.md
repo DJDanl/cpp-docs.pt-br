@@ -8,40 +8,40 @@ helpviewer_keywords:
 - output files, compiler options [C++]
 - cl.exe compiler, output files
 ms.assetid: f6367f30-2710-4178-b43a-639eed824acb
-ms.openlocfilehash: c1fcc7066c04b347f0d8106ac4bf2088e83de6bc
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 38db548bb71f8dc3e21cb1d544ba70d4fdebb6b7
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57415507"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807371"
 ---
 # <a name="output-file-f-options"></a>Opções do arquivo de saída (/F)
 
 As opções de arquivo de saída criar ou renomear arquivos de saída. Elas afetam todos os arquivos de origem C ou C++ especificados na variável de ambiente CL, na linha de comando ou em qualquer arquivo de comando.
 
-- [/FA, /Fa (arquivo de listagem)](../../build/reference/fa-fa-listing-file.md)
+- [/FA, /Fa (arquivo de listagem)](fa-fa-listing-file.md)
 
-- [Especificando o nome de caminho](../../build/reference/specifying-the-pathname.md)
+- [Especificando o nome de caminho](specifying-the-pathname.md)
 
-- [/FD (nomear arquivo PDB)](../../build/reference/fd-program-database-file-name.md)
+- [/FD (nomear arquivo PDB)](fd-program-database-file-name.md)
 
-- [/Fe (nomear arquivo EXE)](../../build/reference/fe-name-exe-file.md)
+- [/Fe (nomear arquivo EXE)](fe-name-exe-file.md)
 
-- [/FI (nomear arquivo de inclusão forçada)](../../build/reference/fi-name-forced-include-file.md)
+- [/FI (nomear arquivo de inclusão forçada)](fi-name-forced-include-file.md)
 
-- [/Fm (nomear mapfile)](../../build/reference/fm-name-mapfile.md)
+- [/Fm (nomear mapfile)](fm-name-mapfile.md)
 
-- [/FO (nomear arquivo de objeto)](../../build/reference/fo-object-file-name.md)
+- [/FO (nomear arquivo de objeto)](fo-object-file-name.md)
 
-- [/FP (nomear o arquivo. pch)](../../build/reference/fp-name-dot-pch-file.md)
+- [/FP (nomear o arquivo. pch)](fp-name-dot-pch-file.md)
 
-- [/FR, /Fr (Create .sbr File)](../../build/reference/fr-fr-create-dot-sbr-file.md)
+- [/FR, /Fr (Create .sbr File)](fr-fr-create-dot-sbr-file.md)
 
-- [/FU (nomear arquivo #using forçado)](../../build/reference/fu-name-forced-hash-using-file.md)
+- [/FU (nomear arquivo #using forçado)](fu-name-forced-hash-using-file.md)
 
-- [/Fx (mesclar código inserido)](../../build/reference/fx-merge-injected-code.md)
+- [/Fx (mesclar código inserido)](fx-merge-injected-code.md)
 
 ## <a name="see-also"></a>Consulte também
 
-[Opções do Compilador](../../build/reference/compiler-options.md)<br/>
-[Definindo opções do compilador](../../build/reference/setting-compiler-options.md)
+[Opções do compilador MSVC](compiler-options.md)<br/>
+[Sintaxe de linha de comando do compilador MSVC](compiler-command-line-syntax.md)

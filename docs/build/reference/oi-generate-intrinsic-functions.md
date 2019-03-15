@@ -12,12 +12,12 @@ helpviewer_keywords:
 - -Oi compiler option [C++]
 - generate intrinsic functions compiler option [C++]
 ms.assetid: fa4a3bf6-0ed8-481b-91c0-add7636132b4
-ms.openlocfilehash: 1dc7f5f183e7dffb65c31ebb9bc47b30776b81e3
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: f3afedade6f99129c21069e5117daa4ceb616cc2
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57422111"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57811882"
 ---
 # <a name="oi-generate-intrinsic-functions"></a>/Oi (gerar funções intrínsecas)
 
@@ -41,7 +41,7 @@ Ver [intrínseco](../../preprocessor/intrinsic.md) para obter mais informações
 
 As funções de ponto flutuantes intrínsecas não executa nenhuma verificação especiais nos valores de entrada e então funcionam em intervalos restringidos de entrada e tem o tratamento de exceção diferentes e condições de limite que as rotinas da biblioteca com o mesmo nome. Usar as formas intrínsecas reais implica em perda de manipulação de exceção do IEEE e perda de `_matherr` e `errno` funcionalidade; o último implica em perda de conformidade com ANSI. No entanto, as formas intrínsecas podem acelerar consideravelmente programas intensivos de ponto flutuante e, para muitos programas, os problemas de conformidade são pouco valor prático.
 
-Você pode usar o [Za](../../build/reference/za-ze-disable-language-extensions.md) opção de compilador para substituir a geração das opções de ponto flutuantes intrínsecas true. Nesse caso, as funções são geradas como rotinas de biblioteca que passam argumentos diretamente para o chip de ponto flutuante em vez de enviá-los para a pilha do programa.
+Você pode usar o [Za](za-ze-disable-language-extensions.md) opção de compilador para substituir a geração das opções de ponto flutuantes intrínsecas true. Nesse caso, as funções são geradas como rotinas de biblioteca que passam argumentos diretamente para o chip de ponto flutuante em vez de enviá-los para a pilha do programa.
 
 **END x86 específico**
 
@@ -49,7 +49,7 @@ Você também usar [intrínseco](../../preprocessor/intrinsic.md) para criar fun
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio
 
-1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, confira [Trabalhando com propriedades do projeto](../../ide/working-with-project-properties.md).
+1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [propriedades de compilador e de build definida C++ no Visual Studio](../working-with-project-properties.md).
 
 1. Clique o **C/C++** pasta.
 
@@ -63,7 +63,7 @@ Você também usar [intrínseco](../../preprocessor/intrinsic.md) para criar fun
 
 ## <a name="see-also"></a>Consulte também
 
-[Opções /O (otimizar código)](../../build/reference/o-options-optimize-code.md)<br/>
-[Opções do Compilador](../../build/reference/compiler-options.md)<br/>
-[Definindo opções do compilador](../../build/reference/setting-compiler-options.md)<br/>
+[Opções /O (otimizar código)](o-options-optimize-code.md)<br/>
+[Opções do compilador MSVC](compiler-options.md)<br/>
+[Sintaxe de linha de comando do compilador MSVC](compiler-command-line-syntax.md)<br/>
 [Intrínsecos do compilador](../../intrinsics/compiler-intrinsics.md)

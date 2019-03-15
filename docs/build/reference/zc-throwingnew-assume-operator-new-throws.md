@@ -11,12 +11,12 @@ helpviewer_keywords:
 - /Zc compiler options (C++)
 - Zc compiler options (C++)
 ms.assetid: 20ff0101-9677-4d83-8c7b-8ec9ca49f04f
-ms.openlocfilehash: 782cb55d30bfb11f55a0074a5c3245dd389323ed
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c8c7b4e7246cc3bb1b3a73cde4f6830eb7178dd2
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50561220"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57813507"
 ---
 # <a name="zcthrowingnew-assume-operator-new-throws"></a>/ZC: throwingnew (pressupor novos acionamentos de operador)
 
@@ -30,7 +30,7 @@ Quando o **/ZC: throwingnew** opção for especificada, o compilador otimiza o c
 
 Desde o ISO c++98, o padrão tiver especificado que o padrão [operador new](../../standard-library/new-operators.md#op_new) lança `std::bad_alloc` quando ocorrer falha de alocação de memória. Versões do Visual C++ para Visual Studio 6.0 retornou um ponteiro nulo em uma falha de alocação. A partir do Visual Studio 2002, `operator new` está em conformidade com o padrão e gerará em caso de falha. Para dar suporte a código que usa o estilo de alocação mais antigo, o Visual Studio fornece uma implementação vinculável de `operator new` em nothrownew que retorna um ponteiro nulo em caso de falha. Por padrão, o compilador também gera defensivas verificações nulas para impedir que um desses alocadores de estilo antigo causando uma falha imediata em caso de falha. O **/ZC: throwingnew** opção instrui o compilador a omitir essas verificações de null, na suposição de que todos os vinculados memória alocadores de acordo com o padrão. Isso não se aplica a explícita não lançamento `operator new` sobrecargas, que são declaradas usando um parâmetro adicional do tipo `std::nothrow_t` e ter uma explícita `noexcept` especificação.
 
-Conceitualmente, para criar um objeto no repositório livre, o compilador gera código para alocar a memória e, em seguida, para invocar o construtor para inicializar a memória. Porque o compilador do Visual C++, normalmente não pode determinar se esse código será vinculado a um alocador não conformes, sem lançamento, por padrão ele também gera uma verificação nula antes de chamar o construtor. Isso impede que um ponteiro nulo na chamada do construtor de desreferência se uma alocação de não lançamento falhar. Na maioria dos casos, essas verificações são desnecessárias, pois o padrão `operator new` alocadores throw em vez de retornar ponteiros nulos. As verificações também tem uma pena efeito colateral. Eles inchar o tamanho do código, eles inundam o indicador de ramificação e inibem a outras otimizações do compilador úteis como devirtualization ou propagação const fora do objeto inicializado. As verificações existem somente ao código de suporte que vincula *nothrownew* ou tiver personalizado não conformes `operator new` implementações. Se você não usar não conformes `operator new`, é recomendável que você use **/ZC: throwingnew** para otimizar seu código.
+Conceitualmente, para criar um objeto no repositório livre, o compilador gera código para alocar a memória e, em seguida, para invocar o construtor para inicializar a memória. Porque o compilador MSVC normalmente não pode determinar se esse código será vinculado a um alocador não conformes, sem lançamento, por padrão ele também gera uma verificação nula antes de chamar o construtor. Isso impede que um ponteiro nulo na chamada do construtor de desreferência se uma alocação de não lançamento falhar. Na maioria dos casos, essas verificações são desnecessárias, pois o padrão `operator new` alocadores throw em vez de retornar ponteiros nulos. As verificações também tem uma pena efeito colateral. Eles inchar o tamanho do código, eles inundam o indicador de ramificação e inibem a outras otimizações do compilador úteis como devirtualization ou propagação const fora do objeto inicializado. As verificações existem somente ao código de suporte que vincula *nothrownew* ou tiver personalizado não conformes `operator new` implementações. Se você não usar não conformes `operator new`, é recomendável que você use **/ZC: throwingnew** para otimizar seu código.
 
 O **/ZC: throwingnew** opção é desativada por padrão e não é afetada pela [/permissive--](permissive-standards-conformance.md) opção.
 
@@ -44,7 +44,7 @@ Para obter mais informações sobre problemas de conformidade no Visual C++, con
 
 ## <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio
 
-1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, confira [Trabalhando com propriedades do projeto](../../ide/working-with-project-properties.md).
+1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [propriedades de compilador e de build definida C++ no Visual Studio](../working-with-project-properties.md).
 
 1. Dos **Configuration** menu suspenso, escolha **todas as configurações de**.
 
@@ -54,9 +54,9 @@ Para obter mais informações sobre problemas de conformidade no Visual C++, con
 
 ## <a name="see-also"></a>Consulte também
 
-[Opções do Compilador](../../build/reference/compiler-options.md)<br/>
-[Definindo opções do compilador](../../build/reference/setting-compiler-options.md)<br/>
-[/Zc (conformidade)](../../build/reference/zc-conformance.md)<br/>
+[Opções do compilador MSVC](compiler-options.md)<br/>
+[Sintaxe de linha de comando do compilador MSVC](compiler-command-line-syntax.md)<br/>
+[/Zc (conformidade)](zc-conformance.md)<br/>
 [noexcept (C++)](../../cpp/noexcept-cpp.md)<br/>
 [Especificações de exceção (lançar) (C++)](../../cpp/exception-specifications-throw-cpp.md)<br/>
 [encerrar (exceção)](../../standard-library/exception-functions.md#terminate)<br/>

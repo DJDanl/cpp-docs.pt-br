@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Win32, console applications
 - console applications, Win32
 ms.assetid: aedfb6b3-ca1f-4e8e-8439-1b680810ee47
-ms.openlocfilehash: b66117f64445c47cc37c25c6713815bd7daa0950
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3644878e0562f535489a64a8c490c8c755054ff6
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50538834"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820761"
 ---
 # <a name="creating-a-console-application"></a>Criar um Aplicativo de console
 
@@ -20,7 +20,7 @@ A maneira mais fácil para criar um aplicativo de console Win32 é usar o **Assi
 
 ### <a name="to-create-a-win32-console-application"></a>Para criar um aplicativo de console Win32
 
-1. Siga as instruções do tópico da Ajuda [Criando um projeto com um assistente de aplicativo do Visual C++](../ide/creating-desktop-projects-by-using-application-wizards.md).
+1. Siga as instruções no tópico da Ajuda [criar um projeto de aplicativo de console C++](../get-started/tutorial-console-cpp.md).
 
 2. No **novo projeto** caixa de diálogo, selecione **projeto de Console Win32** no **modelos** painel para abrir o assistente.
 
@@ -35,4 +35,4 @@ A maneira mais fácil para criar um aplicativo de console Win32 é usar o **Assi
 
 [Projetos de console](/visualstudio/debugger/debugging-preparation-console-projects)<br/>
 [Adicionando funcionalidade com assistentes de código](../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
-[Páginas de propriedade](../ide/property-pages-visual-cpp.md)
+[Páginas de propriedade](../build/reference/property-pages-visual-cpp.md)

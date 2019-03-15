@@ -5,12 +5,12 @@ f1_keywords:
 - /guard
 - VC.Project.VCCLCompilerTool.ControlFlowGuard
 ms.assetid: be495323-f59f-4cf3-a6b6-8ee69e6a19dd
-ms.openlocfilehash: 1d79f4b20499d964d407af61fa498b4579b6794d
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: e6a8a1545b97976cbe82d1c81b0e70c3dac3a266
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424074"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807397"
 ---
 # <a name="guard-enable-control-flow-guard"></a>/guard (habilitar proteção do fluxo de controle)
 
@@ -30,17 +30,17 @@ O **/Guard: CF** opção faz com que o compilador analisar o fluxo de controle p
 
 Quando o **/Guard: CF** opção de proteção de fluxo de controle (CFG) for especificada, o compilador e vinculador inserir verificações de segurança de tempo de execução extra para detectar tentativas de comprometer seu código. Durante a compilação e vinculação, todas as chamadas indiretas em seu código são analisadas para localizar todos os locais que o código pode acessar quando ele é executado corretamente. Essas informações são armazenadas em estruturas adicionais nos cabeçalhos de seus binários. O compilador também injeta uma verificação antes de cada chamada indireta em seu código que garante que o destino é um dos locais verificados. Se a verificação falhar em tempo de execução em um sistema operacional com suporte a CFG, o sistema operacional fecha o programa.
 
-Um ataque comum no software tira proveito de bugs na manipulação de entradas extremas ou inesperadas. Concebidas cuidadosamente entrada para o aplicativo pode substituir um local que contém um ponteiro para o código executável. Isso pode ser usado para redirecionar o fluxo de controle para o código controlado pelo invasor. As verificações de tempo de execução CFG não corrigir os bugs de corrupção de dados em seu executável. Eles em vez disso, torna mais difícil para um invasor usá-los para executar código arbitrário. CFG é uma ferramenta de atenuação que impede chamadas para locais diferentes pontos de entrada de função em seu código. Ele é semelhante a como prevenção de execução de dados (DEP), [/GS](../../build/reference/gs-buffer-security-check.md) , as verificações de pilha e [/DYNAMICBASE](../../build/reference/dynamicbase-use-address-space-layout-randomization.md) e [/HIGHENTROPYVA](../../build/reference/highentropyva-support-64-bit-aslr.md) randomização de layout de espaço (ASLR) mais baixa de endereços a chances de que seu código se torna um vetor de exploração.
+Um ataque comum no software tira proveito de bugs na manipulação de entradas extremas ou inesperadas. Concebidas cuidadosamente entrada para o aplicativo pode substituir um local que contém um ponteiro para o código executável. Isso pode ser usado para redirecionar o fluxo de controle para o código controlado pelo invasor. As verificações de tempo de execução CFG não corrigir os bugs de corrupção de dados em seu executável. Eles em vez disso, torna mais difícil para um invasor usá-los para executar código arbitrário. CFG é uma ferramenta de atenuação que impede chamadas para locais diferentes pontos de entrada de função em seu código. Ele é semelhante a como prevenção de execução de dados (DEP), [/GS](gs-buffer-security-check.md) , as verificações de pilha e [/DYNAMICBASE](dynamicbase-use-address-space-layout-randomization.md) e [/HIGHENTROPYVA](highentropyva-support-64-bit-aslr.md) randomização de layout de espaço (ASLR) mais baixa de endereços a chances de que seu código se torna um vetor de exploração.
 
 O **/Guard: CF** opção deve ser passada para os dois o compilador e vinculador para compilar o código que usa o CFG explorar técnica de mitigação. Se o binário é criado usando um único `cl` de comando, o compilador passa a opção para o vinculador. Se você compilar e vincular separadamente, a opção deve ser definida em comandos do compilador e vinculador. A opção de vinculador /DYNAMICBASE também é necessária. Para verificar se o seu binário tem dados CFG, use o `dumpbin /headers /loadconfig` comando. Tem habilitado o CFG binários `Guard` na lista de características EXE ou DLL e os sinalizadores de proteção incluem `CF Instrumented` e `FID table present`.
 
-O **/Guard: CF** opção é incompatível com [/ZI](../../build/reference/z7-zi-zi-debug-information-format.md) (Edit and Continue informações de depuração) ou [/clr](../../build/reference/clr-common-language-runtime-compilation.md) (Common Language Runtime Compilation).
+O **/Guard: CF** opção é incompatível com [/ZI](z7-zi-zi-debug-information-format.md) (Edit and Continue informações de depuração) ou [/clr](clr-common-language-runtime-compilation.md) (Common Language Runtime Compilation).
 
 Código compilado usando **/Guard: CF** podem ser vinculados a bibliotecas e arquivos que não são compilados usando a opção de objeto. Somente nesse código, quando também vinculado usando o **/Guard: CF** opção e executar em um sistema operacional com suporte a CFG, tem proteção CFG. Porque o código compilado sem a opção não irá parar um ataque, é recomendável que você use a opção em todo o código que você compilar. Há um pequeno tempo de execução de custo para CFG verificações, mas a análise do compilador tenta otimizar as verificações de saltos indiretos que podem ser comprovados para ser seguro.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio
 
-1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, confira [Trabalhando com propriedades do projeto](../../ide/working-with-project-properties.md).
+1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [propriedades de compilador e de build definida C++ no Visual Studio](../working-with-project-properties.md).
 
 1. Selecione **propriedades de configuração**, **C/C++**, **geração de código**.
 
@@ -50,5 +50,5 @@ Código compilado usando **/Guard: CF** podem ser vinculados a bibliotecas e arq
 
 ## <a name="see-also"></a>Consulte também
 
-[Opções do Compilador](../../build/reference/compiler-options.md)<br/>
-[Definindo opções do compilador](../../build/reference/setting-compiler-options.md)
+[Opções do compilador MSVC](compiler-options.md)<br/>
+[Sintaxe de linha de comando do compilador MSVC](compiler-command-line-syntax.md)
