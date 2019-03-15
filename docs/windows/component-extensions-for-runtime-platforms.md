@@ -9,12 +9,12 @@ helpviewer_keywords:
 - keywords [C++]
 - Managed Extensions for C++, replacement syntax
 ms.assetid: 1e400ee6-3ac9-4910-a608-9d3d5993e423
-ms.openlocfilehash: 3b29b2e8b00aa436d1687cdbbd5f299f4787c71b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e9586244c9e2293ba6b484efb158fc3a2529c0ea
+ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50432351"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57814482"
 ---
 # <a name="component-extensions-for-net-and-uwp"></a>Extensões de componentes para .NET e UWP
 
@@ -41,7 +41,7 @@ A tabela a seguir lista as palavras-chave na extensão de linguagem C++.
 |-------------|-----------------------|-------------|---------------|
 |**classe ref**<br /><br /> **estrutura ref**|Não|Declara uma classe.|[Classes e Structs](../windows/classes-and-structs-cpp-component-extensions.md)|
 |**classe de valor**<br /><br /> **estrutura de valor**|Não|Declara uma classe de valor.|[Classes e Structs](../windows/classes-and-structs-cpp-component-extensions.md)|
-|**classe de interface**<br /><br /> **estrutura de interface**|Não|Declara uma interface.|[classe de interface](../windows/interface-class-cpp-component-extensions.md)|
+|**classe de interface**<br /><br /> **interface struct**|Não|Declara uma interface.|[classe de interface](../windows/interface-class-cpp-component-extensions.md)|
 |**classe de enum**<br /><br /> **Enum struct**|Não|Declara uma enumeração.|[classe de enum](../windows/enum-class-cpp-component-extensions.md)|
 |**propriedade**|Sim|Declara uma propriedade.|[propriedade](../windows/property-cpp-component-extensions.md)|
 |**delegate**|Sim|Declara um delegado.|[delegate (C++/CLI e C++/CX)](../windows/delegate-cpp-component-extensions.md)|
@@ -49,7 +49,7 @@ A tabela a seguir lista as palavras-chave na extensão de linguagem C++.
 
 ## <a name="override-specifiers"></a>Especificadores de Substituição
 
-Você pode usar as seguintes palavras-chave para qualificar o comportamento de substituição para derivação. Embora o **novo** palavra-chave não é uma extensão do C++, ele está listado aqui, porque ele pode ser usado em um contexto adicional. Alguns especificadores também são válidas para programação nativa. Para obter mais informações, consulte [como: declarar especificadores de substituição em compilações nativas (C + + / CLI)](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md).
+Você pode usar as seguintes palavras-chave para qualificar o comportamento de substituição para derivação. Embora o **novo** palavra-chave não é uma extensão do C++, ele está listado aqui, porque ele pode ser usado em um contexto adicional. Alguns especificadores também são válidas para programação nativa. Para obter mais informações, confira [Como: Declarar especificadores de substituição em compilações nativas (C + + / CLI)](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md).
 
 |Palavra-chave|Sensíveis ao contexto|Finalidade|Referência|
 |-------------|-----------------------|-------------|---------------|
@@ -64,7 +64,7 @@ As seguintes palavras-chave foram adicionadas para dar suporte a tipos genérico
 
 |Palavra-chave|Sensíveis ao contexto|Finalidade|
 |-------------|-----------------------|-------------|
-|**Genérico**|Não|Declara um tipo genérico.|
+|**generic**|Não|Declara um tipo genérico.|
 |**where**|Sim|Especifica as restrições que são aplicadas a um parâmetro de tipo genérico.|
 
 ## <a name="miscellaneous-keywords"></a>Diversas palavras-chave
@@ -75,9 +75,9 @@ As seguintes palavras-chave foram adicionadas às extensões do C++.
 |-------------|-----------------------|-------------|---------------|
 |**finally**|Sim|Indica o comportamento de handlings de exceção padrão.|[Tratamento de Exceção](../windows/exception-handling-cpp-component-extensions.md)|
 |**for each, in**|Não|Enumera os elementos de uma coleção.|[for each, in](../dotnet/for-each-in.md)|
-|**gcnew**|Não|Aloca tipos no heap coletado como lixo. Use em vez de **novos** e **excluir**.|[REF gcnew de novo,](../windows/ref-new-gcnew-cpp-component-extensions.md)|
-|**REF new**|Sim|Aloca um tipo de tempo de execução do Windows. Use em vez de **novos** e **excluir**.|[REF gcnew de novo,](../windows/ref-new-gcnew-cpp-component-extensions.md)|
-|**InitOnly**|Sim|Indica que um membro só pode ser inicializado na declaração ou em um construtor estático.|[initonly (C++/CLI)](../dotnet/initonly-cpp-cli.md)|
+|**gcnew**|Não|Aloca tipos no heap coletado como lixo. Use em vez de **novos** e **excluir**.|[ref new, gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md)|
+|**ref new**|Sim|Aloca um tipo de tempo de execução do Windows. Use em vez de **novos** e **excluir**.|[ref new, gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md)|
+|**initonly**|Sim|Indica que um membro só pode ser inicializado na declaração ou em um construtor estático.|[initonly (C++/CLI)](../dotnet/initonly-cpp-cli.md)|
 |**literal**|Sim|Cria uma variável de literal.|[literal](../windows/literal-cpp-component-extensions.md)|
 |**nullptr**|Não|Indica que um identificador ou ponteiro não faz referência a um objeto.|[nullptr](../windows/nullptr-cpp-component-extensions.md)|
 
@@ -90,8 +90,8 @@ As seguintes construções de linguagem são implementadas como modelos, em vez 
 |**array**|Declara uma matriz.|[Matrizes](../windows/arrays-cpp-component-extensions.md)|
 |**interior_ptr**|(CLR) Pontos de dados em um tipo de referência.|[interior_ptr (C++/CLI)](../windows/interior-ptr-cpp-cli.md)|
 |**pin_ptr**|(CLR) Aponta para os tipos de referência CLR para suprimir temporariamente o sistema de coleta de lixo.|[pin_ptr (C++/CLI)](../windows/pin-ptr-cpp-cli.md)|
-|**Safe_cast**|Determina e executa o método de conversão ideal para um tipo de tempo de execução.|[Safe_cast](../windows/safe-cast-cpp-component-extensions.md)|
-|**TypeId**|(CLR) Recupera um <xref:System.Type?displayProperty=fullName> objeto que descreve o tipo de dado ou objeto.|[TypeId](../windows/typeid-cpp-component-extensions.md)|
+|**safe_cast**|Determina e executa o método de conversão ideal para um tipo de tempo de execução.|[safe_cast](../windows/safe-cast-cpp-component-extensions.md)|
+|**typeid**|(CLR) Recupera um <xref:System.Type?displayProperty=fullName> objeto que descreve o tipo de dado ou objeto.|[typeid](../windows/typeid-cpp-component-extensions.md)|
 
 ## <a name="declarators"></a>Declaradores
 
@@ -111,7 +111,7 @@ Esta seção lista as construções de programação adicionais e tópicos que p
 |[__identifier (C++/CLI)](../windows/identifier-cpp-cli.md)|(Tempo de execução do Windows e CLR) Permite o uso de palavras-chave como identificadores.|
 |[Listas de argumentos variáveis (...) (C++/CLI)](../windows/variable-argument-lists-dot-dot-dot-cpp-cli.md)|(Tempo de execução do Windows e CLR) Permite que uma função para obter um número variável de argumentos.|
 |[Equivalentes do .NET Framework aos tipos nativos do C++ (C++/CLI)](../dotnet/dotnet-framework-equivalents-to-cpp-native-types-cpp-cli.md)|Lista os tipos CLR que são usados no lugar de tipos integrais do C++.|
-|[AppDomain](../cpp/appdomain.md) **declspec** modificador|**declspec** modificador que exige a existem de variáveis estáticas e globais por appdomain.|
+|[appdomain](../cpp/appdomain.md) **__declspec** modifier|**declspec** modificador que exige a existem de variáveis estáticas e globais por appdomain.|
 |[Conversões C-Style com /clr (C + + / CLI)](../windows/c-style-casts-with-clr-cpp-cli.md)|Descreve como conversões de estilo C são interpretados.|
 |[clrcall](../cpp/clrcall.md) convenção de chamada|Indica a convenção de chamada compatíveis com CLR.|
 |`__cplusplus_cli`|[Macros predefinidas](../preprocessor/predefined-macros.md)|
@@ -122,13 +122,13 @@ Esta seção lista as construções de programação adicionais e tópicos que p
 |[Conversão boxing](../windows/boxing-cpp-component-extensions.md)|Demonstra as condições nas quais valores de tipos de conversão boxing são realizados.|
 |[Suporte a compilador para características de tipo](../windows/compiler-support-for-type-traits-cpp-component-extensions.md)|Discute como detectar as características de tipos em tempo de compilação.|
 |[gerenciado, não gerenciado](../preprocessor/managed-unmanaged.md) pragmas|Demonstra como gerenciadas e funções podem coexistir no mesmo módulo.|
-|[processo](../cpp/process.md) **declspec** modificador|**declspec** modificador que rege a maneira que as variáveis globais e estáticas existem por processo.|
+|[process](../cpp/process.md) **__declspec** modifier|**declspec** modificador que rege a maneira que as variáveis globais e estáticas existem por processo.|
 |[Reflexão (C++/CLI)](../dotnet/reflection-cpp-cli.md)|Demonstra a versão do CLR de informações de tipo de tempo de execução.|
 |[Cadeia de caracteres](../windows/string-cpp-component-extensions.md)|Discute a conversão de compilador de literais de cadeia de caracteres para <xref:System.String>.|
 |[Encaminhamento de tipo (C++/CLI)](../windows/type-forwarding-cpp-cli.md)|Permite a movimentação de um tipo em um assembly de envio para outro assembly para que o código do cliente não precisa ser recompilado.|
 |[Atributos definidos pelo usuário](../windows/user-defined-attributes-cpp-component-extensions.md)|Demonstra os atributos definidos pelo usuário.|
 |[Diretiva #using](../preprocessor/hash-using-directive-cpp.md)|Importa os assemblies externos.|
-|[Documentação XML](../ide/xml-documentation-visual-cpp.md)|Explica a documentação de código com base em XML usando [/doc (processar comentários de documentação) (C/C++)](../build/reference/doc-process-documentation-comments-c-cpp.md)|
+|[Documentação XML](../build/reference/xml-documentation-visual-cpp.md)|Explica a documentação de código com base em XML usando [/doc (processar comentários de documentação) (C/C++)](../build/reference/doc-process-documentation-comments-c-cpp.md)|
 
 ## <a name="see-also"></a>Consulte também
 

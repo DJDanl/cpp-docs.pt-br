@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0020
 ms.assetid: 54bb8cd4-af7c-4d62-8125-3ab5ff5f2cc4
-ms.openlocfilehash: a4529507ea25e2ea988929e421a43471668e3851
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2e9a35d17bd3365d5f4ad3166b440b94fb521e0c
+ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50575029"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57818317"
 ---
 # <a name="project-build-error-prj0020"></a>Erro de Build PRJ0020 no Projeto
 
@@ -21,4 +21,4 @@ O nome do arquivo *arquivo*, especificado na propriedade *propriedade* para a fe
 
 Você pode ter usado uma macro desconhecida ou inválida.
 
-Ver [configuração de propriedades do projeto Visual C++](../../ide/working-with-project-properties.md) para obter informações sobre como acessar as propriedades do projeto.
+Ver [configuração de propriedades do projeto Visual C++](../../build/working-with-project-properties.md) para obter informações sobre como acessar as propriedades do projeto.
