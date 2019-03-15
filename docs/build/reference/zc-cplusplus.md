@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - -Zc:__cplusplus compiler option (C++)
 - __cplusplus macro (C++)
-ms.openlocfilehash: 8e73d93ae0618a04bdcc8476fadb6cc2aab595b4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 89545f541f32374a47dce7f87958e61873c1b47c
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50623984"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810088"
 ---
 # <a name="zccplusplus-enable-updated-cplusplus-macro"></a>/ZC:__cplusplus (habilitar macro de cplusplus atualizado)
 
@@ -19,7 +19,7 @@ O **/Zc:__cplusplus** compilador opção habilita a  **\_ \_cplusplus** macro do
 
 ## <a name="syntax"></a>Sintaxe
 
-> **/ZC:__cplusplus**[**-**]
+> **/Zc:__cplusplus**[**-**]
 
 ## <a name="remarks"></a>Comentários
 
@@ -27,13 +27,13 @@ O  **\_ \_cplusplus** macro do pré-processador normalmente é usado para suport
 
 Quando o **/Zc:__cplusplus** opção estiver habilitada, o valor relatado pelo  **\_ \_cplusplus** macro depende o [/std](std-specify-language-standard-version.md) switch de versão configuração. Esta tabela mostra os valores possíveis para a macro:
 
-|Comutador /ZC:__cplusplus|comutador /std:c++|valor de cplusplus|
+|Comutador /ZC:__cplusplus|/std:c++ switch|__cplusplus value|
 |-|-|-|
-ZC:__cplusplus|/std: c + + 14 (padrão)|L 201402
-ZC:__cplusplus|/std: c + + 17|L 201703
-ZC:__cplusplus|/std: c + + mais recente|L 201704
-ZC:__cplusplus-(desabilitado)|Qualquer valor|L 199711
-Não especificado|Qualquer valor|L 199711
+Zc:__cplusplus|/std: c + + 14 (padrão)|201402L
+Zc:__cplusplus|/std:c++17|201703L
+Zc:__cplusplus|/std:c++latest|201704L
+ZC:__cplusplus-(desabilitado)|Qualquer valor|199711L
+Não especificado|Qualquer valor|199711L
 
 O compilador não oferece suporte a comutadores de padrões para c++98, c++03 ou c++11.
 
@@ -41,7 +41,7 @@ Para mais refinados de detecção de alterações para o conjunto de ferramentas
 
 ### <a name="to-set-this-compiler-option-in-visual-studio"></a>Para definir essa opção do compilador no Visual Studio
 
-1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, confira [Trabalhando com propriedades do projeto](../../ide/working-with-project-properties.md).
+1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [propriedades de compilador e de build definida C++ no Visual Studio](../working-with-project-properties.md).
 
 1. Selecione o **propriedades de configuração** > **C/C++** > **linha de comando** página de propriedades.
 

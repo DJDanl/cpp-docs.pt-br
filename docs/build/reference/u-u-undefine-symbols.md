@@ -13,12 +13,12 @@ helpviewer_keywords:
 - /U compiler option [C++]
 - U compiler option [C++]
 ms.assetid: 7bc0474f-6d1f-419b-807d-0d8816763b2a
-ms.openlocfilehash: 59522b462f2393dd3fd4d8afefe9cbbe0e519203
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: bfc03ebd5c900bf8bf81b4a50eed02111baf85ee
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57413037"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822477"
 ---
 # <a name="u-u-undefine-symbols"></a>/U, /u (indefinir símbolos)
 
@@ -46,18 +46,18 @@ Por padrão, o compilador define símbolos de específico da Microsoft a seguir.
 
 |Símbolo|Função|
 |------------|--------------|
-|_CHAR_UNSIGNED|O tipo char padrão não está assinado. Definido quando o [/J](../../build/reference/j-default-char-type-is-unsigned.md) opção for especificada.|
-|_CPPRTTI|Definido para o código compilado com o [/GR](../../build/reference/gr-enable-run-time-type-information.md) opção.|
-|_CPPUNWIND|Definido para o código compilado com o [/EHsc](../../build/reference/eh-exception-handling-model.md) opção.|
-|_DLL|Definido quando o [/MD](../../build/reference/md-mt-ld-use-run-time-library.md) opção for especificada.|
+|_CHAR_UNSIGNED|O tipo char padrão não está assinado. Definido quando o [/J](j-default-char-type-is-unsigned.md) opção for especificada.|
+|_CPPRTTI|Definido para o código compilado com o [/GR](gr-enable-run-time-type-information.md) opção.|
+|_CPPUNWIND|Definido para o código compilado com o [/EHsc](eh-exception-handling-model.md) opção.|
+|_DLL|Definido quando o [/MD](md-mt-ld-use-run-time-library.md) opção for especificada.|
 |_M_IX86|Por padrão, definido como 600 para x86 de destinos.|
 |_MSC_VER|Para obter mais informações, consulte [Macros predefinidas](../../preprocessor/predefined-macros.md).|
 |_WIN32|Definido para aplicativos WIN32. Sempre definido.|
-|_MT|Definido quando o [/MD ou /MT](../../build/reference/md-mt-ld-use-run-time-library.md) opção for especificada.|
+|_MT|Definido quando o [/MD ou /MT](md-mt-ld-use-run-time-library.md) opção for especificada.|
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio
 
-1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, confira [Trabalhando com propriedades do projeto](../../ide/working-with-project-properties.md).
+1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [propriedades de compilador e de build definida C++ no Visual Studio](../working-with-project-properties.md).
 
 1. Clique o **C/C++** pasta.
 
@@ -71,9 +71,9 @@ Por padrão, o compilador define símbolos de específico da Microsoft a seguir.
 
 ## <a name="see-also"></a>Consulte também
 
-[Opções do Compilador](../../build/reference/compiler-options.md)<br/>
-[Definindo opções do compilador](../../build/reference/setting-compiler-options.md)<br/>
-[/J (o tipo char padrão não é assinado)](../../build/reference/j-default-char-type-is-unsigned.md)<br/>
-[/GR (habilitar informações de tipo em tempo de execução)](../../build/reference/gr-enable-run-time-type-information.md)<br/>
-[/EH (modelo de tratamento de exceções)](../../build/reference/eh-exception-handling-model.md)<br/>
-[/MD, /MT, /LD (usar biblioteca de tempo de execução)](../../build/reference/md-mt-ld-use-run-time-library.md)
+[Opções do compilador MSVC](compiler-options.md)<br/>
+[Sintaxe de linha de comando do compilador MSVC](compiler-command-line-syntax.md)<br/>
+[/J (o tipo char padrão não é assinado)](j-default-char-type-is-unsigned.md)<br/>
+[/GR (habilitar informações de tipo em tempo de execução)](gr-enable-run-time-type-information.md)<br/>
+[/EH (modelo de tratamento de exceções)](eh-exception-handling-model.md)<br/>
+[/MD, /MT, /LD (usar biblioteca de tempo de execução)](md-mt-ld-use-run-time-library.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - /TLS dumpbin option
 - -TLS dumpbin option
 ms.assetid: 2b3f48f9-cac4-4351-b15c-2833b43bc709
-ms.openlocfilehash: 1760e94046a950f67d3c3fd7ef13aa40ca7de47a
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 751c212398f3d309b1d31d204291fe3a0503cf06
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57417782"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57811856"
 ---
 # <a name="tls"></a>/TLS
 
@@ -28,4 +28,4 @@ IMAGE_TLS_DIRECTORY é definido em Winnt. h.
 
 ## <a name="see-also"></a>Consulte também
 
-[Opções de DUMPBIN](../../build/reference/dumpbin-options.md)
+[Opções de DUMPBIN](dumpbin-options.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - -IMPLIB linker option
 - import libraries, overriding default name
 ms.assetid: fe8f71ab-7055-41b5-8ef8-2b97cfa4a432
-ms.openlocfilehash: 8d3793b11e7bd0430c94d89f9d40ec3627c4eb20
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: dc9a9220d55f7831a00f70ec155cc5b57a695818
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57413349"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57821307"
 ---
 # <a name="implib-name-import-library"></a>/IMPLIB (nomear biblioteca de importações)
 
@@ -32,15 +32,15 @@ A opção de /IMPLIB substitui o nome padrão para a biblioteca de importação 
 
 - O [dllexport](../../cpp/dllexport-dllimport.md) palavra-chave no código-fonte
 
-- [Exportações](../../build/reference/exports.md) instrução em um arquivo. def
+- [Exportações](exports.md) instrução em um arquivo. def
 
-- Uma [/exportação](../../build/reference/export-exports-a-function.md) especificação em um comando LINK
+- Uma [/exportação](export-exports-a-function.md) especificação em um comando LINK
 
-O LINK ignora /IMPLIB quando uma biblioteca de importação não está sendo criada. Se nenhuma exportação forem especificadas, o LINK não cria uma biblioteca de importação. Se um arquivo de exportação é usado na compilação, o LINK pressupõe que uma biblioteca de importação já existe e não cria uma. Para obter informações sobre bibliotecas de importação e exportação de arquivos, consulte [referência de LIB](../../build/reference/lib-reference.md).
+O LINK ignora /IMPLIB quando uma biblioteca de importação não está sendo criada. Se nenhuma exportação forem especificadas, o LINK não cria uma biblioteca de importação. Se um arquivo de exportação é usado na compilação, o LINK pressupõe que uma biblioteca de importação já existe e não cria uma. Para obter informações sobre bibliotecas de importação e exportação de arquivos, consulte [referência de LIB](lib-reference.md).
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do vinculador no ambiente de desenvolvimento do Visual Studio
 
-1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [configuração de propriedades do projeto Visual C++](../../ide/working-with-project-properties.md).
+1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [propriedades de compilador e de build definida C++ no Visual Studio](../working-with-project-properties.md).
 
 1. Clique o **vinculador** pasta.
 
@@ -54,5 +54,5 @@ O LINK ignora /IMPLIB quando uma biblioteca de importação não está sendo cri
 
 ## <a name="see-also"></a>Consulte também
 
-[Definindo opções de vinculador](../../build/reference/setting-linker-options.md)<br/>
-[Opções do vinculador](../../build/reference/linker-options.md)
+[Referência de vinculador MSVC](linking.md)<br/>
+[Opções do vinculador MSVC](linker-options.md)

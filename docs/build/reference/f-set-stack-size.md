@@ -10,12 +10,12 @@ helpviewer_keywords:
 - /F compiler option [C++]
 - stack, setting size
 ms.assetid: 17320b6f-8305-445b-9ec2-75833f4b29e0
-ms.openlocfilehash: 31d694c176afd3c79cde172248bfcd93d1346b54
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 9db595daa7de7820b594a8515ece7481b4382c98
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414441"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820410"
 ---
 # <a name="f-set-stack-size"></a>/F (definir tamanho da pilha)
 
@@ -38,13 +38,13 @@ Talvez você precise aumentar o tamanho da pilha, se seu programa obtém mensage
 
 Você também pode definir o tamanho da pilha:
 
-- Usando o **/Stack** a opção de vinculador. Para obter mais informações, consulte [/Stack](../../build/reference/stack.md).
+- Usando o **/Stack** a opção de vinculador. Para obter mais informações, consulte [/Stack](stack.md).
 
-- Usando EDITBIN no arquivo .exe. Para obter mais informações, consulte [referência de EDITBIN](../../build/reference/editbin-reference.md).
+- Usando EDITBIN no arquivo .exe. Para obter mais informações, consulte [referência de EDITBIN](editbin-reference.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio
 
-1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, confira [Trabalhando com propriedades do projeto](../../ide/working-with-project-properties.md).
+1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [propriedades de compilador e de build definida C++ no Visual Studio](../working-with-project-properties.md).
 
 1. Selecione o **propriedades de configuração** > **C/C++** > **linha de comando** página de propriedades.
 
@@ -56,5 +56,5 @@ Você também pode definir o tamanho da pilha:
 
 ## <a name="see-also"></a>Consulte também
 
-[Opções do Compilador](../../build/reference/compiler-options.md)<br/>
-[Definindo opções do compilador](../../build/reference/setting-compiler-options.md)
+[Opções do compilador MSVC](compiler-options.md)<br/>
+[Sintaxe de linha de comando do compilador MSVC](compiler-command-line-syntax.md)

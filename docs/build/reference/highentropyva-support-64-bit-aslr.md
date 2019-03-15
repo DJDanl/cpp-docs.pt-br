@@ -2,12 +2,12 @@
 title: /HIGHENTROPYVA (dar suporte a ASLR de 64 bits)
 ms.date: 06/12/2018
 ms.assetid: fe35f9f7-d28e-4694-9aeb-a79db06168e0
-ms.openlocfilehash: a8bd1b2231530c0f1632b244edaf36ee14ed65b8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5ecbbf8bbd8e74f80f2f5b2d7df0d2ef544112fc
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50534791"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57821996"
 ---
 # <a name="highentropyva-support-64-bit-aslr"></a>/HIGHENTROPYVA (dar suporte a ASLR de 64 bits)
 
@@ -15,7 +15,7 @@ Especifica se a imagem executável dá suporte a randomização de layout de esp
 
 ## <a name="syntax"></a>Sintaxe
 
-> **/ HIGHENTROPYVA**[**: NENHUMA**]
+> **/HIGHENTROPYVA**[**:NO**]
 
 ## <a name="remarks"></a>Comentários
 
@@ -27,7 +27,7 @@ Para **/HIGHENTROPYVA** terem um efeito em tempo de carregamento [/DYNAMICBASE](
 
 ### <a name="to-set-this-linker-option-in-visual-studio"></a>Para definir essa opção do vinculador no Visual Studio
 
-1. Abra o projeto **páginas de propriedade** caixa de diálogo. Para obter mais informações, confira [Trabalhando com propriedades do projeto](../../ide/working-with-project-properties.md).
+1. Abra o projeto **páginas de propriedade** caixa de diálogo. Para obter mais informações, consulte [propriedades de compilador e de build definida C++ no Visual Studio](../working-with-project-properties.md).
 
 1. Selecione o **propriedades de configuração** > **vinculador** > **linha de comando** página de propriedades.
 
@@ -35,8 +35,8 @@ Para **/HIGHENTROPYVA** terem um efeito em tempo de carregamento [/DYNAMICBASE](
 
 ## <a name="see-also"></a>Consulte também
 
-- [Definindo opções de vinculador](../../build/reference/setting-linker-options.md)
-- [Opções do vinculador](../../build/reference/linker-options.md)
+- [Referência de vinculador MSVC](linking.md)
+- [Opções do vinculador MSVC](linker-options.md)
 - [/DYNAMICBASE](dynamicbase-use-address-space-layout-randomization.md)
 - [/LARGEADDRESSAWARE](largeaddressaware-handle-large-addresses.md)
 - [Defesas de segurança de Software ISV do Windows](https://msdn.microsoft.com/library/bb430720.aspx)

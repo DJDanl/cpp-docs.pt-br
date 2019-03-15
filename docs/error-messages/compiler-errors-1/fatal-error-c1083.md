@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C1083
 ms.assetid: 97e52df3-e79c-4f85-8f1e-bbd1057d55e7
-ms.openlocfilehash: ae4c6a9f6c41d94aa1e36ba4a79226b49df08b49
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 522bc4a36be59d4e2c9425e50b1238eb9f4aba61
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50628001"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822191"
 ---
 # <a name="fatal-error-c1083"></a>Erro fatal C1083
 
@@ -71,11 +71,11 @@ Até mesmo quando os arquivos de cabeçalho são listados na **Gerenciador de so
 
 Para corrigir esse problema, corrija o caminho que o compilador usa para procurar o arquivo incluído ou importado. Um novo padrão de usos de projeto incluem caminhos de pesquisa. Talvez você precise modificar o caminho de pesquisa de inclusão para adicionar um diretório para seu projeto. Se você estiver compilando na linha de comando, adicione o caminho para o **INCLUDE** variável de ambiente ou o **/I** opção de compilador para especificar o caminho para o arquivo.
 
-Para definir o caminho do diretório de inclusão no Visual Studio, abra o projeto **páginas de propriedade** caixa de diálogo. Selecione **diretórios VC + +** sob **propriedades de configuração** no painel esquerdo e, em seguida, editar o **diretórios de inclusão** propriedade. Para obter mais informações sobre os diretórios por usuário e por projeto pesquisados pelo compilador no Visual Studio, consulte [página de propriedade dos diretórios VC + +](../../ide/vcpp-directories-property-page.md). Para obter mais informações sobre o **/I** opção de compilador, consulte [/I (diretórios de inclusão adicionais)](../../build/reference/i-additional-include-directories.md).
+Para definir o caminho do diretório de inclusão no Visual Studio, abra o projeto **páginas de propriedade** caixa de diálogo. Selecione **diretórios VC + +** sob **propriedades de configuração** no painel esquerdo e, em seguida, editar o **diretórios de inclusão** propriedade. Para obter mais informações sobre os diretórios por usuário e por projeto pesquisados pelo compilador no Visual Studio, consulte [página de propriedade dos diretórios VC + +](../../build/reference/vcpp-directories-property-page.md). Para obter mais informações sobre o **/I** opção de compilador, consulte [/I (diretórios de inclusão adicionais)](../../build/reference/i-additional-include-directories.md).
 
 ## <a name="the-command-line-include-or-lib-environment-is-not-set"></a>A inclusão de linha de comando ou o ambiente LIB não está definido
 
-Quando o compilador é invocado na linha de comando, variáveis de ambiente são geralmente usadas para especificar caminhos de pesquisa. Se o caminho de pesquisa descrito pela **INCLUDE** ou **LIB** variável de ambiente não está definida corretamente, pode ser gerado um erro C1083. É altamente recomendável usar um atalho de prompt de comando do desenvolvedor para definir o ambiente básico para a linha de comando builds. Para obter mais informações, consulte [Build C/C++ na linha de comando](../../build/building-on-the-command-line.md). Para obter mais informações sobre como usar variáveis de ambiente, consulte [como: usar variáveis de ambiente em um Build](/visualstudio/msbuild/how-to-use-environment-variables-in-a-build).
+Quando o compilador é invocado na linha de comando, variáveis de ambiente são geralmente usadas para especificar caminhos de pesquisa. Se o caminho de pesquisa descrito pela **INCLUDE** ou **LIB** variável de ambiente não está definida corretamente, pode ser gerado um erro C1083. É altamente recomendável usar um atalho de prompt de comando do desenvolvedor para definir o ambiente básico para a linha de comando builds. Para obter mais informações, consulte [Build C/C++ na linha de comando](../../build/building-on-the-command-line.md). Para obter mais informações sobre como usar variáveis de ambiente, consulte [como: Usar variáveis de ambiente em um Build](/visualstudio/msbuild/how-to-use-environment-variables-in-a-build).
 
 ## <a name="the-file-may-be-locked-or-in-use"></a>O arquivo pode estar bloqueado ou em uso
 
@@ -87,7 +87,7 @@ Um erro C1083 também pode indicar que a versão incorreta de um arquivo foi inc
 
 ## <a name="the-precompiled-headers-are-not-yet-precompiled"></a>Os cabeçalhos pré-compilados ainda não foram pré-compilados
 
-Quando um projeto é configurado para usar cabeçalhos pré-compilados, os arquivos .pch relevantes precisam ser criados de forma que os arquivos que usam o conteúdo do cabeçalho possam ser compilados. Por exemplo, o arquivo Stdafx cpp é criado automaticamente no diretório do projeto para novos projetos. Compile esse arquivo primeiro para criar os arquivos de cabeçalho pré-compilados. No design do processo de compilação típico, isso é feito automaticamente. Para obter mais informações, consulte [criando arquivos de cabeçalho pré-compilado](../../build/reference/creating-precompiled-header-files.md).
+Quando um projeto é configurado para usar cabeçalhos pré-compilados, os arquivos .pch relevantes precisam ser criados de forma que os arquivos que usam o conteúdo do cabeçalho possam ser compilados. Por exemplo, o arquivo Stdafx cpp é criado automaticamente no diretório do projeto para novos projetos. Compile esse arquivo primeiro para criar os arquivos de cabeçalho pré-compilados. No design do processo de compilação típico, isso é feito automaticamente. Para obter mais informações, consulte [criando arquivos de cabeçalho pré-compilado](../../build/creating-precompiled-header-files.md).
 
 ## <a name="additional-causes"></a>Causas adicionais
 
@@ -116,7 +116,7 @@ O exemplo a seguir gera um erro C1083 quando o arquivo de cabeçalho `"test.h"` 
 #include "stdio.h"  // OK
 ```
 
-Para obter informações sobre como compilar projetos C/C++ no IDE ou na linha de comando e informações sobre como definir variáveis de ambiente, consulte [compilando programas C/C++](../../build/building-c-cpp-programs.md).
+Para obter informações sobre como compilar projetos C/C++ no IDE ou na linha de comando e informações sobre como definir variáveis de ambiente, consulte [projetos e sistemas de build](../../build/projects-and-build-systems-cpp.md).
 
 ## <a name="see-also"></a>Consulte também
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - /Fe compiler option [C++]
 - Fe compiler option [C++]
 ms.assetid: 49f594fd-5e94-45fe-a1bf-7c9f2abb6437
-ms.openlocfilehash: cac4dc0908c86574ef5b57c4436f734f94c0bb49
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5901ef1997cfea84c97b6d91b30335ff7dbc1d9f
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50473405"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57818044"
 ---
 # <a name="fe-name-exe-file"></a>/Fe (nomear arquivo EXE)
 
@@ -23,7 +23,7 @@ Especifica um nome e um diretório para o arquivo de .exe ou a DLL criada pelo c
 
 ## <a name="syntax"></a>Sintaxe
 
-> **/FE**[_pathname_] **/Fe:** _pathname_
+> **/Fe**[_pathname_] **/Fe:** _pathname_
 
 ### <a name="arguments"></a>Arguments
 
@@ -40,11 +40,11 @@ Se você especificar o [/c (compilar sem vinculação)](c-compile-without-linkin
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio
 
-1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, confira [Trabalhando com propriedades do projeto](../../ide/working-with-project-properties.md).
+1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [propriedades de compilador e de build definida C++ no Visual Studio](../working-with-project-properties.md).
 
 1. Abra o **propriedades de configuração** > **vinculador** > **geral** página de propriedades.
 
-1. Modificar a **arquivo de saída** propriedade. Escolher **Okey** para salvar suas alterações.
+1. Modificar a **arquivo de saída** propriedade. Escolha **OK** para salvar suas alterações.
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Para definir essa opção do compilador via programação
 
@@ -68,7 +68,7 @@ CL /FeC:\BIN\ *.C
 
 ## <a name="see-also"></a>Consulte também
 
-[Opções do arquivo de saída (/F)](../../build/reference/output-file-f-options.md)<br/>
-[Opções do Compilador](../../build/reference/compiler-options.md)<br/>
-[Definindo opções do compilador](../../build/reference/setting-compiler-options.md)<br/>
-[Especificando o nome de caminho](../../build/reference/specifying-the-pathname.md)<br/>
+[Opções do arquivo de saída (/F)](output-file-f-options.md)<br/>
+[Opções do compilador MSVC](compiler-options.md)<br/>
+[Sintaxe de linha de comando do compilador MSVC](compiler-command-line-syntax.md)<br/>
+[Especificando o nome de caminho](specifying-the-pathname.md)<br/>

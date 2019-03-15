@@ -7,12 +7,12 @@ helpviewer_keywords:
 - -FUNCTIONPADMIN linker option
 - /FUNCTIONPADMIN linker option
 ms.assetid: 25b02c13-1add-4fbd-add9-fcb30eb2cae7
-ms.openlocfilehash: c1e84f308796eabcaea61518e3731f633c2f67e8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 699da3cea9914b5a10bdf769015d41c33936a902
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50474883"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57818616"
 ---
 # <a name="functionpadmin-create-hotpatchable-image"></a>/FUNCTIONPADMIN (Criar imagem hotpatchable)
 
@@ -29,17 +29,17 @@ A quantidade de preenchimento a ser adicionado ao início de cada função em by
 
 ## <a name="remarks"></a>Comentários
 
-Em ordem para o vinculador produzir uma imagem de hotpatchable, os arquivos. obj devem ter sido compilados com [/hotpatch (Criar imagem de Hotpatchable)](../../build/reference/hotpatch-create-hotpatchable-image.md).
+Em ordem para o vinculador produzir uma imagem de hotpatchable, os arquivos. obj devem ter sido compilados com [/hotpatch (Criar imagem de Hotpatchable)](hotpatch-create-hotpatchable-image.md).
 
 Quando você compila e vincula uma imagem com uma única chamada de cl.exe, **/hotpatch** implica **/functionpadmin**.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do vinculador no ambiente de desenvolvimento do Visual Studio
 
-1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [configuração de propriedades do projeto Visual C++](../../ide/working-with-project-properties.md).
+1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [propriedades de compilador e de build definida C++ no Visual Studio](../working-with-project-properties.md).
 
 1. Selecione o **propriedades de configuração** > **vinculador** > **linha de comando** página de propriedades.
 
-1. Insira o **/FUNCTIONPADMIN** opção **opções adicionais**. Escolher **Okey** para salvar suas alterações.
+1. Insira o **/FUNCTIONPADMIN** opção **opções adicionais**. Escolha **OK** para salvar suas alterações.
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Para definir esta opção do vinculador por meio de programação
 
@@ -47,5 +47,5 @@ Quando você compila e vincula uma imagem com uma única chamada de cl.exe, **/h
 
 ## <a name="see-also"></a>Consulte também
 
-[Definindo opções de vinculador](../../build/reference/setting-linker-options.md)<br/>
-[Opções do vinculador](../../build/reference/linker-options.md)
+[Referência de vinculador MSVC](linking.md)<br/>
+[Opções do vinculador MSVC](linker-options.md)

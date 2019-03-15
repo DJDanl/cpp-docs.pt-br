@@ -12,12 +12,12 @@ helpviewer_keywords:
 - preprocessor, directives
 - COM, type library header file
 ms.assetid: 787d1112-e543-40d7-ab15-a63d43f4030a
-ms.openlocfilehash: 8029adfd5b4f27e097df693c85ee0d711a13dc4e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a7dc30d3e5869e9b0f534a4769d4517a0514c144
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50612362"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822620"
 ---
 # <a name="import-directive-c"></a>Diretiva #import (C++)
 
@@ -72,7 +72,7 @@ Um ou mais [#import atributos](#_predir_the_23import_directive_import_attributes
 #import "..\drawctl\drawctl.tlb" no_namespace, raw_interfaces_only
 ```
 
-\-ou -
+\-ou-
 
 ```cpp
 #import "..\drawctl\drawctl.tlb" no_namespace raw_interfaces_only
@@ -121,14 +121,14 @@ As seguintes otimizações de compilador vêm com o **#import** diretiva:
 
 - Quando **#import** é processado, o compilador verifica primeiro se o cabeçalho existe e está atualizado. Em caso positivo, ele não precisará ser recriado.
 
-O **#import** diretiva também participa da recompilação mínima e pode ser colocada em um arquivo de cabeçalho pré-compilado. Ver [criando arquivos de cabeçalho pré-compilado](../build/reference/creating-precompiled-header-files.md) para obter mais informações.
+O **#import** diretiva também participa da recompilação mínima e pode ser colocada em um arquivo de cabeçalho pré-compilado. Ver [criando arquivos de cabeçalho pré-compilado](../build/creating-precompiled-header-files.md) para obter mais informações.
 
 ###  <a name="_predir_the_primary_type_library_header_file"></a> Arquivo de cabeçalho de biblioteca de tipo principal
 O arquivo de cabeçalho principal da biblioteca de tipos consiste em sete seções:
 
-- Texto clichê de título: inclui comentários, a instrução `#include` para COMDEF.H (que define algumas macros padrão usadas no cabeçalho) e outras informações de configuração.
+- Texto clichê de título: Consiste em comentários, `#include` instrução para COMDEF. H (que define algumas macros padrão usadas no cabeçalho) e outras informações de configuração.
 
-- Referências de encaminhamento e typedefs: consiste em declarações de estrutura como `struct IMyInterface` e typedefs.
+- Referências de encaminhamento e typedefs: Consiste em declarações de estrutura como `struct IMyInterface` e definições de tipo.
 
 - Declarações de ponteiro inteligente: A classe de modelo `_com_ptr_t` é uma implementação de ponteiro inteligente que encapsula ponteiros de interface e elimina a necessidade de chamar `AddRef`, `Release`, `QueryInterface` funções. Além disso, ela oculta a chamada `CoCreateInstance` na criação de um novo objeto COM. Esta seção usa a instrução de macro `_COM_SMARTPTR_TYPEDEF` para estabelecer typedefs de interfaces COM como especializações de modelo a [com_ptr_t](../cpp/com-ptr-t-class.md) classe de modelo. Por exemplo, para a interface `IMyInterface`, o. Arquivos TLH contém:
 
@@ -144,13 +144,13 @@ O arquivo de cabeçalho principal da biblioteca de tipos consiste em sete seçõ
 
    O tipo `IMyInterfacePtr` pode então ser usado no lugar do ponteiro de interface bruto `IMyInterface*`. Consequentemente, não é necessário chamar as várias `IUnknown` funções de membro
 
-- Declarações de TypeInfo: consiste basicamente em definições de classe e outros itens que expõem os itens individuais de typeinfo retornados por `ITypeLib:GetTypeInfo`. Nesta seção, cada typeinfo da biblioteca de tipos é refletido no cabeçalho em um formato que depende das informações de `TYPEKIND`.
+- Declarações de TypeInfo: Consiste basicamente em definições de classe e outros itens que expõem os itens individuais de typeinfo retornados por `ITypeLib:GetTypeInfo`. Nesta seção, cada typeinfo da biblioteca de tipos é refletido no cabeçalho em um formato que depende das informações de `TYPEKIND`.
 
-- Definição de GUID de estilo antigo opcional: contém inicializações das constantes de GUID nomeadas. Esses são os nomes do formulário `CLSID_CoClass` e `IID_Interface`, semelhantes aos gerados pelo compilador MIDL.
+- Definição de GUID de estilo antigo opcional: Contém inicializações das constantes de GUID nomeadas. Esses são os nomes do formulário `CLSID_CoClass` e `IID_Interface`, semelhantes aos gerados pelo compilador MIDL.
 
 - Instrução `#include` para o cabeçalho secundário da biblioteca de tipos.
 
-- Texto clichê de rodapé: atualmente, inclui `#pragma pack(pop)`.
+- Texto clichê de rodapé: Atualmente, inclui `#pragma pack(pop)`.
 
 Todas as seções, exceto a seção de texto clichê título clichê e rodapé, são colocadas em um namespace com o nome especificado pelo `library` instrução no arquivo IDL original. Você pode usar os nomes do cabeçalho de biblioteca de tipos por meio de uma qualificação explícita com o nome do namespace ou incluindo a instrução a seguir:
 

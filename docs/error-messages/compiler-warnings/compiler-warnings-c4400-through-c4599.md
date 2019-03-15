@@ -30,7 +30,6 @@ f1_keywords:
 - C4455
 - C4456
 - C4457
-- C4458
 - C4459
 - C4472
 - C4474
@@ -99,7 +98,6 @@ helpviewer_keywords:
 - C4455
 - C4456
 - C4457
-- C4458
 - C4459
 - C4472
 - C4474
@@ -140,12 +138,12 @@ helpviewer_keywords:
 - C4594
 - C4595
 ms.assetid: b07850a5-ae89-48ea-bf9a-f0e30939f9b9
-ms.openlocfilehash: 14195271fa0e5e399b801fd36803db4731e690f9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 990560e2c05f66a010382f736735c19c17d4dc28
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50491285"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816614"
 ---
 # <a name="compiler-warnings-c4400-through-c4599"></a>Avisos de compilador C4400 a C4599
 
@@ -187,9 +185,9 @@ Os artigos nesta seção da documentação explicam um subconjunto das mensagens
 |Aviso do compilador (nível 1) C4427|'*operador*': estouro na divisão constante, comportamento indefinido|
 |[Aviso do compilador (nível 4) C4429](../../error-messages/compiler-warnings/compiler-warning-level-4-c4429.md)|possíveis incompleto ou formado incorretamente-nome de caractere universal|
 |[Aviso (erro) do compilador C4430](../../error-messages/compiler-warnings/compiler-warning-c4430.md)|faltando especificador de tipo - int assumido. Observação: C++ não suporta default-int|
-|[Aviso do compilador (nível 4) C4431](../../error-messages/compiler-warnings/compiler-warning-level-4-c4431.md)|faltando especificador de tipo - int assumido. Observação: C não suporta mais default-int|
+|[Aviso do compilador (nível 4) C4431](../../error-messages/compiler-warnings/compiler-warning-level-4-c4431.md)|faltando especificador de tipo - int assumido. Observação: C não suporta default-int|
 |[Aviso do compilador (nível 4) C4434](../../error-messages/compiler-warnings/compiler-warning-level-4-c4434.md)|um construtor static deve possuir acessibilidade private; alterando para acesso privado|
-|[Aviso do compilador (nível 4) C4435](../../error-messages/compiler-warnings/compiler-warning-level-4-c4435.md)|'*derived_class*': layout do objeto em/vd2 será alterado devido à base virtual '*base_class*'|
+|[Aviso do compilador (nível 4) C4435](../../error-messages/compiler-warnings/compiler-warning-level-4-c4435.md)|'*derived_class*': Layout do objeto em/vd2 será alterado devido à base virtual '*base_class*'|
 |[Aviso do compilador (nível 1) C4436](../../error-messages/compiler-warnings/compiler-warning-level-1-c4436.md)|dinâmico\_conversão de base virtual '*base_class*'para'*derived_class*' no construtor ou destruidor poderia falhar com o objeto parcialmente construído|
 |[Aviso do compilador (nível 4) C4437](../../error-messages/compiler-warnings/compiler-warning-level-4-c4437.md)|dinâmico\_conversão de base virtual '*base_class*'para'*derived_class*' poderia falhar em alguns contextos|
 |C4438 de aviso do compilador|'*função*': não pode ser chamado com segurança /await: clrcompat modo. Se '*função*' chamadas para o CLR-lo pode resultar em corrupção de cabeçalhos CLR|
@@ -205,9 +203,9 @@ Os artigos nesta seção da documentação explicam um subconjunto das mensagens
 |C4448 de aviso do compilador|'*tipo*1' não tem uma interface padrão especificada nos metadados. Separação: '*type2*', que pode falhar em tempo de execução.|
 |C4449 de aviso do compilador|'*tipo*' um tipo não selado deve ser marcado como '[WebHostHidden]'|
 |C4450 de aviso do compilador|'*type1*'deve ser marcado como '[WebHostHidden]' porque deriva de'*type2*'|
-|Aviso do compilador (nível 4) C4451|'classname1::member': uso de classe ref classname2::member dentro deste contexto pode levar a empacotamento inválido do objeto entre contextos|
+|Aviso do compilador (nível 4) C4451|'classname1::member': O uso de classe ref classname2::member dentro deste contexto pode levar a empacotamento inválido do objeto entre contextos|
 |Aviso do compilador (nível 1) C4452|'*identificador*': tipo público não pode estar em escopo global. Ele deve ser em um namespace que é um filho do nome do arquivo de saída. winmd.|
-|Aviso do compilador (nível 1) C4453|'*tipo*': um tipo de '[WebHostHidden]' não deve ser usado na superfície publicada de um tipo público que não seja '[WebHostHidden]'|
+|Aviso do compilador (nível 1) C4453|'*type*': Um tipo de '[WebHostHidden]' não deve ser usado na superfície publicada de um tipo público que não seja '[WebHostHidden]'|
 |Aviso do compilador (nível 1) C4454|'*função*' está sobrecarregado por mais do que o número de parâmetros de entrada sem ter [DefaultOverload] especificado. Separação '*declaração*' como a sobrecarga padrão|
 |Aviso do compilador (nível 1) C4455|' operador *operador*': identificadores de sufixos literais que não começam com um sublinhado são reservados|
 |[Aviso do compilador (nível 4) C4456](compiler-warning-level-4-c4456.md)|declaração de '*identificador*' oculta uma declaração local anterior|
@@ -242,7 +240,7 @@ Os artigos nesta seção da documentação explicam um subconjunto das mensagens
 |Aviso do compilador (nível 1) C4491|'*nome*': tem um formato de versão IDL inválido|
 |Aviso do compilador (nível 1, erro) C4492|'*função1*': correspondências de método ref class base '*função2*', mas não está marcado como 'override'|
 |Aviso do compilador (nível 3, erro) c4493 informando|expressão de exclusão não surte efeito porque o destruidor de '*tipo*' não tem acessibilidade 'pública'|
-|Aviso do compilador (nível 1) C4494|'*função*': ignorando __declspec(allocator) porque o tipo de retorno de função não é um ponteiro ou referência|
+|Aviso do compilador (nível 1) C4494|'*função*': Ignorando __declspec(allocator) porque o tipo de retorno de função não é um ponteiro ou referência|
 |C4495 de aviso do compilador|extensão não padrão super' utilizada: substitua pelo nome de classe base explícito|
 |C4496 de aviso do compilador|extensão não padrão 'for each' usada: Substituir por instrução intervalo-para|
 |C4497 de aviso do compilador|extensão não padrão 'selada' usada: Substituir por 'final'|
@@ -318,8 +316,8 @@ Os artigos nesta seção da documentação explicam um subconjunto das mensagens
 |Aviso do compilador (nível 4) C4582|'*tipo*': construtor não está chamado implicitamente|
 |Aviso do compilador (nível 4) C4583|'*tipo*': destruidor não é chamado implicitamente|
 |[Aviso do compilador (nível 1) C4584](../../error-messages/compiler-warnings/compiler-warning-level-1-c4584.md)|'*class1*': classe base*class2*'já é uma classe base de'*class3*'|
-|Aviso do compilador (nível 1, erro) C4585|'*classe*': classe não selada WinRT uma 'classe ref pública' deve ser selada ou deriva de uma já existente|
-|Aviso do compilador (nível 1, erro) C4586|'*tipo*': um tipo público não pode ser declarado em um namespace de nível superior chamado 'Windows'|
+|Aviso do compilador (nível 1, erro) C4585|'*classe*': Uma WinRT '' classe ref pública deve ser selada ou deriva de uma classe não lacrada existente|
+|Aviso do compilador (nível 1, erro) C4586|'*type*': Um tipo público não pode ser declarado em um namespace de nível superior chamado 'Windows'|
 |Aviso do compilador (nível 1) C4587|'*anonymous_structure*': alteração de comportamento: construtor é não é mais implicitamente chamado|
 |Aviso do compilador (nível 1) C4588|'*anonymous_structure*': alteração de comportamento: destruidor é não é mais implicitamente chamado|
 |Aviso do compilador (nível 1) C4591|limite de profundidade da chamada de 'constexpr' *número* excedido (/ /constexpr: Depth\<número >)|

@@ -17,39 +17,39 @@ helpviewer_keywords:
 - linker [C++], reserved words
 - reserved words [C++]
 ms.assetid: 9b9f49e5-0739-45ab-a37e-81e3915ceb25
-ms.openlocfilehash: 360baf479f9100483fe694ca8860dfc1d7ebfe11
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7d51f599dfb81dfa860e1bdba86c4372e80379fb
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50502460"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822438"
 ---
 # <a name="reserved-words"></a>Palavras reservadas
 
-As seguintes palavras são reservadas pelo vinculador. Esses nomes podem ser usados como argumentos em [instruções de definição de módulo](../../build/reference/module-definition-dot-def-files.md) somente se o nome está entre aspas duplas ("").
+As seguintes palavras são reservadas pelo vinculador. Esses nomes podem ser usados como argumentos em [instruções de definição de módulo](module-definition-dot-def-files.md) somente se o nome está entre aspas duplas ("").
 
 ||||
 |-|-|-|
-|**APPLOADER**<sup>1</sup>|**INITINSTANCE**<sup>2</sup>|**PRÉ-CARREGAMENTO**|
-|**BASE DE DADOS DE**|**IOPL**|**PRIVADO**|
-|**CÓDIGO**|**BIBLIOTECA**<sup>1</sup>|**PROTMODE**<sup>2</sup>|
+|**APPLOADER**<sup>1</sup>|**INITINSTANCE**<sup>2</sup>|**PRELOAD**|
+|**BASE**|**IOPL**|**PRIVADO**|
+|**CODE**|**LIBRARY**<sup>1</sup>|**PROTMODE**<sup>2</sup>|
 |**EM CONFORMIDADE COM**|**LOADONCALL**<sup>1</sup>|**PURO**<sup>1</sup>|
 |**DADOS**|**LONGNAMES**<sup>2</sup>|**READONLY**|
 |**DESCRIÇÃO**|**MOVÍVEL**<sup>1</sup>|**READWRITE**|
 |**DEV386**|**MOVEABLE**<sup>1</sup>|**MODO REAL**<sup>1</sup>|
-|**DESCARTÁVEL**|**VÁRIOS**|**RESIDENTE**|
-|**DINÂMICO**|**NOME**|**RESIDENTNAME**<sup>1</sup>|
-|**SOMENTE PARA EXECUÇÃO**|**NEWFILES**<sup>2</sup>|**SEÇÕES**|
+|**DISCARDABLE**|**MULTIPLE**|**RESIDENTE**|
+|**DYNAMIC**|**NOME**|**RESIDENTNAME**<sup>1</sup>|
+|**EXECUTE-ONLY**|**NEWFILES**<sup>2</sup>|**SEÇÕES**|
 |**EXECUTEONLY**|**NODATA**<sup>1</sup>|**SEGMENTOS**|
 |**EXECUTEREAD**|**NOIOPL**<sup>1</sup>|**COMPARTILHADO**|
-|**EXETYPE**|**NONAME**|**ÚNICO**|
+|**EXETYPE**|**NONAME**|**SINGLE**|
 |**EXPORTS**|**NÃO CONFORMES**<sup>1</sup>|**STACKSIZE**|
 |**FIXO**<sup>1</sup>|**NONDISCARDABLE**|**STUB**|
-|**FUNÇÕES**<sup>2</sup>|**NONE**|**VERSÃO**|
+|**FUNÇÕES**<sup>2</sup>|**NONE**|**VERSION**|
 |**HEAPSIZE**|**NÃO COMPARTILHADOS**|**WINDOWAPI**|
 |**IMPORTAÇÕES**|**NOTWINDOWCOMPAT**<sup>1</sup>|**WINDOWCOMPAT**|
-|**IMPUROS**<sup>1</sup>|**OBJETOS**|**WINDOWS**|
-|**INCLUIR**<sup>2</sup>|**ANTIGO**<sup>1</sup>||
+|**IMPUROS**<sup>1</sup>|**OBJECTS**|**WINDOWS**|
+|**INCLUDE**<sup>2</sup>|**OLD**<sup>1</sup>||
 
 <sup>1</sup> o vinculador emite um aviso ("ignorado") quando encontra esse termo. No entanto, a palavra é preservada.
 
@@ -57,5 +57,5 @@ As seguintes palavras são reservadas pelo vinculador. Esses nomes podem ser usa
 
 ## <a name="see-also"></a>Consulte também
 
-- [Definindo opções de vinculador](../../build/reference/setting-linker-options.md)
-- [Opções do vinculador](../../build/reference/linker-options.md)
+- [Referência de vinculador MSVC](linking.md)
+- [Opções do vinculador MSVC](linker-options.md)

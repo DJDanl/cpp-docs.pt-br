@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4634
 ms.assetid: 3e3496ce-2ac7-43d0-a48a-f514c950e81d
-ms.openlocfilehash: a26356dd32f1513eadf4ef2b82175cf71aed13a4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7d0e2af13128a201d96aa905d85621e14441a673
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50536659"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57818252"
 ---
 # <a name="compiler-warning-level-4-c4634"></a>Compilador aviso (nível 4) C4634
 
@@ -19,7 +19,7 @@ Comentário de documento XML: não pode ser aplicado: motivo
 
 Marcas de documentação XML não podem ser aplicadas ao C++ todas as construções.  Por exemplo, você não pode adicionar um comentário de documentação para um namespace ou o modelo.
 
-Para obter mais informações, consulte [documentação XML](../../ide/xml-documentation-visual-cpp.md).
+Para obter mais informações, consulte [documentação XML](../../build/reference/xml-documentation-visual-cpp.md).
 
 ## <a name="example"></a>Exemplo
 

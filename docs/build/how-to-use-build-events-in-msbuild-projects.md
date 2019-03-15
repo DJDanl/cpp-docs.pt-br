@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - 'msbuild (c++), howto: use build events in projects'
 ms.assetid: 2a58dc9d-3d50-4e49-97c1-86c5a05ce218
-ms.openlocfilehash: ea9ff51066c09e1e4a783b622248d9774a023172
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 7678b975558b245fb730bff35fb156bf21d7f895
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57417564"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57814105"
 ---
 # <a name="how-to-use-build-events-in-msbuild-projects"></a>Como: Usar eventos de Build em projetos do MSBuild
 
@@ -39,7 +39,7 @@ A tabela a seguir lista cada *uso no build* elemento:
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir pode ser adicionado dentro do elemento de projeto do myproject. vcxproj arquivo criado no [passo a passo: Usando MSBuild para criar um projeto do Visual C++](../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md). Um *pré-Build* evento faz uma cópia de cpp; um *pré-vínculo* evento faz uma cópia de Main; e um *pós-compilação* evento faz uma cópia do myproject.exe. Se o projeto é compilado usando uma configuração de versão, os eventos de build serão executados. Se o projeto é compilado usando uma configuração de depuração, os eventos de build não são executados.
+O exemplo a seguir pode ser adicionado dentro do elemento de projeto do myproject. vcxproj arquivo criado no [passo a passo: Usando MSBuild para criar um projeto do Visual C++](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md). Um *pré-Build* evento faz uma cópia de cpp; um *pré-vínculo* evento faz uma cópia de Main; e um *pós-compilação* evento faz uma cópia do myproject.exe. Se o projeto é compilado usando uma configuração de versão, os eventos de build serão executados. Se o projeto é compilado usando uma configuração de depuração, os eventos de build não são executados.
 
 ```
 <ItemDefinitionGroup>
@@ -72,5 +72,5 @@ O exemplo a seguir pode ser adicionado dentro do elemento de projeto do myprojec
 
 ## <a name="see-also"></a>Consulte também
 
-[MSBuild (Visual C++)](../build/msbuild-visual-cpp.md)<br/>
-[Passo a passo: Usando o MSBuild para criar um projeto em Visual C++](../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)
+[MSBuild na linha de comando – C++](msbuild-visual-cpp.md)<br/>
+[Passo a passo: Usando o MSBuild para criar um projeto em Visual C++](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - symbols, add to symbol table
 - -INCLUDE linker option
 ms.assetid: 4a039677-360a-480f-bd0b-448e239b449c
-ms.openlocfilehash: 389bd16829c2466b02cb879c8bc8d43c9efa6fb4
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 1f7a443e32ed20550e3017c7e6ce70f4adf5137d
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57421214"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810972"
 ---
 # <a name="include-force-symbol-references"></a>/INCLUDE (forçar referências de símbolo)
 
@@ -38,11 +38,11 @@ Para especificar vários símbolos, digite uma vírgula (,), um ponto e vírgula
 
 O vinculador resolve `symbol` adicionando o objeto que contém a definição do símbolo para o programa. Esse recurso é útil para incluir um objeto de biblioteca, caso contrário, não seria possível vincular ao programa.
 
-Especificar um símbolo com essa opção substitui a remoção desse símbolo por [/OPT: REF](../../build/reference/opt-optimizations.md).
+Especificar um símbolo com essa opção substitui a remoção desse símbolo por [/OPT: REF](opt-optimizations.md).
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do vinculador no ambiente de desenvolvimento do Visual Studio
 
-1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [configuração de propriedades do projeto Visual C++](../../ide/working-with-project-properties.md).
+1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [propriedades de compilador e de build definida C++ no Visual Studio](../working-with-project-properties.md).
 
 1. Clique o **vinculador** pasta.
 
@@ -56,5 +56,5 @@ Especificar um símbolo com essa opção substitui a remoção desse símbolo po
 
 ## <a name="see-also"></a>Consulte também
 
-[Definindo opções de vinculador](../../build/reference/setting-linker-options.md)<br/>
-[Opções do vinculador](../../build/reference/linker-options.md)
+[Referência de vinculador MSVC](linking.md)<br/>
+[Opções do vinculador MSVC](linker-options.md)

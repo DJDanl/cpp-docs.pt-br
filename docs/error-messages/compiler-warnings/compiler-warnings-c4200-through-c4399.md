@@ -31,14 +31,13 @@ f1_keywords:
 - C4380
 - C4387
 - C4388
-- C4396
 ms.assetid: 170248db-7bf2-4823-92d9-437b04c1290d
-ms.openlocfilehash: 02340234fc504773a29b3d83ae606cd1eb4e09f1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9cca32973ead1d7d88e37c4745491c8d5f181e0b
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50455985"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810504"
 ---
 # <a name="compiler-warnings-c4200-through-c4399"></a>Avisos C4200 a C4399
 
@@ -75,7 +74,7 @@ Os artigos nesta seção da documentação explicam um subconjunto das mensagens
 |[Aviso do compilador (nível 1) C4227](../../error-messages/compiler-warnings/compiler-warning-level-1-c4227.md)|anacronismo usado: qualificadores na referência são ignorados|
 |[Aviso do compilador (nível 1) C4228](../../error-messages/compiler-warnings/compiler-warning-level-1-c4228.md)|extensão não padrão usada: qualificadores após a vírgula na lista de declaradores são ignorados|
 |[Aviso do compilador (nível 1) C4229](../../error-messages/compiler-warnings/compiler-warning-level-1-c4229.md)|anacronismo usado: modificadores em dados são ignorados|
-|[Aviso do compilador (nível 1) C4230](../../error-messages/compiler-warnings/compiler-warning-level-1-c4230.md)|anacronismo usado: modificadores/qualificadores intercalados; kvalifikátor se ignoruje.|
+|[Aviso do compilador (nível 1) C4230](../../error-messages/compiler-warnings/compiler-warning-level-1-c4230.md)|anachronism used: modifiers/qualifiers interspersed; qualifier ignored|
 |[Aviso do compilador (nível 4) C4232](../../error-messages/compiler-warnings/compiler-warning-level-4-c4232.md)|extensão não padrão usada: '*identificador*': endereço de dllimport '*dllimport*' não é estático, identidade não garantida|
 |[Compilador aviso (nível 4, erro) C4233](../../error-messages/compiler-warnings/compiler-warning-level-4-c4233.md)|extensão não padrão usada: '*palavra-chave*' palavra-chave só tem suportada em C++, não em C|
 |[Compilador aviso (nível 4, erro) C4234](../../error-messages/compiler-warnings/compiler-warning-level-4-c4234.md)|extensão não padrão usada: '*palavra-chave*' palavra-chave reservada para uso futuro|
@@ -104,7 +103,7 @@ Os artigos nesta seção da documentação explicam um subconjunto das mensagens
 |[Aviso do compilador (nível 1) C4269](../../error-messages/compiler-warnings/compiler-warning-level-1-c4269.md)|'*identificador*': 'const' automática de dados inicializada com o construtor de padrão gerado pelo compilador produz resultados não confiáveis|
 |[Aviso do compilador (nível 1) C4272](../../error-messages/compiler-warnings/compiler-warning-level-1-c4272.md)|'*função*': está marcado como __declspec(dllimport); deve especificar a convenção de chamada nativa ao importar uma função.|
 |[Aviso do compilador (nível 1) C4273](../../error-messages/compiler-warnings/compiler-warning-level-1-c4273.md)|'*função*': vínculo de dll inconsistente|
-|Aviso do compilador (nível 1) C4274|#ident ignorados; Consulte a documentação para #pragma comment (exestr, 'string')|
+|Aviso do compilador (nível 1) C4274|#ident ignored; see documentation for #pragma comment(exestr, 'string')|
 |[Aviso do compilador (nível 2) C4275](../../error-messages/compiler-warnings/compiler-warning-level-2-c4275.md)|não dll-interface '*classkey*' '*identifier1*'usado como base para dll-interface'*classkey*' '*identifier2*'|
 |[Aviso do compilador (nível 1) C4276](../../error-messages/compiler-warnings/compiler-warning-level-1-c4276.md)|'*função*': nenhum protótipo fornecido; assumido sem parâmetros|
 |Aviso do compilador (nível 1) C4277|item importado '*classname*::*membro*' existe como membro de dados e o membro da função; membro de dados ignorado|
@@ -153,7 +152,7 @@ Os artigos nesta seção da documentação explicam um subconjunto das mensagens
 |[Aviso do compilador (nível 1) C4326](../../error-messages/compiler-warnings/compiler-warning-level-1-c4326.md)|tipo de retorno de '*função*'deve ser'*type1*'em vez de'*type2*'|
 |C4327 de aviso do compilador|'*atribuição*': alinhamento de indireção de LHS ('*alignment1*') é maior do que de RHS ('*alignment2*')|
 |C4328 de aviso do compilador|'*função*': alinhamento de indireção de parâmetro formal *parameter_number* (*parameter_alignment*) é maior que o alinhamento de argumento real (*argument_alignment*)|
-|[Aviso do compilador (nível 1) C4329](../../error-messages/compiler-warnings/compiler-warning-level-1-c4329.md)|__declspec(align()) é ignorado em enumeração|
+|[Aviso do compilador (nível 1) C4329](../../error-messages/compiler-warnings/compiler-warning-level-1-c4329.md)|__declspec(align()) is ignored on enum|
 |Aviso do compilador (nível 1) C4330|atributo '*atributo*'para a seção'*seção*' ignorado|
 |[Aviso do compilador (nível 1) C4333](../../error-messages/compiler-warnings/compiler-warning-level-1-c4333.md)|'*shift_operator*': right shift por valor muito grande, perda de dados|
 |[Aviso do compilador (nível 3) C4334](../../error-messages/compiler-warnings/compiler-warning-level-3-c4334.md)|'*shift_operator*': o resultado de 32-bit shift convertido implicitamente para 64 bits (foi a mudança de 64 bits se destina?)|
@@ -175,7 +174,7 @@ Os artigos nesta seção da documentação explicam um subconjunto das mensagens
 |[Aviso do compilador (nível 2) C4356](../../error-messages/compiler-warnings/compiler-warning-level-2-c4356.md)|'*membro*': membro de dados estático não pode ser inicializado via classe derivada|
 |[Aviso do compilador (nível 3) C4357](../../error-messages/compiler-warnings/compiler-warning-level-3-c4357.md)|argumento param array encontrado na lista de argumentos formais para delegate '*delegar*'ignorada ao gerar'*função*'|
 |[Aviso do compilador (nível 1) C4358](../../error-messages/compiler-warnings/compiler-warning-level-1-c4358.md)|'*operador*': tipo de retorno de delegates combinados não é 'void'; o valor retornado será indefinido|
-|[Aviso do compilador (nível 3) C4359](../../error-messages/compiler-warnings/compiler-warning-level-3-c4359.md)|'*tipo*': especificador de alinhamento é menor que o alinhamento real ('*alinhamento*') e será ignorado.|
+|[Aviso do compilador (nível 3) C4359](../../error-messages/compiler-warnings/compiler-warning-level-3-c4359.md)|'*type*': Especificador de alinhamento é menor que o alinhamento real ('*alinhamento*') e será ignorado.|
 |Aviso do compilador (nível 2) C4362|'*tipo*': alinhamento maior que 8 bytes não é compatível com CLR|
 |[Aviso do compilador (nível 1) C4364](../../error-messages/compiler-warnings/compiler-warning-level-1-c4364.md)|#using para assembly '*assembly*'visto anteriormente em'*local*' ('*line_number*') sem como\_atributo amigo; como\_friend não aplicado|
 |[Aviso do compilador (nível 4) C4365](../../error-messages/compiler-warnings/compiler-warning-level-4-c4365.md)|'*expressão*': conversão de '*type1*'para'*type2*', incompatibilidade de signed/unsigned|
@@ -192,7 +191,7 @@ Os artigos nesta seção da documentação explicam um subconjunto das mensagens
 |[Aviso do compilador (nível 1) C4377](../../error-messages/compiler-warnings/compiler-warning-level-1-c4377.md)|tipos nativos são private por padrão. -d1PrivateNativeTypes é preterido|
 |[Aviso do compilador (nível 1) C4378](../../error-messages/compiler-warnings/compiler-warning-level-1-c4378.md)|Deve obter ponteiros de função para executar inicializadores; Considere System::ModuleHandle::ResolveMethodHandle|
 |[Aviso do compilador (nível 1) C4379](../../error-messages/compiler-warnings/compiler-warning-level-1-c4379.md)|Versão '*número_da_versão*' do common language runtime não tem suporte por este compilador. Usando essa versão pode causar resultados inesperados|
-|Aviso do compilador (nível 1, erro) C4380|'*classe*': não é possível preterir um construtor padrão|
+|Aviso do compilador (nível 1, erro) C4380|'*classe*': Não é possível preterir um construtor padrão|
 |[Aviso do compilador (nível 1) C4381](../../error-messages/compiler-warnings/compiler-warning-level-1-c4381.md)|'*função1*': método de interface não será implementado por método não public '*função2*'|
 |[Aviso do compilador (nível 1) C4382](../../error-messages/compiler-warnings/compiler-warning-level-1-c4382.md)|Lançando '*tipo*': um tipo com clrcall destruidor ou Construtor de cópia só pode ser capturado em /clr: pure módulo|
 |[Aviso do compilador (nível 1) C4383](../../error-messages/compiler-warnings/compiler-warning-level-1-c4383.md)|'*instance_dereference_operator*': o significado de desreferenciar um identificador pode mudar, quando um usuário definido pelo '*instance_dereference_operator*' operador existe; escreva o operador como estático função seja explícito sobre o operando|

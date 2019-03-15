@@ -1,5 +1,5 @@
 ---
-title: Importando e exportado funções embutidas
+title: Importando e exportando funções embutidas
 ms.date: 11/04/2016
 helpviewer_keywords:
 - exporting functions [C++], inline functions
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - functions [C++], importing
 - functions [C++], exporting
 ms.assetid: 89f488f8-b078-40fe-afd7-80bd7840057b
-ms.openlocfilehash: fb117ce6c6088b9fdca57f7d4fd7d0193e1813c2
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: ed523d84228124d4a8d99e443c0c744f362f1c56
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57425543"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822035"
 ---
-# <a name="importing-and-exporting-inline-functions"></a>Importando e exportado funções embutidas
+# <a name="importing-and-exporting-inline-functions"></a>Importando e exportando funções embutidas
 
 Funções importadas podem ser definidas como embutidos. O efeito é aproximadamente o mesmo que definir uma padrão de função embutida; chamadas para a função são expandidas no código embutido, assim como uma macro. Isso é útil principalmente como uma maneira de dar suporte a C++ classes em uma DLL isso de forma embutida talvez alguns dos seus membros de funções para maior eficiência.
 
@@ -30,20 +30,20 @@ Um recurso de uma função importada embutida é que você pode usar seu endere�
 
 ## <a name="what-do-you-want-to-do"></a>O que você deseja fazer?
 
-- [Exportação de uma DLL](../build/exporting-from-a-dll.md)
+- [Exportação de uma DLL](exporting-from-a-dll.md)
 
-- [Exportar de uma DLL usando. Arquivos DEF](../build/exporting-from-a-dll-using-def-files.md)
+- [Exportar de uma DLL usando. Arquivos DEF](exporting-from-a-dll-using-def-files.md)
 
-- [Exportar de uma DLL usando dllexport](../build/exporting-from-a-dll-using-declspec-dllexport.md)
+- [Exportar de uma DLL usando dllexport](exporting-from-a-dll-using-declspec-dllexport.md)
 
-- [Exportar e importar usando AFX_EXT_CLASS](../build/exporting-and-importing-using-afx-ext-class.md)
+- [Exportar e importar usando AFX_EXT_CLASS](exporting-and-importing-using-afx-ext-class.md)
 
-- [Exportar funções de C++ para uso em executáveis da linguagem C](../build/exporting-cpp-functions-for-use-in-c-language-executables.md)
+- [Exportar funções de C++ para uso em executáveis da linguagem C](exporting-cpp-functions-for-use-in-c-language-executables.md)
 
-- [Determinar qual método de exportação usar](../build/determining-which-exporting-method-to-use.md)
+- [Determinar qual método de exportação usar](determining-which-exporting-method-to-use.md)
 
-- [Importar para um aplicativo usando __declspec(dllimport)](../build/importing-into-an-application-using-declspec-dllimport.md)
+- [Importar para um aplicativo usando __declspec(dllimport)](importing-into-an-application-using-declspec-dllimport.md)
 
 ## <a name="see-also"></a>Consulte também
 
-[Importando e exportando](../build/importing-and-exporting.md)
+[Importando e exportando](importing-and-exporting.md)

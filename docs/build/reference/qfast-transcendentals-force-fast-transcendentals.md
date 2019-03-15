@@ -7,12 +7,12 @@ helpviewer_keywords:
 - /Qfast_transcendentals
 - Force Fast Transcendentals
 ms.assetid: 4de24bd1-38e6-49d4-9a05-04c9937d24ac
-ms.openlocfilehash: d96b2c93e9fc8be73ef43f63fc0a6328661df442
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 383a915721d627367ca2ca035957df947996bbe2
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414194"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57818343"
 ---
 # <a name="qfasttranscendentals-force-fast-transcendentals"></a>/Qfast_transcendentals (forçar transcendentais rápidos)
 
@@ -28,11 +28,11 @@ Gera código embutido para funções transcendentais.
 
 Essa opção do compilador força funções transcendentais a ser convertido em código embutido para melhorar a velocidade de execução. Essa opção tem efeito somente quando combinado com **/fp: except** ou **/fp: preciso**. Já é o comportamento padrão em geração de código embutido para funções transcendentais **Fast**.
 
-Essa opção é incompatível com **/fp: strict**. Ver [/fp (Especificar comportamento de ponto flutuante)](../../build/reference/fp-specify-floating-point-behavior.md) para obter mais informações sobre opções do compilador do ponto de flutuante.
+Essa opção é incompatível com **/fp: strict**. Ver [/fp (Especificar comportamento de ponto flutuante)](fp-specify-floating-point-behavior.md) para obter mais informações sobre opções do compilador do ponto de flutuante.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio
 
-1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, confira [Trabalhando com propriedades do projeto](../../ide/working-with-project-properties.md).
+1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [propriedades de compilador e de build definida C++ no Visual Studio](../working-with-project-properties.md).
 
 1. Clique o **C/C++** pasta.
 
@@ -46,6 +46,6 @@ Essa opção é incompatível com **/fp: strict**. Ver [/fp (Especificar comport
 
 ## <a name="see-also"></a>Consulte também
 
-[Opções /Q (operações de nível baixo)](../../build/reference/q-options-low-level-operations.md)<br/>
-[Opções do Compilador](../../build/reference/compiler-options.md)<br/>
-[Definindo opções do compilador](../../build/reference/setting-compiler-options.md)
+[Opções /Q (operações de nível baixo)](q-options-low-level-operations.md)<br/>
+[Opções do compilador MSVC](compiler-options.md)<br/>
+[Sintaxe de linha de comando do compilador MSVC](compiler-command-line-syntax.md)

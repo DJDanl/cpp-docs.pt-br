@@ -1,16 +1,16 @@
 ---
 title: Tratamento de exceção ARM64
 ms.date: 11/19/2018
-ms.openlocfilehash: a4d4adcc365c1e9caf7faa0e225fabe133d0a6eb
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 921029704e4bf5adabfbe0a82387dadc911b9036
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176673"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816146"
 ---
 # <a name="arm64-exception-handling"></a>Tratamento de exceção ARM64
 
-O Windows arm64 usa a mesma mecanismo para exceções geradas por hardware assíncronas e exceções geradas por software síncronas de tratamento de exceções de estruturado. Os manipuladores de exceção específicos da linguagem são compilados sobre o tratamento de exceção estruturado do Windows usando funções de auxiliares da linguagem. Este documento descreve o tratamento de exceção no Windows em ARM64 e os auxiliares da linguagem usados pelo código que é gerado pelo assembler Microsoft ARM e o compilador do Visual C++.
+O Windows arm64 usa a mesma mecanismo para exceções geradas por hardware assíncronas e exceções geradas por software síncronas de tratamento de exceções de estruturado. Os manipuladores de exceção específicos da linguagem são compilados sobre o tratamento de exceção estruturado do Windows usando funções de auxiliares da linguagem. Este documento descreve o tratamento de exceção no Windows em ARM64 e os auxiliares da linguagem usados pelo código que é gerado pelo assembler Microsoft ARM e o compilador MSVC.
 
 ## <a name="goals-and-motivation"></a>Metas e motivação
 
@@ -44,7 +44,7 @@ Estas são as suposições feitas no descrição de tratamento de exceção:
 
 1. Não há nenhum código condicional em epílogos.
 
-1. Dedicada de registro de ponteiro de quadro: se o sp seja salvo em outro registro (r29) no prólogo, que registra permanece inalterado durante todo a função, para que o sp original possa ser recuperado a qualquer momento.
+1. Registro de ponteiro de quadro dedicado: Se o sp seja salvo em outro registro (r29) no prólogo, que se registram permanece inalterado durante todo a função, para que o sp original possa ser recuperado a qualquer momento.
 
 1. A menos que o sp seja salvo em outro registro, toda a manipulação do ponteiro de pilha ocorre estritamente dentro do prólogo e epílogo.
 
@@ -52,7 +52,7 @@ Estas são as suposições feitas no descrição de tratamento de exceção:
 
 ## <a name="arm64-stack-frame-layout"></a>Layout de quadro de pilha ARM64
 
-![layout de quadro de pilha](../build/media/arm64-exception-handling-stack-frame.png "layout de quadro de pilha")
+![layout de quadro de pilha](media/arm64-exception-handling-stack-frame.png "layout de quadro de pilha")
 
 Para funções de quadro encadeada, o par de fp e lr pode ser salvos em qualquer posição na área de variável local, dependendo das considerações de otimização. O objetivo é maximizar o número de locais que podem ser alcançadas por uma instrução única, com base em ponteiro de quadro (r29) ou o ponteiro de pilha (sp). No entanto para `alloca` funções, ele deve ser encadeado e r29 deve apontar para a parte inferior da pilha. Para permitir melhor cobertura de register-par-endereçamento-mode, não-volátil registrar aave áreas são posicionadas na parte superior da pilha de rede Local. Aqui estão exemplos que ilustram algumas das sequências de prólogo mais eficientes. Para fins de clareza e melhor localidade de cache, a ordem de armazenamento de registros salvos pelo receptor em todos os Prólogos canônicos é em ordem "cada vez maior para cima". `#framesz` abaixo representa o tamanho da pilha inteira (excluindo alloca área). `#localsz` e `#outsz` indicam o tamanho da área local (incluindo o salvamento área para o \<r29, lr > par) e o tamanho do parâmetro de saída, respectivamente.
 
@@ -181,13 +181,13 @@ Para funções de quadro encadeada, o par de fp e lr pode ser salvos em qualquer
 
 ## <a name="arm64-exception-handling-information"></a>Informações de tratamento de exceção ARM64
 
-### <a name="pdata-records"></a>registros. pData
+### <a name="pdata-records"></a>.pdata records
 
 Os registros. pData são uma matriz ordenada de itens de comprimento fixo que descrevem todas as funções de manipulação de pilha em um PE binário. Observe atentamente a frase "manipulação de pilha": funções de folha que não requerem nenhum armazenamento local e que não é preciso salvar/Restaurar registros não voláteis não exigem um registro. pData; eles devem ser explicitamente omitidos para economizar espaço. Um desenrolamento de uma dessas funções pode simplesmente obter o endereço de retorno de LR para mover para cima para o chamador.
 
 Cada registro. pData para ARM64 tem 8 bytes de comprimento. O formato geral de cada registro locais o RVA de 32 bits da função de início da primeira palavra, seguido por um segundo com que contém um ponteiro para um bloco. XData de comprimento variável ou uma palavra compactada que descreve uma sequência de desenrolamento de função canônica.
 
-![layout de registro. pData](../build/media/arm64-exception-handling-pdata-record.png "layout de registro. pData")
+![layout de registro. pData](media/arm64-exception-handling-pdata-record.png "layout de registro. pData")
 
 Os campos são da seguinte maneira:
 
@@ -203,7 +203,7 @@ Os campos são da seguinte maneira:
 
 Quando o formato de desenrolamento compactado for insuficiente para descrever o desenrolamento de uma função, um registro .xdata de comprimento variável deverá ser criado. O endereço desse registro é armazenado na segunda palavra do registro .pdata. O formato do. XData é um conjunto de comprimento variável compactado de palavras:
 
-![layout de registro. XData](../build/media/arm64-exception-handling-xdata-record.png "layout de registro. XData")
+![layout de registro. XData](media/arm64-exception-handling-xdata-record.png "layout de registro. XData")
 
 Esses dados são divididos em quatro seções:
 
@@ -287,18 +287,18 @@ Os códigos de desenrolamento são codificados de acordo com a tabela a seguir. 
 |-|-|
 |`alloc_s`|000xxxxx: alocar pequena pilha com tamanho \< 512 (2 ^ 5 * 16).|
 |`save_r19r20_x`|    001zzzzz: salvar \<r19, r20 > par na [Z de sp-# * 8]!, deslocamento previamente indexado > =-248 |
-|`save_fplr`|        01zzzzzz: Salve \<r29, lr > emparelhar em [sp + #Z * 8], deslocamento \<= 504. |
+|`save_fplr`|        01zzzzzz: save \<r29,lr> pair at [sp+#Z*8],  offset \<= 504. |
 |`save_fplr_x`|        10zzzzzz: salvar \<r29, lr > emparelhar em [sp-(#Z + 1) * 8]!, deslocamento previamente indexado > = -512 |
 |`alloc_m`|        11000xxx'xxxxxxxx: alocar pilha grande com tamanho \< 16K (2 ^ 11 * 16). |
 |`save_regp`|        110010xx'xxzzzzzz: salvar r(19+#X) par em [sp + #Z * 8], deslocamento \<= 504 |
-|`save_regp_x`|        110011xx'xxzzzzzz: salvar r(19+#X) par em [sp-(#Z + 1) * 8]!, deslocamento previamente indexado > = -512 |
+|`save_regp_x`|        110011xx'xxzzzzzz: save pair r(19+#X) at [sp-(#Z+1)*8]!, pre-indexed offset >= -512 |
 |`save_reg`|        110100xx'xxzzzzzz: salvar r(19+#X) reg em [sp + #Z * 8], deslocamento \<= 504 |
-|`save_reg_x`|        x 1101010'xxxzzzzz: salvar r(19+#X) reg em [sp-(#Z + 1) * 8]!, deslocamento previamente indexado > = -256 |
-|`save_lrpair`|         x 1101011'xxzzzzzz: salvar par \<r19 + 2 *#x10, lr > em [sp + #Z*8], deslocamento \<= 504 |
-|`save_fregp`|        x 1101100'xxzzzzzz: salvar d(8+#X) par em [sp + #Z * 8], deslocamento \<= 504 |
-|`save_fregp_x`|        x 1101101'xxzzzzzz: salvar d(8+#X) par, em [sp-(#Z + 1) * 8]!, deslocamento previamente indexado > = -512 |
-|`save_freg`|        x 1101110'xxzzzzzz: salvar d(8+#X) reg em [sp + #Z * 8], deslocamento \<= 504 |
-|`save_freg_x`|        11011110' xxxzzzzz: salvar d(8+#X) reg em [sp-(#Z + 1) * 8]!, deslocamento previamente indexado > = -256 |
+|`save_reg_x`|        1101010x'xxxzzzzz: save reg r(19+#X) at [sp-(#Z+1)*8]!, pre-indexed offset >= -256 |
+|`save_lrpair`|         1101011x'xxzzzzzz: save pair \<r19+2 *#X,lr> at [sp+#Z*8], offset \<= 504 |
+|`save_fregp`|        1101100x'xxzzzzzz: save pair d(8+#X) at [sp+#Z*8], offset \<= 504 |
+|`save_fregp_x`|        1101101x'xxzzzzzz: save pair d(8+#X), at [sp-(#Z+1)*8]!, pre-indexed offset >= -512 |
+|`save_freg`|        1101110x'xxzzzzzz: save reg d(8+#X) at [sp+#Z*8], offset \<= 504 |
+|`save_freg_x`|        11011110'xxxzzzzz: save reg d(8+#X) at [sp-(#Z+1)*8]!, pre-indexed offset >= -256 |
 |`alloc_l`|         11100000' xxxxxxxx 'xxxxxxxx' xxxxxxxx: alocar pilha grande com tamanho \< 256m (2 ^ 24 * 16) |
 |`set_fp`|        11100001: configurar r29: com: r29 mov, sp |
 |`add_fp`|        11100010' xxxxxxxx: configurar r29 com: Adicionar r29, sp, #x10 * 8 |
@@ -311,11 +311,11 @@ Os códigos de desenrolamento são codificados de acordo com a tabela a seguir. 
 |`arithmetic(eor)`|    11100111' 010zxxxx: eor lr com o cookie reg(z) (0 = x28, 1 = sp); EOR lr, lr, reg(z) |
 |`arithmetic(rol)`|    11100111' 0110xxxx: rol simulado de lr com cookie reg (x28); xip0 = neg x28; RoR lr, xip0 |
 |`arithmetic(ror)`|    11100111' 100zxxxx: ror lr com o cookie reg(z) (0 = x28, 1 = sp); RoR lr, lr, reg(z) |
-| |            11100111: xxxz---:---reservado |
+| |            11100111: xxxz----: ---- reserved |
 | |              11101xxx: reservado para casos de pilha personalizados abaixo gerados apenas para rotinas do asm |
-| |              11101001: personalizado stack para MSFT_OP_TRAP_FRAME |
-| |              11101010: personalizado stack para MSFT_OP_MACHINE_FRAME |
-| |              11101011: personalizado stack para MSFT_OP_CONTEXT |
+| |              11101001: Pilha personalizada para MSFT_OP_TRAP_FRAME |
+| |              11101010: Pilha personalizada para MSFT_OP_MACHINE_FRAME |
+| |              11101011: Pilha personalizada para MSFT_OP_CONTEXT |
 | |              1111xxxx: reservado |
 
 Instruções com valores grandes que abrangem vários bytes, os bits mais significativos são armazenados primeiro. Os códigos de desenrolamento acima são projetados, que simplesmente procurando o primeiro byte do código, é possível saber o tamanho total em bytes do código de desenrolamento. Considerando que cada código de desenrolamento exatamente é mapeado para uma instrução de prólogo/epílogo, para calcular o tamanho do prólogo ou epílogo, tudo o que precisa ser feito é movimentar desde o início da sequência para o final, usando uma tabela de pesquisa ou um dispositivo semelhante para determinar quanto tempo o cor é o opcode está respondendo.
@@ -334,7 +334,7 @@ Para funções cuja siga Prólogos e epílogos a forma canônica descrita abaixo
 
 O formato de um registro. pData com compactado desenrolar dados semelhante ao seguinte:
 
-![dados de desenrolamento de registro. pData com compactado](../build/media/arm64-exception-handling-packed-unwind-data.png "dados de desenrolamento de registro. pData com compactado")
+![dados de desenrolamento de registro. pData com compactado](media/arm64-exception-handling-packed-unwind-data.png "dados de desenrolamento de registro. pData com compactado")
 
 Os campos são da seguinte maneira:
 
@@ -372,14 +372,14 @@ Etapa 5: Alocar pilha restante, incluindo a rede local, \<r29, lr > par e área 
 Etapa n º|Valores de sinalizador|n º de instruções|Opcode|Código de desenrolamento
 -|-|-|-|-
 0|||`#intsz = RegI * 8;`<br/>`if (CR==01) #intsz += 8; // lr`<br/>`#fpsz = RegF * 8;`<br/>`if(RegF) #fpsz += 8;`<br/>`#savsz=((#intsz+#fpsz+8*H)+0xf)&~0xf)`<br/>`#locsz = #famsz - #savsz`|
-1|0 < **regI** < = 10|RegI / 2 + **RegI** % 2|`stp r19,r20,[sp,#savsz]!`<br/>`stp r21,r22,[sp,16]`<br/>`...`|`save_regp_x`<br/>`save_regp`<br/>`...`
-2|**CR**= = 01 *|1|`str lr,[sp, #intsz-8]`\*|`save_reg`
-3|0 < **RegF** < = 7|(RegF + 1) / 2 +<br/>(RegF + 1) % 2).|`stp d8,d9,[sp, #intsz]`\*\*<br/>`stp d10,d11,[sp, #intsz+16]`<br/>`...`<br/>`str d(8+RegF),[sp, #intsz+#fpsz-8]`|`save_fregp`<br/>`...`<br/>`save_freg`
-4|**H** = = 1|4|`stp r0,r1,[sp, #intsz+#fpsz]`<br/>`stp r2,r3,[sp, #intsz+#fpsz+16]`<br/>`stp r4,r5,[sp, #intsz+#fpsz+32]`<br/>`stp r6,r7,[sp, #intsz+#fpsz+48]`|`nop`<br/>`nop`<br/>`nop`<br/>`nop`
-5a|**CR** = = 11 & & #locsz<br/> < = 512|2|`stp r29,lr,[sp,-#locsz]!`<br/>`mov r29,sp`\*\*\*|`save_fplr_x`<br/>`set_fp`
+1|0 < **RegI** <= 10|RegI / 2 + **RegI** % 2|`stp r19,r20,[sp,#savsz]!`<br/>`stp r21,r22,[sp,16]`<br/>`...`|`save_regp_x`<br/>`save_regp`<br/>`...`
+2|**CR**==01*|1|`str lr,[sp, #intsz-8]`\*|`save_reg`
+3|0 < **RegF** <=7|(RegF + 1) / 2 +<br/>(RegF + 1) % 2).|`stp d8,d9,[sp, #intsz]`\*\*<br/>`stp d10,d11,[sp, #intsz+16]`<br/>`...`<br/>`str d(8+RegF),[sp, #intsz+#fpsz-8]`|`save_fregp`<br/>`...`<br/>`save_freg`
+4|**H** == 1|4|`stp r0,r1,[sp, #intsz+#fpsz]`<br/>`stp r2,r3,[sp, #intsz+#fpsz+16]`<br/>`stp r4,r5,[sp, #intsz+#fpsz+32]`<br/>`stp r6,r7,[sp, #intsz+#fpsz+48]`|`nop`<br/>`nop`<br/>`nop`<br/>`nop`
+5a|**CR** == 11 && #locsz<br/> <= 512|2|`stp r29,lr,[sp,-#locsz]!`<br/>`mov r29,sp`\*\*\*|`save_fplr_x`<br/>`set_fp`
 5b|**CR** = = 11 &AMP; &AMP;<br/>512 < #locsz < = 4088|3|`sub sp,sp, #locsz`<br/>`stp r29,lr,[sp,0]`<br/>`add r29, sp, 0`|`alloc_m`<br/>`save_fplr`<br/>`set_fp`
-5c|**CR** = = 11 & & #locsz > 4088|4|`sub sp,sp,4088`<br/>`sub sp,sp, (#locsz-4088)`<br/>`stp r29,lr,[sp,0]`<br/>`add r29, sp, 0`|`alloc_m`<br/>`alloc_s`/`alloc_m`<br/>`save_fplr`<br/>`set_fp`
-5D|(**CR** = = 00 \| \| **CR**= = 01) &AMP; &AMP;<br/>#locsz < = 4088|1|`sub sp,sp, #locsz`|`alloc_s`/`alloc_m`
+5c|**CR** == 11 && #locsz > 4088|4|`sub sp,sp,4088`<br/>`sub sp,sp, (#locsz-4088)`<br/>`stp r29,lr,[sp,0]`<br/>`add r29, sp, 0`|`alloc_m`<br/>`alloc_s`/`alloc_m`<br/>`save_fplr`<br/>`set_fp`
+5d|(**CR** = = 00 \| \| **CR**= = 01) &AMP; &AMP;<br/>#locsz < = 4088|1|`sub sp,sp, #locsz`|`alloc_s`/`alloc_m`
 5e|(**CR** = = 00 \| \| **CR**= = 01) &AMP; &AMP;<br/>#locsz > 4088|2|`sub sp,sp,4088`<br/>`sub sp,sp, (#locsz-4088)`|`alloc_m`<br/>`alloc_s`/`alloc_m`
 
 \* Se **CR** = = 01 e **RegI** é um número ímpar, etapa 2 e a última save_rep na etapa 1 são mesclados em um save_regp.
@@ -531,7 +531,7 @@ Se um fragmento tem nenhum prólogo e nenhum epílogo, ela ainda requer seu pró
 
 ## <a name="examples"></a>Exemplos
 
-### <a name="example-1-frame-chained-compact-form"></a>Exemplo 1: Quadro encadeadas, CD-formulário
+### <a name="example-1-frame-chained-compact-form"></a>Exemplo 1: Formulário de CD quadro encadeadas,
 
 ```asm
 |Foo|     PROC
@@ -549,7 +549,7 @@ Se um fragmento tem nenhum prólogo e nenhum epílogo, ela ainda requer seu pró
     ;Flags[SingleProEpi] functionLength[492] RegF[0] RegI[1] H[0] frameChainReturn[Chained] frameSize[2080]
 ```
 
-### <a name="example-2-frame-chained-full-form-with-mirror-prolog--epilog"></a>Exemplo 2: Quadro encadeadas, formato por completo com o espelho prólogo e epílogo
+### <a name="example-2-frame-chained-full-form-with-mirror-prolog--epilog"></a>Exemplo 2: Formato de completo quadro encadeadas, com espelhamento prólogo e epílogo
 
 ```asm
 |Bar|     PROC
@@ -622,9 +622,9 @@ Observe que o índice de EpilogStart [0] aponta para a mesma sequência de códi
     ;end
 ```
 
-Observação: EpilogStart índice [4] aponta para o meio do código de desenrolamento do prólogo (parcialmente matriz de desenrolamento de reutilização).
+Observação: Índice EpilogStart [4] aponta para o meio do código de desenrolamento do prólogo (parcialmente matriz de desenrolamento de reutilização).
 
 ## <a name="see-also"></a>Consulte também
 
 [Visão geral das convenções de ABI ARM64](arm64-windows-abi-conventions.md)<br/>
-[Tratamento de exceção do ARM](../build/arm-exception-handling.md)
+[Tratamento de exceção do ARM](arm-exception-handling.md)

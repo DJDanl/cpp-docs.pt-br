@@ -6,12 +6,12 @@ ms.date: 12/12/2017
 ms.topic: tutorial
 ms.devlang: cpp
 ms.assetid: 45138d71-719d-42dc-90d7-1d0ca31a2f55
-ms.openlocfilehash: 09780d5823190eb4cb3b4ad13bb60e33808e4987
-ms.sourcegitcommit: beeb77b2976e997debc55b1af35024cc62e62799
+ms.openlocfilehash: 59813a553a9034503d8bf432400db31e6e3d9478
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "52977726"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57813539"
 ---
 # <a name="build-and-run-a-c-console-app-project"></a>Compilar e executar um projeto de aplicativo de console C++
 
@@ -19,29 +19,29 @@ Quando você criou um projeto de aplicativo de console C++ e inseriu seu código
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-- Ter o Visual Studio com o desenvolvimento de área de trabalho com carga de trabalho do C++ instalada e em execução no seu computador. Se ele ainda não estiver instalado, siga as etapas em [suporte de instalar o C++ no Visual Studio](../build/vscpp-step-0-installation.md).
+- Ter o Visual Studio com o desenvolvimento de Desktop com carga de trabalho do C++ instalada e em execução no seu computador. Se ele ainda não estiver instalado, siga as etapas em [suporte de instalar o C++ no Visual Studio](vscpp-step-0-installation.md).
 
-- Criar um "Olá, mundo!" projeto e insira seu código-fonte. Se você ainda não fez isso, siga as etapas em [criar um projeto de aplicativo de console C++](../build/vscpp-step-1-create.md).
+- Criar um "Olá, mundo!" projeto e insira seu código-fonte. Se você ainda não fez isso, siga as etapas em [criar um projeto de aplicativo de console C++](vscpp-step-1-create.md).
 
 Se o Visual Studio se parece com isso, você estará pronto para compilar e executar seu aplicativo:
 
-   ![Pronto para criar o novo projeto](../build/media/vscpp-ready-to-build.png "pronto para criar o novo projeto")
+   ![Pronto para criar o novo projeto](media/vscpp-ready-to-build.png "pronto para criar o novo projeto")
 
 ## <a name="build-and-run-your-code-in-visual-studio"></a>Compilar e executar seu código no Visual Studio
 
-1. Para compilar seu projeto, escolha **compilar solução** da **Build** menu. O **saída** janela mostra os resultados do processo de compilação.
+1. Para compilar o projeto, escolha **Compilar Solução** no menu **Compilar**. A janela de **Saída** mostra os resultados do processo de build.
 
-   ![Compile o projeto](../build/media/vscpp-build-solution.gif "compilar o projeto")
+   ![Compilar o projeto](media/vscpp-build-solution.gif "Compilar o projeto")
 
-1. Para executar o código, na barra de menus, escolha **Debug**, **iniciar sem depuração**.
+1. Para executar o código, na barra de menus, escolha **Depurar**, **Iniciar sem depuração**.
 
-   ![Inicie o projeto](../build/media/vscpp-start-without-debugging.gif "iniciar o projeto")
+   ![Iniciar o projeto](media/vscpp-start-without-debugging.gif "Iniciar o projeto")
 
    Uma janela do console é aberta e, em seguida, executa seu aplicativo. Quando você inicia um aplicativo de console no Visual Studio, ele é executado em seu código e, em seguida, imprime "Pressione qualquer tecla para continuar. . ." para dar a oportunidade de ver a saída.
 
-Parabéns! Você criou seu primeiro "Hello, world!" aplicativo de console no Visual Studio! Pressione uma tecla para fechar a janela do console e retorne ao Visual Studio.
+Parabéns! Você criou seu primeiro aplicativo de console "Olá, mundo!" no Visual Studio! Pressione uma tecla para ignorar a janela do console e retornar ao Visual Studio.
 
-[Que eu encontrei um problema.](#build-and-run-your-code-in-visual-studio-issues)
+[Houve um problema.](#build-and-run-your-code-in-visual-studio-issues)
 
 ## <a name="run-your-code-in-a-command-window"></a>Executar seu código em uma janela de comando
 
@@ -55,11 +55,11 @@ Normalmente, você deve executar aplicativos de console no prompt de comando, n�
 
 1. Na janela do prompt de comando, clique com botão direito para colar o caminho para seu aplicativo no prompt de comando. Pressione Enter para executar seu aplicativo.
 
-   ![Execute o aplicativo no prompt de comando](../build/media/vscpp-run-in-cmd.gif "executar o aplicativo no prompt de comando")
+   ![Execute o aplicativo no prompt de comando](media/vscpp-run-in-cmd.gif "executar o aplicativo no prompt de comando")
 
 Parabéns, você criou e executar um aplicativo de console no Visual Studio!
 
-[Que eu encontrei um problema.](#run-your-code-in-a-command-window-issues)
+[Houve um problema.](#run-your-code-in-a-command-window-issues)
 
 ## <a name="next-steps"></a>Próximas etapas
 

@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - /clr compiler option [C++], restrictions
 ms.assetid: 385f6462-2c68-46d6-810e-469553ead447
-ms.openlocfilehash: 205345a4261f5db8eb80b3bda6e5ea55544a33d0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e2205740aea5a2e557b8d93c3c60045435c4b71d
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50639324"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816094"
 ---
 # <a name="clr-restrictions"></a>/clr Restrições
 
@@ -17,7 +17,7 @@ Observe as seguintes restrições sobre o uso de **/clr**:
 
 - Em um manipulador de exceção estruturada, há restrições sobre como usar `_alloca` ao compilar com **/clr**. Para obter mais informações, consulte [alloca](../../c-runtime-library/reference/alloca.md).
 
-- O uso de verificações de erro em tempo de execução não é válido com **/clr**. Para saber mais, confira [Como usar verificações de tempo de execução nativas](/visualstudio/debugger/how-to-use-native-run-time-checks).
+- O uso de verificações de erro em tempo de execução não é válido com **/clr**. Para obter mais informações, confira [Como: Usar verificações de tempo de execução nativas](/visualstudio/debugger/how-to-use-native-run-time-checks).
 
 - Quando **/clr** é usado para compilar um programa que usa somente a sintaxe de C++ padrão, as diretrizes a seguir se aplicam ao uso de assembly embutido:
 
@@ -37,36 +37,36 @@ Observe as seguintes restrições sobre o uso de **/clr**:
 
 - Não há suporte para as opções do compilador com **/clr**:
 
-  - **/ /EHsc** e **/EHs** (**/clr** implica **/EHa** (consulte [/EH (modelo de tratamento de exceção)](../../build/reference/eh-exception-handling-model.md))
+  - **/ /EHsc** e **/EHs** (**/clr** implica **/EHa** (consulte [/EH (modelo de tratamento de exceção)](eh-exception-handling-model.md))
 
-  - **/FP: strict** e **/fp: except** (consulte [/fp (Especificar comportamento de ponto flutuante)](../../build/reference/fp-specify-floating-point-behavior.md))
+  - **/FP: strict** e **/fp: except** (consulte [/fp (Especificar comportamento de ponto flutuante)](fp-specify-floating-point-behavior.md))
 
-  - [/Zd](../../build/reference/z7-zi-zi-debug-information-format.md)
+  - [/Zd](z7-zi-zi-debug-information-format.md)
 
-  - [/Gm](../../build/reference/gm-enable-minimal-rebuild.md)
+  - [/Gm](gm-enable-minimal-rebuild.md)
 
-  - [/MT](../../build/reference/md-mt-ld-use-run-time-library.md)
+  - [/MT](md-mt-ld-use-run-time-library.md)
 
-  - [/RTC](../../build/reference/rtc-run-time-error-checks.md)
+  - [/RTC](rtc-run-time-error-checks.md)
 
-  - [/ZI](../../build/reference/z7-zi-zi-debug-information-format.md)
+  - [/ZI](z7-zi-zi-debug-information-format.md)
 
-- A combinação da `_STATIC_CPPLIB` definição de pré-processador (`/D_STATIC_CPPLIB`) e o **/clr** não há suporte para a opção de compilador. Isso ocorre porque a definição faria com que seu aplicativo vincular com estática multithread biblioteca padrão C++, que não é suportado. Para obter mais informações, consulte o [/MD, /MT, /LD (usar biblioteca em tempo de execução)](../../build/reference/md-mt-ld-use-run-time-library.md) tópico.
+- A combinação da `_STATIC_CPPLIB` definição de pré-processador (`/D_STATIC_CPPLIB`) e o **/clr** não há suporte para a opção de compilador. Isso ocorre porque a definição faria com que seu aplicativo vincular com estática multithread biblioteca padrão C++, que não é suportado. Para obter mais informações, consulte o [/MD, /MT, /LD (usar biblioteca em tempo de execução)](md-mt-ld-use-run-time-library.md) tópico.
 
-- Ao usar **/Zi** com **/clr**, há implicações de desempenho. Para obter mais informações, consulte [/Zi](../../build/reference/z7-zi-zi-debug-information-format.md).
+- Ao usar **/Zi** com **/clr**, há implicações de desempenho. Para obter mais informações, consulte [/Zi](z7-zi-zi-debug-information-format.md).
 
-- Passando um caractere largo para um .NET Framework de rotina de saída sem especificar também [/ZC: wchar_t](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md) ou sem converter o caractere a ser `__wchar_t` fará com que a saída seja exibido como um `unsigned short int`. Por exemplo:
+- Passando um caractere largo para um .NET Framework de rotina de saída sem especificar também [/ZC: wchar_t](zc-wchar-t-wchar-t-is-native-type.md) ou sem converter o caractere a ser `__wchar_t` fará com que a saída seja exibido como um `unsigned short int`. Por exemplo:
 
     ```cpp
     Console::WriteLine(L' ')              // Will output 32.
     Console::WriteLine((__wchar_t)L' ')   // Will output a space.
     ```
 
-- [/GS](../../build/reference/gs-buffer-security-check.md) será ignorado ao compilar com **/clr**, a menos que uma função está sob `#pragma` [não gerenciado](../../preprocessor/managed-unmanaged.md) ou se a função deve ser compilada para nativo, caso em que o compilador irá gerar Aviso C4793, que é desativada por padrão.
+- [/GS](gs-buffer-security-check.md) será ignorado ao compilar com **/clr**, a menos que uma função está sob `#pragma` [não gerenciado](../../preprocessor/managed-unmanaged.md) ou se a função deve ser compilada para nativo, caso em que o compilador irá gerar Aviso C4793, que é desativada por padrão.
 
-- Ver [/ENTRY](../../build/reference/entry-entry-point-symbol.md) para requisitos de assinatura de função de um aplicativo gerenciado.
+- Ver [/ENTRY](entry-entry-point-symbol.md) para requisitos de assinatura de função de um aplicativo gerenciado.
 
-- Aplicativos compilados com **/openmp** e **/clr** só pode ser executado em um processo único appdomain.  Ver [/openmp (Habilitar suporte a OpenMP 2.0)](../../build/reference/openmp-enable-openmp-2-0-support.md) para obter mais informações.
+- Aplicativos compilados com **/openmp** e **/clr** só pode ser executado em um processo único appdomain.  Ver [/openmp (Habilitar suporte a OpenMP 2.0)](openmp-enable-openmp-2-0-support.md) para obter mais informações.
 
 - Funções que usam um número variável de argumentos (varargs) serão geradas como funções nativas. Quaisquer tipos de dados gerenciado na posição de argumento variável serão empacotados em tipos nativos. Observe que <xref:System.String?displayProperty=fullName> tipos são, na verdade, cadeias de caracteres largos, mas eles são empacotados para cadeias de caracteres de byte único. Portanto, se um especificador de printf é %S (wchar_t *), ele realizará marshaling para uma cadeia de caracteres %s em vez disso.
 
@@ -88,4 +88,4 @@ Observe as seguintes restrições sobre o uso de **/clr**:
 
 ## <a name="see-also"></a>Consulte também
 
-- [/clr (compilação do Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md)
+- [/clr (compilação do Common Language Runtime)](clr-common-language-runtime-compilation.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - GENPROFILE
 - FASTGENPROFILE
 ms.assetid: deff5ce7-46f5-448a-b9cd-a7a83a6864c6
-ms.openlocfilehash: e703c94d4a8b7cf7c70e68071959b775987f1710
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cf6327b175344f1e2914792eb47a4838e544ea24
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496441"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57813871"
 ---
 # <a name="genprofile-fastgenprofile-generate-profiling-instrumented-build"></a>/GENPROFILE, /FASTGENPROFILE (gerar Build instrumentado de criação de perfil)
 
@@ -45,24 +45,24 @@ Use **caminho** para especificar um conjunto separado de contadores PGO para cad
 **TRACKEH**  &#124; **NOTRACKEH** <br/>
 Especifica se deve usar os contadores extras para manter uma contagem precisa quando exceções forem geradas durante o treinamento. Use **TRACKEH** para especificar os contadores extras para uma contagem exata. Use **NOTRACKEH** para especificar contadores únicos para o código que não usa exceção manipulação ou que não encontrar exceções em seus cenários de treinamento.  Quando você especifica **/GENPROFILE**, o padrão é **TRACKEH** . Quando você especifica **/FASTGENPROFILE**, o padrão é **NOTRACKEH** .
 
-**PGD**=*nome de arquivo*<br/>
+**PGD**=*filename*<br/>
 Especifica um nome de arquivo de base para o arquivo. PGD. Por padrão, o vinculador usa o nome do arquivo de imagem executável base com uma extensão. PGD.
 
 ## <a name="remarks"></a>Comentários
 
 O **/GENPROFILE** e **/FASTGENPROFILE** opções dizer ao vinculador para gerar o arquivo de criação de perfil de instrumentação necessário para dar suporte a treinamento de aplicativo para a Otimização Guiada por perfil (PGO). Essas opções são novas no Visual Studio 2015. Prefira essas opções para preteridas **/LTCG:PGINSTRUMENT**, **/PGD.** e **/POGOSAFEMODE** opções e o **PogoSafeMode**,  **VCPROFILE_ALLOC_SCALE** e **VCPROFILE_PATH** variáveis de ambiente. As informações de perfil geradas pelo treinamento de aplicativo são usadas como entrada para executar direcionado a otimizações de programa inteiro durante builds. Você pode definir opções adicionais para controlar vários recursos de criação de perfil de desempenho durante o treinamento do aplicativo e se baseia. As opções padrão especificadas pelo **/GENPROFILE** dar resultados mais precisos, especialmente para grandes e complexos aplicativos multi-threaded. O **/FASTGENPROFILE** opção usa os padrões diferentes para um volume de memória menor e um desempenho mais rápido durante o treinamento, às custas da precisão.
 
-Informações de criação de perfil é capturada quando você executar o aplicativo instrumentado depois que você compila usando **/GENPROFILE** dos **/FASTGENPROFILE**. Essas informações são capturadas quando você especifica o [/USEPROFILE](useprofile.md) etapa de opção de vinculador para executar a criação de perfil e, em seguida, usado para orientar a etapa de compilação otimizada. Para obter mais informações sobre como treinar seu aplicativo e obter detalhes sobre os dados coletados, consulte [Otimização Guiada por perfil](profile-guided-optimizations.md).
+Informações de criação de perfil é capturada quando você executar o aplicativo instrumentado depois que você compila usando **/GENPROFILE** dos **/FASTGENPROFILE**. Essas informações são capturadas quando você especifica o [/USEPROFILE](useprofile.md) etapa de opção de vinculador para executar a criação de perfil e, em seguida, usado para orientar a etapa de compilação otimizada. Para obter mais informações sobre como treinar seu aplicativo e obter detalhes sobre os dados coletados, consulte [otimizações guiadas pelo perfil](../profile-guided-optimizations.md).
 
 Você também deve especificar **/LTCG** quando você especifica **/GENPROFILE** ou **/FASTGENPROFILE**.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do vinculador no ambiente de desenvolvimento do Visual Studio
 
-1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [configuração de propriedades do projeto Visual C++](../../ide/working-with-project-properties.md).
+1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [propriedades de compilador e de build definida C++ no Visual Studio](../working-with-project-properties.md).
 
 1. Selecione o **propriedades de configuração** > **vinculador** > **linha de comando** página de propriedades.
 
-1. Insira o **/GENPROFILE** ou **/FASTGENPROFILE** opções e argumentos para o **opções adicionais** caixa. Escolher **Okey** para salvar suas alterações.
+1. Insira o **/GENPROFILE** ou **/FASTGENPROFILE** opções e argumentos para o **opções adicionais** caixa. Escolha **OK** para salvar suas alterações.
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Para definir esta opção do vinculador por meio de programação
 
@@ -70,6 +70,6 @@ Você também deve especificar **/LTCG** quando você especifica **/GENPROFILE**
 
 ## <a name="see-also"></a>Consulte também
 
-[Definindo opções de vinculador](../../build/reference/setting-linker-options.md)<br/>
-[Opções do vinculador](../../build/reference/linker-options.md)<br/>
-[/LTCG (geração de código do tempo de vinculação)](../../build/reference/ltcg-link-time-code-generation.md)<br/>
+[Referência de vinculador MSVC](linking.md)<br/>
+[Opções do vinculador MSVC](linker-options.md)<br/>
+[/LTCG (geração de código do tempo de vinculação)](ltcg-link-time-code-generation.md)<br/>

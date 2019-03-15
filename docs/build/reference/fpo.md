@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -FPO dumpbin option
 - FPO dumpbin option
 ms.assetid: ee67f08b-bc5a-475a-bee3-c5614721755a
-ms.openlocfilehash: c40c488a89d2338cb30d25dbb1a04703b6c3c901
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: bb56398efb328163c0e0952d50da105bc226c9fa
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57422098"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812922"
 ---
 # <a name="fpo"></a>/FPO
 
@@ -25,8 +25,8 @@ ms.locfileid: "57422098"
 
 Esta opção exibe registros de otimização (FPO) de ponteiro de quadro.
 
-Somente o [/HEADERS](../../build/reference/headers.md) opção DUMPBIN está disponível para uso em arquivos produzidos com o [/GL](../../build/reference/gl-whole-program-optimization.md) opção de compilador.
+Somente o [/HEADERS](headers.md) opção DUMPBIN está disponível para uso em arquivos produzidos com o [/GL](gl-whole-program-optimization.md) opção de compilador.
 
 ## <a name="see-also"></a>Consulte também
 
-[Opções de DUMPBIN](../../build/reference/dumpbin-options.md)
+[Opções de DUMPBIN](dumpbin-options.md)

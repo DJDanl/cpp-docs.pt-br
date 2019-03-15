@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - output files, LIB
 ms.assetid: e73d2f9b-a42d-402b-b7e3-3a94bebb317e
-ms.openlocfilehash: 31c69a273d9f201046171ecc8889dda6e07328d6
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: d7a6352665f12307bfa54025a32f9f7b84311dac
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57419316"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807909"
 ---
 # <a name="lib-output-files"></a>Arquivos de saída LIB
 
@@ -25,4 +25,4 @@ Os arquivos de saída produzidos pelo LIB dependem do modo no qual ele está sen
 
 ## <a name="see-also"></a>Consulte também
 
-[Visão geral de LIB](../../build/reference/overview-of-lib.md)
+[Visão geral de LIB](overview-of-lib.md)

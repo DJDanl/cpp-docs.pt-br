@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /MANIFESTDEPENDENCY linker option
 - -MANIFESTDEPENDENCY linker option
 ms.assetid: e4b68313-33a2-4c3e-908e-ac2b9f7d6a73
-ms.openlocfilehash: debff86b506545862ce4054bf4e210cdb8a29185
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 676059b8d398fd108d8f8fc163c85a3da3c657b4
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57418393"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812220"
 ---
 # <a name="manifestdependency-specify-manifest-dependencies"></a>/MANIFESTDEPENDENCY (especificar dependências de manifesto)
 
@@ -25,7 +25,7 @@ ms.locfileid: "57418393"
 
 /MANIFESTDEPENDENCY permite especificar atributos que serão colocados no \<dependência > seção do arquivo de manifesto.
 
-Ver [/MANIFEST (criar Side-by-Side manifesto do Assembly)](../../build/reference/manifest-create-side-by-side-assembly-manifest.md) para obter informações sobre como criar um arquivo de manifesto.
+Ver [/MANIFEST (criar Side-by-Side manifesto do Assembly)](manifest-create-side-by-side-assembly-manifest.md) para obter informações sobre como criar um arquivo de manifesto.
 
 Para obter mais informações sobre o \<dependência > seção do arquivo de manifesto, consulte [arquivos de configuração de publicador](/windows/desktop/SbsCs/publisher-configuration-files).
 
@@ -61,7 +61,7 @@ O vinculador coletar comentários /MANIFESTDEPENDENCY, eliminar entradas duplica
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do vinculador no ambiente de desenvolvimento do Visual Studio
 
-1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, confira [Trabalhando com propriedades do projeto](../../ide/working-with-project-properties.md).
+1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [propriedades de compilador e de build definida C++ no Visual Studio](../working-with-project-properties.md).
 
 1. Selecione o **propriedades de configuração** > **vinculador** > **o arquivo de manifesto** página de propriedades.
 
@@ -73,5 +73,5 @@ O vinculador coletar comentários /MANIFESTDEPENDENCY, eliminar entradas duplica
 
 ## <a name="see-also"></a>Consulte também
 
-[Definindo opções de vinculador](../../build/reference/setting-linker-options.md)<br/>
-[Opções do vinculador](../../build/reference/linker-options.md)
+[Referência de vinculador MSVC](linking.md)<br/>
+[Opções do vinculador MSVC](linker-options.md)

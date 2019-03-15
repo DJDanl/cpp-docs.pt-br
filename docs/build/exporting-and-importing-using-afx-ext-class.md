@@ -11,16 +11,16 @@ helpviewer_keywords:
 - executable files [C++], importing classes
 - exporting DLLs [C++], AFX_EXT_CLASS macro
 ms.assetid: 6b72cb2b-e92e-4ecd-bcab-c335e1d1cfde
-ms.openlocfilehash: 1451b452c5e2dc62e83e5b8f473248fa7c231877
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: bcfdc94e8db80daec227d77c20ecec6b14d5af11
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57421188"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57821216"
 ---
 # <a name="exporting-and-importing-using-afxextclass"></a>Exportando e importando usando AFX_EXT_CLASS
 
-[DLLs de extensão do MFC](../build/extension-dlls-overview.md) use a macro **AFX_EXT_CLASS** exportar classes; os executáveis vinculados a DLL de extensão do MFC usam a macro para importar classes. Com o **AFX_EXT_CLASS** macro, os mesmos arquivos de cabeçalho que são usados para criar a DLL pode ser usado com os executáveis vinculados à DLL de extensão do MFC.
+[DLLs de extensão do MFC](extension-dlls-overview.md) use a macro **AFX_EXT_CLASS** exportar classes; os executáveis vinculados a DLL de extensão do MFC usam a macro para importar classes. Com o **AFX_EXT_CLASS** macro, os mesmos arquivos de cabeçalho que são usados para criar a DLL pode ser usado com os executáveis vinculados à DLL de extensão do MFC.
 
 No arquivo de cabeçalho para a sua DLL, adicione a **AFX_EXT_CLASS** palavra-chave para a declaração de sua classe, da seguinte maneira:
 
@@ -104,28 +104,28 @@ Como o MFC sempre usa o `AFX_DATA` símbolo em itens de dados, ele define em sua
 
 ### <a name="what-do-you-want-to-do"></a>O que você deseja fazer?
 
-- [Exportar de uma DLL usando arquivos. def](../build/exporting-from-a-dll-using-def-files.md)
+- [Exportar de uma DLL usando arquivos. def](exporting-from-a-dll-using-def-files.md)
 
-- [Exportar de uma DLL usando dllexport](../build/exporting-from-a-dll-using-declspec-dllexport.md)
+- [Exportar de uma DLL usando dllexport](exporting-from-a-dll-using-declspec-dllexport.md)
 
-- [Exportar funções de C++ para uso em executáveis da linguagem C](../build/exporting-cpp-functions-for-use-in-c-language-executables.md)
+- [Exportar funções de C++ para uso em executáveis da linguagem C](exporting-cpp-functions-for-use-in-c-language-executables.md)
 
-- [Exportar funções de C para uso em executáveis C ou da linguagem C++](../build/exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
+- [Exportar funções de C para uso em executáveis C ou da linguagem C++](exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
 
-- [Determinar qual método de exportação usar](../build/determining-which-exporting-method-to-use.md)
+- [Determinar qual método de exportação usar](determining-which-exporting-method-to-use.md)
 
-- [Importar para um aplicativo usando __declspec(dllimport)](../build/importing-into-an-application-using-declspec-dllimport.md)
+- [Importar para um aplicativo usando __declspec(dllimport)](importing-into-an-application-using-declspec-dllimport.md)
 
-- [Inicialize um DLL](../build/run-time-library-behavior.md#initializing-a-dll)
+- [Inicialize um DLL](run-time-library-behavior.md#initializing-a-dll)
 
 ### <a name="what-do-you-want-to-know-more-about"></a>Que mais você deseja saber?
 
-- [Nomes decorados](../build/reference/decorated-names.md)
+- [Nomes decorados](reference/decorated-names.md)
 
-- [Importando e exportando funções embutidas](../build/importing-and-exporting-inline-functions.md)
+- [Importando e exportando funções embutidas](importing-and-exporting-inline-functions.md)
 
-- [Importações mútuas](../build/mutual-imports.md)
+- [Importações mútuas](mutual-imports.md)
 
 ## <a name="see-also"></a>Consulte também
 
-[Exportando de uma DLL](../build/exporting-from-a-dll.md)
+[Exportando de uma DLL](exporting-from-a-dll.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 - /Yc compiler option [C++]
 - Yc compiler option [C++]
 ms.assetid: 47c2e555-b4f5-46e6-906e-ab5cf21f0678
-ms.openlocfilehash: 35b8bfb30a49efa35a3af3d3b76e75f8dede9fd7
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 0d902b9ebb35bc7f267cb67861b7be0763f378a6
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57418965"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57821424"
 ---
 # <a name="yc-create-precompiled-header-file"></a>/Yc (criar arquivo de cabeçalho pré-compilado)
 
@@ -40,23 +40,23 @@ Especifica um arquivo de cabeçalho (. h). Quando esse argumento é usado, o com
 
 Quando **/Yc** for especificado sem um argumento, o compilador compila todo o código até o fim do arquivo de origem de base, ou para o ponto no arquivo de base onde uma [hdrstop](../../preprocessor/hdrstop.md) diretiva ocorre. O arquivo. pch resultante tem o mesmo nome base como seu arquivo de origem de base, a menos que você especifique um nome de arquivo diferente usando o **hdrstop** pragma ou o **/Fp** opção.
 
-O código pré-compilado é salvo em um arquivo com um nome criado do nome de base do arquivo especificado com o **/Yc** opção e a extensão. pch. Você também pode usar o [/Fp (nome. Arquivo pch)](../../build/reference/fp-name-dot-pch-file.md) opção para especificar um nome para o arquivo de cabeçalho pré-compilado.
+O código pré-compilado é salvo em um arquivo com um nome criado do nome de base do arquivo especificado com o **/Yc** opção e a extensão. pch. Você também pode usar o [/Fp (nome. Arquivo pch)](fp-name-dot-pch-file.md) opção para especificar um nome para o arquivo de cabeçalho pré-compilado.
 
-Se você usar __/Yc__*filename*, o compilador compila todo o código até e incluindo o arquivo especificado para uso subsequente com o [/Yu (usar a arquivo de cabeçalho pré-compilado)](../../build/reference/yu-use-precompiled-header-file.md) opção.
+Se você usar __/Yc__*filename*, o compilador compila todo o código até e incluindo o arquivo especificado para uso subsequente com o [/Yu (usar a arquivo de cabeçalho pré-compilado)](yu-use-precompiled-header-file.md) opção.
 
 Se as opções __/Yc__*filename* e __/Yu__*filename* ocorrem na mesma linha de comando e ambos referenciar ou sugerem, o mesmo nome de arquivo, __/Yc__*filename* terá precedência. Esse recurso simplifica a gravação de makefiles.
 
 Para obter mais informações sobre cabeçalhos pré-compilados, consulte:
 
-- [/Y (cabeçalhos pré-compilados)](../../build/reference/y-precompiled-headers.md)
+- [/Y (cabeçalhos pré-compilados)](y-precompiled-headers.md)
 
-- [Criando arquivos de cabeçalho pré-compilado](../../build/reference/creating-precompiled-header-files.md)
+- [Arquivos de cabeçalho pré-compilado](../creating-precompiled-header-files.md)
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio
 
 1. Selecione um arquivo. cpp. O arquivo. cpp deve #include do arquivo. h que contém informações de cabeçalho pré-compilado. O projeto **/Yc** configuração pode ser substituída no nível de arquivo.
 
-1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, confira [Trabalhando com propriedades do projeto](../../ide/working-with-project-properties.md).
+1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [propriedades de compilador e de build definida C++ no Visual Studio](../working-with-project-properties.md).
 
 1. Abra o **propriedades de configuração**, **C/C++**, **cabeçalhos pré-compilados** página de propriedades.
 
@@ -85,6 +85,6 @@ Quando esse código for compilado com o comando `CL /YcMYAPP.H PROG.CPP`, o comp
 
 ## <a name="see-also"></a>Consulte também
 
-[Opções do Compilador](../../build/reference/compiler-options.md)<br/>
-[Definindo opções do compilador](../../build/reference/setting-compiler-options.md)<br/>
-[Criando arquivos de cabeçalho pré-compilado](../../build/reference/creating-precompiled-header-files.md)
+[Opções do compilador MSVC](compiler-options.md)<br/>
+[Sintaxe de linha de comando do compilador MSVC](compiler-command-line-syntax.md)<br/>
+[Arquivos de cabeçalho pré-compilado](../creating-precompiled-header-files.md)

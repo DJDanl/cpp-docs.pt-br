@@ -14,12 +14,12 @@ helpviewer_keywords:
 - Tc compiler option [C++]
 - /Tp compiler option [C++]
 - -Tp compiler option [C++]
-ms.openlocfilehash: e435b48359a708408ff8659e53c9e7c4f7e80261
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f7ee51c858c9f90440cf0c2b21799ef7473cf6da
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50619109"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57813858"
 ---
 # <a name="tc-tp-tc-tp-specify-source-file-type"></a>/Tc, /Tp, /TC, /TP (especificar tipo de arquivo de origem)
 
@@ -29,9 +29,9 @@ O **/Tc** opção especifica que o argumento de nome de arquivo é um arquivo de
 
 ## <a name="syntax"></a>Sintaxe
 
-> **/TC** _filename_
+> **/Tc** _filename_
 >  **/Tp** _filename_
->  **/TC** 
+>  **/TC**
 >  **/TP**
 
 ## <a name="arguments"></a>Arguments
@@ -43,11 +43,11 @@ Um arquivo de origem C ou C++.
 
 Por padrão, **CL** pressupõe que os arquivos com a extensão. c são arquivos de origem C e arquivos com o. cpp ou. cxx extensão são arquivos de origem C++.
 
-Quando ambos os **TC** ou **Tc** opção for especificada, qualquer especificação da [/ZC: wchar_t (wchar_t Is Native Type)](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md) opção será ignorada.
+Quando ambos os **TC** ou **Tc** opção for especificada, qualquer especificação da [/ZC: wchar_t (wchar_t Is Native Type)](zc-wchar-t-wchar-t-is-native-type.md) opção será ignorada.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio
 
-1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, confira [Trabalhando com propriedades do projeto](../../ide/working-with-project-properties.md).
+1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [propriedades de compilador e de build definida C++ no Visual Studio](../working-with-project-properties.md).
 
 1. Selecione o **propriedades de configuração** > **C/C++** > **avançado** página de propriedades.
 
@@ -65,9 +65,9 @@ Essa linha de comando CL Especifica que o Main. c, TEST.prg e COLLATE.prg são t
 
 Essa linha de comando CL Especifica que TEST1.c, TEST2.cxx, TEST3.huh e TEST4.o são compilados como arquivos de C++ e TEST5.z é compilado como um arquivo de C.
 
-> CL TEST1. C TEST2. CXX TEST3. NÉ TEST4. TEST5 de /Tc e S. /TP Z
+> CL TEST1.C TEST2.CXX TEST3.HUH TEST4.O /Tc TEST5.Z /TP
 
 ## <a name="see-also"></a>Consulte também
 
-[Opções do Compilador](../../build/reference/compiler-options.md)<br/>
-[Definindo opções do compilador](../../build/reference/setting-compiler-options.md)
+[Opções do compilador MSVC](compiler-options.md)<br/>
+[Sintaxe de linha de comando do compilador MSVC](compiler-command-line-syntax.md)

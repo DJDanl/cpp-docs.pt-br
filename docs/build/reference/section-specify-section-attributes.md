@@ -8,16 +8,16 @@ helpviewer_keywords:
 - -SECTION linker option
 - section attributes
 - /SECTION linker option
-ms.openlocfilehash: d86dca297940da4978fe42270f444acc5f11fd82
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8fb73043c9c185adee0859bb81098eab022430c2
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50543684"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816549"
 ---
 # <a name="section-specify-section-attributes"></a>/SECTION (especificar atributos de seção)
 
-> **/ SEÇÃO:**_nome_, [[**!**] {**DEKPRSW**}] [**, ALINHAR =**_número_]
+> **/SECTION:**_name_,[[**!**]{**DEKPRSW**}][**,ALIGN=**_number_]
 
 ## <a name="remarks"></a>Comentários
 
@@ -33,29 +33,29 @@ Não use os seguintes nomes, pois eles entram em conflito com os nomes padrão. 
 
 - BSS
 
-- . Data
+- .data
 
 - .edata
 
-- .iData
+- .idata
 
-- . pData
+- .pdata
 
-- . RDATA
+- .rdata
 
-- reloc
+- .reloc
 
-- rsrc
+- .rsrc
 
-- . sbss
+- .sbss
 
-- . sdata
+- .sdata
 
 - .srdata
 
-- . Text
+- .text
 
-- . XData
+- .xdata
 
 Especifique um ou mais atributos para a seção. Os caracteres de atributo, listados abaixo, não diferenciam maiusculas de minúsculas. Você deve especificar todos os atributos que você deseja que a seção ter; um caractere de atributo omitido faz com que esse bit de atributo ser desligado. Se você não especificar a gravação de R, W ou E, a leitura existente, ou executável status permanece inalterado.
 
@@ -71,15 +71,15 @@ Para negar a um atributo, preceda seu caractere com um ponto de exclamação (!)
 |M|Armazenáveis em cache|Marca a seção como não armazenável em cache|
 |P|Paginável|Marca a seção como não paginável|
 
-K e P é incomuns em que os sinalizadores de seção que correspondem a eles são usados no sentido de negativo. Se você especifica um na seção de. Text usando o **/SECTION:.text, K** opção, não há nenhuma diferença nos sinalizadores de seção quando você executa [DUMPBIN](../../build/reference/dumpbin-options.md) com o [/HEADERS](../../build/reference/headers.md)opção; a seção já implicitamente foi armazenado em cache. Para remover o padrão, especifique **/SECTION:.text,! K** em vez disso. Opção DUMPBIN revela as características de seção, incluindo "Não armazenado em cache."
+K e P é incomuns em que os sinalizadores de seção que correspondem a eles são usados no sentido de negativo. Se você especifica um na seção de. Text usando o **/SECTION:.text, K** opção, não há nenhuma diferença nos sinalizadores de seção quando você executa [DUMPBIN](dumpbin-options.md) com o [/HEADERS](headers.md)opção; a seção já implicitamente foi armazenado em cache. Para remover o padrão, especifique **/SECTION:.text,! K** em vez disso. Opção DUMPBIN revela as características de seção, incluindo "Não armazenado em cache."
 
 Uma seção no arquivo PE que não tenha E, R ou W definido é provavelmente inválida.
 
-O **ALIGN =**_número_ argumento permite que você especifique um valor de alinhamento para uma determinada seção. O _número_ argumento é em bytes e deve ser uma potência de dois. Ver [/ALINHAR](../../build/reference/align-section-alignment.md) para obter mais informações.
+O **ALIGN =**_número_ argumento permite que você especifique um valor de alinhamento para uma determinada seção. O _número_ argumento é em bytes e deve ser uma potência de dois. Ver [/ALINHAR](align-section-alignment.md) para obter mais informações.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do vinculador no ambiente de desenvolvimento do Visual Studio
 
-1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [configuração de propriedades do projeto Visual C++](../../ide/working-with-project-properties.md).
+1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [propriedades de compilador e de build definida C++ no Visual Studio](../working-with-project-properties.md).
 
 1. Escolha o **propriedades de configuração** > **vinculador** > **linha de comando** página de propriedades.
 
@@ -91,5 +91,5 @@ O **ALIGN =**_número_ argumento permite que você especifique um valor de alinh
 
 ## <a name="see-also"></a>Consulte também
 
-[Definindo opções de vinculador](../../build/reference/setting-linker-options.md)<br/>
-[Opções do vinculador](../../build/reference/linker-options.md)
+[Referência de vinculador MSVC](linking.md)<br/>
+[Opções do vinculador MSVC](linker-options.md)

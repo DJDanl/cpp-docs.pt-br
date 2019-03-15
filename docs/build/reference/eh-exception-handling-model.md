@@ -12,12 +12,12 @@ helpviewer_keywords:
 - -EH compiler option [C++]
 - /EH compiler option [C++]
 ms.assetid: 754b916f-d206-4472-b55a-b6f1b0f2cb4d
-ms.openlocfilehash: e8707ac716a010ea1d3dc0fa51740e76a5822462
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 9f5eed60ecb51abc1d8fbd3c38773bbf782b23a5
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51329294"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57808249"
 ---
 # <a name="eh-exception-handling-model"></a>/EH (modelo de tratamento de exceções)
 
@@ -25,7 +25,7 @@ Especifica o tipo de manipulação de exceção usado pelo compilador, ao otimiz
 
 ## <a name="syntax"></a>Sintaxe
 
-> **/EH**{**s**|**um**} [**c**] [**r**] [**-**]
+> **/EH**{**s**|**a**}[**c**][**r**][**-**]
 
 ## <a name="arguments"></a>Arguments
 
@@ -43,7 +43,7 @@ Informa ao compilador sempre gera verificações de término do tempo de execuç
 
 ## <a name="remarks"></a>Comentários
 
-O **/EHa** opção de compilador é usada para dar suporte a tratamento de exceções estruturadas assíncronas (SEH) com o C++ nativo `catch(...)` cláusula. Para implementar SEH sem especificar **/EHa**, você pode usar o **Try**, **EXCEPT**, e **Finally** sintaxe. Embora o Windows e Visual C++ ofereçam suporte para SEH, é altamente recomendável que você use o tratamento de exceções do C++ padrão ISO (**/EHs** ou **/EHsc**) pois ele torna o código mais portável e flexível. No entanto, no código existente ou para tipos específicos de programas — por exemplo, no código compilado para dar suporte a common language runtime ([/clr (compilação de tempo de execução de linguagem comum)](../../build/reference/clr-common-language-runtime-compilation.md)) — você ainda pode precisar usar o SEH. Para obter mais informações, consulte [tratamento de exceções estruturado (C/C++)](../../cpp/structured-exception-handling-c-cpp.md).
+O **/EHa** opção de compilador é usada para dar suporte a tratamento de exceções estruturadas assíncronas (SEH) com o C++ nativo `catch(...)` cláusula. Para implementar SEH sem especificar **/EHa**, você pode usar o **Try**, **EXCEPT**, e **Finally** sintaxe. Embora o Windows e Visual C++ ofereçam suporte para SEH, é altamente recomendável que você use o tratamento de exceções do C++ padrão ISO (**/EHs** ou **/EHsc**) pois ele torna o código mais portável e flexível. No entanto, no código existente ou para tipos específicos de programas — por exemplo, no código compilado para dar suporte a common language runtime ([/clr (compilação de tempo de execução de linguagem comum)](clr-common-language-runtime-compilation.md)) — você ainda pode precisar usar o SEH. Para obter mais informações, consulte [tratamento de exceções estruturado (C/C++)](../../cpp/structured-exception-handling-c-cpp.md).
 
 Especificando **/EHa** e tentar manipular todas as exceções usando `catch(...)` pode ser perigoso. Na maioria dos casos, as exceções assíncronas são irrecuperáveis e devem ser consideradas fatais. Capturá-las e continuar pode causar o corrompimento do processo e gerar bugs que são difíceis de localizar e corrigir.
 
@@ -94,11 +94,11 @@ A opção pode ser limpa usando o símbolo **-**. Por exemplo, **/EHsc-** será 
 
 O **/EHr** opção de compilador força verificações de término do tempo de execução em todas as funções que têm um **noexcept** atributo. Por padrão, verificações de tempo de execução podem ser removidas se o back-end do compilador determina que uma função apenas chama *sem lançamento* funções. Funções geradoras de não são todas as funções que têm um atributo que especifica que nenhuma exceção pode ser lançada. Isso inclui funções assinaladas **noexcept**, `throw()`, `__declspec(nothrow)`e, quando **/EHc** for especificado, **extern "C"** funções. Funções geradoras de não também pode incluir qualquer um que o compilador determinou que são não lançamento por inspeção. Você pode definir explicitamente o padrão usando **/EHr-**.
 
-No entanto, o atributo de não lançamento não é uma garantia de que nenhuma exceção pode ser gerada por uma função. Ao contrário do comportamento de um **noexcept** função, o compilador do Visual C++ considera uma exceção gerada por uma função declarada usando `throw()`, `__declspec(nothrow)`, ou **extern "C"** como indefinido comportamento. Funções que usam esses atributos de três declaração não impõem verificações de término para exceções de tempo de execução. Você pode usar o **/EHr** opção para ajudá-lo a identificar esse comportamento indefinido, forçando o compilador gere verificações de tempo de execução para exceções sem tratamento que escapam de um **noexcept** função.
+No entanto, o atributo de não lançamento não é uma garantia de que nenhuma exceção pode ser gerada por uma função. Ao contrário do comportamento de um **noexcept** função, o compilador MSVC considera uma exceção gerada por uma função declarada usando `throw()`, `__declspec(nothrow)`, ou **extern "C"** como um comportamento indefinido. Funções que usam esses atributos de três declaração não impõem verificações de término para exceções de tempo de execução. Você pode usar o **/EHr** opção para ajudá-lo a identificar esse comportamento indefinido, forçando o compilador gere verificações de tempo de execução para exceções sem tratamento que escapam de um **noexcept** função.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio
 
-1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, confira [Trabalhando com propriedades do projeto](../../ide/working-with-project-properties.md).
+1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [propriedades de compilador e de build definida C++ no Visual Studio](../working-with-project-properties.md).
 
 1. Selecione **propriedades de configuração** > **C/C++** > **geração de código**.
 
@@ -112,8 +112,8 @@ No entanto, o atributo de não lançamento não é uma garantia de que nenhuma e
 
 ## <a name="see-also"></a>Consulte também
 
-[Opções do Compilador](../../build/reference/compiler-options.md)<br/>
-[Definindo opções do compilador](../../build/reference/setting-compiler-options.md)<br/>
+[Opções do compilador MSVC](compiler-options.md)<br/>
+[Sintaxe de linha de comando do compilador MSVC](compiler-command-line-syntax.md)<br/>
 [Erros e tratamento de exceções](../../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
 [Especificações de exceção (lançar)](../../cpp/exception-specifications-throw-cpp.md)<br/>
 [Tratamento de exceções estruturado (C/C++)](../../cpp/structured-exception-handling-c-cpp.md)

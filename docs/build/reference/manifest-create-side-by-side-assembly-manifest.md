@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /MANIFEST linker option
 - MANIFEST linker option
 ms.assetid: 98c52e1e-712c-4f49-b149-4d0a3501b600
-ms.openlocfilehash: 685d98d166a94f2c17feae7bfafbd64b77786e8d
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 9a3ca3980a9cdff4e67885b2ad47ffa2385b0774
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57418770"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807813"
 ---
 # <a name="manifest-create-side-by-side-assembly-manifest"></a>/MANIFEST (criar manifesto de assembly lado a lado)
 
@@ -29,7 +29,7 @@ O padrão é anexe.
 
 O anexe: Inserir opção especifica que o vinculador deve incorporar o arquivo de manifesto da imagem como um recurso do tipo RT_MANIFEST. Opcional `ID` parâmetro é a ID de recurso a ser usado para o manifesto. Use um valor de 1 para um arquivo executável. Use um valor de 2 para uma DLL para habilitá-lo para especificar dependências privadas. Se o `ID` parâmetro não for especificado, o valor padrão é 2 se a opção /DLL estiver definida; caso contrário, o valor padrão é 1.
 
-Começando com o Visual Studio 2008, os arquivos de manifesto para executáveis contêm uma seção que especifica as informações de controle de conta de usuário (UAC). Se você especificar anexe mas especificar nenhum deles [/MANIFESTUAC](../../build/reference/manifestuac-embeds-uac-information-in-manifest.md) nem [/DLL](../../build/reference/dll-build-a-dll.md), um fragmento do UAC padrão que tem o conjunto de nível de UAC para *asInvoker* é inserida no manifesto. Para obter mais informações sobre os níveis de UAC, consulte [/MANIFESTUAC (insere informações UAC no manifesto)](../../build/reference/manifestuac-embeds-uac-information-in-manifest.md).
+Começando com o Visual Studio 2008, os arquivos de manifesto para executáveis contêm uma seção que especifica as informações de controle de conta de usuário (UAC). Se você especificar anexe mas especificar nenhum deles [/MANIFESTUAC](manifestuac-embeds-uac-information-in-manifest.md) nem [/DLL](dll-build-a-dll.md), um fragmento do UAC padrão que tem o conjunto de nível de UAC para *asInvoker* é inserida no manifesto. Para obter mais informações sobre os níveis de UAC, consulte [/MANIFESTUAC (insere informações UAC no manifesto)](manifestuac-embeds-uac-information-in-manifest.md).
 
 Para alterar o comportamento padrão para o UAC, siga um destes procedimentos:
 
@@ -37,13 +37,13 @@ Para alterar o comportamento padrão para o UAC, siga um destes procedimentos:
 
 - Ou especifique a opção /MANIFESTUAC: no se não desejar gerar um fragmento do UAC no manifesto.
 
-Se você não especificar anexe, mas especificar [/MANIFESTDEPENDENCY](../../build/reference/manifestdependency-specify-manifest-dependencies.md) comentários, um arquivo de manifesto é criado. Um arquivo de manifesto não é criado se você especificar /MANIFEST:NO.
+Se você não especificar anexe, mas especificar [/MANIFESTDEPENDENCY](manifestdependency-specify-manifest-dependencies.md) comentários, um arquivo de manifesto é criado. Um arquivo de manifesto não é criado se você especificar /MANIFEST:NO.
 
 Se você especificar anexe, o nome do arquivo de manifesto é o mesmo que o nome do seu arquivo de saída, mas com. manifest acrescentado ao nome do arquivo. Por exemplo, se o nome do arquivo de saída for MyFile.exe, o nome do arquivo de manifesto é MyFile.exe.manifest.  Se você especificar /MANIFESTFILE:*nome*, o nome do manifesto é o que você especificar na *nome*.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do vinculador no ambiente de desenvolvimento do Visual Studio
 
-1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, confira [Trabalhando com propriedades do projeto](../../ide/working-with-project-properties.md).
+1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [propriedades de compilador e de build definida C++ no Visual Studio](../working-with-project-properties.md).
 
 1. Expanda o nó **Propriedades de Configuração**.
 
@@ -59,5 +59,5 @@ Se você especificar anexe, o nome do arquivo de manifesto é o mesmo que o nome
 
 ## <a name="see-also"></a>Consulte também
 
-[Definindo opções de vinculador](../../build/reference/setting-linker-options.md)<br/>
-[Opções do vinculador](../../build/reference/linker-options.md)
+[Referência de vinculador MSVC](linking.md)<br/>
+[Opções do vinculador MSVC](linker-options.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -SAFESEH linker option
 - SAFESEH linker option
 ms.assetid: 7722ff99-b833-4c65-a855-aaca902ffcb7
-ms.openlocfilehash: ee0d01ef43cae4128180e0c32c8dc6d00d4c2400
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 62784933cbecd4f312c52ae98cab7d232b893f35
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57425686"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822334"
 ---
 # <a name="safeseh-image-has-safe-exception-handlers"></a>/SAFESEH (a imagem tem manipuladores de exceção seguros)
 
@@ -25,7 +25,7 @@ Quando **/SAFESEH** for especificado, o vinculador só produzirá uma imagem se 
 
 **/SafeSEH** só é válido ao vincular para x86 de destinos. **/SafeSEH** não há suporte para plataformas que já têm os manipuladores de exceção observados. Por exemplo, em x64 e ARM, todos os manipuladores de exceção são indicados na PDATA. ML64.exe tem suporte para adicionar anotações que emitam informações de SEH (XDATA e PDATA) na imagem, permitindo que você por meio de funções ml64 de desenrolamento. Ver [MASM para x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md) para obter mais informações.
 
-Se **/SAFESEH** não for especificado, o vinculador produzirá uma imagem com uma tabela de manipuladores de exceções seguro se todos os módulos são compatíveis com o recurso de manipulação de exceção segura. Se todos os módulos não eram compatíveis com o recurso de manipulação de exceção segura, a imagem resultante não conterá uma tabela de manipuladores de exceção segura. Se [/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md) Especifica WINDOWSCE ou uma das opções EFI_ *, o vinculador não tentará produzir uma imagem com uma tabela de manipuladores de exceções de segurança, como nenhuma aos subsistemas pode fazer uso das informações.
+Se **/SAFESEH** não for especificado, o vinculador produzirá uma imagem com uma tabela de manipuladores de exceções seguro se todos os módulos são compatíveis com o recurso de manipulação de exceção segura. Se todos os módulos não eram compatíveis com o recurso de manipulação de exceção segura, a imagem resultante não conterá uma tabela de manipuladores de exceção segura. Se [/SUBSYSTEM](subsystem-specify-subsystem.md) Especifica WINDOWSCE ou uma das opções EFI_ *, o vinculador não tentará produzir uma imagem com uma tabela de manipuladores de exceções de segurança, como nenhuma aos subsistemas pode fazer uso das informações.
 
 Se **/SAFESEH:NO** for especificado, o vinculador não produzirá uma imagem com uma tabela de manipuladores de exceções seguros mesmo se todos os módulos são compatíveis com a recurso de manipulação de exceção segura.
 
@@ -35,7 +35,7 @@ Você também pode registrar uma função como um manipulador de exceção estru
 
 Não é possível marcar uma existente binário como a existência de exceção segura manipuladores (ou no nenhum manipuladores de exceção); informações sobre a manipulação de exceção segura devem ser adicionadas no momento da compilação.
 
-A capacidade do vinculador para criar uma tabela de manipuladores de exceção segura depende do aplicativo usando a biblioteca de tempo de execução C. Se você vincular [/NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md) e quiser uma tabela de manipuladores de exceção segura, você precisa fornecer uma estrutura de configuração de carga (por exemplo, pode ser encontrado no arquivo de origem loadcfg.c CRT) que contém todas as entradas definidas para o Visual C++. Por exemplo:
+A capacidade do vinculador para criar uma tabela de manipuladores de exceção segura depende do aplicativo usando a biblioteca de tempo de execução C. Se você vincular [/NODEFAULTLIB](nodefaultlib-ignore-libraries.md) e quiser uma tabela de manipuladores de exceção segura, você precisa fornecer uma estrutura de configuração de carga (por exemplo, pode ser encontrado no arquivo de origem loadcfg.c CRT) que contém todas as entradas definidas para o Visual C++. Por exemplo:
 
 ```
 #include <windows.h>
@@ -98,7 +98,7 @@ const IMAGE_LOAD_CONFIG_DIRECTORY32_2 _load_config_used = {
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do vinculador no ambiente de desenvolvimento do Visual Studio
 
-1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [configuração de propriedades do projeto Visual C++](../../ide/working-with-project-properties.md).
+1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [propriedades de compilador e de build definida C++ no Visual Studio](../working-with-project-properties.md).
 
 1. Selecione o **vinculador** pasta.
 
@@ -112,5 +112,5 @@ const IMAGE_LOAD_CONFIG_DIRECTORY32_2 _load_config_used = {
 
 ## <a name="see-also"></a>Consulte também
 
-[Definindo opções de vinculador](../../build/reference/setting-linker-options.md)<br/>
-[Opções do vinculador](../../build/reference/linker-options.md)
+[Referência de vinculador MSVC](linking.md)<br/>
+[Opções do vinculador MSVC](linker-options.md)
