@@ -12,12 +12,12 @@ helpviewer_keywords:
 - -GS compiler option [C++]
 - stack checking calls
 ms.assetid: 40daed7c-f942-4085-b872-01e12b37729e
-ms.openlocfilehash: 49433cd0c84b05248bacf1e930dd5ec78bc3cd1b
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: e31b42c1d9422d44c5f106f40c4a60a38f23425b
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57418822"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57818553"
 ---
 # <a name="gs-control-stack-checking-calls"></a>/Gs (controlar chamadas de verificação da pilha)
 
@@ -55,7 +55,7 @@ Você pode ativar ou desativar as sondas de pilha usando o [check_stack](../../p
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio
 
-1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, confira [Trabalhando com propriedades do projeto](../../ide/working-with-project-properties.md).
+1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [propriedades de compilador e de build definida C++ no Visual Studio](../working-with-project-properties.md).
 
 1. Selecione o **propriedades de configuração** > **C/C++** > **linha de comando** página de propriedades.
 
@@ -67,5 +67,5 @@ Você pode ativar ou desativar as sondas de pilha usando o [check_stack](../../p
 
 ## <a name="see-also"></a>Consulte também
 
-[Opções do Compilador](../../build/reference/compiler-options.md)<br/>
-[Definindo opções do compilador](../../build/reference/setting-compiler-options.md)
+[Opções do compilador MSVC](compiler-options.md)<br/>
+[Sintaxe de linha de comando do compilador MSVC](compiler-command-line-syntax.md)

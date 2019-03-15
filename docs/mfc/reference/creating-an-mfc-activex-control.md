@@ -7,12 +7,12 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], creating
 - ActiveX controls [MFC], creating
 ms.assetid: 8bd5a93c-d04d-414e-bb28-163fdc1c0dd5
-ms.openlocfilehash: 031c8596e568f01cdecd7139d959a77923c341eb
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: b2dc48e2568e180820f8bca008c66878af4b575e
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57294948"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57818538"
 ---
 # <a name="creating-an-mfc-activex-control"></a>Criando um controle ActiveX MFC
 
@@ -25,7 +25,7 @@ A maneira mais fácil de criar um controle ActiveX do MFC é usar o [Assistente 
 
 ### <a name="to-create-an-mfc-activex-control-using-the-mfc-activex-control-wizard"></a>Para criar um controle ActiveX do MFC usando o Assistente de controle ActiveX MFC
 
-1. Siga as instruções do tópico da Ajuda [Criando um projeto com um assistente de aplicativo do Visual C++](../../ide/creating-desktop-projects-by-using-application-wizards.md).
+1. Siga as instruções no tópico da Ajuda [criar um projeto de aplicativo de console C++](../../get-started/tutorial-console-cpp.md).
 
 1. No **novo projeto** caixa de diálogo, selecione o **controle ActiveX do MFC** ícone no painel de modelos para abrir o Assistente de controle de ActiveX do MFC.
 
@@ -36,11 +36,12 @@ A maneira mais fácil de criar um controle ActiveX do MFC é usar o [Assistente 
 
 1. Clique em **concluir** para fechar o assistente e abrir o novo projeto no ambiente de desenvolvimento.
 
-Depois de ter criado seu projeto, você pode exibir os arquivos criados na **Gerenciador de soluções**. Para obter mais informações sobre os arquivos que o assistente cria para seu projeto, consulte o arquivo gerado pelo projeto Readme. txt. Para obter mais informações sobre os tipos de arquivo, consulte [tipos de arquivo criados para projetos do Visual C++](../../ide/file-types-created-for-visual-cpp-projects.md).
+Depois de ter criado seu projeto, você pode exibir os arquivos criados na **Gerenciador de soluções**. Para obter mais informações sobre os arquivos que o assistente cria para seu projeto, consulte o arquivo gerado pelo projeto Readme. txt. Para obter mais informações sobre os tipos de arquivo, consulte [tipos de arquivo criados para projetos do Visual C++](../../build/reference/file-types-created-for-visual-cpp-projects.md).
 
 Depois de ter criado seu projeto, você pode usar os assistentes de código para adicionar [funções](../../ide/add-member-function-wizard.md), [variáveis](../../ide/add-member-variable-wizard.md), [eventos](../../ide/add-event-wizard.md), [propriedades](../../ide/names-add-property-wizard.md), e [métodos](../../ide/add-method-wizard.md). Para obter mais informações sobre como personalizar o seu controle ActiveX, consulte [controles ActiveX do MFC](../../mfc/mfc-activex-controls.md).
 
 ## <a name="see-also"></a>Consulte também
 
 [Adicionando funcionalidade com assistentes de código](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
-[Páginas de propriedade](../../ide/property-pages-visual-cpp.md)
+[Páginas de propriedade](../../build/reference/property-pages-visual-cpp.md)
+

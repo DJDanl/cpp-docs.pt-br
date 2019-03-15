@@ -8,12 +8,12 @@ helpviewer_keywords:
 - '#include directive'
 - include directive (#include)
 ms.assetid: 17067dc0-8db1-4f2d-b43e-ec12ecf83238
-ms.openlocfilehash: da68f71d2a3830cdd86870d8ef072c3fb04933db
-ms.sourcegitcommit: 45835842604602a011813d0cd70abc5df91b89ed
+ms.openlocfilehash: 67a44574a5a72a7b7addc0ed3d7b51cd3eb5b984
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50750399"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57821374"
 ---
 # <a name="include-directive-cc"></a>Diretiva #include (C/C++)
 
@@ -49,7 +49,7 @@ Incluir arquivos que podem ser "aninhados"; ou seja, uma **#include** diretiva p
 
 Ao incluir os arquivos que estão aninhados e ao compilar na linha de comando, a pesquisa de diretório começa com os diretórios do arquivo pai e depois continua pelos diretórios dos arquivos avô. Ou seja, a pesquisa inicia relativa ao diretório que contém a fonte que está sendo processada atualmente. Se o arquivo não for encontrado, a pesquisa muda para diretórios especificados pela [/I (diretórios de inclusão adicionais)](../build/reference/i-additional-include-directories.md) opção de compilador. Por fim, os diretórios que são especificados pela variável de ambiente INCLUDE são pesquisados.
 
-Do ambiente de desenvolvimento do Visual Studio, a variável de ambiente INCLUDE é ignorada. Para obter informações sobre como definir os diretórios que são pesquisados para arquivos de inclusão — isso também se aplica à variável de ambiente LIB — consulte [página de propriedade dos diretórios VC + +](../ide/vcpp-directories-property-page.md).
+Do ambiente de desenvolvimento do Visual Studio, a variável de ambiente INCLUDE é ignorada. Para obter informações sobre como definir os diretórios que são pesquisados para arquivos de inclusão — isso também se aplica à variável de ambiente LIB — consulte [página de propriedade dos diretórios VC + +](../build/reference/vcpp-directories-property-page.md).
 
 Este exemplo mostra a inclusão de arquivo usando os colchetes angulares:
 

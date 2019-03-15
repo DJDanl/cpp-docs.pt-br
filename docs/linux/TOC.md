@@ -4,7 +4,7 @@
 # [Criar um novo projeto do Linux](create-a-new-linux-project.md)
 # [Conectar-se ao computador Linux remoto](connect-to-your-remote-linux-computer.md)
 # [Implantar, executar e depurar o projeto do Linux](deploy-run-and-debug-your-linux-project.md)
-# [Tutorial: Criar projetos de plataforma cruzada do C++ no Visual Studio](../ide/get-started-linux-cmake.md)
+# [Tutorial: Criar projetos de plataforma cruzada do C++ no Visual Studio](../build/get-started-linux-cmake.md)
 # [Referência de página de propriedades do projeto do Linux](prop-pages-linux.md)
 ## [Propriedades gerais (Linux)](prop-pages/general-linux.md)
 ## [Propriedades de depuração (Linux)](prop-pages/debugging-linux.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - -GT compiler option [C++]
 - fiber-safe static thread-local storage compiler option [C++]
 ms.assetid: 071fec79-c701-432b-9970-457344133159
-ms.openlocfilehash: 14d2f66401b7b7ed324b79b12b6de26c7ee450b2
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 417ac00a446f773a424553e42478a4f0cf58efc6
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420252"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822507"
 ---
 # <a name="gt-support-fiber-safe-thread-local-storage"></a>/GT (armazenamento local de thread seguro de fibra de suporte)
 
@@ -33,11 +33,11 @@ Dá suporte à segurança de fibra para dados alocados usando armazenamento de t
 
 Dados declarados com `__declspec(thread)` é referenciado por meio de uma matriz de armazenamento local de thread (TLS). A matriz TLS é uma matriz de endereços que o sistema mantém para cada thread. Cada endereço nessa matriz fornece o local dos dados do armazenamento local de thread.
 
-Uma fibra é um objeto leve que consiste em uma pilha e um contexto de registro e pode ser agendado em vários threads. Uma fibra pode executar em qualquer thread. Como uma fibra pode obter trocada e reiniciada posteriormente em um thread diferente, o endereço da matriz TLS não deve ser armazenado em cache ou otimizado como uma subexpressão comum em uma chamada de função (consulte a [/Og (otimizações globais)](../../build/reference/og-global-optimizations.md) opção para detalhes). **/GT** impede essas otimizações.
+Uma fibra é um objeto leve que consiste em uma pilha e um contexto de registro e pode ser agendado em vários threads. Uma fibra pode executar em qualquer thread. Como uma fibra pode obter trocada e reiniciada posteriormente em um thread diferente, o endereço da matriz TLS não deve ser armazenado em cache ou otimizado como uma subexpressão comum em uma chamada de função (consulte a [/Og (otimizações globais)](og-global-optimizations.md) opção para detalhes). **/GT** impede essas otimizações.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio
 
-1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, confira [Trabalhando com propriedades do projeto](../../ide/working-with-project-properties.md).
+1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [propriedades de compilador e de build definida C++ no Visual Studio](../working-with-project-properties.md).
 
 1. Clique o **C/C++** pasta.
 
@@ -51,5 +51,5 @@ Uma fibra é um objeto leve que consiste em uma pilha e um contexto de registro 
 
 ## <a name="see-also"></a>Consulte também
 
-[Opções do Compilador](../../build/reference/compiler-options.md)<br/>
-[Definindo opções do compilador](../../build/reference/setting-compiler-options.md)
+[Opções do compilador MSVC](compiler-options.md)<br/>
+[Sintaxe de linha de comando do compilador MSVC](compiler-command-line-syntax.md)

@@ -3,12 +3,12 @@ title: / POGOSAFEMODE (executar PGO no modo de segurança do thread)
 ms.date: 03/14/2018
 f1_keywords:
 - POGOSAFEMODE
-ms.openlocfilehash: f210884d693ef0d778943580b9c5a7b2ec2ea336
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bbb328bf67d7823305a43f1d61252747cf5ea29e
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544424"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57821281"
 ---
 # <a name="pogosafemode-run-pgo-in-thread-safe-mode"></a>/ POGOSAFEMODE (executar PGO no modo de segurança do thread)
 
@@ -26,11 +26,11 @@ O **/POGOSAFEMODE** opção define a compilação instrumentada para usar o modo
 
 Por padrão, a criação de perfil de PGO opera no modo rápido. **/ POGOSAFEMODE** é necessário apenas se você deseja usar o modo de segurança.
 
-Para executar a criação de perfil de PGO no modo de segurança, você deve usar **/GENPROFILE: exata** (preferencial), ou usar a variável de ambiente [PogoSafeMode](environment-variables-for-profile-guided-optimizations.md) ou a opção de vinculador **/POGOSAFEMODE**, dependendo do sistema. Se você estiver executando a criação de perfil em um x64 computador, você deve usar a opção de vinculador. Se você estiver executando a criação de perfil em um x86 computador, você pode usar a opção de vinculador ou definir a variável de ambiente como qualquer valor antes de iniciar o processo de instrumentação de PGO.
+Para executar a criação de perfil de PGO no modo de segurança, você deve usar **/GENPROFILE: exata** (preferencial), ou usar a variável de ambiente [PogoSafeMode](../environment-variables-for-profile-guided-optimizations.md) ou a opção de vinculador **/POGOSAFEMODE**, dependendo do sistema. Se você estiver executando a criação de perfil em um x64 computador, você deve usar a opção de vinculador. Se você estiver executando a criação de perfil em um x86 computador, você pode usar a opção de vinculador ou definir a variável de ambiente como qualquer valor antes de iniciar o processo de instrumentação de PGO.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do vinculador no ambiente de desenvolvimento do Visual Studio
 
-1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [configuração de propriedades do projeto Visual C++](../../ide/working-with-project-properties.md).
+1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [propriedades de compilador e de build definida C++ no Visual Studio](../working-with-project-properties.md).
 
 1. Selecione o **propriedades de configuração** > **vinculador** > **otimização** página de propriedades.
 
@@ -38,7 +38,7 @@ Para executar a criação de perfil de PGO no modo de segurança, você deve usa
 
 1. Selecione o **propriedades de configuração** > **vinculador** > **linha de comando** página de propriedades.
 
-1. Insira o **/POGOSAFEMODE** opção para o **opções adicionais** caixa. Escolher **Okey** para salvar suas alterações.
+1. Insira o **/POGOSAFEMODE** opção para o **opções adicionais** caixa. Escolha **OK** para salvar suas alterações.
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Para definir esta opção do vinculador por meio de programação
 
@@ -48,5 +48,5 @@ Para executar a criação de perfil de PGO no modo de segurança, você deve usa
 
 [/GENPROFILE e /FASTGENPROFILE](genprofile-fastgenprofile-generate-profiling-instrumented-build.md)<br/>
 [/LTCG](ltcg-link-time-code-generation.md)<br/>
-[Otimizações guiadas por perfil](../../build/reference/profile-guided-optimizations.md)<br/>
-[Variáveis de ambiente para otimizações guiadas por perfil](../../build/reference/environment-variables-for-profile-guided-optimizations.md)<br/>
+[Otimizações guiadas por perfil](../profile-guided-optimizations.md)<br/>
+[Variáveis de ambiente para otimizações guiadas por perfil](../environment-variables-for-profile-guided-optimizations.md)<br/>

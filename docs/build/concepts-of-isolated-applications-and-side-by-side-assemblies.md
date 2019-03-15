@@ -5,12 +5,12 @@ helpviewer_keywords:
 - side-by-side assemblies [C++]
 - isolated assemblies [C++]
 ms.assetid: 945a885f-cb3e-4c8a-a0b9-2c2e3e02cc50
-ms.openlocfilehash: 332c78581d4a13c61c3adb7728b2b3ef2cf1a2a2
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 61da61b4a213c01ca66e8978c78622fe8b2818d1
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420616"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57817576"
 ---
 # <a name="concepts-of-isolated-applications-and-side-by-side-assemblies"></a>Conceitos de aplicativos isolados e assemblies lado a lado
 
@@ -32,8 +32,8 @@ Você pode alterar as dependências do assembly lado a lado após a implantaçã
 
 ## <a name="visual-c-libraries"></a>Bibliotecas do Visual C++
 
-No Visual Studio 2005 e no Visual Studio 2008, as bibliotecas redistribuíveis como ATL, MFC, CRT, C++ padrão, OpenMP e MSDIA foram implantadas como assemblies lado a lado compartilhados no cache de assembly nativo. Na versão atual, as bibliotecas redistribuíveis usam a implantação central. Por padrão, todos os aplicativos que são compilados usando o Visual C++ são compilados com o manifesto inserido no final binário, e o manifesto descreve as dependências do binário nas bibliotecas do Visual C++. Para entender a geração de manifesto para aplicativos do Visual C++, consulte [Noções básicas sobre geração de manifesto para programas C/C++](../build/understanding-manifest-generation-for-c-cpp-programs.md). Um manifesto não é necessário para aplicativos que são vinculados estaticamente às bibliotecas que eles usam, ou que usam a implantação local. Para obter mais informações sobre a implantação, consulte [implantação no Visual C++](../ide/deployment-in-visual-cpp.md).
+No Visual Studio 2005 e no Visual Studio 2008, as bibliotecas redistribuíveis como ATL, MFC, CRT, C++ padrão, OpenMP e MSDIA foram implantadas como assemblies lado a lado compartilhados no cache de assembly nativo. Na versão atual, as bibliotecas redistribuíveis usam a implantação central. Por padrão, todos os aplicativos que são compilados usando o Visual C++ são compilados com o manifesto inserido no final binário, e o manifesto descreve as dependências do binário nas bibliotecas do Visual C++. Para entender a geração de manifesto para aplicativos do Visual C++, consulte [Noções básicas sobre geração de manifesto para programas C/C++](understanding-manifest-generation-for-c-cpp-programs.md). Um manifesto não é necessário para aplicativos que são vinculados estaticamente às bibliotecas que eles usam, ou que usam a implantação local. Para obter mais informações sobre a implantação, consulte [implantação no Visual C++](../ide/deployment-in-visual-cpp.md).
 
 ## <a name="see-also"></a>Consulte também
 
-[Compilando aplicativos isolados do C/C++ e assemblies lado a lado](../build/building-c-cpp-isolated-applications-and-side-by-side-assemblies.md)
+[Compilando aplicativos isolados do C/C++ e assemblies lado a lado](building-c-cpp-isolated-applications-and-side-by-side-assemblies.md)

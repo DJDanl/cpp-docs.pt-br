@@ -10,12 +10,12 @@ helpviewer_keywords:
 - LoadLibrary method
 - explicit linking [C++]
 ms.assetid: b4535d19-6243-4146-a31a-a5cca4c7c9e3
-ms.openlocfilehash: 7c0b63d80a8b4b03b55d6e50af6c08a8de0937de
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 96b8c0ce1116dbb08260573f25f941ca54169127
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596531"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822412"
 ---
 # <a name="loadlibrary-and-afxloadlibrary"></a>LoadLibrary e AfxLoadLibrary
 
@@ -30,22 +30,22 @@ Para aplicativos MFC que carregam DLLs de extensão do MFC, é recomendável que
 Se o Windows não é possível carregar a DLL, o processo pode tentar recuperar do erro. Por exemplo, o processo pode notificar o usuário sobre o erro e solicitar que o usuário especifique outro caminho para a DLL.
 
 > [!IMPORTANT]
-> Certifique-se de especificar o caminho completo de todas as DLLs. O diretório atual é pesquisado primeiro quando arquivos são carregados. Se você não qualificar o caminho do arquivo, talvez seja possível carregar um arquivo que não seja o pretendido. Outra maneira de evitar isso é usando o [/DEPENDENTLOADFLAG](../build/reference/dependentloadflag.md) a opção de vinculador.
+> Certifique-se de especificar o caminho completo de todas as DLLs. O diretório atual é pesquisado primeiro quando arquivos são carregados. Se você não qualificar o caminho do arquivo, talvez seja possível carregar um arquivo que não seja o pretendido. Outra maneira de evitar isso é usando o [/DEPENDENTLOADFLAG](reference/dependentloadflag.md) a opção de vinculador.
 
 ## <a name="what-do-you-want-to-do"></a>O que você deseja fazer?
 
-- [Como vincular implicitamente para uma DLL](../build/linking-an-executable-to-a-dll.md#linking-implicitly)
+- [Vincular um executável a uma DLL](linking-an-executable-to-a-dll.md#linking-implicitly)
 
-- [Determinar qual método de vinculação usar](../build/linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)
+- [Vincular um executável a uma DLL](linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Que mais você deseja saber?
 
 - [Ordem de pesquisa de biblioteca de vínculo dinâmico](/windows/desktop/Dlls/dynamic-link-library-search-order)
 
-- [FreeLibrary e AfxFreeLibrary](../build/freelibrary-and-afxfreelibrary.md)
+- [FreeLibrary e AfxFreeLibrary](freelibrary-and-afxfreelibrary.md)
 
-- [GetProcAddress](../build/getprocaddress.md)
+- [GetProcAddress](getprocaddress.md)
 
 ## <a name="see-also"></a>Consulte também
 
-- [DLLs no Visual C++](../build/dlls-in-visual-cpp.md)
+- [DLLs no Visual C++](dlls-in-visual-cpp.md)

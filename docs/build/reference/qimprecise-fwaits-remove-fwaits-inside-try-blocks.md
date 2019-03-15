@@ -7,16 +7,16 @@ helpviewer_keywords:
 - -Qimprecise_fwaits compiler option (C++)
 - /Qimprecise_fwaits compiler option (C++)
 ms.assetid: b1501f21-7e08-4fea-95e8-176ec03a635b
-ms.openlocfilehash: 3f2a0e6bc28fb812e087a689716be6119640ffca
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 40683382686ea64a80563f3f29b7d3523f4144a8
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57422125"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57819708"
 ---
 # <a name="qimprecisefwaits-remove-fwaits-inside-try-blocks"></a>/Qimprecise_fwaits (remover fwaits dentro de blocos Try)
 
-Remove o `fwait` comandos internos para `try` bloqueia quando você usa o [/fp: except](../../build/reference/fp-specify-floating-point-behavior.md) opção de compilador.
+Remove o `fwait` comandos internos para `try` bloqueia quando você usa o [/fp: except](fp-specify-floating-point-behavior.md) opção de compilador.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -30,7 +30,7 @@ Essa opção não tem nenhum efeito se **/fp: except** também não for especifi
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio
 
-1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, confira [Trabalhando com propriedades do projeto](../../ide/working-with-project-properties.md).
+1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [propriedades de compilador e de build definida C++ no Visual Studio](../working-with-project-properties.md).
 
 1. Clique o **C/C++** pasta.
 
@@ -44,6 +44,6 @@ Essa opção não tem nenhum efeito se **/fp: except** também não for especifi
 
 ## <a name="see-also"></a>Consulte também
 
-[Opções /Q (operações de nível baixo)](../../build/reference/q-options-low-level-operations.md)<br/>
-[Opções do Compilador](../../build/reference/compiler-options.md)<br/>
-[Definindo opções do compilador](../../build/reference/setting-compiler-options.md)
+[Opções /Q (operações de nível baixo)](q-options-low-level-operations.md)<br/>
+[Opções do compilador MSVC](compiler-options.md)<br/>
+[Sintaxe de linha de comando do compilador MSVC](compiler-command-line-syntax.md)
