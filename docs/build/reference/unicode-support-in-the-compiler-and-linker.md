@@ -8,12 +8,12 @@ f1_keywords:
 - VC.Project.VCXDCMakeTool.UseUnicodeResponseFiles
 helpviewer_keywords:
 - Unicode, Visual C++
-ms.openlocfilehash: cb21165e51960c0ca2f728381413c1a7260c9f83
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 71458ab345670c0a5715576a7da80c4e6ff2955b
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50494972"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807489"
 ---
 # <a name="unicode-support-in-the-compiler-and-linker"></a>Suporte Unicode no compilador e vinculador
 
@@ -45,8 +45,8 @@ Arquivos de resposta e arquivos DEF podem ser UTF-16 com uma BOM ou ANSI.
 
 ## <a name="asm-and-cod-dumps"></a>despejos de. ASM e. COD
 
-despejos de. ASM e. COD estão em ANSI por padrão para compatibilidade com MASM. Use [/FAu](../../build/reference/fa-fa-listing-file.md) para saída UTF-8. Observe que, se você especificar **/FAs**, a origem misturada será diretamente impressa e poderá parecer truncada, por exemplo, se o código-fonte é UTF-8 e você não especificou **/fasu.**.
+despejos de. ASM e. COD estão em ANSI por padrão para compatibilidade com MASM. Use [/FAu](fa-fa-listing-file.md) para saída UTF-8. Observe que, se você especificar **/FAs**, a origem misturada será diretamente impressa e poderá parecer truncada, por exemplo, se o código-fonte é UTF-8 e você não especificou **/fasu**.
 
 ## <a name="see-also"></a>Consulte também
 
-[Compilar código C/C++ na linha de comando](../../build/building-on-the-command-line.md)
+[Usar o conjunto de ferramentas do MSVC da linha de comando](../building-on-the-command-line.md)
