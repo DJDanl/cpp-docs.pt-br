@@ -7,38 +7,38 @@ helpviewer_keywords:
 - .netmodules
 - modules, Visual C++
 ms.assetid: a4bcbe8a-4255-451d-853b-f88cfd82f4e1
-ms.openlocfilehash: 050736e5536a1e38b73524f31491b3a01dc99193
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fcba363cff567c69ac0fbd0a541953dfe2c8e910
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50443571"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57818096"
 ---
 # <a name="netmodule-files-as-linker-input"></a>Arquivos .netmodule como entrada de vinculador
 
 link.exe agora aceita MSIL obj e. netmodules como entrada. O arquivo de saída produzido pelo vinculador é um assembly ou um. netmodule sem dependência de tempo de execução em qualquer um dos netmodules eram de entrada para o vinculador ou. obj.
 
-netmodules são criadas pelo compilador do Visual C++ com [/LN (Criar módulo de MSIL)](../../build/reference/ln-create-msil-module.md) ou pelo vinculador com [/NOASSEMBLY (criar um módulo de MSIL)](../../build/reference/noassembly-create-a-msil-module.md). .objs são sempre criadas em uma compilação do Visual C++. Para outros compiladores do Visual Studio, use o **/target: Module** opção de compilador.
+netmodules são criadas pelo compilador MSVC com [/LN (Criar módulo de MSIL)](ln-create-msil-module.md) ou pelo vinculador com [/NOASSEMBLY (criar um módulo de MSIL)](noassembly-create-a-msil-module.md). .objs são sempre criadas em uma compilação do Visual C++. Para outros compiladores do Visual Studio, use o **/target: Module** opção de compilador.
 
 Você deve passar para o vinculador de arquivo. obj da compilação do Visual C++ que criou o. netmodule. Passando um. netmodule não é mais suportado porque o **/clr: pure** e **/CLR: safe** opções do compilador são preteridas no Visual Studio 2015 e sem suporte no Visual Studio 2017.
 
-Para obter informações sobre como invocar o vinculador da linha de comando, consulte [sintaxe de linha de comando do vinculador](../../build/reference/linker-command-line-syntax.md), [código de compilação C/C++ na linha de comando](../../build/building-on-the-command-line.md), e [definir o caminho e variáveis de ambiente para Compilações de linha de comando](../../build/setting-the-path-and-environment-variables-for-command-line-builds.md).
+Para obter informações sobre como invocar o vinculador da linha de comando, consulte [sintaxe de linha de comando do vinculador](linking.md), [usam o conjunto de ferramentas da linha de comando MSVC](../building-on-the-command-line.md), e [definir o caminho e variáveis de ambiente para compilações de linha de comando](../setting-the-path-and-environment-variables-for-command-line-builds.md).
 
-Passando um arquivo. netmodule ou. dll para o vinculador que foi compilado pelo compilador Visual C++ com **/clr** pode resultar em um erro de vinculador. Para obter mais informações, consulte [escolhendo o formato dos arquivos de entrada. netmodule](../../build/reference/choosing-the-format-of-netmodule-input-files.md).
+Passando um arquivo. netmodule ou. dll para o vinculador que foi compilado pelo compilador MSVC com **/clr** pode resultar em um erro de vinculador. Para obter mais informações, consulte [escolhendo o formato dos arquivos de entrada. netmodule](choosing-the-format-of-netmodule-input-files.md).
 
 O vinculador aceita arquivos. obj nativo, bem como arquivos do MSIL. obj compilados com **/clr**. Ao passar .objs mistos na mesma compilação, a capacidade de verificação do arquivo de saída resultante, por padrão, será igual ao nível mais baixo de capacidade de verificação dos módulos de entrada.
 
 Se você tiver um aplicativo que é composto de dois ou mais assemblies e você deseja que o aplicativo a ser contido em um assembly, você deve recompilar os assemblies e, em seguida, vincule o .objs ou netmodules para produzir um único assembly.
 
-Você deve especificar um ponto de entrada usando [/ENTRY (símbolo de ponto de entrada)](../../build/reference/entry-entry-point-symbol.md) durante a criação de uma imagem executável.
+Você deve especificar um ponto de entrada usando [/ENTRY (símbolo de ponto de entrada)](entry-entry-point-symbol.md) durante a criação de uma imagem executável.
 
-Ao vincular com um arquivo. obj ou. netmodule MSIL, use [/LTCG (geração de código Link-time)](../../build/reference/ltcg-link-time-code-generation.md), caso contrário, quando o vinculador encontra o. netmodule ou. obj MSIL, ele reiniciará o link com /LTCG.
+Ao vincular com um arquivo. obj ou. netmodule MSIL, use [/LTCG (geração de código Link-time)](ltcg-link-time-code-generation.md), caso contrário, quando o vinculador encontra o. netmodule ou. obj MSIL, ele reiniciará o link com /LTCG.
 
 Arquivos. obj ou. netmodule MSIL também podem ser passados para cl.exe.
 
-Arquivos de. obj ou. netmodule MSIL entrada não podem ter recursos inseridos. Um recurso é inserido em um arquivo de saída (módulo ou assembly) com [/ASSEMBLYRESOURCE. (inserir um recurso gerenciado)](../../build/reference/assemblyresource-embed-a-managed-resource.md) opção de vinculador ou com o **/resource** opção do compilador em outros compiladores do Visual Studio.
+Arquivos de. obj ou. netmodule MSIL entrada não podem ter recursos inseridos. Um recurso é inserido em um arquivo de saída (módulo ou assembly) com [/ASSEMBLYRESOURCE. (inserir um recurso gerenciado)](assemblyresource-embed-a-managed-resource.md) opção de vinculador ou com o **/resource** opção do compilador em outros compiladores do Visual Studio.
 
-Ao executar a vinculação MSIL, e se você não especificar também [/LTCG (geração de código Link-time)](../../build/reference/ltcg-link-time-code-generation.md), você verá uma mensagem informativa relatar que o link está reiniciando. Essa mensagem pode ser ignorado, mas to melhorar performance do vinculador com vinculação MSIL, especifique explicitamente **/LTCG**.
+Ao executar a vinculação MSIL, e se você não especificar também [/LTCG (geração de código Link-time)](ltcg-link-time-code-generation.md), você verá uma mensagem informativa relatar que o link está reiniciando. Essa mensagem pode ser ignorado, mas to melhorar performance do vinculador com vinculação MSIL, especifique explicitamente **/LTCG**.
 
 ## <a name="example"></a>Exemplo
 
@@ -98,5 +98,5 @@ caught non System exception in C++ source code file
 
 ## <a name="see-also"></a>Consulte também
 
-- [Arquivos de entrada de LINK](../../build/reference/link-input-files.md)
-- [Opções do vinculador](../../build/reference/linker-options.md)
+- [Arquivos de entrada de LINK](link-input-files.md)
+- [Opções do vinculador MSVC](linker-options.md)

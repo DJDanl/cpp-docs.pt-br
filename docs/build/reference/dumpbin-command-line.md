@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - DUMPBIN program, command line
 ms.assetid: e6ad17d3-965d-41aa-9dfd-75bb073718d4
-ms.openlocfilehash: 4a1ce9f3b6ce3db6687820a4244da54efe38b4ab
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 1f94b26ca3bdc2778c2f9ed41103b456f5194fe3
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57423918"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807384"
 ---
 # <a name="dumpbin-command-line"></a>Linha de comando DUMPBIN
 
@@ -29,5 +29,5 @@ Quando você digita o comando `dumpbin` sem qualquer outra entrada de linha de c
 
 ## <a name="see-also"></a>Consulte também
 
-[Ferramentas de build de C/C++](../../build/reference/c-cpp-build-tools.md)<br/>
-[Referência de DUMPBIN](../../build/reference/dumpbin-reference.md)
+[Ferramentas de Build do MSVC adicionais](c-cpp-build-tools.md)<br/>
+[Referência de DUMPBIN](dumpbin-reference.md)

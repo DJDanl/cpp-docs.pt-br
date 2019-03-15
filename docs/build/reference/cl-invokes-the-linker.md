@@ -10,12 +10,12 @@ helpviewer_keywords:
 - cl.exe compiler [C++], compiling without linking
 - cl.exe compiler [C++], controlling linker
 ms.assetid: eae47ef7-09eb-40c9-b318-7c714cd452fc
-ms.openlocfilehash: 4e65801fcddef739f3fabe88b2b940602fde965a
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: f8d8c5e1b0ca4d2a35a57683fea2e6de12747860
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57412725"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57821476"
 ---
 # <a name="cl-invokes-the-linker"></a>O CL invoca o vinculador
 
@@ -28,7 +28,7 @@ Automaticamente, o CL invoca o vinculador após a compilação, a menos que a op
 |/Zg|Gerar protótipos de função|
 |/Zs|Verificar sintaxe|
 
-Para obter mais detalhes sobre a vinculação, consulte [opções de vinculador](../../build/reference/linker-options.md).
+Para obter mais detalhes sobre a vinculação, consulte [opções do vinculador MSVC](linker-options.md).
 
 ## <a name="example"></a>Exemplo
 
@@ -46,7 +46,7 @@ Para compilar esse programa, compilar com a seguinte linha de comando:
 CL MAIN.c MOD1.C MOD2.C MYGRAPH.lib
 ```
 
-CL primeiro compila os arquivos de origem C e cria os arquivos de objeto Main, MOD1.obj e MOD2.obj. O compilador coloca o nome da biblioteca padrão em cada arquivo. obj. Para obter mais detalhes, consulte [usar a biblioteca de tempo de execução](../../build/reference/md-mt-ld-use-run-time-library.md).
+CL primeiro compila os arquivos de origem C e cria os arquivos de objeto Main, MOD1.obj e MOD2.obj. O compilador coloca o nome da biblioteca padrão em cada arquivo. obj. Para obter mais detalhes, consulte [usar a biblioteca de tempo de execução](md-mt-ld-use-run-time-library.md).
 
 CL passa os nomes dos arquivos. obj, juntamente com o nome MYGRAPH.lib, para o vinculador. O vinculador resolve as referências externas da seguinte maneira:
 
@@ -58,5 +58,5 @@ CL passa os nomes dos arquivos. obj, juntamente com o nome MYGRAPH.lib, para o v
 
 ## <a name="see-also"></a>Consulte também
 
-[Opções do Compilador](../../build/reference/compiler-options.md)<br/>
-[Definindo opções do compilador](../../build/reference/setting-compiler-options.md)
+[Opções do compilador MSVC](compiler-options.md)<br/>
+[Definindo opções do compilador](compiler-command-line-syntax.md)

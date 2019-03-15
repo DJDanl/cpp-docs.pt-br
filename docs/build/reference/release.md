@@ -9,12 +9,12 @@ helpviewer_keywords:
 - /RELEASE editbin option
 - checksum setting
 ms.assetid: 183422eb-6b3c-474e-9589-04a0e69dec5d
-ms.openlocfilehash: 433643da090f17e2034bc34b850c28f6abfd3f0f
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 0437e67a977512cb0ba6f327ad3d1bda0c147485
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57412803"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822373"
 ---
 # <a name="release"></a>/RELEASE
 
@@ -30,4 +30,4 @@ O sistema operacional exige a soma de verificação para drivers de dispositivo.
 
 ## <a name="see-also"></a>Consulte também
 
-[Opções de EDITBIN](../../build/reference/editbin-options.md)
+[Opções de EDITBIN](editbin-options.md)

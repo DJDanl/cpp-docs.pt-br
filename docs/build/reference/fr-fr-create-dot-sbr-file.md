@@ -13,12 +13,12 @@ helpviewer_keywords:
 - FR compiler option [C++]
 - symbolic browser information
 ms.assetid: 3fd8f88b-3924-4feb-9393-287036a28896
-ms.openlocfilehash: 41b415889465441b0c53f12ec7f4aa412a636562
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: a75a9d143012dee7946591d708921d6734b2acda
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57418076"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57811869"
 ---
 # <a name="fr-fr-create-sbr-file"></a>/FR, /Fr (criar arquivo .Sbr)
 
@@ -41,14 +41,14 @@ Durante o processo de compilação, a Microsoft procurar informações de arquiv
 
 Se você não especificar `filename`, o arquivo. SBR obtém o mesmo nome base que o arquivo de origem.
 
-**/FR** foi preterida; use **/FR** em vez disso. Para obter mais informações, consulte preterido e opções do compilador removido no [opções de compilador listadas por categoria](../../build/reference/compiler-options-listed-by-category.md).
+**/FR** foi preterida; use **/FR** em vez disso. Para obter mais informações, consulte preterido e opções do compilador removido no [opções de compilador listadas por categoria](compiler-options-listed-by-category.md).
 
 > [!NOTE]
 >  Não altere a extensão. SBR. BSCMAKE requer os arquivos intermediários para ter essa extensão.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio
 
-1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, confira [Trabalhando com propriedades do projeto](../../ide/working-with-project-properties.md).
+1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [propriedades de compilador e de build definida C++ no Visual Studio](../working-with-project-properties.md).
 
 1. No painel de navegação, escolha o **C/C++**, **procurar informações** página de propriedades.
 
@@ -60,7 +60,7 @@ Se você não especificar `filename`, o arquivo. SBR obtém o mesmo nome base qu
 
 ## <a name="see-also"></a>Consulte também
 
-[Opções do arquivo de saída (/F)](../../build/reference/output-file-f-options.md)<br/>
-[Opções do Compilador](../../build/reference/compiler-options.md)<br/>
-[Definindo opções do compilador](../../build/reference/setting-compiler-options.md)<br/>
-[Especificando o nome de caminho](../../build/reference/specifying-the-pathname.md)
+[Opções do arquivo de saída (/F)](output-file-f-options.md)<br/>
+[Opções do compilador MSVC](compiler-options.md)<br/>
+[Sintaxe de linha de comando do compilador MSVC](compiler-command-line-syntax.md)<br/>
+[Especificando o nome de caminho](specifying-the-pathname.md)

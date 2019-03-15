@@ -12,12 +12,12 @@ helpviewer_keywords:
 - merging injected code
 - /Fx compiler option [C++]
 ms.assetid: 14f0e301-3bab-45a3-bbdf-e7ce66f20560
-ms.openlocfilehash: 674dc9d09aec0cb8d6b127c11185693534359b31
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: f1a266eee4edc524fbbe49bdef31a8235f62bd3c
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57416612"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57818135"
 ---
 # <a name="fx-merge-injected-code"></a>/Fx (mesclar código injetado)
 
@@ -62,7 +62,7 @@ Se seu programa inclui um arquivo de cabeçalho que usa o código injetado **/Fx
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio
 
-1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, confira [Trabalhando com propriedades do projeto](../../ide/working-with-project-properties.md).
+1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [propriedades de compilador e de build definida C++ no Visual Studio](../working-with-project-properties.md).
 
 1. Clique o **C/C++** pasta.
 
@@ -76,6 +76,6 @@ Se seu programa inclui um arquivo de cabeçalho que usa o código injetado **/Fx
 
 ## <a name="see-also"></a>Consulte também
 
-[Opções do arquivo de saída (/F)](../../build/reference/output-file-f-options.md)<br/>
-[Opções do Compilador](../../build/reference/compiler-options.md)<br/>
-[Definindo opções do compilador](../../build/reference/setting-compiler-options.md)
+[Opções do arquivo de saída (/F)](output-file-f-options.md)<br/>
+[Opções do compilador MSVC](compiler-options.md)<br/>
+[Sintaxe de linha de comando do compilador MSVC](compiler-command-line-syntax.md)

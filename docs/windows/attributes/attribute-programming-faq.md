@@ -7,12 +7,12 @@ helpviewer_keywords:
 - attributes [C++/CLI], frequently asked questions
 - FAQs (frequently asked questions), attributed programming [C++]
 ms.assetid: a1b8349f-7f51-43c4-95ea-4edb6e5f243f
-ms.openlocfilehash: b273ad71c3c6eaed69fc715401219200f26f87eb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 89c37b2fe81a414bdd02d73e3c3dfd5205a03831
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50434977"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57815873"
 ---
 # <a name="attribute-programming-faq"></a>Perguntas frequentes de programação do atributo
 
@@ -122,7 +122,7 @@ Você pode ter um projeto ATL nonattributed, que tem um arquivo. idl, e talvez v
 
 ##  <a name="vcconattributeprogrammmingfaqanchor6"></a> Como usar um arquivo. idl em um projeto atribuído?
 
-Você pode ter um arquivo. IDL que você deseja usar em seu projeto ATL atribuído. Nesse caso, você usaria o [importidl](importidl.md) atributo, compile o arquivo. IDL para um arquivo. h (consulte a [páginas de propriedade MIDL](../../ide/midl-property-pages.md) do projeto **páginas de propriedade** caixa de diálogo), e em seguida, inclua o arquivo. h em seu projeto.
+Você pode ter um arquivo. IDL que você deseja usar em seu projeto ATL atribuído. Nesse caso, você usaria o [importidl](importidl.md) atributo, compile o arquivo. IDL para um arquivo. h (consulte a [páginas de propriedade MIDL](../../build/reference/midl-property-pages.md) do projeto **páginas de propriedade** caixa de diálogo), e em seguida, inclua o arquivo. h em seu projeto.
 
 ##  <a name="vcconattributeprogrammmingfaqanchor7"></a> Posso modificar o código que é injetado por um atributo?
 

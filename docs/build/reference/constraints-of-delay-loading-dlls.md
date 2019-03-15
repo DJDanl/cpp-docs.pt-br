@@ -6,12 +6,12 @@ helpviewer_keywords:
 - delayed loading of DLLs, constraints
 - DLLs [C++], constraints
 ms.assetid: 0097ff65-550f-4a4e-8ac3-39bf6404f926
-ms.openlocfilehash: 0be2c9e0681018bb61f433f77df8fdd77ba741a5
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: e37890fcd757a52ddeff0ccd79289bbc0c35e042
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420486"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816575"
 ---
 # <a name="constraints-of-delay-loading-dlls"></a>Restrições de DLLs de carregamento do atraso
 
@@ -21,7 +21,7 @@ Há restrições relativas ao carregamento atrasado de importações.
 
 - O carregamento atrasado de Kernel32.dll não tem suporte. Essa DLL é necessária para que as rotinas da ajuda de carregamento atrasado realize o carregamento atrasado.
 
-- [Associação](../../build/reference/binding-imports.md) da entrada de pontos que são encaminhados não tem suporte.
+- [Associação](binding-imports.md) da entrada de pontos que são encaminhados não tem suporte.
 
 - O carregamento atrasado de uma DLL pode não resultar no mesmo comportamento do processo, caso haja inicializações por processo que ocorrem no ponto de entrada da DLL carregada com atraso. Outros casos incluem estático TLS (armazenamento local de thread), declarado usando [__declspec(thread)](../../cpp/thread.md), que não é tratado quando a DLL é carregada por meio de `LoadLibrary`. TLS dinâmico, usando `TlsAlloc`, `TlsFree`, `TlsGetValue` e `TlsSetValue`, ainda está disponível para uso em DLLs estáticas ou com carregamento atrasado.
 
@@ -33,7 +33,7 @@ Há restrições relativas ao carregamento atrasado de importações.
 
 ## <a name="see-also"></a>Consulte também
 
-[Suporte do vinculador para DLLs carregadas com atraso](../../build/reference/linker-support-for-delay-loaded-dlls.md)<br/>
+[Suporte do vinculador para DLLs carregadas com atraso](linker-support-for-delay-loaded-dlls.md)<br/>
 [Função LoadLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya)<br/>
 [Função GetModuleHandle](/windows/desktop/api/libloaderapi/nf-libloaderapi-getmodulehandlea)<br/>
 [Função GetProcAddress](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress)<br/>

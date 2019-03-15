@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - SECTIONS .def file statement
 ms.assetid: 7b974366-9ef5-4e57-bbcc-73a1df6f8857
-ms.openlocfilehash: d70c8d6e7188844a8721b37d5e80fb88a4e21ef9
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 5125b09675969c784aafe375faf1fdbc36d8c5d9
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57412790"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57815106"
 ---
 # <a name="sections-cc"></a>SECTIONS (C/C++)
 
@@ -58,8 +58,8 @@ section [CLASS 'classname'] specifier
 
 O `CLASS` palavra-chave é suportada para compatibilidade, mas é ignorado.
 
-Uma maneira equivalente para especificar atributos de seção é com o [/seção](../../build/reference/section-specify-section-attributes.md) opção.
+Uma maneira equivalente para especificar atributos de seção é com o [/seção](section-specify-section-attributes.md) opção.
 
 ## <a name="see-also"></a>Consulte também
 
-[Regras para instruções de definição do módulo](../../build/reference/rules-for-module-definition-statements.md)
+[Regras para instruções de definição do módulo](rules-for-module-definition-statements.md)

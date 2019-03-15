@@ -7,12 +7,12 @@ helpviewer_keywords:
 - -PROFILE linker option
 - /PROFILE linker option
 ms.assetid: e676baa1-5063-47a3-a357-ba0d1f0d1699
-ms.openlocfilehash: a0fda47497ffc247dd9678ece7aac76291aed1ff
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: ca68ae090c6e4e6e3e10f37ac0d225faee96746a
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57419147"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57809997"
 ---
 # <a name="profile-performance-tools-profiler"></a>/PROFILE (criador de perfil das ferramentas de desempenho)
 
@@ -28,13 +28,13 @@ Produz um arquivo de saída que pode ser usado com o criador de perfil de Ferram
 
 / PERFIL implica que as seguintes opções do vinculador:
 
-- [/OPT:REF](../../build/reference/opt-optimizations.md)
+- [/OPT:REF](opt-optimizations.md)
 
 - /OPT:NOICF
 
-- [/INCREMENTAL:NO](../../build/reference/incremental-link-incrementally.md)
+- [/INCREMENTAL:NO](incremental-link-incrementally.md)
 
-- [/FIXED:NO](../../build/reference/fixed-fixed-base-address.md)
+- [/FIXED:NO](fixed-fixed-base-address.md)
 
 / PERFIL faz com que o vinculador gerar uma seção de realocação na imagem do programa.  Uma seção de realocação permite que o criador de perfil transformar a imagem de programa para obter dados de perfil.
 
@@ -42,7 +42,7 @@ Produz um arquivo de saída que pode ser usado com o criador de perfil de Ferram
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do vinculador no ambiente de desenvolvimento do Visual Studio
 
-1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, confira [Trabalhando com propriedades do projeto](../../ide/working-with-project-properties.md).
+1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [propriedades de compilador e de build definida C++ no Visual Studio](../working-with-project-properties.md).
 
 1. Expanda o nó **Propriedades de Configuração**.
 
@@ -58,5 +58,5 @@ Produz um arquivo de saída que pode ser usado com o criador de perfil de Ferram
 
 ## <a name="see-also"></a>Consulte também
 
-[Definindo opções de vinculador](../../build/reference/setting-linker-options.md)<br/>
-[Opções do vinculador](../../build/reference/linker-options.md)
+[Referência de vinculador MSVC](linking.md)<br/>
+[Opções do vinculador MSVC](linker-options.md)

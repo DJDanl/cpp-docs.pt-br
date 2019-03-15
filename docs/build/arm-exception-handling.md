@@ -2,16 +2,16 @@
 title: Tratamento de exceção ARM
 ms.date: 07/11/2018
 ms.assetid: fe0e615f-c033-4ad5-97f4-ff96af45b201
-ms.openlocfilehash: f6df8afd453f7e71d1ecc2ebb188c079a3aad02a
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: cbbec3f40df2765fa76399ce667ae30f4533b018
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694342"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57814534"
 ---
 # <a name="arm-exception-handling"></a>Tratamento de exceção ARM
 
-O Windows baseado em ARM usa o mesmo mecanismo de tratamento de exceção estruturado para exceções geradas por hardware assíncronas e exceções geradas por software síncronas. Os manipuladores de exceção específicos da linguagem são compilados sobre o tratamento de exceção estruturado do Windows usando funções de auxiliares da linguagem. Este documento descreve o tratamento de exceção no Windows em ARM e os auxiliares da linguagem usados pelo código que é gerado pelo assembler Microsoft ARM e o compilador do Visual C++.
+O Windows baseado em ARM usa o mesmo mecanismo de tratamento de exceção estruturado para exceções geradas por hardware assíncronas e exceções geradas por software síncronas. Os manipuladores de exceção específicos da linguagem são compilados sobre o tratamento de exceção estruturado do Windows usando funções de auxiliares da linguagem. Este documento descreve o tratamento de exceção no Windows em ARM e os auxiliares da linguagem usados pelo código que é gerado pelo assembler Microsoft ARM e o compilador MSVC.
 
 ## <a name="arm-exception-handling"></a>Tratamento de exceção ARM
 
@@ -104,7 +104,7 @@ Os prólogos para funções canônicas podem ter até 5 instruções (observe qu
 
 |Instrução|Supõe-se que Opcode esteja presente se:|Tamanho|Opcode|Códigos de desenrolamento|
 |-----------------|-----------------------------------|----------|------------|------------------|
-|1|*H*= = 1|16|`push {r0-r3}`|04|
+|1|*H*==1|16|`push {r0-r3}`|04|
 |2|*C*= = 1 ou *L*= = 1 ou *R*= = 0 ou PF==1 = = 1|16/32|`push {registers}`|80-BF/D0-DF/EC-ED|
 |3a|*C*= = 1 e (*L*= = 0 e *R*= = 1 e PF==0 = = 0)|16|`mov r11,sp`|C0-CF/FB|
 |3b|*C*= = 1 e (*L*= = 1 ou *R*= = 0 ou PF==1 = = 1)|32|`add r11,sp,#xx`|FC|
@@ -121,22 +121,22 @@ As instruções 2 e 4 são configuradas com base na necessidade de um envio por 
 
 |C|L|R|PF|Registros de inteiro enviados por push|Registros VFP enviados por push|
 |-------|-------|-------|--------|------------------------------|--------------------------|
-|0|0|0|0|R4-r*N*|nenhum|
-|0|0|0|1|r*S*- r*N*|nenhum|
-|0|0|1|0|nenhum|D8-d*E*|
-|0|0|1|1|r*S*-r3|D8-d*E*|
-|0|1|0|0|R4-r*N*, LR|nenhum|
-|0|1|0|1|r*S*- r*N*, LR|nenhum|
-|0|1|1|0|LR|D8-d*E*|
-|0|1|1|1|r*S*-r3, LR|D8-d*E*|
-|1|0|0|0|R4-r*N*, r11|nenhum|
-|1|0|0|1|r*S*- r*N*, r11|nenhum|
-|1|0|1|0|r11|D8-d*E*|
-|1|0|1|1|r*S*-r3, r11|D8-d*E*|
-|1|1|0|0|R4-r*N*, r11, LR|nenhum|
-|1|1|0|1|r*S*- r*N*, r11, LR|nenhum|
-|1|1|1|0|r11, LR|D8-d*E*|
-|1|1|1|1|r*S*-r3, r11, LR|D8-d*E*|
+|0|0|0|0|r4-r*N*|nenhum|
+|0|0|0|1|r*S*-r*N*|nenhum|
+|0|0|1|0|nenhum|d8-d*E*|
+|0|0|1|1|r*S*-r3|d8-d*E*|
+|0|1|0|0|r4-r*N*, LR|nenhum|
+|0|1|0|1|r*S*-r*N*, LR|nenhum|
+|0|1|1|0|LR|d8-d*E*|
+|0|1|1|1|r*S*-r3, LR|d8-d*E*|
+|1|0|0|0|r4-r*N*, r11|nenhum|
+|1|0|0|1|r*S*-r*N*, r11|nenhum|
+|1|0|1|0|r11|d8-d*E*|
+|1|0|1|1|r*S*-r3, r11|d8-d*E*|
+|1|1|0|0|r4-r*N*, r11, LR|nenhum|
+|1|1|0|1|r*S*-r*N*, r11, LR|nenhum|
+|1|1|1|0|r11, LR|d8-d*E*|
+|1|1|1|1|r*S*-r3, r11, LR|d8-d*E*|
 
 Os epílogos para funções canônicas seguem uma forma semelhante, mas na ordem inversa e com algumas opções adicionais. O epílogo pode ter até 5 instruções de comprimento e sua forma é estritamente ditada pela forma do prólogo.
 
@@ -410,7 +410,7 @@ Se, depois que os epílogos de instrução única forem ignorados, não houver e
 
 Nestes exemplos, a base da imagem está em 0x00400000.
 
-### <a name="example-1-leaf-function-no-locals"></a>Exemplo 1: Função folha, sem locais
+### <a name="example-1-leaf-function-no-locals"></a>Exemplo 1: Função de folha, sem locais
 
 ```asm
 Prologue:
@@ -444,7 +444,7 @@ Epilogue:
 
    - *Ajuste de pilha* = 0, indicando que nenhum ajuste de pilha
 
-### <a name="example-2-nested-function-with-local-allocation"></a>Exemplo 2: Função aninhada com alocação local
+### <a name="example-2-nested-function-with-local-allocation"></a>Exemplo 2: Função aninhada com alocação Local
 
 ```asm
 Prologue:
@@ -479,7 +479,7 @@ Epilogue:
 
    - *Ajuste de pilha* = 3 (= 0x0C/4)
 
-### <a name="example-3-nested-variadic-function"></a>Exemplo 3: Função Variadic aninhada
+### <a name="example-3-nested-variadic-function"></a>Exemplo 3: Função de Variadic aninhada
 
 ```asm
 Prologue:
@@ -514,7 +514,7 @@ Epilogue:
 
    - *Ajuste de pilha* = 0, indicando que nenhum ajuste de pilha
 
-### <a name="example-4-function-with-multiple-epilogues"></a>Exemplo 4: Função com vários epílogos
+### <a name="example-4-function-with-multiple-epilogues"></a>Exemplo 4: Função com vários Epílogos
 
 ```asm
 Prologue:
@@ -626,7 +626,7 @@ Epilogue:
 
    - *Palavras de código* = 0x01, que indica uma palavra de 32 bits de códigos de desenrolamento
 
-- Palavra 1: O escopo do epílogo no deslocamento 0xC6 (= 0x18C/2), iniciando o índice do código de desenrolamento em 0x00 e com uma condição de 0x0E (sempre)
+- Word 1: Escopo do epílogo no deslocamento 0xC6 (= 0x18c/2), iniciando o índice de código de desenrolamento em 0x00 e com uma condição de 0x0E (sempre)
 
 - Códigos de desenrolamento, iniciando na Palavra 2: (compartilhado entre o prólogo/epílogo)
 
@@ -739,5 +739,5 @@ Function:
 
 ## <a name="see-also"></a>Consulte também
 
-[Visão geral das convenções ARM ABI](../build/overview-of-arm-abi-conventions.md)<br/>
-[Problemas de migração ARM do Visual C++ comuns](../build/common-visual-cpp-arm-migration-issues.md)
+[Visão geral das convenções ARM ABI](overview-of-arm-abi-conventions.md)<br/>
+[Problemas de migração ARM do Visual C++ comuns](common-visual-cpp-arm-migration-issues.md)

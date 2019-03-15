@@ -25,12 +25,12 @@ helpviewer_keywords:
 - RTCc compiler option
 - -RTCc compiler option [C++]
 ms.assetid: 9702c558-412c-4004-acd5-80761f589368
-ms.openlocfilehash: 3ac70904332f5f05463b317f02a2ab8d3bfc7bb3
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: a830ff5b8ba4b7fcd95eb462f899f2eadce6de11
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424607"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57815886"
 ---
 # <a name="rtc-run-time-error-checks"></a>/RTC (verificações de erro de tempo de execução)
 
@@ -75,7 +75,7 @@ Permite empilhar quadro tempo de execução verificação de erros, da seguinte 
 
 - Inicialização de variáveis locais para um valor diferente de zero. Isso ajuda a identificar bugs que não aparecem quando em execução no modo de depuração. Há uma chance maior de que variáveis de pilha ainda será zero em uma compilação de depuração em comparação comparada um build de versão devido a otimizações do compilador de variáveis de pilha em um build de versão. Depois que um programa tenha usado uma área de sua pilha, ele nunca é redefinido como 0 pelo compilador. Portanto, as variáveis de pilha subsequentes, não inicializado que usam a mesma área de pilha podem retornar valores restantes do uso anterior dessa memória de pilha.
 
-- Detecção de saturações e falhas de variáveis locais, como matrizes. **/RTC** `s` não irá detectar estouros ao acessar a memória que resulta do preenchimento de compilador dentro de uma estrutura. Preenchimento pode ocorrer por meio [alinhar](../../cpp/align-cpp.md), [/Zp (alinhamento de membro de Struct)](../../build/reference/zp-struct-member-alignment.md), ou [pack](../../preprocessor/pack.md), ou se você ordenar os elementos de estrutura de forma exigir o compilador a adicionar preenchimento.
+- Detecção de saturações e falhas de variáveis locais, como matrizes. **/RTC** `s` não irá detectar estouros ao acessar a memória que resulta do preenchimento de compilador dentro de uma estrutura. Preenchimento pode ocorrer por meio [alinhar](../../cpp/align-cpp.md), [/Zp (alinhamento de membro de Struct)](zp-struct-member-alignment.md), ou [pack](../../preprocessor/pack.md), ou se você ordenar os elementos de estrutura de forma exigir o compilador a adicionar preenchimento.
 
 - Verificação de ponteiro de pilha, que detecta dano do ponteiro de pilha. Corrompimento de ponteiro de pilha pode ser causado por uma incompatibilidade de convenção de chamada. Por exemplo, usando um ponteiro de função, você chama uma função em uma DLL que é exportada como [stdcall](../../cpp/stdcall.md) , mas você declara o ponteiro para a função como [cdecl](../../cpp/cdecl.md).
 
@@ -99,13 +99,13 @@ Verificações de erro em tempo de execução são uma maneira de localizar prob
 
 Se você compilar seu programa na linha de comando usando qualquer um dos **/RTC** opções do compilador, qualquer pragma [otimizar](../../preprocessor/optimize.md) instruções em seu código falhará silenciosamente. Isso ocorre porque as verificações de erro em tempo de execução não são válidas em um build de versão (otimizado).
 
-Você deve usar **/RTC** para compilações de desenvolvimento; **/RTC** não deve ser usado para um build de varejo. **/RTC** não pode ser usado com as otimizações do compilador ([/O opções (otimizar código)](../../build/reference/o-options-optimize-code.md)). Imagem de um programa compilado com **/RTC** será um pouco maior e um pouco mais lento do que uma imagem criada com **/Od** (até 5% mais lento do que uma **/Od** compilar).
+Você deve usar **/RTC** para compilações de desenvolvimento; **/RTC** não deve ser usado para um build de varejo. **/RTC** não pode ser usado com as otimizações do compilador ([/O opções (otimizar código)](o-options-optimize-code.md)). Imagem de um programa compilado com **/RTC** será um pouco maior e um pouco mais lento do que uma imagem criada com **/Od** (até 5% mais lento do que uma **/Od** compilar).
 
-A diretiva de pré-processador msvc_runtime_checks será definida quando você usar qualquer **/RTC** opção ou [/GZ](../../build/reference/gz-enable-stack-frame-run-time-error-checking.md).
+A diretiva de pré-processador msvc_runtime_checks será definida quando você usar qualquer **/RTC** opção ou [/GZ](gz-enable-stack-frame-run-time-error-checking.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio
 
-1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, confira [Trabalhando com propriedades do projeto](../../ide/working-with-project-properties.md).
+1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [propriedades de compilador e de build definida C++ no Visual Studio](../working-with-project-properties.md).
 
 1. Clique o **C/C++** pasta.
 
@@ -119,6 +119,6 @@ A diretiva de pré-processador msvc_runtime_checks será definida quando você u
 
 ## <a name="see-also"></a>Consulte também
 
-[Opções do Compilador](../../build/reference/compiler-options.md)<br/>
-[Definindo opções do compilador](../../build/reference/setting-compiler-options.md)<br/>
+[Opções do compilador MSVC](compiler-options.md)<br/>
+[Sintaxe de linha de comando do compilador MSVC](compiler-command-line-syntax.md)<br/>
 [Como: Usar verificações de tempo de execução nativas](/visualstudio/debugger/how-to-use-native-run-time-checks)

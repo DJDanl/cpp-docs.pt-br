@@ -21,12 +21,12 @@ helpviewer_keywords:
 - Gv compiler option [C++]
 - /Gr compiler option [C++]
 ms.assetid: fd3110cb-2d77-49f2-99cf-a03f9ead00a3
-ms.openlocfilehash: 8eba665e34fc3b949283557461e33348106fd532
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7c4f7e6edb020f5c8d2abf80f14df33e18a915c5
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50451492"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57817456"
 ---
 # <a name="gd-gr-gv-gz-calling-convention"></a>/Gd, /Gr, /Gv, /Gz (convenção de chamada)
 
@@ -51,14 +51,14 @@ Essas opções determinam a ordem na qual função argumentos são enviados por 
 
 Funções que usam um número variável de argumentos devem ser marcada como `__cdecl`.
 
-**/Gd**, **/Gr**, **/Gv** e **/Gz** não são compatíveis com [/CLR: safe](../../build/reference/clr-common-language-runtime-compilation.md) ou **/clr: pure**. O **/clr: pure** e **/CLR: safe** opções do compilador são preteridas no Visual Studio 2015 e sem suporte no Visual Studio 2017.
+**/Gd**, **/Gr**, **/Gv** e **/Gz** não são compatíveis com [/CLR: safe](clr-common-language-runtime-compilation.md) ou **/clr: pure**. O **/clr: pure** e **/CLR: safe** opções do compilador são preteridas no Visual Studio 2015 e sem suporte no Visual Studio 2017.
 
 > [!NOTE]
 > Por padrão para x86 de processadores, as funções de membro de C++ usam [thiscall](../../cpp/thiscall.md).
 
 Para todos os processadores, uma função de membro que está explicitamente marcada como `__cdecl`, `__fastcall`, `__vectorcall`, ou `__stdcall` usa a convenção de chamada especificada se ele não é ignorado na arquitetura. Uma função de membro que aceita um número variável de argumentos sempre usa o `__cdecl` convenção de chamada.
 
-Essas opções do compilador não têm efeito sobre a decoração de nome de funções e métodos de C++. A menos que declarado como `extern "C"`, funções e métodos de C++ usam um esquema de decoração de nome diferente. Para obter mais informações, consulte [nomes decorados](../../build/reference/decorated-names.md).
+Essas opções do compilador não têm efeito sobre a decoração de nome de funções e métodos de C++. A menos que declarado como `extern "C"`, funções e métodos de C++ usam um esquema de decoração de nome diferente. Para obter mais informações, consulte [nomes decorados](decorated-names.md).
 
 Para obter mais informações sobre as convenções de chamada, consulte [convenções de chamada](../../cpp/calling-conventions.md).
 
@@ -66,7 +66,7 @@ Para obter mais informações sobre as convenções de chamada, consulte [conven
 
 Em x86 processadores, todos os argumentos de função são passados na pilha da direita para esquerda. No ARM e x64 arquiteturas, alguns argumentos são passadas pelo registro e o restante é passado na pilha da direita para esquerda. A rotina chamada remove os argumentos da pilha.
 
-Para o C, o `__cdecl` usos de convenção de nomenclatura no nome da função precedido por um sublinhado ( `_` ); nenhuma tradução realizada. A menos que declarado como `extern "C"`, funções de C++ usam um esquema de decoração de nome diferente. Para obter mais informações, consulte [nomes decorados](../../build/reference/decorated-names.md).
+Para o C, o `__cdecl` usos de convenção de nomenclatura no nome da função precedido por um sublinhado ( `_` ); nenhuma tradução realizada. A menos que declarado como `extern "C"`, funções de C++ usam um esquema de decoração de nome diferente. Para obter mais informações, consulte [nomes decorados](decorated-names.md).
 
 ## <a name="fastcall-specifics"></a>especificações de fastcall
 
@@ -99,7 +99,7 @@ Para o C, o `__vectorcall` convenção de nomenclatura usa o nome da função se
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio
 
-1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, confira [Trabalhando com propriedades do projeto](../../ide/working-with-project-properties.md).
+1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [propriedades de compilador e de build definida C++ no Visual Studio](../working-with-project-properties.md).
 
 1. Selecione o **C/C++** > **avançado** página de propriedades.
 
@@ -111,5 +111,5 @@ Para o C, o `__vectorcall` convenção de nomenclatura usa o nome da função se
 
 ## <a name="see-also"></a>Consulte também
 
-- [Opções do Compilador](../../build/reference/compiler-options.md)
-- [Definindo opções do compilador](../../build/reference/setting-compiler-options.md)
+- [Opções do compilador MSVC](compiler-options.md)
+- [Sintaxe de linha de comando do compilador MSVC](compiler-command-line-syntax.md)

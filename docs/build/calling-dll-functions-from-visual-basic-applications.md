@@ -10,12 +10,12 @@ helpviewer_keywords:
 - __stdcall keyword [C++]
 - DLL functions [C++], calling
 ms.assetid: 282f7fbf-a0f2-4b9f-b277-1982710be56c
-ms.openlocfilehash: 88705b2a33e3eb82043d93c534477fce96849502
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 1e4f1a538da2394c6cead6ea011faf126b022a3f
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57417565"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57814963"
 ---
 # <a name="calling-dll-functions-from-visual-basic-applications"></a>Chamando funções DLL a partir de aplicativos Visual Basic
 
@@ -33,7 +33,7 @@ int __stdcall func (int a, double b)
 
 A convenção de chamada C (`__cdecl`) decora o nome como `_func`.
 
-Para obter o nome decorado, use [/Map](../build/reference/map-generate-mapfile.md). Uso de **dllexport** faz o seguinte:
+Para obter o nome decorado, use [/Map](reference/map-generate-mapfile.md). Uso de **dllexport** faz o seguinte:
 
 - Se a função será exportada com a convenção de chamada C (`__cdecl`), ele tira o sublinhado ( **\_** ) quando o nome é exportado.
 
@@ -58,18 +58,18 @@ Para DLLs sejam chamadas pelos programas escritos em Visual Basic, a técnica do
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Que mais você deseja saber?
 
-- [Exportando de uma DLL](../build/exporting-from-a-dll.md)
+- [Exportando de uma DLL](exporting-from-a-dll.md)
 
-- [Exportando de uma DLL usando. Arquivos DEF](../build/exporting-from-a-dll-using-def-files.md)
+- [Exportando de uma DLL usando. Arquivos DEF](exporting-from-a-dll-using-def-files.md)
 
-- [Exportando a partir de uma DLL usando dllexport](../build/exporting-from-a-dll-using-declspec-dllexport.md)
+- [Exportando a partir de uma DLL usando dllexport](exporting-from-a-dll-using-declspec-dllexport.md)
 
-- [Exportando funções C++ para uso em executáveis da linguagem C](../build/exporting-cpp-functions-for-use-in-c-language-executables.md)
+- [Exportando funções C++ para uso em executáveis da linguagem C](exporting-cpp-functions-for-use-in-c-language-executables.md)
 
-- [Determinando qual método de exportação usar](../build/determining-which-exporting-method-to-use.md)
+- [Determinar qual método de exportação usar](determining-which-exporting-method-to-use.md)
 
-- [Nomes decorados](../build/reference/decorated-names.md)
+- [Nomes decorados](reference/decorated-names.md)
 
 ## <a name="see-also"></a>Consulte também
 
-[DLLs no Visual C++](../build/dlls-in-visual-cpp.md)
+[DLLs no Visual C++](dlls-in-visual-cpp.md)

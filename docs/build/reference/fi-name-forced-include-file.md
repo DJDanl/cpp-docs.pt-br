@@ -12,12 +12,12 @@ helpviewer_keywords:
 - /FI compiler option [C++]
 - preprocess header file compiler option [C++]
 ms.assetid: 07e79577-8152-4df9-a64c-aae08c603397
-ms.openlocfilehash: b91ca1ba6cc97157be0ab16fc18e065dc501d5fd
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 2e85706a0266696b83fe1a1a6cdc45ba3399fc21
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57422462"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57809217"
 ---
 # <a name="fi-name-forced-include-file"></a>/FI (Arquivo de inclusão forçado do nome)
 
@@ -35,7 +35,7 @@ Essa opção tem o mesmo efeito que especificar o arquivo com aspas duplas em um
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio
 
-1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, confira [Trabalhando com propriedades do projeto](../../ide/working-with-project-properties.md).
+1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [propriedades de compilador e de build definida C++ no Visual Studio](../working-with-project-properties.md).
 
 1. Clique o **C/C++** pasta.
 
@@ -49,7 +49,7 @@ Essa opção tem o mesmo efeito que especificar o arquivo com aspas duplas em um
 
 ## <a name="see-also"></a>Consulte também
 
-[Opções do arquivo de saída (/F)](../../build/reference/output-file-f-options.md)<br/>
-[Opções do Compilador](../../build/reference/compiler-options.md)<br/>
-[Definindo opções do compilador](../../build/reference/setting-compiler-options.md)<br/>
-[Especificando o nome de caminho](../../build/reference/specifying-the-pathname.md)
+[Opções do arquivo de saída (/F)](output-file-f-options.md)<br/>
+[Opções do compilador MSVC](compiler-options.md)<br/>
+[Sintaxe de linha de comando do compilador MSVC](compiler-command-line-syntax.md)<br/>
+[Especificando o nome de caminho](specifying-the-pathname.md)

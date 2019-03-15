@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - EXPORTS .def file statement
 ms.assetid: dbcd7579-b855-44c4-bd27-931e157657f7
-ms.openlocfilehash: b12548bafa9a0c580c5976cd7c4c54d8726e5ace
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 33b70c680bfc3db24f5326a2027fa9ec4740e3f2
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50435669"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57814131"
 ---
 # <a name="exports"></a>EXPORTS
 
@@ -28,7 +28,7 @@ A primeira *definition* pode ser na mesma linha como o `EXPORTS` palavra-chave o
 
 A sintaxe para uma exportação *definição* é:
 
-> *Nome_da_entrada*\[__=__*internal_name*|*other_module.exported_name*] \[ **\@** _ordinal_ \[ **NONAME**]] \[ \[ **PRIVADA**] | \[ **Dados**]]
+> *entryname*\[__=__*internal_name*|*other_module.exported_name*] \[**\@**_ordinal_ \[**NONAME**] ] \[ \[**PRIVATE**] | \[**DATA**] ]
 
 *Nome_da_entrada* é o nome de função ou variável que você deseja exportar. É obrigatório. Se o nome exportado for diferente do nome na DLL, especifique o nome da exportação no DLL usando *internal_name*. Por exemplo, se o DLL exportar uma função `func1` e você desejar que os chamadores a utilizem como `func2`, especifique:
 
@@ -51,9 +51,9 @@ EXPORTS
    func2=other_module.#42
 ```
 
-Como o compilador do Visual C++ usa decoração de nome para funções C++, você deve usar o nome decorado *internal_name* ou definir as funções exportadas usando `extern "C"` no código-fonte. O compilador também decora funções C que usam o [stdcall](../../cpp/stdcall.md) chamando convenção com um sublinhado (\_) prefixo e um sufixo composto o sinal de arroba (\@) seguido pelo número de bytes (em decimais) no lista de argumentos.
+Como o compilador MSVC usa a decoração de nome para funções C++, você deve usar o nome decorado *internal_name* ou definir as funções exportadas usando `extern "C"` no código-fonte. O compilador também decora funções C que usam o [stdcall](../../cpp/stdcall.md) chamando convenção com um sublinhado (\_) prefixo e um sufixo composto o sinal de arroba (\@) seguido pelo número de bytes (em decimais) no lista de argumentos.
 
-Para localizar os nomes decorados produzidos pelo compilador, use o [DUMPBIN](../../build/reference/dumpbin-reference.md) ferramenta ou o vinculador [/Map](../../build/reference/map-generate-mapfile.md) opção. Os nomes decorados são específicos do compilador. Se você exportar os nomes decorados no arquivo .DEF, executáveis vinculados ao DLL também devem ser construídos com a mesma versão do compilador. Isso garante que os nomes decorados no chamador correspondam aos nomes exportados no arquivo .DEF.
+Para localizar os nomes decorados produzidos pelo compilador, use o [DUMPBIN](dumpbin-reference.md) ferramenta ou o vinculador [/Map](map-generate-mapfile.md) opção. Os nomes decorados são específicos do compilador. Se você exportar os nomes decorados no arquivo .DEF, executáveis vinculados ao DLL também devem ser construídos com a mesma versão do compilador. Isso garante que os nomes decorados no chamador correspondam aos nomes exportados no arquivo .DEF.
 
 Você pode usar \@ *ordinal* para especificar que um número e não o nome da função, entra em tabela de exportação da DLL. Muitos DLLs do Windows exportam ordinais para dar suporte a código legado. Era comum usar ordinais em código do Windows de 16 bits, pois isso podia ajudar a minimizar o tamanho de um DLL. Não recomendamos exportar funções por ordinais, a menos que os clientes DLL precisem disso para suporte legado. Como o arquivo .LIB conterá o mapeamento entre o ordinal e a função, é possível usar o nome da função como normalmente se faria em projetos que usam o DLL.
 
@@ -74,7 +74,7 @@ Há quatro maneiras de exportar uma definição, listadas na ordem recomendada:
 
 1. Uma instrução `EXPORTS` em um arquivo .DEF
 
-1. Uma [/exportação](../../build/reference/export-exports-a-function.md) especificação em um comando LINK
+1. Uma [/exportação](export-exports-a-function.md) especificação em um comando LINK
 
 1. Um [comentário](../../preprocessor/comment-c-cpp.md) diretiva no código-fonte do formulário `#pragma comment(linker, "/export: definition ")`. O exemplo a seguir mostra uma diretiva de comentário #pragma antes de uma declaração de função, onde `PlainFuncName` é o nome não decorado, e `_PlainFuncName@4` é o nome decorado da função:
 
@@ -102,4 +102,4 @@ Ao exportar uma variável de um DLL usando um arquivo .DEF, não é necessário 
 
 ## <a name="see-also"></a>Consulte também
 
-[Regras para instruções de definição do módulo](../../build/reference/rules-for-module-definition-statements.md)
+[Regras para instruções de definição do módulo](rules-for-module-definition-statements.md)

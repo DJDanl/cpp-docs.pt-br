@@ -10,12 +10,12 @@ helpviewer_keywords:
 - external names
 - -H compiler option [C++]
 ms.assetid: de701dd3-ed04-4c88-8195-960d2520ec2e
-ms.openlocfilehash: bb7821587d6c0bbe06eb6baa02227955582eb76d
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: bdd3da8d3a5165262c00bc3475122e31f5770726
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420408"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57811258"
 ---
 # <a name="h-restrict-length-of-external-names"></a>/H (restringir comprimento de nomes externos)
 
@@ -68,13 +68,13 @@ void func2(void) {}
 
 Você também deve ter cuidado ao usar o **/H** opção por causa de identificadores de compilador predefinidos. Se o comprimento máximo do identificador é muito pequeno, determinados identificadores predefinidos será biblioteca não resolvidas, bem como determinadas chamadas de função. Por exemplo, se o `printf` função é usada e a opção **/H5** é especificado em tempo de compilação, o símbolo **_prin** será criado para fazer referência a `printf`, e isso não será encontrado na biblioteca.
 
-Uso de **/H** é incompatível com [/GL (otimização de programa inteiro)](../../build/reference/gl-whole-program-optimization.md).
+Uso de **/H** é incompatível com [/GL (otimização de programa inteiro)](gl-whole-program-optimization.md).
 
-O **/H** opção foi preterida desde o Visual Studio 2005; os limites de comprimento máximo aumentaram e **/H** não for mais necessário. Para obter uma lista de opções do compilador preterido, consulte **preteridos e removidos opções do compilador** na [opções de compilador listadas por categoria](../../build/reference/compiler-options-listed-by-category.md).
+O **/H** opção foi preterida desde o Visual Studio 2005; os limites de comprimento máximo aumentaram e **/H** não for mais necessário. Para obter uma lista de opções do compilador preterido, consulte **preteridos e removidos opções do compilador** na [opções de compilador listadas por categoria](compiler-options-listed-by-category.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio
 
-1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, confira [Trabalhando com propriedades do projeto](../../ide/working-with-project-properties.md).
+1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [propriedades de compilador e de build definida C++ no Visual Studio](../working-with-project-properties.md).
 
 1. Selecione o **propriedades de configuração** > **C/C++** > **linha de comando** página de propriedades.
 
@@ -86,5 +86,5 @@ O **/H** opção foi preterida desde o Visual Studio 2005; os limites de comprim
 
 ## <a name="see-also"></a>Consulte também
 
-[Opções do Compilador](../../build/reference/compiler-options.md)<br/>
-[Definindo opções do compilador](../../build/reference/setting-compiler-options.md)
+[Opções do compilador MSVC](compiler-options.md)<br/>
+[Sintaxe de linha de comando do compilador MSVC](compiler-command-line-syntax.md)

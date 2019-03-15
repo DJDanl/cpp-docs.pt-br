@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - PRJ0049
 ms.assetid: 8b38afa1-e080-4efd-ae89-776cfd044413
-ms.openlocfilehash: a451b7fe7b2f7cd89f8898232badf0d3b7e9f138
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fba3de0be764aa56b56ed22c6a9fde9366295456
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50447210"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816224"
 ---
 # <a name="project-build-warning-prj0049"></a>Aviso PRJ0049 no Build do Projeto
 
@@ -21,7 +21,7 @@ Aplicativos criados usando o Visual Studio 2008 podem especificar qual versão d
 
 1. Escolha uma das seguintes opções:
 
-   - Alterar a estrutura de destino do projeto **páginas de propriedade** caixa de diálogo para que seja posterior ou igual à versão mínima do framework de todos os assemblies referenciados e projetos. Para obter mais informações, consulte [adicionando referências](../../ide/adding-references-in-visual-cpp-projects.md).
+   - Alterar a estrutura de destino do projeto **páginas de propriedade** caixa de diálogo para que seja posterior ou igual à versão mínima do framework de todos os assemblies referenciados e projetos. Para obter mais informações, consulte [adicionando referências](../../build/adding-references-in-visual-cpp-projects.md).
 
    - Remova a referência ao assembly ou projeto que tem uma versão mínima do framework que é posterior a estrutura de destino. Esses itens serão marcados com um ícone de aviso do projeto **páginas de propriedade**.
 

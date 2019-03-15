@@ -7,19 +7,19 @@ helpviewer_keywords:
 - MFC Application Wizard
 - executable files, creating
 ms.assetid: 227ac090-921d-4b2f-be0a-66a5f4cab0d4
-ms.openlocfilehash: 3cdaba750060290fa25007d4097b6782d6f20fbf
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 808e8364764dd826ee82e445627ba21b06946ed6
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57258626"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822659"
 ---
 # <a name="mfc-application-wizard"></a>Assistente de aplicativo MFC
 
 O Assistente de aplicativo do MFC gera um aplicativo que, quando compilado, implementa os recursos básicos de um aplicativo do Windows executável (.exe). O aplicativo do MFC starter inclui arquivos de origem (. cpp) C++, arquivos de recurso (. rc), arquivos de cabeçalho (. h) e um arquivo de projeto (. vcxproj). O código gerado nesses arquivos starter baseia-se no MFC.
 
 > [!NOTE]
->  Dependendo das opções que você selecionar, o assistente cria arquivos adicionais em seu projeto. Por exemplo, se você selecionar **ajuda contextual** sobre o [recursos avançados](../../mfc/reference/advanced-features-mfc-application-wizard.md) página, o assistente cria os arquivos que são necessários para compilar os arquivos de Ajuda do projeto. Para obter mais informações sobre os arquivos que o assistente cria, consulte [tipos de arquivo criados para projetos do Visual C++](../../ide/file-types-created-for-visual-cpp-projects.md)e consulte o arquivo readme. txt no projeto.
+>  Dependendo das opções que você selecionar, o assistente cria arquivos adicionais em seu projeto. Por exemplo, se você selecionar **ajuda contextual** sobre o [recursos avançados](../../mfc/reference/advanced-features-mfc-application-wizard.md) página, o assistente cria os arquivos que são necessários para compilar os arquivos de Ajuda do projeto. Para obter mais informações sobre os arquivos que o assistente cria, consulte [tipos de arquivo criados para projetos do Visual C++](../../build/reference/file-types-created-for-visual-cpp-projects.md)e consulte o arquivo readme. txt no projeto.
 
 ## <a name="overview"></a>Visão geral
 

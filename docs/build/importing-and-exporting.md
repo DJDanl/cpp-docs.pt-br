@@ -8,12 +8,12 @@ helpviewer_keywords:
 - DLLs [C++], exporting from
 - __declspec(dllimport) keyword [C++]
 ms.assetid: 7c44c2aa-2117-4cec-9615-a65bfd3f8f7b
-ms.openlocfilehash: 1aaf18003f831ca94ecd90dafb472ecb894b8a60
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 882010cd28c291e9f49ca0f7dd9d646c70130184
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424789"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57815821"
 ---
 # <a name="importing-and-exporting"></a>Importando e exportando
 
@@ -27,7 +27,7 @@ Você pode importar os símbolos públicos para um aplicativo ou exportar funç�
 
 Um arquivo de definição de módulo (. def) é um arquivo de texto que contém uma ou mais declarações de módulo que descrevem vários atributos de uma DLL. Se você não usar **__declspec(dllimport)** ou **dllexport** para exportar funções de uma DLL, a DLL exige um arquivo. def.
 
-Você pode usar arquivos. def [importar para um aplicativo](../build/importing-using-def-files.md) ou a [exportar de uma DLL](../build/exporting-from-a-dll-using-def-files.md).
+Você pode usar arquivos. def [importar para um aplicativo](importing-using-def-files.md) ou a [exportar de uma DLL](exporting-from-a-dll-using-def-files.md).
 
 ## <a name="using-declspec"></a>Usando declspec
 
@@ -41,10 +41,10 @@ O formato de executável portátil do Win32 é projetado para minimizar o númer
 
 ## <a name="what-do-you-want-to-do"></a>O que você deseja fazer?
 
-- [Importar para um aplicativo](../build/importing-into-an-application-using-declspec-dllimport.md)
+- [Importar para um aplicativo](importing-into-an-application-using-declspec-dllimport.md)
 
-- [Exportação de uma DLL](../build/exporting-from-a-dll.md)
+- [Exportação de uma DLL](exporting-from-a-dll.md)
 
 ## <a name="see-also"></a>Consulte também
 
-[DLLs no Visual C++](../build/dlls-in-visual-cpp.md)
+[DLLs no Visual C++](dlls-in-visual-cpp.md)

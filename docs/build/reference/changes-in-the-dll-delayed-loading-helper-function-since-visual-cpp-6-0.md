@@ -7,12 +7,12 @@ helpviewer_keywords:
 - __delayLoadHelper2 function
 - helper functions, what's changed
 ms.assetid: 99f0be69-105d-49ba-8dd5-3be7939c0c72
-ms.openlocfilehash: 25c59d37b753c80014b566fd925363cae71798be
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: cd6e842fd6d35e05f2d5a9f906713f0d85d3b80d
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57426518"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807995"
 ---
 # <a name="changes-in-the-dll-delayed-loading-helper-function-since-visual-c-60"></a>Alterações feitas na função auxiliar de carregamento com atraso da DLL desde o Visual C++ 6.0
 
@@ -33,7 +33,7 @@ Se você tiver várias versões do Visual C++ em seu computador ou se você tive
 
 Se você tiver várias versões do Visual C++ em seu computador, verifique se que o vinculador corresponde delayimp. Se houver uma incompatibilidade, você receberá um erro de vinculador a emissão de relatórios `___delayLoadHelper2@8` ou `___delayLoadHelper@8` como um símbolo externo não resolvido. O primeiro implica um vinculador novo com um delayimp antigo e o último implica um vinculador antigo com um novo delayimp.
 
-Se você receber um erro de vinculador não resolvido, execute [/linkermember (DUMPBIN)](../../build/reference/linkermember.md): 1 no delayimp que você espera que contenha a função auxiliar para ver qual função auxiliar é definida em vez disso. A função auxiliar também pode ser definida em um arquivo de objeto; Execute [dumpbin /symbols](../../build/reference/symbols.md) e procure `delayLoadHelper(2)`.
+Se você receber um erro de vinculador não resolvido, execute [/linkermember (DUMPBIN)](linkermember.md): 1 no delayimp que você espera que contenha a função auxiliar para ver qual função auxiliar é definida em vez disso. A função auxiliar também pode ser definida em um arquivo de objeto; Execute [dumpbin /symbols](symbols.md) e procure `delayLoadHelper(2)`.
 
 Se você souber que tem o vinculador do Visual C++ 6.0, então:
 
@@ -51,7 +51,7 @@ Se você definiu sua própria função auxiliar e estiver usando a versão atual
 
 ## <a name="load-all-imports-for-a-delay-loaded-dll"></a>Carregar todas as importações para uma DLL carregadas com atraso
 
-O vinculador pode carregar todas as importações de uma DLL que você especificou para ser carregado de atraso. Ver [carregar todas as importações para uma DLL Delay-Loaded](../../build/reference/loading-all-imports-for-a-delay-loaded-dll.md) para obter mais informações.
+O vinculador pode carregar todas as importações de uma DLL que você especificou para ser carregado de atraso. Ver [carregar todas as importações para uma DLL Delay-Loaded](loading-all-imports-for-a-delay-loaded-dll.md) para obter mais informações.
 
 ## <a name="see-also"></a>Consulte também
 

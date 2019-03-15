@@ -11,12 +11,12 @@ helpviewer_keywords:
 - .pch files, use existing
 - precompiled header files, use existing
 ms.assetid: 24f1bd0e-b624-4296-a17e-d4b53e374e1f
-ms.openlocfilehash: 49cc7a67a8b25e515d352d481b6ede8d521e51e1
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: c0dcb045450d6e6eca31b8c76a92726e62400656
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424113"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810107"
 ---
 # <a name="yu-use-precompiled-header-file"></a>/Yu (usar arquivo de cabeçalho pré-compilado)
 
@@ -45,7 +45,7 @@ O compilador trata todo o código que ocorrem antes do arquivo. h como pré-comp
 
 Na linha de comando, não é permitido nenhum espaço entre **/Yu** e `filename`.
 
-Quando você especifica o **/Yu** opção sem um nome de arquivo, seu programa de origem deve conter um [#pragma hdrstop](../../preprocessor/hdrstop.md) pragma que especifica o nome do arquivo de cabeçalho pré-compilado, o arquivo. pch. Nesse caso, o compilador usará o cabeçalho pré-compilado (arquivo. pch) nomeado por [/Fp (nome. Arquivo pch)](../../build/reference/fp-name-dot-pch-file.md). O compilador ignora até o local desse pragma, restaura o estado compilado do arquivo de cabeçalho pré-compilado especificado pelo pragma e, em seguida, compila somente o código que se segue ao pragma. Se **#pragma hdrstop** não especifica um nome de arquivo, o compilador procura um arquivo com um nome derivado do nome base do arquivo de origem com uma extensão. pch. Você também pode usar o **/Fp** opção para especificar um arquivo. pch diferentes.
+Quando você especifica o **/Yu** opção sem um nome de arquivo, seu programa de origem deve conter um [#pragma hdrstop](../../preprocessor/hdrstop.md) pragma que especifica o nome do arquivo de cabeçalho pré-compilado, o arquivo. pch. Nesse caso, o compilador usará o cabeçalho pré-compilado (arquivo. pch) nomeado por [/Fp (nome. Arquivo pch)](fp-name-dot-pch-file.md). O compilador ignora até o local desse pragma, restaura o estado compilado do arquivo de cabeçalho pré-compilado especificado pelo pragma e, em seguida, compila somente o código que se segue ao pragma. Se **#pragma hdrstop** não especifica um nome de arquivo, o compilador procura um arquivo com um nome derivado do nome base do arquivo de origem com uma extensão. pch. Você também pode usar o **/Fp** opção para especificar um arquivo. pch diferentes.
 
 Se você especificar o **/Yu** opção sem um nome de arquivo e não especificar um **hdrstop** pragma, uma mensagem de erro é gerada e a compilação for bem-sucedida.
 
@@ -55,15 +55,15 @@ Como arquivos. pch contêm informações sobre o ambiente de máquina, bem como 
 
 Para obter mais informações sobre cabeçalhos pré-compilados, consulte:
 
-- [/Y (cabeçalhos pré-compilados)](../../build/reference/y-precompiled-headers.md)
+- [/Y (cabeçalhos pré-compilados)](y-precompiled-headers.md)
 
-- [Criando arquivos de cabeçalho pré-compilado](../../build/reference/creating-precompiled-header-files.md)
+- [Arquivos de cabeçalho pré-compilado](../creating-precompiled-header-files.md)
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio
 
-1. Especificar [/Yc (criar a arquivo de cabeçalho pré-compilado)](../../build/reference/yc-create-precompiled-header-file.md) em um arquivo. cpp no projeto.
+1. Especificar [/Yc (criar a arquivo de cabeçalho pré-compilado)](yc-create-precompiled-header-file.md) em um arquivo. cpp no projeto.
 
-1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, confira [Trabalhando com propriedades do projeto](../../ide/working-with-project-properties.md).
+1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [propriedades de compilador e de build definida C++ no Visual Studio](../working-with-project-properties.md).
 
 1. Clique o **C/C++** pasta.
 
@@ -88,7 +88,7 @@ Se o código a seguir:
 
 é compilado com a linha de comando `CL /YuMYAPP.H PROG.CPP`, o compilador não processa os três incluem instruções mas código pré-compilado de usos de MYAPP.pch, assim, economizando o tempo envolvido no pré-processamento de todos os três arquivos (e todos eles podem incluir os arquivos).
 
-Você pode usar o [/Fp (nome. Arquivo pch)](../../build/reference/fp-name-dot-pch-file.md) a opção com o **/Yu** opção para especificar o nome do arquivo. pch, se o nome é diferente do que o argumento de nome de arquivo para **/Yc** ou o nome base do arquivo de origem, como no a seguir:
+Você pode usar o [/Fp (nome. Arquivo pch)](fp-name-dot-pch-file.md) a opção com o **/Yu** opção para especificar o nome do arquivo. pch, se o nome é diferente do que o argumento de nome de arquivo para **/Yc** ou o nome base do arquivo de origem, como no a seguir:
 
 ```
 CL /YuMYAPP.H /FpMYPCH.pch PROG.CPP
@@ -98,5 +98,5 @@ Este comando Especifica um arquivo de cabeçalho pré-compilado chamado MYPCH.pc
 
 ## <a name="see-also"></a>Consulte também
 
-[Opções do Compilador](../../build/reference/compiler-options.md)<br/>
-[Definindo opções do compilador](../../build/reference/setting-compiler-options.md)
+[Opções do compilador MSVC](compiler-options.md)<br/>
+[Sintaxe de linha de comando do compilador MSVC](compiler-command-line-syntax.md)

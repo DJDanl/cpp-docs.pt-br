@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Modules button
 ms.assetid: 51552765-865a-4acc-aeae-f78afb73289a
-ms.openlocfilehash: ccce2db123422b18e3ff4a645a97a7b9aad0ebc9
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: efe6859ead257201fea8577675a7b8e55b5f700e
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57419290"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57811622"
 ---
 # <a name="modules-button"></a>Botão Módulos
 
@@ -17,4 +17,4 @@ Clique o **módulos** botão para abrir o **módulos adicionais para busca de er
 
 ## <a name="see-also"></a>Consulte também
 
-[Controle de edição de valor](../../build/reference/value-edit-control.md)
+[Controle de edição de valor](value-edit-control.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /DYNAMICBASE linker option
 - DYNAMICBASE linker option
 ms.assetid: 6c0ced8e-fe9c-4b63-b956-eb8a55fbceb2
-ms.openlocfilehash: 47d23ac6f9234e095a1733a8d4078840318cce4b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a3495de3ec72bcac78cdee2f5f3265864e7a2932
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50512392"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807748"
 ---
 # <a name="dynamicbase-use-address-space-layout-randomization"></a>/DYNAMICBASE (usar aleatorização do layout de espaço do endereço)
 
@@ -21,7 +21,7 @@ Especifica se deve gerar uma imagem executável que possa ter REBASE aleatória 
 
 ## <a name="syntax"></a>Sintaxe
 
-> **/DYNAMICBASE**[**: NENHUMA**]
+> **/DYNAMICBASE**[**:NO**]
 
 ## <a name="remarks"></a>Comentários
 
@@ -31,7 +31,7 @@ Por padrão, **/DYNAMICBASE** está habilitado. Para desabilitar essa opção, u
 
 ### <a name="to-set-this-linker-option-in-visual-studio"></a>Para definir essa opção do vinculador no Visual Studio
 
-1. Abra o projeto **páginas de propriedade** caixa de diálogo. Para obter mais informações, confira [Trabalhando com propriedades do projeto](../../ide/working-with-project-properties.md).
+1. Abra o projeto **páginas de propriedade** caixa de diálogo. Para obter mais informações, consulte [propriedades de compilador e de build definida C++ no Visual Studio](../working-with-project-properties.md).
 
 1. Selecione o **propriedades de configuração** > **vinculador** > **avançado** página de propriedades.
 
@@ -43,7 +43,7 @@ Por padrão, **/DYNAMICBASE** está habilitado. Para desabilitar essa opção, u
 
 ## <a name="see-also"></a>Consulte também
 
-- [Definindo opções de vinculador](../../build/reference/setting-linker-options.md)
-- [Opções do vinculador](../../build/reference/linker-options.md)
+- [Referência de vinculador MSVC](linking.md)
+- [Opções do vinculador MSVC](linker-options.md)
 - [/HIGHENTROPYVA](highentropyva-support-64-bit-aslr.md)
 - [Defesas de segurança de Software ISV do Windows](https://msdn.microsoft.com/library/bb430720.aspx)

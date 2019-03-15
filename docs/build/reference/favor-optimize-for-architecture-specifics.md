@@ -7,12 +7,12 @@ helpviewer_keywords:
 - -favor compiler option [C++]
 - /favor compiler option [C++]
 ms.assetid: ad264df2-e30f-4d68-8bd0-10d6bee71a2a
-ms.openlocfilehash: 1f76164468375e84380c6f02050c6c7a35b32412
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: b914d3e6e7a2865ec610249ff51d320d7890adcb
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57418978"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820449"
 ---
 # <a name="favor-optimize-for-architecture-specifics"></a>/favor (Otimizar para especificações da arquitetura)
 
@@ -39,11 +39,11 @@ ms.locfileid: "57418978"
 > [!NOTE]
 > Arquitetura de Intel64 era conhecida como Extended Memory 64 Technology e a opção de compilador correspondente foi **/favor:EM64T**.
 
-Para obter informações sobre como programar para o x64 arquitetura, consulte [x64 convenções de software](../../build/x64-software-conventions.md).
+Para obter informações sobre como programar para o x64 arquitetura, consulte [x64 convenções de Software](../x64-software-conventions.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio
 
-1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, confira [Trabalhando com propriedades do projeto](../../ide/working-with-project-properties.md).
+1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [propriedades de compilador e de build definida C++ no Visual Studio](../working-with-project-properties.md).
 
 1. Selecione o **C/C++** pasta.
 
@@ -57,5 +57,5 @@ Para obter informações sobre como programar para o x64 arquitetura, consulte [
 
 ## <a name="see-also"></a>Consulte também
 
-[Opções do Compilador](../../build/reference/compiler-options.md)<br/>
-[Definindo opções do compilador](../../build/reference/setting-compiler-options.md)
+[Opções do compilador MSVC](compiler-options.md)<br/>
+[Sintaxe de linha de comando do compilador MSVC](compiler-command-line-syntax.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - containers [MFC], creating
 - OLE controls [MFC], containers
 ms.assetid: ec70e137-7c14-4940-bd0e-fd4edcc63ea5
-ms.openlocfilehash: f0d5fe419375535ab8c52378b9005df88634e99a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 759f118b6796dbf53ceaa898902a50d87466abeb
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57275890"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57814106"
 ---
 # <a name="creating-an-mfc-activex-control-container"></a>Criando um contêiner de controle ActiveX MFC
 
@@ -39,4 +39,5 @@ Criar um programa de contêiner MFC usando o [Assistente de aplicativo MFC](../.
 
 ## <a name="see-also"></a>Consulte também
 
-[Tipos de projeto do Visual C++](../../ide/visual-cpp-project-types.md)
+[Tipos de projeto do Visual C++](../../build/reference/visual-cpp-project-types.md)
+

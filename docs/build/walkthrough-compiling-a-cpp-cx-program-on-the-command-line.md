@@ -2,12 +2,12 @@
 title: 'Passo a passo: Compilando um c++ /CLI programa CX na linha de comando'
 ms.date: 09/24/2018
 ms.assetid: 626f5544-69ed-4736-83a9-f11389b371b2
-ms.openlocfilehash: 7f6716b379a11f88adb5c75643e325a9b2856eac
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: ad718a2eb876430d7721d0cd20cfd5b952750f8b
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57413791"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57809503"
 ---
 # <a name="walkthrough-compiling-a-ccx-program-on-the-command-line"></a>Passo a passo: Compilando um c++ /CLI programa CX na linha de comando
 
@@ -24,11 +24,11 @@ Você entender os conceitos básicos da linguagem C++.
 
 ## <a name="compiling-a-ccx-program"></a>Compilando um programa C++/CX
 
-Para habilitar a compilação para C + + c++ /CX, você deve usar o [/ZW](../build/reference/zw-windows-runtime-compilation.md) opção de compilador. O compilador do Visual C++ gera um arquivo .exe destinado ao Tempo de Execução do Windows e vincula às bibliotecas necessárias.
+Para habilitar a compilação para C + + c++ /CX, você deve usar o [/ZW](reference/zw-windows-runtime-compilation.md) opção de compilador. O compilador MSVC gera um arquivo de .exe que tem como alvo o tempo de execução do Windows e contém links para as bibliotecas necessárias.
 
 #### <a name="to-compile-a-ccx-application-on-the-command-line"></a>Para compilar um aplicativo em C++/CX na linha de comando
 
-1. Abra uma **Prompt de comando do desenvolvedor** janela. (Sobre o **inicie** janela, abra **aplicativos**. Abra o **ferramentas do Visual Studio** pasta em sua versão do Visual Studio e, em seguida, escolha o **Prompt de comando do desenvolvedor** atalho.) Para obter mais informações sobre como abrir uma janela de Prompt de comando do desenvolvedor, consulte [código de compilação C/C++ na linha de comando](../build/building-on-the-command-line.md).
+1. Abra uma **Prompt de comando do desenvolvedor** janela. (Sobre o **inicie** janela, abra **aplicativos**. Abra o **ferramentas do Visual Studio** pasta em sua versão do Visual Studio e, em seguida, escolha o **Prompt de comando do desenvolvedor** atalho.) Para obter mais informações sobre como abrir uma janela de Prompt de comando do desenvolvedor, consulte [usar o conjunto de ferramentas da linha de comando MSVC](building-on-the-command-line.md).
 
    As credenciais de administrador podem ser necessárias para compilar o código com êxito, dependendo do sistema operacional e da configuração do computador. Para executar a janela de Prompt de comando como administrador, abra o menu de atalho **Prompt de comando do desenvolvedor** e, em seguida, escolha **executar como administrador**.
 
@@ -51,7 +51,7 @@ Para habilitar a compilação para C + + c++ /CX, você deve usar o [/ZW](../bui
 
    Você criou um arquivo de origem do Visual C++ que usa o tempo de execução do Windows [namespace de plataforma](../cppcx/platform-namespace-c-cx.md) namespace.
 
-1. No prompt de comando, digite **cl /EHsc /ZW basiccx /link /Subsystem: console**. O compilador cl.exe compila o código-fonte em um arquivo .obj e executa o vinculador para gerar um programa executável denominado basiccx.exe. (O [/EHsc](../build/reference/eh-exception-handling-model.md) opção de compilador Especifica o modelo de tratamento de exceções do C++ e o [/link](../build/reference/link-pass-options-to-linker.md) sinalizador Especifica que um aplicativo de console.)
+1. No prompt de comando, digite **cl /EHsc /ZW basiccx /link /Subsystem: console**. O compilador cl.exe compila o código-fonte em um arquivo .obj e executa o vinculador para gerar um programa executável denominado basiccx.exe. (O [/EHsc](reference/eh-exception-handling-model.md) opção de compilador Especifica o modelo de tratamento de exceções do C++ e o [/link](reference/link-pass-options-to-linker.md) sinalizador Especifica que um aplicativo de console.)
 
 1. Para executar o programa basiccx.exe, no prompt de comando, digite **basiccx**.
 
@@ -63,6 +63,5 @@ Para habilitar a compilação para C + + c++ /CX, você deve usar o [/ZW](../bui
 
 ## <a name="see-also"></a>Consulte também
 
-[Referência da linguagem C++](../cpp/cpp-language-reference.md)<br/>
-[Compilando programas do C/C++](../build/building-c-cpp-programs.md)<br/>
-[Opções do Compilador](../build/reference/compiler-options.md)
+[Projetos e sistemas de build](projects-and-build-systems-cpp.md)<br/>
+[Opções do compilador MSVC](reference/compiler-options.md)

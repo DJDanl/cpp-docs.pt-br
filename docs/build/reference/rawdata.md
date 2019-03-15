@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -RAWDATA dumpbin option
 - /RAWDATA dumpbin option
 ms.assetid: 41cba845-5e1f-415e-9fe4-604a52235983
-ms.openlocfilehash: 4e884ba8bca7b3ccdf900c7da2c43dd741c03d12
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 02af8df04d80c20c5d7629b51abab6295a21f5e5
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57413362"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816458"
 ---
 # <a name="rawdata"></a>/RAWDATA
 
@@ -35,8 +35,8 @@ Essa opção exibe o conteúdo bruto de cada seção no arquivo. Os argumentos d
 |NONE|Dados brutos são suprimidos. Esse argumento é útil para controlar a saída de/ALL.|
 |*Número*|Linhas exibidas são definidas para uma largura que mantém `number` valores por linha.|
 
-Somente o [/HEADERS](../../build/reference/headers.md) opção DUMPBIN está disponível para uso em arquivos produzidos com o [/GL](../../build/reference/gl-whole-program-optimization.md) opção de compilador.
+Somente o [/HEADERS](headers.md) opção DUMPBIN está disponível para uso em arquivos produzidos com o [/GL](gl-whole-program-optimization.md) opção de compilador.
 
 ## <a name="see-also"></a>Consulte também
 
-[Opções de DUMPBIN](../../build/reference/dumpbin-options.md)
+[Opções de DUMPBIN](dumpbin-options.md)

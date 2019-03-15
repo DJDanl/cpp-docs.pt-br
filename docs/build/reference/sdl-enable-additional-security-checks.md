@@ -4,12 +4,12 @@ ms.date: 11/26/2018
 f1_keywords:
 - VC.Project.VCCLCompilerTool.SDLCheck
 ms.assetid: 3dcf86a0-3169-4240-9f29-e04a9f535826
-ms.openlocfilehash: dd37dae4927531b86cfdac274493b945b066760a
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 0618b796d492395c3e0e5413047ac0260082baff
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57413089"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57814196"
 ---
 # <a name="sdl-enable-additional-security-checks"></a>/sdl (Habilitar verificações de segurança adicionais)
 
@@ -23,7 +23,7 @@ Adiciona verificações do Security Development Lifecycle (SDL) recomendado. Ess
 
 ## <a name="remarks"></a>Comentários
 
-**/SDL** permite que um superconjunto das verificações de segurança da linha de base fornecido pelo [/GS](../../build/reference/gs-buffer-security-check.md) e substituições **/GS-**. Por padrão, **/sdl** está desativado. **/SDL-** desabilita as verificações de segurança adicional.
+**/SDL** permite que um superconjunto das verificações de segurança da linha de base fornecido pelo [/GS](gs-buffer-security-check.md) e substituições **/GS-**. Por padrão, **/sdl** está desativado. **/SDL-** desabilita as verificações de segurança adicional.
 
 ## <a name="compile-time-checks"></a>Verificações de tempo de compilação
 
@@ -67,7 +67,7 @@ Para obter mais informações, consulte [avisos, /sdl e melhorando a detecção 
 
 #### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio
 
-1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, confira [Trabalhando com propriedades do projeto](../../ide/working-with-project-properties.md).
+1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [propriedades de compilador e de build definida C++ no Visual Studio](../working-with-project-properties.md).
 
 1. Selecione o **C/C++** pasta.
 
@@ -75,5 +75,5 @@ Para obter mais informações, consulte [avisos, /sdl e melhorando a detecção 
 
 ## <a name="see-also"></a>Consulte também
 
-[Opções do Compilador](../../build/reference/compiler-options.md)<br/>
-[Definindo opções do compilador](../../build/reference/setting-compiler-options.md)
+[Opções do compilador MSVC](compiler-options.md)<br/>
+[Sintaxe de linha de comando do compilador MSVC](compiler-command-line-syntax.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - ATL projects, creating
 - ATL Project Wizard
 ms.assetid: 564d2aaf-5b8e-4c2a-a925-ca40a283ea34
-ms.openlocfilehash: c9d69b6ca8cf1cff45098f0d63b452238db7ddfe
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 4059961d70e6486f7417a5eff034b194d9860558
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259757"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807787"
 ---
 # <a name="atl-project-wizard"></a>ATL Project Wizard
 
@@ -44,13 +44,12 @@ Além disso, considere estas tarefas quando você cria e aprimorar um projeto AT
 
 - [Otimizar o compilador para um projeto ATL](../../atl/reference/specifying-compiler-optimization-for-an-atl-project.md)
 
-Você pode especificar as propriedades do projeto (por exemplo, [se deseja vincular estaticamente ao CRT](../../atl/programming-with-atl-and-c-run-time-code.md)) na [propriedades do projeto](../../ide/general-property-page-project.md) página e você pode definir [configurações de build](/visualstudio/ide/understanding-build-configurations) para um Projeto ATL.
+Você pode especificar as propriedades do projeto (por exemplo, [se deseja vincular estaticamente ao CRT](../../atl/programming-with-atl-and-c-run-time-code.md)) na [propriedades do projeto](../../build/reference/general-property-page-project.md) página e você pode definir [configurações de build](/visualstudio/ide/understanding-build-configurations) para um Projeto ATL.
 
 ## <a name="see-also"></a>Consulte também
 
-[Criando e gerenciando projetos do Visual C++](../../ide/creating-and-managing-visual-cpp-projects.md)<br/>
-[Tipos de projeto do Visual C++](../../ide/visual-cpp-project-types.md)<br/>
-[Criando projetos para área de trabalho com Assistentes de Aplicativo](../../ide/creating-desktop-projects-by-using-application-wizards.md)<br/>
+[Criando e gerenciando projetos do Visual C++](../../build/creating-and-managing-visual-cpp-projects.md)<br/>
+[Tipos de projeto do Visual C++](../../build/reference/visual-cpp-project-types.md)<br/>
 [Princípios básicos de objetos COM da ATL](../../atl/fundamentals-of-atl-com-objects.md)<br/>
 [Programando com código de tempo de execução C e da ATL](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
 [Tutorial](../../atl/active-template-library-atl-tutorial.md)

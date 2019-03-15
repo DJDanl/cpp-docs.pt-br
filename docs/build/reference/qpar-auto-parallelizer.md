@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - VC.Project.VCCLCompilerTool.EnableParallelCodeGeneration
 ms.assetid: 33ecf49d-c0d5-4f34-bce3-84ff03f38918
-ms.openlocfilehash: 8563382f9a95d9b7da49efdf1f12d517eae3da3d
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: c1ddea73c5aa8d3e7e70b45834cb04154bf3b4bb
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57416625"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57809555"
 ---
 # <a name="qpar-auto-parallelizer"></a>/Qpar (paralelizador automático)
 
@@ -27,7 +27,7 @@ Quando o compilador paraleliza automaticamente loops no código, ele distribui a
 
 O `#pragma loop()` diretivas estão disponíveis para ajudar o otimizador de paralelizar loops específicos. Para obter mais informações, consulte [loop](../../preprocessor/loop.md).
 
-Para obter informações sobre como habilitar as mensagens de saída para paralelizador automático, consulte [/Qpar-report (nível de relatórios do Paralelizador automático)](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md).
+Para obter informações sobre como habilitar as mensagens de saída para paralelizador automático, consulte [/Qpar-report (nível de relatórios do Paralelizador automático)](qpar-report-auto-parallelizer-reporting-level.md).
 
 ### <a name="to-set-the-qpar-compiler-option-in-visual-studio"></a>Para definir a opção de compilador /Qpar no Visual Studio
 
@@ -43,9 +43,9 @@ Para obter informações sobre como habilitar as mensagens de saída para parale
 
 ## <a name="see-also"></a>Consulte também
 
-[Opções /Q (operações de nível baixo)](../../build/reference/q-options-low-level-operations.md)<br/>
-[/Qpar-report (nível de relatórios do paralelizador automático)](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md)<br/>
-[Opções do Compilador](../../build/reference/compiler-options.md)<br/>
-[Definindo opções do compilador](../../build/reference/setting-compiler-options.md)<br/>
+[Opções /Q (operações de nível baixo)](q-options-low-level-operations.md)<br/>
+[/Qpar-report (nível de relatórios do paralelizador automático)](qpar-report-auto-parallelizer-reporting-level.md)<br/>
+[Opções do compilador MSVC](compiler-options.md)<br/>
+[Sintaxe de linha de comando do compilador MSVC](compiler-command-line-syntax.md)<br/>
 [#pragma loop()](../../preprocessor/loop.md)<br/>
 [Programação paralela em código nativo](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/04/12/auto-vectorizer-in-visual-studio-2012-overview/)

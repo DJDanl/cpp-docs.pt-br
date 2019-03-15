@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 73abc426-dab0-45e2-be85-0f9a14206cc2
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 3cefe34eef1a30274ba2e9e362e2f61458f10e38
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cb23106648e3325755a857d0b962112e9bdcfac4
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50565913"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822594"
 ---
 # <a name="clrunmanagedcodecheck-remove-suppressunmanagedcodesecurityattribute"></a>/CLRUNMANAGEDCODECHECK (remova SuppressUnmanagedCodeSecurityAttribute)
 
@@ -23,7 +23,7 @@ ms.locfileid: "50565913"
 
 ## <a name="syntax"></a>Sintaxe
 
-> **/CLRUNMANAGEDCODECHECK**[**: NENHUMA**]
+> **/CLRUNMANAGEDCODECHECK**[**:NO**]
 
 ## <a name="remarks"></a>Comentários
 
@@ -39,7 +39,7 @@ Ver [diretrizes de codificação segura para código não gerenciado](/dotnet/fr
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do vinculador no ambiente de desenvolvimento do Visual Studio
 
-1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, confira [Trabalhando com propriedades do projeto](../../ide/working-with-project-properties.md).
+1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [propriedades de compilador e de build definida C++ no Visual Studio](../working-with-project-properties.md).
 
 1. Expanda o nó **Propriedades de Configuração**.
 
@@ -55,5 +55,5 @@ Ver [diretrizes de codificação segura para código não gerenciado](/dotnet/fr
 
 ## <a name="see-also"></a>Consulte também
 
-- [Definindo opções de vinculador](../../build/reference/setting-linker-options.md)
-- [Opções do vinculador](../../build/reference/linker-options.md)
+- [Referência de vinculador MSVC](linking.md)
+- [Opções do vinculador MSVC](linker-options.md)

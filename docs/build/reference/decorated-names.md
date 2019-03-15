@@ -6,12 +6,12 @@ helpviewer_keywords:
 - name decoration [C++]
 - names [C++], decorated
 ms.assetid: a4e9ae8e-b239-4454-b401-4102793cb344
-ms.openlocfilehash: d9d3db9a3db1943581e5fd603ba85777cb49b863
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 3fae232e6ca886195315002f4e65063d8a23ddc8
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57423307"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57815407"
 ---
 # <a name="decorated-names"></a>Nomes decorados
 
@@ -67,7 +67,7 @@ Depois de compilar o arquivo de origem que contém os dados, o objeto, ou a defi
 
 #### <a name="to-use-a-listing-to-view-decorated-names"></a>Usar uma lista para exibir nomes decorados
 
-1. Gerar uma lista ao compilar o arquivo de origem que contém os dados, o objeto, ou a definição de função ou o protótipo com o [tipo de arquivo de listagem](../../build/reference/fa-fa-listing-file.md) opção de compilador definida como Assembly com código-fonte (**/FAs**).
+1. Gerar uma lista ao compilar o arquivo de origem que contém os dados, o objeto, ou a definição de função ou o protótipo com o [tipo de arquivo de listagem](fa-fa-listing-file.md) opção de compilador definida como Assembly com código-fonte (**/FAs**).
 
    Por exemplo, digite `cl /c /FAs example.cpp` em um prompt de comando do desenvolvedor para gerar um arquivo de listagem, example.asm.
 
@@ -94,5 +94,5 @@ is :- "private: void __thiscall a::func1(int)"
 
 ## <a name="see-also"></a>Consulte também
 
-[Ferramentas de build de C/C++](../../build/reference/c-cpp-build-tools.md)<br/>
+[Ferramentas de Build do MSVC adicionais](c-cpp-build-tools.md)<br/>
 [Usando extern para especificar a ligação](../../cpp/using-extern-to-specify-linkage.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0003
 ms.assetid: fc5a84bb-c6d3-41d6-8dd6-475455820778
-ms.openlocfilehash: 9a116f41efc791ed90fbac8065bc339172c9ea9d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a6530045870573921cf626ceeec4c1dca10cdbfb
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50572374"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816172"
 ---
 # <a name="project-build-error-prj0003"></a>Erro de Build PRJ0003 no Projeto
 
@@ -27,7 +27,7 @@ Os motivos possíveis para esse erro incluem:
 
 - Privilégios de segurança insuficientes. Verifique se que você tem privilégios suficientes.
 
-- Caminhos de executável especificado na **diretórios VC + +** não incluem o caminho para a ferramenta que você está tentando executar. Para obter informações, consulte [trabalhando com propriedades do projeto](../../ide/working-with-project-properties.md)
+- Caminhos de executável especificado na **diretórios VC + +** não incluem o caminho para a ferramenta que você está tentando executar. Para obter informações, consulte [definir compilador e propriedades de compilação](../../build/working-with-project-properties.md)
 
 - Para projetos makefile, um comando para executar em qualquer um estiver faltando **linha de comando de compilação** ou **recompilar linha de comando**.
 

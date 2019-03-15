@@ -1,13 +1,13 @@
 ---
-title: Microsoft Visual C++, otimização de ponto flutuante
+title: Otimização de ponto flutuante MSVC
 ms.date: 03/09/2018
 ms.topic: conceptual
-ms.openlocfilehash: 6e297cebb4982b293e86885815436c4120d903cd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 78c5c310f2f348b5cfa5a92feb65e265d28560d9
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50504293"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57814365"
 ---
 # <a name="microsoft-visual-c-floating-point-optimization"></a>Otimização de ponto flutuante do Microsoft Visual C++
 
@@ -36,11 +36,11 @@ Essa função adiciona n **float** valores do vetor de matriz `A`. Dentro do cor
 
 Um compilador de C++ ingênua pode pressupor que a aritmética de ponto flutuante segue as mesmas regras algébricas como o número Real de aritmética. Um compilador assim, em seguida, pode erroneamente Concluir para que
 
-> C = T - soma - Y = = > (soma + Y) - soma - Y = = > 0;
+> C = T - sum - Y ==> (sum+Y)-sum-Y ==> 0;
 
 Ou seja, o valor percebido de C é sempre um constante zero. Se esse valor constante, em seguida, é propagado para as expressões subsequentes, o corpo do loop é reduzido a uma soma simple. Para ser preciso,
 
-> Y = [i] - C = = > Y = [i]<br/>T = soma + Y = = > T = soma + [i]<br/>soma = T = = > soma = soma + [i]
+> Y = A[i] - C ==> Y = A[i]<br/>T = sum + Y ==> T = sum + A[i]<br/>sum = T ==> sum = sum + A[i]
 
 Assim, para o compilador ingênua, a transformação de lógica do `KahanSum` função seria:
 
@@ -187,7 +187,7 @@ O modo padrão de semântica de ponto flutuante é fp: precisos. Quando este mod
 
 Para solicitar explicitamente o fp: modo preciso usando o compilador de linha de comando, use o [/fp: preciso](fp-specify-floating-point-behavior.md) mudar:
 
-> Cl /fp: source.cpp precisas
+> cl /fp:precise source.cpp
 
 Isso instrui o compilador a usar fp: semântica precisa ao gerar código para o arquivo source.cpp. O fp: modelo preciso também pode ser chamado em uma base de função por função usando o [float_control (pragma) compilador](#the-float-control-pragma).
 
@@ -641,7 +641,7 @@ Quando o modo /FP: Fast está habilitado, o compilador alivia as regras que fp: 
 
 O modo de ponto flutuante /FP: Fast é habilitado usando o [Fast](fp-specify-floating-point-behavior.md) comutador de compilador de linha de comando da seguinte maneira:
 
-> Cl Fast source.cpp
+> cl /fp:fast source.cpp
 
 Este exemplo instrui o compilador use /FP: Fast semântica ao gerar código para o arquivo source.cpp. O modelo /FP: Fast também pode ser chamado em uma base de função por função usando o `float_control` pragma de compilador.
 
@@ -825,7 +825,7 @@ Quando o fp: modo estrito está habilitado, o compilador segue as mesmas regras 
 
 O fp: modo estrito de ponto flutuante é habilitado usando o [/fp: strict](fp-specify-floating-point-behavior.md) comutador de compilador de linha de comando da seguinte maneira:
 
-> Cl /fp: strict source.cpp
+> cl /fp:strict source.cpp
 
 Este exemplo instrui o compilador a usar fp: semântica estrita ao gerar código para o arquivo source.cpp. O fp: modelo estrito também pode ser chamado em uma base de função por função usando o `float_control` pragma de compilador.
 
@@ -951,12 +951,12 @@ As opções de linha de comando são, na verdade, uma abreviação para definir 
 
 ||||||
 |-|-|-|-|-|
-||float_control(precise)|float_control(EXCEPT)|fp_contract|fenv_access|
-|/FP: strict|em|em|Desativar|em|
-|/FP: strict /fp: except-|em|Desativar|Desativar|em|
-|/FP: preciso|em|Desativar|em|Desativar|
-|/FP: preciso /fp: except|em|em|em|Desativar|
-|Fast|Desativar|Desativar|em|Desativar|
+||float_control(precise)|float_control(except)|fp_contract|fenv_access|
+|/fp:strict|em|em|Desativar|em|
+|/fp:strict /fp:except-|em|Desativar|Desativar|em|
+|/fp:precise|em|Desativar|em|Desativar|
+|/fp:precise /fp:except|em|em|em|Desativar|
+|/fp:fast|Desativar|Desativar|em|Desativar|
 
 Por exemplo, a seguir habilita explicitamente /FP: Fast semântica.
 
@@ -1088,4 +1088,4 @@ catch(float_exception)
 
 ## <a name="see-also"></a>Consulte também
 
-[Otimizando seu código](optimizing-your-code.md)<br/>
+[Otimizando seu código](../optimizing-your-code.md)<br/>

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - /HEAP linker option
 - HEAP linker option
 ms.assetid: a3f71927-7f1d-492c-9fdb-dfccb1a043da
-ms.openlocfilehash: 500e1eca9385697829edca46e5e703a5238684a7
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 715eaa358d052d4ae646f38f2e784f0235dffccb
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57422362"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57813287"
 ---
 # <a name="heap-set-heap-size"></a>/HEAP (definir tamanho do heap)
 
@@ -34,11 +34,11 @@ Opcional `commit` argumento especifica a quantidade de memória física para alo
 
 Especifique o *reservar* e `commit` valores em decimal ou notação de linguagem C.
 
-Essa funcionalidade também está disponível por meio de um arquivo de definição de módulo com [HEAPSIZE](../../build/reference/heapsize.md).
+Essa funcionalidade também está disponível por meio de um arquivo de definição de módulo com [HEAPSIZE](heapsize.md).
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do vinculador no ambiente de desenvolvimento do Visual Studio
 
-1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [configuração de propriedades do projeto Visual C++](../../ide/working-with-project-properties.md).
+1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [propriedades de compilador e de build definida C++ no Visual Studio](../working-with-project-properties.md).
 
 1. Clique o **vinculador** pasta.
 
@@ -52,5 +52,5 @@ Essa funcionalidade também está disponível por meio de um arquivo de definiç
 
 ## <a name="see-also"></a>Consulte também
 
-[Definindo opções de vinculador](../../build/reference/setting-linker-options.md)<br/>
-[Opções do vinculador](../../build/reference/linker-options.md)
+[Referência de vinculador MSVC](linking.md)<br/>
+[Opções do vinculador MSVC](linker-options.md)

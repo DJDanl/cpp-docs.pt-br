@@ -13,16 +13,16 @@ helpviewer_keywords:
 - common subexpression elimination
 - Og compiler option [C++]
 ms.assetid: d10630cc-b9cf-4e97-bde3-8d7ee79e9435
-ms.openlocfilehash: e8032d7dbd771ca1527c6515a779b0f532a2c658
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 5e45273b6b609f1bf78504a519c1fb98e2147f76
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420863"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57818525"
 ---
 # <a name="og-global-optimizations"></a>/Og (otimizações globais)
 
-Preterido. Fornece otimizações de locais e globais, alocação o registro automático e a otimização de loop. É recomendável que você use um [/O1 (minimizar tamanho)](../../build/reference/o1-o2-minimize-size-maximize-speed.md) ou [/O2 (maximizar velocidade)](../../build/reference/o1-o2-minimize-size-maximize-speed.md) em vez disso.
+Preterido. Fornece otimizações de locais e globais, alocação o registro automático e a otimização de loop. É recomendável que você use um [/O1 (minimizar tamanho)](o1-o2-minimize-size-maximize-speed.md) ou [/O2 (maximizar velocidade)](o1-o2-minimize-size-maximize-speed.md) em vez disso.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -30,7 +30,7 @@ Preterido. Fornece otimizações de locais e globais, alocação o registro auto
 
 ## <a name="remarks"></a>Comentários
 
-**/Og** foi preterido. Geralmente, essas otimizações agora estão habilitadas por padrão. Para obter mais informações sobre as otimizações, consulte [/O1, / O2 (minimizar tamanho, maximizar velocidade)](../../build/reference/o1-o2-minimize-size-maximize-speed.md) ou [/Ox (habilitar mais otimizações de velocidade)](../../build/reference/ox-full-optimization.md).
+**/Og** foi preterido. Geralmente, essas otimizações agora estão habilitadas por padrão. Para obter mais informações sobre as otimizações, consulte [/O1, / O2 (minimizar tamanho, maximizar velocidade)](o1-o2-minimize-size-maximize-speed.md) ou [/Ox (habilitar mais otimizações de velocidade)](ox-full-optimization.md).
 
 As seguintes otimizações estão disponíveis sob **/Og**:
 
@@ -76,11 +76,11 @@ As seguintes otimizações estão disponíveis sob **/Og**:
    > [!NOTE]
    > Você pode habilitar ou desabilitar a otimização global em uma base de função por função usando o `optimize` pragma junto com o `g` opção.
 
-Para obter informações relacionadas, consulte [/Oi (gerar funções intrínsecas)](../../build/reference/oi-generate-intrinsic-functions.md) e [/Ox (habilitar mais otimizações de velocidade)](../../build/reference/ox-full-optimization.md).
+Para obter informações relacionadas, consulte [/Oi (gerar funções intrínsecas)](oi-generate-intrinsic-functions.md) e [/Ox (habilitar mais otimizações de velocidade)](ox-full-optimization.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio
 
-1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, confira [Trabalhando com propriedades do projeto](../../ide/working-with-project-properties.md).
+1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [propriedades de compilador e de build definida C++ no Visual Studio](../working-with-project-properties.md).
 
 1. Clique o **C/C++** pasta.
 
@@ -94,8 +94,4 @@ Para obter informações relacionadas, consulte [/Oi (gerar funções intrínsec
 
 ## <a name="see-also"></a>Consulte também
 
-[Opções /O (otimizar código)](../../build/reference/o-options-optimize-code.md)
-
-[Opções do Compilador](../../build/reference/compiler-options.md)
-
-[Definindo opções do compilador](../../build/reference/setting-compiler-options.md)
+[Sintaxe de linha de comando do compilador MSVC](compiler-command-line-syntax.md)

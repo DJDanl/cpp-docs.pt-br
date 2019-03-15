@@ -6,12 +6,12 @@ helpviewer_keywords:
 - .def files [C++], exporting from DLLs
 - exporting DLLs [C++], DEF files
 ms.assetid: 9d31eda2-184e-47de-a2ee-a93ebd603f8e
-ms.openlocfilehash: bed47c2c69b154c6bab996299eaeb4173c8298f3
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 35f55ea525bd03c5b0b1b1750d25c1223bc608fc
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57416541"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816986"
 ---
 # <a name="exporting-from-a-dll-using-def-files"></a>Exportando a partir de uma DLL usando arquivos DEF
 
@@ -21,7 +21,7 @@ Um arquivo DEF mínimo deve conter as seguintes instruções de definição de m
 
 - A primeira instrução no arquivo deve ser a instrução LIBRARY. Essa declaração identifica o arquivo DEF como pertencente a uma DLL. A instrução LIBRARY é seguida pelo nome da DLL. O vinculador coloca esse nome na biblioteca de importação da DLL.
 
-- A declaração EXPORTS lista os nomes e, opcionalmente, os valores ordinais das funções exportadas pela DLL. Atribuir a função de um valor ordinal seguindo o nome da função com um sinal de arroba (@) e um número. Quando você especificar valores ordinais, eles devem ser no intervalo de 1 a N, onde N é o número de funções exportadas pela DLL. Se você quiser exportar funções por ordinal, consulte [exportar funções de uma DLL por Ordinal em vez de por nome](../build/exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md) , bem como neste tópico.
+- A declaração EXPORTS lista os nomes e, opcionalmente, os valores ordinais das funções exportadas pela DLL. Atribuir a função de um valor ordinal seguindo o nome da função com um sinal de arroba (@) e um número. Quando você especificar valores ordinais, eles devem ser no intervalo de 1 a N, onde N é o número de funções exportadas pela DLL. Se você quiser exportar funções por ordinal, consulte [exportar funções de uma DLL por Ordinal em vez de por nome](exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md) , bem como neste tópico.
 
 Por exemplo, uma DLL que contém o código para implementar uma árvore de pesquisa binária pode parecer com o seguinte:
 
@@ -56,32 +56,32 @@ Observe que o próprio MFC usa arquivos DEF para exportar funções e classes de
 
 ## <a name="what-do-you-want-to-do"></a>O que você deseja fazer?
 
-- [Exportar de uma DLL usando dllexport](../build/exporting-from-a-dll-using-declspec-dllexport.md)
+- [Exportar de uma DLL usando dllexport](exporting-from-a-dll-using-declspec-dllexport.md)
 
-- [Exportar e importar usando AFX_EXT_CLASS](../build/exporting-and-importing-using-afx-ext-class.md)
+- [Exportar e importar usando AFX_EXT_CLASS](exporting-and-importing-using-afx-ext-class.md)
 
-- [Exportar funções de C++ para uso em executáveis da linguagem C](../build/exporting-cpp-functions-for-use-in-c-language-executables.md)
+- [Exportar funções de C++ para uso em executáveis da linguagem C](exporting-cpp-functions-for-use-in-c-language-executables.md)
 
-- [Exportar funções de C para uso em executáveis C ou da linguagem C++](../build/exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
+- [Exportar funções de C para uso em executáveis C ou da linguagem C++](exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
 
-- [Determinar qual método de exportação usar](../build/determining-which-exporting-method-to-use.md)
+- [Determinar qual método de exportação usar](determining-which-exporting-method-to-use.md)
 
-- [Importar para um aplicativo usando __declspec(dllimport)](../build/importing-into-an-application-using-declspec-dllimport.md)
+- [Importar para um aplicativo usando __declspec(dllimport)](importing-into-an-application-using-declspec-dllimport.md)
 
-- [Inicialize um DLL](../build/run-time-library-behavior.md#initializing-a-dll)
+- [Inicialize um DLL](run-time-library-behavior.md#initializing-a-dll)
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Que mais você deseja saber?
 
-- [arquivos. def](../build/reference/module-definition-dot-def-files.md)
+- [arquivos. def](reference/module-definition-dot-def-files.md)
 
-- [Regras para instruções de definição de módulo](../build/reference/rules-for-module-definition-statements.md)
+- [Regras para instruções de definição de módulo](reference/rules-for-module-definition-statements.md)
 
-- [Nomes decorados](../build/reference/decorated-names.md)
+- [Nomes decorados](reference/decorated-names.md)
 
-- [Importando e exportando funções embutidas](../build/importing-and-exporting-inline-functions.md)
+- [Importando e exportando funções embutidas](importing-and-exporting-inline-functions.md)
 
-- [Importações mútuas](../build/mutual-imports.md)
+- [Importações mútuas](mutual-imports.md)
 
 ## <a name="see-also"></a>Consulte também
 
-[Exportando de uma DLL](../build/exporting-from-a-dll.md)
+[Exportando de uma DLL](exporting-from-a-dll.md)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Managed Extensions for C++, compiling
 - common language runtime, /clr compiler option
 ms.assetid: fec5a8c0-40ec-484c-a213-8dec918c1d6c
-ms.openlocfilehash: 5a908fc49776eaca68d9a79fb679b759155853d9
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 124f54f46e71ac8fb8511d12fba43ab77d04c32e
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57418848"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822452"
 ---
 # <a name="clr-common-language-runtime-compilation"></a>/clr (compilação do Common Language Runtime)
 
@@ -47,11 +47,11 @@ Uma ou mais das seguintes opções, separados por vírgulas.
 
 - **noAssembly**
 
-   **/CLR:noAssembly é preterida**. Use [/LN (Criar módulo de MSIL)](../../build/reference/ln-create-msil-module.md) em vez disso.
+   **/CLR:noAssembly é preterida**. Use [/LN (Criar módulo de MSIL)](ln-create-msil-module.md) em vez disso.
 
    Especifica que um manifesto do assembly não deve ser inserido no arquivo de saída. Por padrão, o **noAssembly** opção não estiver em vigor.
 
-   Um programa gerenciado que não tem metadados de assembly no manifesto é conhecido como um *módulo*. O **noAssembly** opção pode ser usada somente para produzir um módulo. Se você compilar usando [/c](../../build/reference/c-compile-without-linking.md) e **/clr:noAssembly**, em seguida, especifique a [/NOASSEMBLY](../../build/reference/noassembly-create-a-msil-module.md) opção na fase de vinculador para criar um módulo.
+   Um programa gerenciado que não tem metadados de assembly no manifesto é conhecido como um *módulo*. O **noAssembly** opção pode ser usada somente para produzir um módulo. Se você compilar usando [/c](c-compile-without-linking.md) e **/clr:noAssembly**, em seguida, especifique a [/NOASSEMBLY](noassembly-create-a-msil-module.md) opção na fase de vinculador para criar um módulo.
 
    Antes do Visual C++ 2005, **/clr:noAssembly** necessária **/LD**. **/LD** agora está implícita quando você especifica **/clr:noAssembly**.
 
@@ -65,27 +65,27 @@ Uma ou mais das seguintes opções, separados por vírgulas.
 
 ## <a name="remarks"></a>Comentários
 
-Código gerenciado é o código que pode ser inspecionado e gerenciado pelo CLR. Código gerenciado pode acessar objetos gerenciados. Para obter mais informações, consulte [/clr Restrições](../../build/reference/clr-restrictions.md).
+Código gerenciado é o código que pode ser inspecionado e gerenciado pelo CLR. Código gerenciado pode acessar objetos gerenciados. Para obter mais informações, consulte [/clr Restrições](clr-restrictions.md).
 
 Para obter informações sobre como desenvolver aplicativos que definem e consumam tipos gerenciados, consulte [extensões de componentes para plataformas de tempo de execução](../../windows/component-extensions-for-runtime-platforms.md).
 
 Um aplicativo compilado usando **/clr** pode ou não conter dados gerenciados.
 
-Para habilitar a depuração em um aplicativo gerenciado, consulte [/ASSEMBLYDEBUG (Adicionar DebuggableAttribute)](../../build/reference/assemblydebug-add-debuggableattribute.md).
+Para habilitar a depuração em um aplicativo gerenciado, consulte [/ASSEMBLYDEBUG (Adicionar DebuggableAttribute)](assemblydebug-add-debuggableattribute.md).
 
 Somente os tipos CLR serão instanciados no heap coletado como lixo. Para obter mais informações, consulte [Classes e Structs](../../windows/classes-and-structs-cpp-component-extensions.md). Para compilar uma função para código nativo, use o `unmanaged` pragma. Para obter mais informações, consulte [gerenciado, não gerenciado](../../preprocessor/managed-unmanaged.md).
 
-Por padrão, **/clr** não está em vigor. Quando **/clr** está em vigor, **/MD** também está em vigor. Para obter mais informações, consulte [/MD, /MT, /LD (usar biblioteca em tempo de execução)](../../build/reference/md-mt-ld-use-run-time-library.md). **/MD** garante que as versões multi-threaded e vinculadas dinamicamente as rotinas de tempo de execução são selecionadas dos arquivos de cabeçalho padrão (. h). O multithreading é necessário para porque o coletor de lixo do CLR executa os finalizadores em um thread auxiliar de programação gerenciada.
+Por padrão, **/clr** não está em vigor. Quando **/clr** está em vigor, **/MD** também está em vigor. Para obter mais informações, consulte [/MD, /MT, /LD (usar biblioteca em tempo de execução)](md-mt-ld-use-run-time-library.md). **/MD** garante que as versões multi-threaded e vinculadas dinamicamente as rotinas de tempo de execução são selecionadas dos arquivos de cabeçalho padrão (. h). O multithreading é necessário para porque o coletor de lixo do CLR executa os finalizadores em um thread auxiliar de programação gerenciada.
 
-Se você compilar usando **/c**, você pode especificar o tipo CLR do arquivo de saída resultante com [/CLRIMAGETYPE](../../build/reference/clrimagetype-specify-type-of-clr-image.md).
+Se você compilar usando **/c**, você pode especificar o tipo CLR do arquivo de saída resultante com [/CLRIMAGETYPE](clrimagetype-specify-type-of-clr-image.md).
 
-**/CLR** implica **/EHa**e nenhum outro **/EH** opções têm suporte para **/clr**. Para obter mais informações, consulte [/EH (modelo de tratamento de exceção)](../../build/reference/eh-exception-handling-model.md).
+**/CLR** implica **/EHa**e nenhum outro **/EH** opções têm suporte para **/clr**. Para obter mais informações, consulte [/EH (modelo de tratamento de exceção)](eh-exception-handling-model.md).
 
-Para obter informações sobre como determinar o tipo de imagem CLR de um arquivo, consulte [/clrheader](../../build/reference/clrheader.md).
+Para obter informações sobre como determinar o tipo de imagem CLR de um arquivo, consulte [/clrheader](clrheader.md).
 
 Todos os módulos passados para determinada invocação do vinculador devem ser compilados usando a mesma opção de compilador da biblioteca de tempo de execução (**/MD** ou **/LD**).
 
-Use o [/ASSEMBLYRESOURCE.](../../build/reference/assemblyresource-embed-a-managed-resource.md) opção de vinculador para inserir um recurso em um assembly. [/ DELAYSIGN](../../build/reference/delaysign-partially-sign-an-assembly.md), [/KEYCONTAINER](../../build/reference/keycontainer-specify-a-key-container-to-sign-an-assembly.md), e [/KEYFILE](../../build/reference/keyfile-specify-key-or-key-pair-to-sign-an-assembly.md) opções do vinculador também permitem que você personalize como um assembly é criado.
+Use o [/ASSEMBLYRESOURCE.](assemblyresource-embed-a-managed-resource.md) opção de vinculador para inserir um recurso em um assembly. [/ DELAYSIGN](delaysign-partially-sign-an-assembly.md), [/KEYCONTAINER](keycontainer-specify-a-key-container-to-sign-an-assembly.md), e [/KEYFILE](keyfile-specify-key-or-key-pair-to-sign-an-assembly.md) opções do vinculador também permitem que você personalize como um assembly é criado.
 
 Quando **/clr** for usado, o `_MANAGED` símbolo é definido como 1. Para obter mais informações, consulte [Macros predefinidas](../../preprocessor/predefined-macros.md).
 
@@ -105,5 +105,5 @@ Use ildasm.exe para exibir os metadados.
 
 ## <a name="see-also"></a>Consulte também
 
-[Opções do Compilador](../../build/reference/compiler-options.md)<br/>
-[Definindo opções do compilador](../../build/reference/setting-compiler-options.md)
+[Opções do compilador MSVC](compiler-options.md)<br/>
+[Sintaxe de linha de comando do compilador MSVC](compiler-command-line-syntax.md)

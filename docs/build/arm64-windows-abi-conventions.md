@@ -1,12 +1,12 @@
 ---
 title: Visão geral das convenções de ABI ARM64
 ms.date: 07/11/2018
-ms.openlocfilehash: c5c928dcb77729f5b79433d3be1b552664a0d211
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 537f8cf5bb8db61854bea7f4624e3dd3176c6a59
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50599778"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816536"
 ---
 # <a name="overview-of-arm64-abi-conventions"></a>Visão geral das convenções de ABI ARM64
 
@@ -57,14 +57,14 @@ A arquitetura AArch64 dá suporte a 32 registros de inteiros, resumidos abaixo:
 
 |Registro|Volátil?|Função|
 |-|-|-|
-X0|Volátil|Parâmetro/zero registrar 1, o registro de resultado
-x1 x7|Volátil|Registre-se de zero/parâmetro 2 a 8
-x8 x15|Volátil|Registros de rascunho
-x17 x16|Volátil|Registros de chamada de procedimento intra transitórios
-X18|Não volátil|Registro de plataforma: no modo kernel, aponta para KPCR do processador atual; no modo de usuário, aponta para TEB
-x19 x28|Não volátil|Registros de rascunho
+x0|Volátil|Parâmetro/zero registrar 1, o registro de resultado
+x1-x7|Volátil|Registre-se de zero/parâmetro 2 a 8
+x8-x15|Volátil|Registros de rascunho
+x16-x17|Volátil|Registros de chamada de procedimento intra transitórios
+x18|Não volátil|Registro de plataforma: no modo kernel, aponta para KPCR do processador atual; no modo de usuário, aponta para TEB
+x19-x28|Não volátil|Registros de rascunho
 x29/fp|Não volátil|Ponteiro de quadro
-X30/lr|Não volátil|Registros de link
+x30/lr|Não volátil|Registros de link
 
 Cada registro pode ser acessado como um valor de total de 64 bits (via x0-x30) ou como um valor de 32 bits (via w0 w30). operações de 32 bits zero-estendem seus resultados até 64 bits.
 
@@ -82,8 +82,8 @@ Registro|Volátil?|Função
 |-|-|-|
 v0|Volátil|Parâmetro/zero registrar 1, o registro de resultado
 v1-v7|Volátil|Parâmetro/zero registra 2 a 8
-v8 v15|Não volátil|Rascunho de registros (Observe que apenas os 64 bits baixos não são voláteis)
-v16 v31|Volátil|Registros de rascunho
+v8-v15|Não volátil|Rascunho de registros (Observe que apenas os 64 bits baixos não são voláteis)
+v16-v31|Volátil|Registros de rascunho
 
 Cada registro pode ser acessado como um valor de 128 bits completo (via v0 v31 ou q0 q31), como um valor de 64 bits (via d0-d31), como um valor de 32 bits (via s0-s31), como um valor de 16 bits (via h0-amp;H31) ou como um valor de 8 bits (via b0-b31). Acessos menores do que 128 bits acessar apenas os bits inferiores do registro completo de 128 bits e deixe os bits restantes inalterados, a menos que especificado o contrário. (Observe que isso é significativamente diferente da AArch32, onde os registros menores foram empacotados na parte superior de registros maiores).
 
@@ -95,7 +95,7 @@ Bits|Significado|Volátil?|Função
 25|DN|Não-volátil|Controle de modo NaN padrão
 24|FZ|Não volátil|Controle de modo Flush-to-zero
 23-22|RMode|Não volátil|Controle de modo de arredondamento
-15,12-8|IDE/IXE/etc.|Não-volátil|Bits de habilitação de captura de exceção, deve ser sempre 0
+15,12-8|IDE/IXE/etc|Não-volátil|Bits de habilitação de captura de exceção, deve ser sempre 0
 
 ## <a name="system-registers"></a>Registros do sistema
 
@@ -171,7 +171,7 @@ Para cada argumento na lista as seguintes regras são aplicadas por sua vez até
 
 1. O argumento é copiado para a memória no NSAA ajustado. O NSAA é incrementado pelo tamanho do argumento. O argumento foi alocado.
 
-### <a name="addendum-variadic-functions"></a>Adendo: Funções de Variadic
+### <a name="addendum-variadic-functions"></a>Adendo: Funções Variadic
 
 Funções que usam um número variável de argumentos são tratadas de maneira diferente acima, da seguinte maneira:
 
@@ -203,7 +203,7 @@ A pilha de modo de kernel padrão no Windows é seis páginas (24k). Preste aten
 
 ## <a name="stack-walking"></a>Passagem de pilha
 
-O código dentro do Windows é compilado com ponteiros de quadro habilitados ([/Oy-](../build/reference/oy-frame-pointer-omission.md)) para habilitar a passagem rápida de pilha. A conclusão de que isso é que x29 (fp) em geral aponta para o próximo link na cadeia, que é um {fp, lr} que indica o ponteiro para o quadro anterior na pilha e o endereço de retorno de par. Código de terceiros é incentivado habilitar ponteiros de quadros também para permitir aprimorada de criação de perfil e o rastreamento.
+O código dentro do Windows é compilado com ponteiros de quadro habilitados ([/Oy-](reference/oy-frame-pointer-omission.md)) para habilitar a passagem rápida de pilha. A conclusão de que isso é que x29 (fp) em geral aponta para o próximo link na cadeia, que é um {fp, lr} que indica o ponteiro para o quadro anterior na pilha e o endereço de retorno de par. Código de terceiros é incentivado habilitar ponteiros de quadros também para permitir aprimorada de criação de perfil e o rastreamento.
 
 ## <a name="exception-unwinding"></a>O desenrolamento de exceção
 
@@ -221,5 +221,5 @@ Observe que o contador de ciclo aqui é um verdadeiro contador de ciclo, não um
 
 ## <a name="see-also"></a>Consulte também
 
-[Problemas de migração ARM do Visual C++ comuns](../build/common-visual-cpp-arm-migration-issues.md)<br/>
-[Tratamento de exceção ARM64](../build/arm64-exception-handling.md)
+[Problemas de migração ARM do Visual C++ comuns](common-visual-cpp-arm-migration-issues.md)<br/>
+[Tratamento de exceção ARM64](arm64-exception-handling.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -ALL dumpbin option
 - ALL dumpbin option
 ms.assetid: aa7eb74a-33ba-4d77-8620-3d7ea8b19952
-ms.openlocfilehash: 4289f256886abad87266e1ad82a6b6f4c6efb0a0
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 4b02a13be70963d8c2dcf934cf2c750daf8052a9
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57412751"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57818083"
 ---
 # <a name="all"></a>/ALL
 
@@ -23,10 +23,10 @@ ms.locfileid: "57412751"
 
 ## <a name="remarks"></a>Comentários
 
-Esta opção exibe todas as informações disponíveis, exceto a desmontagem do código. Use [/DISASM](../../build/reference/disasm.md) para exibir a desmontagem. Você pode usar [/RAWDATA](../../build/reference/rawdata.md): nenhum com/tudo para omitir os detalhes de binários brutos do arquivo.
+Esta opção exibe todas as informações disponíveis, exceto a desmontagem do código. Use [/DISASM](disasm.md) para exibir a desmontagem. Você pode usar [/RAWDATA](rawdata.md): nenhum com/tudo para omitir os detalhes de binários brutos do arquivo.
 
-Somente o [/HEADERS](../../build/reference/headers.md) opção DUMPBIN está disponível para uso em arquivos produzidos com o [/GL](../../build/reference/gl-whole-program-optimization.md) opção de compilador.
+Somente o [/HEADERS](headers.md) opção DUMPBIN está disponível para uso em arquivos produzidos com o [/GL](gl-whole-program-optimization.md) opção de compilador.
 
 ## <a name="see-also"></a>Consulte também
 
-[Opções de DUMPBIN](../../build/reference/dumpbin-options.md)
+[Opções de DUMPBIN](dumpbin-options.md)

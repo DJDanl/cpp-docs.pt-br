@@ -97,13 +97,12 @@ f1_keywords:
 - C5043
 - C5044
 - C5045
-- C5046
-ms.openlocfilehash: 672aa1b0e298be3b6754b1706e721ad6798230ec
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 70a0eee4e0a7774c1c92a44ad1e8eaa480ce84d3
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50642852"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816341"
 ---
 # <a name="compiler-warnings-c4800-through-c5999"></a>Avisos do compilador C4800 por meio de C5999
 
@@ -144,7 +143,7 @@ Os artigos nesta seção da documentação explicam um subconjunto das mensagens
 |[Aviso do compilador (nível 4) C4840](compiler-warning-level-4-c4840.md)|o uso não portátil da classe*tipo*' como um argumento para uma função variadic|
 |Aviso do compilador (nível 4) C4841|extensão não padrão usada: designador de membro composto usado no offsetof|
 |Aviso do compilador (nível 4) C4842|o resultado de 'offsetof' aplicado a um tipo usando a herança múltipla não é garantido para ser consistente entre versões do compilador|
-|C4843 de aviso do compilador|'*type1*': um manipulador de exceção de referência ao tipo de matriz ou função está inacessível, use '*type2*' em vez disso|
+|C4843 de aviso do compilador|'*type1*': Um manipulador de exceção de referência ao tipo de matriz ou função está inacessível, use '*type2*' em vez disso|
 |C4844 de aviso do compilador|' Exportar módulo *module_name*;' agora é a sintaxe preferencial para declarar uma interface de módulo|
 |[Aviso do compilador (nível 4) C4866](c4866.md)| compilador não pode impor a ordem de avaliação da esquerda para a direita para a chamada para *operator_name*|
 |[Aviso (erro) do compilador C4867](compiler-warning-c4867.md)|'*função*': faltando lista de argumentos de chamada de função; use '*chamar*' para criar um ponteiro para membro|
@@ -176,7 +175,7 @@ Os artigos nesta seção da documentação explicam um subconjunto das mensagens
 |Aviso do compilador (nível 1) C4935|especificador de acesso de assembly modificado de '*acesso*'|
 |Aviso do compilador (nível 1, erro) C4936|Este declspec é suportado apenas quando compilado com /clr ou /clr: pure|
 |Aviso do compilador (nível 4) C4937|'*text1*'e'*Texto2*'são indistinguíveis como argumentos para'*diretiva*'|
-|Aviso do compilador (nível 4) C4938|'*var*': variável de redução de ponto flutuante pode causar resultados inconsistentes sob /fp: strict ou #pragma fenv_access|
+|Aviso do compilador (nível 4) C4938|'*var*': Variável de redução de ponto flutuante pode causar resultados inconsistentes sob /fp: strict ou #pragma fenv_access|
 |C4939 de aviso do compilador|#pragma vtordisp é preterido e será removido em uma versão futura do Visual C++|
 |Aviso do compilador (nível 1) C4944|'*símbolo*': não é possível importar símbolo de '*assembly1*': como*símbolo*' já existe no escopo atual|
 |[Aviso do compilador (nível 1) C4945](compiler-warning-level-1-c4945.md)|'*símbolo*': não é possível importar símbolo de '*assembly1*': como*símbolo*'já foi importado de outro assembly'*assembly2* '|
@@ -196,7 +195,7 @@ Os artigos nesta seção da documentação explicam um subconjunto das mensagens
 |Aviso do compilador (nível 1, erro) C4959|não é possível definir o tipo não gerenciado '*tipo*' em /CLR: safe porque o acesso aos seus membros produz código não verificável|
 |Aviso do compilador (nível 4) C4960|'*função*' é muito grande para ser analisado|
 |Aviso do compilador (nível 1) C4961|Nenhum dado de perfil foi mesclado em 'arquivo. PGD,' otimizações guiadas por perfil desabilitadas|
-|Aviso do compilador (nível 4) C4962|'*função*': otimizações guiadas por perfil desabilitadas porque otimizações fizeram dados de perfil se tornar inconsistente|
+|Aviso do compilador (nível 4) C4962|'*função*': Otimizações guiadas por perfil desabilitadas porque otimizações fizeram dados de perfil se tornar inconsistente|
 |Aviso do compilador (nível 1) C4963|'*descrição*': nenhum dado de perfil encontrado; opções de compilação diferentes foram usadas em compilação instrumentada|
 |[Aviso do compilador (nível 1) C4964](compiler-warning-level-1-c4964.md)|Não há opções de otimização foram especificadas; informações de perfil não serão coletadas|
 |[Aviso do compilador (nível 1) C4965](compiler-warning-level-1-c4965.md)|box implícito de inteiro 0; Use nullptr ou conversão explícita|
@@ -226,7 +225,7 @@ Os artigos nesta seção da documentação explicam um subconjunto das mensagens
 |Aviso do compilador (nível 4) C5025|'*tipo*': mover operador de atribuição foi implicitamente definido como excluído|
 |Aviso do compilador (nível 1 e nível 4) C5026|'*tipo*': construtor de movimento foi implicitamente definido como excluído|
 |Aviso do compilador (nível 1 e nível 4) C5027|'*tipo*': mover operador de atribuição foi implicitamente definido como excluído|
-|Aviso do compilador (nível 1) C5028|'*nome*': alinhamento especificado na declaração anterior (*número*) não especificado na definição|
+|Aviso do compilador (nível 1) C5028|'*name*': Alinhamento especificado na declaração anterior (*número*) não especificado na definição|
 |Aviso do compilador (nível 4) C5029|extensão não padrão usada: atributos de alinhamento no C++ se aplicam a variáveis, membros de dados e somente os tipos de marcas|
 |Aviso do compilador (nível 3) C5030|atributo '*atributo*' não é reconhecido|
 |Aviso do compilador (nível 4) C5031|Warning (POP) #pragma: provável incompatibilidade, estado de aviso enviado por push em outro arquivo mostrado|
@@ -244,4 +243,4 @@ Os artigos nesta seção da documentação explicam um subconjunto das mensagens
 |Aviso do compilador (nível 2) C5043|'*especificação*': especificação de exceção não corresponde à declaração anterior|
 |Aviso do compilador (nível 4) C5044|Um argumento para a opção de linha de comando *opção* aponta para um caminho '*caminho*' que não existe|
 |[C5045 de aviso do compilador](c5045.md)|Compilador inserirá a mitigação de espectro para carga de memória se a opção /Qspectre especificado|
-|[Aviso do compilador (nível 2) C5046](c5046.md)|'*função*': símbolo que envolvem o tipo com vinculação interna não definida|
+|[Aviso do compilador (nível 2) C5046](c5046.md)|'*função*': Símbolo que envolvem o tipo com vinculação interna não definida|

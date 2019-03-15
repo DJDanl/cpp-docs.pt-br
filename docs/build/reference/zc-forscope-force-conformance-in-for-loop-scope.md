@@ -11,16 +11,16 @@ helpviewer_keywords:
 - Conformance compiler options
 - Zc compiler options [C++]
 ms.assetid: 3031f02d-3b14-4ad0-869e-22b0110c3aed
-ms.openlocfilehash: b800bdcc36c82dabe13418244782e82737ad9171
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7f98667d3a771994d1b4e54b429f42cb566c102c
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50502018"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810244"
 ---
 # <a name="zcforscope-force-conformance-in-for-loop-scope"></a>/Zc:forScope (forçar conformidade para escopo de loop)
 
-Usado para implementar o comportamento padrão do C++ para [para](../../cpp/for-statement-cpp.md) loops com extensões da Microsoft ([/Ze](../../build/reference/za-ze-disable-language-extensions.md)).
+Usado para implementar o comportamento padrão do C++ para [para](../../cpp/for-statement-cpp.md) loops com extensões da Microsoft ([/Ze](za-ze-disable-language-extensions.md)).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -28,7 +28,7 @@ Usado para implementar o comportamento padrão do C++ para [para](../../cpp/for-
 
 ## <a name="remarks"></a>Comentários
 
-Comportamento padrão é permitir que um **para** inicializador do loop saem do escopo após a **para** loop. Sob **/Zc:forScope-** e [/Ze](../../build/reference/za-ze-disable-language-extensions.md), o **para** inicializador do loop permanece no escopo até que o escopo local terminar.
+Comportamento padrão é permitir que um **para** inicializador do loop saem do escopo após a **para** loop. Sob **/Zc:forScope-** e [/Ze](za-ze-disable-language-extensions.md), o **para** inicializador do loop permanece no escopo até que o escopo local terminar.
 
 O **/ZC: forScope** opção permanece ativada por padrão. **/ZC: forScope** não é afetada quando o [/permissive--](permissive-standards-conformance.md) opção for especificada.
 
@@ -55,13 +55,13 @@ Se você usar **/Zc:forScope-**, aviso C4288 (desativado por padrão) é gerado 
 
 Você pode modificar o comportamento de tempo de execução **/ZC: forScope** usando o [estão em conformidade com](../../preprocessor/conform.md) pragma.
 
-Se você usar **/Zc:forScope-** em um projeto que tem um arquivo. pch existente, um aviso será gerado, **/Zc:forScope-** é ignorado, e a compilação continuará usando os arquivos. pch existentes. Se você quiser um novo arquivo. pch, use [/Yc (criar a arquivo de cabeçalho pré-compilado)](../../build/reference/yc-create-precompiled-header-file.md).
+Se você usar **/Zc:forScope-** em um projeto que tem um arquivo. pch existente, um aviso será gerado, **/Zc:forScope-** é ignorado, e a compilação continuará usando os arquivos. pch existentes. Se você quiser um novo arquivo. pch, use [/Yc (criar a arquivo de cabeçalho pré-compilado)](yc-create-precompiled-header-file.md).
 
 Para obter mais informações sobre problemas de conformidade no Visual C++, consulte [comportamento não padrão](../../cpp/nonstandard-behavior.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio
 
-1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, confira [Trabalhando com propriedades do projeto](../../ide/working-with-project-properties.md).
+1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [propriedades de compilador e de build definida C++ no Visual Studio](../working-with-project-properties.md).
 
 1. Selecione o **propriedades de configuração** > **C/C++** > **idioma** página de propriedades.
 
@@ -73,5 +73,5 @@ Para obter mais informações sobre problemas de conformidade no Visual C++, con
 
 ## <a name="see-also"></a>Consulte também
 
-[/Zc (conformidade)](../../build/reference/zc-conformance.md)<br/>
-[/Za, /Ze (desabilitar extensões de linguagem)](../../build/reference/za-ze-disable-language-extensions.md)<br/>
+[/Zc (conformidade)](zc-conformance.md)<br/>
+[/Za, /Ze (desabilitar extensões de linguagem)](za-ze-disable-language-extensions.md)<br/>

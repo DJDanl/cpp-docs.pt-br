@@ -15,12 +15,12 @@ helpviewer_keywords:
 - precompiled header files, naming
 - /Fp compiler option [C++]
 ms.assetid: 0fcd9cbd-e09f-44d3-9715-b41efb5d0be2
-ms.openlocfilehash: 8384aa1ee27fee0bc42e023b78b948d9acd384e8
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 95506e17dff47e51cb7a3d83b629880f63422d26
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414090"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820384"
 ---
 # <a name="fp-name-pch-file"></a>/Fp (nomear arquivo .Pch)
 
@@ -32,7 +32,7 @@ Fornece um nome de caminho para um cabeçalho pré-compilado em vez de usar o no
 
 ## <a name="remarks"></a>Comentários
 
-Use essa opção com [/Yc (criar a arquivo de cabeçalho pré-compilado)](../../build/reference/yc-create-precompiled-header-file.md) ou [/Yu (usar arquivo de cabeçalho pré-compilado)](../../build/reference/yu-use-precompiled-header-file.md) para fornecer um nome de caminho para um cabeçalho pré-compilado em vez de usar o nome do caminho padrão. Você também pode usar **/Fp** com **/Yc** para especificar o uso de um arquivo de cabeçalho pré-compilado que difere do **/Yc**<em>filename</em> argumento e do nome de base do arquivo de origem.
+Use essa opção com [/Yc (criar a arquivo de cabeçalho pré-compilado)](yc-create-precompiled-header-file.md) ou [/Yu (usar arquivo de cabeçalho pré-compilado)](yu-use-precompiled-header-file.md) para fornecer um nome de caminho para um cabeçalho pré-compilado em vez de usar o nome do caminho padrão. Você também pode usar **/Fp** com **/Yc** para especificar o uso de um arquivo de cabeçalho pré-compilado que difere do **/Yc**<em>filename</em> argumento e do nome de base do arquivo de origem.
 
 Se você não especificar uma extensão como parte do nome do caminho, uma extensão de. pch será assumida. Se você especificar um diretório sem um nome de arquivo, o nome de arquivo padrão é VC*x*0.pch, onde *x* é a versão principal do Visual C++ em uso.
 
@@ -40,7 +40,7 @@ Você também pode usar o **/Fp** com a opção **/Yu**.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio
 
-1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, confira [Trabalhando com propriedades do projeto](../../ide/working-with-project-properties.md).
+1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [propriedades de compilador e de build definida C++ no Visual Studio](../working-with-project-properties.md).
 
 1. Clique o **C/C++** pasta.
 
@@ -70,7 +70,7 @@ CL /YuMYAPP.H /FpMYPCH.PCH PROG.CPP
 
 ## <a name="see-also"></a>Consulte também
 
-[Opções do arquivo de saída (/F)](../../build/reference/output-file-f-options.md)<br/>
-[Opções do Compilador](../../build/reference/compiler-options.md)<br/>
-[Definindo opções do compilador](../../build/reference/setting-compiler-options.md)<br/>
-[Especificando o nome de caminho](../../build/reference/specifying-the-pathname.md)
+[Opções do arquivo de saída (/F)](output-file-f-options.md)<br/>
+[Opções do compilador MSVC](compiler-options.md)<br/>
+[Sintaxe de linha de comando do compilador MSVC](compiler-command-line-syntax.md)<br/>
+[Especificando o nome de caminho](specifying-the-pathname.md)
