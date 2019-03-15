@@ -7,12 +7,12 @@ helpviewer_keywords:
 - /Zc:ternary
 - Zc:ternary
 - -Zc:ternary
-ms.openlocfilehash: 2bc9e924656b9e1cb914255780adc4ae50220275
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cb9a4f8468a9cb57af711cdca36ee343e5092493
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618186"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816484"
 ---
 # <a name="zcternary-enforce-conditional-operator-rules"></a>/ZC: ternary (Aplicar regras de operador condicional)
 
@@ -151,7 +151,7 @@ Para obter mais informações sobre problemas de conformidade no Visual C++, con
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio
 
-1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, confira [Trabalhando com propriedades do projeto](../../ide/working-with-project-properties.md).
+1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [propriedades de compilador e de build definida C++ no Visual Studio](../working-with-project-properties.md).
 
 1. Selecione o **propriedades de configuração** > **C/C++** > **linha de comando** página de propriedades.
 
@@ -159,4 +159,4 @@ Para obter mais informações sobre problemas de conformidade no Visual C++, con
 
 ## <a name="see-also"></a>Consulte também
 
-[/Zc (conformidade)](../../build/reference/zc-conformance.md)
+[/Zc (conformidade)](zc-conformance.md)

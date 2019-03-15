@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4075
 ms.assetid: f39ad3f9-c263-4cf0-9d70-259fc56ac96d
-ms.openlocfilehash: bba0fa85a3f2590c84cbb6f78fac7e49386d35a9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bf22e7c78dce6949c357d7ad4a0c76209c88eef3
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548246"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57809893"
 ---
 # <a name="linker-tools-warning-lnk4075"></a>Aviso LNK4075 (Ferramentas de Vinculador)
 
@@ -21,7 +21,7 @@ A segunda opção substitui o primeiro.
 
 Opções do vinculador mutuamente exclusivos que estão sendo especificadas.  Examine suas opções de vinculador.  Em que as opções do vinculador são especificadas depende de como você está criando seu projeto.
 
-- Se você estiver compilando no ambiente de desenvolvimento, consulte as páginas de propriedades do vinculador para seu projeto e ver onde as duas opções de vinculador estão sendo especificadas.  Ver [trabalhando com propriedades do projeto](../../ide/working-with-project-properties.md) para obter mais informações.
+- Se você estiver compilando no ambiente de desenvolvimento, consulte as páginas de propriedades do vinculador para seu projeto e ver onde as duas opções de vinculador estão sendo especificadas.  Ver [definir compilador e propriedades de compilação](../../build/working-with-project-properties.md) para obter mais informações.
 
 - Se você compilar na linha de comando, examine as opções de vinculador especificadas existe.
 

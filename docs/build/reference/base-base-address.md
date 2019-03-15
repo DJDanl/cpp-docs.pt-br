@@ -20,12 +20,12 @@ helpviewer_keywords:
 - executable files [C++], base address
 - at sign symbol for base address
 ms.assetid: 00b9f6fe-0bd2-4772-a69c-7365eb199069
-ms.openlocfilehash: 87fdceea4ac71fe4bf0a53d7ae8e473bc97a01d7
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: dc6380903af0be2e6696ca3589813c249f71dd05
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57416742"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812272"
 ---
 # <a name="base-base-address"></a>/BASE (endereço básico)
 
@@ -38,9 +38,9 @@ Especifica o endereço base para um programa.
 ## <a name="remarks"></a>Comentários
 
 > [!NOTE]
-> Por motivos de segurança, a Microsoft recomenda que você use o [/DYNAMICBASE](../../build/reference/dynamicbase-use-address-space-layout-randomization.md) opção em vez de especificar os endereços base para seus executáveis. Isso gera uma imagem executável que possa ter REBASE aleatória no momento do carregamento usando o recurso de aleatoriedade (ASLR) de layout de espaço de endereço do Windows. A opção de /DYNAMICBASE está ativada por padrão.
+> Por motivos de segurança, a Microsoft recomenda que você use o [/DYNAMICBASE](dynamicbase-use-address-space-layout-randomization.md) opção em vez de especificar os endereços base para seus executáveis. Isso gera uma imagem executável que possa ter REBASE aleatória no momento do carregamento usando o recurso de aleatoriedade (ASLR) de layout de espaço de endereço do Windows. A opção de /DYNAMICBASE está ativada por padrão.
 
-A opção BASE define um endereço base para o programa, substituindo o local padrão para um .exe ou o arquivo DLL. O endereço de base padrão para um arquivo .exe é 0x400000 para imagens de 32 bits ou 0x140000000 para imagens de 64 bits. Para uma DLL, o endereço básico padrão é 0x10000000 para imagens de 32 bits ou 0x180000000 para imagens de 64 bits. Em sistemas operacionais que não suportam a randomização de layout de espaço de endereço (ASLR), ou quando a opção /DynamicBase: no foi definida, o sistema operacional primeiro tenta carregar um programa em seu especificado ou o endereço básico padrão. Se espaço suficiente não estiver disponível, o sistema realoca o programa. Para evitar a realocação, use o [/Fixed](../../build/reference/fixed-fixed-base-address.md) opção.
+A opção BASE define um endereço base para o programa, substituindo o local padrão para um .exe ou o arquivo DLL. O endereço de base padrão para um arquivo .exe é 0x400000 para imagens de 32 bits ou 0x140000000 para imagens de 64 bits. Para uma DLL, o endereço básico padrão é 0x10000000 para imagens de 32 bits ou 0x180000000 para imagens de 64 bits. Em sistemas operacionais que não suportam a randomização de layout de espaço de endereço (ASLR), ou quando a opção /DynamicBase: no foi definida, o sistema operacional primeiro tenta carregar um programa em seu especificado ou o endereço básico padrão. Se espaço suficiente não estiver disponível, o sistema realoca o programa. Para evitar a realocação, use o [/Fixed](fixed-fixed-base-address.md) opção.
 
 O vinculador emitirá um erro se *endereço* não é um múltiplo de 64 K. Opcionalmente, você pode especificar o tamanho do programa; o vinculador emitirá um aviso se o programa não pode se ajustar no tamanho especificado.
 
@@ -62,11 +62,11 @@ Se o arquivo que contém essas linhas é chamado de DLLs, o comando de exemplo a
 link dlltwo.obj /dll /base:@dlls.txt,two
 ```
 
-Outra maneira de definir o endereço base é usando o *BASE* argumento em uma [nome](../../build/reference/name-c-cpp.md) ou [biblioteca](../../build/reference/library.md) instrução. Opção /BASE e [/DLL](../../build/reference/dll-build-a-dll.md) opções juntas são equivalentes para o **biblioteca** instrução.
+Outra maneira de definir o endereço base é usando o *BASE* argumento em uma [nome](name-c-cpp.md) ou [biblioteca](library.md) instrução. Opção /BASE e [/DLL](dll-build-a-dll.md) opções juntas são equivalentes para o **biblioteca** instrução.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do vinculador no ambiente de desenvolvimento do Visual Studio
 
-1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [configuração de propriedades do projeto Visual C++](../../ide/working-with-project-properties.md).
+1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [propriedades de compilador e de build definida C++ no Visual Studio](../working-with-project-properties.md).
 
 1. Selecione o **propriedades de configuração** > **vinculador** > **avançado** página de propriedades.
 
@@ -78,5 +78,5 @@ Outra maneira de definir o endereço base é usando o *BASE* argumento em uma [n
 
 ## <a name="see-also"></a>Consulte também
 
-[Definindo opções de vinculador](../../build/reference/setting-linker-options.md)<br/>
-[Opções do vinculador](../../build/reference/linker-options.md)
+[Referência de vinculador MSVC](linking.md)<br/>
+[Opções do vinculador MSVC](linker-options.md)

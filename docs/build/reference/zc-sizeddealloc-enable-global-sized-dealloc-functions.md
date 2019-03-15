@@ -11,12 +11,12 @@ helpviewer_keywords:
 - /Zc compiler options (C++)
 - Zc compiler options (C++)
 ms.assetid: 3a73ace0-4d36-420a-b699-0ca6fc0dd134
-ms.openlocfilehash: 160e90f0b068da6fe8330ac97dfd8bda52f05a38
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dc381058c6a2ef84542be1d3cdd00c410aa51c2f
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50536598"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57809292"
 ---
 # <a name="zcsizeddealloc-enable-global-sized-deallocation-functions"></a>/ZC: sizeddealloc (habilitar Global funções desalocação de tamanho)
 
@@ -40,7 +40,7 @@ Para obter mais informações sobre problemas de conformidade no Visual C++, con
 
 ## <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio
 
-1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, confira [Trabalhando com propriedades do projeto](../../ide/working-with-project-properties.md).
+1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [propriedades de compilador e de build definida C++ no Visual Studio](../working-with-project-properties.md).
 
 1. Dos **configurações** menu suspenso, escolha **todas as configurações de**.
 
@@ -50,6 +50,6 @@ Para obter mais informações sobre problemas de conformidade no Visual C++, con
 
 ## <a name="see-also"></a>Consulte também
 
-[Opções do Compilador](../../build/reference/compiler-options.md)<br/>
-[Definindo opções do compilador](../../build/reference/setting-compiler-options.md)<br/>
-[/Zc (conformidade)](../../build/reference/zc-conformance.md)<br/>
+[Opções do compilador MSVC](compiler-options.md)<br/>
+[Sintaxe de linha de comando do compilador MSVC](compiler-command-line-syntax.md)<br/>
+[/Zc (conformidade)](zc-conformance.md)<br/>

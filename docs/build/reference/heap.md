@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -HEAP editbin option
 - /HEAP editbin option
 ms.assetid: 6ce759b5-75b7-44ff-a5fd-3a83a0ba9a48
-ms.openlocfilehash: 24470c00afce54bab0a15dd08e03cef6dfee63fc
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: fcf557b467ba5bd04352ba2f2702659a1eb2948d
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57415247"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810348"
 ---
 # <a name="heap"></a>/HEAP
 
@@ -28,7 +28,7 @@ reserve[,commit]
 
 ## <a name="remarks"></a>Comentários
 
-O `reserve` argumento especifica a alocação inicial de heap total na memória virtual. Por padrão, o tamanho do heap é 1 MB. [Referência de EDITBIN](../../build/reference/editbin-reference.md) Arredonda o valor especificado para o múltiplo mais próximo de 4 bytes.
+O `reserve` argumento especifica a alocação inicial de heap total na memória virtual. Por padrão, o tamanho do heap é 1 MB. [Referência de EDITBIN](editbin-reference.md) Arredonda o valor especificado para o múltiplo mais próximo de 4 bytes.
 
 Opcional `commit` argumento está sujeitas a interpretação pelo sistema operacional. Em um sistema operacional Windows, ele especifica a quantidade inicial de memória física para alocar e a quantidade de memória adicional para alocar ao heap deve ser expandido. Memória virtual confirmada faz com que o espaço a ser reservado no arquivo de paginação. Uma maior `commit` valor permite que o sistema alocar memória menor geralmente, quando o aplicativo precisa de mais espaço de heap, mas aumenta os requisitos de memória e, possivelmente, a duração de inicialização do aplicativo. O `commit` valor deve ser menor ou igual ao `reserve` valor.
 
@@ -36,4 +36,4 @@ Especifique o `reserve` e `commit` valores em decimal ou notação octal ou hexa
 
 ## <a name="see-also"></a>Consulte também
 
-[Opções de EDITBIN](../../build/reference/editbin-options.md)
+[Opções de EDITBIN](editbin-options.md)
