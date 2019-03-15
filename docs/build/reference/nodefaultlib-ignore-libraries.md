@@ -13,12 +13,12 @@ helpviewer_keywords:
 - /NODEFAULTLIB linker option
 - ignore libraries linker option
 ms.assetid: 7270b673-6711-468e-97a7-c2925ac2be6e
-ms.openlocfilehash: d2bac6f62f7b1a692e5fc40fcf6dea1e10a50927
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: cacc1ef312065da5d6e62ddba1040e87fae9d709
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424347"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807449"
 ---
 # <a name="nodefaultlib-ignore-libraries"></a>/NODEFAULTLIB (ignorar bibliotecas)
 
@@ -35,19 +35,19 @@ Uma biblioteca que você deseja que o vinculador ignore ao resolver referências
 
 A opção /NODEFAULTLIB informa o vinculador para remover uma ou mais bibliotecas padrão da lista de bibliotecas que busca ao resolver referências externas.
 
-Para criar um arquivo. obj que contém referências a bibliotecas padrão, use [/Zl (omitir nome da biblioteca padrão)](../../build/reference/zl-omit-default-library-name.md).
+Para criar um arquivo. obj que contém referências a bibliotecas padrão, use [/Zl (omitir nome da biblioteca padrão)](zl-omit-default-library-name.md).
 
 Por padrão, /NODEFAULTLIB remove todas as bibliotecas padrão da lista de bibliotecas que busca ao resolver referências externas. Opcional *biblioteca* parâmetro permite que você remover uma biblioteca especificada ou bibliotecas da lista de bibliotecas que busca ao resolver referências externas. Especifica uma opção /NODEFAULTLIB para cada biblioteca que você deseja excluir.
 
 O vinculador resolve referências para definições externas por meio da pesquisa pela primeira vez em bibliotecas que você especificar explicitamente, em seguida, em default bibliotecas especificada com a opção de /DEFAULTLIB e, em seguida, nas bibliotecas padrão chamadas nos arquivos. obj.
 
-/NODEFAULTLIB:*biblioteca* substitui [/DEFAULTLIB:](../../build/reference/defaultlib-specify-default-library.md)*biblioteca* quando o mesmo *biblioteca* nome é especificado em ambos.
+/NODEFAULTLIB:*biblioteca* substitui [/DEFAULTLIB:](defaultlib-specify-default-library.md)*biblioteca* quando o mesmo *biblioteca* nome é especificado em ambos.
 
-Se você usar /NODEFAULTLIB, por exemplo, para compilar seu programa sem a biblioteca de tempo de execução C, talvez você precise usar também [/ENTRY](../../build/reference/entry-entry-point-symbol.md) para especificar o ponto de entrada (função) em seu programa. Para obter mais informações, consulte [Recursos da biblioteca CRT](../../c-runtime-library/crt-library-features.md).
+Se você usar /NODEFAULTLIB, por exemplo, para compilar seu programa sem a biblioteca de tempo de execução C, talvez você precise usar também [/ENTRY](entry-entry-point-symbol.md) para especificar o ponto de entrada (função) em seu programa. Para obter mais informações, consulte [Recursos da biblioteca CRT](../../c-runtime-library/crt-library-features.md).
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do vinculador no ambiente de desenvolvimento do Visual Studio
 
-1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [configuração de propriedades do projeto Visual C++](../../ide/working-with-project-properties.md).
+1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [propriedades de compilador e de build definida C++ no Visual Studio](../working-with-project-properties.md).
 
 1. Clique o **vinculador** pasta.
 
@@ -61,5 +61,5 @@ Se você usar /NODEFAULTLIB, por exemplo, para compilar seu programa sem a bibli
 
 ## <a name="see-also"></a>Consulte também
 
-[Definindo opções de vinculador](../../build/reference/setting-linker-options.md)<br/>
-[Opções do vinculador](../../build/reference/linker-options.md)
+[Referência de vinculador MSVC](linking.md)<br/>
+[Opções do vinculador MSVC](linker-options.md)
