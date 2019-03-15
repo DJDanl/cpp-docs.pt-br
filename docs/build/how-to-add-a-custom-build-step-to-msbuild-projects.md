@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - 'msbuild (c++), howto: add a custom build step'
 ms.assetid: a20a0c47-4df4-4754-a1f0-a94a99958916
-ms.openlocfilehash: 57b7636c58a245bfea3a71dfb6aa7ee853329f19
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 4c64c6875d82000d6a0ac880b103b5e220015cb3
+ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57413219"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57813996"
 ---
 # <a name="how-to-add-a-custom-build-step-to-msbuild-projects"></a>Como: Adicionar uma etapa de compilação personalizada a projetos MSBuild
 
@@ -27,7 +27,7 @@ Etapas de compilação personalizada e ferramentas de build personalizadas compa
 
 ### <a name="to-define-what-is-executed-by-the-custom-build-step"></a>Para definir o que é executado pela etapa de compilação personalizada
 
-1. Adicione um grupo de propriedades para o arquivo de projeto. Nesse grupo de propriedade, especifique o comando, suas entradas e saídas e uma mensagem, conforme mostrado no exemplo a seguir. Este exemplo cria um arquivo. cab do arquivo cpp criado no [passo a passo: Usando MSBuild para criar um projeto do Visual C++](../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md).
+1. Adicione um grupo de propriedades para o arquivo de projeto. Nesse grupo de propriedade, especifique o comando, suas entradas e saídas e uma mensagem, conforme mostrado no exemplo a seguir. Este exemplo cria um arquivo. cab do arquivo cpp criado no [passo a passo: Usando MSBuild para criar um projeto do Visual C++](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md).
 
     ```
     <ItemDefinitionGroup>
@@ -52,6 +52,6 @@ Etapas de compilação personalizada e ferramentas de build personalizadas compa
 
 ## <a name="see-also"></a>Consulte também
 
-[Passo a passo: Usando o MSBuild para criar um projeto em Visual C++](../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)<br/>
-[Como: Usar eventos de build em projetos do MSBuild](../build/how-to-use-build-events-in-msbuild-projects.md)<br/>
-[Como: Adicionar ferramentas personalizadas de build a projetos do MSBuild](../build/how-to-add-custom-build-tools-to-msbuild-projects.md)
+[Passo a passo: Usando o MSBuild para criar um projeto em Visual C++](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)<br/>
+[Como: Usar eventos de build em projetos do MSBuild](how-to-use-build-events-in-msbuild-projects.md)<br/>
+[Como: Adicionar ferramentas personalizadas de build a projetos do MSBuild](how-to-add-custom-build-tools-to-msbuild-projects.md)
