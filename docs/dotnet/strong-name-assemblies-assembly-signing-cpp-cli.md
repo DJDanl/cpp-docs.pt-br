@@ -9,12 +9,12 @@ helpviewer_keywords:
 - linker [C++], assembly signing
 - strong-named assemblies [C++]
 ms.assetid: c337cd3f-e5dd-4c6f-a1ad-437e85dba1cc
-ms.openlocfilehash: 762c95c3ecc60995e8d0e6f9e4f7bc95d179c26f
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: ac46d069ece3c75af93f93497169d054b45267d0
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57747495"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57813923"
 ---
 # <a name="strong-name-assemblies-assembly-signing-ccli"></a>Assemblies de nome forte (assinatura de assembly) (C++/CLI)
 
@@ -34,7 +34,7 @@ Motivos para não usar os atributos incluem o fato de que o nome da chave é vis
 
 Se você compilar na linha de comando, use as opções do vinculador para assinar seu assembly e, em seguida, execute uma ferramenta de pós-processamento (como mt.exe), você precisará assinar novamente o assembly com sn.exe. Como alternativa, é possível criar e atrasar a assinatura de assembly e depois de executar as ferramentas de pós-processamento, concluir a assinatura.
 
-Se você usar os atributos de assinatura ao compilar no ambiente de desenvolvimento, você pode entrar com êxito o assembly explicitamente chamando sn.exe ([Sn.exe (ferramenta de nome forte)](/dotnet/framework/tools/sn-exe-strong-name-tool)) em um evento de pós-compilação. Para obter mais informações, confira [Especificando eventos de build](../ide/specifying-build-events.md). Tempos de compilação podem ser menor, se você usar um evento de pós-compilação, em comparação ao uso de um opções do vinculador e de atributos.
+Se você usar os atributos de assinatura ao compilar no ambiente de desenvolvimento, você pode entrar com êxito o assembly explicitamente chamando sn.exe ([Sn.exe (ferramenta de nome forte)](/dotnet/framework/tools/sn-exe-strong-name-tool)) em um evento de pós-compilação. Para obter mais informações, confira [Especificando eventos de build](../build/specifying-build-events.md). Tempos de compilação podem ser menor, se você usar um evento de pós-compilação, em comparação ao uso de um opções do vinculador e de atributos.
 
 As seguintes opções do vinculador dão suporte a assinatura do assembly:
 

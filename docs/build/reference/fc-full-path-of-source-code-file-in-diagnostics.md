@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /FC compiler option [C++]
 - -FC compiler option [C++]
 ms.assetid: 1f11414e-cb42-421b-be68-9d369aab036b
-ms.openlocfilehash: 96809f09efd068b80f04a70d4356c1ceaf5f113c
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 190174e1e2ac4d160140ddc54f9cc1c3a1b31709
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57422475"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57809022"
 ---
 # <a name="fc-full-path-of-source-code-file-in-diagnostics"></a>/FC (demarcador completo do arquivo de código-fonte no diagnóstico)
 
@@ -44,13 +44,13 @@ Com o **/FC**, o texto de diagnóstico seria semelhante ao seguinte texto de dia
 
 **/FC** também é necessário se você quiser ver o caminho completo de um nome de arquivo ao usar o &#95; &#95;arquivo&#95; &#95; macro. Ver [Macros predefinidas](../../preprocessor/predefined-macros.md) para obter mais informações sobre &#95; &#95;arquivo&#95;&#95;.
 
-O **/FC** opção é indicada pela **/ZI**. Para obter mais informações sobre **/ZI**, consulte [/Z7, /Zi, /ZI (formato de informações de depuração)](../../build/reference/z7-zi-zi-debug-information-format.md).
+O **/FC** opção é indicada pela **/ZI**. Para obter mais informações sobre **/ZI**, consulte [/Z7, /Zi, /ZI (formato de informações de depuração)](z7-zi-zi-debug-information-format.md).
 
 **/FC** gera caminhos completos em letras minúsculas.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio
 
-1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, confira [Trabalhando com propriedades do projeto](../../ide/working-with-project-properties.md).
+1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [propriedades de compilador e de build definida C++ no Visual Studio](../working-with-project-properties.md).
 
 1. Selecione o **propriedades de configuração** > **C/C++** > **avançado** página de propriedades.
 
@@ -62,5 +62,5 @@ O **/FC** opção é indicada pela **/ZI**. Para obter mais informações sobre 
 
 ## <a name="see-also"></a>Consulte também
 
-[Opções do Compilador](../../build/reference/compiler-options.md)<br/>
-[Definindo opções do compilador](../../build/reference/setting-compiler-options.md)
+[Opções do compilador MSVC](compiler-options.md)<br/>
+[Sintaxe de linha de comando do compilador MSVC](compiler-command-line-syntax.md)

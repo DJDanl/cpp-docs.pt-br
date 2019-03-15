@@ -57,14 +57,13 @@ f1_keywords:
 - C4767
 - C4770
 - C4792
-- C4794
 ms.assetid: 22bd4392-f3be-445c-9f23-6126aebac901
-ms.openlocfilehash: 02b679e3cfb91b09db381b014ba2f3d3d0e5b02a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4acc36fcf7508bdcfcc1bd936110df4c32c47ae2
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50553147"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810075"
 ---
 # <a name="compiler-warnings-c4600-through-c4799"></a>Avisos de compilador C4600 a C4799
 
@@ -128,7 +127,7 @@ Os artigos nesta seção da documentação explicam um subconjunto das mensagens
 |[Aviso do compilador (nível 1) C4656](../../error-messages/compiler-warnings/compiler-warning-level-1-c4656.md)|'symbol': tipo de dados é novo ou foi alterado desde a última compilação ou é definido de forma diferente em outro lugar|
 |Aviso do compilador (nível 1) C4657|expressão envolve um tipo de dados que há de novo desde a última compilação|
 |Aviso do compilador (nível 1) C4658|'function': protótipo de função é novo desde a última compilação, ou é declarado de forma diferente em outro lugar|
-|[Aviso do compilador (nível 1) C4659](../../error-messages/compiler-warnings/compiler-warning-level-1-c4659.md)|#pragma 'pragma': uso de segmento reservado 'segmento' possui comportamento indefinido, use #pragma comment (linker,...)|
+|[Aviso do compilador (nível 1) C4659](../../error-messages/compiler-warnings/compiler-warning-level-1-c4659.md)|#pragma 'pragma': use of reserved segment 'segment' has undefined behavior, use #pragma comment(linker, ...)|
 |[Aviso do compilador (nível 1) C4661](../../error-messages/compiler-warnings/compiler-warning-level-1-c4661.md)|'identifier': nenhuma definição compatível fornecida para solicitação de instanciação de modelo explícitos|
 |Aviso do compilador (nível 1) C4662|instanciação explícita; classe de modelo 'identifier1' não possui nenhuma definição da qual especializar 'identifier2'|
 |[Aviso do compilador (nível 1) C4667](../../error-messages/compiler-warnings/compiler-warning-level-1-c4667.md)|'function': nenhum template de função definido que corresponda à instanciação de forçada|
@@ -147,12 +146,12 @@ Os artigos nesta seção da documentação explicam um subconjunto das mensagens
 |Aviso do compilador (nível 4) C4681|'class': coclass não especifica uma interface padrão que é uma origem do evento|
 |Aviso do compilador (nível 4) C4682|'parameter': nenhum atributo de parâmetro direcional especificado, padronizando para [in]|
 |[Aviso do compilador (nível 1) C4683](../../error-messages/compiler-warnings/compiler-warning-level-1-c4683.md)|'function': origem do evento tem um 'out'-parâmetro; Tome cuidado ao capturar vários manipuladores de eventos|
-|[Aviso do compilador (nível 1) C4684](../../error-messages/compiler-warnings/compiler-warning-level-1-c4684.md)|'attribute': aviso!! atributo pode causar a geração de código inválido: use com cuidado|
+|[Aviso do compilador (nível 1) C4684](../../error-messages/compiler-warnings/compiler-warning-level-1-c4684.md)|'attribute': AVISO!! atributo pode causar a geração de código inválido: use com cuidado|
 |Aviso do compilador (nível 1) C4685|esperando ' >> ' encontrado ' >> ' durante a análise de parâmetros de modelo|
 |[Aviso do compilador (nível 3) C4686](../../error-messages/compiler-warnings/compiler-warning-level-3-c4686.md)|'user-defined type': possível alteração no comportamento, alteração na convenção de chamada de retorno UDT|
 |[Aviso (erro) do compilador C4687](../../error-messages/compiler-warnings/compiler-warning-c4687.md)|'class': uma classe sealed abstract não pode implementar uma interface 'interface'|
 |[Aviso do compilador (nível 1) C4688](../../error-messages/compiler-warnings/compiler-warning-level-1-c4688.md)|'restrição de ': lista de restrições contém tipo private de assembly 'type'|
-|Aviso do compilador (nível 1) C4689|'%c'': caractere no #pragma detect_mismatch; sem suporte #pragma ignorado|
+|Aviso do compilador (nível 1) C4689|'%c': unsupported character in #pragma detect_mismatch; #pragma ignored|
 |[Aviso do compilador (nível 4) C4690](../../error-messages/compiler-warnings/compiler-warning-level-4-c4690.md)|\[ emitidl (pop)]: mais ativações do que envios por push|
 |[Aviso do compilador (nível 1) C4691](../../error-messages/compiler-warnings/compiler-warning-level-1-c4691.md)|'type': tipo referenciado era esperado no assembly não referenciado 'file', tipo definido na unidade de tradução atual usada em vez disso|
 |[Aviso do compilador (nível 1) C4692](../../error-messages/compiler-warnings/compiler-warning-level-1-c4692.md)|'function': assinatura de membro não privado contém tipo nativo privado de assembly 'native_type'|
@@ -194,7 +193,7 @@ Os artigos nesta seção da documentação explicam um subconjunto das mensagens
 |[Aviso do compilador (nível 1) C4743](../../error-messages/compiler-warnings/compiler-warning-level-1-c4743.md)|'type' possui tamanho diferente em 'file1' e 'file2': número e o número de bytes|
 |[Aviso do compilador (nível 1) C4744](../../error-messages/compiler-warnings/compiler-warning-level-1-c4744.md)|'var' possui tipo diferente em 'file1' e 'file2': 'type1' e 'type2'|
 |[Aviso do compilador C4746](../../error-messages/compiler-warnings/compiler-warning-c4746.md)|acesso volátil de '*expressão*' está sujeito a /volatile:\<iso&#124;ms > Configuração; considere o uso de funções intrínsecas do iso_volatile_load/store|
-|[Aviso do compilador (nível 1) C4747](../../error-messages/compiler-warnings/compiler-warning-level-1-c4747.md)|Chamar 'entrypoint' gerenciado: código gerenciado não pode ser executado sob bloqueio do carregador, incluindo o ponto de entrada da DLL e chamadas acessadas do ponto de entrada DLL|
+|[Aviso do compilador (nível 1) C4747](../../error-messages/compiler-warnings/compiler-warning-level-1-c4747.md)|Chamada gerenciada 'entrypoint': Código gerenciado não pode ser executado sob bloqueio do carregador, incluindo o ponto de entrada da DLL e chamadas acessadas do ponto de entrada DLL|
 |Aviso do compilador (nível 4) C4749|tem suporte condicionalmente: offsetof aplicado ao tipo de layout não padrão '*tipo*'|
 |Aviso do compilador (nível 1) C4750|'identifier': função com alloca () embutida em um loop|
 |Aviso do compilador (nível 4) C4751|/arch: avx não se aplica a Intel (r) Extensões SIMD de Streaming que estão dentro do ASM embutido|

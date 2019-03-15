@@ -6,12 +6,12 @@ ms.date: 11/19/2018
 ms.topic: tutorial
 ms.devlang: cpp
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
-ms.openlocfilehash: ac8439e1709b6bbce6f32580bafee50c9ff30e3f
-ms.sourcegitcommit: beeb77b2976e997debc55b1af35024cc62e62799
+ms.openlocfilehash: 6c5adac9bb31287693b7d53c1fa8ff10263f4367
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "52977739"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57815847"
 ---
 # <a name="install-c-support-in-visual-studio"></a>Instalar o suporte do C++ no Visual Studio
 
@@ -45,15 +45,15 @@ Em geral, é altamente recomendado que você use o Visual Studio 2017, mesmo que
 
 1. Localize o arquivo do instalador baixado e executá-lo. Ele pode ser exibido em seu navegador, ou você pode encontrá-lo na pasta Downloads. O instalador precisa de privilégios de administrador para ser executado. Você poderá ver uma **User Account Control** caixa de diálogo solicitando que você conceda permissão para permitir que o instalador de fazer alterações ao seu sistema; escolher **Sim**. Se você estiver tendo problemas, localize o arquivo baixado no Explorador de arquivos, clique com botão direito no ícone de instalação e escolha **executar como administrador** no menu de contexto.
 
-   ![Baixe e instale o instalador do Visual Studio](../build/media/vscpp-concierge-run-installer.gif "Baixe e instale o instalador do Visual Studio")
+   ![Baixe e instale o instalador do Visual Studio](media/vscpp-concierge-run-installer.gif "Baixe e instale o instalador do Visual Studio")
 
 1. O instalador apresenta uma lista de cargas de trabalho, que são grupos de opções relacionadas para áreas de desenvolvimento específicas. Suporte para C++ agora faz parte das cargas de trabalho opcionais que não são instalados por padrão.
 
-   ![Desenvolvimento para desktop com a carga de trabalho C++](../build/media/desktop-development-with-cpp.png "desenvolvimento para Desktop com C++")
+   ![Desenvolvimento para desktop com a carga de trabalho C++](media/desktop-development-with-cpp.png "desenvolvimento para Desktop com C++")
 
    Para C++, selecione o **desenvolvimento para Desktop com C++** carga de trabalho e, em seguida, escolha **instalar**.
 
-   ![Instalar o desenvolvimento de área de trabalho com carga de trabalho do C++](../build/media/vscpp-concierge-choose-workload.gif "instalar o desenvolvimento de área de trabalho com carga de trabalho do C++")
+   ![Instalar o desenvolvimento de área de trabalho com carga de trabalho do C++](media/vscpp-concierge-choose-workload.gif "instalar o desenvolvimento de área de trabalho com carga de trabalho do C++")
 
 1. Quando a instalação for concluída, escolha o **inicie** botão para iniciar o Visual Studio.
 
@@ -61,13 +61,13 @@ Em geral, é altamente recomendado que você use o Visual Studio 2017, mesmo que
 
    Pode levar o Visual Studio vários minutos para se preparar para usam na primeira vez em que você executá-lo. Aqui está o que ele se parece com um rápido lapso de tempo:
 
-   ![Visual Studio 2017 entrar](../build/media/vscpp-quickstart-first-run.gif "entrar do Visual Studio 2017")
+   ![Visual Studio 2017 entrar](media/vscpp-quickstart-first-run.gif "entrar do Visual Studio 2017")
 
    Visual Studio inicia muito mais rapidamente quando você executá-lo novamente.
 
 1. Quando o Visual Studio é aberto, verifique se o ícone de sinalizador na barra de título é realçado:
 
-   ![Sinalizador de notificação do Visual Studio 2017](../build/media/vscpp-first-start-page-flag.png "sinalizador de notificação do Visual Studio 2017")
+   ![Sinalizador de notificação do Visual Studio 2017](media/vscpp-first-start-page-flag.png "sinalizador de notificação do Visual Studio 2017")
 
    Se ele estiver selecionado, selecione-o para abrir o **notificações** janela. Se houver quaisquer atualizações disponíveis para o Visual Studio, é recomendável que instalá-los agora. Depois que a instalação for concluída, reinicie o Visual Studio.
 

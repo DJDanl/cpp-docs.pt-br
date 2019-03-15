@@ -10,12 +10,12 @@ helpviewer_keywords:
 - -GL compiler option [C++]
 - GL compiler option [C++]
 ms.assetid: 09d51e2d-9728-4bd0-b5dc-3b8284aca1d1
-ms.openlocfilehash: b0aabdc1a2fb86479a165ae9559372316bd02260
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 6251209dac74a504bb0635f0c544c39935090a42
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420668"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812376"
 ---
 # <a name="gl-whole-program-optimization"></a>/GL (otimização de todo o programa)
 
@@ -43,21 +43,21 @@ Com informações sobre todos os módulos, o compilador pode:
 
 - Embutir uma função em um módulo, mesmo quando a função é definida em outro módulo.
 
-arquivos. obj produzido com **/GL** não estarão disponíveis para esses utilitários do vinculador como [EDITBIN](../../build/reference/editbin-reference.md) e [DUMPBIN](../../build/reference/dumpbin-reference.md).
+arquivos. obj produzido com **/GL** não estarão disponíveis para esses utilitários do vinculador como [EDITBIN](editbin-reference.md) e [DUMPBIN](dumpbin-reference.md).
 
-Se você compilar seu programa com **/GL** e [/c](../../build/reference/c-compile-without-linking.md), você deve usar a opção de vinculador /LTCG para criar o arquivo de saída.
+Se você compilar seu programa com **/GL** e [/c](c-compile-without-linking.md), você deve usar a opção de vinculador /LTCG para criar o arquivo de saída.
 
-[/Zi](../../build/reference/z7-zi-zi-debug-information-format.md) não pode ser usado com **/GL**
+[/Zi](z7-zi-zi-debug-information-format.md) não pode ser usado com **/GL**
 
 O formato dos arquivos produzidos com **/GL** na versão atual podem não ser legíveis por versões subsequentes do Visual C++. Você não deve fornecer um arquivo. lib composto de arquivos. obj que foram gerados com **/GL** , a menos que você está disposto a enviar cópias do arquivo. lib para todas as versões do Visual C++ você espera que os usuários usem, agora e no futuro.
 
 arquivos. obj produzido com **/GL** e arquivos de cabeçalho pré-compilado não devem ser usados para criar um arquivo. lib, a menos que o arquivo. lib será vinculado no mesmo computador que produziu o **/GL** arquivo. obj. Serão necessárias informações de arquivo de cabeçalho pré-compilado do arquivo. obj em tempo de vinculação.
 
-Para obter mais informações sobre as otimizações disponíveis com e as limitações de otimização do programa completo, consulte [/LTCG](../../build/reference/ltcg-link-time-code-generation.md).  **/GL** também o torna disponível de Otimização Guiada por perfil; consulte /LTCG.  Ao compilar para otimizações e se deseja que a função de ordenação de suas otimizações guiadas por perfil guiada por perfil, você deve compilar com [/Gy](../../build/reference/gy-enable-function-level-linking.md) ou uma opção de compilador que implica /Gy.
+Para obter mais informações sobre as otimizações disponíveis com e as limitações de otimização do programa completo, consulte [/LTCG](ltcg-link-time-code-generation.md).  **/GL** também o torna disponível de Otimização Guiada por perfil; consulte /LTCG.  Ao compilar para otimizações e se deseja que a função de ordenação de suas otimizações guiadas por perfil guiada por perfil, você deve compilar com [/Gy](gy-enable-function-level-linking.md) ou uma opção de compilador que implica /Gy.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do vinculador no ambiente de desenvolvimento do Visual Studio
 
-1. Ver [/LTCG (geração de código Link-time)](../../build/reference/ltcg-link-time-code-generation.md) para obter informações sobre como especificar **/GL** no ambiente de desenvolvimento.
+1. Ver [/LTCG (geração de código Link-time)](ltcg-link-time-code-generation.md) para obter informações sobre como especificar **/GL** no ambiente de desenvolvimento.
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Para definir esta opção do vinculador por meio de programação
 
@@ -65,5 +65,5 @@ Para obter mais informações sobre as otimizações disponíveis com e as limit
 
 ## <a name="see-also"></a>Consulte também
 
-[Opções do Compilador](../../build/reference/compiler-options.md)<br/>
-[Definindo opções do compilador](../../build/reference/setting-compiler-options.md)
+[Opções do compilador MSVC](compiler-options.md)<br/>
+[Sintaxe de linha de comando do compilador MSVC](compiler-command-line-syntax.md)

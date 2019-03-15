@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ATL projects, compiler optimization
 - ATL_NO_VTABLE macro
 ms.assetid: 7f379318-66d5-43dd-a53d-530758d3a228
-ms.openlocfilehash: 6e6fe09aaa0726a39aae8b85cb6581c5d0cd24e1
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 5b6620b73713886301e4efc29754cf407d9576f4
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57280011"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812337"
 ---
 # <a name="specifying-compiler-optimization-for-an-atl-project"></a>Especificação de otimização do compilador para um projeto ATL
 
@@ -54,8 +54,7 @@ em Stdafx. h, antes de todos os outra ATL arquivos de cabeçalho estão incluíd
 ## <a name="see-also"></a>Consulte também
 
 [Assistente de Projeto da ATL](../../atl/reference/atl-project-wizard.md)<br/>
-[Tipos de projeto do Visual C++](../../ide/visual-cpp-project-types.md)<br/>
-[Criando projetos para área de trabalho com Assistentes de Aplicativo](../../ide/creating-desktop-projects-by-using-application-wizards.md)<br/>
+[Tipos de projeto do Visual C++](../../build/reference/visual-cpp-project-types.md)<br/>
 [Programando com código de tempo de execução C e da ATL](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
 [Princípios básicos de objetos COM da ATL](../../atl/fundamentals-of-atl-com-objects.md)<br/>
 [novtable](../../cpp/novtable.md)<br/>

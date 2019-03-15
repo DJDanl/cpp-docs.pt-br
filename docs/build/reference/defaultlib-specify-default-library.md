@@ -10,12 +10,12 @@ helpviewer_keywords:
 - /DEFAULTLIB linker option
 - libraries, adding to list of
 ms.assetid: 6af7ff49-c170-4a13-97e2-2b9ae2de20c9
-ms.openlocfilehash: 59a4b48e412cee6b2a90608747aa6fb3e1b79ca7
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 0b7d4569c7be70bd97094ebbe09a7ae462331983
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326380"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57815951"
 ---
 # <a name="defaultlib-specify-default-library"></a>/DEFAULTLIB (especificar biblioteca padrão)
 
@@ -23,26 +23,26 @@ Especifique uma biblioteca padrão de pesquisa para resolver referências extern
 
 ## <a name="syntax"></a>Sintaxe
 
-> **/DEFAULTLIB**:_biblioteca_
+> **/DEFAULTLIB**:_library_
 
 ### <a name="arguments"></a>Arguments
 
-*Biblioteca*<br/>
+*library*<br/>
 O nome de uma biblioteca para pesquisar ao resolver referências externas.
 
 ## <a name="remarks"></a>Comentários
 
 O **/DEFAULTLIB** opção adiciona uma *biblioteca* à lista de bibliotecas de LINK busca ao resolver referências. Uma biblioteca especificada com **/DEFAULTLIB** é pesquisada após bibliotecas explicitamente especificadas na linha de comando e antes de bibliotecas padrão chamadas nos arquivos. obj.
 
-Quando usada sem argumentos, o [/NODEFAULTLIB (ignorar todas as bibliotecas de padrão)](../../build/reference/nodefaultlib-ignore-libraries.md) opção substitui todos **/DEFAULTLIB**:*biblioteca* opções. O **/NODEFAULTLIB**:*biblioteca* opção substituições **/DEFAULTLIB**:*biblioteca* quando o mesmo *biblioteca*nome é especificado em ambos.
+Quando usada sem argumentos, o [/NODEFAULTLIB (ignorar todas as bibliotecas de padrão)](nodefaultlib-ignore-libraries.md) opção substitui todos **/DEFAULTLIB**:*biblioteca* opções. O **/NODEFAULTLIB**:*biblioteca* opção substituições **/DEFAULTLIB**:*biblioteca* quando o mesmo *biblioteca*nome é especificado em ambos.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do vinculador no ambiente de desenvolvimento do Visual Studio
 
-1. Abra o projeto **páginas de propriedade** caixa de diálogo. Para obter mais informações, confira [Trabalhando com propriedades do projeto](../../ide/working-with-project-properties.md).
+1. Abra o projeto **páginas de propriedade** caixa de diálogo. Para obter mais informações, consulte [propriedades de compilador e de build definida C++ no Visual Studio](../working-with-project-properties.md).
 
 1. Selecione o **propriedades de configuração** > **vinculador** > **linha de comando** página de propriedades.
 
-1. Na **opções adicionais**, insira um **/DEFAULTLIB**:*biblioteca* opção para cada biblioteca pesquisar. Escolher **Okey** para salvar suas alterações.
+1. Na **opções adicionais**, insira um **/DEFAULTLIB**:*biblioteca* opção para cada biblioteca pesquisar. Escolha **OK** para salvar suas alterações.
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Para definir esta opção do vinculador por meio de programação
 
@@ -50,5 +50,5 @@ Quando usada sem argumentos, o [/NODEFAULTLIB (ignorar todas as bibliotecas de p
 
 ## <a name="see-also"></a>Consulte também
 
-- [Definindo opções de vinculador](../../build/reference/setting-linker-options.md)
-- [Opções do vinculador](../../build/reference/linker-options.md)
+- [Referência de vinculador MSVC](linking.md)
+- [Opções do vinculador MSVC](linker-options.md)

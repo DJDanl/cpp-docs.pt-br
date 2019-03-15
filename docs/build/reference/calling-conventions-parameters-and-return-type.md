@@ -6,12 +6,12 @@ helpviewer_keywords:
 - helper functions, calling conventions
 - helper functions, return types
 ms.assetid: 0ffa4558-6005-4803-be95-7a8ec8837660
-ms.openlocfilehash: 15631b305246cbfd7dcd8081cb1ee488bf225fec
-ms.sourcegitcommit: eb2b34a24e6edafb727e87b138499fa8945f981e
+ms.openlocfilehash: a85825eb49b1f8faab7862e902b226c1c1fb6d58
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56264797"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812961"
 ---
 # <a name="calling-conventions-parameters-and-return-type"></a>Convenções de chamada, parâmetros e tipo de retorno
 
@@ -29,7 +29,7 @@ FARPROC WINAPI __delayLoadHelper2(
 *pidd*<br/>
 Um `const` ponteiro para um `ImgDelayDescr` que contém os deslocamentos de vários dados relacionados à importação, um carimbo de hora para obter informações de associação e um conjunto de atributos que fornecem mais informações sobre o conteúdo do descritor. Atualmente, há apenas um atributo, `dlattrRva`, que indica que os endereços do descritor estão relacionados a endereços virtuais. Para obter mais informações, consulte as declarações no *delayimp*.
 
-A definição do `PCImgDelayDescr` estrutura, consulte [definições de estrutura e constante](../../build/reference/structure-and-constant-definitions.md).
+A definição do `PCImgDelayDescr` estrutura, consulte [definições de estrutura e constante](structure-and-constant-definitions.md).
 
 *ppfnIATEntry*<br/>
 Um ponteiro para o slot no atraso de carga importação endereço IAT (tabela) que é atualizado com o endereço da função importada. A rotina do auxiliar deve armazenar o mesmo valor que ele retorna para esse local.
@@ -137,4 +137,4 @@ const PfnDliHook __pfnDliNotifyHook2 = delayHook;
 
 ## <a name="see-also"></a>Consulte também
 
-[Noções básicas sobre a função auxiliar](../../build/reference/understanding-the-helper-function.md)
+[Noções básicas sobre a função auxiliar](understanding-the-helper-function.md)

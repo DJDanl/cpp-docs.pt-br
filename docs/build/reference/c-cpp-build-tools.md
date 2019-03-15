@@ -1,5 +1,5 @@
 ---
-title: Ferramentas de build da linguagem C/C++
+title: Ferramentas de Build do MSVC adicionais
 ms.date: 11/04/2016
 f1_keywords:
 - c.build
@@ -7,32 +7,35 @@ helpviewer_keywords:
 - builds [C++], C/C++ tools
 - tools [C++], build
 ms.assetid: 48d9daf4-6bbf-473a-8ce2-bf2923b69f80
-ms.openlocfilehash: 8240ee91d0318b969ba36cedac9dbc3f645d2ed8
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: e41a6dcb8de4a8608d065cce5bce2595cd96a84f
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57416755"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57808060"
 ---
-# <a name="cc-build-tools"></a>Ferramentas de build da linguagem C/C++
+# <a name="additional-msvc-build-tools"></a>Ferramentas de Build do MSVC adicionais
 
-Visual C++ fornece as seguintes ferramentas de linha de comando para exibir ou manipular a saída da compilação:
+O Visual C++ fornece os utilitários de linha de comando a seguir para exibir ou manipular a saída da compilação:
 
-- [BSCMAKE. EXE](../../build/reference/bscmake-reference.md) cria um arquivo de informações de procura (. bsc) que contém informações sobre os símbolos (classes, funções, dados, macros e tipos) em seu programa. Você pode exibir essas informações em janelas de navegação dentro do ambiente de desenvolvimento. (Um arquivo. bsc também pode ser criado no ambiente de desenvolvimento.)
 
-- [LIB. EXE](../../build/reference/lib-reference.md) é usado para criar e gerenciar uma biblioteca de arquivos de objeto comum objeto COFF (File Format). Ele também pode ser usado para criar arquivos de exportação e importe as bibliotecas para referenciar definições exportadas.
+- [LIB. EXE](lib-reference.md) é usado para criar e gerenciar uma biblioteca de arquivos de objeto comum objeto COFF (File Format). Ele também pode ser usado para criar arquivos de exportação e importe as bibliotecas para referenciar definições exportadas.
 
-- [(EDITBIN). EXE](../../build/reference/editbin-reference.md) é usada para modificar os arquivos binários de COFF.
+- [(EDITBIN). EXE](editbin-reference.md) é usada para modificar os arquivos binários de COFF.
 
-- [OPÇÃO DUMPBIN. EXE](../../build/reference/dumpbin-reference.md) exibe informações (como uma tabela de símbolo) sobre os arquivos binários de COFF.
+- [OPÇÃO DUMPBIN. EXE](dumpbin-reference.md) exibe informações (como uma tabela de símbolo) sobre os arquivos binários de COFF.
 
-- [NMAKE](../../build/nmake-reference.md) lê e executa makefiles.
+- [NMAKE](nmake-reference.md) lê e executa makefiles.
 
-- [ERRLOOK](../../build/reference/value-edit-control.md), o utilitário de pesquisa de erro, recupera uma mensagem de erro do sistema ou a mensagem de erro do módulo com base no valor inserido.
+- [ERRLOOK](value-edit-control.md), o utilitário de pesquisa de erro, recupera uma mensagem de erro do sistema ou a mensagem de erro do módulo com base no valor inserido.
+
+- [XDCMake](xdcmake-reference.md). Um processamento de arquivos de código fonte que contêm comentários da documentação de toolfor marcado com marcas XML.
+
+- [BSCMAKE. EXE](bscmake-reference.md) (fornecido para compatibilidade com versões anteriores) cria um arquivo de informações de procura (. bsc) que contém informações sobre os símbolos (classes, funções, dados, macros e tipos) em seu programa. Você pode exibir essas informações em janelas de navegação dentro do ambiente de desenvolvimento. (Um arquivo. bsc também pode ser criado no ambiente de desenvolvimento.)
 
 ## <a name="see-also"></a>Consulte também
 
-[Referência de build C/C++](../../build/reference/c-cpp-building-reference.md)<br/>
-[Nomes decorados](../../build/reference/decorated-names.md)<br/>
-[Opções do Compilador](../../build/reference/compiler-options.md)<br/>
-[Opções do vinculador](../../build/reference/linker-options.md)
+[Referência de build C/C++](c-cpp-building-reference.md)<br/>
+[Nomes decorados](decorated-names.md)<br/>
+[Opções do compilador MSVC](compiler-options.md)<br/>
+[Opções do vinculador MSVC](linker-options.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C1853
 ms.assetid: ceb9b4a5-92bf-4573-8a9f-3109cc7743ce
-ms.openlocfilehash: 30cf003cc81cb27f7c68b7f0a38529e2d9c88ef5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ec2d6bf6bac46cca8bdc2e3b8fe7cc6b7799d78a
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677819"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820722"
 ---
 # <a name="fatal-error-c1853"></a>Erro fatal C1853
 
@@ -21,4 +21,4 @@ Possíveis causas:
 
 - O cabeçalho pré-compilado foi compilado com uma versão anterior do compilador. Tente recompilar o cabeçalho com o compilador atual.
 
-- O cabeçalho pré-compilado é C++ e são usá-lo do tente C. recompilar o cabeçalho para uso com o C, especificando um dos [/Tc](../../build/reference/tc-tp-tc-tp-specify-source-file-type.md) opções do compilador ou alterando o sufixo do arquivo de origem para o "c". Para obter mais informações, consulte [duas escolhas para pré-compilar código](../../build/reference/creating-precompiled-header-files.md#two-choices-for-precompiling-code).
+- O cabeçalho pré-compilado é C++ e são usá-lo do tente C. recompilar o cabeçalho para uso com o C, especificando um dos [/Tc](../../build/reference/tc-tp-tc-tp-specify-source-file-type.md) opções do compilador ou alterando o sufixo do arquivo de origem para o "c". Para obter mais informações, consulte [duas escolhas para pré-compilar código](../../build/creating-precompiled-header-files.md#two-choices-for-precompiling-code).

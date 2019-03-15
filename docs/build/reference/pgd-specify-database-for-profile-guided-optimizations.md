@@ -7,12 +7,12 @@ helpviewer_keywords:
 - -PGD linker option
 - /PGD linker option
 ms.assetid: 9f312498-493b-461f-886f-92652257e443
-ms.openlocfilehash: 68d112c0a40289ba62e3fe5c37ae23f8f55f9209
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e1d7c9fcb94a9351ce94b66e04b4bfc523248f4e
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50601286"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812194"
 ---
 # <a name="pgd-specify-database-for-profile-guided-optimizations"></a>/PGD (especificar banco de dados para otimizações orientadas por perfil)
 
@@ -29,19 +29,19 @@ Especifica o nome do arquivo. PGD que é usado para manter informações sobre o
 
 ## <a name="remarks"></a>Comentários
 
-Ao usar preteridas [/LTCG:PGINSTRUMENT](../../build/reference/ltcg-link-time-code-generation.md) opção, use **/PGD.** para especificar um nome de não-padrão ou local para o arquivo. PGD. Se você não especificar **/PGD.**, o nome base do arquivo. PGD é o mesmo que a saída (.exe ou. dll) nome base do arquivo e é criado no mesmo diretório do qual o link foi invocado.
+Ao usar preteridas [/LTCG:PGINSTRUMENT](ltcg-link-time-code-generation.md) opção, use **/PGD.** para especificar um nome de não-padrão ou local para o arquivo. PGD. Se você não especificar **/PGD.**, o nome base do arquivo. PGD é o mesmo que a saída (.exe ou. dll) nome base do arquivo e é criado no mesmo diretório do qual o link foi invocado.
 
 Ao usar preteridas **/LTCG:PGOPTIMIZE** opção, use o **/PGD.** opção para especificar o nome do arquivo. PGD para usar para criar a imagem otimizada. O *filename* argumento deve corresponder a *filename* especificado para **/LTCG:PGINSTRUMENT**.
 
-Para obter mais informações, consulte [Otimização Guiada por perfil](../../build/reference/profile-guided-optimizations.md).
+Para obter mais informações, consulte [otimizações guiadas pelo perfil](../profile-guided-optimizations.md).
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do vinculador no ambiente de desenvolvimento do Visual Studio
 
-1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [configuração de propriedades do projeto Visual C++](../../ide/working-with-project-properties.md).
+1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [propriedades de compilador e de build definida C++ no Visual Studio](../working-with-project-properties.md).
 
 1. Selecione o **propriedades de configuração** > **vinculador** > **otimização** página de propriedades.
 
-1. Modificar a **banco de dados guiada por perfil** propriedade. Escolher **Okey** para salvar suas alterações.
+1. Modificar a **banco de dados guiada por perfil** propriedade. Escolha **OK** para salvar suas alterações.
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Para definir esta opção do vinculador por meio de programação
 
@@ -49,5 +49,5 @@ Para obter mais informações, consulte [Otimização Guiada por perfil](../../b
 
 ## <a name="see-also"></a>Consulte também
 
-[Definindo opções de vinculador](../../build/reference/setting-linker-options.md)<br/>
-[Opções do vinculador](../../build/reference/linker-options.md)<br/>
+[Referência de vinculador MSVC](linking.md)<br/>
+[Opções do vinculador MSVC](linker-options.md)<br/>

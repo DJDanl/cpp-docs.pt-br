@@ -19,16 +19,16 @@ helpviewer_keywords:
 - Single Inheritance compiler option
 - -vmv compiler option [C++]
 ms.assetid: 0fcd7ae0-3031-4c62-a2a8-e154c8685dae
-ms.openlocfilehash: 3c11572880a0b58a1ba82f2e794c9dbfbd521c44
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 7a46cecdbf96ad891ce218df4769a60590e562a9
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57425205"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810036"
 ---
 # <a name="vmm-vms-vmv-general-purpose-representation"></a>/vmm, /vms, /vmv (representação de finalidade geral)
 
-Usado quando [/vmb, /vmg (método de representação)](../../build/reference/vmb-vmg-representation-method.md) está selecionado como o [método de representação](../../build/reference/vmb-vmg-representation-method.md). Essas opções indicam o modelo de herança da definição de classe ainda não encontrado.
+Usado quando [/vmb, /vmg (método de representação)](vmb-vmg-representation-method.md) está selecionado como o [método de representação](vmb-vmg-representation-method.md). Essas opções indicam o modelo de herança da definição de classe ainda não encontrado.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -52,7 +52,7 @@ Quando você especificar uma dessas opções de modelo de herança, esse modelo 
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio
 
-1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, confira [Trabalhando com propriedades do projeto](../../ide/working-with-project-properties.md).
+1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [propriedades de compilador e de build definida C++ no Visual Studio](../working-with-project-properties.md).
 
 1. Clique o **C/C++** pasta.
 
@@ -66,6 +66,6 @@ Quando você especificar uma dessas opções de modelo de herança, esse modelo 
 
 ## <a name="see-also"></a>Consulte também
 
-[/vmb, /vmg (método de representação)](../../build/reference/vmb-vmg-representation-method.md)<br/>
-[Opções do Compilador](../../build/reference/compiler-options.md)<br/>
-[Definindo opções do compilador](../../build/reference/setting-compiler-options.md)
+[/vmb, /vmg (método de representação)](vmb-vmg-representation-method.md)<br/>
+[Opções do compilador MSVC](compiler-options.md)<br/>
+[Sintaxe de linha de comando do compilador MSVC](compiler-command-line-syntax.md)

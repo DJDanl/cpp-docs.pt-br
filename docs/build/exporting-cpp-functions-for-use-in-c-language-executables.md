@@ -7,12 +7,12 @@ helpviewer_keywords:
 - exporting functions [C++], C++ functions in C executables
 - functions [C++], exporting
 ms.assetid: 80b9e982-f52d-4312-a891-f73cc69f3c2b
-ms.openlocfilehash: 86d771f8dcb9ee1ef137b7766f249a1dda7257db
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: a694b77e3730ab82ec1698076cc66729ff115cdc
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57426479"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57814014"
 ---
 # <a name="exporting-c-functions-for-use-in-c-language-executables"></a>Exportando funções do C++ a serem usadas em executáveis da linguagem C
 
@@ -26,26 +26,26 @@ extern "C" __declspec( dllexport ) int MyFunc(long parm1);
 
 ## <a name="what-do-you-want-to-do"></a>O que você deseja fazer?
 
-- [Exportar de uma DLL usando arquivos. def](../build/exporting-from-a-dll-using-def-files.md)
+- [Exportar de uma DLL usando arquivos. def](exporting-from-a-dll-using-def-files.md)
 
-- [Exportar de uma DLL usando dllexport](../build/exporting-from-a-dll-using-declspec-dllexport.md)
+- [Exportar de uma DLL usando dllexport](exporting-from-a-dll-using-declspec-dllexport.md)
 
-- [Exportar e importar usando AFX_EXT_CLASS](../build/exporting-and-importing-using-afx-ext-class.md)
+- [Exportar e importar usando AFX_EXT_CLASS](exporting-and-importing-using-afx-ext-class.md)
 
-- [Exportar funções de C para uso em executáveis C ou da linguagem C++](../build/exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
+- [Exportar funções de C para uso em executáveis C ou da linguagem C++](exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
 
-- [Determinar qual método de exportação usar](../build/determining-which-exporting-method-to-use.md)
+- [Determinar qual método de exportação usar](determining-which-exporting-method-to-use.md)
 
-- [Importar para um aplicativo usando __declspec(dllimport)](../build/importing-into-an-application-using-declspec-dllimport.md)
+- [Importar para um aplicativo usando __declspec(dllimport)](importing-into-an-application-using-declspec-dllimport.md)
 
-- [Inicialize um DLL](../build/run-time-library-behavior.md#initializing-a-dll)
+- [Inicialize um DLL](run-time-library-behavior.md#initializing-a-dll)
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Que mais você deseja saber?
 
-- [Nomes decorados](../build/reference/decorated-names.md)
+- [Nomes decorados](reference/decorated-names.md)
 
 - [Usando extern para especificar a ligação](../cpp/using-extern-to-specify-linkage.md)
 
 ## <a name="see-also"></a>Consulte também
 
-[Exportando de uma DLL](../build/exporting-from-a-dll.md)
+[Exportando de uma DLL](exporting-from-a-dll.md)

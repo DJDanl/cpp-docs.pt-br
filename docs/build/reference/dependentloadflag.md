@@ -10,12 +10,12 @@ helpviewer_keywords:
 - linker [C++], DEPENDENTLOADFLAG
 - DEPENDENTLOADFLAG linker option
 - /DEPENDENTLOADFLAG linker option
-ms.openlocfilehash: 0bdf2542d641f751f40757079eb576f2c97540dc
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 94998e06f23a7e70524221d3cb75166b5d3f2c44
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326154"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57815964"
 ---
 # <a name="dependentloadflag-set-default-dependent-load-flags"></a>/ DEPENDENTLOADFLAG (definir sinalizadores de carregamento dependente padrão)
 
@@ -23,7 +23,7 @@ Define os sinalizadores de carga padrão usado quando `LoadLibrary` é usado par
 
 ## <a name="syntax"></a>Sintaxe
 
-> **/ DEPENDENTLOADFLAG**[**:**_loadflags_]
+> **/DEPENDENTLOADFLAG**[**:**_loadflags_]
 
 ### <a name="arguments"></a>Arguments
 
@@ -42,7 +42,7 @@ Se você especificar a opção de link `/DEPENDENTLOADFLAG:0xA00` (o valor dos s
 
 ### <a name="to-set-the-dependentloadflag-linker-option-in-the-visual-studio-development-environment"></a>Para definir a opção de vinculador DEPENDENTLOADFLAG no ambiente de desenvolvimento do Visual Studio
 
-1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [configuração de propriedades do projeto Visual C++](../../ide/working-with-project-properties.md).
+1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [propriedades de compilador e de build definida C++ no Visual Studio](../working-with-project-properties.md).
 
 1. Selecione o **propriedades de configuração** > **vinculador** > **linha de comando** página de propriedades.
 
@@ -54,9 +54,9 @@ Se você especificar a opção de link `/DEPENDENTLOADFLAG:0xA00` (o valor dos s
 
 ## <a name="see-also"></a>Consulte também
 
-- [Definindo opções de vinculador](setting-linker-options.md)
-- [Opções do vinculador](linker-options.md)
-- [Como vincular implicitamente para uma DLL](../linking-an-executable-to-a-dll.md#linking-implicitly)
-- [Determinar qual método de vinculação usar](../linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)
+- [Referência de vinculador MSVC](linking.md)
+- [Opções do vinculador MSVC](linker-options.md)
+- [Vincular um executável a uma DLL](../linking-an-executable-to-a-dll.md#linking-implicitly)
+- [Vincular um executável a uma DLL](../linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)
 - [LoadLibraryEx](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibraryexa)
 - [Ordem de pesquisa de biblioteca de vínculo dinâmico](/windows/desktop/Dlls/dynamic-link-library-search-order)

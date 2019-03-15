@@ -1,22 +1,19 @@
 ---
-title: 'Instruções passo a passo: compilando um programa do C++/CLI na linha de comando'
+title: 'Passo a passo: Compilando um c++ CLI programa na linha de comando'
 ms.date: 09/24/2018
 ms.assetid: cef41c88-faf9-439d-8423-25aa3f5674dd
-ms.openlocfilehash: e8841600fd61aacfe5b942ac4a4305619dff7e90
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c90d2c915db7264dc1b4e4807803e063c2a24fc7
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50451019"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57811921"
 ---
-# <a name="walkthrough-compiling-a-ccli-program-on-the-command-line"></a>Instruções passo a passo: compilando um programa do C++/CLI na linha de comando
+# <a name="walkthrough-compiling-a-ccli-program-on-the-command-line"></a>Passo a passo: Compilando um c++ CLI programa na linha de comando
 
 É possível criar programas Visual C++ que tenham CLR (Common Language Runtime) como destino e usem .NET Framework e depois compilá-los na linha de comando. O Visual C++ tem suporte à linguagem de programação C++/CLI, que possui tipos e operadores adicionais para atingir o modelo de programação .NET. Para obter informações gerais sobre o C + + c++ /CLI linguagem CLI, consulte [programação do .NET com C + + c++ CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md).
 
 Neste passo a passo, você usa um editor de texto para criar um programa de C++/CLI básico e, em seguida, o compila na linha de comandos. (Você pode usar seu próprio programa de C++/CLI ao invés de digitar o que é mostrado ou, ainda, usar uma amostra de código de C++/CLI de outro artigo de ajuda. Essa técnica é útil para compilar e testar pequenos módulos que têm sem elementos de interface do usuário.)
-
-> [!NOTE]
-> Em seguida, é possível usar o Visual Studio IDE para compilar programas C++/CLI. Para obter mais informações, consulte [instruções passo a passo: compilando um programa C++ que se destina ao CLR no Visual Studio](../ide/walkthrough-compiling-a-cpp-program-that-targets-the-clr-in-visual-studio.md).
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -26,11 +23,11 @@ Você entender os conceitos básicos da linguagem C++.
 
 As etapas a seguir mostram como compilar um aplicativo de console C++/CLI que usa classes .NET Framework.
 
-Para habilitar a compilação para c++ /CLI, você deve usar o [/clr](../build/reference/clr-common-language-runtime-compilation.md) opção de compilador. O compilador do Visual C++ gera um arquivo .exe contendo código MSIL — ou MSIL misto e código nativo — e links para as bibliotecas .NET Framework.
+Para habilitar a compilação para c++ /CLI, você deve usar o [/clr](reference/clr-common-language-runtime-compilation.md) opção de compilador. O compilador MSVC gera um arquivo de .exe contendo código MSIL — ou MSIL misto e código nativo — e links para as bibliotecas necessárias do .NET Framework.
 
 ### <a name="to-compile-a-ccli-application-on-the-command-line"></a>Para compilar um aplicativo C++/CLI na linha de comando
 
-1. Abra uma **Prompt de comando do desenvolvedor** janela. Para obter instruções específicas, consulte [para abrir uma janela de prompt de comando do desenvolvedor](../build/building-on-the-command-line.md#developer_command_prompt).
+1. Abra uma **Prompt de comando do desenvolvedor** janela. Para obter instruções específicas, consulte [para abrir uma janela de prompt de comando do desenvolvedor](building-on-the-command-line.md#developer_command_prompt).
 
    As credenciais de administrador podem ser necessárias para compilar o código com êxito, dependendo do sistema operacional e da configuração do computador. Para executar a janela de prompt de comando como administrador, clique com botão direito para abrir o menu de atalho do prompt de comando e, em seguida, escolha **mais** > **executar como administrador**.
 
@@ -64,5 +61,5 @@ Para habilitar a compilação para c++ /CLI, você deve usar o [/clr](../build/r
 ## <a name="see-also"></a>Consulte também
 
 [Referência da linguagem C++](../cpp/cpp-language-reference.md)<br/>
-[Compilando programas do C/C++](../build/building-c-cpp-programs.md)<br/>
-[Opções do Compilador](../build/reference/compiler-options.md)
+[Projetos e sistemas de build](projects-and-build-systems-cpp.md)<br/>
+[Opções do compilador MSVC](reference/compiler-options.md)

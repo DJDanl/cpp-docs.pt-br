@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /MP compiler option (C++)
 - MP compiler option (C++)
 - cl.exe compiler, multi-process build
-ms.openlocfilehash: d0a3e50ca75535d505e46c0e454a8e0902b1ffb1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8a66f6f6f1f4ce77e33df992b915be9ca5dcce70
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50562078"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57808450"
 ---
 # <a name="mp-build-with-multiple-processes"></a>/MP (compilar com vários processos)
 
@@ -50,10 +50,10 @@ A tabela a seguir lista Opções do compilador e recursos de linguagem que são 
 |Opção ou um recurso de linguagem|Descrição|
 |--------------------------------|-----------------|
 |[#import](../../preprocessor/hash-import-directive-cpp.md) diretiva de pré-processador|Converte os tipos em uma biblioteca de tipos em classes C++ e, em seguida, grava essas classes em um arquivo de cabeçalho.|
-|[/E](../../build/reference/e-preprocess-to-stdout.md), [/EP](../../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md)|Copia a saída de pré-processador para a saída padrão (**stdout**).|
-|[/Gm](../../build/reference/gm-enable-minimal-rebuild.md)|Habilita uma recompilação incremental.|
-|[/showIncludes](../../build/reference/showincludes-list-include-files.md)|Grava uma lista de arquivos de inclusão para o erro padrão (**stderr**).|
-|[/Yc](../../build/reference/yc-create-precompiled-header-file.md)|Grava um arquivo de cabeçalho pré-compilado.|
+|[/E](e-preprocess-to-stdout.md), [/EP](ep-preprocess-to-stdout-without-hash-line-directives.md)|Copia a saída de pré-processador para a saída padrão (**stdout**).|
+|[/Gm](gm-enable-minimal-rebuild.md)|Habilita uma recompilação incremental.|
+|[/showIncludes](showincludes-list-include-files.md)|Grava uma lista de arquivos de inclusão para o erro padrão (**stderr**).|
+|[/Yc](yc-create-precompiled-header-file.md)|Grava um arquivo de cabeçalho pré-compilado.|
 
 ## <a name="diagnostic-messages"></a>Mensagens de diagnóstico
 
@@ -61,7 +61,7 @@ Se você especificar um recurso de opção ou linguagem que é incompatível com
 
 |Mensagem de diagnóstico|Descrição|Comportamento do compilador|
 |------------------------|-----------------|-----------------------|
-|**C2813**|O **#import** diretiva não é compatível com o **/MP** opção.|A compilação termina, a menos que um [nível de aviso do compilador](../../build/reference/compiler-option-warning-level.md) opção especifique o contrário.|
+|**C2813**|O **#import** diretiva não é compatível com o **/MP** opção.|A compilação termina, a menos que um [nível de aviso do compilador](compiler-option-warning-level.md) opção especifique o contrário.|
 |**D9014**|Um valor inválido é especificado para o *processMax* argumento.|O compilador ignora o valor inválido e pressupõe que um valor de 1.|
 |**D9030**|A opção especificada é incompatível com **/MP**.|O compilador ignora os **/MP** opção.|
 
@@ -99,7 +99,7 @@ Os arquivos de origem não podem ser compilados na mesma ordem em que aparecem n
 
 Um arquivo de origem é compilado quando um processo está disponível para compilá-lo. Se houver mais arquivos de processos, o primeiro conjunto de arquivos é compilado por processos disponíveis. Os arquivos restantes são processados quando um processo termina de tratamento de um arquivo anterior e está disponível para trabalhar em um dos arquivos restantes.
 
-Não especifique o mesmo arquivo de origem várias vezes em uma linha de comando. Isso pode ocorrer, por exemplo, se uma ferramenta cria automaticamente um [makefile](../../build/contents-of-a-makefile.md) que se baseia em informações de dependência em um projeto. Se você não especificar o **/MP** opção, o compilador processa a lista de arquivos em sequência e recompila cada ocorrência do arquivo. No entanto, se você especificar o **/MP** opção, compiladores diferentes podem compilar o mesmo arquivo ao mesmo tempo. Consequentemente, os compiladores diferentes tentará gravar no mesmo arquivo de saída ao mesmo tempo. Um compilador adquirirá o acesso de gravação exclusivo ao arquivo de saída e tenha êxito e os outros compiladores falhará com um erro de acesso de arquivo.
+Não especifique o mesmo arquivo de origem várias vezes em uma linha de comando. Isso pode ocorrer, por exemplo, se uma ferramenta cria automaticamente um [makefile](contents-of-a-makefile.md) que se baseia em informações de dependência em um projeto. Se você não especificar o **/MP** opção, o compilador processa a lista de arquivos em sequência e recompila cada ocorrência do arquivo. No entanto, se você especificar o **/MP** opção, compiladores diferentes podem compilar o mesmo arquivo ao mesmo tempo. Consequentemente, os compiladores diferentes tentará gravar no mesmo arquivo de saída ao mesmo tempo. Um compilador adquirirá o acesso de gravação exclusivo ao arquivo de saída e tenha êxito e os outros compiladores falhará com um erro de acesso de arquivo.
 
 ### <a name="using-type-libraries-import"></a>Usando bibliotecas de tipo (#import)
 

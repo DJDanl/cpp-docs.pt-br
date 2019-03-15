@@ -10,12 +10,12 @@ helpviewer_keywords:
 - /hotpatch compiler option [C++]
 - hotpatching
 ms.assetid: aad539b6-c053-4c78-8682-853d98327798
-ms.openlocfilehash: aca009b108eab8a9e7e9401aa14db4ab225d475a
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 8830b26b8fdfc3db2aa5fe31a52e6226fd554946
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57417847"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807475"
 ---
 # <a name="hotpatch-create-hotpatchable-image"></a>/hotpatch (Criar imagem hotpatchable)
 
@@ -31,13 +31,13 @@ Prepara uma imagem para patch instantâneo.
 
 Quando **/hotpatch** é usado em uma compilação, o compilador garante a primeira instrução de cada função tenha pelo menos dois bytes, que é necessário para o patch.
 
-Para concluir a preparação e criar uma imagem hotpatchable, depois de usar **/hotpatch** para compilar, você deve usar [/FUNCTIONPADMIN (Criar imagem de Hotpatchable)](../../build/reference/functionpadmin-create-hotpatchable-image.md) para vincular. Quando você compila e vincula uma imagem usando uma invocação de cl.exe, **/hotpatch** implica **/functionpadmin**.
+Para concluir a preparação e criar uma imagem hotpatchable, depois de usar **/hotpatch** para compilar, você deve usar [/FUNCTIONPADMIN (Criar imagem de Hotpatchable)](functionpadmin-create-hotpatchable-image.md) para vincular. Quando você compila e vincula uma imagem usando uma invocação de cl.exe, **/hotpatch** implica **/functionpadmin**.
 
 Como as instruções são sempre de dois bytes ou maiores na arquitetura ARM e porque x64 compilação sempre é tratada como se **/hotpatch** tiver sido especificada, você não precisa especificar **/hotpatch** quando Você pode compilar para esses destinos; No entanto, ainda será necessário vincular usando **/functionpadmin** para criar imagens hotpatchable para eles. O **/hotpatch** compilador opção só afeta x86 compilação.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio
 
-1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, confira [Trabalhando com propriedades do projeto](../../ide/working-with-project-properties.md).
+1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [propriedades de compilador e de build definida C++ no Visual Studio](../working-with-project-properties.md).
 
 1. Selecione o **C/C++** pasta.
 
@@ -51,5 +51,5 @@ Como as instruções são sempre de dois bytes ou maiores na arquitetura ARM e p
 
 ## <a name="see-also"></a>Consulte também
 
-[Opções do Compilador](../../build/reference/compiler-options.md)<br/>
-[Definindo opções do compilador](../../build/reference/setting-compiler-options.md)
+[Opções do compilador MSVC](compiler-options.md)<br/>
+[Sintaxe de linha de comando do compilador MSVC](compiler-command-line-syntax.md)

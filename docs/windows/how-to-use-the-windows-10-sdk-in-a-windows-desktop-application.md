@@ -1,16 +1,16 @@
 ---
-title: 'Como: usar o Windows 10 SDK em um aplicativo de área de trabalho do Windows'
+title: 'Como: Usar o Windows 10 SDK em um aplicativo de área de trabalho do Windows'
 ms.custom: get-started-article
 ms.date: 07/12/2018
 ms.assetid: eed6421e-9355-44a6-9582-3f1d453a6d44
-ms.openlocfilehash: ed860a229866991b01266093058b71cc2ae84986
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 25ef3674a7ab741f20a07d6e65d1b5524fb88d5f
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50669112"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57809919"
 ---
-# <a name="how-to-use-the-windows-10-sdk-in-a-windows-desktop-application"></a>Como: usar o Windows 10 SDK em um aplicativo de área de trabalho do Windows
+# <a name="how-to-use-the-windows-10-sdk-in-a-windows-desktop-application"></a>Como: Usar o Windows 10 SDK em um aplicativo de área de trabalho do Windows
 
 Quando você cria um projeto de área de trabalho clássico do Windows no Visual Studio 2017, ele é configurado por padrão para compilar com a versão do SDK do Windows 10 foi instalado quando a carga de trabalho de área de trabalho do C++ foi instalada ou atualizado pela última vez. Esta versão do SDK do Windows é compatível com o Windows 7 e posterior. Ver [usando os cabeçalhos do Windows](/windows/desktop/WinProg/using-the-windows-headers) para obter mais informações sobre destinados a versões específicas do Windows.
 
@@ -38,7 +38,7 @@ Começando com o Visual Studio 2015 e o SDK do Windows 10, a biblioteca de CRT f
 
    `Retargeting End: 1 completed, 0 failed, 0 skipped`
 
-4. Abra as propriedades do projeto e, na **propriedades de configuração, geral** seção, observe os valores de **versão de plataforma de destino do Windows**. Alterar o valor aqui tem o mesmo efeito que esse procedimento. Ver [página de propriedades gerais (projeto)](../ide/general-property-page-project.md).
+4. Abra as propriedades do projeto e, na **propriedades de configuração, geral** seção, observe os valores de **versão de plataforma de destino do Windows**. Alterar o valor aqui tem o mesmo efeito que esse procedimento. Ver [página de propriedades gerais (projeto)](../build/reference/general-property-page-project.md).
 
    ![Versão da plataforma de destino](../windows/media/retargetingwindowssdk3.PNG "RetargetingWindowsSDK3")
 

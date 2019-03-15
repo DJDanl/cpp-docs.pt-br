@@ -8,12 +8,12 @@ helpviewer_keywords:
 - DEBUGTYPE linker option
 - -DEBUGTYPE linker option
 ms.assetid: 1ddcb718-7fec-4f92-a319-3f70f04fe742
-ms.openlocfilehash: c4a24d79295c1f7dbbe645c4a6e52f58b4a08807
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 00e3cb61f8ec9aa707bb72aa9ff05a64f98d4e47
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57423489"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820046"
 ---
 # <a name="debugtype-debug-info-options"></a>/DEBUGTYPE (opções de informações de depuração)
 
@@ -40,11 +40,11 @@ Argumentos a serem **/DEBUGTYPE** podem ser combinadas em qualquer ordem, separa
 
 Use o **/DEBUGTYPE** opção para especificar a inclusão de informações de cabeçalho realocação tabela dados ou registro. pData e. XData no fluxo de depuração. Isso faz com que o vinculador a incluir informações sobre o código de modo de usuário que é visível em um depurador de kernel quando significativas no código do modo kernel. Para disponibilizar os símbolos de depuração quando **correção** é especificado, inclua o **CV** argumento.
 
-Para depurar o código no modo de usuário, que é típico para aplicativos, o **/DEBUGTYPE** opção não é necessária. Por padrão, as opções de compilador que especificam a depuração de saída ([/Z7, /Zi, /ZI](../../build/reference/z7-zi-zi-debug-information-format.md)) emite todas as informações necessárias pelo Visual Studio do depurador. Use **/DEBUGTYPE:PDATA** ou **/debugtype: CV, PDATA, correção** para depurar o código que combina os componentes do modo de usuário e o modo de kernel, como um aplicativo de configuração para um driver de dispositivo. Para obter mais informações sobre os depuradores de modo kernel, consulte [depuração ferramentas para Windows (WinDbg, KD, CDB, NTSD.)](/windows-hardware/drivers/debugger/index)
+Para depurar o código no modo de usuário, que é típico para aplicativos, o **/DEBUGTYPE** opção não é necessária. Por padrão, as opções de compilador que especificam a depuração de saída ([/Z7, /Zi, /ZI](z7-zi-zi-debug-information-format.md)) emite todas as informações necessárias pelo Visual Studio do depurador. Use **/DEBUGTYPE:PDATA** ou **/debugtype: CV, PDATA, correção** para depurar o código que combina os componentes do modo de usuário e o modo de kernel, como um aplicativo de configuração para um driver de dispositivo. Para obter mais informações sobre os depuradores de modo kernel, consulte [depuração ferramentas para Windows (WinDbg, KD, CDB, NTSD.)](/windows-hardware/drivers/debugger/index)
 
 ## <a name="see-also"></a>Consulte também
 
-[/DEBUG (gerar informações de depuração)](../../build/reference/debug-generate-debug-info.md)<br/>
-[/DRIVER (driver de modo de kernel do Windows NT)](../../build/reference/driver-windows-nt-kernel-mode-driver.md)<br/>
-[/PROFILE (criador de perfil de ferramentas de desempenho)](../../build/reference/profile-performance-tools-profiler.md)<br/>
+[/DEBUG (gerar informações de depuração)](debug-generate-debug-info.md)<br/>
+[/DRIVER (driver de modo de kernel do Windows NT)](driver-windows-nt-kernel-mode-driver.md)<br/>
+[/PROFILE (criador de perfil de ferramentas de desempenho)](profile-performance-tools-profiler.md)<br/>
 [Ferramentas de depuração para Windows (WinDbg, KD, CDB, NTSD.)](/windows-hardware/drivers/debugger/index)
