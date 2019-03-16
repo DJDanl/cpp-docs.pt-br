@@ -9,12 +9,12 @@ helpviewer_keywords:
 - statically linked DLLs [C++]
 - regular MFC DLLs [C++], statically linked to MFC
 ms.assetid: 2eed531c-726a-4b8a-b936-f721dc00a7fa
-ms.openlocfilehash: 074cd6c9fca08261cf2333a968dce3cc83c0c860
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 1f05b5e3c268935cf3161fb7184e04b3e3ea1446
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57415976"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57815795"
 ---
 # <a name="regular-mfc-dlls-statically-linked-to-mfc"></a>DLLs MFC regulares vinculadas estaticamente ao MFC
 
@@ -66,20 +66,20 @@ As bibliotecas de vínculo estático padrão do MFC são nomeadas de acordo com 
 
 ## <a name="what-do-you-want-to-do"></a>O que você deseja fazer?
 
-- [Inicializar dll normais do MFC](../build/run-time-library-behavior.md#initializing-regular-dlls)
+- [Inicializar dll normais do MFC](run-time-library-behavior.md#initializing-regular-dlls)
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Que mais você deseja saber?
 
 - [Usando MFC como parte de uma DLL](../mfc/tn011-using-mfc-as-part-of-a-dll.md)
 
-- [Usando banco de dados, OLE e DLLs de extensão de MFC de soquetes em DLLs MFC regulares](../build/using-database-ole-and-sockets-extension-dlls-in-regular-dlls.md)
+- [Usando banco de dados, OLE e DLLs de extensão de MFC de soquetes em DLLs MFC regulares](using-database-ole-and-sockets-extension-dlls-in-regular-dlls.md)
 
 - [Criando uma DLL MFC](../mfc/reference/mfc-dll-wizard.md)
 
-- [DLLs MFC regulares vinculadas dinamicamente ao MFC](../build/regular-dlls-dynamically-linked-to-mfc.md)
+- [DLLs MFC regulares vinculadas dinamicamente ao MFC](regular-dlls-dynamically-linked-to-mfc.md)
 
-- [DLLs de extensão de MFC](../build/extension-dlls-overview.md)
+- [DLLs de extensão de MFC](extension-dlls-overview.md)
 
 ## <a name="see-also"></a>Consulte também
 
-[Tipos de DLLs](../build/kinds-of-dlls.md)
+[Tipos de DLLs](kinds-of-dlls.md)

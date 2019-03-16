@@ -1,17 +1,17 @@
 ---
-title: Como criar projetos C++ verificáveis (C++/CLI)
+title: 'Como: Criar projetos C++ verificáveis (C++ /CLI CLI)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - verifiable assemblies [C++], creating
 - conversions, C++ projects
 - Visual C++ projects
 ms.assetid: 4ef2cc1a-e3e5-4d67-8d8d-9c614f8ec5d3
-ms.openlocfilehash: acd37469f0702b73cdb1386fcf43091c8d27aebb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: de3742717bf55c53ab4007aaed18b6ce687fbede
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630432"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57817368"
 ---
 # <a name="how-to-create-verifiable-c-projects-ccli"></a>Como: criar projetos do C++ verificáveis (C + + / CLI)
 
@@ -28,7 +28,7 @@ Por padrão, os projetos do .NET usam o sinalizador do compilador /clr e configu
 
 ### <a name="to-change-the-compiler-and-linker-settings"></a>Para alterar as configurações de compilador e vinculador
 
-1. Exiba o página de propriedades do projeto. Para obter mais informações, confira [Trabalhando com propriedades do projeto](../ide/working-with-project-properties.md).
+1. Exiba o página de propriedades do projeto. Para obter mais informações, consulte [definir compilador e propriedades de compilação](../build/working-with-project-properties.md).
 
 1. No **gerais** página sob a **propriedades de configuração** conjunto de nós, o **suporte a Common Language Runtime** propriedade para **seguro MSIL Common Language Suporte de tempo de execução (/ /CLR: Safe)**.
 
@@ -56,7 +56,7 @@ Porque aplicativos verificáveis não é possível usar as bibliotecas de tempo 
 
 1. Altere _tmain() para Main () no arquivo. cpp principal do projeto.
 
-1. Exiba o página de propriedades do projeto. Para obter mais informações, confira [Trabalhando com propriedades do projeto](../ide/working-with-project-properties.md).
+1. Exiba o página de propriedades do projeto. Para obter mais informações, consulte [definir compilador e propriedades de compilação](../build/working-with-project-properties.md).
 
 1. No **Advanced** página sob a **vinculador** nó, insira `Main` como o **ponto de entrada** valor da propriedade.
 
