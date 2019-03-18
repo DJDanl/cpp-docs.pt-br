@@ -8,12 +8,12 @@ helpviewer_keywords:
 - dllimport attribute [C++], DEF files
 - DLLs [C++], DEF files
 ms.assetid: aefdbf50-f603-488a-b0d7-ed737bae311d
-ms.openlocfilehash: f6e553a85e6c17a3ea914365ad29ad5136e50629
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 13a6a375d6200f73dd9845d057d1954c2b65485c
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424764"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57815327"
 ---
 # <a name="importing-using-def-files"></a>Importando usando arquivos DEF
 
@@ -59,8 +59,8 @@ if (ulDataInDll == 0L)   /*sample code fragment*/
 
 Usando a constante é mais arriscado porque se você esquecer de usar o nível extra de indireção, você poderia potencialmente acessar ponteiro da tabela de endereço de importação para a variável — não a própria variável. Esse tipo de problema com frequência pode se manifestar como uma violação de acesso porque a tabela de endereços de importação é feita no momento, somente leitura pelo compilador e vinculador.
 
-O vinculador atual do Visual C++ emite um aviso se perceber constante no arquivo. def para levar em conta para esse caso. O motivo real só para usar a constante é se você não é possível recompilar algum arquivo de objeto em que o arquivo de cabeçalho não listar **__declspec(dllimport)** no protótipo.
+O vinculador MSVC atual emite um aviso se perceber constante no arquivo. def para levar em conta para esse caso. O motivo real só para usar a constante é se você não é possível recompilar algum arquivo de objeto em que o arquivo de cabeçalho não listar **__declspec(dllimport)** no protótipo.
 
 ## <a name="see-also"></a>Consulte também
 
-[Importando para um aplicativo](../build/importing-into-an-application.md)
+[Importando para um aplicativo](importing-into-an-application.md)
