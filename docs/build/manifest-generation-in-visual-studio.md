@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - manifests [C++]
 ms.assetid: 0af60aa9-d223-42cd-8426-b3fc543a2a81
-ms.openlocfilehash: 69e1868990358aeb4d790366b3a0bfa8d8999823
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: eabd488e581357ec1386b20597c1987e4c8b2c19
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414740"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57809724"
 ---
 # <a name="manifest-generation-in-visual-studio"></a>Geração de manifesto no Visual Studio
 
@@ -27,11 +27,8 @@ O sistema de compilação no Visual Studio permite que o manifesto a ser inserid
 
 1. Se o manifesto inserido no binário é o mesmo que o manifesto gerado pela ferramenta de manifesto, a compilação continuará para as próximas etapas de compilação.
 
-O manifesto é incorporado no final binário como um recurso de texto e pode ser exibido, abrindo o binário final como um arquivo no Visual Studio. Para garantir que o manifesto aponta para as bibliotecas corretas, siga as etapas descritas em [Noções básicas sobre as dependências de um aplicativo do Visual C++](../ide/understanding-the-dependencies-of-a-visual-cpp-application.md) ou seguir as sugestões descritas o [desoluçãodeproblemas](../build/troubleshooting-c-cpp-isolated-applications-and-side-by-side-assemblies.md) seção.
+O manifesto é incorporado no final binário como um recurso de texto e pode ser exibido, abrindo o binário final como um arquivo no Visual Studio. Para garantir que o manifesto aponta para as bibliotecas corretas, siga as etapas descritas em [Noções básicas sobre as dependências de um aplicativo do Visual C++](../ide/understanding-the-dependencies-of-a-visual-cpp-application.md) ou seguir as sugestões descritas o [desoluçãodeproblemas](troubleshooting-c-cpp-isolated-applications-and-side-by-side-assemblies.md) seção.
 
 ## <a name="see-also"></a>Consulte também
 
-[Como: Inserir um manifesto em um aplicativo do C/C++](../build/how-to-embed-a-manifest-inside-a-c-cpp-application.md)<br/>
-[Sobre Assemblies particulares](/windows/desktop/SbsCs/about-private-assemblies-)<br/>
-[Ferramenta de manifesto](/windows/desktop/SbsCs/mt-exe)<br/>
-[Noções básicas sobre o Manifest Generation para programas do C/C++](../build/understanding-manifest-generation-for-c-cpp-programs.md)
+[Noções básicas sobre o Manifest Generation para programas do C/C++](understanding-manifest-generation-for-c-cpp-programs.md)
