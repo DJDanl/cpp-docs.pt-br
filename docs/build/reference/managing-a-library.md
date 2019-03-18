@@ -40,12 +40,12 @@ helpviewer_keywords:
 - LIST library manager option
 - /CONVERT library manager option
 ms.assetid: f56a8b85-fbdc-4c09-8d8e-00f0ffe1da53
-ms.openlocfilehash: fb06fdf0298d627f289448930b490fb0660e381d
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 74b8cf198d46f83de327c68ac5f883bd75e5db80
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57419592"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812038"
 ---
 # <a name="managing-a-library"></a>Gerenciando uma biblioteca
 
@@ -64,7 +64,7 @@ Por padrão, LIB nomeia o arquivo de saída usando o nome base do primeiro arqui
 As opções a seguir se aplicam a criação e modificação de uma biblioteca:
 
 **/LIBPATH:** *dir*<br/>
-Substitui o caminho da biblioteca de ambiente. Para obter detalhes, consulte a descrição do LINK [/LIBPATH](../../build/reference/libpath-additional-libpath.md) opção.
+Substitui o caminho da biblioteca de ambiente. Para obter detalhes, consulte a descrição do LINK [/LIBPATH](libpath-additional-libpath.md) opção.
 
 **/LIST**<br/>
 Exibe informações sobre a biblioteca de saída para a saída padrão. A saída pode ser redirecionada para um arquivo. Você pode usar /LIST para determinar o conteúdo de uma biblioteca existente sem modificá-lo.
@@ -73,7 +73,7 @@ Exibe informações sobre a biblioteca de saída para a saída padrão. A saída
 Ao criar uma biblioteca de importação, especifica o nome da DLL para o qual a biblioteca de importação está sendo criada.
 
 **/NODEFAULTLIB**<br/>
-Remove uma ou mais bibliotecas padrão da lista de bibliotecas que busca ao resolver referências externas. Ver [/NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md) para obter mais informações.
+Remove uma ou mais bibliotecas padrão da lista de bibliotecas que busca ao resolver referências externas. Ver [/NODEFAULTLIB](nodefaultlib-ignore-libraries.md) para obter mais informações.
 
 **/ Entrada saída:** *nome de arquivo*<br/>
 Substitui o nome do arquivo de saída padrão. Por padrão, a biblioteca de saída é criada no diretório atual, com o nome base do primeiro arquivo de biblioteca ou objeto na linha de comando e a extensão. lib.
@@ -82,7 +82,7 @@ Substitui o nome do arquivo de saída padrão. Por padrão, a biblioteca de saí
 Omite especificado *objeto* da biblioteca de saída. LIB cria uma biblioteca de saída combinando todos os objetos (arquivos de objeto ou bibliotecas) e, em seguida, excluindo qualquer objeto especificado com /remove.
 
 **/SUBSYSTEM:**{**CONSOLE** &AMP;#124; **EFI_APPLICATION** &AMP;#124; **EFI_BOOT_SERVICE_DRIVER** &AMP;#124; **EFI_ROM** &AMP;#124; **EFI_RUNTIME_DRIVER** &AMP;#124; **NATIVO** &AMP;#124; **POSIX** &AMP;#124; **WINDOWS** &AMP;#124; **WINDOWSCE**} [, N º [. # #]]<br/>
-Informa o sistema operacional como executar um programa criado por meio da vinculação para a biblioteca de saída. Para obter mais informações, consulte a descrição do LINK [/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md) opção.
+Informa o sistema operacional como executar um programa criado por meio da vinculação para a biblioteca de saída. Para obter mais informações, consulte a descrição do LINK [/SUBSYSTEM](subsystem-specify-subsystem.md) opção.
 
 Opções de LIB especificadas na linha de comando não diferenciam maiusculas de minúsculas.
 
@@ -101,4 +101,4 @@ Você pode usar LIB para executar as seguintes tarefas de gerenciamento de bibli
 
 ## <a name="see-also"></a>Consulte também
 
-[Referência de LIB](../../build/reference/lib-reference.md)
+[Referência de LIB](lib-reference.md)
