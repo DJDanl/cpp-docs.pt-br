@@ -10,12 +10,12 @@ helpviewer_keywords:
 - porting to Win32 [C++]
 - Win32 applications [C++], migrating from UNIX
 ms.assetid: 3837e4fe-3f96-4f24-b2a1-7be94718a881
-ms.openlocfilehash: 1cf5660d1ad2f0fdde02837eeffb642c4a74e5ea
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 325cdb86f61f658776c69057022c005c389492d3
+ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57744495"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57813897"
 ---
 # <a name="porting-from-unix-to-win32"></a>Portando de UNIX para Win32
 
@@ -81,4 +81,4 @@ Outra opção que os programadores do UNIX procuram é o subsistema POSIX do Win
 
 [Guia de atualização e portabilidade do Visual C++](visual-cpp-change-history-2003-2015.md)<br/>
 [UNIX](../c-runtime-library/unix.md)<br/>
-[Regras de inferência](../build/inference-rules.md)
+[Regras de inferência](../build/reference/inference-rules.md)

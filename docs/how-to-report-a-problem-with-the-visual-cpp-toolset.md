@@ -4,12 +4,12 @@ ms.date: 06/21/2018
 ms.technology: cpp-ide
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 4b64f79ea5a9566d2ad28216fbc5e736b622fe00
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 50b1005c7734b62941cbda087161d5ec41a0d026
+ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57740250"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57808034"
 ---
 # <a name="how-to-report-a-problem-with-the-visual-c-toolset-or-documentation"></a>Como relatar um problema com o conjunto de ferramentas ou a documentação do Visual C++
 
@@ -43,7 +43,7 @@ Precisamos de informações de versão completas da arquitetura de destino e do 
 
 #### <a name="to-report-the-full-version-of-the-compiler-youre-using"></a>Para relatar a versão completa do compilador que você está usando
 
-1. Abra o **Prompt de Comando do Desenvolvedor** correspondente à arquitetura de versão e à configuração do Visual Studio usada para compilar o projeto. Por exemplo, se você compila usando o Visual Studio de 2017 em x64 para destinos x64, escolha **Prompt de Comando de Ferramentas Nativas do x64 para VS 2017**. Para obter mais informações, consulte [Atalhos de prompt de comando do desenvolvedor](build/building-on-the-command-line.md#developer-command-prompt-shortcuts).
+1. Abra o **Prompt de Comando do Desenvolvedor** correspondente à arquitetura de versão e à configuração do Visual Studio usada para compilar o projeto. Por exemplo, se você compila usando o Visual Studio de 2017 em x64 para destinos x64, escolha **Prompt de Comando de Ferramentas Nativas do x64 para VS 2017**. Para obter mais informações, consulte [Atalhos de prompt de comando do desenvolvedor](build/building-on-the-command-line.md#developer_command_prompt_shortcuts).
 
 1. Na janela do console de prompt de comando do desenvolvedor, insira o comando **cl /Bv**.
 

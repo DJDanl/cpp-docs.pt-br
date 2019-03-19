@@ -5,12 +5,12 @@ helpviewer_keywords:
 - 32-bit code porting
 - upgrading Visual C++ applications, 32-bit code
 ms.assetid: 18cdacaa-4742-43db-9e4c-2d9e73d8cc84
-ms.openlocfilehash: dcbec57c75b4dc6fb72a3b35040e12cab0e7111e
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 8848dca10a75bec6f5ff6251a3af5be8e9a7b6e6
+ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57740867"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57816367"
 ---
 # <a name="upgrading-projects-from-earlier-versions-of-visual-c"></a>Atualizando projetos a partir de versões anteriores do Visual C++
 
@@ -33,9 +33,18 @@ As fontes de dados estão contidas em um projeto de banco de dados separado para
 
 Para obter informações sobre como atualizar as versões de destino do Windows, consulte [Modificando WINVER e _WIN32_WINNT](../porting/modifying-winver-and-win32-winnt.md).
 
+## <a name="in-this-section"></a>Nesta seção
+
+[Atualizar seu código para o CRT Universal](upgrade-your-code-to-the-universal-crt.md)<br/>
+[Modificando WINVER e _WIN32_WINNT](modifying-winver-and-win32-winnt.md)<br/>
+[Corrigir suas dependências em recursos internos de biblioteca](fix-your-dependencies-on-library-internals.md)<br/>
+[Problemas de migração de ponto flutuante](floating-point-migration-issues.md)<br/>
+[Usar direcionamento múltiplo nativo no Visual Studio para compilar projetos antigos](use-native-multi-targeting.md)<br/>
+[Recursos do Visual C++ preteridos na versão prévia do Visual Studio 2019](features-deprecated-in-visual-studio.md)<br/>
+[Alterações no sistema de build](build-system-changes.md)<br/>
+
 ## <a name="see-also"></a>Consulte também
 
-[Alterações no sistema de build](../build/build-system-changes.md)<br/>
 [Novidades do Visual C++ no Visual Studio 2017](../what-s-new-for-visual-cpp-in-visual-studio.md)<br/>
 [Histórico de alterações de 2003 a 2015 do Visual C++](../porting/visual-cpp-change-history-2003-2015.md)<br/>
 [Comportamento não padrão](../cpp/nonstandard-behavior.md)
