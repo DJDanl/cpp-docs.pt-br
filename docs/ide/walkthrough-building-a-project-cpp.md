@@ -6,12 +6,12 @@ helpviewer_keywords:
 - projects [C++], building
 - project building [C++]
 ms.assetid: d459bc03-88ef-48d0-9f9a-82d17f0b6a4d
-ms.openlocfilehash: 1d5dbd8f83f501c3b68bad771089eab8acc6f8aa
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 8aadb6983cc096ff75785c6bab7ace6bd5f0c632
+ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57742492"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57808996"
 ---
 # <a name="walkthrough-building-a-project-c"></a>Passo a passo: Compilando um projeto (C++)
 
@@ -60,4 +60,4 @@ Neste passo a passo, você introduzirá um erro de sintaxe do Visual C++ no cód
 ## <a name="see-also"></a>Consulte também
 
 [Referência da linguagem C++](../cpp/cpp-language-reference.md)<br/>
-[Compilando programas do C/C++](../build/building-c-cpp-programs.md)<br/>
+[Sistemas de Compilação e Projetos](../build/projects-and-build-systems-cpp.md)<br/>
