@@ -1,6 +1,6 @@
 ---
 title: Funções &lt;system_error&gt;
-ms.date: 11/04/2016
+ms.date: 03/15/2019
 f1_keywords:
 - system_error/std::generic_category
 - system_error/std::make_error_code
@@ -12,26 +12,26 @@ helpviewer_keywords:
 - std::make_error_code
 - std::make_error_condition
 - std::system_category
-ms.openlocfilehash: 24890830456e3c1026b02960aa650a43da3b6067
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 78be83af678b553babbf1cde3d96c1507940b611
+ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50554362"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58172901"
 ---
 # <a name="ltsystemerrorgt-functions"></a>Funções &lt;system_error&gt;
 
 ||||
 |-|-|-|
 |[generic_category](#generic_category)|[make_error_code](#make_error_code)|[make_error_condition](#make_error_condition)|
-|[system_category](#system_category)|
+|[system_category](#system_category)|||
 
-## <a name="generic_category"></a>  generic_category
+## <a name="generic_category"></a> generic_category
 
 Representa a categoria de erros genéricos.
 
 ```cpp
-extern const error_category& generic_category();
+const error_category& generic_category() noexcept;
 ```
 
 ### <a name="remarks"></a>Comentários
@@ -43,14 +43,13 @@ O `generic_category` objeto é uma implementação de [error_category](../standa
 Cria um objeto de código de erro.
 
 ```cpp
-error_code make_error_code(generic_errno _Errno);
+error_code make_error_code(std::errc error) noexcept;
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-|Parâmetro|Descrição|
-|---------------|-----------------|
-|*Errno*|O valor de enumeração a ser armazenado no objeto de código de erro.|
+*error*\
+O `std::errc` valor de enumeração para armazenar no objeto de código de erro.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -63,14 +62,13 @@ O objeto de código de erro.
 Cria um objeto de condição de erro.
 
 ```cpp
-error_condition make_error_condition(generic_errno _Errno);
+error_condition make_error_condition(std::errc error) noexcept;
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-|Parâmetro|Descrição|
-|---------------|-----------------|
-|*Errno*|O valor de enumeração a ser armazenado no objeto de condição de erro.|
+*error*\
+O `std::errc` valor de enumeração para armazenar no objeto de código de erro.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -83,7 +81,7 @@ O objeto de condição de erro.
 Representa a categoria de erros causados por estouros de nível inferior do sistema.
 
 ```cpp
-extern const error_category& system_category();
+const error_category& system_category() noexcept;
 ```
 
 ### <a name="remarks"></a>Comentários
@@ -92,4 +90,4 @@ O `system_category` objeto é uma implementação de [error_category](../standar
 
 ## <a name="see-also"></a>Consulte também
 
-[<system_error>](../standard-library/system-error.md)<br/>
+[\<system_error>](../standard-library/system-error.md)<br/>
