@@ -1,18 +1,18 @@
 ---
 title: Objetos de função na Biblioteca Padrão C++
-ms.date: 11/04/2016
+ms.date: 03/15/2019
 helpviewer_keywords:
 - functors
 - C++ Standard Library, functors
 - C++ Standard Library, function objects
 - function objects
 ms.assetid: 85f8a735-2c7b-4f10-9c4d-95c666ec4192
-ms.openlocfilehash: 7af56f52b59b03dfed9e1233473239274a0dcbd8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 310d846285612ad94ec9d66672fcb996557b07e2
+ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437105"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58172953"
 ---
 # <a name="function-objects-in-the-c-standard-library"></a>Objetos de função na Biblioteca Padrão C++
 
@@ -33,9 +33,17 @@ public:
         return a < b;
     }
 };
+
+int main()
+{
+    Functor f;
+    int a = 5;
+    int b = 7;
+    int ans = f(a, b);
+}
 ```
 
-A última linha da função `main` mostra como chamar o objeto de função. Essa chamada é semelhante a uma chamada para uma função, mas na verdade está chamando o operator() do tipo Functor. É dessa semelhança entre chamar um objeto de função e uma função que surgiu o termo objeto de função.
+A última linha da função `main` mostra como chamar o objeto de função. Essa chamada é semelhante uma chamada para uma função, mas é, na verdade, chamada Operator () do tipo Functor. É dessa semelhança entre chamar um objeto de função e uma função que surgiu o termo objeto de função.
 
 ## <a name="function-objects-and-containers"></a>Contêineres e objetos de função
 
@@ -48,7 +56,7 @@ template <class Key,
 class set
 ```
 
-O segundo argumento de modelo é o objeto de função `less`. Esse objeto de função retorna **verdadeira** se o primeiro parâmetro passado para ele for menor que o segundo parâmetro passado. Como alguns contêineres classificam seus elementos, o contêiner precisa de uma forma de comparar dois elementos e isso é feito usando o objeto de função. Você pode definir seus próprios critérios de classificação para contêineres criando um objeto de função e especificando-o na lista de modelos para o contêiner.
+O segundo argumento de modelo é o objeto de função `less`. Esse objeto de função retorna **verdadeira** se o primeiro parâmetro for menor que o segundo parâmetro. Como alguns contêineres classificam seus elementos, o contêiner precisa de uma maneira de comparar dois elementos. A comparação é feita usando o objeto de função. Você pode definir seus próprios critérios de classificação para contêineres criando um objeto de função e especificando-o na lista de modelos para o contêiner.
 
 ## <a name="function-objects-and-algorithms"></a>Algoritmos e objetos de função
 
