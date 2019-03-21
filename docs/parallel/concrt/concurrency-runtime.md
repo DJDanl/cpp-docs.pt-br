@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ConcRT (see Concurrency Runtime)
 - Concurrency Runtime
 ms.assetid: 874bc58f-8dce-483e-a3a1-4dcc9e52ed2c
-ms.openlocfilehash: 245984d9702c997f16601bf5e2a9bd049ae5fed9
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 6f7b70dcbee639bdd44a195709bddde9e06dee21
+ms.sourcegitcommit: 90817d9d78fbaed8ffacde63f3add334842e596f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57258327"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58278542"
 ---
 # <a name="concurrency-runtime"></a>Tempo de Execução de Simultaneidade
 
@@ -99,7 +99,6 @@ Para obter a documentação de referência, consulte [referência](../../paralle
 |||
 |-|-|
 |[Padrões de programação assíncrona e dicas no Hilo (aplicativos da Windows Store usando C++ e XAML)](https://msdn.microsoft.com/library/windows/apps/jj160321.aspx)|Saiba como usamos o tempo de execução de simultaneidade para implementar operações assíncronas no Hilo, um aplicativo de tempo de execução do Windows usando C++ e XAML.|
-|[Exemplos de código para o tempo de execução de simultaneidade e a biblioteca de padrões paralela no Visual Studio 2010](http://go.microsoft.com/fwlink/p/?linkid=183875)|Fornece exemplos de aplicativos e utilitários que demonstram o tempo de execução de simultaneidade.|
 |[Programação paralela no blog de código nativo](http://go.microsoft.com/fwlink/p/?linkid=183873)|Fornece artigos de blog detalhadas adicionais sobre programação paralela em tempo de execução de simultaneidade.|
 |[Computação paralela no Fórum do C++ e o código nativo](http://go.microsoft.com/fwlink/p/?linkid=183874)|Permite que você participe de discussões da comunidade sobre o tempo de execução de simultaneidade.|
 |[Programação paralela](/dotnet/standard/parallel-programming/index)|Ensina sobre o modelo de programação paralelo que está disponível no .NET Framework.|
