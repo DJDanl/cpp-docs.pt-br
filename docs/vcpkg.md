@@ -3,15 +3,15 @@ title: vcpkg-- um gerenciador de pacotes do C++ para Windows, Linux e MacOS
 description: O vcpkg é um gerenciador de pacote de linha de comando que simplifica bastante a aquisição e instalação de bibliotecas de C++ de software livre no Windows.
 author: mikeblome
 ms.author: mblome
-ms.date: 02/22/2019
+ms.date: 03/18/2019
 ms.technology: cpp-ide
 ms.assetid: f50d459a-e18f-4b4e-814b-913e444cedd6
-ms.openlocfilehash: dc07086f271c9789629b335b58758b88e8e3d4e8
-ms.sourcegitcommit: fbc05d8581913bca6eff664e5ecfcda8e471b8b1
+ms.openlocfilehash: 2ca1b88f492d96f8a08d296cab7f35f3b72409c9
+ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56809705"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58172875"
 ---
 # <a name="vcpkg-a-c-package-manager-for-windows-linux-and-macos"></a>vcpkg: Um gerenciador de pacotes do C++ para Windows, Linux e MacOS
 
@@ -19,7 +19,7 @@ O vcpkg é um gerenciador de pacotes de linha de comando que simplifica bastante
 
 ## <a name="simple-yet-flexible"></a>Simples e flexível
 
-Com um único comando, você pode baixar fontes e compilar uma biblioteca. O próprio vcpkg é um projeto de software livre disponível no GitHub. Você pode personalizar seus clones particulares de qualquer forma que desejar. Por exemplo, você pode especificar diferentes bibliotecas ou diferentes versões de bibliotecas das que são encontradas no catálogo público. Você pode ter vários clones de vcpkg em um único computador, cada um gerando conjuntos personalizados de bibliotecas e/ou opções de compilação, etc. Cada clone é um ambiente x-copiável autocontido, com sua própria cópia do vcpkg.exe que funciona apenas em sua própria hierarquia. O vcpkg não é adicionado a nenhuma variável de ambiente e não tem nenhuma dependência no Registro do Windows ou no Visual Studio.
+Com um único comando, você pode baixar fontes e compilar uma biblioteca. O próprio vcpkg é um projeto de software livre disponível no GitHub. Você pode personalizar seus clones particulares de qualquer forma que desejar. Por exemplo, você pode especificar diferentes bibliotecas ou diferentes versões de bibliotecas das que são encontradas no catálogo público. Você pode ter vários clones de vcpkg em um único computador, cada um gerando conjuntos personalizados de bibliotecas e/ou opções de compilação, etc. Cada clone é um ambiente autocontido, com sua própria cópia do vcpkg.exe que funciona apenas em sua própria hierarquia. O vcpkg não é adicionado a nenhuma variável de ambiente e não tem nenhuma dependência no Registro do Windows ou no Visual Studio.
 
 ## <a name="sources-not-binaries"></a>Fontes não binárias
 

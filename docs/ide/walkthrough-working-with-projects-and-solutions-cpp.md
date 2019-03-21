@@ -1,5 +1,5 @@
 ---
-title: 'Instruções passo a passo: trabalhando com projetos e soluções (C++)'
+title: 'Passo a passo: Como trabalhar com Projetos e Soluções (C++)'
 ms.date: 09/14/2018
 helpviewer_keywords:
 - solutions [C++]
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - projects [C++]
 - solutions [C++], about solutions
 ms.assetid: 93a3f290-e294-46e3-876e-e3084d9ae833
-ms.openlocfilehash: 968e4981a28d646b75335ee380635fd8f8e863e3
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 9408938b670d8130305f2e1c1258fc6fcb9875bb
+ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519225"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57820059"
 ---
-# <a name="walkthrough-working-with-projects-and-solutions-c"></a>Instruções passo a passo: trabalhando com projetos e soluções (C++)
+# <a name="walkthrough-working-with-projects-and-solutions-c"></a>Passo a passo: Como trabalhar com Projetos e Soluções (C++)
 
 Veja como criar um projeto em C++ no Visual Studio, adicionar código e, em seguida, compilar e executar o projeto. O projeto neste passo a passo é um programa que acompanha quantas pessoas estão jogando jogos de cartas diferentes.
 
@@ -22,7 +22,7 @@ No Visual Studio, o trabalho é organizado em projetos e soluções. Uma soluç�
 
 ## <a name="before-you-start"></a>Antes de começar
 
-Para concluir este passo a passo, você precisará do Visual Studio 2017 versão 15.3 ou posterior. Caso precise de uma cópia, acesse aqui um breve guia: [Instalar o suporte ao C++ no Visual Studio](../build/vscpp-step-0-installation.md). Se você ainda não fez isso, siga as próximas etapas após a instalação até o tutorial "Olá, Mundo", para garantir que o Visual C++ está instalado corretamente e que tudo funciona.
+Para concluir este passo a passo, você precisará do Visual Studio 2017 versão 15.3 ou posterior. Se você precisar de uma cópia, aqui está um breve guia: [Instalar o suporte ao C++ no Visual Studio](../build/vscpp-step-0-installation.md). Se você ainda não fez isso, siga as próximas etapas após a instalação até o tutorial "Olá, Mundo", para garantir que o Visual C++ está instalado corretamente e que tudo funciona.
 
 Será útil se você entender os conceitos básicos da linguagem C++ e saber a função de um compilador, de um vinculador e de um depurador. O tutorial também pressupõe que você esteja familiarizado com o Windows e como usar menus, caixas de diálogo,
 
@@ -83,11 +83,13 @@ Esta parte do passo a passo mostra como adicionar uma classe ao projeto. Quando 
 
       Modifique o construtor para que ele use um parâmetro do tipo `int`, chamado *players*.
 
-      <!--[!code-cpp[NVC_Walkthrough_Working_With_Projects#101](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_2.h)]--> `Cardgame(int players);`
+      <!--[!code-cpp[NVC_Walkthrough_Working_With_Projects#101](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_2.h)]-->
+      `Cardgame(int players);`
 
    - Após o destruidor padrão, adicione uma declaração embutida para uma função de membro `static int` chamada *GetParticipants* que não usa parâmetros e retorna o valor de `totalParticipants`.
 
-      <!--[!code-cpp[NVC_Walkthrough_Working_With_Projects#102](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_3.h)]--> `static int GetParticipants() { return totalParticipants; }`
+      <!--[!code-cpp[NVC_Walkthrough_Working_With_Projects#102](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_3.h)]-->
+      `static int GetParticipants() { return totalParticipants; }`
 
    O arquivo Cardgame.h deve ter a aparência do código abaixo depois de alterado:
 
@@ -215,10 +217,10 @@ Parabéns! Você compilou com êxito uma solução e um projeto de aplicativo. C
 
 ## <a name="next-steps"></a>Próximas etapas
 
-**Anterior:** [usando o Visual Studio IDE para desenvolvimento do C++ da área de trabalho](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md)<br/>
-**Próximo:** [passo a passo: Compilando um projeto (C++)](../ide/walkthrough-building-a-project-cpp.md)<br/>
+**Anterior:** [Usando o IDE do Visual Studio para desenvolvimento de área de trabalho do C++](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md)<br/>
+**Avançar:** [Passo a passo: Compilação de um projeto (C++)](../ide/walkthrough-building-a-project-cpp.md)<br/>
 
 ## <a name="see-also"></a>Consulte também
 
 [Referência da linguagem C++](../cpp/cpp-language-reference.md)<br/>
-[Compilando programas do C/C++](../build/building-c-cpp-programs.md)<br/>
+[Sistemas de Compilação e Projetos](../build/projects-and-build-systems-cpp.md)<br/>
