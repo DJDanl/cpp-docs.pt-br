@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /clr compiler option [C++], double thunking
 - interoperability [C++], double thunking
 ms.assetid: a85090b2-dc3c-498a-b40c-340db229dd6f
-ms.openlocfilehash: 984a20d701b159820a94483fe9d3743f015b71f6
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: f34af20ed3dd2c48659bdbf7794c443920dbb4e9
+ms.sourcegitcommit: 90817d9d78fbaed8ffacde63f3add334842e596f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57741968"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58278392"
 ---
 # <a name="double-thunking-c"></a>Conversão dupla (C++)
 
@@ -27,7 +27,7 @@ Uma resolução é dizer ao compilador para não gerar um ponto de entrada nativ
 
 Da mesma forma, se você exportar ([dllexport, dllimport](../cpp/dllexport-dllimport.md)) uma função gerenciada, um ponto de entrada nativo é gerado e qualquer função que importa e chama essa função chamará o ponto de entrada nativo. Para evitar a dupla nessa situação, não use semântica de importação/exportação nativo; Basta referenciar os metadados por meio `#using` (consulte [# diretiva using](../preprocessor/hash-using-directive-cpp.md)).
 
-O compilador foi atualizado para reduzir a dupla desnecessária. Por exemplo, qualquer função com um tipo gerenciado na assinatura (incluindo o tipo de retorno) implicitamente será marcada como `__clrcall`. Para obter mais informações sobre a eliminação de duas conversões, consulte [ https://msdn.microsoft.com/msdnmag/issues/05/01/COptimizations/default.aspx ](https://msdn.microsoft.com/msdnmag/issues/05/01/COptimizations/default.aspx).
+O compilador foi atualizado para reduzir a dupla desnecessária. Por exemplo, qualquer função com um tipo gerenciado na assinatura (incluindo o tipo de retorno) implicitamente será marcada como `__clrcall`.
 
 ## <a name="example"></a>Exemplo
 
