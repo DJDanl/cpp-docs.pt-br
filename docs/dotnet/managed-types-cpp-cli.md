@@ -17,12 +17,12 @@ helpviewer_keywords:
 - exceptions, diagnosing odd behavior
 - compatibility, between assemblies
 ms.assetid: 679b8ed3-d966-4a0c-b627-2a3f3ec96b74
-ms.openlocfilehash: c61f3fdd434a1b746c024b1a98d1d71f04df7e5b
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: b91918d526d83d4cf47436d02b7c67038576bafb
+ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57746911"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58356173"
 ---
 # <a name="managed-types-ccli"></a>Tipos gerenciados (C++/CLI)
 
@@ -46,19 +46,21 @@ A tabela a seguir mostra as palavras-chave para tipos internos do Visual C++, qu
 
 |Tipo de Visual C++|Tipo do .NET Framework|
 |-----------------------|-------------------------|
-|**bool**|**System.Boolean**|
-|**assinado char** (consulte [/J](../build/reference/j-default-char-type-is-unsigned.md) para obter mais informações)|**System.SByte**|
-|**unsigned char**|**System.Byte**|
-|**wchar_t**|**System.Char**|
-|**duplo** e **longo duplo**|**System.Double**|
-|**float**|**System.Single**|
-|**int**, **assinado int**, **longo**, e **assinado longa**|**System.Int32**|
-|**int sem sinal** e **unsigned long**|**System.UInt32**|
-|**__int64** e **assinado __int64**|**System.Int64**|
-|**unsigned __int64**|**System.UInt64**|
-|**curto** e **1&gt;signed**|**System.Int16**|
-|**unsigned short**|**System.UInt16**|
-|**void**|**System.Void**|
+|**void**|<xref:System.Void?displayProperty=nameWithType>|
+|**bool**|<xref:System.Boolean?displayProperty=nameWithType>|
+|**signed char** |<xref:System.SByte?displayProperty=nameWithType>|
+|**unsigned char**|<xref:System.Byte?displayProperty=nameWithType>|
+|**wchar_t**|<xref:System.Char?displayProperty=nameWithType>|
+|**curto** e **1&gt;signed**|<xref:System.Int16?displayProperty=nameWithType>|
+|**unsigned short**|<xref:System.UInt16?displayProperty=nameWithType>|
+|**int**, **assinado int**, **longo**, e **assinado longa**|<xref:System.Int32?displayProperty=nameWithType>|
+|**int sem sinal** e **unsigned long**|<xref:System.UInt32?displayProperty=nameWithType>|
+|**__int64** e **assinado __int64**|<xref:System.Int64?displayProperty=nameWithType>|
+|**unsigned __int64**|<xref:System.UInt64?displayProperty=nameWithType>|
+|**float**|<xref:System.Single?displayProperty=nameWithType>|
+|**duplo** e **longo duplo**|<xref:System.Double?displayProperty=nameWithType>|
+
+Para obter mais informações sobre a opção de compilador padrão para com ou sem sinal **char**, consulte [/J (o tipo char padrão é sem sinal)](../build/reference/j-default-char-type-is-unsigned.md).
 
 ## <a name="version_issues"></a> Problemas de versão para tipos de valor aninhados em tipos nativos
 

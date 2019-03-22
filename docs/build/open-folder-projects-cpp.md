@@ -1,15 +1,15 @@
 ---
 title: Suporte para Open Folder para sistemas de build do C++ no Visual Studio
-ms.date: 01/21/2019
+ms.date: 03/21/2019
 helpviewer_keywords:
 - Open Folder Projects in Visual C++
 ms.assetid: abd1985e-3717-4338-9e80-869db5435175
-ms.openlocfilehash: a7e352d7978ba5c973d779224639006fa984e4f0
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 2dedd56759b6bb49260221e22218da6f4300a970
+ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57824384"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58356082"
 ---
 # <a name="open-folder-projects-for-c"></a>Projetos Open Folder para C++
 
@@ -49,7 +49,7 @@ O comportamento do IntelliSense e da navegação depende parcialmente da configu
       "includePath": [ "include" ],
       "defines": [ "_DEBUG" ],
       "compilerSwitches": "/std:c++17",
-      "intelliSenseMode": "msvc-x64",
+      "intelliSenseMode": "windows-msvc-x64",
       "forcedInclude": [ "pch.h" ],
       "undefines": []
     }
@@ -64,7 +64,7 @@ Você pode automatizar os scripts de compilação, ou quaisquer outras operaçõ
 
 ![Configurar Tarefas do recurso Abrir Pasta](media/open-folder-config-tasks.png)
 
-Isso cria (ou abre) o arquivo `tasks.vs.json` na pasta .vs criada pelo Visual Studio na pasta raiz do projeto. Defina qualquer tarefa arbitrária nesse arquivo e, em seguida, invoque-a no menu de contexto do **Gerenciador de Soluções**. O exemplo a seguir mostra um arquivo tasks.vs.json que define uma única tarefa. `taskName` define o nome exibido no menu de contexto. `appliesTo` define em quais arquivos o comando pode ser executado. A propriedade `command` se refere à variável de ambiente COMSPEC, que identifica o caminho para o console (cmd.exe no Windows). Referencie também variáveis de ambiente declaradas em CppProperties.json ou CMakeSettings.json. A propriedade `args` especifica a linha de comando a ser invocada. A macro `${file}` recupera o arquivo selecionado no **Gerenciador de Soluções**. O exemplo a seguir exibirá o nome do arquivo .cpp atualmente selecionado.
+Isso cria (ou abre) o **Tasks** arquivo na pasta. VS, o que o Visual Studio cria na pasta raiz do projeto. Defina qualquer tarefa arbitrária nesse arquivo e, em seguida, invoque-a no menu de contexto do **Gerenciador de Soluções**. O exemplo a seguir mostra um arquivo tasks.vs.json que define uma única tarefa. `taskName` define o nome exibido no menu de contexto. `appliesTo` define em quais arquivos o comando pode ser executado. A propriedade `command` se refere à variável de ambiente COMSPEC, que identifica o caminho para o console (cmd.exe no Windows). Referencie também variáveis de ambiente declaradas em CppProperties.json ou CMakeSettings.json. A propriedade `args` especifica a linha de comando a ser invocada. A macro `${file}` recupera o arquivo selecionado no **Gerenciador de Soluções**. O exemplo a seguir exibirá o nome do arquivo .cpp atualmente selecionado.
 
 ```json
 {
@@ -87,7 +87,7 @@ Para obter mais informações, confira [Referência de esquema de Tasks.vs.json]
 
 ### <a name="configure-debugging-parameters-with-launchvsjson"></a>Configurar parâmetros de depuração com launch.vs.json
 
-Para personalizar os argumentos de linha de comando do programa, clique com o botão direito do mouse no executável no **Gerenciador de Soluções** e selecione **Configurações de Depuração e de Inicialização**. Isso abrirá um arquivo `launch.vs.json` existente ou, se não houver nenhum, ele criará um arquivo pré-populado com as informações sobre o programa selecionado.
+Para personalizar os argumentos de linha de comando do programa, clique com o botão direito do mouse no executável no **Gerenciador de Soluções** e selecione **Configurações de Depuração e de Inicialização**. Isso abrirá uma existente **Launch** arquivo, ou se não houver nenhum, ele criará um novo arquivo pré-preenchida com as informações sobre o programa que você selecionou.
 
 Para especificar argumentos adicionais, basta adicioná-los na matriz JSON `args`, conforme mostrado no seguinte exemplo:
 

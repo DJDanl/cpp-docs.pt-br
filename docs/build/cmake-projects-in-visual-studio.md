@@ -4,12 +4,12 @@ ms.date: 03/05/2019
 helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
-ms.openlocfilehash: b055a1e3ca1d43cc0a1633401c1a08a3d54c1a31
-ms.sourcegitcommit: 90817d9d78fbaed8ffacde63f3add334842e596f
+ms.openlocfilehash: 84511c0712fffcacc1f90d4bde808620e0a0ab0f
+ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58278444"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58356135"
 ---
 # <a name="cmake-projects-in-visual-studio"></a>Projetos do CMake no Visual Studio
 
@@ -17,7 +17,7 @@ O CMake é uma ferramenta multiplataforma de software livre para definir os proc
 
 No Visual Studio 2015, os usuários do Visual Studio podem usar um [gerador do CMake](https://cmake.org/cmake/help/latest/manual/cmake-generators.7.html) para gerar arquivos de projeto do MSBuild, que o IDE então consome para IntelliSense, navegação e compilação.
 
-O Visual Studio 2017 apresenta suporte avançado para CMake, incluindo [projetos do CMake multiplataforma](../linux/cmake-linux-project.md). O componente **Ferramentas do Visual C++ para CMake** usa o recurso **Abrir Pasta** para permitir o consumo pelo IDE de arquivos de projeto do CMake (como CMakeLists.txt) diretamente para as finalidades do IntelliSense e de navegação. Há suporte para geradores Ninja e Visual Studio. Se você usar um gerador do Visual Studio, um arquivo de projeto temporário será gerado e passado para msbuild.exe, mas nunca será carregado para as finalidades do IntelliSense ou de navegação. Você pode importar um cache de CMake existente; o Visual Studio automaticamente extrai variáveis personalizadas e cria um arquivo `CMakeSettings.json` pré-preenchido. 
+O Visual Studio 2017 apresenta suporte avançado para CMake, incluindo [projetos do CMake multiplataforma](../linux/cmake-linux-project.md). O componente **Ferramentas do Visual C++ para CMake** usa o recurso **Abrir Pasta** para permitir o consumo pelo IDE de arquivos de projeto do CMake (como CMakeLists.txt) diretamente para as finalidades do IntelliSense e de navegação. Há suporte para geradores Ninja e Visual Studio. Se você usar um gerador do Visual Studio, um arquivo de projeto temporário será gerado e passado para msbuild.exe, mas nunca será carregado para as finalidades do IntelliSense ou de navegação. Você pode importar um cache de CMake existente; Visual Studio automaticamente extrai variáveis personalizadas e cria um pré-populada **Cmakesettings** arquivo. 
 
 ## <a name="installation"></a>Instalação
 
@@ -47,18 +47,18 @@ Você também pode exibir seus projetos logicamente organizados pelos destinos. 
 
 ![Botão de exibição de destinos do CMake](media/cmake-targets-view.png)
 
-O Visual Studio usa um arquivo chamado `CMakeSettings.json` para armazenar as variáveis de ambiente ou as opções de linha de comando para Cmake.exe. `CMakeSettings.json` também permite que você defina e armazene várias configurações de build do CMake e alterne convenientemente entre elas no IDE. 
+O Visual Studio usa um arquivo chamado **Cmakesettings** para armazenar as variáveis de ambiente ou as opções de linha de comando para Cmake.exe. **Cmakesettings** também permite que você para definir e armazenar CMake várias configurações de build e alternar convenientemente entre elas no IDE. 
 
-Caso contrário, use o `CMakeLists.txt` exatamente como faria em qualquer projeto do CMake para especificar arquivos de origem, localizar bibliotecas, definir opções compilador e vinculador e especificar outras informações relacionadas ao sistema de build.
+Caso contrário, use o **cmakelists. txt** exatamente como você faria em qualquer projeto de CMake para especificar arquivos de origem, encontrar bibliotecas, defina as opções compilador e vinculador e especifique outro sistema de build informações relacionadas.
 
-Se você precisar passar argumentos para um executável no tempo de depuração, poderá usar outro arquivo chamado `launch.vs.json`. Em alguns cenários, o Visual Studio gerará automaticamente esses arquivos e você pode editá-los manualmente. Você também pode criar o arquivo por conta própria.
+Se você precisar passar argumentos para um executável no tempo de depuração, você pode usar outro arquivo chamado **Launch**. Em alguns cenários, o Visual Studio gerará automaticamente esses arquivos e você pode editá-los manualmente. Você também pode criar o arquivo por conta própria.
 
 > [!NOTE]
-> Para outros tipos de projetos de Open Folder, dois arquivos adicionais do JSON são usados: `CppProperties.json` e `tasks.vs.json`. Nenhum deles é relevante para projetos do CMake.
+> Para outros tipos de projetos de pasta aberta, dois arquivos adicionais do JSON são usados: **Cppproperties** e **Tasks**. Nenhum deles é relevante para projetos do CMake.
 
 ## <a name="import-an-existing-cache"></a>Importar um cache existente
 
-Quando você importa um arquivo CMakeCache.txt existente, o Visual Studio extrai as variáveis personalizadas automaticamente e cria um arquivo [ `CMakeSettings.json`](#cmake_settings) pré-preenchido baseado nelas. O cache original não é modificado de forma alguma e ainda pode ser usado na linha de comando ou com qualquer ferramenta ou IDE que foi usado para gerá-lo. O novo arquivo `CMakeSettings.json` é colocado ao lado da raiz do projeto CMakeLists.txt. O Visual Studio gera um novo cache com base no arquivo de configurações. Você pode substituir a geração automática de cache na caixa de diálogo **Ferramentas | Opções | CMake | Geral**.
+Quando você importa um arquivo existente de cmakecache. txt, o Visual Studio automaticamente extrai variáveis personalizadas e cria um previamente preenchido [ **Cmakesettings** ](#cmake_settings) arquivo com base neles. O cache original não é modificado de forma alguma e ainda pode ser usado na linha de comando ou com qualquer ferramenta ou IDE que foi usado para gerá-lo. O novo **Cmakesettings** arquivo é colocado ao lado da raiz do projeto cmakelists. txt. O Visual Studio gera um novo cache com base no arquivo de configurações. Você pode substituir a geração automática de cache na caixa de diálogo **Ferramentas | Opções | CMake | Geral**.
 
 Nem tudo no cache é importado.  Propriedades, como o gerador e o local dos compiladores, são substituídas pelos padrões conhecidos por funcionar bem com o IDE.
 
@@ -88,7 +88,7 @@ Para compilar um projeto do CMake, você tem estas opções:
 
 ![Comando de menu de build do CMake](media/cmake-build-menu.png "Menu de comando de build do CMake")
 
-Você pode personalizar configurações de build, variáveis de ambiente, argumentos de linha de comando e outras configurações sem modificar o arquivo CMakeLists.txt usando o arquivo `CMakeSettings.json`. Para obter mais informações, confira [Personalizar configurações do CMake](customize-cmake-settings.md).
+Você pode personalizar configurações de build, variáveis de ambiente, os argumentos de linha de comando e outras configurações sem modificar o arquivo Cmakelists txt usando o **Cmakesettings** arquivo. Para obter mais informações, confira [Personalizar configurações do CMake](customize-cmake-settings.md).
 
 Como se esperaria, os resultados do build são mostrados na **Janela de Saída** e na **Lista de Erros**.
 
@@ -104,7 +104,7 @@ Para depurar um projeto do CMake, escolha a configuração desejada e pressione 
 
 Os comandos **Executar** ou **F5** primeiro compilam o projeto se as alterações foram feitas desde o build anterior.
 
-Você pode personalizar uma sessão de depuração do CMake configurando propriedades no arquivo `launch.vs.json`. Para obter mais informações, confira [Configurar sessões de depuração do CMake](configure-cmake-debugging-sessions.md).
+Você pode personalizar uma sessão de depuração definindo propriedades de CMake a **Launch** arquivo. Para obter mais informações, confira [Configurar sessões de depuração do CMake](configure-cmake-debugging-sessions.md).
 
 
 ## <a name="editing-cmakeliststxt-files"></a>Editando arquivos CMakeLists.txt
@@ -120,13 +120,13 @@ Assim que você salva o arquivo, a etapa de configuração é executada novament
 
 ## <a name="cmake-configure-step"></a>Etapa de configuração do CMake
 
-Quando alterações significativas forem feitas aos arquivos `CMakeSettings.json` ou CMakeLists.txt, o Visual Studio executará novamente a etapa de configuração do CMake de modo automático. Se a etapa de configuração é concluída sem erros, as informações coletadas ficam disponíveis nos serviços de linguagem e no C++ IntelliSense e também nas operações de build e de depuração.
+Quando as alterações significativas são feitas para o **Cmakesettings** ou arquivos cmakelists. txt, Visual Studio automaticamente executa novamente o CMake configurar etapa. Se a etapa de configuração é concluída sem erros, as informações coletadas ficam disponíveis nos serviços de linguagem e no C++ IntelliSense e também nas operações de build e de depuração.
 
 Quando vários projetos do CMake usam o mesmo nome de configuração do CMake (por exemplo, x86-Debug), todos eles são configurados e compilados (em sua própria pasta raiz de build) quando essa configuração é selecionada. Depure os destinos de todos os projetos do CMake que participam dessa configuração do CMake.
 
    ![Item de menu Somente Build do CMake](media/cmake-build-only.png "CMake Build Only menu item")
 
-Para limitar os builds e as sessões de depuração a um subconjunto dos projetos no workspace, crie uma configuração com um nome exclusivo no arquivo `CMakeSettings.json` e aplique-a apenas a esses projetos. Quando essa configuração é selecionada, os comandos de build, de depuração e do IntelliSense são habilitados apenas para esses projetos especificados.
+Para limitar os builds e depurar sessões para um subconjunto dos projetos no espaço de trabalho, criar uma nova configuração com um nome exclusivo na **Cmakesettings** de arquivo e aplicá-lo para apenas esses projetos. Quando essa configuração é selecionada, os comandos de build, de depuração e do IntelliSense são habilitados apenas para esses projetos especificados.
 
 ## <a name="troubleshooting-cmake-cache-errors"></a>Solução de problemas de erros do cache do CMake
 

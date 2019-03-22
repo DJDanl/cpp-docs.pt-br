@@ -1,12 +1,12 @@
 ---
 title: Visão geral das convenções de ABI ARM64
-ms.date: 07/11/2018
-ms.openlocfilehash: 537f8cf5bb8db61854bea7f4624e3dd3176c6a59
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.date: 03/22/2019
+ms.openlocfilehash: 5dddc26285606b771a3939be19dff5b9ad53f3c7
+ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816536"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58356186"
 ---
 # <a name="overview-of-arm64-abi-conventions"></a>Visão geral das convenções de ABI ARM64
 
@@ -191,7 +191,7 @@ Para retornar-por-valor que não pode ser passado por meio de registros, o chama
 
 Seguindo a ABI Cllique ARM, a pilha deve permanecer 16 bytes alinhado em todos os momentos. AArch64 contém um recurso de hardware que gera o alinhamento de pilha falhas sempre que uma carga de SP relativo ou store é feita e SP é 16 bytes não alinhadas. Windows é executado com esse recurso habilitado em todos os momentos.
 
-Funções que alocam 4 mil ou mais que vale a pena de pilha devem garantir que cada página antes da página final será tocada em ordem, não garantindo assim a nenhum código poderá "saltar sobre" as páginas de proteção que o Windows usa para expandir a pilha. Normalmente, isso é feito `__chkstk` auxiliar, que tem uma convenção de chamada personalizada que passa a alocação da pilha total dividida por 16 em x8.
+Funções que alocam 4 mil ou mais que vale a pena de pilha devem garantir que cada página antes da página final será tocada em ordem, não garantindo assim a nenhum código poderá "saltar sobre" as páginas de proteção que o Windows usa para expandir a pilha. Normalmente, isso é feito `__chkstk` auxiliar, que tem uma convenção de chamada personalizada que passa a alocação da pilha total dividida por 16 em x15.
 
 ## <a name="red-zone"></a>Zona vermelha
 
