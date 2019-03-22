@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CDBVariant [MFC], m_pstringA
 - CDBVariant [MFC], m_pstringW
 ms.assetid: de23609c-c560-4b24-bd6b-9d8903fd5b49
-ms.openlocfilehash: 41ea20bcddc53142773d474af41021e9c71af1aa
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 48a2e08d056e3bfef8a06b80ae6607947923cbcb
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57289852"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328942"
 ---
 # <a name="cdbvariant-class"></a>Classe CDBVariant
 
@@ -53,13 +53,13 @@ class CDBVariant
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
 |[CDBVariant::CDBVariant](#cdbvariant)|Constrói um objeto `CDBVariant`.|
 
-### <a name="public-methods"></a>Métodos Públicos
+### <a name="public-methods"></a>Métodos públicos
 
 |Nome|Descrição|
 |----------|-----------------|
@@ -216,7 +216,7 @@ Armazena um ponteiro para um objeto do tipo TIMESTAMP_STRUCT.
 
 O `m_pdate` membro de dados pertence a uma união. Antes de acessar `m_pdate`, verifique primeiro o valor da [CDBVariant::m_dwType](#m_dwtype). Se `m_dwType` é definido como DBVT_DATE, em seguida, `m_pdate` contém um ponteiro válido; caso contrário, acessando `m_pdate` produzirá resultados não confiáveis.
 
-Para obter mais informações sobre o tipo de dados TIMESTAMP_STRUCT, consulte o tópico [tipos de dados C](/previous-versions/windows/desktop/ms714556) no Apêndice D do *referência do programador de ODBC* no SDK do Windows.
+Para obter mais informações sobre o tipo de dados TIMESTAMP_STRUCT, consulte o tópico [tipos de dados C](/sql/odbc/reference/appendixes/c-data-types) no Apêndice D do *referência do programador de ODBC* no SDK do Windows.
 
 ##  <a name="m_pstring"></a>  CDBVariant::m_pstring
 

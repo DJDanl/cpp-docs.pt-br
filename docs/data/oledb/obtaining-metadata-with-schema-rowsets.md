@@ -6,12 +6,12 @@ helpviewer_keywords:
 - OLE DB consumer templates, getting provider metadata
 - metadata, getting (OLE DB Templates)
 ms.assetid: 6b448461-82fb-4acf-816b-3cbb0ca1d186
-ms.openlocfilehash: 64502c19b55d42ab0ed7f6c2b8b1cf503e7795c8
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 9e61507a187f7625e7e90e2a0e3a1ce404573e29
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57422658"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328864"
 ---
 # <a name="obtaining-metadata-with-schema-rowsets"></a>Obtendo metadados com conjuntos de linhas de esquema
 
@@ -52,7 +52,7 @@ CRestrictions<CAccessor<CColumnsInfo>
 
 O [CRestrictions](../../data/oledb/crestrictions-class.md) classe fornece o suporte de restrição. Depois de criar uma instância do conjunto de linhas de esquema, chame [crestrictions:: Open](../../data/oledb/crestrictions-open.md). Esse método retorna um conjunto de resultados com base nas restrições que você especificar.
 
-Para especificar restrições, consulte [apêndice b: Conjuntos de linhas de esquema](/previous-versions/windows/desktop/ms712921(v=vs.85)) e consultar o conjunto de linhas que você está usando. Por exemplo, `CColumns` corresponde do [conjunto de linhas COLUMNS](/previous-versions/windows/desktop/ms723052(v=vs.85)\(v%3dvs.85\)); esse tópico lista as colunas de restrição no conjunto de linhas de colunas: TABLE_CATALOG, TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME. Você deve seguir nessa ordem no especificando suas restrições.
+Para especificar restrições, consulte [apêndice b: Conjuntos de linhas de esquema](/previous-versions/windows/desktop/ms712921(v=vs.85)) e consultar o conjunto de linhas que você está usando. Por exemplo, `CColumns` corresponde do [conjunto de linhas COLUMNS](/previous-versions/windows/desktop/ms723052(v=vs.85)); esse tópico lista as colunas de restrição no conjunto de linhas de colunas: TABLE_CATALOG, TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME. Você deve seguir nessa ordem no especificando suas restrições.
 
 Portanto, por exemplo, se você quiser restringir por nome de tabela, TABLE_NAME é a terceira coluna de restrição e, em seguida, chame `Open`, especificando o nome da tabela desejada como o terceiro parâmetro de restrição, conforme mostrado no exemplo a seguir.
 

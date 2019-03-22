@@ -3,7 +3,6 @@ title: Avisos C4200 a C4399
 ms.date: 11/17/2017
 f1_keywords:
 - C4203
-- C4274
 - C4277
 - C4279
 - C4298
@@ -12,7 +11,6 @@ f1_keywords:
 - C4303
 - C4314
 - C4315
-- C4316
 - C4317
 - C4318
 - C4321
@@ -22,22 +20,20 @@ f1_keywords:
 - C4328
 - C4330
 - C4338
-- C4343
 - C4352
 - C4362
 - C4367
 - C4370
-- C4373
 - C4380
 - C4387
 - C4388
 ms.assetid: 170248db-7bf2-4823-92d9-437b04c1290d
-ms.openlocfilehash: 9cca32973ead1d7d88e37c4745491c8d5f181e0b
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: d79c9c12664f9920f03490b8cb53ec671d3d78a3
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57810504"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328259"
 ---
 # <a name="compiler-warnings-c4200-through-c4399"></a>Avisos C4200 a C4399
 
@@ -103,7 +99,7 @@ Os artigos nesta seção da documentação explicam um subconjunto das mensagens
 |[Aviso do compilador (nível 1) C4269](../../error-messages/compiler-warnings/compiler-warning-level-1-c4269.md)|'*identificador*': 'const' automática de dados inicializada com o construtor de padrão gerado pelo compilador produz resultados não confiáveis|
 |[Aviso do compilador (nível 1) C4272](../../error-messages/compiler-warnings/compiler-warning-level-1-c4272.md)|'*função*': está marcado como __declspec(dllimport); deve especificar a convenção de chamada nativa ao importar uma função.|
 |[Aviso do compilador (nível 1) C4273](../../error-messages/compiler-warnings/compiler-warning-level-1-c4273.md)|'*função*': vínculo de dll inconsistente|
-|Aviso do compilador (nível 1) C4274|#ident ignored; see documentation for #pragma comment(exestr, 'string')|
+|[Aviso do compilador (nível 1) C4274](compiler-warning-level-1-c4274.md)|#ident ignored; see documentation for #pragma comment(exestr, 'string')|
 |[Aviso do compilador (nível 2) C4275](../../error-messages/compiler-warnings/compiler-warning-level-2-c4275.md)|não dll-interface '*classkey*' '*identifier1*'usado como base para dll-interface'*classkey*' '*identifier2*'|
 |[Aviso do compilador (nível 1) C4276](../../error-messages/compiler-warnings/compiler-warning-level-1-c4276.md)|'*função*': nenhum protótipo fornecido; assumido sem parâmetros|
 |Aviso do compilador (nível 1) C4277|item importado '*classname*::*membro*' existe como membro de dados e o membro da função; membro de dados ignorado|
@@ -140,7 +136,7 @@ Os artigos nesta seção da documentação explicam um subconjunto das mensagens
 |[Aviso do compilador (nível 1) C4313](../../error-messages/compiler-warnings/compiler-warning-level-1-c4313.md)|'*função*': '*format_specifier*'no formato de cadeia de caracteres está em conflito com o argumento'*argument_number*'do tipo'*tipo*'|
 |C4314 de aviso do compilador|esperado parâmetro de pragma como '32' ou '64'|
 |Aviso do compilador (nível 4) C4315|'*classname*': ponteiro 'this' para membro '*membro*'pode não estar alinhado'*alinhamento*' conforme o esperado pelo construtor|
-|Aviso do compilador (nível 3) C4316|'*identificador*': objeto alocado no heap pode não estar alinhado '*alinhamento*'|
+|[Aviso do compilador (nível 3) C4316](compiler-warning-level-3-c4316.md)|'*identificador*': objeto alocado no heap pode não estar alinhado '*alinhamento*'|
 |Aviso do compilador (nível 1) C4317|'*printf_family*': não há argumentos suficientes passado para a cadeia de caracteres de formato|
 |C4318 de aviso do compilador|passando constante zero como o comprimento para memset|
 |[Aviso do compilador (nível 1) C4319](../../error-messages/compiler-warnings/compiler-warning-level-1-c4319.md)|'*operador*': estendendo o zero '*type1*'para'*type2*' de tamanho maior|
@@ -163,7 +159,7 @@ Os artigos nesta seção da documentação explicam um subconjunto das mensagens
 |[Aviso do compilador (nível 4) C4339](../../error-messages/compiler-warnings/compiler-warning-level-4-c4339.md)|'*tipo*': uso do tipo indefinido detectado em ' WinRT&#124;CLR' meta-data - uso desse tipo pode levar a uma exceção de tempo de execução|
 |[Aviso do compilador (nível 1) C4340](../../error-messages/compiler-warnings/compiler-warning-level-1-c4340.md)|'*valor*': valor convertido de positivo como valor negativo|
 |[Aviso do compilador (nível 1) C4342](../../error-messages/compiler-warnings/compiler-warning-level-1-c4342.md)|alteração de comportamento: '*função*' chamado, mas um operador de membro foi chamado em versões anteriores|
-|Aviso do compilador (nível 4) C4343|#pragma optimize("g",off) substitui opção /Og|
+|[Aviso do compilador (nível 4) C4343](compiler-warning-level-4-c4343.md)|#pragma optimize("g",off) substitui opção /Og|
 |[Aviso do compilador (nível 1) C4344](../../error-messages/compiler-warnings/compiler-warning-level-1-c4344.md)|alteração de comportamento: uso dos resultados de argumentos de modelo explícitos na chamada para '*função*'|
 |[Aviso do compilador (nível 1) C4346](../../error-messages/compiler-warnings/compiler-warning-level-1-c4346.md)|'*nome*': nome dependente não é um tipo|
 |[Aviso do compilador (nível 1) C4348](../../error-messages/compiler-warnings/compiler-warning-level-1-c4348.md)|'*tipo*': redefinição do parâmetro padrão: parâmetro '*parameter_number*'|
@@ -184,7 +180,7 @@ Os artigos nesta seção da documentação explicam um subconjunto das mensagens
 |[Aviso do compilador (nível 1) C4369](../../error-messages/compiler-warnings/compiler-warning-level-1-c4369.md)|'*enumerador*': valor do enumerador '*valor*'não pode ser representado como'*tipo*', valor é'*novo_valor*'|
 |Aviso C4370 do compilador|'*classname*': layout da classe foi alterado de uma versão anterior do compilador devido a empacotamento melhor|
 |[Aviso do compilador (nível 3) C4371](../../error-messages/compiler-warnings/c4371.md)|'*classname*': layout da classe pode ter alterado de uma versão anterior do compilador devido a empacotamento melhor do membro '*membro*'|
-|Aviso do compilador (nível 3) C4373|'*derived_class*::*função*': substituições de função virtual*base_class*::*função*', as versões anteriores do compilador não substituíam quando parâmetros diferiam apenas em qualificadores const/volatile|
+|[Aviso do compilador (nível 3) C4373](compiler-warning-level-3-c4373.md)|'*derived_class*::*função*': substituições de função virtual*base_class*::*função*', as versões anteriores do compilador não substituíam quando parâmetros diferiam apenas em qualificadores const/volatile|
 |[Aviso do compilador (nível 1) C4374](../../error-messages/compiler-warnings/compiler-warning-level-1-c4374.md)|'*função1*': método de interface não será implementado por método não virtual '*função2*'|
 |[Aviso do compilador (nível 1) C4375](../../error-messages/compiler-warnings/compiler-warning-level-1-c4375.md)|método não public '*method2*'não substitui'*method2*'|
 |[Aviso do compilador (nível 1) C4376](../../error-messages/compiler-warnings/compiler-warning-level-1-c4376.md)|especificador de acesso '*old_specifier*:' não é mais suportado: use '*new_specifier*:' em vez disso|
@@ -205,7 +201,7 @@ Os artigos nesta seção da documentação explicam um subconjunto das mensagens
 |[Aviso do compilador (nível 1) C4393](../../error-messages/compiler-warnings/compiler-warning-level-1-c4393.md)|'*variável*': const não tem nenhum efeito '*literal*' membro de dados; ignorado|
 |[Aviso do compilador C4394](../../error-messages/compiler-warnings/compiler-warning-c4394.md)|'*função*': símbolo per-appdomain não deve ser marcado com __declspec('dllexport')|
 |[Aviso do compilador (nível 1) C4395](../../error-messages/compiler-warnings/compiler-warning-level-1-c4395.md)|'*função*': função de membro será invocada em uma cópia do membro de dados initonly '*membro*'|
-|Aviso do compilador (nível 2) C4396|'*função*': o especificador embutido não pode ser usado quando uma declaração friend se refere a uma especialização de um modelo de função|
+|[Aviso do compilador (nível 2) C4396](compiler-warning-level-2-c4396.md)|'*função*': o especificador embutido não pode ser usado quando uma declaração friend se refere a uma especialização de um modelo de função|
 |[Aviso do compilador (nível 1) C4397](../../error-messages/compiler-warnings/compiler-warning-level-1-c4397.md)|DefaultCharSetAttribute é ignorado|
 |[Aviso do compilador (nível 3) C4398](../../error-messages/compiler-warnings/compiler-warning-level-3-c4398.md)|'*variável*': objeto global de cada processo poderão não funcionar corretamente com múltiplos appdomains; considere o uso de __declspec(appdomain)|
 |[Aviso do compilador (nível 1) C4399](../../error-messages/compiler-warnings/compiler-warning-level-1-c4399.md)|'*símbolo*': símbolo per-process não deve ser marcado com __declspec('dllimport') quando compilado com /clr: pure|

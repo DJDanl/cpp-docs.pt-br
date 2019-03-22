@@ -1,6 +1,6 @@
 ---
-title: Macros comuns para comandos e propriedades de build
-ms.date: 05/29/2018
+title: Macros comuns para comandos do MSBuild e propriedades
+ms.date: 03/20/2019
 f1_keywords:
 - VC.Project.VCCLCompilerTool.GenerateXMLDocumentationFiles
 - VC.Project.VCCLCompilerTool.XMLDocumentationFileName
@@ -90,26 +90,29 @@ helpviewer_keywords:
 - builds [C++], macros
 - $(FrameworkDir) macro
 - $(PlatformName) macro
+- $(PlatformShortName) macro
 - SolutionPath macro $(SolutionPath)
 ms.assetid: 239bd708-2ea9-4687-b264-043f1febf98b
-ms.openlocfilehash: 669114691bc89c1e8136e07a949be57cda3d71b9
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 46fdd5e356ded96388a154ff459ef4cc3c02267f
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57824270"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58327672"
 ---
-# <a name="common-macros-for-build-commands-and-properties"></a>Macros comuns para comandos e propriedades de build
+# <a name="common-macros-for-msbuild-commands-and-properties"></a>Macros comuns para comandos do MSBuild e propriedades
 
-Dependendo das opções de instalação, o Visual Studio pode disponibilizar centenas de macros para você. Elas correspondem às propriedades do MSBuild definidas por padrão, em arquivos .props ou .targets ou nas configurações de projeto. Use essas macros em qualquer lugar na caixa de diálogo **Páginas de Propriedades** de um projeto no qual cadeias de caracteres são aceitas. Essas macros não diferenciam maiúsculas de minúsculas.
+Dependendo das suas opções de instalação, Visual Studio pode tornar centenas de macros disponíveis para você em um projeto do Visual Studio (com base em MSBuild). Elas correspondem às propriedades do MSBuild definidas por padrão, em arquivos .props ou .targets ou nas configurações de projeto. Use essas macros em qualquer lugar na caixa de diálogo **Páginas de Propriedades** de um projeto no qual cadeias de caracteres são aceitas. Essas macros não diferenciam maiúsculas de minúsculas.
 
 ## <a name="view-the-current-properties-and-macros"></a>Exibir as macros e as propriedades atuais
 
-Para exibir as macros atualmente disponíveis, em qualquer página de propriedades da caixa de diálogo **Páginas de Propriedades**, escolha a seta suspensa no final de uma linha de propriedade. Se a opção **Editar** estiver disponível, escolha-a e, em seguida, na caixa de diálogo de edição, escolha o botão **Macros**. O conjunto atual de propriedades e macros visíveis para o Visual Studio é listado junto com o valor atual de cada uma. Para obter mais informações, consulte o **valores Specifying User-Defined** seção [referência de página de propriedades do projeto C++](property-pages-visual-cpp.md).
+Para exibir todas as macros disponíveis no momento, o **páginas de propriedades** caixa de diálogo, em **diretórios VC + +**, escolha a seta suspensa no final de uma linha de propriedade. Clique em **edite** e, em seguida, na caixa de diálogo de edição, escolha o **Macros** botão. O conjunto atual de propriedades e macros visíveis para o Visual Studio é listado junto com o valor atual de cada uma. Para obter mais informações, consulte o **valores Specifying User-Defined** seção [referência de página de propriedades do projeto C++](property-pages-visual-cpp.md).
+
+![Botão de macros do VC + +](../media/vcppdir_libdir_macros.png "menu Macros")
 
 ## <a name="list-of-common-macros"></a>Lista de macros comuns
 
-Esta tabela descreve um subconjunto geralmente usado das macros disponíveis. Essa lista está longe de ser completa. Para obter detalhes sobre como as definições de propriedade do MSBuild são criadas e usadas como macros em arquivos .props, .targets e .vcxproj, confira [Propriedades do MSBuild](/visualstudio/msbuild/msbuild-properties).
+Esta tabela descreve um subconjunto usado com frequência das macros disponíveis; Há muitos mais não listados aqui. Vá para o **Macros** caixa de diálogo para ver todas as propriedades e seus valores atuais em seu projeto. Para obter detalhes sobre como as definições de propriedade do MSBuild são criadas e usadas como macros em arquivos .props, .targets e .vcxproj, confira [Propriedades do MSBuild](/visualstudio/msbuild/msbuild-properties).
 
 |Macro|Descrição|
 |-----------|-----------------|
@@ -122,6 +125,7 @@ Esta tabela descreve um subconjunto geralmente usado das macros disponíveis. Es
 |**$(IntDir)**|Caminho para o diretório especificado para arquivos intermediários. Se esse for um caminho relativo, os arquivos intermediários acessarão esse caminho acrescentado ao diretório do projeto. Esse caminho deve ter uma barra à direita. Isso é resolvido para o valor da propriedade **Diretório Intermediário**. Não use **$(OutDir)** para definir essa propriedade.|
 |**$(OutDir)**|Caminho para o diretório de arquivo de saída. Se esse for um caminho relativo, os arquivos de saída acessarão esse caminho acrescentado ao diretório do projeto. Esse caminho deve ter uma barra à direita. Isso é resolvido para o valor da propriedade **Diretório de Saída**. Não use **$(IntDir)** para definir essa propriedade.|
 |**$(Platform)**|O nome da plataforma do projeto atual, por exemplo, "Win32".|
+|**$(PlatformShortName)**|O nome curto de arquitetura atual, por exemplo, "x86" ou "x64".|
 |**$(ProjectDir)**|O diretório do projeto (definido como unidade + caminho); inclui a barra invertida à direita '\\'.|
 |**$(ProjectExt)**|A extensão de arquivo do projeto. Inclui o “.” antes da extensão de arquivo.|
 |**$(ProjectFileName)**|O nome de arquivo do projeto (definido como nome base + extensão de arquivo).|

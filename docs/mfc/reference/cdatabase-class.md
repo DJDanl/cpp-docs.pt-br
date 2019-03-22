@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CDatabase [MFC], SetQueryTimeout
 - CDatabase [MFC], m_hdbc
 ms.assetid: bd0de70a-e3c3-4441-bcaa-bbf434426ca8
-ms.openlocfilehash: 0e523b2a145254cd9b7adf2b066605a679349f6c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: ebc36d82af9bfe12ab30a86214e58610b5eaab95
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57273434"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328994"
 ---
 # <a name="cdatabase-class"></a>Classe CDatabase
 
@@ -69,7 +69,7 @@ class CDatabase : public CObject
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
@@ -192,7 +192,7 @@ void Cancel();
 
 ### <a name="remarks"></a>Comentários
 
-Observe que as classes MFC ODBC não for mais usam o processamento assíncrono; para executar uma operação assíncrona, você deve chamar diretamente a função da API do ODBC [SQLSetConnectOption](/previous-versions/windows/desktop/ms713564). Para obter mais informações, consulte [execução assíncrona](/previous-versions/windows/desktop/ms713563) no SDK do Windows.
+Observe que as classes MFC ODBC não for mais usam o processamento assíncrono; para executar uma operação assíncrona, você deve chamar diretamente a função da API do ODBC [SQLSetConnectOption](/sql/odbc/reference/syntax/sqlsetconnectoption-function). Para obter mais informações, consulte [execução assíncrona](/sql/odbc/reference/develop-app/asynchronous-execution).
 
 ##  <a name="cantransact"></a>  CDatabase::CanTransact
 

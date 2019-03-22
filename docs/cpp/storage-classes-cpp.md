@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - storage classes [C++], basic concepts
 ms.assetid: f10e1c56-6249-4eb6-b08f-09ab1eef1992
-ms.openlocfilehash: 31f9ba4e16fa1216db4fb66c7b7faeca333f2c43
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e50e5da5ea24d59131f123bb0c772897f9a30218
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50520296"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58329020"
 ---
 # <a name="storage-classes-c"></a>Classes de armazenamento (C++)
 
@@ -24,7 +24,7 @@ Um *classe de armazenamento* no contexto do C++ declarações de variável é um
 
 1. O [mutável](../cpp/mutable-data-members-cpp.md) palavra-chave pode ser considerada um especificador de classe de armazenamento. No entanto, ela só está disponível na lista de membros de uma definição de classe.
 
-1. **Visual C++ 2010 e posterior:** as **automática** palavra-chave não é mais um especificador de classe de armazenamento do C++ e o **registrar** palavra-chave é preterida. **Visual Studio 2017 versão 15.7 e posterior:** (disponível com [/std: c + + 17](../build/reference/std-specify-language-standard-version.md)): O **registrar** palavra-chave é removida da linguagem C++.
+1. **Visual C++ 2010 e posterior:** O **automática** palavra-chave não é mais um especificador de classe de armazenamento do C++ e o **registrar** palavra-chave é preterida. **Visual Studio 2017 versão 15.7 e posterior:** (disponível com [/std: c + + 17](../build/reference/std-specify-language-standard-version.md)): O **registrar** palavra-chave é removida da linguagem C++.
 
 ```cpp
    register int val; // warning C5033: 'register' is no longer a supported storage class
@@ -167,7 +167,7 @@ Objetos e as variáveis declaradas como **extern** declarar um objeto que é def
 
 Declaração de **const** variáveis com o **extern** força a classe de armazenamento a variável para ter vinculação externa. Uma inicialização de um **extern const** variável é permitida na unidade de tradução de definição. As inicializações das unidades de tradução diferentes da unidade de tradução de definição geram resultados indefinidos. Para obter mais informações, consulte [usando extern para especificar ligação](../cpp/using-extern-to-specify-linkage.md)
 
-O [/ZC: externconstexpr](../build/reference/zc-externconstexpr.md) opção de compilador faz o compilador aplique [vinculação externa]() para as variáveis declaradas usando `extern constexpr`. Em versões anteriores do Visual Studio e, por padrão ou se **/Zc:externConstexpr-** for especificado, vinculação interna para o Visual Studio aplicará **constexpr** mesmo variáveis a **extern** palavra-chave é usada. O **/ZC: externconstexpr** opção está disponível a partir do Visual Studio 2017 15.6 de atualização. e é desativado por padrão. O /permissive-option não habilita /ZC: externconstexpr.
+O [/ZC: externconstexpr](../build/reference/zc-externconstexpr.md) opção de compilador faz o compilador aplique [vinculação externa](../c-language/external-linkage.md) para as variáveis declaradas usando `extern constexpr`. Em versões anteriores do Visual Studio e, por padrão ou se **/Zc:externConstexpr-** for especificado, vinculação interna para o Visual Studio aplicará **constexpr** mesmo variáveis a **extern** palavra-chave é usada. O **/ZC: externconstexpr** opção está disponível a partir do Visual Studio 2017 15.6 de atualização. e é desativado por padrão. O /permissive-option não habilita /ZC: externconstexpr.
 
 O código a seguir mostra duas **extern** declarações, `DefinedElsewhere` (que se refere a um nome definido em uma unidade de tradução diferente) e `DefinedHere` (que se refere a um nome definido em um escopo delimitador):
 
@@ -219,7 +219,7 @@ Coisas a observar sobre o `thread_local` especificador:
 
 No Windows, `thread_local` é funcionalmente equivalente à [__declspec(thread)](../cpp/thread.md) exceto que **__declspec(thread)** pode ser aplicado a uma definição de tipo e é válido no código C. Sempre que possível, use `thread_local` porque ele faz parte do C++ padrão e, portanto, é mais portátil.
 
-##  <a name="register"></a>  Registre-se
+##  <a name="register"></a>  register
 
 **Visual Studio 2017 versão 15.3 e posterior** (disponível com [/std: c + + 17](../build/reference/std-specify-language-standard-version.md)): O **registrar** palavra-chave não é uma classe de armazenamento com suporte. A palavra-chave é preservada no padrão para uso futuro.
 

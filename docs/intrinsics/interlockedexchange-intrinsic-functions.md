@@ -44,12 +44,12 @@ helpviewer_keywords:
 - _InterlockedExchange intrinsic
 - _InterlockedExchange8_nf
 ms.assetid: be2f232a-6301-462a-a92b-fcdeb8b0f209
-ms.openlocfilehash: ecf69b1e910dab9824131f26d8db1eb5615d6e18
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: bccf9f46a886a622c493485818601044afff232d
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627170"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328513"
 ---
 # <a name="interlockedexchange-intrinsic-functions"></a>Funções intrínsecas _InterlockedExchange
 
@@ -164,7 +164,7 @@ Retorna o valor inicial apontado por `Target`.
 
 ## <a name="remarks"></a>Comentários
 
-`_InterlockedExchange` fornece suporte intrínseco ao compilador para o SDK do Windows Win32 [InterlockedExchange](/windows/desktop/api/winbase/nf-winbase-interlockedexchange) função.
+`_InterlockedExchange` fornece suporte intrínseco ao compilador para o SDK do Windows Win32 [InterlockedExchange](/windows/desktop/api/winnt/nf-winnt-interlockedexchange) função.
 
 Há diversas variações em `_InterlockedExchange` que têm base no tipo de dados que envolvem e se a semântica acquire ou release é usada.
 

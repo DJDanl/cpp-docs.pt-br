@@ -23,12 +23,12 @@ helpviewer_keywords:
 - GetFileVersionInfo
 - version information
 ms.assetid: 772e6f19-f765-4cec-9521-0ad3eeb99f9b
-ms.openlocfilehash: 8382371acfd423f8c6864e816b0357e3ef11718e
-ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
+ms.openlocfilehash: 7cfb2b5426a65298c01c61541020a0f30b673f9c
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57210972"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328812"
 ---
 # <a name="version-information-editor-c"></a>Editor de informações de versão (C++)
 
@@ -60,7 +60,7 @@ Você pode classificar a sequência de informações do bloco de cadeia de carac
 
 ### <a name="to-add-version-information-for-another-language-new-version-info-block"></a>Para adicionar informações de versão para outro idioma (novo bloco de informações de versão)
 
-1. Abrir um recurso de informações de versão clicando duas vezes no [exibição de recurso](../windows/resource-view-window.md).
+1. Abrir um recurso de informações de versão clicando duas vezes no [exibição de recurso](how-to-create-a-resource-script-file.md#create-resources).
 
 1. Clique dentro da tabela de informações de versão e escolha **novo bloco de informações de versão**.
 
@@ -70,7 +70,7 @@ Você pode classificar a sequência de informações do bloco de cadeia de carac
 
 ### <a name="to-delete-a-version-information-block"></a>Para excluir um bloco de informações de versão
 
-1. Abra o recurso de informações de versão clicando duas vezes em seu ícone no [exibição de recurso](../windows/resource-view-window.md).
+1. Abra o recurso de informações de versão clicando duas vezes em seu ícone no [exibição de recurso](how-to-create-a-resource-script-file.md#create-resources).
 
 1. Clique com botão direito do cabeçalho de bloco que deseja excluir e escolha **Excluir Bloco de informações de versão**.
 

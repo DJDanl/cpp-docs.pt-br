@@ -238,12 +238,12 @@ helpviewer_keywords:
 - Update method
 - UpdateAll method
 ms.assetid: b0228a90-b8dd-47cc-b397-8d4c15c1e7f4
-ms.openlocfilehash: cb79bfe7cf0a30e0ff4ed2a4a6860bc3042983ee
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 4a24dada2f1211138449e65a8865810a46230970
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57416534"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58329007"
 ---
 # <a name="crowset-class"></a>Classe CRowset
 
@@ -275,7 +275,7 @@ Uma classe de acessador. O padrão é `CAccessorBase`.
 |[Fechar](#close)|Libera linhas e atual `IRowset` interface.|
 |[Compare](#compare)|Compara dois indicadores usando [IRowsetLocate::Compare](/previous-versions/windows/desktop/ms709539(v=vs.85)).|
 |[CRowset](#crowset)|Cria um novo `CRowset` do objeto e (opcionalmente) associa a um `IRowset` interface fornecida como um parâmetro.|
-|[Excluir](#delete)|Exclui linhas do conjunto de linhas usando [IRowsetChange:DeleteRows](/previous-versions/windows/desktop/ms724362(v=vs.85)(v%3dvs.85)).|
+|[Excluir](#delete)|Exclui linhas do conjunto de linhas usando [IRowsetChange:DeleteRows](/previous-versions/windows/desktop/ms724362(v=vs.85)).|
 |[FindNextRow](#findnextrow)|Localiza a próxima linha correspondente após o indicador especificado.|
 |[GetApproximatePosition](#getapproximateposition)|Retorna a posição aproximada de uma linha correspondente a um indicador.|
 |[GetData](#getdata)|Recupera dados da cópia do conjunto de linhas da linha.|
@@ -386,7 +386,7 @@ CRowset(IRowset* pRowset);
 
 ## <a name="delete"></a> CRowset::Delete
 
-Chamadas [IRowsetChange:: DeleteRows](/previous-versions/windows/desktop/ms724362(v=vs.85)(v%3dvs.85)) para excluir a linha atual do conjunto de linhas.
+Chamadas [IRowsetChange:: DeleteRows](/previous-versions/windows/desktop/ms724362(v=vs.85)) para excluir a linha atual do conjunto de linhas.
 
 ### <a name="syntax"></a>Sintaxe
 

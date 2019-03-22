@@ -3,12 +3,12 @@ title: 'Como: Usar winmdidl.exe e midlrt.exe para criar arquivos. h de metadados
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 4be8ba11-c223-44ad-9256-7e1edae9a7bc
-ms.openlocfilehash: b81f6901e60f27ada27f14d7dbc7c10fa3faec34
-ms.sourcegitcommit: 360b55e89e5954f494e52b1cf989fbaceda06f1c
+ms.openlocfilehash: b9016f05b82e3eb04474d370bd069e8008de5278
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54335451"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328708"
 ---
 # <a name="how-to-use-winmdidlexe-and-midlrtexe-to-create-h-files-from-windows-metadata"></a>Como: Usar winmdidl.exe e midlrt.exe para criar arquivos. h de metadados do windows
 
@@ -18,7 +18,7 @@ Você pode usar essas ferramentas em dois cenários principais:
 
 - Criando arquivos de cabeçalho e IDL personalizado para que um aplicativo C++ gravado usando a biblioteca de modelos de tempo de execução do Windows (WRL) pode consumir um componente de tempo de execução do Windows personalizado.
 
-- Gerando arquivos de proxy e stub para tipos de evento definido pelo usuário em um componente de tempo de execução do Windows. Para obter mais informações, consulte [eventos personalizados e acessadores de evento nos componentes de tempo de execução do Windows](/uwp/winrt-components/custom-events-and-event-accessors-in-windows-runtime-components).
+- Gerando arquivos de proxy e stub para tipos de evento definido pelo usuário em um componente de tempo de execução do Windows. Para obter mais informações, consulte [eventos personalizados e acessadores de evento nos componentes de tempo de execução do Windows](/windows/uwp/winrt-components/custom-events-and-event-accessors-in-windows-runtime-components).
 
 Essas ferramentas são necessárias apenas para analisar arquivos. winmd personalizado. Os arquivos. idl e. h para componentes do sistema operacional Windows já são gerados para você. Por padrão no Windows 8.1, estão localizados em \Program arquivos (x86) \Windows Kits\8.1\Include\winrt\\.
 
@@ -75,4 +75,4 @@ Em seguida, o midlrt é executado no arquivo IDL gerado. Observe que o **metadat
 
 O arquivo de saída de uma operação de winmdidl tem o mesmo nome como o arquivo de entrada, mas tem a extensão de nome de arquivo. idl.
 
-Se você estiver desenvolvendo um componente de tempo de execução do Windows que será acessado a partir do WRL, você pode especificar winmdidl.exe e midlrt.exe para ser executado como etapas pós-build para que os arquivos. idl e. h são gerados em cada compilação. Por exemplo, consulte [gerando eventos em componentes de tempo de execução do Windows](/uwp/winrt-components/raising-events-in-windows-runtime-components).
+Se você estiver desenvolvendo um componente de tempo de execução do Windows que será acessado a partir do WRL, você pode especificar winmdidl.exe e midlrt.exe para ser executado como etapas pós-build para que os arquivos. idl e. h são gerados em cada compilação. Por exemplo, consulte [gerando eventos em componentes de tempo de execução do Windows](/windows/uwp/winrt-components/raising-events-in-windows-runtime-components).

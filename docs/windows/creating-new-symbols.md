@@ -19,12 +19,12 @@ helpviewer_keywords:
 - View Use button
 - resource editors [C++], resource symbols
 ms.assetid: 35168d31-3af6-4ecd-9362-3707d47b53f3
-ms.openlocfilehash: 91092b29d7265904e69b093310daa72b673d8745
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: c2e2f67a6547b05fca198a54b13776a1d3fafecf
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57563375"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328916"
 ---
 # <a name="how-to-create-symbols-c"></a>Como: Crie símbolos (C++)
 
@@ -65,7 +65,7 @@ A caixa de diálogo contém as seguintes propriedades:
 
 ## <a name="to-view-resource-symbols"></a>Para exibir os símbolos de recurso
 
-No [exibição de recurso](/windows/how-to-create-a-resource-script-file#create-resources), clique com botão direito seu *. rc* arquivo e selecione **símbolos de recurso** para exibir uma tabela de símbolos de recurso no **símbolos de recurso**caixa de diálogo.
+No [exibição de recurso](how-to-create-a-resource-script-file.md#create-resources), clique com botão direito seu *. rc* arquivo e selecione **símbolos de recurso** para exibir uma tabela de símbolos de recurso no **símbolos de recurso**caixa de diálogo.
 
 > [!NOTE]
 > Para ver os símbolos predefinidos, verifique as **Mostrar símbolos somente leitura** caixa de seleção.
