@@ -32,12 +32,12 @@ helpviewer_keywords:
 - strings [C++], formatting
 - strings [C++], special characters
 ms.assetid: f71ab8de-3068-4e29-8e28-5a33d18dd416
-ms.openlocfilehash: bea53c33ef723cf8c98d0c542d24389e730c092a
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 6c855986d98f265f876f2acdd085eea46e057c93
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57563297"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328890"
 ---
 # <a name="string-editor-c"></a>Editor de cadeia de caracteres (C++)
 
@@ -56,7 +56,7 @@ O **Editor de cadeia de caracteres** permite que você:
 
 ### <a name="to-find-a-string-resource-in-the-string-table"></a>Para localizar um recurso de cadeia de caracteres na tabela de cadeia de caracteres
 
-1. Abra a tabela de cadeia de caracteres clicando duas vezes em seu ícone no [exibição de recurso](/windows/how-to-create-a-resource-script-file#create-resources).
+1. Abra a tabela de cadeia de caracteres clicando duas vezes em seu ícone no [exibição de recurso](how-to-create-a-resource-script-file.md#create-resources).
 
 1. Vá ao menu **edite** > **localizar e substituir** e escolha **localizar**.
 
@@ -79,7 +79,7 @@ O **Editor de cadeia de caracteres** torna-se de que você não use uma ID que j
 
 #### <a name="to-add-a-string-table-entry"></a>Para adicionar uma entrada de tabela de cadeia de caracteres
 
-1. Abra a tabela de cadeia de caracteres clicando duas vezes em seu ícone no [exibição de recurso](/windows/how-to-create-a-resource-script-file#create-resources).
+1. Abra a tabela de cadeia de caracteres clicando duas vezes em seu ícone no [exibição de recurso](how-to-create-a-resource-script-file.md#create-resources).
 
 1. Clique dentro da tabela de cadeia de caracteres e escolha **nova cadeia de caracteres**.
 
@@ -124,7 +124,7 @@ Você pode usar a edição in-loco para alterar o **identificação**, **valor**
 
 #### <a name="to-change-a-string-or-its-identifier"></a>Para alterar uma cadeia de caracteres ou seu identificador
 
-1. Abra a tabela de cadeia de caracteres clicando duas vezes em seu ícone no [exibição de recurso](/windows/how-to-create-a-resource-script-file#create-resources).
+1. Abra a tabela de cadeia de caracteres clicando duas vezes em seu ícone no [exibição de recurso](how-to-create-a-resource-script-file.md#create-resources).
 
 1. Selecione a cadeia de caracteres que você deseja editar e clique duas vezes o **identificação**, **valor**, ou **legenda** coluna, em seguida, você pode:
 
@@ -136,7 +136,7 @@ Você pode usar a edição in-loco para alterar o **identificação**, **valor**
 
 #### <a name="to-change-the-caption-property-of-multiple-string-resources"></a>Para alterar a propriedade caption de vários recursos de cadeia de caracteres
 
-1. Abra a tabela de cadeia de caracteres clicando duas vezes em seu ícone no [exibição de recurso](/windows/how-to-create-a-resource-script-file#create-resources).
+1. Abra a tabela de cadeia de caracteres clicando duas vezes em seu ícone no [exibição de recurso](how-to-create-a-resource-script-file.md#create-resources).
 
 1. Selecione as cadeias de caracteres que você deseja alterar, mantendo pressionada a **Ctrl** da chave conforme você seleciona cada uma delas.
 
@@ -146,7 +146,7 @@ Você pode usar a edição in-loco para alterar o **identificação**, **valor**
 
 ### <a name="to-add-formatting-or-special-characters-to-a-string-resource"></a>Para adicionar formatação ou caracteres especiais a um recurso de cadeia de caracteres
 
-1. Abra a tabela de cadeia de caracteres clicando duas vezes em seu ícone no [exibição de recurso](/windows/how-to-create-a-resource-script-file#create-resources).
+1. Abra a tabela de cadeia de caracteres clicando duas vezes em seu ícone no [exibição de recurso](how-to-create-a-resource-script-file.md#create-resources).
 
 1. Selecione a cadeia de caracteres que você deseja modificar.
 

@@ -42,12 +42,12 @@ helpviewer_keywords:
 - Image editor [C++], grid settings
 - grid settings, Image editor
 ms.assetid: 586d2b8b-0348-4883-a85d-1ff0ddbf14dd
-ms.openlocfilehash: 73fd4a8996bcfbaaf6fdd4018e524b66913d11cd
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 22fe458a72d970bb09687a53232f94b171e14a45
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57563076"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328422"
 ---
 # <a name="image-editor-for-icons-c"></a>Editor de imagens para ícones (C++)
 
@@ -60,7 +60,7 @@ Recursos gráficos são as imagens que você define para seu aplicativo. Você p
 
 Você também pode usar o **Editor de imagens** e o [Editor binário](binary-editor.md) para trabalhar com arquivos de recursos em projetos gerenciados. Todos os recursos gerenciados que você deseja editar devem ser recursos vinculados. Os editores de recursos do Visual Studio não oferecem suporte a edição de recursos inseridos.
 
-Além de criar novos recursos gráficos, você pode [importar imagens existentes](/windows/how-to-copy-resources#import-and-export-resources) para edição e, em seguida, adicioná-los ao seu projeto. Você também pode abrir e editar imagens que não fazem parte de um projeto para [edição de imagem autônoma](../windows/editing-an-image-outside-of-a-project-image-editor-for-icons.md).
+Além de criar novos recursos gráficos, você pode [importar imagens existentes](../windows/how-to-copy-resources.md#import-and-export-resources) para edição e, em seguida, adicioná-los ao seu projeto. Você também pode abrir e editar imagens que não fazem parte de um projeto para [edição de imagem autônoma](../windows/editing-an-image-outside-of-a-project-image-editor-for-icons.md).
 
 Para obter informações sobre o **Editor de imagens**, consulte como [criar um ícone ou outra imagem](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md), [editar uma imagem](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md), [usar uma ferramenta de desenho](../windows/using-a-drawing-tool-image-editor-for-icons.md), [Trabalhar com cores](../windows/working-with-color-image-editor-for-icons.md), e [teclas de aceleração](../windows/accelerator-keys-image-editor-for-icons.md).
 
@@ -151,7 +151,7 @@ Para acessar essa caixa de diálogo, selecione a **Font** botão na **ferramenta
 
 Aqui está um exemplo de como adicionar texto a um ícone em um aplicativo do Windows e manipular a fonte do texto.
 
-1. Crie um aplicativo de formulários do Windows do C++. Para obter detalhes, consulte [criando um projeto de aplicativo do Windows](/previous-versions/visualstudio/visual-studio-2010/42wc9kk5). Uma *app.ico* arquivo é adicionado ao seu projeto por padrão.
+1. Crie um aplicativo de formulários do Windows do C++. Para obter detalhes, confira [Como: Criar aplicativos do Windows Forms](/previous-versions/visualstudio/visual-studio-2008/s69bf10x(v%3dvs.90)). Uma *app.ico* arquivo é adicionado ao seu projeto por padrão.
 
 1. Na **Gerenciador de soluções**, clique duas vezes no arquivo *app.ico*. O **Editor de imagens** será aberta.
 

@@ -2,12 +2,12 @@
 title: Referência de linguagem Visual C++ (C++/CX)
 ms.date: 09/15/2017
 ms.assetid: 3f6abf92-4e5e-4ed8-8e11-f9252380d30a
-ms.openlocfilehash: 319374447ba08dbf18fba91e4c24c0874d3b6ce2
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: ce0272499b653b9077a891e39e9b29797e7e051d
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57422956"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328409"
 ---
 # <a name="visual-c-language-reference-ccx"></a>Referência de linguagem Visual C++ (C++/CX)
 
@@ -24,7 +24,7 @@ Usando C + + c++ /CX, você pode criar:
 
 - Componentes de tempo de execução do C++ Windows que podem ser consumidos por aplicativos do Windows baseados em JavaScript. Para obter mais informações, consulte [Creating Windows Runtime Components in C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp).
 
-- Jogos do Windows DirectX e aplicativos intensivos de elementos gráficos. Para obter mais informações, consulte [criar um jogo UWP simples com o DirectX](/windows/uwp/gaming/tutorial--create-your-first-metro-style-directx-game).
+- Jogos do Windows DirectX e aplicativos intensivos de elementos gráficos. Para obter mais informações, consulte [criar um jogo UWP simples com o DirectX](/windows/uwp/gaming/tutorial--create-your-first-uwp-directx-game).
 
 ## <a name="related-articles"></a>Artigos relacionados
 
@@ -32,7 +32,7 @@ Usando C + + c++ /CX, você pode criar:
 |-|-|
 |[Referência rápida](../cppcx/quick-reference-c-cx.md)|Tabela de palavras-chave e operadores para C + + c++ /CLI CX.|
 |[Sistema de tipos](../cppcx/type-system-c-cx.md)|Descreve básico c++ /CLI CX tipos e construções de programação e como utilizar C + + c++ /CLI CX consumir e criar tipos de tempo de execução do Windows.|
-|[Compilando aplicativos e bibliotecas](../cppcx/building-apps-and-libraries-c-cx.md)|Discute como usar o IDE para criar aplicativos e associar a bibliotecas estáticas e DLLs.|
+|[Compilando aplicativos e bibliotecas](../cppcx/building-apps-and-libraries-c-cx.md)|Discute como usar o IDE para criar aplicativos e vincular a bibliotecas estáticas e DLLs.|
 |[Interoperando com outras linguagens](../cppcx/interoperating-with-other-languages-c-cx.md)|Discute como componentes que são escritos usando C + + c++ /CLI CX pode ser usado com componentes escritos em JavaScript, qualquer gerenciado idioma ou a biblioteca de modelos C++ do Windows Runtime.|
 |[Threading e Marshaling](../cppcx/threading-and-marshaling-c-cx.md)|Discute como especificar comportamento de threading e marshaling dos componentes que você cria.|
 |[Referência de namespaces](../cppcx/namespaces-reference-c-cx.md)|Consulte a documentação do namespace padrão, do namespace Platform, Platform::Collections e dos namespaces relacionados.|

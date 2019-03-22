@@ -14,18 +14,18 @@ helpviewer_keywords:
 - .def files
 - licensing ActiveX controls
 ms.assetid: 2b0ee2e0-ae81-4185-9bb9-11da3c99a283
-ms.openlocfilehash: c05dd9da5dd17b0e06ace750d34f2c5abcf94380
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 7ef8127b829b60d84af72874292c33ae1c7c4636
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57824557"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58327575"
 ---
 # <a name="file-types-created-for-visual-studio-c-projects"></a>Tipos de arquivo criados para projetos do Visual Studio C++
 
 Este tópico descreve todos os tipos de arquivos que estão associados a projetos do Visual Studio para aplicativos da área de trabalho clássicos. Os arquivos reais incluídos no projeto dependem do tipo de projeto e das opções selecionadas ao usar um assistente.
 
-- [Arquivos de projeto e solução]()
+- [Arquivos de projeto e solução](project-and-solution-files.md)
 
 - [Projetos CLR](files-created-for-clr-projects.md)
 
@@ -54,7 +54,7 @@ A tabela a seguir mostra os arquivos comuns em um projeto do Visual Studio e ide
 |.atp|Projeto|Arquivo de projeto de modelo do aplicativo.|
 |.bmp, .dib, .gif, .jpg, .jpe, .png|Recurso|Arquivos de imagem gerais.|
 |.bsc|Compilando|O arquivo de código do navegador.|
-|.cpp; .c|Origem|Arquivos de código-fonte principal do aplicativo.|
+|.cpp, .c|Origem|Arquivos de código-fonte principal do aplicativo.|
 |.cur|Recurso|Arquivo gráfico de bitmap do cursor.|
 |.dbp|Projeto|Arquivo de projeto de banco de dados.|
 |.disco|Origem|O arquivo de documento da descoberta dinâmica. Manipula a descoberta de serviço Web XML.|
@@ -78,8 +78,8 @@ A tabela a seguir mostra os arquivos comuns em um projeto do Visual Studio e ide
 |.vap|Projeto|Um arquivo de projeto do Visual Studio Analyzer.|
 |.vbg|Solução|Um arquivo de grupo de projetos compatível.|
 |.vbp, .vip, .vbproj|Projeto|O arquivo de projeto do Visual Basic.|
-|.vcxitems|Projeto|Projeto Itens Compartilhados para compartilhar arquivos de código entre vários projetos do C++. Confira [Arquivos de projeto e Makefiles]() para obter mais informações.|
-|.vcxproj|Projeto|O arquivo de projeto do Visual Studio. Confira [Arquivos de projeto e Makefiles]() para obter mais informações.|
+|.vcxitems|Projeto|Projeto Itens Compartilhados para compartilhar arquivos de código entre vários projetos do C++. Ver [arquivos de projeto e solução](project-and-solution-files.md) para obter mais informações.|
+|.vcxproj|Projeto|O arquivo de projeto do Visual Studio. Ver [arquivos de projeto e solução](project-and-solution-files.md) para obter mais informações.|
 |.vcxproj.filters|Projeto|Quando o Gerenciador de Soluções é usado para adicionar um arquivo a um projeto, o arquivo de filtros define em que o local no modo de exibição de árvore do Gerenciador de Soluções o arquivo é adicionado, com base em sua extensão de nome de arquivo.|
 |.vdproj|Projeto|O arquivo de projeto de implantação do Visual Studio.|
 |.vmx|Projeto|O arquivo de projeto de macro.|

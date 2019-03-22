@@ -33,12 +33,12 @@ helpviewer_keywords:
 - keyboard shortcuts [C++], property changing
 - accelerator tables [C++], changing properties
 ms.assetid: 013c30b6-5d61-4f1c-acef-8bd15bed7060
-ms.openlocfilehash: f57c09d549a4ceb92db21c06499b4f6e71fc6a52
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 4ed283b9be2afdacfbc93c647c7633fb7802e7fd
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57562933"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328396"
 ---
 # <a name="accelerator-editor-c"></a>Editor de aceleradores (C++)
 
@@ -116,7 +116,7 @@ Os procedimentos a seguir se referem ao uso de páginas de propriedades padrão,
 
 ### <a name="to-edit-in-an-accelerator-table"></a>Para editar em uma tabela de aceleradores
 
-1. Abra a tabela de aceleradores clicando duas vezes em seu ícone no [exibição de recurso](/windows/how-to-create-a-resource-script-file#create-resources).
+1. Abra a tabela de aceleradores clicando duas vezes em seu ícone no [exibição de recurso](how-to-create-a-resource-script-file.md#create-resources).
 
 1. Selecione uma entrada na tabela e selecione para ativar a edição in-loco.
 
@@ -132,7 +132,7 @@ Os procedimentos a seguir se referem ao uso de páginas de propriedades padrão,
 
 ### <a name="to-find-an-entry-in-an-open-accelerator-table"></a>Para localizar uma entrada em uma tabela de aceleradores aberto
 
-1. Abra a tabela de aceleradores clicando duas vezes em seu ícone no [exibição de recurso](/windows/how-to-create-a-resource-script-file#create-resources).
+1. Abra a tabela de aceleradores clicando duas vezes em seu ícone no [exibição de recurso](how-to-create-a-resource-script-file.md#create-resources).
 
 1. Selecione um cabeçalho de coluna para classificar o conteúdo da coluna em ordem alfabética. Por exemplo, selecione **ID** para exibir todas as IDs em sua tabela de aceleradores em ordem alfabética.
 
@@ -140,7 +140,7 @@ Os procedimentos a seguir se referem ao uso de páginas de propriedades padrão,
 
 ### <a name="to-add-an-entry-to-an-accelerator-table"></a>Para adicionar uma entrada para uma tabela de aceleradores
 
-1. Abra a tabela de aceleradores clicando duas vezes em seu ícone no [exibição de recurso](/windows/how-to-create-a-resource-script-file#create-resources).
+1. Abra a tabela de aceleradores clicando duas vezes em seu ícone no [exibição de recurso](how-to-create-a-resource-script-file.md#create-resources).
 
 1. Clique dentro da tabela do acelerador e escolha **novo Acelerador**, ou selecione a entrada de linha vazia na parte inferior da tabela.
 
@@ -155,7 +155,7 @@ Os procedimentos a seguir se referem ao uso de páginas de propriedades padrão,
 
 ### <a name="to-delete-an-entry-from-an-accelerator-table"></a>Para excluir uma entrada de uma tabela de aceleradores
 
-1. Abra a tabela de aceleradores clicando duas vezes em seu ícone no [exibição de recurso](/windows/how-to-create-a-resource-script-file#create-resources).
+1. Abra a tabela de aceleradores clicando duas vezes em seu ícone no [exibição de recurso](how-to-create-a-resource-script-file.md#create-resources).
 
 1. Selecione a entrada que você deseja excluir, ou mantenha pressionada a **Ctrl** ou **Shift** chave durante a seleção para escolher várias entradas.
 
@@ -177,7 +177,7 @@ Os procedimentos a seguir se referem ao uso de páginas de propriedades padrão,
 
 ### <a name="to-change-the-properties-of-multiple-accelerator-keys"></a>Para alterar as propriedades de várias teclas de aceleração
 
-1. Abra a tabela de aceleradores clicando duas vezes em seu ícone no [exibição de recurso](/windows/how-to-create-a-resource-script-file#create-resources).
+1. Abra a tabela de aceleradores clicando duas vezes em seu ícone no [exibição de recurso](how-to-create-a-resource-script-file.md#create-resources).
 
 1. Selecione as teclas de aceleração que você deseja alterar, mantendo pressionada a **Ctrl** da chave conforme você seleciona cada uma delas.
 

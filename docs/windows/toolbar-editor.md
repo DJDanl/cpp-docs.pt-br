@@ -50,12 +50,12 @@ helpviewer_keywords:
 - buttons [C++], tool tips
 - Toolbar editor [C++], creating tool tips
 ms.assetid: aa9f0adf-60f6-4f79-ab05-bc330f15ec43
-ms.openlocfilehash: a138eb5aa40429696ca2efa4a67e1a1c5490f4fa
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 83402159d19f07cf94a0d00ccd79d68549b124e9
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57563245"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328851"
 ---
 # <a name="toolbar-editor-c"></a>Editor de barra de ferramentas (C++)
 
@@ -128,7 +128,7 @@ O **barra de ferramentas do Editor** permite que você:
 
 #### <a name="to-create-a-new-toolbar-button"></a>Para criar um novo botão de barra de ferramentas
 
-1. Na [exibição de recurso](../windows/resource-view-window.md) expanda a pasta de recurso (por exemplo, *Project1.rc*).
+1. Na [exibição de recurso](how-to-create-a-resource-script-file.md#create-resources) expanda a pasta de recurso (por exemplo, *Project1.rc*).
 
 1. Expanda o **barra de ferramentas** pasta e selecione uma barra de ferramentas para editar, siga um destes procedimentos:
 
@@ -138,7 +138,7 @@ O **barra de ferramentas do Editor** permite que você:
 
 #### <a name="to-add-an-image-to-a-toolbar-as-a-button"></a>Para adicionar uma imagem para uma barra de ferramentas, como um botão
 
-1. Na [exibição de recurso](../windows/resource-view-window.md), abra a barra de ferramentas clicando duas vezes nele.
+1. Na [exibição de recurso](how-to-create-a-resource-script-file.md#create-resources), abra a barra de ferramentas clicando duas vezes nele.
 
 1. Em seguida, abra a imagem que você deseja adicionar à barra de ferramentas.
 

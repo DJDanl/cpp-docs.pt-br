@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CComMultiThreadModel class
 - threading [ATL]
 ms.assetid: db8f1662-2f7a-44b3-b341-ffbfb6e422a3
-ms.openlocfilehash: 6b77efffca127c79c665cb8dedb916b0874de038
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 2ec83fc320d65f5f51c14f9523544972cd69c66c
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57290723"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328682"
 ---
 # <a name="ccommultithreadmodel-class"></a>Classe CComMultiThreadModel
 
@@ -157,7 +157,7 @@ Ver [CComMultiThreadModel::AutoCriticalSection](#autocriticalsection).
 
 ##  <a name="decrement"></a>  CComMultiThreadModel::Decrement
 
-A função estática chama a função Win32 [InterlockedDecrement](/windows/desktop/api/winbase/nf-winbase-interlockeddecrement), que diminui o valor da variável apontado por *p*.
+A função estática chama a função Win32 [InterlockedDecrement](/windows/desktop/api/winnt/nf-winnt-interlockeddecrement), que diminui o valor da variável apontado por *p*.
 
 ```
 static ULONG WINAPI Decrement(LPLONG p) throw ();
@@ -178,7 +178,7 @@ Se o resultado de decremento for 0, em seguida, `Decrement` retornará 0. Se o r
 
 ##  <a name="increment"></a>  CComMultiThreadModel::Increment
 
-A função estática chama a função Win32 [InterlockedIncrement](/windows/desktop/api/winbase/nf-winbase-interlockedincrement), que incrementa o valor da variável apontado por *p*.
+A função estática chama a função Win32 [InterlockedIncrement](/windows/desktop/api/winnt/nf-winnt-interlockedincrement), que incrementa o valor da variável apontado por *p*.
 
 ```
 static ULONG WINAPI Increment(LPLONG p) throw ();

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - mixed-mode applications, intermediate language
 - projects [C++], converting to intermediate language
 ms.assetid: 855f9e3c-4f09-4bfe-8eab-a45f68292be9
-ms.openlocfilehash: 46a12e6204113b00c209696bbdfd1093232d7521
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 93eff646fb582e25ad70549afc714c5321e56079
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559662"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328578"
 ---
 # <a name="converting-projects-from-mixed-mode-to-pure-intermediate-language"></a>Convertendo projetos do modo misto em linguagem intermediária pura
 
@@ -45,7 +45,7 @@ Se você estiver usando uma versão anterior do conjunto de ferramentas de compi
       // #include <tchar.h>
       ```
 
-       -ou-
+       - ou -
 
        Por exemplo, em aplicativos do Windows Forms:
 
@@ -80,7 +80,7 @@ Se você estiver usando uma versão anterior do conjunto de ferramentas de compi
    |[Booliano](/dotnet/api/system.boolean)|Representa um valor booliano.|
    |[Byte](/dotnet/api/system.byte)|Representa um inteiro sem sinal de 8 bits.|
    |[Char](/dotnet/api/system.char)|Representa um caractere Unicode.|
-   |[DateTime](/dotnet/api/system.datetime.datetime.aspx)|Representa um momento no tempo, geralmente expresso como uma data e hora do dia.|
+   |[DateTime](/dotnet/api/system.datetime)|Representa um momento no tempo, geralmente expresso como uma data e hora do dia.|
    |[Decimal](/dotnet/api/system.decimal)|Representa um número decimal.|
    |[Duplo](/dotnet/api/system.double)|Representa um número de ponto flutuante de precisão dupla.|
    |[Guid](/dotnet/api/system.guid)|Representa um identificador global exclusivo (GUID).|
@@ -88,8 +88,8 @@ Se você estiver usando uma versão anterior do conjunto de ferramentas de compi
    |[Int32](/dotnet/api/system.int32)|Representa um inteiro com sinal de 32 bits.|
    |[Int64](/dotnet/api/system.int64)|Representa um inteiro com sinal de 64 bits.|
    |[IntPtr](/dotnet/api/system.intptr)|Um tipo específico da plataforma que é usado para representar um ponteiro ou um identificador.|
-   |[SByte](/dotnet/api/system.byte.aspx)|Representa um inteiro com sinal de 8 bits.|
-   |[Simples](/dotnet/api/system.single.aspx)|Representa um número de ponto flutuante de precisão simples.|
+   |[SByte](/dotnet/api/system.byte)|Representa um inteiro com sinal de 8 bits.|
+   |[Simples](/dotnet/api/system.single)|Representa um número de ponto flutuante de precisão simples.|
    |[TimeSpan](/dotnet/api/system.timespan)|Representa um intervalo de tempo.|
    |[UInt16](/dotnet/api/system.uint16)|Representa um inteiro sem sinal de 16 bits.|
    |[UInt32](/dotnet/api/system.uint32)|Representa um inteiro sem sinal de 32 bits.|

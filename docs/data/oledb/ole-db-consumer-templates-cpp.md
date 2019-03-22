@@ -7,12 +7,12 @@ helpviewer_keywords:
 - OLE DB consumer templates [C++]
 - databases [C++], consumers
 ms.assetid: d3e42612-0bc0-4d65-9c32-0e8a7b219e82
-ms.openlocfilehash: f3b247660e65975630b9434685d0a12caf0fc257
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: a93b0a48bc5996cbb96194762b9c03ea143556e2
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57419160"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328716"
 ---
 # <a name="ole-db-consumer-templates-c"></a>Modelos de consumidor de banco de dados OLE (C++)
 
@@ -24,7 +24,7 @@ O OLE DB modelos de consumidor dão suporte a especificação de versão 2.6 do 
 
 - Tipos de dados de C/C++ nativos para programação de OLE DB.
 
-Para usar os modelos OLE DB, você deve estar familiarizado com modelos de C++, COM e as interfaces do OLE DB. Se você não estiver familiarizado com o OLE DB, consulte [referência do programador DB OLE](/previous-versions/windows/desktop/ms718124(v=vs.85)).
+Para usar os modelos OLE DB, você deve estar familiarizado com modelos de C++, COM e as interfaces do OLE DB. Se você não estiver familiarizado com o OLE DB, consulte [Microsoft Driver do OLE DB para SQL Server](/sql/connect/oledb/oledb-driver-for-sql-server).
 
 Os modelos OLE DB oferecer suporte a modelo de objeto OLE DB existente em vez de adicionar um novo modelo de objeto. As classes de camada superior de OLE DB modelos de consumidor em paralelo os componentes definidos na especificação do OLE DB. O design dos modelos de consumidor de banco de dados OLE inclui recursos avançados como vários acessadores em um conjunto de linhas. O uso de modelos e herança múltipla torna a biblioteca de pequeno e flexível.
 
@@ -61,4 +61,4 @@ Para mais informações, consulte os seguintes tópicos:
 [Programação do OLE DB](../../data/oledb/ole-db-programming.md)<br/>
 [Acesso a dados](../data-access-in-cpp.md)<br/>
 [Documentação do SDK do OLE DB](/previous-versions/windows/desktop/ms722784(v=vs.85))<br/>
-[Referência do programador do OLE DB](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming)
+[Driver do Microsoft OLE DB para SQL Server](/sql/connect/oledb/oledb-driver-for-sql-server)

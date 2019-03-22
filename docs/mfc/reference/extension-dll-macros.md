@@ -4,12 +4,12 @@ ms.date: 04/03/2017
 helpviewer_keywords:
 - module macros in MFC
 ms.assetid: 303f4161-cb5e-4099-81ad-acdb11aa60fb
-ms.openlocfilehash: 1d0cbd1f702a1d26dd2eaafd88efcfd61f52ff78
-ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
+ms.openlocfilehash: 863350067c39fbc9cdb3d9d3a6c4448348d977de
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55850210"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328760"
 ---
 # <a name="macros-and-functions-for-managing-dlls"></a>Macros e funções para o gerenciamento de DLLs
 
@@ -21,9 +21,9 @@ ms.locfileid: "55850210"
 |[AfxNetInitModule](#afxnetinitmodule)|Fornece que suporte a MFC de soquetes de uma DLL MFC regular vinculada dinamicamente ao MFC.|
 |[AfxGetAmbientActCtx](#afxgetambientactctx)|Obtém o estado atual do sinalizador de estado por módulo.|
 |[AfxGetStaticModuleState](#afxgetstaticmodulestate)|Define o estado do módulo antes da inicialização e/ou para restaurar o estado do módulo anterior após a limpeza.|
-|[AfxInitExtensionModule]()#afxinitextensionmodule|Inicializa a DLL.|
+|[AfxInitExtensionModule](#afxinitextensionmodule)|Inicializa a DLL.|
 |[AfxSetAmbientActCtx](#afxsetambientactctx)|Defina o sinalizador de estado por módulo, que afeta o comportamento de WinSxS do MFC.|
-|[AfxTermExtensionModule]()#afxtermextensionmodule)|Permite MFC para limpar a DLL de extensão do MFC quando cada processo desanexado da DLL.|
+|[AfxTermExtensionModule](#afxtermextensionmodule)|Permite MFC para limpar a DLL de extensão do MFC quando cada processo desanexado da DLL.|
 
 ## <a name="afx_ext_class"></a>  AFX_EXT_CLASS
 

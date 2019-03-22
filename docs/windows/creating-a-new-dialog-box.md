@@ -14,12 +14,12 @@ helpviewer_keywords:
 - dialog boxes [C++], size
 - dialog boxes [C++], positioning
 ms.assetid: 303de801-c4f8-42e1-b622-353f6423f688
-ms.openlocfilehash: 51ff52aefb5586b4e301831dbdebeb783ec3c4c5
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 7e7cfcc206ce58ab401bcdb9c9ac6103c50e997f
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57563194"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328630"
 ---
 # <a name="how-to-create-a-dialog-box-c"></a>Como: Criar uma caixa de diálogo (C++)
 
@@ -34,7 +34,7 @@ O **Editor de caixa de diálogo** permite que você:
 
 ### <a name="to-create-a-new-dialog-box"></a>Para criar uma nova caixa de diálogo
 
-1. Na [exibição de recurso](/windows/how-to-create-a-resource-script-file#create-resources), clique com botão direito seu *. rc* arquivo e selecione **adicionar recurso**.
+1. Na [exibição de recurso](how-to-create-a-resource-script-file.md#create-resources), clique com botão direito seu *. rc* arquivo e selecione **adicionar recurso**.
 
 1. No **adicionar recurso** caixa de diálogo, selecione **caixa de diálogo** no **tipo de recurso** lista e, em seguida, escolha **novo**.
 

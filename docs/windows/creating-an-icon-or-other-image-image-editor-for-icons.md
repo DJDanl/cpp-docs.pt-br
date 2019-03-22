@@ -87,12 +87,12 @@ helpviewer_keywords:
 - graphics [C++], converting formats
 - images [C++], converting formats
 ms.assetid: 66db3fb2-cfc1-48a2-9bdd-53f61eb7ee30
-ms.openlocfilehash: 92eac69e6802a824c4b6e107d2ff3393e931a542
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 4191b1bd495a8908610b6e49c3dff676de2304dc
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57563050"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328487"
 ---
 # <a name="how-to-create-an-icon-or-other-image"></a>Como: Criar um ícone ou outra imagem
 
@@ -167,7 +167,7 @@ Use o **abra &lt;dispositivo&gt; imagem** caixa de diálogo para abrir imagens d
 
 #### <a name="to-create-a-new-icon-or-cursor"></a>Para criar um novo ícone ou cursor
 
-1. Na [exibição de recurso](/windows/how-to-create-a-resource-script-file#create-resources), clique com botão direito seu *. rc* de arquivo e, em seguida, escolha **inserir recurso**. Se você já tiver um recurso de imagem existente em seu *. rc* arquivo, como um cursor, você pode clique com botão direito do **Cursor** pasta e selecione **Cursor inserir**.
+1. Na [exibição de recurso](how-to-create-a-resource-script-file.md#create-resources), clique com botão direito seu *. rc* de arquivo e, em seguida, escolha **inserir recurso**. Se você já tiver um recurso de imagem existente em seu *. rc* arquivo, como um cursor, você pode clique com botão direito do **Cursor** pasta e selecione **Cursor inserir**.
 
 1. No [caixa de diálogo Inserir recurso](../windows/add-resource-dialog-box.md), selecione **ícone** ou **Cursor** e escolha **novo**. Para ícones, essa ação cria um recurso de ícone com um 32 × 32, o ícone de 16 cores. Para cursores de 32 × 32, imagem monocromática de (2 cores) é criada.
 
@@ -228,7 +228,7 @@ Usando o **Editor de imagens**, ícones e cursores podem ser dimensionados grand
 
 #### <a name="to-create-a-256-color-icon-or-cursor"></a>Para criar um ícone de 256 cores ou cursor
 
-1. Na [exibição de recurso](/windows/how-to-create-a-resource-script-file#create-resources), clique com botão direito seu *. rc* de arquivo e, em seguida, escolha **inserir recurso**. Se você já tiver um recurso de imagem existente em seu *. rc* arquivo, como um cursor, você pode clique com botão direito do **Cursor** pasta e selecione **Cursor inserir**.
+1. Na [exibição de recurso](how-to-create-a-resource-script-file.md#create-resources), clique com botão direito seu *. rc* de arquivo e, em seguida, escolha **inserir recurso**. Se você já tiver um recurso de imagem existente em seu *. rc* arquivo, como um cursor, você pode clique com botão direito do **Cursor** pasta e selecione **Cursor inserir**.
 
 1. No [caixa de diálogo Inserir recurso](../windows/add-resource-dialog-box.md), selecione **ícone** ou **Cursor** e escolha **novo**.
 
@@ -295,7 +295,7 @@ Você pode abrir imagens GIF ou JPEG na **Editor de imagens** e salvá-los como 
 
 ### <a name="to-add-a-new-image-resource-to-an-unmanaged-c-project"></a>Para adicionar um novo recurso de imagem a um projeto de C++ não gerenciado
 
-1. Na [exibição de recurso](/windows/how-to-create-a-resource-script-file#create-resources), clique com botão direito seu *. rc* de arquivo e, em seguida, escolha **inserir recurso**. Se você já tiver um recurso de imagem existente em seu *. rc* arquivo, como um cursor, você pode simplesmente com o botão direito do **Cursor** pasta e selecione **Cursor inserir**.
+1. Na [exibição de recurso](how-to-create-a-resource-script-file.md#create-resources), clique com botão direito seu *. rc* de arquivo e, em seguida, escolha **inserir recurso**. Se você já tiver um recurso de imagem existente em seu *. rc* arquivo, como um cursor, você pode simplesmente com o botão direito do **Cursor** pasta e selecione **Cursor inserir**.
 
 1. No [caixa de diálogo Inserir recurso](../windows/add-resource-dialog-box.md), selecione o tipo de recurso de imagem que você deseja criar (**Bitmap**, por exemplo), em seguida, escolha **New**.
 

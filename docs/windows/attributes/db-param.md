@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - db_param attribute
 ms.assetid: a28315f5-4722-459e-92ef-32e83c0b205a
-ms.openlocfilehash: 58d6fa5026395b4be6663ab253cf9ffdfea01788
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2de051b099da5f179a7634cddfb359d85f4b1f83
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505034"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328786"
 ---
 # <a name="dbparam"></a>db_param
 
@@ -25,7 +25,7 @@ Associa a variável de membro especificado com um parâmetro de entrada ou saíd
 
 ### <a name="parameters"></a>Parâmetros
 
-*Ordinal*<br/>
+*ordinal*<br/>
 O número da coluna (ordinal DBCOLUMNINFO) correspondente a um campo no conjunto de linhas à qual associar dados.
 
 *paramtype*<br/>
@@ -37,17 +37,17 @@ O número da coluna (ordinal DBCOLUMNINFO) correspondente a um campo no conjunto
 
 - DBPARAMIO_NOTPARAM o acessador não tem parâmetros. Definindo `eParamIO` para esse valor na linha acessadores lembra ao usuário que os parâmetros são ignorados.
 
-*DbType*<br/>
-(Opcional) Um banco de dados OLE [indicador de tipo](/previous-versions/windows/desktop/ms711251) para a entrada de coluna.
+*dbtype*<br/>
+(Opcional) Um banco de dados OLE [indicador de tipo](/previous-versions/windows/desktop/ms711251(v=vs.85)) para a entrada de coluna.
 
 *precision*<br/>
-(Opcional) A precisão a ser usado para a entrada da coluna. Para obter detalhes, consulte a descrição da `bPrecision` elemento o [estrutura DBBINDING](/previous-versions/windows/desktop/ms716845)
+(Opcional) A precisão a ser usado para a entrada da coluna. Para obter detalhes, consulte a descrição da `bPrecision` elemento o [estrutura DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85))
 
-*Escala*<br/>
-(Opcional) A escala a ser usado para a entrada da coluna. Para obter detalhes, consulte a descrição da `bScale` elemento o [estrutura DBBINDING](/previous-versions/windows/desktop/ms716845)
+*scale*<br/>
+(Opcional) A escala a ser usado para a entrada da coluna. Para obter detalhes, consulte a descrição da `bScale` elemento o [estrutura DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85))
 
 *status*<br/>
-(Opcional) Uma variável de membro usada para manter o status dessa coluna. O status indica se o valor da coluna é um valor de dados ou algum outro valor, como nulo. Para os valores possíveis, consulte [Status](/previous-versions/windows/desktop/ms722617) na *referência do programador DB OLE*.
+(Opcional) Uma variável de membro usada para manter o status dessa coluna. O status indica se o valor da coluna é um valor de dados ou algum outro valor, como nulo. Para os valores possíveis, consulte [Status](/previous-versions/windows/desktop/ms722617(v=vs.85)) na *referência do programador DB OLE*.
 
 *length*<br/>
 (Opcional) Uma variável de membro usada para manter o tamanho da coluna em bytes.
