@@ -52,12 +52,12 @@ helpviewer_keywords:
 - C1505
 - C1901
 ms.assetid: 6c8df109-7594-48ed-987a-97d9fe2b04af
-ms.openlocfilehash: 6809ef1640c324e247bd20c83d4622fe27987ae6
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: 17c456f6ab248964cbd19cd9695da290254ccf1b
+ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328240"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58356212"
 ---
 # <a name="compiler-fatal-errors-c999-through-c1999"></a>Erros fatais do compilador C999 até C1999
 
@@ -70,7 +70,7 @@ Os artigos nesta seção da documentação explicam um subconjunto das mensagens
 |Erro|Mensagem|
 |-----------|-------------|
 |[Erro fatal C999](../../error-messages/compiler-errors-1/fatal-error-c999.md)|. Mensagem desconhecida escolha o comando de suporte técnico no menu Ajuda do Visual C++, ou abra o arquivo de Ajuda do suporte técnico para obter mais informações|
-|[Erro fatal C1001](../../error-messages/compiler-errors-1/fatal-error-c1001.md)|Erro interno no compilador.<br /><br /> (arquivo do compilador '*arquivo*', linha *número*)<br /><br /> Para contornar esse problema, tente simplificar ou alterar o programa próximo aos locais listados acima. Escolha o comando de suporte técnico no menu Ajuda do Visual C++, ou abra o arquivo de Ajuda do suporte técnico para obter mais informações|
+|[Erro fatal C1001](../../error-messages/compiler-errors-1/fatal-error-c1001.md)|Erro interno no compilador.<br /> (arquivo do compilador '*arquivo*', linha *número*)<br /> Para contornar esse problema, tente simplificar ou alterar o programa próximo aos locais listados acima. Escolha o comando de suporte técnico no menu Ajuda do Visual C++, ou abra o arquivo de Ajuda do suporte técnico para obter mais informações|
 |[Erro fatal C1002](../../error-messages/compiler-errors-1/fatal-error-c1002.md)|o compilador está fora do espaço de heap no passo 2|
 |[Erro fatal C1003](../../error-messages/compiler-errors-1/fatal-error-c1003.md)|Contagem de erros excede *número*; interrompendo compilação|
 |[Erro fatal C1004](../../error-messages/compiler-errors-1/fatal-error-c1004.md)|fim-de-arquivo inesperado encontrado|
@@ -78,7 +78,7 @@ Os artigos nesta seção da documentação explicam um subconjunto das mensagens
 |[Erro fatal C1007](../../error-messages/compiler-errors-1/fatal-error-c1007.md)|sinalizador não reconhecido '*cadeia de caracteres*'in'*opção*'|
 |[Erro fatal C1008](../../error-messages/compiler-errors-1/fatal-error-c1008.md)|Nenhum arquivo de entrada especificado|
 |[Erro fatal C1009](../../error-messages/compiler-errors-1/fatal-error-c1009.md)|limite do compilador: macros com aninhamento muito profundo|
-|[Erro fatal C1010](../../error-messages/compiler-errors-1/fatal-error-c1010.md)|fim de arquivo inesperado durante a procura de cabeçalho pré-compilado. Você esqueceu de adicionar ' #include <*arquivo*>' à sua fonte?|
+|[Erro fatal C1010](../../error-messages/compiler-errors-1/fatal-error-c1010.md)|fim de arquivo inesperado durante a procura de cabeçalho pré-compilado. Você esqueceu de adicionar ' #include \< *arquivo*>' à sua fonte?|
 |[Erro fatal C1012](fatal-error-c1012.md)|Parêntese sem correspondência: ausente '*caractere*"|
 |[Erro fatal C1013](fatal-error-c1013.md)|limite do compilador: muitos parênteses abertos|
 |[Erro fatal C1014](fatal-error-c1014.md)|muitos arquivos de inclusão: profundidade = *número*|

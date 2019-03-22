@@ -1,21 +1,21 @@
 ---
-title: / CETCOMPAT (compatível com a tecnologia de imposição de fluxo de controle)
+title: / CETCOMPAT (compatível com a pilha de sombra CET)
 ms.date: 02/19/2019
 f1_keywords:
 - /CETCOMPAT
 helpviewer_keywords:
 - /CETCOMPAT linker option
 - /CETCOMPAT
-ms.openlocfilehash: 1a01dd45667f64dbcbe11acaf1180835bd0d6e31
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 0ed5d9d4f9f4f4dc5cd4fc19df4179e86e430187
+ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57809841"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58356009"
 ---
-# <a name="cetcompat-control-flow-enforcement-technology-compatible"></a>/ CETCOMPAT (compatível com a tecnologia de imposição de fluxo de controle)
+# <a name="cetcompat-cet-shadow-stack-compatible"></a>/ CETCOMPAT (compatível com a pilha de sombra CET)
 
-Especifica se é necessário marcar uma imagem executável como compatível com tecnologia de imposição de fluxo de controle (CET).
+Especifica se é necessário marcar uma imagem executável como compatível com a pilha de sombra de tecnologia de imposição (CET) de fluxo de controle.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -24,13 +24,13 @@ Especifica se é necessário marcar uma imagem executável como compatível com 
 ## <a name="arguments"></a>Arguments
 
 **NÃO**<br/>
-Especifica que o executável não deve ser marcados como compatível com CET.
+Especifica que o executável não deve ser marcado compatível com a pilha de sombra CET.
 
 ## <a name="remarks"></a>Comentários
 
-Tecnologia de imposição de fluxo de controle (CET) é um recurso de processador do computador que fornece recursos para proteger contra determinados tipos de ataques de malware. Para obter mais informações, consulte [visualização de tecnologia de imposição de fluxo de controle do Intel](https://software.intel.com/sites/default/files/managed/4d/2a/control-flow-enforcement-technology-preview.pdf).
+Pilha de sombra de tecnologia de imposição (CET) de fluxo de controle é um recurso de processador do computador que fornece recursos para proteção contra a programação orientada retornada (ROP) com base em ataques de malware. Para obter mais informações, consulte [visualização de tecnologia de imposição de fluxo de controle do Intel](https://software.intel.com/sites/default/files/managed/4d/2a/control-flow-enforcement-technology-preview.pdf).
 
-O **/CETCOMPAT** a opção de vinculador instrui o vinculador para marcar o binário como compatível com o horário da Europa Central. **/CETCOMPAT:no** marca o binário como não compatível com o horário da Europa Central. Se ambas as opções são especificadas na linha de comando, a última especificada será usada. Atualmente, essa opção só é aplicável às arquiteturas x86 e x64.
+O **/CETCOMPAT** a opção de vinculador instrui o vinculador para marcar o binário como compatível com o sombra CET pilha. **/CETCOMPAT:no** marca o binário como não é compatível com a pilha de sombra CET. Se ambas as opções são especificadas na linha de comando, a última especificada será usada. Atualmente, essa opção só é aplicável às arquiteturas x86 e x64.
 
 O **/CETCOMPAT** opção está disponível a partir do conjunto de ferramentas da visualização 3 do Visual Studio de 2019.
 
