@@ -1,18 +1,18 @@
 ---
 title: __declspec
-ms.date: 10/09/2018
+ms.date: 03/21/2019
 f1_keywords:
 - __declspec_cpp
 - __declspec
 - _declspec
 helpviewer_keywords:
 - __declspec keyword [C++]
-ms.openlocfilehash: 3ee83203cc992ba8c5d05b7bb6974d3576baf59c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e924f3e4a038f900e084dbf84d85430d815c8e8f
+ms.sourcegitcommit: 0064d37467f958dd6a5111f20d7660eaccd53ee9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50645088"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58416943"
 ---
 # <a name="declspec"></a>__declspec
 
@@ -32,9 +32,10 @@ A sintaxe de atributo estendido para especificar informações de classe de arma
 *extended-decl-modifier*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**align(** *#* **)**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**allocate("** *segname* **")**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**allocator**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**appdomain**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**code_seg("** *segname* **")**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**Preterido**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**deprecated**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**dllimport**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**dllexport**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**jitintrinsic**<br/>
@@ -46,16 +47,16 @@ A sintaxe de atributo estendido para especificar informações de classe de arma
 &nbsp;&nbsp;&nbsp;&nbsp;**novtable**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**Processo**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**property(** { **get=**_get_func_name_ &#124; **,put=**_put_func_name_ } **)**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**restringir**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**restrict**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**safebuffers**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**selectany**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**spectre(nomitigation)**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**thread**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**UUID ("** *ComObjectGUID* **")**
+&nbsp;&nbsp;&nbsp;&nbsp;**uuid("** *ComObjectGUID* **")**
 
 O espaço em branco separa a sequência modificadora de declaração. Os exemplos aparecem nas seções posteriores.
 
-Gramática de atributo estendido dá suporte a esses atributos de classe de armazenamento específico da Microsoft: [alinhar](../cpp/align-cpp.md), [alocar](../cpp/allocate.md), [appdomain](../cpp/appdomain.md), [code_seg](../cpp/code-seg-declspec.md), [preterido](../cpp/deprecated-cpp.md), [dllexport](../cpp/dllexport-dllimport.md), [dllimport](../cpp/dllexport-dllimport.md), [jitintrinsic](../cpp/jitintrinsic.md), [naked](../cpp/naked-cpp.md), [noalias](../cpp/noalias.md), [noinline](../cpp/noinline.md), [noreturn](../cpp/noreturn.md), [nothrow](../cpp/nothrow-cpp.md), [novtable](../cpp/novtable.md) , [processo](../cpp/process.md), [restringir](../cpp/restrict.md), [safebuffers](../cpp/safebuffers.md), [selectany](../cpp/selectany.md), [spectre](../cpp/spectre.md), e [thread](../cpp/thread.md). Ele também dá suporte a esses atributos de objeto COM: [propriedade](../cpp/property-cpp.md) e [uuid](../cpp/uuid-cpp.md).
+Gramática de atributo estendido dá suporte a esses atributos de classe de armazenamento específico da Microsoft: [alinhar](../cpp/align-cpp.md), [alocar](../cpp/allocate.md), [alocador](../cpp/allocator.md), [appdomain](../cpp/appdomain.md), [code_seg](../cpp/code-seg-declspec.md), [preterido](../cpp/deprecated-cpp.md), [dllexport](../cpp/dllexport-dllimport.md), [dllimport](../cpp/dllexport-dllimport.md), [jitintrinsic](../cpp/jitintrinsic.md), [naked](../cpp/naked-cpp.md), [noalias](../cpp/noalias.md), [noinline](../cpp/noinline.md), [noreturn](../cpp/noreturn.md), [nothrow](../cpp/nothrow-cpp.md), [novtable](../cpp/novtable.md), [processo](../cpp/process.md), [restringir](../cpp/restrict.md), [safebuffers](../cpp/safebuffers.md), [selectany](../cpp/selectany.md), [spectre](../cpp/spectre.md), e [thread](../cpp/thread.md). Ele também dá suporte a esses atributos de objeto COM: [propriedade](../cpp/property-cpp.md) e [uuid](../cpp/uuid-cpp.md).
 
 O **code_seg**, **dllexport**, **dllimport**, **naked**, **noalias**, **nothrow** , **propriedade**, **restringir**, **selectany**, **thread**, e **uuid**os atributos de classe de armazenamento são propriedades somente da declaração do objeto ou da função aos quais elas são aplicadas. O **thread** atributo afeta os dados e objetos apenas. O **naked** e **spectre** atributos afetam somente funções. O **dllimport** e **dllexport** atributos afetam funções, dados e objetos. O **propriedade**, **selectany**, e **uuid** atributos afetam objetos COM.
 
