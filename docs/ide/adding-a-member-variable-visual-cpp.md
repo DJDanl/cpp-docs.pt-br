@@ -12,16 +12,16 @@ helpviewer_keywords:
 - dialog box controls, variable types
 - variables, dialog box control member variables
 ms.assetid: 437783bd-8eb4-4508-8b73-7380116e9d71
-ms.openlocfilehash: 2a519c0606a7df6e0ce55997a055d78865afafbf
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 0f10b4867b443f0db69743d7ff23bb059290b0a5
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694407"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328955"
 ---
 # <a name="add-a-member-variable"></a>Adicionar uma variável de membro
 
-É possível adicionar uma variável de membro a uma classe usando o Modo de Exibição de Classe. As variáveis de membro podem se destinar à [troca e à validação de dados](../mfc/dialog-data-exchange-and-validation.md) ou podem ser genéricas. O assistente de variável de membro de dados foi projetado para encontrar as informações relevantes e usá-las para inserir elementos nos arquivos de origem nos locais apropriados. É possível adicionar uma variável de membro por meio do [Editor de caixas de diálogo](../windows/dialog-editor.md) em [Modo de Exibição de Recursos](../windows/resource-view-window.md) ou por meio de [Modo de Exibição de Classe](/visualstudio/ide/viewing-the-structure-of-code).
+É possível adicionar uma variável de membro a uma classe usando o Modo de Exibição de Classe. As variáveis de membro podem se destinar à [troca e à validação de dados](../mfc/dialog-data-exchange-and-validation.md) ou podem ser genéricas. O assistente de variável de membro de dados foi projetado para encontrar as informações relevantes e usá-las para inserir elementos nos arquivos de origem nos locais apropriados. É possível adicionar uma variável de membro por meio do [Editor de caixas de diálogo](../windows/dialog-editor.md) em [Modo de Exibição de Recursos](../windows/how-to-create-a-resource-script-file.md#create-resources) ou por meio de [Modo de Exibição de Classe](/visualstudio/ide/viewing-the-structure-of-code).
 
 > [!NOTE]
 > Quando está projetando e implementando uma caixa de diálogo, talvez seja mais eficiente usar o Editor de caixas de diálogo para adicionar os controles de caixa de diálogo e, em seguida, implementar as variáveis de membro dos controles.

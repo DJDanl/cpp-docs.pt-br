@@ -5,12 +5,12 @@ ms.technology: cpp-language
 ms.assetid: 475da6e9-0d78-4b4e-bd23-f41c406c4efe
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 604057753e67d08c12204f9d3b09bce0e1212966
-ms.sourcegitcommit: fbc05d8581913bca6eff664e5ecfcda8e471b8b1
+ms.openlocfilehash: 17a830238e21a5ef231285b5be9bfa6ae39183f4
+ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56809757"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58356264"
 ---
 # <a name="visual-c-language-conformance"></a>Conformidade com a linguagem Visual C++
 
@@ -79,18 +79,17 @@ Para detalhes sobre melhorias de conformidade e outras mudanças no Visual Studi
 |&nbsp;&nbsp;[P0017R1 Inicialização de agregação estendida](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0017r1.html)|VS 2017 15.7  <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0091R3 Dedução de argumento de modelo para modelos de classe](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0091r3.html)<br />&nbsp;&nbsp;[P0512R0 Problemas de dedução de argumento de modelo de classe](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0512r0.pdf)|VS 2017 15.7 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0127R2 Declarando parâmetros de modelo sem tipo com automático](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0127r2.html)|VS 2017 15.7 <sup>[17](#note_17)</sup>|
-|&nbsp;&nbsp;[P0135R1 Garantia de elisão de cópia](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0135r1.html)|VS 2017 15.6<sup>[H](#note_H)</sup>|
+|&nbsp;&nbsp;[P0135R1 Garantia de elisão de cópia](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0135r1.html)|VS 2017 15.6|
 |&nbsp;&nbsp;[P0136R1 Reescrevendo construtores de herança](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0136r1.html)|VS 2017 15.7 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0137R1 std::launder](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0137r1.html)|VS 2017 15.7 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0145R3 Refinando a ordem de avaliação de expressão](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0145r3.pdf)<br />&nbsp;&nbsp;[P0400R0 Ordem de avaliação de argumentos de função](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0400r0.html)|VS 2017 15.7 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0195R2 Expansões de pacote em declarações using](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0195r2.html)|VS 2017 15.7 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0283R2 Ignorando atributos não reconhecidos](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0283r2.html)|VS 2015 <sup>[14](#note_14)</sup>|
-|&nbsp;&nbsp;[P0702R1 Corrigindo dedução de argumento de modelo de classe para construtores de lista de inicializadores](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0702r1.html)|VS 2017 15.7 <sup>[17](#note_17)</sup>|
 
 |Área de recursos| |
 |----|---|
 |__Principais recursos da linguagem C++17 (relatórios de defeito)__|__Com suporte__|
-|&nbsp;&nbsp;[P0702R1 Corrigindo dedução de argumento de modelo de classe para construtores de lista de inicializadores](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0702r1.html)|VS 2017 15.7 <sup>[17](#note_17)</sup>|
+|&nbsp;&nbsp;[P0702R1 Corrigindo dedução de argumento de modelo de classe para construtores de lista de inicializadores](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0702r1.html)|VS 2017 15.7 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0588R1 Simplificar captura de lambda implícita](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0588r1.html)|Não|
 |&nbsp;&nbsp;[CWG 1581: Quando as funções de membro constexpr são definidas?](https://wg21.cmeerw.net/cwg/issue1581)|Não|
 |&nbsp;&nbsp;[P0962R1 Relaxar as regras de localização do ponto de personalização de associações estruturadas](http://open-std.org/JTC1/SC22/WG21/docs/papers/2018/p0961r1.html)|Não|
@@ -100,7 +99,7 @@ Para detalhes sobre melhorias de conformidade e outras mudanças no Visual Studi
 |Área de recursos| |
 |----|---|
 |__Principais recursos da linguagem C++20__|__Com suporte__|
-|&nbsp;&nbsp;[P0306R4 Adição de &#95;&#95;VA_OPT&#95;&#95; para omissão e exclusão de vírgulas](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0306r4.pdf)|Não|
+|&nbsp;&nbsp;[P0306R4 Adição de &#95;&#95;VA_OPT&#95;&#95; para omissão e exclusão de vírgulas](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0306r4.html)|Não|
 |&nbsp;&nbsp;[P0329R4 Inicialização designada](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0329r4.pdf)|Não|
 |&nbsp;&nbsp;[P0409R2 Permissão de captura de lambda [=, this]](http://open-std.org/JTC1/SC22/WG21/docs/papers/2017/p0409r2.html)|Não|
 |&nbsp;&nbsp;[P0428R2 Sintaxe familiar de modelo para lambdas genéricas](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0428r2.pdf)|Não|
@@ -145,7 +144,7 @@ Para detalhes sobre melhorias de conformidade e outras mudanças no Visual Studi
 |&nbsp;&nbsp;[N4562 Conceitos básicos de biblioteca: \<memory_resource>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/n4562.html#memory.resource.synop)<br />&nbsp;&nbsp;[P0337R0 Excluindo a atribuição polymorphic_allocator](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0337r0.html)|VS 2017 15.6|
 |&nbsp;&nbsp;[P0024R2 Algoritmos paralelos](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0024r2.html)<br />&nbsp;&nbsp;[P0336R1 Renomeando políticas de execução paralela](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0336r1.pdf)<br />&nbsp;&nbsp;[P0394R4 Algoritmos paralelos devem conter terminate() para exceções](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0394r4.html)<br />&nbsp;&nbsp;[P0452R1 Unificar algoritmos paralelos \<numeric>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0452r1.html)|VS 2017 15.7|
 |&nbsp;&nbsp;[P0226R1 Funções matemáticas especiais](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0226r1.pdf)|VS 2017 15.7|
-|&nbsp;&nbsp;[P0218R1 \<filesystem>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0218r1.html)<br />&nbsp;&nbsp;[P0219R1 Caminhos relativos para o sistema de arquivos](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0219r1.html)<br />&nbsp;&nbsp;[P0317R1 Cache de entrada de diretório para sistema de arquivos](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p03179r1.html)<br />&nbsp;&nbsp;[P0392R0 Dando suporte a string_view em caminhos do sistema de arquivos](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0392r0.pdf)<br />&nbsp;&nbsp;[P0430R2 Suporte a sistemas de arquivos não POSIX](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0430r2.pdf)<br />&nbsp;&nbsp;[P0492R2 Resolução de comentários NB para o sistema de arquivos](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0492r2.html)|VS 2017 15.7 <sup>[K](#note_K)</sup>|
+|&nbsp;&nbsp;[P0218R1 \<filesystem>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0218r1.html)<br />&nbsp;&nbsp;[P0219R1 Caminhos relativos para o sistema de arquivos](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0219r1.html)<br />&nbsp;&nbsp;[P0317R1 Cache de entrada de diretório para sistema de arquivos](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0317r1.html)<br />&nbsp;&nbsp;[P0392R0 Dando suporte a string_view em caminhos do sistema de arquivos](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0392r0.pdf)<br />&nbsp;&nbsp;[P0430R2 Suporte a sistemas de arquivos não POSIX](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0430r2.pdf)<br />&nbsp;&nbsp;[P0492R2 Resolução de comentários NB para o sistema de arquivos](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0492r2.html)|VS 2017 15.7 <sup>[K](#note_K)</sup>|
 |&nbsp;&nbsp;[P0003R5 Removendo Especificações de Exceção Dinâmica](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0003r5.html)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0005R4 not_fn()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0005r4.html)<br />&nbsp;&nbsp;[P0358R1 Correções para not_fn()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0358r1.html)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0033R1 Reescrevendo enable_shared_from_this](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0033r1.html)|VS 2017 15.5 <sup>[14](#note_14)</sup>|
@@ -162,7 +161,7 @@ Para detalhes sobre melhorias de conformidade e outras mudanças no Visual Studi
 |&nbsp;&nbsp;[P0084R2 Tipo de retorno emplace](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0084r2.pdf)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0152R1 atomic::is_always_lock_free](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0152r1.html)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0154R1 hardware_destructive_interference_size, etc.](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0154r1.html)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
-|&nbsp;&nbsp;[P0156R2 Como renomear Variadic lock\_guard para scoped\_lock](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0156r2.html)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
+|&nbsp;&nbsp;[P0156R2 Como renomear Variadic lock\_guard para scoped\_lock](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0156r2.html)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0258R2 has_unique_object_representations](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0258r2.html)|VS 2017 15.3 <sup>[L](#note_L)</sup>|
 |&nbsp;&nbsp;[P0295R0 gcd(), lcm()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0295r0.pdf)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0298R3 std::byte](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0298r3.pdf)|VS 2017 15.3 <sup>[17](#note_17), [byte](#note_byte)</sup>|
