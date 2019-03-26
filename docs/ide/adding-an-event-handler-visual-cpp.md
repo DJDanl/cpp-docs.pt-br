@@ -10,12 +10,12 @@ helpviewer_keywords:
 - MSBuild, properties
 - event handler wizard [C++]
 ms.assetid: 050bebf0-a9e0-474b-905c-796fe5ac8fc3
-ms.openlocfilehash: 8e6b2511b00b7f949718e5b0d9fd793ac53d0d8b
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 96e5b8777bb8b0c976277a06e8ad49b3334921fb
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694511"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328565"
 ---
 # <a name="add-an-event-handler"></a>Adicionar um manipulador de eventos
 
@@ -25,7 +25,7 @@ Adicione um evento à classe que implementa a caixa de diálogo usando a [janela
 
 **Para adicionar um manipulador de eventos a um controle de caixa de diálogo:**
 
-1. Clique duas vezes no recurso de caixa de diálogo no [Modo de Exibição de Recursos](../windows/resource-view-window.md) para abrir o recurso de caixa de diálogo que contém o controle no [editor de caixas de diálogo](../windows/dialog-editor.md).
+1. Clique duas vezes no recurso de caixa de diálogo no [Modo de Exibição de Recursos](../windows/how-to-create-a-resource-script-file.md#create-resources) para abrir o recurso de caixa de diálogo que contém o controle no [editor de caixas de diálogo](../windows/dialog-editor.md).
 
 1. Clique com o botão direito do mouse no controle para o qual deseja manipular o evento de notificação.
 
