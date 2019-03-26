@@ -3,12 +3,12 @@ title: Sistema do tipo C++ (C++ moderno)
 ms.date: 11/19/2018
 ms.topic: conceptual
 ms.assetid: 553c0ed6-77c4-43e9-87b1-c903eec53e80
-ms.openlocfilehash: ea4d8da9af10df2fb930daaad8374d70b6704d28
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.openlocfilehash: 4dfbf408654ccc92c92d6855c15238cb07c01b58
+ms.sourcegitcommit: 6e4dd21759caaed262a7255735cf8d6e8fb9f4d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220667"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58476897"
 ---
 # <a name="c-type-system-modern-c"></a>Sistema do tipo C++ (C++ moderno)
 
@@ -70,7 +70,7 @@ A tabela a seguir lista os tipos fundamentais usados com mais frequência:
 |bool|1 byte|Representa valores que podem ser true ou false.|
 |char|1 byte|Use os caracteres ASCII em cadeias de caracteres do estilo C mais antigo ou objetos std::string que nunca precisarão ser convertidos em UNICODE.|
 |wchar_t|2 bytes|Representa os valores de caractere "largos" que podem ser codificados no formato UNICODE (UTF-16 no Windows, outros sistemas operacionais podem ser diferentes). Esse é o tipo de caractere usado em cadeias de caracteres do tipo `std::wstring`.|
-|sem sinal&nbsp;char|1 byte|O C++ não tem o tipo `byte` interno.  Use unsigned char para representar um valor de bytes.|
+|unsigned&nbsp;char|1 byte|O C++ não tem o tipo `byte` interno.  Use unsigned char para representar um valor de bytes.|
 |unsigned int|4 bytes|Escolha padrão para sinalizadores de bit.|
 |long long|8 bytes|Representa valores inteiros muito grandes.|
 
@@ -102,9 +102,7 @@ Quando você define uma **classe**, **struct**, **união**, ou **enum**, essa co
 
 - O compilador não tem conhecimento interno de um tipo definido pelo usuário. Ele aprende do tipo quando ele encontra a definição durante o processo de compilação pela primeira vez.
 
-- Você especifica que operações podem ser executadas em seu tipo, e como ele pode ser convertido em outros tipos, definindo (por meio de sobrecarga) os operadores apropriados, como membros de classe ou funções de não membro. Para obter mais informações, consulte [sobrecarregamento de função](function-overloading.md).
-
-- Não precisam ser estaticamente tipados (a regra é que o tipo de um objeto nunca muda). Por meio de mecanismos *herança* e *polimorfismo*, uma variável declarada como um tipo definido pelo usuário da classe (conhecido como uma instância do objeto de uma classe) pode ter um tipo diferente no tempo de execução que no tempo de compilação. Para obter mais informações, consulte [Herança](../cpp/inheritance-cpp.md).
+- Você especifica que operações podem ser executadas em seu tipo, e como ele pode ser convertido em outros tipos, definindo (por meio de sobrecarga) os operadores apropriados, como membros de classe ou funções de não membro. Para obter mais informações, consulte [sobrecarregamento de função](function-overloading.md)
 
 ## <a name="pointer-types"></a>Tipos de ponteiro
 

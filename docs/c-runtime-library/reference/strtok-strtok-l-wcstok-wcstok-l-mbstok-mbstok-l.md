@@ -1,6 +1,6 @@
 ---
 title: strtok, _strtok_l, wcstok, _wcstok_l, _mbstok, _mbstok_l
-ms.date: 11/04/2016
+ms.date: 03/25/2019
 apiname:
 - _mbstok_l
 - _mbstok
@@ -45,12 +45,12 @@ helpviewer_keywords:
 - _tcstok_l function
 - strtok_l function
 ms.assetid: 904cb734-f0d7-4d77-ba81-4791ddf461ae
-ms.openlocfilehash: bb791c7049379f62b99804fa8f1cf3a57fe0b749
-ms.sourcegitcommit: 0064d37467f958dd6a5111f20d7660eaccd53ee9
+ms.openlocfilehash: 22dd01a0b2558c83ca1e25875a2ace7dd4ee15c0
+ms.sourcegitcommit: 6e4dd21759caaed262a7255735cf8d6e8fb9f4d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58416956"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58476910"
 ---
 # <a name="strtok-strtokl-wcstok-wcstokl-mbstok-mbstokl"></a>strtok, _strtok_l, wcstok, _wcstok_l, _mbstok, _mbstok_l
 
@@ -81,11 +81,11 @@ wchar_t *wcstok_l(
    _locale_t locale
 );
 unsigned char *_mbstok(
-   unsigned char*strToken,
+   unsigned char *strToken,
    const unsigned char *strDelimit
 );
 unsigned char *_mbstok_l(
-   unsigned char*strToken,
+   unsigned char *strToken,
    const unsigned char *strDelimit,
    _locale_t locale
 );
@@ -104,7 +104,7 @@ Localidade a usar.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Retorna um ponteiro para o próximo token encontrado no *strToken*. Elas retornam **nulo** quando não há mais tokens são encontradas. Cada chamada modifica *strToken* substituindo um caractere nulo para o primeiro delimitador que ocorre após o token retornado.
+Retorna um ponteiro para o próximo token encontrado no *strToken*. As funções retornam **nulo** quando não há mais tokens são encontradas. Cada chamada modifica *strToken* substituindo um caractere nulo para o primeiro delimitador que ocorre após o token retornado.
 
 ## <a name="remarks"></a>Comentários
 
@@ -115,7 +115,9 @@ O **strtok** função localiza o próximo token no *strToken*. O conjunto de car
 
 Na primeira chamada para **strtok**, a função ignora delimitadores à esquerda e retorna um ponteiro para o primeiro token no *strToken*, encerrando o token com um caractere nulo. Mais tokens podem ser divididos, fora o restante da *strToken* por uma série de chamadas para **strtok**. Cada chamada para **strtok** modifica *strToken* inserindo um caractere nulo após o **token** retornado pela chamada. Para ler o próximo token de *strToken*, chame **strtok** com um **nulo** valor para o *strToken* argumento. O **nulo** *strToken* faz com que o argumento **strtok** para procurar o próximo token no modificado *strToken*. O *strDelimit* argumento pode assumir qualquer valor de uma chamada para o próximo, de modo que o conjunto de delimitadores pode variar.
 
-O valor de saída é afetado pela configuração da categoria **LC_CTYPE** da localidade. Consulte [setlocale](setlocale-wsetlocale.md) para obter mais informações. As versões dessas funções sem o sufixo **_l** usam a localidade atual desse comportamento dependente da localidade. As versões com o sufixo **_l** são idênticas, exceto por usarem o parâmetro de localidade passado em seu lugar. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+O valor de saída é afetado pela configuração da **LC_CTYPE** configuração de categoria da localidade. Para obter mais informações sobre, consulte [setlocale](setlocale-wsetlocale.md).
+
+As versões dessas funções sem o **l** sufixo usam a localidade atual desse comportamento dependente da localidade. As versões com o **l** sufixo são idênticas, exceto que eles usam o parâmetro de localidade passado em seu lugar. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
 > [!NOTE]
 > Cada função usa uma variável estática de thread local para classificar a cadeia de caracteres em tokens. Portanto, vários threads simultaneamente podem chamar essas funções sem efeitos indesejáveis. No entanto, em um único thread, chamadas intercaladas para uma dessas funções é tende muito a causar dados corrompidos e resultados imprecisos. Ao classificar cadeias de caracteres diferentes, termine de classificar uma cadeia de caracteres antes de começar a analisar a próxima. Além disso, fique ciente do potencial de risco ao chamar uma dessas funções de dentro de um loop em que outra função seja chamada. Se a outra função acaba usando uma dessas funções, uma sequência intercalada de chamadas resultará, disparando os dados corrompidos.

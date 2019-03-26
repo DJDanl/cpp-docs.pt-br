@@ -2,12 +2,12 @@
 title: Tratamento de exceção ARM
 ms.date: 07/11/2018
 ms.assetid: fe0e615f-c033-4ad5-97f4-ff96af45b201
-ms.openlocfilehash: cbbec3f40df2765fa76399ce667ae30f4533b018
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 8a2bae8e42ac6a624bebe7c185ac7e0ade8d5491
+ms.sourcegitcommit: 6e4dd21759caaed262a7255735cf8d6e8fb9f4d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57814534"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58476936"
 ---
 # <a name="arm-exception-handling"></a>Tratamento de exceção ARM
 
@@ -190,7 +190,7 @@ Quando o formato de desenrolamento compactado for insuficiente para descrever o 
 
 1. Se o *X* campo do cabeçalho é 1, os bytes de código de desenrolamento são seguidos pelas informações do manipulador de exceção. Isso consiste em uma *RVA de manipulador de exceção* que contém o endereço do manipulador de exceção, seguido imediatamente pela quantidade de dados exigidos pelo manipulador de exceção (comprimento variável).
 
-O registro .xdata é projetado para que seja possível buscar os primeiros 8 bytes e calcular o tamanho total do registro, sem incluir o comprimento dos dados de exceção de tamanho variável que se segue. Este trecho de código calcula o tamanho do registro:
+O registro .xdata é projetado para que seja possível buscar os primeiros 8 bytes e calcular o tamanho total do registro, sem incluir o comprimento dos dados de exceção de tamanho variável que se segue. Este snippet de código calcula o tamanho do registro:
 
 ```cpp
 ULONG ComputeXdataSize(PULONG *Xdata)
@@ -220,7 +220,7 @@ ULONG ComputeXdataSize(PULONG *Xdata)
 }
 ```
 
-Embora o prólogo e cada epílogo tenha um índice nos códigos de desenrolamento, a tabela é compartilhada entre eles. Não é incomum que eles possam todos compartilhar os mesmos códigos de desenrolamento. Recomendamos que os gravadores de compiladores sejam otimizados para este caso, pois o maior índice que pode ser especificado é 255, o que limita o número total possível de códigos de desenrolamento para uma função específica.
+Embora o prólogo e cada epílogo tem um índice nos códigos de desenrolamento, a tabela é compartilhada entre eles. Não é incomum que eles possam todos compartilhar os mesmos códigos de desenrolamento. Recomendamos que os gravadores de compiladores sejam otimizados para este caso, pois o maior índice que pode ser especificado é 255, o que limita o número total possível de códigos de desenrolamento para uma função específica.
 
 ### <a name="unwind-codes"></a>Códigos de desenrolamento
 
@@ -239,20 +239,20 @@ A tabela a seguir mostra o mapeamento de códigos de desenrolamento para opcodes
 |Byte 1|Byte 2|Byte 3|Byte 4|Tamanho de opcode|Explicação|
 |------------|------------|------------|------------|------------|-----------------|
 |00-7F||||16|`add   sp,sp,#X`<br /><br /> em que X é (código e 0x7F) \* 4|
-|80-BF|00-FF|||32|`pop   {r0-r12, lr}`<br /><br /> em que LR será exibido se Código e 0x2000 e r0-r12 forem exibidos se o bit correspondente for configurado em Código e 0x1FFF|
-|C0-CF||||16|`mov   sp,rX`<br /><br /> em que X é Código e 0x0F|
-|D0-D7||||16|`pop   {r4-rX,lr}`<br /><br /> em que X é (Código e 0x03) + 4 e LR será exibido se Código e 0x04|
-|D8-DF||||32|`pop   {r4-rX,lr}`<br /><br /> em que X é (Código e 0x03) + 8 e LR será exibido se Código e 0x04|
-|E0-E7||||32|`vpop  {d8-dX}`<br /><br /> em que X é (Código e 0x07) + 8|
+|80-BF|00-FF|||32|`pop   {r0-r12, lr}`<br /><br /> em que LR será exibido se código e 0x2000 e r0-r12 forem exibidos se o bit correspondente é definido no código e 0x1FFF|
+|C0-CF||||16|`mov   sp,rX`<br /><br /> em que X é código e 0x0F|
+|D0-D7||||16|`pop   {r4-rX,lr}`<br /><br /> em que X é (código e 0x03) + 4 e LR será exibido se código e 0x04|
+|D8-DF||||32|`pop   {r4-rX,lr}`<br /><br /> em que X é (código e 0x03) + 8 e LR será exibido se código e 0x04|
+|E0-E7||||32|`vpop  {d8-dX}`<br /><br /> em que X é (código e 0x07) + 8|
 |E8-EB|00-FF|||32|`addw  sp,sp,#X`<br /><br /> em que X é (código e 0x03FF) \* 4|
-|EC-ED|00-FF|||16|`pop   {r0-r7,lr}`<br /><br /> em que LR será exibido se Código e 0x0100 e r0-r7 forem exibidos se o bit correspondente for configurado em Código e 0x00FF|
+|EC-ED|00-FF|||16|`pop   {r0-r7,lr}`<br /><br /> em que LR será exibido se código e 0x0100 e r0-r7 forem exibidos se o bit correspondente é definido no código e 0x00FF|
 |EE|00-0F|||16|Específico da Microsoft|
 |EE|10-FF|||16|Disponível|
 |EF|00-0F|||32|`ldr   lr,[sp],#X`<br /><br /> em que X é (código e 0x000F) \* 4|
 |EF|10-FF|||32|Disponível|
 |F0-F4||||-|Disponível|
-|F5|00-FF|||32|`vpop  {dS-dE}`<br /><br /> em que S é (Código e 0x00F0) >> 4 e E é Código e 0x000F|
-|F6|00-FF|||32|`vpop  {dS-dE}`<br /><br /> em que S é ((Código e 0x00F0) >> 4) + 16 e E é (Código e 0x000F) + 16|
+|F5|00-FF|||32|`vpop  {dS-dE}`<br /><br /> em que S é (código e 0x00F0) >> 4 e E é código e 0x000F|
+|F6|00-FF|||32|`vpop  {dS-dE}`<br /><br /> em que S é ((Code & 0x00F0) >> 4) + 16 e E é (código e 0x000F) + 16|
 |F7|00-FF|00-FF||16|`add   sp,sp,#X`<br /><br /> em que X é (código e 0x00FFFF) \* 4|
 |F8|00-FF|00-FF|00-FF|16|`add   sp,sp,#X`<br /><br /> em que X é (código e 0x00FFFFFF) \* 4|
 |F9|00-FF|00-FF||32|`add   sp,sp,#X`<br /><br /> em que X é (código e 0x00FFFF) \* 4|
@@ -570,7 +570,7 @@ Epilogues:
 
 - Códigos de desenrolamento, iniciando na Palavra 5: (compartilhado entre o prólogo/epílogo)
 
-   - Código de desenrolamento 0 = 0x06: sp += (6 << 2)
+   - Código de desenrolamento 0 = 0x06: sp + = (6 << 2)
 
    - Código de desenrolamento 1 = 0xDE: pop {r4-r10, lr}
 
@@ -634,7 +634,7 @@ Epilogue:
 
    - Código de desenrolamento 1 = 0xDC: pop {r4-r8, lr}
 
-   - Código de desenrolamento 2 = 0x04: sp += (4 << 2)
+   - Código de desenrolamento 2 = 0x04: sp + = (4 << 2)
 
    - Código de desenrolamento 3 = 0xFD: end, é considerado uma instrução de 16 bits para o epílogo
 
@@ -688,7 +688,7 @@ Epilogue:
 
    - Código de desenrolamento 0 = 0xC7: sp = r7
 
-   - Código de desenrolamento 1 = 0x05: sp += (5 << 2)
+   - Código de desenrolamento 1 = 0x05: sp + = (5 << 2).
 
    - Código de desenrolamento 2 = 0xED/0x90: pop {r4, r7, lr}
 

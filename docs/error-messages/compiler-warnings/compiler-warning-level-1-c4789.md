@@ -1,17 +1,17 @@
 ---
 title: Compilador aviso (nível 1) C4789
-ms.date: 11/04/2016
+ms.date: 03/25/2019
 f1_keywords:
 - C4789
 helpviewer_keywords:
 - C4789
 ms.assetid: 5800c301-5afb-4af0-85c1-ceb54d775234
-ms.openlocfilehash: f489915f07eefd0909cbcd806a590f93f674c258
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 36a5032098c5caabb1b050833e487fd58679a782
+ms.sourcegitcommit: 6e4dd21759caaed262a7255735cf8d6e8fb9f4d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677390"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58476845"
 ---
 # <a name="compiler-warning-level-1-c4789"></a>Compilador aviso (nível 1) C4789
 
@@ -19,9 +19,11 @@ ms.locfileid: "50677390"
 
 ## <a name="remarks"></a>Comentários
 
-Avisa sobre quando específicas funções do C Runtime (CRT) são usadas, de estouro de buffer de parâmetros são passados, e as atribuições são executadas, de modo que os tamanhos de dados são conhecidos em tempo de compilação. Esse aviso é para situações em que talvez elude detecção de incompatibilidade de tamanho de dados típico.
+**C4789** avisa sobre estouros de buffer quando funções específicas de tempo de execução (CRT) de C são usadas. Ele também pode relatar incompatibilidade de tamanho quando os parâmetros são passados ou atribuições são feitas. O aviso é possível se os tamanhos de dados são conhecidos em tempo de compilação. Esse aviso é para situações em que talvez elude detecção de incompatibilidade de tamanho de dados típico.
 
-O aviso é exibido quando os dados, cujo tamanho é conhecido em tempo de compilação, são copiados e colocados em um bloco de dados cujo tamanho é conhecido no tempo de compilação para ser muito pequeno para os dados. A cópia deve ser feita usando o formulário intrínseco de uma das seguintes funções de CRT:
+**C4789** avisa quando dados são copiados em um bloco de dados que tem conhecida por ser muito pequeno em tempo de compilação.
+
+O aviso ocorre se a cópia usa a forma intrínseca de uma dessas funções de CRT:
 
 - [strcpy](../../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md)
 
@@ -29,18 +31,18 @@ O aviso é exibido quando os dados, cujo tamanho é conhecido em tempo de compil
 
 - [memcpy](../../c-runtime-library/reference/memcpy-wmemcpy.md), [wmemcpy](../../c-runtime-library/reference/memcpy-wmemcpy.md)
 
-O aviso também é exibida quando um parâmetro de tipo de dados é incompatível com o uso de uma conversão, e, em seguida, há a tentativa de uma atribuição de cópia de uma referência de lvalue.
+O aviso também é exibida quando você converter um parâmetro para um tipo de dados maior e, em seguida, fazer uma atribuição de cópia de uma referência de lvalue.
 
-Visual C++ pode gerar esse aviso para um caminho de código que nunca seja executado. Você pode desativar temporariamente o aviso usando `#pragma`, conforme mostrado neste exemplo:
+Visual C++ pode gerar esse aviso para um caminho de código que nunca será executado. Você pode desativar temporariamente o aviso usando `#pragma`, conforme mostrado neste exemplo:
 
 ```cpp
-#pragma(push)
-#pragma warning ( disable : 4789 )
+#pragma warning( push )
+#pragma warning( disable : 4789 )
 // unused code that generates compiler warning C4789`
-#pragma(pop)
+#pragma warning( pop )
 ```
 
-Isso impede que o Visual C++ gera o aviso para esse bloco específico de código. O `#pragma(push)` preserva o estado existente antes de `#pragma warning(disable: 4789)` altera-la. O `#pragma(pop)` restaura o estado pressionado e remove os efeitos da `#pragma warning(disable:4789)`. Para obter mais informações sobre a diretiva de pré-processador C++ `#pragma`, consulte [aviso](../../preprocessor/warning.md) e [diretivas Pragma e a palavra-chave pragma](../../preprocessor/pragma-directives-and-the-pragma-keyword.md).
+Essa linguagem impede que o Visual C++ gerando o aviso para esse bloco específico de código. O `#pragma warning(push)` preserva o estado existente antes de `#pragma warning(disable: 4789)` altera-la. O `#pragma warning(pop)` restaura o estado pressionado e remove os efeitos da `#pragma warning(disable:4789)`. Para obter mais informações sobre a diretiva de pré-processador C++ `#pragma`, consulte [aviso](../../preprocessor/warning.md) e [diretivas Pragma e a palavra-chave pragma](../../preprocessor/pragma-directives-and-the-pragma-keyword.md).
 
 ## <a name="example"></a>Exemplo
 
