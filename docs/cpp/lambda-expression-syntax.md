@@ -1,15 +1,15 @@
 ---
 title: Sintaxe da expressão lambda
-ms.date: 11/04/2016
+ms.date: 03/25/2019
 helpviewer_keywords:
 - lambda expressions [C++], syntax
 ms.assetid: 5d6154a4-f34d-4a15-970d-7e7de45f54e9
-ms.openlocfilehash: 030960cf8a301575396231cec1a37ff7bed2667f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2df2c203024e1b50cffdcb15af834fe09effaae2
+ms.sourcegitcommit: 6e4dd21759caaed262a7255735cf8d6e8fb9f4d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50577448"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58476848"
 ---
 # <a name="lambda-expression-syntax"></a>Sintaxe da expressão lambda
 
@@ -23,7 +23,7 @@ Um lambda combina os benefícios dos ponteiros de função com os objetos de fun
 
 Os exemplos a seguir comparam o uso de uma lambda ao uso de um objeto de função. O primeiro exemplo usa uma lambda para imprimir no console se cada elemento em um objeto `vector` é para ou ímpar. O segundo exemplo usa um objeto de função para realizar a mesma tarefa.
 
-## <a name="example-1-using-a-lambda"></a>Exemplo 1: Usando uma lambda
+## <a name="example-1-using-a-lambda"></a>Exemplo 1: Usando uma Lambda
 
 Este exemplo passa um lambda para o **for_each** função. O lambda imprime um resultado que indica se cada elemento em um `vector` objeto é par ou ímpar.
 
@@ -39,7 +39,7 @@ using namespace std;
 
 int main()
 {
-   // Create a vector object that contains 10 elements.
+   // Create a vector object that contains 9 elements.
    vector<int> v;
    for (int i = 1; i < 10; ++i) {
       v.push_back(i);
@@ -63,8 +63,6 @@ int main()
         << " even numbers in the vector." << endl;
 }
 ```
-
-### <a name="output"></a>Saída
 
 ```Output
 1 is odd
@@ -129,7 +127,7 @@ private:
 
 int main()
 {
-    // Create a vector object that contains 10 elements.
+    // Create a vector object that contains 9 elements.
     vector<int> v;
     for (int i = 1; i < 10; ++i) {
         v.push_back(i);
@@ -145,8 +143,6 @@ int main()
         << " even numbers in the vector." << endl;
 }
 ```
-
-## <a name="output"></a>Saída
 
 ```Output
 1 is odd
