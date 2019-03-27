@@ -13,12 +13,12 @@ helpviewer_keywords:
 - FR compiler option [C++]
 - symbolic browser information
 ms.assetid: 3fd8f88b-3924-4feb-9393-287036a28896
-ms.openlocfilehash: a75a9d143012dee7946591d708921d6734b2acda
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 73642baba77a62cac531ae7b2842ec9953b338ec
+ms.sourcegitcommit: 06fc71a46e3c4f6202a1c0bc604aa40611f50d36
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57811869"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58508696"
 ---
 # <a name="fr-fr-create-sbr-file"></a>/FR, /Fr (criar arquivo .Sbr)
 
@@ -32,6 +32,9 @@ Cria arquivos. SBR.
 ```
 
 ## <a name="remarks"></a>Comentários
+
+> [!WARNING]
+> Embora BSCMAKE ainda está instalado com o Visual Studio, ele não é mais usado pelo IDE. Desde o Visual Studio 2008, as informações de símbolo e procura são armazenadas automaticamente em um arquivo. sdf de SQL Server na pasta da solução.
 
 Durante o processo de compilação, a Microsoft procurar informações de arquivo manutenção Utility (BSCMAKE) usa esses arquivos para criar um. Arquivo BSC, que é usado para exibir informações de procura.
 
@@ -62,5 +65,5 @@ Se você não especificar `filename`, o arquivo. SBR obtém o mesmo nome base qu
 
 [Opções do arquivo de saída (/F)](output-file-f-options.md)<br/>
 [Opções do compilador MSVC](compiler-options.md)<br/>
-[Sintaxe de linha de comando do compilador MSVC](compiler-command-line-syntax.md)<br/>
+[Sintaxe da linha de comando do compilador MSVC](compiler-command-line-syntax.md)<br/>
 [Especificando o nome de caminho](specifying-the-pathname.md)

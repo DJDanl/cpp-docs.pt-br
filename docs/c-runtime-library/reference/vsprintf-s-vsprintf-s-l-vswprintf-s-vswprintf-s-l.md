@@ -1,6 +1,6 @@
 ---
 title: vsprintf_s, _vsprintf_s_l, vswprintf_s, _vswprintf_s_l
-ms.date: 11/04/2016
+ms.date: 03/26/2019
 apiname:
 - _vswprintf_s_l
 - vsprintf_s
@@ -36,12 +36,12 @@ helpviewer_keywords:
 - formatted text [C++]
 - _vswprintf_s_l function
 ms.assetid: 60e90518-57f0-4f1b-b732-f62a69702833
-ms.openlocfilehash: 055b2279be923712528463cb23ab3fd6b52897d7
-ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
+ms.openlocfilehash: 469a823d0f033a2f140d78a65cb0e69a3ef16d5c
+ms.sourcegitcommit: 06fc71a46e3c4f6202a1c0bc604aa40611f50d36
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57211024"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58508781"
 ---
 # <a name="vsprintfs-vsprintfsl-vswprintfs-vswprintfsl"></a>vsprintf_s, _vsprintf_s_l, vswprintf_s, _vswprintf_s_l
 
@@ -109,7 +109,7 @@ A localidade a ser usada.
 
 ## <a name="return-value"></a>Valor de retorno
 
-**vsprintf_s** e **vswprintf_s** retornar o número de caracteres gravados, não incluindo o caractere nulo de terminação ou um valor negativo se ocorrer um erro de saída. Se *buffer* ou *formato* é um ponteiro nulo, se a contagem for zero, ou se a cadeia de caracteres de formato contiver caracteres de formatação inválidos, o manipulador de parâmetro inválido será invocado, conforme descrito em [ Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, as funções retornarão -1 e defina **errno** à **EINVAL**.
+**vsprintf_s** e **vswprintf_s** retornar o número de caracteres gravados, não incluindo o caractere nulo de terminação ou um valor negativo se ocorrer um erro de saída. Se *buffer* ou *formato* é um ponteiro nulo, se *numberOfElements* for zero, ou se a cadeia de caracteres de formato contém formatação inválida caracteres, o manipulador de parâmetro inválido é invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, as funções retornarão -1 e defina **errno** à **EINVAL**.
 
 Para obter informações sobre esses e outros códigos de erro, consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
