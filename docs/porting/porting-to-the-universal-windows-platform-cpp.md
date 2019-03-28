@@ -2,12 +2,12 @@
 title: Portando para a Plataforma Universal do Windows (C++)
 ms.date: 11/04/2016
 ms.assetid: f662d2e4-8940-418d-8109-cb76cb8f8569
-ms.openlocfilehash: 06543ce27fe4fed839a6f6b885259e8cc1b180c6
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 6bda600abfea04e1158f6ff993e04e5076e4c24b
+ms.sourcegitcommit: 90817d9d78fbaed8ffacde63f3add334842e596f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518535"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58278457"
 ---
 # <a name="porting-to-the-universal-windows-platform-c"></a>Portando para a Plataforma Universal do Windows (C++)
 
@@ -21,7 +21,7 @@ Este tópico contém os procedimentos a seguir para portabilidade de código par
 
 - [Portabilidade de um Componente do Tempo de Execução do Windows 8.1 para a UWP](#BK_81Component)
 
-Se você tiver uma DLL de área de trabalho clássica Win32 e desejar chamá-la de um aplicativo da UWP, você poderá fazer isso também. Usando esses procedimentos, você pode criar uma camada da interface do usuário da UWP para um aplicativo C++ da área de trabalho do Windows clássica existente ou seu código C++ padrão de plataforma cruzada. Veja [Como usar o código C++ existente em um aplicativo da Plataforma Universal do Windows](../porting/how-to-use-existing-cpp-code-in-a-universal-windows-platform-app.md).
+Se você tiver uma DLL de área de trabalho clássica Win32 e desejar chamá-la de um aplicativo da UWP, você poderá fazer isso também. Usando esses procedimentos, você pode criar uma camada da interface do usuário da UWP para um aplicativo C++ da área de trabalho do Windows clássica existente ou seu código C++ padrão de plataforma cruzada. Confira [Como usar o código C++ existente em um aplicativo da Plataforma Universal do Windows](../porting/how-to-use-existing-cpp-code-in-a-universal-windows-platform-app.md).
 
 ## <a name="BK_81StoreApp"></a> Portabilidade de um aplicativo da Windows 8.1 Store para a UWP
 
@@ -74,7 +74,7 @@ Se você tiver uma DLL ou um Componente do Tempo de Execução do Windows que j�
 
 ### <a name="to-port-a-windows-81-runtime-component-to-the-uwp"></a>Para portar um Componente do Tempo de Execução do Windows 8.1 para a UWP
 
-1. Na caixa de diálogo **Novo Projeto** no Visual Studio 2017, localize o nó **Windows Universal**. Se você não vir esse nó, instale primeiro as [Ferramentas para Windows 10](http://go.microsoft.com/fwlink/p/?LinkID=617903). Escolha o modelo **Componente do Tempo de Execução do Windows**, dê um nome para seu componente e escolha o botão **OK**. O nome do componente será usado como o nome do namespace, então você talvez queira usar o mesmo nome do namespace do seu projeto antigo. Isso requer que você crie o projeto em uma pasta diferente da antiga. Se você escolher um nome diferente, você poderá atualizar o nome do namespace nos arquivos de código gerados.
+1. Na caixa de diálogo **Novo Projeto** no Visual Studio 2017, localize o nó **Windows Universal**. Se você não vir esse nó, instale primeiro o [SDK do Windows 10](https://developer.microsoft.com/windows/downloads/windows-10-sdk). Escolha o modelo **Componente do Tempo de Execução do Windows**, dê um nome para seu componente e escolha o botão **OK**. O nome do componente será usado como o nome do namespace, então você talvez queira usar o mesmo nome do namespace do seu projeto antigo. Isso requer que você crie o projeto em uma pasta diferente da antiga. Se você escolher um nome diferente, você poderá atualizar o nome do namespace nos arquivos de código gerados.
 
 1. Feche o projeto.
 
