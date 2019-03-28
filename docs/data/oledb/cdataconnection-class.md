@@ -1,6 +1,6 @@
 ---
 title: Classe CDataConnection
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - ATL::CDataConnection
 - ATL.CDataConnection
@@ -65,12 +65,12 @@ helpviewer_keywords:
 - operator CSession*
 - CSession* operator
 ms.assetid: 77432d85-4e20-49ec-a0b0-142137828471
-ms.openlocfilehash: 8a419a19c04b579c72df9938151f9ada657178f2
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 769dfc99f431cb5ba803075e28176713f9bd7092
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326531"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565500"
 ---
 # <a name="cdataconnection-class"></a>Classe CDataConnection
 
@@ -119,7 +119,7 @@ Com `CDataConnection`, você só precisará criar um objeto de conexão, passá-
 > [!NOTE]
 >  Se você estiver criando um aplicativo de banco de dados que precisa para lidar com várias sessões, você precisará usar [OpenNewSession](../../data/oledb/cdataconnection-opennewsession.md).
 
-## <a name="#cdataconnection"></a> Cdataconnection:: Cdataconnection
+## <a name="cdataconnection"></a> Cdataconnection:: Cdataconnection
 
 Cria uma instância e inicializa um `CDataConnection` objeto.
 
@@ -132,7 +132,7 @@ CDataConnection(const CDataConnection &ds);
 
 #### <a name="parameters"></a>Parâmetros
 
-*DS*<br/>
+*ds*<br/>
 [in] Uma referência a uma conexão de dados existente.
 
 ### <a name="remarks"></a>Comentários
@@ -141,7 +141,7 @@ A primeira substituição cria um novo `CDataConnection` objeto com as configura
 
 A segunda substituição cria um novo `CDataConnection` objeto com as configurações equivalentes ao objeto de conexão de dados que você especificar.
 
-## <a name="#copy"></a> Cdataconnection:: Copy
+## <a name="copy"></a> Cdataconnection:: Copy
 
 Cria uma cópia de uma conexão de dados existente.
 
@@ -153,10 +153,10 @@ CDataConnection& Copy(const CDataConnection & ds) throw();
 
 #### <a name="parameters"></a>Parâmetros
 
-*DS*<br/>
+*ds*<br/>
 [in] Uma referência a uma conexão de dados existente para copiar.
 
-## <a name="#open"></a> Cdataconnection:: Open
+## <a name="open"></a> Cdataconnection:: Open
 
 Abre uma conexão a uma fonte de dados usando uma cadeia de caracteres de inicialização.
 
@@ -175,7 +175,7 @@ HRESULT Open(LPCOLESTR szInitString) throw();
 
 Um HRESULT padrão.
 
-## <a name="#opennewsession"></a> Cdataconnection:: Opennewsession
+## <a name="opennewsession"></a> CDataConnection::OpenNewSession
 
 Abre uma nova sessão usando a fonte de dados do objeto de conexão atual.
 
@@ -187,7 +187,7 @@ HRESULT OpenNewSession(CSession & session) throw();
 
 #### <a name="parameters"></a>Parâmetros
 
-*Sessão*<br/>
+*session*<br/>
 [entrada/saída] Uma referência ao novo objeto de sessão.
 
 ### <a name="remarks"></a>Comentários

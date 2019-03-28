@@ -1,18 +1,18 @@
 ---
 title: Classe Platform::Collections::VectorViewIterator
-ms.date: 12/30/2016
+ms.date: 03/27/2019
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::VectorViewIterator::VectorViewIterator
 helpviewer_keywords:
 - VectorViewIterator Class
 ms.assetid: be3aa1ae-e6ba-4a06-8d6b-86d8128026f7
-ms.openlocfilehash: 4d4a591c6febdf6e34757251c4de5d01a9e2fa87
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 0de4ffb8e72c21490f07ae164aa23ffcd524c2b8
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57743746"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565656"
 ---
 # <a name="platformcollectionsvectorviewiterator-class"></a>Classe Platform::Collections::VectorViewIterator
 
@@ -61,7 +61,7 @@ O typename da classe de modelo de VectorViewIterator.
 |[VectorViewIterator::operator\[\]](#operator-at)|Recupera uma referência ao elemento que é um deslocamento especificado de VectorViewIterator atual.|
 |[Operador VectorViewIterator::operator+](#operator-plus)|Retorna um VectorViewIterator que referencia o elemento no deslocamento especificado do VectorViewIterator especificado.|
 |[Operador VectorViewIterator::operator++](#operator-increment)|Incrementa o VectorViewIterator atual.|
-|[Operador VectorViewIterator::operator+=](#operator-plus-assign)|Incrementa o VectorViewIterator atual pelo deslocamento especificado.|
+|[Operador VectorViewIterator::operator+=](#operator-plus-equals)|Incrementa o VectorViewIterator atual pelo deslocamento especificado.|
 |[Operador VectorViewIterator::operator<](#operator-less-than)|Indica se o VectorViewIterator atual é menor que um VectorViewIterator especificado.|
 |[Operador vectorviewiterator::\<Operator =](#operator-less-than-or-equals)|Indica se o VectorViewIterator atual é menor ou igual a um VectorViewIterator especificado.|
 |[VectorViewIterator::operator-= Operator](#operator-minus-assign)|Decrementa o VectorViewIterator atual pelo deslocamento especificado.|

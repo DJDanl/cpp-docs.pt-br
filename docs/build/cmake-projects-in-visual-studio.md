@@ -1,15 +1,15 @@
 ---
 title: Projetos do CMake no Visual Studio
-ms.date: 03/05/2019
+ms.date: 03/27/2019
 helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
-ms.openlocfilehash: 84511c0712fffcacc1f90d4bde808620e0a0ab0f
-ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
+ms.openlocfilehash: 479179d94a0534f5f0c790fea18e281053b686e2
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58356135"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565289"
 ---
 # <a name="cmake-projects-in-visual-studio"></a>Projetos do CMake no Visual Studio
 
@@ -58,7 +58,7 @@ Se você precisar passar argumentos para um executável no tempo de depuração,
 
 ## <a name="import-an-existing-cache"></a>Importar um cache existente
 
-Quando você importa um arquivo existente de cmakecache. txt, o Visual Studio automaticamente extrai variáveis personalizadas e cria um previamente preenchido [ **Cmakesettings** ](#cmake_settings) arquivo com base neles. O cache original não é modificado de forma alguma e ainda pode ser usado na linha de comando ou com qualquer ferramenta ou IDE que foi usado para gerá-lo. O novo **Cmakesettings** arquivo é colocado ao lado da raiz do projeto cmakelists. txt. O Visual Studio gera um novo cache com base no arquivo de configurações. Você pode substituir a geração automática de cache na caixa de diálogo **Ferramentas | Opções | CMake | Geral**.
+Quando você importa um arquivo CMakeCache.txt existente, o Visual Studio extrai as variáveis personalizadas automaticamente e cria um arquivo **CMakeSettings.json** pré-populado baseado nelas. O cache original não é modificado de forma alguma e ainda pode ser usado na linha de comando ou com qualquer ferramenta ou IDE que foi usado para gerá-lo. O novo **Cmakesettings** arquivo é colocado ao lado da raiz do projeto cmakelists. txt. O Visual Studio gera um novo cache com base no arquivo de configurações. Você pode substituir a geração automática de cache na caixa de diálogo **Ferramentas | Opções | CMake | Geral**.
 
 Nem tudo no cache é importado.  Propriedades, como o gerador e o local dos compiladores, são substituídas pelos padrões conhecidos por funcionar bem com o IDE.
 
@@ -132,7 +132,7 @@ Para limitar os builds e depurar sessões para um subconjunto dos projetos no es
 
 Caso precise obter mais informações sobre o estado do cache do CMake para diagnosticar um problema, abra o menu principal do **CMake** ou o menu de contexto de **CMakeLists.txt** no **Gerenciador de Soluções** para executar um destes comandos:
 
-- **Exibir Cache** abre o arquivo CMakeCache.txt na pasta raiz de build no editor. (Todas as edições feitas aqui em CMakeCache.txt são apagadas se o cache é limpo. Para fazer alterações que persistem depois que o cache é limpo, confira [Configurações do CMake e configurações personalizadas](#cmake_settings) anteriormente neste artigo.)
+- **Exibir Cache** abre o arquivo CMakeCache.txt na pasta raiz de build no editor. (Todas as edições feitas aqui em CMakeCache.txt são apagadas se o cache é limpo. Para fazer alterações persistirão depois que o cache é limpo, consulte [CMake personalizar configurações](customize-cmake-settings.md).)
 
 - **Abrir Pasta do Cache** abre uma janela do Explorer na pasta raiz de build.
 

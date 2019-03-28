@@ -1,6 +1,6 @@
 ---
 title: Classe COleDateTimeSpan
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - COleDateTimeSpan
 - ATLCOMTIME/ATL::COleDateTimeSpan
@@ -26,12 +26,12 @@ helpviewer_keywords:
 - Date data type, MFC encapsulation of
 - COleDateTimeSpan class
 ms.assetid: 7441526d-a30a-4019-8fb3-3fee6f897cbe
-ms.openlocfilehash: feef238be96d9a04c2c41e6955efec8b23cf6a89
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: b68a984488f37326f3b0c1249a5f17a3eb76548b
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57748483"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565643"
 ---
 # <a name="coledatetimespan-class"></a>Classe COleDateTimeSpan
 
@@ -45,13 +45,13 @@ class COleDateTimeSpan
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
 |[COleDateTimeSpan::COleDateTimeSpan](#coledatetimespan)|Constrói um objeto `COleDateTimeSpan`.|
 
-### <a name="public-methods"></a>Métodos Públicos
+### <a name="public-methods"></a>Métodos públicos
 
 |Nome|Descrição|
 |----------|-----------------|
@@ -745,7 +745,7 @@ Para obter uma breve descrição desses valores de status, consulte a lista a se
 - `COleDateTimeSpan::null` Indica que este `COleDateTimeSpan` objeto for nulo, ou seja, se nenhum valor foi fornecido para este objeto. (Isso é "null" no sentido de banco de dados de "não ter nenhum valor," em vez de nulo do C++)
 
    > [!CAUTION]
-   > Essa função é para situações de programação avançadas. Essa função não altera os dados neste objeto. Ele geralmente será usado para definir o status como **nulo** ou **inválido**. Observe que o operador de atribuição ( [operador =](#eq)) e [SetDateTimeSpan](#setdatetimespan) definir o status do objeto com base em valores de origem.
+   > Essa função é para situações de programação avançadas. Essa função não altera os dados neste objeto. Ele geralmente será usado para definir o status como **nulo** ou **inválido**. Observe que o operador de atribuição ([operador =](#operator_eq)) e [SetDateTimeSpan](#setdatetimespan) definir o status do objeto com base em valores de origem.
 
 ### <a name="example"></a>Exemplo
 

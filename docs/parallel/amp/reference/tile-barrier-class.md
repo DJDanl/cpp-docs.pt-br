@@ -1,6 +1,6 @@
 ---
 title: Classe tile_barrier
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - tile_barrier
 - AMP/tile_barrier
@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - tile_barrier class
 ms.assetid: b4ccdccb-0032-4e11-b7bd-dc9d43445dee
-ms.openlocfilehash: 4336a4cc317344c881f60e5ed4c5bdf8328a34b8
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: f0e742a0cc1a0809fc08b3862cadb7e3deb36fa8
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57301162"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58564977"
 ---
 # <a name="tilebarrier-class"></a>Classe tile_barrier
 
@@ -31,7 +31,7 @@ class tile_barrier;
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
@@ -56,7 +56,7 @@ class tile_barrier;
 
 **Namespace:** Concorrência
 
-## <a name="tile_barrier__ctor"></a>  Construtor de tile_barrier
+## <a name="ctor"></a>  Construtor de tile_barrier
 
 Inicializa uma nova instância da classe copiando uma existente.
 
@@ -72,7 +72,7 @@ tile_barrier(
 *_Other*<br/>
 O `tile_barrier` objeto a ser copiado.
 
-## <a name="wait"></a>  wait
+## <a name="wait"></a>Aguarde
 
 Instrui a todos os threads no grupo de segmentos (tile) para interromper a execução até que todos os threads no tile terminem de esperar.
 
@@ -82,7 +82,7 @@ Instrui a todos os threads no grupo de segmentos (tile) para interromper a execu
 void wait() const restrict(amp);
 ```
 
-## <a name="wait_with_all_memory_fence"></a>  wait_with_all_memory_fence
+## <a name="waitwithallmemoryfence"></a>wait_with_all_memory_fence
 
 Impede a execução de todos os threads em um bloco até que todos os threads em um bloco atinjam esta chamada. Isso garante que todos os acessos de memória sejam visíveis para outros threads no quadro de threads e que sejam executados na ordem do programa.
 
@@ -92,7 +92,7 @@ Impede a execução de todos os threads em um bloco até que todos os threads em
 void wait_with_all_memory_fence() const restrict(amp);
 ```
 
-## <a name="wait_with_global_memory_fence"></a>  wait_with_global_memory_fence
+## <a name="waitwithglobalmemoryfence"></a>wait_with_global_memory_fence
 
 Impede a execução de todos os threads em um bloco até que todos os threads em um bloco atinjam esta chamada. Isso garante que todos os acessos de memória global sejam visíveis para outros threads no quadro de threads e que sejam executados na ordem do programa.
 
@@ -102,7 +102,7 @@ Impede a execução de todos os threads em um bloco até que todos os threads em
 void wait_with_global_memory_fence() const  restrict(amp);
 ```
 
-## <a name="wait_with_tile_static_memory_fence"></a>  wait_with_tile_static_memory_fence
+## <a name="waitwithtilestaticmemoryfence"></a>wait_with_tile_static_memory_fence
 
 Impede a execução de todos os threads em um bloco até que todos os threads em um bloco atinjam esta chamada. Isso garante que `tile_static` memória acessos são visíveis para outros threads no quadro de threads e que sejam executados na ordem do programa.
 

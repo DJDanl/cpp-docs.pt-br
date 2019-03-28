@@ -1,6 +1,6 @@
 ---
 title: Classe CSid
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CSid
 - ATLSECURITY/ATL::CSid
@@ -21,12 +21,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSid class
 ms.assetid: be58b7ca-5958-49c3-a833-ca341aaaf753
-ms.openlocfilehash: 02b7cbb9e66e1e8297699503fc510247efed1629
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 4c8d05fd193254f2431bbec7692ff25420c1bf05
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57301890"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565864"
 ---
 # <a name="csid-class"></a>Classe CSid
 
@@ -86,8 +86,8 @@ class CSid
 |-|-|
 |[operator ==](#operator_eq_eq)|Testa dois objetos do descritor de segurança quanto à igualdade|
 |[operator !=](#operator_neq)|Testa dois objetos do descritor de segurança quanto à desigualdade|
-|[operador \<](#operator_lt_)|Compara o valor relativo de dois objetos do descritor de segurança.|
-|[operador >](#operator_gt_)|Compara o valor relativo de dois objetos do descritor de segurança.|
+|[operador \<](#operator_lt)|Compara o valor relativo de dois objetos do descritor de segurança.|
+|[operador >](#operator_gt)|Compara o valor relativo de dois objetos do descritor de segurança.|
 |[operador \<=](#operator_lt__eq)|Compara o valor relativo de dois objetos do descritor de segurança.|
 |[operador > =](#operator_gt__eq)|Compara o valor relativo de dois objetos do descritor de segurança.|
 
@@ -119,7 +119,7 @@ Retorna o LPCTSTR apontando para o nome da conta.
 
 Esse método tenta localizar um nome especificado `SID` (identificador de segurança). Para obter detalhes completos, consulte [LookupAccountSid](/windows/desktop/api/winbase/nf-winbase-lookupaccountsida).
 
-Se nenhum nome de conta para o `SID` pode ser encontrado, `AccountName` retorna uma cadeia de caracteres vazia. Isso pode ocorrer se um tempo limite da rede impede que esse método encontrando o nome. Isso também ocorre para identificadores de segurança com nenhum nome de conta correspondente, como um logon `SID` que identifica uma sessão de logon.
+Se nenhum nome de conta para o `SID` pode ser encontrado, `AccountName` retorna uma cadeia de caracteres vazia. Isso pode ocorrer se um tempo limite da rede impede que esse método encontrando o nome. Isso também ocorre para identificadores de segurança sem nome de conta correspondente, como um `SID` que identifica uma sessão de entrada.
 
 ##  <a name="csid"></a>  CSid::CSid
 
@@ -210,7 +210,7 @@ Retorna o `LPCTSTR` apontando para o domínio.
 
 Esse método tenta localizar um nome especificado `SID` (identificador de segurança). Para obter detalhes completos, consulte [LookupAccountSid](/windows/desktop/api/winbase/nf-winbase-lookupaccountsida).
 
-Se nenhum nome de conta para o `SID` pode ser encontrado, `Domain` retorna o domínio como uma cadeia de caracteres vazia. Isso pode ocorrer se um tempo limite da rede impede que esse método encontrando o nome. Isso também ocorre para identificadores de segurança com nenhum nome de conta correspondente, como um logon `SID` que identifica uma sessão de logon.
+Se nenhum nome de conta para o `SID` pode ser encontrado, `Domain` retorna o domínio como uma cadeia de caracteres vazia. Isso pode ocorrer se um tempo limite da rede impede que esse método encontrando o nome. Isso também ocorre para identificadores de segurança sem nome de conta correspondente, como um `SID` que identifica uma sessão de entrada.
 
 ##  <a name="equalprefix"></a>  CSid::EqualPrefix
 

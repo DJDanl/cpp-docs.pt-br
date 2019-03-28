@@ -1,6 +1,6 @@
 ---
 title: Classe CAnimationController
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CAnimationController
 - AFXANIMATIONCONTROLLER/CAnimationController
@@ -103,12 +103,12 @@ helpviewer_keywords:
 - CAnimationController [MFC], m_pTransitionFactory
 - CAnimationController [MFC], m_pTransitionLibrary
 ms.assetid: ed294c98-695e-40a6-b940-33ef1d40aa6b
-ms.openlocfilehash: 114b6bffdc63ecadc951965f8f199b229f0f7672
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: a3a533b876b9ca245c0553c4c24a815ef3cabca1
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270274"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565955"
 ---
 # <a name="canimationcontroller-class"></a>Classe CAnimationController
 
@@ -122,12 +122,12 @@ class CAnimationController : public CObject;
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
 |[CAnimationController::CAnimationController](#canimationcontroller)|Constrói um controlador de animação.|
-|[CAnimationController::~CAnimationController](#canimationcontroller__~canimationcontroller)|O destruidor. Chamado quando o objeto de controlador de animação está sendo destruído.|
+|[CAnimationController::~CAnimationController](#_dtorcanimationcontroller)|O destruidor. Chamado quando o objeto de controlador de animação está sendo destruído.|
 
 ### <a name="public-methods"></a>Métodos públicos
 

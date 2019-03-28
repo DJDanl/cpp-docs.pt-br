@@ -1,6 +1,6 @@
 ---
 title: '&lt;shared_mutex&gt;'
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - <shared_mutex>
 - shared_mutex/std::swap
@@ -45,12 +45,12 @@ f1_keywords:
 - shared_mutex/std::shared_timed_mutex::try_lock_shared_until
 - shared_mutex/std::shared_timed_mutex::unlock_shared
 ms.assetid: 0b37a97d-ee5d-4050-b29f-09db9f76beb3
-ms.openlocfilehash: 9823b01048eece557a4d29904f223841b626bc9a
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 97d77399357030feaa90228a1b0cdeb80d48034c
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57751811"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565380"
 ---
 # <a name="ltsharedmutex"></a>&lt;shared_mutex>
 
@@ -60,13 +60,13 @@ O cabeçalho &lt;shared_mutex > define as classes `shared_mutex` e `shared_timed
 
 |Classes|Descrição|
 |-------------|-----------------|
-|[shared_mutex Class](../standard-library/shared-mutex.md#class_shared_mutex)|Um tipo shared mutex que pode ser bloqueado exclusivamente por um agente ou compartilhado não exclusivamente por vários agentes.|
-|[shared_timed_mutex Class](../standard-library/shared-mutex.md#class_shared_timed_mutex)|Um tipo shared timed mutex que pode ser bloqueado exclusivamente por um agente ou compartilhado não exclusivamente por vários agentes.|
-|[shared_lock Class](../standard-library/shared-mutex.md#class_shared_lock)|Uma classe de modelo que encapsula um shared mutex para dar suporte a operações de tempo limite de bloqueio e compartilhamento não exclusivo por vários agentes.|
+|[shared_mutex Class](#class_shared_mutex)|Um tipo shared mutex que pode ser bloqueado exclusivamente por um agente ou compartilhado não exclusivamente por vários agentes.|
+|[shared_timed_mutex Class](#class_shared_timed_mutex)|Um tipo shared timed mutex que pode ser bloqueado exclusivamente por um agente ou compartilhado não exclusivamente por vários agentes.|
+|[shared_lock Class](#class_shared_lock)|Uma classe de modelo que encapsula um shared mutex para dar suporte a operações de tempo limite de bloqueio e compartilhamento não exclusivo por vários agentes.|
 
 |Funções|Descrição|
 |---------------|-----------------|
-|[swap](../standard-library/shared-mutex.md#function_swap)|Troca o conteúdo dos objetos shared mutex referenciados pelos parâmetros da função.|
+|[swap](#function_swap)|Troca o conteúdo dos objetos shared mutex referenciados pelos parâmetros da função.|
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -167,7 +167,7 @@ public:
    };
 ```
 
-###  <a name="&lt;shared"></a> Classe shared_lock
+###  <a name="class_shared_lock"></a> Classe shared_lock
 
 A classe de modelo `shared_lock` controla a propriedade compartilhada de um objeto shared mutex dentro de um escopo. O parâmetro de modelo deve ser de um tipo shared mutex.
 

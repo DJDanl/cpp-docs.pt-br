@@ -1,6 +1,6 @@
 ---
 title: Classe uninitialized_object
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - uninitialized_object
 - AMPRT/uninitialized_object
@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - uninitialized_object class
 ms.assetid: 6ae3c4e8-64a6-4511-a158-03be197b63af
-ms.openlocfilehash: 1c431364aee0f1d1e75059abdb023ae52cf92155
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 05c24672531d50fa9bc31587e6c6733fdff21f29
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57279322"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565526"
 ---
 # <a name="uninitializedobject-class"></a>Classe uninitialized_object
 
@@ -27,11 +27,11 @@ class uninitialized_object : public runtime_exception;
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
-|[Construtor de uninitialized_object](#ctor)|Inicializa uma nova instância da classe `uninitialized_object`.|
+|[Construtor de uninitialized_object](#uninitialized_object)|Inicializa uma nova instância da classe `uninitialized_object`.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -46,17 +46,18 @@ class uninitialized_object : public runtime_exception;
 **Cabeçalho:** amprt. h
 
 **Namespace:** Concorrência
-## <a name="uninitialized_object__ctor"></a> unsupported_feature
 
-Constrói uma nova instância da exceção de unsupported_feature.
+## <a name="uninitializedobject"></a>uninitialized_object
+
+Constrói uma nova instância do `uninitialized_object` exceção.
 
 ### <a name="syntax"></a>Sintaxe
 
 ```
-explicit unsupported_feature(
+explicit uninitialized_object(
     const char * _Message ) throw();
 
-unsupported_feature() throw();
+uninitialized_object() throw();
 ```
 
 ### <a name="parameters"></a>Parâmetros
@@ -66,7 +67,7 @@ Uma descrição do erro.
 
 ### <a name="return-value"></a>Valor de retorno
 
-O objeto `unsupported_feature`.
+O `uninitialized_object` objeto de exceção.
 
 ## <a name="see-also"></a>Consulte também
 

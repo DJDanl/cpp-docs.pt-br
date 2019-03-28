@@ -1,6 +1,6 @@
 ---
 title: Operadores de atribuição
-ms.date: 03/05/2018
+ms.date: 03/27/2019
 f1_keywords:
 - =
 - '*='
@@ -31,20 +31,20 @@ helpviewer_keywords:
 - /= operator
 - <<= operator
 ms.assetid: b028cf35-2ff1-4f14-9027-fd53ebec8aa0
-ms.openlocfilehash: 44211e43a0449c8a50ff03cac31eeed1fcc49a28
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 758c82f02d2b113f6c750f7f0ede662c97b646b0
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51328468"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565474"
 ---
 # <a name="assignment-operators"></a>Operadores de atribuição
 
 ## <a name="syntax"></a>Sintaxe
 
-*expressão* *operador de atribuição* *expressão*
+*expression* *assignment-operator* *expression*
 
-*operador de atribuição* : um dos<br/>
+*assignment-operator* : one of<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<strong>=&nbsp;&nbsp;&nbsp;*=&nbsp;&nbsp;&nbsp;/=&nbsp;&nbsp;&nbsp;%=&nbsp;&nbsp;&nbsp;+=&nbsp;&nbsp;&nbsp;-=&nbsp;&nbsp;&nbsp;\<\<=&nbsp;&nbsp;&nbsp;>>=&nbsp;&nbsp;&nbsp;&=&nbsp;&nbsp;&nbsp;^=&nbsp;&nbsp;&nbsp;\|=</strong>
 
 ## <a name="remarks"></a>Comentários
@@ -57,7 +57,7 @@ Os operadores de atribuição armazenam um valor no objeto designado pelo operan
 
 Todos os operadores de atribuição na tabela a seguir, exceto o operador =, são operadores de atribuição composta.
 
-### <a name="assignment-operators"></a>Operadores de atribuição
+### <a name="assignment-operators-table"></a>Tabela de operadores de atribuição
 
 |Operador|Significado|
 |--------------|-------------|
@@ -73,7 +73,7 @@ Todos os operadores de atribuição na tabela a seguir, exceto o operador =, sã
 |**^=**|Obtém o bit a bit exclusivo OR do primeiro e do segundo operandos; armazena o resultado no objeto especificado pelo primeiro operando.|
 |**\|=**|Obtém o bit a bit inclusivo OR do primeiro e do segundo operandos; armazena o resultado no objeto especificado pelo primeiro operando.|
 
-**Palavras-chave do operador**
+### <a name="operator-keywords"></a>Palavras-chave de operador
 
 Três dos operadores de atribuição composta têm equivalentes de texto. Elas são:
 
@@ -180,7 +180,7 @@ pode ter um dos seguintes efeitos
 
 ## <a name="compound-assignment"></a>Atribuição composta
 
-Os operadores de atribuição composta, mostrados na tabela [operadores de atribuição](#assignment-operators), são especificadas no formulário *e1* *op*= *e2*, onde *e1* é um l-value modificável não de **const** tipo e *e2* é um dos seguintes:
+Os operadores de atribuição composta, mostrados na [tabela de operadores de atribuição](#assignment-operators-table), são especificadas no formulário *e1* *op*= *e2*, onde *e1* é um l-value modificável não do **const** tipo e *e2* é um dos seguintes:
 
 - Um tipo aritmético
 

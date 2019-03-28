@@ -1,19 +1,19 @@
 ---
 title: Defina o compilador C++ e compilar propriedades no Visual Studio
 description: Use o IDE do Visual Studio para alterar as opções de compilador e vinculador C++ e outras configurações de compilação.
-ms.date: 12/10/2018
+ms.date: 03/27/2019
 helpviewer_keywords:
 - project properties [C++], modifying
 - properties [C++]
 - Visual C++ projects, properties
 - projects [C++], properties
 ms.assetid: 9b0d6f8b-7d4e-4e61-aa75-7d14944816cd
-ms.openlocfilehash: 55adb6dc91919bda9c2827a89e5de536667085c1
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: ab5456bfc8a1b8305813f4ee4a4399091de15aee
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57824629"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58564900"
 ---
 # <a name="set-compiler-and-build-properties"></a>Defina o compilador e propriedades de compilação
 
@@ -65,7 +65,7 @@ A ilustração a seguir mostra as páginas de propriedades para um projeto do Vi
 
 ![Páginas de propriedades do projeto](media/project_property_pages_vc.png "Project_Property_Pages_VC")
 
-Use o Editor de Propriedades para exibir os valores de todas as macros disponíveis. As macros são abordadas na seção [Macros da página de propriedades](#bkmkPropertiesVersusMacros) mais adiante neste artigo.
+Use o Editor de Propriedades para exibir os valores de todas as macros disponíveis.
 
 ### <a name="predefined-macros"></a>Macros predefinidas
 
@@ -79,7 +79,7 @@ Tem a sintaxe `%(name)`. Para um arquivo, uma macro de item se aplica somente a 
 
 Crie *macros definidas pelo usuário* para usar como variáveis em builds do projeto. Por exemplo, você pode criar uma macro definida pelo usuário que forneça um valor a uma etapa personalizada de compilação ou a uma ferramenta personalizada de compilação. Uma macro definida é um par de nome/valor. Em um arquivo de projeto, use a notação **$(**<em>name</em>**)** para acessar o valor.
 
-Uma macro definida pelo usuário é armazenada em uma folha de propriedades. Se seu projeto ainda não contiver uma folha de propriedades, você pode criar um seguindo as etapas descritas em [resuse ou compartilhamento de configurações de projeto do Visual Studio C++](#bkmkPropertySheets).
+Uma macro definida pelo usuário é armazenada em uma folha de propriedades. Se seu projeto ainda não contiver uma folha de propriedades, você pode criar um seguindo as etapas descritas em [reutilização ou compartilhamento de configurações de projeto do Visual Studio](create-reusable-property-configurations.md).
 
 #### <a name="to-create-a-user-defined-macro"></a>Para criar uma macro definida pelo usuário
 
@@ -128,13 +128,13 @@ No painel direito, modifique as configurações do projeto **Ambiente** ou **Amb
 
 ## <a name="in-this-section"></a>Nesta seção
 
-[Resuse ou compartilhamento de configurações de projeto do Visual Studio](create-reusable-property-configurations.md)<br/>
+[Compartilhamento ou reutilização das configurações de projeto do Visual Studio](create-reusable-property-configurations.md)<br/>
 Como criar um arquivo. Props com as configurações de compilação personalizados que podem ser compartilhadas ou resused.
 
 [Herança de propriedade do projeto](project-property-inheritance.md)<br/>
 Descreve a ordem de avaliação para. Props,. targets, arquivos. vcxproj e variáveis de ambiente no processo de compilação.
 
-[Modificar as propriedades e destinos sem alterar o arquivo de projeto](modify-project-properties-without-changing-project-file.md)<br/>
+[Modificação de propriedades e destinos sem alteração do arquivo de projeto](modify-project-properties-without-changing-project-file.md)<br/>
 Como criar configurações de build temporários sem ter que modificar um arquivo de projeto. 
 
 ## <a name="see-also"></a>Consulte também

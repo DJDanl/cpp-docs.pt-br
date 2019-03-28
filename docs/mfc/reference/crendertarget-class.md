@@ -1,6 +1,6 @@
 ---
 title: Classe CRenderTarget
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CRenderTarget
 - AFXRENDERTARGET/CRenderTarget
@@ -114,12 +114,12 @@ helpviewer_keywords:
 - CRenderTarget [MFC], m_pRenderTarget
 - CRenderTarget [MFC], m_pTextFormatDefault
 ms.assetid: 30d1607d-68d3-4d14-ac36-fdbd0ef903a1
-ms.openlocfilehash: 112bd4422a1fa6b9b97239228dc586a0555ddc96
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: a14a1fba25c8c38c4bcf441dda566f14dc790f76
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259874"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565748"
 ---
 # <a name="crendertarget-class"></a>Classe CRenderTarget
 
@@ -133,12 +133,12 @@ class CRenderTarget : public CObject;
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
 |[CRenderTarget::CRenderTarget](#crendertarget)|Constrói um objeto CRenderTarget.|
-|[CRenderTarget::~CRenderTarget](#crendertarget__~crendertarget)|O destruidor. Chamado quando um objeto de destino de renderização está sendo destruído.|
+|[CRenderTarget::~CRenderTarget](#_dtorcrendertarget)|O destruidor. Chamado quando um objeto de destino de renderização está sendo destruído.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
@@ -502,7 +502,7 @@ Desenha o contorno de um retângulo que tem as dimensões especificadas e o esti
 
 ```
 void DrawRectangle(
-    const CD2DRectF& rect,
+    const CD2DRectF& rectangle,
     CD2DBrush* pBrush,
     FLOAT fStrokeWidth = 1.0,
     ID2D1StrokeStyle* strokeStyle = NULL);
@@ -510,7 +510,7 @@ void DrawRectangle(
 
 ### <a name="parameters"></a>Parâmetros
 
-*rect*<br/>
+*rectangle*<br/>
 As dimensões do retângulo a ser desenhada, em pixels independentes de dispositivo
 
 *pBrush*<br/>
@@ -555,7 +555,7 @@ Desenha o texto especificado usando as informações de formato fornecidas por u
 ```
 void DrawText(
     const CString& strText,
-    const CD2DRectF& rect,
+    const CD2DRectF& rectangle,
     CD2DBrush* pForegroundBrush,
     CD2DTextFormat* textFormat = NULL,
     D2D1_DRAW_TEXT_OPTIONS options = D2D1_DRAW_TEXT_OPTIONS_NONE,
@@ -567,7 +567,7 @@ void DrawText(
 *strText*<br/>
 Um ponteiro para uma matriz de caracteres Unicode para desenhar.
 
-*rect*<br/>
+*rectangle*<br/>
 O tamanho e posição da área na qual o texto é desenhado.
 
 *pForegroundBrush*<br/>
@@ -714,13 +714,13 @@ Pinta o interior do retângulo especificado.
 
 ```
 void FillRectangle(
-    const CD2DRectF& rect,
+    const CD2DRectF& rectangle,
     CD2DBrush* pBrush);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*rect*<br/>
+*rectangle*<br/>
 A dimensão do retângulo para pintar, em pixels independentes de dispositivo.
 
 *pBrush*<br/>
@@ -999,7 +999,7 @@ void PushAxisAlignedClip(
 O tamanho e posição da área de recorte, em pixels independentes de dispositivo.
 
 *modo*<br/>
-O modo de suavização é usado para desenhar as bordas do clipe rects que têm limites de subpixel e para misturar o clipe com o conteúdo da cena. O processo de mesclagem é executado uma vez quando o método PopAxisAlignedClip é chamado e não se aplicam a cada primitiva dentro da camada.
+O modo de suavização é usado para desenhar as bordas dos retângulos de recorte que têm limites de subpixel e para misturar o clipe com o conteúdo da cena. O processo de mesclagem é executado uma vez quando o método PopAxisAlignedClip é chamado e não se aplicam a cada primitiva dentro da camada.
 
 ##  <a name="pushlayer"></a>  CRenderTarget::PushLayer
 
