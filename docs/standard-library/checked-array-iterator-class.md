@@ -1,6 +1,6 @@
 ---
 title: Classe checked_array_iterator
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - iterator/checked_array_iterator
 - iterator/stdext::checked_array_iterator::difference_type
@@ -13,12 +13,12 @@ helpviewer_keywords:
 - stdext::checked_array_iterator [C++], reference
 - stdext::checked_array_iterator [C++], base
 ms.assetid: 7f07185e-d588-4ae3-9c4f-84ec4aa25a28
-ms.openlocfilehash: 2d7788a33321f794af6b395de3188bc51f662ad0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 688b93902da5b4492812b4715a248db9561ec258
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476590"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565708"
 ---
 # <a name="checkedarrayiterator-class"></a>Classe checked_array_iterator
 
@@ -495,7 +495,7 @@ Consulte um exemplo de código em [checked_array_iterator::operator&lt;](#op_lt)
 
 Para obter mais informações, consulte [Iteradores verificados](../standard-library/checked-iterators.md).
 
-## <a name="lt_eq"></a>  checked_array_iterator::operator&lt;=
+## <a name="op_lt_eq"></a>  checked_array_iterator::operator&lt;=
 
 Testa se o `checked_array_iterator` à esquerda do operador é menor ou igual ao `checked_array_iterator` à direita.
 
@@ -514,7 +514,7 @@ Consulte um exemplo de código em [checked_array_iterator::operator&gt;=](#op_gt
 
 Para obter mais informações, consulte [Iteradores verificados](../standard-library/checked-iterators.md).
 
-## <a name="gt_eq"></a>  checked_array_iterator::operator&gt;=
+## <a name="op_gt_eq"></a>  checked_array_iterator::operator&gt;=
 
 Testa se o `checked_array_iterator` à esquerda do operador é maior ou igual ao `checked_array_iterator` à direita.
 
@@ -697,7 +697,7 @@ int main() {
 */
 ```
 
-## <a name="checked_array_iterator__operator--"></a>  checked_array_iterator::operator--
+## <a name="operator--"></a>  checked_array_iterator::operator--
 
 Decrementa o `checked_array_iterator` para o elemento anterior.
 
@@ -755,7 +755,7 @@ checked_array_iterator<_Iterator>& operator+=(difference_type _Off);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Off*<br/>
+*_Off*<br/>
 O deslocamento pelo qual incrementar o iterador.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -803,7 +803,7 @@ checked_array_iterator<_Iterator> operator+(difference_type _Off) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*Off*<br/>
+*_Off*<br/>
 O deslocamento a ser adicionado a `checked_array_iterator`.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -841,7 +841,7 @@ int main() {
 */
 ```
 
-## <a name="checked_array_iterator__operator-_eq"></a>  checked_array_iterator::operator-=
+## <a name="operator-_eq"></a>  checked_array_iterator::operator-=
 
 Decrementa um deslocamento especificado de um `checked_array_iterator`.
 
@@ -851,7 +851,7 @@ checked_array_iterator<_Iterator>& operator-=(difference_type _Off);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Off*<br/>
+*_Off*<br/>
 O deslocamento pelo qual incrementar o iterador.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -890,7 +890,7 @@ int main() {
 */
 ```
 
-## <a name="checked_array_iterator__operator-"></a>  checked_array_iterator::operator-
+## <a name="operator-"></a>  checked_array_iterator::operator-
 
 Decrementa um deslocamento de um iterador e retorna o novo `checked_array_iterator` que trata o elemento inserido na nova posição de deslocamento.
 
@@ -902,7 +902,7 @@ difference_type operator-(const checked_array_iterator& right) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*Off*<br/>
+*_Off*<br/>
 O deslocamento a ser decrementado do `checked_array_iterator`.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -910,8 +910,6 @@ O deslocamento a ser decrementado do `checked_array_iterator`.
 Um `checked_array_iterator` que trata o elemento de deslocamento.
 
 ### <a name="remarks"></a>Comentários
-
-Consulte um exemplo de código em [checked_array_iterator::operator-](#operator-).
 
 Para obter mais informações, consulte [Iteradores verificados](../standard-library/checked-iterators.md).
 
@@ -925,7 +923,7 @@ reference operator[](difference_type _Off) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*Off*<br/>
+*_Off*<br/>
 O deslocamento do endereço `checked_array_iterator`.
 
 ### <a name="return-value"></a>Valor de retorno

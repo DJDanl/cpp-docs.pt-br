@@ -1,6 +1,6 @@
 ---
 title: Classe CPathT
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CPathT
 - ATLPATH/ATL::CPathT
@@ -49,19 +49,19 @@ f1_keywords:
 helpviewer_keywords:
 - CPathT class
 ms.assetid: eba4137d-1fd2-4b44-a2e1-0944db64df3c
-ms.openlocfilehash: 36d8710bd7bb055d8629dec57ec4d8c3602c8f79
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 109f9baefd0e6775db05eeba8cb78542bf60a9ac
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57273017"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565772"
 ---
 # <a name="cpatht-class"></a>Classe CPathT
 
 Essa classe representa um caminho.
 
 > [!IMPORTANT]
->  Essa classe e seus membros não podem ser usados em aplicativos executados no tempo de execução do Windows.
+> Essa classe e seus membros não podem ser usados em aplicativos executados no tempo de execução do Windows.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -139,7 +139,7 @@ A classe de cadeia de caracteres ATL/MFC a ser usado para o caminho (consulte [C
 |----------|-----------------|
 |[CPathT::operator StringType de const &](#operator_const_stringtype_amp)|Esse operador permite que o objeto a ser tratado como uma cadeia de caracteres.|
 |[CPathT::operator CPathT::PCXSTR](#operator_cpatht__pcxstr)|Esse operador permite que o objeto a ser tratado como uma cadeia de caracteres.|
-|[CPathT::operator StringType &](#operator_stringtype)|Esse operador permite que o objeto a ser tratado como uma cadeia de caracteres.|
+|[CPathT::operator StringType &](#operator_stringtype_amp)|Esse operador permite que o objeto a ser tratado como uma cadeia de caracteres.|
 |[+ CPathT::operator =](#operator_add_eq)|Esse operador acrescenta uma cadeia de caracteres para o caminho.|
 
 ### <a name="public-data-members"></a>Membros de Dados Públicos
@@ -653,7 +653,7 @@ Retorna o caminho de atualização.
 Esse operador permite que o objeto a ser tratado como uma cadeia de caracteres.
 
 ```
-operatorconst StringType&() const throw();
+operator const StringType&() const throw();
 ```
 
 ### <a name="return-value"></a>Valor de retorno
@@ -665,19 +665,19 @@ Retorna uma cadeia de caracteres que representa o caminho atual gerenciado por e
 Esse operador permite que o objeto a ser tratado como uma cadeia de caracteres.
 
 ```
-operatorPCXSTR() const throw();
+operator PCXSTR() const throw();
 ```
 
 ### <a name="return-value"></a>Valor de retorno
 
 Retorna uma cadeia de caracteres que representa o caminho atual gerenciado por este objeto.
 
-##  <a name="operator_stringtype__amp"></a>  CPathT::operator StringType &amp;
+##  <a name="operator_stringtype_amp"></a>  CPathT::operator StringType &amp;
 
 Esse operador permite que o objeto a ser tratado como uma cadeia de caracteres.
 
 ```
-operatorStringType&() throw();
+operator StringType&() throw();
 ```
 
 ### <a name="return-value"></a>Valor de retorno

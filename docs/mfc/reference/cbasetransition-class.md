@@ -1,6 +1,6 @@
 ---
 title: Classe CBaseTransition
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CBaseTransition
 - AFXANIMATIONCONTROLLER/CBaseTransition
@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CBaseTransition [MFC], m_transition
 - CBaseTransition [MFC], m_type
 ms.assetid: dfe84007-bbc5-43b7-b5b8-fae9145573bf
-ms.openlocfilehash: 1f9bc3708974511506741a35c11676df2b0be592
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 37bf536403d0edfc16b098929a4758a6c6958cf1
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57258366"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565903"
 ---
 # <a name="cbasetransition-class"></a>Classe CBaseTransition
 
@@ -73,8 +73,8 @@ class CBaseTransition : public CObject;
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CBaseTransition::CBaseTransition](#cbasetransition)|Constrói um objeto transtion base.|
-|[CBaseTransition::~CBaseTransition](#cbasetransition__~cbasetransition)|O destruidor. Chamado quando um objeto de transição está sendo destruído.|
+|[CBaseTransition::CBaseTransition](#cbasetransition)|Constrói um objeto de base de transição.|
+|[CBaseTransition::~CBaseTransition](#_dtorcbasetransition)|O destruidor. Chamado quando um objeto de transição está sendo destruído.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
@@ -170,7 +170,7 @@ Aplica-se a transição para a variável relacionada no storyboard. Se o quadro-
 
 ##  <a name="cbasetransition"></a>  CBaseTransition::CBaseTransition
 
-Constrói um objeto transtion base.
+Constrói um objeto de base de transição.
 
 ```
 CBaseTransition();
@@ -228,7 +228,7 @@ Um ponteiro válido para um quadro-chave, ou nulo se não deve ser inserida uma 
 
 ### <a name="remarks"></a>Comentários
 
-Esse método pode ser usado para acessar um objeto de quadro-chave que foi anteriormente definido pela SetKeyframes. Ele é chamado pelo código de nível superior quando as transições que estão sendo adicionadas ao storyboard.
+Esse método pode ser usado para acessar um objeto de quadro-chave que foi anteriormente definido pela SetKeyframes. É chamado pelo código de nível superior quando as transições que estão sendo adicionadas ao criar o storyboard.
 
 ##  <a name="getrelatedvariable"></a>  CBaseTransition::GetRelatedVariable
 
@@ -260,7 +260,7 @@ Um ponteiro válido para um quadro-chave, ou nulo se não deve começar a uma tr
 
 ### <a name="remarks"></a>Comentários
 
-Esse método pode ser usado para acessar um objeto de quadro-chave que foi anteriormente definido pela SetKeyframes. Ele é chamado pelo código de nível superior quando as transições que estão sendo adicionadas ao storyboard.
+Esse método pode ser usado para acessar um objeto de quadro-chave que foi anteriormente definido pela SetKeyframes. É chamado pelo código de nível superior quando as transições que estão sendo adicionadas ao criar o storyboard.
 
 ##  <a name="gettransition"></a>  CBaseTransition::GetTransition
 

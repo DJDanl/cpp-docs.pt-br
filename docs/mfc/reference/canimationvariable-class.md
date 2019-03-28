@@ -1,6 +1,6 @@
 ---
 title: Classe CAnimationVariable
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CAnimationVariable
 - AFXANIMATIONCONTROLLER/CAnimationVariable
@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CAnimationVariable [MFC], m_pParentObject
 - CAnimationVariable [MFC], m_variable
 ms.assetid: 506e697e-31a8-4033-a27e-292f4d7b42d9
-ms.openlocfilehash: 335d29e1e2e8e5b54ec1434a4c072ff3909b3823
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 42fd3ddc504e85ba3f69588bee54c6540b628129
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57269026"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565747"
 ---
 # <a name="canimationvariable-class"></a>Classe CAnimationVariable
 
@@ -63,12 +63,12 @@ class CAnimationVariable;
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
 |[CAnimationVariable::CAnimationVariable](#canimationvariable)|Constrói um objeto de variável de animação.|
-|[CAnimationVariable::~CAnimationVariable](#canimationvariable__~canimationvariable)|O destruidor. Chamado quando um objeto CAnimationVariable está sendo destruído.|
+|[CAnimationVariable::~CAnimationVariable](#_dtorcanimationvariable)|O destruidor. Chamado quando um objeto CAnimationVariable está sendo destruído.|
 
 ### <a name="public-methods"></a>Métodos públicos
 

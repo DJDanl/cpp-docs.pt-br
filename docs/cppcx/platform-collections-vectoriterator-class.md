@@ -1,18 +1,18 @@
 ---
 title: Classe Platform::Collections::VectorIterator
-ms.date: 12/30/2016
+ms.date: 03/27/2019
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::VectorIterator::VectorIterator
 helpviewer_keywords:
 - VectorIterator Class
 ms.assetid: d531cb42-27e0-48a6-bf5e-c265891a18ff
-ms.openlocfilehash: 448ce9e9c6c937d5f95640dca8fa2d2ed20bb4b8
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 55f4e7f1d9367779d131796fdf29e6098eb6aa0f
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57743230"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565751"
 ---
 # <a name="platformcollectionsvectoriterator-class"></a>Classe Platform::Collections::VectorIterator
 
@@ -64,11 +64,11 @@ O typename da classe de modelo de VectorIterator.
 |[Operador VectorIterator::operator+=](#operator-plus-assign)|Incrementa o VectorIterator atual pelo deslocamento especificado.|
 |[Operador VectorIterator::operator<](#operator-less-than)|Indica se o VectorIterator atual é menor que um VectorIterator especificado.|
 |[Operador vectoriterator::\<Operator =](#operator-less-than-or-equals)|Indica se o VectorIterator atual é menor ou igual a um VectorIterator especificado.|
-|[Operador VectorIterator::operator-=](#operator-subtract-assign)|Decrementa o VectorIterator atual pelo deslocamento especificado.|
+|[Operador VectorIterator::operator-=](#operator-minus-equals)|Decrementa o VectorIterator atual pelo deslocamento especificado.|
 |[Operador VectorIterator::operator==](#operator-equality)|Indica se o VectorIterator atual é igual a um VectorIterator especificado.|
 |[Operador VectorIterator::operator>](#operator-greater-than)|Indica se o VectorIterator atual é maior que um VectorIterator especificado.|
 |[Operador VectorIterator::operator->](#operator-arrow)|Recupera o endereço do elemento referenciado pelo VectorIterator atual.|
-|[Operador VectorIterator::operator>=](#operator-greater-than-or-equal)|Indica se o VectorIterator atual é maior ou igual a um VectorIterator especificado.|
+|[Operador VectorIterator::operator>=](#operator-greater-than-or-equals)|Indica se o VectorIterator atual é maior ou igual a um VectorIterator especificado.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 

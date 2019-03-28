@@ -1,6 +1,6 @@
 ---
 title: Funções globais TypeLib e registro
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - atlbase/ATL::AtlGetPerUserRegistration
 - afxpriv/ATL::AfxRegCreateKey
@@ -17,12 +17,12 @@ f1_keywords:
 helpviewer_keywords:
 - RegistryDataExchange function, global functions
 ms.assetid: d58b8a4e-975c-4417-8b34-d3c847f679b3
-ms.openlocfilehash: f94dd1770ff194e47e2e38cc3a9b5cf0cbaebe58
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c5fdaceb47b6cd09dd9d66f26af1337a8dc6bbae
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57301825"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58566007"
 ---
 # <a name="registry-and-typelib-global-functions"></a>Funções globais TypeLib e registro
 
@@ -33,8 +33,8 @@ Essas funções dão suporte para carregar e registrar uma biblioteca de tipos.
 
 |||
 |-|-|
-|[AfxRegCreateKey](#afxrefcreatekey)|Cria a chave do Registro especificada.|
-|[AfxRegDeleteKey](#afxrefdeletekey)|Exclui a chave do Registro especificada.|
+|[AfxRegCreateKey](#afxregcreatekey)|Cria a chave do Registro especificada.|
+|[AfxRegDeleteKey](#afxregdeletekey)|Exclui a chave do Registro especificada.|
 |[AfxRegisterPreviewHandler](#afxregisterpreviewhandler)|Um auxiliar para registrar um manipulador de visualização.|
 |[AfxUnregisterPreviewHandler](#afxunregisterpreviewhandler)| Um auxiliar para cancelar o registro de um Gerenciador de visualização. |
 |[AtlRegisterTypeLib](#atlregistertypelib)|Essa função é chamada para registrar uma biblioteca de tipos.|
@@ -343,7 +343,7 @@ Retorna S_OK no êxito ou um erro HRESULT em caso de falha.
 
 ### <a name="remarks"></a>Comentários
 
-Essa função auxiliar é utilizada pelo [CAtlComModule::UnRegisterTypeLib](../../atl/reference/catlcommodule-class.md#unregistertypelib) e [AtlComModuleUnregisterServer](#atlcommoduleunregisterserver).
+Essa função auxiliar é utilizada pelo [CAtlComModule::UnRegisterTypeLib](../../atl/reference/catlcommodule-class.md#unregistertypelib) e [AtlComModuleUnregisterServer](server-registration-global-functions.md#atlcommoduleunregisterserver).
 
 ### <a name="requirements"></a>Requisitos
 

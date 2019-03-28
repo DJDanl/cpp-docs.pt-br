@@ -1,6 +1,6 @@
 ---
 title: Classe Platform::Collections::Map
-ms.date: 01/18/2018
+ms.date: 03/27/2019
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::Map::Map
@@ -15,12 +15,12 @@ f1_keywords:
 helpviewer_keywords:
 - Map Class (C++/Cx)
 ms.assetid: 2b8cf968-1167-4898-a149-1195b32c1785
-ms.openlocfilehash: cbe0b5e422c05cee46bff85e816ecc726c667749
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: ce50290217c7c06e26f26fc50564d3e37c873157
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57745169"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565276"
 ---
 # <a name="platformcollectionsmap-class"></a>Classe Platform::Collections::Map
 
@@ -69,7 +69,7 @@ Para obter mais informações, consulte [coleções](../cppcx/collections-c-cx.m
 
 ### <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
@@ -93,7 +93,7 @@ Para obter mais informações, consulte [coleções](../cppcx/collections-c-cx.m
 |||
 |-|-|
 |Nome|Descrição|
-|[Map:: mapchanged](#mapchanged-event.md) `event`|Ocorre quando o Map é alterado.|
+|[Map:: mapchanged](#mapchanged) evento|Ocorre quando o Map é alterado.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -238,7 +238,7 @@ O typename do Map atual.
 Um tipo que fornece um objeto de função que pode comparar dois valores de elemento como chaves de classificação para determinar sua ordem relativa no Map.
 
 *m*<br/>
-Uma referência ou [Lvalues e Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md) para um `map Class` que é usado para inicializar o Map atual.
+Uma referência ou [rvalue](../cpp/lvalues-and-rvalues-visual-cpp.md) para um `map Class` que é usado para inicializar o Map atual.
 
 *first*<br/>
 O iterador de entrada do primeiro elemento em um intervalo de elementos usados para inicializar o Map atual.

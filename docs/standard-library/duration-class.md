@@ -1,6 +1,6 @@
 ---
 title: Classe duration
-ms.date: 11/04/2016
+ms.date: 03/27/2016
 f1_keywords:
 - chrono/std::chrono::duration
 - chrono/std::chrono::duration::duration
@@ -11,12 +11,12 @@ f1_keywords:
 ms.assetid: 06b863b3-65be-4ded-a72e-6e1eb1531077
 helpviewer_keywords:
 - std::chrono [C++], duration
-ms.openlocfilehash: 2b710de6275933b5dc05814664caef92cf251da4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 49c68b1650ced36ebcf949ae2594508480e15136
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50568878"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565565"
 ---
 # <a name="duration-class"></a>Classe duration
 
@@ -50,9 +50,9 @@ O argumento de modelo `Rep` descreve o tipo que é usado para manter o número d
 
 |Nome|Descrição|
 |----------|-----------------|
-|[duração](#duration)|Constrói um objeto `duration`.|
+|[duration](#duration)|Constrói um objeto `duration`.|
 
-### <a name="public-methods"></a>Métodos Públicos
+### <a name="public-methods"></a>Métodos públicos
 
 |Nome|Descrição|
 |----------|-----------------|
@@ -159,7 +159,7 @@ static constexpr duration min();
 
 Na verdade, retorna `duration(duration_values<rep>::min())`.
 
-## <a name="duration__operator-"></a>  duration::operator-
+## <a name="operator-"></a>  duration::operator-
 
 Retorna uma cópia do objeto `duration` junto com uma contagem de tiques negados.
 
@@ -167,7 +167,7 @@ Retorna uma cópia do objeto `duration` junto com uma contagem de tiques negados
 constexpr duration operator-() const;
 ```
 
-## <a name="duration__operator--"></a>  duration::operator--
+## <a name="operator--"></a>  duration::operator--
 
 Diminui a contagem de tiques armazenados.
 
@@ -212,7 +212,7 @@ duration& operator*=(const rep& Mult);
 
 ### <a name="parameters"></a>Parâmetros
 
-*MULT*<br/>
+*Mult*<br/>
 Um valor do tipo especificado por `duration::rep`.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -277,7 +277,7 @@ Um objeto `duration`.
 
 O objeto `duration` depois que a adição é executada.
 
-## <a name="duration__operator-_eq"></a>  duration::operator-=
+## <a name="operator-_eq"></a>  duration::operator-=
 
 Subtrai a contagem de tiques de um objeto `duration` especificado da contagem de tiques armazenados.
 

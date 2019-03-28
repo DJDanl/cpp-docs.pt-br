@@ -1,17 +1,17 @@
 ---
 title: Contêineres e objetos em paralelo
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 helpviewer_keywords:
 - parallel objects
 - parallel containers
 - concurrent containers
 ms.assetid: 90ab715c-29cd-48eb-8e76-528619aab466
-ms.openlocfilehash: b406bc194735a2796f03f1e9d6cf0cf2ae2e6f86
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: bcf3ead9fe945ecb2246fdb28b7f67cd51b1238b
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51333276"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565942"
 ---
 # <a name="parallel-containers-and-objects"></a>Contêineres e objetos em paralelo
 
@@ -27,13 +27,13 @@ Este tópico descreve os seguintes contêineres paralelos e objetos em detalhes.
 
 Contêineres simultâneos:
 
-- [Classe concurrent_vector](#ctor)
+- [Classe concurrent_vector](#vector)
 
-   - [Vetor e diferenças entre concurrent_vector](#ctor)
+   - [Vetor e diferenças entre concurrent_vector](#vector-differences)
 
-   - [Operações de prova de simultaneidade](#ctor)
+   - [Operações de prova de simultaneidade](#vector-safety)
 
-   - [Segurança de exceção](#ctor)
+   - [Segurança de exceção](#vector-exceptions)
 
 - [Classe concurrent_queue](#queue)
 
@@ -127,7 +127,7 @@ O tipo de dados dos elementos do vetor, `T`, deve atender aos requisitos a segui
 
 - Se o construtor padrão ou de cópia gerará, o destruidor não deve ser declarado usando a `virtual` palavra-chave e ele devem funcionar corretamente com memória inicializada do zero.
 
-[[Superior](#top)]
+[[Top](#top)]
 
 ##  <a name="queue"></a> Classe concurrent_queue
 
@@ -179,7 +179,7 @@ Um `concurrent_queue` iterador atravessa os elementos na direção progressiva. 
 |`operator*`|Recupera uma referência ao item atual.|
 |`operator->`|Recupera um ponteiro para o item atual.|
 
-[[Superior](#top)]
+[[Top](#top)]
 
 ##  <a name="unordered_map"></a> Classe concurrent_unordered_map
 
@@ -189,7 +189,7 @@ O exemplo a seguir mostra a estrutura básica para usar `concurrent_unordered_ma
 
 [!code-cpp[concrt-unordered-map-structure#1](../../parallel/concrt/codesnippet/cpp/parallel-containers-and-objects_2.cpp)]
 
-Para obter um exemplo que usa `concurrent_unordered_map` para executar um mapa e reduzir a operação em paralelo, consulte [como: executar o mapa e reduzir operações em paralelo](../../parallel/concrt/how-to-perform-map-and-reduce-operations-in-parallel.md).
+Para obter um exemplo que usa `concurrent_unordered_map` para executar um mapa e reduzir a operação em paralelo, consulte [como: Executar o mapa e reduzir as operações em paralelo](../../parallel/concrt/how-to-perform-map-and-reduce-operations-in-parallel.md).
 
 ###  <a name="map-differences"></a> Unordered_map e diferenças entre concurrent_unordered_map
 
@@ -227,7 +227,7 @@ A tabela a seguir mostra os operadores que não estão protegido contra simultan
 
 Além desses métodos, qualquer método que que começa com `unsafe_` também não é seguro em simultaneidade.
 
-[[Superior](#top)]
+[[Top](#top)]
 
 ##  <a name="unordered_multimap"></a> Classe concurrent_unordered_multimap
 
@@ -241,7 +241,7 @@ O exemplo a seguir mostra a estrutura básica para usar `concurrent_unordered_mu
 
 [!code-cpp[concrt-unordered-multimap-structure#1](../../parallel/concrt/codesnippet/cpp/parallel-containers-and-objects_3.cpp)]
 
-[[Superior](#top)]
+[[Top](#top)]
 
 ##  <a name="unordered_set"></a> Classe concurrent_unordered_set
 
@@ -251,7 +251,7 @@ O exemplo a seguir mostra a estrutura básica para usar `concurrent_unordered_se
 
 [!code-cpp[concrt-unordered-set#1](../../parallel/concrt/codesnippet/cpp/parallel-containers-and-objects_4.cpp)]
 
-[[Superior](#top)]
+[[Top](#top)]
 
 ##  <a name="unordered_multiset"></a> Classe concurrent_unordered_multiset
 
@@ -265,7 +265,7 @@ O exemplo a seguir mostra a estrutura básica para usar `concurrent_unordered_mu
 
 [!code-cpp[concrt-unordered-multiset#1](../../parallel/concrt/codesnippet/cpp/parallel-containers-and-objects_5.cpp)]
 
-[[Superior](#top)]
+[[Top](#top)]
 
 ##  <a name="combinable"></a> Classe combinable
 
@@ -291,21 +291,21 @@ Você pode armazenar dados adicionais em uma `combinable` do objeto depois de ch
 
 Para obter exemplos sobre como usar o `combinable` de classe, consulte os seguintes tópicos:
 
-- [Como usar combinável para melhorar o desempenho](../../parallel/concrt/how-to-use-combinable-to-improve-performance.md)
+- [Como: Usar combinável para melhorar o desempenho](../../parallel/concrt/how-to-use-combinable-to-improve-performance.md)
 
-- [Como usar combinável para combinar conjuntos](../../parallel/concrt/how-to-use-combinable-to-combine-sets.md)
+- [Como: Usar combinável para combinar conjuntos](../../parallel/concrt/how-to-use-combinable-to-combine-sets.md)
 
-[[Superior](#top)]
+[[Top](#top)]
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-[Como usar contêineres em paralelo para aumentar a eficiência](../../parallel/concrt/how-to-use-parallel-containers-to-increase-efficiency.md)<br/>
+[Como: Usar contêineres em paralelo para aumentar a eficiência](../../parallel/concrt/how-to-use-parallel-containers-to-increase-efficiency.md)<br/>
 Mostra como usar contêineres em paralelo com eficiência armazenar e acessar dados em paralelo.
 
-[Como usar combinável para melhorar o desempenho](../../parallel/concrt/how-to-use-combinable-to-improve-performance.md)<br/>
+[Como: Usar combinável para melhorar o desempenho](../../parallel/concrt/how-to-use-combinable-to-improve-performance.md)<br/>
 Mostra como usar o `combinable` de classe para eliminar o estado compartilhado e, assim, melhorar o desempenho.
 
-[Como usar combinável para combinar conjuntos](../../parallel/concrt/how-to-use-combinable-to-combine-sets.md)<br/>
+[Como: Usar combinável para combinar conjuntos](../../parallel/concrt/how-to-use-combinable-to-combine-sets.md)<br/>
 Mostra como usar um `combine` função para mesclar os locais de thread de conjuntos de dados.
 
 [PPL (Biblioteca de Padrões Paralelos)](../../parallel/concrt/parallel-patterns-library-ppl.md)<br/>

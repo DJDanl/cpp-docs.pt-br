@@ -1,6 +1,6 @@
 ---
 title: Classe basic_ostream
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - ostream/std::basic_ostream
 - ostream/std::basic_ostream::flush
@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::basic_ostream [C++], tellp
 - std::basic_ostream [C++], write
 ms.assetid: 5baadc65-b662-4fab-8c9f-94457c58cda1
-ms.openlocfilehash: dce4911bd4b7abe6c73551d6a0b178d9b2700dbb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 64a32513e9dc151e64fccdb0ef678a75588f0a41
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50543631"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565721"
 ---
 # <a name="basicostream-class"></a>Classe basic_ostream
 
@@ -48,7 +48,7 @@ O caractere `traits_type`.
 
 ## <a name="remarks"></a>Comentários
 
-A maioria das funções membro que sobrecarrega o [operator<<](#op_lt_lt) é composta por funções de entrada formatadas. Elas seguem o padrão:
+A maioria das funções membro que sobrecarrega o [operator<<](#basic_ostream_operator_lt_lt) é composta por funções de entrada formatadas. Elas seguem o padrão:
 
 ```cpp
 iostate state = goodbit;
@@ -122,7 +122,7 @@ Consulte o exemplo de [Classe basic_ifstream](../standard-library/basic-ofstream
 |[put](#put)|Coloca um caractere em um fluxo.|
 |[seekp](#seekp)|Redefine a posição no fluxo de saída.|
 |[sentry](#sentry)|A classe aninhada descreve um objeto cuja declaração estrutura as funções de saída formatadas e as funções de saída não formatadas.|
-|[swap](#op_eq)|Troca os valores desse objeto `basic_ostream` por aqueles do objeto `basic_ostream` fornecido.|
+|[swap](#swap)|Troca os valores desse objeto `basic_ostream` por aqueles do objeto `basic_ostream` fornecido.|
 |[tellp](#tellp)|Relata a posição no fluxo de saída.|
 |[write](#write)|Coloca caracteres em um fluxo.|
 
@@ -130,7 +130,7 @@ Consulte o exemplo de [Classe basic_ifstream](../standard-library/basic-ofstream
 
 |Operador|Descrição|
 |-|-|
-|[operator=](#basic_ostream_operator_eq)|Atribui o valor do objeto parâmetro `basic_ostream` fornecido para esse objeto.|
+|[operator=](#op_eq)|Atribui o valor do objeto parâmetro `basic_ostream` fornecido para esse objeto.|
 |[operator<<](#basic_ostream_operator_lt_lt)|Grava no fluxo.|
 
 ## <a name="requirements"></a>Requisitos
@@ -237,13 +237,13 @@ basic_ostream<Elem, Tr>& operator<<(const void* val);
 
 ### <a name="parameters"></a>Parâmetros
 
-*pfn*<br/>
+*Pfn*<br/>
 Um ponteiro de função.
 
 *strbuf*<br/>
 Um ponteiro para um `stream_buf` objeto.
 
-*Val*<br/>
+*val*<br/>
 Um elemento para gravar no fluxo.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -375,7 +375,7 @@ basic_ostream<Elem, Tr>& put(char_type _Ch);
 
 ### <a name="parameters"></a>Parâmetros
 
-*CH*<br/>
+*_Ch*<br/>
 Um caractere.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -419,13 +419,13 @@ basic_ostream<Elem, Tr>& seekp(off_type _Off, ios_base::seekdir _Way);
 
 ### <a name="parameters"></a>Parâmetros
 
-*POS*<br/>
+*_Pos*<br/>
 A posição no fluxo.
 
-*Off*<br/>
+*_Off*<br/>
 O deslocamento relativo a *Way*.
 
-*Way*<br/>
+*_Way*<br/>
 Uma das enumerações de [ios_base::seekdir](../standard-library/ios-base-class.md#seekdir).
 
 ### <a name="return-value"></a>Valor de retorno
@@ -470,7 +470,7 @@ int main()
 
 A classe aninhada descreve um objeto cuja declaração estrutura as funções de saída formatadas e as funções de saída não formatadas.
 
-Sentinela classe {public: sentry explícita (basic_ostream\<Elem, Tr > & _Ostr); operador bool () const; ~ sentry();};
+class sentry { public: explicit sentry(basic_ostream\<Elem, Tr>& _Ostr); operator bool() const; ~sentry(); };
 
 ### <a name="remarks"></a>Comentários
 

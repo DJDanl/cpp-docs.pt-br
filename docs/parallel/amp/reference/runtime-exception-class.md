@@ -1,6 +1,6 @@
 ---
 title: Classe runtime_exception
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - runtime_exception
 - AMPRT/runtime_exception
@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - runtime_exception class
 ms.assetid: 8fe3ce2c-3d4c-4b9c-95e8-e592f37adefd
-ms.openlocfilehash: 5260d2f1d2e5a6a6498d501599037a90bc7bc9a0
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 024ede0f05dfd646bcebe7acd2cfb86b5c54f6d1
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57289657"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565487"
 ---
 # <a name="runtimeexception-class"></a>Classe runtime_exception
 
@@ -28,7 +28,7 @@ class runtime_exception : public std::exception;
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
@@ -39,7 +39,7 @@ class runtime_exception : public std::exception;
 
 |Nome|Descrição|
 |----------|-----------------|
-|[get_error_code](#runtime_exception__get_error_code)|Retorna o código de erro que causou a exceção.|
+|[get_error_code](#get_error_code)|Retorna o código de erro que causou a exceção.|
 
 ### <a name="public-operators"></a>Operadores públicos
 
@@ -59,7 +59,7 @@ class runtime_exception : public std::exception;
 
 **Namespace:** Concorrência
 
-## <a name="runtime_exception__ctor"></a>  Construtor de runtime_exception
+## <a name="ctor"></a>  Construtor de runtime_exception
 
 Inicializa uma nova instância da classe.
 
@@ -102,7 +102,7 @@ Destrói o objeto.
 virtual ~runtime_exception() throw();
 ```
 
-## <a name="runtime_exception__get_error_code"></a>  get_error_code
+## <a name="geterrorcode"></a>get_error_code
 
 Retorna o código de erro que causou a exceção.
 
@@ -116,7 +116,7 @@ HRESULT get_error_code() const throw();
 
 O HRESULT do erro que causou a exceção.
 
-## <a name="runtime_exception__operator_eq"></a>  operator=
+## <a name="operator_eq"></a>  operator=
   Copia o conteúdo especificado `runtime_exception` esse objeto.
 
 ### <a name="syntax"></a>Sintaxe

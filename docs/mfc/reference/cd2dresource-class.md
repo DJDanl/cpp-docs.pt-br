@@ -1,6 +1,6 @@
 ---
 title: Classe CD2DResource
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CD2DResource
 - AFXRENDERTARGET/CD2DResource
@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CD2DResource [MFC], m_bIsAutoDestroy
 - CD2DResource [MFC], m_pParentTarget
 ms.assetid: 34e3ee18-aab6-4c39-9294-de869e1f7820
-ms.openlocfilehash: 04d1fa57e34528f96f505fa20abb9b1131f80689
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: e2cc6be7119a2df193aa2af415a9c8d4054f537c
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57284860"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58564769"
 ---
 # <a name="cd2dresource-class"></a>Classe CD2DResource
 
@@ -46,7 +46,7 @@ class CD2DResource : public CObject;
 |Nome|Descrição|
 |----------|-----------------|
 |[CD2DResource::CD2DResource](#cd2dresource)|Constrói um objeto CD2DResource.|
-|[CD2DResource:: ~ CD2DResource](#cd2dresource__~cd2dresource)|O destruidor. Chamado quando um objeto de recurso D2D está sendo destruído.|
+|[CD2DResource:: ~ CD2DResource](#_dtorcd2dresource)|O destruidor. Chamado quando um objeto de recurso D2D está sendo destruído.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
@@ -67,7 +67,7 @@ class CD2DResource : public CObject;
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CD2DResource::m_bIsAutoDestroy](#m_bisautodestroy)|Recurso será destoyed pelo proprietário (CRenderTarget)|
+|[CD2DResource::m_bIsAutoDestroy](#m_bisautodestroy)|Recurso será destruído pelo proprietário (CRenderTarget)|
 |[CD2DResource::m_pParentTarget](#m_pparenttarget)|Ponteiro para o pai CRenderTarget)|
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
@@ -157,7 +157,7 @@ TRUE se o recurso for válido. Caso contrário, FALSE.
 
 ##  <a name="m_bisautodestroy"></a>  CD2DResource::m_bIsAutoDestroy
 
-Recurso será destoyed pelo proprietário (CRenderTarget)
+Recurso será destruído pelo proprietário (CRenderTarget)
 
 ```
 BOOL m_bIsAutoDestroy;

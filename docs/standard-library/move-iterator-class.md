@@ -1,6 +1,6 @@
 ---
 title: Classe move_iterator
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - iterator/std::move_iterator
 - iterator/std::move_iterator::iterator_type
@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::move_iterator [C++], reference
 - std::move_iterator [C++], base
 ms.assetid: a5e5cdd8-a264-4c6b-9f9c-68b0e8edaab7
-ms.openlocfilehash: c9ff9385d43ac1c53f91a548ea01c04c1c67dc18
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3e2e62946325c082e761b6997ae584419175f8fe
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50656113"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565033"
 ---
 # <a name="moveiterator-class"></a>Classe move_iterator
 
@@ -164,7 +164,7 @@ move_iterator& operator+=(difference_type _Off);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Off*<br/>
+*_Off*<br/>
 Um deslocamento para adicionar à posição atual para determinar a nova posição atual.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -175,7 +175,7 @@ Retorna o novo elemento atual.
 
 O operador adiciona *off* ao iterador armazenado. Em seguida, retorna `*this`.
 
-## <a name="move_iterator__operator-_eq"></a>  move_iterator::operator-=
+## <a name="operator-_eq"></a>  move_iterator::operator-=
 
 Move entre um número especificado de elementos anteriores. Este operador subtrai um deslocamento do iterador armazenado.
 
@@ -234,7 +234,7 @@ reference operator[](difference_type _Off) const;
 
 O operador retorna `(reference)*(*this + _Off)`.
 
-## <a name="move_iterator__operator--"></a>  move_iterator::operator--
+## <a name="operator--"></a>  move_iterator::operator--
 
 Os operadores de membro pré e pós-incremento realizam uma diminuição no iterador armazenado.
 
@@ -251,7 +251,7 @@ O primeiro operador de membro (pré-decremento) diminui o iterador armazenado. E
 
 O segundo operador (pós-decremento) faz uma cópia do `*this`, avalia `--*this`. E retorna a cópia.
 
-## <a name="move_iterator__operator-"></a>  move_iterator::operator-
+## <a name="operator-"></a>  move_iterator::operator-
 
 Diminui o iterador armazenado e retorna o valor indicado.
 

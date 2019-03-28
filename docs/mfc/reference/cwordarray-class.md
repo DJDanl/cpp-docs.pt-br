@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CObArray [MFC], SetAtGrow
 - CObArray [MFC], SetSize
 ms.assetid: 2ba2c194-2c6c-40ff-9db4-e9dbe57e1f57
-ms.openlocfilehash: c21f89215e08523188eb32490d7b1d5506299fb5
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 9b2888c82ad9522925ffbd53923d3988863f56ca
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259445"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565354"
 ---
 # <a name="cwordarray-class"></a>Classe CWordArray
 
@@ -75,7 +75,7 @@ por exemplo, traduz para
 |----------|-----------------|
 |[CObArray::CObArray](../../mfc/reference/cobarray-class.md#cobarray)|Constrói uma matriz vazia.|
 
-### <a name="public-methods"></a>Métodos Públicos
+### <a name="public-methods"></a>Métodos públicos
 
 |Nome|Descrição|
 |----------|-----------------|
@@ -97,7 +97,7 @@ por exemplo, traduz para
 |[CObArray::SetAtGrow](../../mfc/reference/cobarray-class.md#setatgrow)|Define o valor de um determinado índice; aumenta a matriz quando necessário.|
 |[CObArray::SetSize](../../mfc/reference/cobarray-class.md#setsize)|Define o número de elementos a ser contido nesta matriz.|
 
-### <a name="public-operators"></a>Operadores Públicos
+### <a name="public-operators"></a>Operadores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
@@ -292,7 +292,7 @@ O índice final do intervalo de IDs de comando.
 
 ### <a name="remarks"></a>Comentários
 
-Esse método Remove um grupo de manipuladores de mensagens, mapeado para o especificado de IDs de comando por *cmdIDMin* e *cmdIDMax*, do objeto de origem de comando.
+Esse método Remove um grupo de manipuladores de mensagens, mapeados para as IDs de comando especificadas pelo *cmdIDMin* e *cmdIDMax*, do objeto de origem de comando.
 
 ##  <a name="removecommandrangeuihandler"></a>  ICommandSource::RemoveCommandRangeUIHandler
 
@@ -314,7 +314,7 @@ O índice final do intervalo de IDs de comando.
 
 ### <a name="remarks"></a>Comentários
 
-Esse método Remove um grupo de usuário interface comando de manipuladores de mensagens, mapeado para o especificado de IDs de comando por *cmdIDMin* e *cmdIDMax*, do objeto de origem de comando.
+Esse método Remove um grupo de usuário interface comando de manipuladores de mensagens, mapeados para as IDs de comando especificadas pelo *cmdIDMin* e *cmdIDMax*, do objeto de origem de comando.
 
 ##  <a name="removecommanduihandler"></a>  ICommandSource::RemoveCommandUIHandler
 

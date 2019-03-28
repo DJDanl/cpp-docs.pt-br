@@ -1,6 +1,6 @@
 ---
 title: '#Importar diretiva (C++)'
-ms.date: 10/18/2018
+ms.date: 03/27/2019
 f1_keywords:
 - '#import'
 helpviewer_keywords:
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - preprocessor, directives
 - COM, type library header file
 ms.assetid: 787d1112-e543-40d7-ab15-a63d43f4030a
-ms.openlocfilehash: a7dc30d3e5869e9b0f534a4769d4517a0514c144
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 72fd1d025ab19b7db9521e08655d00936b77581e
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57822620"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58564944"
 ---
 # <a name="import-directive-c"></a>Diretiva #import (C++)
 
@@ -160,7 +160,7 @@ using namespace MyLib;
 
 imediatamente após o **#import** instrução no código-fonte.
 
-O namespace pode ser suprimido usando o [no_namespace](#_predir_no_namespace) atributo da **#import** diretiva. No entanto, suprimir o namespace pode resultar em colisões de nomes. O namespace também pode ser renomeado com o [rename_namespace](#_predir_rename_namespace) atributo.
+O namespace pode ser suprimido usando o [no_namespace](no-namespace.md)) o atributo da **#import** diretiva. No entanto, suprimir o namespace pode resultar em colisões de nomes. O namespace também pode ser renomeado com o [rename_namespace](rename-namespace.md) atributo.
 
 O compilador fornece o caminho completo para qualquer dependência de biblioteca de tipos exigida pela biblioteca que esteja em processamento. O caminho é escrito, na forma de comentários, no cabeçalho da biblioteca de tipos (.TLH) gerado pelo compilador para cada biblioteca de tipos processada.
 

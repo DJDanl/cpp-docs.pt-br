@@ -1,6 +1,6 @@
 ---
 title: Classe CStringT
-ms.date: 10/18/2018
+ms.date: 03/27/2019
 f1_keywords:
 - CStringT
 - ATLSTR/ATL::CStringT
@@ -80,12 +80,12 @@ helpviewer_keywords:
 - shared classes, CStringT
 - CStringT class
 ms.assetid: 7cacc59c-425f-40f1-8f5b-6db921318ec9
-ms.openlocfilehash: 9566830de4d3af8f34e8efa5e5ef468acae1fba5
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 327ffc40a9b7e41004bc5aac7ecc320076de537f
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57750865"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565812"
 ---
 # <a name="cstringt-class"></a>Classe CStringT
 
@@ -132,7 +132,7 @@ Determina se a classe de cadeia de caracteres precisa de suporte de biblioteca d
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
@@ -182,7 +182,7 @@ Determina se a classe de cadeia de caracteres precisa de suporte de biblioteca d
 
 |||
 |-|-|
-|[operator =](#operator_eq)|Atribui um novo valor para um `CStringT` objeto.|
+|[CStringT::operator =](#operator_eq)|Atribui um novo valor para um `CStringT` objeto.|
 |[CStringT::operator +](#operator_add)|Concatena duas cadeias de caracteres ou um caractere e uma cadeia de caracteres.|
 |[+ CStringT::operator =](#operator_add_eq)|Concatena uma nova cadeia de caracteres ao final de uma cadeia de caracteres existente.|
 |[CStringT::operator ==](#operator_eq_eq)|Determina se duas cadeias de caracteres são logicamente iguais.|
@@ -1023,6 +1023,56 @@ Essa função não estará disponível se Unicode estiver definido.
 ### <a name="example"></a>Exemplo
 
 Veja o exemplo de [CStringT::AnsiToOem](#ansitooem).
+
+##  <a name="operator_eq"></a>  CStringT::operator =
+
+Atribui um novo valor para a cadeia de caracteres.
+
+```
+CStringT& operator=(const CStringT& strSrc);
+
+template<bool bMFCDLL>
+CStringT& operator=(const CSimpleStringT<BaseType, bMFCDLL>& str);
+
+CStringT& operator=(PCXSTR pszSrc);
+CStringT& operator=(PCYSTR pszSrc);
+CStringT& operator=(const unsigned char* pszSrc);
+CStringT& operator=(XCHAR ch);
+CStringT& operator=(YCHAR ch);
+CStringT& operator=(const VARIANT& var);
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*strSrc*<br/>
+Um `CStringT` para atribuir a essa cadeia de caracteres.
+
+*str*<br/>
+Uma referência a um objeto `CThisSimpleString`.
+
+*bMFCDLL*<br/>
+Um booliano que especifica se o projeto é uma DLL MFC ou não.
+
+*BaseType*<br/>
+O tipo de base de cadeia de caracteres.
+
+*var*<br/>
+Um objeto variante para atribuir a essa cadeia de caracteres.
+
+*ch*<br/>
+Um caractere para atribuir a cadeia de caracteres ANSI ou Unicode.
+
+*pszSrc*<br/>
+Um ponteiro para a cadeia de caracteres original que está sendo atribuído.
+
+### <a name="remarks"></a>Comentários
+
+O operador de atribuição aceita outro `CStringT` objeto, um ponteiro de caractere ou um único caractere. Você deve estar ciente que as exceções podem ocorrer sempre que você usa esse operador porque o novo armazenamento pode ser alocado a memória.
+
+Para obter informações sobre `CThisSimpleString`, consulte a seção comentários da [CStringT::CStringT](#cstringt).
+
+> [!NOTE]
+> Embora seja possível criar `CStringT` instâncias que contêm incorporado caracteres nulos, é recomendável. Chamando métodos e operadores em `CStringT` objetos que contêm caracteres nulos inseridos podem produzir resultados não intencionais.
 
 ##  <a name="operator_add"></a>  CStringT::operator +
 
