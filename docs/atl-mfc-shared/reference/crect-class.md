@@ -34,12 +34,12 @@ helpviewer_keywords:
 - LPRECT operator
 - RECT structure
 ms.assetid: dee4e752-15d6-4db4-b68f-1ad65b2ed6ca
-ms.openlocfilehash: fadb430d570e516d915d520f06e4c247b131c3db
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 6e87d77eec526cbfcfe5c1e6e78b0287226f0613
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57739428"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565684"
 ---
 # <a name="crect-class"></a>Classe CRect
 
@@ -53,13 +53,13 @@ class CRect : public tagRECT
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
 |[CRect::CRect](#crect)|Constrói um objeto `CRect`.|
 
-### <a name="public-methods"></a>Métodos Públicos
+### <a name="public-methods"></a>Métodos públicos
 
 |Nome|Descrição|
 |----------|-----------------|
@@ -950,7 +950,7 @@ Aponta para um [RECT](/windows/desktop/api/windef/ns-windef-tagrect) estrutura o
 
 O parâmetro *x* e *y* (ou `cx` e `cy`) valores são adicionados ao `CRect`.
 
-A terceira sobrecarga infla `CRect` pelo número de unidades especificada em cada membro do parâmetro.
+A terceira sobrecarga infla `CRect` pelo número de unidades especificadas em cada membro do parâmetro.
 
 ### <a name="example"></a>Exemplo
 
@@ -988,7 +988,7 @@ Aponta para um [RECT](/windows/desktop/api/windef/ns-windef-tagrect) estrutura o
 
 O parâmetro *x* e *y* (ou `cx` e `cy`) valores são subtraídos do `CRect`.
 
-A terceira sobrecarga compacta os `CRect` pelo número de unidades especificada em cada membro do parâmetro. Observe que essa sobrecarga de funções, como [DeflateRect](#deflaterect).
+A terceira sobrecarga compacta os `CRect` pelo número de unidades especificadas em cada membro do parâmetro. Observe que essa sobrecarga de funções, como [DeflateRect](#deflaterect).
 
 ### <a name="example"></a>Exemplo
 
@@ -1085,7 +1085,7 @@ O `CRect` resultante da movimentação ou inflacionando `CRect` pelo número de 
 
 O parâmetro *x* e *y* (ou `cx` e `cy`) parâmetros são adicionados ao `CRect`da posição.
 
-A terceira sobrecarga retorna um novo `CRect` que é igual ao `CRect` inflado pelo número de unidades especificada em cada membro do parâmetro.
+A terceira sobrecarga retorna um novo `CRect` que é igual ao `CRect` inflado pelo número de unidades especificadas em cada membro do parâmetro.
 
 ### <a name="example"></a>Exemplo
 
@@ -1128,7 +1128,7 @@ O `CRect` resultante da movimentação ou deflating `CRect` pelo número de unid
 
 O parâmetro *x* e *y* (ou `cx` e `cy`) parâmetros são subtraídos do `CRect`da posição.
 
-A terceira sobrecarga retorna um novo `CRect` que é igual ao `CRect` desinflada pelo número de unidades especificada em cada membro do parâmetro. Observe que essa sobrecarga de funções, como [DeflateRect](#deflaterect), e não [SubtractRect](#subtractrect).
+A terceira sobrecarga retorna um novo `CRect` que é igual ao `CRect` desinflada pelo número de unidades especificadas em cada membro do parâmetro. Observe que essa sobrecarga de funções, como [DeflateRect](#deflaterect), e não [SubtractRect](#subtractrect).
 
 ### <a name="example"></a>Exemplo
 
