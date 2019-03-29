@@ -1,17 +1,17 @@
 ---
 title: Classe basic_regex
-ms.date: 09/10/2018
+ms.date: 03/27/2019
 f1_keywords:
 - regex/std::basic_regex
 helpviewer_keywords:
 - basic_regex class
 ms.assetid: 8a18c6b4-f22a-4cfd-bc16-b4267867ebc3
-ms.openlocfilehash: 0799bbcbfb7cdbc1ee1755cf387de2aee46db027
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e3a38dc186a52c8431442d58bb10e56837396b07
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50633387"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565445"
 ---
 # <a name="basicregex-class"></a>Classe basic_regex
 
@@ -58,13 +58,13 @@ Essas funções de membro também usam um argumento `flags` que especifica vári
 |-|-|
 |público estático icase de flag_type const|regex_constants::icase|
 |público estático nosubs de flag_type const|regex_constants::nosubs|
-|otimizar o público flag_type const estático|regex_constants::Optimize|
-|collate flag_type de const estático público|regex_constants::COLLATE|
+|otimizar o público flag_type const estático|regex_constants::optimize|
+|collate flag_type de const estático público|regex_constants::collate|
 |flag_type const estático público ECMAScript|regex_constants::ECMAScript|
-|público flag_type const estático básico|regex_constants::Basic|
-|flag_type de const estático público estendido|regex_constants::Extended|
+|público flag_type const estático básico|regex_constants::basic|
+|flag_type de const estático público estendido|regex_constants::extended|
 |público estático awk de flag_type const|regex_constants::awk|
-|público estático grep de flag_type const|regex_constants::GREP|
+|público estático grep de flag_type const|regex_constants::grep|
 |público estático egrep de flag_type const|regex_constants::egrep|
 |características de RXtraits privadas||
 
@@ -88,7 +88,7 @@ Essas funções de membro também usam um argumento `flags` que especifica vári
 |-|-|
 |[assign](#assign)|Atribui um valor ao objeto da expressão regular.|
 |[flags](#flags)|Retorna os sinalizadores de opção de sintaxe.|
-|[get_loc](#get_loc)|Retorna o objeto de localidade armazenado.|
+|[getloc](#getloc)|Retorna o objeto de localidade armazenado.|
 |[imbue](#imbue)|Altera o objeto de localidade armazenado.|
 |[mark_count](#mark_count)|Retorna o número de subexpressões correspondente.|
 |[swap](#swap)|Troca dois objetos de expressão regular.|
@@ -248,7 +248,7 @@ Ponteiro para o início da sequência a copiar.
 *flags*<br/>
 Sinalizadores de opção de sintaxe a adicionar ao copiar.
 
-*Len/TD >*<br/>
+*len/TD>*<br/>
 Comprimento da sequência a copiar.
 
 *str*<br/>
@@ -322,7 +322,7 @@ Ponteiro para o início da sequência a copiar.
 *flags*<br/>
 Sinalizadores de opção de sintaxe a adicionar ao copiar.
 
-*Len/TD >*<br/>
+*len/TD>*<br/>
 Comprimento da sequência a copiar.
 
 *str*<br/>
@@ -391,7 +391,7 @@ locale_type imbue(locale_type loc);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Loc*<br/>
+*loc*<br/>
 O objeto de localidade a ser armazenado.
 
 ### <a name="remarks"></a>Comentários
