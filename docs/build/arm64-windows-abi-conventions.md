@@ -1,12 +1,12 @@
 ---
 title: Visão geral das convenções de ABI ARM64
 ms.date: 03/27/2019
-ms.openlocfilehash: 2695ba69c642b2100ec041d1f85debb4ad7041c8
-ms.sourcegitcommit: 06fc71a46e3c4f6202a1c0bc604aa40611f50d36
+ms.openlocfilehash: 4c0f89f97529d4cd70e1449c90b131d25d30f9ee
+ms.sourcegitcommit: ac5c04b347e817eeece6e2c98e60236fc0e307a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58508852"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58639440"
 ---
 # <a name="overview-of-arm64-abi-conventions"></a>Visão geral das convenções de ABI ARM64
 
@@ -187,27 +187,21 @@ Valores integrais são retornados em x0.
 
 Valores de ponto flutuante são retornados em s0/d0/v0 conforme apropriado.
 
-Tipos retornados por valor são tratados diferentemente dependendo se eles têm determinadas propriedades.
+Tipos retornados por valor são tratados diferentemente dependendo se eles têm determinadas propriedades. Tipos que têm todas essas propriedades,
 
-Tipos recebem um estilo de retorno de "C" se eles são agregados por C + + 14 definição padrão. Isto é
+- eles são *agregação* por C + + 14 definição padrão, ou seja, eles têm nenhum construtor fornecido pelo usuário, nenhum membro de dados de não estáticos privados ou protegidos, sem classes base e sem funções virtuais, e
+- eles têm um operador de atribuição de cópia trivial, e
+- eles têm um destruidor trivial,
 
-- eles têm nenhum construtor fornecido pelo usuário, nenhum membro de dados de não estáticos privados ou protegidos, sem classes base e sem funções virtuais,
-- eles têm um construtor de cópia trivial, e
-- eles têm um destruidor trivial.
+Use o estilo de retorno a seguir:
 
-Todos os outros tipos recebem um estilo de retorno de "C++".
+- Tipos de menor ou igual a 8 bytes são retornados em x0.
+- Tipos de menor ou igual a 16 bytes são retornados em x0 e x1, com x0 contendo os bytes de 8 de ordem inferior.
+- Para tipos de maiores que 16 bytes, o chamador deverá reservar um bloco de memória de tamanho suficiente e o alinhamento para conter o resultado. O endereço do bloco de memória deverão ser passado como um argumento adicional para a função em x8. O receptor pode modificar o bloco de memória de resultados a qualquer momento durante a execução da sub-rotina. O receptor não é necessário para preservar o valor armazenado no x8.
 
-### <a name="c-return-style"></a>Estilo de retorno de C
+Todos os outros tipos usam esta convenção:
 
-Tipos de menor ou igual a 8 bytes são retornados em x0.
-
-Tipos de menor ou igual a 16 bytes são retornados em x0 e x1, com x0 contendo os bytes de 8 de ordem inferior.
-
-Para tipos de maiores que 16 bytes, o chamador deverá reservar um bloco de memória de tamanho suficiente e o alinhamento para conter o resultado. O endereço do bloco de memória deverão ser passado como um argumento adicional para a função em x8. O receptor pode modificar o bloco de memória de resultados a qualquer momento durante a execução da sub-rotina. O receptor não é necessário para preservar o valor armazenado no x8.
-
-### <a name="c-return-style"></a>Estilo de retorno do C++
-
-O chamador deverá reservar um bloco de memória de tamanho suficiente e o alinhamento para conter o resultado. O endereço do bloco de memória deverão ser passado como um argumento adicional para a função em x0 e x1 se $ que isso é passado na x0. O receptor pode modificar o bloco de memória de resultados a qualquer momento durante a execução da sub-rotina. Receptor retorna o endereço do bloco de memória na x0.
+- O chamador deverá reservar um bloco de memória de tamanho suficiente e o alinhamento para conter o resultado. O endereço do bloco de memória deverão ser passado como um argumento adicional para a função em x0 e x1 se $ que isso é passado na x0. O receptor pode modificar o bloco de memória de resultados a qualquer momento durante a execução da sub-rotina. Receptor retorna o endereço do bloco de memória na x0.
 
 ## <a name="stack"></a>Pilha
 
