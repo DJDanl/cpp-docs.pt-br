@@ -1,5 +1,5 @@
 ---
-title: 'TN011: Usando o MFC como parte de uma DLL'
+title: 'TN011: Usando MFC como parte de uma DLL'
 ms.date: 11/04/2016
 f1_keywords:
 - vc.mfc.dll
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - DLLs [MFC], linking
 - MFC DLLs [MFC], linking regular MFC DLLs to MFC
 ms.assetid: 76753e9c-59dc-40f6-b6a7-f6bb9a7c4190
-ms.openlocfilehash: 63e97c3b9260465259d76cf6996d1d389f65ee41
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 7e9fda44e2af4ec32bae6299fbcc0eda17984f9b
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57326446"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769726"
 ---
-# <a name="tn011-using-mfc-as-part-of-a-dll"></a>TN011: Usando o MFC como parte de uma DLL
+# <a name="tn011-using-mfc-as-part-of-a-dll"></a>TN011: Usando MFC como parte de uma DLL
 
 Essa observação descreve DLLs normais do MFC, que permitem que você use a biblioteca do MFC como parte de uma biblioteca de vínculo dinâmico (DLL) do Windows. Ele pressupõe que você esteja familiarizado com DLLs do Windows e como criá-los. Para obter informações sobre DLLs de extensão do MFC, com o qual você pode criar extensões para a biblioteca do MFC, consulte [versão de DLL do MFC](../mfc/tn033-dll-version-of-mfc.md).
 
@@ -57,7 +57,7 @@ Você também deve definir esses símbolos e usar essas opções de compilador a
 
 As APIs (interfaces) entre o aplicativo e a DLL devem ser exportadas explicitamente. É recomendável que você defina suas interfaces para ser baixa largura de banda e usa somente as interfaces de C, se possível. Interfaces de C diretas são mais fáceis de manter que classes mais complexas do C++.
 
-Coloque suas APIs em um cabeçalho separado que pode ser incluído em arquivos C e C++. Consulte o cabeçalho ScreenCap.h no exemplo de conceitos avançados MFC [DLLScreenCap](../visual-cpp-samples.md) para obter um exemplo. Para exportar suas funções, inseri-los a `EXPORTS` seção do seu arquivo de definição de módulo (. DEF) ou incluir `__declspec(dllexport)` em suas definições de função. Use `__declspec(dllimport)` para importar essas funções para o executável do cliente.
+Coloque suas APIs em um cabeçalho separado que pode ser incluído em arquivos C e C++. Consulte o cabeçalho ScreenCap.h no exemplo de conceitos avançados MFC [DLLScreenCap](../overview/visual-cpp-samples.md) para obter um exemplo. Para exportar suas funções, inseri-los a `EXPORTS` seção do seu arquivo de definição de módulo (. DEF) ou incluir `__declspec(dllexport)` em suas definições de função. Use `__declspec(dllimport)` para importar essas funções para o executável do cliente.
 
 Você deve adicionar o macro AFX_MANAGE_STATE no início de todas as funções exportadas em DLLs MFC regulares vinculadas dinamicamente ao MFC. Essa macro define o estado atual do módulo para aquele para a DLL. Para usar essa macro, adicione a seguinte linha de código para o início das funções exportadas da DLL:
 

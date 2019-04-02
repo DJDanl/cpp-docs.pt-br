@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - macros, error reporting
 ms.assetid: 4da9b87f-ec5c-4a32-ab93-637780909b9d
-ms.openlocfilehash: 24ab589ae19bd2027e2527ebefbf48dbf24e399d
-ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
+ms.openlocfilehash: 0d5010f913521848675987b145a1277c7b00decf
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58565029"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775032"
 ---
 # <a name="debugging-and-error-reporting-macros"></a>Macros de depuração e relatório de erros
 
@@ -220,7 +220,7 @@ ATLTRACE2(
 
 ### <a name="remarks"></a>Comentários
 
-A forma abreviada de ATLTRACE2 grava uma cadeia de caracteres para a janela de saída do depurador. A segunda forma de ATLTRACE2 também grava a saída para a janela de saída do depurador, mas está sujeito às configurações da ferramenta de rastreamento de ATL/MFC (consulte [ATLTraceTool exemplo](../../visual-cpp-samples.md)). Por exemplo, se você definir *nível* 4 e a ferramenta de rastreamento ATL/MFC para o nível 0, você não verá a mensagem. *nível* pode ser 0, 1, 2, 3 ou 4. O padrão, 0, relata apenas os problemas mais graves.
+A forma abreviada de ATLTRACE2 grava uma cadeia de caracteres para a janela de saída do depurador. A segunda forma de ATLTRACE2 também grava a saída para a janela de saída do depurador, mas está sujeito às configurações da ferramenta de rastreamento de ATL/MFC (consulte [ATLTraceTool exemplo](../../overview/visual-cpp-samples.md)). Por exemplo, se você definir *nível* 4 e a ferramenta de rastreamento ATL/MFC para o nível 0, você não verá a mensagem. *nível* pode ser 0, 1, 2, 3 ou 4. O padrão, 0, relata apenas os problemas mais graves.
 
 O *categoria* listas de parâmetros para definir os sinalizadores de rastreamento. Esses sinalizadores correspondem aos tipos de métodos para a qual você deseja relatar. As tabelas abaixo listam os sinalizadores de rastreamento válido que você pode usar para o *categoria* parâmetro.
 

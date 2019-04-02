@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Ribbon Designer (MFC)
 - MFC Ribbon Designer
 ms.assetid: 0806dfd6-7d11-471a-99e1-4072852231f9
-ms.openlocfilehash: 0972cdfbb80129b0c87c96fa7daf6768d18aa0c4
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 5740b2f93f451a74407483c98ce5bf547b79bf35
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57288773"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769479"
 ---
 # <a name="ribbon-designer-mfc"></a>Designer da faixa de opções (MFC)
 
@@ -107,7 +107,7 @@ Os tópicos a seguir descrevem como usar os recursos no designer de faixa de op�
 
 - **Painel:** Uma área da barra de faixa de opções que exibe um grupo de controles relacionados. Cada categoria de faixa de opções contém um ou mais painéis de faixa de opções.
 
-- **Elementos de faixa de opções:** Controles nos painéis, por exemplo, botões e caixas de combinação. Para ver os diversos controles que podem ser hospedados em uma faixa de opções, consulte [exemplo de gadget de fita: Aplicativo de gadget de faixa de opções](../visual-cpp-samples.md).
+- **Elementos de faixa de opções:** Controles nos painéis, por exemplo, botões e caixas de combinação. Para ver os diversos controles que podem ser hospedados em uma faixa de opções, consulte [exemplo de gadget de fita: Aplicativo de gadget de faixa de opções](../overview/visual-cpp-samples.md).
 
 ## <a name="see-also"></a>Consulte também
 

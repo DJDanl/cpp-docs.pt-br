@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - msclr::ptr class
 ms.assetid: 0144d0e4-919c-45f9-a3f8-fbc9edba32bf
-ms.openlocfilehash: 8909f91e31279f1fc1395610aea4708b79731113
-ms.sourcegitcommit: 9813e146a4eb30929d8352872859e8fcb7ff6d2f
+ms.openlocfilehash: 342c222b837e179e2e13dbbd27c88efc18b12332
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54805962"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774164"
 ---
 # <a name="comptr-class"></a>Classe com::ptr
 
@@ -43,7 +43,7 @@ Interface COM.
 
 Um `com::ptr` também pode ser usado como uma variável de função local para simplificar as tarefas COM vários e para automatizar o gerenciamento de tempo de vida.
 
-Um `com::ptr` não pode ser usado diretamente como um parâmetro de função; use um [operador de referência de rastreamento](../windows/tracking-reference-operator-cpp-component-extensions.md) ou uma [operador Handle to object (^)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md) em vez disso.
+Um `com::ptr` não pode ser usado diretamente como um parâmetro de função; use um [operador de referência de rastreamento](../extensions/tracking-reference-operator-cpp-component-extensions.md) ou uma [operador Handle to object (^)](../extensions/handle-to-object-operator-hat-cpp-component-extensions.md) em vez disso.
 
 Um `com::ptr` não pode ser retornado diretamente de uma função; use um identificador em seu lugar.
 
@@ -589,7 +589,7 @@ Fornece a propriedade do objeto COM, retornando um ponteiro para o objeto.
 _interface_type * Detach();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 O ponteiro para o objeto COM.
 
@@ -694,7 +694,7 @@ Retorna um ponteiro para o objeto COM propriedade.
 _interface_type * GetInterface();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um ponteiro para o objeto COM propriedade.
 
@@ -1055,7 +1055,7 @@ Operador de acesso de membro, usado para chamar métodos no objeto COM proprieda
 _detail::smart_com_ptr<_interface_type> operator->();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um `smart_com_ptr` ao objeto COM.
 
@@ -1204,7 +1204,7 @@ ptr<_interface_type> % operator=(
 *_right*<br/>
 O ponteiro de interface COM para anexar.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Uma referência de rastreamento sobre o `com::ptr`.
 
@@ -1302,7 +1302,7 @@ Operador para usar `com::ptr` em uma expressão condicional.
 operator bool();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 `true` Se o objeto COM propriedade é válido. `false` caso contrário.
 
@@ -1373,7 +1373,7 @@ Operador para determinar se o objeto COM propriedade é inválido.
 bool operator!();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 `true` Se o objeto COM propriedade é inválido; `false` caso contrário.
 

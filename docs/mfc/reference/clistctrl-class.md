@@ -264,12 +264,12 @@ helpviewer_keywords:
 - CListCtrl [MFC], SubItemHitTest
 - CListCtrl [MFC], Update
 ms.assetid: fe08a1ca-4b05-4ff7-a12a-ee4c765a2197
-ms.openlocfilehash: fdfc0888e7d6213fb7c04a5257358da8f5dae138
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: eea37d03ca5a4fab450fbca0c4c3f6c76fefb407
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57425088"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780607"
 ---
 # <a name="clistctrl-class"></a>Classe CListCtrl
 
@@ -283,13 +283,13 @@ class CListCtrl : public CWnd
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
 |[CListCtrl::CListCtrl](#clistctrl)|Constrói um objeto `CListCtrl`.|
 
-### <a name="public-methods"></a>Métodos Públicos
+### <a name="public-methods"></a>Métodos públicos
 
 |Nome|Descrição|
 |----------|-----------------|
@@ -4422,7 +4422,7 @@ Essa função também organiza o controle de exibição de lista se ele tem o es
 
 ## <a name="see-also"></a>Consulte também
 
-[Exemplo MFC ROWLIST](../../visual-cpp-samples.md)<br/>
+[Exemplo MFC ROWLIST](../../overview/visual-cpp-samples.md)<br/>
 [Classe CWnd](cwnd-class.md)<br/>
 [Gráfico da hierarquia](../hierarchy-chart.md)<br/>
 [Classe CImageList](cimagelist-class.md)

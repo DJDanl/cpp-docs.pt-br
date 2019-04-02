@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3609
 ms.assetid: 801e7f79-4ac6-4f8f-955f-703cdf095d00
-ms.openlocfilehash: 5572f39082e2dcd8746bb464595c5c00e2f77356
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 27eba3df800c42cc53a7031e958a675c84255440
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50556436"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780971"
 ---
 # <a name="compiler-error-c3609"></a>Erro do compilador C3609
 
 'member': uma função selada ou final deve ser virtual
 
-O [lacrado](../../windows/sealed-cpp-component-extensions.md) e [final](../../cpp/final-specifier.md) palavras-chave são permitidas apenas em uma função de classe, struct ou membro marcada `virtual`.
+O [lacrado](../../extensions/sealed-cpp-component-extensions.md) e [final](../../cpp/final-specifier.md) palavras-chave são permitidas apenas em uma função de classe, struct ou membro marcada `virtual`.
 
 O exemplo a seguir gera C3609:
 

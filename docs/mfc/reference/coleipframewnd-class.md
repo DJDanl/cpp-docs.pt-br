@@ -12,12 +12,12 @@ helpviewer_keywords:
 - COleIPFrameWnd [MFC], OnCreateControlBars
 - COleIPFrameWnd [MFC], RepositionFrame
 ms.assetid: 24abb2cb-826c-4dda-a287-d8a8900a5763
-ms.openlocfilehash: 307bf991853264fcf03dfc5b22eed8e91a3e7aa8
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 34388e635ba89d732ae3993074a2c8268e2289a3
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57301396"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779606"
 ---
 # <a name="coleipframewnd-class"></a>Classe COleIPFrameWnd
 
@@ -31,13 +31,13 @@ class COleIPFrameWnd : public CFrameWnd
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
 |[COleIPFrameWnd::COleIPFrameWnd](#coleipframewnd)|Constrói um objeto `COleIPFrameWnd`.|
 
-### <a name="public-methods"></a>Métodos Públicos
+### <a name="public-methods"></a>Métodos públicos
 
 |Nome|Descrição|
 |----------|-----------------|
@@ -132,7 +132,7 @@ Layout das barras de controle na janela do contêiner é diferente do que é exe
 
 ## <a name="see-also"></a>Consulte também
 
-[Exemplo MFC HIERSVR](../../visual-cpp-samples.md)<br/>
+[Exemplo MFC HIERSVR](../../overview/visual-cpp-samples.md)<br/>
 [Classe CFrameWnd](../../mfc/reference/cframewnd-class.md)<br/>
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
 [Classe CFrameWnd](../../mfc/reference/cframewnd-class.md)

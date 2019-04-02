@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - reference types, C++ stack semantics for
 ms.assetid: 319a1304-f4a4-4079-8b84-01cec847d531
-ms.openlocfilehash: 6ba17a56c5274295c44cdc5aa651380d1e6c83d3
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 69771de120dc413496a3b7b0613e51a13d208e22
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57740931"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772599"
 ---
 # <a name="c-stack-semantics-for-reference-types"></a>Semântica da pilha do C++ para tipos de referência
 
-Antes do Visual C++ 2005, uma instância de um tipo de referência pode apenas ser criada usando o `new` operador, que criou o objeto sobre o lixo coletado heap. No entanto, agora você pode criar uma instância de um tipo de referência usando a mesma sintaxe que você usaria para criar uma instância de um tipo nativo na pilha. Assim, você não precisará usar [gcnew de novo, ref](../windows/ref-new-gcnew-cpp-component-extensions.md) para criar um objeto do tipo de referência. E quando o objeto sai do escopo, o compilador chama o destruidor do objeto.
+Antes do Visual C++ 2005, uma instância de um tipo de referência pode apenas ser criada usando o `new` operador, que criou o objeto sobre o lixo coletado heap. No entanto, agora você pode criar uma instância de um tipo de referência usando a mesma sintaxe que você usaria para criar uma instância de um tipo nativo na pilha. Assim, você não precisará usar [gcnew de novo, ref](../extensions/ref-new-gcnew-cpp-component-extensions.md) para criar um objeto do tipo de referência. E quando o objeto sai do escopo, o compilador chama o destruidor do objeto.
 
 ## <a name="remarks"></a>Comentários
 
@@ -41,9 +41,9 @@ O compilador também fornece um `%` operador unário para converter uma instânc
 
 Os seguintes tipos de referência não estão disponíveis para uso com a semântica de pilha:
 
-- [delegate (Extensões de componentes do C++)](../windows/delegate-cpp-component-extensions.md)
+- [delegate (Extensões de componentes do C++)](../extensions/delegate-cpp-component-extensions.md)
 
-- [Matrizes](../windows/arrays-cpp-component-extensions.md)
+- [Matrizes](../extensions/arrays-cpp-component-extensions.md)
 
 - <xref:System.String>
 
@@ -113,4 +113,4 @@ int main() {
 
 ## <a name="see-also"></a>Consulte também
 
-[Classes e Structs](../windows/classes-and-structs-cpp-component-extensions.md)
+[Classes e Structs](../extensions/classes-and-structs-cpp-component-extensions.md)

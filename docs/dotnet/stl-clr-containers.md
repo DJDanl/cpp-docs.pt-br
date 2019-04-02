@@ -6,12 +6,12 @@ helpviewer_keywords:
 - STL/CLR, containers
 - containers, STL/CLR
 ms.assetid: 34ca8031-2041-46b9-aed9-29082d1972ea
-ms.openlocfilehash: 511ea14d02b77e237ae9768776c4ff3eb97982ed
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: dc2e5ce3263c61839a1ba434ab0d2a39e6a9078f
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57744358"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774536"
 ---
 # <a name="stlclr-containers"></a>Contêineres STL/CLR
 
@@ -37,7 +37,7 @@ Você não é possível inserir tipos de valor demarcado em qualquer um dos cont
 
 ### <a name="handles-to-reference-types"></a>Identificadores para tipos de referência
 
-Você pode inserir um identificador para um tipo de referência em um contêiner STL/CLR. Um identificador em C++ que se destina ao CLR é análogo a um ponteiro em C++ nativo. Para obter mais informações, consulte [operador Handle to Object (^)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md).
+Você pode inserir um identificador para um tipo de referência em um contêiner STL/CLR. Um identificador em C++ que se destina ao CLR é análogo a um ponteiro em C++ nativo. Para obter mais informações, consulte [operador Handle to Object (^)](../extensions/handle-to-object-operator-hat-cpp-component-extensions.md).
 
 #### <a name="example"></a>Exemplo
 
@@ -229,7 +229,7 @@ int main()
 
 Você também pode inserir um tipo value unboxed em um contêiner STL/CLR. Um tipo value unboxed é um tipo de valor que não tenha sido *box* em um tipo de referência.
 
-Um elemento de tipo de valor pode ser um dos tipos de valor padrão, como um `int`, ou pode ser um tipo de valor definidos pelo usuário, como um `value class`. Para obter mais informações, consulte [Classes e Structs](../windows/classes-and-structs-cpp-component-extensions.md)
+Um elemento de tipo de valor pode ser um dos tipos de valor padrão, como um `int`, ou pode ser um tipo de valor definidos pelo usuário, como um `value class`. Para obter mais informações, consulte [Classes e Structs](../extensions/classes-and-structs-cpp-component-extensions.md)
 
 #### <a name="example"></a>Exemplo
 

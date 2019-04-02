@@ -24,12 +24,12 @@ helpviewer_keywords:
 - COleInsertDialog [MFC], GetSelectionType
 - COleInsertDialog [MFC], m_io
 ms.assetid: a9ec610b-abde-431e-bd01-c40159a66dbb
-ms.openlocfilehash: 750243ddf6494ecc4a6a28c0cb47b05ca7089c33
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 27bf98ea4fe6951624873c1463d50f37558c9234
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57260680"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781478"
 ---
 # <a name="coleinsertdialog-class"></a>Classe COleInsertDialog
 
@@ -43,13 +43,13 @@ class COleInsertDialog : public COleDialog
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
 |[COleInsertDialog::COleInsertDialog](#coleinsertdialog)|Constrói um objeto `COleInsertDialog`.|
 
-### <a name="public-methods"></a>Métodos Públicos
+### <a name="public-methods"></a>Métodos públicos
 
 |Nome|Descrição|
 |----------|-----------------|
@@ -304,7 +304,7 @@ Para obter mais informações, consulte o [OLEUIINSERTOBJECT](/windows/desktop/a
 
 ## <a name="see-also"></a>Consulte também
 
-[Exemplo MFC OCLIENT](../../visual-cpp-samples.md)<br/>
+[Exemplo MFC OCLIENT](../../overview/visual-cpp-samples.md)<br/>
 [Classe COleDialog](../../mfc/reference/coledialog-class.md)<br/>
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
 [Classe COleDialog](../../mfc/reference/coledialog-class.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - MFC, wizards
 - Class View tool, managing Windows messages
 ms.assetid: f5dd4d13-9dc1-4a49-b6bf-5b3cb45fa8ba
-ms.openlocfilehash: 5316899b7eb8828847af6d7db95edf3d8ba3822a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 41cbb86b4245bd78baecd222b5573ba5e877243a
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57265516"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773821"
 ---
 # <a name="wizards-and-the-resource-editors"></a>Assistentes e os editores de recursos
 
@@ -46,7 +46,7 @@ A janela Propriedades criará funções de membro vazio do manipulador de mensag
 
 Usar o Visual C++ [editores de recursos](../windows/resource-editors.md) para criar e editar os menus, caixas de diálogo, controles personalizados, teclas de aceleração, bitmaps, ícones, cursores, cadeias de caracteres e recursos de versão. A partir do Visual C++ versão 4.0, um editor de barra de ferramentas facilita criar barras de ferramentas.
 
-Para ajudá-lo ainda mais, a biblioteca Microsoft Foundation Class fornece um arquivo chamado comum. RES, que contém os recursos de "clip-art" que você pode copiar de comuns. RES e colado em seu próprio arquivo de recurso. COMUM. RES inclui botões de barra de ferramentas, cursores comuns, ícones e muito mais. Você pode usar, modificar e redistribuir esses recursos em seu aplicativo. Para obter mais informações sobre o comum. RES, consulte o [exemplo de clip-art](../visual-cpp-samples.md).
+Para ajudá-lo ainda mais, a biblioteca Microsoft Foundation Class fornece um arquivo chamado comum. RES, que contém os recursos de "clip-art" que você pode copiar de comuns. RES e colado em seu próprio arquivo de recurso. COMUM. RES inclui botões de barra de ferramentas, cursores comuns, ícones e muito mais. Você pode usar, modificar e redistribuir esses recursos em seu aplicativo. Para obter mais informações sobre o comum. RES, consulte o [exemplo de clip-art](../overview/visual-cpp-samples.md).
 
 O Assistente de aplicativo do MFC, os assistentes do Visual C++, editores de recursos e a estrutura MFC não muito trabalho para você e facilitar o gerenciamento de seu código muito mais fácil. A maior parte do seu código específico do aplicativo está em suas classes de documento e exibição.
 

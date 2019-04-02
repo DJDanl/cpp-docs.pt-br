@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - try-catch keyword [C++], exception handling
 ms.assetid: a6aa08de-669d-4ce8-9ec3-ec20d1354fcf
-ms.openlocfilehash: a155d56cc234c11534f5456ef92ea913e094f1a8
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: 506ead1b6e96f59717a92b6b0c48db0270b1822f
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627274"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779515"
 ---
 # <a name="exception-handling-in-visual-c"></a>Tratamento de exceções no Visual C++
 
@@ -33,7 +33,7 @@ O Visual C++ dá suporte a três tipos de tratamento de exceções:
 
 Use o [/EH](../build/reference/eh-exception-handling-model.md) opção do compilador para especificar o tipo de tratamento de exceções para usar em um projeto; Tratamento de exceções C++ é o padrão. Não combine os mecanismos de tratamento de erro, por exemplo, não use exceções do C++ com manipulação de exceções estruturada. Usar manipulação de exceções C++ torna seu código mais portável e permite que você manipule exceções de qualquer tipo. Para obter mais informações sobre as desvantagens da manipulação de exceção estruturada, consulte [Structured Exception Handling](../cpp/structured-exception-handling-c-cpp.md). Para obter conselhos sobre mesclando macros MFC e exceções do C++, consulte [exceções: Usando Macros MFC e exceções do C++](../mfc/exceptions-using-mfc-macros-and-cpp-exceptions.md).
 
-Para obter informações sobre o tratamento de exceções em aplicativos do CLR, consulte [tratamento de exceções (C + + c++ /CLI e c++ /CLI CX)](../windows/exception-handling-cpp-component-extensions.md).
+Para obter informações sobre o tratamento de exceções em aplicativos do CLR, consulte [tratamento de exceções (C + + c++ /CLI e c++ /CLI CX)](../extensions/exception-handling-cpp-component-extensions.md).
 
 Para obter informações sobre o tratamento de exceções em x64 processadores, consulte [x64 tratamento de exceção](../build/exception-handling-x64.md).
 

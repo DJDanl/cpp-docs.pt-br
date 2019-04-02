@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3394
 ms.assetid: 4e025d79-27ba-43c8-b0d9-839ecef98126
-ms.openlocfilehash: 4eba2c9f34f1cfcaf97733f914520043ee1124bf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 826084d375c69ca289a858a29a12ae16874c1fbd
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50557385"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781452"
 ---
 # <a name="compiler-error-c3394"></a>Erro do compilador C3394
 
 Erro de sintaxe em cláusula de restrição: encontrado um tipo esperado de 'identifier'
 
-Uma restrição ill foi formada.  Para obter mais informações, consulte [restrições em parâmetros de tipo genéricos (C + + / CLI)](../../windows/constraints-on-generic-type-parameters-cpp-cli.md).
+Uma restrição ill foi formada.  Para obter mais informações, consulte [restrições em parâmetros de tipo genéricos (C + + / CLI)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md).
 
 ## <a name="example"></a>Exemplo
 

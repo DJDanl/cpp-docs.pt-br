@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - Object class
 ms.assetid: 709e84a8-0bff-471b-bc14-63e424080b5a
-ms.openlocfilehash: 8e2304ca2c4a6e974262fdb1b449a64b5871a474
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 77313f8c4dcc87fa9de852afe2d60e614f8fc3a3
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57749874"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781010"
 ---
 # <a name="platformobject-class"></a>Classe Platform::Object
 
@@ -31,7 +31,7 @@ public ref class Object : Object
 
 ### <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
@@ -118,7 +118,7 @@ Estático [Type:: GetTypeCode](../cppcx/platform-type-class.md#gettypecode) pode
 
 O [Windows::UI::Xaml::Interop::TypeName](/uwp/api/windows.ui.xaml.interop.typename) classe é usada nas APIs do Windows como uma maneira independente de linguagem de passar informações de tipo entre componentes do Windows e aplicativos. O T[classe Platform:: Type](../cppcx/platform-type-class.md) tem operadores para a conversão entre `Type` e `TypeName`.
 
-Use o [typeid](../windows/typeid-cpp-component-extensions.md) operador para retornar um `Platform::Type` objeto para um nome de classe, por exemplo, ao navegar entre páginas XAML:
+Use o [typeid](../extensions/typeid-cpp-component-extensions.md) operador para retornar um `Platform::Type` objeto para um nome de classe, por exemplo, ao navegar entre páginas XAML:
 
 ```
 rootFrame->Navigate(TypeName(MainPage::typeid), e->Arguments);

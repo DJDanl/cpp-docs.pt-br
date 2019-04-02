@@ -120,12 +120,12 @@ helpviewer_keywords:
 - CDocument [MFC], m_clrRichPreviewTextColor
 - CDocument [MFC], m_lfRichPreviewFont
 ms.assetid: e5a2891d-e1e1-4599-8c7e-afa9b4945446
-ms.openlocfilehash: b7358c2206c15660b9ffb283802283ee71e57f03
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 2d87ff67000fb5b70c0a5c965638875e6f50b22c
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57299069"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774170"
 ---
 # <a name="cdocument-class"></a>Classe CDocument
 
@@ -139,13 +139,13 @@ class CDocument : public CCmdTarget
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
 |[CDocument::CDocument](#cdocument)|Constrói um objeto `CDocument`.|
 
-### <a name="public-methods"></a>Métodos Públicos
+### <a name="public-methods"></a>Métodos públicos
 
 |Nome|Descrição|
 |----------|-----------------|
@@ -1254,9 +1254,9 @@ Essa função chama o [CView::OnUpdate](../../mfc/reference/cview-class.md#onupd
 
 ## <a name="see-also"></a>Consulte também
 
-[Exemplo MFC MDIDOCVW](../../visual-cpp-samples.md)<br/>
-[Exemplo MFC SNAPVW](../../visual-cpp-samples.md)<br/>
-[Exemplo MFC NPP](../../visual-cpp-samples.md)<br/>
+[Exemplo MFC MDIDOCVW](../../overview/visual-cpp-samples.md)<br/>
+[Exemplo MFC SNAPVW](../../overview/visual-cpp-samples.md)<br/>
+[Exemplo MFC NPP](../../overview/visual-cpp-samples.md)<br/>
 [Classe CCmdTarget](../../mfc/reference/ccmdtarget-class.md)<br/>
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
 [Classe CCmdTarget](../../mfc/reference/ccmdtarget-class.md)<br/>

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3469
 ms.assetid: e23b0e5c-c704-4e67-a868-bf02c2055d85
-ms.openlocfilehash: 7ae0b7b779749a9787601a6046eadd80c2ba49d0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1e935fb90c93d6f301226f3e9029c04929f179ac
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50571061"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773275"
 ---
 # <a name="compiler-error-c3469"></a>Erro do compilador C3469
 
@@ -19,7 +19,7 @@ ms.locfileid: "50571061"
 
 É possível usar o encaminhamento de tipo em uma classe genérica.
 
-Para obter mais informações, consulte [encaminhamento de tipo (C + + / CLI)](../../windows/type-forwarding-cpp-cli.md).
+Para obter mais informações, consulte [encaminhamento de tipo (C + + / CLI)](../../extensions/type-forwarding-cpp-cli.md).
 
 ## <a name="example"></a>Exemplo
 

@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3292
 ms.assetid: ead485cc-5471-4e10-b361-300589ff5b70
-ms.openlocfilehash: 7c59932a79534a365a20fcad25583f7addc0d624
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a68d3e922532480063fe4c294e40f453885743e8
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50609594"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780646"
 ---
 # <a name="compiler-error-c3292"></a>Erro do compilador C3292
 
 o namespace cli não pode ser reaberto
 
-O namespace cli não pode ser declarado em seu código.  Para obter mais informações, consulte [plataforma, padrão e cli Namespaces](../../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md).
+O namespace cli não pode ser declarado em seu código.  Para obter mais informações, consulte [plataforma, padrão e cli Namespaces](../../extensions/platform-default-and-cli-namespaces-cpp-component-extensions.md).
 
 ## <a name="example"></a>Exemplo
 

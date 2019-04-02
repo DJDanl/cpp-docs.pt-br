@@ -24,12 +24,12 @@ helpviewer_keywords:
 - COleDocObjectItem [MFC], QueryCommand
 - COleDocObjectItem [MFC], Release
 ms.assetid: d150d306-8fd3-4831-b06d-afbe71d8fc9b
-ms.openlocfilehash: af6d866298309f5ddb8eb21a5caeb3d1526b166a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 382960b4dc4dcfa61c836a87044dd14585756174
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57276280"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769635"
 ---
 # <a name="coledocobjectitem-class"></a>Classe COleDocObjectItem
 
@@ -43,7 +43,7 @@ class COleDocObjectItem : public COleClientItem
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
@@ -305,7 +305,7 @@ Destrói o item do cliente.
 
 ## <a name="see-also"></a>Consulte também
 
-[Exemplo MFC MFCBIND](../../visual-cpp-samples.md)<br/>
+[Exemplo MFC MFCBIND](../../overview/visual-cpp-samples.md)<br/>
 [Classe COleClientItem](../../mfc/reference/coleclientitem-class.md)<br/>
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
 [Classe COleClientItem](../../mfc/reference/coleclientitem-class.md)<br/>

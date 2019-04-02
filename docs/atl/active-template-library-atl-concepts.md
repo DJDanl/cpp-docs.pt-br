@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - ATL, about ATL
 ms.assetid: a3960991-4d76-4da5-9568-3fa7fde53ff4
-ms.openlocfilehash: 90fd096f15f185feebc6f6ae8b73b010fe3c1813
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 7eb7eb1c369f825fbb689cd476d43be538ae8d9a
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57265334"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774614"
 ---
 # <a name="active-template-library-atl-concepts"></a>Conceitos da Biblioteca de Modelo Ativa (ATL)
 
@@ -87,7 +87,7 @@ Fornece código para manipular URLs e caminhos na forma de [CPathT](../atl/refer
 
 ## <a name="related-sections"></a>Seções relacionadas
 
-[Exemplos de ATL](../visual-cpp-samples.md)<br/>
+[Exemplos de ATL](../overview/visual-cpp-samples.md)<br/>
 Fornece descrições de links para os programas de exemplo do ATL.
 
 [Criando um projeto ATL](../atl/reference/creating-an-atl-project.md)<br/>

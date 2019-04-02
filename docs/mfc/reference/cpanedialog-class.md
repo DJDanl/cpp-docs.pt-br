@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CPaneDialog [MFC], HandleInitDialog
 - CPaneDialog [MFC], SetOccDialogInfo
 ms.assetid: 48a6bb91-4b92-40f5-8907-b3270b146cf6
-ms.openlocfilehash: 16aa707792cc1289ced380e54abef3f15289e7cf
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c78b8f2cd19e87fa559c3f9bbd24d07543d887c5
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57274551"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769739"
 ---
 # <a name="cpanedialog-class"></a>Classe CPaneDialog
 
@@ -31,7 +31,7 @@ class CPaneDialog : public CDockablePane
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
@@ -150,7 +150,7 @@ TRUE se este método for bem-sucedido; Caso contrário, FALSE.
 
 ### <a name="example"></a>Exemplo
 
-O exemplo a seguir demonstra como usar o `Create` método no `CPaneDialog` classe. Este exemplo é parte do [exemplo de definir o tamanho do painel](../../visual-cpp-samples.md).
+O exemplo a seguir demonstra como usar o `Create` método no `CPaneDialog` classe. Este exemplo é parte do [exemplo de definir o tamanho do painel](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_SetPaneSize#2](../../mfc/reference/codesnippet/cpp/cpanedialog-class_1.h)]
 [!code-cpp[NVC_MFC_SetPaneSize#3](../../mfc/reference/codesnippet/cpp/cpanedialog-class_2.cpp)]

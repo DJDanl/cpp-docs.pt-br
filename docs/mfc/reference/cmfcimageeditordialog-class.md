@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCImageEditorDialog [MFC], CMFCImageEditorDialog
 ms.assetid: 6a7d08f3-1ec2-4062-9b79-a0c2776b58d1
-ms.openlocfilehash: 57b1df49616967841a433a36a504beed0b900cde
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 97f16fa00b2e90fd9c43bf9b6792b4eafe7d7b88
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57278529"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780439"
 ---
 # <a name="cmfcimageeditordialog-class"></a>Classe CMFCImageEditorDialog
 
@@ -27,7 +27,7 @@ class CMFCImageEditorDialog : public CDialogEx
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
@@ -99,7 +99,7 @@ Para modificar uma imagem, passe um ponteiro de imagem para o `CMFCImageEditorDi
 
 ### <a name="example"></a>Exemplo
 
-O exemplo a seguir demonstra como construir um objeto do `CMFCImageEditorDialog` classe. Este exemplo é parte do [exemplo de novos controles](../../visual-cpp-samples.md).
+O exemplo a seguir demonstra como construir um objeto do `CMFCImageEditorDialog` classe. Este exemplo é parte do [exemplo de novos controles](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#8](../../mfc/reference/codesnippet/cpp/cmfcimageeditordialog-class_1.cpp)]
 [!code-cpp[NVC_MFC_NewControls#40](../../mfc/reference/codesnippet/cpp/cmfcimageeditordialog-class_2.cpp)]

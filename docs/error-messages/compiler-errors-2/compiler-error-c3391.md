@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3391
 ms.assetid: c32532b9-7db4-4ccd-84b9-479e5a1a19d1
-ms.openlocfilehash: cac397e4588c493fb8c47932feb97a5f12cf2583
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 32ba1ca63a3a6fafa3290946a976e6845385126f
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50578211"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772586"
 ---
 # <a name="compiler-error-c3391"></a>Erro do compilador C3391
 
 'type_arg': argumento de tipo inválido para parâmetro de generic param de genérico 'generic_type' deve ser um tipo de valor não anulável
 
-Um tipo genérico foi instanciado incorretamente. Verifique a definição de tipo. Para obter mais informações, consulte <xref:System.Nullable> e [genéricos](../../windows/generics-cpp-component-extensions.md).
+Um tipo genérico foi instanciado incorretamente. Verifique a definição de tipo. Para obter mais informações, consulte <xref:System.Nullable> e [genéricos](../../extensions/generics-cpp-component-extensions.md).
 
 ## <a name="example"></a>Exemplo
 

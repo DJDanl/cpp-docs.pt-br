@@ -5,12 +5,12 @@ helpviewer_keywords:
 - structs [C++]
 - classes [C++], instantiating
 ms.assetid: 1c03cb0d-1459-4b5e-af65-97d6b3094fd7
-ms.openlocfilehash: 2c43234ca05c661d8f3d920b1129256a7550a5e2
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 090259a4ad6b46eccf66dca6c99b4eb532b7ae5c
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57751824"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774913"
 ---
 # <a name="how-to-define-and-consume-classes-and-structs-ccli"></a>Como: Definir e consumir Classes e Structs (C++ /CLI CLI)
 
@@ -97,7 +97,7 @@ int main() {
 
 Uma *classe abstrata implicitamente* não pode ser instanciada. Uma classe é abstrata implicitamente se o tipo base da classe é uma interface e a classe não implementa todas as funções de membro da interface.
 
-Se não for possível construir objetos de uma classe derivada de uma interface, o motivo pode ser que a classe é abstrata implicitamente. Para obter mais informações sobre classes abstratas, consulte [abstrata](../windows/abstract-cpp-component-extensions.md).
+Se não for possível construir objetos de uma classe derivada de uma interface, o motivo pode ser que a classe é abstrata implicitamente. Para obter mais informações sobre classes abstratas, consulte [abstrata](../extensions/abstract-cpp-component-extensions.md).
 
 O exemplo de código a seguir demonstra que o `MyClass` classe não pode ser instanciado porque função `MyClass::func2` não está implementado. Para habilitar o exemplo compilar, remova a marca de comentário de `MyClass::func2`.
 
@@ -229,7 +229,7 @@ Esta tabela resume o efeito dos vários especificadores de acesso:
 |públicos|Membro é acessível dentro e fora do assembly.  Ver [pública](../cpp/public-cpp.md) para obter mais informações.|
 |particulares|Membro não está acessível, nem dentro como fora do assembly.  Ver [privada](../cpp/private-cpp.md) para obter mais informações.|
 |protegidos|Membro é acessível dentro e fora do assembly, mas apenas para tipos derivados.  Ver [protegidos](../cpp/protected-cpp.md) para obter mais informações.|
-|interno|Membro é público dentro do assembly, mas privada fora do assembly.  `internal` é uma palavra-chave contextual.  Para obter mais informações, consulte [contextual as palavras-chave](../windows/context-sensitive-keywords-cpp-component-extensions.md).|
+|interno|Membro é público dentro do assembly, mas privada fora do assembly.  `internal` é uma palavra-chave contextual.  Para obter mais informações, consulte [contextual as palavras-chave](../extensions/context-sensitive-keywords-cpp-component-extensions.md).|
 |público público protegido - ou - protegido|Membro é público dentro do assembly, mas protegidos fora do assembly.|
 |privada privado protegido - ou - protegido|Membro é protegida dentro do assembly, mas privada fora do assembly.|
 
@@ -499,9 +499,9 @@ Essas semânticas diferentes da `this` ponteiro pode causar um comportamento ine
 
 Para saber mais, veja
 
-- [Operador Handle to Object (^)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)
+- [Operador Handle to Object (^)](../extensions/handle-to-object-operator-hat-cpp-component-extensions.md)
 
-- [interior_ptr (C++/CLI)](../windows/interior-ptr-cpp-cli.md)
+- [interior_ptr (C++/CLI)](../extensions/interior-ptr-cpp-cli.md)
 
 ```cpp
 // compile with: /clr
@@ -797,7 +797,7 @@ Código escrito em Visual C++ e compilado usando **/clr** executa o destruidor d
 
 - O objeto é um membro em um objeto cujo destruidor está em execução.
 
-- Você chama o [exclua](../cpp/delete-operator-cpp.md) operador em uma alça ([operador Handle to Object (^)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)).
+- Você chama o [exclua](../cpp/delete-operator-cpp.md) operador em uma alça ([operador Handle to Object (^)](../extensions/handle-to-object-operator-hat-cpp-component-extensions.md)).
 
 - Você chamar explicitamente o destruidor.
 
@@ -844,7 +844,7 @@ Depois que o finalizador de um objeto é executado, os finalizadores em todas as
 
 Se um finalizador exclui um ponteiro nativo em um tipo gerenciado, você deve garantir que as referências a ou através do ponteiro nativo não sejam coletadas prematuramente; chamar o destruidor em um tipo gerenciado em vez de usar <xref:System.GC.KeepAlive%2A>.
 
-Em tempo de compilação, você pode detectar se um tipo tem um finalizador ou um destruidor. Para obter mais informações, consulte [suporte do compilador para características de tipo](../windows/compiler-support-for-type-traits-cpp-component-extensions.md).
+Em tempo de compilação, você pode detectar se um tipo tem um finalizador ou um destruidor. Para obter mais informações, consulte [suporte do compilador para características de tipo](../extensions/compiler-support-for-type-traits-cpp-component-extensions.md).
 
 O próximo exemplo mostra dois tipos, que possui recursos não gerenciados e que tem recursos que são lançados de forma determinista gerenciados.
 
@@ -914,5 +914,5 @@ int main() {
 
 ## <a name="see-also"></a>Consulte também
 
-[Classes e Structs](../windows/classes-and-structs-cpp-component-extensions.md)<br/>
-[Classes e Structs](../windows/classes-and-structs-cpp-component-extensions.md)
+[Classes e Structs](../extensions/classes-and-structs-cpp-component-extensions.md)<br/>
+[Classes e Structs](../extensions/classes-and-structs-cpp-component-extensions.md)

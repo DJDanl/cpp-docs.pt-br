@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CMFCShellTreeCtrl [MFC], SetFlags
 - CMFCShellTreeCtrl [MFC], SetRelatedList
 ms.assetid: 3d1da715-9554-4ed7-968c-055c48146267
-ms.openlocfilehash: 3fa829c5333a87d908d36438fe8ffcd253f9fb5a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 1fc422c3aca3efe1fb177e7a3567530d70c27119
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57279985"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779749"
 ---
 # <a name="cmfcshelltreectrl-class"></a>Classe CMFCShellTreeCtrl
 
@@ -86,7 +86,7 @@ Essa classe estende a `CTreeCtrl` classe, permitindo que seu programa incluir it
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir demonstra como criar um objeto do `CMFCShellTreeCtrl` classe. Este trecho de código faz parte de [amostra do Gerenciador de](../../visual-cpp-samples.md).
+O exemplo a seguir demonstra como criar um objeto do `CMFCShellTreeCtrl` classe. Este trecho de código faz parte de [amostra do Gerenciador de](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_Explorer#4](../../mfc/reference/codesnippet/cpp/cmfcshelltreectrl-class_1.h)]
 [!code-cpp[NVC_MFC_Explorer#5](../../mfc/reference/codesnippet/cpp/cmfcshelltreectrl-class_2.cpp)]

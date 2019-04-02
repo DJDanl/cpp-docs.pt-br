@@ -6,12 +6,12 @@ helpviewer_keywords:
 - catching exceptions, thrown from MSIL
 - MSIL, catching exceptions in native code
 ms.assetid: c15afd2b-8505-43bf-8a4a-f1d41532a124
-ms.openlocfilehash: acb3ba1ab6d10decba10b899861007abfff03359
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 95ce7a2afabc34ea78376b12da61f419dab4af34
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57748717"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776551"
 ---
 # <a name="how-to-catch-exceptions-in-native-code-thrown-from-msil"></a>Como: Capturar exceções em código nativo lançadas pela MSIL
 
@@ -79,4 +79,4 @@ caught an exception
 
 ## <a name="see-also"></a>Consulte também
 
-[Tratamento de Exceção](../windows/exception-handling-cpp-component-extensions.md)
+[Tratamento de Exceção](../extensions/exception-handling-cpp-component-extensions.md)

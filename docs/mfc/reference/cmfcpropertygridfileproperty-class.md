@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCPropertyGridFileProperty [MFC], CMFCPropertyGridFileProperty
 ms.assetid: 2bb8b8b4-47fc-4798-bd5e-dc8ea0b4cd9d
-ms.openlocfilehash: 5022063fe7eb8242f01684438e2fdeeeedc80616
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 20a0a50198357602d70a2111c6884058f7578af7
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57302891"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773327"
 ---
 # <a name="cmfcpropertygridfileproperty-class"></a>Classe CMFCPropertyGridFileProperty
 
@@ -27,7 +27,7 @@ class CMFCPropertyGridFileProperty : public CMFCPropertyGridProperty
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
@@ -105,7 +105,7 @@ Para obter uma lista completa dos sinalizadores disponíveis, consulte [estrutur
 
 ### <a name="example"></a>Exemplo
 
-O exemplo a seguir demonstra como criar um objeto usando o construtor do `CMFCPropertyGridFileProperty` classe. Este exemplo faz parte do [amostra de demonstração do Visual Studio](../../visual-cpp-samples.md).
+O exemplo a seguir demonstra como criar um objeto usando o construtor do `CMFCPropertyGridFileProperty` classe. Este exemplo faz parte do [amostra de demonstração do Visual Studio](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#22](../../mfc/codesnippet/cpp/cmfcpropertygridfileproperty-class_1.cpp)]
 

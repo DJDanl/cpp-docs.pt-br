@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CShellManager [MFC], GetParentItem
 - CShellManager [MFC], ItemFromPath
 ms.assetid: f15c4c1a-6fae-487d-9913-9b7369b33da0
-ms.openlocfilehash: 3f58492c6adbb6c183d6498e4a58f3ce639d7d18
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: ec2abf243e7f3865609f81fa4f3bf81e1b4c3d92
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57269377"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769963"
 ---
 # <a name="cshellmanager-class"></a>Classe CShellManager
 
@@ -47,13 +47,13 @@ class CShellManager : public CObject
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
 |[CShellManager::CShellManager](#cshellmanager)|Constrói um objeto `CShellManager`.|
 
-### <a name="public-methods"></a>Métodos Públicos
+### <a name="public-methods"></a>Métodos públicos
 
 |Nome|Descrição|
 |----------|-----------------|
@@ -128,7 +128,7 @@ Quando você chama esse método, o aplicativo cria e mostra uma caixa de diálog
 
 ### <a name="example"></a>Exemplo
 
-O exemplo a seguir demonstra como recuperar uma referência a um `CShellManager` objeto usando o `CWinAppEx::GetShellManager` método e como usar o `BrowseForFolder` método. Este trecho de código faz parte de [amostra do Gerenciador de](../../visual-cpp-samples.md).
+O exemplo a seguir demonstra como recuperar uma referência a um `CShellManager` objeto usando o `CWinAppEx::GetShellManager` método e como usar o `BrowseForFolder` método. Este trecho de código faz parte de [amostra do Gerenciador de](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_Explorer#6](../../mfc/reference/codesnippet/cpp/cshellmanager-class_1.cpp)]
 

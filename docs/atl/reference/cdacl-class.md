@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - CDacl class
 ms.assetid: 2dc76616-6362-4967-b6cf-e2d39ca37ddd
-ms.openlocfilehash: edfa7a47fa94e659d6529706d04021dfc800c269
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 1beac6106b825c775012b85ccd01226c3dfab795
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57280115"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770013"
 ---
 # <a name="cdacl-class"></a>Classe CDacl
 
@@ -35,7 +35,7 @@ class CDacl : public CAcl
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
@@ -262,7 +262,7 @@ Remove todos os `ACE` estrutura (entrada de controle de acesso) (se houver) na `
 
 ## <a name="see-also"></a>Consulte também
 
-[Exemplo de segurança](../../visual-cpp-samples.md)<br/>
+[Exemplo de segurança](../../overview/visual-cpp-samples.md)<br/>
 [Classe CAcl](../../atl/reference/cacl-class.md)<br/>
 [ACLs](/windows/desktop/SecAuthZ/access-control-lists)<br/>
 [ACEs](/windows/desktop/SecAuthZ/access-control-entries)<br/>

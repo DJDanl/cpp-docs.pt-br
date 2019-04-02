@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - static_cast keyword [C++]
 ms.assetid: 1f7c0c1c-b288-476c-89d6-0e2ceda5c293
-ms.openlocfilehash: 8e39fe7eb0fb9b77a82b305fa2f8186ad4e855a1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dca6d5297379e6ddc1c70dba80f35f2f55672e49
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50601702"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776915"
 ---
 # <a name="staticcast-operator"></a>Operador static_cast
 
@@ -103,7 +103,7 @@ Qualquer expressão pode ser convertido no tipo void pelo explicitamente o **sta
 
 O **static_cast** operador não pode eliminar a **const**, **volátil**, ou **unaligned** atributos. Ver [operador const_cast](../cpp/const-cast-operator.md) para obter informações sobre como remover esses atributos.
 
-Devido ao perigo de realizar conversões não verificadas na parte superior de um coletor de lixo realocação, o uso de **static_cast** só deve estar no código crítico de desempenho quando você tiver certeza de que ele funcionará corretamente. Se você precisar usar **static_cast** no modo de liberação, substitua-o por [safe_cast](../windows/safe-cast-cpp-component-extensions.md) em suas compilações de depuração para garantir o sucesso.
+**C++/CLI:** Devido ao perigo de realizar conversões não verificadas na parte superior de um coletor de lixo realocação, o uso de **static_cast** só deve estar no código crítico de desempenho quando você tiver certeza de que ele funcionará corretamente. Se você precisar usar **static_cast** no modo de liberação, substitua-o por [safe_cast](../extensions/safe-cast-cpp-component-extensions.md) em suas compilações de depuração para garantir o sucesso.
 
 ## <a name="see-also"></a>Consulte também
 
