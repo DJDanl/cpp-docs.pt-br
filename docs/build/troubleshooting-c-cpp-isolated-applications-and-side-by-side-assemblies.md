@@ -6,12 +6,12 @@ helpviewer_keywords:
 - troubleshooting isolated applications
 - troubleshooting Visual C++
 ms.assetid: 3257257a-1f0b-4ede-8564-9277a7113a35
-ms.openlocfilehash: d23662d6dd6d2f241c48e0c83f2fa5ed9532c3f7
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 32896939ddc7fd0b841e1b6904124b06c9bc51c9
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57807943"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58766047"
 ---
 # <a name="troubleshooting-cc-isolated-applications-and-side-by-side-assemblies"></a>Solucionando problemas de aplicativos isolados do C/C++ e assemblies lado a lado
 
@@ -31,7 +31,7 @@ Se seu aplicativo não tem nenhum manifesto e depende de uma DLL que não é pos
 
 Se seu aplicativo é implantado em um computador que não tenha o Visual Studio, e ele falhar com mensagens de erro semelhantes do anteriores, verifique se essas coisas:
 
-1. Siga as etapas descritas em [Noções básicas sobre as dependências de um aplicativo do Visual C++](../ide/understanding-the-dependencies-of-a-visual-cpp-application.md). O dependency walker pode mostrar a maioria das dependências para um aplicativo ou DLL. Se você observar que algumas DLLs estão faltando, você deve instalá-los no computador no qual você está tentando executar seu aplicativo.
+1. Siga as etapas descritas em [Noções básicas sobre as dependências de um aplicativo do Visual C++](../windows/understanding-the-dependencies-of-a-visual-cpp-application.md). O dependency walker pode mostrar a maioria das dependências para um aplicativo ou DLL. Se você observar que algumas DLLs estão faltando, você deve instalá-los no computador no qual você está tentando executar seu aplicativo.
 
 1. Carregador do sistema operacional usa o manifesto do aplicativo para carregar assemblies que o aplicativo depende. O manifesto pode ser inserido no binário como um recurso ou instalado como um arquivo separado na pasta do aplicativo. Para verificar se o manifesto é incorporado no binário, abra o binário no Visual Studio e procure RT_MANIFEST em sua lista de recursos. Se você não encontrar um manifesto inserido, procure na pasta do aplicativo para um arquivo que tem um nome, como < binary_name >. \<extensão >. manifest.
 

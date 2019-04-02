@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAutoRevertImpersonation class
 ms.assetid: 43732849-1940-4bd4-9d52-7a5698bb8838
-ms.openlocfilehash: c8ab7fed8f1560054eb023cbd4e47c43c4c6f0cc
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 78488fba080e397b06eb67ebe8039fb3e8d5e035
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57299095"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779372"
 ---
 # <a name="cautorevertimpersonation-class"></a>Classe CAutoRevertImpersonation
 
@@ -30,7 +30,7 @@ class CAutoRevertImpersonation
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
@@ -137,6 +137,6 @@ Se esse método é chamado para fins que incluem a reversão de uma representaç
 
 ## <a name="see-also"></a>Consulte também
 
-[Exemplo de ATLSecurity](../../visual-cpp-samples.md)<br/>
+[Exemplo de ATLSecurity](../../overview/visual-cpp-samples.md)<br/>
 [Tokens de acesso](/windows/desktop/SecAuthZ/access-tokens)<br/>
 [Visão geral da classe](../../atl/atl-class-overview.md)

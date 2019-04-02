@@ -20,12 +20,12 @@ helpviewer_keywords:
 - C++ COM Interop
 - .NET [C++], porting C++ native to
 ms.assetid: 5f710bf1-88ae-4c4e-8326-b3f0b7c4c68a
-ms.openlocfilehash: ffe4aaeecc3e0f65851a87840cd21f81c4806fb4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aaa07373b7dd22807290ceefa9197b4013c61fe5
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50464573"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58778228"
 ---
 # <a name="using-c-interop-implicit-pinvoke"></a>Usando interop C++ (PInvoke implícito)
 
@@ -59,7 +59,7 @@ Independentemente se o COM é usado diretamente ou por meio de um CRCW, tipos de
 
 ## <a name="blittable-types"></a>Tipos blittable
 
-Para APIs não gerenciadas que usam tipos simples, intrínseco (consulte [Blittable e não blittable](/dotnet/framework/interop/blittable-and-non-blittable-types)), nenhuma codificação especial é necessária porque esses tipos de dados têm a mesma representação na memória, mas exigem tipos de dados mais complexos marshaling de dados explícitos. Por exemplo, consulte [como: chamar DLLs nativas de gerenciadas código usando PInvoke](../dotnet/how-to-call-native-dlls-from-managed-code-using-pinvoke.md).
+Para APIs não gerenciadas que usam tipos simples, intrínseco (consulte [Blittable e não blittable](/dotnet/framework/interop/blittable-and-non-blittable-types)), nenhuma codificação especial é necessária porque esses tipos de dados têm a mesma representação na memória, mas exigem tipos de dados mais complexos marshaling de dados explícitos. Para obter um exemplo, consulte [ Chamar DLLs nativas de código gerenciado usando PInvoke](../dotnet/how-to-call-native-dlls-from-managed-code-using-pinvoke.md).
 
 ## <a name="example"></a>Exemplo
 
@@ -93,57 +93,57 @@ Done
 
 ## <a name="in-this-section"></a>Nesta seção
 
-- [Como realizar marshaling de cadeias de caracteres ANSI usando interop do C++](../dotnet/how-to-marshal-ansi-strings-using-cpp-interop.md)
+- [Como: realizar marshaling de cadeias de caracteres ANSI usando a interop do C++](../dotnet/how-to-marshal-ansi-strings-using-cpp-interop.md)
 
-- [Como realizar marshaling de cadeias de caracteres Unicode usando interop do C++](../dotnet/how-to-marshal-unicode-strings-using-cpp-interop.md)
+- [Como: realizar marshaling de cadeias de caracteres Unicode usando a interop do C++](../dotnet/how-to-marshal-unicode-strings-using-cpp-interop.md)
 
-- [Como realizar marshaling de cadeias de caracteres COM usando interop do C++](../dotnet/how-to-marshal-com-strings-using-cpp-interop.md)
+- [Como: realizar marshaling de cadeias de caracteres COM usando a interop do C++](../dotnet/how-to-marshal-com-strings-using-cpp-interop.md)
 
-- [Como realizar marshaling de estruturas usando interop do C++](../dotnet/how-to-marshal-structures-using-cpp-interop.md)
+- [Como: realizar marshaling de estruturas usando a interop do C++](../dotnet/how-to-marshal-structures-using-cpp-interop.md)
 
-- [Como realizar marshaling de matrizes usando interop do C++](../dotnet/how-to-marshal-arrays-using-cpp-interop.md)
+- [Como: realizar marshaling de matrizes usando a interop do C++](../dotnet/how-to-marshal-arrays-using-cpp-interop.md)
 
-- [Como realizar marshaling de retornos de chamada e delegados usando interop do C++](../dotnet/how-to-marshal-callbacks-and-delegates-by-using-cpp-interop.md)
+- [Como: realizar marshaling de retornos de chamada e delegados usando a interop do C++](../dotnet/how-to-marshal-callbacks-and-delegates-by-using-cpp-interop.md)
 
-- [Como realizar marshaling de ponteiros inseridos usando interop do C++](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md)
+- [Como: realizar marshaling de ponteiros inseridos usando a interop do C++](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md)
 
-- [Como acessar caracteres em um System::String](../dotnet/how-to-access-characters-in-a-system-string.md)
+- [Como: acessar caracteres em um System::String](../dotnet/how-to-access-characters-in-a-system-string.md)
 
-- [Como converter a cadeia de caracteres char * na matriz System::Byte](../dotnet/how-to-convert-char-star-string-to-system-byte-array.md)
+- [Como: converter a cadeia de caracteres char* na matriz System::Byte](../dotnet/how-to-convert-char-star-string-to-system-byte-array.md)
 
-- [Como: converter System:: String em wchar_t * ou char\*](../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md)
+- [Como: Converter System:: String em wchar_t * ou char\*](../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md)
 
-- [Como converter System::String em uma cadeia de caracteres padrão](../dotnet/how-to-convert-system-string-to-standard-string.md)
+- [Como: converter System::String em uma cadeia de caracteres padrão](../dotnet/how-to-convert-system-string-to-standard-string.md)
 
-- [Como converter uma cadeia de caracteres padrão em System::String](../dotnet/how-to-convert-standard-string-to-system-string.md)
+- [Como: converter uma cadeia de caracteres padrão em System::String](../dotnet/how-to-convert-standard-string-to-system-string.md)
 
-- [Como obter um ponteiro para uma matriz de bytes](../dotnet/how-to-obtain-a-pointer-to-byte-array.md)
+- [Como: obter um ponteiro para uma matriz de bytes](../dotnet/how-to-obtain-a-pointer-to-byte-array.md)
 
-- [Como carregar recursos não gerenciados em uma matriz de bytes](../dotnet/how-to-load-unmanaged-resources-into-a-byte-array.md)
+- [Como: carregar recursos não gerenciados em uma matriz de bytes](../dotnet/how-to-load-unmanaged-resources-into-a-byte-array.md)
 
-- [Como modificar a classe de referência em uma função nativa](../dotnet/how-to-modify-reference-class-in-a-native-function.md)
+- [Como: modificar a classe de referência em uma função nativa](../dotnet/how-to-modify-reference-class-in-a-native-function.md)
 
-- [Como determinar se uma imagem é nativa ou CLR](../dotnet/how-to-determine-if-an-image-is-native-or-clr.md)
+- [Como: determinar se uma imagem é nativa ou CLR](../dotnet/how-to-determine-if-an-image-is-native-or-clr.md)
 
-- [Como adicionar a DLL nativa ao cache de assembly global](../dotnet/how-to-add-native-dll-to-global-assembly-cache.md)
+- [Como: adicionar a DLL nativa ao Cache de Assembly Global ](../dotnet/how-to-add-native-dll-to-global-assembly-cache.md)
 
-- [Como manter a referência para o tipo de valor no tipo nativo](../dotnet/how-to-hold-reference-to-value-type-in-native-type.md)
+- [Como: manter a referência ao tipo de valor em tipo nativo](../dotnet/how-to-hold-reference-to-value-type-in-native-type.md)
 
-- [Como manter a referência do objeto na memória não gerenciada](../dotnet/how-to-hold-object-reference-in-unmanaged-memory.md)
+- [Como: manter a referência do objeto na memória não gerenciada](../dotnet/how-to-hold-object-reference-in-unmanaged-memory.md)
 
-- [Como: detectar a compilação /clr](../dotnet/how-to-detect-clr-compilation.md)
+- [Como: Detectar a compilação /clr](../dotnet/how-to-detect-clr-compilation.md)
 
-- [Como converter entre System::Guid e _GUID](../dotnet/how-to-convert-between-system-guid-and-guid.md)
+- [Como: converter entre System::Guid e _GUID](../dotnet/how-to-convert-between-system-guid-and-guid.md)
 
-- [Como especificar um parâmetro out](../dotnet/how-to-specify-an-out-parameter.md)
+- [Como: especificar um parâmetro externo](../dotnet/how-to-specify-an-out-parameter.md)
 
-- [Como: usar um tipo nativo em uma compilação /clr](../dotnet/how-to-use-a-native-type-in-a-clr-compilation.md)
+- [Como: Usar um tipo nativo em uma compilação /clr](../dotnet/how-to-use-a-native-type-in-a-clr-compilation.md)
 
-- [Como declarar identificadores em tipos nativos](../dotnet/how-to-declare-handles-in-native-types.md)
+- [Como: declarar identificadores em tipos nativos](../dotnet/how-to-declare-handles-in-native-types.md)
 
-- [Como encapsular a classe nativa a ser usada por C#](../dotnet/how-to-wrap-native-class-for-use-by-csharp.md)
+- [Como: encapsular a classe nativa a ser usada pelo C#](../dotnet/how-to-wrap-native-class-for-use-by-csharp.md)
 
-Para obter informações sobre como usar delegados em um cenário de interoperabilidade, consulte [delegado (extensões de componentes C++)](../windows/delegate-cpp-component-extensions.md).
+Para obter informações sobre como usar delegados em um cenário de interoperabilidade, consulte [delegado (extensões de componentes C++)](../extensions/delegate-cpp-component-extensions.md).
 
 ## <a name="see-also"></a>Consulte também
 

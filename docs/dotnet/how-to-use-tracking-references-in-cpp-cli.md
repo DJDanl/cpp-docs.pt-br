@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - CLR types, passing by reference
 ms.assetid: d91e471c-34ff-4786-9e0d-c6db0494b946
-ms.openlocfilehash: cf4d528fe23ee6959b770bfce859d24d2f3403cf
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 8be575bd39bc3b2e6512ba1bcb40d9206731f83a
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57746234"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58777045"
 ---
 # <a name="how-to-use-tracking-references-in-ccli"></a>Como: Usar referências de acompanhamento no C + + / CLI
 
@@ -70,7 +70,7 @@ int main() {
 zip == 20100
 ```
 
-O próximo exemplo mostra que tomar o endereço de uma referência de rastreamento retorna um [interior_ptr (C++ c++ CLI)](../windows/interior-ptr-cpp-cli.md)e mostra como modificar e acessar dados por meio de uma referência de rastreamento.
+O próximo exemplo mostra que tomar o endereço de uma referência de rastreamento retorna um [interior_ptr (C++ c++ CLI)](../extensions/interior-ptr-cpp-cli.md)e mostra como modificar e acessar dados por meio de uma referência de rastreamento.
 
 ```cpp
 // tracking_reference_data.cpp
@@ -343,4 +343,4 @@ T &
 
 ## <a name="see-also"></a>Consulte também
 
-[Operador de referência de acompanhamento](../windows/tracking-reference-operator-cpp-component-extensions.md)
+[Operador de referência de acompanhamento](../extensions/tracking-reference-operator-cpp-component-extensions.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - marshaling [C++], callbacks and delegates
 - callbacks [C++], marshaling
 ms.assetid: 2313e9eb-5df9-4367-be0f-14b4712d8d2d
-ms.openlocfilehash: d3814ffbcd23168a9727b1b1d73e2c825639a9c5
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: f8088bf90162fd2177599c252b0eee6332d61289
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57739223"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58766931"
 ---
 # <a name="how-to-marshal-callbacks-and-delegates-by-using-c-interop"></a>Como: Marshaling de retornos de chamada e delegados usando Interop do C++
 
@@ -27,7 +27,7 @@ O código a seguir exemplos de uso de [gerenciado, não gerenciado](../preproces
 
 O exemplo a seguir demonstra como configurar uma API não gerenciada para disparar um representante gerenciado. Um representante gerenciado é criado e um dos métodos a interoperabilidade, <xref:System.Runtime.InteropServices.Marshal.GetFunctionPointerForDelegate%2A>, é usado para recuperar o ponto de entrada subjacente para o delegado. Esse endereço é então passado para a função não gerenciada, o que faz a chamada sem o conhecimento do fato de que ele é implementado como uma função gerenciada.
 
-Observe que é possível, mas não necessário, para fixar o representante que usa [pin_ptr (C + + / CLI)](../windows/pin-ptr-cpp-cli.md) para impedir que ela seja localizado novamente ou descartado pelo coletor de lixo. Proteção da coleta de lixo prematura é necessária, mas a fixação oferece mais proteção do que é necessário, pois ele impede a coleta, mas também previne a realocação.
+Observe que é possível, mas não necessário, para fixar o representante que usa [pin_ptr (C + + / CLI)](../extensions/pin-ptr-cpp-cli.md) para impedir que ela seja localizado novamente ou descartado pelo coletor de lixo. Proteção da coleta de lixo prematura é necessária, mas a fixação oferece mais proteção do que é necessário, pois ele impede a coleta, mas também previne a realocação.
 
 Se um delegado novamente está localizado, uma coleta de lixo, ele não afetará o retorno de chamada subjacentes gerenciados, então, <xref:System.Runtime.InteropServices.GCHandle.Alloc%2A> é usado para adicionar uma referência ao delegado, permitindo que a realocação do delegado, mas impedindo o descarte. O uso de GCHandle em vez de pin_ptr reduz o potencial de fragmentação do heap gerenciado.
 

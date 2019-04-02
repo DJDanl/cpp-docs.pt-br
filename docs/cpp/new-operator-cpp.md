@@ -4,19 +4,19 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - new keyword [C++]
 ms.assetid: 69fee812-1c28-4882-8fda-d1ad17860004
-ms.openlocfilehash: 83800f823ffd14fd61a9735b09b12d2f07f6d0a4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bcb7784e59966510970bd9b3ae0157ae982e462d
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50477981"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768062"
 ---
 # <a name="new-operator-c"></a>Operador new (C++)
 
 Aloca memória para um objeto ou uma matriz de objetos do *nome do tipo* do repositório livre e retorna um ponteiro adequadamente tipado, diferente de zero para o objeto.
 
 > [!NOTE]
->  Extensões de componentes do Microsoft C++ fornece suporte para o **novo** palavra-chave para adicionar entradas de slot a vtable. Para obter mais informações, consulte [novo (novo slot em vtable)](../windows/new-new-slot-in-vtable-cpp-component-extensions.md)
+>  Extensões de componentes do Microsoft C++ fornece suporte para o **novo** palavra-chave para adicionar entradas de slot a vtable. Para obter mais informações, consulte [novo (novo slot em vtable)](../extensions/new-new-slot-in-vtable-cpp-component-extensions.md)
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -29,7 +29,7 @@ Aloca memória para um objeto ou uma matriz de objetos do *nome do tipo* do repo
 
 Caso contrário, **novos** retorna zero ou lança uma exceção, consulte [o novo e excluir operadores](../cpp/new-and-delete-operators.md) para obter mais informações. Você pode alterar esse comportamento padrão escrevendo uma rotina de manipulação de exceção personalizada e chamando o [set_new_handler](../c-runtime-library/reference/set-new-handler.md) a função de biblioteca de tempo de execução com o nome de função como seu argumento.
 
-Para obter informações sobre como criar um objeto no heap gerenciado, consulte [gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md).
+Para obter informações sobre como criar um objeto no heap gerenciado, consulte [gcnew](../extensions/ref-new-gcnew-cpp-component-extensions.md).
 
 Quando **novo** é usado para alocar memória para um objeto de classe do C++, o construtor do objeto é chamado depois que a memória é alocada.
 

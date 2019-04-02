@@ -3,12 +3,12 @@ title: Bem-vindo ao C++ (C++ moderno)
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 1cb1b849-ed9c-4721-a972-fd8f3dab42e2
-ms.openlocfilehash: 08563f6a67ec7105da688d566d71d8ea15cb8cec
-ms.sourcegitcommit: 360b55e89e5954f494e52b1cf989fbaceda06f1c
+ms.openlocfilehash: 5b2868d20c047eef7762256ff8c9bf43de7a0de0
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54334619"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58771780"
 ---
 # <a name="welcome-back-to-c-modern-c"></a>Bem-vindo ao C++ (C++ moderno)
 
@@ -38,7 +38,7 @@ Destaques do C++ moderno:
 
 - Baseado em intervalo para loops para gravar loops mais robustos que funcionam com matrizes, contêineres da biblioteca padrão C++ e tempo de execução do Windows coleções na forma `for ( for-range-declaration : expression )`. Isso faz parte do suporte à linguagem base. Para obter mais informações, consulte [de instrução (C++) baseado em intervalo](../cpp/range-based-for-statement-cpp.md).
 
-A linguagem C++ também evoluiu. Compare os trechos de código a seguir. Este trecho mostra como a linguagem C++ era antigamente:
+A linguagem C++ também evoluiu. Compare os snippets de código a seguir. Este trecho mostra como a linguagem C++ era antigamente:
 
 ```cpp
 #include <vector>
@@ -132,4 +132,4 @@ Para obter mais informações, consulte o artigo de Stack Overflow [expressões 
 [Referência da linguagem C++](../cpp/cpp-language-reference.md)<br/>
 [Expressões Lambda](../cpp/lambda-expressions-in-cpp.md)<br/>
 [Biblioteca Padrão do C++](../standard-library/cpp-standard-library-reference.md)<br/>
-[Conformidade com a linguagem Visual C++](../visual-cpp-language-conformance.md)
+[Conformidade com a linguagem Visual C++](../overview/visual-cpp-language-conformance.md)

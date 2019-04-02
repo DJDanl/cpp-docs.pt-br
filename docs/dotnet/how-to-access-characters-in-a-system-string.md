@@ -7,12 +7,12 @@ helpviewer_keywords:
 - examples [C++], strings
 - strings [C++], accessing characters
 ms.assetid: cfc89756-aef3-4988-907e-fb236dcb7087
-ms.openlocfilehash: 68444b337710515ccf8ecb98157d144493978ecd
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 6b9e30a18ab1d2b8463ccccae0b265bc20904020
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57738456"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775966"
 ---
 # <a name="how-to-access-characters-in-a-systemstring"></a>Como: Caracteres de acesso em um System:: String
 
@@ -22,7 +22,7 @@ Você pode acessar os caracteres de um <xref:System.String> funções de objeto 
 
 `PtrToStringChars` Retorna um <xref:System.Char>, que é um ponteiro interior (também conhecido como um `byref`). Como tal, está sujeito à coleta de lixo. Você não precisa que fixar esse ponteiro, a menos que você vai passá-lo para uma função nativa.
 
-Considere o código a seguir.  A fixação não é necessária porque `ppchar` é um ponteiro interior, e se o coletor de lixo move a cadeia de caracteres que ele aponte para, ele também atualizará `ppchar`. Sem um [pin_ptr (C + + / CLI)](../windows/pin-ptr-cpp-cli.md), o código funcionará e não tê o potencial impacto no desempenho causada pela fixação.
+Considere o código a seguir.  A fixação não é necessária porque `ppchar` é um ponteiro interior, e se o coletor de lixo move a cadeia de caracteres que ele aponte para, ele também atualizará `ppchar`. Sem um [pin_ptr (C + + / CLI)](../extensions/pin-ptr-cpp-cli.md), o código funcionará e não tê o potencial impacto no desempenho causada pela fixação.
 
 Se você passar `ppchar` para uma função nativa, em seguida, ele deve ser um ponteiro de fixação; o coletor de lixo não será capaz de atualizar todos os ponteiros no quadro de pilha não gerenciada.
 

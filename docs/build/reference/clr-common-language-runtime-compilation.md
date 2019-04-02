@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Managed Extensions for C++, compiling
 - common language runtime, /clr compiler option
 ms.assetid: fec5a8c0-40ec-484c-a213-8dec918c1d6c
-ms.openlocfilehash: 124f54f46e71ac8fb8511d12fba43ab77d04c32e
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 1946fdabe66934e64cf95d3c3f12e16bc98ba664
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57822452"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779346"
 ---
 # <a name="clr-common-language-runtime-compilation"></a>/clr (compilação do Common Language Runtime)
 
@@ -67,13 +67,13 @@ Uma ou mais das seguintes opções, separados por vírgulas.
 
 Código gerenciado é o código que pode ser inspecionado e gerenciado pelo CLR. Código gerenciado pode acessar objetos gerenciados. Para obter mais informações, consulte [/clr Restrições](clr-restrictions.md).
 
-Para obter informações sobre como desenvolver aplicativos que definem e consumam tipos gerenciados, consulte [extensões de componentes para plataformas de tempo de execução](../../windows/component-extensions-for-runtime-platforms.md).
+Para obter informações sobre como desenvolver aplicativos que definem e consumam tipos gerenciados, consulte [extensões de componentes para plataformas de tempo de execução](../../extensions/component-extensions-for-runtime-platforms.md).
 
 Um aplicativo compilado usando **/clr** pode ou não conter dados gerenciados.
 
 Para habilitar a depuração em um aplicativo gerenciado, consulte [/ASSEMBLYDEBUG (Adicionar DebuggableAttribute)](assemblydebug-add-debuggableattribute.md).
 
-Somente os tipos CLR serão instanciados no heap coletado como lixo. Para obter mais informações, consulte [Classes e Structs](../../windows/classes-and-structs-cpp-component-extensions.md). Para compilar uma função para código nativo, use o `unmanaged` pragma. Para obter mais informações, consulte [gerenciado, não gerenciado](../../preprocessor/managed-unmanaged.md).
+Somente os tipos CLR serão instanciados no heap coletado como lixo. Para obter mais informações, consulte [Classes e Structs](../../extensions/classes-and-structs-cpp-component-extensions.md). Para compilar uma função para código nativo, use o `unmanaged` pragma. Para obter mais informações, consulte [gerenciado, não gerenciado](../../preprocessor/managed-unmanaged.md).
 
 Por padrão, **/clr** não está em vigor. Quando **/clr** está em vigor, **/MD** também está em vigor. Para obter mais informações, consulte [/MD, /MT, /LD (usar biblioteca em tempo de execução)](md-mt-ld-use-run-time-library.md). **/MD** garante que as versões multi-threaded e vinculadas dinamicamente as rotinas de tempo de execução são selecionadas dos arquivos de cabeçalho padrão (. h). O multithreading é necessário para porque o coletor de lixo do CLR executa os finalizadores em um thread auxiliar de programação gerenciada.
 
@@ -106,4 +106,4 @@ Use ildasm.exe para exibir os metadados.
 ## <a name="see-also"></a>Consulte também
 
 [Opções do compilador MSVC](compiler-options.md)<br/>
-[Sintaxe de linha de comando do compilador MSVC](compiler-command-line-syntax.md)
+[Sintaxe da linha de comando do compilador MSVC](compiler-command-line-syntax.md)

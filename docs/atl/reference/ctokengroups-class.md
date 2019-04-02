@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - CTokenGroups class
 ms.assetid: 2ab08076-4b08-4487-bc70-ec6dee304190
-ms.openlocfilehash: 842ceab1630fc7bc08b5c27dc769a25d029886f3
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 934d746dafafb39c2ffc3477c59c95914d270196
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57274512"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772820"
 ---
 # <a name="ctokengroups-class"></a>Classe CTokenGroups
 
@@ -38,7 +38,7 @@ class CTokenGroups
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
@@ -273,7 +273,7 @@ Converte um valor para um ponteiro para o [TOKEN_GROUPS](/windows/desktop/api/wi
 
 ## <a name="see-also"></a>Consulte também
 
-[Exemplo de segurança](../../visual-cpp-samples.md)<br/>
+[Exemplo de segurança](../../overview/visual-cpp-samples.md)<br/>
 [Classe CSid](../../atl/reference/csid-class.md)<br/>
 [Visão geral da classe](../../atl/atl-class-overview.md)<br/>
 [Funções globais de segurança](../../atl/reference/security-global-functions.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - OLE DB templates
 ms.assetid: 73918f6f-1fd7-4fa2-a0ff-7f9d792fce7e
-ms.openlocfilehash: 518697a35a51c75b76efd22ed55980c778f1f6c9
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 9f0f917de7eeb2ace6800368d10958cec7d36e6a
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523774"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770376"
 ---
 # <a name="ole-db-templates"></a>Modelos de banco de dados OLE
 
@@ -33,7 +33,7 @@ Descreve as novidades do OLE DB e discute o acesso a dados Universal no OLE DB.
 [Referência do programador do OLE DB](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming)<br/>
 Fornece links para a documentação do SDK do Windows no OLE DB.
 
-[Exemplos de modelos OLE DB](../../visual-cpp-samples.md)<br/>
+[Exemplos de modelos OLE DB](../../overview/visual-cpp-samples.md)<br/>
 Fornece links para os exemplos de modelos OLE DB que mostram como usar o OLE DB em seus projetos.
 
 [Modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>

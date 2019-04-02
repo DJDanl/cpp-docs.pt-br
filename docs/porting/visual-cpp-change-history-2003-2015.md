@@ -4,18 +4,18 @@ ms.date: 08/30/2017
 helpviewer_keywords:
 - breaking changes [C++]
 ms.assetid: b38385a9-a483-4de9-99a6-797488bc5110
-ms.openlocfilehash: 20920a5f1a1cdf2a4e10263a7b1de3010f24f9c0
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: 9be4db9e0f7c50054dc6e6ca498b1c9d49715a8d
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58329033"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775407"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Histórico de alterações de 2003 a 2015 do Visual C++
 
 Este artigo descreve todas as alterações significativas, partindo do Visual Studio 2015 e voltando até o Visual Studio 2003 e os termos "novo comportamento" ou "agora" neste artigo referem-se ao Visual Studio 2015 e às versões posteriores. Os termos "comportamento antigo" e "antes" referem-se ao Visual Studio 2013 e versões anteriores.
 
-Para obter informações sobre o Visual Studio 2017, consulte [Novidades do Visual C++ no Visual Studio 2017](../what-s-new-for-visual-cpp-in-visual-studio.md) e [Melhorias de conformidade no Visual C++ no Visual Studio 2017](../cpp-conformance-improvements-2017.md).
+Para obter informações sobre o Visual Studio 2017, consulte [Novidades do Visual C++ no Visual Studio 2017](../overview/what-s-new-for-visual-cpp-in-visual-studio.md) e [Melhorias de conformidade no Visual C++ no Visual Studio 2017](../overview/cpp-conformance-improvements-2017.md).
 
 > [!NOTE]
 > Não há alterações significativas binárias entre o Visual Studio 2015 e Visual Studio 2017.
@@ -3524,4 +3524,4 @@ A enumeração `SchedulerType` de `UmsThreadDefault` foi preterida. A especifica
 
 ## <a name="see-also"></a>Consulte também
 
-[Novidades do Visual C++ no Visual Studio](../what-s-new-for-visual-cpp-in-visual-studio.md)
+[Novidades do Visual C++ no Visual Studio](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - operators [C++], casting
 - casting operators [C++]
 ms.assetid: 16240348-26bc-4f77-8eab-57253f00ce52
-ms.openlocfilehash: 4d6c8a0dc448e08ae2f344faeeb27756cdd27eff
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e2ac8e9079b1d30dca077363bbb6cef35960902e
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50549737"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768946"
 ---
 # <a name="casting-operators"></a>Operadores de conversão
 
@@ -25,7 +25,7 @@ Há vários operadores de conversão específicos à linguagem C++. Esses operad
 
 - [reinterpret_cast](../cpp/reinterpret-cast-operator.md) usado para a reinterpretação simples de bits.
 
-- [Safe_cast](../windows/safe-cast-cpp-component-extensions.md) usado para produzir MSIL verificável.
+- [Safe_cast](../extensions/safe-cast-cpp-component-extensions.md) usada no C + + c++ CLI para produzir MSIL verificável.
 
 Use **const_cast** e **reinterpret_cast** como último recurso, pois esses operadores apresentam os mesmos perigos das conversões antigas. No entanto, ainda são necessários para substituir completamente as conversões antigas.
 

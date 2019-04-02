@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - for each keyword [C++]
 ms.assetid: 0c3a364b-2747-43f3-bb8d-b7d3b7023f79
-ms.openlocfilehash: c5ee72e557c62e3db2eeb5dac4811133719183f6
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: b1dfe3a32f88c0e9456e3d73c31c533911f8d3ac
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57746288"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770685"
 ---
 # <a name="for-each-in"></a>for each, in
 
@@ -35,7 +35,7 @@ Itera por meio de uma matriz ou coleção. Essa palavra-chave não padrão está
 O tipo de `identifier`.
 
 *identifier*<br/>
-A variável de iteração que representa o elemento da coleção.  Quando `identifier` é um [operador de referência de acompanhamento](../windows/tracking-reference-operator-cpp-component-extensions.md), você pode modificar o elemento.
+A variável de iteração que representa o elemento da coleção.  Quando `identifier` é um [operador de referência de acompanhamento](../extensions/tracking-reference-operator-cpp-component-extensions.md), você pode modificar o elemento.
 
 *Expressão*<br/>
 Uma expressão ou coleção de matriz. O elemento de coleção deve permitir que o compilador converta-o no tipo `identifier`.
@@ -49,7 +49,7 @@ A instrução `for each` é usada para iterar por meio de uma coleção. Você p
 
 O *instruções* são executadas para cada elemento da matriz ou coleção. Após a iteração ter sido concluída para todos os elementos na coleção, o controle é transferido para a próxima instrução que segue o bloco `for each`.
 
-`for each` e `in` estão [palavras-chave contextuais](../windows/context-sensitive-keywords-cpp-component-extensions.md).
+`for each` e `in` estão [palavras-chave contextuais](../extensions/context-sensitive-keywords-cpp-component-extensions.md).
 
 Para saber mais:
 
@@ -159,4 +159,4 @@ Testing
 
 ## <a name="see-also"></a>Consulte também
 
-[Extensões de componentes para plataformas de tempo de execução](../windows/component-extensions-for-runtime-platforms.md)
+[Extensões de componentes para plataformas de tempo de execução](../extensions/component-extensions-for-runtime-platforms.md)

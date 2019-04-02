@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data marshaling [C++], strings
 - Unicode, marshaling strings
 ms.assetid: 96c2141d-6c5d-43ef-a1aa-5785afb9a9aa
-ms.openlocfilehash: 920f06bd2197315b11f239827de76eba9591bad5
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 37b56834e000cff686557730252f3d425f642772
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57742668"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58777669"
 ---
 # <a name="how-to-marshal-unicode-strings-using-c-interop"></a>Como: Cadeias de caracteres de Unicode de marshaling usando Interop do C++
 
@@ -30,7 +30,7 @@ Este tópico demonstra como cadeias de caracteres Unicode podem ser passados do 
 
 ## <a name="example"></a>Exemplo
 
-Para passar uma cadeia de caracteres Unicode de gerenciado para uma função não gerenciada, a função PtrToStringChars (declarada em vcclr) pode ser usada para acesso na memória em que a cadeia de caracteres gerenciada é armazenada. Como esse endereço será passado para uma função nativa, é importante que a memória ser fixado com [pin_ptr (C + + c++ CLI)](../windows/pin-ptr-cpp-cli.md) para impedir que os dados de cadeia de caracteres que estão sendo realocados, deve um ciclo de coleta de lixo ocorrer durante a executa a função não gerenciada.
+Para passar uma cadeia de caracteres Unicode de gerenciado para uma função não gerenciada, a função PtrToStringChars (declarada em vcclr) pode ser usada para acesso na memória em que a cadeia de caracteres gerenciada é armazenada. Como esse endereço será passado para uma função nativa, é importante que a memória ser fixado com [pin_ptr (C + + c++ CLI)](../extensions/pin-ptr-cpp-cli.md) para impedir que os dados de cadeia de caracteres que estão sendo realocados, deve um ciclo de coleta de lixo ocorrer durante a executa a função não gerenciada.
 
 ```
 // MarshalUnicode1.cpp

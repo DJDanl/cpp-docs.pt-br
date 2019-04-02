@@ -10,19 +10,19 @@ helpviewer_keywords:
 - named constants, enumeration declarations
 - declaring enumerations
 ms.assetid: 081829db-5dca-411e-a53c-bffef315bcb3
-ms.openlocfilehash: 3ed135c0fc32f9218783c964ed4ce79a9b3ec067
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: caec9ea7ac5482ff23b73676a3fd7b3d25ad293f
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51332407"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772559"
 ---
 # <a name="enumerations-c"></a>Enumerações (C++)
 
 Uma enumeração é um tipo definido pelo usuário que consiste em um conjunto de constantes integrais nomeadas que são conhecidas como enumeradores.
 
 > [!NOTE]
->  Este artigo aborda a linguagem C++ padrão ISO **enum** tipo e o escopo (ou fortemente tipado) **classe enum** tipo introduzido no c++11. Para obter informações sobre o **classe enum pública** ou **classe enum privada** tipos no C + + c++ CLI e C + + c++ /CLI CX, consulte [classe enum](../windows/enum-class-cpp-component-extensions.md).
+>  Este artigo aborda a linguagem C++ padrão ISO **enum** tipo e o escopo (ou fortemente tipado) **classe enum** tipo introduzido no c++11. Para obter informações sobre o **classe enum pública** ou **classe enum privada** tipos no C + + c++ CLI e C + + c++ /CLI CX, consulte [classe enum](../extensions/enum-class-cpp-component-extensions.md).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -52,7 +52,7 @@ O nome do tipo dado à enumeração.
 *type*<br/>
 O tipo subjacente dos enumeradores; todos os enumeradores têm o mesmo tipo subjacente. Pode ser qualquer tipo integral.
 
-*lista de enumeração*<br/>
+*enum-list*<br/>
 Uma lista separada por vírgulas dos enumeradores na enumeração. Cada enumerador ou nome de variável no escopo deve ser exclusivo. No entanto, os valores podem ser duplicados. Em um enum sem escopo, o escopo será o escopo adjacente; em uma enumeração com escopo, o escopo é o *enum lista* em si.  Em uma enumeração com escopo definido, a lista pode estar vazia que define o novo tipo de integral em vigor.
 
 *class*<br/>
@@ -145,7 +145,7 @@ Observe que a linha `hand = account_num;` ainda causa o erro que ocorre com enum
 
 ## <a name="no_enumerators"></a> Enums com nenhum enumeradores
 
-**Visual Studio 2017 versão 15.3 e posterior** (disponível com [/std: c + + 17](../build/reference/std-specify-language-standard-version.md)): definindo uma enumeração (regular ou escopo) com um tipo subjacente explícito e nenhum enumeradores, você pode em vigor introduz um novo tipo integral que não tiver nenhuma conversão implícita em qualquer outro tipo. Usando esse tipo em vez de seu tipo subjacente interno, você pode eliminar a possibilidade de erros sutis causados por conversões implícitas acidentais.
+**Visual Studio 2017 versão 15.3 e posterior** (disponível com [/std: c + + 17](../build/reference/std-specify-language-standard-version.md)): Definindo uma enumeração (regular ou escopo) com um tipo subjacente explícito e nenhum enumeradores, você em vigor pode introduzir um novo tipo integral que não tiver nenhuma conversão implícita em qualquer outro tipo. Usando esse tipo em vez de seu tipo subjacente interno, você pode eliminar a possibilidade de erros sutis causados por conversões implícitas acidentais.
 
 ```cpp
 enum class byte : unsigned char { };

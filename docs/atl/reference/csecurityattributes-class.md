@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSecurityAttributes class
 ms.assetid: a094880c-52e1-4a28-97ff-752d5869908e
-ms.openlocfilehash: ef0756ee1dd0aa7d82caf218aa2c417df0c2778c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 66188a2c944379cfae813220937ac1e7e98fb41d
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57269247"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768335"
 ---
 # <a name="csecurityattributes-class"></a>Classe CSecurityAttributes
 
@@ -31,7 +31,7 @@ class CSecurityAttributes : public SECURITY_ATTRIBUTES
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
@@ -98,7 +98,7 @@ Esse método é usado pelo construtor para inicializar o `CSecurityAttributes` o
 
 ## <a name="see-also"></a>Consulte também
 
-[Exemplo de segurança](../../visual-cpp-samples.md)<br/>
+[Exemplo de segurança](../../overview/visual-cpp-samples.md)<br/>
 [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560)<br/>
 [descritor de segurança](/windows/desktop/api/winnt/ns-winnt-_security_descriptor)<br/>
 [Visão geral da classe](../../atl/atl-class-overview.md)<br/>

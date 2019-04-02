@@ -10,12 +10,12 @@ helpviewer_keywords:
 - pointers [C++], marshaling
 - data marshaling [C++], embedded pointers
 ms.assetid: 05fb8858-97f2-47aa-86b2-2c0ad713bdb2
-ms.openlocfilehash: 89194dabb4b124aa7cbd4d1d34a74de491fba66f
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: c6d622060aaf700b6ea1a3bfe797ab3190eee797
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57738475"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780230"
 ---
 # <a name="how-to-marshal-embedded-pointers-using-c-interop"></a>Como: Marshaling de ponteiros inseridos usando Interop do C++
 
@@ -23,7 +23,7 @@ O código a seguir exemplos de uso de [gerenciado, não gerenciado](../preproces
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir demonstra como uma função não gerenciada que usa uma estrutura que contém ponteiros pode ser chamada de uma função gerenciada. A função gerenciada cria uma instância da estrutura e inicializa o ponteiro inserido com a nova palavra-chave (em vez do [gcnew de novo, ref](../windows/ref-new-gcnew-cpp-component-extensions.md) palavra-chave). Porque isso aloca a memória no heap nativo, não é necessário para fixar a matriz para suprimir a coleta de lixo. No entanto, a memória deve ser explicitamente excluída para evitar vazamentos de memória.
+O exemplo a seguir demonstra como uma função não gerenciada que usa uma estrutura que contém ponteiros pode ser chamada de uma função gerenciada. A função gerenciada cria uma instância da estrutura e inicializa o ponteiro inserido com a nova palavra-chave (em vez do [gcnew de novo, ref](../extensions/ref-new-gcnew-cpp-component-extensions.md) palavra-chave). Porque isso aloca a memória no heap nativo, não é necessário para fixar a matriz para suprimir a coleta de lixo. No entanto, a memória deve ser explicitamente excluída para evitar vazamentos de memória.
 
 ```
 // marshal_embedded_pointer.cpp

@@ -25,12 +25,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlArray class
 ms.assetid: 0b503aa8-2357-40af-a326-6654bf1da098
-ms.openlocfilehash: ca4b0f4c8ffc3382984660caec7ae04107c8797a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 6a0b83f722d1b616e9c10713646d337f9cb090a4
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57301839"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775693"
 ---
 # <a name="catlarray-class"></a>Classe CAtlArray
 
@@ -549,9 +549,9 @@ Substitui o valor do elemento apontado pelo índice. Se *iElement* é maior do q
 
 ## <a name="see-also"></a>Consulte também
 
-[Exemplo de MMXSwarm](../../visual-cpp-samples.md)<br/>
-[Exemplo de DynamicConsumer](../../visual-cpp-samples.md)<br/>
-[Exemplo de UpdatePV](../../visual-cpp-samples.md)<br/>
-[Exemplo de letreiro](../../visual-cpp-samples.md)<br/>
+[Exemplo de MMXSwarm](../../overview/visual-cpp-samples.md)<br/>
+[Exemplo de DynamicConsumer](../../overview/visual-cpp-samples.md)<br/>
+[Exemplo de UpdatePV](../../overview/visual-cpp-samples.md)<br/>
+[Exemplo de letreiro](../../overview/visual-cpp-samples.md)<br/>
 [Classe CArray](../../mfc/reference/carray-class.md)<br/>
 [Visão geral da classe](../../atl/atl-class-overview.md)
