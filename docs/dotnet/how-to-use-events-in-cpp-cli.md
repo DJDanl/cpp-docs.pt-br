@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - events [C++], accessing in interfaces
 ms.assetid: fbf452dc-2dd7-4322-adc0-656512d654d1
-ms.openlocfilehash: 63bac664afad2852a7b5e70c1c23335c75d0ad3b
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 6b4ecbba5651341965d2cf4df5b5ad2ead7f9f26
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57748756"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770988"
 ---
 # <a name="how-to-use-events-in-ccli"></a>Como: Usar eventos em C + + / CLI
 
@@ -649,4 +649,4 @@ hello
 
 ## <a name="see-also"></a>Consulte também
 
-[event](../windows/event-cpp-component-extensions.md)
+[event](../extensions/event-cpp-component-extensions.md)

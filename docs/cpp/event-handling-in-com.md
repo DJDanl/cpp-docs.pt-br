@@ -16,16 +16,16 @@ helpviewer_keywords:
 - declaring events, in COM
 - declaring events, event handling in COM
 ms.assetid: 6b4617d4-a58e-440c-a8a6-1ad1c715b2bb
-ms.openlocfilehash: a66c429626938f1bf10d715c1fecac341a3ba000
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: da255da9fb9ff7a652fa1af796568a8e50759dc4
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50446040"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58777688"
 ---
 # <a name="event-handling-in-com"></a>Tratamento de eventos em COM
 
-Manipulação de eventos COM, você configura um receptor de origem e o evento de eventos usando o [event_source](../windows/event-source.md) e [event_receiver](../windows/event-receiver.md) atributos, respectivamente, especificando `type` = `com`. Esses atributos injetam o código apropriado para interfaces personalizadas, duais e de expedição a fim de permitir que as classes às quais são aplicados acionem eventos e manipulem eventos por meio de pontos de conexão COM.
+Manipulação de eventos COM, você configura um receptor de origem e o evento de eventos usando o [event_source](../windows/attributes/event-source.md) e [event_receiver](../windows/attributes/event-receiver.md) atributos, respectivamente, especificando `type` = `com`. Esses atributos injetam o código apropriado para interfaces personalizadas, duais e de expedição a fim de permitir que as classes às quais são aplicados acionem eventos e manipulem eventos por meio de pontos de conexão COM.
 
 ## <a name="declaring-events"></a>Declarando eventos
 

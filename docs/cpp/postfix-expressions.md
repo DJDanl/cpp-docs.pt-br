@@ -6,12 +6,12 @@ helpviewer_keywords:
 - postfix expressions
 - expressions [C++], postfix
 ms.assetid: 7ac62a57-06df-422f-b012-a75b37d7cb9b
-ms.openlocfilehash: 6230cc161d7b7fc011d4f3082cc7b9452e136280
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: eb6e6e8914cf260df09581232066caf3f873c04e
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51332433"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779255"
 ---
 # <a name="postfix-expressions"></a>Expressões pós-fixadas
 
@@ -23,7 +23,7 @@ As expressões pós-fixadas consistem em expressões primárias ou expressões n
 |-------------------|-----------------------|
 |[Operador de subscrito](../cpp/subscript-operator.md)|**[ ]**|
 |[Operador de chamada de função](../cpp/function-call-operator-parens.md)|**( )**|
-|[Operador de conversão de tipo explícito](../cpp/explicit-type-conversion-operator-parens.md)|*nome do tipo* **)**|
+|[Operador de conversão de tipo explícito](../cpp/explicit-type-conversion-operator-parens.md)|*type-name* **( )**|
 |[Operador de acesso de membro](../cpp/member-access-operators-dot-and.md)|**.** Ou **->**|
 |[Operador de incremento pós-fixado](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)|**++**|
 |[Operador de decremento de sufixo](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)|**--**|
@@ -149,7 +149,7 @@ As reticências denotam que os argumentos podem ser necessários, mas que o núm
 
 As reticências, se usadas, deverão ser declaradas por último na lista de argumentos. Para obter mais informações sobre como passar um número variável de argumentos, consulte a discussão sobre [va_arg, va_start e va_list](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md) na *referência de biblioteca de tempo de execução*.
 
-Para obter informações sobre os argumentos padrão na programação CLR, consulte [listas de argumentos variáveis (...) (C + + / CLI) ](../windows/variable-argument-lists-dot-dot-dot-cpp-cli.md).
+Para obter informações sobre os argumentos padrão na programação CLR, consulte [listas de argumentos variáveis (...) (C + + / CLI) ](../extensions/variable-argument-lists-dot-dot-dot-cpp-cli.md).
 
 Os argumentos padrão permitem que você especifique o valor que um argumento deverá assumir caso nenhum seja fornecido na chamada de função. O fragmento de código a seguir mostra como os argumentos padrão funcionam. Para obter mais informações sobre as restrições sobre como especificar os argumentos padrão, consulte [argumentos padrão](../cpp/default-arguments.md).
 

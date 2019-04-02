@@ -12,12 +12,12 @@ helpviewer_keywords:
 - builds [C++], options
 - Visual C++, build options
 ms.assetid: fa6ed4ff-334a-4d99-b5e2-a1f83d2b3008
-ms.openlocfilehash: 0c4a74ce69f5c52eb6fc107ea477e5715e86ecd2
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 6a4048d741cf291d8d6173c1444b6933523c6851
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57824257"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775420"
 ---
 # <a name="cc-projects-and-build-systems-in-visual-studio"></a>Projetos C/C++ e sistemas de build no Visual Studio
 
@@ -74,10 +74,12 @@ Você pode invocar o MSBuild na linha de comando, passando a ele um arquivo. vcx
 
 [Builds de versão](release-builds.md) como criar e solucionar problemas de versão otimizada compilações para implantação para os usuários finais.
 
-[Usar o conjunto de ferramentas do MSVC da linha de comando](building-on-the-command-line.md)<br/>
+[Uso do conjunto de ferramentas MSVC da linha de comando](building-on-the-command-line.md)<br/>
 Discute como usar o compilador C/C++ e compilar ferramentas diretamente da linha de comando em vez de usar o IDE do Visual Studio.
 
 [Criação de DLLs no Visual Studio](dlls-in-visual-cpp.md) como criar, depurar e implantar as DLLs (bibliotecas compartilhadas) do C/C++ no Visual Studio.
+
+[Passo a passo: Criando e usando uma biblioteca estática](walkthrough-creating-and-using-a-static-library-cpp.md) como criar um arquivo binário.
 
 [Compilando aplicativos isolados do C/C++ e Assemblies lado a lado](building-c-cpp-isolated-applications-and-side-by-side-assemblies.md) descreve o modelo de implantação para aplicativos de área de trabalho do Windows, com base na ideia de aplicativos isolados e assemblies lado a lado.
 

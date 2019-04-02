@@ -2,16 +2,16 @@
 title: 'Passo a passo: Compilando um c++ /CLI programa CX na linha de comando'
 ms.date: 09/24/2018
 ms.assetid: 626f5544-69ed-4736-83a9-f11389b371b2
-ms.openlocfilehash: ad718a2eb876430d7721d0cd20cfd5b952750f8b
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 099bef402d22abc12a31f105f63e5405c65a1d82
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57809503"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58766048"
 ---
 # <a name="walkthrough-compiling-a-ccx-program-on-the-command-line"></a>Passo a passo: Compilando um c++ /CLI programa CX na linha de comando
 
-Você pode criar programas Visual C++ destinados ao Windows Runtime e compilá-los na linha de comando. O Visual C++ oferece suporte a extensões de componente do Visual C++ (C++/CX), que possuem tipos e operadores adicionais destinados ao modelo de programação do Windows Runtime. Você pode usar C + + c++ /CX para compilar aplicativos para a plataforma Universal do Windows (UWP), Windows Phone 8.1 e Windows desktop. Para obter mais informações, consulte [um Tour do c++ c++ /CX](https://msdn.microsoft.com/magazine/dn166929.aspx) e [extensões de componentes para plataformas de tempo de execução](../windows/component-extensions-for-runtime-platforms.md).
+Você pode criar programas Visual C++ destinados ao Windows Runtime e compilá-los na linha de comando. O Visual C++ oferece suporte a extensões de componente do Visual C++ (C++/CX), que possuem tipos e operadores adicionais destinados ao modelo de programação do Windows Runtime. Você pode usar C + + c++ /CX para compilar aplicativos para a plataforma Universal do Windows (UWP), Windows Phone 8.1 e Windows desktop. Para obter mais informações, consulte [um Tour do c++ c++ /CX](https://msdn.microsoft.com/magazine/dn166929.aspx) e [extensões de componentes para plataformas de tempo de execução](../extensions/component-extensions-for-runtime-platforms.md).
 
 Neste passo a passo, você usa um editor de texto para criar um programa de C++/CX básico e, em seguida, o compila na linha de comandos. (Você pode usar seu próprio programa de C++/CX ao invés de digitar o que é mostrado ou, ainda, usar uma amostra de código de C++/CX de outro artigo de ajuda. Essa técnica é útil para compilar e testar pequenos módulos que têm sem elementos de interface do usuário.)
 
@@ -63,5 +63,5 @@ Para habilitar a compilação para C + + c++ /CX, você deve usar o [/ZW](refere
 
 ## <a name="see-also"></a>Consulte também
 
-[Projetos e sistemas de build](projects-and-build-systems-cpp.md)<br/>
+[Sistemas de Compilação e Projetos](projects-and-build-systems-cpp.md)<br/>
 [Opções do compilador MSVC](reference/compiler-options.md)

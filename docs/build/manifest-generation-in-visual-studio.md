@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - manifests [C++]
 ms.assetid: 0af60aa9-d223-42cd-8426-b3fc543a2a81
-ms.openlocfilehash: eabd488e581357ec1386b20597c1987e4c8b2c19
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: f055e3d16dfc0ea4320883210458ae10daebdc45
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57809724"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781673"
 ---
 # <a name="manifest-generation-in-visual-studio"></a>Geração de manifesto no Visual Studio
 
@@ -27,7 +27,7 @@ O sistema de compilação no Visual Studio permite que o manifesto a ser inserid
 
 1. Se o manifesto inserido no binário é o mesmo que o manifesto gerado pela ferramenta de manifesto, a compilação continuará para as próximas etapas de compilação.
 
-O manifesto é incorporado no final binário como um recurso de texto e pode ser exibido, abrindo o binário final como um arquivo no Visual Studio. Para garantir que o manifesto aponta para as bibliotecas corretas, siga as etapas descritas em [Noções básicas sobre as dependências de um aplicativo do Visual C++](../ide/understanding-the-dependencies-of-a-visual-cpp-application.md) ou seguir as sugestões descritas o [desoluçãodeproblemas](troubleshooting-c-cpp-isolated-applications-and-side-by-side-assemblies.md) seção.
+O manifesto é incorporado no final binário como um recurso de texto e pode ser exibido, abrindo o binário final como um arquivo no Visual Studio. Para garantir que o manifesto aponta para as bibliotecas corretas, siga as etapas descritas em [Noções básicas sobre as dependências de um aplicativo do Visual C++](../windows/understanding-the-dependencies-of-a-visual-cpp-application.md) ou seguir as sugestões descritas o [desoluçãodeproblemas](troubleshooting-c-cpp-isolated-applications-and-side-by-side-assemblies.md) seção.
 
 ## <a name="see-also"></a>Consulte também
 

@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Type Class
 ms.assetid: d6b03f1e-b240-49b9-a08e-53a460030475
-ms.openlocfilehash: 73338e5b4c723c7f66dbecaea5add3b197f3493d
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 456dbff652c8f1b800308ff757930b425616a83f
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57744032"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781738"
 ---
 # <a name="platformtype-class"></a>Classe Platform::Type
 
-Contém informações de tempo de execução sobre um tipo, especificamente um nome de cadeia de caracteres e um typecode. Obtido chamando [Object:: GetType](../cppcx/platform-object-class.md#gettype) em qualquer objeto ou usando o [typeid](../windows/typeid-cpp-component-extensions.md) operador em um nome de classe ou struct.
+Contém informações de tempo de execução sobre um tipo, especificamente um nome de cadeia de caracteres e um typecode. Obtido chamando [Object:: GetType](../cppcx/platform-object-class.md#gettype) em qualquer objeto ou usando o [typeid](../extensions/typeid-cpp-component-extensions.md) operador em um nome de classe ou struct.
 
 ## <a name="syntax"></a>Sintaxe
 

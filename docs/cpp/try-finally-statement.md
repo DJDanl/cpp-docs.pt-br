@@ -20,12 +20,12 @@ helpviewer_keywords:
 - __leave keyword [C++], try-finally statement
 - structured exception handling [C++], try-finally
 ms.assetid: 826e0347-ddfe-4f6e-a7bc-0398e0edc7c2
-ms.openlocfilehash: d05e1d113f4fc661cb6e2e2905fbd8c9dcdd7e2d
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: d2a1c63f686b46aad4e174c86895f6f9fc00d260
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175909"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58778332"
 ---
 # <a name="try-finally-statement"></a>Instrução try-finally
 
@@ -33,11 +33,11 @@ ms.locfileid: "52175909"
 
 A sintaxe a seguir descreve o **try-finally** instrução:
 
-> **\_\_Tente**<br/>
+> **\_\_try**<br/>
 > {<br/>
 > &nbsp;&nbsp;&nbsp;&nbsp;código protegido<br/>
 > }<br/>
-> **\_\_Por fim**<br/>
+> **\_\_finally**<br/>
 > {<br/>
 > &nbsp;&nbsp;&nbsp;&nbsp;código de finalização<br/>
 > }<br/>
@@ -45,11 +45,11 @@ A sintaxe a seguir descreve o **try-finally** instrução:
 ## <a name="grammar"></a>Gramática
 
 *try-finally-statement*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**\_\_tente** *compound-statement*  **\_ \_finalmente** *instrução composta*
+&nbsp;&nbsp;&nbsp;&nbsp;**\_\_try** *compound-statement* **\_\_finally** *compound-statement*
 
 O **try-finally** instrução é uma extensão da Microsoft para as linguagens C e C++ que permite que aplicativos de destino para garantir a execução de código de limpeza quando a execução de um bloco de código é interrompida. A limpeza consiste em tarefas como desalocar memória, fechar arquivos e liberar identificadores de arquivos. O **try-finally** instrução é especialmente útil para rotinas que têm vários locais em que uma verificação é feita para um erro que poderia causar prematura retornam da rotina.
 
-Para obter informações relacionadas e um exemplo de código, consulte [tente-exceto instrução](../cpp/try-except-statement.md). Para obter mais informações em geral de manipulação de exceção estruturada, consulte [Structured Exception Handling](../cpp/structured-exception-handling-c-cpp.md). Para obter mais informações sobre o tratamento de exceções em aplicativos gerenciados, consulte [tratamento de exceções em /clr](../windows/exception-handling-cpp-component-extensions.md).
+Para obter informações relacionadas e um exemplo de código, consulte [tente-exceto instrução](../cpp/try-except-statement.md). Para obter mais informações em geral de manipulação de exceção estruturada, consulte [Structured Exception Handling](../cpp/structured-exception-handling-c-cpp.md). Para obter mais informações sobre o tratamento de exceções em aplicativos gerenciados com C + + / CLI, consulte [tratamento de exceções em /clr](../extensions/exception-handling-cpp-component-extensions.md).
 
 > [!NOTE]
 > A manipulação de exceção estruturada funciona com Win32 para arquivos de código-fonte em C e C++. No entanto, não é projetada especificamente para C++. Você pode garantir que o código seja mais portátil usando a manipulação de exceção de C++. Além disso, a manipulação de exceção de C++ é mais flexível, pois pode tratar exceções de qualquer tipo. Para programas C++, é recomendável que você use o mecanismo de tratamento de exceções do C++ ([try, catch e throw](../cpp/try-throw-and-catch-statements-cpp.md) instruções).
@@ -66,7 +66,7 @@ O controle atinge uma **Try** instrução em uma execução sequencial simple (q
 
 Se ocorrer uma exceção na **Try** bloco, o sistema operacional deve localizar um manipulador para a exceção ou o programa falhará. Se um manipulador for encontrado, todos os **Finally** blocos são executados e a execução é retomada no manipulador.
 
-Por exemplo, imagine que uma série de chamadas de função vincula a função A à função D, conforme mostrado na figura a seguir. Cada função tem um manipulador de encerramento. Se uma exceção é gerada na função D e tratada na A, os manipuladores de encerramento são chamados nessa ordem à medida que o sistema desenrola a pilha: D, C, B.
+Por exemplo, imagine que uma série de chamadas de função vincula a função A à função D, conforme mostrado na figura a seguir. Cada função tem um manipulador de encerramento. Se uma exceção é gerada na função D e tratada na, os manipuladores de encerramento são chamados nessa ordem que o sistema desenrola a pilha: D, C, B.
 
 ![Ordem de encerramento&#45;execução do manipulador](../cpp/media/vc38cx1.gif "ordem de término&#45;execução do manipulador") <br/>
 Ordem de execução do manipulador de encerramento

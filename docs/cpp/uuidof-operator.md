@@ -10,12 +10,12 @@ helpviewer_keywords:
 - __uuidof keyword [C++]
 - __LIBID_ keyword [C++]
 ms.assetid: badfe709-809b-4b66-ad48-ee35039d25c6
-ms.openlocfilehash: 6e593d023c486aa504f0b5eee8578fa8c307bcc8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a14ef9043ec2196ff930a37d0eff95e90024d3d5
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50432702"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769193"
 ---
 # <a name="uuidof-operator"></a>Operador __uuidof
 
@@ -39,7 +39,7 @@ Use essa palavra-chave para extrair o GUID vinculado a:
 
 - Um objeto, o [uuid](../cpp/uuid-cpp.md) atributo estendido.
 
-- Um bloco de biblioteca criado com o [módulo](../windows/module-cpp.md) atributo.
+- Um bloco de biblioteca criado com o [módulo](../windows/attributes/module-cpp.md) atributo.
 
 > [!NOTE]
 > Em uma compilação de depuração **uuidof** sempre inicializa um objeto dinamicamente (em tempo de execução). Em um build de versão **uuidof** pode estaticamente (no tempo de compilação) inicializar um objeto.

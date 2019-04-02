@@ -8,12 +8,12 @@ helpviewer_keywords:
 - _Copy class
 - _CopyInterface class
 ms.assetid: 06704b68-d318-4c5d-a65b-71457fe9d00d
-ms.openlocfilehash: 24d81506f1518f980576899a4a104bbfdc0a1438
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 73bec31b4ae140797c85a06ee7c5023c9e0c4446
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57296339"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776954"
 ---
 # <a name="atl-copy-policy-classes"></a>Classes de política de cópia da ATL
 
@@ -62,7 +62,7 @@ ATL fornece duas classes de política de cópia na forma do `_Copy` e `_CopyInte
 
 ## <a name="custom-implementations"></a>Implementações personalizadas
 
-Normalmente, você precisará definir suas próprias classes de política de cópia para copiar heterogêneas (ou seja, a conversão entre tipos de dados). Para obter alguns exemplos de classes de política de cópia personalizada, examine os arquivos VCUE_Copy.h e VCUE_CopyString.h na [ATLCollections](../visual-cpp-samples.md) exemplo. Esses arquivos contêm duas classes de política de cópia de modelo, `GenericCopy` e `MapCopy`, além de várias especializações de `GenericCopy` para diferentes tipos de dados.
+Normalmente, você precisará definir suas próprias classes de política de cópia para copiar heterogêneas (ou seja, a conversão entre tipos de dados). Para obter alguns exemplos de classes de política de cópia personalizada, examine os arquivos VCUE_Copy.h e VCUE_CopyString.h na [ATLCollections](../overview/visual-cpp-samples.md) exemplo. Esses arquivos contêm duas classes de política de cópia de modelo, `GenericCopy` e `MapCopy`, além de várias especializações de `GenericCopy` para diferentes tipos de dados.
 
 ### <a name="genericcopy"></a>GenericCopy
 
@@ -81,4 +81,4 @@ VCUE_Copy.h também contém as seguintes especializações dessa classe: `Generi
 ## <a name="see-also"></a>Consulte também
 
 [Implementando uma coleção baseada na biblioteca padrão C++](../atl/implementing-an-stl-based-collection.md)<br/>
-[Exemplo de ATLCollections](../visual-cpp-samples.md)
+[Exemplo de ATLCollections](../overview/visual-cpp-samples.md)

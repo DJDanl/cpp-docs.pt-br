@@ -18,12 +18,12 @@ helpviewer_keywords:
 - data types [C++], enumerating
 - public members [C++]
 ms.assetid: 46b6ff4a-e441-4022-8892-78e69422f230
-ms.openlocfilehash: 769ba87f64a8096ac8c7f14cc091119345177b3b
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: a17910e0288b81723aa837ba9204bb40713d5d49
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57426440"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770780"
 ---
 # <a name="reflection-ccli"></a>Reflexão (C++/CLI)
 
@@ -79,7 +79,7 @@ type of i = 'System.Int32'
 
 ## <a name="example-typeid"></a>Exemplo: typeid
 
-Assim como acontece com o `GetType` método, o [typeid](../windows/typeid-cpp-component-extensions.md) operador retorna um ponteiro para um **tipo** do objeto, portanto, esse código indica o nome do tipo **System.Int32**. Exibindo nomes de tipo é o recurso mais básico de reflexão, mas uma técnica potencialmente mais úteis é inspecionar ou descobrir os valores válidos para os tipos enumerados. Isso pode ser feito usando a estatística **Enum::GetNames** de função, que retorna uma matriz de cadeias de caracteres, cada um contendo um valor de enumeração na forma de texto.  O exemplo a seguir recupera uma matriz de cadeias de caracteres que descreve os valores de enumeração de valor para o **opções** enum (CLR) e os exibe em um loop.
+Assim como acontece com o `GetType` método, o [typeid](../extensions/typeid-cpp-component-extensions.md) operador retorna um ponteiro para um **tipo** do objeto, portanto, esse código indica o nome do tipo **System.Int32**. Exibindo nomes de tipo é o recurso mais básico de reflexão, mas uma técnica potencialmente mais úteis é inspecionar ou descobrir os valores válidos para os tipos enumerados. Isso pode ser feito usando a estatística **Enum::GetNames** de função, que retorna uma matriz de cadeias de caracteres, cada um contendo um valor de enumeração na forma de texto.  O exemplo a seguir recupera uma matriz de cadeias de caracteres que descreve os valores de enumeração de valor para o **opções** enum (CLR) e os exibe em um loop.
 
 Se uma quarta opção é adicionada a **opções** enumeração, esse código relatará a nova opção sem recompilação, mesmo se a enumeração for definida em um assembly separado.
 

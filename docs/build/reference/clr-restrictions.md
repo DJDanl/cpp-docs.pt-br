@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - /clr compiler option [C++], restrictions
 ms.assetid: 385f6462-2c68-46d6-810e-469553ead447
-ms.openlocfilehash: e2205740aea5a2e557b8d93c3c60045435c4b71d
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 21b7ead553871854c73021756eb2086f9e6e7393
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816094"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58777812"
 ---
 # <a name="clr-restrictions"></a>/clr Restrições
 
@@ -29,7 +29,7 @@ Observe as seguintes restrições sobre o uso de **/clr**:
 
 - O [naked](../../cpp/naked-cpp.md) [declspec](../../cpp/declspec.md) modificador é ignorado em /clr.
 
-- A função conversora definido por [set_se_translator](../../c-runtime-library/reference/set-se-translator.md) afetará somente as armadilhas no código não gerenciado. Ver [Exception Handling](../../windows/exception-handling-cpp-component-extensions.md) para obter mais informações.
+- A função conversora definido por [set_se_translator](../../c-runtime-library/reference/set-se-translator.md) afetará somente as armadilhas no código não gerenciado. Ver [Exception Handling](../../extensions/exception-handling-cpp-component-extensions.md) para obter mais informações.
 
 - A comparação de ponteiros de função não é permitida sob **/clr**.
 

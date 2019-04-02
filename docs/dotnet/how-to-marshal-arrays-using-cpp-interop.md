@@ -9,12 +9,12 @@ helpviewer_keywords:
 - C++ Interop, arrays
 - data marshaling [C++], arrays
 ms.assetid: c2b37ab1-8acf-4855-ad3c-7d2864826b14
-ms.openlocfilehash: 0b27fd65b7d42bff2a009b14c39d9547d8a4a919
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 91fd86a547a0241f0cfcca7cfc36c204429d80ac
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57740005"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776889"
 ---
 # <a name="how-to-marshal-arrays-using-c-interop"></a>Como: Marshaling de matrizes usando Interop do C++
 
@@ -24,7 +24,7 @@ O código a seguir exemplos de uso de [gerenciado, não gerenciado](../preproces
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir demonstra como passar uma matriz gerenciada para uma função não gerenciada. Usa a função gerenciada [pin_ptr (C + + / CLI)](../windows/pin-ptr-cpp-cli.md) para suprimir a coleta de lixo para a matriz antes de chamar a função não gerenciada. Fornecendo a função não gerenciada com um ponteiro de fixação para o heap de GC, pode ser evitada a sobrecarga de fazer uma cópia da matriz. Para demonstrar que a função não gerenciada está acessando a memória de heap de GC, ele modifica o conteúdo da matriz e as alterações são refletidas quando a função gerenciada retoma o controle.
+O exemplo a seguir demonstra como passar uma matriz gerenciada para uma função não gerenciada. Usa a função gerenciada [pin_ptr (C + + / CLI)](../extensions/pin-ptr-cpp-cli.md) para suprimir a coleta de lixo para a matriz antes de chamar a função não gerenciada. Fornecendo a função não gerenciada com um ponteiro de fixação para o heap de GC, pode ser evitada a sobrecarga de fazer uma cópia da matriz. Para demonstrar que a função não gerenciada está acessando a memória de heap de GC, ele modifica o conteúdo da matriz e as alterações são refletidas quando a função gerenciada retoma o controle.
 
 ```
 // PassArray1.cpp

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - __event keyword [C++]
 - events [C++], __event
 ms.assetid: d3019b3e-722e-48df-8536-c05878461f9e
-ms.openlocfilehash: bd5f53e5d2b80b22c3a38f413c4fa79b27fa7026
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3a837e30d3cd66f7caa9b44971f432e00b0917ae
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50606473"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58778254"
 ---
 # <a name="event"></a>__event
 
@@ -62,7 +62,7 @@ Ver [manipulação de eventos em C++ nativo](../cpp/event-handling-in-native-cpp
 
 Os eventos COM são interfaces. Os parâmetros de um método em uma interface de origem do evento devem ser *na* parâmetros (mas isso não é rigorosamente imposto), porque um *out* parâmetro não é útil para o multicasting. Será emitido um aviso de nível 1, se você usar um *out* parâmetro.
 
-O tipo de retorno normalmente é o HRESULT ou **void**, mas pode ser qualquer tipo integral, incluindo **enum**. Quando um evento usa um tipo de retorno integral e um manipulador de eventos retorna uma condição de erro, nesse caso, o evento sendo gerado aborta as chamadas para outros delegados. Observe que o compilador marcará automaticamente uma interface de origem do evento como um [origem](../windows/source-cpp.md) no IDL gerado.
+O tipo de retorno normalmente é o HRESULT ou **void**, mas pode ser qualquer tipo integral, incluindo **enum**. Quando um evento usa um tipo de retorno integral e um manipulador de eventos retorna uma condição de erro, nesse caso, o evento sendo gerado aborta as chamadas para outros delegados. Observe que o compilador marcará automaticamente uma interface de origem do evento como um [origem](../windows/attributes/source-cpp.md) no IDL gerado.
 
 O [interface](../cpp/interface.md) palavra-chave sempre é necessária após **Event** para uma fonte de evento COM.
 
@@ -75,7 +75,7 @@ Ver [manipulação de eventos em COM](../cpp/event-handling-in-com.md) para cód
 
 ## <a name="managed-events"></a>Eventos gerenciadas
 
-Para obter informações sobre a codificação de eventos na nova sintaxe, consulte [evento](../windows/event-cpp-component-extensions.md).
+Para obter informações sobre a codificação de eventos na nova sintaxe, consulte [evento](../extensions/event-cpp-component-extensions.md).
 
 Os eventos gerenciados são membros de dados ou métodos. Quando usado com um evento, o tipo de retorno de um delegado deve ser compatível com o [Common Language Specification](/dotnet/standard/language-independence-and-language-independent-components). O tipo de retorno do manipulador de eventos deve corresponder ao tipo de retorno do delegado. Para obter mais informações sobre delegados, consulte [delegados e eventos](../dotnet/delegates-and-events.md). Se um evento gerenciado for um membro de dados, seu tipo deve ser um ponteiro para um delegado.
 
@@ -89,7 +89,7 @@ __event void OnClick(String* s);  // method as event
 
 Ao declarar implicitamente um evento gerenciado, você pode especificamente adicionar e remover acessadores que serão chamados quando manipuladores de eventos forem adicionados ou removidos. Você também pode definir o método que chama (gera) o evento de fora da classe.
 
-## <a name="example-native-events"></a>Exemplo: eventos nativos
+## <a name="example-native-events"></a>Exemplo: Eventos nativos
 
 ```cpp
 // EventHandling_Native_Event.cpp
@@ -101,7 +101,7 @@ public:
 };
 ```
 
-## <a name="example-com-events"></a>Exemplo: eventos COM
+## <a name="example-com-events"></a>Exemplo: Eventos COM
 
 ```cpp
 // EventHandling_COM_Event.cpp
@@ -131,8 +131,8 @@ public:
 
 [Palavras-chave](../cpp/keywords-cpp.md)<br/>
 [Manipulação de eventos](../cpp/event-handling.md)<br/>
-[event_source](../windows/event-source.md)<br/>
-[event_receiver](../windows/event-receiver.md)<br/>
+[event_source](../windows/attributes/event-source.md)<br/>
+[event_receiver](../windows/attributes/event-receiver.md)<br/>
 [__hook](../cpp/hook.md)<br/>
 [__unhook](../cpp/unhook.md)<br/>
 [__raise](../cpp/raise.md)

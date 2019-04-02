@@ -5,12 +5,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - expressions [C++]
 ms.assetid: aaa1f250-7185-4113-b682-3f5e995943d1
-ms.openlocfilehash: d0d509341cd63b9a5e2a13271a2e799c95f44df9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c2dc4f1654b7e76bf9506f82d6d613684258c174
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50458754"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58771364"
 ---
 # <a name="expressions-c"></a>Expressões (C++)
 
@@ -48,7 +48,7 @@ Tópicos sobre operadores em outras seções:
 
 - [Operadores sobrecarregados](../cpp/operator-overloading.md)
 
-- [TypeId](../windows/typeid-cpp-component-extensions.md)
+- [typeid](../extensions/typeid-cpp-component-extensions.md) (C++/CLI)
 
     > [!NOTE]
     >  Os operadores para tipos internos não podem ser sobrecarregados; o comportamento deles é predefinido.

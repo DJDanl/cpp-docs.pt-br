@@ -52,12 +52,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAccessToken class
 ms.assetid: bb5c5945-56a5-4083-b442-76573cee83ab
-ms.openlocfilehash: eb49ee135dce4ee0d5e37acd2382a34e1d99b083
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 0b98df740b751d019c9b2852d682f61a51384818
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57265477"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772183"
 ---
 # <a name="caccesstoken-class"></a>Classe CAccessToken
 
@@ -74,7 +74,7 @@ class CAccessToken
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
@@ -1181,6 +1181,6 @@ O grupo primário é o grupo padrão para novos objetos criados enquanto esse to
 
 ## <a name="see-also"></a>Consulte também
 
-[Exemplo de ATLSecurity](../../visual-cpp-samples.md)<br/>
+[Exemplo de ATLSecurity](../../overview/visual-cpp-samples.md)<br/>
 [Tokens de acesso](/windows/desktop/SecAuthZ/access-tokens)<br/>
 [Visão geral da classe](../../atl/atl-class-overview.md)

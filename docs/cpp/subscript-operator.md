@@ -9,12 +9,12 @@ helpviewer_keywords:
 - '[] operator'
 - subscript operator [C++], syntax
 ms.assetid: 69c31494-52da-4dd0-8bbe-6ccbfd50f197
-ms.openlocfilehash: 5921b89c7637f1a4d1171c8835bb1b5300b718fb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2d55c18d2c9faa1a704bea129f2551937e76133c
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50572907"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767919"
 ---
 # <a name="subscript-operator-"></a>Operador subscrito]
 
@@ -28,7 +28,7 @@ postfix-expression [ expression ]
 
 Uma expressão de pós-fixação (que também pode ser uma expressão primária) seguida pelo operador de subscrito **[]**, especifica a indexação de matriz.
 
-Para obter informações sobre matrizes gerenciadas, consulte [matrizes](../windows/arrays-cpp-component-extensions.md).
+Para obter informações sobre matrizes gerenciadas no C + + / CLI, consulte [matrizes](../extensions/arrays-cpp-component-extensions.md).
 
 Geralmente, o valor representado pelo *postfix-expression* é um valor de ponteiro, como um identificador de matriz, e *expressão* é um valor integral (incluindo tipos enumerados). No entanto, tudo o que é necessário sintaticamente é que uma das expressões seja do tipo ponteiro e a outra seja do tipo integral. Assim que o valor integral pode estar na *postfix-expression* posição e o valor do ponteiro pode estar entre colchetes na *expressão* ou posição de subscrito. Considere o fragmento de código a seguir:
 

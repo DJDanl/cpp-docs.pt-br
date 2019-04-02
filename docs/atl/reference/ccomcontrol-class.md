@@ -19,12 +19,12 @@ helpviewer_keywords:
 - ambient properties
 - controls [ATL], properties
 ms.assetid: 55368c27-bd16-45a7-b701-edb36157c8e8
-ms.openlocfilehash: 29eeb31c0823a0614fa1404cf7efc1c281bab3a4
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: ffbec7c1a83c0dd829878f4c73340528d32fb852
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57261577"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58771546"
 ---
 # <a name="ccomcontrol-class"></a>Classe CComControl
 
@@ -51,7 +51,7 @@ A classe base que implementa as funções de janela. O padrão é [CWindowImpl](
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
@@ -73,7 +73,7 @@ A classe base que implementa as funções de janela. O padrão é [CWindowImpl](
 
 Para obter mais informações sobre como criar um controle, consulte o [Tutorial da ATL](../../atl/active-template-library-atl-tutorial.md). Para obter mais informações sobre o Assistente de projeto da ATL, consulte o artigo [criando um projeto ATL](../../atl/reference/creating-an-atl-project.md).
 
-Para obter uma demonstração `CComControl` métodos e membros de dados, consulte a [c](../../visual-cpp-samples.md) exemplo.
+Para obter uma demonstração `CComControl` métodos e membros de dados, consulte a [c](../../overview/visual-cpp-samples.md) exemplo.
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 

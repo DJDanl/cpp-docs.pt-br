@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Delegate Class
 ms.assetid: 82b21271-768f-4193-9ca2-be68ddfd546e
-ms.openlocfilehash: 6a509827b3b8e14b6d28995b5b4ca468ee9a662e
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 4116de3240c3ef334db51095997f946731372708
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57741177"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769232"
 ---
 # <a name="platformdelegate-class"></a>Classe Platform::Delegate
 
@@ -30,7 +30,7 @@ A classe Delegate possui os métodos Equals(), GetHashCode() e ToString() deriva
 
 ### <a name="remarks"></a>Comentários
 
-Use a palavra-chave [delegate](../windows/delegate-cpp-component-extensions.md) para criar delegados; não use Platform::Delegate explicitamente. Para obter mais informações, consulte [Delegados](../cppcx/delegates-c-cx.md). Para ver um exemplo de como criar e consumir um delegado, veja [Creating Windows Runtime Components in C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp).
+Use a palavra-chave [delegate](../extensions/delegate-cpp-component-extensions.md) para criar delegados; não use Platform::Delegate explicitamente. Para obter mais informações, consulte [Delegados](../cppcx/delegates-c-cx.md). Para ver um exemplo de como criar e consumir um delegado, veja [Creating Windows Runtime Components in C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp).
 
 ### <a name="requirements"></a>Requisitos
 
