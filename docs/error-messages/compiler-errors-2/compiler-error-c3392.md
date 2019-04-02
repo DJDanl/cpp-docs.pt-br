@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3392
 ms.assetid: e4757596-e2aa-4314-b01e-5c4bfd2110e9
-ms.openlocfilehash: 34097de7d50e260ee82a8891cee988b1533debdd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 72bdef1b3344b3d69ba0d014f92a85e9381de4b3
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50556566"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779528"
 ---
 # <a name="compiler-error-c3392"></a>Erro do compilador C3392
 
 'type_arg': argumento de tipo inválido para parâmetro de generic param de genérico 'generic_type' deve ter um construtor público sem parâmetros
 
-Um tipo genérico foi instanciado incorretamente. Verifique a definição de tipo. Para obter mais informações, consulte [genéricos](../../windows/generics-cpp-component-extensions.md).
+Um tipo genérico foi instanciado incorretamente. Verifique a definição de tipo. Para obter mais informações, consulte [genéricos](../../extensions/generics-cpp-component-extensions.md).
 
 ## <a name="example"></a>Exemplo
 

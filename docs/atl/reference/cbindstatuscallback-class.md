@@ -29,12 +29,12 @@ helpviewer_keywords:
 - data transfer [C++], asynchronous
 - CBindStatusCallback class
 ms.assetid: 0f5da276-6031-4418-b2a9-a4750ef29e77
-ms.openlocfilehash: e8c8d3f170803a792ca2ea8c7a37a18fd2cebd48
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 6e5e55a23ee678bbedf76f608bc4fdf562cc1822
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259198"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773119"
 ---
 # <a name="cbindstatuscallback-class"></a>Classe CBindStatusCallback
 
@@ -62,7 +62,7 @@ Especifica os sinalizadores de associação que são retornados pelo [GetBindInf
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
@@ -101,7 +101,7 @@ Especifica os sinalizadores de associação que são retornados pelo [GetBindInf
 
 A classe `CBindStatusCallback` implementa a interface `IBindStatusCallback`. `IBindStatusCallback` deve ser implementada pelo seu aplicativo para que ele pode receber notificações de uma transferência de dados assíncronos. Usa o moniker assíncrono fornecido pelo sistema `IBindStatusCallback` métodos para enviar e receber informações sobre os dados assíncronos de transferência / para seu objeto.
 
-Normalmente, o `CBindStatusCallback` objeto está associado uma operação de ligação específica. Por exemplo, nos [ASYNC](../../visual-cpp-samples.md) exemplo, quando você definir a propriedade de URL, ele cria um `CBindStatusCallback` objeto na chamada para `Download`:
+Normalmente, o `CBindStatusCallback` objeto está associado uma operação de ligação específica. Por exemplo, nos [ASYNC](../../overview/visual-cpp-samples.md) exemplo, quando você definir a propriedade de URL, ele cria um `CBindStatusCallback` objeto na chamada para `Download`:
 
 [!code-cpp[NVC_ATL_Windowing#86](../../atl/codesnippet/cpp/cbindstatuscallback-class_1.h)]
 
@@ -528,7 +528,7 @@ void Function_Name(
     DWORD dwSize);
 ```
 
-No exemplo a seguir (tiradas de [ASYNC](../../visual-cpp-samples.md) exemplo), a função `OnData` grava os dados recebidos em uma caixa de texto.
+No exemplo a seguir (tiradas de [ASYNC](../../overview/visual-cpp-samples.md) exemplo), a função `OnData` grava os dados recebidos em uma caixa de texto.
 
 ### <a name="example"></a>Exemplo
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - OLE applications [MFC], implementing OLE
 - applications [OLE], implementing OLE
 ms.assetid: 0875ddae-99df-488c-82c6-164074a81058
-ms.openlocfilehash: 40c74d48b76921f770740602a39d28804a7e3c09
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 83a1089ecaaaa9bd0dd1d928cd3d1869e5017a4a
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57284808"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774380"
 ---
 # <a name="ole-background-implementation-strategies"></a>Tela de fundo OLE: Estratégias de implementação
 
@@ -23,7 +23,7 @@ Dependendo do seu aplicativo, há quatro estratégias de implementação possív
 
 - Você tem um programa escrito com a biblioteca Microsoft Foundation Class versão 2.0 ou superior que não dá suporte a OLE.
 
-   Criar um novo aplicativo com o Assistente de aplicativo do MFC como mencionado anteriormente e, em seguida, copie e cole o código do novo aplicativo em seu aplicativo existente. Isso funcionará para servidores, contêineres ou aplicativos automatizados. Consulte o MFC [RABISCO](../visual-cpp-samples.md) exemplo para obter um exemplo dessa estratégia.
+   Criar um novo aplicativo com o Assistente de aplicativo do MFC como mencionado anteriormente e, em seguida, copie e cole o código do novo aplicativo em seu aplicativo existente. Isso funcionará para servidores, contêineres ou aplicativos automatizados. Consulte o MFC [RABISCO](../overview/visual-cpp-samples.md) exemplo para obter um exemplo dessa estratégia.
 
 - Você tem um programa de biblioteca Microsoft Foundation Class que implementa o suporte da versão 1.0 de OLE.
 
@@ -33,7 +33,7 @@ Dependendo do seu aplicativo, há quatro estratégias de implementação possív
 
    Essa situação requer mais trabalho. Uma abordagem é criar um novo aplicativo, como a primeira estratégia e, em seguida, copie e cole o código existente nele. Se seu código existente é escrito em C, em seguida, você precisa modificá-lo para que ele pode compilar como código C++. Se seu código C chama a API do Windows, não é necessário alterá-lo para usar as Microsoft Foundation classes. Essa abordagem provavelmente exigirá alguma reestruturação do seu programa para dar suporte à arquitetura de documento/exibição usada por versões 2.0 e mais recente do que o Microsoft Foundation Classes. Para obter mais informações sobre essa arquitetura, consulte [25 de observação técnica](../mfc/tn025-document-view-and-frame-creation.md).
 
-Depois de decidir uma estratégia, você deve ler o [recipientes](../mfc/containers.md) ou [servidores](../mfc/servers.md) artigos (dependendo do tipo de aplicativo que você está escrevendo) ou examinar as amostras de programas, ou ambos. Os exemplos de OLE do MFC [OCLIENT](../visual-cpp-samples.md) e [HIERSVR](../visual-cpp-samples.md) mostram como implementar os vários aspectos de contêineres e servidores, respectivamente. Em vários pontos ao longo desses artigos, você será chamada para determinadas funções nesses exemplos como exemplos das técnicas que está sendo discutidos.
+Depois de decidir uma estratégia, você deve ler o [recipientes](../mfc/containers.md) ou [servidores](../mfc/servers.md) artigos (dependendo do tipo de aplicativo que você está escrevendo) ou examinar as amostras de programas, ou ambos. Os exemplos de OLE do MFC [OCLIENT](../overview/visual-cpp-samples.md) e [HIERSVR](../overview/visual-cpp-samples.md) mostram como implementar os vários aspectos de contêineres e servidores, respectivamente. Em vários pontos ao longo desses artigos, você será chamada para determinadas funções nesses exemplos como exemplos das técnicas que está sendo discutidos.
 
 ## <a name="see-also"></a>Consulte também
 

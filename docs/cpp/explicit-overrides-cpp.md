@@ -8,12 +8,12 @@ helpviewer_keywords:
 - explicit virtual function overrides
 - explicit override of virtual function
 ms.assetid: ee583234-5cda-4e90-b55e-3f9fbf079ced
-ms.openlocfilehash: 5f46d55dc3898fdf5fede075a0d44f04a9f8326a
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: dbaf8b0d78093df522cfbc63bf20dd0acb6c477c
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51325855"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774250"
 ---
 # <a name="explicit-overrides-c"></a>Substituições Explícitas (C++)
 
@@ -21,7 +21,7 @@ ms.locfileid: "51325855"
 
 Se a mesma função virtual é declarada em duas ou mais [interfaces](../cpp/interface.md) e se uma classe for derivada dessas interfaces, você pode substituir explicitamente cada função virtual.
 
-Para obter informações sobre explícita substituem em código gerenciado usando a nova sintaxe gerenciada, consulte [substituições explícitas](../windows/explicit-overrides-cpp-component-extensions.md).
+Para obter informações sobre substituições explícitas em código gerenciado usando C + + / CLI, consulte [substituições explícitas](../extensions/explicit-overrides-cpp-component-extensions.md).
 
 **Fim da seção específica da Microsoft**
 

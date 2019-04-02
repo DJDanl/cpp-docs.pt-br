@@ -160,12 +160,12 @@ helpviewer_keywords:
 - CMFCToolBarButton [MFC], m_nStyle
 - CMFCToolBarButton [MFC], m_strText
 ms.assetid: 8a6ecffb-86b0-4f5c-8211-a9146b463efd
-ms.openlocfilehash: 94d7ba14e01b2965a0fe788162726d1019e847de
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 0a3af2b13eeb2775671ee89019b1562010acc059
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57275227"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776382"
 ---
 # <a name="cmfctoolbarbutton-class"></a>Classe CMFCToolBarButton
 
@@ -179,7 +179,7 @@ class CMFCToolBarButton : public CObject
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
@@ -287,7 +287,7 @@ O `CMFCToolBarButton` classe é a classe base para outras classes de botão de b
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir demonstra como configurar uma `CMFCToolBarButton` objeto usando vários métodos no `CMFCToolBarButton` classe. O exemplo ilustra como habilitar o mouse e a entrada do teclado, configure o índice da imagem do botão, defina o retângulo delimitador do botão e tornar visível o botão. Este trecho de código é parte do [exemplo de controle de guia](../../visual-cpp-samples.md).
+O exemplo a seguir demonstra como configurar uma `CMFCToolBarButton` objeto usando vários métodos no `CMFCToolBarButton` classe. O exemplo ilustra como habilitar o mouse e a entrada do teclado, configure o índice da imagem do botão, defina o retângulo delimitador do botão e tornar visível o botão. Este trecho de código é parte do [exemplo de controle de guia](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_TabControl#1](../../mfc/reference/codesnippet/cpp/cmfctoolbarbutton-class_1.cpp)]
 [!code-cpp[NVC_MFC_TabControl#2](../../mfc/reference/codesnippet/cpp/cmfctoolbarbutton-class_2.cpp)]

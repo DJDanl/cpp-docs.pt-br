@@ -15,12 +15,12 @@ helpviewer_keywords:
 - multiple frame windows [MFC]
 - splitter windows [MFC], static
 ms.assetid: c6b9e4e0-7c9c-45f1-a804-aeac39c9a128
-ms.openlocfilehash: e64ea6701c5e3ec594c705e8995b5ba605ab0b79
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 154fc67dc35d5e5633c72c27100da9be56c0c68c
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57301188"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779671"
 ---
 # <a name="multiple-document-types-views-and-frame-windows"></a>Vários tipos de documento, exibições e janelas com moldura
 
@@ -67,9 +67,9 @@ A figura a seguir, dividido em partes a, b e c, mostra os três modelos de inter
 ![Vários&#45;exibir interfaces do usuário](../mfc/media/vc37a71.gif "diversos&#45;exibir interfaces do usuário") <br/>
 Interfaces do usuário do modo de exibição de vários
 
-A estrutura fornece esses modelos, Implementando o comando nova janela e fornecendo a classe [CSplitterWnd](../mfc/reference/csplitterwnd-class.md), como descrito em [divisor Windows](#_core_splitter_windows). Você pode implementar outros modelos usando esses como seu ponto de partida. Para programas de exemplo que ilustram as diferentes configurações de exibições e janelas com moldura divisores, consulte [exemplos de MFC](../visual-cpp-samples.md).
+A estrutura fornece esses modelos, Implementando o comando nova janela e fornecendo a classe [CSplitterWnd](../mfc/reference/csplitterwnd-class.md), como descrito em [divisor Windows](#_core_splitter_windows). Você pode implementar outros modelos usando esses como seu ponto de partida. Para programas de exemplo que ilustram as diferentes configurações de exibições e janelas com moldura divisores, consulte [exemplos de MFC](../overview/visual-cpp-samples.md).
 
-Para obter mais informações sobre `UpdateAllViews`, consulte a classe [CView](../mfc/reference/cview-class.md) no *referência da MFC* e o [exemplo de rabisco](../visual-cpp-samples.md).
+Para obter mais informações sobre `UpdateAllViews`, consulte a classe [CView](../mfc/reference/cview-class.md) no *referência da MFC* e o [exemplo de rabisco](../overview/visual-cpp-samples.md).
 
 ##  <a name="_core_multiple_frame_windows"></a> Windows de vários quadros
 
@@ -79,11 +79,11 @@ Você pode usar o comando nova janela no menu janela para aplicativos MDI para c
 
 Em uma janela separadora, a janela é, ou pode ser dividido em dois ou mais painéis roláveis. Um divisor controle (ou "dividir a caixa") no quadro de janela ao lado de barras de rolagem permite ao usuário ajustar os tamanhos relativos dos painéis. Cada painel é uma exibição no mesmo documento. Divisores "dinâmicos", as exibições são da mesma classe, conforme mostrado na parte b de figura, a exibição de várias Interfaces de usuário. Em divisores "estáticos", os modos de exibição podem ser de classes diferentes. Janelas separadoras de ambos os tipos são suportadas pela classe [CSplitterWnd](../mfc/reference/csplitterwnd-class.md).
 
-Janelas separadoras dinâmicas, com exibições da mesma classe, permitem ao usuário dividir uma janela em vários painéis à vontade e, em seguida, role diferentes painéis para ver as diferentes partes do documento. O usuário também pode reverter divisão da janela para remover os modos de exibição adicionais. As janelas separadoras adicionadas para o [exemplo de Scribble](../visual-cpp-samples.md) são um exemplo. Esse tópico descreve a técnica para a criação de janelas separadoras dinâmicas. Uma janela divisora dinâmica é mostrada na parte b da figura, a exibição de várias Interfaces de usuário.
+Janelas separadoras dinâmicas, com exibições da mesma classe, permitem ao usuário dividir uma janela em vários painéis à vontade e, em seguida, role diferentes painéis para ver as diferentes partes do documento. O usuário também pode reverter divisão da janela para remover os modos de exibição adicionais. As janelas separadoras adicionadas para o [exemplo de Scribble](../overview/visual-cpp-samples.md) são um exemplo. Esse tópico descreve a técnica para a criação de janelas separadoras dinâmicas. Uma janela divisora dinâmica é mostrada na parte b da figura, a exibição de várias Interfaces de usuário.
 
 Janelas separadoras estáticas, modos de exibição de classes diferentes, comece com a janela dividida em vários painéis, cada um com uma finalidade diferente. Por exemplo, no editor de bitmap do Visual C++, a janela de imagem mostra dois painéis lado a lado. O painel esquerdo exibe uma imagem life-sized do bitmap. O painel direito exibe uma imagem ampliada ou ampliada do mesmo bitmap. Os painéis são separados por uma "barra divisória" que o usuário pode arrastar para alterar o tamanho relativo dos painéis. Uma janela separadora estático é mostrada na parte c da figura modo de exibição de várias Interfaces de usuário.
 
-Para obter mais informações, consulte a classe [CSplitterWnd](../mfc/reference/csplitterwnd-class.md) na *referência da MFC* e [exemplos de MFC](../visual-cpp-samples.md).
+Para obter mais informações, consulte a classe [CSplitterWnd](../mfc/reference/csplitterwnd-class.md) na *referência da MFC* e [exemplos de MFC](../overview/visual-cpp-samples.md).
 
 ## <a name="see-also"></a>Consulte também
 

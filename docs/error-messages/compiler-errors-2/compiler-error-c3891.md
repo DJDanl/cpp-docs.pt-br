@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3891
 ms.assetid: 6e1a9458-97f5-4580-bc0f-aa97a1bfd20d
-ms.openlocfilehash: 67d12984a32998c244bcd04f99a5f2200a192974
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 74b8802a165ab3265cc0f1c6a0b33b31d3db401d
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50524560"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779905"
 ---
 # <a name="compiler-error-c3891"></a>Erro do compilador C3891
 
 'var': um membro de dados literal não pode ser usado como um l-value
 
-Um [literal](../../windows/literal-cpp-component-extensions.md) variável é const, e seu valor não pode ser alterado depois que ele é inicializado na declaração.
+Um [literal](../../extensions/literal-cpp-component-extensions.md) variável é const, e seu valor não pode ser alterado depois que ele é inicializado na declaração.
 
 O exemplo a seguir gera C3891:
 

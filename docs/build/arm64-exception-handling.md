@@ -1,12 +1,12 @@
 ---
 title: Tratamento de exceção ARM64
 ms.date: 11/19/2018
-ms.openlocfilehash: 921029704e4bf5adabfbe0a82387dadc911b9036
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 78d3d7d206adcb123c9537e91c2d5976b8be5baa
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816146"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770064"
 ---
 # <a name="arm64-exception-handling"></a>Tratamento de exceção ARM64
 
@@ -54,7 +54,7 @@ Estas são as suposições feitas no descrição de tratamento de exceção:
 
 ![layout de quadro de pilha](media/arm64-exception-handling-stack-frame.png "layout de quadro de pilha")
 
-Para funções de quadro encadeada, o par de fp e lr pode ser salvos em qualquer posição na área de variável local, dependendo das considerações de otimização. O objetivo é maximizar o número de locais que podem ser alcançadas por uma instrução única, com base em ponteiro de quadro (r29) ou o ponteiro de pilha (sp). No entanto para `alloca` funções, ele deve ser encadeado e r29 deve apontar para a parte inferior da pilha. Para permitir melhor cobertura de register-par-endereçamento-mode, não-volátil registrar aave áreas são posicionadas na parte superior da pilha de rede Local. Aqui estão exemplos que ilustram algumas das sequências de prólogo mais eficientes. Para fins de clareza e melhor localidade de cache, a ordem de armazenamento de registros salvos pelo receptor em todos os Prólogos canônicos é em ordem "cada vez maior para cima". `#framesz` abaixo representa o tamanho da pilha inteira (excluindo alloca área). `#localsz` e `#outsz` indicam o tamanho da área local (incluindo o salvamento área para o \<r29, lr > par) e o tamanho do parâmetro de saída, respectivamente.
+Para funções de quadro encadeada, o par de fp e lr pode ser salvos em qualquer posição na área de variável local, dependendo das considerações de otimização. O objetivo é maximizar o número de locais que podem ser alcançadas por uma instrução única, com base em ponteiro de quadro (r29) ou o ponteiro de pilha (sp). No entanto para `alloca` funções, ele deve ser encadeado e r29 deve apontar para a parte inferior da pilha. Para permitir melhor cobertura de register-par-endereçamento-mode, o registro não volátil de áreas de salvamento são posicionados na parte superior da pilha de rede Local. Aqui estão exemplos que ilustram algumas das sequências de prólogo mais eficientes. Para fins de clareza e melhor localidade de cache, a ordem de armazenamento de registros salvos pelo receptor em todos os Prólogos canônicos é em ordem "cada vez maior para cima". `#framesz` abaixo representa o tamanho da pilha inteira (excluindo alloca área). `#localsz` e `#outsz` indicam o tamanho da área local (incluindo o salvamento área para o \<r29, lr > par) e o tamanho do parâmetro de saída, respectivamente.
 
 1. Encadeadas, #localsz \<= 512
 
@@ -267,7 +267,7 @@ ULONG ComputeXdataSize(PULONG *Xdata)
 }
 ```
 
-É importante observar que embora o prólogo e cada epílogo tem seu próprio índice nos códigos de desenrolamento, a tabela é compartilhada entre eles, e é totalmente possível (e não totalmente incomum) que eles possam todos compartilhar os mesmos códigos (consulte o exemplo 2 no Apêndice A, abaixo). Gravadores de compilador devem otimizar para esse caso em particular porque o maior índice que pode ser especificado é 255, limitando o número total de códigos de desenrolamento para uma função específica.
+É importante observar que embora o prólogo e cada epílogo tem seu próprio índice nos códigos de desenrolamento, a tabela é compartilhada entre eles, e é totalmente possível (e não totalmente incomum) que eles possam todos compartilhar os mesmos (consulte o exemplo 2 no rótulo de seção de exemplos de códigos omo). Gravadores de compilador devem otimizar para esse caso em particular porque o maior índice que pode ser especificado é 255, limitando o número total de códigos de desenrolamento para uma função específica.
 
 ### <a name="unwind-codes"></a>Códigos de desenrolamento
 
@@ -340,7 +340,7 @@ Os campos são da seguinte maneira:
 
 - **Função RVA iniciar** é o RVA de 32 bits do início da função.
 - **Sinalizador** é um campo de 2 bits, conforme descrito acima, com os seguintes significados:
-  - 00 = compactado desenrolar dados não usados; bits restantes apontam para um registro. XData abaixo
+  - 00 = compactado desenrolar dados não usados; bits restantes apontam para um registro. XData
   - 01 = compactado usados conforme descrito abaixo com único prólogo e epílogo no início e no final do escopo de dados de desenrolamento
   - 10 = compactado desenrolar dados usados como descrito abaixo para o código sem qualquer prólogo e epílogo; Isso é útil para descrever os segmentos separados por função.
   - 11 = reservados;
@@ -353,7 +353,7 @@ Os campos são da seguinte maneira:
   - 11 = função encadeada, uma instrução de par de loja/carga é usada no prólogo/epílogo \<r29, lr >
 - **H** é um sinalizador de 1 bit que indica se a função hospeda o parâmetro numérico inteiro registra (r0-r7), armazenando-os no início da função. (0 = não hospeda registros, 1 = hospeda registros).
 - **RegI** é um campo de 4 bits que indica o número de registros INT não-volátil (r19 r28) salvo no local de pilha canônico.
-- **RegF** é um campo de 3 bits que indica o número de registros FP não-volátil (d8-d15) salvo no local de pilha canônico. (0 não = nenhum FP register for salva, m > 0: m + 1 registradores FP são salvos). Para a função salvar apenas um desenrolamento de FP, empacotada dados não podem ser aplicados.
+- **RegF** é um campo de 3 bits que indica o número de registros FP não-volátil (d8-d15) salvo no local de pilha canônico. (RegF = 0: nenhum de FP é salvo; RegF > 0: RegF + 1 registradores FP são salvos). Empacotadas desenrolar dados não podem ser usados para a função que salvam um único registro FP.
 
 Prólogos canônicos que se enquadram nas categorias 1, 2 (sem área de parâmetro de saída), 3 e 4 na seção acima podem ser representados pelo formato de desenrolamento compactado.  Os epílogos para funções canônicas seguem uma forma muito semelhante, exceto **H** não tem nenhum efeito, a `set_fp` instrução for omitida e a ordem das etapas, bem como instruções em cada etapa são revertidas no epílogo. O algoritmo para xdata compactado segue estas etapas detalhadas na tabela a seguir:
 
@@ -386,7 +386,7 @@ Etapa n º|Valores de sinalizador|n º de instruções|Opcode|Código de desenro
 
 \*\* Se **RegI** == **CR** = = 0, e **RegF** ! = 0, o stp primeiro para o ponto flutuante faz o pré-decremento.
 
-\*\*\* Nenhuma instrução correspondente a `mov r29, sp` está presente no epílogo. Se uma função exige a restauração de sp de r29 e em seguida, não podemos usar empacotadas dados de desenrolamento.
+\*\*\* Nenhuma instrução correspondente a `mov r29, sp` está presente no epílogo. Empacotadas desenrolar dados não podem ser usados se uma função exige a restauração de sp de r29.
 
 ### <a name="unwinding-partial-prologs-and-epilogs"></a>Epílogos e desenrolamento de Prólogos parciais
 

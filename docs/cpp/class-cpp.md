@@ -7,12 +7,12 @@ helpviewer_keywords:
 - class types [C++], class statements
 - class keyword [C++]
 ms.assetid: dd23c09f-6598-4069-8bff-69c7f2518b9f
-ms.openlocfilehash: 5abd2ef73ff8af9ebc2f1827cb5403025d5383ee
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: c4ef9690a41737147354ee0976f6912c4711ff67
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330990"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774809"
 ---
 # <a name="class-c"></a>class (C++)
 
@@ -31,25 +31,25 @@ class [ms-decl-spec] [tag [: base-list ]]
 
 #### <a name="parameters"></a>Parâmetros
 
-*especificações de modelo*<br/>
+*template-spec*<br/>
 Especificações de modelo opcionais. Para obter mais informações, consulte [modelos](templates-cpp.md).
 
 *class*<br/>
 O **classe** palavra-chave.
 
-*MS-decl-spec*<br/>
+*ms-decl-spec*<br/>
 Especificação de classe de armazenamento opcional. Para obter mais informações, consulte o [declspec](../cpp/declspec.md) palavra-chave.
 
-*Marca*<br/>
+*tag*<br/>
 O nome do tipo dado à classe. A marca se torna uma palavra reservada no escopo da classe. A marca é opcional. Se omitida, uma classe anônima será definida. Para obter mais informações, consulte [tipos de classe anônima](../cpp/anonymous-class-types.md).
 
-*Base de dados de lista*<br/>
+*base-list*<br/>
 A lista opcional de classes ou estruturas da qual esta classe derivará seus membros. Ver [Classes Base](../cpp/base-classes.md) para obter mais informações. Cada nome de classe ou estrutura de base pode ser precedido por um especificador de acesso ([pública](../cpp/public-cpp.md), [privada](../cpp/private-cpp.md), [protegido](../cpp/protected-cpp.md)) e o [virtual](../cpp/virtual-cpp.md) palavra-chave. Consulte a tabela de acesso de membro [controlando o acesso a membros de classe](member-access-control-cpp.md) para obter mais informações.
 
-*lista de membros*<br/>
+*member-list*<br/>
 Lista de membros da classe. Consulte a [visão geral de membros de classe](../cpp/class-member-overview.md) para obter mais informações.
 
-*declaradores*<br/>
+*declarators*<br/>
 Lista de declaradores que especifica os nomes de uma ou mais instâncias do tipo da classe. Os declaradores podem incluir listas de inicializadores se todos os membros de dados da classe estiverem **público**. Isso é mais comum em estruturas, cujos membros de dados são **pública** por padrão, que em classes. Ver [visão geral dos declaradores](../cpp/overview-of-declarators.md) para obter mais informações.
 
 ## <a name="remarks"></a>Comentários
@@ -60,13 +60,13 @@ Para obter mais informações sobre as classes em geral, consulte um dos seguint
 
 - [union](../cpp/unions.md)
 
-- [multiple_inheritance](../cpp/inheritance-keywords.md)
+- [__multiple_inheritance](../cpp/inheritance-keywords.md)
 
-- [Single_Inheritance](../cpp/inheritance-keywords.md)
+- [__single_inheritance](../cpp/inheritance-keywords.md)
 
-- [virtual_inheritance](../cpp/inheritance-keywords.md)
+- [__virtual_inheritance](../cpp/inheritance-keywords.md)
 
-Para obter informações sobre classes e estruturas gerenciadas, consulte [Classes e Structs](../windows/classes-and-structs-cpp-component-extensions.md)
+Para obter informações sobre classes gerenciadas e estruturas em C + + c++ /CLI e c++ /CLI CX, consulte [Classes e Structs](../extensions/classes-and-structs-cpp-component-extensions.md)
 
 ## <a name="example"></a>Exemplo
 

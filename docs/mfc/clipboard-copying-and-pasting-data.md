@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Clipboard, copying data to
 - Clipboard, pasting
 ms.assetid: 580e10be-241f-4f9f-94cf-8302edc5beef
-ms.openlocfilehash: da589743e98b2ac020e006aedb0ccc0415998f17
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: cff9094315dc97e2040eb4dbad25d044c7c51a81
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270729"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776096"
 ---
 # <a name="clipboard-copying-and-pasting-data"></a>Área de transferência: Copiando e colando dados
 
@@ -32,7 +32,7 @@ Antes de implementar copiar ou colar, primeiro você deve fornecer funções par
 
 1. Se o usuário escolher uma operação Cut em vez de uma operação de cópia, exclua os dados selecionados do seu aplicativo.
 
-Para ver um exemplo dessa sequência, consulte o `OnEditCut` e `OnEditCopy` programas de exemplo de funções na OLE do MFC [OCLIENT](../visual-cpp-samples.md) e [HIERSVR](../visual-cpp-samples.md). Observe que esses exemplos de mantenham um ponteiro para os dados selecionados no momento, portanto, a etapa 1 já foi concluída.
+Para ver um exemplo dessa sequência, consulte o `OnEditCut` e `OnEditCopy` programas de exemplo de funções na OLE do MFC [OCLIENT](../overview/visual-cpp-samples.md) e [HIERSVR](../overview/visual-cpp-samples.md). Observe que esses exemplos de mantenham um ponteiro para os dados selecionados no momento, portanto, a etapa 1 já foi concluída.
 
 ##  <a name="_core_pasting_data"></a> Colando dados
 
@@ -50,7 +50,7 @@ Colagem de dados é mais complicado do que copiá-lo porque você precisa escolh
 
 1. Realize a colagem no formato.
 
-Para obter um exemplo de como isso funciona, consulte a implementação de `OnEditPaste` funções de membro nas classes de exibição definidas nos programas de exemplo OLE do MFC [OCLIENT](../visual-cpp-samples.md) e [HIERSVR](../visual-cpp-samples.md).
+Para obter um exemplo de como isso funciona, consulte a implementação de `OnEditPaste` funções de membro nas classes de exibição definidas nos programas de exemplo OLE do MFC [OCLIENT](../overview/visual-cpp-samples.md) e [HIERSVR](../overview/visual-cpp-samples.md).
 
 > [!TIP]
 >  O principal benefício de separar a operação de colagem para sua própria função é que o mesmo código de colar pode ser usado quando dados são soltos em seu aplicativo durante uma operação de arrastar e soltar. Como na, OCLIENT e HIERSVR, suas `OnDrop` também pode chamar a função `DoPasteItem`, reutilizar o código escrito para implementar operações de colagem.

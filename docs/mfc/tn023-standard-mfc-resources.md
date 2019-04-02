@@ -8,12 +8,12 @@ helpviewer_keywords:
 - TN023
 - standard resources
 ms.assetid: 60af8415-c576-4c2f-a711-ca5da0b9a1f2
-ms.openlocfilehash: b4edc00f77152b8d677f3113e0ed6386569b0988
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: d29f0ab2254a52e01f2016f64a37ddfce47955bb
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57277671"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780308"
 ---
 # <a name="tn023-standard-mfc-resources"></a>TN023: Recursos MFC padrão
 
@@ -23,7 +23,7 @@ Essa observação descreve os recursos padrão fornecido com e necessárias para
 
 MFC oferece duas categorias de recursos predefinidos que você pode usar em seu aplicativo: recursos de clip-arts e recursos de estrutura padrão.
 
-Clip-arts são recursos adicionais que o framework dependem, mas que talvez você queira adicionar a interface do usuário do seu aplicativo. Os seguintes recursos de clip-arts estão contidos na amostra gerais MFC [clip-art](../visual-cpp-samples.md):
+Clip-arts são recursos adicionais que o framework dependem, mas que talvez você queira adicionar a interface do usuário do seu aplicativo. Os seguintes recursos de clip-arts estão contidos na amostra gerais MFC [clip-art](../overview/visual-cpp-samples.md):
 
 - Common.rc: Um único arquivo de recursos que contém:
 

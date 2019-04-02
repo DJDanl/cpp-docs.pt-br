@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - sample applications [MFC], dialog boxes
 ms.assetid: 3fc7dd7c-d758-4c43-96bb-0ea638ca1ad7
-ms.openlocfilehash: 03a505f9d193890c9dabdd96c2dafbbbd0104b0e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 72470463c3d4ff402bca9c119456778cf7fadecb
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57260953"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769779"
 ---
 # <a name="dialog-sample-list"></a>Lista de exemplos da caixa de diálogo
 
@@ -17,41 +17,41 @@ Consulte os seguintes programas de exemplo que ilustram as caixas de diálogo e 
 
 *Aplicativo de exemplo MDI com caixas de diálogo*
 
-- [RABISCO](../visual-cpp-samples.md)
+- [RABISCO](../overview/visual-cpp-samples.md)
 
 *Caixa de diálogo sem janela restrita*
 
-- [SEM JANELA RESTRITA](../visual-cpp-samples.md)
+- [SEM JANELA RESTRITA](../overview/visual-cpp-samples.md)
 
 *Caixa de diálogo de folha de propriedade (caixa de diálogo de guia)*
 
-- [PROPDLG](../visual-cpp-samples.md)
+- [PROPDLG](../overview/visual-cpp-samples.md)
 
-- [CMNCTRL1](../visual-cpp-samples.md)
+- [CMNCTRL1](../overview/visual-cpp-samples.md)
 
-- [CMNCTRL2](../visual-cpp-samples.md)
+- [CMNCTRL2](../overview/visual-cpp-samples.md)
 
 *Aplicativo com base em uma caixa de diálogo*
 
-- [CMNCTRL1](../visual-cpp-samples.md)
+- [CMNCTRL1](../overview/visual-cpp-samples.md)
 
-- [CMNCTRL2](../visual-cpp-samples.md)
+- [CMNCTRL2](../overview/visual-cpp-samples.md)
 
 *Controles de caixa de diálogo*
 
-- [CMNCTRL1](../visual-cpp-samples.md)
+- [CMNCTRL1](../overview/visual-cpp-samples.md)
 
-- [CMNCTRL2](../visual-cpp-samples.md)
+- [CMNCTRL2](../overview/visual-cpp-samples.md)
 
-- [CTRLTEST](../visual-cpp-samples.md)
+- [CTRLTEST](../overview/visual-cpp-samples.md)
 
 *Modos de exibição de formulário de caixa de diálogo semelhante*
 
-- [VIEWEX](../visual-cpp-samples.md)
+- [VIEWEX](../overview/visual-cpp-samples.md)
 
 *Modelo de caixa de diálogo na memória*
 
-- [DLGTEMPL](../visual-cpp-samples.md)
+- [DLGTEMPL](../overview/visual-cpp-samples.md)
 
 ## <a name="see-also"></a>Consulte também
 

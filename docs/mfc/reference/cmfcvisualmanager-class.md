@@ -344,12 +344,12 @@ helpviewer_keywords:
 - CMFCVisualManager [MFC], SetMenuShadowDepth
 - CMFCVisualManager [MFC], SetShadowHighlightedImage
 ms.assetid: beed80f7-36a2-4d64-9f09-e807cfefc3fe
-ms.openlocfilehash: 594e727a091cbb7b2999e540ae8da7ddec2a7a14
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 7b4d6a31e69e75af240e0e58cbfbb7d2d24291aa
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57294324"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775160"
 ---
 # <a name="cmfcvisualmanager-class"></a>Classe CMFCVisualManager
 
@@ -365,7 +365,7 @@ class CMFCVisualManager : public CMFCBaseVisualManager
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
@@ -587,7 +587,7 @@ void CMFCSkinsApp::SetSkin (int iIndex)
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir demonstra como recuperar os valores padrão de um `CMFCVisualManager` objeto. Este trecho de código é parte do [exemplo de painel de tarefas de](../../visual-cpp-samples.md).
+O exemplo a seguir demonstra como recuperar os valores padrão de um `CMFCVisualManager` objeto. Este trecho de código é parte do [exemplo de painel de tarefas de](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_TasksPane#1](../../mfc/reference/codesnippet/cpp/cmfcvisualmanager-class_1.h)]
 
@@ -4331,7 +4331,7 @@ A implementação padrão desse método preenche a tela de fundo da barra com a 
 
 ### <a name="example"></a>Exemplo
 
-O exemplo a seguir demonstra como usar o `OnFillBarBackground` no `CMFCVisualManager` classe. Este trecho de código faz parte do [amostra de demonstração do Outlook](../../visual-cpp-samples.md).
+O exemplo a seguir demonstra como usar o `OnFillBarBackground` no `CMFCVisualManager` classe. Este trecho de código faz parte do [amostra de demonstração do Outlook](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_OutlookDemo#4](../../mfc/reference/codesnippet/cpp/cmfcvisualmanager-class_2.cpp)]
 

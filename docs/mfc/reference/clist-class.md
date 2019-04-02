@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CList [MFC], RemoveTail
 - CList [MFC], SetAt
 ms.assetid: 6f6273c3-c8f6-47f5-ac2a-0a950379ae5d
-ms.openlocfilehash: 722c38de100f2f1ff00e6589573a76bcdd9f3e84
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 383222e4892bccc653f010ce4939bca23f2adc93
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57297379"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780945"
 ---
 # <a name="clist-class"></a>Classe CList
 
@@ -70,7 +70,7 @@ class CList : public CObject
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
@@ -697,7 +697,7 @@ Você deve garantir que o valor da posição representa uma posição válida na
 
 ## <a name="see-also"></a>Consulte também
 
-[Exemplo MFC COLETAR](../../visual-cpp-samples.md)<br/>
+[Exemplo MFC COLETAR](../../overview/visual-cpp-samples.md)<br/>
 [Classe CObject](../../mfc/reference/cobject-class.md)<br/>
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
 [Classe CMap](../../mfc/reference/cmap-class.md)<br/>

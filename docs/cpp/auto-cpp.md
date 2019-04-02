@@ -1,5 +1,5 @@
 ---
-title: automático (C++)
+title: auto (C++)
 ms.date: 11/04/2016
 f1_keywords:
 - auto_CPP
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - auto keyword [C++]
 ms.assetid: e9d495d7-601c-4547-b897-998389a311f4
-ms.openlocfilehash: f4d17069ed4e06a85b80d2027433ff87be6d1521
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 3d77a17d490f8d7680f095367c309ce0e4f366b7
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518561"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776330"
 ---
-# <a name="auto-c"></a>automático (C++)
+# <a name="auto-c"></a>auto (C++)
 
 Deduz o tipo de uma variável declarada da expressão de inicialização.
 
@@ -34,13 +34,13 @@ O **automática** palavra-chave instrui o compilador a usar a expressão de inic
 
 É recomendável que você use o **automática** palavra-chave para a maioria das situações — a menos que você realmente deseje uma conversão — porque ele oferece estes benefícios:
 
-- **Robustez:** se o tipo da expressão for alterado — isso inclui quando um tipo de retorno da função é alterado — ele apenas funciona.
+- **Robustez:** Se o tipo da expressão for alterado — isso inclui quando um tipo de retorno da função é alterado — ele apenas funciona.
 
-- **Desempenho:** tem a garantia de que não haja nenhuma conversão.
+- **Desempenho:** Você tem a garantia de que não haja nenhuma conversão.
 
-- **Facilidade de uso:** você não precisa se preocupar com dificuldades de ortografia do nome de tipo e erros de digitação.
+- **Facilidade de uso:** Você não precisa se preocupar com dificuldades de ortografia do nome de tipo e erros de digitação.
 
-- **Eficiência:** a codificação pode ser mais eficiente.
+- **Eficiência:** A codificação pode ser mais eficiente.
 
 Casos de conversão em que você não poderá usar **automática**:
 
@@ -52,7 +52,7 @@ Para usar o **automática** palavra-chave, usá-lo em vez de um tipo para declar
 
 A expressão de inicialização pode ser uma atribuição (sintaxe de sinal de igual), uma inicialização direta (sintaxe de estilo de função), uma [operador new](new-operator-cpp.md) expressão ou a expressão de inicialização pode ser o  *para range-declaration* parâmetro em uma [de instrução (C++) baseado em intervalo](../cpp/range-based-for-statement-cpp.md) instrução. Para obter mais informações, consulte [inicializadores](../cpp/initializers.md) e exemplos de código neste documento.
 
-O **automática** palavra-chave é um espaço reservado para um tipo, mas ele não é um tipo. Portanto, o **automática** palavra-chave não pode ser usado nas conversões ou operadores, como [sizeof](../cpp/sizeof-operator.md) e [typeid](../windows/typeid-cpp-component-extensions.md).
+O **automática** palavra-chave é um espaço reservado para um tipo, mas ele não é um tipo. Portanto, o **automática** palavra-chave não pode ser usado nas conversões ou operadores, como [sizeof](../cpp/sizeof-operator.md) e (para C + + c++ CLI) [typeid](../extensions/typeid-cpp-component-extensions.md).
 
 ## <a name="usefulness"></a>Utilidade
 
@@ -133,7 +133,7 @@ A tabela a seguir lista as restrições no uso do **automática** palavra-chave 
 |[C3536](../error-messages/compiler-errors-2/compiler-error-c3536.md)|Um símbolo não pode ser usado antes de ser inicializado. Na prática, isso significa que uma variável não pode ser usada para se inicializar.|
 |[C3537](../error-messages/compiler-errors-2/compiler-error-c3537.md)|Você não pode ser convertido em um tipo que é declarado com o **automática** palavra-chave.|
 |[C3538](../error-messages/compiler-errors-2/compiler-error-c3538.md)|Todos os símbolos em uma lista de declaradores que é declarado com o **automática** palavra-chave deve ser resolvido para o mesmo tipo. Para obter mais informações, consulte [declarações e definições](declarations-and-definitions-cpp.md).|
-|[C3540](../error-messages/compiler-errors-2/compiler-error-c3540.md), [C3541](../error-messages/compiler-errors-2/compiler-error-c3541.md)|O [sizeof](../cpp/sizeof-operator.md) e [typeid](../windows/typeid-cpp-component-extensions.md) operadores não podem ser aplicados a um símbolo que é declarado com o **automático** palavra-chave.|
+|[C3540](../error-messages/compiler-errors-2/compiler-error-c3540.md), [C3541](../error-messages/compiler-errors-2/compiler-error-c3541.md)|O [sizeof](../cpp/sizeof-operator.md) e [typeid](../extensions/typeid-cpp-component-extensions.md) operadores não podem ser aplicados a um símbolo que é declarado com o **automático** palavra-chave.|
 
 ## <a name="examples"></a>Exemplos
 
@@ -225,7 +225,7 @@ int main()
 [Palavras-chave](../cpp/keywords-cpp.md)<br/>
 [/Zc:auto (deduzir tipo de variável)](../build/reference/zc-auto-deduce-variable-type.md)<br/>
 [Operador sizeof](../cpp/sizeof-operator.md)<br/>
-[TypeId](../windows/typeid-cpp-component-extensions.md)<br/>
+[typeid](../extensions/typeid-cpp-component-extensions.md)<br/>
 [operador new](new-operator-cpp.md)<br/>
 [Declarações e definições](declarations-and-definitions-cpp.md)<br/>
 [Exemplos de expressões lambda](../cpp/examples-of-lambda-expressions.md)<br/>

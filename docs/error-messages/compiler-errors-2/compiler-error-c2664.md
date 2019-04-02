@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2664
 ms.assetid: 3595d66e-cf87-4fda-a896-c0cd81f95db4
-ms.openlocfilehash: d9ebea5c955dcf89308654feec9866d4fdc924cd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cffd178e1736358333ee27d4572d3531de23f527
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50501355"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774601"
 ---
 # <a name="compiler-error-c2664"></a>Erro do compilador C2664
 
@@ -31,7 +31,7 @@ Para corrigir o C2664,
 
 O C2664 também pode ser gerado quando uma classe oculta um membro de uma de suas classes base.
 
-Para obter mais informações, consulte [como: converter System:: String em wchar_t * ou char\*](../../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md).
+Para obter mais informações, confira [Como: Converter System:: String em wchar_t * ou char\*](../../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md).
 
 ## <a name="example"></a>Exemplo
 
@@ -189,7 +189,7 @@ int main( ) {
 
 ## <a name="example"></a>Exemplo
 
-Uma variável enum não é convertida em seu tipo subjacente para que uma chamada de função seja atendida. Para obter mais informações, consulte [classe enum](../../windows/enum-class-cpp-component-extensions.md). O exemplo a seguir gera C2664 e mostra como corrigi-lo.
+Uma variável enum não é convertida em seu tipo subjacente para que uma chamada de função seja atendida. Para obter mais informações, consulte [classe enum](../../extensions/enum-class-cpp-component-extensions.md). O exemplo a seguir gera C2664 e mostra como corrigi-lo.
 
 ```
 // C2664f.cpp

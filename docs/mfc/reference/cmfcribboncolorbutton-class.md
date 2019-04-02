@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CMFCRibbonColorButton [MFC], SetPalette
 - CMFCRibbonColorButton [MFC], UpdateColor
 ms.assetid: 6b4b4ee3-8cc0-41b4-a4eb-93e8847008e1
-ms.openlocfilehash: a7901619110652423a2ab00d8088d6b9213fe202
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: ceb686a9aca4ac126c4d61dd45975c65a9376ce9
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57266270"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769960"
 ---
 # <a name="cmfcribboncolorbutton-class"></a>Classe CMFCRibbonColorButton
 
@@ -59,7 +59,7 @@ class CMFCRibbonColorButton : public CMFCRibbonGallery
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
@@ -92,7 +92,7 @@ Botão de cor da faixa de opções exibe uma barra de cores quando um usuário p
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir demonstra como usar vários métodos no `CMFCRibbonColorButton` classe. O exemplo mostra como construir um `CMFCRibbonColorButton` do objeto, defina a imagem grande, habilitar o **automática** botão, habilite o **outros** botão, defina o número de colunas, defina o tamanho de todos os elementos de cor que aparecem na barra de cores, adicionar um grupo de cores para a área de cores regular e especificar uma lista de valores RGB para exibir na área de cor do documento. Este trecho de código é parte do [desenhar o cliente de exemplo](../../visual-cpp-samples.md).
+O exemplo a seguir demonstra como usar vários métodos no `CMFCRibbonColorButton` classe. O exemplo mostra como construir um `CMFCRibbonColorButton` do objeto, defina a imagem grande, habilitar o **automática** botão, habilite o **outros** botão, defina o número de colunas, defina o tamanho de todos os elementos de cor que aparecem na barra de cores, adicionar um grupo de cores para a área de cores regular e especificar uma lista de valores RGB para exibir na área de cor do documento. Este trecho de código é parte do [desenhar o cliente de exemplo](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_DrawClient#3](../../mfc/reference/codesnippet/cpp/cmfcribboncolorbutton-class_1.cpp)]
 

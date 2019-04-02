@@ -8,12 +8,12 @@ helpviewer_keywords:
 - language reference, Visual C++
 - Visual C++, language reference
 ms.assetid: 4be9cacb-c862-4391-894a-3a118c9c93ce
-ms.openlocfilehash: 4d184e70e6a7284d07e706ce8b8c247c96442750
-ms.sourcegitcommit: cce52b2232b94ce8fd8135155b86e2d38a4e4562
+ms.openlocfilehash: 8da5a4f7113bbb4256e45e7ec3c91a9c6677643c
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54031259"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774029"
 ---
 # <a name="c-language-reference"></a>Referência da linguagem C++
 
@@ -97,8 +97,8 @@ Uma visão geral de programação C++ moderna práticas para escrever programas 
 
 ## <a name="related-sections"></a>Seções relacionadas
 
-[Extensões de componentes para plataformas de tempo de execução](../windows/component-extensions-for-runtime-platforms.md)<br/>
-Material de referência sobre o uso do Visual C++ para focar no common language runtime.
+[Extensões de componentes para plataformas de tempo de execução](../extensions/component-extensions-for-runtime-platforms.md)<br/>
+Material de referência sobre como usar o Visual C++ para o destino .NET.
 
 [Referência de build C/C++](../build/reference/c-cpp-building-reference.md)<br/>
 Opções do compilador, opções de vinculador e outras ferramentas de compilação.

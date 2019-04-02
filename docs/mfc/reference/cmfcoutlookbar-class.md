@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CMFCOutlookBar [MFC], SetButtonsFont
 - CMFCOutlookBar [MFC], SetMode2003
 ms.assetid: 2b335f71-ce99-4efd-b103-e65ba43ffc36
-ms.openlocfilehash: be11bcd4cdbcd8448cc54f688d7dab9b61f49a57
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: fc1281db0271393ec0538e26c2a2d2af09c99f7a
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304074"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775251"
 ---
 # <a name="cmfcoutlookbar-class"></a>Classe CMFCOutlookBar
 
@@ -57,7 +57,7 @@ class CMFCOutlookBar : public CBaseTabbedPane
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
@@ -89,7 +89,7 @@ class CMFCOutlookBar : public CBaseTabbedPane
 
 ## <a name="remarks"></a>Comentários
 
-Para obter um exemplo de uma barra do Outlook, consulte o [OutlookDemo exemplo: Aplicativo do MFC OutlookDemo](../../visual-cpp-samples.md).
+Para obter um exemplo de uma barra do Outlook, consulte o [OutlookDemo exemplo: Aplicativo do MFC OutlookDemo](../../overview/visual-cpp-samples.md).
 
 ## <a name="implementing-the-outlook-bar"></a>Implementando a barra do Outlook
 
@@ -294,7 +294,7 @@ Ver [CBasePane::CreateEx](../../mfc/reference/cbasepane-class.md#createex) para 
 
 ### <a name="example"></a>Exemplo
 
-O exemplo a seguir demonstra como usar o `Create` método da `CMFCOutlookBar` classe. Este trecho de código faz parte do [Outlook com várias exibições de exemplo](../../visual-cpp-samples.md).
+O exemplo a seguir demonstra como usar o `Create` método da `CMFCOutlookBar` classe. Este trecho de código faz parte do [Outlook com várias exibições de exemplo](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_OutlookMultiViews#1](../../mfc/reference/codesnippet/cpp/cmfcoutlookbar-class_1.h)]
 [!code-cpp[NVC_MFC_OutlookMultiViews#2](../../mfc/reference/codesnippet/cpp/cmfcoutlookbar-class_2.cpp)]

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - security [C++]
 - security [C++], best practices
 ms.assetid: 86acaccf-cdb4-4517-bd58-553618e3ec42
-ms.openlocfilehash: 81a15f7a34ebe6c4c101932074c63cb1c7f7fd26
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: bc449d0bbf222391868dc7586e0245fd6e8cd2ac
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57742473"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769856"
 ---
 # <a name="security-best-practices-for-c"></a>Práticas recomendadas de segurança para C++
 
@@ -46,7 +46,7 @@ A biblioteca em tempo de execução C (CRT) foi aumentada para incluir versões 
 
 ## <a name="safeint-library"></a>Biblioteca de SafeInt
 
-[Biblioteca SafeInt](../windows/safeint-library.md) ajuda a impedir estouros de inteiro e outros erros exploráveis que podem ocorrer quando o aplicativo executa operações matemáticas. O `SafeInt` biblioteca inclui o [classe SafeInt](../windows/safeint-class.md), o [classe SafeIntException](../windows/safeintexception-class.md)e várias [funções SafeInt](../windows/safeint-functions.md).
+[Biblioteca SafeInt](../safeint/safeint-library.md) ajuda a impedir estouros de inteiro e outros erros exploráveis que podem ocorrer quando o aplicativo executa operações matemáticas. O `SafeInt` biblioteca inclui o [classe SafeInt](../safeint/safeint-class.md), o [classe SafeIntException](../safeint/safeintexception-class.md)e várias [funções SafeInt](../safeint/safeint-functions.md).
 
 A classe de `SafeInt` protege contra explorações de estouro de inteiro e de divisão por zero. Você pode usá-la para tratar comparações entre valores de tipos diferentes. Ele fornece duas políticas de tratamento de erro. A política padrão é que a classe `SafeInt` lance uma exceção da classe `SafeIntException` para relatar por que uma operação matemática não pode ser concluída. A segunda política é que a classe `SafeInt` interrompa a execução do programa. Você também pode definir uma política personalizada.
 

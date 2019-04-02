@@ -7,12 +7,12 @@ helpviewer_keywords:
 - dialog boxes [MFC], property sheets
 - tab dialog boxes
 ms.assetid: 09439f65-921d-45a2-b3cc-e13884a087b1
-ms.openlocfilehash: b33f123c7b024e0de0853f8d30211272fd8de58a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 974d6cc0004985544f1786139a9a89c61f00382f
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57267596"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770077"
 ---
 # <a name="property-sheets-mfc"></a>Folhas de propriedade (MFC)
 
@@ -38,7 +38,7 @@ Essa família de artigos explica como implementar o suporte para folhas de propr
 
 - [Classe CPropertyPage](../mfc/reference/cpropertypage-class.md)
 
-- [Amostra](../visual-cpp-samples.md)
+- [Amostra](../overview/visual-cpp-samples.md)
 
 ## <a name="see-also"></a>Consulte também
 

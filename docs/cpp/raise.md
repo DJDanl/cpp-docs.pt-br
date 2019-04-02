@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - __raise keyword [C++]
 ms.assetid: 6f1ae418-5f0f-48b6-9f6e-8ea7e66b239a
-ms.openlocfilehash: 865524fe91b7d137e3a943973dcca6d833bd16df
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c5703c87945667f4ac65647019a72b304363bee2
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471429"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780620"
 ---
 # <a name="raise"></a>__raise
 
@@ -26,7 +26,7 @@ __raise method-declarator;
 
 ## <a name="remarks"></a>Comentários
 
-No código gerenciado, um evento só pode ser acionado de dentro da classe em que é definido. Ver [evento](../windows/event-cpp-component-extensions.md) para obter mais informações.
+No código gerenciado, um evento só pode ser acionado de dentro da classe em que é definido. Ver [evento](../extensions/event-cpp-component-extensions.md) para obter mais informações.
 
 A palavra-chave **__raise** causa um erro a ser emitido se você chamar um não evento.
 
@@ -63,4 +63,4 @@ int main() {
 
 [Palavras-chave](../cpp/keywords-cpp.md)<br/>
 [Manipulação de eventos](../cpp/event-handling.md)<br/>
-[Extensões de componentes para plataformas de tempo de execução](../windows/component-extensions-for-runtime-platforms.md)
+[Extensões de componentes para plataformas de tempo de execução](../extensions/component-extensions-for-runtime-platforms.md)

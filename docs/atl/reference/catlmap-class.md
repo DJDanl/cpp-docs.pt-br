@@ -37,12 +37,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlMap class
 ms.assetid: 5e2fe028-8e6d-4686-93df-1433d2080ec3
-ms.openlocfilehash: 80975047b300f270c0ac58c8b8abfc59ff2b17ef
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 1821532a4d5a3078202f180273b02945b8d8e4ba
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57293778"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774549"
 ---
 # <a name="catlmap-class"></a>Classe CAtlMap
 
@@ -782,6 +782,6 @@ O tipo de elemento de valor.
 
 ## <a name="see-also"></a>Consulte também
 
-[Exemplo de letreiro](../../visual-cpp-samples.md)<br/>
+[Exemplo de letreiro](../../overview/visual-cpp-samples.md)<br/>
 [Exemplo de UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV)<br/>
 [Visão geral da classe](../../atl/atl-class-overview.md)
