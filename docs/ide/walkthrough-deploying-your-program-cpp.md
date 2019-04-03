@@ -9,24 +9,24 @@ helpviewer_keywords:
 - projects [C++], deploying programs
 - application deployment [C++], walkthroughs
 ms.assetid: 79e6cc4e-dced-419d-aaf7-d62d1367603f
-ms.openlocfilehash: 051ef3aa8c691a2191d25183ef96f17b557a47c1
-ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
+ms.openlocfilehash: aa0e1cd6ec7c27b8d3ccc1e327f3cb8da526d4f7
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57820202"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769258"
 ---
 # <a name="walkthrough-deploying-your-program-c"></a>Passo a passo: Implantando o programa (C++)
 
-Agora que você criou seu aplicativo concluindo os passos a passos anteriormente relacionados, listados em [Usando o IDE do Visual Studio para desenvolvimento para desktop com C++](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md), a última etapa é criar um instalador, de modo que outros usuários possam instalar o programa em seus computadores. Para o instalador, você adicionará um novo projeto à solução existente. A saída desse novo projeto é um arquivo setup.exe que instalará o aplicativo em outro computador.
+Agora que você criou seu aplicativo concluindo os passos a passos anteriormente relacionados, a última etapa é criar um instalador, de modo que outros usuários possam instalar o programa nos computadores deles. Para o instalador, você adicionará um novo projeto à solução existente. A saída desse novo projeto é um arquivo setup.exe que instalará o aplicativo em outro computador.
 
-Este passo a passo mostra como usar o Windows Installer para implantar seu aplicativo. Use também o ClickOnce para implantar um aplicativo. Para obter mais informações, confira [Implantação do ClickOnce para aplicativos do Visual C++](../ide/clickonce-deployment-for-visual-cpp-applications.md). Para obter mais informações sobre a implantação em geral, confira [Implantando aplicativos, serviços e componentes](/visualstudio/deployment/deploying-applications-services-and-components).
+Este passo a passo mostra como usar o Windows Installer para implantar seu aplicativo. Use também o ClickOnce para implantar um aplicativo. Para obter mais informações, confira [Implantação do ClickOnce para aplicativos do Visual C++](../windows/clickonce-deployment-for-visual-cpp-applications.md). Para obter mais informações sobre a implantação em geral, confira [Implantando aplicativos, serviços e componentes](/visualstudio/deployment/deploying-applications-services-and-components).
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
 - Este passo a passo pressupõe que você conhece os princípios básicos da linguagem C++.
 
-- Também pressupõe que você tenha concluído os passos a passos relacionados anteriores listados em [Usando o IDE do Visual Studio para Desenvolvimento para Desktop com C++](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).
+- Também pressupõe que você tenha concluído os passos a passos relacionados anteriores listados em [Usando o IDE do Visual Studio para Desenvolvimento para Desktop com C++](using-the-visual-studio-ide-for-cpp-desktop-development.md).
 
 - O passo a passo não pode ser concluído nas edições Express do Visual Studio.
 
@@ -72,10 +72,10 @@ Este passo a passo mostra como usar o Windows Installer para implantar seu aplic
 
 ## <a name="next-steps"></a>Próximas etapas
 
-**Anterior:** [Passo a passo: Depurando um projeto (C++)](../ide/walkthrough-debugging-a-project-cpp.md)<br/>
+**Anterior:** [Passo a passo: Depurando um projeto (C++)](walkthrough-debugging-a-project-cpp.md)<br/>
 
 ## <a name="see-also"></a>Consulte também
 
 [Referência da linguagem C++](../cpp/cpp-language-reference.md)<br/>
 [Sistemas de Compilação e Projetos](../build/projects-and-build-systems-cpp.md)<br/>
-[Implantando aplicativos da área de trabalho](../ide/deploying-native-desktop-applications-visual-cpp.md)<br/>
+[Implantando aplicativos da área de trabalho](../windows/deploying-native-desktop-applications-visual-cpp.md)<br/>

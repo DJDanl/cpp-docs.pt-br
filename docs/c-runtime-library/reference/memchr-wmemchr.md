@@ -1,6 +1,6 @@
 ---
 title: memchr, wmemchr
-ms.date: 11/04/2016
+ms.date: 03/31/2019
 apiname:
 - wmemchr
 - memchr
@@ -24,12 +24,12 @@ helpviewer_keywords:
 - memchr function
 - wmemchr function
 ms.assetid: 5a348581-28f1-4256-8434-687245f7fc9f
-ms.openlocfilehash: cbd8b80ed42a6532fb7161fab7217a772a2cb777
-ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
+ms.openlocfilehash: 00a1f0d12047cc388b56074a657ffd739e986827
+ms.sourcegitcommit: 489c0b998f2360317701f7a4a97b2b8ad96052d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57209893"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58866910"
 ---
 # <a name="memchr-wmemchr"></a>memchr, wmemchr
 
@@ -87,9 +87,9 @@ Se for bem-sucedido, retorna um ponteiro para o primeiro local da *c* na *buffer
 
 ## <a name="remarks"></a>Comentários
 
-`memchr` e `wmemchr` procurar a primeira ocorrência do *c* no primeiro *contagem* bytes de *buffer*. Ele para quando encontra *c* ou quando tiver verificado os primeiros *contagem* bytes.
+`memchr` e `wmemchr` procurar a primeira ocorrência do *c* no primeiro *contagem* caracteres da *buffer*. Ele para quando encontra *c* ou quando tiver verificado os primeiros *contagem* caracteres.
 
-Em C, essas funções usam um **const** ponteiro para o primeiro argumento. No C++, duas sobrecargas estão disponíveis. A sobrecarga de colocar um ponteiro para **const** retorna um ponteiro para **const**; a versão que usa um ponteiro para não**const** retorna um ponteiro para não -**const** . _CRT_CONST_CORRECT_OVERLOADS a macro é definida se ambos os **const** e não-**const** versões dessas funções estão disponíveis. Se você precisar de não**const** comportamento para ambas as sobrecargas de C++ no C++, defina o símbolo const_return.
+Em C, essas funções usam um **const** ponteiro para o primeiro argumento. No C++, duas sobrecargas estão disponíveis. A sobrecarga de colocar um ponteiro para **const** retorna um ponteiro para **const**; a versão que usa um ponteiro para não**const** retorna um ponteiro para não -**const** . A macro \_CRT\_CONST\_correto\_SOBRECARGAS é definida se ambos os **const** e não-**const** versões dessas funções estão disponíveis. Se você precisar de não**const** comportamento para as sobrecargas de C++ no C++, defina o símbolo \_CONST\_retornar.
 
 ## <a name="requirements"></a>Requisitos
 
