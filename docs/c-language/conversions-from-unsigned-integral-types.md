@@ -1,6 +1,6 @@
 ---
 title: Conversões de tipos integrais sem sinal
-ms.date: 01/29/2018
+ms.date: 03/27/2019
 helpviewer_keywords:
 - integers, converting
 - type casts, involving integers
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - type conversion [C++], signed and unsigned integers
 - integral conversions, from unsigned
 ms.assetid: 60fb7e10-bff9-4a13-8a48-e19f25a36a02
-ms.openlocfilehash: d7653c545601d10b159f10a8a3c8f60f9128f944
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3f6136a721f84332451184baa648ebc7c909d5d7
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579680"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565016"
 ---
 # <a name="conversions-from-unsigned-integral-types"></a>Conversões de tipos integrais sem sinal
 
-Um inteiro sem sinal é convertido em um inteiro com ou sem sinal mais curto por meio do truncamento dos bits de ordem superior; ou é convertido em um inteiro com ou sem sinal mais longo por meio da extensão de zero (consulte a tabela [Conversões de tipos integrais sem sinal](#_clang_table_4..3)).
+Um inteiro sem sinal é convertido em um inteiro com ou sem sinal mais curto por meio do truncamento dos bits de ordem superior; ou é convertido em um inteiro com ou sem sinal mais longo por meio da extensão de zero. Para obter mais informações, confira [Conversões de tabela de tipos integrais sem sinal](#conversions-from-unsigned-integral-types-table).
 
 Quando o valor com tipo integral é rebaixado para um inteiro com sinal de tamanho menor, ou um inteiro sem sinal é convertido no inteiro com sinal correspondente, o valor não será alterado se ele puder ser representado no novo tipo. No entanto, o valor que ele representa mudará se o bit de sinal for definido, como no exemplo a seguir.
 
@@ -35,7 +35,7 @@ Valores sem sinal são convertidos de uma maneira que preserva o valor e não é
 
 A tabela a seguir resume as conversões de tipos integrais sem sinal.
 
-## <a name="conversions-from-unsigned-integral-types"></a>Conversões de tipos integrais sem sinal
+## <a name="conversions-from-unsigned-integral-types-table"></a>Conversões de tabela de tipos integrais sem sinal
 
 |De|Para|Método|
 |----------|--------|------------|
