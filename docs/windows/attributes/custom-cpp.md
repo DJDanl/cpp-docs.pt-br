@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - custom attributes, defining
 ms.assetid: 3abac928-4d55-4ea6-8cf6-8427a4ad79f1
-ms.openlocfilehash: 7aca125879591f71fe2ba60f34b712918350940f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 227e67696e679452a9c6c0e18c04e3d918f7a93f
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50565692"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59029428"
 ---
 # <a name="custom-c"></a>custom (C++)
 
@@ -31,7 +31,7 @@ Define os metadados de um objeto na biblioteca de tipos.
 *uuid*<br/>
 Uma ID exclusiva.
 
-*value*<br/>
+*Valor *<br/>
 Um valor que pode ser colocado em uma variante.
 
 ## <a name="remarks"></a>Comentários
@@ -55,8 +55,8 @@ Para obter mais informações sobre os contextos de atributo, consulte [contexto
 
 ## <a name="see-also"></a>Consulte também
 
-[Atributos de IDL](idl-attributes.md)<br/>
-[Atributos independentes](stand-alone-attributes.md)<br/>
+[Atributos IDL](idl-attributes.md)<br/>
+[Atributos autônomos](stand-alone-attributes.md)<br/>
 [Atributos Typedef, Enum, Union e Struct](typedef-enum-union-and-struct-attributes.md)<br/>
 [Atributos de parâmetro](parameter-attributes.md)<br/>
 [Atributos de método](method-attributes.md)<br/>

@@ -1,5 +1,5 @@
 ---
-title: 'Registrar troca de campos: trabalhando com o código do assistente'
+title: 'Registrar troca de campos: Trabalhando com o código de Assistente'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - DoFieldExchange method, overriding
@@ -15,19 +15,19 @@ helpviewer_keywords:
 - overriding, DoFieldExchange
 - m_nFields data member, initializing
 ms.assetid: f00d882a-ff1b-4a75-9717-98d8762bb237
-ms.openlocfilehash: c0e1a35e5476c9e2e335c6f2863429d89e4fa28a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 82f0d946cac3429150250e2df5d1bfd674ec30ee
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492112"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041280"
 ---
-# <a name="record-field-exchange-working-with-the-wizard-code"></a>Registrar troca de campos: trabalhando com o código do assistente
+# <a name="record-field-exchange-working-with-the-wizard-code"></a>Registrar troca de campos: Trabalhando com o código de Assistente
 
 Este tópico explica o código que o Assistente de aplicativo do MFC e **Add Class** (conforme descrito em [adicionando um consumidor de ODBC do MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)) dar suporte a RFX e como você pode alterar esse código de gravação.
 
 > [!NOTE]
->  Este tópico se aplica a classes derivadas de `CRecordset` em qual linha em massa buscando não foi implementado. Se você estiver usando a busca de linhas em massa, é implementada em massa registrar troca de campos (RFX em massa). Em massa RFX é semelhante a RFX. Para entender as diferenças, consulte [conjunto de registros: buscando registros em massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+>  Este tópico se aplica a classes derivadas de `CRecordset` em qual linha em massa buscando não foi implementado. Se você estiver usando a busca de linhas em massa, é implementada em massa registrar troca de campos (RFX em massa). Em massa RFX é semelhante a RFX. Para entender as diferenças, consulte [conjunto de registros: Buscando registros em massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 Quando você cria uma classe de conjunto de registros com o Assistente de aplicativo do MFC ou **Adicionar classe**, o assistente grava os seguintes elementos de RFX para você, com base na fonte de dados, tabela e coluna escolhas feitas no Assistente:
 
@@ -99,7 +99,7 @@ Observe os seguintes recursos principais da função:
 
 - Uma chamada para `CFieldExchange::SetFieldType`, por meio de `pFX` ponteiro. Essa chamada especifica que todas as função RFX chama-se ao final da `DoFieldExchange` ou a próxima chamada para `SetFieldType` são colunas de saída. Para obter mais informações, consulte [CFieldExchange::SetFieldType](../../mfc/reference/cfieldexchange-class.md#setfieldtype).
 
-- Várias chamadas para o `RFX_Text` função global — um por membro de dados do campo (que são todos `CString` variáveis no exemplo). Essas chamadas de especificam a relação entre um nome de coluna na fonte de dados e um membro de dados do campo. As funções RFX fazem a transferência de dados real. A biblioteca de classes fornece funções RFX para todos os tipos de dados comuns. Para obter mais informações sobre as funções RFX, consulte [troca de campos do registro: usando as funções RFX](../../data/odbc/record-field-exchange-using-the-rfx-functions.md).
+- Várias chamadas para o `RFX_Text` função global — um por membro de dados do campo (que são todos `CString` variáveis no exemplo). Essas chamadas de especificam a relação entre um nome de coluna na fonte de dados e um membro de dados do campo. As funções RFX fazem a transferência de dados real. A biblioteca de classes fornece funções RFX para todos os tipos de dados comuns. Para obter mais informações sobre as funções RFX, consulte [troca de campos do registro: Usando as funções RFX](../../data/odbc/record-field-exchange-using-the-rfx-functions.md).
 
     > [!NOTE]
     >  A ordem das colunas no conjunto de resultados deve corresponder à ordem das chamadas de função RFX em `DoFieldExchange`.
@@ -140,4 +140,4 @@ Este é o código para adicionar três novos campos. Se você adicionar quaisque
 
 ## <a name="see-also"></a>Consulte também
 
-[RFX (troca de campo de registro)](../../data/odbc/record-field-exchange-rfx.md)
+[Registrar troca de campos (RFX)](../../data/odbc/record-field-exchange-rfx.md)

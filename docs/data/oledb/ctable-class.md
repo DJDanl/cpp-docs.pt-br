@@ -13,12 +13,12 @@ helpviewer_keywords:
 - CTable class
 - Open method
 ms.assetid: f13fdaa3-e198-4557-977d-54b0bbc3454d
-ms.openlocfilehash: ff2a139c16b6678bedf38c64a16dce28fa53c5fe
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: fab1ba2e496f4945eb56c0a67b833f6bf063404e
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57425192"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038756"
 ---
 # <a name="ctable-class"></a>Classe CTable
 
@@ -82,7 +82,7 @@ HRESULT Open(const CSession& session,
 
 #### <a name="parameters"></a>Parâmetros
 
-*session*<br/>
+*Sessão*<br/>
 [in] A sessão para o qual a tabela é aberta.
 
 *wszTableName*<br/>
@@ -91,7 +91,7 @@ HRESULT Open(const CSession& session,
 *szTableName*<br/>
 [in] O nome da tabela para abrir, passado como uma cadeia de caracteres ANSI.
 
-*dbid*<br/>
+*DBID*<br/>
 [in] O `DBID` da tabela para abrir.
 
 *pPropSet*<br/>
@@ -110,5 +110,5 @@ Para obter mais detalhes, consulte [IOpenRowset:: OPENROWSET](/previous-versions
 
 ## <a name="see-also"></a>Consulte também
 
-[Modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Referência de modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)
+[Modelos de consumidor de banco de dados OLE](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Referência dos modelos de consumidor de banco de dados OLE](../../data/oledb/ole-db-consumer-templates-reference.md)

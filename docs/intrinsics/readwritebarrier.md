@@ -7,16 +7,16 @@ helpviewer_keywords:
 - ReadWriteBarrier intrinsic
 - _ReadWriteBarrier intrinsic
 ms.assetid: dd9f58b5-8bb6-494e-bb0f-9fe184f3908d
-ms.openlocfilehash: a279017e57c8bf828b302940463bd0b3504f085d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9da26b685be90bd349d6bfe56c4ad980541d09c0
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50626155"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59026747"
 ---
 # <a name="readwritebarrier"></a>_ReadWriteBarrier
 
-**Seção específica da Microsoft**
+**Específico da Microsoft**
 
 Limita as otimizações do compilador que podem reordenar os acessos à memória através do ponto da chamada.
 
@@ -41,7 +41,7 @@ void _ReadWriteBarrier(void);
 
 O tipo intrínseco do `_ReadWriteBarrier` limita as otimizações do compilador que podem remover e reordenar acessos à memória através do ponto da chamada.
 
-**Fim da seção específica da Microsoft**
+**FIM de Específico da Microsoft**
 
 ## <a name="see-also"></a>Consulte também
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - max_is attribute
 ms.assetid: 7c851f5c-6649-4d77-a792-247c37d8f560
-ms.openlocfilehash: 10732d5ba3251185dc7027e3449486af3037f763
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dca2a3dc18aa3c3e75bbb682ed0b1b90adcd9236
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50627468"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041303"
 ---
 # <a name="maxis"></a>max_is
 
@@ -25,7 +25,7 @@ Designa o valor máximo para um índice de matriz válida.
 
 ### <a name="parameters"></a>Parâmetros
 
-*Expressão*<br/>
+*expressão*<br/>
 Uma ou mais expressões de linguagem C. Slots de argumentos vazia são permitidos.
 
 ## <a name="remarks"></a>Comentários
@@ -51,7 +51,7 @@ Ver [first_is](first-is.md) para obter um exemplo de como especificar uma seçã
 
 ## <a name="see-also"></a>Consulte também
 
-[Atributos de IDL](idl-attributes.md)<br/>
+[Atributos IDL](idl-attributes.md)<br/>
 [Atributos Typedef, Enum, Union e Struct](typedef-enum-union-and-struct-attributes.md)<br/>
 [Atributos de parâmetro](parameter-attributes.md)<br/>
 [first_is](first-is.md)<br/>

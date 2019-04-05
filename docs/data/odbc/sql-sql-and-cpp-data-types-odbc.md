@@ -1,19 +1,19 @@
 ---
-title: 'SQL: tipos de dados SQL e C++ (ODBC)'
+title: 'SQL: SQL e tipos de dados do C++ (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - data types [C++], SQL vs. C++
 - SQL data types [C++]
 - SQL [C++], vs. C++ data types
 ms.assetid: 066e0070-d4da-435c-9c4b-f7cab3352c86
-ms.openlocfilehash: 6767d009ca376d8e8579baf32f2c9af1e282abce
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3efa36342b7d16968113acd818a7a1386e4cefcc
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50649485"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59024342"
 ---
-# <a name="sql-sql-and-c-data-types-odbc"></a>SQL: tipos de dados SQL e C++ (ODBC)
+# <a name="sql-sql-and-c-data-types-odbc"></a>SQL: SQL e tipos de dados do C++ (ODBC)
 
 > [!NOTE]
 >  Essas informações se aplicam às classes ODBC do MFC. Se você estiver trabalhando com as classes MFC DAO, consulte o tópico "Comparação do banco de dados de mecanismo de SQL e ANSI SQL do Microsoft Jet" na Ajuda do DAO.
@@ -30,8 +30,8 @@ A tabela a seguir mapeia tipos de dados SQL ANSI para tipos de dados C++. Isso a
 |**REAL**|**float**|
 |**INTEGER**|**long**|
 |**FLOAT**|**double**|
-|**DOUBLE**|**double**|
-|**NUMERIC**|`CString` 1|
+|**DUPLA**|**double**|
+|**NUMÉRICO**|`CString` 1|
 |**VARCHAR**|`CString`|
 |**LONGVARCHAR**|`CLongBinary`, `CString` 2|
 |**BIT**|**BOOL**|
@@ -41,7 +41,7 @@ A tabela a seguir mapeia tipos de dados SQL ANSI para tipos de dados C++. Isso a
 |**VARBINARY**|`CByteArray`|
 |**LONGVARBINARY**|`CLongBinary`, `CByteArray` 3|
 |**DATE**|`CTime`, `CString`|
-|**TEMPO**|`CTime`, `CString`|
+|**TIME**|`CTime`, `CString`|
 |**TIMESTAMP**|`CTime`, `CString`|
 
 1. ANSI **decimais** e **NUMÉRICO** mapeados para `CString` porque **SQL_C_CHAR** é o tipo de transferência ODBC padrão.
@@ -57,4 +57,4 @@ Se você estiver usando a biblioteca de cursores ODBC com as classes de banco de
 ## <a name="see-also"></a>Consulte também
 
 [SQL](../../data/odbc/sql.md)<br/>
-[SQL: fazendo chamadas SQL diretas (ODBC)](../../data/odbc/sql-making-direct-sql-calls-odbc.md)
+[SQL: Fazendo chamadas SQL diretas (ODBC)](../../data/odbc/sql-making-direct-sql-calls-odbc.md)
