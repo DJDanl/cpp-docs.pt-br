@@ -10,12 +10,12 @@ helpviewer_keywords:
 - pragmas, comment
 - comment pragma
 ms.assetid: 20f099ff-6303-49b3-9c03-a94b6aa69b85
-ms.openlocfilehash: ec80e8cf177becdc25bdf49d6dfa9ad9c7794b88
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fb9bfef2ae751529b8424143cde020e78f17ec72
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50612817"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59025264"
 ---
 # <a name="comment-cc"></a>comment (C/C++)
 
@@ -39,7 +39,7 @@ Coloque o nome e o número da versão do compilador no arquivo de objeto. Esse r
 
 Casas *commentstring* no arquivo de objeto. No tempo de vinculação, essa cadeia de caracteres é colocada no arquivo executável. A cadeia de caracteres não será carregada na memória quando o arquivo executável for carregado; no entanto, pode ser encontrada com um programa que localiza cadeias de caracteres imprimíveis em arquivos. Um uso para esse tipo de registro de comentário é inserir um número de versão ou informações semelhantes em um arquivo executável.
 
-`exestr` é preterido e será removido em uma versão futura; o vinculador não processa o registro de comentário.
+`exestr` foi preterido e será removido em uma versão futura; o vinculador não processa o registro de comentário.
 
 ### <a name="lib"></a>lib
 
@@ -67,7 +67,7 @@ Apenas o seguinte (*tipo de comentário*) opções de vinculador estão disponí
 
 - [/MERGE](../build/reference/merge-combine-sections.md)
 
-- [/ SEÇÃO](../build/reference/section-specify-section-attributes.md)
+- [/SECTION](../build/reference/section-specify-section-attributes.md)
 
 ### <a name="user"></a>usuário
 

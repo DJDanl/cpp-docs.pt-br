@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - raw_method_prefix attribute
 ms.assetid: 71490313-af78-4bb2-b28a-eee67950d30b
-ms.openlocfilehash: c3015cf8b51646d25fd8f36a7336c63dc8fe492b
-ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
+ms.openlocfilehash: 963e04752dcb797343550d9b89f778bfe0e8a593
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58565591"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59021405"
 ---
 # <a name="rawmethodprefix"></a>raw_method_prefix
 
@@ -37,9 +37,9 @@ Métodos e propriedades de baixo nível são expostos por funções de membro no
 > [!NOTE]
 > Os efeitos do **raw_method_prefix** atributo não será alterado pela presença da [raw_interfaces_only](raw-interfaces-only.md) atributo. O **raw_method_prefix** sempre tem precedência sobre `raw_interfaces_only` na especificação de um prefixo. Se ambos os atributos são usados na mesma `#import` instrução, em seguida, o prefixo especificado o **raw_method_prefix** atributo é usado.
 
-**FIM de específico de C++**
+**FIM de Específico do C++**
 
 ## <a name="see-also"></a>Consulte também
 
-[atributos de #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
-[#import diretiva](../preprocessor/hash-import-directive-cpp.md)
+[Atributos de #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
+[Diretiva #import](../preprocessor/hash-import-directive-cpp.md)

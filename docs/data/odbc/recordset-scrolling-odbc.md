@@ -1,5 +1,5 @@
 ---
-title: 'Conjunto de registros: rolando (ODBC)'
+title: 'Conjunto de registros: Rolando (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - recordsets [C++], end of
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - scrolling [C++], recordsets
 - Move method (recordsets)
 ms.assetid: f38d2dcb-1e88-4e41-af25-98b00c276be4
-ms.openlocfilehash: e41b526b86922bafd1d923fa5848a5ef8ed4825e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5df8151664bd7e726087cb5323c1e4622264ad23
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579578"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59040050"
 ---
-# <a name="recordset-scrolling-odbc"></a>Conjunto de registros: rolando (ODBC)
+# <a name="recordset-scrolling-odbc"></a>Conjunto de registros: Rolando (ODBC)
 
 Este tópico se aplica às classes ODBC do MFC.
 
@@ -32,7 +32,7 @@ Este tópico explica:
 
 ##  <a name="_core_scrolling_from_one_record_to_another"></a> Rolagem de um registro para outro
 
-Classe `CRecordset` fornece o `Move` funções de membro para rolagem dentro de um conjunto de registros. Essas funções mover conjuntos de linhas do registro atual. Se você tiver implementado a busca de linhas em massa, um `Move` operação reposiciona o conjunto de registros pelo tamanho do conjunto de linhas. Se você não tiver implementado linhas em massa buscando uma chamada para um `Move` função reposiciona o conjunto de registros por um registro de cada vez. Para obter mais informações sobre a busca de linhas em massa, consulte [conjunto de registros: buscando registros em massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+Classe `CRecordset` fornece o `Move` funções de membro para rolagem dentro de um conjunto de registros. Essas funções mover conjuntos de linhas do registro atual. Se você tiver implementado a busca de linhas em massa, um `Move` operação reposiciona o conjunto de registros pelo tamanho do conjunto de linhas. Se você não tiver implementado linhas em massa buscando uma chamada para um `Move` função reposiciona o conjunto de registros por um registro de cada vez. Para obter mais informações sobre a busca de linhas em massa, consulte [conjunto de registros: Buscando registros em massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 > [!NOTE]
 >  Ao mover por meio de um conjunto de registros, registros excluídos não podem ser ignorados. Para obter mais informações, consulte o [IsDeleted](../../mfc/reference/crecordset-class.md#isdeleted) função de membro.
@@ -89,7 +89,7 @@ rsCustSet.MoveFirst( );
 
 `IsEOF` Retorna um valor diferente de zero se o conjunto de registros é posicionado após o último registro. `IsBOF` Retorna um valor diferente de zero se o conjunto de registros é posicionado antes do primeiro registro (antes de todos os registros). Em ambos os casos, não há nenhum registro atual no qual operar. Se você chamar `MovePrev` quando `IsBOF` é já TRUE ou chamar `MoveNext` quando `IsEOF` já for TRUE, o framework lança uma `CDBException`. Você também pode usar `IsBOF` e `IsEOF` para verificar se há um conjunto de registros vazio.
 
-Para obter mais informações sobre navegação de conjunto de registros, consulte [conjunto de registros: indicadores e posições absolutas (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md).
+Para obter mais informações sobre navegação de conjunto de registros, consulte [conjunto de registros: Indicadores e posições absolutas (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md).
 
 ##  <a name="_core_when_scrolling_is_supported"></a> Quando a rolagem é suportada
 
@@ -106,4 +106,4 @@ Como foi criado originalmente, SQL fornecido apenas roll-forward, mas ODBC esten
 [Conjunto de registros (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
 [CRecordset::CanScroll](../../mfc/reference/crecordset-class.md#canscroll)<br/>
 [CRecordset::CheckRowsetError](../../mfc/reference/crecordset-class.md#checkrowseterror)<br/>
-[Conjunto de registros: filtrando registros (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md)
+[Conjunto de registros: Filtrando registros (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - SQL [C++], ODBC
 - ODBC [C++], SQL implementation
 ms.assetid: e3923bc4-b317-4e0b-afd8-3cd403eb0faf
-ms.openlocfilehash: c9ea15520f98a86f8af7c278bfc77463689a4606
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8f93d97530068695359273b523e7d2ae46de01cb
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50576786"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037851"
 ---
 # <a name="sql"></a>SQL
 
@@ -49,10 +49,10 @@ As classes de banco de dados usam uma parte do SQL, conhecida como linguagem de 
 |-----------------|---------------------------------------------|
 |**SELECT**|Para identificar quais tabelas e colunas na fonte de dados devem ser usados.|
 |**WHERE**|Para aplicar um filtro que restringe a seleção.|
-|**ORDER BY**|Para aplicar uma ordem de classificação para o conjunto de registros.|
-|**INSERIR**|Para adicionar novos registros a um conjunto de registros.|
-|**EXCLUIR**|Para excluir registros de um conjunto de registros.|
-|**ATUALIZAÇÃO**|Para modificar os campos de um registro.|
+|**ORDENAR POR**|Para aplicar uma ordem de classificação para o conjunto de registros.|
+|**INSERT**|Para adicionar novos registros a um conjunto de registros.|
+|**DELETE**|Para excluir registros de um conjunto de registros.|
+|**UPDATE**|Para modificar os campos de um registro.|
 
 Além disso, as classes de banco de dados reconhecem ODBC **chamar** instruções que você pode usar para chamar uma consulta predefinida (ou procedimento armazenado) em algumas fontes de dados. O driver de banco de dados ODBC interpreta essas instruções e substitui o comando apropriado para cada DBMS.
 
@@ -61,9 +61,9 @@ Além disso, as classes de banco de dados reconhecem ODBC **chamar** instruçõe
 
 Se as classes não reconhecem uma instrução fornecida pelo usuário em `CRecordset::Open`, ele será interpretado como um nome de tabela.
 
-Para obter uma explicação de como o framework constrói instruções SQL, consulte [conjunto de registros: como conjuntos de registros selecionar registros (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md) e [SQL: SQL instrução (ODBC Personalizando seu conjunto de registros)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md).
+Para obter uma explicação de como o framework constrói instruções SQL, consulte [conjunto de registros: Como conjuntos de registros selecionam registros (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md) e [SQL: Personalizando a instrução de SQL do seu conjunto de registros (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md).
 
-Bancos de dados SQL usam tipos de dados semelhantes aos usados em C e C++. Para uma discussão sobre essas semelhanças, consulte [SQL: SQL e tipos de dados do C++ (ODBC)](../../data/odbc/sql-sql-and-cpp-data-types-odbc.md).
+Bancos de dados SQL usam tipos de dados semelhantes aos usados em C e C++. Para uma discussão sobre essas semelhanças, consulte [SQL: Tipos de dados de C++ (ODBC) e SQL](../../data/odbc/sql-sql-and-cpp-data-types-odbc.md).
 
 Você pode encontrar mais informações sobre o SQL, incluindo uma lista de instruções SQL com suporte, tipos de dados, gramática de núcleo do SQL e uma lista de leitura recomendada publicações sobre SQL, nos *ODBC SDK* *referência do programador*  no CD da biblioteca MSDN.
 
@@ -79,11 +79,11 @@ Os tópicos a seguir fornecem mais informações sobre como as classes de banco 
 
 - [SQL: Personalizando a instrução de SQL do seu conjunto de registros (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)
 
-- [SQL: tipos de dados SQL e C++ (ODBC)](../../data/odbc/sql-sql-and-cpp-data-types-odbc.md)
+- [SQL: SQL e tipos de dados do C++ (ODBC)](../../data/odbc/sql-sql-and-cpp-data-types-odbc.md)
 
-- [SQL: fazendo chamadas SQL diretas (ODBC)](../../data/odbc/sql-making-direct-sql-calls-odbc.md)
+- [SQL: Fazendo chamadas SQL diretas (ODBC)](../../data/odbc/sql-making-direct-sql-calls-odbc.md)
 
 ## <a name="see-also"></a>Consulte também
 
-[ODBC (conectividade de banco de dados aberto)](../../data/odbc/open-database-connectivity-odbc.md)<br/>
+[Conectividade de banco de dados aberto (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)<br/>
 [Noções básicas de ODBC](../../data/odbc/odbc-basics.md)

@@ -7,14 +7,14 @@ helpviewer_keywords:
 - ODBC data sources, creating tables in
 - tables [C++], creating programmatically
 ms.assetid: 9ca68fb5-c3df-424a-a75c-e3fb01cc1b18
-ms.openlocfilehash: 139efb7a34baacb2bb6ad424d13f2d337eb12af6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 61d3f3e39362db27d1e3abc00fa3cb9ea82b86e2
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50661650"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59028393"
 ---
-# <a name="data-source-programmatically-creating-a-table-in-an-odbc-data-source"></a>Fonte de dados: criando uma tabela programaticamente em uma fonte de dados ODBC
+# <a name="data-source-programmatically-creating-a-table-in-an-odbc-data-source"></a>Fonte de dados: Criando uma tabela programaticamente em uma fonte de dados ODBC
 
 Este tópico explica como criar uma tabela para seus dados de origem, usando o `ExecuteSQL` função de membro da classe `CDatabase`, passando a função de uma cadeia de caracteres que contém um **CREATE TABLE** instrução SQL.
 

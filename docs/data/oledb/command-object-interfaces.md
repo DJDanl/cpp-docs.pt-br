@@ -6,12 +6,12 @@ helpviewer_keywords:
 - command objects [OLE DB]
 - OLE DB [C++], command object interfaces
 ms.assetid: dacff5ae-252c-4f20-9ad7-4e602cc48536
-ms.openlocfilehash: d9f663d4e857d300e5c0f5783b86445ce824ea8e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 755c44cf8d0cb5bf5066197bfd0ead3e0f25e1f9
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50598868"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59032395"
 ---
 # <a name="command-object-interfaces"></a>Interfaces de objeto do comando
 
@@ -21,4 +21,4 @@ O `ICommandText` interface fornece uma maneira de especificar um comando de text
 
 ## <a name="see-also"></a>Consulte também
 
-[Arquitetura de modelo do provedor do OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)<br/>
+[Arquitetura de modelo do provedor de banco de dados OLE](../../data/oledb/ole-db-provider-template-architecture.md)<br/>

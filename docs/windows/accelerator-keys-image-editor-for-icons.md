@@ -8,12 +8,12 @@ helpviewer_keywords:
 - accelerator keys
 - Image editor [C++], accelerator keys
 ms.assetid: add37861-3e17-4a6f-89e8-46df12e74a90
-ms.openlocfilehash: 0b29f435ab91b10e010e956d26fb8d2d116edc6e
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 45afdf4b3b557b560d7597b1bb4330c36a1fc84d
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57563115"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59025079"
 ---
 # <a name="accelerator-keys-c-image-editor-for-icons"></a>Teclas de aceleração (Editor de C++ imagens para ícones)
 
@@ -71,5 +71,5 @@ Nenhum
 [Editor de imagens para ícones](../windows/image-editor-for-icons.md)<br/>
 [Como: Criar um ícone ou outra imagem](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md)<br/>
 [Como: Editar uma imagem](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)<br/>
-[Como: Usar uma ferramenta de desenho](../windows/using-a-drawing-tool-image-editor-for-icons.md)<br/>
+[Como: Use uma ferramenta de desenho](../windows/using-a-drawing-tool-image-editor-for-icons.md)<br/>
 [Como: Trabalhar com cores](../windows/working-with-color-image-editor-for-icons.md)<br/>

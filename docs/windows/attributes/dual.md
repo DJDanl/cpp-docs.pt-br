@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - dual attribute
 ms.assetid: 5d4a9069-d819-42cd-ba56-bbcda17157d9
-ms.openlocfilehash: 30d334f58f0eb91c9ca44ba5a5b6b8edf3970510
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8f02f6b69b31f10b41d5c920cfc2ad62dfa1cef2
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509948"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023952"
 ---
 # <a name="dual"></a>dual
 
@@ -68,9 +68,9 @@ Para obter mais informações, consulte [contextos de atributo](cpp-attributes-c
 
 ## <a name="see-also"></a>Consulte também
 
-[Atributos de IDL](idl-attributes.md)<br/>
+[Atributos IDL](idl-attributes.md)<br/>
 [Atributos por uso](attributes-by-usage.md)<br/>
-[custom](custom-cpp.md)<br/>
+[personalizado](custom-cpp.md)<br/>
 [dispinterface](dispinterface.md)<br/>
-[object](object-cpp.md)<br/>
+[objeto](object-cpp.md)<br/>
 [__interface](../../cpp/interface.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Conjunto de registros: repetindo consulta a um conjunto de registros (ODBC)'
+title: 'Conjunto de registros: Repetindo consulta a um conjunto de registros (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - recordsets, requerying
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - ODBC recordsets, requerying
 - refreshing recordsets
 ms.assetid: 4ebc3b5b-5b91-4f51-a967-245223c6b8e1
-ms.openlocfilehash: b8e7de569a8310fdad0273ae70449d2da544f6e3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7edc1c04da617f96165b25a47ce169b266ae0003
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50482727"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59024589"
 ---
-# <a name="recordset-requerying-a-recordset-odbc"></a>Conjunto de registros: repetindo consulta a um conjunto de registros (ODBC)
+# <a name="recordset-requerying-a-recordset-odbc"></a>Conjunto de registros: Repetindo consulta a um conjunto de registros (ODBC)
 
 Este tópico se aplica às classes ODBC do MFC.
 
@@ -29,7 +29,7 @@ Os principais motivos para repetindo consulta a um conjunto de registros são:
 
 ##  <a name="_core_bringing_the_recordset_up_to_date"></a> Trazendo o conjunto de registros de cima para data
 
-Com frequência, você desejará requery seu objeto de conjunto de registros para colocá-lo atualizado. Em um ambiente de banco de dados multiusuário, outros usuários podem fazer alterações aos dados durante o ciclo de vida de seu conjunto de registros. Para obter mais informações sobre quando o seu conjunto de registros reflete as alterações feitas por outros usuários e quando os conjuntos de registros de outros usuários refletem suas alterações, consulte [conjunto de registros: como conjuntos de registros atualizam registros (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md) e [Dynaset](../../data/odbc/dynaset.md).
+Com frequência, você desejará requery seu objeto de conjunto de registros para colocá-lo atualizado. Em um ambiente de banco de dados multiusuário, outros usuários podem fazer alterações aos dados durante o ciclo de vida de seu conjunto de registros. Para obter mais informações sobre quando o seu conjunto de registros reflete as alterações feitas por outros usuários e quando os conjuntos de registros de outros usuários refletem suas alterações, consulte [conjunto de registros: Como conjuntos de registros atualizam registros (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md) e [Dynaset](../../data/odbc/dynaset.md).
 
 ##  <a name="_core_requerying_based_on_new_parameters"></a> Repetir a consulta com base em novos parâmetros
 
@@ -48,7 +48,7 @@ Como dynasets destinam-se para apresentar um conjunto de registros dinâmicos da
 
 Como alternativa, você pode fechar e reabrir o conjunto de registros original. Em ambos os casos, o novo conjunto de registros representa o estado atual da fonte de dados.
 
-Por exemplo, consulte [exibições de registro: preenchendo uma caixa de listagem de um segundo conjunto de registros](../../data/filling-a-list-box-from-a-second-recordset-mfc-data-access.md).
+Por exemplo, consulte [exibições de registro: Preenchendo uma caixa de listagem de um segundo conjunto de registros](../../data/filling-a-list-box-from-a-second-recordset-mfc-data-access.md).
 
 > [!TIP]
 >  Para otimizar `Requery` desempenho, evite alterar o conjunto de registros [filtro](../../data/odbc/recordset-filtering-records-odbc.md) ou [classificação](../../data/odbc/recordset-sorting-records-odbc.md). Alterar apenas o valor do parâmetro antes de chamar `Requery`.
@@ -58,5 +58,5 @@ Se o `Requery` chamar falhar, você pode repetir a chamada; caso contrário, seu
 ## <a name="see-also"></a>Consulte também
 
 [Conjunto de registros (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Conjunto de registros: associando dinamicamente colunas de dados (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)<br/>
-[Conjunto de registros: criando e fechando conjuntos de registros (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md)
+[Conjunto de registros: Associando dinamicamente colunas de dados (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)<br/>
+[Conjunto de registros: Criando e fechando conjuntos de registros (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md)

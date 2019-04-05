@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - GetActivationFactory function
 ms.assetid: 5736d285-6beb-42aa-8788-e261c0010afe
-ms.openlocfilehash: 82c83e95648eeb0fc8985777156659a2ffb876a8
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 3e138eee9e5bc02971cd1eb34c78f2be4ad5c9a0
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58783722"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033937"
 ---
 # <a name="getactivationfactory-function"></a>Função GetActivationFactory
 
@@ -38,7 +38,7 @@ Um parâmetro de modelo que especifica o tipo de alocador de ativação.
 *activatableClassId*<br/>
 O nome da classe que o alocador de ativação pode produzir.
 
-*factory*<br/>
+*fábrica*<br/>
 Quando essa operação for concluída, uma referência para o alocador de ativação para o tipo *T*.
 
 ## <a name="return-value"></a>Valor de retorno

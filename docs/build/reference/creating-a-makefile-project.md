@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Makefile projects, creating
 - project files [C++], Makefile projects
 ms.assetid: dd077af3-97a8-48fb-baaa-cf7e07ddef61
-ms.openlocfilehash: bb28d76b0ec459b5fd63f6a00dedff723274e90f
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 9c2edfe35233672e8117d336ba40cfea497b1a22
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57824569"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59035592"
 ---
 # <a name="create-a-c-makefile-project"></a>Criar um projeto de makefile do C++
 
@@ -22,7 +22,7 @@ Se tiver um projeto makefile existente, você terá estas opções se desejar co
 
 - Crie um projeto do makefile do Visual Studio que usa o makefile existente para configurar um arquivo. vcxproj que usará o Visual Studio para o IntelliSense. (Você não terá todos os recursos do IDE que tem com um projeto MSBuild nativo). Consulte [Para criar um projeto makefile](#create_a_makefile_project) abaixo.
 - Use o assistente para **Criar Novo Projeto com base em Arquivos de Código Existentes** para criar um projeto nativo do MSBuild com base no código-fonte. O makefile original não será usado depois de fazer isso. Para obter mais informações, confira [Como: Criar um projeto em C++ de um código existente](../how-to-create-a-cpp-project-from-existing-code.md).
-- **Visual Studio 2017 e posterior**: Use o **Abrir pasta** recurso Editar e compilar um projeto do makefile como-está, sem qualquer envolvimento do sistema MSBuild. Para obter mais informações, consulte [projetos de pasta aberta para C++](../open-folder-projects-cpp.md).
+- **Visual Studio 2017 e posterior**: Use o **Abrir pasta** recurso Editar e compilar um projeto do makefile como-está, sem qualquer envolvimento do sistema MSBuild. Para saber mais, veja [Projetos Open Folder para C++](../open-folder-projects-cpp.md).
 
 ## <a name="a-namecreateamakefileproject-to-create-a-makefile-project-with-the-makefile-project-template"></a><a name="create_a_makefile_project"> Para criar um projeto do makefile com o modelo de projeto makefile
 
@@ -86,7 +86,7 @@ Na próxima vez que você abrir o projeto makefile no ambiente de desenvolviment
 
 ## <a name="see-also"></a>Consulte também
 
-[Usando o IntelliSense](/visualstudio/ide/using-intellisense)<br>
+[Usando IntelliSense](/visualstudio/ide/using-intellisense)<br>
 [Referência a NMAKE](nmake-reference.md)<br>
 [Como: Criar um projeto C++ de código existente](../how-to-create-a-cpp-project-from-existing-code.md)
 [caracteres especiais em um Makefile](special-characters-in-a-makefile.md)<br/>

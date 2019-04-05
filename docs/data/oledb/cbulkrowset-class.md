@@ -102,12 +102,12 @@ helpviewer_keywords:
 - ReleaseRows method
 - SetRows method
 ms.assetid: c6bde426-c543-4022-a98a-9519d9e2ae59
-ms.openlocfilehash: 776123baa0d53ac2a1777849b60d35cf0d93a172
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: ba6b41a708cd854e398cbaa80609472ebbe167e8
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57426219"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023224"
 ---
 # <a name="cbulkrowset-class"></a>Classe CBulkRowset
 
@@ -245,7 +245,7 @@ HRESULT MoveToBookmark(const CBookmarkBase& bookmark,
 
 #### <a name="parameters"></a>Parâmetros
 
-*bookmark*<br/>
+*Indicador*<br/>
 [in] Um indicador que marca o local do qual você deseja buscar dados.
 
 *lSkip*<br/>
@@ -321,5 +321,5 @@ Se você chamar essa função, ele deve ser antes que o conjunto de linhas é ab
 
 ## <a name="see-also"></a>Consulte também
 
-[Modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Referência de modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)
+[Modelos de consumidor de banco de dados OLE](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Referência dos modelos de consumidor de banco de dados OLE](../../data/oledb/ole-db-consumer-templates-reference.md)

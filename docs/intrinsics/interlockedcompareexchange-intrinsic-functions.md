@@ -48,16 +48,16 @@ helpviewer_keywords:
 - InterlockedCompareExchange64_rel intrinsic
 - _InterlockedCompareExchange64_rel intrinsic
 ms.assetid: c3ad79c0-a523-4930-a3a4-69a65d7d5c81
-ms.openlocfilehash: 840a7e63bb9b98cfb46ea36e30b3439168688c87
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: 6c0fabe7cbada87253960faca8e207bb10dd07bd
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328305"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59021463"
 ---
 # <a name="interlockedcompareexchange-intrinsic-functions"></a>Funções intrínsecas interlockedcompareexchange
 
-**Seção específica da Microsoft**
+**Específico da Microsoft**
 
 Executa uma comparação e troca sincronizada.
 
@@ -202,7 +202,7 @@ O valor retornado é o valor inicial do ponteiro `Destination`.
 
 ## <a name="remarks"></a>Comentários
 
-`_InterlockedCompareExchange` realiza uma comparação atômica do valor `Destination` com o valor `Comparand`. Se o valor `Destination` for igual ao valor `Comparand`, o valor `Exchange` será armazenado no endereço especificado pelo `Destination`. Caso contrário, nenhuma operação será executada.
+`_InterlockedCompareExchange` executa uma comparação atômica do `Destination` valor com o `Comparand` valor. Se o valor `Destination` for igual ao valor `Comparand`, o valor `Exchange` será armazenado no endereço especificado pelo `Destination`. Caso contrário, nenhuma operação será executada.
 
 `_InterlockedCompareExchange` fornece suporte intrínseco ao compilador para o SDK do Windows Win32 [{3&gt;interlockedcompareexchange&lt;3](/windows/desktop/api/winnt/nf-winnt-interlockedcompareexchange) função.
 
@@ -431,7 +431,7 @@ int main(
 <29
 ```
 
-**Fim da seção específica da Microsoft**
+**FIM de Específico da Microsoft**
 
 ## <a name="see-also"></a>Consulte também
 
@@ -439,4 +439,4 @@ int main(
 [Funções intrínsecas _InterlockedCompareExchangePointer](../intrinsics/interlockedcompareexchangepointer-intrinsic-functions.md)<br/>
 [Intrínsecos do compilador](../intrinsics/compiler-intrinsics.md)<br/>
 [Palavras-chave](../cpp/keywords-cpp.md)<br/>
-[conflitos com o compilador x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)
+[Conflitos com o compilador x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

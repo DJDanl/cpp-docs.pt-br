@@ -4,12 +4,12 @@ ms.date: 11/06/2018
 helpviewer_keywords:
 - OLE DB consumers, creating
 ms.assetid: ae32d657-72ea-4db8-9839-75cb5cff68ae
-ms.openlocfilehash: 4346bca99d3744657072a4940776934e3c03e9de
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 060a39a8436ff73900ebfaea7d1c882b9862ee7e
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326635"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59025120"
 ---
 # <a name="creating-a-simple-consumer"></a>Criando um consumidor simples
 
@@ -56,7 +56,7 @@ Em seguida, use o **ATL OLE DB Assistente de consumidor** para adicionar um obje
    1. Sobre o **Conexão** , especifique as informações necessárias, como o nome do servidor, ID de logon e senha para sua fonte de dados e o banco de dados no servidor.
 
       > [!NOTE]
-      > Há um problema de segurança com o **permitir salvamento de senha** recurso da **propriedades de vínculo de dados** caixa de diálogo. No **insira as informações de logon para o servidor**, há dois botões de opção: **segurança integrada Use Windows NT** e **usar um determinado nome de usuário e senha**.
+      > Há um problema de segurança com o **permitir salvamento de senha** recurso da **propriedades de vínculo de dados** caixa de diálogo. Na **insira as informações de logon para o servidor**, há dois botões de opção: **Segurança integrada do Windows usar NT** e **usar um determinado nome de usuário e senha**.
 
       > [!NOTE]
       > Se você selecionar **usar um determinado nome de usuário e senha**, você tem a opção de salvar a senha (usando o **permitir salvamento de senha** caixa de seleção); no entanto, essa opção não é segura. É recomendável que você selecione **a segurança integrada Use Windows NT**; essa opção usa o Windows NT para verificar sua identidade.
@@ -100,4 +100,4 @@ O assistente gera uma classe de comando e uma classe de registro de usuário, co
 
 ## <a name="see-also"></a>Consulte também
 
-[Criando um consumidor do OLE DB usando um assistente](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)
+[Criando um consumidor de banco de dados OLE sem usar um assistente](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)

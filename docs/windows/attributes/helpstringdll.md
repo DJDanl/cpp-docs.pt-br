@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - helpstringdll attribute [C++]
 ms.assetid: 121271fa-f061-492b-b87f-bbfcf4b02e7b
-ms.openlocfilehash: 17e70a54024b8e5a3ab29e2420f60fbf3eec08a3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 72f5926018e3ac7ec4770f83d7a2c3438b67d861
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677234"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59025199"
 ---
 # <a name="helpstringdll"></a>helpstringdll
 
@@ -25,7 +25,7 @@ Especifica o nome da DLL a usar para executar a pesquisa de cadeia de caracteres
 
 ### <a name="parameters"></a>Parâmetros
 
-*string*<br/>
+*cadeia de caracteres*<br/>
 A DLL de usar para executar a pesquisa de cadeia de caracteres do documento.
 
 ## <a name="remarks"></a>Comentários
@@ -62,7 +62,7 @@ Para obter mais informações, consulte [contextos de atributo](cpp-attributes-c
 
 ## <a name="see-also"></a>Consulte também
 
-[Atributos de IDL](idl-attributes.md)<br/>
+[Atributos IDL](idl-attributes.md)<br/>
 [Atributos de interface](interface-attributes.md)<br/>
 [Atributos de classe](class-attributes.md)<br/>
 [Atributos de método](method-attributes.md)

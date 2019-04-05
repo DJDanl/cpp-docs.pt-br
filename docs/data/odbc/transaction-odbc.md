@@ -10,12 +10,12 @@ helpviewer_keywords:
 - recordsets [C++], transactions
 - ODBC recordsets [C++], transactions
 ms.assetid: a2ec0995-2029-45f2-8092-6efd6f2a77f4
-ms.openlocfilehash: 0deb21a43ff17ca94efe29bdec37db7611331a86
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a151ec5ca2b4bdc19bfa7dc626aebda0740a2c9e
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50615807"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023664"
 ---
 # <a name="transaction-odbc"></a>Transação (ODBC)
 
@@ -29,7 +29,7 @@ Uma transação é uma maneira de agrupar, ou um lote, uma série de atualizaç�
 Chamadas para o `AddNew` e `Edit` funções de membro de uma `CRecordset` afetam os dados de origem imediatamente quando você chama do objeto `Update`. `Delete` chamadas também entram em vigor imediatamente. Por outro lado, você pode usar uma transação consiste em várias chamadas para `AddNew`, `Edit`, `Update`, e `Delete`, que são executadas, mas não foi confirmada até que você chame `CommitTrans` explicitamente. Estabelecendo uma transação, você pode executar uma série dessas chamadas, mantendo a capacidade de revertê-los. Se um recurso crítico não está disponível ou outra condição impede que toda a transação seja concluída, você pode reverter a transação em vez de confirmá-lo. Nesse caso, nenhuma das alterações que pertencem à transação afeta a fonte de dados.
 
 > [!NOTE]
->  Atualmente, a classe `CRecordset` não oferece suporte a atualizações para a fonte de dados se você tiver implementado a busca de linhas em massa. Isso significa que você não pode fazer chamadas para `AddNew`, `Edit`, `Delete`, ou `Update`. No entanto, você pode escrever funções próprias para executar atualizações e, em seguida, chamar essas funções dentro de uma determinada transação. Para obter mais informações sobre a busca de linhas em massa, consulte [conjunto de registros: buscando registros em massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+>  Atualmente, a classe `CRecordset` não oferece suporte a atualizações para a fonte de dados se você tiver implementado a busca de linhas em massa. Isso significa que você não pode fazer chamadas para `AddNew`, `Edit`, `Delete`, ou `Update`. No entanto, você pode escrever funções próprias para executar atualizações e, em seguida, chamar essas funções dentro de uma determinada transação. Para obter mais informações sobre a busca de linhas em massa, consulte [conjunto de registros: Buscando registros em massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 > [!NOTE]
 >  Além de afetar seu conjunto de registros, as transações afetam instruções SQL que você execute diretamente desde que você use o ODBC **HDBC** associado com seus `CDatabase` objeto ou um ODBC **HSTMT** com base em que **HDBC**.
@@ -43,10 +43,10 @@ As classes de banco de dados, você executa transações por meio de `CDatabase`
 
 Os tópicos a seguir fornecem mais informações sobre como as transações são executadas:
 
-- [Transação: realizando uma transação em um conjunto de registros (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)
+- [Transação: Realizando uma transação em um conjunto de registros (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)
 
-- [Transação: como as transações afetam atualizações (ODBC)](../../data/odbc/transaction-how-transactions-affect-updates-odbc.md)
+- [Transação: Como as transações afetam atualizações (ODBC)](../../data/odbc/transaction-how-transactions-affect-updates-odbc.md)
 
 ## <a name="see-also"></a>Consulte também
 
-[ODBC (conectividade de banco de dados aberto)](../../data/odbc/open-database-connectivity-odbc.md)
+[Conectividade de banco de dados aberto (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)

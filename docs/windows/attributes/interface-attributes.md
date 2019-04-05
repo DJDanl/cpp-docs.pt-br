@@ -5,12 +5,12 @@ helpviewer_keywords:
 - attributes [C++/CLI], reference topics
 - interface attributes
 ms.assetid: 27fcdfee-abce-4585-8b53-ee31635356e8
-ms.openlocfilehash: d954b7622ac78142c84b40007ecda8138b1b8f2f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8218ccb66c6be9edef5d7de751a73bf4753d069f
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50556631"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59027199"
 ---
 # <a name="interface-attributes"></a>Atributos de interface
 
@@ -19,7 +19,7 @@ Os atributos a seguir se aplicam para o [interface (ou interface)](../../cpp/int
 |Atributo|Descrição|
 |---------------|-----------------|
 |[async_uuid](async-uuid.md)|Especifica o UUID que direciona o compilador MIDL para definir versões síncronas e assíncronas de uma interface COM.|
-|[custom](custom-cpp.md)|Permite definir seus próprios atributos.|
+|[personalizado](custom-cpp.md)|Permite definir seus próprios atributos.|
 |[dispinterface](dispinterface.md)|Coloca uma interface no arquivo. idl como uma interface de expedição.|
 |[dual](dual.md)|Coloca uma interface no arquivo. idl como uma interface dupla.|
 |[export](export.md)|Faz com que uma estrutura de dados a serem colocados no arquivo. idl.|
@@ -28,12 +28,12 @@ Os atributos a seguir se aplicam para o [interface (ou interface)](../../cpp/int
 |[helpstring](helpstring.md)|Especifica uma cadeia de caracteres que é usada para descrever o elemento ao qual ela se aplica.|
 |[helpstringcontext](helpstringcontext.md)|Especifica a ID do tópico da Ajuda em um arquivo. hlp ou. chm.|
 |[helpstringdll](helpstringdll.md)|Especifica o nome da DLL a usar para executar a pesquisa de cadeia de caracteres do documento (localização).|
-|[hidden](hidden.md)|Indica que o item existe, mas não deve ser exibido em um navegador orientado ao usuário.|
+|[oculto](hidden.md)|Indica que o item existe, mas não deve ser exibido em um navegador orientado ao usuário.|
 |[library_block](library-block.md)|Coloca uma construção de dentro do bloco de biblioteca do arquivo. idl.|
 |[local](local-cpp.md)|Permite que você use o compilador MIDL como um gerador de cabeçalho quando usado no cabeçalho da interface. Quando usado em uma função individual, designa um procedimento de local para o qual nenhuma stubs são gerados.|
 |[nonextensible](nonextensible.md)|Especifica que o `IDispatch` implementação inclui apenas as propriedades e os métodos listados na descrição da interface e não podem ser estendidos com membros adicionais em tempo de execução. Esse atributo só é válido em uma [dual](dual.md) interface.|
 |[odl](odl.md)|Identifica uma interface como uma interface de linguagem de descrição do objeto (ODL).|
-|[object](object-cpp.md)|Identifica uma interface personalizada.|
+|[objeto](object-cpp.md)|Identifica uma interface personalizada.|
 |[oleautomation](oleautomation.md)|Indica que uma interface é compatível com a automação.|
 |[pointer_default](pointer-default.md)|Especifica o atributo de ponteiro padrão para todos os ponteiros, exceto ponteiros de nível superior que aparecem em listas de parâmetros.|
 |[ptr](ptr.md)|Designa um ponteiro como um ponteiro completo.|

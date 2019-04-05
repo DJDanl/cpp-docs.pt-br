@@ -1,5 +1,5 @@
 ---
-title: 'Conjunto de registros: obtendo SUMs e outros resultados agregados (ODBC)'
+title: 'Conjunto de registros: Obtendo SUMs e outros resultados agregados (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - SQL, retrieving aggregate values from recordsets
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - SQL Server projects, retrieving aggregate values from recordsets
 - SQL aggregate values, retrieving from recordsets
 ms.assetid: 94500662-22a4-443e-82d7-acbe6eca447b
-ms.openlocfilehash: 7a63e6b0e4ac26fb2806d8505e3fcd8f5daf0f10
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e10f2e1574dae234d98d210784d4a8ddef3bb57e
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50491571"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59025316"
 ---
-# <a name="recordset-obtaining-sums-and-other-aggregate-results-odbc"></a>Conjunto de registros: obtendo SUMs e outros resultados agregados (ODBC)
+# <a name="recordset-obtaining-sums-and-other-aggregate-results-odbc"></a>Conjunto de registros: Obtendo SUMs e outros resultados agregados (ODBC)
 
 Este tópico se aplica às classes ODBC do MFC.
 
@@ -91,4 +91,4 @@ DDX_FieldText(pDX, IDC_SUMSALES, m_pSet->m_dblSumSales, m_pSet);
 ## <a name="see-also"></a>Consulte também
 
 [Conjunto de registros (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Conjunto de registros: como conjuntos de registros selecionam registros (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)
+[Conjunto de registros: Como conjuntos de registros selecionam registros (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)

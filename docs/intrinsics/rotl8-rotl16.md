@@ -8,16 +8,16 @@ helpviewer_keywords:
 - _rotl8 intrinsic
 - _rotl16 intrinsic
 ms.assetid: 8c519ab6-aef9-4f07-a387-daee8408368f
-ms.openlocfilehash: 63a4b342db58b37070c9348ac9eff1044a54a28b
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 8c87c7a5fa1c2bee475b0e4508b5c1571dc449de
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327948"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59028283"
 ---
 # <a name="rotl8-rotl16"></a>_rotl8, _rotl16
 
-**Seção específica da Microsoft**
+**Específico da Microsoft**
 
 Gire os valores de entrada à esquerda para o bit mais significativo (MSB) por um número especificado de posições de bits.
 
@@ -36,7 +36,7 @@ unsigned short _rotl16(
 
 #### <a name="parameters"></a>Parâmetros
 
-*value*<br/>
+*Valor *<br/>
 [in] O valor a ser girado.
 
 *shift*<br/>
@@ -98,7 +98,7 @@ Rotating 0x41 left by 7 bits gives 0xa0
 Rotating unsigned short 0x12 left by 10 bits gives 0x4800
 ```
 
-**Fim da seção específica da Microsoft**
+**FIM de Específico da Microsoft**
 
 ## <a name="see-also"></a>Consulte também
 

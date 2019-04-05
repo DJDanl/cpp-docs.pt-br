@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - ODBC drivers, using
 ms.assetid: ae1bf357-4ca4-4748-9336-8fc317f294ab
-ms.openlocfilehash: 6d245a8c4071f8f3822e3bdd6bfe0467251fc852
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fa0ccf65584d08088635d3939e609eb2d763abe7
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437824"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59030070"
 ---
 # <a name="work-with-odbc-and-drivers"></a>Trabalhar com ODBC e drivers
 
@@ -29,4 +29,4 @@ ODBC permite que você escreva aplicativos que não são dependentes em apenas u
 
 ## <a name="see-also"></a>Consulte também
 
-[ODBC (conectividade de banco de dados aberto)](../../data/odbc/open-database-connectivity-odbc.md)
+[Conectividade de banco de dados aberto (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)

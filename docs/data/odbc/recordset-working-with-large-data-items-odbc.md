@@ -1,5 +1,5 @@
 ---
-title: 'Conjunto de registros: trabalhando com itens de dados grandes (ODBC)'
+title: 'Conjunto de registros: Trabalhando com itens de dados grandes (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - BLOB (binary large object), recordsets
@@ -8,19 +8,19 @@ helpviewer_keywords:
 - binary large objects
 - CLongBinary class, using in recordsets
 ms.assetid: 3e80b5a8-b6e7-43c6-a816-e54befc513a3
-ms.openlocfilehash: 8ef32621821d731d9137a446bea220564cb7f92f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3ba8d4af5b0781c425dd3b1223e2208b279f055e
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50460366"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033038"
 ---
-# <a name="recordset-working-with-large-data-items-odbc"></a>Conjunto de registros: trabalhando com itens de dados grandes (ODBC)
+# <a name="recordset-working-with-large-data-items-odbc"></a>Conjunto de registros: Trabalhando com itens de dados grandes (ODBC)
 
 Este tópico aplica-se para as classes MFC ODBC e as classes MFC DAO.
 
 > [!NOTE]
->  Se você estiver usando as classes MFC DAO, gerenciar os seus itens de dados grandes com a classe [CByteArray](../../mfc/reference/cbytearray-class.md) em vez da classe [CLongBinary](../../mfc/reference/clongbinary-class.md). Se você estiver usando as classes MFC ODBC com a busca de linhas em massa, use `CLongBinary` em vez de `CByteArray`. Para obter mais informações sobre a busca de linhas em massa, consulte [conjunto de registros: buscando registros em massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+>  Se você estiver usando as classes MFC DAO, gerenciar os seus itens de dados grandes com a classe [CByteArray](../../mfc/reference/cbytearray-class.md) em vez da classe [CLongBinary](../../mfc/reference/clongbinary-class.md). Se você estiver usando as classes MFC ODBC com a busca de linhas em massa, use `CLongBinary` em vez de `CByteArray`. Para obter mais informações sobre a busca de linhas em massa, consulte [conjunto de registros: Buscando registros em massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 Suponha que seu banco de dados pode armazenar grandes partes de dados, como bitmaps (fotografias de funcionário, mapas, imagens de produtos, objetos OLE e assim por diante). Esse tipo de dados é conhecido como um objeto binário grande (ou BLOB) porque:
 
@@ -62,5 +62,5 @@ Por sua vez, você usa o `HGLOBAL` tratar, `m_hData`, para trabalhar com os dado
 ## <a name="see-also"></a>Consulte também
 
 [Conjunto de registros (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Conjunto de registros: obtendo SUMs e outros resultados agregados (ODBC)](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md)<br/>
-[RFX (troca de campo de registro)](../../data/odbc/record-field-exchange-rfx.md)
+[Conjunto de registros: Obtendo SUMs e outros resultados agregados (ODBC)](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md)<br/>
+[Registrar troca de campos (RFX)](../../data/odbc/record-field-exchange-rfx.md)

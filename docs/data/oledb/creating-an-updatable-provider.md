@@ -6,12 +6,12 @@ helpviewer_keywords:
 - notifications, support in providers
 - OLE DB providers, creating
 ms.assetid: bdfd5c9f-1c6f-4098-822c-dd650e70ab82
-ms.openlocfilehash: 04db02bc8ad4db0c669e07a0bcf1b60ffa22e8ad
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: d3f8314e7cd57617e35e50a67a4562d4055cb93a
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51521395"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59024732"
 ---
 # <a name="creating-an-updatable-provider"></a>Criando um provedor atualizável
 
@@ -109,13 +109,13 @@ Observe que `IRowsetUpdateImpl` deriva `IRowsetChangeImpl`. Portanto, `IRowsetUp
 
    Se você implementar `IRowsetChangeImpl`, você deve definir as propriedades a seguir no seu provedor. Essas propriedades são usadas principalmente para solicitar interfaces por `ICommandProperties::SetProperties`.
 
-   - `DBPROP_IRowsetChange`: Isso automaticamente definindo conjuntos `DBPROP_IRowsetChange`.
+   - `DBPROP_IRowsetChange`: Configuração isso automaticamente define `DBPROP_IRowsetChange`.
 
    - `DBPROP_UPDATABILITY`: Um bitmask que especifica os métodos com suporte no `IRowsetChange`: `SetData`, `DeleteRows`, ou `InsertRow`.
 
-   - `DBPROP_CHANGEINSERTEDROWS`: O consumidor pode chamar `IRowsetChange::DeleteRows` ou `SetData` para linhas recentemente inseridas.
+   - `DBPROP_CHANGEINSERTEDROWS`: Consumidor pode chamar `IRowsetChange::DeleteRows` ou `SetData` para linhas recentemente inseridas.
 
-   - `DBPROP_IMMOBILEROWS`: O conjunto de linhas não reorganizará as linhas inseridas ou atualizadas.
+   - `DBPROP_IMMOBILEROWS`: Conjunto de linhas não reorganizará as linhas inseridas ou atualizadas.
 
    **Se você implementar IRowsetUpdateImpl**
 
@@ -413,7 +413,7 @@ virtual HRESULT SetDBStatus(DBSTATUS* pdbStatus, CSimpleRow* pRow,
 
 ### <a name="column-flags"></a>Sinalizadores de coluna
 
-Se você oferecer suporte a valores padrão em suas colunas, você precisa configurá-lo usando os metadados na \<classe de provedor\>Conjunto_de_linhas_de_esquema classe. Definir `m_bColumnHasDefault = VARIANT_TRUE`.
+Se você oferecer suporte a valores padrão em suas colunas, você precisa configurá-lo usando os metadados na \<classe de provedor\>Conjunto_de_linhas_de_esquema classe. Defina `m_bColumnHasDefault = VARIANT_TRUE`.
 
 Você também tem a responsabilidade de definir os sinalizadores de coluna, que são especificados usar o DBCOLUMNFLAGS tipo enumerado. Os sinalizadores de coluna descrevem as características da coluna.
 
@@ -436,4 +436,4 @@ Esse código especifica, entre outras coisas, a coluna dá suporte a um valor pa
 
 ## <a name="see-also"></a>Consulte também
 
-[Criando um provedor do OLE DB](creating-an-ole-db-provider.md)
+[Criando um provedor de banco de dados OLE](creating-an-ole-db-provider.md)

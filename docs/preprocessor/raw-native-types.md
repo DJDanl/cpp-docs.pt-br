@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - raw_native_types attribute
 ms.assetid: 9f38daa8-8dc0-46a5-aff9-f1ff9c1e6f48
-ms.openlocfilehash: e48aa2ca1469d38b67dcb06a3377713141a158e6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 32b77905ef7025334e5101e76864da9a15c50cf6
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620435"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59024962"
 ---
 # <a name="rawnativetypes"></a>raw_native_types
 **Específico do C++**
@@ -28,9 +28,9 @@ raw_native_types
 
 Por padrão, os métodos de tratamento de erros de alto nível usam as classes de suporte COM [bstr_t](../cpp/bstr-t-class.md) e [variant_t](../cpp/variant-t-class.md) em vez da `BSTR` e `VARIANT` ponteiros de interface bruto COM e tipos de dados. Essas classes encapsulam os detalhes da alocação e da desalocação do armazenamento de memória para esses tipos de dados e simplificam significativamente as operações de conversão e de conversão de tipos.
 
-**FIM de específico de C++**
+**FIM de Específico do C++**
 
 ## <a name="see-also"></a>Consulte também
 
-[atributos de #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
-[#import diretiva](../preprocessor/hash-import-directive-cpp.md)
+[Atributos de #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
+[Diretiva #import](../preprocessor/hash-import-directive-cpp.md)

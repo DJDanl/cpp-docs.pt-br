@@ -9,12 +9,12 @@ helpviewer_keywords:
 - pragmas, check_stack
 - pragmas, check_stack usage table
 ms.assetid: f18e20cc-9abb-48b7-ad62-8d384875b996
-ms.openlocfilehash: 93ded20bde98cc4e7b0fc15fd8332195d38f2543
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 49477a3b39db17047f349e341bd05c04954c964c
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50451981"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023367"
 ---
 # <a name="checkstack"></a>check_stack
 Instrui o compilador a desativar investigações da pilha, se `off` (ou `-`) for especificado, ou para ativar investigações da pilha se `on` (ou `+`) for especificado.
@@ -38,8 +38,8 @@ Se você não fornecer um argumento para o **check_stack** pragma, verificação
 |------------|------------------------------------|------------|
 |`#pragma check_stack( )` ou<br /><br /> `#pragma check_stack`|Sim|Desativa a verificação da pilha quanto às funções seguintes|
 |`#pragma check_stack( )` ou<br /><br /> `#pragma check_stack`|Não|Ativa a verificação da pilha quanto às funções seguintes|
-|`#pragma check_stack(on)`<br /><br /> Ou `#pragma check_stack +`|Sim ou não|Ativa a verificação da pilha quanto às funções seguintes|
-|`#pragma check_stack(off)`<br /><br /> Ou `#pragma check_stack -`|Sim ou não|Desativa a verificação da pilha quanto às funções seguintes|
+|`#pragma check_stack(on)`<br /><br /> ou `#pragma check_stack +`|Sim ou não|Ativa a verificação da pilha quanto às funções seguintes|
+|`#pragma check_stack(off)`<br /><br /> ou `#pragma check_stack -`|Sim ou não|Desativa a verificação da pilha quanto às funções seguintes|
 
 ## <a name="see-also"></a>Consulte também
 

@@ -3,12 +3,12 @@ title: 'Como: Usar o Windows 10 SDK em um aplicativo de área de trabalho do Win
 ms.custom: get-started-article
 ms.date: 07/12/2018
 ms.assetid: eed6421e-9355-44a6-9582-3f1d453a6d44
-ms.openlocfilehash: 25ef3674a7ab741f20a07d6e65d1b5524fb88d5f
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: f3f6897dfa0f180f629a2ca169ff74c5e5588365
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57809919"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59021522"
 ---
 # <a name="how-to-use-the-windows-10-sdk-in-a-windows-desktop-application"></a>Como: Usar o Windows 10 SDK em um aplicativo de área de trabalho do Windows
 

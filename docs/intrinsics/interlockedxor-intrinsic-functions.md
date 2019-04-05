@@ -34,16 +34,16 @@ helpviewer_keywords:
 - InterlockedXor64 intrinsic
 - _InterlockedXor intrinsic
 ms.assetid: faef1796-cb5a-4430-b1e2-9d5eaf9b4a91
-ms.openlocfilehash: 8410420564ae641ff5e624cc5a1ddb0f260672e6
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: c86a743df84df37ffe3234d82d79abd987a4dcda
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627371"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023122"
 ---
 # <a name="interlockedxor-intrinsic-functions"></a>Funções intrínsecas _InterlockedXor
 
-**Seção específica da Microsoft**
+**Específico da Microsoft**
 
 Execute uma operação bit a bit atômica ou (XOR) em uma variável compartilhada por vários threads.
 
@@ -202,9 +202,9 @@ int main()
 0xffff0000 0xffff00 0xff00ff00
 ```
 
-**Fim da seção específica da Microsoft**
+**FIM de Específico da Microsoft**
 
 ## <a name="see-also"></a>Consulte também
 
 [Intrínsecos do compilador](../intrinsics/compiler-intrinsics.md)<br/>
-[conflitos com o compilador x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)
+[Conflitos com o compilador x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)
