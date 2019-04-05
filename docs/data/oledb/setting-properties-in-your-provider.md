@@ -5,12 +5,12 @@ helpviewer_keywords:
 - OLE DB providers, properties
 - properties [C++], OLE DB provider
 ms.assetid: 26a8b493-7ec4-4686-96d0-9ad5d2bca5ac
-ms.openlocfilehash: 04f6f046451a5347dbd2a911ce9fbd1a67e39bba
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 2cbb334ab15912fdcf6980461016976d869f5a84
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414151"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59029454"
 ---
 # <a name="setting-properties-in-your-provider"></a>Definindo propriedades no provedor
 
@@ -49,4 +49,4 @@ Os provedores OLE DB da Microsoft ignorar as propriedades de OLE DB a seguir:
 
 ## <a name="see-also"></a>Consulte também
 
-[Trabalhando com modelos de provedor do OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)
+[Trabalhando com modelos de provedor de banco de dados OLE](../../data/oledb/working-with-ole-db-provider-templates.md)

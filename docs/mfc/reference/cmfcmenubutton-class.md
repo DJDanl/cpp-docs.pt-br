@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CMFCMenuButton [MFC], m_hMenu
 - CMFCMenuButton [MFC], m_nMenuResult
 ms.assetid: 53d3d459-1e5a-47c5-8b7f-2e61f6af5187
-ms.openlocfilehash: bacd8726fd4c833f956f763cca81a88d41d1f167
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: cbdf4005ee1a0249e7ed2b5f1d50621fb951f64f
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57298198"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58777357"
 ---
 # <a name="cmfcmenubutton-class"></a>Classe CMFCMenuButton
 
@@ -41,13 +41,13 @@ class CMFCMenuButton : public CMFCButton
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
 |[CMFCMenuButton::CMFCMenuButton](#cmfcmenubutton)|Constrói um objeto `CMFCMenuButton`.|
 
-### <a name="public-methods"></a>Métodos Públicos
+### <a name="public-methods"></a>Métodos públicos
 
 |Nome|Descrição|
 |----------|-----------------|
@@ -72,7 +72,7 @@ Quando você cria um `CMFCMenuButton`, você deverá passar um identificador par
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir demonstra como definir o identificador do menu anexado ao botão, redimensionar o botão de acordo com seu tamanho de texto e imagem e o menu pop-up que é exibido pela estrutura. Este trecho de código é parte do [exemplo de novos controles](../../visual-cpp-samples.md).
+O exemplo a seguir demonstra como definir o identificador do menu anexado ao botão, redimensionar o botão de acordo com seu tamanho de texto e imagem e o menu pop-up que é exibido pela estrutura. Este trecho de código é parte do [exemplo de novos controles](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#38](../../mfc/reference/codesnippet/cpp/cmfcmenubutton-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#39](../../mfc/reference/codesnippet/cpp/cmfcmenubutton-class_2.cpp)]

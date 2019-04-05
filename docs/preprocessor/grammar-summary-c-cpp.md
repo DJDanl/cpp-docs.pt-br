@@ -5,12 +5,12 @@ helpviewer_keywords:
 - grammar
 - preprocessor, grammar
 ms.assetid: 0acb6e9b-364c-4ef8-ace4-7be980521121
-ms.openlocfilehash: f61aaaf041ca566f52a2e3e95cb12d17e4cb2230
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a3f1674d8d72639413f092ca3f67324d4688618a
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50461276"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038428"
 ---
 # <a name="grammar-summary-cc"></a>Resumo de gramática (C/C++)
 Esta seção descreve a gramática formal do pré-processador. Ele aborda a sintaxe de diretivas de pré-processamento e dos operadores abordados em [o pré-processador](../preprocessor/preprocessor.md) e, na [diretivas Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md).
@@ -25,4 +25,4 @@ Os seguintes tópicos estão incluídos:
 
 ## <a name="see-also"></a>Consulte também
 
-[Referência de pré-processador do C/C++](../preprocessor/c-cpp-preprocessor-reference.md)
+[Referência de pré-processador C/C++](../preprocessor/c-cpp-preprocessor-reference.md)

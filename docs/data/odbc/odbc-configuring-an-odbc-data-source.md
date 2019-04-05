@@ -1,19 +1,19 @@
 ---
-title: 'ODBC: configurando uma fonte de dados ODBC'
+title: 'ODBC: Configurando uma fonte de dados ODBC'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ODBC data sources, configuring
 - ODBC connections, configuring
 - configuring ODBC data sources
 ms.assetid: 1cd03e6a-8d59-4eca-a8c6-1010582d5e67
-ms.openlocfilehash: 96f4694e8aa321dc5844fc413ae9740bec5a416c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 259f0e2afa61096e4529a50ee2ba7de07b293c46
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50643073"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59034125"
 ---
-# <a name="odbc-configuring-an-odbc-data-source"></a>ODBC: configurando uma fonte de dados ODBC
+# <a name="odbc-configuring-an-odbc-data-source"></a>ODBC: Configurando uma fonte de dados ODBC
 
 Para usar um [fonte de dados](../../data/odbc/data-source-odbc.md) com um aplicativo que você desenvolveu, você deve usar o administrador de ODBC para configurá-lo. Administrador de ODBC controla de fontes de dados disponíveis e suas informações de conexão no registro do Windows. Use o administrador de ODBC para adicionar, modificar e excluir fontes de dados de **fontes de dados** caixa de diálogo para adicionar e excluir os drivers ODBC.
 
@@ -27,4 +27,4 @@ Para obter informações sobre como escrever programas de instalação do ODBC e
 ## <a name="see-also"></a>Consulte também
 
 [Noções básicas de ODBC](../../data/odbc/odbc-basics.md)<br/>
-[ODBC: chamando funções de API ODBC diretamente](../../data/odbc/odbc-calling-odbc-api-functions-directly.md)
+[ODBC: Chamando funções de API ODBC diretamente](../../data/odbc/odbc-calling-odbc-api-functions-directly.md)

@@ -90,12 +90,12 @@ helpviewer_keywords:
 - CMonthCalCtrl [MFC], SizeMinReq
 - CMonthCalCtrl [MFC], SizeRectToMin
 ms.assetid: a42f6bd6-ab5c-4335-82f8-839982fc64a2
-ms.openlocfilehash: 440d158774a716db9fba351200f2760783925cc6
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: bd062a4e0d4db364c9cb628608c6af165dc0edc2
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57413921"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58777162"
 ---
 # <a name="cmonthcalctrl-class"></a>Classe CMonthCalCtrl
 
@@ -109,13 +109,13 @@ class CMonthCalCtrl : public CWnd
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
 |[CMonthCalCtrl::CMonthCalCtrl](#cmonthcalctrl)|Constrói um objeto `CMonthCalCtrl`.|
 
-### <a name="public-methods"></a>Métodos Públicos
+### <a name="public-methods"></a>Métodos públicos
 
 |Nome|Descrição|
 |----------|-----------------|
@@ -862,7 +862,7 @@ BOOL SetCalID(CALID calid);
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|*calid*|[in] Um dos [identificador de calendário](/windows/desktop/Intl/calendar-identifiers) constantes.|
+|*CALID*|[in] Um dos [identificador de calendário](/windows/desktop/Intl/calendar-identifiers) constantes.|
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -1079,7 +1079,7 @@ BOOL SetMaxSelCount(int nMax);
 
 ### <a name="parameters"></a>Parâmetros
 
-*nMax*<br/>
+*Nmáx*<br/>
 O valor será definido para representar o número máximo de dias selecionáveis.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1304,7 +1304,7 @@ Esse método envia o [MCM_SIZERECTTOMIN](/windows/desktop/Controls/mcm-sizerectt
 
 ## <a name="see-also"></a>Consulte também
 
-[CMNCTRL1 de exemplo do MFC](../../visual-cpp-samples.md)<br/>
+[CMNCTRL1 de exemplo do MFC](../../overview/visual-cpp-samples.md)<br/>
 [Classe CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
 [Classe CDateTimeCtrl](../../mfc/reference/cdatetimectrl-class.md)

@@ -14,16 +14,16 @@ helpviewer_keywords:
 - lzcnt64 intrinsic
 - __lzcnt64 intrinsic
 ms.assetid: 412113e7-052e-46e5-8bfa-d5ad72abc10e
-ms.openlocfilehash: 7b1e499eff8c8c7de59dc6f96cb1060ce845e27d
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 333d9f2b23fb90388af8395945256956c9222ab9
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523449"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041332"
 ---
 # <a name="lzcnt16-lzcnt-lzcnt64"></a>__lzcnt16, __lzcnt, __lzcnt64
 
-**Seção específica da Microsoft**
+**Específico da Microsoft**
 
 Contagens de que o número de líderes zeros em um 16, 32 ou inteiro de 64 bits.
 
@@ -43,7 +43,7 @@ unsigned __int64 __lzcnt64(
 
 #### <a name="parameters"></a>Parâmetros
 
-*value*<br/>
+*Valor *<br/>
 [in] 16-, 32 ou 64 bits de inteiro sem sinal de verificação de zeros à esquerda.
 
 ## <a name="return-value"></a>Valor de retorno
@@ -54,9 +54,9 @@ O número de bits zero à esquerda o `value` parâmetro. Se `value` for zero, o 
 
 |Intrínseco|Arquitetura|
 |---------------|------------------|
-|`__lzcnt16`|AMD: Manipulação de Bit avançado (ABM)<br /><br /> Intel: Haswell|
-|`__lzcnt`|AMD: Manipulação de Bit avançado (ABM)<br /><br /> Intel: Haswell|
-|`__lzcnt64`|AMD: Avançadas de manipulação de Bit (ABM) no modo de 64 bits.<br /><br /> Intel: Haswell|
+|`__lzcnt16`|AMD: Manipulação de bits avançada (ABM)<br /><br /> Intel: Haswell|
+|`__lzcnt`|AMD: Manipulação de bits avançada (ABM)<br /><br /> Intel: Haswell|
+|`__lzcnt64`|AMD: Manipulação o Bit avançado (ABM) no modo de 64 bits.<br /><br /> Intel: Haswell|
 
 **Arquivo de cabeçalho** \<intrin. h >
 
@@ -105,7 +105,7 @@ __lzcnt(0xffff) = 16
 __lzcnt(0xffffffff) = 0
 ```
 
-**Fim da seção específica da Microsoft**
+**FIM de Específico da Microsoft**
 
 Partes deste conteúdo são Copyright 2007 Advanced Micro dispositivos, Inc. Todos os direitos reservados. Reproduzido com a permissão do Advanced Micro dispositivos, Inc.
 

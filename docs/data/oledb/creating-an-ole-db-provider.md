@@ -5,12 +5,12 @@ helpviewer_keywords:
 - OLE DB providers, creating
 - OLE DB provider templates, creating providers
 ms.assetid: f73017c3-c89f-41a6-a306-ea992cf6092c
-ms.openlocfilehash: b6e59dba375e78878d13a6014ce75edf2a21758b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3e46e87b0d5d538a0f9fd7e231debfef3fa95210
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50611192"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59036108"
 ---
 # <a name="creating-an-ole-db-provider"></a>Criando um provedor de banco de dados OLE
 
@@ -38,5 +38,5 @@ As etapas básicas são as seguintes:
 
 ## <a name="see-also"></a>Consulte também
 
-[Exemplo CatDB: Navegador de esquema de fonte de dados](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/catdb)<br/>
-[Exemplo DBViewer: Navegador de banco de dados](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/dbviewer)
+[Exemplo de CatDB: Navegador de esquema de fonte de dados](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/catdb)<br/>
+[Exemplo de DBViewer: Navegador de banco de dados](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/dbviewer)
