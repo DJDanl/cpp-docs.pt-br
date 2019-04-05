@@ -12,12 +12,12 @@ helpviewer_keywords:
 - event sinks, creating
 - event sinks
 ms.assetid: bf8fe770-3ea2-4128-b46b-166222ee4097
-ms.openlocfilehash: e483ece1019d4a8203215eddbc4d3b9d545328a6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 81a3ec88c336ddeb550f133e657854b3b6f89d96
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50663176"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023289"
 ---
 # <a name="eventreceiver"></a>event_receiver
 
@@ -32,7 +32,7 @@ Cria um receptor de eventos (coletor).
 
 ### <a name="parameters"></a>Parâmetros
 
-*type*<br/>
+*tipo*<br/>
 Uma enumeração de um dos seguintes valores:
 
 - `native` para código C/C++ não gerenciado (padrão para classes nativas).
@@ -69,7 +69,7 @@ O **event_receiver** atributo de C++ Especifica que a classe ou estrutura à qua
 
 |||
 |-|-|
-|**Aplica-se a**|**classe**, **struct**|
+|**Aplica-se a**|**class**, **struct**|
 |**Repetível**|Não|
 |**Atributos obrigatórios**|`coclass` Quando *layout_dependent*=**true**|
 |**Atributos inválidos**|Nenhum|
@@ -79,7 +79,7 @@ Para obter mais informações, consulte [contextos de atributo](cpp-attributes-c
 ## <a name="see-also"></a>Consulte também
 
 [Atributos de compilador](compiler-attributes.md)<br/>
-[event_source](event-source.md)<br/>
+[origem do evento](event-source.md)<br/>
 [__event](../../cpp/event.md)<br/>
 [__hook](../../cpp/hook.md)<br/>
 [__unhook](../../cpp/unhook.md)<br/>

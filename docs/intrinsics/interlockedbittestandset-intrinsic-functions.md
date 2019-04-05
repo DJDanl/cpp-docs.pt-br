@@ -1,5 +1,5 @@
 ---
-title: Funções intrínsecas _interlockedbittestandset
+title: Funções intrínsecas _interlockedbittestandreset
 ms.date: 12/17/2018
 f1_keywords:
 - _interlockedbittestandset_cpp
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - _interlockedbittestandset64 intrinsic
 - lock_bts instruction
 ms.assetid: b1b7e334-53ea-48cf-ba60-5fa3ef51a1fc
-ms.openlocfilehash: 2f7dc1cf6501f789d969143bc23469a6ecf7239c
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: 3da533b3cf2ab8f396e4ba284cc0bf921a5c80b5
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627209"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023198"
 ---
-# <a name="interlockedbittestandset-intrinsic-functions"></a>Funções intrínsecas _interlockedbittestandset
+# <a name="interlockedbittestandset-intrinsic-functions"></a>Funções intrínsecas _interlockedbittestandreset
 
-**Seção específica da Microsoft**
+**Específico da Microsoft**
 
 Gere uma instrução que examina o bit `b` do endereço `a` e retorna seu valor atual antes de defini-la como 1.
 
@@ -104,9 +104,9 @@ Em processadores Intel que suportam instruções HLE (Elisão de Bloqueio de Har
 
 Essas rotinas somente estão disponíveis como intrínsecos.
 
-**Fim da seção específica da Microsoft**
+**FIM de Específico da Microsoft**
 
 ## <a name="see-also"></a>Consulte também
 
 [Intrínsecos do compilador](../intrinsics/compiler-intrinsics.md)<br/>
-[conflitos com o compilador x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)
+[Conflitos com o compilador x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

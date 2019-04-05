@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - size_is attribute
 ms.assetid: 70192d09-f6c5-4d52-b3fe-303f8cb10aa5
-ms.openlocfilehash: 95b0e16e5f5d085e526f45e8e98898474fc5a17f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a7b990a708bafba78c9dc4153315f8b7b20351ba
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50449433"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033223"
 ---
 # <a name="sizeis"></a>size_is
 
@@ -25,7 +25,7 @@ Especifique o tamanho da memória alocada para ponteiros de tamanho, tamanho de 
 
 ### <a name="parameters"></a>Parâmetros
 
-*Expressão*<br/>
+*expressão*<br/>
 O tamanho da memória alocada para ponteiros de tamanho.
 
 ## <a name="remarks"></a>Comentários
@@ -51,7 +51,7 @@ Para obter mais informações sobre os contextos de atributo, consulte [contexto
 
 ## <a name="see-also"></a>Consulte também
 
-[Atributos de IDL](idl-attributes.md)<br/>
+[Atributos IDL](idl-attributes.md)<br/>
 [Atributos Typedef, Enum, Union e Struct](typedef-enum-union-and-struct-attributes.md)<br/>
 [Atributos de parâmetro](parameter-attributes.md)<br/>
 [first_is](first-is.md)<br/>

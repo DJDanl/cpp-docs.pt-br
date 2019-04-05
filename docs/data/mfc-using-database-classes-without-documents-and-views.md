@@ -1,5 +1,5 @@
 ---
-title: 'MFC: usando classes de banco de dados sem documentos e exibições'
+title: 'MFC: Usando Classes de banco de dados sem documentos e exibições'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ODBC applications [C++], without views
@@ -17,14 +17,14 @@ helpviewer_keywords:
 - database applications [C++], without documents
 - user interface [C++], drawing information
 ms.assetid: 15bf52d4-91cf-4b1d-8b37-87c3ae70123a
-ms.openlocfilehash: 558917f1a1485f1a886356b3c272842579f6b03e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ab9946609fa20c4644873a684a754cbc8a41742f
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50602209"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59024628"
 ---
-# <a name="mfc-using-database-classes-without-documents-and-views"></a>MFC: usando classes de banco de dados sem documentos e exibições
+# <a name="mfc-using-database-classes-without-documents-and-views"></a>MFC: Usando Classes de banco de dados sem documentos e exibições
 
 Às vezes, não convém usar a arquitetura de documento/exibição da estrutura em seus aplicativos de banco de dados. Este tópico explica:
 
@@ -59,7 +59,7 @@ O Assistente de aplicativo do MFC tem várias opções **selecione o suporte de 
 |**Exibição de banco de dados sem suporte para arquivo**|Derivado de `CRecordView`|Fornece suporte a documentos, mas não há suporte de serialização. Documento pode armazenar o conjunto de registros e coordenar várias exibições; não oferece suporte a serialização ou o **New**, **abra**, **salvar**, e **Salvar como** comandos. Ver [aplicativos com o mínimo documentos](#_core_applications_with_minimal_documents). Se você incluir um modo de exibição de banco de dados, você deve especificar a fonte de dados.<br /><br /> Inclui um conjunto de registros, bibliotecas de vínculo, uma exibição de registro e arquivos de cabeçalho do banco de dados. (Disponível somente para aplicativos com o **suporte de arquitetura de documento/exibição** opção selecionada na [tipo de aplicativo, Assistente de aplicativo MFC](../mfc/reference/application-type-mfc-application-wizard.md) página.)|
 |**Exibição de banco de dados com suporte para arquivo**|Derivado de `CRecordView`|Fornece suporte total a documentos, incluindo a serialização e relacionadas a documentos **arquivo** comandos de menu. Aplicativos de banco de dados geralmente operam em uma base por registro, em vez de por arquivo base e, portanto, não precisa de serialização. No entanto, você pode ter um uso especial para serialização. Ver [aplicativos com o mínimo documentos](#_core_applications_with_minimal_documents). Se você incluir um modo de exibição de banco de dados, você deve especificar a fonte de dados.<br /><br /> Inclui um conjunto de registros, bibliotecas de vínculo, uma exibição de registro e arquivos de cabeçalho do banco de dados. (Disponível somente para aplicativos com o **suporte de arquitetura de documento/exibição** opção selecionada na [tipo de aplicativo, Assistente de aplicativo MFC](../mfc/reference/application-type-mfc-application-wizard.md) página.)|
 
-Para uma discussão sobre alternativas para serialização e usos alternativos para serialização, consulte [serialização: serialização vs. Entrada/saída de banco de dados](../mfc/serialization-serialization-vs-database-input-output.md).
+Para uma discussão sobre alternativas para serialização e usos alternativos para serialização, consulte [serialização: Serialização vs. Entrada/saída de banco de dados](../mfc/serialization-serialization-vs-database-input-output.md).
 
 ##  <a name="_core_applications_with_minimal_documents"></a> Aplicativos com documentos mínimos
 
@@ -81,7 +81,7 @@ Você geralmente pode usar essa opção para aplicativos simples baseados em for
 
 ###  <a name="_core_a_document_with_file_support"></a> Documento com suporte para arquivo
 
-Selecione a opção de banco de dados do Assistente de aplicativo **modo de exibição com suporte a arquivos de banco de dados** quando você tem a alternativa de usar para o documento relacionado **arquivo** comandos de menu e serialização do documento. Parte de acesso a dados do seu programa, você pode usar o documento da mesma maneira como descrito em [documento sem suporte a arquivos](#_core_a_document_without_file_support). Você pode usar o recurso de serialização do documento, por exemplo, para ler e gravar um documento de perfil de usuário serializada que armazena as preferências do usuário ou outras informações úteis. Para obter mais ideias, consulte [serialização: serialização vs. Entrada/saída de banco de dados](../mfc/serialization-serialization-vs-database-input-output.md).
+Selecione a opção de banco de dados do Assistente de aplicativo **modo de exibição com suporte a arquivos de banco de dados** quando você tem a alternativa de usar para o documento relacionado **arquivo** comandos de menu e serialização do documento. Parte de acesso a dados do seu programa, você pode usar o documento da mesma maneira como descrito em [documento sem suporte a arquivos](#_core_a_document_without_file_support). Você pode usar o recurso de serialização do documento, por exemplo, para ler e gravar um documento de perfil de usuário serializada que armazena as preferências do usuário ou outras informações úteis. Para obter mais ideias, consulte [serialização: Serialização vs. Entrada/saída de banco de dados](../mfc/serialization-serialization-vs-database-input-output.md).
 
 O Assistente de aplicativo dá suporte a essa opção, mas você deve escrever o código que serializa o documento. Store as informações serializadas em membros de dados do documento.
 

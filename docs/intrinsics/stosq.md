@@ -8,16 +8,16 @@ helpviewer_keywords:
 - stosq instruction
 - __stosq intrinsic
 ms.assetid: 3ea28297-4369-4c2d-bf0c-91fa539ce209
-ms.openlocfilehash: f395a8b0fc7194f36bb3388d631628a829f33aca
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: eacb12f7c02b82607d980281f8d4a0bc1e1d7c14
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51331302"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59032425"
 ---
 # <a name="stosq"></a>__stosq
 
-**Seção específica da Microsoft**
+**Específico da Microsoft**
 
 Gera uma instrução de cadeia de caracteres de repositório (`rep stosq`).
 
@@ -82,7 +82,7 @@ int main()
 0 ffffffffffff ffffffffffff 0
 ```
 
-**Fim da seção específica da Microsoft**
+**FIM de Específico da Microsoft**
 
 ## <a name="see-also"></a>Consulte também
 

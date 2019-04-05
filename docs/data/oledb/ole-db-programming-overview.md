@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Universal Data Access
 - OLE DB, about OLE DB
 ms.assetid: a5a69730-2793-4277-a67d-6f3c8edab6df
-ms.openlocfilehash: d19e98d7c5743207dba224214b0d9a0e9f308e81
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 68ada06514defe0f7f5332288ad8e91a7d8d9351
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50608866"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59035524"
 ---
 # <a name="ole-db-programming-overview"></a>Visão geral da programação de banco de dados OLE
 
@@ -26,7 +26,7 @@ Com base na especificação COM, OLE DB define uma coleção extensível e suste
 
 ## <a name="see-also"></a>Consulte também
 
-[Programação do OLE DB](../../data/oledb/ole-db-programming.md)<br/>
-[Modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Modelos de provedor do OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
-[Modelos do OLE DB](../../data/oledb/ole-db-templates.md)
+[Programação de banco de dados OLE](../../data/oledb/ole-db-programming.md)<br/>
+[Modelos de consumidor de banco de dados OLE](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Modelos de provedor de banco de dados OLE](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Modelos de banco de dados OLE](../../data/oledb/ole-db-templates.md)

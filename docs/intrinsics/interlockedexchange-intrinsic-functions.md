@@ -44,16 +44,16 @@ helpviewer_keywords:
 - _InterlockedExchange intrinsic
 - _InterlockedExchange8_nf
 ms.assetid: be2f232a-6301-462a-a92b-fcdeb8b0f209
-ms.openlocfilehash: bccf9f46a886a622c493485818601044afff232d
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: 3945b8a7516962531050e999e96bdef31b179bbb
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328513"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59021489"
 ---
 # <a name="interlockedexchange-intrinsic-functions"></a>Funções intrínsecas _InterlockedExchange
 
-**Seção específica da Microsoft**
+**Específico da Microsoft**
 
 Gera uma instrução atômica para definir um valor especificado.
 
@@ -144,7 +144,7 @@ __int64 _InterlockedExchange64_rel(
 
 #### <a name="parameters"></a>Parâmetros
 
-*Target*<br/>
+*Destino*<br/>
 [no, out] Ponteiro para o valor a ser trocado. A função define essa variável como `Value` e retorna seu valor anterior.
 
 *Valor*<br/>
@@ -180,10 +180,10 @@ Essas rotinas somente estão disponíveis como intrínsecos.
 
 Para obter um exemplo de como usar `_InterlockedExchange`, consulte [interlockeddecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md).
 
-**Fim da seção específica da Microsoft**
+**FIM de Específico da Microsoft**
 
 ## <a name="see-also"></a>Consulte também
 
 [Intrínsecos do compilador](../intrinsics/compiler-intrinsics.md)<br/>
 [Palavras-chave](../cpp/keywords-cpp.md)<br/>
-[conflitos com o compilador x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)
+[Conflitos com o compilador x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

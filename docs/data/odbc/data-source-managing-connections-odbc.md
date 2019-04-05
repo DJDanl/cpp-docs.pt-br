@@ -1,5 +1,5 @@
 ---
-title: 'Fonte de dados: gerenciando conexões (ODBC)'
+title: 'Fonte de dados: Gerenciando conexões (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ODBC data sources [C++], multiuser environments
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - ODBC data sources [C++], connections
 - database connections [C++], MFC ODBC classes
 ms.assetid: c0adbcdd-c000-40c6-b199-09ffdc7b6ef2
-ms.openlocfilehash: 0f10dd1053819cb201385098b0125042ad556a47
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5b646ca0eb86d3addabaad59ca23f56cfe914114
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50568486"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041157"
 ---
-# <a name="data-source-managing-connections-odbc"></a>Fonte de dados: gerenciando conexões (ODBC)
+# <a name="data-source-managing-connections-odbc"></a>Fonte de dados: Gerenciando conexões (ODBC)
 
 Este tópico se aplica às classes ODBC do MFC.
 
@@ -72,7 +72,7 @@ Você pode usar um arquivo do Excel como uma fonte de dados, e você precisará 
 
 ##  <a name="_core_working_in_a_multiuser_environment"></a> Trabalhando em um ambiente multiusuário
 
-Se vários usuários estiverem conectados a uma fonte de dados, eles podem alterar dados enquanto você manipula-os em conjuntos de registros. Da mesma forma, as alterações poderão afetar os conjuntos de registros de outros usuários. Para obter mais informações, consulte [conjunto de registros: como conjuntos de registros atualizam registros (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md) e [transação (ODBC)](../../data/odbc/transaction-odbc.md).
+Se vários usuários estiverem conectados a uma fonte de dados, eles podem alterar dados enquanto você manipula-os em conjuntos de registros. Da mesma forma, as alterações poderão afetar os conjuntos de registros de outros usuários. Para obter mais informações, consulte [conjunto de registros: Como conjuntos de registros atualizam registros (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md) e [transação (ODBC)](../../data/odbc/transaction-odbc.md).
 
 ##  <a name="_core_generalizing_the_connection_string"></a> Generalizar a cadeia de caracteres de Conexão
 
@@ -139,5 +139,5 @@ Você pode reutilizar um `CDatabase` objeto depois de se desconectar dele, se vo
 ## <a name="see-also"></a>Consulte também
 
 [Fonte de dados (ODBC)](../../data/odbc/data-source-odbc.md)<br/>
-[Fonte de dados: determinando o esquema da fonte de dados (ODBC)](../../data/odbc/data-source-determining-the-schema-of-the-data-source-odbc.md)<br/>
+[Fonte de dados: Determinando o esquema da fonte de dados (ODBC)](../../data/odbc/data-source-determining-the-schema-of-the-data-source-odbc.md)<br/>
 [Classe CRecordset](../../mfc/reference/crecordset-class.md)

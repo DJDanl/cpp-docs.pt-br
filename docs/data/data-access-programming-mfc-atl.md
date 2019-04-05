@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data [C++], data access technologies
 - data access [C++], class libraries for databases
 ms.assetid: def97b2c-b5a6-445f-afeb-308050fd4852
-ms.openlocfilehash: 5417918ee3cf966183e1910fdbc12bd7b8cc046e
-ms.sourcegitcommit: 984fb4814a2dd9bcea5ec88c9528707f17a7cffa
+ms.openlocfilehash: b4f5fb6ed21fb23195af340c8de3ee7c654f7fee
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "51949486"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037818"
 ---
 # <a name="data-access-programming-mfcatl"></a>Programação de acesso a dados (MFC/ATL)
 
@@ -23,17 +23,17 @@ A OLE DB é uma API de nível baixo e alto desempenho com base na especificaçã
 
 ## <a name="porting-data-applications"></a>Movimentando aplicativos de dados
 
-Se seu aplicativo herdado usa a OLE DB ou a interface ADO de nível mais alto para se conectar ao SQL Server e você não está acessando servidores vinculados, você deve considerar a migração para o ODBC em um futuro próximo. Se você não precisa de portabilidade multiplataforma ou dos recursos mais recentes do SQL Server, você pode usar o Provedor Microsoft OLE DB para ODBC (MSDASQL).  O MSDASQL permite que os aplicativos que são criados com base em OLE DB e ADO (que usa internamente OLEDB) acessem fontes de dados por meio de um driver ODBC. Assim como acontece com qualquer camada de translação, MSDASQL pode afetar o desempenho do banco de dados. Você deve testar para determinar se o impacto é significativo para seu aplicativo. O MSDASQL é fornecido com o sistema operacional Windows e o Windows Server 2008 e Windows Vista SP1 são as primeira versões a incluir uma versão de 64 bits da tecnologia.
+Se seu aplicativo herdado usa a OLE DB ou a interface ADO de nível mais alto para se conectar ao SQL Server e você não está acessando servidores vinculados, você deve considerar a migração para o ODBC em um futuro próximo. Se você não precisa de portabilidade multiplataforma ou dos recursos mais recentes do SQL Server, você pode usar o Provedor Microsoft OLE DB para ODBC (MSDASQL).  O MSDASQL permite que os aplicativos que são criados com base em OLE DB e ADO (que usa internamente OLEDB) acessem fontes de dados por meio de um driver ODBC. Assim como acontece com qualquer camada de translação, o MSDASQL pode afetar o desempenho do banco de dados. Você deve testar para determinar se o impacto é significativo para seu aplicativo. O MSDASQL é fornecido com o sistema operacional Windows e o Windows Server 2008 e Windows Vista SP1 são as primeira versões a incluir uma versão de 64 bits da tecnologia.
 
 O componente SNAC (SQL Native Client), que empacota os drivers OLE DB e ODBC em uma única DLL, foi preterido para aplicativos ODBC. A versão do SQL Server 2012 do SNAC (SQLNCLI11.DLL) é fornecida com o SQL Server 2016 porque os outros componentes do SQL Server dependem dele. No entanto, os novos aplicativos de C++ que se conectam ao SQL Server ou ao Banco de Dados SQL do Azure por meio de ODBC devem usar [o driver ODBC mais recente](/sql/connect/odbc/download-odbc-driver-for-sql-server). Para obter mais informações, consulte [Programação do SQL Server Native Client](/sql/relational-databases/native-client/sql-server-native-client-programming)
 
 Se você usa C++/CLI, você pode continuar a usar o ADO.NET como sempre. Para obter mais informações, consulte [Acesso a dados usando ADO.NET (C++/CLI)](../dotnet/data-access-using-adonet-cpp-cli.md) e [Acesso a dados no Visual Studio](/visualstudio/data-tools/accessing-data-in-visual-studio).
 
-- Além das classes de wrapper de ODBC, o MFC também fornece classes de wrapper de objetos de acesso a dados (DAO) para se conectar aos bancos de dados do Access.  No entanto, o DAO está obsoleto. Qualquer código com base em CDaoDatabase ou CDaoRecordset deve ser atualizado.
+- Além das classes wrapper de ODBC, o MFC também fornece as classes wrapper de DAO (Objetos de Acesso a Dados) para se conectar aos bancos de dados do Access.  No entanto, o DAO está obsoleto. Qualquer código com base em CDaoDatabase ou CDaoRecordset deve ser atualizado.
 
 Para obter mais informações sobre o histórico de tecnologias de acesso a dados no Microsoft Windows, consulte [Microsoft Data Access Components (Wikipédia)](https://en.wikipedia.org/wiki/Microsoft_Data_Access_Components).
 
 ## <a name="see-also"></a>Consulte também
 
 [Acesso a dados](data-access-in-cpp.md)<br/>
-[Microsoft ODBC (Open Database Connectivity)](/sql/odbc/microsoft-open-database-connectivity-odbc)<br/>
+[Microsoft Open Database Connectivity (ODBC)](/sql/odbc/microsoft-open-database-connectivity-odbc)<br/>

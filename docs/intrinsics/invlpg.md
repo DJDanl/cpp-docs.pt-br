@@ -8,16 +8,16 @@ helpviewer_keywords:
 - invlpg instruction
 - __invlpg intrinsic
 ms.assetid: 3fb3633f-d9b7-4ec0-9e7f-a7f2fa8ed794
-ms.openlocfilehash: 0ff46aa15fbb8728ce02255209a32f01a168609b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b4f941baae9f03ed288a99d59e2b06262962e339
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50629379"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023303"
 ---
 # <a name="invlpg"></a>__invlpg
 
-**Seção específica da Microsoft**
+**Específico da Microsoft**
 
 Gera o x86 `invlpg` instrução, o que invalida o buffer de conversão à parte (TLB) para a página associada com a memória apontada por `Address`.
 
@@ -48,7 +48,7 @@ O intrínseco `__invlpg` emite uma instrução privilegiada e só está disponí
 
 Essa rotina só está disponível como função intrínseca.
 
-**Fim da seção específica da Microsoft**
+**FIM de Específico da Microsoft**
 
 ## <a name="see-also"></a>Consulte também
 

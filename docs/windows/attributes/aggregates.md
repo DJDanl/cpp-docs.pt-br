@@ -9,12 +9,12 @@ helpviewer_keywords:
 - aggregate objects [C++], aggregates attribute
 - aggregates [C++]
 ms.assetid: 67a084c9-941f-474b-a029-9c93b38ebe9a
-ms.openlocfilehash: aaf138ab3b0fa69f2a8c201eed631569b33b079f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 12e6af31c2714095cf2ecf51e4f067081789a9e0
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50486782"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59028691"
 ---
 # <a name="aggregates"></a>aggregates
 
@@ -28,7 +28,7 @@ Indica que o objeto agrega o objeto especificado pelo CLSID.
 
 ### <a name="parameters"></a>Parâmetros
 
-*clsid*<br/>
+*CLSID*<br/>
 Especifica o CLSID do objeto agregável.
 
 *variable_name*<br/>
@@ -83,7 +83,7 @@ struct CObject : IObject
 
 |||
 |-|-|
-|**Aplica-se a**|**classe**, **struct**|
+|**Aplica-se a**|**class**, **struct**|
 |**Repetível**|Sim|
 |**Atributos obrigatórios**|Um ou mais das seguintes opções: `coclass`, `progid`, ou `vi_progid`.|
 |**Atributos inválidos**|Nenhum|
@@ -92,7 +92,7 @@ Para obter mais informações sobre os contextos de atributo, consulte [contexto
 
 ## <a name="see-also"></a>Consulte também
 
-[Atributos de COM](com-attributes.md)<br/>
+[Atributos COM](com-attributes.md)<br/>
 [Atributos de classe](class-attributes.md)<br/>
 [Atributos Typedef, Enum, Union e Struct](typedef-enum-union-and-struct-attributes.md)<br/>
 [Agregação](/windows/desktop/com/aggregation)<br/>

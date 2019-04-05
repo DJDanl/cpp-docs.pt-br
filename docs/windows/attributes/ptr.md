@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - ptr attribute
 ms.assetid: 95eaea57-a5be-45f6-a612-ba2c9bc4645a
-ms.openlocfilehash: 7ed08403f32e5e4609266975c5c479a7b758fe89
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2c712a2d9c85e0fe8fd8c4dbad5c7f48812ab1a2
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506204"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59030122"
 ---
 # <a name="ptr"></a>ptr
 
@@ -46,7 +46,7 @@ Para obter mais informações sobre os contextos de atributo, consulte [contexto
 
 ## <a name="see-also"></a>Consulte também
 
-[Atributos de IDL](idl-attributes.md)<br/>
+[Atributos IDL](idl-attributes.md)<br/>
 [Atributos de interface](interface-attributes.md)<br/>
 [Atributos de método](method-attributes.md)<br/>
 [Atributos Typedef, Enum, Union e Struct](typedef-enum-union-and-struct-attributes.md)

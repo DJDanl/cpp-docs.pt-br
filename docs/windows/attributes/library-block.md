@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - library_block attribute
 ms.assetid: ae7a7ebe-5e1a-4eda-a058-11bbd058ece8
-ms.openlocfilehash: 76e643cb45d8a87408015e6e0726e47d423147f1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 219f6a89dd7f80246e0337c2ef3bcad43540b165
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50459911"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033198"
 ---
 # <a name="libraryblock"></a>library_block
 
@@ -58,4 +58,4 @@ Para obter mais informações, consulte [contextos de atributo](cpp-attributes-c
 ## <a name="see-also"></a>Consulte também
 
 [Atributos de compilador](compiler-attributes.md)<br/>
-[Atributos independentes](stand-alone-attributes.md)
+[Atributos autônomos](stand-alone-attributes.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - attributes [C++/CLI], frequently asked questions
 - FAQs (frequently asked questions), attributed programming [C++]
 ms.assetid: a1b8349f-7f51-43c4-95ea-4edb6e5f243f
-ms.openlocfilehash: 89c37b2fe81a414bdd02d73e3c3dfd5205a03831
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: fd4c24e3933738d128dffd41018466c33b419de8
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57815873"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59025092"
 ---
 # <a name="attribute-programming-faq"></a>Perguntas frequentes de programação do atributo
 
@@ -88,8 +88,8 @@ No entanto, os seguintes atributos têm parâmetros sem nomeados, únicos:
 |[iid_is](iid-is.md)|[import](import.md)|[importlib](importlib.md)|
 |[include](include-cpp.md)|[includelib](includelib-cpp.md)|[last_is](last-is.md)|
 |[length_is](length-is.md)|[max_is](max-is.md)|[no_injected_text](no-injected-text.md)|
-|[pointer_default](pointer-default.md)|[pragma](pragma.md)|[restricted](restricted.md)|
-|[size_is](size-is.md)|[source](source-cpp.md)|[switch_is](switch-is.md)|
+|[pointer_default](pointer-default.md)|[(pragma)](pragma.md)|[restricted](restricted.md)|
+|[size_is](size-is.md)|[origem](source-cpp.md)|[switch_is](switch-is.md)|
 |[switch_type](switch-type.md)|[transmit_as](transmit-as.md)|[wire_marshal](wire-marshal.md)|
 
 ##  <a name="vcconattributeprogrammmingfaqanchor3"></a> Pode usar comentários em um bloco de atributo?
@@ -244,4 +244,4 @@ Não, não há suporte para usar atributos em uma classe derivada de uma classe 
 
 ## <a name="see-also"></a>Consulte também
 
-[Atributos C++ para COM e .NET](cpp-attributes-com-net.md)
+[Atributos de C++ para COM e .NET](cpp-attributes-com-net.md)

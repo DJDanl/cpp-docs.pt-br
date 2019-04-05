@@ -8,16 +8,16 @@ helpviewer_keywords:
 - __ll_rshift intrinsic
 - ll_rshift intrinsic
 ms.assetid: ef13b732-d122-44a0-add9-f5544a2c4ab2
-ms.openlocfilehash: 9c486921e41732ef7736ca5b62b44a86010dcf83
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e39f8fe797467569077dd24baf49670607915107
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50621866"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041014"
 ---
 # <a name="llrshift"></a>__ll_rshift
 
-**Seção específica da Microsoft**
+**Específico da Microsoft**
 
 Desloca um valor de 64 bits especificado pelo primeiro parâmetro para a direita em um número de bits especificado pelo segundo parâmetro.
 
@@ -89,7 +89,7 @@ fffffffffffffff0
 
 **Observação** se `_ull_rshift` tiver sido usado, o MSB do valor deslocados para a direita teria sido zero, portanto, o resultado desejado seria não ter sido obtido no caso de um valor negativo.
 
-**Fim da seção específica da Microsoft**
+**FIM de Específico da Microsoft**
 
 ## <a name="see-also"></a>Consulte também
 

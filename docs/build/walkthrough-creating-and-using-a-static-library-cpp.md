@@ -7,12 +7,12 @@ helpviewer_keywords:
 - static libraries [C++]
 ms.assetid: 3cc36411-7d66-4240-851e-dacb9a8fd6ac
 ms.author: corob
-ms.openlocfilehash: 506db5ea8e94887d9971b48c06ce8c0d6156dccb
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 0d527681abb077a01b3d902c092a21de7a052867
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58783801"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59031502"
 ---
 # <a name="walkthrough-creating-and-using-a-static-library-c"></a>Passo a passo: Criando e usando uma biblioteca estática (C++)
 
@@ -147,4 +147,4 @@ Um entendimento dos fundamentos da linguagem C++.
 ## <a name="see-also"></a>Consulte também
 
 [Passo a passo: Criando e usando uma biblioteca de vínculo dinâmico (C++)](../build/walkthrough-creating-and-using-a-dynamic-link-library-cpp.md)<br/>
-[Aplicativos de área de trabalho (Visual C++)](../windows/desktop-applications-visual-cpp.md)<br/>
+[Aplicativos da área de trabalho (Visual C++)](../windows/desktop-applications-visual-cpp.md)<br/>

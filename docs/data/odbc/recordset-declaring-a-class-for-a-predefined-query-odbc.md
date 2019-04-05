@@ -1,5 +1,5 @@
 ---
-title: 'Conjunto de registros: declarando uma classe para uma consulta predefinida (ODBC)'
+title: 'Conjunto de registros: Declarando uma classe para uma consulta predefinida (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ODBC recordsets, queries
@@ -8,21 +8,21 @@ helpviewer_keywords:
 - recordsets, predefined queries
 - recordsets, stored procedures
 ms.assetid: d27c4df9-dad2-4484-ba72-92ab0c8ff928
-ms.openlocfilehash: e83bf2ecb24a9abfd8dc9800a3a10d2d65025336
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d4ae9f21c4bd53a8050d6f8c3765bb9823d077ba
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50611257"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59026521"
 ---
-# <a name="recordset-declaring-a-class-for-a-predefined-query-odbc"></a>Conjunto de registros: declarando uma classe para uma consulta predefinida (ODBC)
+# <a name="recordset-declaring-a-class-for-a-predefined-query-odbc"></a>Conjunto de registros: Declarando uma classe para uma consulta predefinida (ODBC)
 
 Este tópico se aplica às classes ODBC do MFC.
 
 Este tópico explica como criar uma classe de conjunto de registros para uma consulta predefinida (às vezes chamada de um procedimento armazenado, como no Microsoft SQL Server).
 
 > [!NOTE]
->  Este tópico se aplica a objetos derivados de `CRecordset` em qual linha em massa buscando não foi implementado. Se a busca de linhas em massa for implementado, o processo é muito semelhante. Para entender as diferenças entre conjuntos de registros que implementam a busca de linhas em massa e aqueles que não fizer isso, consulte [conjunto de registros: buscando registros em massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+>  Este tópico se aplica a objetos derivados de `CRecordset` em qual linha em massa buscando não foi implementado. Se a busca de linhas em massa for implementado, o processo é muito semelhante. Para entender as diferenças entre conjuntos de registros que implementam a busca de linhas em massa e aqueles que não fizer isso, consulte [conjunto de registros: Buscando registros em massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 Alguns sistemas de gerenciamento de banco de dados (DBMSs) permitem que você crie uma consulta predefinida e chamá-lo em seus programas como uma função. A consulta tem um nome, pode levar a parâmetros e pode retornar os registros. O procedimento neste tópico descreve como chamar uma consulta predefinida que retorna registros (e talvez usa parâmetros).
 
@@ -63,7 +63,7 @@ Você pode criar uma classe de conjunto de registros único para gerenciar a cha
 
 1. Se a consulta usa parâmetros, adicione um membro de dados para cada parâmetro, uma chamada de função para cada RFX e uma inicialização para cada parâmetro.
 
-1. Você deve incrementar `m_nParams` para cada parâmetro adicionado, como você fez `m_nFields` para adicionou campos na etapa 4 deste procedimento. Para obter mais informações, consulte [conjunto de registros: parametrizando um conjunto de registros (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).
+1. Você deve incrementar `m_nParams` para cada parâmetro adicionado, como você fez `m_nFields` para adicionou campos na etapa 4 deste procedimento. Para obter mais informações, consulte [conjunto de registros: Parametrizando um conjunto de registros (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).
 
 1. Gravar manualmente uma cadeia de caracteres da instrução SQL da seguinte forma:
 
@@ -153,6 +153,6 @@ Esse código cria um instantâneo, passa um parâmetro obtido anteriormente do u
 ## <a name="see-also"></a>Consulte também
 
 [Conjunto de registros (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Conjunto de registros: repetindo consulta a um conjunto de registros (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)<br/>
-[Conjunto de registros: declarando uma classe para uma tabela (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)<br/>
-[Conjunto de registros: realizando uma junção (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)
+[Conjunto de registros: Repetindo consulta a um conjunto de registros (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)<br/>
+[Conjunto de registros: Declarando uma classe para uma tabela (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)<br/>
+[Conjunto de registros: Realizando uma junção (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)

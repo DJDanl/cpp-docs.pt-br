@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data members [C++], attributes
 - data members [C++]
 ms.assetid: 95b2397d-1daf-4ae4-8cd0-06956d005b13
-ms.openlocfilehash: e188f4d9ad2c553ff142e45ec84bc0a04630b816
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ad21ed16eee8cd14e8f798450ff385d5f429a280
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50512925"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041144"
 ---
 # <a name="data-member-attributes"></a>Atributos de membro de dados
 
@@ -31,7 +31,7 @@ Os atributos a seguir se aplicam para os membros de dados em uma classe, coclass
 |[range](range-cpp.md)|Especifica um intervalo de valores permitidos para argumentos ou campos cujos valores são definidos em tempo de execução.|
 |[rdx](rdx.md)|Cria uma chave do registro ou modifica uma chave do registro existente.|
 |[readonly](readonly-cpp.md)|Proíbe a atribuição a um membro de dados.|
-|[requestedit](requestedit.md)|Indica que a propriedade oferece suporte a `OnRequestEdit` notificação.|
+|[requestedit](requestedit.md)|Indica que a propriedade dá suporte à notificação `OnRequestEdit`.|
 
 ## <a name="see-also"></a>Consulte também
 

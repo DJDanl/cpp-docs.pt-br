@@ -8,16 +8,16 @@ helpviewer_keywords:
 - __inwordstring intrinsic
 - rep insw instruction
 ms.assetid: 6de37939-017a-4740-9e3d-7de78a30daba
-ms.openlocfilehash: b56a55da06e808bcccf123ccc9867a1b868834a3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 52c36754e1eea56b84eeb494e82e37a5b043246e
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50608553"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59030213"
 ---
 # <a name="inwordstring"></a>__inwordstring
 
-**Seção específica da Microsoft**
+**Específico da Microsoft**
 
 Lê dados da porta especificada usando o `rep insw` instrução.
 
@@ -54,7 +54,7 @@ void __inwordstring(
 
 Essa rotina só está disponível como função intrínseca.
 
-**Fim da seção específica da Microsoft**
+**FIM de Específico da Microsoft**
 
 ## <a name="see-also"></a>Consulte também
 

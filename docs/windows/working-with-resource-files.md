@@ -6,12 +6,12 @@ helpviewer_keywords:
 - resources [C++], about resource files
 - resource files [C++], about resource files
 ms.assetid: 2699a539-b369-4b78-80f0-df03eb7b6780
-ms.openlocfilehash: 8edc860db453c4ee9e0dd3fdacb18bbde662accb
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: a08c7ecb153b790f06da386ac93d1f05f5981e61
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57562959"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037716"
 ---
 # <a name="working-with-resource-files"></a>Trabalhando com arquivos de recurso
 
@@ -38,10 +38,10 @@ Para globalizar e localizar recursos em aplicativos gerenciados, consulte [Globa
 
 ## <a name="in-this-section"></a>Nesta seção
 
-[Arquivos de recurso](../windows/resource-files-visual-studio.md)<br/>
+[Arquivos de recursos](../windows/resource-files-visual-studio.md)<br/>
 Descreve os arquivos de recurso e como eles são usados em aplicativos da área de trabalho do Windows. Também fornece links para artigos que descrevem como usar arquivos de recurso.
 
-[Identificadores de recursos (símbolos)](../windows/symbols-resource-identifiers.md)<br/>
+[Identificadores de recurso (símbolos)](../windows/symbols-resource-identifiers.md)<br/>
 Descreve símbolos e fornece informações sobre como usar o **símbolos de recurso** caixa de diálogo Gerenciar símbolos em seus projetos.
 
 [Editores de recursos](../windows/resource-editors.md)<br/>
@@ -49,7 +49,7 @@ Descreve os editores de recursos fornecidos no Visual Studio e os tipos de recur
 
 ## <a name="related-sections"></a>Seções relacionadas
 
-[Visual C++](../visual-cpp-in-visual-studio.md)<br/>
+[Visual C++](../overview/visual-cpp-in-visual-studio.md)<br/>
 Fornece links para a documentação do Visual C++.
 
 [Fale conosco](/visualstudio/ide/talk-to-us)<br/>

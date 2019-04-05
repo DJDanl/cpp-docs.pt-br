@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - object attribute
 ms.assetid: f2d3c231-630d-4b4c-bd15-b1c30df362dd
-ms.openlocfilehash: 1cae9e6b014f33dfbbcccdeb4172d6f35349e307
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c0f544e84e5110761dfd01e25abef4352f055ff5
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50526146"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59022353"
 ---
 # <a name="object-c"></a>object (C++)
 
@@ -48,9 +48,9 @@ Para obter mais informações sobre os contextos de atributo, consulte [contexto
 
 ## <a name="see-also"></a>Consulte também
 
-[Atributos de IDL](idl-attributes.md)<br/>
+[Atributos IDL](idl-attributes.md)<br/>
 [Atributos de interface](interface-attributes.md)<br/>
 [dual](dual.md)<br/>
 [dispinterface](dispinterface.md)<br/>
-[custom](custom-cpp.md)<br/>
+[personalizado](custom-cpp.md)<br/>
 [__interface](../../cpp/interface.md)

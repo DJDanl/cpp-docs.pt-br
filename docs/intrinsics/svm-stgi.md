@@ -7,16 +7,16 @@ helpviewer_keywords:
 - __svm_stgi intrinsic
 - STGI instruction
 ms.assetid: 96488da4-5587-4e99-8674-627a9e51be84
-ms.openlocfilehash: 9f7e35bbecf4051e4a47c32753b3a221dd2a4cc1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ea138f17a24af21afa937991f77bd1e2a689c3f7
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50494660"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59024784"
 ---
 # <a name="svmstgi"></a>__svm_stgi
 
-**Seção específica da Microsoft**
+**Específico da Microsoft**
 
 Define o sinalizador de interrupção global.
 
@@ -30,7 +30,7 @@ void __svm_stgi(void);
 
 O `__svm_stgi` função é equivalente ao `STGI` instruções de máquina. O sinalizador de interrupção global determina se o microprocessador ignora, adia ou lida com interrupções devido a eventos como uma conclusão de e/s, um alerta de temperatura de hardware ou uma exceção de depuração.
 
-Essa função dá suporte a interação do monitor de máquina virtual do host com um sistema operacional e seus aplicativos de convidado. Para obter mais informações, pesquise o documento "Volume de Manual do programador da arquitetura AMD64 2: programação do sistema," número 24593, 3.11, de revisão de documentos na [corporation AMD](https://developer.amd.com/resources/developer-guides-manuals/) site.
+Essa função dá suporte a interação do monitor de máquina virtual do host com um sistema operacional e seus aplicativos de convidado. Para obter mais informações, pesquise o documento "Volume de Manual do programador da arquitetura AMD64 2: Sistema de programação,"documento número 24593, revisão 3.11, o [corporation AMD](https://developer.amd.com/resources/developer-guides-manuals/) site.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -40,7 +40,7 @@ Essa função dá suporte a interação do monitor de máquina virtual do host c
 
 **Arquivo de cabeçalho** \<intrin. h >
 
-**Fim da seção específica da Microsoft**
+**FIM de Específico da Microsoft**
 
 ## <a name="see-also"></a>Consulte também
 

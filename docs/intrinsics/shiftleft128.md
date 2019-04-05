@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - __shiftleft128 intrinsic
 ms.assetid: 557b846a-8fb0-469d-91ac-1b1fad80dc2a
-ms.openlocfilehash: 4fb1f9e65210ca9f9e38afd6fc13e01c7eb8f045
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 5fcb797694c7a45dc4f2113f3d2ed4a2f578c894
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51325543"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59024849"
 ---
 # <a name="shiftleft128"></a>__shiftleft128
 
-**Seção específica da Microsoft**
+**Específico da Microsoft**
 
 Desloca uma quantidade de 128 bits, representada como duas quantidades de 64 bits `LowPart` e `HighPart`, para a esquerda por um número de bits especificado pelo `Shift` e retorna os 64 bits altos do resultado.
 
@@ -31,7 +31,7 @@ unsigned __int64 __shiftleft128(
 
 #### <a name="parameters"></a>Parâmetros
 
-*Dinâmaico*<br/>
+*LowPart*<br/>
 [in] Os 64 bits baixos da quantidade de 128 bits a deslocar.
 
 *HighPart*<br/>
@@ -94,7 +94,7 @@ int main()
 0x100000000000000001 >> 1 = 0x080000000000000000
 ```
 
-**Fim da seção específica da Microsoft**
+**FIM de Específico da Microsoft**
 
 ## <a name="see-also"></a>Consulte também
 

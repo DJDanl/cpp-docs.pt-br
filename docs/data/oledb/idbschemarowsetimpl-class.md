@@ -36,12 +36,12 @@ helpviewer_keywords:
 - GetRowset method
 - GetSchemas method
 ms.assetid: bd7bf0d7-a1c6-4afa-88e3-cfdbdf560703
-ms.openlocfilehash: 080504dabccd89340d511aa6d3192cf711d3d6bf
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: b764b571aae81f6225028cbe0d052d817d93d183
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57416852"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59024355"
 ---
 # <a name="idbschemarowsetimpl-class"></a>Classe IDBSchemaRowsetImpl
 
@@ -289,7 +289,7 @@ A implementação dessa função exige que o usuário tenha um esquema do mapa n
 
 ## <a name="see-also"></a>Consulte também
 
-[Classes typedef e classes de conjunto de linhas de esquema](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)<br/>
+[Classes Rowset do esquema e Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)<br/>
 [Dando suporte a conjuntos de linhas do esquema](../../data/oledb/supporting-schema-rowsets.md)<br/>
 [SCHEMA_ENTRY](../../data/oledb/schema-entry.md)<br/>
 [UpdatePV](https://github.com/Microsoft/VCSamples)

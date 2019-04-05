@@ -7,12 +7,12 @@ helpviewer_keywords:
 - templates, OLE DB provider
 - OLE DB providers, templates
 ms.assetid: c90b7523-dbff-431c-be06-eed9055710d2
-ms.openlocfilehash: 23a455eef5645aa027a9fdb97baaea948500cd6c
-ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
+ms.openlocfilehash: 79b225fb45c05a0b324f441654e63c6ea9f4918f
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51265055"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59030901"
 ---
 # <a name="working-with-ole-db-provider-templates"></a>Trabalhando com modelos de provedor de banco de dados OLE
 
@@ -24,7 +24,7 @@ Para saber como trabalhar com os modelos de provedor do OLE DB, consulte os tóp
 
 - [Definindo propriedades no provedor](../../data/oledb/setting-properties-in-your-provider.md)
 
-- [Colunas de associação dinâmica no provedor](../../data/oledb/dynamically-binding-columns-in-your-provider.md)
+- [Colunas de associação dinâmicas no provedor](../../data/oledb/dynamically-binding-columns-in-your-provider.md)
 
 - [Dando suporte ao thread livre no provedor](../../data/oledb/supporting-free-threading-in-your-provider.md)
 
@@ -32,9 +32,9 @@ Para saber como trabalhar com os modelos de provedor do OLE DB, consulte os tóp
 
 - [Depurando o provedor](../../data/oledb/debugging-your-provider.md)
 
-- [Convertendo dados sem suporte do provedor](../../data/oledb/converting-data-not-supported-by-the-provider.md)
+- [Dados de conversão não suportados pelo provedor](../../data/oledb/converting-data-not-supported-by-the-provider.md)
 
 ## <a name="see-also"></a>Consulte também
 
-[Referência dos modelos de provedor do OLE DB](../../data/oledb/ole-db-provider-templates-reference.md)<br/>
-[Modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)
+[Referência dos modelos de provedor de banco de dados OLE](../../data/oledb/ole-db-provider-templates-reference.md)<br/>
+[Modelos de consumidor de banco de dados OLE](../../data/oledb/ole-db-consumer-templates-cpp.md)

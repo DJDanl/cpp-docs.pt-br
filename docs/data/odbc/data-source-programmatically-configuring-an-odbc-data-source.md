@@ -1,5 +1,5 @@
 ---
-title: 'Fonte de dados: configurando programaticamente uma fonte de dados ODBC'
+title: 'Fonte de dados: Configurando programaticamente uma fonte de dados ODBC'
 ms.date: 11/04/2016
 f1_keywords:
 - SQLConfigDataSource
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - ODBC connections, configuring
 - configuring ODBC data sources
 ms.assetid: b8cabe9b-9e12-4d73-ae36-7cb12dee3213
-ms.openlocfilehash: 3d02a19d6c61e79fffd31b67ef1b8f7ea9007fcb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 33269b65835812a6e1a03e091833831781d97b6d
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677364"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037934"
 ---
-# <a name="data-source-programmatically-configuring-an-odbc-data-source"></a>Fonte de dados: configurando programaticamente uma fonte de dados ODBC
+# <a name="data-source-programmatically-configuring-an-odbc-data-source"></a>Fonte de dados: Configurando programaticamente uma fonte de dados ODBC
 
 Este tópico explica como você pode configurar nomes de fonte de dados de conectividade de banco de dados aberto (ODBC) por meio de programação. Isso oferece flexibilidade para acessar os dados sem forçar o usuário a usar explicitamente o administrador de ODBC ou outros programas para especificar os nomes de fontes de dados.
 
@@ -41,7 +41,7 @@ SQLConfigDataSource(NULL,ODBC_ADD_DSN, "Excel Files (*.xls)",
 
 Observe que a fonte de dados é, na verdade, um diretório (C:\EXCELDIR); Esse diretório deve existir. O driver do Excel usa diretórios como suas fontes de dados e arquivos como tabelas individuais (uma tabela por arquivo. xls).
 
-Para obter mais informações sobre como criar tabelas, consulte [fonte de dados: Criando uma tabela em uma fonte de dados ODBC programaticamente](../../data/odbc/data-source-programmatically-creating-a-table-in-an-odbc-data-source.md).
+Para obter mais informações sobre como criar tabelas, consulte [fonte de dados: Criando uma tabela programaticamente em uma fonte de dados ODBC](../../data/odbc/data-source-programmatically-creating-a-table-in-an-odbc-data-source.md).
 
 As informações a seguir descreve os parâmetros que precisam ser passados para o `::SQLConfigDataSource` função ODBC API. Para usar `::SQLConfigDataSource`, você deve incluir o arquivo de cabeçalho Odbcinst e usar a biblioteca de importação Odbcinst. Além disso, Odbccp32.dll deve estar no caminho em tempo de execução (ou Odbcinst para 16 bits).
 
@@ -94,7 +94,7 @@ Uma maneira de localizar os nomes de chave e valores para o *lpszAttributes* par
 
    - Para 32 bits, localize a chave **HKEY_CURRENT_USER\Software\ODBC\ODBC. Fontes de dados INI\ODBC** no painel esquerdo.
 
-      O painel direito lista entradas no formato: "pub: REG_SZ:*<data source name>*", onde *<data source name>* é uma fonte de dados que já foi configurada com as configurações desejadas para o driver que você pretende Para usar. Selecione a fonte de dados que você deseja, por exemplo, o SQL Server. Os itens que seguem a cadeia de caracteres "pub:" são, por ordem, o keyname e o valor para usar em seu *lpszAttributes* parâmetro.
+      O painel direito lista entradas no formato: "pub: REG_SZ:*<data source name>*", onde *<data source name>* é uma fonte de dados que já foi configurada com as configurações desejadas para o driver que você pretende usar. Selecione a fonte de dados que você deseja, por exemplo, o SQL Server. Os itens que seguem a cadeia de caracteres "pub:" são, por ordem, o keyname e o valor para usar em seu *lpszAttributes* parâmetro.
 
    - Para 16 bits, localize a seção no arquivo ini marcado por [*\<nome da fonte de dados >*].
 

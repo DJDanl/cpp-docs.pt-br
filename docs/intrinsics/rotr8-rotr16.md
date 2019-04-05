@@ -8,16 +8,16 @@ helpviewer_keywords:
 - _rotr8 intrinsic
 - _rotr16 intrinsic
 ms.assetid: dfbd2c82-82b4-427a-ad52-51609027ebff
-ms.openlocfilehash: 218fb14c118cb9208cdfc29176897543f680b593
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 27c3a9d914d04ecdffb7fa74dc3c8f79a442445c
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51329716"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59028737"
 ---
 # <a name="rotr8-rotr16"></a>_rotr8, _rotr16
 
-**Seção específica da Microsoft**
+**Específico da Microsoft**
 
 Gire os valores de entrada para a direita para o bit menos significativo (LSB) por um número especificado de posições de bits.
 
@@ -36,7 +36,7 @@ unsigned short _rotr16(
 
 #### <a name="parameters"></a>Parâmetros
 
-*value*<br/>
+*Valor *<br/>
 [in] O valor a ser girado.
 
 *shift*<br/>
@@ -99,7 +99,7 @@ Rotating 0x41 right by 7 bits gives 0x82
 Rotating unsigned short 0x12 right by 10 bits gives 0x480
 ```
 
-**Fim da seção específica da Microsoft**
+**FIM de Específico da Microsoft**
 
 ## <a name="see-also"></a>Consulte também
 

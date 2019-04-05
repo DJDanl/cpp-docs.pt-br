@@ -8,12 +8,12 @@ helpviewer_keywords:
 - attributes [C#], default attribute
 - defaults, default attribute
 ms.assetid: 0cdca716-1ba8-46d7-9399-167e55492870
-ms.openlocfilehash: 1c9c8cd9a6bf0d6ea34db5d62d7767874b4dd4b6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c6448b00fef50a7654816a2c39af2943db12d314
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50560595"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59024576"
 ---
 # <a name="default-c"></a>default (C++)
 
@@ -27,12 +27,12 @@ Indica que o personalizado ou dispinterface definido dentro de uma coclass repre
 
 ### <a name="parameters"></a>Parâmetros
 
-*Interface1*<br/>
+*interface1*<br/>
 A interface padrão que será disponibilizada para os ambientes de script que cria um objeto com base na classe definida com o **padrão** atributo.
 
 Se nenhuma interface padrão for especificado, a primeira ocorrência de uma interface nonsource é usada como o padrão.
 
-*Interface2*<br/>
+*interface2*<br/>
 (Opcional) A interface de origem padrão. Você também deve especificar essa interface com o [origem](source-cpp.md) atributo.
 
 Se nenhuma interface de origem padrão for especificado, a primeira interface de origem é usada como o padrão.
@@ -108,6 +108,6 @@ Para obter mais informações, consulte [contextos de atributo](cpp-attributes-c
 
 ## <a name="see-also"></a>Consulte também
 
-[Atributos de IDL](idl-attributes.md)<br/>
+[Atributos IDL](idl-attributes.md)<br/>
 [Atributos de classe](class-attributes.md)<br/>
 [coclass](coclass.md)
