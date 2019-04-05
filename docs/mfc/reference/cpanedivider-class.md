@@ -84,12 +84,12 @@ helpviewer_keywords:
 - CPaneDivider [MFC], m_nDefaultWidth
 - CPaneDivider [MFC], m_pSliderRTC
 ms.assetid: 8e828a5d-232f-4127-b8e3-7fa45a7a476e
-ms.openlocfilehash: 7fc1215fb1b286423d6c50337bf5d94cac3298e2
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 43cba977d50e161c58d3e240e1282049a415c88d
+ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57273616"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58773847"
 ---
 # <a name="cpanedivider-class"></a>Classe CPaneDivider
 
@@ -105,7 +105,7 @@ class CPaneDivider : public CBasePane
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
@@ -176,7 +176,7 @@ Há dois tipos de divisores de painel:
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir demonstra como obter um `CPaneDivider` do objeto de um `CWorkspaceBar` objeto. Este trecho de código faz parte de [amostra de demonstração de guias MDI](../../visual-cpp-samples.md).
+O exemplo a seguir demonstra como obter um `CPaneDivider` do objeto de um `CWorkspaceBar` objeto. Este trecho de código faz parte de [amostra de demonstração de guias MDI](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_MDITabsDemo#5](../../mfc/reference/codesnippet/cpp/cpanedivider-class_1.cpp)]
 
