@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CCmdTarget [MFC], OnFinalRelease
 - CCmdTarget [MFC], RestoreWaitCursor
 ms.assetid: 8883b132-2057-4ce0-a5f2-88979f8f2b13
-ms.openlocfilehash: 5e4de39b0352f33ad59950754df7c0815d6038c3
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 9314717fab53b1a89b87d657ec617a4c6bd45b8b
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57417899"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58776187"
 ---
 # <a name="ccmdtarget-class"></a>Classe CCmdTarget
 
@@ -65,13 +65,13 @@ class CCmdTarget : public CObject
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
 |[CCmdTarget::CCmdTarget](#ccmdtarget)|Constrói um objeto `CCmdTarget`.|
 
-### <a name="public-methods"></a>Métodos Públicos
+### <a name="public-methods"></a>Métodos públicos
 
 |Nome|Descrição|
 |----------|-----------------|
@@ -349,7 +349,7 @@ HRESULT GetTypeInfoOfGuid(
 *lcid*<br/>
 Um identificador de localidade ( `LCID`).
 
-*guid*<br/>
+*GUID*<br/>
 O [GUID](https://msdn.microsoft.com/library/windows/desktop/aa373931) da descrição de tipo.
 
 *ppTypeInfo*<br/>
@@ -411,7 +411,7 @@ virtual BOOL IsInvokeAllowed(DISPID dispid);
 
 ### <a name="parameters"></a>Parâmetros
 
-*dispid*<br/>
+*DISPID*<br/>
 Uma ID de expedição.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -524,7 +524,7 @@ void RestoreWaitCursor();
 
 ## <a name="see-also"></a>Consulte também
 
-[Exemplo MFC ACDUAL](../../visual-cpp-samples.md)<br/>
+[Exemplo MFC ACDUAL](../../overview/visual-cpp-samples.md)<br/>
 [Classe CObject](../../mfc/reference/cobject-class.md)<br/>
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
 [Classe CCmdUI](../../mfc/reference/ccmdui-class.md)<br/>

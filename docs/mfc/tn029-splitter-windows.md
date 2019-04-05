@@ -7,12 +7,12 @@ helpviewer_keywords:
 - TN029
 - splitter windows [MFC], about splitter windows
 ms.assetid: 2c57ce99-2a3c-4eff-9cea-baccb13af075
-ms.openlocfilehash: 0c27545c6f425eda952e87c80ed1d37de9e1093a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 6c2f619d9cd619ca598c66ca657faa1b9dccaaa2
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57294987"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58781725"
 ---
 # <a name="tn029-splitter-windows"></a>TN029: Windows divisor
 
@@ -46,7 +46,7 @@ O número máximo de painéis que você pode especificar para divisores dinâmic
 
 ## <a name="splitter-examples"></a>Exemplos de divisor
 
-Muitos dos programas de exemplo do MFC usam janelas separadoras direta ou indiretamente. O exemplo de MFC geral [VIEWEX](../visual-cpp-samples.md) ilustra vários usos de divisores estáticos, inclusive sobre como colocar um divisor em um divisor.
+Muitos dos programas de exemplo do MFC usam janelas separadoras direta ou indiretamente. O exemplo de MFC geral [VIEWEX](../overview/visual-cpp-samples.md) ilustra vários usos de divisores estáticos, inclusive sobre como colocar um divisor em um divisor.
 
 Você também pode usar o ClassWizard para criar um novo vários documento interface MDI filho quadro classe de janela que contém uma janela separadora. Para obter mais informações sobre janelas separadoras, consulte [vários tipos de documentos, exibições e quadro Windows](../mfc/multiple-document-types-views-and-frame-windows.md).
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3345
 ms.assetid: 1dda4c79-73bb-441b-b939-746154c3afba
-ms.openlocfilehash: 196928d7a171aa7ffe2d6b8f38b529d3d3588bc4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: eb1d15a12bfebbf44f7335a848d68c367c285586
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624772"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59027527"
 ---
 # <a name="compiler-error-c3345"></a>Erro do compilador C3345
 
@@ -55,5 +55,5 @@ BOOL WINAPI DllMain(DWORD dwReason, LPVOID lpReserved) {
 ## <a name="see-also"></a>Consulte também
 
 [__iscsym](../../c-runtime-library/reference/iscsym-functions.md)<br/>
-[Classificação de caracteres](../../c-runtime-library/character-classification.md)<br/>
+[Classificação de caractere](../../c-runtime-library/character-classification.md)<br/>
 [module](../../windows/module-cpp.md)

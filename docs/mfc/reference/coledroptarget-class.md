@@ -24,12 +24,12 @@ helpviewer_keywords:
 - COleDropTarget [MFC], Register
 - COleDropTarget [MFC], Revoke
 ms.assetid: a58c9a48-6a93-4357-b078-4594df258311
-ms.openlocfilehash: 127245385ebd89e51a1cc77d1efaa16729d73fe7
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 9a1633ed48c763b986f3421c33589a05f8bba126
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57300110"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58781634"
 ---
 # <a name="coledroptarget-class"></a>Classe COleDropTarget
 
@@ -43,13 +43,13 @@ class COleDropTarget : public CCmdTarget
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
 |[COleDropTarget::COleDropTarget](#coledroptarget)|Constrói um objeto `COleDropTarget`.|
 
-### <a name="public-methods"></a>Métodos Públicos
+### <a name="public-methods"></a>Métodos públicos
 
 |Nome|Descrição|
 |----------|-----------------|
@@ -317,7 +317,7 @@ Aponta para o objeto de dados que contém os dados a ser removido.
 *dropDefault*<br/>
 O efeito que o usuário escolheu para a operação de soltar padrão com base no estado atual da chave. Ele pode ser DROPEFFECT_NONE. Efeitos de soltar são discutidos na seção comentários.
 
-*dropList*<br/>
+*lista suspensa*<br/>
 Uma lista dos efeitos de soltar que ofereça suporte a origem de soltar. Valores de efeito de soltar podem ser combinados usando o OR bit a bit (**&#124;**) operação. Efeitos de soltar são discutidos na seção comentários.
 
 *point*<br/>
@@ -386,8 +386,8 @@ Para obter mais informações, consulte [RevokeDragDrop](/windows/desktop/api/ol
 
 ## <a name="see-also"></a>Consulte também
 
-[Exemplo MFC HIERSVR](../../visual-cpp-samples.md)<br/>
-[Exemplo MFC OCLIENT](../../visual-cpp-samples.md)<br/>
+[Exemplo MFC HIERSVR](../../overview/visual-cpp-samples.md)<br/>
+[Exemplo MFC OCLIENT](../../overview/visual-cpp-samples.md)<br/>
 [Classe CCmdTarget](../../mfc/reference/ccmdtarget-class.md)<br/>
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
 [Classe COleDropSource](../../mfc/reference/coledropsource-class.md)

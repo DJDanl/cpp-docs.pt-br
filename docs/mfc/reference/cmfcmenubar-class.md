@@ -106,12 +106,12 @@ helpviewer_keywords:
 - CMFCMenuBar [MFC], SetRecentlyUsedMenus
 - CMFCMenuBar [MFC], SetShowAllCommands
 ms.assetid: 8a3ce4c7-b012-4dc0-b4f8-53c10b4b86b8
-ms.openlocfilehash: e4b1a7eba31ef28578c515c437978bc59cbd08f1
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 87844e843057bb295c904b5f1b3d7dd03fa4d797
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57267362"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58775888"
 ---
 # <a name="cmfcmenubar-class"></a>Classe CMFCMenuBar
 
@@ -191,7 +191,7 @@ Para usar um `CMFCMenuBar` de objeto, inseri-lo no objeto de quadro de janela pr
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir demonstra como usar vários métodos no `CMFCMenuBar` classe. O exemplo mostra como definir o estilo do painel, habilitar o botão Personalizar, habilitar uma caixa de Ajuda, sombras para menus pop-up e atualizar a barra de menus. Este trecho de código faz parte do [amostra de demonstração do IE](../../visual-cpp-samples.md).
+O exemplo a seguir demonstra como usar vários métodos no `CMFCMenuBar` classe. O exemplo mostra como definir o estilo do painel, habilitar o botão Personalizar, habilitar uma caixa de Ajuda, sombras para menus pop-up e atualizar a barra de menus. Este trecho de código faz parte do [amostra de demonstração do IE](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_IEDemo#1](../../mfc/reference/codesnippet/cpp/cmfcmenubar-class_1.h)]
 [!code-cpp[NVC_MFC_IEDemo#3](../../mfc/reference/codesnippet/cpp/cmfcmenubar-class_2.cpp)]
@@ -395,7 +395,7 @@ Para listas de estilos adicionais, consulte [estilos de botão e controle de bar
 
 ### <a name="example"></a>Exemplo
 
-O exemplo a seguir demonstra como usar o `CreateEx` método da `CMFCMenuBar` classe. Este trecho de código faz parte do [amostra de demonstração do IE](../../visual-cpp-samples.md).
+O exemplo a seguir demonstra como usar o `CreateEx` método da `CMFCMenuBar` classe. Este trecho de código faz parte do [amostra de demonstração do IE](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_IEDemo#1](../../mfc/reference/codesnippet/cpp/cmfcmenubar-class_1.h)]
 [!code-cpp[NVC_MFC_IEDemo#2](../../mfc/reference/codesnippet/cpp/cmfcmenubar-class_3.cpp)]
@@ -464,7 +464,7 @@ static void EnableMenuShadows(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parâmetros
 
-*bEnable*<br/>
+*bAtivar*<br/>
 [in] Um parâmetro booliano que indica se as sombras devem ser habilitadas para menus pop-up.
 
 ### <a name="remarks"></a>Comentários

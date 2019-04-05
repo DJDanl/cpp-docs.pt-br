@@ -8,18 +8,18 @@ helpviewer_keywords:
 - scroll bars [MFC], messages
 - scrolling views [MFC]
 ms.assetid: f98a3421-c336-407e-97ee-dbb2ffd76fbd
-ms.openlocfilehash: 2baa89f233eb6df93cde3adbde35ba1e6d35c093
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 7d26bc656dec3fdcbb8fc5ea4918ec7d59bc5afc
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283703"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58777569"
 ---
 # <a name="scrolling-and-scaling-views"></a>Rolando e colocando exibições em escala
 
 MFC dá suporte a modos de exibição que rolagem e exibições que são dimensionados automaticamente para o tamanho da janela do quadro que exibe-os. Classe `CScrollView` dá suporte a ambos os tipos de modos de exibição.
 
-Para obter mais informações sobre a rolagem e o dimensionamento, consulte a classe [CScrollView](../mfc/reference/cscrollview-class.md) na *referência da MFC*. Para obter um exemplo de rolagem, consulte o [exemplo de Scribble](../visual-cpp-samples.md).
+Para obter mais informações sobre a rolagem e o dimensionamento, consulte a classe [CScrollView](../mfc/reference/cscrollview-class.md) na *referência da MFC*. Para obter um exemplo de rolagem, consulte o [exemplo de Scribble](../overview/visual-cpp-samples.md).
 
 ## <a name="what-do-you-want-to-know-more-about"></a>O que você deseja saber mais sobre
 

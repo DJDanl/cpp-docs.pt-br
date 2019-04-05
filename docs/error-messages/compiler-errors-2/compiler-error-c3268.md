@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3268
 ms.assetid: d74a630c-daea-4e29-9759-83efef7fb184
-ms.openlocfilehash: c766488b29273f321feffa8e38a97e54454db7b1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d9954c12fb1065a4aa5e7afbdecd1f96758acaf9
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50480529"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58778002"
 ---
 # <a name="compiler-error-c3268"></a>Erro do compilador C3268
 
@@ -21,7 +21,7 @@ ms.locfileid: "50480529"
 
 O **/clr: pure** e **/CLR: safe** opções do compilador são preteridas no Visual Studio 2015 e sem suporte no Visual Studio 2017.
 
-Ver [genéricos](../../windows/generics-cpp-component-extensions.md) para obter mais informações.
+Ver [genéricos](../../extensions/generics-cpp-component-extensions.md) para obter mais informações.
 
 ## <a name="example"></a>Exemplo
 

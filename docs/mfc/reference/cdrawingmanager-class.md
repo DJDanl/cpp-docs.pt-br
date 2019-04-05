@@ -56,12 +56,12 @@ helpviewer_keywords:
 - CDrawingManager [MFC], SetPixel
 - CDrawingManager [MFC], SmartMixColors
 ms.assetid: 9e4775ca-101b-4aa9-a85a-4d047c701215
-ms.openlocfilehash: f14b21c97e5a36d5107e7db526e4153446ae2a01
-ms.sourcegitcommit: 90817d9d78fbaed8ffacde63f3add334842e596f
+ms.openlocfilehash: 506ab7a06653942ecff05043a7e7efabd535115f
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58278522"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58781686"
 ---
 # <a name="cdrawingmanager-class"></a>Classe CDrawingManager
 
@@ -75,7 +75,7 @@ class CDrawingManager : public CObject
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
@@ -389,7 +389,7 @@ Se você definir *bRightShadow* como FALSE, a sombra será desenhada abaixo e à
 
 ### <a name="example"></a>Exemplo
 
-O exemplo a seguir demonstra como usar o `DrawShadow` método da `CDrawingManager` classe. Este trecho de código é parte do [amostra de demonstração de folha Prop](../../visual-cpp-samples.md).
+O exemplo a seguir demonstra como usar o `DrawShadow` método da `CDrawingManager` classe. Este trecho de código é parte do [amostra de demonstração de folha Prop](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_PropSheetDemo#1](../../mfc/reference/codesnippet/cpp/cdrawingmanager-class_1.cpp)]
 
@@ -473,7 +473,7 @@ void FillGradient(
 
 ### <a name="example"></a>Exemplo
 
-O exemplo a seguir demonstra como usar o `FillGradient` método da `CDrawingManager` classe. Este trecho de código faz parte de [amostra de demonstração do MS Office 2007](../../visual-cpp-samples.md).
+O exemplo a seguir demonstra como usar o `FillGradient` método da `CDrawingManager` classe. Este trecho de código faz parte de [amostra de demonstração do MS Office 2007](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_MSOffice2007Demo#12](../../mfc/reference/codesnippet/cpp/cdrawingmanager-class_2.cpp)]
 
@@ -509,7 +509,7 @@ Use *nAngle* para especificar a direção do gradiente de cores. Quando você es
 
 ### <a name="example"></a>Exemplo
 
-O exemplo a seguir demonstra como usar o `FillGradient2` método da `CDrawingManager` classe. Este trecho de código é parte do [exemplo de novos controles](../../visual-cpp-samples.md).
+O exemplo a seguir demonstra como usar o `FillGradient2` método da `CDrawingManager` classe. Este trecho de código é parte do [exemplo de novos controles](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#37](../../mfc/reference/codesnippet/cpp/cdrawingmanager-class_3.cpp)]
 
@@ -781,7 +781,7 @@ static COLORREF __stdcall PixelAlpha(
 *srcPixel*<br/>
 [in] A cor inicial para o pixel.
 
-*percent*<br/>
+*{1&gt;percent&lt;1}*<br/>
 [in] Um número entre 0 e 100 que representa a porcentagem de transparência. Um valor de 100 indica que a cor inicial é completamente transparente.
 
 *percentR*<br/>
@@ -930,7 +930,7 @@ static void __stdcall SetAlphaPixel(
 *y*<br/>
 [in] A coordenada vertical do pixel para a cor.
 
-*percent*<br/>
+*{1&gt;percent&lt;1}*<br/>
 [in] A porcentagem de transparência.
 
 *iShadowSize*<br/>
@@ -972,7 +972,7 @@ static void __stdcall SetPixel(
 |*cy*|[in] A altura total do bitmap.|
 |*x*|[in] A coordenada x do pixel no bitmap para alterar.|
 |*y*|[in] A coordenada y do pixel no bitmap para alterar.|
-|*color*|[in] A nova cor para o pixel identificado pelas coordenadas fornecidas.|
+|*cor*|[in] A nova cor para o pixel identificado pelas coordenadas fornecidas.|
 
 ##  <a name="smartmixcolors"></a>  CDrawingManager::SmartMixColors
 

@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3887
 ms.assetid: a7e82426-ef99-437b-9562-2822004e18fe
-ms.openlocfilehash: e41ea1dbe1f2bd47f9b557d502ec95bcecb1e2a2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 85434cb8daba0db82843c09e2d1bb09d98960272
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50428257"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58777435"
 ---
 # <a name="compiler-error-c3887"></a>Erro do compilador C3887
 
 'var': o inicializador para um membro de dados literal deve ser uma expressão constante
 
-Um [literal](../../windows/literal-cpp-component-extensions.md) membro de dados só pode ser inicializado com uma expressão constante.
+Um [literal](../../extensions/literal-cpp-component-extensions.md) membro de dados só pode ser inicializado com uma expressão constante.
 
 O exemplo a seguir gera C3887:
 

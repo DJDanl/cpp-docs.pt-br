@@ -11,12 +11,12 @@ helpviewer_keywords:
 - ifndef directive (#ifndef)
 - '#ifndef directive'
 ms.assetid: 2b0be69d-9e72-45d8-8e24-e4130fb2455b
-ms.openlocfilehash: 418b19e844d56fa2f33cf91a1b072e9add771eb2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d7a6a1604df03f0607f33e42880270cbdcd62e8b
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50643788"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59027224"
 ---
 # <a name="ifdef-and-ifndef-directives-cc"></a>Diretivas #ifdef e #ifndef (C/C++)
 O **#ifdef** e **#ifndef** diretivas de executam a mesma tarefa como o `#if` diretiva quando ele é usado com **definidas**( *identificador* ).
@@ -40,7 +40,7 @@ Essas políticas são fornecidas somente para compatibilidade com versões anter
 
 O **#ifndef** diretiva verifica o oposto da condição verificada por **#ifdef**. Se o identificador não foi definido (ou a definição foi removida com `#undef`), a condição é true (diferente de zero). Caso contrário, a condição será false (0).
 
-**Seção específica da Microsoft**
+**Específico da Microsoft**
 
 O *identificador* podem ser passados de linha de comando usando o `/D` opção. Até 30 macros pode ser especificado com `/D`.
 
@@ -54,8 +54,8 @@ Isso é útil para verificar se uma definição existe, uma vez que uma definiç
 #endif
 ```
 
-**Fim da seção específica da Microsoft**
+**FIM de Específico da Microsoft**
 
 ## <a name="see-also"></a>Consulte também
 
-[Diretivas do pré-processador](../preprocessor/preprocessor-directives.md)
+[Diretivas de pré-processador](../preprocessor/preprocessor-directives.md)

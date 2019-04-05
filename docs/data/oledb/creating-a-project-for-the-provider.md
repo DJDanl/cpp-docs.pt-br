@@ -6,12 +6,12 @@ helpviewer_keywords:
 - OLE DB providers, projects
 - projects [C++], creating
 ms.assetid: 076a75de-1d4b-486a-bcf8-9c0f6b049fa2
-ms.openlocfilehash: f63b09d47dd8f3ebe8750275bb005be89ca8fde8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dc085b1f663369033947ed2a5577f334dd79c0aa
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677104"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59030732"
 ---
 # <a name="creating-a-project-for-the-provider"></a>Criando um projeto para o provedor
 
@@ -36,4 +36,4 @@ ms.locfileid: "50677104"
 
 ## <a name="see-also"></a>Consulte também
 
-[Criando um provedor do OLE DB](../../data/oledb/creating-an-ole-db-provider.md)
+[Criando um provedor de banco de dados OLE](../../data/oledb/creating-an-ole-db-provider.md)

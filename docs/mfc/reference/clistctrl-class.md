@@ -265,10 +265,10 @@ helpviewer_keywords:
 - CListCtrl [MFC], Update
 ms.assetid: fe08a1ca-4b05-4ff7-a12a-ee4c765a2197
 ms.openlocfilehash: eea37d03ca5a4fab450fbca0c4c3f6c76fefb407
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58780607"
 ---
 # <a name="clistctrl-class"></a>Classe CListCtrl
@@ -2116,7 +2116,7 @@ int GetNextSelectedItem(POSITION& pos) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*pos*<br/>
+*POS*<br/>
 Uma referência a um valor de posição retornado por uma chamada anterior a `GetNextSelectedItem` ou `GetFirstSelectedItemPosition`. O valor é atualizado para a próxima posição por essa chamada.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -2556,7 +2556,7 @@ void GetWorkAreas(
 *nWorkAreas*<br/>
 O número de `RECT` estruturas contidas em de *prc* matriz.
 
-*prc*<br/>
+*República Popular da China*<br/>
 Um ponteiro para uma matriz de `RECT` estruturas (ou [CRect](../../atl-mfc-shared/reference/crect-class.md) objetos) que recebem as áreas de trabalho do controle de exibição de lista. Valores essas estruturas são nas coordenadas do cliente.
 
 ### <a name="remarks"></a>Comentários
@@ -2702,7 +2702,7 @@ LRESULT InsertGroup(
 
 ### <a name="parameters"></a>Parâmetros
 
-*index*<br/>
+*índice*<br/>
 O índice do item no qual o grupo deve ser inserido.
 
 *pgrp*<br/>
@@ -2875,7 +2875,7 @@ BOOL IsItemVisible(int index) const;
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|*index*|[in] Índice baseado em zero de um item no controle de exibição de lista atual.|
+|*índice*|[in] Índice baseado em zero de um item no controle de exibição de lista atual.|
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -2923,7 +2923,7 @@ UINT MapIndexToID(UINT index) const;
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|*index*|[in] O índice baseado em zero de um item.|
+|*índice*|[in] O índice baseado em zero de um item.|
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -3043,7 +3043,7 @@ BOOL RedrawItems(
 *nFirst*<br/>
 Índice do primeiro item a ser pintada novamente.
 
-*nLast*<br/>
+*núltima*<br/>
 Índice do último item a ser pintada novamente.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -3598,7 +3598,7 @@ COLORREF SetInsertMarkColor(COLORREF color);
 
 ### <a name="parameters"></a>Parâmetros
 
-*color*<br/>
+*cor*<br/>
 Um [COLORREF](/windows/desktop/gdi/colorref) estrutura que especifica a cor para definir o ponto de inserção.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -3955,7 +3955,7 @@ COLORREF SetOutlineColor(COLORREF color);
 
 ### <a name="parameters"></a>Parâmetros
 
-*color*<br/>
+*cor*<br/>
 O novo [COLORREF](/windows/desktop/gdi/colorref) estrutura que contém a cor do contorno.
 
 ### <a name="return-value"></a>Valor de retorno

@@ -4,12 +4,12 @@ ms.date: 10/22/2018
 helpviewer_keywords:
 - schema rowsets, defined
 ms.assetid: 0716a065-230c-4c20-bb53-98870e79ea29
-ms.openlocfilehash: 9be586d4bd9c0b5591dbab3202b9fc44d0924a5a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c0ec284b4bb366b72eae86f684346f70bfb44239
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50556579"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59028228"
 ---
 # <a name="schema-rowsets"></a>Conjuntos de linhas do esquema
 
@@ -19,4 +19,4 @@ Para obter informações sobre como usar conjuntos de linhas de esquema, consult
 
 ## <a name="see-also"></a>Consulte também
 
-[Modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)
+[Modelos de consumidor de banco de dados OLE](../../data/oledb/ole-db-consumer-templates-cpp.md)

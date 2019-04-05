@@ -1,5 +1,5 @@
 ---
-title: 'Conjunto de registros: recuperando registros em massa (ODBC)'
+title: 'Conjunto de registros: Buscando registros em massa (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - bulk row fetching, implementing
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - rowsets, bulk row fetching
 - RFX (ODBC), bulk row fetching
 ms.assetid: 20d10fe9-c58a-414a-b675-cdf9aa283e4f
-ms.openlocfilehash: 55a89a66b36d12e6341b85d7dfa655b299638fcd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2fdcbf18fcb0d97ba7b2a39aa9bbbd79e65a4112
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50628196"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59027760"
 ---
-# <a name="recordset-fetching-records-in-bulk-odbc"></a>Conjunto de registros: recuperando registros em massa (ODBC)
+# <a name="recordset-fetching-records-in-bulk-odbc"></a>Conjunto de registros: Buscando registros em massa (ODBC)
 
 Este tópico se aplica às classes ODBC do MFC.
 
@@ -137,7 +137,7 @@ void MultiRowSet::DoBulkFieldExchange( CFieldExchange* pFX )
 > [!NOTE]
 >  Você deve chamar o `Close` função de membro antes de sua derivada `CRecordset` classe sai do escopo. Isso garante que toda a memória alocada pela estrutura sejam liberados. Ela é boa prática chamar sempre explicitamente `Close`, independentemente de se você tiver implementado a busca de linhas em massa.
 
-Para obter mais informações sobre como registrar troca de campos (RFX), consulte [troca de campos do registro: como funciona a RFX](../../data/odbc/record-field-exchange-how-rfx-works.md). Para obter mais informações sobre como usar parâmetros, consulte [CFieldExchange::SetFieldType](../../mfc/reference/cfieldexchange-class.md#setfieldtype) e [conjunto de registros: parametrizando um conjunto de registros (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).
+Para obter mais informações sobre como registrar troca de campos (RFX), consulte [troca de campos do registro: Como funciona RFX](../../data/odbc/record-field-exchange-how-rfx-works.md). Para obter mais informações sobre como usar parâmetros, consulte [CFieldExchange::SetFieldType](../../mfc/reference/cfieldexchange-class.md#setfieldtype) e [conjunto de registros: Parametrizando um conjunto de registros (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).
 
 ## <a name="see-also"></a>Consulte também
 
