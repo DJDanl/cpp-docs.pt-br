@@ -21,12 +21,12 @@ helpviewer_keywords:
 - elif directive (#elif)
 - defined directive
 ms.assetid: c77a175f-6ca8-47d4-8df9-7bac5943d01b
-ms.openlocfilehash: 76b8be265145896105490a82946c50bc576e6f9f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 90fbab45c6408c30198c2a52a42545718002cc11
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50520409"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59028085"
 ---
 # <a name="if-elif-else-and-endif-directives-cc"></a>Diretivas #if, #elif, #else e #endif (C/C++)
 
@@ -37,35 +37,35 @@ O **#if** diretiva, com o **#elif**, **#else**, e **#endif** diretivas de compil
 *condicional* :<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Se-part elif-partes*<sub>opt</sub> *parte else*<sub>aceitação</sub> *Part&lt;3}{4&gt;opt&lt;4}{5&gt;endif-line&lt;5*
 
-*Se parte* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*texto if-line*
+*if-part* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*if-line text*
 
 *if-line* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#if***expressão constante*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#ifdef***identificador*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#ifndef***identificador*
+&nbsp;&nbsp;&nbsp;&nbsp;**#if**  *constant-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#ifdef**  *identifier*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#ifndef**  *identifier*
 
 *elif partes* :<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*texto de linha elif*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*texto de linha elif partes elif*
 
-*linha elif* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#elif***expressão constante*
+*elif-line* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#elif**  *constant-expression*
 
-*outra parte* :<br/>
+*else-part* :<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*texto Else-line*
 
-*outra linha* :<br/>
+*else-line* :<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**#else**
 
-*linha endif* :<br/>
+*endif-line* :<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**#endif**
 
 Cada **#if** diretiva em um arquivo de origem deve ser correspondida por um fechamento **#endif** diretiva. Qualquer número de **#elif** diretivas podem aparecer entre as **#if** e **#endif** diretivas, mas no máximo uma **#else** diretiva é permitida. O **#else** diretiva, se presente, deve ser a última política antes **#endif**.
 
 O **#if**, **#elif**, **#else**, e **#endif** diretivas podem ser aninhadas nas partes de texto de outro **#if**diretivas. Cada aninhados **#else**, **#elif**, ou **#endif** pertence precedente mais próxima diretiva **#if** diretiva.
 
-Todas as diretivas de compilação condicional, tal como **#if** e **#ifdef**, devem ser correspondidas com fechamento **#endif** diretivas antes do final do arquivo; caso contrário, um erro mensagem é gerada. Quando as políticas de compilação condicional estão contidas em arquivos de inclusão, elas devem satisfazer às mesmas circunstâncias: não deve haver nenhuma política de compilação condicional sem correspondência no fim do arquivo de inclusão.
+Todas as diretivas de compilação condicional, tal como **#if** e **#ifdef**, devem ser correspondidas com fechamento **#endif** diretivas antes do final do arquivo; caso contrário, um erro mensagem é gerada. Quando as diretivas de compilação condicional estão contidas em arquivos de inclusão, elas devem satisfazer às mesmas condições: Não deve haver nenhum diretivas de compilação condicional sem correspondência no final do arquivo de inclusão.
 
 Substituição de macro é executada na parte da linha de comando que segue uma **#elif** de comando, portanto, uma chamada de macro pode ser usada na *expressão de constante*.
 
@@ -97,7 +97,7 @@ O operador de pré-processador **definidas** pode ser usado em expressões de co
 
 defined( `identifier` )
 
-defined `identifier`
+definido `identifier`
 
 Esta expressão constante é considerada verdadeira (diferente de zero) se o *identificador* estiver definido; caso contrário, a condição for false (0). Um identificador definido como texto vazio é considerado definido. O **definidos** diretiva pode ser usada em um **#if** e um **#elif** diretiva, mas nenhum outro lugar.
 
@@ -174,7 +174,7 @@ O código acima verifica se a constante `EXAMPLE_H` foi definida. Em caso afirma
 
 ## <a name="hasinclude"></a>__has_include
 
-**Visual Studio 2017 versão 15.3 e posterior**: determina se um cabeçalho de biblioteca está disponível para inclusão:
+**Visual Studio 2017 versão 15.3 e posteriores**:  Determina se um cabeçalho de biblioteca está disponível para inclusão:
 
 ```cpp
 #ifdef __has_include
@@ -193,4 +193,4 @@ O código acima verifica se a constante `EXAMPLE_H` foi definida. Em caso afirma
 
 ## <a name="see-also"></a>Consulte também
 
-[Diretivas do pré-processador](../preprocessor/preprocessor-directives.md)
+[Diretivas de pré-processador](../preprocessor/preprocessor-directives.md)

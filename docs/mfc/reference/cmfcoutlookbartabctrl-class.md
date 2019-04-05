@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CMFCOutlookBarTabCtrl [MFC], SetToolbarImageList
 - CMFCOutlookBarTabCtrl [MFC], SetVisiblePageButtons
 ms.assetid: b1f2b3f7-cc59-49a3-99d8-7ff9b37c044b
-ms.openlocfilehash: 01effb8cb1142db0bcae6f9c456e4a3b3abd69e8
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c791f3988c7257ed7d188917394e74a6dbeca98b
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57269925"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58776798"
 ---
 # <a name="cmfcoutlookbartabctrl-class"></a>Classe CMFCOutlookBarTabCtrl
 
@@ -63,7 +63,7 @@ class CMFCOutlookBarTabCtrl : public CMFCBaseTabCtrl
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
@@ -109,7 +109,7 @@ Para criar uma barra do Outlook que tem suporte de encaixe, use um `CMFCOutlookB
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir demonstra como inicializar uma `CMFCOutlookBarTabCtrl` do objeto e usar vários métodos no `CMFCOutlookBarTabCtrl` classe. O exemplo mostra como habilitar a edição in-loco do rótulo de texto nos botões de página de guia da barra do Outlook, habilitar a animação, habilitar identificadores de rolagem que permitem que o usuário role por meio de botões no painel da barra do Outlook, defina o tamanho da borda da continuação de guia do Outlook função e defina o alinhamento dos rótulos de texto dos botões da guia da barra do Outlook. Este trecho de código faz parte do [amostra de demonstração do Outlook](../../visual-cpp-samples.md).
+O exemplo a seguir demonstra como inicializar uma `CMFCOutlookBarTabCtrl` do objeto e usar vários métodos no `CMFCOutlookBarTabCtrl` classe. O exemplo mostra como habilitar a edição in-loco do rótulo de texto nos botões de página de guia da barra do Outlook, habilitar a animação, habilitar identificadores de rolagem que permitem que o usuário role por meio de botões no painel da barra do Outlook, defina o tamanho da borda da continuação de guia do Outlook função e defina o alinhamento dos rótulos de texto dos botões da guia da barra do Outlook. Este trecho de código faz parte do [amostra de demonstração do Outlook](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_OutlookDemo#1](../../mfc/reference/codesnippet/cpp/cmfcoutlookbartabctrl-class_1.cpp)]
 [!code-cpp[NVC_MFC_OutlookDemo#2](../../mfc/reference/codesnippet/cpp/cmfcoutlookbartabctrl-class_2.cpp)]
@@ -170,7 +170,7 @@ Se você definir *bDetachable* como TRUE, o `AddControl` cria internamente uma `
 
 ### <a name="example"></a>Exemplo
 
-O exemplo a seguir demonstra como usar o `AddControl` método no `CMFCOutlookBarTabCtrl` classe. Este trecho de código faz parte do [amostra de demonstração do Outlook](../../visual-cpp-samples.md).
+O exemplo a seguir demonstra como usar o `AddControl` método no `CMFCOutlookBarTabCtrl` classe. Este trecho de código faz parte do [amostra de demonstração do Outlook](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_OutlookDemo#3](../../mfc/reference/codesnippet/cpp/cmfcoutlookbartabctrl-class_3.cpp)]
 
@@ -246,7 +246,7 @@ static void EnableAnimation(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>Parâmetros
 
-*bEnable*<br/>
+*bAtivar*<br/>
 [in] Especifica se a animação deve ser habilitada ou desabilitada.
 
 ### <a name="remarks"></a>Comentários
@@ -265,7 +265,7 @@ virtual void EnableInPlaceEdit(BOOL bEnable);
 
 ### <a name="parameters"></a>Parâmetros
 
-*bEnable*<br/>
+*bAtivar*<br/>
 Se for TRUE, habilite a edição in-loco do rótulo de texto. Se for FALSE, desabilite a edição in-loco.
 
 ### <a name="remarks"></a>Comentários
@@ -285,7 +285,7 @@ void EnableScrollButtons(
 
 ### <a name="parameters"></a>Parâmetros
 
-*bEnable*<br/>
+*bAtivar*<br/>
 [in] Determina se os botões de rolagem são exibidos.
 
 *bIsUp*<br/>

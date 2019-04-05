@@ -5,12 +5,12 @@ helpviewer_keywords:
 - OLE DB providers, multithreaded
 - threading [C++], providers
 ms.assetid: a91270dc-cdf9-4855-88e7-88a54be7cbe8
-ms.openlocfilehash: 14acaa6ad96f74b2a3f88ca366a43caa9199a1d8
-ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
+ms.openlocfilehash: a2afb7354dd0447375ee6205b7c5d9a4755aa4b8
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51265029"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59025332"
 ---
 # <a name="supporting-free-threading-in-your-provider"></a>Dando suporte ao thread livre no provedor
 
@@ -37,10 +37,10 @@ HRESULT MyObject::MyMethod(void)
 }
 ```
 
-Para obter mais informações sobre como proteger seções críticas com `Lock` e `Unlock`, consulte [Multithreading: como usar as Classes de sincronização](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).
+Para obter mais informações sobre como proteger seções críticas com `Lock` e `Unlock`, consulte [Multithreading: Como usar as Classes de sincronização](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).
 
 Verifique se todos os métodos que você substituir (como `Execute`) são thread-safe.
 
 ## <a name="see-also"></a>Consulte também
 
-[Trabalhando com modelos de provedor do OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)
+[Trabalhando com modelos de provedor de banco de dados OLE](../../data/oledb/working-with-ole-db-provider-templates.md)

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CMFCFontComboBox [MFC], Setup
 - CMFCFontComboBox [MFC], m_bDrawUsingFont
 ms.assetid: 9a53fb0c-7b45-486d-8187-2a4c723d9fbb
-ms.openlocfilehash: 6d0b2fc22d1d0779db17e970118694270a206439
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: ccc4e545b2274d6dbb9989cfb9c047de819b8d32
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57272666"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58781296"
 ---
 # <a name="cmfcfontcombobox-class"></a>Classe CMFCFontComboBox
 
@@ -35,7 +35,7 @@ class CMFCFontComboBox : public CComboBox
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
@@ -151,7 +151,7 @@ Use esse método para selecionar e role até o item na caixa de combinação de 
 
 ### <a name="example"></a>Exemplo
 
-O exemplo a seguir demonstra como usar o `SelectFont` método no `CMFCFontComboBox` classe. Este exemplo é parte do [exemplo de novos controles](../../visual-cpp-samples.md).
+O exemplo a seguir demonstra como usar o `SelectFont` método no `CMFCFontComboBox` classe. Este exemplo é parte do [exemplo de novos controles](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#34](../../mfc/reference/codesnippet/cpp/cmfcfontcombobox-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#35](../../mfc/reference/codesnippet/cpp/cmfcfontcombobox-class_2.cpp)]
@@ -188,7 +188,7 @@ Esse método inicializa a caixa de combinação de fonte enumerando as fontes at
 
 ### <a name="example"></a>Exemplo
 
-O exemplo a seguir demonstra como usar o `Setup` método no `CMFCFontComboBox` classe. Este exemplo é parte do [exemplo de novos controles](../../visual-cpp-samples.md).
+O exemplo a seguir demonstra como usar o `Setup` método no `CMFCFontComboBox` classe. Este exemplo é parte do [exemplo de novos controles](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#34](../../mfc/reference/codesnippet/cpp/cmfcfontcombobox-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#36](../../mfc/reference/codesnippet/cpp/cmfcfontcombobox-class_3.cpp)]

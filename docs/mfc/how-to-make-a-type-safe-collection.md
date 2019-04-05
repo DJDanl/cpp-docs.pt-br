@@ -10,12 +10,12 @@ helpviewer_keywords:
 - serialization [MFC], collection classes
 - collection classes [MFC], deriving from nontemplate
 ms.assetid: 7230b2db-4283-4083-b098-eb231bf5b89e
-ms.openlocfilehash: d4241a77184458f5253b6d8987c310604310683c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c8be781bad699edb8cb0be844d79802269c3e0c5
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57295182"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58781517"
 ---
 # <a name="how-to-make-a-type-safe-collection"></a>Como: Fazer uma coleção fortemente tipada
 
@@ -27,7 +27,7 @@ Este artigo explica como criar coleções fortemente tipadas para seus próprios
 
 - [Usando classes de coleção de fora do modelo](#_core_using_nontemplate_collection_classes)
 
-A biblioteca Microsoft Foundation Class fornece predefinidas coleções fortemente tipadas com base em modelos de C++. Porque eles são modelos, essas classes ajudam a fornecer o tipo de segurança e facilidade de uso sem a conversão de tipo e outro trabalho extra envolvidas no uso de uma classe de fora do modelo para essa finalidade. O exemplo MFC [COLETAR](../visual-cpp-samples.md) demonstra o uso de classes de coleção com base em modelo em um aplicativo MFC. Em geral, use essas classes sempre que você escrever novo código de coleções.
+A biblioteca Microsoft Foundation Class fornece predefinidas coleções fortemente tipadas com base em modelos de C++. Porque eles são modelos, essas classes ajudam a fornecer o tipo de segurança e facilidade de uso sem a conversão de tipo e outro trabalho extra envolvidas no uso de uma classe de fora do modelo para essa finalidade. O exemplo MFC [COLETAR](../overview/visual-cpp-samples.md) demonstra o uso de classes de coleção com base em modelo em um aplicativo MFC. Em geral, use essas classes sempre que você escrever novo código de coleções.
 
 ##  <a name="_core_using_template.2d.based_classes_for_type_safety"></a> Usando Classes com base no modelo de segurança de tipo
 

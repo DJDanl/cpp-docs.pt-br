@@ -6,12 +6,12 @@ helpviewer_keywords:
 - dynamic column binding
 - providers [C++], dynamic column binding
 ms.assetid: 45e811e3-f5a7-4627-98cc-bf817c4e556e
-ms.openlocfilehash: 0f681907360812f51b34b187ee0ece776816cc82
-ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
+ms.openlocfilehash: 3c66cf58ce1f8b83b2b3308c8dabba6cf8cdf0ef
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51264600"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033846"
 ---
 # <a name="dynamically-binding-columns-in-your-provider"></a>Colunas de associação dinâmicas no provedor
 
@@ -88,4 +88,4 @@ Verifique se que você realmente precisa de associação de coluna dinâmica. Vo
 
 ## <a name="see-also"></a>Consulte também
 
-[Trabalhando com modelos de provedor do OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)
+[Trabalhando com modelos de provedor de banco de dados OLE](../../data/oledb/working-with-ole-db-provider-templates.md)

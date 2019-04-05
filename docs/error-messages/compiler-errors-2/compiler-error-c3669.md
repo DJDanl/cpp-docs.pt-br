@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3669
 ms.assetid: be9c7ae4-e96f-47ab-922a-39a3537d5ca6
-ms.openlocfilehash: c2e92fec7c3faeda80bf7f0be3caa33e5d78295b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3b0ad3aa7395f5f423c8c36f547d4a0e2ad792c1
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50550274"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58777097"
 ---
 # <a name="compiler-error-c3669"></a>Erro do compilador C3669
 
 'member': especificador de substituição 'override' não permitido em funções de membro estático ou em construtores
 
-Uma substituição foi especificada incorretamente. Para obter mais informações, consulte [substituições explícitas](../../windows/explicit-overrides-cpp-component-extensions.md).
+Uma substituição foi especificada incorretamente. Para obter mais informações, consulte [substituições explícitas](../../extensions/explicit-overrides-cpp-component-extensions.md).
 
 ## <a name="example"></a>Exemplo
 

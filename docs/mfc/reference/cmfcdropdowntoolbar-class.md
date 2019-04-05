@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CMFCDropDownToolBar [MFC], OnSendCommand
 - CMFCDropDownToolBar [MFC], OnUpdateCmdUI
 ms.assetid: 78818ec5-83ce-42fa-a0d4-2d9d5ecc8770
-ms.openlocfilehash: 704d48cc546943d818ae8b898060fe0f7e203c53
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: f2c4135d2a27928dbde4299fa1f8eda42237d893
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57303547"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58776785"
 ---
 # <a name="cmfcdropdowntoolbar-class"></a>Classe CMFCDropDownToolBar
 
@@ -76,7 +76,7 @@ Para obter mais informações sobre os botões de barra de ferramentas, consulte
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir demonstra como usar o `Create` método no `CMFCDropDownToolBar` classe. Este trecho de código faz parte do [amostra de demonstração do Visual Studio](../../visual-cpp-samples.md).
+O exemplo a seguir demonstra como usar o `Create` método no `CMFCDropDownToolBar` classe. Este trecho de código faz parte do [amostra de demonstração do Visual Studio](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#29](../../mfc/codesnippet/cpp/cmfcdropdowntoolbar-class_1.h)]
 [!code-cpp[NVC_MFC_VisualStudioDemo#30](../../mfc/codesnippet/cpp/cmfcdropdowntoolbar-class_2.cpp)]
@@ -138,7 +138,7 @@ virtual BOOL LoadBitmap(
 *uiMenuResID*<br/>
 [in] A ID de recurso do bitmap que se refere às imagens do menu comum.
 
-*bLocked*<br/>
+*Bloqueado*<br/>
 [in] TRUE para bloquear a barra de ferramentas. Caso contrário, FALSE.
 
 *uiDisabledResID*<br/>

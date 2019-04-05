@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2144
 ms.assetid: 49f3959b-324f-4c06-9588-c0ecef5dc5b3
-ms.openlocfilehash: f6472fc70ee4a86bed1422941e758127009f14cb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a75330d26b0924e60f7e46d10d617341709d7e23
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50483324"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58778280"
 ---
 # <a name="compiler-error-c2144"></a>Erro do compilador C2144
 
@@ -23,7 +23,7 @@ Esse erro pode ser causado por uma chave de fechamento ausente, parêntese direi
 
 C2144 também pode ocorrer ao tentar criar uma macro de uma palavra-chave CLR que contém um caractere de espaço em branco.
 
-Você também poderá ver C2144 se você está tentando fazer o encaminhamento de tipo. Ver [encaminhamento de tipo (C + + / CLI)](../../windows/type-forwarding-cpp-cli.md) para obter mais informações.
+Você também poderá ver C2144 se você está tentando fazer o encaminhamento de tipo. Ver [encaminhamento de tipo (C + + / CLI)](../../extensions/type-forwarding-cpp-cli.md) para obter mais informações.
 
 ## <a name="examples"></a>Exemplos
 

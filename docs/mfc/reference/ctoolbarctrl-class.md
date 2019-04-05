@@ -182,12 +182,12 @@ helpviewer_keywords:
 - CToolBarCtrl [MFC], SetToolTips
 - CToolBarCtrl [MFC], SetWindowTheme
 ms.assetid: 8f2f8ad2-05d7-4975-8715-3f2eed795248
-ms.openlocfilehash: 97854a554be729b75d50f09b0627ffc94b1b093f
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 92f5adcea50e660ecfad131313247e118312e609
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424477"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58781257"
 ---
 # <a name="ctoolbarctrl-class"></a>Classe CToolBarCtrl
 
@@ -201,13 +201,13 @@ class CToolBarCtrl : public CWnd
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
 |[CToolBarCtrl::CToolBarCtrl](#ctoolbarctrl)|Constrói um objeto `CToolBarCtrl`.|
 
-### <a name="public-methods"></a>Métodos Públicos
+### <a name="public-methods"></a>Métodos públicos
 
 |Nome|Descrição|
 |----------|-----------------|
@@ -579,7 +579,7 @@ BOOL CheckButton(
 *nID*<br/>
 Identificador do botão para marcar ou desmarcar o comando.
 
-*bCheck*<br/>
+*bVerificar*<br/>
 True para seleção do botão, FALSE para limpá-lo.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -755,7 +755,7 @@ BOOL EnableButton(
 *nID*<br/>
 Identificador do botão Habilitar ou desabilitar o comando.
 
-*bEnable*<br/>
+*bAtivar*<br/>
 TRUE para habilitar o botão; FALSE para desabilitar o botão.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1587,7 +1587,7 @@ ID de um bitmap que contém as imagens a serem carregadas. Para especificar seu 
 |IDB_VIEW_LARGE_COLOR|Bitmaps de modo de exibição de tamanho grande|
 |IDB_VIEW_SMALL_COLOR|Bitmaps de modo de exibição de tamanho pequeno|
 
-*hinst*<br/>
+*HINST*<br/>
 Identificador de instância do programa para o aplicativo de chamada. Esse parâmetro pode ser HINST_COMMCTRL para carregar uma lista de imagens padrão.
 
 ### <a name="remarks"></a>Comentários
@@ -2386,8 +2386,8 @@ Essa função membro emula a funcionalidade dos [TB_SETWINDOWTHEME](/windows/des
 
 ## <a name="see-also"></a>Consulte também
 
-[CMNCTRL1 de exemplo do MFC](../../visual-cpp-samples.md)<br/>
-[Exemplo MFC MFCIE](../../visual-cpp-samples.md)<br/>
+[CMNCTRL1 de exemplo do MFC](../../overview/visual-cpp-samples.md)<br/>
+[Exemplo MFC MFCIE](../../overview/visual-cpp-samples.md)<br/>
 [Classe CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
 [Classe CToolBar](../../mfc/reference/ctoolbar-class.md)

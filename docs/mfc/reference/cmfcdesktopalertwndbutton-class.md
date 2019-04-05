@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CMFCDesktopAlertWndButton [MFC], IsCaptionButton
 - CMFCDesktopAlertWndButton [MFC], IsCloseButton
 ms.assetid: df39a0c8-0c39-4ab0-8c64-78c5b2c4ecaf
-ms.openlocfilehash: 2a9ade332c87f293719872e426fb459b011d2d35
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 639342e0a09a6e970478fce1b5aac629f03c2015
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270248"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58776928"
 ---
 # <a name="cmfcdesktopalertwndbutton-class"></a>Classe CMFCDesktopAlertWndButton
 
@@ -29,7 +29,7 @@ class CMFCDesktopAlertWndButton : public CMFCButton
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |||
 |-|-|
@@ -61,7 +61,7 @@ Adicione `CMFCDesktopAlertWndButton` objetos para um `CMFCDesktopAlertDialog` co
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir demonstra como usar o `SetImage` método no `CMFCDesktopAlertWndButton` classe. Este trecho de código faz parte do [amostra de demonstração de alerta da área de trabalho](../../visual-cpp-samples.md).
+O exemplo a seguir demonstra como usar o `SetImage` método no `CMFCDesktopAlertWndButton` classe. Este trecho de código faz parte do [amostra de demonstração de alerta da área de trabalho](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_DesktopAlertDemo#4](../../mfc/reference/codesnippet/cpp/cmfcdesktopalertwndbutton-class_1.h)]
 [!code-cpp[NVC_MFC_DesktopAlertDemo#5](../../mfc/reference/codesnippet/cpp/cmfcdesktopalertwndbutton-class_2.cpp)]

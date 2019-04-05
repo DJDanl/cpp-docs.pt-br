@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - coclass attribute
 ms.assetid: 42da6a10-3af9-4b43-9a1d-689d00b61eb3
-ms.openlocfilehash: 69f749dd6f8b2a8c42b4c75dd3790b9f7fbcf291
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e1f99a2780ab4f451533a3e797e473f60680c6ab
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50603080"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59035196"
 ---
 # <a name="coclass"></a>coclass
 
@@ -131,7 +131,7 @@ public:
 
 |||
 |-|-|
-|**Aplica-se a**|**classe**, **struct**|
+|**Aplica-se a**|**class**, **struct**|
 |**Repetível**|Não|
 |**Atributos obrigatórios**|Nenhum|
 |**Atributos inválidos**|Nenhum|
@@ -140,8 +140,8 @@ Para obter mais informações sobre os contextos de atributo, consulte [contexto
 
 ## <a name="see-also"></a>Consulte também
 
-[Atributos de IDL](idl-attributes.md)<br/>
-[Atributos de COM](com-attributes.md)<br/>
+[Atributos IDL](idl-attributes.md)<br/>
+[Atributos COM](com-attributes.md)<br/>
 [Atributos de classe](class-attributes.md)<br/>
 [Atributos Typedef, Enum, Union e Struct](typedef-enum-union-and-struct-attributes.md)<br/>
 [appobject](appobject.md)

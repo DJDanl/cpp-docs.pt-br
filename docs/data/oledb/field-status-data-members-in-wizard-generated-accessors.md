@@ -5,12 +5,12 @@ helpviewer_keywords:
 - OLE DB consumer templates, field status
 - field status in OLE DB templates
 ms.assetid: 66e4e223-c60c-471e-860d-d23abcdfe371
-ms.openlocfilehash: 46cf285e07bffe178874546d13d196b5165cb28b
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: dd650b7cafef78e23c23ddfef791c88b6b93727f
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524352"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59025066"
 ---
 # <a name="field-status-data-members-in-wizard-generated-accessors"></a>Membros de dados do status de campo em acessadores gerados por assistente
 
@@ -106,4 +106,4 @@ Quando você usa `CDynamicAccessor`, o comprimento e o status associados para vo
 
 ## <a name="see-also"></a>Consulte também
 
-[Trabalhando com modelos de consumidor do OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)
+[Trabalhando com modelos de consumidor de banco de dados OLE](../../data/oledb/working-with-ole-db-consumer-templates.md)

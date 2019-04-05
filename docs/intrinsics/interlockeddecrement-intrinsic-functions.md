@@ -44,16 +44,16 @@ helpviewer_keywords:
 - _InterlockedDecrement64_nf intrinsic
 - InterlockedDecrement_rel intrinsic
 ms.assetid: 5268fce3-86b5-4b2b-b96c-2e531a3fb9b5
-ms.openlocfilehash: e2816d99991fcd051c5bbfbe6f4be6a43db2ef2e
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: 525c40f4260d59f370f0580d2cb7d9e8f184ee4c
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328552"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59035072"
 ---
 # <a name="interlockeddecrement-intrinsic-functions"></a>Funções intrínsecas _InterlockedDecrement
 
-**Seção específica da Microsoft**
+**Específico da Microsoft**
 
 Fornece suporte intrínseco ao compilador para o SDK do Windows Win32 [InterlockedDecrement](/windows/desktop/api/winnt/nf-winnt-interlockeddecrement) função.
 
@@ -200,4 +200,4 @@ void __cdecl SimpleThread(void* pParam) {
 
 [Intrínsecos do compilador](../intrinsics/compiler-intrinsics.md)<br/>
 [Palavras-chave](../cpp/keywords-cpp.md)<br/>
-[conflitos com o compilador x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)
+[Conflitos com o compilador x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

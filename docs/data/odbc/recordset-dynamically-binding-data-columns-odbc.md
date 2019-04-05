@@ -1,5 +1,5 @@
 ---
-title: 'Conjunto de registros: associando dinamicamente colunas de dados (ODBC)'
+title: 'Conjunto de registros: Associando dinamicamente colunas de dados (ODBC)'
 ms.date: 11/19/2018
 helpviewer_keywords:
 - ODBC recordsets [C++], binding columns dynamically
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - data binding [C++], columns in recordsets
 - columns [C++], binding to recordsets
 ms.assetid: bff67254-d953-4ae4-9716-91c348cb840b
-ms.openlocfilehash: c2fc870ba08bbec0a886b3d77281f3c697ae09fe
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: c2f2a6a6696f46fb5b8f2777c6c911269c9e7a80
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175659"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59035109"
 ---
-# <a name="recordset-dynamically-binding-data-columns-odbc"></a>Conjunto de registros: associando dinamicamente colunas de dados (ODBC)
+# <a name="recordset-dynamically-binding-data-columns-odbc"></a>Conjunto de registros: Associando dinamicamente colunas de dados (ODBC)
 
 Este tópico se aplica às classes ODBC do MFC.
 
@@ -26,7 +26,7 @@ Colunas da tabela de associação que você especificou em tempo de design de ge
 - [Como associar colunas dinamicamente em tempo de execução](#_core_how_to_bind_columns_dynamically).
 
 > [!NOTE]
->  Este tópico se aplica a objetos derivados de `CRecordset` em qual linha em massa buscando não foi implementado. As técnicas descritas geralmente não são recomendadas se você estiver usando a busca de linhas em massa. Para obter mais informações sobre a busca de linhas em massa, consulte [conjunto de registros: buscando registros em massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+>  Este tópico se aplica a objetos derivados de `CRecordset` em qual linha em massa buscando não foi implementado. As técnicas descritas geralmente não são recomendadas se você estiver usando a busca de linhas em massa. Para obter mais informações sobre a busca de linhas em massa, consulte [conjunto de registros: Buscando registros em massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 ##  <a name="_core_when_you_might_bind_columns_dynamically"></a> Quando você pode associar colunas dinamicamente
 
@@ -91,8 +91,8 @@ As quatro listas com que você precisará trabalhar são mostradas na tabela a s
 
 |||
 |-|-|
-|**Colunas da tabela atual**| (Lista de 1 na ilustração) Uma lista das colunas atualmente na tabela na fonte de dados. Essa lista pode corresponder a lista de colunas associadas no momento em seu conjunto de registros.|
-|**Colunas do conjunto de associação**| (Lista de 2 na ilustração) Uma lista das colunas de limite no seu conjunto de registros. Essas colunas já ter instruções RFX seu `DoFieldExchange` função.|
+|**Current-Table-Columns**| (Lista de 1 na ilustração) Uma lista das colunas atualmente na tabela na fonte de dados. Essa lista pode corresponder a lista de colunas associadas no momento em seu conjunto de registros.|
+|**Bound-Recordset-Columns**| (Lista de 2 na ilustração) Uma lista das colunas de limite no seu conjunto de registros. Essas colunas já ter instruções RFX seu `DoFieldExchange` função.|
 |**Colunas-para-Bind-dinamicamente**| (Lista de 3 na ilustração) Uma lista de colunas na tabela, mas não em seu conjunto de registros. Essas são as colunas que você deseja associar dinamicamente.|
 |**Valores de coluna dinâmica**| (Lista de 4 na ilustração) Uma lista que contém o armazenamento para os valores recuperados das colunas que você vincular dinamicamente. Os elementos dessa lista correspondem às colunas-para-Bind-dinamicamente, um para um.|
 
@@ -140,7 +140,7 @@ Em seguida, configure os locais de armazenamento para as colunas a ser associado
 
    No caso mais comum, os valores de coluna dinâmica com elementos do tipo `CString`. Se você estiver lidando com colunas de diferentes tipos de dados, você precisa de uma lista que pode conter elementos de uma variedade de tipos.
 
-O resultado dos procedimentos acima é duas listas principais: colunas-para-Bind-dinamicamente que contém os nomes de colunas e dinâmico--valores de coluna que contém os valores nas colunas para o registro atual.
+O resultado dos procedimentos acima é duas listas principais: Colunas-para-Bind-dinamicamente que contém os nomes de colunas e dinâmico--valores de coluna que contém os valores nas colunas para o registro atual.
 
 > [!TIP]
 > Se as novas colunas não são todos do mesmo tipo de dados, você pode ser um paralelo extra lista que contém itens que alguma forma, definem o tipo de cada elemento correspondente na lista de colunas. (Você pode usar os valores AFX_RFX_BOOL, AFX_RFX_BYTE, e assim por diante, para isso é se você deseja. Essas constantes são definidas em AFXDB. H.) Escolha um tipo de lista com base em como você representa os tipos de dados de coluna.
@@ -171,4 +171,4 @@ Quando o framework chama `DoFieldExchange` durante o `Open` processo para associ
 ## <a name="see-also"></a>Consulte também
 
 [Conjunto de registros (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Conjunto de registros: trabalhando com itens de dados grandes (ODBC)](../../data/odbc/recordset-working-with-large-data-items-odbc.md)
+[Conjunto de registros: Trabalhando com itens de dados grandes (ODBC)](../../data/odbc/recordset-working-with-large-data-items-odbc.md)

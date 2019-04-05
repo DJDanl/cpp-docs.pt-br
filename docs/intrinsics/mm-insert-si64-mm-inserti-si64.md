@@ -9,16 +9,16 @@ helpviewer_keywords:
 - _mm_insert_si64 intrinsic
 - _mm_inserti_si64 intrinsic
 ms.assetid: 897a4b36-8b08-4b00-a18f-7850f5732d7d
-ms.openlocfilehash: 062e7e56de16d8e8a18101dec0a8e9766e02967f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f8c8f2f9b33588513e25b2290772aac464f46808
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50631006"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033012"
 ---
 # <a name="mminsertsi64-mminsertisi64"></a>_mm_insert_si64, _mm_inserti_si64
 
-**Seção específica da Microsoft**
+**Específico da Microsoft**
 
 Gera o `insertq` instruções para inserir os bits de seu segundo operando em seu primeiro operando.
 
@@ -45,7 +45,7 @@ __m128i _mm_inserti_si64(
 *Source2*<br/>
 [in] Um campo de 128 bits com os dados a serem inseridos em seus bits baixos.  Para `_mm_insert_si64`, também contém um descritor de campo no seus bits altos.
 
-*Comprimento*<br/>
+*Length*<br/>
 [in] Uma constante de inteiro que especifica o comprimento do campo a ser inserido.
 
 *Índice*<br/>
@@ -118,7 +118,7 @@ result2 = 0xfffffffff3210fff
 result3 = 0xfffffffff3210fff
 ```
 
-**Fim da seção específica da Microsoft**
+**FIM de Específico da Microsoft**
 
 Copyright 2007 por dispositivos Micro avançada, Inc. Todos os direitos reservados. Reproduzido com a permissão do Advanced Micro dispositivos, Inc.
 

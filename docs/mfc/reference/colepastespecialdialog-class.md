@@ -28,12 +28,12 @@ helpviewer_keywords:
 - COlePasteSpecialDialog [MFC], GetSelectionType
 - COlePasteSpecialDialog [MFC], m_ps
 ms.assetid: 0e82ef9a-9bbe-457e-8240-42c86a0534f7
-ms.openlocfilehash: 1d135a2a254f71a4123a8bd338e1d6e9f87b74c2
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 9c31ed6f82f4280206bf233999fac74981636db3
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57303307"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58776902"
 ---
 # <a name="colepastespecialdialog-class"></a>Classe COlePasteSpecialDialog
 
@@ -47,13 +47,13 @@ class COlePasteSpecialDialog : public COleDialog
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
 |[COlePasteSpecialDialog::COlePasteSpecialDialog](#colepastespecialdialog)|Constrói um objeto `COlePasteSpecialDialog`.|
 
-### <a name="public-methods"></a>Métodos Públicos
+### <a name="public-methods"></a>Métodos públicos
 
 |Nome|Descrição|
 |----------|-----------------|
@@ -131,13 +131,13 @@ Cadeia de caracteres que descreve o formato para o usuário.
 *lpszResult*<br/>
 Cadeia de caracteres que descreve o resultado se esse formato for escolhido na caixa de diálogo.
 
-*flags*<br/>
+*sinalizadores*<br/>
 Os diferentes vinculando e inserindo as opções disponíveis para esse formato. Esse sinalizador é uma combinação bit a bit de um ou mais dos valores diferentes no OLEUIPASTEFLAG tipo enumerado.
 
 *cf*<br/>
 O formato da área de transferência para adicionar.
 
-*tymed*<br/>
+*TYMED.&lt;1}*<br/>
 Os tipos de mídia disponível nesse formato. Isso é uma combinação bit a bit de um ou mais dos valores a TYMED tipo enumerado.
 
 *nFormatID*<br/>
@@ -383,7 +383,7 @@ Para obter mais informações, consulte o [OLEUIPASTESPECIAL](/windows/desktop/a
 
 ## <a name="see-also"></a>Consulte também
 
-[Exemplo MFC OCLIENT](../../visual-cpp-samples.md)<br/>
+[Exemplo MFC OCLIENT](../../overview/visual-cpp-samples.md)<br/>
 [Classe COleDialog](../../mfc/reference/coledialog-class.md)<br/>
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
 [Classe COleDialog](../../mfc/reference/coledialog-class.md)

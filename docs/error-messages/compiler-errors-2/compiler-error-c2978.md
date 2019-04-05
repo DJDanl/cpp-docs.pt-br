@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2978
 ms.assetid: 5e7bee82-e266-4ccd-ad2e-ee89606ec5bf
-ms.openlocfilehash: 25798e793bec7d09ea1f307ec1e2d9a63b9dbe27
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cf682bf14246754cca74a43dffc39761ff6125c1
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50428100"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58780295"
 ---
 # <a name="compiler-error-c2978"></a>Erro do compilador C2978
 
 Erro de sintaxe: esperado 'keyword1' ou 'keyword2'; encontrado o tipo 'keyword3'; Não há suporte para parâmetros sem tipo em genéricos
 
-Uma classe genérica foi declarada incorretamente. Ver [genéricos](../../windows/generics-cpp-component-extensions.md)para obter mais informações.
+Uma classe genérica foi declarada incorretamente. Ver [genéricos](../../extensions/generics-cpp-component-extensions.md)para obter mais informações.
 
 ## <a name="example"></a>Exemplo
 

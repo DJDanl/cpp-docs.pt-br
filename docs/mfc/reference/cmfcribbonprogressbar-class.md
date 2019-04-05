@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CMFCRibbonProgressBar [MFC], SetPos
 - CMFCRibbonProgressBar [MFC], SetRange
 ms.assetid: de3d9f2e-ed59-480e-aa7d-08a33ab36c67
-ms.openlocfilehash: 626666a8f03a8312bd26fceca745f82ad1ab89b1
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 7c16217378cb8825ca4605687770de177e720c1d
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57285913"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58778163"
 ---
 # <a name="cmfcribbonprogressbar-class"></a>Classe CMFCRibbonProgressBar
 
@@ -45,7 +45,7 @@ class CMFCRibbonProgressBar : public CMFCRibbonBaseElement
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
@@ -71,7 +71,7 @@ Um `CMFCRibbonProgressBar` pode operar em dois modos: regular e infinito. No mod
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir demonstra como usar vários métodos no `CMFCRibbonProgressBar` classe. O exemplo mostra como definir a barra de progresso para funcionar no modo de infinito (onde o tempo de conclusão de uma operação é desconhecido), defina os valores mínimos e máximo para a barra de progresso e definir a posição atual da barra de progresso. Este trecho de código faz parte de [amostra de demonstração do MS Office 2007](../../visual-cpp-samples.md).
+O exemplo a seguir demonstra como usar vários métodos no `CMFCRibbonProgressBar` classe. O exemplo mostra como definir a barra de progresso para funcionar no modo de infinito (onde o tempo de conclusão de uma operação é desconhecido), defina os valores mínimos e máximo para a barra de progresso e definir a posição atual da barra de progresso. Este trecho de código faz parte de [amostra de demonstração do MS Office 2007](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_MSOffice2007Demo#11](../../mfc/reference/codesnippet/cpp/cmfcribbonprogressbar-class_1.cpp)]
 
@@ -253,7 +253,7 @@ void SetRange(
 *nMin*<br/>
 [in] Especifica o valor mínimo do intervalo.
 
-*nMax*<br/>
+*Nmáx*<br/>
 [in] Especifica o valor máximo do intervalo.
 
 ### <a name="remarks"></a>Comentários

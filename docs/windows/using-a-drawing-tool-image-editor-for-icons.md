@@ -16,12 +16,12 @@ helpviewer_keywords:
 - graphics [C++], custom brushes
 - custom brushes
 ms.assetid: 1f8c6eef-7760-45a9-a5cb-9e15c6f91245
-ms.openlocfilehash: bde951a2915bf980e09d94c16edc1a9b462c662e
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 7b362749c9a5cb1c7ec77e5cac8625aa7eb260f0
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57563323"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037783"
 ---
 # <a name="how-to-use-a-drawing-tool"></a>Como: Use uma ferramenta de desenho
 

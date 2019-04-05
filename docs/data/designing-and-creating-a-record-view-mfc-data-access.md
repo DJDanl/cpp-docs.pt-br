@@ -9,12 +9,12 @@ helpviewer_keywords:
 - application wizards [C++], creating record view classes
 - designing record views
 ms.assetid: 1d6f5439-754f-4b8b-a19d-841a4657827b
-ms.openlocfilehash: b97ac5e61530742280dd8ee2183ec54229fb4441
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 15a8afde8c86d3dae8198e8f42b2b7c3b49f0dfa
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50613441"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59035537"
 ---
 # <a name="designing-and-creating-a-record-view--mfc-data-access"></a>Projetando e criando uma exibição de registro (Acesso a dados MFC)
 
@@ -34,11 +34,11 @@ Você pode criar sua classe de exibição de registro com o [Assistente de aplic
 
 Os tópicos a seguir explicam os detalhes adicionais do uso de exibição de registro:
 
-- [Exibições de registro: Suportando navegação em uma exibição de registro](../data/supporting-navigation-in-a-record-view-mfc-data-access.md)
+- [Exibições de registro: Dando suporte à navegação em uma exibição de registro](../data/supporting-navigation-in-a-record-view-mfc-data-access.md)
 
 - [Exibições de registro: Usando uma exibição de registro](../data/using-a-record-view-mfc-data-access.md)
 
-- [Exibições de registro: Preenchendo uma caixa de listagem de um segundo conjunto de registros](../data/filling-a-list-box-from-a-second-recordset-mfc-data-access.md)
+- [Exibições de registro: Preenchendo uma caixa de listagem a partir de um segundo conjunto de registros](../data/filling-a-list-box-from-a-second-recordset-mfc-data-access.md)
 
 ## <a name="see-also"></a>Consulte também
 

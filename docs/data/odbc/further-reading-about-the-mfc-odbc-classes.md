@@ -4,36 +4,36 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC ODBC classes
 ms.assetid: 155c092b-3577-4cb8-b00e-f1adf4cb2adc
-ms.openlocfilehash: 42f8a066728b1800ce245435584dd5e61f786440
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 96286fc7a60a6ab43190dae6262948ac99ca30d6
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50440333"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59035183"
 ---
 # <a name="further-reading-about-the-mfc-odbc-classes"></a>Leitura adicional sobre as classes ODBC MFC
 
 Além disso, os seguintes tópicos explicam os conceitos e técnicas apresentadas neste tópico:
 
-- [Suporte ao banco de dados, Assistente de aplicativo MFC](../../mfc/reference/database-support-mfc-application-wizard.md)
+- [Suporte ao banco de dados, Assistente de Aplicativo MFC](../../mfc/reference/database-support-mfc-application-wizard.md)
 
-- [Adicionando um consumidor de ODBC do MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)
+- [Adicionando um Consumidor ODBC do MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)
 
 - [Fonte de dados (ODBC)](../../data/odbc/data-source-odbc.md)
 
 - [Dynaset](../../data/odbc/dynaset.md)
 
-- [Exceções: exceções de banco de dados](../../mfc/exceptions-database-exceptions.md)
+- [Exceções: Exceções do Banco de Dados](../../mfc/exceptions-database-exceptions.md)
 
-- [MFC: usando classes de banco de dados com documentos e exibições](../../data/mfc-using-database-classes-with-documents-and-views.md)
+- [MFC: Usando Classes de banco de dados com documentos e exibições](../../data/mfc-using-database-classes-with-documents-and-views.md)
 
-- [MFC: usando classes de banco de dados sem documentos e exibições](../../data/mfc-using-database-classes-without-documents-and-views.md)
+- [MFC: Usando Classes de banco de dados sem documentos e exibições](../../data/mfc-using-database-classes-without-documents-and-views.md)
 
 - [ODBC](../../data/odbc/odbc-basics.md)
 
-- [Administrador do ODBC](../../data/odbc/odbc-administrator.md)
+- [Administrador ODBC](../../data/odbc/odbc-administrator.md)
 
-- [RFX (troca de campo de registro)](../../data/odbc/record-field-exchange-rfx.md)
+- [Registrar troca de campos (RFX)](../../data/odbc/record-field-exchange-rfx.md)
 
 - [Conjunto de registros (ODBC)](../../data/odbc/recordset-odbc.md)
 
@@ -54,4 +54,4 @@ No *referência da MFC*, consulte [CDatabase](../../mfc/reference/cdatabase-clas
 ## <a name="see-also"></a>Consulte também
 
 [ODBC e MFC](../../data/odbc/odbc-and-mfc.md)<br/>
-[Acesso a dados (MFC/ATL) de programação](../../data/data-access-programming-mfc-atl.md)
+[Programação de acesso a dados (MFC/ATL)](../../data/data-access-programming-mfc-atl.md)

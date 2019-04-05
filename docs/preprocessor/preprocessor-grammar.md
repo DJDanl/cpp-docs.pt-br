@@ -6,65 +6,65 @@ helpviewer_keywords:
 - grammar, preprocessor
 - preprocessor, grammar
 ms.assetid: 6cd33fad-0b08-4592-9be8-7359c43e24e9
-ms.openlocfilehash: 17768b7ec1442f2af1abf76596527d4df69b1534
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6177cf5fddba549e410842ef3f270edcc13d4782
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614182"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59032408"
 ---
 # <a name="preprocessor-grammar"></a>Gramática do pré-processador
 
-*linha do controle*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#define** *identificador* *cadeia de caracteres de token*<sub>otimizado</sub><br/>
+*control-line*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#define** *identifier* *token-string*<sub>opt</sub><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**#define** <em>identificador</em>**(** *identificador*<sub>aceitar</sub> **,** ... **,** *identificador*<sub>aceitar</sub> **)** *token de cadeia de caracteres*<sub>otimizado</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#include** **"** *caminho-spec* **"**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#include** **\<** *especificação de caminho* **>**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#line** *sequência de dígitos***"** *filename* **"**<sub>otimizado</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#undef** *identificador*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#error** *cadeia de caracteres de token*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#pragma** *cadeia de caracteres de token*
+&nbsp;&nbsp;&nbsp;&nbsp;**#include** **"** *path-spec* **"**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#include** **\<** *path-spec* **>**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#line** *digit-sequence*  **"** *filename* **"**<sub>opt</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#undef** *identifier*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#error** *token-string*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#pragma** *token-string*
 
 *constant-expression*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**definido (** *identificador* **)**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**definido** *identificador*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**defined(** *identifier* **)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**defined** *identifier*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;qualquer expressão de constante
 
 *condicional* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Se parte* *partes elif*<sub>aceitar</sub> *parte else*<sub>aceitar</sub> *Part&lt;3}{4&gt;opt&lt;4}{5&gt;endif-line&lt;5*
+&nbsp;&nbsp;&nbsp;&nbsp;*if-part* *elif-parts*<sub>opt</sub> *else-part*<sub>opt</sub> *endif-line*
 
-*Se parte* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*if-line* *texto*
+*if-part* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*if-line* *text*
 
 *if-line* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#if** *expressão constante*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#ifdef** *identificador*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#ifndef** *identificador*
+&nbsp;&nbsp;&nbsp;&nbsp;**#if** *constant-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#ifdef** *identifier*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#ifndef** *identifier*
 
 *elif partes* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*linha elif* *texto*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*partes elif* *linha elif* *texto*
+&nbsp;&nbsp;&nbsp;&nbsp;*elif-line* *text*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*elif-parts* *elif-line* *text*
 
-*linha elif* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#elif** *expressão constante*
+*elif-line* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#elif** *constant-expression*
 
-*outra parte* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*linha Else* *texto*
+*else-part* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*else-line* *text*
 
-*outra linha* :<br/>
+*else-line* :<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**#else**
 
-*linha endif* :<br/>
+*endif-line* :<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**#endif**
 
-*sequência de dígitos* :<br/>
+*digit-sequence* :<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*digit*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*digit-sequence* *digit*
 
-*Dígito* : um dos<br/>
+*digit* : one of<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**0 1 2 3 4 5 6 7 8 9**
 
-*cadeia de caracteres de token* :<br/>
+*token-string* :<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;Cadeia de caracteres de tokens
 
 *token* :<br/>
@@ -77,10 +77,10 @@ ms.locfileid: "50614182"
 *nome do arquivo* :<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;Nome de arquivo válido do sistema operacional
 
-*especificação de caminho* :<br/>
+*path-spec* :<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;Caminho de arquivo válido
 
-*texto* :<br/>
+*text* :<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;Qualquer sequência de texto
 
 > [!NOTE]

@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CSplitterWnd [MFC], OnDrawSplitter
 - CSplitterWnd [MFC], OnInvertTracker
 ms.assetid: fd0de258-6dbe-4552-9e47-a39de0471d51
-ms.openlocfilehash: 42913ddea7818636dce8d630ed2d79d13c19ce81
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 065735c13a3e763208142eb6bc989d3a496221f0
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57302098"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58781439"
 ---
 # <a name="csplitterwnd-class"></a>Classe CSplitterWnd
 
@@ -91,7 +91,7 @@ class CSplitterWnd : public CWnd
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
@@ -175,9 +175,9 @@ Para obter mais informações sobre janelas separadoras, consulte [29 de observa
 
 Para obter mais informações sobre como criar janelas separadoras dinâmicas, consulte:
 
-- Exemplo MFC [Rabisco](../../visual-cpp-samples.md)
+- Exemplo MFC [Rabisco](../../overview/visual-cpp-samples.md)
 
-- Exemplo MFC [VIEWEX](../../visual-cpp-samples.md).
+- Exemplo MFC [VIEWEX](../../overview/visual-cpp-samples.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -388,7 +388,7 @@ virtual BOOL CreateView(
 
 ### <a name="parameters"></a>Parâmetros
 
-*row*<br/>
+*linha*<br/>
 Especifica a linha da janela separador no qual colocar a nova exibição.
 
 *col*<br/>
@@ -475,7 +475,7 @@ virtual void DeleteView(
 
 ### <a name="parameters"></a>Parâmetros
 
-*row*<br/>
+*linha*<br/>
 Especifica a linha da janela de divisor na qual se deseja excluir o modo de exibição.
 
 *col*<br/>
@@ -649,7 +649,7 @@ CWnd* GetPane(
 
 ### <a name="parameters"></a>Parâmetros
 
-*row*<br/>
+*linha*<br/>
 Especifica uma linha.
 
 *col*<br/>
@@ -684,7 +684,7 @@ void GetRowInfo(
 
 ### <a name="parameters"></a>Parâmetros
 
-*row*<br/>
+*linha*<br/>
 Especifica uma linha.
 
 *cyCur*<br/>
@@ -727,7 +727,7 @@ int IdFromRowCol(
 
 ### <a name="parameters"></a>Parâmetros
 
-*row*<br/>
+*linha*<br/>
 Especifica a linha de janela do divisor.
 
 *col*<br/>
@@ -877,7 +877,7 @@ virtual void SetActivePane(
 
 ### <a name="parameters"></a>Parâmetros
 
-*row*<br/>
+*linha*<br/>
 Se *Apropriei* for NULL, que especifica a linha no painel de ativos.
 
 *col*<br/>
@@ -937,7 +937,7 @@ void SetRowInfo(
 
 ### <a name="parameters"></a>Parâmetros
 
-*row*<br/>
+*linha*<br/>
 Especifica uma linha da janela de divisor.
 
 *cyIdeal*<br/>
@@ -1036,7 +1036,7 @@ Um ponteiro para um contexto de dispositivo.
 
 ## <a name="see-also"></a>Consulte também
 
-[Exemplo MFC VIEWEX](../../visual-cpp-samples.md)<br/>
+[Exemplo MFC VIEWEX](../../overview/visual-cpp-samples.md)<br/>
 [Classe CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
 [Classe CView](../../mfc/reference/cview-class.md)<br/>

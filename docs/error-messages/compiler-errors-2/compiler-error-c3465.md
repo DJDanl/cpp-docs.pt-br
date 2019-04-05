@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3465
 ms.assetid: aeb815e5-b3fc-4525-afe2-d738e9321df1
-ms.openlocfilehash: 8a6cbbc1e75d345d0ebdcfc9e1db32f660c13b01
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 117c9b9918950fd2e95e206c5aea457dee183b0a
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50653399"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58781569"
 ---
 # <a name="compiler-error-c3465"></a>Erro do compilador C3465
 
@@ -19,7 +19,7 @@ Para usar o tipo 'type', você deve referenciar o assembly 'assembly'
 
 Encaminhamento de tipo funcionará para um aplicativo cliente até que você recompilar o cliente. Quando você recompilar, você precisará de uma referência para cada assembly que contém a definição de um tipo usado em seu aplicativo cliente.
 
-Para obter mais informações, consulte [encaminhamento de tipo (C + + / CLI)](../../windows/type-forwarding-cpp-cli.md).
+Para obter mais informações, consulte [encaminhamento de tipo (C + + / CLI)](../../extensions/type-forwarding-cpp-cli.md).
 
 ## <a name="example"></a>Exemplo
 

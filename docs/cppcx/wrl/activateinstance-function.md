@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - ActivateInstance function
 ms.assetid: 8cfd1dd9-5fda-4cc2-acf8-d40e783b3875
-ms.openlocfilehash: 4525ee74bc63a9655e7f1142fb1b2b6812d82bb6
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 43aa34153f0e71dd665090243ff2288bff704404
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58783787"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59029074"
 ---
 # <a name="activateinstance-function"></a>Função ActivateInstance
 
@@ -37,7 +37,7 @@ Um tipo para ativar.
 *activatableClassId*<br/>
 A ID da classe que define o parâmetro *T*.
 
-*instance*<br/>
+*instância*<br/>
 Quando essa operação for concluída, uma referência a uma instância do *T*.
 
 ## <a name="return-value"></a>Valor de retorno

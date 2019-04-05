@@ -8,16 +8,16 @@ helpviewer_keywords:
 - cmpxchg16b instruction
 - _InterlockedCompareExchange128 intrinsic
 ms.assetid: f05918fc-716a-4f6d-b746-1456d6b96c56
-ms.openlocfilehash: 3cfe9d650b66dc08a96599652b52f0b153198afa
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: 9330b1405ca247364cd04d3ab399f66e4f332273
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627352"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037864"
 ---
 # <a name="interlockedcompareexchange128"></a>_InterlockedCompareExchange128
 
-**Seção específica da Microsoft**
+**Específico da Microsoft**
 
 Executa um 128 bits comparação e troca sincronizada.
 
@@ -123,12 +123,12 @@ int main(void)
 BigInt.Int[1] = 34, BigInt.Int[0] = 12
 ```
 
-**Fim da seção específica da Microsoft**
+**FIM de Específico da Microsoft**
 
 Copyright 2007 por dispositivos Micro avançada, Inc. Todos os direitos reservados. Reproduzido com a permissão do Advanced Micro dispositivos, Inc.
 
 ## <a name="see-also"></a>Consulte também
 
 [Intrínsecos do compilador](../intrinsics/compiler-intrinsics.md)<br/>
-[Funções intrínsecas _InterlockedCompareExchange](../intrinsics/interlockedcompareexchange-intrinsic-functions.md)<br/>
-[conflitos com o compilador x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)
+[Funções intrínsecas interlockedcompareexchange](../intrinsics/interlockedcompareexchange-intrinsic-functions.md)<br/>
+[Conflitos com o compilador x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

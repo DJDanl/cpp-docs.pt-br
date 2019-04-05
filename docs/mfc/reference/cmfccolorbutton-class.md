@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CMFCColorButton [MFC], UpdateColor
 - CMFCColorButton [MFC], m_bEnabledInCustomizeMode
 ms.assetid: 9fdf34ae-4cc5-4c5e-9d89-1c50e8a73699
-ms.openlocfilehash: 05a4ad17feea20c67069e65c5c5df43d543e2377
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c0c9ad79342f2013aa071240c684fce168e55c9e
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57293479"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58779996"
 ---
 # <a name="cmfccolorbutton-class"></a>Classe CMFCColorButton
 
@@ -63,7 +63,7 @@ class CMFCColorButton : public CMFCButton
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
@@ -126,7 +126,7 @@ O `CMFCColorButton` notifica o objeto pai que uma cor está mudando, enviando-um
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir demonstra como configurar um botão de cor usando vários métodos no `CMFCColorButton` classe. Os métodos de definir a cor do botão de cor e seu número de colunas e habilitar o automático e os outros botões. Este exemplo faz parte do [amostra de demonstração da barra de Status](../../visual-cpp-samples.md).
+O exemplo a seguir demonstra como configurar um botão de cor usando vários métodos no `CMFCColorButton` classe. Os métodos de definir a cor do botão de cor e seu número de colunas e habilitar o automático e os outros botões. Este exemplo faz parte do [amostra de demonstração da barra de Status](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_StatusBarDemo#10](../../mfc/reference/codesnippet/cpp/cmfccolorbutton-class_1.h)]
 [!code-cpp[NVC_MFC_StatusBarDemo#11](../../mfc/reference/codesnippet/cpp/cmfccolorbutton-class_2.cpp)]
@@ -162,7 +162,7 @@ void EnableAutomaticButton(
 *colorAutomatic*<br/>
 [in] Um valor RGB que especifica a cor do padrão do botão automático.
 
-*bEnable*<br/>
+*bAtivar*<br/>
 [in] Especifica se o botão automático está habilitado ou desabilitado.
 
 ### <a name="remarks"></a>Comentários
@@ -186,7 +186,7 @@ void EnableOtherButton(
 *bAltColorDlg*<br/>
 [in] Especifica se o [CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md) a caixa de diálogo de cor do sistema ou de caixa de diálogo é aberta quando o usuário clica no botão.
 
-*bEnable*<br/>
+*bAtivar*<br/>
 [in] Especifica se o botão "other" está habilitado ou desabilitado.
 
 ### <a name="remarks"></a>Comentários
@@ -355,7 +355,7 @@ void SetColor(COLORREF color);
 
 ### <a name="parameters"></a>Parâmetros
 
-*color*<br/>
+*cor*<br/>
 [in] Um valor RGB.
 
 ### <a name="remarks"></a>Comentários
@@ -372,7 +372,7 @@ static void SetColorName(
 
 ### <a name="parameters"></a>Parâmetros
 
-*color*<br/>
+*cor*<br/>
 [in] O valor da cor RGB.
 
 *strName*<br/>
@@ -465,7 +465,7 @@ virtual void UpdateColor(COLORREF color);
 
 ### <a name="parameters"></a>Parâmetros
 
-*color*<br/>
+*cor*<br/>
 [in] Cor selecionada pelo usuário.
 
 ### <a name="remarks"></a>Comentários

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4487
 ms.assetid: 796144cf-cd3c-4edc-b6a4-96192b7eb4f0
-ms.openlocfilehash: 743069c0ed3103a2ed8d459def65083146b971e1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 231482547856fc07d43ecfb859b31c2ece49fc5e
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496990"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58776486"
 ---
 # <a name="compiler-warning-level-4-c4487"></a>Compilador aviso (nível 4) C4487
 
@@ -19,7 +19,7 @@ ms.locfileid: "50496990"
 
 Uma função em uma classe derivada tem a mesma assinatura como uma função de classe base não virtuais. C4487 lembra você de que a função de classe derivada substitui a função de classe base. Marcar explicitamente a função de classe derivada como `new` para resolver este aviso.
 
-Para obter mais informações, consulte [novo (novo slot em vtable)](../../windows/new-new-slot-in-vtable-cpp-component-extensions.md).
+Para obter mais informações, consulte [novo (novo slot em vtable)](../../extensions/new-new-slot-in-vtable-cpp-component-extensions.md).
 
 ## <a name="example"></a>Exemplo
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - pop warning pragma
 - warning pragma
 ms.assetid: 8e9a0dec-e223-4657-b21d-5417ebe29cc8
-ms.openlocfilehash: 53f79061ded358c9cb895fd7e8e245c46ed99fd5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1341472af22582635207a2bdff93b4367fd59330
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50631709"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037744"
 ---
 # <a name="warning-pragma"></a>Pragma de aviso
 Permite a modificação seletiva do comportamento de mensagens de aviso do compilador.
@@ -37,8 +37,8 @@ Os seguintes parâmetros de especificador de aviso estão disponíveis.
 |------------------------|-------------|
 |*1, 2, 3, 4*|Aplique o nível fornecido aos avisos especificados. Isso também ativa um aviso especificado que é desativado por padrão.|
 |*default*|Redefina o comportamento de aviso para seu valor padrão. Isso também ativa um aviso especificado que é desativado por padrão. O aviso será gerado em seu nível padrão e documentado.<br /><br /> Para obter mais informações, consulte [compilador avisos que são desativado por padrão](../preprocessor/compiler-warnings-that-are-off-by-default.md).|
-|*disable*|Não emita a mensagem de aviso especificada.|
-|*error*|Relate os avisos especificados como erros.|
+|*Desabilitar*|Não emita a mensagem de aviso especificada.|
+|*erro*|Relate os avisos especificados como erros.|
 |*uma vez*|Exiba as mensagens especificadas somente uma vez.|
 |*Suprimir*|Empurra o estado atual do pragma na pilha, desabilita o aviso especificado para a próxima linha e depois exibe a pilha de aviso para que o estado de pragma seja redefinido.|
 

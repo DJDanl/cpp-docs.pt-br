@@ -14,12 +14,12 @@ helpviewer_keywords:
 - COleTemplateServer [MFC], Unregister
 - COleTemplateServer [MFC], UpdateRegistry
 ms.assetid: 47a2887d-8162-4993-a842-a784177c7f5c
-ms.openlocfilehash: bcc79f781be3a0292398e4f211ea55f5403b6b8f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 3abdf1dc2da5ef9a111371b501d5cd8ce208825d
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57302872"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58781205"
 ---
 # <a name="coletemplateserver-class"></a>Classe COleTemplateServer
 
@@ -33,13 +33,13 @@ class COleTemplateServer : public COleObjectFactory
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
 |[COleTemplateServer::COleTemplateServer](#coletemplateserver)|Constrói um objeto `COleTemplateServer`.|
 
-### <a name="public-methods"></a>Métodos Públicos
+### <a name="public-methods"></a>Métodos públicos
 
 |Nome|Descrição|
 |----------|-----------------|
@@ -94,7 +94,7 @@ void ConnectTemplate(
 
 ### <a name="parameters"></a>Parâmetros
 
-*clsid*<br/>
+*CLSID*<br/>
 Referência para a ID de classe OLE que solicita o modelo.
 
 *pDocTemplate*<br/>
@@ -156,7 +156,7 @@ Uma lista de entradas será gravada no registro somente se não existe nenhuma e
 *rglpszOverwrite*<br/>
 Uma lista de entradas que é gravada no registro, independentemente de existirem quaisquer entradas anteriores.
 
-*bRegister*<br/>
+*bRegistre-se participar*<br/>
 Determina se a classe deve ser registrado. Se *bRegistre-se participar* for TRUE, a classe é registrada com o registro do sistema. Caso contrário, ele cancela o registro da classe.
 
 ### <a name="remarks"></a>Comentários
@@ -171,7 +171,7 @@ Para obter mais informações, consulte [Implementando a IDispatch Interface](/p
 
 ## <a name="see-also"></a>Consulte também
 
-[Exemplo MFC HIERSVR](../../visual-cpp-samples.md)<br/>
+[Exemplo MFC HIERSVR](../../overview/visual-cpp-samples.md)<br/>
 [Classe COleObjectFactory](../../mfc/reference/coleobjectfactory-class.md)<br/>
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
 [Classe COleServerDoc](../../mfc/reference/coleserverdoc-class.md)<br/>
