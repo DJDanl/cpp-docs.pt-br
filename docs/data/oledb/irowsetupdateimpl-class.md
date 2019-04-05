@@ -52,12 +52,12 @@ helpviewer_keywords:
 - IsUpdateAllowed method
 - m_mapCachedData
 ms.assetid: f85af76b-ab6f-4f8b-8f4a-337c9679d68f
-ms.openlocfilehash: 0ee4fc505bb3e22046f1b0c197f14326e5a50d7d
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 6c20698e2219cf7c3e1d840e23b5f8113947ae9f
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57423892"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037705"
 ---
 # <a name="irowsetupdateimpl-class"></a>Classe IRowsetUpdateImpl
 
@@ -118,8 +118,8 @@ A unidade de armazenamento para todos os identificadores de linha mantidos pelo 
 |[GetOriginalData](#getoriginaldata)|Obtém os dados transmitidos para mais recentemente ou obtidos da fonte de dados, ignorando as alterações pendentes.|
 |[GetPendingRows](#getpendingrows)|Retorna uma lista de linhas com alterações pendentes.|
 |[GetRowStatus](#getrowstatus)|Retorna o status de linhas especificados.|
-|[Undo](#undo)|Desfaz todas as alterações para a linha desde a última busca ou atualização.|
-|[Atualizar](#update)|Transmite todas as alterações feitas na linha desde a última busca ou atualização.|
+|[Desfazer](#undo)|Desfaz todas as alterações para a linha desde a última busca ou atualização.|
+|[Atualização](#update)|Transmite todas as alterações feitas na linha desde a última busca ou atualização.|
 
 ### <a name="implementation-methods-callback"></a>Métodos de implementação (retorno de chamada)
 
@@ -334,6 +334,6 @@ Um ponteiro para os dados sejam armazenados em cache. Os dados são do tipo *arm
 
 ## <a name="see-also"></a>Consulte também
 
-[Modelos de provedor do OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
-[Arquitetura de modelo do provedor do OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)<br/>
+[Modelos de provedor de banco de dados OLE](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Arquitetura de modelo do provedor de banco de dados OLE](../../data/oledb/ole-db-provider-template-architecture.md)<br/>
 [Criando um provedor atualizável](../../data/oledb/creating-an-updatable-provider.md)

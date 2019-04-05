@@ -143,12 +143,12 @@ helpviewer_keywords:
 - _WINRT_DLL macro
 - __func__ identifier
 ms.assetid: 1cc5f70a-a225-469c-aed0-fe766238e23f
-ms.openlocfilehash: 9ebc23545817de0f249185700454237c66610c13
-ms.sourcegitcommit: d441305fb19131afbd7fc259d8cda63ea26f2343
+ms.openlocfilehash: 9dcc0922f3715d1e583605a071535f51fa8b2f57
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51678348"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59032447"
 ---
 # <a name="predefined-macros"></a>Macros predefinidas
 
@@ -362,7 +362,7 @@ Microsoft Visual C++ dá suporte a essas macros predefinidas adicionais.
 
 - **&#95;MSC&#95;VIDOR** definido como um literal de inteiro que codifica os elementos de número principais e secundárias do número de versão do compilador. O número principal é o primeiro elemento do número de versão delimitado por ponto e o número secundário é o segundo elemento. Por exemplo, se o número de versão do compilador Visual C++ for 17.00.51106.1, a  **&#95;MSC&#95;VIDOR** macro será avaliada em 1700. Insira `cl /?` na linha de comando para exibir o número de versão do compilador. Essa macro é sempre definida.
 
-   |Versão do Visual Studio|&AMP;#95;MSC&AMP;#95;VIDOR|
+   |Versão do Visual Studio|&#95;MSC&#95;VER|
    |-|-|
    |Visual Studio 6.0|1200|
    |Visual Studio .NET 2002 (7.0)|1300|
@@ -438,4 +438,4 @@ Macros de pré-processador usadas para determinar a versão da biblioteca MFC ou
 
 [Macros (C/C++)](../preprocessor/macros-c-cpp.md)<br/>
 [Operadores de pré-processador](../preprocessor/preprocessor-operators.md)<br/>
-[Diretivas do pré-processador](../preprocessor/preprocessor-directives.md)
+[Diretivas de pré-processador](../preprocessor/preprocessor-directives.md)

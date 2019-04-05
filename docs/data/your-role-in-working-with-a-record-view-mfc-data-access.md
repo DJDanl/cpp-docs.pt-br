@@ -5,18 +5,18 @@ helpviewer_keywords:
 - record views, customizing default code
 - MFC, record views
 ms.assetid: 691e89a5-ff21-4ca3-9278-69d4678288bb
-ms.openlocfilehash: 1f1361baafa5bb3dc884adcc464a3571aee04dd3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c5c35208f654cff90e3cdf87e697e654bdfbe307
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50478631"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59032999"
 ---
 # <a name="your-role-in-working-with-a-record-view--mfc-data-access"></a>Sua função ao trabalhar com uma exibição de registro (Acesso a dados MFC)
 
 A tabela a seguir mostra o que você geralmente deve fazer para trabalhar com um modo de exibição do registro e a estrutura que funciona para você.
 
-### <a name="working-with-a-record-view-you-and-the-framework"></a>Trabalhando com uma exibição do registro: você e a estrutura
+### <a name="working-with-a-record-view-you-and-the-framework"></a>Trabalhando com um modo de exibição do registro: Você e a estrutura
 
 |Você|A estrutura|
 |---------|-------------------|
@@ -29,7 +29,7 @@ A tabela a seguir mostra o que você geralmente deve fazer para trabalhar com um
 |[Opcional] Escreva o código para qualquer validação especial.||
 |[Opcional] Escreva o código para adicionar ou excluir registros.||
 
-Programação baseada em formulários é apenas uma abordagem de trabalhar com um banco de dados. Para obter informações sobre os aplicativos usando algumas outra interface do usuário, ou nenhuma interface do usuário, consulte [MFC: usando Classes de banco de dados com documentos e exibições](../data/mfc-using-database-classes-with-documents-and-views.md) e [MFC: usando Classes de banco de dados sem documentos e exibições](../data/mfc-using-database-classes-without-documents-and-views.md). Para obter métodos alternativos para exibir registros de banco de dados, consulte classes [CListView](../mfc/reference/clistview-class.md) e [CTreeView](../mfc/reference/ctreeview-class.md).
+Programação baseada em formulários é apenas uma abordagem de trabalhar com um banco de dados. Para obter informações sobre os aplicativos usando algumas outra interface do usuário, ou nenhuma interface do usuário, consulte [MFC: Usando Classes de banco de dados com documentos e exibições](../data/mfc-using-database-classes-with-documents-and-views.md) e [MFC: Usando Classes de banco de dados sem documentos e exibições](../data/mfc-using-database-classes-without-documents-and-views.md). Para obter métodos alternativos para exibir registros de banco de dados, consulte classes [CListView](../mfc/reference/clistview-class.md) e [CTreeView](../mfc/reference/ctreeview-class.md).
 
 ## <a name="see-also"></a>Consulte também
 

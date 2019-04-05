@@ -1,5 +1,5 @@
 ---
-title: 'Registrar troca de campos: como funciona RFX'
+title: 'Registrar troca de campos: Como funciona RFX'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - record editing [C++], using RFX
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - scrolling [C++], RFX
 - RFX (ODBC) [C++], binding fields and parameters
 ms.assetid: e647cacd-62b0-4b80-9e20-b392deca5a88
-ms.openlocfilehash: efc08736f1b61bc634b819fc62545d886134cd35
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7da9d480f16dcb6bc5ded0a1dff559b1b1ac4b38
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50534700"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59032671"
 ---
-# <a name="record-field-exchange-how-rfx-works"></a>Registrar troca de campos: como funciona RFX
+# <a name="record-field-exchange-how-rfx-works"></a>Registrar troca de campos: Como funciona RFX
 
 Este tópico explica o processo RFX. Isso é um avançado cobertura do tópico:
 
@@ -26,7 +26,7 @@ Este tópico explica o processo RFX. Isso é um avançado cobertura do tópico:
 - [O processo RFX](#_core_the_record_field_exchange_process)
 
 > [!NOTE]
->  Este tópico se aplica a classes derivadas de `CRecordset` em qual linha em massa buscando não foi implementado. Se você estiver usando a busca de linhas em massa, é implementada em massa registrar troca de campos (RFX em massa). Em massa RFX é semelhante a RFX. Para entender as diferenças, consulte [conjunto de registros: buscando registros em massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+>  Este tópico se aplica a classes derivadas de `CRecordset` em qual linha em massa buscando não foi implementado. Se você estiver usando a busca de linhas em massa, é implementada em massa registrar troca de campos (RFX em massa). Em massa RFX é semelhante a RFX. Para entender as diferenças, consulte [conjunto de registros: Buscando registros em massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 ##  <a name="_core_rfx_and_the_recordset"></a> RFX e o conjunto de registros
 
@@ -34,15 +34,15 @@ Membros de dados do campo do objeto de conjunto de registros, juntos, constituem
 
 A estrutura faz backup do buffer de edição em determinados estágios para que ele possa restaurar seu conteúdo, se necessário. RFX faz backup do buffer de edição antes de adicionar um novo registro e antes de editar um registro existente. Ele restaura o buffer de edição em alguns casos, por exemplo, após um `Update` seguinte chamada `AddNew`. O buffer de edição não é restaurado se abandonar um buffer de edição recém-alterada por, por exemplo, mudar para outro registro antes de chamar `Update`.
 
-Além de troca de dados entre a fonte de dados e membros de dados de campo do conjunto de registros, RFX gerencia a associação de parâmetros. Quando o conjunto de registros é aberto, nenhum membro de dados de parâmetro é associado na ordem do "?" espaços reservados na instrução SQL que `CRecordset::Open` constrói. Para obter mais informações, consulte [conjunto de registros: parametrizando um conjunto de registros (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).
+Além de troca de dados entre a fonte de dados e membros de dados de campo do conjunto de registros, RFX gerencia a associação de parâmetros. Quando o conjunto de registros é aberto, nenhum membro de dados de parâmetro é associado na ordem do "?" espaços reservados na instrução SQL que `CRecordset::Open` constrói. Para obter mais informações, consulte [conjunto de registros: Parametrizando um conjunto de registros (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).
 
 Substituição de sua classe de conjunto de registros de `DoFieldExchange` faz todo o trabalho, a movimentação de dados em ambas as direções. Como a troca de dados de caixa de diálogo (DDX), RFX precisa de informações sobre os membros de dados de sua classe. O assistente fornece as informações necessárias ao escrever uma implementação específica do conjunto de registros da `DoFieldExchange` para você, com base nos dados do campo tipos de dados e nomes de membro especificado com o assistente.
 
 ##  <a name="_core_the_record_field_exchange_process"></a> Processo de troca de campo do registro
 
-Esta seção descreve a sequência de eventos RFX conforme um objeto de conjunto de registros é aberto e você adicionar, atualizar e excluir registros. A tabela [sequência de RFX operações durante o conjunto de registros aberto](#_core_sequence_of_rfx_operations_during_recordset_open) e a tabela [sequência de RFX operações durante a rolagem](#_core_sequence_of_rfx_operations_during_scrolling) neste tópico mostram o processo como processos RFX um `Move` comando o conjunto de registros e RFX gerencia uma atualização. Durante esses processos [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) é chamado para executar muitas operações diferentes. O `m_nOperation` membro de dados do [CFieldExchange](../../mfc/reference/cfieldexchange-class.md) objeto determina qual operação é solicitada. Talvez seja útil ler [conjunto de registros: como conjuntos de registros selecionar registros (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md) e [conjunto de registros: como conjuntos de registros atualizam registros (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md) antes de ler este material.
+Esta seção descreve a sequência de eventos RFX conforme um objeto de conjunto de registros é aberto e você adicionar, atualizar e excluir registros. A tabela [sequência de RFX operações durante o conjunto de registros aberto](#_core_sequence_of_rfx_operations_during_recordset_open) e a tabela [sequência de RFX operações durante a rolagem](#_core_sequence_of_rfx_operations_during_scrolling) neste tópico mostram o processo como processos RFX um `Move` comando o conjunto de registros e RFX gerencia uma atualização. Durante esses processos [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) é chamado para executar muitas operações diferentes. O `m_nOperation` membro de dados do [CFieldExchange](../../mfc/reference/cfieldexchange-class.md) objeto determina qual operação é solicitada. Talvez seja útil ler [conjunto de registros: Como conjuntos de registros selecionam registros (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md) e [conjunto de registros: Como conjuntos de registros atualizam registros (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md) antes de ler este material.
 
-###  <a name="_mfc_rfx.3a_.initial_binding_of_columns_and_parameters"></a> RFX: A vinculação inicial de colunas e parâmetros
+###  <a name="_mfc_rfx.3a_.initial_binding_of_columns_and_parameters"></a> RFX: Associação inicial de colunas e parâmetros
 
 As seguintes atividades RFX ocorram, nessa ordem mostrada, quando você chama um objeto de conjunto de registros [abrir](../../mfc/reference/crecordset-class.md#open) função de membro:
 
@@ -68,7 +68,7 @@ A tabela a seguir mostra a sequência de operações RFX quando você abre um co
 
 Conjuntos de registros usam a execução preparada do ODBC para permitir a rápida repetir a consulta com a mesma instrução SQL. Para obter mais informações sobre a execução preparada, consulte o SDK do ODBC *referência do programador* na biblioteca MSDN.
 
-###  <a name="_mfc_rfx.3a_.scrolling"></a> RFX: rolagem
+###  <a name="_mfc_rfx.3a_.scrolling"></a> RFX: Rolagem
 
 Quando você rolar de um registro para outro, o framework chama `DoFieldExchange` para substituir os valores armazenados anteriormente nos membros de dados de campo com valores para o novo registro.
 
@@ -82,7 +82,7 @@ A tabela a seguir mostra a sequência de operações RFX quando o usuário move 
 |||2. ODBC faz a movimentação e preenche os dados.|
 ||3. Corrigi os dados para o C++.||
 
-###  <a name="_mfc_rfx.3a_.adding_new_records_and_editing_existing_records"></a> RFX: Adição de novos registros e editar os registros existentes
+###  <a name="_mfc_rfx.3a_.adding_new_records_and_editing_existing_records"></a> RFX: Adicionando novos registros e editando registros existentes
 
 Se você adicionar um novo registro, o conjunto de registros funciona como um buffer de edição para criar o conteúdo do novo registro. Assim como acontece com a adição de registros, editando registros envolve a alteração dos valores de membros de dados de campo do conjunto de registros. Da perspectiva do RFX, a sequência é da seguinte maneira:
 
@@ -122,7 +122,7 @@ Quando você exclui um registro, RFX define todos os campos como NULL como um le
 
 ## <a name="see-also"></a>Consulte também
 
-[RFX (troca de campo de registro)](../../data/odbc/record-field-exchange-rfx.md)<br/>
+[Registrar troca de campos (RFX)](../../data/odbc/record-field-exchange-rfx.md)<br/>
 [Consumidor ODBC do MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)<br/>
 [Macros, funções globais e variáveis globais](../../mfc/reference/mfc-macros-and-globals.md)<br/>
 [Classe CFieldExchange](../../mfc/reference/cfieldexchange-class.md)<br/>
