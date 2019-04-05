@@ -6,16 +6,16 @@ helpviewer_keywords:
 - record views, refreshing controls
 - record views, application wizard code
 ms.assetid: 18fd4703-5939-491d-b759-985f767b951f
-ms.openlocfilehash: 5340926789925d8243ecd20c27537c9690582a41
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e25ca9cad1390dd11ab7328ffefed31badf6fc0b
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50427970"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59036069"
 ---
 # <a name="record-view-code-created-by-application-wizard--mfc-data-access"></a>Código criado pelo assistente de aplicativo (Acesso a dados MFC)
 
-O [Assistente de aplicativo MFC](../mfc/reference/database-support-mfc-application-wizard.md) substitui o modo de exibição `OnInitialUpdate` e `OnGetRecordset` funções de membro. Depois que a estrutura cria a janela do quadro, o documento e a exibição, ela chama `OnInitialUpdate` para inicializar a exibição. `OnInitialUpdate` obtém um ponteiro para o conjunto de registros do documento. Uma chamada para a classe base [cview:: Oninitialupdate](../mfc/reference/cview-class.md#oninitialupdate) função abre o conjunto de registros. O código a seguir mostra esse processo para um `CRecordView`:
+O [Assistente de aplicativo MFC](../mfc/reference/database-support-mfc-application-wizard.md) substitui o modo de exibição `OnInitialUpdate` e `OnGetRecordset` funções de membro. Depois que a estrutura cria a janela do quadro, o documento e a exibição, ela chama `OnInitialUpdate` para inicializar a exibição. `OnInitialUpdate` Obtém um ponteiro para o conjunto de registros do documento. Uma chamada para a classe base [cview:: Oninitialupdate](../mfc/reference/cview-class.md#oninitialupdate) função abre o conjunto de registros. O código a seguir mostra esse processo para um `CRecordView`:
 
 ```cpp
 void CSectionForm::OnInitialUpdate()

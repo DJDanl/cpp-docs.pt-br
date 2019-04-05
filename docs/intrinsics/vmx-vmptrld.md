@@ -7,16 +7,16 @@ helpviewer_keywords:
 - __vmx_vmptrld intrinsic
 - VMPTRLD instruction
 ms.assetid: 95c9ec5b-1a81-41ba-983e-327bd6a65fcb
-ms.openlocfilehash: 4f74a69bf0a4a780834dc9669c1266c82f7038e6
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: e3d552720d454a4f22af368616b3953452c6db0e
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51325894"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59040417"
 ---
 # <a name="vmxvmptrld"></a>__vmx_vmptrld
 
-**Seção específica da Microsoft**
+**Específico da Microsoft**
 
 Carrega o ponteiro para a estrutura atual do controle de máquina virtual (VMCS) do endereço especificado.
 
@@ -58,7 +58,7 @@ O `__vmx_vmptrld` função é equivalente ao `VMPTRLD` instruções de máquina.
 
 **Arquivo de cabeçalho** \<intrin. h >
 
-**Fim da seção específica da Microsoft**
+**FIM de Específico da Microsoft**
 
 ## <a name="see-also"></a>Consulte também
 

@@ -91,12 +91,12 @@ helpviewer_keywords:
 - m_iRowset
 - m_rgRowHandles
 ms.assetid: 6a9189af-7556-45b1-adcb-9d62bb36704c
-ms.openlocfilehash: d7d7797e0e1ac69ef114a251fbcee9fbe29cd7e9
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 47b03a542933c6223e098bc9d8fa8d45bf5e047b
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420889"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59024446"
 ---
 # <a name="irowsetimpl-class"></a>Classe IRowsetImpl
 
@@ -446,6 +446,6 @@ Identificadores de linha são removidas chamando `ReleaseRows`. Consulte a [vis�
 
 ## <a name="see-also"></a>Consulte também
 
-[Modelos de provedor do OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
-[Arquitetura de modelo do provedor do OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)<br/>
+[Modelos de provedor de banco de dados OLE](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Arquitetura de modelo do provedor de banco de dados OLE](../../data/oledb/ole-db-provider-template-architecture.md)<br/>
 [Classe CSimpleRow](../../data/oledb/csimplerow-class.md)

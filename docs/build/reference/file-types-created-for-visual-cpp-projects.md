@@ -14,12 +14,12 @@ helpviewer_keywords:
 - .def files
 - licensing ActiveX controls
 ms.assetid: 2b0ee2e0-ae81-4185-9bb9-11da3c99a283
-ms.openlocfilehash: 7ef8127b829b60d84af72874292c33ae1c7c4636
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: b0f780b122b147d633d5d7cd949da805d267f757
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58327575"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033369"
 ---
 # <a name="file-types-created-for-visual-studio-c-projects"></a>Tipos de arquivo criados para projetos do Visual Studio C++
 
@@ -35,7 +35,7 @@ Este tópico descreve todos os tipos de arquivos que estão associados a projeto
 
 - [Arquivos de cabeçalho pré-compilado](../creating-precompiled-header-files.md)
 
-- [Arquivos de recurso](resource-files-cpp.md)
+- [Arquivos de recursos](resource-files-cpp.md)
 
 - [Arquivos de ajuda (WinHelp)](help-files-winhelp.md)
 

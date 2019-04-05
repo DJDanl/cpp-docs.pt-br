@@ -10,12 +10,12 @@ helpviewer_keywords:
 - symbols [C++], editing
 - resource editors [C++], resource symbols
 ms.assetid: 8fccc09a-0237-4a65-b9c4-57d60c59e324
-ms.openlocfilehash: 63971ba381394bcaf905d614496511b7aa0d01f3
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 0b19ff0d1c709616868d47c172ff4cf8c6931b82
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57563310"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59036043"
 ---
 # <a name="resource-identifiers-symbols-c"></a>Identificadores de recurso (símbolos) (C++)
 
@@ -49,5 +49,5 @@ Win32
 ## <a name="see-also"></a>Consulte também
 
 [Trabalhando com arquivos de recurso](../windows/working-with-resource-files.md)<br/>
-[Arquivos de recurso](../windows/resource-files-visual-studio.md)<br/>
+[Arquivos de recursos](../windows/resource-files-visual-studio.md)<br/>
 [Editores de recursos](../windows/resource-editors.md)<br/>

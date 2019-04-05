@@ -5,12 +5,12 @@ helpviewer_keywords:
 - custom attributes
 - custom attributes, defining
 ms.assetid: af9998a5-aa12-4b94-9a43-97ce99026e29
-ms.openlocfilehash: c16337e15fedca25bbba31503026358e39a66026
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fbb1c629f23c5d70a78d62db2a3634cbfc489967
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50567174"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59034044"
 ---
 # <a name="custom-attributes-c"></a>Atributos personalizados (C++)
 
@@ -18,11 +18,11 @@ Um atributo personalizado é uma técnica com rigidez de tipos que permite ao us
 
 Para obter informações sobre como definir novos atributos personalizados, consulte,
 
-- [Atributos definidos pelo usuário](../user-defined-attributes-cpp-component-extensions.md)
+- [Atributos Definidos pelo Usuário](../../extensions/user-defined-attributes-cpp-component-extensions.md)
 
 - [atributo](attribute.md) (uma sintaxe preterido).
 
 ## <a name="see-also"></a>Consulte também
 
-[attribute](attribute.md)<br/>
+[Atributo](attribute.md)<br/>
 [Atributos personalizados (C++)](custom-attributes-cpp.md)

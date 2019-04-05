@@ -8,12 +8,12 @@ helpviewer_keywords:
 - CDialog class [MFC], MFC dialog boxes
 - MFC dialog boxes
 ms.assetid: e4feea1a-8360-4ccb-9b84-507f1ccd9ef3
-ms.openlocfilehash: 9add6f003f0f6cd4ab85980e1e35370770da43aa
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 32a8f8784459338131d4893f25d8798f8031b68b
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57282052"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58778488"
 ---
 # <a name="dialog-boxes"></a>Caixas de diálogo
 
@@ -61,10 +61,10 @@ A maioria das caixas de diálogo são modais, que exigem que o usuário fechar a
 
 - [Caixas de diálogo em OLE](../mfc/dialog-boxes-in-ole.md)
 
-- Criar um aplicativo cuja interface do usuário é uma caixa de diálogo: consulte a [CMNCTRL1](../visual-cpp-samples.md) ou [CMNCTRL2](../visual-cpp-samples.md) programas de exemplo. O Assistente de aplicativo fornece essa opção também.
+- Criar um aplicativo cuja interface do usuário é uma caixa de diálogo: consulte a [CMNCTRL1](../overview/visual-cpp-samples.md) ou [CMNCTRL2](../overview/visual-cpp-samples.md) programas de exemplo. O Assistente de aplicativo fornece essa opção também.
 
-- [Amostras](../mfc/dialog-sample-list.md)
+- [Exemplos](../mfc/dialog-sample-list.md)
 
 ## <a name="see-also"></a>Consulte também
 
-[Elementos da Interface do usuário](../mfc/user-interface-elements-mfc.md)
+[Elementos da interface do usuário](../mfc/user-interface-elements-mfc.md)

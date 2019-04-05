@@ -79,10 +79,10 @@ helpviewer_keywords:
 - CMFCRibbonGallery [MFC], OnDrawPaletteIcon
 ms.assetid: 9734c9c9-981c-4b3f-8c59-264fd41811b4
 ms.openlocfilehash: 818ce55e44d91520e568308a1a1e8a1fa0c8658d
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58780386"
 ---
 # <a name="cmfcribbongallery-class"></a>Classe CMFCRibbonGallery
@@ -328,7 +328,7 @@ void EnableMenuResize(
 
 ### <a name="parameters"></a>Parâmetros
 
-*bEnable*<br/>
+*bAtivar*<br/>
 [in] TRUE para habilitar o redimensionamento de menu; Caso contrário, FALSE.
 
 *bVertcalOnly*<br/>
@@ -348,7 +348,7 @@ void EnablMenuSideBar(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>Parâmetros
 
-*bEnable*<br/>
+*bAtivar*<br/>
 [in] TRUE para especificar que a barra lateral estiver habilitada; Caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
@@ -691,7 +691,7 @@ virtual BOOL SetACCData(
 *pParent*<br/>
 [in] A janela pai da janela de galeria da faixa de opções.
 
-*data*<br/>
+*Dados*<br/>
 [out] Um `CAccessibilityData` objeto que recebe os dados de acessibilidade da Galeria da faixa de opções.
 
 ### <a name="return-value"></a>Valor de retorno

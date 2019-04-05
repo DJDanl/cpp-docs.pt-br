@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4754
 ms.assetid: e0e4606a-754a-4f42-a274-21a34978d21d
-ms.openlocfilehash: 82036017188acc3f882e9751096af8ab268fd9db
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 203f2b97547c7ff8b1d68e3640e62d531b2600e9
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51525165"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58780347"
 ---
 # <a name="compiler-warning-level-4-c4754"></a>Compilador aviso (nível 4) C4754
 
@@ -19,7 +19,7 @@ Regras de conversão para operações aritméticas em uma comparação significa
 
 O aviso C4754 é emitido porque o resultado da comparação é sempre o mesmo. Isso indica que um dos ramificações da condição nunca será executado, provavelmente porque a expressão de inteiro associado está incorreta. Esse defeito de código geralmente ocorre em verificações de estouro de inteiro incorreto em arquiteturas de 64 bits.
 
-Regras de conversão de inteiro são complexas e há muitas armadilhas sutis. Como alternativa para a correção de cada aviso C4754, você pode atualizar o código para usar o [biblioteca de SafeInt](../../windows/safeint-library.md).
+Regras de conversão de inteiro são complexas e há muitas armadilhas sutis. Como alternativa para a correção de cada aviso C4754, você pode atualizar o código para usar o [biblioteca de SafeInt](../../safeint/safeint-library.md).
 
 ## <a name="example"></a>Exemplo
 

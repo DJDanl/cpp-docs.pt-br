@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - oleautomation attribute
 ms.assetid: c1086c91-260b-4dc3-b244-662852d09906
-ms.openlocfilehash: 4a50121e1a2e170ba69ee21526f4600512097c74
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 74701742de904b76e7b1152c8ddb3f2f5dd953c2
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471663"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59031706"
 ---
 # <a name="oleautomation"></a>oleautomation
 
@@ -46,5 +46,5 @@ Para obter mais informações sobre os contextos de atributo, consulte [contexto
 
 ## <a name="see-also"></a>Consulte também
 
-[Atributos de IDL](idl-attributes.md)<br/>
+[Atributos IDL](idl-attributes.md)<br/>
 [Atributos de interface](interface-attributes.md)

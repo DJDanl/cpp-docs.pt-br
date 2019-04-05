@@ -8,16 +8,16 @@ helpviewer_keywords:
 - _InterlockedAddLargeStatistic intrinsic
 - InterlockedAddLargeStatistic intrinsic
 ms.assetid: 2802e74b-bcee-46e4-b562-894908d44409
-ms.openlocfilehash: 88ada0a906b777ab8ac676ddfe0a5166e906999d
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: 6f9d599a8d7668c6c8a37846275e8338002589d1
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627386"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033408"
 ---
 # <a name="interlockedaddlargestatistic"></a>_InterlockedAddLargeStatistic
 
-**Seção específica da Microsoft**
+**Específico da Microsoft**
 
 Executa uma adição sincronizada em que o primeiro operando é um valor de 64 bits.
 
@@ -56,9 +56,9 @@ Esse intrínseco não é atômico porque ele é implementado como dois separados
 
 Essa função se comporta como uma barreira de leitura / gravação. Para obter mais informações, consulte [readwritebarrier](../intrinsics/readwritebarrier.md).
 
-**Fim da seção específica da Microsoft**
+**FIM de Específico da Microsoft**
 
 ## <a name="see-also"></a>Consulte também
 
 [Intrínsecos do compilador](../intrinsics/compiler-intrinsics.md)<br/>
-[conflitos com o compilador x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)
+[Conflitos com o compilador x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

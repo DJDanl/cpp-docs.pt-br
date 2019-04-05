@@ -1,12 +1,12 @@
 ---
 title: Tratamento de exceção ARM64
 ms.date: 11/19/2018
-ms.openlocfilehash: 43e43beae5ee02f9ef4537da08a1c9915056b777
-ms.sourcegitcommit: 5fc76f5b3c4c3ee49f38f05b37261a324591530b
+ms.openlocfilehash: ec81374f9a20cf5d23edda7d925705b6a4d5e2e6
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58870787"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59031720"
 ---
 # <a name="arm64-exception-handling"></a>Tratamento de exceção ARM64
 
@@ -219,15 +219,15 @@ Esses dados são divididos em quatro seções:
 
    e. **Contagem de epílogo** é um campo de 5 bits que tem dois significados, dependendo do estado do **eletrônico** bit:
 
-      1. Se **eletrônico** é definido como 0: Especifica a contagem do número total de escopos de exceção descrita na seção 2. Se mais de 31 escopos existirem na função, em seguida, a **palavras código** campo deve ser definido como 0 para indicar que uma palavra de extensão é necessária.
+      1. Se **eletrônico** é definido como 0: Especifica a contagem do número total de escopos de epílogo descrito na seção 2. Se mais de 31 escopos existirem na função, em seguida, a **palavras código** campo deve ser definido como 0 para indicar que uma palavra de extensão é necessária.
 
       2. Se **eletrônico** é definido como 1, em seguida, este campo especifica o índice do primeiro código de desenrolamento que descreve um e apenas epílogo.
 
-   f. **Palavras de código** é um campo de 5 bits que especifica o número de palavras de 32 bits necessários para conter todos os códigos de desenrolamento na seção 4. Se mais de 31 palavras forem necessárias (ou seja, mais de 124 desenrolar bytes de código), em seguida, esse campo deve ser definido como 0 para indicar que uma palavra de extensão é necessária.
+   f. **Palavras de código** é um campo de 5 bits que especifica o número de palavras de 32 bits necessários para conter todos os códigos de desenrolamento na seção 3. Se mais de 31 palavras forem necessárias (ou seja, mais de 124 desenrolar bytes de código), em seguida, esse campo deve ser definido como 0 para indicar que uma palavra de extensão é necessária.
 
    g. **Estendido a contagem de epílogo** e **palavras de código estendido** são campos de 8 e 16 bits, respectivamente, que fornecem mais espaço para codificação de um número excepcionalmente grande de epílogos ou um número excepcionalmente grande de palavras de código de desenrolamento. A palavra de extensão que contém esses campos só estará presente se os dois os **contagem de epílogo** e **código palavras** campos da primeira palavra do cabeçalho são definidos como 0.
 
-1. Depois que os dados de exceção, se **contagem de epílogo** não é zero, é uma lista de informações sobre escopos de epílogo, compactados um para uma palavra e armazenados em ordem crescente de deslocamento inicial. Cada escopo contém os bits do seguintes:
+1. Depois que o cabeçalho e o cabeçalho opcional estendido, descrita acima, se **contagem de epílogo** não é zero, é uma lista de informações sobre escopos de epílogo, compactados um para uma palavra e armazenados em ordem crescente de deslocamento inicial. Cada escopo contém os bits do seguintes:
 
    a. **Deslocamento de início do epílogo** é um campo de 18 bits que descreve o deslocamento em bytes dividido por 4 de epílogo em relação ao início da função
 
@@ -237,7 +237,7 @@ Esses dados são divididos em quatro seções:
 
 1. Depois que a lista de escopos de epílogo trata de uma matriz de bytes que contêm códigos de desenrolamento, descritos em detalhes em uma seção posterior. Essa matriz é preenchida no final, o mais próximo possível do limite da palavra completa. Os bytes são armazenados em ordem little-endian para que possam ser buscados diretamente no modo little-endian.
 
-1. Por fim, após os bytes de código de desenrolamento (e, se o **X** bit no cabeçalho foi definido como 1) é fornecido as informações do manipulador de exceção. Isso consiste em uma única **RVA de manipulador de exceção** fornecendo o endereço do manipulador de exceção em si, seguido imediatamente por uma quantidade de comprimento variável de dados necessários para o manipulador de exceção.
+1. Por fim, após os bytes de código de desenrolamento, se o **X** bit no cabeçalho foi definido como 1, o que vem de informações do manipulador de exceção. Isso consiste em uma única **RVA de manipulador de exceção** fornecendo o endereço do manipulador de exceção em si, seguido imediatamente por uma quantidade de comprimento variável de dados necessários para o manipulador de exceção.
 
 O registro. XData acima foi projetado, que é possível buscar os primeiros 8 bytes e do que calcular o tamanho total do registro (menos o comprimento dos dados de exceção de tamanho variável que segue). O trecho de código a seguir calcula o tamanho do registro:
 

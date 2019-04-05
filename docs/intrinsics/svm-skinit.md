@@ -7,16 +7,16 @@ helpviewer_keywords:
 - SKINIT instruction
 - __svm_skinit intrinsic
 ms.assetid: 787ec781-4cf2-40a2-aa20-5192334b131a
-ms.openlocfilehash: 630d4b9d93802038bd00b65495bb18455b0c61a4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 199cba2623f9d8e47c08be642ec485599b87976e
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50591211"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59026130"
 ---
 # <a name="svmskinit"></a>__svm_skinit
 
-**Seção específica da Microsoft**
+**Específico da Microsoft**
 
 Inicia o carregamento de software seguro verificável, como um monitor de máquina virtual.
 
@@ -40,7 +40,7 @@ O `__svm_skinit` função é equivalente ao `SKINIT` instruções de máquina. E
 
 O `SLB` parâmetro especifica o endereço físico de um bloco de 64K de memória chamada a *bloco de carregador seguro* (SLB). O SLB contém um programa chamado o carregador seguro que estabelece o ambiente operacional do computador e, subsequentemente, carrega o kernel de segurança.
 
-Essa função dá suporte a interação do monitor de máquina virtual do host com um sistema operacional e seus aplicativos de convidado. Para obter mais informações, pesquise o documento "Volume de Manual do programador da arquitetura AMD64 2: programação do sistema," número 24593, 3.11, de revisão de documentos na [corporation AMD](https://developer.amd.com/resources/developer-guides-manuals/) site.
+Essa função dá suporte a interação do monitor de máquina virtual do host com um sistema operacional e seus aplicativos de convidado. Para obter mais informações, pesquise o documento "Volume de Manual do programador da arquitetura AMD64 2: Sistema de programação,"documento número 24593, revisão 3.11, o [corporation AMD](https://developer.amd.com/resources/developer-guides-manuals/) site.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -50,7 +50,7 @@ Essa função dá suporte a interação do monitor de máquina virtual do host c
 
 **Arquivo de cabeçalho** \<intrin. h >
 
-**Fim da seção específica da Microsoft**
+**FIM de Específico da Microsoft**
 
 ## <a name="see-also"></a>Consulte também
 

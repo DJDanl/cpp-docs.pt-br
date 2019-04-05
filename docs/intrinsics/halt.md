@@ -8,16 +8,16 @@ helpviewer_keywords:
 - __halt intrinsic
 - HLT instruction
 ms.assetid: a074f44a-101c-45a5-8a5e-cfd223c34002
-ms.openlocfilehash: d99a87b1f3fd70d1fffb724629e9acded025732a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dd68c88a13035ca25f89304bcd84267a73978420
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50617172"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59025945"
 ---
 # <a name="halt"></a>__halt
 
-**Seção específica da Microsoft**
+**Específico da Microsoft**
 
 Interrompe o microprocessador até que ocorra uma interrupção habilitada, uma NMI (interrupção não Mascarável) ou uma redefinição.
 
@@ -37,9 +37,9 @@ void __halt( void );
 
 ## <a name="remarks"></a>Comentários
 
-O `__halt` função é equivalente ao `HLT` instruções de máquina e está disponível apenas no modo kernel. Para obter mais informações, pesquise o documento, "Manual do desenvolvedor de Software de arquitetura Intel, Volume 2: referência de conjunto de instruções," no [Intel Corporation](https://software.intel.com/articles/intel-sdm) site.
+O `__halt` função é equivalente ao `HLT` instruções de máquina e está disponível apenas no modo kernel. Para obter mais informações, pesquise o documento, "Manual do desenvolvedor de Software de arquitetura Intel, Volume 2: Instrução definir Reference"na [Intel Corporation](https://software.intel.com/articles/intel-sdm) site.
 
-**Fim da seção específica da Microsoft**
+**FIM de Específico da Microsoft**
 
 ## <a name="see-also"></a>Consulte também
 

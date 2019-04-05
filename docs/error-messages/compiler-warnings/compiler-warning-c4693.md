@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4693
 ms.assetid: 72d8db01-5e6f-4794-8731-76107e8f064a
-ms.openlocfilehash: 49d101ea56cd868e18489b6c74724a2d106c9265
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cac5918eb4a1689fd215e07272958eeca48247ad
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50536630"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58781894"
 ---
 # <a name="compiler-warning-c4693"></a>Aviso do compilador C4693
 
 > 'class': uma classe sealed abstract não pode ter quaisquer membros de instância 'Test'
 
-Se um tipo é marcado [lacrado](../../windows/sealed-cpp-component-extensions.md) e [abstrata](../../windows/abstract-cpp-component-extensions.md), ele só pode ter membros estáticos.
+Se um tipo é marcado [lacrado](../../extensions/sealed-cpp-component-extensions.md) e [abstrata](../../extensions/abstract-cpp-component-extensions.md), ele só pode ter membros estáticos.
 
 Esse aviso é promovido automaticamente a um erro. Se você quiser modificar esse comportamento, use [#pragma aviso](../../preprocessor/warning.md).
 

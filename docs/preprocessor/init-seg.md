@@ -9,12 +9,12 @@ helpviewer_keywords:
 - init_seg pragma
 - data segment initializing [C++]
 ms.assetid: 40a5898a-5c85-4aa9-8d73-3d967eb13610
-ms.openlocfilehash: f11ec6d3cee7af2ce785555af9b73d8c0eb58638
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 801496739fd9bd2b8a14e699ca4da9fe79f3a28d
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532609"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59026624"
 ---
 # <a name="initseg"></a>init_seg
 
@@ -42,7 +42,7 @@ Reservado para a inicialização da biblioteca em tempo de execução do Microso
 *lib*<br/>
 Disponível para as inicializações de fornecedores de bibliotecas de classes de terceiros. Os objetos nesse grupo são construídos após os marcados como *compilador* , mas antes de qualquer outro.
 
-*Usuário*<br/>
+*usuário*<br/>
 Disponível para qualquer usuário. Os objetos nesse grupo são construídos por último.
 
 *nome da seção* permite a especificação explícita da seção de inicialização. Objetos em um usuário especificado *nome da seção* não são construídos implicitamente; no entanto, seus endereços são colocados na seção nomeada pelo *nome da seção*.

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pragmas, vtordisp
 - vtordisp pragma
 ms.assetid: 05b7d73c-43fa-4b62-8c8a-170a9e427391
-ms.openlocfilehash: 075f00ad8a4071af57014638707503847b58756d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 67c6c329bcee75012f6075334760925eca945501
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50557177"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59034372"
 ---
 # <a name="vtordisp"></a>vtordisp
 
@@ -41,7 +41,7 @@ Remove o registro superior da pilha interna do compilador e restaura a configura
 *n*<br/>
 Especifica o novo valor da configuração de vtordisp. Os valores possíveis são 0, 1 ou 2, correspondente a `/vd0`, `/vd1`, e `/vd2` opções do compilador. Para obter mais informações, consulte [/vd (desabilitar deslocamentos de construção)](../build/reference/vd-disable-construction-displacements.md).
 
-*on*<br/>
+*em*<br/>
 Equivalente a `#pragma vtordisp(1)`.
 
 *Desativar*<br/>
@@ -65,7 +65,7 @@ class GetReal : virtual public VBase { ... };
 #pragma vtordisp(pop)
 ```
 
-**FIM de específico de C++**
+**FIM de Específico do C++**
 
 ## <a name="see-also"></a>Consulte também
 

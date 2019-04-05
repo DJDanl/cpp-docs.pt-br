@@ -8,16 +8,16 @@ helpviewer_keywords:
 - rep insb instruction
 - __inbytestring intrinsic
 ms.assetid: fe549556-e7a3-4af3-8ebf-8a7dc3cb233b
-ms.openlocfilehash: 494c57625bc6f93e09817171476267ff5fb27c3e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e515c6452d18ca022707fa2f9e36e2045523ccd5
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50556774"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038577"
 ---
 # <a name="inbytestring"></a>__inbytestring
 
-**Seção específica da Microsoft**
+**Específico da Microsoft**
 
 Lê dados da porta especificada usando o `rep insb` instrução.
 
@@ -54,7 +54,7 @@ void __inbytestring(
 
 Essa rotina só está disponível como função intrínseca.
 
-**Fim da seção específica da Microsoft**
+**FIM de Específico da Microsoft**
 
 ## <a name="see-also"></a>Consulte também
 

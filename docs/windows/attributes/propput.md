@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - propput attribute
 ms.assetid: 1f84dda9-9cce-4e16-aaf0-b2c5219827f2
-ms.openlocfilehash: 1902ba61417be457b4c296b513e1632bfdd8cec6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c9853b38675abfa0a94a319ac752eb2ef61a48e0
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492723"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59031722"
 ---
 # <a name="propput"></a>propput
 
@@ -46,7 +46,7 @@ Para obter mais informações sobre os contextos de atributo, consulte [contexto
 
 ## <a name="see-also"></a>Consulte também
 
-[Atributos de IDL](idl-attributes.md)<br/>
+[Atributos IDL](idl-attributes.md)<br/>
 [Atributos de método](method-attributes.md)<br/>
 [propget](propget.md)<br/>
 [propputref](propputref.md)

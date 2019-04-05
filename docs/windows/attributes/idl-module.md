@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - idl_module attribute
 ms.assetid: 3578b337-e38a-4334-b747-15404c02dbc0
-ms.openlocfilehash: c58997928fb3121c1ab8e277790969a93d9066de
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 80e4909a61b5b53ecde19471f2c838dd4c425874
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50608678"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59034972"
 ---
 # <a name="idlmodule"></a>idl_module
 
@@ -44,7 +44,7 @@ Um nome definido pelo usuário para o bloco de código que será exibida no arqu
 *helpcontext*<br/>
 (Opcional) A identificação de ajuda para esta biblioteca de tipos.
 
-*hidden*<br/>
+*oculto*<br/>
 (Opcional) Um parâmetro que impede que a biblioteca que está sendo exibido. Consulte a [ocultos](/windows/desktop/Midl/hidden) atributo MIDL para obter mais informações.
 
 *restricted*<br/>
@@ -91,6 +91,6 @@ Para obter mais informações, consulte [contextos de atributo](cpp-attributes-c
 
 ## <a name="see-also"></a>Consulte também
 
-[Atributos de IDL](idl-attributes.md)<br/>
-[Atributos independentes](stand-alone-attributes.md)<br/>
+[Atributos IDL](idl-attributes.md)<br/>
+[Atributos autônomos](stand-alone-attributes.md)<br/>
 [entry](entry.md)

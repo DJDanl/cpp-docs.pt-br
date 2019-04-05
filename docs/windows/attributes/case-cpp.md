@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - case attribute
 ms.assetid: 6fb883c3-0526-4932-a901-b4564dcaeb7d
-ms.openlocfilehash: 1ed107b78ea5638d93a773e19de13b4c1fe1036c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b3058f2fe6f35e1b11d4790780cb0fcdcaada706
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50648403"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038194"
 ---
 # <a name="case-c"></a>case (C++)
 
@@ -25,7 +25,7 @@ Usado com o [switch_type](switch-type.md) atributo em uma **união**.
 
 #### <a name="parameters"></a>Parâmetros
 
-*value*<br/>
+*Valor *<br/>
 Um valor de entrada possíveis para o qual você deseja fornecer processamento. O tipo de **valor** pode ser um dos seguintes tipos:
 
 - `int`
@@ -78,6 +78,6 @@ Para obter mais informações sobre os contextos de atributo, consulte [contexto
 
 ## <a name="see-also"></a>Consulte também
 
-[Atributos de IDL](idl-attributes.md)<br/>
+[Atributos IDL](idl-attributes.md)<br/>
 [Atributos Typedef, Enum, Union e Struct](typedef-enum-union-and-struct-attributes.md)<br/>
 [Atributos de classe](class-attributes.md)

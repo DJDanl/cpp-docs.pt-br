@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CSliderCtrl [MFC], SetTipSide
 - CSliderCtrl [MFC], SetToolTips
 ms.assetid: dd12b084-4eda-4550-a810-8f3cfb06b871
-ms.openlocfilehash: 0179d69726f49f2df02979264da4966b35178434
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 4db27112daf65b2c3f477527cd7b4351b91d7f18
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57421994"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58776629"
 ---
 # <a name="csliderctrl-class"></a>Classe CSliderCtrl
 
@@ -93,13 +93,13 @@ class CSliderCtrl : public CWnd
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
 |[CSliderCtrl::CSliderCtrl](#csliderctrl)|Constrói um objeto `CSliderCtrl`.|
 
-### <a name="public-methods"></a>Métodos Públicos
+### <a name="public-methods"></a>Métodos públicos
 
 |Nome|Descrição|
 |----------|-----------------|
@@ -388,7 +388,7 @@ void GetRange(
 *nMin*<br/>
 Referência a um número inteiro que recebe a posição mínima.
 
-*nMax*<br/>
+*Nmáx*<br/>
 Referência a um número inteiro que recebe a posição do máximo.
 
 ### <a name="remarks"></a>Comentários
@@ -434,7 +434,7 @@ void GetSelection(
 *nMin*<br/>
 Referência a um número inteiro que recebe a posição inicial da seleção atual.
 
-*nMax*<br/>
+*Nmáx*<br/>
 Referência a um número inteiro que recebe a posição final da seleção atual.
 
 ##  <a name="getthumblength"></a>  CSliderCtrl::GetThumbLength
@@ -633,7 +633,7 @@ void SetRange(
 *nMin*<br/>
 Posição do mínimo para o controle deslizante.
 
-*nMax*<br/>
+*Nmáx*<br/>
 Posição máximo para o controle deslizante.
 
 *bRedraw*<br/>
@@ -651,7 +651,7 @@ void SetRangeMax(
 
 ### <a name="parameters"></a>Parâmetros
 
-*nMax*<br/>
+*Nmáx*<br/>
 Posição máximo para o controle deslizante.
 
 *bRedraw*<br/>
@@ -690,7 +690,7 @@ void SetSelection(
 *nMin*<br/>
 Posição inicial para o controle deslizante.
 
-*nMax*<br/>
+*Nmáx*<br/>
 Posição final para o controle deslizante.
 
 ##  <a name="setthumblength"></a>  CSliderCtrl::SetThumbLength
@@ -771,7 +771,7 @@ int SetTipSide(int nLocation);
 
 ### <a name="parameters"></a>Parâmetros
 
-*nLocation*<br/>
+*Nlocal*<br/>
 Valor que representa o local no qual exibir o controle de dica de ferramenta. Para obter uma lista de valores possíveis, consulte a mensagem do Win32 [TBM_SETTIPSIDE](/windows/desktop/Controls/tbm-settipside), conforme descrito no SDK do Windows.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -801,7 +801,7 @@ Essa função membro implementa o comportamento da mensagem do Win32 [TBM_SETTOO
 
 ## <a name="see-also"></a>Consulte também
 
-[CMNCTRL2 de exemplo do MFC](../../visual-cpp-samples.md)<br/>
+[CMNCTRL2 de exemplo do MFC](../../overview/visual-cpp-samples.md)<br/>
 [Classe CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
 [Classe CProgressCtrl](../../mfc/reference/cprogressctrl-class.md)

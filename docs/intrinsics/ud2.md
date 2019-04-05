@@ -7,16 +7,16 @@ helpviewer_keywords:
 - UD2 instruction
 - __ud2 intrinsic
 ms.assetid: 0831cd5a-8b65-402e-bb57-11e1d5d7ffd2
-ms.openlocfilehash: dd876f26349c39e0af0d2e0f100fb4e13efa50f4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a36ab5c25ac9138b2a4d6810cc2a339e534f1695
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50666538"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59029395"
 ---
 # <a name="ud2"></a>__ud2
 
-**Seção específica da Microsoft**
+**Específico da Microsoft**
 
 Gera uma instrução indefinida.
 
@@ -30,7 +30,7 @@ void __ud2();
 
 O processador gerará uma exceção de opcode inválido, se você executar uma instrução indefinida.
 
-O `__ud2` função é equivalente ao `UD2` instruções de máquina e está disponível apenas no modo kernel. Para obter mais informações, pesquise o documento, "Manual do desenvolvedor de Software de arquitetura Intel, Volume 2: referência de conjunto de instruções," no [Intel Corporation](https://software.intel.com/articles/intel-sdm) site.
+O `__ud2` função é equivalente ao `UD2` instruções de máquina e está disponível apenas no modo kernel. Para obter mais informações, pesquise o documento, "Manual do desenvolvedor de Software de arquitetura Intel, Volume 2: Instrução definir Reference"na [Intel Corporation](https://software.intel.com/articles/intel-sdm) site.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -40,7 +40,7 @@ O `__ud2` função é equivalente ao `UD2` instruções de máquina e está disp
 
 **Arquivo de cabeçalho** \<intrin. h >
 
-**Fim da seção específica da Microsoft**
+**FIM de Específico da Microsoft**
 
 ## <a name="example"></a>Exemplo
 

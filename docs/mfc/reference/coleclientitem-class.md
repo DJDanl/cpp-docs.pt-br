@@ -164,12 +164,12 @@ helpviewer_keywords:
 - COleClientItem [MFC], OnScrollBy
 - COleClientItem [MFC], OnShowItem
 ms.assetid: 7f571b7c-2758-4839-847a-0cf1ef643128
-ms.openlocfilehash: ec3048e7bd033e5c296b558dd2083c648bc377e7
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 2687dfc9941a512523a7cb771cb872c78b97ce2d
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57295351"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58773977"
 ---
 # <a name="coleclientitem-class"></a>Classe COleClientItem
 
@@ -183,13 +183,13 @@ class COleClientItem : public CDocItem
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
 |[COleClientItem::COleClientItem](#coleclientitem)|Constrói um objeto `COleClientItem`.|
 
-### <a name="public-methods"></a>Métodos Públicos
+### <a name="public-methods"></a>Métodos públicos
 
 |Nome|Descrição|
 |----------|-----------------|
@@ -627,7 +627,7 @@ BOOL CreateFromClipboard(
 
 ### <a name="parameters"></a>Parâmetros
 
-*render*<br/>
+*renderização*<br/>
 Sinalizador que especifica como o servidor processará o item OLE. Para os valores possíveis, consulte [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) no SDK do Windows.
 
 *cfFormat*<br/>
@@ -663,7 +663,7 @@ BOOL CreateFromData(
 *pDataObject*<br/>
 Ponteiro para o [COleDataObject](../../mfc/reference/coledataobject-class.md) objeto do qual o item OLE deve ser criado.
 
-*render*<br/>
+*renderização*<br/>
 Sinalizador que especifica como o servidor processará o item OLE. Para os valores possíveis, consulte [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) no SDK do Windows.
 
 *cfFormat*<br/>
@@ -700,10 +700,10 @@ BOOL CreateFromFile(
 *lpszFileName*<br/>
 Ponteiro para o nome do arquivo do qual o item OLE é a ser criado.
 
-*clsid*<br/>
+*CLSID*<br/>
 Reservado para uso futuro.
 
-*render*<br/>
+*renderização*<br/>
 Sinalizador que especifica como o servidor processará o item OLE. Para os valores possíveis, consulte [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) no SDK do Windows.
 
 *cfFormat*<br/>
@@ -735,7 +735,7 @@ BOOL CreateLinkFromClipboard(
 
 ### <a name="parameters"></a>Parâmetros
 
-*render*<br/>
+*renderização*<br/>
 Sinalizador que especifica como o servidor processará o item OLE. Para os valores possíveis, consulte [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) no SDK do Windows.
 
 *cfFormat*<br/>
@@ -771,7 +771,7 @@ BOOL CreateLinkFromData(
 *pDataObject*<br/>
 Ponteiro para o [COleDataObject](../../mfc/reference/coledataobject-class.md) objeto do qual o item OLE deve ser criado.
 
-*render*<br/>
+*renderização*<br/>
 Sinalizador que especifica como o servidor processará o item OLE. Para os valores possíveis, consulte [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) no SDK do Windows.
 
 *cfFormat*<br/>
@@ -807,7 +807,7 @@ BOOL CreateLinkFromFile(
 *lpszFileName*<br/>
 Ponteiro para o nome do arquivo do qual o item OLE é a ser criado.
 
-*render*<br/>
+*renderização*<br/>
 Sinalizador que especifica como o servidor processará o item OLE. Para os valores possíveis, consulte [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) no SDK do Windows.
 
 *cfFormat*<br/>
@@ -840,10 +840,10 @@ BOOL CreateNewItem(
 
 ### <a name="parameters"></a>Parâmetros
 
-*clsid*<br/>
+*CLSID*<br/>
 ID que identifica exclusivamente o tipo de item OLE para criar.
 
-*render*<br/>
+*renderização*<br/>
 Sinalizador que especifica como o servidor processará o item OLE. Para os valores possíveis, consulte [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) no SDK do Windows.
 
 *cfFormat*<br/>
@@ -875,7 +875,7 @@ BOOL CreateStaticFromClipboard(
 
 ### <a name="parameters"></a>Parâmetros
 
-*render*<br/>
+*renderização*<br/>
 Sinalizador que especifica como o servidor processará o item OLE. Para os valores possíveis, consulte [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) no SDK do Windows.
 
 *cfFormat*<br/>
@@ -911,7 +911,7 @@ BOOL CreateStaticFromData(
 *pDataObject*<br/>
 Ponteiro para o [COleDataObject](../../mfc/reference/coledataobject-class.md) objeto do qual o item OLE deve ser criado.
 
-*render*<br/>
+*renderização*<br/>
 Sinalizador que especifica como o servidor processará o item OLE. Para os valores possíveis, consulte [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) no SDK do Windows.
 
 *cfFormat*<br/>
@@ -1273,7 +1273,7 @@ static HICON GetIconFromRegistry(CLSID& clsid);
 
 ### <a name="parameters"></a>Parâmetros
 
-*clsid*<br/>
+*CLSID*<br/>
 Uma referência ao CLSID para o servidor associado ao ícone.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -2187,8 +2187,8 @@ Para obter mais informações, consulte [IOleLink::Update](/windows/desktop/api/
 
 ## <a name="see-also"></a>Consulte também
 
-[Exemplo MFC MFCBIND](../../visual-cpp-samples.md)<br/>
-[Exemplo MFC OCLIENT](../../visual-cpp-samples.md)<br/>
+[Exemplo MFC MFCBIND](../../overview/visual-cpp-samples.md)<br/>
+[Exemplo MFC OCLIENT](../../overview/visual-cpp-samples.md)<br/>
 [Classe CDocItem](../../mfc/reference/cdocitem-class.md)<br/>
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
 [Classe COleServerItem](../../mfc/reference/coleserveritem-class.md)

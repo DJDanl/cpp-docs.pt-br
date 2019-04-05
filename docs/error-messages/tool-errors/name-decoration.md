@@ -6,12 +6,12 @@ helpviewer_keywords:
 - names [C++], decorated
 - decorated names, calling conventions
 ms.assetid: 8327a27b-bb4f-49f2-8218-b851b9d2a463
-ms.openlocfilehash: c01e684be62dbb8716f8556680b1c692af1efc45
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b916a73e0b8f86755384914fa85ef8a901e4a64c
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50598855"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041517"
 ---
 # <a name="name-decoration"></a>Decoração do nome
 
@@ -38,4 +38,4 @@ Atualmente, há um padrão de nomenclatura entre fornecedores de compilador ou a
 
 ## <a name="see-also"></a>Consulte também
 
-[Erro das ferramentas de vinculador LNK2001](../../error-messages/tool-errors/linker-tools-error-lnk2001.md)
+[Erro das Ferramentas de Vinculador LNK2001](../../error-messages/tool-errors/linker-tools-error-lnk2001.md)

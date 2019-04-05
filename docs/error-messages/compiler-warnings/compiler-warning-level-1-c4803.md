@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4803
 ms.assetid: 2552f3a6-c418-49f4-98a2-a929857be658
-ms.openlocfilehash: 3915307ac2bcc6a923c93382cfefa618ce01fe52
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bb8f5fe9d55a44193325a2fcfe9ef7675a2b3b89
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50563209"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58774874"
 ---
 # <a name="compiler-warning-level-1-c4803"></a>Compilador aviso (nível 1) C4803
 
@@ -19,7 +19,7 @@ ms.locfileid: "50563209"
 
 Métodos de evento devem ter a mesma classe de armazenamento que a declaração de evento. O compilador ajusta os métodos do evento para que as classes de armazenamento são os mesmos.
 
-Esse aviso pode ocorrer se você tiver uma classe que implementa um evento de uma interface. O compilador não gera implicitamente um método para disparar um evento em uma interface. Quando você implementa essa interface em uma classe, implicitamente o compilador gera um método raise e esse método não será virtual, portanto, o aviso. Para obter mais informações sobre eventos, consulte [evento](../../windows/event-cpp-component-extensions.md).
+Esse aviso pode ocorrer se você tiver uma classe que implementa um evento de uma interface. O compilador não gera implicitamente um método para disparar um evento em uma interface. Quando você implementa essa interface em uma classe, implicitamente o compilador gera um método raise e esse método não será virtual, portanto, o aviso. Para obter mais informações sobre eventos, consulte [evento](../../extensions/event-cpp-component-extensions.md).
 
 Ver [aviso](../../preprocessor/warning.md) pragma para obter informações sobre como desativar um aviso.
 

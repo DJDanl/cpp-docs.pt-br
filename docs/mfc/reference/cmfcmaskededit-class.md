@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CMFCMaskedEdit [MFC], SetWindowText
 - CMFCMaskedEdit [MFC], IsMaskedChar
 ms.assetid: 13b1a645-2d5d-4c37-8599-16d5003f23a5
-ms.openlocfilehash: 88a9c49b55dca9d98976924127efff67c479a96a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c1dcf89811fa5225283cb5bec120d3bd2fdfb003
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57276956"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58773782"
 ---
 # <a name="cmfcmaskededit-class"></a>Classe CMFCMaskedEdit
 
@@ -43,7 +43,7 @@ class CMFCMaskedEdit : public CEdit
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
@@ -88,7 +88,7 @@ Se você não chamar métodos de um ou mais para inicializar a máscara, o carac
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir demonstra como definir uma máscara (por exemplo, um número de telefone) usando o `EnableMask` método para criar a máscara para a máscara de controle, edite o `SetValidChars` método para especificar uma cadeia de caracteres válidos que o usuário pode inserir e `SetWindowText` controle de edição do método para exibir um aviso no mascarado. Este exemplo é parte do [exemplo de novos controles](../../visual-cpp-samples.md).
+O exemplo a seguir demonstra como definir uma máscara (por exemplo, um número de telefone) usando o `EnableMask` método para criar a máscara para a máscara de controle, edite o `SetValidChars` método para especificar uma cadeia de caracteres válidos que o usuário pode inserir e `SetWindowText` controle de edição do método para exibir um aviso no mascarado. Este exemplo é parte do [exemplo de novos controles](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#11](../../mfc/reference/codesnippet/cpp/cmfcmaskededit-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#12](../../mfc/reference/codesnippet/cpp/cmfcmaskededit-class_2.cpp)]
@@ -131,7 +131,7 @@ void EnableGetMaskedCharsOnly(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>Parâmetros
 
-*bEnable*<br/>
+*bAtivar*<br/>
 [in] TRUE para especificar que o [CMFCMaskedEdit::GetWindowText](#getwindowtext) método retrieve apenas mascarado caracteres; FALSO para especificar que o método de recuperar o texto inteiro. O valor padrão é TRUE.
 
 ### <a name="remarks"></a>Comentários
@@ -191,7 +191,7 @@ void EnableSelectByGroup(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>Parâmetros
 
-*bEnable*<br/>
+*bAtivar*<br/>
 [in] TRUE para selecionar apenas grupos; FALSE para selecionar o texto inteiro. O valor padrão é TRUE.
 
 ### <a name="remarks"></a>Comentários
@@ -225,7 +225,7 @@ void EnableSetMaskedCharsOnly(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>Parâmetros
 
-*bEnable*<br/>
+*bAtivar*<br/>
 [in] TRUE para validar a entrada em relação a apenas mascarado caracteres; do usuário FALSE para validar contra a máscara inteira. O valor padrão é TRUE.
 
 ##  <a name="getwindowtext"></a>  CMFCMaskedEdit::GetWindowText

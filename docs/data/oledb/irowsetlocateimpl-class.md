@@ -32,12 +32,12 @@ helpviewer_keywords:
 - Hash method
 - m_rgbookmarks
 ms.assetid: a8aa3149-7ce8-4976-a680-2da193fd3234
-ms.openlocfilehash: c5954aefaff2cdacb1aa1712f8b4bda93c9e434e
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: e3513084697a60a33b9fa2ab02222a9b332cce79
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420369"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59039813"
 ---
 # <a name="irowsetlocateimpl-class"></a>Classe IRowsetLocateImpl
 
@@ -94,7 +94,7 @@ A unidade de armazenamento para todos os identificadores de linha mantidos pelo 
 
 |||
 |-|-|
-|[Compare](#compare)|Compara dois indicadores.|
+|[Comparar](#compare)|Compara dois indicadores.|
 |[GetRowsAt](#getrowsat)|Busca linhas começando com a linha especificada por um deslocamento de um indicador.|
 |[GetRowsByBookmark](#getrowsbybookmark)|Busque as linhas que correspondem aos indicadores especificados.|
 |[Hash](#hash)|Retorna o hash valores para os indicadores especificados.|
@@ -235,8 +235,8 @@ CAtlArray<DBROWCOUNT> m_rgBookmarks;
 
 ## <a name="see-also"></a>Consulte também
 
-[Modelos de provedor do OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
-[Arquitetura de modelo do provedor do OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)<br/>
+[Modelos de provedor de banco de dados OLE](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Arquitetura de modelo do provedor de banco de dados OLE](../../data/oledb/ole-db-provider-template-architecture.md)<br/>
 [IRowsetLocate:IRowset](/previous-versions/windows/desktop/ms721190(v=vs.85))
 [suporte do provedor para indicadores](../../data/oledb/provider-support-for-bookmarks.md)<br/>
 [Indicadores](/previous-versions/windows/desktop/ms709728(v=vs.85))

@@ -26,16 +26,16 @@ helpviewer_keywords:
 - _InterlockedAdd_acq intrinsic
 - _InterlockedAdd64_rel intrinsic
 ms.assetid: 3d319603-ea9c-4fdd-ae61-e52430ccc3b1
-ms.openlocfilehash: 473d113ff9af3b009075dfef657082034b1bbcb6
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: 348e936bb05796e36ae45095f25b943076cec464
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53626900"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59040949"
 ---
 # <a name="interlockedadd-intrinsic-functions"></a>Funções intrínsecas InterlockedAdd
 
-**Seção específica da Microsoft**
+**Específico da Microsoft**
 
 Essas funções executam uma adição atômica, o que torna-se de que a operação for concluída com êxito quando mais de um thread tem acesso a uma variável compartilhada.
 
@@ -167,9 +167,9 @@ ff0000000000 + ff0000ffffffff = ffff00ffffffff
 Return value: ffff00ffffffff
 ```
 
-**Fim da seção específica da Microsoft**
+**FIM de Específico da Microsoft**
 
 ## <a name="see-also"></a>Consulte também
 
 [Intrínsecos do compilador](../intrinsics/compiler-intrinsics.md)<br/>
-[conflitos com o compilador x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)
+[Conflitos com o compilador x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

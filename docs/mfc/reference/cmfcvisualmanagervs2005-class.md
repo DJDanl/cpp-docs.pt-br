@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CMFCVisualManagerVS2005 [MFC], OnFillMiniFrameCaption
 - CMFCVisualManagerVS2005 [MFC], OnUpdateSystemColors
 ms.assetid: ea39b9ae-327e-4a51-bce7-dc84c78f005b
-ms.openlocfilehash: 212ef69350fbc85e6e0cc76bd505b2a895e75c8e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 4d1ef0c9087e876f3e8f43430b58fc80f3923ba6
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57279959"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58773457"
 ---
 # <a name="cmfcvisualmanagervs2005-class"></a>Classe CMFCVisualManagerVS2005
 
@@ -86,7 +86,7 @@ Todos os membros dessa classe são funções virtuais que são derivadas do ance
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir demonstra como usar o Gerenciador visual VS 2005. Este trecho de código faz parte do [amostra de demonstração de alerta da área de trabalho](../../visual-cpp-samples.md).
+O exemplo a seguir demonstra como usar o Gerenciador visual VS 2005. Este trecho de código faz parte do [amostra de demonstração de alerta da área de trabalho](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_DesktopAlertDemo#9](../../mfc/reference/codesnippet/cpp/cmfcvisualmanagervs2005-class_1.cpp)]
 

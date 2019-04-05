@@ -16,12 +16,12 @@ helpviewer_keywords:
 - COleLinkingDoc [MFC], OnFindEmbeddedItem
 - COleLinkingDoc [MFC], OnGetLinkedItem
 ms.assetid: 9f547f35-2f95-427f-b9c0-85c31940198b
-ms.openlocfilehash: 275119b2343c4d13b6a32f939fc8c3b2b5d5890c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c5076ceef0c6626fac0232fadf6818edd78b4ccf
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57300395"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58773548"
 ---
 # <a name="colelinkingdoc-class"></a>Classe COleLinkingDoc
 
@@ -35,13 +35,13 @@ class COleLinkingDoc : public COleDocument
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
 |[COleLinkingDoc::COleLinkingDoc](#colelinkingdoc)|Constrói um objeto `COleLinkingDoc`.|
 
-### <a name="public-methods"></a>Métodos Públicos
+### <a name="public-methods"></a>Métodos públicos
 
 |Nome|Descrição|
 |----------|-----------------|
@@ -57,7 +57,7 @@ class COleLinkingDoc : public COleDocument
 
 ## <a name="remarks"></a>Comentários
 
-Um aplicativo de contêiner que dá suporte à vinculação aos itens inseridos é chamado de "recipiente de link". O [OCLIENT](../../visual-cpp-samples.md) aplicativo de exemplo é um exemplo de um contêiner de link.
+Um aplicativo de contêiner que dá suporte à vinculação aos itens inseridos é chamado de "recipiente de link". O [OCLIENT](../../overview/visual-cpp-samples.md) aplicativo de exemplo é um exemplo de um contêiner de link.
 
 Quando a fonte de um item vinculado é um item inserido em outro documento, que a que contém o documento deve ser carregado para que o item inserido a ser editado. Por esse motivo, um contêiner de link deve ser capaz de ser iniciado por outro aplicativo de contêiner quando o usuário desejar editar a fonte de um item vinculado. Seu aplicativo também deve usar o [COleTemplateServer](../../mfc/reference/coletemplateserver-class.md) de classe para que ele possa criar documentos quando iniciado por meio de programação.
 
@@ -75,7 +75,7 @@ Conectar seu `COleTemplateServer` objeto aos seus modelos de documento ao chamar
 
 [!code-cpp[NVC_MFCOleContainer#25](../../mfc/codesnippet/cpp/colelinkingdoc-class_3.cpp)]
 
-Para obter um exemplo `CWinApp`-derivado de definição de classe e `InitInstance` , consulte OCLIENT. H e OCLIENT. CPP na amostra MFC [OCLIENT](../../visual-cpp-samples.md).
+Para obter um exemplo `CWinApp`-derivado de definição de classe e `InitInstance` , consulte OCLIENT. H e OCLIENT. CPP na amostra MFC [OCLIENT](../../overview/visual-cpp-samples.md).
 
 Para obter mais informações sobre como usar `COleLinkingDoc`, consulte os artigos [contêineres: Implementando um contêiner](../../mfc/containers-implementing-a-container.md) e [contêineres: Recursos avançados de](../../mfc/containers-advanced-features.md).
 
@@ -193,7 +193,7 @@ Você deve chamar essa função ao fechar um arquivo nomeado, mas geralmente nã
 
 ## <a name="see-also"></a>Consulte também
 
-[Exemplo MFC OCLIENT](../../visual-cpp-samples.md)<br/>
+[Exemplo MFC OCLIENT](../../overview/visual-cpp-samples.md)<br/>
 [Classe COleDocument](../../mfc/reference/coledocument-class.md)<br/>
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
 [Classe CDocTemplate](../../mfc/reference/cdoctemplate-class.md)

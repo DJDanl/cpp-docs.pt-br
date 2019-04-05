@@ -1,5 +1,5 @@
 ---
-title: 'Conjunto de registros: como conjuntos de registros atualizam registros (ODBC)'
+title: 'Conjunto de registros: Como conjuntos de registros atualizam registros (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - records, updating
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - updating recordsets
 - recordsets, updating
 ms.assetid: 5ceecc06-7a86-43b1-93db-a54fb1e717c7
-ms.openlocfilehash: 3b9bea1cc8fc0a11773d2392f88fff333eb7084f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bf71f562714e2dacfe75540e1e532219b3eb307f
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50510000"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59034476"
 ---
-# <a name="recordset-how-recordsets-update-records-odbc"></a>Conjunto de registros: como conjuntos de registros atualizam registros (ODBC)
+# <a name="recordset-how-recordsets-update-records-odbc"></a>Conjunto de registros: Como conjuntos de registros atualizam registros (ODBC)
 
 Este tópico se aplica às classes ODBC do MFC.
 
@@ -25,7 +25,7 @@ Além de sua capacidade de selecionar os registros de uma fonte de dados, conjun
 >  O SQL no qual seu `CRecordset` com base em objeto pode afetar a capacidade de atualização do seu conjunto de registros. Por exemplo, se seu SQL contém uma junção ou um **GROUP BY** cláusula, o MFC define a capacidade de atualização como FALSE.
 
 > [!NOTE]
->  Este tópico se aplica a objetos derivados de `CRecordset` em qual linha em massa buscando não foi implementado. Se você estiver usando a busca de linhas em massa, consulte [conjunto de registros: buscando registros em massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+>  Este tópico se aplica a objetos derivados de `CRecordset` em qual linha em massa buscando não foi implementado. Se você estiver usando a busca de linhas em massa, consulte [conjunto de registros: Buscando registros em massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 Este tópico explica:
 
@@ -73,4 +73,4 @@ Quando você chama [AddNew](../../mfc/reference/crecordset-class.md#addnew) ou [
 ## <a name="see-also"></a>Consulte também
 
 [Conjunto de registros (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Conjunto de registros: como fazer AddNew, editar e excluir trabalho (ODBC)](../../data/odbc/recordset-how-addnew-edit-and-delete-work-odbc.md)
+[Conjunto de registros: Como AddNew, editar e excluir trabalho (ODBC)](../../data/odbc/recordset-how-addnew-edit-and-delete-work-odbc.md)

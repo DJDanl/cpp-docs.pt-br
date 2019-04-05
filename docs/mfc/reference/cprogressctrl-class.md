@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CProgressCtrl [MFC], SetStep
 - CProgressCtrl [MFC], StepIt
 ms.assetid: 222630f4-1598-4026-8198-51649b1192ab
-ms.openlocfilehash: 131bee5f9eae1e6e2be4d48941d148edbde68262
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 15241485278f09d16c86fc7274f2fc1d85a7a2f7
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57418757"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58778943"
 ---
 # <a name="cprogressctrl-class"></a>Classe CProgressCtrl
 
@@ -61,13 +61,13 @@ class CProgressCtrl : public CWnd
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
 |[CProgressCtrl::CProgressCtrl](#cprogressctrl)|Constrói um objeto `CProgressCtrl`.|
 
-### <a name="public-methods"></a>Métodos Públicos
+### <a name="public-methods"></a>Métodos públicos
 
 |Nome|Descrição|
 |----------|-----------------|
@@ -604,6 +604,6 @@ O incremento de etapa é definido pelo `CProgressCtrl::SetStep` função de memb
 
 ## <a name="see-also"></a>Consulte também
 
-[CMNCTRL2 de exemplo do MFC](../../visual-cpp-samples.md)<br/>
+[CMNCTRL2 de exemplo do MFC](../../overview/visual-cpp-samples.md)<br/>
 [Classe CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)

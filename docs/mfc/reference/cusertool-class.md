@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CUserTool [MFC], m_strInitialDirectory
 - CUserTool [MFC], m_strLabel
 ms.assetid: 7c287d3e-d012-488d-b4e1-aa0f83f294bb
-ms.openlocfilehash: ca9035ecfcde0c2e82628c5509a16557a487b8cc
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 5bb0ae073b722c97e8e30158f8f7832fd88b2fbc
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57290450"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58779034"
 ---
 # <a name="cusertool-class"></a>Classe CUserTool
 
@@ -82,7 +82,7 @@ Para obter mais informações sobre como habilitar as ferramentas de usuário em
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir demonstra como criar uma ferramenta de um `CUserToolsManager` do objeto, defina o `m_strLabel` variável de membro e defina o aplicativo que executa a ferramenta de usuário. Este trecho de código faz parte do [amostra de demonstração do Visual Studio](../../visual-cpp-samples.md).
+O exemplo a seguir demonstra como criar uma ferramenta de um `CUserToolsManager` do objeto, defina o `m_strLabel` variável de membro e defina o aplicativo que executa a ferramenta de usuário. Este trecho de código faz parte do [amostra de demonstração do Visual Studio](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#35](../../mfc/codesnippet/cpp/cusertool-class_1.cpp)]
 

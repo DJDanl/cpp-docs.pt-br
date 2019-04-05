@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - rdx attribute
 ms.assetid: ff8e4312-c1ad-4934-bdaa-86f54409651e
-ms.openlocfilehash: 0b21e94ce3c54c0234dd7883aac3ef5cadbbc009
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2790c3de01d21242daee73fc442ad22d88739355
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677871"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023874"
 ---
 # <a name="rdx"></a>rdx
 
@@ -78,5 +78,5 @@ public:
 
 ## <a name="see-also"></a>Consulte também
 
-[Atributos de COM](com-attributes.md)<br/>
+[Atributos COM](com-attributes.md)<br/>
 [registration_script](registration-script.md)

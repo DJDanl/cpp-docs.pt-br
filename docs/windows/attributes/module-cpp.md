@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - module attributes
 ms.assetid: 02223b2a-62b5-4262-832f-564b1e11e58e
-ms.openlocfilehash: bafdb65f255ddf33964d22e5ea80a62446c2ad45
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.openlocfilehash: 5c69e0aa9e3444ec9b43470f8feb4d1f870dc9c8
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54893516"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59040574"
 ---
 # <a name="module-c"></a>module (C++)
 
@@ -25,7 +25,7 @@ Define o bloco de biblioteca no arquivo. idl.
 
 ### <a name="parameters"></a>Parâmetros
 
-*type*<br/>
+*tipo*<br/>
 (Opcional) Pode ser uma das seguintes opções:
 
 - `dll` Adiciona funções e classes que permitem que a DLL resultante funcionar como um servidor de COM em processo. Este é o valor padrão.
@@ -48,7 +48,7 @@ A ID exclusiva para a biblioteca. Se você omitir esse parâmetro, uma ID será 
 *lcid*<br/>
 O parâmetro de localização. Ver [lcid](/windows/desktop/Midl/lcid) para obter mais informações.
 
-*control*<br/>
+*Controle *<br/>
 (Opcional) Especifica que todas as coclasses na biblioteca de controles.
 
 *helpstring*<br/>
@@ -66,13 +66,13 @@ Especifica a biblioteca de tipos.
 *helpstringcontext*<br/>
 (Opcional) Ver [helpstringcontext](helpstringcontext.md) para obter mais informações.
 
-*hidden*<br/>
+*oculto*<br/>
 (Opcional) Impede que a biblioteca inteira seja exibido. Esse uso destina-se para uso com controles. Hosts precisam criar uma nova biblioteca de tipo que encapsula o controle com propriedades estendidas. Consulte a [ocultos](/windows/desktop/Midl/hidden) atributo MIDL para obter mais informações.
 
 *restricted*<br/>
 (Opcional) Membros da biblioteca não podem ser chamados arbitrariamente. Consulte a [restrito](/windows/desktop/Midl/restricted) atributo MIDL para obter mais informações.
 
-*custom*<br/>
+*personalizado*<br/>
 (Opcional) Um ou mais atributos; Isso é semelhante a [personalizado](custom-cpp.md) atributo. O primeiro parâmetro para *personalizado* é o GUID do atributo. Por exemplo:
 
 ```
@@ -161,12 +161,12 @@ Para obter mais informações, consulte [contextos de atributo](cpp-attributes-c
 
 ## <a name="see-also"></a>Consulte também
 
-[Atributos de IDL](idl-attributes.md)<br/>
+[Atributos IDL](idl-attributes.md)<br/>
 [Atributos de classe](class-attributes.md)<br/>
-[Atributos independentes](stand-alone-attributes.md)<br/>
+[Atributos autônomos](stand-alone-attributes.md)<br/>
 [Atributos Typedef, Enum, Union e Struct](typedef-enum-union-and-struct-attributes.md)<br/>
 [usesgetlasterror](usesgetlasterror.md)<br/>
-[library](/windows/desktop/Midl/library)<br/>
+[biblioteca](/windows/desktop/Midl/library)<br/>
 [helpcontext](helpcontext.md)<br/>
 [helpstring](helpstring.md)<br/>
 [helpfile](helpfile.md)<br/>

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - range attribute
 ms.assetid: f352f79e-ecb3-4cdd-9cdd-8406ef473594
-ms.openlocfilehash: b75915b901f55ce7ef8d295531ab5148c6535c93
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9ce941fe95f2bbef3895c039984db1e1d2985ae1
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50644952"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59029532"
 ---
 # <a name="range-c"></a>range (C++)
 
@@ -25,10 +25,10 @@ Especifica um intervalo de valores permitidos para argumentos ou campos cujos va
 
 ### <a name="parameters"></a>Parâmetros
 
-*low*<br/>
+*Baixa*<br/>
 O valor baixo do intervalo.
 
-*high*<br/>
+*Alta*<br/>
 O valor de intervalo alto.
 
 ## <a name="remarks"></a>Comentários
@@ -66,7 +66,7 @@ Para obter mais informações sobre os contextos de atributo, consulte [contexto
 
 ## <a name="see-also"></a>Consulte também
 
-[Atributos de IDL](idl-attributes.md)<br/>
+[Atributos IDL](idl-attributes.md)<br/>
 [Atributos de método](method-attributes.md)<br/>
 [Atributos de parâmetro](parameter-attributes.md)<br/>
 [Atributos de membro de dados](data-member-attributes.md)

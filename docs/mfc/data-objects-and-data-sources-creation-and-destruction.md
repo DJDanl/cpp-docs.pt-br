@@ -15,12 +15,12 @@ helpviewer_keywords:
 - destruction [MFC], data objects
 - data sources [MFC], creating
 ms.assetid: ac216d54-3ca5-4ce7-850d-cd1f6a90d4f1
-ms.openlocfilehash: 74119d7ea33eef68f0cb4a67c8419514cbb73c10
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 68ee5fbfec554df8865ca50c265ca2fa2f226a29
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304425"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58775238"
 ---
 # <a name="data-objects-and-data-sources-creation-and-destruction"></a>Objetos de dados e fontes de dados: Criação e destruição
 
@@ -68,7 +68,7 @@ Fontes de dados são criadas quando um aplicativo precisa para copiar dados para
 
 1. Se esse for um **Recortar** operação ou `DoDragDrop` retorna **DROPEFFECT_MOVE**, os dados selecionados na etapa 1 são excluídos do documento.
 
-Esse cenário é implementado pelos exemplos de OLE do MFC [OCLIENT](../visual-cpp-samples.md) e [HIERSVR](../visual-cpp-samples.md). Examinar o código-fonte para cada aplicativo `CView`-derivado da classe para tudo, exceto os `GetClipboardData` e `OnGetClipboardData` funções. Essas duas funções estão em um a `COleClientItem` ou `COleServerItem`-derivadas implementações de classe. Esses programas de exemplo fornecem um bom exemplo de como implementar esses conceitos.
+Esse cenário é implementado pelos exemplos de OLE do MFC [OCLIENT](../overview/visual-cpp-samples.md) e [HIERSVR](../overview/visual-cpp-samples.md). Examinar o código-fonte para cada aplicativo `CView`-derivado da classe para tudo, exceto os `GetClipboardData` e `OnGetClipboardData` funções. Essas duas funções estão em um a `COleClientItem` ou `COleServerItem`-derivadas implementações de classe. Esses programas de exemplo fornecem um bom exemplo de como implementar esses conceitos.
 
 Uma outra situação em que você talvez queira criar um `COleDataSource` objeto ocorre se você estiver modificando o comportamento padrão de uma operação de arrastar e soltar. Para obter mais informações, consulte o [arrastar e soltar: Personalizando](../mfc/drag-and-drop-customizing.md) artigo.
 
@@ -84,6 +84,6 @@ Para obter mais informações, consulte [arrastar e soltar](../mfc/drag-and-drop
 
 ## <a name="see-also"></a>Consulte também
 
-[Objetos e fontes de dados (OLE)](../mfc/data-objects-and-data-sources-ole.md)<br/>
+[Objetos e origens de dados (OLE)](../mfc/data-objects-and-data-sources-ole.md)<br/>
 [Classe COleDataObject](../mfc/reference/coledataobject-class.md)<br/>
 [Classe COleDataSource](../mfc/reference/coledatasource-class.md)

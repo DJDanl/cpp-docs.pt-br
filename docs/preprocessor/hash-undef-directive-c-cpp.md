@@ -8,12 +8,12 @@ helpviewer_keywords:
 - undef directive (#undef)
 - preprocessor, directives
 ms.assetid: 88900e0e-2c19-4a63-b681-f3d3133c24ca
-ms.openlocfilehash: cb3a08165e41f336df0e141f50310f191cd83257
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4f4f5ce244be6d7f4e13d7a2abc5d21232c08d9d
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50537261"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59039001"
 ---
 # <a name="undef-directive-cc"></a>Diretiva #undef (C/C++)
 Remove (não define) um nome criado anteriormente com `#define`.
@@ -45,12 +45,12 @@ No exemplo a seguir, o **#undef** diretiva remove as definições de uma constan
 #undef ADD
 ```
 
-**Seção específica da Microsoft**
+**Específico da Microsoft**
 
 As macros podem ser definidas a partir da linha de comando usando o `/U` opção, seguida pelos nomes de macro a serem definidos. O efeito de emitir esse comando é equivalente a uma sequência de `#undef` *nome da macro* instruções no início do arquivo.
 
-**Fim da seção específica da Microsoft**
+**FIM de Específico da Microsoft**
 
 ## <a name="see-also"></a>Consulte também
 
-[Diretivas do pré-processador](../preprocessor/preprocessor-directives.md)
+[Diretivas de pré-processador](../preprocessor/preprocessor-directives.md)

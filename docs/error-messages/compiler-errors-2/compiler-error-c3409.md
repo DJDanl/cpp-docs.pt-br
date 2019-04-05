@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3409
 ms.assetid: e372d9fa-230c-4b28-b6d3-6ad81ccf9dbb
-ms.openlocfilehash: b6ceb6f2e8700a5459dbd01db443ef90de314b5e
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 24f107e0c1f74f95afc521c8a4c888a26a35c13a
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330080"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033755"
 ---
 # <a name="compiler-error-c3409"></a>Erro do compilador C3409
 
@@ -19,7 +19,7 @@ ms.locfileid: "51330080"
 
 ## <a name="remarks"></a>Comentários
 
-Os colchetes foram interpretados pelo compilador como um [atributo](../../windows/cpp-attributes-reference.md) bloco, mas nenhum atributo foi encontrado.
+Os colchetes foram interpretados pelo compilador como um [atributo](../../windows/attributes-alphabetical-reference.md) bloco, mas nenhum atributo foi encontrado.
 
 O compilador pode gerar esse erro quando você usa colchetes como parte da definição de uma expressão lambda. Esse erro ocorre quando o compilador não pode determinar se os colchetes são parte da definição de uma expressão lambda ou de um bloco de atributo. Para obter mais informações sobre expressões lambda, consulte [Expressões lambda](../../cpp/lambda-expressions-in-cpp.md).
 
@@ -69,6 +69,6 @@ int main()
 
 ## <a name="see-also"></a>Consulte também
 
-[attribute](../../windows/cpp-attributes-reference.md)<br/>
-[Expressões Lambda](../../cpp/lambda-expressions-in-cpp.md)<br/>
+[Atributo](../../windows/attributes-alphabetical-reference.md)<br/>
+[Expressões lambda](../../cpp/lambda-expressions-in-cpp.md)<br/>
 [Sintaxe da expressão lambda](../../cpp/lambda-expression-syntax.md)

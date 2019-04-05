@@ -1,5 +1,5 @@
 ---
-title: 'Conjunto de registros: arquitetura (ODBC)'
+title: 'Conjunto de registros: Arquitetura (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - recordsets, data members
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - m_nParams data member
 - m_nFields data member, recordsets
 ms.assetid: 47555ddb-11be-4b9e-9b9a-f2931764d298
-ms.openlocfilehash: fc44f2b4fcae51cef78d6b660f0cc86ee516e5e6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5904a69f81dd1fbf22171a46040da5d4f5511588
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50651185"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59039644"
 ---
-# <a name="recordset-architecture-odbc"></a>Conjunto de registros: arquitetura (ODBC)
+# <a name="recordset-architecture-odbc"></a>Conjunto de registros: Arquitetura (ODBC)
 
 Este tópico se aplica às classes ODBC do MFC.
 
@@ -33,7 +33,7 @@ Este tópico descreve os membros de dados que compõem a arquitetura de um objet
 - [Usando membros de dados m_nFields e m_nParams](#_core_using_m_nfields_and_m_nparams)
 
 > [!NOTE]
->  Este tópico se aplica a objetos derivados de `CRecordset` em qual linha em massa buscando não foi implementado. Se a busca de linhas em massa for implementada, a arquitetura é semelhante. Para entender as diferenças, consulte [conjunto de registros: buscando registros em massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+>  Este tópico se aplica a objetos derivados de `CRecordset` em qual linha em massa buscando não foi implementado. Se a busca de linhas em massa for implementada, a arquitetura é semelhante. Para entender as diferenças, consulte [conjunto de registros: Buscando registros em massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 ##  <a name="_core_a_sample_class"></a> Classe de exemplo
 
@@ -83,16 +83,16 @@ Definindo membros de dados de parâmetro, você pode dizer à estrutura sobre os
 >  MFC não faz nada próprio com os parâmetros — em particular, ele não realiza uma substituição de texto. Em vez disso, o MFC informa ODBC onde obter o parâmetro; ODBC recupera os dados e executa a parametrização necessária.
 
 > [!NOTE]
->  A ordem dos parâmetros é importante. Para obter informações sobre isso e mais informações sobre parâmetros, consulte [conjunto de registros: parametrizando um conjunto de registros (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).
+>  A ordem dos parâmetros é importante. Para obter informações sobre isso e mais informações sobre parâmetros, consulte [conjunto de registros: Parametrizando um conjunto de registros (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).
 
 ##  <a name="_core_using_m_nfields_and_m_nparams"></a> Usando m_nFields e m_nParams
 
 Quando um assistente grava um construtor para a sua classe, ele também inicializa o [m_nFields](../../mfc/reference/crecordset-class.md#m_nfields) membro de dados, que especifica o número de [membros de dados de campo](#_core_field_data_members) na classe. Se você adicionar qualquer [parâmetros](#_core_parameter_data_members) à sua classe, você também deve adicionar a inicialização para o [m_nParams](../../mfc/reference/crecordset-class.md#m_nparams) membro de dados, que especifica o número de membros de dados do parâmetro. A estrutura usa esses valores para trabalhar com os membros de dados.
 
-Para obter mais informações e exemplos, consulte [troca de campos do registro: usando RFX](../../data/odbc/record-field-exchange-using-rfx.md).
+Para obter mais informações e exemplos, consulte [troca de campos do registro: Usando RFX](../../data/odbc/record-field-exchange-using-rfx.md).
 
 ## <a name="see-also"></a>Consulte também
 
 [Conjunto de registros (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Conjunto de registros: declarando uma classe para uma tabela (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)<br/>
-[RFX (troca de campo de registro)](../../data/odbc/record-field-exchange-rfx.md)
+[Conjunto de registros: Declarando uma classe para uma tabela (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)<br/>
+[Registrar troca de campos (RFX)](../../data/odbc/record-field-exchange-rfx.md)

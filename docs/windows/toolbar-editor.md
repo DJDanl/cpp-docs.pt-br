@@ -50,12 +50,12 @@ helpviewer_keywords:
 - buttons [C++], tool tips
 - Toolbar editor [C++], creating tool tips
 ms.assetid: aa9f0adf-60f6-4f79-ab05-bc330f15ec43
-ms.openlocfilehash: 83402159d19f07cf94a0d00ccd79d68549b124e9
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: 9d50561c598f17e251425972590c0663efe6e832
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328851"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038143"
 ---
 # <a name="toolbar-editor-c"></a>Editor de barra de ferramentas (C++)
 
@@ -64,7 +64,7 @@ O **barra de ferramentas do Editor** permite que você criar recursos de barra d
 O **barra de ferramentas do Editor** janela mostra dois modos de exibição de uma imagem de botão, o mesmo que o **Editor de imagens** janela. Uma barra de divisão separa os dois painéis e você pode arrastar a barra de divisão do lado a lado para alterar o tamanho relativo dos painéis. O painel ativo exibe uma borda de seleção e superior os dois modos de exibição da imagem é a barra de ferramentas do assunto.
 
 ![Toolbar Editor](../mfc/media/vctoolbareditor.gif "vcToolbarEditor")<br/>
-**Editor de barra de ferramentas**
+**Editor de Barra de Ferramentas**
 
 O **barra de ferramentas do Editor** é semelhante ao **Editor de imagens** na funcionalidade e os itens de menu, ferramentas gráficas e grade de bitmap entre os dois são iguais. Há um comando de menu na **imagem** menu para alternar entre as **barra de ferramentas do Editor** e o **Editor de imagens**. Para obter mais informações sobre como usar o **gráficos** barra de ferramentas **cores** paleta, ou **imagem** menu, consulte [Editor de imagens](../windows/image-editor-for-icons.md).
 

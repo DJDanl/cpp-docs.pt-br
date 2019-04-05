@@ -7,16 +7,16 @@ helpviewer_keywords:
 - CLGI instruction
 - __svm_clgi intrinsic
 ms.assetid: 6640f5ab-9472-46f9-a042-e15c4f1ff858
-ms.openlocfilehash: 9f3484cc5cbffea1315d546ced317dfdfceee9e6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fe25141499a19a265e2ac3ec746664ecd6cc9a2e
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618839"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59028685"
 ---
 # <a name="svmclgi"></a>__svm_clgi
 
-**Seção específica da Microsoft**
+**Específico da Microsoft**
 
 Limpa o sinalizador de interrupção global.
 
@@ -30,7 +30,7 @@ void __svm_clgi( void );
 
 O `__svm_clgi` função é equivalente ao `CLGI` instruções de máquina. O sinalizador de interrupção global determina se o microprocessador ignora, adia ou lida com interrupções devido a eventos como uma conclusão de e/s, um alerta de temperatura de hardware ou uma exceção de depuração.
 
-Essa função dá suporte a interação do monitor de máquina virtual do host com um sistema operacional e seus aplicativos de convidado. Para obter mais informações, pesquise o documento "Volume de Manual do programador da arquitetura AMD64 2: programação do sistema," número 24593, 3.11, de revisão de documentos na [corporation AMD](https://developer.amd.com/resources/developer-guides-manuals/) site.
+Essa função dá suporte a interação do monitor de máquina virtual do host com um sistema operacional e seus aplicativos de convidado. Para obter mais informações, pesquise o documento "Volume de Manual do programador da arquitetura AMD64 2: Sistema de programação,"documento número 24593, revisão 3.11, o [corporation AMD](https://developer.amd.com/resources/developer-guides-manuals/) site.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -40,7 +40,7 @@ Essa função dá suporte a interação do monitor de máquina virtual do host c
 
 **Arquivo de cabeçalho** \<intrin. h >
 
-**Fim da seção específica da Microsoft**
+**FIM de Específico da Microsoft**
 
 ## <a name="see-also"></a>Consulte também
 

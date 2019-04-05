@@ -7,16 +7,16 @@ helpviewer_keywords:
 - __svm_vmload intrinsic
 - VMLOAD instruction
 ms.assetid: b46a5592-db76-4ffc-8694-2f3494e28bed
-ms.openlocfilehash: 31f60096b60db7d8b135c686af87464060e0401a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 282f1c005c7eb59b2c590c70b38233c88c664e07
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50584763"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59031148"
 ---
 # <a name="svmvmload"></a>__svm_vmload
 
-**Seção específica da Microsoft**
+**Específico da Microsoft**
 
 Carrega um subconjunto de estado do processador do bloco de controle de máquina virtual especificada (VMCB).
 
@@ -36,7 +36,7 @@ void __svm_vmload(
 
 ## <a name="remarks"></a>Comentários
 
-O `__svm_vmload` função é equivalente ao `VMLOAD` instruções de máquina. Essa função dá suporte a interação do monitor de máquina virtual do host com um sistema operacional e seus aplicativos de convidado. Para obter mais informações, pesquise o documento "Volume de Manual do programador da arquitetura AMD64 2: programação do sistema," número 24593, 3.11, de revisão de documentos na [corporation AMD](https://developer.amd.com/resources/developer-guides-manuals/) site.
+O `__svm_vmload` função é equivalente ao `VMLOAD` instruções de máquina. Essa função dá suporte a interação do monitor de máquina virtual do host com um sistema operacional e seus aplicativos de convidado. Para obter mais informações, pesquise o documento "Volume de Manual do programador da arquitetura AMD64 2: Sistema de programação,"documento número 24593, revisão 3.11, o [corporation AMD](https://developer.amd.com/resources/developer-guides-manuals/) site.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -46,7 +46,7 @@ O `__svm_vmload` função é equivalente ao `VMLOAD` instruções de máquina. E
 
 **Arquivo de cabeçalho** \<intrin. h >
 
-**Fim da seção específica da Microsoft**
+**FIM de Específico da Microsoft**
 
 ## <a name="see-also"></a>Consulte também
 

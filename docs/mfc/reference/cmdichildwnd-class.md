@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CMDIChildWnd [MFC], MDIRestore
 - CMDIChildWnd [MFC], SetHandles
 ms.assetid: 6d07f5d4-9a3e-4723-9fa5-e65bb669fdd5
-ms.openlocfilehash: efcf5057481345c001cc48224f53c666623d0780
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 13f027e68184a4869e88883ff8b8d3b123b94e3e
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304984"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58774575"
 ---
 # <a name="cmdichildwnd-class"></a>Classe CMDIChildWnd
 
@@ -41,13 +41,13 @@ class CMDIChildWnd : public CFrameWnd
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
 |[CMDIChildWnd::CMDIChildWnd](#cmdichildwnd)|Constrói um objeto `CMDIChildWnd`.|
 
-### <a name="public-methods"></a>Métodos Públicos
+### <a name="public-methods"></a>Métodos públicos
 
 |Nome|Descrição|
 |----------|-----------------|
@@ -287,9 +287,9 @@ Chame essa função para definir os recursos de menu e accelerator usados pelo o
 
 ## <a name="see-also"></a>Consulte também
 
-[Exemplo MFC MDI](../../visual-cpp-samples.md)<br/>
-[Exemplo MFC MDIDOCVW](../../visual-cpp-samples.md)<br/>
-[Exemplo MFC SNAPVW](../../visual-cpp-samples.md)<br/>
+[Exemplo MFC MDI](../../overview/visual-cpp-samples.md)<br/>
+[Exemplo MFC MDIDOCVW](../../overview/visual-cpp-samples.md)<br/>
+[Exemplo MFC SNAPVW](../../overview/visual-cpp-samples.md)<br/>
 [Classe CFrameWnd](../../mfc/reference/cframewnd-class.md)<br/>
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
 [Classe CWnd](../../mfc/reference/cwnd-class.md)<br/>

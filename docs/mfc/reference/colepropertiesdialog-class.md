@@ -22,12 +22,12 @@ helpviewer_keywords:
 - COlePropertiesDialog [MFC], m_psh
 - COlePropertiesDialog [MFC], m_vp
 ms.assetid: a54dbc89-1447-4329-bd01-00e98ec9e935
-ms.openlocfilehash: 37197ee20b31564c589099b10e0f8d3f0d1f7e86
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: e574f535609ec9401bd76badf11fa7e05cc0c619
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57263865"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58781855"
 ---
 # <a name="colepropertiesdialog-class"></a>Classe COlePropertiesDialog
 
@@ -41,13 +41,13 @@ class COlePropertiesDialog : public COleDialog
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
 |[COlePropertiesDialog::COlePropertiesDialog](#colepropertiesdialog)|Constrói um objeto `COlePropertiesDialog`.|
 
-### <a name="public-methods"></a>Métodos Públicos
+### <a name="public-methods"></a>Métodos públicos
 
 |Nome|Descrição|
 |----------|-----------------|
@@ -261,7 +261,7 @@ A implementação padrão não faz nada. Você deve substituir essa função par
 
 ## <a name="see-also"></a>Consulte também
 
-[Exemplo MFC c](../../visual-cpp-samples.md)<br/>
+[Exemplo MFC c](../../overview/visual-cpp-samples.md)<br/>
 [Classe COleDialog](../../mfc/reference/coledialog-class.md)<br/>
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
 [Classe COleDialog](../../mfc/reference/coledialog-class.md)<br/>

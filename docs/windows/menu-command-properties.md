@@ -17,12 +17,12 @@ helpviewer_keywords:
 - mnemonics [C++], uniqueness checking
 - Check Mnemonics command
 ms.assetid: 6d308205-3c9e-42f2-ab42-45e656940e45
-ms.openlocfilehash: 62249bff7a278963ea67b2d2015ff52f22fcfc85
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: c9abf46907c473d4cf6d9e945038f70aa75bfc48
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57562920"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59026273"
 ---
 # <a name="menu-commands-c"></a>Comandos de menu (C++)
 
@@ -30,10 +30,10 @@ As informações a seguir são organizadas de acordo com o **menus** as propried
 
 |Propriedade|Descrição|
 |--------------|-----------------|
-|**Interromper**|Pode ser um destes valores:<br/>  - **Nenhum**: Sem quebra. Esse é o padrão.<br/>  - **Coluna**: Para menus estáticos, esse valor coloca o comando de menu em uma nova linha.<br/>      Para menus pop-up, esse valor coloca o comando de menu em uma nova coluna com nenhuma linha divisória entre as colunas.<br/>      Definir essa propriedade afeta a aparência do menu apenas em tempo de execução, não no editor de menu.<br />   - **Bar**: Mesmo que **coluna** , exceto, para menus pop-up, esse valor separa a nova coluna de coluna antiga com uma linha vertical.<br/>      Definir essa propriedade afeta a aparência do menu apenas em tempo de execução, não na **Editor de Menu**.|
-|**Caption**|O texto que rotula o comando de menu (o nome do menu). Para fazer uma das letras na legenda de um menu de comando de uma tecla mnemônica, preceda-o com um e comercial (&).|
-|**Verificado**|Se **verdadeira**, o comando de menu inicialmente é verificado. Tipo: **Bool**. Padrão: **False**.|
-|**Habilitado**|Se **falsos**, o item de menu está desabilitado.|
+|**quebra**|Pode ser um destes valores:<br/>  - **Nenhum**: Sem quebra. Esse é o padrão.<br/>  - **Coluna**: Para menus estáticos, esse valor coloca o comando de menu em uma nova linha.<br/>      Para menus pop-up, esse valor coloca o comando de menu em uma nova coluna com nenhuma linha divisória entre as colunas.<br/>      Definir essa propriedade afeta a aparência do menu apenas em tempo de execução, não no editor de menu.<br />   - **Bar**: Mesmo que **coluna** , exceto, para menus pop-up, esse valor separa a nova coluna de coluna antiga com uma linha vertical.<br/>      Definir essa propriedade afeta a aparência do menu apenas em tempo de execução, não na **Editor de Menu**.|
+|**Legenda**|O texto que rotula o comando de menu (o nome do menu). Para fazer uma das letras na legenda de um menu de comando de uma tecla mnemônica, preceda-o com um e comercial (&).|
+|**Selecionado**|Se **verdadeira**, o comando de menu inicialmente é verificado. Tipo: **Bool**. Padrão: **False**.|
+|**Habilitada**|Se **falsos**, o item de menu está desabilitado.|
 |**Indisponível**|Se **verdadeira**, o comando de menu é inicialmente esmaecida e inativo. Tipo: **Bool**. Padrão: **False**.|
 |**Ajuda**|Alinha o item de menu à direita. Padrão: **False**.<br/><br/>Por exemplo, o **ajudar** comando de menu é sempre à direita em todos os aplicativos do Windows. Se você definir essa propriedade em um item de menu, o item aparecerá muito à direita e no final do menu. Aplica-se a itens de nível superior.|
 |**ID**|Um símbolo definido no arquivo de cabeçalho. Tipo: **Símbolo**, **inteiro**, ou **caracteres entre aspas**.<br/><br/>Você pode usar qualquer símbolo que é geralmente disponível em qualquer um dos editores, mesmo que o [janela de propriedades](/visualstudio/ide/reference/properties-window) não fornece uma lista suspensa para seleção do.|
@@ -88,7 +88,7 @@ Win32
 
 ## <a name="see-also"></a>Consulte também
 
-[Editor de Menu](../windows/menu-editor.md)<br/>
+[Editor de menu](../windows/menu-editor.md)<br/>
 
 <!--
 [Strings (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)<br/>-->

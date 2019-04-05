@@ -4,12 +4,12 @@ ms.date: 10/22/2018
 helpviewer_keywords:
 - OLE DB consumers, creating
 ms.assetid: efefd4c0-4491-4072-aa9b-59545641efb3
-ms.openlocfilehash: e3c3de8861cbb5bdd2e1553cf27602763bdc4d47
-ms.sourcegitcommit: db07d1b9750ed4e42b6060719673d9518668942c
+ms.openlocfilehash: e4de4070b1662e33d4b0c0c355cabde851746662
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56844523"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59024498"
 ---
 # <a name="creating-an-ole-db-consumer-using-a-wizard"></a>Criando um consumidor de banco de dados OLE sem usar um assistente
 
@@ -29,4 +29,4 @@ Esta seção abrange os seguintes tópicos:
 
 ## <a name="see-also"></a>Consulte também
 
-[Criando um consumidor do OLE DB](../../data/oledb/creating-an-ole-db-consumer.md)
+[Criando um consumidor de banco de dados OLE](../../data/oledb/creating-an-ole-db-consumer.md)

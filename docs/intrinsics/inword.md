@@ -8,16 +8,16 @@ helpviewer_keywords:
 - in instruction
 - __inword intrinsic
 ms.assetid: 5c617edd-6709-40a1-aad2-40d5e39283c6
-ms.openlocfilehash: 85498fd85f5401ad123794cc9aaed2b278db867c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f7355f64eeb2ace550d272ac6a9b1414e90eb172
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50475355"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038590"
 ---
 # <a name="inword"></a>__inword
 
-**Seção específica da Microsoft**
+**Específico da Microsoft**
 
 Lê dados da porta especificada usando o `in` instrução.
 
@@ -50,7 +50,7 @@ A palavra de leitura de dados.
 
 Essa rotina só está disponível como função intrínseca.
 
-**Fim da seção específica da Microsoft**
+**FIM de Específico da Microsoft**
 
 ## <a name="see-also"></a>Consulte também
 

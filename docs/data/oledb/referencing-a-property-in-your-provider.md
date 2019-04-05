@@ -6,12 +6,12 @@ helpviewer_keywords:
 - references, to properties in providers
 - referencing properties in providers
 ms.assetid: bfbb3851-5eed-467a-a179-4a97a9515525
-ms.openlocfilehash: d8c775af8f887deb7bf49016f9716fa0a76d2439
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: c3e620cd760aa04df7d7d2209ef009a606675276
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57415936"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59028448"
 ---
 # <a name="referencing-a-property-in-your-provider"></a>Fazendo referência a uma propriedade no provedor
 
@@ -68,4 +68,4 @@ if (pPropSet)
 
 ## <a name="see-also"></a>Consulte também
 
-[Trabalhando com modelos de provedor do OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)
+[Trabalhando com modelos de provedor de banco de dados OLE](../../data/oledb/working-with-ole-db-provider-templates.md)

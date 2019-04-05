@@ -7,16 +7,16 @@ helpviewer_keywords:
 - __vmx_vmptrst intrinsic
 - VMPTRST instruction
 ms.assetid: 8dc66e47-03a0-41b0-8e25-c1485f42817a
-ms.openlocfilehash: 4d7e2ed29daac276c9b6cba07a727371a212fd4a
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 5ef02dd4401e0c10a84be008d7cb25841e0359cd
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51331887"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59029494"
 ---
 # <a name="vmxvmptrst"></a>__vmx_vmptrst
 
-**Seção específica da Microsoft**
+**Específico da Microsoft**
 
 Armazena o ponteiro para a estrutura atual do controle de máquina virtual (VMCS) no endereço especificado.
 
@@ -47,7 +47,7 @@ O `__vmx_vmptrst` função é equivalente ao `VMPTRST` instruções de máquina.
 
 **Arquivo de cabeçalho** \<intrin. h >
 
-**Fim da seção específica da Microsoft**
+**FIM de Específico da Microsoft**
 
 ## <a name="see-also"></a>Consulte também
 

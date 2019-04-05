@@ -7,16 +7,16 @@ helpviewer_keywords:
 - __outword intrinsic
 - out instruction
 ms.assetid: 995f8834-0f50-4b4f-a7a2-af0e7c371cda
-ms.openlocfilehash: 8a34dfe8bfaedf8f6df5e6f26015eeccd67ed957
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 067f438d2135f4d61245606ab25af5a6f1ec9568
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51332004"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59036780"
 ---
 # <a name="outword"></a>__outword
 
-**Seção específica da Microsoft**
+**Específico da Microsoft**
 
 Gera o `out` instrução, que envia a palavra `Data` para a porta de e/s especificada pelo `Port`.
 
@@ -49,7 +49,7 @@ void __outword(
 
 Essa rotina só está disponível como função intrínseca.
 
-**Fim da seção específica da Microsoft**
+**FIM de Específico da Microsoft**
 
 ## <a name="see-also"></a>Consulte também
 

@@ -8,16 +8,16 @@ helpviewer_keywords:
 - __readpmc intrinsic
 - rdpmc instruction
 ms.assetid: 14ed45a6-28b6-4635-8437-a597c04b43d4
-ms.openlocfilehash: 059d9344fa329e69666abaca4d73122ab29f8d2a
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 848c880e76d6d431ee56a0bb30a33b276837ce76
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326427"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59029337"
 ---
 # <a name="readpmc"></a>__readpmc
 
-**Seção específica da Microsoft**
+**Específico da Microsoft**
 
 Gera o `rdpmc` instrução, que lê o desempenho de monitoramento do contador especificado por `counter`.
 
@@ -31,7 +31,7 @@ unsigned __int64 __readpmc(
 
 #### <a name="parameters"></a>Parâmetros
 
-*counter*<br/>
+*contador*<br/>
 [in] O contador de desempenho de leitura.
 
 ## <a name="return-value"></a>Valor de retorno
@@ -50,7 +50,7 @@ O valor do contador de desempenho especificado.
 
 Esse intrínseco está disponível no modo de kernel apenas e a rotina só está disponível como um intrínseco.
 
-**Fim da seção específica da Microsoft**
+**FIM de Específico da Microsoft**
 
 ## <a name="see-also"></a>Consulte também
 

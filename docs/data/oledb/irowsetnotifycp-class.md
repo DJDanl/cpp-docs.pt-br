@@ -24,12 +24,12 @@ helpviewer_keywords:
 - Fire_OnRowChange method
 - Fire_OnRowsetChange method
 ms.assetid: ccef402b-94a0-4c2e-9a13-7e854ef82390
-ms.openlocfilehash: e3c85092b4abf074107eadb73ca0d589742c6ecd
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: a3ab63206ce7ac53ff996ecf1bb64bdaa0b79fcb
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420850"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59031680"
 ---
 # <a name="irowsetnotifycp-class"></a>Classe IRowsetNotifyCP
 
@@ -77,7 +77,7 @@ Uma matriz do tipo [CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray
 
 ## <a name="remarks"></a>Comentários
 
-`IRowsetNotifyCP` implementa funções para informar ouvintes no ponto de conexão de difusão `IID_IRowsetNotify` de alterações no conteúdo do conjunto de linhas.
+`IRowsetNotifyCP` Implementa funções para informar ouvintes no ponto de conexão de difusão `IID_IRowsetNotify` de alterações no conteúdo do conjunto de linhas.
 
 Observe que você também deve implementar e registrar `IRowsetNotify` consumidor (também conhecido como o "coletor") usando [IRowsetNotifyImpl](../../data/oledb/irowsetnotifyimpl-class.md) para que o consumidor pode lidar com notificações. Ver [recebendo notificações](../../data/oledb/receiving-notifications.md) sobre como implementar a interface de ponto de conexão no consumidor.
 
@@ -141,8 +141,8 @@ Ver [IRowsetNotify::OnRowsetChange](/previous-versions/windows/desktop/ms722669(
 
 ## <a name="see-also"></a>Consulte também
 
-[Modelos de provedor do OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
-[Arquitetura de modelo do provedor do OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)<br/>
+[Modelos de provedor de banco de dados OLE](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Arquitetura de modelo do provedor de banco de dados OLE](../../data/oledb/ole-db-provider-template-architecture.md)<br/>
 [Notificações (COM)](/windows/desktop/com/notifications)<br/>
 [BEGIN_CONNECTION_POINT_MAP](../../atl/reference/connection-point-macros.md#begin_connection_point_map)<br/>
 [END_CONNECTION_POINT_MAP](../../atl/reference/connection-point-macros.md#end_connection_point_map)<br/>

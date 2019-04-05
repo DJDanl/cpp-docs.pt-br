@@ -121,10 +121,10 @@ helpviewer_keywords:
 - CDocument [MFC], m_lfRichPreviewFont
 ms.assetid: e5a2891d-e1e1-4599-8c7e-afa9b4945446
 ms.openlocfilehash: 2d87ff67000fb5b70c0a5c965638875e6f50b22c
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58774170"
 ---
 # <a name="cdocument-class"></a>Classe CDocument
@@ -372,10 +372,10 @@ virtual POSITION FindChunk(
 
 ### <a name="parameters"></a>Parâmetros
 
-*guid*<br/>
+*GUID*<br/>
 Especifica o GUID de uma parte para localizar.
 
-*pid*<br/>
+*PID*<br/>
 Especifica um PID de uma parte para localizar.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1073,7 +1073,7 @@ virtual void RemoveChunk(
 *Guid*<br/>
 Especifica o GUID de uma parte a ser removido.
 
-*Pid*<br/>
+*PID*<br/>
 Especifica o PID de uma parte a ser removido.
 
 ### <a name="remarks"></a>Comentários

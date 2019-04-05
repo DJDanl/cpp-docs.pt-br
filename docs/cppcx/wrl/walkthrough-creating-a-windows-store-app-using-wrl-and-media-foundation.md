@@ -3,12 +3,12 @@ title: 'Passo a passo: Criando um aplicativo UWP usando WRL e Media Foundation'
 ms.date: 09/17/2018
 ms.topic: reference
 ms.assetid: 0336c550-fbeb-4dc4-aa9b-660f9fc45382
-ms.openlocfilehash: e6d240152c3740b59c34ae8e0f5aa818ce8be638
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: e0254be8c6fa185f75c46898d4da51742195550a
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58783803"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59036030"
 ---
 # <a name="walkthrough-creating-a-uwp-app-using-wrl-and-media-foundation"></a>Passo a passo: Criando um aplicativo UWP usando WRL e Media Foundation
 
@@ -121,6 +121,6 @@ O exemplo mostra como capturar fotos da webcam padrão, um por vez. O [exemplo d
 
 ## <a name="see-also"></a>Consulte também
 
-[WRL (Biblioteca de Modelos C++ do Tempo de Execução do Windows)](windows-runtime-cpp-template-library-wrl.md)<br/>
+[Biblioteca de Modelos C++ do Windows Runtime  (WRL)](windows-runtime-cpp-template-library-wrl.md)<br/>
 [Microsoft Media Foundation](/windows/desktop/medfound/microsoft-media-foundation-sdk)<br/>
 [Exemplo de extensões de mídia](http://code.msdn.microsoft.com/windowsapps/Media-extensions-sample-7b466096)

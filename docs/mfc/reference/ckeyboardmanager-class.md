@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CKeyboardManager [MFC], TranslateCharToUpper
 - CKeyboardManager [MFC], UpdateAccelTable
 ms.assetid: 4809ece6-89df-4479-8b53-9bf476ee107b
-ms.openlocfilehash: c953958b3e0112997423376d42b62953b936049a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 3360a28d50f64546837cc5ef35dcfc761b4fb0f5
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57303601"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58779801"
 ---
 # <a name="ckeyboardmanager-class"></a>Classe CKeyboardManager
 
@@ -49,14 +49,14 @@ class CKeyboardManager : public CObject
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |||
 |-|-|
 |Nome|Descrição|
 |[CKeyboardManager::CKeyboardManager](#ckeyboardmanager)|Constrói um objeto `CKeyboardManager`.|
 
-### <a name="public-methods"></a>Métodos Públicos
+### <a name="public-methods"></a>Métodos públicos
 
 |||
 |-|-|
@@ -81,7 +81,7 @@ Você não deve criar um `CKeyboardManager` objeto manualmente. Ele será criado
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir demonstra como recuperar um ponteiro para um `CKeyboardManager` do objeto de um `CWinAppEx` classe e como mostrar todas as teclas de atalho associadas aos comandos de menu. Este trecho de código é parte do [exemplo de páginas personalizadas](../../visual-cpp-samples.md).
+O exemplo a seguir demonstra como recuperar um ponteiro para um `CKeyboardManager` do objeto de um `CWinAppEx` classe e como mostrar todas as teclas de atalho associadas aos comandos de menu. Este trecho de código é parte do [exemplo de páginas personalizadas](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_CustomPages#5](../../mfc/reference/codesnippet/cpp/ckeyboardmanager-class_1.cpp)]
 

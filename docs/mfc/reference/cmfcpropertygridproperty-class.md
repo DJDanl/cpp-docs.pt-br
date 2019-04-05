@@ -166,12 +166,12 @@ helpviewer_keywords:
 - CMFCPropertyGridProperty [MFC], m_strFormatLong
 - CMFCPropertyGridProperty [MFC], m_strFormatShort
 ms.assetid: 36f3fabe-0efe-468b-8a0b-5a7956db38a2
-ms.openlocfilehash: 550f238ae66bcaf7d5afc245b709c42c78769949
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: aa88cc2d4ee915b970157ee6ed280512e2352bcc
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57305062"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58779021"
 ---
 # <a name="cmfcpropertygridproperty-class"></a>Classe CMFCPropertyGridProperty
 
@@ -187,7 +187,7 @@ class CMFCPropertyGridProperty : public CObject
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
@@ -297,7 +297,7 @@ Um objeto de propriedade pode representar tipos de dados como cadeias de caracte
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir demonstra como construir um `CMFCPropertyGridProperty` objeto. O exemplo também demonstra como usar vários métodos no `CMFCPropertyGridProperty` classe para adicionar uma opção, adicione um subitem, ativar uma propriedade e mostrar uma propriedade. Este exemplo é parte do [exemplo de novos controles](../../visual-cpp-samples.md).
+O exemplo a seguir demonstra como construir um `CMFCPropertyGridProperty` objeto. O exemplo também demonstra como usar vários métodos no `CMFCPropertyGridProperty` classe para adicionar uma opção, adicione um subitem, ativar uma propriedade e mostrar uma propriedade. Este exemplo é parte do [exemplo de novos controles](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#27](../../mfc/reference/codesnippet/cpp/cmfcpropertygridproperty-class_1.cpp)]
 
@@ -406,7 +406,7 @@ void AllowEdit(BOOL bAllow=TRUE);
 
 ### <a name="parameters"></a>Parâmetros
 
-*bAllow*<br/>
+*bPermitir*<br/>
 [in] TRUE para tornar a propriedade editável; FALSE para tornar a propriedade somente leitura. O valor padrão é TRUE.
 
 ### <a name="remarks"></a>Comentários
@@ -545,7 +545,7 @@ void Enable(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>Parâmetros
 
-*bEnable*<br/>
+*bAtivar*<br/>
 [in] TRUE para habilitar a propriedade; FALSE para desabilitar a propriedade. Propriedades desabilitadas não respondem ao mouse ou teclado de entrada. O valor padrão é TRUE.
 
 ### <a name="remarks"></a>Comentários
@@ -563,13 +563,13 @@ void EnableSpinControl(
 
 ### <a name="parameters"></a>Parâmetros
 
-*bEnable*<br/>
+*bAtivar*<br/>
 [in] True para habilitar o controle de botão de rotação; FALSE para desabilitar o controle de botão de rotação. O valor padrão é TRUE.
 
 *nMin*<br/>
 [in] O valor mínimo do controle de botão de rotação. O valor padrão é 0.
 
-*nMax*<br/>
+*Nmáx*<br/>
 [in] O valor máximo do controle de botão de rotação. O valor padrão é 0.
 
 ### <a name="remarks"></a>Comentários
@@ -801,7 +801,7 @@ CMFCPropertyGridProperty* GetSubItem(int nIndex) const;
 
 Um ponteiro para um objeto de propriedade que é um item filho dessa propriedade.
 
--ou-
+- ou -
 
 No modo de varejo, NULL se o *nIndex* parâmetro é inválido. No modo de depuração, esse método declara.
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - preprocessor directives
 - preprocessor, directives
 ms.assetid: df59990f-b420-43f3-b415-5c25493abeee
-ms.openlocfilehash: 740ef6d59295a96eaa93c3f2eeaf9a561b420b31
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ddb8239e6c168a3c20aeb252125e9dde60c7c4bf
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437748"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59031797"
 ---
 # <a name="null-directive"></a>Diretiva nula
 A diretiva de pré-processador nula é um único sinal numérico (**#**) em apenas uma linha. Ele não tem efeito.
@@ -25,4 +25,4 @@ A diretiva de pré-processador nula é um único sinal numérico (**#**) em apen
 
 ## <a name="see-also"></a>Consulte também
 
-[Diretivas do pré-processador](../preprocessor/preprocessor-directives.md)
+[Diretivas de pré-processador](../preprocessor/preprocessor-directives.md)

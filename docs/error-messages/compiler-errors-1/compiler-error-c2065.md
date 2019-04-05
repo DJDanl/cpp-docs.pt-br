@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2065
 ms.assetid: 78093376-acb7-45f5-9323-5ed7e0aab1dc
-ms.openlocfilehash: ae7f582de5d6c45df34c42164756356a9c794d31
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3daf2cd532cd07225b822c80b46fc28274d4e2a8
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50482506"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58778748"
 ---
 # <a name="compiler-error-c2065"></a>Erro do compilador C2065
 
@@ -203,9 +203,9 @@ int main() {
 }
 ```
 
-## <a name="example-ccli-type-deduction-failure"></a>Exemplo: C + + / falha de dedução de tipo CLI
+## <a name="example-ccli-type-deduction-failure"></a>Exemplo: C + + / Falha de dedução de tipo CLI
 
-Esse erro pode ocorrer ao chamar uma função genérica, se o argumento de tipo pretendida não pode ser deduzido dos parâmetros usados. Para obter mais informações, consulte [funções genéricas (C + + / CLI)](../../windows/generic-functions-cpp-cli.md).
+Esse erro pode ocorrer ao chamar uma função genérica, se o argumento de tipo pretendida não pode ser deduzido dos parâmetros usados. Para obter mais informações, consulte [funções genéricas (C + + / CLI)](../../extensions/generic-functions-cpp-cli.md).
 
 ```cpp
 // C2065_b.cpp

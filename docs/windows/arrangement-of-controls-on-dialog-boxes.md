@@ -80,12 +80,12 @@ helpviewer_keywords:
 - CListBox class, scroll bar width
 - scroll bars [C++], width
 ms.assetid: 832491cf-98af-42e5-a854-2cb135fd45c6
-ms.openlocfilehash: 3d79e48411006156ee4682adc736e83e226743af
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 878b7371dfa77880d68f1001444ed44b84d7240c
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57562972"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037415"
 ---
 # <a name="how-to-layout-controls-c"></a>Como: Controles de layout (C++)
 
@@ -261,7 +261,7 @@ Quando você adicioná-lo à caixa de diálogo, você pode dimensionar uma caixa
    |Espaçamento|Descrição|
    |---|---|
    |**Entre**|Controles de espaço uniformemente entre os mais à esquerda e o controle mais à direita selecionado.|
-   |**Para baixo**|Controles de espaço uniformemente entre o primeiro e o controle na extremidade inferior selecionado.|
+   |**Abaixo**|Controles de espaço uniformemente entre o primeiro e o controle na extremidade inferior selecionado.|
 
 - Para centralizar os controles, selecione o controle ou controles que você deseja reorganizar. Vá ao menu **formato** > **na caixa de diálogo Centro** e escolha uma das seguintes organizações:
 
@@ -275,7 +275,7 @@ Quando você adicioná-lo à caixa de diálogo, você pode dimensionar uma caixa
    |Disposição|Descrição|
    |---|---|
    |**Direita**|Alinha os botões de envio por push ao longo da borda direita da caixa de diálogo.|
-   |**Inferior**|Alinha os botões de envio por push ao longo da borda inferior da caixa de diálogo.|
+   |**Parte Inferior**|Alinha os botões de envio por push ao longo da borda inferior da caixa de diálogo.|
 
    Se você selecionar um controle que não seja um botão de envio por push, sua posição não é afetada.
 
@@ -287,4 +287,4 @@ Win32
 
 [Gerenciar controles de caixa de diálogo](controls-in-dialog-boxes.md)<br/>
 [Como: Adicionar, editar ou excluir controles](adding-editing-or-deleting-controls.md)<br/>
-[Como: Definir acesso e valores de controle](defining-mnemonics-access-keys.md)<br/>
+[Como: Definir valores e controlar o acesso](defining-mnemonics-access-keys.md)<br/>

@@ -1,18 +1,18 @@
 ---
-title: 'Conjunto de registros: declarando uma classe para uma tabela (ODBC)'
+title: 'Conjunto de registros: Declarando uma classe para uma tabela (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ODBC recordsets, declaring class for tables
 - recordsets, declaring classes for tables
 ms.assetid: 3fe286c2-3f3d-493d-9d8c-762310939d08
-ms.openlocfilehash: 28de6ed8dcbf34e2ab2c140fdc17a8cd803501de
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 17adc6e26dcbb39453d9009d82843d213271cc78
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476681"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038234"
 ---
-# <a name="recordset-declaring-a-class-for-a-table-odbc"></a>Conjunto de registros: declarando uma classe para uma tabela (ODBC)
+# <a name="recordset-declaring-a-class-for-a-table-odbc"></a>Conjunto de registros: Declarando uma classe para uma tabela (ODBC)
 
 Este tópico se aplica às classes ODBC do MFC.
 
@@ -27,6 +27,6 @@ Outros usos para conjuntos de registros incluem:
 ## <a name="see-also"></a>Consulte também
 
 [Conjunto de registros (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Conjunto de registros: criando e fechando conjuntos de registros (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md)<br/>
-[Conjunto de registros: declarando uma classe para uma consulta predefinida (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)<br/>
-[Conjunto de registros: realizando uma junção (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)
+[Conjunto de registros: Criando e fechando conjuntos de registros (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md)<br/>
+[Conjunto de registros: Declarando uma classe para uma consulta predefinida (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)<br/>
+[Conjunto de registros: Realizando uma junção (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)
