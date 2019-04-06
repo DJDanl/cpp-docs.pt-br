@@ -11,12 +11,12 @@ helpviewer_keywords:
 - event sources
 - event handling, creating event source
 ms.assetid: 0983e36a-6127-4fbb-8a22-8dfec6564c16
-ms.openlocfilehash: e7a58abc617fcfed69020bdace60758a6bf75337
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 81eba3c032a3556d1c69ad02652455ebc07ab6be
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50510559"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59035926"
 ---
 # <a name="eventsource"></a>origem do evento
 
@@ -30,7 +30,7 @@ Cria uma origem de evento.
 
 ### <a name="parameters"></a>Parâmetros
 
-*type*<br/>
+*tipo*<br/>
 Uma enumeração de um dos seguintes valores:
 
 - `native` para código C/C++ não gerenciado (padrão para classes não gerenciadas).
@@ -64,7 +64,7 @@ O **event_source** atributo C++ Especifica que a classe ou estrutura à qual ela
 
 |||
 |-|-|
-|**Aplica-se a**|**classe**, **struct**|
+|**Aplica-se a**|**class**, **struct**|
 |**Repetível**|Não|
 |**Atributos obrigatórios**|**coclass** quando `type`=`com`|
 |**Atributos inválidos**|Nenhum|

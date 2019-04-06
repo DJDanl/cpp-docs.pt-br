@@ -232,12 +232,12 @@ helpviewer_keywords:
 - CMFCRibbonBaseElement [MFC], OnProcessKey
 - CMFCRibbonBaseElement [MFC], OnSetFocus
 ms.assetid: 419ea91b-5062-44cc-b0a3-f87d29566f62
-ms.openlocfilehash: 4fe7c84981d116d5915013cb466c3e91119f20e1
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 6daa5b6249c7ff18a8bc01c2309ffb94d3fb88ce
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57289969"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58773067"
 ---
 # <a name="cmfcribbonbaseelement-class"></a>Classe CMFCRibbonBaseElement
 
@@ -251,13 +251,13 @@ class CMFCRibbonBaseElement : public CObject
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
 |`CMFCRibbonBaseElement`|Constrói um objeto `CMFCRibbonBaseElement`.|
 
-### <a name="public-methods"></a>Métodos Públicos
+### <a name="public-methods"></a>Métodos públicos
 
 |Nome|Descrição|
 |----------|-----------------|
@@ -394,7 +394,7 @@ Dependendo de seu tamanho, um elemento de faixa de opções exibe em uma imagem 
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir demonstra como usar vários métodos no `CMFCRibbonBaseElement` classe. O exemplo mostra como obter um `CMFCRibbonBaseElement` do objeto de um `CMFCRibbonStatusBar` de classe, defina a descrição para o elemento de faixa de opções, definir o texto, definir uma dica de tecla e definir o texto de dica de ferramenta para o elemento de faixa de opções. Este trecho de código é parte do [desenhar o cliente de exemplo](../../visual-cpp-samples.md).
+O exemplo a seguir demonstra como usar vários métodos no `CMFCRibbonBaseElement` classe. O exemplo mostra como obter um `CMFCRibbonBaseElement` do objeto de um `CMFCRibbonStatusBar` de classe, defina a descrição para o elemento de faixa de opções, definir o texto, definir uma dica de tecla e definir o texto de dica de ferramenta para o elemento de faixa de opções. Este trecho de código é parte do [desenhar o cliente de exemplo](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_DrawClient#8](../../mfc/reference/codesnippet/cpp/cmfcribbonbaseelement-class_1.cpp)]
 [!code-cpp[NVC_MFC_DrawClient#9](../../mfc/reference/codesnippet/cpp/cmfcribbonbaseelement-class_2.cpp)]
@@ -580,7 +580,7 @@ virtual void DrawImage(
 *pDC*<br/>
 [in] Ponteiro para um contexto de dispositivo.
 
-*type*<br/>
+*tipo*<br/>
 [in] Valor enumerado de um tipo de imagem. Consulte a seção de comentários para obter uma lista de valores possíveis.
 
 *rectImage*<br/>
@@ -1933,7 +1933,7 @@ virtual BOOL SetACCData(
 *pParent*<br/>
 A janela pai para o elemento de faixa de opções.
 
-*data*<br/>
+*Dados*<br/>
 Os dados de acessibilidade para o elemento de faixa de opções.
 
 ### <a name="return-value"></a>Valor de retorno

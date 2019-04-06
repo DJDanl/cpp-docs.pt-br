@@ -13,12 +13,12 @@ helpviewer_keywords:
 - dialog box controls [C++], custom (user) controls
 - Dialog Editor [C++], custom controls
 ms.assetid: e216c4f9-2fd4-429d-889a-8ebce7bad177
-ms.openlocfilehash: 152113200fd7aa9ee87b749380e370fe4e6ad9ff
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 563cf73299c00413889ada2520b1bf4fcd86f2be
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57563349"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023692"
 ---
 # <a name="dialog-box-controls-c"></a>Controles de caixa de diálogo (C++)
 
@@ -58,12 +58,12 @@ O [controles comuns do Windows](../mfc/controls-mfc.md) disponível na **caixa d
 |Nome do controle|Evento padrão|
 |---|---|
 |[Controle deslizante](../mfc/slider-control-styles.md)|NM_CUSTOMDRAW|
-|[Controle de rotação](../mfc/using-cspinbuttonctrl.md)|UDN_DELTAPOS|
+|[Controle de giro](../mfc/using-cspinbuttonctrl.md)|UDN_DELTAPOS|
 |[Controle de progresso](../mfc/styles-for-the-progress-control.md)|NM_CUSTOMDRAW|
 |[Controle de tecla de acesso](../mfc/using-a-hot-key-control.md)|NM_OUTOFMEMORY|
 |[Controle de lista](../mfc/list-control-and-list-view.md)|LVN_ITEMCHANGE|
 |[Controle de árvore](../mfc/tree-control-styles.md)|TVN_SELCHANGE|
-|[Controle de guia](../mfc/tab-controls-and-property-sheets.md)|TCN_SELCHANGE|
+|[Controle guia](../mfc/tab-controls-and-property-sheets.md)|TCN_SELCHANGE|
 |[Controle de animação](../mfc/using-an-animation-control.md)|ACN_START|
 |[Controle de seletor de tempo de data](../mfc/creating-the-date-and-time-picker-control.md)|DTN_DATETIMECHANGE|
 |[Controle de calendário mensal](../mfc/month-calendar-control-examples.md)|MCN_SELCHANGE|
@@ -101,7 +101,7 @@ Win32
 
 ## <a name="see-also"></a>Consulte também
 
-[Editor de caixa de diálogo](../windows/dialog-editor.md)<br/>
+[Editor de Caixa de Diálogo](../windows/dialog-editor.md)<br/>
 
 <!--
 [Adding Event Handlers for Dialog Box Controls](../windows/adding-event-handlers-for-dialog-box-controls.md)<br/>

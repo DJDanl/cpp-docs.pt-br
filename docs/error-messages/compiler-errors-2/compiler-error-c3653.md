@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3653
 ms.assetid: 316549d7-f7ef-4578-a2ba-57adc8aac527
-ms.openlocfilehash: d7936303dab4fbb273a01f98def5b9af99f89dac
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 75e2c061190b24019491db7a625ecafb5ac82b6b
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50477617"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58776642"
 ---
 # <a name="compiler-error-c3653"></a>Erro do compilador C3653
 
 'function': não pode ser usado como uma substituição nomeada: uma função que está sendo substituída não foi encontrada; Você esqueceu de nomear a função explicitamente, usando um:: operador?
 
-Uma substituição explícita especificada de uma função que não foi encontrada em qualquer interface. Para obter mais informações, consulte [substituições explícitas](../../windows/explicit-overrides-cpp-component-extensions.md).
+Uma substituição explícita especificada de uma função que não foi encontrada em qualquer interface. Para obter mais informações, consulte [substituições explícitas](../../extensions/explicit-overrides-cpp-component-extensions.md).
 
 O exemplo a seguir gera C3653:
 

@@ -66,12 +66,12 @@ helpviewer_keywords:
 - CMFCCaptionBar [MFC], m_clrBarBorder
 - CMFCCaptionBar [MFC], m_clrBarText
 ms.assetid: acb54d5f-14ff-4c96-aeb3-7717cf566d9a
-ms.openlocfilehash: 1a18e235c9f5875a977f740c26b917a3567a678d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c6385cb6bd3eec3ce5fefe0475d771c774777820
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57264983"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58781868"
 ---
 # <a name="cmfccaptionbar-class"></a>Classe CMFCCaptionBar
 
@@ -148,7 +148,7 @@ Para habilitar o modo de barra de mensagem, chame [CMFCCaptionBar::Create](#crea
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir demonstra como usar vários métodos no `CMFCCaptionBar` classe. O exemplo mostra como criar o controle de barra de legenda, defina uma borda 3D da barra de legenda, defina a distância, em pixels, entre a borda da legenda da barra elementos e a borda do controle de barra de legenda, defina o botão de barra de legenda , defina a dica de ferramenta do botão, defina o rótulo de texto para a barra de legenda, definir a imagem de bitmap para a barra de legenda e defina a dica de ferramenta para a imagem na barra de legenda. Este trecho de código faz parte de [amostra de demonstração do MS Office 2007](../../visual-cpp-samples.md).
+O exemplo a seguir demonstra como usar vários métodos no `CMFCCaptionBar` classe. O exemplo mostra como criar o controle de barra de legenda, defina uma borda 3D da barra de legenda, defina a distância, em pixels, entre a borda da legenda da barra elementos e a borda do controle de barra de legenda, defina o botão de barra de legenda , defina a dica de ferramenta do botão, defina o rótulo de texto para a barra de legenda, definir a imagem de bitmap para a barra de legenda e defina a dica de ferramenta para a imagem na barra de legenda. Este trecho de código faz parte de [amostra de demonstração do MS Office 2007](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_MSOffice2007Demo#1](../../mfc/reference/codesnippet/cpp/cmfccaptionbar-class_1.h)]
 [!code-cpp[NVC_MFC_MSOffice2007Demo#2](../../mfc/reference/codesnippet/cpp/cmfccaptionbar-class_2.cpp)]
@@ -233,7 +233,7 @@ void EnableButton(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>Parâmetros
 
-*bEnable*<br/>
+*bAtivar*<br/>
 [in] TRUE para habilitar o botão, FALSE para desabilitar o botão.
 
 ##  <a name="getalignment"></a>  CMFCCaptionBar::GetAlignment
@@ -246,7 +246,7 @@ BarElementAlignment GetAlignment(BarElement elem);
 
 ### <a name="parameters"></a>Parâmetros
 
-*elem*<br/>
+*Elem*<br/>
 [in] Um elemento da barra de legenda para o qual recuperar o alinhamento.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -412,7 +412,7 @@ virtual void OnDrawButton(
 *strButton*<br/>
 [in] Rótulo de texto do botão.
 
-*bEnabled*<br/>
+*bAtivado*<br/>
 [in] TRUE se o botão estiver habilitado; FALSE caso contrário.
 
 ### <a name="remarks"></a>Comentários

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data [C++], data access technologies
 - data access [C++], class libraries for databases
 ms.assetid: 95da6237-bbe2-480a-ae50-3a520051ceff
-ms.openlocfilehash: a56c15f76b83620e4f67c188450a6b5d2f68c22f
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 142d067b6fbc9e2357ff8fc23fd931a1194477e9
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58766034"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041248"
 ---
 # <a name="data-access-in-visual-c"></a>Acesso a dados no Visual C++
 
@@ -23,21 +23,21 @@ Desde 2011, a Microsoft tem se alinhado com o ODBC como o padrão para aplicativ
 
 ## <a name="in-this-section"></a>Nesta seção
 
-[Acesso a dados (MFC/ATL) de programação](data-access-programming-mfc-atl.md)<br/>
+[Programação de acesso a dados (MFC/ATL)](data-access-programming-mfc-atl.md)<br/>
 Descreve programação de acesso a dados herdados com Visual C++, em que a melhor maneira é usar uma das bibliotecas de classe, como a classe biblioteca ATL (Active Template Library) ou a biblioteca MFC (Microsoft Foundation Class), que simplificam o trabalho com as APIs do banco de dados.
 
-[ODBC (conectividade de banco de dados aberto)](odbc/open-database-connectivity-odbc.md)<br/>
+[Conectividade de banco de dados aberto (ODBC)](odbc/open-database-connectivity-odbc.md)<br/>
 A biblioteca MFC (Microsoft Foundation Classes) fornece classes para programar com ODBC (Conectividade Aberta de Banco de Dados).
 
-[Programação do OLE DB](oledb/ole-db-programming.md)<br/>
+[Programação de banco de dados OLE](oledb/ole-db-programming.md)<br/>
 Uma interface principalmente herdada que ainda é necessário em alguns cenários, especialmente quando você estiver programando em servidores vinculados.
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-[Conectar-se ao banco de dados SQL usando C e C++](/azure/sql-database/sql-database-develop-cplusplus-simple)<br/>
+[Conectar-se ao Banco de Dados SQL usando C e C++](/azure/sql-database/sql-database-develop-cplusplus-simple)<br/>
 Conecte-se ao banco de dados SQL de aplicativos C ou C++.
 
-[Biblioteca de cliente de armazenamento do Microsoft Azure para C++](https://github.com/Azure/azure-storage-cpp)<br/>
+[Biblioteca de cliente do Armazenamento do Microsoft Azure para C++](https://github.com/Azure/azure-storage-cpp)<br/>
 O [Armazenamento do Azure](/azure/storage/storage-introduction) é uma solução de armazenamento em nuvem para aplicativos modernos que dependem de durabilidade, disponibilidade e escalabilidade para atender às necessidades dos clientes. Conecte-se ao Armazenamento do Azure pelo C++ usando a Biblioteca de Cliente do Armazenamento do Azure para C++.
 
 [Driver ODBC 13.1 para SQL Server - Windows lançado](https://blogs.msdn.microsoft.com/sqlnativeclient/2016/08/01/announcing-the-odbc-driver-13-1-for-sql-server)<br/>
@@ -49,10 +49,10 @@ O SQL Server Native Client é uma API (Interface de Programação de Aplicativo)
 [Microsoft Azure C e C++ Developer Center](https://azure.microsoft.com/develop/cpp/)<br/>
 O Azure facilita o build de aplicativos do C++, com maior flexibilidade, escalabilidade e confiabilidade usando ferramentas que você adora.
 
-[Como usar o armazenamento de BLOBs do C++](https://docs.microsoft.com/azure/storage/storage-c-plus-plus-how-to-use-blobs)<br/>
+[Como usar o Armazenamento de Blobs do C++](https://docs.microsoft.com/azure/storage/storage-c-plus-plus-how-to-use-blobs)<br/>
 O Armazenamento de Blobs do Azure é um serviço que armazena dados não estruturados na nuvem como objetos/blobs. O Armazenamento de Blobs pode armazenar qualquer tipo de texto ou dados binários, como um documento, um arquivo de mídia ou um instalador de aplicativo. O Armazenamento de Blobs também é conhecido como armazenamento de objeto.
 
-[ Referência do programador de ODBC](https://docs.microsoft.com/sql/odbc/reference/odbc-programmer-s-reference)<br/>
+[ Referência do Programador de ODBC](https://docs.microsoft.com/sql/odbc/reference/odbc-programmer-s-reference)<br/>
 A interface ODBC é projetada para uso com a linguagem de programação C. Uso da interface ODBC abrange três áreas: Instruções SQL, chamadas de função ODBC e programação em C.
 
 ## <a name="see-also"></a>Consulte também

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - bindable attribute
 ms.assetid: a2360f92-927b-4af8-98cc-6eca7f4ec954
-ms.openlocfilehash: 08ecd3e242d1e3601f7a5a3ea54c51a679dca97a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 07f446b946d6703c4a8b9ae59ae0edd8172c6879
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50664146"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037231"
 ---
 # <a name="bindable"></a>bindable
 
@@ -29,11 +29,11 @@ O **associável** atributo C++ tem a mesma funcionalidade que o [associável](/w
 
 Os exemplos MFC a seguir mostram o uso do **associável**:
 
-- [Exemplos de controles: Controles do ActiveX do MFC com base](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
+- [Exemplos de controles: Controles ActiveX com base em MFC](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
 
 - [Exemplo c: Controle ActiveX](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
 
-- [TESTHELP exemplo: Controle de ActiveX com dicas de ferramenta e a Ajuda](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
+- [Exemplo de TESTHELP: Controle ActiveX com dicas de ferramenta e a Ajuda](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
 
 ## <a name="example"></a>Exemplo
 
@@ -73,7 +73,7 @@ Para obter mais informações sobre os contextos de atributo, consulte [contexto
 
 ## <a name="see-also"></a>Consulte também
 
-[Atributos de IDL](idl-attributes.md)<br/>
+[Atributos IDL](idl-attributes.md)<br/>
 [Atributos de método](method-attributes.md)<br/>
 [defaultbind](defaultbind.md)<br/>
 [displaybind](displaybind.md)<br/>

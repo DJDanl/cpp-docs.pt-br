@@ -56,16 +56,16 @@ helpviewer_keywords:
 - _InterlockedOr16_rel intrinsic
 - _InterlockedOr_HLEAcquire intrinsic
 ms.assetid: 5f265240-7af8-44b7-b952-19f3a9c56186
-ms.openlocfilehash: c0006dccb3beb28fb7dcb2d9d8313be022523883
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: 9748099e4224a8c55cd4455a57c8e849531f1c9a
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627183"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59040469"
 ---
 # <a name="interlockedor-intrinsic-functions"></a>Funções intrínsecas _InterlockedOr
 
-**Seção específica da Microsoft**
+**Específico da Microsoft**
 
 Execute um bit a bit atômico ou operação em uma variável compartilhada por vários threads.
 
@@ -224,9 +224,9 @@ int main()
 0xffffff00 0xffff00 0xff00ff00
 ```
 
-**Fim da seção específica da Microsoft**
+**FIM de Específico da Microsoft**
 
 ## <a name="see-also"></a>Consulte também
 
 [Intrínsecos do compilador](../intrinsics/compiler-intrinsics.md)<br/>
-[conflitos com o compilador x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)
+[Conflitos com o compilador x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

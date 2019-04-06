@@ -6,12 +6,12 @@ helpviewer_keywords:
 - intrinsics, alphabetical list
 - intrinsics
 ms.assetid: 178f88a2-7e8e-43ac-b55e-ef3298bef895
-ms.openlocfilehash: 83b254b67cb2a7e09fbf57597996097a7afb5d76
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 67206e63d163b489c5087e6bc6759cde30a3d6c4
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50654760"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59026188"
 ---
 # <a name="alphabetical-listing-of-intrinsic-functions"></a>Lista alfabética de funções intrínsecas
 
@@ -69,7 +69,7 @@ As seções a seguir descrevem as funções intrínsecas específicas da Microso
 
 [__int2c](../intrinsics/int2c.md)
 
-[Funções intrínsecas _InterlockedAdd](../intrinsics/interlockedadd-intrinsic-functions.md)
+[Funções intrínsecas InterlockedAdd](../intrinsics/interlockedadd-intrinsic-functions.md)
 
 [_InterlockedAddLargeStatistic](../intrinsics/interlockedaddlargestatistic.md)
 
@@ -77,9 +77,9 @@ As seções a seguir descrevem as funções intrínsecas específicas da Microso
 
 [Funções intrínsecas _interlockedbittestandreset](../intrinsics/interlockedbittestandreset-intrinsic-functions.md)
 
-[Funções intrínsecas _interlockedbittestandset](../intrinsics/interlockedbittestandset-intrinsic-functions.md)
+[Funções intrínsecas _interlockedbittestandreset](../intrinsics/interlockedbittestandset-intrinsic-functions.md)
 
-[Funções intrínsecas _InterlockedCompareExchange](../intrinsics/interlockedcompareexchange-intrinsic-functions.md)
+[Funções intrínsecas interlockedcompareexchange](../intrinsics/interlockedcompareexchange-intrinsic-functions.md)
 
 [_InterlockedCompareExchange128](../intrinsics/interlockedcompareexchange128.md)
 

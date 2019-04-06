@@ -44,16 +44,16 @@ helpviewer_keywords:
 - _InterlockedIncrement_acq intrinsic
 - InterlockedIncrement intrinsic
 ms.assetid: 37700615-f372-438b-bcef-d76e11839482
-ms.openlocfilehash: 91e9c6dac1b6f13997bb7e4f2727a743a9177083
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: b41ce5c744bde7cd89cabed6c829cfb06da75129
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328604"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59039352"
 ---
 # <a name="interlockedincrement-intrinsic-functions"></a>Funções intrínsecas _InterlockedIncrement
 
-**Seção específica da Microsoft**
+**Específico da Microsoft**
 
 Fornece suporte intrínseco ao compilador para o SDK do Windows Win32 [InterlockedIncrement](/windows/desktop/api/winnt/nf-winnt-interlockedincrement) função.
 
@@ -132,10 +132,10 @@ Essas rotinas somente estão disponíveis como intrínsecos.
 
 Para obter um exemplo de como usar `_InterlockedIncrement`, consulte [interlockeddecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md).
 
-**Fim da seção específica da Microsoft**
+**FIM de Específico da Microsoft**
 
 ## <a name="see-also"></a>Consulte também
 
 [Intrínsecos do compilador](../intrinsics/compiler-intrinsics.md)<br/>
 [Palavras-chave](../cpp/keywords-cpp.md)<br/>
-[conflitos com o compilador x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)
+[Conflitos com o compilador x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

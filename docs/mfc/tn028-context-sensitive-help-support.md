@@ -8,12 +8,12 @@ helpviewer_keywords:
 - TN028
 - resource identifiers, context-sensitive Help
 ms.assetid: 884f1c55-fa27-4d4c-984f-30907d477484
-ms.openlocfilehash: e3ac2742f2c57c01c645c72c933234a96ece773a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 5689e314c2ba94068619a066e5f458e06819b2b7
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57288279"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58773470"
 ---
 # <a name="tn028-context-sensitive-help-support"></a>TN028: Suporte à ajuda contextual
 
@@ -148,7 +148,7 @@ HID_MY_COMMAND    0x10096
 
 Esse formato é compatível com o recurso de Ajuda do compilador, que mapeia as IDs de contexto (os números à direita) com nomes de tópico (os símbolos no lado esquerdo).
 
-O código-fonte MAKEHM está disponível no exemplo utilitários de programação MFC [MAKEHM](../visual-cpp-samples.md).
+O código-fonte MAKEHM está disponível no exemplo utilitários de programação MFC [MAKEHM](../overview/visual-cpp-samples.md).
 
 ## <a name="adding-help-support-after-running-the-mfc-application-wizard"></a>Adicionando suporte à Ajuda após executar o Assistente de aplicativo do MFC
 

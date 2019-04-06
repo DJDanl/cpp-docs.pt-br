@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CScrollView [MFC], SetScaleToFitSize
 - CScrollView [MFC], SetScrollSizes
 ms.assetid: 4ba16dac-1acb-4be0-bb55-5fb695b6948d
-ms.openlocfilehash: ea95de2bceab290f94bb7c0e7bbc94a90048ee13
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: d60082092bd42fbe220eee08953ad5fda0ff0a85
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259250"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58774147"
 ---
 # <a name="cscrollview-class"></a>Classe CScrollView
 
@@ -53,7 +53,7 @@ class CScrollView : public CView
 |----------|-----------------|
 |[CScrollView::CScrollView](#cscrollview)|Constrói um objeto `CScrollView`.|
 
-### <a name="public-methods"></a>Métodos Públicos
+### <a name="public-methods"></a>Métodos públicos
 
 |Nome|Descrição|
 |----------|-----------------|
@@ -82,7 +82,7 @@ Para rolar automaticamente em resposta às mensagens do teclado, adicionar uma m
 
 Você pode lidar com a roda do mouse para rolar por conta própria, substituindo a mensagem mapeada [OnMouseWheel](../../mfc/reference/cwnd-class.md#onmousewheel) e [OnRegisteredMouseWheel](../../mfc/reference/cwnd-class.md#onregisteredmousewheel) funções de membro. Como são para `CScrollView`, o comportamento recomendado para dar suporte a essas funções de membro [WM_MOUSEWHEEL](/windows/desktop/inputdev/wm-mousewheel), a mensagem de rotação da roda.
 
-Para tirar proveito da rolagem automática, derive sua classe de exibição da `CScrollView` em vez do `CView`. Quando o modo de exibição é criado, se você deseja calcular o tamanho da exibição rolável com base no tamanho do documento, a chamada a `SetScrollSizes` função de membro de sua substituição de um [cview:: Oninitialupdate](../../mfc/reference/cview-class.md#oninitialupdate) ou [ CView::OnUpdate](../../mfc/reference/cview-class.md#onupdate). (Você deve escrever seu próprio código para consultar o tamanho do documento. Por exemplo, consulte o [exemplo de Scribble](../../visual-cpp-samples.md).)
+Para tirar proveito da rolagem automática, derive sua classe de exibição da `CScrollView` em vez do `CView`. Quando o modo de exibição é criado, se você deseja calcular o tamanho da exibição rolável com base no tamanho do documento, a chamada a `SetScrollSizes` função de membro de sua substituição de um [cview:: Oninitialupdate](../../mfc/reference/cview-class.md#oninitialupdate) ou [ CView::OnUpdate](../../mfc/reference/cview-class.md#onupdate). (Você deve escrever seu próprio código para consultar o tamanho do documento. Por exemplo, consulte o [exemplo de Scribble](../../overview/visual-cpp-samples.md).)
 
 A chamada para o `SetScrollSizes` função de membro define o modo de mapeamento do modo de exibição, as dimensões total da exibição da rolagem e os valores para rolar horizontalmente e verticalmente. Todos os tamanhos são em unidades lógicas. O tamanho lógico do modo de exibição normalmente é calculado dos dados armazenados no documento, mas em alguns casos, você talvez queira especificar um tamanho fixo. Para obter exemplos de ambas as abordagens, consulte [CScrollView::SetScrollSizes](#setscrollsizes).
 
@@ -376,7 +376,7 @@ Você deve definir o modo de mapeamento para qualquer um dos modos de mapeamento
 
 ## <a name="see-also"></a>Consulte também
 
-[Exemplo MFC DIBLOOK](../../visual-cpp-samples.md)<br/>
+[Exemplo MFC DIBLOOK](../../overview/visual-cpp-samples.md)<br/>
 [Classe CView](../../mfc/reference/cview-class.md)<br/>
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
 [Classe CView](../../mfc/reference/cview-class.md)<br/>

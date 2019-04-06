@@ -1,5 +1,5 @@
 ---
-title: 'Conjunto de registros: indicadores e posições absolutas (ODBC)'
+title: 'Conjunto de registros: Indicadores e posições absolutas (ODBC)'
 ms.date: 11/04/2016
 f1_keywords:
 - SetAbsolutePosition
@@ -21,14 +21,14 @@ helpviewer_keywords:
 - GetBookmark method
 - SetAbsolutePosition method, bookmarks
 ms.assetid: 189788d6-33c1-41c5-9265-97db2a5d43cc
-ms.openlocfilehash: 826c1c0124eb261c97fff8f1e2fa01c8becb073a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c4a223f01b25b4c321ccfb4f4c03c3c5241381ec
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50500926"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023783"
 ---
-# <a name="recordset-bookmarks-and-absolute-positions-odbc"></a>Conjunto de registros: indicadores e posições absolutas (ODBC)
+# <a name="recordset-bookmarks-and-absolute-positions-odbc"></a>Conjunto de registros: Indicadores e posições absolutas (ODBC)
 
 Este tópico se aplica às classes ODBC do MFC.
 
@@ -80,7 +80,7 @@ Para mover o ponteiro de registro atual usando a posição absoluta, chame [CRec
 > [!NOTE]
 >  A posição absoluta de um registro é potencialmente não confiável. Se o usuário exclui registros do conjunto de registros, altera a posição ordinal de qualquer registro subsequente. Os indicadores são o método recomendado para mover o registro atual. Para obter mais informações, consulte [indicadores em MFC ODBC](#_core_bookmarks_in_mfc_odbc).
 
-Para obter mais informações sobre navegação de conjunto de registros, consulte [conjunto de registros: rolando (ODBC)](../../data/odbc/recordset-scrolling-odbc.md).
+Para obter mais informações sobre navegação de conjunto de registros, consulte [conjunto de registros: Rolando (ODBC)](../../data/odbc/recordset-scrolling-odbc.md).
 
 ## <a name="see-also"></a>Consulte também
 

@@ -132,12 +132,12 @@ helpviewer_keywords:
 - CFileDialog [MFC], OnTypeChange
 - CFileDialog [MFC], m_ofn
 ms.assetid: fda4fd3c-08b8-4ce0-8e9d-7bab23f8c6c0
-ms.openlocfilehash: aaa05fc3e97fe690e8d6a0cd9eba826c482b410d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: f74d883fa0dcdce025345848caf49069736ee0fa
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57262097"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58779203"
 ---
 # <a name="cfiledialog-class"></a>Classe CFileDialog
 
@@ -151,13 +151,13 @@ class CFileDialog : public CCommonDialog
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
 |[CFileDialog::CFileDialog](#cfiledialog)|Constrói um objeto `CFileDialog`.|
 
-### <a name="public-methods"></a>Métodos Públicos
+### <a name="public-methods"></a>Métodos públicos
 
 |Nome|Descrição|
 |----------|-----------------|
@@ -251,7 +251,7 @@ Alguns `CFileDialog` métodos não têm suporte no Windows Vista ou posterior. C
 
 - [CDialog::OnSetFont](../../mfc/reference/cdialog-class.md#onsetfont)
 
-As mensagens do windows para o `CFileDialog` classe variam de acordo com qual sistema operacional você está usando. Por exemplo, Windows XP não suporta [CDialog::OnCancel](../../mfc/reference/cdialog-class.md#oncancel) e [CDialog::OnOK](../../mfc/reference/cdialog-class.md#onok) para o `CFileDialog` classe. No entanto, Windows Vista e sistemas operacionais posteriores oferecem suporte a isso. Para obter mais informações sobre as diferentes mensagens que são geradas e a ordem em que elas são recebidas, consulte [CFileDialog exemplo: Ordem de eventos de log](../../visual-cpp-samples.md).
+As mensagens do windows para o `CFileDialog` classe variam de acordo com qual sistema operacional você está usando. Por exemplo, Windows XP não suporta [CDialog::OnCancel](../../mfc/reference/cdialog-class.md#oncancel) e [CDialog::OnOK](../../mfc/reference/cdialog-class.md#onok) para o `CFileDialog` classe. No entanto, Windows Vista e sistemas operacionais posteriores oferecem suporte a isso. Para obter mais informações sobre as diferentes mensagens que são geradas e a ordem em que elas são recebidas, consulte [CFileDialog exemplo: Ordem de eventos de log](../../overview/visual-cpp-samples.md).
 
 Para usar um `CFileDialog` de objeto, primeiro crie o objeto usando o `CFileDialog` construtor. Depois que a caixa de diálogo foi construída, você pode definir ou modificar quaisquer valores na [CFileDialog::m_ofn](#m_ofn) estrutura para inicializar os valores ou os estados dos controles de caixa de diálogo. O `m_ofn` estrutura é do tipo `OPENFILENAME`. Para obter mais informações, consulte o [OPENFILENAME](/windows/desktop/api/commdlg/ns-commdlg-tagofna) estrutura no SDK do Windows.
 
@@ -893,7 +893,7 @@ CString GetNextPathName(POSITION& pos) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*pos*<br/>
+*POS*<br/>
 Uma referência a um valor de posição retornado por uma anterior `GetNextPathName` ou `GetStartPosition` chamada de função. NULL se o final da lista foi atingido.
 
 ### <a name="return-value"></a>Valor de retorno

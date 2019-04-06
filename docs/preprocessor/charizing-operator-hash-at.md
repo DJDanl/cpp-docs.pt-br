@@ -8,15 +8,15 @@ helpviewer_keywords:
 - charizing operator
 - '#@ preprocessor operator'
 ms.assetid: dee03314-d27c-4063-965c-64756efbef22
-ms.openlocfilehash: 7259487a3289173bc77517c8c616638c370041c4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c9acc9b9872e096cd441b950632c341e975fecb8
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50568331"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59034329"
 ---
 # <a name="charizing-operator-"></a>Operador de caracterização (#@)
-**Seção específica da Microsoft**
+**Específico da Microsoft**
 
 O operador de charizing pode usado apenas com os argumentos das macros. Se `#@` preceder um parâmetro formal na definição da macro, o argumento real é colocado entre aspas simples e tratado como um caractere quando a macro é expandida. Por exemplo:
 
@@ -38,7 +38,7 @@ a = 'b';
 
 O caractere de aspas simples não pode ser usado com o operador de charizing.
 
-**Fim da seção específica da Microsoft**
+**FIM de Específico da Microsoft**
 
 ## <a name="see-also"></a>Consulte também
 

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - cursor library [ODBC], disabling
 - ODBC cursor library [ODBC], disabling
 ms.assetid: e89e41c4-78fd-4cb6-821f-4fb090f4b08b
-ms.openlocfilehash: 200d52774845ecafd510534d6407154206f439ea
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2bd762e64d9f742ade789e3c9571eb02d6f0ef2e
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505008"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59039248"
 ---
 # <a name="use-the-odbc-cursor-library"></a>Usar a biblioteca de cursores ODBC
 
@@ -22,4 +22,4 @@ ODBC gerencia rolar por conjuntos de registros por meio da biblioteca de Cursor.
 
 ## <a name="see-also"></a>Consulte também
 
-[ODBC (conectividade de banco de dados aberto)](../../data/odbc/open-database-connectivity-odbc.md)
+[Conectividade de banco de dados aberto (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Conjunto de registros: mais sobre atualizações (ODBC)'
+title: 'Conjunto de registros: Mais informações sobre atualizações (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - records, updating
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - updating recordsets
 - recordsets, updating
 ms.assetid: 0353a742-d226-4fe2-8881-a7daeffe86cd
-ms.openlocfilehash: b34f6f51c6ff3a0995f4cf6044ddd7949644f42c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c29ff110fc507c4e449b2f3d082d98c159a35107
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50665290"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59040762"
 ---
-# <a name="recordset-more-about-updates-odbc"></a>Conjunto de registros: mais sobre atualizações (ODBC)
+# <a name="recordset-more-about-updates-odbc"></a>Conjunto de registros: Mais informações sobre atualizações (ODBC)
 
 Este tópico se aplica às classes ODBC do MFC.
 
@@ -30,7 +30,7 @@ Este tópico explica:
 - [Mais informações sobre as funções de membro de Update e Delete](#_core_more_about_update_and_delete).
 
 > [!NOTE]
->  Este tópico se aplica a objetos derivados de `CRecordset` em qual linha em massa buscando não foi implementado. Se você tiver implementado a busca de linhas em massa, algumas informações não se aplica. Por exemplo, você não pode chamar o `AddNew`, `Edit`, `Delete`, e `Update` funções de membro; no entanto, você pode executar transações. Para obter mais informações sobre a busca de linhas em massa, consulte [conjunto de registros: buscando registros em massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+>  Este tópico se aplica a objetos derivados de `CRecordset` em qual linha em massa buscando não foi implementado. Se você tiver implementado a busca de linhas em massa, algumas informações não se aplica. Por exemplo, você não pode chamar o `AddNew`, `Edit`, `Delete`, e `Update` funções de membro; no entanto, você pode executar transações. Para obter mais informações sobre a busca de linhas em massa, consulte [conjunto de registros: Buscando registros em massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 ##  <a name="_core_how_other_operations_affect_updates"></a> Como outras operações afetam atualizações
 
@@ -53,7 +53,7 @@ Se você fechar um conjunto de registros ou de seus associados `CDatabase` objet
 
 ###  <a name="_core_how_scrolling_affects_updates"></a> Como rolar afeta as atualizações
 
-Quando você [conjunto de registros: rolando (ODBC)](../../data/odbc/recordset-scrolling-odbc.md) em um conjunto de registros, o buffer de edição é preenchido com cada novo registro atual (o registro anterior não for armazenado primeiro). Rolagem ignora sobre registros excluídos anteriormente. Se você rolar após uma `AddNew` ou `Edit` chamada sem chamar `Update`, `CommitTrans`, ou `Rollback` em primeiro lugar, quaisquer alterações serão perdidas (sem nenhum aviso para você) como um novo registro é colocado no buffer de edição. O buffer de edição é preenchido com o registro rolado para o registro armazenado é liberado e não ocorre nenhuma alteração na fonte de dados. Isso se aplica a ambos `AddNew` e `Edit`.
+Quando você [conjunto de registros: Rolando (ODBC)](../../data/odbc/recordset-scrolling-odbc.md) em um conjunto de registros, o buffer de edição é preenchido com cada novo registro atual (o registro anterior não for armazenado primeiro). Rolagem ignora sobre registros excluídos anteriormente. Se você rolar após uma `AddNew` ou `Edit` chamada sem chamar `Update`, `CommitTrans`, ou `Rollback` em primeiro lugar, quaisquer alterações serão perdidas (sem nenhum aviso para você) como um novo registro é colocado no buffer de edição. O buffer de edição é preenchido com o registro rolado para o registro armazenado é liberado e não ocorre nenhuma alteração na fonte de dados. Isso se aplica a ambos `AddNew` e `Edit`.
 
 ##  <a name="_core_your_updates_and_the_updates_of_other_users"></a> As atualizações e as atualizações de outros usuários
 
@@ -105,7 +105,7 @@ Quando essas exceções forem geradas, você permanecer na `AddNew` ou `Edit` es
 ## <a name="see-also"></a>Consulte também
 
 [Conjunto de registros (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Conjunto de registros: como conjuntos de registros selecionam registros (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)<br/>
-[RFX (troca de campo de registro)](../../data/odbc/record-field-exchange-rfx.md)<br/>
+[Conjunto de registros: Como conjuntos de registros selecionam registros (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)<br/>
+[Registrar troca de campos (RFX)](../../data/odbc/record-field-exchange-rfx.md)<br/>
 [SQL](../../data/odbc/sql.md)<br/>
-[Exceções: exceções de banco de dados](../../mfc/exceptions-database-exceptions.md)
+[Exceções: Exceções do Banco de Dados](../../mfc/exceptions-database-exceptions.md)

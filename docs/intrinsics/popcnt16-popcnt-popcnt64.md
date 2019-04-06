@@ -11,16 +11,16 @@ helpviewer_keywords:
 - __popcnt64
 - __popcnt
 ms.assetid: e525b236-adc8-42df-9b9b-8b7d8c245d3b
-ms.openlocfilehash: a6424f3414d9da17e52c0a9f78290497f5e5e01e
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.openlocfilehash: d6cc9a0ce784ab79f5e4225675a082fc55bd53e7
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56146886"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037004"
 ---
 # <a name="popcnt16-popcnt-popcnt64"></a>__popcnt16, __popcnt, __popcnt64
 
-**Seção específica da Microsoft**
+**Específico da Microsoft**
 
 Conta o número de um bits (contagem de população) em um 16, 32 ou inteiro sem sinal de 64 bits.
 
@@ -40,7 +40,7 @@ unsigned __int64 __popcnt64(
 
 #### <a name="parameters"></a>Parâmetros
 
-*value*<br/>
+*Valor *<br/>
 [in] A 16, 32 ou inteiro sem sinal de 64 bits para os quais queremos que a contagem de população.
 
 ## <a name="return-value"></a>Valor de retorno
@@ -99,7 +99,7 @@ __popcnt(0xffff) = 16
 __popcnt(0xffffffff) = 32
 ```
 
-**Fim da seção específica da Microsoft**
+**FIM de Específico da Microsoft**
 
 Copyright 2007 por dispositivos Micro avançada, Inc. Todos os direitos reservados. Reproduzido com a permissão do Advanced Micro dispositivos, Inc.
 

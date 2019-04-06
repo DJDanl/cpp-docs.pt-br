@@ -40,12 +40,12 @@ helpviewer_keywords:
 - Image editor [C++], Properties window
 - Properties window, image editor
 ms.assetid: 8b6ce4ad-eba1-4ece-86ba-cea92c3edff2
-ms.openlocfilehash: 246dee3c7d0c1a5a4f495fddf709833acc2c885e
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 849da0d14987a057d39d5f9531e97545b3d4b8cf
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57562985"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033281"
 ---
 # <a name="how-to-edit-an-image"></a>Como: Editar uma imagem
 
@@ -223,6 +223,6 @@ Nenhum
 
 [Editor de imagens para ícones](../windows/image-editor-for-icons.md)<br/>
 [Como: Criar um ícone ou outra imagem](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md)<br/>
-[Como: Usar uma ferramenta de desenho](../windows/using-a-drawing-tool-image-editor-for-icons.md)<br/>
+[Como: Use uma ferramenta de desenho](../windows/using-a-drawing-tool-image-editor-for-icons.md)<br/>
 [Como: Trabalhar com cores](../windows/working-with-color-image-editor-for-icons.md)<br/>
 [Teclas de aceleração](../windows/accelerator-keys-image-editor-for-icons.md)<br/>

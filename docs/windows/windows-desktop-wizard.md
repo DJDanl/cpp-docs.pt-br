@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Desktop Wizard
 - Win32 Project Wizard
 ms.assetid: 5d7b3a5e-8461-479a-969a-67b7883725b9
-ms.openlocfilehash: 52ffd992480df517f8677e14161b697eb3ecc321
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 43a47366475b227ccfc5918b07760cc582326e82
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58786124"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041465"
 ---
 # <a name="windows-desktop-wizard"></a>Assistente da Área de Trabalho do Windows
 
@@ -29,7 +29,7 @@ A tabela a seguir indica quais opções estão disponíveis para cada tipo de ap
 |**Exportar símbolos**|Não|Não|Sim|Não|
 |**Cabeçalho pré-compilado**|Não|Não|Não|Sim|
 |**Suporte ATL**|Sim|Não|Não|Não|
-|**Suporte do MFC**|Sim|Não|Não|Sim|
+|**Suporte MFC**|Sim|Não|Não|Sim|
 
 ## <a name="overview"></a>Visão geral
 

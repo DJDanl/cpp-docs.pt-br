@@ -8,12 +8,12 @@ helpviewer_keywords:
 - IDL files [C++], attributes
 - .idl files [C++]
 ms.assetid: 04c596f4-c97b-4952-8053-316678b1d0b6
-ms.openlocfilehash: 6e88edf114e180a118d0467d5425d16e50d7c216
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a699e327eec056bbb36747840990bb9c7ccc259b
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50593486"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59039489"
 ---
 # <a name="idl-attributes"></a>Atributos IDL
 
@@ -38,7 +38,7 @@ Observe que [idl_quote](idl-quote.md) permite que você use construções MIDL q
 |[call_as](call-as.md)|Permite que uma função nonremotable a ser mapeada para uma função remota.|
 |[case](case-cpp.md)|Usado com o [switch_type](switch-type.md) atributo em uma união.|
 |[coclass](coclass.md)|Locais de definição em um arquivo. idl como coclass de classe.|
-|[control](control.md)|Especifica que o tipo definido pelo usuário é um controle.|
+|[Controle ](control.md)|Especifica que o tipo definido pelo usuário é um controle.|
 |[cpp_quote](cpp-quote.md)|Emite a cadeia de caracteres especificada, sem caracteres de aspas, para o arquivo de cabeçalho gerado.|
 |[defaultbind](defaultbind.md)|Indica a única propriedade associável que melhor representa o objeto.|
 |[defaultcollelem](defaultcollelem.md)|Usada para otimização de código do Visual Basic.|
@@ -55,7 +55,7 @@ Observe que [idl_quote](idl-quote.md) permite que você use construções MIDL q
 |[helpstringcontext](helpstringcontext.md)|Especifica a ID do tópico da Ajuda em um arquivo. hlp ou. chm.|
 |[helpstringdll](helpstringdll.md)|Especifica o nome da DLL a usar para executar a pesquisa de cadeia de caracteres do documento (localização).|
 |[helpstring](helpstring.md)|Especifica uma cadeia de caracteres que é usada para descrever o elemento ao qual ela se aplica.|
-|[hidden](hidden.md)|Indica que o item existe, mas não deve ser exibido em um navegador orientado ao usuário.|
+|[oculto](hidden.md)|Indica que o item existe, mas não deve ser exibido em um navegador orientado ao usuário.|
 |[idl_module](idl-module.md)|Especifica um ponto de entrada em uma DLL.|
 |[idl_quote](idl-quote.md)|Permite que você use atributos ou IDL construções que não são suportados na versão atual do Visual C++.|
 |[id](id.md)|Especifica um DISPID para uma função de membro (uma propriedade ou um método, em uma interface ou dispinterface).|
@@ -65,7 +65,7 @@ Observe que [idl_quote](idl-quote.md) permite que você use construções MIDL q
 |[import](import.md)|Especifica outro arquivo. idl, odl ou cabeçalho que contém definições que você deseja fazer referência do seu arquivo. idl principal.|
 |[include](include-cpp.md)|Especifica um ou mais arquivos de cabeçalho a serem incluídos no arquivo. idl gerado.|
 |[includelib](includelib-cpp.md)|Faz com que um arquivo. IDL ou. h a serem incluídos no arquivo. idl gerado.|
-|[in](in-cpp.md)|Indica que um parâmetro deve ser passado do procedimento de chamada para o procedimento chamado.|
+|[em](in-cpp.md)|Indica que um parâmetro deve ser passado do procedimento de chamada para o procedimento chamado.|
 |[last_is](last-is.md)|Especifica o índice do último elemento da matriz a ser transmitido.|
 |[lcid](lcid.md)|Permite que você passar um identificador de localidade para uma função.|
 |[length_is](length-is.md)|Especifica o número de elementos da matriz a ser transmitido.|
@@ -78,28 +78,28 @@ Observe que [idl_quote](idl-quote.md) permite que você use construções MIDL q
 |[nonbrowsable](nonbrowsable.md)|Indica que um membro de interface não deve ser exibido em um navegador de propriedade.|
 |[noncreatable](noncreatable.md)|Define um objeto que não pode ser instanciado por si só.|
 |[nonextensible](nonextensible.md)|Especifica que o `IDispatch` implementação inclui apenas as propriedades e os métodos listados na descrição da interface e não podem ser estendidos com membros adicionais em tempo de execução.|
-|[object](object-cpp.md)|Identifica uma interface personalizada; sinônimo de atributo personalizado.|
+|[objeto](object-cpp.md)|Identifica uma interface personalizada; sinônimo de atributo personalizado.|
 |[odl](odl.md)|Identifica uma interface como uma interface de linguagem de descrição do objeto (ODL).|
 |[oleautomation](oleautomation.md)|Indica que uma interface é compatível com a automação.|
 |[optional](optional-cpp.md)|Especifica um parâmetro opcional para uma função de membro.|
 |[out](out-cpp.md)|Identifica os parâmetros de ponteiro que são retornados do procedimento chamado ao procedimento de chamada (do servidor para o cliente).|
 |[pointer_default](pointer-default.md)|Especifica o atributo de ponteiro padrão para todos os ponteiros, exceto ponteiros de nível superior que aparecem em listas de parâmetros.|
-|[pragma](pragma.md)|Emite a cadeia de caracteres especificada, sem os caracteres de aspas no arquivo. idl gerado.|
+|[(pragma)](pragma.md)|Emite a cadeia de caracteres especificada, sem os caracteres de aspas no arquivo. idl gerado.|
 |[progid](progid.md)|Especifica o ProgID de um objeto COM.|
 |[propget](propget.md)|Especifica uma função de propriedade do acessador (get).|
 |[propputref](propputref.md)|Especifica uma função de definição de propriedade que usa uma referência em vez de um valor.|
 |[propput](propput.md)|Especifica uma função de definição de propriedade.|
 |[ptr](ptr.md)|Designa um ponteiro como um ponteiro completo.|
-|[public](public-cpp-attributes.md)|Garante que um typedef entra em biblioteca de tipos, mesmo se ele não é referenciado de dentro do arquivo. idl.|
+|[públicos](public-cpp-attributes.md)|Garante que um typedef entra em biblioteca de tipos, mesmo se ele não é referenciado de dentro do arquivo. idl.|
 |[range](range-cpp.md)|Especifica um intervalo de valores permitidos para argumentos ou campos cujos valores são definidos em tempo de execução.|
 |[readonly](readonly-cpp.md)|Proíbe a atribuição a uma variável.|
 |[ref](ref-cpp.md)|Identifica um ponteiro de referência.|
-|[requestedit](requestedit.md)|Indica que a propriedade oferece suporte a `OnRequestEdit` notificação.|
+|[requestedit](requestedit.md)|Indica que a propriedade dá suporte à notificação `OnRequestEdit`.|
 |[restricted](restricted.md)|Especifica que uma biblioteca ou membro de um módulo, interface ou dispinterface não pode ser chamado arbitrariamente.|
 |[retval](retval.md)|Designa o parâmetro que recebe o valor de retorno do membro.|
 |[size_is](size-is.md)|Especifica o tamanho da memória alocada para ponteiros de tamanho, tamanho de ponteiros para ponteiros de tamanho e único ou matrizes multidimensionais.|
-|[source](source-cpp.md)|Indica que um membro de classe, propriedade ou método é uma origem de eventos.|
-|[string](string-cpp.md)|Indica que o unidimensional **char**, **wchar_t**, `byte`, ou equivalente matriz ou o ponteiro para essa matriz deve ser tratado como uma cadeia de caracteres.|
+|[origem](source-cpp.md)|Indica que um membro de classe, propriedade ou método é uma origem de eventos.|
+|[cadeia de caracteres](string-cpp.md)|Indica que o unidimensional **char**, **wchar_t**, `byte`, ou equivalente matriz ou o ponteiro para essa matriz deve ser tratado como uma cadeia de caracteres.|
 |[switch_is](switch-is.md)|Especifica a expressão ou um identificador que atua como o discriminador de união que seleciona o membro de união.|
 |[switch_type](switch-type.md)|Identifica o tipo da variável usada como o discriminador de união.|
 |[transmit_as](transmit-as.md)|Instrui o compilador para associar um tipo apresentado, manipulam a quais aplicativos cliente e servidor, com um tipo transmitido.|

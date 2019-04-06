@@ -5,12 +5,12 @@ helpviewer_keywords:
 - symbols [C++], predefined IDs
 - predefined symbol IDs
 ms.assetid: 91a5d610-1a04-47e8-b8a4-63ad650a90df
-ms.openlocfilehash: 22337e812936a90f8d7c4ead33989e1e0c4d39f0
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 5acaf9d470ce3d1cccad65bc8235cacfd7a56427
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57562751"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59024537"
 ---
 # <a name="predefined-symbol-ids"></a>IDs de símbolo predefinido
 
@@ -20,11 +20,11 @@ Essas IDs de símbolo se tornam importantes ao trabalhar com recursos. Eles est�
 
 Bibliotecas têm predefinidos símbolos que serão exibido como parte do projeto:
 
-- [Símbolos predefinidos da ATL](../windows/atl-predefined-symbols.md)
+- [Símbolos predefinidos ATL](../windows/atl-predefined-symbols.md)
 
-- [Símbolos predefinidos do MFC](../windows/mfc-predefined-symbols.md)
+- [Símbolos predefinidos MFC](../windows/mfc-predefined-symbols.md)
 
-- [Símbolos predefinidos do Win32](../windows/win32-predefined-symbols.md)
+- [Símbolos predefinidos Win32](../windows/win32-predefined-symbols.md)
 
 > [!NOTE]
 > Símbolos predefinidos são sempre somente leitura.
@@ -35,6 +35,6 @@ Win32, MFC ou ATL
 
 ## <a name="see-also"></a>Consulte também
 
-[Identificadores de recursos (símbolos)](../windows/symbols-resource-identifiers.md)<br/>
-[Como: criar símbolos](../windows/creating-new-symbols.md)<br/>
-[Como: gerenciar símbolos](../windows/changing-a-symbol-or-symbol-name-id.md)<br/>
+[Identificadores de recurso (símbolos)](../windows/symbols-resource-identifiers.md)<br/>
+[Como: Crie símbolos](../windows/creating-new-symbols.md)<br/>
+[Como: Gerenciar símbolos](../windows/changing-a-symbol-or-symbol-name-id.md)<br/>

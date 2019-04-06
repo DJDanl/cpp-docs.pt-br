@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2844
 ms.assetid: dcaf4cd2-21b0-4280-ae42-0a706c524d83
-ms.openlocfilehash: 8af9f42be279f728f72fc6968aeba98ee5d2474a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2676a32cee487595a2241359496ae9b0380126b8
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462706"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58775005"
 ---
 # <a name="compiler-error-c2844"></a>Erro do compilador C2844
 
 'member': não pode ser um membro de interface 'interface'
 
-Uma [classe de interface](../../windows/interface-class-cpp-component-extensions.md) não pode conter um membro de dados, a menos que também é uma propriedade.
+Uma [classe de interface](../../extensions/interface-class-cpp-component-extensions.md) não pode conter um membro de dados, a menos que também é uma propriedade.
 
 Algo diferente de uma propriedade ou função de membro não é permitido em uma interface. Além disso, operadores, construtores e destruidores não são permitidas.
 

@@ -102,12 +102,12 @@ helpviewer_keywords:
 - CListBox [MFC], SetTopIndex
 - CListBox [MFC], VKeyToItem
 ms.assetid: 7ba3c699-c286-4cd9-9066-532c41ec05d1
-ms.openlocfilehash: 17ff89fde3ef893c2cfcd8beeb8482722af60358
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: b448f725bac68c2b67dc44d660c664c075aa86da
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57280310"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58778761"
 ---
 # <a name="clistbox-class"></a>Classe CListBox
 
@@ -121,13 +121,13 @@ class CListBox : public CWnd
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
 |[CListBox::CListBox](#clistbox)|Constrói um objeto `CListBox`.|
 
-### <a name="public-methods"></a>Métodos Públicos
+### <a name="public-methods"></a>Métodos públicos
 
 |Nome|Descrição|
 |----------|-----------------|
@@ -1143,7 +1143,7 @@ int SelItemRange(
 
 ### <a name="parameters"></a>Parâmetros
 
-*bSelect*<br/>
+*bSelecione*<br/>
 Especifica como definir a seleção. Se *bSelecione* for TRUE, a cadeia de caracteres está selecionada e realçada; se FALSE, o realce é removido e a cadeia de caracteres não será mais selecionada.
 
 *nFirstItem*<br/>
@@ -1412,7 +1412,7 @@ int SetSel(
 *nIndex*<br/>
 Contém o índice baseado em zero da cadeia de caracteres a ser definido. Se -1, a seleção é adicionada ou removida de todas as cadeias de caracteres, dependendo do valor de *bSelecione*.
 
-*bSelect*<br/>
+*bSelecione*<br/>
 Especifica como definir a seleção. Se *bSelecione* for TRUE, a cadeia de caracteres está selecionada e realçada; se FALSE, o realce é removido e a cadeia de caracteres não será mais selecionada. A cadeia de caracteres especificada está selecionada e realçada por padrão.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1538,7 +1538,7 @@ Um valor retornado de 0 ou maior Especifica o índice de um item na caixa de lis
 
 ## <a name="see-also"></a>Consulte também
 
-[Exemplo MFC CTRLTEST](../../visual-cpp-samples.md)<br/>
+[Exemplo MFC CTRLTEST](../../overview/visual-cpp-samples.md)<br/>
 [Classe CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
 [Classe CWnd](../../mfc/reference/cwnd-class.md)<br/>

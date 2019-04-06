@@ -108,12 +108,12 @@ helpviewer_keywords:
 - CComboBox [MFC], SetTopIndex
 - CComboBox [MFC], ShowDropDown
 ms.assetid: 4e73b5df-0d2e-4658-9706-38133fb10513
-ms.openlocfilehash: 847927a36bac8540dd95307ae3c0259d0adba12a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: a76be4be87471f26970a5b517d9993ae324b56c5
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304464"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58778514"
 ---
 # <a name="ccombobox-class"></a>Classe CComboBox
 
@@ -127,13 +127,13 @@ class CComboBox : public CWnd
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
 |[CComboBox::CComboBox](#ccombobox)|Constrói um objeto `CComboBox`.|
 
-### <a name="public-methods"></a>Métodos Públicos
+### <a name="public-methods"></a>Métodos públicos
 
 |Nome|Descrição|
 |----------|-----------------|
@@ -674,7 +674,7 @@ BOOL GetCueBanner(
 
 Na primeira sobrecarga, uma [CString](../../atl-mfc-shared/using-cstring.md) objeto que contém o texto da faixa de indicação se existir; caso contrário, um `CString` objeto que tem comprimento zero.
 
--ou-
+- ou -
 
 Na segunda sobrecarga, TRUE se este método for bem-sucedida; Caso contrário, FALSE.
 
@@ -1312,7 +1312,7 @@ int SetExtendedUI(BOOL bExtended = TRUE);
 
 ### <a name="parameters"></a>Parâmetros
 
-*bExtended*<br/>
+*bO*<br/>
 Especifica se a caixa de combinação deve usar a interface do usuário estendida ou a interface do usuário padrão. Um valor TRUE seleciona a interface do usuário estendida; um valor FALSE seleciona a interface de usuário padrão.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1557,7 +1557,7 @@ Essa função de membro não tem nenhum efeito em uma caixa de combinação cria
 
 ## <a name="see-also"></a>Consulte também
 
-[Exemplo MFC CTRLBARS](../../visual-cpp-samples.md)<br/>
+[Exemplo MFC CTRLBARS](../../overview/visual-cpp-samples.md)<br/>
 [Classe CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
 [Classe CWnd](../../mfc/reference/cwnd-class.md)<br/>

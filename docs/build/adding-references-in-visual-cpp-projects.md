@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Add References Dialog Box (C++)
 - .NET Framework (C++), Add References Dialog Box
 ms.assetid: 12b8f571-0f21-40b3-9404-5318a57e9cb5
-ms.openlocfilehash: eb4d970527ba919af10eadab7c907f5108767b9b
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: dff057977e6b6ff0c36d3a888bc4d5c3aa778576
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58780464"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038755"
 ---
 # <a name="consuming-libraries-and-components"></a>Consumindo bibliotecas e componentes
 
@@ -60,23 +60,23 @@ Cada tipo de referência tem propriedades. Exiba as propriedades selecionando a 
 
 As propriedades de referência do ActiveX estão disponíveis somente para referências a componentes COM. Essas propriedades são exibidas apenas quando um componente COM é selecionado no painel **Referências**. As propriedades não podem ser modificadas.
 
-- **Caminho Completo do Controle**
+- **Caminho completo do controle**
 
    Exibe o caminho do diretório do controle referenciado.
 
-- **GUID do Controle**
+- **GUID de controle**
 
    Exibe o GUID do controle ActiveX.
 
-- **Versão do Controle**
+- **Controle de versão**
 
    Exibe a versão do controle ActiveX referenciado.
 
-- **Nome da Biblioteca de Tipos**
+- **Nome da biblioteca de tipo**
 
    Exibe o nome da biblioteca de tipos referenciada.
 
-- **Ferramenta Wrapper**
+- **Ferramenta do wrapper**
 
    Exibe a ferramenta usada para compilar o assembly de interoperabilidade da biblioteca COM referenciada ou do controle ActiveX.
 
@@ -84,7 +84,7 @@ As propriedades de referência do ActiveX estão disponíveis somente para refer
 
 Propriedades da referência do assembly estão disponíveis apenas para as referências aos assemblies do .NET Framework no C + + / projetos. Essas propriedades são exibidas apenas quando um assembly do .NET Framework está selecionado na **referências** painel. As propriedades não podem ser modificadas.
 
-- **Caminho Relativo**
+- **Caminho relativo**
 
    Exibe o caminho relativo do diretório do projeto ao assembly referenciado.
 
@@ -92,7 +92,7 @@ Propriedades da referência do assembly estão disponíveis apenas para as refer
 
 As propriedades a seguir estão disponíveis em vários tipos de referências. Elas permitem que você especifique como compilar com referências.
 
-- **Local da Cópia**
+- **Local da cópia**
 
    Especifica se o assembly referenciado será copiado automaticamente para o local de destino durante um build.
 
@@ -100,7 +100,7 @@ As propriedades a seguir estão disponíveis em vários tipos de referências. E
 
    Especifica se os assemblies satélite serão copiados automaticamente do assembly referenciado para o local de destino durante um build. Usado somente se **Local da cópia** for **true**.
 
-- **Saída do Assembly de Referência**
+- **Saída do Assembly de referência**
 
    Especifica que esse assembly é usado no processo de build. Se for **true**, o assembly será usado na linha de comando do compilador durante o build.
 
@@ -112,7 +112,7 @@ As propriedades a seguir definem um *referência projeto a projeto* do projeto s
 
    Quando essa propriedade é **True**, o sistema de projeto é vinculado ao projeto dependente dos arquivos .lib que são produzidos pelo projeto independente. Normalmente, você especificará **True**.
 
-- **Identificador do Projeto**
+- **Identificador do projeto**
 
    Identifica exclusivamente o projeto independente. O valor da propriedade é um GUID de sistema interno que não pode ser modificado.
 
@@ -124,7 +124,7 @@ As propriedades a seguir definem um *referência projeto a projeto* do projeto s
 
 As propriedades a seguir são encontradas em referências de assembly .NET e COM e não podem ser modificadas.
 
-- **Nome do assembly**
+- **Nome do Assembly**
 
    Exibe o nome do assembly para o assembly referenciado.
 
@@ -136,7 +136,7 @@ As propriedades a seguir são encontradas em referências de assembly .NET e COM
 
    Exibe a descrição da referência selecionada.
 
-- **Caminho Completo**
+- **Caminho completo**
 
    Exibe o caminho do diretório do assembly referenciado.
 
@@ -144,7 +144,7 @@ As propriedades a seguir são encontradas em referências de assembly .NET e COM
 
    Para assemblies .NET Framework, exibe o caminho completo. Para componentes COM, exibe o GUID.
 
-- **Rótulo**
+- **Rotular**
 
    Exibe o rótulo da referência.
 
@@ -152,13 +152,13 @@ As propriedades a seguir são encontradas em referências de assembly .NET e COM
 
    Exibe o nome da referência.
 
-- **Token de Chave Pública**
+- **Token de chave pública**
 
    Exibe o token de chave pública usado para identificar o assembly referenciado.
 
-- **Nome Forte**
+- **Nome forte**
 
-   `true` se o assembly referenciado tem um nome forte. Um assembly com nome forte tem uma versão exclusiva.
+   `true` Se o assembly referenciado tiver um nome forte. Um assembly com nome forte tem uma versão exclusiva.
 
 - **Versão**
 
@@ -167,4 +167,4 @@ As propriedades a seguir são encontradas em referências de assembly .NET e COM
 ## <a name="see-also"></a>Consulte também
 
 [Referência de página de propriedades do projeto C++](reference/property-pages-visual-cpp.md)<br>
-[Definição das propriedades de compilação do C++ no Visual Studio](working-with-project-properties.md)
+[Defina o compilador C++ e compilar propriedades no Visual Studio](working-with-project-properties.md)

@@ -8,12 +8,12 @@ f1_keywords:
 - C5001
 - C5012
 ms.assetid: d8f4844a-f414-42ab-b9a5-925a5da9d365
-ms.openlocfilehash: 69e174a000edfea7027a04f9cf97bf5a1aeb585e
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 6f80bc9d2a2438a6003c93ce7e60de50fd639a16
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518757"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023900"
 ---
 # <a name="vectorizer-and-parallelizer-messages"></a>Mensagens do vetorizador e do paralelizador
 
@@ -984,7 +984,7 @@ void code_1505(int *A, int *B)
 
 [Paralelização automática e vetorização automática](../../parallel/auto-parallelization-and-auto-vectorization.md)<br/>
 [Programação paralela em código nativo](http://go.microsoft.com/fwlink/p/?linkid=263662)<br/>
-[#pragma loop()&lt;3](../../preprocessor/loop.md)<br/>
-[Opções /Q (operações de nível baixo)](../../build/reference/q-options-low-level-operations.md)<br/>
+[#pragma loop()](../../preprocessor/loop.md)<br/>
+[/Q Opções (operações de nível baixo)](../../build/reference/q-options-low-level-operations.md)<br/>
 [/Qpar-report (nível de relatórios do paralelizador automático)](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md)<br/>
 [/Qvec-report (nível de relatórios do vetorizador automático)](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md)

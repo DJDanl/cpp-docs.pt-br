@@ -9,12 +9,12 @@ helpviewer_keywords:
 - zooming and in-place activation
 - in-place activation, zooming and resizing
 ms.assetid: 4d7859bd-0b2e-4254-be62-2735cecf02c6
-ms.openlocfilehash: e2f6c6acfefaae877790fd2cc0926bc2474c79b8
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c2cb25388184ac969bec7c01d8077a458c03a03a
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283755"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58775277"
 ---
 # <a name="tn040-mfcole-in-place-resizing-and-zooming"></a>TN040: Zoom e redimensionamento de in-loco MFC/OLE
 
@@ -40,7 +40,7 @@ A maioria da carga é colocado no implementador de servidor, em que o servidor d
 
 O fator de zoom atual pode ser determinado chamando `COleServerDoc::GetZoomFactor`. Quando o documento não está ativo no local de chamada isso sempre resultará em um fator de zoom de 100% (ou taxa de 1:1). Chamando-o enquanto ativo no local pode retornar algo diferente de 100%.
 
-Para obter um exemplo do zoom corretamente, consulte o exemplo OLE do MFC [HIERSVR](../visual-cpp-samples.md). Aumentar o zoom HIERSVR é complicado pelo fato de que ele exibe o texto e texto, em geral, não dimensione de maneira linear (dicas de, convenções tipográficas, design larguras e alturas todos complicar a questão). Ainda assim, HIERSVR é uma referência razoável para a implementação de zoom corretamente, e então é o Tutorial de MFC [RABISCO](../visual-cpp-samples.md) (etapa 7).
+Para obter um exemplo do zoom corretamente, consulte o exemplo OLE do MFC [HIERSVR](../overview/visual-cpp-samples.md). Aumentar o zoom HIERSVR é complicado pelo fato de que ele exibe o texto e texto, em geral, não dimensione de maneira linear (dicas de, convenções tipográficas, design larguras e alturas todos complicar a questão). Ainda assim, HIERSVR é uma referência razoável para a implementação de zoom corretamente, e então é o Tutorial de MFC [RABISCO](../overview/visual-cpp-samples.md) (etapa 7).
 
 `COleServerDoc::GetZoomFactor` Determina o fator de zoom com base em um número de métricas diferentes disponíveis do contêiner ou da implementação de sua `COleServerItem` e `COleServerDoc` classes. Em resumo, o fator de zoom atual é determinado pela fórmula a seguir:
 

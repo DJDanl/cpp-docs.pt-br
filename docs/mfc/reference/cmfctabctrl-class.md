@@ -104,12 +104,12 @@ helpviewer_keywords:
 - CMFCTabCtrl [MFC], SynchronizeScrollBar
 - CMFCTabCtrl [MFC], m_bEnableActivate
 ms.assetid: d441385d-2c72-4203-96fa-deae2273da35
-ms.openlocfilehash: 8dc8c51cc1847d29b76e2017db4c1368b35b9a9f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 43eb171ce9b3ea3454855dc1f92d9aa1b74645d4
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57281675"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58778449"
 ---
 # <a name="cmfctabctrl-class"></a>Classe CMFCTabCtrl
 
@@ -123,7 +123,7 @@ class CMFCTabCtrl : public CMFCBaseTabCtrl
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
@@ -243,7 +243,7 @@ Para obter um exemplo de como criar uma janela com guias como uma barra de contr
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir demonstra como usar vários métodos na `CMFCTabCtrl` classe para configurar um `CMFCTabCtrl` objeto. O exemplo explica como adicionar uma guia, mostrar o botão Fechar na guia ativa, habilitar rótulos editáveis de guia e exibir um menu pop-up de rótulos de janela com guias. Este exemplo é parte do [exemplo de coleção de estado](../../visual-cpp-samples.md).
+O exemplo a seguir demonstra como usar vários métodos na `CMFCTabCtrl` classe para configurar um `CMFCTabCtrl` objeto. O exemplo explica como adicionar uma guia, mostrar o botão Fechar na guia ativa, habilitar rótulos editáveis de guia e exibir um menu pop-up de rótulos de janela com guias. Este exemplo é parte do [exemplo de coleção de estado](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_StateCollection#1](../../mfc/reference/codesnippet/cpp/cmfctabctrl-class_1.h)]
 [!code-cpp[NVC_MFC_StateCollection#3](../../mfc/reference/codesnippet/cpp/cmfctabctrl-class_2.cpp)]
@@ -310,7 +310,7 @@ BOOL Create(
 
 ### <a name="parameters"></a>Parâmetros
 
-*style*<br/>
+*Estilo *<br/>
 [in] O estilo do controle guia. Para obter mais informações, consulte Comentários.
 
 *rect*<br/>
@@ -322,7 +322,7 @@ BOOL Create(
 *nID*<br/>
 [in] A ID do controle guia.
 
-*location*<br/>
+*local*<br/>
 [in] O local das guias. O valor padrão é LOCATION_BOTTOM. Para obter mais informações, consulte Comentários.
 
 *bCloseBtn*<br/>
@@ -355,7 +355,7 @@ A tabela a seguir lista os valores que você pode especificar para o *local* par
 
 ### <a name="example"></a>Exemplo
 
-O exemplo a seguir demonstra como usar o `Create` método no `CMFCTabCtrl` classe. Este exemplo é parte do [exemplo de coleção de estado](../../visual-cpp-samples.md).
+O exemplo a seguir demonstra como usar o `Create` método no `CMFCTabCtrl` classe. Este exemplo é parte do [exemplo de coleção de estado](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_StateCollection#1](../../mfc/reference/codesnippet/cpp/cmfctabctrl-class_1.h)]
 [!code-cpp[NVC_MFC_StateCollection#2](../../mfc/reference/codesnippet/cpp/cmfctabctrl-class_3.cpp)]
@@ -387,7 +387,7 @@ void EnableActiveTabCloseButton(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>Parâmetros
 
-*bEnable*<br/>
+*bAtivar*<br/>
 [in] TRUE para exibir o botão Fechar na guia ativa. FALSE para exibir o botão Fechar no canto superior direito da área da guia. O valor padrão é TRUE.
 
 ##  <a name="enableinplaceedit"></a>  CMFCTabCtrl::EnableInPlaceEdit
@@ -400,7 +400,7 @@ virtual void EnableInPlaceEdit(BOOL bEnable);
 
 ### <a name="parameters"></a>Parâmetros
 
-*bEnable*<br/>
+*bAtivar*<br/>
 [in] TRUE para ativar rótulos de guia editável; FALSE para desativar os rótulos de guia editável.
 
 ### <a name="remarks"></a>Comentários
@@ -415,7 +415,7 @@ void EnableTabDocumentsMenu(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>Parâmetros
 
-*bEnable*<br/>
+*bAtivar*<br/>
 [in] TRUE para exibir um menu pop-up de rótulos de janela com guias; FALSE para exibir botões de rolagem para frente e para trás. O valor padrão é TRUE.
 
 ### <a name="remarks"></a>Comentários
@@ -835,7 +835,7 @@ BOOL ModifyTabStyle(Style style);
 
 ### <a name="parameters"></a>Parâmetros
 
-*style*<br/>
+*Estilo *<br/>
 [in] Um dos valores de enumeração que especifica a aparência do controle guia. Para obter mais informações, consulte a tabela em comentários.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -944,7 +944,7 @@ void SetActiveInMDITabGroup(BOOL bActive);
 
 ### <a name="parameters"></a>Parâmetros
 
-*bActive*<br/>
+*bScripts Ativos*<br/>
 [in] TRUE para tornar a guia ativa; a guia atual FALSE para tornar a guia atual inativa.
 
 ### <a name="remarks"></a>Comentários
@@ -1111,7 +1111,7 @@ void StopResize(BOOL bCancel);
 
 ### <a name="parameters"></a>Parâmetros
 
-*bCancel*<br/>
+*bCancelar*<br/>
 [in] TRUE para abandonar a operação de redimensionamento atual; FALSE para concluir as operação de redimensionamento atual. Em ambos os casos, o framework para desenhar o retângulo de redimensionamento.
 
 ##  <a name="synchronizescrollbar"></a>  CMFCTabCtrl::SynchronizeScrollBar

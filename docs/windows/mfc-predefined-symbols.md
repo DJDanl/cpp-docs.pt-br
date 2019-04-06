@@ -9,12 +9,12 @@ helpviewer_keywords:
 - databases [C++], MFC programming model
 - Windows programming MFC symbols [C++]
 ms.assetid: c1e689c4-45d7-40a3-8ee9-f47676cc3bbb
-ms.openlocfilehash: c60c75275ca565b332c33848d27c134deb90a5c6
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: e9e4f9f62a3004e171eea9e3552d8a0f58923075
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57563193"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59031799"
 ---
 # <a name="mfc-predefined-symbols"></a>Símbolos predefinidos MFC
 
@@ -282,6 +282,6 @@ MFC
 
 ## <a name="see-also"></a>Consulte também
 
-[IDs de símbolos predefinidos](../windows/predefined-symbol-ids.md)<br/>
-[Símbolos predefinidos da ATL](../windows/atl-predefined-symbols.md)<br/>
-[Símbolos predefinidos do Win32](../windows/win32-predefined-symbols.md)<br/>
+[IDs de símbolo predefinido](../windows/predefined-symbol-ids.md)<br/>
+[Símbolos predefinidos ATL](../windows/atl-predefined-symbols.md)<br/>
+[Símbolos predefinidos Win32](../windows/win32-predefined-symbols.md)<br/>

@@ -7,16 +7,16 @@ helpviewer_keywords:
 - VMXOFF instruction
 - __vmx_off intrinsic
 ms.assetid: 78a32d46-9291-406c-b982-a550855aff18
-ms.openlocfilehash: 24f57195b60a788c0189a295fa7b6e4818a93d83
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4a01752bd510f9aa8cb159c23e691c9d244145e2
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50440281"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023848"
 ---
 # <a name="vmxoff"></a>__vmx_off
 
-**Seção específica da Microsoft**
+**Específico da Microsoft**
 
 Desativa a operação de extensões (VMX) da máquina virtual no processador.
 
@@ -38,7 +38,7 @@ O `__vmx_off` função é equivalente ao `VMXOFF` instruções de máquina. Essa
 
 **Arquivo de cabeçalho** \<intrin. h >
 
-**Fim da seção específica da Microsoft**
+**FIM de Específico da Microsoft**
 
 ## <a name="see-also"></a>Consulte também
 

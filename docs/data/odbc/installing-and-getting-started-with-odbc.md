@@ -5,12 +5,12 @@ helpviewer_keywords:
 - installing ODBC
 - ODBC, installing
 ms.assetid: 6b473481-1d68-468f-89f6-82b0fd7716fd
-ms.openlocfilehash: 8ebf164fc51d50c45313654a2259126eef5afeb6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 112593aac74a15279f605c75a52fb3eec6750576
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50484237"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59028646"
 ---
 # <a name="installing-and-getting-started-with-odbc"></a>Instalação e introdução com ODBC
 
@@ -24,4 +24,4 @@ Os tópicos a seguir o ajudarão a instalar os componentes que você precisa par
 
 ## <a name="see-also"></a>Consulte também
 
-[ODBC (conectividade de banco de dados aberto)](../../data/odbc/open-database-connectivity-odbc.md)
+[Conectividade de banco de dados aberto (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)

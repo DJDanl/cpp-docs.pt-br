@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - length_is attribute
 ms.assetid: 1d99b883-84bb-4b1e-b098-eb780fc94f40
-ms.openlocfilehash: 54206dd82a550924169bf7bcccd4f70f9e5a657c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1de168606b57c801bc3dc1fb9aee76eb6f3d54c8
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50489551"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59039904"
 ---
 # <a name="lengthis"></a>length_is
 
@@ -25,7 +25,7 @@ Especifica o número de elementos da matriz a ser transmitido.
 
 ### <a name="parameters"></a>Parâmetros
 
-*Expressão*<br/>
+*expressão*<br/>
 Uma ou mais expressões de linguagem C. Slots de argumentos vazia são permitidos.
 
 ## <a name="remarks"></a>Comentários
@@ -51,7 +51,7 @@ Para obter mais informações, consulte [contextos de atributo](cpp-attributes-c
 
 ## <a name="see-also"></a>Consulte também
 
-[Atributos de IDL](idl-attributes.md)<br/>
+[Atributos IDL](idl-attributes.md)<br/>
 [Atributos Typedef, Enum, Union e Struct](typedef-enum-union-and-struct-attributes.md)<br/>
 [Atributos de parâmetro](parameter-attributes.md)<br/>
 [first_is](first-is.md)<br/>

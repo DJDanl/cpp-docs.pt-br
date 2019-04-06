@@ -1,5 +1,5 @@
 ---
-title: 'Conjunto de registros: filtrando registros (ODBC)'
+title: 'Conjunto de registros: Filtrando registros (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - data [MFC], filtering
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - ODBC recordsets [C++], filtering records
 - filters [C++], recordset object
 ms.assetid: 5c075f37-c837-464d-90c1-d028a9d1c175
-ms.openlocfilehash: 47ac2b83df4da5fcfe0cbe5e9546571a50ecdfac
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 050524df840be28d661da89d04b685a44238f88c
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50514745"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041209"
 ---
-# <a name="recordset-filtering-records-odbc"></a>Conjunto de registros: filtrando registros (ODBC)
+# <a name="recordset-filtering-records-odbc"></a>Conjunto de registros: Filtrando registros (ODBC)
 
 Este tópico se aplica às classes ODBC do MFC.
 
@@ -44,7 +44,7 @@ Você deve estabelecer o filtro do conjunto de registros de um objeto depois de 
     > [!NOTE]
     >  A cadeia de caracteres literal "MATH101" é mostrada com aspas simples acima. Na especificação do ODBC SQL, aspas simples são usadas para indicar um literal de cadeia de caracteres. Verifique a documentação do driver ODBC para os requisitos de aspas do DBMS nessa situação. Essa sintaxe também é discutido mais perto do final deste tópico.
 
-1. Defina quaisquer outras opções que você precisa, como ordem de classificação, o modo de bloqueio ou parâmetros. Especificando um parâmetro é especialmente útil. Para obter informações sobre a parametrização de seu filtro, consulte [conjunto de registros: parametrizando um conjunto de registros (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).
+1. Defina quaisquer outras opções que você precisa, como ordem de classificação, o modo de bloqueio ou parâmetros. Especificando um parâmetro é especialmente útil. Para obter informações sobre a parametrização de seu filtro, consulte [conjunto de registros: Parametrizando um conjunto de registros (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).
 
 1. Chame `Open` para o novo objeto (ou `Requery` para um objeto aberto anteriormente).
 
@@ -82,15 +82,15 @@ Observe o uso de caracteres de aspas simples; Se você definir a cadeia de carac
 m_strFilter = "StudentID = 100";   // incorrect for some drivers
 ```
 
-A delimitação mostrado acima está em conformidade com a especificação de ODBC, mas alguns DBMSs podem exigir outros caracteres de aspas. Para obter mais informações, consulte [SQL: SQL instrução (ODBC Personalizando seu conjunto de registros)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md).
+A delimitação mostrado acima está em conformidade com a especificação de ODBC, mas alguns DBMSs podem exigir outros caracteres de aspas. Para obter mais informações, consulte [SQL: Personalizando a instrução de SQL do seu conjunto de registros (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md).
 
 > [!NOTE]
->  Se você optar por substituir a cadeia de caracteres do conjunto de registros padrão SQL passando sua própria cadeia de caracteres SQL para `Open`, você não deve definir um filtro se sua cadeia de caracteres personalizada tem uma **onde** cláusula. Para obter mais informações sobre como substituir o padrão SQL, consulte [SQL: SQL instrução (ODBC Personalizando seu conjunto de registros)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md).
+>  Se você optar por substituir a cadeia de caracteres do conjunto de registros padrão SQL passando sua própria cadeia de caracteres SQL para `Open`, você não deve definir um filtro se sua cadeia de caracteres personalizada tem uma **onde** cláusula. Para obter mais informações sobre como substituir o padrão SQL, consulte [SQL: Personalizando a instrução de SQL do seu conjunto de registros (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md).
 
 ## <a name="see-also"></a>Consulte também
 
 [Conjunto de registros (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Conjunto de registros: classificando registros (ODBC)](../../data/odbc/recordset-sorting-records-odbc.md)<br/>
-[Conjunto de registros: como conjuntos de registros selecionam registros (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)<br/>
-[Conjunto de registros: como conjuntos de registros atualizam registros (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)<br/>
-[Conjunto de registros: bloqueando registros (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)
+[Conjunto de registros: Classificando registros (ODBC)](../../data/odbc/recordset-sorting-records-odbc.md)<br/>
+[Conjunto de registros: Como conjuntos de registros selecionam registros (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)<br/>
+[Conjunto de registros: Como conjuntos de registros atualizam registros (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)<br/>
+[Conjunto de registros: Bloqueio de registros (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)

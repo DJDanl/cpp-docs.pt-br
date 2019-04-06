@@ -162,12 +162,12 @@ helpviewer_keywords:
 - CTreeCtrl [MFC], SortChildren
 - CTreeCtrl [MFC], SortChildrenCB
 ms.assetid: 96e20031-6161-4143-8c12-8d1816c66d90
-ms.openlocfilehash: 92666e10d82d96b76ad43b652ed90e0e41b8f853
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 3819e861b7a5e6ff27fe632a33413b588a5a4835
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57418926"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58781998"
 ---
 # <a name="ctreectrl-class"></a>Classe CTreeCtrl
 
@@ -181,13 +181,13 @@ class CTreeCtrl : public CWnd
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
 |[CTreeCtrl::CTreeCtrl](#ctreectrl)|Constrói um objeto `CTreeCtrl`.|
 
-### <a name="public-methods"></a>Métodos Públicos
+### <a name="public-methods"></a>Métodos públicos
 
 |Nome|Descrição|
 |----------|-----------------|
@@ -1713,7 +1713,7 @@ COLORREF SetBkColor(COLORREF clr);
 
 ### <a name="parameters"></a>Parâmetros
 
-*clr*<br/>
+*CLR*<br/>
 Um valor COLORREF que contém a nova cor de plano de fundo. Se esse valor é -1, o controle voltará a usar a cor do sistema para a cor do plano de fundo.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -2229,7 +2229,7 @@ COLORREF SetTextColor(COLORREF clr);
 
 ### <a name="parameters"></a>Parâmetros
 
-*clr*<br/>
+*CLR*<br/>
 Um valor COLORREF que contém a nova cor do texto. Se esse argumento for -1, o controle voltará a usar a cor do sistema para a cor do texto.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -2341,7 +2341,7 @@ O *lParam1* e *lParam2* parâmetros correspondem do `lParam` membro do [TVITEM](
 
 ## <a name="see-also"></a>Consulte também
 
-[CMNCTRL1 de exemplo do MFC](../../visual-cpp-samples.md)<br/>
+[CMNCTRL1 de exemplo do MFC](../../overview/visual-cpp-samples.md)<br/>
 [Classe CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
 [Classe CImageList](../../mfc/reference/cimagelist-class.md)

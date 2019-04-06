@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - WRL namespace
 ms.assetid: 01118a8f-f564-4859-b87e-9444848585a1
-ms.openlocfilehash: d402f2a1292088b52ce921bbc0007ab96554189e
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 749469c7ae2acf3a0da92d24a51bbfca9b68971d
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58783733"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033515"
 ---
 # <a name="microsoftwrl-namespace"></a>Namespace Microsoft::WRL
 
@@ -50,7 +50,7 @@ namespace Microsoft::WRL;
 |[Classe DeferrableEventArgs](deferrableeventargs-class.md)|Uma classe de modelo usada para os tipos de argumento de evento para adiamentos.|
 |[Classe EventSource](eventsource-class.md)|Representa um evento. `EventSource` funções de membro, adicionar, remover e invocar manipuladores de eventos.|
 |[Classe FtmBase](ftmbase-class.md)|Representa um objeto livre de marshaler.|
-|[Classe Module](module-class.md)|Representa uma coleção de objetos relacionados.|
+|[Classe de módulo](module-class.md)|Representa uma coleção de objetos relacionados.|
 |[Classe RuntimeClass](runtimeclass-class.md)|Representa uma classe instanciada que herda o número especificado de interfaces e fornece o tempo de execução do Windows especificado, COM clássico e suporte fraco de referência.|
 |[Classe SimpleActivationFactory](simpleactivationfactory-class.md)|Fornece um mecanismo fundamental para criar um tempo de execução do Windows ou a classe base do COM clássico.|
 |[Classe SimpleClassFactory](simpleclassfactory-class.md)|Fornece um mecanismo fundamental para criar uma classe base.|
@@ -62,7 +62,7 @@ namespace Microsoft::WRL;
 |----------|-----------------|
 |[Estrutura ChainInterfaces](chaininterfaces-structure.md)|Especifica as funções de verificação e de inicialização que podem ser aplicadas a um conjunto de IDs de interface.|
 |[Estrutura CloakedIid](cloakediid-structure.md)|Indica para o `RuntimeClass`, `Implements` e `ChainInterfaces` que a interface especificada não está acessível na lista de IID de modelos.|
-|[Estrutura Implements](implements-structure.md)|Implementa `QueryInterface` e `GetIid` para interfaces especificadas.|
+|[Implementa estrutura](implements-structure.md)|Implementa `QueryInterface` e `GetIid` para interfaces especificadas.|
 |[Estrutura MixIn](mixin-structure.md)|Garante que uma classe de tempo de execução deriva de interfaces do COM clássico, em seguida e as interfaces de tempo de execução do Windows, se houver.|
 |[Estrutura RuntimeClassFlags](runtimeclassflags-structure.md)|Contém o tipo para uma instância de um [RuntimeClass](runtimeclass-class.md).|
 

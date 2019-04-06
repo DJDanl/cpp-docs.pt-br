@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - vi_progid attribute
 ms.assetid: a52449be-b93e-4111-b883-44bb8da53261
-ms.openlocfilehash: 1045c240a283a8a534c2266186f941312216f206
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7050543c9acf3801a99d3e32e119325900bdb050
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544268"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033583"
 ---
 # <a name="viprogid"></a>vi_progid
 
@@ -50,7 +50,7 @@ Consulte a [coclass](coclass.md) exemplo para uso do exemplo **vi_progid**.
 
 |||
 |-|-|
-|**Aplica-se a**|**classe**, **struct**|
+|**Aplica-se a**|**class**, **struct**|
 |**Repetível**|Não|
 |**Atributos obrigatórios**|Nenhum|
 |**Atributos inválidos**|Nenhum|
@@ -59,7 +59,7 @@ Para obter mais informações sobre os contextos de atributo, consulte [contexto
 
 ## <a name="see-also"></a>Consulte também
 
-[Atributos de IDL](idl-attributes.md)<br/>
+[Atributos IDL](idl-attributes.md)<br/>
 [Atributos Typedef, Enum, Union e Struct](typedef-enum-union-and-struct-attributes.md)<br/>
 [Atributos de classe](class-attributes.md)<br/>
 [Chave progID](/windows/desktop/com/-progid--key)

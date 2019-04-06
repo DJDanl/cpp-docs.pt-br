@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CListView [MFC], GetListCtrl
 - CListView [MFC], RemoveImageList
 ms.assetid: 7626bdb2-a1b8-4eab-b631-6743710a8432
-ms.openlocfilehash: 4507c2a640296c2d2619b1da7a0ebae2bc6ef401
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 698e37b2853a2ca3698ee0a426c8ded688c99c58
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57291269"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58776616"
 ---
 # <a name="clistview-class"></a>Classe CListView
 
@@ -31,13 +31,13 @@ class CListView : public CCtrlView
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
 |[CListView::CListView](#clistview)|Constrói um objeto `CListView`.|
 
-### <a name="public-methods"></a>Métodos Públicos
+### <a name="public-methods"></a>Métodos públicos
 
 |Nome|Descrição|
 |----------|-----------------|
@@ -110,7 +110,7 @@ O índice baseado em zero da imagem a ser removida.
 
 ## <a name="see-also"></a>Consulte também
 
-[Exemplo MFC ROWLIST](../../visual-cpp-samples.md)<br/>
+[Exemplo MFC ROWLIST](../../overview/visual-cpp-samples.md)<br/>
 [Classe CCtrlView](../../mfc/reference/cctrlview-class.md)<br/>
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
 [Classe CCtrlView](../../mfc/reference/cctrlview-class.md)

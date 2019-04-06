@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pragmas, const_seg
 - const_seg pragma
 ms.assetid: 1eb58ee2-fb0e-4a39-9621-699c8f5ef957
-ms.openlocfilehash: ce932b068f5751b7cf1ceab969312defd18336f7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c58f154f5e1ab6906b45d59f454a7dc2b5c0bfbe
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50648338"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59029616"
 ---
 # <a name="constseg"></a>const_seg
 Especifica o segmento em que [const](../cpp/const-cpp.md) as variáveis são armazenadas no arquivo. obj.
@@ -37,10 +37,10 @@ Especifica o segmento em que [const](../cpp/const-cpp.md) as variáveis são arm
 
 Usando o *identificador* habilita vários registros a serem exibidos com uma única **pop-up** comando.
 
-"*nome do segmento*"<br/>
+"*segment-name*"<br/>
 (Opcional) O nome de um segmento. Quando usado com **pop-up**, a pilha é exibida e *nome do segmento* se torna o nome do segmento ativo.
 
-"*classe de segmento*"<br/>
+"*segment-class*"<br/>
 (Opcional) Incluído para compatibilidade com o C++ antes da versão 2.0. É ignorado.
 
 ## <a name="remarks"></a>Comentários

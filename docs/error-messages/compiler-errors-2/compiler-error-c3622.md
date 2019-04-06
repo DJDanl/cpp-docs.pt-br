@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3622
 ms.assetid: 02836f78-0cf2-4947-b87e-710187d81014
-ms.openlocfilehash: 69565a1a2d159623bca927a94543834d18c13299
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ed307f46db1261d79d5b0ec6b36852cac2e6d13e
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50518086"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58781907"
 ---
 # <a name="compiler-error-c3622"></a>Erro do compilador C3622
 
 'class': uma classe declarada como 'palavra-chave' não pode ser instanciada.
 
-Foi feita uma tentativa de instanciar uma classe marcada como [abstrata](../../windows/abstract-cpp-component-extensions.md). Uma classe marcada como `abstract` pode ser uma classe base, mas ele não pode ser instanciado.
+Foi feita uma tentativa de instanciar uma classe marcada como [abstrata](../../extensions/abstract-cpp-component-extensions.md). Uma classe marcada como `abstract` pode ser uma classe base, mas ele não pode ser instanciado.
 
 ## <a name="example"></a>Exemplo
 

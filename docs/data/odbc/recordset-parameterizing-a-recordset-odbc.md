@@ -1,5 +1,5 @@
 ---
-title: 'Conjunto de registros: parametrizando um conjunto de registros (ODBC)'
+title: 'Conjunto de registros: Parametrizando um conjunto de registros (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - parameterizing recordsets
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - recordsets, parameterizing
 - passing parameters, to queries at runtime
 ms.assetid: 7d1dfeb6-5ee0-45e2-aacc-63bc52a465cd
-ms.openlocfilehash: f58a33a0c43cb0d70d98f3f2ae33f766058b1c23
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: df67256c54cae3e2adb054d653d3e58bb91dd631
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51331263"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59026156"
 ---
-# <a name="recordset-parameterizing-a-recordset-odbc"></a>Conjunto de registros: parametrizando um conjunto de registros (ODBC)
+# <a name="recordset-parameterizing-a-recordset-odbc"></a>Conjunto de registros: Parametrizando um conjunto de registros (ODBC)
 
 Este tópico se aplica às classes ODBC do MFC.
 
@@ -46,7 +46,7 @@ Usos típicos para os parâmetros incluem:
 
 - Passando argumentos de tempo de execução para uma consulta predefinida.
 
-   Para passar parâmetros para um procedimento armazenado, você deve especificar um ODBC personalizada completa **chamar** instrução — com espaços reservados de parâmetro — quando você chama `Open`, substituindo a instrução de SQL padrão do conjunto de registros. Para obter mais informações, consulte [{1&gt;crecordset::Open&lt;1](../../mfc/reference/crecordset-class.md#open) na *referência da biblioteca de classe* e [SQL: SQL instrução (ODBC Personalizando seu conjunto de registros)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md) e [ Conjunto de registros: Declarando uma classe para uma consulta predefinida (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md).
+   Para passar parâmetros para um procedimento armazenado, você deve especificar um ODBC personalizada completa **chamar** instrução — com espaços reservados de parâmetro — quando você chama `Open`, substituindo a instrução de SQL padrão do conjunto de registros. Para obter mais informações, consulte [{1&gt;crecordset::Open&lt;1](../../mfc/reference/crecordset-class.md#open) na *referência da biblioteca de classe* e [SQL: Personalizando a instrução de SQL do seu conjunto de registros (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md) e [conjunto de registros: Declarando uma classe para uma consulta predefinida (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md).
 
 - Executar com eficiência as diversas requeries com informações de parâmetro diferentes.
 
@@ -75,19 +75,19 @@ Usos típicos para os parâmetros incluem:
                                        // for some drivers
     ```
 
-   Para uma discussão sobre como usar aspas corretamente para cadeias de caracteres de filtro, consulte [conjunto de registros: filtrando registros (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md).
+   Para uma discussão sobre como usar aspas corretamente para cadeias de caracteres de filtro, consulte [conjunto de registros: Filtrando registros (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md).
 
    O valor do parâmetro é diferente cada vez que você consulte novamente o conjunto de registros para uma nova ID do aluno.
 
    > [!TIP]
    > É mais eficiente do que simplesmente um filtro usando um parâmetro. Para um conjunto de registros com parâmetros, o banco de dados deve processar um SQL **selecionar** instrução somente uma vez. Para um conjunto de registros filtrado sem parâmetros, o **selecionar** instrução deve ser processada cada vez que você `Requery` com um novo valor de filtro.
 
-Para obter mais informações sobre filtros, consulte [conjunto de registros: filtrando registros (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md).
+Para obter mais informações sobre filtros, consulte [conjunto de registros: Filtrando registros (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md).
 
 ##  <a name="_core_parameterizing_your_recordset_class"></a> Parametrização de sua classe de conjunto de registros
 
 > [!NOTE]
-> Esta seção se aplica a objetos derivados de `CRecordset` em qual linha em massa buscando não foi implementado. Se você estiver usando a linha em massa buscando, a implementação de parâmetros é um processo semelhante. Para obter mais informações, consulte [conjunto de registros: buscando registros em massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+> Esta seção se aplica a objetos derivados de `CRecordset` em qual linha em massa buscando não foi implementado. Se você estiver usando a linha em massa buscando, a implementação de parâmetros é um processo semelhante. Para obter mais informações, consulte [conjunto de registros: Buscando registros em massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 Antes de criar sua classe de conjunto de registros, determine quais parâmetros você precisa, seus tipos de dados e como o conjunto de registros utiliza.
 
@@ -114,7 +114,7 @@ Antes de criar sua classe de conjunto de registros, determine quais parâmetros 
 
    Adicione os membros de dados de parâmetro após os membros de dados do campo gerado pelo assistente. A convenção é acrescentar a palavra "Param" para cada nome de parâmetro definidos pelo usuário.
 
-1. Modificar a [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) definição de função de membro no arquivo. cpp. Adicione uma chamada de função RFX para cada membro de dados de parâmetro adicionado à classe. Para obter informações sobre como escrever suas funções RFX, consulte [troca de campos do registro: como funciona a RFX](../../data/odbc/record-field-exchange-how-rfx-works.md). Preceda as chamadas RFX para os parâmetros com uma única chamada para:
+1. Modificar a [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) definição de função de membro no arquivo. cpp. Adicione uma chamada de função RFX para cada membro de dados de parâmetro adicionado à classe. Para obter informações sobre como escrever suas funções RFX, consulte [troca de campos do registro: Como funciona RFX](../../data/odbc/record-field-exchange-how-rfx-works.md). Preceda as chamadas RFX para os parâmetros com uma única chamada para:
 
     ```cpp
     pFX->SetFieldType( CFieldExchange::param );
@@ -123,7 +123,7 @@ Antes de criar sua classe de conjunto de registros, determine quais parâmetros 
 
 1. No construtor da sua classe de conjunto de registros, incrementar a contagem de parâmetros, `m_nParams`.
 
-   Para obter informações, consulte [registrar troca de campos: Trabalhando com o código de assistente](../../data/odbc/record-field-exchange-working-with-the-wizard-code.md).
+   Para obter informações, consulte [troca de campos do registro: Trabalhando com o código de assistente](../../data/odbc/record-field-exchange-working-with-the-wizard-code.md).
 
 1. Quando você escreve o código que cria um objeto recordset dessa classe, coloque um "?" símbolo (ponto de interrogação) em cada local em suas cadeias de caracteres de instrução SQL em que um parâmetro deve ser substituída.
 
@@ -176,5 +176,5 @@ O conjunto de registros contém registros para os alunos cujos registros satisfa
 ## <a name="see-also"></a>Consulte também
 
 [Conjunto de registros (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Conjunto de registros: adicionando, atualizando e excluindo registros (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)<br/>
-[Conjunto de registros: como conjuntos de registros selecionam registros (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)
+[Conjunto de registros: Adicionando, atualizando e excluindo registros (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)<br/>
+[Conjunto de registros: Como conjuntos de registros selecionam registros (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)

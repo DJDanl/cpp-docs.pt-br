@@ -8,12 +8,12 @@ helpviewer_keywords:
 - float_control pragma
 - pragmas, float_control
 ms.assetid: 4f4ba5cf-3707-413e-927d-5ecdbc0a9a43
-ms.openlocfilehash: 63e27e992778776e186345da07937d1a88844e5d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8a7829252cebb726363c67c990a94d08b0d6467a
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50611010"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59032304"
 ---
 # <a name="floatcontrol"></a>float_control
 
@@ -21,11 +21,11 @@ Especifica o comportamento de ponto flutuante para uma função.
 
 ## <a name="syntax"></a>Sintaxe
 
-> **float_control #pragma** [ **(** [ *valor* **,** *configuração* [ **, push** ]] | [ **push** | **pop-up** ] **)** ]
+> **#pragma float_control** [ **(** [ *value* **,** *setting* [ **, push** ] ] | [ **push** | **pop** ] **)** ]
 
 ## <a name="options"></a>Opções
 
-*valor*, *configuração* [, **push**]<br/>
+*value*, *setting* [, **push**]<br/>
 Especifica o comportamento de ponto flutuante. *valor* pode ser **preciso**, **strict**, ou **exceto**. Para obter mais informações, consulte [/fp (especificar comportamento de ponto flutuante)](../build/reference/fp-specify-floating-point-behavior.md). O *configuração* pode ser **na** ou **off**.
 
 Se *valor* é **estrito**, as configurações para ambos **estrito** e **exceto** são especificadas por *configuração* . **exceto** só pode ser definida como **na** quando **preciso** ou **estrito** também é definido como **em**.

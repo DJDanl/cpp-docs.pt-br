@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - pragma execution_character_set
 ms.assetid: 32248cbc-7c92-4dca-8442-230c052b53ad
-ms.openlocfilehash: ff6ff550f39dc746bb687d8d3147baa0837a6cff
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bd31e8e91a1bcbfa6ace9b47fa2b13dd945adb20
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50472650"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59039920"
 ---
 # <a name="executioncharacterset"></a>execution_character_set
 
@@ -26,7 +26,7 @@ Especifica o conjunto de caracteres de execução usado para a cadeia de caracte
 
 ### <a name="parameters"></a>Parâmetros
 
-*target*<br/>
+*destino*<br/>
 Especifica o conjunto de caracteres de execução de destino. Atualmente, a execução de destino somente definir com suporte é "utf-8".
 
 ## <a name="remarks"></a>Comentários
@@ -43,4 +43,4 @@ Por padrão, o Visual Studio usa a página de código atual como o conjunto de c
 
 [Diretivas pragma e a \_ \_palavra-chave de Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)<br/>
 [/Execution-charset (definir execução de conjunto de caracteres)](../build/reference/execution-charset-set-execution-character-set.md)<br/>
-[/utf-8 (definir conjuntos de caracteres de origem e executáveis como UTF-8)](../build/reference/utf-8-set-source-and-executable-character-sets-to-utf-8.md)
+[/UTF-8 (Definir origem e executáveis conjuntos de caracteres UTF-8)](../build/reference/utf-8-set-source-and-executable-character-sets-to-utf-8.md)

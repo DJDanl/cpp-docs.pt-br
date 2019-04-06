@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - db_table attribute
 ms.assetid: ff9eb957-4e6d-4175-afcc-fd8ea916cec0
-ms.openlocfilehash: d0b67bae643698b6d4f09a75dd2e4ec6a23a5d28
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3ab548261d6ebcb9d3d7f7e352c8afe3b33db06f
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607266"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023861"
 ---
 # <a name="dbtable"></a>db_table
 
@@ -34,7 +34,7 @@ Uma cadeia de caracteres especificando o nome de uma tabela de banco de dados (p
 *source_name*<br/>
 (Opcional) O `CSession` variável ou instância de uma classe que tem o `db_source` atributo aplicado a ele no qual o comando é executado. Ver [db_source](db-source.md).
 
-*HRESULT*<br/>
+*hresult*<br/>
 (Opcional) Identifica a variável que receberá o HRESULT desse comando de banco de dados. Se a variável não existir, ele será automaticamente injetado pelo atributo.
 
 ## <a name="remarks"></a>Comentários
@@ -68,7 +68,7 @@ Para obter um exemplo desse atributo usado em um aplicativo, consulte os exemplo
 
 |||
 |-|-|
-|**Aplica-se a**|**classe**, **struct**|
+|**Aplica-se a**|**class**, **struct**|
 |**Repetível**|Não|
 |**Atributos obrigatórios**|Nenhum|
 |**Atributos inválidos**|Nenhum|
@@ -77,4 +77,4 @@ Para obter mais informações sobre os contextos de atributo, consulte [contexto
 
 ## <a name="see-also"></a>Consulte também
 
-[Atributos de consumidor do OLE DB](ole-db-consumer-attributes.md)
+[Atributos de consumidor de banco de dados OLE](ole-db-consumer-attributes.md)

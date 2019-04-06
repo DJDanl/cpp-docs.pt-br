@@ -11,26 +11,26 @@ helpviewer_keywords:
 - build steps [C++], build events
 - builds [C++], custom build steps
 ms.assetid: beb2f017-3e9f-4b2c-9b57-2572fd2628e4
-ms.openlocfilehash: 5bc402ad8999f1864c7e6b1155da3c68862dda97
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: fc12689148e3bf23c233e4656249625d1156f9a7
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57824600"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59028500"
 ---
 # <a name="understanding-custom-build-steps-and-build-events"></a>Noções básicas de etapas e eventos de compilação personalizados
 
 No ambiente de desenvolvimento do Visual C++, há três formas básicas de personalizar o processo de build:
 
-- **Etapas de Build Personalizadas**
+- **Etapas de compilação personalizada**
 
    Uma etapa de build personalizada é uma regra de build associada a um projeto. Uma etapa de build personalizada pode especificar uma linha de comando a ser executada, arquivos adicionais de entrada ou de saída e uma mensagem a ser exibida. Para obter mais informações, confira [Como: Adicionar uma etapa personalizada de build a projetos do MSBuild](how-to-add-a-custom-build-step-to-msbuild-projects.md).
 
-- **Ferramentas de Build Personalizadas**
+- **Ferramentas de Build personalizadas**
 
    Uma ferramenta de build personalizada é uma regra de build associada a um ou mais arquivos. Uma etapa de build personalizada pode passar arquivos de entrada para uma ferramenta de build personalizada, o que resulta em um ou mais arquivos de saída. Por exemplo, os arquivos de Ajuda em um aplicativo MFC são criados com uma ferramenta de build personalizada. Para obter mais informações, confira [Como: Adicionar ferramentas feitas sob medida a projetos MSBuild](how-to-add-custom-build-tools-to-msbuild-projects.md) e [Especificando ferramentas feitas sob medida](specifying-custom-build-tools.md).
 
-- **Eventos de Build**
+- **Compilar Eventos**
 
    Os eventos de build permitem que você personalize o build de um projeto. Há três eventos de build: *pré-build*, *pré-vínculo* e *pós-build*. Um evento de build permite que você especifique uma ação que ocorrerá em um momento específico no processo de build. Por exemplo, você pode usar um evento de build para registrar um arquivo em **regsvr32.exe** após a conclusão do projeto de build. Para obter mais informações, confira [Especificando eventos de build](specifying-build-events.md).
 

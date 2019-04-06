@@ -28,12 +28,12 @@ helpviewer_keywords:
 - COleDataObject [MFC], IsDataAvailable
 - COleDataObject [MFC], Release
 ms.assetid: d1cc84be-2e1c-4bb3-a8a0-565eb08aaa34
-ms.openlocfilehash: 95a19b20e0acc4ae45a953eee5a1c4d2bfb3e9da
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 24d79c684226d57839161946255781c3bdd5a043
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57326719"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58779086"
 ---
 # <a name="coledataobject-class"></a>Classe COleDataObject
 
@@ -47,13 +47,13 @@ class COleDataObject
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
 |[COleDataObject::COleDataObject](#coledataobject)|Constrói um objeto `COleDataObject`.|
 
-### <a name="public-methods"></a>Métodos Públicos
+### <a name="public-methods"></a>Métodos públicos
 
 |Nome|Descrição|
 |----------|-----------------|
@@ -338,8 +338,8 @@ O `IDataObject` foi associado a `COleDataObject` chamando `Attach` ou `AttachCli
 
 ## <a name="see-also"></a>Consulte também
 
-[Exemplo MFC HIERSVR](../../visual-cpp-samples.md)<br/>
-[Exemplo MFC OCLIENT](../../visual-cpp-samples.md)<br/>
+[Exemplo MFC HIERSVR](../../overview/visual-cpp-samples.md)<br/>
+[Exemplo MFC OCLIENT](../../overview/visual-cpp-samples.md)<br/>
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
 [Classe COleDataSource](../../mfc/reference/coledatasource-class.md)<br/>
 [Classe COleClientItem](../../mfc/reference/coleclientitem-class.md)<br/>

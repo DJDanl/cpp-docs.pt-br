@@ -11,16 +11,16 @@ helpviewer_keywords:
 - _bittestandset intrinsic
 - _bittestandset64 intrinsic
 ms.assetid: 6d6c8670-fea0-4c1c-9aad-2bb842715203
-ms.openlocfilehash: 95acb833b05b67e7781973d6b3bd6fdcfe97615b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dadeeae23b1808bbee13940727a3bdbace1dad54
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50513016"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59028581"
 ---
 # <a name="bittestandset-bittestandset64"></a>_bittestandset, _bittestandset64
 
-**Seção específica da Microsoft**
+**Específico da Microsoft**
 
 Gere uma instrução que examina o bit `b` do endereço `a` e retorna seu valor atual e define o bit como 1.
 
@@ -147,7 +147,7 @@ Flags: 0x4
 Flags: 0x0
 ```
 
-**Fim da seção específica da Microsoft**
+**FIM de Específico da Microsoft**
 
 ## <a name="see-also"></a>Consulte também
 

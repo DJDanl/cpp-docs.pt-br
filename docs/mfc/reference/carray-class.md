@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CArray [MFC], SetAtGrow
 - CArray [MFC], SetSize
 ms.assetid: fead8b00-4cfd-4625-ad0e-251df62ba92f
-ms.openlocfilehash: 342eea1d5bcf8adfe9a9ff0e8d915c9155b413ca
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: f82dbf7dce2e14bf760bb76d23d23f667797ee0f
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57266127"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58779840"
 ---
 # <a name="carray-class"></a>Classe CArray
 
@@ -70,13 +70,13 @@ Parâmetro de modelo que especifica o tipo de argumento que é usado para acessa
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
 |[CArray::CArray](#carray)|Constrói uma matriz vazia.|
 
-### <a name="public-methods"></a>Métodos Públicos
+### <a name="public-methods"></a>Métodos públicos
 
 |Nome|Descrição|
 |----------|-----------------|
@@ -98,11 +98,11 @@ Parâmetro de modelo que especifica o tipo de argumento que é usado para acessa
 |[CArray::SetAtGrow](#setatgrow)|Define o valor de um determinado índice; aumenta a matriz quando necessário.|
 |[CArray::SetSize](#setsize)|Define o número de elementos a ser contido nesta matriz.|
 
-### <a name="public-operators"></a>Operadores Públicos
+### <a name="public-operators"></a>Operadores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
-|[operator&#91;&#93;](#operator_at)|Define ou obtém o elemento no índice especificado.|
+|[operador&#91;&#93;](#operator_at)|Define ou obtém o elemento no índice especificado.|
 
 ## <a name="remarks"></a>Comentários
 
@@ -630,7 +630,7 @@ O *nGrowBy* parâmetro afeta a alocação de memória interna enquanto a matriz 
 
 ## <a name="see-also"></a>Consulte também
 
-[Exemplo MFC COLETAR](../../visual-cpp-samples.md)<br/>
+[Exemplo MFC COLETAR](../../overview/visual-cpp-samples.md)<br/>
 [Classe CObject](../../mfc/reference/cobject-class.md)<br/>
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
 [Classe CObArray](../../mfc/reference/cobarray-class.md)<br/>

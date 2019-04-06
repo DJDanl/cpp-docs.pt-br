@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - implements_category attribute
 ms.assetid: fb162df3-1ebe-43dc-a084-668d7ef8c03f
-ms.openlocfilehash: a63504ce327bc2f1996c74dba9c51dc345e15abd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: beca804fae8d6e82b4664102b39d76a23e66ca59
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50647155"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041397"
 ---
 # <a name="implementscategory"></a>implements_category
 
@@ -57,7 +57,7 @@ class CMyClass {};
 
 |||
 |-|-|
-|**Aplica-se a**|**classe**, **struct**|
+|**Aplica-se a**|**class**, **struct**|
 |**Repetível**|Sim|
 |**Atributos obrigatórios**|Um dos seguintes: `coclass`, `progid`, ou `vi_progid`|
 |**Atributos inválidos**|Nenhum|
@@ -66,6 +66,6 @@ Para obter mais informações, consulte [contextos de atributo](cpp-attributes-c
 
 ## <a name="see-also"></a>Consulte também
 
-[Atributos de COM](com-attributes.md)<br/>
+[Atributos COM](com-attributes.md)<br/>
 [Atributos de classe](class-attributes.md)<br/>
 [IMPLEMENTED_CATEGORY](../../atl/reference/category-macros.md#implemented_category)

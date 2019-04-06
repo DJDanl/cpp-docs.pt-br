@@ -55,16 +55,16 @@ helpviewer_keywords:
 - _InterlockedExchangeAdd16_nf intrinsic
 - _InterlockedExchangeAdd64_rel intrinsic
 ms.assetid: 25809e1f-9c60-4492-9f7c-0fb59c8d13d2
-ms.openlocfilehash: 8cb4c4a5f1b8048995684e3f5c630acecc74000b
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: 2cffd5a088c4b3c67441e79bc04bd709be6bf8ef
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627397"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59039170"
 ---
 # <a name="interlockedexchangeadd-intrinsic-functions"></a>Funções intrínsecas _InterlockedExchangeAdd
 
-**Seção específica da Microsoft**
+**Específico da Microsoft**
 
 Fornece suporte intrínseco ao compilador para o SDK do Windows Win32 [interlockedexchangeadd funções intrínsecas](../intrinsics/interlockedexchangeadd-intrinsic-functions.md) função.
 
@@ -189,10 +189,10 @@ Essas rotinas somente estão disponíveis como intrínsecos. Assim, eles são in
 
 Para obter um exemplo de como usar `_InterlockedExchangeAdd`, consulte [interlockeddecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md).
 
-**Fim da seção específica da Microsoft**
+**FIM de Específico da Microsoft**
 
 ## <a name="see-also"></a>Consulte também
 
 [Intrínsecos do compilador](../intrinsics/compiler-intrinsics.md)<br/>
 [Palavras-chave](../cpp/keywords-cpp.md)<br/>
-[conflitos com o compilador x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)
+[Conflitos com o compilador x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)
