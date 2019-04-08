@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAccessor class
 ms.assetid: b2ba959f-a686-46f3-8837-176248aef748
-ms.openlocfilehash: 942a8e9eca7d09809594cbac1e4c14959aa96fbf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cfc91f971fc975bcdd2c8ae37d798ff2f5a1cab0
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50632668"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59039191"
 ---
 # <a name="caccessor-class"></a>Classe CAccessor
 
@@ -47,5 +47,5 @@ Se seu acessador contém campos que apontam para a memória (como uma `BSTR` ou 
 
 ## <a name="see-also"></a>Consulte também
 
-[Modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Referência de modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)
+[Modelos de consumidor de banco de dados OLE](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Referência dos modelos de consumidor de banco de dados OLE](../../data/oledb/ole-db-consumer-templates-reference.md)

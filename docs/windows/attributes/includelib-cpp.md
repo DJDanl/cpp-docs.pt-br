@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - includelib attribute
 ms.assetid: cd90ea6e-5ae8-4f11-b8d1-662db95412b2
-ms.openlocfilehash: 4cfadc84b9131aa787323b4967ae9cfc4baabbcb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 57f039eeae527dd03884b12e7d9eb424d87f597f
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50570411"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59029994"
 ---
 # <a name="includelib-c"></a>includelib (C++)
 
@@ -25,7 +25,7 @@ Faz com que um arquivo. IDL ou. h a serem incluídos no arquivo. idl gerado.
 
 ### <a name="parameters"></a>Parâmetros
 
-*Name.idl*<br/>
+*name.idl*<br/>
 O nome do arquivo. IDL que você deseja que seja incluído como parte do arquivo. idl gerado.
 
 ## <a name="remarks"></a>Comentários
@@ -58,8 +58,8 @@ Para obter mais informações, consulte [contextos de atributo](cpp-attributes-c
 
 ## <a name="see-also"></a>Consulte também
 
-[Atributos de IDL](idl-attributes.md)<br/>
-[Atributos independentes](stand-alone-attributes.md)<br/>
+[Atributos IDL](idl-attributes.md)<br/>
+[Atributos autônomos](stand-alone-attributes.md)<br/>
 [import](import.md)<br/>
 [importidl](importidl.md)<br/>
 [include](include-cpp.md)<br/>

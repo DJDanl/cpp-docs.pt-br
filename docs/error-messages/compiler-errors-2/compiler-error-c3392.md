@@ -21,7 +21,7 @@ Um tipo genérico foi instanciado incorretamente. Verifique a definição de tip
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir usa c# para criar um componente que contém um tipo genérico que tem certas restrições que não têm suporte durante a criação de tipos genéricos no C + + / CLI. Para obter mais informações, consulte [Restrições a parâmetros de tipo](/dotnet/csharp/programming-guide/generics/constraints-on-type-parameters).
+O exemplo a seguir usa C# para criar um componente que contém um tipo genérico que tem certas restrições que não têm suporte durante a criação de tipos genéricos no C + + / CLI. Para obter mais informações, consulte [Restrições a parâmetros de tipo](/dotnet/csharp/programming-guide/generics/constraints-on-type-parameters).
 
 ```cs
 // C3392.cs

@@ -14,10 +14,10 @@ ms.locfileid: "59036030"
 
 Saiba como usar a biblioteca de modelos do Windows em tempo de execução C++ (WRL) para criar um aplicativo de plataforma Universal do Windows (UWP) que usa [Microsoft Media Foundation](/windows/desktop/medfound/microsoft-media-foundation-sdk).
 
-Este exemplo cria uma transformação personalizada do Media Foundation que se aplica a um efeito de escala de cinza para imagens que são capturadas de uma webcam. O aplicativo usa C++ para definir a transformação personalizada e o c# para usar o componente para transformar as imagens capturadas.
+Este exemplo cria uma transformação personalizada do Media Foundation que se aplica a um efeito de escala de cinza para imagens que são capturadas de uma webcam. O aplicativo usa C++ para definir a transformação personalizada e o C# para usar o componente para transformar as imagens capturadas.
 
 > [!NOTE]
-> Em vez de c#, você também pode usar JavaScript, Visual Basic ou C++ para consumir o componente de transformação personalizados.
+> Em vez de C#, você também pode usar JavaScript, Visual Basic ou C++ para consumir o componente de transformação personalizados.
 
 Na maioria dos casos, você pode usar C + + c++ /CX para criar o tempo de execução do Windows. No entanto, às vezes, você precisa usar a WRL. Por exemplo, quando você cria uma extensão de mídia para o Microsoft Media Foundation, você deve criar um componente que implementa as interfaces COM e o tempo de execução do Windows. Porque C + + c++ /CLI CX só pode criar objetos de tempo de execução do Windows, para criar uma extensão de mídia você deve usar a WRL porque ela permite que a implementação de interfaces COM e o tempo de execução do Windows.
 
@@ -95,7 +95,7 @@ Na maioria dos casos, você pode usar C + + c++ /CX para criar o tempo de execu�
 
    1. Sob **metadados do Windows**, defina **gerar metadados do Windows** para **Sim (/ WINMD)**.
 
-### <a name="to-use-the-wrl-the-custom-media-foundation-component-from-a-c-app"></a>Para usar a WRL o componente personalizado do Media Foundation de um aplicativo c#
+### <a name="to-use-the-wrl-the-custom-media-foundation-component-from-a-c-app"></a>Para usar a WRL o componente personalizado do Media Foundation de um aplicativo C#
 
 1. Adicione um novo **aplicativo em branco em C# (Windows Universal)** do projeto para o `MediaCapture` solução. Nomeie o projeto, por exemplo, *MediaCapture*.
 

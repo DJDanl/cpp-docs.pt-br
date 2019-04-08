@@ -469,7 +469,7 @@ C++ AMP inclui uma biblioteca de elementos gráficos que se destina a programaç
 
 ## <a name="universal-windows-platform-uwp-apps"></a>Aplicativos da UWP (Plataforma Universal do Windows)
 
-Como em outras bibliotecas de C++, você pode usar o C++ AMP em seus aplicativos UWP. Esses artigos descrevem como incluir código de C++ AMP em aplicativos que é criado usando o C++, c#, Visual Basic ou JavaScript:
+Como em outras bibliotecas de C++, você pode usar o C++ AMP em seus aplicativos UWP. Esses artigos descrevem como incluir código de C++ AMP em aplicativos que é criado usando o C++, C#, Visual Basic ou JavaScript:
 
 - [Usando C++ AMP em aplicativos UWP](../../parallel/amp/using-cpp-amp-in-windows-store-apps.md)
 
@@ -477,9 +477,9 @@ Como em outras bibliotecas de C++, você pode usar o C++ AMP em seus aplicativos
 
 - [O Bing Maps Trip Optimizer, um aplicativo de janela Store em JavaScript e C++](http://go.microsoft.com/fwlink/p/?linkid=249078)
 
-- [Como usar o C++ AMP do c# usando o tempo de execução do Windows](http://go.microsoft.com/fwlink/p/?linkid=249080)
+- [Como usar o C++ AMP do C# usando o tempo de execução do Windows](http://go.microsoft.com/fwlink/p/?linkid=249080)
 
-- [Como usar o C++ AMP do c#](http://go.microsoft.com/fwlink/p/?linkid=249081)
+- [Como usar o C++ AMP do C#](http://go.microsoft.com/fwlink/p/?linkid=249081)
 
 - [Chamando funções nativas de código gerenciado](../../dotnet/calling-native-functions-from-managed-code.md)
 
