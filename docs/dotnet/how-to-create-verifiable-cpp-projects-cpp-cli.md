@@ -18,7 +18,7 @@ ms.locfileid: "57817368"
 Assistentes de aplicativo do Visual C++ não criam projetos verificáveis.
 
 > [!IMPORTANT]
-> Preterido do Visual Studio 2015 e Visual Studio 2017 não oferece suporte a **/clr: pure** e **/CLR: safe** criação de projetos verificáveis. Se você precisar de código verificável, recomendamos que você converter seu código para c#.
+> Preterido do Visual Studio 2015 e Visual Studio 2017 não oferece suporte a **/clr: pure** e **/CLR: safe** criação de projetos verificáveis. Se você precisar de código verificável, recomendamos que você converter seu código para C#.
 
 No entanto, se você estiver usando uma versão mais antiga do conjunto de ferramentas de compilador do Visual C++ que dá suporte a **/clr: pure** e **/CLR: safe**, projetos podem ser convertidos para que seja verificável. Este tópico descreve como definir as propriedades do projeto e modificar arquivos de origem do projeto para transformar seus projetos do Visual C++ para produzir aplicativos verificáveis.
 

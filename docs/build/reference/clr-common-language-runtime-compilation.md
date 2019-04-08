@@ -39,11 +39,11 @@ Uma ou mais das seguintes opções, separados por vírgulas.
 
 - **puro**
 
-   **/CLR: pure foi preterido**. A opção é removida no Visual Studio 2017. É recomendável que você porta o código que deve ser a MSIL puro para c#.
+   **/CLR: pure foi preterido**. A opção é removida no Visual Studio 2017. É recomendável que você porta o código que deve ser a MSIL puro para C#.
 
 - **seguro**
 
-   **/CLR: safe é preterida**. A opção é removida no Visual Studio 2017. É recomendável que você porta o código que deve ser a MSIL seguro para c#.
+   **/CLR: safe é preterida**. A opção é removida no Visual Studio 2017. É recomendável que você porta o código que deve ser a MSIL seguro para C#.
 
 - **noAssembly**
 

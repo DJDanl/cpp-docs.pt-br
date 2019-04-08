@@ -72,7 +72,7 @@ Por exemplo, imagine que uma série de chamadas de função vincula a função A
 Ordem de execução do manipulador de encerramento
 
 > [!NOTE]
-> O comportamento de try-finally é diferente de outras linguagens que dão suporte ao uso de **finalmente**, como c#.  Uma única **Try** pode ter, mas não ambos, do **Finally** e **EXCEPT**.  Se ambos devem ser usados juntos, uma instrução try-except externa deve incluir a instrução interna try-finally.  As regras que especificam quando cada bloco é executado também são diferentes.
+> O comportamento de try-finally é diferente de outras linguagens que dão suporte ao uso de **finalmente**, como C#.  Uma única **Try** pode ter, mas não ambos, do **Finally** e **EXCEPT**.  Se ambos devem ser usados juntos, uma instrução try-except externa deve incluir a instrução interna try-finally.  As regras que especificam quando cada bloco é executado também são diferentes.
 
 Para compatibilidade com versões anteriores, **_try**, **_finally**, e **_leave** são sinônimos do **Try**, **_ Por fim**, e **Leave** , a menos que a opção de compilador [/Za \(desabilitar extensões de linguagem)](../build/reference/za-ze-disable-language-extensions.md) for especificado.
 

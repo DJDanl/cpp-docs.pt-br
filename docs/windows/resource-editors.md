@@ -40,9 +40,9 @@ O editor apropriado é aberto automaticamente quando você criar ou abrir um rec
 |Use o...|Para editar...|
 |----------------|----------------|
 |[Editor de aceleradores](../windows/accelerator-editor.md)|Tabelas de aceleradores em projetos do Visual C++.|
-|[Editor binário](binary-editor.md)|Informações de dados binários e recursos personalizados em projetos do Visual C++, Visual Basic ou Visual c#.|
+|[Editor binário](binary-editor.md)|Informações de dados binários e recursos personalizados em projetos do Visual C++, Visual Basic ou Visual C#.|
 |[Editor de Caixa de Diálogo](../windows/dialog-editor.md)|Caixas de diálogo em projetos do Visual C++.|
-|[Editor de imagem](../windows/image-editor-for-icons.md)|Bitmaps, ícones, cursores e outros arquivos de imagem em projetos do Visual C++, Visual Basic ou Visual c#.|
+|[Editor de imagem](../windows/image-editor-for-icons.md)|Bitmaps, ícones, cursores e outros arquivos de imagem em projetos do Visual C++, Visual Basic ou Visual C#.|
 |[Editor de menu](../windows/menu-editor.md)|Recursos de menu em projetos do Visual C++.|
 |[Ribbon Editor](../mfc/ribbon-designer-mfc.md)|Recursos de faixa de opções em projetos MFC.|
 |[Editor de Cadeia de Caracteres](../windows/string-editor.md)|Tabelas em projetos do Visual C++ de cadeia de caracteres.|

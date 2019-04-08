@@ -43,7 +43,7 @@ int main() {
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir cria um componente usando a linguagem c#. Observe que a restrição Especifica que o tipo genérico só pode ser instanciado com um tipo de valor.
+O exemplo a seguir cria um componente usando a linguagem C#. Observe que a restrição Especifica que o tipo genérico só pode ser instanciado com um tipo de valor.
 
 ```
 // C3225_b.cs
@@ -54,7 +54,7 @@ public class MyList<T> where T: struct {}
 
 ## <a name="example"></a>Exemplo
 
-Este exemplo consome c#-autor de componente e viola a restrição de MyList só pode ser instanciado com um tipo de valor diferente de <xref:System.Nullable>. O exemplo a seguir gera C3225.
+Este exemplo consome C#-autor de componente e viola a restrição de MyList só pode ser instanciado com um tipo de valor diferente de <xref:System.Nullable>. O exemplo a seguir gera C3225.
 
 ```
 // C3225_c.cpp

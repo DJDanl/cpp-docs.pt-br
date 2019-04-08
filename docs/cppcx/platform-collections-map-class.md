@@ -262,7 +262,7 @@ Um [MapChangedEventHandler\<K, V >](/uwp/api/windows.foundation.collections.mapc
 
 ## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework
 
-Projeto de aplicativos de tempo de execução do Windows que usam c# ou Visual Basic IMap\<K, V > como IDictionary\<K, V >.
+Projeto de aplicativos de tempo de execução do Windows que usam C# ou Visual Basic IMap\<K, V > como IDictionary\<K, V >.
 
 ## <a name="remove"></a>  Método Map:: remove
 

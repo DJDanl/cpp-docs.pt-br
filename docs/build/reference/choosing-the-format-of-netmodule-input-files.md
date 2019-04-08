@@ -13,7 +13,7 @@ ms.locfileid: "57807319"
 
 Um arquivo. obj MSIL (compilado com [/clr](clr-common-language-runtime-compilation.md)) também pode ser usado como um arquivo. netmodule.  arquivos. obj contêm metadados e símbolos nativa.  netmodules contém apenas metadados.
 
-Você pode passar um arquivo. obj MSIL para qualquer compilador do Visual Studio por meio da opção de compilador /addmodule (mas lembre-se de que o arquivo. obj se torna parte do assembly resultante e deve ser enviado com o assembly).  Por exemplo, Visual c# e Visual Basic têm a opção de compilador /addmodule.
+Você pode passar um arquivo. obj MSIL para qualquer compilador do Visual Studio por meio da opção de compilador /addmodule (mas lembre-se de que o arquivo. obj se torna parte do assembly resultante e deve ser enviado com o assembly).  Por exemplo, Visual C# e Visual Basic têm a opção de compilador /addmodule.
 
 > [!NOTE]
 >  Na maioria dos casos, você precisará passar para o vinculador o arquivo. obj da compilação que criou o módulo do .net.  Passar um arquivo de módulo MSIL. dll ou. netmodule para o vinculador pode resultar em das LNK1107.

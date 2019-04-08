@@ -17,7 +17,7 @@ No C++ há várias opções para conectar-se com a Web e com a nuvem.
 
 - [Windows Azure serviços móveis](http://www.windowsazure.com/develop/mobile/)
 
-  Fornece APIs nativas que você pode usar em aplicativos de plataforma Universal do Windows (UWP) ou em aplicativos da área de trabalho do Windows para se conectar aos serviços móveis do Windows Azure. Embora a maioria dos exemplos no site está em c#, você também pode usar C++. Para obter mais informações, confira [Início Rápido: Adicionando um serviço móvel usando C++](https://msdn.microsoft.com/library/windows/apps/dn263181.aspx).
+  Fornece APIs nativas que você pode usar em aplicativos de plataforma Universal do Windows (UWP) ou em aplicativos da área de trabalho do Windows para se conectar aos serviços móveis do Windows Azure. Embora a maioria dos exemplos no site está em C#, você também pode usar C++. Para obter mais informações, confira [Início Rápido: Adicionando um serviço móvel usando C++](https://msdn.microsoft.com/library/windows/apps/dn263181.aspx).
 
 - [Biblioteca de cliente de armazenamento do Microsoft Azure para C++](https://blogs.msdn.microsoft.com/windowsazurestorage/2015/04/29/microsoft-azure-storage-client-library-for-c-v1-0-0-general-availability/)
 

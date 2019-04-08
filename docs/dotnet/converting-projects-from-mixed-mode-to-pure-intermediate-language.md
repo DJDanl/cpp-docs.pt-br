@@ -19,7 +19,7 @@ ms.locfileid: "58328578"
 Vincular todos os projetos de CLR do Visual C++ para as bibliotecas de tempo de execução C por padrão. Consequentemente, esses projetos são classificados como aplicativos de modo misto, porque eles combinam código nativo com código que tem como alvo o common language runtime (código gerenciado). Quando eles são compilados, são compilados em IL (linguagem intermediária), também conhecido como Microsoft intermediate language (MSIL).
 
 > [!IMPORTANT]
-> Preterido do Visual Studio 2015 e Visual Studio 2017 não suporta a criação de **/clr: pure** ou **/CLR: safe** código para aplicativos do CLR. Se você precisar de assemblies puros ou seguros, é recomendável que converter o seu aplicativo c#.
+> Preterido do Visual Studio 2015 e Visual Studio 2017 não suporta a criação de **/clr: pure** ou **/CLR: safe** código para aplicativos do CLR. Se você precisar de assemblies puros ou seguros, é recomendável que converter o seu aplicativo C#.
 
 Se você estiver usando uma versão anterior do conjunto de ferramentas de compilador do Visual C++ que dá suporte a **/clr: pure** ou **/CLR: safe**, você pode usar este procedimento para converter seu código em MSIL puro:
 

@@ -807,7 +807,7 @@ Se seu tipo está sendo consumido por um cliente que é escrito em outra linguag
 
 - Em uma chamada para `Dispose(void)` no tipo.
 
-- Se o tipo sai do escopo em c# `using` instrução.
+- Se o tipo sai do escopo em C# `using` instrução.
 
 Se você criar um objeto do tipo de referência no heap gerenciado (não usando a semântica de pilha para tipos de referência), use [try-finally](../cpp/try-finally-statement.md) sintaxe para garantir que uma exceção não impede que o destruidor em execução.
 
