@@ -5,12 +5,12 @@ helpviewer_keywords:
 - 32-bit code porting
 - upgrading Visual C++ applications, 32-bit code
 ms.assetid: 18cdacaa-4742-43db-9e4c-2d9e73d8cc84
-ms.openlocfilehash: dae4937661db945fa17f15ea39b0d17a8bf72640
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 41cac1b23d5ab16825891ef654341016958ab826
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58768206"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59034907"
 ---
 # <a name="upgrading-projects-from-earlier-versions-of-visual-c"></a>Atualizando projetos a partir de versões anteriores do Visual C++
 
@@ -35,13 +35,13 @@ Para obter informações sobre como atualizar as versões de destino do Windows,
 
 ## <a name="in-this-section"></a>Nesta seção
 
-[Atualizar seu código para o CRT Universal](upgrade-your-code-to-the-universal-crt.md)<br/>
+[Atualize seu código para o CRT Universal](upgrade-your-code-to-the-universal-crt.md)<br/>
 [Modificando WINVER e _WIN32_WINNT](modifying-winver-and-win32-winnt.md)<br/>
-[Corrigir suas dependências em recursos internos de biblioteca](fix-your-dependencies-on-library-internals.md)<br/>
+[Corrigir suas dependências de internos de biblioteca](fix-your-dependencies-on-library-internals.md)<br/>
 [Problemas de migração de ponto flutuante](floating-point-migration-issues.md)<br/>
-[Usar direcionamento múltiplo nativo no Visual Studio para compilar projetos antigos](use-native-multi-targeting.md)<br/>
+[Usar multiplataforma nativa no Visual Studio para compilar projetos antigos](use-native-multi-targeting.md)<br/>
 [Recursos do Visual C++ preteridos na versão prévia do Visual Studio 2019](features-deprecated-in-visual-studio.md)<br/>
-[Alterações no sistema de build](build-system-changes.md)<br/>
+[Alterações no sistema de compilação](build-system-changes.md)<br/>
 
 ## <a name="see-also"></a>Consulte também
 
