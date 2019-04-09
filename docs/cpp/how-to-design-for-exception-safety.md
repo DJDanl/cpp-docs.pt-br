@@ -4,12 +4,12 @@ ms.custom: how-to
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 19ecc5d4-297d-4c4e-b4f3-4fccab890b3d
-ms.openlocfilehash: 2dada25ea712b7bb6d48d80525c824a0457b18cf
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.openlocfilehash: 37ebcc646864774b15513c9e1891ba14e0705298
+ms.sourcegitcommit: 35c4b3478f8cc310ebbd932a18963ad8ab846ed9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220538"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59237192"
 ---
 # <a name="how-to-design-for-exception-safety"></a>Como: Design para segurança de exceção
 
@@ -23,7 +23,7 @@ Não importa como uma função lida com uma exceção, para ajudar a garantir qu
 
 ### <a name="keep-resource-classes-simple"></a>Simplificar a Classes de recursos
 
-Ao encapsular o gerenciamento de recurso manual em classes, use uma classe que faz mais nada a gerenciar cada recurso; Caso contrário, você poderá introduzir vazamentos. Use [ponteiros inteligentes](../cpp/smart-pointers-modern-cpp.md) quando possível, conforme mostrado no exemplo a seguir. Este exemplo é intencionalmente simplificado para destacar as diferenças e artificial quando `shared_ptr` é usado.
+Ao encapsular o gerenciamento de recurso manual em classes, use uma classe que não faz nada além de gerenciar um único recurso. Mantendo a classe simples, você deve reduzir o risco de introduzir a perda de recursos. Use [ponteiros inteligentes](../cpp/smart-pointers-modern-cpp.md) quando possível, conforme mostrado no exemplo a seguir. Este exemplo é intencionalmente simplificado para destacar as diferenças e artificial quando `shared_ptr` é usado.
 
 ```cpp
 // old-style new/delete version

@@ -1,6 +1,6 @@
 ---
 title: /Zp (alinhamento de membro do Struct)
-ms.date: 12/17/2018
+ms.date: 04/04/2019
 f1_keywords:
 - /zp
 - VC.Project.VCCLCompilerTool.StructMemberAlignment
@@ -11,12 +11,12 @@ helpviewer_keywords:
 - /Zp compiler option [C++]
 - -Zp compiler option [C++]
 ms.assetid: 5242f656-ed9b-48a3-bc73-cfcf3ed2520f
-ms.openlocfilehash: d30e61137fc5ff8f6a5501ac7815edafc18f7680
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: d76cd93c7af4228bff8f73fa3bcbf40fa149b0be
+ms.sourcegitcommit: 35c4b3478f8cc310ebbd932a18963ad8ab846ed9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57807683"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59237158"
 ---
 # <a name="zp-struct-member-alignment"></a>/Zp (alinhamento de membro do Struct)
 
@@ -28,7 +28,7 @@ Controla como os membros de uma estrutura são empacotados na memória e especif
 
 ## <a name="remarks"></a>Comentários
 
-Quando você especifica o **/Zp**_n_ opção, cada membro da estrutura depois do primeiro é armazenado no tamanho do tipo de membro ou *n*-limites de bytes (em que *n* é 1, 2, 4, 8 ou 16), o que for menor.
+O **/Zp**_n_ opção informa ao compilador onde armazenar cada membro da estrutura. O compilador armazena membros após o primeiro em um limite que for menor do tamanho do tipo de membro, ou um *n*-limite de bytes.
 
 Os valores de remessa disponíveis são descritos na tabela a seguir:
 
@@ -37,13 +37,13 @@ Os valores de remessa disponíveis são descritos na tabela a seguir:
 |1|Empacota estruturas em limites de 1 byte. Mesmo que **/Zp**.|
 |2|Empacota estruturas em limites de 2 bytes.|
 |4|Empacota estruturas em limites de 4 bytes.|
-|8|Empacota estruturas em limites de 8 bytes (padrão).|
-|16| Empacota estruturas em limites de 16 bytes.|
+|8|Empacota estruturas em limites de 8 bytes (o padrão para x86, ARM e ARM64).|
+|16| Empacota estruturas em limites de 16 bytes (o padrão para x64).|
 
-Você não deve usar essa opção, a menos que você tenha requisitos de alinhamento específico.
+Não use essa opção, a menos que você tenha requisitos de alinhamento específico.
 
 > [!WARNING]
-> Suponha que os cabeçalhos de C++ no SDK do Windows **/zp8** de remessa. Memória corrupção pode ocorrer se o **/Zp** configuração é alterada quando o uso de cabeçalhos do SDK do Windows.
+> Cabeçalhos de C++ no SDK do Windows definida e supor **/zp8** internamente de remessa. Memória corrupção pode ocorrer se o **/Zp** for alterada dentro os cabeçalhos do SDK do Windows. Os cabeçalhos não são afetados por qualquer **/Zp** opção definida na linha de comando.
 
 Você também pode usar [pack](../../preprocessor/pack.md) a empacotamento de estrutura de controle. Para obter mais informações sobre alinhamento, consulte:
 
@@ -59,7 +59,7 @@ Você também pode usar [pack](../../preprocessor/pack.md) a empacotamento de es
 
 1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [propriedades de compilador e de build definida C++ no Visual Studio](../working-with-project-properties.md).
 
-1. Selecione o **C/C++** > **geração de código** página de propriedades.
+1. Selecione o **propriedades de configuração** > **C/C++** > **geração de código** página de propriedades.
 
 1. Modificar a **alinhamento de membro de Struct** propriedade.
 
@@ -69,5 +69,5 @@ Você também pode usar [pack](../../preprocessor/pack.md) a empacotamento de es
 
 ## <a name="see-also"></a>Consulte também
 
-- [Opções do compilador MSVC](compiler-options.md)
-- [Sintaxe de linha de comando do compilador MSVC](compiler-command-line-syntax.md)
+[Opções do compilador MSVC](compiler-options.md) \
+[Sintaxe de linha de comando do compilador MSVC](compiler-command-line-syntax.md)

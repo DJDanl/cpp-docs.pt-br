@@ -4,12 +4,12 @@ ms.date: 03/21/2019
 helpviewer_keywords:
 - Open Folder Projects in Visual C++
 ms.assetid: abd1985e-3717-4338-9e80-869db5435175
-ms.openlocfilehash: 2dedd56759b6bb49260221e22218da6f4300a970
-ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
+ms.openlocfilehash: 380a96bcb1a119b2b6d4104d60936217d1350fbb
+ms.sourcegitcommit: 35c4b3478f8cc310ebbd932a18963ad8ab846ed9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58356082"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59237127"
 ---
 # <a name="open-folder-projects-for-c"></a>Projetos Open Folder para C++
 
@@ -64,7 +64,7 @@ Você pode automatizar os scripts de compilação, ou quaisquer outras operaçõ
 
 ![Configurar Tarefas do recurso Abrir Pasta](media/open-folder-config-tasks.png)
 
-Isso cria (ou abre) o **Tasks** arquivo na pasta. VS, o que o Visual Studio cria na pasta raiz do projeto. Defina qualquer tarefa arbitrária nesse arquivo e, em seguida, invoque-a no menu de contexto do **Gerenciador de Soluções**. O exemplo a seguir mostra um arquivo tasks.vs.json que define uma única tarefa. `taskName` define o nome exibido no menu de contexto. `appliesTo` define em quais arquivos o comando pode ser executado. A propriedade `command` se refere à variável de ambiente COMSPEC, que identifica o caminho para o console (cmd.exe no Windows). Referencie também variáveis de ambiente declaradas em CppProperties.json ou CMakeSettings.json. A propriedade `args` especifica a linha de comando a ser invocada. A macro `${file}` recupera o arquivo selecionado no **Gerenciador de Soluções**. O exemplo a seguir exibirá o nome do arquivo .cpp atualmente selecionado.
+Isso cria (ou abre) o **Tasks** arquivo na pasta. VS, o que o Visual Studio cria na pasta raiz do projeto. Defina qualquer tarefa arbitrária nesse arquivo e, em seguida, invoque-a no menu de contexto do **Gerenciador de Soluções**. O exemplo a seguir mostra um arquivo tasks.vs.json que define uma única tarefa. `taskName` Define o nome que aparece no menu de contexto. `appliesTo` define quais arquivos o comando pode ser executado em. A propriedade `command` se refere à variável de ambiente COMSPEC, que identifica o caminho para o console (cmd.exe no Windows). Referencie também variáveis de ambiente declaradas em CppProperties.json ou CMakeSettings.json. A propriedade `args` especifica a linha de comando a ser invocada. A macro `${file}` recupera o arquivo selecionado no **Gerenciador de Soluções**. O exemplo a seguir exibirá o nome do arquivo .cpp atualmente selecionado.
 
 ```json
 {
@@ -107,7 +107,3 @@ Para especificar argumentos adicionais, basta adicioná-los na matriz JSON `args
 ```
 
 Quando você salva esse arquivo, a nova configuração é exibida na lista suspensa Destino de Depuração e você pode selecioná-la para iniciar o depurador. Crie quantas configurações de depuração desejar para qualquer quantidade de executáveis. Se você pressionar **F5** agora, o depurador será iniciado e atingirá qualquer ponto de interrupção que você já possa ter definido. Todas as janelas do depurador conhecidas e sua funcionalidade agora estão disponíveis.
-
-## <a name="see-also"></a>Consulte também
-
-
