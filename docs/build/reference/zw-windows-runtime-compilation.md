@@ -1,6 +1,6 @@
 ---
 title: /ZW (Compilação de Tempo de Execução do Windows)
-ms.date: 11/04/2016
+ms.date: 04/08/2019
 f1_keywords:
 - VC.Project.VCCLCompilerTool.CompileAsWinRT
 - /zw
@@ -11,16 +11,16 @@ helpviewer_keywords:
 - -ZW
 - Windows Runtime compiler option
 ms.assetid: 0fe362b0-9526-498b-96e0-00d7a965a248
-ms.openlocfilehash: a16482cf8d21651db9486ab19c347a4ccadf5279
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 73295866004fd506fd5f06ff25c048d14b821016
+ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57809425"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59424034"
 ---
 # <a name="zw-windows-runtime-compilation"></a>/ZW (Compilação de Tempo de Execução do Windows)
 
-Compila o código para dar suporte a extensões de componentes do Visual C++ C + +-fonte c++ /CX para a criação de aplicativos da plataforma Universal do Windows (UWP).
+Compila o código para dar suporte a Visual-fonte C++ extensões de componentes C++/CX para a criação de aplicativos da plataforma Universal do Windows (UWP).
 
 Quando você usa **/ZW** para compilar, sempre especifique **/EHsc** também.
 
@@ -44,7 +44,7 @@ Quando você especifica o **/ZW** opção, o compilador dá suporte a esses recu
 
 - Automático-contagem de referência de objetos de tempo de execução do Windows e o descarte automático de um objeto quando sua contagem de referência chega a zero.
 
-Como o vinculador incremental não oferece suporte a metadados do Windows incluídos em arquivos. obj usando a **/ZW** opção, o [/Gm (habilitar recompilação mínima)](gm-enable-minimal-rebuild.md) opção é incompatível com **/ZW** .
+Como o vinculador incremental não oferece suporte a metadados do Windows incluídos em arquivos. obj usando a **/ZW** opção preteridas [/Gm (habilitar recompilação mínima)](gm-enable-minimal-rebuild.md) opção é incompatível com **/ZW**.
 
 Para obter mais informações, consulte [referência de linguagem do Visual C++](../../cppcx/visual-c-language-reference-c-cx.md).
 

@@ -1,14 +1,14 @@
 ---
 title: Opções do compilador listadas em ordem alfabética
-ms.date: 08/20/2018
+ms.date: 04/08/2019
 helpviewer_keywords:
 - compiler options, C++
-ms.openlocfilehash: 6175d62938534e790fb60b300ff55ad031da5801
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: d8ab1cbac7ad8eb44f16c7829ccac20a6d3e73ff
+ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57811934"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59424112"
 ---
 # <a name="compiler-options-listed-alphabetically"></a>Opções do compilador listadas em ordem alfabética
 
@@ -29,7 +29,7 @@ Esta é uma lista alfabética abrangente das opções de compilador. Para obter 
 |[/clr](clr-common-language-runtime-compilation.md)|Produz um arquivo de saída a ser executado no Common Language Runtime.|
 |[/constexpr](constexpr-control-constexpr-evaluation.md)|Avaliação de constexpr de controle em tempo de compilação.|
 |[/D](d-preprocessor-definitions.md)|Define constantes e macros.|
-|[/diagnostics](diagnostics-compiler-diagnostic-options.md)|Controla o formato das mensagens de diagnóstico.|
+|[/Diagnostics](diagnostics-compiler-diagnostic-options.md)|Controla o formato das mensagens de diagnóstico.|
 |[/doc](doc-process-documentation-comments-c-cpp.md)|Processa comentários de documentação em um arquivo XML.|
 |[/E](e-preprocess-to-stdout.md)|Copia a saída do pré-processador para a saída padrão.|
 |[/EH](eh-exception-handling-model.md)|Especifica o modelo de tratamento de exceções.|
@@ -60,7 +60,7 @@ Esta é uma lista alfabética abrangente das opções de compilador. Para obter 
 |[/GH](gh-enable-pexit-hook-function.md)|Chama a função de gancho `_pexit`.|
 |[/Gh](gh-enable-penter-hook-function.md)|Chama a função de gancho `_penter`.|
 |[/GL](gl-whole-program-optimization.md)|Habilita a otimização de todo o programa.|
-|[/Gm](gm-enable-minimal-rebuild.md)|Habilita recompilação mínima.|
+|[/Gm](gm-enable-minimal-rebuild.md)|Preterido. Habilita recompilação mínima.|
 |[/GR](gr-enable-run-time-type-information.md)|Habilita RTTI (informações de tipo de tempo de execução).|
 |[/Gr](gd-gr-gv-gz-calling-convention.md)|Usa a convenção de chamada `__fastcall` (somente x86).|
 |[/GS](gs-buffer-security-check.md)|Armazena a verificação de segurança em buffer.|
@@ -76,7 +76,7 @@ Esta é uma lista alfabética abrangente das opções de compilador. Para obter 
 |[/H](h-restrict-length-of-external-names.md)|Preterido. Restringe o tamanho de nomes externos (públicos).|
 |[/HELP](help-compiler-command-line-help.md)|Lista as opções do compilador.|
 |[/homeparams](homeparams-copy-register-parameters-to-stack.md)|Força os parâmetros passados em registros a serem gravados em seus locais na pilha mediante a entrada da função. Essa opção do compilador é apenas para x64 compiladores (native e compilação cruzada).|
-|[/hotpatch](hotpatch-create-hotpatchable-image.md)|Cria uma imagem capaz de aplicar patches sob demanda.|
+|[/hotpatch](hotpatch-create-hotpatchable-image.md)|Cria uma imagem para patch a quente.|
 |[/I](i-additional-include-directories.md)|Pesquisa um diretório para incluir arquivos.|
 |[/J](j-default-char-type-is-unsigned.md)|Altera o tipo `char` padrão.|
 |[/JMC](jmc.md)|Dá suporte à depuração de C++ apenas meu código nativo.|
@@ -97,13 +97,13 @@ Esta é uma lista alfabética abrangente das opções de compilador. Para obter 
 |[/Od](od-disable-debug.md)|Desabilita a otimização.|
 |[/Og](og-global-optimizations.md)|Preterido. Usa otimizações globais.|
 |[/Oi](oi-generate-intrinsic-functions.md)|Gera funções intrínsecas.|
-|[/openmp](openmp-enable-openmp-2-0-support.md)|Habilita [#pragma omp](../../preprocessor/omp.md) no código-fonte.|
+|[/openmp](openmp-enable-openmp-2-0-support.md)|Permite que o [ `#pragma omp` ](../../preprocessor/omp.md) diretiva no código-fonte.|
 |[/Os](os-ot-favor-small-code-favor-fast-code.md)|Favorece código pequeno.|
 |[/Ot](os-ot-favor-small-code-favor-fast-code.md)|Favorece código rápido.|
 |[/Ox](ox-full-optimization.md)|Usa a otimização máxima (/Ob2gity /Gs).|
 |[/Oy](oy-frame-pointer-omission.md)|Omite o ponteiro de quadro (somente x86).|
 |[/P](p-preprocess-to-a-file.md)|Grava a saída do pré-processador em um arquivo.|
-|[/permissive-](permissive-standards-conformance.md)|Definir o modo de conformidade com o padrão.|
+|[/permissive--](permissive-standards-conformance.md)|Definir o modo de conformidade com o padrão.|
 |[/Qfast_transcendentals](qfast-transcendentals-force-fast-transcendentals.md)|Gera transcendentais rápidos.|
 |[/QIfist](qifist-suppress-ftol.md)|Preterido. Suprime `_ftol` quando é necessária uma conversão de um tipo de ponto flutuante em um tipo integral (somente x86).|
 |[/Qimprecise_fwaits](qimprecise-fwaits-remove-fwaits-inside-try-blocks.md)|Remove comandos `fwait` dentro de blocos `try`.|

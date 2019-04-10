@@ -1,6 +1,6 @@
 ---
 title: /permissive--(conformidade com padrões)
-ms.date: 06/21/2018
+ms.date: 03/08/2019
 f1_keywords:
 - /permissive
 - VC.Project.VCCLCompilerTool.ConformanceMode
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Standards conformance compiler options
 - permissive compiler options [C++]
 ms.assetid: db1cc175-6e93-4a2e-9396-c3725d2d8f71
-ms.openlocfilehash: 5590996c7598016365bb122977084835830f95ab
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 05089ef4f0a516f932d82f13be979da572701ae2
+ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57820787"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59424125"
 ---
 # <a name="permissive--standards-conformance"></a>/permissive--(conformidade com padrões)
 
@@ -23,7 +23,7 @@ Especifique o modo de conformidade de padrões para o compilador. Use esta opç�
 
 ## <a name="syntax"></a>Sintaxe
 
-> **/permissive-**
+> **/permissive--**
 
 ## <a name="remarks"></a>Comentários
 
@@ -35,15 +35,15 @@ Por padrão, o **/permissive--** opção é definida em novos projetos criados p
 
 O **/permissive--** opção é compatível com quase todos os arquivos de cabeçalho de Kits do Windows mais recente, como o Software Development Kit (SDK) ou o Windows Driver Kit (WDK), a partir do SDK do Windows Fall Creators (10.0.16299.0). Versões mais antigas do SDK podem falhar ao compilar sob **/permissive--** para várias motivos de conformidade de código de origem. O compilador e remessa de SDKs em cronogramas de lançamento diferentes, portanto, há alguns problemas restantes. Para problemas de arquivo de cabeçalho específicos, consulte [problemas de cabeçalho do Windows](#windows-header-issues) abaixo.
 
-O **/permissive--** conjuntos de opções de [/ZC: strictstrings](zc-conformance.md) e [/ZC: rvaluecast](zc-conformance.md) opções de comportamento em conformidade. Eles têm como padrão o comportamento de não conformes. Você pode passar específico **/Zc** opções após **/permissive--** na linha de comando para substituir esse comportamento.
+O **/permissive--** conjuntos de opções de [/ZC: referencebinding](zc-referencebinding-enforce-reference-binding-rules.md), [/ZC: strictstrings](zc-strictstrings-disable-string-literal-type-conversion.md), e [/ZC: rvaluecast](zc-rvaluecast-enforce-type-conversion-rules.md) opções para em conformidade com comportamento. Esses padrões de opções para comportamento não conforme. Você pode passar específico **/Zc** opções após **/permissive--** na linha de comando para substituir esse comportamento.
 
-Nas versões do início de compilador no Visual Studio 2017 versão 15.3, o **/permissive--** conjuntos de opções de [/ZC: ternary](zc-ternary.md) opção. O compilador também implementa mais os requisitos para a pesquisa de nome em duas fases. Quando o **/permissive--** opção for definida, o compilador analisa as definições de modelo de função e de classe, identificando nomes dependentes e não dependente usados nos modelos. Nesta versão, a análise de dependência de nome só é executada.
+Nas versões do início de compilador no Visual Studio 2017 versão 15.3, o **/permissive--** conjuntos de opções de [/ZC: ternary](zc-ternary.md) opção. O compilador também implementa mais os requisitos para a pesquisa de nome em duas fases. Quando o **/permissive--** opção for definida, o compilador analisa as definições de modelo de função e de classe e identifica os nomes de dependentes e não dependente usados nos modelos. Nesta versão, a análise de dependência de nome só é executada.
 
 Extensões específicas do ambiente e áreas de idioma que o padrão deixa a implementação não são afetadas por **/permissive--**. Por exemplo, específicos da Microsoft `__declspec`, convenção de chamada e palavras-chave e diretivas pragma específicos do compilador ou atributos de manipulação de exceção estruturada não são sinalizados pelo compilador **/permissive--** modo.
 
 O **/permissive--** opção usa o suporte de conformidade na versão atual do compilador para determinar quais construções de linguagem são não conformes. A opção não determina se seu código está de acordo com uma versão específica do C++ padrão. Para habilitar a todo o suporte de compilador implementado para o padrão de rascunho mais recente, use o [/std:latest](std-specify-language-standard-version.md) opção. Para restringir o suporte do compilador implementado atualmente c++17 standard, use o [/std: c + + 17](std-specify-language-standard-version.md) opção. Para restringir o suporte do compilador para corresponder a mais de perto o padrão c++14, use o [/std: c + + 14](std-specify-language-standard-version.md) opção, que é o padrão.
 
-Não todas as c++11, c++14 ou c++17 em conformidade com os padrões de código é suportado pelo compilador MSVC no Visual Studio 2017. Dependendo da versão do Visual Studio, o **/permissive--** opção pode não detectar problemas em relação a alguns aspectos da pesquisa de nome em duas fases, uma referência não const para um temporário de associação, tratando de inicialização de cópia como init direto, permitindo que várias conversões definidas pelo usuário na inicialização ou tokens alternativos para os operadores lógicos e outras áreas de conformidade sem suporte. Para obter mais informações sobre problemas de conformidade no Visual C++, consulte [comportamento não padrão](../../cpp/nonstandard-behavior.md). Para obter o máximo proveito do **/permissive--**, atualizar o Visual Studio para a versão mais recente.
+Não todas as c++11, c++14 ou c++17 em conformidade com os padrões de código é suportado pelo compilador MSVC em todas as versões do Visual Studio 2017. Dependendo da versão do Visual Studio, o **/permissive--** opção pode não detectar problemas em relação a alguns aspectos da pesquisa de nome em duas fases, uma referência não const para um temporário de associação, tratando de inicialização de cópia como init direto, permitindo que várias conversões definidas pelo usuário na inicialização ou tokens alternativos para os operadores lógicos e outras áreas de conformidade sem suporte. Para obter mais informações sobre problemas de conformidade no Visual C++, consulte [comportamento não padrão](../../cpp/nonstandard-behavior.md). Para obter o máximo proveito do **/permissive--**, atualizar o Visual Studio para a versão mais recente.
 
 ### <a name="how-to-fix-your-code"></a>Como corrigir seu código
 
@@ -56,7 +56,7 @@ void func(int default); // Error C2321: 'default' is a keyword, and
                         // cannot be used in this context
 ```
 
-#### <a name="lookup-members-in-dependent-base"></a>Membros de pesquisa na base de dados dependente
+#### <a name="look-up-members-in-dependent-base"></a>Pesquisar membros na base de dados dependente
 
 ```cpp
 template <typename T>
@@ -247,7 +247,7 @@ Erros comuns que poderão incidir essa alteração incluem:
 
 - Erro C2446: ':': nenhuma conversão de 'B' para 'A'
 
-Um padrão de código típico que pode causar esse problema é quando alguma classe C fornece um construtor não explícito de outro tipo T e um operador de conversão não explícita para o tipo T. Nesse caso, a conversão do argumento 2º para o tipo de dia 3 e a conversão do argumento 3ª para o tipo do 2º são conversões válidas, que é ambíguo de acordo com o padrão.
+Um padrão de código típico que pode causar esse problema é quando alguma classe C fornece um construtor não explícito de outro tipo T e um operador de conversão não explícita para o tipo T. Nesse caso, a conversão do segundo argumento para o tipo do terceiro argumento e a conversão do terceiro argumento para o tipo do segundo argumento são conversões válidas. Já que ambos são válidos, é ambíguo de acordo com o padrão.
 
 ```cpp
 // Example 1: class that provides conversion to and initialization from some type T
@@ -311,9 +311,9 @@ decltype(auto) x = cond ? a : b; // char without, const char& with /Zc:ternary
 const char (&z)[2] = count > 3 ? "A" : "B"; // const char* without /Zc:ternary
 ```
 
-#### <a name="two-phase-name-look-up"></a>Pesquisar nome de duas fases
+#### <a name="two-phase-name-look-up"></a>Pesquisa de nome em duas fases
 
-Quando o **/permissive--** opção for definida, o compilador analisa as definições de modelo de função e de classe, identificando nomes dependentes e não dependente usados nos modelos conforme necessário para a pesquisa de nome em duas fases. No Visual Studio 2017 versão 15.3, análise de dependência de nome é executada. Os nomes não dependentes que não são declarados no contexto de uma definição de modelo em particular, fazer com que uma mensagem de diagnóstico conforme exigido por padrões ISO do C++. No Visual Studio 2017 versão 15.7, associação de nomes não dependentes que exigem um argumento dependentes pesquisar no contexto de definição também é feita.
+Quando o **/permissive--** opção for definida, o compilador analisa as definições de modelo de função e de classe, identificando nomes dependentes e não dependente usados nos modelos conforme necessário para a pesquisa de nome em duas fases. No Visual Studio 2017 versão 15.3, análise de dependência de nome é executada. Os nomes não dependentes que não são declarados no contexto de uma definição de modelo em particular, fazer com que uma mensagem de diagnóstico conforme exigido por padrões ISO do C++. No Visual Studio 2017 versão 15.7, associação de nomes não dependentes que exigem pesquisa dependente de argumento no contexto de definição também é feita.
 
 ```cpp
 // dependent base

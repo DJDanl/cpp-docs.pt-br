@@ -1,6 +1,6 @@
 ---
 title: setbuf
-ms.date: 11/04/2016
+ms.date: 04/08/2019
 apiname:
 - setbuf
 apilocation:
@@ -22,12 +22,12 @@ helpviewer_keywords:
 - setbuf function
 - stream buffering
 ms.assetid: 13beda22-7b56-455d-8a6c-f2eb636885b9
-ms.openlocfilehash: 3b5fbccd304d406131b0c4f7d16a289f80484642
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 89f8a4d8eb853c774f4f7299ceaa9b9eb6177b42
+ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50440490"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59424164"
 ---
 # <a name="setbuf"></a>setbuf
 
@@ -52,9 +52,9 @@ Buffer alocado pelo usuário.
 
 ## <a name="remarks"></a>Comentários
 
-O **setbuf** controla o buffer para funcionar *fluxo*. O *stream* argumento deve se referir a um arquivo aberto que não foi lido ou gravado. Se o *buffer* argumento é **nulo**, o fluxo é sem buffer. Se não, o buffer deve apontar para uma matriz de caracteres de comprimento **BUFSIZ**, onde **BUFSIZ** é o tamanho do buffer conforme definido em STDIO. H. O buffer especificado pelo usuário, em vez do buffer alocado do sistema padrão para o fluxo informado, é usado para buffer de E/S. O **stderr** fluxo é sem buffer por padrão, mas você pode usar **setbuf** atribuir buffers para **stderr**.
+O **setbuf** controla o buffer para funcionar *fluxo*. O *stream* argumento deve se referir a um arquivo aberto que ainda não foi lido ou gravado. Se o *buffer* argumento é **nulo**, o fluxo é sem buffer. Se não, o buffer deve apontar para uma matriz de caracteres de comprimento **BUFSIZ**, onde **BUFSIZ** é o tamanho do buffer conforme definido em STDIO. H. O buffer especificado pelo usuário, em vez do buffer alocado do sistema padrão para o fluxo informado, é usado para buffer de E/S. O **stderr** fluxo é sem buffer por padrão, mas você pode usar **setbuf** atribuir buffers para **stderr**.
 
-**setbuf** foi substituído por [setvbuf](setvbuf.md), que é a rotina preferencial para o novo código. **setbuf** é mantido para compatibilidade com o código existente.
+**setbuf** foi substituído por [setvbuf](setvbuf.md), que é a rotina preferencial para o novo código. Diferentemente **setvbuf**, **setbuf** não tem nenhuma maneira de erros do reporting. **setvbuf** também lhe permite controlar o modo de buffer e o tamanho do buffer. **setbuf** existe para compatibilidade com o código existente.
 
 ## <a name="requirements"></a>Requisitos
 
