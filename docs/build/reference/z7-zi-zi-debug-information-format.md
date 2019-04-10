@@ -1,6 +1,6 @@
 ---
 title: /Z7, /Zi, /ZI (depurar formato de informações)
-ms.date: 02/22/2018
+ms.date: 04/08/2019
 f1_keywords:
 - VC.Project.VCCLCompilerTool.DebugInformationFormat
 - /ZI
@@ -23,12 +23,12 @@ helpviewer_keywords:
 - line numbers only compiler option [C++]
 - cl.exe compiler, debugging options
 - -Z7 compiler option [C++]
-ms.openlocfilehash: 1beab7cb1e8e654d25620eb59a9326f5628ce047
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: e809c7af7465cde98db11eac8628b76d04f7e8b5
+ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816315"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59424073"
 ---
 # <a name="z7-zi-zi-debug-information-format"></a>/Z7, /Zi, /ZI (depurar formato de informações)
 
@@ -52,7 +52,7 @@ O **/Z7** opção produz arquivos de objeto que também contêm informações de
 
 Para distribuidores de versões de depuração das bibliotecas de terceiros, há uma vantagem de não ter um arquivo PDB. No entanto, os arquivos de objeto para quaisquer cabeçalhos pré-compilados são necessários durante a fase de link de biblioteca e para depuração. Se houver apenas digite informações (e nenhum código) no arquivo de objeto. pch, você também deve usar o [/Yl (injetar referência PCH para biblioteca de depuração)](yl-inject-pch-reference-for-debug-library.md) opção, que é habilitada por padrão, quando você compila a biblioteca.
 
-O [/Gm (habilitar recompilação mínima)](gm-enable-minimal-rebuild.md) opção não está disponível quando **/Z7** for especificado.
+Preteridas [/Gm (habilitar recompilação mínima)](gm-enable-minimal-rebuild.md) opção não está disponível quando **/Z7** for especificado.
 
 ### <a name="zi"></a>/Zi
 
