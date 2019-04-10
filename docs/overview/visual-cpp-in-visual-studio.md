@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual C++, home page
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 7ef43491c35ec4f57f7a691851e584e6aad58ef3
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 6430d57ddc8718c419076d2da1008e21efdb9b13
+ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58782095"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58898707"
 ---
 # <a name="c-in-visual-studio"></a>C++ no Visual Studio
 
@@ -26,14 +26,14 @@ Microsoft Visual C++, geralmente abreviado para Visual C++ ou MSVC, é o nome pa
 
 ## <a name="whats-new-and-conformance-history"></a>Histórico de novidades e de conformidade
 
-[Novidades do C++ no Visual Studio 2017](what-s-new-for-visual-cpp-in-visual-studio.md)<br/>
-Descubra as novidades do Visual Studio 2017.
+[Novidades do C++ no Visual Studio](what-s-new-for-visual-cpp-in-visual-studio.md)<br/>
+Descubra as novidades do Visual Studio.
 
 [Novidades do C++ no Visual Studio 2003 até 2015](../porting/visual-cpp-what-s-new-2003-through-2015.md)<br/>
 Descubra quais foram as novidades do C++ para cada versão do Visual Studio, de 2003 até 2015.
 
-[Aprimoramentos de conformidade do C++ no Visual Studio 2017](cpp-conformance-improvements-2017.md)<br/>
-Saiba mais sobre as melhorias de conformidade do C++ no Visual Studio 2017.
+[Aprimoramentos de conformidade do C++ no Visual Studio](cpp-conformance-improvements.md)<br/>
+Saiba mais sobre as melhorias de conformidade do C++ no Visual Studio.
 
 [Conformidade com a linguagem Visual C++](visual-cpp-language-conformance.md)<br/>
 Uma lista de status de conformidade por recurso no compilador C++ do MSVC.
@@ -49,10 +49,10 @@ Baixe o Visual Studio 2015 ou o Visual Studio 2017 e instale o conjunto de ferra
 [Guia de atualização e portabilidade do Visual C++](../porting/visual-cpp-porting-and-upgrading-guide.md)<br/>
 Diretrizes para portabilidade de código e atualização de projetos para o Visual Studio 2015 ou o Visual Studio 2017, incluindo a portabilidade de código C++ para o Windows 10 e a Plataforma Universal do Windows.
 
-[Ferramentas e recursos do Visual C++ em edições do Visual Studio](visual-cpp-tools-and-features-in-visual-studio-editions.md)<br/>
+[Ferramentas e funcionalidades do Visual C++ em edições do Visual Studio](visual-cpp-tools-and-features-in-visual-studio-editions.md)<br/>
 Descubra as diferentes edições do Visual Studio.
 
-[Plataformas com suporte](supported-platforms-visual-cpp.md)<br/>
+[Plataformas compatíveis](supported-platforms-visual-cpp.md)<br/>
 Descubra quais plataformas têm suporte.
 
 ## <a name="learn-c"></a>Aprender sobre o C++
@@ -109,7 +109,7 @@ Descubra como usar o Win32, o ATL e o MFC para criar DLLs de área de trabalho d
 [Programação paralela](../parallel/parallel-programming-in-visual-cpp.md)<br/>
 Saiba como usar a Biblioteca de Padrões Paralelos, C++ AMP, OpenMP e outros recursos que estão relacionados ao multithreading no Windows.
 
-[Práticas Recomendadas de segurança](../security/security-best-practices-for-cpp.md)<br/>
+[Práticas recomendadas de segurança](../security/security-best-practices-for-cpp.md)<br/>
 Saiba como proteger aplicativos contra código mal-intencionado e de uso não autorizado.
 
 [Programação de Nuvem e da Web](../cloud/cloud-and-web-programming-in-visual-cpp.md)<br/>
@@ -125,20 +125,20 @@ Saiba mais sobre como trabalhar com formatos e codificações diferentes de text
 
 [Referência da linguagem C++](../cpp/cpp-language-reference.md)
 
-[Referência de pré-processador do C/C++](../preprocessor/c-cpp-preprocessor-reference.md)
+[Referência de pré-processador C/C++](../preprocessor/c-cpp-preprocessor-reference.md)
 
 [Referência da linguagem C](../c-language/c-language-reference.md)
 
-[Intrínsecos do compilador e linguagem assembly](../intrinsics/compiler-intrinsics-and-assembly-language.md)
+[Intrínsecos do compilador e linguagem do assembly](../intrinsics/compiler-intrinsics-and-assembly-language.md)
 
 ## <a name="c-libraries-in-visual-studio"></a>Bibliotecas do C++ no Visual Studio
 
 As seções a seguir fornecem informações sobre as diferentes bibliotecas do C e C++ que estão incluídas no Visual Studio.
 
-[Referência da biblioteca em tempo de execução C](../c-runtime-library/c-run-time-library-reference.md)<br/>
+[Referência da biblioteca em tempo de execução do C](../c-runtime-library/c-run-time-library-reference.md)<br/>
 Inclui alternativas aprimoradas de segurança a funções que são conhecidas por impor problemas de segurança.
 
-[Biblioteca Padrão do C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[Biblioteca Padrão C++](../standard-library/cpp-standard-library-reference.md)<br/>
 A Biblioteca Padrão do C++.
 
 [ATL (Active Template Library)](../atl/atl-com-desktop-components.md)<br/>
@@ -147,7 +147,7 @@ Compatibilidade com aplicativos e componentes COM.
 [Bibliotecas MFC (Microsoft Foundation Class)](../mfc/mfc-desktop-applications.md)<br/>
 Suporte para criação de aplicativos da área de trabalho com interfaces de usuário tradicionais ou no estilo Office.
 
-[PPL (Biblioteca de Padrões Paralelos)](../parallel/concrt/parallel-patterns-library-ppl.md)<br/>
+[Biblioteca de padrões paralelos (PPL)](../parallel/concrt/parallel-patterns-library-ppl.md)<br/>
 Algoritmos assíncronos e paralelos que são executados na CPU.
 
 [C++ AMP (C++ Accelerated Massive Parallelism)](../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)<br/>
@@ -177,5 +177,5 @@ Saiba como obter ajuda, arquivar bugs e fazer sugestões para o Visual Studio.
 ## <a name="see-also"></a>Consulte também
 
 - [Referência da linguagem C](../c-language/c-language-reference.md)
-- [Referência da biblioteca em tempo de execução C](../c-runtime-library/c-run-time-library-reference.md)
-- [Intrínsecos do compilador e linguagem assembly](../intrinsics/compiler-intrinsics-and-assembly-language.md)
+- [Referência da biblioteca em tempo de execução do C](../c-runtime-library/c-run-time-library-reference.md)
+- [Intrínsecos do compilador e linguagem do assembly](../intrinsics/compiler-intrinsics-and-assembly-language.md)
