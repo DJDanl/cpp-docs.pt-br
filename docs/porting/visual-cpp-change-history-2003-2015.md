@@ -5,10 +5,10 @@ helpviewer_keywords:
 - breaking changes [C++]
 ms.assetid: b38385a9-a483-4de9-99a6-797488bc5110
 ms.openlocfilehash: b381a2b7cc9a4ad4749f382838bdec5872a3decf
-ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
+ms.sourcegitcommit: 88631cecbe3e3fa752eae3ad05b7f9d9f9437b4d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/15/2019
 ms.locfileid: "58898876"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Histórico de alterações de 2003 a 2015 do Visual C++
@@ -28,13 +28,13 @@ Você nunca deve escrever código que dependa de um determinado layout de um obj
 
 Além disso, aprimoramentos contínuos para a conformidade do compilador podem alterar como o compilador compreende seu código-fonte existente. Por exemplo, você poderá encontrar erros novos ou diferentes durante o build ou até diferenças de comportamento no código que foi compilado anteriormente e parecia executar corretamente. Embora essas melhorias não sejam alterações da falha, ao contrário daquelas discutidas neste documento, pode ser necessário fazer alterações no código-fonte para resolver estes problemas:
 
-- [Alterações de falha na Biblioteca CRT (C Runtime)](#BK_CRT)
+- [Alterações significativas na Biblioteca CRT (Tempo de execução de C)](#BK_CRT)
 
-- [Alterações de falha no C++ Padrão e na Biblioteca Padrão do C++](#BK_STL)
+- [Alterações significativas no C++ Padrão e na Biblioteca Padrão do C++](#BK_STL)
 
-- [Alterações de falha de MFC e ATL](#BK_MFC)
+- [Alterações significativas de MFC e ATL](#BK_MFC)
 
-- [Alterações de falha de Tempo de Execução de Simultaneidade](#BK_ConcRT)
+- [Alterações significativas de Tempo de Execução de Simultaneidade](#BK_ConcRT)
 
 ## <a name="VC_2015"></a> Alterações de conformidade do Visual C++ 2015
 
@@ -66,7 +66,7 @@ Além disso, aprimoramentos contínuos para a conformidade do compilador podem a
 
   - `double pow(double, int)`, `float pow(float, float)`, `float pow(float, int)`, `long double pow(long double, long double)`, `long double pow(long double, int)`
 
-  - `float` e versões `long double` das funções de ponto flutuante `acos`, `acosh`, `asin`, `asinh`, `atan`, `atanh`, `atan2`, `cbrt`, `ceil`, `copysign`, `cos`, `cosh`, `erf`, `erfc`, `exp`, `exp2`, `expm1`, `fabs`, `fdim`, `floor`, `fma`, `fmax`, `fmin`, `fmod`, `frexp`, `hypot`, `ilogb`, `ldexp`, `lgamma`, `llrint`, `llround`, `log`, `log10`, `log1p`, `log2`, `lrint`, `lround`, `modf`, `nearbyint`, `nextafter`, `nexttoward`, `remainder`, `remquo`, `rint`, `round`, `scalbln`, `scalbn`, `sin`, `sinh`, `sqrt`, `tan`, `tanh`, `tgamma` e `trunc`
+  - Versões `float` e `long double` das funções de ponto flutuante `acos`, `acosh`, `asin`, `asinh`, `atan`, `atanh`, `atan2`, `cbrt`, `ceil`, `copysign`, `cos`, `cosh`, `erf`, `erfc`, `exp`, `exp2`, `expm1`, `fabs`, `fdim`, `floor`, `fma`, `fmax`, `fmin`, `fmod`, `frexp`, `hypot`, `ilogb`, `ldexp`, `lgamma`, `llrint`, `llround`, `log`, `log10`, `log1p`, `log2`, `lrint`, `lround`, `modf`, `nearbyint`, `nextafter`, `nexttoward`, `remainder`, `remquo`, `rint`, `round`, `scalbln`, `scalbn`, `sin`, `sinh`, `sqrt`, `tan`, `tanh`, `tgamma` e `trunc`
 
   Se você tem código que usa `abs` com um tipo de ponto flutuante que inclui apenas o cabeçalho \<math.h>, as versões de ponto flutuante não estarão mais disponíveis. A chamada agora resolve para `abs(int)`, mesmo com um argumento de ponto flutuante, que produz o erro:
 
@@ -191,7 +191,7 @@ Além disso, aprimoramentos contínuos para a conformidade do compilador podem a
 
    Os especificadores de formato %a e %A formatam um número de ponto flutuante como uma mantissa hexadecimal e expoente binário. Nas versões anteriores, as funções `printf` preencheriam incorretamente as cadeias de caracteres com zero. Por exemplo, `printf("%07.0a\n", 1.0)` imprimiria 00x1p+0, mas deveria imprimir 0x01p+0. Essa falha foi corrigida.
 
-- **Precisão de %A e %a**
+- **Precisão %A e %a**
 
    A precisão padrão dos especificadores de formato %A e %a era de 6 nas versões anteriores da biblioteca. A precisão padrão agora é de 13 para conformidade com o Padrão C.
 
@@ -415,11 +415,11 @@ Embora essas diferenças possam afetar seu código-fonte ou outros artefatos de 
 
 - [Melhorias de conformidade no Visual Studio 2015](#VS_RTM)
 
-- [Melhorias de conformidade na Atualização 1](#VS_Update1)
+- [Aprimoramentos de conformidade na Atualização 1](#VS_Update1)
 
-- [Melhorias de conformidade na Atualização 2](#VS_Update2)
+- [Aprimoramentos de conformidade na Atualização 2](#VS_Update2)
 
-- [Melhorias de conformidade na Atualização 3](#VS_Update3)
+- [Aprimoramentos de conformidade na Atualização 3](#VS_Update3)
 
 ###  <a name="VS_RTM"></a> Melhorias de conformidade no Visual Studio 2015
 
@@ -443,13 +443,13 @@ Embora essas diferenças possam afetar seu código-fonte ou outros artefatos de 
     }
     ```
 
-- `/Zg` Opção do compilador
+- Opção do compilador `/Zg`
 
    A opção do compilador `/Zg` (Gerar Protótipos de Função) não está mais disponível. Essa opção do compilador foi anteriormente preterida.
 
 - Não é possível executar testes de unidade com C++/CLI na linha de comando com mstest.exe. Em vez disso, use vstest.console.exe. Consulte [Opções de linha de comando de VSTest.Console.exe](/visualstudio/test/vstest-console-options).
 
-- **Palavra-chave mutable**
+- **palavra-chave mutable**
 
    O especificador de classe de armazenamento **mutable** não é mais permitido em locais em que anteriormente era compilado sem erros. Agora, o compilador gera um erro C2071 (classe de armazenamento inválida). Segundo o padrão, o especificador **mutable** só pode ser aplicado a nomes de membros de dados de classe e não pode ser aplicado a nomes declarados const ou static e também não pode ser aplicado para fazer referência a membros.
 
@@ -1584,7 +1584,7 @@ Embora essas diferenças possam afetar seu código-fonte ou outros artefatos de 
 
    Para corrigir o erro, remova os parênteses em torno de `j`. Se os parênteses forem necessários para maior clareza, use uma **typedef**.
 
-- **__declspec(novtable) e construtores gerados pelo compilador**
+- **__Declspec(novtable) e construtores gerados pelo compilador**
 
    No Visual Studio 2015, há uma probabilidade maior de que construtores embutidos gerados pelo compilador de classes abstratas com classes base virtuais exponham o uso inapropriado de `__declspec(novtable)` quando usado em combinação com `__declspec(dllimport)`.
 
@@ -1633,9 +1633,9 @@ Embora essas diferenças possam afetar seu código-fonte ou outros artefatos de 
     static_assert(std::is_convertible<D*, B2*>::value, "fail");
     ```
 
-- **declarações de __declspec(novtable) precisam ser consistentes**
+- **declarações de declspec(novtable) precisam ser consistentes**
 
-   `__declspec` Declarações precisam ser consistentes em todas as bibliotecas. Agora, o código a seguir produzirá uma violação de regra de definição de um (ODR):
+   Declarações `__declspec` precisam ser consistentes em todas as bibliotecas. Agora, o código a seguir produzirá uma violação de regra de definição de um (ODR):
 
     ```cpp
     //a.cpp
@@ -2966,7 +2966,7 @@ O compilador C++ no Visual Studio 2013 detecta incompatibilidades em _ITERATOR_D
 
 - A acessibilidade para a faixa de opções do MFC foi alterada.  Em vez de uma arquitetura de um nível, há agora uma arquitetura hierárquica. Você ainda pode usar o comportamento antigo chamando `CRibbonBar::EnableSingleLevelAccessibilityMode()`.
 
-- `CDatabase::GetConnect` O método foi removido. Para melhorar a segurança, a cadeia de conexão agora é armazenada criptografada e é descriptografada somente quando necessário; ela não pode ser retornada como texto sem formatação.  A cadeia de caracteres pode ser obtida usando o método `CDatabase::Dump`.
+- O método `CDatabase::GetConnect` foi removido. Para melhorar a segurança, a cadeia de conexão agora é armazenada criptografada e é descriptografada somente quando necessário; ela não pode ser retornada como texto sem formatação.  A cadeia de caracteres pode ser obtida usando o método `CDatabase::Dump`.
 
 - A assinatura de `CWnd::OnPowerBroadcast` foi alterada. A assinatura desse manipulador de mensagens foi alterada para obter um LPARAM como o segundo parâmetro.
 
@@ -2986,7 +2986,7 @@ O compilador C++ no Visual Studio 2013 detecta incompatibilidades em _ITERATOR_D
 
    - `CMFCMaskedEdit::OnPaste` foi alterado para sem parâmetros em vez de (WPARAM, LPARAM) para que a nova macro ON_WM_PASTE possa ser usada no mapa de mensagens.
 
-- `#ifdef` As diretivas nos arquivos de cabeçalho MFC foram removidas. Várias diretivas `#ifdef` nos arquivos de cabeçalho MFC relacionados a versões sem suporte do Windows (WINVER &lt; 0x0501) foram removidas.
+- As diretivas `#ifdef` nos arquivos de cabeçalho MFC foram removidas. Várias diretivas `#ifdef` nos arquivos de cabeçalho MFC relacionados a versões sem suporte do Windows (WINVER &lt; 0x0501) foram removidas.
 
 - ATL DLL (atl120.dll) foi removida. A ATL agora é fornecida como cabeçalhos e uma biblioteca estática (atls.lib).
 
@@ -3090,7 +3090,7 @@ A enumeração `SchedulerType` de `UmsThreadDefault` foi preterida. A especifica
 
 - Foi adicionado um parâmetro ao construtor `CFolderPickerDialog`. (É um parâmetro padrão e, portanto, não causa interrupção de código-fonte.)
 
-- `CFileStatus` O tamanho da estrutura mudou: o membro `m_attribute` foi alterado de BYTE para DWORD (para corresponder ao valor retornado de `GetFileAttributes`).
+- O tamanho da estrutura `CFileStatus` mudou: o membro `m_attribute` foi alterado de BYTE para DWORD (para corresponder ao valor retornado de `GetFileAttributes`).
 
 - `CRichEditCtrl` e `CRichEditView` usam MSFTEDIT_CLASS (controle RichEdit 4.1) em vez de RICHEDIT_CLASS (controle RichEdit 3.0) em builds de Unicode.
 
@@ -3404,15 +3404,15 @@ A enumeração `SchedulerType` de `UmsThreadDefault` foi preterida. A especifica
 
 ### <a name="mfc"></a>MFC
 
-- `CTime` Classe: A classe `CTime` agora aceita datas a partir de 1/1/1900 D.C. em vez de 1/1/1970 D.C.
+- Classe `CTime`: A classe `CTime` agora aceita datas a partir de 1/1/1900 D.C. em vez de 1/1/1970 D.C.
 
 - Ordem de tabulação dos controles em caixas de diálogo do MFC: a ordem de tabulação correta de vários controles em uma caixa de diálogo do MFC será afetada se um controle ActiveX MFC for inserido na ordem de tabulação. Essa alteração corrige esse problema.
 
    Por exemplo, crie um aplicativo de caixa de diálogo do MFC que tem um controle ActiveX e vários controles de edição. Posicione o controle ActiveX no meio da ordem de tabulação dos controles de edição. Inicie o aplicativo, clique em um controle de edição cuja ordem de tabulação é depois do controle ActiveX e, em seguida, TAB. Antes dessa mudança, o foco ia para o controle de edição depois do controle ActiveX em vez do próximo controle de edição na ordem de tabulação.
 
-- `CFileDialog` Classe: os modelos personalizados para a classe `CFileDialog` não podem ser automaticamente transferidos para o Windows Vista. Eles ainda podem ser usados, mas não terão a funcionalidade adicional ou a aparência das caixas de diálogo do estilo Windows Vista.
+- Classe `CFileDialog`: os modelos personalizados para a classe `CFileDialog` não podem ser automaticamente transferidos para o Windows Vista. Eles ainda podem ser usados, mas não terão a funcionalidade adicional ou a aparência das caixas de diálogo do estilo Windows Vista.
 
-- `CWnd` Classe e classe `CFrameWnd`: o método `CWnd::GetMenuBarInfo` foi removido.
+- Classe `CWnd` e classe `CFrameWnd`: o método `CWnd::GetMenuBarInfo` foi removido.
 
    O método `CFrameWnd::GetMenuBarInfo` agora é um método não virtual. Para obter mais informações, consulte **Função GetMenuBarInfo** no SDK do Windows.
 
@@ -3436,7 +3436,7 @@ A enumeração `SchedulerType` de `UmsThreadDefault` foi preterida. A especifica
 
 - O especificador de formato %n não é mais compatível por padrão em qualquer uma das famílias ou funções printf porque é inerentemente inseguro. Se %n for encontrado, o comportamento padrão será invocar o manipulador de parâmetro inválido. Para habilitar o suporte a %n, use `_set_printf_count_output` (consulte também `_get_printf_count_output`).
 
-- `sprintf` Agora, imprime o sinal negativo de um zero com sinal.
+- Agora, `sprintf` imprime o sinal negativo de um zero com sinal.
 
 - `swprintf` foi alterado para conformidade com o Padrão. Agora, ele exige um parâmetro de tamanho. A forma de `swprintf` sem um parâmetro de tamanho foi preterida.
 
