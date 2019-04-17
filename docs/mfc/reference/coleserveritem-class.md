@@ -74,12 +74,12 @@ helpviewer_keywords:
 - COleServerItem [MFC], OnShow
 - COleServerItem [MFC], m_sizeExtent
 ms.assetid: 80256df6-3888-4256-944b-787d4b2e6b0d
-ms.openlocfilehash: f774a8db1121dd293db8e58f7cd92aaabaeabada
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c4c026975e9884ac2a0e6aaef31e799c2b5b09bf
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270547"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58777370"
 ---
 # <a name="coleserveritem-class"></a>Classe COleServerItem
 
@@ -99,7 +99,7 @@ class COleServerItem : public CDocItem
 |----------|-----------------|
 |[COleServerItem::COleServerItem](#coleserveritem)|Constrói um objeto `COleServerItem`.|
 
-### <a name="public-methods"></a>Métodos Públicos
+### <a name="public-methods"></a>Métodos públicos
 
 |Nome|Descrição|
 |----------|-----------------|
@@ -997,7 +997,7 @@ O nome deve ser exclusivo dentro do documento. Quando um aplicativo de servidor 
 
 ## <a name="see-also"></a>Consulte também
 
-[Exemplo MFC HIERSVR](../../visual-cpp-samples.md)<br/>
+[Exemplo MFC HIERSVR](../../overview/visual-cpp-samples.md)<br/>
 [Classe CDocItem](../../mfc/reference/cdocitem-class.md)<br/>
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
 [Classe COleClientItem](../../mfc/reference/coleclientitem-class.md)<br/>

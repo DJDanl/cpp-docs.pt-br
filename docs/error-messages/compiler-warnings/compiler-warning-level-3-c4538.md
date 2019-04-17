@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4538
 ms.assetid: 747e3d51-b6d0-41c1-a726-7af3253b59d7
-ms.openlocfilehash: 81634ed45ad7d09a35f8399774920f6445628dee
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e0f20c7b1d9f840bc272cd3b9d43f4872ac3f71d
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50569358"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58777240"
 ---
 # <a name="compiler-warning-level-3-c4538"></a>Compilador aviso (nível 3) C4538
 
 'type': não há suporte para qualificadores const/volatile neste tipo
 
-Uma palavra-chave qualificador foi aplicada a uma matriz incorretamente. Para obter mais informações, consulte [matriz](../../windows/arrays-cpp-component-extensions.md).
+Uma palavra-chave qualificador foi aplicada a uma matriz incorretamente. Para obter mais informações, consulte [matriz](../../extensions/arrays-cpp-component-extensions.md).
 
 O exemplo a seguir gera C4538:
 

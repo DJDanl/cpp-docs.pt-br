@@ -64,12 +64,12 @@ helpviewer_keywords:
 - CMFCToolBarComboBoxButton [MFC], SetDropDownHeight
 - CMFCToolBarComboBoxButton [MFC], SetFlatMode
 ms.assetid: 32fa39f7-8e4e-4f0a-a31d-7b540d969a6c
-ms.openlocfilehash: fae70e44657023b7a7b93f72599bef4ba6faf307
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: e3c124103aa95d9db5095e438a6b21d46c7cb35d
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57303164"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772066"
 ---
 # <a name="cmfctoolbarcomboboxbutton-class"></a>Classe CMFCToolBarComboBoxButton
 
@@ -83,7 +83,7 @@ class CMFCToolBarComboBoxButton : public CMFCToolBarButton
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
@@ -136,7 +136,7 @@ Para obter mais informações, confira [Passo a passo: Colocando controles em ba
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir demonstra como usar vários métodos no `CMFCToolBarComboBoxButton` classe. O exemplo mostra como habilitar as caixas de combinação e de edição, definir a posição vertical da caixa de combinação botões de caixa no aplicativo, defina a altura da caixa de listagem, quando ele é removido para baixo, definir a aparência de estilo plano dos botões da caixa de combinação no aplicativo e definir o texto na caixa de edição da caixa de combinação de botão da caixa. Este trecho de código faz parte do [amostra de demonstração do Visual Studio](../../visual-cpp-samples.md).
+O exemplo a seguir demonstra como usar vários métodos no `CMFCToolBarComboBoxButton` classe. O exemplo mostra como habilitar as caixas de combinação e de edição, definir a posição vertical da caixa de combinação botões de caixa no aplicativo, defina a altura da caixa de listagem, quando ele é removido para baixo, definir a aparência de estilo plano dos botões da caixa de combinação no aplicativo e definir o texto na caixa de edição da caixa de combinação de botão da caixa. Este trecho de código faz parte do [amostra de demonstração do Visual Studio](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#36](../../mfc/codesnippet/cpp/cmfctoolbarcomboboxbutton-class_1.cpp)]
 [!code-cpp[NVC_MFC_VisualStudioDemo#37](../../mfc/codesnippet/cpp/cmfctoolbarcomboboxbutton-class_2.cpp)]

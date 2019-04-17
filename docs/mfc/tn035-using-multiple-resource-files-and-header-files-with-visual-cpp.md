@@ -7,12 +7,12 @@ helpviewer_keywords:
 - resource files, multiple
 - TN035
 ms.assetid: 1f08ce5e-a912-44cc-ac56-7dd93ad73fb6
-ms.openlocfilehash: 7d97e4536c2a43e7e224e9056aa39df5480daeca
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 0493dd45caf5eb78da435987a4590442a908a5a3
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57279907"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772758"
 ---
 # <a name="tn035-using-multiple-resource-files-and-header-files-with-visual-c"></a>TN035: Usando vários arquivos de recurso e arquivos de cabeçalho com o Visual C++
 
@@ -177,7 +177,7 @@ Visual C++ e o compilador de recurso dar suporte a várias. Arquivos RC no mesmo
 
 - Se você quiser manter um recurso com um editor de texto em um formato legível por humanos, você deve mantê-lo um. Arquivo RC separado do Visual C++ edita.
 
-- Se você precisar manter um recurso definido pelo usuário em um formato binário ou texto que pode ser interpretado por outro editor de dados especializado, você deve mantê-lo em um separado. Arquivo RC para que Visual C++ não altera o formato para dados hexadecimais. A. Recursos de arquivos WAV (som) no exemplo de conceitos avançados MFC [SPEAKN](../visual-cpp-samples.md) são um bom exemplo.
+- Se você precisar manter um recurso definido pelo usuário em um formato binário ou texto que pode ser interpretado por outro editor de dados especializado, você deve mantê-lo em um separado. Arquivo RC para que Visual C++ não altera o formato para dados hexadecimais. A. Recursos de arquivos WAV (som) no exemplo de conceitos avançados MFC [SPEAKN](../overview/visual-cpp-samples.md) são um bom exemplo.
 
 Você pode #include um segundo. RC nas diretivas de tempo de compilação na caixa de diálogo conjunto inclui:
 
@@ -286,7 +286,7 @@ O Visual C++ contorna a dependência no recurso. H, incluindo o seguinte coment�
 
 O ambiente de desenvolvimento interpreta este comentário ignorando as alterações ao recurso. Portanto, que é dependente de H. Arquivos CPP não precisarão ser recompilados.
 
-Visual C++ sempre adiciona a //{{no_dependencies}}}} comentário de linha para um. Arquivo RC quando salva o arquivo. Em alguns casos, evitando a dependência de compilação no recurso. H pode levar a erros de tempo de execução não detectados em tempo de vinculação. Por exemplo, se você usar o navegador do símbolo para alterar o valor numérico atribuído a um símbolo para um recurso, o recurso de não ser corretamente encontrado e carregado em caso de tempo de execução do aplicativo a. Arquivo CPP referindo-se para o recurso não é recompilado. Nesses casos, você deve recompilar explicitamente qualquer. Os arquivos CPP que você sabe que são afetados pelas alterações de símbolo no recurso. H ou select **Rebuild All**. Se você tiver a necessidade de alterar com frequência de valores de símbolo para um determinado grupo de recursos, você provavelmente achará mais conveniente e seguro quebrar esses símbolos em um arquivo de cabeçalho somente leitura separado, conforme descrito na seção acima [incluindo Arquivos de cabeçalho adicionais](#_mfcnotes_tn035_including).
+O Visual C++ sempre adiciona a //{{no_dependencies}}}} comentário de linha para um. Arquivo RC quando salva o arquivo. Em alguns casos, evitando a dependência de compilação no recurso. H pode levar a erros de tempo de execução não detectados em tempo de vinculação. Por exemplo, se você usar o navegador do símbolo para alterar o valor numérico atribuído a um símbolo para um recurso, o recurso de não ser corretamente encontrado e carregado em caso de tempo de execução do aplicativo a. Arquivo CPP referindo-se para o recurso não é recompilado. Nesses casos, você deve recompilar explicitamente qualquer. Os arquivos CPP que você sabe que são afetados pelas alterações de símbolo no recurso. H ou select **Rebuild All**. Se você tiver a necessidade de alterar com frequência de valores de símbolo para um determinado grupo de recursos, você provavelmente achará mais conveniente e seguro quebrar esses símbolos em um arquivo de cabeçalho somente leitura separado, conforme descrito na seção acima [incluindo Arquivos de cabeçalho adicionais](#_mfcnotes_tn035_including).
 
 ## <a name="_mfcnotes_tn035_set_includes"></a> Como o Visual C++ gerencia conjunto inclui informações**
 

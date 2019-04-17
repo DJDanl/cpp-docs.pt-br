@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C3451
 ms.assetid: a4897a69-e3e7-40bb-bb1c-598644904012
-ms.openlocfilehash: 041c0c22b7ae842073bfd6656d9cbb3b2a20af9c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5ef4352101541391a7cda88471fbaa6aeae4ffb4
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50430050"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770363"
 ---
 # <a name="compiler-error-c3451"></a>Erro do compilador C3451
 
 'attribute': não é possível aplicar o atributo não gerenciado para 'type'
 
-Um atributo de C++ não pode ser aplicado a um tipo CLR. Ver [referência de atributos C++](../../windows/cpp-attributes-reference.md) para obter mais informações.
+Um atributo de C++ não pode ser aplicado a um tipo CLR. Ver [referência de atributos C++](../../windows/attributes/attributes-alphabetical-reference.md) para obter mais informações.
 
-Para obter mais informações, consulte [atributos definidos pelo usuário](../../windows/user-defined-attributes-cpp-component-extensions.md).
+Para obter mais informações, consulte [atributos definidos pelo usuário](../../extensions/user-defined-attributes-cpp-component-extensions.md).
 
 Esse erro pode ser gerado como resultado do trabalho de conformidade do compilador que foi feito para o Visual C++ 2005: o [uuid](../../windows/uuid-cpp-attributes.md) atributo não é permitido em um atributo definido pelo usuário usando a programação de CLR. Use <xref:System.Runtime.InteropServices.GuidAttribute> em seu lugar.
 

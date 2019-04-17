@@ -60,12 +60,12 @@ helpviewer_keywords:
 - CFile [MFC], m_hFile
 - CFile [MFC], m_pTM
 ms.assetid: b2eb5757-d499-4e67-b044-dd7d1abaa0f8
-ms.openlocfilehash: f287b04b32b7bc45342ac7248fbe986a3dcf959e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: db499ffa5f1d82b6e3622287f86132930a929102
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57289858"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768545"
 ---
 # <a name="cfile-class"></a>Classe CFile
 
@@ -79,7 +79,7 @@ class CFile : public CObject
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
@@ -918,7 +918,7 @@ Além disso, consulte os exemplos para [CFile::CFile](#cfile) e [CFile::Open](#o
 
 ## <a name="see-also"></a>Consulte também
 
-[Exemplo MFC DRAWCLI](../../visual-cpp-samples.md)<br/>
+[Exemplo MFC DRAWCLI](../../overview/visual-cpp-samples.md)<br/>
 [Classe CObject](../../mfc/reference/cobject-class.md)<br/>
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
 [Classe CStdioFile](../../mfc/reference/cstdiofile-class.md)<br/>

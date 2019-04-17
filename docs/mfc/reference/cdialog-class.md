@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CDialog [MFC], OnCancel
 - CDialog [MFC], OnOK
 ms.assetid: ca64b77e-2cd2-47e3-8eff-c2645ad578f9
-ms.openlocfilehash: d3c3bca7932b9e9c7e7723b286c83ca3694a9968
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 9918b1ae38caacf2b2355ace6337e8e5e6260605
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57305088"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58771341"
 ---
 # <a name="cdialog-class"></a>Classe CDialog
 
@@ -59,13 +59,13 @@ class CDialog : public CWnd
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
 |[CDialog::CDialog](#cdialog)|Constrói um objeto `CDialog`.|
 
-### <a name="public-methods"></a>Métodos Públicos
+### <a name="public-methods"></a>Métodos públicos
 
 |Nome|Descrição|
 |----------|-----------------|
@@ -558,7 +558,7 @@ Especifica a ID de ajuda contextual.
 
 ## <a name="see-also"></a>Consulte também
 
-[DLGCBR32 de exemplo do MFC](../../visual-cpp-samples.md)<br/>
-[Exemplo MFC DLGTEMPL](../../visual-cpp-samples.md)<br/>
+[DLGCBR32 de exemplo do MFC](../../overview/visual-cpp-samples.md)<br/>
+[Exemplo MFC DLGTEMPL](../../overview/visual-cpp-samples.md)<br/>
 [Classe CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)

@@ -120,12 +120,12 @@ helpviewer_keywords:
 - CPaneContainer [MFC], StoreRecentDockSiteInfo
 - CPaneContainer [MFC], StretchPaneContainer
 ms.assetid: beb79e08-f611-4d66-ba04-053baa79bf86
-ms.openlocfilehash: 099f1cccd178068f9b96bda6193b5ee9df3b66c3
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: fab7415a71d8029952a840b83aae0f066c09084c
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57274954"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775355"
 ---
 # <a name="cpanecontainer-class"></a>Classe CPaneContainer
 
@@ -141,7 +141,7 @@ class CPaneContainer : public CObject
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
@@ -214,7 +214,7 @@ class CPaneContainer : public CObject
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir demonstra como construir uma instância de `CPaneContainer` classe. Este trecho de código é parte do [exemplo de definir o tamanho do painel](../../visual-cpp-samples.md).
+O exemplo a seguir demonstra como construir uma instância de `CPaneContainer` classe. Este trecho de código é parte do [exemplo de definir o tamanho do painel](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_SetPaneSize#2](../../mfc/reference/codesnippet/cpp/cpanecontainer-class_1.h)]
 [!code-cpp[NVC_MFC_SetPaneSize#1](../../mfc/reference/codesnippet/cpp/cpanecontainer-class_2.cpp)]

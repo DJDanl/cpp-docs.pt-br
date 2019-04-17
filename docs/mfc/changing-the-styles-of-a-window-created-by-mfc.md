@@ -21,12 +21,12 @@ helpviewer_keywords:
 - CMainFrame class [MFC]
 - styles [MFC], windows
 ms.assetid: 77fa4f03-96b4-4687-9ade-41e46f7e4b0a
-ms.openlocfilehash: c8a3a5d9b8b007887dfb31f7459c0269377b38fd
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 0a002badf9c20ca7b2d1a129eca069e586893f3c
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57294155"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767230"
 ---
 # <a name="changing-the-styles-of-a-window-created-by-mfc"></a>Alternando os estilos de uma janela criada por MFC
 
@@ -50,7 +50,7 @@ Para alterar os atributos de janela padrão usados por um aplicativo de framewor
 
 [!code-cpp[NVC_MFCDocView#15](../mfc/codesnippet/cpp/changing-the-styles-of-a-window-created-by-mfc_1.cpp)]
 
-O [CTRLBARS](../visual-cpp-samples.md) aplicativo de exemplo demonstra essa técnica para alterar os atributos de janela. Dependendo de quais alterações a seu aplicativo no `PreCreateWindow`, talvez seja necessário chamar a implementação da classe base da função.
+O [CTRLBARS](../overview/visual-cpp-samples.md) aplicativo de exemplo demonstra essa técnica para alterar os atributos de janela. Dependendo de quais alterações a seu aplicativo no `PreCreateWindow`, talvez seja necessário chamar a implementação da classe base da função.
 
 A discussão a seguir aborda o caso de SDI e o [caso MDI](#_core_the_mdi_case).
 

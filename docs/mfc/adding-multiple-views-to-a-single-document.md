@@ -7,19 +7,19 @@ helpviewer_keywords:
 - single document interface (SDI), adding views
 - views [MFC], SDI applications
 ms.assetid: 86d0c134-01d5-429c-b672-36cfb956dc01
-ms.openlocfilehash: b665f090fc680221be70f170452d756dd5f68dc5
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 593c59c73b58b4364c9d652ce8eb415c17af496c
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57284275"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767581"
 ---
 # <a name="adding-multiple-views-to-a-single-document"></a>Adicionando várias exibições a um único documento
 
 Em um aplicativo de interface de documento único (SDI) criado com a biblioteca Microsoft Foundation Class (MFC), cada tipo de documento está associado um tipo de exibição único. Em alguns casos, é desejável ter a capacidade de alternar o modo de exibição atual de um documento com um novo modo de exibição.
 
 > [!TIP]
->  Para obter procedimentos adicionais sobre a implementação de vários modos de exibição para um único documento, consulte [CDocument::AddView](../mfc/reference/cdocument-class.md#addview) e o [COLETAR](../visual-cpp-samples.md) amostra do MFC.
+>  Para obter procedimentos adicionais sobre a implementação de vários modos de exibição para um único documento, consulte [CDocument::AddView](../mfc/reference/cdocument-class.md#addview) e o [COLETAR](../overview/visual-cpp-samples.md) amostra do MFC.
 
 Você pode implementar essa funcionalidade adicionando um novo `CView`-derivado da classe e código adicional para alternar entre os modos de exibição dinamicamente a um aplicativo MFC existente.
 

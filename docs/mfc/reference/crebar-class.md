@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CReBar [MFC], Create
 - CReBar [MFC], GetReBarCtrl
 ms.assetid: c1ad2720-1d33-4106-8e4e-80aa84f93559
-ms.openlocfilehash: 4216898e85ebbec748598e10ebb31ce5510f7908
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 5a87f70816e9342c7aa203a53d13699659cebb28
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57267778"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767256"
 ---
 # <a name="crebar-class"></a>Classe CReBar
 
@@ -175,6 +175,6 @@ Para obter mais informações sobre como usar `CReBarCtrl` para personalizar seu
 
 ## <a name="see-also"></a>Consulte também
 
-[Exemplo MFC MFCIE](../../visual-cpp-samples.md)<br/>
+[Exemplo MFC MFCIE](../../overview/visual-cpp-samples.md)<br/>
 [Classe CControlBar](../../mfc/reference/ccontrolbar-class.md)<br/>
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)

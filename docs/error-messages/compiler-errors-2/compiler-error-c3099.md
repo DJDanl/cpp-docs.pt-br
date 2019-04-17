@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3099
 ms.assetid: b3dded0f-76c9-42c1-991b-532eb8619661
-ms.openlocfilehash: beaa34bb9bed4824383cdad32c6bfd0aea19f6b7
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 0f3eac1c232ef159d220a347d6b6dc3aed2fdd9a
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57418563"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58771481"
 ---
 # <a name="compiler-error-c3099"></a>Erro do compilador C3099
 
@@ -19,7 +19,7 @@ ms.locfileid: "57418563"
 
 Use <xref:System.AttributeUsageAttribute> declarar **/clr** atributos. Use `Windows::Foundation::Metadata::AttributeUsageAttribute` declarar atributos de tempo de execução do Windows.
 
-Para obter mais informações sobre atributos /CLR, consulte [atributos definidos pelo usuário](../../windows/user-defined-attributes-cpp-component-extensions.md). Para atributos com suporte em tempo de execução do Windows, consulte [namespace do Windows](/uwp/api/windows.foundation.metadata)
+Para obter mais informações sobre atributos /CLR, consulte [atributos definidos pelo usuário](../../extensions/user-defined-attributes-cpp-component-extensions.md). Para atributos com suporte em tempo de execução do Windows, consulte [namespace do Windows](/uwp/api/windows.foundation.metadata)
 
 ## <a name="example"></a>Exemplo
 

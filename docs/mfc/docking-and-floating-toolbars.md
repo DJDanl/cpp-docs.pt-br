@@ -21,12 +21,12 @@ helpviewer_keywords:
 - toolbars [MFC], wrapping
 - floating palettes
 ms.assetid: b7f9f9d4-f629-47d2-a3c4-2b33fa6b51e4
-ms.openlocfilehash: 93d1e067777b1c6f4430fe9cc44ae531559b6962
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 01450dca56ad662c8db0a35f89749c4a288109b3
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57294665"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768128"
 ---
 # <a name="docking-and-floating-toolbars"></a>Encaixando e flutuando barras de ferramentas
 
@@ -50,7 +50,7 @@ Outros tópicos abordados neste artigo incluem:
 
 - [Posições de encapsulamento de configuração para uma barra de ferramentas-style](#_core_setting_wrap_positions_for_a_fixed_style_toolbar)
 
-Consulte o exemplo de MFC geral [DOCKTOOL](../visual-cpp-samples.md) para obter exemplos.
+Consulte o exemplo de MFC geral [DOCKTOOL](../overview/visual-cpp-samples.md) para obter exemplos.
 
 ##  <a name="_core_enabling_docking_in_a_frame_window"></a> Habilitando o encaixe em uma janela com moldura
 
@@ -104,7 +104,7 @@ Para uma barra de ferramentas com o tamanho fixo de estilo, designe a barra de f
 
 [!code-cpp[NVC_MFCDocViewSDI#10](../mfc/codesnippet/cpp/docking-and-floating-toolbars_1.cpp)]
 
-O exemplo de MFC geral [DOCKTOOL](../visual-cpp-samples.md) mostra como usar funções de membro de classes [CControlBar](../mfc/reference/ccontrolbar-class.md) e [CToolBar](../mfc/reference/ctoolbar-class.md) para gerenciar o layout dinâmico de uma barra de ferramentas. Consulte o arquivo EDITBAR. CPP em DOCKTOOL.
+O exemplo de MFC geral [DOCKTOOL](../overview/visual-cpp-samples.md) mostra como usar funções de membro de classes [CControlBar](../mfc/reference/ccontrolbar-class.md) e [CToolBar](../mfc/reference/ctoolbar-class.md) para gerenciar o layout dinâmico de uma barra de ferramentas. Consulte o arquivo EDITBAR. CPP em DOCKTOOL.
 
 ### <a name="what-do-you-want-to-know-more-about"></a>O que você deseja saber mais sobre
 

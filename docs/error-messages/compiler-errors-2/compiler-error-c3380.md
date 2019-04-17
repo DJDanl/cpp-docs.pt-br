@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3380
 ms.assetid: 86f1f4ec-4ad8-4a1a-9b6c-2d9b6129df6b
-ms.openlocfilehash: e03212c3148ba7f5c445dfee02ee32629ab5d373
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 516690f2524d48e7abbf7546592c6346e92c3e2e
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668579"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781595"
 ---
 # <a name="compiler-error-c3380"></a>Erro do compilador C3380
 
@@ -19,7 +19,7 @@ ms.locfileid: "50668579"
 
 Quando aplicado a uma classe gerenciada ou struct, o [pública](../../cpp/public-cpp.md) e [privada](../../cpp/private-cpp.md) palavras-chave que indicam se a classe será exposta por meio de metadados do assembly. Somente `public` ou `private` pode ser aplicado a uma classe em um programa compilado com [/clr](../../build/reference/clr-common-language-runtime-compilation.md).
 
-O `ref` e `value` palavras-chave, quando usado com [/clr](../../build/reference/clr-common-language-runtime-compilation.md), indicar que uma classe é gerenciada (consulte [Classes e Structs](../../windows/classes-and-structs-cpp-component-extensions.md)).
+O `ref` e `value` palavras-chave, quando usado com [/clr](../../build/reference/clr-common-language-runtime-compilation.md), indicar que uma classe é gerenciada (consulte [Classes e Structs](../../extensions/classes-and-structs-cpp-component-extensions.md)).
 
 O exemplo a seguir gera C3380:
 

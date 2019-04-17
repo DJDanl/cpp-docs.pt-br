@@ -10,12 +10,12 @@ helpviewer_keywords:
 - dialog boxes [MFC], OLE
 - Insert object
 ms.assetid: 73c41eb8-738a-4d02-9212-d3395bb09a3a
-ms.openlocfilehash: 1081a831cc2b9fc0ab22e2c80a4f657466534d86
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: fa3d87e2cc17e297c3e6387920c6d527d8ddbe39
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270885"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767646"
 ---
 # <a name="dialog-boxes-in-ole"></a>Caixas de diálogo em OLE
 
@@ -31,7 +31,7 @@ Essa caixa de diálogo permite que o usuário controlar o formato usado ao colar
 Essa caixa de diálogo permite que o usuário selecione qual ícone é exibido para representar o item vinculado ou inserido. Exiba esta caixa de diálogo quando o usuário escolhe alterar ícone no menu Editar ou escolhe o botão Alterar ícone no Colar especial ou caixas de diálogo de Convert. Também exibi-lo quando o usuário abre a caixa de diálogo Inserir objeto e escolhe exibir como ícone. Use o [COleChangeIconDialog](../mfc/reference/colechangeicondialog-class.md) classe para exibir essa caixa de diálogo.
 
 *Convert*<br/>
-Essa caixa de diálogo permite que o usuário altere o tipo de um item vinculado ou inserido. Por exemplo, se você tiver inserido um metarquivo em um documento composto e mais tarde deseja usar outro aplicativo para modificar o metarquivo incorporado, você pode usar a caixa de diálogo Converter. Geralmente, essa caixa de diálogo é exibida clicando *tipo de item* objeto no menu Editar e em seguida, no menu em cascata, em Converter. Use o [COleConvertDialog](../mfc/reference/coleconvertdialog-class.md) classe para exibir essa caixa de diálogo. Por exemplo, executar o exemplo OLE do MFC [OCLIENT](../visual-cpp-samples.md).
+Essa caixa de diálogo permite que o usuário altere o tipo de um item vinculado ou inserido. Por exemplo, se você tiver inserido um metarquivo em um documento composto e mais tarde deseja usar outro aplicativo para modificar o metarquivo incorporado, você pode usar a caixa de diálogo Converter. Geralmente, essa caixa de diálogo é exibida clicando *tipo de item* objeto no menu Editar e em seguida, no menu em cascata, em Converter. Use o [COleConvertDialog](../mfc/reference/coleconvertdialog-class.md) classe para exibir essa caixa de diálogo. Por exemplo, executar o exemplo OLE do MFC [OCLIENT](../overview/visual-cpp-samples.md).
 
 *Editar Links ou atualização*<br/>
 A caixa de diálogo Editar Links permite que o usuário altere as informações sobre a origem de um objeto vinculado. A caixa de diálogo Links de atualização verifica as fontes de todos os itens vinculados na caixa de diálogo atual e exibe a caixa de diálogo Editar Links, se necessário. Exiba a caixa de diálogo Editar Links quando o usuário escolhe Links no menu Editar. A caixa de diálogo Links de atualização normalmente é exibida quando um documento composto é aberto pela primeira vez. Use o [COleLinksDialog](../mfc/reference/colelinksdialog-class.md) ou o [COleUpdateDialog](../mfc/reference/coleupdatedialog-class.md) de classe, dependendo de qual caixa de diálogo que você deseja exibir.

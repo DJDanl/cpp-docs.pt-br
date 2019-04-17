@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3288
 ms.assetid: ed08a540-9751-46e1-9cbe-c51d6a49ffab
-ms.openlocfilehash: 30a88d1047f8395fc8e3042cf2a1da88e6e5c2d3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d076dabe0df91cefb90be5ec9e90f371331a51f1
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50608410"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58771001"
 ---
 # <a name="compiler-error-c3288"></a>Erro do compilador C3288
 
 'type': cancelamento inválido de um tipo de identificador
 
-O compilador detectou uma ilegal desreferência de um tipo de identificador. Você pode cancelar a referência de um tipo de identificador e atribuí-lo a uma referência. Para obter mais informações, consulte [operador de referência de acompanhamento](../../windows/tracking-reference-operator-cpp-component-extensions.md).
+O compilador detectou uma ilegal desreferência de um tipo de identificador. Você pode cancelar a referência de um tipo de identificador e atribuí-lo a uma referência. Para obter mais informações, consulte [operador de referência de acompanhamento](../../extensions/tracking-reference-operator-cpp-component-extensions.md).
 
 ## <a name="example"></a>Exemplo
 

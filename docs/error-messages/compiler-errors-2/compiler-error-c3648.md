@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3648
 ms.assetid: 5d042989-41cb-4cd0-aa50-976b70146aaf
-ms.openlocfilehash: f3ef949b2651631f30a9c614a0d21b2668b7239f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7394f6b9789caa09ffc2ad6c2cf56f037b5d57b8
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50653759"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767958"
 ---
 # <a name="compiler-error-c3648"></a>Erro do compilador C3648
 
@@ -19,7 +19,7 @@ Essa sintaxe de substituição explícita requer /CLR: oldSyntax
 
 Ao compilar para a sintaxe gerenciada mais recente, o compilador encontrou explícito substituem sintaxe para versões anteriores que não é mais suportada.
 
-Para obter mais informações, consulte [substituições explícitas](../../windows/explicit-overrides-cpp-component-extensions.md).
+Para obter mais informações, consulte [substituições explícitas](../../extensions/explicit-overrides-cpp-component-extensions.md).
 
 ## <a name="example"></a>Exemplo
 

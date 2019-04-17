@@ -20,12 +20,12 @@ helpviewer_keywords:
 - MFC COM, Automation
 - methods [MFC], Automation
 ms.assetid: 329117f0-c1aa-4680-a901-bfb71277dfba
-ms.openlocfilehash: b26a08bbe9ef9b9151910871201abe05a44d2f6c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 7818aa708a762f2a284be029a6c3f3facd971d9a
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57265555"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767724"
 ---
 # <a name="automation"></a>Automação
 
@@ -55,17 +55,17 @@ O **VARIANT** tipo é encapsulado na [COleVariant](../mfc/reference/colevariant-
 
 ## <a name="automation-samples"></a>Exemplos de automação
 
-- [AUTOCLIK](../visual-cpp-samples.md) usar esse exemplo para aprender técnicas de automação e como uma base para a automação remota de aprendizado.
+- [AUTOCLIK](../overview/visual-cpp-samples.md) usar esse exemplo para aprender técnicas de automação e como uma base para a automação remota de aprendizado.
 
-- [ACDUAL](../visual-cpp-samples.md) adiciona interfaces dual a um aplicativo de servidor de automação.
+- [ACDUAL](../overview/visual-cpp-samples.md) adiciona interfaces dual a um aplicativo de servidor de automação.
 
-- [CALCDRIV](../visual-cpp-samples.md) orientando MFCCALC aplicativo cliente da automação.
+- [CALCDRIV](../overview/visual-cpp-samples.md) orientando MFCCALC aplicativo cliente da automação.
 
-- [INPROC](../visual-cpp-samples.md) demonstra um aplicativo de servidor em processo de automação.
+- [INPROC](../overview/visual-cpp-samples.md) demonstra um aplicativo de servidor em processo de automação.
 
-- [IPDRIVE](../visual-cpp-samples.md) aplicativo de cliente de automação, orientando INPROC.
+- [IPDRIVE](../overview/visual-cpp-samples.md) aplicativo de cliente de automação, orientando INPROC.
 
-- [MFCCALC](../visual-cpp-samples.md) demonstra um aplicativo de cliente de automação.
+- [MFCCALC](../overview/visual-cpp-samples.md) demonstra um aplicativo de cliente de automação.
 
 ## <a name="what-do-you-want-to-know-more-about"></a>O que você deseja saber mais sobre
 

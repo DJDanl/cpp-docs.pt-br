@@ -152,12 +152,12 @@ helpviewer_keywords:
 - CRichEditCtrl [MFC], StreamOut
 - CRichEditCtrl [MFC], Undo
 ms.assetid: 2be52788-822c-4c27-aafd-2471231e74eb
-ms.openlocfilehash: 634aa4adbe4e7084266be43ef932074373835c10
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 5517efca66744c43eeccd3fb91b97a6fedc8180e
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414285"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779268"
 ---
 # <a name="cricheditctrl-class"></a>Classe CRichEditCtrl
 
@@ -171,13 +171,13 @@ class CRichEditCtrl : public CWnd
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
 |[CRichEditCtrl::CRichEditCtrl](#cricheditctrl)|Constrói um objeto `CRichEditCtrl`.|
 
-### <a name="public-methods"></a>Métodos Públicos
+### <a name="public-methods"></a>Métodos públicos
 
 |Nome|Descrição|
 |----------|-----------------|
@@ -269,7 +269,7 @@ Para obter mais informações sobre como usar `CRichEditCtrl`, consulte:
 
 - [Usando CRichEditCtrl](../../mfc/using-cricheditctrl.md)
 
-Para obter um exemplo de como usar um controle de edição rica em um aplicativo MFC, consulte o [WORDPAD](../../visual-cpp-samples.md) aplicativo de exemplo.
+Para obter um exemplo de como usar um controle de edição rica em um aplicativo MFC, consulte o [WORDPAD](../../overview/visual-cpp-samples.md) aplicativo de exemplo.
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -1030,7 +1030,7 @@ As duas formas dessa função oferecem formas alternativas de obter os limites d
 
 - **GetSel (** `cr` **)** este formulário usa o `CHARRANGE` estrutura com seus `cpMin` e `cpMax` membros para retornar os limites.
 
-- **GetSel (** `nStartChar` **,** `nEndChar` **)** este formulário retorna os limites nos parâmetros *nStartChar* e *nEndChar* .
+- **GetSel (** `nStartChar` **,** `nEndChar` **)** este formulário retorna os limites nos parâmetros *nStartChar* e *nEndChar *.
 
 A seleção inclui tudo o que, se o início (`cpMin` ou *nStartChar*) é 0 e o fim (`cpMax` ou *nEndChar*) é - 1.
 
@@ -2198,7 +2198,7 @@ Para obter mais informações, consulte [EM_UNDO](/windows/desktop/Controls/em-u
 
 ## <a name="see-also"></a>Consulte também
 
-[Exemplo MFC WORDPAD](../../visual-cpp-samples.md)<br/>
+[Exemplo MFC WORDPAD](../../overview/visual-cpp-samples.md)<br/>
 [Classe CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
 [Classe CEdit](../../mfc/reference/cedit-class.md)<br/>

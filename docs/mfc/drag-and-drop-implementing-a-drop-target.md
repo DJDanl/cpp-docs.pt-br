@@ -6,12 +6,12 @@ helpviewer_keywords:
 - OLE drag and drop [MFC], drop target
 - drag and drop [MFC], drop target
 ms.assetid: 0689f1ec-5326-4008-b226-4b373c881358
-ms.openlocfilehash: da04fa7fa84e7e5014d574583c9c95992db10f88
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 46501193569d7f3098e23c67c68c76ce20a82ea3
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57281937"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58766669"
 ---
 # <a name="drag-and-drop-implementing-a-drop-target"></a>Arrastar e soltar: Implementando um destino de soltar
 
@@ -33,7 +33,7 @@ Este artigo descreve como tornar seu aplicativo em um destino de soltar. Impleme
     |`OnDrop`|Manipulação de dados que está sendo soltas dentro da janela especificada.|
     |`OnScrollBy`|Comportamento especial quando rolagem é necessária na janela de destino.|
 
-Consulte o MAINVIEW. CPP arquivo que é parte do exemplo OLE do MFC [OCLIENT](../visual-cpp-samples.md) para obter um exemplo de como funcionam essas funções.
+Consulte o MAINVIEW. CPP arquivo que é parte do exemplo OLE do MFC [OCLIENT](../overview/visual-cpp-samples.md) para obter um exemplo de como funcionam essas funções.
 
 Para obter mais informações, consulte:
 

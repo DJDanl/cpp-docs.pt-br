@@ -160,12 +160,12 @@ helpviewer_keywords:
 - CMFCPopupMenu [MFC], OnChangeHot
 - CMFCPopupMenu [MFC], OnChooseItem
 ms.assetid: 9555dca1-8c9c-44c9-af72-0659ddad128e
-ms.openlocfilehash: b45ac09ff87c191e55e403951fdff18cae33256d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: bd6629df4274af8a4f450024f0bad6da45ae3683
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57292270"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776005"
 ---
 # <a name="cmfcpopupmenu-class"></a>Classe CMFCPopupMenu
 
@@ -186,7 +186,7 @@ class CMFCPopupMenu : public CMiniFrameWnd
 |----------|-----------------|
 |[CMFCPopupMenu::CMFCPopupMenu](#cmfcpopupmenu)|Constrói um objeto `CMFCPopupMenu`.|
 
-### <a name="public-methods"></a>Métodos Públicos
+### <a name="public-methods"></a>Métodos públicos
 
 |Nome|Descrição|
 |----------|-----------------|
@@ -278,7 +278,7 @@ Normalmente, MFC cria menus pop-up automaticamente. Se você quiser criar uma `C
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir demonstra como configurar um objeto de menu pop-up. O exemplo mostra como definir o logotipo e o som do menu pop-up, a velocidade da animação e o tipo, desenhar sombras de menu quando o menu pop-up aparecer fora do quadro principal, defina a largura máxima e o alinhamento de menus à direita do menu pop-up. Este trecho de código é parte do [exemplo de páginas personalizadas](../../visual-cpp-samples.md).
+O exemplo a seguir demonstra como configurar um objeto de menu pop-up. O exemplo mostra como definir o logotipo e o som do menu pop-up, a velocidade da animação e o tipo, desenhar sombras de menu quando o menu pop-up aparecer fora do quadro principal, defina a largura máxima e o alinhamento de menus à direita do menu pop-up. Este trecho de código é parte do [exemplo de páginas personalizadas](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_CustomPages#2](../../mfc/reference/codesnippet/cpp/cmfcpopupmenu-class_1.cpp)]
 
@@ -451,7 +451,7 @@ Se *bOwnMessage* for TRUE, as rotas de framework quaisquer mensagens de menu a *
 
 ### <a name="example"></a>Exemplo
 
-O exemplo a seguir demonstra como usar o `Create` método da `CMFCPopuMenu` classe. Este trecho de código é parte do [exemplo de páginas personalizadas](../../visual-cpp-samples.md).
+O exemplo a seguir demonstra como usar o `Create` método da `CMFCPopuMenu` classe. Este trecho de código é parte do [exemplo de páginas personalizadas](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_CustomPages#1](../../mfc/reference/codesnippet/cpp/cmfcpopupmenu-class_2.cpp)]
 

@@ -82,12 +82,12 @@ helpviewer_keywords:
 - COleServerDoc [MFC], OnSetItemRects
 - COleServerDoc [MFC], OnShowDocument
 ms.assetid: a9cdd96a-e0ac-43bb-9203-2c29237e965c
-ms.openlocfilehash: 3069c5f53b37984cbeae8bee1379bb8b0c36ccc3
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 4cada70723c7fadc9c91c40380b8a7e9fc46a07a
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57285276"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58777253"
 ---
 # <a name="coleserverdoc-class"></a>Classe COleServerDoc
 
@@ -101,13 +101,13 @@ class AFX_NOVTABLE COleServerDoc : public COleLinkingDoc
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
 |[COleServerDoc::COleServerDoc](#coleserverdoc)|Constrói um objeto `COleServerDoc`.|
 
-### <a name="public-methods"></a>Métodos Públicos
+### <a name="public-methods"></a>Métodos públicos
 
 |Nome|Descrição|
 |----------|-----------------|
@@ -943,7 +943,7 @@ Essa função chama o `OnUpdate` função de membro para cada um dos itens do do
 
 ## <a name="see-also"></a>Consulte também
 
-[Exemplo MFC HIERSVR](../../visual-cpp-samples.md)<br/>
+[Exemplo MFC HIERSVR](../../overview/visual-cpp-samples.md)<br/>
 [Classe COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md)<br/>
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
 [Classe COleDocument](../../mfc/reference/coledocument-class.md)<br/>

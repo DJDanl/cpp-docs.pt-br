@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CMFCColorBar [MFC], SetPropList
 - CMFCColorBar [MFC], ShowCommandMessageString
 ms.assetid: 4756ee40-25a5-4cee-af7f-acab7993d1c7
-ms.openlocfilehash: f1f7610fc315da65145798058fdcf9752e7873d0
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 4eee24eb93be446f6b4f2631b70736c13a02f45c
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283248"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58771401"
 ---
 # <a name="cmfccolorbar-class"></a>Classe CMFCColorBar
 
@@ -99,7 +99,7 @@ class CMFCColorBar : public CMFCPopupMenuBar
 |----------|-----------------|
 |[CMFCColorBar::CMFCColorBar](#cmfccolorbar)|Constrói um objeto `CMFCColorBar`.|
 
-### <a name="public-methods"></a>Métodos Públicos
+### <a name="public-methods"></a>Métodos públicos
 
 |Nome|Descrição|
 |----------|-----------------|
@@ -202,7 +202,7 @@ Quando o usuário clica em um botão de controle de barra de cores, a estrutura 
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir demonstra como configurar uma barra de cores usando vários métodos no `CMFCColorBar` classe. Os métodos de definir as margens horizontais e verticais, habilitam o outro botão, criam uma janela de controle de barra de cores e define a cor atualmente selecionada. Este exemplo é parte do [exemplo de novos controles](../../visual-cpp-samples.md).
+O exemplo a seguir demonstra como configurar uma barra de cores usando vários métodos no `CMFCColorBar` classe. Os métodos de definir as margens horizontais e verticais, habilitam o outro botão, criam uma janela de controle de barra de cores e define a cor atualmente selecionada. Este exemplo é parte do [exemplo de novos controles](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#1](../../mfc/reference/codesnippet/cpp/cmfccolorbar-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#2](../../mfc/reference/codesnippet/cpp/cmfccolorbar-class_2.cpp)]
@@ -344,7 +344,7 @@ O rótulo padrão do botão automático estiver **automática**.
 *lpszOtherColor*<br/>
 [in] O rótulo de texto a *outros* botão, que exibe mais opções de cores, ou nulo.
 
-É o rótulo padrão para o outro botão **mais cores...** .
+É o rótulo padrão para o outro botão **mais cores...**.
 
 *lpszDocColors*<br/>
 [in] O rótulo de texto do botão de cores do documento. A paleta de cores do documento lista todas as cores que atualmente usa o documento.
@@ -544,7 +544,7 @@ void EnableOtherButton(
 *lpszLabel*<br/>
 [in] O rótulo de texto a *outros* botão, que exibe mais opções de cores, ou nulo.
 
-O rótulo padrão para este botão é **mais cores...** .
+O rótulo padrão para este botão é **mais cores...**.
 
 *bAltColorDlg*<br/>
 [in] True para exibir o [CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md) caixa de diálogo. FALSE para exibir o padrão [CColorDialog](../../mfc/reference/ccolordialog-class.md) caixa de diálogo. O valor padrão é TRUE.

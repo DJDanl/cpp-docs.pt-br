@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3828
 ms.assetid: 8d9cee75-9504-4bc8-88b6-2413618a3f45
-ms.openlocfilehash: 68a82105a2ff7d58090e9f345bf7aafb34d492d4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f499bb2a8fd6d3148935daec89835b79d2ff5b49
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50515278"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770545"
 ---
 # <a name="compiler-error-c3828"></a>Erro do compilador C3828
 
 tipo de objeto: argumentos de posicionamento não permitidos durante a criação de instâncias de gerenciadas ou WinRTclasses
 
-Ao criar um objeto de um tipo de tempo de execução do Windows ou um tipo gerenciado, você não pode usar o formulário de posicionamento do operador [gcnew de novo, ref](../../windows/ref-new-gcnew-cpp-component-extensions.md) ou [novos](../../cpp/new-operator-cpp.md).
+Ao criar um objeto de um tipo de tempo de execução do Windows ou um tipo gerenciado, você não pode usar o formulário de posicionamento do operador [gcnew de novo, ref](../../extensions/ref-new-gcnew-cpp-component-extensions.md) ou [novos](../../cpp/new-operator-cpp.md).
 
 O exemplo a seguir gera C3828 e mostra como corrigi-lo:
 

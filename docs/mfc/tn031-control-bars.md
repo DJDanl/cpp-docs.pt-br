@@ -14,12 +14,12 @@ helpviewer_keywords:
 - TN031
 - styles [MFC], control bars
 ms.assetid: 8cb895c0-40ea-40ef-90ee-1dd29f34cfd1
-ms.openlocfilehash: 07178597e66975a006a0ea5293192ee7ea099e42
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 39309408c6d1fc6cbb4223eda22c511865f14498
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57286459"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772508"
 ---
 # <a name="tn031-control-bars"></a>TN031: Barras de controle
 
@@ -136,7 +136,7 @@ Todos os botões de bitmap na barra de ferramentas são obtidos de um bitmap. Es
 
 Cada botão deve ser do mesmo tamanho. O padrão é os padrão 24 x 22 pixels. Cada imagem/glifo deve ser do mesmo tamanho e deve ser o lado a lado no bitmap. O tamanho de imagem/glifos padrão é 16 x 15 pixels. Portanto, para uma barra de ferramentas com 10 botões (usando os tamanhos padrão), você precisa de um bitmap que é de 160 pixels de largura e 15 pixels de altura.
 
-Cada botão tem uma e apenas uma imagem/glifo. O botão diferente estados e estilos (por exemplo, pressionado, para cima, para baixo, desabilitado, desabilitado para baixo, indeterminado) algoritmicamente gerados a partir de que uma imagem/glifos. Qualquer bitmap colorido ou DIB pode ser usado na teoria. O algoritmo para gerar o botão diferente estados funciona melhor se a imagem original é tons de cinza. Examinar os botões de barra de ferramentas padrão e o botão de barra de ferramentas clip-art fornecido no exemplo de MFC geral [clip-art](../visual-cpp-samples.md) para obter exemplos.
+Cada botão tem uma e apenas uma imagem/glifo. O botão diferente estados e estilos (por exemplo, pressionado, para cima, para baixo, desabilitado, desabilitado para baixo, indeterminado) algoritmicamente gerados a partir de que uma imagem/glifos. Qualquer bitmap colorido ou DIB pode ser usado na teoria. O algoritmo para gerar o botão diferente estados funciona melhor se a imagem original é tons de cinza. Examinar os botões de barra de ferramentas padrão e o botão de barra de ferramentas clip-art fornecido no exemplo de MFC geral [clip-art](../overview/visual-cpp-samples.md) para obter exemplos.
 
 As cores usadas na barra de ferramentas também são consistentes com a recomendação do guia de Design do aplicativo de Interface do Windows. Essas cores não são codificados e são alterados dinamicamente em resposta a personalização de usuário no painel de controle.
 

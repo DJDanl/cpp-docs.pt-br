@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CMFCColorDialog [MFC], SetPageOne
 - CMFCColorDialog [MFC], SetPageTwo
 ms.assetid: 235bbbbc-a3b1-46e0-801b-fb55093ec579
-ms.openlocfilehash: d94c223ed1e0b236ae8565d13a9f2c9652b6eb84
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 1b9f57e46d5ac74dd52f7ddb7ebd90f8888891e3
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270288"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772745"
 ---
 # <a name="cmfccolordialog-class"></a>Classe CMFCColorDialog
 
@@ -41,7 +41,7 @@ class CMFCColorDialog : public CDialogEx
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
@@ -100,7 +100,7 @@ Você pode construir uma `CMFCColorDialog` do objeto na pilha e, em seguida, cha
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir demonstra como configurar uma caixa de diálogo de cor usando vários métodos no `CMFCColorDialog` classe. O exemplo mostra como definir o atual e as novas cores da caixa de diálogo e como definir os componentes vermelhos, verdes e azuis da cor selecionada nas páginas de propriedades de dois da caixa de diálogo de cor. Este exemplo é parte do [exemplo de novos controles](../../visual-cpp-samples.md).
+O exemplo a seguir demonstra como configurar uma caixa de diálogo de cor usando vários métodos no `CMFCColorDialog` classe. O exemplo mostra como definir o atual e as novas cores da caixa de diálogo e como definir os componentes vermelhos, verdes e azuis da cor selecionada nas páginas de propriedades de dois da caixa de diálogo de cor. Este exemplo é parte do [exemplo de novos controles](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#3](../../mfc/reference/codesnippet/cpp/cmfccolordialog-class_1.cpp)]
 

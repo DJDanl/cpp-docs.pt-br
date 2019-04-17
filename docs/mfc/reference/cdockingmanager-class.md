@@ -160,12 +160,12 @@ helpviewer_keywords:
 - CDockingManager [MFC], m_nTimeOutBeforeDockingBarDock
 - CDockingManager [MFC], m_nTimeOutBeforeToolBarDock
 ms.assetid: 98e69c43-55d8-4f43-b861-4fda80ec1e32
-ms.openlocfilehash: 268a46e1bdecc1ea468c152fd0ed480873c36591
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 6d3bbafa15ada97f53710f0faf6a18ea8e892f6c
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57260381"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58771300"
 ---
 # <a name="cdockingmanager-class"></a>Classe CDockingManager
 
@@ -292,7 +292,7 @@ As dicas a seguir se aplicam a `CDockingManager` objetos:
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir demonstra como usar vários métodos na `CDockingManager` classe para configurar um `CDockingManager` objeto. O exemplo mostra como exibir mais um botão que abre um menu pop-up nas legendas de todos os painéis de encaixe e como definir o modo de encaixe do objeto. Este trecho de código faz parte do [amostra de demonstração do Visual Studio](../../visual-cpp-samples.md).
+O exemplo a seguir demonstra como usar vários métodos na `CDockingManager` classe para configurar um `CDockingManager` objeto. O exemplo mostra como exibir mais um botão que abre um menu pop-up nas legendas de todos os painéis de encaixe e como definir o modo de encaixe do objeto. Este trecho de código faz parte do [amostra de demonstração do Visual Studio](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#24](../../mfc/codesnippet/cpp/cdockingmanager-class_1.cpp)]
 

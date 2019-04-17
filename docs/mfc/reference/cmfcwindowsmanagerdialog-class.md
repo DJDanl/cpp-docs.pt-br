@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCWindowsManagerDialog [MFC], CMFCWindowsManagerDialog
 ms.assetid: 35b4b0db-33c4-4b22-94d8-5e3396341340
-ms.openlocfilehash: 566eae1f1b2ca4e91ed2c4b41c36073c205a272e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 5089decc7a118cd867aa14df51f5d7e269221108
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57302787"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767393"
 ---
 # <a name="cmfcwindowsmanagerdialog-class"></a>Classe CMFCWindowsManagerDialog
 
@@ -27,7 +27,7 @@ class CMFCWindowsManagerDialog : public CDialog
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
@@ -41,7 +41,7 @@ O `CMFCWindowsManagerDialog` contém uma lista de janelas filho MDI que estão a
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir demonstra como criar uma `CMFCWindowsManagerDialog` objeto chamando `CMDIFrameWndEx::ShowWindowsDialog`. Este trecho de código faz parte do [amostra de demonstração do Visual Studio](../../visual-cpp-samples.md).
+O exemplo a seguir demonstra como criar uma `CMFCWindowsManagerDialog` objeto chamando `CMDIFrameWndEx::ShowWindowsDialog`. Este trecho de código faz parte do [amostra de demonstração do Visual Studio](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#18](../../mfc/codesnippet/cpp/cmfcwindowsmanagerdialog-class_1.cpp)]
 

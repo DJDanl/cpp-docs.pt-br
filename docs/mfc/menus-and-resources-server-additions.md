@@ -17,18 +17,18 @@ helpviewer_keywords:
 - server applications [MFC], OLE menus and resources
 - OLE initialization failure [MFC]
 ms.assetid: 56ce9e8d-8f41-4db8-8dee-e8b0702d057c
-ms.openlocfilehash: 0cf5b495ca1e3f6e7b0ae434c09e014a29eadb00
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 85c7b6059a868e93c6c6a7ebbd7b08dac3233612
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57281938"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767191"
 ---
 # <a name="menus-and-resources-server-additions"></a>Menus e recursos: Adições de servidor
 
 Este artigo explica as alterações que precisam ser feitas para os menus e outros recursos em um aplicativo de servidor (componente) de edição visual. Um aplicativo de servidor requer muitas adições à estrutura do menu e outros recursos, porque ele pode ser iniciado em um dos três modos: espera sozinho, incorporado, ou em vigor. Conforme descrito na [Menus e recursos (OLE)](../mfc/menus-and-resources-ole.md) do artigo, há um máximo de quatro conjuntos de menus. Todos os quatro são usados para um aplicativo de servidor completo MDI, enquanto apenas três são usados para um miniserver. O Assistente de aplicativo criará o layout de menu necessários para o tipo de servidor que você deseja. Alguma personalização pode ser necessária.
 
-Se você não usar o Assistente de aplicativo, você talvez queira examinar HIERSVR. RC, o script de recurso para o aplicativo de exemplo do MFC [HIERSVR](../visual-cpp-samples.md), para ver como essas alterações são implementadas.
+Se você não usar o Assistente de aplicativo, você talvez queira examinar HIERSVR. RC, o script de recurso para o aplicativo de exemplo do MFC [HIERSVR](../overview/visual-cpp-samples.md), para ver como essas alterações são implementadas.
 
 Os tópicos abordados neste artigo incluem:
 
@@ -56,7 +56,7 @@ Dois novos recursos de tabela do acelerador devem ser adicionados aos aplicativo
 
 A segunda tabela é quase uma cópia exata da tabela de Aceleradores do modo de exibição. Quaisquer diferenças em paralelo as alterações feitas no menu totalmente aberto mencionado na [adições de Menu de servidor](#_core_server_menu_additions).
 
-Para obter um exemplo dessas alterações de tabela do acelerador, compare as tabelas de acelerador IDR_HIERSVRTYPE_SRVR_IP e IDR_HIERSVRTYPE_SRVR_EMB com IDR_MAINFRAME no HIERSVR. Arquivo RC incluído o exemplo OLE do MFC [HIERSVR](../visual-cpp-samples.md). Os aceleradores de arquivo e janela estão ausentes da tabela no local e cópias exatas de que eles estão na tabela inserida.
+Para obter um exemplo dessas alterações de tabela do acelerador, compare as tabelas de acelerador IDR_HIERSVRTYPE_SRVR_IP e IDR_HIERSVRTYPE_SRVR_EMB com IDR_MAINFRAME no HIERSVR. Arquivo RC incluído o exemplo OLE do MFC [HIERSVR](../overview/visual-cpp-samples.md). Os aceleradores de arquivo e janela estão ausentes da tabela no local e cópias exatas de que eles estão na tabela inserida.
 
 ##  <a name="_core_string_table_additions_for_server_applications"></a> Adições de tabela de cadeia de caracteres para aplicativos de servidor
 

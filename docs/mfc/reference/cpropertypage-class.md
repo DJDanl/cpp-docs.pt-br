@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CPropertyPage [MFC], SetModified
 - CPropertyPage [MFC], m_psp
 ms.assetid: d9000a21-aa81-4530-85d9-f43432afb4dc
-ms.openlocfilehash: ef46001e230813afb0abb857b7aee39bf5fba05d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 9d4100037c5a6cd2eeef1a50fb2d5a46b2cb6505
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57260745"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772717"
 ---
 # <a name="cpropertypage-class"></a>Classe CPropertyPage
 
@@ -59,13 +59,13 @@ class CPropertyPage : public CDialog
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
 |[CPropertyPage::CPropertyPage](#cpropertypage)|Constrói um objeto `CPropertyPage`.|
 
-### <a name="public-methods"></a>Métodos Públicos
+### <a name="public-methods"></a>Métodos públicos
 
 |Nome|Descrição|
 |----------|-----------------|
@@ -574,10 +574,10 @@ O framework mantém controle de quais páginas estão "sujas", ou seja, as pági
 
 ## <a name="see-also"></a>Consulte também
 
-[CMNCTRL1 de exemplo do MFC](../../visual-cpp-samples.md)<br/>
-[CMNCTRL2 de exemplo do MFC](../../visual-cpp-samples.md)<br/>
-[Exemplo MFC PROPDLG](../../visual-cpp-samples.md)<br/>
-[Exemplo MFC SNAPVW](../../visual-cpp-samples.md)<br/>
+[CMNCTRL1 de exemplo do MFC](../../overview/visual-cpp-samples.md)<br/>
+[CMNCTRL2 de exemplo do MFC](../../overview/visual-cpp-samples.md)<br/>
+[Exemplo MFC PROPDLG](../../overview/visual-cpp-samples.md)<br/>
+[Exemplo MFC SNAPVW](../../overview/visual-cpp-samples.md)<br/>
 [Classe CDialog](../../mfc/reference/cdialog-class.md)<br/>
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
 [Classe CPropertySheet](../../mfc/reference/cpropertysheet-class.md)<br/>

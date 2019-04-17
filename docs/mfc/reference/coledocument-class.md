@@ -52,12 +52,12 @@ helpviewer_keywords:
 - COleDocument [MFC], OnUpdatePasteLinkMenu
 - COleDocument [MFC], OnUpdatePasteMenu
 ms.assetid: dc2ecb99-03e1-44c7-bb69-48056dd1b672
-ms.openlocfilehash: 7f36557a4a993e8abd3004dc59372cc5a089e044
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: d1922c2f2d804c2a93d30dc0708b2d3ae037414d
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259744"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768699"
 ---
 # <a name="coledocument-class"></a>Classe COleDocument
 
@@ -71,13 +71,13 @@ class COleDocument : public CDocument
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
 |[COleDocument::COleDocument](#coledocument)|Constrói um objeto `COleDocument`.|
 
-### <a name="public-methods"></a>Métodos Públicos
+### <a name="public-methods"></a>Métodos públicos
 
 |Nome|Descrição|
 |----------|-----------------|
@@ -544,7 +544,7 @@ Isso permite que o framework solicitar ao usuário para salvar o documento antes
 
 ## <a name="see-also"></a>Consulte também
 
-[CONTÊINER de amostra MFC](../../visual-cpp-samples.md)<br/>
-[Exemplo MFC MFCBIND](../../visual-cpp-samples.md)<br/>
+[CONTÊINER de amostra MFC](../../overview/visual-cpp-samples.md)<br/>
+[Exemplo MFC MFCBIND](../../overview/visual-cpp-samples.md)<br/>
 [Classe CDocument](../../mfc/reference/cdocument-class.md)<br/>
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)

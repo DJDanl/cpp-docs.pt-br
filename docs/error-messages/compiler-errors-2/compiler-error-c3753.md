@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3753
 ms.assetid: a5b99e28-796c-4107-a673-97c2ae3bb2b9
-ms.openlocfilehash: b6b1e8c3241a778b29045e734fffebb663554e62
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7c9c078e72babc85dc7092b8d6414625e9c0db7b
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50498365"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58771091"
 ---
 # <a name="compiler-error-c3753"></a>Erro do compilador C3753
 
@@ -19,7 +19,7 @@ uma propriedade de generic não é permitida
 
 Listas de parâmetro genérico podem aparecer somente em funções, estruturas ou classes gerenciadas.
 
-Para obter mais informações, consulte [genéricos](../../windows/generics-cpp-component-extensions.md) e [propriedade](../../windows/property-cpp-component-extensions.md).
+Para obter mais informações, consulte [genéricos](../../extensions/generics-cpp-component-extensions.md) e [propriedade](../../extensions/property-cpp-component-extensions.md).
 
 ## <a name="example"></a>Exemplo
 

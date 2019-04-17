@@ -92,12 +92,12 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCVisualManagerOffice2003 Class [MFC]
 ms.assetid: 115482cd-e349-450a-8dc4-c6023d092aab
-ms.openlocfilehash: c3b0a031db8ff843bb43f7dfa69f046d6ae99a96
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: dd62ea4073ae1982f01a279a411c8d11e8e5cec3
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57273264"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776200"
 ---
 # <a name="cmfcvisualmanageroffice2003-class"></a>Classe CMFCVisualManagerOffice2003
 
@@ -207,7 +207,7 @@ Você usa o `CMFCVisualManagerOffice2003` classe para alterar a aparência visua
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir demonstra como definir o Gerenciador visual do office 2003. Este trecho de código faz parte do [amostra de demonstração de alerta da área de trabalho](../../visual-cpp-samples.md).
+O exemplo a seguir demonstra como definir o Gerenciador visual do office 2003. Este trecho de código faz parte do [amostra de demonstração de alerta da área de trabalho](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_DesktopAlertDemo#6](../../mfc/reference/codesnippet/cpp/cmfcvisualmanageroffice2003-class_1.cpp)]
 

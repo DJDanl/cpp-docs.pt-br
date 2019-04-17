@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CMFCDesktopAlertWnd [MFC], SetSmallCaption
 - CMFCDesktopAlertWnd [MFC], SetTransparency
 ms.assetid: 73a2dd7b-ea84-4ae2-9830-7cf6e8dd2425
-ms.openlocfilehash: 6b7d72b048d9f44233f96a3af859315ea20e9747
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 3ff74f5025d888077b51f8191f043237597dfdbe
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57291633"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776967"
 ---
 # <a name="cmfcdesktopalertwnd-class"></a>Classe CMFCDesktopAlertWnd
 
@@ -120,7 +120,7 @@ Use as seguintes funções para controlar o comportamento da janela de alerta da
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir ilustra como usar vários métodos na `CMFCDesktopAlertWnd` classe para configurar um `CMFCDesktopAlertWnd` objeto. O exemplo mostra como definir um tipo de animação, definir a transparência da janela pop-up, especifique que a janela de alerta exibe uma legenda curta e definir o tempo decorrido antes que a janela de alerta é fechado automaticamente. O exemplo também demonstra como criar e inicializar a janela de alerta da área de trabalho. Este trecho de código faz parte do [amostra de demonstração de alerta da área de trabalho](../../visual-cpp-samples.md).
+O exemplo a seguir ilustra como usar vários métodos na `CMFCDesktopAlertWnd` classe para configurar um `CMFCDesktopAlertWnd` objeto. O exemplo mostra como definir um tipo de animação, definir a transparência da janela pop-up, especifique que a janela de alerta exibe uma legenda curta e definir o tempo decorrido antes que a janela de alerta é fechado automaticamente. O exemplo também demonstra como criar e inicializar a janela de alerta da área de trabalho. Este trecho de código faz parte do [amostra de demonstração de alerta da área de trabalho](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_DesktopAlertDemo#1](../../mfc/reference/codesnippet/cpp/cmfcdesktopalertwnd-class_1.cpp)]
 
