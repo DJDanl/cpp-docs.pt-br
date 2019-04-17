@@ -5,12 +5,12 @@ helpviewer_keywords:
 - applications [OLE], OLE container
 - OLE containers [MFC], implementing
 ms.assetid: af1e2079-619a-4eac-9327-985ad875823a
-ms.openlocfilehash: 0ab91316c9ee07296fbc46f9f17b3c46c71ee96f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: b0d737a2025ed0006db00425d42c02ebf0bdeda8
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57271418"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767880"
 ---
 # <a name="containers-implementing-a-container"></a>Contêineres: Implementando um contêiner
 
@@ -36,7 +36,7 @@ Esses recursos são fornecidos para você automaticamente quando você usa o Ass
 
 1. Implemente um `OnSize` manipulador de mensagem para informar uma OLE inseridos item que ele precisa alterar seu retângulo para refletir a alteração no tamanho do modo de exibição que contém.
 
-Como a implementação desses recursos varia significativamente de um aplicativo para o próximo, o Assistente de aplicativo fornece apenas uma implementação básica. Provavelmente, você precisará personalizar essas funções para que seu aplicativo funcione corretamente. Para obter um exemplo disso, consulte a [CONTÊINER](../visual-cpp-samples.md) exemplo.
+Como a implementação desses recursos varia significativamente de um aplicativo para o próximo, o Assistente de aplicativo fornece apenas uma implementação básica. Provavelmente, você precisará personalizar essas funções para que seu aplicativo funcione corretamente. Para obter um exemplo disso, consulte a [CONTÊINER](../overview/visual-cpp-samples.md) exemplo.
 
 #### <a name="to-handle-embedded-and-linked-items"></a>Para lidar com itens vinculados e inseridos
 
@@ -44,7 +44,7 @@ Como a implementação desses recursos varia significativamente de um aplicativo
 
 1. Substituir `OnChange`, `OnChangeItemPosition`, e `OnGetItemPosition`. Essas funções tratam de dimensionamento, posicionamento e modificando os itens vinculados e inseridos.
 
-O Assistente para aplicativo derivará a classe para você, mas você provavelmente precisará substituir `OnChange` e as outras funções são listadas com ele na etapa 2 do procedimento anterior. As implementações de esqueleto precisam ser personalizado para a maioria dos aplicativos, porque essas funções são implementadas de forma diferente de um aplicativo para o próximo. Para obter exemplos de isso, consulte os exemplos MFC [DRAWCLI](../visual-cpp-samples.md) e [CONTÊINER](../visual-cpp-samples.md).
+O Assistente para aplicativo derivará a classe para você, mas você provavelmente precisará substituir `OnChange` e as outras funções são listadas com ele na etapa 2 do procedimento anterior. As implementações de esqueleto precisam ser personalizado para a maioria dos aplicativos, porque essas funções são implementadas de forma diferente de um aplicativo para o próximo. Para obter exemplos de isso, consulte os exemplos MFC [DRAWCLI](../overview/visual-cpp-samples.md) e [CONTÊINER](../overview/visual-cpp-samples.md).
 
 Você deve adicionar um número de itens para a estrutura do menu do aplicativo de contêiner para dar suporte a OLE. Para obter mais informações sobre isso, consulte [Menus e recursos: Adições de contêiner](../mfc/menus-and-resources-container-additions.md).
 

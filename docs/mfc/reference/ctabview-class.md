@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CTabView [MFC], IsScrollBar
 - CTabView [MFC], OnActivateView
 ms.assetid: 8e6ecd9d-d28d-432b-8ec8-0446f0204d52
-ms.openlocfilehash: 5ac62d04c38dbddda90d2f33a9c14c9c131fcd9c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 56640edbd0d2e74a1cc00dad5441350ad3d35725
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57326589"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772079"
 ---
 # <a name="ctabview-class"></a>Classe CTabView
 
@@ -65,7 +65,7 @@ Essa classe facilita a colocar uma exibição com guias em um aplicativo de docu
 
 Por exemplo, você pode ter um documento que pode ser representado de formas diferentes: como uma planilha, um gráfico, um formulário editável e assim por diante. Você pode criar exibições individuais, os dados de desenho, conforme necessário, inseri-los em seu `CTabView`-objeto derivado e tê-las com guias sem qualquer codificação adicional.
 
-[Exemplo de TabbedView: Aplicativo de exibição com guias MFC](../../visual-cpp-samples.md) ilustra o uso de `CTabView`.
+[Exemplo de TabbedView: Aplicativo de exibição com guias MFC](../../overview/visual-cpp-samples.md) ilustra o uso de `CTabView`.
 
 ## <a name="example"></a>Exemplo
 

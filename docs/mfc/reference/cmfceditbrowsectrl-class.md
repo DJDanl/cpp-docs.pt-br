@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CMFCEditBrowseCtrl [MFC], OnIllegalFileName
 - CMFCEditBrowseCtrl [MFC], SetBrowseButtonImage
 ms.assetid: 69cfd886-3d35-4bee-8901-7c88fcf9520f
-ms.openlocfilehash: 8d1f603f8439815c92360af40ccb807446d0e84a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 0c6fb39e17e22bcac60d50b87f7370c6a9f91db9
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57273277"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770672"
 ---
 # <a name="cmfceditbrowsectrl-class"></a>Classe CMFCEditBrowseCtrl
 
@@ -45,7 +45,7 @@ class CMFCEditBrowseCtrl : public CEdit
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
@@ -88,7 +88,7 @@ O `CMFCEditBrowseCtrl` classe dá suporte a modos a seguir.
 
    Uma caixa de diálogo de seleção de pasta padrão é exibida quando o usuário clica no botão Procurar.
 
-## <a name="how-to-specify-an-edit-browse-control"></a>Como: Especifique um controle de navegação de edição
+## <a name="how-to-specify-an-edit-browse-control"></a>Como fazer: Especifique um controle de navegação de edição
 
 Execute as seguintes etapas para incorporar um controle de edição de procurar em seu aplicativo:
 
@@ -120,7 +120,7 @@ Execute as seguintes etapas para incorporar um controle de edição de procurar 
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir demonstra como usar dois métodos de `CMFCEditBrowseCtrl` classe: `EnableFolderBrowseButton` e `EnableFileBrowseButton`. Este exemplo é parte do [exemplo de novos controles](../../visual-cpp-samples.md).
+O exemplo a seguir demonstra como usar dois métodos de `CMFCEditBrowseCtrl` classe: `EnableFolderBrowseButton` e `EnableFileBrowseButton`. Este exemplo é parte do [exemplo de novos controles](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#6](../../mfc/reference/codesnippet/cpp/cmfceditbrowsectrl-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#7](../../mfc/reference/codesnippet/cpp/cmfceditbrowsectrl-class_2.cpp)]

@@ -59,12 +59,12 @@ helpviewer_keywords:
 - ID_FILE_NEW command [MFC]
 - ID_INDICATOR_NUM command
 ms.assetid: a7883b46-23f7-4870-ac3a-804aed9258b5
-ms.openlocfilehash: 4c066521ba2b5be9ac24a8abaece42e57b8ad85f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 8d568760cc75a4c1f2ddb6dd88108cc830783194
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57279336"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775825"
 ---
 # <a name="tn022-standard-commands-implementation"></a>TN022: Implementação de comandos padrão
 
@@ -221,7 +221,7 @@ Para cada ID de comando, há uma sequência de prompt de linha de mensagem padr�
 
    Atualmente, não há nenhuma implementação padrão para esse comando. Você deve implementar isso para cada `CView`-classe derivada.
 
-   Se você optar por implementar esse comando, é recomendável que você use essa ID de comando. Consulte o exemplo de Tutorial do MFC [RABISCO](../visual-cpp-samples.md) para um exemplo de implementação.
+   Se você optar por implementar esse comando, é recomendável que você use essa ID de comando. Consulte o exemplo de Tutorial do MFC [RABISCO](../overview/visual-cpp-samples.md) para um exemplo de implementação.
 
 - ID_EDIT_COPY copia a seleção atual na área de transferência.
 
@@ -438,7 +438,7 @@ Para cada ID de comando, há uma sequência de prompt de linha de mensagem padr�
 
    Todos os aplicativos de cliente OLE devem implementar esse comando. O AppWizard, com a opção OLE, criará uma implementação esqueleto de `OnInsertObject` em sua classe de exibição que você precisará concluir.
 
-   Consulte a amostra OLE do MFC [OCLIENT](../visual-cpp-samples.md) exemplo para uma implementação completa desse comando.
+   Consulte a amostra OLE do MFC [OCLIENT](../overview/visual-cpp-samples.md) exemplo para uma implementação completa desse comando.
 
 - Links ID_OLE_EDIT_LINKS edita OLE
 

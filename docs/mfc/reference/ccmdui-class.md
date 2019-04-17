@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CCmdUI [MFC], m_pOther
 - CCmdUI [MFC], m_pSubMenu
 ms.assetid: 04eaaaf5-f510-48ab-b425-94665ba24766
-ms.openlocfilehash: 12d9ead736a84d89b04f7b68ed76da8ccea22d0c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c1d44638779f9b5caf052106ac172110d309b69f
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57302865"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770883"
 ---
 # <a name="ccmdui-class"></a>Classe CCmdUI
 
@@ -231,6 +231,6 @@ Um ponteiro para uma cadeia de caracteres de texto.
 
 ## <a name="see-also"></a>Consulte também
 
-[Exemplo MFC MDI](../../visual-cpp-samples.md)<br/>
+[Exemplo MFC MDI](../../overview/visual-cpp-samples.md)<br/>
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
 [Classe CCmdTarget](../../mfc/reference/ccmdtarget-class.md)

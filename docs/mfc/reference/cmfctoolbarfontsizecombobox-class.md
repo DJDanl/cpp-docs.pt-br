@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CMFCToolBarFontSizeComboBox [MFC], RebuildFontSizes
 - CMFCToolBarFontSizeComboBox [MFC], SetTwipSize
 ms.assetid: 72e0c44c-6a0e-4194-a71f-ab64e3afb9b5
-ms.openlocfilehash: a1dd85ed7bf80f5307bf0bd07ef5ef74875c8562
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 43832f6c9b02c43fbe4a05cbea3add8783150113
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57258938"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767659"
 ---
 # <a name="cmfctoolbarfontsizecombobox-class"></a>Classe CMFCToolBarFontSizeComboBox
 
@@ -39,7 +39,7 @@ class CMFCToolBarFontSizeComboBox : public CMFCToolBarComboBoxButton
 |----------|-----------------|
 |[CMFCToolBarFontSizeComboBox::CMFCToolBarFontSizeComboBox](#cmfctoolbarfontsizecombobox)|Constrói um objeto `CMFCToolBarFontSizeComboBox`.|
 
-### <a name="public-methods"></a>Métodos Públicos
+### <a name="public-methods"></a>Métodos públicos
 
 |Nome|Descrição|
 |----------|-----------------|
@@ -57,7 +57,7 @@ Quando o usuário seleciona uma nova fonte em uma `CMFCToolBarFontComboBox` do o
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir demonstra como usar vários métodos na `CMFCToolBarFontSizeComboBox` classe para configurar um `CMFCToolBarFontSizeComboBox` objeto. O exemplo ilustra como recuperar o tamanho da fonte, em twips, a caixa de texto, preencher a caixa de combinação do tamanho de fonte com todos os tamanhos válidos de determinada fonte e especifique o tamanho da fonte em twips. Este trecho de código é parte do [exemplo de Word Pad](../../visual-cpp-samples.md).
+O exemplo a seguir demonstra como usar vários métodos na `CMFCToolBarFontSizeComboBox` classe para configurar um `CMFCToolBarFontSizeComboBox` objeto. O exemplo ilustra como recuperar o tamanho da fonte, em twips, a caixa de texto, preencher a caixa de combinação do tamanho de fonte com todos os tamanhos válidos de determinada fonte e especifique o tamanho da fonte em twips. Este trecho de código é parte do [exemplo de Word Pad](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_WordPad#8](../../mfc/reference/codesnippet/cpp/cmfctoolbarfontsizecombobox-class_1.cpp)]
 

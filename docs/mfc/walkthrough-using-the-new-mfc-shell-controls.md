@@ -4,12 +4,12 @@ ms.date: 09/20/2018
 helpviewer_keywords:
 - shell controls (MFC)
 ms.assetid: f0015caa-199d-4aaf-9501-5a239fce9095
-ms.openlocfilehash: 9314eec7c02ed0286a7ae3fcf14bae6572dd710c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: ef0e4856a844503f8d13b7b6ed37318b76b6af69
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57288776"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772144"
 ---
 # <a name="walkthrough-using-the-new-mfc-shell-controls"></a>Passo a passo: Usando os novos controles de Shell MFC
 
@@ -166,7 +166,7 @@ Este passo a passo pressupõe que você configurou o Visual Studio para usar **c
 
 - O assistente criou uma barra do Outlook com ambos um **pastas** painel e um **calendário** painel. Provavelmente não faz sentido ter um **calendário** painel em um **Explorer** janela, portanto, remova esse painel agora.
 
-- O `CMFCShellListCtrl` suporta a exibição de arquivos em modos diferentes, como **ícones grandes**, **ícones pequenos**, **lista**, e **detalhes**. Atualize seu aplicativo para implementar essa funcionalidade. Dica: consulte [exemplos do Visual C++](../visual-cpp-samples.md).
+- O `CMFCShellListCtrl` suporta a exibição de arquivos em modos diferentes, como **ícones grandes**, **ícones pequenos**, **lista**, e **detalhes**. Atualize seu aplicativo para implementar essa funcionalidade. Dica: consulte [exemplos do Visual C++](../overview/visual-cpp-samples.md).
 
 ## <a name="see-also"></a>Consulte também
 

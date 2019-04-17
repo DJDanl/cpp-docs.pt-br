@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CMFCStatusBar [MFC], SetTipText
 - CMFCStatusBar [MFC], OnDrawPane
 ms.assetid: f2960d1d-f4ed-41e8-bd99-0382b2f8d88e
-ms.openlocfilehash: 94876dcf6549842a5fedbd96a93ef2cc760225ce
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 87f75769e2f400a7721a8c9089d6c5596c31a4e3
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57326745"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775953"
 ---
 # <a name="cmfcstatusbar-class"></a>Classe CMFCStatusBar
 
@@ -138,26 +138,26 @@ class CMFCStatusBar : public CPane
 
 ## <a name="remarks"></a>Comentários
 
-O diagrama a seguir mostra uma figura da barra de status de [amostra de demonstração da barra de Status](../../visual-cpp-samples.md) aplicativo.
+O diagrama a seguir mostra uma figura da barra de status de [amostra de demonstração da barra de Status](../../overview/visual-cpp-samples.md) aplicativo.
 
 ![Exemplo de CMFCStatusBar](../../mfc/reference/media/cmfcstatusbar.png "exemplo de CMFCStatusBar")
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir demonstra as variáveis locais que o aplicativo usa para chamar vários métodos `CMFCStatusBar` classe. Essas variáveis são declaradas no StatusBarDemoView.h. O quadro principal é declarado em MainFrm.h, o documento é declarado em StatusBarDemoDoc.h e o modo de exibição é declarado em StatusBarDemoView.h. Este trecho de código faz parte do [amostra de demonstração da barra de Status](../../visual-cpp-samples.md).
+O exemplo a seguir demonstra as variáveis locais que o aplicativo usa para chamar vários métodos `CMFCStatusBar` classe. Essas variáveis são declaradas no StatusBarDemoView.h. O quadro principal é declarado em MainFrm.h, o documento é declarado em StatusBarDemoDoc.h e o modo de exibição é declarado em StatusBarDemoView.h. Este trecho de código faz parte do [amostra de demonstração da barra de Status](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_StatusBarDemo#9](../../mfc/reference/codesnippet/cpp/cmfcstatusbar-class_1.h)]
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir demonstra como obter uma referência a `CMFCStatusBar` objeto introduzindo o `GetStatusBar` método em MainFrm.h e, em seguida, chamar esse método da `GetStatusBar` método na StatusBarDemoView.h. Este trecho de código faz parte do [amostra de demonstração da barra de Status](../../visual-cpp-samples.md).
+O exemplo a seguir demonstra como obter uma referência a `CMFCStatusBar` objeto introduzindo o `GetStatusBar` método em MainFrm.h e, em seguida, chamar esse método da `GetStatusBar` método na StatusBarDemoView.h. Este trecho de código faz parte do [amostra de demonstração da barra de Status](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_StatusBarDemo#7](../../mfc/reference/codesnippet/cpp/cmfcstatusbar-class_2.h)]
 [!code-cpp[NVC_MFC_StatusBarDemo#8](../../mfc/reference/codesnippet/cpp/cmfcstatusbar-class_3.h)]
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir demonstra como chamar vários métodos `CMFCStatusBar` classe no StatusBarDemoView.cpp. As constantes são declaradas no MainFrm.h. O exemplo mostra como definir o ícone, definir o texto de dica de ferramenta do painel de barra de status, exibir uma barra de progresso no painel de dados especificado, atribuir uma animação ao painel especificado, o texto e a largura do painel da barra de status e o indicador de progresso atual do progr barra de ESS do painel da barra de status. Este trecho de código faz parte do [amostra de demonstração da barra de Status](../../visual-cpp-samples.md).
+O exemplo a seguir demonstra como chamar vários métodos `CMFCStatusBar` classe no StatusBarDemoView.cpp. As constantes são declaradas no MainFrm.h. O exemplo mostra como definir o ícone, definir o texto de dica de ferramenta do painel de barra de status, exibir uma barra de progresso no painel de dados especificado, atribuir uma animação ao painel especificado, o texto e a largura do painel da barra de status e o indicador de progresso atual do progr barra de ESS do painel da barra de status. Este trecho de código faz parte do [amostra de demonstração da barra de Status](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_StatusBarDemo#6](../../mfc/reference/codesnippet/cpp/cmfcstatusbar-class_4.h)]
 [!code-cpp[NVC_MFC_StatusBarDemo#1](../../mfc/reference/codesnippet/cpp/cmfcstatusbar-class_5.cpp)]

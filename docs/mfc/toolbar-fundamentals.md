@@ -20,12 +20,12 @@ helpviewer_keywords:
 - frame window classes [MFC], toolbar embedded in
 - LoadToolBar method [MFC]
 ms.assetid: cc00aaff-8a56-433b-b0c0-b857d76b4ffd
-ms.openlocfilehash: 39e790e5152dd07ab40901140ecdd8f8791a446e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 9c784db2e1a482b313147e6837d6bbbd16d0ecb4
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57258392"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775485"
 ---
 # <a name="toolbar-fundamentals"></a>Fundamentos da barra de ferramentas
 
@@ -62,7 +62,7 @@ Barra de ferramentas criação ocorre em `CMainFrame::OnCreate`. Chamadas MFC [O
 1. Chama funções para habilitar o encaixe, flutuante e dicas de ferramenta. Para obter detalhes sobre essas chamadas, consulte o artigo [encaixe e barras de ferramentas flutuante](../mfc/docking-and-floating-toolbars.md).
 
 > [!NOTE]
->  O exemplo de MFC geral [DOCKTOOL](../visual-cpp-samples.md) inclui ilustrações das barras de ferramentas MFC novas e antigas. As barras de ferramentas que usam `COldToolbar` exigem chamadas na etapa 2 para `LoadBitmap` (em vez de `LoadToolBar`) e, ao `SetButtons`. As novas barras de ferramentas exigem chamadas para `LoadToolBar`.
+>  O exemplo de MFC geral [DOCKTOOL](../overview/visual-cpp-samples.md) inclui ilustrações das barras de ferramentas MFC novas e antigas. As barras de ferramentas que usam `COldToolbar` exigem chamadas na etapa 2 para `LoadBitmap` (em vez de `LoadToolBar`) e, ao `SetButtons`. As novas barras de ferramentas exigem chamadas para `LoadToolBar`.
 
 O encaixe, flutuante e chamadas de dicas de ferramenta são opcionais. Você pode remover as linhas de um `OnCreate` se você preferir. O resultado é uma barra de ferramentas que permanece fixo, não é possível float ou encaixe-o novamente e não é possível exibir dicas de ferramenta.
 

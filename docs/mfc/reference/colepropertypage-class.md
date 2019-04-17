@@ -38,12 +38,12 @@ helpviewer_keywords:
 - COlePropertyPage [MFC], SetModifiedFlag
 - COlePropertyPage [MFC], SetPageName
 ms.assetid: e9972872-8e6b-4550-905e-d36a274d64dc
-ms.openlocfilehash: 55f4b7304d0b50004585b55142804e0bb4234c16
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 8253b2c2fa6b93ec51c7ede983ef710eed039970
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57271249"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776980"
 ---
 # <a name="colepropertypage-class"></a>Classe COlePropertyPage
 
@@ -57,13 +57,13 @@ class AFX_NOVTABLE COlePropertyPage : public CDialog
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
 |[COlePropertyPage::COlePropertyPage](#colepropertypage)|Constrói um objeto `COlePropertyPage`.|
 
-### <a name="public-methods"></a>Métodos Públicos
+### <a name="public-methods"></a>Métodos públicos
 
 |Nome|Descrição|
 |----------|-----------------|
@@ -385,8 +385,8 @@ Ponteiro para uma cadeia de caracteres que contém o nome da página de propried
 
 ## <a name="see-also"></a>Consulte também
 
-[CIRC3 de exemplo do MFC](../../visual-cpp-samples.md)<br/>
-[Exemplo MFC TESTHELP](../../visual-cpp-samples.md)<br/>
+[CIRC3 de exemplo do MFC](../../overview/visual-cpp-samples.md)<br/>
+[Exemplo MFC TESTHELP](../../overview/visual-cpp-samples.md)<br/>
 [Classe CDialog](../../mfc/reference/cdialog-class.md)<br/>
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
 [Classe CDialog](../../mfc/reference/cdialog-class.md)

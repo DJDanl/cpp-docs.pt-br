@@ -6,12 +6,12 @@ ms.date: 03/25/2019
 ms.topic: tutorial
 ms.devlang: cpp
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
-ms.openlocfilehash: b558b2e0c381b8521fe0ba5f18647a933175ce07
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.openlocfilehash: f1e6b06c3212ae3ff192fdf402c0167575161656
+ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "58866959"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59430706"
 ---
 # <a name="create-a-c-console-app-project"></a>Criar um projeto de aplicativo de console C++
 
@@ -34,6 +34,9 @@ O Visual Studio usa os *projetos* para organizar o código em um aplicativo e as
 1. Na lista de modelos de projeto, escolha **Aplicativo de Console** e, em seguida, escolha **Avançar**.
 
    ![Escolher o modelo de aplicativo de console](./media/calc-vs2019-choose-console-app.png "Escolher o modelo de aplicativo de console")
+
+   > [!Important]
+   > É preciso que você escolha a versão do C++ do modelo do **Aplicativo de Console**. Ele tem as marcas **C++**, **Windows** e **Console**, enquanto o ícone tem "++" no canto.
 
 1. Na caixa de diálogo **Configurar novo projeto**, selecione a caixa de edição **Nome do projeto**, dê ao novo projeto o nome *CalculatorTutorial* e, em seguida, escolha **Criar**.
 

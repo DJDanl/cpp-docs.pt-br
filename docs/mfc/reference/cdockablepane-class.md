@@ -132,12 +132,12 @@ helpviewer_keywords:
 - CDockablePane [MFC], m_bHideInAutoHideMode
 - CDockablePane [MFC], m_nSlideSteps
 ms.assetid: e2495f4c-765f-48f9-a2e2-e45e47608d91
-ms.openlocfilehash: c78634c93bda94940b2834a61d276f63522e4aeb
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: a9d7c4ea941884435c9ecfac54a1d42649c6dbd5
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57271899"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769687"
 ---
 # <a name="cdockablepane-class"></a>Classe CDockablePane
 
@@ -151,7 +151,7 @@ class CDockablePane : public CPane
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
@@ -290,7 +290,7 @@ As dicas a seguir se aplicam a `CDockablePane` objetos:
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir demonstra como configurar uma `CDockablePane` objeto usando vários métodos no `CDockablePane` classe. O exemplo ilustra como habilitar ocultar automaticamente todos os recursos para o painel encaixável, habilite a legenda ou garra, habilitar o modo de ocultamento automático, mostrar o painel e animar um painel que está no modo de ocultamento automático. Este trecho de código faz parte do [amostra de demonstração do Visual Studio](../../visual-cpp-samples.md).
+O exemplo a seguir demonstra como configurar uma `CDockablePane` objeto usando vários métodos no `CDockablePane` classe. O exemplo ilustra como habilitar ocultar automaticamente todos os recursos para o painel encaixável, habilite a legenda ou garra, habilitar o modo de ocultamento automático, mostrar o painel e animar um painel que está no modo de ocultamento automático. Este trecho de código faz parte do [amostra de demonstração do Visual Studio](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#27](../../mfc/codesnippet/cpp/cdockablepane-class_1.cpp)]
 [!code-cpp[NVC_MFC_VisualStudioDemo#28](../../mfc/codesnippet/cpp/cdockablepane-class_2.cpp)]

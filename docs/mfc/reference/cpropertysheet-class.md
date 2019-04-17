@@ -52,12 +52,12 @@ helpviewer_keywords:
 - CPropertySheet [MFC], SetWizardMode
 - CPropertySheet [MFC], m_psh
 ms.assetid: 8461ccff-d14f-46e0-a746-42ad642ef94e
-ms.openlocfilehash: 03f9e5e0cac9cc71080bfe97d6a3115fd3cc99b5
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 0e5194a356684f2ff86d74a0ed1f37f332bcffeb
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57418991"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781647"
 ---
 # <a name="cpropertysheet-class"></a>Classe CPropertySheet
 
@@ -71,13 +71,13 @@ class CPropertySheet : public CWnd
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
 |[CPropertySheet::CPropertySheet](#cpropertysheet)|Constrói um objeto `CPropertySheet`.|
 
-### <a name="public-methods"></a>Métodos Públicos
+### <a name="public-methods"></a>Métodos públicos
 
 |Nome|Descrição|
 |----------|-----------------|
@@ -830,9 +830,9 @@ Chame `SetWizardMode` antes de chamar [DoModal](#domodal). Depois de chamar `Set
 
 ## <a name="see-also"></a>Consulte também
 
-[CMNCTRL1 de exemplo do MFC](../../visual-cpp-samples.md)<br/>
-[CMNCTRL2 de exemplo do MFC](../../visual-cpp-samples.md)<br/>
-[Exemplo MFC PROPDLG](../../visual-cpp-samples.md)<br/>
-[Exemplo MFC SNAPVW](../../visual-cpp-samples.md)<br/>
+[CMNCTRL1 de exemplo do MFC](../../overview/visual-cpp-samples.md)<br/>
+[CMNCTRL2 de exemplo do MFC](../../overview/visual-cpp-samples.md)<br/>
+[Exemplo MFC PROPDLG](../../overview/visual-cpp-samples.md)<br/>
+[Exemplo MFC SNAPVW](../../overview/visual-cpp-samples.md)<br/>
 [Classe CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)

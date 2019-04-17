@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CMFCShellListCtrl [MFC], Refresh
 - CMFCShellListCtrl [MFC], SetItemTypes
 ms.assetid: ad472958-5586-4c50-aadf-1844c30bf6e7
-ms.openlocfilehash: a08cfff3996d3dce617cf80293a96675083a39d1
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: a513a5e85ae5cf00f7ea874967a709245e016b34
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57302540"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772105"
 ---
 # <a name="cmfcshelllistctrl-class"></a>Classe CMFCShellListCtrl
 
@@ -92,7 +92,7 @@ Um [CMFCShellTreeCtrl](../../mfc/reference/cmfcshelltreectrl-class.md) objeto po
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir demonstra como criar um objeto do `CMFCShellListCtrl` classe e como exibir a pasta pai da pasta exibida no momento. Este trecho de código faz parte de [amostra do Gerenciador de](../../visual-cpp-samples.md).
+O exemplo a seguir demonstra como criar um objeto do `CMFCShellListCtrl` classe e como exibir a pasta pai da pasta exibida no momento. Este trecho de código faz parte de [amostra do Gerenciador de](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_Explorer#1](../../mfc/reference/codesnippet/cpp/cmfcshelllistctrl-class_1.h)]
 [!code-cpp[NVC_MFC_Explorer#2](../../mfc/reference/codesnippet/cpp/cmfcshelllistctrl-class_2.cpp)]

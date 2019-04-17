@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3255
 ms.assetid: 877ffca2-fd92-44b6-9060-6091b928b1c1
-ms.openlocfilehash: a5b483f3aaa82e543d561cb7c550495069a19f7c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 129d2698a782d2b98267877e8d575a6ee641b94b
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519932"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772040"
 ---
 # <a name="compiler-error-c3255"></a>Erro do compilador C3255
 
 tipo de valor: não é possível alocar dinamicamente este objeto de tipo value em heap nativo
 
-Instâncias de um tipo de valor (consulte [Classes e Structs](../../windows/classes-and-structs-cpp-component-extensions.md)) que contêm membros gerenciados podem ser criados na pilha, mas não no heap.
+Instâncias de um tipo de valor (consulte [Classes e Structs](../../extensions/classes-and-structs-cpp-component-extensions.md)) que contêm membros gerenciados podem ser criados na pilha, mas não no heap.
 
 O exemplo a seguir gera C3255:
 

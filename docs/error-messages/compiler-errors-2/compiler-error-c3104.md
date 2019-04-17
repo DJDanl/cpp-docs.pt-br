@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3104
 ms.assetid: b5648d47-e5d3-4b45-a3c0-f46e04eae731
-ms.openlocfilehash: 71a5943f65f4bd490ecb02824fef7a96741709f1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3b2737bd67798fd467649be175d581ca551e1331
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50540317"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770623"
 ---
 # <a name="compiler-error-c3104"></a>Erro do compilador C3104
 
@@ -19,7 +19,7 @@ argumento de atributo inválido
 
 Você especificou um argumento inválido para um atributo.
 
-Ver [tipos de parâmetro de atributo](../../windows/attribute-parameter-types-cpp-component-extensions.md) para obter mais informações.
+Ver [tipos de parâmetro de atributo](../../extensions/attribute-parameter-types-cpp-component-extensions.md) para obter mais informações.
 
 Esse erro pode ser gerado como resultado do trabalho de conformidade do compilador que foi feito para o Visual C++ 2005: ao passar matrizes gerenciadas para atributos personalizados, o tipo da matriz não é deduzido da lista de inicialização de agregação. O compilador agora requer que você especifique o tipo de matriz, bem como a lista de inicializadores.
 

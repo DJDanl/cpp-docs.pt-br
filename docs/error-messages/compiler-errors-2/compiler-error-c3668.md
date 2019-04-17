@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3668
 ms.assetid: 53a96698-bde4-4447-95b5-b5108291f60c
-ms.openlocfilehash: 7bc03050518055bb3167ee2ce9d1e1fcd88b59b0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 770294eb58c09024ddfb4269357b77de7b7ea7d0
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50504553"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58771793"
 ---
 # <a name="compiler-error-c3668"></a>Erro do compilador C3668
 
@@ -19,7 +19,7 @@ ms.locfileid: "50504553"
 
 Uma função de tentativa de substituir uma função não existente.
 
-Para obter mais informações, consulte [substituições explícitas](../../windows/explicit-overrides-cpp-component-extensions.md).
+Para obter mais informações, consulte [substituições explícitas](../../extensions/explicit-overrides-cpp-component-extensions.md).
 
 ## <a name="example"></a>Exemplo
 

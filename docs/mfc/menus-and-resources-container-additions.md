@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CONTAIN tutorial [MFC]
 - Links menu item [MFC]
 ms.assetid: 425448be-8ca0-412e-909a-a3a9ce845288
-ms.openlocfilehash: ad3431f78d3637bcdfdb0266c8abdb43047ca28d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: b1a74fef743592d3d052226dac926fc7ddc58578
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57279323"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770337"
 ---
 # <a name="menus-and-resources-container-additions"></a>Menus e recursos: Adições de contêiner
 
@@ -29,7 +29,7 @@ Este artigo explica as alterações que precisam ser feitas para os menus e outr
 
 Em aplicativos de contêiner, os dois tipos de alterações precisam ser feitas: modificações aos recursos existentes para dar suporte à edição visual do OLE e adição de novos recursos usada para ativação no local. Se você usar o Assistente de aplicativo para criar seu aplicativo de contêiner, essas etapas serão executadas para você, mas eles podem exigir alguma personalização.
 
-Se você não usar o Assistente de aplicativo, você talvez queira examinar OCLIENT. RC, o script de recurso para o aplicativo de exemplo OCLIENT, para ver como essas alterações são implementadas. Consulte a amostra OLE do MFC [OCLIENT](../visual-cpp-samples.md).
+Se você não usar o Assistente de aplicativo, você talvez queira examinar OCLIENT. RC, o script de recurso para o aplicativo de exemplo OCLIENT, para ver como essas alterações são implementadas. Consulte a amostra OLE do MFC [OCLIENT](../overview/visual-cpp-samples.md).
 
 Os tópicos abordados neste artigo incluem:
 
@@ -62,7 +62,7 @@ Pequenas alterações em recursos de tabela do acelerador do aplicativo de cont�
 |--------|---------|----------|
 |ID_CANCEL_EDIT_CNTR|VK_ESCAPE|**VIRTKEY**|
 
-A segunda alteração é criar uma nova tabela do acelerador correspondente para o novo recurso de menu criado para ativação no local. Esta tabela tem entradas para os menus de arquivo e janela além da entrada VK_ESCAPE acima. O exemplo a seguir é a tabela de aceleradores criada para a ativação in-loco no exemplo de MFC [CONTÊINER](../visual-cpp-samples.md):
+A segunda alteração é criar uma nova tabela do acelerador correspondente para o novo recurso de menu criado para ativação no local. Esta tabela tem entradas para os menus de arquivo e janela além da entrada VK_ESCAPE acima. O exemplo a seguir é a tabela de aceleradores criada para a ativação in-loco no exemplo de MFC [CONTÊINER](../overview/visual-cpp-samples.md):
 
 |ID|Chave|Tipo|
 |--------|---------|----------|

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - drag and drop [MFC], about OLE drag and drop
 - OLE drag and drop [MFC]
 ms.assetid: a4595350-ca06-4400-88a1-f0175c76b77b
-ms.openlocfilehash: 277f82874426a008f598c052966ad81f46c45732
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 98bd58745e56a62bf5700e9b5fe4963a7b584953
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57305036"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58766789"
 ---
 # <a name="drag-and-drop-ole"></a>Arrastar e soltar (OLE)
 
@@ -26,7 +26,7 @@ Quando você usa o arrastar e soltar OLE, você remove duas etapas do processo. 
 
 Usando o OLE arrastar e soltar, os dados podem ser transferidos de um local para outro dentro de um documento, entre documentos diferentes ou entre aplicativos. Ele pode ser implementado em um contêiner ou um aplicativo de servidor e qualquer aplicativo pode ser uma origem para soltar, um destino de soltar ou ambos. Se um aplicativo tiver suporte a origem de soltar e o destino de soltar implementado, arrastar e soltar está habilitada entre janelas filho, ou em uma janela. Esse recurso pode tornar seu aplicativo muito mais fácil de usar.
 
-Se você quiser usar os recursos de arrastar e soltar do OLE, consulte [arrastar e soltar: Personalizando](../mfc/drag-and-drop-customizing.md). Você pode usar as técnicas explicadas neste artigo para fazer com que aplicativos não são OLE remover fontes. O artigo [arrastar e soltar: Implementando um destino de soltar](../mfc/drag-and-drop-implementing-a-drop-target.md) descreve como implementar o suporte de destino de soltar para OLE e aplicativos não são OLE. Também será útil examinar os exemplos de OLE do MFC [OCLIENT](../visual-cpp-samples.md) e [HIERSVR](../visual-cpp-samples.md).
+Se você quiser usar os recursos de arrastar e soltar do OLE, consulte [arrastar e soltar: Personalizando](../mfc/drag-and-drop-customizing.md). Você pode usar as técnicas explicadas neste artigo para fazer com que aplicativos não são OLE remover fontes. O artigo [arrastar e soltar: Implementando um destino de soltar](../mfc/drag-and-drop-implementing-a-drop-target.md) descreve como implementar o suporte de destino de soltar para OLE e aplicativos não são OLE. Também será útil examinar os exemplos de OLE do MFC [OCLIENT](../overview/visual-cpp-samples.md) e [HIERSVR](../overview/visual-cpp-samples.md).
 
 Se você não leu a [objetos de dados e fontes de dados (OLE)](../mfc/data-objects-and-data-sources-ole.md) família de artigos, você talvez queira fazer isso agora. Estes artigos explicam os conceitos básicos da transferência de dados e como implementá-lo em seus aplicativos.
 

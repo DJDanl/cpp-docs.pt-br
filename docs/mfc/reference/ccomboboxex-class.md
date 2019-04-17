@@ -36,12 +36,12 @@ helpviewer_keywords:
 - CComboBoxEx [MFC], SetItem
 - CComboBoxEx [MFC], SetWindowTheme
 ms.assetid: 33ca960a-2409-478c-84a4-a2ee8ecfe8f7
-ms.openlocfilehash: 44943803fdb422ccbf77302e7c81f23c34cc7433
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: c3fd57510a38d597b827f80ab98a0be280ad31e3
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420747"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767763"
 ---
 # <a name="ccomboboxex-class"></a>Classe CComboBoxEx
 
@@ -55,13 +55,13 @@ class CComboBoxEx : public CComboBox
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
 |[CComboBoxEx::CComboBoxEx](#ccomboboxex)|Constrói um objeto `CComboBoxEx`.|
 
-### <a name="public-methods"></a>Métodos Públicos
+### <a name="public-methods"></a>Métodos públicos
 
 |Nome|Descrição|
 |----------|-----------------|
@@ -470,7 +470,7 @@ Essa função membro emula a funcionalidade dos [CBEM_SETWINDOWTHEME](/windows/d
 
 ## <a name="see-also"></a>Consulte também
 
-[Exemplo MFC MFCIE](../../visual-cpp-samples.md)<br/>
+[Exemplo MFC MFCIE](../../overview/visual-cpp-samples.md)<br/>
 [Classe CComboBox](../../mfc/reference/ccombobox-class.md)<br/>
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
 [Classe CComboBox](../../mfc/reference/ccombobox-class.md)

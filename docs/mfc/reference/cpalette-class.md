@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CPalette [MFC], ResizePalette
 - CPalette [MFC], SetPaletteEntries
 ms.assetid: 8cd95498-53ed-4852-85e1-70e522541114
-ms.openlocfilehash: 8abd03ff2b133eb6040799eff6879a19a64783ef
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: f0105a8ee33a57f7431a9c6a97b4b132f291f42a
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57274655"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770779"
 ---
 # <a name="cpalette-class"></a>Classe CPalette
 
@@ -45,7 +45,7 @@ class CPalette : public CGdiObject
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
@@ -326,7 +326,7 @@ Para obter mais informações sobre a estrutura do Windows `PALETTEENTRY`, consu
 
 ## <a name="see-also"></a>Consulte também
 
-[Exemplo MFC DIBLOOK](../../visual-cpp-samples.md)<br/>
+[Exemplo MFC DIBLOOK](../../overview/visual-cpp-samples.md)<br/>
 [Classe CGdiObject](../../mfc/reference/cgdiobject-class.md)<br/>
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
 [CPalette::GetPaletteEntries](#getpaletteentries)<br/>

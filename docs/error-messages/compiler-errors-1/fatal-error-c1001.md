@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C1001
 ms.assetid: 5736cdb3-22c8-4fad-aa85-d5e0d2b232f4
-ms.openlocfilehash: a7130ed0568de387c99b8296dc4e10d92baec337
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: beb382b9c6ccf80d01f5a0262832e7fb7e1ea0a4
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57821359"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770922"
 ---
 # <a name="fatal-error-c1001"></a>Erro fatal C1001
 
@@ -23,4 +23,4 @@ Geralmente, você pode corrigir um problema de otimização, removendo uma ou ma
 
 Se as otimizações não são responsáveis pelo erro, tente reescrever a linha em que o erro é relatado, ou várias linhas de código ao redor dessa linha. Para ver o código de forma que o compilador vê-lo após o pré-processamento, você pode usar o [/P (pré-processar em um arquivo)](../../build/reference/p-preprocess-to-a-file.md) opção.
 
-Para obter mais informações sobre como isolar a origem do erro e como relatar um erro interno do compilador para a Microsoft, consulte [como relatar um problema com o conjunto de ferramentas do Visual C++](../../how-to-report-a-problem-with-the-visual-cpp-toolset.md).
+Para obter mais informações sobre como isolar a origem do erro e como relatar um erro interno do compilador para a Microsoft, consulte [como relatar um problema com o conjunto de ferramentas do Visual C++](../../overview/how-to-report-a-problem-with-the-visual-cpp-toolset.md).

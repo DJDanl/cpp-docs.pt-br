@@ -52,12 +52,12 @@ helpviewer_keywords:
 - CView [MFC], OnPrint
 - CView [MFC], OnUpdate
 ms.assetid: 9cff3c56-7564-416b-b9a4-71a9254ed755
-ms.openlocfilehash: fe9b282fd248f8dd03a6a7f078c03866d1b14b2d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 06c6d4dff28399f3d8e6ac7f46d9ed751850036f
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57305010"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775303"
 ---
 # <a name="cview-class"></a>Classe CView
 
@@ -77,7 +77,7 @@ class AFX_NOVTABLE CView : public CWnd
 |----------|-----------------|
 |[CView::CView](#cview)|Constrói um objeto `CView`.|
 
-### <a name="public-methods"></a>Métodos Públicos
+### <a name="public-methods"></a>Métodos públicos
 
 |Nome|Descrição|
 |----------|-----------------|
@@ -351,7 +351,7 @@ Um valor da DROPEFFECT enumerado tipo, que indica o tipo de soltar que ocorreria
 
 - DROPEFFECT_MOVE para MK_ALT cria uma cópia do objeto solto e excluir o objeto original. Isso normalmente é o efeito de soltar padrão, quando o modo de exibição pode aceitar esse objeto de dados.
 
-Para obter mais informações, consulte o exemplo de conceitos avançados MFC [OCLIENT](../../visual-cpp-samples.md).
+Para obter mais informações, consulte o exemplo de conceitos avançados MFC [OCLIENT](../../overview/visual-cpp-samples.md).
 
 ### <a name="remarks"></a>Comentários
 
@@ -405,7 +405,7 @@ Um valor da DROPEFFECT enumerado tipo, que indica o tipo de soltar que ocorreria
 
 - DROPEFFECT_MOVE para MK_ALT cria uma cópia do objeto solto e excluir o objeto original. Isso normalmente é o efeito de soltar padrão, quando o modo de exibição pode aceitar o objeto de dados.
 
-Para obter mais informações, consulte o exemplo de conceitos avançados MFC [OCLIENT](../../visual-cpp-samples.md).
+Para obter mais informações, consulte o exemplo de conceitos avançados MFC [OCLIENT](../../overview/visual-cpp-samples.md).
 
 ### <a name="remarks"></a>Comentários
 
@@ -445,7 +445,7 @@ Um valor da DROPEFFECT enumerado tipo, que indica o tipo de soltar que ocorreria
 
 - DROPEFFECT_SCROLL indica que uma operação de arrastar rolagem está prestes a ocorrer ou se está ocorrendo no modo de exibição de destino.
 
-Para obter mais informações, consulte o exemplo de conceitos avançados MFC [OCLIENT](../../visual-cpp-samples.md).
+Para obter mais informações, consulte o exemplo de conceitos avançados MFC [OCLIENT](../../overview/visual-cpp-samples.md).
 
 ### <a name="remarks"></a>Comentários
 
@@ -871,7 +871,7 @@ Se *lHint* é 0 e *pHint* for NULL, o documento enviou uma notificação de atua
 
 ## <a name="see-also"></a>Consulte também
 
-[Exemplo MFC MDIDOCVW](../../visual-cpp-samples.md)<br/>
+[Exemplo MFC MDIDOCVW](../../overview/visual-cpp-samples.md)<br/>
 [Classe CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
 [Classe CWnd](../../mfc/reference/cwnd-class.md)<br/>

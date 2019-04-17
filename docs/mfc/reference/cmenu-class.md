@@ -84,12 +84,12 @@ helpviewer_keywords:
 - CMenu [MFC], TrackPopupMenuEx
 - CMenu [MFC], m_hMenu
 ms.assetid: 40cacfdc-d45c-4ec7-bf28-991c72812499
-ms.openlocfilehash: bdc5f2ebf20949f63b3892ee8e8c6eedf05e2838
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 464b59f7e598ea1901cf88c47c5887cbbf308607
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57293856"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770844"
 ---
 # <a name="cmenu-class"></a>Classe CMenu
 
@@ -103,13 +103,13 @@ class CMenu : public CObject
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
 |[CMenu::CMenu](#cmenu)|Constrói um objeto `CMenu`.|
 
-### <a name="public-methods"></a>Métodos Públicos
+### <a name="public-methods"></a>Métodos públicos
 
 |Nome|Descrição|
 |----------|-----------------|
@@ -561,7 +561,7 @@ Ver [CWnd::OnDrawItem](../../mfc/reference/cwnd-class.md#ondrawitem) para obter 
 
 ### <a name="example"></a>Exemplo
 
-O código a seguir é de MFC [CTRLTEST](../../visual-cpp-samples.md) exemplo:
+O código a seguir é de MFC [CTRLTEST](../../overview/visual-cpp-samples.md) exemplo:
 
 [!code-cpp[NVC_MFCWindowing#24](../../mfc/reference/codesnippet/cpp/cmenu-class_4.cpp)]
 
@@ -1094,7 +1094,7 @@ Ver [CWnd::OnMeasureItem](../../mfc/reference/cwnd-class.md#onmeasureitem) para 
 
 ### <a name="example"></a>Exemplo
 
-O código a seguir é de MFC [CTRLTEST](../../visual-cpp-samples.md) exemplo:
+O código a seguir é de MFC [CTRLTEST](../../overview/visual-cpp-samples.md) exemplo:
 
 [!code-cpp[NVC_MFCWindowing#31](../../mfc/reference/codesnippet/cpp/cmenu-class_11.cpp)]
 
@@ -1484,8 +1484,8 @@ Um menu pop-up flutuante pode aparecer em qualquer lugar na tela. Para obter mai
 
 ## <a name="see-also"></a>Consulte também
 
-[Exemplo MFC CTRLTEST](../../visual-cpp-samples.md)<br/>
-[Exemplo MFC DYNAMENU](../../visual-cpp-samples.md)<br/>
+[Exemplo MFC CTRLTEST](../../overview/visual-cpp-samples.md)<br/>
+[Exemplo MFC DYNAMENU](../../overview/visual-cpp-samples.md)<br/>
 [Classe CObject](../../mfc/reference/cobject-class.md)<br/>
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
 [Classe CObject](../../mfc/reference/cobject-class.md)
