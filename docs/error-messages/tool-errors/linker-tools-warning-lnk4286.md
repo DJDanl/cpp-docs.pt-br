@@ -1,18 +1,18 @@
 ---
-title: Aviso LNK4286 ferramentas de vinculador
-ms.date: 04/09/2019
+title: Aviso LNK4286 (Ferramentas de Vinculador)
+ms.date: 04/15/2019
 f1_keywords:
 - LNK4286
 helpviewer_keywords:
 - LNK4286
-ms.openlocfilehash: f4ab9104c68534eaf1278a6cacb91623c24a237b
-ms.sourcegitcommit: 0ad3f4517e64900a2702dd3d366586f9e2bce2c2
+ms.openlocfilehash: 43ed18808ba5ce632dd7dc7095f7bc30e4497ec9
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/10/2019
-ms.locfileid: "59477626"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59674221"
 ---
-# <a name="linker-tools-warning-lnk4286"></a>Aviso LNK4286 ferramentas de vinculador
+# <a name="linker-tools-warning-lnk4286"></a>Aviso LNK4286 (Ferramentas de Vinculador)
 
 > símbolo de '*símbolo*'definido em'*filename_1.obj*'é importado por'*filename_2.obj*'
 
@@ -31,5 +31,5 @@ Para obter mais informações sobre importar e exportar dados de declarações, 
 ## <a name="see-also"></a>Consulte também
 
 [Aviso LNK4049 ferramentas de vinculador](linker-tools-warning-lnk4049.md) \
-[Aviso LNK4286 ferramentas de vinculador](linker-tools-warning-lnk4286.md) \
+[Aviso LNK4217 ferramentas de vinculador](linker-tools-warning-lnk4217.md) \
 [dllexport, dllimport](../../cpp/dllexport-dllimport.md)

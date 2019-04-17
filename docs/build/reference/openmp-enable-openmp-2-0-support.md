@@ -1,6 +1,6 @@
 ---
-title: /openmp (habilitar suporte a OpenMP 2.0)
-ms.date: 11/04/2016
+title: /OpenMP (Habilitar suporte a OpenMP)
+ms.date: 04/15/2019
 f1_keywords:
 - /openmp
 - VC.Project.VCCLCompilerTool.OpenMP
@@ -8,50 +8,60 @@ helpviewer_keywords:
 - /openmp compiler option [C++]
 - -openmp compiler option [C++]
 ms.assetid: 9082b175-18d3-4378-86a7-c0eb95664e13
-ms.openlocfilehash: f1edcc6d29a5b84106b3a5fd91d2446c34e0f7b9
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: caa06d89c590abd2b3a74a5a6b118d6ba4acd910
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57807462"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59674260"
 ---
-# <a name="openmp-enable-openmp-20-support"></a>/openmp (habilitar suporte a OpenMP 2.0)
+# <a name="openmp-enable-openmp-support"></a>/OpenMP (Habilitar suporte a OpenMP)
 
-Faz com que o compilador processar `#pragma` [omp](../../preprocessor/omp.md).
+Faz com que o compilador processar [ `#pragma omp` ](../../preprocessor/omp.md) diretivas para dar suporte a OpenMP.
 
 ## <a name="syntax"></a>Sintaxe
 
-```
-/openmp
-```
+::: moniker range=">= vs-2019"
+
+> **/openmp**\[**:**__experimental__]
+
+::: moniker-end
+
+::: moniker range="<= vs-2017"
+
+> **/openmp**
+
+::: moniker-end
 
 ## <a name="remarks"></a>Comentários
 
 `#pragma omp` é usado para especificar [diretivas](../../parallel/openmp/reference/openmp-directives.md) e [cláusulas](../../parallel/openmp/reference/openmp-clauses.md). Se **/openmp** não for especificado em uma compilação, o compilador ignora cláusulas e diretivas OpenMP. [Função OpenMP](../../parallel/openmp/reference/openmp-functions.md) chamadas são processadas pelo mesmo-se compilador **/openmp** não for especificado.
 
-Aplicativos compilados com **/openmp** e **/clr** só pode ser executado em um processo de domínio de aplicativo único; não há suporte para vários domínios de aplicativo. Ou seja, quando o construtor de módulo (. cctor) é executado, ele detectará o processo é compilado com **/openmp** e se o aplicativo está sendo carregado em um tempo de execução não padrão. Para obter mais informações, consulte [appdomain](../../cpp/appdomain.md), [/clr (compilação de tempo de execução de linguagem comum)](clr-common-language-runtime-compilation.md), e [inicialização de Assemblies mistos](../../dotnet/initialization-of-mixed-assemblies.md).
+::: moniker range=">= vs-2019"
 
-Se você tentar carregar um aplicativo compilado com **/openmp** e **/clr** em um domínio de aplicativo não padrão, um <xref:System.TypeInitializationException> exceção será lançada fora do depurador e um OpenMPWithMultipleAppdomainsException exceção será lançada no depurador.
+O C++ no momento, o compilador é compatível com o padrão de OpenMP 2.0. No entanto, o Visual Studio de 2019 agora também oferece funcionalidade SIMD. Para usar SIMD, compilar, usando o **/openmp: experimental** opção. Essa opção permite que os dois recursos comuns de OpenMP e SIMD OpenMP recursos adicionais não disponíveis ao usar o **/openmp** alternar.
+
+::: moniker-end
+
+Aplicativos compilados usando ambos **/openmp** e **/clr** só pode ser executado em um processo de domínio de aplicativo único. Não há suporte para vários domínios de aplicativo. Ou seja, quando o construtor de módulo (`.cctor`) é executado, ele detecta se o processo é compilado usando **/openmp**, e se o aplicativo for carregado em um tempo de execução não padrão. Para obter mais informações, consulte [appdomain](../../cpp/appdomain.md), [/clr (compilação de tempo de execução de linguagem comum)](clr-common-language-runtime-compilation.md), e [inicialização de Assemblies mistos](../../dotnet/initialization-of-mixed-assemblies.md).
+
+Se você tentar carregar um aplicativo compilado usando ambos **/openmp** e **/clr** em um domínio de aplicativo não padrão, uma <xref:System.TypeInitializationException> exceção for lançada fora do depurador e um `OpenMPWithMultipleAppdomainsException` exceção é lançada no depurador.
 
 Essas exceções também podem ser geradas nas seguintes situações:
 
-- Se seu aplicativo compilado com **/clr**, mas não com **/openmp**, é carregado em um domínio de aplicativo não padrão, mas em que o processo inclui um aplicativo que foi compilado com **/ OpenMP**.
+- Se seu aplicativo for compilado usando **/clr** , mas não **/openmp**e é carregado em um domínio de aplicativo não padrão, em que o processo inclui um aplicativo compilado usando **/openmp**.
 
-- Se você passar seu **/clr** aplicativo a um utilitário, como regasm.exe ([Regasm.exe (ferramenta de registro de Assembly)](/dotnet/framework/tools/regasm-exe-assembly-registration-tool)), que carrega seus assemblies de destino em um domínio de aplicativo não padrão.
+- Se você passar seu **/clr** aplicativo a um utilitário, como [regasm.exe](/dotnet/framework/tools/regasm-exe-assembly-registration-tool), que carrega seus assemblies de destino em um domínio de aplicativo não padrão.
 
 Segurança de acesso do código do common language runtime não funciona nas regiões do OpenMP. Se você aplicar um atributo de segurança de acesso de código do CLR fora de uma região paralela, ficará em vigor na região paralela.
 
-Microsoft avisa que não gravar **/openmp** aplicativos que permite parcialmente confiáveis chamadores, usando <xref:System.Security.AllowPartiallyTrustedCallersAttribute>, ou quaisquer atributos de segurança de acesso do código CLR.
+A Microsoft não recomenda que você escreva **/openmp** aplicativos que permitem parcialmente confiável para os chamadores. Não use <xref:System.Security.AllowPartiallyTrustedCallersAttribute>, ou quaisquer atributos de segurança de acesso do código CLR.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio
 
 1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [propriedades de compilador e de build definida C++ no Visual Studio](../working-with-project-properties.md).
 
-1. Expanda o nó **Propriedades de Configuração**.
-
-1. Expanda o **C/C++** nó.
-
-1. Selecione o **linguagem** página de propriedades.
+1. Expanda o **propriedades de configuração** > **C /C++** > **idioma** página de propriedades.
 
 1. Modificar a **suporte para OpenMP** propriedade.
 
@@ -61,13 +71,13 @@ Microsoft avisa que não gravar **/openmp** aplicativos que permite parcialmente
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir mostra alguns dos efeitos de inicialização de threadpool em vez de usar threadpool depois de iniciado para cima. Supondo que um x64, único núcleo, o pool de threads de processador duplo leva aproximadamente 16 ms para inicialização. Depois no entanto há muito pouco custo para o pool de threads.
+O exemplo a seguir mostra alguns dos efeitos de inicialização do pool de thread em vez de usar o pool de segmentos, depois de iniciada. Supondo que um x64, núcleo único, processador duplo, o pool de threads leva aproximadamente 16 ms para ser inicializado. Depois disso, não há é pouco custo extra para o pool de threads.
 
-Quando você compila com **/openmp**, a segunda chamada para test2 nunca é executado mais tempo do que se você compilar com **/openmp-**, pois não há nenhuma inicialização threadpool. Em iterações de um milhão de **/openmp** versão é mais rápido do que o **/openmp-** versão para a segunda chamada para test2 e em 25 iterações **/openmp-** e **/openmp** versões register menor do que a granularidade de relógio.
+Quando você compila usando **/openmp**, a segunda chamada para test2 nunca é executado mais tempo do que se você compilar usando **/openmp-**, pois não há nenhuma inicialização do pool de thread. Em um milhão de iterações, o **/openmp** versão é mais rápido do que o **/openmp-** versão para a segunda chamada para test2. Em 25 iterações, ambos **/openmp-** e **/openmp** versões register menor do que a granularidade de relógio.
 
-Portanto, se você tiver apenas um loop em seu aplicativo e ele é executado em menos de 15 ms (ajustada para a sobrecarga aproximada em seu computador), **/openmp** pode não ser apropriado, mas se for nada mais do que isso, você talvez queira considerar o uso de **/openmp**.
+Se você tiver apenas um loop em seu aplicativo e ele é executado em menos de 15 ms (ajustadas para a sobrecarga aproximada em seu computador), **/openmp** pode não ser apropriado. Se ele for maior, você talvez queira considerar o uso **/openmp**.
 
-```
+```cpp
 // cpp_compiler_options_openmp.cpp
 #include <omp.h>
 #include <stdio.h>
@@ -113,5 +123,6 @@ int main(int argc, char* argv[]) {
 
 ## <a name="see-also"></a>Consulte também
 
-[Opções do compilador MSVC](compiler-options.md)<br/>
-[Sintaxe de linha de comando do compilador MSVC](compiler-command-line-syntax.md)
+[Opções do compilador MSVC](compiler-options.md) \
+[Sintaxe de linha de comando do compilador MSVC](compiler-command-line-syntax.md) \
+[OpenMP no MSVC](../../parallel/openmp/openmp-in-visual-cpp.md)

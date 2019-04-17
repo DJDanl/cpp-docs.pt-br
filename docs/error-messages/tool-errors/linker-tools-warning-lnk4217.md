@@ -1,23 +1,25 @@
 ---
 title: Aviso LNK4217 (Ferramentas de Vinculador)
-ms.date: 04/09/2019
+ms.date: 04/15/2019
 f1_keywords:
 - LNK4217
 helpviewer_keywords:
 - LNK4217
 ms.assetid: 280dc03e-5933-4e8d-bb8c-891fbe788738
-ms.openlocfilehash: 3fcb806afa064a4f6d9c9c0680c617662a3b9a21
-ms.sourcegitcommit: 0ad3f4517e64900a2702dd3d366586f9e2bce2c2
+ms.openlocfilehash: f1ea3cd0a8770571ae5c55d29a901c134311550f
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/10/2019
-ms.locfileid: "59477386"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59674234"
 ---
 # <a name="linker-tools-warning-lnk4217"></a>Aviso LNK4217 (Ferramentas de Vinculador)
 
 > símbolo de '*símbolo*'definido em'*filename_1.obj*'é importado por'*filename_2.obj*'na função'*função*'
 
 [__declspec(DllImport)](../../cpp/dllexport-dllimport.md) foi especificado para um símbolo, embora o símbolo é definido em um arquivo de objetos na mesma imagem. Remover o `__declspec(dllimport)` modificador para resolver este aviso.
+
+## <a name="remarks"></a>Comentários
 
 *símbolo* é o nome do símbolo que é definido dentro da imagem. *função* é a função que está importando o símbolo.
 
@@ -42,3 +44,9 @@ __declspec(dllexport) void func(unsigned short*) {}
 ```
 
 A tentativa de vincular esses dois módulos resultará em LNK4217. Compile o segundo exemplo com a biblioteca de importação da primeira amostra para resolver.
+
+## <a name="see-also"></a>Consulte também
+
+[Aviso LNK4049 ferramentas de vinculador](linker-tools-warning-lnk4049.md) \
+[Aviso LNK4286 ferramentas de vinculador](linker-tools-warning-lnk4286.md) \
+[dllexport, dllimport](../../cpp/dllexport-dllimport.md)
