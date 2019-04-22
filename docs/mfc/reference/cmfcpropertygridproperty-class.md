@@ -167,10 +167,10 @@ helpviewer_keywords:
 - CMFCPropertyGridProperty [MFC], m_strFormatShort
 ms.assetid: 36f3fabe-0efe-468b-8a0b-5a7956db38a2
 ms.openlocfilehash: aa88cc2d4ee915b970157ee6ed280512e2352bcc
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58779021"
 ---
 # <a name="cmfcpropertygridproperty-class"></a>Classe CMFCPropertyGridProperty
@@ -406,7 +406,7 @@ void AllowEdit(BOOL bAllow=TRUE);
 
 ### <a name="parameters"></a>Parâmetros
 
-*bPermitir*<br/>
+*bAllow*<br/>
 [in] TRUE para tornar a propriedade editável; FALSE para tornar a propriedade somente leitura. O valor padrão é TRUE.
 
 ### <a name="remarks"></a>Comentários
@@ -545,7 +545,7 @@ void Enable(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>Parâmetros
 
-*bAtivar*<br/>
+*bEnable*<br/>
 [in] TRUE para habilitar a propriedade; FALSE para desabilitar a propriedade. Propriedades desabilitadas não respondem ao mouse ou teclado de entrada. O valor padrão é TRUE.
 
 ### <a name="remarks"></a>Comentários
@@ -563,13 +563,13 @@ void EnableSpinControl(
 
 ### <a name="parameters"></a>Parâmetros
 
-*bAtivar*<br/>
+*bEnable*<br/>
 [in] True para habilitar o controle de botão de rotação; FALSE para desabilitar o controle de botão de rotação. O valor padrão é TRUE.
 
 *nMin*<br/>
 [in] O valor mínimo do controle de botão de rotação. O valor padrão é 0.
 
-*Nmáx*<br/>
+*nMax*<br/>
 [in] O valor máximo do controle de botão de rotação. O valor padrão é 0.
 
 ### <a name="remarks"></a>Comentários

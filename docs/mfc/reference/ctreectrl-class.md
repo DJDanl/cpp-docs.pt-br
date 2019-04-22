@@ -163,10 +163,10 @@ helpviewer_keywords:
 - CTreeCtrl [MFC], SortChildrenCB
 ms.assetid: 96e20031-6161-4143-8c12-8d1816c66d90
 ms.openlocfilehash: 3819e861b7a5e6ff27fe632a33413b588a5a4835
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58781998"
 ---
 # <a name="ctreectrl-class"></a>Classe CTreeCtrl
@@ -1713,7 +1713,7 @@ COLORREF SetBkColor(COLORREF clr);
 
 ### <a name="parameters"></a>Parâmetros
 
-*CLR*<br/>
+*clr*<br/>
 Um valor COLORREF que contém a nova cor de plano de fundo. Se esse valor é -1, o controle voltará a usar a cor do sistema para a cor do plano de fundo.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -2229,7 +2229,7 @@ COLORREF SetTextColor(COLORREF clr);
 
 ### <a name="parameters"></a>Parâmetros
 
-*CLR*<br/>
+*clr*<br/>
 Um valor COLORREF que contém a nova cor do texto. Se esse argumento for -1, o controle voltará a usar a cor do sistema para a cor do texto.
 
 ### <a name="return-value"></a>Valor de retorno

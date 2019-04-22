@@ -157,10 +157,10 @@ helpviewer_keywords:
 - CMDIFrameWndEx [MFC], m_bDisableSetRedraw
 ms.assetid: dbcafcb3-9a7a-4f11-9dfe-ba57565c81d0
 ms.openlocfilehash: b24afd943f2168657c6b4437fed65b0a45689b52
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58778553"
 ---
 # <a name="cmdiframewndex-class"></a>Classe CMDIFrameWndEx
@@ -641,7 +641,7 @@ void EnableLoadDockState(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parâmetros
 
-*bAtivar*<br/>
+*bEnable*<br/>
 [in] TRUE para habilitar o carregamento do estado de encaixe, FALSE para desabilitar o carregamento do estado de encaixe.
 
 ### <a name="remarks"></a>Comentários
@@ -658,7 +658,7 @@ void EnableMDITabbedGroups(
 
 ### <a name="parameters"></a>Parâmetros
 
-*bAtivar*<br/>
+*bEnable*<br/>
 [in] Se for TRUE, o recurso de grupos com guias MDI estiver habilitado; Se for FALSE, o recurso de grupos com guias MDI está desabilitado.
 
 *params*<br/>
@@ -707,7 +707,7 @@ void EnableMDITabs(
 
 ### <a name="parameters"></a>Parâmetros
 
-*bAtivar*<br/>
+*bEnable*<br/>
 Especifica se as guias estão habilitadas.
 
 *bIcons*<br/>
@@ -719,7 +719,7 @@ Especifica o local dos rótulos de guia.
 *bTabCloseButton*<br/>
 Especifica se deve exibir botões de fechamento de guia.
 
-*Estilo *<br/>
+*style*<br/>
 Especifica o estilo das guias. Use STYLE_3D_SCROLLED para guias normais ou STYLE_3D_ONENOTE para as guias do Microsoft OneNote.
 
 *bTabCustomTooltips*<br/>
@@ -783,7 +783,7 @@ void EnablePaneMenu(
 
 ### <a name="parameters"></a>Parâmetros
 
-*bAtivar*<br/>
+*bEnable*<br/>
 [in] Se for TRUE, a manipulação automática de menu do painel estiver habilitada; Se for FALSE, a manipulação automática está desabilitada.
 
 *uiCustomizeCmd*<br/>
@@ -1047,7 +1047,7 @@ BOOL InsertPane(
 *pTarget*<br/>
 [in] Um ponteiro para o painel antes ou após o qual o painel.
 
-*bDepois*<br/>
+*bAfter*<br/>
 [in] Se for TRUE, *pControlBar* é inserido após *pTarget*. Se for FALSE, *pControlBar* é inserido antes *pTarget*.
 
 ### <a name="return-value"></a>Valor de retorno

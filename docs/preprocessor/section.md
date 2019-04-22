@@ -9,10 +9,10 @@ helpviewer_keywords:
 - section pragma
 ms.assetid: c67215e9-2c4a-4b0f-b691-2414d2e2d96f
 ms.openlocfilehash: 41479d7d8767438d0e59fbe6beb7e435459dcb1b
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59023237"
 ---
 # <a name="section"></a>section
@@ -39,11 +39,11 @@ Quando uma seção é definida, ela permanece válida pelo restante da compilaç
 |-|-|
 |**read**|Permite operações de leitura em dados.|
 |**write**|Permite operações de gravação em dados.|
-|**Executar**|Permite que o código seja executado.|
+|**execute**|Permite que o código seja executado.|
 |**shared**|Compartilha a seção entre todos os processos que carregam a imagem.|
-|**noPage**|Marca a seção como não paginável; útil para drivers de dispositivo do Win32.|
-|**{1&gt;nocache&lt;1}**|Marca a seção como não colocável em cache; útil para drivers de dispositivo do Win32.|
-|**Descartar**|Marca a seção como descartável; útil para drivers de dispositivo do Win32.|
+|**nopage**|Marca a seção como não paginável; útil para drivers de dispositivo do Win32.|
+|**nocache**|Marca a seção como não colocável em cache; útil para drivers de dispositivo do Win32.|
+|**discard**|Marca a seção como descartável; útil para drivers de dispositivo do Win32.|
 |**remove**|Marca a seção como memória não residente; drivers de dispositivo virtual (V*x*1!d) apenas.|
 
 Se você não especificar atributos, a seção terá os atributos de leitura e gravação.

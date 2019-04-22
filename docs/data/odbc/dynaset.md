@@ -11,10 +11,10 @@ helpviewer_keywords:
 - dynasets
 ms.assetid: 2867e6be-208e-4fe7-8bbe-b8697cb1045c
 ms.openlocfilehash: 21c47546d14d9a121bdd0698fe96eb133dbc44a0
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59040404"
 ---
 # <a name="dynaset"></a>Dynaset
@@ -73,4 +73,4 @@ Para obter uma lista de drivers ODBC incluídos nesta versão do Visual C++ e pa
 
 ## <a name="see-also"></a>Consulte também
 
-[Conectividade de banco de dados aberto (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)
+[ODBC (conectividade de banco de dados aberto)](../../data/odbc/open-database-connectivity-odbc.md)

@@ -113,10 +113,10 @@ helpviewer_keywords:
 - CMDIChildWndEx [MFC], UpdateTaskbarTabIcon
 ms.assetid: d39fec06-0bd6-4271-917d-35aae3b24d8e
 ms.openlocfilehash: e12cf9f65e6fd6dd7f68edc4a94103baa5a8df62
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58781751"
 ---
 # <a name="cmdichildwndex-class"></a>Classe CMDIChildWndEx
@@ -547,7 +547,7 @@ BOOL InsertPane(
 *pTarget*<br/>
 [in] Um ponteiro para o painel adjacente.
 
-*bDepois*<br/>
+*bAfter*<br/>
 [in] Se for TRUE, *pControlBar* é inserido após *pTarget*. Se for FALSE, *pControlBar* é inserido antes *pTarget*.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -941,7 +941,7 @@ Especifica um ponteiro para a janela pai de nível superior da janela que está 
 *nHitTest*<br/>
 Especifica o código de área de teste de clique. Um teste de clique é um teste que determina o local do cursor.
 
-*mensagem*<br/>
+*message*<br/>
 Especifica o número de mensagens de mouse.
 
 ### <a name="remarks"></a>Comentários
@@ -1152,7 +1152,7 @@ void EnableTaskbarThumbnailClipRect(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parâmetros
 
-*bAtivar*<br/>
+*bEnable*<br/>
 Especifica se deve ser habilitado (TRUE) ou desabilitar (FALSE) a seleção automática de uma parte da área de cliente de uma janela para exibir.
 
 ### <a name="remarks"></a>Comentários

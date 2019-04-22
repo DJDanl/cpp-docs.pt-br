@@ -6,10 +6,10 @@ f1_keywords:
 - event/Microsoft::WRL::Callback
 ms.assetid: afb15d25-3230-44f7-b321-e17c54872943
 ms.openlocfilehash: d37e6fdd2521f07728305bfbf5441cebb363030a
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59041384"
 ---
 # <a name="callback-function-wrl"></a>Função de retorno de chamada (WRL)
@@ -230,10 +230,10 @@ Um parâmetro de modelo que especifica o tipo do nono argumento do método de re
 *callback*<br/>
 Um objeto que representa o objeto de retorno de chamada e sua função de membro.
 
-*objeto*<br/>
+*object*<br/>
 O objeto cuja função de membro é chamada quando ocorre um evento.
 
-*method*<br/>
+*Método*<br/>
 A função de membro ser chamada quando ocorre um evento.
 
 ## <a name="return-value"></a>Valor de retorno

@@ -1,17 +1,17 @@
 ---
-title: 'Como: Declarar especificadores de substituição (C + + / CLI)'
+title: 'Como: Declarar especificadores de substituição (C++/CLI)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - override specifiers in native compilation, overriding
 ms.assetid: d0551836-9ac7-41eb-a6e9-a4b3ef60767d
 ms.openlocfilehash: db74ef226242ec8f4f70f2769fbc8ba102a808c8
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58777175"
 ---
-# <a name="how-to-declare-override-specifiers-in-native-compilations-ccli"></a>Como: Declarar especificadores de substituição em compilações nativas (C + + / CLI)
+# <a name="how-to-declare-override-specifiers-in-native-compilations-ccli"></a>Como: Declarar especificadores de substituição em compilações nativas (C++/CLI)
 
 [lacrado](../extensions/sealed-cpp-component-extensions.md), [abstrata](../extensions/abstract-cpp-component-extensions.md), e [substituir](../extensions/override-cpp-component-extensions.md) estão disponíveis em compilações que não usam **/ZW** ou [/clr](../build/reference/clr-common-language-runtime-compilation.md).
 

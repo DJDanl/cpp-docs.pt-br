@@ -15,10 +15,10 @@ helpviewer_keywords:
 - licensing ActiveX controls
 ms.assetid: 2b0ee2e0-ae81-4185-9bb9-11da3c99a283
 ms.openlocfilehash: eee53acbb8b0b8432a7d5819fb773b616f0e8897
-ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59424087"
 ---
 # <a name="file-types-created-for-visual-studio-c-projects"></a>Tipos de arquivo criados para projetos do Visual Studio C++
@@ -35,7 +35,7 @@ Muitos tipos de arquivos são associados com projetos do Visual Studio para apli
 
 - [Arquivos de cabeçalho pré-compilado](../creating-precompiled-header-files.md)
 
-- [Arquivos de recursos](resource-files-cpp.md)
+- [Arquivos de recurso](resource-files-cpp.md)
 
 - [Arquivos de ajuda (WinHelp)](help-files-winhelp.md)
 
@@ -49,17 +49,17 @@ A tabela a seguir mostra os arquivos comuns em um projeto do Visual Studio e ide
 
 |Extensão de arquivo|Tipo|Conteúdo|
 |--------------------|----------|--------------|
-|.asmx|Origem|Arquivo de implantação.|
-|.asp|Origem|Arquivo Active Server Page.|
+|.asmx|Source|Arquivo de implantação.|
+|.asp|Source|Arquivo Active Server Page.|
 |.atp|Projeto|Arquivo de projeto de modelo do aplicativo.|
 |.bmp, .dib, .gif, .jpg, .jpe, .png|Recurso|Arquivos de imagem gerais.|
 |.bsc|Compilando|O arquivo de código do navegador.|
-|.cpp, .c|Origem|Arquivos de código-fonte principal do aplicativo.|
+|.cpp, .c|Source|Arquivos de código-fonte principal do aplicativo.|
 |.cur|Recurso|Arquivo gráfico de bitmap do cursor.|
 |.dbp|Projeto|Arquivo de projeto de banco de dados.|
-|.disco|Origem|O arquivo de documento da descoberta dinâmica. Manipula a descoberta de serviço Web XML.|
+|.disco|Source|O arquivo de documento da descoberta dinâmica. Manipula a descoberta de serviço Web XML.|
 |.exe, .dll|Projeto|Arquivos de biblioteca executável ou de vínculo dinâmico.|
-|.h|Origem|Um arquivo de cabeçalho (inclusão).|
+|.h|Source|Um arquivo de cabeçalho (inclusão).|
 |.htm, .html, .xsp, .asp, .htc, .hta, .xml|Recurso|Arquivos da Web comuns.|
 |.HxC|Projeto|Arquivo de projeto da Ajuda.|
 |.ico|Recurso|Arquivo gráfico de bitmap do ícone.|

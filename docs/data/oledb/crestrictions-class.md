@@ -14,10 +14,10 @@ helpviewer_keywords:
 - Open method
 ms.assetid: 0aaa2364-641c-4318-b110-7446aada4b4f
 ms.openlocfilehash: 309bb7e707d649cf78528f3d0df6cf8e43201823
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59040613"
 ---
 # <a name="crestrictions-class"></a>Classe CRestrictions
@@ -75,7 +75,7 @@ HRESULT Open(const CSession& session,
 
 #### <a name="parameters"></a>Parâmetros
 
-*Sessão*<br/>
+*session*<br/>
 [in] Especifica um objeto de sessão existente usado para se conectar à fonte de dados.
 
 *lpszParam*<br/>
@@ -96,6 +96,6 @@ Ver [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) para
 
 ## <a name="see-also"></a>Consulte também
 
-[Modelos de consumidor de banco de dados OLE](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Referência dos modelos de consumidor de banco de dados OLE](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
-[Classes Rowset do esquema e Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)
+[Modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Referência de modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
+[Classes typedef e classes de conjunto de linhas de esquema](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)

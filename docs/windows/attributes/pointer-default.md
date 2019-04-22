@@ -1,5 +1,5 @@
 ---
-title: pointer_default (atributo de COM do C++)
+title: pointer_default (C++ COM atributo)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.pointer_default
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - pointer_default attribute
 ms.assetid: 2d0c7bbc-a1e8-4337-9e54-e304523e2735
 ms.openlocfilehash: 37bd2b16fb7a7c1c186f59897898e08cc73fffae
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59022660"
 ---
 # <a name="pointerdefault"></a>pointer_default
@@ -25,12 +25,12 @@ Especifica o atributo de ponteiro padrão para todos os ponteiros, exceto pontei
 
 ### <a name="parameters"></a>Parâmetros
 
-*Valor *<br/>
+*value*<br/>
 Um valor que descreve o tipo de ponteiro: **ptr**, **ref**, ou **exclusivo**.
 
 ## <a name="remarks"></a>Comentários
 
-O **pointer_default** atributo C++ tem a mesma funcionalidade que o [pointer_default](/windows/desktop/Midl/pointer-default) atributo MIDL.
+O **pointer_default** C++ atributo tem a mesma funcionalidade que o [pointer_default](/windows/desktop/Midl/pointer-default) atributo MIDL.
 
 ## <a name="example"></a>Exemplo
 
@@ -51,5 +51,5 @@ Para obter mais informações sobre os contextos de atributo, consulte [contexto
 
 ## <a name="see-also"></a>Consulte também
 
-[Atributos IDL](idl-attributes.md)<br/>
+[Atributos de IDL](idl-attributes.md)<br/>
 [Atributos de interface](interface-attributes.md)

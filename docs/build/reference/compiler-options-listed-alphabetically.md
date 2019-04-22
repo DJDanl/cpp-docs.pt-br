@@ -4,10 +4,10 @@ ms.date: 04/08/2019
 helpviewer_keywords:
 - compiler options, C++
 ms.openlocfilehash: d8ab1cbac7ad8eb44f16c7829ccac20a6d3e73ff
-ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59424112"
 ---
 # <a name="compiler-options-listed-alphabetically"></a>Opções do compilador listadas em ordem alfabética
@@ -29,7 +29,7 @@ Esta é uma lista alfabética abrangente das opções de compilador. Para obter 
 |[/clr](clr-common-language-runtime-compilation.md)|Produz um arquivo de saída a ser executado no Common Language Runtime.|
 |[/constexpr](constexpr-control-constexpr-evaluation.md)|Avaliação de constexpr de controle em tempo de compilação.|
 |[/D](d-preprocessor-definitions.md)|Define constantes e macros.|
-|[/Diagnostics](diagnostics-compiler-diagnostic-options.md)|Controla o formato das mensagens de diagnóstico.|
+|[/diagnostics](diagnostics-compiler-diagnostic-options.md)|Controla o formato das mensagens de diagnóstico.|
 |[/doc](doc-process-documentation-comments-c-cpp.md)|Processa comentários de documentação em um arquivo XML.|
 |[/E](e-preprocess-to-stdout.md)|Copia a saída do pré-processador para a saída padrão.|
 |[/EH](eh-exception-handling-model.md)|Especifica o modelo de tratamento de exceções.|
@@ -103,7 +103,7 @@ Esta é uma lista alfabética abrangente das opções de compilador. Para obter 
 |[/Ox](ox-full-optimization.md)|Usa a otimização máxima (/Ob2gity /Gs).|
 |[/Oy](oy-frame-pointer-omission.md)|Omite o ponteiro de quadro (somente x86).|
 |[/P](p-preprocess-to-a-file.md)|Grava a saída do pré-processador em um arquivo.|
-|[/permissive--](permissive-standards-conformance.md)|Definir o modo de conformidade com o padrão.|
+|[/permissive-](permissive-standards-conformance.md)|Definir o modo de conformidade com o padrão.|
 |[/Qfast_transcendentals](qfast-transcendentals-force-fast-transcendentals.md)|Gera transcendentais rápidos.|
 |[/QIfist](qifist-suppress-ftol.md)|Preterido. Suprime `_ftol` quando é necessária uma conversão de um tipo de ponto flutuante em um tipo integral (somente x86).|
 |[/Qimprecise_fwaits](qimprecise-fwaits-remove-fwaits-inside-try-blocks.md)|Remove comandos `fwait` dentro de blocos `try`.|
@@ -165,4 +165,4 @@ Esta é uma lista alfabética abrangente das opções de compilador. Para obter 
 ## <a name="see-also"></a>Consulte também
 
 [Opções do compilador MSVC](compiler-options.md)<br/>
-[Sintaxe de linha de comando do compilador MSVC](compiler-command-line-syntax.md)
+[Sintaxe da linha de comando do compilador MSVC](compiler-command-line-syntax.md)

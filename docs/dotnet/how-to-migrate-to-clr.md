@@ -11,10 +11,10 @@ helpviewer_keywords:
 - /clr compiler option [C++], porting to
 ms.assetid: c9290b8b-436a-4510-8b56-eae51f4a9afc
 ms.openlocfilehash: 6ac470b85a14bfe32c7f3fe47168180687669ec6
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58781309"
 ---
 # <a name="how-to-migrate-to-clr"></a>Como: Migrar para /clr
@@ -154,7 +154,7 @@ Em alguns casos, o CLR pode encerrar antes da conclusão do seu código gerencia
 
 Depois de seu aplicativo compila, links e executado, você pode começar a usar recursos do .NET em qualquer módulo compilado com **/clr**. Para obter mais informações, consulte [Extensões de componentes para plataformas de tempo de execução](../extensions/component-extensions-for-runtime-platforms.md).
 
-Se você usou extensões gerenciadas para C++, você pode converter seu código para usar a nova sintaxe. Para obter detalhes sobre como converter extensões gerenciadas para C++, consulte [C + + c++ Primer de migração](../dotnet/cpp-cli-migration-primer.md).
+Se você usou extensões gerenciadas para C++, você pode converter seu código para usar a nova sintaxe. Para obter detalhes sobre como converter extensões gerenciadas do C++, consulte [ C++Primer de migração](../dotnet/cpp-cli-migration-primer.md).
 
 Para obter informações sobre programação no Visual C++ .NET, consulte:
 
