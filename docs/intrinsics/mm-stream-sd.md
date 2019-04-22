@@ -8,15 +8,15 @@ helpviewer_keywords:
 - movntsd instruction
 ms.assetid: 2b4bea5e-e64e-45fa-9afc-88a2e4b82cfc
 ms.openlocfilehash: 3555b71e15d6f9c618a83f573d6da3cda9e7b705
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59023510"
 ---
 # <a name="mmstreamsd"></a>_mm_stream_sd
 
-**Específico da Microsoft**
+**Seção específica da Microsoft**
 
 Grava dados de 64 bits em um local de memória sem poluir os caches.
 
@@ -31,10 +31,10 @@ void _mm_stream_sd(
 
 #### <a name="parameters"></a>Parâmetros
 
-*dest*<br/>
+*Dest*<br/>
 [out] Um ponteiro para o local onde os dados de origem serão gravados.
 
-*Origem*<br/>
+*Source*<br/>
 [in] Um valor de 128 bits que contém o `double` valor a ser gravado em sua parte inferior de 64 bits...
 
 ## <a name="return-value"></a>Valor de retorno
@@ -81,7 +81,7 @@ int main()
 d[0] = -1, d[1] = 1
 ```
 
-**FIM de Específico da Microsoft**
+**Fim da seção específica da Microsoft**
 
 Copyright 2007 por dispositivos Micro avançada, Inc. Todos os direitos reservados. Reproduzido com a permissão do Advanced Micro dispositivos, Inc.
 

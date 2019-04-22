@@ -5,10 +5,10 @@ helpviewer_keywords:
 - enum class, specifying underlying types
 ms.assetid: df8f2b91-b9d2-4fab-9be4-b1d58b8bc570
 ms.openlocfilehash: 9787b7b96f83b2926c65209254c88eb56fe1a8ab
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58774731"
 ---
 # <a name="how-to-define-and-consume-enums-in-ccli"></a>Como: Definir e consumir enums no c++ /CLI CLI
@@ -92,7 +92,7 @@ Operadores &#124; ^ & ~ + + – são definidas apenas para enumerações com tip
 O compilador não faz nenhuma verificação estática ou dinâmica do resultado de uma operação de enumeração; uma operação pode resultar em um valor não está no intervalo de enumeradores de válido da enumeração.
 
 > [!NOTE]
->  C++11 introduz os tipos de classe de enum em código não gerenciado que são significativamente diferentes de classes de enum gerenciado no C + + / CLI. Em particular, o tipo de classe de enumeração C + + 11 não oferece suporte os mesmos operadores como o tipo de classe enum gerenciado em C + + c++ CLI e C + + c++ /CLI código-fonte da CLI deve fornecer declarações de classe de um especificador de acessibilidade na enum gerenciado para diferenciá-los de não gerenciado (C++ 11) declarações de classe enum. Para obter mais informações sobre classes de enumeração no C + + c++ /CLI CLI C + +, c++ /CX e C++ 11, consulte [classe enum](../extensions/enum-class-cpp-component-extensions.md).
+>  C++11 introduz os tipos de classe de enum em código não gerenciado que são significativamente diferentes de classes enum gerenciado no C++/CLI. Em particular, o tipo de classe de enumeração C + + 11 não suporta os mesmos operadores como o tipo de classe enum gerenciado em C++/CLI, e C++/código-fonte da CLI deve fornecer declarações de classe de um especificador de acessibilidade na enum gerenciado para distingui-los do não gerenciado (c++11) declarações de classe de enum. Para obter mais informações sobre classes enum no C++/CLI, C++/CX e c++11, see [classe enum](../extensions/enum-class-cpp-component-extensions.md).
 
 ```
 // mcppv2_enum_5.cpp
@@ -137,4 +137,4 @@ True
 
 ## <a name="see-also"></a>Consulte também
 
-[classe de enum](../extensions/enum-class-cpp-component-extensions.md)
+[enum class](../extensions/enum-class-cpp-component-extensions.md)

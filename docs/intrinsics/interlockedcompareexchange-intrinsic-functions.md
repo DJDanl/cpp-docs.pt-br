@@ -49,15 +49,15 @@ helpviewer_keywords:
 - _InterlockedCompareExchange64_rel intrinsic
 ms.assetid: c3ad79c0-a523-4930-a3a4-69a65d7d5c81
 ms.openlocfilehash: 6c0fabe7cbada87253960faca8e207bb10dd07bd
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59021463"
 ---
 # <a name="interlockedcompareexchange-intrinsic-functions"></a>Funções intrínsecas interlockedcompareexchange
 
-**Específico da Microsoft**
+**Seção específica da Microsoft**
 
 Executa uma comparação e troca sincronizada.
 
@@ -202,7 +202,7 @@ O valor retornado é o valor inicial do ponteiro `Destination`.
 
 ## <a name="remarks"></a>Comentários
 
-`_InterlockedCompareExchange` executa uma comparação atômica do `Destination` valor com o `Comparand` valor. Se o valor `Destination` for igual ao valor `Comparand`, o valor `Exchange` será armazenado no endereço especificado pelo `Destination`. Caso contrário, nenhuma operação será executada.
+`_InterlockedCompareExchange` realiza uma comparação atômica do valor `Destination` com o valor `Comparand`. Se o valor `Destination` for igual ao valor `Comparand`, o valor `Exchange` será armazenado no endereço especificado pelo `Destination`. Caso contrário, nenhuma operação será executada.
 
 `_InterlockedCompareExchange` fornece suporte intrínseco ao compilador para o SDK do Windows Win32 [{3&gt;interlockedcompareexchange&lt;3](/windows/desktop/api/winnt/nf-winnt-interlockedcompareexchange) função.
 
@@ -431,7 +431,7 @@ int main(
 <29
 ```
 
-**FIM de Específico da Microsoft**
+**Fim da seção específica da Microsoft**
 
 ## <a name="see-also"></a>Consulte também
 
@@ -439,4 +439,4 @@ int main(
 [Funções intrínsecas _InterlockedCompareExchangePointer](../intrinsics/interlockedcompareexchangepointer-intrinsic-functions.md)<br/>
 [Intrínsecos do compilador](../intrinsics/compiler-intrinsics.md)<br/>
 [Palavras-chave](../cpp/keywords-cpp.md)<br/>
-[Conflitos com o compilador x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)
+[conflitos com o compilador x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

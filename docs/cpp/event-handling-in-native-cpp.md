@@ -5,15 +5,15 @@ helpviewer_keywords:
 - event handling [C++], Visual C++
 ms.assetid: e4b9219a-15d8-42fb-83c8-6d2e4e087c8d
 ms.openlocfilehash: 93bfcc93c680618ea3a51eabd145548a4f47563a
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58772326"
 ---
 # <a name="event-handling-in-native-c"></a>Tratamento de eventos em C++ nativo
 
-Manipulação de eventos de C++ nativa, você configura um receptor de origem e o evento de eventos usando o [event_source](../windows/attributes/event-source.md) e [event_receiver](../windows/attributes/event-receiver.md) atributos, respectivamente, especificando `type` = `native`. Esses atributos as permitem que as classes às quais eles são aplicados disparem eventos e manipulem eventos em um contexto nativo, e não de COM.
+No formato nativo C++ manipulação de eventos, você configura um receptor de origem e o evento de eventos usando o [event_source](../windows/attributes/event-source.md) e [event_receiver](../windows/attributes/event-receiver.md) atributos, respectivamente, especificando `type` =`native`. Esses atributos as permitem que as classes às quais eles são aplicados disparem eventos e manipulem eventos em um contexto nativo, e não de COM.
 
 ## <a name="declaring-events"></a>Declarando eventos
 

@@ -7,10 +7,10 @@ helpviewer_keywords:
 - struct constructors
 ms.assetid: 3c6ba273-e248-4ff1-8c69-d2abcf1263c6
 ms.openlocfilehash: e9ffd30dd0017e912fd7c196e2d3f0e987fb0810
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58780854"
 ---
 # <a name="struct-c"></a>struct (C++)
@@ -56,7 +56,7 @@ Um tipo de estrutura é um tipo composto definido pelo usuário. É composto de 
 
 No C++, uma estrutura é o mesmo que uma classe, exceto pelo fato de que seus membros são **pública** por padrão.
 
-Para obter informações sobre classes gerenciadas e estruturas em C + + / CLI, consulte [Classes e Structs](../extensions/classes-and-structs-cpp-component-extensions.md).
+Para obter informações sobre classes gerenciadas e estruturas em C++/CLI, consulte [Classes e Structs](../extensions/classes-and-structs-cpp-component-extensions.md).
 
 ## <a name="using-a-structure"></a>Usando uma estrutura
 

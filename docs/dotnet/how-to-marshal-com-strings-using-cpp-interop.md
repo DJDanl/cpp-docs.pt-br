@@ -10,10 +10,10 @@ helpviewer_keywords:
 - COM [C++], marshaling strings
 ms.assetid: 06590759-bf99-4e34-a3a9-4527ea592cc2
 ms.openlocfilehash: e86cf0b3e57eda9a0f4fa5fe2337d0c42de5669f
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58780867"
 ---
 # <a name="how-to-marshal-com-strings-using-c-interop"></a>Como: Cadeias de caracteres COM marshaling usando Interop do C++
@@ -28,7 +28,7 @@ O código a seguir exemplos de uso de [gerenciado, não gerenciado](../preproces
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir demonstra como um BSTR (um formato de cadeia de caracteres usado na programação COM) pode ser passado de gerenciado para uma função não gerenciada. Chamada gerenciada a função usará <xref:System.Runtime.InteropServices.Marshal.StringToBSTR%2A> para obter o endereço de uma representação do BSTR do conteúdo de um System. String do .NET. Esse ponteiro é fixado usando [pin_ptr (C + + / CLI)](../extensions/pin-ptr-cpp-cli.md) para garantir que seu endereço físico não é alterado durante um ciclo de coleta de lixo enquanto executa a função não gerenciada. O coletor de lixo é proibido da mudança de memória até que o [pin_ptr (C + + / CLI)](../extensions/pin-ptr-cpp-cli.md) sai do escopo.
+O exemplo a seguir demonstra como um BSTR (um formato de cadeia de caracteres usado na programação COM) pode ser passado de gerenciado para uma função não gerenciada. Chamada gerenciada a função usará <xref:System.Runtime.InteropServices.Marshal.StringToBSTR%2A> para obter o endereço de uma representação do BSTR do conteúdo de um System. String do .NET. Esse ponteiro é fixado usando [pin_ptr (C++/CLI)](../extensions/pin-ptr-cpp-cli.md) para garantir que seu endereço físico não é alterado durante um ciclo de coleta de lixo enquanto executa a função não gerenciada. O coletor de lixo é proibido da mudança de memória até que o [pin_ptr (C++/CLI)](../extensions/pin-ptr-cpp-cli.md) sai do escopo.
 
 ```
 // MarshalBSTR1.cpp

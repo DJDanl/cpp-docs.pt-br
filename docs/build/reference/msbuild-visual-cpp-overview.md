@@ -5,10 +5,10 @@ helpviewer_keywords:
 - MSBuild overview
 ms.assetid: dd258f6f-ab51-48d9-b274-f7ba911d05ca
 ms.openlocfilehash: 6c8e891f6bf6ed6b3bb3d1c84dbc13b64ab7b868
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59021898"
 ---
 # <a name="msbuild-internals-for-c-projects"></a>Recursos internos de MSBuild para projetos do C++
@@ -90,7 +90,7 @@ A tabela a seguir lista vários destinos útil orientado ao usuário.
 
 ## <a name="see-also"></a>Consulte também
 
-[Referência das tarefas do MSBuild](/visualstudio/msbuild/msbuild-task-reference)<br/>
+[Referência de tarefas do MSBuild](/visualstudio/msbuild/msbuild-task-reference)<br/>
 [Tarefa BscMake](/visualstudio/msbuild/bscmake-task)<br/>
 [Tarefa CL](/visualstudio/msbuild/cl-task)<br/>
 [Tarefa CPPClean](/visualstudio/msbuild/cppclean-task)<br/>

@@ -5,10 +5,10 @@ helpviewer_keywords:
 - friend assemblies, Visual C++
 ms.assetid: 8d55fee0-b7c2-4fbe-a23b-dfe424dc71cd
 ms.openlocfilehash: e469556a773ffcdbf50e53d94022c0b6b7abf869
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58781036"
 ---
 # <a name="friend-assemblies-c"></a>Assemblies amigáveis (C++)
@@ -47,7 +47,7 @@ Embora tipos em escopo global e de escopo de namespace podem ser um assembly de 
 
 Acesso a todos os tipos em um assembly deve ser concedido explicitamente.  Por exemplo, o assembly C não tem acesso a todos os tipos em um assembly se o assembly C faz referência ao assembly B e o assembly B tem acesso a todos os tipos no assembly A.
 
-Para obter informações sobre como assinar — ou seja, como dar um nome forte para — um assembly que é criado usando o compilador do Visual C++, consulte [Assemblies de nome forte (assinatura de Assembly) (C + + c++ CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md).
+Para obter informações sobre como assinar — ou seja, como dar um nome forte para — um assembly que é criado usando o Visual C++ compilador, consulte [Assemblies com nome forte (assinatura de Assembly) (C++/CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md).
 
 Como uma alternativa para usar o recurso de assemblies de amigo, você pode usar <xref:System.Security.Permissions.StrongNameIdentityPermission> para restringir o acesso aos tipos individuais.
 

@@ -21,15 +21,15 @@ helpviewer_keywords:
 - InterlockedExchangePointer intrinsic
 ms.assetid: 0eaca0b0-d79e-406b-892d-b3b462c50bbb
 ms.openlocfilehash: 1f6e66ae4d5524518c3388f5af843cc15f65da50
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59024524"
 ---
 # <a name="interlockedexchangepointer-intrinsic-functions"></a>Funções intrínsecas _InterlockedExchangePointer
 
-**Específico da Microsoft**
+**Seção específica da Microsoft**
 
 Execute uma operação atômica de troca, que copia o endereço passado como o segundo argumento para o primeiro e retorna o endereço original do primeiro.
 
@@ -64,7 +64,7 @@ void * _InterlockedExchangePointer_HLERelease(
 
 #### <a name="parameters"></a>Parâmetros
 
-*Destino*<br/>
+*Target*<br/>
 [no, out] Ponteiro para o ponteiro para o valor para o exchange. A função define o valor como `Value` e retorna seu valor anterior.
 
 *Valor*<br/>
@@ -94,9 +94,9 @@ Em plataformas Intel que suportam instruções HLE (Elisão de Bloqueio de Hardw
 
 Essas rotinas somente estão disponíveis como intrínsecos.
 
-**FIM de Específico da Microsoft**
+**Fim da seção específica da Microsoft**
 
 ## <a name="see-also"></a>Consulte também
 
 [Intrínsecos do compilador](../intrinsics/compiler-intrinsics.md)<br/>
-[Conflitos com o compilador x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)
+[conflitos com o compilador x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

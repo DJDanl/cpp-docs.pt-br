@@ -58,10 +58,10 @@ helpviewer_keywords:
 - OpenWithServiceComponents method
 ms.assetid: 99bf862c-9d5c-4117-9501-aa0e2672085c
 ms.openlocfilehash: 2564d4d9b0a2e5df1f575d6f2627ce80f48533c1
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59021911"
 ---
 # <a name="cdatasource-class"></a>Classe CDataSource
@@ -176,10 +176,10 @@ HRESULT GetProperty(const GUID& guid,
 
 #### <a name="parameters"></a>Parâmetros
 
-*GUID*<br/>
+*guid*<br/>
 [in] Um GUID que identifica a propriedade definida para o qual retornar a propriedade.
 
-*PROPID*<br/>
+*propid*<br/>
 [in] ID da propriedade para a propriedade para retornar.
 
 *pVariant*<br/>
@@ -240,7 +240,7 @@ HRESULT Open(LPCSTR szProgID,
 
 #### <a name="parameters"></a>Parâmetros
 
-*CLSID*<br/>
+*clsid*<br/>
 [in] O `CLSID` do provedor de dados.
 
 *pPropSet*<br/>
@@ -392,7 +392,7 @@ HRESULT OpenWithServiceComponents (LPCSTR szProgID,
 
 #### <a name="parameters"></a>Parâmetros
 
-*CLSID*<br/>
+*clsid*<br/>
 [in] O `CLSID` de um provedor de dados.
 
 *szProgID*<br/>
@@ -414,5 +414,5 @@ Este método abre um objeto de fonte de dados usando os componentes de serviço 
 
 ## <a name="see-also"></a>Consulte também
 
-[Modelos de consumidor de banco de dados OLE](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Referência dos modelos de consumidor de banco de dados OLE](../../data/oledb/ole-db-consumer-templates-reference.md)
+[Modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Referência de modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

@@ -7,10 +7,10 @@ helpviewer_keywords:
 - rdx attribute
 ms.assetid: ff8e4312-c1ad-4934-bdaa-86f54409651e
 ms.openlocfilehash: 2790c3de01d21242daee73fc442ad22d88739355
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59023874"
 ---
 # <a name="rdx"></a>rdx
@@ -28,7 +28,7 @@ Cria uma chave do registro ou modifica uma chave do registro existente.
 *key*<br/>
 O nome da chave a ser criado ou aberto.
 
-*ValueName*<br/>
+*valuename*<br/>
 (Opcional) Especifica o campo de valor a ser definido. Se um campo de valor com esse nome ainda não existir na chave, ele será adicionado.
 
 *regtype*<br/>
@@ -78,5 +78,5 @@ public:
 
 ## <a name="see-also"></a>Consulte também
 
-[Atributos COM](com-attributes.md)<br/>
+[Atributos de COM](com-attributes.md)<br/>
 [registration_script](registration-script.md)

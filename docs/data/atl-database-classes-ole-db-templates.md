@@ -7,10 +7,10 @@ helpviewer_keywords:
 - database classes [C++], ATL
 ms.assetid: 219766aa-e18a-405f-9e36-d7a0fdb31b2b
 ms.openlocfilehash: 2ecde060f10a7c2a056869525f58d0bb4da67963
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59023432"
 ---
 # <a name="atl-database-classes-ole-db-templates"></a>Classes de banco de dados ATL (modelos de banco de dados OLE)
@@ -33,8 +33,8 @@ Para obter mais informações, consulte [OLE DB de programação](../data/oledb/
 
 ## <a name="see-also"></a>Consulte também
 
-[Criando um consumidor de banco de dados OLE](../data/oledb/creating-an-ole-db-consumer.md)<br/>
-[Criando um provedor de banco de dados OLE](../data/oledb/creating-an-ole-db-provider.md)<br/>
-[Referência dos modelos de consumidor de banco de dados OLE](../data/oledb/ole-db-consumer-templates-reference.md)<br/>
-[Referência dos modelos de provedor de banco de dados OLE](../data/oledb/ole-db-provider-templates-reference.md)<br/>
+[Criando um consumidor do OLE DB](../data/oledb/creating-an-ole-db-consumer.md)<br/>
+[Criando um provedor do OLE DB](../data/oledb/creating-an-ole-db-provider.md)<br/>
+[Referência de modelos de consumidor do OLE DB](../data/oledb/ole-db-consumer-templates-reference.md)<br/>
+[Referência dos modelos de provedor do OLE DB](../data/oledb/ole-db-provider-templates-reference.md)<br/>
 [Exemplos de modelos OLE DB](https://github.com/Microsoft/VCSamples)

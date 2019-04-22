@@ -1,17 +1,17 @@
 ---
-title: 'Como: Usar eventos em C + + / CLI'
+title: 'Como: Usar eventos no C++/CLI'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - events [C++], accessing in interfaces
 ms.assetid: fbf452dc-2dd7-4322-adc0-656512d654d1
 ms.openlocfilehash: 6b4ecbba5651341965d2cf4df5b5ad2ead7f9f26
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58770988"
 ---
-# <a name="how-to-use-events-in-ccli"></a>Como: Usar eventos em C + + / CLI
+# <a name="how-to-use-events-in-ccli"></a>Como: Usar eventos no C++/CLI
 
 Este artigo mostra como usar uma interface que declara um evento e uma função para chamar esse evento e o manipulador de classe e eventos que implementam a interface.
 

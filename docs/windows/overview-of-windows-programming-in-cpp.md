@@ -3,10 +3,10 @@ title: Visão geral de programação do Windows no C++
 ms.date: 03/28/2019
 ms.assetid: efc691d7-21f3-47ae-ae56-cab999ccf59d
 ms.openlocfilehash: 35842ae73e59685946afe31e88729a36a6431768
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58772898"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>Visão geral de programação do Windows no C++
@@ -33,7 +33,7 @@ Para cenários de aplicativos da área de trabalho máximo (em outras palavras, 
 - acesso ao DirectX
 - uso intenso de bibliotecas C++ padrão
 
-Você pode criar uma interface do usuário no C# e use C + + c++ CLI para permitir que o aplicativo consumir bibliotecas nativas do C++. Para obter mais informações, consulte [programação do .NET com C + + c++ CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md).
+Você pode criar uma interface do usuário no C# e usar C++/CLI para permitir que o aplicativo consumir nativo C++ bibliotecas. Para obter mais informações, consulte [programação do .NET com o C++/CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md).
 
 ## <a name="com-components"></a>Componentes COM
 
@@ -43,7 +43,7 @@ O [(COM Component Object Model)](/windows/desktop/com/the-component-object-model
 
 A Universal Windows Platform (UWP) é a API do Windows moderno. Aplicativos UWP executados em qualquer dispositivo Windows 10, usam XAML para a interface do usuário e são totalmente habilitados para toque. Para obter mais informações sobre a UWP, consulte [o que é um aplicativo de plataforma Universal do Windows (UWP)?](/windows/uwp/get-started/whats-a-uwp) e [guia para aplicativos universais do Windows](/windows/uwp/get-started/universal-application-platform-guide).
 
-O suporte de C++ original para a UWP é formada por de (1) C + + c++ /CX, um dialeto do C++ com extensões de sintaxe ou (2) o Windows Runtime Library (WRL) que se baseia no padrão C++ e COM. Ambos os C + + c++ /CLI CX e WRL ainda são suportados. Para novos projetos, recomendamos [C + + c++ /CLI WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) que se baseia inteiramente no C++ padrão e fornece um desempenho mais rápido. 
+Original C++ suporte para UWP consistiu em (1) C++/CX, um dialeto do C++ com extensões de sintaxe ou (2) o Windows Runtime Library (WRL) que se baseia no padrão de C++ e COM. Ambos C++/CX e WRL ainda são suportados. Para novos projetos, recomendamos [ C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) que é totalmente baseado no padrão de C++ e fornece um desempenho mais rápido. 
 
 ## <a name="desktop-bridge"></a>Ponte de desktop
 
@@ -96,20 +96,20 @@ O Visual Studio inclui um depurador potente para código nativo, ferramentas de 
 ## <a name="in-this-section"></a>Nesta seção
 |Título|Descrição|
 |-----------|-----------------|
-|[Passo a passo: Criando um programa C++ padrão](walkthrough-creating-a-standard-cpp-program-cpp.md)| Crie um aplicativo de console do Windows.|
-|[Passo a passo: Criando aplicativos da área de trabalho do Windows (C++)](walkthrough-creating-windows-desktop-applications-cpp.md)|Crie um aplicativo da área de trabalho do Windows simples.|
+|[Passo a passo: como criar um programa C++ padrão](walkthrough-creating-a-standard-cpp-program-cpp.md)| Crie um aplicativo de console do Windows.|
+|[Passo a passo: como criar aplicativos de área de trabalho do Windows (C++)](walkthrough-creating-windows-desktop-applications-cpp.md)|Crie um aplicativo da área de trabalho do Windows simples.|
 |[Assistente da Área de Trabalho do Windows](windows-desktop-wizard.md)|Use o Assistente para criar novos projetos do Windows.|
-|[Active Template Library (ATL)](../atl/TOC.md)|Use a biblioteca ATL para criar componentes COM em C++.|
-|[Microsoft Foundation Classes (MFC)](../mfc/TOC.md)|Usar o MFC para criar grandes ou pequenos aplicativos do Windows com caixas de diálogo e controles|
-|[Classes compartilhadas de ATL e MFC](../atl-mfc-shared/TOC.md)|Use classes como CString que são compartilhadas em ATL e MFC.|
+|[ATL (Active Template Library)](../atl/TOC.md)|Use a biblioteca ATL para criar componentes COM em C++.|
+|[MFC (Microsoft Foundation Classes)](../mfc/TOC.md)|Usar o MFC para criar grandes ou pequenos aplicativos do Windows com caixas de diálogo e controles|
+|[Classes compartilhadas da ATL e do MFC](../atl-mfc-shared/TOC.md)|Use classes como CString que são compartilhadas em ATL e MFC.|
 |[Acesso a dados](../data/data-access-in-cpp.md)| OLE DB e ODBC|
 |[Texto e cadeias de caracteres](../text/text-and-strings-in-visual-cpp.md)|Vários tipos de cadeia de caracteres no Windows.|
 |[Recursos para criar um jogo usando DirectX](resources-for-creating-a-game-using-directx.md)
-|[Como: Usar o Windows 10 SDK em um aplicativo de área de trabalho do Windows](how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)|SDK do Windows|
+|[Como: usar o SDK do Windows 10 em um aplicativo da área de trabalho do Windows](how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)|SDK do Windows|
 |[Trabalhando com arquivos de recurso](working-with-resource-files.md)|Como adicionar imagens, ícones, tabelas de cadeia de caracteres e outros recursos para um aplicativo de desktop.|
 |[Recursos para criar um jogo usando DirectX (C++)](resources-for-creating-a-game-using-directx.md)|Links para conteúdo para a criação de jogos em C++.|
-|[Como: Usar o Windows 10 SDK em um aplicativo de área de trabalho do Windows](how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)|Contém as etapas para configurar seu projeto compilar usando o SDK do Windows 10.|
-|[Implantando aplicativos nativos de área de trabalho](deploying-native-desktop-applications-visual-cpp.md)|Implante aplicativos nativos no Windows.|
+|[Como: usar o SDK do Windows 10 em um aplicativo da área de trabalho do Windows](how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)|Contém as etapas para configurar seu projeto compilar usando o SDK do Windows 10.|
+|[Como implantar aplicativos da área de trabalho nativos](deploying-native-desktop-applications-visual-cpp.md)|Implante aplicativos nativos no Windows.|
 
 
 ## <a name="related-articles"></a>Artigos relacionados
@@ -117,8 +117,8 @@ O Visual Studio inclui um depurador potente para código nativo, ferramentas de 
 |Título|Descrição|
 |-----------|-----------------|
 |[Visual C++](../overview/visual-cpp-in-visual-studio.md)|Tópico pai para o conteúdo para desenvolvedores do Visual C++.|
-[Desenvolvimento do .NET com C + + / CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)|Crie wrappers para bibliotecas de C++ nativas que habilitá-lo para a comunicação com aplicativos .NET e componentes.|
-|[Extensões de componentes para .NET e UWP](../extensions/component-extensions-for-runtime-platforms.md)|Referência para elementos de sintaxe compartilhados pelo C + + c++ /CLI CX e C + + / CLI.|
-|[Aplicativos universais do Windows (C++)](universal-windows-apps-cpp.md)|Escrever aplicativos UWP usando C + + c++ /CX ou biblioteca de modelos de tempo de execução do Windows (WRL).|
-|[Atributos de C++ para COM e .NET](attributes/cpp-attributes-com-net.md)|Atributos não padrão para a programação somente para Windows usando o .NET ou COM.|
+[Desenvolvimento .NET com C++/CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)|Crie wrappers para bibliotecas de C++ nativas que habilitá-lo para a comunicação com aplicativos .NET e componentes.|
+|[Extensões de componentes para .NET e UWP](../extensions/component-extensions-for-runtime-platforms.md)|Referência para elementos de sintaxe compartilhados pelo C++/CX e C++/CLI.|
+|[Aplicativos universais do Windows (C++)](universal-windows-apps-cpp.md)|Escrever aplicativos UWP usando C++/CX ou biblioteca de modelos de tempo de execução do Windows (WRL).|
+|[Atributos C++ para COM e .NET](attributes/cpp-attributes-com-net.md)|Atributos não padrão para a programação somente para Windows usando o .NET ou COM.|
 

@@ -6,15 +6,15 @@ helpviewer_keywords:
 - classes [C++], instantiating
 ms.assetid: 1c03cb0d-1459-4b5e-af65-97d6b3094fd7
 ms.openlocfilehash: 090259a4ad6b46eccf66dca6c99b4eb532b7ae5c
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58774913"
 ---
 # <a name="how-to-define-and-consume-classes-and-structs-ccli"></a>Como: Definir e consumir Classes e Structs (C++ /CLI CLI)
 
-Este artigo mostra como definir e consumir tipos de referência definidos pelo usuário e tipos de valor no C + + / CLI.
+Este artigo mostra como definir e consumir tipos de referência definidos pelo usuário e tipos de valor em C++/CLI.
 
 ##  <a name="BKMK_Contents"></a> Conteúdo
 
@@ -455,7 +455,7 @@ O compilador embutida de uma chamada para um construtor não é possível se a c
 
 Defina um construtor estático como uma função de membro privado, como ele se destina a ser chamado somente pelo CLR.
 
-Para obter mais informações sobre construtores estáticos, consulte [como: Definir um construtor estático de Interface (C + + / CLI)](../dotnet/how-to-define-an-interface-static-constructor-cpp-cli.md) .
+Para obter mais informações sobre construtores estáticos, consulte [como: Definir um construtor estático de Interface (C++/CLI)](../dotnet/how-to-define-an-interface-static-constructor-cpp-cli.md) .
 
 ```cpp
 // compile with: /clr
@@ -807,7 +807,7 @@ Se seu tipo está sendo consumido por um cliente que é escrito em outra linguag
 
 - Em uma chamada para `Dispose(void)` no tipo.
 
-- Se o tipo sai do escopo em C# `using` instrução.
+- Se o tipo sai do escopo em c# `using` instrução.
 
 Se você criar um objeto do tipo de referência no heap gerenciado (não usando a semântica de pilha para tipos de referência), use [try-finally](../cpp/try-finally-statement.md) sintaxe para garantir que uma exceção não impede que o destruidor em execução.
 

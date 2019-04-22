@@ -5,12 +5,12 @@ helpviewer_keywords:
 - method attributes
 - attributes [C++/CLI], reference topics
 ms.assetid: b2313352-480d-488b-8c35-6242ffd3a549
-ms.openlocfilehash: 96a3eab3e6d2761019a9f0855ff7cbb978445f68
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aa67d45dfc0fadd300caeaaeb8a7c25bb1c38bcb
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50667916"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59023562"
 ---
 # <a name="method-attributes"></a>Atributos de método
 
@@ -45,7 +45,7 @@ Os atributos a seguir se aplicam aos métodos em uma classe, coclass ou interfac
 |[propputref](propputref.md)|Especifica uma função de configuração de propriedade que usa uma referência em vez de um valor.|
 |[ptr](ptr.md)|Designa um ponteiro como um ponteiro completo.|
 |[range](range-cpp.md)|Especifica um intervalo de valores permitidos para argumentos ou campos cujos valores são definidos em tempo de execução.|
-|[requestedit](requestedit.md)|Indica que a propriedade oferece suporte a `OnRequestEdit` notificação.|
+|[requestedit](requestedit.md)|Indica que a propriedade dá suporte à notificação `OnRequestEdit`.|
 |[restricted](restricted.md)|Especifica que um membro de um módulo, interface ou dispinterface não pode ser chamado arbitrariamente.|
 |[satype](satype.md)|Especifica o tipo de dados a `SAFEARRAY` estrutura.|
 |[source](source-cpp.md)|Especifica as interfaces de origem do controle para pontos de conexão em uma classe. Em uma propriedade ou método, o `source` atributo indica que o membro retorna um objeto ou uma VARIANTE que é uma origem de eventos.|

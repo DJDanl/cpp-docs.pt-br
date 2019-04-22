@@ -8,15 +8,15 @@ helpviewer_keywords:
 - cvttss2si instruction
 ms.assetid: f9a3fd07-5bd8-4758-8744-6315c082cf87
 ms.openlocfilehash: cfdea6ded622cbcbe42bd555edb3029fabad7823
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59023705"
 ---
 # <a name="mmcvttsssi64x"></a>_mm_cvttss_si64x
 
-**Específico da Microsoft**
+**Seção específica da Microsoft**
 
 Emite x64 estendido versão de Convert com o número de ponto flutuante de precisão simples de truncamento em inteiro de 64 bits (`cvttss2si`) instrução.
 
@@ -30,7 +30,7 @@ __int64 _mm_cvttss_si64x(
 
 #### <a name="parameters"></a>Parâmetros
 
-*Valor *<br/>
+*value*<br/>
 [in] Um `__m128` estrutura que contém os valores de ponto flutuante de precisão simples.
 
 ## <a name="return-value"></a>Valor de retorno
@@ -85,7 +85,7 @@ int main()
 101
 ```
 
-**FIM de Específico da Microsoft**
+**Fim da seção específica da Microsoft**
 
 ## <a name="see-also"></a>Consulte também
 

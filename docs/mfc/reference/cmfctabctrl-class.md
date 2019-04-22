@@ -105,10 +105,10 @@ helpviewer_keywords:
 - CMFCTabCtrl [MFC], m_bEnableActivate
 ms.assetid: d441385d-2c72-4203-96fa-deae2273da35
 ms.openlocfilehash: 43eb171ce9b3ea3454855dc1f92d9aa1b74645d4
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58778449"
 ---
 # <a name="cmfctabctrl-class"></a>Classe CMFCTabCtrl
@@ -310,7 +310,7 @@ BOOL Create(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Estilo *<br/>
+*style*<br/>
 [in] O estilo do controle guia. Para obter mais informações, consulte Comentários.
 
 *rect*<br/>
@@ -322,7 +322,7 @@ BOOL Create(
 *nID*<br/>
 [in] A ID do controle guia.
 
-*local*<br/>
+*location*<br/>
 [in] O local das guias. O valor padrão é LOCATION_BOTTOM. Para obter mais informações, consulte Comentários.
 
 *bCloseBtn*<br/>
@@ -387,7 +387,7 @@ void EnableActiveTabCloseButton(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>Parâmetros
 
-*bAtivar*<br/>
+*bEnable*<br/>
 [in] TRUE para exibir o botão Fechar na guia ativa. FALSE para exibir o botão Fechar no canto superior direito da área da guia. O valor padrão é TRUE.
 
 ##  <a name="enableinplaceedit"></a>  CMFCTabCtrl::EnableInPlaceEdit
@@ -400,7 +400,7 @@ virtual void EnableInPlaceEdit(BOOL bEnable);
 
 ### <a name="parameters"></a>Parâmetros
 
-*bAtivar*<br/>
+*bEnable*<br/>
 [in] TRUE para ativar rótulos de guia editável; FALSE para desativar os rótulos de guia editável.
 
 ### <a name="remarks"></a>Comentários
@@ -415,7 +415,7 @@ void EnableTabDocumentsMenu(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>Parâmetros
 
-*bAtivar*<br/>
+*bEnable*<br/>
 [in] TRUE para exibir um menu pop-up de rótulos de janela com guias; FALSE para exibir botões de rolagem para frente e para trás. O valor padrão é TRUE.
 
 ### <a name="remarks"></a>Comentários
@@ -835,7 +835,7 @@ BOOL ModifyTabStyle(Style style);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Estilo *<br/>
+*style*<br/>
 [in] Um dos valores de enumeração que especifica a aparência do controle guia. Para obter mais informações, consulte a tabela em comentários.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -944,7 +944,7 @@ void SetActiveInMDITabGroup(BOOL bActive);
 
 ### <a name="parameters"></a>Parâmetros
 
-*bScripts Ativos*<br/>
+*bActive*<br/>
 [in] TRUE para tornar a guia ativa; a guia atual FALSE para tornar a guia atual inativa.
 
 ### <a name="remarks"></a>Comentários
@@ -1111,7 +1111,7 @@ void StopResize(BOOL bCancel);
 
 ### <a name="parameters"></a>Parâmetros
 
-*bCancelar*<br/>
+*bCancel*<br/>
 [in] TRUE para abandonar a operação de redimensionamento atual; FALSE para concluir as operação de redimensionamento atual. Em ambos os casos, o framework para desenhar o retângulo de redimensionamento.
 
 ##  <a name="synchronizescrollbar"></a>  CMFCTabCtrl::SynchronizeScrollBar

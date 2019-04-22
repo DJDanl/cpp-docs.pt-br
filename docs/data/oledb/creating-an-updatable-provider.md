@@ -7,10 +7,10 @@ helpviewer_keywords:
 - OLE DB providers, creating
 ms.assetid: bdfd5c9f-1c6f-4098-822c-dd650e70ab82
 ms.openlocfilehash: d3f8314e7cd57617e35e50a67a4562d4055cb93a
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59024732"
 ---
 # <a name="creating-an-updatable-provider"></a>Criando um provedor atualizável
@@ -436,4 +436,4 @@ Esse código especifica, entre outras coisas, a coluna dá suporte a um valor pa
 
 ## <a name="see-also"></a>Consulte também
 
-[Criando um provedor de banco de dados OLE](creating-an-ole-db-provider.md)
+[Criando um provedor do OLE DB](creating-an-ole-db-provider.md)

@@ -8,10 +8,10 @@ helpviewer_keywords:
 - auto keyword [C++]
 ms.assetid: e9d495d7-601c-4547-b897-998389a311f4
 ms.openlocfilehash: 3d77a17d490f8d7680f095367c309ce0e4f366b7
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58776330"
 ---
 # <a name="auto-c"></a>auto (C++)
@@ -52,7 +52,7 @@ Para usar o **automática** palavra-chave, usá-lo em vez de um tipo para declar
 
 A expressão de inicialização pode ser uma atribuição (sintaxe de sinal de igual), uma inicialização direta (sintaxe de estilo de função), uma [operador new](new-operator-cpp.md) expressão ou a expressão de inicialização pode ser o  *para range-declaration* parâmetro em uma [de instrução (C++) baseado em intervalo](../cpp/range-based-for-statement-cpp.md) instrução. Para obter mais informações, consulte [inicializadores](../cpp/initializers.md) e exemplos de código neste documento.
 
-O **automática** palavra-chave é um espaço reservado para um tipo, mas ele não é um tipo. Portanto, o **automática** palavra-chave não pode ser usado nas conversões ou operadores, como [sizeof](../cpp/sizeof-operator.md) e (para C + + c++ CLI) [typeid](../extensions/typeid-cpp-component-extensions.md).
+O **automática** palavra-chave é um espaço reservado para um tipo, mas ele não é um tipo. Portanto, o **automática** palavra-chave não pode ser usado nas conversões ou operadores, como [sizeof](../cpp/sizeof-operator.md) e (para C++/CLI) [typeid](../extensions/typeid-cpp-component-extensions.md).
 
 ## <a name="usefulness"></a>Utilidade
 

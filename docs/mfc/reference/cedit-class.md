@@ -95,10 +95,10 @@ helpviewer_keywords:
 - CEdit [MFC], Undo
 ms.assetid: b1533c30-7f10-4663-88d3-8b7f2c9f7024
 ms.openlocfilehash: 45c03d142c34186660aa2715081ffb0f45e85ccc
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58773743"
 ---
 # <a name="cedit-class"></a>Classe CEdit
@@ -854,7 +854,7 @@ int LineIndex(int nLine = -1) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*nLinha*<br/>
+*nLine*<br/>
 Contém o valor de índice para a linha desejada no texto do controle de edição ou -1. Se *nLinha* é -1, ele especifica a linha atual, ou seja, a linha que contém o cursor.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -883,7 +883,7 @@ int LineLength(int nLine = -1) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*nLinha*<br/>
+*nLine*<br/>
 O índice baseado em zero de um caractere na linha cujo comprimento deve ser recuperado. O valor padrão é -1.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1117,7 +1117,7 @@ void SetLimitText(UINT nMax);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Nmáx*<br/>
+*nMax*<br/>
 O novo limite de texto, em caracteres.
 
 ### <a name="remarks"></a>Comentários

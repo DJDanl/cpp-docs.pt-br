@@ -7,15 +7,15 @@ helpviewer_keywords:
 - __umulh intrinsic
 ms.assetid: d241b53a-e6f7-4af1-9f6e-84e149158f03
 ms.openlocfilehash: 3a42de276b483f98e2eaf9d0c8505d7f1d5b5bca
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59026559"
 ---
 # <a name="umulh"></a>__umulh
 
-**Específico da Microsoft**
+**Seção específica da Microsoft**
 
 Retorne os 64 bits altos do produto dos dois inteiros sem sinal de 64 bits.
 
@@ -78,7 +78,7 @@ int main()
 0x10 * 0xfedcba9876543210 = 0xfedcba98765432100
 ```
 
-**FIM de Específico da Microsoft**
+**Fim da seção específica da Microsoft**
 
 ## <a name="see-also"></a>Consulte também
 

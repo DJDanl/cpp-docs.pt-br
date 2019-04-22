@@ -20,10 +20,10 @@ helpviewer_keywords:
 - resource editors [C++], resource symbols
 ms.assetid: 35168d31-3af6-4ecd-9362-3707d47b53f3
 ms.openlocfilehash: 8bb73c1a9e8d253492a7068c444dd7ddea8417da
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59026351"
 ---
 # <a name="how-to-create-symbols-c"></a>Como: Crie símbolos (C++)
@@ -88,6 +88,6 @@ Win32
 
 ## <a name="see-also"></a>Consulte também
 
-[Identificadores de recurso (símbolos)](../windows/symbols-resource-identifiers.md)<br/>
-[Como: Gerenciar símbolos](../windows/changing-a-symbol-or-symbol-name-id.md)<br/>
-[IDs de símbolo predefinido](../windows/predefined-symbol-ids.md)<br/>
+[Identificadores de recursos (símbolos)](../windows/symbols-resource-identifiers.md)<br/>
+[Como: gerenciar símbolos](../windows/changing-a-symbol-or-symbol-name-id.md)<br/>
+[IDs de símbolos predefinidos](../windows/predefined-symbol-ids.md)<br/>

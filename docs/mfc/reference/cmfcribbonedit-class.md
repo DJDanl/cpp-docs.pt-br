@@ -74,10 +74,10 @@ helpviewer_keywords:
 - CMFCRibbonEdit [MFC], SetWidth
 ms.assetid: 9b85f1f2-446b-454e-9af9-104fdad8a897
 ms.openlocfilehash: 80ee43ae32416f9f62df419c4afbd46a0aa63cc8
-ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/10/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58780477"
 ---
 # <a name="cmfcribbonedit-class"></a>Classe CMFCRibbonEdit
@@ -286,7 +286,7 @@ void EnableSpinButtons(
 *nMin*<br/>
 [in] O valor mínimo do botão de rotação.
 
-*Nmáx*<br/>
+*nMax*<br/>
 [in] O valor máximo do botão de rotação.
 
 ### <a name="remarks"></a>Comentários
@@ -555,7 +555,7 @@ virtual void OnEnable(BOOL bEnable);
 
 ### <a name="parameters"></a>Parâmetros
 
-*bAtivar*<br/>
+*bEnable*<br/>
 [in] TRUE para habilitar o controle; FALSE para desabilitar o controle.
 
 ### <a name="remarks"></a>Comentários
@@ -681,7 +681,7 @@ virtual BOOL SetACCData(
 *pParent*<br/>
 Ponteiro para a janela pai para o `CMFCRibbonEdit` objeto.
 
-*Dados*<br/>
+*data*<br/>
 Os dados de acessibilidade para o `CMFCRibbonEdit` objeto.
 
 ### <a name="return-value"></a>Valor de retorno

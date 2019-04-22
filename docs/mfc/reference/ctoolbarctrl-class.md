@@ -183,10 +183,10 @@ helpviewer_keywords:
 - CToolBarCtrl [MFC], SetWindowTheme
 ms.assetid: 8f2f8ad2-05d7-4975-8715-3f2eed795248
 ms.openlocfilehash: 92f5adcea50e660ecfad131313247e118312e609
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58781257"
 ---
 # <a name="ctoolbarctrl-class"></a>Classe CToolBarCtrl
@@ -579,7 +579,7 @@ BOOL CheckButton(
 *nID*<br/>
 Identificador do botão para marcar ou desmarcar o comando.
 
-*bVerificar*<br/>
+*bCheck*<br/>
 True para seleção do botão, FALSE para limpá-lo.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -755,7 +755,7 @@ BOOL EnableButton(
 *nID*<br/>
 Identificador do botão Habilitar ou desabilitar o comando.
 
-*bAtivar*<br/>
+*bEnable*<br/>
 TRUE para habilitar o botão; FALSE para desabilitar o botão.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1587,7 +1587,7 @@ ID de um bitmap que contém as imagens a serem carregadas. Para especificar seu 
 |IDB_VIEW_LARGE_COLOR|Bitmaps de modo de exibição de tamanho grande|
 |IDB_VIEW_SMALL_COLOR|Bitmaps de modo de exibição de tamanho pequeno|
 
-*HINST*<br/>
+*hinst*<br/>
 Identificador de instância do programa para o aplicativo de chamada. Esse parâmetro pode ser HINST_COMMCTRL para carregar uma lista de imagens padrão.
 
 ### <a name="remarks"></a>Comentários

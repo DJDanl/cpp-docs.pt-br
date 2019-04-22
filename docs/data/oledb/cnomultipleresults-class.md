@@ -9,10 +9,10 @@ helpviewer_keywords:
 - CNoMultipleResults class
 ms.assetid: 343e77c4-b319-476e-b592-901ab9b2f34e
 ms.openlocfilehash: 59b7b35c350a37f13e1f253bc1430d69521e4fa8
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59026704"
 ---
 # <a name="cnomultipleresults-class"></a>Classe CNoMultipleResults
@@ -35,5 +35,5 @@ Se você quiser um comando para lidar com vários conjuntos de resultados, use [
 
 ## <a name="see-also"></a>Consulte também
 
-[Modelos de consumidor de banco de dados OLE](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Referência dos modelos de consumidor de banco de dados OLE](../../data/oledb/ole-db-consumer-templates-reference.md)
+[Modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Referência de modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

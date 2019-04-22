@@ -233,10 +233,10 @@ helpviewer_keywords:
 - CMFCRibbonBaseElement [MFC], OnSetFocus
 ms.assetid: 419ea91b-5062-44cc-b0a3-f87d29566f62
 ms.openlocfilehash: 6daa5b6249c7ff18a8bc01c2309ffb94d3fb88ce
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58773067"
 ---
 # <a name="cmfcribbonbaseelement-class"></a>Classe CMFCRibbonBaseElement
@@ -580,7 +580,7 @@ virtual void DrawImage(
 *pDC*<br/>
 [in] Ponteiro para um contexto de dispositivo.
 
-*tipo*<br/>
+*type*<br/>
 [in] Valor enumerado de um tipo de imagem. Consulte a seção de comentários para obter uma lista de valores possíveis.
 
 *rectImage*<br/>
@@ -1933,7 +1933,7 @@ virtual BOOL SetACCData(
 *pParent*<br/>
 A janela pai para o elemento de faixa de opções.
 
-*Dados*<br/>
+*data*<br/>
 Os dados de acessibilidade para o elemento de faixa de opções.
 
 ### <a name="return-value"></a>Valor de retorno

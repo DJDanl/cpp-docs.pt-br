@@ -1,5 +1,5 @@
 ---
-title: event_receiver (atributo de COM do C++)
+title: event_receiver (C++ COM atributo)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.event_receiver
@@ -13,10 +13,10 @@ helpviewer_keywords:
 - event sinks
 ms.assetid: bf8fe770-3ea2-4128-b46b-166222ee4097
 ms.openlocfilehash: 81a3ec88c336ddeb550f133e657854b3b6f89d96
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59023289"
 ---
 # <a name="eventreceiver"></a>event_receiver
@@ -32,7 +32,7 @@ Cria um receptor de eventos (coletor).
 
 ### <a name="parameters"></a>Parâmetros
 
-*tipo*<br/>
+*type*<br/>
 Uma enumeração de um dos seguintes valores:
 
 - `native` para código C/C++ não gerenciado (padrão para classes nativas).
@@ -54,7 +54,7 @@ Especificar *layout_dependent* somente se `type` = **com**. *layout_dependent* �
 
 ## <a name="remarks"></a>Comentários
 
-O **event_receiver** atributo de C++ Especifica que a classe ou estrutura à qual ela é aplicada será um receptor de eventos, usando o modelo de evento unificado do Visual C++.
+O **event_receiver** C++ atributo especifica que a classe ou estrutura à qual ela é aplicada será um receptor de eventos, usando o Visual C++ modelo unificado de eventos.
 
 **event_receiver** é usado com o [event_source](event-source.md) atributo e o [hook](../../cpp/hook.md) e [unhook](../../cpp/unhook.md) palavras-chave. Use `event_source` para criar fontes de evento. Use **hook** dentro de métodos de um receptor evento para associar a métodos de receptor de eventos ("gancho") para os eventos de uma origem do evento. Use **unhook** para desassociá-los.
 
@@ -79,7 +79,7 @@ Para obter mais informações, consulte [contextos de atributo](cpp-attributes-c
 ## <a name="see-also"></a>Consulte também
 
 [Atributos de compilador](compiler-attributes.md)<br/>
-[origem do evento](event-source.md)<br/>
+[event_source](event-source.md)<br/>
 [__event](../../cpp/event.md)<br/>
 [__hook](../../cpp/hook.md)<br/>
 [__unhook](../../cpp/unhook.md)<br/>

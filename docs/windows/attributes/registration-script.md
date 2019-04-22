@@ -1,5 +1,5 @@
 ---
-title: registration_script (atributo de COM do C++)
+title: registration_script (C++ COM atributo)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.registration_script
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - registration_script attribute
 ms.assetid: 786f8072-9187-4163-a979-7a604dd4c888
 ms.openlocfilehash: 0b2c4d576a699dea7772821b5635944b2663c57c
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59024368"
 ---
 # <a name="registrationscript"></a>registration_script
@@ -30,7 +30,7 @@ O caminho completo para um arquivo de script (. rgs) de registro personalizado. 
 
 ## <a name="remarks"></a>Comentários
 
-O **registration_script** atributo C++ executa o script de registro personalizado especificado por *script*. Se esse atributo não for especificado, um arquivo. rgs padrão (que contém informações para registrar o componente) será usado. Para obter mais informações sobre arquivos. rgs, consulte [o componente de registro ATL (registrador)](../../atl/atl-registry-component-registrar.md).
+O **registration_script** C++ atributo executa o script de registro personalizado especificado por *script*. Se esse atributo não for especificado, um arquivo. rgs padrão (que contém informações para registrar o componente) será usado. Para obter mais informações sobre arquivos. rgs, consulte [o componente de registro ATL (registrador)](../../atl/atl-registry-component-registrar.md).
 
 Este atributo exige que o [coclass](coclass.md), [progid](progid.md), ou [vi_progid](vi-progid.md) atributo (ou outro atributo que implica uma destas opções) também ser aplicadas ao mesmo elemento.
 
@@ -72,6 +72,6 @@ Para obter mais informações sobre os contextos de atributo, consulte [contexto
 
 ## <a name="see-also"></a>Consulte também
 
-[Atributos COM](com-attributes.md)<br/>
+[Atributos de COM](com-attributes.md)<br/>
 [Atributos de classe](class-attributes.md)<br/>
 [rdx](rdx.md)

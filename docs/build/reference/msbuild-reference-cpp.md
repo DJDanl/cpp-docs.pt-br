@@ -4,10 +4,10 @@ ms.date: 12/08/2018
 helpviewer_keywords:
 - MSBuild reference [C++]
 ms.openlocfilehash: b6ec6b5d276cb7104cf61c229476596d2a2a7684
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59024693"
 ---
 # <a name="msbuild-reference-for-c-projects"></a>Referência do MSBuild para projetos do C++
@@ -18,7 +18,7 @@ Se por algum motivo, você quiser usar o MSBuild diretamente da linha de comando
 
 ## <a name="in-this-section"></a>Nesta seção
 
-[Recursos internos de MSBuild para projetos do C++](msbuild-visual-cpp-overview.md)<br/>
+[Recursos internos do MSBuild para projetos C++](msbuild-visual-cpp-overview.md)<br/>
 Informações sobre como as propriedades e destinos são armazenados e consumidos.
 
 [Macros comuns para comandos e propriedades de build](common-macros-for-build-commands-and-properties.md)<br/>
@@ -30,7 +30,7 @@ Descreve os vários tipos de arquivos que o Visual Studio cria para diferentes t
 [Modelos de projeto do Visual Studio C++](visual-cpp-project-types.md)<br>
 Descreve os tipos de projeto do MSBuild que estão disponíveis para C++.
 
-[Novos modelos de item de C++](using-visual-cpp-add-new-item-templates.md)<br>
+[Novos modelos de item do C++](using-visual-cpp-add-new-item-templates.md)<br>
 Descreve os arquivos de origem e outros itens que você pode adicionar a um projeto do Visual Studio.
 
 [Arquivos de cabeçalho pré-compilado](../creating-precompiled-header-files.md) como usar arquivos de cabeçalho pré-compilado e como criar seu próprio pré-compilado código para acelerar o tempo de compilação.

@@ -7,10 +7,10 @@ helpviewer_keywords:
 - expressions [C++], postfix
 ms.assetid: 7ac62a57-06df-422f-b012-a75b37d7cb9b
 ms.openlocfilehash: eb6e6e8914cf260df09581232066caf3f873c04e
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58779255"
 ---
 # <a name="postfix-expressions"></a>Expressões pós-fixadas
@@ -149,7 +149,7 @@ As reticências denotam que os argumentos podem ser necessários, mas que o núm
 
 As reticências, se usadas, deverão ser declaradas por último na lista de argumentos. Para obter mais informações sobre como passar um número variável de argumentos, consulte a discussão sobre [va_arg, va_start e va_list](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md) na *referência de biblioteca de tempo de execução*.
 
-Para obter informações sobre os argumentos padrão na programação CLR, consulte [listas de argumentos variáveis (...) (C + + / CLI) ](../extensions/variable-argument-lists-dot-dot-dot-cpp-cli.md).
+Para obter informações sobre os argumentos padrão na programação CLR, consulte [listas de argumentos variáveis (...) (C++/CLI) ](../extensions/variable-argument-lists-dot-dot-dot-cpp-cli.md).
 
 Os argumentos padrão permitem que você especifique o valor que um argumento deverá assumir caso nenhum seja fornecido na chamada de função. O fragmento de código a seguir mostra como os argumentos padrão funcionam. Para obter mais informações sobre as restrições sobre como especificar os argumentos padrão, consulte [argumentos padrão](../cpp/default-arguments.md).
 

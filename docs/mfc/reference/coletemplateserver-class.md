@@ -15,10 +15,10 @@ helpviewer_keywords:
 - COleTemplateServer [MFC], UpdateRegistry
 ms.assetid: 47a2887d-8162-4993-a842-a784177c7f5c
 ms.openlocfilehash: 3abdf1dc2da5ef9a111371b501d5cd8ce208825d
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58781205"
 ---
 # <a name="coletemplateserver-class"></a>Classe COleTemplateServer
@@ -94,7 +94,7 @@ void ConnectTemplate(
 
 ### <a name="parameters"></a>Parâmetros
 
-*CLSID*<br/>
+*clsid*<br/>
 Referência para a ID de classe OLE que solicita o modelo.
 
 *pDocTemplate*<br/>
@@ -156,7 +156,7 @@ Uma lista de entradas será gravada no registro somente se não existe nenhuma e
 *rglpszOverwrite*<br/>
 Uma lista de entradas que é gravada no registro, independentemente de existirem quaisquer entradas anteriores.
 
-*bRegistre-se participar*<br/>
+*bRegister*<br/>
 Determina se a classe deve ser registrado. Se *bRegistre-se participar* for TRUE, a classe é registrada com o registro do sistema. Caso contrário, ele cancela o registro da classe.
 
 ### <a name="remarks"></a>Comentários

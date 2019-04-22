@@ -10,10 +10,10 @@ helpviewer_keywords:
 - subscript operator [C++], syntax
 ms.assetid: 69c31494-52da-4dd0-8bbe-6ccbfd50f197
 ms.openlocfilehash: 2d55c18d2c9faa1a704bea129f2551937e76133c
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58767919"
 ---
 # <a name="subscript-operator-"></a>Operador subscrito]
@@ -28,7 +28,7 @@ postfix-expression [ expression ]
 
 Uma expressão de pós-fixação (que também pode ser uma expressão primária) seguida pelo operador de subscrito **[]**, especifica a indexação de matriz.
 
-Para obter informações sobre matrizes gerenciadas no C + + / CLI, consulte [matrizes](../extensions/arrays-cpp-component-extensions.md).
+Para obter informações sobre matrizes gerenciadas no C++/CLI, consulte [matrizes](../extensions/arrays-cpp-component-extensions.md).
 
 Geralmente, o valor representado pelo *postfix-expression* é um valor de ponteiro, como um identificador de matriz, e *expressão* é um valor integral (incluindo tipos enumerados). No entanto, tudo o que é necessário sintaticamente é que uma das expressões seja do tipo ponteiro e a outra seja do tipo integral. Assim que o valor integral pode estar na *postfix-expression* posição e o valor do ponteiro pode estar entre colchetes na *expressão* ou posição de subscrito. Considere o fragmento de código a seguir:
 
@@ -77,7 +77,7 @@ int main() {
 
 ## <a name="positive-and-negative-subscripts"></a>Subscritos positivos e negativos
 
-O primeiro elemento de uma matriz é o elemento 0. O intervalo de uma matriz de C++ é de *array*[0] para *array*[*tamanho* - 1]. No entanto, o C++ oferece suporte a subscritos positivos e negativos. Os subscritos negativos devem estar dentro dos limites da matriz, se não estiverem, os resultados serão imprevisíveis. O código a seguir mostra os subscritos positivo e negativo da matriz:
+O primeiro elemento de uma matriz é o elemento 0. O intervalo de um C++ matriz está entre *array*[0] para *matriz*[*tamanho* - 1]. No entanto, o C++ oferece suporte a subscritos positivos e negativos. Os subscritos negativos devem estar dentro dos limites da matriz, se não estiverem, os resultados serão imprevisíveis. O código a seguir mostra os subscritos positivo e negativo da matriz:
 
 ```cpp
 #include <iostream>

@@ -25,10 +25,10 @@ helpviewer_keywords:
 - CMFCToolBarsCustomizeDialog [MFC], PostNcDestroy
 ms.assetid: 78e2cddd-4f13-4097-afc3-1ad646a113f1
 ms.openlocfilehash: e1dd6fff9fa4f03dbf93510da26c78c73e86c6ab
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58780958"
 ---
 # <a name="cmfctoolbarscustomizedialog-class"></a>Classe CMFCToolBarsCustomizeDialog
@@ -137,7 +137,7 @@ void AddButton(
 *uiCategoryId*<br/>
 [in] Especifica a ID da categoria para inserir o botão.
 
-*Botão*<br/>
+*button*<br/>
 [in] Especifica o botão a ser inserido.
 
 *iInsertBefore*<br/>
@@ -357,7 +357,7 @@ void EnableUserDefinedToolbars(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>Parâmetros
 
-*bAtivar*<br/>
+*bEnable*<br/>
 [in] TRUE para habilitar as barras de ferramentas definidas pelo usuário; FALSE para desabilitar as barras de ferramentas.
 
 ### <a name="remarks"></a>Comentários
@@ -716,7 +716,7 @@ void ReplaceButton(
 *uiCmd*<br/>
 [in] Especifica o comando do botão a ser substituído.
 
-*Botão*<br/>
+*button*<br/>
 [in] Um **const** referência para o objeto de botão de barra de ferramentas que substitui o antigo botão.
 
 ### <a name="remarks"></a>Comentários

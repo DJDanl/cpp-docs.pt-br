@@ -9,15 +9,15 @@ helpviewer_keywords:
 - __ll_lshift intrinsic
 ms.assetid: fe98f733-426d-44b3-8f24-5d0d6d44bd94
 ms.openlocfilehash: 5a91ce5db46b19be570f8d48a584a2caeabcc163
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59024459"
 ---
 # <a name="lllshift"></a>__ll_lshift
 
-**Específico da Microsoft**
+**Seção específica da Microsoft**
 
 Desloca o valor fornecido de 64 bits para a esquerda pelo número especificado de bits.
 
@@ -85,7 +85,7 @@ int main()
 
 **Observação** há nenhuma versão sem sinal da operação de deslocamento à esquerda. Isso ocorre porque `__ll_lshift` já usa um parâmetro de entrada sem sinal. Ao contrário o deslocamento para a direita, não há nenhuma dependência de entrada para o deslocamento à esquerda, porque o bit menos significativo no resultado é sempre definido como zero, independentemente do sinal do valor deslocado.
 
-**FIM de Específico da Microsoft**
+**Fim da seção específica da Microsoft**
 
 ## <a name="see-also"></a>Consulte também
 

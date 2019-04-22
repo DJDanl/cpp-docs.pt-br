@@ -9,15 +9,15 @@ helpviewer_keywords:
 - HLT instruction
 ms.assetid: a074f44a-101c-45a5-8a5e-cfd223c34002
 ms.openlocfilehash: dd68c88a13035ca25f89304bcd84267a73978420
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59025945"
 ---
 # <a name="halt"></a>__halt
 
-**Específico da Microsoft**
+**Seção específica da Microsoft**
 
 Interrompe o microprocessador até que ocorra uma interrupção habilitada, uma NMI (interrupção não Mascarável) ou uma redefinição.
 
@@ -39,7 +39,7 @@ void __halt( void );
 
 O `__halt` função é equivalente ao `HLT` instruções de máquina e está disponível apenas no modo kernel. Para obter mais informações, pesquise o documento, "Manual do desenvolvedor de Software de arquitetura Intel, Volume 2: Instrução definir Reference"na [Intel Corporation](https://software.intel.com/articles/intel-sdm) site.
 
-**FIM de Específico da Microsoft**
+**Fim da seção específica da Microsoft**
 
 ## <a name="see-also"></a>Consulte também
 

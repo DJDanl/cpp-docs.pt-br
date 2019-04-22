@@ -25,15 +25,15 @@ helpviewer_keywords:
 - _InterlockedCompareExchangePointer_np intrinsic
 ms.assetid: 97fde59d-2bf9-42aa-a0fe-a5b6befdd44b
 ms.openlocfilehash: 2db18c73f7765454d29e2dfdbd9408f62c51d32a
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59024810"
 ---
 # <a name="interlockedcompareexchangepointer-intrinsic-functions"></a>Funções intrínsecas _InterlockedCompareExchangePointer
 
-**Específico da Microsoft**
+**Seção específica da Microsoft**
 
 Executa uma operação atômica que armazena o endereço do `Exchange` no endereço `Destination` se os endereços `Comparand` e `Destination` forem iguais.
 
@@ -102,7 +102,7 @@ O valor de retorno é o valor inicial do destino.
 
 ## <a name="remarks"></a>Comentários
 
-`_InterlockedCompareExchangePointer` executa uma comparação atômica do `Destination` endereço com o `Comparand` endereço. Se o endereço `Destination` for igual ao endereço `Comparand`, o endereço `Exchange` será armazenado no endereço especificado pelo `Destination`. Caso contrário, nenhuma operação será executada.
+`_InterlockedCompareExchangePointer` realiza uma comparação atômica do endereço `Destination` com o endereço `Comparand`. Se o endereço `Destination` for igual ao endereço `Comparand`, o endereço `Exchange` será armazenado no endereço especificado pelo `Destination`. Caso contrário, nenhuma operação será executada.
 
 `_InterlockedCompareExchangePointer` fornece suporte intrínseco ao compilador para o SDK do Windows Win32 [interlockedcompareexchangepointer](https://msdn.microsoft.com/library/ff547863.aspx) função.
 
@@ -116,7 +116,7 @@ Em plataformas Intel que suportam instruções HLE (Elisão de Bloqueio de Hardw
 
 Essas rotinas somente estão disponíveis como intrínsecos.
 
-**FIM de Específico da Microsoft**
+**Fim da seção específica da Microsoft**
 
 ## <a name="see-also"></a>Consulte também
 
