@@ -1,1 +1,0 @@
-SDL do Visual Studio 2012

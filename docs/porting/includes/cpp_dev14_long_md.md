@@ -1,1 +1,0 @@
-Visual C++ no Visual Studio 2015

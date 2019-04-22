@@ -1,1 +1,0 @@
-SDK do Visual Studio
