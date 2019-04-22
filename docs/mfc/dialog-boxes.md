@@ -9,10 +9,10 @@ helpviewer_keywords:
 - MFC dialog boxes
 ms.assetid: e4feea1a-8360-4ccb-9b84-507f1ccd9ef3
 ms.openlocfilehash: 32a8f8784459338131d4893f25d8798f8031b68b
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58778488"
 ---
 # <a name="dialog-boxes"></a>Caixas de diálogo
@@ -63,8 +63,8 @@ A maioria das caixas de diálogo são modais, que exigem que o usuário fechar a
 
 - Criar um aplicativo cuja interface do usuário é uma caixa de diálogo: consulte a [CMNCTRL1](../overview/visual-cpp-samples.md) ou [CMNCTRL2](../overview/visual-cpp-samples.md) programas de exemplo. O Assistente de aplicativo fornece essa opção também.
 
-- [Exemplos](../mfc/dialog-sample-list.md)
+- [Amostras](../mfc/dialog-sample-list.md)
 
 ## <a name="see-also"></a>Consulte também
 
-[Elementos da interface do usuário](../mfc/user-interface-elements-mfc.md)
+[Elementos da Interface do usuário](../mfc/user-interface-elements-mfc.md)

@@ -8,10 +8,10 @@ helpviewer_keywords:
 - strings [C++], converting
 ms.assetid: e7e4f741-3c82-45f0-b8c0-1e1e343b0e77
 ms.openlocfilehash: 21006f19f7c811f87f3f75e346983f7a8e7e0bf5
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58778319"
 ---
 # <a name="how-to-convert-between-various-string-types"></a>Como: Converter entre diversos tipos de cadeia de caracteres
@@ -803,11 +803,11 @@ Hello, World! (basic_string)
 ## <a name="see-also"></a>Consulte também
 
 [ATL e Macros de conversão de cadeia de caracteres MFC](../atl/reference/string-conversion-macros.md)<br/>
-[Operações CString relacionadas a cadeias de caracteres de estilo C](../atl-mfc-shared/cstring-operations-relating-to-c-style-strings.md)<br/>
-[Como: Converter cadeia de caracteres padrão em System:: String](../dotnet/how-to-convert-standard-string-to-system-string.md)<br/>
-[Como: Converter System:: String em cadeia de caracteres padrão](../dotnet/how-to-convert-system-string-to-standard-string.md)<br/>
+[Operações de CString relacionadas a cadeias de caracteres de estilo C](../atl-mfc-shared/cstring-operations-relating-to-c-style-strings.md)<br/>
+[Como: converter uma cadeia de caracteres padrão em System::String](../dotnet/how-to-convert-standard-string-to-system-string.md)<br/>
+[Como: converter System::String em uma cadeia de caracteres padrão](../dotnet/how-to-convert-system-string-to-standard-string.md)<br/>
 [Como: Converter System:: String em wchar_t * ou char\*](../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md)<br/>
-[Programando com o CComBSTR](../atl/programming-with-ccombstr-atl.md)<br/>
+[Programando com CComBSTR](../atl/programming-with-ccombstr-atl.md)<br/>
 [mbstowcs_s, _mbstowcs_s_l](../c-runtime-library/reference/mbstowcs-s-mbstowcs-s-l.md)<br/>
 [wcstombs_s, _wcstombs_s_l](../c-runtime-library/reference/wcstombs-s-wcstombs-s-l.md)<br/>
 [strcpy_s, wcscpy_s, _mbscpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md)<br/>

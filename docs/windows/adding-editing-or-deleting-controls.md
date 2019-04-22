@@ -44,10 +44,10 @@ helpviewer_keywords:
 - rich edit controls [C++], RichEdit 1.0
 ms.assetid: 73cef03f-5c8c-456a-87d1-1458dff185cf
 ms.openlocfilehash: 2e3e671cd92313ad120d2cd6aae3f7e815e09e65
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59025358"
 ---
 # <a name="how-to-add-edit-or-delete-controls-c"></a>Como: Adicionar, editar ou excluir controles (C++)
@@ -193,7 +193,7 @@ O **Inserir controle ActiveX** caixa de diálogo permite que você inserir contr
 |Propriedade|Descrição|
 |---|---|
 |**Controle ActiveX**|Exibe uma lista de controles ActiveX.<br/><br/>Inserindo um controle nessa caixa de diálogo não gera uma classe wrapper. Se você precisar de uma classe wrapper, use [Class View](/visualstudio/ide/viewing-the-structure-of-code) para criar um, consulte [adicionando uma classe](../ide/adding-a-class-visual-cpp.md).<br/><br/>Se um controle ActiveX não aparecer na caixa de diálogo, tente instalar o controle de acordo com as instruções do fornecedor.|
-|**Caminho**|Exibe o arquivo no qual o controle ActiveX é encontrado.|
+|**Path**|Exibe o arquivo no qual o controle ActiveX é encontrado.|
 
 > [!CAUTION]
 > Ele pode não ser legal para distribuir todos os controles ActiveX em seu sistema. Consulte o contrato de licença para softwares que instalados os controles ou entre em contato com a empresa de software.
@@ -232,7 +232,7 @@ Win32
 
 [Gerenciar controles de caixa de diálogo](controls-in-dialog-boxes.md)<br/>
 [Como: Controles de layout](arrangement-of-controls-on-dialog-boxes.md)<br/>
-[Como: Definir valores e controlar o acesso](defining-mnemonics-access-keys.md)<br/>
+[Como: Definir acesso e valores de controle](defining-mnemonics-access-keys.md)<br/>
 
 <!-- excluded links
 [Mapping Messages to Functions](../mfc/reference/mapping-messages-to-functions.md)<br/>

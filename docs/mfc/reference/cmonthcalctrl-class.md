@@ -91,10 +91,10 @@ helpviewer_keywords:
 - CMonthCalCtrl [MFC], SizeRectToMin
 ms.assetid: a42f6bd6-ab5c-4335-82f8-839982fc64a2
 ms.openlocfilehash: bd062a4e0d4db364c9cb628608c6af165dc0edc2
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58777162"
 ---
 # <a name="cmonthcalctrl-class"></a>Classe CMonthCalCtrl
@@ -862,7 +862,7 @@ BOOL SetCalID(CALID calid);
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|*CALID*|[in] Um dos [identificador de calendário](/windows/desktop/Intl/calendar-identifiers) constantes.|
+|*calid*|[in] Um dos [identificador de calendário](/windows/desktop/Intl/calendar-identifiers) constantes.|
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -1079,7 +1079,7 @@ BOOL SetMaxSelCount(int nMax);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Nmáx*<br/>
+*nMax*<br/>
 O valor será definido para representar o número máximo de dias selecionáveis.
 
 ### <a name="return-value"></a>Valor de retorno

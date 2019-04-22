@@ -75,10 +75,10 @@ helpviewer_keywords:
 - CSliderCtrl [MFC], SetToolTips
 ms.assetid: dd12b084-4eda-4550-a810-8f3cfb06b871
 ms.openlocfilehash: 4db27112daf65b2c3f477527cd7b4351b91d7f18
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58776629"
 ---
 # <a name="csliderctrl-class"></a>Classe CSliderCtrl
@@ -388,7 +388,7 @@ void GetRange(
 *nMin*<br/>
 Referência a um número inteiro que recebe a posição mínima.
 
-*Nmáx*<br/>
+*nMax*<br/>
 Referência a um número inteiro que recebe a posição do máximo.
 
 ### <a name="remarks"></a>Comentários
@@ -434,7 +434,7 @@ void GetSelection(
 *nMin*<br/>
 Referência a um número inteiro que recebe a posição inicial da seleção atual.
 
-*Nmáx*<br/>
+*nMax*<br/>
 Referência a um número inteiro que recebe a posição final da seleção atual.
 
 ##  <a name="getthumblength"></a>  CSliderCtrl::GetThumbLength
@@ -633,7 +633,7 @@ void SetRange(
 *nMin*<br/>
 Posição do mínimo para o controle deslizante.
 
-*Nmáx*<br/>
+*nMax*<br/>
 Posição máximo para o controle deslizante.
 
 *bRedraw*<br/>
@@ -651,7 +651,7 @@ void SetRangeMax(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Nmáx*<br/>
+*nMax*<br/>
 Posição máximo para o controle deslizante.
 
 *bRedraw*<br/>
@@ -690,7 +690,7 @@ void SetSelection(
 *nMin*<br/>
 Posição inicial para o controle deslizante.
 
-*Nmáx*<br/>
+*nMax*<br/>
 Posição final para o controle deslizante.
 
 ##  <a name="setthumblength"></a>  CSliderCtrl::SetThumbLength
@@ -771,7 +771,7 @@ int SetTipSide(int nLocation);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Nlocal*<br/>
+*nLocation*<br/>
 Valor que representa o local no qual exibir o controle de dica de ferramenta. Para obter uma lista de valores possíveis, consulte a mensagem do Win32 [TBM_SETTIPSIDE](/windows/desktop/Controls/tbm-settipside), conforme descrito no SDK do Windows.
 
 ### <a name="return-value"></a>Valor de retorno

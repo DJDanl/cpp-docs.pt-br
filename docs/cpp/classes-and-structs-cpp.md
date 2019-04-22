@@ -9,10 +9,10 @@ helpviewer_keywords:
 - user-defined types, C++ classes
 ms.assetid: 516dd496-13fb-4f17-845a-e9ca45437873
 ms.openlocfilehash: c28f83e7853ffb09bba7721ec71ab43c85aedb0c
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58779385"
 ---
 # <a name="classes-and-structs-c"></a>Classes e structs (C++)
@@ -51,7 +51,7 @@ Os seguintes tópicos estão incluídos:
 
 Os três tipos de classe são estrutura, classe e união. Elas são declaradas usando o [struct](../cpp/struct-cpp.md), [classe](../cpp/class-cpp.md), e [união](../cpp/unions.md) palavras-chave. A tabela a seguir mostra as diferenças entre os três tipos de classe.
 
-Para obter mais informações sobre uniões, consulte [uniões](../cpp/unions.md). Para obter informações sobre classes e estruturas em C + + c++ /CLI e c++ /CLI CX, consulte [Classes e Structs](../extensions/classes-and-structs-cpp-component-extensions.md).
+Para obter mais informações sobre uniões, consulte [uniões](../cpp/unions.md). Para obter informações sobre classes e estruturas em C++/CLI e C++/CX, consulte [Classes e Structs](../extensions/classes-and-structs-cpp-component-extensions.md).
 
 ### <a name="access-control-and-constraints-of-structures-classes-and-unions"></a>Controle de acesso e restrições de estruturas, classes e uniões
 

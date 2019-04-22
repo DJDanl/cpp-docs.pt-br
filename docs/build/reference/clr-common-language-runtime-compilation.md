@@ -14,10 +14,10 @@ helpviewer_keywords:
 - common language runtime, /clr compiler option
 ms.assetid: fec5a8c0-40ec-484c-a213-8dec918c1d6c
 ms.openlocfilehash: 1946fdabe66934e64cf95d3c3f12e16bc98ba664
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58779346"
 ---
 # <a name="clr-common-language-runtime-compilation"></a>/clr (compilação do Common Language Runtime)
@@ -39,11 +39,11 @@ Uma ou mais das seguintes opções, separados por vírgulas.
 
 - **puro**
 
-   **/CLR: pure foi preterido**. A opção é removida no Visual Studio 2017. É recomendável que você porta o código que deve ser a MSIL puro para C#.
+   **/CLR: pure foi preterido**. A opção é removida no Visual Studio 2017. É recomendável que você porta o código que deve ser a MSIL puro para c#.
 
 - **seguro**
 
-   **/CLR: safe é preterida**. A opção é removida no Visual Studio 2017. É recomendável que você porta o código que deve ser a MSIL seguro para C#.
+   **/CLR: safe é preterida**. A opção é removida no Visual Studio 2017. É recomendável que você porta o código que deve ser a MSIL seguro para c#.
 
 - **noAssembly**
 

@@ -1,5 +1,5 @@
 ---
-title: db_column (atributo de COM do C++)
+title: db_column (C++ COM atributo)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.db_column
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - db_column attribute
 ms.assetid: 58da4afc-f69c-4ae6-af9a-3f9515f56081
 ms.openlocfilehash: e0e2c873452884275e97663ae2d9d6df2f790ffd
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59024836"
 ---
 # <a name="dbcolumn"></a>db_column
@@ -36,10 +36,10 @@ O número de coluna ordinal (`DBCOLUMNINFO` ordinal) ou o nome de coluna (cadeia
 *dbtype*<br/>
 (Opcional) Um banco de dados OLE [indicador de tipo](/previous-versions/windows/desktop/ms711251(v=vs.85)) para a entrada de coluna.
 
-*precisão*<br/>
+*precision*<br/>
 (Opcional) A precisão a ser usado para a entrada da coluna. Para obter detalhes, consulte a descrição dos `bPrecision` elemento o [estrutura DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85))
 
-*dimensionar*<br/>
+*scale*<br/>
 (Opcional) A escala a ser usado para a entrada da coluna. Para obter detalhes, consulte a descrição da `bScale` elemento o [estrutura DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85))
 
 *status*<br/>
@@ -113,5 +113,5 @@ Para obter mais informações sobre os contextos de atributo, consulte [contexto
 
 ## <a name="see-also"></a>Consulte também
 
-[Atributos de consumidor de banco de dados OLE](ole-db-consumer-attributes.md)<br/>
+[Atributos de consumidor do OLE DB](ole-db-consumer-attributes.md)<br/>
 [Atributos de classe](class-attributes.md)

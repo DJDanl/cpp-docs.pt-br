@@ -10,10 +10,10 @@ helpviewer_keywords:
 - structures, MFC
 ms.assetid: 27566602-7d84-4089-880c-8e90fb04fa56
 ms.openlocfilehash: a5f0be66cdcb5c4a37d16b1e83cbc40cf023df32
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58780191"
 ---
 # <a name="structures-styles-callbacks-and-message-maps"></a>Estruturas, estilos, retornos de chamada e mapas de mensagem
@@ -28,10 +28,10 @@ Fornece links para as estruturas chamadas a partir de várias funções de membr
 [Estilos usados pelo MFC](../../mfc/reference/styles-used-by-mfc.md)<br/>
 Fornece links para os estilos usados durante a criação de objetos MFC.
 
-[Funções de Retorno de Chamada Usadas pelo MFC](../../mfc/reference/callback-functions-used-by-mfc.md)<br/>
+[Funções de retorno de chamada usadas pelo MFC](../../mfc/reference/callback-functions-used-by-mfc.md)<br/>
 Fornece links para as funções de retorno de chamada que aparecem na biblioteca do MFC.
 
-[Mapas de mensagem](../../mfc/reference/message-maps-mfc.md)<br/>
+[Mapas de mensagens](../../mfc/reference/message-maps-mfc.md)<br/>
 Descreve as macros de mapeamento de mensagem e `CWnd` entradas de mapa de mensagem.
 
 ## <a name="related-sections"></a>Seções relacionadas

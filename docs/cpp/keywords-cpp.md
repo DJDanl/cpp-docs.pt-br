@@ -10,15 +10,15 @@ helpviewer_keywords:
 - __identifer keyword [C++]
 ms.assetid: d7ca94a8-f785-41ce-9f73-d3c4fd508489
 ms.openlocfilehash: f87c2401bcc964229d3c0b3cf7119a09553cc2f2
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58774757"
 ---
 # <a name="keywords-c"></a>Palavras-chave (C++)
 
-Palavras-chave são identificadores reservados pré-definidos que têm significados especiais. Não podem ser usados como identificadores em seu programa. As palavras-chave a seguir são reservadas para o Microsoft C++. Nomes com sublinhados à esquerda e seguido de (C + + / CLI) são extensões da Microsoft.
+Palavras-chave são identificadores reservados pré-definidos que têm significados especiais. Não podem ser usados como identificadores em seu programa. As palavras-chave a seguir são reservadas para o Microsoft C++. Nomes com sublinhados à esquerda e seguido de (C++/CLI) são extensões da Microsoft.
 
 |||||
 |-|-|-|-|
@@ -42,12 +42,12 @@ Palavras-chave são identificadores reservados pré-definidos que têm significa
 |[const_cast](const-cast-operator.md)|[constexpr](constexpr-cpp.md)|[continue](continue-statement-cpp.md)|[decltype](decltype-cpp.md)|
 |[default](switch-statement-cpp.md)|[delegate](../extensions/delegate-cpp-component-extensions.md)(C++/CLI)|[delete](delete-operator-cpp.md)|[deprecated](deprecated-cpp.md) <sup>1</sup>|
 |[dllexport](dllexport-dllimport.md) <sup>1</sup>|[dllimport](dllexport-dllimport.md) <sup>1</sup>|[do](do-while-statement-cpp.md)|[double](fundamental-types-cpp.md)|
-|[dynamic_cast](dynamic-cast-operator.md)|[else](if-else-statement-cpp.md)|[enum](enumerations-cpp.md)|[classe de enum](../extensions/enum-class-cpp-component-extensions.md)|
+|[dynamic_cast](dynamic-cast-operator.md)|[else](if-else-statement-cpp.md)|[enum](enumerations-cpp.md)|[enum class](../extensions/enum-class-cpp-component-extensions.md)|
 |[Enum struct](../extensions/enum-class-cpp-component-extensions.md)|[event](../extensions/event-cpp-component-extensions.md)(C++/CLI)|[explicit](user-defined-type-conversions-cpp.md)|[extern](using-extern-to-specify-linkage.md)|
 |[false](false-cpp.md)|[finally](../dotnet/finally.md)|[float](fundamental-types-cpp.md)|[for](for-statement-cpp.md)|
 |[para cada um no](../dotnet/for-each-in.md)|[friend](friend-cpp.md)|[friend_as](../preprocessor/hash-using-directive-cpp.md)|[gcnew](../extensions/ref-new-gcnew-cpp-component-extensions.md)(C++/CLI)|
 |[generic](../extensions/generics-cpp-component-extensions.md)(C++/CLI)|[goto](goto-statement-cpp.md)|[if](if-else-statement-cpp.md)|[initonly](../dotnet/initonly-cpp-cli.md)|
-|[inline](inline-functions-cpp.md)|[int](fundamental-types-cpp.md)|[classe de interface](../extensions/interface-class-cpp-component-extensions.md)(C + + / CLI)|[estrutura de interface](../extensions/interface-class-cpp-component-extensions.md)(C + + / CLI)|
+|[inline](inline-functions-cpp.md)|[int](fundamental-types-cpp.md)|[classe de interface](../extensions/interface-class-cpp-component-extensions.md)(C++/CLI)|[estrutura de interface](../extensions/interface-class-cpp-component-extensions.md)(C++/CLI)|
 |[interior_ptr](../extensions/interior-ptr-cpp-cli.md)(C++/CLI)|[literal](../extensions/literal-cpp-component-extensions.md)(C++/CLI)|[long](fundamental-types-cpp.md)|[mutável](mutable-data-members-cpp.md)|
 |[naked](naked-cpp.md) <sup>1</sup>|[namespace](namespaces-cpp.md)|[new](../extensions/new-new-slot-in-vtable-cpp-component-extensions.md)(C++/CLI)|[new](new-operator-cpp.md)|
 |[noexcept](noexcept-cpp.md)|[noinline](noinline.md) <sup>1</sup>|[noreturn](noreturn.md) <sup>1</sup>|[nothrow](nothrow-cpp.md) <sup>1</sup>|
@@ -60,8 +60,8 @@ Palavras-chave são identificadores reservados pré-definidos que têm significa
 |[template](templates-cpp.md)|[this](this-pointer.md)|[thread](thread.md) <sup>1</sup>|[throw](try-throw-and-catch-statements-cpp.md)|
 |[true](true-cpp.md)|[try](try-throw-and-catch-statements-cpp.md)|[typedef](aliases-and-typedefs-cpp.md)|[typeid](typeid-operator.md)|
 |[typeid](../extensions/typeid-cpp-component-extensions.md)|[typename](typename.md)|[union](unions.md)|[unsigned](fundamental-types-cpp.md)|
-|[usando](using-declaration.md) declaração|[usando](namespaces-cpp.md#using_directives) diretiva|[uuid](uuid-cpp.md) <sup>1</sup>|[classe de valor](../extensions/classes-and-structs-cpp-component-extensions.md)(C + + / CLI)|
-|[estrutura de valor](../extensions/classes-and-structs-cpp-component-extensions.md)(C + + / CLI)|[virtual](virtual-cpp.md)|[void](void-cpp.md)|[volatile](volatile-cpp.md)|
+|[usando](using-declaration.md) declaração|[usando](namespaces-cpp.md#using_directives) diretiva|[uuid](uuid-cpp.md) <sup>1</sup>|[classe de valor](../extensions/classes-and-structs-cpp-component-extensions.md)(C++/CLI)|
+|[estrutura de valor](../extensions/classes-and-structs-cpp-component-extensions.md)(C++/CLI)|[virtual](virtual-cpp.md)|[void](void-cpp.md)|[volatile](volatile-cpp.md)|
 |[while](while-statement-cpp.md)|
 
 <sup>1</sup> estendido atributos para o **declspec** palavra-chave.

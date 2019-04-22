@@ -16,10 +16,10 @@ helpviewer_keywords:
 - data sources [MFC], creating
 ms.assetid: ac216d54-3ca5-4ce7-850d-cd1f6a90d4f1
 ms.openlocfilehash: 68ee5fbfec554df8865ca50c265ca2fa2f226a29
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58775238"
 ---
 # <a name="data-objects-and-data-sources-creation-and-destruction"></a>Objetos de dados e fontes de dados: Criação e destruição
@@ -84,6 +84,6 @@ Para obter mais informações, consulte [arrastar e soltar](../mfc/drag-and-drop
 
 ## <a name="see-also"></a>Consulte também
 
-[Objetos e origens de dados (OLE)](../mfc/data-objects-and-data-sources-ole.md)<br/>
+[Objetos e fontes de dados (OLE)](../mfc/data-objects-and-data-sources-ole.md)<br/>
 [Classe COleDataObject](../mfc/reference/coledataobject-class.md)<br/>
 [Classe COleDataSource](../mfc/reference/coledatasource-class.md)

@@ -29,10 +29,10 @@ helpviewer_keywords:
 - COlePasteSpecialDialog [MFC], m_ps
 ms.assetid: 0e82ef9a-9bbe-457e-8240-42c86a0534f7
 ms.openlocfilehash: 9c31ed6f82f4280206bf233999fac74981636db3
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58776902"
 ---
 # <a name="colepastespecialdialog-class"></a>Classe COlePasteSpecialDialog
@@ -131,13 +131,13 @@ Cadeia de caracteres que descreve o formato para o usuário.
 *lpszResult*<br/>
 Cadeia de caracteres que descreve o resultado se esse formato for escolhido na caixa de diálogo.
 
-*sinalizadores*<br/>
+*flags*<br/>
 Os diferentes vinculando e inserindo as opções disponíveis para esse formato. Esse sinalizador é uma combinação bit a bit de um ou mais dos valores diferentes no OLEUIPASTEFLAG tipo enumerado.
 
 *cf*<br/>
 O formato da área de transferência para adicionar.
 
-*TYMED.&lt;1}*<br/>
+*tymed*<br/>
 Os tipos de mídia disponível nesse formato. Isso é uma combinação bit a bit de um ou mais dos valores a TYMED tipo enumerado.
 
 *nFormatID*<br/>

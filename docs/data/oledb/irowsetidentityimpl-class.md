@@ -15,10 +15,10 @@ helpviewer_keywords:
 - IsSameRow method
 ms.assetid: 56821edf-e045-40c8-96bd-231552cd5799
 ms.openlocfilehash: 51f8d7e832476619ccec277c9d73791041d146a6
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59023173"
 ---
 # <a name="irowsetidentityimpl-class"></a>Classe IRowsetIdentityImpl
@@ -74,5 +74,5 @@ Para comparar identificadores de linha, este método converte o `HROW` lida com 
 
 ## <a name="see-also"></a>Consulte também
 
-[Modelos de provedor de banco de dados OLE](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
-[Arquitetura de modelo do provedor de banco de dados OLE](../../data/oledb/ole-db-provider-template-architecture.md)
+[Modelos de provedor do OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Arquitetura de modelo do provedor do OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

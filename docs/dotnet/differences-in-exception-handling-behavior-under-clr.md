@@ -6,10 +6,10 @@ helpviewer_keywords:
 - set_se_translator function
 ms.assetid: 2e7e8daf-d019-44b0-a51c-62d7aaa89104
 ms.openlocfilehash: ae745cfb96f4efe1ede7e3fc762842f9e4d63323
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58772732"
 ---
 # <a name="differences-in-exception-handling-behavior-under-clr"></a>Diferenças no comportamento do tratamento de exceções em /CLR
@@ -18,7 +18,7 @@ ms.locfileid: "58772732"
 
 ##  <a name="vcconjumpingoutofafinallyblock"></a> Saltar fora de um bloco Finally
 
-No código C/C++ nativo, saltando fora de um _**finalmente** bloco usando a manipulação de exceção estruturada (SEH) é permitido, embora ele produz um aviso.  Sob [/clr](../build/reference/clr-common-language-runtime-compilation.md), alternando de uma **finalmente** bloco causa um erro:
+Em C nativo /C++ código, saltando fora de um _**finalmente** bloco de manipulação de exceção estruturada (SEH) é permitido, embora ele produz um aviso.  Sob [/clr](../build/reference/clr-common-language-runtime-compilation.md), alternando de uma **finalmente** bloco causa um erro:
 
 ```cpp
 // clr_exception_handling_4.cpp

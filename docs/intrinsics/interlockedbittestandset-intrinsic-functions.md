@@ -19,15 +19,15 @@ helpviewer_keywords:
 - lock_bts instruction
 ms.assetid: b1b7e334-53ea-48cf-ba60-5fa3ef51a1fc
 ms.openlocfilehash: 3da533b3cf2ab8f396e4ba284cc0bf921a5c80b5
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59023198"
 ---
 # <a name="interlockedbittestandset-intrinsic-functions"></a>Funções intrínsecas _interlockedbittestandreset
 
-**Específico da Microsoft**
+**Seção específica da Microsoft**
 
 Gere uma instrução que examina o bit `b` do endereço `a` e retorna seu valor atual antes de defini-la como 1.
 
@@ -104,9 +104,9 @@ Em processadores Intel que suportam instruções HLE (Elisão de Bloqueio de Har
 
 Essas rotinas somente estão disponíveis como intrínsecos.
 
-**FIM de Específico da Microsoft**
+**Fim da seção específica da Microsoft**
 
 ## <a name="see-also"></a>Consulte também
 
 [Intrínsecos do compilador](../intrinsics/compiler-intrinsics.md)<br/>
-[Conflitos com o compilador x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)
+[conflitos com o compilador x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

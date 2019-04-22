@@ -1,5 +1,5 @@
 ---
-title: cpp_quote (atributo de COM do C++)
+title: cpp_quote (C++ COM atributo)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.cpp_quote
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - cpp_quote attribute
 ms.assetid: f75327ff-42bd-498b-9177-7ffa25427e1f
 ms.openlocfilehash: 378435ced5a541785b7b32bc9d2f408034d5a2d8
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59024668"
 ---
 # <a name="cppquote"></a>cpp_quote
@@ -30,7 +30,7 @@ Uma instrução C.
 
 ## <a name="remarks"></a>Comentários
 
-O **cpp_quote** atributo C++ é útil se você deseja colocar uma diretiva de pré-processador em um arquivo. idl.
+O **cpp_quote** C++ atributo é útil se você deseja colocar uma diretiva de pré-processador em um arquivo. idl.
 
 Você também pode usar **cpp_quote** e gerar um arquivo. h como parte da compilação MIDL. Por exemplo, se você tiver um arquivo de cabeçalho de C++ que usa atributos de IDL do C++, mas não é possível usar esse arquivo para alguma tarefa, em seguida, você pode compilá-lo para criar um arquivo. h de gerados por MIDL, que você deve ser capaz de usar.
 
@@ -55,5 +55,5 @@ Para obter mais informações sobre os contextos de atributo, consulte [contexto
 
 ## <a name="see-also"></a>Consulte também
 
-[Atributos IDL](idl-attributes.md)<br/>
-[Atributos autônomos](stand-alone-attributes.md)
+[Atributos de IDL](idl-attributes.md)<br/>
+[Atributos independentes](stand-alone-attributes.md)

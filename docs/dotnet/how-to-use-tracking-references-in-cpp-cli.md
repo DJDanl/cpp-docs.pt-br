@@ -1,19 +1,19 @@
 ---
-title: 'Como: Usar referências de acompanhamento no C + + / CLI'
+title: 'Como: Usar referências de acompanhamento no C++/CLI'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - CLR types, passing by reference
 ms.assetid: d91e471c-34ff-4786-9e0d-c6db0494b946
 ms.openlocfilehash: 8be575bd39bc3b2e6512ba1bcb40d9206731f83a
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58777045"
 ---
-# <a name="how-to-use-tracking-references-in-ccli"></a>Como: Usar referências de acompanhamento no C + + / CLI
+# <a name="how-to-use-tracking-references-in-ccli"></a>Como: Usar referências de acompanhamento no C++/CLI
 
-Este artigo mostra como usar uma referência de rastreamento (%) no C + + c++ CLI para passar o common language runtime (CLR) tipos por referência.
+Este artigo mostra como usar uma referência de rastreamento (%) no C++/CLI passar common language runtime (CLR) tipos por referência.
 
 ## <a name="to-pass-clr-types-by-reference"></a>Para passar tipos CLR por referência
 
@@ -70,7 +70,7 @@ int main() {
 zip == 20100
 ```
 
-O próximo exemplo mostra que tomar o endereço de uma referência de rastreamento retorna um [interior_ptr (C++ c++ CLI)](../extensions/interior-ptr-cpp-cli.md)e mostra como modificar e acessar dados por meio de uma referência de rastreamento.
+O próximo exemplo mostra que tomar o endereço de uma referência de rastreamento retorna um [interior_ptr (C++/CLI)](../extensions/interior-ptr-cpp-cli.md)e mostra como modificar e acessar dados por meio de uma referência de rastreamento.
 
 ```cpp
 // tracking_reference_data.cpp
@@ -343,4 +343,4 @@ T &
 
 ## <a name="see-also"></a>Consulte também
 
-[Operador de referência de acompanhamento](../extensions/tracking-reference-operator-cpp-component-extensions.md)
+[Operador de Referência de Acompanhamento](../extensions/tracking-reference-operator-cpp-component-extensions.md)

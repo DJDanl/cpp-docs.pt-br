@@ -165,10 +165,10 @@ helpviewer_keywords:
 - COleClientItem [MFC], OnShowItem
 ms.assetid: 7f571b7c-2758-4839-847a-0cf1ef643128
 ms.openlocfilehash: 2687dfc9941a512523a7cb771cb872c78b97ce2d
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58773977"
 ---
 # <a name="coleclientitem-class"></a>Classe COleClientItem
@@ -627,7 +627,7 @@ BOOL CreateFromClipboard(
 
 ### <a name="parameters"></a>Parâmetros
 
-*renderização*<br/>
+*render*<br/>
 Sinalizador que especifica como o servidor processará o item OLE. Para os valores possíveis, consulte [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) no SDK do Windows.
 
 *cfFormat*<br/>
@@ -663,7 +663,7 @@ BOOL CreateFromData(
 *pDataObject*<br/>
 Ponteiro para o [COleDataObject](../../mfc/reference/coledataobject-class.md) objeto do qual o item OLE deve ser criado.
 
-*renderização*<br/>
+*render*<br/>
 Sinalizador que especifica como o servidor processará o item OLE. Para os valores possíveis, consulte [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) no SDK do Windows.
 
 *cfFormat*<br/>
@@ -700,10 +700,10 @@ BOOL CreateFromFile(
 *lpszFileName*<br/>
 Ponteiro para o nome do arquivo do qual o item OLE é a ser criado.
 
-*CLSID*<br/>
+*clsid*<br/>
 Reservado para uso futuro.
 
-*renderização*<br/>
+*render*<br/>
 Sinalizador que especifica como o servidor processará o item OLE. Para os valores possíveis, consulte [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) no SDK do Windows.
 
 *cfFormat*<br/>
@@ -735,7 +735,7 @@ BOOL CreateLinkFromClipboard(
 
 ### <a name="parameters"></a>Parâmetros
 
-*renderização*<br/>
+*render*<br/>
 Sinalizador que especifica como o servidor processará o item OLE. Para os valores possíveis, consulte [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) no SDK do Windows.
 
 *cfFormat*<br/>
@@ -771,7 +771,7 @@ BOOL CreateLinkFromData(
 *pDataObject*<br/>
 Ponteiro para o [COleDataObject](../../mfc/reference/coledataobject-class.md) objeto do qual o item OLE deve ser criado.
 
-*renderização*<br/>
+*render*<br/>
 Sinalizador que especifica como o servidor processará o item OLE. Para os valores possíveis, consulte [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) no SDK do Windows.
 
 *cfFormat*<br/>
@@ -807,7 +807,7 @@ BOOL CreateLinkFromFile(
 *lpszFileName*<br/>
 Ponteiro para o nome do arquivo do qual o item OLE é a ser criado.
 
-*renderização*<br/>
+*render*<br/>
 Sinalizador que especifica como o servidor processará o item OLE. Para os valores possíveis, consulte [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) no SDK do Windows.
 
 *cfFormat*<br/>
@@ -840,10 +840,10 @@ BOOL CreateNewItem(
 
 ### <a name="parameters"></a>Parâmetros
 
-*CLSID*<br/>
+*clsid*<br/>
 ID que identifica exclusivamente o tipo de item OLE para criar.
 
-*renderização*<br/>
+*render*<br/>
 Sinalizador que especifica como o servidor processará o item OLE. Para os valores possíveis, consulte [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) no SDK do Windows.
 
 *cfFormat*<br/>
@@ -875,7 +875,7 @@ BOOL CreateStaticFromClipboard(
 
 ### <a name="parameters"></a>Parâmetros
 
-*renderização*<br/>
+*render*<br/>
 Sinalizador que especifica como o servidor processará o item OLE. Para os valores possíveis, consulte [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) no SDK do Windows.
 
 *cfFormat*<br/>
@@ -911,7 +911,7 @@ BOOL CreateStaticFromData(
 *pDataObject*<br/>
 Ponteiro para o [COleDataObject](../../mfc/reference/coledataobject-class.md) objeto do qual o item OLE deve ser criado.
 
-*renderização*<br/>
+*render*<br/>
 Sinalizador que especifica como o servidor processará o item OLE. Para os valores possíveis, consulte [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) no SDK do Windows.
 
 *cfFormat*<br/>
@@ -1273,7 +1273,7 @@ static HICON GetIconFromRegistry(CLSID& clsid);
 
 ### <a name="parameters"></a>Parâmetros
 
-*CLSID*<br/>
+*clsid*<br/>
 Uma referência ao CLSID para o servidor associado ao ícone.
 
 ### <a name="return-value"></a>Valor de retorno

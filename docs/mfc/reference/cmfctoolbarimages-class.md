@@ -141,10 +141,10 @@ helpviewer_keywords:
 - CMFCToolBarImages [MFC], m_bDisableTrueColorAlpha
 ms.assetid: d4e50518-9ffc-406f-9996-f79e5cd38155
 ms.openlocfilehash: 210432b8ec193efccc0bf2338089dbccca310726
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58776408"
 ---
 # <a name="cmfctoolbarimages-class"></a>Classe CMFCToolBarImages
@@ -482,7 +482,7 @@ BOOL Draw(
 *bHilite*<br/>
 [in] TRUE se a imagem precisar ser realçado; Caso contrário, FALSE.
 
-*bDesabilitado*<br/>
+*bDisabled*<br/>
 [in] TRUE se a imagem deve ser desenhada no estilo desabilitado; Caso contrário, FALSE.
 
 *bIndeterminate*<br/>
@@ -1180,7 +1180,7 @@ static void SetDisabledImageAlpha(BYTE nValue);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Nvalor*<br/>
+*nValue*<br/>
 [in] O novo valor do canal alfa.
 
 ### <a name="remarks"></a>Comentários

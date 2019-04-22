@@ -9,15 +9,15 @@ helpviewer_keywords:
 - AddressOfReturnAddress intrinsic
 ms.assetid: c7e10b8c-445e-4236-a602-e2d90200f70a
 ms.openlocfilehash: 79d1e4645c60fb4231a53aaefdcf1fe0f3c876c4
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59024771"
 ---
 # <a name="addressofreturnaddress"></a>_AddressOfReturnAddress
 
-**Específico da Microsoft**
+**Seção específica da Microsoft**
 
 Fornece o endereço do local da memória que contém o endereço de retorno da função atual. Esse endereço não pode ser usado para acessar outros locais de memória (por exemplo, os argumentos da função).
 
@@ -73,7 +73,7 @@ int main() {
 00401058
 ```
 
-**FIM de Específico da Microsoft**
+**Fim da seção específica da Microsoft**
 
 ## <a name="see-also"></a>Consulte também
 

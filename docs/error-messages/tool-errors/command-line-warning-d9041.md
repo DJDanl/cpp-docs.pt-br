@@ -7,10 +7,10 @@ helpviewer_keywords:
 - D9041
 ms.assetid: ada8815f-4246-4e25-b57d-a7f16fa107cc
 ms.openlocfilehash: d9a32fbf961e980633635f277a76955a706a4b0e
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59021443"
 ---
 # <a name="command-line-warning-d9041"></a>Aviso D9041 (linha de comando)
@@ -31,5 +31,5 @@ Para corrigir o aviso, adicione a **/ANALYZE** opção de linha de comando. Se *
 
 ## <a name="see-also"></a>Consulte também
 
-[Erros de linha de comando D8000 até D9999](../../error-messages/tool-errors/command-line-errors-d8000-through-d9999.md)<br/>
+[Erros de linha de comando D8000 a D9999](../../error-messages/tool-errors/command-line-errors-d8000-through-d9999.md)<br/>
 [Opções do compilador MSVC](../../build/reference/compiler-options.md)
