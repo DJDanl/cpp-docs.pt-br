@@ -7,10 +7,10 @@ helpviewer_keywords:
 - importlib attribute
 ms.assetid: f129e459-b8d3-4aca-a0bc-ee53e18b62ed
 ms.openlocfilehash: 29c7df8fbedbd107a9bb0b05466addc4672fc555
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59041439"
 ---
 # <a name="importlib"></a>importlib
@@ -59,7 +59,7 @@ Para obter mais informações, consulte [contextos de atributo](cpp-attributes-c
 ## <a name="see-also"></a>Consulte também
 
 [Atributos de compilador](compiler-attributes.md)<br/>
-[Atributos autônomos](stand-alone-attributes.md)<br/>
+[Atributos independentes](stand-alone-attributes.md)<br/>
 [import](import.md)<br/>
 [importidl](importidl.md)<br/>
 [include](include-cpp.md)<br/>

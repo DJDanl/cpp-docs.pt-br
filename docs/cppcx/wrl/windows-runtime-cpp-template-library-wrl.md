@@ -4,10 +4,10 @@ ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: b915afce-553b-44a7-b8dc-0ab601758eb0
 ms.openlocfilehash: 5c1a4e7df424499f400dbd70d675956deef6bc5d
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58783770"
 ---
 # <a name="windows-runtime-c-template-library-wrl"></a>Biblioteca de Modelos C++ do Windows Runtime  (WRL)
@@ -15,21 +15,21 @@ ms.locfileid: "58783770"
 A WRL (Biblioteca de Modelos C++ do Tempo de Execução do Windows) é uma biblioteca de modelos que fornece uma maneira de baixo nível para criar e usar componente do Windows Runtime.
 
 > [!NOTE]
-> WRL agora foi substituído por C + + c++ /CLI WinRT, uma padrão C + + 17 projeção de linguagem para APIs do Windows Runtime. C + + c++ /CLI WinRT está disponível no SDK do Windows 10, versão 1803 em diante. C + + c++ /CLI WinRT é implementado inteiramente em arquivos de cabeçalho e projetado para fornecer acesso de primeira classe à moderna API do Windows.
+> WRL agora foi substituído por C++/WinRT, uma padrão C + + 17 projeção de linguagem para APIs do Windows Runtime. C++/ WinRT está disponível no SDK do Windows 10, versão 1803 em diante. C++/ WinRT é implementado inteiramente em arquivos de cabeçalho e projetado para fornecer acesso de primeira classe à moderna API do Windows.
 >
-> Com C + + c++ /CLI WinRT, você pode consumir e criar APIs do Windows Runtime usando qualquer compilador que 17 compatível com os padrões C + +. C + + c++ /CLI WinRT normalmente tem um desempenho melhor e produz binários menores do que qualquer outra opção de idioma para o tempo de execução do Windows. Continuaremos a dar suporte a C + + c++ /CLI CX e WRL, mas altamente recomendável que usem novos aplicativos C + + c++ /CLI WinRT. Para obter mais informações, consulte [C + + c++ /CLI WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/index).
+> Com o C++/WinRT, você pode consumir e criar APIs do Windows Runtime usando qualquer compilador que 17 compatível com os padrões C + +. C++/ WinRT normalmente tem um desempenho melhor e produz binários menores do que qualquer outra opção de idioma para o tempo de execução do Windows. Continuaremos a dar suporte a C++/CX e WRL, mas altamente recomendável que novos aplicativos usem C++/WinRT. Para obter mais informações, consulte [ C++/WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/index).
 
 ## <a name="benefits"></a>Benefícios
 
 A biblioteca de modelos de C++ de tempo de execução do Windows permite que você implementar com mais facilidade e consumir componentes do modelo de objeto de componente (COM). Ele fornece técnicas domésticas, como contagem de referência para gerenciar o tempo de vida de objetos e valores HRESULT para determinar se uma operação foi bem-sucedida ou falha de teste. Para poder usar a biblioteca de modelos C++ do Windows Runtime, você deve seguir cuidadosamente essas regras e técnicas.
 
-O C + + c++ /CLI CX é uma maneira de alto nível, com base no idioma usar componentes de tempo de execução do Windows. Tanto a biblioteca de modelos de C++ do Windows Runtime e C + + c++ /CLI CX simplificam a escrita de código para o tempo de execução do Windows, automaticamente, executando tarefas de manutenção do sistema em seu nome.
+O C++/CX é uma maneira de alto nível, com base no idioma usar componentes de tempo de execução do Windows. Os dois o tempo de execução do Windows C++ biblioteca de modelos e C++/CX simplificam a escrita de código para o tempo de execução do Windows, automaticamente, executando tarefas de manutenção do sistema em seu nome.
 
-A biblioteca de modelos de C++ do Windows Runtime e C + + c++ /CX oferece benefícios diferentes. Aqui estão alguns motivos, você talvez queira usar a biblioteca de modelos C++ do Windows Runtime em vez de C + + c++ /CX:
+O tempo de execução do Windows C++ biblioteca de modelos e C++/CX fornecem benefícios diferentes. Aqui estão alguns motivos, você talvez queira usar o tempo de execução do Windows C++ biblioteca de modelos em vez de C++/CX:
 
 - Biblioteca de modelos de C++ de tempo de execução do Windows adiciona uma pequena abstração sobre o Windows Runtime aplicativo ABI (Interface binária), dando a você a capacidade de controlar o código subjacente para melhor criar ou consumir APIs do Windows Runtime.
 
-- C + + c++ /CX representa valores COM HRESULT como exceções. Se você herdou uma base de código que usa COM, ou um que não usa exceções, você pode achar que a biblioteca de modelos C++ do Windows Runtime é uma maneira mais natural para trabalhar com o tempo de execução do Windows, porque você não precisa usar exceções.
+- C++/CX representa valores COM HRESULT como exceções. Se você herdou uma base de código que usa COM, ou um que não usa exceções, você pode achar que a biblioteca de modelos C++ do Windows Runtime é uma maneira mais natural para trabalhar com o tempo de execução do Windows, porque você não precisa usar exceções.
 
    > [!NOTE]
    > A biblioteca de modelos C++ do Windows Runtime usa valores HRESULT e não lança exceções. Além disso, a biblioteca de modelos C++ do Windows Runtime usa ponteiros inteligentes e o padrão RAII para ajudar a garantir que os objetos sejam destruídos corretamente quando o código do aplicativo gera uma exceção. Para obter mais informações sobre ponteiros inteligentes e RAII, consulte [ponteiros inteligentes](../../cpp/smart-pointers-modern-cpp.md) e [recursos do objetos próprios (RAII)](../../cpp/objects-own-resources-raii.md).
@@ -71,7 +71,7 @@ Mostra como usar o [IXMLHTTPRequest2](/windows/desktop/api/msxml6/nn-msxml6-ixml
 Usa o `HttpRequest` que é definido na classe [passo a passo: Conectando usando tarefas e solicitações HTTP XML](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md) no contexto de um aplicativo da UWP completo.
 
 [Criando um componente de DLL de tempo de execução do Windows com o exemplo do C++](https://code.msdn.microsoft.com/windowsapps/Creating-a-Windows-Runtime-6c399797)<br/>
-Mostra como usar a biblioteca de modelos C++ do Windows Runtime para criar um componente DLL em processo e consumi-lo em C + + c++ /CX, JavaScript e C#.
+Mostra como usar o tempo de execução do Windows C++ biblioteca de modelos para criar um componente DLL em processo e consuma-o de C++/CX, JavaScript, e C#.
 
 [Exemplo do jogo marble maze DirectX](https://code.msdn.microsoft.com/windowsapps/DirectX-Marble-Maze-Game-e4806345)<br/>
 Demonstra como usar a biblioteca de modelos de C++ de tempo de execução do Windows para gerenciar o tempo de vida de componentes COM, como o DirectX e Media Foundation no contexto de um jogo 3D completo.
@@ -147,5 +147,5 @@ Um `WeakRef` objeto normalmente representa um objeto cuja existência é control
 |-|-|
 |[APIs de chave por categoria](key-wrl-apis-by-category.md)|Realça os tipos primários de biblioteca de modelos de C++ de tempo de execução do Windows, funções e as macros.|
 |[Referência](wrl-reference.md)|Contém informações de referência para a biblioteca de modelos C++ do Windows Runtime.|
-|[Referência rápida (tempo de execução do Windows e Visual C++)](../../cppcx/quick-reference-c-cx.md)|Descreve resumidamente a C + + / recursos CX que dão suporte ao tempo de execução do Windows.|
-|[Usando componentes de tempo de execução do Windows no Visual C++](/windows/uwp/winrt-components/walkthrough-creating-a-basic-windows-runtime-component-in-cpp-and-calling-it-from-javascript-or-csharp)|Mostra como usar C + + c++ /CX para criar um componente básico do tempo de execução do Windows.|
+|[Referência rápida (tempo de execução do Windows e Visual C++)](../../cppcx/quick-reference-c-cx.md)|Descreve resumidamente a C++/CX recursos que dão suporte ao tempo de execução do Windows.|
+|[Usando componentes de tempo de execução do Windows no Visual C++](/windows/uwp/winrt-components/walkthrough-creating-a-basic-windows-runtime-component-in-cpp-and-calling-it-from-javascript-or-csharp)|Mostra como usar C++/CX para criar um componente básico do tempo de execução do Windows.|

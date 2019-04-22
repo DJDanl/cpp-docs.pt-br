@@ -25,10 +25,10 @@ helpviewer_keywords:
 - COleDropTarget [MFC], Revoke
 ms.assetid: a58c9a48-6a93-4357-b078-4594df258311
 ms.openlocfilehash: 9a1633ed48c763b986f3421c33589a05f8bba126
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58781634"
 ---
 # <a name="coledroptarget-class"></a>Classe COleDropTarget
@@ -317,7 +317,7 @@ Aponta para o objeto de dados que contém os dados a ser removido.
 *dropDefault*<br/>
 O efeito que o usuário escolheu para a operação de soltar padrão com base no estado atual da chave. Ele pode ser DROPEFFECT_NONE. Efeitos de soltar são discutidos na seção comentários.
 
-*lista suspensa*<br/>
+*dropList*<br/>
 Uma lista dos efeitos de soltar que ofereça suporte a origem de soltar. Valores de efeito de soltar podem ser combinados usando o OR bit a bit (**&#124;**) operação. Efeitos de soltar são discutidos na seção comentários.
 
 *point*<br/>

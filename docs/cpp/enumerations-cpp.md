@@ -11,10 +11,10 @@ helpviewer_keywords:
 - declaring enumerations
 ms.assetid: 081829db-5dca-411e-a53c-bffef315bcb3
 ms.openlocfilehash: caec9ea7ac5482ff23b73676a3fd7b3d25ad293f
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58772559"
 ---
 # <a name="enumerations-c"></a>Enumerações (C++)
@@ -22,7 +22,7 @@ ms.locfileid: "58772559"
 Uma enumeração é um tipo definido pelo usuário que consiste em um conjunto de constantes integrais nomeadas que são conhecidas como enumeradores.
 
 > [!NOTE]
->  Este artigo aborda a linguagem C++ padrão ISO **enum** tipo e o escopo (ou fortemente tipado) **classe enum** tipo introduzido no c++11. Para obter informações sobre o **classe enum pública** ou **classe enum privada** tipos no C + + c++ CLI e C + + c++ /CLI CX, consulte [classe enum](../extensions/enum-class-cpp-component-extensions.md).
+>  Este artigo aborda a linguagem C++ padrão ISO **enum** tipo e o escopo (ou fortemente tipado) **classe enum** tipo introduzido no c++11. Para obter informações sobre o **classe enum pública** ou **classe enum privada** tipos no C++/CLI e C++/CX, consulte [classe enum](../extensions/enum-class-cpp-component-extensions.md).
 
 ## <a name="syntax"></a>Sintaxe
 

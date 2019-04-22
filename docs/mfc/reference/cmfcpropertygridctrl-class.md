@@ -151,10 +151,10 @@ helpviewer_keywords:
 - CMFCPropertyGridCtrl [MFC], ValidateItemData
 ms.assetid: 95877cae-2311-4a2a-9031-0c8c3cf0a5f9
 ms.openlocfilehash: 93ace0388981f429ac4a422947fbdaae8cdb8f24
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58781972"
 ---
 # <a name="cmfcpropertygridctrl-class"></a>Classe CMFCPropertyGridCtrl
@@ -558,7 +558,7 @@ void EnableDescriptionArea(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>Parâmetros
 
-*bAtivar*<br/>
+*bEnable*<br/>
 [in] TRUE para habilitar a área de descrição; FALSE para desabilitar a área de descrição. O valor padrão é TRUE.
 
 ### <a name="remarks"></a>Comentários
@@ -578,7 +578,7 @@ void EnableHeaderCtrl(
 
 ### <a name="parameters"></a>Parâmetros
 
-*bAtivar*<br/>
+*bEnable*<br/>
 [in] True para habilitar o controle de cabeçalho; FALSE para desabilitar o controle de cabeçalho. O valor padrão é TRUE.
 
 *lpszLeftColumn*<br/>
@@ -1608,7 +1608,7 @@ virtual void UpdateColor(COLORREF color);
 
 ### <a name="parameters"></a>Parâmetros
 
-*cor*<br/>
+*color*<br/>
 [in] Um valor de cor RGB.
 
 ### <a name="remarks"></a>Comentários

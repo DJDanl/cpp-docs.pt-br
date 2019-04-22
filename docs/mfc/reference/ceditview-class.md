@@ -41,10 +41,10 @@ helpviewer_keywords:
 - CEditView [MFC], dwStyleDefault
 ms.assetid: bf38255c-fcbe-450c-95b2-3c5e35f86c37
 ms.openlocfilehash: 3ab276e83e8642aa5de2fd96305cb6d7b648fc40
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58781231"
 ---
 # <a name="ceditview-class"></a>Classe CEditView

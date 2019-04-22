@@ -16,10 +16,10 @@ helpviewer_keywords:
 - FireEvent method, adding custom events
 ms.assetid: c584d053-1e34-47aa-958e-37d3e9b85892
 ms.openlocfilehash: 48c5ddbc8a3bcf6f74c251820e83cdebcef05bc9
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58780997"
 ---
 # <a name="mfc-activex-controls-adding-custom-events"></a>Controles ActiveX MFC: Adicionando eventos personalizados
@@ -133,6 +133,6 @@ O procedimento a seguir adiciona um clique personalizado eventos.
 
 ## <a name="see-also"></a>Consulte também
 
-[Controles ActiveX MFC](../mfc/mfc-activex-controls.md)<br/>
+[Controles ActiveX do MFC](../mfc/mfc-activex-controls.md)<br/>
 [Controles ActiveX MFC: Métodos](../mfc/mfc-activex-controls-methods.md)<br/>
 [Classe COleControl](../mfc/reference/colecontrol-class.md)

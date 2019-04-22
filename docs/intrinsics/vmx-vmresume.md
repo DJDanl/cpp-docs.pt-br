@@ -8,15 +8,15 @@ helpviewer_keywords:
 - VMRESUME instruction
 ms.assetid: 233fe1b6-c727-493a-a484-1b2363732281
 ms.openlocfilehash: d2bfe9a8f98b8a03a82768177217d70674708c39
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59040587"
 ---
 # <a name="vmxvmresume"></a>__vmx_vmresume
 
-**Específico da Microsoft**
+**Seção específica da Microsoft**
 
 Reinicia a operação de não-raiz VMX usando a estrutura de controle da máquina virtual atual (VMCS).
 
@@ -49,7 +49,7 @@ O `__vmx_vmresume` função é equivalente ao `VMRESUME` instruções de máquin
 
 **Arquivo de cabeçalho** \<intrin. h >
 
-**FIM de Específico da Microsoft**
+**Fim da seção específica da Microsoft**
 
 ## <a name="see-also"></a>Consulte também
 

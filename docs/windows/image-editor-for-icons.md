@@ -43,10 +43,10 @@ helpviewer_keywords:
 - grid settings, Image editor
 ms.assetid: 586d2b8b-0348-4883-a85d-1ff0ddbf14dd
 ms.openlocfilehash: dd7da76d3df68fa63c87f64610524accfd4302ef
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59041543"
 ---
 # <a name="image-editor-for-icons-c"></a>Editor de imagens para ícones (C++)
@@ -74,8 +74,8 @@ O **imagem** menu, que é exibido apenas quando o **Editor de imagens** estiver 
 |Comando|Descrição|
 |---|---|
 |**Inverter cores**|Inverte suas cores.|
-|**Inverter horizontalmente**|Inverte a imagem ou seleção horizontalmente.|
-|**Inverter verticalmente**|Inverte a imagem ou seleção verticalmente.|
+|**Inverter Horizontalmente**|Inverte a imagem ou seleção horizontalmente.|
+|**Inverter Verticalmente**|Inverte a imagem ou seleção verticalmente.|
 |**Girar 90 graus**|A imagem ou seleção gira 90 graus.|
 |**Mostrar janela de cores**|Abre o **cores** janela, em que você pode escolher as cores a ser usado para sua imagem.|
 |**Usar seleção como Pincel**|Permite que você crie um pincel personalizado de uma parte de uma imagem.<br/><br/>Sua seleção torna-se um pincel personalizado que distribui as cores na seleção entre a imagem. Cópias da seleção são deixadas ao longo do caminho de arrastamento. Quanto mais lentamente do que você arrastar, são feitas as cópias mais.|
@@ -84,7 +84,7 @@ O **imagem** menu, que é exibido apenas quando o **Editor de imagens** estiver 
 |**Carregar paleta**|Abre o **carregar paleta de cores** caixa de diálogo que permite que você carregue as cores da paleta salvas anteriormente para um arquivo. PAL.|
 |**Salvar paleta**|Salva a paleta de cores em um arquivo. PAL.|
 |**Desenhar opaco**|Quando selecionada, torna a seleção atual opaca.<br/><br/>Quando desmarcada, torna transparente a seleção atual.|
-|**Editor de Barra de Ferramentas**|Abre o [caixa de diálogo novo recurso da barra de ferramentas](../windows/new-toolbar-resource-dialog-box.md).|
+|**Editor de barra de ferramentas**|Abre o [caixa de diálogo novo recurso da barra de ferramentas](../windows/new-toolbar-resource-dialog-box.md).|
 |**Configurações da grade**|Abre o **configurações da grade** caixa de diálogo na qual você pode especificar grades para sua imagem.|
 |**Novo tipo de imagem**|Abre o [New \<dispositivo > caixa de diálogo de tipo de imagem](../windows/new-device-image-type-dialog-box-image-editor-for-icons.md).<br/><br/>Um recurso de ícone único pode conter várias imagens de tamanhos diferentes e windows podem usar o tamanho de ícone apropriado, dependendo de como ela será a ser exibido. Um novo tipo de dispositivo não modifica o tamanho do ícone, mas em vez disso, cria uma nova imagem dentro do ícone. Aplica-se somente a ícones e cursores.|
 |**Tipo de imagem de ícone/Cursor atual**|Abre um submenu que lista as imagens de ícone ou cursor disponíveis nove primeiros. O último comando no submenu, **mais**, abre o [abra \<dispositivo > caixa de diálogo imagem](../windows/open-device-image-dialog-box-image-editor-for-icons.md).|
@@ -142,8 +142,8 @@ Para acessar essa caixa de diálogo, selecione a **Font** botão na **ferramenta
 |Propriedade|Descrição|
 |---|---|
 |**Fonte**|Lista as fontes disponíveis.|
-|**Estilo de fonte**|Lista os estilos disponíveis para a fonte especificada.|
-|**Tamanho**|Lista os tamanhos de ponto disponíveis para a fonte especificada.|
+|**Estilo da fonte**|Lista os estilos disponíveis para a fonte especificada.|
+|**Size**|Lista os tamanhos de ponto disponíveis para a fonte especificada.|
 |**Amostra**|Mostra um exemplo de como o texto será exibido com as configurações de fonte especificada.|
 |**script**|Lista os scripts de linguagem disponíveis para a fonte especificada.<br/><br/>Quando você seleciona um script de idioma diferente, o conjunto de caracteres desse idioma ficará disponível para a criação de documentos multilíngues.|
 
