@@ -9,15 +9,15 @@ helpviewer_keywords:
 - __lidt intrinsic
 ms.assetid: 8298d25d-a19e-4900-828d-6b3b09841882
 ms.openlocfilehash: 757309603af48820a17668cfe272bbeaad9239b3
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59038467"
 ---
 # <a name="lidt"></a>__lidt
 
-**Específico da Microsoft**
+**Seção específica da Microsoft**
 
 Carrega o registro de tabela de descritor de interrupção (IDTR) com o valor no local da memória especificado.
 
@@ -31,7 +31,7 @@ void __lidt(void * Source);
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|*Origem*|[in] Ponteiro para o valor a ser copiado para IDTR.|
+|*Source*|[in] Ponteiro para o valor a ser copiado para IDTR.|
 
 ## <a name="requirements"></a>Requisitos
 
@@ -45,7 +45,7 @@ void __lidt(void * Source);
 
 O `__lidt` função é equivalente ao `LIDT` instruções de máquina e está disponível apenas no modo kernel. Para obter mais informações, pesquise o documento, "Manual do desenvolvedor de Software de arquitetura Intel, Volume 2: Instrução definir Reference"na [Intel Corporation](https://software.intel.com/articles/intel-sdm) site.
 
-**FIM de Específico da Microsoft**
+**Fim da seção específica da Microsoft**
 
 ## <a name="see-also"></a>Consulte também
 

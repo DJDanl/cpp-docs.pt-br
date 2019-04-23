@@ -5,10 +5,10 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 19ecc5d4-297d-4c4e-b4f3-4fccab890b3d
 ms.openlocfilehash: 37ebcc646864774b15513c9e1891ba14e0705298
-ms.sourcegitcommit: 35c4b3478f8cc310ebbd932a18963ad8ab846ed9
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59237192"
 ---
 # <a name="how-to-design-for-exception-safety"></a>Como: Design para segurança de exceção
@@ -122,4 +122,4 @@ Tipos internos são todos não falhas e os tipos de biblioteca padrão oferecem 
 ## <a name="see-also"></a>Consulte também
 
 [Erros e tratamento de exceções (C++ moderno)](../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
-[Como: Interface entre códigos excepcionais e não excepcional](../cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md)
+[Como: realizar a interface entre códigos excepcionais e não excepcionais](../cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md)

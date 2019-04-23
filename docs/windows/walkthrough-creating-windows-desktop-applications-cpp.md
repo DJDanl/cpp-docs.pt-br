@@ -7,17 +7,17 @@ helpviewer_keywords:
 - Windows Desktop applications [C++]
 - Windows API [C++]
 ms.openlocfilehash: cb6d09acc00f2e38ee41180c81c1877bc53027c2
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59037938"
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>Passo a passo: Criar um aplicativo tradicional de área de trabalho do Windows (C++)
 
 Este passo a passo mostra como criar um aplicativo de área de trabalho tradicional do Windows no Visual Studio. O aplicativo de exemplo, você criará usa a API do Windows para exibir "Hello, área de trabalho do Windows!" em uma janela. Você pode usar o código que você desenvolve neste passo a passo como um padrão para criar outros aplicativos da área de trabalho do Windows.
 
-A API do Windows (também conhecido como a API do Win32, API de área de trabalho do Windows e API clássica do Windows) é uma estrutura com base em linguagem C para a criação de aplicativos do Windows. Ele já existe desde a década de 1980 e foi usado para criar aplicativos do Windows há décadas. Mais estruturas avançadas e mais fácil para programa foram criadas sobre a API do Windows, como MFC, ATL e os .NET frameworks. Até mesmo os mais moderno código para aplicativos UWP e Store escrito em C + + c++ /CLI WinRT usa a API do Windows abaixo. Para obter mais informações sobre a API do Windows, consulte [índice de API do Windows](/windows/desktop/apiindex/windows-api-list). Há muitas maneiras de criar aplicativos do Windows, mas o processo acima foi a primeira.
+A API do Windows (também conhecido como a API do Win32, API de área de trabalho do Windows e API clássica do Windows) é uma estrutura com base em linguagem C para a criação de aplicativos do Windows. Ele já existe desde a década de 1980 e foi usado para criar aplicativos do Windows há décadas. Mais estruturas avançadas e mais fácil para programa foram criadas sobre a API do Windows, como MFC, ATL e os .NET frameworks. Até mesmo os mais moderno código para aplicativos UWP e Store escritos em C++/WinRT usa a API do Windows abaixo. Para obter mais informações sobre a API do Windows, consulte [índice de API do Windows](/windows/desktop/apiindex/windows-api-list). Há muitas maneiras de criar aplicativos do Windows, mas o processo acima foi a primeira.
 
 > [!IMPORTANT]
 > Por questão de brevidade, algumas instruções de código são omitidas no texto. O [compilar o código](#build-the-code) seção no final deste documento mostra o código completo.

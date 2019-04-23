@@ -1,5 +1,5 @@
 ---
-title: async_uuid (atributo de COM do C++)
+title: async_uuid (C++ COM atributo)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.async_uuid
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - async_uuid attribute
 ms.assetid: 235cb0d7-be58-4dd9-983c-e2a21bbc42c6
 ms.openlocfilehash: 4c2bca9165d8b23f8cfa4f0f5523c882fd2f52bf
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59035790"
 ---
 # <a name="asyncuuid"></a>async_uuid
@@ -30,7 +30,7 @@ Um UUID que identifica a versão da interface.
 
 ## <a name="remarks"></a>Comentários
 
-O **async_uuid** atributo C++ tem a mesma funcionalidade que o [async_uuid](/windows/desktop/Midl/async-uuid) atributo MIDL.
+O **async_uuid** C++ atributo tem a mesma funcionalidade que o [async_uuid](/windows/desktop/Midl/async-uuid) atributo MIDL.
 
 ## <a name="example"></a>Exemplo
 
@@ -61,5 +61,5 @@ Para obter mais informações sobre os contextos de atributo, consulte [contexto
 
 ## <a name="see-also"></a>Consulte também
 
-[Atributos IDL](idl-attributes.md)<br/>
+[Atributos de IDL](idl-attributes.md)<br/>
 [Atributos de interface](interface-attributes.md)

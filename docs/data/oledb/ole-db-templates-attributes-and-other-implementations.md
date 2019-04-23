@@ -7,10 +7,10 @@ helpviewer_keywords:
 - OLE DB templates
 ms.assetid: 0c780c1b-9bba-4788-8c33-8552d9f120ac
 ms.openlocfilehash: 0e6b5dbc97f6a7bea1df342d6a792ea43907ca33
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59039579"
 ---
 # <a name="ole-db-templates-attributes-and-other-implementations"></a>Modelos de banco de dados OLE, atributos e outras implementações
@@ -53,5 +53,5 @@ Nos casos em que os modelos OLE DB não dá suporte a funcionalidade de OLE DB, 
 
 ## <a name="see-also"></a>Consulte também
 
-[Programação de banco de dados OLE](../../data/oledb/ole-db-programming.md)<br/>
-[Visão geral da programação de banco de dados OLE](../../data/oledb/ole-db-programming-overview.md)
+[Programação do OLE DB](../../data/oledb/ole-db-programming.md)<br/>
+[Visão geral da programação do OLE DB](../../data/oledb/ole-db-programming-overview.md)

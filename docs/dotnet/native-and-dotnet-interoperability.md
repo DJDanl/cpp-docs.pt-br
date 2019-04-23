@@ -15,10 +15,10 @@ helpviewer_keywords:
 - native code [C++], .NET interoperatibility
 ms.assetid: f3ec6c99-c745-4256-b95b-f1d12ba17a5a
 ms.openlocfilehash: 486796e404ad1aee39fbeb85251d26cc078b1160
-ms.sourcegitcommit: 35c4b3478f8cc310ebbd932a18963ad8ab846ed9
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59237140"
 ---
 # <a name="native-and-net-interoperability"></a>Nativo e interoperabilidade .NET
@@ -33,5 +33,5 @@ Descreve os assemblies gerados com o [/clr (compilação de tempo de execução 
 [Usando um controle de usuário do Windows Form no MFC](../dotnet/using-a-windows-form-user-control-in-mfc.md)<br/>
 Discute como usar as classes de suporte do MFC Windows Forms para hospedar controles de formulários do Windows em seus aplicativos do MFC.
 
-[Chamando funções nativas a partir do código gerenciado](../dotnet/calling-native-functions-from-managed-code.md)<br/>
+[Chamando funções nativas de código gerenciado](../dotnet/calling-native-functions-from-managed-code.md)<br/>
 Descreve como as DLLs não - CLR pode ser usado nos aplicativos .NET.

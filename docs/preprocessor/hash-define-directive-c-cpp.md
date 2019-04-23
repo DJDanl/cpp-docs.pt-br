@@ -11,10 +11,10 @@ helpviewer_keywords:
 - '#define directive'
 ms.assetid: 33cf25c6-b24e-40bf-ab30-9008f0391710
 ms.openlocfilehash: 8a0cc7e7836a0c82c72055fe8d9e7497995485d0
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59039488"
 ---
 # <a name="define-directive-cc"></a>Diretiva #define (C/C++)
@@ -25,7 +25,7 @@ O **#define** cria um *macro*, que é a associação de um identificador ou um i
 
 `#define` *identifier* *token-string*<sub>opt</sub>
 
-`#define` *identifier* `(` *identifier*<sub>opt</sub>`,` *...* `,` *identifier*<sub>opt</sub>`)` *token-string*<sub>opt</sub>
+`#define` *identificador* `(` *identificador*<sub>aceitar</sub> `,` *...*  `,` *identificador*<sub>aceitar</sub> `)` *cadeia de caracteres de token*<sub>otimizado</sub>
 
 ## <a name="remarks"></a>Comentários
 
@@ -62,7 +62,7 @@ Se o nome da macro que está sendo definida ocorre em *token de cadeia de caract
 
 Um segundo **#define** para uma macro com o mesmo nome gera um aviso, a menos que a segunda sequência de token é idêntica ao primeiro.
 
-**Específico da Microsoft**
+**Seção específica da Microsoft**
 
 O Microsoft C/C++ permite que você redefina uma macro se a nova definição for sintaticamente idêntica à definição original. Ou seja, as duas definições podem ter nomes de parâmetro diferentes. Esse comportamento difere de ANSI C, que exige que as duas definições sejam lexicalmente idênticas.
 
@@ -80,7 +80,7 @@ Por outro lado, as duas macros a seguir não são idênticas e irão gerar um av
 #define multiply( a1, a2 ) ( b1 * b2 )
 ```
 
-**FIM de Específico da Microsoft**
+**Fim da seção específica da Microsoft**
 
 Este exemplo ilustra a **#define** diretiva:
 
@@ -109,12 +109,12 @@ var = 80 + 10 * 20;
 
 que é avaliada como 280.
 
-**Específico da Microsoft**
+**Seção específica da Microsoft**
 
 Definindo macros e constantes com a [/D](../build/reference/d-preprocessor-definitions.md) opção de compilador tem o mesmo efeito que usar um **#define** diretiva de pré-processamento no início do seu arquivo. Até 30 macros podem ser definidas usando a opção /D.
 
-**FIM de Específico da Microsoft**
+**Fim da seção específica da Microsoft**
 
 ## <a name="see-also"></a>Consulte também
 
-[Diretivas de pré-processador](../preprocessor/preprocessor-directives.md)
+[Diretivas do pré-processador](../preprocessor/preprocessor-directives.md)

@@ -11,10 +11,10 @@ helpviewer_keywords:
 - permissive compiler options [C++]
 ms.assetid: db1cc175-6e93-4a2e-9396-c3725d2d8f71
 ms.openlocfilehash: 05089ef4f0a516f932d82f13be979da572701ae2
-ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59424125"
 ---
 # <a name="permissive--standards-conformance"></a>/permissive--(conformidade com padrões)
@@ -23,7 +23,7 @@ Especifique o modo de conformidade de padrões para o compilador. Use esta opç�
 
 ## <a name="syntax"></a>Sintaxe
 
-> **/permissive--**
+> **/permissive-**
 
 ## <a name="remarks"></a>Comentários
 
@@ -465,4 +465,4 @@ Nas versões anteriores do Visual Studio 2017 versão 15.5, use este procediment
 ## <a name="see-also"></a>Consulte também
 
 - [Opções do compilador MSVC](compiler-options.md)
-- [Sintaxe de linha de comando do compilador MSVC](compiler-command-line-syntax.md)
+- [Sintaxe da linha de comando do compilador MSVC](compiler-command-line-syntax.md)

@@ -50,10 +50,10 @@ helpviewer_keywords:
 - Unprepare method
 ms.assetid: 0760bfc5-b9ee-4aee-8e54-31bd78714d3a
 ms.openlocfilehash: 406a78ff1958d565fcc74781f6a63d4784f48bfc
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59039722"
 ---
 # <a name="ccommand-class"></a>Classe CCommand
@@ -101,7 +101,7 @@ Para usar um comando de OLE DB que pode retornar diversos resultados, especifiqu
 
 |||
 |-|-|
-|[Create](#create)|Cria um novo comando para a sessão especificada e, em seguida, define o texto do comando.|
+|[criar](#create)|Cria um novo comando para a sessão especificada e, em seguida, define o texto do comando.|
 |[CreateCommand](#createcommand)|Cria um novo comando.|
 |[GetParameterInfo](#getparameterinfo)|Obtém uma lista de parâmetros do comando, seus nomes e seus tipos.|
 |[Preparar](#prepare)|Valida e otimiza o comando atual.|
@@ -209,7 +209,7 @@ HRESULT Open(DBPROPSET *pPropSet = NULL,
 
 #### <a name="parameters"></a>Parâmetros
 
-*Sessão*<br/>
+*session*<br/>
 [in] A sessão na qual executar o comando.
 
 *wszCommand*<br/>
@@ -276,7 +276,7 @@ HRESULT CCommandBase::Create(const CSession& session,
 
 #### <a name="parameters"></a>Parâmetros
 
-*Sessão*<br/>
+*session*<br/>
 [in] Uma sessão na qual criar o comando.
 
 *wszCommand*<br/>
@@ -308,7 +308,7 @@ HRESULT CCommandBase::CreateCommand(const CSession& session) throw ();
 
 #### <a name="parameters"></a>Parâmetros
 
-*Sessão*<br/>
+*session*<br/>
 [in] Um `CSession` objeto a ser associado com o novo comando.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -416,5 +416,5 @@ Esse método encapsula o método OLE DB [icommandprepare:: Unprepare](/previous-
 
 ## <a name="see-also"></a>Consulte também
 
-[Modelos de consumidor de banco de dados OLE](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Referência dos modelos de consumidor de banco de dados OLE](../../data/oledb/ole-db-consumer-templates-reference.md)
+[Modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Referência de modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

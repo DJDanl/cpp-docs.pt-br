@@ -128,10 +128,10 @@ helpviewer_keywords:
 - SetValue method
 ms.assetid: 374b13b7-1f09-457d-9e6b-df260ff4d178
 ms.openlocfilehash: 19b8d0c86044e04cc60fd7aab89ec828c46f5fb9
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59040962"
 ---
 # <a name="cdynamicaccessor-class"></a>Classe CDynamicAccessor
@@ -195,7 +195,7 @@ HRESULT AddBindEntry(const DBCOLUMNINFO& info) throw();
 
 #### <a name="parameters"></a>Parâmetros
 
-*Informações de*<br/>
+*info*<br/>
 [in] Um `DBCOLUMNINFO` estrutura que contém informações de coluna. Consulte "Estruturas DBCOLUMNINFO" na [icolumnsinfo:: Getcolumninfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) na *referência do programador do OLE DB*.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -696,7 +696,7 @@ bool SetValue(
 *pColumnName*<br/>
 [in] Um ponteiro para uma cadeia de caracteres que contém o nome da coluna.
 
-*Dados*<br/>
+*data*<br/>
 [in] O ponteiro para a memória que contém os dados.
 
 *nColumn*<br/>
@@ -710,8 +710,8 @@ Para todos os outros tipos de dados, é mais simples de usar as versões com mod
 
 ## <a name="see-also"></a>Consulte também
 
-[Modelos de consumidor de banco de dados OLE](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Referência dos modelos de consumidor de banco de dados OLE](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
+[Modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Referência de modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [Classe CAccessor](../../data/oledb/caccessor-class.md)<br/>
 [Classe CDynamicParameterAccessor](../../data/oledb/cdynamicparameteraccessor-class.md)<br/>
 [Classe CManualAccessor](../../data/oledb/cmanualaccessor-class.md)

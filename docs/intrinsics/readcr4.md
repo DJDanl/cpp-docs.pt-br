@@ -7,15 +7,15 @@ helpviewer_keywords:
 - __readcr4 intrinsic
 ms.assetid: b841a27b-fe0d-4ee9-b76b-f91d3eb061fa
 ms.openlocfilehash: b67016846768be778881c02b395c8d6f3af1ef3f
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59037209"
 ---
 # <a name="readcr4"></a>__readcr4
 
-**Específico da Microsoft**
+**Seção específica da Microsoft**
 
 Lê o registro de CR4 e retorna seu valor.
 
@@ -41,7 +41,7 @@ O valor no registro CR4.
 
 Esse intrínseco só está disponível no modo kernel e a rotina só está disponível como um intrínseco.
 
-**FIM de Específico da Microsoft**
+**Fim da seção específica da Microsoft**
 
 ## <a name="see-also"></a>Consulte também
 

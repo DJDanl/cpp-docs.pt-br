@@ -7,10 +7,10 @@ helpviewer_keywords:
 - debug builds, converting to release build
 ms.assetid: fa9a78fa-f4b5-4722-baf4-aec655c4ff0f
 ms.openlocfilehash: cf11e63354502be000ba5f7259d9e36dfa774060
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59038142"
 ---
 # <a name="release-builds"></a>Builds de lançamento
@@ -19,13 +19,13 @@ Um build de versão usa otimizações. Quando você usa otimizações para criar
 
 ## <a name="in-this-section"></a>Nesta seção
 
-[Problemas comuns durante a criação de uma compilação de versão](common-problems-when-creating-a-release-build.md)<br/>
-[Corrigindo problemas de compilação da versão](fixing-release-build-problems.md)<br/>
+[Problemas comuns durante a criação de um build de versão](common-problems-when-creating-a-release-build.md)<br/>
+[Corrigindo problemas do build de versão](fixing-release-build-problems.md)<br/>
 [Usando VERIFY em vez de ASSERT](using-verify-instead-of-assert.md)<br/>
-[Usando o build de depuração para verificar a substituição de memória](using-the-debug-build-to-check-for-memory-overwrite.md)<br/>
-[Como: Depurar um Build de versão](how-to-debug-a-release-build.md)<br/>
-[Verificando substituições de memória](checking-for-memory-overwrites.md)<br/>
-[Otimizando o código](optimizing-your-code.md)<br/>
+[Usando o build de depuração para verificar se há substituição de memória](using-the-debug-build-to-check-for-memory-overwrite.md)<br/>
+[Como: depurar um build da versão](how-to-debug-a-release-build.md)<br/>
+[Verificando se há substituições de memória](checking-for-memory-overwrites.md)<br/>
+[Otimizando seu código](optimizing-your-code.md)<br/>
 
 ## <a name="see-also"></a>Consulte também
 

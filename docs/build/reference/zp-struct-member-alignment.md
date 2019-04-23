@@ -12,10 +12,10 @@ helpviewer_keywords:
 - -Zp compiler option [C++]
 ms.assetid: 5242f656-ed9b-48a3-bc73-cfcf3ed2520f
 ms.openlocfilehash: d76cd93c7af4228bff8f73fa3bcbf40fa149b0be
-ms.sourcegitcommit: 35c4b3478f8cc310ebbd932a18963ad8ab846ed9
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59237158"
 ---
 # <a name="zp-struct-member-alignment"></a>/Zp (alinhamento de membro do Struct)
@@ -70,4 +70,4 @@ Você também pode usar [pack](../../preprocessor/pack.md) a empacotamento de es
 ## <a name="see-also"></a>Consulte também
 
 [Opções do compilador MSVC](compiler-options.md) \
-[Sintaxe de linha de comando do compilador MSVC](compiler-command-line-syntax.md)
+[Sintaxe da linha de comando do compilador MSVC](compiler-command-line-syntax.md)

@@ -10,15 +10,15 @@ helpviewer_keywords:
 - _mm_extract_si64 intrinsic
 ms.assetid: 459fdd72-cc54-4ee5-bbd5-d2c6067a88e7
 ms.openlocfilehash: e77ca5589ed50a4199921603afec1d9888c6cca5
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59040206"
 ---
 # <a name="mmextractsi64-mmextractisi64"></a>_mm_extract_si64, _mm_extracti_si64
 
-**Específico da Microsoft**
+**Seção específica da Microsoft**
 
 Gera o `extrq` instruções para extrair seu de 64 bits baixos do seu primeiro argumento especificado do bits.
 
@@ -38,13 +38,13 @@ __m128i _mm_extracti_si64(
 
 #### <a name="parameters"></a>Parâmetros
 
-*Origem*<br/>
+*Source*<br/>
 [in] Um campo de 128 bits com dados de entrada em seus 64 bits inferiores.
 
 *Descritor*<br/>
 [in] Um campo de 128 bits que descreve o campo de bits para extrair.
 
-*Length*<br/>
+*Comprimento*<br/>
 [in] Um inteiro que especifica o comprimento do campo para extrair.
 
 *Índice*<br/>
@@ -108,7 +108,7 @@ result2 = 0x30eca86
 result3 = 0x30eca86
 ```
 
-**FIM de Específico da Microsoft**
+**Fim da seção específica da Microsoft**
 
 Copyright 2007 por dispositivos Micro avançada, Inc. Todos os direitos reservados. Reproduzido com a permissão do Advanced Micro dispositivos, Inc.
 

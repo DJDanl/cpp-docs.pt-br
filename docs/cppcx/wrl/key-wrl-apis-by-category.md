@@ -4,10 +4,10 @@ ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 7367bacf-6b7c-4ecd-a0ce-a662db46fc66
 ms.openlocfilehash: f3065323c567c944dab12fc1ebbcbd6bb57127e9
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59039047"
 ---
 # <a name="key-wrl-apis-by-category"></a>APIs de chave WRL por categoria
@@ -22,13 +22,13 @@ As tabelas a seguir listam os principais produtos de classes, structs, funções
 |[Classe AsyncBase](asyncbase-class.md)|Implementa a máquina de estado assíncrona do tempo de execução do Windows.|
 |[Classe ClassFactory](classfactory-class.md)|Implementa a funcionalidade básica do `IClassFactory` interface.|
 |[Classe ComPtr](comptr-class.md)|Cria uma *ponteiro inteligente* tipo que representa a interface especificada pelo parâmetro de modelo. ComPtr automaticamente mantém uma contagem de referência para o ponteiro de interface subjacente e libera a interface quando a contagem de referência chega a zero.|
-|[Classe Event (Biblioteca em Tempo de Execução C++ do Windows Runtime )](event-class-wrl.md)|Representa um evento.|
+|[Classe Event (Biblioteca de Modelos C++ do Tempo de Execução do Windows)](event-class-wrl.md)|Representa um evento.|
 |[Classe EventSource](eventsource-class.md)|Representa um evento. `EventSource` funções de membro, adicionar, remover e invocar manipuladores de eventos.|
 |[Classe FtmBase](ftmbase-class.md)|Representa um objeto livre de marshaler.|
 |[Classe HandleT](handlet-class.md)|Representa um identificador para um objeto.|
 |[Classe HString](hstring-class.md)|Fornece suporte para manipular identificadores de HSTRING.|
 |[Classe HStringReference](hstringreference-class.md)|Representa um HSTRING que é criado a partir de uma cadeia de caracteres existente.|
-|[Classe de módulo](module-class.md)|Representa uma coleção de objetos relacionados.|
+|[Classe Module](module-class.md)|Representa uma coleção de objetos relacionados.|
 |[Classe Module::GenericReleaseNotifier](module-genericreleasenotifier-class.md)|Invoca um manipulador de eventos quando o último objeto no módulo atual é liberado. O manipulador de eventos é especificado em um lambda, functor ou ponteiro para função.|
 |[Classe Module::MethodReleaseNotifier](module-methodreleasenotifier-class.md)|Invoca um manipulador de eventos quando o último objeto no módulo atual é liberado. O manipulador de eventos é especificado por um objeto e seu membro de ponteiro ao método.|
 |[Classe Module::ReleaseNotifier](module-releasenotifier-class.md)|Invoca um manipulador de eventos quando o último objeto em um módulo é liberado.|
@@ -44,7 +44,7 @@ As tabelas a seguir listam os principais produtos de classes, structs, funções
 |-----------|-----------------|
 |[Estrutura ChainInterfaces](chaininterfaces-structure.md)|Especifica as funções de verificação e de inicialização que podem ser aplicadas a um conjunto de IDs de interface.|
 |[Estrutura CloakedIid](cloakediid-structure.md)|Indica para o `RuntimeClass`, `Implements` e `ChainInterfaces` que a interface especificada não está acessível na lista de IID de modelos.|
-|[Implementa estrutura](implements-structure.md)|Implementa `QueryInterface` e `GetIid` para interfaces especificadas.|
+|[Estrutura Implements](implements-structure.md)|Implementa `QueryInterface` e `GetIid` para interfaces especificadas.|
 |[Estrutura MixIn](mixin-structure.md)|Garante que uma classe de tempo de execução deriva de interfaces do COM clássico, em seguida e as interfaces de tempo de execução do Windows, se houver.|
 
 ## <a name="functions"></a>Funções
@@ -53,7 +53,7 @@ As tabelas a seguir listam os principais produtos de classes, structs, funções
 |-----------|-----------------|
 |[Função ActivateInstance](activateinstance-function.md)|Registra e recupera uma instância de um tipo especificado definido em uma ID de classe especificado.|
 |[Função AsWeak](asweak-function.md)|Recupera uma referência fraca a uma instância especificada.|
-|[Função de retorno da chamada](callback-function-wrl.md)|Cria um objeto cuja função de membro é um método de retorno de chamada.|
+|[Função de retorno de chamada](callback-function-wrl.md)|Cria um objeto cuja função de membro é um método de retorno de chamada.|
 |[Função CreateActivationFactory](createactivationfactory-function.md)|Cria uma fábrica que produz instâncias da classe especificada que pode ser ativado pelo tempo de execução do Windows.|
 |[Função CreateClassFactory](createclassfactory-function.md)|Cria uma fábrica que produz instâncias da classe especificada.|
 |[Função GetActivationFactory](getactivationfactory-function.md)|Recupera um alocador de ativação para o tipo especificado pelo parâmetro de modelo.|
@@ -68,4 +68,4 @@ As tabelas a seguir listam os principais produtos de classes, structs, funções
 
 ## <a name="see-also"></a>Consulte também
 
-[Biblioteca de Modelos C++ do Windows Runtime  (WRL)](windows-runtime-cpp-template-library-wrl.md)
+[WRL (Biblioteca de Modelos C++ do Tempo de Execução do Windows)](windows-runtime-cpp-template-library-wrl.md)

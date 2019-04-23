@@ -4,22 +4,22 @@ ms.date: 09/17/2018
 ms.topic: reference
 ms.assetid: 0336c550-fbeb-4dc4-aa9b-660f9fc45382
 ms.openlocfilehash: e0254be8c6fa185f75c46898d4da51742195550a
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59036030"
 ---
 # <a name="walkthrough-creating-a-uwp-app-using-wrl-and-media-foundation"></a>Passo a passo: Criando um aplicativo UWP usando WRL e Media Foundation
 
 Saiba como usar a biblioteca de modelos do Windows em tempo de execução C++ (WRL) para criar um aplicativo de plataforma Universal do Windows (UWP) que usa [Microsoft Media Foundation](/windows/desktop/medfound/microsoft-media-foundation-sdk).
 
-Este exemplo cria uma transformação personalizada do Media Foundation que se aplica a um efeito de escala de cinza para imagens que são capturadas de uma webcam. O aplicativo usa C++ para definir a transformação personalizada e o C# para usar o componente para transformar as imagens capturadas.
+Este exemplo cria uma transformação personalizada do Media Foundation que se aplica a um efeito de escala de cinza para imagens que são capturadas de uma webcam. O aplicativo usa C++ para definir a transformação personalizada e o c# para usar o componente para transformar as imagens capturadas.
 
 > [!NOTE]
-> Em vez de C#, você também pode usar JavaScript, Visual Basic ou C++ para consumir o componente de transformação personalizados.
+> Em vez de c#, você também pode usar JavaScript, Visual Basic ou C++ para consumir o componente de transformação personalizados.
 
-Na maioria dos casos, você pode usar C + + c++ /CX para criar o tempo de execução do Windows. No entanto, às vezes, você precisa usar a WRL. Por exemplo, quando você cria uma extensão de mídia para o Microsoft Media Foundation, você deve criar um componente que implementa as interfaces COM e o tempo de execução do Windows. Porque C + + c++ /CLI CX só pode criar objetos de tempo de execução do Windows, para criar uma extensão de mídia você deve usar a WRL porque ela permite que a implementação de interfaces COM e o tempo de execução do Windows.
+Na maioria dos casos, você pode usar C++/CX para criar o tempo de execução do Windows. No entanto, às vezes, você precisa usar a WRL. Por exemplo, quando você cria uma extensão de mídia para o Microsoft Media Foundation, você deve criar um componente que implementa as interfaces COM e o tempo de execução do Windows. Porque C++/CX só pode criar objetos de tempo de execução do Windows, para criar uma extensão de mídia você deve usar a WRL porque ela permite que a implementação de interfaces COM e o tempo de execução do Windows.
 
 > [!NOTE]
 > Embora este exemplo de código for longo, ele demonstra o mínimo necessário para criar uma transformação do Media Foundation úteis. Você pode usá-lo como um ponto de partida para sua própria transformação personalizada. Este exemplo é adaptado do [exemplo de extensões de mídia](http://code.msdn.microsoft.com/windowsapps/Media-extensions-sample-7b466096), quais extensões de mídia usa para aplicar efeitos de vídeo, decodificar vídeo e criar manipuladores de esquema que produzem fluxos de mídia.
@@ -95,7 +95,7 @@ Na maioria dos casos, você pode usar C + + c++ /CX para criar o tempo de execu�
 
    1. Sob **metadados do Windows**, defina **gerar metadados do Windows** para **Sim (/ WINMD)**.
 
-### <a name="to-use-the-wrl-the-custom-media-foundation-component-from-a-c-app"></a>Para usar a WRL o componente personalizado do Media Foundation de um aplicativo C#
+### <a name="to-use-the-wrl-the-custom-media-foundation-component-from-a-c-app"></a>Para usar a WRL o componente personalizado do Media Foundation de um aplicativo c#
 
 1. Adicione um novo **aplicativo em branco em C# (Windows Universal)** do projeto para o `MediaCapture` solução. Nomeie o projeto, por exemplo, *MediaCapture*.
 
@@ -121,6 +121,6 @@ O exemplo mostra como capturar fotos da webcam padrão, um por vez. O [exemplo d
 
 ## <a name="see-also"></a>Consulte também
 
-[Biblioteca de Modelos C++ do Windows Runtime  (WRL)](windows-runtime-cpp-template-library-wrl.md)<br/>
+[WRL (Biblioteca de Modelos C++ do Tempo de Execução do Windows)](windows-runtime-cpp-template-library-wrl.md)<br/>
 [Microsoft Media Foundation](/windows/desktop/medfound/microsoft-media-foundation-sdk)<br/>
 [Exemplo de extensões de mídia](http://code.msdn.microsoft.com/windowsapps/Media-extensions-sample-7b466096)

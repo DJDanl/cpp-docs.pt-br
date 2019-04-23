@@ -8,15 +8,15 @@ helpviewer_keywords:
 - wbinvd instruction
 ms.assetid: 628d0981-39e5-49e1-bd43-706d123af121
 ms.openlocfilehash: 99c7a452e063dea328e4aa1362aae8783929deb0
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59039261"
 ---
 # <a name="wbinvd"></a>__wbinvd
 
-**Específico da Microsoft**
+**Seção específica da Microsoft**
 
 Gera o gravar novamente e invalidar o Cache (`wbinvd`) instrução.
 
@@ -38,7 +38,7 @@ void __wbinvd(void);
 
 Essa função só está disponível no modo de kernel com um nível de privilégio (CPL) igual a 0 e a rotina só está disponível como um intrínseco.
 
-**FIM de Específico da Microsoft**
+**Fim da seção específica da Microsoft**
 
 ## <a name="see-also"></a>Consulte também
 

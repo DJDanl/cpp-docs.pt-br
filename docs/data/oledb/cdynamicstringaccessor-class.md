@@ -13,10 +13,10 @@ helpviewer_keywords:
 - SetString method
 ms.assetid: 138dc4de-c7c3-478c-863e-431e48249027
 ms.openlocfilehash: 6ba56143beb3411734899839a46ab42992dfa4d8
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59035657"
 ---
 # <a name="cdynamicstringaccessor-class"></a>Classe CDynamicStringAccessor
@@ -110,7 +110,7 @@ HRESULT SetString(const WCHAR* pColumnName,
 *pColumnName*<br/>
 [in] Um ponteiro para uma cadeia de caracteres que contém o nome da coluna.
 
-*Dados*<br/>
+*data*<br/>
 [in] Um ponteiro para os dados de cadeia de caracteres a ser gravado para a coluna especificada.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -125,8 +125,8 @@ Se _SECURE_ATL for definido para ter um valor diferente de zero, uma falha de as
 
 ## <a name="see-also"></a>Consulte também
 
-[Modelos de consumidor de banco de dados OLE](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Referência dos modelos de consumidor de banco de dados OLE](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
+[Modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Referência de modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [Classe CAccessor](../../data/oledb/caccessor-class.md)<br/>
 [Classe CDynamicParameterAccessor](../../data/oledb/cdynamicparameteraccessor-class.md)<br/>
 [Classe CManualAccessor](../../data/oledb/cmanualaccessor-class.md)<br/>

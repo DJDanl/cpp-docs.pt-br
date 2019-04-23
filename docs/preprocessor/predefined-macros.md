@@ -144,10 +144,10 @@ helpviewer_keywords:
 - __func__ identifier
 ms.assetid: 1cc5f70a-a225-469c-aed0-fe766238e23f
 ms.openlocfilehash: dedcab9b0addd3696749b50fef92b70081981c03
-ms.sourcegitcommit: 35c4b3478f8cc310ebbd932a18963ad8ab846ed9
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59237205"
 ---
 # <a name="predefined-macros"></a>Macros predefinidas
@@ -439,4 +439,4 @@ Sem macros de pré-processador que identificam a versão da biblioteca MFC ou AT
 
 [Macros (C/C++)](../preprocessor/macros-c-cpp.md)<br/>
 [Operadores de pré-processador](../preprocessor/preprocessor-operators.md)<br/>
-[Diretivas de pré-processador](../preprocessor/preprocessor-directives.md)
+[Diretivas do pré-processador](../preprocessor/preprocessor-directives.md)

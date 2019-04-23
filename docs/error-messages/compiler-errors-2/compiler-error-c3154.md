@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C3154
 ms.assetid: 78005c74-eaaf-4ac2-88ae-6c25d01a302a
 ms.openlocfilehash: 9f7af4e19fab5f5a0539e9fc3bf9dbeffb5c6fbf
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "58781374"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59776282"
 ---
 # <a name="compiler-error-c3154"></a>Erro do compilador C3154
 
@@ -19,7 +19,7 @@ Esperado ',' antes de reticências. Vírgula não separadas não tem suportada e
 
 Uma função de argumento variável não foi declarada corretamente.
 
-Para obter mais informações, consulte [listas de argumentos variáveis (...) (C + + / CLI) ](../../extensions/variable-argument-lists-dot-dot-dot-cpp-cli.md).
+Para obter mais informações, consulte [listas de argumentos variáveis (...) (C++/CLI) ](../../extensions/variable-argument-lists-dot-dot-dot-cpp-cli.md).
 
 ## <a name="example"></a>Exemplo
 

@@ -21,10 +21,10 @@ helpviewer_keywords:
 - GetXMLRowData method
 ms.assetid: c88c082c-ec2f-4351-8947-a330b15e448a
 ms.openlocfilehash: 85fddb9b77cfc089b2236f2ff82944fec6ef9632
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59036095"
 ---
 # <a name="cxmlaccessor-class"></a>Classe CXMLAccessor
@@ -126,8 +126,8 @@ O exemplo a seguir mostra como os dados da linha são formatados em XML. `DATA` 
 
 ## <a name="see-also"></a>Consulte também
 
-[Modelos de consumidor de banco de dados OLE](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Referência dos modelos de consumidor de banco de dados OLE](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
+[Modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Referência de modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [Classe CAccessor](../../data/oledb/caccessor-class.md)<br/>
 [Classe CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)<br/>
 [Classe CDynamicParameterAccessor](../../data/oledb/cdynamicparameteraccessor-class.md)<br/>

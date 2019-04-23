@@ -9,10 +9,10 @@ helpviewer_keywords:
 - rowsets, user record
 ms.assetid: 9c0d2864-2738-4f62-a750-1016d9c3523f
 ms.openlocfilehash: b37835f1a3161edd10f61f9b4e76cfb5f558e07b
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59038507"
 ---
 # <a name="user-record"></a>Registro de usuário
@@ -68,4 +68,4 @@ Para obter um exemplo mais detalhado de como substituir `GetColumnInfo` em um re
 
 ## <a name="see-also"></a>Consulte também
 
-[Arquitetura de modelo do provedor de banco de dados OLE](../../data/oledb/ole-db-provider-template-architecture.md)<br/>
+[Arquitetura de modelo do provedor do OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)<br/>

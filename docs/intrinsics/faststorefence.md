@@ -9,15 +9,15 @@ helpviewer_keywords:
 - sfence instruction
 ms.assetid: 6c6eb973-3cf0-4306-b3af-cfde9b0210a5
 ms.openlocfilehash: a0c8027f443a475b03521920e2e036e7ed4eaafb
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59036689"
 ---
 # <a name="faststorefence"></a>__faststorefence
 
-**Específico da Microsoft**
+**Seção específica da Microsoft**
 
 Garantias de que cada referência anterior a memória, incluindo carregar e armazena referências de memória, é globalmente visível antes de qualquer referência de memória subsequente.
 
@@ -43,7 +43,7 @@ Na plataforma AMD64, essa rotina gera uma instrução que é um limite de armaze
 
 Essa rotina só está disponível como função intrínseca.
 
-**FIM de Específico da Microsoft**
+**Fim da seção específica da Microsoft**
 
 ## <a name="see-also"></a>Consulte também
 

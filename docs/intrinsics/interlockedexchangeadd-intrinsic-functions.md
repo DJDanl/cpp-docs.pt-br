@@ -56,15 +56,15 @@ helpviewer_keywords:
 - _InterlockedExchangeAdd64_rel intrinsic
 ms.assetid: 25809e1f-9c60-4492-9f7c-0fb59c8d13d2
 ms.openlocfilehash: 2cffd5a088c4b3c67441e79bc04bd709be6bf8ef
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59039170"
 ---
 # <a name="interlockedexchangeadd-intrinsic-functions"></a>Funções intrínsecas _InterlockedExchangeAdd
 
-**Específico da Microsoft**
+**Seção específica da Microsoft**
 
 Fornece suporte intrínseco ao compilador para o SDK do Windows Win32 [interlockedexchangeadd funções intrínsecas](../intrinsics/interlockedexchangeadd-intrinsic-functions.md) função.
 
@@ -155,7 +155,7 @@ __int64 _InterlockedExchangeAdd64_HLERelease(
 
 #### <a name="parameters"></a>Parâmetros
 
-*Adendo*<br/>
+*Addend*<br/>
 [no, out] O valor a ser adicionado; substituído pelo resultado da adição.
 
 *Valor*<br/>
@@ -189,10 +189,10 @@ Essas rotinas somente estão disponíveis como intrínsecos. Assim, eles são in
 
 Para obter um exemplo de como usar `_InterlockedExchangeAdd`, consulte [interlockeddecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md).
 
-**FIM de Específico da Microsoft**
+**Fim da seção específica da Microsoft**
 
 ## <a name="see-also"></a>Consulte também
 
 [Intrínsecos do compilador](../intrinsics/compiler-intrinsics.md)<br/>
 [Palavras-chave](../cpp/keywords-cpp.md)<br/>
-[Conflitos com o compilador x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)
+[conflitos com o compilador x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

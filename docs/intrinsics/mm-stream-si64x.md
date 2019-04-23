@@ -8,15 +8,15 @@ helpviewer_keywords:
 - _mm_stream_si64x intrinsic
 ms.assetid: 114c2cd0-085f-41aa-846e-87bdd56c9ee7
 ms.openlocfilehash: d7f7a75be1602fbb70a230b0dd3a791be99d092a
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59039592"
 ---
 # <a name="mmstreamsi64x"></a>_mm_stream_si64x
 
-**Específico da Microsoft**
+**Seção específica da Microsoft**
 
 Gera a instrução de MOVNTI. Grava os dados `Source` para um local de memória especificado por `Dest`, sem poluir os caches.
 
@@ -31,10 +31,10 @@ void _mm_stream_si64x(
 
 #### <a name="parameters"></a>Parâmetros
 
-*dest*<br/>
+*Dest*<br/>
 [out] Um ponteiro para o local para gravar os dados de origem.
 
-*Origem*<br/>
+*Source*<br/>
 [in] Os dados serem gravados.
 
 ## <a name="requirements"></a>Requisitos
@@ -75,7 +75,7 @@ int main()
 0 ffffffffffff 0 0
 ```
 
-**FIM de Específico da Microsoft**
+**Fim da seção específica da Microsoft**
 
 ## <a name="see-also"></a>Consulte também
 

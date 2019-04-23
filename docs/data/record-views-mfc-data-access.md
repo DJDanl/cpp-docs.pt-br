@@ -9,10 +9,10 @@ helpviewer_keywords:
 - forms [C++], data access tasks
 ms.assetid: 562122d9-01d8-4284-acf6-ea109ab0408d
 ms.openlocfilehash: 199f51f20dd42ee9105b4e09f579c1f48948745f
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59040193"
 ---
 # <a name="record-views--mfc-data-access"></a>Exibição de registro (Acesso a dados MFC)
@@ -37,7 +37,7 @@ O material nos tópicos aplicam-se a classes baseadas em ODBC e baseadas em DAO.
 
 Os tópicos incluem:
 
-- [Funcionalidades de classes de exibição do registro](../data/features-of-record-view-classes-mfc-data-access.md)
+- [Recursos das Classes de exibição de registro](../data/features-of-record-view-classes-mfc-data-access.md)
 
 - [Troca de dados para exibições de registro](../data/data-exchange-for-record-views-mfc-data-access.md)
 
@@ -49,5 +49,5 @@ Os tópicos incluem:
 
 ## <a name="see-also"></a>Consulte também
 
-[Programação de acesso a dados (MFC/ATL)](../data/data-access-programming-mfc-atl.md)<br/>
+[Acesso a dados (MFC/ATL) de programação](../data/data-access-programming-mfc-atl.md)<br/>
 [Lista de drivers ODBC](../data/odbc/odbc-driver-list.md)

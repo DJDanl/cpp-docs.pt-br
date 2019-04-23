@@ -5,16 +5,16 @@ helpviewer_keywords:
 - '#import directive, attributes'
 ms.assetid: 2a5085e3-82ee-4f83-892b-0aa6cc13863b
 ms.openlocfilehash: 954dfec50db75c0e3d11f0924b0ee398cd211fe1
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59036134"
 ---
 # <a name="import-attributes-c"></a>Atributos #import (C++)
 Fornece links para atributos usados com o `#import` diretiva.
 
-**Específico da Microsoft**
+**Seção específica da Microsoft**
 
 Os seguintes atributos estão disponíveis para o `#import` diretiva.
 
@@ -47,8 +47,8 @@ Os seguintes atributos estão disponíveis para o `#import` diretiva.
 |[rename_search_namespace](../preprocessor/rename-search-namespace.md)|Tem a mesma funcionalidade que o [rename_namespace](../preprocessor/rename-namespace.md) do atributo, mas é usado em bibliotecas de tipos que você usar a diretiva #import com o [auto_search](../preprocessor/auto-search.md) atributo.|
 |[tlbid](../preprocessor/tlbid.md)|Permite carregar bibliotecas diferentes de biblioteca de tipos primárias.|
 
-**FIM de Específico da Microsoft**
+**Fim da seção específica da Microsoft**
 
 ## <a name="see-also"></a>Consulte também
 
-[Diretiva #import](../preprocessor/hash-import-directive-cpp.md)
+[#import diretiva](../preprocessor/hash-import-directive-cpp.md)
