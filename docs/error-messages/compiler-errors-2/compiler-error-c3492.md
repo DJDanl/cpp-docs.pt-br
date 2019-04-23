@@ -7,10 +7,10 @@ helpviewer_keywords:
 - C3492
 ms.assetid: b1dc6342-9133-4b1f-a9c3-e8c65d20d121
 ms.openlocfilehash: facd8c78e775945924d77b09f9dc754bdc301ddd
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59038813"
 ---
 # <a name="compiler-error-c3492"></a>Erro do compilador C3492
@@ -65,4 +65,4 @@ int main()
 
 ## <a name="see-also"></a>Consulte também
 
-[Expressões lambda](../../cpp/lambda-expressions-in-cpp.md)
+[Expressões Lambda](../../cpp/lambda-expressions-in-cpp.md)

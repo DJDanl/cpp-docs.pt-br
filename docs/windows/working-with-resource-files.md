@@ -7,10 +7,10 @@ helpviewer_keywords:
 - resource files [C++], about resource files
 ms.assetid: 2699a539-b369-4b78-80f0-df03eb7b6780
 ms.openlocfilehash: a08c7ecb153b790f06da386ac93d1f05f5981e61
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59037716"
 ---
 # <a name="working-with-resource-files"></a>Trabalhando com arquivos de recurso
@@ -18,7 +18,7 @@ ms.locfileid: "59037716"
 > [!WARNING]
 > Esta seção se aplica a aplicativos da área de trabalho do Windows escritos em C++.
 >
-> Para obter informações sobre recursos em aplicativos da plataforma Universal do Windows escritos em C++, consulte [definindo recursos do aplicativo](/windows/uwp/app-resources/), ou sobre como adicionar recursos a C + + c++ CLI (gerenciado) de projetos, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) em Guia do desenvolvedor do .NET Framework.
+> Para obter informações sobre recursos em aplicativos da plataforma Universal do Windows escritos em C++, consulte [definindo recursos do aplicativo](/windows/uwp/app-resources/), ou sobre como adicionar recursos para C++/CLI (gerenciado) de projetos, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) no guia do desenvolvedor do .NET Framework.
 
 Recursos podem ser compostos de uma ampla variedade de elementos, como:
 
@@ -38,10 +38,10 @@ Para globalizar e localizar recursos em aplicativos gerenciados, consulte [Globa
 
 ## <a name="in-this-section"></a>Nesta seção
 
-[Arquivos de recursos](../windows/resource-files-visual-studio.md)<br/>
+[Arquivos de recurso](../windows/resource-files-visual-studio.md)<br/>
 Descreve os arquivos de recurso e como eles são usados em aplicativos da área de trabalho do Windows. Também fornece links para artigos que descrevem como usar arquivos de recurso.
 
-[Identificadores de recurso (símbolos)](../windows/symbols-resource-identifiers.md)<br/>
+[Identificadores de recursos (símbolos)](../windows/symbols-resource-identifiers.md)<br/>
 Descreve símbolos e fornece informações sobre como usar o **símbolos de recurso** caixa de diálogo Gerenciar símbolos em seus projetos.
 
 [Editores de recursos](../windows/resource-editors.md)<br/>

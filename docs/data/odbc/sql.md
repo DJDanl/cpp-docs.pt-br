@@ -8,10 +8,10 @@ helpviewer_keywords:
 - ODBC [C++], SQL implementation
 ms.assetid: e3923bc4-b317-4e0b-afd8-3cd403eb0faf
 ms.openlocfilehash: 8f93d97530068695359273b523e7d2ae46de01cb
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59037851"
 ---
 # <a name="sql"></a>SQL
@@ -49,10 +49,10 @@ As classes de banco de dados usam uma parte do SQL, conhecida como linguagem de 
 |-----------------|---------------------------------------------|
 |**SELECT**|Para identificar quais tabelas e colunas na fonte de dados devem ser usados.|
 |**WHERE**|Para aplicar um filtro que restringe a seleção.|
-|**ORDENAR POR**|Para aplicar uma ordem de classificação para o conjunto de registros.|
-|**INSERT**|Para adicionar novos registros a um conjunto de registros.|
+|**ORDER BY**|Para aplicar uma ordem de classificação para o conjunto de registros.|
+|**INSERIR**|Para adicionar novos registros a um conjunto de registros.|
 |**DELETE**|Para excluir registros de um conjunto de registros.|
-|**UPDATE**|Para modificar os campos de um registro.|
+|**ATUALIZAÇÃO**|Para modificar os campos de um registro.|
 
 Além disso, as classes de banco de dados reconhecem ODBC **chamar** instruções que você pode usar para chamar uma consulta predefinida (ou procedimento armazenado) em algumas fontes de dados. O driver de banco de dados ODBC interpreta essas instruções e substitui o comando apropriado para cada DBMS.
 
@@ -85,5 +85,5 @@ Os tópicos a seguir fornecem mais informações sobre como as classes de banco 
 
 ## <a name="see-also"></a>Consulte também
 
-[Conectividade de banco de dados aberto (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)<br/>
+[ODBC (conectividade de banco de dados aberto)](../../data/odbc/open-database-connectivity-odbc.md)<br/>
 [Noções básicas de ODBC](../../data/odbc/odbc-basics.md)

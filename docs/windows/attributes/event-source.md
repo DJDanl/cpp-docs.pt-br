@@ -12,10 +12,10 @@ helpviewer_keywords:
 - event handling, creating event source
 ms.assetid: 0983e36a-6127-4fbb-8a22-8dfec6564c16
 ms.openlocfilehash: 81eba3c032a3556d1c69ad02652455ebc07ab6be
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59035926"
 ---
 # <a name="eventsource"></a>origem do evento
@@ -30,7 +30,7 @@ Cria uma origem de evento.
 
 ### <a name="parameters"></a>Parâmetros
 
-*tipo*<br/>
+*type*<br/>
 Uma enumeração de um dos seguintes valores:
 
 - `native` para código C/C++ não gerenciado (padrão para classes não gerenciadas).
@@ -46,12 +46,12 @@ Uma enumeração de um dos seguintes valores:
 *optimize*<br/>
 Quando *tipo* é `native`, você pode especificar `optimize=size`, para indicar que há 4 bytes de armazenamento (mínimo) para todos os eventos em uma classe ou `optimize=speed` (o padrão) para indicar que há 4 * bytes (n º de eventos) de armazenamento.
 
-*Decore*<br/>
+*decorate*<br/>
 Quando *tipo* é `native`, você pode especificar `decorate=false`, para indicar que o nome expandido no arquivo mesclado (. mrg) não deve incluir o nome da classe delimitadora. [/FX](../../build/reference/fx-merge-injected-code.md) permite gerar arquivos. mrg. `decorate=false`, que é o padrão, o que resulta em nomes de tipo totalmente qualificado no arquivo mesclado.
 
 ## <a name="remarks"></a>Comentários
 
-O **event_source** atributo C++ Especifica que a classe ou estrutura à qual ela é aplicada estejam uma origem do evento.
+O **event_source** C++ atributo especifica que a classe ou estrutura à qual ela é aplicada será uma origem do evento.
 
 **EVENT_SOURCE** é usado em conjunto com o [event_receiver](event-receiver.md) atributo e o [Event](../../cpp/event.md) palavra-chave. Use `event_receiver` para criar receptores de evento. Use **Event** nos métodos dentro da fonte de evento para especificar esses métodos como eventos.
 

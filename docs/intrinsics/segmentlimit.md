@@ -8,15 +8,15 @@ helpviewer_keywords:
 - lsl instruction
 ms.assetid: d0bc3630-90cb-4185-8667-686fd41e23d4
 ms.openlocfilehash: 650a847be3270782dc441d0e68c2c80d910e9d1e
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59036702"
 ---
 # <a name="segmentlimit"></a>__segmentlimit
 
-**Específico da Microsoft**
+**Seção específica da Microsoft**
 
 Gera o `lsl` instrução (limite de segmento de carga).
 
@@ -105,7 +105,7 @@ Success!
 sl was changed
 ```
 
-**FIM de Específico da Microsoft**
+**Fim da seção específica da Microsoft**
 
 ## <a name="see-also"></a>Consulte também
 

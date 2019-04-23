@@ -5,10 +5,10 @@ helpviewer_keywords:
 - OLE DB, application design considerations
 ms.assetid: 8caa7d99-d2bb-42c9-8884-74f228bb6ecc
 ms.openlocfilehash: 2f0a7a114c671e17d8f95280ab00ed93570e8609
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59037666"
 ---
 # <a name="ole-db-architectural-design-issues"></a>Problemas de design arquitetônico de banco de dados OLE
@@ -33,11 +33,11 @@ Por exemplo, se você deseja atualizar dados em um conjunto de linhas, mas esque
 
 Considerando as combinações possíveis de tecnologias (por exemplo, usando componentes ADO com componentes de OLE DB e migrar o código do ODBC para OLE DB), que abrange todas as situações está além do escopo da documentação do Visual C++. No entanto, muitos artigos que abordam vários cenários estão disponíveis nos seguintes sites da Microsoft:
 
-- [Ajuda e suporte](https://support.microsoft.com/)
+- [Ajuda e Suporte da Microsoft](https://support.microsoft.com/)
 
 - [Visão geral do Microsoft Data Access artigos técnicos](https://msdn.microsoft.com/library/ms810811.aspx)
 
 ## <a name="see-also"></a>Consulte também
 
-[Programação de banco de dados OLE](../../data/oledb/ole-db-programming.md)<br/>
-[Visão geral da programação de banco de dados OLE](../../data/oledb/ole-db-programming-overview.md)
+[Programação do OLE DB](../../data/oledb/ole-db-programming.md)<br/>
+[Visão geral da programação do OLE DB](../../data/oledb/ole-db-programming-overview.md)

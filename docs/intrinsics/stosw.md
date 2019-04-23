@@ -9,15 +9,15 @@ helpviewer_keywords:
 - rep stosw instruction
 ms.assetid: 7620fd1d-dba5-40e3-8e07-01aa68895133
 ms.openlocfilehash: c203973a79c2c3b1094ad8a5351db0999a56bf19
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59035751"
 ---
 # <a name="stosw"></a>__stosw
 
-**Específico da Microsoft**
+**Seção específica da Microsoft**
 
 Gera uma instrução de cadeia de caracteres de repositório (`rep stosw`).
 
@@ -33,7 +33,7 @@ void __stosw(
 
 #### <a name="parameters"></a>Parâmetros
 
-*dest*<br/>
+*Dest*<br/>
 [out] O destino da operação.
 
 *Dados*<br/>
@@ -80,7 +80,7 @@ int main()
 0 128 128 0
 ```
 
-**FIM de Específico da Microsoft**
+**Fim da seção específica da Microsoft**
 
 ## <a name="see-also"></a>Consulte também
 

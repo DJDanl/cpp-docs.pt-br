@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C2440
 ms.assetid: 36e6676c-f04f-4715-8ba1-f096c4bf3b44
 ms.openlocfilehash: c85a8284c91037e981f0d1ea82507b49be8121a3
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "58780672"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59777127"
 ---
 # <a name="compiler-error-c2440"></a>Erro do compilador C2440
 
@@ -143,7 +143,7 @@ int main() {
 
 ## <a name="example"></a>Exemplo
 
-O C2440 também pode ocorrer para um uso incorreto de uma conversão definida pelo usuário. Por exemplo, quando um operador de conversão foi definido como `explicit`, o compilador não pode usá-lo em uma conversão implícita. Para obter mais informações sobre conversões definidas pelo usuário, consulte [conversões definidas pelo usuário (C + + / CLI)](../../dotnet/user-defined-conversions-cpp-cli.md)). Este exemplo gera C2440:
+O C2440 também pode ocorrer para um uso incorreto de uma conversão definida pelo usuário. Por exemplo, quando um operador de conversão foi definido como `explicit`, o compilador não pode usá-lo em uma conversão implícita. Para obter mais informações sobre conversões definidas pelo usuário, consulte [conversões definidas pelo usuário (C++/CLI)](../../dotnet/user-defined-conversions-cpp-cli.md)). Este exemplo gera C2440:
 
 ```cpp
 // C2440d.cpp
@@ -194,7 +194,7 @@ O C2440 também pode ocorrer devido a alterações no recurso de atributos.  O e
 
 ## <a name="example"></a>Exemplo
 
-O compilador do Visual C++ não permite mais que o [operador const_cast](../../cpp/const-cast-operator.md) downcast quando código-fonte que usa **/clr** programação é compilada.
+O Visual C++ compilador não permite mais que o [operador const_cast](../../cpp/const-cast-operator.md) downcast quando código-fonte que usa **/clr** programação é compilada.
 
 Para resolver esse C2440, use o operador de conversão correto. Para obter mais informações, consulte [operadores de conversão](../../cpp/casting-operators.md).
 

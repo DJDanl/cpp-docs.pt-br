@@ -4,10 +4,10 @@ ms.date: 03/05/2019
 helpviewer_keywords:
 - CMake build settings
 ms.openlocfilehash: 1bdf4ef3e20b055b6fa3d5449a880ddb7aab44a0
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
-ms.translationtype: MT
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59037517"
 ---
 # <a name="customize-cmake-build-settings"></a>Personalizar as configurações de build do CMake
@@ -100,16 +100,16 @@ Configurações adicionais estão disponíveis para projetos do CMake Linux. Vej
 
 ## <a name="environment-variables"></a>Variáveis de ambiente
 
- `CMakeSettings.json` também dá suporte a variáveis de ambiente de consumo em qualquer uma das propriedades mencionadas acima. A sintaxe a ser usada é `${env.FOO}` para expandir a variável de ambiente %FOO%.
+ `CMakeSettings.json` também dá suporte ao consumo de variáveis de ambiente em uma das propriedades mencionadas acima. A sintaxe a ser usada é `${env.FOO}` para expandir a variável de ambiente %FOO%.
 Você também tem acesso às macros internas dentro deste arquivo:
 
-- `${workspaceRoot}` – fornece o caminho completo da pasta do espaço de trabalho
-- `${workspaceHash}` – hash do local do espaço de trabalho; útil para a criação de um identificador exclusivo para o espaço de trabalho atual (por exemplo, para usar em caminhos de pastas)
-- `${projectFile}` – o caminho completo do arquivo raiz cmakelists. txt
-- `${projectDir}` – o caminho completo da pasta do arquivo raiz cmakelists. txt
-- `${thisFile}` – o caminho completo do `CMakeSettings.json` arquivo
+- `${workspaceRoot}` – fornece o caminho completo da pasta de workspace
+- `${workspaceHash}` – hash do local do workspace; útil para criação de um identificador exclusivo para o workspace atual (por exemplo, para uso em caminhos de pasta)
+- `${projectFile}` – o caminho completo do arquivo CMakeLists.txt raiz
+- `${projectDir}` – o caminho completo da pasta do arquivo CMakeLists.txt raiz
+- `${thisFile}` – o caminho completo do arquivo `CMakeSettings.json`
 - `${name}` – o nome da configuração
-- `${generator}` – o nome do gerador de CMake usado nesta configuração
+- `${generator}` – o nome do gerador do CMake usado nessa configuração
 
 ## <a name="ninja-command-line-arguments"></a>Argumentos da linha de comando do Ninja
 
@@ -137,7 +137,7 @@ usage: ninja [options] [targets...]
 
 ## <a name="inherited-environments"></a>Ambientes herdados
 
- `CMakeSettings.json` dá suporte a herdada ambientes. Esse recurso permite que você (1) herde os ambientes padrão e (2) crie variáveis de ambiente personalizadas que são passadas para CMake.exe quando ele é executado.
+ `CMakeSettings.json` dá suporte a ambientes herdados. Esse recurso permite que você (1) herde os ambientes padrão e (2) crie variáveis de ambiente personalizadas que são passadas para CMake.exe quando ele é executado.
 
 ```json
   "inheritEnvironments": [ "msvc_x64_x64" ]
@@ -236,7 +236,7 @@ No exemplo a seguir, a configuração de Depuração x86 define seu próprio val
 
 ## <a name="see-also"></a>Consulte também
 
-[Projetos de CMake no Visual Studio](cmake-projects-in-visual-studio.md)<br/>
+[Projetos do CMake no Visual Studio](cmake-projects-in-visual-studio.md)<br/>
 [Configurar um projeto do Linux CMake](../linux/cmake-linux-project.md)<br/>
 [Conectar-se ao computador Linux remoto](../linux/connect-to-your-remote-linux-computer.md)<br/>
 [Configurar sessões de depuração do CMake](configure-cmake-debugging-sessions.md)<br/>

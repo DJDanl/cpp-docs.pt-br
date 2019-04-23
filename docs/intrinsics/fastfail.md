@@ -3,15 +3,15 @@ title: __fastfail
 ms.date: 11/04/2016
 ms.assetid: 9cd32639-e395-4c75-9f3a-ac3ba7f49921
 ms.openlocfilehash: a9f75cbf3c572401ef26fb16ced221eb24d35534
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59041491"
 ---
 # <a name="fastfail"></a>__fastfail
 
-**Específico da Microsoft**
+**Seção específica da Microsoft**
 
 Encerra imediatamente o processo de chamada com sobrecarga mínima.
 
@@ -23,7 +23,7 @@ void __fastfail(unsigned int code);
 
 #### <a name="parameters"></a>Parâmetros
 
-*código*<br/>
+*code*<br/>
 [in] Um `FAST_FAIL_<description>` constante simbólica de Winnt. h ou WDM. h indica o motivo do término do processo.
 
 ## <a name="return-value"></a>Valor de retorno
@@ -61,7 +61,7 @@ Suporte para o mecanismo de falha rápida nativa iniciado no Windows 8. Sistemas
 
 **Arquivo de cabeçalho** \<intrin. h >
 
-**FIM de Específico da Microsoft**
+**Fim da seção específica da Microsoft**
 
 ## <a name="see-also"></a>Consulte também
 

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - include directive (#include)
 ms.assetid: 17067dc0-8db1-4f2d-b43e-ec12ecf83238
 ms.openlocfilehash: 7ffccb34d52f8ffa1e6b9cc64a58d3471d02ac92
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59038975"
 ---
 # <a name="include-directive-cc"></a>Diretiva #include (C/C++)
@@ -69,7 +69,7 @@ Este exemplo adiciona o conteúdo do arquivo especificado por DEFS.H para o prog
 
 O aninhamento dos arquivos de inclusão pode continuar até 10 níveis. Quando aninhado **#include** é processado, o pré-processador continuará a inserir o arquivo de inclusão delimitador no arquivo de origem original.
 
-**Específico da Microsoft**
+**Seção específica da Microsoft**
 
 Para localizar os arquivos de origem, o pré-processador pesquisa primeiro os diretórios especificados pela **/I** opção de compilador. Se o **/I** opção não está presente ou falhar, o pré-processador usará a variável de ambiente INCLUDE para localizar os arquivos de inclusão entre colchetes angulares. A variável de ambiente INCLUDE e **/I** opção de compilador pode conter vários caminhos, separados por ponto e vírgula (**;**). Se mais de um diretório aparecer como parte do **/I** opção ou dentro de variável de ambiente INCLUDE, o pré-processador procurará por eles na ordem em que aparecem.
 
@@ -92,9 +92,9 @@ Se o nome de arquivo for totalmente especificado para um arquivo de inclusão qu
 
 Para incluir arquivos que são especificados como `#include "path-spec"`, pesquisa de diretório começa com o diretório do arquivo pai e, em seguida, continua pelos diretórios dos arquivos avô. Ou seja, pesquisa inicia relativa ao diretório que contém o arquivo de origem que contém o **#include** diretiva que está sendo processada. Se não houver nenhum arquivo avô e o arquivo não tiver sido encontrado, a pesquisa continua como se o nome do arquivo estivesse dentro de colchetes.
 
-**FIM de Específico da Microsoft**
+**Fim da seção específica da Microsoft**
 
 ## <a name="see-also"></a>Consulte também
 
-[Diretivas de pré-processador](../preprocessor/preprocessor-directives.md)<br/>
+[Diretivas do pré-processador](../preprocessor/preprocessor-directives.md)<br/>
 [/I (diretórios de inclusão adicionais)](../build/reference/i-additional-include-directories.md)<br/>

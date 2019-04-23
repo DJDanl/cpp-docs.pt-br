@@ -12,10 +12,10 @@ helpviewer_keywords:
 - ActivatableClassWithFactoryEx
 ms.assetid: 9bd64709-ec2c-4678-8c96-ea5982622bdd
 ms.openlocfilehash: 7d38db9e7d3fa94c89195b6379e14692f26f7ee5
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59037588"
 ---
 # <a name="activatableclass-macros"></a>ActivatableClass Macros
@@ -46,7 +46,7 @@ ActivatableClassWithFactoryEx(
 *className*<br/>
 Nome da classe a ser criada.
 
-*fábrica*<br/>
+*factory*<br/>
 Fábrica que cria uma instância da classe especificada.
 
 *serverName*<br/>
@@ -64,4 +64,4 @@ Não use essas macros com o COM clássico, a menos que você use o `#undef` dire
 
 ## <a name="see-also"></a>Consulte também
 
-[Classe de módulo](module-class.md)
+[Classe Module](module-class.md)

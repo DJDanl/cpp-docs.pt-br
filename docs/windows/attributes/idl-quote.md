@@ -1,5 +1,5 @@
 ---
-title: idl_quote (atributo de COM do C++)
+title: idl_quote (C++ COM atributo)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.idl_quote
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - idl_quote attribute
 ms.assetid: a370e1b7-948b-4e67-9a25-58facf24e4c9
 ms.openlocfilehash: fd7455298c9a1b69926d85766b6cd7f96bd374cc
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59037111"
 ---
 # <a name="idlquote"></a>idl_quote
@@ -25,12 +25,12 @@ Permite que você use construções IDL que não têm suporte na versão atual d
 
 ### <a name="parameters"></a>Parâmetros
 
-*texto*<br/>
+*text*<br/>
 O nome do atributo que você pretende que o compilador do Visual C++ para passar para o arquivo. idl gerado sem retornar um erro do compilador.
 
 ## <a name="remarks"></a>Comentários
 
-Se o **idl_quote** atributo de C++ é usado como um atributo autônomo (com um ponto e vírgula após o colchete de fechamento), em seguida, *texto* é colocado no arquivo. idl mesclado como está. Se **idl_quote** é usado em um símbolo *texto* é colocado dentro do bloco de atributo para esse símbolo.
+Se o **idl_quote** C++ atributo é usado como um atributo autônomo (com um ponto e vírgula após o colchete de fechamento), em seguida, *texto* é colocado no arquivo. idl mesclado como está. Se **idl_quote** é usado em um símbolo *texto* é colocado dentro do bloco de atributo para esse símbolo.
 
 ## <a name="example"></a>Exemplo
 
@@ -86,5 +86,5 @@ Para obter mais informações, consulte [contextos de atributo](cpp-attributes-c
 
 ## <a name="see-also"></a>Consulte também
 
-[Atributos IDL](idl-attributes.md)<br/>
-[Atributos autônomos](stand-alone-attributes.md)
+[Atributos de IDL](idl-attributes.md)<br/>
+[Atributos independentes](stand-alone-attributes.md)

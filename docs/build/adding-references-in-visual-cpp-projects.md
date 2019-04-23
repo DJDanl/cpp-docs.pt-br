@@ -8,10 +8,10 @@ helpviewer_keywords:
 - .NET Framework (C++), Add References Dialog Box
 ms.assetid: 12b8f571-0f21-40b3-9404-5318a57e9cb5
 ms.openlocfilehash: dff057977e6b6ff0c36d3a888bc4d5c3aa778576
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59038755"
 ---
 # <a name="consuming-libraries-and-components"></a>Consumindo bibliotecas e componentes
@@ -50,7 +50,7 @@ Se seu aplicativo C++ nativo precisa consumir um objeto COM, e o objeto está *r
 
 ## <a name="net-assemblies-and-windows-runtime-components"></a>Assemblies do .NET e componentes de tempo de execução do Windows
 
-Na UWP ou C + + c++ /CLI projetos, consumir assemblies do .NET ou componentes de tempo de execução do Windows com a adição de um *referência* para o assembly ou componente. Sob o **referências** nó em um UWP ou C + + c++ CLI project, você verá referências a componentes usados. Com o botão direito no **referências** nó no **Gerenciador de soluções** para abrir o **Gerenciador de referências** e procurar por meio de componentes adicionais que são conhecidos no sistema. Clique o **procurar** botão para navegar para qualquer pasta onde se encontra um componente personalizado. Como assemblies do .NET e componentes de tempo de execução do Windows contêm informações de tipo interno, você pode exibir suas classes e métodos clicando com botão direito e escolhendo **modo de exibição no Pesquisador de objetos**. 
+Na UWP ou C++projetos /CLI, consumir assemblies do .NET ou componentes de tempo de execução do Windows com a adição de um *referência* para o assembly ou componente. Sob o **referências** nó em uma UWP ou C++projeto /CLI, você verá referências a componentes usados. Com o botão direito no **referências** nó no **Gerenciador de soluções** para abrir o **Gerenciador de referências** e procurar por meio de componentes adicionais que são conhecidos no sistema. Clique o **procurar** botão para navegar para qualquer pasta onde se encontra um componente personalizado. Como assemblies do .NET e componentes de tempo de execução do Windows contêm informações de tipo interno, você pode exibir suas classes e métodos clicando com botão direito e escolhendo **modo de exibição no Pesquisador de objetos**. 
 
 ## <a name="reference-properties"></a>Propriedades de referência
 
@@ -60,31 +60,31 @@ Cada tipo de referência tem propriedades. Exiba as propriedades selecionando a 
 
 As propriedades de referência do ActiveX estão disponíveis somente para referências a componentes COM. Essas propriedades são exibidas apenas quando um componente COM é selecionado no painel **Referências**. As propriedades não podem ser modificadas.
 
-- **Caminho completo do controle**
+- **Caminho Completo do Controle**
 
    Exibe o caminho do diretório do controle referenciado.
 
-- **GUID de controle**
+- **GUID do Controle**
 
    Exibe o GUID do controle ActiveX.
 
-- **Controle de versão**
+- **Versão do Controle**
 
    Exibe a versão do controle ActiveX referenciado.
 
-- **Nome da biblioteca de tipo**
+- **Nome da Biblioteca de Tipos**
 
    Exibe o nome da biblioteca de tipos referenciada.
 
-- **Ferramenta do wrapper**
+- **Ferramenta Wrapper**
 
    Exibe a ferramenta usada para compilar o assembly de interoperabilidade da biblioteca COM referenciada ou do controle ActiveX.
 
-### <a name="assembly-reference-properties-ccli"></a>Propriedades de referência de assembly (C + + / CLI)
+### <a name="assembly-reference-properties-ccli"></a>Propriedades de referência de assembly (C++/CLI)
 
-Propriedades da referência do assembly estão disponíveis apenas para as referências aos assemblies do .NET Framework no C + + / projetos. Essas propriedades são exibidas apenas quando um assembly do .NET Framework está selecionado na **referências** painel. As propriedades não podem ser modificadas.
+Propriedades da referência do assembly estão disponíveis apenas para as referências aos assemblies do .NET Framework em C++projetos /CLI. Essas propriedades são exibidas apenas quando um assembly do .NET Framework está selecionado na **referências** painel. As propriedades não podem ser modificadas.
 
-- **Caminho relativo**
+- **Caminho Relativo**
 
    Exibe o caminho relativo do diretório do projeto ao assembly referenciado.
 
@@ -92,15 +92,15 @@ Propriedades da referência do assembly estão disponíveis apenas para as refer
 
 As propriedades a seguir estão disponíveis em vários tipos de referências. Elas permitem que você especifique como compilar com referências.
 
-- **Local da cópia**
+- **Local da Cópia**
 
    Especifica se o assembly referenciado será copiado automaticamente para o local de destino durante um build.
 
-- **Copiar Assemblies de satélite de Local (C + + / CLI)**
+- **Copiar Assemblies de satélite de Local (C++/CLI)**
 
    Especifica se os assemblies satélite serão copiados automaticamente do assembly referenciado para o local de destino durante um build. Usado somente se **Local da cópia** for **true**.
 
-- **Saída do Assembly de referência**
+- **Saída do Assembly de Referência**
 
    Especifica que esse assembly é usado no processo de build. Se for **true**, o assembly será usado na linha de comando do compilador durante o build.
 
@@ -112,7 +112,7 @@ As propriedades a seguir definem um *referência projeto a projeto* do projeto s
 
    Quando essa propriedade é **True**, o sistema de projeto é vinculado ao projeto dependente dos arquivos .lib que são produzidos pelo projeto independente. Normalmente, você especificará **True**.
 
-- **Identificador do projeto**
+- **Identificador do Projeto**
 
    Identifica exclusivamente o projeto independente. O valor da propriedade é um GUID de sistema interno que não pode ser modificado.
 
@@ -124,7 +124,7 @@ As propriedades a seguir definem um *referência projeto a projeto* do projeto s
 
 As propriedades a seguir são encontradas em referências de assembly .NET e COM e não podem ser modificadas.
 
-- **Nome do Assembly**
+- **Nome do assembly**
 
    Exibe o nome do assembly para o assembly referenciado.
 
@@ -136,7 +136,7 @@ As propriedades a seguir são encontradas em referências de assembly .NET e COM
 
    Exibe a descrição da referência selecionada.
 
-- **Caminho completo**
+- **Caminho Completo**
 
    Exibe o caminho do diretório do assembly referenciado.
 
@@ -144,7 +144,7 @@ As propriedades a seguir são encontradas em referências de assembly .NET e COM
 
    Para assemblies .NET Framework, exibe o caminho completo. Para componentes COM, exibe o GUID.
 
-- **Rotular**
+- **Rótulo**
 
    Exibe o rótulo da referência.
 
@@ -152,13 +152,13 @@ As propriedades a seguir são encontradas em referências de assembly .NET e COM
 
    Exibe o nome da referência.
 
-- **Token de chave pública**
+- **Token de Chave Pública**
 
    Exibe o token de chave pública usado para identificar o assembly referenciado.
 
-- **Nome forte**
+- **Nome Forte**
 
-   `true` Se o assembly referenciado tiver um nome forte. Um assembly com nome forte tem uma versão exclusiva.
+   `true` se o assembly referenciado tem um nome forte. Um assembly com nome forte tem uma versão exclusiva.
 
 - **Versão**
 
@@ -167,4 +167,4 @@ As propriedades a seguir são encontradas em referências de assembly .NET e COM
 ## <a name="see-also"></a>Consulte também
 
 [Referência de página de propriedades do projeto C++](reference/property-pages-visual-cpp.md)<br>
-[Defina o compilador C++ e compilar propriedades no Visual Studio](working-with-project-properties.md)
+[Definição das propriedades de compilação do C++ no Visual Studio](working-with-project-properties.md)

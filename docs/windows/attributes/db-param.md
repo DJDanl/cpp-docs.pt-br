@@ -1,5 +1,5 @@
 ---
-title: db_param (atributo de COM do C++)
+title: db_param (C++ COM atributo)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.db_param
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - db_param attribute
 ms.assetid: a28315f5-4722-459e-92ef-32e83c0b205a
 ms.openlocfilehash: a3cfcf3c7ce3313eaff9a3b35854e1e077fc906f
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59038090"
 ---
 # <a name="dbparam"></a>db_param
@@ -40,10 +40,10 @@ O número da coluna (ordinal DBCOLUMNINFO) correspondente a um campo no conjunto
 *dbtype*<br/>
 (Opcional) Um banco de dados OLE [indicador de tipo](/previous-versions/windows/desktop/ms711251(v=vs.85)) para a entrada de coluna.
 
-*precisão*<br/>
+*precision*<br/>
 (Opcional) A precisão a ser usado para a entrada da coluna. Para obter detalhes, consulte a descrição da `bPrecision` elemento o [estrutura DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85))
 
-*dimensionar*<br/>
+*scale*<br/>
 (Opcional) A escala a ser usado para a entrada da coluna. Para obter detalhes, consulte a descrição da `bScale` elemento o [estrutura DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85))
 
 *status*<br/>
@@ -117,4 +117,4 @@ Para obter mais informações sobre os contextos de atributo, consulte [contexto
 
 ## <a name="see-also"></a>Consulte também
 
-[Atributos de consumidor de banco de dados OLE](ole-db-consumer-attributes.md)
+[Atributos de consumidor do OLE DB](ole-db-consumer-attributes.md)

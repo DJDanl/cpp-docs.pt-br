@@ -11,10 +11,10 @@ helpviewer_keywords:
 - function calls, RFX functions
 ms.assetid: c594300b-5a29-4119-a68b-e7ca32def696
 ms.openlocfilehash: dc717336a5279e7eda1b7c39b19a7c76f9055cd3
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59035978"
 ---
 # <a name="record-field-exchange-using-the-rfx-functions"></a>Registrar troca de campos: Usando as funções RFX
@@ -64,7 +64,7 @@ Para obter mais informações, consulte a documentação da função RFX sob [Ma
 
 ## <a name="see-also"></a>Consulte também
 
-[Registrar troca de campos (RFX)](../../data/odbc/record-field-exchange-rfx.md)<br/>
+[RFX (troca de campo de registro)](../../data/odbc/record-field-exchange-rfx.md)<br/>
 [Registrar troca de campos: Como funciona RFX](../../data/odbc/record-field-exchange-how-rfx-works.md)<br/>
 [Conjunto de registros: Parametrizando um conjunto de registros (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)<br/>
 [Conjunto de registros: Associando dinamicamente colunas de dados (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)<br/>

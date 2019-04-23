@@ -12,10 +12,10 @@ helpviewer_keywords:
 - ATL projects
 ms.assetid: 11003cd8-9046-4630-a189-a32bf3b88047
 ms.openlocfilehash: b4772b9bd625a542a18039386fefe42840ab65b1
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59038032"
 ---
 # <a name="visual-studio-projects---c"></a>Projetos do Visual Studio – C++
@@ -60,21 +60,21 @@ Na lista de erros, você pode pressionar **F1** em um erro realçado para ir par
 
 ## <a name="in-this-section"></a>Nesta seção
 
-[Defina o compilador C++ e compilar propriedades no Visual Studio](working-with-project-properties.md)<br/>
+[Definição das propriedades de compilação do C++ no Visual Studio](working-with-project-properties.md)<br/>
 Como usar páginas de propriedades e folhas de propriedades para especificar as configurações do projeto.
 
-[As bibliotecas de referência e componentes em tempo de compilação](adding-references-in-visual-cpp-projects.md)<br/>
+[Bibliotecas e componentes de referência em tempo de compilação](adding-references-in-visual-cpp-projects.md)<br/>
 Como incluir componentes de bibliotecas, DLLs, COM e .NET em um projeto.
  
-[Organizar arquivos de saída do projeto](how-to-organize-project-output-files-for-builds.md)<br/>
+[Organização de arquivos de saída do projeto](how-to-organize-project-output-files-for-builds.md)<br/>
 Como personalizar o local dos arquivos executáveis criados no processo de compilação.
 
-[Etapas de compilação personalizada e eventos de Build](understanding-custom-build-steps-and-build-events.md)<br/>
+[Etapas e eventos de build personalizados](understanding-custom-build-steps-and-build-events.md)<br/>
 Como adicionar qualquer comando arbitrário para o processo de compilação em pontos específicos.
 
-[Criar um projeto com base no código existente](how-to-create-a-cpp-project-from-existing-code.md)<br/>
+[Criar um projeto com base em código existente](how-to-create-a-cpp-project-from-existing-code.md)<br/>
 Como criar um novo projeto do Visual Studio de um conjunto flexível de arquivos de origem.
 
 ## <a name="see-also"></a>Consulte também
 
-[Projetos e sistemas de build](projects-and-build-systems-cpp.md)<br>
+[Sistemas de Compilação e Projetos](projects-and-build-systems-cpp.md)<br>

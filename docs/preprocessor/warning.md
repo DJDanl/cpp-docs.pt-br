@@ -1,5 +1,5 @@
 ---
-title: aviso
+title: warning
 ms.date: 11/04/2016
 f1_keywords:
 - warning_CPP
@@ -11,10 +11,10 @@ helpviewer_keywords:
 - warning pragma
 ms.assetid: 8e9a0dec-e223-4657-b21d-5417ebe29cc8
 ms.openlocfilehash: 1341472af22582635207a2bdff93b4367fd59330
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59037744"
 ---
 # <a name="warning-pragma"></a>Pragma de aviso
@@ -37,10 +37,10 @@ Os seguintes parâmetros de especificador de aviso estão disponíveis.
 |------------------------|-------------|
 |*1, 2, 3, 4*|Aplique o nível fornecido aos avisos especificados. Isso também ativa um aviso especificado que é desativado por padrão.|
 |*default*|Redefina o comportamento de aviso para seu valor padrão. Isso também ativa um aviso especificado que é desativado por padrão. O aviso será gerado em seu nível padrão e documentado.<br /><br /> Para obter mais informações, consulte [compilador avisos que são desativado por padrão](../preprocessor/compiler-warnings-that-are-off-by-default.md).|
-|*Desabilitar*|Não emita a mensagem de aviso especificada.|
-|*erro*|Relate os avisos especificados como erros.|
+|*disable*|Não emita a mensagem de aviso especificada.|
+|*error*|Relate os avisos especificados como erros.|
 |*uma vez*|Exiba as mensagens especificadas somente uma vez.|
-|*Suprimir*|Empurra o estado atual do pragma na pilha, desabilita o aviso especificado para a próxima linha e depois exibe a pilha de aviso para que o estado de pragma seja redefinido.|
+|*suppress*|Empurra o estado atual do pragma na pilha, desabilita o aviso especificado para a próxima linha e depois exibe a pilha de aviso para que o estado de pragma seja redefinido.|
 
 A seguinte instrução de código mostra que um parâmetro `warning-number-list` pode conter vários números de aviso e que vários parâmetros `warning-specifier` podem ser especificados na mesma política de pragma.
 

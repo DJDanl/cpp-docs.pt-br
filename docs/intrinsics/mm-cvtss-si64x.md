@@ -8,15 +8,15 @@ helpviewer_keywords:
 - _mm_cvtss_si64x intrinsic
 ms.assetid: c279aff2-ee29-4271-8829-3ec691bf7718
 ms.openlocfilehash: a3b7ece325d975045046e865e6b090f3f6729558
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59036819"
 ---
 # <a name="mmcvtsssi64x"></a>_mm_cvtss_si64x
 
-**Específico da Microsoft**
+**Seção específica da Microsoft**
 
 Gera o x64 estendido a versão do converter escalar único precisão flutuante ponto número inteiro de 64 bits (`cvtss2si`) instrução.
 
@@ -30,7 +30,7 @@ __int64 _mm_cvtss_si64x(
 
 #### <a name="parameters"></a>Parâmetros
 
-*Valor *<br/>
+*value*<br/>
 [in] Um `__m128` estrutura que contém valores de ponto flutuante.
 
 ## <a name="return-value"></a>Valor de retorno
@@ -85,7 +85,7 @@ int main()
 101
 ```
 
-**FIM de Específico da Microsoft**
+**Fim da seção específica da Microsoft**
 
 ## <a name="see-also"></a>Consulte também
 
