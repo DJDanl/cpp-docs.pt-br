@@ -6,11 +6,11 @@ ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
 author: mikeblome
 ms.author: mblome
 ms.openlocfilehash: e74f8270d241b9725a24ee257fb846a7cc4e079e
-ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/03/2019
-ms.locfileid: "58899452"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59779480"
 ---
 # <a name="whats-new-for-c-in-visual-studio-2017"></a>Novidades do C++ no Visual Studio 2017
 
@@ -143,7 +143,7 @@ Vários recursos adicionais do C++17 foram implementados. Para saber mais, veja 
 - Habilitada a otimização de valor retornado nomeado em `system_category::message()`.
 - `conjunction` e `disjunction` agora instanciam de N + 1 tipos, em vez de 2N + 2 tipos.
 - `std::function` não instancia mais máquinas de suporte de alocador para cada chamável apagado por tipo, melhorando a taxa de transferência e reduzindo o tamanho de .obj em programas que passam vários lambdas distintos para `std::function`.
-- `allocator_traits<std::allocator>` contém operações `std::allocator` manualmente embutidas, o que reduz o tamanho do código que interage com `std::allocator` apenas por meio de `allocator_traits` (ou seja, na maioria dos códigos).
+- `allocator_traits<std::allocator>` contém operações `std::allocator` manualmente embutidas, o que reduz o tamanho do código que interage com `std::allocator` apenas por meio de `allocator_traits` (ou seja, no maioria dos códigos).
 - A interface de alocador mínima C++11 agora é manipulada pela Biblioteca Padrão chamando `allocator_traits` diretamente, em vez de encapsular o alocador em uma classe interna `_Wrap_alloc`. Isso reduz o tamanho do código gerado compatível com o alocador, melhora a capacidade do otimizador de raciocinar sobre contêineres da Biblioteca Padrão em alguns casos e fornece uma melhor experiência de depuração (porque agora você pode ver o tipo de alocador, em vez de `_Wrap_alloc<your_allocator_type>` no depurador).
 - Removida a metaprogramação para `allocator::reference` personalizada, que os alocadores, na verdade, não têm permissão para serem personalizados. (Os alocadores podem fazer contêineres usarem ponteiros sofisticados, mas não referências sofisticadas.)
 - O front-end do compilador foi ensinado a descompactar iteradores de depuração em loops for baseados em intervalo, melhorando o desempenho de compilações de depuração.
@@ -156,7 +156,7 @@ Vários recursos adicionais do C++17 foram implementados. Para saber mais, veja 
 - Concluída a alteração da expressão SFINAE baseada em função para baseada em `struct` e em `void_t`.
 - Os algoritmos de Biblioteca Padrão agora evitam iteradores de pós-incrementação.
 - Corrigidos os avisos de truncamento ao usar alocadores de 32 bits em sistemas de 64 bits.
-- `std::vector` A atribuição de movimentação agora é mais eficiente para o caso de alocador não igual a não POCMA reutilizando o buffer quando possível.
+- A atribuição de movimentação `std::vector` agora é mais eficiente para o caso de alocador não igual a não POCMA reutilizando o buffer quando possível.
 
 #### <a name="readability-and-other-improvements"></a>Legibilidade e outras melhorias
 
@@ -206,7 +206,7 @@ Vários recursos foram adicionados, preteridos ou removidos da Biblioteca Padrã
 - Construir `std::random_device` agora não constrói e, em seguida, destrói um `std::string`.
 - `std::equal` e `std::partition` tinham uma passagem de otimização de jump-threading que salvava uma comparação de iterador.
 - Quando for passado ponteiros em `std::reverse` para `T` facilmente copiado, ele agora enviará uma implementação vetorizada manuscrita.
-- `std::fill``std::equal` e `std::lexicographical_compare` foram ensinados a enviar a `memset` e a `memcmp` para `std::byte` e para `gsl::byte` (e outras classes de enumeração e enumerações similares a char). Observe que `std::copy` envia usando `is_trivially_copyable` e, portanto não precisa de nenhum alteração.
+- `std::fill`, `std::equal` e `std::lexicographical_compare` foram ensinados a enviar a `memset` e a `memcmp` para `std::byte` e para `gsl::byte` (e outras classes de enumeração e enumerações similares a char). Observe que `std::copy` envia usando `is_trivially_copyable` e, portanto não precisa de nenhum alteração.
 - A Biblioteca Padrão não contém mais destruidores com chaves vazias cujo único comportamento era tornar os tipos em não facilmente destrutíveis.
 
 #### <a name="correctness-fixes-in-visual-studio-2017-version-155"></a>Correções no Visual Studio 2017 versão 15.5
