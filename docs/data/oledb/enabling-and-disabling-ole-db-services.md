@@ -6,10 +6,10 @@ helpviewer_keywords:
 - service providers [OLE DB]
 ms.assetid: 445f97eb-32a8-41c2-ad26-1169f78a074f
 ms.openlocfilehash: df17a55950b03d4d63dea2199e3bc19bedb8a7e3
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59028948"
 ---
 # <a name="enabling-and-disabling-ole-db-services"></a>Habilitando e desabilitando serviços de banco de dados OLE
@@ -20,4 +20,4 @@ Em alguns casos, pode ser necessário desabilitar serviços individuais do OLE D
 
 ## <a name="see-also"></a>Consulte também
 
-[Pooling de recursos e serviços de banco de dados OLE](../../data/oledb/ole-db-resource-pooling-and-services.md)
+[Pooling de recursos e serviços do OLE DB](../../data/oledb/ole-db-resource-pooling-and-services.md)

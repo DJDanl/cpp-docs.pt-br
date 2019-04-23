@@ -9,10 +9,10 @@ helpviewer_keywords:
 - pragmas, alloc_text
 ms.assetid: 1fd7be18-e4f7-4f70-b079-6326f72b871a
 ms.openlocfilehash: 399e8956a511f289b480e66db7f03cac0a6c7c20
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59031352"
 ---
 # <a name="alloctext"></a>alloc_text
@@ -28,7 +28,7 @@ textsection
 
 ## <a name="remarks"></a>Comentários
 
-O **alloc_text** pragma não trata funções de membro C++ ou funções sobrecarregadas. Ele é aplicável somente às funções declaradas com vinculação C — ou seja, as funções declaradas com o **extern "C"** especificação de vinculação. Se você tentar usar esse pragma em uma função com vinculação C++, um erro do compilador será gerado.
+O **alloc_text** pragma não lida com C++ funções de membro ou funções sobrecarregadas. Ele é aplicável somente às funções declaradas com vinculação C — ou seja, as funções declaradas com o **extern "C"** especificação de vinculação. Se você tentar usar esse pragma em uma função com vinculação C++, um erro do compilador será gerado.
 
 Desde a função usando endereçamento `__based` não for compatível, especificar locais de seção requer o uso do **alloc_text** pragma. O nome especificado por *textsection* deve ser colocado entre aspas duplas.
 

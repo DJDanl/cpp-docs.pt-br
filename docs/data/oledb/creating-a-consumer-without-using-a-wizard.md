@@ -5,10 +5,10 @@ helpviewer_keywords:
 - OLE DB consumers, creating
 ms.assetid: e8241cfe-5faf-48f8-9de3-241203de020b
 ms.openlocfilehash: 029fe6866df81d366cc3bc15096f638791faa413
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59030414"
 ---
 # <a name="creating-a-consumer-without-using-a-wizard"></a>Criando um consumidor sem usar um assistente
@@ -78,4 +78,4 @@ Programaticamente, um consumidor normalmente executa a seguinte sequência de op
 
 ## <a name="see-also"></a>Consulte também
 
-[Criando um consumidor de banco de dados OLE](../../data/oledb/creating-an-ole-db-consumer.md)
+[Criando um consumidor do OLE DB](../../data/oledb/creating-an-ole-db-consumer.md)

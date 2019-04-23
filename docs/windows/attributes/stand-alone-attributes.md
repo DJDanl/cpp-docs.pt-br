@@ -6,10 +6,10 @@ helpviewer_keywords:
 - attributes [C++/CLI], standalone
 ms.assetid: 0d72e84e-236c-43b3-ac9a-d9b91fcd6794
 ms.openlocfilehash: 7dd1f35add3b23dbd81e32a1600481eec79fe7d7
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59033051"
 ---
 # <a name="stand-alone-attributes"></a>Atributos autônomos
@@ -21,7 +21,7 @@ Um atributo autônomo não funciona em uma palavra-chave C++, mas é mais pareci
 |Atributo|Descrição|
 |---------------|-----------------|
 |[cpp_quote](cpp-quote.md)|Emite a cadeia de caracteres especificada, sem caracteres de aspas, para o arquivo de cabeçalho gerado.|
-|[personalizado](custom-cpp.md)|Permite que você defina seu próprio atributo.|
+|[custom](custom-cpp.md)|Permite que você defina seu próprio atributo.|
 |[db_command](db-command.md)|Cria um comando OLE DB.|
 |[emitidl](emitidl.md)|Determina se todos os atributos IDL subsequentes serão processados e colocados no arquivo. idl gerado.|
 |[idl_module](idl-module.md)|Especifica um ponto de entrada em uma DLL.|
@@ -34,7 +34,7 @@ Um atributo autônomo não funciona em uma palavra-chave C++, mas é mais pareci
 |[library_block](library-block.md)|Coloca uma construção de dentro do bloco de biblioteca do arquivo. idl.|
 |[module](module-cpp.md)|Define o bloco de biblioteca no arquivo. idl.|
 |[no_injected_text](no-injected-text.md)|Impede que o compilador injetando código como resultado do uso do atributo.|
-|[(pragma)](pragma.md)|Emite a cadeia de caracteres especificada, sem os caracteres de aspas no arquivo. idl gerado.|
+|[pragma](pragma.md)|Emite a cadeia de caracteres especificada, sem os caracteres de aspas no arquivo. idl gerado.|
 
 ## <a name="see-also"></a>Consulte também
 

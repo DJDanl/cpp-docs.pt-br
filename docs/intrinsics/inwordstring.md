@@ -9,15 +9,15 @@ helpviewer_keywords:
 - rep insw instruction
 ms.assetid: 6de37939-017a-4740-9e3d-7de78a30daba
 ms.openlocfilehash: 52c36754e1eea56b84eeb494e82e37a5b043246e
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59030213"
 ---
 # <a name="inwordstring"></a>__inwordstring
 
-**Específico da Microsoft**
+**Seção específica da Microsoft**
 
 Lê dados da porta especificada usando o `rep insw` instrução.
 
@@ -54,7 +54,7 @@ void __inwordstring(
 
 Essa rotina só está disponível como função intrínseca.
 
-**FIM de Específico da Microsoft**
+**Fim da seção específica da Microsoft**
 
 ## <a name="see-also"></a>Consulte também
 

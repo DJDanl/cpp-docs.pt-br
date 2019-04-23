@@ -88,10 +88,10 @@ helpviewer_keywords:
 - images [C++], converting formats
 ms.assetid: 66db3fb2-cfc1-48a2-9bdd-53f61eb7ee30
 ms.openlocfilehash: d10593ffbae7aef55adc3334057402b6952d8ba7
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59027591"
 ---
 # <a name="how-to-create-an-icon-or-other-image"></a>Como: Criar um ícone ou outra imagem
@@ -321,7 +321,7 @@ Nenhum
 
 [Editor de imagens para ícones](../windows/image-editor-for-icons.md)<br/>
 [Como: Editar uma imagem](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)<br/>
-[Como: Use uma ferramenta de desenho](../windows/using-a-drawing-tool-image-editor-for-icons.md)<br/>
+[Como: Usar uma ferramenta de desenho](../windows/using-a-drawing-tool-image-editor-for-icons.md)<br/>
 [Como: Trabalhar com cores](../windows/working-with-color-image-editor-for-icons.md)<br/>
 [Teclas de aceleração](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
 <!--

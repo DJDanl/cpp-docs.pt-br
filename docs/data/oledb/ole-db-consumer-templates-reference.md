@@ -13,10 +13,10 @@ helpviewer_keywords:
 - OLE DB consumer templates, classes
 ms.assetid: cfc7f698-1a0e-4a09-a4d3-ccb99e6654fe
 ms.openlocfilehash: fb0b24798b3f2682bbbec7624df34b40a2a9f4cc
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59032265"
 ---
 # <a name="ole-db-consumer-templates-reference"></a>Referência dos modelos de consumidor de banco de dados OLE
@@ -86,7 +86,7 @@ Usado para buscar e manipular linhas em massa recuperando vários identificadore
 [CNoRowset](../../data/oledb/cnorowset-class.md)<br/>
 Pode ser usado como um argumento de modelo, se o comando não retornar um conjunto de linhas.
 
-[cRestrictions](../../data/oledb/crestrictions-class.md)<br/>
+[CRestrictions](../../data/oledb/crestrictions-class.md)<br/>
 Usado para especificar restrições para conjuntos de linhas de esquema.
 
 [CRowset](../../data/oledb/crowset-class.md)<br/>
@@ -98,7 +98,7 @@ Retorna um `ISequentialStream` do objeto em vez de um conjunto de linhas; em seg
 [IRowsetNotifyImpl](../../data/oledb/irowsetnotifyimpl-class.md)<br/>
 Fornece uma implementação fictícia para `IRowsetNotify`, com funções vazias para o `IRowsetNotify` métodos `OnFieldChange`, `OnRowChange`, e `OnRowsetChange`.
 
-[Classes Rowset do esquema e Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)
+[Classes typedef e classes de conjunto de linhas de esquema](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)
 
 Os modelos OLE DB fornecem um conjunto de classes que correspondem aos conjuntos de linhas de esquema OLE DB.
 
@@ -142,5 +142,5 @@ Usado para recuperar informações de erro OLE DB.
 
 ## <a name="see-also"></a>Consulte também
 
-[Referência dos modelos de provedor de banco de dados OLE](../../data/oledb/ole-db-provider-templates-reference.md)<br/>
-[Modelos de banco de dados OLE](../../data/oledb/ole-db-templates.md)
+[Referência dos modelos de provedor do OLE DB](../../data/oledb/ole-db-provider-templates-reference.md)<br/>
+[Modelos do OLE DB](../../data/oledb/ole-db-templates.md)

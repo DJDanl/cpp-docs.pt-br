@@ -4,10 +4,10 @@ ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 1c77543f-7b0c-4a94-93bf-e3225885ed76
 ms.openlocfilehash: 959a85d6cf6de666ae56d09035acefe9a3828ae8
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59033171"
 ---
 # <a name="how-to-handle-events-using-wrl"></a>Como: Manipular eventos usando a WRL
@@ -89,4 +89,4 @@ Para compilar o código, copiá-lo e, em seguida, cole-o em um projeto do Visual
 
 ## <a name="see-also"></a>Consulte também
 
-[Biblioteca de Modelos C++ do Windows Runtime  (WRL)](windows-runtime-cpp-template-library-wrl.md)
+[WRL (Biblioteca de Modelos C++ do Tempo de Execução do Windows)](windows-runtime-cpp-template-library-wrl.md)

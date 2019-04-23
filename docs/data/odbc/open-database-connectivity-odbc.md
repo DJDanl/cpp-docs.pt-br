@@ -7,10 +7,10 @@ helpviewer_keywords:
 - data access [C++], ODBC
 ms.assetid: 56b6067a-651e-4c10-a24d-d4a6a17ca5e4
 ms.openlocfilehash: fdaafd5c8243143fd9705d45db2497577820ca0a
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59030083"
 ---
 # <a name="open-database-connectivity-odbc"></a>Conectividade de banco de dados aberto (ODBC)
@@ -74,8 +74,8 @@ Essas tarefas se baseiam no MFC [ODBC](odbc-basics.md) classes. Para obter mais 
 
 - [Usar a biblioteca de cursores ODBC](use-the-odbc-cursor-library.md)
 
-- [Usar conjuntos de registros ODBC MFC](use-mfc-odbc-recordsets.md)
+- [Usar conjuntos de registros ODBC do MFC](use-mfc-odbc-recordsets.md)
 
 ## <a name="see-also"></a>Consulte também
 
-[Programação de acesso a dados (MFC/ATL)](../../data/data-access-programming-mfc-atl.md)
+[Acesso a dados (MFC/ATL) de programação](../../data/data-access-programming-mfc-atl.md)

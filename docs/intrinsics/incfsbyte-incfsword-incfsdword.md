@@ -14,15 +14,15 @@ helpviewer_keywords:
 - __incfsbyte intrinsic
 ms.assetid: 820457fb-e35e-42d3-bcb6-725da3281c64
 ms.openlocfilehash: 9e1e2630f8c0a66b681be2aa550f9c9255c92173
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59026997"
 ---
 # <a name="incfsbyte-incfsword-incfsdword"></a>__incfsbyte, __incfsword, __incfsdword
 
-**Específico da Microsoft**
+**Seção específica da Microsoft**
 
 Adicione um para o valor em um local de memória especificado por um deslocamento em relação ao início do `FS` segmento.
 
@@ -42,7 +42,7 @@ void __incfsdword(
 
 #### <a name="parameters"></a>Parâmetros
 
-*deslocamento*<br/>
+*Offset*<br/>
 [in] O deslocamento do início do `FS`.
 
 ## <a name="requirements"></a>Requisitos
@@ -57,7 +57,7 @@ void __incfsdword(
 
 Esses intrínsecos só estão disponíveis no modo kernel, e as rotinas somente estão disponíveis como intrínsecos.
 
-**FIM de Específico da Microsoft**
+**Fim da seção específica da Microsoft**
 
 ## <a name="see-also"></a>Consulte também
 

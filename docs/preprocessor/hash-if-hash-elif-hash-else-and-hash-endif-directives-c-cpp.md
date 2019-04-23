@@ -22,10 +22,10 @@ helpviewer_keywords:
 - defined directive
 ms.assetid: c77a175f-6ca8-47d4-8df9-7bac5943d01b
 ms.openlocfilehash: 90fbab45c6408c30198c2a52a42545718002cc11
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59028085"
 ---
 # <a name="if-elif-else-and-endif-directives-cc"></a>Diretivas #if, #elif, #else e #endif (C/C++)
@@ -97,7 +97,7 @@ O operador de pré-processador **definidas** pode ser usado em expressões de co
 
 defined( `identifier` )
 
-definido `identifier`
+defined `identifier`
 
 Esta expressão constante é considerada verdadeira (diferente de zero) se o *identificador* estiver definido; caso contrário, a condição for false (0). Um identificador definido como texto vazio é considerado definido. O **definidos** diretiva pode ser usada em um **#if** e um **#elif** diretiva, mas nenhum outro lugar.
 
@@ -193,4 +193,4 @@ O código acima verifica se a constante `EXAMPLE_H` foi definida. Em caso afirma
 
 ## <a name="see-also"></a>Consulte também
 
-[Diretivas de pré-processador](../preprocessor/preprocessor-directives.md)
+[Diretivas do pré-processador](../preprocessor/preprocessor-directives.md)

@@ -7,10 +7,10 @@ helpviewer_keywords:
 - high_property_prefixes attribute
 ms.assetid: 91c6cc2b-19b6-4aba-8831-d9e5cccb58b5
 ms.openlocfilehash: 3f8975ec9737e02bb1216166cc6c241549e95a07
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59029363"
 ---
 # <a name="highpropertyprefixes"></a>high_property_prefixes
@@ -40,9 +40,9 @@ Prefixo a ser usado para o `propputref` métodos.
 
 Por padrão, tratamento de erros de alto nível `propget`, `propput`, e `propputref` métodos expostos pela funções membro nomeadas com prefixos `Get`, `Put`, e `PutRef`, respectivamente.
 
-**FIM de Específico do C++**
+**FIM de específico de C++**
 
 ## <a name="see-also"></a>Consulte também
 
-[Atributos de #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
-[Diretiva #import](../preprocessor/hash-import-directive-cpp.md)
+[atributos de #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
+[#import diretiva](../preprocessor/hash-import-directive-cpp.md)

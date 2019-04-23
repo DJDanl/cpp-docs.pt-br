@@ -6,10 +6,10 @@ helpviewer_keywords:
 - parameter attributes
 ms.assetid: 024c2dd5-49d7-4ced-a17a-c56c1bc485b6
 ms.openlocfilehash: e89542027c2187a77c18637432a5b60f47377c10
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59029545"
 ---
 # <a name="parameter-attributes"></a>Atributos de parâmetro
@@ -18,12 +18,12 @@ Os atributos a seguir se aplicam a parâmetros de um método em uma classe ou in
 
 |Atributo|Descrição|
 |---------------|-----------------|
-|[personalizado](custom-cpp.md)|Permite que você defina seu próprio atributo.|
+|[custom](custom-cpp.md)|Permite que você defina seu próprio atributo.|
 |[defaultvalue](defaultvalue.md)|Permite a especificação de um valor padrão para um parâmetro opcional tipado.|
 |[first_is](first-is.md)|Especifica o índice do primeiro elemento da matriz a ser transmitido.|
 |[iid_is](iid-is.md)|Especifica o índice do primeiro elemento da matriz a ser transmitido.|
 |[immediatebind](immediatebind.md)|Indica que o banco de dados será notificado imediatamente de todas as alterações a uma propriedade de um objeto de associação de dados.|
-|[em](in-cpp.md)|Indica que um parâmetro deve ser passado do procedimento de chamada para o procedimento chamado.|
+|[in](in-cpp.md)|Indica que um parâmetro deve ser passado do procedimento de chamada para o procedimento chamado.|
 |[last_is](last-is.md)|Especifica o índice do último elemento da matriz a ser transmitido.|
 |[lcid](lcid.md)|Permite que você passar um identificador de localidade para uma função.|
 |[length_is](length-is.md)|Especifica o número de elementos da matriz a ser transmitido.|

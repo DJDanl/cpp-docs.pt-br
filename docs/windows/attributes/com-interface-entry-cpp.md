@@ -1,5 +1,5 @@
 ---
-title: com_interface_entry (atributo de COM do C++)
+title: com_interface_entry (C++ COM atributo)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.com_interface_entry
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - com_interface_entry attribute
 ms.assetid: 10368f81-b99b-4a0f-ba4f-a142e6911a5c
 ms.openlocfilehash: 65d174679f851613e064568b071cfcbdad8f0f06
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59030401"
 ---
 # <a name="cominterfaceentry-c"></a>com_interface_entry (C++)
@@ -31,7 +31,7 @@ Uma cadeia de caracteres que contém o texto real da entrada. Para obter uma lis
 
 ## <a name="remarks"></a>Comentários
 
-O **com_interface_entry** atributo C++ insere o conteúdo unabridged de uma cadeia de caracteres para o mapa de interface COM do objeto de destino. Se o atributo é aplicado de uma vez para o objeto de destino, a entrada será inserida no início do mapa de interface existente. Se o atributo é aplicado várias vezes ao mesmo objeto de destino, as entradas são inseridas no início do mapa de interface na ordem em que elas são recebidas.
+O **com_interface_entry** C++ atributo insere o conteúdo unabridged de uma cadeia de caracteres para o mapa de interface COM do objeto de destino. Se o atributo é aplicado de uma vez para o objeto de destino, a entrada será inserida no início do mapa de interface existente. Se o atributo é aplicado várias vezes ao mesmo objeto de destino, as entradas são inseridas no início do mapa de interface na ordem em que elas são recebidas.
 
 Este atributo exige que o [coclass](coclass.md), [progid](progid.md), ou [vi_progid](vi-progid.md) atributo (ou outro atributo que implica uma destas opções) também ser aplicadas ao mesmo elemento. Se qualquer atributo único for usado, os outros dois são aplicados automaticamente. Por exemplo, se `progid` for aplicada, `vi_progid` e `coclass` também são aplicadas.
 
@@ -118,6 +118,6 @@ Para obter mais informações sobre os contextos de atributo, consulte [contexto
 
 ## <a name="see-also"></a>Consulte também
 
-[Atributos COM](com-attributes.md)<br/>
+[Atributos de COM](com-attributes.md)<br/>
 [Atributos de classe](class-attributes.md)<br/>
 [Atributos Typedef, Enum, Union e Struct](typedef-enum-union-and-struct-attributes.md)

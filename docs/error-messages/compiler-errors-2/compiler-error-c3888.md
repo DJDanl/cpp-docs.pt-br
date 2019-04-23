@@ -7,15 +7,15 @@ helpviewer_keywords:
 - C3888
 ms.assetid: 40820812-79c5-4dcd-a19d-b4164d25fc8a
 ms.openlocfilehash: e4d52946126e7be6c6f2aef34b5eb5a93a0babad
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59033635"
 ---
 # <a name="compiler-error-c3888"></a>Erro do compilador C3888
 
-'name': a expressão const associada a este membro de dados literal não é suportada pelo C + + / CLI
+'name': a expressão const associada a este membro de dados literal não é suportada pelo C++/CLI
 
 O *nome* membro de dados que é declarado com o [literal](../../extensions/literal-cpp-component-extensions.md) palavra-chave é inicializada com um valor que o compilador não oferece suporte. O compilador suporta apenas constante integral, enum ou tipos de cadeia de caracteres. A causa provável para o **C3888** erro é que o membro de dados é inicializado com uma matriz de bytes.
 

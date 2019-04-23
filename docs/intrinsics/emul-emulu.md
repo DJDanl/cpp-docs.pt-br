@@ -11,15 +11,15 @@ helpviewer_keywords:
 - __emulu intrinsic
 ms.assetid: 79545236-cca2-40b8-a4e1-8abce9b26311
 ms.openlocfilehash: 8657c0fb034ac6bbcfbebb946e059ad08d9e7046
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59030044"
 ---
 # <a name="emul-emulu"></a>__emul, __emulu
 
-**Específico da Microsoft**
+**Seção específica da Microsoft**
 
 Executa multiplicações que estouram o que pode conter um inteiro de 32 bits.
 
@@ -102,7 +102,7 @@ int main()
 4294967295 * 251658240 = 1080863910317260800
 ```
 
-**FIM de Específico da Microsoft**
+**Fim da seção específica da Microsoft**
 
 ## <a name="see-also"></a>Consulte também
 

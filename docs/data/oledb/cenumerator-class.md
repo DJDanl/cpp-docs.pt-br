@@ -23,10 +23,10 @@ helpviewer_keywords:
 - Open method
 ms.assetid: 25805f1b-26e3-402f-af83-1b5fe5ddebf7
 ms.openlocfilehash: 23467caf46d38175a74dab061f60e11009f1f481
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59030174"
 ---
 # <a name="cenumerator-class"></a>Classe CEnumerator
@@ -50,7 +50,7 @@ class CEnumerator :
 
 |||
 |-|-|
-|[Localizar](#find)|Pesquisa por meio de provedores disponíveis (fontes de dados) procurando um com o nome especificado.|
+|[Find](#find)|Pesquisa por meio de provedores disponíveis (fontes de dados) procurando um com o nome especificado.|
 |[GetMoniker](#getmoniker)|Recupera o `IMoniker` interface para o registro atual.|
 |[Abrir](#open)|Abre o enumerador.|
 
@@ -138,5 +138,5 @@ Um HRESULT padrão.
 ## <a name="see-also"></a>Consulte também
 
 [DBViewer](../../overview/visual-cpp-samples.md)<br/>
-[Modelos de consumidor de banco de dados OLE](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Referência dos modelos de consumidor de banco de dados OLE](../../data/oledb/ole-db-consumer-templates-reference.md)
+[Modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Referência de modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

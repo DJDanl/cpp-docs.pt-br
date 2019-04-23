@@ -239,10 +239,10 @@ helpviewer_keywords:
 - UpdateAll method
 ms.assetid: b0228a90-b8dd-47cc-b397-8d4c15c1e7f4
 ms.openlocfilehash: dc4f619fb0dba924693682c927247e809fe2cfe9
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59032317"
 ---
 # <a name="crowset-class"></a>Classe CRowset
@@ -273,7 +273,7 @@ Uma classe de acessador. O padrão é `CAccessorBase`.
 |-|-|
 |[AddRefRows](#addrefrows)|Incrementa a contagem de referência associado com a linha atual.|
 |[Fechar](#close)|Libera linhas e atual `IRowset` interface.|
-|[Comparar](#compare)|Compara dois indicadores usando [IRowsetLocate::Compare](/previous-versions/windows/desktop/ms709539(v=vs.85)).|
+|[Compare](#compare)|Compara dois indicadores usando [IRowsetLocate::Compare](/previous-versions/windows/desktop/ms709539(v=vs.85)).|
 |[CRowset](#crowset)|Cria um novo `CRowset` do objeto e (opcionalmente) associa a um `IRowset` interface fornecida como um parâmetro.|
 |[Excluir](#delete)|Exclui linhas do conjunto de linhas usando [IRowsetChange:DeleteRows](/previous-versions/windows/desktop/ms724362(v=vs.85)).|
 |[FindNextRow](#findnextrow)|Localiza a próxima linha correspondente após o indicador especificado.|
@@ -292,8 +292,8 @@ Uma classe de acessador. O padrão é `CAccessorBase`.
 |[MoveToRatio](#movetoratio)|Busca linhas a partir de uma posição fracionária no conjunto de linhas.|
 |[ReleaseRows](#releaserows)|Chamadas [IRowset:: Releaserows](/previous-versions/windows/desktop/ms719771(v=vs.85)) para liberar o identificador de linha atual.|
 |[SetData](#setdata)|Define os valores de dados em uma ou mais colunas de uma linha usando [IRowsetChange:SetData](/previous-versions/windows/desktop/ms721232(v=vs.85)).|
-|[Desfazer](#undo)|Desfaz todas as alterações feitas em uma linha desde o último fetch ou [atualização](../../data/oledb/crowset-update.md).|
-|[Atualização](#update)|Transmite todas as alterações feitas na linha atual desde a última busca ou atualização pendentes.|
+|[Undo](#undo)|Desfaz todas as alterações feitas em uma linha desde o último fetch ou [atualização](../../data/oledb/crowset-update.md).|
+|[Atualizar](#update)|Transmite todas as alterações feitas na linha atual desde a última busca ou atualização pendentes.|
 |[UpdateAll](#updateall)|Transmite todas as alterações feitas a todas as linhas desde o último fetch ou a atualização pendentes.|
 
 ## <a name="remarks"></a>Comentários
@@ -741,7 +741,7 @@ HRESULT MoveToBookmark(const CBookmarkBase& bookmark,
 
 #### <a name="parameters"></a>Parâmetros
 
-*Indicador*<br/>
+*bookmark*<br/>
 [in] Um indicador que marca o local do qual você deseja buscar dados.
 
 *lSkip*<br/>
@@ -940,5 +940,5 @@ Um HRESULT padrão.
 [Exemplo de DBViewer](../../overview/visual-cpp-samples.md)<br/>
 [Exemplo multiRead](../../overview/visual-cpp-samples.md)<br/>
 [Exemplo de atributos multiRead](../../overview/visual-cpp-samples.md)<br/>
-[Modelos de consumidor de banco de dados OLE](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Referência dos modelos de consumidor de banco de dados OLE](../../data/oledb/ole-db-consumer-templates-reference.md)
+[Modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Referência de modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

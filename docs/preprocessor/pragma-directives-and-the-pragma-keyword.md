@@ -14,10 +14,10 @@ helpviewer_keywords:
 - pragma directives (#pragma)
 ms.assetid: 9867b438-ac64-4e10-973f-c3955209873f
 ms.openlocfilehash: b6c2ff579c6fafa78cbfd0a2879a71fca2bfaa01
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59027435"
 ---
 # <a name="pragma-directives-and-the-pragma-keyword"></a>Diretivas Pragma e a palavra-chave __Pragma
@@ -53,13 +53,13 @@ Os compiladores C e C++ da Microsoft reconhecem os seguintes pragmas:
 |[function](../preprocessor/function-c-cpp.md)|[hdrstop](../preprocessor/hdrstop.md)|[include_alias](../preprocessor/include-alias.md)|
 |[init_seg](../preprocessor/init-seg.md) <sup>1</sup>|[inline_depth](../preprocessor/inline-depth.md)|[inline_recursion](../preprocessor/inline-recursion.md)|
 |[intrinsic](../preprocessor/intrinsic.md)|[loop](../preprocessor/loop.md) <sup>1</sup>|[make_public](../preprocessor/make-public.md)|
-|[gerenciado](../preprocessor/managed-unmanaged.md)|[mensagem](../preprocessor/message.md)||
+|[Gerenciado](../preprocessor/managed-unmanaged.md)|[message](../preprocessor/message.md)||
 |[omp](../preprocessor/omp.md)|[uma vez](../preprocessor/once.md)||
-|[optimize](../preprocessor/optimize.md)|[pack](../preprocessor/pack.md)|[pointers_to_members](../preprocessor/pointers-to-members.md) <sup>1</sup>|
+|[otimizar](../preprocessor/optimize.md)|[pack](../preprocessor/pack.md)|[pointers_to_members](../preprocessor/pointers-to-members.md) <sup>1</sup>|
 |[pop_macro](../preprocessor/pop-macro.md)|[push_macro](../preprocessor/push-macro.md)|[region, endregion](../preprocessor/region-endregion.md)|
-|[runtime_checks](../preprocessor/runtime-checks.md)|[section](../preprocessor/section.md)|[setlocale](../preprocessor/setlocale.md)|
-|[strict_gs_check](../preprocessor/strict-gs-check.md)|[não gerenciado](../preprocessor/managed-unmanaged.md)|[vtordisp](../preprocessor/vtordisp.md) <sup>1</sup>|
-|[aviso](../preprocessor/warning.md)|||
+|[runtime_checks](../preprocessor/runtime-checks.md)|[seção](../preprocessor/section.md)|[setlocale](../preprocessor/setlocale.md)|
+|[strict_gs_check](../preprocessor/strict-gs-check.md)|[unmanaged](../preprocessor/managed-unmanaged.md)|[vtordisp](../preprocessor/vtordisp.md) <sup>1</sup>|
+|[warning](../preprocessor/warning.md)|||
 
 <sup>1</sup> suportado apenas pelo compilador C++.
 
@@ -80,7 +80,7 @@ cl /Zp8 ...
 
 ## <a name="the-pragma-keyword"></a>A palavra-chave __pragma()
 
-**específica da Microsoft**
+**Específico da Microsoft**
 
 O compilador também dá suporte a **pragma** palavra-chave, que tem a mesma funcionalidade como a **#pragma** diretiva, mas pode ser usada integrada a uma definição de macro. O **#pragma** diretiva não pode ser usada em uma definição de macro porque o compilador interpreta o caractere de sinal de número ('#') na diretiva seja a [operador stringizing (#)](../preprocessor/stringizing-operator-hash.md).
 
@@ -104,10 +104,10 @@ END_CATCH_ALL \
 return _hr; \
 ```
 
-**Fim de específico da Microsoft**
+**Final específico da Microsoft**
 
 ## <a name="see-also"></a>Consulte também
 
-[Referência de pré-processador C/C++](../preprocessor/c-cpp-preprocessor-reference.md)<br/>
-[C Pragmas](../c-language/c-pragmas.md)<br/>
+[Referência de pré-processador do C/C++](../preprocessor/c-cpp-preprocessor-reference.md)<br/>
+[Pragmas C](../c-language/c-pragmas.md)<br/>
 [Palavras-chave](../cpp/keywords-cpp.md)

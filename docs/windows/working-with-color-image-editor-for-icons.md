@@ -63,10 +63,10 @@ helpviewer_keywords:
 - colors [C++], inverting
 ms.assetid: d34ff96f-241d-494f-abdd-13811ada8cd3
 ms.openlocfilehash: c424d2e613c51f901def13c4bf42a066797cc65c
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59034137"
 ---
 # <a name="how-to-work-with-color"></a>Como: Trabalhar com cores
@@ -109,7 +109,7 @@ O **seletor de cores personalizada** caixa de diálogo permite que você persona
 |**Barra de luminosidade**|Define a luminosidade para a cor selecionada na **exibição em cores gradiente** caixa.<br/><br/>Selecione e arraste a seta branca a barra de brilho maior ou para baixo para o menor. O **cor** caixa exibe a cor que você selecionou e o efeito de luminosidade você definir.|
 |**Cor**|Lista o matiz (valor de roda de cores) da cor que você está definindo. Os valores variam de 0 a 240, onde 0 é vermelho, 60 é amarelo, 120 é verde, 180 é ciano, 200 é magenta e 240 é azul.|
 |**Matiz**|Lista o matiz (valor de roda de cores) da cor que você está definindo. Os valores variam de 0 a 240, onde 0 é vermelho, 60 é amarelo, 120 é verde, 180 é ciano, 200 é magenta e 240 é azul.|
-|**Sáb**|Especifica o valor de saturação da cor que você está definindo. A saturação é a quantidade de cor em um matiz especificado. Os valores variam de 0 a 240.|
+|**Sat**|Especifica o valor de saturação da cor que você está definindo. A saturação é a quantidade de cor em um matiz especificado. Os valores variam de 0 a 240.|
 |**Luminosidade**|Lista a luminosidade (brilho) da cor que você está definindo. Os valores variam de 0 a 240.|
 |**Vermelho**|Especifica o valor de vermelho da cor que você está definindo. Os valores variam de 0 a 255.|
 |**Verde**|Especifica o valor de verde da cor que você está definindo. Os valores variam de 0 a 255.|
@@ -230,5 +230,5 @@ Nenhum
 [Editor de imagens para ícones](../windows/image-editor-for-icons.md)<br/>
 [Como: Criar um ícone ou outra imagem](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md)<br/>
 [Como: Editar uma imagem](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)<br/>
-[Como: Use uma ferramenta de desenho](../windows/using-a-drawing-tool-image-editor-for-icons.md)<br/>
+[Como: Usar uma ferramenta de desenho](../windows/using-a-drawing-tool-image-editor-for-icons.md)<br/>
 [Teclas de aceleração](../windows/accelerator-keys-image-editor-for-icons.md)<br/>

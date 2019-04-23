@@ -1,5 +1,5 @@
 ---
-title: first_is (atributo de COM do C++)
+title: first_is (C++ COM atributo)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.first_is
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - first_is attribute
 ms.assetid: 89acbf56-3b38-4d44-83e8-1ce2f6f74ffd
 ms.openlocfilehash: 79ddcb3a3ca256af4c7c30536d65c820dcef2afe
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59033077"
 ---
 # <a name="firstis"></a>first_is
@@ -25,12 +25,12 @@ Especifica o índice do primeiro elemento da matriz a ser transmitido.
 
 ### <a name="parameters"></a>Parâmetros
 
-*expressão*<br/>
+*Expressão*<br/>
 Uma ou mais expressões de linguagem C. Slots de argumentos vazia são permitidos.
 
 ## <a name="remarks"></a>Comentários
 
-O **first_is** atributo C++ tem a mesma funcionalidade que o [first_is](/windows/desktop/Midl/first-is) atributo MIDL.
+O **first_is** C++ atributo tem a mesma funcionalidade que o [first_is](/windows/desktop/Midl/first-is) atributo MIDL.
 
 ## <a name="example"></a>Exemplo
 
@@ -71,7 +71,7 @@ Para obter mais informações, consulte [contextos de atributo](cpp-attributes-c
 
 ## <a name="see-also"></a>Consulte também
 
-[Atributos IDL](idl-attributes.md)<br/>
+[Atributos de IDL](idl-attributes.md)<br/>
 [Atributos Typedef, Enum, Union e Struct](typedef-enum-union-and-struct-attributes.md)<br/>
 [Atributos de parâmetro](parameter-attributes.md)<br/>
 [last_is](last-is.md)<br/>

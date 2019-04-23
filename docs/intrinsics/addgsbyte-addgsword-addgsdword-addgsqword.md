@@ -17,15 +17,15 @@ helpviewer_keywords:
 - __addgsbyte intrinsic
 ms.assetid: 4fa03e69-d849-49ed-ba37-1d3aa23c2a21
 ms.openlocfilehash: 61fff704e600296443964ab62a0b58799c87b51b
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59031187"
 ---
 # <a name="addgsbyte-addgsword-addgsdword-addgsqword"></a>__addgsbyte, __addgsword, __addgsdword, __addgsqword
 
-**Específico da Microsoft**
+**Seção específica da Microsoft**
 
 Adicione um valor para um local de memória especificado por um deslocamento em relação ao início do `GS` segmento.
 
@@ -52,7 +52,7 @@ void __addgsqword(
 
 #### <a name="parameters"></a>Parâmetros
 
-*deslocamento*<br/>
+*Offset*<br/>
 [in] O deslocamento do início do `GS`.
 
 *Dados*<br/>
@@ -71,7 +71,7 @@ void __addgsqword(
 
 Essas rotinas somente estão disponíveis como um intrínseco.
 
-**FIM de Específico da Microsoft**
+**Fim da seção específica da Microsoft**
 
 ## <a name="see-also"></a>Consulte também
 

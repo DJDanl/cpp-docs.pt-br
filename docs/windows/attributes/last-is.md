@@ -1,5 +1,5 @@
 ---
-title: last_is (atributo de COM do C++)
+title: last_is (C++ COM atributo)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.last_is
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - last_is attribute
 ms.assetid: 9e045ac0-fa38-4249-af55-67bde5d0a58c
 ms.openlocfilehash: 39b35b218f3402839d956c4da0a00f290fe5d595
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59033264"
 ---
 # <a name="lastis"></a>last_is
@@ -25,12 +25,12 @@ Especifica o índice do último elemento da matriz a ser transmitido.
 
 ### <a name="parameters"></a>Parâmetros
 
-*expressão*<br/>
+*Expressão*<br/>
 Uma ou mais expressões de linguagem C. Slots de argumentos vazia são permitidos.
 
 ## <a name="remarks"></a>Comentários
 
-O **last_is** atributo C++ tem a mesma funcionalidade que o [last_is](/windows/desktop/Midl/last-is) atributo MIDL.
+O **last_is** C++ atributo tem a mesma funcionalidade que o [last_is](/windows/desktop/Midl/last-is) atributo MIDL.
 
 ## <a name="example"></a>Exemplo
 
@@ -51,7 +51,7 @@ Para obter mais informações, consulte [contextos de atributo](cpp-attributes-c
 
 ## <a name="see-also"></a>Consulte também
 
-[Atributos IDL](idl-attributes.md)<br/>
+[Atributos de IDL](idl-attributes.md)<br/>
 [Atributos Typedef, Enum, Union e Struct](typedef-enum-union-and-struct-attributes.md)<br/>
 [Atributos de parâmetro](parameter-attributes.md)<br/>
 [first_is](first-is.md)<br/>

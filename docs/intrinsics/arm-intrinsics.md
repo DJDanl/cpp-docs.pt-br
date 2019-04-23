@@ -1932,10 +1932,10 @@ helpviewer_keywords:
 - intrinsics, ARM
 ms.assetid: d3d7dadd-7bd5-4508-8bff-371a66913e20
 ms.openlocfilehash: 47fd2f449568494bafde993e035d3ec37c44f6fe
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59027618"
 ---
 # <a name="arm-intrinsics"></a>Intrínsecos ARM
@@ -2208,7 +2208,7 @@ Número de coprocessador no intervalo de 0 a 15.
 *opcode1*<br/>
 Código operacional específico de coprocessador no intervalo de 0 a 7
 
-*CRN*<br/>
+*crn*<br/>
 Número de registro do coprocessador, no intervalo de 0 a 15, que especifica o primeiro operando da instrução.
 
 *crm*<br/>
@@ -2250,7 +2250,7 @@ Código operacional específico de coprocessador no intervalo de 0 a 15.
 *crm*<br/>
 Número de registro do coprocessador no intervalo de 0 a 15, que especifica uma fonte adicional ou operando de destino.
 
-**Valor de retorno**
+**Retorna o valor**
 
 O valor lido do coprocessador.
 
@@ -2286,7 +2286,7 @@ void _MoveToCoprocessor2(
 
 #### <a name="parameters"></a>Parâmetros
 
-*Valor *<br/>
+*value*<br/>
 O valor a ser gravado no coprocessador.
 
 *coproc*<br/>
@@ -2295,7 +2295,7 @@ Número de coprocessador no intervalo de 0 a 15.
 *opcode1*<br/>
 Código operacional específico de coprocessador no intervalo de 0 a 7.
 
-*CRN*<br/>
+*crn*<br/>
 Número de registro do coprocessador, no intervalo de 0 a 15, que especifica o primeiro operando da instrução.
 
 *crm*<br/>

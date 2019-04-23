@@ -9,10 +9,10 @@ helpviewer_keywords:
 - columns [C++], binding to recordsets
 ms.assetid: bff67254-d953-4ae4-9716-91c348cb840b
 ms.openlocfilehash: c2f2a6a6696f46fb5b8f2777c6c911269c9e7a80
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59035109"
 ---
 # <a name="recordset-dynamically-binding-data-columns-odbc"></a>Conjunto de registros: Associando dinamicamente colunas de dados (ODBC)
@@ -93,7 +93,7 @@ As quatro listas com que você precisará trabalhar são mostradas na tabela a s
 |-|-|
 |**Current-Table-Columns**| (Lista de 1 na ilustração) Uma lista das colunas atualmente na tabela na fonte de dados. Essa lista pode corresponder a lista de colunas associadas no momento em seu conjunto de registros.|
 |**Bound-Recordset-Columns**| (Lista de 2 na ilustração) Uma lista das colunas de limite no seu conjunto de registros. Essas colunas já ter instruções RFX seu `DoFieldExchange` função.|
-|**Colunas-para-Bind-dinamicamente**| (Lista de 3 na ilustração) Uma lista de colunas na tabela, mas não em seu conjunto de registros. Essas são as colunas que você deseja associar dinamicamente.|
+|**Columns-To-Bind-Dynamically**| (Lista de 3 na ilustração) Uma lista de colunas na tabela, mas não em seu conjunto de registros. Essas são as colunas que você deseja associar dinamicamente.|
 |**Valores de coluna dinâmica**| (Lista de 4 na ilustração) Uma lista que contém o armazenamento para os valores recuperados das colunas que você vincular dinamicamente. Os elementos dessa lista correspondem às colunas-para-Bind-dinamicamente, um para um.|
 
 ###  <a name="_core_building_your_lists"></a> Criação de suas listas

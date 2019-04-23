@@ -34,10 +34,10 @@ helpviewer_keywords:
 - AddProperty method
 ms.assetid: 54190149-c277-4679-b81a-ef484d4d1c00
 ms.openlocfilehash: b58c0262d361ede37bc3db68784177ec4c29f3a4
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59034224"
 ---
 # <a name="cdbpropset-class"></a>Classe CDBPropSet
@@ -68,7 +68,7 @@ class CDBPropSet : public tagDBPROPSET
 
 |||
 |-|-|
-|[operador =](#op_equal)|Atribui o conteúdo de uma propriedade definida para outro.|
+|[operator =](#op_equal)|Atribui o conteúdo de uma propriedade definida para outro.|
 
 ## <a name="remarks"></a>Comentários
 
@@ -109,7 +109,7 @@ bool AddProperty(DWORD dwPropertyID,
 *bValue*<br/>
 [in] Um `BYTE` ou um valor booliano usado para inicializar o valor da propriedade para o `DBPROP` adicionada ao conjunto de propriedades de estrutura.
 
-*Nvalor*<br/>
+*nValue*<br/>
 [in] Um valor inteiro usado para inicializar o valor da propriedade para o `DBPROP` adicionada ao conjunto de propriedades de estrutura.
 
 *fltValue*<br/>
@@ -141,10 +141,10 @@ CDBPropSet();
 
 #### <a name="parameters"></a>Parâmetros
 
-*GUID*<br/>
+*guid*<br/>
 [in] Um GUID usado para inicializar o `guidPropertySet` campo.
 
-*conjunto de propriedades*<br/>
+*propset*<br/>
 [in] Outro `CDBPropSet` objeto para a construção da cópia.
 
 ## <a name="setguid"></a> CDBPropSet::SetGUID
@@ -159,7 +159,7 @@ void SetGUID(const GUID& guid) throw();
 
 #### <a name="parameters"></a>Parâmetros
 
-*GUID*<br/>
+*guid*<br/>
 [in] Um GUID usado para definir a `guidPropertySet` campo do [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) estrutura.
 
 ### <a name="remarks"></a>Comentários
@@ -178,8 +178,8 @@ CDBPropSet& operator =(CDBPropSet& propset) throw();
 
 ## <a name="see-also"></a>Consulte também
 
-[Modelos de consumidor de banco de dados OLE](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Referência dos modelos de consumidor de banco de dados OLE](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
+[Modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Referência de modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [Classe CDBPropIDSet](../../data/oledb/cdbpropidset-class.md)<br/>
 [Estrutura DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85))
 [estrutura DBPROP](/previous-versions/windows/desktop/ms717970(v=vs.85))

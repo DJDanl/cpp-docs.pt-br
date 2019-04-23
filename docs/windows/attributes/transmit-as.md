@@ -1,5 +1,5 @@
 ---
-title: transmit_as (atributo de COM do C++)
+title: transmit_as (C++ COM atributo)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.transmit_as
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - transmit_as attribute
 ms.assetid: 53d0b8ab-5b06-423e-83eb-3d01a10424b2
 ms.openlocfilehash: e432d1a8f39cbc5e12f192ed7b07c29421bc403e
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59032083"
 ---
 # <a name="transmitas"></a>transmit_as
@@ -25,12 +25,12 @@ Instrui o compilador para associar um tipo apresentado que manipulam a aplicativ
 
 ### <a name="parameters"></a>Parâmetros
 
-*tipo*<br/>
+*type*<br/>
 Especifica o tipo de dados que é transmitido entre cliente e servidor.
 
 ## <a name="remarks"></a>Comentários
 
-O **transmit_as** atributo C++ tem a mesma funcionalidade que o [transmit_as](/windows/desktop/Midl/transmit-as) atributo MIDL.
+O **transmit_as** C++ atributo tem a mesma funcionalidade que o [transmit_as](/windows/desktop/Midl/transmit-as) atributo MIDL.
 
 ## <a name="example"></a>Exemplo
 
@@ -79,6 +79,6 @@ Para obter mais informações sobre os contextos de atributo, consulte [contexto
 
 ## <a name="see-also"></a>Consulte também
 
-[Atributos IDL](idl-attributes.md)<br/>
+[Atributos de IDL](idl-attributes.md)<br/>
 [Atributos Typedef, Enum, Union e Struct](typedef-enum-union-and-struct-attributes.md)<br/>
 [export](export.md)
