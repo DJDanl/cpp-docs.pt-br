@@ -7,12 +7,12 @@ helpviewer_keywords:
 - -PROFILE linker option
 - /PROFILE linker option
 ms.assetid: e676baa1-5063-47a3-a357-ba0d1f0d1699
-ms.openlocfilehash: ca68ae090c6e4e6e3e10f37ac0d225faee96746a
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 23cbccba9a8ec839252d553cc5cbafd37e66bbf9
+ms.sourcegitcommit: 14b292596bc9b9b883a9c58cd3e366b282a1f7b3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57809997"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60124766"
 ---
 # <a name="profile-performance-tools-profiler"></a>/PROFILE (criador de perfil das ferramentas de desempenho)
 
@@ -56,7 +56,22 @@ Produz um arquivo de saída que pode ser usado com o criador de perfil de Ferram
 
 1. Consulte <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.Profile%2A>.
 
+### <a name="to-set-this-linker-option-within-visual-studio-cmake-project"></a>Para definir essa opção de vinculador dentro do projeto do CMake do Visual Studio
+
+**CMake** projeto não tem um **páginas de propriedade**, as opções de vinculador podem ser definidas pela modificação a cmakelists. txt.
+
+1. Abra o cmakelists. txt no diretório raiz do projeto.
+
+1. Adicione o código a seguir. Para obter detalhes, consulte [CMake referências](https://cmake.org/cmake/help/v3.0/command/set_target_properties.html)
+
+1. Recompile sua solução.
+
+```
+SET_TARGET_PROPERTIES(${PROJECT_NAME} PROPERTIES LINK_FLAGS "/PROFILE")
+```
+
 ## <a name="see-also"></a>Consulte também
 
 [Referência de vinculador MSVC](linking.md)<br/>
-[Opções do vinculador MSVC](linker-options.md)
+[Opções de vinculador MSVC](linker-options.md)
+

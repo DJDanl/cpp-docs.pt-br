@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C3299
 ms.assetid: 7cabdf01-bceb-404f-9401-cdd9c7fc1641
 ms.openlocfilehash: 314b75a9d0ab8cde2886a7466fa0f95b5bbdd8f1
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "58778046"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59777205"
 ---
 # <a name="compiler-error-c3299"></a>Erro do compilador C3299
 
@@ -21,7 +21,7 @@ Ao substituir uma função de membro genérico, você não pode especificar as c
 
 As cláusulas de restrição sobre a função genérica que você está substituindo serão herdadas.
 
-Para obter mais informações, consulte [restrições em parâmetros de tipo genéricos (C + + / CLI)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md).
+Para obter mais informações, consulte [restrições em parâmetros de tipo genéricos (C++/CLI)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md).
 
 ## <a name="example"></a>Exemplo
 

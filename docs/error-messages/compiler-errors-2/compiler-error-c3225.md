@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C3225
 ms.assetid: f5f66973-256e-4298-ac46-c87819cbde34
 ms.openlocfilehash: cae0572002c849fb5aed771993d3a89ed82c726a
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "58778306"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59778263"
 ---
 # <a name="compiler-error-c3225"></a>Erro do compilador C3225
 
@@ -43,7 +43,7 @@ int main() {
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir cria um componente usando a linguagem C#. Observe que a restrição Especifica que o tipo genérico só pode ser instanciado com um tipo de valor.
+O exemplo a seguir cria um componente usando a linguagem c#. Observe que a restrição Especifica que o tipo genérico só pode ser instanciado com um tipo de valor.
 
 ```
 // C3225_b.cs
@@ -54,7 +54,7 @@ public class MyList<T> where T: struct {}
 
 ## <a name="example"></a>Exemplo
 
-Este exemplo consome C#-autor de componente e viola a restrição de MyList só pode ser instanciado com um tipo de valor diferente de <xref:System.Nullable>. O exemplo a seguir gera C3225.
+Este exemplo consome c#-autor de componente e viola a restrição de MyList só pode ser instanciado com um tipo de valor diferente de <xref:System.Nullable>. O exemplo a seguir gera C3225.
 
 ```
 // C3225_c.cpp

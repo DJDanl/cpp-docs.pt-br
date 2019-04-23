@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C3298
 ms.assetid: 458c2680-95bb-4d5e-895f-ce4115844193
 ms.openlocfilehash: fe6913d402c6ce4df3551c159eb56a12590799cb
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58773888"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59779122"
 ---
 # <a name="compiler-error-c3298"></a>Erro do compilador C3298
 
@@ -19,7 +19,7 @@ ms.locfileid: "58773888"
 
 Você não pode especificar características mutuamente exclusivas para uma restrição. Por exemplo, um parâmetro de tipo genérico não pode ser restrito a um tipo de valor e um tipo de referência.
 
-Para obter mais informações, consulte [restrições em parâmetros de tipo genéricos (C + + / CLI)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md).
+Para obter mais informações, consulte [restrições em parâmetros de tipo genéricos (C++/CLI)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md).
 
 ## <a name="example"></a>Exemplo
 

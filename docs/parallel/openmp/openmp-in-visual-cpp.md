@@ -1,29 +1,23 @@
 ---
 title: OpenMP no Visual C++
-ms.date: 11/04/2016
+ms.date: 03/20/2019
 helpviewer_keywords:
 - OpenMP in Visual C++
 - explicit parallelization
 - explicit parallelization, OpenMP in Visual C++
 ms.assetid: 54d8d0da-1f47-4312-9f25-5875c7dc08ed
-ms.openlocfilehash: dc65b63c8bb1bd24b58e472a25779379925c7280
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0aff645ce9b0edd3976abf8dd77fff8a79d3c545
+ms.sourcegitcommit: 14b292596bc9b9b883a9c58cd3e366b282a1f7b3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50511404"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60124844"
 ---
 # <a name="openmp-in-visual-c"></a>OpenMP no Visual C++
 
 A interface de programa aplicativo OpenMP C e C++ permite escrever aplicativos que usam com eficácia vários processadores. Visual C++ dá suporte a OpenMP 2.0 padrão.
 
 ## <a name="in-this-section"></a>Nesta seção
-
-[Diretivas](../../parallel/openmp/reference/openmp-directives.md)<br/>
-Fornece links para as diretivas usadas na API OpenMP.
-
-[Cláusulas](../../parallel/openmp/reference/openmp-clauses.md)<br/>
-Fornece links para as cláusulas usadas na API OpenMP.
 
 [Referência da biblioteca](../../parallel/openmp/reference/openmp-library-reference.md)<br/>
 Fornece links para construções usadas na API OpenMP.
