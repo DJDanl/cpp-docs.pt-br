@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C2065
 ms.assetid: 78093376-acb7-45f5-9323-5ed7e0aab1dc
 ms.openlocfilehash: 3daf2cd532cd07225b822c80b46fc28274d4e2a8
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "58778748"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59779395"
 ---
 # <a name="compiler-error-c2065"></a>Erro do compilador C2065
 
@@ -203,9 +203,9 @@ int main() {
 }
 ```
 
-## <a name="example-ccli-type-deduction-failure"></a>Exemplo: C + + / Falha de dedução de tipo CLI
+## <a name="example-ccli-type-deduction-failure"></a>Exemplo: C++/ Falha na dedução de tipo CLI
 
-Esse erro pode ocorrer ao chamar uma função genérica, se o argumento de tipo pretendida não pode ser deduzido dos parâmetros usados. Para obter mais informações, consulte [funções genéricas (C + + / CLI)](../../extensions/generic-functions-cpp-cli.md).
+Esse erro pode ocorrer ao chamar uma função genérica, se o argumento de tipo pretendida não pode ser deduzido dos parâmetros usados. Para obter mais informações, consulte [funções genéricas (C++/CLI)](../../extensions/generic-functions-cpp-cli.md).
 
 ```cpp
 // C2065_b.cpp
@@ -220,7 +220,7 @@ int main() {
 }
 ```
 
-## <a name="example-ccli-attribute-parameters"></a>Exemplo: C + + / parâmetros de atributo CLI
+## <a name="example-ccli-attribute-parameters"></a>Exemplo: C++/ Parâmetros de atributo CLI
 
 Esse erro também pode ser gerado como resultado do trabalho de conformidade do compilador que foi feito para o Visual C++ 2005: parâmetros de verificação para os atributos do Visual C++.
 

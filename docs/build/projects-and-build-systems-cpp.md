@@ -12,12 +12,12 @@ helpviewer_keywords:
 - builds [C++], options
 - Visual C++, build options
 ms.assetid: fa6ed4ff-334a-4d99-b5e2-a1f83d2b3008
-ms.openlocfilehash: 6a4048d741cf291d8d6173c1444b6933523c6851
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: 73797f3817338c48e8ff11eaaadff71263374fd0
+ms.sourcegitcommit: 14b292596bc9b9b883a9c58cd3e366b282a1f7b3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58775420"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60124753"
 ---
 # <a name="cc-projects-and-build-systems-in-visual-studio"></a>Projetos C/C++ e sistemas de build no Visual Studio
 
@@ -35,7 +35,7 @@ Compilação de C++ básica envolve três etapas principais:
 
 ## <a name="the-msvc-toolset"></a>O conjunto de ferramentas do MSVC
 
-O compilador Microsoft C++, vinculador, bibliotecas padrão e utilitários relacionados compõem o conjunto de ferramentas de compilador MSCV (também chamado de uma cadeia de ferramentas ou "ferramentas de build"). Eles estão incluídos no Visual Studio. Você também pode baixar e usar o conjunto de ferramentas como um pacote autônomo gratuito dos [local de download de ferramentas de Build do Visual Studio 2017](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2017).
+O Microsoft C++ compilador, vinculador, bibliotecas padrão e utilitários relacionados compõem o conjunto de ferramentas de compilador MSVC (também chamado de uma cadeia de ferramentas ou "ferramentas de build"). Eles estão incluídos no Visual Studio. Você também pode baixar e usar o conjunto de ferramentas como um pacote autônomo gratuito dos [local de download de ferramentas de Build do Visual Studio 2017](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2017).
 
 Você pode criar programas simples, invocando o compilador MSVC (cl.exe) diretamente da linha de comando. O comando a seguir aceita um arquivo de código fonte única e invoca cl.exe para compilar um executável chamado *hello.exe*: 
 

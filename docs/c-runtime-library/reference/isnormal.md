@@ -6,16 +6,16 @@ f1_keywords:
 - math/isnormal
 helpviewer_keywords:
 - isnormal function
-ms.openlocfilehash: 93e3b8912ddf20bf8e190bb42e8413e6d909bbcc
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
+ms.openlocfilehash: e426fbce71efff1e810a03b8347e7c48aa0d91d2
+ms.sourcegitcommit: 14b292596bc9b9b883a9c58cd3e366b282a1f7b3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55703398"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60124675"
 ---
 # <a name="isnormal"></a>isnormal
 
-Determina se um valor de ponto flutuante é infinito.
+Determina se um valor de ponto flutuante é um valor normal.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -27,7 +27,7 @@ int isnormal(
 template <class FloatingType>
 inline bool isnormal(
    FloatingType x
-) throw(); /* C++-only template function */
+) throw(); /* C++-only function template */
 ```
 
 ### <a name="parameters"></a>Parâmetros
@@ -37,11 +37,11 @@ O valor de ponto flutuante a ser testado.
 
 ## <a name="return-value"></a>Valor retornado
 
-**isnormal** retorna um valor diferente de zero (**verdadeira** em código C++) se o argumento *x* é finito e não subnormal. **isnormal** retornará 0 (**falso** em código C++) se o argumento for um subnormal, um infinito ou NAN.
+**isnormal** retorna um valor diferente de zero (**verdadeira** em C++ código) se o argumento *x* não é zero, subnormal, infinito, nem um NaN. Caso contrário, **isnormal** retorna 0 (**falso** em C++ código).
 
 ## <a name="remarks"></a>Comentários
 
-**isnormal** é uma macro quando compilado como C e uma função de modelo embutida quando compilada como C++.
+**isnormal** é uma macro quando compilado como C e um modelo de função embutida quando compilado como C++.
 
 ## <a name="requirements"></a>Requisitos
 

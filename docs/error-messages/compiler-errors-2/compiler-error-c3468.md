@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C3468
 ms.assetid: cfd320db-2f6e-4e0d-ba02-e79ece87e1e0
 ms.openlocfilehash: e3870fa21e2b4a932937edd49091980406a5ff0d
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "58777226"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59779317"
 ---
 # <a name="compiler-error-c3468"></a>Erro do compilador C3468
 
@@ -21,7 +21,7 @@ ms.locfileid: "58777226"
 
 Somente tipos em um assembly podem ser encaminhados.
 
-Para obter mais informações, consulte [encaminhamento de tipo (C + + / CLI)](../../extensions/type-forwarding-cpp-cli.md).
+Para obter mais informações, consulte [encaminhamento de tipo (C++/CLI)](../../extensions/type-forwarding-cpp-cli.md).
 
 ## <a name="example"></a>Exemplo
 

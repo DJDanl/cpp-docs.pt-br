@@ -3,10 +3,10 @@ title: 'Como: Usar o código C++ existente em um aplicativo da Plataforma Univer
 ms.date: 04/08/2019
 ms.assetid: 87e5818c-3081-42f3-a30d-3dca2cf0645c
 ms.openlocfilehash: 3aeef205effe072a25fc0b3dabb9145245461d45
-ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59424190"
 ---
 # <a name="how-to-use-existing-c-code-in-a-universal-windows-platform-app"></a>Como: Usar o código C++ existente em um aplicativo da Plataforma Universal do Windows
@@ -44,11 +44,11 @@ Essas instruções aplicam-se, respectivamente, a aplicativos UWP e a aplicativo
 
 Este tópico contém os seguintes procedimentos:
 
-- [Como usar uma DLL do Win32 em um aplicativo UWP](#BK_Win32DLL)
+- [Usando uma DLL do Win32 em um aplicativo UWP](#BK_Win32DLL)
 
-- [Como usar uma biblioteca estática em C++ nativa em um aplicativo UWP](#BK_StaticLib)
+- [Usando uma biblioteca estática em C++ nativa em um aplicativo UWP](#BK_StaticLib)
 
-- [Portabilidade de uma biblioteca C++ para um Componente do Tempo de Execução do Windows](#BK_WinRTComponent)
+- [Portabilidade uma biblioteca C++ para um Componente do Tempo de Execução do Windows](#BK_WinRTComponent)
 
 ##  <a name="BK_Win32DLL"></a> Usando uma DLL do Win32 em um aplicativo UWP
 
