@@ -6,10 +6,10 @@ helpviewer_keywords:
 - record views, ODBC
 ms.assetid: 6a2ce346-8104-4ccd-b06e-ca0859a132fe
 ms.openlocfilehash: d2267c732a2f879fc507f6793ac0a7bd9cda8128
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59030057"
 ---
 # <a name="use-database-forms-record-views-with-odbc"></a>Usar formulários de banco de dados (exibições de registro) com ODBC
@@ -32,4 +32,4 @@ Alguns aplicativos, como a entrada de dados ou exibição de dados, exigem um fo
 
 ## <a name="see-also"></a>Consulte também
 
-[Conectividade de banco de dados aberto (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)
+[ODBC (conectividade de banco de dados aberto)](../../data/odbc/open-database-connectivity-odbc.md)

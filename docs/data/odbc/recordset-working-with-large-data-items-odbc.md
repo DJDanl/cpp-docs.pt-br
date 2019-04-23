@@ -9,10 +9,10 @@ helpviewer_keywords:
 - CLongBinary class, using in recordsets
 ms.assetid: 3e80b5a8-b6e7-43c6-a816-e54befc513a3
 ms.openlocfilehash: 3ba8d4af5b0781c425dd3b1223e2208b279f055e
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59033038"
 ---
 # <a name="recordset-working-with-large-data-items-odbc"></a>Conjunto de registros: Trabalhando com itens de dados grandes (ODBC)
@@ -63,4 +63,4 @@ Por sua vez, você usa o `HGLOBAL` tratar, `m_hData`, para trabalhar com os dado
 
 [Conjunto de registros (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
 [Conjunto de registros: Obtendo SUMs e outros resultados agregados (ODBC)](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md)<br/>
-[Registrar troca de campos (RFX)](../../data/odbc/record-field-exchange-rfx.md)
+[RFX (troca de campo de registro)](../../data/odbc/record-field-exchange-rfx.md)

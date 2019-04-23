@@ -1,5 +1,5 @@
 ---
-title: idl_module (atributo de COM do C++)
+title: idl_module (C++ COM atributo)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.idl_module
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - idl_module attribute
 ms.assetid: 3578b337-e38a-4334-b747-15404c02dbc0
 ms.openlocfilehash: 80e4909a61b5b53ecde19471f2c838dd4c425874
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59034972"
 ---
 # <a name="idlmodule"></a>idl_module
@@ -44,7 +44,7 @@ Um nome definido pelo usuário para o bloco de código que será exibida no arqu
 *helpcontext*<br/>
 (Opcional) A identificação de ajuda para esta biblioteca de tipos.
 
-*oculto*<br/>
+*hidden*<br/>
 (Opcional) Um parâmetro que impede que a biblioteca que está sendo exibido. Consulte a [ocultos](/windows/desktop/Midl/hidden) atributo MIDL para obter mais informações.
 
 *restricted*<br/>
@@ -55,7 +55,7 @@ A função que serão definidos.
 
 ## <a name="remarks"></a>Comentários
 
-O **idl_module** atributo C++ permite que você especifique o ponto de entrada em um arquivo. dll, que lhe permite importar de um arquivo. dll.
+O **idl_module** C++ atributo permite que você especifique o ponto de entrada em um arquivo. dll, que lhe permite importar de um arquivo. dll.
 
 O **idl_module** atributo tem uma funcionalidade semelhante para o [módulo](/windows/desktop/Midl/module) atributo MIDL.
 
@@ -91,6 +91,6 @@ Para obter mais informações, consulte [contextos de atributo](cpp-attributes-c
 
 ## <a name="see-also"></a>Consulte também
 
-[Atributos IDL](idl-attributes.md)<br/>
-[Atributos autônomos](stand-alone-attributes.md)<br/>
+[Atributos de IDL](idl-attributes.md)<br/>
+[Atributos independentes](stand-alone-attributes.md)<br/>
 [entry](entry.md)

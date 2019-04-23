@@ -18,10 +18,10 @@ helpviewer_keywords:
 - records [C++], editing
 ms.assetid: cab43d43-235a-4bed-ac05-67d10e94f34e
 ms.openlocfilehash: e5fc6ad2a1fe00367cd8a0b1c53ac914b95018ab
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59033197"
 ---
 # <a name="recordset-how-addnew-edit-and-delete-work-odbc"></a>Conjunto de registros: Como AddNew, editar e excluir trabalho (ODBC)
@@ -161,4 +161,4 @@ Para obter informações sobre instruções SQL usada em operações de atualiza
 
 [Conjunto de registros (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
 [Conjunto de registros: Mais informações sobre atualizações (ODBC)](../../data/odbc/recordset-more-about-updates-odbc.md)<br/>
-[Registrar troca de campos (RFX)](../../data/odbc/record-field-exchange-rfx.md)
+[RFX (troca de campo de registro)](../../data/odbc/record-field-exchange-rfx.md)

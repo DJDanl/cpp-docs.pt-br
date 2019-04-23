@@ -1,5 +1,5 @@
 ---
-title: '#Diretiva using (C + + / CLI)'
+title: '#Diretiva using (C++/CLI)'
 ms.date: 10/18/2018
 f1_keywords:
 - friend_as_cpp
@@ -13,13 +13,13 @@ helpviewer_keywords:
 - preprocessor, directives
 ms.assetid: 870b15e5-f361-40a8-ba1c-c57d75c8809a
 ms.openlocfilehash: ddae6137e94e10f5701e1e7d0f8f7a7514b18662
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59034255"
 ---
-# <a name="using-directive-ccli"></a># Diretiva using (C + + / CLI)
+# <a name="using-directive-ccli"></a># Diretiva using (C++/CLI)
 
 Importa metadados para um programa compilado com [/clr](../build/reference/clr-common-language-runtime-compilation.md).
 
@@ -31,7 +31,7 @@ Importa metadados para um programa compilado com [/clr](../build/reference/clr-c
 
 ### <a name="parameters"></a>Parâmetros
 
-*Arquivo *<br/>
+*file*<br/>
 Um MSIL .dll, .exe, .netmodule ou .obj. Por exemplo,
 
 `#using <MyComponent.dll>`
@@ -47,7 +47,7 @@ Se *arquivo* não contém um assembly (se *arquivo* é um módulo) e se você n�
 
 Uma alternativa para usar **#using** é o [/FU](../build/reference/fu-name-forced-hash-using-file.md) opção de compilador.
 
-assemblies .exe passado para **#using** deve ser compilado usando um dos compiladores do Visual Studio .NET (Visual Basic ou Visual C#, por exemplo).  Tentar importar metadados de um assembly .exe compilado com `/clr` resultará em uma exceção de carregamento de arquivo.
+assemblies .exe passado para **#using** deve ser compilado usando um dos compiladores do Visual Studio .NET (Visual Basic ou Visual c#, por exemplo).  Tentar importar metadados de um assembly .exe compilado com `/clr` resultará em uma exceção de carregamento de arquivo.
 
 > [!NOTE]
 > Um componente que é referenciado com **#using** pode ser executado com uma versão diferente do arquivo importado no tempo de compilação, fazendo com que um aplicativo cliente para gerar resultados inesperados.
@@ -113,4 +113,4 @@ int main() {
 
 ## <a name="see-also"></a>Consulte também
 
-[Diretivas de pré-processador](../preprocessor/preprocessor-directives.md)
+[Diretivas do pré-processador](../preprocessor/preprocessor-directives.md)

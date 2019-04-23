@@ -57,15 +57,15 @@ helpviewer_keywords:
 - _InterlockedAnd_HLEAcquire intrinsic
 ms.assetid: ad271dc3-42cd-47d0-9f65-30d5cfeb66fc
 ms.openlocfilehash: b38a181102247ab203c86ccb6310a72135dccc8b
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59033314"
 ---
 # <a name="interlockedand-intrinsic-functions"></a>Funções intrínsecas _InterlockedAnd
 
-**Específico da Microsoft**
+**Seção específica da Microsoft**
 
 Usado para executar uma operação AND bit a bit atômica em uma variável compartilhada por vários segmentos.
 
@@ -172,10 +172,10 @@ __int64 _InterlockedAnd64_rel(
 
 #### <a name="parameters"></a>Parâmetros
 
-*Valor *<br/>
+*value*<br/>
 [no, out] Um ponteiro para o primeiro operando, a ser substituído pelo resultado.
 
-*Máscara*<br/>
+*mask*<br/>
 [in] O segundo operando.
 
 ## <a name="return-value"></a>Valor de retorno
@@ -225,9 +225,9 @@ int main()
 0xff00 0xffff00 0xff00ff00
 ```
 
-**FIM de Específico da Microsoft**
+**Fim da seção específica da Microsoft**
 
 ## <a name="see-also"></a>Consulte também
 
 [Intrínsecos do compilador](../intrinsics/compiler-intrinsics.md)<br/>
-[Conflitos com o compilador x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)
+[conflitos com o compilador x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

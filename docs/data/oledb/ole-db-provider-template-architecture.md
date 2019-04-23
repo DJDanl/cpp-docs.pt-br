@@ -7,10 +7,10 @@ helpviewer_keywords:
 - OLE DB provider templates, object model
 ms.assetid: 639304a3-f9e0-44dc-8d0c-0ebd2455b363
 ms.openlocfilehash: 65a7e5b8f169d06ca11d8d27ec99ce3db4b63014
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59028542"
 ---
 # <a name="ole-db-provider-template-architecture"></a>Arquitetura de modelo do provedor de banco de dados OLE
@@ -29,9 +29,9 @@ Os modelos de provedor do OLE DB oferecem implementações pré-empacotados para
 
 - [Fonte de dados](../../data/oledb/data-source-object-interfaces.md)
 
-- [Session](../../data/oledb/session-object-interfaces.md)
+- [Sessão](../../data/oledb/session-object-interfaces.md)
 
-- [Conjunto de linhas](../../data/oledb/rowset-object-interfaces.md)
+- [Rowset](../../data/oledb/rowset-object-interfaces.md)
 
 - [Comando](../../data/oledb/command-object-interfaces.md)
 
@@ -57,5 +57,5 @@ Para mais informações, consulte os seguintes tópicos:
 
 ## <a name="see-also"></a>Consulte também
 
-[Modelos de provedor de banco de dados OLE](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Modelos de provedor do OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Interfaces OLE DB](/previous-versions/windows/desktop/ms709709(v=vs.85))<br/>

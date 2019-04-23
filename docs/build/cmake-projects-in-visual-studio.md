@@ -5,10 +5,10 @@ helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
 ms.openlocfilehash: 22a8ecc34e6413c32628381241d45d3d76b39ecc
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59030427"
 ---
 # <a name="cmake-projects-in-visual-studio"></a>Projetos do CMake no Visual Studio
@@ -160,11 +160,11 @@ Se tiver instalado o CMake do Instalador do Visual Studio, será possível execu
   
 ## <a name="see-also"></a>Consulte também
 
-[Tutorial: Criar projetos multiplataforma do C++ no Visual Studio](get-started-linux-cmake.md)<br/>
+[Tutorial: Criar projetos de plataforma cruzada do C++ no Visual Studio](get-started-linux-cmake.md)<br/>
 [Configurar um projeto do Linux CMake](../linux/cmake-linux-project.md)<br/>
 [Conectar-se ao computador Linux remoto](../linux/connect-to-your-remote-linux-computer.md)<br/>
-[Personalizar as configurações de build do CMake](customize-cmake-settings.md)<br/>
-[Referência de Cmakesettings](cmakesettings-reference.md)<br/>
+[Personalizar as configurações de compilação do CMake](customize-cmake-settings.md)<br/>
+[Referência de CMakeSettings.json](cmakesettings-reference.md)<br/>
 [Configurar sessões de depuração do CMake](configure-cmake-debugging-sessions.md)<br/>
 [Implantar, executar e depurar o projeto do Linux](../linux/deploy-run-and-debug-your-linux-project.md)<br/>
 [Referência de configuração predefinida do CMake](cmake-predefined-configuration-reference.md)<br/>

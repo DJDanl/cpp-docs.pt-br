@@ -9,15 +9,15 @@ helpviewer_keywords:
 - stosb instruction
 ms.assetid: 634589ed-2da3-439b-a381-a214d89bf10c
 ms.openlocfilehash: 679f1a892a6ee5b458a05d1577ecf766bed385dd
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59034991"
 ---
 # <a name="stosb"></a>__stosb
 
-**Específico da Microsoft**
+**Seção específica da Microsoft**
 
 Gera uma instrução de cadeia de caracteres de repositório (`rep stosb`).
 
@@ -33,7 +33,7 @@ void __stosb(
 
 #### <a name="parameters"></a>Parâmetros
 
-*dest*<br/>
+*Dest*<br/>
 [out] O destino da operação.
 
 *Dados*<br/>
@@ -83,7 +83,7 @@ int main()
 *@@@@@@**************************
 ```
 
-**FIM de Específico da Microsoft**
+**Fim da seção específica da Microsoft**
 
 ## <a name="see-also"></a>Consulte também
 

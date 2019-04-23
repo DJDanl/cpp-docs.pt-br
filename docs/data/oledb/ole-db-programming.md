@@ -7,10 +7,10 @@ helpviewer_keywords:
 - OLE DB [C++], about OLE DB
 ms.assetid: 52a80d66-17a9-43a1-9b90-392ae43cea2b
 ms.openlocfilehash: ac74f94b4cdc738237c2994646f7602f7f5118ca
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59031641"
 ---
 # <a name="ole-db-programming"></a>Programação de banco de dados OLE
@@ -25,14 +25,14 @@ Além disso, você pode usar atributos para implementar os modelos de consumidor
 
 |Para saber mais a respeito|Consulte|
 |-------------------------|---------|
-|Usando os modelos de consumidor OLE DB (tópicos conceituais)|[Modelos de consumidor de banco de dados OLE](../../data/oledb/ole-db-consumer-templates-cpp.md)|
-|Usando modelos do provedor der OLE DB (tópicos conceituais)|[Modelos de provedor de banco de dados OLE](../../data/oledb/ole-db-provider-templates-cpp.md)|
+|Usando os modelos de consumidor OLE DB (tópicos conceituais)|[Modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)|
+|Usando modelos do provedor der OLE DB (tópicos conceituais)|[Modelos de provedor do OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)|
 |Macros e classes de modelos OLE DB|[Referência de modelos OLE DB](../../data/oledb/ole-db-templates.md) (Visual C++)|
-|Atributos do consumidor OLE DB |[Atributos de consumidor de banco de dados OLE](../../windows/ole-db-consumer-attributes.md)|
+|Atributos do consumidor OLE DB |[Atributos de consumidor do OLE DB](../../windows/ole-db-consumer-attributes.md)|
 |Interfaces OLE DB|[Referência do programador de OLE DB](/sql/connect/oledb/oledb-driver-for-sql-server) (no SDK do Windows)|
 |Exemplos de modelos OLE DB|[Exemplos de modelos OLE DB](https://github.com/Microsoft/VCSamples)|
 |Visão geral de programação (Visual C++) de acesso a dados|[Programação de acesso a dados](../../data/data-access-programming-mfc-atl.md)|
-|Tópicos conceituais do ODBC|[Conectividade de banco de dados aberto (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)|
+|Tópicos conceituais do ODBC|[ODBC (conectividade de banco de dados aberto)](../../data/odbc/open-database-connectivity-odbc.md)|
 
 ## <a name="see-also"></a>Consulte também
 

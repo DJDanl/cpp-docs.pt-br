@@ -7,10 +7,10 @@ helpviewer_keywords:
 - embedded_idl attribute
 ms.assetid: f1c1c2e8-3872-4172-8795-8d1288a20452
 ms.openlocfilehash: c46924d2757d01a934c21a70f23e6556f6a10fd3
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59034083"
 ---
 # <a name="embeddedidl"></a>embedded_idl
@@ -46,9 +46,9 @@ Pode ser um destes dois valores:
 
 ## <a name="remarks"></a>Comentários
 
-**FIM de Específico do C++**
+**FIM de específico de C++**
 
 ## <a name="see-also"></a>Consulte também
 
-[Atributos de #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
-[Diretiva #import](../preprocessor/hash-import-directive-cpp.md)
+[atributos de #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
+[#import diretiva](../preprocessor/hash-import-directive-cpp.md)

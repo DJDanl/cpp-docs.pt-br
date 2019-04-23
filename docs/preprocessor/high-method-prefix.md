@@ -7,10 +7,10 @@ helpviewer_keywords:
 - high_method_prefix attribute
 ms.assetid: cacebf09-12f5-4919-ad40-939e206e340c
 ms.openlocfilehash: 1575b2e3fee461ee0e3987aaf1e770d0611e31ec
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59028980"
 ---
 # <a name="highmethodprefix"></a>high_method_prefix
@@ -34,9 +34,9 @@ Prefixo a ser usado.
 
 Por padrão, as propriedades e métodos de tratamento de erros de alto nível são expostos pela funções membro nomeadas sem um prefixo. Os nomes são da biblioteca de tipos.
 
-**FIM de Específico do C++**
+**FIM de específico de C++**
 
 ## <a name="see-also"></a>Consulte também
 
-[Atributos de #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
-[Diretiva #import](../preprocessor/hash-import-directive-cpp.md)
+[atributos de #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
+[#import diretiva](../preprocessor/hash-import-directive-cpp.md)

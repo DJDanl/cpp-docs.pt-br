@@ -5,10 +5,10 @@ helpviewer_keywords:
 - preprocessor
 ms.assetid: e120eda3-b413-49f1-a07c-e9fb128cf500
 ms.openlocfilehash: b1443d88fdba470cb8ed5058c9a9012bfbdc5bc7
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59028568"
 ---
 # <a name="preprocessor"></a>Pré-processador
@@ -16,19 +16,19 @@ O pré-processador é um processador de texto que manipula o texto de um arquivo
 
 O material de referência no pré-processador inclui as seguintes seções:
 
-- [Diretivas do pré-processador](../preprocessor/preprocessor-directives.md)
+- [Diretivas de pré-processador](../preprocessor/preprocessor-directives.md)
 
-- [Operadores do pré-processador](../preprocessor/preprocessor-operators.md)
+- [Operadores de pré-processador](../preprocessor/preprocessor-operators.md)
 
 - [Macros predefinidas](../preprocessor/predefined-macros.md)
 
 - [Pragmas](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
 
-**Específico da Microsoft**
+**Seção específica da Microsoft**
 
 Você pode obter uma listagem de código-fonte após o pré-processamento usando o [/E](../build/reference/e-preprocess-to-stdout.md) ou [/EP](../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md) opção de compilador. As duas opções invocam o pré-processador e tem como saída o texto resultante no dispositivo de saída padrão que, na maioria dos casos, é o console. A diferença entre as duas opções é que /E inclui as políticas `#line` e /EP as retira.
 
-**FIM de Específico da Microsoft**
+**Fim da seção específica da Microsoft**
 
 ##  <a name="_predir_special_terminology"></a> Terminologia especial
 
@@ -38,5 +38,5 @@ O termo "variável" se refere a um objeto de dados simples do tipo C. O termo "o
 
 ## <a name="see-also"></a>Consulte também
 
-[Referência de pré-processador C/C++](../preprocessor/c-cpp-preprocessor-reference.md)<br/>
+[Referência de pré-processador do C/C++](../preprocessor/c-cpp-preprocessor-reference.md)<br/>
 [Fases de translação](../preprocessor/phases-of-translation.md)

@@ -9,15 +9,15 @@ helpviewer_keywords:
 - __indword intrinsic
 ms.assetid: 1068d686-586e-4e36-b962-d1d7c3315260
 ms.openlocfilehash: 063ebd92682f8011bc6b60eee14c3443bc04c333
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59029324"
 ---
 # <a name="indword"></a>__indword
 
-**Específico da Microsoft**
+**Seção específica da Microsoft**
 
 Lê uma palavra dupla de dados da porta especificada usando o `in` instrução.
 
@@ -50,7 +50,7 @@ A palavra ler da porta.
 
 Essa rotina só está disponível como função intrínseca.
 
-**FIM de Específico da Microsoft**
+**Fim da seção específica da Microsoft**
 
 ## <a name="see-also"></a>Consulte também
 

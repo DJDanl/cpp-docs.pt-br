@@ -36,12 +36,12 @@ helpviewer_keywords:
 - resources [C++], templates
 - .rct files [C++]
 ms.assetid: 82be732a-cdcd-4a58-8de7-976d1418f86b
-ms.openlocfilehash: a18c24685ff0d5f65970a094730d1587abffb601
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: c22df99240c0fa076124e33224a4f6f4ab9a957e
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57563024"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59028516"
 ---
 # <a name="how-to-create-resources-c"></a>Como: Criar recursos (C++)
 

@@ -7,10 +7,10 @@ helpviewer_keywords:
 - emitidl attribute
 ms.assetid: 85b80c56-578e-4392-ac03-8443c74ebb7d
 ms.openlocfilehash: 6c4055e0f14bced1e5047fc502a4bf274126f804
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59031628"
 ---
 # <a name="emitidl"></a>emitidl
@@ -25,7 +25,7 @@ Especifica se todos os atributos IDL subsequentes são processados e colocados n
 
 ### <a name="parameters"></a>Parâmetros
 
-*estado*<br/>
+*state*<br/>
 Um desses valores possíveis: `true`, `false`, `forced`, `restricted`, `push`, ou `pop`.
 
 - Se `true`, qualquer atributo de categoria IDL encontrado em um arquivo de código-fonte é colocado no arquivo. idl gerado. Essa é a configuração padrão para **emitidl**.
@@ -68,4 +68,4 @@ Para obter mais informações, consulte [contextos de atributo](cpp-attributes-c
 ## <a name="see-also"></a>Consulte também
 
 [Atributos de compilador](compiler-attributes.md)<br/>
-[Atributos autônomos](stand-alone-attributes.md)
+[Atributos independentes](stand-alone-attributes.md)

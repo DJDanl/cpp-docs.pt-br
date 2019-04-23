@@ -11,10 +11,10 @@ helpviewer_keywords:
 - database connections [C++], MFC ODBC classes
 ms.assetid: 98f02fd7-1235-437b-89a9-edfd0fc797f7
 ms.openlocfilehash: 9b7d04e2eb8bbb1adf96e05282861ef33e20434a
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59031174"
 ---
 # <a name="odbc-and-mfc"></a>ODBC e MFC
@@ -34,10 +34,10 @@ Este tópico apresenta os principais conceitos de classes de banco de dados base
 
 - [Acesso a ODBC e SQL](access-to-odbc-and-sql.md)
 
-- [Leitura adicional sobre as classes ODBC MFC](further-reading-about-the-mfc-odbc-classes.md)
+- [Leitura adicional sobre as classes ODBC do MFC](further-reading-about-the-mfc-odbc-classes.md)
 
 As classes de banco de dados do MFC com base em ODBC são projetadas para fornecer acesso a qualquer banco de dados para o qual um driver ODBC está disponível. Como as classes usam o ODBC, seu aplicativo pode acessar dados em vários formatos de dados diferentes e diferentes configurações de local/remoto. Você não precisa escrever código de casos especiais para lidar com sistemas de gerenciamento de outro banco de dados (DBMSs). Desde que os usuários tiverem um driver ODBC apropriado para os dados que desejam acessar, eles podem usar o seu programa para manipular dados em tabelas armazenadas lá.
 
 ## <a name="see-also"></a>Consulte também
 
-[Conectividade de banco de dados aberto (ODBC)](open-database-connectivity-odbc.md)
+[ODBC (conectividade de banco de dados aberto)](open-database-connectivity-odbc.md)

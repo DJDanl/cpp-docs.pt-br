@@ -13,10 +13,10 @@ helpviewer_keywords:
 - COM, type library header file
 ms.assetid: 787d1112-e543-40d7-ab15-a63d43f4030a
 ms.openlocfilehash: 98a0f9f66fb209bb41215fc1e86a9682a4fed023
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59031979"
 ---
 # <a name="import-directive-c"></a>Diretiva #import (C++)
@@ -65,7 +65,7 @@ Especifica a biblioteca de tipos a ser importada. *nome de arquivo* pode ser uma
 
 - Qualquer outro formato de arquivo que possa ser compreendido pela **LoadTypeLib** API.
 
-*atributos*<br/>
+*Atributos*<br/>
 Um ou mais [#import atributos](#_predir_the_23import_directive_import_attributes). Separe os atributos com espaços ou vírgulas. Por exemplo:
 
 ```cpp
@@ -148,7 +148,7 @@ O arquivo de cabeçalho principal da biblioteca de tipos consiste em sete seçõ
 
 - Definição de GUID de estilo antigo opcional: Contém inicializações das constantes de GUID nomeadas. Esses são os nomes do formulário `CLSID_CoClass` e `IID_Interface`, semelhantes aos gerados pelo compilador MIDL.
 
-- `#include` instrução de cabeçalho da biblioteca de tipo de secundário.
+- Instrução `#include` para o cabeçalho secundário da biblioteca de tipos.
 
 - Texto clichê de rodapé: Atualmente, inclui `#pragma pack(pop)`.
 
@@ -189,9 +189,9 @@ Você deve determinar qual a dependência de comentários não são fornecidos d
 
 Para obter mais informações, consulte [#import atributos](../preprocessor/hash-import-attributes-cpp.md).
 
-**FIM de Específico do C++**
+**FIM de específico de C++**
 
 ## <a name="see-also"></a>Consulte também
 
-[Diretivas de pré-processador](../preprocessor/preprocessor-directives.md)<br/>
+[Diretivas do pré-processador](../preprocessor/preprocessor-directives.md)<br/>
 [Suporte para COM do compilador](../cpp/compiler-com-support.md)

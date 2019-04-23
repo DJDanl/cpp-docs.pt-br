@@ -9,10 +9,10 @@ helpviewer_keywords:
 - ODBC [C++], RFX
 ms.assetid: f5ddfbf0-2901-48d7-9848-4fb84de3c7ee
 ms.openlocfilehash: 8630fab11728b0c0cd16eee5035df028a8382706
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59032213"
 ---
 # <a name="record-field-exchange-rfx"></a>Registrar troca de campos (RFX)
@@ -46,8 +46,8 @@ Os tópicos a seguir explicam os detalhes de como usar objetos de conjunto de re
 
 ## <a name="see-also"></a>Consulte também
 
-[Conectividade de banco de dados aberto (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)<br/>
+[ODBC (conectividade de banco de dados aberto)](../../data/odbc/open-database-connectivity-odbc.md)<br/>
 [Conjunto de registros (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
 [Consumidor ODBC do MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)<br/>
-[Suporte ao banco de dados, Assistente de Aplicativo MFC](../../mfc/reference/database-support-mfc-application-wizard.md)<br/>
+[Suporte ao banco de dados, Assistente de aplicativo MFC](../../mfc/reference/database-support-mfc-application-wizard.md)<br/>
 [Classe CRecordset](../../mfc/reference/crecordset-class.md)

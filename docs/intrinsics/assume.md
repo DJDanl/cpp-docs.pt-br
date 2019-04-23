@@ -9,15 +9,15 @@ helpviewer_keywords:
 - __assume keyword [C++]
 ms.assetid: d8565123-b132-44b1-8235-5a8c8bff85a7
 ms.openlocfilehash: 1d84e9306dcd468153f38cc0c3085b43388e1dbd
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59029415"
 ---
 # <a name="assume"></a>__assume
 
-**Específico da Microsoft**
+**Seção específica da Microsoft**
 
 Passa uma dica para o otimizador.
 
@@ -31,7 +31,7 @@ __assume(
 
 #### <a name="parameters"></a>Parâmetros
 
-*expressão*<br/>
+*Expressão*<br/>
 Qualquer expressão supostamente avaliada como verdadeira.
 
 ## <a name="remarks"></a>Comentários
@@ -43,7 +43,7 @@ Se a instrução `__assume` for gravada como uma contradição (uma expressão q
 > [!WARNING]
 >  Um programa não deve conter uma instrução `__assume` inválida em um caminho acessível. Se o compilador puder acessar uma instrução `__assume` inválida, o programa pode causar comportamento imprevisível e potencialmente perigoso.
 
-`__assume` não é uma verdadeira intrínseco. Ele não precisa ser declarado como uma função e não pode ser usado em uma diretiva `#pragma intrinsic`. Embora nenhum código seja gerado, o código gerado pelo otimizador é afetado.
+`__assume` não é um intrínseco verdadeiro. Ele não precisa ser declarado como uma função e não pode ser usado em uma diretiva `#pragma intrinsic`. Embora nenhum código seja gerado, o código gerado pelo otimizador é afetado.
 
 Use `__assume` em um [ASSERT](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) somente quando o assert não for recuperável. Não use `__assume` em um assert para o qual você tem código de recuperação de erro subsequente porque o compilador pode otimizar o código de tratamento do erro.
 
@@ -114,7 +114,7 @@ Infelizmente, esse uso de `assert` impede que o compilador execute a otimizaçã
       NODEFAULT;
 ```
 
-**FIM de Específico da Microsoft**
+**Fim da seção específica da Microsoft**
 
 ## <a name="see-also"></a>Consulte também
 

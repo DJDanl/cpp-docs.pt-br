@@ -11,10 +11,10 @@ helpviewer_keywords:
 - RFX (ODBC) [C++], binding fields and parameters
 ms.assetid: e647cacd-62b0-4b80-9e20-b392deca5a88
 ms.openlocfilehash: 7da9d480f16dcb6bc5ded0a1dff559b1b1ac4b38
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59032671"
 ---
 # <a name="record-field-exchange-how-rfx-works"></a>Registrar troca de campos: Como funciona RFX
@@ -90,7 +90,7 @@ Se você adicionar um novo registro, o conjunto de registros funciona como um bu
 
 1. `AddNew` ou `Edit` prepara os campos no buffer de edição para RFX possa detectar membros de dados do campo alterado.
 
-   Como um novo registro não tem nenhum valor anterior para comparar os novos com, `AddNew` define o valor de cada membro de dados do campo como um valor PSEUDO_NULL. Posteriormente, quando você chamar `Update`, RFX compara o valor de cada membro de dados com o valor PSEUDO_NULL. Se houver uma diferença, o membro de dados foi definido. (PSEUDO_NULL não é o mesmo que uma coluna de registro com um valor Null true nem qualquer uma do mesmo que o C++ nulo.)
+   Como um novo registro não tem nenhum valor anterior para comparar os novos com, `AddNew` define o valor de cada membro de dados do campo como um valor PSEUDO_NULL. Posteriormente, quando você chamar `Update`, RFX compara o valor de cada membro de dados com o valor PSEUDO_NULL. Se houver uma diferença, o membro de dados foi definido. (PSEUDO_NULL não é o mesmo que uma coluna de registro com um valor Null true nem qualquer uma do mesmo que C++ nulo.)
 
    Ao contrário o `Update` pedir `AddNew`, o `Update` chamar para `Edit` compara os valores atualizados com os valores armazenados anteriormente em vez de usar PSEUDO_NULL. A diferença é que `AddNew` não tem nenhum valor armazenado anteriormente para comparação.
 
@@ -122,7 +122,7 @@ Quando você exclui um registro, RFX define todos os campos como NULL como um le
 
 ## <a name="see-also"></a>Consulte também
 
-[Registrar troca de campos (RFX)](../../data/odbc/record-field-exchange-rfx.md)<br/>
+[RFX (troca de campo de registro)](../../data/odbc/record-field-exchange-rfx.md)<br/>
 [Consumidor ODBC do MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)<br/>
 [Macros, funções globais e variáveis globais](../../mfc/reference/mfc-macros-and-globals.md)<br/>
 [Classe CFieldExchange](../../mfc/reference/cfieldexchange-class.md)<br/>

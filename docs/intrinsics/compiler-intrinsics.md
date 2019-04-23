@@ -8,10 +8,10 @@ helpviewer_keywords:
 - cl.exe compiler, intrinsics
 ms.assetid: 48bb9929-7d78-4fd8-a092-ae3c9f971858
 ms.openlocfilehash: 9a014e870d731d7e7d443c3bfefd66884aa50d5d
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59029272"
 ---
 # <a name="compiler-intrinsics"></a>Intrínsecos do compilador
@@ -34,7 +34,7 @@ Um arquivo de cabeçalho, \<intrin. h >, está disponível e declara protótipos
 
 As seções a seguir listam todos os intrínsecos que estão disponíveis em várias arquiteturas. Para obter mais informações sobre como os intrínsecos funcionam no seu processador de destino específico, consulte a documentação de referência do fabricante.
 
-- [Intrínsecos ARM](../intrinsics/arm-intrinsics.md)
+- [Intrínsecos do ARM](../intrinsics/arm-intrinsics.md)
 
 - [Lista de intrínsecos x86](../intrinsics/x86-intrinsics-list.md)
 
@@ -42,11 +42,11 @@ As seções a seguir listam todos os intrínsecos que estão disponíveis em vá
 
 - [Intrínsecos disponíveis em todas as arquiteturas](../intrinsics/intrinsics-available-on-all-architectures.md)
 
-- [Lista alfabética de funções intrínsecas](../intrinsics/alphabetical-listing-of-intrinsic-functions.md)
+- [Listagem alfabética de funções intrínsecas](../intrinsics/alphabetical-listing-of-intrinsic-functions.md)
 
 ## <a name="see-also"></a>Consulte também
 
 [Referência do assembler ARM](../assembler/arm/arm-assembler-reference.md)<br/>
 [Referência do Microsoft Macro Assembler](../assembler/masm/microsoft-macro-assembler-reference.md)<br/>
 [Palavras-chave](../cpp/keywords-cpp.md)<br/>
-[Referência da biblioteca em tempo de execução do C](../c-runtime-library/c-run-time-library-reference.md)
+[Referência da biblioteca em tempo de execução C](../c-runtime-library/c-run-time-library-reference.md)

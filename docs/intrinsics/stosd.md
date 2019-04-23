@@ -9,15 +9,15 @@ helpviewer_keywords:
 - __stosd intrinsic
 ms.assetid: 03104247-1cea-49f6-b6f8-287917bf5680
 ms.openlocfilehash: 43a0efcfb94b7e53dacec16caccdacf86a96f5bb
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59032135"
 ---
 # <a name="stosd"></a>__stosd
 
-**Específico da Microsoft**
+**Seção específica da Microsoft**
 
 Gera uma instrução de cadeia de caracteres de repositório (`rep stosd`).
 
@@ -33,7 +33,7 @@ void __stosd(
 
 #### <a name="parameters"></a>Parâmetros
 
-*dest*<br/>
+*Dest*<br/>
 [out] O destino da operação.
 
 *Dados*<br/>
@@ -85,7 +85,7 @@ printf_s( "%u %u %u %u",
 0 99999 99999 0
 ```
 
-**FIM de Específico da Microsoft**
+**Fim da seção específica da Microsoft**
 
 ## <a name="see-also"></a>Consulte também
 

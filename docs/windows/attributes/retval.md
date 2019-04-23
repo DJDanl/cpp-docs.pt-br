@@ -7,10 +7,10 @@ helpviewer_keywords:
 - retval attribute
 ms.assetid: bfa16f08-157d-4eea-afde-1232c54b8501
 ms.openlocfilehash: 9f5ad86a289f8904278a58636e66809ae0edd55b
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59035084"
 ---
 # <a name="retval"></a>retval
@@ -42,12 +42,12 @@ Veja o exemplo de [associável](bindable.md) para uso do exemplo **retval**.
 |**Aplica-se a**|Parâmetro de interface, o método de interface|
 |**Repetível**|Não|
 |**Atributos obrigatórios**|**out**|
-|**Atributos inválidos**|**em**|
+|**Atributos inválidos**|**in**|
 
 Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Consulte também
 
-[Atributos IDL](idl-attributes.md)<br/>
+[Atributos de IDL](idl-attributes.md)<br/>
 [Atributos de parâmetro](parameter-attributes.md)<br/>
 [Atributos de método](method-attributes.md)

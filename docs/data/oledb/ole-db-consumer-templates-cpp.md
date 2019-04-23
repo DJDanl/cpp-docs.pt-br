@@ -8,10 +8,10 @@ helpviewer_keywords:
 - databases [C++], consumers
 ms.assetid: d3e42612-0bc0-4d65-9c32-0e8a7b219e82
 ms.openlocfilehash: d2697c955d2063bb075e06536b083c0b138aa4ac
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59031953"
 ---
 # <a name="ole-db-consumer-templates-c"></a>Modelos de consumidor de banco de dados OLE (C++)
@@ -32,7 +32,7 @@ Os modelos OLE DB oferecer suporte a modelo de objeto OLE DB existente em vez de
 
 Os consumidores usam vários tipos de objetos, que são descritos nos tópicos a seguir:
 
-- [Origens de dados e sessões](../../data/oledb/data-sources-and-sessions.md)
+- [Fontes de dados e sessões](../../data/oledb/data-sources-and-sessions.md)
 
 - [Acessadores e conjuntos de linhas](../../data/oledb/accessors-and-rowsets.md)
 
@@ -52,13 +52,13 @@ Um conceito importante ao trabalhar com os consumidores é que você declare dua
 
 Para mais informações, consulte os seguintes tópicos:
 
-- [Criando um consumidor de banco de dados OLE](../../data/oledb/creating-an-ole-db-consumer.md)
+- [Criando um consumidor do OLE DB](../../data/oledb/creating-an-ole-db-consumer.md)
 
 - [Cenários comuns de OLE DB consumidor (exemplos)](../../data/oledb/working-with-ole-db-consumer-templates.md)
 
 ## <a name="see-also"></a>Consulte também
 
-[Programação de banco de dados OLE](../../data/oledb/ole-db-programming.md)<br/>
+[Programação do OLE DB](../../data/oledb/ole-db-programming.md)<br/>
 [Acesso a dados](../data-access-in-cpp.md)<br/>
 [Documentação do SDK do OLE DB](/previous-versions/windows/desktop/ms722784(v=vs.85))<br/>
 [Driver do Microsoft OLE DB para SQL Server](/sql/connect/oledb/oledb-driver-for-sql-server)

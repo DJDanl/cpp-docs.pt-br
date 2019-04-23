@@ -10,10 +10,10 @@ helpviewer_keywords:
 - standard applications [C++]
 ms.assetid: 48217e35-d892-46b7-93e3-f6f0b7e2da35
 ms.openlocfilehash: d58d23e757a97402985ef60badf551523c0a275e
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59030615"
 ---
 # <a name="walkthrough-creating-a-standard-c-program-c"></a>Passo a passo: Criando um programa C++ padrão (C++)
@@ -22,7 +22,7 @@ Você pode usar o Visual C++ no ambiente de desenvolvimento integrado (IDE) do V
 
 Você pode digitar seu próprio programa C++ ou use um dos programas de exemplo. O programa de exemplo neste passo a passo é um aplicativo de console. Esse aplicativo usa o `set` contêiner na biblioteca padrão C++.
 
-Visual C++ segue o padrão de C++ de 2003, com as seguintes exceções principais: pesquisa de nome de dois estágios, especificações de exceção e exportação. Além disso, o Visual C++ oferece suporte a vários recursos do c++0x, por exemplo, lambdas, auto, static_assert, referências de rvalue e modelos extern.
+Visual C++ segue o padrão de C++ de 2003, com as seguintes exceções principais: pesquisa de nome de dois estágios, especificações de exceção e exportação. Além disso, o Visual C++ dá suporte a vários recursos do c++0x, por exemplo, lambdas, automaticamente, static_assert, referências de rvalue e modelos extern.
 
 > [!NOTE]
 > Se a conformidade com o padrão é necessária, use o `/Za` opção de compilador desabilitar extensões da Microsoft para o padrão. Para obter mais informações, consulte [/Za, /Ze (desabilitar extensões de linguagem)](../build/reference/za-ze-disable-language-extensions.md).
@@ -79,4 +79,4 @@ Para concluir este passo a passo, você deve compreender os fundamentos da lingu
 ## <a name="see-also"></a>Consulte também
 
 [Referência da linguagem C++](../cpp/cpp-language-reference.md)<br/>
-[Biblioteca Padrão C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[Biblioteca Padrão do C++](../standard-library/cpp-standard-library-reference.md)<br/>

@@ -8,15 +8,15 @@ helpviewer_keywords:
 - VMLOAD instruction
 ms.assetid: b46a5592-db76-4ffc-8694-2f3494e28bed
 ms.openlocfilehash: 282f1c005c7eb59b2c590c70b38233c88c664e07
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59031148"
 ---
 # <a name="svmvmload"></a>__svm_vmload
 
-**Específico da Microsoft**
+**Seção específica da Microsoft**
 
 Carrega um subconjunto de estado do processador do bloco de controle de máquina virtual especificada (VMCB).
 
@@ -46,7 +46,7 @@ O `__svm_vmload` função é equivalente ao `VMLOAD` instruções de máquina. E
 
 **Arquivo de cabeçalho** \<intrin. h >
 
-**FIM de Específico da Microsoft**
+**Fim da seção específica da Microsoft**
 
 ## <a name="see-also"></a>Consulte também
 
