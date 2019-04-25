@@ -21,11 +21,11 @@ helpviewer_keywords:
 - CSocket [MFC], OnMessagePending
 ms.assetid: 7f23c081-d24d-42e3-b511-8053ca53d729
 ms.openlocfilehash: a861e557b7368d13d615aaf796faded93c72b040
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57266556"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62323954"
 ---
 # <a name="csocket-class"></a>Classe CSocket
 
@@ -39,13 +39,13 @@ class CSocket : public CAsyncSocket
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
 |[CSocket::CSocket](#csocket)|Constrói um objeto `CSocket`.|
 
-### <a name="public-methods"></a>Métodos Públicos
+### <a name="public-methods"></a>Métodos públicos
 
 |Nome|Descrição|
 |----------|-----------------|

@@ -47,11 +47,11 @@ helpviewer_keywords:
 - ismbcalpha_l function
 ms.assetid: 12d57925-aebe-46e0-80b0-82b84c4c31ec
 ms.openlocfilehash: 1a2f928d826b70b788220130f69c53cc351b4910
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532217"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157264"
 ---
 # <a name="ismbcalnum-ismbcalnuml-ismbcalpha-ismbcalphal-ismbcdigit-ismbcdigitl"></a>_ismbcalnum, _ismbcalnum_l, _ismbcalpha, _ismbcalpha_l, _ismbcdigit, _ismbcdigit_l
 
@@ -112,17 +112,17 @@ As versões dessas funções com o **l** sufixo são idênticas, exceto que eles
 
 |Rotina|Condição de teste|Exemplo da página de código 932|
 |-------------|--------------------|---------------------------|
-|**ismbcalnum**, **ismbcalnum_l**|Alfanumérico|Retorna diferente de zero se e somente se *c* é uma representação de byte único de uma letra ASCII em inglês: Confira exemplos de **ismbcdigit** e **ismbcalpha**.|
-|**ismbcalpha**, **ismbcalpha_l**|Alfabético|Retorna diferente de zero se e somente se *c* é uma representação de byte único de uma letra ASCII em inglês: 0x41&lt < =*c*< lt;=0x5a ou 0x61< < =*c*< lt;=0x7a; ou uma letra katakana: 0xa6< < =*c*< lt;=0xDF.|
-|**ismbcdigit**, **ismbcdigit**|Dígito|Retorna diferente de zero se e somente se *c* é uma representação de byte único de um dígito ASCII: 0x30 < =*c*< lt;=0x39.|
+|**_ismbcalnum**, **_ismbcalnum_l**|Alfanumérico|Retorna diferente de zero se e somente se *c* é uma representação de byte único de uma letra ASCII em inglês: Consulte exemplos para **ismbcdigit** e **ismbcalpha**.|
+|**_ismbcalpha**, **_ismbcalpha_l**|Alfabético|Retorna diferente de zero se e somente se *c* é uma representação de byte único de uma letra ASCII em inglês: 0x41 < =*c*< lt;=0x5a ou 0x61< < =*c*< lt;=0x7a; ou uma letra katakana: 0xa6< < =*c*< lt;=0xDF.|
+|**_ismbcdigit**, **_ismbcdigit**|Dígito|Retorna diferente de zero se e somente se *c* é uma representação de byte único de um dígito ASCII: 0x30 < =*c*< lt;=0x39.|
 
 ## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|
-|**ismbcalnum**, **ismbcalnum_l**|\<mbstring.h>|
-|**ismbcalpha**, **ismbcalpha_l**|\<mbstring.h>|
-|**ismbcdigit**, **ismbcdigit_l**|\<mbstring.h>|
+|**_ismbcalnum**, **_ismbcalnum_l**|\<mbstring.h>|
+|**_ismbcalpha**, **_ismbcalpha_l**|\<mbstring.h>|
+|**_ismbcdigit**, **_ismbcdigit_l**|\<mbstring.h>|
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 

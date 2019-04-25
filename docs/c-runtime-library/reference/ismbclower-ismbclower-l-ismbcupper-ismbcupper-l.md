@@ -33,11 +33,11 @@ helpviewer_keywords:
 - _ismbcupper_l function
 ms.assetid: 17d89587-65bc-477c-ba8f-a84e63cf59e7
 ms.openlocfilehash: 29a1e97f4583808931e5228a6905aed7c0a62702
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50431857"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157260"
 ---
 # <a name="ismbclower-ismbclowerl-ismbcupper-ismbcupperl"></a>_ismbclower, _ismbclower_l, _ismbcupper, _ismbcupper_l
 
@@ -87,8 +87,8 @@ As versões dessas funções com o **l** sufixo são idênticas, exceto que eles
 |-------------|--------------------|---------------------------|
 |**_ismbclower**|Alfabético minúsculo|Retorna diferente de zero se e somente se *c* é uma representação de byte único de uma letra ASCII minúsculos em inglês: 0x61< < =*c*< = 0x7A.|
 |**_ismbclower_l**|Alfabético minúsculo|Retorna diferente de zero se e somente se *c* é uma representação de byte único de uma letra ASCII minúsculos em inglês: 0x61< < =*c*< = 0x7A.|
-|**_ismbcupper**|Alfabético maiúsculo|Retorna diferente de zero se e somente se *c* é uma representação de byte único de uma letra ASCII em maiusculas em inglês: 0x41&lt < =*c*< lt;=0x5a.|
-|**_ismbcupper_l**|Alfabético maiúsculo|Retorna diferente de zero se e somente se *c* é uma representação de byte único de uma letra ASCII em maiusculas em inglês: 0x41&lt < =*c*< lt;=0x5a.|
+|**_ismbcupper**|Alfabético maiúsculo|Retorna diferente de zero se e somente se *c* é uma representação de byte único de uma letra ASCII em maiusculas em inglês: 0x41 < =*c*< lt;=0x5a.|
+|**_ismbcupper_l**|Alfabético maiúsculo|Retorna diferente de zero se e somente se *c* é uma representação de byte único de uma letra ASCII em maiusculas em inglês: 0x41 < =*c*< lt;=0x5a.|
 
 ## <a name="requirements"></a>Requisitos
 

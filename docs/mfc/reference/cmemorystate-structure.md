@@ -9,11 +9,11 @@ helpviewer_keywords:
 - detecting memory leaks [MFC]
 ms.assetid: 229d9de7-a6f3-4cc6-805b-5a9d9b1bfe1d
 ms.openlocfilehash: a110e1345cb970c117de125bd8105e1bc86eaf94
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57288123"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62163748"
 ---
 # <a name="cmemorystate-structure"></a>Estrutura CMemoryState
 
@@ -27,7 +27,7 @@ struct CMemoryState
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
@@ -54,7 +54,7 @@ Um "vazamento de memória" ocorre quando a memória de um objeto é alocada no h
 
 - Usando o C++ **novos** e **excluir** operadores.
 
-O `CMemoryState` diagnóstico de apenas ajudar a detectar memória vazamentos causados quando a memória alocada usando o **novos** operador não é desalocado usando **excluir**. Os outros dois grupos de funções de gerenciamento de memória são para programas não-c + + e combinando-os com **novos** e **excluir** no mesmo programa não é recomendado. Uma macro adicional, DEBUG_NEW, é fornecida para substituir a **novo** operador quando precisar de arquivo e número de linha de acompanhamento de alocações de memória. DEBUG_NEW é usado sempre que você normalmente usa o **novo** operador.
+O `CMemoryState` diagnóstico de apenas ajudar a detectar memória vazamentos causados quando a memória alocada usando o **novos** operador não é desalocado usando **excluir**. Os outros dois grupos de funções de gerenciamento de memória são para não -C++ programas e combinando-os com **novos** e **excluir** no mesmo programa não é recomendado. Uma macro adicional, DEBUG_NEW, é fornecida para substituir a **novo** operador quando precisar de arquivo e número de linha de acompanhamento de alocações de memória. DEBUG_NEW é usado sempre que você normalmente usa o **novo** operador.
 
 Assim como acontece com outros diagnósticos, o `CMemoryState` diagnóstico só está disponível em versões de depuração do seu programa. Uma versão de depuração deve ter a constante Debug definida.
 

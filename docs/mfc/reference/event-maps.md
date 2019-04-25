@@ -7,11 +7,11 @@ helpviewer_keywords:
 - event maps [MFC]
 ms.assetid: 1ed53aee-bc53-43cd-834a-6fb935c0d29b
 ms.openlocfilehash: 512170d7eaa891b3616ca1ea56c29a8bb5cccda9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492217"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62322235"
 ---
 # <a name="event-maps"></a>Mapas de evento
 
@@ -21,7 +21,7 @@ A biblioteca Microsoft Foundation Class oferece um modelo de programação com o
 
 [!code-cpp[NVC_MFCAxCtl#16](../../mfc/reference/codesnippet/cpp/event-maps_1.cpp)]
 
-O `EVENT_STOCK_CLICK` macro indica que o controle será disparado um clique de evento sempre que detecta um mouse de clique de ações. Para obter uma lista mais detalhada de outros eventos de estoque, consulte o artigo [controles ActiveX: eventos](../../mfc/mfc-activex-controls-events.md). Macros também estão disponíveis para indicar eventos personalizados.
+O `EVENT_STOCK_CLICK` macro indica que o controle será disparado um clique de evento sempre que detecta um mouse de clique de ações. Para obter uma lista mais detalhada de outros eventos de estoque, consulte o artigo [controles ActiveX: Eventos](../../mfc/mfc-activex-controls-events.md). Macros também estão disponíveis para indicar eventos personalizados.
 
 Embora as macros de mapa de evento são importantes, você geralmente não inseri-los diretamente. Isso ocorre porque a janela Propriedades cria automaticamente as entradas de mapa de eventos nos arquivos de origem quando usá-lo para associar funções de acionamento do evento de eventos. Sempre que você deseja editar ou adicionar uma entrada de mapa de evento, você pode usar a janela Propriedades.
 
@@ -63,11 +63,11 @@ DECLARE_EVENT_MAP()
 
 Use a macro DECLARE_EVENT_MAP no final de sua declaração de classe. Em seguida, no arquivo. cpp que define as funções de membro da classe, use a macro BEGIN_EVENT_MAP, entradas de macro para cada um dos eventos do controle e a macro END_EVENT_MAP para declarar o fim da lista de eventos.
 
-Para obter mais informações sobre mapas de evento, consulte o artigo [controles ActiveX: eventos](../../mfc/mfc-activex-controls-events.md).
+Para obter mais informações sobre mapas de evento, consulte o artigo [controles ActiveX: Eventos](../../mfc/mfc-activex-controls-events.md).
 
 ### <a name="requirements"></a>Requisitos
 
-**Cabeçalho** afxctl. h
+**Header** afxctl.h
 
 ## <a name="begin_event_map"></a>  BEGIN_EVENT_MAP
 
@@ -89,11 +89,11 @@ Especifica o nome da classe base da *theClass*.
 
 No arquivo de implementação (. cpp) que define as funções de membro para a sua classe, iniciar o mapa de evento com a macro BEGIN_EVENT_MAP, em seguida, adicione entradas de macro para cada um dos seus eventos e concluir o mapa de evento com a macro END_EVENT_MAP.
 
-Para obter mais informações sobre mapas de evento e a macro BEGIN_EVENT_MAP, consulte o artigo [controles ActiveX: eventos](../../mfc/mfc-activex-controls-events.md).
+Para obter mais informações sobre mapas de evento e a macro BEGIN_EVENT_MAP, consulte o artigo [controles ActiveX: Eventos](../../mfc/mfc-activex-controls-events.md).
 
 ### <a name="requirements"></a>Requisitos
 
-**Cabeçalho** afxctl. h
+**Header** afxctl.h
 
 ##  <a name="end_event_map"></a>  END_EVENT_MAP
 
@@ -105,7 +105,7 @@ END_EVENT_MAP()
 
 ### <a name="requirements"></a>Requisitos
 
-**Cabeçalho** afxctl. h
+**Header** afxctl.h
 
 ## <a name="event_custom"></a>  EVENT_CUSTOM
 
@@ -145,7 +145,7 @@ O `VTS_` constantes e seus significados são da seguinte maneira:
 |VTS_COLOR|OLE_COLOR|
 |VTS_CY|MOEDA|
 |VTS_DATE|DATE|
-|VTS_BSTR|**Const** __char\*__|
+|VTS_BSTR|**const** __char\*__|
 |VTS_DISPATCH|LPDISPATCH|
 |VTS_FONT|`IFontDispatch*`|
 |VTS_HANDLE|IDENTIFICADOR|
@@ -171,7 +171,7 @@ O `VTS_` constantes e seus significados são da seguinte maneira:
 
 ### <a name="requirements"></a>Requisitos
 
-**Cabeçalho** afxctl. h
+**Header** afxctl.h
 
 ## <a name="event_custom_id"></a>  EVENT_CUSTOM_ID
 
@@ -190,7 +190,7 @@ EVENT_CUSTOM_ID(
 *pszName*<br/>
 O nome do evento.
 
-*DISPID*<br/>
+*dispid*<br/>
 A ID de expedição usada pelo controle ao acionar o evento.
 
 *pfnFire*<br/>
@@ -211,7 +211,7 @@ Para obter uma lista de `VTS_` constantes, consulte [EVENT_CUSTOM](#event_custom
 
 ### <a name="requirements"></a>Requisitos
 
-**Cabeçalho** afxctl. h
+**Header** afxctl.h
 
 ## <a name="on_oleverb"></a>  ON_OLEVERB
 
