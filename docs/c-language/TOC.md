@@ -28,7 +28,7 @@
 #### [Concatenação de literal da cadeia de caracteres](string-literal-concatenation.md)
 #### [Tamanho máximo da cadeia de caracteres](maximum-string-length.md)
 ### [Pontuação e caracteres especiais](punctuation-and-special-characters.md)
-## [Estrutura do Programa](program-structure.md)
+## [Estrutura do programa](program-structure.md)
 ### [Arquivos e programas de origem](source-files-and-source-programs.md)
 #### [Diretivas para o pré-processador](directives-to-the-preprocessor.md)
 #### [Pragmas C](c-pragmas.md)

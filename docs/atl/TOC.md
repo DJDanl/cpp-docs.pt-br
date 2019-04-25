@@ -46,7 +46,7 @@
 ## [Página de propriedades COM da ATL](atl-com-property-pages.md)
 ### [Especificando páginas de propriedades](specifying-property-pages.md)
 ### [Implementando páginas de propriedades](implementing-property-pages.md)
-#### [Exemplo: implementando uma página de propriedades](example-implementing-a-property-page.md)
+#### [Exemplo: implementar uma página de propriedades](example-implementing-a-property-page.md)
 ## [Suporte da ATL para controles DHTML](atl-support-for-dhtml-controls.md)
 ### [Identificando os elementos do projeto de controle DHTML](identifying-the-elements-of-the-dhtml-control-project.md)
 ### [Chamando código C++ do DHTML](calling-cpp-code-from-dhtml.md)

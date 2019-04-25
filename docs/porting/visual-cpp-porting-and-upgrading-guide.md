@@ -3,10 +3,10 @@ title: Guia de atualização e portabilidade do Visual C++
 ms.date: 09/18/2018
 ms.assetid: f5fbcc3d-aa72-41a6-ad9a-a706af2166fb
 ms.openlocfilehash: 8798d8b3da5a91adfc6f77912d4f34bf62549f54
-ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58898785"
 ---
 # <a name="visual-c-porting-and-upgrading-guide"></a>Guia de atualização e portabilidade do Visual C++
@@ -75,7 +75,7 @@ Como alternativa, você pode ter novos requisitos ou prever a necessidade de dir
 
 |Título|Descrição|
 |-----------|-----------------|
-|[Atualizando projetos a partir de versões anteriores do Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)|Discute como usar projetos criados em versões anteriores do Visual C++.|
+|[Atualizando projetos de versões anteriores do Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)|Discute como usar projetos criados em versões anteriores do Visual C++.|
 |[Novidades do compilador C++ no Visual Studio](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)|Alterações no IDE e em ferramentas na versão atual do Visual Studio|
 |[Aprimoramentos de conformidade do C++ no Visual Studio](../overview/cpp-conformance-improvements.md)|Aprimoramentos de conformidade com padrões do Visual Studio 2015 até o Visual Studio|
 |[Histórico de alterações de 2003 a 2015 do Visual C++](visual-cpp-change-history-2003-2015.md)|Uma lista de todas as alterações nas bibliotecas e ferramentas de build do Visual C++ do Visual Studio 2003 até 2015 que podem exigir alterações em seu código.|
@@ -84,7 +84,7 @@ Como alternativa, você pode ter novos requisitos ou prever a necessidade de dir
 |[Portando e atualizando: exemplos e estudos de caso](porting-and-upgrading-examples-and-case-studies.md)|Nessa seção, portamos e atualizamos vários exemplos e aplicativos e discutimos as experiências e os resultados. Ao ler essa seção você pode obter uma noção do que está envolvido no processo de portabilidade e atualização. Durante o processo, discutimos a respeito de dicas e truques para a atualização e mostramos como erros específicos foram corrigidos.|
 |[Portabilidade para a Plataforma Universal do Windows](porting-to-the-universal-windows-platform-cpp.md)|Contém informações sobre como fazer portabilidade de código para o Windows 10|
 |[Introdução ao Visual C++ para usuários do UNIX](introduction-to-visual-cpp-for-unix-users.md)|Fornece informações para usuários do UNIX novatos no Visual C++ e que desejam tornar-se produtivos com ele.|
-|[Portando de UNIX para Win32](porting-from-unix-to-win32.md)|Discute as opções para migrar aplicativos UNIX para o Windows.|
+|[Portabilidade de UNIX para Win32](porting-from-unix-to-win32.md)|Discute as opções para migrar aplicativos UNIX para o Windows.|
 
 ## <a name="see-also"></a>Consulte também
 
