@@ -28,11 +28,11 @@ helpviewer_keywords:
 - files [C++], permission settings for
 ms.assetid: 70898f61-bf2b-4d8d-8291-0ccaa6d33145
 ms.openlocfilehash: 878a22cb2884c36e792ff8dead1453582addb5b4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50480660"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62268904"
 ---
 # <a name="umasks"></a>_umask_s
 
@@ -76,9 +76,9 @@ A expressão de inteiro *pmode* contém uma ou ambas das seguintes constantes de
 
 |*pmode*||
 |-|-|
-|**S_IWRITE**|Gravação permitida.|
-|**S_IREAD**|Leitura permitida.|
-|**S_IREAD** \| **S_IWRITE**|Leitura e gravação permitidas.|
+|**_S_IWRITE**|Gravação permitida.|
+|**_S_IREAD**|Leitura permitida.|
+|**_S_IREAD** \| **_S_IWRITE**|Leitura e gravação permitidas.|
 
 Quando as duas constantes são informadas, elas são unidas com o operador OR bit a bit ( **|** ). Se o *modo* argumento é **s_iread**, leitura não será permitida (o arquivo é somente gravação). Se o *modo* argumento é **s_iwrite**, gravação não é permitida (o arquivo é somente leitura). Por exemplo, se o bit de gravação estiver definido na máscara, quaisquer novos arquivos serão somente leitura. Observe que nos sistemas operacionais MS-DOS e Windows, todos os arquivos podem ser lidos; não é possível conceder permissão somente gravação. Portanto, definir a bit de leitura **umask_s** não tem nenhum efeito sobre os modos do arquivo.
 

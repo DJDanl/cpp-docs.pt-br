@@ -5,11 +5,11 @@ f1_keywords:
 - <future>
 ms.assetid: 2f5830fc-455d-44f9-9e3d-94ea051596a2
 ms.openlocfilehash: 189a9f16b65ae74fc2a86bee62bf8bd548c486aa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50555727"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62159854"
 ---
 # <a name="ltfuturegt"></a>&lt;future&gt;
 
@@ -40,7 +40,7 @@ A função de modelo `async` e as classes de modelo `promise` e `packaged_task` 
 
 Cada uma das classes de modelo `promise`, `future`, e `shared_future` tem uma especialização para o tipo **void** e uma especialização parcial para armazenar e recuperar um valor por referência. Essas especializações diferem do modelo primário somente quanto às assinaturas e à semântica das funções que armazenam e recuperam o valor retornado.
 
-As classes de modelo `future` e `shared_future` nunca bloqueiam seus destruidores, exceto em um caso que é preservado para compatibilidade com versões anteriores: diferente de todos os outros futures, para um `future` — ou para o último `shared_future` — anexado a uma tarefa iniciada com `std::async`, o destruidor é bloqueado se a tarefa não tiver sido concluída, ou seja, ele é bloqueado se o thread ainda não tiver chamado `.get()` ou `.wait()` e a tarefa ainda estiver em execução. A observação de usabilidade a seguir foi adicionada à descrição de `std::async` no padrão de rascunho: "[Observação: se um future obtido de std::async for movido para fora do escopo local, outro código que usa o future deve estar ciente de que o destruidor do future pode ser bloqueado para que o estado compartilhado fique pronto. — final da observação]". Em todos os outros casos, os destruidores `future` e `shared_future` são obrigatórios e é garantido que eles nunca são bloqueados.
+As classes de modelo `future` e `shared_future` nunca bloquear em seus destruidores, exceto em um caso é preservado para compatibilidade com versões anteriores: Ao contrário de todos os outros futures, para um `future`— ou o último `shared_future`— anexado a uma tarefa iniciada com `std::async`, os destruidor é bloqueado se a tarefa tiver sido concluída, ou seja, ele é bloqueado se esse thread ainda não tiver chamado `.get()` ou `.wait()`e a tarefa ainda está em execução. A observação de usabilidade a seguir foi adicionada à descrição do `std::async` no padrão de rascunho: "[Observação: Se um futuro obtido do std::async é movido para fora do escopo local, outro código que usa o futuro deve estar ciente de que o destruidor do futuro pode ser bloqueado para o estado compartilhado fique pronto. — nota final] "em todos os outros casos, `future` e `shared_future` Os destruidores são necessários e são garantidos nunca será bloqueada.
 
 ## <a name="members"></a>Membros
 

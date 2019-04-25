@@ -7,11 +7,11 @@ helpviewer_keywords:
 - LNK1256
 ms.assetid: 55b64b2b-a56b-436c-a55e-ec9c6dcb050e
 ms.openlocfilehash: 47c20f24a2fe26cc96d5efcf359652a40af508ee
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57811531"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62160569"
 ---
 # <a name="linker-tools-error-lnk1256"></a>Erro das Ferramentas de Vinculador LNK1256
 

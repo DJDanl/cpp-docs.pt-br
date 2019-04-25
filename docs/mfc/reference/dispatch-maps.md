@@ -9,11 +9,11 @@ helpviewer_keywords:
 - dispatch map macros [MFC]
 ms.assetid: bef9d08b-ad35-4c3a-99d8-04150c7c04e2
 ms.openlocfilehash: 5ebedaa02a03bcc7802110977b96659dae45f174
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50585075"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62322508"
 ---
 # <a name="dispatch-maps"></a>Mapas de expedição
 
@@ -78,7 +78,7 @@ No arquivo de implementação (. cpp) que define as funções de membro para a s
 
 ### <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** afxdisp.h
+**Header:** afxdisp.h
 
 ## <a name="end_dispatch_map"></a>  END_DISPATCH_MAP
 
@@ -94,7 +94,7 @@ Ele deve ser usado em conjunto com BEGIN_DISPATCH_MAP.
 
 ### <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** afxdisp.h
+**Header:** afxdisp.h
 
 ## <a name="disp_function"></a>  DISP_FUNCTION
 
@@ -184,7 +184,7 @@ O `VTS_` constantes e seus significados são da seguinte maneira:
 
 ### <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** afxdisp.h
+**Header:** afxdisp.h
 
 ## <a name="disp_property"></a>  DISP_PROPERTY
 
@@ -206,7 +206,7 @@ Nome da classe.
 *pszName*<br/>
 Nome externo da propriedade.
 
-*Nome do membro*<br/>
+*memberName*<br/>
 Nome da variável de membro no qual a propriedade é armazenada.
 
 *vtPropType*<br/>
@@ -235,7 +235,7 @@ Quando um cliente externo altera a propriedade, o valor da variável de membro e
 
 ### <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** afxdisp.h
+**Header:** afxdisp.h
 
 ## <a name="disp_property_ex"></a>  DISP_PROPERTY_EX
 
@@ -261,7 +261,7 @@ Nome externo da propriedade.
 *memberGet*<br/>
 Nome da função de membro usada para obter a propriedade.
 
-*conjunto de membros*<br/>
+*memberSet*<br/>
 Nome da função de membro usada para definir a propriedade.
 
 *vtPropType*<br/>
@@ -275,7 +275,7 @@ O *vtPropType* argumento é do tipo VARTYPE. Os valores possíveis para esse arg
 
 ### <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** afxdisp.h
+**Header:** afxdisp.h
 
 ## <a name="disp_property_notify"></a>  DISP_PROPERTY_NOTIFY
 
@@ -298,7 +298,7 @@ Nome da classe.
 *szExternalName*<br/>
 Nome externo da propriedade.
 
-*Nome do membro*<br/>
+*memberName*<br/>
 Nome da variável de membro no qual a propriedade é armazenada.
 
 *pfnAfterSet*<br/>
@@ -330,7 +330,7 @@ O *vtPropType* argumento é do tipo VARTYPE. Os valores possíveis para esse arg
 
 ### <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** afxdisp.h
+**Header:** afxdisp.h
 
 ## <a name="disp_property_param"></a>  DISP_PROPERTY_PARAM
 
@@ -390,7 +390,7 @@ Elas correspondem à seguinte macro DISP_PROPERTY_PARAM no mapa de expedição d
 
 ### <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** afxdisp.h
+**Header:** afxdisp.h
 
 ## <a name="disp_defvalue"></a>  DISP_DEFVALUE
 
@@ -416,7 +416,7 @@ O "valor padrão" de seu objeto é a propriedade que é recuperada ou definida q
 
 ### <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** afxdisp.h
+**Header:** afxdisp.h
 
 ## <a name="see-also"></a>Consulte também
 
