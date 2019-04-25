@@ -3,11 +3,11 @@ title: /MANIFESTINPUT (especificar entrada de manifesto)
 ms.date: 11/04/2016
 ms.assetid: a0b0c21e-1f9b-4d8c-bb3f-178f57fa7f1b
 ms.openlocfilehash: bf192664a7a2402b06621167d91dff67ce0741a9
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57814212"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62321352"
 ---
 # <a name="manifestinput-specify-manifest-input"></a>/MANIFESTINPUT (especificar entrada de manifesto)
 
@@ -33,4 +33,4 @@ Essa opção não pode ser definida diretamente no Visual Studio. Em vez disso, 
 ## <a name="see-also"></a>Consulte também
 
 [Referência de vinculador MSVC](linking.md)<br/>
-[Opções do vinculador MSVC](linker-options.md)
+[Opções de vinculador MSVC](linker-options.md)

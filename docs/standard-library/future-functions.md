@@ -15,11 +15,11 @@ helpviewer_keywords:
 - std::make_error_condition [C++]
 - std::swap [C++]
 ms.openlocfilehash: 56ae0da7e86e092cee46d24d1a2a27d9d54709e4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50487705"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62159503"
 ---
 # <a name="ltfuturegt-functions"></a>Funções &lt;future&gt;
 
@@ -44,7 +44,7 @@ future<typename result_of<Fn(ArgTypes...)>::type>
 
 ### <a name="parameters"></a>Parâmetros
 
-*Política*<br/>
+*policy*<br/>
 Um valor [launch](../standard-library/future-enums.md#launch).
 
 ### <a name="remarks"></a>Comentários
@@ -92,7 +92,7 @@ inline error_code make_error_code(future_errc Errno) noexcept;
 
 ### <a name="parameters"></a>Parâmetros
 
-*errno*<br/>
+*Errno*<br/>
 Um valor de [future_errc](../standard-library/future-enums.md#future_errc) que identifica o erro relatado.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -109,7 +109,7 @@ inline error_condition make_error_condition(future_errc Errno) noexcept;
 
 ### <a name="parameters"></a>Parâmetros
 
-*errno*<br/>
+*Errno*<br/>
 Um valor de [future_errc](../standard-library/future-enums.md#future_errc) que identifica o erro relatado.
 
 ### <a name="return-value"></a>Valor de retorno

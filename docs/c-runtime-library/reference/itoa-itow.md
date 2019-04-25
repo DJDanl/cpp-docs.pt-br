@@ -100,11 +100,11 @@ helpviewer_keywords:
 - _itoa function
 ms.assetid: 46592a00-77bb-4e73-98c0-bf629d96cea6
 ms.openlocfilehash: 016f3474345b623415be9fe33556bb9f466542ad
-ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57210530"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157364"
 ---
 # <a name="itoa-itoa-ltoa-ltoa-ultoa-ultoa-i64toa-ui64toa-itow-ltow-ultow-i64tow-ui64tow"></a>itoa, _itoa, ltoa, _ltoa, ultoa, _ultoa, _i64toa, _ui64toa, _itow, _ltow, _ultow, _i64tow, _ui64tow
 
@@ -199,7 +199,7 @@ Para usar essas funções sem o aviso de substituição, defina as **crt_secure_
 
 No C++, essas funções têm sobrecargas de modelo que invocam suas equivalentes mais seguros. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../../c-runtime-library/secure-template-overloads.md).
 
-Os nomes de Posix **itoa**, **ltoa**, e **ultoa** existir como aliases para o **itoa**, **ltoa**, e **ultoa** funções. Os nomes de Posix foram preteridos porque eles não seguem as convenções de nome de função específicos de implementação de C. ISO Por padrão, essas funções fazem com que o aviso de reprovação [C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md): **O nome do POSIX para este item está obsoleto. Em vez disso, use o nome compatível com ISO C e C++:** *new_name*. É recomendável que você altere seu código-fonte para usar as versões mais seguras dessas funções **itoa_s**, **ltoa_s**, ou **ultoa_s**. Para obter mais informações, consulte [itoa_s, itow_s funções](itoa-s-itow-s.md).
+Os nomes de Posix **itoa**, **ltoa**, e **ultoa** existir como aliases para o **itoa**, **ltoa**, e **ultoa** funções. Os nomes de Posix foram preteridos porque eles não seguem as convenções de nome de função específicos de implementação de C. ISO Por padrão, essas funções fazem com que o aviso de reprovação [C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md): **O nome do POSIX para este item está obsoleto. Em vez disso, use o ISO C e C++ nome de acordo com as conformidades:** *new_name*. É recomendável que você altere seu código-fonte para usar as versões mais seguras dessas funções **itoa_s**, **ltoa_s**, ou **ultoa_s**. Para obter mais informações, consulte [itoa_s, itow_s funções](itoa-s-itow-s.md).
 
 Para fins de portabilidade de código fonte, talvez você prefira manter os nomes de Posix em seu código. Para usar essas funções sem o aviso de substituição, defina ambos os **_CRT_NONSTDC_NO_WARNINGS** e **crt_secure_no_warnings** macros de pré-processador antes de incluir cabeçalhos CRT. Você pode fazer isso na linha de comando em um prompt de comando do desenvolvedor, adicionando a **/D_CRT_SECURE_NO_WARNINGS** e **/D_CRT_NONSTDC_NO_WARNINGS** de opções do compilador para o **cl**comando. Caso contrário, defina as macros nos arquivos de origem. Se você usar cabeçalhos pré-compilados, defina as macros na parte superior do cabeçalho pré-compilado incluem o arquivo, normalmente Stdafx. h. Para definir as macros em seu código-fonte, use **#define** diretivas antes de incluir qualquer cabeçalho de CRT, como neste exemplo:
 
