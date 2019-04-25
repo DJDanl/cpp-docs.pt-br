@@ -3,11 +3,11 @@ title: Diretivas do assembler ARM
 ms.date: 08/30/2018
 ms.assetid: 9cfa8896-ec10-4e77-855a-3135c40d7d2a
 ms.openlocfilehash: 9124f893b3334e0893073332c9d5f5a1388373d9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50592446"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62167667"
 ---
 # <a name="arm-assembler-directives"></a>Diretivas do assembler ARM
 
@@ -15,7 +15,7 @@ Na maior parte, o assembler Microsoft ARM usa a linguagem de assembly do ARM, qu
 
 ## <a name="microsoft-implementations-of-arm-assembly-directives"></a>Implementações Microsoft de diretivas de Assembly do ARM
 
-- ÁREA
+- AREA
 
    O assembler Microsoft ARM dá suporte a estes `AREA` atributos: `ALIGN`, `CODE`, `CODEALIGN`, `DATA`, `NOINIT`, `READONLY`, `READWRITE`, `THUMB`, `ARM`.
 
@@ -55,7 +55,7 @@ Na maior parte, o assembler Microsoft ARM usa a linguagem de assembly do ARM, qu
 
    Especifica as exportações usando esta sintaxe:
 
-   > **EXPORTAR**|**GLOBAL** <em>sym</em>{**[**<em>tipo</em>**]**}
+   > **EXPORT**|**GLOBAL** <em>sym</em>{**[**<em>type</em>**]**}
 
    *SYM* é o símbolo a ser exportado.  [*tipo*], se especificado, pode ser `[DATA]` para indicar que o símbolo de pontos de dados ou `[FUNC]` para indicar que o símbolo de pontos de código. `GLOBAL` é um sinônimo de `EXPORT`.
 

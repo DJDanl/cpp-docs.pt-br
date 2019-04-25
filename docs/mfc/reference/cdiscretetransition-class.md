@@ -17,11 +17,11 @@ helpviewer_keywords:
 - CDiscreteTransition [MFC], m_hold
 ms.assetid: b4d84fb3-ccaa-451c-a69b-6b50dcb9b9c8
 ms.openlocfilehash: dc2311f7dae71f7c3848b7825b297ec5c9747859
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57262825"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62168005"
 ---
 # <a name="cdiscretetransition-class"></a>Classe CDiscreteTransition
 
@@ -35,7 +35,7 @@ class CDiscreteTransition : public CBaseTransition;
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|

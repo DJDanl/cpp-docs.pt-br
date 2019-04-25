@@ -35,11 +35,11 @@ helpviewer_keywords:
 - directories [C++], current working
 ms.assetid: d9bdf712-43f8-4173-8f9a-844e82beaa97
 ms.openlocfilehash: 47938c387ba30d7bcba038145c2dff9c7b59b750
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50563677"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157702"
 ---
 # <a name="getdcwdnolock-wgetdcwdnolock"></a>_getdcwd_nolock, _wgetdcwd_nolock
 
@@ -65,13 +65,13 @@ wchar_t *_wgetdcwd_nolock(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Dirigir*<br/>
+*drive*<br/>
 Unidade de disco.
 
 *buffer*<br/>
 Local de armazenamento para o caminho.
 
-*MaxLen*<br/>
+*maxlen*<br/>
 Comprimento máximo de caminho em caracteres: **char** para **getdcwd** e **wchar_t** para **wgetdcwd**.
 
 ## <a name="return-value"></a>Valor de retorno
@@ -86,7 +86,7 @@ Consulte [_getdcwd, _wgetdcwd](getdcwd-wgetdcwd.md).
 
 |Rotina Tchar.h|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**tgetdcwd_nolock**|**_getdcwd_nolock**|**_getdcwd_nolock**|**_wgetdcwd_nolock**|
+|**_tgetdcwd_nolock**|**_getdcwd_nolock**|**_getdcwd_nolock**|**_wgetdcwd_nolock**|
 
 ## <a name="requirements"></a>Requisitos
 

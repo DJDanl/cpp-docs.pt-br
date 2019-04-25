@@ -14,11 +14,11 @@ helpviewer_keywords:
 - exceptions [MFC], MFC throwing functions
 ms.assetid: 26d4457c-8350-48f5-916e-78f919787c30
 ms.openlocfilehash: 3db919f40caf4e5dbf42b4e10c549b165c0a9fe4
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57293739"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62322209"
 ---
 # <a name="exception-processing"></a>Processamento de exceção
 
@@ -161,7 +161,7 @@ Especifica um nome para um ponteiro de objeto de exceção que será criado pela
 O código de processamento de exceção pode interrogar o objeto de exceção, se apropriado, para obter mais informações sobre a causa específica da exceção. Invocar o `THROW_LAST` macro para deslocar o processamento para o próximo quadro de exceção externa. Se você usar **CATCH_ALL**, final a **tente** bloco com uma macro END_CATCH_ALL.
 
 > [!NOTE]
->  O **CATCH_ALL** bloco é definido como um escopo C++ delineado por chaves. Se você declarar variáveis nesse escopo, eles são acessíveis somente dentro desse escopo.
+>  O **CATCH_ALL** bloco é definido como um C++ escopo delimitado por chaves. Se você declarar variáveis nesse escopo, eles são acessíveis somente dentro desse escopo.
 
 Para obter mais informações sobre exceções, consulte o artigo [exceções](../../mfc/exception-handling-in-mfc.md).
 
@@ -196,7 +196,7 @@ Use a macro CATCH para capturar um tipo de exceção, em seguida, a macro AND_CA
 O código de processamento de exceção pode interrogar o objeto de exceção, se apropriado, para obter mais informações sobre a causa específica da exceção. Chamar a macro THROW_LAST dentro de **AND_CATCH** bloquear o deslocamento de processamento para o próximo quadro de exceção externa. **AND_CATCH** marca o final do anterior **CATCH** ou **AND_CATCH** bloco.
 
 > [!NOTE]
->  O **AND_CATCH** bloco é definido como um escopo C++ (delimitado por chaves). Se você declarar variáveis nesse escopo, lembre-se de que eles são acessíveis somente dentro desse escopo. Isso também se aplica a *exception_object_pointer_name* variável.
+>  O **AND_CATCH** bloco é definido como um C++ escopo (delimitado por chaves). Se você declarar variáveis nesse escopo, lembre-se de que eles são acessíveis somente dentro desse escopo. Isso também se aplica a *exception_object_pointer_name* variável.
 
 ### <a name="example"></a>Exemplo
 
@@ -225,7 +225,7 @@ Use o **CATCH** macro para capturar um tipo de exceção e, em seguida, a macro 
 O código de processamento de exceção pode interrogar o objeto de exceção, se apropriado, para obter mais informações sobre a causa específica da exceção. Chamar a macro THROW_LAST dentro de **AND_CATCH_ALL** bloquear o deslocamento de processamento para o próximo quadro de exceção externa. **AND_CATCH_ALL** marca o final do anterior **CATCH** ou **AND_CATCH_ALL** bloco.
 
 > [!NOTE]
->  O **AND_CATCH_ALL** bloco é definido como um escopo C++ (delimitado por chaves). Se você declarar variáveis nesse escopo, lembre-se de que eles são acessíveis somente dentro desse escopo.
+>  O **AND_CATCH_ALL** bloco é definido como um C++ escopo (delimitado por chaves). Se você declarar variáveis nesse escopo, lembre-se de que eles são acessíveis somente dentro desse escopo.
 
 ### <a name="requirements"></a>Requisitos
 

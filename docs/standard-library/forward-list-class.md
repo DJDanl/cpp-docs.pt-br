@@ -81,11 +81,11 @@ helpviewer_keywords:
 - std::forward_list::unique
 ms.assetid: 89a3b805-ab60-4858-b772-5855130c11b1
 ms.openlocfilehash: 5eaa8eba1904dc0a729fb66b280b8d3fa4bb78f1
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524541"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62159776"
 ---
 # <a name="forwardlist-class"></a>Classe forward_list
 
@@ -104,7 +104,7 @@ class forward_list
 |Parâmetro|Descrição|
 |---------------|-----------------|
 |*Tipo*|O tipo de dados do elemento a ser armazenado na forward_list.|
-|*Alocador*|O objeto alocador armazenado que encapsula detalhes sobre a alocação e desalocação de memória na forward_list. Esse parâmetro é opcional. O valor padrão é allocator< `Type`>.|
+|*Allocator*|O objeto alocador armazenado que encapsula detalhes sobre a alocação e desalocação de memória na forward_list. Esse parâmetro é opcional. O valor padrão é allocator< `Type`>.|
 
 ## <a name="remarks"></a>Comentários
 
@@ -217,9 +217,9 @@ void assign(InputIterator First, InputIterator Last);
 |*first*|O início do intervalo de substituição.|
 |*last*|O final do intervalo de substituição.|
 |*count*|O número de elementos a serem atribuídos.|
-|*Val*|O valor a atribuir a cada elemento.|
+|*val*|O valor a atribuir a cada elemento.|
 |*Tipo*|Tipo do valor.|
-|* IList'|A initializer_list a ser copiada.|
+|* IList'| A initializer_list a ser copiada.|
 
 ### <a name="remarks"></a>Comentários
 
@@ -397,7 +397,7 @@ iterator emplace_after(const_iterator Where, Type&& val);
 |Parâmetro|Descrição|
 |---------------|-----------------|
 |*Where*|A posição na lista de encaminhamento de destino em que o novo elemento é criado.|
-|*Val*|O argumento do construtor.|
+|*val*|O argumento do construtor.|
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -420,7 +420,7 @@ void emplace_front(Type&& val);
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|*Val*|O elemento adicionado ao início da lista de encaminhamento.|
+|*val*|O elemento adicionado ao início da lista de encaminhamento.|
 
 ### <a name="remarks"></a>Comentários
 
@@ -513,8 +513,8 @@ forward_list(InputIterator First, InputIterator Last, const Allocator& Al);
 |*Contagem*|O número de elementos na lista construída.|
 |*Val*|O valor dos elementos na lista construída.|
 |*Direita*|A lista da qual a lista construída é uma cópia.|
-|*Primeiro*|A posição do primeiro elemento no intervalo de elementos a serem copiados.|
-|*último*|A posição do primeiro elemento além do intervalo de elementos a serem copiados.|
+|*First*|A posição do primeiro elemento no intervalo de elementos a serem copiados.|
+|*Last*|A posição do primeiro elemento além do intervalo de elementos a serem copiados.|
 |*IList*|A initializer_list a ser copiada.|
 
 ### <a name="remarks"></a>Comentários
@@ -577,8 +577,8 @@ void insert_after(const_iterator Where, InputIterator First, InputIterator Last)
 |---------------|-----------------|
 |*Where*|A posição na lista de encaminhamento de destino em que o primeiro elemento é inserido.|
 |*Contagem*|O número de elementos a serem inseridos.|
-|*Primeiro*|O início do intervalo de inserção.|
-|*último*|O final do intervalo de inserção.|
+|*First*|O início do intervalo de inserção.|
+|*Last*|O final do intervalo de inserção.|
 |*Val*|O elemento adicionado à lista de encaminhamento.|
 |*IList*|A initializer_list a ser inserida.|
 
@@ -719,7 +719,7 @@ void push_front(Type&& val);
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|*Val*|O elemento adicionado ao início da lista de encaminhamento.|
+|*val*|O elemento adicionado ao início da lista de encaminhamento.|
 
 ### <a name="remarks"></a>Comentários
 
@@ -747,7 +747,7 @@ void remove(const Type& val);
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|*Val*|O valor que, se mantido por um elemento, resultará na remoção de tal elemento da lista.|
+|*val*|O valor que, se mantido por um elemento, resultará na remoção de tal elemento da lista.|
 
 ### <a name="remarks"></a>Comentários
 
@@ -768,7 +768,7 @@ void remove_if(Predicate pred);
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|*Pred*|O predicado unário que, se atendido por um elemento, resultará na exclusão de tal elemento da lista.|
+|*pred*|O predicado unário que, se atendido por um elemento, resultará na exclusão de tal elemento da lista.|
 
 ### <a name="remarks"></a>Comentários
 
@@ -790,7 +790,7 @@ void resize(size_type _Newsize, const Type& val);
 |Parâmetro|Descrição|
 |---------------|-----------------|
 |*_Newsize*|O número de elementos na lista de encaminhamento redimensionada.|
-|*Val*|O valor a ser usado para preenchimento.|
+|*val*|O valor a ser usado para preenchimento.|
 
 ### <a name="remarks"></a>Comentários
 
@@ -832,7 +832,7 @@ void sort(Predicate pred);
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|*Pred*|O predicado de ordenação.|
+|*pred*|O predicado de ordenação.|
 
 ### <a name="remarks"></a>Comentários
 
@@ -880,10 +880,10 @@ A forward_list de origem que deve ser inserida na forward_list de destino.
 *Iter*<br/>
 O elemento a ser inserido da forward_list de origem.
 
-*Primeiro*<br/>
+*First*<br/>
 O primeiro elemento no intervalo a ser inserido da forward_list de origem.
 
-*último*<br/>
+*Last*<br/>
 A primeira posição além do intervalo a ser inserida da forward_list de origem.
 
 ### <a name="remarks"></a>Comentários

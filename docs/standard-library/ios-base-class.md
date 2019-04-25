@@ -109,11 +109,11 @@ helpviewer_keywords:
 - std::ios_base [C++], xalloc
 ms.assetid: 0f9e0abc-f70f-49bc-aa1f-003859f56cfe
 ms.openlocfilehash: 8911c3763e6a0c861c162611e1b2617ec26f0cf9
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51333341"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62158585"
 ---
 # <a name="iosbase-class"></a>Classe ios_base
 
@@ -265,7 +265,7 @@ typedef void (__cdecl *event_callback)(
 *_E*<br/>
 O [evento](#event).
 
-*Base*<br/>
+*_Base*<br/>
 O fluxo no qual o evento foi chamado.
 
 *_I*<br/>
@@ -714,7 +714,7 @@ void *& pword(int _Idx);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Idx*<br/>
+*_Idx*<br/>
 O índice do valor a ser armazenado como `pword`.
 
 ### <a name="remarks"></a>Comentários
@@ -905,7 +905,7 @@ fmtflags setf(
 *_Mask*<br/>
 Os sinalizadores a serem ativados.
 
-*Unset*<br/>
+*_Unset*<br/>
 Os sinalizadores para desativar.
 
 ### <a name="return-value"></a>Valor de retorno

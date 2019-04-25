@@ -15,11 +15,11 @@ helpviewer_keywords:
 - CSyncObject [MFC], m_hObject
 ms.assetid: c62ea6eb-a17b-4e01-aed4-321fc435a5f4
 ms.openlocfilehash: 842ff5f98f05425fbbb511d112ae3e4fd65ff076
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57263703"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62324864"
 ---
 # <a name="csyncobject-class"></a>Classe CSyncObject
 
@@ -33,13 +33,13 @@ class CSyncObject : public CObject
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
 |[CSyncObject::CSyncObject](#csyncobject)|Constrói um objeto `CSyncObject`.|
 
-### <a name="public-methods"></a>Métodos Públicos
+### <a name="public-methods"></a>Métodos públicos
 
 |Nome|Descrição|
 |----------|-----------------|
