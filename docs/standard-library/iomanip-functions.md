@@ -27,11 +27,11 @@ helpviewer_keywords:
 - std::setprecision [C++]
 - std::setw [C++]
 ms.openlocfilehash: b5ead8b1000fd6c2708b2450f71da3dc612dc51d
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524580"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62158554"
 ---
 # <a name="ltiomanipgt-functions"></a>Funções &lt;iomanip&gt;
 
@@ -53,7 +53,7 @@ T7 get_money(Money& _Amount, bool _Intl);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Amount*<br/>
+*_Amount*<br/>
 O valor monetário extraído.
 
 *_Intl*<br/>
@@ -97,7 +97,7 @@ T8 put_money(const Money& _Amount, bool _Intl);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Amount*<br/>
+*_Amount*<br/>
 O valor monetário a ser inserido no fluxo.
 
 *_Intl*<br/>
@@ -150,7 +150,7 @@ quoted(const char* str, char delimiter, char escape) // or wide versions
 *str*<br/>
 Um std:: String, char\*, cadeia de caracteres literal de cadeia de caracteres literal ou brutos ou uma versão larga de qualquer um deles (por exemplo, std:: wstring, wchar_t\*).
 
-*delimitador*<br/>
+*delimiter*<br/>
 Um caractere especificado pelo usuário, ou caractere largo, a ser usado como delimitador para o início e o fim da cadeia de caracteres.
 
 *escape*<br/>
@@ -332,7 +332,7 @@ T3 setbase(int _Base);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Base*<br/>
+*_Base*<br/>
 A base numérica.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -362,7 +362,7 @@ T4 setfill(Elem Ch);
 
 ### <a name="parameters"></a>Parâmetros
 
-*CH*<br/>
+*Ch*<br/>
 O caractere que será usado para preencher espaços em uma exibição justificada à direita.
 
 ### <a name="return-value"></a>Valor de retorno

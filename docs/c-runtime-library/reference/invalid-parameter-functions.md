@@ -20,11 +20,11 @@ f1_keywords:
 - _invoke_watson
 ms.assetid: a4d6f1fd-ce56-4783-8719-927151a7a814
 ms.openlocfilehash: e43d5caaeebb6303d209d870c804357117812985
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50478358"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157533"
 ---
 # <a name="invalidparameter-invalidparameternoinfo-invalidparameternoinfonoreturn-invokewatson"></a>_invalid_parameter, _invalid_parameter_noinfo, _invalid_parameter_noinfo_noreturn, _invoke_watson
 
@@ -67,7 +67,7 @@ O nome da função que chamou o manipulador.
 *file_name*<br/>
 O arquivo de código-fonte em que o manipulador foi chamado.
 
-*LINE_NUMBER*<br/>
+*line_number*<br/>
 O número de linha no código-fonte em que o manipulador foi chamado.
 
 *reserved*<br/>
@@ -91,7 +91,7 @@ Quando o manipulador padrão **_invoke_watson** é chamado, se o processador der
 
 |Função|Cabeçalho necessário|
 |--------------|------------------|
-|**invalid_parameter**, **invalid_parameter_noinfo**, **invalid_parameter_noinfo_noreturn**, **_invoke_watson**|\<corecrt.h>|
+|**_invalid_parameter**, **_invalid_parameter_noinfo**, **_invalid_parameter_noinfo_noreturn**, **_invoke_watson**|\<corecrt.h>|
 
 Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 

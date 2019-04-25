@@ -29,11 +29,11 @@ helpviewer_keywords:
 - _ismbbkprint_l function
 ms.assetid: 8d1d3258-1e34-4365-81ed-97c95de25475
 ms.openlocfilehash: 9d30abb0bcb587aeb15087ceb80d60d54ac1bebe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50645972"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157520"
 ---
 # <a name="ismbbkprint-ismbbkprintl"></a>_ismbbkprint, _ismbbkprint_l
 
@@ -61,7 +61,7 @@ Localidade a usar.
 
 ## <a name="return-value"></a>Valor de retorno
 
-**ismbbkprint** retorna um valor diferente de zero se o número inteiro *c* é um texto não ASCII ou símbolo de pontuação não ASCII ou 0 se não for. Por exemplo, somente na página de código 932, **_ismbbkprint** testa se há pontuação katakana ou alfanumérico katakana (intervalo: 0xA1 – 0xDF). **ismbbkprint** usa a localidade atual para configurações de caracteres dependentes da localidade. **ismbbkprint_l** é idêntico, exceto que ele usa a localidade passada. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+**ismbbkprint** retorna um valor diferente de zero se o número inteiro *c* é um texto não ASCII ou símbolo de pontuação não ASCII ou 0 se não for. Por exemplo, na página de código 932 somente, **ismbbkprint** testes katakana ou alfanumérico pontuação katakana (intervalo: 0xA1 a 0xDF). **ismbbkprint** usa a localidade atual para configurações de caracteres dependentes da localidade. **ismbbkprint_l** é idêntico, exceto que ele usa a localidade passada. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Requisitos
 

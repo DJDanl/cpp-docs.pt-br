@@ -16,11 +16,11 @@ helpviewer_keywords:
 - CWorkerThread class
 ms.assetid: be79a832-1345-4a36-a13e-a406cc65286f
 ms.openlocfilehash: d4645f4a57ce70c3683972c22e0f99cbce87ca6b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57287772"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62276647"
 ---
 # <a name="cworkerthread-class"></a>Classe CWorkerThread
 
@@ -49,7 +49,7 @@ A classe que fornece a função de criação de thread, como [CRTThreadTraits](.
 |----------|-----------------|
 |`WorkerClientEntry`||
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|

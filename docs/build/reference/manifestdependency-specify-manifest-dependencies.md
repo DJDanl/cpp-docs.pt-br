@@ -9,11 +9,11 @@ helpviewer_keywords:
 - -MANIFESTDEPENDENCY linker option
 ms.assetid: e4b68313-33a2-4c3e-908e-ac2b9f7d6a73
 ms.openlocfilehash: 676059b8d398fd108d8f8fc163c85a3da3c657b4
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57812220"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62321586"
 ---
 # <a name="manifestdependency-specify-manifest-dependencies"></a>/MANIFESTDEPENDENCY (especificar dependências de manifesto)
 
@@ -74,4 +74,4 @@ O vinculador coletar comentários /MANIFESTDEPENDENCY, eliminar entradas duplica
 ## <a name="see-also"></a>Consulte também
 
 [Referência de vinculador MSVC](linking.md)<br/>
-[Opções do vinculador MSVC](linker-options.md)
+[Opções de vinculador MSVC](linker-options.md)

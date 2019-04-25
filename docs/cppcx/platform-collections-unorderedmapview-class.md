@@ -6,11 +6,11 @@ f1_keywords:
 - collection/Platform::Collections::UnorderedMapView
 ms.assetid: 545a3725-2efd-4cc1-b590-4a7cd2351f61
 ms.openlocfilehash: ebda6f179c365aaa009eb45425a36058105def10
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57743440"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62161610"
 ---
 # <a name="platformcollectionsunorderedmapview-class"></a>Classe Platform::Collections::UnorderedMapView
 
@@ -43,7 +43,7 @@ UnorderedMapView é uma implementação concreta de C++ do [3&gt;{4&gt;Windows::
 
 ### <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
