@@ -12,11 +12,11 @@ helpviewer_keywords:
 - -MAPINFO linker option
 ms.assetid: 533d2bce-f9b7-4fea-ae1c-0b4864c9d10b
 ms.openlocfilehash: 491df211856a9d7ceb02b6a401270f15b9da3b96
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57812363"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62321430"
 ---
 # <a name="mapinfo-include-information-in-mapfile"></a>/MAPINFO (incluir informações em mapfile)
 
@@ -45,4 +45,4 @@ A opção /MAPINFO informa o vinculador a incluir as informações especificadas
 ## <a name="see-also"></a>Consulte também
 
 [Referência de vinculador MSVC](linking.md)<br/>
-[Opções do vinculador MSVC](linker-options.md)
+[Opções de vinculador MSVC](linker-options.md)
