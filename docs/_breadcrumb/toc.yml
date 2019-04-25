@@ -103,15 +103,9 @@
                   tocHref: /cpp/build/reference/
                   topicHref: /cpp/build/reference/c-cpp-building-reference
                   items:
-                    - name: Erros do Compilador
-                      tocHref: /cpp/error-messages/compiler-errors-1/
-                      topicHref: /cpp/compiler-errors-1/c-cpp-build-errors
-                    - name: Avisos do Compilador
-                      tocHref: /cpp/compiler-warnings/
-                      topicHref: /cpp/compiler-warnings/compiler-warnings-c4000-through-C4199
-                    - name: Outras Ferramentas
-                      tocHref: /cpp/error-messages/tool-errors/
-                      topicHref: /cpp/error-messages/tool-errors/vectorizer-and-parallelizer-messages
+                    - name: Erros e avisos da ferramenta e do compilador
+                      tocHref: /cpp/error-messages/
+                      topicHref: /cpp/error-messages/compiler-errors-1/c-cpp-build-errors
             - name: Portabilidade e atualizando
               tocHref: /cpp/porting/
               topicHref: /cpp/porting/visual-cpp-porting-and-upgrading-guide
