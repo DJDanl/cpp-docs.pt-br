@@ -7,11 +7,11 @@ helpviewer_keywords:
 - _com_ptr_t class
 ms.assetid: 3753a8a0-03d4-4cfd-8a9a-74872ea53971
 ms.openlocfilehash: ce19dbc5f55460bb4bdbdee17f4fbbbcc8c6fd60
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50547115"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62154897"
 ---
 # <a name="comptrt-class"></a>Classe _com_ptr_t
 
@@ -52,8 +52,8 @@ Um conjunto de [modelos de função](../cpp/relational-function-templates.md), n
 
 |||
 |-|-|
-|[operador =](../cpp/com-ptr-t-operator-equal.md)|Atribui um novo valor a um existente **com_ptr_t** objeto.|
-|[operadores = =,! =, \<, >, \<=, > =](../cpp/com-ptr-t-relational-operators.md)|Comparar o objeto de ponteiro inteligente com outro ponteiro inteligente, o ponteiro de interface bruto ou NULL.|
+|[operator =](../cpp/com-ptr-t-operator-equal.md)|Atribui um novo valor a um existente **com_ptr_t** objeto.|
+|[operators ==, !=, \<, >, \<=, >=](../cpp/com-ptr-t-relational-operators.md)|Comparar o objeto de ponteiro inteligente com outro ponteiro inteligente, o ponteiro de interface bruto ou NULL.|
 |[Extratores](../cpp/com-ptr-t-extractors.md)|Extrai o ponteiro de interface COM encapsulado.|
 
 **Fim da seção específica da Microsoft**

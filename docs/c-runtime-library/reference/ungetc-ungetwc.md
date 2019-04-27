@@ -29,11 +29,11 @@ helpviewer_keywords:
 - ungetc function
 ms.assetid: e0754f3a-b4c6-408f-90c7-e6387b830d84
 ms.openlocfilehash: c504540f8fbbe14961fa051bb93ebef350c2c1da
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51332381"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62155427"
 ---
 # <a name="ungetc-ungetwc"></a>ungetc, ungetwc
 
@@ -57,7 +57,7 @@ wint_t ungetwc(
 *c*<br/>
 O caractere a ser enviado.
 
-*fluxo*<br/>
+*stream*<br/>
 Ponteiro para a estrutura **FILE**.
 
 ## <a name="return-value"></a>Valor de retorno
@@ -82,7 +82,7 @@ Essas funções são thread-safe e bloqueiam dados confidenciais durante a execu
 
 |Rotina TCHAR.H|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**ungettc**|**ungetc**|**ungetc**|**ungetwc**|
+|**_ungettc**|**ungetc**|**ungetc**|**ungetwc**|
 
 ## <a name="requirements"></a>Requisitos
 

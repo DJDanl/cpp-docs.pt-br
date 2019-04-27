@@ -6,11 +6,11 @@ helpviewer_keywords:
 - client items and OLE containers
 ms.assetid: 231528b5-0744-4f83-8897-083bf55ed087
 ms.openlocfilehash: 0c7f4a63cb9a31b52be2d3574ddad29313df6a4d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57298276"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62153353"
 ---
 # <a name="containers-client-items"></a>Contêineres: Itens de cliente
 
@@ -27,8 +27,8 @@ Cada aplicativo de contêiner deve derivar de pelo menos uma classe de `COleClie
 ## <a name="see-also"></a>Consulte também
 
 [Contêineres](../mfc/containers.md)<br/>
-[Contêineres: Composta de arquivos](../mfc/containers-compound-files.md)<br/>
-[Contêineres: Problemas da Interface do usuário](../mfc/containers-user-interface-issues.md)<br/>
-[Contêineres: Recursos avançados](../mfc/containers-advanced-features.md)<br/>
+[Contêineres: arquivos compostos](../mfc/containers-compound-files.md)<br/>
+[Contêineres: problemas da interface do usuário](../mfc/containers-user-interface-issues.md)<br/>
+[Contêineres: recursos avançados](../mfc/containers-advanced-features.md)<br/>
 [Classe COleClientItem](../mfc/reference/coleclientitem-class.md)<br/>
 [Classe COleServerItem](../mfc/reference/coleserveritem-class.md)

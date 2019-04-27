@@ -21,11 +21,11 @@ helpviewer_keywords:
 - A4509
 ms.assetid: 52b38267-6023-4bdc-a0ef-863362f48eec
 ms.openlocfilehash: 867ef50065c6ed63a4da6d37523bd5a1f3cbadba
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50601676"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62167837"
 ---
 # <a name="arm-assembler-diagnostic-messages"></a>Mensagens de diagnóstico do ARM Assembler
 
@@ -78,7 +78,7 @@ No modo ARM, há uma sintaxe alternativa para especificar constantes.  Em vez de
     MOV r0, #4, #1       ; A2513: Rotation must be even
 ```
 
-> A2557: O número incorreto de bytes a serem write-back
+> A2557: Número incorreto de bytes para write-back
 
 Na estrutura de NEON carregar e armazenar instruções (`VLDn`, `VSTn`), há uma sintaxe alternativa para especificar o write-back para o registro de base.  Em vez de colocar um ponto de exclamação (!) após o endereço, você pode especificar um valor de imediato que indica o deslocamento a ser adicionado ao registro de base.  Se você usar essa sintaxe, você deve especificar o número exato de bytes que foram carregados ou armazenados pela instrução.
 
@@ -113,7 +113,7 @@ No modo ARM, há uma sintaxe alternativa para especificar constantes.  Em vez de
     ANDS r0, r0, #4, #2            ; A4508: Use of this rotated constant is deprecated
 ```
 
-> A4509: Este formulário da instrução condicional foi preterido
+> A4509: Essa forma da instrução condicional foi preterida
 
 Essa forma da instrução condicional foi substituída pelo ARM na arquitetura ARMv8. É recomendável que você altere o código para usar ramificações condicionais. Para ver quais instruções condicionais ainda são suportadas, consulte o [Manual de referência de arquitetura ARM](http://go.microsoft.com/fwlink/p/?linkid=246464).
 

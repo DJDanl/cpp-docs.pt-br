@@ -7,11 +7,11 @@ helpviewer_keywords:
 - user interfaces
 ms.assetid: f5daf2c1-bc08-4b71-9b03-da2c0aab5764
 ms.openlocfilehash: bf1c3f677ac8cd2e3ad91ef694f0637af8a6f578
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57278607"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62180766"
 ---
 # <a name="user-interface-elements-mfc"></a>Elementos da interface do usuário (MFC)
 
@@ -43,7 +43,7 @@ Descreve o gerenciamento de dados no MFC.
 [Modos de exibição de formulário](../mfc/form-views-mfc.md)<br/>
 Descreve como adicionar suporte de formulários ao seu aplicativo.
 
-[Ajuda em HTML: Ajuda contextual para seus programas](../mfc/html-help-context-sensitive-help-for-your-programs.md)<br/>
+[Ajuda HTML: ajuda contextual para os programas](../mfc/html-help-context-sensitive-help-for-your-programs.md)<br/>
 Descreve como adicionar uma ajuda contextual a seus aplicativos usando a Ajuda em HTML.
 
 [Grupos com guias da MDI](../mfc/mdi-tabbed-groups.md)<br/>

@@ -15,11 +15,11 @@ helpviewer_keywords:
 - OLE IUnknown
 ms.assetid: 2b67016a-d78e-4d60-925f-c28ec8fb6180
 ms.openlocfilehash: f793c7d7303a49057e46c32eb658ea7eea8e9ccc
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57267266"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62186723"
 ---
 # <a name="ole-background-mfc-implementation"></a>Tela de fundo OLE: Implementação do MFC
 
@@ -47,4 +47,4 @@ Para obter mais informações sobre como as Microsoft Foundation classes OLE imp
 ## <a name="see-also"></a>Consulte também
 
 [Tela de fundo OLE](../mfc/ole-background.md)<br/>
-[Tela de fundo OLE: Estratégias de implementação](../mfc/ole-background-implementation-strategies.md)
+[Tela de fundo OLE: estratégias de implementação](../mfc/ole-background-implementation-strategies.md)

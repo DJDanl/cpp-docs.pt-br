@@ -44,11 +44,11 @@ helpviewer_keywords:
 - data types [C++], void
 ms.assetid: 58b0106a-0406-4b74-a430-7cbd315c0f89
 ms.openlocfilehash: f4af392ed559349b0e49fd26f3ecb4406a70b74b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50601364"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62153795"
 ---
 # <a name="fundamental-types--c"></a>Tipos fundamentais (C++)
 
@@ -75,7 +75,7 @@ A tabela a seguir explica as restrições de tamanhos de tipo. Essas restriçõe
 ||**__int8**, **__int16**, **__int32**, **__int64**|Inteiro dimensionado `__int n`, onde `n` é o tamanho, em bits, da variável de inteiro. **__int8**, **__int16**, **__int32** e **__int64** são palavras-chave específicas da Microsoft. Nem todos os tipos estão disponíveis em todas as arquiteturas. (**__int128** não tem suporte.)|
 ||**long**|Tipo de **longo** (ou **long int**) é um tipo integral que é maior ou igual ao tamanho do tipo **int**.<br /><br /> Objetos do tipo **longo** podem ser declarados como **assinado longa** ou **unsigned long**. **Assinado longa** é um sinônimo de **longo**.|
 ||**long long**|Maior do que um unsigned **longo**.<br /><br /> Objetos do tipo **long long** podem ser declarados como **assinado longo longo** ou **longo longo sem sinal**. **assinado longo longo** é um sinônimo de **long long**.|
-||**wchar_t**, **wchar_t**|Uma variável do tipo **wchar_t** designa um tipo de caractere multibyte ou caracteres largos. Por padrão, **wchar_t** é um tipo nativo, mas você pode usar [/Zc:wchar_t-](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) fazer **wchar_t** um typedef para **unsigned short**. O **wchar_t** tipo é um sinônimo de específico da Microsoft para nativo **wchar_t** tipo.<br /><br /> Use o prefixo L antes de um caractere ou literal de cadeia de caracteres para designar o tipo de caractere largo.|
+||**wchar_t**, **__wchar_t**|Uma variável do tipo **wchar_t** designa um tipo de caractere multibyte ou caracteres largos. Por padrão, **wchar_t** é um tipo nativo, mas você pode usar [/Zc:wchar_t-](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) fazer **wchar_t** um typedef para **unsigned short**. O **wchar_t** tipo é um sinônimo de específico da Microsoft para nativo **wchar_t** tipo.<br /><br /> Use o prefixo L antes de um caractere ou literal de cadeia de caracteres para designar o tipo de caractere largo.|
 |Ponto flutuante|**float**|Tipo de **float** é flutuante menor tipo de ponto.|
 ||**double**|Tipo de **duplas** é um tipo de ponto flutuante que é maior que ou igual ao tipo **float**, mas menor ou igual ao tamanho do tipo **longo duplo**.<br /><br /> Específico da Microsoft: A representação de **longo duplo** e **duplo** é idêntico. No entanto, **longo duplo** e **duplo** são tipos separados.|
 ||**long double**|Tipo de **longo duplo** é um tipo de ponto que é maior que ou igual ao tipo flutuante **duplo**.|
@@ -88,8 +88,8 @@ A tabela a seguir lista a quantidade de armazenamento necessária para tipos fun
 
 |Tipo|Tamanho|
 |----------|----------|
-|**bool**, **char**, **unsigned char**, **assinado char**, **__int8**|1 byte|
-|**__int16**, **curto**, **unsigned short**, **wchar_t**, **wchar_t**|2 bytes|
+|**bool**, **char**, **unsigned char**, **signed char**, **__int8**|1 byte|
+|**__int16**, **short**, **unsigned short**, **wchar_t**, **__wchar_t**|2 bytes|
 |**float**, **__int32**, **int**, **unsigned int**, **long**, **unsigned long**|4 bytes|
 |**duplo**, **__int64**, **long double**, **long long**|8 bytes|
 

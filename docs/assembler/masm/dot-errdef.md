@@ -7,11 +7,11 @@ helpviewer_keywords:
 - .ERRDEF directive
 ms.assetid: 07e39826-56f7-4734-a9de-5ff72879af10
 ms.openlocfilehash: 61d78bc026d53cf8fafd99de8e6e29566938631e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50520010"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62185207"
 ---
 # <a name="errdef"></a>.ERRDEF
 
@@ -19,7 +19,7 @@ Gera um erro se *nome* é um rótulo definido anteriormente, uma variável ou um
 
 ## <a name="syntax"></a>Sintaxe
 
-> . Nome ERRDEF [[, mensagem]]
+> .ERRDEF name [[, message]]
 
 ## <a name="see-also"></a>Consulte também
 

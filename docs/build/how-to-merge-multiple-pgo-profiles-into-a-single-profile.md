@@ -6,11 +6,11 @@ helpviewer_keywords:
 - profile-guided optimizations, merging profiles
 ms.assetid: aab686b5-59dd-40d1-a04b-5064690f65a6
 ms.openlocfilehash: 451c0f30a271f5dce3974e172766da4a23340b93
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57824329"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62188867"
 ---
 # <a name="how-to-merge-multiple-pgo-profiles-into-a-single-profile"></a>Como: Mesclar vários perfis PGO em um único perfil
 

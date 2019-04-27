@@ -9,11 +9,11 @@ helpviewer_keywords:
 - identifiers [C++]
 ms.assetid: 03a0dfb1-4530-4cdf-8295-5ea4dca4c1b8
 ms.openlocfilehash: 6f87486d0bb2614a3b2542cf050172a47f152c4c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50653655"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62184595"
 ---
 # <a name="identifiers-c"></a>Identificadores (C++)
 
@@ -58,7 +58,7 @@ Os seguintes caracteres são permitidos como qualquer caractere em um identifica
 
 Esses intervalos de número de ponto de código Unicode também são permitidos nomes de caracteres como universais para qualquer caractere em um identificador, exceto o primeiro:
 
-- 0300-036F 1DC0 1DFF, D 20 0-20FF, FE20 FE2F
+- 0300-036F, 1DC0-1DFF, 20D0-20FF, FE20-FE2F
 
 **Seção específica da Microsoft**
 
@@ -95,7 +95,7 @@ O primeiro caractere de um identificador deve ser um caractere alfabético, maiu
 
 Os identificadores não podem ter exatamente a mesma grafia e caixa (maiúscula ou minúscula) que as palavras-chave. Os identificadores que contêm palavras-chave são aceitos. Por exemplo, `Pint` é um identificador legal, mesmo que ele contenha **int**, que é uma palavra-chave.
 
-Uso de dois caracteres sublinhados sequenciais ( **_** ) em um identificador ou um único sublinhado à esquerda seguido por uma letra maiuscula, é reservado para implementações de C++ em todos os escopos. Você deve evitar o uso de um sublinhado inicial seguido por uma letra minúscula para nomes com o escopo de arquivo por causa de possíveis conflitos com identificadores reservados atuais ou futuros.
+Uso de dois caracteres sublinhados sequenciais ( **_** ) em um identificador ou um único sublinhado à esquerda seguido por uma letra maiuscula, é reservado para C++ implementações em todos os escopos. Você deve evitar o uso de um sublinhado inicial seguido por uma letra minúscula para nomes com o escopo de arquivo por causa de possíveis conflitos com identificadores reservados atuais ou futuros.
 
 ## <a name="see-also"></a>Consulte também
 

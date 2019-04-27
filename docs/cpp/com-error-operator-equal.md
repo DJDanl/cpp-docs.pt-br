@@ -9,11 +9,11 @@ helpviewer_keywords:
 - operator = _com_error objects
 ms.assetid: b9cc4094-d055-450c-b45a-0a95317488f8
 ms.openlocfilehash: 68eb486ec109d98890ebf3adc0c086368380142b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50449589"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62154988"
 ---
 # <a name="comerroroperator-"></a>_com_error::operator =
 
@@ -31,7 +31,7 @@ _com_error& operator = (
 
 #### <a name="parameters"></a>Parâmetros
 
-*Isso*<br/>
+*that*<br/>
 Um objeto `_com_error`.
 
 **Fim da seção específica da Microsoft**

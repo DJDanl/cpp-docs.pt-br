@@ -12,11 +12,11 @@ helpviewer_keywords:
 - exporting DLLs [C++], AFX_EXT_CLASS macro
 ms.assetid: 6b72cb2b-e92e-4ecd-bcab-c335e1d1cfde
 ms.openlocfilehash: bcfdc94e8db80daec227d77c20ecec6b14d5af11
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57821216"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62195323"
 ---
 # <a name="exporting-and-importing-using-afxextclass"></a>Exportando e importando usando AFX_EXT_CLASS
 
@@ -114,7 +114,7 @@ Como o MFC sempre usa o `AFX_DATA` símbolo em itens de dados, ele define em sua
 
 - [Determinar qual método de exportação usar](determining-which-exporting-method-to-use.md)
 
-- [Importar para um aplicativo usando __declspec(dllimport)](importing-into-an-application-using-declspec-dllimport.md)
+- [Importação para um aplicativo usando __declspec(dllimport)](importing-into-an-application-using-declspec-dllimport.md)
 
 - [Inicialize um DLL](run-time-library-behavior.md#initializing-a-dll)
 
@@ -122,7 +122,7 @@ Como o MFC sempre usa o `AFX_DATA` símbolo em itens de dados, ele define em sua
 
 - [Nomes decorados](reference/decorated-names.md)
 
-- [Importando e exportando funções embutidas](importing-and-exporting-inline-functions.md)
+- [Importação e exportação de funções embutidas](importing-and-exporting-inline-functions.md)
 
 - [Importações mútuas](mutual-imports.md)
 

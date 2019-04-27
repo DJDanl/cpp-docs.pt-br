@@ -19,11 +19,11 @@ helpviewer_keywords:
 - std::function [C++], target_type
 ms.assetid: 7b5ca76b-9ca3-4d89-8fcf-cad70a4aeae6
 ms.openlocfilehash: 44c7691cc967b13b4fa94a7c51da57b7bf4d511f
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518717"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62159711"
 ---
 # <a name="function-class"></a>Classe function
 
@@ -82,7 +82,7 @@ public:
 *Fty*<br/>
 O tipo de função a ser encapsulada.
 
-*AX*<br/>
+*Ax*<br/>
 A função do alocador.
 
 ## <a name="remarks"></a>Comentários
@@ -162,7 +162,7 @@ Um objeto que pode ser chamado.
 *_Fnref*<br/>
 Um wrapper de referência que contém um objeto que pode ser chamado.
 
-*AX*<br/>
+*Ax*<br/>
 Um objeto alocador.
 
 ### <a name="remarks"></a>Comentários
@@ -197,7 +197,7 @@ template <class Fx, class Alloc>
 *right*<br/>
 O objeto de função a ser copiado.
 
-*FX*<br/>
+*Fx*<br/>
 O tipo do objeto que pode ser chamado.
 
 *_Func*<br/>
@@ -206,7 +206,7 @@ O objeto que pode ser chamado a ser encapsulado.
 *ALLOC*<br/>
 O tipo do alocador.
 
-*AX*<br/>
+*Ax*<br/>
 O alocador.
 
 *_Fnref*<br/>
@@ -344,7 +344,7 @@ result_type operator()(
 *TN*<br/>
 O tipo do enésimo argumento de chamada.
 
-*TN*<br/>
+*tN*<br/>
 O enésimo argumento de chamada.
 
 ### <a name="remarks"></a>Comentários
@@ -400,7 +400,7 @@ Uma constante de ponteiro nulo.
 *right*<br/>
 O objeto de função a ser copiado.
 
-*Fn*<br/>
+*fn*<br/>
 O objeto que pode ser chamado a ser encapsulado.
 
 *fnref*<br/>

@@ -454,24 +454,24 @@ helpviewer_keywords:
 - HRESULT typedef
 ms.assetid: a057c776-7caa-4605-8f33-9815cf6f9b27
 ms.openlocfilehash: fa1156aa6406f1c34712e845612147a42b753184
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50663327"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62180141"
 ---
 # <a name="reference-concurrency-runtime"></a>Referência (Tempo de Execução de Simultaneidade)
 
 Esta seção contém informações de referência para o tempo de execução de simultaneidade.
 
 > [!Note]
-> O padrão da linguagem C++ reserva o uso de identificadores que começam com um caractere de sublinhado (_) para implementações, como bibliotecas. Não use esses nomes em seu código. O comportamento de elementos de código cujos nomes seguem essa convenção não é garantido e está sujeito a alteração em versões futuras. Por esses motivos, esses elementos de código são omitidos da documentação do tempo de execução de simultaneidade.
+> O C++ padrão de linguagem reserva o uso de identificadores que começam com um caractere de sublinhado (_) para implementações, como bibliotecas. Não use esses nomes em seu código. O comportamento de elementos de código cujos nomes seguem essa convenção não é garantido e está sujeito a alteração em versões futuras. Por esses motivos, esses elementos de código são omitidos da documentação do tempo de execução de simultaneidade.
 
 ## <a name="in-this-section"></a>Nesta seção
 
 [Namespace de simultaneidade](concurrency-namespace.md)<br/>
 O namespace de simultaneidade fornece classes e funções que permitem que você acessam no tempo de execução de simultaneidade, uma estrutura de programação simultânea para C++. Para obter mais informações, consulte [Tempo de Execução de Simultaneidade](../concurrency-runtime.md).
 
-[namespace STD](std-namespace.md)
+[std namespace](std-namespace.md)
 
-[namespace stdx](stdx-namespace.md)
+[stdx namespace](stdx-namespace.md)

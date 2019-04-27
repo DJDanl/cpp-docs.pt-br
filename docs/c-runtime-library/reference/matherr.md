@@ -23,11 +23,11 @@ helpviewer_keywords:
 - matherr function
 ms.assetid: b600d66e-165a-4608-a856-8fb418d46760
 ms.openlocfilehash: b830dc940fa2abb131f70130033d27b057412137
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51329625"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62156897"
 ---
 # <a name="matherr"></a>_matherr
 
@@ -74,11 +74,11 @@ O **tipo** membro Especifica o tipo de erro de matemática. Ele é um dos valore
 |Macro|Significado|
 |-|-|
 | **_DOMAIN** | Erro de argumento de domínio |
-| **SING** | Singularidade do argumento |
-| **OVERFLOW** | Erro de intervalo de estouro |
-| **PLOSS** | Perda parcial de significância |
-| **TLOSS** | Perda total de significância |
-| **UNDERFLOW** | O resultado é muito pequeno para ser representado. (Não há suporte para essa condição no momento.) |
+| **_SING** | Singularidade do argumento |
+| **_OVERFLOW** | Erro de intervalo de estouro |
+| **_PLOSS** | Perda parcial de significância |
+| **_TLOSS** | Perda total de significância |
+| **_UNDERFLOW** | O resultado é muito pequeno para ser representado. (Não há suporte para essa condição no momento.) |
 
 O membro da estrutura **name** é um ponteiro de uma cadeia de caracteres terminada com caractere nulo, que contém o nome da função que causou o erro. Os membros da estrutura **arg1** e **arg2** especificam os valores que causaram o erro. Se apenas um argumento for fornecido, ele é armazenado em **arg1**.
 

@@ -2,11 +2,11 @@
 title: Visão geral das convenções de ABI ARM64
 ms.date: 03/27/2019
 ms.openlocfilehash: 4c0f89f97529d4cd70e1449c90b131d25d30f9ee
-ms.sourcegitcommit: ac5c04b347e817eeece6e2c98e60236fc0e307a4
-ms.translationtype: MT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58639440"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62195495"
 ---
 # <a name="overview-of-arm64-abi-conventions"></a>Visão geral das convenções de ABI ARM64
 
@@ -231,7 +231,7 @@ Código gerado dinamicamente deve ser descrito com tabelas de função dinâmico
 
 ## <a name="cycle-counter"></a>Contador de ciclo
 
-Todas as CPUs ARMv8 são necessários para dar suporte a um contador de ciclo de registrar um registro de 64 bits que configura o Windows para serem legíveis em qualquer nível de exceção, incluindo o modo de usuário. Ele pode ser acessado por meio de PMCCNTR_EL0 especial se registrar usando o opcode MSR no código de assembly, ou o `_ReadStatusReg` intrínseco no código C/C++.
+Todas as CPUs ARMv8 são necessários para dar suporte a um contador de ciclo de registrar um registro de 64 bits que configura o Windows para serem legíveis em qualquer nível de exceção, incluindo o modo de usuário. Ele pode ser acessado por meio de PMCCNTR_EL0 especial se registrar usando o opcode MSR no código de assembly, ou o `_ReadStatusReg` intrínseco em C /C++ código.
 
 O contador de ciclo aqui é um verdadeiro contador de ciclo, não um relógio de parede. A frequência de contagem variam de acordo com a frequência do processador. Se você achar que você deve saber a frequência do contador de ciclo, você não deve estar usando o contador de ciclo de. Em vez disso, você deseja medir a hora do relógio, em que você deve usar `QueryPerformanceCounter`.
 

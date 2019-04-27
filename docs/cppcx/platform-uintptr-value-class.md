@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Platform::UIntPtr Struct
 ms.assetid: dc4f5176-4c4d-4209-b68e-eb30f2c2465b
 ms.openlocfilehash: 8a49438f610af47831aa856e7bd4c33b90feef65
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57746338"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62182971"
 ---
 # <a name="platformuintptr-value-class"></a>Platform::classe de valor UIntPtr
 
@@ -36,4 +36,4 @@ public value struct UintPtr
 
 ## <a name="see-also"></a>Consulte também
 
-[Namespace Platform](../cppcx/platform-namespace-c-cx.md)
+[Namespace de plataforma](../cppcx/platform-namespace-c-cx.md)

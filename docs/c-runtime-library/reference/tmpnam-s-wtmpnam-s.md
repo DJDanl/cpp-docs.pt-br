@@ -31,11 +31,11 @@ helpviewer_keywords:
 - wtmpnam_s function
 ms.assetid: e70d76dc-49f5-4aee-bfa2-f1baa2bcd29f
 ms.openlocfilehash: 9bf994d16362ef461d8d25d72466721ba9a5890f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50497481"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62155531"
 ---
 # <a name="tmpnams-wtmpnams"></a>tmpnam_s, _wtmpnam_s
 
@@ -78,7 +78,7 @@ Ambas as funções retornarão 0 se tiverem êxito ou um número de erro em caso
 
 |||||
 |-|-|-|-|
-|*str*|*sizeInChars*|**Valor retornado**|**Conteúdo do***str*|
+|*str*|*sizeInChars*|**Valor retornado**|**Contents of**  *str*|
 |**NULL**|qualquer|**EINVAL**|não modificado|
 |Não **nulo** (aponta para a memória válida)|muito curto|**ERANGE**|não modificado|
 

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - declarators, functions
 ms.assetid: 33ba01d5-75b5-48d2-8eab-5483ac7d2274
 ms.openlocfilehash: aafd3be3b27fbe134b380a29083b4ca36177e702
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176478"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62154121"
 ---
 # <a name="functions-c"></a>Funções (C++)
 
@@ -196,7 +196,7 @@ Quando uma função modifica um argumento que é passado por referência, ele mo
 void DoSomething(const std::string& input){...}
 ```
 
-**C++ 11:** para manipular explicitamente os argumentos são passados por referência de rvalue ou referência de lvalue, use um duplo e comercial no parâmetro para indicar uma referência universal:
+**C++ 11:**  Para manipular explicitamente os argumentos são passados por referência de rvalue ou referência de lvalue, use um duplo e comercial no parâmetro para indicar uma referência universal:
 
 ```cpp
 void DoSomething(const std::string&& input){...}
@@ -363,7 +363,7 @@ Há várias maneiras de retornar mais de um valor de uma função:
     }
     ```
 
-1. **Visual Studio 2017 versão 15.3 e posterior** (disponível com [/std: c + + 17](../build/reference/std-specify-language-standard-version.md)): uso estruturado de associações. A vantagem de associações estruturadas é que as variáveis que armazenam os valores de retorno são inicializadas ao mesmo tempo em que são declarados, que, em alguns casos pode ser significativamente mais eficiente. Nesta instrução –`auto[x, y, z] = f();`– os colchetes introduzir e inicializar nomes que estão no escopo para o bloco de função inteira.
+1. **Visual Studio 2017 versão 15.3 e posterior** (disponível com [/std: c + + 17](../build/reference/std-specify-language-standard-version.md)): Use associações estruturadas. A vantagem de associações estruturadas é que as variáveis que armazenam os valores de retorno são inicializadas ao mesmo tempo em que são declarados, que, em alguns casos pode ser significativamente mais eficiente. Nesta instrução –`auto[x, y, z] = f();`– os colchetes introduzir e inicializar nomes que estão no escopo para o bloco de função inteira.
 
     ```cpp
     #include <tuple>

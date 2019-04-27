@@ -5,11 +5,11 @@ f1_keywords:
 - typedef_cpp
 ms.assetid: af1c24d2-4bfd-408a-acfc-482e264232f5
 ms.openlocfilehash: 155f1868123514dfec89ab448ef22f2da225c4d3
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51521460"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62155284"
 ---
 # <a name="aliases-and-typedefs-c"></a>Aliases e typedefs (C++)
 
@@ -347,7 +347,7 @@ typedef struct {
 } POINT;
 ```
 
-O exemplo anterior declara uma classe chamada `POINT` usando a classe sem-nome **typedef** sintaxe. `POINT` é tratado como um nome de classe; no entanto, as seguintes restrições se aplicam aos nomes introduzidos desta forma:
+O exemplo anterior declara uma classe chamada `POINT` usando a classe sem-nome **typedef** sintaxe. `POINT` é tratado como um nome de classe; No entanto, as seguintes restrições se aplicam aos nomes introduzidos desta forma:
 
 - O nome (o sinônimo) não pode aparecer após um **classe**, **struct**, ou **união** prefixo.
 

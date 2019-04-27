@@ -9,11 +9,11 @@ helpviewer_keywords:
 - __declspec(dllimport) keyword [C++]
 ms.assetid: 7c44c2aa-2117-4cec-9615-a65bfd3f8f7b
 ms.openlocfilehash: 882010cd28c291e9f49ca0f7dd9d646c70130184
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57815821"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62188841"
 ---
 # <a name="importing-and-exporting"></a>Importando e exportando
 
@@ -31,7 +31,7 @@ Você pode usar arquivos. def [importar para um aplicativo](importing-using-def-
 
 ## <a name="using-declspec"></a>Usando declspec
 
-Usos do Visual C++ **__declspec(dllimport)** e **dllexport** para substituir o **export** palavra-chave usada anteriormente nas versões de 16 bits do Visual C++.
+O Visual C++ usa **__declspec(dllimport)** e **dllexport** para substituir o **export** palavra-chave usada anteriormente nas versões de 16 bits do Visual C++.
 
 Não é necessário usar **__declspec(dllimport)** para seu código seja compilado corretamente, mas fazer isso permite que o compilador gere um código melhor. O compilador é capaz de gerar um código melhor, porque ele pode determinar se existe uma função em uma DLL ou não, que permite que o compilador a produzir um código que ignora um nível de indireção que normalmente estaria presente em uma chamada de função que cruzaram um limite de DLL. No entanto, você deve usar **__declspec(dllimport)** para importar as variáveis usadas em uma DLL.
 

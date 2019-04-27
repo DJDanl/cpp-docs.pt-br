@@ -7,11 +7,11 @@ helpviewer_keywords:
 - applications [MFC], managing
 ms.assetid: b72f4154-24db-4e75-bca3-6873e2459c15
 ms.openlocfilehash: 78b9ae467d3504f3922c540a3e4cd100322d8f4e
-ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "57808385"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62151273"
 ---
 # <a name="application-information-and-management"></a>Informações e gerenciamento do aplicativo
 
@@ -682,7 +682,7 @@ A biblioteca Microsoft Foundation Class registra automaticamente várias classes
 
 O nome registrado para uma classe por `AfxRegisterWndClass` depende exclusivamente os parâmetros. Se você chamar `AfxRegisterWndClass` várias vezes com parâmetros idênticos, ele só registra uma classe na primeira chamada. As chamadas subsequentes para `AfxRegisterWndClass` com parâmetros idênticos simplesmente retornar o nome de classe já registrado.
 
-Se você chamar `AfxRegisterWndClass` para várias classes derivadas de CWnd com parâmetros idênticos, em vez de obter uma classe de janela separada para cada classe, cada classe compartilha a mesma classe de janela. Isso pode causar problemas se o estilo de classe CS_CLASSDC é usado. Em vez de várias classes de janela CS_CLASSDC, você acaba com uma classe de janela CS_CLASSDC e todas as janelas de C++ que usam esse compartilhamento de classe mesmo controlador de domínio. Para evitar esse problema, chame [AfxRegisterClass](#afxregisterclass) para registrar a classe.
+Se você chamar `AfxRegisterWndClass` para várias classes derivadas de CWnd com parâmetros idênticos, em vez de obter uma classe de janela separada para cada classe, cada classe compartilha a mesma classe de janela. Isso pode causar problemas se o estilo de classe CS_CLASSDC é usado. Em vez de várias classes de janela CS_CLASSDC, você acabará com uma classe de janela CS_CLASSDC e todos os C++ windows que usam essa classe compartilham o mesmo controlador de domínio. Para evitar esse problema, chame [AfxRegisterClass](#afxregisterclass) para registrar a classe.
 
 Consulte a nota técnica [TN001: Registro da classe Window](../../mfc/tn001-window-class-registration.md) para obter mais informações sobre o registro de classe de janela e o `AfxRegisterWndClass` função.
 

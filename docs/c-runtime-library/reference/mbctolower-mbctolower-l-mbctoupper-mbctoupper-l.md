@@ -43,11 +43,11 @@ helpviewer_keywords:
 - mbctoupper function
 ms.assetid: 787fab71-3224-4ed7-bc93-4dcd8023fc54
 ms.openlocfilehash: e620af526e5f0af02868bba4ba635e9ed6e34ff6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50539679"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62156792"
 ---
 # <a name="mbctolower-mbctolowerl-mbctoupper-mbctoupperl"></a>_mbctolower, _mbctolower_l, _mbctoupper, _mbctoupper_l
 
@@ -93,8 +93,8 @@ As funções testam um caractere *c* e, se possível, aplicam uma das conversõe
 
 |Rotinas|Converte|
 |--------------|--------------|
-|**mbctolower**, **mbctolower_l**|Caracteres maiúsculos para caracteres minúsculos.|
-|**mbctoupper**, **mbctoupper_l**|Caracteres minúsculos para caracteres maiúsculos.|
+|**_mbctolower**, **_mbctolower_l**|Caracteres maiúsculos para caracteres minúsculos.|
+|**_mbctoupper**, **_mbctoupper_l**|Caracteres minúsculos para caracteres maiúsculos.|
 
 O valor de saída é afetado pela configuração da categoria **LC_CTYPE** da localidade. Consulte [setlocale](setlocale-wsetlocale.md) para obter mais informações. A versão dessa função sem o **l** sufixo usa a localidade atual desse comportamento dependente da localidade; a versão com o **l** sufixo é idêntico, exceto que ele usa o parâmetro de localidade passado em seu lugar. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
@@ -104,17 +104,17 @@ Nas versões anteriores, **mbctolower** foi chamado **jtolower**, e **mbctoupper
 
 |Rotina Tchar.h|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**totlower**|**tolower**|**_mbctolower**|**towlower**|
+|**_totlower**|**tolower**|**_mbctolower**|**towlower**|
 |**_totlower_l**|**_tolower_l**|**_mbctolower_l**|**_towlower_t**|
-|**totupper**|**toupper**|**_mbctoupper**|**towupper**|
+|**_totupper**|**toupper**|**_mbctoupper**|**towupper**|
 |**_totupper_l**|**toupper_l**|**_mbctoupper_l**|**_towupper_l**|
 
 ## <a name="requirements"></a>Requisitos
 
 |Rotinas|Cabeçalho necessário|
 |--------------|---------------------|
-|**mbctolower**, **mbctolower_l**|\<mbstring.h>|
-|**mbctoupper**, **mbctoupper_l**|\<mbstring.h>|
+|**_mbctolower**, **_mbctolower_l**|\<mbstring.h>|
+|**_mbctoupper**, **_mbctoupper_l**|\<mbstring.h>|
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 

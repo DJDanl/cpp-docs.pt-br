@@ -26,11 +26,11 @@ helpviewer_keywords:
 - _locking function
 ms.assetid: 099aaac1-d4ca-4827-aed6-24dff9844150
 ms.openlocfilehash: 90327ed3388d4f18e0f64f92c33112c9ddd800f5
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327038"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157456"
 ---
 # <a name="locking"></a>_locking
 
@@ -78,11 +78,11 @@ O **Locking** função bloqueia ou desbloqueia *nbytes* bytes do arquivo especif
 
 |*modo* valor|Efeito|
 |-|-|
-| **LK_LOCK** | Bloqueia os bytes especificados. Se os bytes não puderem ser bloqueados, o programa tentará novamente após 1 segundo. Se, após 10 tentativas, os bytes não puderem ser bloqueados, a constante retornará um erro. |
-| **LK_NBLCK** | Bloqueia os bytes especificados. Se os bytes não puderem ser bloqueados, a constante retornará um erro. |
-| **LK_NBRLCK** | Mesmo que **lk_nblck**. |
-| **LK_RLCK** | Mesmo que **lk_lock**. |
-| **LK_UNLCK** | Desbloqueia os bytes especificados, que devem ter sido bloqueados anteriormente. |
+| **_LK_LOCK** | Bloqueia os bytes especificados. Se os bytes não puderem ser bloqueados, o programa tentará novamente após 1 segundo. Se, após 10 tentativas, os bytes não puderem ser bloqueados, a constante retornará um erro. |
+| **_LK_NBLCK** | Bloqueia os bytes especificados. Se os bytes não puderem ser bloqueados, a constante retornará um erro. |
+| **_LK_NBRLCK** | Same as **_LK_NBLCK**. |
+| **_LK_RLCK** | Mesmo que **lk_lock**. |
+| **_LK_UNLCK** | Desbloqueia os bytes especificados, que devem ter sido bloqueados anteriormente. |
 
 Várias regiões de um arquivo que não se sobrepõem podem ser bloqueadas. Uma região que está sendo desbloqueada deve ter sido bloqueada anteriormente. **Locking** mescla regiões adjacentes; se duas regiões bloqueadas forem adjacentes, cada região deve ser desbloqueada separadamente. Regiões devem ser bloqueadas por um curto período de tempo e devem ser desbloqueadas antes de fechar um arquivo ou sair do programa.
 

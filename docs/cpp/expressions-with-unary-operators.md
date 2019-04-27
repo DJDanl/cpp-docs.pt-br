@@ -7,11 +7,11 @@ helpviewer_keywords:
 - expressions [C++], operators
 ms.assetid: 1217685b-b85d-4b48-9ff4-d90f56a26c1b
 ms.openlocfilehash: a13b86755a5e309a51a0e2e14faa1157b7e95ea0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559040"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62183864"
 ---
 # <a name="expressions-with-unary-operators"></a>Expressões com operadores unários
 
@@ -51,21 +51,21 @@ As formas possíveis de expressões unárias são estas:
 
 - *postfix-expression*
 
-- `++` *expressão unária*
+- `++` *unary-expression*
 
-- `--` *expressão unária*
+- `--` *unary-expression*
 
-- *operador unário* *cast-expression*
+- *unary-operator* *cast-expression*
 
-- **sizeof** *expressão unária*
+- **sizeof** *unary-expression*
 
-- `sizeof(` *nome do tipo* `)`
+- `sizeof(` *type-name* `)`
 
-- `decltype(` *Expressão* `)`
+- `decltype(` *expression* `)`
 
-- *expressão de alocação*
+- *allocation-expression*
 
-- *expressão de desalocação*
+- *deallocation-expression*
 
 Qualquer *postfix-expression* é considerada uma *expressão unária*, e porque qualquer expressão primária é considerada uma *postfix-expression*, é de todas as expressões primárias considerado um *expressão unária* também. Para obter mais informações, consulte [expressões pós-fixadas](../cpp/postfix-expressions.md) e [expressões primárias](../cpp/primary-expressions.md).
 

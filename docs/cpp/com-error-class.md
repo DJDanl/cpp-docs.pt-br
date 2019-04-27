@@ -7,11 +7,11 @@ helpviewer_keywords:
 - _com_error class
 ms.assetid: 70dafa69-b1fb-4a5c-9249-e857e0793d42
 ms.openlocfilehash: 8ed1521cbf768e5b473281e5f9b7c6597cdc4692
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519549"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62155196"
 ---
 # <a name="comerror-class"></a>Classe _com_error
 
@@ -29,7 +29,7 @@ Um **com_error** objeto representa uma condição de exceção detectada pelas f
 
 |||
 |-|-|
-|[operador =](../cpp/com-error-operator-equal.md)|Atribui um existente **com_error** objeto para outro.|
+|[operator =](../cpp/com-error-operator-equal.md)|Atribui um existente **com_error** objeto para outro.|
 
 ### <a name="extractor-functions"></a>Funções de extrator
 
@@ -45,7 +45,7 @@ Um **com_error** objeto representa uma condição de exceção detectada pelas f
 |-|-|
 |[Descrição](../cpp/com-error-description.md)|Chama a função `IErrorInfo::GetDescription`.|
 |[HelpContext](../cpp/com-error-helpcontext.md)|Chama a função `IErrorInfo::GetHelpContext`.|
-|[Arquivo de ajuda](../cpp/com-error-helpfile.md)|Chama a função `IErrorInfo::GetHelpFile`.|
+|[HelpFile](../cpp/com-error-helpfile.md)|Chama a função `IErrorInfo::GetHelpFile`.|
 |[Source](../cpp/com-error-source.md)|Chama a função `IErrorInfo::GetSource`.|
 |[GUID](../cpp/com-error-guid.md)|Chama a função `IErrorInfo::GetGUID`.|
 

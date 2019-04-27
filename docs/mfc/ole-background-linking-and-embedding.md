@@ -11,11 +11,11 @@ helpviewer_keywords:
 - OLE items [MFC], types
 ms.assetid: 11107711-eb96-4099-8f5c-7910bb3ecb75
 ms.openlocfilehash: 02607df2a8fa086c5751f2b446e349a3efdbcd20
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57280960"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62186796"
 ---
 # <a name="ole-background-linking-and-embedding"></a>Tela de fundo OLE: Vinculação e incorporação
 
@@ -30,6 +30,6 @@ Todos os itens OLE, se incorporado ou vinculado, tem um tipo associado a ele com
 ## <a name="see-also"></a>Consulte também
 
 [Tela de fundo OLE](../mfc/ole-background.md)<br/>
-[Tela de fundo OLE: Contêineres e servidores](../mfc/ole-background-containers-and-servers.md)<br/>
-[Contêineres: Itens de cliente](../mfc/containers-client-items.md)<br/>
-[servidores: Itens do servidor](../mfc/servers-server-items.md)
+[Tela de fundo OLE: contêineres e servidores](../mfc/ole-background-containers-and-servers.md)<br/>
+[Contêineres: itens de cliente](../mfc/containers-client-items.md)<br/>
+[Servidores: itens de servidor](../mfc/servers-server-items.md)
