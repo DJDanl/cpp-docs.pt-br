@@ -11,11 +11,11 @@ helpviewer_keywords:
 - exporting DLLs [C++], __declspec(dllexport) keyword
 ms.assetid: a35e25e8-7263-4a04-bad4-00b284458679
 ms.openlocfilehash: 3b6b9733776f30fc8dcbfeee709b7d24e0f0187b
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57810231"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62195310"
 ---
 # <a name="exporting-from-a-dll-using-declspecdllexport"></a>Exportando a partir de uma DLL usando __declspec(dllexport)
 
@@ -68,7 +68,7 @@ Como uma referência, pesquise por meio do arquivo de cabeçalho WinBase Win32. 
 
 - [Determinar qual método de exportação usar](determining-which-exporting-method-to-use.md)
 
-- [Importar para um aplicativo usando __declspec(dllimport)](importing-into-an-application-using-declspec-dllimport.md)
+- [Importação para um aplicativo usando __declspec(dllimport)](importing-into-an-application-using-declspec-dllimport.md)
 
 - [Inicialize um DLL](run-time-library-behavior.md#initializing-a-dll)
 
@@ -76,7 +76,7 @@ Como uma referência, pesquise por meio do arquivo de cabeçalho WinBase Win32. 
 
 - [A palavra-chave declspec](../cpp/declspec.md)
 
-- [Importando e exportando funções embutidas](importing-and-exporting-inline-functions.md)
+- [Importação e exportação de funções embutidas](importing-and-exporting-inline-functions.md)
 
 - [Importações mútuas](mutual-imports.md)
 

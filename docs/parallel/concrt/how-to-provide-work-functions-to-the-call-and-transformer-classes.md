@@ -7,11 +7,11 @@ helpviewer_keywords:
 - using the call class [Concurrency Runtime]
 ms.assetid: df715ce4-8507-41ca-b204-636d11707a73
 ms.openlocfilehash: c41c29dae277105f268171503e662e2a02e3857e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57277680"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62205784"
 ---
 # <a name="how-to-provide-work-functions-to-the-call-and-transformer-classes"></a>Como: Fornecer funções de trabalho para as Classes call e transformer
 
