@@ -5,15 +5,15 @@ ms.date: 11/19/2018
 ms.topic: conceptual
 ms.assetid: 9a373030-e587-452f-b9a5-c5f9d58b7673
 ms.openlocfilehash: 48e459b69592bf4c231407c2a378a7b7e01ff4ae
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220576"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62153640"
 ---
 # <a name="how-to-create-and-use-uniqueptr-instances"></a>Como: Criar e usar instâncias unique_ptr
 
-Um [unique_ptr](../standard-library/unique-ptr-class.md) não compartilha seu ponteiro. Ele não pode ser copiado para outro `unique_ptr`, passado por valor para uma função ou usado em qualquer algoritmo da biblioteca padrão C++ que exija que cópias sejam feitas. Um `unique_ptr` só pode ser movido. Isso significa que a propriedade do recurso de memória é transferida para outro `unique_ptr` e que o `unique_ptr` original não a possui mais. É recomendável que você restrinja um objeto a um proprietário, porque a propriedade múltipla adiciona complexidade à lógica do programa. Portanto, quando você precisa de um ponteiro inteligente para um objeto C++ simples, use `unique_ptr`, e quando você construir um `unique_ptr`, use o [make_unique](../standard-library/memory-functions.md#make_unique) função auxiliar.
+Um [unique_ptr](../standard-library/unique-ptr-class.md) não compartilha seu ponteiro. Ele não pode ser copiado para outro `unique_ptr`, passado por valor para uma função ou usado em qualquer algoritmo da biblioteca padrão C++ que exija que cópias sejam feitas. Um `unique_ptr` só pode ser movido. Isso significa que a propriedade do recurso de memória é transferida para outro `unique_ptr` e que o `unique_ptr` original não a possui mais. É recomendável que você restrinja um objeto a um proprietário, porque a propriedade múltipla adiciona complexidade à lógica do programa. Portanto, quando você precisa um ponteiro inteligente para um simples C++ do objeto, use `unique_ptr`, e quando você construir um `unique_ptr`, use o [make_unique](../standard-library/memory-functions.md#make_unique) função auxiliar.
 
 O diagrama a seguir ilustra a transferência de propriedade entre duas instâncias de `unique_ptr`.
 

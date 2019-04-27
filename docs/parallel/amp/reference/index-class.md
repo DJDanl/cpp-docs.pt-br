@@ -1,6 +1,6 @@
 ---
 title: Classe index
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - AMP/index
 - AMP/Concurrency::index::index
@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - index structure
 ms.assetid: cbe79b08-0ba7-474c-9828-f1a71da39eb3
-ms.openlocfilehash: 054db83e4d8e140af37dcff9a7664ffdf7902325
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 5226440e49aab5766fc7992e0651e2b5ee5d4981
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57284639"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62180226"
 ---
 # <a name="index-class"></a>Classe index
 
@@ -33,18 +33,18 @@ A classificação ou o número de dimensões.
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
-|[Construtor de índice](#ctor)|Inicializa uma nova instância da classe `index`.|
+|[Construtor de índice](#index_ctor)|Inicializa uma nova instância da classe `index`.|
 
 ### <a name="public-operators"></a>Operadores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
 |[operator--](#operator--)|Decrementa cada elemento do `index` objeto.|
-|[operator(mod)=](#operator_mod_eq)|Calcula o módulo (resto) de cada elemento no `index` objeto quando esse elemento é dividido por um número.|
+|[operator%=](#operator_mod_eq)|Calcula o módulo (resto) de cada elemento no `index` objeto quando esse elemento é dividido por um número.|
 |[operator*=](#operator_star_eq)|Multiplica cada elemento do `index` objeto por um número.|
 |[operator/=](#operator_div_eq)|Divide cada elemento do `index` objeto por um número.|
 |[index::operator\[\]](#operator_at)|Retorna o elemento que está no índice especificado.|
@@ -139,7 +139,7 @@ index operator--(
 
 Para o operador de prefixo, o objeto de índice (* isso). Para o operador de sufixo, um novo objeto de índice.
 
-## <a name="operator_mod_eq"></a>  operator(mod)=
+## <a name="operator_mod_eq"></a>  operator%=
 
 Calcula o módulo (resto) de cada elemento no objeto de índice quando esse elemento é dividido pelo número especificado.
 

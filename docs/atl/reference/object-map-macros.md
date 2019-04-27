@@ -7,11 +7,11 @@ f1_keywords:
 - atlcom/ATL::OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO
 ms.assetid: 680087f4-9894-41dd-a79c-6f337e1f13c1
 ms.openlocfilehash: 73dc924527bac8499adefab3d0d6b51afa500a5a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57298601"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62197374"
 ---
 # <a name="object-map-macros"></a>Macros de mapa de objeto
 
@@ -65,10 +65,10 @@ OBJECT_ENTRY_AUTO( clsid, class )
 ### <a name="parameters"></a>Parâmetros
 
 *clsid*<br/>
-[in] O CLSID de uma classe COM implementado pela classe C++ chamado *classe*.
+[in] O CLSID de uma classe COM implementada pelo C++ classe denominada *classe*.
 
 *class*<br/>
-[in] O nome da classe C++ Implementando a classe COM representado por *clsid*.
+[in] O nome da C++ classe que implementa a classe COM representado por *clsid*.
 
 ### <a name="remarks"></a>Comentários
 
@@ -97,10 +97,10 @@ OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO( clsid, class )
 ### <a name="parameters"></a>Parâmetros
 
 *clsid*<br/>
-[in] O CLSID de uma classe COM implementado pela classe C++ chamado *classe*.
+[in] O CLSID de uma classe COM implementada pelo C++ classe denominada *classe*.
 
 *class*<br/>
-[in] O nome da classe C++ Implementando a classe COM representado por *clsid*.
+[in] O nome da C++ classe que implementa a classe COM representado por *clsid*.
 
 ### <a name="remarks"></a>Comentários
 

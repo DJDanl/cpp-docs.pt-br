@@ -7,11 +7,11 @@ helpviewer_keywords:
 - _com_error method [C++]
 ms.assetid: 0a69e46c-caab-49ef-b091-eee401253ce6
 ms.openlocfilehash: 8856289605cce430fdab36d6e3e8b743190e02ea
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50631732"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62155118"
 ---
 # <a name="comerrorcomerror"></a>_com_error::_com_error
 
@@ -38,7 +38,7 @@ Informações de HRESULT.
 *perrinfo*<br/>
 Objeto `IErrorInfo`.
 
-*faddref=false&lt;1}*<br/>
+*fAddRef*<br/>
 O padrão faz com que o construtor chame AddRef em não nulo `IErrorInfo` interface. Isso fornece de referência correta de contagem no caso comum em que a propriedade da interface é passada para o **com_error** objeto, como:
 
 ```cpp
@@ -51,7 +51,7 @@ Se você não quiser que seu código para transferir a propriedade para o **com_
 _com_error err(hr, perrinfo, true);
 ```
 
-*Isso*<br/>
+*that*<br/>
 Um existente **com_error** objeto.
 
 ## <a name="remarks"></a>Comentários

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - /LN compiler option [C++]
 ms.assetid: 4f38f4f4-3176-4caf-8200-5c7585dc1ed3
 ms.openlocfilehash: 18b0e72d50f328afc1f2856f833cec1aa7d46f30
-ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "57813130"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62176210"
 ---
 # <a name="ln-create-msil-module"></a>/LN (criar módulo MSIL)
 
@@ -51,4 +51,4 @@ O vinculador MSVC aceita arquivos. netmodule como entrada e o arquivo de saída 
 ## <a name="see-also"></a>Consulte também
 
 [Opções do compilador MSVC](compiler-options.md)<br/>
-[Sintaxe de linha de comando do compilador MSVC](compiler-command-line-syntax.md)
+[Sintaxe da linha de comando do compilador MSVC](compiler-command-line-syntax.md)

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - push_macro pragma
 ms.assetid: ac89efc9-afd1-4dfe-bfd1-497229b3e81d
 ms.openlocfilehash: 5602dd91b7d017c49a122524e469100b0ec6debf
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59029736"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62179822"
 ---
 # <a name="pushmacro"></a>push_macro
 Salva o valor da *macro_name* macro no topo da pilha dessa macro.

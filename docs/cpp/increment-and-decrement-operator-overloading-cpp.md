@@ -8,11 +8,11 @@ helpviewer_keywords:
 - decrement operators [C++], types of
 ms.assetid: 5423c6ce-3999-4a77-92f6-ad540add1b1d
 ms.openlocfilehash: 4413c2bba600d1118870faca9a15b20398ec4dd4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50557257"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62183562"
 ---
 # <a name="increment-and-decrement-operator-overloading-c"></a>Sobrecarga dos operadores de incremento e decremento (C++)
 

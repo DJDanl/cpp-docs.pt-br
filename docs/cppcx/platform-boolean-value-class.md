@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Platform::Boolean Struct
 ms.assetid: 8518a1db-7139-4187-9c7a-1ae3943373f2
 ms.openlocfilehash: c97ce0171fcf8f28254ce3f91b91f4d1711ad813
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57748405"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62161687"
 ---
 # <a name="platformboolean-value-class"></a>Platform::classe de valor booliano
 
@@ -40,4 +40,4 @@ O booliano possui os métodos Equals(), GetHashCode() e ToString() derivados da 
 
 ## <a name="see-also"></a>Consulte também
 
-[Namespace Platform](../cppcx/platform-namespace-c-cx.md)
+[Namespace de plataforma](../cppcx/platform-namespace-c-cx.md)

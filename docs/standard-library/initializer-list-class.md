@@ -13,11 +13,11 @@ helpviewer_keywords:
 - std::initializer_list::end
 - std::initializer_list::size
 ms.openlocfilehash: de925f73ac206113aafb8661a8d5b347503150c5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50466905"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62159295"
 ---
 # <a name="initializerlist-class"></a>Classe initializer_list
 
@@ -116,8 +116,8 @@ initializer_list(const InputIterator First, const InputIterator Last);
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|*Primeiro*|A posição do primeiro elemento no intervalo de elementos a serem copiados.|
-|*último*|A posição do primeiro elemento além do intervalo de elementos a serem copiados.|
+|*First*|A posição do primeiro elemento no intervalo de elementos a serem copiados.|
+|*Last*|A posição do primeiro elemento além do intervalo de elementos a serem copiados.|
 
 ### <a name="remarks"></a>Comentários
 

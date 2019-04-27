@@ -7,11 +7,11 @@ helpviewer_keywords:
 - COMM directive
 ms.assetid: a23548c4-ad04-41fa-91da-945f228de742
 ms.openlocfilehash: 342c8acd95fd45de1a21dc298325de9a7b40b717
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50434795"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62179101"
 ---
 # <a name="comm"></a>COMM
 
@@ -27,7 +27,7 @@ Quase variáveis são alocadas pelo vinculador e não podem ser inicializadas. I
 
 Cada *definição* tem a seguinte forma:
 
-[*langtype*] [**NEAR** &#124; **EXTREMO**] _rótulo_**:**_tipo_[**:**_contagem_]
+[*langtype*] [**NEAR** &#124; **FAR**] _label_**:**_type_[**:**_count_]
 
 Opcional *langtype* define as convenções de nomenclatura para o nome que segue. Ela substitui qualquer idioma especificado pelo **. MODELO** diretiva. Opcional **NEAR** ou **EXTREMO** substituir o modelo de memória atual. O *rótulo* é o nome da variável. O *tipo* pode ser qualquer especificador de tipo ([bytes](../../assembler/masm/byte-masm.md), [WORD](../../assembler/masm/word.md)e assim por diante) ou um inteiro que especifica o número de bytes. Opcional *contagem* Especifica o número de elementos no objeto de dados declarado; o padrão é um.
 

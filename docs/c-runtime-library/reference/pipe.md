@@ -26,11 +26,11 @@ helpviewer_keywords:
 - pipe function
 ms.assetid: 8d3e9800-4041-44b5-9e93-2df0b0354a75
 ms.openlocfilehash: c5db59fecd84ae291e5651b1cec1be31c815e53a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50453964"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62155943"
 ---
 # <a name="pipe"></a>_pipe
 
@@ -51,13 +51,13 @@ int _pipe(
 
 ### <a name="parameters"></a>Parâmetros
 
-*PFDs*<br/>
+*pfds*<br/>
 Ponteiro para uma matriz de dois **int** para manter a leitura e gravação de descritores de arquivo.
 
 *psize*<br/>
 Quantidade de memória a ser reservada.
 
-*TextMode*<br/>
+*textmode*<br/>
 Modo de arquivo.
 
 ## <a name="return-value"></a>Valor de retorno

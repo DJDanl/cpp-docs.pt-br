@@ -9,11 +9,11 @@ helpviewer_keywords:
 - tasks [Concurrency Runtime]
 ms.assetid: 42f05ac3-2098-494a-ba84-737fcdcad077
 ms.openlocfilehash: c9f18dfd1498538ce3700fd73a27ce6f6088ee42
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51331211"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62180037"
 ---
 # <a name="task-parallelism-concurrency-runtime"></a>Paralelismo de tarefa (tempo de execução de simultaneidade)
 
@@ -108,7 +108,7 @@ Você pode usar o `create_task` função para criar a operação equivalente.
 
 Se uma exceção for gerada durante a execução de uma tarefa, o tempo de execução efetua marshaling dessa exceção na chamada subsequente para `task::get` ou `task::wait`, ou para uma continuação baseada em tarefa. Para obter mais informações sobre o mecanismo de tratamento de exceção de tarefa, consulte [tratamento de exceções](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md).
 
-Para obter um exemplo que usa `task`, [Concurrency:: task_completion_event](../../parallel/concrt/reference/task-completion-event-class.md), cancelamento, consulte [passo a passo: conectando usando tarefas e solicitações HTTP XML](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md). (O `task_completion_event` classe é descrita posteriormente neste documento.)
+Para obter um exemplo que usa `task`, [Concurrency:: task_completion_event](../../parallel/concrt/reference/task-completion-event-class.md), cancelamento, consulte [passo a passo: Conexão usando tarefas e solicitações HTTP XML](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md). (O `task_completion_event` classe é descrita posteriormente neste documento.)
 
 > [!TIP]
 >  Para saber detalhes que são específicos para tarefas em aplicativos UWP, consulte [programação assíncrona em C++](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps) e [criando a operações assíncronas em C++ para aplicativos UWP](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md).
@@ -244,7 +244,7 @@ Duas maneiras de fazer isso são usar uma continuação ou iniciar uma tarefa e 
 
 O [Concurrency:: task_completion_event](../../parallel/concrt/reference/task-completion-event-class.md) classe ajuda a simplificar tal composição de tarefas. Como o `task` classe, o parâmetro de tipo `T` é o tipo do resultado produzido pela tarefa. Esse tipo pode ser `void` se a tarefa não retornar um valor. `T` não é possível usar o `const` modificador. Normalmente, um `task_completion_event` objeto é fornecido para um thread ou tarefa que sinalizará quando o valor para que ele se torna disponível. Ao mesmo tempo, uma ou mais tarefas são definidas como ouvintes do evento. Quando o evento é definido, as tarefas de ouvinte completam e suas continuações são agendadas para execução.
 
-Para obter um exemplo que usa `task_completion_event` para implementar uma tarefa que termine após um atraso, consulte [como: criar uma tarefa que é concluída após um atraso](../../parallel/concrt/how-to-create-a-task-that-completes-after-a-delay.md).
+Para obter um exemplo que usa `task_completion_event` para implementar uma tarefa que termine após um atraso, consulte [como: Criar uma tarefa que termine após um atraso](../../parallel/concrt/how-to-create-a-task-that-completes-after-a-delay.md).
 
 ##  <a name="task-groups"></a> Grupos de tarefas
 
@@ -299,7 +299,7 @@ Message from task: 42
 
 Porque o `parallel_invoke` algoritmo executa tarefas simultaneamente, a ordem das mensagens de saída pode variar.
 
-Para obter exemplos completos que mostram como usar o `parallel_invoke` algoritmo, consulte [como: usar parallel_invoke para escrever uma rotina de classificação paralela](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md) e [como: usar parallel_invoke para executar operações em paralelo](../../parallel/concrt/how-to-use-parallel-invoke-to-execute-parallel-operations.md). Para obter um exemplo completo que usa o `task_group` classe para implementar futuros assíncronos, consulte [passo a passo: Implementando futuros](../../parallel/concrt/walkthrough-implementing-futures.md).
+Para obter exemplos completos que mostram como usar o `parallel_invoke` algoritmo, consulte [como: Usar parallel_invoke para escrever uma rotina de classificação paralela](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md) e [como: Usar parallel_invoke para executar operações em paralelo](../../parallel/concrt/how-to-use-parallel-invoke-to-execute-parallel-operations.md). Para obter um exemplo completo que usa o `task_group` classe para implementar futuros assíncronos, consulte [passo a passo: Implementando futuros](../../parallel/concrt/walkthrough-implementing-futures.md).
 
 ##  <a name="robust"></a> Programação robusta
 
@@ -309,10 +309,10 @@ Certifique-se de que você entenda a função de cancelamento e tratamento de ex
 
 |Título|Descrição|
 |-----------|-----------------|
-|[Como usar parallel_invoke para escrever uma rotina de classificação em paralelo](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md)|Mostra como usar o `parallel_invoke` algoritmo para melhorar o desempenho do algoritmo de classificação bitonic.|
-|[Como usar Parallel.Invoke para executar operações em paralelo](../../parallel/concrt/how-to-use-parallel-invoke-to-execute-parallel-operations.md)|Mostra como usar o `parallel_invoke` algoritmo para melhorar o desempenho de um programa que executa várias operações em uma fonte de dados compartilhada.|
-|[Como criar uma tarefa que seja concluída após um atraso](../../parallel/concrt/how-to-create-a-task-that-completes-after-a-delay.md)|Mostra como usar o `task`, `cancellation_token_source`, `cancellation_token`, e `task_completion_event` classes para criar uma tarefa que termine após um atraso.|
-|[Instruções passo a passo: implementando futuros](../../parallel/concrt/walkthrough-implementing-futures.md)|Mostra como combinar a funcionalidade existente no tempo de execução de simultaneidade em algo mais útil.|
+|[Como: Usar parallel_invoke para escrever uma rotina de classificação em paralelo](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md)|Mostra como usar o `parallel_invoke` algoritmo para melhorar o desempenho do algoritmo de classificação bitonic.|
+|[Como: Usar parallel_invoke para executar operações em paralelo](../../parallel/concrt/how-to-use-parallel-invoke-to-execute-parallel-operations.md)|Mostra como usar o `parallel_invoke` algoritmo para melhorar o desempenho de um programa que executa várias operações em uma fonte de dados compartilhada.|
+|[Como: Criar uma tarefa que seja concluída após um atraso](../../parallel/concrt/how-to-create-a-task-that-completes-after-a-delay.md)|Mostra como usar o `task`, `cancellation_token_source`, `cancellation_token`, e `task_completion_event` classes para criar uma tarefa que termine após um atraso.|
+|[Passo a passo: Implementando futuros](../../parallel/concrt/walkthrough-implementing-futures.md)|Mostra como combinar a funcionalidade existente no tempo de execução de simultaneidade em algo mais útil.|
 |[PPL (Biblioteca de Padrões Paralelos)](../../parallel/concrt/parallel-patterns-library-ppl.md)|Descreve o PPL, que fornece um modelo imperativo de programação para desenvolver aplicativos simultâneos.|
 
 ## <a name="reference"></a>Referência

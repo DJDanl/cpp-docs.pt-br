@@ -11,11 +11,11 @@ helpviewer_keywords:
 - exports table [C++]
 ms.assetid: a08f86c4-5996-460b-ae54-da2b764045f0
 ms.openlocfilehash: 6bdf5b86724ae07aa073a9feb1cc4d5723bc6e6b
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57819111"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62196736"
 ---
 # <a name="exporting-from-a-dll"></a>Exportando a partir de uma DLL
 
@@ -53,7 +53,7 @@ Ao exportar funções com um desses métodos, certifique-se de usar o [stdcall](
 
 - [Importando para um aplicativo](importing-into-an-application.md)
 
-- [Importando e exportando funções embutidas](importing-and-exporting-inline-functions.md)
+- [Importação e exportação de funções embutidas](importing-and-exporting-inline-functions.md)
 
 - [Importações mútuas](mutual-imports.md)
 

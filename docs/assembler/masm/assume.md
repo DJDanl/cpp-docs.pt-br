@@ -7,11 +7,11 @@ helpviewer_keywords:
 - ASSUME directive
 ms.assetid: cd162070-aee9-4c65-babc-005c6cc73d7c
 ms.openlocfilehash: 97a57cc8a1acccf70572ff963e496aa79fa3ab43
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50500562"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62166458"
 ---
 # <a name="assume"></a>ASSUME
 
@@ -21,8 +21,8 @@ Habilita a verificação de erros para os valores do registro.
 
 > SUPONHA *segregister*:*nome* [[, *segregister*:*nome*]]...<br/>
 > SUPONHA *dataregister*:*tipo* [[, *dataregister*:*tipo*]]...<br/>
-> SUPONHA *registre*: erro [[, *registrar*: erro]]...<br/>
-> Suponha que [[*registre*:]] NADA [[, *registrar*: NADA]]...
+> ASSUME *register*:ERROR [[, *register*:ERROR]]...<br/>
+> ASSUME [[*register*:]] NOTHING [[, *register*:NOTHING]]...
 
 ## <a name="remarks"></a>Comentários
 

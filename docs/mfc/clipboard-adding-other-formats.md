@@ -10,11 +10,11 @@ helpviewer_keywords:
 - custom Clipboard data formats
 ms.assetid: aea58159-65ed-4385-aeaa-3d9d5281903b
 ms.openlocfilehash: 182abe71ccc9552c113ebb114b4351178e48b096
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58766841"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62151858"
 ---
 # <a name="clipboard-adding-other-formats"></a>Área de transferência: Adicionando outros formatos
 
@@ -48,4 +48,4 @@ Essa técnica é usada no programa de exemplo OLE do MFC [HIERSVR](../overview/v
 
 ## <a name="see-also"></a>Consulte também
 
-[Área de transferência: Usando o mecanismo de área de transferência OLE](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)
+[Área de transferência: usar o mecanismo da Área de transferência OLE](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)

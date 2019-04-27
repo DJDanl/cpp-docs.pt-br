@@ -19,11 +19,11 @@ helpviewer_keywords:
 - timer class
 ms.assetid: 4f4dea51-de9f-40f9-93f5-dd724c567b49
 ms.openlocfilehash: e36441f53c9b53c9826ee92b2892142a522d7243
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57298146"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62180115"
 ---
 # <a name="timer-class"></a>Classe timer
 
@@ -43,7 +43,7 @@ O tipo de carga das mensagens de saída desse bloco.
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|

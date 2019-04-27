@@ -22,11 +22,11 @@ helpviewer_keywords:
 - Vector Class (C++/Cx)
 ms.assetid: aee8c076-9700-47c3-99b6-799fd3edb0ca
 ms.openlocfilehash: 5466f1d1c8987724aa0768cd8915e06b62b031ad
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57747119"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62161612"
 ---
 # <a name="platformcollectionsvector-class"></a>Classe Platform::Collections::Vector
 
@@ -67,7 +67,7 @@ Se você tentar usar um **vetor** digite um valor de retorno público ou um par�
 
 ### <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|

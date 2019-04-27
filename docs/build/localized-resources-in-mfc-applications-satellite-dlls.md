@@ -13,11 +13,11 @@ helpviewer_keywords:
 - satellite DLLs [C++]
 ms.assetid: 3a1100ae-a9c8-47b5-adbd-cbedef5992ef
 ms.openlocfilehash: c593d0bae6fc23cfd765116c44b07caa2a6d8ccf
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57821320"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62188733"
 ---
 # <a name="localized-resources-in-mfc-applications-satellite-dlls"></a>Recursos localizados em aplicativos MFC: DLLs satélite
 
@@ -54,4 +54,4 @@ Se nenhuma dessas DLLs for encontrada, o MFC usa os recursos em LangExample.exe.
 ## <a name="see-also"></a>Consulte também
 
 [DLLs no Visual C++](dlls-in-visual-cpp.md)<br/>
-[TN057: Localização de componentes MFC](../mfc/tn057-localization-of-mfc-components.md)
+[TN057: localização de componentes MFC](../mfc/tn057-localization-of-mfc-components.md)

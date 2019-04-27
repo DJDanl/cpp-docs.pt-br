@@ -7,11 +7,11 @@ helpviewer_keywords:
 - expressions [C++], binary operators
 ms.assetid: 6dea3df4-a4bd-42c3-9807-4a27c120ac9a
 ms.openlocfilehash: d3a966a7922c1888defbebf970ac409872fe18ec
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505113"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62154302"
 ---
 # <a name="expressions-with-binary-operators"></a>Expressões com operadores binários
 
@@ -33,9 +33,9 @@ Os operadores binários atuam em dois operandos em uma expressão. Os operadores
 
 - [Operadores shift](../cpp/left-shift-and-right-shift-operators-input-and-output.md)
 
-   - Shift direita (>>)
+   - Deslocamento para a direita (>>)
 
-   - Shift esquerda (<<)
+   - O deslocamento à esquerda (<<)
 
 - [Operadores relacionais e de igualdade](../cpp/relational-operators-equal-and-equal.md)
 
@@ -45,7 +45,7 @@ Os operadores binários atuam em dois operandos em uma expressão. Os operadores
 
    - Menor ou igual a (\<=)
 
-   - Maior que ou igual a (>=)
+   - Maior que ou igual a (> =)
 
    - Igual a (==)
 
@@ -81,9 +81,9 @@ Os operadores binários atuam em dois operandos em uma expressão. Os operadores
 
    - Atribuição de shift esquerda (<\<=)
 
-   - Atribuição de shift direita (>>=)
+   - Atribuição de shift direita (>> =)
 
-   - Atribuição AND de bit a bit (&=)
+   - Atribuição de AND bit a bit (& =)
 
    - Atribuição OR exclusivo de bit a bit (^=)
 

@@ -26,11 +26,11 @@ helpviewer_keywords:
 - _min macro
 ms.assetid: 2037f26c-b48a-4a69-8870-22519f052a3c
 ms.openlocfilehash: f9e867cd1f3e3519e440c91895e61e317d9688a3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50617809"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62156545"
 ---
 # <a name="min"></a>__min
 
@@ -44,7 +44,7 @@ Uma macro de pré-processador que retorna o menor dos dois valores.
 
 ### <a name="parameters"></a>Parâmetros
 
-*uma*, *b*<br/>
+*a*, *b*<br/>
 Valores de qualquer tipo que o **<** operador funciona em.
 
 ## <a name="return-value"></a>Valor de retorno

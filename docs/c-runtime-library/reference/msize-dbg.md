@@ -24,11 +24,11 @@ helpviewer_keywords:
 - msize_dbg function
 ms.assetid: a333f4b6-f8a2-4e61-bb69-cb34063b8cef
 ms.openlocfilehash: 3b6d08d44162d8263ca88147fe86166924d7d162
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50629119"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62156298"
 ---
 # <a name="msizedbg"></a>_msize_dbg
 
@@ -45,7 +45,7 @@ size_t _msize_dbg(
 
 ### <a name="parameters"></a>Parâmetros
 
-*dados do usuário*<br/>
+*userData*<br/>
 Ponteiro para o bloco de memória para o qual determinar o tamanho.
 
 *blockType*<br/>
@@ -57,7 +57,7 @@ Após a conclusão bem-sucedida, **msize_dbg** retorna o tamanho (em bytes) do b
 
 ## <a name="remarks"></a>Comentários
 
-**msize_dbg** é uma versão de depuração da _[msize](msize.md) função. Quando [Debug](../../c-runtime-library/debug.md) não estiver definido, cada chamada para **msize_dbg** é reduzida a uma chamada para **msize**. Ambos **msize** e **msize_dbg** calcular o tamanho de um bloco de memória no heap de base, mas **msize_dbg** adiciona dois recursos de depuração: ele inclui os buffers nos dois lados do usuário parte do bloco de memória no tamanho retornado e ele permite que os cálculos de tamanho para os tipos de bloco.
+**msize_dbg** é uma versão de depuração da _[msize](msize.md) função. Quando [Debug](../../c-runtime-library/debug.md) não estiver definido, cada chamada para **msize_dbg** é reduzida a uma chamada para **msize**. Ambos **msize** e **msize_dbg** calcular o tamanho de um bloco de memória no heap de base, mas **msize_dbg** adiciona dois recursos de depuração: Ele inclui os buffers nos dois lados da parte do usuário do bloco de memória no tamanho retornado e permite que os cálculos de tamanho para os tipos de bloco.
 
 Para obter informações sobre como os blocos de memória são alocados, inicializados e gerenciados na versão de depuração do heap de base, consulte [Detalhes do heap de depuração CRT](/visualstudio/debugger/crt-debug-heap-details). Para obter informações sobre os tipos de blocos de alocação e como eles são usados, consulte [Types of blocks on the debug heap](/visualstudio/debugger/crt-debug-heap-details) (Tipos de blocos no heap de depuração). Para obter informações sobre as diferenças entre chamar uma função de heap padrão e sua versão de depuração em um build de depuração de um aplicativo, consulte [Versões de depuração das funções de alocação de heap](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).
 

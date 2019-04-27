@@ -39,11 +39,11 @@ helpviewer_keywords:
 - _iswctype function
 ms.assetid: cf7509b7-12fc-4d95-8140-ad2eb98173d3
 ms.openlocfilehash: c5eb0b51cf0371100ed884221ee04885dfbe9ad9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50563147"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157276"
 ---
 # <a name="isctype-iswctype-isctypel-iswctypel"></a>_isctype, iswctype, _isctype_l, _iswctype_l
 
@@ -93,7 +93,7 @@ O comportamento de **isctype** e **isctype_l** é indefinido se *c* não for EOF
 
 |Rotina Tchar.h|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|N/D|**_isctype**|N/D|**iswctype**|
+|N/D|**_isctype**|N/D|**_iswctype**|
 |N/D|**_isctype_l**|N/D|**_iswctype_l**|
 
 ## <a name="requirements"></a>Requisitos

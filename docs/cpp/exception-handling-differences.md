@@ -9,11 +9,11 @@ helpviewer_keywords:
 - wrapper classes [C++], C exception
 ms.assetid: f21d1944-4810-468e-b02a-9f77da4138c9
 ms.openlocfilehash: 2c4f1a8c3729e2b4d49a0152425e57717f7e9997
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50482843"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62154394"
 ---
 # <a name="handle-structured-exceptions-in-c"></a>Tratar exceções estruturadas em C++
 

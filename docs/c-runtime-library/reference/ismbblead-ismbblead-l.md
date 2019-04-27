@@ -33,11 +33,11 @@ helpviewer_keywords:
 - _istlead function
 ms.assetid: 2abc6f75-ed5c-472e-bfd0-e905a1835ccf
 ms.openlocfilehash: 7bf8e8c88153e2f22cfa08bb35ff8d4ba01a8804
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50452540"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157205"
 ---
 # <a name="ismbblead-ismbbleadl"></a>_ismbblead, _ismbblead_l
 
@@ -77,7 +77,7 @@ Caracteres multibyte consistem em um byte inicial seguido de um byte à direita.
 
 |Rotina Tchar.h|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**istlead**|Sempre retorna falso|**_ismbblead**|Sempre retorna falso|
+|**_istlead**|Sempre retorna falso|**_ismbblead**|Sempre retorna falso|
 
 ## <a name="requirements"></a>Requisitos
 

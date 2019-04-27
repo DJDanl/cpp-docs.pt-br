@@ -7,11 +7,11 @@ helpviewer_keywords:
 - MASM (Microsoft Macro Assembler), directives reference
 ms.assetid: da6efcd1-18f7-41de-81cd-a002a02f9a22
 ms.openlocfilehash: 655c177b8e5b859faf3b6d9c3250bc3ced31b430
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327194"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62178932"
 ---
 # <a name="directives-reference"></a>Referência de diretivas
 
@@ -28,7 +28,7 @@ ms.locfileid: "51327194"
 |||
 |-|-|
 |[ALINHAR](../../assembler/masm/align-masm.md)|[EVEN](../../assembler/masm/even.md)|
-|[RÓTULO](../../assembler/masm/label-masm.md)|[ORG](../../assembler/masm/org.md)|
+|[LABEL](../../assembler/masm/label-masm.md)|[ORG](../../assembler/masm/org.md)|
 
 ### <a name="conditional-assembly"></a>Assembly condicional
 
@@ -61,11 +61,11 @@ ms.locfileid: "51327194"
 
 ||||
 |-|-|-|
-|[ALINHAR](../../assembler/masm/align-masm.md)|[BYTES](../../assembler/masm/byte-masm.md)/[SBYTE](../../assembler/masm/sbyte-masm.md)|[DWORD](../../assembler/masm/dword.md)/[SDWORD](../../assembler/masm/sdword.md)|
-|[EVEN](../../assembler/masm/even.md)|[FWORD](../../assembler/masm/fword.md)|[RÓTULO](../../assembler/masm/label-masm.md)|
+|[ALINHAR](../../assembler/masm/align-masm.md)|[BYTE](../../assembler/masm/byte-masm.md)/[SBYTE](../../assembler/masm/sbyte-masm.md)|[DWORD](../../assembler/masm/dword.md)/[SDWORD](../../assembler/masm/sdword.md)|
+|[EVEN](../../assembler/masm/even.md)|[FWORD](../../assembler/masm/fword.md)|[LABEL](../../assembler/masm/label-masm.md)|
 |[ORG](../../assembler/masm/org.md)|[QWORD](../../assembler/masm/qword.md)|[REAL4](../../assembler/masm/real4.md)|
 |[REAL8](../../assembler/masm/real8.md)|[REAL10](../../assembler/masm/real10.md)|[TBYTE](../../assembler/masm/tbyte.md)|
-|[WORD](../../assembler/masm/word.md)/[GUMES](../../assembler/masm/sword.md)|||
+|[WORD](../../assembler/masm/word.md)/[SWORD](../../assembler/masm/sword.md)|||
 
 ### <a name="equates"></a>É igual
 
@@ -97,7 +97,7 @@ ms.locfileid: "51327194"
 |[ALIAS](../../assembler/masm/alias-masm.md)|[ASSUME](../../assembler/masm/assume.md)|[COMENTÁRIO](../../assembler/masm/comment-masm.md)|
 |[ECHO](../../assembler/masm/echo.md)|[END](../../assembler/masm/end-masm.md)|[.FPO](../../assembler/masm/dot-fpo.md)|
 |[INCLUDE](../../assembler/masm/include-masm.md)|[INCLUDELIB](../../assembler/masm/includelib-masm.md)|[MMWORD](../../assembler/masm/mmword.md)|
-|[OPÇÃO](../../assembler/masm/option-masm.md)|[POPCONTEXT](../../assembler/masm/popcontext.md)|[PUSHCONTEXT](../../assembler/masm/pushcontext.md)|
+|[OPTION](../../assembler/masm/option-masm.md)|[POPCONTEXT](../../assembler/masm/popcontext.md)|[PUSHCONTEXT](../../assembler/masm/pushcontext.md)|
 |[.RADIX](../../assembler/masm/dot-radix.md)|[.SAFESEH](../../assembler/masm/dot-safeseh.md)|[XMMWORD](../../assembler/masm/xmmword.md)|
 |[YMMWORD](../../assembler/masm/ymmword.md)|||
 

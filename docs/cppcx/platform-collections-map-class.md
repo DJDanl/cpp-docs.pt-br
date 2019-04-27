@@ -16,11 +16,11 @@ helpviewer_keywords:
 - Map Class (C++/Cx)
 ms.assetid: 2b8cf968-1167-4898-a149-1195b32c1785
 ms.openlocfilehash: ce50290217c7c06e26f26fc50564d3e37c873157
-ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58565276"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62161752"
 ---
 # <a name="platformcollectionsmap-class"></a>Classe Platform::Collections::Map
 
@@ -262,7 +262,7 @@ Um [MapChangedEventHandler\<K, V >](/uwp/api/windows.foundation.collections.mapc
 
 ## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework
 
-Projeto de aplicativos de tempo de execução do Windows que usam C# ou Visual Basic IMap\<K, V > como IDictionary\<K, V >.
+Projeto de aplicativos de tempo de execução do Windows que usam c# ou Visual Basic IMap\<K, V > como IDictionary\<K, V >.
 
 ## <a name="remove"></a>  Método Map:: remove
 

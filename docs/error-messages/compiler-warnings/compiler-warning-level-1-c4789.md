@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4789
 ms.assetid: 5800c301-5afb-4af0-85c1-ceb54d775234
 ms.openlocfilehash: 36a5032098c5caabb1b050833e487fd58679a782
-ms.sourcegitcommit: 6e4dd21759caaed262a7255735cf8d6e8fb9f4d7
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58476845"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62187225"
 ---
 # <a name="compiler-warning-level-1-c4789"></a>Compilador aviso (nível 1) C4789
 
@@ -42,7 +42,7 @@ Visual C++ pode gerar esse aviso para um caminho de código que nunca será exec
 #pragma warning( pop )
 ```
 
-Essa linguagem impede que o Visual C++ gerando o aviso para esse bloco específico de código. O `#pragma warning(push)` preserva o estado existente antes de `#pragma warning(disable: 4789)` altera-la. O `#pragma warning(pop)` restaura o estado pressionado e remove os efeitos da `#pragma warning(disable:4789)`. Para obter mais informações sobre a diretiva de pré-processador C++ `#pragma`, consulte [aviso](../../preprocessor/warning.md) e [diretivas Pragma e a palavra-chave pragma](../../preprocessor/pragma-directives-and-the-pragma-keyword.md).
+Essa linguagem impede que o Visual C++ gerando o aviso para esse bloco específico de código. O `#pragma warning(push)` preserva o estado existente antes de `#pragma warning(disable: 4789)` altera-la. O `#pragma warning(pop)` restaura o estado pressionado e remove os efeitos da `#pragma warning(disable:4789)`. Para obter mais informações sobre o C++ diretiva de pré-processador `#pragma`, consulte [aviso](../../preprocessor/warning.md) e [diretivas Pragma e a palavra-chave pragma](../../preprocessor/pragma-directives-and-the-pragma-keyword.md).
 
 ## <a name="example"></a>Exemplo
 

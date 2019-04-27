@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Platform::IntPtr Struct
 ms.assetid: 6c0326e8-edfd-4e53-a963-240b845dcde8
 ms.openlocfilehash: 8101fa2c82a0ac3e3b573384d14d9a7eff6ecf61
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57747106"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62152729"
 ---
 # <a name="platformintptr-value-class"></a>Platform::classe de valor IntPtr
 
@@ -102,4 +102,4 @@ Um inteiro de 32 bits.
 
 ## <a name="see-also"></a>Consulte também
 
-[Namespace Platform](../cppcx/platform-namespace-c-cx.md)
+[Namespace de plataforma](../cppcx/platform-namespace-c-cx.md)

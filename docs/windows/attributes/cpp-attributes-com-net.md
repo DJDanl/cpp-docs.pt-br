@@ -7,11 +7,11 @@ helpviewer_keywords:
 - attributes [C++/CLI], reference topics
 ms.assetid: 613a3611-b3eb-4347-aa38-99b654600e1c
 ms.openlocfilehash: f9d339860e9d2bdb8d66f6b7f8f49d3993b2d5cf
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57820735"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62148310"
 ---
 # <a name="c-attributes-for-com-and-net"></a>Atributos de C++ para COM e .NET
 
@@ -60,7 +60,7 @@ A figura a seguir demonstra a relação entre o compilador e o provedor de atrib
 > [!NOTE]
 > Uso do atributo não altera o conteúdo do arquivo de origem. É a única vez em que o código gerado do atributo é visível durante as sessões de depuração. Além disso, para cada arquivo de origem no projeto, você pode gerar um arquivo de texto que exibe os resultados da substituição de atributo. Para obter mais informações sobre esse procedimento, consulte [/Fx (mesclar código injetado)](../../build/reference/fx-merge-injected-code.md) e [depurando código injetado](/visualstudio/debugger/how-to-debug-injected-code).
 
-Como a maioria das construções de C++, os atributos têm um conjunto de características que define seu uso adequado. Isso é conhecido como o contexto do atributo e é abordado na tabela de contexto de atributo para cada tópico de referência de atributo. Por exemplo, o [coclass](coclass.md) atributo só pode ser aplicado a uma classe existente ou estrutura, em vez de [cpp_quote](cpp-quote.md) atributo, que pode ser inserido em qualquer lugar dentro de um arquivo de origem do C++.
+Como a maioria das construções de C++, os atributos têm um conjunto de características que define seu uso adequado. Isso é conhecido como o contexto do atributo e é abordado na tabela de contexto de atributo para cada tópico de referência de atributo. Por exemplo, o [coclass](coclass.md) atributo só pode ser aplicado a uma classe existente ou estrutura, em vez da [cpp_quote](cpp-quote.md) atributo, que pode ser inserido em qualquer lugar dentro de um C++ arquivo de origem.
 
 ## <a name="building-an-attributed-program"></a>Compilando um programa atribuído
 

@@ -6,11 +6,11 @@ f1_keywords:
 - Platform::WeakReference
 ms.assetid: 8cfe1977-a8c7-4b7b-b539-25c77ed4c5f1
 ms.openlocfilehash: cadafcc227347bc2f55c8600ae63a5c0996aefae
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57742092"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62182958"
 ---
 # <a name="platformweakreference-class"></a>Classe Platform::WeakReference
 
@@ -132,4 +132,4 @@ MyClass^ copy2 = wr.Resolve<MyClass>();
 
 ## <a name="see-also"></a>Consulte também
 
-[Namespace Platform](../cppcx/platform-namespace-c-cx.md)
+[Namespace de plataforma](../cppcx/platform-namespace-c-cx.md)

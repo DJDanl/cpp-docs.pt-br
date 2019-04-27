@@ -1,5 +1,5 @@
 ---
-title: db_command (atributo de COM do C++)
+title: db_command (C++ COM atributo)
 ms.date: 07/10/2018
 f1_keywords:
 - vc-attr.db_command
@@ -7,11 +7,11 @@ helpviewer_keywords:
 - db_command attribute
 ms.assetid: 714c3e15-85d7-408b-9a7c-88505c3e5d24
 ms.openlocfilehash: 136c82b2674f3c08f053de9676068c0fb4baac11
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559465"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62148192"
 ---
 # <a name="dbcommand"></a>db_command
 
@@ -39,7 +39,7 @@ O *comando* sintaxe é a seguinte:
 
 Um *bloco de parâmetro de associação* é definido da seguinte maneira:
 
-> **(\[**  *bindtype* **]** *szVar1* \[, *szVar2* \[, *nVar3* \[,...]]] **)**
+> **(\[** *bindtype* **]** *szVar1* \[, *szVar2* \[, *nVar3* \[, ...]]] **)**
 
 em que:
 
@@ -89,15 +89,15 @@ TCHAR m_state[3] = 'CA';
 
 **db_command** verificações para garantir que a variável usada para *source_name* for válido, portanto, a variável especificada deve estar no escopo global ou de função.
 
-*HRESULT*<br/>
+*hresult*<br/>
 (Opcional) Identifica a variável que receberá o HRESULT desse comando de banco de dados. Se a variável não existir, ele será automaticamente injetado pelo atributo.
 
-*Associações*<br/>
+*bindings*<br/>
 (Opcional) Permite que você separe os parâmetros de associação do comando OLE DB.
 
 Se você especificar um valor para *ligações*, **db_command** analisa o valor associado e não analisará o \[ *bindtype*] parâmetro. Esse uso permite que você use a sintaxe do provedor OLE DB. Para desabilitar a análise, sem a associação de parâmetros, especifique `Bindings=""`.
 
-Se você não especificar um valor para *ligações*, **db_command** analisará o bloco de parâmetro de associação, procurando por '**(**', seguido por **\[** _bindtype_**]** entre colchetes, seguidos por um ou mais declarada anteriormente C++ variáveis-membro, seguido por '**)**'. Todo o texto entre os parênteses será removido do comando resultante, e esses parâmetros serão usados para construir as associações de parâmetro e coluna desse comando.
+Se você não especificar um valor para *ligações*, **db_command** analisará o bloco de parâmetro de associação, procurando por '**(**', seguido por **\[** _bindtype_**]** entre colchetes, seguido por um ou mais anteriormente declarado C++ variáveis-membro, seguidas por '**)**'. Todo o texto entre os parênteses será removido do comando resultante, e esses parâmetros serão usados para construir as associações de parâmetro e coluna desse comando.
 
 *bulk_fetch*<br/>
 (Opcional) Um valor inteiro que especifica o número de linhas a serem buscadas.
@@ -122,7 +122,7 @@ Quando o provedor do consumidor de atributo se aplica a esse atributo a uma clas
 
 Este exemplo define um comando que seleciona os nomes e sobrenomes de uma tabela em que a coluna de estado corresponde a 'CA'. **db_command** cria e lê um conjunto de linhas em que você pode chamar funções geradas pelo assistente, como [OpenAll e CloseAll](../../data/oledb/consumer-wizard-generated-methods.md), bem como `CRowset` funções de membro, como [MoveNext](../../data/oledb/crowset-movenext.md).
 
-Observe que esse código requer que você forneça sua própria cadeia de caracteres de conexão que se conecta ao banco de dados pubs. Para obter informações sobre como fazer isso no ambiente de desenvolvimento, consulte [como: conectar-se a um banco de dados e procurar objetos existentes&lt;4}&lt;3}{5&gt;{6&gt;usar](/sql/ssdt/how-to-connect-to-a-database-and-browse-existing-objects) e [adicionar novas conexões](/visualstudio/data-tools/add-new-connections).
+Observe que esse código requer que você forneça sua própria cadeia de caracteres de conexão que se conecta ao banco de dados pubs. Para obter informações sobre como fazer isso no ambiente de desenvolvimento, consulte [como: Conectar-se a um banco de dados e procurar objetos existentes&lt;4}&lt;3}{5&gt;{6&gt;usar](/sql/ssdt/how-to-connect-to-a-database-and-browse-existing-objects) e [adicionar novas conexões](/visualstudio/data-tools/add-new-connections).
 
 ```cpp
 // db_command.h

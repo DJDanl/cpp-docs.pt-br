@@ -15,11 +15,11 @@ helpviewer_keywords:
 - msclr::lock class
 ms.assetid: 5123edd9-6aed-497d-9a0b-f4b6d6c0d666
 ms.openlocfilehash: 43418da36aa2d87608a9d672e4345d24011be0b3
-ms.sourcegitcommit: 9813e146a4eb30929d8352872859e8fcb7ff6d2f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54805949"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62153433"
 ---
 # <a name="lock-class"></a>Classe lock
 
@@ -434,7 +434,7 @@ Indica se um bloqueio está sendo mantido.
 bool is_locked();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 `true` Se um bloqueio for mantido, `false` caso contrário.
 
@@ -537,7 +537,7 @@ Operador para usar `lock` em uma expressão condicional.
 operator bool();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 `true` Se um bloqueio for mantido, `false` caso contrário.
 
@@ -758,7 +758,7 @@ bool try_acquire(
 *_timeout*<br/>
 Valor de tempo limite em milissegundos, ou como um <xref:System.TimeSpan>.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 `true` Se o bloqueio foi adquirido, `false` caso contrário.
 
@@ -871,7 +871,7 @@ template<class T> bool operator==(
 *t*<br/>
 A igualdade de um objeto a ser comparado.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Retorna `true` se `t` é o mesmo que objeto do bloqueio, `false` caso contrário.
 
@@ -914,7 +914,7 @@ template<class T> bool operator!=(
 *t*<br/>
 O objeto a ser comparado quanto à desigualdade.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Retorna `true` se `t` é diferente do objeto do bloqueio, `false` caso contrário.
 

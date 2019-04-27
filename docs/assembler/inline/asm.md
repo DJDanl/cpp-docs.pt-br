@@ -10,11 +10,11 @@ helpviewer_keywords:
 - __asm keyword [C++]
 ms.assetid: 77ff3bc9-a492-4b5e-85e1-fa4e414e79cd
 ms.openlocfilehash: 6b94bf73e66550d0245ef1f55c17d6676e3b4356
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50591276"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62167550"
 ---
 # <a name="asm"></a>__asm
 
@@ -27,13 +27,13 @@ O `__asm` palavra-chave invoca o assembler embutido e pode aparecer sempre que u
 
 ## <a name="grammar"></a>Gramática
 
-*bloco ASM*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**ASM** *instrução de assembly* **;** <sub>otimizado</sub><br/>
+*asm-block*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**__asm** *assembly-instruction* **;**<sub>opt</sub><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**ASM {** *lista de instruções de assembly* **}** **;** <sub>otimizado</sub>
 
 *lista de instruções de assembly*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*instrução de assembly* **;** <sub>otimizado</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*instrução de assembly* **;** *lista de instruções de assembly* **;** <sub>otimizado</sub>
+&nbsp;&nbsp;&nbsp;&nbsp;*assembly-instruction* **;**<sub>opt</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*assembly-instruction* **;** *assembly-instruction-list* **;**<sub>opt</sub>
 
 ## <a name="remarks"></a>Comentários
 

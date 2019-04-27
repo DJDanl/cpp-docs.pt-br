@@ -19,11 +19,11 @@ helpviewer_keywords:
 - inheritance, keywords
 ms.assetid: bb810f56-7720-4fea-b8b6-9499edd141df
 ms.openlocfilehash: 656ee7ed38c24c9f3b8881f84d8e33ca81e3d936
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462966"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62183486"
 ---
 # <a name="inheritance-keywords"></a>Palavras-chave de herança
 
@@ -37,7 +37,7 @@ class [__virtual_inheritance] class-name;
 
 em que:
 
-*nome de classe*<br/>
+*class-name*<br/>
 O nome da classe que está sendo declarada.
 
 O C++ permite que você declare um ponteiro para um membro de classe antes da definição da classe. Por exemplo:

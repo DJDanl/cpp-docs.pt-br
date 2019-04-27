@@ -34,11 +34,11 @@ helpviewer_keywords:
 - _wpopen function
 ms.assetid: eb718ff2-c87d-4bd4-bd2e-ba317c3d6973
 ms.openlocfilehash: 5284685f56a73c4c7e48fce981745220651399a1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50498898"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62156155"
 ---
 # <a name="popen-wpopen"></a>_popen, _wpopen
 
@@ -94,7 +94,7 @@ O **popen** função cria um pipe e executa uma cópia gerada do processador de 
 
 |Rotina Tchar.h|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**tpopen**|**_popen**|**_popen**|**_wpopen**|
+|**_tpopen**|**_popen**|**_popen**|**_wpopen**|
 
 ## <a name="requirements"></a>Requisitos
 
