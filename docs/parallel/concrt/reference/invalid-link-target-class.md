@@ -9,11 +9,11 @@ helpviewer_keywords:
 - invalid_link_target class
 ms.assetid: 33b64885-34d8-4d4e-a893-02e9f19c958e
 ms.openlocfilehash: 3ef34ab7607c444044b6dde17f3db3f73d0d7086
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57276748"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62205649"
 ---
 # <a name="invalidlinktarget-class"></a>Classe invalid_link_target
 
@@ -27,7 +27,7 @@ class invalid_link_target : public std::exception;
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
