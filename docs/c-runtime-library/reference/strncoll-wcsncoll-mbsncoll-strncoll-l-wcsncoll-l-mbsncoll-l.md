@@ -61,11 +61,11 @@ helpviewer_keywords:
 - _wcsncoll_l function
 ms.assetid: e659a5a4-8afe-4033-8e72-17ffd4bdd8e9
 ms.openlocfilehash: fe6c3283c9379b370911cc63184535e813b96d8c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658530"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62209768"
 ---
 # <a name="strncoll-wcsncoll-mbsncoll-strncolll-wcsncolll-mbsncolll"></a>_strncoll, _wcsncoll, _mbsncoll, _strncoll_l, _wcsncoll_l, _mbsncoll_l
 
@@ -145,16 +145,16 @@ Todas essas funções validam seus parâmetros. Se qualquer um dos *string1* ou 
 
 |Rotina TCHAR.H|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**tcsnccoll**|**_strncoll**|**_mbsncoll**|**_wcsncoll**|
-|**tcsncoll**|**_strncoll**|[_mbsnbcoll](mbsnbcoll-mbsnbcoll-l-mbsnbicoll-mbsnbicoll-l.md)|**_wcsncoll**|
+|**_tcsnccoll**|**_strncoll**|**_mbsncoll**|**_wcsncoll**|
+|**_tcsncoll**|**_strncoll**|[_mbsnbcoll](mbsnbcoll-mbsnbcoll-l-mbsnbicoll-mbsnbicoll-l.md)|**_wcsncoll**|
 
 ## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|
-|**strncoll**, **strncoll_l**|\<string.h>|
-|**wcsncoll**, **wcsncoll_l**|\<wchar.h> or \<string.h>|
-|**mbsncoll**, **mbsncoll_l**|\<mbstring.h>|
+|**_strncoll**, **_strncoll_l**|\<string.h>|
+|**_wcsncoll**, **_wcsncoll_l**|\<wchar.h> or \<string.h>|
+|**_mbsncoll**, **_mbsncoll_l**|\<mbstring.h>|
 
 Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 

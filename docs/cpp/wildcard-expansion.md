@@ -12,11 +12,11 @@ helpviewer_keywords:
 - question mark, wildcard
 ms.assetid: 1a543398-607b-4404-93d1-45d290bde638
 ms.openlocfilehash: 2d495f94f2e3fb7b88d235edc7b98f8e90775393
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507426"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62209509"
 ---
 # <a name="wildcard-expansion"></a>Expansão de curinga
 
@@ -30,4 +30,4 @@ Argumentos de linha de comando são tratados por uma rotina chamada `_setargv` (
 
 ## <a name="see-also"></a>Consulte também
 
-[main: inicialização do programa](../cpp/main-program-startup.md)
+[main: inicialização de programa](../cpp/main-program-startup.md)

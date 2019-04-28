@@ -12,11 +12,11 @@ helpviewer_keywords:
 - EXP files
 ms.assetid: 399f5636-0a4d-462e-b500-5f5b9ae5ad22
 ms.openlocfilehash: 0f2f5c22752d6d938700228fc208c21b8f32cc7b
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57822282"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62293661"
 ---
 # <a name="exp-files-as-linker-input"></a>Arquivos .Exp como entrada de vinculador
 
@@ -25,4 +25,4 @@ Arquivos de exportação (. Exp) contêm informações sobre itens de funções 
 ## <a name="see-also"></a>Consulte também
 
 [Arquivos de entrada de LINK](link-input-files.md)<br/>
-[Opções do vinculador MSVC](linker-options.md)
+[Opções de vinculador MSVC](linker-options.md)

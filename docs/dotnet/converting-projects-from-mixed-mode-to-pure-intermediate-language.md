@@ -8,18 +8,18 @@ helpviewer_keywords:
 - projects [C++], converting to intermediate language
 ms.assetid: 855f9e3c-4f09-4bfe-8eab-a45f68292be9
 ms.openlocfilehash: 93eff646fb582e25ad70549afc714c5321e56079
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328578"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62209237"
 ---
 # <a name="converting-projects-from-mixed-mode-to-pure-intermediate-language"></a>Convertendo projetos do modo misto em linguagem intermediária pura
 
 Vincular todos os projetos de CLR do Visual C++ para as bibliotecas de tempo de execução C por padrão. Consequentemente, esses projetos são classificados como aplicativos de modo misto, porque eles combinam código nativo com código que tem como alvo o common language runtime (código gerenciado). Quando eles são compilados, são compilados em IL (linguagem intermediária), também conhecido como Microsoft intermediate language (MSIL).
 
 > [!IMPORTANT]
-> Preterido do Visual Studio 2015 e Visual Studio 2017 não suporta a criação de **/clr: pure** ou **/CLR: safe** código para aplicativos do CLR. Se você precisar de assemblies puros ou seguros, é recomendável que converter o seu aplicativo C#.
+> Preterido do Visual Studio 2015 e Visual Studio 2017 não suporta a criação de **/clr: pure** ou **/CLR: safe** código para aplicativos do CLR. Se você precisar de assemblies puros ou seguros, é recomendável que converter o seu aplicativo c#.
 
 Se você estiver usando uma versão anterior do conjunto de ferramentas de compilador do Visual C++ que dá suporte a **/clr: pure** ou **/CLR: safe**, você pode usar este procedimento para converter seu código em MSIL puro:
 

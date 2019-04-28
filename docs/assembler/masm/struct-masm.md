@@ -7,11 +7,11 @@ helpviewer_keywords:
 - STRUCT directive
 ms.assetid: 70c3ba6b-00db-461e-8dd9-eafd3ae5b3c8
 ms.openlocfilehash: b64e6adbabe847600147dbd773328aadf4225cb2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525635"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62210271"
 ---
 # <a name="struct-masm"></a>STRUCT (MASM)
 
@@ -19,8 +19,8 @@ Declara um tipo de estrutura com a especificada *declarações de campo*. Cada c
 
 ## <a name="syntax"></a>Sintaxe
 
-> *nome da* STRUCT [[*alinhamento*]] [[, não exclusivo]]<br/>
-> *declarações de campo*<br/>
+> *name* STRUCT [[*alignment*]] [[, NONUNIQUE]]<br/>
+> *field-declarations*<br/>
 > *nome* termina
 
 ## <a name="see-also"></a>Consulte também
