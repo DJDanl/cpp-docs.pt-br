@@ -45,11 +45,11 @@ helpviewer_keywords:
 - strstr function
 ms.assetid: 03d70c3f-2473-45cb-a5f8-b35beeb2748a
 ms.openlocfilehash: 42e02473e062c3af9524ed432aa163b7574342de
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50541057"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62223073"
 ---
 # <a name="strstr-wcsstr-mbsstr-mbsstrl"></a>strstr, wcsstr, _mbsstr, _mbsstr_l
 
@@ -136,7 +136,7 @@ O `strstr` função retorna um ponteiro para a primeira ocorrência do *strSearc
 > [!IMPORTANT]
 > Essas funções podem incorrer uma ameaça de um problema de estouro de buffer. Problemas de estouro de buffer podem ser usados para atacar um sistema pois eles podem permitir a execução de código arbitrário, que pode causar uma injustificada elevação de privilégio. Para obter mais informações, consulte [Avoiding Buffer Overruns](/windows/desktop/SecBP/avoiding-buffer-overruns) (Evitando estouros de buffer).
 
-Em C, essas funções usam um **const** ponteiro para o primeiro argumento. No C++, duas sobrecargas estão disponíveis. A sobrecarga que usa um ponteiro para **const** retorna um ponteiro para **const**; a versão que usa um ponteiro para não**const** retorna um ponteiro para não - **Const**. _CRT_CONST_CORRECT_OVERLOADS a macro é definida se ambos os **const** e não-**const** versões dessas funções estão disponíveis. Se você precisar de não**const** comportamento para as sobrecargas de C++, defina o símbolo const_return.
+Em C, essas funções usam um **const** ponteiro para o primeiro argumento. No C++, duas sobrecargas estão disponíveis. A sobrecarga que usa um ponteiro para **const** retorna um ponteiro para **const**; a versão que usa um ponteiro para não**const** retorna um ponteiro para não - **Const**. _CRT_CONST_CORRECT_OVERLOADS a macro é definida se ambos os **const** e não-**const** versões dessas funções estão disponíveis. Se você precisar de não**const** comportamento para ambos C++ sobrecargas, defina o símbolo const_return.
 
 O valor de saída é afetado pela configuração de categoria da localidade do LC_CTYPE; Para obter mais informações, consulte [setlocale, wsetlocale](setlocale-wsetlocale.md). As versões dessas funções que não têm o **l** sufixo usam a localidade atual desse comportamento dependente da localidade; as versões que têm o **l** sufixo são idênticas, exceto pelo fato de que usam o parâmetro de localidade informado. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 

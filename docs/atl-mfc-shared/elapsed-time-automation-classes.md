@@ -12,11 +12,11 @@ helpviewer_keywords:
 - calculations, date and time
 ms.assetid: 26b34b37-c10e-4b91-82c3-1dc5ffb5361f
 ms.openlocfilehash: d6a77d57a88166354fcb222c0da09690426108e9
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57750043"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62235777"
 ---
 # <a name="elapsed-time-automation-classes"></a>Tempo decorrido: Classes de automação
 
@@ -38,4 +38,4 @@ Este procedimento mostra como calcular a diferença entre dois `CTime` objetos e
 
 ## <a name="see-also"></a>Consulte também
 
-[Data e hora: Suporte de automação](../atl-mfc-shared/date-and-time-automation-support.md)
+[Data e hora: suporte de automação](../atl-mfc-shared/date-and-time-automation-support.md)

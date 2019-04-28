@@ -31,11 +31,11 @@ helpviewer_keywords:
 - fullpath function
 ms.assetid: 4161ec17-0d22-45dd-b07d-0222553afae9
 ms.openlocfilehash: aeacaf581b7f33ee893754c192ae547376ce73ea
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50550391"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62287636"
 ---
 # <a name="fullpath-wfullpath"></a>_fullpath, _wfullpath
 
@@ -64,7 +64,7 @@ Ponteiro para um buffer que contém o nome de caminho absoluto ou completo, ou *
 *relPath*<br/>
 Nome de caminho relativo.
 
-*MaxLength*<br/>
+*maxLength*<br/>
 Comprimento máximo do buffer de nome de caminho absoluto (*absPath*). Esse comprimento é em bytes para **FullPath** , mas em caracteres largos (**wchar_t**) para **wfullpath**.
 
 ## <a name="return-value"></a>Valor de retorno

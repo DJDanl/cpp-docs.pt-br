@@ -37,11 +37,11 @@ helpviewer_keywords:
 - _wprintf_s_l function
 ms.assetid: 044ebb2e-5cc1-445d-bb4c-f084b405615b
 ms.openlocfilehash: 6b07fd90e0390d5c39bc8f5885f5744de20eeb79
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524177"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62231995"
 ---
 # <a name="printfs-printfsl-wprintfs-wprintfsl"></a>printf_s, _printf_s_l, wprintf_s, _wprintf_s_l
 
@@ -103,8 +103,8 @@ As versões dessas funções com o **l** sufixo são idênticas, exceto que eles
 
 |Rotina TCHAR.H|_UNICODE e _MBCS não definidos|_MBCS definido|_unicode definido|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**tprintf_s**|**printf_s**|**printf_s**|**wprintf_s**|
-|**tprintf_s_l**|**_printf_s_l**|**_printf_s_l**|**_wprintf_s_l**|
+|**_tprintf_s**|**printf_s**|**printf_s**|**wprintf_s**|
+|**_tprintf_s_l**|**_printf_s_l**|**_printf_s_l**|**_wprintf_s_l**|
 
 O *formato* argumento consiste em caracteres comuns, sequências de escape, e (se os argumentos seguirem *formato*) especificações de formato. Os caracteres comuns e as sequências de escape são copiadas para **stdout** na ordem de sua aparência. Por exemplo, a linha
 
@@ -128,8 +128,8 @@ Line one
 
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|
-|**printf_s**, **printf_s_l**|\<stdio.h>|
-|**wprintf_s**, **wprintf_s_l**|\<stdio.h> ou \<wchar.h>|
+|**printf_s**, **_printf_s_l**|\<stdio.h>|
+|**wprintf_s**, **_wprintf_s_l**|\<stdio.h> ou \<wchar.h>|
 
 Não há suporte para o console em aplicativos da plataforma Universal do Windows (UWP). Os identificadores de fluxo padrão que estão associados com o console **stdin**, **stdout**, e **stderr**, deverá ser redirecionado para funções de tempo de execução C possam ser usados em aplicativos UWP . Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 

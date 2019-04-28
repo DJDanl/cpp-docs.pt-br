@@ -39,11 +39,11 @@ helpviewer_keywords:
 - formatted text [C++]
 ms.assetid: 77a854ae-5b48-4865-89f4-f2dc5cf80f52
 ms.openlocfilehash: 1f3d439c12fa803bfe1af31a9a45d777b2e1caa2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50666889"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62232487"
 ---
 # <a name="printf-printfl-wprintf-wprintfl"></a>printf, _printf_l, wprintf, _wprintf_l
 
@@ -101,7 +101,7 @@ As versões dessas funções com o **l** sufixo são idênticas, exceto que eles
 
 |Rotina TCHAR.H|_UNICODE e _MBCS não definidos|_MBCS definido|_unicode definido|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**tprintf**|**printf**|**printf**|**wprintf**|
+|**_tprintf**|**printf**|**printf**|**wprintf**|
 
 O *formato* argumento consiste em caracteres comuns, sequências de escape, e (se os argumentos seguirem *formato*) especificações de formato. Os caracteres comuns e as sequências de escape são copiadas para **stdout** na ordem de sua aparência. Por exemplo, a linha:
 
@@ -125,15 +125,15 @@ Line one
 
 |Rotina Tchar.h|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**tprintf**|**printf**|**printf**|**wprintf**|
-|**tprintf_l**|**_printf_l**|**_printf_l**|**_wprintf_l**|
+|**_tprintf**|**printf**|**printf**|**wprintf**|
+|**_tprintf_l**|**_printf_l**|**_printf_l**|**_wprintf_l**|
 
 ## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|
-|**printf**, **printf_l**|\<stdio.h>|
-|**wprintf**, **wprintf_l**|\<stdio.h> ou \<wchar.h>|
+|**printf**, **_printf_l**|\<stdio.h>|
+|**wprintf**, **_wprintf_l**|\<stdio.h> ou \<wchar.h>|
 
 Não há suporte para o console em aplicativos da plataforma Universal do Windows (UWP). Os identificadores de fluxo padrão que estão associados com o console **stdin**, **stdout**, e **stderr**, deverá ser redirecionado para funções de tempo de execução C possam ser usados em aplicativos UWP . Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 

@@ -16,11 +16,11 @@ helpviewer_keywords:
 - C4793
 ms.assetid: 819ada53-1d9c-49b8-a629-baf8c12314e6
 ms.openlocfilehash: e7ca3b10e09b0d6818fbc7f5607ebc9c95c7f15c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50623243"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62280536"
 ---
 # <a name="compiler-warning-level-1-and-3-c4793"></a>Aviso do compilador (nível 1 e 3) C4793
 
@@ -38,7 +38,7 @@ A tabela a seguir lista todas as mensagens de continuação possíveis.
 |--------------------|-------------|
 |Não há suporte para tipos de dados alinhados no código gerenciado|O CLR deve ser capaz de alocar dados conforme necessário, que talvez não seja possível se os dados alinhados com declarações, como [__m128](../../cpp/m128.md) ou [alinhar](../../cpp/align-cpp.md).|
 |Funções que usam ImageBase' não são suportadas em código gerenciado|`__ImageBase` é um símbolo de vinculador especial que normalmente é usado somente pelo código nativo de baixo nível para carregar uma DLL.|
-|varargs não são compatíveis com o ' / clr' opção de compilador|Funções nativas não é possível chamar funções gerenciadas que tenham [listas de argumentos variáveis](../../cpp/functions-with-variable-argument-lists-cpp.md) (varargs) porque as funções têm requisitos de layout de pilha diferente. No entanto, se você especificar o **/clr: pure** opção de compilador, o argumento variável listas têm suporte porque o assembly pode conter apenas funções gerenciadas. Para obter mais informações, consulte [código puro e verificável (C + + / CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md).|
+|varargs não são compatíveis com o ' / clr' opção de compilador|Funções nativas não é possível chamar funções gerenciadas que tenham [listas de argumentos variáveis](../../cpp/functions-with-variable-argument-lists-cpp.md) (varargs) porque as funções têm requisitos de layout de pilha diferente. No entanto, se você especificar o **/clr: pure** opção de compilador, o argumento variável listas têm suporte porque o assembly pode conter apenas funções gerenciadas. Para obter mais informações, consulte [código puro e verificável (C++/CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md).|
 |O CLR de 64 bits não dá suporte a dados declarados com o modificador __ptr32|Um ponteiro deve ser do mesmo tamanho que um ponteiro nativo na plataforma atual. Para obter mais informações, consulte [__ptr32, \__ptr64](../../cpp/ptr32-ptr64.md).|
 |O CLR de 32 bits não dá suporte a dados declarados com o modificador __ptr64|Um ponteiro deve ser do mesmo tamanho que um ponteiro nativo na plataforma atual. Para obter mais informações, consulte [__ptr32, \__ptr64](../../cpp/ptr32-ptr64.md).|
 |Não há suporte para um ou mais intrínsecos em código gerenciado|O nome do intrínseco não está disponível no momento em que a mensagem é emitida. No entanto, um intrínseco que faz com que essa mensagem geralmente representa uma instrução de baixo nível de máquina.|
