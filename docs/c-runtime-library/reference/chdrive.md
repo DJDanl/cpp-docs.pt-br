@@ -25,11 +25,11 @@ helpviewer_keywords:
 - chdrive function
 ms.assetid: 212a1a4b-4fa8-444e-9677-7fca4c8c47e3
 ms.openlocfilehash: 963b7b7b40b632981abfc1529beb9c48a5b991ba
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50602300"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62335471"
 ---
 # <a name="chdrive"></a>_chdrive
 
@@ -48,7 +48,7 @@ int _chdrive(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Dirigir*<br/>
+*drive*<br/>
 Um inteiro de 1 a 26 que especifica a unidade de trabalho atual (1 = A, B = 2 e assim por diante).
 
 ## <a name="return-value"></a>Valor de retorno

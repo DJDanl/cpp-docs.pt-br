@@ -5,11 +5,11 @@ f1_keywords:
 - VC.Project.VCLinkerTool.GenerateWindowsMetadata
 ms.assetid: bcfb4901-411e-4c9e-9f78-23028b6e5fcc
 ms.openlocfilehash: 93db20d14d3477734e35d33111246f9459310b90
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57810361"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62317153"
 ---
 # <a name="winmd-generate-windows-metadata"></a>/WINMD (Gera metadados do Windows
 
@@ -51,4 +51,4 @@ Por padrão, o nome do arquivo de saída tem a forma *binaryname*. winmd. Para e
 [/WINMDKEYCONTAINER (especificar contêiner de chave)](winmdkeycontainer-specify-key-container.md)<br/>
 [/WINMDDELAYSIGN (assinar parcialmente um winmd)](winmddelaysign-partially-sign-a-winmd.md)<br/>
 [Referência de vinculador MSVC](linking.md)<br/>
-[Opções do vinculador MSVC](linker-options.md)
+[Opções de vinculador MSVC](linker-options.md)

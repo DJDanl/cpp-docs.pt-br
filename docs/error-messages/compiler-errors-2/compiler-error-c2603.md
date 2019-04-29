@@ -7,15 +7,15 @@ helpviewer_keywords:
 - C2603
 ms.assetid: 9ca520d0-f082-4b65-933d-17c3bcf8b02c
 ms.openlocfilehash: 5391aed09b7fd448a9d72ea7cc17cd5c26fc5f04
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605748"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62215395"
 ---
 # <a name="compiler-error-c2603"></a>Erro do compilador C2603
 
-> '*função*': muitos bloco objetos static de escopo com construtores/destrutores na função
+> '*função*': Objetos estáticos do excesso escopo de bloco com construtores/destrutores na função
 
 Nas versões do compilador do Visual C++ antes do Visual Studio 2015, ou quando o [/Zc:threadSafeInit-](../../build/reference/zc-threadsafeinit-thread-safe-local-static-initialization.md) opção de compilador for especificada, há um limite de 31 no número de objetos estáticos, você pode ter em uma função embutida visível externamente .
 

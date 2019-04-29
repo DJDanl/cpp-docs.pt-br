@@ -21,11 +21,11 @@ helpviewer_keywords:
 - _countof macro
 ms.assetid: 86198767-f7e5-4beb-898d-3cbbf60350a3
 ms.openlocfilehash: 60b4350d6cf14a545de67de0bdaee70ee2099006
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50536130"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62335341"
 ---
 # <a name="countof-macro"></a>Macro _countof
 
@@ -50,7 +50,7 @@ O número de elementos na matriz, expressada como uma **size_t**.
 
 **countof** é implementado como uma macro de pré-processador do tipo função. A versão do C++ tem maquinário de modelo extra para detectar no tempo de compilação se um ponteiro é passado em vez de uma matriz declarada estaticamente.
 
-Certifique-se de que *matriz* é, na verdade, uma matriz, e não um ponteiro. Em C, **countof** produz resultados incorretos se *matriz* é um ponteiro. No C++, **countof** Falha na compilação se *matriz* é um ponteiro.  Uma matriz é passada como um parâmetro para uma função *decai para um ponteiro*, que significa que, dentro da função, você não pode usar **countof** para determinar a extensão da matriz.
+Certifique-se de que *matriz* é, na verdade, uma matriz, e não um ponteiro. Em C, **countof** produz resultados incorretos se *matriz* é um ponteiro. No C++, **countof** Falha ao compilar se *matriz* é um ponteiro.  Uma matriz é passada como um parâmetro para uma função *decai para um ponteiro*, que significa que, dentro da função, você não pode usar **countof** para determinar a extensão da matriz.
 
 ## <a name="requirements"></a>Requisitos
 

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - SEGMENT directive
 ms.assetid: e6f68367-6714-4f06-a79c-edfa88014430
 ms.openlocfilehash: f37be47b92a71e20821cd1e40f8cf1350dfedaff
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50615417"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62210369"
 ---
 # <a name="segment"></a>SEGMENT
 
@@ -20,7 +20,7 @@ Define um segmento de programa chamado *nome* ter atributos de segmento
 ## <a name="syntax"></a>Sintaxe
 
 > *nome da* segmento [[somente leitura]] [[*alinhar*]] [[*combinar*]] [[*usar*]] [[*características*]] ALIAS (*cadeia de caracteres*) [['*classe*']]<br/>
-> *Instruções*<br/>
+> *statements*<br/>
 > *nome* termina
 
 #### <a name="parameters"></a>Parâmetros
@@ -42,15 +42,15 @@ Se esse parâmetro não for especificado, **PARA** é usado por padrão.
 *combine*<br/>
 **PÚBLICO**, **pilha**, **comuns**, **memória**, **em**<em>endereço</em>, **Particular**
 
-*Use*<br/>
+*use*<br/>
 **USE16**, **USE32**, **FLAT**
 
-*Características*<br/>
+*characteristics*<br/>
 **INFO**, **leia**, **ESCREVER**, **EXECUTE**, **compartilhado**, **NOPAGE**, **NOCACHE**, e **descartar**
 
 Esses são suportados apenas para COFF e correspondem às características de seção COFF de nome semelhante (por exemplo, **compartilhado** corresponde à IMAGE_SCN_MEM_SHARED). LEITURA define o sinalizador IMAGE_SCN_MEM_READ. O sinalizador somente leitura obsoleto causado a seção para limpar o sinalizador IMG_SCN_MEM_WRITE. Se houver *características* forem definidos, as características padrão não são usadas e somente os sinalizadores especificados pelo programador estão em vigor.
 
-`ALIAS(` *cadeia de caracteres* `)`<br/>
+`ALIAS(` *string* `)`<br/>
 Essa cadeia de caracteres é usada como o nome da seção no objeto COFF emitido.  Cria várias seções com o mesmo nome externo, com nomes distintos de segmentos (MASM).
 
 Não há suportada com **/omf**.

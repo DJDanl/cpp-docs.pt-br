@@ -34,11 +34,11 @@ helpviewer_keywords:
 - copying dates
 ms.assetid: de8e4097-58f8-42ba-9dcd-cb4d9a9f1696
 ms.openlocfilehash: 4dc2ea7f25e644c9bf7a4ddca4a625991f37d912
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50639602"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62353957"
 ---
 # <a name="strdate-wstrdate"></a>_strdate, _wstrdate
 
@@ -88,7 +88,7 @@ No C++, essas funções têm sobrecargas de modelo que invocam os equivalentes m
 
 |Rotina TCHAR.H|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**tstrdate**|**_strdate**|**_strdate**|**_wstrdate**|
+|**_tstrdate**|**_strdate**|**_strdate**|**_wstrdate**|
 
 ## <a name="requirements"></a>Requisitos
 

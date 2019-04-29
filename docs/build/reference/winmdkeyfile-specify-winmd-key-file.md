@@ -5,11 +5,11 @@ f1_keywords:
 - VC.Project.VCLinkerTool.WINMDKeyFile
 ms.assetid: 65d88fdc-fff9-49ea-8cfc-b2f408741734
 ms.openlocfilehash: 4b0c847bc5be6c73b78af4aa15b0074c712cc840
-ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "57820397"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62316451"
 ---
 # <a name="winmdkeyfile-specify-winmd-key-file"></a>/WINMDKEYFILE (Especifica o arquivo de chave winmd)
 
@@ -36,4 +36,4 @@ Especifica uma chave ou um par de chaves para assinar um arquivo de metadados de
 ## <a name="see-also"></a>Consulte também
 
 [Referência de vinculador MSVC](linking.md)<br/>
-[Opções do vinculador MSVC](linker-options.md)
+[Opções de vinculador MSVC](linker-options.md)

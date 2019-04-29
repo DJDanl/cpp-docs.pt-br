@@ -8,11 +8,11 @@ helpviewer_keywords:
 - MFC Ribbon Designer
 ms.assetid: 0806dfd6-7d11-471a-99e1-4072852231f9
 ms.openlocfilehash: 5740b2f93f451a74407483c98ce5bf547b79bf35
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58769479"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62309173"
 ---
 # <a name="ribbon-designer-mfc"></a>Designer da faixa de opções (MFC)
 
@@ -85,13 +85,13 @@ A ilustração a seguir mostra os vários componentes no designer de faixa de op
 
 Os tópicos a seguir descrevem como usar os recursos no designer de faixa de opções:
 
-- [Como: Personalizar o botão do aplicativo](../mfc/how-to-customize-the-application-button.md)
+- [Como: personalizar o botão do aplicativo](../mfc/how-to-customize-the-application-button.md)
 
-- [Como: Personalizar a barra de ferramentas de acesso rápido](../mfc/how-to-customize-the-quick-access-toolbar.md)
+- [Como: personalizar a barra de ferramentas de acesso rápido](../mfc/how-to-customize-the-quick-access-toolbar.md)
 
-- [Como: Adicionar controles de faixa de opções e manipuladores de eventos](../mfc/how-to-add-ribbon-controls-and-event-handlers.md)
+- [Como: adicionar controles de faixa de opções e manipuladores de evento](../mfc/how-to-add-ribbon-controls-and-event-handlers.md)
 
-- [Como: Carregar um recurso de faixa de opções de um aplicativo do MFC](../mfc/how-to-load-a-ribbon-resource-from-an-mfc-application.md)
+- [Como: carregar um recurso da faixa de opções de um aplicativo MFC](../mfc/how-to-load-a-ribbon-resource-from-an-mfc-application.md)
 
 ## <a name="definitions-of-ribbon-elements"></a>Definições de elementos de faixa de opções
 

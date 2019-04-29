@@ -41,11 +41,11 @@ helpviewer_keywords:
 - _wscanf_l function
 ms.assetid: 73eac607-117f-4be4-9ff0-4afd9cf3c848
 ms.openlocfilehash: 48aa0bb3348a3336de9ee0eb9f9ec0d3e1a2b3cb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544762"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62357116"
 ---
 # <a name="scanf-scanfl-wscanf-wscanfl"></a>scanf, _scanf_l, wscanf, _wscanf_l
 
@@ -108,8 +108,8 @@ As versões dessas funções com o **l** sufixo são idênticas, exceto que eles
 
 |Rotina TCHAR.H|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**tscanf**|**scanf**|**scanf**|**wscanf**|
-|**tscanf_l**|**_scanf_l**|**_scanf_l**|**_wscanf_l**|
+|**_tscanf**|**scanf**|**scanf**|**wscanf**|
+|**_tscanf_l**|**_scanf_l**|**_scanf_l**|**_wscanf_l**|
 
 Para obter mais informações, consulte [Campos de especificação de formato – funções scanf e wscanf](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md).
 
@@ -117,8 +117,8 @@ Para obter mais informações, consulte [Campos de especificação de formato �
 
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|
-|**scanf**, **scanf_l**|\<stdio.h>|
-|**wscanf**, **wscanf_l**|\<stdio.h> ou \<wchar.h>|
+|**scanf**, **_scanf_l**|\<stdio.h>|
+|**wscanf**, **_wscanf_l**|\<stdio.h> ou \<wchar.h>|
 
 Não há suporte para o console em aplicativos da plataforma Universal do Windows (UWP). Os identificadores de fluxo padrão que estão associados com o console **stdin**, **stdout**, e **stderr**, deverá ser redirecionado para funções de tempo de execução C possam ser usados em aplicativos UWP . Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
