@@ -35,11 +35,11 @@ helpviewer_keywords:
 - _strtoll_l function
 ms.assetid: e2d05dcf-d3b2-4291-9e60-dee77e540fd7
 ms.openlocfilehash: 53ae4ab1d482478c50aa257acdc974569bfc05f7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50523151"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62269144"
 ---
 # <a name="strtoll-strtolll-wcstoll-wcstolll"></a>strtoll, _strtoll_l, wcstoll, _wcstoll_l
 
@@ -104,8 +104,8 @@ O **strtoll** função converte *strSource* para um **longo** **longo**. Ambas a
 
 |Rotina TCHAR.H|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**tcstoll**|**strtoll**|**strtoll**|**wcstoll**|
-|**tcstoll_l**|**_strtoll_l**|**_strtoll_l**|**_wcstoll_l**|
+|**_tcstoll**|**strtoll**|**strtoll**|**wcstoll**|
+|**_tcstoll_l**|**_strtoll_l**|**_strtoll_l**|**_wcstoll_l**|
 
 A localidade **LC_NUMERIC** configuração de categoria determina o reconhecimento do caractere fracionário em *strSource*; para obter mais informações, consulte [setlocale, wsetlocale](setlocale-wsetlocale.md). As funções que não têm o **l** sufixo usam a localidade atual; **strtoll_l** e **wcstoll_l** são idênticas às funções correspondentes que não têm o sufixo, exceto que eles usam a localidade que é passada. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
@@ -121,8 +121,8 @@ Um *espaço em branco* pode consistir em caracteres de espaço ou tabulação, q
 
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|
-|**strtoll**, **strtoll_l**|\<stdlib.h>|
-|**wcstoll**, **wcstoll_l**|\<stdlib.h> ou \<wchar.h>|
+|**strtoll**, **_strtoll_l**|\<stdlib.h>|
+|**wcstoll**, **_wcstoll_l**|\<stdlib.h> ou \<wchar.h>|
 
 Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 

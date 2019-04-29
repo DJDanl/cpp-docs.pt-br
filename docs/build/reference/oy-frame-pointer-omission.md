@@ -14,11 +14,11 @@ helpviewer_keywords:
 - /Oy compiler option [C++]
 ms.assetid: c451da86-5297-4c5a-92bc-561d41379853
 ms.openlocfilehash: 7884f52cc22766c6b1a864fc01abcd73f92cfabb
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57817953"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62319961"
 ---
 # <a name="oy-frame-pointer-omission"></a>/Oy (omissão do ponteiro de quadro)
 
@@ -56,4 +56,4 @@ O **/Oy** faz de opção de compilador usando o depurador mais difícil porque o
 
 [Opções /O (otimizar código)](o-options-optimize-code.md)<br/>
 [Opções do compilador MSVC](compiler-options.md)<br/>
-[Sintaxe de linha de comando do compilador MSVC](compiler-command-line-syntax.md)<br/>
+[Sintaxe da linha de comando do compilador MSVC](compiler-command-line-syntax.md)<br/>

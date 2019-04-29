@@ -9,11 +9,11 @@ helpviewer_keywords:
 - cl.exe compiler, output files
 ms.assetid: f6367f30-2710-4178-b43a-639eed824acb
 ms.openlocfilehash: 38db548bb71f8dc3e21cb1d544ba70d4fdebb6b7
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57807371"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62320104"
 ---
 # <a name="output-file-f-options"></a>Opções do arquivo de saída (/F)
 
@@ -44,4 +44,4 @@ As opções de arquivo de saída criar ou renomear arquivos de saída. Elas afet
 ## <a name="see-also"></a>Consulte também
 
 [Opções do compilador MSVC](compiler-options.md)<br/>
-[Sintaxe de linha de comando do compilador MSVC](compiler-command-line-syntax.md)
+[Sintaxe da linha de comando do compilador MSVC](compiler-command-line-syntax.md)

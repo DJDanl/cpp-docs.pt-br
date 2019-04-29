@@ -1,6 +1,6 @@
 ---
-title: Avisos do compilador C4800 por meio de C5999
-ms.date: 03/14/2019
+title: Avisos do Compilador C4800 a C5999
+ms.date: 04/21/2019
 f1_keywords:
 - C4808
 - C4809
@@ -153,14 +153,14 @@ helpviewer_keywords:
 - C5105
 - C5106
 - C5107
-ms.openlocfilehash: 46bb439b490295b7f3279f06421d3fd6b8d6ba8b
-ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
-ms.translationtype: MT
+ms.openlocfilehash: 93ff809d640efab6852e855f85e7b6e0109d9c1d
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58356251"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62280303"
 ---
-# <a name="compiler-warnings-c4800-through-c5999"></a>Avisos do compilador C4800 por meio de C5999
+# <a name="compiler-warnings-c4800-through-c5999"></a>Avisos do Compilador C4800 a C5999
 
 Os artigos nesta seção da documentação explicam um subconjunto das mensagens de aviso são geradas pelo compilador.
 
@@ -170,7 +170,7 @@ Os artigos nesta seção da documentação explicam um subconjunto das mensagens
 
 |Aviso|Mensagem|
 |-------------|------------|
-|[(Nível 4) de aviso do compilador C4800](compiler-warning-level-3-c4800.md)| Conversão implícita de '*tipo*' em bool. Possível perda de informações |
+|[Aviso do compilador (nível 4) C4800](compiler-warning-level-3-c4800.md)| Conversão implícita de '*tipo*' em bool. Possível perda de informações |
 |[Aviso do compilador (nível 1) C4803](compiler-warning-level-1-c4803.md)|'*método*': o método raise possui uma classe de armazenamento diferente do evento, '*evento*'|
 |[Aviso do compilador (nível 1) C4804](compiler-warning-level-1-c4804.md)|'*operação*': uso não seguro de tipo 'bool' em operação|
 |[Aviso do compilador (nível 1) C4805](compiler-warning-level-1-c4805.md)|'*operação*': mistura não segura de tipo '*type1*'e tipo'*type2*' em operação|
@@ -206,8 +206,8 @@ Os artigos nesta seção da documentação explicam um subconjunto das mensagens
 | Aviso do compilador (nível 4) C4847 | '\_\_declspec (nenhum\_init\_all)' só pode ser aplicada a uma função, um tipo de classe ou uma variável local: ignorado |
 | Aviso do compilador (nível 1) C4848 | suporte para o atributo padrão ' nenhuma\_exclusivo\_seu endereço de C + + 17 e versões anteriores é uma extensão de fornecedor |
 |[Aviso do compilador (nível 4) C4866](c4866.md)| compilador não pode impor a ordem de avaliação da esquerda para a direita para a chamada para *operator_name*|
-|[Aviso (erro) do compilador C4867](compiler-warning-c4867.md)|'*função*': faltando lista de argumentos de chamada de função; use '*chamar*' para criar um ponteiro para membro|
-|[(Nível 4) de aviso do compilador C4868](compiler-warning-c4868.md)|'_arquivo_(*line_number*)' compilador não pode impor a ordem de avaliação da esquerda para a direita na lista de inicialização entre chaves|
+|[Aviso (erro) C4867 do compilador](compiler-warning-c4867.md)|'*função*': faltando lista de argumentos de chamada de função; use '*chamar*' para criar um ponteiro para membro|
+|[Aviso do compilador (nível 4) C4868](compiler-warning-c4868.md)|'_arquivo_(*line_number*)' compilador não pode impor a ordem de avaliação da esquerda para a direita na lista de inicialização entre chaves|
 |Aviso do compilador (nível 2) C4872|divisão de ponto flutuante por zero detectado ao compilar o grafo de chamada para o Concurrency:: parallel_for_each em: '*local*'|
 |Aviso do compilador (nível 1) C4880|conversão de ' const *type_1*'para'*type_2*': constness de um ponteiro ou referência podem resultar em comportamento indefinido em uma função de amp restringido|
 |Aviso do compilador (nível 4) C4881|o construtor e/ou o destruidor não será invocado para inicializar a variável tile_static '*variável*'|
@@ -242,7 +242,7 @@ Os artigos nesta seção da documentação explicam um subconjunto das mensagens
 |[Aviso do compilador (nível 1) C4946](compiler-warning-level-1-c4946.md)|reinterpret_cast usado entre classes relacionadas: '*class1*'e'*class2*'|
 |[Aviso do compilador (nível 1) C4947](compiler-warning-level-1-c4947.md)|'*type_or_member*': marcado como obsoleto|
 |[Aviso do compilador (nível 2) C4948](compiler-warning-level-2-c4948.md)|tipo de retorno de '*acessador*' não coincide com o último tipo de parâmetro do setter correspondente|
-|[Aviso do compilador (níveis 1 e 4) C4949](compiler-warning-level-1-and-level-4-c4949.md)|pragmas 'managed' e 'unmanaged' são significativos apenas quando compilado com ' / clr [: opção]'|
+|[Aviso do compilador (nível 1 e nível 4) C4949](compiler-warning-level-1-and-level-4-c4949.md)|pragmas 'managed' e 'unmanaged' são significativos apenas quando compilado com ' / clr [: opção]'|
 |[Aviso do compilador (nível 1, erro) C4950](compiler-warning-c4950.md)|'*type_or_member*': marcado como obsoleto|
 |[Aviso do compilador (nível 1) C4951](compiler-warning-level-1-c4951.md)|'*função*' foi editado desde o perfil de dados foram coletados, dados de perfil de função não usados|
 |[Aviso do compilador (nível 1) C4952](compiler-warning-level-1-c4952.md)|'*função*': nenhum dado de perfil encontrado no banco de dados do programa '*pgd_file*'|
@@ -267,7 +267,7 @@ Os artigos nesta seção da documentação explicam um subconjunto das mensagens
 |Aviso do compilador (nível 1) C4974|'*símbolo*': marcados como preteridos|
 |Aviso do compilador (nível 3) C4981|Warbird: função '*função*' marcada como forceinline não embutida porque contém semântica de exceção|
 |Aviso do compilador (nível 3) C4985|o nome do símbolo ': atributos não presentes em declaração anterior.|
-|[Aviso do compilador C4986](compiler-warning-c4986.md)|'*declaração*': especificação de exceção não corresponde à declaração anterior|
+|[C4986 de aviso do compilador](compiler-warning-c4986.md)|'*declaração*': especificação de exceção não corresponde à declaração anterior|
 |Aviso do compilador (nível 4) C4987|extensão não padrão usada: 'throw (...)'|
 |Aviso do compilador (nível 4) C4988|'*variável*': variável declarada fora do escopo de classe/função|
 |Aviso do compilador (nível 4) C4989|'*tipo*': tipo tem definições conflitantes.|
@@ -316,3 +316,8 @@ Os artigos nesta seção da documentação explicam um subconjunto das mensagens
 | Aviso do compilador (nível 1) C5105 | expansão de macro produzindo 'defined' possui comportamento indefinido |
 | Aviso do compilador (nível 1) C5106 | macro redefinido com nomes de parâmetro diferentes |
 | Aviso do compilador (nível 1) C5107 | faltando encerrando '*char*' caractere |
+
+## <a name="see-also"></a>Consulte também
+
+[C /C++ ferramentas de compilador e build erros e avisos](../compiler-errors-1/c-cpp-build-errors.md) \
+[Avisos do compilador C4000 - C5999](compiler-warnings-c4000-c5999.md)

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Rollback method, ODBC transactions
 ms.assetid: 9e00bbf4-e9fb-4332-87fc-ec8ac61b3f68
 ms.openlocfilehash: 996b8410366661cb91cf82cfff823f17d3aad8b4
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59033093"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62329901"
 ---
 # <a name="transaction-how-transactions-affect-updates-odbc"></a>Transação: Como as transações afetam atualizações (ODBC)
 
@@ -56,6 +56,6 @@ A tabela a seguir explica os efeitos da `Rollback` em transações.
 
 [Transação (ODBC)](../../data/odbc/transaction-odbc.md)<br/>
 [Transação (ODBC)](../../data/odbc/transaction-odbc.md)<br/>
-[Transação: Realizando uma transação em um conjunto de registros (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)<br/>
+[Transação: realizar uma transação em um conjunto de registros (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)<br/>
 [Classe CDatabase](../../mfc/reference/cdatabase-class.md)<br/>
 [Classe CRecordset](../../mfc/reference/crecordset-class.md)

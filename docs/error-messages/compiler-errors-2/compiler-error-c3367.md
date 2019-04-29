@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C3367
 ms.assetid: e675d42b-f5b0-4d43-aab1-1f5024233102
 ms.openlocfilehash: f53312fa9225270ef79d50d2ad351adce790d6fa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456284"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62300525"
 ---
 # <a name="compiler-error-c3367"></a>Erro do compilador C3367
 
@@ -19,7 +19,7 @@ ms.locfileid: "50456284"
 
 Quando você chama um delegate não associado, você deve passar uma instância de um objeto. Uma vez que uma função de membro estático é chamada pelo nome da classe, você só pode instanciar um delegate não associado com uma função de membro de instância.
 
-Para obter mais informações sobre delegados não associados, consulte [como: definir e usar delegados (C + + / CLI)](../../dotnet/how-to-define-and-use-delegates-cpp-cli.md).
+Para obter mais informações sobre delegados não associados, consulte [como: Definir e usar delegados (C++/CLI)](../../dotnet/how-to-define-and-use-delegates-cpp-cli.md).
 
 ## <a name="example"></a>Exemplo
 

@@ -51,11 +51,11 @@ helpviewer_keywords:
 - time, converting
 ms.assetid: 2423de37-a35c-4f0a-a378-3116bc120a9d
 ms.openlocfilehash: d1858a36c68a2ca5cedf70a1d74d5f250cbac8df
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50580813"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62288597"
 ---
 # <a name="ctime-ctime32-ctime64-wctime-wctime32-wctime64"></a>ctime, _ctime32, _ctime64, _wctime, _wctime32, _wctime64
 
@@ -111,7 +111,7 @@ Essas funções validam seus parâmetros. Se *sourceTime* for um ponteiro nulo, 
 
 |Rotina TCHAR.H|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**tctime**|**ctime**|**ctime**|**_wctime**|
+|**_tctime**|**ctime**|**ctime**|**_wctime**|
 |**_tctime32**|**_ctime32**|**_ctime32**|**_wctime32**|
 |**_tctime64**|**_ctime64**|**_ctime64**|**_wctime64**|
 

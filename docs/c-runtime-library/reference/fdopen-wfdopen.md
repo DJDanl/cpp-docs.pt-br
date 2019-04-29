@@ -34,11 +34,11 @@ helpviewer_keywords:
 - streams, associating with files
 ms.assetid: 262757ff-1e09-4472-a5b6-4325fc28f971
 ms.openlocfilehash: 0cde110bf1dd12c23a6b0b658809502743d9edd3
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327155"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62334769"
 ---
 # <a name="fdopen-wfdopen"></a>_fdopen, _wfdopen
 
@@ -81,7 +81,7 @@ Arquivo descritores passados para **fdopen** são de propriedade por retornado *
 
 |Rotina Tchar.h|\_UNICODE e \_MBCS não definidos|\_MBCS definido|\_UNICODE definido|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**tfdopen**|**_fdopen**|**_fdopen**|**_wfdopen**|
+|**_tfdopen**|**_fdopen**|**_fdopen**|**_wfdopen**|
 
 O *modo* cadeia de caracteres Especifica o tipo de acesso ao arquivo solicitado para o arquivo:
 
@@ -114,11 +114,11 @@ Caracteres válidos para o *modo* cadeia de caracteres usada na **fopen** e **fd
 |Caracteres em *modo* cadeia de caracteres|Equivalente *oflag* valor para **Open** e **sopen**|
 |---------------------------------|---------------------------------------------------|
 |**a**|**\_U\_WRONLY &#124; \_s\_APPEND** (geralmente  **\_s\_WRONLY &#124; \_s\_CRI &#124; \_s \_APPEND**)|
-|**+**|**\_U\_RDWR &#124; \_s\_APPEND** (geralmente  **\_s\_RDWR &#124; \_s\_APPEND &#124; \_s\_ CRIAR** )|
+|**a+**|**\_U\_RDWR &#124; \_s\_APPEND** (geralmente  **\_s\_RDWR &#124; \_s\_APPEND &#124; \_s\_ CRIAR** )|
 |**r**|**\_O\_RDONLY**|
-|**r +**|**\_O\_RDWR**|
+|**r+**|**\_O\_RDWR**|
 |**w**|**\_U\_WRONLY** (geralmente  **\_s\_WRONLY &#124; \_s\_criar &#124; \_s\_TRUNC**)|
-|**w +**|**\_U\_RDWR** (geralmente  **\_s\_RDWR &#124; \_s\_criar &#124; \_s\_TRUNC**)|
+|**w+**|**\_U\_RDWR** (geralmente  **\_s\_RDWR &#124; \_s\_criar &#124; \_s\_TRUNC**)|
 |**b**|**\_O\_BINARY**|
 |**t**|**\_O\_TEXT**|
 |**c**|Nenhum|
@@ -186,7 +186,7 @@ Lines in file: 2
 ## <a name="see-also"></a>Consulte também
 
 [E/S de fluxo](../../c-runtime-library/stream-i-o.md)<br/>
-[\_DUP, \_dup2](dup-dup2.md)<br/>
+[\_dup, \_dup2](dup-dup2.md)<br/>
 [fclose, \_fcloseall](fclose-fcloseall.md)<br/>
 [fopen, \_wfopen](fopen-wfopen.md)<br/>
 [freopen, \_wfreopen](freopen-wfreopen.md)<br/>

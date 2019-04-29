@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Platform::SizeT Struct
 ms.assetid: 0803612c-8ba1-430c-9b7b-1bebae88608d
 ms.openlocfilehash: 7f81cb9e1fc2ef7a74cb3878c369e4d7d14e3d90
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57751551"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62330104"
 ---
 # <a name="platformsizet-value-class"></a>Platform::classe de valor SizeT
 
@@ -60,4 +60,4 @@ Ponteiro para um valor de 32 bits sem sinal.
 
 ## <a name="see-also"></a>Consulte também
 
-[Namespace Platform](../cppcx/platform-namespace-c-cx.md)
+[Namespace de plataforma](../cppcx/platform-namespace-c-cx.md)

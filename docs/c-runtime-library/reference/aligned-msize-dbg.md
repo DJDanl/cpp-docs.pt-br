@@ -21,11 +21,11 @@ helpviewer_keywords:
 - _aligned_msize_dbg
 ms.assetid: f1c44af0-3f66-4033-81d1-d71d3afecba0
 ms.openlocfilehash: 054f7b88f93eef37a9a88fbb7895452f7c158716
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50451292"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62342023"
 ---
 # <a name="alignedmsizedbg"></a>_aligned_msize_dbg
 
@@ -60,7 +60,7 @@ Retorna o tamanho (em bytes) como um inteiro sem sinal.
 
 O *alinhamento* e *deslocamento* valores devem ser o mesmo que os valores passados para a função que alocou o bloco.
 
-**aligned_msize_dbg** é uma versão de depuração de [aligned_msize](aligned-msize.md) função. Quando [Debug](../../c-runtime-library/debug.md) não estiver definido, cada chamada para **aligned_msize_dbg** é reduzida a uma chamada para **aligned_msize**. Ambos **aligned_msize** e **aligned_msize_dbg** calcular o tamanho de um bloco de memória no heap de base, mas **aligned_msize_dbg** adiciona um recurso de depuração: ele inclui bloqueiam os buffers nos dois lados da parte do usuário da memória no tamanho retornado.
+**aligned_msize_dbg** é uma versão de depuração de [aligned_msize](aligned-msize.md) função. Quando [Debug](../../c-runtime-library/debug.md) não estiver definido, cada chamada para **aligned_msize_dbg** é reduzida a uma chamada para **aligned_msize**. Ambos **aligned_msize** e **aligned_msize_dbg** calcular o tamanho de um bloco de memória no heap de base, mas **aligned_msize_dbg** adiciona um recurso de depuração: Ele inclui os buffers nos dois lados da parte do usuário do bloco de memória no tamanho retornado.
 
 Esta função valida seu parâmetro. Se *memblock* for um ponteiro nulo ou *alinhamento* não for uma potência de 2 **msize** invocará o manipulador de parâmetro inválido, conforme descrito em [validação de parâmetro ](../../c-runtime-library/parameter-validation.md). Se o erro for tratado, a função definirá **errno** à **EINVAL** e retornará -1.
 

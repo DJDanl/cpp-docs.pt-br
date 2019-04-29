@@ -8,11 +8,11 @@ helpviewer_keywords:
 - -Q compiler option [C++]
 - /Q compiler option [C++]
 ms.openlocfilehash: 5bbb63b4f437f8aefd5c84c1c1c4bd20bdb965cb
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57819903"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62319376"
 ---
 # <a name="q-options-low-level-operations"></a>/Q Opções (operações de nível baixo)
 
@@ -37,4 +37,4 @@ Você pode usar o **/Q** opções do compilador para executar as seguintes opera
 ## <a name="see-also"></a>Consulte também
 
 [Opções do compilador MSVC](compiler-options.md)<br/>
-[Sintaxe de linha de comando do compilador MSVC](compiler-command-line-syntax.md)
+[Sintaxe da linha de comando do compilador MSVC](compiler-command-line-syntax.md)

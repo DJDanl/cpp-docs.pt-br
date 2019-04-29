@@ -29,11 +29,11 @@ helpviewer_keywords:
 - assert macro
 ms.assetid: a9ca031a-648b-47a6-bdf1-65fc7399dd40
 ms.openlocfilehash: 7ac299213ba3de878f7cf2dc99b44c45273bc3b2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50590951"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62341360"
 ---
 # <a name="assert-macro-assert-wassert"></a>assert Macro, _assert, _wassert
 
@@ -68,7 +68,7 @@ A mensagem a ser exibida.
 *filename*<br/>
 O nome do arquivo de origem no qual a declaração falhou.
 
-*Linha*<br/>
+*line*<br/>
 O número de linha no arquivo de origem da declaração com falha.
 
 ## <a name="remarks"></a>Comentários
@@ -81,7 +81,7 @@ A mensagem de diagnóstico é impressa em caracteres largos. Dessa forma, ela fu
 
 O destino da mensagem de diagnóstico depende do tipo de aplicativo que chamou a rotina. Aplicativos de console sempre recebem a mensagem por meio **stderr**. Em um aplicativo baseado em Windows, **assert** chama o Windows [MessageBox](/windows/desktop/api/winuser/nf-winuser-messagebox) função para criar uma caixa de mensagem para exibir a mensagem junto com um **Okey** botão. Quando o usuário clica em **OK**, o programa é anulado imediatamente.
 
-Quando o aplicativo estiver vinculado a uma versão de depuração das bibliotecas do tempo de execução, **assert** cria uma caixa de mensagem com três botões: **anular**, **repetir**e **Ignorar**. Se o usuário clicar em **Anular**, o programa será anulado imediatamente. Se o usuário clicar em **Tentar Novamente**, o depurador será chamado e o usuário poderá depurar o programa se a depuração JIT (Just-In-Time) estiver habilitada. Se o usuário clica **Ignore**, **assert** continua com sua execução normal: Criando a caixa de mensagem com o **Okey** botão. Observe que clicar em **Ignorar** quando há uma condição de erro pode resultar em comportamento indefinido.
+Quando o aplicativo estiver vinculado a uma versão de depuração das bibliotecas do tempo de execução, **assert** cria uma caixa de mensagem com três botões: **Anular**, **Repita**, e **ignorar**. Se o usuário clicar em **Anular**, o programa será anulado imediatamente. Se o usuário clicar em **Tentar Novamente**, o depurador será chamado e o usuário poderá depurar o programa se a depuração JIT (Just-In-Time) estiver habilitada. Se o usuário clica **Ignore**, **assert** continua com sua execução normal: Criando a caixa de mensagem com o **Okey** botão. Observe que clicar em **Ignorar** quando há uma condição de erro pode resultar em comportamento indefinido.
 
 Para obter mais informações sobre depuração de CRT, consulte [Técnicas de Depuração CRT](/visualstudio/debugger/crt-debugging-techniques).
 
@@ -93,7 +93,7 @@ O **assert** macro está habilitada em ambas as versões de lançamento e de dep
 
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|
-|**Assert**, **wassert**|\<assert.h>|
+|**assert**, **_wassert**|\<assert.h>|
 
 A assinatura do **macros Assert** função não está disponível em um arquivo de cabeçalho. A assinatura do **wassert** função está disponível apenas quando o **NDEBUG** macro não está definida.
 

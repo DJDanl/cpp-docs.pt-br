@@ -1,5 +1,5 @@
 ---
-title: SINH, sinhf, sinhl
+title: sinh, sinhf, sinhl
 ms.date: 04/10/2018
 apiname:
 - sinhl
@@ -32,13 +32,13 @@ helpviewer_keywords:
 - sinhl function
 - hyperbolic functions
 ms.openlocfilehash: 7327809a20569c520aa799690203458d54e30fb5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50569800"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62356271"
 ---
-# <a name="sinh-sinhf-sinhl"></a>SINH, sinhf, sinhl
+# <a name="sinh-sinhf-sinhl"></a>sinh, sinhf, sinhl
 
 Calcula o seno hiperbólico.
 
@@ -79,7 +79,7 @@ Como C++ permite sobrecargas, é possível chamar sobrecargas de **sinh** que us
 
 |Rotina|Cabeçalho necessário (C)|Cabeçalho necessário (C++)|
 |-|-|-|
-|**SINH**, **sinhf**, **sinhl**|\<math.h>|\<cmath> ou \<math.h>|
+|**sinh**, **sinhf**, **sinhl**|\<math.h>|\<cmath> ou \<math.h>|
 
 Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 

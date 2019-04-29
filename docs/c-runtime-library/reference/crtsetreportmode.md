@@ -23,11 +23,11 @@ helpviewer_keywords:
 - CrtSetReportMode function
 ms.assetid: 3ecc6a12-afdd-4242-b046-8187ff6d4b36
 ms.openlocfilehash: 2096d39a8ba316fc76c97517a16e34231940e7f4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50595527"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62335289"
 ---
 # <a name="crtsetreportmode"></a>_CrtSetReportMode
 
@@ -73,7 +73,7 @@ A tabela a seguir lista os tipos de relatório definidos em Crtdbg.h.
 |Tipo de relatório|Descrição|
 |-----------------|-----------------|
 |**_CRT_WARN**|Avisos, mensagens e informações que não precisam de atenção imediata.|
-|**CRT_ERROR**|Erros, problemas irrecuperáveis e problemas que exigem atenção imediata.|
+|**_CRT_ERROR**|Erros, problemas irrecuperáveis e problemas que exigem atenção imediata.|
 |**_CRT_ASSERT**|Falhas de declaração (expressões declaradas que são avaliadas como **falsos**).|
 
 O **CrtSetReportMode** função atribui o novo modo de relatório especificado em *reportMode* para o tipo de relatório especificado na *reportType* e retorna o previamente definido modo de relatório para *reportType*. A tabela a seguir lista as opções disponíveis para o *reportMode* e o comportamento resultante de **crtdbgreport**. Essas opções são definidas como sinalizadores de bits em Crtdbg.h.
@@ -83,7 +83,7 @@ O **CrtSetReportMode** função atribui o novo modo de relatório especificado e
 |**_CRTDBG_MODE_DEBUG**|Grava a mensagem na janela de saída do depurador.|
 |**_CRTDBG_MODE_FILE**|Grava a mensagem em um identificador de arquivo fornecido pelo usuário. [_CrtSetReportFile](crtsetreportfile.md) deve ser chamado para definir o arquivo ou o fluxo específico a ser usado como o destino.|
 |**_CRTDBG_MODE_WNDW**|Cria uma caixa de mensagem para exibir a mensagem junto com o [anular](abort.md), **Repita**, e **ignorar** botões.|
-|**_CRTDBG_REPORT_MODE**|Retorna *reportMode* especificado *reportType*:<br /><br /> 1 **_CRTDBG_MODE_FILE**<br /><br /> 2 **_CRTDBG_MODE_DEBUG**<br /><br /> 4 **_CRTDBG_MODE_WNDW**|
+|**_CRTDBG_REPORT_MODE**|Retorna *reportMode* especificado *reportType*:<br /><br /> 1   **_CRTDBG_MODE_FILE**<br /><br /> 2   **_CRTDBG_MODE_DEBUG**<br /><br /> 4   **_CRTDBG_MODE_WNDW**|
 
 Cada tipo de relatório pode ser relatado usando um, dois ou três modos ou nenhum modo. Portanto, é possível ter mais de um destino definido para um único tipo de relatório. Por exemplo, o fragmento de código a seguir causa falhas de declaração a ser enviado para ambos os uma janela de mensagem de depuração e, ao **stderr**:
 
@@ -102,7 +102,7 @@ Além disso, os modos de relatório para cada tipo de relatório podem ser contr
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-**Bibliotecas:** somente versões de depuração dos [Recursos da biblioteca CRT](../../c-runtime-library/crt-library-features.md).
+**Bibliotecas:** Versões de depuração [recursos da biblioteca CRT](../../c-runtime-library/crt-library-features.md) apenas.
 
 ## <a name="see-also"></a>Consulte também
 

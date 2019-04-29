@@ -23,11 +23,11 @@ helpviewer_keywords:
 - fesetexceptflag function
 ms.assetid: 2f7dad77-9e54-4097-a3e3-35176ace4de5
 ms.openlocfilehash: 9ac79e790f0b1e7a89413a0d4974f6053c95616e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50615872"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62333989"
 ---
 # <a name="fesetexceptflag"></a>fesetexceptflag
 
@@ -47,7 +47,7 @@ int fesetexceptflag(
 *pstatus*<br/>
 Ponteiro para um **fexcept_t** objeto que contém os valores para definir sinalizadores de status de exceção para. O objeto pode ser definido por uma chamada anterior a [fegetexceptflag](fegetexceptflag2.md).
 
-*exceções de*<br/>
+*excepts*<br/>
 Os sinalizadores do status de exceção de ponto flutuante que serão definidos.
 
 ## <a name="return-value"></a>Valor de retorno

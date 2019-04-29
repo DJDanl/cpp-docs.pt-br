@@ -14,11 +14,11 @@ helpviewer_keywords:
 - D compiler option [C++]
 ms.assetid: b53fdda7-8da1-474f-8811-ba7cdcc66dba
 ms.openlocfilehash: 18bbdb980c63b3c04b432602afb2402c5e2c42e7
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57812077"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62293960"
 ---
 # <a name="d-preprocessor-definitions"></a>/D (definições de pré-processador)
 
@@ -98,7 +98,7 @@ TEST defined 1
 ## <a name="see-also"></a>Consulte também
 
 [Opções do compilador MSVC](compiler-options.md)<br/>
-[Sintaxe de linha de comando do compilador MSVC](compiler-command-line-syntax.md)<br/>
+[Sintaxe da linha de comando do compilador MSVC](compiler-command-line-syntax.md)<br/>
 [/U, /u (excluir definições de símbolos)](u-u-undefine-symbols.md)<br/>
 [Diretiva #undef (C/C++)](../../preprocessor/hash-undef-directive-c-cpp.md)<br/>
 [Diretiva #define (C/C++)](../../preprocessor/hash-define-directive-c-cpp.md)

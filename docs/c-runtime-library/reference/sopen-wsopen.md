@@ -33,11 +33,11 @@ helpviewer_keywords:
 - _wsopen function
 ms.assetid: a9d4cccf-06e9-414d-96fa-453fca88cc1f
 ms.openlocfilehash: b3773550fd32df75f0a3819767de1171daebaf0f
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330119"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62355387"
 ---
 # <a name="sopen-wsopen"></a>_sopen, _wsopen
 
@@ -102,22 +102,22 @@ O **sopen** função abre o arquivo especificado por *filename* e prepara o arqu
 
 A expressão de inteiro *oflag* é formada combinando uma ou mais das seguintes constantes de manifesto, definidas em \<fcntl. h >. Quando duas ou mais constantes formam o argumento *oflag*, elas são combinadas com o operador OR bit a bit ( **&#124;** ).
 
-|*oflag* constante|Comportamento|
+|*oflag* constant|Comportamento|
 |-|-|
 | **_O_APPEND** | Move o ponteiro para o final do arquivo antes de cada operação de gravação. |
-| **O_BINARY** | Abre o arquivo no modo binário (sem conversão). (Consulte [fopen](fopen-wfopen.md) para obter uma descrição do modo binário.) |
-| **O_CREAT** | Cria um arquivo e o abre para gravação. Não tem nenhum efeito se o arquivo especificado por *filename* existe. O *pmode* argumento é necessário quando **o_creat** for especificado. |
-| **O_CREAT** &AMP;#124; **_O_SHORT_LIVED** | Cria um arquivo temporário e, se possível, não alinha com o disco. O *pmode* argumento é necessário quando **o_creat** for especificado. |
-| **O_CREAT** &AMP;#124; **_O_TEMPORARY** | Cria um arquivo temporário, que é excluído quando o último descritor de arquivo é fechado. O *pmode* argumento é necessário quando **o_creat** for especificado. |
-| **O_CREAT**&AMP;#124; ` _O_EXCL` | Retorna um valor de erro se um arquivo especificado por *filename* existe. Aplica-se somente quando usado com **o_creat**. |
-| **O_NOINHERIT** | Impede a criação de um descritor de arquivo compartilhado. |
+| **_O_BINARY** | Abre o arquivo no modo binário (sem conversão). (Consulte [fopen](fopen-wfopen.md) para obter uma descrição do modo binário.) |
+| **_O_CREAT** | Cria um arquivo e o abre para gravação. Não tem nenhum efeito se o arquivo especificado por *filename* existe. O *pmode* argumento é necessário quando **o_creat** for especificado. |
+| **_O_CREAT** &#124; **_O_SHORT_LIVED** | Cria um arquivo temporário e, se possível, não alinha com o disco. O *pmode* argumento é necessário quando **o_creat** for especificado. |
+| **_O_CREAT** &#124; **_O_TEMPORARY** | Cria um arquivo temporário, que é excluído quando o último descritor de arquivo é fechado. O *pmode* argumento é necessário quando **o_creat** for especificado. |
+| **_O_CREAT** &#124; ` _O_EXCL` | Retorna um valor de erro se um arquivo especificado por *filename* existe. Aplica-se somente quando usado com **o_creat**. |
+| **_O_NOINHERIT** | Impede a criação de um descritor de arquivo compartilhado. |
 | **_O_RANDOM** | Especifica que o cache é otimizado para acesso aleatório do disco, mas não se restringe a isso. |
 | **_O_RDONLY** | Abre um arquivo somente leitura. Não pode ser especificado com **o_rdwr** ou **o_wronly**. |
-| **O_RDWR** | Abre um arquivo para leitura e gravação. Não pode ser especificado com **o_rdonly** ou **o_wronly**. |
+| **_O_RDWR** | Abre um arquivo para leitura e gravação. Não pode ser especificado com **o_rdonly** ou **o_wronly**. |
 | **_O_SEQUENTIAL** | Especifica que o cache é otimizado para acesso sequencial do disco, mas não se restringe a isso. |
 | **_O_TEXT** | Abre um arquivo no modo de texto (convertido). (Para obter mais informações, consulte [E/S de arquivo nos modos de texto e binário](../../c-runtime-library/text-and-binary-mode-file-i-o.md) e [fopen](fopen-wfopen.md).) |
-| **O_TRUNC** | Abre um arquivo e o trunca para que ele fique com tamanho zero; o arquivo deve ter permissão de gravação. Não pode ser especificado com **o_rdonly**. **O_trunc** usado com **o_creat** abre um arquivo existente ou cria um arquivo. **Observação:** as **o_trunc** sinalizador destrói o conteúdo do arquivo especificado. |
-| **O_WRONLY** | Abre um arquivo somente gravação. Não pode ser especificado com **o_rdonly** ou **o_rdwr**. |
+| **_O_TRUNC** | Abre um arquivo e o trunca para que ele fique com tamanho zero; o arquivo deve ter permissão de gravação. Não pode ser especificado com **o_rdonly**. **O_trunc** usado com **o_creat** abre um arquivo existente ou cria um arquivo. **Observação:** O **o_trunc** sinalizador destrói o conteúdo do arquivo especificado. |
+| **_O_WRONLY** | Abre um arquivo somente gravação. Não pode ser especificado com **o_rdonly** ou **o_rdwr**. |
 | **_O_U16TEXT** | Abre um arquivo no modo Unicode UTF-16. |
 | **_O_U8TEXT** | Abre um arquivo no modo Unicode UTF-8. |
 | **_O_WTEXT** | Abre um arquivo no modo Unicode. |
@@ -130,20 +130,20 @@ Se **sopen** for chamado com **o_wronly** | **o_append** (modo de acréscimo) e 
 
 O argumento *shflag* é uma expressão constante formada por uma das seguintes constantes de manifesto, definidas em \<Share. h >.
 
-|*shflag* constante|Comportamento|
+|*shflag* constant|Comportamento|
 |-|-|
-| **SH_DENYRW** | Nega acesso de leitura e gravação a um arquivo. |
-| **SH_DENYWR** | Nega acesso de gravação a um arquivo. |
-| **SH_DENYRD** | Nega acesso de leitura a um arquivo. |
-| **SH_DENYNO** | Permite acesso de leitura e gravação. |
+| **_SH_DENYRW** | Nega acesso de leitura e gravação a um arquivo. |
+| **_SH_DENYWR** | Nega acesso de gravação a um arquivo. |
+| **_SH_DENYRD** | Nega acesso de leitura a um arquivo. |
+| **_SH_DENYNO** | Permite acesso de leitura e gravação. |
 
 O *pmode* argumento é necessário somente quando **o_creat** for especificado. Se o arquivo não existir, *pmode* Especifica configurações de permissão do arquivo, que são definidas quando o novo arquivo é fechado pela primeira vez. Caso contrário, *pmode* será ignorado. *pmode* é uma expressão de inteiro que contém uma ou ambas as constantes de manifesto **s_iwrite** e **s_iread**, que estão definidos na \<sys\stat.h. >. Quando as duas constantes são fornecidas, elas são combinadas com o operador OR bit a bit. O significado dos *pmode* é da seguinte maneira.
 
 |*pmode*|Significado|
 |-|-|
-| **S_IREAD** | Somente a leitura é permitida. |
-| **S_IWRITE** | Gravação permitida. (Na verdade, permite leitura e gravação.) |
-| **S_IREAD** &AMP;#124; **S_IWRITE** | Leitura e gravação permitidas. |
+| **_S_IREAD** | Somente a leitura é permitida. |
+| **_S_IWRITE** | Gravação permitida. (Na verdade, permite leitura e gravação.) |
+| **_S_IREAD** &#124; **_S_IWRITE** | Leitura e gravação permitidas. |
 
 Se a permissão de gravação não for fornecida, o arquivo será somente leitura. No sistema operacional Windows, todos os arquivos podem ser lidos; não é possível conceder permissão de somente gravação. Portanto, os modos **s_iwrite** e **s_iread** | **s_iwrite** são equivalentes.
 

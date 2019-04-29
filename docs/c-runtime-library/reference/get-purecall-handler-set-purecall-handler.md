@@ -35,11 +35,11 @@ helpviewer_keywords:
 - _get_purecall_handler function
 ms.assetid: 2759b878-8afa-4129-86e7-72afc2153d9c
 ms.openlocfilehash: 0009b4bc1c7bf70bd84b9a82ecdc8643789e8164
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50646349"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62287394"
 ---
 # <a name="getpurecallhandler-setpurecallhandler"></a>_get_purecall_handler, _set_purecall_handler
 
@@ -66,7 +66,7 @@ Anterior **_purecall_handler**. Retorna **nullptr** se não houver nenhum manipu
 
 ## <a name="remarks"></a>Comentários
 
-O **get_purecall_handler** e **set_purecall_handler** funções são específicas da Microsoft e se aplicam somente a código C++.
+O **get_purecall_handler** e **set_purecall_handler** funções são específicas da Microsoft e só se aplicam ao C++ código.
 
 Uma chamada para uma função virtual pura é um erro porque não tem nenhuma implementação. Por padrão, o compilador gera código para invocar uma função de manipulador de erro quando uma função virtual pura é chamada, o que encerra o programa. Você pode instalar sua própria função de manipulador de erro para chamadas de função pura virtual, para capturá-las para fins de depuração ou relatório. Para usar seu próprio manipulador de erro, crie uma função que tem o **_purecall_handler** assinatura, em seguida, use **set_purecall_handler** para torná-lo o manipulador atual.
 
@@ -78,7 +78,7 @@ Para restaurar o comportamento padrão, chame **set_purecall_handler** usando um
 
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|
-|**get_purecall_handler**, **set_purecall_handler**|\<cstdlib> ou \<stdlib.h>|
+|**_get_purecall_handler**, **_set_purecall_handler**|\<cstdlib> ou \<stdlib.h>|
 
 Para obter informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 

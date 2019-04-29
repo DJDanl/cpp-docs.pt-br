@@ -30,11 +30,11 @@ helpviewer_keywords:
 - wfreopen function
 ms.assetid: de4b73f8-1043-4d62-98ee-30d2022da885
 ms.openlocfilehash: 4c570837bddea1f5e986ae5f767279ab2637ea21
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51332498"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62332982"
 ---
 # <a name="freopen-wfreopen"></a>freopen, _wfreopen
 
@@ -63,7 +63,7 @@ Caminho do novo arquivo.
 *modo*<br/>
 Tipo de acesso permitido.
 
-*fluxo*<br/>
+*stream*<br/>
 Ponteiro para a estrutura **FILE**.
 
 ## <a name="return-value"></a>Valor de retorno
@@ -82,7 +82,7 @@ O **freopen** função fecha o arquivo atualmente associado *fluxo* e reatribui 
 
 |Rotina TCHAR.H|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**tfreopen**|**freopen**|**freopen**|**_wfreopen**|
+|**_tfreopen**|**freopen**|**freopen**|**_wfreopen**|
 
 **freopen** normalmente é usado para redirecionar os arquivos abertos previamente **stdin**, **stdout**, e **stderr** para arquivos especificados pelo usuário. O novo arquivo associado *stream* é aberto com *modo*, que é uma cadeia de caracteres que especifica o tipo de acesso solicitado para o arquivo, da seguinte maneira:
 

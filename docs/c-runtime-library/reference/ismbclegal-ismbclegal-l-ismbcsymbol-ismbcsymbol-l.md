@@ -43,11 +43,11 @@ helpviewer_keywords:
 - istlegal_l function
 ms.assetid: 31bf1ea5-b56f-4e28-b21e-b49a2cf93ffc
 ms.openlocfilehash: 07855ec970b2bf307238982987912f1e91505e96
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50454568"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62286826"
 ---
 # <a name="ismbclegal-ismbclegall-ismbcsymbol-ismbcsymboll"></a>_ismbclegal, _ismbclegal_l, _ismbcsymbol, _ismbcsymbol_l
 
@@ -102,15 +102,15 @@ As versões dessas funções com o **l** sufixo são idênticas, exceto que eles
 
 |Rotina Tchar.h|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**istlegal**|Sempre retorna falso|**_ismbclegal**|Sempre retorna falso.|
-|**istlegal_l**|Sempre retorna falso|**_ismbclegal_l**|Sempre retorna falso.|
+|**_istlegal**|Sempre retorna falso|**_ismbclegal**|Sempre retorna falso.|
+|**_istlegal_l**|Sempre retorna falso|**_ismbclegal_l**|Sempre retorna falso.|
 
 ## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|
-|**ismbclegal**, **ismbclegal_l**|\<mbstring.h>|
-|**ismbcsymbol**, **ismbcsymbol_l**|\<mbstring.h>|
+|**_ismbclegal**, **_ismbclegal_l**|\<mbstring.h>|
+|**_ismbcsymbol**, **_ismbcsymbol_l**|\<mbstring.h>|
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 

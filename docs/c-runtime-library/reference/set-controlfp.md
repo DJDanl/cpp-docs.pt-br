@@ -25,11 +25,11 @@ helpviewer_keywords:
 - _set_controlfp function
 ms.assetid: e0689d50-f68a-4028-a9c1-fb23eedee4ad
 ms.openlocfilehash: 1187502f09849d7ca4d8e595c237cfa511d00c6b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50498972"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62356674"
 ---
 # <a name="setcontrolfp"></a>_set_controlfp
 
@@ -49,12 +49,12 @@ void __cdecl _set_controlfp(
 *newControl*<br/>
 Novos valores de bit da palavra de controle.
 
-*Máscara*<br/>
+*mask*<br/>
 Máscara para novos bits da palavra de controle a ser definida.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Nenhum.
+nenhuma.
 
 ## <a name="remarks"></a>Comentários
 

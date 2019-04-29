@@ -3,25 +3,25 @@ title: Exceções (C++/CX)
 ms.date: 01/18/2018
 ms.assetid: 6cbdc1f1-e4d7-4707-a670-86365146432f
 ms.openlocfilehash: 7134cbb9e90f0355a3b2a912330027cf73876443
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471695"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62301520"
 ---
 # <a name="exceptions-ccx"></a>Exceções (C++/CX)
 
-Tratamento de erros em C + + c++ /CX se baseia em exceções. O nível mais fundamental, os componentes de tempo de execução do Windows relatam erros como valores HRESULT. No C + + c++ /CX, esses valores são convertidos em exceções fortemente tipadas que contêm um valor HRESULT e uma descrição de cadeia de caracteres que você pode acessar programaticamente.  As exceções são implementadas como `ref class` que deriva de `Platform::Exception`.  O namespace `Platform` define classes de exceção distinta para os valores HRESULT mais comuns; todos os outros valores são relatados por meio da classe `Platform::COMException` . Todas as classes de exceção têm um campo [Exception::HResult](platform-exception-class.md#hresult) que você pode usar para recuperar o HRESULT original. Você também pode examinar informações da pilha de chamadas para código do usuário no depurador que pode ajudar a identificar a origem da exceção, mesmo que ela seja proveniente de código que foi escrito em um idioma diferente do C++.
+Tratamento de erros em C++/CX se baseia em exceções. O nível mais fundamental, os componentes de tempo de execução do Windows relatam erros como valores HRESULT. No C++/CX, esses valores são convertidos em exceções fortemente tipadas que contêm um valor HRESULT e uma descrição de cadeia de caracteres que você pode acessar programaticamente.  As exceções são implementadas como `ref class` que deriva de `Platform::Exception`.  O namespace `Platform` define classes de exceção distinta para os valores HRESULT mais comuns; todos os outros valores são relatados por meio da classe `Platform::COMException` . Todas as classes de exceção têm um campo [Exception::HResult](platform-exception-class.md#hresult) que você pode usar para recuperar o HRESULT original. Você também pode examinar informações da pilha de chamadas para código do usuário no depurador que pode ajudar a identificar a origem da exceção, mesmo que ela seja proveniente de código que foi escrito em um idioma diferente do C++.
 
 ## <a name="exceptions"></a>Exceções
 
-Em seu programa de C++, você pode gerar e capturar uma exceção proveniente de uma operação de tempo de execução do Windows, uma exceção que é derivada de `std::exception`, ou um tipo definido pelo usuário. Você precisa lançar uma exceção de tempo de execução do Windows somente quando ele for o limite ABI (interface binária) do aplicativo, por exemplo, quando o código que captura sua exceção está escrito em JavaScript. Quando uma exceção de Windows Runtime C++ alcança os limites de ABI, a exceção é convertida em um `Platform::FailureException` exceção, que representa um E_FAIL HRESULT. Para obter mais informações sobre a ABI, consulte [Creating Windows Runtime Components in C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp).
+Em seu programa de C++, você pode gerar e capturar uma exceção proveniente de uma operação de tempo de execução do Windows, uma exceção que é derivada de `std::exception`, ou um tipo definido pelo usuário. Você precisa lançar uma exceção de tempo de execução do Windows somente quando ele for o limite ABI (interface binária) do aplicativo, por exemplo, quando o código que captura sua exceção está escrito em JavaScript. Quando um não - Windows Runtime C++ exceção alcança os limites de ABI, a exceção é convertida em uma `Platform::FailureException` exceção, que representa um E_FAIL HRESULT. Para obter mais informações sobre a ABI, consulte [Creating Windows Runtime Components in C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp).
 
 Você pode declarar uma [Platform:: Exception](platform-exception-class.md) usando um dos dois construtores que usam um parâmetro HRESULT ou um parâmetro HRESULT e um [Platform:: string](platform-string-class.md)^ que pode ser transmitido pelo parâmetro de ABI para qualquer aplicativo de tempo de execução do Windows que lida com isso. Ou pode declarar uma exceção usando uma de duas sobrecargas do [método Exception::CreateException](platform-exception-class.md#createexception) que adotam um parâmetro HRESULT, ou um parâmetro HRESULT e um parâmetro `Platform::String^` .
 
 ## <a name="standard-exceptions"></a>Exceções padrão
 
-C + + c++ /CX oferece suporte a um conjunto de exceções padrão que representam erros HRESULT típicos. Cada exceção padrão é derivada de [Platform::COMException](platform-comexception-class.md), que, por sua vez, é derivada de `Platform::Exception`. Quando você gera uma exceção através dos limites da ABI, é necessário gerar uma das exceções padrão.
+C++/CX oferece suporte a um conjunto de exceções padrão que representam erros HRESULT típicos. Cada exceção padrão é derivada de [Platform::COMException](platform-comexception-class.md), que, por sua vez, é derivada de `Platform::Exception`. Quando você gera uma exceção através dos limites da ABI, é necessário gerar uma das exceções padrão.
 
 você não pode derivar seu próprio tipo de exceção de `Platform::Exception`. Para gerar uma exceção personalizada, use um HRESULT definido pelo usuário para construir um objeto `COMException` .
 
@@ -43,7 +43,7 @@ A tabela a seguir lista as exceções padrão.
 |OperationCanceledException|E\_ANULAR|Gerada quando uma operação é anulada.|
 |OutOfBoundsException|E\_DOS LIMITES|Gerada quando uma operação tenta acessar dados fora do intervalo válido.|
 |OutOfMemoryException|E\_OUTOFMEMORY|Gerada quando a memória para concluir a operação é insuficiente.|
-|WrongThreadException|RPC\_ELETRÔNICO\_ERRADO\_DE THREAD|Gerada quando um thread chama via um ponteiro de interface, que destina-se a um objeto proxy que não pertence ao apartment do thread.|
+|WrongThreadException|RPC\_E\_WRONG\_THREAD|Gerada quando um thread chama via um ponteiro de interface, que destina-se a um objeto proxy que não pertence ao apartment do thread.|
 
 ## <a name="hresult-and-message-properties"></a>Propriedades de HResult e de Message
 
@@ -65,13 +65,13 @@ Para capturar exceções geradas durante uma operação assíncrona, use a class
 
 No Windows 8.1, você pode assinar para o [Windows::ApplicationModel::Core::CoreApplication::UnhandledErrorDetected](/uwp/api/windows.applicationmodel.core.icoreapplicationunhandlederror#Windows_ApplicationModel_Core_ICoreApplicationUnhandledError_UnhandledErrorDetected) evento estático, que fornece acesso aos erros não tratados que estão prestes a anular o processo. Independentemente da origem do erro, ele chega a esse manipulador como um objeto [Windows::ApplicationModel::Core::UnhandledError](/uwp/api/windows.applicationmodel.core.unhandlederror) que é transmitido com os argumentos do evento. Quando você chama `Propagate` no objeto, ele cria e gera uma exceção `Platform::*Exception` do tipo correspondente ao código de erro. Nos blocos catch, você pode salvar o estado do usuário, se necessário, e permitir que o processo seja finalizado chamando `throw`ou fazendo algo para colocar o programa novamente em um estado conhecido. O exemplo a seguir mostra o padrão básico:
 
-No app.xaml.h:
+In app.xaml.h:
 
 ```cpp
 void OnUnhandledException(Platform::Object^ sender, Windows::ApplicationModel::Core::UnhandledErrorDetectedEventArgs^ e);
 ```
 
-No app.xaml.cpp:
+In app.xaml.cpp:
 
 ```cpp
 // Subscribe to the event, for example in the app class constructor:
@@ -99,7 +99,7 @@ void App::OnUnhandledException(Platform::Object^ sender, Windows::ApplicationMod
 
 ### <a name="remarks"></a>Comentários
 
-C + + c++ /CX não usa o `finally` cláusula.
+C++/CX não usa o `finally` cláusula.
 
 ## <a name="see-also"></a>Consulte também
 
