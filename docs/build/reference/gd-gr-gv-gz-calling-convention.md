@@ -22,11 +22,11 @@ helpviewer_keywords:
 - /Gr compiler option [C++]
 ms.assetid: fd3110cb-2d77-49f2-99cf-a03f9ead00a3
 ms.openlocfilehash: 7c4f7e6edb020f5c8d2abf80f14df33e18a915c5
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57817456"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62270946"
 ---
 # <a name="gd-gr-gv-gz-calling-convention"></a>/Gd, /Gr, /Gv, /Gz (convenção de chamada)
 
@@ -41,7 +41,7 @@ Essas opções determinam a ordem na qual função argumentos são enviados por 
 
 ## <a name="remarks"></a>Comentários
 
-**/Gd**, a configuração padrão, especifica o [cdecl](../../cpp/cdecl.md) convenção de chamada para todas as funções exceto membro C++ funções e funções que são marcadas [stdcall](../../cpp/stdcall.md), [_ fastcall](../../cpp/fastcall.md), ou [vectorcall](../../cpp/vectorcall.md).
+**/Gd**, a configuração padrão, especifica o [cdecl](../../cpp/cdecl.md) convenção de chamada para todas as funções exceto C++ funções de membro e que são marcados [stdcall](../../cpp/stdcall.md), [fastcall](../../cpp/fastcall.md), ou [vectorcall](../../cpp/vectorcall.md).
 
 **/GR** Especifica o `__fastcall` convenção de chamada para todas as funções exceto funções de membro de C++, chamado de funções `main`e funções que são marcadas `__cdecl`, `__stdcall`, ou `__vectorcall`. Todos os `__fastcall` funções devem ter protótipos. Esta convenção de chamada só está disponível nos compiladores que direcionam o x86 e é ignorada pelos compiladores que direcionam outras arquiteturas.
 
@@ -54,7 +54,7 @@ Funções que usam um número variável de argumentos devem ser marcada como `__
 **/Gd**, **/Gr**, **/Gv** e **/Gz** não são compatíveis com [/CLR: safe](clr-common-language-runtime-compilation.md) ou **/clr: pure**. O **/clr: pure** e **/CLR: safe** opções do compilador são preteridas no Visual Studio 2015 e sem suporte no Visual Studio 2017.
 
 > [!NOTE]
-> Por padrão para x86 de processadores, as funções de membro de C++ usam [thiscall](../../cpp/thiscall.md).
+> Por padrão para x86 de processadores, C++ funções membro usam [thiscall](../../cpp/thiscall.md).
 
 Para todos os processadores, uma função de membro que está explicitamente marcada como `__cdecl`, `__fastcall`, `__vectorcall`, ou `__stdcall` usa a convenção de chamada especificada se ele não é ignorado na arquitetura. Uma função de membro que aceita um número variável de argumentos sempre usa o `__cdecl` convenção de chamada.
 
@@ -112,4 +112,4 @@ Para o C, o `__vectorcall` convenção de nomenclatura usa o nome da função se
 ## <a name="see-also"></a>Consulte também
 
 - [Opções do compilador MSVC](compiler-options.md)
-- [Sintaxe de linha de comando do compilador MSVC](compiler-command-line-syntax.md)
+- [Sintaxe da linha de comando do compilador MSVC](compiler-command-line-syntax.md)

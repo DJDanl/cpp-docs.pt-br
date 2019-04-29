@@ -12,11 +12,11 @@ helpviewer_keywords:
 - -TLBOUT linker option
 ms.assetid: 0df6d078-2e48-46c9-a1a5-02674d85dce8
 ms.openlocfilehash: 4e04514933a521bbf9d927fa6b47bacb87896353
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57822256"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62317634"
 ---
 # <a name="tlbout-name-tlb-file"></a>/TLBOUT (nomear arquivo .TLB)
 
@@ -57,7 +57,7 @@ Se /TLBOUT não for especificado, o arquivo. tlb receberá seu nome de [/IDLOUT]
 ## <a name="see-also"></a>Consulte também
 
 [Referência de vinculador MSVC](linking.md)<br/>
-[Opções do vinculador MSVC](linker-options.md)<br/>
+[Opções de vinculador MSVC](linker-options.md)<br/>
 [/IGNOREIDL (não processar atributos em MIDL)](ignoreidl-don-t-process-attributes-into-midl.md)<br/>
 [/MIDL (especificar opções de linha de comando de MIDL)](midl-specify-midl-command-line-options.md)<br/>
 [Compilando um programa atribuído](../../windows/building-an-attributed-program.md)

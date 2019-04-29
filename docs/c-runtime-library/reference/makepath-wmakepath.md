@@ -34,11 +34,11 @@ helpviewer_keywords:
 - tmakepath function
 ms.assetid: 5930b197-a7b8-46eb-8519-2841a58cd026
 ms.openlocfilehash: 073f8aba6936aa33dafcef7ed47f5286802a4948
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50483545"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62285693"
 ---
 # <a name="makepath-wmakepath"></a>_makepath, _wmakepath
 
@@ -68,7 +68,7 @@ void _wmakepath(
 *path*<br/>
 Buffer de caminho completo.
 
-*Dirigir*<br/>
+*drive*<br/>
 Contém uma letra (A, B e assim por diante) correspondente à unidade desejada e um sinal de dois pontos opcional à direita. **makepath** insere os dois-pontos automaticamente no caminho de composição se ele estiver ausente. Se *unidade* é **nulo** ou aponta para uma cadeia de caracteres vazia, nenhuma letra da unidade é exibida na composição *caminho* cadeia de caracteres.
 
 *dir*<br/>
@@ -90,7 +90,7 @@ O **makepath** função cria uma cadeia de caracteres de caminho de composição
 
 |Rotina Tchar.h|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**tmakepath**|**_makepath**|**_makepath**|**_wmakepath**|
+|**_tmakepath**|**_makepath**|**_makepath**|**_wmakepath**|
 
 O *caminho* argumento deve apontar para um buffer vazio grande o suficiente para conter o caminho completo. A composição *caminho* deve ser maior do que o **MAX_PATH** constante, definida em stdlib. h.
 

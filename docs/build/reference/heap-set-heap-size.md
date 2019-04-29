@@ -12,11 +12,11 @@ helpviewer_keywords:
 - HEAP linker option
 ms.assetid: a3f71927-7f1d-492c-9fdb-dfccb1a043da
 ms.openlocfilehash: 715eaa358d052d4ae646f38f2e784f0235dffccb
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57813287"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62270348"
 ---
 # <a name="heap-set-heap-size"></a>/HEAP (definir tamanho do heap)
 
@@ -53,4 +53,4 @@ Essa funcionalidade também está disponível por meio de um arquivo de definiç
 ## <a name="see-also"></a>Consulte também
 
 [Referência de vinculador MSVC](linking.md)<br/>
-[Opções do vinculador MSVC](linker-options.md)
+[Opções de vinculador MSVC](linker-options.md)

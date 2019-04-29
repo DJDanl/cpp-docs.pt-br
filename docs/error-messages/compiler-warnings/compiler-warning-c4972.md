@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4972
 ms.assetid: d18e8e65-b2ef-4d75-a207-fbd0c17c9060
 ms.openlocfilehash: 7c58258298fb91d04014e719732135a1f33f13b6
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59777894"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62280692"
 ---
 # <a name="compiler-warning-c4972"></a>Aviso do compilador C4972
 

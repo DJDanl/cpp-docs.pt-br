@@ -8,11 +8,11 @@ helpviewer_keywords:
 - __declspec keyword [C++], align
 ms.assetid: 9cb63f58-658b-4425-ac47-af8eabfc5878
 ms.openlocfilehash: 1bfe6e7a4646be8cea622078b4d85f20f458e1c5
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627326"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62258143"
 ---
 # <a name="align-c"></a>align (C++)
 
@@ -244,4 +244,4 @@ O deslocamento de um objeto baseia-se no deslocamento do objeto anterior e na co
 
 [__declspec](../cpp/declspec.md)<br/>
 [Visão geral das convenções ARM ABI](../build/overview-of-arm-abi-conventions.md)<br/>
-[x64 convenções de software](../build/x64-software-conventions.md)
+[Convenções de software x64](../build/x64-software-conventions.md)

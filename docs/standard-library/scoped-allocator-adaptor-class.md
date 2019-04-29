@@ -24,11 +24,11 @@ helpviewer_keywords:
 - std::scoped_allocator_adaptor::select_on_container_copy_construction
 ms.assetid: 0d9b06a1-9a4a-4669-9470-8805cae48e89
 ms.openlocfilehash: c02f5171fac862b6f79e194f5940b0adeb2e93e0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50601416"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62348205"
 ---
 # <a name="scopedallocatoradaptor-class"></a>Classe scoped_allocator_adaptor
 
@@ -124,7 +124,7 @@ pointer allocate(size_type count);pointer allocate(size_type count, const_void_p
 *count*<br/>
 O número de elementos para os quais um armazenamento suficiente deve ser alocado.
 
-*Dica*<br/>
+*hint*<br/>
 Um ponteiro que pode ajudar o objeto alocador localizando o endereço de um objeto alocado antes da solicitação.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -271,7 +271,7 @@ Uma referência ao objeto armazenado do tipo `outer_allocator_type`.
 
 Define o tipo `Outer::rebind\<Other>::other` como um sinônimo de `scoped_allocator_adaptor\<Other, Inner...>`.
 
-struct reassociação {typedef Other_traits::rebind\<outros > Other_alloc; typedef scoped_allocator_adaptor\<Other_alloc, Inner... > outros;};
+struct reassociação {typedef Other_traits::rebind\<outros > Other_alloc; typedef scoped_allocator_adaptor\<Other_alloc, Inner... > outros; };
 
 ## <a name="scoped_allocator_adaptor"></a> Construtor scoped_allocator_adaptor::scoped_allocator_adaptor
 
@@ -297,10 +297,10 @@ scoped_allocator_adaptor(Outer2&& al,
 *right*<br/>
 Um `scoped_allocator_adaptor` existente.
 
-*Al*<br/>
+*al*<br/>
 Um alocador existente a ser usado como o alocador externo.
 
-*REST*<br/>
+*rest*<br/>
 Um alocador existente a ser usado como os alocadores internos.
 
 ### <a name="remarks"></a>Comentários

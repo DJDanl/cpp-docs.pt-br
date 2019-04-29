@@ -31,11 +31,11 @@ helpviewer_keywords:
 - csinhl function
 ms.assetid: cc616e55-d14d-4cd3-91f0-fbee03ce5edf
 ms.openlocfilehash: 2ea6eaedc7eae7256310bf55b06fde0ecb2c64de
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50552003"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62289397"
 ---
 # <a name="csinh-csinhf-csinhl"></a>csinh, csinhf, csinhl
 
@@ -72,13 +72,13 @@ O seno hiperbólico *z*, em radianos.
 
 ## <a name="remarks"></a>Comentários
 
-Como C++ permite sobrecargas, é possível chamar sobrecargas de **csinh** que usam e retornam **fcomplex** e **_Lcomplex** valores. Em um programa do C **csinh** sempre usa e retorna um **_Dcomplex** valor.
+Porque C++ permite sobrecargas, é possível chamar sobrecargas de **csinh** que usam e retornam **fcomplex** e **_Lcomplex** valores. Em um programa do C **csinh** sempre usa e retorna um **_Dcomplex** valor.
 
 ## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho C|Cabeçalho C++|
 |-------------|--------------|------------------|
-|**csinh**, **csinhf**, **csinhl**|\<complex.h>|\<ccomplex>|
+|**csinh**,               **csinhf**, **csinhl**|\<complex.h>|\<ccomplex>|
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 

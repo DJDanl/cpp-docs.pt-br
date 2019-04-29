@@ -9,11 +9,11 @@ helpviewer_keywords:
 - -FC compiler option [C++]
 ms.assetid: 1f11414e-cb42-421b-be68-9d369aab036b
 ms.openlocfilehash: 190174e1e2ac4d160140ddc54f9cc1c3a1b31709
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57809022"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62271288"
 ---
 # <a name="fc-full-path-of-source-code-file-in-diagnostics"></a>/FC (demarcador completo do arquivo de código-fonte no diagnóstico)
 
@@ -63,4 +63,4 @@ O **/FC** opção é indicada pela **/ZI**. Para obter mais informações sobre 
 ## <a name="see-also"></a>Consulte também
 
 [Opções do compilador MSVC](compiler-options.md)<br/>
-[Sintaxe de linha de comando do compilador MSVC](compiler-command-line-syntax.md)
+[Sintaxe da linha de comando do compilador MSVC](compiler-command-line-syntax.md)

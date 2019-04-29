@@ -13,11 +13,11 @@ helpviewer_keywords:
 - task_continuation_context class
 ms.assetid: 1fb5a76a-3682-45c2-a615-8b6b527741f0
 ms.openlocfilehash: 5d7d92fcd1bb00513b9e05030afa56726e87183b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57280286"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62212851"
 ---
 # <a name="taskcontinuationcontext-class"></a>Classe task_continuation_context
 
@@ -73,7 +73,7 @@ O `get_current_winrt_context` método captura o contexto do thread de tempo de e
 
 O valor retornado por `get_current_winrt_context` pode ser usado para indicar ao tempo de execução que a continuação deve ser executada no modelo de apartment de contexto capturado (STA contra o MTA), independentemente da tarefa antecedente está ciente de segmentação. Um apartment com suporte a tarefa é uma tarefa que desempacota um tempo de execução do Windows `IAsyncInfo` interface ou uma tarefa que é descendente de tal tarefa.
 
-Esse método é semelhante ao `use_current` método, mas ele também está disponível para código C++ nativo sem C + + c++ /CLI suporte à extensão do CX. Ele destina-se para uso por usuários avançados de gravação C + + c++ /CLI código da biblioteca CX independente para chamadores de tempo de execução do Windows e nativos. A menos que você precisa dessa funcionalidade, recomendamos o `use_current` método, que está disponível apenas para C + + c++ /CLI clientes CX.
+Esse método é semelhante para o `use_current` método, mas ele também está disponível para nativo C++ o código sem C++suporte à extensão /CX. Ele destina-se para uso por usuários avançados de gravação C++código de biblioteca /CX-agnostic para nativo e chamadores de tempo de execução do Windows. A menos que você precisa dessa funcionalidade, recomendamos a `use_current` método, que está disponível apenas para C++/CX clientes.
 
 ##  <a name="use_arbitrary"></a> use_arbitrary
 

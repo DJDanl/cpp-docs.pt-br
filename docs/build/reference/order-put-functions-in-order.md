@@ -13,11 +13,11 @@ helpviewer_keywords:
 - paging, optimizing
 ms.assetid: ecf5eb3e-e404-4e86-9a91-4e5ec157261a
 ms.openlocfilehash: b1927ffd2efc923157fe1956fe905c939bc62719
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57807878"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62320182"
 ---
 # <a name="order-put-functions-in-order"></a>/ORDER (colocar funções na ordem)
 
@@ -74,4 +74,4 @@ O **/ORDER** opção desabilita a vinculação incremental. Você pode ver aviso
 ## <a name="see-also"></a>Consulte também
 
 [Referência de vinculador MSVC](linking.md)<br/>
-[Opções do vinculador MSVC](linker-options.md)
+[Opções de vinculador MSVC](linker-options.md)

@@ -16,11 +16,11 @@ helpviewer_keywords:
 - MIDL, property pages
 ms.assetid: 0692484c-a7e6-4270-8df7-981589368399
 ms.openlocfilehash: 2ce9e9a713a3d62bf64e5eb4e596c38148eef81e
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57824186"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62321144"
 ---
 # <a name="midl-property-pages-general"></a>Páginas de propriedade MIDL: Geral
 

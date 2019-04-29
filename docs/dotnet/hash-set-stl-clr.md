@@ -96,11 +96,11 @@ helpviewer_keywords:
 - value_type member [STL/CLR]
 ms.assetid: d110e356-ba3e-4e52-9e2d-d997bf975c96
 ms.openlocfilehash: 3cfd4e97af8b5abf163ce88eb81b438ef4737ed5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50636157"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62222891"
 ---
 # <a name="hashset-stlclr"></a>hash_set (STL/CLR)
 
@@ -236,7 +236,7 @@ Apagando ou remover um elemento chama o destruidor para seu valor armazenado. De
 
 ## <a name="members"></a>Membros
 
-## <a name="begin"></a> hash_set:: Begin (STL/CLR)
+## <a name="begin"></a> hash_set::begin (STL/CLR)
 
 Designa o início da sequência controlada.
 
@@ -248,7 +248,7 @@ iterator begin();
 
 ### <a name="remarks"></a>Comentários
 
-A função membro retorna um iterador bidirecional que designa o primeiro elemento da sequência controlada ou logo após o fim de uma sequência vazia. Você pode usá-lo para obter um iterador que designa o `current` início da sequência controlada, mas seu status pode alterar se o comprimento da sequência controlada for alterado.
+A função membro retorna um iterador bidirecional que designa o primeiro elemento da sequência controlada ou logo após o fim de uma sequência vazia. Use-o para obter um iterador que designa o início `current` da sequência controlada, mas seu status poderá mudar se o tamanho da sequência controlada for alterado.
 
 ### <a name="example"></a>Exemplo
 
@@ -352,7 +352,7 @@ load_factor() = 0.0234375
 max_load_factor() = 0.25
 ```
 
-## <a name="clear"></a> hash_set:: Clear (STL/CLR)
+## <a name="clear"></a> hash_set::clear (STL/CLR)
 
 Remove todos os elementos.
 
@@ -410,7 +410,7 @@ a b
 size() = 0
 ```
 
-## <a name="const_iterator"></a> hash_set:: const_iterator (STL/CLR)
+## <a name="const_iterator"></a> hash_set::const_iterator (STL/CLR)
 
 O tipo de um iterador de constante para a sequência controlada.
 
@@ -452,7 +452,7 @@ int main()
 a b c
 ```
 
-## <a name="const_reference"></a> hash_set:: const_reference (STL/CLR)
+## <a name="const_reference"></a> hash_set::const_reference (STL/CLR)
 
 O tipo de uma referência de constante para um elemento.
 
@@ -497,7 +497,7 @@ int main()
 a b c
 ```
 
-## <a name="const_reverse_iterator"></a> hash_set:: const_reverse_iterator (STL/CLR)
+## <a name="const_reverse_iterator"></a> hash_set::const_reverse_iterator (STL/CLR)
 
 O tipo de um iterador inverso constante para a sequência controlada...
 
@@ -539,7 +539,7 @@ int main()
 c b a
 ```
 
-## <a name="count"></a> hash_set:: Count (STL/CLR)
+## <a name="count"></a> hash_set::count (STL/CLR)
 
 Localiza o número de elementos que correspondem a uma chave especificada.
 
@@ -592,7 +592,7 @@ count(L'b') = 1
 count(L'C') = 0
 ```
 
-## <a name="difference_type"></a> hash_set:: difference_type (STL/CLR)
+## <a name="difference_type"></a> hash_set::difference_type (STL/CLR)
 
 Os tipos de uma distância com sinal entre dois elementos.
 
@@ -647,7 +647,7 @@ end()-begin() = 3
 begin()-end() = -3
 ```
 
-## <a name="empty"></a> hash_set:: Empty (STL/CLR)
+## <a name="empty"></a> hash_set::empty (STL/CLR)
 
 Testa se nenhum elemento está presente.
 
@@ -699,7 +699,7 @@ size() = 0
 empty() = True
 ```
 
-## <a name="end"></a> hash_set:: end (STL/CLR)
+## <a name="end"></a> hash_set::end (STL/CLR)
 
 Designa o fim da sequência controlada.
 
@@ -748,7 +748,7 @@ a b c
 *--end() = c
 ```
 
-## <a name="equal_range"></a> hash_set:: equal_range (STL/CLR)
+## <a name="equal_range"></a> hash_set::equal_range (STL/CLR)
 
 Localiza o intervalo que corresponde a uma chave especificada.
 
@@ -808,7 +808,7 @@ equal_range(L'x') empty = True
 b
 ```
 
-## <a name="erase"></a> hash_set:: Erase (STL/CLR)
+## <a name="erase"></a> hash_set::erase (STL/CLR)
 
 Remove os elementos em posições especificadas.
 
@@ -892,7 +892,7 @@ erase(begin(), end()-1) = e
 size() = 1
 ```
 
-## <a name="find"></a> hash_set:: Find (STL/CLR)
+## <a name="find"></a> hash_set::find (STL/CLR)
 
 Localiza um elemento que corresponde a uma chave especificada.
 
@@ -1216,7 +1216,7 @@ hash(L'a') = 1616896120
 hash(L'b') = 570892832
 ```
 
-## <a name="hash_set"></a> hash_set:: hash_set (STL/CLR)
+## <a name="hash_set"></a> hash_set::hash_set (STL/CLR)
 
 Constrói um objeto contêiner.
 
@@ -1254,7 +1254,7 @@ Função para chaves de mapeamento para buckets de hash.
 *last*<br/>
 Fim do intervalo a inserir.
 
-*Pred*<br/>
+*pred*<br/>
 Ordenação de predicado para a sequência controlada.
 
 *right*<br/>
@@ -1495,7 +1495,7 @@ hash(L'a') = 1616896120
 hash(L'b') = 570892832
 ```
 
-## <a name="insert"></a> hash_set:: Insert (STL/CLR)
+## <a name="insert"></a> hash_set::insert (STL/CLR)
 
 Adiciona elementos.
 
@@ -1520,7 +1520,7 @@ Fim do intervalo a inserir.
 *right*<br/>
 Enumeração a ser inserido.
 
-*Val*<br/>
+*val*<br/>
 Valor da chave a ser inserido.
 
 *where*<br/>
@@ -1611,7 +1611,7 @@ a b c x
 a b c x y
 ```
 
-## <a name="iterator"></a> hash_set:: Iterator (STL/CLR)
+## <a name="iterator"></a> hash_set::iterator (STL/CLR)
 
 O tipo de um iterador para a sequência controlada.
 
@@ -1653,7 +1653,7 @@ int main()
 a b c
 ```
 
-## <a name="key_comp"></a> hash_set:: key_comp (STL/CLR)
+## <a name="key_comp"></a> hash_set::key_comp (STL/CLR)
 
 Copia o delegado de ordenação para duas chaves.
 
@@ -1712,7 +1712,7 @@ compare(L'a', L'b') = False
 compare(L'b', L'a') = True
 ```
 
-## <a name="key_comp"></a> hash_set:: key_comp (STL/CLR)
+## <a name="key_comp"></a> hash_set::key_comp (STL/CLR)
 
 Copia o delegado de ordenação para duas chaves.
 
@@ -1771,7 +1771,7 @@ compare(L'a', L'b') = False
 compare(L'b', L'a') = True
 ```
 
-## <a name="key_compare"></a> hash_set:: key_compare (STL/CLR)
+## <a name="key_compare"></a> hash_set::key_compare (STL/CLR)
 
 O delegado de ordenação para duas chaves.
 
@@ -1831,7 +1831,7 @@ compare(L'a', L'b') = False
 compare(L'b', L'a') = True
 ```
 
-## <a name="key_type"></a> hash_set:: key_type (STL/CLR)
+## <a name="key_type"></a> hash_set::key_type (STL/CLR)
 
 O tipo de uma chave de classificação.
 
@@ -1950,7 +1950,7 @@ load_factor() = 0.0234375
 max_load_factor() = 0.25
 ```
 
-## <a name="lower_bound"></a> hash_set:: lower_bound (STL/CLR)
+## <a name="lower_bound"></a> hash_set::lower_bound (STL/CLR)
 
 Localiza o início do intervalo que corresponde a uma chave especificada.
 
@@ -2120,7 +2120,7 @@ int main()
     }
 ```
 
-## <a name="op"></a> hash_set::Operator = (STL/CLR)
+## <a name="op"></a> hash_set::operator= (STL/CLR)
 
 Substitui a sequência controlada.
 
@@ -2175,7 +2175,7 @@ a b c
 a b c
 ```
 
-## <a name="rbegin"></a> hash_set:: rbegin (STL/CLR)
+## <a name="rbegin"></a> hash_set::rbegin (STL/CLR)
 
 Designa o início da sequência controlada invertida.
 
@@ -2187,7 +2187,7 @@ reverse_iterator rbegin();
 
 ### <a name="remarks"></a>Comentários
 
-A função membro retorna um iterador inverso que designa o último elemento da sequência controlada ou logo após o início de uma sequência vazia. Portanto, ele designa o `beginning` da sequência inversa. Você pode usá-lo para obter um iterador que designa o `current` início da sequência controlada visto na ordem inversa, mas seu status pode alterar se o comprimento da sequência controlada for alterado.
+A função membro retorna um iterador inverso que designa o último elemento da sequência controlada ou logo após o início de uma sequência vazia. Portanto, ele designa o `beginning` da sequência invertida. Use-o para obter um iterador que designa o início `current` da sequência controlada que é vista na ordem inversa, mas seu status poderá mudar se o tamanho da sequência controlada for alterado.
 
 ### <a name="example"></a>Exemplo
 
@@ -2223,7 +2223,7 @@ a b c
 *++rbegin() = b
 ```
 
-## <a name="reference"></a> hash_set:: Reference (STL/CLR)
+## <a name="reference"></a> hash_set::reference (STL/CLR)
 
 O tipo de uma referência para um elemento.
 
@@ -2342,7 +2342,7 @@ load_factor() = 0.0234375
 max_load_factor() = 0.25
 ```
 
-## <a name="rend"></a> hash_set:: rend (STL/CLR)
+## <a name="rend"></a> hash_set::rend (STL/CLR)
 
 Designa o fim da sequência controlada invertida.
 
@@ -2354,7 +2354,7 @@ reverse_iterator rend();
 
 ### <a name="remarks"></a>Comentários
 
-A função membro retorna um iterador inverso que aponta logo após o início da sequência controlada. Portanto, ele designa o `end` da sequência inversa. Você pode usá-lo para obter um iterador que designa o `current` final da sequência controlada visto na ordem inversa, mas seu status pode alterar se o comprimento da sequência controlada for alterado.
+A função membro retorna um iterador inverso que aponta logo após o início da sequência controlada. Portanto, ele designa o `end` da sequência invertida. Use-o para obter um iterador que designa o fim `current` da sequência controlada vista na ordem inversa, mas seu status poderá mudar se o tamanho da sequência controlada for alterado.
 
 ### <a name="example"></a>Exemplo
 
@@ -2391,7 +2391,7 @@ a b c
 *--rend() = a
 ```
 
-## <a name="reverse_iterator"></a> hash_set:: reverse_iterator (STL/CLR)
+## <a name="reverse_iterator"></a> hash_set::reverse_iterator (STL/CLR)
 
 O tipo de um iterador inverso para a sequência controlada.
 
@@ -2433,7 +2433,7 @@ int main()
 c b a
 ```
 
-## <a name="size"></a> hash_set:: Size (STL/CLR)
+## <a name="size"></a> hash_set::size (STL/CLR)
 
 Conta o número de elementos.
 
@@ -2487,7 +2487,7 @@ size() = 0 after clearing
 size() = 2 after adding 2
 ```
 
-## <a name="size_type"></a> hash_set:: size_type (STL/CLR)
+## <a name="size_type"></a> hash_set::size_type (STL/CLR)
 
 O tipo de uma distância com sinal entre dois elementos.
 
@@ -2535,7 +2535,7 @@ a b c
 end()-begin() = 3
 ```
 
-## <a name="swap"></a> :: swap (STL/CLR)
+## <a name="swap"></a> hash_set::swap (STL/CLR)
 
 Alterna o conteúdo de dois contêineres.
 
@@ -2653,7 +2653,7 @@ a b c d
 a b c
 ```
 
-## <a name="upper_bound"></a> hash_set:: upper_bound (STL/CLR)
+## <a name="upper_bound"></a> hash_set::upper_bound (STL/CLR)
 
 Localiza o final do intervalo que corresponde a uma chave especificada.
 
@@ -2710,7 +2710,7 @@ upper_bound(L'x')==end() = True
 *upper_bound(L'b') = c
 ```
 
-## <a name="value_comp"></a> hash_set:: value_comp (STL/CLR)
+## <a name="value_comp"></a> hash_set::value_comp (STL/CLR)
 
 Copia o delegado de ordenação para dois valores de elemento.
 
@@ -2754,7 +2754,7 @@ compare(L'a', L'b') = True
 compare(L'b', L'a') = False
 ```
 
-## <a name="value_compare"></a> hash_set:: value_compare (STL/CLR)
+## <a name="value_compare"></a> hash_set::value_compare (STL/CLR)
 
 O delegado de ordenação para dois valores de elemento.
 
@@ -2799,7 +2799,7 @@ compare(L'a', L'b') = True
 compare(L'b', L'a') = False
 ```
 
-## <a name="value_type"></a> hash_set:: value_type (STL/CLR)
+## <a name="value_type"></a> hash_set::value_type (STL/CLR)
 
 O tipo de um elemento.
 

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - KEYFILE linker option
 ms.assetid: 9b71f8c0-541c-4fe5-a0c7-9364f42ecb06
 ms.openlocfilehash: d309390c1ac1a19d9d4a982908dbbbac0bd52714
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57813767"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62291555"
 ---
 # <a name="keyfile-specify-key-or-key-pair-to-sign-an-assembly"></a>/KEYFILE (especificar chave ou par de chaves para assinar um assembly)
 
@@ -33,7 +33,7 @@ O vinculador insere a chave pública no manifesto do assembly e, em seguida, ass
 
 Se você compilar com [/LN](ln-create-msil-module.md), o nome do arquivo de chave será mantido no módulo e incorporado no assembly que é criado quando você compila um assembly que inclui uma referência explícita para o módulo, por meio de [#using](../../preprocessor/hash-using-directive-cpp.md), ou ao vincular com [/ASSEMBLYMODULE](assemblymodule-add-a-msil-module-to-the-assembly.md).
 
-Você também pode passar suas informações de criptografia para o vinculador com [/KEYCONTAINER](keycontainer-specify-a-key-container-to-sign-an-assembly.md). Use [/DELAYSIGN](delaysign-partially-sign-an-assembly.md) se você quiser um assembly parcialmente assinado. Ver [Assemblies de nome forte (assinatura de Assembly) (C + + / CLI)](../../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md) para obter mais informações sobre como assinar um assembly.
+Você também pode passar suas informações de criptografia para o vinculador com [/KEYCONTAINER](keycontainer-specify-a-key-container-to-sign-an-assembly.md). Use [/DELAYSIGN](delaysign-partially-sign-an-assembly.md) se você quiser um assembly parcialmente assinado. Ver [Assemblies de nome forte (assinatura de Assembly) (C++/CLI)](../../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md) para obter mais informações sobre como assinar um assembly.
 
 No caso de ambos **/KEYFILE** e **/KEYCONTAINER** são especificados (pela opção de linha de comando ou pelo atributo personalizado), o vinculador tentará primeiro o contêiner de chave. Se isso ocorrer, o assembly será assinado com as informações no contêiner de chaves. Se o vinculador não localizar o contêiner de chave, ele tentará o arquivo especificado com /keyfile. Se isso ocorrer, o assembly será assinado com as informações no arquivo de chave e as informações da chave serão instaladas no contêiner de chaves (semelhante a sn -i), de forma que, na próxima compilação, o contêiner de chaves será válido.
 
@@ -70,4 +70,4 @@ Outras opções de vinculador que afetam a geração de assembly são:
 ## <a name="see-also"></a>Consulte também
 
 [Referência de vinculador MSVC](linking.md)<br/>
-[Opções do vinculador MSVC](linker-options.md)
+[Opções de vinculador MSVC](linker-options.md)

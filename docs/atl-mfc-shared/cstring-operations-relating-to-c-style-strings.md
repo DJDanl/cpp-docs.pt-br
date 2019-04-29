@@ -16,11 +16,11 @@ helpviewer_keywords:
 - casting CString objects
 ms.assetid: 5048de8a-5298-4891-b8a0-c554b5a3ac1b
 ms.openlocfilehash: eee23296d9aac40849dacf58c3b3d9bdf583d1df
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57743290"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62236093"
 ---
 # <a name="cstring-operations-relating-to-c-style-strings"></a>Operações CString relacionadas a cadeias de caracteres de estilo C
 

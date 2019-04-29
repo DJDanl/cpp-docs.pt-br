@@ -31,11 +31,11 @@ helpviewer_keywords:
 - threading [C++], terminating threads
 ms.assetid: 18a91f2f-659e-40b4-b266-ec12dcf2abf5
 ms.openlocfilehash: 2f54ca9c4cd5e863ca960f1d9c3634b85e7896dd
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54893295"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62288817"
 ---
 # <a name="endthread-endthreadex"></a>_endthread, _endthreadex
 
@@ -67,7 +67,7 @@ Você pode chamar **endthread** ou **endthreadex** explicitamente para terminar 
 Como o Win32 **ExitThread** API, **endthreadex** não fecha o identificador de thread. Portanto, quando você usa **beginthreadex** e **endthreadex**, você deve fechar o identificador de thread chamando Win32 **CloseHandle** API.
 
 > [!NOTE]
-> **endthread** e **endthreadex** fazer com que os destruidores C++ pendentes no thread não deve ser chamada.
+> **endthread** e **endthreadex** causar C++ destruidores pendentes no thread não deve ser chamada.
 
 ## <a name="requirements"></a>Requisitos
 

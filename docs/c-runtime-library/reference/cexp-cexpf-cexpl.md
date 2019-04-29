@@ -31,11 +31,11 @@ helpviewer_keywords:
 - cexpf function
 ms.assetid: f27fd5a9-70c7-4957-a7ee-5256d19bd1da
 ms.openlocfilehash: 401dd30b326fcd6caef7cae6f1ecbdc43ed5dd5a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462927"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62335444"
 ---
 # <a name="cexp-cexpf-cexpl"></a>cexp, cexpf, cexpl
 
@@ -65,7 +65,7 @@ O valor de **eletrônico** elevado à potência de *z*.
 
 ## <a name="remarks"></a>Comentários
 
-Como C++ permite sobrecargas, é possível chamar sobrecargas de **cexp** que usam e retornam **fcomplex** e **_Lcomplex** valores. Em um programa do C **cexp** sempre usa e retorna um **_Dcomplex** valor.
+Porque C++ permite sobrecargas, é possível chamar sobrecargas de **cexp** que usam e retornam **fcomplex** e **_Lcomplex** valores. Em um programa do C **cexp** sempre usa e retorna um **_Dcomplex** valor.
 
 ## <a name="requirements"></a>Requisitos
 

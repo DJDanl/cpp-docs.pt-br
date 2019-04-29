@@ -8,11 +8,11 @@ helpviewer_keywords:
 - complex header
 ms.assetid: 5e728995-3059-496a-9ce9-61d1bfbe4f2b
 ms.openlocfilehash: afcdb1246d9c02f83dbc8708326d10e802ad2779
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525860"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62212086"
 ---
 # <a name="ltcomplexgt"></a>&lt;complex&gt;
 
@@ -44,7 +44,7 @@ O conjunto de números complexos com as operações de adição e multiplicaçã
 
 Por que representa um número complexo *z* = (*um*, *b*) na forma *z* = *um*  +  *bi*, onde *eu*<sup>2</sup> = -1, as regras de álgebra do conjunto de números reais pode ser aplicada ao conjunto de números complexos e aos seus componentes. Por exemplo:
 
-   (1 + 2*eu*) \* (2 + 3*eu*) = 1 \* (2 + 3*eu*) + 2*eu* \* (2 + 3*i*) = (2 + 3*eu*) + (4*eu* + 6*eu*<sup>2</sup>) = (2 a 6) + (3 + 4)*eu* = -4 + 7*eu*
+   (1 + 2*i*) \* (2 + 3*i*) = 1 \* (2 + 3*i*) + 2*i* \* (2 + 3*i*) = (2 + 3*i*) + (4*i* + 6*i*<sup>2</sup>) = (2 - 6) + (3 + 4)*i* = -4 + 7*i*
 
 O sistema de números complexos é um campo, mas não é um campo ordenado. Não há nenhuma ordenação dos números complexos como há para o campo de números reais e seus subconjuntos para que as desigualdades não podem ser aplicadas a números complexos como estão em números reais.
 
@@ -54,7 +54,7 @@ Há três formas comuns de representar um número complexo *z*:
 
 - Polar: *z* = *r* (cos *p* + *eu* sin *p*)
 
-- Exponencial: *z* = *r* \* *eletrônico*<sup>*ip*</sup>
+- Exponential: *z* = *r* \* *e*<sup>*ip*</sup>
 
 Os termos usados nessas representações padrão de um número complexo são referidas como o seguinte:
 

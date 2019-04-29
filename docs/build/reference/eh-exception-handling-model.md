@@ -13,11 +13,11 @@ helpviewer_keywords:
 - /EH compiler option [C++]
 ms.assetid: 754b916f-d206-4472-b55a-b6f1b0f2cb4d
 ms.openlocfilehash: 9f5eed60ecb51abc1d8fbd3c38773bbf782b23a5
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57808249"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62271795"
 ---
 # <a name="eh-exception-handling-model"></a>/EH (modelo de tratamento de exceções)
 
@@ -113,7 +113,7 @@ No entanto, o atributo de não lançamento não é uma garantia de que nenhuma e
 ## <a name="see-also"></a>Consulte também
 
 [Opções do compilador MSVC](compiler-options.md)<br/>
-[Sintaxe de linha de comando do compilador MSVC](compiler-command-line-syntax.md)<br/>
+[Sintaxe da linha de comando do compilador MSVC](compiler-command-line-syntax.md)<br/>
 [Erros e tratamento de exceções](../../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
 [Especificações de exceção (lançar)](../../cpp/exception-specifications-throw-cpp.md)<br/>
 [Tratamento de exceções estruturado (C/C++)](../../cpp/structured-exception-handling-c-cpp.md)

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - CMultiDocTemplate [MFC], CMultiDocTemplate
 ms.assetid: 5b8aa328-e461-41d0-b388-00594535e119
 ms.openlocfilehash: 5fefe91fa2067831c0263146ff3b2cd143b9c647
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57284249"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62366923"
 ---
 # <a name="cmultidoctemplate-class"></a>Classe CMultiDocTemplate
 
@@ -27,7 +27,7 @@ class CMultiDocTemplate : public CDocTemplate
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|

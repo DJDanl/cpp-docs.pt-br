@@ -21,11 +21,11 @@ f1_keywords:
 - stdio/fread_s
 ms.assetid: ce735de0-f005-435d-a8f2-6f4b80ac775e
 ms.openlocfilehash: 898e813c19fd53cfdacd536c2e9819743a62a8da
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519815"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62287805"
 ---
 # <a name="freads"></a>fread_s
 
@@ -48,7 +48,7 @@ size_t fread_s(
 *buffer*<br/>
 Local de armazenamento de dados.
 
-*BufferSize*<br/>
+*bufferSize*<br/>
 Tamanho do buffer de destino em bytes.
 
 *elementSize*<br/>
@@ -57,7 +57,7 @@ Tamanho do item a ser lido em bytes.
 *count*<br/>
 Número máximo de itens a serem lidos.
 
-*fluxo*<br/>
+*stream*<br/>
 Ponteiro para a estrutura **FILE**.
 
 ## <a name="return-value"></a>Valor de retorno

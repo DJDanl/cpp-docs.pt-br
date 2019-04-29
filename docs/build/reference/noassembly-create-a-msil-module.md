@@ -12,11 +12,11 @@ helpviewer_keywords:
 - assemblies [C++], not creating an assembly
 ms.assetid: 3cea4e70-f451-4395-a626-1930b1b127fe
 ms.openlocfilehash: 3350aa10dc7ae3b6f584394c01644c1af2abd2b4
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57822386"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62320546"
 ---
 # <a name="noassembly-create-a-msil-module"></a>/NOASSEMBLY (criar um módulo MSIL)
 
@@ -63,4 +63,4 @@ Outras opções de vinculador que afetam a geração de assembly são:
 ## <a name="see-also"></a>Consulte também
 
 [Referência de vinculador MSVC](linking.md)<br/>
-[Opções do vinculador MSVC](linker-options.md)
+[Opções de vinculador MSVC](linker-options.md)

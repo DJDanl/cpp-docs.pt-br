@@ -3,17 +3,17 @@ title: Trivial, layout padrão, o POD e tipos de literal
 ms.date: 04/05/2018
 ms.assetid: 2b23a7be-9bad-49fc-8298-31a9a7c556b0
 ms.openlocfilehash: c742f4c84a1b2ba558b790d7eea7760902da7818
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51521694"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62266758"
 ---
 # <a name="trivial-standard-layout-pod-and-literal-types"></a>Trivial, layout padrão, o POD e tipos de literal
 
 O termo *layout* se refere a como os membros de um objeto de classe, struct ou tipo de união são organizados na memória. Em alguns casos, o layout é bem definido pela especificação de linguagem. Mas, quando uma classe ou struct contém determinados recursos da linguagem C++, como classes base virtuais, funções virtuais, os membros com controle de acesso diferentes, em seguida, o compilador é livre para escolher um layout. Esse layout pode variar, dependendo de quais otimizações estão sendo executadas e em muitos casos objeto pode não mesmo ocupar uma área contígua da memória. Por exemplo, se uma classe tem funções virtuais, todas as instâncias dessa classe podem compartilhar uma tabela de função virtual único. Esses tipos são obviamente muito útil, mas eles também têm limitações. Como o layout é indefinido não podem ser passados para os programas escritos em outras linguagens, como C, e porque eles podem ser não contíguos que eles não podem ser confiável copiados com funções de nível inferior rápido como `memcopy` ou serializado em uma rede.
 
-Para habilitar metaprograms raciocinar sobre a adequação de qualquer tipo para operações que dependem de um layout de memória específica, bem como programas do C++ e compiladores, C + + 14 introduziu três categorias de classes simples e estruturas: *trivial*, *layout padrão*, e *POD* ou dados antigos simples. A biblioteca padrão tem os modelos de função `is_trivial<T>`, `is_standard_layout<T>` e `is_pod<T>` que determinam se um determinado tipo pertence a uma determinada categoria.
+Para habilitar os compiladores, bem como C++ programas e metaprograms ponderar sobre a adequação de qualquer tipo para operações que dependem de um layout de memória específica, C + + 14 introduziu três categorias de classes simples e estruturas: *trivial* , *layout padrão*, e *POD* ou dados antigos simples. A biblioteca padrão tem os modelos de função `is_trivial<T>`, `is_standard_layout<T>` e `is_pod<T>` que determinam se um determinado tipo pertence a uma determinada categoria.
 
 ## <a name="trivial-types"></a>Tipos triviais
 

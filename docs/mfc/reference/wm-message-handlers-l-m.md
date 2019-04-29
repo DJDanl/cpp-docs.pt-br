@@ -34,11 +34,11 @@ helpviewer_keywords:
 - WM_ messages
 ms.assetid: 96ecaaf1-6d13-4e12-a454-535635967489
 ms.openlocfilehash: 6ebf5ced1f8e36dc059922b67552b19ca4672443
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57290515"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62309155"
 ---
 # <a name="wm-message-handlers-l---m"></a>Manipuladores de mensagens WM _: L - M
 

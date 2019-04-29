@@ -10,11 +10,11 @@ helpviewer_keywords:
 - TN024
 ms.assetid: c65353ce-8096-454b-ad22-1a7a1dd9a788
 ms.openlocfilehash: 029177821d37d5d26abe0b39ea1581e8a5ad602b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57278126"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62306019"
 ---
 # <a name="tn024-mfc-defined-messages-and-resources"></a>TN024: Recursos e as mensagens definidas pelo MFC
 
@@ -172,7 +172,7 @@ A barra de ferramentas padrão fornecida pelo AppWizard baseia-se em um recurso 
 
 Um formato de recurso privado MFC é usado para armazenar informações de inicialização extra da caixa de diálogo. Isso inclui as cadeias de caracteres inicias armazenadas em uma caixa de combinação. O formato desse recurso não foi projetado para ser editado manualmente, mas é tratada pelo Visual C++.
 
-Visual C++ e esse recurso RT_DLGINIT não são necessários para usar os recursos relacionados do MFC, pois há alternativa de API para usar as informações no recurso. Usando o Visual C++ torna muito mais fácil de escrever, manter e converter seu aplicativo a longo prazo.
+O Visual C++ e esse recurso RT_DLGINIT não são necessários para usar os recursos relacionados do MFC, pois há alternativa de API para usar as informações no recurso. Usando o Visual C++ torna muito mais fácil de escrever, manter e converter seu aplicativo a longo prazo.
 
 A estrutura básica de um recurso RT_DLGINIT é da seguinte maneira:
 

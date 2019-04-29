@@ -23,11 +23,11 @@ helpviewer_keywords:
 - std::unique_ptr [C++], swap
 ms.assetid: acdf046b-831e-4a4a-83aa-6d4ee467db9a
 ms.openlocfilehash: b0751d7716e2f8587ab410e57c2bea17c5dd3e21
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51520966"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62295455"
 ---
 # <a name="uniqueptr-class"></a>Classe unique_ptr
 
@@ -99,10 +99,10 @@ Um `unique_ptr`.
 *Nptr*<br/>
 Um `rvalue` do tipo `std::nullptr_t`.
 
-*PTR*<br/>
+*Ptr*<br/>
 Um `pointer`.
 
-*Agente de exclusão*<br/>
+*Deleter*<br/>
 Uma função `deleter` que é associada a `unique_ptr`.
 
 ## <a name="exceptions"></a>Exceções
@@ -117,7 +117,7 @@ Use a função auxiliar [make_unique](../standard-library/memory-functions.md#ma
 
 `unique_ptr` gerencia exclusivamente um recurso. Cada objeto `unique_ptr` armazena um ponteiro para o objeto que possui ou armazena um ponteiro nulo. Um recurso pode ser possuído apenas por um objeto `unique_ptr`; quando um objeto `unique_ptr` que possui um recurso específico é destruído, o recurso é liberado. Um objeto `unique_ptr` pode ser movido, mas não copiado; para obter mais informações, consulte [Declarador de Referência de Valor R: &&](../cpp/rvalue-reference-declarator-amp-amp.md).
 
-O recurso é liberado chamando um objeto `deleter` armazenado do tipo `Del` que sabe como os recursos são alocados para um determinado `unique_ptr`. O padrão `deleter` `default_delete<T>` supõe que o recurso apontado por `ptr` é alocado com `new`, e que ele pode ser liberado chamando `delete _Ptr`. (Uma especialização parcial `unique_ptr<T[]>`gerencia objetos de matriz alocados com `new[]` e tem o `deleter` `default_delete<T[]>` padrão, especializado para chamar delete[] `ptr`.)
+O recurso é liberado chamando um objeto `deleter` armazenado do tipo `Del` que sabe como os recursos são alocados para um determinado `unique_ptr`. O padrão `deleter` `default_delete<T>` supõe que o recurso apontado por `ptr` é alocado com `new`, e que ele pode ser liberado chamando `delete _Ptr`. (Uma especialização parcial `unique_ptr<T[]>`gerencia os objetos de matriz alocados com `new[]`, e tem o padrão `deleter` `default_delete<T[]>`, especializado para chamar delete [] `ptr`.)
 
 O ponteiro armazenado para um recurso possuído, `stored_ptr` tem o tipo `pointer`. Ele será `Del::pointer` se definido e `T *`, se não. O objeto `deleter` armazenado `stored_deleter` não ocupará nenhum espaço no objeto se `deleter` não tiver estado. Observe que `Del` pode ser um tipo de referência.
 

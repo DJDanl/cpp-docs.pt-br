@@ -10,11 +10,11 @@ helpviewer_keywords:
 - -KEYCONTAINER linker option
 ms.assetid: 94882d12-b77a-49c7-96d0-18a31aee001e
 ms.openlocfilehash: 96d2f5fed0e450224f82ee909cea9d56082505fb
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57807839"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62291607"
 ---
 # <a name="keycontainer-specify-a-key-container-to-sign-an-assembly"></a>/KEYCONTAINER (especificar um contêiner de chave para assinar um assembly)
 
@@ -33,7 +33,7 @@ O vinculador cria um assembly assinado, inserindo uma chave pública no manifest
 
 Se você compilar com [/LN](ln-create-msil-module.md), o nome do arquivo de chave será mantido no módulo e incorporado no assembly que é criado quando você compila um assembly que inclui uma referência explícita para o módulo, por meio de [#using](../../preprocessor/hash-using-directive-cpp.md), ou ao vincular com [/ASSEMBLYMODULE](assemblymodule-add-a-msil-module-to-the-assembly.md).
 
-Você também pode passar suas informações de criptografia para o compilador com [/KEYFILE](keyfile-specify-key-or-key-pair-to-sign-an-assembly.md). Use [/DELAYSIGN](delaysign-partially-sign-an-assembly.md) se você quiser um assembly parcialmente assinado. Ver [Assemblies de nome forte (assinatura de Assembly) (C + + / CLI)](../../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md) para obter mais informações sobre como assinar um assembly.
+Você também pode passar suas informações de criptografia para o compilador com [/KEYFILE](keyfile-specify-key-or-key-pair-to-sign-an-assembly.md). Use [/DELAYSIGN](delaysign-partially-sign-an-assembly.md) se você quiser um assembly parcialmente assinado. Ver [Assemblies de nome forte (assinatura de Assembly) (C++/CLI)](../../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md) para obter mais informações sobre como assinar um assembly.
 
 Outras opções de vinculador que afetam a geração de assembly são:
 
@@ -64,4 +64,4 @@ Outras opções de vinculador que afetam a geração de assembly são:
 ## <a name="see-also"></a>Consulte também
 
 [Referência de vinculador MSVC](linking.md)<br/>
-[Opções do vinculador MSVC](linker-options.md)
+[Opções de vinculador MSVC](linker-options.md)

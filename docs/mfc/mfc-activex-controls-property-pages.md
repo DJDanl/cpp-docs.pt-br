@@ -11,11 +11,11 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], property pages
 ms.assetid: 1506f87a-9fd6-4505-8380-0dbc9636230e
 ms.openlocfilehash: 3fe092e412cf11f7bf8600e8d0d7d43abb0e11c7
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57303892"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62239940"
 ---
 # <a name="mfc-activex-controls-property-pages"></a>Controles ActiveX MFC: Páginas de propriedade
 
@@ -45,9 +45,9 @@ Este artigo aborda tópicos relacionados ao uso de páginas de propriedades em u
 
 Para obter mais informações sobre como usar páginas de propriedades em um controle ActiveX, consulte os seguintes artigos:
 
-- [Controles ActiveX MFC: Adicionando outra página de propriedade personalizada](../mfc/mfc-activex-controls-adding-another-custom-property-page.md)
+- [Controles ActiveX MFC: adicionar outra página de propriedade personalizada](../mfc/mfc-activex-controls-adding-another-custom-property-page.md)
 
-- [Controles ActiveX MFC: Usando páginas de propriedade de estoque](../mfc/mfc-activex-controls-using-stock-property-pages.md)
+- [Controles ActiveX MFC: usar páginas de propriedade de estoque](../mfc/mfc-activex-controls-using-stock-property-pages.md)
 
 Para obter informações sobre como usar folhas de propriedades em um aplicativo que não seja um controle ActiveX do MFC, consulte [folhas de propriedade](../mfc/property-sheets-mfc.md).
 

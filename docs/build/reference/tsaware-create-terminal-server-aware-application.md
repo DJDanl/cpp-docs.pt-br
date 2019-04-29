@@ -12,11 +12,11 @@ helpviewer_keywords:
 - TSAWARE linker option
 ms.assetid: fe1c1846-de5b-4839-b562-93fbfe36cd29
 ms.openlocfilehash: f6ed6184f8ae4b3a0f9db3c1f962a2918a185138
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816939"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62317426"
 ---
 # <a name="tsaware-create-terminal-server-aware-application"></a>/TSAWARE (criar aplicativo com reconhecimento do Terminal Server)
 
@@ -57,6 +57,6 @@ Se um aplicativo foi vinculado com /TSAWARE, DUMPBIN [/HEADERS](headers.md) exib
 ## <a name="see-also"></a>Consulte também
 
 [Referência de vinculador MSVC](linking.md)<br/>
-[Opções do vinculador MSVC](linker-options.md)<br/>
+[Opções de vinculador MSVC](linker-options.md)<br/>
 [Armazenar informações específicas do usuário](/windows/desktop/TermServ/storing-user-specific-information)<br/>
 [Aplicativos herdados em um ambiente de serviços de Terminal](https://msdn.microsoft.com/library/aa382957.aspx)

@@ -1,6 +1,6 @@
 ---
-title: Avisos C4200 a C4399
-ms.date: 11/17/2017
+title: Avisos do compilador C4200 a C4399
+ms.date: 04/21/2019
 f1_keywords:
 - C4203
 - C4277
@@ -28,14 +28,14 @@ f1_keywords:
 - C4387
 - C4388
 ms.assetid: 170248db-7bf2-4823-92d9-437b04c1290d
-ms.openlocfilehash: d79c9c12664f9920f03490b8cb53ec671d3d78a3
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
-ms.translationtype: MT
+ms.openlocfilehash: 5a257fa5ac39a9b8f593062d6a670c8d1ce4187f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328259"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62280562"
 ---
-# <a name="compiler-warnings-c4200-through-c4399"></a>Avisos C4200 a C4399
+# <a name="compiler-warnings-c4200-through-c4399"></a>Avisos do compilador C4200 a C4399
 
 Os artigos nesta seção da documentação explicam um subconjunto das mensagens de aviso são geradas pelo compilador.
 
@@ -66,15 +66,15 @@ Os artigos nesta seção da documentação explicam um subconjunto das mensagens
 |[Aviso do compilador (nível 4) C4221](../../error-messages/compiler-warnings/compiler-warning-level-4-c4221.md)|extensão não padrão usada: '*identificador*': não pode ser inicializado usando endereço da variável automática '*variável*'|
 |[Aviso do compilador (níveis 1 e 4) C4223](../../error-messages/compiler-warnings/compiler-warning-levels-1-and-4-c4223.md)|extensão não padrão usada: matriz não lvalue convertida em ponteiro|
 |[Aviso do compilador (nível 1) C4224](../../error-messages/compiler-warnings/compiler-warning-level-1-c4224.md)|extensão não padrão usada: parâmetro formal '*identificador*' foi definido anteriormente como um tipo|
-|[Compilador aviso (nível 1, erro) C4226](../../error-messages/compiler-warnings/compiler-warning-level-1-c4226.md)|extensão não padrão usada: '*palavra-chave*' é uma palavra-chave obsoleta|
+|[Aviso do compilador (nível 1, erro) C4226](../../error-messages/compiler-warnings/compiler-warning-level-1-c4226.md)|extensão não padrão usada: '*palavra-chave*' é uma palavra-chave obsoleta|
 |[Aviso do compilador (nível 1) C4227](../../error-messages/compiler-warnings/compiler-warning-level-1-c4227.md)|anacronismo usado: qualificadores na referência são ignorados|
 |[Aviso do compilador (nível 1) C4228](../../error-messages/compiler-warnings/compiler-warning-level-1-c4228.md)|extensão não padrão usada: qualificadores após a vírgula na lista de declaradores são ignorados|
 |[Aviso do compilador (nível 1) C4229](../../error-messages/compiler-warnings/compiler-warning-level-1-c4229.md)|anacronismo usado: modificadores em dados são ignorados|
 |[Aviso do compilador (nível 1) C4230](../../error-messages/compiler-warnings/compiler-warning-level-1-c4230.md)|anachronism used: modifiers/qualifiers interspersed; qualifier ignored|
 |[Aviso do compilador (nível 4) C4232](../../error-messages/compiler-warnings/compiler-warning-level-4-c4232.md)|extensão não padrão usada: '*identificador*': endereço de dllimport '*dllimport*' não é estático, identidade não garantida|
-|[Compilador aviso (nível 4, erro) C4233](../../error-messages/compiler-warnings/compiler-warning-level-4-c4233.md)|extensão não padrão usada: '*palavra-chave*' palavra-chave só tem suportada em C++, não em C|
-|[Compilador aviso (nível 4, erro) C4234](../../error-messages/compiler-warnings/compiler-warning-level-4-c4234.md)|extensão não padrão usada: '*palavra-chave*' palavra-chave reservada para uso futuro|
-|[Compilador aviso (nível 4, erro) C4235](../../error-messages/compiler-warnings/compiler-warning-level-4-c4235.md)|extensão não padrão usada: '*palavra-chave*' não tem suportada nesta arquitetura de palavra-chave|
+|[Aviso do compilador (nível 4, erro) C4233](../../error-messages/compiler-warnings/compiler-warning-level-4-c4233.md)|extensão não padrão usada: '*palavra-chave*' palavra-chave só tem suportada em C++, não em C|
+|[Aviso do compilador (nível 4, erro) C4234](../../error-messages/compiler-warnings/compiler-warning-level-4-c4234.md)|extensão não padrão usada: '*palavra-chave*' palavra-chave reservada para uso futuro|
+|[Aviso do compilador (nível 4, erro) C4235](../../error-messages/compiler-warnings/compiler-warning-level-4-c4235.md)|extensão não padrão usada: '*palavra-chave*' não tem suportada nesta arquitetura de palavra-chave|
 |[Aviso do compilador (nível 1) C4237](../../error-messages/compiler-warnings/compiler-warning-level-1-c4237.md)|'*palavra-chave*' palavra-chave ainda não tem suporte, mas reservada para uso futuro|
 |[Aviso do compilador (nível 4) C4238](../../error-messages/compiler-warnings/compiler-warning-level-4-c4238.md)|extensão não padrão usada: classe rvalue usada como lvalue|
 |[Aviso do compilador (nível 4) C4239](../../error-messages/compiler-warnings/compiler-warning-level-4-c4239.md)|extensão não padrão usada: '*token*': conversão de '*type1*'para'*type2*'|
@@ -114,7 +114,7 @@ Os artigos nesta seção da documentação explicam um subconjunto das mensagens
 |[Aviso do compilador (nível 3) C4287](../../error-messages/compiler-warnings/compiler-warning-level-3-c4287.md)|'*operador*': incompatibilidade de constante unsigned/negativa|
 |[Aviso do compilador (nível 1) C4288](../../error-messages/compiler-warnings/compiler-warning-level-1-c4288.md)|extensão não padrão usada: '*variável*': variável de controle de loop declarada no loop for é usada fora do escopo de loop for; ela entra em conflito com a declaração no escopo externo|
 |[Aviso do compilador (nível 4) C4289](../../error-messages/compiler-warnings/compiler-warning-level-4-c4289.md)|extensão não padrão usada: '*variável*': variável de controle de loop declarada no loop for é usada fora do escopo de loop for|
-|[Aviso do compilador (nível 3) C4290](../../error-messages/compiler-warnings/compiler-warning-level-3-c4290.md)|Especificação de exceção de C++ ignorada, exceto to indicam uma função não é __declspec(nothrow)|
+|[Aviso do compilador (nível 3) C4290](../../error-messages/compiler-warnings/compiler-warning-level-3-c4290.md)|C++especificação de exceção ignorada, exceto to indicam uma função não é __declspec(nothrow)|
 |[Aviso do compilador (nível 1) C4291](../../error-messages/compiler-warnings/compiler-warning-level-1-c4291.md)|'*declaração*': Nenhum operador delete encontrado; memória não será liberada se inicialização lançar uma exceção|
 |[Aviso do compilador (nível 1) C4293](../../error-messages/compiler-warnings/compiler-warning-level-1-c4293.md)|'*shift_operator*': shift Contagem negativa ou muito grande, comportamento indefinido|
 |[Aviso do compilador (nível 4) C4295](../../error-messages/compiler-warnings/compiler-warning-level-4-c4295.md)|'*matriz*': matriz é muito pequena para incluir um caractere nulo de terminação|
@@ -152,7 +152,7 @@ Os artigos nesta seção da documentação explicam um subconjunto das mensagens
 |Aviso do compilador (nível 1) C4330|atributo '*atributo*'para a seção'*seção*' ignorado|
 |[Aviso do compilador (nível 1) C4333](../../error-messages/compiler-warnings/compiler-warning-level-1-c4333.md)|'*shift_operator*': right shift por valor muito grande, perda de dados|
 |[Aviso do compilador (nível 3) C4334](../../error-messages/compiler-warnings/compiler-warning-level-3-c4334.md)|'*shift_operator*': o resultado de 32-bit shift convertido implicitamente para 64 bits (foi a mudança de 64 bits se destina?)|
-|[Aviso do compilador C4335](../../error-messages/compiler-warnings/compiler-warning-c4335.md)|Formato de arquivo Mac detectado: converta o arquivo de origem para o formato DOS ou UNIX|
+|[C4335 de aviso do compilador](../../error-messages/compiler-warnings/compiler-warning-c4335.md)|Formato de arquivo Mac detectado: converta o arquivo de origem para o formato DOS ou UNIX|
 |[Aviso do compilador (nível 4) C4336](../../error-messages/compiler-warnings/compiler-warning-level-4-c4336.md)|Importar a biblioteca de tipos com referência cruzada '*library1*'antes de importar'*library2*'|
 |[Aviso do compilador (nível 4) C4337](../../error-messages/compiler-warnings/compiler-warning-level-4-c4337.md)|biblioteca de tipos com referência cruzada '*library1*'in'*library2*' está sendo importada automaticamente|
 |Aviso do compilador (nível 4) C4338|#pragma *diretiva*: seção padrão '*seção*' é usado|
@@ -166,7 +166,7 @@ Os artigos nesta seção da documentação explicam um subconjunto das mensagens
 |[Aviso do compilador (nível 1) C4350](../../error-messages/compiler-warnings/compiler-warning-level-1-c4350.md)|alteração de comportamento: '*member1*'chamado em vez de'*membro2*'|
 |Aviso do compilador (nível 1) C4352|'*identificador*': função intrínseca já definida|
 |[Aviso do compilador (nível 1) C4353](../../error-messages/compiler-warnings/compiler-warning-level-1-c4353.md)|extensão não padrão usada: constante 0 como expressão de função.  Use NOOP' função intrínseca|
-|[Aviso do compilador C4355](../../error-messages/compiler-warnings/compiler-warning-c4355.md)aviso do compilador (nível 1 e nível 4) C4355|'this': usado na lista de inicializador de membro base|
+|[C4355 de aviso do compilador](../../error-messages/compiler-warnings/compiler-warning-c4355.md)aviso do compilador (nível 1 e nível 4) C4355|'this': usado na lista de inicializador de membro base|
 |[Aviso do compilador (nível 2) C4356](../../error-messages/compiler-warnings/compiler-warning-level-2-c4356.md)|'*membro*': membro de dados estático não pode ser inicializado via classe derivada|
 |[Aviso do compilador (nível 3) C4357](../../error-messages/compiler-warnings/compiler-warning-level-3-c4357.md)|argumento param array encontrado na lista de argumentos formais para delegate '*delegar*'ignorada ao gerar'*função*'|
 |[Aviso do compilador (nível 1) C4358](../../error-messages/compiler-warnings/compiler-warning-level-1-c4358.md)|'*operador*': tipo de retorno de delegates combinados não é 'void'; o valor retornado será indefinido|
@@ -176,7 +176,7 @@ Os artigos nesta seção da documentação explicam um subconjunto das mensagens
 |[Aviso do compilador (nível 4) C4365](../../error-messages/compiler-warnings/compiler-warning-level-4-c4365.md)|'*expressão*': conversão de '*type1*'para'*type2*', incompatibilidade de signed/unsigned|
 |[Aviso do compilador (nível 4) C4366](../../error-messages/compiler-warnings/compiler-warning-level-4-c4366.md)|O resultado do operador unário '*operador*' operador deve ser unaligned|
 |Aviso do compilador (nível 3) C4367|Conversão de '*type1*'para'*type2*' pode causar exceção de desalinhamento de tipo de dados|
-|[Aviso (erro) do compilador C4368](../../error-messages/compiler-warnings/compiler-warning-c4368.md)|não é possível definir '*membro*'como um membro do gerenciado'*tipo*': não há suporte para tipos mistos|
+|[Aviso (erro) C4368 do compilador](../../error-messages/compiler-warnings/compiler-warning-c4368.md)|não é possível definir '*membro*'como um membro do gerenciado'*tipo*': não há suporte para tipos mistos|
 |[Aviso do compilador (nível 1) C4369](../../error-messages/compiler-warnings/compiler-warning-level-1-c4369.md)|'*enumerador*': valor do enumerador '*valor*'não pode ser representado como'*tipo*', valor é'*novo_valor*'|
 |Aviso C4370 do compilador|'*classname*': layout da classe foi alterado de uma versão anterior do compilador devido a empacotamento melhor|
 |[Aviso do compilador (nível 3) C4371](../../error-messages/compiler-warnings/c4371.md)|'*classname*': layout da classe pode ter alterado de uma versão anterior do compilador devido a empacotamento melhor do membro '*membro*'|
@@ -199,9 +199,14 @@ Os artigos nesta seção da documentação explicam um subconjunto das mensagens
 |[Aviso do compilador (nível 1) C4391](../../error-messages/compiler-warnings/compiler-warning-level-1-c4391.md)|'*function_signature*': tipo de retorno incorreto para função intrínseca, esperado '*tipo*'|
 |[Aviso do compilador (nível 1) C4392](../../error-messages/compiler-warnings/compiler-warning-level-1-c4392.md)|'*function_signature*': número incorreto de argumentos para função intrínseca, esperado '*argument_count*' argumentos|
 |[Aviso do compilador (nível 1) C4393](../../error-messages/compiler-warnings/compiler-warning-level-1-c4393.md)|'*variável*': const não tem nenhum efeito '*literal*' membro de dados; ignorado|
-|[Aviso do compilador C4394](../../error-messages/compiler-warnings/compiler-warning-c4394.md)|'*função*': símbolo per-appdomain não deve ser marcado com __declspec('dllexport')|
+|[C4394 de aviso do compilador](../../error-messages/compiler-warnings/compiler-warning-c4394.md)|'*função*': símbolo per-appdomain não deve ser marcado com __declspec('dllexport')|
 |[Aviso do compilador (nível 1) C4395](../../error-messages/compiler-warnings/compiler-warning-level-1-c4395.md)|'*função*': função de membro será invocada em uma cópia do membro de dados initonly '*membro*'|
 |[Aviso do compilador (nível 2) C4396](compiler-warning-level-2-c4396.md)|'*função*': o especificador embutido não pode ser usado quando uma declaração friend se refere a uma especialização de um modelo de função|
 |[Aviso do compilador (nível 1) C4397](../../error-messages/compiler-warnings/compiler-warning-level-1-c4397.md)|DefaultCharSetAttribute é ignorado|
 |[Aviso do compilador (nível 3) C4398](../../error-messages/compiler-warnings/compiler-warning-level-3-c4398.md)|'*variável*': objeto global de cada processo poderão não funcionar corretamente com múltiplos appdomains; considere o uso de __declspec(appdomain)|
 |[Aviso do compilador (nível 1) C4399](../../error-messages/compiler-warnings/compiler-warning-level-1-c4399.md)|'*símbolo*': símbolo per-process não deve ser marcado com __declspec('dllimport') quando compilado com /clr: pure|
+
+## <a name="see-also"></a>Consulte também
+
+[C /C++ ferramentas de compilador e build erros e avisos](../compiler-errors-1/c-cpp-build-errors.md) \
+[Avisos do compilador C4000 - C5999](compiler-warnings-c4000-c5999.md)

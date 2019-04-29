@@ -9,11 +9,11 @@ helpviewer_keywords:
 - ATL OLE DB Consumer Wizard
 ms.assetid: dcb68ed1-2224-422f-9f7b-108a74864204
 ms.openlocfilehash: 59ad635f62ab7a20a31de7255ec4522136e102ec
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524125"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62261254"
 ---
 # <a name="atl-ole-db-consumer-wizard"></a>Assistente de consumidor OLE DB da ATL
 
@@ -36,11 +36,11 @@ Este assistente define uma classe de consumidor do OLE DB com as associações d
 
    - **Conexão** guia
 
-      O conteúdo dessa guia depende do provedor selecionado. Embora haja muitos tipos de provedores, esta seção aborda as conexões para as duas mais comuns: dados SQL e ODBC. Os outros são semelhantes variações nos campos descritos aqui.
+      O conteúdo dessa guia depende do provedor selecionado. Embora haja muitos tipos de provedores, esta seção aborda as conexões para as duas mais comuns: Dados SQL e ODBC. Os outros são semelhantes variações nos campos descritos aqui.
 
       Para dados do SQL:
 
-      1. **Selecione ou insira um nome de servidor:** clique no menu de lista suspensa para exibir todos os servidores de dados registrados na rede e selecione um.
+      1. **Selecione ou insira um nome de servidor:** Clique no menu de lista suspensa para exibir todos os servidores de dados registrados na rede e selecione um.
 
       1. **Insira informações para fazer logon no servidor:** Insira um nome de usuário e senha para fazer logon no servidor de dados.
 
@@ -53,21 +53,21 @@ Este assistente define uma classe de consumidor do OLE DB com as associações d
          > Se você selecionar **usar um determinado nome de usuário e senha**, você tem a opção de salvar a senha (usando a caixa de seleção para "Permitir salvamento de senha"); no entanto, essa opção não é segura. É recomendável que você selecione **a segurança integrada Use Windows NT**; essa opção é segura porque ele criptografa a senha.
          > Pode haver situações em que você deseja selecionar "Permitir salvamento de senha". Por exemplo, se você estiver liberando uma biblioteca com uma solução de banco de dados particular, você deve não acessar o banco de dados diretamente, mas em vez disso, use um aplicativo de camada intermediária para verificar se o usuário (por meio de qualquer esquema de autenticação escolhido) e, em seguida, limitar a classificação de dados disponível para o usuário.
 
-      1. **Selecione o banco de dados no servidor:** clique no menu de lista suspensa para exibir todos os bancos de dados no servidor de data e selecione um.
+      1. **Selecione o banco de dados no servidor:** Clique no menu de lista suspensa para exibir todos os bancos de dados no servidor de data e selecione um.
 
          \- ou -
 
-         **Anexar um arquivo de banco de dados como um nome de banco de dados:** especificar um arquivo a ser usado como o banco de dados; Insira o nome do caminho explícito.
+         **Anexe um arquivo de banco de dados como um nome de banco de dados:** Especificar um arquivo a ser usado como o banco de dados; Insira o nome do caminho explícito.
 
       Para dados ODBC:
 
-      1. **Especifique a fonte de dados:** você pode usar um nome de fonte de dados ou uma cadeia de caracteres de conexão.
+      1. **Especifique a fonte de dados:** Você pode usar um nome de fonte de dados ou uma cadeia de caracteres de conexão.
 
-         **Nome de fonte de dados de uso:** essa lista suspensa exibe fontes de dados registrados no seu computador. Você pode configurar fontes de dados antes do tempo usando o administrador de fonte de dados ODBC
+         **Use o nome da fonte de dados:** Essa lista suspensa exibe fontes de dados registrados no seu computador. Você pode configurar fontes de dados antes do tempo usando o administrador de fonte de dados ODBC
 
          \- ou -
 
-         **Usar cadeia de caracteres de conexão:** insira uma cadeia de caracteres de conexão já tenham obtido, ou clique em de **compilar** botão; o **Selecionar fonte de dados** caixa de diálogo é exibida. Selecione uma fonte de dados de arquivo ou de máquina e clique em **Okey**.
+         **Use a cadeia de caracteres de conexão:** Insira uma cadeia de caracteres de conexão já tenham obtido, ou clique no **construir** botão; o **Selecionar fonte de dados** caixa de diálogo é exibida. Selecione uma fonte de dados de arquivo ou de máquina e clique em **Okey**.
 
          > [!NOTE]
          > Você pode obter uma cadeia de caracteres de conexão ao exibir as propriedades de uma conexão existente na **Gerenciador de servidores**, ou você pode criar uma conexão clicando duas vezes em **Adicionar Conexão** em **Server Explorer**.
@@ -80,9 +80,9 @@ Este assistente define uma classe de consumidor do OLE DB com as associações d
 
    - **Advanced** guia
 
-      **Configurações de rede:** especifique o **nível de representação** (o nível de representação que o servidor tem permissão para usar ao representar o cliente; corresponde diretamente aos níveis de representação do RPC) e  **Nível de proteção** (o nível de proteção de dados enviados entre cliente e servidor; corresponde diretamente aos níveis de proteção do RPC).
+      **Configurações de rede:** Especifique o **nível de representação** (o nível de representação que o servidor tem permissão para usar ao representar o cliente; corresponde diretamente aos níveis de representação do RPC) e **nível de proteção** ( o nível de proteção de dados enviados entre cliente e servidor. corresponde diretamente aos níveis de proteção do RPC).
 
-      **Outros:** na **tempo limite de conexão**, especifique o número de segundos de tempo ocioso permitido antes que ocorra um tempo limite. Na **permissões de acesso**, especifique as permissões de acesso na conexão de dados.
+      **Outros:** Na **tempo limite de conexão**, especifique o número de segundos de tempo ocioso permitido antes que ocorra um tempo limite. Na **permissões de acesso**, especifique as permissões de acesso na conexão de dados.
 
       Para obter mais informações sobre propriedades de inicialização avançadas, consulte a documentação fornecida com cada provedor do OLE DB específico.
 

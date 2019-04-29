@@ -41,11 +41,11 @@ helpviewer_keywords:
 - ismbckata function
 ms.assetid: 2db388a2-be31-489b-81c8-f6bf3f0582d3
 ms.openlocfilehash: d2a5d0336e5ed4ad8bbb19f8a259128ab33d004e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506581"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62286727"
 ---
 # <a name="ismbchira-ismbchiral-ismbckata-ismbckatal"></a>_ismbchira, _ismbchira_l, _ismbckata, _ismbckata_l
 
@@ -93,10 +93,10 @@ As versões dessas funções com o **l** sufixo são idênticas, exceto que eles
 
 |Rotina|Condição de teste (página de código 932 somente)|
 |-------------|-------------------------------------------|
-|**_ismbchira**|Hiragana de byte duplo: 0x829f< < =*c*< lt;=0x82f1.|
-|**_ismbchira_l**|Hiragana de byte duplo: 0x829f< < =*c*< lt;=0x82f1.|
-|**_ismbckata**|Katakana de byte duplo: 0x8340< < =*c*< lt;=0x8396.|
-|**_ismbckata_l**|Katakana de byte duplo: 0x8340< < =*c*< lt;=0x8396.|
+|**_ismbchira**|Hiragana de byte duplo: 0x829F<=*c*<=0x82F1.|
+|**_ismbchira_l**|Hiragana de byte duplo: 0x829F<=*c*<=0x82F1.|
+|**_ismbckata**|Katakana de byte duplo: 0x8340<=*c*<=0x8396.|
+|**_ismbckata_l**|Katakana de byte duplo: 0x8340<=*c*<=0x8396.|
 
 **Final específico da página de código 932**
 

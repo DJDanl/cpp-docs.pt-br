@@ -16,11 +16,11 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], property pages
 ms.assetid: 22638d86-ff3e-4124-933e-54b7c2a25968
 ms.openlocfilehash: b73a027422cfe9cbf03afece400c1b513cace151
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304698"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62239329"
 ---
 # <a name="mfc-activex-controls-using-stock-property-pages"></a>Controles ActiveX MFC: Usando páginas de propriedade de estoque
 
@@ -31,9 +31,9 @@ Este artigo discute as páginas de propriedade de estoque disponíveis para os c
 
 Para obter mais informações sobre como usar páginas de propriedades em um controle ActiveX, consulte os seguintes artigos:
 
-- [Controles ActiveX MFC: Páginas de propriedades](../mfc/mfc-activex-controls-property-pages.md)
+- [Controles ActiveX MFC: página de propriedades](../mfc/mfc-activex-controls-property-pages.md)
 
-- [Controles ActiveX MFC: Adicionando outra página de propriedade personalizada](../mfc/mfc-activex-controls-adding-another-custom-property-page.md)
+- [Controles ActiveX MFC: adicionar outra página de propriedade personalizada](../mfc/mfc-activex-controls-adding-another-custom-property-page.md)
 
 O MFC fornece três páginas de propriedade de estoque para uso com controles ActiveX: `CLSID_CColorPropPage`, `CLSID_CFontPropPage`, e `CLSID_CPicturePropPage`. Essas páginas exibem uma interface do usuário de estoque cor, fonte e propriedades da imagem, respectivamente.
 
@@ -54,4 +54,4 @@ Depois de fazer essas modificações, recompile o projeto. Agora, o controle tiv
 ## <a name="see-also"></a>Consulte também
 
 [Controles ActiveX do MFC](../mfc/mfc-activex-controls.md)<br/>
-[Controles ActiveX MFC: Adicionando propriedades de estoque](../mfc/mfc-activex-controls-adding-stock-properties.md)
+[Controles ActiveX MFC: adicionar propriedades de estoque](../mfc/mfc-activex-controls-adding-stock-properties.md)

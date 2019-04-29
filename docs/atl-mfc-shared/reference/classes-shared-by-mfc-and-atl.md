@@ -5,11 +5,11 @@ helpviewer_keywords:
 - shared classes, classes
 ms.assetid: ca8b4b6b-744d-430b-b31f-d5b2f17bf210
 ms.openlocfilehash: 5376a87aac2b82615cd48f80e0e95208b8132bf0
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57750475"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62235140"
 ---
 # <a name="classes-shared-by-mfc-and-atl"></a>Classes compartilhadas por MFC e ATL
 

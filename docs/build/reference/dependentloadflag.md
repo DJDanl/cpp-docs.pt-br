@@ -11,11 +11,11 @@ helpviewer_keywords:
 - DEPENDENTLOADFLAG linker option
 - /DEPENDENTLOADFLAG linker option
 ms.openlocfilehash: 94998e06f23a7e70524221d3cb75166b5d3f2c44
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57815964"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62272081"
 ---
 # <a name="dependentloadflag-set-default-dependent-load-flags"></a>/ DEPENDENTLOADFLAG (definir sinalizadores de carregamento dependente padrão)
 
@@ -55,7 +55,7 @@ Se você especificar a opção de link `/DEPENDENTLOADFLAG:0xA00` (o valor dos s
 ## <a name="see-also"></a>Consulte também
 
 - [Referência de vinculador MSVC](linking.md)
-- [Opções do vinculador MSVC](linker-options.md)
+- [Opções de vinculador MSVC](linker-options.md)
 - [Vincular um executável a uma DLL](../linking-an-executable-to-a-dll.md#linking-implicitly)
 - [Vincular um executável a uma DLL](../linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)
 - [LoadLibraryEx](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibraryexa)

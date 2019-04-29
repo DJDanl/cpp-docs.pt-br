@@ -34,11 +34,11 @@ helpviewer_keywords:
 - _tmkdir function
 ms.assetid: 7f22d01d-63a5-4712-a6e7-d34878b2d840
 ms.openlocfilehash: 0d89e1f0930cf9131156a4691069f1f17c15c124
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496606"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62285191"
 ---
 # <a name="mkdir-wmkdir"></a>_mkdir, _wmkdir
 
@@ -73,7 +73,7 @@ Para obter mais informações sobre esses e outros códigos de retorno, consulte
 
 ## <a name="remarks"></a>Comentários
 
-O **mkdir** função cria um novo diretório com especificado *dirname.* **mkdir** pode criar apenas um novo diretório por chamada, portanto, somente o último componente de *dirname* pode nomear um novo diretório. **mkdir** não se traduz delimitadores de caminho. No Windows NT, a barra invertida (\\) e a barra "/" são delimitadores de caminho válidos em cadeias de caracteres em rotinas de tempo de execução.
+O **mkdir** função cria um novo diretório com especificado *dirname.* **mkdir** pode criar apenas um novo diretório por chamada, portanto, somente o último componente de *dirname* pode nomear um novo diretório. **_mkdir** does not translate path delimiters. No Windows NT, a barra invertida (\\) e a barra "/" são delimitadores de caminho válidos em cadeias de caracteres em rotinas de tempo de execução.
 
 **wmkdir** é uma versão de caractere largo de **mkdir**; o *dirname* argumento **wmkdir** é uma cadeia de caracteres largos. **wmkdir** e **mkdir** se comportam de forma idêntica caso contrário.
 
@@ -81,7 +81,7 @@ O **mkdir** função cria um novo diretório com especificado *dirname.* **mkdir
 
 |Rotina Tchar.h|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**tmkdir**|**_mkdir**|**_mkdir**|**_wmkdir**|
+|**_tmkdir**|**_mkdir**|**_mkdir**|**_wmkdir**|
 
 ## <a name="requirements"></a>Requisitos
 

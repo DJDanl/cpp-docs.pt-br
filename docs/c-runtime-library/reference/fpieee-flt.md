@@ -26,11 +26,11 @@ helpviewer_keywords:
 - fpieee_flt function
 ms.assetid: 2bc4801e-0eed-4e73-b518-215da8cc9740
 ms.openlocfilehash: 9a49ec403b1cb95407b0a366accf1d9374d9cb22
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50458611"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62333242"
 ---
 # <a name="fpieeeflt"></a>_fpieee_flt
 
@@ -54,7 +54,7 @@ Código da exceção.
 *excInfo*<br/>
 Ponteiro para a estrutura de informações de exceção do Windows NT.
 
-*Manipulador*<br/>
+*handler*<br/>
 Ponteiro para a rotina do manipulador de interceptação do IEEE do usuário.
 
 ## <a name="return-value"></a>Valor de retorno
@@ -71,7 +71,7 @@ O **fpieee_record** estrutura, definida em fpieee, contém informações que per
 |----------------------------|-----------------|
 |**RoundingMode**<br/>**Precisão**|Eles **sem sinal** **int** campos contêm informações sobre o ambiente de ponto flutuante no momento em que ocorreu a exceção.|
 |**operação**|Isso **sem sinal** **int** campo indica o tipo de operação que causou a interceptação. Se o tipo é uma comparação (**_FpCodeCompare**), você pode fornecer um dos especiais **_FPIEEE_COMPARE_RESULT** valores (conforme definido em fpieee) nos **Result.Value** campo. O tipo de conversão (**_FpCodeConvert**) indica que a interceptação ocorreu durante uma operação de conversão de ponto flutuante. Você pode examinar os **necessário operando1** e **resultado** tipos para determinar o tipo de conversão que está sendo tentada.|
-|**Necessário operando1**<br/>**Necessário operando2**<br/>**Result**|Eles **_FPIEEE_VALUE** estruturas indicam os tipos e valores do resultado proposto e operandos. Cada estrutura contém estes campos:<br /><br /> **OperandValid** – o sinalizador que indica se o valor de resposta é válido.<br />**Formato** -tipo de dados do valor correspondente. O tipo de formato pode ser retornado, mesmo que o valor correspondente não seja válido.<br />**Valor** -valor de dados de resultado ou do operando.|
+|**Necessário operando1**<br/>**Operand2**<br/>**Result**|Eles **_FPIEEE_VALUE** estruturas indicam os tipos e valores do resultado proposto e operandos. Cada estrutura contém estes campos:<br /><br /> **OperandValid** – o sinalizador que indica se o valor de resposta é válido.<br />**Formato** -tipo de dados do valor correspondente. O tipo de formato pode ser retornado, mesmo que o valor correspondente não seja válido.<br />**Valor** -valor de dados de resultado ou do operando.|
 |**Causa**<br/>**Habilitar**<br/>**Status**|**Fpieee_exception_flags** contém um campo de bits por tipo de exceção de ponto de flutuante. Há uma correspondência entre esses campos e os argumentos usados para mascarar as exceções fornecidas a [_controlfp](control87-controlfp-control87-2.md). O significado exato de cada bit depende do contexto:<br /><br /> **Causa** -cada bit definido indica que a exceção específica que foi gerada.<br />**Habilitar** -cada bit definido indica que a exceção específica está sendo desmascarada.<br />**Status** -cada bit definido indica que a exceção específica está pendente no momento. Isso inclui exceções que não foram geradas porque estavam mascaradas por **controlfp**.|
 
 Exceções pendentes desabilitadas são geradas quando você as habilita. Isso pode resultar em comportamento indefinido ao usar **fpieee_flt** como um filtro de exceção. Sempre chame [_clearfp](clear87-clearfp.md) antes de habilitar exceções de ponto flutuante.

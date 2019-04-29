@@ -5,11 +5,11 @@ helpviewer_keywords:
 - Parallel Patterns Library (PPL)
 ms.assetid: 40fd86b2-69fa-45e5-93d8-98a75636c242
 ms.openlocfilehash: 11440d56b9618d4763e1b7e47a21b365bbdc0c15
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57290710"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62301845"
 ---
 # <a name="parallel-patterns-library-ppl"></a>Biblioteca de padrões paralelos (PPL)
 
@@ -27,7 +27,7 @@ O PPL fornece os seguintes recursos:
 
 O PPL fornece um modelo de programação que se parece com a biblioteca padrão C++. O exemplo a seguir demonstra vários recursos da PPL. Ele calcula vários números de Fibonacci em série e em paralelo. Ambas as computações agir em uma [std:: array](../../standard-library/array-class-stl.md) objeto. O exemplo também imprime no console a hora em que é necessária executar ambos os cálculos.
 
-A versão serial usa a biblioteca padrão C++ [std::for_each](../../standard-library/algorithm-functions.md#for_each) algoritmo para percorrer a matriz e armazena os resultados em um [std:: Vector](../../standard-library/vector-class.md) objeto. A versão paralela executa a mesma tarefa, mas usa a PPL [Concurrency:: parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) algoritmo e armazena os resultados em um [concurrency::concurrent_vector](../../parallel/concrt/reference/concurrent-vector-class.md) objeto. O `concurrent_vector` classe permite que cada iteração do loop simultaneamente adicionar elementos sem a necessidade de sincronizar o acesso de gravação ao contêiner.
+A versão serial usa o C++ biblioteca padrão [std::for_each](../../standard-library/algorithm-functions.md#for_each) algoritmo para percorrer a matriz e armazena os resultados em um [std:: Vector](../../standard-library/vector-class.md) objeto. A versão paralela executa a mesma tarefa, mas usa a PPL [Concurrency:: parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) algoritmo e armazena os resultados em um [concurrency::concurrent_vector](../../parallel/concrt/reference/concurrent-vector-class.md) objeto. O `concurrent_vector` classe permite que cada iteração do loop simultaneamente adicionar elementos sem a necessidade de sincronizar o acesso de gravação ao contêiner.
 
 Porque `parallel_for_each` age simultaneamente, a versão paralela deste exemplo deve classificar o `concurrent_vector` objeto para produzir os mesmos resultados que a versão serial.
 

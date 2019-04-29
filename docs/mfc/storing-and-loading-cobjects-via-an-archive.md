@@ -11,11 +11,11 @@ helpviewer_keywords:
 - CObjects [MFC]
 ms.assetid: a829b6dd-bc31-47e0-8108-fbb946722db9
 ms.openlocfilehash: 591ce7032aa3d70b1e5a020cd9173ed4c9d0fa9b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57299928"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62306763"
 ---
 # <a name="storing-and-loading-cobjects-via-an-archive"></a>Armazenando e carregando CObjects por meio de um arquivo morto
 
@@ -40,4 +40,4 @@ Em resumo, se sua classe serializável define inserida `CObject` como um membro,
 
 ## <a name="see-also"></a>Consulte também
 
-[Serialização: Serializando um objeto](../mfc/serialization-serializing-an-object.md)
+[Serialização: serializar um objeto](../mfc/serialization-serializing-an-object.md)

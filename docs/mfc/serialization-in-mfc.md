@@ -9,11 +9,11 @@ helpviewer_keywords:
 - serialization [MFC], bypassing
 ms.assetid: fb596a18-4522-47e0-96e0-192732d24c12
 ms.openlocfilehash: 5c7dec140635b6d83bdae936d1bb0cef144f825b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57262136"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62308206"
 ---
 # <a name="serialization-in-mfc"></a>Serialização em MFC
 
@@ -36,9 +36,9 @@ Se você quiser, você pode ignorar a serialização do MFC para criar seu próp
 
 Os artigos a seguir abordam as duas tarefas principais necessárias para a serialização:
 
-- [Serialização: Criando uma classe serializável](../mfc/serialization-making-a-serializable-class.md)
+- [Serialização: criar uma classe serializável](../mfc/serialization-making-a-serializable-class.md)
 
-- [Serialização: Serializando um objeto](../mfc/serialization-serializing-an-object.md)
+- [Serialização: serializar um objeto](../mfc/serialization-serializing-an-object.md)
 
 O artigo [serialização: Serialização vs. Entrada/saída de banco de dados](../mfc/serialization-serialization-vs-database-input-output.md) descreve quando a serialização é uma técnica de entrada/saída apropriada em aplicativos de banco de dados.
 

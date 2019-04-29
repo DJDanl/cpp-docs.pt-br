@@ -45,11 +45,11 @@ helpviewer_keywords:
 - _ungetwch function
 ms.assetid: 70ae71c6-228c-4883-a57d-de6d5f873825
 ms.openlocfilehash: 7407d26606bd5242c430961faa4f60090b83f036
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50430297"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62268865"
 ---
 # <a name="ungetch-ungetwch-ungetchnolock-ungetwchnolock"></a>_ungetch, _ungetwch, _ungetch_nolock, _ungetwch_nolock
 
@@ -94,15 +94,15 @@ As versões com o sufixo **_nolock** são idênticas, exceto pelo fato de não s
 
 |Rotina TCHAR.H|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**ungettch**|**_ungetch**|**_ungetch**|**_ungetwch**|
-|**ungettch_nolock**|**_ungetch_nolock**|**_ungetch_nolock**|**_ungetwch_nolock**|
+|**_ungettch**|**_ungetch**|**_ungetch**|**_ungetwch**|
+|**_ungettch_nolock**|**_ungetch_nolock**|**_ungetch_nolock**|**_ungetwch_nolock**|
 
 ## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|
-|**ungetch**, **ungetch_nolock**|\<conio.h>|
-|**ungetwch**, **ungetwch_nolock**|\<conio.h> ou \<wchar.h>|
+|**_ungetch**, **_ungetch_nolock**|\<conio.h>|
+|**_ungetwch**, **_ungetwch_nolock**|\<conio.h> ou \<wchar.h>|
 
 Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 

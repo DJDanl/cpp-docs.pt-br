@@ -11,11 +11,11 @@ f1_keywords:
 - chrono/std::chrono::microseconds
 ms.assetid: 844de749-f306-482e-89bc-6f53c99c8324
 ms.openlocfilehash: 1fcf87d84b2c99b89217b7f2e0fc7fecd55fff02
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51331471"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62279093"
 ---
 # <a name="ltchronogt"></a>&lt;chrono&gt;
 
@@ -89,9 +89,9 @@ Para obter mais informações sobre tipos de índice usados nas seguintes typede
 |Literal|Descrição|
 |-------------|-----------------|
 |chrono::hours operator "" h(unsigned long long Val)|Especifica horas como um valor integral.|
-|chrono:: Duration\<dupla, proporção\<3600 >> operador "" h (Val longo dupla)|Especifica horas como um valor de ponto flutuante.|
+|chrono::duration\<double, ratio\<3600> > operator "" h(long double Val)|Especifica horas como um valor de ponto flutuante.|
 |chrono::minutes (operator "" min)(unsigned long long Val)|Especifica minutos como um valor integral.|
-|chrono:: Duration\<dupla, proporção\<60 >> (operador "" min) (duplo longo Val)|Especifica minutos como um valor de ponto flutuante.|
+|chrono::duration\<double, ratio\<60> > (operator "" min)( long double Val)|Especifica minutos como um valor de ponto flutuante.|
 |chrono::seconds operator "" s(unsigned long long Val)|Especifica minutos como um valor integral.|
 |chrono::duration\<double> operator "" s(long double Val)|Especifica segundos como um valor de ponto flutuante.|
 |chrono::milliseconds operator "" ms(unsigned long long Val)|Especifica milissegundos como um valor integral.|

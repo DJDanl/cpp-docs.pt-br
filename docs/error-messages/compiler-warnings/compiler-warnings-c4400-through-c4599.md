@@ -1,6 +1,6 @@
 ---
-title: Avisos de compilador C4400 a C4599
-ms.date: 05/30/2018
+title: Avisos do compilador C4400 a C4599
+ms.date: 04/21/2019
 f1_keywords:
 - C4413
 - C4415
@@ -23,14 +23,10 @@ f1_keywords:
 - C4448
 - C4449
 - C4450
-- C4451
 - C4452
 - C4453
 - C4454
 - C4455
-- C4456
-- C4457
-- C4459
 - C4472
 - C4474
 - C4475
@@ -138,14 +134,14 @@ helpviewer_keywords:
 - C4594
 - C4595
 ms.assetid: b07850a5-ae89-48ea-bf9a-f0e30939f9b9
-ms.openlocfilehash: 990560e2c05f66a010382f736735c19c17d4dc28
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
-ms.translationtype: MT
+ms.openlocfilehash: 7dd09e6f31592f6d4b62b94d8d3256fe1a432010
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816614"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62280302"
 ---
-# <a name="compiler-warnings-c4400-through-c4599"></a>Avisos de compilador C4400 a C4599
+# <a name="compiler-warnings-c4400-through-c4599"></a>Avisos do compilador C4400 a C4599
 
 Os artigos nesta seção da documentação explicam um subconjunto das mensagens de aviso são geradas pelo compilador.
 
@@ -184,14 +180,14 @@ Os artigos nesta seção da documentação explicam um subconjunto das mensagens
 |Aviso do compilador (nível 1) C4426|os sinalizadores de otimização foram alterados após incluir o cabeçalho, pode ser devido a #pragma optimize)|
 |Aviso do compilador (nível 1) C4427|'*operador*': estouro na divisão constante, comportamento indefinido|
 |[Aviso do compilador (nível 4) C4429](../../error-messages/compiler-warnings/compiler-warning-level-4-c4429.md)|possíveis incompleto ou formado incorretamente-nome de caractere universal|
-|[Aviso (erro) do compilador C4430](../../error-messages/compiler-warnings/compiler-warning-c4430.md)|faltando especificador de tipo - int assumido. Observação: C++ não suporta default-int|
+|[Aviso (erro) C4430 do compilador](../../error-messages/compiler-warnings/compiler-warning-c4430.md)|faltando especificador de tipo - int assumido. Observação: C++ não suporta default-int|
 |[Aviso do compilador (nível 4) C4431](../../error-messages/compiler-warnings/compiler-warning-level-4-c4431.md)|faltando especificador de tipo - int assumido. Observação: C não suporta default-int|
 |[Aviso do compilador (nível 4) C4434](../../error-messages/compiler-warnings/compiler-warning-level-4-c4434.md)|um construtor static deve possuir acessibilidade private; alterando para acesso privado|
 |[Aviso do compilador (nível 4) C4435](../../error-messages/compiler-warnings/compiler-warning-level-4-c4435.md)|'*derived_class*': Layout do objeto em/vd2 será alterado devido à base virtual '*base_class*'|
 |[Aviso do compilador (nível 1) C4436](../../error-messages/compiler-warnings/compiler-warning-level-1-c4436.md)|dinâmico\_conversão de base virtual '*base_class*'para'*derived_class*' no construtor ou destruidor poderia falhar com o objeto parcialmente construído|
 |[Aviso do compilador (nível 4) C4437](../../error-messages/compiler-warnings/compiler-warning-level-4-c4437.md)|dinâmico\_conversão de base virtual '*base_class*'para'*derived_class*' poderia falhar em alguns contextos|
 |C4438 de aviso do compilador|'*função*': não pode ser chamado com segurança /await: clrcompat modo. Se '*função*' chamadas para o CLR-lo pode resultar em corrupção de cabeçalhos CLR|
-|[Aviso (erro) do compilador C4439](../../error-messages/compiler-warnings/compiler-warning-c4439.md)|'*função*': definição de função com um tipo gerenciado na assinatura deve ter um clrcall convenção de chamada|
+|[Aviso (erro) C4439 do compilador](../../error-messages/compiler-warnings/compiler-warning-c4439.md)|'*função*': definição de função com um tipo gerenciado na assinatura deve ter um clrcall convenção de chamada|
 |[Aviso do compilador (nível 1) C4440](../../error-messages/compiler-warnings/compiler-warning-level-1-c4440.md)|redefinição de convenção de chamada de '*calling_convention1*'para'*calling_convenction2*' ignorado|
 |[Aviso do compilador (nível 1) C4441](../../error-messages/compiler-warnings/compiler-warning-level-1-c4441.md)|convenção de chamada de '*calling_convention1*' ignorado; '*calling_convention2*' usado em vez disso|
 |Aviso do compilador (nível 1) C4442|terminador nulo inserido no argumento de Annotation.  Valor será truncado.|
@@ -212,9 +208,9 @@ Os artigos nesta seção da documentação explicam um subconjunto das mensagens
 |[Aviso do compilador (nível 4) C4457](compiler-warning-level-4-c4457.md)|declaração de '*identificador*' oculta o parâmetro de função|
 |[Aviso do compilador (nível 4) C4458](compiler-warning-level-4-c4458.md)|declaração de '*identificador*' oculta o membro da classe|
 |[Aviso do compilador (nível 4) C4459](compiler-warning-level-4-c4459.md)|declaração de '*identificador*' oculta uma declaração global|
-|[Aviso do compilador (nível 4) C4460](../../error-messages/compiler-warnings/compiler-warning-level-4-c4460.md)|' WinRT&#124;gerenciado ' operador '*operador*', tem o parâmetro passado por referência. ' WinRT&#124;gerenciado ' operador '*operador*'tem uma semântica diferente do operador de C++'*cpp_operator*', você pretendia passar por valor?|
+|[Aviso do compilador (nível 4) C4460](../../error-messages/compiler-warnings/compiler-warning-level-4-c4460.md)|' WinRT&#124;gerenciado ' operador '*operador*', tem o parâmetro passado por referência. ' WinRT&#124;gerenciado ' operador '*operador*' tem semânticas diferentes do C++ operador '*cpp_operator*', você pretendia passar por valor?|
 |[Aviso do compilador (nível 1) C4461](../../error-messages/compiler-warnings/compiler-warning-level-1-c4461.md)|'*classname*': essa classe tem um finalizador '! *finalizador*', mas nenhum destruidor ' ~*dtor*'|
-|[Aviso (nível 1, erro) do compilador C4462](../../error-messages/compiler-warnings/compiler-warning-level-1-c4462.md)|'*tipo*': não é possível determinar o GUID do tipo. O programa poderá falhar no tempo de execução.|
+|[Aviso do compilador (nível 1, erro) C4462](../../error-messages/compiler-warnings/compiler-warning-level-1-c4462.md)|'*tipo*': não é possível determinar o GUID do tipo. O programa poderá falhar no tempo de execução.|
 |[Aviso do compilador (nível 4) C4463](compiler-warning-level-4-c4463.md)|estouro; atribuição de '*valor*'para o campo de bits que pode conter apenas valores de'*min_value*'para'*max_value*'|
 |[Aviso do compilador (nível 4) C4464](../../error-messages/compiler-warnings/c4464.md)|caminho de inclusão relativo contém '.. '|
 |[Aviso do compilador (nível 1) C4470](../../error-messages/compiler-warnings/compiler-warning-level-1-c4470.md)|pragmas de controle de ponto flutuante ignorados sob /clr|
@@ -230,8 +226,8 @@ Os artigos nesta seção da documentação explicam um subconjunto das mensagens
 |[Aviso do compilador (nível 4) C4481](../../error-messages/compiler-warnings/compiler-warning-level-4-c4481.md)|extensão não padrão usada: especificador de substituição '*palavra-chave*'|
 |C4482 de aviso do compilador|extensão não padrão usada: enum '*enumeração*' usado no nome qualificado|
 |Aviso do compilador (nível 1, erro) C4483|Erro de sintaxe: esperada palavra-chave C++|
-|[Aviso (erro) do compilador C4484](../../error-messages/compiler-warnings/compiler-warning-c4484.md)|'*override_function*': correspondências de método ref class base '*base_class_function*', mas não está marcado como 'virtual', 'new' ou 'override'; 'new' (e não 'virtual') é assumido|
-|[Aviso (erro) do compilador C4485](../../error-messages/compiler-warnings/compiler-warning-c4485.md)|'*override_function*': correspondências de método ref class base '*base_class_function*', mas não está marcado como 'new' ou 'override'; 'new' (e 'virtual') são assumidos|
+|[Aviso (erro) C4484 do compilador](../../error-messages/compiler-warnings/compiler-warning-c4484.md)|'*override_function*': correspondências de método ref class base '*base_class_function*', mas não está marcado como 'virtual', 'new' ou 'override'; 'new' (e não 'virtual') é assumido|
+|[Aviso (erro) C4485 do compilador](../../error-messages/compiler-warnings/compiler-warning-c4485.md)|'*override_function*': correspondências de método ref class base '*base_class_function*', mas não está marcado como 'new' ou 'override'; 'new' (e 'virtual') são assumidos|
 |[Aviso do compilador (nível 1) C4486](../../error-messages/compiler-warnings/compiler-warning-level-1-c4486.md)|'*função*': um método private virtual de uma classe ref ou classe de valor deve ser marcado como 'sealed'|
 |[Aviso do compilador (nível 4) C4487](../../error-messages/compiler-warnings/compiler-warning-level-4-c4487.md)|'*derived_class_function*': correspondências herdadas de método não virtual '*base_class_function*', mas não está explicitamente marcado como 'new'|
 |[Aviso do compilador (nível 1) C4488](../../error-messages/compiler-warnings/compiler-warning-level-1-c4488.md)|'*função*': requer '*palavra-chave*'palavra-chave para implementar o método de interface'*interface_method*'|
@@ -289,7 +285,7 @@ Os artigos nesta seção da documentação explicam um subconjunto das mensagens
 |[Aviso do compilador (nível 1) C4551](../../error-messages/compiler-warnings/compiler-warning-level-1-c4551.md)|lista de argumentos ausente de chamada de função|
 |[Aviso do compilador (nível 1) C4552](../../error-messages/compiler-warnings/compiler-warning-level-1-c4552.md)|'*operador*': operador não tem nenhum efeito; esperado operador com efeito colateral|
 |[Aviso do compilador (nível 1) C4553](../../error-messages/compiler-warnings/compiler-warning-level-1-c4553.md)|'*operador*': operador não tem nenhum efeito; você pretendia ' operador?|
-|[Compilador aviso (nível 3) C4554](../../error-messages/compiler-warnings/compiler-warning-level-3-c4554.md) C4554|'*operador*': Verifique a precedência do operador para possível erro; use parênteses para esclarecer a precedência|
+|[Aviso do compilador (nível 3) C4554](../../error-messages/compiler-warnings/compiler-warning-level-3-c4554.md) C4554|'*operador*': Verifique a precedência do operador para possível erro; use parênteses para esclarecer a precedência|
 |[Aviso do compilador (nível 1) C4555](../../error-messages/compiler-warnings/compiler-warning-level-1-c4555.md)|expressão não tem efeito; expressão esperada com efeito colateral|
 |[Aviso do compilador (nível 1) C4556](../../error-messages/compiler-warnings/compiler-warning-level-1-c4556.md)|valor do argumento imediato intrínseco '*valor*'está fora do intervalo'*lower_bound* - *upper_bound*'|
 |[Aviso do compilador (nível 3) C4557](../../error-messages/compiler-warnings/compiler-warning-level-3-c4557.md)|assume' contém efeito '*efeito*'|
@@ -329,3 +325,8 @@ Os artigos nesta seção da documentação explicam um subconjunto das mensagens
 |Aviso do compilador (erro) C4597|um comportamento indefinido: offsetof aplicado a um membro de uma base virtual|
 |Aviso do compilador (nível 1 e nível 3) C4598|' #include "*cabeçalho*"': o número de cabeçalho *número* no cabeçalho pré-compilado não coincide com a compilação atual naquela posição|
 |Aviso do compilador (nível 3) C4599|'*sinalizador* *caminho*': número de argumento de linha de comando *número* não corresponde ao cabeçalho pré-compilado|
+
+## <a name="see-also"></a>Consulte também
+
+[C /C++ ferramentas de compilador e build erros e avisos](../compiler-errors-1/c-cpp-build-errors.md) \
+[Avisos do compilador C4000 - C5999](compiler-warnings-c4000-c5999.md)

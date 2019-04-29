@@ -10,11 +10,11 @@ f1_keywords:
 - VC.Project.VCManifestTool.AssemblyIdentity
 ms.assetid: b99368a5-6819-482c-a06e-f2409290cfd1
 ms.openlocfilehash: 9acdb7f5c934a8cabdd1803074778ac9f01f4960
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57824605"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62271017"
 ---
 # <a name="general-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>Caixa de diálogo Geral, Ferramenta de Manifesto, Propriedades de Configuração, Páginas de Propriedades de &lt;Projectname&gt;
 
@@ -44,4 +44,4 @@ Para acessar essa caixa de diálogo da página de propriedades, abra as páginas
 
 [Manifesto de aplicativo ClickOnce](/visualstudio/deployment/clickonce-application-manifest)<br>
 [Páginas de propriedades da ferramenta de manifesto](manifest-tool-property-pages.md)<br>
-[Defina o compilador C++ e compilar propriedades no Visual Studio](../working-with-project-properties.md)
+[Definição das propriedades de compilação do C++ no Visual Studio](../working-with-project-properties.md)

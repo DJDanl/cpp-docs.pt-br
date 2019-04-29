@@ -7,11 +7,11 @@ helpviewer_keywords:
 - _ITERATOR_DEBUG_LEVEL
 ms.assetid: 718549cd-a9a9-4ab3-867b-aac00b321e67
 ms.openlocfilehash: a584fe5a97e251205e750507b27e53e6e7b9a20e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50502811"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62224188"
 ---
 # <a name="iteratordebuglevel"></a>_ITERATOR_DEBUG_LEVEL
 
@@ -49,7 +49,7 @@ Para obter informações sobre como desabilitar avisos sobre iteradores verifica
 
 ### <a name="example"></a>Exemplo
 
-Para especificar um valor para a macro iterator_debug_level, use uma [/D](../build/reference/d-preprocessor-definitions.md) opção de compilador para defini-lo na linha de comando ou use `#define` antes da biblioteca padrão C++ cabeçalhos são incluídos nos arquivos de origem. Por exemplo, na linha de comando, para compilar *Sample. cpp* no modo de depuração e usar o suporte do iterador de depuração, você pode especificar a definição da macro iterator_debug_level:
+Para especificar um valor para a macro iterator_debug_level, use uma [/D](../build/reference/d-preprocessor-definitions.md) opção de compilador para defini-lo na linha de comando ou use `#define` antes do C++ cabeçalhos da biblioteca padrão são incluídos nos arquivos de origem. Por exemplo, na linha de comando, para compilar *Sample. cpp* no modo de depuração e usar o suporte do iterador de depuração, você pode especificar a definição da macro iterator_debug_level:
 
 `cl /EHsc /Zi /MDd /D_ITERATOR_DEBUG_LEVEL=1 sample.cpp`
 

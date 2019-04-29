@@ -3,15 +3,15 @@ title: Conversão (C++/CX)
 ms.date: 06/19/2018
 ms.assetid: 5247f6c7-6a0a-4021-97c9-21c868bd9455
 ms.openlocfilehash: 65d489d14c91b462e5a2bbe8bd60fce2657904a7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50454815"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62258207"
 ---
 # <a name="casting-ccx"></a>Conversão (C++/CX)
 
-Quatro operadores cast diferentes se aplicam a tipos de tempo de execução do Windows: [operador static_cast](../cpp/static-cast-operator.md), [operador dynamic_cast](../cpp/dynamic-cast-operator.md), **operador safe_cast**, e [ Operador reinterpret_cast](../cpp/reinterpret-cast-operator.md). **Safe_cast** e **static_cast** lançar uma exceção quando a conversão não pode ser executada; [operador static_cast](../cpp/static-cast-operator.md) também executa a verificação de tipo de tempo de compilação. **dynamic_cast** retorna **nullptr** se ele falhar ao converter o tipo. Embora **reinterpret_cast** retorna um valor não nulo, ele poderá ser inválido. Por esse motivo, recomendamos que você não use **reinterpret_cast** , a menos que você sabe que a conversão seja bem-sucedida. Além disso, é recomendável que você não use conversões de estilo C em seu C + + c++ /CLI CX código porque elas são idênticas às **reinterpret_cast**.
+Quatro operadores cast diferentes se aplicam a tipos de tempo de execução do Windows: [operador static_cast](../cpp/static-cast-operator.md), [operador dynamic_cast](../cpp/dynamic-cast-operator.md), **operador safe_cast**, e [ Operador reinterpret_cast](../cpp/reinterpret-cast-operator.md). **Safe_cast** e **static_cast** lançar uma exceção quando a conversão não pode ser executada; [operador static_cast](../cpp/static-cast-operator.md) também executa a verificação de tipo de tempo de compilação. **dynamic_cast** retorna **nullptr** se ele falhar ao converter o tipo. Embora **reinterpret_cast** retorna um valor não nulo, ele poderá ser inválido. Por esse motivo, recomendamos que você não use **reinterpret_cast** , a menos que você sabe que a conversão seja bem-sucedida. Além disso, é recomendável que você não use conversões C-style em seu C++/CX código porque elas são idênticas às **reinterpret_cast**.
 
 O compilador e o tempo de execução também executam conversões implícitas - por exemplo, em operações de conversão boxing quando um tipo de valor ou um tipo interno é transmitido como argumentos para um método cujo tipo de parâmetro é `Object^`. Em tese, uma conversão implícita nunca deve causar uma exceção no tempo de execução; se o compilador não puder executar uma conversão implícita, ele gerará um erro no tempo de compilação.
 

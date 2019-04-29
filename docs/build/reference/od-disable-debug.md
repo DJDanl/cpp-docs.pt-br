@@ -13,11 +13,11 @@ helpviewer_keywords:
 - disable (debug) compiler option [C++]
 ms.assetid: b1ac31b7-e086-4eeb-be5e-488f7513f5f5
 ms.openlocfilehash: 83ece0865eb74a4e9e292b78733df9d24602fe1d
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57806760"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62320676"
 ---
 # <a name="od-disable-debug"></a>/Od (desabilitar [depuração])
 
@@ -51,5 +51,5 @@ Essa opção é o padrão. Porque **/Od** suprime a movimentação de código, e
 
 [Opções /O (otimizar código)](o-options-optimize-code.md)<br/>
 [Opções do compilador MSVC](compiler-options.md)<br/>
-[Sintaxe de linha de comando do compilador MSVC](compiler-command-line-syntax.md)<br/>
+[Sintaxe da linha de comando do compilador MSVC](compiler-command-line-syntax.md)<br/>
 [/Z7, /Zi, /ZI (Formato de Informações de Depuração)](z7-zi-zi-debug-information-format.md)

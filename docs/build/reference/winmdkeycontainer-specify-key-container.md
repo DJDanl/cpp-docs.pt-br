@@ -5,11 +5,11 @@ f1_keywords:
 - VC.Project.VCLinkerTool.WINMDKEYCONTAINER
 ms.assetid: c2fc44dc-7cb5-42b9-897f-1b124928f2f7
 ms.openlocfilehash: 0b6cb42fc391d94634ae90e5a4cc17e69a14ff09
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57813065"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62316509"
 ---
 # <a name="winmdkeycontainer-specify-key-container"></a>/WINMDKEYCONTAINER (Especifica o contêiner de chave)
 
@@ -36,4 +36,4 @@ Especifica um contêiner de chave para assinar um arquivo de metadados do Window
 ## <a name="see-also"></a>Consulte também
 
 [Referência de vinculador MSVC](linking.md)<br/>
-[Opções do vinculador MSVC](linker-options.md)
+[Opções de vinculador MSVC](linker-options.md)

@@ -31,11 +31,11 @@ helpviewer_keywords:
 - csinl function
 ms.assetid: 3ed475e8-9aae-42ba-a25c-7ae656a0fd4d
 ms.openlocfilehash: 66483c9121750c3333850d6244704b89b8893cad
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50633487"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62288843"
 ---
 # <a name="csin-csinf-csinl"></a>csin, csinf, csinl
 
@@ -72,13 +72,13 @@ O seno *z*, em radianos.
 
 ## <a name="remarks"></a>Comentários
 
-Como C++ permite sobrecargas, é possível chamar sobrecargas de **csin** que usam e retornam **fcomplex** e **_Lcomplex** valores. Em um programa do C **csin** sempre usa e retorna um **_Dcomplex** valor.
+Porque C++ permite sobrecargas, é possível chamar sobrecargas de **csin** que usam e retornam **fcomplex** e **_Lcomplex** valores. Em um programa do C **csin** sempre usa e retorna um **_Dcomplex** valor.
 
 ## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho C|Cabeçalho C++|
 |-------------|--------------|------------------|
-|**csin**, **csinf**, **csinl**|\<complex.h>|\<ccomplex>|
+|**csin**,               **csinf**, **csinl**|\<complex.h>|\<ccomplex>|
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 

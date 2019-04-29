@@ -8,17 +8,17 @@ helpviewer_keywords:
 - __thiscall keyword [C++]
 ms.assetid: a6a22dd2-0101-4885-b33b-22f6057965df
 ms.openlocfilehash: fc5a32fedf52377889b61103856e2125733cd696
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50448835"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62266771"
 ---
 # <a name="thiscall"></a>__thiscall
 
 **Seção específica da Microsoft**
 
-O **thiscall** convenção de chamada é usada em funções membro e é a convenção de chamada padrão usada pelas funções de membro de C++ que não usam argumentos variáveis. Sob **thiscall**, o receptor limpa a pilha, que é impossível `vararg` funções. Os argumentos são empurrados na pilha da direita para esquerda, com o **isso** ponteiro que está sendo passado por meio do registro ECX e não na pilha, em x86 arquitetura.
+O **thiscall** convenção de chamada é usada em funções de membro e é o padrão de convenção de chamada usada por C++ funções de membro que não usam argumentos variáveis. Sob **thiscall**, o receptor limpa a pilha, que é impossível `vararg` funções. Os argumentos são empurrados na pilha da direita para esquerda, com o **isso** ponteiro que está sendo passado por meio do registro ECX e não na pilha, em x86 arquitetura.
 
 Um motivo para usar **thiscall** está em classes cujas funções membro usam `__clrcall` por padrão. Nesse caso, você pode usar **thiscall** para tornar funções membro individuais que pode ser chamado do código nativo.
 

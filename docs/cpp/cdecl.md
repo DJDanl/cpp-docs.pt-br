@@ -10,17 +10,17 @@ helpviewer_keywords:
 - __cdecl keyword [C++]
 ms.assetid: 1ff1d03e-fb4e-4562-8be1-74f1ad6427f1
 ms.openlocfilehash: 298485d310ee4039b13781a8b5cd88a489af3b8b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50550209"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62232396"
 ---
 # <a name="cdecl"></a>__cdecl
 
 **Seção específica da Microsoft**
 
-**cdecl** é o padrão de convenção de chamada para programas em C e C++. Porque a pilha é limpa pelo chamador, ele pode fazer `vararg` funções. O **cdecl** convenção de chamada cria executáveis maiores do que [stdcall](../cpp/stdcall.md)porque requer que cada chamada de função para incluir o código de limpeza de pilha. A lista a seguir mostra a implementação dessa convenção de chamada.
+**cdecl** é a convenção de chamada para o C padrão e C++ programas. Porque a pilha é limpa pelo chamador, ele pode fazer `vararg` funções. O **cdecl** convenção de chamada cria executáveis maiores do que [stdcall](../cpp/stdcall.md)porque requer que cada chamada de função para incluir o código de limpeza de pilha. A lista a seguir mostra a implementação dessa convenção de chamada.
 
 |Elemento|Implementação|
 |-------------|--------------------|

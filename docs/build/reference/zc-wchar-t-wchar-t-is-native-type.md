@@ -13,11 +13,11 @@ helpviewer_keywords:
 - Zc compiler options [C++]
 ms.assetid: b0de5a84-da72-4e5a-9a4e-541099f939e0
 ms.openlocfilehash: b2563ba0ae2a07bc9f9d81128745ed4b9651fb6c
-ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "57815171"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62315632"
 ---
 # <a name="zcwchart-wchart-is-native-type"></a>/Zc:wchar_t (wchar_t é do tipo nativo)
 
@@ -29,11 +29,11 @@ Analise `wchar_t` como um tipo interno de acordo com o padrão C++.
 
 ## <a name="remarks"></a>Comentários
 
-Se **/ZC: wchar_t** estiver ativado, `wchar_t` é uma palavra-chave para um tipo integral interna no código compilado c++. Se **/Zc:wchar_t-** (com um sinal de subtração) é especificado, ou no código compilado como C, `wchar_t` não é um tipo interno. Em vez disso, `wchar_t` é definido como um `typedef` para `unsigned short` em stddef. h do cabeçalho canônico. (A implementação da Microsoft define-lo em outro cabeçalho é incluído por stddef. h e outros cabeçalhos padrão.)
+Se **/ZC: wchar_t** estiver ativado, `wchar_t` é uma palavra-chave para um tipo integral interna no código compilado como C++. Se **/Zc:wchar_t-** (com um sinal de subtração) é especificado, ou no código compilado como C, `wchar_t` não é um tipo interno. Em vez disso, `wchar_t` é definido como um `typedef` para `unsigned short` em stddef. h do cabeçalho canônico. (A implementação da Microsoft define-lo em outro cabeçalho é incluído por stddef. h e outros cabeçalhos padrão.)
 
-Não recomendamos **/Zc:wchar_t-** porque o padrão C++ requer que `wchar_t` ser um tipo interno. Usar a versão `typedef` pode causar problemas de portabilidade. Se você atualizar de versões anteriores do Visual C++ e encontrar o erro do compilador [C2664](../../error-messages/compiler-errors-2/compiler-error-c2664.md) porque o código está tentando converter implicitamente um `wchar_t` para `unsigned short`, recomendamos que você altere o código para corrigir o erro, em vez disso de configuração **/Zc:wchar_t-**.
+Não recomendamos **/Zc:wchar_t-** porque o C++ padrão requer que `wchar_t` seja um tipo interno. Usar a versão `typedef` pode causar problemas de portabilidade. Se você atualizar de versões anteriores do Visual C++ e encontrar o erro do compilador [C2664](../../error-messages/compiler-errors-2/compiler-error-c2664.md) porque o código está tentando converter implicitamente um `wchar_t` para `unsigned short`, é recomendável que você altere o código para corrigir o erro, em vez de definir **/Zc:wchar_t-**.
 
-O **/ZC: wchar_t** opção está ativada por padrão em compilações de C++ e é ignorada em compilações de C. O [/permissive--](permissive-standards-conformance.md) opção não afeta **/ZC: wchar_t**.
+O **/ZC: wchar_t** opção permanece ativada por padrão em C++ compilações e é ignorada em compilações de C. O [/permissive--](permissive-standards-conformance.md) opção não afeta **/ZC: wchar_t**.
 
 A Microsoft implementa `wchar_t` como um valor sem sinal de dois bytes. Ela mapeia para o tipo nativo do específico da Microsoft `__wchar_t`. Para obter mais informações sobre `wchar_t`, consulte [intervalos de tipos de dados](../../cpp/data-type-ranges.md) e [tipos fundamentais](../../cpp/fundamental-types-cpp.md).
 
