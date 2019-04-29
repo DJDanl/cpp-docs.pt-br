@@ -38,11 +38,11 @@ helpviewer_keywords:
 - va_copy macro
 ms.assetid: a700dbbd-bfe5-4077-87b6-3a07af74a907
 ms.openlocfilehash: cc0a903f6bc4895f7d2ea6e80990dea94f28c6c2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506347"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62353556"
 ---
 # <a name="vaarg-vacopy-vaend-vastart"></a>va_arg, va_copy, va_end, va_start
 
@@ -94,7 +94,7 @@ Parâmetro que precede o primeiro argumento opcional.
 
 ## <a name="remarks"></a>Comentários
 
-O **va_arg**, **va_copy**, **va_end**, e **va_start** macros fornecem uma maneira portátil para acessar os argumentos para uma função quando o função usa um número variável de argumentos. Há duas versões das macros: as macros definidas em STDARG.H estão em conformidade com a norma ISO C99; as macros definidas em VARARGS.H foram preteridas, mas são mantidas para fins de compatibilidade com código gravado antes da norma ANSI C89.
+O **va_arg**, **va_copy**, **va_end**, e **va_start** macros fornecem uma maneira portátil para acessar os argumentos para uma função quando o função usa um número variável de argumentos. Há duas versões das macros: As macros definidas em STDARG. H estão em conformidade com o padrão ico C99; as macros definidas em VARARGS. H foram preteridas, mas são mantidos para compatibilidade com versões anteriores com o código escrito antes do C89 ANSI padrão.
 
 Essas macros pressupõem que a função usa um número fixo de argumentos necessários, seguido por um número variável de argumentos opcionais. Os argumentos necessários são declarados como parâmetros comuns para a função e podem ser acessados por meio dos nomes de parâmetro. Os argumentos opcionais são acessados por meio das macros em STDARG.H (ou VARARGS.H para código gravado antes da norma ANSI C89), que define um ponteiro para o primeiro argumento opcional na lista de argumentos, recupera os argumentos da lista e redefine o ponteiro quando o processamento do argumento é concluído.
 

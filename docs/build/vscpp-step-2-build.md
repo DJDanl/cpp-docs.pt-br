@@ -1,5 +1,5 @@
 ---
-title: Compilar e executar um projeto de aplicativo de console C++
+title: Desenvolver e executar um projeto de aplicativo de console C++
 description: Compilar e executar um aplicativo de console Olá, mundo em Visual C++
 ms.custom: mvc
 ms.date: 12/12/2017
@@ -7,13 +7,13 @@ ms.topic: tutorial
 ms.devlang: cpp
 ms.assetid: 45138d71-719d-42dc-90d7-1d0ca31a2f55
 ms.openlocfilehash: 59813a553a9034503d8bf432400db31e6e3d9478
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57813539"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62314220"
 ---
-# <a name="build-and-run-a-c-console-app-project"></a>Compilar e executar um projeto de aplicativo de console C++
+# <a name="build-and-run-a-c-console-app-project"></a>Desenvolver e executar um projeto de aplicativo de console C++
 
 Quando você criou um projeto de aplicativo de console C++ e inseriu seu código, compilação e executá-lo dentro do Visual Studio e, em seguida, executá-lo como um aplicativo autônomo da linha de comando.
 

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C2955
 ms.assetid: 77709fb6-d69b-46fd-a62f-e8564563d01b
 ms.openlocfilehash: c012e5189b9ca1d0b0e786cbddacedee7c6728d2
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519991"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62300733"
 ---
 # <a name="compiler-error-c2955"></a>Erro do compilador C2955
 
@@ -70,7 +70,7 @@ int main() {
 
 ## <a name="example"></a>Exemplo
 
-**Visual Studio 2017 e posterior:** o compilador corretamente diagnostica listas de argumentos de modelo ausentes quando o modelo é exibido em uma lista de parâmetros de modelo (por exemplo, como parte de um argumento de modelo padrão ou um parâmetro de modelo sem tipo). O código a seguir é compilado no Visual Studio 2015, mas produz um erro no Visual Studio 2017.
+**Visual Studio 2017 e posterior:** O compilador corretamente diagnostica listas de argumentos de modelo ausentes quando o modelo é exibido em uma lista de parâmetros de modelo (por exemplo, como parte de um argumento de modelo padrão ou um parâmetro de modelo sem tipo). O código a seguir é compilado no Visual Studio 2015, mas produz um erro no Visual Studio 2017.
 
 ```
 template <class T> class ListNode;

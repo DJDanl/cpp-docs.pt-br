@@ -45,11 +45,11 @@ helpviewer_keywords:
 - scwprintf function
 ms.assetid: ecbb0ba6-5f4c-4ce6-a64b-144ad8b5fe92
 ms.openlocfilehash: 09c44bbf6f918211c1aa2ee875a23bfcc7ca2da5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50500838"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62357064"
 ---
 # <a name="scprintf-scprintfl-scwprintf-scwprintfl"></a>_scprintf, _scprintf_l, _scwprintf, _scwprintf_l
 
@@ -112,15 +112,15 @@ As versões dessas funções com o **l** sufixo são idênticas, exceto que eles
 
 |Rotina Tchar.h|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**sctprintf**|**_scprintf**|**_scprintf**|**_scwprintf**|
-|**sctprintf_l**|**_scprintf_l**|**_scprintf_l**|**_scwprintf_l**|
+|**_sctprintf**|**_scprintf**|**_scprintf**|**_scwprintf**|
+|**_sctprintf_l**|**_scprintf_l**|**_scprintf_l**|**_scwprintf_l**|
 
 ## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|
-|**scprintf**, **scprintf_l**|\<stdio.h>|
-|**scwprintf**, **scwprintf_l**|\<stdio.h> ou \<wchar.h>|
+|**_scprintf**, **_scprintf_l**|\<stdio.h>|
+|**_scwprintf**, **_scwprintf_l**|\<stdio.h> ou \<wchar.h>|
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 

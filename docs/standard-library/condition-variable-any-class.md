@@ -19,11 +19,11 @@ helpviewer_keywords:
 - std::condition_variable_any::wait_for
 - std::condition_variable_any::wait_until
 ms.openlocfilehash: c38c080b0a8dbd9d4b0b76496aa367fa55892f50
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50598153"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62279041"
 ---
 # <a name="conditionvariableany-class"></a>Classe condition_variable_any
 
@@ -37,13 +37,13 @@ class condition_variable_any;
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
 |[condition_variable_any](#condition_variable_any)|Constrói um objeto `condition_variable_any`.|
 
-### <a name="public-methods"></a>Métodos Públicos
+### <a name="public-methods"></a>Métodos públicos
 
 |Nome|Descrição|
 |----------|-----------------|

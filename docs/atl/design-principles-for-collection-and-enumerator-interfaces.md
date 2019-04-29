@@ -6,11 +6,11 @@ helpviewer_keywords:
 - collection interfaces
 ms.assetid: ea19a39e-6333-41a1-be62-5435c236640e
 ms.openlocfilehash: f40c86d3bc8d9b4e4c752fe6657f6a5a14f19e0c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57269923"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62234820"
 ---
 # <a name="design-principles-for-collection-and-enumerator-interfaces"></a>Princípios de design para Interfaces de enumerador e coleção
 

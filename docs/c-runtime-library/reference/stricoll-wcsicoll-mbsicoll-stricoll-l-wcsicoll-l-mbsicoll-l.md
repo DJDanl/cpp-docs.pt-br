@@ -52,11 +52,11 @@ helpviewer_keywords:
 - ftcsicoll function
 ms.assetid: 8ec93016-5a49-49d2-930f-721566661d82
 ms.openlocfilehash: bd2406751fd2855afd02743c98938e530398e7d1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579653"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62353658"
 ---
 # <a name="stricoll-wcsicoll-mbsicoll-stricolll-wcsicolll-mbsicolll"></a>_stricoll, _wcsicoll, _mbsicoll, _stricoll_l, _wcsicoll_l, _mbsicoll_l
 
@@ -130,15 +130,15 @@ Todas essas funções validam seus parâmetros. Se qualquer um dos *string1* ou 
 
 |Rotina TCHAR.H|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**tcsicoll**|**_stricoll**|**_mbsicoll**|**_wcsicoll**|
+|**_tcsicoll**|**_stricoll**|**_mbsicoll**|**_wcsicoll**|
 
 ## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|
-|**stricoll**, **stricoll_l**|\<string.h>|
-|**wcsicoll**, **_wcsicoll_l**|\<wchar.h>, \<string.h>|
-|**mbsicoll**, **mbsicoll_l**|\<mbstring.h>|
+|**_stricoll**, **_stricoll_l**|\<string.h>|
+|**_wcsicoll**, **_wcsicoll_l**|\<wchar.h>, \<string.h>|
+|**_mbsicoll**, **_mbsicoll_l**|\<mbstring.h>|
 
 Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 

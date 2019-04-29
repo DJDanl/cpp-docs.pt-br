@@ -9,11 +9,11 @@ helpviewer_keywords:
 - /QIfist compiler option [C++]
 ms.assetid: 1afd32a5-f658-4b66-85f4-e0ce4cb955bd
 ms.openlocfilehash: 7af88c91793688d23cf35177ae7a5250b04832a8
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816588"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62319272"
 ---
 # <a name="qifist-suppress-ftol"></a>/QIfist (suprimir _ftol)
 
@@ -67,4 +67,4 @@ O **/QIfist** opção foi preterida a partir do Visual Studio 2005. O compilador
 
 [Opções /Q (operações de nível baixo)](q-options-low-level-operations.md)<br/>
 [Opções do compilador MSVC](compiler-options.md)<br/>
-[Sintaxe de linha de comando do compilador MSVC](compiler-command-line-syntax.md)
+[Sintaxe da linha de comando do compilador MSVC](compiler-command-line-syntax.md)

@@ -26,11 +26,11 @@ helpviewer_keywords:
 - _fcvt_s function
 ms.assetid: 48671197-1d29-4c2b-a5d8-d2368f5f68a1
 ms.openlocfilehash: 51ff3c675f1f53aee9beab629b17193164a2e7eb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50536835"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62334860"
 ---
 # <a name="fcvts"></a>_fcvt_s
 
@@ -118,7 +118,7 @@ A versão de depuração dessa função preenche primeiro o buffer com 0xFD. Par
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-**Bibliotecas:** todas as versões dos [Recursos da Biblioteca CRT](../../c-runtime-library/crt-library-features.md).
+**Bibliotecas:** Todas as versões dos [recursos da biblioteca CRT](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Exemplo
 

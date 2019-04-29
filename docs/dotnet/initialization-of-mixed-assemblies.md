@@ -11,15 +11,15 @@ helpviewer_keywords:
 - mixed assemblies [C++], initilizing
 ms.assetid: bfab7d9e-f323-4404-bcb8-712b15f831eb
 ms.openlocfilehash: 1f4ea7f5cfc6e99390c93ba9c2beadc46fce8584
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50665004"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62339033"
 ---
 # <a name="initialization-of-mixed-assemblies"></a>Inicialização de assemblies mistos
 
-Os desenvolvedores do Windows sempre devem ter cautela ao bloqueio do carregador durante a execução de código durante `DllMain`. No entanto, há algumas considerações adicionais que entram em jogo ao lidar com C + + c++ /CLI assemblies de modo misto do clr.
+Os desenvolvedores do Windows sempre devem ter cautela ao bloqueio do carregador durante a execução de código durante `DllMain`. No entanto, há algumas considerações adicionais que entram em jogo ao lidar com C++/clr assemblies de modo misto.
 
 Código dentro do [DllMain](/windows/desktop/Dlls/dllmain) não deve acessar o CLR. Isso significa que `DllMain` não deve fazer nenhuma chamada para funções gerenciadas, direta ou indiretamente; nenhum código gerenciado deve ser declarado ou implementado no `DllMain`; e nenhuma coleta de lixo ou o carregamento da biblioteca automática deve ocorrer dentro de `DllMain` .
 

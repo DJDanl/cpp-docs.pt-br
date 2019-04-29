@@ -3,11 +3,11 @@ title: Atributos em C++
 ms.date: 06/01/2018
 ms.assetid: 748340d9-8abf-4940-b0a0-91b6156a3ff8
 ms.openlocfilehash: 81de2816c208d5ddc879f04d70912c3dddcd7832
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694108"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62284741"
 ---
 # <a name="attributes-in-c"></a>Atributos em C++
 
@@ -15,7 +15,7 @@ O padrão C++ define um conjunto de atributos e também permite que fornecedores
 
 Em alguns casos, os atributos padrão se sobrepõem com parâmetros específicos do compilador declspec. No Visual C++, você pode usar o `[[deprecated]]` atributo em vez de usar `declspec(deprecated)` e o atributo será reconhecido pelo compilador qualquer compatível com. Para todos os outros parâmetros de declspec como dllimport e dllexport, há que ainda não há equivalente do atributo para que você deve continuar a usar a sintaxe de declspec. Atributos não afetam o sistema de tipos, e não alterar o significado de um programa. Compiladores ignoram os valores de atributo que eles não reconhecem.
 
-**Visual Studio 2017 versão 15.3 e posterior** (disponível com [/std: c + + 17](../build/reference/std-specify-language-standard-version.md)): no escopo de uma lista de atributos, você pode especificar o namespace para todos os nomes com um único **usando** Introdutor:
+**Visual Studio 2017 versão 15.3 e posterior** (disponível com [/std: c + + 17](../build/reference/std-specify-language-standard-version.md)): No escopo de uma lista de atributos, você pode especificar o namespace para todos os nomes com um único **usando** Introdutor:
 
 ```cpp
 void g() {
@@ -77,10 +77,10 @@ Atributos que representam uma alternativa padronizada para extensões específic
 
   O exemplo gera esses avisos:
 
-  - 26494 (tipo de regra 5: sempre inicialize um objeto.)
+  - 26494 (tipo de regra 5: Sempre inicialize um objeto).
 
-  - 26485 (limites a regra 3: sem matriz para ponteiro de decaimento.)
+  - 26485 (3 de regras de limites: Sem matriz para ponteiro de decaimento.)
 
-  - 26481 (limites regra 1: não use aritmética de ponteiro. Usar o span em vez disso.)
+  - 26481 (limites regra 1: Não use aritmética de ponteiro. Usar o span em vez disso.)
 
   Os dois primeiros avisos são acionados quando você compilar esse código com a ferramenta de análise de código CppCoreCheck instalado e ativado. Mas o terceiro aviso não dispara devido ao atributo. Você pode suprimir todo o perfil limites escrevendo [[gsl::suppress(bounds)]] sem incluir um número específico de regra. Diretrizes principais do C++ são projetadas para ajudar você a escrever código melhor e mais seguro. O atributo de suprimir torna fácil desativar avisos quando eles não são desejáveis.

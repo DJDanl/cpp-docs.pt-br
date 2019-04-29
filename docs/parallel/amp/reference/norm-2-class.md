@@ -29,11 +29,11 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::norm_2::operator--
 ms.assetid: 80703f9b-61f4-414a-93fd-bc774f7d3393
 ms.openlocfilehash: c48e6dd573e3303307cc8a0247a955aba62d809e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57271171"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62353047"
 ---
 # <a name="norm2-class"></a>Classe norm_2
 
@@ -53,7 +53,7 @@ class norm_2;
 |----------|-----------------|
 |`value_type`||
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|

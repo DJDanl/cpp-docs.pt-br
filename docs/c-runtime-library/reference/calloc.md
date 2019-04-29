@@ -23,11 +23,11 @@ helpviewer_keywords:
 - calloc function
 ms.assetid: 17bb79a1-98cf-4096-90cb-1f9365cd6829
 ms.openlocfilehash: 59aa535136cf32ea5dd68b8917ec969eee41e2ae
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50666967"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62347724"
 ---
 # <a name="calloc"></a>calloc
 
@@ -44,7 +44,7 @@ void *calloc(
 
 ### <a name="parameters"></a>Parâmetros
 
-*número*<br/>
+*number*<br/>
 Número de elementos.
 
 *size*<br/>

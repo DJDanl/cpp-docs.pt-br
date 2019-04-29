@@ -7,11 +7,11 @@ helpviewer_keywords:
 - back_inserter Function
 ms.assetid: 91476338-5548-44b7-bc7e-2150f4fbe31a
 ms.openlocfilehash: 82df6b06389fa9f1c3ab83fa7b1da3bab092c68d
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57750735"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62209436"
 ---
 # <a name="backinserter-function"></a>Função back_inserter
 
@@ -50,4 +50,4 @@ Um iterador.
 
 ## <a name="see-also"></a>Consulte também
 
-[Namespace Collections](../cppcx/windows-foundation-collections-namespace-c-cx.md)
+[Namespace Windows::Foundation::Collections](../cppcx/windows-foundation-collections-namespace-c-cx.md)

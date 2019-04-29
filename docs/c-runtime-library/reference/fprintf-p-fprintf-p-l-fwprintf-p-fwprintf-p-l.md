@@ -42,11 +42,11 @@ helpviewer_keywords:
 - fwprintf_p_l function
 ms.assetid: 46b082e1-45ba-4383-9ee4-97015aa50bc6
 ms.openlocfilehash: db9e9a746193c7bf35913d6792d87aa9ba85fa79
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462771"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62333138"
 ---
 # <a name="fprintfp-fprintfpl-fwprintfp-fwprintfpl"></a>_fprintf_p, _fprintf_p_l, _fwprintf_p, _fwprintf_p_l
 
@@ -81,7 +81,7 @@ int _fwprintf_p_l(
 
 ### <a name="parameters"></a>Parâmetros
 
-*fluxo*<br/>
+*stream*<br/>
 Ponteiro para a estrutura **FILE**.
 
 *format*<br/>
@@ -114,8 +114,8 @@ Assim como as versões não seguras (consulte [fprintf, fprintf_l, fwprintf, fwp
 
 |Rotina Tchar.h|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**ftprintf_p**|**_fprintf_p**|**_fprintf_p**|**_fwprintf_p**|
-|**ftprintf_p_l**|**_fprintf_p_l**|**_fprintf_p_l**|**_fwprintf_p_l**|
+|**_ftprintf_p**|**_fprintf_p**|**_fprintf_p**|**_fwprintf_p**|
+|**_ftprintf_p_l**|**_fprintf_p_l**|**_fprintf_p_l**|**_fwprintf_p_l**|
 
 Para obter mais informações, consulte [Especificações de formato](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
 
@@ -123,8 +123,8 @@ Para obter mais informações, consulte [Especificações de formato](../../c-ru
 
 |Função|Cabeçalho necessário|
 |--------------|---------------------|
-|**fprintf_p**, **fprintf_p_l**|\<stdio.h>|
-|**fwprintf_p**, **fwprintf_p_l**|\<stdio.h> ou \<wchar.h>|
+|**_fprintf_p**, **_fprintf_p_l**|\<stdio.h>|
+|**_fwprintf_p**, **_fwprintf_p_l**|\<stdio.h> ou \<wchar.h>|
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 

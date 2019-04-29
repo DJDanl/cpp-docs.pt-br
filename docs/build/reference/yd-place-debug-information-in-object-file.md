@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Yd compiler option [C++]
 ms.assetid: c5a699fe-65ce-461e-964c-7f5eb2a8320a
 ms.openlocfilehash: e6719226d28088d10da6c4f0e6caf3bdb78bea27
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57820150"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62316165"
 ---
 # <a name="yd-place-debug-information-in-object-file"></a>/Yd (colocar informações de depuração no arquivo de projeto)
 
@@ -84,4 +84,4 @@ Se o cabeçalho pré-compilado não foi compilado com **/Z7**, você ainda pode 
 ## <a name="see-also"></a>Consulte também
 
 [Opções do compilador MSVC](compiler-options.md)<br/>
-[Sintaxe de linha de comando do compilador MSVC](compiler-command-line-syntax.md)
+[Sintaxe da linha de comando do compilador MSVC](compiler-command-line-syntax.md)

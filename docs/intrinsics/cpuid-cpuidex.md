@@ -1,5 +1,5 @@
 ---
-title: CPUID, cpuidex
+title: __cpuid, __cpuidex
 ms.date: 03/22/2018
 f1_keywords:
 - __cpuid_cpp
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - cpuid intrinsic
 ms.assetid: f8c344d3-91bf-405f-8622-cb0e337a6bdc
 ms.openlocfilehash: 30b66c78c6c3477c4da634901058d77d0e362101
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50494531"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62349076"
 ---
-# <a name="cpuid-cpuidex"></a>CPUID, cpuidex
+# <a name="cpuid-cpuidex"></a>__cpuid, __cpuidex
 
 **Seção específica da Microsoft**
 
@@ -65,7 +65,7 @@ O intrínseco `__cpuid` limpa o registro do ECX antes de chamar a instrução `c
 
 Para obter mais informações sobre parâmetros específicos a usar e os valores retornados pelos intrínsecos em processadores Intel, consulte a documentação para o `cpuid` instrução no [Intel 64 e IA-32 Manual de desenvolvedores de Software de arquiteturas Volume 2: Referência do conjunto de instruções](http://go.microsoft.com/fwlink/p/?LinkID=510021) e [referência de programação de extensões do conjunto de instruções de arquitetura](http://go.microsoft.com/fwlink/p/?LinkID=506627). Documentação da Intel usa os termos "folha" e "subfolha" para o *function_id* e *subfunction_id* parâmetros passados no EAX e no ECX.
 
-Para obter mais informações sobre parâmetros específicos a usar e os valores retornados pelos intrínsecos em processadores AMD, consulte a documentação para o `cpuid` instrução no Volume de Manual 3 do programador da arquitetura AMD64: uso geral e do sistema Instruções e nos guias de revisão para famílias de processador específico. Para obter links para esses documentos e outras informações, consulte o AMD [documentos ISA, guias do desenvolvedor e manuais](http://go.microsoft.com/fwlink/p/?LinkId=510023) página. Documentação do AMD usa os termos "número de função" e "número de subfunção" para o *function_id* e *subfunction_id* parâmetros passados no EAX e no ECX.
+Para obter mais informações sobre parâmetros específicos a usar e os valores retornados pelos intrínsecos em processadores AMD, consulte a documentação para o `cpuid` instrução no Volume de Manual 3 do programador da arquitetura AMD64: Uso geral e instruções do sistema e nos guias de revisão para famílias de processador específico. Para obter links para esses documentos e outras informações, consulte o AMD [documentos ISA, guias do desenvolvedor e manuais](http://go.microsoft.com/fwlink/p/?LinkId=510023) página. Documentação do AMD usa os termos "número de função" e "número de subfunção" para o *function_id* e *subfunction_id* parâmetros passados no EAX e no ECX.
 
 Quando o *function_id* argumento é 0, o *cpuInfo*[0] retorna o mais alto disponível não estendido *function_id* valor suportado pelo processador. O fabricante do processador é codificado no *cpuInfo*[1] *cpuInfo*[2], e *cpuInfo*[3].
 

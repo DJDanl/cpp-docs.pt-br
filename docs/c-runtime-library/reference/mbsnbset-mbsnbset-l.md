@@ -33,11 +33,11 @@ helpviewer_keywords:
 - mbsnbset function
 ms.assetid: 8e46ef75-9a56-42d2-a522-a08450c67c19
 ms.openlocfilehash: 4c0f053cde32d71e4864c442b761606bb56c8829
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50484611"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62331279"
 ---
 # <a name="mbsnbset-mbsnbsetl"></a>_mbsnbset, _mbsnbset_l
 
@@ -96,8 +96,8 @@ O valor de saída é afetado pela configuração da categoria **LC_CTYPE** da lo
 
 |Rotina Tchar.h|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**tcsnset**|**_strnset**|**_mbsnbset**|**_wcsnset**|
-|**tcsnset_l**|**_strnset_l**|**_mbsnbset_l**|**_wcsnset_l**|
+|**_tcsnset**|**_strnset**|**_mbsnbset**|**_wcsnset**|
+|**_tcsnset_l**|**_strnset_l**|**_mbsnbset_l**|**_wcsnset_l**|
 
 ## <a name="requirements"></a>Requisitos
 

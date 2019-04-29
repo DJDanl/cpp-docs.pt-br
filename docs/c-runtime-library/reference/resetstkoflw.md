@@ -25,11 +25,11 @@ helpviewer_keywords:
 - _resetstkoflw function
 ms.assetid: 319529cd-4306-4d22-810b-2063f3ad9e14
 ms.openlocfilehash: ad8c9b470c33a4c84f46ac7758d368917e7938e0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50480542"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62357532"
 ---
 # <a name="resetstkoflw"></a>_resetstkoflw
 
@@ -88,7 +88,7 @@ Chame **resetstkoflw** para restaurar a página de proteção sempre que a recup
 
 Nesses pontos, a pilha ainda não está suficientemente organizada.
 
-Exceções de estouro de pilha são geradas como exceções estruturadas, não exceções C++, portanto **resetstkoflw** não é útil em um comum **catch** bloquear, pois ele não vai capturar uma exceção de estouro de pilha. No entanto, se [_set_se_translator](set-se-translator.md) for usado para implementar um conversor de exceção estruturada que gera exceções C++ (como no segundo exemplo), uma exceção de excedente de pilha resulta em uma exceção C++ que pode ser manipulada por um bloco catch de C++.
+Exceções de estouro de pilha são geradas como exceções estruturadas, não C++ exceções, portanto **resetstkoflw** não é útil em um comum **catch** bloquear, pois ele não irá capturar um estouro de pilha exceção. No entanto, se [_set_se_translator](set-se-translator.md) for usado para implementar um conversor de exceção estruturada que gera exceções C++ (como no segundo exemplo), uma exceção de excedente de pilha resulta em uma exceção C++ que pode ser manipulada por um bloco catch de C++.
 
 Não é seguro chamar **_resetstkoflw** em um bloco catch de C++ que é alcançado de uma exceção gerada pela função do conversor de exceção estruturada. Nesse caso, o espaço de pilha não é liberado e o ponteiro de pilha não é redefinido até estar fora do bloco catch, embora os destruidores tenham sido chamados para todos os objetos destrutíveis antes do bloco catch. Essa função não deve ser chamada até o espaço de pilha ser liberado e o ponteiro de pilha ser redefinido. Portanto, ele deve ser chamado somente depois de sair do bloco catch. Como o menor espaço na pilha possível deve ser usado no bloco catch devido ao excedente de pilha que ocorre no bloco catch que está tentando se recuperar de um excedente de pilha anterior não é recuperável e pode fazer com que o programa pare de responder enquanto o excedente no bloco catch dispara uma exceção que é em si manipulada pelo mesmo bloco catch.
 
@@ -104,7 +104,7 @@ Manipulação de exceção estruturada não irá capturar uma **STATUS_STACK_OVE
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-**Bibliotecas:** todas as versões dos [Recursos da Biblioteca CRT](../../c-runtime-library/crt-library-features.md).
+**Bibliotecas:** Todas as versões dos [recursos da biblioteca CRT](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Exemplo
 
@@ -212,7 +212,7 @@ resetting stack overflow
 
 ### <a name="description"></a>Descrição
 
-O exemplo a seguir mostra o uso recomendado de **resetstkoflw** em um programa em que exceções estruturadas são convertidas em exceções do C++.
+O exemplo a seguir mostra o uso recomendado de **resetstkoflw** em um programa em que exceções estruturadas são convertidas em C++ exceções.
 
 ### <a name="code"></a>Código
 

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - stream sockets [MFC]
 ms.assetid: 43ce76f5-aad3-4247-b8a6-16cc7d012796
 ms.openlocfilehash: 0f9fd339fdbdfee9381ea693568f40473c2397e9
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57265542"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62296508"
 ---
 # <a name="windows-sockets-sequence-of-operations"></a>Windows Sockets: Sequência de operações
 
@@ -33,8 +33,8 @@ Até o ponto de construir um `CSocketFile` do objeto, a sequência a seguir é p
 ||`// seek a connection`<br /><br /> `sockClient.Connect(strAddr, nPort);`3,4|
 |`// construct a new, empty socket`<br /><br /> `CSocket sockRecv;`<br /><br /> `// accept connection`<br /><br /> `sockSrvr.Accept( sockRecv );` 5||
 |`// construct file object`<br /><br /> `CSocketFile file(&sockRecv);`|`// construct file object`<br /><br /> `CSocketFile file(&sockClient);`|
-|`// construct an archive`<br /><br /> `CArchive arIn(&file, CArchive::load);`<br /><br /> -ou-<br /><br /> `CArchive arOut(&file, CArchive::store);`<br /><br /> - ou ambos-|`// construct an archive`<br /><br /> `CArchive arIn(&file, CArchive::load);`<br /><br /> -ou-<br /><br /> `CArchive arOut(&file, CArchive::store);`<br /><br /> - ou ambos-|
-|`// use the archive to pass data:`<br /><br /> `arIn >> dwValue;`<br /><br /> -ou-<br /><br /> `arOut << dwValue;`6|`// use the archive to pass data:`<br /><br /> `arIn >> dwValue;`<br /><br /> -ou-<br /><br /> `arOut << dwValue;`6|
+|`// construct an archive`<br /><br /> `CArchive arIn(&file, CArchive::load);`<br /><br /> - ou -<br /><br /> `CArchive arOut(&file, CArchive::store);`<br /><br /> - ou ambos-|`// construct an archive`<br /><br /> `CArchive arIn(&file, CArchive::load);`<br /><br /> - ou -<br /><br /> `CArchive arOut(&file, CArchive::store);`<br /><br /> - ou ambos-|
+|`// use the archive to pass data:`<br /><br /> `arIn >> dwValue;`<br /><br /> - ou -<br /><br /> `arOut << dwValue;`6|`// use the archive to pass data:`<br /><br /> `arIn >> dwValue;`<br /><br /> - ou -<br /><br /> `arOut << dwValue;`6|
 
 1. Em que *nPort* é um número de porta. Consulte [Windows Sockets: Portas e endereços de soquete](../mfc/windows-sockets-ports-and-socket-addresses.md) para obter detalhes sobre as portas.
 
@@ -56,15 +56,15 @@ A sequência de chamadas mostrada na tabela anterior é para um soquete de fluxo
 
 Para obter mais informações, consulte:
 
-- [Windows Sockets: Usando soquetes com arquivos mortos](../mfc/windows-sockets-using-sockets-with-archives.md)
+- [Windows Sockets: usar soquetes com arquivos mortos](../mfc/windows-sockets-using-sockets-with-archives.md)
 
-- [Windows Sockets: Usando classe CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
+- [Windows Sockets: usar a classe CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
 
-- [Windows Sockets: Portas e endereços de soquete](../mfc/windows-sockets-ports-and-socket-addresses.md)
+- [Windows Sockets: portas e endereços de soquete](../mfc/windows-sockets-ports-and-socket-addresses.md)
 
-- [Windows Sockets: Stream Sockets](../mfc/windows-sockets-stream-sockets.md)
+- [Windows Sockets: soquetes de fluxo](../mfc/windows-sockets-stream-sockets.md)
 
-- [Windows Sockets: Soquetes de datagrama](../mfc/windows-sockets-datagram-sockets.md)
+- [Windows Sockets: soquetes de datagrama](../mfc/windows-sockets-datagram-sockets.md)
 
 ## <a name="see-also"></a>Consulte também
 

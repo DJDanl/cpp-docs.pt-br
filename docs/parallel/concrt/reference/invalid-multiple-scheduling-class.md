@@ -9,11 +9,11 @@ helpviewer_keywords:
 - invalid_multiple_scheduling class
 ms.assetid: e9a47cb7-a778-4df7-92b0-3752119fd4c7
 ms.openlocfilehash: 7c8ce0aefc12097a71e79933d34a116997c8105f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57276351"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62252749"
 ---
 # <a name="invalidmultiplescheduling-class"></a>Classe invalid_multiple_scheduling
 
@@ -27,7 +27,7 @@ class invalid_multiple_scheduling : public std::exception;
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|

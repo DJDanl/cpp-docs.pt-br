@@ -14,11 +14,11 @@ helpviewer_keywords:
 - std::make_tuple [C++]
 - std::tie [C++]
 ms.openlocfilehash: 93c11a89f7cdfa3949be2d97e401fad199a17d97
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50435524"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62278950"
 ---
 # <a name="lttuplegt-functions"></a>Funções &lt;tuple&gt;
 
@@ -121,7 +121,7 @@ template <class T1, class T2, ..., class TN>
 *TN*<br/>
 O tipo do enésimo parâmetro de função.
 
-*TN*<br/>
+*tN*<br/>
 O valor do enésimo parâmetro de função.
 
 ### <a name="remarks"></a>Comentários

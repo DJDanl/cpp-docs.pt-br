@@ -51,11 +51,11 @@ helpviewer_keywords:
 - _CRTDBG_CHECK_CRT_DF macro
 ms.assetid: b5657ffb-6178-4cbf-9886-1af904ede94c
 ms.openlocfilehash: dcb8e37090e4c15ba849e76ca1cb1cc646a7bcc0
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556797"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62348179"
 ---
 # <a name="crtsetdbgflag"></a>_CrtSetDbgFlag
 
@@ -71,7 +71,7 @@ int _CrtSetDbgFlag(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Novo_sinalizador*<br/>
+*newFlag*<br/>
 Novo estado de **_crtDbgFlag**.
 
 ## <a name="return-value"></a>Valor de retorno
@@ -86,11 +86,11 @@ A tabela a seguir lista os campos de bits de **_crtDbgFlag** e descreve seu comp
 
 |Campo de bits|Padrão|Descrição|
 |---------------|-------------|-----------------|
-|**_CRTDBG_ALLOC_MEM_DF**|ON|ON: Habilite alocações do heap de depuração e uso de identificadores de tipo de bloco de memória, como **client_block**. OFF: adicione novas alocações à lista vinculada do heap, mas defina o tipo de bloco como **_IGNORE_BLOCK**.<br /><br /> Também pode ser combinado com qualquer uma das macros de verificação da frequência de heap.|
-|**_CRTDBG_CHECK_ALWAYS_DF**|OFF|ON: chame [_CrtCheckMemory](crtcheckmemory.md) em qualquer solicitação de alocação e desalocação. OFF: **crtcheckmemory** deve ser chamado explicitamente.<br /><br /> As macros de verificação da frequência de heap não entram em vigor quando esse sinalizador está definido.|
-|**CRTDBG_CHECK_CRT_DF**|OFF|ON: Inclua **crt_block** operações de diferença de tipos em estado de memória e de detecção de vazamento. OFF: a memória usada internamente pela biblioteca em tempo de execução é ignorada por essas operações.<br /><br /> Também pode ser combinado com qualquer uma das macros de verificação da frequência de heap.|
-|**_CRTDBG_DELAY_FREE_MEM_DF**|OFF|ON: mantenha os blocos de memória liberados na lista vinculada do heap, atribua-os ao tipo **_FREE_BLOCK** e preencha-os com o valor de byte 0xDD. OFF: não mantenha blocos liberados na lista vinculada do heap.<br /><br /> Também pode ser combinado com qualquer uma das macros de verificação da frequência de heap.|
-|**CRTDBG_LEAK_CHECK_DF**|OFF|ON: realize a verificação automática de perda na saída do programa por meio de uma chamada a [_CrtDumpMemoryLeaks](crtdumpmemoryleaks.md) e, caso o aplicativo não libere toda a memória alocada, gere um relatório de erros. OFF: não realize a verificação automática de perda na saída do programa.<br /><br /> Também pode ser combinado com qualquer uma das macros de verificação da frequência de heap.|
+|**_CRTDBG_ALLOC_MEM_DF**|ON|ON: Habilite alocações do heap de depuração e uso de identificadores de tipo de bloco de memória, como **client_block**. OFF: Adicione novas alocações à lista vinculada do heap, mas definir tipo de bloco como **ignore_block**.<br /><br /> Também pode ser combinado com qualquer uma das macros de verificação da frequência de heap.|
+|**_CRTDBG_CHECK_ALWAYS_DF**|OFF|ON: Chame [crtcheckmemory](crtcheckmemory.md) em qualquer solicitação de alocação e desalocação. OFF: **crtcheckmemory** deve ser chamado explicitamente.<br /><br /> As macros de verificação da frequência de heap não entram em vigor quando esse sinalizador está definido.|
+|**_CRTDBG_CHECK_CRT_DF**|OFF|ON: Incluir **crt_block** operações de diferença de tipos em estado de memória e de detecção de vazamento. OFF: A memória usada internamente pela biblioteca em tempo de execução é ignorada por essas operações.<br /><br /> Também pode ser combinado com qualquer uma das macros de verificação da frequência de heap.|
+|**_CRTDBG_DELAY_FREE_MEM_DF**|OFF|ON: Mantenha os blocos de memória liberados na lista vinculada do heap, atribua-os **free_block** digite e preenchê-los com o valor de byte 0xDD. OFF: Não mantenha blocos liberados na lista vinculada do heap.<br /><br /> Também pode ser combinado com qualquer uma das macros de verificação da frequência de heap.|
+|**_CRTDBG_LEAK_CHECK_DF**|OFF|ON: Executar verificação na saída do programa por meio de uma chamada para automática de perda [crtdumpmemoryleaks](crtdumpmemoryleaks.md) e gerar um relatório de erros se o aplicativo não libere toda a memória alocada. OFF: Não realize a verificação automática de perda na saída do programa.<br /><br /> Também pode ser combinado com qualquer uma das macros de verificação da frequência de heap.|
 
 **Macros de frequência da verificação de heap**
 

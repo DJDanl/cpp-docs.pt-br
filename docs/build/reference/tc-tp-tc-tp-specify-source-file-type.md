@@ -15,11 +15,11 @@ helpviewer_keywords:
 - /Tp compiler option [C++]
 - -Tp compiler option [C++]
 ms.openlocfilehash: f7ee51c858c9f90440cf0c2b21799ef7473cf6da
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57813858"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62317439"
 ---
 # <a name="tc-tp-tc-tp-specify-source-file-type"></a>/Tc, /Tp, /TC, /TP (especificar tipo de arquivo de origem)
 
@@ -70,4 +70,4 @@ Essa linha de comando CL Especifica que TEST1.c, TEST2.cxx, TEST3.huh e TEST4.o 
 ## <a name="see-also"></a>Consulte também
 
 [Opções do compilador MSVC](compiler-options.md)<br/>
-[Sintaxe de linha de comando do compilador MSVC](compiler-command-line-syntax.md)
+[Sintaxe da linha de comando do compilador MSVC](compiler-command-line-syntax.md)

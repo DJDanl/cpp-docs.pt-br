@@ -7,11 +7,11 @@ f1_keywords:
 - AMP_SHORT_VECTORS/Concurrency::graphics::norm Constructor
 ms.assetid: 73002f3d-c25e-4119-bcd3-4c46c9b6abf1
 ms.openlocfilehash: 56f879ef2fc0d3010ab4f64fedaf2570dac565d1
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57272419"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62351557"
 ---
 # <a name="norm-class"></a>Classe norm
 
@@ -25,7 +25,7 @@ class norm;
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|

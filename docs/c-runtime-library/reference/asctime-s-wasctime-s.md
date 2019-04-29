@@ -31,11 +31,11 @@ helpviewer_keywords:
 - asctime_s function
 ms.assetid: 17ad9b2b-a459-465d-976a-42822897688a
 ms.openlocfilehash: 350d8c7b1dcf61272a3cfee884dff8a63b455f1c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471949"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62349469"
 ---
 # <a name="asctimes-wasctimes"></a>asctime_s, _wasctime_s
 
@@ -120,7 +120,7 @@ O resultado de cadeia de caracteres produzido por **asctime_s** contém exatamen
 
 |Rotina TCHAR.H|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**tasctime_s**|**asctime_s**|**asctime_s**|**_wasctime_s**|
+|**_tasctime_s**|**asctime_s**|**asctime_s**|**_wasctime_s**|
 
 No C++, o uso dessas funções é simplificado por sobrecargas de modelo. As sobrecargas podem inferir automaticamente o tamanho do buffer, eliminando a necessidade de especificar um argumento de tamanho. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../../c-runtime-library/secure-template-overloads.md).
 

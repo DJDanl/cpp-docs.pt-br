@@ -41,11 +41,11 @@ helpviewer_keywords:
 - _wtempnam function
 ms.assetid: 3ce75f0f-5e30-42a6-9791-8d7cbfe70fca
 ms.openlocfilehash: 29fa8fc836b1b52bcf66247b3f6aaba47b8c2eaa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506785"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62284859"
 ---
 # <a name="tempnam-wtempnam-tmpnam-wtmpnam"></a>_tempnam, _wtempnam, tmpnam, _wtmpnam
 
@@ -112,7 +112,7 @@ Se **Debug** e **crtdbg_map_alloc** estiverem definidos, **tempnam** e **wtempna
 
 |Rotina TCHAR.H|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**ttmpnam**|**tmpnam**|**tmpnam**|**_wtmpnam**|
+|**_ttmpnam**|**tmpnam**|**tmpnam**|**_wtmpnam**|
 |**_ttempnam**|**_tempnam**|**_tempnam**|**_wtempnam**|
 
 ## <a name="requirements"></a>Requisitos
@@ -120,7 +120,7 @@ Se **Debug** e **crtdbg_map_alloc** estiverem definidos, **tempnam** e **wtempna
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|
 |**_tempnam**|\<stdio.h>|
-|**wtempnam**, **wtmpnam**|\<stdio.h> ou \<wchar.h>|
+|**_wtempnam**, **_wtmpnam**|\<stdio.h> ou \<wchar.h>|
 |**tmpnam**|\<stdio.h>|
 
 Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).

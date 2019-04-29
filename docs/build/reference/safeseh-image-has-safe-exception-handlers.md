@@ -9,11 +9,11 @@ helpviewer_keywords:
 - SAFESEH linker option
 ms.assetid: 7722ff99-b833-4c65-a855-aaca902ffcb7
 ms.openlocfilehash: 62784933cbecd4f312c52ae98cab7d232b893f35
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57822334"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62318635"
 ---
 # <a name="safeseh-image-has-safe-exception-handlers"></a>/SAFESEH (a imagem tem manipuladores de exceção seguros)
 
@@ -113,4 +113,4 @@ const IMAGE_LOAD_CONFIG_DIRECTORY32_2 _load_config_used = {
 ## <a name="see-also"></a>Consulte também
 
 [Referência de vinculador MSVC](linking.md)<br/>
-[Opções do vinculador MSVC](linker-options.md)
+[Opções de vinculador MSVC](linker-options.md)

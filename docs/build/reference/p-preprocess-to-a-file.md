@@ -13,11 +13,11 @@ helpviewer_keywords:
 - preprocessing output files
 ms.assetid: 123ee54f-8219-4a6f-9876-4227023d83fc
 ms.openlocfilehash: 5e6302d90647bce7e37c47a619e814cab300aaee
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57813754"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62319974"
 ---
 # <a name="p-preprocess-to-a-file"></a>/P (pré-processar em um arquivo)
 
@@ -62,5 +62,5 @@ CL /P /C ADD.C
 ## <a name="see-also"></a>Consulte também
 
 [Opções do compilador MSVC](compiler-options.md)<br/>
-[Sintaxe de linha de comando do compilador MSVC](compiler-command-line-syntax.md)<br/>
+[Sintaxe da linha de comando do compilador MSVC](compiler-command-line-syntax.md)<br/>
 [/Fi (pré-processar nome do arquivo de saída)](fi-preprocess-output-file-name.md)

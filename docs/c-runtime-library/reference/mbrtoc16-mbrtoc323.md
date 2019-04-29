@@ -27,11 +27,11 @@ helpviewer_keywords:
 - mbrtoc32 function
 ms.assetid: 099ade4d-56f7-4e61-8b45-493f1d7a64bd
 ms.openlocfilehash: f8573ac321772d19141be0228891b290ba48b217
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51520136"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62331578"
 ---
 # <a name="mbrtoc16-mbrtoc32"></a>mbrtoc16, mbrtoc32
 
@@ -57,7 +57,7 @@ size_t mbrtoc32(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Destino*<br/>
+*destination*<br/>
 Ponteiro para o **char16_t** ou **char32_t** equivalente do caractere multibyte a ser convertido. Se for null, a função não armazenará um valor.
 
 *source*<br/>

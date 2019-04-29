@@ -87,11 +87,11 @@ helpviewer_keywords:
 - std::set [C++], value_comp
 ms.assetid: 8991f9aa-5509-4440-adc1-371512d32018
 ms.openlocfilehash: 8f4ad77c28b4643a979d7c3fb22e44e4aebd43dd
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694732"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62295481"
 ---
 # <a name="set-class"></a>Classe set
 
@@ -116,7 +116,7 @@ O tipo que fornece um objeto de função que pode comparar dois valores de eleme
 
 No C++ 14, você pode habilitar a pesquisa heterogênea ao especificar o predicado `std::less<>` ou o `std::greater<>`, que não tem nenhum parâmetro de tipo. Para obter mais informações, consulte [Pesquisa heterogênea em contêineres associativos](../standard-library/stl-containers.md#sequence_containers)
 
-*Alocador*<br/>
+*Allocator*<br/>
 O tipo que representa o objeto de alocador armazenado que encapsula detalhes sobre a alocação e a desalocação do conjunto da memória. Esse argumento é opcional e o valor padrão é `allocator<Key>`.
 
 ## <a name="remarks"></a>Comentários
@@ -1008,10 +1008,10 @@ size_type erase(
 *Where*<br/>
 A posição do elemento a ser removido.
 
-*Primeiro*<br/>
+*First*<br/>
 A posição do primeiro elemento a ser removido.
 
-*último*<br/>
+*Last*<br/>
 A posição logo após o último elemento a ser removido.
 
 *Chave*<br/>
@@ -1308,8 +1308,8 @@ IList);
 |*Val*|O valor de um elemento a ser inserido no conjunto, a menos que ele já contenha um elemento cujo valor seja ordenado de modo equivalente.|
 |*Where*|O local a partir do qual se começa a procurar pelo ponto de inserção correto. (Se esse ponto preceder imediatamente *onde*, inserção poderá ocorrer em tempo constante amortizado, em vez de no tempo logarítmico.)|
 |*ValTy*|Parâmetro de modelo que especifica o tipo de argumento que o conjunto pode usar para construir um elemento de [value_type](../standard-library/map-class.md#value_type)e perfect-forwards *Val* como um argumento.|
-|*Primeiro*|A posição do primeiro elemento a ser copiado.|
-|*último*|A posição imediatamente após o último elemento a ser copiado.|
+|*First*|A posição do primeiro elemento a ser copiado.|
+|*Last*|A posição imediatamente após o último elemento a ser copiado.|
 |*InputIterator*|Argumento da função de modelo que atende aos requisitos de um [iterador de entrada](../standard-library/input-iterator-tag-struct.md) que aponta para elementos de um tipo que pode ser usado para construir objetos [value_type](../standard-library/map-class.md#value_type).|
 |*IList*|O [initializer_list](../standard-library/initializer-list.md) do qual os elementos serão copiados.|
 
@@ -1325,7 +1325,7 @@ Nenhum iterador, ponteiro ou referência é invalidado por essa função.
 
 Durante a inserção de apenas um elemento, se uma exceção for lançada, o estado do contêiner não será modificado. Durante a inserção de vários elementos, se uma exceção for lançada, o contêiner será deixado em um estado não especificado, mas válido.
 
-Para acessar o componente do iterador de um `pair` `pr` que é retornado pelas funções do membro de elemento único, consulte `pr.first`; para desreferenciar o iterador dentro do par retornado, use `*pr.first`, que oferece um elemento. Para acessar o **bool** componente, use `pr.second`. Para obter um exemplo, consulte o código de amostra mais adiante neste artigo.
+Para acessar o componente do iterador de um `pair` `pr` que é retornado pelas funções membro de elemento único, consulte `pr.first`; para desreferenciar o iterador dentro do par retornado, use `*pr.first`, dando a você um elemento. Para acessar o **bool** componente, use `pr.second`. Para obter um exemplo, consulte o código de amostra mais adiante neste artigo.
 
 O [value_type](../standard-library/map-class.md#value_type) de um contêiner é um typedef que pertence ao contêiner e, para o conjunto, `set<V>::value_type` é do tipo `const V`.
 
@@ -1992,8 +1992,8 @@ set(
 |*Al*|A classe de alocador de armazenamento a ser usado neste objeto set, cujo padrão é `Allocator`.|
 |*Comp*|A função de comparação do tipo `const Traits` usada para ordenar os elementos no set, cujo padrão é `Compare`.|
 |*Rght*|O set do qual o conjunto criado é uma cópia.|
-|*Primeiro*|A posição do primeiro elemento no intervalo de elementos a serem copiados.|
-|*último*|A posição do primeiro elemento além do intervalo de elementos a serem copiados.|
+|*First*|A posição do primeiro elemento no intervalo de elementos a serem copiados.|
+|*Last*|A posição do primeiro elemento além do intervalo de elementos a serem copiados.|
 |*IList*|O initializer_list do qual copiar os elementos.|
 
 ### <a name="remarks"></a>Comentários

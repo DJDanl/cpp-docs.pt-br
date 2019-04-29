@@ -6,11 +6,11 @@ helpviewer_keywords:
 - command IDs
 ms.assetid: e0171a2b-45b9-41fa-945d-ec2f7602ded0
 ms.openlocfilehash: 76071105e72f1ca4a851b9cdb76d5f1a96f44edb
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57274564"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62219882"
 ---
 # <a name="command-ids"></a>IDs de comando
 

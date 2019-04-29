@@ -12,11 +12,11 @@ helpviewer_keywords:
 - Zc compiler options (C++)
 ms.assetid: 20ff0101-9677-4d83-8c7b-8ec9ca49f04f
 ms.openlocfilehash: c8c7b4e7246cc3bb1b3a73cde4f6830eb7178dd2
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57813507"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62315983"
 ---
 # <a name="zcthrowingnew-assume-operator-new-throws"></a>/ZC: throwingnew (pressupor novos acionamentos de operador)
 
@@ -55,7 +55,7 @@ Para obter mais informações sobre problemas de conformidade no Visual C++, con
 ## <a name="see-also"></a>Consulte também
 
 [Opções do compilador MSVC](compiler-options.md)<br/>
-[Sintaxe de linha de comando do compilador MSVC](compiler-command-line-syntax.md)<br/>
+[Sintaxe da linha de comando do compilador MSVC](compiler-command-line-syntax.md)<br/>
 [/Zc (conformidade)](zc-conformance.md)<br/>
 [noexcept (C++)](../../cpp/noexcept-cpp.md)<br/>
 [Especificações de exceção (lançar) (C++)](../../cpp/exception-specifications-throw-cpp.md)<br/>

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - /validate-charset compiler option
 ms.assetid: 50360fd0-4d32-4a4f-95d0-53d38c12ad4c
 ms.openlocfilehash: 30c818bcb64c2f2ee57c05a4870e7d30afe98cfe
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57810062"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62317075"
 ---
 # <a name="validate-charset-validate-for-compatible-characters"></a>/Validate-charset (validar quanto caracteres compatíveis)
 
@@ -45,7 +45,7 @@ O Visual Studio usa UTF-8 como a codificação de caracteres interno durante a c
 ## <a name="see-also"></a>Consulte também
 
 [Opções do compilador MSVC](compiler-options.md)<br/>
-[Sintaxe de linha de comando do compilador MSVC](compiler-command-line-syntax.md)<br/>
+[Sintaxe da linha de comando do compilador MSVC](compiler-command-line-syntax.md)<br/>
 [/Execution-charset (definir execução de conjunto de caracteres)](execution-charset-set-execution-character-set.md)<br/>
 [/source-charset (definir conjunto de caracteres de origem)](source-charset-set-source-character-set.md)<br/>
 [/utf-8 (definir conjuntos de caracteres de origem e executáveis como UTF-8)](utf-8-set-source-and-executable-character-sets-to-utf-8.md)

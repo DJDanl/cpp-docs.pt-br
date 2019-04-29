@@ -31,11 +31,11 @@ helpviewer_keywords:
 - creall function
 ms.assetid: fa3ac62f-7aa3-4238-a71f-d6b00cd0c7c8
 ms.openlocfilehash: 32fd0898ccac80b74b467dbfe0a136eef139e642
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50604279"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62339715"
 ---
 # <a name="creal-crealf-creall"></a>creal, crealf, creall
 
@@ -65,7 +65,7 @@ A parte real de *z*.
 
 ## <a name="remarks"></a>Comentários
 
-Como C++ permite sobrecargas, é possível chamar sobrecargas de **creal** que utilizam **fcomplex** ou **_Lcomplex** valores e retornar **float** ou **longo duplo** valores. Em um programa do C **creal** sempre usa um **_Dcomplex** valor e retorna um **double** valor.
+Porque C++ permite sobrecargas, é possível chamar sobrecargas de **creal** que utilizam **fcomplex** ou **_Lcomplex** valores e retornar **float**ou **longo duplo** valores. Em um programa do C **creal** sempre usa um **_Dcomplex** valor e retorna um **double** valor.
 
 ## <a name="requirements"></a>Requisitos
 

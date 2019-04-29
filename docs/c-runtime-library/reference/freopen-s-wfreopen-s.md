@@ -30,11 +30,11 @@ helpviewer_keywords:
 - freopen_s function
 ms.assetid: ad25a4da-6ad4-476b-a86d-660b221ca84d
 ms.openlocfilehash: 2cdc16f21882c32933868000c6fd1d66accc74b8
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326506"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62332995"
 ---
 # <a name="freopens-wfreopens"></a>freopen_s, _wfreopen_s
 
@@ -68,7 +68,7 @@ Caminho do novo arquivo.
 *modo*<br/>
 Tipo de acesso permitido.
 
-*fluxo*<br/>
+*stream*<br/>
 Ponteiro para a estrutura **FILE**.
 
 ## <a name="return-value"></a>Valor de retorno
@@ -85,7 +85,7 @@ Se qualquer uma das *pFile*, *caminho*, *modo*, ou *fluxo* são **nulo**, ou se 
 
 |Rotina TCHAR.H|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**tfreopen_s**|**freopen_s**|**freopen_s**|**_wfreopen_s**|
+|**_tfreopen_s**|**freopen_s**|**freopen_s**|**_wfreopen_s**|
 
 **freopen_s** normalmente é usado para redirecionar os arquivos abertos previamente **stdin**, **stdout**, e **stderr** para arquivos especificados pelo usuário. O novo arquivo associado *stream* é aberto com *modo*, que é uma cadeia de caracteres que especifica o tipo de acesso solicitado para o arquivo, da seguinte maneira:
 

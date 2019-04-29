@@ -22,11 +22,11 @@ helpviewer_keywords:
 - feraiseexcept function
 ms.assetid: 87e89151-83c2-4563-9a9a-45666245d437
 ms.openlocfilehash: 581dd4026a20ce7221945c5815af3ae102f132fa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532243"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62334353"
 ---
 # <a name="feraiseexcept"></a>feraiseexcept
 
@@ -42,7 +42,7 @@ int feraiseexcept(
 
 ### <a name="parameters"></a>Parâmetros
 
-*exceções de*<br/>
+*excepts*<br/>
 As exceções de ponto flutuante que serão geradas.
 
 ## <a name="return-value"></a>Valor de retorno
@@ -66,7 +66,7 @@ O *, exceto* argumento pode ser zero, um dos valores de macro de exceção ou bi
 
 Para usar essa função, você deve desligar otimizações de ponto flutuante que poderiam impedir o acesso usando a diretiva `#pragma fenv_access(on)` antes da chamada. Para obter mais informações, consulte [fenv_access](../../preprocessor/fenv-access.md).
 
-**Specific da Microsoft:** as exceções especificadas em *, exceto* são gerados na ordem FE_INVALID, FE_DIVBYZERO, FE_OVERFLOW, FE_UNDERFLOW, FE_INEXACT. No entanto, FE_INEXACT pode ser gerada quando FE_OVERFLOW ou FE_UNDERFLOW for gerado, mesmo se não especificado na *, exceto*. **Fim da seção específica da Microsoft**
+**Específico da Microsoft:** As exceções especificadas em *, exceto* são gerados na ordem FE_INVALID, FE_DIVBYZERO, FE_OVERFLOW, FE_UNDERFLOW, FE_INEXACT. No entanto, FE_INEXACT pode ser gerada quando FE_OVERFLOW ou FE_UNDERFLOW for gerado, mesmo se não especificado na *, exceto*. **Fim da seção específica da Microsoft**
 
 ## <a name="requirements"></a>Requisitos
 

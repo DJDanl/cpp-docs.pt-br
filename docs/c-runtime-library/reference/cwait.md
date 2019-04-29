@@ -23,11 +23,11 @@ helpviewer_keywords:
 - _cwait function
 ms.assetid: d9b596b5-45f4-4e03-9896-3f383cb922b8
 ms.openlocfilehash: f7a49497ac71ec15261e1215bd2bbed2e49f42ab
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50489616"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62288778"
 ---
 # <a name="cwait"></a>_cwait
 
@@ -54,7 +54,7 @@ Ponteiro para um buffer em que o código de resultado do processo especificado s
 *procHandle*<br/>
 O identificador para o processo para aguardar (ou seja, o processo que precisa terminar antes **cwait** pode retornar).
 
-*Ação*<br/>
+*action*<br/>
 NULL: Ignorado por aplicativos de sistema operacional Windows; para outros aplicativos: código de ação para executar em *procHandle*.
 
 ## <a name="return-value"></a>Valor de retorno

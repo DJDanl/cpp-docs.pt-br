@@ -142,11 +142,11 @@ helpviewer_keywords:
 - upper_bound function [STL/CLR]
 ms.assetid: ee2718dc-a98d-40b8-8341-593fe7d2ac15
 ms.openlocfilehash: 6011aad0ef86bc0e633687a6d8e017e9b12771c8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528720"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62350826"
 ---
 # <a name="algorithm-stlclr"></a>algorithm (STL/CLR)
 
@@ -191,9 +191,9 @@ Define as funções de modelo de contêiner STL/CLR que executam algoritmos.
 |[lexicographical_compare (STL/CLR)](#lexicographical_compare)|Compara duas sequências, elemento por elemento, identificando qual sequência é o menor dos dois.|
 |[lower_bound (STL/CLR)](#lower_bound)|Localiza a posição do primeiro elemento em uma sequência ordenada de valores que tem um valor maior que ou igual ao valor especificado.|
 |[make_heap (STL/CLR)](#make_heap)|Converte os elementos de um intervalo especificado em um heap em que o primeiro elemento no heap é o maior.|
-|[Max (STL/CLR)](#max))|Compara dois objetos e retorna o maior dos dois.|
+|[max (STL/CLR)](#max))|Compara dois objetos e retorna o maior dos dois.|
 |[max_element (STL/CLR)](#max_element)|Localiza o maior elemento em uma sequência de valores especificada.|
-|[mesclagem (STL/CLR)](#merge))|Combina todos os elementos de dois intervalos de origem classificados em um intervalo de destino classificado único.|
+|[merge (STL/CLR)](#merge))|Combina todos os elementos de dois intervalos de origem classificados em um intervalo de destino classificado único.|
 |[min (STL/CLR)](#min)|Compara dois objetos e retorna o menor dos dois.|
 |[min_element (STL/CLR)](#min_element)|Localiza o menor elemento em uma sequência de valores especificada.|
 |[mismatch (STL/CLR)](#mismatch)|Compara dois intervalos, elemento por elemento e retorna a primeira posição em que ocorre uma diferença.|
@@ -335,7 +335,7 @@ template<class _InIt, class _Pr> inline
 
 Essa função se comporta da mesma que a função de biblioteca padrão C++ `count_if`. Para obter mais informações, consulte [count_if](../standard-library/algorithm-functions.md#count_if).
 
-## <a name="equal"></a> igual a (STL/CLR)
+## <a name="equal"></a> equal (STL/CLR)
 
 Compara a igualdade ou equivalência de dois intervalos, elemento por elemento, de certo modo especificado por um predicado binário.
 
@@ -372,7 +372,7 @@ template<class _FwdIt, class _Ty, class _Pr> inline
 
 Essa função se comporta da mesma que a função de biblioteca padrão C++ `equal_range`. Para obter mais informações, consulte [equal_range](../standard-library/algorithm-functions.md#equal_range).
 
-## <a name="fill"></a> preenchimento (STL/CLR)
+## <a name="fill"></a> fill (STL/CLR)
 
 Atribui o mesmo novo valor para cada elemento em um intervalo especificado.
 
@@ -402,7 +402,7 @@ template<class _OutIt, class _Diff, class _Ty> inline
 
 Essa função se comporta da mesma que a função de biblioteca padrão C++ `fill_n`. Para obter mais informações, consulte [fill_n](../standard-library/algorithm-functions.md#fill_n).
 
-## <a name="find"></a> Localizar (STL/CLR)
+## <a name="find"></a> find (STL/CLR)
 
 Localiza a posição da primeira ocorrência de um elemento em um intervalo que tem um valor especificado.
 
@@ -485,7 +485,7 @@ template<class _InIt, class _Fn1> inline
 
 Essa função se comporta da mesma que a função de biblioteca padrão C++ `for_each`. Para obter mais informações, consulte [for_each](../standard-library/algorithm-functions.md#for_each).
 
-## <a name="generate"></a> Gerar (STL/CLR)
+## <a name="generate"></a> generate (STL/CLR)
 
 Atribui os valores gerados por um objeto de função a cada elemento em um intervalo.
 
@@ -550,7 +550,7 @@ template<class _BidIt, class _Pr> inline
 
 ### <a name="remarks"></a>Comentários
 
-Essa função se comporta da mesma que a função de biblioteca padrão C++ `inplace_merge` para obter mais informações, consulte [inplace_merge](../standard-library/algorithm-functions.md#inplace_merge).
+Essa função se comporta da mesma como o C++ função de biblioteca padrão `inplace_merge` para obter mais informações, consulte [inplace_merge](../standard-library/algorithm-functions.md#inplace_merge).
 
 ## <a name="iter_swap"></a> iter_swap (STL/CLR)
 
@@ -621,7 +621,7 @@ template<class _RanIt, class _Pr> inline
 
 Essa função se comporta da mesma que a função de biblioteca padrão C++ `make_heap`. Para obter mais informações, consulte [make_heap](../standard-library/algorithm-functions.md#make_heap).
 
-## <a name="max"></a> Max (STL/CLR)
+## <a name="max"></a> max (STL/CLR)
 
 Compara dois objetos e retorna o maior dos dois, em que o critério de ordenação pode ser especificado por um predicado binário.
 
@@ -655,7 +655,7 @@ template<class _FwdIt, class _Pr> inline
 
 Essa função se comporta da mesma que a função de biblioteca padrão C++ `max_element`. Para obter mais informações, consulte [max_element](../standard-library/algorithm-functions.md#max_element).
 
-## <a name="merge"></a> mesclagem (STL/CLR)
+## <a name="merge"></a> merge (STL/CLR)
 
 Combina todos os elementos de dois intervalos classificados de origem em um único intervalo de destino classificado, em que o critério de ordenação pode ser especificado por um predicado binário.
 
@@ -708,7 +708,7 @@ template<class _FwdIt, class _Pr> inline
 
 Essa função se comporta da mesma que a função de biblioteca padrão C++ `min_element`. Para obter mais informações, consulte [min_element](../standard-library/algorithm-functions.md#min_element).
 
-## <a name="mismatch"></a> incompatibilidade de (STL/CLR)
+## <a name="mismatch"></a> mismatch (STL/CLR)
 
 Compara dois intervalos, elemento por elemento, por igualdade ou equivalência de certo modo especificado por um predicado binário e localiza a primeira posição onde ocorre uma diferença.
 
@@ -883,7 +883,7 @@ template<class _RanIt, class _Fn1> inline
 
 Essa função se comporta da mesma que a função de biblioteca padrão C++ `random_shuffle`. Para obter mais informações, consulte [random_shuffle](../standard-library/algorithm-functions.md#random_shuffle).
 
-## <a name="remove"></a> Remover (STL/CLR)
+## <a name="remove"></a> remove (STL/CLR)
 
 Elimina um valor especificado de um determinado intervalo sem afetar a ordem dos elementos restantes e retornando ao fim de um novo intervalo livre do valor especificado.
 
@@ -945,7 +945,7 @@ template<class _FwdIt, class _Pr> inline
 
 Essa função se comporta da mesma que a função de biblioteca padrão C++ `remove_if`. Para obter mais informações, consulte [remove_if](../standard-library/algorithm-functions.md#remove_if).
 
-## <a name="replace"></a> Substituir (STL/CLR)
+## <a name="replace"></a> replace (STL/CLR)
 
 Examina cada elemento em um intervalo e o substitui se ele corresponder a um valor especificado.
 
@@ -1009,7 +1009,7 @@ template<class _FwdIt, class _Pr, class _Ty> inline
 
 Essa função se comporta da mesma que a função de biblioteca padrão C++ `replace_if`. Para obter mais informações, consulte [replace_if](../standard-library/algorithm-functions.md#replace_if).
 
-## <a name="reverse"></a> Inverter (STL/CLR)
+## <a name="reverse"></a> reverse (STL/CLR)
 
 Inverte a ordem dos elementos em um intervalo.
 
@@ -1070,7 +1070,7 @@ template<class _FwdIt, class _OutIt> inline
 
 Essa função se comporta da mesma que a função de biblioteca padrão C++ `rotate_copy`. Para obter mais informações, consulte [rotate_copy](../standard-library/algorithm-functions.md#rotate_copy).
 
-## <a name="search_"></a> pesquisa (STL/CLR)
+## <a name="search_"></a> search (STL/CLR)
 
 Procura a primeira ocorrência de uma sequência em um intervalo de destino cujos elementos são iguais àqueles em uma determinada sequência de elementos ou cujos elementos são equivalentes de certo modo especificado por um predicado binário para os elementos na sequência determinada.
 
@@ -1184,7 +1184,7 @@ template<class _InIt1, class _InIt2, class _OutIt, class _Pr> inline
 
 Essa função se comporta da mesma que a função de biblioteca padrão C++ `set_union`. Para obter mais informações, consulte [set_union](../standard-library/algorithm-functions.md#set_union).
 
-## <a name="sort"></a> Classificar (STL/CLR)
+## <a name="sort"></a> sort (STL/CLR)
 
 Organiza os elementos de um intervalo especificado em ordem não decrescente ou de acordo com um critério de ordenação especificado por um predicado binário.
 
@@ -1300,7 +1300,7 @@ template<class _InIt1, class _InIt2, class _OutIt, class _Fn2> inline
 
 Essa função se comporta da mesma que a função de biblioteca padrão C++ `transform`. Para obter mais informações, consulte [transformar](../standard-library/algorithm-functions.md#transform).
 
-## <a name="unique"></a> exclusivo (STL/CLR)
+## <a name="unique"></a> unique (STL/CLR)
 
 Remove elementos duplicados que são adjacentes um ao outro em um intervalo especificado.
 

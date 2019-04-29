@@ -2,11 +2,11 @@
 title: /Qsafe_fp_loads
 ms.date: 01/24/2018
 ms.openlocfilehash: 57aece79dfab617121371e0489aa80f18e143372
-ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "57819683"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62319324"
 ---
 # <a name="qsafefploads"></a>/Qsafe_fp_loads
 
@@ -42,4 +42,4 @@ Essa opção é substituída por [/fp: except](fp-specify-floating-point-behavio
 
 [Opções /Q (operações de nível baixo)](q-options-low-level-operations.md)<br/>
 [Opções do compilador MSVC](compiler-options.md)<br/>
-[Sintaxe de linha de comando do compilador MSVC](compiler-command-line-syntax.md)
+[Sintaxe da linha de comando do compilador MSVC](compiler-command-line-syntax.md)

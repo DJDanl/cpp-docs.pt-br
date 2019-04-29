@@ -14,11 +14,11 @@ helpviewer_keywords:
 - -volatile compiler option [C++]
 ms.assetid: 9d08fcc6-5bda-44c8-8151-8d8d54f164b8
 ms.openlocfilehash: 02871622242930d7419fda16f4d106fccb2056f0
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57819487"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62316633"
 ---
 # <a name="volatile-volatile-keyword-interpretation"></a>/volatile (Interpretação da palavra-chave volatile)
 
@@ -56,4 +56,4 @@ Não há nenhum `#pragma` equivalente para controlar essa opção.
 
 [volatile](../../cpp/volatile-cpp.md)<br/>
 [Opções do compilador MSVC](compiler-options.md)<br/>
-[Sintaxe de linha de comando do compilador MSVC](compiler-command-line-syntax.md)
+[Sintaxe da linha de comando do compilador MSVC](compiler-command-line-syntax.md)
