@@ -26,11 +26,11 @@ helpviewer_keywords:
 - transferring control to error handler
 ms.assetid: 1d1781b6-5cf8-486a-b430-f365e0bb023f
 ms.openlocfilehash: bc7718503f59c69868a75cac9383286a548fc307
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50640304"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62356492"
 ---
 # <a name="setnewhandler"></a>_set_new_handler
 
@@ -53,7 +53,7 @@ Retorna um ponteiro para a função registrada por manipulação de exceção an
 
 ## <a name="remarks"></a>Comentários
 
-O C++ **set_new_handler** função especifica uma função de manipulação de exceção que assumirá o controle se o **novos** operador falha ao alocar memória. Se **novos** falhar, o sistema de tempo de execução automaticamente chama a função de manipulação de exceção que foi passada como um argumento para **set_new_handler**. **Pnh**, definidas em h, é um ponteiro para uma função que retorna o tipo **int** e usa um argumento do tipo **size_t**. Use **size_t** para especificar a quantidade de espaço a ser alocado.
+O C++ **set_new_handler** função especifica uma função de manipulação de exceção que assumirá o controle se o **nova** operador falha ao alocar memória. Se **novos** falhar, o sistema de tempo de execução automaticamente chama a função de manipulação de exceção que foi passada como um argumento para **set_new_handler**. **Pnh**, definidas em h, é um ponteiro para uma função que retorna o tipo **int** e usa um argumento do tipo **size_t**. Use **size_t** para especificar a quantidade de espaço a ser alocado.
 
 Não há nenhum manipulador padrão.
 

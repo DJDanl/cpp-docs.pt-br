@@ -7,11 +7,11 @@ helpviewer_keywords:
 - PROTO directive
 ms.assetid: 0487ee16-9dc7-43d1-9445-cd1601f5a080
 ms.openlocfilehash: 616b6be2a5c191ebc67d61288cb5fa6c183091fa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50536696"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62210515"
 ---
 # <a name="proto"></a>PROTO
 
@@ -19,7 +19,7 @@ Protótipos de uma função ou procedimento. Você pode chamar a função protot
 
 ## <a name="syntax"></a>Sintaxe
 
-> *rótulo* **PROTO** \[ *distância*] \[ *langtype*] \[ __,__ \[ *parâmetro*]__:__*marca*]...
+> *label* **PROTO** \[*distance*] \[*langtype*] \[__,__ \[*parameter*]__:__*tag*] ...
 
 ### <a name="parameters"></a>Parâmetros
 
@@ -39,7 +39,7 @@ O nome da função com protótipo.
 *parameter*<br/>
 O nome opcional para um parâmetro de função.
 
-*Marca*<br/>
+*tag*<br/>
 O tipo de um parâmetro de função.
 
 O *parâmetro* e *marca* parâmetros podem aparecer várias vezes, uma vez para cada argumento passado.

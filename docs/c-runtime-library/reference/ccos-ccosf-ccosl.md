@@ -31,11 +31,11 @@ helpviewer_keywords:
 - ccosl function
 ms.assetid: 4ab936ac-ff85-49ac-9418-2b69cf5d4696
 ms.openlocfilehash: d1a94f7ad0bbd525480d344fa8ac5b3ee591a1b2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50489681"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62340437"
 ---
 # <a name="ccos-ccosf-ccosl"></a>ccos, ccosf, ccosl
 
@@ -72,13 +72,13 @@ O cosseno *z*, em radianos.
 
 ## <a name="remarks"></a>Comentários
 
-Como C++ permite sobrecargas, é possível chamar sobrecargas de **ccos** que usam e retornam **fcomplex** e **_Lcomplex** valores. Em um programa do C **ccos** sempre usa e retorna um **_Dcomplex** valor.
+Porque C++ permite sobrecargas, é possível chamar sobrecargas de **ccos** que usam e retornam **fcomplex** e **_Lcomplex** valores. Em um programa do C **ccos** sempre usa e retorna um **_Dcomplex** valor.
 
 ## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho C|Cabeçalho C++|
 |-------------|--------------|------------------|
-|**ccos**, **ccosf**, **ccosl**|\<complex.h>|\<ccomplex>|
+|**ccos**,               **ccosf**, **ccosl**|\<complex.h>|\<ccomplex>|
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 

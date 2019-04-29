@@ -9,11 +9,11 @@ helpviewer_keywords:
 - bss_seg pragma
 ms.assetid: 755f0154-de51-4778-97d3-c9b24e445079
 ms.openlocfilehash: 489ced11bb6024fdf9818872c07ab7feebfeabf3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50566303"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62212406"
 ---
 # <a name="bssseg"></a>bss_seg
 
@@ -36,10 +36,10 @@ Especifica o segmento em que as variáveis não inicializadas são armazenadas n
 *identifier*<br/>
 (Opcional) Quando usado com **push**, atribui um nome ao registro na pilha interna do compilador. *identificador* habilita vários registros a serem exibidos com uma única **pop-up** comando. Quando usado com **pop-up**, a diretiva elimina registros da pilha interna até *identificador* for removido; se *identificador* não for encontrado na pilha interna, nada é ser exibido.
 
-*"nome do segmento"*<br/>
+*"segment-name"*<br/>
 (Opcional) O nome de um segmento. Quando usado com **pop-up**, a pilha é exibida e *nome do segmento* se torna o nome do segmento ativo.
 
-*"segmento-class"*<br/>
+*"segment-class"*<br/>
 (Opcional) Incluído para compatibilidade com o C++ antes da versão 2.0. É ignorado.
 
 ## <a name="remarks"></a>Comentários

@@ -26,11 +26,11 @@ helpviewer_keywords:
 - _fcloseall function
 ms.assetid: c3c6ea72-92c6-450a-a33e-3e568d2784a4
 ms.openlocfilehash: 4713ffb7ecdf8da73e5f949bbef7be124dfaf28a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50536507"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62334873"
 ---
 # <a name="fclose-fcloseall"></a>fclose, _fcloseall
 
@@ -47,7 +47,7 @@ int _fcloseall( void );
 
 ### <a name="parameters"></a>Parâmetros
 
-*fluxo*<br/>
+*stream*<br/>
 Ponteiro para a estrutura **FILE**.
 
 ## <a name="return-value"></a>Valor de retorno
@@ -62,7 +62,7 @@ Consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/er
 
 O **fcloseall** função fecha todos os fluxos abertos exceto **stdin**, **stdout**, **stderr** (e, no MS-DOS, **_stdaux**  e **_stdprn**). Ela também fecha e exclui todos os arquivos temporários criados pelo **tmpfile**. Em ambas as funções, todos os buffers associados com o fluxo são liberados antes do fechamento. Buffers alocados pelo sistema são liberados quando o fluxo está fechado. Buffers atribuídos pelo usuário com **setbuf** e **setvbuf** não são liberados automaticamente.
 
-**Observação:** quando essas funções são usadas para fechar um fluxo, o descritor de arquivo subjacente e o identificador de arquivo do sistema operacional (ou soquete) são fechados, bem como o fluxo. Assim, se o arquivo foi aberto originalmente como um arquivo de manipular ou descritor de arquivo e é fechada com **fclose**, não chame **Close** para fechar o descritor de arquivo; não chame a função Win32  **CloseHandle** para fechar o identificador de arquivo.
+**Observação:** Quando essas funções são usadas para fechar um fluxo, o subjacente descritor de arquivo e sistema operacional identificador de arquivo (ou soquete) é fechado, bem como o fluxo. Assim, se o arquivo foi aberto originalmente como um arquivo de manipular ou descritor de arquivo e é fechada com **fclose**, não chame **Close** para fechar o descritor de arquivo; não chame a função Win32  **CloseHandle** para fechar o identificador de arquivo.
 
 **fclose** e **fcloseall** incluir código para proteger contra interferência de outros threads. Para a versão sem bloqueio de um **fclose**, consulte **fclose_nolock**.
 

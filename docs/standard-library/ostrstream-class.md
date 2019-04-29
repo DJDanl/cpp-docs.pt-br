@@ -13,11 +13,11 @@ helpviewer_keywords:
 - std::ostrstream [C++], str
 ms.assetid: e2e34679-b266-4728-a8e1-8eda5d400e46
 ms.openlocfilehash: 2d4a7a780f1a7db27bcb600c13430deaa0dc35cd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50537729"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62370860"
 ---
 # <a name="ostrstream-class"></a>Classe ostrstream
 
@@ -98,7 +98,7 @@ O buffer.
 *count*<br/>
 O tamanho do buffer em bytes.
 
-*Modo*<br/>
+*_Mode*<br/>
 O modo de entrada e saída do buffer. Consulte [ios_base::openmode](../standard-library/ios-base-class.md#openmode) para obter mais informações.
 
 ### <a name="remarks"></a>Comentários

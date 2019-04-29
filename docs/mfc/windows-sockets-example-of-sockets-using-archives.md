@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Windows Sockets [MFC], with archives
 ms.assetid: 2e3c9bb2-7e7b-4f28-8dc5-6cb7a484edac
 ms.openlocfilehash: 4ea1e2911b156066360da09993fa7302db79f12b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57295247"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62305284"
 ---
 # <a name="windows-sockets-example-of-sockets-using-archives"></a>Windows Sockets: Exemplo de soquetes que usam arquivos mortos
 
@@ -47,11 +47,11 @@ Nesse modelo de comunicação, a palavra "Recebimento", a mensagem enviada na *s
 
 Para obter mais informações, consulte a especificação do Windows Sockets: **htonl**, **htons**, **ntohl**, **ntohs**. Além disso, para obter mais informações, consulte:
 
-- [Windows Sockets: Derivando de Classes de soquete](../mfc/windows-sockets-deriving-from-socket-classes.md)
+- [Windows Sockets: derivar de classes de soquete](../mfc/windows-sockets-deriving-from-socket-classes.md)
 
-- [Windows Sockets: Como funcionam soquetes com arquivos mortos](../mfc/windows-sockets-how-sockets-with-archives-work.md)
+- [Windows Sockets: como soquetes com arquivos mortos funcionam](../mfc/windows-sockets-how-sockets-with-archives-work.md)
 
-- [Windows Sockets: Background](../mfc/windows-sockets-background.md)
+- [Windows Sockets: tela de fundo](../mfc/windows-sockets-background.md)
 
 ## <a name="see-also"></a>Consulte também
 

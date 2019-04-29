@@ -10,11 +10,11 @@ helpviewer_keywords:
 - C++ exception handling, exception handlers
 ms.assetid: dd3b647d-c269-43a8-aab9-ad1458712976
 ms.openlocfilehash: b77a218340399578e3c9428100476787e2e60b25
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50534557"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62330564"
 ---
 # <a name="structured-exception-handling-cc"></a>Tratamento de exceções estruturado (C/C++)
 
@@ -24,11 +24,11 @@ Manipulação de exceção estruturada (SEH) é uma extensão da Microsoft para 
 
 ## <a name="grammar"></a>Gramática
 
-*Try-except-Statement&lt;1* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**Try** *compound-statement* **EXCEPT** **(** *expressão* **)** *instrução composta*
+*try-except-statement* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**__try** *compound-statement* **__except** **(** *expression* **)** *compound-statement*
 
 *try-finally-statement* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**Try** *compound-statement* **Finally** *instrução composta*
+&nbsp;&nbsp;&nbsp;&nbsp;**__try** *compound-statement* **__finally** *compound-statement*
 
 ## <a name="remarks"></a>Comentários
 

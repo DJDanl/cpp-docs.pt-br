@@ -1,5 +1,5 @@
 ---
-title: COSH, coshf, coshl
+title: cosh, coshf, coshl
 ms.date: 04/11/2018
 apiname:
 - cosh
@@ -29,13 +29,13 @@ helpviewer_keywords:
 - trigonometric functions
 - hyperbolic functions
 ms.openlocfilehash: 0f55e084e760cb6d04dbe7ec4fefb5e2ac1d79fd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50609528"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62347438"
 ---
-# <a name="cosh-coshf-coshl"></a>COSH, coshf, coshl
+# <a name="cosh-coshf-coshl"></a>cosh, coshf, coshl
 
 Calcula o cosseno hiperbólico.
 
@@ -66,7 +66,7 @@ Por padrão, se o resultado for muito grande em uma **cosh**, **coshf**, ou **co
 |Entrada|Exceção SEH|Exceção Matherr|
 |-----------|-------------------|-----------------------|
 |± **QNAN**, **IND**|nenhum|**_DOMAIN**|
-|*x* ≥ 7,104760e+002|**INEXATA**+**OVERFLOW**|**ESTOURO**|
+|*x* ≥ 7,104760e+002|**INEXACT**+**OVERFLOW**|**OVERFLOW**|
 
 ## <a name="remarks"></a>Comentários
 

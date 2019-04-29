@@ -12,11 +12,11 @@ helpviewer_keywords:
 - Zc compiler options (C++)
 ms.assetid: 0c6cfaac-9c2a-41a3-aa94-64ca8ef261fc
 ms.openlocfilehash: 9dfe8f5b4713d9567f6e98af6685c552fb51160e
-ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "57822152"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62316100"
 ---
 # <a name="zcreferencebinding-enforce-reference-binding-rules"></a>/ZC: referencebinding (Impor regras de associação de referência)
 
@@ -68,5 +68,5 @@ Para obter mais informações sobre problemas de conformidade no Visual C++, con
 ## <a name="see-also"></a>Consulte também
 
 [Opções do compilador MSVC](compiler-options.md)<br/>
-[Sintaxe de linha de comando do compilador MSVC](compiler-command-line-syntax.md)<br/>
+[Sintaxe da linha de comando do compilador MSVC](compiler-command-line-syntax.md)<br/>
 [/Zc (conformidade)](zc-conformance.md)<br/>

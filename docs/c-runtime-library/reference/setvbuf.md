@@ -24,11 +24,11 @@ helpviewer_keywords:
 - setvbuf function
 ms.assetid: 6aa5aa37-3408-4fa0-992f-87f9f9c4baea
 ms.openlocfilehash: d4336c6cc478a035fcc0b9b059a7161d58bc4442
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51328091"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62356310"
 ---
 # <a name="setvbuf"></a>setvbuf
 
@@ -47,7 +47,7 @@ int setvbuf(
 
 ### <a name="parameters"></a>Parâmetros
 
-*fluxo*<br/>
+*stream*<br/>
 Ponteiro para a estrutura **FILE**.
 
 *buffer*<br/>
@@ -57,7 +57,7 @@ Buffer alocado pelo usuário.
 Modo de buffer.
 
 *size*<br/>
-O tamanho do buffer, em bytes. Intervalo permitido: 2 < = *tamanho* < = INT_MAX (2147483647). Internamente, o valor fornecido para *tamanho* é arredondado para baixo até o múltiplo mais próximo de 2.
+O tamanho do buffer, em bytes. Intervalo permitido: 2 <= *size* <= INT_MAX (2147483647). Internamente, o valor fornecido para *tamanho* é arredondado para baixo até o múltiplo mais próximo de 2.
 
 ## <a name="return-value"></a>Valor de retorno
 
@@ -75,9 +75,9 @@ O modo deve ser **iofbf**, **iolbf**, ou **ionbf**. Se *modo* é **iofbf** ou **
 
 |*modo* valor|Significado|
 |-|-|
-| **IOFBF** | Buffer completo; ou seja, *buffer* é usado como o buffer e *tamanho* é usado como o tamanho do buffer. Se *buffer* é **nulo**, um buffer alocado automaticamente *tamanho* bytes de comprimento é usado. |
-| **IOLBF** | Para alguns sistemas, isso fornece buffer em linha. No entanto, para Win32, o comportamento é igual a **iofbf** -buffer completo. |
-| **IONBF** | Nenhum buffer é usado, independentemente de *buffer* ou *tamanho*. |
+| **_IOFBF** | Buffer completo; ou seja, *buffer* é usado como o buffer e *tamanho* é usado como o tamanho do buffer. Se *buffer* é **nulo**, um buffer alocado automaticamente *tamanho* bytes de comprimento é usado. |
+| **_IOLBF** | Para alguns sistemas, isso fornece buffer em linha. No entanto, para Win32, o comportamento é igual a **iofbf** -buffer completo. |
+| **_IONBF** | Nenhum buffer é usado, independentemente de *buffer* ou *tamanho*. |
 
 ## <a name="requirements"></a>Requisitos
 

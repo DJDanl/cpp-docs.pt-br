@@ -13,11 +13,11 @@ helpviewer_keywords:
 - CInstantaneousTransition [MFC], m_dblFinalValue
 ms.assetid: c3d5121f-2c6b-4221-9e57-10e082a31120
 ms.openlocfilehash: 6e28c7d51fd80771d0348ab42021d196f81d3474
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57275098"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62345741"
 ---
 # <a name="cinstantaneoustransition-class"></a>Classe CInstantaneousTransition
 
@@ -31,7 +31,7 @@ class CInstantaneousTransition : public CBaseTransition;
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|

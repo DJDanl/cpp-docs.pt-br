@@ -15,11 +15,11 @@ helpviewer_keywords:
 - exporting DLLs [C++], mutual imports
 ms.assetid: 2cc29537-92ee-4d92-af39-8b8b3afd808f
 ms.openlocfilehash: f01e69138a6ca1744645a1c2fa8525b7088e260d
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57814547"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62295662"
 ---
 # <a name="mutual-imports"></a>Importações mútuas
 
@@ -121,7 +121,7 @@ class CExampleA : public CObject
 
 - [Determinar qual método de exportação usar](determining-which-exporting-method-to-use.md)
 
-- [Importar para um aplicativo usando __declspec(dllimport)](importing-into-an-application-using-declspec-dllimport.md)
+- [Importação para um aplicativo usando __declspec(dllimport)](importing-into-an-application-using-declspec-dllimport.md)
 
 ### <a name="what-do-you-want-to-know-more-about"></a>Que mais você deseja saber?
 

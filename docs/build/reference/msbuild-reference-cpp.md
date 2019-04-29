@@ -4,11 +4,11 @@ ms.date: 12/08/2018
 helpviewer_keywords:
 - MSBuild reference [C++]
 ms.openlocfilehash: b6ec6b5d276cb7104cf61c229476596d2a2a7684
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59024693"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62320923"
 ---
 # <a name="msbuild-reference-for-c-projects"></a>Referência do MSBuild para projetos do C++
 

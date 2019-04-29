@@ -31,11 +31,11 @@ helpviewer_keywords:
 - spawnlp function
 ms.assetid: 74fc6e7a-4f24-4103-9387-7177875875e6
 ms.openlocfilehash: 44137aefcec8f6658a90117288a47696f4d31903
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51328728"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62355231"
 ---
 # <a name="spawnlp-wspawnlp"></a>_spawnlp, _wspawnlp
 
@@ -73,7 +73,7 @@ Modo de execução do processo de chamada.
 *cmdname*<br/>
 Caminho do arquivo a ser executado.
 
-*arg0*, *arg1*,... *argn*<br/>
+*arg0*, *arg1*, ... *argn*<br/>
 Lista de ponteiros para os argumentos. O *arg0* argumento geralmente é um ponteiro para *cmdname*. Os argumentos *arg1* por meio *argn* são ponteiros para as cadeias de caracteres que formam a nova lista de argumentos. A seguir *argn*, deve haver uma **nulo** ponteiro para marcar o final da lista de argumentos.
 
 ## <a name="return-value"></a>Valor de retorno
