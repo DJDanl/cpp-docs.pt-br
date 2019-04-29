@@ -44,11 +44,11 @@ helpviewer_keywords:
 - vfwprintf_p function
 ms.assetid: 4d4a0914-4175-4b65-9ca1-037c4ef29147
 ms.openlocfilehash: 7e93972ccd77d730d873177fe92f958877c83fe4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50515304"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62365358"
 ---
 # <a name="vfprintfp-vfprintfpl-vfwprintfp-vfwprintfpl"></a>_vfprintf_p, _vfprintf_p_l, _vfwprintf_p, _vfwprintf_p_l
 
@@ -83,7 +83,7 @@ int _vfwprintf_p_l(
 
 ### <a name="parameters"></a>Parâmetros
 
-*fluxo*<br/>
+*stream*<br/>
 Ponteiro para a estrutura **FILE**.
 
 *format*<br/>
@@ -118,15 +118,15 @@ Se qualquer um dos *stream* ou *formato* for um ponteiro nulo ou se a cadeia de 
 
 |Rotina TCHAR.H|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**vftprintf_p**|**_vfprintf_p**|**_vfprintf_p**|**_vfwprintf_p**|
-|**vftprintf_p_l**|**_vfprintf_p_l**|**_vfprintf_p_l**|**_vfwprintf_p_l**|
+|**_vftprintf_p**|**_vfprintf_p**|**_vfprintf_p**|**_vfwprintf_p**|
+|**_vftprintf_p_l**|**_vfprintf_p_l**|**_vfprintf_p_l**|**_vfwprintf_p_l**|
 
 ## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho necessário|Cabeçalhos opcionais|
 |-------------|---------------------|----------------------|
-|**vfprintf_p**, **vfprintf_p_l**|\<stdio.h> e \<stdarg.h>|\<varargs.h>*|
-|**vfwprintf_p**, **vfwprintf_p_l**|\<stdio.h> ou \<wchar.h> e \<stdarg.h>|\<varargs.h>*|
+|**_vfprintf_p**, **_vfprintf_p_l**|\<stdio.h> e \<stdarg.h>|\<varargs.h>*|
+|**_vfwprintf_p**, **_vfwprintf_p_l**|\<stdio.h> ou \<wchar.h> e \<stdarg.h>|\<varargs.h>*|
 
 \* Necessário para compatibilidade com UNIX V.
 

@@ -42,11 +42,11 @@ helpviewer_keywords:
 - _vtcprintf_p function
 ms.assetid: 611024cc-90e7-41db-8e85-145ca95012b1
 ms.openlocfilehash: 59e601d5cd03d58fe2d1725ba509a9fa3b2f3422
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50538119"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62364877"
 ---
 # <a name="vcprintfp-vcprintfpl-vcwprintfp-vcwprintfpl"></a>_vcprintf_p, _vcprintf_p_l, _vcwprintf_p, _vcwprintf_p_l
 
@@ -114,15 +114,15 @@ Essas funções validam o ponteiro de entrada e a cadeia de caracteres de format
 
 |Rotina Tchar.h|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**vtcprintf_p**|**_vcprintf_p**|**_vcprintf_p**|**_vcwprintf_p**|
-|**vtcprintf_p_l**|**_vcprintf_p_l**|**_vcprintf_p_l**|**_vcwprintf_p_l**|
+|**_vtcprintf_p**|**_vcprintf_p**|**_vcprintf_p**|**_vcwprintf_p**|
+|**_vtcprintf_p_l**|**_vcprintf_p_l**|**_vcprintf_p_l**|**_vcwprintf_p_l**|
 
 ## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|
-|**vcprintf_p**, **vcprintf_p_l**|\<conio.h> e \<stdarg.h>|
-|**vcwprintf_p**, **vcwprintf_p_l**|\<conio.h> e \<stdarg.h>|
+|**_vcprintf_p**, **_vcprintf_p_l**|\<conio.h> e \<stdarg.h>|
+|**_vcwprintf_p**, **_vcwprintf_p_l**|\<conio.h> e \<stdarg.h>|
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - walkthroughs [MFC], update existing application
 ms.assetid: aa6330d3-6cfc-4c79-8fcb-0282263025f7
 ms.openlocfilehash: 213bc8087b58eac232cc8fcfccc88e13785a807e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
-ms.translationtype: MT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57258756"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62358276"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-1"></a>Passo a passo: Atualizando o aplicativo de rabisco MFC (parte 1)
 
@@ -269,4 +269,4 @@ Você modificou o clássico exemplo de rabisco MFC de 1.0 para usar o **Designer
 ## <a name="see-also"></a>Consulte também
 
 [Explicações Passo a Passo](../mfc/walkthroughs-mfc.md)<br/>
-[Passo a passo: Atualizando o aplicativo de rabisco MFC (parte 2)](../mfc/walkthrough-updating-the-mfc-scribble-application-part-2.md)
+[Passo a passo: atualizar o aplicativo de rabisco MFC (parte 2)](../mfc/walkthrough-updating-the-mfc-scribble-application-part-2.md)

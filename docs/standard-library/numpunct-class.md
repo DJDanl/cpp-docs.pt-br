@@ -31,11 +31,11 @@ helpviewer_keywords:
 - std::numpunct [C++], truename
 ms.assetid: 73fb93cc-ac11-4c98-987c-bfa6267df596
 ms.openlocfilehash: 6084392c5cae151f6c7111fbe9fe7a45e103b74d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50495542"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62371471"
 ---
 # <a name="numpunct-class"></a>Classe numpunct
 
@@ -352,11 +352,11 @@ Valor inteiro usado para especificar o tipo de gerenciamento de memória do obje
 
 Os valores possíveis para o *_Refs* parâmetro e sua significância são:
 
-- 0: o tempo de vida do objeto é gerenciado pelas localidades que o contêm.
+- 0: O tempo de vida do objeto é gerenciado pelas localidades que o contêm.
 
-- 1: o tempo de vida do objeto deve ser gerenciado manualmente.
+- 1: O tempo de vida do objeto deve ser gerenciado manualmente.
 
-- \> 1: esses valores não estão definidos.
+- \> 1: Esses valores não estão definidos.
 
 Nenhum exemplo direto é possível, pois o destruidor está protegido.
 

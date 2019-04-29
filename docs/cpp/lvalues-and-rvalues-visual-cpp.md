@@ -6,11 +6,11 @@ helpviewer_keywords:
 - L-values [C++]
 ms.assetid: a8843344-cccc-40be-b701-b71f7b5cdcaf
 ms.openlocfilehash: 74bfac5f5bb56549eee41a5479babf8e71b00aa6
-ms.sourcegitcommit: e9568560cdb95e83a8fba1e9bca21ece910d20b7
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52453879"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62245539"
 ---
 # <a name="lvalues-and-rvalues-visual-c"></a>Lvalues e Rvalues (Visual C++)
 
@@ -20,7 +20,7 @@ O padrão c++17 define categorias de valor de expressão da seguinte maneira:
 
 - Um *glvalue* é uma expressão cuja avaliação determina a identidade de um objeto, um campo de bits ou uma função.
 - Um *prvalue* é uma expressão cuja avaliação inicializa um objeto ou um campo de bits ou calcula o valor do operando de um operador, conforme especificado pelo contexto no qual ela aparece.
-- Uma *xvalue* é um glvalue que denota um objeto ou um campo de bits cujos recursos podem ser reutilizados (normalmente porque ele está perto do fim do seu tempo de vida). Exemplo: Certos tipos de expressões que envolvem as referências de rvalue (8.3.2) produzem xvalues, como uma chamada para uma função cujo tipo de retorno é uma referência rvalue ou uma conversão para um tipo de referência de rvalue.
+- Uma *xvalue* é um glvalue que denota um objeto ou um campo de bits cujos recursos podem ser reutilizados (normalmente porque ele está perto do fim do seu tempo de vida). Exemplo: Determinados tipos de expressões que envolvem as referências de rvalue (8.3.2) produzem xvalues, como uma chamada para uma função cujo tipo de retorno é uma referência rvalue ou uma conversão para um tipo de referência de rvalue.
 - Uma *lvalue* é um que não seja um xvalue glvalue.
 - Uma *rvalue* é um prvalue ou um xvalue.
 

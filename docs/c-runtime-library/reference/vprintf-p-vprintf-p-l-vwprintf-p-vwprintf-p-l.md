@@ -45,11 +45,11 @@ helpviewer_keywords:
 - formatted text [C++]
 ms.assetid: 3f99bde3-c891-493d-908f-30559c421058
 ms.openlocfilehash: 266df8c033fc9d1c8459aff9f2b95771947d88d1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50635078"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62364695"
 ---
 # <a name="vprintfp-vprintfpl-vwprintfp-vwprintfpl"></a>_vprintf_p, _vprintf_p_l, _vwprintf_p, _vwprintf_p_l
 
@@ -112,15 +112,15 @@ Se *formato* for um ponteiro nulo ou se a cadeia de caracteres de formato contiv
 
 |Rotina TCHAR.H|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**vtprintf_p**|**_vprintf_p**|**_vprintf_p**|**_vwprintf_p**|
-|**vtprintf_p_l**|**_vprintf_p_l**|**_vprintf_p_l**|**_vwprintf_p_l**|
+|**_vtprintf_p**|**_vprintf_p**|**_vprintf_p**|**_vwprintf_p**|
+|**_vtprintf_p_l**|**_vprintf_p_l**|**_vprintf_p_l**|**_vwprintf_p_l**|
 
 ## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho necessário|Cabeçalhos opcionais|
 |-------------|---------------------|----------------------|
-|**vprintf_p**, **vprintf_p_l**|\<stdio.h> e \<stdarg.h>|\<varargs.h>*|
-|**vwprintf_p**, **vwprintf_p_l**|\<stdio.h> ou \<wchar.h> e \<stdarg.h>|\<varargs.h>*|
+|**_vprintf_p**, **_vprintf_p_l**|\<stdio.h> e \<stdarg.h>|\<varargs.h>*|
+|**_vwprintf_p**, **_vwprintf_p_l**|\<stdio.h> ou \<wchar.h> e \<stdarg.h>|\<varargs.h>*|
 
 \* Necessário para compatibilidade com UNIX V.
 

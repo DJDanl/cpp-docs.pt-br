@@ -134,11 +134,11 @@ helpviewer_keywords:
 - CPane [MFC], m_recentDockInfo
 ms.assetid: 5c651a64-3c79-4d94-9676-45f6402a6bc5
 ms.openlocfilehash: b660d181aada8abeb61b397fb30b097897e74f65
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57326771"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62373148"
 ---
 # <a name="cpane-class"></a>Classe CPane
 
@@ -152,7 +152,7 @@ class CPane : public CBasePane
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|

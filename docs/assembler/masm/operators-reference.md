@@ -6,11 +6,11 @@ helpviewer_keywords:
 - operators [MASM]
 ms.assetid: c069cab7-d6b0-4f82-a6ce-0ca3fc7e6428
 ms.openlocfilehash: cb97c5dcb640b8d8592d842afd7dbb8cf9d0852c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50430453"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62210808"
 ---
 # <a name="masm-operators-reference"></a>Referência de operadores (MASM)
 
@@ -19,7 +19,7 @@ ms.locfileid: "50430453"
 ||||
 |-|-|-|
 |[* (multiplicação)](operator-multiply.md)|[+ (adição)](operator-add.md)|[-(subtrair ou negar)](operator-subtract-2.md)|
-|[. (campo)](operator-dot.md)|[/ (divisão)](operator-subtract-1.md)|[&#91;&#93;(índice)](operator-brackets.md)|
+|[. (campo)](operator-dot.md)|[/ (divisão)](operator-subtract-1.md)|[&#91;&#93; (index)](operator-brackets.md)|
 |[MOD (resto)](operator-mod.md)|||
 
 ## <a name="control-flow"></a>Fluxo de controle
@@ -44,7 +44,7 @@ ms.locfileid: "50430453"
 
 ||||
 |-|-|-|
-|[\! (o caractere literal)](operator-logical-not-masm.md)|[% (trate como texto)](operator-percent.md)||
+|[\! (o caractere literal)](operator-logical-not-masm.md)|[% (treat as text)](operator-percent.md)||
 |[;; (trate como comentário)](operator-semicolons.md)|[&lt; &gt; (trate como um literal)](operator-literal.md)|[& & (substitua o valor do parâmetro)](operator-logical-and-masm.md)|
 
 ## <a name="miscellaneous"></a>Diversos
@@ -53,7 +53,7 @@ ms.locfileid: "50430453"
 |-|-|-|
 |[' ' (trate como cadeia de caracteres)](operator-single-quote.md)|["" (tratar como cadeia de caracteres)](operator-double-quote.md)||
 |: (definição de rótulo de local)|:: (registrar o segmento e o deslocamento)|:: (definição de rótulo global)|
-|[; (trate como comentário)](operator-semicolon.md)|[DUP (declaração de repetição)](operator-dup.md)||
+|[; (treat as comment)](operator-semicolon.md)|[DUP (declaração de repetição)](operator-dup.md)||
 
 ## <a name="record"></a>Registro
 
@@ -65,7 +65,7 @@ ms.locfileid: "50430453"
 
 ||||
 |-|-|-|
-|[EQ (igual)](operator-eq.md)|[GE (maior ou igual)](operator-ge.md)|[GT (maior que)](operator-gt.md)|
+|[EQ (equal)](operator-eq.md)|[GE (maior ou igual)](operator-ge.md)|[GT (maior que)](operator-gt.md)|
 |[LE (menor ou igual)](operator-le.md)|[LT (menor que)](operator-lt.md)|[NE (não igual)](operator-ne.md)|
 
 ## <a name="segment"></a>Segmento

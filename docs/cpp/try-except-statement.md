@@ -27,11 +27,11 @@ helpviewer_keywords:
 - _abnormal_termination keyword [C++]
 ms.assetid: 30d60071-ea49-4bfb-a8e6-7a420de66381
 ms.openlocfilehash: 400c831eec1c570f26dfc010b4e4c61e7d21b1c4
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326648"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62266836"
 ---
 # <a name="try-except-statement"></a>Instrução try-except
 
@@ -41,11 +41,11 @@ O **tente-exceto** instrução é uma extensão da Microsoft para o C e manipula
 
 ## <a name="syntax"></a>Sintaxe
 
-> **\_\_Tente**<br/>
+> **\_\_try**<br/>
 > {<br/>
 > &nbsp;&nbsp;&nbsp;&nbsp;código protegido<br/>
 > }<br/>
-> **\_\_exceto** ( *expressão* )<br/>
+> **\_\_except** ( *expression* )<br/>
 > {<br/>
 > &nbsp;&nbsp;&nbsp;&nbsp;código do manipulador de exceção<br/>
 > }<br/>
@@ -112,11 +112,11 @@ A função intrínseca `AbnormalTermination` está disponível dentro de um mani
 
 excpt. h define nomes alternativos para estes intrínsecos:
 
-`GetExceptionCode` equivale a `_exception_code`
+`GetExceptionCode` é equivalente a `_exception_code`
 
-`GetExceptionInformation` equivale a `_exception_info`
+`GetExceptionInformation` é equivalente a `_exception_info`
 
-`AbnormalTermination` equivale a `_abnormal_termination`
+`AbnormalTermination` é equivalente a `_abnormal_termination`
 
 ## <a name="example"></a>Exemplo
 

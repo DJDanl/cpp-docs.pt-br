@@ -39,11 +39,11 @@ helpviewer_keywords:
 - std::tan [C++]
 - std::tanh [C++]
 ms.openlocfilehash: c4e5873e9a511311d2c49b34791df82038fe9f9b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630953"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62365178"
 ---
 # <a name="ltvalarraygt-functions"></a>Funções &lt;valarray&gt;
 
@@ -1210,7 +1210,7 @@ Uma valarray cujos elementos são iguais ao cosseno hiperbólico dos elementos d
 
 Identidades que definem a tangente hiperbólica em termos da função exponencial:
 
-TANH ( *z* ) = sinh ( *z* ) / cosh ( *z* ) = (exp ( *z* ) – exp (- *z* )) / (exp ( *z* ) + exp (- *z* ))
+tanh ( *z* ) = sinh ( *z* ) / cosh ( *z* ) = ( exp ( *z* ) - exp ( - *z* ) ) / ( exp ( *z* ) + exp ( - *z* ) )
 
 ### <a name="example"></a>Exemplo
 

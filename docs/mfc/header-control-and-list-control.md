@@ -10,11 +10,11 @@ helpviewer_keywords:
 - header controls [MFC], list controls used with
 ms.assetid: b20194b1-1a6b-4e2f-b890-1b3cca6650bc
 ms.openlocfilehash: 934b54de3266138225087d5519af2be51972cf9d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57266764"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62240069"
 ---
 # <a name="header-control-and-list-control"></a>Controle de cabeçalho e de lista
 

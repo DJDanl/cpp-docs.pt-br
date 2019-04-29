@@ -28,11 +28,11 @@ helpviewer_keywords:
 - remainder
 ms.assetid: 5f721fb3-8b78-4597-9bc0-ca9bcd1f1d0e
 ms.openlocfilehash: 9a9abe82e69122ca87f44e293e1da725c97045d4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50572738"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62357636"
 ---
 # <a name="remainder-remainderf-remainderl"></a>remainder, remainderf, remainderl
 
@@ -73,7 +73,7 @@ Como C++ permite sobrecargas, é possível chamar sobrecargas de **restante** qu
 
 |Função|Cabeçalho necessário (C)|Cabeçalho necessário (C++)|
 |--------------|---------------------|-|
-|**restante**, **remainderf**, **remainderl**|\<math.h>|\<cmath> ou \<math.h>|
+|**remainder**, **remainderf**, **remainderl**|\<math.h>|\<cmath> ou \<math.h>|
 
 Para obter informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - CMutex [MFC], CMutex
 ms.assetid: 6330c050-4f01-4195-a099-2029b92f8cf1
 ms.openlocfilehash: f85e562af9d048503be20d1ab5d219fe8d2d039f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57273290"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62373620"
 ---
 # <a name="cmutex-class"></a>Classe CMutex
 
@@ -27,7 +27,7 @@ class CMutex : public CSyncObject
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|

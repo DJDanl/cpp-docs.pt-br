@@ -13,11 +13,11 @@ helpviewer_keywords:
 - CMFCToolBarFontComboBox [MFC], SetFont
 ms.assetid: 25f8e08c-aadd-4cb5-9581-a99d49d444b1
 ms.openlocfilehash: 89767a3ed6880703c3c754700ea5669c0cc183e5
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58779190"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62218334"
 ---
 # <a name="cmfctoolbarfontcombobox-class"></a>Classe CMFCToolBarFontComboBox
 
@@ -214,4 +214,4 @@ Se *bExact* for TRUE, esse método seleciona uma fonte que corresponda exatament
 [Classe CMFCToolBarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md)<br/>
 [Classe CMFCFontInfo](../../mfc/reference/cmfcfontinfo-class.md)<br/>
 [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)<br/>
-[Passo a passo: Colocando controles em barras de ferramentas](../../mfc/walkthrough-putting-controls-on-toolbars.md)
+[Passo a passo: colocar controles em barras de ferramentas](../../mfc/walkthrough-putting-controls-on-toolbars.md)

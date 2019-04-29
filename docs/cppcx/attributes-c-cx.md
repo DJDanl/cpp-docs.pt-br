@@ -3,15 +3,15 @@ title: Atributos (C++/CX)
 ms.date: 12/30/2016
 ms.assetid: 4438e03c-4de3-433d-abcc-31aa863bc0e0
 ms.openlocfilehash: 5f74914ab65fdf2c1803b47665e16378991efa3c
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57743825"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62209449"
 ---
 # <a name="attributes-ccx"></a>Atributos (C++/CX)
 
-Um atributo é um tipo especial de classe ref que pode ser colocado entre colchetes para tipos de tempo de execução do Windows e métodos para especificar determinados comportamentos na criação de metadados. Vários atributos predefinidos — por exemplo, [Windows::Foundation::Metadata::WebHostHidden](/uwp/api/Windows.Foundation.Metadata.WebHostHiddenAttribute)— são comumente usados em C + + c++ /CLI código CX. Este exemplo mostra como o atributo é aplicado a uma classe:
+Um atributo é um tipo especial de classe ref que pode ser colocado entre colchetes para tipos de tempo de execução do Windows e métodos para especificar determinados comportamentos na criação de metadados. Vários atributos predefinidos — por exemplo, [Windows::Foundation::Metadata::WebHostHidden](/uwp/api/Windows.Foundation.Metadata.WebHostHiddenAttribute)— são comumente usados em C++/CX código. Este exemplo mostra como o atributo é aplicado a uma classe:
 
 [!code-cpp[cx_attributes#01](../cppcx/codesnippet/CPP/cx_attributes/class1.h#01)]
 

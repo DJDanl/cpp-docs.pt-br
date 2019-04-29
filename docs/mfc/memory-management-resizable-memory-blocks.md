@@ -10,11 +10,11 @@ helpviewer_keywords:
 - resizable memory blocks [MFC]
 ms.assetid: f0efe6f4-a3ed-4541-9195-51ec1291967a
 ms.openlocfilehash: 124a2599e1523d5393fcf6255c88de0fd8cd72cd
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57281740"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62219129"
 ---
 # <a name="memory-management-resizable-memory-blocks"></a>Gerenciamento de memória: Blocos de memória redimensionáveis
 
@@ -25,4 +25,4 @@ O **novos** e **excluir** operadores, descritas no artigo [gerenciamento de mem�
 
 ## <a name="see-also"></a>Consulte também
 
-[Gerenciamento de memória: Alocação de heap](../mfc/memory-management-heap-allocation.md)
+[Gerenciamento de memória: alocação de heap](../mfc/memory-management-heap-allocation.md)

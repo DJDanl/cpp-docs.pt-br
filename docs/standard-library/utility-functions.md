@@ -15,11 +15,11 @@ helpviewer_keywords:
 - std::move [C++]
 - std::swap [C++]
 ms.openlocfilehash: 7a061ede19c5c4c181b5fea912b9c6212c583267
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50543904"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62362361"
 ---
 # <a name="ltutilitygt-functions"></a>Funções &lt;utility&gt;
 
@@ -39,7 +39,7 @@ T exchange(T& val, Other&& new_val)
 
 ### <a name="parameters"></a>Parâmetros
 
-*Val*<br/>
+*val*<br/>
 O objeto que receberá o valor de new_val.
 
 *new_val*<br/>
@@ -100,7 +100,7 @@ constexpr Type&& forward(typename remove_reference<Type>::type&& Arg) noexcept
 |Parâmetro|Descrição|
 |---------------|-----------------|
 |*Tipo*|O tipo do valor passado em *Arg*, que pode ser diferente do tipo de *Arg*. Geralmente determinado por um argumento de modelo da função de encaminhamento.|
-|*arg*|O argumento a ser convertido.|
+|*Arg*|O argumento a ser convertido.|
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -170,7 +170,7 @@ O tipo do primeiro elemento do par.
 *T2*<br/>
 O tipo do segundo elemento do par.
 
-*solicitação de pull*<br/>
+*pr*<br/>
 O par do qual selecionar.
 
 ### <a name="remarks"></a>Comentários
@@ -276,7 +276,7 @@ constexpr typename remove_reference<Type>::type&& move(Type&& Arg) noexcept;
 |Parâmetro|Descrição|
 |---------------|-----------------|
 |*Tipo*|Um tipo deduzido do tipo do argumento passado *Arg*, juntamente com as regras de recolhimento de referência.|
-|*arg*|O argumento a ser convertido. Embora o tipo de *Arg* pareça ser especificado como uma referência de rvalue, `move` também aceita argumentos lvalue porque as referências de lvalue podem associar a referências de rvalue.|
+|*Arg*|O argumento a ser convertido. Embora o tipo de *Arg* pareça ser especificado como uma referência de rvalue, `move` também aceita argumentos lvalue porque as referências de lvalue podem associar a referências de rvalue.|
 
 ### <a name="return-value"></a>Valor de retorno
 

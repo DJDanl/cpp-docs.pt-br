@@ -8,11 +8,11 @@ helpviewer_keywords:
 - iterator header
 ms.assetid: c61a3962-f3ed-411a-b5a3-e8b3c2b500bd
 ms.openlocfilehash: 1b0d3282075246f3b217f0c8acac19ed8ece79cb
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51520745"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62224084"
 ---
 # <a name="ltiteratorgt"></a>&lt;iterator&gt;
 
@@ -40,7 +40,7 @@ Os iteradores são uma generalização dos ponteiros, abstraídos dos seus requi
 
 Os iteradores que têm mais requisitos e um acesso mais avançado a elementos podem ser usados no lugar de iteradores com menos requisitos. Por exemplo, se um iterador de avanço for chamado, um iterador de acesso aleatório poderá usado em seu lugar.
 
-O Visual Studio adicionou extensões aos iteradores da Biblioteca Padrão do C++ para oferecer suporte a várias situações de modo de depuração para iteradores verificados e não verificados. Para obter mais informações, consulte [Bibliotecas seguras: Biblioteca Padrão C++](../standard-library/safe-libraries-cpp-standard-library.md).
+O Visual Studio adicionou extensões aos iteradores da Biblioteca Padrão do C++ para oferecer suporte a várias situações de modo de depuração para iteradores verificados e não verificados. Para obter mais informações, consulte [bibliotecas seguras: C++Biblioteca padrão](../standard-library/safe-libraries-cpp-standard-library.md).
 
 ### <a name="functions"></a>Funções
 
@@ -55,9 +55,9 @@ O Visual Studio adicionou extensões aos iteradores da Biblioteca Padrão do C++
 |[end](../standard-library/iterator-functions.md#end)|Recupera um iterador para o elemento que segue o último elemento no contêiner especificado.|
 |[front_inserter](../standard-library/iterator-functions.md#front_inserter)|Cria um iterador que pode inserir elementos na frente de um contêiner especificado.|
 |[inserter](../standard-library/iterator-functions.md#inserter)|Um adaptador de iterador que adiciona um novo elemento a um contêiner em um ponto de inserção especificado.|
-|[make_checked_array_iterator](../standard-library/iterator-functions.md#make_checked_array_iterator)|Cria um [checked_array_iterator](../standard-library/checked-array-iterator-class.md) que pode ser usado por outros algoritmos. **Observação:** essa função é uma extensão da Biblioteca Padrão do C++ da Microsoft. O código implementado usando essa função não é portátil para ambientes de criação do C++ Standard que não oferecem suporte a essa extensão da Microsoft.|
+|[make_checked_array_iterator](../standard-library/iterator-functions.md#make_checked_array_iterator)|Cria um [checked_array_iterator](../standard-library/checked-array-iterator-class.md) que pode ser usado por outros algoritmos. **Observação:**  Essa função é uma extensão da Biblioteca Padrão do C++ da Microsoft. O código implementado usando essa função não é portátil para ambientes de criação do C++ Standard que não oferecem suporte a essa extensão da Microsoft.|
 |[make_move_iterator](../standard-library/iterator-functions.md#make_move_iterator)|Retorna um iterador de movimentação que contém o iterador fornecido como o seu iterador de base armazenado.|
-|[make_unchecked_array_iterator](../standard-library/iterator-functions.md#make_unchecked_array_iterator)|Cria um [unchecked_array_iterator](../standard-library/unchecked-array-iterator-class.md) que pode ser usado por outros algoritmos. **Observação:** essa função é uma extensão da Biblioteca Padrão do C++ da Microsoft. O código implementado usando essa função não é portátil para ambientes de criação do C++ Standard que não oferecem suporte a essa extensão da Microsoft.|
+|[make_unchecked_array_iterator](../standard-library/iterator-functions.md#make_unchecked_array_iterator)|Cria um [unchecked_array_iterator](../standard-library/unchecked-array-iterator-class.md) que pode ser usado por outros algoritmos. **Observação:**  Essa função é uma extensão da Biblioteca Padrão do C++ da Microsoft. O código implementado usando essa função não é portátil para ambientes de criação do C++ Standard que não oferecem suporte a essa extensão da Microsoft.|
 |[next](../standard-library/iterator-functions.md#next)|Itera um número de vezes especificado e retorna a nova posição do iterador.|
 |[prev](../standard-library/iterator-functions.md#prev)|Itera em ordem inversa um número de vezes especificado e retorna a nova posição do iterador.|
 
@@ -80,7 +80,7 @@ O Visual Studio adicionou extensões aos iteradores da Biblioteca Padrão do C++
 |-|-|
 |[back_insert_iterator](../standard-library/back-insert-iterator-class.md)|A classe de modelo descreve um objeto de iterador de saída. Insere elementos em um contêiner do tipo `Container`, que acessa por meio de protegido `pointer` contêiner chamado de objeto que armazena.|
 |[bidirectional_iterator_tag](../standard-library/bidirectional-iterator-tag-struct.md)|Uma classe que fornece um tipo de retorno para um `iterator_category` função que representa um iterador bidirecional.|
-|[checked_array_iterator](../standard-library/checked-array-iterator-class.md)|Uma classe que acessa uma matriz usando um iterador verificado de acesso aleatório. **Observação:** essa classe é uma extensão da Microsoft da Biblioteca Padrão C++. O código implementado usando essa função não é portátil para ambientes de criação do C++ Standard que não oferecem suporte a essa extensão da Microsoft.|
+|[checked_array_iterator](../standard-library/checked-array-iterator-class.md)|Uma classe que acessa uma matriz usando um iterador verificado de acesso aleatório. **Observação:**  Essa classe é uma extensão da Microsoft da Biblioteca Padrão C++. O código implementado usando essa função não é portátil para ambientes de criação do C++ Standard que não oferecem suporte a essa extensão da Microsoft.|
 |[forward_iterator_tag](../standard-library/forward-iterator-tag-struct.md)|Uma classe que fornece um tipo de retorno para um `iterator_category` função que representa um iterador de avanço.|
 |[front_insert_iterator](../standard-library/front-insert-iterator-class.md)|A classe de modelo descreve um objeto de iterador de saída. Insere elementos em um contêiner do tipo `Container`, que acessa por meio de protegido `pointer` contêiner chamado de objeto que armazena.|
 |[input_iterator_tag](../standard-library/input-iterator-tag-struct.md)|Uma classe que fornece um tipo de retorno para um `iterator_category` função que representa um iterador de entrada.|
@@ -95,7 +95,7 @@ O Visual Studio adicionou extensões aos iteradores da Biblioteca Padrão do C++
 |[output_iterator_tag](../standard-library/output-iterator-tag-struct.md)|Uma classe que fornece um tipo de retorno para `iterator_category` função que representa um iterador de saída.|
 |[random_access_iterator_tag](../standard-library/random-access-iterator-tag-struct.md)|Uma classe que fornece um tipo de retorno para `iterator_category` função que representa um iterador de acesso aleatório.|
 |[reverse_iterator](../standard-library/reverse-iterator-class.md)|A classe de modelo descreve um objeto que se comporta como um iterador de acesso aleatório, somente em ordem inversa.|
-|[unchecked_array_iterator](../standard-library/unchecked-array-iterator-class.md)|Uma classe que acessa uma matriz usando um iterador não verificado de acesso aleatório. **Observação:** essa classe é uma extensão da Microsoft da Biblioteca Padrão C++. O código implementado usando essa função não é portátil para ambientes de criação do C++ Standard que não oferecem suporte a essa extensão da Microsoft.|
+|[unchecked_array_iterator](../standard-library/unchecked-array-iterator-class.md)|Uma classe que acessa uma matriz usando um iterador não verificado de acesso aleatório. **Observação:**  Essa classe é uma extensão da Microsoft da Biblioteca Padrão C++. O código implementado usando essa função não é portátil para ambientes de criação do C++ Standard que não oferecem suporte a essa extensão da Microsoft.|
 
 ## <a name="see-also"></a>Consulte também
 

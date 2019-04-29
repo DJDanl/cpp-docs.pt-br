@@ -21,11 +21,11 @@ helpviewer_keywords:
 - COleVariant [MFC], SetString
 ms.assetid: e1b5cd4a-b066-4b9b-b48b-6215ed52d998
 ms.openlocfilehash: 2b2d0935380caed8ad9d6741b9107a5f879f7903
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57268052"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62373304"
 ---
 # <a name="colevariant-class"></a>Classe COleVariant
 
@@ -39,13 +39,13 @@ class COleVariant : public tagVARIANT
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
 |[COleVariant::COleVariant](#colevariant)|Constrói um objeto `COleVariant`.|
 
-### <a name="public-methods"></a>Métodos Públicos
+### <a name="public-methods"></a>Métodos públicos
 
 |Nome|Descrição|
 |----------|-----------------|

@@ -56,11 +56,11 @@ helpviewer_keywords:
 - AFX_GLOBAL_DATA constructor
 ms.assetid: c7abf2fb-ad5e-4336-a01d-260c29ed53a2
 ms.openlocfilehash: 0fd8143564beecccd8943f3ceba531e8697151d1
-ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55850318"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62212916"
 ---
 # <a name="afxglobaldata-structure"></a>Estrutura AFX_GLOBAL_DATA
 
@@ -74,7 +74,7 @@ struct AFX_GLOBAL_DATA
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|

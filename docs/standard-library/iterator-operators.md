@@ -18,11 +18,11 @@ helpviewer_keywords:
 - std::operator&lt; (iterator)
 - std::operator&lt;= (iterator), std::operator== (iterator)
 ms.openlocfilehash: 311710d5614bbc7c24d6b32e89285715476f94da
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50510793"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62224253"
 ---
 # <a name="ltiteratorgt-operators"></a>Operadores &lt;iterator&gt;
 
@@ -621,7 +621,7 @@ operator+(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Off*<br/>
+*_Off*<br/>
 O número de posições na constante move_iterator ou na constante reverse_iterator deve sofrer um deslocamento.
 
 *right*<br/>

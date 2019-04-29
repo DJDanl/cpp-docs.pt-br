@@ -33,11 +33,11 @@ helpviewer_keywords:
 - std::next [C++]
 - std::prev [C++]
 ms.openlocfilehash: f6ea1ac49dabbfc34af9c8ddd020543f606d37a4
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523670"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62224136"
 ---
 # <a name="ltiteratorgt-functions"></a>Funções &lt;iterador&gt;
 
@@ -213,7 +213,7 @@ Ty *begin(Ty (& array)[Size]);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Cont*<br/>
+*cont*<br/>
 Um contêiner.
 
 *array*<br/>
@@ -308,7 +308,7 @@ auto cbegin(const Container& cont)
 
 ### <a name="parameters"></a>Parâmetros
 
-*Cont*<br/>
+*cont*<br/>
 Um contêiner ou initializer_list.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -341,7 +341,7 @@ auto cend(const Container& cont)
 
 ### <a name="parameters"></a>Parâmetros
 
-*Cont*<br/>
+*cont*<br/>
 Um contêiner ou initializer_list.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -454,7 +454,7 @@ Ty *end(Ty (& array)[Size]);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Cont*<br/>
+*cont*<br/>
 Um contêiner.
 
 *array*<br/>
@@ -630,7 +630,7 @@ Iter Ptr,
 
 ### <a name="parameters"></a>Parâmetros
 
-*PTR*<br/>
+*Ptr*<br/>
 Um ponteiro para a matriz de destino.
 
 *Size*<br/>
@@ -740,7 +740,7 @@ unchecked_array_iterator<Iter>
 
 ### <a name="parameters"></a>Parâmetros
 
-*PTR*<br/>
+*Ptr*<br/>
 Um ponteiro para a matriz de destino.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -820,7 +820,7 @@ InputIterator next(
 *first*<br/>
 A posição atual.
 
-*Off*<br/>
+*_Off*<br/>
 O número de vezes que a iteração deve ser executada.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -847,7 +847,7 @@ BidirectionalIterator prev(
 *first*<br/>
 A posição atual.
 
-*Off*<br/>
+*_Off*<br/>
 O número de vezes que a iteração deve ser executada.
 
 ### <a name="remarks"></a>Comentários

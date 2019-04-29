@@ -12,11 +12,11 @@ helpviewer_keywords:
 - CFileTimeSpan class
 ms.assetid: 5856fb39-9c82-4027-8ccf-8760890491ec
 ms.openlocfilehash: 001e6ddc78a41e118949e9b750b78609f3ff9e92
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57746429"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62235296"
 ---
 # <a name="cfiletimespan-class"></a>Classe CFileTimeSpan
 
@@ -30,7 +30,7 @@ class CFileTimeSpan
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|

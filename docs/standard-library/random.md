@@ -7,11 +7,11 @@ helpviewer_keywords:
 - random header
 ms.assetid: 60afc25c-b162-4811-97c1-1b65398d4c57
 ms.openlocfilehash: 5b246be02c860ede6691db1c4d21af7e6b4da26a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50511846"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62369795"
 ---
 # <a name="ltrandomgt"></a>&lt;random&gt;
 
@@ -212,11 +212,11 @@ Esse código demonstra duas aleatorizações diferentes, aleatorizar um vetor de
 
 URNGs geralmente são descritos de acordo com essas propriedades:
 
-1. **Duração do período**: quantas iterações são necessárias para repetir a sequência de números gerada. Quanto maior, melhor.
+1. **Duração do período**: Quantas iterações são necessárias para repetir a sequência de números gerada. Quanto maior, melhor.
 
-2. **Desempenho**: a velocidade com que os números podem ser gerados e quanta memória isso ocupa. Quanto menor, melhor.
+2. **Desempenho**: A velocidade com que os números podem ser gerados e quanta memória isso ocupa. Quanto menor, melhor.
 
-3. **Qualidade**: a proximidade de uma sequência gerada de números verdadeiramente aleatórios. Isso geralmente é chamado de “*aleatoriedade*”.
+3. **Qualidade**: Qual a proximidade de uma sequência gerada de números verdadeiramente aleatórios. Isso geralmente é chamado de “*aleatoriedade*”.
 
 As seções a seguir listam os uniformes geradores de números aleatórios (URNGs) fornecidos no \<aleatório > cabeçalho.
 
@@ -437,7 +437,7 @@ Cada mecanismo e adaptador do mecanismo possuem os seguintes membros:
 
 - Um construtor explícito com o argumento `seed_seq& seq` que cria uma gerador propagado como se fosse chamando `seed(seq)`.
 
-- `void discard(unsigned long long count)` chama de maneira eficaz `operator()` `count` vezes e descarta cada valor.
+- `void discard(unsigned long long count)` efetivamente chama `operator()` `count` vezes e descarta cada valor.
 
 **Adaptadores do mecanismo** também dão suporte a esses membros (`Engine` é o primeiro parâmetro de modelo de um adaptador do mecanismo, designando o tipo do mecanismo básico):
 

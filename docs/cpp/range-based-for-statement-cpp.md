@@ -3,11 +3,11 @@ title: Instrução for com base em intervalo (C++)
 ms.date: 11/04/2016
 ms.assetid: 5750ba1d-ba48-4236-a923-e32de8345c2d
 ms.openlocfilehash: 1cbdb4e1636f471c26f6742b9e8686a332ed845f
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330925"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62244125"
 ---
 # <a name="range-based-for-statement-c"></a>Instrução for com base em intervalo (C++)
 
@@ -24,7 +24,7 @@ for ( for-range-declaration : expression )
 
 Usar baseado em intervalo **para** instrução para construir loops que devem ser executados por meio de um "intervalo", que é definido como qualquer coisa que você pode iterar por meio de — por exemplo, `std::vector`, ou qualquer outra biblioteca de padrão de C++ cujo intervalo de sequência é definido por uma `begin()` e `end()`. O nome que é declarado na `for-range-declaration` parte é local para o **para** instrução e não pode ser declarado novamente em `expression` ou `statement`. Observe que o [automática](../cpp/auto-cpp.md) palavra-chave é preferido no `for-range-declaration` parte da instrução.
 
-**Novo no Visual Studio 2017:** baseado em intervalo para loops não exigem mais que Begin e end () retornem objetos do mesmo tipo. Isso permite que end() retorne um objeto sentinela como usado por intervalos, conforme definido na proposta Ranges-V3. Para obter mais informações, consulte [Generalizing the Range-Based For Loop (Generalizando o loop “for” baseado em intervalo)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0184r0.html) e [range-v3 library on GitHub (Biblioteca range-v3 no GitHub)](https://github.com/ericniebler/range-v3).
+**Novo no Visual Studio 2017:**  Baseada em intervalo para loops que não exigem mais que begin() e end() retornem objetos do mesmo tipo. Isso permite que end() retorne um objeto sentinela como usado por intervalos, conforme definido na proposta Ranges-V3. Para obter mais informações, consulte [Generalizing the Range-Based For Loop (Generalizando o loop “for” baseado em intervalo)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0184r0.html) e [range-v3 library on GitHub (Biblioteca range-v3 no GitHub)](https://github.com/ericniebler/range-v3).
 
 Este código mostra como usar baseado em intervalo **para** loops para iterar por meio de uma matriz e um vetor:
 

@@ -15,11 +15,11 @@ helpviewer_keywords:
 - std::num_get [C++], get
 ms.assetid: 9933735d-3918-4b17-abad-5fca2adc62d7
 ms.openlocfilehash: c0984c15e2bf1682fc902264f47f340d0bd3c859
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50472755"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62223739"
 ---
 # <a name="numget-class"></a>Classe num_get
 
@@ -173,13 +173,13 @@ O início do intervalo de caracteres do qual o número será lido.
 *last*<br/>
 O fim do intervalo de caracteres do qual o número será lido.
 
-*Iosbase*<br/>
+*_Iosbase*<br/>
 O [ios_base](../standard-library/ios-base-class.md) cujos sinalizadores são usados pela conversão.
 
-*Estad_o*<br/>
+*_State*<br/>
 O estado para o qual failbit (consulte [ios_base::iostate](../standard-library/ios-base-class.md#iostate)) é adicionado após a falha.
 
-*Val*<br/>
+*val*<br/>
 O valor que foi lido.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -420,13 +420,13 @@ O início do intervalo de caracteres do qual o número será lido.
 *last*<br/>
 O fim do intervalo de caracteres do qual o número será lido.
 
-*Iosbase*<br/>
+*_Iosbase*<br/>
 O [ios_base](../standard-library/ios-base-class.md) cujos sinalizadores são usados pela conversão.
 
-*Estad_o*<br/>
+*_State*<br/>
 O estado para o qual failbit (consulte [ios_base::iostate](../standard-library/ios-base-class.md#iostate)) é adicionado após a falha.
 
-*Val*<br/>
+*val*<br/>
 O valor que foi lido.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -580,11 +580,11 @@ Valor inteiro usado para especificar o tipo de gerenciamento de memória do obje
 
 Os valores possíveis para o *_Refs* parâmetro e sua significância são:
 
-- 0: o tempo de vida do objeto é gerenciado pelas localidades que o contêm.
+- 0: O tempo de vida do objeto é gerenciado pelas localidades que o contêm.
 
-- 1: o tempo de vida do objeto deve ser gerenciado manualmente.
+- 1: O tempo de vida do objeto deve ser gerenciado manualmente.
 
-- \> 1: esses valores não estão definidos.
+- \> 1: Esses valores não estão definidos.
 
 Nenhum exemplo direto é possível, pois o destruidor está protegido.
 

@@ -14,11 +14,11 @@ helpviewer_keywords:
 - operators [C++], shift
 ms.assetid: 25fa0cbb-5fdd-4657-8745-b35f7d8f1606
 ms.openlocfilehash: 2f118c11aab9fb2bbdd6cfa4f23425077b382b23
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50565831"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62216415"
 ---
 # <a name="left-shift-and-right-shift-operators-gtgt-and-ltlt"></a>Operadores de deslocamento de deslocamento à esquerda e direita (&gt; &gt; e &lt; &lt;)
 
@@ -26,8 +26,8 @@ Os operadores shift bit a bit são o operador de deslocamento à direita (**&gt;
 
 ## <a name="syntax"></a>Sintaxe
 
-> *SHIFT-Expression&lt;2}{3&gt;Additive* `<<` *additive-expression*
-> *shift-Expression&lt;2}{3&gt;Additive* `>>` *additive-expression*
+> *shift-expression* `<<` *additive-expression*
+> *shift-expression* `>>` *additive-expression*
 
 ## <a name="remarks"></a>Comentários
 

@@ -23,11 +23,11 @@ helpviewer_keywords:
 - std::queue [C++], size
 ms.assetid: 28c20ab0-3a72-4185-9e0f-5a44eea0e204
 ms.openlocfilehash: 2b82e4237a525b09758323ae2483d8818fc938af
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429725"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62369937"
 ---
 # <a name="queue-class"></a>Classe queue
 
@@ -45,7 +45,7 @@ class queue
 *Tipo*<br/>
 O tipo de dados do elemento a ser armazenado na fila
 
-*Contêiner*<br/>
+*Container*<br/>
 O tipo do contêiner subjacente usado para implementar a fila.
 
 ## <a name="remarks"></a>Comentários
@@ -323,7 +323,7 @@ void push(const Type& val);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Val*<br/>
+*val*<br/>
 O elemento adicionado na parte final da fila.
 
 ### <a name="remarks"></a>Comentários

@@ -13,11 +13,11 @@ helpviewer_keywords:
 - CReversalTransition [MFC], m_duration
 ms.assetid: e89516be-2d07-4885-95a8-fc278f46e3ad
 ms.openlocfilehash: 4bd60ca13ff4a162ddd674e271291a1a3f09a856
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57299719"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62372121"
 ---
 # <a name="creversaltransition-class"></a>Classe CReversalTransition
 
@@ -31,7 +31,7 @@ class CReversalTransition : public CBaseTransition;
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|

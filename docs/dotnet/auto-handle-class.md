@@ -16,11 +16,11 @@ helpviewer_keywords:
 - msclr::auto_handle class
 ms.assetid: a65604d1-ecbb-44fd-ae2f-696ddeeed9d6
 ms.openlocfilehash: ad98bfa9ff447f08c458427961b427e0f2087e62
-ms.sourcegitcommit: 9813e146a4eb30929d8352872859e8fcb7ff6d2f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54806001"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62209263"
 ---
 # <a name="autohandle-class"></a>Classe auto_handle
 
@@ -218,7 +218,7 @@ Obtém o objeto contido.
 _element_type ^ get();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 O objeto contido.
 
@@ -278,7 +278,7 @@ Libera o objeto de `auto_handle` gerenciamento.
 _element_type ^ release();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 O objeto lançado.
 
@@ -450,7 +450,7 @@ O operador de acesso de membro.
 _element_type ^ operator->();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 O objeto que é encapsulado por `auto_handle`.
 
@@ -510,7 +510,7 @@ auto_handle<_element_type> % operator=(
 *_right*<br/>
 O `auto_handle` a ser atribuído ao atual `auto_handle`.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 O atual `auto_handle`agora proprietário `_right`.
 
@@ -585,7 +585,7 @@ template<typename _other_type>
 operator auto_handle<_other_type>();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 O atual `auto_handle` convertido em `auto_handle<_other_type>`.
 
@@ -639,7 +639,7 @@ Operador para usar `auto_handle` em uma expressão condicional.
 operator bool();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 `true` Se o objeto encapsulado for válido; `false` caso contrário.
 
@@ -684,7 +684,7 @@ Operador para usar `auto_handle` em uma expressão condicional.
 bool operator!();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 `true` Se o objeto encapsulado é inválido; `false` caso contrário.
 

@@ -20,11 +20,11 @@ helpviewer_keywords:
 - fonts [MFC], ActiveX controls
 ms.assetid: 7c51d602-3f5a-481d-84d1-a5d8a3a71761
 ms.openlocfilehash: ce1e913bb3bd1c3b74db43dc02d9d360b9cfd00c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57271301"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62239480"
 ---
 # <a name="mfc-activex-controls-using-fonts"></a>Controles ActiveX MFC: Usando fontes
 
@@ -236,5 +236,5 @@ Depois que essas alterações foram feitas ao seu projeto, recompile o projeto e
 ## <a name="see-also"></a>Consulte também
 
 [Controles ActiveX do MFC](../mfc/mfc-activex-controls.md)<br/>
-[Controles ActiveX MFC: Usando imagens em um controle ActiveX](../mfc/mfc-activex-controls-using-pictures-in-an-activex-control.md)<br/>
-[Controles ActiveX MFC: Usando páginas de propriedade de estoque](../mfc/mfc-activex-controls-using-stock-property-pages.md)
+[Controles ActiveX MFC: usar imagens em um controle ActiveX](../mfc/mfc-activex-controls-using-pictures-in-an-activex-control.md)<br/>
+[Controles ActiveX MFC: usar páginas de propriedade de estoque](../mfc/mfc-activex-controls-using-stock-property-pages.md)

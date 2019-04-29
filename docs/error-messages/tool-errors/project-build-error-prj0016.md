@@ -1,5 +1,5 @@
 ---
-title: Erro de Build PRJ0016 no Projeto
+title: Erro PRJ0016 (compilação de projeto)
 ms.date: 11/04/2016
 f1_keywords:
 - PRJ0016
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - PRJ0016
 ms.assetid: e9745336-883a-4c70-9c40-7753e02f0325
 ms.openlocfilehash: ada89b074fd8e0c2bfc75ba833e9c5966a145312
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50616860"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62359417"
 ---
-# <a name="project-build-error-prj0016"></a>Erro de Build PRJ0016 no Projeto
+# <a name="project-build-error-prj0016"></a>Erro PRJ0016 (compilação de projeto)
 
 Configurações de segurança do usuário evitam que o processo que está sendo criado. Essas configurações são necessárias para a compilação.
 

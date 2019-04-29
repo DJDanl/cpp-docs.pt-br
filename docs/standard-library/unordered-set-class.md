@@ -135,11 +135,11 @@ helpviewer_keywords:
 - std::unordered_set::swap
 ms.assetid: ac08084e-05a7-48c0-9ae4-d40c529922dd
 ms.openlocfilehash: 01c8b79f596c2fda8cef0a74a7b5dcdc70786dbf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50534986"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62362732"
 ---
 # <a name="unorderedset-class"></a>Classe unordered_set
 
@@ -161,7 +161,7 @@ class unordered_set;
 |Parâmetro|Descrição|
 |-|-|
 |*Chave*|O tipo principal.|
-|*hash*|O tipo de objeto da função de hash.|
+|*Hash*|O tipo de objeto da função de hash.|
 |*Pred*|O tipo de objeto da função de comparação de igualdade.|
 |*ALLOC*|A classe do alocador.|
 
@@ -1236,10 +1236,10 @@ size_type erase(const key_type& Key);
 *Where*<br/>
 A posição do elemento a ser removido.
 
-*Primeiro*<br/>
+*First*<br/>
 A posição do primeiro elemento a ser removido.
 
-*último*<br/>
+*Last*<br/>
 A posição logo após o último elemento a ser removido.
 
 *Chave*<br/>
@@ -1462,8 +1462,8 @@ void insert(initializer_list<value_type> IList);
 |*Val*|O valor de um elemento a ser inserido no unordered_set, a menos que ele já contenha um elemento cuja chave seja ordenada de maneira equivalente.|
 |*Where*|O local a partir do qual se começa a procurar pelo ponto de inserção correto.|
 |*ValTy*|Parâmetro de modelo que especifica o tipo de argumento que o unordered_set pode usar para construir um elemento de[value_type](../standard-library/map-class.md#value_type)e perfect-forwards *Val* como um argumento.|
-|*Primeiro*|A posição do primeiro elemento a ser copiado.|
-|*último*|A posição imediatamente após o último elemento a ser copiado.|
+|*First*|A posição do primeiro elemento a ser copiado.|
+|*Last*|A posição imediatamente após o último elemento a ser copiado.|
 |*InputIterator*|Argumento da função de modelo que atende aos requisitos de um [iterador de entrada](../standard-library/input-iterator-tag-struct.md) que aponta para elementos de um tipo que pode ser usado para construir objetos [value_type](../standard-library/map-class.md#value_type).|
 |*IList*|A [initializer_list](../standard-library/initializer-list.md) da qual os elementos serão copiados.|
 
@@ -2429,7 +2429,7 @@ unordered_set(
 |*InputIterator*|O tipo de iterador.|
 |*Al*|O objeto de alocador a ser armazenado.|
 |*Comp*|O objeto de função de comparação a ser armazenado.|
-|*hash*|O objeto de função de hash a ser armazenado.|
+|*Hash*|O objeto de função de hash a ser armazenado.|
 |*bucket_count*|O número mínimo de buckets.|
 |*Direita*|O contêiner a ser copiado.|
 |*IList*|A initializer_list que contém os elementos a serem copiados.|

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -Ob2 C++ compiler option
 - function inlining problems
 ms.assetid: 65d59943-4b3c-4a43-aeb6-dccbf7686740
-ms.openlocfilehash: fec3884dff0dda7140f18fa53e493c12996edcf0
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
-ms.translationtype: MT
+ms.openlocfilehash: f088b0f3ec94ad59c9c5576e6090a895bb88c3ad
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59031518"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62255494"
 ---
 # <a name="function-inlining-problems"></a>Problemas de inlining da função
 
@@ -24,7 +24,7 @@ Se você estiver usando o inlining de função, você deve:
 
 - Ter inlining ativadas no arquivo de cabeçalho.
 
-```
+```cpp
 // LNK2019_function_inline.cpp
 // compile with: /c
 // post-build command: lib LNK2019_function_inline.obj
@@ -39,7 +39,7 @@ void _load_config_used::Test() { printf("in Test\n"); }
 
 E, em seguida,
 
-```
+```cpp
 // LNK2019_function_inline_2.cpp
 // compile with: LNK2019_function_inline.lib
 struct _load_config_used {
@@ -60,7 +60,7 @@ Combinação de opções de compilação embutido e não ser embutida em módulo
 
 Da mesma forma, um projeto que usa o inlining de função ainda define as funções em um arquivo. cpp, em vez de no cabeçalho do arquivo também obterão LNK2019. O arquivo de cabeçalho é incluído em todos os lugares considerado apropriado, mas as funções são apenas embutidas quando o arquivo. cpp passa pelo compilador. Portanto, o vinculador vê as funções como externos não resolvidos quando usado em outros módulos.
 
-```
+```cpp
 // LNK2019_FIP.h
 struct testclass {
    void PublicStatMemFunc1(void);
@@ -69,7 +69,7 @@ struct testclass {
 
 E, em seguida,
 
-```
+```cpp
 // LNK2019_FIP.cpp
 // compile with: /c
 #include "LNK2019_FIP.h"
@@ -78,7 +78,7 @@ inline void testclass::PublicStatMemFunc1(void) {}
 
 E, em seguida,
 
-```
+```cpp
 // LNK2019_FIP_2.cpp
 // compile with: LNK2019_FIP.cpp
 // LNK2019 expected

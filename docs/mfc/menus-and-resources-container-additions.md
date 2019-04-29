@@ -17,11 +17,11 @@ helpviewer_keywords:
 - Links menu item [MFC]
 ms.assetid: 425448be-8ca0-412e-909a-a3a9ce845288
 ms.openlocfilehash: b1a74fef743592d3d052226dac926fc7ddc58578
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58770337"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62363460"
 ---
 # <a name="menus-and-resources-container-additions"></a>Menus e recursos: Adições de contêiner
 
@@ -86,4 +86,4 @@ A maioria das alterações às tabelas de cadeia de caracteres para aplicativos 
 ## <a name="see-also"></a>Consulte também
 
 [Menus e recursos (OLE)](../mfc/menus-and-resources-ole.md)<br/>
-[Menus e recursos: Adições de servidor](../mfc/menus-and-resources-server-additions.md)
+[Menus e recursos: adições de servidor](../mfc/menus-and-resources-server-additions.md)

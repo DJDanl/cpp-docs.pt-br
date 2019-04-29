@@ -7,11 +7,11 @@ helpviewer_keywords:
 - __clrcall keyword [C++]
 ms.assetid: 92096695-683a-40ed-bf65-0c8443572152
 ms.openlocfilehash: bc44feb97223de47f45734f75777ee040d0ebdd8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50534570"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62364565"
 ---
 # <a name="clrcall"></a>__clrcall
 
@@ -29,7 +29,7 @@ Quando `/clr` (não `/clr:pure` ou `/clr:safe`) é usado e **clrcall** não é u
 
 [/CLR (compilação de tempo de execução de linguagem comum)](../build/reference/clr-common-language-runtime-compilation.md) significa que todas as funções e ponteiros de função são **clrcall** e o compilador não permitirá que uma função dentro de compiland seja marcada como algo que não seja **clrcall**. Quando **/clr: pure** for usado, **clrcall** só pode ser especificado em ponteiros de função e declarações externas.
 
-Você pode chamar diretamente **clrcall** funções de código C++ existente que foi compilado usando **/clr** desde que essa função tem uma implementação de MSIL. **clrcall** funções não podem ser chamadas diretamente de funções que têm asm e chamam intrinisics específico da CPU, por exemplo, mesmo se essas funções forem compilados com `/clr`.
+Você pode chamar diretamente **clrcall** funções de existente C++ código que foi compilado usando **/clr** desde que essa função tem uma implementação de MSIL. **clrcall** funções não podem ser chamadas diretamente de funções que têm asm e chamam intrinisics específico da CPU, por exemplo, mesmo se essas funções forem compilados com `/clr`.
 
 **clrcall** ponteiros de função somente devem ser usadas no domínio do aplicativo no qual eles foram criados.  Em vez de passar **clrcall** ponteiros de função em domínios de aplicativo, use <xref:System.CrossAppDomainDelegate>. Para obter mais informações, consulte [domínios de aplicativo e do Visual C++](../dotnet/application-domains-and-visual-cpp.md).
 

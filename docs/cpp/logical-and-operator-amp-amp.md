@@ -9,11 +9,11 @@ helpviewer_keywords:
 - '&& operator'
 ms.assetid: 50cfa664-a8c4-4b31-9bab-2f80d7cd2d1f
 ms.openlocfilehash: 0843ba95467c3ae0d735476de48a8195a59788f0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50660545"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62368650"
 ---
 # <a name="logical-and-operator-ampamp"></a>Operador AND lógico: &amp;&amp;
 
@@ -41,7 +41,7 @@ char *pch = 0;
 
 Se `pch` for nulo (0), o lado direito da expressão nunca será avaliado. Portanto, a atribuição por meio de um ponteiro nulo é impossível.
 
-## <a name="operator-keyword-for-"></a>Palavra-chave do operador para &&
+## <a name="operator-keyword-for-"></a>Palavra-chave de operador para & &
 
 O **e** operador é o equivalente de texto de **&&**. Há duas maneiras para acessar o **e** operador em seus programas: incluir o arquivo de cabeçalho `iso646.h`, ou compilando com o [/Za](../build/reference/za-ze-disable-language-extensions.md) opção do compilador (desabilitar extensões de linguagem).
 

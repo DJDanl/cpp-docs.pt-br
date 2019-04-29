@@ -13,11 +13,11 @@ helpviewer_keywords:
 - encapsulated Win32 API [MFC]
 ms.assetid: 3be0fec8-9843-4119-ae42-ece993ef500b
 ms.openlocfilehash: 933fcf97c24ed0903395e2c718f8c89d42473494
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57269013"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62219763"
 ---
 # <a name="framework-mfc"></a>Framework (MFC)
 
@@ -41,7 +41,7 @@ Encapsulamento significa que a classe do C++ `CWnd`, por exemplo, contém uma va
 
 [Como o Framework chama o código](../mfc/how-the-framework-calls-your-code.md)
 
-[CWinApp: A classe do aplicativo](../mfc/cwinapp-the-application-class.md)
+[CWinApp: a classe do aplicativo](../mfc/cwinapp-the-application-class.md)
 
 [Modelos de documento e o processo de criação de documento/exibição](../mfc/document-templates-and-the-document-view-creation-process.md)
 
