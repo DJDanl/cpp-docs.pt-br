@@ -3,21 +3,21 @@ title: Classes e estruturas ref (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: 3d736b82-0bf0-48cf-bac1-cc9d110b70d1
 ms.openlocfilehash: e9ac14762dba580967fbecd245a81a4ff4356b64
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57741832"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62368585"
 ---
 # <a name="ref-classes-and-structs-ccx"></a>Classes e estruturas ref (C++/CX)
 
-O C + + c++ /CLI suporta CX definidos pelo usuário *classes ref* e *estruturas ref*, definidas pelo usuário *classes de valor* e *structs de valor*. Essas estruturas de dados são os contêineres principais pelos quais C + + c++ /CLI CX oferece suporte ao sistema de tipo de tempo de execução do Windows. O conteúdo é emitido para metadados de acordo com determinadas regras específicas, e isso permite que ele seja transmitido entre componentes de tempo de execução do Windows e aplicativos de plataforma Universal do Windows que são escritos em C++ ou outras linguagens.
+O C++suporta /CX definidos pelo usuário *classes ref* e *estruturas ref*e definidos pelo usuário *valor classes* e *structs de valor*. Essas estruturas de dados são os contêineres principais pelos quais C++/CX oferece suporte ao sistema de tipo de tempo de execução do Windows. O conteúdo é emitido para metadados de acordo com determinadas regras específicas, e isso permite que ele seja transmitido entre componentes de tempo de execução do Windows e aplicativos de plataforma Universal do Windows que são escritos em C++ ou outras linguagens.
 
 Uma classe ou estrutura ref apresenta estes recursos essenciais:
 
 - Ela deve ser declarada em um namespace, no escopo do namespace, e dentro dele ela pode ter acessibilidade pública ou privada. Somente os tipos públicos são emitidos para metadados. As definições de classes públicas aninhadas não são permitidas, incluindo classes [enum](../cppcx/enums-c-cx.md) públicas aninhadas. Para obter mais informações, consulte [Namespaces e visibilidade de tipo](../cppcx/namespaces-and-type-visibility-c-cx.md).
 
-- Ele pode conter como membros C + + c++ /CLI CX, incluindo classes ref, classes de valor, estruturas ref, estruturas de valor ou estruturas de valor anuláveis. Também pode conter tipos escalares como float64, bool etc. Pode conter também tipos C++ padrão, como `std::vector` ou uma classe personalizada, desde que não sejam públicos. C + + c++ /CLI CX construções podem ter `public`, `protected`, `internal`, `private`, ou `protected private` acessibilidade. Todos os membros `public` ou `protected` são emitidos para metadados. Os tipos C++ padrão devem ter acessibilidade `private`, `internal`ou `protected private` , o que os impede de serem emitidos em metadados.
+- Ele pode conter como membros C++/CX incluindo classes ref, classes de valor, estruturas ref, estruturas de valor ou estruturas de valor anuláveis. Também pode conter tipos escalares como float64, bool etc. Pode conter também tipos C++ padrão, como `std::vector` ou uma classe personalizada, desde que não sejam públicos. C++Construções /CX podem ter `public`, `protected`, `internal`, `private`, ou `protected private` acessibilidade. Todos os membros `public` ou `protected` são emitidos para metadados. Os tipos C++ padrão devem ter acessibilidade `private`, `internal`ou `protected private` , o que os impede de serem emitidos em metadados.
 
 - Ela pode implementar uma ou mais *classes de interface* ou *estruturas da interface*.
 
@@ -81,7 +81,7 @@ As classes ref públicas que têm parâmetros de tipo não são permitidas. Não
 
 ## <a name="destructors"></a>Destruidores
 
-No C + + c++ /CX, chamar `delete` em um destruidor público chama o destruidor independentemente da contagem de referência do objeto. Esse comportamento permite definir um destruidor que execute uma limpeza personalizada de recursos não RAII de uma maneira determinista. No entanto, mesmo nesse caso, o próprio objeto não é excluído da memória. A memória do objeto é liberada apenas quando a contagem de referência atinge o valor zero.
+No C++/CX, chamando `delete` em um destruidor público chama o destruidor independentemente da contagem de referência do objeto. Esse comportamento permite definir um destruidor que execute uma limpeza personalizada de recursos não RAII de uma maneira determinista. No entanto, mesmo nesse caso, o próprio objeto não é excluído da memória. A memória do objeto é liberada apenas quando a contagem de referência atinge o valor zero.
 
 Se o destruidor de uma classe não for público, ele será chamado apenas quando a contagem de referência atingir o valor zero. Se você chamar `delete` em um objeto que tem um destruidor privado, o compilador gerará o aviso c4493, informando que diz "expressão de exclusão não surte efeito porque o destruidor de \<nome do tipo > não tem acessibilidade 'pública'."
 
@@ -97,11 +97,11 @@ Não é permitida nenhuma outra combinação entre as características citadas a
 
 O comportamento será indefinido se você tentar acessar membros de uma classe que já tenha executado seu destruidor; provavelmente, isso causará falha do programa. Chamar `delete t` em um tipo que não tenha um destruidor público não terá nenhum efeito. Também não terá efeito nenhum chamar `delete this` em um tipo ou em uma classe base que tenha um destruidor `private` ou `protected private` conhecido de dentro da sua hierarquia de tipos.
 
-Quando você declara um destruidor público, o compilador gera o código de forma que a classe ref implemente `Platform::IDisposable` e o destruidor implemente o método `Dispose` . `Platform::IDisposable` é o C + + c++ /CLI projeção CX de `Windows::Foundation::IClosable`. Nunca implemente explicitamente essas interfaces.
+Quando você declara um destruidor público, o compilador gera o código de forma que a classe ref implemente `Platform::IDisposable` e o destruidor implemente o método `Dispose` . `Platform::IDisposable` é o C++/CX projeção dos `Windows::Foundation::IClosable`. Nunca implemente explicitamente essas interfaces.
 
 ## <a name="inheritance"></a>Herança
 
-Platform::Object é a classe base universal para todas as classes ref. Todas as classes ref podem ser convertidas implicitamente em Platform::Object e substituir [Object::ToString](../cppcx/platform-object-class.md#tostring). No entanto, o modelo de herança de tempo de execução do Windows não se destina geral modelo de herança; no C + + c++ /CX, isso significa que uma classe ref pública definida pelo usuário não pode servir como uma classe base.
+Platform::Object é a classe base universal para todas as classes ref. Todas as classes ref podem ser convertidas implicitamente em Platform::Object e substituir [Object::ToString](../cppcx/platform-object-class.md#tostring). No entanto, o modelo de herança de tempo de execução do Windows não se destina geral modelo de herança; no C++/CX, isso significa que uma classe ref pública definida pelo usuário não pode servir como uma classe base.
 
 Se você estiver criando um controle de usuário XAML, e o objeto participar do sistema de propriedade de dependência, poderá usar `Windows::UI::Xaml::DependencyObject` como uma classe base.
 
@@ -109,9 +109,9 @@ Após definir uma classe `MyBase` não lacrada que é herdada de `DependencyObje
 
 Não é necessário que uma classe ref privada seja derivada de uma classe não lacrada existente. Se for necessária uma hierarquia de objetos para modelar a estrutura do seu próprio programa ou para habilitar a reutilização de código, use classes ref privadas ou internas, ou melhor ainda, as classes C++ padrão. É possível expor a funcionalidade da hierarquia de objetos privados por meio de um wrapper de classe ref lacrada pública.
 
-Uma classe ref que tem um construtor público ou protegido no C + + c++ /CLI CX deve ser declarada como lacrada. Essa restrição significa que não há nenhuma maneira para classes que são escritos em outras linguagens como c# ou Visual Basic para herdar de tipos que você declara em um componente de tempo de execução do Windows que é escrito em C + + c++ /CLI CX.
+Uma classe ref que tem um construtor público ou protegido em C++/CX deve ser declarada como lacrada. Essa restrição significa que não há nenhuma maneira para classes que são escritos em outras linguagens, como C# ou o Visual Basic para herdar de tipos que você declara em um componente de tempo de execução do Windows que é escrito em C++/CX.
 
-Aqui estão as regras básicas de herança em C + + c++ /CX:
+Aqui estão as regras básicas de herança em C++/CX:
 
 - As classes ref podem ser herdadas diretamente de, no máximo, uma classe ref base, mas podem implementar qualquer número de interface.
 
@@ -130,6 +130,6 @@ O exemplo a seguir mostra como expor uma classe ref pública que deriva de outra
 ## <a name="see-also"></a>Consulte também
 
 [Sistema de tipos](../cppcx/type-system-c-cx.md)<br/>
-[Classes de valor e structs](../cppcx/value-classes-and-structs-c-cx.md)<br/>
+[Classes e estruturas de valor](../cppcx/value-classes-and-structs-c-cx.md)<br/>
 [Referência de linguagem do Visual C++](../cppcx/visual-c-language-reference-c-cx.md)<br/>
 [Referência de namespaces](../cppcx/namespaces-reference-c-cx.md)
