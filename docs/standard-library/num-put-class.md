@@ -15,11 +15,11 @@ helpviewer_keywords:
 - std::num_put [C++], put
 ms.assetid: 36c5bffc-8283-4201-8ed4-78c4d81f8a17
 ms.openlocfilehash: 2ede0ccd85f116f300939c819ae8209435da72b7
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327324"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62223552"
 ---
 # <a name="numput-class"></a>Classe num_put
 
@@ -142,13 +142,13 @@ virtual iter_type do_put(
 *next*<br/>
 Um iterador que trata o primeiro elemento na cadeia de caracteres inserida.
 
-*Iosbase*<br/>
+*_Iosbase*<br/>
 Foi especificado o fluxo que contém a localidade com a faceta numpunct usada para pontuar a saída e os sinalizadores para a formatação da saída.
 
 *_Fill*<br/>
 Um caractere que é usado para espaçamento.
 
-*Val*<br/>
+*val*<br/>
 O número ou tipo booliano que será a saída.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -315,11 +315,11 @@ Valor inteiro usado para especificar o tipo de gerenciamento de memória do obje
 
 Os valores possíveis para o *_Refs* parâmetro e sua significância são:
 
-- 0: o tempo de vida do objeto é gerenciado pelas localidades que o contêm.
+- 0: O tempo de vida do objeto é gerenciado pelas localidades que o contêm.
 
-- 1: o tempo de vida do objeto deve ser gerenciado manualmente.
+- 1: O tempo de vida do objeto deve ser gerenciado manualmente.
 
-- \> 1: esses valores não estão definidos.
+- \> 1: Esses valores não estão definidos.
 
 Nenhum exemplo direto é possível, pois o destruidor está protegido.
 
@@ -384,13 +384,13 @@ iter_type put(
 *dest*<br/>
 Um iterador que trata o primeiro elemento na cadeia de caracteres inserida.
 
-*Iosbase*<br/>
+*_Iosbase*<br/>
 Foi especificado o fluxo que contém a localidade com a faceta numpunct usada para pontuar a saída e os sinalizadores para a formatação da saída.
 
 *_Fill*<br/>
 Um caractere que é usado para espaçamento.
 
-*Val*<br/>
+*val*<br/>
 O número ou tipo booliano que será a saída.
 
 ### <a name="return-value"></a>Valor de retorno

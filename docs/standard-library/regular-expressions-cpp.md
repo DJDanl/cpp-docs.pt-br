@@ -7,11 +7,11 @@ helpviewer_keywords:
 - regular expressions
 ms.assetid: aafe202a-1d96-4b36-a270-d676dfd3c51c
 ms.openlocfilehash: dafbe7c7ba10db2b0f34fdc6065c1475d63be284
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50443453"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62369027"
 ---
 # <a name="regular-expressions-c"></a>Expressões regulares (C++)
 
@@ -24,9 +24,9 @@ A gramática de expressão regular a usar é por especificado pelo uso de um do 
 - `ECMAScript`: Isso é mais próximo a gramática usada por JavaScript e as linguagens do .NET.
 - `basic`: As expressões regulares básicas do POSIX ou BRE.
 - `extended`: O POSIX estendido ERE ou expressões regulares.
-- `awk`: Esta é `extended`, mas tem adicionais escapes de caracteres não imprimíveis.
-- `grep`: Esta é `basic`, mas também permite newline caracteres ('\n') separar alternações.
-- `egrep`: Esta é `extended`, mas também permite que os caracteres de nova linha separar alternações.
+- `awk`: Isso é `extended`, mas tem adicionais escapes de caracteres não imprimíveis.
+- `grep`: Isso é `basic`, mas também permite newline caracteres ('\n') separar alternações.
+- `egrep`: Isso é `extended`, mas também permite que os caracteres de nova linha separar alternações.
 
 Por padrão, não se for especificada nenhuma gramática, `ECMAScript` será assumido. Pode ser especificada apenas uma gramática.
 
@@ -34,7 +34,7 @@ A gramática, além de vários sinalizadores podem ser aplicados:
 - `icase`: Ignore maiusculas e minúsculas durante a correspondência.
 - `nosubs`: Ignorar marcadas correspondências (ou seja, expressões entre parênteses); Não há substituições são armazenadas.
 - `optimize`: Fazer a correspondência mais rapidamente, possivelmente às custas de maior tempo de construção.
-- `collate`: Use as sequências de agrupamento de distinção de localidade (por exemplo, os intervalos da forma "[a-z]").
+- `collate`: Use sequências de agrupamento de distinção de localidade (por exemplo, os intervalos da forma "[a-z]").
 
 Zero ou mais sinalizadores podem ser combinadas com a gramática para especificar o comportamento do mecanismo de expressão regular. Se apenas os sinalizadores forem especificados, `ECMAScript` é assumida como a gramática.
 
@@ -148,7 +148,7 @@ Para todas as gramáticas, exceto `basic` e `grep`, uma contagem de repetição 
 
 Exemplos:
 
-- "a"? corresponde à sequência de destino "" e a sequência de destino "a", mas não à sequência de destino "aa".
+- "a?" corresponde à sequência de destino "" e a sequência de destino "a", mas não à sequência de destino "aa".
 
 - "a+" corresponde à sequência de destino "a", à sequência de destino "aa", e assim por diante, mas não à sequência de destino "".
 
@@ -303,8 +303,8 @@ Um escape de caractere dsw é um nome curto para uma classe de caractere, confor
 |"\D"|"[^[:d:]]"|"[^[:digit:]]"|
 |"\s"|"[[:s:]]"|"[[:space:]]"|
 |"\S"|"[^[:s:]]"|"[^[:space:]]"|
-|"\w"|"[[:w:]]"|"[a-zA-Z0-9 _]"\*|
-|"\W"|"[^[:w:]]"|"[^ a-zA-Z0-9 _]"\*|
+|"\w"|"[[:w:]]"|"[a-zA-Z0-9_]"\*|
+|"\W"|"[^[:w:]]"|"[^a-zA-Z0-9_]"\*|
 
 \*Conjunto de caracteres ASCII
 
@@ -393,7 +393,7 @@ Um caractere comum é qualquer caractere válido que não tem um significado esp
 
 Em `ECMAScript`, os seguintes caracteres têm significados especiais:
 
-- ^  $  \  .  \*  +  ?  (  )  \[  ]  {  }&#124;
+- ^  $  \  .  \*  +  ?  (  )  \[  ]  {  }  &#124;
 
 Em `basic` e `grep`, os seguintes caracteres têm significados especiais:
 
@@ -480,7 +480,7 @@ Uma correspondência parcial será bem-sucedida se a correspondência atingir o 
 |"$&"|"&"|A sequência de caracteres que corresponde à expressão regular inteira (`[match[0].first, match[0].second)`)|
 |"$$"||"$"|
 ||"\\&"|"&"|
-|"$\`" (símbolo de dólar seguido pelo acento)||A sequência de caracteres que precede a subsequência que corresponde à expressão regular (`[match.prefix().first, match.prefix().second)`)|
+|"$\`" (símbolo de dólar seguido pelo acento) | | A sequência de caracteres que precede a subsequência que corresponde à expressão regular (`[match.prefix().first, match.prefix().second)`)|
 |"$'" (cifrão de dólar seguido por aspas simples)||A sequência de caracteres que segue a subsequência que corresponde à expressão regular (`[match.suffix().first, match.suffix().second)`)|
 |"$n"|"\n"|A sequência de caracteres que corresponde ao grupo de captura na posição `n`, onde `n` é um número entre 0 e 9 (`[match[n].first, match[n].second)`)|
 ||"\\\n"|"\n"|

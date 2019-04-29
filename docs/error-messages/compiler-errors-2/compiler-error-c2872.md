@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C2872
 ms.assetid: c619ef97-6e0e-41d7-867c-f8d28a07d553
 ms.openlocfilehash: 103998c7872b683c7405796ee28bd550246ae9bf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50566212"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62257602"
 ---
 # <a name="compiler-error-c2872"></a>Erro do compilador C2872
 
@@ -21,7 +21,7 @@ O compilador não pode determinar o símbolo que você está referenciando. Mais
 
 C2872 pode ocorrer se um arquivo de cabeçalho inclui um [diretiva using](../../cpp/namespaces-cpp.md#using_directives), e um arquivo de cabeçalho subsequente é incluído que contém um tipo que também está no namespace especificado no `using` diretiva. Especifique um `using` diretiva somente depois de todos os arquivos de cabeçalho são especificados com `#include`.
 
-C2872 pode ocorrer no Visual Studio 2013 devido a um conflito entre o `Windows::Foundation::Metadata::Platform` enum tipo e o C + + c++ /CLI definido pelo CX `Platform` namespace. Para contornar esse problema, siga estas etapas:
+C2872 pode ocorrer no Visual Studio 2013 devido a um conflito entre o `Windows::Foundation::Metadata::Platform` tipo de enumeração e o C++/definido pelo CX `Platform` namespace. Para contornar esse problema, siga estas etapas:
 
 - Remova a cláusula "using namespace Windows::Foundation::Metadata" dos arquivos de projeto.
 

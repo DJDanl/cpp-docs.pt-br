@@ -21,11 +21,11 @@ helpviewer_keywords:
 - std::packaged_task [C++], swap
 - std::packaged_task [C++], valid
 ms.openlocfilehash: e759b1bc8cb47c5c943f29545e3b03ee535f3df7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50515759"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62370665"
 ---
 # <a name="packagedtask-class"></a>Classe packaged_task
 
@@ -40,7 +40,7 @@ class packaged_task;
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
@@ -172,10 +172,10 @@ template <class Fn, class Alloc>
 *Direita*<br/>
 Um objeto `packaged_task`.
 
-*ALLOC*<br/>
+*alloc*<br/>
 Um alocador de memória. Para obter mais informações, consulte [\<allocators>](../standard-library/allocators-header.md).
 
-*Fn*<br/>
+*fn*<br/>
 Um objeto de função.
 
 ### <a name="remarks"></a>Comentários

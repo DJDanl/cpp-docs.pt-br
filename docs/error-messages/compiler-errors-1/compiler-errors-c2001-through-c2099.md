@@ -1,6 +1,6 @@
 ---
-title: Erros de compilador C2000 a c2099
-ms.date: 11/17/2017
+title: Erros do compilador C2000 a C2099
+ms.date: 04/21/2019
 f1_keywords:
 - C2000
 - C2016
@@ -36,14 +36,14 @@ helpviewer_keywords:
 - C2096
 - C2098
 ms.assetid: d99a19eb-eeeb-4181-9b33-9cbe4459767b
-ms.openlocfilehash: aff0faff5d8e58b46aa6280eb8f259dbd64acee9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.openlocfilehash: cf1d2f647c13b589463624749e29dc277f6f1d3e
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548142"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62360483"
 ---
-# <a name="compiler-errors-c2000-through-c2099"></a>Erros de compilador C2000 a c2099
+# <a name="compiler-errors-c2000-through-c2099"></a>Erros do compilador C2000 a C2099
 
 Os artigos nesta seção da documentação explicam um subconjunto das mensagens de erro que são gerados pelo compilador.
 
@@ -53,7 +53,7 @@ Os artigos nesta seção da documentação explicam um subconjunto das mensagens
 
 |Erro|Mensagem|
 |-----------|-------------|
-|C2000 de erro do compilador|Erro desconhecido, escolha o comando de suporte técnico no menu Ajuda do Visual C++, ou abra o arquivo de Ajuda do suporte técnico para obter mais informações|
+|Erro do compilador C2000|Erro desconhecido, escolha o comando de suporte técnico no menu Ajuda do Visual C++, ou abra o arquivo de Ajuda do suporte técnico para obter mais informações|
 |[Erro do compilador C2001](compiler-error-c2001.md)|Newline em constante|
 |[Erro do compilador C2002](compiler-error-c2002.md)|constante de caractere largo inválida|
 |[Erro do compilador C2003](compiler-error-c2003.md)|esperado 'defined id'|
@@ -69,29 +69,29 @@ Os artigos nesta seção da documentação explicam um subconjunto das mensagens
 |[Erro do compilador C2013](compiler-error-c2013.md)|faltando ' >'|
 |[Erro do compilador C2014](compiler-error-c2014.md)|comando de pré-processador deve começar como primeiro caractere diferente de espaço|
 |[Erro do compilador C2015](compiler-error-c2015.md)|número excessivo de caracteres na constante|
-|C2016 de erro do compilador|C requer que uma struct ou união tem pelo menos um membro|
+|Erro do compilador C2016|C requer que uma struct ou união tem pelo menos um membro|
 |[Erro do compilador C2017](compiler-error-c2017.md)|sequência de escape ilegal|
 |[Erro do compilador C2018](compiler-error-c2018.md)|caractere desconhecido ' 0 x*valor*'|
 |[Erro do compilador C2019](compiler-error-c2019.md)|esperada diretiva de pré-processador, encontrado '*caractere*'|
 |[Erro do compilador C2020](compiler-error-c2020.md)|'*membro*': '*classe*' redefinição de membro|
 |[Erro do compilador C2021](compiler-error-c2021.md)|esperado valor de expoente, não '*caractere*'|
 |[Erro do compilador C2022](compiler-error-c2022.md)|'*número*': muito grande para caractere|
-|C2023 de erro do compilador|'*identificador*': alinhamento (*Número1*) diferente da declaração anterior (*Número2*)|
-|C2024 de erro do compilador|o atributo 'alignas' se aplica a variáveis, membros de dados e somente os tipos de marcas|
-|C2025 de erro do compilador|arquivo de interface de módulo binário corrompido ou inválido: '*filename*'|
+|Erro do compilador C2023|'*identifier*': Alinhamento (*Número1*) diferente da declaração anterior (*Número2*)|
+|Erro do compilador C2024|o atributo 'alignas' se aplica a variáveis, membros de dados e somente os tipos de marcas|
+|Erro do compilador C2025|arquivo de interface de módulo binário corrompido ou inválido: '*filename*'|
 |[Erro do compilador C2026](compiler-error-c2026.md)|cadeia de caracteres muito grande, caracteres truncados à direita|
 |[Erro do compilador C2027](compiler-error-c2027.md)|uso do tipo indefinido '*tipo*'|
 |[Erro do compilador C2028](compiler-error-c2028.md)|membro de struct/union deve estar dentro de uma struct/union|
-|C2029 de erro do compilador|esquerda de '*token*'especifica indefinido class/struct/interface'*identificador*'|
+|Erro do compilador C2029|esquerda de '*token*'especifica indefinido class/struct/interface'*identificador*'|
 |[Erro do compilador C2030](compiler-error-c2030.md)|um destruidor com acessibilidade 'privada protegida' não pode ser um membro de uma classe declarada 'selada'|
-|C2031 de erro do compilador|um destruidor virtual com '*acessibilidade*' acessibilidade não é permitida para esse tipo|
+|Erro do compilador C2031|um destruidor virtual com '*acessibilidade*' acessibilidade não é permitida para esse tipo|
 |[Erro do compilador C2032](compiler-error-c2032.md)|'*identificador*': função não pode ser membro de struct/union '*tipo*'|
 |[Erro do compilador C2033](compiler-error-c2033.md)|'*identificador*': campo de bits não pode possuir indireção|
 |[Erro do compilador C2034](compiler-error-c2034.md)|'*identificador*': tipo de campo de bits muito pequeno para número de bits|
-|C2035 de erro do compilador|um destruidor não virtual com '*acessibilidade*' acessibilidade não é permitida para esse tipo|
+|Erro do compilador C2035|um destruidor não virtual com '*acessibilidade*' acessibilidade não é permitida para esse tipo|
 |[Erro do compilador C2036](compiler-error-c2036.md)|'*identificador*': tamanho desconhecido|
-|C2037 de erro do compilador|esquerda de '*identificador*'especifica struct/union indefinida'*tipo*'|
-|C2038 de erro do compilador|o namespace std não pode ser embutido|
+|Erro do compilador C2037|esquerda de '*identificador*'especifica struct/union indefinida'*tipo*'|
+|Erro do compilador C2038|o namespace std não pode ser embutido|
 |[Erro do compilador C2039](compiler-error-c2039.md)|'*identifier1*': não é um membro de '*identifier2*'|
 |[Erro do compilador C2040](compiler-error-c2040.md)|'*operador*': '*identifier1*'difere em níveis de indireção de'*identifier2*'|
 |[Erro do compilador C2041](compiler-error-c2041.md)|dígito inválido '*caractere*'para base'*número*'|
@@ -102,7 +102,7 @@ Os artigos nesta seção da documentação explicam um subconjunto das mensagens
 |[Erro do compilador C2046](compiler-error-c2046.md)|case inválido|
 |[Erro do compilador C2047](compiler-error-c2047.md)|default inválido|
 |[Erro do compilador C2048](compiler-error-c2048.md)|mais de um padrão|
-|C2049 de erro do compilador|'*identificador*': namespace não embutido não pode ser reaberto como embutido|
+|Erro do compilador C2049|'*identificador*': namespace não embutido não pode ser reaberto como embutido|
 |[Erro do compilador C2050](compiler-error-c2050.md)|expressão de switch não integral|
 |[Erro do compilador C2051](compiler-error-c2051.md)|expressão case não constante|
 |[Erro do compilador C2052](compiler-error-c2052.md)|'*tipo*': tipo inválido para expressão case|
@@ -121,7 +121,7 @@ Os artigos nesta seção da documentação explicam um subconjunto das mensagens
 |[Erro do compilador C2065](compiler-error-c2065.md)|'*identificador*': identificador não declarado|
 |[Erro do compilador C2066](compiler-error-c2066.md)|conversão para tipo de função é inválida|
 |[Erro do compilador C2067](compiler-error-c2067.md)|conversão para tipo de matriz é inválida|
-|C2068 de erro do compilador|uso ilegal de função sobrecarregada. Lista de argumentos ausente?|
+|Erro do compilador C2068|uso ilegal de função sobrecarregada. Lista de argumentos ausente?|
 |[Erro do compilador C2069](compiler-error-c2069.md)|Converter do termo 'void' para não 'void'|
 |[Erro do compilador C2070](compiler-error-c2070.md)|'*tipo*': operando de sizeof inválido|
 |[Erro do compilador C2071](compiler-error-c2071.md)|'*identificador*': classe de armazenamento inválida|
@@ -129,11 +129,11 @@ Os artigos nesta seção da documentação explicam um subconjunto das mensagens
 |[Erro do compilador C2073](compiler-error-c2073.md)|'*identificador*': elementos de matriz parcialmente inicializada devem ter um construtor padrão|
 |[Erro do compilador C2074](compiler-error-c2074.md)|'*identificador*': '*tipo*' inicialização requer uma lista de inicializadores entre chaves|
 |[Erro do compilador C2075](compiler-error-c2075.md)|'*identificador*': inicialização de matriz requer uma lista de inicializadores entre chaves|
-|C2076 de erro do compilador|uma lista de inicializadores entre chaves não pode ser usada em uma expressão new cujo tipo contém '*tipo*'|
+|Erro do compilador C2076|uma lista de inicializadores entre chaves não pode ser usada em uma expressão new cujo tipo contém '*tipo*'|
 |[Erro do compilador C2077](compiler-error-c2077.md)|inicializador de campo não escalar '*identificador*'|
 |[Erro do compilador C2078](compiler-error-c2078.md)|Muitos inicializadores|
 |[Erro do compilador C2079](compiler-error-c2079.md)|'*identificador*'usa indefinido em class/struct/union'*tipo*'|
-|C2080 de erro do compilador|'*identificador*': o tipo para '*tipo*' só pode ser deduzido de uma expressão de inicializador único|
+|Erro do compilador C2080|'*identificador*': o tipo para '*tipo*' só pode ser deduzido de uma expressão de inicializador único|
 |[Erro do compilador C2081](compiler-error-c2081.md)|'*identificador*': nome ilegal da lista de parâmetros formais|
 |[Erro do compilador C2082](compiler-error-c2082.md)|redefinição de parâmetro formal '*identificador*'|
 |[Erro do compilador C2083](compiler-error-c2083.md)|comparação de struct/union inválida|
@@ -149,7 +149,12 @@ Os artigos nesta seção da documentação explicam um subconjunto das mensagens
 |[Erro do compilador C2093](compiler-error-c2093.md)|'*identifier1*': não pode ser inicializado usando endereço da variável automática '*identifier2*'|
 |[Erro do compilador C2094](compiler-error-c2094.md)|rótulo '*identificador*' estava indefinido|
 |[Erro do compilador C2095](compiler-error-c2095.md)|'*função*': parâmetro real possui tipo 'void': parâmetro *número*|
-|C2096 de erro do compilador|'*identificador*': um membro de dados não pode ser inicializado com um inicializador entre parênteses|
+|Erro do compilador C2096|'*identifier*': Um membro de dados não pode ser inicializado com um inicializador entre parênteses|
 |[Erro do compilador C2097](compiler-error-c2097.md)|inicialização inválida|
-|C2098 de erro do compilador|token inesperado após o membro de dados '*identificador*'|
+|Erro do compilador C2098|token inesperado após o membro de dados '*identificador*'|
 |[Erro do compilador C2099](compiler-error-c2099.md)|inicializador não é uma constante|
+
+## <a name="see-also"></a>Consulte também
+
+[C /C++ ferramentas de compilador e build erros e avisos](../compiler-errors-1/c-cpp-build-errors.md) \
+[Erros do compilador C2000 - C3999](../compiler-errors-1/compiler-errors-c2000-c3999.md)

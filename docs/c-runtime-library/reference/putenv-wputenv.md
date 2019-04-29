@@ -35,11 +35,11 @@ helpviewer_keywords:
 - environment variables, modifying
 ms.assetid: 9ba9b7fd-276e-45df-8420-d70c4204b8bd
 ms.openlocfilehash: 952a4d62f6ceb6b689091ac09f6ca338d0b10864
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50432507"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62357872"
 ---
 # <a name="putenv-wputenv"></a>_putenv, _wputenv
 
@@ -61,7 +61,7 @@ int _wputenv(
 
 ### <a name="parameters"></a>Parâmetros
 
-*cadeiacaracenv*<br/>
+*envstring*<br/>
 Definição de cadeia de caracteres de ambiente.
 
 ## <a name="return-value"></a>Valor de retorno
@@ -76,7 +76,7 @@ O **putenv** função adiciona novas variáveis de ambiente ou modifica os valor
 
 |Rotina Tchar.h|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**tputenv**|**_putenv**|**_putenv**|**_wputenv**|
+|**_tputenv**|**_putenv**|**_putenv**|**_wputenv**|
 
 O *cadeiacaracenv* argumento deve ser um ponteiro para uma cadeia de caracteres do formulário *varname*=*sequência_dovalor*, em que *varname* é o nome da variável de ambiente a ser adicionada ou modificada e *sequência_dovalor* é o valor da variável. Se *varname* já é parte do ambiente, seu valor é substituído pelo *sequência_dovalor*; caso contrário, o novo *varname* variável e seu *sequência_dovalor*  valor são adicionadas ao ambiente. Você pode remover uma variável do ambiente especificando uma vazia *sequência_dovalor*, ou em outras palavras, especificando somente *varname*=.
 

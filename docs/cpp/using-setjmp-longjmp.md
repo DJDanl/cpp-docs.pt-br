@@ -13,11 +13,11 @@ helpviewer_keywords:
 - setjmp function, C++ programs
 ms.assetid: 96be8816-f6f4-4567-9a9c-0c3c720e37c5
 ms.openlocfilehash: 4ead12f79701899b3977993c9de3c3803023150f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525704"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62364513"
 ---
 # <a name="using-setjmp-and-longjmp"></a>Usando setjmp e o longjmp
 
@@ -32,7 +32,7 @@ Se você decidir usar `setjmp` e `longjmp` em um programa C++, também incluem \
 
 Se você usar um [/EH](../build/reference/eh-exception-handling-model.md) opção para compilar código C++, os destruidores de objetos locais são chamados durante o desenrolamento de pilha. No entanto, se você usar **/EHs** ou **/EHsc** para compilação e uma de suas funções que usa [noexcept](../cpp/noexcept-cpp.md) chamadas `longjmp`, em seguida, o destruidor de desenrolamento para essa função poderá não ocorrer, dependendo do estado de otimizador.
 
-No código portátil, quando um `longjmp` chamada é executada, destruição correta dos objetos baseados em quadro explicitamente não é garantida por padrão e pode não ter suporte por outros compiladores. Para permitir que você sabe, no nível de aviso 4, uma chamada para `setjmp` faz com que o aviso C4611: interação entre 'setjmp' e a destruição de objeto de C++ é não portátil.
+No código portátil, quando um `longjmp` chamada é executada, destruição correta dos objetos baseados em quadro explicitamente não é garantida por padrão e pode não ter suporte por outros compiladores. Para permitir que você sabe, no nível de aviso 4, uma chamada para `setjmp` faz com que o aviso C4611: interação entre 'setjmp' e C++ destruição de objeto é não portátil.
 
 **Fim da seção específica da Microsoft**
 

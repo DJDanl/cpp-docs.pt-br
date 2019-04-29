@@ -7,11 +7,11 @@ helpviewer_keywords:
 - conversions, standard
 ms.assetid: ce7ac8d3-5c99-4674-8229-0672de05528d
 ms.openlocfilehash: aee100bdc7e8ba6dd7d06c6bca9ed39c09cf2d97
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176972"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62267266"
 ---
 # <a name="standard-conversions"></a>Conversões padrão
 
@@ -61,7 +61,7 @@ Os objetos de um tipo integral podem ser convertidos em outro tipo integral mais
 
 - Tipos de enumeração
 
-- **int** campos de bits
+- **int** bit fields
 
 - Enumeradores
 

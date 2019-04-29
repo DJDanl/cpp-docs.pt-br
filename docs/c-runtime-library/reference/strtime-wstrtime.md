@@ -34,11 +34,11 @@ helpviewer_keywords:
 - time, copying
 ms.assetid: 9e538161-cf49-44ec-bca5-c0ab0b9e4ca3
 ms.openlocfilehash: 9d874321418854a703886eb80ee23ac1cba57fa4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50431106"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62223076"
 ---
 # <a name="strtime-wstrtime"></a>_strtime, _wstrtime
 
@@ -84,7 +84,7 @@ No C++, essas funções têm sobrecargas de modelo que invocam os equivalentes m
 
 |Rotina TCHAR.H|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**tstrtime**|**_strtime**|**_strtime**|**_wstrtime**|
+|**_tstrtime**|**_strtime**|**_strtime**|**_wstrtime**|
 
 ## <a name="requirements"></a>Requisitos
 

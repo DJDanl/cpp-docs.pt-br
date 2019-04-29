@@ -5,11 +5,11 @@ helpviewer_keywords:
 - output streams [C++], member functions
 ms.assetid: 38aaf710-8035-4a34-a0c4-123a5327f28a
 ms.openlocfilehash: eba627c69437754a9c0a819167443aa00c025fef
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50621761"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62370834"
 ---
 # <a name="output-file-stream-member-functions"></a>Funções de Membro de Fluxo de Arquivo de Saída
 
@@ -109,7 +109,7 @@ Use essas funções membro para testar se há erros ao gravar em um fluxo:
 |[good](basic-ios-class.md#good)|Retorna **true** não se houver nenhuma condição de erro (recuperável ou não) e o sinalizador de fim de arquivo não estiver definido.|
 |[eof](basic-ios-class.md#eof)|Retorna **true** na condição de fim de arquivo.|
 |[clear](basic-ios-class.md#clear)|Define o estado de erro interno. Se chamado com os argumentos padrão, limpa todos os bits de erro.|
-|[rdstate] (basic-ios-class.md #rdstate|Retorna o estado de erro atual.|
+|[rdstate](basic-ios-class.md#rdstate|Retorna o estado de erro atual.|
 
 O **!** operador está sobrecarregado para executar a mesma função que o `fail` função. Portanto, a expressão:
 

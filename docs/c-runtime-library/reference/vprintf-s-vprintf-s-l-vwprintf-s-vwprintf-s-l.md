@@ -36,11 +36,11 @@ helpviewer_keywords:
 - vprintf_s function
 ms.assetid: cf864996-a530-4b40-9c30-54c4cef439c8
 ms.openlocfilehash: 7fc49cbac375bdf1ecb3a6b977dfcc3e2b5ce170
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50561610"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62364812"
 ---
 # <a name="vprintfs-vprintfsl-vwprintfs-vwprintfsl"></a>vprintf_s, _vprintf_s_l, vwprintf_s, _vwprintf_s_l
 
@@ -105,15 +105,15 @@ As versões dessas funções com o **l** sufixo são idênticas, exceto que eles
 
 |Rotina TCHAR.H|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**vtprintf_s**|**vprintf_s**|**vprintf_s**|**vwprintf_s**|
-|**vtprintf_s_l**|**_vprintf_s_l**|**_vprintf_s_l**|**_vwprintf_s_l**|
+|**_vtprintf_s**|**vprintf_s**|**vprintf_s**|**vwprintf_s**|
+|**_vtprintf_s_l**|**_vprintf_s_l**|**_vprintf_s_l**|**_vwprintf_s_l**|
 
 ## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho necessário|Cabeçalhos opcionais|
 |-------------|---------------------|----------------------|
-|**vprintf_s**, **vprintf_s_l**|\<stdio.h> e \<stdarg.h>|\<varargs.h>*|
-|**vwprintf_s**, **vwprintf_s_l**|\<stdio.h> ou \<wchar.h> e \<stdarg.h>|\<varargs.h>*|
+|**vprintf_s**, **_vprintf_s_l**|\<stdio.h> e \<stdarg.h>|\<varargs.h>*|
+|**vwprintf_s**, **_vwprintf_s_l**|\<stdio.h> ou \<wchar.h> e \<stdarg.h>|\<varargs.h>*|
 
 \* Necessário para compatibilidade com UNIX V.
 

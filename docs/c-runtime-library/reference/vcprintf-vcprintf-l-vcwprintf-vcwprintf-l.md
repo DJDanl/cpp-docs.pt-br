@@ -44,11 +44,11 @@ helpviewer_keywords:
 - formatted text [C++]
 ms.assetid: 4ef8d237-6200-4b66-8731-8c57e5624bb1
 ms.openlocfilehash: e78d2f0b873042bda4fc79df100374b52751aebc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624751"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62364838"
 ---
 # <a name="vcprintf-vcprintfl-vcwprintf-vcwprintfl"></a>_vcprintf, _vcprintf_l, _vcwprintf, _vcwprintf_l
 
@@ -110,15 +110,15 @@ As versões dessas funções com o **l** sufixo são idênticas, exceto que eles
 
 |Rotina TCHAR.H|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**vtcprintf**|**_vcprintf**|**_vcprintf**|**_vcwprintf**|
-|**vtcprintf_l**|**_vcprintf_l**|**_vcprintf_l**|**_vcwprintf_l**|
+|**_vtcprintf**|**_vcprintf**|**_vcprintf**|**_vcwprintf**|
+|**_vtcprintf_l**|**_vcprintf_l**|**_vcprintf_l**|**_vcwprintf_l**|
 
 ## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho necessário|Cabeçalhos opcionais|
 |-------------|---------------------|----------------------|
-|**vcprintf**, **vcprintf_l**|\<conio.h> e \<stdarg.h>|\<varargs.h>*|
-|**vcwprintf**, **vcwprintf_l**|\<conio.h> ou \<wchar.h> e \<stdarg.h>|\<varargs.h>*|
+|**_vcprintf**, **_vcprintf_l**|\<conio.h> e \<stdarg.h>|\<varargs.h>*|
+|**_vcwprintf**, **_vcwprintf_l**|\<conio.h> ou \<wchar.h> e \<stdarg.h>|\<varargs.h>*|
 
 \* Necessário para compatibilidade com UNIX V.
 

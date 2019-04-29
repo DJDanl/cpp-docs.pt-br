@@ -6,11 +6,11 @@ helpviewer_keywords:
 - creating a ribbon aplication (MFC)
 ms.assetid: e61393e2-1d6b-4594-a7ce-157d3d1b0d9f
 ms.openlocfilehash: 29991a389a09e1fe3dc0074b80fd9a255458f673
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
-ms.translationtype: MT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58781218"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62358301"
 ---
 # <a name="walkthrough-creating-a-ribbon-application-by-using-mfc"></a>Passo a passo: Criando um aplicativo de faixa de opções usando MFC
 
@@ -83,9 +83,9 @@ Este passo a passo pressupõe que você configurou o Visual Studio para usar **c
 
 ## <a name="next-steps"></a>Próximas etapas
 
-[Como: Personalizar a barra de ferramentas de acesso rápido](../mfc/how-to-customize-the-quick-access-toolbar.md)
+[Como: personalizar a barra de ferramentas de acesso rápido](../mfc/how-to-customize-the-quick-access-toolbar.md)
 
-[Como: Personalizar o botão do aplicativo](../mfc/how-to-customize-the-application-button.md)
+[Como: personalizar o botão do aplicativo](../mfc/how-to-customize-the-application-button.md)
 
 Para obter exemplos de ponta a ponta, consulte [exemplos (MFC Feature Pack)](../overview/visual-cpp-samples.md).
 

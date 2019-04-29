@@ -35,11 +35,11 @@ helpviewer_keywords:
 - _vftprintf_s function
 ms.assetid: eab6f563-46e2-4806-963f-2b23f339ecdc
 ms.openlocfilehash: fc04dbc9c23e86694686953bf3184e370714841c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50486626"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62364825"
 ---
 # <a name="vfprintfs-vfprintfsl-vfwprintfs-vfwprintfsl"></a>vfprintf_s, _vfprintf_s_l, vfwprintf_s, _vfwprintf_s_l
 
@@ -74,7 +74,7 @@ int _vfwprintf_s_l(
 
 ### <a name="parameters"></a>Parâmetros
 
-*fluxo*<br/>
+*stream*<br/>
 Ponteiro para a estrutura **FILE**.
 
 *format*<br/>
@@ -111,15 +111,15 @@ As versões dessas funções com o **l** sufixo são idênticas, exceto que eles
 
 |Rotina TCHAR.H|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**vftprintf_s**|**vfprintf_s**|**vfprintf_s**|**vfwprintf_s**|
-|**vftprintf_s_l**|**_vfprintf_s_l**|**_vfprintf_s_l**|**_vfwprintf_s_l**|
+|**_vftprintf_s**|**vfprintf_s**|**vfprintf_s**|**vfwprintf_s**|
+|**_vftprintf_s_l**|**_vfprintf_s_l**|**_vfprintf_s_l**|**_vfwprintf_s_l**|
 
 ## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho necessário|Cabeçalhos opcionais|
 |-------------|---------------------|----------------------|
-|**vfprintf_s**, **vfprintf_s_l**|\<stdio.h> e \<stdarg.h>|\<varargs.h>*|
-|**vfwprintf_s**, **vfwprintf_s_l**|\<stdio.h> ou \<wchar.h> e \<stdarg.h>|\<varargs.h>*|
+|**vfprintf_s**, **_vfprintf_s_l**|\<stdio.h> e \<stdarg.h>|\<varargs.h>*|
+|**vfwprintf_s**, **_vfwprintf_s_l**|\<stdio.h> ou \<wchar.h> e \<stdarg.h>|\<varargs.h>*|
 
 \* Necessário para compatibilidade com UNIX V.
 

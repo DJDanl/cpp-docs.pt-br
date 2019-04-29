@@ -43,11 +43,11 @@ helpviewer_keywords:
 - CObArray [MFC], SetSize
 ms.assetid: c23b87a3-bf84-49d6-a66b-61e999d0938a
 ms.openlocfilehash: 59ecf01b81c4150e2bdae3b6d2862c1b3e91152b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57281714"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62372394"
 ---
 # <a name="cptrarray-class"></a>Classe CPtrArray
 
@@ -75,7 +75,7 @@ por exemplo, traduz para
 |----------|-----------------|
 |[CObArray::CObArray](../../mfc/reference/cobarray-class.md#cobarray)|Constrói uma matriz vazia.|
 
-### <a name="public-methods"></a>Métodos Públicos
+### <a name="public-methods"></a>Métodos públicos
 
 |Nome|Descrição|
 |----------|-----------------|
@@ -97,7 +97,7 @@ por exemplo, traduz para
 |[CObArray::SetAtGrow](../../mfc/reference/cobarray-class.md#setatgrow)|Define o valor de um determinado índice; aumenta a matriz quando necessário.|
 |[CObArray::SetSize](../../mfc/reference/cobarray-class.md#setsize)|Define o número de elementos a ser contido nesta matriz.|
 
-### <a name="public-operators"></a>Operadores Públicos
+### <a name="public-operators"></a>Operadores públicos
 
 |Nome|Descrição|
 |----------|-----------------|

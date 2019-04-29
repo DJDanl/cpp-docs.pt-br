@@ -9,11 +9,11 @@ helpviewer_keywords:
 - CComAutoCriticalSection class
 ms.assetid: 491a9d90-3398-4f90-88f5-fd2172a46b30
 ms.openlocfilehash: 613440eceb71f0277f4cc5de2af89fe263772797
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57301604"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62260182"
 ---
 # <a name="ccomautocriticalsection-class"></a>Classe CComAutoCriticalSection
 
@@ -27,7 +27,7 @@ class CComAutoCriticalSection : public CComCriticalSection
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|

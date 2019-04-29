@@ -25,11 +25,11 @@ helpviewer_keywords:
 - CMFCTasksPaneTaskGroup [MFC], m_strName
 ms.assetid: 2111640b-a46e-4b27-b033-29e88632b86a
 ms.openlocfilehash: a28f00fb732727ec1334946a9e752679307cd3a0
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57295221"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62222210"
 ---
 # <a name="cmfctaskspanetaskgroup-class"></a>Classe CMFCTasksPaneTaskGroup
 
@@ -43,7 +43,7 @@ class CMFCTasksPaneTaskGroup : public CObject
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|

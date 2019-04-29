@@ -9,11 +9,11 @@ helpviewer_keywords:
 - __stdcall keyword [C++]
 ms.assetid: e212594b-1827-4d07-9527-7d412b300df8
 ms.openlocfilehash: b9efac6f729a78db945ff3bd9ab16ebe315b7a5a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50560626"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62266953"
 ---
 # <a name="stdcall"></a>__stdcall
 
@@ -23,7 +23,7 @@ O **stdcall** convenção de chamada é usada para chamar funções de API do Wi
 
 ## <a name="syntax"></a>Sintaxe
 
-> *tipo de retorno*  **\_ \_stdcall** *nome da função*[**(** *lista de argumentos* **)** ]
+> *return-type* **\_\_stdcall** *function-name*[**(** *argument-list* **)**]
 
 ## <a name="remarks"></a>Comentários
 

@@ -131,11 +131,11 @@ helpviewer_keywords:
 - CRecordset [MFC], m_strSort
 ms.assetid: dd89a21d-ef39-4aab-891b-1e373d67c855
 ms.openlocfilehash: efb833a8d4cc0b801f75951bc648d6b83df5bae8
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57305179"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62372188"
 ---
 # <a name="crecordset-class"></a>Classe CRecordset
 
@@ -149,7 +149,7 @@ class CRecordset : public CObject
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|

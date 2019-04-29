@@ -19,11 +19,11 @@ helpviewer_keywords:
 - OLE menus and resources [MFC]
 ms.assetid: 52bfa086-7d3d-466f-94c7-c7061f3bdb3a
 ms.openlocfilehash: 4e8f8c7fa8e24349a741b99822f13d5473373e17
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57268519"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62225461"
 ---
 # <a name="menus-and-resources-ole"></a>Menus e recursos (OLE)
 
@@ -54,11 +54,11 @@ Cada um desses nomes de recurso representa um menu e, geralmente, uma tabela de 
 
 Os artigos a seguir abordam tópicos relacionados a contêineres, servidores e o menu de mesclagem necessárias para implementar a ativação no local:
 
-- [Menus e recursos: Adições de contêiner](../mfc/menus-and-resources-container-additions.md)
+- [Menus e recursos: adições de contêiner](../mfc/menus-and-resources-container-additions.md)
 
-- [Menus e recursos: Adições de servidor](../mfc/menus-and-resources-server-additions.md)
+- [Menus e recursos: adições de servidor](../mfc/menus-and-resources-server-additions.md)
 
-- [Menus e recursos: Mesclagem de menu](../mfc/menus-and-resources-menu-merging.md)
+- [Menus e recursos: mesclagem de menu](../mfc/menus-and-resources-menu-merging.md)
 
 ## <a name="see-also"></a>Consulte também
 

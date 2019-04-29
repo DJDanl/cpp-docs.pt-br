@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Visual C++, preprocessor macros
 ms.assetid: a7bfc5d4-2537-4fe0-bef0-70cec0b43388
 ms.openlocfilehash: 281aaf686c07894b5cb1fab187ba903179c51de8
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59032174"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62371770"
 ---
 # <a name="macros-cc"></a>Macros (C/C++)
 Pré-processamento expande macros em todas as linhas que não são diretivas de pré-processador (linhas que não têm uma **#** como o primeiro caractere diferente de espaço em branco) e em partes de algumas políticas que não são ignoradas como parte de um compilação condicional. As políticas de “compilação condicional” permitem que você suprima a compilação de partes de um arquivo de origem testando uma expressão constante ou um identificador para determinar quais blocos de texto passam no compilador e que são removidos do arquivo de origem durante o pré-processamento.

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - PROC directive
 ms.assetid: ee5bb6b6-fa15-4d73-b0cf-e650178539a9
 ms.openlocfilehash: e7931c97570c0fefcacb0123d75934867793fba4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50439618"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62210528"
 ---
 # <a name="proc"></a>PROC
 
@@ -19,10 +19,10 @@ Marca o início e término de um bloco do procedimento chamado *rótulo*. As ins
 
 ## <a name="syntax"></a>Sintaxe
 
-> *rótulo* PROC [[*distância*]] [[*langtype*]] [[*visibilidade*]] [[\<*prologuearg*>]] [[ USA *reglist*]] [[, *parâmetro* [[:*marca*]]]...<br/>
-> [[Quadro [[:*ehandler endereço*]]]]<br/>
-> *Instruções*<br/>
-> *rótulo* ENDP
+> *label* PROC [[*distance*]] [[*langtype*]] [[*visibility*]] [[\<*prologuearg*>]] [[USES *reglist*]] [[, *parameter* [[:*tag*]]]] ...<br/>
+> [[FRAME [[:*ehandler-address*]] ]]<br/>
+> *statements*<br/>
+> *label* ENDP
 
 ## <a name="remarks"></a>Comentários
 

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - CSocket class [MFC], programming model
 ms.assetid: 17e71a99-a09e-4e1a-9fda-13d62805c824
 ms.openlocfilehash: 71a7ed1f1b67bed157805328679a18ceabf201d3
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57261499"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62358273"
 ---
 # <a name="windows-sockets-using-sockets-with-archives"></a>Windows Sockets: Usando soquetes com arquivos mortos
 
@@ -46,7 +46,7 @@ Usando um `CSocket` objeto envolve criar e associar juntos vários objetos de cl
 
 1. Se o soquete é um cliente, chame [CAsyncSocket::Connect](../mfc/reference/casyncsocket-class.md#connect) para conectar-se o objeto de soquete para um soquete de servidor.
 
-     -ou-
+     - ou -
 
    Se o soquete é um servidor, chame [CAsyncSocket::Listen](../mfc/reference/casyncsocket-class.md#listen) para começar a escutar tentativas de conexão de um cliente. Ao receber uma solicitação de conexão, aceitá-lo chamando [CAsyncSocket::Accept](../mfc/reference/casyncsocket-class.md#accept).
 
@@ -74,9 +74,9 @@ O artigo [Windows Sockets: Sequência de operações](../mfc/windows-sockets-seq
 
 Para obter mais informações, consulte:
 
-- [Windows Sockets: Stream Sockets](../mfc/windows-sockets-stream-sockets.md)
+- [Windows Sockets: soquetes de fluxo](../mfc/windows-sockets-stream-sockets.md)
 
-- [Windows Sockets: Soquetes de datagrama](../mfc/windows-sockets-datagram-sockets.md)
+- [Windows Sockets: soquetes de datagrama](../mfc/windows-sockets-datagram-sockets.md)
 
 ## <a name="see-also"></a>Consulte também
 

@@ -23,11 +23,11 @@ helpviewer_keywords:
 - CContainedWindowT class
 ms.assetid: cde0ca36-9347-4068-995a-d294dae57ca9
 ms.openlocfilehash: 660c6c047bb700e531fd941ac8ed19d638866070
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57421565"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62246043"
 ---
 # <a name="ccontainedwindowt-class"></a>Classe CContainedWindowT
 
@@ -56,7 +56,7 @@ Uma classe de características que define os estilos para a sua janela. O padrã
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|

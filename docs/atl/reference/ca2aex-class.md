@@ -11,11 +11,11 @@ helpviewer_keywords:
 - CA2AEX class
 ms.assetid: 57dc65df-d9cf-4a84-99d3-6e031dde3664
 ms.openlocfilehash: 712e663ab58e2c9de4e2f25090b84b35d0bced71
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57293817"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62247632"
 ---
 # <a name="ca2aex-class"></a>Classe CA2AEX
 
@@ -38,7 +38,7 @@ O tamanho do buffer usado no processo de tradução. O comprimento padrão é 12
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|

@@ -61,11 +61,11 @@ helpviewer_keywords:
 - COleSafeArray [MFC], Unlock
 ms.assetid: f45a5224-5f48-40ec-9ddd-287ef9740150
 ms.openlocfilehash: 0833dca9311689063c2ebeadd3942d9f5ce376e2
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57267154"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62224417"
 ---
 # <a name="colesafearray-class"></a>Classe COleSafeArray
 
@@ -79,13 +79,13 @@ class COleSafeArray : public tagVARIANT
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
 |[COleSafeArray::COleSafeArray](#colesafearray)|Constrói um objeto `COleSafeArray`.|
 
-### <a name="public-methods"></a>Métodos Públicos
+### <a name="public-methods"></a>Métodos públicos
 
 |Nome|Descrição|
 |----------|-----------------|

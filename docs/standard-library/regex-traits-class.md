@@ -39,11 +39,11 @@ helpviewer_keywords:
 - std::regex_traits [C++], getloc
 ms.assetid: bc5a5eed-32fc-4eb7-913d-71c42e729e81
 ms.openlocfilehash: 80739d3d8f4bfd38dc3d252a5f3d6308653a7bb9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50484052"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62369118"
 ---
 # <a name="regextraits-class"></a>Classe regex_traits
 
@@ -95,7 +95,7 @@ Cada objeto `regex_traits` contém um objeto do tipo `regex_traits::locale` que 
 |[lookup_collatename](#lookup_collatename)|Mapeia uma sequência para um elemento de agrupamento.|
 |[transform](#transform)|É convertido na sequência ordenada equivalente.|
 |[transform_primary](#transform_primary)|É convertido na sequência ordenada sem distinção de maiúsculas e minúsculas.|
-|[Traduzir](#translate)|É convertido no elemento correspondente equivalente.|
+|[translate](#translate)|É convertido no elemento correspondente equivalente.|
 |[translate_nocase](#translate_nocase)|É convertido no elemento correspondente equivalente sem distinção de maiúsculas e minúsculas.|
 |[value](#value)|Converte um elemento em um valor de dígito.|
 
@@ -221,7 +221,7 @@ locale_type imbue(locale_type loc);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Loc*<br/>
+*loc*<br/>
 O objeto de localidade a ser armazenado.
 
 ### <a name="remarks"></a>Comentários
@@ -241,7 +241,7 @@ bool isctype(char_type ch, char_class_type cls) const;
 *ch*<br/>
 O elemento para teste.
 
-*com CLS*<br/>
+*cls*<br/>
 As classes de teste.
 
 ### <a name="remarks"></a>Comentários

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - hosting Windows Forms control [C++]
 ms.assetid: 43c02ab4-1366-434c-a980-0b19326d6ea0
 ms.openlocfilehash: 9c59f28739ab94210c16bd800a48997f3f2282df
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57739787"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62222865"
 ---
 # <a name="hosting-a-windows-forms-user-control-as-an-mfc-view"></a>Hospedando um controle de usuário dos Windows Forms como uma exibição MFC
 

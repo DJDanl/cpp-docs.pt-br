@@ -3,11 +3,11 @@ title: OpenMP Interface de programa do aplicativo C e C++
 ms.date: 03/20/2019
 ms.assetid: efec8865-a755-452f-838f-ddbfecab44d4
 ms.openlocfilehash: dc3ab50059f16abc2cc6148395ef6982e5f85449
-ms.sourcegitcommit: 14b292596bc9b9b883a9c58cd3e366b282a1f7b3
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60124831"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62362693"
 ---
 # <a name="openmp-c-and-c-application-program-interface"></a>OpenMP Interface de programa do aplicativo C e C++
 
@@ -35,9 +35,9 @@ R. [Exemplos](a-examples.md)
 
 B. [Stubs para funções da biblioteca em tempo de execução](b-stubs-for-run-time-library-functions.md)
 
-C. [OpenMP C e C++ gramática](c-openmp-c-and-cpp-grammar.md)
+C. [Gramática C e C++ do OpenMP](c-openmp-c-and-cpp-grammar.md)
 
-D. [A cláusula de agendamento](d-using-the-schedule-clause.md)
+D. [A cláusula schedule](d-using-the-schedule-clause.md)
 
 E. [Comportamentos definidos por implementação no OpenMP C/C++](e-implementation-defined-behaviors-in-openmp-c-cpp.md)
 

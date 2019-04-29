@@ -7,11 +7,11 @@ helpviewer_keywords:
 - recordsets, sorting
 ms.assetid: b40b152e-0a91-452e-be7b-e5bc27f744c7
 ms.openlocfilehash: 831f21901186ed0ae010b0f332327eefcba94b51
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59024654"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62368624"
 ---
 # <a name="recordset-sorting-records-odbc"></a>Conjunto de registros: Classificando registros (ODBC)
 
@@ -62,5 +62,5 @@ O conjunto de registros contém todos os registros de alunos, classificados em o
 ## <a name="see-also"></a>Consulte também
 
 [Conjunto de registros (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Conjunto de registros: Parametrizando um conjunto de registros (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)<br/>
-[Conjunto de registros: Filtrando registros (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md)
+[Conjunto de registros: parametrizar um conjunto de registros (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)<br/>
+[Conjunto de registros: filtrar registros (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md)

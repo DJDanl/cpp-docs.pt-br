@@ -1,20 +1,72 @@
 ---
-title: Erros e avisos de otimização orientada a perfil
-ms.date: 11/04/2016
+title: Erros e avisos de otimização guiada por perfil
+ms.date: 04/17/2019
+f1_keywords:
+- PG0001
+- PG0002
+- PG0003
+- PG0061
+- PG0062
+- PG0063
+- PG0065
+- PG0066
+- PG0067
+- PG0068
+- PG0069
+- PG0070
+- PG0071
+- PG0081
+- PG0087
+- PG0090
+- PG0091
+- PG0092
+- PG0094
+- PG0096
+- PG0168
+- PG0169
+- PG0181
+- PG0188
+- PG1000
+- PG1001
+- PG1032
+- PG1033
+- PG1035
+- PG1036
+- PG1038
+- PG1051
+- PG1052
+- PG1053
+- PG1056
+- PG1058
+- PG1060
+- PG1061
+- PG1065
+- PG1066
+- PG1067
 ms.assetid: f67b1011-fb64-4df3-9356-d52c9423ff3f
-ms.openlocfilehash: f4c452ac8d3b4e06c3b32527a86a4049f0d8a433
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.openlocfilehash: 9be94ee3145dc23543fa5880c14e08a2ed25c76b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50623139"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62359742"
 ---
-# <a name="profile-guided-optimization-errors-and-warnings"></a>Erros e avisos de otimização orientada a perfil
+# <a name="profile-guided-optimization-errors-and-warnings-pgxxxx"></a>Erros de Otimização Guiada por perfil e avisos (PGxxxx)
 
-Esta seção é uma referência aos erros gerados pelas ferramentas de compilação. Para obter ajuda com uma mensagem de erro específica, clique no número de erro na janela de saída e pressiona F1, digite o número de erro na **procure** caixa no índice, ou clique no link apropriado:
+Esta seção é uma referência aos erros gerados pelas ferramentas de Otimização Guiada por perfil (PGO). Avisos e erros PGO têm o formato PG*xxxx*, onde *xxxx* é um número de quatro dígitos.
+
+[!INCLUDE[error-boilerplate](../../error-messages/includes/error-boilerplate.md)]
+
+## <a name="pgo-errors"></a>Erros PGO
 
 [Erro de otimização guiada por perfil PG0165](../../error-messages/tool-errors/profile-guided-optimization-error-pg0165.md)
 
-[Aviso de otimização guiada por perfil PG1039](../../error-messages/tool-errors/profile-guided-optimization-warning-pg1039.md)
+## <a name="pgo-warnings"></a>Avisos de PGO
 
+[Otimização Guiada por perfil PG1039 de aviso](../../error-messages/tool-errors/profile-guided-optimization-warning-pg1039.md) \
 [Aviso de otimização guiada por perfil PG1087](../../error-messages/tool-errors/profile-guided-optimization-warning-pg1087.md)
+
+## <a name="see-also"></a>Consulte também
+
+[C /C++ ferramentas de compilador e build erros e avisos](../compiler-errors-1/c-cpp-build-errors.md) \
+[Otimizações guiadas por perfil](../../build/profile-guided-optimizations.md)

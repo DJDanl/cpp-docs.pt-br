@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C1060
 ms.assetid: feaf305c-c84c-4160-b974-50e283412849
 ms.openlocfilehash: 876ae7a368d2d1a1ee94a04fc9ecf50d0f4b8d78
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607054"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62364227"
 ---
 # <a name="fatal-error-c1060"></a>Erro fatal C1060
 
@@ -25,7 +25,7 @@ O sistema operacional ou a biblioteca de tempo de execução não pode preencher
 
    Se o [/Zm](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md) opção já estiver definida, tente removê-lo. O espaço de heap pode se esgotar porque o limite de alocação de memória especificado na opção é muito alto. O compilador usa um limite padrão se você remover o [/Zm](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md) opção.
 
-1. Se você estiver compilando em uma plataforma de 64 bits, use o conjunto de ferramentas do compilador de 64 bits. Para obter informações, consulte [como: habilitar um 64-Bit Visual C++ conjunto de ferramentas na linha de comando](../../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md).
+1. Se você estiver compilando em uma plataforma de 64 bits, use o conjunto de ferramentas do compilador de 64 bits. Para obter mais informações, veja [Como: Habilitar um 64-Bit Visual C++ conjunto de ferramentas na linha de comando](../../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md).
 
 1. No Windows de 32 bits, tente usar o [3 GB](https://support.microsoft.com/help/833721/available-switch-options-for-the-windows-xp-and-the-windows-server-200) Boot. ini.
 

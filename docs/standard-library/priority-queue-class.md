@@ -21,11 +21,11 @@ helpviewer_keywords:
 - std::priority_queue [C++], top
 ms.assetid: 69fca9cc-a449-4be4-97b7-02ca5db9cbb2
 ms.openlocfilehash: d8f2b4ab788c82e531d1121f04dd0d422efb17cd
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51333209"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62370003"
 ---
 # <a name="priorityqueue-class"></a>Classe priority_queue
 
@@ -43,7 +43,7 @@ class priority_queue
 *Tipo*<br/>
 O tipo de dados do elemento a ser armazenado no priority_queue.
 
-*Contêiner*<br/>
+*Container*<br/>
 O tipo do contêiner subjacente usado para implementar o priority_queue.
 
 *Compare*<br/>
@@ -242,7 +242,7 @@ priority_queue(InputIterator first, InputIterator last, const Traits& _comp, con
 
 ### <a name="parameters"></a>Parâmetros
 
-*são*<br/>
+*_comp*<br/>
 A função de comparação do tipo **constTraits** usado para ordenar os elementos no priority_queue, cujo padrão é a função de comparação do contêiner base.
 
 *_Cont*<br/>
@@ -386,7 +386,7 @@ void push(const Type& val);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Val*<br/>
+*val*<br/>
 O elemento adicionado à parte superior da priority_queue.
 
 ### <a name="remarks"></a>Comentários
