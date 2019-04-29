@@ -8,11 +8,11 @@ helpviewer_keywords:
 - databases [C++], consumers
 ms.assetid: d3e42612-0bc0-4d65-9c32-0e8a7b219e82
 ms.openlocfilehash: d2697c955d2063bb075e06536b083c0b138aa4ac
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59031953"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62284040"
 ---
 # <a name="ole-db-consumer-templates-c"></a>Modelos de consumidor de banco de dados OLE (C++)
 

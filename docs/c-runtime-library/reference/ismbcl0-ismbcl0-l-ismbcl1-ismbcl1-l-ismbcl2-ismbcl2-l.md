@@ -49,11 +49,11 @@ helpviewer_keywords:
 - _ismbcl0 function
 ms.assetid: ee15ebd1-462c-4a43-95f3-6735836d626a
 ms.openlocfilehash: b4ea5a165e5fb06229c3fdf69c53cdf82c4f35f4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50430882"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62286624"
 ---
 # <a name="ismbcl0-ismbcl0l-ismbcl1-ismbcl1l-ismbcl2-ismbcl2l"></a>_ismbcl0, _ismbcl0_l, _ismbcl1, _ismbcl1_l, _ismbcl2, _ismbcl2_l
 
@@ -108,10 +108,10 @@ O valor de saída é afetado pela configuração da categoria **LC_CTYPE** da lo
 
 |Rotina|Condição de teste (página de código 932 somente)|
 |-------------|-------------------------------------------|
-|**_ismbcl0**|JIS não Kanji: 0x8140< < =*c*< lt;=0x889e.|
-|**_ismbcl0_l**|JIS não Kanji: 0x8140< < =*c*< lt;=0x889e.|
-|**_ismbcl1**|JIS nível 1: 0x889f< < =*c*< lt;=0x9872.|
-|**_ismbcl1_l**|JIS nível 1: 0x889f< < =*c*< lt;=0x9872.|
+|**_ismbcl0**|JIS não Kanji: 0x8140<=*c*<=0x889E.|
+|**_ismbcl0_l**|JIS não Kanji: 0x8140<=*c*<=0x889E.|
+|**_ismbcl1**|JIS nível 1: 0x889F<=*c*<=0x9872.|
+|**_ismbcl1_l**|JIS nível 1: 0x889F<=*c*<=0x9872.|
 |**_ismbcl2**|JIS nível 2: 0x989f< < =*c*< lt;=0xeaa4.|
 |**_ismbcl2_l**|JIS nível 2: 0x989f< < =*c*< lt;=0xeaa4.|
 

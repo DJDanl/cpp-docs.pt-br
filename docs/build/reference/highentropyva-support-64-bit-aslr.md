@@ -3,11 +3,11 @@ title: /HIGHENTROPYVA (dar suporte a ASLR de 64 bits)
 ms.date: 06/12/2018
 ms.assetid: fe35f9f7-d28e-4694-9aeb-a79db06168e0
 ms.openlocfilehash: 5ecbbf8bbd8e74f80f2f5b2d7df0d2ef544112fc
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57821996"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62291594"
 ---
 # <a name="highentropyva-support-64-bit-aslr"></a>/HIGHENTROPYVA (dar suporte a ASLR de 64 bits)
 
@@ -36,7 +36,7 @@ Para **/HIGHENTROPYVA** terem um efeito em tempo de carregamento [/DYNAMICBASE](
 ## <a name="see-also"></a>Consulte também
 
 - [Referência de vinculador MSVC](linking.md)
-- [Opções do vinculador MSVC](linker-options.md)
+- [Opções de vinculador MSVC](linker-options.md)
 - [/DYNAMICBASE](dynamicbase-use-address-space-layout-randomization.md)
 - [/LARGEADDRESSAWARE](largeaddressaware-handle-large-addresses.md)
 - [Defesas de segurança de Software ISV do Windows](https://msdn.microsoft.com/library/bb430720.aspx)

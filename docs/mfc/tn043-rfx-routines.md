@@ -9,11 +9,11 @@ helpviewer_keywords:
 - RFX (record field exchange)
 ms.assetid: f552d0c1-2c83-4389-b472-42c9940aa713
 ms.openlocfilehash: 18820c7d17ddea355490ee32679d5d690ec3533e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57294480"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62305392"
 ---
 # <a name="tn043-rfx-routines"></a>TN043: Rotinas RFX
 

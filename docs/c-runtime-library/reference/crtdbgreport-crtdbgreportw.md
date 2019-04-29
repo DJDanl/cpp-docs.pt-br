@@ -29,11 +29,11 @@ helpviewer_keywords:
 - _CrtDbgReportW function
 ms.assetid: 6e581fb6-f7fb-4716-9432-f0145d639ecc
 ms.openlocfilehash: f12dafc62e302d90e5cffa04ee93e662b78295be
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467789"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62339475"
 ---
 # <a name="crtdbgreport-crtdbgreportw"></a>_CrtDbgReport, _CrtDbgReportW
 
@@ -96,7 +96,7 @@ O [macros rpt, rptf](rpt-rptf-rptw-rptfw-macros.md) chamada de macros de depura�
 
 A tabela a seguir lista as opções disponíveis para o modo de relatório ou modos de arquivo e o comportamento resultante de **crtdbgreport** e **CrtDbgReportW**. Essas opções são definidas como sinalizadores de bit em \<crtdbg.h>.
 
-|Modo do relatório|Arquivo do relatório|**Crtdbgreport**, **CrtDbgReportW** comportamento|
+|Modo do relatório|Arquivo do relatório|**_CrtDbgReport**, **_CrtDbgReportW** behavior|
 |-----------------|-----------------|------------------------------------------------|
 |**_CRTDBG_MODE_DEBUG**|Não aplicável|Grava mensagens usando a API [OutputDebugString](https://msdn.microsoft.com/library/windows/desktop/aa363362.aspx) do Windows.|
 |**_CRTDBG_MODE_WNDW**|Não aplicável|Chama a API [MessageBox](/windows/desktop/api/winuser/nf-winuser-messagebox) do Windows para criar uma caixa de mensagem e exibir a mensagem junto com os botões **Anular**, **Tentar novamente** e **Ignorar**. Se um usuário clica **anular**, **crtdbgreport** ou **crtdbgreport** será anulado imediatamente. Se um usuário clicar em **Tentar novamente**, ele retornará 1. Se um usuário clica **Ignore**, a execução continua e **crtdbgreport** e **CrtDbgReportW** retornam 0. Observe que clicar em **Ignorar** quando há uma condição de erro geralmente resulta em “comportamento inesperado”.|

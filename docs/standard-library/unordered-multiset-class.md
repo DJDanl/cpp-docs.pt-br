@@ -135,11 +135,11 @@ helpviewer_keywords:
 - std::unordered_multiset::swap
 ms.assetid: 70c8dfc5-492a-4af2-84f5-1aa9cb04b71c
 ms.openlocfilehash: 34fb3e16dc7369526895a011c7e192d2f51edf14
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519771"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62278547"
 ---
 # <a name="unorderedmultiset-class"></a>Classe unordered_multiset
 
@@ -160,7 +160,7 @@ class unordered_multiset;
 |Parâmetro|Descrição|
 |-|-|
 |*Chave*|O tipo principal.|
-|*hash*|O tipo de objeto da função de hash.|
+|*Hash*|O tipo de objeto da função de hash.|
 |*Pred*|O tipo de objeto da função de comparação de igualdade.|
 |*ALLOC*|A classe do alocador.|
 
@@ -1235,10 +1235,10 @@ size_type erase(
 *Where*<br/>
 A posição do elemento a ser removido.
 
-*Primeiro*<br/>
+*First*<br/>
 A posição do primeiro elemento a ser removido.
 
-*último*<br/>
+*Last*<br/>
 A posição logo após o último elemento a ser removido.
 
 *Chave*<br/>
@@ -1473,8 +1473,8 @@ IList);
 |*Val*|O valor de um elemento a ser inserido no unordered_multiset.|
 |*Where*|O local a partir do qual se começa a procurar pelo ponto de inserção correto.|
 |*ValTy*|Parâmetro de modelo que especifica o tipo de argumento que o unordered_multiset pode usar para construir um elemento de [value_type](../standard-library/map-class.md#value_type)e perfect-forwards *Val* como um argumento.|
-|*Primeiro*|A posição do primeiro elemento a ser copiado.|
-|*último*|A posição imediatamente após o último elemento a ser copiado.|
+|*First*|A posição do primeiro elemento a ser copiado.|
+|*Last*|A posição imediatamente após o último elemento a ser copiado.|
 |*InputIterator*|Argumento da função de modelo que atende aos requisitos de um [iterador de entrada](../standard-library/input-iterator-tag-struct.md) que aponta para elementos de um tipo que pode ser usado para construir objetos [value_type](../standard-library/map-class.md#value_type).|
 |*IList*|O [initializer_list](../standard-library/initializer-list.md) do qual os elementos serão copiados.|
 
@@ -2439,7 +2439,7 @@ unordered_multiset(
 |*InputIterator*|O tipo de iterador.|
 |*Al*|O objeto de alocador a ser armazenado.|
 |*Comp*|O objeto de função de comparação a ser armazenado.|
-|*hash*|O objeto de função de hash a ser armazenado.|
+|*Hash*|O objeto de função de hash a ser armazenado.|
 |*Bucket_count*|O número mínimo de buckets.|
 |*Direita*|O contêiner a ser copiado.|
 |*IList*|A initializer_list da qual copiar.|

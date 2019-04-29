@@ -25,11 +25,11 @@ helpviewer_keywords:
 - _heapwalk function
 ms.assetid: 2df67649-fb00-4570-a8b1-a4eca5738744
 ms.openlocfilehash: cc2a49d9032746cc6c82c9dc401fc96baabbe2e1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50454893"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62331675"
 ---
 # <a name="heapwalk"></a>_heapwalk
 
@@ -55,12 +55,12 @@ Buffer que conterá informações do heap.
 
 |Valor retornado|Significado|
 |-|-|
-|**HEAPBADBEGIN**| As informações do cabeçalho inicial são inválidas ou não foram encontradas.|
-|**HEAPBADNODE**| Heap danificado ou nó inválido encontrado.|
-|**HEAPBADPTR**| O **pentry** campo da **heapinfo** estrutura não contém um ponteiro válido para o heap ou *entryinfo* for um ponteiro nulo.|
-|**HEAPEND**| Fim do heap alcançado com êxito.|
-|**HEAPEMPTY**| Heap não inicializado.|
-|**HEAPOK**| Nenhum erro até o momento; *entryinfo* é atualizado com informações sobre a próxima entrada do heap.|
+|**_HEAPBADBEGIN**| As informações do cabeçalho inicial são inválidas ou não foram encontradas.|
+|**_HEAPBADNODE**| Heap danificado ou nó inválido encontrado.|
+|**_HEAPBADPTR**| O **pentry** campo da **heapinfo** estrutura não contém um ponteiro válido para o heap ou *entryinfo* for um ponteiro nulo.|
+|**_HEAPEND**| Fim do heap alcançado com êxito.|
+|**_HEAPEMPTY**| Heap não inicializado.|
+|**_HEAPOK**| Nenhum erro até o momento; *entryinfo* é atualizado com informações sobre a próxima entrada do heap.|
 
 Além disso, se ocorrer um erro, **heapwalk** define **errno** para **ENOSYS**.
 

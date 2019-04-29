@@ -57,11 +57,11 @@ helpviewer_keywords:
 - _strcmpi function
 ms.assetid: 0e1ee515-0d75-435a-a445-8875d4669b50
 ms.openlocfilehash: d27b2128d79d7ff3ab0150e182d494fed52d46ca
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559043"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62353820"
 ---
 # <a name="stricmp-wcsicmp-mbsicmp-stricmpl-wcsicmpl-mbsicmpl"></a>_stricmp, _wcsicmp, _mbsicmp, _stricmp_l, _wcsicmp_l, _mbsicmp_l
 
@@ -165,15 +165,15 @@ Todas essas funções validam seus parâmetros. Se qualquer um dos *string1* ou 
 
 |Rotina TCHAR.H|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**tcsicmp**|**_stricmp**|**_mbsicmp**|**_wcsicmp**|
+|**_tcsicmp**|**_stricmp**|**_mbsicmp**|**_wcsicmp**|
 
 ## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|
-|**stricmp**, **stricmp_l**|\<string.h>|
-|**wcsicmp**, **wcsicmp_l**|\<string.h> ou \<wchar.h>|
-|**mbsicmp**, **mbsicmp_l**|\<mbstring.h>|
+|**_stricmp**, **_stricmp_l**|\<string.h>|
+|**_wcsicmp**, **_wcsicmp_l**|\<string.h> ou \<wchar.h>|
+|**_mbsicmp**, **_mbsicmp_l**|\<mbstring.h>|
 
 Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 

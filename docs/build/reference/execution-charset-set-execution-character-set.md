@@ -9,11 +9,11 @@ helpviewer_keywords:
 - -execution-charset compiler option
 ms.assetid: 0e02f487-2236-45bc-95f3-5760933a8f96
 ms.openlocfilehash: 0a140bf438a44df152b1578f4569a087a604061c
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57807709"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62271431"
 ---
 # <a name="execution-charset-set-execution-character-set"></a>/Execution-charset (definir execução de conjunto de caracteres)
 
@@ -54,7 +54,7 @@ Se você quiser definir o conjunto de caracteres de origem e o conjunto de carac
 ## <a name="see-also"></a>Consulte também
 
 [Opções do compilador MSVC](compiler-options.md)<br/>
-[Sintaxe de linha de comando do compilador MSVC](compiler-command-line-syntax.md)<br/>
+[Sintaxe da linha de comando do compilador MSVC](compiler-command-line-syntax.md)<br/>
 [/source-charset (definir conjunto de caracteres de origem)](source-charset-set-source-character-set.md)<br/>
 [/utf-8 (definir conjuntos de caracteres de origem e executáveis como UTF-8)](utf-8-set-source-and-executable-character-sets-to-utf-8.md)<br/>
 [/validate-charset (validar quanto à presença de caracteres compatíveis)](validate-charset-validate-for-compatible-characters.md)

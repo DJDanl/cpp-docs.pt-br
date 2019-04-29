@@ -3,11 +3,11 @@ title: /arch (ARM)
 ms.date: 11/04/2016
 ms.assetid: 4f1406ff-f174-487c-a126-8ab06cf447c1
 ms.openlocfilehash: b732a74d5fe223fdaf3b161d4ae92093ab5df407
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57807865"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62295195"
 ---
 # <a name="arch-arm"></a>/arch (ARM)
 
@@ -51,4 +51,4 @@ Quando você usa [/clr](clr-common-language-runtime-compilation.md) para compila
 
 [/arch (arquitetura mínima de CPU)](arch-minimum-cpu-architecture.md)<br/>
 [Opções do compilador MSVC](compiler-options.md)<br/>
-[Sintaxe de linha de comando do compilador MSVC](compiler-command-line-syntax.md)
+[Sintaxe da linha de comando do compilador MSVC](compiler-command-line-syntax.md)

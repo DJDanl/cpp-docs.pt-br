@@ -24,11 +24,11 @@ helpviewer_keywords:
 - findclose function
 ms.assetid: 9216c573-0878-444c-b5d7-cdaf16fb9163
 ms.openlocfilehash: 29010f8a502d463eeb6ca98837a1b7dae9f5ae6b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50538106"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62333749"
 ---
 # <a name="findclose"></a>_findclose
 
@@ -44,7 +44,7 @@ int _findclose(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Identificador*<br/>
+*handle*<br/>
 Identificador de pesquisa retornado por uma chamada anterior a **FindFirst**.
 
 ## <a name="return-value"></a>Valor de retorno

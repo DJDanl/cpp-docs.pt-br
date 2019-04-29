@@ -11,11 +11,11 @@ helpviewer_keywords:
 - server applications [MFC]
 ms.assetid: e45172e8-eae3-400a-8139-0fa009a42fdc
 ms.openlocfilehash: 7b1eb0df439bcfde3aa295f23a90291e865df3a9
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57290789"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62307829"
 ---
 # <a name="servers"></a>Servidores
 
@@ -43,21 +43,21 @@ O aplicativo de servidor deve informar as DLLs do sistema OLE o que fazer se uma
 
 Para obter mais detalhes sobre servidores, consulte:
 
-- [servidores: Implementação de um servidor](../mfc/servers-implementing-a-server.md)
+- [Servidores: implementar um servidor](../mfc/servers-implementing-a-server.md)
 
-- [servidores: Implementando documentos de servidor](../mfc/servers-implementing-server-documents.md)
+- [Servidores: implementar documentos de servidor](../mfc/servers-implementing-server-documents.md)
 
-- [servidores: Implementando o Windows de quadro in-loco](../mfc/servers-implementing-in-place-frame-windows.md)
+- [Servidores: implementar janelas de quadro in-loco](../mfc/servers-implementing-in-place-frame-windows.md)
 
-- [servidores: Itens do servidor](../mfc/servers-server-items.md)
+- [Servidores: itens de servidor](../mfc/servers-server-items.md)
 
-- [servidores: Problemas da Interface do usuário](../mfc/servers-user-interface-issues.md)
+- [Servidores: problemas da interface do usuário](../mfc/servers-user-interface-issues.md)
 
 ## <a name="see-also"></a>Consulte também
 
 [OLE](../mfc/ole-in-mfc.md)<br/>
 [Contêineres](../mfc/containers.md)<br/>
-[Contêineres: Recursos avançados](../mfc/containers-advanced-features.md)<br/>
+[Contêineres: recursos avançados](../mfc/containers-advanced-features.md)<br/>
 [Menus e recursos (OLE)](../mfc/menus-and-resources-ole.md)<br/>
 [Registro](../mfc/registration.md)<br/>
 [Servidores de automação](../mfc/automation-servers.md)

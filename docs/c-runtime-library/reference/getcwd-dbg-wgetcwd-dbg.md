@@ -32,11 +32,11 @@ helpviewer_keywords:
 - directories [C++], current working
 ms.assetid: 8d5d151f-d844-4aa6-a28c-1c11a22dc00d
 ms.openlocfilehash: 9616c5f7e29b4f003d3943ba058d1f1a1d5adb5c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50521128"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62287222"
 ---
 # <a name="getcwddbg-wgetcwddbg"></a>_getcwd_dbg, _wgetcwd_dbg
 
@@ -66,7 +66,7 @@ wchar_t *_wgetcwd_dbg(
 *buffer*<br/>
 Local de armazenamento para o caminho.
 
-*MaxLen*<br/>
+*maxlen*<br/>
 Comprimento máximo do caminho em caracteres: **char** para **getcwd_dbg** e **wchar_t** para **wgetcwd_dbg**.
 
 *blockType*<br/>

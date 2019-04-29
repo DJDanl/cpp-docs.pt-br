@@ -7,11 +7,11 @@ helpviewer_keywords:
 - /Y compiler options [C++]
 ms.assetid: 1df5726a-8ebe-42c3-b618-d2f5e1ce8673
 ms.openlocfilehash: 616ce194f9f005fcd08f60997ceccd49acdcc31b
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57820163"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62316035"
 ---
 # <a name="y-precompiled-headers"></a>/Y (cabeçalhos pré-compilados)
 
@@ -32,4 +32,4 @@ Para obter detalhes sobre como trabalhar com cabeçalhos pré-compilados, consul
 ## <a name="see-also"></a>Consulte também
 
 [Opções do compilador MSVC](compiler-options.md)<br/>
-[Sintaxe de linha de comando do compilador MSVC](compiler-command-line-syntax.md)
+[Sintaxe da linha de comando do compilador MSVC](compiler-command-line-syntax.md)

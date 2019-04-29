@@ -7,11 +7,11 @@ helpviewer_keywords:
 - LNK2031
 ms.assetid: 18ed4b6e-3e75-443c-bbd8-2f6030dc89ee
 ms.openlocfilehash: 003b9a58bfb08130f034530f59e2de27efa2ae8d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50484816"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62298913"
 ---
 # <a name="linker-tools-error-lnk2031"></a>Erro das Ferramentas de Vinculador LNK2031
 
@@ -19,7 +19,7 @@ ms.locfileid: "50484816"
 
 ## <a name="remarks"></a>Comentários
 
-Ao tentar importar uma função nativa em uma imagem pura, lembre-se de que as convenções de chamada implícitas diferem entre compilações nativas e puras. Para obter mais informações sobre imagens puras, consulte [código puro e verificável (C + + / CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md).
+Ao tentar importar uma função nativa em uma imagem pura, lembre-se de que as convenções de chamada implícitas diferem entre compilações nativas e puras. Para obter mais informações sobre imagens puras, consulte [código puro e verificável (C++/CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md).
 
 O **/clr: pure** opção do compilador é preterida no Visual Studio 2015 e sem suporte no Visual Studio 2017.
 

@@ -19,11 +19,11 @@ helpviewer_keywords:
 - environment variables [C++], CL compiler
 ms.assetid: 99389528-deb5-43b9-b99a-03c8773ebaf4
 ms.openlocfilehash: fed3360294bec724af09b87e5abd7c6bb22fa285
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57811063"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62315385"
 ---
 # <a name="set-the-path-and-environment-variables-for-command-line-builds"></a>Defina o caminho e variáveis de ambiente para compilações de linha de comando
 
@@ -38,8 +38,8 @@ Para ver quais variáveis de ambiente são definidas por um atalho de prompt de 
 
 ## <a name="see-also"></a>Consulte também
 
-[Usar o conjunto de ferramentas do MSVC da linha de comando](building-on-the-command-line.md)<br/>
+[Uso do conjunto de ferramentas MSVC da linha de comando](building-on-the-command-line.md)<br/>
 [Referência de vinculador MSVC](reference/linking.md)<br/>
-[Opções do vinculador MSVC](reference/linker-options.md)<br/>
+[Opções de vinculador MSVC](reference/linker-options.md)<br/>
 [Referência de compilador MSVC](reference/compiling-a-c-cpp-program.md)<br/>
 [Opções do compilador MSVC](reference/compiler-options.md)

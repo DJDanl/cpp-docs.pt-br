@@ -87,11 +87,11 @@ helpviewer_keywords:
 - RPTW1 macro
 ms.assetid: a5bf8b30-57f7-4971-8030-e773b7a1ae13
 ms.openlocfilehash: 61748cca2cdfcc2d72b6943bfeedd9597009e20b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50440088"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62357481"
 ---
 # <a name="rpt-rptf-rptw-rptfw-macros"></a>Macros _RPT, _RPTF, _RPTW, _RPTFW
 
@@ -152,7 +152,7 @@ Se um **macros RPT** macro é chamada e nem **CrtSetReportMode** nem **crtsetrep
 |Tipo de relatório|Destino de saída|
 |-----------------|------------------------|
 |**_CRT_WARN**|O texto de aviso não é exibido.|
-|**CRT_ERROR**|Uma janela pop-up. Mesmo que se `_CrtSetReportMode(_CRT_ERROR, _CRTDBG_MODE_WNDW);` tivesse sido especificado.|
+|**_CRT_ERROR**|Uma janela pop-up. Mesmo que se `_CrtSetReportMode(_CRT_ERROR, _CRTDBG_MODE_WNDW);` tivesse sido especificado.|
 |**_CRT_ASSERT**|Mesmo que **crt_error**.|
 
 Quando o destino é uma janela de mensagem de depuração e o usuário escolhe o **repetir** botão **crtdbgreport** ou **CrtDbgReportW** retorna 1, fazendo com que essas macros iniciar o o depurador, desde que a depuração do just-in-time (JIT) está habilitada. Para obter mais informações sobre como usar essas macros como um mecanismo de tratamento de erro de depuração, consulte [Usando macros para verificação e relatórios](/visualstudio/debugger/macros-for-reporting).
@@ -163,10 +163,10 @@ Há duas outras macros que geram um relatório de depuração. A macro [_ASSERT]
 
 |Macro|Cabeçalho necessário|
 |-----------|---------------------|
-|**Macros RPT** macros|\<crtdbg.h>|
-|**Rptf** macros|\<crtdbg.h>|
-|**Rptw** macros|\<crtdbg.h>|
-|**Rptfw** macros|\<crtdbg.h>|
+|**_RPT** macros|\<crtdbg.h>|
+|**_RPTF** macros|\<crtdbg.h>|
+|**_RPTW** macros|\<crtdbg.h>|
+|**_RPTFW** macros|\<crtdbg.h>|
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
