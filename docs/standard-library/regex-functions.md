@@ -14,11 +14,11 @@ helpviewer_keywords:
 - std::swap [C++]
 - std::swap [C++]
 ms.openlocfilehash: 47b3ae9d59db7c39d7b9667038d216f24530d5dd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624816"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62369599"
 ---
 # <a name="ltregexgt-functions"></a>Funções &lt;regex&gt;
 
@@ -120,7 +120,7 @@ Os resultados da correspondência. Corresponde ao tipo Elem: [smatch](../standar
 *ptr*<br/>
 Ponteiro para o início da sequência de correspondência. Se *ptr* é `char*`, em seguida, use `cmatch` e `regex`. Se *ptr* é `wchar_t*` , em seguida, usar `wcmatch` e `wregex`.
 
-*Re*<br/>
+*re*<br/>
 A expressão regular de correspondência. Tipo de `regex` para `string` e `char*`, ou `wregex` para `wstring` e `wchar_t*`.
 
 *str*<br/>
@@ -241,7 +241,7 @@ Sinalizadores de correspondências.
 *first*<br/>
 Início da sequência de correspondência.
 
-*FMT*<br/>
+*fmt*<br/>
 O formato das substituições.
 
 *last*<br/>
@@ -250,7 +250,7 @@ Fim da sequência de correspondência.
 *out*<br/>
 O iterador de saída.
 
-*Re*<br/>
+*re*<br/>
 A expressão regular de correspondência.
 
 *str*<br/>
@@ -389,7 +389,7 @@ Os resultados da correspondência.
 *ptr*<br/>
 Ponteiro para o início da sequência de correspondência.
 
-*Re*<br/>
+*re*<br/>
 A expressão regular de correspondência.
 
 *str*<br/>

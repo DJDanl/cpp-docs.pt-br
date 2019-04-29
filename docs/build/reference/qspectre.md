@@ -6,11 +6,11 @@ f1_keywords:
 helpviewer_keywords:
 - /Qspectre
 ms.openlocfilehash: 42adff6564dc1c2ef47abffe9f9e6e630279ea7d
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57812454"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62319181"
 ---
 # <a name="qspectre"></a>/Qspectre
 
@@ -55,8 +55,8 @@ O impacto de desempenho **/Qspectre** foi visto ser insignificante em várias ba
 O **/Qspectre** opção de compilador gera código que vincula-se versões das bibliotecas de tempo de execução que foram criadas para fornecer mitigações implicitamente. Essas bibliotecas são componentes opcionais que devem ser instalados usando o instalador do Visual Studio:
 
 - VC + + 2017 versão *version_numbers* Libs para Spectre \[(x86 e x64) | (ARM) | (ARM64)]
-- Visual C++ ATL para \[(x86 x64) | ARM | ARM64] com mitigações de espectro
-- MFC do Visual C++ para \[x86/x64 | ARM | ARM64] com mitigações de espectro
+- O Visual C++ ATL para \[(x86 x64) | ARM | ARM64] com mitigações de espectro
+- O Visual C++ MFC para \[x86/x64 | ARM | ARM64] com mitigações de espectro
 
 Se você compilar seu código usando **/Qspectre** e essas bibliotecas não são instalados, os relatórios do sistema de compilação **aviso MSB8038: Mitigação do spectre está habilitada, mas não foram encontradas bibliotecas atenuadas do Spectre**. Se seu código MFC ou ATL apresentou falha na criação e o vinculador relata um erro, como **erro fatal LNK1104: não é possível abrir o arquivo 'oldnames. lib'**, essas bibliotecas ausentes podem ser a causa.
 
@@ -80,4 +80,4 @@ Para obter mais detalhes, consulte oficial [Microsoft Security Advisory ADV18000
 
 [Opções /Q (operações de nível baixo)](q-options-low-level-operations.md)<br/>
 [Opções do compilador MSVC](compiler-options.md)<br/>
-[Sintaxe de linha de comando do compilador MSVC](compiler-command-line-syntax.md)
+[Sintaxe da linha de comando do compilador MSVC](compiler-command-line-syntax.md)
