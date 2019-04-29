@@ -25,11 +25,11 @@ helpviewer_keywords:
 - _query_new_mode function
 ms.assetid: e185c5f9-b73b-4257-8eff-b47648374768
 ms.openlocfilehash: 327f22c847793316bd126721b4a66846d7da84dd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620019"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62358067"
 ---
 # <a name="querynewmode"></a>_query_new_mode
 
@@ -49,7 +49,7 @@ Retorna o novo manipulador modo atual, ou seja, 0 ou 1, para **malloc**. Um valo
 
 ## <a name="remarks"></a>Comentários
 
-O C++ **query_new_mode** função retorna um inteiro que indica o novo modo do manipulador que é definido por C++ [set_new_mode](set-new-mode.md) funcionar por [malloc](malloc.md). O novo modo do manipulador indica se deve, em caso de falha ao alocar memória, **malloc** é chamar a nova rotina do manipulador conforme definido pela [set_new_handler](set-new-handler.md). Por padrão, **malloc** não chama a nova rotina do manipulador em caso de falha. Você pode usar **set_new_mode** para substituir esse comportamento para que, em caso de falha **malloc** chame a nova rotina do manipulador da mesma forma que o **novo** operador faz quando ele não consegue aloca memória. Para obter mais informações, consulte a discussão sobre os [operadores new e delete](../../cpp/new-and-delete-operators.md) na Referência da Linguagem C++.
+O C++ **query_new_mode** função retorna um inteiro que indica o novo modo do manipulador que é definido pelo C++ [set_new_mode](set-new-mode.md) funcionar por [malloc](malloc.md). O novo modo do manipulador indica se deve, em caso de falha ao alocar memória, **malloc** é chamar a nova rotina do manipulador conforme definido pela [set_new_handler](set-new-handler.md). Por padrão, **malloc** não chama a nova rotina do manipulador em caso de falha. Você pode usar **set_new_mode** para substituir esse comportamento para que, em caso de falha **malloc** chame a nova rotina do manipulador da mesma forma que o **novo** operador faz quando ele não consegue aloca memória. Para obter mais informações, consulte a discussão sobre os [operadores new e delete](../../cpp/new-and-delete-operators.md) na Referência da Linguagem C++.
 
 ## <a name="requirements"></a>Requisitos
 

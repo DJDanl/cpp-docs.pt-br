@@ -9,11 +9,11 @@ f1_keywords:
 helpviewer_keywords:
 - Unicode, Visual C++
 ms.openlocfilehash: 71458ab345670c0a5715576a7da80c4e6ff2955b
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57807489"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62317322"
 ---
 # <a name="unicode-support-in-the-compiler-and-linker"></a>Suporte Unicode no compilador e vinculador
 
@@ -49,4 +49,4 @@ despejos de. ASM e. COD estão em ANSI por padrão para compatibilidade com MASM
 
 ## <a name="see-also"></a>Consulte também
 
-[Usar o conjunto de ferramentas do MSVC da linha de comando](../building-on-the-command-line.md)
+[Uso do conjunto de ferramentas MSVC da linha de comando](../building-on-the-command-line.md)

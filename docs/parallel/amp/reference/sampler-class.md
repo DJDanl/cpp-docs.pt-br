@@ -13,11 +13,11 @@ f1_keywords:
 - AMP_GRAPHICS/concurrency::sampler::graphics::filter_mode
 ms.assetid: 9a6a9807-497d-402d-b092-8c4d86275b80
 ms.openlocfilehash: 1a66e4d025a7592b78839dbe5f25f9103da41224
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50535948"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62352587"
 ---
 # <a name="sampler-class"></a>Classe de amostra
 
@@ -31,7 +31,7 @@ class sampler;
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
@@ -114,7 +114,7 @@ O modo de endereçando a ser usado em amostragem para todas as dimensões.
 *_Border_color*<br/>
 A cor da borda a ser usado se o modo de endereço for address_border. O valor padrão é `float_4(0.0f, 0.0f, 0.0f, 0.0f)`.
 
-*Outro*<br/>
+*_Other*<br/>
 [5] construtor de cópia o `sampler` objeto a ser copiado no novo `sampler` instância.
 
 [6] construtor de movimentação a `sampler` objeto a ser movido para a nova `sampler` instância.
@@ -179,7 +179,7 @@ Concurrency::graphics::filter_mode get_filter_mode() const restrict(amp, cpu);
 
 O modo de filtro que é configurado para a amostra.
 
-##  <a name="operator_eq"></a> operador =
+##  <a name="operator_eq"></a> operator=
 
 Atribui o valor de outro objeto do demonstrador a um demonstrador existente.
 
@@ -193,7 +193,7 @@ sampler& operator= (    // [2] move assignment operator
 
 ### <a name="parameters"></a>Parâmetros
 
-*Outro*<br/>
+*_Other*<br/>
 [1] operador de atribuição de cópia o `sampler` o objeto a ser copiado neste `sampler`.
 
 [2] operador de atribuição de movimentação o `sampler` objeto a ser movido para este `sampler`.
