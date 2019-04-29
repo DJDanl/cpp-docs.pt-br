@@ -3,11 +3,11 @@ title: Configurando programas para Windows XP
 ms.date: 02/02/2018
 ms.assetid: 1e4487b3-d815-4123-878b-5718b22f0fd5
 ms.openlocfilehash: 989a4e2c7e91c05498902bf1c5cb9d838ee47c3b
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57814287"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62273796"
 ---
 # <a name="configuring-programs-for-windows-xp"></a>Configurando programas para Windows XP
 
@@ -25,7 +25,7 @@ O conjunto de ferramentas da plataforma Windows XP que está incluído no Visual
 
 1. No **Gerenciador de Soluções**, abra o menu de atalho do projeto e escolha **Propriedades**.
 
-1. No **páginas de propriedades** caixa de diálogo do projeto, em **propriedades de configuração** > **geral**, defina o **doconjuntodeferramentasdeplataforma** propriedade para o conjunto de ferramentas desejado do Windows XP. Por exemplo, escolha **Visual Studio 2017 – Windows XP (v141_xp)** para criar o código para o Windows XP e Windows Server 2003 usando o compilador Microsoft Visual C++ 2017.
+1. No **páginas de propriedades** caixa de diálogo do projeto, em **propriedades de configuração** > **geral**, defina o **doconjuntodeferramentasdeplataforma** propriedade para o conjunto de ferramentas desejado do Windows XP. Por exemplo, escolha **Visual Studio 2017 – Windows XP (v141_xp)** para criar o código para o Windows XP e Windows Server 2003 usando o Microsoft Visual C++ compilador 2017.
 
 ### <a name="c-runtime-support"></a>Suporte de tempo de execução do C++
 
@@ -43,7 +43,7 @@ Essas bibliotecas são suportadas pelos conjuntos de ferramentas de plataforma i
 |C++ AMP|X|X||
 
 > [!NOTE]
-> Aplicativos que são escritos em C + + c++ CLI e o destino do .NET Framework 4 são executados no Windows XP e Windows Server 2003.
+> Aplicativos que são escritos em C++/CLI e o destino do .NET Framework 4 são executados no Windows XP e Windows Server 2003.
 
 ### <a name="differences-between-the-toolsets"></a>Diferenças entre os conjuntos de ferramentas
 

@@ -14,11 +14,11 @@ helpviewer_keywords:
 - U compiler option [C++]
 ms.assetid: 7bc0474f-6d1f-419b-807d-0d8816763b2a
 ms.openlocfilehash: bfc03ebd5c900bf8bf81b4a50eed02111baf85ee
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57822477"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62316997"
 ---
 # <a name="u-u-undefine-symbols"></a>/U, /u (indefinir símbolos)
 
@@ -72,7 +72,7 @@ Por padrão, o compilador define símbolos de específico da Microsoft a seguir.
 ## <a name="see-also"></a>Consulte também
 
 [Opções do compilador MSVC](compiler-options.md)<br/>
-[Sintaxe de linha de comando do compilador MSVC](compiler-command-line-syntax.md)<br/>
+[Sintaxe da linha de comando do compilador MSVC](compiler-command-line-syntax.md)<br/>
 [/J (o tipo char padrão não é assinado)](j-default-char-type-is-unsigned.md)<br/>
 [/GR (habilitar informações de tipo em tempo de execução)](gr-enable-run-time-type-information.md)<br/>
 [/EH (modelo de tratamento de exceções)](eh-exception-handling-model.md)<br/>

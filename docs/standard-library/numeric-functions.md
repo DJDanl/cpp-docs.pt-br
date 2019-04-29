@@ -15,11 +15,11 @@ helpviewer_keywords:
 - std::iota [C++]
 - std::partial_sum [C++]
 ms.openlocfilehash: 6df37cf4f6c8afe09f25550d4fc0d9acb553ac52
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50475095"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62236538"
 ---
 # <a name="ltnumericgt-functions"></a>Funções &lt;numeric&gt;
 
@@ -52,7 +52,7 @@ Um iterador de entrada que trata o primeiro elemento no intervalo para ser somad
 *last*<br/>
 Um iterador de entrada que trata o último elemento no intervalo para ser somado ou combinado, de acordo com uma operação binária especificada que está uma posição além do elemento final de fato incluído no acúmulo iterado.
 
-*Val*<br/>
+*val*<br/>
 Um valor inicial para o qual cada elemento por sua vez é adicionado ou combinado de acordo com uma operação binária especificada.
 
 *binary_op*<br/>
@@ -192,7 +192,7 @@ Um iterador de entrada que trata o primeiro elemento no intervalo de entrada cuj
 *last*<br/>
 Um iterador de entrada que trata o último elemento no intervalo de entrada cujos elementos deverão ser diferenciados com seus respectivos antecessores ou onde o par de valores deverá ser operado por qualquer outra operação binária especificada.
 
-*resultado*<br/>
+*result*<br/>
 Um iterador de saída que trata o primeiro elemento em um intervalo de destino onde a série de diferenças ou os resultados da operação especificada deverão ser armazenados.
 
 *binary_op*<br/>
@@ -306,7 +306,7 @@ Um iterador de entrada que trata o último elemento no primeiro intervalo cujo p
 *first2*<br/>
 Um iterador de entrada que trata o primeiro elemento no segundo intervalo cujo produto interno ou produto interno generalizado com o primeiro intervalo deverá ser calculado.
 
-*Val*<br/>
+*val*<br/>
 Um valor inicial para o qual deve ser adicionado o produto interno ou o produto interno generalizado entre os intervalos.
 
 *binary_op1*<br/>
@@ -319,7 +319,7 @@ A operação binária que substitui a operação em relação ao elemento do pro
 
 A primeira função membro retorna a soma dos produtos em relação ao elemento e adiciona a ela o valor inicial especificado. Então, para intervalos de valores *a*i e *b*i, ela retornará:
 
-`val` + ( *uma*1 \* *b*1) + ( *um*2 \* *b*2) +... + ( *um*n \* *b*n)
+`val` + ( *a*1 \* *b*1 ) + ( *a*2 \* *b*2 ) + ... + ( *a*n \* *b*n )
 
 substituindo iterativamente *val* com `val` + ( *um*eu \* *b*eu).
 
@@ -514,7 +514,7 @@ Um iterador de entrada que trata o primeiro elemento no intervalo para ser parci
 *last*<br/>
 Um iterador de entrada que trata o último elemento no intervalo para ser parcialmente somado ou combinado, de acordo com uma operação binária especificada que está uma posição além do elemento final de fato incluído no acúmulo iterado.
 
-*resultado*<br/>
+*result*<br/>
 Um iterador de saída que trata o primeiro elemento em um intervalo de destino onde a série de somas parciais ou os resultados da operação especificada deverão ser armazenados.
 
 *binary_op*<br/>

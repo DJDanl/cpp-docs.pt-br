@@ -3,11 +3,11 @@ title: 1. Introdução
 ms.date: 01/16/2019
 ms.assetid: c42e72bc-0e31-4b1c-b670-cd82673c0c5a
 ms.openlocfilehash: 8c735408bdf9f9a13693bd0ad25df185bb1db42a
-ms.sourcegitcommit: 382e247c0f1b4cb7c2dab837b8b6fdff24bff47a
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55087269"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62236444"
 ---
 # <a name="1-introduction"></a>1. Introdução
 
@@ -57,7 +57,7 @@ Os seguintes termos são usados neste documento:
 
   Uma variável privada nomeia um bloco de armazenamento que é exclusivo para o thread que faz a referência. Há várias maneiras para especificar que uma variável é privada: uma definição em uma região paralela, um `threadprivate` diretiva, uma `private`, `firstprivate`, `lastprivate`, ou `reduction` cláusula ou uso da variável como um `for`loop variável de controle em uma `for` loop imediatamente após uma `for` ou `parallel for` diretiva.
 
-- região
+- region
 
   Uma extensão dinâmica.
 

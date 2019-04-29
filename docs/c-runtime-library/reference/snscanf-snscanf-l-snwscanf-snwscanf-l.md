@@ -49,11 +49,11 @@ helpviewer_keywords:
 - _snscanf function
 ms.assetid: da1ac890-f905-4cd7-954b-3c90957b5551
 ms.openlocfilehash: ba80bec70bbb96c383d0bbe73ed52f30fb90b7ef
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50626883"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62355400"
 ---
 # <a name="snscanf-snscanfl-snwscanf-snwscanfl"></a>_snscanf, _snscanf_l, _snwscanf, _snwscanf_l
 
@@ -125,15 +125,15 @@ As versões dessas funções com o **l** sufixo são idênticas, exceto que eles
 
 |Rotina Tchar.h|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**sntscanf**|**_snscanf**|**_snscanf**|**_snwscanf**|
-|**sntscanf_l**|**_snscanf_l**|**_snscanf_l**|**_snwscanf_l**|
+|**_sntscanf**|**_snscanf**|**_snscanf**|**_snwscanf**|
+|**_sntscanf_l**|**_snscanf_l**|**_snscanf_l**|**_snwscanf_l**|
 
 ## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|
-|**snscanf**, **snscanf_l**|\<stdio.h>|
-|**snwscanf**, **snwscanf_l**|\<stdio.h> ou \<wchar.h>|
+|**_snscanf**, **_snscanf_l**|\<stdio.h>|
+|**_snwscanf**, **_snwscanf_l**|\<stdio.h> ou \<wchar.h>|
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 

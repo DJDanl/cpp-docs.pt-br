@@ -7,11 +7,11 @@ helpviewer_keywords:
 - EXPORTS .def file statement
 ms.assetid: dbcd7579-b855-44c4-bd27-931e157657f7
 ms.openlocfilehash: 33b70c680bfc3db24f5326a2027fa9ec4740e3f2
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57814131"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62271340"
 ---
 # <a name="exports"></a>EXPORTS
 
@@ -51,7 +51,7 @@ EXPORTS
    func2=other_module.#42
 ```
 
-Como o compilador MSVC usa a decoração de nome para funções C++, você deve usar o nome decorado *internal_name* ou definir as funções exportadas usando `extern "C"` no código-fonte. O compilador também decora funções C que usam o [stdcall](../../cpp/stdcall.md) chamando convenção com um sublinhado (\_) prefixo e um sufixo composto o sinal de arroba (\@) seguido pelo número de bytes (em decimais) no lista de argumentos.
+Como o compilador MSVC usa a decoração de nome para C++ funções, você deve usar o nome decorado *internal_name* ou definir as funções exportadas usando `extern "C"` no código-fonte. O compilador também decora funções C que usam o [stdcall](../../cpp/stdcall.md) chamando convenção com um sublinhado (\_) prefixo e um sufixo composto o sinal de arroba (\@) seguido pelo número de bytes (em decimais) no lista de argumentos.
 
 Para localizar os nomes decorados produzidos pelo compilador, use o [DUMPBIN](dumpbin-reference.md) ferramenta ou o vinculador [/Map](map-generate-mapfile.md) opção. Os nomes decorados são específicos do compilador. Se você exportar os nomes decorados no arquivo .DEF, executáveis vinculados ao DLL também devem ser construídos com a mesma versão do compilador. Isso garante que os nomes decorados no chamador correspondam aos nomes exportados no arquivo .DEF.
 

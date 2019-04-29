@@ -30,11 +30,11 @@ helpviewer_keywords:
 - puttc function
 ms.assetid: a37b2e82-9d88-4565-8190-ff8d04c0ddb9
 ms.openlocfilehash: de87ca4996540737dad319fc920f4c76415250b9
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330873"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62284858"
 ---
 # <a name="putc-putwc"></a>putc, putwc
 
@@ -58,7 +58,7 @@ wint_t putwc(
 *c*<br/>
 O caractere a ser gravado.
 
-*fluxo*<br/>
+*stream*<br/>
 Ponteiro para a estrutura **FILE**.
 
 ## <a name="return-value"></a>Valor de retorno
@@ -77,7 +77,7 @@ As versões com o sufixo **_nolock** são idênticas, exceto pelo fato de não s
 
 |Rotina TCHAR.H|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**puttc**|**putc**|**putc**|**putwc**|
+|**_puttc**|**putc**|**putc**|**putwc**|
 
 ## <a name="requirements"></a>Requisitos
 

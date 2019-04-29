@@ -14,11 +14,11 @@ helpviewer_keywords:
 - IDLOUT linker option
 ms.assetid: 10d00a6a-85b4-4de1-8732-e422c6931509
 ms.openlocfilehash: 3816bb85cb3c711075e3fefeec2d706c2f8cc2ff
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57821463"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62291568"
 ---
 # <a name="idlout-name-midl-output-files"></a>/IDLOUT (nomear arquivos de saída MIDL)
 
@@ -71,7 +71,7 @@ Se você especificar nem /IDLOUT nem /TLBOUT, o vinculador criará vc70.tlb, vc7
 ## <a name="see-also"></a>Consulte também
 
 [Referência de vinculador MSVC](linking.md)<br/>
-[Opções do vinculador MSVC](linker-options.md)<br/>
+[Opções de vinculador MSVC](linker-options.md)<br/>
 [/IGNOREIDL (não processar atributos em MIDL)](ignoreidl-don-t-process-attributes-into-midl.md)<br/>
 [/MIDL (especificar opções de linha de comando de MIDL)](midl-specify-midl-command-line-options.md)<br/>
 [Compilando um programa atribuído](../../windows/building-an-attributed-program.md)

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - less_equal struct
 ms.assetid: 32085782-c7e0-4310-9b40-8aa3c1bff211
 ms.openlocfilehash: e1949477cc130bbbc8cdfeea082ec73f14bf4aad
-ms.sourcegitcommit: 4299caac2dc9e806c74ac833d856a3838b0f52a1
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "57006676"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62223937"
 ---
 # <a name="lessequal-struct"></a>Struct less_equal
 

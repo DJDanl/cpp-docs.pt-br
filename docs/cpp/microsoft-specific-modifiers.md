@@ -3,11 +3,11 @@ title: Modificadores específicos da Microsoft
 ms.date: 08/16/2018
 ms.assetid: 22c7178c-f854-47fa-9de6-07d23fda58e1
 ms.openlocfilehash: 119e4d06d0235bbf637eefe8754668d3e90b0c52
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57749718"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62301780"
 ---
 # <a name="microsoft-specific-modifiers"></a>Modificadores específicos da Microsoft
 

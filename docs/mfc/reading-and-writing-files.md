@@ -13,11 +13,11 @@ helpviewer_keywords:
 - writing to files [MFC]
 ms.assetid: cac0c826-ba56-495f-99b3-ce6336f65763
 ms.openlocfilehash: ab1ddc58ec6cc2b67e5843f46afbead3ead54eba
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57267662"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62324253"
 ---
 # <a name="reading-and-writing-files"></a>Lendo e gravando arquivos
 
@@ -27,7 +27,7 @@ Se você já usou as funções de manipulação de arquivos de biblioteca de tem
 
 1. Use o `Read` e `Write` funções de membro para ler e gravar dados no arquivo.
 
-     -ou-
+     - ou -
 
 1. O `Seek` função de membro também está disponível para a movimentação para um deslocamento específico dentro do arquivo.
 

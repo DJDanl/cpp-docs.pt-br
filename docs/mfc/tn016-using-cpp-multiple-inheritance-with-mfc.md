@@ -1,5 +1,5 @@
 ---
-title: 'TN016: usando várias heranças do C++ com MFC'
+title: 'TN016: Usando várias heranças do C++ com MFC'
 ms.date: 06/28/2018
 f1_keywords:
 - vc.inheritance
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - multiple inheritance, MFC support for
 ms.assetid: 4ee27ae1-1410-43a5-b111-b6af9b84535d
 ms.openlocfilehash: 76dc2e856ca7db783ee542aa2dbb498fd4c1a769
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668865"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62306123"
 ---
-# <a name="tn016-using-c-multiple-inheritance-with-mfc"></a>TN016: usando várias heranças do C++ com MFC
+# <a name="tn016-using-c-multiple-inheritance-with-mfc"></a>TN016: Usando várias heranças do C++ com MFC
 
 Essa observação descreve como usar a herança múltipla (MI) com o Microsoft Foundation Classes. O uso de MI não é necessário com o MFC. MI não é usada em qualquer classe do MFC e não é necessário escrever uma biblioteca de classes.
 

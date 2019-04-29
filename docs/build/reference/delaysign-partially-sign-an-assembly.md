@@ -10,11 +10,11 @@ helpviewer_keywords:
 - -DELAYSIGN linker option
 ms.assetid: 15244d30-3ecb-492f-a408-ffe81f38de20
 ms.openlocfilehash: 65585b856627ad9fda5a8f8bfad6ad81fef0f81c
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57807644"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62293830"
 ---
 # <a name="delaysign-partially-sign-an-assembly"></a>/DELAYSIGN (assinar parcialmente um assembly)
 
@@ -37,7 +37,7 @@ Quando você solicita um assembly totalmente assinado, o compilador usa o hash n
 
 Por exemplo, usando **/DELAYSIGN** permite que um testador coloque o assembly no cache global. Após o teste, é possível assinar completamente o assembly, colocando a chave privada no assembly.
 
-Ver [Assemblies de nome forte (assinatura de Assembly) (C + + c++ CLI)](../../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md) e [Assinando um Assembly com atraso](/dotnet/framework/app-domains/delay-sign-assembly) para obter mais informações sobre como assinar um assembly.
+Ver [Assemblies de nome forte (assinatura de Assembly) (C++/CLI)](../../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md) e [Assinando um Assembly com atraso](/dotnet/framework/app-domains/delay-sign-assembly) para obter mais informações sobre como assinar um assembly.
 
 Outras opções de vinculador que afetam a geração de assembly são:
 
@@ -68,4 +68,4 @@ Outras opções de vinculador que afetam a geração de assembly são:
 ## <a name="see-also"></a>Consulte também
 
 [Referência de vinculador MSVC](linking.md)<br/>
-[Opções do vinculador MSVC](linker-options.md)
+[Opções de vinculador MSVC](linker-options.md)

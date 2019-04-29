@@ -7,11 +7,11 @@ helpviewer_keywords:
 - begin Function
 ms.assetid: 5a44fb33-e247-49fd-b7a1-4a5b42e9e1e4
 ms.openlocfilehash: 1b95e4d32321aadf7de65ecb25109fbecd9eb614
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57741401"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62258285"
 ---
 # <a name="begin-function"></a>Função begin
 
@@ -67,4 +67,4 @@ O objeto que é retornado por begin de VectorIterator é um iterador proxy que a
 
 ## <a name="see-also"></a>Consulte também
 
-[Namespace Collections](../cppcx/windows-foundation-collections-namespace-c-cx.md)
+[Namespace Windows::Foundation::Collections](../cppcx/windows-foundation-collections-namespace-c-cx.md)

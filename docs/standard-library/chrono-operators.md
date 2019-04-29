@@ -5,11 +5,11 @@ f1_keywords:
 - chrono/std::operator modulo
 ms.assetid: c5a19267-4684-40c1-b7a9-cc1012b058f3
 ms.openlocfilehash: d86fbf15313c25dd28b9220c654750ee8bc96d81
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50631845"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62279053"
 ---
 # <a name="ltchronogt-operators"></a>Operadores &lt;chrono&gt;
 
@@ -118,7 +118,7 @@ constexpr duration<typename common_type<Rep1, Rep2>::type, Period2>
 *Dur*<br/>
 Um objeto `duration`.
 
-*MULT*<br/>
+*Mult*<br/>
 Um valor integral.
 
 ### <a name="return-value"></a>Valor de retorno

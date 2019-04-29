@@ -31,11 +31,11 @@ helpviewer_keywords:
 - ctanhf function
 ms.assetid: 807f2cd1-8740-4988-afff-5911c346385b
 ms.openlocfilehash: f63329e45fdcd3a26d613f73cd911fdf6fb10401
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55702681"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62288934"
 ---
 # <a name="ctanh-ctanhf-ctanhl"></a>ctanh, ctanhf, ctanhl
 
@@ -77,7 +77,7 @@ A tangente hiperbólica complexa de *z*.
 
 ## <a name="remarks"></a>Comentários
 
-Como C++ permite sobrecargas, é possível chamar sobrecargas de **ctanh** que usam e retornam **fcomplex** e **_Lcomplex** valores. Em um programa do C **ctanh** sempre usa e retorna um **_Dcomplex** valor.
+Porque C++ permite sobrecargas, é possível chamar sobrecargas de **ctanh** que usam e retornam **fcomplex** e **_Lcomplex** valores. Em um programa do C **ctanh** sempre usa e retorna um **_Dcomplex** valor.
 
 ## <a name="requirements"></a>Requisitos
 

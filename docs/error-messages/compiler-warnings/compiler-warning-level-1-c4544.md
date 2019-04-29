@@ -7,15 +7,15 @@ helpviewer_keywords:
 - C4544
 ms.assetid: 11ee04df-41ae-435f-af44-881e801315a8
 ms.openlocfilehash: f2a3f2e64a6a859add8182de4fc883c735563e92
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532893"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62352917"
 ---
 # <a name="compiler-warning-level-1-c4544"></a>Compilador aviso (nível 1) C4544
 
-'declaração de ': argumento de modelo ignorado nessa declaração de template padrão
+'declaração': Argumento de template padrão ignorado nessa declaração de template
 
 Um argumento de modelo padrão foi especificado em um local incorreto e foi ignorado. Um argumento de modelo padrão para um modelo de classe só pode ser especificado na declaração ou definição do modelo de classe e não em um membro do modelo de classe.
 

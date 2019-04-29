@@ -17,11 +17,11 @@ helpviewer_keywords:
 - compiler options, macros
 ms.assetid: a869adc6-b3de-4299-b040-9ae20b45f82c
 ms.openlocfilehash: 79b1cabc0304e905012db5f6dd73ed71073c0c1e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57258470"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62278417"
 ---
 # <a name="compiler-options-macros"></a>Macros de opções do compilador
 
@@ -115,7 +115,7 @@ Defina essa macro para forçar o uso da sintaxe de C++ ANSI compatíveis com o p
 
 As bibliotecas ATL e MFC foram alteradas para corresponder melhor conformidade de C++ padrão do compilador Visual C++. Segundo o padrão ANSI C++, a sintaxe de um ponteiro para uma função de membro de classe deve ser `&CMyClass::MyFunc`.
 
-Quando [_ATL_ENABLE_PTM_WARNING](#_atl_enable_ptm_warning) não está definido (o caso padrão), ATL/MFC desabilita o erro C4867 em mapas de macro (particularmente mensagem mapeia) para que o código que foi criado em versões anteriores pode continuar a compilação como antes. Se você definir **_ATL_ENABLE_PTM_WARNING**, seu código deve ser o padrão de C++ em conformidade.
+Quando [_ATL_ENABLE_PTM_WARNING](#_atl_enable_ptm_warning) não está definido (o caso padrão), ATL/MFC desabilita o erro C4867 em mapas de macro (particularmente mensagem mapeia) para que o código que foi criado em versões anteriores pode continuar a compilação como antes. Se você definir **_ATL_ENABLE_PTM_WARNING**, seu código deve ser C++ padrão em conformidade.
 
 No entanto, o formulário não-padrão foi preterido, portanto, você precisará mover o código existente para sintaxe de conformidade padrão C++. Por exemplo, o seguinte:
 

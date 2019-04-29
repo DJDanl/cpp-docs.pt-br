@@ -9,11 +9,11 @@ helpviewer_keywords:
 - -errorReport compiler option [C++]
 ms.assetid: 819828f8-b0a5-412c-9c57-bf822f17e667
 ms.openlocfilehash: 52909cb42180bf8b778d73fd709be05faf3f5714
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57811232"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62271782"
 ---
 # <a name="errorreport-report-internal-compiler-errors"></a>/errorReport (erros de compilador internos do relatório)
 
@@ -64,4 +64,4 @@ A capacidade do usuário de enviar relatórios depende das permissões de polít
 ## <a name="see-also"></a>Consulte também
 
 [Opções do compilador MSVC](compiler-options.md)<br/>
-[Sintaxe de linha de comando do compilador MSVC](compiler-command-line-syntax.md)
+[Sintaxe da linha de comando do compilador MSVC](compiler-command-line-syntax.md)

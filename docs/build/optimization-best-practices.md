@@ -6,11 +6,11 @@ helpviewer_keywords:
 - optimization, best practices
 ms.assetid: f3433148-7255-4ca6-8a4f-7c31aac88508
 ms.openlocfilehash: edb036292b87593a3f8bb9b3f5ec5f7beb84c3a5
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57824606"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62274164"
 ---
 # <a name="optimization-best-practices"></a>Melhores práticas de otimização
 
@@ -93,7 +93,7 @@ Outro pragma útil para limitar a profundidade do inlining é `#pragma inline_de
 
 ## <a name="restrict-and-assume"></a>Restrict e \__assume
 
-Há algumas das palavras-chave no Visual C++ que podem ajudar o desempenho: [Restrict](../cpp/extension-restrict.md) e [assume](../intrinsics/assume.md).
+Há algumas das palavras-chave no Visual C++ que pode ajudar o desempenho: [Restrict](../cpp/extension-restrict.md) e [assume](../intrinsics/assume.md).
 
 Primeiro, é importante observar que `__restrict` e `__declspec(restrict)` são duas coisas diferentes. Enquanto eles estiverem ligeiramente relacionados sua semântica é diferente. `__restrict` é um qualificador de tipo, como `const` ou `volatile`, mas exclusivamente para tipos de ponteiro.
 

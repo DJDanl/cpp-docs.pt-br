@@ -11,11 +11,11 @@ helpviewer_keywords:
 - Platform::Exception Class
 ms.assetid: ca1d5a67-3a5a-48fe-8099-f9c38a2d2dce
 ms.openlocfilehash: d37d55c56e3c23d8d9129c985cb4272d2e3ee47a
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57743423"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62368728"
 ---
 # <a name="platformexception-class"></a>Classe Platform::Exception
 
@@ -125,7 +125,7 @@ public:
     property int HResult { int get(); }
 ```
 
-## <a name="property-value"></a>Valor de propriedade
+## <a name="property-value"></a>Valor da propriedade
 
 Um valor HRESULT.
 
@@ -143,14 +143,14 @@ Mensagem que descreve o erro.
 public:property String^ Message;
 ```
 
-## <a name="property-value"></a>Valor de propriedade
+## <a name="property-value"></a>Valor da propriedade
 
 Nas exceções originadas no Tempo de Execução do Windows, essa é uma descrição do erro fornecida pelo sistema.
 
 ### <a name="remarks"></a>Comentários
 
-No Windows 8, essa propriedade é somente leitura, porque as exceções nessa versão do Windows Runtime são transportadas pela ABI somente como HRESULTS. No Windows 8.1, as informações de exceção mais detalhadas são transportadas pela ABI, e você pode fornecer uma mensagem personalizada que outros componentes podem acessar programaticamente. Para obter mais informações, consulte [exceções (C + + c++ /CX)](../cppcx/exceptions-c-cx.md).
+No Windows 8, essa propriedade é somente leitura, porque as exceções nessa versão do Windows Runtime são transportadas pela ABI somente como HRESULTS. No Windows 8.1, as informações de exceção mais detalhadas são transportadas pela ABI, e você pode fornecer uma mensagem personalizada que outros componentes podem acessar programaticamente. Para obter mais informações, consulte [exceções (C++/CX)](../cppcx/exceptions-c-cx.md).
 
 ## <a name="see-also"></a>Consulte também
 
-[Namespace Platform](../cppcx/platform-namespace-c-cx.md)
+[Namespace de plataforma](../cppcx/platform-namespace-c-cx.md)

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Visual C++, 64-bit hardware
 ms.assetid: cb99f72b-8c74-48f4-846a-8921b37b97e9
 ms.openlocfilehash: c56cd34ecbc6615b0acebde6c40c658ca0c436a4
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57818109"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62274675"
 ---
 # <a name="configure-c-projects-for-64-bit-x64-targets"></a>Configurar projetos do C++ para x64 de 64 bits, destinos
 
@@ -47,4 +47,4 @@ Esta seção contém tópicos sobre como alvo x64 de 64 bits ferramentas de comp
 
 ## <a name="see-also"></a>Consulte também
 
-[Projetos e sistemas de build](projects-and-build-systems-cpp.md)
+[Sistemas de Compilação e Projetos](projects-and-build-systems-cpp.md)

@@ -12,11 +12,11 @@ helpviewer_keywords:
 - PDBSTRIPPED linker option
 ms.assetid: 9b9e0070-6a13-4142-8180-19c003fbbd55
 ms.openlocfilehash: 3ed36eca727a15a3c70bc51a07cd3c143d7f66da
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57815210"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62320130"
 ---
 # <a name="pdbstripped-strip-private-symbols"></a>/PDBSTRIPPED (remover símbolos privados)
 
@@ -68,4 +68,4 @@ Se você não criar um arquivo PDB, /PDBSTRIPPED será ignorado.
 ## <a name="see-also"></a>Consulte também
 
 [Referência de vinculador MSVC](linking.md)<br/>
-[Opções do vinculador MSVC](linker-options.md)
+[Opções de vinculador MSVC](linker-options.md)

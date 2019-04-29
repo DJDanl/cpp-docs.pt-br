@@ -11,11 +11,11 @@ helpviewer_keywords:
 - generate function prototypes compiler option
 ms.assetid: c8df1b46-24ff-46f2-8356-e0a144b21dd2
 ms.openlocfilehash: 684174cf46e644c22e072e3fa60f75f9434c7e54
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816159"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62315892"
 ---
 # <a name="zg-generate-function-prototypes"></a>/Zg (gerar protótipos de função)
 
@@ -63,4 +63,4 @@ O **/Zg** opção foi preterida no Visual Studio 2005 e foi removida no Visual S
 ## <a name="see-also"></a>Consulte também
 
 [Opções do compilador MSVC](compiler-options.md)<br/>
-[Sintaxe de linha de comando do compilador MSVC](compiler-command-line-syntax.md)
+[Sintaxe da linha de comando do compilador MSVC](compiler-command-line-syntax.md)

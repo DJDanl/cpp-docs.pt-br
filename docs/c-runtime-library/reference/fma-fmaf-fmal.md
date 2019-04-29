@@ -31,11 +31,11 @@ helpviewer_keywords:
 - fmal function
 ms.assetid: 584a6037-da1e-4e86-9f0c-97aae86de0c0
 ms.openlocfilehash: f96592e245e443bae2f3334da51cae5572753708
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51517794"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62333489"
 ---
 # <a name="fma-fmaf-fmal"></a>fma, fmaf, fmal
 
@@ -94,7 +94,7 @@ Caso contrário, pode retornar um dos seguintes valores:
 
 |Problema|Valor de|
 |-----------|------------|
-|*x* = infinito, *y* = 0 ou<br /><br /> *x* = 0, *y* = infinito|NaN|
+|*x* = infinito, *y* = 0 ou<br /><br /> *x* = 0, *y* = INFINITY|NaN|
 |*x* ou *y* = ± exata infinito, *z* = infinito com o sinal oposto|NaN|
 |*x* ou *y* = NaN|NaN|
 |não (*x* = 0, *y*= indefinido) e *z* = NaN<br /><br /> não (*x*= indefinido, *y*= 0) e *z* = NaN|NaN|
@@ -113,7 +113,7 @@ Esta função calcula o valor como se ele tivesse precisão infinita e arredonda
 
 |Função|Cabeçalho C|Cabeçalho C++|
 |--------------|--------------|------------------|
-|**FMA**, **fmaf**, **fmal**|\<math.h>|\<cmath>|
+|**fma**, **fmaf**, **fmal**|\<math.h>|\<cmath>|
 
 Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 

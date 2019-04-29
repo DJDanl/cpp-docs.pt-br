@@ -31,11 +31,11 @@ helpviewer_keywords:
 - _telli64 function
 ms.assetid: 1500e8f9-8fec-4253-9eec-ec66125dfc9b
 ms.openlocfilehash: 628f37d3b8a39a75fb2329a1b2805426f15e821f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50660142"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62258566"
 ---
 # <a name="tell-telli64"></a>_tell, _telli64
 
@@ -54,7 +54,7 @@ __int64 _telli64(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Identificador*<br/>
+*handle*<br/>
 Descritor de arquivo que faz referência a um arquivo aberto.
 
 ## <a name="return-value"></a>Valor de retorno
@@ -73,7 +73,7 @@ O **Tell** função obtém a posição atual do ponteiro do arquivo (se houver) 
 
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|
-|**Tell**, **_telli64**|\<io.h>|
+|**_tell**, **_telli64**|\<io.h>|
 
 Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 

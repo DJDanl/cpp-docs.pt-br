@@ -24,11 +24,11 @@ helpviewer_keywords:
 - locales, getting information on
 ms.assetid: 7ecdb1f2-88f5-4037-a0e7-c754ab003660
 ms.openlocfilehash: bf26e4f7b7fb4f0334b57604fe5c4996312bd62a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50628131"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62286300"
 ---
 # <a name="localeconv"></a>localeconv
 
@@ -52,7 +52,7 @@ O **localeconv** função obtém informações detalhadas sobre a formatação n
 |-|-|
 decimal_point,<br/>_W_decimal_point|Ponteiro para caractere para quantidades não monetárias de ponto decimal.
 thousands_sep,<br/>_W_thousands_sep|Ponteiro para o caractere que separa grupos de dígitos à esquerda do ponto decimal para quantidades não monetárias.
-agrupando|Ponteiro para um **char**-tamanho inteiro que contém o tamanho de cada grupo de dígitos em quantidades não monetárias.
+grouping|Ponteiro para um **char**-tamanho inteiro que contém o tamanho de cada grupo de dígitos em quantidades não monetárias.
 int_curr_symbol,<br/>_W_int_curr_symbol|Ponteiro para o símbolo de moeda internacional para a localidade atual. Os três primeiros caracteres especificam o símbolo de moeda alfabético internacional, conforme definido na norma *ISO 4217, Códigos para a Representação de Moedas e Fundos*. O quarto caractere (caractere nulo imediatamente anterior) separa o símbolo de moeda internacional da quantidade monetária.
 currency_symbol,<br/>_W_currency_symbol|Ponteiro para o símbolo de moeda local para a localidade atual.
 mon_decimal_point,<br/>_W_mon_decimal_point|Ponteiro para caractere para quantidades monetárias de ponto decimal.

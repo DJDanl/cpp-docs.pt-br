@@ -28,11 +28,11 @@ helpviewer_keywords:
 - standard input, reading from
 ms.assetid: 19fda588-3e33-415c-bb60-dd73c028086a
 ms.openlocfilehash: 5f8d7dbeb35c8818706eb6070df613df8654feb6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50626597"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62287235"
 ---
 # <a name="getchar-getwchar"></a>getchar, getwchar
 
@@ -59,7 +59,7 @@ Essas funções bloqueiam o thread de chamada e, portanto, são thread-safe. Par
 
 |Rotina TCHAR.H|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**gettchar**|**getchar**|**getchar**|**getwchar**|
+|**_gettchar**|**getchar**|**getchar**|**getwchar**|
 
 ## <a name="requirements"></a>Requisitos
 

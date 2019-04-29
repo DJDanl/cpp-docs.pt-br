@@ -30,11 +30,11 @@ helpviewer_keywords:
 - fgetts function
 ms.assetid: ad549bb5-df98-4ccd-a53f-95114e60c4fc
 ms.openlocfilehash: 16dfb7cb0401083960669a735a976fbcd4ad4081
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50489554"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62333856"
 ---
 # <a name="fgets-fgetws"></a>fgets, fgetws
 
@@ -63,7 +63,7 @@ Local de armazenamento de dados.
 *numChars*<br/>
 O número máximo de caracteres a serem lidos.
 
-*fluxo*<br/>
+*stream*<br/>
 Ponteiro para a estrutura **FILE**.
 
 ## <a name="return-value"></a>Valor de retorno
@@ -84,7 +84,7 @@ O **fgets** função lê uma cadeia de caracteres de entrada *fluxo* argumento e
 
 |Rotina TCHAR.H|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**fgetts**|**fgets**|**fgets**|**fgetws**|
+|**_fgetts**|**fgets**|**fgets**|**fgetws**|
 
 ## <a name="requirements"></a>Requisitos
 

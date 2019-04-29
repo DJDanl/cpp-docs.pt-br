@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Windows messages [MFC], routing
 ms.assetid: b5952c8b-123e-406c-a36d-a6ac7c6df307
 ms.openlocfilehash: ce8aa2013c8f2f351ca1028f0d6103135ba5ecd8
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57294389"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62306175"
 ---
 # <a name="tn021-command-and-message-routing"></a>TN021: Comando e roteamento de mensagens
 
@@ -80,7 +80,7 @@ Manter o estado habilitado/marcada de todo um programa itens de menu sempre pode
 
 `CFrameWnd` também lida com a mensagem WM_ENTERIDLE para descrever o item selecionado na barra (também conhecido como a linha de mensagem) de status de menu atual.
 
-Estrutura do menu do aplicativo, editada pelo Visual C++, é usada para representar os comandos possíveis disponíveis em tempo de WM_INITMENUPOPUP. Manipuladores ON_UPDATE_COMMAND_UI podem modificar o estado ou o texto de um menu, ou para usos avançados (como a lista MRU do arquivo ou no menu pop-up verbos OLE), na verdade, modificar a estrutura de menu antes de menu é desenhado.
+Estrutura do menu do aplicativo, editada por Visual C++, é usado para representar os comandos possíveis disponíveis em tempo de WM_INITMENUPOPUP. Manipuladores ON_UPDATE_COMMAND_UI podem modificar o estado ou o texto de um menu, ou para usos avançados (como a lista MRU do arquivo ou no menu pop-up verbos OLE), na verdade, modificar a estrutura de menu antes de menu é desenhado.
 
 O mesmo tipo de processamento de ON_UPDATE_COMMAND_UI é feito para barras de ferramentas (e outras barras de controle) quando o aplicativo entra em seu loop ocioso. Consulte a *referência da biblioteca de classe* e [31 de observação técnica](../mfc/tn031-control-bars.md) para obter mais informações sobre barras de controle.
 

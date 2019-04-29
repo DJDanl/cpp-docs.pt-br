@@ -6,11 +6,11 @@ helpviewer_keywords:
 - PDB files, as linker input
 ms.assetid: c1071478-2369-4b03-9df8-71761cf82f3b
 ms.openlocfilehash: 365f2955f5bc9e8082221a070af454c820c665f1
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57822503"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62273281"
 ---
 # <a name="pdb-files-as-linker-input"></a>Arquivos .Pdb como entrada de vinculador
 
@@ -21,4 +21,4 @@ LINK também usa um PDB para armazenar informações de depuração para o arqui
 ## <a name="see-also"></a>Consulte também
 
 [Arquivos de entrada de LINK](link-input-files.md)<br/>
-[Opções do vinculador MSVC](linker-options.md)
+[Opções de vinculador MSVC](linker-options.md)
