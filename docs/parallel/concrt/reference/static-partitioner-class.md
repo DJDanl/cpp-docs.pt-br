@@ -9,11 +9,11 @@ helpviewer_keywords:
 - static_partitioner class
 ms.assetid: 2b3dbdf0-6eb9-49f6-8639-03df1d974143
 ms.openlocfilehash: 5120e3c53dc00ba9d5c3a4218efe1dcfb8f92e28
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57287630"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62337382"
 ---
 # <a name="staticpartitioner-class"></a>Classe static_partitioner
 
@@ -27,7 +27,7 @@ class static_partitioner;
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|

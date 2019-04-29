@@ -21,11 +21,11 @@ f1_keywords:
 helpviewer_keywords:
 - signal function
 ms.openlocfilehash: 351bdbe1d787fc5e5d741460adfe415df7fda756
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51328572"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62356284"
 ---
 # <a name="signal"></a>signal
 
@@ -58,7 +58,7 @@ Para obter mais informações sobre esses códigos de retorno, consulte [errno, 
 
 O **sinal** função permite que um processo escolha uma das várias maneiras de lidar com um sinal de interrupção do sistema operacional. O *sig* argumento é a interrupção à qual **sinal** responde; ele deve ser uma das seguintes constantes de manifesto, definidas em SIGNAL. H.
 
-|*SIG* valor|Descrição|
+|*sig* value|Descrição|
 |-----------------|-----------------|
 |**SIGABRT**|Encerramento anormal|
 |**SIGFPE**|Erro de ponto flutuante|

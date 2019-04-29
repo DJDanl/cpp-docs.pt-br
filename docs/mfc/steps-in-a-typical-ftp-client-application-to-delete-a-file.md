@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Internet applications [MFC], FTP client applications
 ms.assetid: 2c347a96-c0a4-4827-98fe-668406e552bc
 ms.openlocfilehash: 6d2a920d3053a920638dd20a23e1c2334745bbc3
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57326498"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62307049"
 ---
 # <a name="steps-in-a-typical-ftp-client-application-to-delete-a-file"></a>Etapas em um aplicativo cliente FTP típico para excluir um arquivo
 

@@ -3,17 +3,17 @@ title: Coleções (C++/CX)
 ms.date: 11/19/2018
 ms.assetid: 914da30b-aac5-4cd7-9da3-a5ac08cdd72c
 ms.openlocfilehash: 850ac0f4801a13a5407f8fe008740bbfa21cc02c
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57745425"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62347323"
 ---
 # <a name="collections-ccx"></a>Coleções (C++/CX)
 
-No C + + / programa c++ /CX, você pode usar livremente de contêineres STL Standard Template Library () ou qualquer outro tipo de coleção definida pelo usuário. No entanto, quando você passa coleções e para trás pela interface de binária de aplicativo (ABI) do tempo de execução do Windows — por exemplo, para um controle XAML ou para um cliente JavaScript — você deve usar tipos de coleção de tempo de execução do Windows.
+Em um C++programa /CX, você pode usar livremente de contêineres STL Standard Template Library () ou qualquer outro tipo de coleção definida pelo usuário. No entanto, quando você passa coleções e para trás pela interface de binária de aplicativo (ABI) do tempo de execução do Windows — por exemplo, para um controle XAML ou para um cliente JavaScript — você deve usar tipos de coleção de tempo de execução do Windows.
 
-O tempo de execução do Windows define as interfaces para coleções e tipos relacionados e C + + c++ /CLI CX fornece as implementações C++ concretas no arquivo de cabeçalho Collection. h. Esta ilustração mostra as relações entre os tipos de coleção:
+O tempo de execução do Windows define as interfaces para coleções e tipos relacionados, e C++/CX fornece concretas C++ implementações no arquivo de cabeçalho Collection. h. Esta ilustração mostra as relações entre os tipos de coleção:
 
 ![C&#43;&#43;&#47;árvore de herança do CX para tipos de coleção](../cppcx/media/cppcxcollectionsinheritancetree.png "C&#43;&#43;&#47;árvore de herança do CX para tipos de coleção")
 
@@ -28,7 +28,7 @@ O tempo de execução do Windows define as interfaces para coleções e tipos re
    > [!IMPORTANT]
    > Os iteradores proxy `VectorIterator` e `VectorViewIterator` utilizam os objetos proxy `VectoryProxy<T>` e `ArrowProxy<T>` para permitir o uso com contêineres STL. Para obter mais informações, consulte "Elementos VectorProxy" mais adiante neste artigo.
 
-- O C + + c++ /CLI a segurança do thread mesmo garante que os contêineres STL dão suporte a tipos de coleção do CX.
+- O C++tipos de coleção /CX suporte a segurança do thread mesmo garante que dá suporte a contêineres STL.
 
 - [Windows::Foundation::Collections::IObservableVector](/uwp/api/Windows.Foundation.Collections.IObservableVector_T_) e [Windows::Foundation::Collections::IObservableMap](/uwp/api/Windows.Foundation.Collections.IObservableMap_K_V_) definem eventos que são acionados quando a coleção é alterada de várias maneiras. Com a implementação dessas interfaces,  [Platform::Collections::Map](../cppcx/platform-collections-map-class.md) e [Platform::Collections::Vector](../cppcx/platform-collections-vector-class.md) oferecem suporte à associação de dados com coleções XAML. Por exemplo, se você tiver um `Vector` com dados associados a `Grid`, quando você adicionar um item a uma coleção, a alteração será refletida na interface de usuário da grade.
 
@@ -96,7 +96,7 @@ Os elementos de um [Platform::Collections::Map](../cppcx/platform-collections-ma
 
 ## <a name="collection-types"></a>Tipos de coleção
 
-As coleções se enquadram em quatro categorias: versões modificáveis e somente leitura das coleções de sequência e coleções associativas. Além disso, C + + c++ /CX aprimora as coleções fornecendo três classes de iterador que simplificam o acesso de coleções.
+As coleções se enquadram em quatro categorias: versões modificáveis e somente leitura das coleções de sequência e coleções associativas. Além disso, C++/CX aprimora as coleções fornecendo três classes de iterador que simplificam o acesso de coleções.
 
 Os elementos de uma coleção modificável podem ser alterados, mas os elementos de uma coleção somente leitura, que é conhecida como *exibição*, só podem ser lidos. Elementos de uma [Platform::Collections::Vector&lt;2](../cppcx/platform-collections-vector-class.md) ou[Platform::Collections::vectorview&lt;1}](../cppcx/platform-collections-vectorview-class.md) coleção pode ser acessada por meio da coleção ou de um iterador [Vector:: getat](../cppcx/platform-collections-vector-class.md#getat) e um índice. Elementos de uma coleção associativa podem ser acessados por meio da coleção [Map:: Lookup](../cppcx/platform-collections-map-class.md#lookup) e uma chave.
 
@@ -125,7 +125,7 @@ Um iterador STL que satisfaz os requisitos de um iterador de acesso aleatório S
 
 ### <a name="begin-and-end-functions"></a>Funções begin() e end()
 
-Para simplificar o uso de STL para processar `Vector`, `VectorView`, `Map`, `MapView`e arbitrário `Windows::Foundation::Collections` objetos C + +, c++ /CLI CX dá suporte a sobrecargas do [função begin](../cppcx/begin-function.md) e [final Função](../cppcx/end-function.md) funções não membro.
+Para simplificar o uso de STL para processar `Vector`, `VectorView`, `Map`, `MapView`e arbitrário `Windows::Foundation::Collections` objetos, C++/CX oferece suporte a sobrecargas do [função begin](../cppcx/begin-function.md) e o [end Function](../cppcx/end-function.md) funções não membro.
 
 A tabela a seguir lista os iteradores e as funções disponíveis.
 

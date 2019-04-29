@@ -1,5 +1,5 @@
 ---
-title: 'TN039: Implementação de automação de MFC-OLE'
+title: 'TN039: Implementação de automação OLE do MFC'
 ms.date: 06/28/2018
 f1_keywords:
 - vc.mfc.ole
@@ -11,13 +11,13 @@ helpviewer_keywords:
 - Automation, MFC COM interface entry points
 ms.assetid: 765fa3e9-dd54-4f08-9ad2-26e0546ff8b6
 ms.openlocfilehash: cd6f8d681ef7e6517f2172ca6b22b13723a962fd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658975"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62305483"
 ---
-# <a name="tn039-mfcole-automation-implementation"></a>TN039: implementação de automação MFC/OLE
+# <a name="tn039-mfcole-automation-implementation"></a>TN039: Implementação de automação MFC/OLE
 
 > [!NOTE]
 > A nota técnica a seguir não foi atualizada desde que foi incluído pela primeira vez na documentação online. Como resultado, alguns procedimentos e tópicos podem estar desatualizadas ou incorretas. Para obter as informações mais recentes, é recomendável que você pesquise o tópico de interesse no índice da documentação online.
@@ -120,7 +120,7 @@ Nome da classe.
 *pszName*<br/>
 Nome externo da propriedade.
 
-*Nome do membro*<br/>
+*memberName*<br/>
 Nome da variável de membro no qual a propriedade é armazenada.
 
 *pfnAfterSet*<br/>
@@ -156,7 +156,7 @@ Nome externo da propriedade.
 *memberGet*<br/>
 Nome da função de membro usada para obter a propriedade.
 
-*conjunto de membros*<br/>
+*memberSet*<br/>
 Nome da função de membro usada para definir a propriedade.
 
 *vtPropType*<br/>
@@ -228,7 +228,7 @@ Nome da classe.
 *pszName*<br/>
 Nome externo da propriedade.
 
-*DISPID*<br/>
+*dispid*<br/>
 O DISPID fixo para a propriedade ou método.
 
 *pfnGet*<br/>
@@ -237,7 +237,7 @@ Nome da função de membro usada para obter a propriedade.
 *pfnSet*<br/>
 Nome da função de membro usada para definir a propriedade.
 
-*Nome do membro*<br/>
+*memberName*<br/>
 O nome da variável de membro para mapear para a propriedade
 
 *vtPropType*<br/>

@@ -6,11 +6,11 @@ f1_keywords:
 - /kernel-
 ms.assetid: 6d7fdff0-c3d1-4b78-9367-4da588ce8b05
 ms.openlocfilehash: d065364cf6d3ae824098634c070f3651324aa52a
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816445"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62291334"
 ---
 # <a name="kernel-create-kernel-mode-binary"></a>/kernel (criar binário do modo kernel)
 
@@ -99,4 +99,4 @@ O **/kernel** opção e a **/driver** opção operar de forma independente e nã
 ## <a name="see-also"></a>Consulte também
 
 [Opções do compilador MSVC](compiler-options.md)<br/>
-[Sintaxe de linha de comando do compilador MSVC](compiler-command-line-syntax.md)
+[Sintaxe da linha de comando do compilador MSVC](compiler-command-line-syntax.md)

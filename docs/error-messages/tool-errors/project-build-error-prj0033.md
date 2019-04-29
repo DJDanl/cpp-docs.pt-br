@@ -1,5 +1,5 @@
 ---
-title: Erro de Build PRJ0033 no Projeto
+title: Erro PRJ0033 (compilação de projeto)
 ms.date: 11/04/2016
 f1_keywords:
 - PRJ0033
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - PRJ0033
 ms.assetid: 84d4a052-0586-4b78-9315-81c1e8386c1e
 ms.openlocfilehash: e074ee18508271b56686aa16f9012085ed3bd77d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50586206"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62346915"
 ---
-# <a name="project-build-error-prj0033"></a>Erro de Build PRJ0033 no Projeto
+# <a name="project-build-error-prj0033"></a>Erro PRJ0033 (compilação de projeto)
 
 A propriedade 'Additional Dependencies' para a compilação personalizada passo para o arquivo 'file' contido 'macro' que é avaliado 'macro_expansion'.
 

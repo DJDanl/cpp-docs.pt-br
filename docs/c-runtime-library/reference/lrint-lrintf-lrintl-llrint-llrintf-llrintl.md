@@ -43,11 +43,11 @@ helpviewer_keywords:
 - llrintl function
 ms.assetid: 28ccd5b3-5e6f-434f-997d-a21d51b8ce7f
 ms.openlocfilehash: 01680a62e654112475a55bd8eac0cc14d254e2a2
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523231"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62285766"
 ---
 # <a name="lrint-lrintf-lrintl-llrint-llrintf-llrintl"></a>lrint, lrintf, lrintl, llrint, llrintf, llrintl
 
@@ -116,7 +116,7 @@ Como C++ permite sobrecargas, é possível chamar sobrecargas de **lrint** e **l
 
 Se *x* não representa o equivalente de ponto flutuante de um valor integral, essas funções geram **FE_INEXACT**.
 
-**Seção específica da Microsoft**: quando o resultado estiver fora do intervalo de tipo retornado ou quando o parâmetro for um NaN ou infinito, o valor retornado será definido pela implementação. O compilador da Microsoft retorna um valor zero (0).
+**Específico da Microsoft**: Quando o resultado está fora do intervalo do tipo de retorno, ou quando o parâmetro for um NaN ou infinito, o valor de retorno é definido pela implementação. O compilador da Microsoft retorna um valor zero (0).
 
 ## <a name="requirements"></a>Requisitos
 

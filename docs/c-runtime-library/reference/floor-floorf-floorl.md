@@ -30,11 +30,11 @@ helpviewer_keywords:
 - floorl function
 ms.assetid: e9955f70-d659-414f-8050-132e13c8ff36
 ms.openlocfilehash: 050b7ea0eedf07666fa52145eeaf43f8fde2e18b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50647717"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62333580"
 ---
 # <a name="floor-floorf-floorl"></a>floor, floorf, floorl
 
@@ -83,7 +83,7 @@ C++ permite sobrecargas, portanto, é possível chamar sobrecargas de **andar** 
 
 |Função|Cabeçalho necessário|
 |--------------|---------------------|
-|**Floor**, **floorf**, **floorl**|\<math.h>|
+|**floor**, **floorf**, **floorl**|\<math.h>|
 
 Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 

@@ -40,11 +40,11 @@ helpviewer_keywords:
 - error messages, getting
 ms.assetid: 9e5b15a0-efe1-4586-b7e3-e1d7c31a03d6
 ms.openlocfilehash: 00ff9d0df1a78d07eaa509201fb998b30396cc4c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429634"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62353814"
 ---
 # <a name="strerrors-strerrors-wcserrors-wcserrors"></a>strerror_s, _strerror_s, _wcserror_s, __wcserror_s
 
@@ -122,7 +122,7 @@ Zero se for bem-sucedido ou um código de erro em caso de falha.
 
 ## <a name="remarks"></a>Comentários
 
-O **strerror_s** função mapas *errnum* para uma cadeia de caracteres de mensagem de erro, retornando a cadeia de caracteres no *buffer*. **strerror_s** não tem o número de erro; ele usa o valor atual da **errno** para determinar a mensagem apropriada. Nem **strerror_s** nem **strerror_s** imprimem a mensagem: para fazer isso, você precisa chamar uma função de saída, como [fprintf](fprintf-fprintf-l-fwprintf-fwprintf-l.md):
+O **strerror_s** função mapas *errnum* para uma cadeia de caracteres de mensagem de erro, retornando a cadeia de caracteres no *buffer*. **strerror_s** não tem o número de erro; ele usa o valor atual da **errno** para determinar a mensagem apropriada. Nem **strerror_s** nem **strerror_s** imprimem a mensagem: Para fazer isso, você precisa chamar uma função de saída, como [fprintf](fprintf-fprintf-l-fwprintf-fwprintf-l.md):
 
 ```C
 if (( _access( "datafile",2 )) == -1 )
@@ -152,14 +152,14 @@ As versões de depuração dessas funções preenchem primeiro o buffer com 0xFD
 
 |Rotina TCHAR.H|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**tcserror_s**|**strerror_s**|**strerror_s**|**_wcserror_s**|
+|**_tcserror_s**|**strerror_s**|**strerror_s**|**_wcserror_s**|
 
 ## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|
-|**strerror_s**, **strerror_s**|\<string.h>|
-|**wcserror_s**, **wcserror_s**|\<string.h> ou \<wchar.h>|
+|**strerror_s**, **_strerror_s**|\<string.h>|
+|**_wcserror_s**, **__wcserror_s**|\<string.h> ou \<wchar.h>|
 
 Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 

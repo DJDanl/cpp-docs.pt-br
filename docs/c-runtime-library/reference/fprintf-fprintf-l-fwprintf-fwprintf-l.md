@@ -36,11 +36,11 @@ helpviewer_keywords:
 - fwprintf_l function
 ms.assetid: 34a87e1c-6e4d-4d48-a611-58314dd4dc4b
 ms.openlocfilehash: d84ef50e6fd522e393bb87664fb1eb47f3d32bb4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50637288"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62333190"
 ---
 # <a name="fprintf-fprintfl-fwprintf-fwprintfl"></a>fprintf, _fprintf_l, fwprintf, _fwprintf_l
 
@@ -75,7 +75,7 @@ int _fwprintf_l(
 
 ### <a name="parameters"></a>Parâmetros
 
-*fluxo*<br/>
+*stream*<br/>
 Ponteiro para a estrutura **FILE**.
 
 *format*<br/>
@@ -108,8 +108,8 @@ As versões dessas funções com o **l** sufixo são idênticas, exceto que eles
 
 |Rotina TCHAR.H|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**ftprintf**|**fprintf**|**fprintf**|**fwprintf**|
-|**ftprintf_l**|**_fprintf_l**|**_fprintf_l**|**_fwprintf_l**|
+|**_ftprintf**|**fprintf**|**fprintf**|**fwprintf**|
+|**_ftprintf_l**|**_fprintf_l**|**_fprintf_l**|**_fwprintf_l**|
 
 Para obter mais informações, consulte [Especificações de formato](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
 
@@ -117,8 +117,8 @@ Para obter mais informações, consulte [Especificações de formato](../../c-ru
 
 |Função|Cabeçalho necessário|
 |--------------|---------------------|
-|**fprintf**, **fprintf_l**|\<stdio.h>|
-|**fwprintf**, **fwprintf_l**|\<stdio.h> ou \<wchar.h>|
+|**fprintf**, **_fprintf_l**|\<stdio.h>|
+|**fwprintf**, **_fwprintf_l**|\<stdio.h> ou \<wchar.h>|
 
 Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 

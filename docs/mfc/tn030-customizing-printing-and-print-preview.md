@@ -1,5 +1,5 @@
 ---
-title: 'TN030: personalizando impressão e visualização de impressão'
+title: 'TN030: Personalizando impressão e visualização de impressão'
 ms.date: 06/28/2018
 f1_keywords:
 - vc.print
@@ -11,13 +11,13 @@ helpviewer_keywords:
 - print preview [MFC], customizing
 ms.assetid: 32744697-c91c-41b6-9a12-b8ec01e0d438
 ms.openlocfilehash: 09938c5cec2812998d5e76e15154754ad3ac3e0b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50667893"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62305678"
 ---
-# <a name="tn030-customizing-printing-and-print-preview"></a>TN030: personalizando impressão e visualização de impressão
+# <a name="tn030-customizing-printing-and-print-preview"></a>TN030: Personalizando impressão e visualização de impressão
 
 > [!NOTE]
 > A nota técnica a seguir não foi atualizada desde que foi incluído pela primeira vez na documentação online. Como resultado, alguns procedimentos e tópicos podem estar desatualizadas ou incorretas. Para obter as informações mais recentes, é recomendável que você pesquise o tópico de interesse no índice da documentação online.
@@ -40,13 +40,13 @@ Para a banda manualmente, você deve re implementar o loop de impressão, de mod
 
 Em segundo lugar, você deve chamar com frequência `QueryAbort` ao desenhar a faixa. Caso contrário, o procedimento de anular não será chamado e o usuário será não é possível cancelar o trabalho de impressão.
 
-## <a name="print-preview-electronic-paper-with-user-interface"></a>Visualização de impressão: O papel eletrônico com Interface do usuário
+## <a name="print-preview-electronic-paper-with-user-interface"></a>Visualização de impressão: Papel eletrônico com Interface do usuário
 
 Visualizar impressão, em essência, tenta ativar a exibição em uma emulação de uma impressora. Por padrão, a área de cliente da janela principal é usada para exibir uma ou duas páginas totalmente dentro da janela. O usuário é capaz de aplicar zoom em uma área da página para vê-lo em mais detalhes. Com suporte adicional, o usuário ainda poderá ter permissão para editar o documento no modo de visualização.
 
 ## <a name="customizing-print-preview"></a>Personalizando a visualização de impressão
 
-Essa observação lida apenas com um aspecto da modificação de visualização de impressão: adicionando a interface do usuário para o modo de visualização. Outras modificações são possíveis, mas essas alterações estão fora do escopo desta discussão.
+Essa observação lida apenas com um aspecto da modificação de visualização de impressão: Adicionando a interface do usuário para o modo de visualização. Outras modificações são possíveis, mas essas alterações estão fora do escopo desta discussão.
 
 ## <a name="to-add-ui-to-the-preview-mode"></a>Para adicionar a interface do usuário para o modo de visualização
 

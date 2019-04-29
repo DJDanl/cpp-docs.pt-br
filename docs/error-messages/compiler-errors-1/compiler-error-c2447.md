@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C2447
 ms.assetid: d1bd6e9a-ee42-4510-ae5e-6b0378f7b931
 ms.openlocfilehash: 64dca8313af8b640b7b03c1ab27a1a31fa90de09
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50638523"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62301962"
 ---
 # <a name="compiler-error-c2447"></a>Erro do compilador C2447
 

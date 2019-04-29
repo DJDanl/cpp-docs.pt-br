@@ -93,11 +93,11 @@ helpviewer_keywords:
 - _tfindnexti64 function
 ms.assetid: 75d97188-5add-4698-a46c-4c492378f0f8
 ms.openlocfilehash: c7df8649625488a83239a19e4afcecea129f9072
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51329443"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62333723"
 ---
 # <a name="findnext-findnext32-findnext32i64-findnext64-findnext64i32-findnexti64-wfindnext-wfindnext32-wfindnext32i64-wfindnext64-wfindnext64i32-wfindnexti64"></a>_findnext, _findnext32, _findnext32i64, _findnext64, _findnext64i32, _findnexti64, _wfindnext, _wfindnext32, _wfindnext32i64, _wfindnext64, _wfindnext64i32, _wfindnexti64
 
@@ -158,10 +158,10 @@ int _wfindnext64i32(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Identificador*<br/>
+*handle*<br/>
 Identificador de pesquisa retornado por uma chamada anterior a **FindFirst**.
 
-*FileInfo*<br/>
+*fileinfo*<br/>
 Buffer de informações do arquivo.
 
 ## <a name="return-value"></a>Valor de retorno
@@ -190,8 +190,8 @@ A menos que você tenha um motivo específico para usar as versões que especifi
 
 |Funções|**_USE_32BIT_TIME_T** definidos?|Tipo de hora|Tipo de tamanho de arquivo|
 |---------------|----------------------------------|---------------|----------------------|
-|**FindNext**, **wfindnext**|Não definido|64 bits|32 bits|
-|**FindNext**, **wfindnext**|Definido|32 bits|32 bits|
+|**_findnext**, **_wfindnext**|Não definido|64 bits|32 bits|
+|**_findnext**, **_wfindnext**|Definido|32 bits|32 bits|
 |**_findnext32**, **_wfindnext32**|Não afetado pela definição de macro|32 bits|32 bits|
 |**_findnext64**, **_wfindnext64**|Não afetado pela definição de macro|64 bits|64 bits|
 |**_findnexti64**, **_wfindnexti64**|Não definido|64 bits|64 bits|
@@ -203,7 +203,7 @@ A menos que você tenha um motivo específico para usar as versões que especifi
 
 |Rotina Tchar.h|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**tfindnext**|**_findnext**|**_findnext**|**_wfindnext**|
+|**_tfindnext**|**_findnext**|**_findnext**|**_wfindnext**|
 |**_tfindnext32**|**_findnext32**|**_findnext32**|**_wfindnext32**|
 |**_tfindnext64**|**_findnext64**|**_findnext64**|**_wfindnext64**|
 |**_tfindnexti64**|**_findnexti64**|**_findnexti64**|**_wfindnexti64**|

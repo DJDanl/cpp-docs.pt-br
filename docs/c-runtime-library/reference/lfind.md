@@ -28,11 +28,11 @@ helpviewer_keywords:
 - _lfind function
 ms.assetid: a40ece70-1674-4b75-94bd-9f57cfff18f2
 ms.openlocfilehash: 1508d54d6b2f2566e4aee3afef02af45b28e4f48
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579160"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62286486"
 ---
 # <a name="lfind"></a>_lfind
 
@@ -58,7 +58,7 @@ O objeto a ser pesquisado.
 *base*<br/>
 Ponteiro para a base dos dados de pesquisa.
 
-*número*<br/>
+*number*<br/>
 Número de elementos da matriz.
 
 *width*<br/>

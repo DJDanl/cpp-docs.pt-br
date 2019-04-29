@@ -9,11 +9,11 @@ helpviewer_keywords:
 - command files, CL compiler
 ms.assetid: ec3cea06-2af0-4fe9-a94c-119c9d31b3a9
 ms.openlocfilehash: 9810f7b4308eab2b47a068072039335e59e19f5f
-ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "57816068"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62272579"
 ---
 # <a name="cl-command-files"></a>Arquivos de comando CL
 
@@ -47,5 +47,5 @@ Observe que a linha de comando e os comandos do arquivo de comando são combinad
 
 ## <a name="see-also"></a>Consulte também
 
-[Sintaxe de linha de comando do compilador MSVC](compiler-command-line-syntax.md)<br/>
+[Sintaxe da linha de comando do compilador MSVC](compiler-command-line-syntax.md)<br/>
 [Opções do compilador MSVC](compiler-options.md)

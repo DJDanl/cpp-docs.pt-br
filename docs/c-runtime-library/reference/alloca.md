@@ -24,11 +24,11 @@ helpviewer_keywords:
 - _alloca function
 ms.assetid: 74488eb1-b71f-4515-88e1-cdd03b6f8225
 ms.openlocfilehash: 7c083e791301d3224709a5fc6c711ceaa6397d38
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668060"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62341594"
 ---
 # <a name="alloca"></a>_alloca
 
@@ -57,7 +57,7 @@ Uma exceção de excedente de pilha será gerada se não for possível alocar o 
 
 **alloca** aloca *tamanho* bytes da pilha de programa. O espaço alocado é liberado automaticamente quando a função de chamada é encerrado (não quando a alocação simplesmente passa fora do escopo). Portanto, não passe o valor do ponteiro retornado por **alloca** como um argumento para [livre](free.md).
 
-Há restrições para chamar explicitamente **alloca** em um manipulador de exceção (EH). As rotinas do EH que são executadas em processadores da classe x86 operam em seu próprio quadro de memória: elas realizam suas tarefas no espaço de memória que não é baseado no local atual do ponteiro de pilha da função delimitadora. As implementações mais comuns incluem SEH (Manipulação de Exceção Estruturada ) do Windows NT e expressões de cláusula catch de C++. Portanto, chamar explicitamente **alloca** em qualquer um dos seguintes cenários resulta em falha do programa durante o retorno ao chamar a rotina EH:
+Há restrições para chamar explicitamente **alloca** em um manipulador de exceção (EH). As rotinas do EH que são executados em processadores da classe x86 operam em seu próprio quadro de memória: Elas realizam suas tarefas no espaço de memória que não se baseia o local atual do ponteiro de pilha da função. As implementações mais comuns incluem SEH (Manipulação de Exceção Estruturada ) do Windows NT e expressões de cláusula catch de C++. Portanto, chamar explicitamente **alloca** em qualquer um dos seguintes cenários resulta em falha do programa durante o retorno ao chamar a rotina EH:
 
 - Expressão de filtro de exceção SEH do Windows NT: `__except ( _alloca() )`
 

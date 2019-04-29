@@ -27,11 +27,11 @@ helpviewer_keywords:
 - _controlfp_s function
 ms.assetid: a51fc3f6-ab13-41f0-b227-6bf02d98e987
 ms.openlocfilehash: 0624cbfb4870ca87efebac01a8de682b588a4ca3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506672"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62335367"
 ---
 # <a name="controlfps"></a>_controlfp_s
 
@@ -55,7 +55,7 @@ O valor de bit da palavra de controle atual.
 *newControl*<br/>
 Novos valores de bit da palavra de controle.
 
-*Máscara*<br/>
+*mask*<br/>
 Máscara para novos bits da palavra de controle a ser definida.
 
 ## <a name="return-value"></a>Valor de retorno
@@ -68,7 +68,7 @@ O **controlfp_s** função é uma versão mais segura e independente de platafor
 
 Se o valor para *máscara* é igual a 0, **controlfp_s** obtém a palavra de controle de ponto flutuante e armazenará o valor recuperado no *currentControl*.
 
-Se *máscara* é diferente de zero, um novo valor para a palavra de controle é definido: para qualquer bit que é definido (ou seja, igual a 1) em *máscara*, o bit correspondente no *novo* é usado para atualizar o controle Word. Em outras palavras, *fpcntrl* = ((*fpcntrl* & ~*máscara*) &#124; (*newControl* & *máscara* )) em que *fpcntrl* é a palavra de controle de ponto flutuante. Nesse cenário, *currentControl* é definido como o valor após a conclusão da alteração; não é o valor antigo de bit de palavra de controle.
+Se *máscara* é diferente de zero, um novo valor para a palavra de controle é definido: Para qualquer bit que é definido (ou seja, igual a 1) no *máscara*, o bit correspondente no *novos* é usado para atualizar a palavra de controle. Em outras palavras, *fpcntrl* = ((*fpcntrl* & ~*máscara*) &#124; (*newControl* & *máscara* )) em que *fpcntrl* é a palavra de controle de ponto flutuante. Nesse cenário, *currentControl* é definido como o valor após a conclusão da alteração; não é o valor antigo de bit de palavra de controle.
 
 > [!NOTE]
 > Por padrão, as bibliotecas em tempo de execução mascaram todas as exceções de ponto flutuante.

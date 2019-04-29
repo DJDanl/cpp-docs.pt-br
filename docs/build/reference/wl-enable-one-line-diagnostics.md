@@ -9,11 +9,11 @@ helpviewer_keywords:
 - WL compiler option [C++]
 ms.assetid: 332cadb4-8ea6-45fe-b67d-33ddec1f2c2e
 ms.openlocfilehash: c0d5110615f66dcf4f7dc170d89ee58c2e8fa5cb
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57811973"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62316529"
 ---
 # <a name="wl-enable-one-line-diagnostics"></a>/WL (habilitar diagnóstico de uma linha)
 
@@ -58,4 +58,4 @@ int main() {
 ## <a name="see-also"></a>Consulte também
 
 [Opções do compilador MSVC](compiler-options.md)<br/>
-[Sintaxe de linha de comando do compilador MSVC](compiler-command-line-syntax.md)
+[Sintaxe da linha de comando do compilador MSVC](compiler-command-line-syntax.md)

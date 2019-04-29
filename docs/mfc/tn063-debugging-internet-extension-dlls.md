@@ -9,11 +9,11 @@ helpviewer_keywords:
 - DLLs [MFC], Internet extension
 ms.assetid: 7012d592-9d2f-491a-b417-48e5c2a7680f
 ms.openlocfilehash: a44e2fb0f10f387f9362cbff25252ae0a03bbf43
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57288799"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62351834"
 ---
 # <a name="tn063-debugging-internet-mfc-extension-dlls"></a>TN063: Depurando DLLs de extensão de MFC da Internet
 

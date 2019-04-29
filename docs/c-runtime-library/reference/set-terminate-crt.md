@@ -24,11 +24,11 @@ helpviewer_keywords:
 - exception handling, termination
 ms.assetid: 3ff1456a-7898-44bc-9266-a328a80b6006
 ms.openlocfilehash: 7be81dec7fba80a273d635cbd30b96b09928bc66
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50493906"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62356440"
 ---
 # <a name="setterminate-crt"></a>set_terminate (CRT)
 
@@ -51,7 +51,7 @@ Retorna um ponteiro para a função anterior registrada por **set_terminate** pa
 
 ## <a name="remarks"></a>Comentários
 
-O **set_terminate** função instala *termFunction* como a função chamada por **encerrar**. **set_terminate** é usado com o tratamento de exceções C++ e pode ser chamado a qualquer momento em seu programa antes que a exceção seja lançada. **encerrar** chamadas [anular](abort.md) por padrão. Você pode alterar esse padrão escrevendo sua própria função de encerramento e chamar **set_terminate** com o nome da sua função como seu argumento. **encerrar** chama a função last especificada como um argumento para **set_terminate**. Depois de executar quaisquer tarefas de limpeza, desejadas *termFunction* deve sair do programa. Se ele não é encerrado (se ele retorna para seu chamador), [anular](abort.md) é chamado.
+O **set_terminate** função instala *termFunction* como a função chamada por **encerrar**. **set_terminate** é usado com C++ tratamento de exceção e pode ser chamado a qualquer momento em seu programa antes que a exceção seja lançada. **encerrar** chamadas [anular](abort.md) por padrão. Você pode alterar esse padrão escrevendo sua própria função de encerramento e chamar **set_terminate** com o nome da sua função como seu argumento. **encerrar** chama a função last especificada como um argumento para **set_terminate**. Depois de executar quaisquer tarefas de limpeza, desejadas *termFunction* deve sair do programa. Se ele não é encerrado (se ele retorna para seu chamador), [anular](abort.md) é chamado.
 
 Em um ambiente multithreaded, funções de encerramento são mantidas separadamente para cada thread. Cada novo thread precisa instalar sua própria função de encerramento. Portanto, cada thread é responsável por sua própria manipulação de encerramento.
 

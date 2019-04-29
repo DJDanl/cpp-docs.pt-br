@@ -39,11 +39,11 @@ helpviewer_keywords:
 - control87_2 function
 ms.assetid: 0d09729d-d9a0-43d6-864c-43ff25e7e0c5
 ms.openlocfilehash: e2ebfdc80a451ebf02563f78a62dd08618f92bcd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505866"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62340411"
 ---
 # <a name="control87-controlfp-control872"></a>_control87, _controlfp, __control87_2
 
@@ -73,7 +73,7 @@ int __control87_2(
 *new*<br/>
 Novos valores de bit da palavra de controle.
 
-*Máscara*<br/>
+*mask*<br/>
 Máscara para novos bits da palavra de controle a ser definida.
 
 *x86_cw*<br/>
@@ -90,7 +90,7 @@ Para **__control87_2**, o valor retornado é 1, que indica êxito.
 
 ## <a name="remarks"></a>Comentários
 
-O **_control87** função obtém e define a palavra de controle de ponto flutuante. A palavra de controle de ponto flutuante permite que o programa altere os modos de precisão, arredondamento e infinito no pacote de matemática de ponto flutuante, dependendo da plataforma. Você também pode usar **_control87** para mascarar ou remover a máscara das exceções de ponto flutuante. Se o valor para *máscara* é igual a 0, **_control87** obtém a palavra de controle de ponto flutuante. Se *máscara* é diferente de zero, um novo valor para a palavra de controle é definido: para qualquer bit que esteja em (ou seja, igual a 1) em *máscara*, o bit correspondente no *novo* é usado para atualizar o controle Word. Em outras palavras, **fpcntrl** = ((**fpcntrl** & ~*máscara*) &#124; (*novo* & *demáscara*)) em que **fpcntrl** é a palavra de controle de ponto flutuante.
+O **_control87** função obtém e define a palavra de controle de ponto flutuante. A palavra de controle de ponto flutuante permite que o programa altere os modos de precisão, arredondamento e infinito no pacote de matemática de ponto flutuante, dependendo da plataforma. Você também pode usar **_control87** para mascarar ou remover a máscara das exceções de ponto flutuante. Se o valor para *máscara* é igual a 0, **_control87** obtém a palavra de controle de ponto flutuante. Se *máscara* é diferente de zero, um novo valor para a palavra de controle é definido: Para qualquer bit que é em (ou seja, igual a 1) no *máscara*, o bit correspondente no *novos* é usado para atualizar a palavra de controle. Em outras palavras, **fpcntrl** = ((**fpcntrl** & ~*máscara*) &#124; (*novo* & *demáscara*)) em que **fpcntrl** é a palavra de controle de ponto flutuante.
 
 > [!NOTE]
 > Por padrão, as bibliotecas em tempo de execução mascaram todas as exceções de ponto flutuante.
@@ -144,7 +144,7 @@ Para o **_MCW_EM** máscara, limpar a máscara define a exceção, que permite q
 
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|
-|**_control87**, **controlfp**, **_control87_2**|\<float.h>|
+|**_control87**, **_controlfp**, **_control87_2**|\<float.h>|
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 

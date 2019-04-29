@@ -75,11 +75,11 @@ helpviewer_keywords:
 - CButton [MFC], SetTextMargin
 ms.assetid: cdc76d5b-31da-43c5-bc43-fde4cb39de5b
 ms.openlocfilehash: b1a02d995594f5e079359151167ac970a3d1ab37
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57260134"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62348686"
 ---
 # <a name="cbutton-class"></a>Classe CButton
 
@@ -93,13 +93,13 @@ class CButton : public CWnd
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
 |[CButton::CButton](#cbutton)|Constrói um objeto `CButton`.|
 
-### <a name="public-methods"></a>Métodos Públicos
+### <a name="public-methods"></a>Métodos públicos
 
 |Nome|Descrição|
 |----------|-----------------|
@@ -430,7 +430,7 @@ BOOL GetNote(
 
 Na primeira sobrecarga, uma [CString](../../atl-mfc-shared/using-cstring.md) objeto que contém o texto de anotação associado ao controle de link de comando atual.
 
--ou-
+- ou -
 
 Na segunda sobrecarga, TRUE se este método for bem-sucedida; Caso contrário, FALSE.
 

@@ -24,11 +24,11 @@ helpviewer_keywords:
 - time, elapsed
 ms.assetid: ee1e42f6-1839-477a-8435-fb26ad475140
 ms.openlocfilehash: 3c80260c1f57e49a34b4e9f3331f4d0d69ab30ce
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57752318"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62252516"
 ---
 # <a name="ctimespan-class"></a>Classe CTimeSpan
 
@@ -42,7 +42,7 @@ class CTimeSpan
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|

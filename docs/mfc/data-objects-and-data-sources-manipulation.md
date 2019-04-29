@@ -13,11 +13,11 @@ helpviewer_keywords:
 - OLE [MFC], data sources
 ms.assetid: f7f27e77-bb5d-4131-b819-d71bf929ebaf
 ms.openlocfilehash: 81dfe911866c4d1ba1720ee2c9854076c499f0a3
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57286745"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62241543"
 ---
 # <a name="data-objects-and-data-sources-manipulation"></a>Objetos de dados e fontes de dados: Manipulação
 
@@ -37,7 +37,7 @@ Como os dados são inseridos em uma fonte de dados depende se os dados são forn
 
 - Chamar `COleDataSource::CacheGlobalData` repetidamente para cada formato de área de transferência na qual você está fornecendo dados. Passe o formato de área de transferência a ser usado, um identificador para a memória que contém os dados e, opcionalmente, uma **FORMATETC** estrutura que descreve os dados.
 
-     -ou-
+     - ou -
 
 - Se você quiser trabalhar diretamente com **STGMEDIUM** estruturas, chame `COleDataSource::CacheData` em vez de `COleDataSource::CacheGlobalData` na opção acima.
 
@@ -47,7 +47,7 @@ Este é um tópico avançado.
 
 - Chamar `COleDataSource::DelayRenderData` repetidamente para cada formato de área de transferência na qual você está fornecendo dados. Passe o formato de área de transferência a ser usado e, opcionalmente, uma **FORMATETC** estrutura que descreve os dados. Quando os dados são solicitados, a estrutura chamará `COleDataSource::OnRenderData`, que deve ser substituído.
 
-     -ou-
+     - ou -
 
 - Se você usar um `CFile` objeto para fornecer os dados, chame `COleDataSource::DelayRenderFileData` em vez de `COleDataSource::DelayRenderData` na opção anterior. Quando os dados são solicitados, a estrutura chamará `COleDataSource::OnRenderFileData`, que deve ser substituído.
 

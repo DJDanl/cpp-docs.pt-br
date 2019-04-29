@@ -3,15 +3,15 @@ title: Reprovando tipos e membros (C++/CX)
 ms.date: 12/30/2016
 ms.assetid: b20b01c1-a439-4ff0-8cf3-d7280c492813
 ms.openlocfilehash: 7f488dfa522c0b48c75150d40584b0946baae806
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57748444"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62301494"
 ---
 # <a name="deprecating-types-and-members-ccx"></a>Reprovando tipos e membros (C++/CX)
 
-No C + + c++ /CLI CX, substituição de membros e tipos de tempo de execução do Windows para produtores e consumidores usando o [preterido](/uwp/api/windows.foundation.metadata.deprecatedattribute) atributo tem suporte. Se você consumir uma API para a qual esse atributo foi aplicado, você receberá uma mensagem de aviso de tempo de compilação indicando que a API foi substituída e recomendando também uma API alternativa para uso. Em seus próprios tipos e métodos públicos, você pode aplicar esse atributo e fornecer sua própria mensagem personalizada.
+No C++/CX, substituição de membros e tipos de tempo de execução do Windows para produtores e consumidores usando o [Deprecated](/uwp/api/windows.foundation.metadata.deprecatedattribute) há suporte ao atributo. Se você consumir uma API para a qual esse atributo foi aplicado, você receberá uma mensagem de aviso de tempo de compilação indicando que a API foi substituída e recomendando também uma API alternativa para uso. Em seus próprios tipos e métodos públicos, você pode aplicar esse atributo e fornecer sua própria mensagem personalizada.
 
 > [!CAUTION]
 > O [preterido](/uwp/api/windows.foundation.metadata.deprecatedattribute) atributo é usado apenas com tipos de tempo de execução do Windows. Para classes e membros C++ padrão, use [__declspec(deprecated)](../cpp/deprecated-cpp.md).

@@ -5,11 +5,11 @@ f1_keywords:
 - VC.Project.VCCLCompilerTool.SDLCheck
 ms.assetid: 3dcf86a0-3169-4240-9f29-e04a9f535826
 ms.openlocfilehash: 0618b796d492395c3e0e5413047ac0260082baff
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57814196"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62318440"
 ---
 # <a name="sdl-enable-additional-security-checks"></a>/sdl (Habilitar verificações de segurança adicionais)
 
@@ -76,4 +76,4 @@ Para obter mais informações, consulte [avisos, /sdl e melhorando a detecção 
 ## <a name="see-also"></a>Consulte também
 
 [Opções do compilador MSVC](compiler-options.md)<br/>
-[Sintaxe de linha de comando do compilador MSVC](compiler-command-line-syntax.md)
+[Sintaxe da linha de comando do compilador MSVC](compiler-command-line-syntax.md)

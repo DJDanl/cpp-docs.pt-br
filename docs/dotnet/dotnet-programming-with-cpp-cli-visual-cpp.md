@@ -8,17 +8,17 @@ helpviewer_keywords:
 - Visual C++, .NET programming
 ms.assetid: 2c7f3b0f-a266-4f0e-b318-d6f1371e04a9
 ms.openlocfilehash: 21a45dbff2b02ccce5444706c158e5bdcc6e6cc2
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57749809"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62303790"
 ---
 # <a name="net-programming-with-ccli-visual-c"></a>Programação do .NET com c++ CLI (Visual C++)
 
 **Visual Studio 2015**: Por padrão, os projetos CLR criados com o Visual Studio 2015 de destino do .NET Framework 4.5.2. Para o destino o .NET Framework 4.6 quando você cria um novo projeto, no **novo projeto** caixa de diálogo, altere a estrutura de destino na lista suspensa na parte central superior da caixa de diálogo. Para alterar a estrutura de destino para um projeto existente, feche o projeto, edite o arquivo de projeto (. vcxproj) e altere o valor da versão do Framework de destino a 4.6. Próxima vez que abrir o projeto, as configurações entrarão em vigor.
 
-**Visual Studio 2017**: No Visual Studio 2017, a estrutura padrão é a 4.6.1 e o seletor de versão do Framework é na parte inferior a **caixa de diálogo Novo projeto**. C + + c++ CLI em si não é instalado por padrão. Para instalar o componente, abra o instalador do Visual Studio e escolha o C + + c++ /CLI componente de CLI em Visual C++.
+**Visual Studio 2017**: No Visual Studio 2017, a estrutura padrão é a 4.6.1 e o seletor de versão do Framework é na parte inferior a **caixa de diálogo Novo projeto**. C++/ CLI em si não está instalada por padrão. Para instalar o componente, abra o instalador do Visual Studio e escolha o C++componente /CLI no Visual C++.
 
 ## <a name="in-this-section"></a>Nesta seção
 
@@ -32,7 +32,7 @@ ms.locfileid: "57749809"
 
 [Expressões regulares (C++/CLI)](../dotnet/regular-expressions-cpp-cli.md)
 
-[Tratamento de arquivos e e/s (C + + / CLI)](../dotnet/file-handling-and-i-o-cpp-cli.md)
+[Tratamento de arquivos e e/s (C++/CLI)](../dotnet/file-handling-and-i-o-cpp-cli.md)
 
 [Operações de gráficos (C++/CLI)](../dotnet/graphics-operations-cpp-cli.md)
 

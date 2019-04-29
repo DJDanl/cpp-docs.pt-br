@@ -32,11 +32,11 @@ helpviewer_keywords:
 - wcsdup_dbg function
 ms.assetid: 681db70c-d124-43ab-b83e-5eeea9035097
 ms.openlocfilehash: 3092c27df1e39c7b719f6e7037efa202d29c9e81
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50531147"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62353867"
 ---
 # <a name="strdupdbg-wcsdupdbg"></a>_strdup_dbg, _wcsdup_dbg
 
@@ -93,7 +93,7 @@ Na maioria dos casos, não é necessário chamar essas funções explicitamente.
 
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|
-|**strdup_dbg**, **wcsdup_dbg**|\<crtdbg.h>|
+|**_strdup_dbg**, **_wcsdup_dbg**|\<crtdbg.h>|
 
 Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 

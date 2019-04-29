@@ -23,11 +23,11 @@ helpviewer_keywords:
 - streams, file position indicator
 ms.assetid: bfa05c38-1135-418c-bda1-d41be51acb62
 ms.openlocfilehash: e213c9830ffe6edf04b12a80828f14cc48f77524
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658413"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62333924"
 ---
 # <a name="fgetpos"></a>fgetpos
 
@@ -44,15 +44,15 @@ int fgetpos(
 
 ### <a name="parameters"></a>Parâmetros
 
-*fluxo*<br/>
+*stream*<br/>
 O fluxo de destino.
 
-*POS*<br/>
+*pos*<br/>
 Armazenamento do indicador de posição.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Se for bem-sucedido, **fgetpos** retornará 0. Em caso de falha, ele retorna um valor diferente de zero e define **errno** para uma das seguintes constantes (definidas em STDIO de manifesto. H): **EBADF**, que significa que o fluxo especificado não for um ponteiro de arquivo válido ou não está acessível, ou **EINVAL**, que significa que o *fluxo* valor ou o valor de *pos* é inválido, por exemplo, se é um ponteiro nulo. Se *stream* ou *pos* é um **nulo** ponteiro, a função invocará o manipulador de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md).
+Se for bem-sucedido, **fgetpos** retornará 0. Em caso de falha, ele retorna um valor diferente de zero e define **errno** para uma das seguintes constantes (definidas em STDIO de manifesto. H): **EBADF**, que significa que o fluxo especificado não for um ponteiro de arquivo válido ou não está acessível, ou **EINVAL**, que significa que o *fluxo* valor ou o valor de *pos*é inválido, por exemplo, se é um ponteiro nulo. Se *stream* ou *pos* é um **nulo** ponteiro, a função invocará o manipulador de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md).
 
 ## <a name="remarks"></a>Comentários
 

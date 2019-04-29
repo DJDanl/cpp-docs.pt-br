@@ -39,11 +39,11 @@ helpviewer_keywords:
 - mbctokata function
 ms.assetid: f949afd7-44d4-4f08-ac8f-1fef2c915a1c
 ms.openlocfilehash: 11b08449a7d27015c4ffe0ce398c471bbd6069f0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50637795"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62285607"
 ---
 # <a name="mbctohira-mbctohiral-mbctokata-mbctokatal"></a>_mbctohira, _mbctohira_l, _mbctokata, _mbctokata_l
 
@@ -89,8 +89,8 @@ O **mbctohira** e **mbctokata** funções testam um caractere *c* e, se possíve
 
 |Rotinas|Converte|
 |--------------|--------------|
-|**mbctohira**, **mbctohira_l**|Katakana multibyte para Hiragana multibyte.|
-|**mbctokata**, **mbctokata_l**|Hiragana multibyte para Katakana multibyte.|
+|**_mbctohira**, **_mbctohira_l**|Katakana multibyte para Hiragana multibyte.|
+|**_mbctokata**, **_mbctokata_l**|Hiragana multibyte para Katakana multibyte.|
 
 O valor de saída é afetado pela configuração da categoria **LC_CTYPE** da localidade. Consulte [setlocale](setlocale-wsetlocale.md) para obter mais informações. As versões dessas funções são idênticas, exceto que aquelas que não têm o **l** sufixo usam a localidade atual desse comportamento dependente da localidade e aqueles que têm o **l** sufixo em vez disso Use o parâmetro de localidade que é passado. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 

@@ -35,11 +35,11 @@ helpviewer_keywords:
 - time strings
 ms.assetid: 6330ff20-4729-4c4a-82af-932915d893ea
 ms.openlocfilehash: 932a7827ef61a5e111f86f8bc44291827843b76e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505658"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62353821"
 ---
 # <a name="strftime-wcsftime-strftimel-wcsftimel"></a>strftime, wcsftime, _strftime_l, _wcsftime_l
 
@@ -81,7 +81,7 @@ size_t _wcsftime_l(
 *strDest*<br/>
 Cadeia de caracteres de saída.
 
-*tamanho máximo*<br/>
+*maxsize*<br/>
 Tamanho do *strDest* buffer, medido em caracteres (**char** ou **wchar_t**).
 
 *format*<br/>
@@ -111,7 +111,7 @@ Essa função valida seus parâmetros. Se *strDest*, *formato*, ou *timeptr* é 
 
 |Rotina TCHAR.H|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**tcsftime**|**strftime**|**strftime**|**wcsftime**|
+|**_tcsftime**|**strftime**|**strftime**|**wcsftime**|
 
 O *formato* argumento consiste em um ou mais códigos, como em **printf**, os códigos de formatação são precedidos por um sinal de porcentagem (**%**). Caracteres que não começam com **%** são copiados inalterado para *strDest*. O **LC_TIME** categoria da localidade atual afeta a formatação de saída de **strftime**. (Para obter mais informações sobre **LC_TIME**, consulte [setlocale](setlocale-wsetlocale.md).) O **strftime** e **wcsftime** funções usam atualmente definida localidade. O **strftime_l** e **wcsftime_l** versões dessas funções são idênticas, exceto que eles usam a localidade como um parâmetro e usá-lo em vez de definida atualmente localidade. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
@@ -162,9 +162,9 @@ Como mostra a **printf** função, o **#** sinalizador pode ser prefixo em qualq
 
 |Código de formatação|Significado|
 |-----------------|-------------|
-|**% #a**, **%#A**, **%#b**, **%#B**, **%#g**, **%#G**, **%#h**, **%#n**, **%#p**, **%#t**, **%#u**, **%#w**, **%#x10** , **%#z**, **%#Z**, **%#%**|**#** sinalizador é ignorado.|
+|**%#a**, **%#A**, **%#b**, **%#B**, **%#g**, **%#G**, **%#h**, **%#n**, **%#p**, **%#t**, **%#u**, **%#w**, **%#X**, **%#z**, **%#Z**, **%#%**|**#** sinalizador é ignorado.|
 |**%#c**|Longa data e hora representação, apropriada para a localidade. Por exemplo: "Terça-feira, 14 de março de 1995, 12:41:29".|
-|**%#x10**|Representação de data por extenso, apropriada à localidade. Por exemplo: "Terça-feira, 14 de março de 1995".|
+|**%#x**|Representação de data por extenso, apropriada à localidade. Por exemplo: "Terça-feira, 14 de março de 1995".|
 |**%#d**, **%#D**, **%#e**, **%#F**, **%#H**, **% #I**, **%#j**, **%#m**, **%#M**, **%#r**, **%#R**, **%#S**, **%#T** , **%#U**, **%#V**, **%#W**, **%#y**, **%#Y**|Remova os zeros à esquerda ou espaços (se houver).|
 
 A semana com base no ano e semana ISO 8601 produzido pelo **%V**, **%g**, e **%G**, usa uma semana em que começa na segunda-feira, onde semana 1 é a que contém 4 de janeiro, que é o primeiro semana que inclui pelo menos quatro dias do ano. Se a primeira segunda-feira do ano é o 2º, 3 ou 4 de maio, os dias anteriores fazem parte da última semana do ano anterior. Para esses dias **%V** é substituído pelo 53 e ambos **%g** e **%G** são substituídos por dígitos do ano anterior.

@@ -36,11 +36,11 @@ helpviewer_keywords:
 - file sharing [C++]
 ms.assetid: 5e4502ab-48a9-4bee-a263-ebac8d638dec
 ms.openlocfilehash: 197a4f690a6626edbfec27ea4abef1999b6cedaf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677481"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62287688"
 ---
 # <a name="fsopen-wfsopen"></a>_fsopen, _wfsopen
 
@@ -112,17 +112,17 @@ O argumento *shflag* é uma expressão constante formada por uma das seguintes c
 
 |Termo|Definição|
 |----------|----------------|
-|**SH_COMPAT**|Define o modo de Compatibilidade para aplicativos de 16 bits.|
-|**SH_DENYNO**|Permite acesso de leitura e gravação.|
-|**SH_DENYRD**|Nega acesso de leitura ao arquivo.|
-|**SH_DENYRW**|Nega acesso de leitura e gravação ao arquivo.|
-|**SH_DENYWR**|Nega acesso de gravação ao arquivo.|
+|**_SH_COMPAT**|Define o modo de Compatibilidade para aplicativos de 16 bits.|
+|**_SH_DENYNO**|Permite acesso de leitura e gravação.|
+|**_SH_DENYRD**|Nega acesso de leitura ao arquivo.|
+|**_SH_DENYRW**|Nega acesso de leitura e gravação ao arquivo.|
+|**_SH_DENYWR**|Nega acesso de gravação ao arquivo.|
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
 |Rotina Tchar.h|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**tfsopen**|**_fsopen**|**_fsopen**|**_wfsopen**|
+|**_tfsopen**|**_fsopen**|**_fsopen**|**_wfsopen**|
 
 ## <a name="requirements"></a>Requisitos
 

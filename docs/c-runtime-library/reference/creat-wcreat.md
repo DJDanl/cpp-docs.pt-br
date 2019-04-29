@@ -33,11 +33,11 @@ helpviewer_keywords:
 - _tcreat function
 ms.assetid: 3b3b795d-1620-40ec-bd2b-a4bbb0d20fe5
 ms.openlocfilehash: 901a95a6a9361f95f38749dacf1a5001d97b3761
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50494985"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62335302"
 ---
 # <a name="creat-wcreat"></a>_creat, _wcreat
 
@@ -86,15 +86,15 @@ O **Creat** função cria um novo arquivo ou abre e trunca um existente. **wcrea
 
 |Rotina Tchar.h|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**tcreat**|**_creat**|**_creat**|**_wcreat**|
+|**_tcreat**|**_creat**|**_creat**|**_wcreat**|
 
 Se o arquivo especificado por *filename* não existir, um novo arquivo é criado com a configuração de permissão determinada e será aberto para gravação. Se o arquivo já existe e a configuração de permissão permite gravação, **Creat** trunca o arquivo para o tamanho 0, destruindo o conteúdo anterior e o abre para gravação. A configuração de permissão *pmode*, se aplica somente a arquivos recém-criados. O novo arquivo recebe a configuração de permissão especificada depois que ele é fechado pela primeira vez. A expressão de inteiro *pmode* contém uma ou ambas as constantes de manifesto **s_iwrite** e **s_iread**, definidas em sys\stat.h. Quando as duas constantes são informadas, elas são unidas com o bit a bit ou operador ( **&#124;** ). O *pmode* parâmetro é definido como um dos valores a seguir.
 
 |Valor|Definição|
 |-----------|----------------|
-|**S_IWRITE**|Gravação permitida.|
-|**S_IREAD**|Leitura permitida.|
-|**S_IREAD** &AMP;#124; **S_IWRITE**|Leitura e gravação permitidas.|
+|**_S_IWRITE**|Gravação permitida.|
+|**_S_IREAD**|Leitura permitida.|
+|**_S_IREAD** &#124; **_S_IWRITE**|Leitura e gravação permitidas.|
 
 Se a permissão de gravação não for fornecida, o arquivo será somente leitura. Todos os arquivos são sempre legíveis; é impossível conceder permissão somente gravação. Os modos **s_iwrite** e **s_iread** | **s_iwrite** , em seguida, são equivalentes. Arquivos abertos usando **Creat** sempre são abertos no modo de compatibilidade (consulte [sopen](sopen-wsopen.md)) com **sh_denyno**.
 

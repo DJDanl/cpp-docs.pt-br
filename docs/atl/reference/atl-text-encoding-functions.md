@@ -26,11 +26,11 @@ f1_keywords:
 - atlenc/ATL::UUEncodeGetRequiredLength
 ms.assetid: 2ae1648b-2b87-4112-92aa-0069fcfd23da
 ms.openlocfilehash: 13c521bae6790a030212c4a8edac460c960ecfc0
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270809"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62247858"
 ---
 # <a name="atl-text-encoding-functions"></a>Funções de codificação de texto da ATL
 
@@ -362,7 +362,7 @@ O comprimento em caracteres da cadeia de caracteres convertida.
 
 Possíveis conversões executadas por essa função são mostradas na tabela:
 
-|Origem|Destino|
+|Source|Destino|
 |------------|-----------------|
 |\<|&lt;|
 |>|&gt;|

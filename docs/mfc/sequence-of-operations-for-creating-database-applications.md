@@ -8,11 +8,11 @@ helpviewer_keywords:
 - MFC, database applications
 ms.assetid: 9371da59-8536-43cd-8314-706ad320e2ec
 ms.openlocfilehash: efd6b12b186ce0ef1c0caf57f313f6aa50425fec
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283664"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62308492"
 ---
 # <a name="sequence-of-operations-for-creating-database-applications"></a>Sequência de operações para criação de aplicativos de banco de dados
 

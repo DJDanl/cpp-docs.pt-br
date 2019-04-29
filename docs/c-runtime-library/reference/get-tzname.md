@@ -25,11 +25,11 @@ helpviewer_keywords:
 - get_tzname function
 ms.assetid: df0065ff-095f-4237-832c-2fe9ab913875
 ms.openlocfilehash: c173832efb866eed133a908b5f2b72266fd3798a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50452228"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62332033"
 ---
 # <a name="gettzname"></a>_get_tzname
 
@@ -60,7 +60,7 @@ O tamanho do *timeZoneName* cadeia de caracteres em bytes.
 *index*<br/>
 O índice de um dos dois nomes de fuso horário a serem recuperados.
 
-|*index*|Conteúdo de *timeZoneName*|*timeZoneName* valor padrão|
+|*index*|Conteúdo de *timeZoneName*|*timeZoneName* default value|
 |-|-|-|
 |0|Nome do fuso horário|"PST"|
 |1|O nome do fuso horário com horário de verão|"PDT"|

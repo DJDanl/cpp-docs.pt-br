@@ -1,5 +1,5 @@
 ---
-title: CoS, cosf, cosl
+title: cos, cosf, cosl
 ms.date: 04/05/2018
 apiname:
 - cos
@@ -32,13 +32,13 @@ helpviewer_keywords:
 - cosines, calculating
 ms.assetid: ae90435e-6b68-4a47-a81f-be87d5c08f16
 ms.openlocfilehash: b050fd98a35028b121def8b665fce62ad58ec437
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519881"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62335354"
 ---
-# <a name="cos-cosf-cosl"></a>CoS, cosf, cosl
+# <a name="cos-cosf-cosl"></a>cos, cosf, cosl
 
 Calcula o cosseno.
 
@@ -67,7 +67,7 @@ O cosseno *x*. Se *x* é maior que ou igual a 263 ou menor que ou igual a -263, 
 |Entrada|Exceção SEH|Exceção Matherr|
 |-----------|-------------------|-----------------------|
 |± QNAN, IND|nenhum|**_DOMAIN**|
-|± INF|**INVÁLIDO**|**_DOMAIN**|
+|± INF|**INVALID**|**_DOMAIN**|
 
 ## <a name="remarks"></a>Comentários
 
@@ -77,7 +77,7 @@ Como C++ permite sobrecargas, é possível chamar sobrecargas de **cos** que usa
 
 |Rotina|Cabeçalho C necessário|Cabeçalho C++ necessário|
 |-------------|---------------------|-|
-|**CoS**, **cosh**, **cosf**|\<math.h>|\<cmath> ou \<math.h>|
+|**cos**, **cosh**, **cosf**|\<math.h>|\<cmath> ou \<math.h>|
 
 Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 

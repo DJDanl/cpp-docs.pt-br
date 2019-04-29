@@ -29,11 +29,11 @@ helpviewer_keywords:
 - _execvpe function
 ms.assetid: c0c3c986-d9c0-4814-a96c-10f0b3092766
 ms.openlocfilehash: 064f8b94a9a97795015c09c11cd56e0370dcc60c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50431688"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62339397"
 ---
 # <a name="execvpe-wexecvpe"></a>_execvpe, _wexecvpe
 
@@ -72,7 +72,7 @@ Matriz de ponteiros para as configurações de ambiente.
 
 Se bem-sucedidas, essas funções não retornam ao processo de chamada. Um valor de retorno de -1 indica um erro, caso em que o **errno** variável global é definida.
 
-|**errno** valor|Descrição|
+|**errno** value|Descrição|
 |-------------------|-----------------|
 |**E2BIG**|O espaço necessário para os argumentos e as configurações de ambiente excede 32 KB.|
 |**EACCES**|O arquivo especificado tem uma violação de compartilhamento ou de bloqueio.|

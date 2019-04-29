@@ -31,11 +31,11 @@ helpviewer_keywords:
 - function calls, terminating
 - process termination, calling
 ms.openlocfilehash: 7b2a22649d779f382bb4055b1e44c14312627ccd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50451747"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62339345"
 ---
 # <a name="exit-exit-exit"></a>exit, _Exit, _exit
 
@@ -67,7 +67,7 @@ Código de status de saída.
 
 O **saia**, **exit** e **exit** funções encerram o processo de chamada. O **saia** função chama destruidores para objetos de thread local, em seguida, chama — na ordem do último a entrar, primeiro a sair (UEPS) — as funções que são registradas por **atexit** e **OnExit**e, em seguida, libera todos os buffers de arquivo antes de encerrar o processo. O **exit** e **exit** funções terminar o processo sem destruir objetos de thread local ou processamento **atexit** ou **OnExit**funções e sem eliminação de buffers de fluxo.
 
-Embora o **saia**, **exit** e **exit** chamadas não retornam um valor, o valor na *status* é disponibilizado para o ambiente de host ou aguardando o processo de chamada, se houver uma, depois que o processo é encerrado. Normalmente, o chamador define o *status* valor como 0 para indicar uma saída normal ou para algum outro valor para indicar um erro. O *status* valor estará disponível para o comando de lote do sistema operacional **ERRORLEVEL** e é representado por uma das duas constantes: **EXIT_SUCCESS**, que representa um valor 0, ou **EXIT_FAILURE**, que representa um valor de 1.
+Embora o **saia**, **exit** e **exit** chamadas não retornam um valor, o valor na *status* é disponibilizado para o ambiente de host ou aguardando o processo de chamada, se houver uma, depois que o processo é encerrado. Normalmente, o chamador define o *status* valor como 0 para indicar uma saída normal ou para algum outro valor para indicar um erro. O *status* valor estará disponível para o comando de lote do sistema operacional **ERRORLEVEL** e é representado por uma das duas constantes: **EXIT_SUCCESS**, que representa um valor de 0, ou **EXIT_FAILURE**, que representa um valor de 1.
 
 O **saia**, **exit**, **exit**, **quick_exit**, **cexit**, e **c_exit** funções se comportam da seguinte maneira.
 
@@ -97,7 +97,7 @@ Não use **DLL_PROCESS_ATTACH** chamar **sair** da **DllMain**. Para sair de **D
 
 |Função|Cabeçalho necessário|
 |--------------|---------------------|
-|**Saia**, **exit**, **Exit**|\<process.h> ou \<stdlib.h>|
+|**exit**, **_Exit**, **_exit**|\<process.h> ou \<stdlib.h>|
 
 Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 

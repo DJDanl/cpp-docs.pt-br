@@ -34,11 +34,11 @@ helpviewer_keywords:
 - Unicode [C++], files
 ms.assetid: c534857e-39ee-4a3f-bd26-dfe551ac96c3
 ms.openlocfilehash: 1309f991b8251bde7d614aa274d8d2e9da7a8ed3
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51333339"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62333320"
 ---
 # <a name="fopens-wfopens"></a>fopen_s, _wfopen_s
 
@@ -98,7 +98,7 @@ Sempre verifique o valor retornado para ver se a função foi bem-sucedida antes
 
 **fopen_s** dá suporte a fluxos de arquivo Unicode. Para abrir um arquivo Unicode novo ou existente, passe uma *ccs* sinalizador que especifica a codificação desejada para **fopen_s**:
 
-**fopen_s (& fp, "NewFile", "rw, ccs =**_codificação_**");**
+**fopen_s(&fp, "newfile.txt", "rw, ccs=**_encoding_**");**
 
 Valores de permitidos *codificação* são **UNICODE**, **UTF-8**, e **UTF-16LE**. Se há nenhum valor for especificado para *codificação*, **fopen_s** usa a codificação ANSI.
 
@@ -125,7 +125,7 @@ Se *modo* é **", ccs =**_codificação_**"**, **fopen_s** primeiro tenta abrir 
 
 |Rotina TCHAR.H|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**tfopen_s**|**fopen_s**|**fopen_s**|**_wfopen_s**|
+|**_tfopen_s**|**fopen_s**|**fopen_s**|**_wfopen_s**|
 
 A cadeia de caracteres *modo* Especifica o tipo de acesso solicitado para o arquivo, da seguinte maneira.
 
@@ -168,19 +168,19 @@ Para obter mais informações sobre como usar os modos de texto e binário em Un
 | **R** | Especifica que o cache é otimizado para acesso aleatório do disco, mas não se restringe a isso. |
 | **T** | Especifica um arquivo como temporário. Se possível, ele não é liberado no disco. |
 | **D** | Especifica um arquivo como temporário. É excluído quando o último ponteiro de arquivo é fechado. |
-| **CCS =**_codificação_ | Especifica o caractere codificado definido para usar (um dos **UTF-8**, **UTF-16LE**, ou **UNICODE**) para esse arquivo. Deixe não especificado se desejar codificação ANSI. |
+| **ccs=**_encoding_ | Especifica o caractere codificado definido para usar (um dos **UTF-8**, **UTF-16LE**, ou **UNICODE**) para esse arquivo. Deixe não especificado se desejar codificação ANSI. |
 
 Caracteres válidos para o *modo* cadeia de caracteres usada na **fopen_s** e [fdopen](fdopen-wfdopen.md) correspondem às *oflag* argumentos usados no [_ Abra](open-wopen.md) e [sopen](sopen-wsopen.md), da seguinte maneira.
 
 |Caracteres em *modo* cadeia de caracteres|Equivalente *oflag* valor para sopen|
 |-------------------------------|----------------------------------------------------|
-|**a**|**O_wronly** &#124; **o_append** (geralmente **o_wronly** &#124; **o_creat** &#124;* * o_append * *)|
-|**+**|**O_rdwr** &#124; **o_append** (geralmente **o_rdwr** &#124; **o_append** &#124; **o_creat** )|
+|**a**|**_O_WRONLY** &#124; **_O_APPEND** (usually **_O_WRONLY** &#124; **_O_CREAT** &#124;** _O_APPEND**)|
+|**a+**|**O_rdwr** &#124; **o_append** (geralmente **o_rdwr** &#124; **o_append** &#124; **o_creat** )|
 |**r**|**_O_RDONLY**|
-|**r +**|**O_RDWR**|
-|**w**|**O_wronly** (geralmente **o_wronly** &#124; **o_creat** &#124;* * o_trunc * *)|
-|**w +**|**O_rdwr** (geralmente **o_rdwr** &#124; **o_creat** &#124; **o_trunc**)|
-|**b**|**O_BINARY**|
+|**r+**|**_O_RDWR**|
+|**w**|**_O_WRONLY** (usually **_O_WRONLY** &#124; **_O_CREAT** &#124;** _O_TRUNC**)|
+|**w+**|**_O_RDWR** (usually **_O_RDWR** &#124; **_O_CREAT** &#124; **_O_TRUNC**)|
+|**b**|**_O_BINARY**|
 |**t**|**_O_TEXT**|
 |**c**|Nenhum|
 |**n**|Nenhum|
@@ -188,9 +188,9 @@ Caracteres válidos para o *modo* cadeia de caracteres usada na **fopen_s** e [f
 |**R**|**_O_RANDOM**|
 |**T**|**_O_SHORTLIVED**|
 |**D**|**_O_TEMPORARY**|
-|**CCS = UNICODE**|**_O_WTEXT**|
-|**CCS = UTF-8**|**_O_UTF8**|
-|**CCS = UTF-16LE**|**_O_UTF16**|
+|**ccs=UNICODE**|**_O_WTEXT**|
+|**ccs=UTF-8**|**_O_UTF8**|
+|**ccs=UTF-16LE**|**_O_UTF16**|
 
 Se você estiver usando **rb** modo, não será necessário portar seu código e esperar ler uma grande parte do arquivo e/ou não se preocupa com o desempenho da rede, arquivos do Win32 mapeados na memória também podem ser uma opção.
 

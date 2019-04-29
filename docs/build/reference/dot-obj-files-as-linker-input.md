@@ -10,11 +10,11 @@ helpviewer_keywords:
 - OBJ files as linker input
 - .obj files as linker input
 ms.openlocfilehash: c55c3181c2ddfabddce882a473e56d952a7e5d81
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816393"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62293271"
 ---
 # <a name="obj-files-as-linker-input"></a>Arquivos .Obj como entrada de vinculador
 
@@ -33,7 +33,7 @@ Para obter mais informações sobre o compilador e vinculador, consulte [suporte
 ## <a name="see-also"></a>Consulte também
 
 [Arquivos de entrada de LINK](link-input-files.md)<br/>
-[Opções do vinculador MSVC](linker-options.md)<br/>
+[Opções de vinculador MSVC](linker-options.md)<br/>
 [Suporte para Unicode](../../text/support-for-unicode.md)<br/>
 [Suporte Unicode no compilador e no vinculador](unicode-support-in-the-compiler-and-linker.md)<br/>
 [Padrão Unicode](http://www.unicode.org/)<br/>

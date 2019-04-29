@@ -28,11 +28,11 @@ f1_keywords:
 - wcstold
 ms.assetid: 928c0c9a-bc49-445b-8822-100eb5954115
 ms.openlocfilehash: dcf1eca5b163c8553b43d747d53537ec424a793c
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51521330"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62269183"
 ---
 # <a name="strtold-strtoldl-wcstold-wcstoldl"></a>strtold, _strtold_l, wcstold, _wcstold_l
 
@@ -97,7 +97,7 @@ Se *endptr* não está **nulo**, um ponteiro para o caractere que parou a verifi
 
 **strtold** espera *strSource* para apontar para uma cadeia de caracteres da seguinte forma:
 
-[*espaço em branco*] [*sinal*] [*dígitos*] [. *dígitos*] [{**1!d** &#124; **1!d** &#124; **eletrônico** &#124; **eletrônico**} [*entrada* ]*dígitos*]
+[*whitespace*] [*sign*] [*digits*] [.*digits*] [ {**d** &#124; **D** &#124; **e** &#124; **E**}[*sign*]*digits*]
 
 Um *espaço em branco* pode consistir em caracteres de espaço ou tabulação, que são ignorados; *sinal* seja plus (**+**) ou de menos (**-**); e *dígitos* são um ou mais dígitos decimais. Se nenhum dígito aparecer antes do caractere fracionário, pelo menos um deverá aparecer após o caractere fracionário. Os dígitos decimais podem ser seguidos por um expoente, que consiste em uma letra de apresentação (**d**, **D**, **e** ou **E**) e um inteiro opcionalmente com sinal. Se nem um expoente nem um caractere fracionário aparecer, supõe-se que um caractere fracionário siga o último dígito na cadeia de caracteres. O primeiro caractere que não é adequado a esse formato interrompe o exame.
 

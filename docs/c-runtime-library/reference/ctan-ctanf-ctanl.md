@@ -31,11 +31,11 @@ helpviewer_keywords:
 - ctanl function
 ms.assetid: d3cbd25c-1e93-4a6d-8154-da42921f7223
 ms.openlocfilehash: 2d4da5a39658e46bc633ae3bd9c8f6f0a01555aa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50661741"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62288748"
 ---
 # <a name="ctan-ctanf-ctanl"></a>ctan, ctanf, ctanl
 
@@ -77,13 +77,13 @@ A tangente de *z*.
 
 ## <a name="remarks"></a>Comentários
 
-Como C++ permite sobrecargas, é possível chamar sobrecargas de **ctan** que usam e retornam **fcomplex** e **_Lcomplex** valores. Em um programa do C **ctan** sempre usa e retorna um **_Dcomplex** valor.
+Porque C++ permite sobrecargas, é possível chamar sobrecargas de **ctan** que usam e retornam **fcomplex** e **_Lcomplex** valores. Em um programa do C **ctan** sempre usa e retorna um **_Dcomplex** valor.
 
 ## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho C|Cabeçalho C++|
 |-------------|--------------|------------------|
-|**ctan**, **ctanf**, **ctanl**|\<complex.h>|\<ccomplex>|
+|**ctan**,               **ctanf**, **ctanl**|\<complex.h>|\<ccomplex>|
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 

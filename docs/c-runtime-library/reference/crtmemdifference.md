@@ -23,11 +23,11 @@ helpviewer_keywords:
 - _CrtMemDifference function
 ms.assetid: 0f327278-b551-482f-958b-76941f796ba4
 ms.openlocfilehash: f2c6306bf604737d0ace142674b21845a08e2dee
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429647"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62339462"
 ---
 # <a name="crtmemdifference"></a>_CrtMemDifference
 
@@ -78,7 +78,7 @@ Para obter mais informações sobre as funções de estado de heap e o **crtmems
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-**Bibliotecas:** somente versões de depuração dos [Recursos da biblioteca CRT](../../c-runtime-library/crt-library-features.md).
+**Bibliotecas:** Versões de depuração [recursos da biblioteca CRT](../../c-runtime-library/crt-library-features.md) apenas.
 
 ## <a name="see-also"></a>Consulte também
 

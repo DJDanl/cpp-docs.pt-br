@@ -3,15 +3,15 @@ title: 'Passo a passo: Compilando um c++ CLI programa na linha de comando'
 ms.date: 09/24/2018
 ms.assetid: cef41c88-faf9-439d-8423-25aa3f5674dd
 ms.openlocfilehash: c90d2c915db7264dc1b4e4807803e063c2a24fc7
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57811921"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62314163"
 ---
 # <a name="walkthrough-compiling-a-ccli-program-on-the-command-line"></a>Passo a passo: Compilando um c++ CLI programa na linha de comando
 
-É possível criar programas Visual C++ que tenham CLR (Common Language Runtime) como destino e usem .NET Framework e depois compilá-los na linha de comando. O Visual C++ tem suporte à linguagem de programação C++/CLI, que possui tipos e operadores adicionais para atingir o modelo de programação .NET. Para obter informações gerais sobre o C + + c++ /CLI linguagem CLI, consulte [programação do .NET com C + + c++ CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md).
+É possível criar programas Visual C++ que tenham CLR (Common Language Runtime) como destino e usem .NET Framework e depois compilá-los na linha de comando. O Visual C++ tem suporte à linguagem de programação C++/CLI, que possui tipos e operadores adicionais para atingir o modelo de programação .NET. Para obter informações gerais sobre o C++linguagem /CLI, consulte [programação do .NET com o C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md).
 
 Neste passo a passo, você usa um editor de texto para criar um programa de C++/CLI básico e, em seguida, o compila na linha de comandos. (Você pode usar seu próprio programa de C++/CLI ao invés de digitar o que é mostrado ou, ainda, usar uma amostra de código de C++/CLI de outro artigo de ajuda. Essa técnica é útil para compilar e testar pequenos módulos que têm sem elementos de interface do usuário.)
 
@@ -61,5 +61,5 @@ Para habilitar a compilação para c++ /CLI, você deve usar o [/clr](reference/
 ## <a name="see-also"></a>Consulte também
 
 [Referência da linguagem C++](../cpp/cpp-language-reference.md)<br/>
-[Projetos e sistemas de build](projects-and-build-systems-cpp.md)<br/>
+[Sistemas de Compilação e Projetos](projects-and-build-systems-cpp.md)<br/>
 [Opções do compilador MSVC](reference/compiler-options.md)

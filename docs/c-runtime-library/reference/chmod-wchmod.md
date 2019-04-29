@@ -30,11 +30,11 @@ helpviewer_keywords:
 - _wchmod function
 ms.assetid: 92f7cb86-b3b0-4232-a599-b8c04a2f2c19
 ms.openlocfilehash: 278ee1e6dda9e153b55676ce5c0ca389f383efd1
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518405"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62348465"
 ---
 # <a name="chmod-wchmod"></a>_chmod, _wchmod
 
@@ -67,7 +67,7 @@ O **chmod** função altera a configuração de permissão do arquivo especifica
 |-|-|
 | **\_S\_IREAD** | Somente a leitura é permitida. |
 | **\_S\_IWRITE** | Gravação permitida. (Na verdade, permite leitura e gravação.) |
-| **\_S\_IREAD** &AMP;#124;  **\_S\_IWRITE** | Leitura e gravação permitidas. |
+| **\_S\_IREAD** &#124; **\_S\_IWRITE** | Leitura e gravação permitidas. |
 
 Quando as duas constantes são informadas, elas são unidas com o bit a bit ou operador (**\|**). Se a permissão de gravação não for fornecida, o arquivo será somente leitura. Observe que todos os arquivos são sempre legíveis; não é possível dar permissão somente gravação. Portanto, os modos **s_iwrite** e **s_iread** \| **s_iwrite** são equivalentes.
 
