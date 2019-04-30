@@ -13,11 +13,11 @@ helpviewer_keywords:
 - hierarchy, operator
 ms.assetid: 95c1f0ba-dad8-4034-b039-f79a904f112f
 ms.openlocfilehash: 0b560913deb57393a8547f0831e0d987eed41ab7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50574051"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392343"
 ---
 # <a name="c-built-in-operators-precedence-and-associativity"></a>Operadores C++ internos, precedência e associatividade
 
@@ -37,7 +37,7 @@ Operador *precedência* Especifica a ordem das operações em expressões que co
 |[Chamada de função](../cpp/function-call-operator-parens.md)|[()](../cpp/function-call-operator-parens.md)|
 |[Incremento de sufixo](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)|[++](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)|
 |[Decremento de sufixo](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)|[--](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)|
-|[Nome do tipo](../cpp/typeid-operator.md)|[TypeId](../cpp/typeid-operator.md)|
+|[Nome do tipo](../cpp/typeid-operator.md)|[typeid](../cpp/typeid-operator.md)|
 |[Conversão de tipo de constante](../cpp/const-cast-operator.md)|[const_cast](../cpp/const-cast-operator.md)|
 |[Conversão de tipo dinâmico](../cpp/dynamic-cast-operator.md)|[dynamic_cast](../cpp/dynamic-cast-operator.md)|
 |[Conversão de tipo reinterpretado](../cpp/reinterpret-cast-operator.md)|[reinterpret_cast](../cpp/reinterpret-cast-operator.md)|
@@ -50,7 +50,7 @@ Operador *precedência* Especifica a ordem das operações em expressões que co
 |[Not lógico](../cpp/logical-negation-operator-exclpt.md)|[\!](../cpp/logical-negation-operator-exclpt.md)|
 |[Negação unária](../cpp/unary-plus-and-negation-operators-plus-and.md)|[-](../cpp/unary-plus-and-negation-operators-plus-and.md)|
 |[Adição unária](../cpp/unary-plus-and-negation-operators-plus-and.md)|[+](../cpp/unary-plus-and-negation-operators-plus-and.md)|
-|[Endereço de](../cpp/address-of-operator-amp.md)|[&amp;](../cpp/address-of-operator-amp.md)|
+|[Address-of](../cpp/address-of-operator-amp.md)|[&amp;](../cpp/address-of-operator-amp.md)|
 |[Indireção](../cpp/indirection-operator-star.md)|[&#42;](../cpp/indirection-operator-star.md)|
 |[Criar objeto](../cpp/new-operator-cpp.md)|[new](../cpp/new-operator-cpp.md)|
 |[Destruir o objeto](../cpp/delete-operator-cpp.md)|[delete](../cpp/delete-operator-cpp.md)|

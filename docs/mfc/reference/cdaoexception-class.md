@@ -19,11 +19,11 @@ helpviewer_keywords:
 - CDaoException [MFC], m_scode
 ms.assetid: b2b01fa9-7ce2-42a1-842e-40f13dc50da4
 ms.openlocfilehash: 8d49291c51f66ee837f9b31a2ade390cec48c51a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57288994"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62399792"
 ---
 # <a name="cdaoexception-class"></a>Classe CDaoException
 
@@ -37,13 +37,13 @@ class CDaoException : public CException
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
 |[CDaoException::CDaoException](#cdaoexception)|Constrói um objeto `CDaoException`.|
 
-### <a name="public-methods"></a>Métodos Públicos
+### <a name="public-methods"></a>Métodos públicos
 
 |Nome|Descrição|
 |----------|-----------------|
@@ -153,7 +153,7 @@ Chame essa função de membro para obter os seguintes tipos de informações sob
 
 - Código de erro
 
-- Origem
+- Source
 
 - Descrição
 
@@ -194,7 +194,7 @@ Esse objeto contém as seguintes informações:
 |Membro de CDaoErrorInfo|Informações|Significado|
 |--------------------------|-----------------|-------------|
 |`m_lErrorCode`|Código do erro|O código de erro do DAO|
-|`m_strSource`|Origem|O nome do objeto ou aplicativo que originalmente gerou o erro|
+|`m_strSource`|Source|O nome do objeto ou aplicativo que originalmente gerou o erro|
 |`m_strDescription`|Descrição|Uma cadeia de caracteres descritiva associada ao erro|
 |`m_strHelpFile`|Arquivo de ajuda|Um caminho para um arquivo de Ajuda do Windows na qual o usuário pode obter informações sobre o problema|
 |`m_lHelpContext`|Contexto da Ajuda|A ID de contexto para um tópico no arquivo de Ajuda do DAO|

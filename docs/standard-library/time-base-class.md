@@ -7,11 +7,11 @@ helpviewer_keywords:
 - time_base class
 ms.assetid: 9ae37f0b-9a42-496e-9870-3d9b71bab8fb
 ms.openlocfilehash: e790237e506aa32bafdb39938d841307bbc4d9c3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50593395"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412014"
 ---
 # <a name="timebase-class"></a>Classe time_base
 
@@ -46,7 +46,7 @@ Cada constante caracteriza uma maneira diferente de ordenar os componentes de um
 
 - `ymd` Especifica a ordem ano, mês e dia, como em 1979/12/2.
 
-- `ydm` Especifica a ordem ano, dia e mês, como em 1979:2 de dezembro.
+- `ydm` Especifica a ordem ano, dia e mês, como em 1979: 2 de dezembro.
 
 ## <a name="requirements"></a>Requisitos
 

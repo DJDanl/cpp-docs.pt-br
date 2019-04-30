@@ -13,11 +13,11 @@ helpviewer_keywords:
 - inline functions [C++], class members
 ms.assetid: 355f120c-2847-4608-ac04-8dda18ffe10c
 ms.openlocfilehash: 55cf598877c2447e0f80e783b53b290699042b8b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607812"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62400585"
 ---
 # <a name="inline-functions-c"></a>Funções embutidas (C++)
 
@@ -78,7 +78,7 @@ O uso das funções embutidas pode fazer com que seu programa seja mais rápido 
 
 O compilador trata as opções de expansão embutida e as palavras-chave como sugestões. Não há garantia de que as funções serão embutidas. Você não pode forçar o compilador a embutir uma função específica, mesmo com o **forceinline** palavra-chave. Ao compilar com **/clr**, o compilador não embutirá uma função se houver atributos de segurança aplicados à função.
 
-O **embutido** palavra-chave está disponível apenas no C++. O **inline** e **forceinline** palavras-chave estão disponíveis em C e C++. Para compatibilidade com versões anteriores, **inline** e **_forceinline** são sinônimos do **inline**, e **forceinline** , a menos que opção de compilador [/Za \(desabilitar extensões de linguagem)](../build/reference/za-ze-disable-language-extensions.md) for especificado.
+O **embutido** palavra-chave está disponível apenas no C++. O **inline** e **forceinline** palavras-chave estão disponíveis no C e C++. Para compatibilidade com versões anteriores, **inline** e **_forceinline** são sinônimos do **inline**, e **forceinline** , a menos que opção de compilador [/Za \(desabilitar extensões de linguagem)](../build/reference/za-ze-disable-language-extensions.md) for especificado.
 
 O **embutido** palavra-chave informa ao compilador que a expansão embutida é preferida. No entanto, o compilador pode criar uma instância separada da função (uma instância) e criar vínculos de chamada padrão em vez de inserir o código embutido. Os dois casos em que isso pode acontecer são:
 

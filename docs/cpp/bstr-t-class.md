@@ -9,11 +9,11 @@ helpviewer_keywords:
 - BSTR object [C++], COM encapsulation
 ms.assetid: 58841fef-fe21-4a84-aab9-780262b5201f
 ms.openlocfilehash: f394a48c0326058be705d14fb0413e23e8052ae2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50524678"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62386155"
 ---
 # <a name="bstrt-class"></a>Classe _bstr_t
 
@@ -43,12 +43,12 @@ Um `_bstr_t` encapsula o objeto de [tipo de dados BSTR](/previous-versions/windo
 
 |||
 |-|-|
-|[operador =](../cpp/bstr-t-operator-equal.md)|Atribui um novo valor a um objeto `_bstr_t` existente.|
+|[operator =](../cpp/bstr-t-operator-equal.md)|Atribui um novo valor a um objeto `_bstr_t` existente.|
 |[Operator + =](../cpp/bstr-t-operator-add-equal-plus.md)|Acrescenta caracteres ao final do objeto `_bstr_t`.|
 |[operador +](../cpp/bstr-t-operator-add-equal-plus.md)|Concatena duas cadeias de caracteres.|
 |[operador !](../cpp/bstr-t-operator-logical-not.md)|Verifica se encapsulado `BSTR` é uma cadeia de caracteres nula.|
-|[operador = =,! =, \<, >, \<=, > =](../cpp/bstr-t-relational-operators.md)|Compara dois objetos `_bstr_t`.|
-|[operador wchar_t * &#124; char\*](../cpp/bstr-t-wchar-t-star-bstr-t-char-star.md)|Extrai os ponteiros para o objeto `BSTR` Unicode ou multibyte encapsulado.|
+|[operator ==, !=, \<, >, \<=, >=](../cpp/bstr-t-relational-operators.md)|Compara dois objetos `_bstr_t`.|
+|[operator wchar_t* &#124; char\*](../cpp/bstr-t-wchar-t-star-bstr-t-char-star.md)|Extrai os ponteiros para o objeto `BSTR` Unicode ou multibyte encapsulado.|
 
 **Fim da seção específica da Microsoft**
 

@@ -13,11 +13,11 @@ helpviewer_keywords:
 - stdext::rts_alloc [C++], equals
 ms.assetid: ab41bffa-83d1-4a1c-87b9-5707d516931f
 ms.openlocfilehash: 2c77f93a2311dbf21959b0d2a7830c20ba6dce96
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50587259"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62409740"
 ---
 # <a name="rtsalloc-class"></a>Classe rts_alloc
 
@@ -108,7 +108,7 @@ bool equals(const sync<_Cache>& _Other) const;
 |Parâmetro|Descrição|
 |---------------|-----------------|
 |*_Cache*|O objeto de cache associado ao filtro.|
-|*Outro*|O objeto de cache a ser comparado quanto à igualdade.|
+|*_Other*|O objeto de cache a ser comparado quanto à igualdade.|
 
 ### <a name="remarks"></a>Comentários
 

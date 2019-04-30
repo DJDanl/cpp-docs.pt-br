@@ -3,15 +3,15 @@ title: Usando lambdas, objetos de função e funções restritas
 ms.date: 11/04/2016
 ms.assetid: 25346cc9-869d-4ada-aad3-e2228cad3d6c
 ms.openlocfilehash: 0c72ae6f600fe73405481e34ab05b60f163e44d2
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57288110"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405320"
 ---
 # <a name="using-lambdas-function-objects-and-restricted-functions"></a>Usando lambdas, objetos de função e funções restritas
 
-O código de C++ AMP que você deseja executar no Acelerador é especificado como um argumento em uma chamada para o [parallel_for_each](reference/concurrency-namespace-functions-amp.md#parallel_for_each) método. Você pode fornecer uma expressão lambda ou um objeto de função (functor) como o argumento. Além disso, o objeto de função ou expressão lambda pode chamar uma função restrita C++ AMP. Este tópico usa um algoritmo de adição de matriz para demonstrar lambdas, objetos de função e funções restritas. O exemplo a seguir mostra o algoritmo sem código de C++ AMP. São criadas duas matrizes dimensionais 1 de comprimento igual. Os elementos inteiros correspondentes são adicionados e armazenados em uma terceira matriz dimensional de 1. C++ AMP não é usado.
+O C++ código de AMP que você deseja executar no Acelerador é especificado como um argumento em uma chamada para o [parallel_for_each](reference/concurrency-namespace-functions-amp.md#parallel_for_each) método. Você pode fornecer uma expressão lambda ou um objeto de função (functor) como o argumento. Além disso, o objeto de função ou expressão lambda pode chamar uma função restrita C++ AMP. Este tópico usa um algoritmo de adição de matriz para demonstrar lambdas, objetos de função e funções restritas. O exemplo a seguir mostra o algoritmo sem código de C++ AMP. São criadas duas matrizes dimensionais 1 de comprimento igual. Os elementos inteiros correspondentes são adicionados e armazenados em uma terceira matriz dimensional de 1. C++ AMP não é usado.
 
 ```cpp
 void CpuMethod() {

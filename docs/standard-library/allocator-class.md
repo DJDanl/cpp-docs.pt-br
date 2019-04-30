@@ -35,11 +35,11 @@ helpviewer_keywords:
 - std::allocator [C++], rebind
 ms.assetid: 3fd58076-56cc-43bb-ad58-b4b7c9c6b410
 ms.openlocfilehash: 40e99901d4d4105902010a9e5b71ed3edf7d00db
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518860"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62411039"
 ---
 # <a name="allocator-class"></a>Classe allocator
 
@@ -77,7 +77,7 @@ Portanto, um alocador define os seguintes tipos:
 
 Eles `Type`s especificam o formulário que os ponteiros e referências devem usar para elementos alocados. ( [allocator:: Pointer](#pointer) não é necessariamente igual `Type*` para todos os objetos de alocador, mesmo tendo essa definição óbvia para a classe `allocator`.)
 
-**C++11 e posterior:** para permitir operações de movimentação em seu alocador, use a interface de alocador mínimo e implemente o construtor de cópia, os operadores == e !=, alocar e desalocar. Para obter mais informações e um exemplo, consulte [Alocadores](../standard-library/allocators.md)
+**C + + 11 e posterior:**  Para habilitar operações de movimentação em seu alocador, use a interface de alocador mínimo e implemente o construtor de cópia, = = e! = operadores, alocar e desalocar. Para obter mais informações e um exemplo, consulte [Alocadores](../standard-library/allocators.md)
 
 ## <a name="members"></a>Membros
 
@@ -134,7 +134,7 @@ const_pointer address(const_reference val) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*Val*<br/>
+*val*<br/>
 O valor const ou não const do objeto cujo endereço está sendo pesquisado.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -469,7 +469,7 @@ void construct(pointer ptr, _Other&&...   val);
 *ptr*<br/>
 Um ponteiro para o local no qual o objeto deve ser construído.
 
-*Val*<br/>
+*val*<br/>
 O valor com o qual o objeto que está sendo construído deve ser inicializado.
 
 ### <a name="remarks"></a>Comentários

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - CDaoIndexInfo structure [MFC]
 ms.assetid: 251d8285-78ce-4716-a0b3-ccc3395fc437
 ms.openlocfilehash: 55f64fcebc308bd0e63643cfb5447608c4e2e37c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677897"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62399766"
 ---
 # <a name="cdaoindexinfo-structure"></a>Estrutura CDaoIndexInfo
 
@@ -61,7 +61,7 @@ Quando você definir uma chave primária para uma tabela, a chave primária é a
 *m_bUnique*<br/>
 Indica se um objeto de índice representa um índice exclusivo para uma tabela. Se essa propriedade for TRUE, o objeto de índice representa um índice exclusivo. Um índice exclusivo consiste em um ou mais campos que organizam logicamente todos os registros em uma tabela em uma ordem predefinida, exclusiva. Se o índice consiste em um campo, os valores nesse campo devem ser exclusivos para a tabela inteira. Se o índice consistir em mais de um campo, cada campo pode conter valores duplicados, mas cada combinação de valores de todos os campos indexados deve ser exclusiva.
 
-Se o exclusiva e primária de um objeto de índice são definidas como TRUE, o índice é exclusiva e primária: identifica exclusivamente todos os registros na tabela em uma ordem lógica predefinida. Se a propriedade principal é definida como FALSE, o índice é um índice secundário. Índices secundários (chave e não chave) organizam logicamente os registros em uma ordem predefinida sem servir como um identificador para registros da tabela.
+Se o exclusiva e primária de um objeto de índice são definidas como TRUE, o índice é exclusiva e primária: Ele identifica exclusivamente todos os registros na tabela em uma ordem lógica predefinida. Se a propriedade principal é definida como FALSE, o índice é um índice secundário. Índices secundários (chave e não chave) organizam logicamente os registros em uma ordem predefinida sem servir como um identificador para registros da tabela.
 
 Para obter mais informações, consulte os tópicos "Propriedade primário" e "Propriedade exclusiva" na Ajuda do DAO.
 
@@ -74,7 +74,7 @@ Indica se um objeto de índice representa um índice clusterizado para uma tabel
 *m_bIgnoreNulls*<br/>
 Indica se há entradas de índice para os registros que têm valores nulos em seus campos de índice. Se essa propriedade for TRUE, os campos com valores Null não tem uma entrada de índice. Para facilitar a pesquisa de registros usando um campo com mais rapidez, você pode definir um índice para o campo. Se você permitir entradas nulas em um campo indexado e esperar que muitas das entradas para ser Null, você pode definir a propriedade do objeto index ignorar como TRUE para reduzir a quantidade de espaço de armazenamento que usa o índice. A configuração da propriedade ignorar e a configuração de propriedade necessários juntos determinam se um registro com um valor de índice nulo tem uma entrada de índice, como mostra a tabela a seguir.
 
-|Ignorar|Necessária|Nulo no campo de índice|
+|IgnoreNulls|Necessária|Nulo no campo de índice|
 |-----------------|--------------|-------------------------|
 |verdadeiro|False|Valor nulo permitido. Nenhuma entrada de índice adicionada.|
 |False|False|Valor nulo permitido. entrada de índice adicionada.|

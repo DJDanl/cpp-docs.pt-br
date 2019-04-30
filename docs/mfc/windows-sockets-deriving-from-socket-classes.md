@@ -7,11 +7,11 @@ helpviewer_keywords:
 - sockets [MFC], deriving from socket classes
 ms.assetid: 3a26e67a-e323-433b-9b05-eca018799801
 ms.openlocfilehash: 12ab66cfd9212cd79752e2f6359b857194c6428c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270287"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62385252"
 ---
 # <a name="windows-sockets-deriving-from-socket-classes"></a>Windows Sockets: Derivando de Classes de soquete
 
@@ -27,15 +27,15 @@ No seu `OnMessagePending` substituir, retornar um **verdadeira** ou o retorno de
 
 Para obter mais informações, consulte:
 
-- [Windows Sockets: Usando soquetes com arquivos mortos](../mfc/windows-sockets-using-sockets-with-archives.md)
+- [Windows Sockets: usar soquetes com arquivos mortos](../mfc/windows-sockets-using-sockets-with-archives.md)
 
-- [Windows Sockets: Usando classe CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
+- [Windows Sockets: usar a classe CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
 
-- [Windows Sockets: Bloqueando](../mfc/windows-sockets-blocking.md)
+- [Windows Sockets: bloquear](../mfc/windows-sockets-blocking.md)
 
-- [Windows Sockets: A ordem de bytes](../mfc/windows-sockets-byte-ordering.md)
+- [Windows Sockets: ordenação da regra](../mfc/windows-sockets-byte-ordering.md)
 
-- [Windows Sockets: Convertendo cadeias de caracteres](../mfc/windows-sockets-converting-strings.md)
+- [Windows Sockets: converter cadeias de caracteres](../mfc/windows-sockets-converting-strings.md)
 
 ## <a name="see-also"></a>Consulte também
 

@@ -7,17 +7,17 @@ helpviewer_keywords:
 - C3799
 ms.assetid: 336a2811-9370-4e6e-b03b-325bda470805
 ms.openlocfilehash: 19ff414bde9bb24fca62fd10cfef6d18109199e8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50553537"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62400117"
 ---
 # <a name="compiler-error-c3799"></a>Erro do compilador C3799
 
 propriedade indexada não pode ter uma lista de parâmetros vazia
 
-Uma propriedade indexada foi declarada incorretamente. Para obter mais informações, consulte [como: usar propriedades no C + + c++ CLI](../../dotnet/how-to-use-properties-in-cpp-cli.md).
+Uma propriedade indexada foi declarada incorretamente. Para obter mais informações, confira [Como: Usar propriedades no C++/CLI](../../dotnet/how-to-use-properties-in-cpp-cli.md).
 
 ## <a name="example"></a>Exemplo
 

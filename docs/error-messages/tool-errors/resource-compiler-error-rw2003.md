@@ -7,11 +7,11 @@ helpviewer_keywords:
 - RW2003
 ms.assetid: 9dc0ba70-6776-4aef-b316-5f1711d8e42e
 ms.openlocfilehash: f359c1f71f03ce0d946579776230398fb31d046f
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51520602"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62396764"
 ---
 # <a name="resource-compiler-error-rw2003"></a>Erro RW2003 (compilador de recurso)
 
@@ -19,7 +19,7 @@ Erro de geração
 
 ### <a name="to-fix-by-checking-the-following-possible-causes"></a>Para corrigir verificando as possíveis causas a seguir
 
-1. **Erro: Arquivo de recurso de arquivo de Bitmap não está no formato 3.00**
+1. **Erro: Arquivo de recurso de arquivo de bitmap não está no formato 3.00**
 
    Bitmaps usando o formato Windows versão 2.x não podem ser usados em arquivos de recursos de versão 3.x. O bitmap deve ser redesenhado ou convertido para o formato 3.x.
 

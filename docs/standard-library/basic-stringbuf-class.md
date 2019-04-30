@@ -31,11 +31,11 @@ helpviewer_keywords:
 - std::basic_stringbuf [C++], underflow
 ms.assetid: 40c85f9e-42a5-4a65-af5c-23c8e3bf8113
 ms.openlocfilehash: 1ed9deee46f7c99750ee3260a6b2a8de1f0f3397
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51329638"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62409753"
 ---
 # <a name="basicstringbuf-class"></a>Classe basic_stringbuf
 
@@ -128,7 +128,7 @@ basic_stringbuf(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Modo*<br/>
+*_Mode*<br/>
 Uma das enumerações em [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
 *str*<br/>
@@ -235,13 +235,13 @@ virtual pos_type seekoff(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Off*<br/>
+*_Off*<br/>
 A posição para buscar com relação a *Way*. Para obter mais informações, consulte [basic_stringbuf::off_type](#off_type).
 
-*Way*<br/>
+*_Way*<br/>
 O ponto de partida para operações de deslocamento. Consulte [ios_base::seekdir](../standard-library/ios-base-class.md#seekdir) para obter os valores possíveis.
 
-*Modo*<br/>
+*_Mode*<br/>
 Especifica o modo para a posição do ponteiro. O padrão é permitir que você modifique as posições de leitura e gravação. Para obter mais informações, consulte [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
 ### <a name="return-value"></a>Valor de retorno
@@ -277,7 +277,7 @@ virtual pos_type seekpos(pos_type _Sp, ios_base::openmode _Mode = ios_base::in |
 *_Sp*<br/>
 A posição pela qual buscar.
 
-*Modo*<br/>
+*_Mode*<br/>
 Especifica o modo para a posição do ponteiro. O padrão é permitir que você modifique as posições de leitura e gravação.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -379,7 +379,7 @@ Se a função não conseguir obter êxito, ela retornará **traits_type::**[eof]
 
 ### <a name="remarks"></a>Comentários
 
-A função de membro virtual protegida tenta extrair o elemento atual `byte` do buffer de entrada, avança a posição do fluxo atual e retorna o elemento como **traits_type::**[to_int_type](../standard-library/char-traits-struct.md#to_int_type)( **bytes**). Ele pode fazer isso de uma maneira: se uma posição de leitura estiver disponível, ela terá `byte` como o elemento armazenado na posição de leitura e avançará o próximo ponteiro para o buffer de entrada.
+A função de membro virtual protegida tenta extrair o elemento atual `byte` do buffer de entrada, avança a posição do fluxo atual e retorna o elemento como **traits_type::**[to_int_type](../standard-library/char-traits-struct.md#to_int_type)( **bytes**). Ele pode fazer isso de uma maneira: Se uma posição de leitura estiver disponível, ela terá `byte` como o elemento armazenado na posição de leitura e avançará o próximo ponteiro para o buffer de entrada.
 
 ## <a name="swap"></a>  basic_streambuf::swap
 

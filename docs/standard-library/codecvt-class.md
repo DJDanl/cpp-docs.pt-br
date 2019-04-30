@@ -41,11 +41,11 @@ helpviewer_keywords:
 - std::codecvt [C++], unshift
 ms.assetid: 37d3efa1-2b7f-42b6-b04f-7a972c8c2c86
 ms.openlocfilehash: be1075da65284ac3f9672a839622b59c8926bfb9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50439267"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405229"
 ---
 # <a name="codecvt-class"></a>Classe codecvt
 
@@ -209,11 +209,11 @@ Valor inteiro usado para especificar o tipo de gerenciamento de memória do obje
 
 Os valores possíveis para o *_Refs* parâmetro e sua significância são:
 
-- 0: o tempo de vida do objeto é gerenciado pelas localidades que o contêm.
+- 0: O tempo de vida do objeto é gerenciado pelas localidades que o contêm.
 
-- 1: o tempo de vida do objeto deve ser gerenciado manualmente.
+- 1: O tempo de vida do objeto deve ser gerenciado manualmente.
 
-- 2: esses valores não estão definidos.
+- 2: Esses valores não estão definidos.
 
 O construtor inicializa seu `locale::facet` objeto base com **localidade::**[faceta](../standard-library/locale-class.md#facet_class)(`_Refs`).
 
@@ -274,7 +274,7 @@ virtual result do_in(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Estad_o*<br/>
+*_State*<br/>
 O estado de conversão mantido entre as chamadas para a função membro.
 
 *first1*<br/>
@@ -329,7 +329,7 @@ virtual int do_length(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Estad_o*<br/>
+*_State*<br/>
 O estado de conversão mantido entre as chamadas para a função membro.
 
 *first1*<br/>
@@ -394,7 +394,7 @@ virtual result do_out(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Estad_o*<br/>
+*_State*<br/>
 O estado de conversão mantido entre as chamadas para a função membro.
 
 *first1*<br/>
@@ -449,7 +449,7 @@ virtual result do_unshift(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Estad_o*<br/>
+*_State*<br/>
 O estado de conversão mantido entre as chamadas para a função membro.
 
 *first2*<br/>
@@ -563,7 +563,7 @@ result in(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Estad_o*<br/>
+*_State*<br/>
 O estado de conversão mantido entre as chamadas para a função membro.
 
 *first1*<br/>
@@ -665,7 +665,7 @@ int length(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Estad_o*<br/>
+*_State*<br/>
 O estado de conversão mantido entre as chamadas para a função membro.
 
 *first1*<br/>
@@ -770,7 +770,7 @@ result out(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Estad_o*<br/>
+*_State*<br/>
 O estado de conversão mantido entre as chamadas para a função membro.
 
 *first1*<br/>
@@ -862,7 +862,7 @@ result unshift(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Estad_o*<br/>
+*_State*<br/>
 O estado de conversão mantido entre as chamadas para a função membro.
 
 *first2*<br/>

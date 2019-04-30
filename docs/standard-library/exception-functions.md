@@ -25,11 +25,11 @@ helpviewer_keywords:
 - std::uncaught_exception [C++]
 - std::unexpected [C++]
 ms.openlocfilehash: 22c5b34f1c87d10b48a797229bc987305fca8f9d
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523657"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412651"
 ---
 # <a name="ltexceptiongt-functions"></a>Funções &lt;exception&gt;
 
@@ -73,7 +73,7 @@ exception_ptr make_exception_ptr(E Except);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Exceto*<br/>
+*Except*<br/>
 A classe com a exceção a ser copiada. Normalmente, você especifica um objeto de [classe de exceção](../standard-library/exception-class.md) como o argumento para a função `make_exception_ptr`, embora qualquer objeto de classe possa ser o argumento.
 
 ### <a name="return-value"></a>Valor de retorno

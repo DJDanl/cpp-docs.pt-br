@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Safe C++ Standard Library
 ms.assetid: 3993340f-1f29-4d81-b3f5-52a52bc8e148
 ms.openlocfilehash: 340d300efb442fedb18b738c275bc0a79f874991
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630718"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62409727"
 ---
 # <a name="safe-libraries-c-standard-library"></a>Bibliotecas seguras: Biblioteca Padrão C++
 

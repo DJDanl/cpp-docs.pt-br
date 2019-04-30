@@ -43,11 +43,11 @@ helpviewer_keywords:
 - std::tan [C++]
 - std::tanh [C++]
 ms.openlocfilehash: a67955da21c1229c3492d5b52dd6e14c9caa33fd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50474276"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62389197"
 ---
 # <a name="ltcomplexgt-functions"></a>Funções &lt;complex&gt;
 
@@ -934,7 +934,7 @@ complex<Type> pow(const Type& _Base, const complex<Type>& _Power);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Base*<br/>
+*_Base*<br/>
 O número complexo ou número do tipo de parâmetro do número complexo que é a base a ser elevada a uma potência pela função membro.
 
 *_Power*<br/>

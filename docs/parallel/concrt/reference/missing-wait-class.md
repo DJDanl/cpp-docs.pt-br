@@ -9,11 +9,11 @@ helpviewer_keywords:
 - missing_wait class
 ms.assetid: ff981875-bd43-47e3-806f-b03c9f418b18
 ms.openlocfilehash: 68d24d710eec4fd602e64cc3cbde810db2b1a495
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57297627"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62409961"
 ---
 # <a name="missingwait-class"></a>Classe missing_wait
 
@@ -27,7 +27,7 @@ class missing_wait : public std::exception;
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|

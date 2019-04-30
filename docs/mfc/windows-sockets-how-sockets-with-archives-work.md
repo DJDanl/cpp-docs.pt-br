@@ -10,11 +10,11 @@ helpviewer_keywords:
 - two-state socket object
 ms.assetid: d8ae4039-391d-44f0-a19b-558817affcbb
 ms.openlocfilehash: 3af94bc881276238f1a8d2dbeeee4dca1f173a4b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57300677"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62389432"
 ---
 # <a name="windows-sockets-how-sockets-with-archives-work"></a>Windows Sockets: Como funcionam soquetes com arquivos mortos
 
@@ -46,7 +46,7 @@ Se `CSocket` não foram implementados como um objeto de dois estados, é possív
 
 No modo de "compatível com o arquivo morto", um `CSocketFile` objeto fornece um melhor desempenho e reduz o risco de um "deadlock". Um deadlock ocorre quando os soquetes de envio e recebimento estão aguardando uns aos outros ou aguardando um recurso comum. Essa situação pode ocorrer se o `CArchive` objeto trabalhou com o `CSocketFile` da forma que faz com um `CFile` objeto. Com `CFile`, o arquivo morto pode presumir que se ela recebe menos bytes que ele é solicitado, o final do arquivo foi atingido. Com `CSocketFile`, no entanto, dados for baseado em mensagem; o buffer pode conter várias mensagens, então receber menos do que o número de bytes solicitado não implica o final do arquivo. O aplicativo não bloqueia neste caso, como pode ocorrer com `CFile`, e pode continuar lendo mensagens do buffer até que o buffer está vazio. O [IsBufferEmpty](../mfc/reference/carchive-class.md#isbufferempty) funcionar em `CArchive` é útil para monitorar o estado do buffer do arquivo morto nesse caso.
 
-Para obter mais informações, consulte [Windows Sockets: Usando soquetes com arquivos mortos](../mfc/windows-sockets-using-sockets-with-archives.md)
+Para obter mais informações, consulte [Windows Sockets: usar soquetes com arquivos mortos](../mfc/windows-sockets-using-sockets-with-archives.md)
 
 ## <a name="see-also"></a>Consulte também
 

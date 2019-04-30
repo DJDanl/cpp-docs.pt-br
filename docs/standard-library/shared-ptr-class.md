@@ -32,11 +32,11 @@ helpviewer_keywords:
 - std::shared_ptr [C++], use_count
 ms.assetid: 1469fc51-c658-43f1-886c-f4530dd84860
 ms.openlocfilehash: 791a18461b3a0ee8237dec47c87f9d441221141d
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519354"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412547"
 ---
 # <a name="sharedptr-class"></a>Classe shared_ptr
 
@@ -155,7 +155,7 @@ Vários threads podem ler e gravar simultaneamente objetos `shared_ptr` diferent
 
 |Operador|Descrição|
 |-|-|
-|[shared_ptr:: Operator bool](#op_bool)|Testa se um recurso possuído existe.|
+|[shared_ptr::operator bool](#op_bool)|Testa se um recurso possuído existe.|
 |[shared_ptr::operator*](#op_star)|Obtém o valor designado.|
 |[shared_ptr::operator=](#op_eq)|Substitui o recurso possuído.|
 |[shared_ptr::operator-&gt;](#op_arrow)|Obtém um ponteiro para o valor designado.|
@@ -239,7 +239,7 @@ sp0.get() == 0 == true
 *sp1.get() == 5
 ```
 
-## <a name="op_bool"></a>  shared_ptr:: Operator bool
+## <a name="op_bool"></a>  shared_ptr::operator bool
 
 Testa se um recurso possuído existe.
 
@@ -337,10 +337,10 @@ shared_ptr& operator=(unique_ptr<Other, Deletor>&& ap);
 
 ### <a name="parameters"></a>Parâmetros
 
-*SP*<br/>
+*sp*<br/>
 O ponteiro compartilhado a ser copiado.
 
-*Pacífico Asiático*<br/>
+*ap*<br/>
 O ponteiro automático para copiar.
 
 ### <a name="remarks"></a>Comentários
@@ -468,7 +468,7 @@ O agente de exclusão a copiar.
 *A*<br/>
 O tipo do alocador.
 
-*ALLOC*<br/>
+*alloc*<br/>
 O alocador a copiar.
 
 ### <a name="remarks"></a>Comentários
@@ -591,13 +591,13 @@ O agente de exclusão.
 *ator*<br/>
 O alocador.
 
-*SP*<br/>
+*sp*<br/>
 O ponteiro inteligente a copiar.
 
 *wp*<br/>
 O ponteiro fraco.
 
-*Pacífico Asiático*<br/>
+*ap*<br/>
 O ponteiro automático para copiar.
 
 ### <a name="remarks"></a>Comentários
@@ -721,7 +721,7 @@ void swap(shared_ptr& sp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*SP*<br/>
+*sp*<br/>
 O ponteiro compartilhado com o qual realizar a troca.
 
 ### <a name="remarks"></a>Comentários

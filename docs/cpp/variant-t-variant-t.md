@@ -8,11 +8,11 @@ helpviewer_keywords:
 - _variant_t method [C++]
 ms.assetid: a50e5b33-d4c6-4a26-8e7e-a0a25fd9895b
 ms.openlocfilehash: b3575226199c15c4a9796fb439f65efb5a539225
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544099"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62403276"
 ---
 # <a name="varianttvariantt"></a>_variant_t::_variant_t
 
@@ -151,10 +151,10 @@ O `VARTYPE` para o novo `_variant_t` objeto.
 *fltSrc, dblSrc*<br/>
 Um valor numérico a ser copiado no novo objeto `_variant_t`.
 
-*1&gt;Operator=(&lt;1}{2&gt;cysrc&lt;2}{3&gt;)&lt;3*<br/>
+*cySrc*<br/>
 Um objeto `CY` a ser copiado no novo objeto `_variant_t`.
 
-*1&gt;Operator=(&lt;1}{2&gt;bstrsrc&lt;2}{3&gt;)&lt;3*<br/>
+*bstrSrc*<br/>
 Um objeto `_bstr_t` a ser copiado no novo objeto `_variant_t`.
 
 *strSrc, wstrSrc*<br/>
@@ -166,10 +166,10 @@ Um **bool** valor a ser copiado no novo `_variant_t` objeto.
 *pIUknownSrc*<br/>
 Ponteiro de interface COM para um objeto VT_UNKNOWN a ser encapsulado no novo `_variant_t` objeto.
 
-*1&gt;Operator=(&lt;1}{2&gt;pdispsrc&lt;2}{3&gt;)&lt;3*<br/>
+*pDispSrc*<br/>
 Ponteiro de interface COM para um objeto VT_DISPATCH a ser encapsulado no novo `_variant_t` objeto.
 
-*1&gt;Operator=(&lt;1}{2&gt;decsrc&lt;2}{3&gt;)&lt;3*<br/>
+*decSrc*<br/>
 Um valor `DECIMAL` a ser copiado no novo objeto `_variant_t`.
 
 *bSrc*<br/>

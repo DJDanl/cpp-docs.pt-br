@@ -4,11 +4,11 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 629b361a-2ce1-4700-8b5d-ab4f57b245d5
 ms.openlocfilehash: 79285e4870b73ff01ed3b230a0162f87c0400aa8
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220641"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62404683"
 ---
 # <a name="type-conversions-and-type-safety-modern-c"></a>Conversões e segurança de tipo (C++ moderno)
 
@@ -20,7 +20,7 @@ Quando o compilador detecta uma conversão não segura, ele emite um erro ou um 
 
 ## <a name="implicit-type-conversions"></a>Conversões de tipo implícito
 
-Quando uma expressão contém operandos dos tipos internos diferentes e não há conversões explícitas estão presentes, o compilador usa interna *conversões padrão* para converter um dos operandos para que os tipos correspondentes. O compilador tenta as conversões em uma sequência bem definida até obter êxito. Se a conversão selecionada for uma promoção, o compilador não emitirá um aviso. Se a conversão é uma redução, o compilador emite um aviso sobre a possível perda de dados. Se ocorre perda de dados real depende dos valores reais envolvidos, mas é recomendável que você trate esse aviso como um erro. Se um tipo definido pelo usuário estiver envolvido, o compilador tentará usar as conversões que você especificou na definição de classe. Se ele não é possível localizar uma conversão aceitável, o compilador emitirá um erro e não o programa. Para obter mais informações sobre as regras que regem as conversões padrão, consulte [conversões padrão](../cpp/standard-conversions.md). Para obter mais informações sobre conversões definidas pelo usuário, consulte [conversões definidas pelo usuário (C + + / CLI)](../dotnet/user-defined-conversions-cpp-cli.md).
+Quando uma expressão contém operandos dos tipos internos diferentes e não há conversões explícitas estão presentes, o compilador usa interna *conversões padrão* para converter um dos operandos para que os tipos correspondentes. O compilador tenta as conversões em uma sequência bem definida até obter êxito. Se a conversão selecionada for uma promoção, o compilador não emitirá um aviso. Se a conversão é uma redução, o compilador emite um aviso sobre a possível perda de dados. Se ocorre perda de dados real depende dos valores reais envolvidos, mas é recomendável que você trate esse aviso como um erro. Se um tipo definido pelo usuário estiver envolvido, o compilador tentará usar as conversões que você especificou na definição de classe. Se ele não é possível localizar uma conversão aceitável, o compilador emitirá um erro e não o programa. Para obter mais informações sobre as regras que regem as conversões padrão, consulte [conversões padrão](../cpp/standard-conversions.md). Para obter mais informações sobre conversões definidas pelo usuário, consulte [conversões definidas pelo usuário (C++/CLI)](../dotnet/user-defined-conversions-cpp-cli.md).
 
 ### <a name="widening-conversions-promotion"></a>Conversões (promoção) de expansão
 
@@ -30,8 +30,8 @@ Em uma conversão de ampliação, um valor em uma variável menor é atribuído 
 |----------|--------|
 |Qualquer um com sinal ou um tipo integral, exceto **long long** ou **__int64**|**double**|
 |**bool** ou **char**|Qualquer outro tipo interno|
-|**curto** ou **wchar_t**|**int**, **longo**, **long long**|
-|**int**, **longo**|**long long**|
+|**curto** ou **wchar_t**|**int**, **long**, **long long**|
+|**int**, **long**|**long long**|
 |**float**|**double**|
 
 ### <a name="narrowing-conversions-coercion"></a>Conversões de estreitamento (coerção)

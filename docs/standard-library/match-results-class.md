@@ -7,11 +7,11 @@ helpviewer_keywords:
 - match_results class
 ms.assetid: b504fdca-e5dd-429d-9960-6e27c9167fa6
 ms.openlocfilehash: 32a5f9d20999740d4368f7901c797d87acce0be9
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657455"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412963"
 ---
 # <a name="matchresults-class"></a>Classe match_results
 
@@ -68,11 +68,11 @@ A classe de modelo descreve um objeto que controla uma sequência de elementos n
 |[get_allocator](#get_allocator)|Retorna o alocador armazenado.|
 |[length](#length)|Retorna o comprimento de uma subcorrespondência.|
 |[max_size](#max_size)|Obtém o maior número de subcorrespondências.|
-|[posição](#position)|Iniciar o deslocamento de um subgrupo.|
+|[position](#position)|Iniciar o deslocamento de um subgrupo.|
 |[prefix](#prefix)|Obtém a sequência antes da primeira subcorrespondência.|
 |[size](#size)|Número de contagens de subcorrespondências.|
 |[str](#str)|Retorna uma subcorrespondência.|
-|[Sufixo](#suffix)|Obtém a sequência após a última subcorrespondência.|
+|[suffix](#suffix)|Obtém a sequência após a última subcorrespondência.|
 |[swap](#swap)|Troca dois objetos match_results.|
 
 ### <a name="operators"></a>Operadores
@@ -304,7 +304,7 @@ O tipo de iterador de saída.
 *out*<br/>
 O fluxo de saída no qual gravar.
 
-*FMT*<br/>
+*fmt*<br/>
 A cadeia de caracteres de formato.
 
 *flags*<br/>
@@ -369,7 +369,7 @@ match_results(const match_results& right);
 
 ### <a name="parameters"></a>Parâmetros
 
-*ALLOC*<br/>
+*alloc*<br/>
 O objeto de alocador a ser armazenado.
 
 *right*<br/>

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C2228
 ms.assetid: 901cadb1-ce90-4ae0-a360-547a9ba2ca18
 ms.openlocfilehash: 20e295d09e39a12ed8163ec980fa304cd4167218
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50628391"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62404332"
 ---
 # <a name="compiler-error-c2228"></a>Erro do compilador C2228
 
@@ -40,6 +40,6 @@ int main() {
 
 Você também verá esse erro se você usar uma sintaxe incorreta ao usar extensões gerenciadas. Ao passo que em outras linguagens do Visual Studio, você pode usar o operador ponto para acessar um membro de uma classe gerenciada, um ponteiro para o objeto em C++ significa que você precisa usar o operador para acessar o membro ->:
 
-Errado: `String * myString = checkedListBox1->CheckedItems->Item[0].ToString();`
+Wrong: `String * myString = checkedListBox1->CheckedItems->Item[0].ToString();`
 
 Certo: `String * myString = checkedListBox1->CheckedItems->Item[0]->ToString();`

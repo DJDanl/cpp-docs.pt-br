@@ -17,11 +17,11 @@ helpviewer_keywords:
 - std::subtract_with_carry_engine [C++], seed
 ms.assetid: 94a055f2-a620-4a22-ac34-c156924bab31
 ms.openlocfilehash: 76981df1f4a642cca1a57a9619f20aa4cebd63bb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50501394"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412183"
 ---
 # <a name="subtractwithcarryengine-class"></a>Classe subtract_with_carry_engine
 
@@ -68,10 +68,10 @@ O argumento de modelo `UIntType` deve ser grande o suficiente para manter valore
 
 Embora seja possível construir um gerador diretamente com base nesse mecanismo, também é possível usar um dos typedefs predefinidos:
 
-`ranlux24_base`: usado como base para `ranlux24`.
+`ranlux24_base`: Usado como base para `ranlux24`.
 `typedef subtract_with_carry_engine<unsigned int, 24, 10, 24> ranlux24_base;`
 
-`ranlux48_base`: usado como base para `ranlux48`.
+`ranlux48_base`: Usado como base para `ranlux48`.
 `typedef subtract_with_carry_engine<unsigned long long, 48, 5, 12> ranlux48_base;`
 
 Para obter informações detalhadas sobre o algoritmo de mecanismo de subtração com transferência, consulte o artigo da Wikipédia [Lagged Fibonacci generator](https://en.wikipedia.org/wiki/Lagged_Fibonacci_generator) (Gerador de retardamento de Fibonacci).

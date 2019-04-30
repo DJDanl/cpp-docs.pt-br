@@ -17,11 +17,11 @@ helpviewer_keywords:
 - std::basic_ofstream [C++], swap
 ms.assetid: 3bcc9c51-6dfc-4844-8fcc-22ef57c9dff1
 ms.openlocfilehash: 9a8255a02c46a4ade33bd95635516e5d36fe8e64
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50551418"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62409792"
 ---
 # <a name="basicofstream-class"></a>Classe basic_ofstream
 
@@ -121,10 +121,10 @@ basic_ofstream(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Nome de arquivo*<br/>
+*_Filename*<br/>
 O nome do arquivo a ser aberto.
 
-*Modo*<br/>
+*_Mode*<br/>
 Uma das enumerações em [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
 *_Prot*<br/>
@@ -243,10 +243,10 @@ void open(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Nome de arquivo*<br/>
+*_Filename*<br/>
 O nome do arquivo a ser aberto.
 
-*Modo*<br/>
+*_Mode*<br/>
 Uma das enumerações em [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
 *_Prot*<br/>

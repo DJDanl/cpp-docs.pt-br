@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C2280
 ms.assetid: e6c5b1fb-2b9b-4554-8ff9-775eeb37161b
 ms.openlocfilehash: e1ec032878fefdc1992605df5ee1aa13c673d4cf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50572803"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62388898"
 ---
 # <a name="compiler-error-c2280"></a>Erro do compilador C2280
 
@@ -19,7 +19,7 @@ ms.locfileid: "50572803"
 
 O compilador detectou uma tentativa de fazer referência a um `deleted` função. Esse erro pode ser causado por uma chamada para uma função de membro que foi marcada explicitamente como `= deleted` no código-fonte. Esse erro também pode ser causado por uma chamada para uma função de membro especial implícito de um struct ou classe que é automaticamente declarado e marcado como `deleted` pelo compilador. Para obter mais informações sobre quando o compilador gera automaticamente `default` ou `deleted` funções de membro especial, consulte [funções de membro especial](../../cpp/special-member-functions.md).
 
-## <a name="example-explicitly-deleted-functions"></a>Exemplo: Excluídos explicitamente funções
+## <a name="example-explicitly-deleted-functions"></a>Exemplo: Funções explicitamente excluídas
 
 Uma chamada para um explicitamente `deleted` função faz com que esse erro. Um explicitamente `deleted` função de membro implica que a classe ou struct intencionalmente foi projetado para evitar seu uso, portanto, para corrigir esse problema, você deve alterar seu código para evitá-la.
 
@@ -58,7 +58,7 @@ struct A {
 } a;    // C2280
 ```
 
-## <a name="example-reference-and-const-data-members"></a>Exemplo: Referência e constantes membros de dados
+## <a name="example-reference-and-const-data-members"></a>Exemplo: Referência e os membros de dados const
 
 Um `const` ou membro de dados de tipo de referência faz com que o compilador declarar um `deleted` operador de atribuição de cópia. Depois de inicializado, esses membros não podem ser atribuídos, portanto, uma simple cópia ou movimentação não pode funcionar. Para corrigir esse problema, é recomendável que você altere sua lógica para remover as operações de atribuição que causam o erro.
 
@@ -79,7 +79,7 @@ void f() {
 }
 ```
 
-## <a name="example-movable-deletes-implicit-copy"></a>Exemplo: Movidos exclui cópia implícita
+## <a name="example-movable-deletes-implicit-copy"></a>Exemplo: Cópia implícita de exclusões móvel
 
 Se uma classe declara um construtor de movimentação ou um operador de atribuição de movimentação, mas não declara explicitamente um construtor de cópia, o compilador implicitamente declara um construtor de cópia e define-o como `deleted`. Da mesma forma, se uma classe declara um construtor de movimentação ou um operador de atribuição de movimentação, mas não declara explicitamente um operador de atribuição de cópia, o compilador implicitamente declara um operador de atribuição de cópia e define-o como `deleted`. Para corrigir esse problema, você deve declarar explicitamente esses membros.
 
@@ -108,7 +108,7 @@ void copy(base *p)
 }
 ```
 
-## <a name="example-variant-and-volatile-members"></a>Exemplo: Membros de Variant e volátil
+## <a name="example-variant-and-volatile-members"></a>Exemplo: Membros variantes e volátil
 
 Versões do compilador antes do Visual Studio 2015 atualização 2 foram construtores e destruidores para uniões anônimas padrão gerado e não conformes. Eles agora são implicitamente declarados como `deleted`. Essas versões também permitiam não conformes definição implícita da `default` copiar e mover os construtores e `default` copiar e mover os operadores de atribuição em classes e structs que têm `volatile` variáveis de membro. Agora o compilador considera ter construtores não-triviais e operadores de atribuição e não gera `default` implementações. Quando essa classe é um membro de uma união ou uma união anônima dentro de uma classe, os construtores de cópia e movimentação e operadores de atribuição de cópia e movimentação da união ou classe são definidos implicitamente como `deleted`. Para corrigir esse problema, você deve declarar explicitamente as funções de membro especial necessária.
 

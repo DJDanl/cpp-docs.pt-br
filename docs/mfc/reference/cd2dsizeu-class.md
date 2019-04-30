@@ -11,11 +11,11 @@ helpviewer_keywords:
 - CD2DSizeU [MFC], IsNull
 ms.assetid: 6e679ba8-2112-43c3-8275-70b660856f02
 ms.openlocfilehash: f6b0bc12933100c6f2401f4f4cb9e1fae52dda65
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57278646"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62396243"
 ---
 # <a name="cd2dsizeu-class"></a>Classe CD2DSizeU
 
@@ -29,7 +29,7 @@ class CD2DSizeU : public D2D1_SIZE_U;
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|

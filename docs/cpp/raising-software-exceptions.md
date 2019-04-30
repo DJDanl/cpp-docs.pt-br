@@ -14,11 +14,11 @@ helpviewer_keywords:
 - formats [C++], exception codes
 ms.assetid: be1376c3-c46a-4f52-ad1d-c2362840746a
 ms.openlocfilehash: 49ee800bafff017c29b73c5f6fd64318009a140a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50562039"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62403458"
 ---
 # <a name="raising-software-exceptions"></a>Acionando exceções de software
 
@@ -38,7 +38,7 @@ O \<Winerror. h > arquivo mostra o formato para códigos de exceção. Para veri
 
 |Bits|Configuração binária recomendada|Descrição|
 |----------|--------------------------------|-----------------|
-|31-30|11|Esses dois bits descrevem o status básico de código:  11 = erro, 00 = êxito, 01 = informativo, 10 = aviso.|
+|31-30|11|Esses dois bits descrevem o status básico do código:  11 = erro, 00 = êxito, 01 = informativo, 10 = aviso.|
 |29|1|Bit cliente. Definido como 1 para códigos definidos pelo usuário.|
 |28|0|Bit reservado. (Deixe definido como 0.)|
 

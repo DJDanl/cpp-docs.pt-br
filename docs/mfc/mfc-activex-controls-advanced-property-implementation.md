@@ -7,11 +7,11 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], properties
 ms.assetid: ec2e6759-5a8e-41d8-a275-99af8ff6f32e
 ms.openlocfilehash: 438c95c56961cc587b64e494678ade191f18ab6b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57266959"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392784"
 ---
 # <a name="mfc-activex-controls-advanced-property-implementation"></a>Controles ActiveX MFC: Implementação da propriedade avançada
 
@@ -74,6 +74,6 @@ Para obter mais informações sobre o relatório de exceções em outras áreas 
 ## <a name="see-also"></a>Consulte também
 
 [Controles ActiveX do MFC](../mfc/mfc-activex-controls.md)<br/>
-[Controles ActiveX MFC: Propriedades](../mfc/mfc-activex-controls-properties.md)<br/>
-[Controles ActiveX MFC: Métodos](../mfc/mfc-activex-controls-methods.md)<br/>
+[Controles ActiveX MFC: propriedades](../mfc/mfc-activex-controls-properties.md)<br/>
+[Controles ActiveX MFC: métodos](../mfc/mfc-activex-controls-methods.md)<br/>
 [Classe COleControl](../mfc/reference/colecontrol-class.md)

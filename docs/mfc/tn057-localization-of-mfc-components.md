@@ -1,5 +1,5 @@
 ---
-title: 'TN057: localização de componentes MFC'
+title: 'TN057: Localização de componentes MFC'
 ms.date: 06/28/2018
 f1_keywords:
 - vc.mfc.components
@@ -14,13 +14,13 @@ helpviewer_keywords:
 - localization [MFC], resources
 ms.assetid: 5376d329-bd45-41bd-97f5-3d895a9a0af5
 ms.openlocfilehash: 812c2d29c42b523d7b88b03741dc20f08ee70f44
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50428633"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62399623"
 ---
-# <a name="tn057-localization-of-mfc-components"></a>TN057: localização de componentes MFC
+# <a name="tn057-localization-of-mfc-components"></a>TN057: Localização de componentes MFC
 
 > [!NOTE]
 > A nota técnica a seguir não foi atualizada desde que foi incluído pela primeira vez na documentação online. Como resultado, alguns procedimentos e tópicos podem estar desatualizadas ou incorretas. Para obter as informações mais recentes, é recomendável que você pesquise o tópico de interesse no índice da documentação online.
