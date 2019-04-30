@@ -9,11 +9,11 @@ helpviewer_keywords:
 - _bstr_t class
 ms.assetid: 116d994e-5a72-4351-afbe-866c80b4c165
 ms.openlocfilehash: 44a301b8b2a1c53636c27be6f59f61aa0dcd46b1
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330665"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62385005"
 ---
 # <a name="bstrtbstrt"></a>_bstr_t::_bstr_t
 
@@ -45,19 +45,19 @@ _bstr_t(
 
 #### <a name="parameters"></a>Parâmetros
 
-*S1*<br/>
+*s1*<br/>
 Um objeto `_bstr_t` a ser copiado.
 
-*S2*<br/>
+*s2*<br/>
 Uma cadeia de caracteres multibyte.
 
-*S3*<br/>
+*s3*<br/>
 Uma cadeia de caracteres Unicode
 
 *var*<br/>
 Um [variant_t](../cpp/variant-t-class.md) objeto.
 
-*BSTR*<br/>
+*bstr*<br/>
 Um objeto `BSTR` existente.
 
 *fCopy*<br/>

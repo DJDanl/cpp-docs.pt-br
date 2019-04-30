@@ -99,11 +99,11 @@ helpviewer_keywords:
 - operator>= member [STL/CLR]
 ms.assetid: dd669da3-3c0e-45e9-8596-f6b483720941
 ms.openlocfilehash: ff5ddcfa101baf4c85145d1c6d64a6a3b9e7df58
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445052"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62393760"
 ---
 # <a name="deque-stlclr"></a>deque (STL/CLR)
 
@@ -209,7 +209,7 @@ O tipo de um elemento na sequência controlada.
 |<xref:System.Collections.Generic.IEnumerable%601>|Por meio de elementos com tipo de sequência.|
 |<xref:System.Collections.Generic.ICollection%601>|Manter o grupo de elementos com tipo.|
 |<xref:System.Collections.Generic.IList%601>|Manter o grupo ordenado de elementos com tipo.|
-|IDeque < valor\>|Manter o contêiner genérico.|
+|IDeque<Value\>|Manter o contêiner genérico.|
 
 ## <a name="remarks"></a>Comentários
 
@@ -225,7 +225,7 @@ Apagando ou remover um elemento chama o destruidor para seu valor armazenado. De
 
 ## <a name="members"></a>Membros
 
-## <a name="assign"></a> Assign (STL/CLR)
+## <a name="assign"></a> deque::assign (STL/CLR)
 
 Substitui todos os elementos.
 
@@ -252,7 +252,7 @@ Fim do intervalo a inserir.
 *right*<br/>
 Enumeração a ser inserido.
 
-*Val*<br/>
+*val*<br/>
 Valor do elemento a ser inserido.
 
 ### <a name="remarks"></a>Comentários
@@ -306,7 +306,7 @@ a b
 a b c
 ```
 
-## <a name="at"></a> deque:: AT (STL/CLR)
+## <a name="at"></a> deque::at (STL/CLR)
 
 Acessa um elemento em uma posição especificada.
 
@@ -318,7 +318,7 @@ reference at(size_type pos);
 
 #### <a name="parameters"></a>Parâmetros
 
-*POS*<br/>
+*pos*<br/>
 Posição do elemento a acessar.
 
 ### <a name="remarks"></a>Comentários
@@ -358,7 +358,7 @@ a b c
 a x c
 ```
 
-## <a name="back"></a> deque:: back (STL/CLR)
+## <a name="back"></a> deque::back (STL/CLR)
 
 Acessa o último elemento.
 
@@ -460,7 +460,7 @@ back_item = c
 a b x
 ```
 
-## <a name="begin"></a> deque:: Begin (STL/CLR)
+## <a name="begin"></a> deque::begin (STL/CLR)
 
 Designa o início da sequência controlada.
 
@@ -472,7 +472,7 @@ iterator begin();
 
 ### <a name="remarks"></a>Comentários
 
-A função membro retorna um iterador de acesso aleatório que designa o primeiro elemento da sequência controlada ou logo após o fim de uma sequência vazia. Você pode usá-lo para obter um iterador que designa o `current` início da sequência controlada, mas seu status pode alterar se o comprimento da sequência controlada for alterado.
+A função membro retorna um iterador de acesso aleatório que designa o primeiro elemento da sequência controlada ou logo após o fim de uma sequência vazia. Use-o para obter um iterador que designa o início `current` da sequência controlada, mas seu status poderá mudar se o tamanho da sequência controlada for alterado.
 
 ### <a name="example"></a>Exemplo
 
@@ -515,7 +515,7 @@ a b c
 x y c
 ```
 
-## <a name="clear"></a> deque:: Clear (STL/CLR)
+## <a name="clear"></a> deque::clear (STL/CLR)
 
 Remove todos os elementos.
 
@@ -572,7 +572,7 @@ a b
 size() = 0
 ```
 
-## <a name="const_iterator"></a> deque:: const_iterator (STL/CLR)
+## <a name="const_iterator"></a> deque::const_iterator (STL/CLR)
 
 O tipo de um iterador de constante para a sequência controlada.
 
@@ -613,7 +613,7 @@ int main()
 a b c
 ```
 
-## <a name="const_reference"></a> deque:: const_reference (STL/CLR)
+## <a name="const_reference"></a> deque::const_reference (STL/CLR)
 
 O tipo de uma referência de constante para um elemento.
 
@@ -657,7 +657,7 @@ int main()
 a b c
 ```
 
-## <a name="const_reverse_iterator"></a> deque:: const_reverse_iterator (STL/CLR)
+## <a name="const_reverse_iterator"></a> deque::const_reverse_iterator (STL/CLR)
 
 O tipo de um iterador inverso constante para a sequência controlada...
 
@@ -699,7 +699,7 @@ int main()
 c b a
 ```
 
-## <a name="deque"></a> deque:: deque (STL/CLR)
+## <a name="deque"></a> deque::deque (STL/CLR)
 
 Constrói um objeto contêiner.
 
@@ -730,7 +730,7 @@ Fim do intervalo a inserir.
 *right*<br/>
 Objeto ou intervalo a inserir.
 
-*Val*<br/>
+*val*<br/>
 Valor do elemento a ser inserido.
 
 ### <a name="remarks"></a>Comentários
@@ -844,7 +844,7 @@ x x x x x x
 x x x x x x
 ```
 
-## <a name="difference_type"></a> deque:: difference_type (STL/CLR)
+## <a name="difference_type"></a> deque::difference_type (STL/CLR)
 
 Os tipos de uma distância com sinal entre dois elementos.
 
@@ -898,7 +898,7 @@ end()-begin() = 3
 begin()-end() = -3
 ```
 
-## <a name="empty"></a> deque:: Empty (STL/CLR)
+## <a name="empty"></a> deque::empty (STL/CLR)
 
 Testa se nenhum elemento está presente.
 
@@ -949,7 +949,7 @@ size() = 0
 empty() = True
 ```
 
-## <a name="end"></a> deque:: end (STL/CLR)
+## <a name="end"></a> deque::end (STL/CLR)
 
 Designa o fim da sequência controlada.
 
@@ -961,7 +961,7 @@ iterator end();
 
 ### <a name="remarks"></a>Comentários
 
-A função membro retorna um iterador de acesso aleatório que aponta para logo após o fim da sequência controlada. Você pode usá-lo para obter um iterador que designa o `current` final da sequência controlada, mas seu status pode alterar se o comprimento da sequência controlada for alterado.
+A função membro retorna um iterador de acesso aleatório que aponta para logo após o fim da sequência controlada. Use-o para obter um iterador que designa o fim `current` da sequência controlada, mas seu status poderá mudar se o tamanho da sequência controlada for alterado.
 
 ### <a name="example"></a>Exemplo
 
@@ -1005,7 +1005,7 @@ a b c
 a x y
 ```
 
-## <a name="erase"></a> Erase (STL/CLR)
+## <a name="erase"></a> deque::erase (STL/CLR)
 
 Remove os elementos em posições especificadas.
 
@@ -1084,7 +1084,7 @@ erase(begin(), end()-1) = e
 size() = 1
 ```
 
-## <a name="front"></a> deque (STL/CLR)
+## <a name="front"></a> deque::front (STL/CLR)
 
 Acessa o primeiro elemento.
 
@@ -1422,7 +1422,7 @@ a b c
 a a c
 ```
 
-## <a name="insert"></a> deque:: Insert (STL/CLR)
+## <a name="insert"></a> deque::insert (STL/CLR)
 
 Adiciona os elementos em uma posição especificada.
 
@@ -1451,7 +1451,7 @@ Fim do intervalo a inserir.
 *right*<br/>
 Enumeração a ser inserido.
 
-*Val*<br/>
+*val*<br/>
 Valor do elemento a ser inserido.
 
 *where*<br/>
@@ -1531,7 +1531,7 @@ y y a x b
 a x b c y y a x b
 ```
 
-## <a name="iterator"></a> deque:: Iterator (STL/CLR)
+## <a name="iterator"></a> deque::iterator (STL/CLR)
 
 O tipo de um iterador para a sequência controlada.
 
@@ -1580,7 +1580,7 @@ a b c
 x b c
 ```
 
-## <a name="op_neq"></a> deque:: Operator! = (STL/CLR)
+## <a name="op_neq"></a> deque::operator!= (STL/CLR)
 
 Deque não igual a comparação.
 
@@ -1649,7 +1649,7 @@ a b d
 [a b c] != [a b d] is True
 ```
 
-## <a name="operator"></a> deque::Operator(STL/CLR)
+## <a name="operator"></a> deque::operator(STL/CLR)
 
 Acessa um elemento em uma posição especificada.
 
@@ -1661,7 +1661,7 @@ reference operator[](size_type pos);
 
 #### <a name="parameters"></a>Parâmetros
 
-*POS*<br/>
+*pos*<br/>
 Posição do elemento a acessar.
 
 ### <a name="remarks"></a>Comentários
@@ -1701,7 +1701,7 @@ a b c
 a x c
 ```
 
-## <a name="pop_back"></a> deque:: pop_back (STL/CLR)
+## <a name="pop_back"></a> deque::pop_back (STL/CLR)
 
 Remove o último elemento.
 
@@ -1748,7 +1748,7 @@ a b c
 a b
 ```
 
-## <a name="pop_front"></a> deque:: pop_front (STL/CLR)
+## <a name="pop_front"></a> deque::pop_front (STL/CLR)
 
 Remove o primeiro elemento.
 
@@ -1795,7 +1795,7 @@ a b c
 b c
 ```
 
-## <a name="push_back"></a> push_back (STL/CLR)
+## <a name="push_back"></a> deque::push_back (STL/CLR)
 
 Adiciona um novo último elemento.
 
@@ -1835,7 +1835,7 @@ int main()
 a b c
 ```
 
-## <a name="push_front"></a> push_front (STL/CLR)
+## <a name="push_front"></a> deque::push_front (STL/CLR)
 
 Adiciona um novo elemento primeiro.
 
@@ -1875,7 +1875,7 @@ int main()
 c b a
 ```
 
-## <a name="rbegin"></a> rbegin (STL/CLR)
+## <a name="rbegin"></a> deque::rbegin (STL/CLR)
 
 Designa o início da sequência controlada invertida.
 
@@ -1887,7 +1887,7 @@ reverse_iterator rbegin();
 
 ### <a name="remarks"></a>Comentários
 
-A função membro retorna um iterador inverso que designa o último elemento da sequência controlada ou logo após o início de uma sequência vazia. Portanto, ele designa o `beginning` da sequência inversa. Você pode usá-lo para obter um iterador que designa o `current` início da sequência controlada visto na ordem inversa, mas seu status pode alterar se o comprimento da sequência controlada for alterado.
+A função membro retorna um iterador inverso que designa o último elemento da sequência controlada ou logo após o início de uma sequência vazia. Portanto, ele designa o `beginning` da sequência invertida. Use-o para obter um iterador que designa o início `current` da sequência controlada que é vista na ordem inversa, mas seu status poderá mudar se o tamanho da sequência controlada for alterado.
 
 ### <a name="example"></a>Exemplo
 
@@ -1930,7 +1930,7 @@ a b c
 a y x
 ```
 
-## <a name="reference"></a> deque:: Reference (STL/CLR)
+## <a name="reference"></a> deque::reference (STL/CLR)
 
 O tipo de uma referência para um elemento.
 
@@ -1985,7 +1985,7 @@ a b c
 A B C
 ```
 
-## <a name="rend"></a> deque:: rend (STL/CLR)
+## <a name="rend"></a> deque::rend (STL/CLR)
 
 Designa o fim da sequência controlada invertida.
 
@@ -1997,7 +1997,7 @@ reverse_iterator rend();
 
 ### <a name="remarks"></a>Comentários
 
-A função membro retorna um iterador inverso que aponta logo após o início da sequência controlada. Portanto, ele designa o `end` da sequência inversa. Você pode usá-lo para obter um iterador que designa o `current` final da sequência controlada visto na ordem inversa, mas seu status pode alterar se o comprimento da sequência controlada for alterado.
+A função membro retorna um iterador inverso que aponta logo após o início da sequência controlada. Portanto, ele designa o `end` da sequência invertida. Use-o para obter um iterador que designa o fim `current` da sequência controlada vista na ordem inversa, mas seu status poderá mudar se o tamanho da sequência controlada for alterado.
 
 ### <a name="example"></a>Exemplo
 
@@ -2041,7 +2041,7 @@ a b c
 y x c
 ```
 
-## <a name="resize"></a> deque:: Resize (STL/CLR)
+## <a name="resize"></a> deque::resize (STL/CLR)
 
 Altera o número de elementos.
 
@@ -2057,7 +2057,7 @@ void resize(size_type new_size, value_type val);
 *new_size*<br/>
 Novo tamanho da sequência controlada.
 
-*Val*<br/>
+*val*<br/>
 Valor do elemento de preenchimento.
 
 ### <a name="remarks"></a>Comentários
@@ -2101,7 +2101,7 @@ size() = 0
 x x x x x
 ```
 
-## <a name="reverse_iterator"></a> deque:: reverse_iterator (STL/CLR)
+## <a name="reverse_iterator"></a> deque::reverse_iterator (STL/CLR)
 
 O tipo de um iterador inverso para a sequência controlada.
 
@@ -2150,7 +2150,7 @@ c b a
 x b a
 ```
 
-## <a name="size"></a> deque (STL/CLR)
+## <a name="size"></a> deque::size (STL/CLR)
 
 Conta o número de elementos.
 
@@ -2203,7 +2203,7 @@ size() = 0 after clearing
 size() = 2 after adding 2
 ```
 
-## <a name="size_type"></a> deque:: size_type (STL/CLR)
+## <a name="size_type"></a> deque::size_type (STL/CLR)
 
 O tipo de uma distância com sinal entre dois elementos.
 
@@ -2248,7 +2248,7 @@ a b c
 end()-begin() = 3
 ```
 
-## <a name="swap"></a> deque:: swap (STL/CLR)
+## <a name="swap"></a> deque::swap (STL/CLR)
 
 Alterna o conteúdo de dois contêineres.
 
@@ -2361,7 +2361,7 @@ a b c d
 a b c
 ```
 
-## <a name="value_type"></a> deque:: value_type (STL/CLR)
+## <a name="value_type"></a> deque::value_type (STL/CLR)
 
 O tipo de um elemento.
 
@@ -2406,7 +2406,7 @@ int main()
 a b c
 ```
 
-## <a name="op_lt"></a> operador&lt; (deque) (STL/CLR)
+## <a name="op_lt"></a> operator&lt; (deque) (STL/CLR)
 
 Deque menor do que a comparação.
 
@@ -2475,7 +2475,7 @@ a b d
 [a b c] < [a b d] is True
 ```
 
-## <a name="op_lteq"></a> operador&lt;= (deque) (STL/CLR)
+## <a name="op_lteq"></a> operator&lt;= (deque) (STL/CLR)
 
 Deque menor ou igual comparação.
 
@@ -2544,7 +2544,7 @@ a b d
 [a b d] <= [a b c] is False
 ```
 
-## <a name="op_as"></a> operador = (deque) (STL/CLR)
+## <a name="op_as"></a> operator= (deque) (STL/CLR)
 
 Substitui a sequência controlada.
 
@@ -2597,7 +2597,7 @@ a b c
 a b c
 ```
 
-## <a name="op_eq"></a> operador = = (deque) (STL/CLR)
+## <a name="op_eq"></a> operator== (deque) (STL/CLR)
 
 Comparação de igualdade do deque.
 
@@ -2666,7 +2666,7 @@ a b d
 [a b c] == [a b d] is False
 ```
 
-## <a name="op_gt"></a> operador&gt; (deque) (STL/CLR)
+## <a name="op_gt"></a> operator&gt; (deque) (STL/CLR)
 
 Maior que a comparação do deque.
 
@@ -2735,7 +2735,7 @@ a b d
 [a b d] > [a b c] is True
 ```
 
-## <a name="op_gteq"></a> operador&gt;= (deque) (STL/CLR)
+## <a name="op_gteq"></a> operator&gt;= (deque) (STL/CLR)
 
 Comparação de maior que ou igual do deque.
 

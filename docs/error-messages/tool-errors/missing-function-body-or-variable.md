@@ -5,12 +5,12 @@ helpviewer_keywords:
 - function body
 - variables, missing
 ms.assetid: 1a88d809-b14f-46a4-97c4-3e48beb418f2
-ms.openlocfilehash: c287d804df3222475d7cf32c6eb025f642dfb913
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
-ms.translationtype: MT
+ms.openlocfilehash: 5e3436054d69da7fb67c240c1d684585734635c3
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59031849"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62378434"
 ---
 # <a name="missing-function-body-or-variable"></a>Corpo de função ou variável ausente
 
@@ -20,7 +20,7 @@ Com apenas um protótipo de função, o compilador pode continuar sem erro, mas 
 
 A chamada de função em main causará LNK2019, porque o protótipo permite que o compilador acha que a função existe.  O vinculador localiza que ele não.
 
-```
+```cpp
 // LNK2019_MFBV.cpp
 // LNK2019 expected
 void DoSomething(void);
@@ -33,7 +33,7 @@ int main() {
 
 No C++, certifique-se de que você inclua a implementação de uma função específica para uma classe e não apenas um protótipo na definição de classe. Se você estiver definindo a classe fora do arquivo de cabeçalho, certifique-se de incluir o nome da classe antes da função (`Classname::memberfunction`).
 
-```
+```cpp
 // LNK2019_MFBV_2.cpp
 // LNK2019 expected
 struct A {

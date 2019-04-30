@@ -44,11 +44,11 @@ helpviewer_keywords:
 - Visual C++, writing to Windows Registry
 ms.assetid: b9a75cb4-0589-4d5b-92cb-5e8be42b4ac0
 ms.openlocfilehash: 413ccc3b66d76f8779861d4d65eb262ee8640725
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57750891"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384368"
 ---
 # <a name="windows-operations-ccli"></a>Operações do Windows (C++/CLI)
 
@@ -144,7 +144,7 @@ int main( )
 
 O <xref:Microsoft.Win32.Registry> classe é meramente um contêiner para instâncias estáticas de <xref:Microsoft.Win32.RegistryKey>. Cada instância representa um nó raiz do registro. As instâncias estiverem <xref:Microsoft.Win32.Registry.ClassesRoot>, <xref:Microsoft.Win32.Registry.CurrentConfig>, <xref:Microsoft.Win32.Registry.CurrentUser>, <xref:Microsoft.Win32.Registry.LocalMachine>, e <xref:Microsoft.Win32.Registry.Users>.
 
-Além do que está sendo estático, os objetos dentro de <xref:Microsoft.Win32.Registry> classe são somente leitura. Além disso, instâncias da <xref:Microsoft.Win32.RegistryKey> objetos de classe são criadas para acessar o conteúdo do registro também são somente leitura. Para obter um exemplo de como substituir esse comportamento, consulte [como: Gravar dados no registro do Windows (C + + / CLI)](../dotnet/how-to-write-data-to-the-windows-registry-cpp-cli.md).
+Além do que está sendo estático, os objetos dentro de <xref:Microsoft.Win32.Registry> classe são somente leitura. Além disso, instâncias da <xref:Microsoft.Win32.RegistryKey> objetos de classe são criadas para acessar o conteúdo do registro também são somente leitura. Para obter um exemplo de como substituir esse comportamento, consulte [como: Gravar dados no registro do Windows (C++/CLI)](../dotnet/how-to-write-data-to-the-windows-registry-cpp-cli.md).
 
 Há dois objetos adicionais no <xref:Microsoft.Win32.Registry> classe: <xref:Microsoft.Win32.Registry.DynData> e <xref:Microsoft.Win32.Registry.PerformanceData>. Ambos são instâncias do <xref:Microsoft.Win32.RegistryKey> classe. O <xref:Microsoft.Win32.Registry.DynData> objeto contém informações de registro dinâmico, que só são suportadas no Windows 98 e Windows Me. O <xref:Microsoft.Win32.Registry.PerformanceData> objeto pode ser usado para acessar informações do contador de desempenho para aplicativos que usam o sistema de monitoramento de desempenho do Windows. O <xref:Microsoft.Win32.Registry.PerformanceData> nó representa informações que não é realmente armazenadas no registro e, portanto, não podem ser exibidas usando Regedit.exe.
 

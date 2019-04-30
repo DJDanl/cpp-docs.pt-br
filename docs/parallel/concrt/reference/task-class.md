@@ -15,11 +15,11 @@ helpviewer_keywords:
 - task class
 ms.assetid: cdc3a8c0-5cbe-45a0-b5d5-e9f81d94df1a
 ms.openlocfilehash: 99676ac0fff9584cd8453562f8918f6cadd66666
-ms.sourcegitcommit: 90817d9d78fbaed8ffacde63f3add334842e596f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58278523"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62385200"
 ---
 # <a name="task-class-concurrency-runtime"></a>Classe task (Tempo de Execução de Simultaneidade)
 
@@ -54,13 +54,13 @@ O tipo de resultado desta tarefa.
 |----------|-----------------|
 |`result_type`|O tipo do resultado que um objeto desta classe produz.|
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
 |[task](#ctor)|Sobrecarregado. Constrói um objeto `task`.|
 
-### <a name="public-methods"></a>Métodos Públicos
+### <a name="public-methods"></a>Métodos públicos
 
 |Nome|Descrição|
 |----------|-----------------|
@@ -71,7 +71,7 @@ O tipo de resultado desta tarefa.
 |[then](#then)|Sobrecarregado. Adiciona uma tarefa de continuação para essa tarefa.|
 |[wait](#wait)|Aguarda que essa tarefa alcance um estado terminal. É possível para `wait` executar a tarefa em linha, se todas as dependências de tarefas forem atendidas, e ela ainda não tiver sido escolhida para execução por um trabalho em segundo plano.|
 
-### <a name="public-operators"></a>Operadores Públicos
+### <a name="public-operators"></a>Operadores públicos
 
 |Nome|Descrição|
 |----------|-----------------|

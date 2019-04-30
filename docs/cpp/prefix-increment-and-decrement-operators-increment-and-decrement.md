@@ -14,11 +14,11 @@ helpviewer_keywords:
 - decrement operators [C++]
 ms.assetid: 45ea7fc7-f279-4be9-a216-1d9a0ef9eb7b
 ms.openlocfilehash: deb8acc6c6a68c9a97f2f0efbdc4084b4937df46
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50606018"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392096"
 ---
 # <a name="prefix-increment-and-decrement-operators--and---"></a>Operadores de incremento e de decremento pré-fixados: ++ e --
 

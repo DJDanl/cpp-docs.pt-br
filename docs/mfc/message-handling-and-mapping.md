@@ -7,11 +7,11 @@ helpviewer_keywords:
 - message maps [MFC]
 ms.assetid: 62fe2a1b-944c-449d-a0f0-63c11ee0a3cb
 ms.openlocfilehash: 41f3432b3741019a787ee24b0f508fe8e65e0470
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57279660"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62383965"
 ---
 # <a name="message-handling-and-mapping"></a>Manipulação e mapeamento de mensagem
 
@@ -41,7 +41,7 @@ Para obter informações gerais sobre mensagens e filas de mensagens no Windows,
 
 - [Atualização dinâmica de objetos de interface do usuário](../mfc/how-to-update-user-interface-objects.md)
 
-- [Como: Criar um mapa de mensagem para uma classe de modelo](../mfc/how-to-create-a-message-map-for-a-template-class.md)
+- [Como: criar um mapa de mensagem para uma classe de modelo](../mfc/how-to-create-a-message-map-for-a-template-class.md)
 
 ## <a name="see-also"></a>Consulte também
 

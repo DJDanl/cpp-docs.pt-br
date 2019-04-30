@@ -17,11 +17,11 @@ helpviewer_keywords:
 - std::money_put [C++], put
 ms.assetid: f439fd56-c9b1-414c-95e1-66c918c6eee6
 ms.openlocfilehash: 346dd4f681432143c954ca125c3862fc6827db60
-ms.sourcegitcommit: b04160e9ed58f83bdc8ace218ae64b35395f6ea2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50968098"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62383536"
 ---
 # <a name="moneyput-class"></a>Classe money_put
 
@@ -114,13 +114,13 @@ Um iterador que trata o primeiro elemento na cadeia de caracteres inserida.
 *_Intl*<br/>
 Um valor booliano que indica o tipo do símbolo de moeda esperado na sequência: **true** se internacional, **false** se nacional.
 
-*Iosbase*<br/>
+*_Iosbase*<br/>
 Um sinalizador de formato que quando definido indica que o símbolo de moeda é opcional; caso contrário, será obrigatório
 
 *_Fill*<br/>
 Um caractere que é usado para espaçamento.
 
-*Val*<br/>
+*val*<br/>
 Um objeto de cadeia de caracteres a ser convertido.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -236,13 +236,13 @@ Um iterador que trata o primeiro elemento na cadeia de caracteres inserida.
 *_Intl*<br/>
 Um valor booliano que indica o tipo do símbolo de moeda esperado na sequência: **true** se internacional, **false** se nacional.
 
-*Iosbase*<br/>
+*_Iosbase*<br/>
 Um sinalizador de formato que quando definido indica que o símbolo de moeda é opcional; caso contrário, será obrigatório
 
 *_Fill*<br/>
 Um caractere que é usado para espaçamento.
 
-*Val*<br/>
+*val*<br/>
 Um objeto de cadeia de caracteres a ser convertido.
 
 ### <a name="return-value"></a>Valor de retorno

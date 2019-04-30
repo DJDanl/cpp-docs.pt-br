@@ -24,11 +24,11 @@ helpviewer_keywords:
 - files [C++], writing to
 ms.assetid: 7b868c33-766f-4e1a-95a7-e8d25f0604c4
 ms.openlocfilehash: b3fa53b21d4ea23c5f8e59de673f4074deedb505
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519243"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62383406"
 ---
 # <a name="write"></a>_write
 
@@ -57,7 +57,7 @@ Quantidade de bytes.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Se for bem-sucedido, **Write** retorna o número de bytes gravados. Se o espaço restante no disco for menor que o tamanho do buffer em que a função está tentando gravar no disco **Write** falhar e libera o conteúdo do buffer no disco. Um valor de retorno de -1 indica um erro. Se parâmetros inválidos forem passados, essa função invocará o manipulador de parâmetro inválido, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, a função retornará -1 e **errno** é definido como um dos três valores: **EBADF**, o que significa que o descritor de arquivo é inválido ou o arquivo não está aberto para gravação; **ENOSPC**, que significa que não há suficiente espaço disponível no dispositivo para a operação; ou **EINVAL**, o que significa que *buffer* era um ponteiro nulo ou que indefinido *contagem* de bytes foi passada para ser gravado em um arquivo no modo Unicode.
+Se for bem-sucedido, **Write** retorna o número de bytes gravados. Se o espaço restante no disco for menor que o tamanho do buffer em que a função está tentando gravar no disco **Write** falhar e libera o conteúdo do buffer no disco. Um valor de retorno de -1 indica um erro. Se parâmetros inválidos forem passados, essa função invocará o manipulador de parâmetro inválido, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, a função retornará -1 e **errno** é definido como um dos três valores: **EBADF**, o que significa que o descritor de arquivo é inválido ou o arquivo não está aberto para gravação; **ENOSPC**, que significa que não há suficiente espaço disponível no dispositivo para a operação; ou **EINVAL**, o que significa que *buffer* era um ponteiro nulo ou que um ímpar *contagem* de bytes foi passada para ser gravado em um arquivo no modo Unicode.
 
 Para obter mais informações sobre esses e outros códigos de retorno, consulte [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 

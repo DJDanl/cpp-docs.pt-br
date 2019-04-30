@@ -14,11 +14,11 @@ helpviewer_keywords:
 - OLE events [MFC]
 ms.assetid: e1e57e0c-206b-4923-a0b5-682c26564f74
 ms.openlocfilehash: 0d8a881d07a3e48673c6dc3298816d165273be0d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57276761"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392668"
 ---
 # <a name="mfc-activex-controls-events"></a>Controles ActiveX MFC: Eventos
 
@@ -45,10 +45,10 @@ Dois outros artigos abordam eventos detalhadamente:
 
 - [Controles ActiveX MFC: Adicionando eventos de estoque](../mfc/mfc-activex-controls-adding-stock-events-to-an-activex-control.md)
 
-- [Controles ActiveX MFC: Adicionando eventos personalizados](../mfc/mfc-activex-controls-adding-custom-events.md)
+- [Controles ActiveX MFC: adicionando eventos personalizados](../mfc/mfc-activex-controls-adding-custom-events.md)
 
 ## <a name="see-also"></a>Consulte também
 
 [Controles ActiveX do MFC](../mfc/mfc-activex-controls.md)<br/>
-[Controles ActiveX MFC: Métodos](../mfc/mfc-activex-controls-methods.md)<br/>
+[Controles ActiveX MFC: métodos](../mfc/mfc-activex-controls-methods.md)<br/>
 [Classe COleControl](../mfc/reference/colecontrol-class.md)

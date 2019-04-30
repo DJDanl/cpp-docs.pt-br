@@ -49,11 +49,11 @@ f1_keywords:
 - atomic/std::atomic_uint_least64_t
 ms.assetid: e79a6b9f-52ff-48da-9554-654c4e1999f6
 ms.openlocfilehash: e2146c7424d4903523372ad54b0cd2eece525cbe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50600480"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62376595"
 ---
 # <a name="ltatomicgt"></a>&lt;atomic&gt;
 
@@ -78,7 +78,7 @@ Uma operação atômica tem duas propriedades-chave que o ajudarão a usar vári
 
 Em algumas plataformas, pode não ser possível implementar operações atômicas com eficiência para alguns tipos sem usar bloqueios `mutex`. Um tipo atômico será *livre de bloqueio* se nenhuma operação atômica no tipo usar bloqueios.
 
-**C++11**: em manipuladores de sinal, você pode executar operações atômicas em um objeto `obj` se `obj.is_lock_free()` ou `atomic_is_lock_free(x)` for true.
+**C++11**: Você pode executar operações atômicas em um objeto em manipuladores de sinal `obj` se `obj.is_lock_free()` ou `atomic_is_lock_free(x)` forem verdadeiras.
 
 A classe [atomic_flag](../standard-library/atomic-flag-structure.md) fornece um tipo atômico mínimo que contém uma **bool** sinalizador. Suas operações são sempre livres de bloqueio.
 
@@ -101,7 +101,7 @@ Para cada um dos tipos integrais, há um tipo atômico nomeado correspondente qu
 |Tipo `atomic_integral`|Tipo integral|Macro `atomic_is_lock_free`|
 |----------------------------|-------------------|---------------------------------|
 |`atomic_char`|**char**|ATOMIC_CHAR_LOCK_FREE|
-|`atomic_schar`|**char assinada**|ATOMIC_CHAR_LOCK_FREE|
+|`atomic_schar`|**signed char**|ATOMIC_CHAR_LOCK_FREE|
 |`atomic_uchar`|**unsigned char**|ATOMIC_CHAR_LOCK_FREE|
 |`atomic_char16_t`|`char16_t`|ATOMIC_CHAR16_T_LOCK_FREE|
 |`atomic_char32_t`|`char32_t`|ATOMIC_CHAR32_T_LOCK_FREE|
@@ -113,7 +113,7 @@ Para cada um dos tipos integrais, há um tipo atômico nomeado correspondente qu
 |`atomic_long`|**long**|ATOMIC_LONG_LOCK_FREE|
 |`atomic_ulong`|**unsigned long**|ATOMIC_LONG_LOCK_FREE|
 |`atomic_llong`|**long long**|ATOMIC_LLONG_LOCK_FREE|
-|`atomic_ullong`|**longo longo sem sinal**|ATOMIC_LLONG_LOCK_FREE|
+|`atomic_ullong`|**unsigned long long**|ATOMIC_LLONG_LOCK_FREE|
 
 Os nomes Typedef existem para especializações do modelo atômico para alguns dos tipos definidos no cabeçalho \<inttypes.h>.
 

@@ -13,11 +13,11 @@ helpviewer_keywords:
 - native code [C++], .NET interoperatibility
 ms.assetid: 4299dfce-392f-4933-8bf0-5da2f0d1c282
 ms.openlocfilehash: 78e95177282804369bac2065582a06b8acbc975b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50428661"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384849"
 ---
 # <a name="mixed-native-and-managed-assemblies"></a>Assemblies mistos de (nativos e gerenciados)
 
@@ -27,14 +27,14 @@ Por exemplo, uma biblioteca existente que consistam inteiramente de código C++ 
 
 Visual C++ suporta somente a geração de assemblies gerenciados mistos, usando o **/clr** opção de compilador. O **/clr: pure** e **/CLR: safe** opções do compilador são preteridas no Visual Studio 2015 e sem suporte no Visual Studio 2017. Se você precisar de assemblies gerenciados puros ou verificáveis, é recomendável que criá-las usando c#.
 
-A geração dos três tipos distintos de assemblies gerenciados com suporte de versões anteriores do conjunto de ferramentas de compilador do Visual C++: mistas, puras e verificáveis. O último dois são discutidos [código puro e verificável (C + + c++ CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md).
+A geração dos três tipos distintos de assemblies gerenciados com suporte de versões anteriores do conjunto de ferramentas de compilador do Visual C++: mistas, puras e verificáveis. O último dois são discutidos [código puro e verificável (C++/CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md).
 
 ## <a name="in-this-section"></a>Nesta seção
 
-[Como: migrar para /clr](../dotnet/how-to-migrate-to-clr.md)<br/>
+[Como: Migrar para /clr](../dotnet/how-to-migrate-to-clr.md)<br/>
 Descreve as etapas recomendadas para introdução ou atualizando a funcionalidade do .NET em seu aplicativo.
 
-[Como: compilar MFC e ATL código, usando /clr](../dotnet/how-to-compile-mfc-and-atl-code-by-using-clr.md)<br/>
+[Como: Compilar o MFC e ATL código, usando /clr](../dotnet/how-to-compile-mfc-and-atl-code-by-using-clr.md)<br/>
 Discute como compilar programas existentes do MFC e ATL para direcionar o Common Language Runtime.
 
 [Inicialização de assemblies mistos](../dotnet/initialization-of-mixed-assemblies.md)<br/>
@@ -55,7 +55,7 @@ Discute as implicações de desempenho de um ponto de entrada nativo para uma fu
 [Evitando exceções no CLR desligamento ao consumo dos objetos COM criados com /clr](../dotnet/avoiding-exceptions-on-clr-shutdown-when-consuming-com-objects-built-with-clr.md)<br/>
 Discute como obter um desligamento correto de um aplicativo gerenciado que consome um objeto COM compilados com **/clr**.
 
-[Como criar um aplicativo parcialmente confiável removendo a dependência da DLL da biblioteca CRT](../dotnet/create-a-partially-trusted-application.md)<br/>
+[Como: criar um aplicativo parcialmente confiável, removendo a dependência da DLL da biblioteca CRT](../dotnet/create-a-partially-trusted-application.md)<br/>
 Discute como criar um aplicativo parcialmente confiável do Common Language Runtime usando o Visual C++, removendo a dependência no msvcm90.dll.
 
 Para obter mais informações sobre diretrizes de codificação para assemblies mistos, consulte o artigo do MSDN [uma visão geral de gerenciado/não gerenciado interoperabilidade entre código](https://msdn.microsoft.com/library/ms973872.aspx).

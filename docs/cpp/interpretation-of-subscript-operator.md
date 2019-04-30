@@ -8,17 +8,17 @@ helpviewer_keywords:
 - operators [C++], interpretation of subscript
 ms.assetid: 8852ca18-9d5b-43f7-b8bd-abc89364fbf2
 ms.openlocfilehash: 1c3d5bca66cb294503805fd5b7691331ac380ae5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50446599"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62375308"
 ---
 # <a name="interpretation-of-subscript-operator"></a>Interpretação do operador subscrito
 
 Como outros operadores, o operador subscrito (**\[]**) pode ser redefinido pelo usuário. O comportamento padrão do operador subscrito, se não sobrecarregado, é combinar o nome da matriz e o subscrito usando o seguinte método:
 
-\*((*nome da matriz*) + (*subscrito*))
+\*((*array-name*) + (*subscript*))
 
 Como em qualquer adição que envolve tipos do ponteiro, o dimensionamento é executado automaticamente para se ajustar ao tamanho do tipo. Portanto, o valor resultante não é *subscrito* bytes de origem de *nome da matriz*; em vez disso, é o *subscrito*º elemento da matriz. (Para obter mais informações sobre essa conversão, consulte [operadores aditivos](../cpp/additive-operators-plus-and.md).)
 

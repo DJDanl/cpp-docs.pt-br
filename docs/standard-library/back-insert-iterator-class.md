@@ -11,11 +11,11 @@ helpviewer_keywords:
 - std::back_insert_iterator [C++], reference
 ms.assetid: a1ee07f2-cf9f-46a1-8608-cfaf207f9713
 ms.openlocfilehash: 2a0510b6df656b7925fd42a4c97d768336537424
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50557437"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62376439"
 ---
 # <a name="backinsertiterator-class"></a>Classe back_insert_iterator
 
@@ -30,7 +30,7 @@ class back_insert_iterator;
 
 ### <a name="parameters"></a>Parâmetros
 
-*Contêiner*<br/>
+*Container*<br/>
 O tipo de contêiner na parte de trás dos elementos a serem inseridos por um `back_insert_iterator`.
 
 ## <a name="remarks"></a>Comentários
@@ -183,7 +183,7 @@ The original vector vec is: ( 1 2 3 ).
 After the insertion, the vector is: ( 1 2 3 40 ).
 ```
 
-## <a name="op_star"></a>  back_insert_iterator:: Operator\*
+## <a name="op_star"></a>  back_insert_iterator::operator\*
 
 Operador de desreferenciamento usado para implementar a expressão do iterador de saída \* *i* = *x*.
 
@@ -315,7 +315,7 @@ back_insert_iterator<Container>& operator=(typename Container::value_type&& val)
 
 ### <a name="parameters"></a>Parâmetros
 
-*Val*<br/>
+*val*<br/>
 O valor a ser inserido no contêiner.
 
 ### <a name="return-value"></a>Valor de retorno

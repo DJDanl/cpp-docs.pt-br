@@ -98,11 +98,11 @@ helpviewer_keywords:
 - vector member [STL/CLR]
 ms.assetid: f90060d5-097a-4e9d-9a26-a634b5b9c6c2
 ms.openlocfilehash: 09a0919cd47937960736c6cccf31343c5e12087d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50640707"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384374"
 ---
 # <a name="vector-stlclr"></a>vector (STL/CLR)
 
@@ -248,7 +248,7 @@ Fim do intervalo a inserir.
 *right*<br/>
 Enumeração a ser inserido.
 
-*Val*<br/>
+*val*<br/>
 Valor do elemento a ser inserido.
 
 ### <a name="remarks"></a>Comentários
@@ -314,7 +314,7 @@ reference at(size_type pos);
 
 #### <a name="parameters"></a>Parâmetros
 
-*POS*<br/>
+*pos*<br/>
 Posição do elemento a acessar.
 
 ### <a name="remarks"></a>Comentários
@@ -354,7 +354,7 @@ a b c
 a x c
 ```
 
-## <a name="back"></a> Vector:: back (STL/CLR)
+## <a name="back"></a> vector::back (STL/CLR)
 
 Acessa o último elemento.
 
@@ -405,7 +405,7 @@ back() = c
 a b x
 ```
 
-## <a name="back_item"></a> Vector::back_item (STL/CLR)
+## <a name="back_item"></a> vector::back_item (STL/CLR)
 
 Acessa o último elemento.
 
@@ -468,7 +468,7 @@ iterator begin();
 
 ### <a name="remarks"></a>Comentários
 
-A função membro retorna um iterador de acesso aleatório que designa o primeiro elemento da sequência controlada ou logo após o fim de uma sequência vazia. Você pode usá-lo para obter um iterador que designa o `current` início da sequência controlada, mas seu status pode alterar se o comprimento da sequência controlada for alterado.
+A função membro retorna um iterador de acesso aleatório que designa o primeiro elemento da sequência controlada ou logo após o fim de uma sequência vazia. Use-o para obter um iterador que designa o início `current` da sequência controlada, mas seu status poderá mudar se o tamanho da sequência controlada for alterado.
 
 ### <a name="example"></a>Exemplo
 
@@ -618,7 +618,7 @@ a b
 size() = 0
 ```
 
-## <a name="const_iterator"></a> Vector:: const_iterator (STL/CLR)
+## <a name="const_iterator"></a> vector::const_iterator (STL/CLR)
 
 O tipo de um iterador de constante para a sequência controlada.
 
@@ -659,7 +659,7 @@ int main()
 a b c
 ```
 
-## <a name="const_reference"></a> Vector:: const_reference (STL/CLR)
+## <a name="const_reference"></a> vector::const_reference (STL/CLR)
 
 O tipo de uma referência de constante para um elemento.
 
@@ -703,7 +703,7 @@ int main()
 a b c
 ```
 
-## <a name="const_reverse_iterator"></a> Vector:: const_reverse_iterator (STL/CLR)
+## <a name="const_reverse_iterator"></a> vector::const_reverse_iterator (STL/CLR)
 
 O tipo de um iterador inverso constante para a sequência controlada...
 
@@ -745,7 +745,7 @@ int main()
 c b a
 ```
 
-## <a name="difference_type"></a> Vector:: difference_type (STL/CLR)
+## <a name="difference_type"></a> vector::difference_type (STL/CLR)
 
 Os tipos de uma distância com sinal entre dois elementos.
 
@@ -862,7 +862,7 @@ iterator end();
 
 ### <a name="remarks"></a>Comentários
 
-A função membro retorna um iterador de acesso aleatório que aponta para logo após o fim da sequência controlada. Você pode usá-lo para obter um iterador que designa o `current` final da sequência controlada, mas seu status pode alterar se o comprimento da sequência controlada for alterado.
+A função membro retorna um iterador de acesso aleatório que aponta para logo após o fim da sequência controlada. Use-o para obter um iterador que designa o fim `current` da sequência controlada, mas seu status poderá mudar se o tamanho da sequência controlada for alterado.
 
 ### <a name="example"></a>Exemplo
 
@@ -906,7 +906,7 @@ a b c
 a x y
 ```
 
-## <a name="erase"></a> Vector:: Erase (STL/CLR)
+## <a name="erase"></a> vector::erase (STL/CLR)
 
 Remove os elementos em posições especificadas.
 
@@ -985,7 +985,7 @@ erase(begin(), end()-1) = e
 size() = 1
 ```
 
-## <a name="front"></a> Vector:: front (STL/CLR)
+## <a name="front"></a> vector::front (STL/CLR)
 
 Acessa o primeiro elemento.
 
@@ -1036,7 +1036,7 @@ front() = a
 x b c
 ```
 
-# <a name="front_item"></a> Vector::front_item (STL/CLR)
+# <a name="front_item"></a> vector::front_item (STL/CLR)
 Acessa o primeiro elemento.
 
 ### <a name="syntax"></a>Sintaxe
@@ -1086,7 +1086,7 @@ front_item = a
 x b c
 ```
 
-# <a name="generic_container"></a> Vector::generic_container (STL/CLR)
+# <a name="generic_container"></a> vector::generic_container (STL/CLR)
 O tipo da interface genérica para o contêiner.
 
 ### <a name="syntax"></a>Sintaxe
@@ -1151,7 +1151,7 @@ a b c d
 a b c d e
 ```
 
-## <a name="generic_iterator"></a> Vector::generic_iterator (STL/CLR)
+## <a name="generic_iterator"></a> vector::generic_iterator (STL/CLR)
 
 O tipo de um iterador para uso com a interface genérica para o contêiner.
 
@@ -1209,7 +1209,7 @@ a b c
 a a c
 ```
 
-# <a name="generic_reverse_iterator"></a> Vector::generic_reverse_iterator (STL/CLR)
+# <a name="generic_reverse_iterator"></a> vector::generic_reverse_iterator (STL/CLR)
 O tipo de um iterador inverso para uso com a interface genérica para o contêiner.
 
 ### <a name="syntax"></a>Sintaxe
@@ -1265,7 +1265,7 @@ a b c
 a c c
 ```
 
-## <a name="generic_value"></a> Vector::generic_value (STL/CLR)
+## <a name="generic_value"></a> vector::generic_value (STL/CLR)
 
 O tipo de um elemento para uso com a interface genérica para o contêiner.
 
@@ -1321,7 +1321,7 @@ a b c
 a a c
 ```
 
-## <a name="insert"></a> Vector:: Insert (STL/CLR)
+## <a name="insert"></a> vector::insert (STL/CLR)
 
 Adiciona os elementos em uma posição especificada.
 
@@ -1350,7 +1350,7 @@ Fim do intervalo a inserir.
 *right*<br/>
 Enumeração a ser inserido.
 
-*Val*<br/>
+*val*<br/>
 Valor do elemento a ser inserido.
 
 *where*<br/>
@@ -1479,7 +1479,7 @@ a b c
 x b c
 ```
 
-## <a name="op_as"></a> Vector:: Operator = (STL/CLR)
+## <a name="op_as"></a> vector::operator= (STL/CLR)
 
 Substitui a sequência controlada.
 
@@ -1532,7 +1532,7 @@ a b c
 a b c
 ```
 
-## <a name="op"></a> Vector::Operator(STL/CLR)
+## <a name="op"></a> vector::operator(STL/CLR)
 
 Acessa um elemento em uma posição especificada.
 
@@ -1544,7 +1544,7 @@ reference operator[](size_type pos);
 
 #### <a name="parameters"></a>Parâmetros
 
-*POS*<br/>
+*pos*<br/>
 Posição do elemento a acessar.
 
 ### <a name="remarks"></a>Comentários
@@ -1584,7 +1584,7 @@ a b c
 a x c
 ```
 
-## <a name="pop_back"></a> Vector:: pop_back (STL/CLR)
+## <a name="pop_back"></a> vector::pop_back (STL/CLR)
 
 Remove o último elemento.
 
@@ -1631,7 +1631,7 @@ a b c
 a b
 ```
 
-## <a name="push_back"></a> Vector:: push_back (STL/CLR)
+## <a name="push_back"></a> vector::push_back (STL/CLR)
 
 Adiciona um novo último elemento.
 
@@ -1683,7 +1683,7 @@ reverse_iterator rbegin();
 
 ### <a name="remarks"></a>Comentários
 
-A função membro retorna um iterador inverso que designa o último elemento da sequência controlada ou logo após o início de uma sequência vazia. Portanto, ele designa o `beginning` da sequência inversa. Você pode usá-lo para obter um iterador que designa o `current` início da sequência controlada visto na ordem inversa, mas seu status pode alterar se o comprimento da sequência controlada for alterado.
+A função membro retorna um iterador inverso que designa o último elemento da sequência controlada ou logo após o início de uma sequência vazia. Portanto, ele designa o `beginning` da sequência invertida. Use-o para obter um iterador que designa o início `current` da sequência controlada que é vista na ordem inversa, mas seu status poderá mudar se o tamanho da sequência controlada for alterado.
 
 ### <a name="example"></a>Exemplo
 
@@ -1726,7 +1726,7 @@ a b c
 a y x
 ```
 
-## <a name="reference"></a> Vector:: Reference (STL/CLR)
+## <a name="reference"></a> vector::reference (STL/CLR)
 
 O tipo de uma referência para um elemento.
 
@@ -1793,7 +1793,7 @@ reverse_iterator rend();
 
 ### <a name="remarks"></a>Comentários
 
-A função membro retorna um iterador inverso que aponta logo após o início da sequência controlada. Portanto, ele designa o `end` da sequência inversa. Você pode usá-lo para obter um iterador que designa o `current` final da sequência controlada visto na ordem inversa, mas seu status pode alterar se o comprimento da sequência controlada for alterado.
+A função membro retorna um iterador inverso que aponta logo após o início da sequência controlada. Portanto, ele designa o `end` da sequência invertida. Use-o para obter um iterador que designa o fim `current` da sequência controlada vista na ordem inversa, mas seu status poderá mudar se o tamanho da sequência controlada for alterado.
 
 ### <a name="example"></a>Exemplo
 
@@ -1837,7 +1837,7 @@ a b c
 y x c
 ```
 
-## <a name="reserve"></a> Vector:: Reserve (STL/CLR)
+## <a name="reserve"></a> vector::reserve (STL/CLR)
 
 Garante uma capacidade de crescimento mínima para o contêiner.
 
@@ -1908,7 +1908,7 @@ void resize(size_type new_size, value_type val);
 *new_size*<br/>
 Novo tamanho da sequência controlada.
 
-*Val*<br/>
+*val*<br/>
 Valor do elemento de preenchimento.
 
 ### <a name="remarks"></a>Comentários
@@ -1952,7 +1952,7 @@ size() = 0
 x x x x x
 ```
 
-## <a name="reverse_iterator"></a> Vector:: reverse_iterator (STL/CLR)
+## <a name="reverse_iterator"></a> vector::reverse_iterator (STL/CLR)
 
 O tipo de um iterador inverso para a sequência controlada.
 
@@ -2054,7 +2054,7 @@ size() = 0 after clearing
 size() = 2 after adding 2
 ```
 
-## <a name="size_type"></a> Vector:: size_type (STL/CLR)
+## <a name="size_type"></a> vector::size_type (STL/CLR)
 
 O tipo de uma distância com sinal entre dois elementos.
 
@@ -2099,7 +2099,7 @@ a b c
 end()-begin() = 3
 ```
 
-## <a name="swap"></a> Vector:: swap (STL/CLR)
+## <a name="swap"></a> vector::swap (STL/CLR)
 
 Alterna o conteúdo de dois contêineres.
 
@@ -2163,7 +2163,7 @@ x x x x x
 a b c
 ```
 
-## <a name="to_array"></a> Vector::to_array (STL/CLR)
+## <a name="to_array"></a> vector::to_array (STL/CLR)
 
 Copia a sequência controlada para uma nova matriz.
 
@@ -2212,7 +2212,7 @@ a b c d
 a b c
 ```
 
-## <a name="value_type"></a> Vector:: value_type (STL/CLR)
+## <a name="value_type"></a> vector::value_type (STL/CLR)
 
 O tipo de um elemento.
 
@@ -2288,7 +2288,7 @@ Fim do intervalo a inserir.
 *right*<br/>
 Objeto ou intervalo a inserir.
 
-*Val*<br/>
+*val*<br/>
 Valor do elemento a ser inserido.
 
 ### <a name="remarks"></a>Comentários
@@ -2402,7 +2402,7 @@ x x x x x x
 x x x x x x
 ```
 
-## <a name="op_neq"></a> operador! = (vector) (STL/CLR)
+## <a name="op_neq"></a> operator!= (vector) (STL/CLR)
 
 Vetor não igual a comparação.
 
@@ -2540,7 +2540,7 @@ a b d
 [a b c] < [a b d] is True
 ```
 
-## <a name="op_lteq"></a> operador&lt;= (vector) (STL/CLR)
+## <a name="op_lteq"></a> operator&lt;= (vector) (STL/CLR)
 
 Vetor menor ou igual comparação.
 
@@ -2609,7 +2609,7 @@ a b d
 [a b d] <= [a b c] is False
 ```
 
-## <a name="op_eq"></a> operador = = (vector) (STL/CLR)
+## <a name="op_eq"></a> operator== (vector) (STL/CLR)
 
 Comparação de igualdade de vetor.
 
@@ -2747,7 +2747,7 @@ a b d
 [a b d] > [a b c] is True
 ```
 
-## <a name="op_gteq"></a> operador&gt;= (vector) (STL/CLR)
+## <a name="op_gteq"></a> operator&gt;= (vector) (STL/CLR)
 
 Vetor maior que ou igual comparação.
 

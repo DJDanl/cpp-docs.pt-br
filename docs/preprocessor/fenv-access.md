@@ -9,18 +9,18 @@ helpviewer_keywords:
 - fenv_access pragma
 ms.assetid: 2ccea292-0ae4-42ce-9c67-cc189299857b
 ms.openlocfilehash: 507e78dd9f9571cc9ce44d7fd91e78b1c955ba73
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50664029"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62389249"
 ---
 # <a name="fenvaccess"></a>fenv_access
 Desabilita (**na**) ou habilita (**off**) otimizações que poderiam alterar o ambiente de ponto flutuante sinalizador testes e alterações de modo.
 
 ## <a name="syntax"></a>Sintaxe
 
-> **#pragma fenv_access (** { **nos** | **off** } **)**
+> **#pragma fenv_access (** { **on** | **off** } **)**
 
 ## <a name="remarks"></a>Comentários
 

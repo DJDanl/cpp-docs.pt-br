@@ -5,11 +5,11 @@ helpviewer_keywords:
 - RFX (ODBC), implementing
 ms.assetid: ada8f043-37e6-4d41-9db3-92c997a61957
 ms.openlocfilehash: 2a029f653753363e08b3c4f8b9fceab6295924af
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59034109"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62395645"
 ---
 # <a name="record-field-exchange-using-rfx"></a>Registrar troca de campos: Usando RFX
 
@@ -41,8 +41,8 @@ A tabela a seguir mostra a sua função em relação ao que a estrutura faz para
 ## <a name="see-also"></a>Consulte também
 
 [RFX (troca de campo de registro)](../../data/odbc/record-field-exchange-rfx.md)<br/>
-[Registrar troca de campos: Como funciona RFX](../../data/odbc/record-field-exchange-how-rfx-works.md)<br/>
-[Conjunto de registros: Obtendo SUMs e outros resultados agregados (ODBC)](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md)<br/>
+[Registrar troca de campos: como o RFX funciona](../../data/odbc/record-field-exchange-how-rfx-works.md)<br/>
+[Conjunto de registros: obter SUMs e outros resultados agregados (ODBC)](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md)<br/>
 [Classe CRecordset](../../mfc/reference/crecordset-class.md)<br/>
 [Classe CFieldExchange](../../mfc/reference/cfieldexchange-class.md)<br/>
 [Macros, funções globais e variáveis globais](../../mfc/reference/mfc-macros-and-globals.md)

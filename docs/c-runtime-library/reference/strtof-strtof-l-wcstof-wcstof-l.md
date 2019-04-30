@@ -39,11 +39,11 @@ helpviewer_keywords:
 - strtof function
 ms.assetid: 52221b46-876d-4fcc-afb1-97512c17a43b
 ms.openlocfilehash: 10a50a175685f3e8f7f1241683c7705fd9a9b142
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607912"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62376426"
 ---
 # <a name="strtof-strtofl-wcstof-wcstofl"></a>strtof, _strtof_l, wcstof, _wcstof_l
 
@@ -99,8 +99,8 @@ Cada função converte a cadeia de caracteres de entrada *strSource* para um **f
 
 |Rotina TCHAR.H|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**tcstof**|**strtof**|**strtof**|**wcstof**|
-|**tcstof_l**|**_strtof_l**|**_strtof_l**|**_wcstof_l**|
+|**_tcstof**|**strtof**|**strtof**|**wcstof**|
+|**_tcstof_l**|**_strtof_l**|**_strtof_l**|**_wcstof_l**|
 
 O **LC_NUMERIC** configuração da categoria da localidade atual determina o reconhecimento do caractere fracionário em *strSource*; para obter mais informações, consulte [setlocale, wsetlocale](setlocale-wsetlocale.md). As funções que não têm o **l** sufixo usam a localidade atual; aqueles que têm o sufixo são idênticas, exceto que eles usam a localidade que é passada em seu lugar. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
@@ -118,8 +118,8 @@ As versões UCRT dessas funções não têm suporte para conversão do estilo Fo
 
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|
-|**strtof**, **strtof_l**|C: \<stdlib.h> C++: &lt;cstdlib> ou \<stdlib.h>|
-|**wcstof**, **wcstof_l**|C: \<stdlib.h> ou \<wchar.h> C++: &lt;cstdlib>, \<stdlib.h> ou \<wchar.h>|
+|**strtof**, **_strtof_l**|C: \<stdlib.h> C++: &lt;cstdlib> ou \<stdlib.h>|
+|**wcstof**, **_wcstof_l**|C: \<stdlib.h> ou \<wchar.h> C++: &lt;cstdlib>, \<stdlib.h> ou \<wchar.h>|
 
 Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 

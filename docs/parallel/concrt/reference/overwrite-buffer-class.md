@@ -21,11 +21,11 @@ helpviewer_keywords:
 - overwrite_buffer class
 ms.assetid: 5cc428fe-3697-419c-9fb2-78f6181c9293
 ms.openlocfilehash: adac6e220a60a49a2b9bfa9463f16f8956b08d2e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57299303"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62394345"
 ---
 # <a name="overwritebuffer-class"></a>Classe overwrite_buffer
 
@@ -45,7 +45,7 @@ O tipo de carga das mensagens armazenadas e propagada pelo buffer.
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|

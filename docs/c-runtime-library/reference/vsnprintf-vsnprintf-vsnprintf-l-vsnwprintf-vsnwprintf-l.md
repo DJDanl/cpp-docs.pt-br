@@ -53,11 +53,11 @@ helpviewer_keywords:
 - vsnwprintf function
 ms.assetid: a97f92df-c2f8-4ea0-9269-76920d2d566a
 ms.openlocfilehash: 7c3416397d8f43963d3be2ce9bc39707ea7865db
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50453879"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62383458"
 ---
 # <a name="vsnprintf-vsnprintf-vsnprintfl-vsnwprintf-vsnwprintfl"></a>vsnprintf, _vsnprintf, _vsnprintf_l, _vsnwprintf, _vsnwprintf_l
 
@@ -188,15 +188,15 @@ No C++, essas funções têm sobrecargas de modelo que invocam os equivalentes m
 
 |Rotina TCHAR.H|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**vsntprintf**|**_vsnprintf**|**_vsnprintf**|**_vsnwprintf**|
-|**vsntprintf_l**|**_vsnprintf_l**|**_vsnprintf_l**|**_vsnwprintf_l**|
+|**_vsntprintf**|**_vsnprintf**|**_vsnprintf**|**_vsnwprintf**|
+|**_vsntprintf_l**|**_vsnprintf_l**|**_vsnprintf_l**|**_vsnwprintf_l**|
 
 ## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho necessário (C)|Cabeçalho necessário (C++)|
 |-------------|---------------------------|-------------------------------|
-|**vsnprintf**, **vsnprintf**, **vsnprintf_l**|\<stdio.h>|\<stdio.h> ou \<cstdio>|
-|**vsnwprintf**, **vsnwprintf_l**|\<stdio.h> ou \<wchar.h>|\<stdio.h>, \<wchar.h>, \<cstdio> ou \<cwchar>|
+|**vsnprintf**, **_vsnprintf**, **_vsnprintf_l**|\<stdio.h>|\<stdio.h> ou \<cstdio>|
+|**_vsnwprintf**, **_vsnwprintf_l**|\<stdio.h> ou \<wchar.h>|\<stdio.h>, \<wchar.h>, \<cstdio> ou \<cwchar>|
 
 O **vsnprintf**, **vsnprintf_l**, **vsnwprintf** e **vsnwprintf_l** funções são específicas da Microsoft. Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 

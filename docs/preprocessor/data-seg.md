@@ -9,11 +9,11 @@ helpviewer_keywords:
 - pragmas, data_seg
 ms.assetid: 65c66466-4c98-494f-93af-106beb4caf78
 ms.openlocfilehash: 414fc542aa3f84f985e326960d8cf73b67fd1580
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456375"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62389301"
 ---
 # <a name="dataseg"></a>data_seg
 
@@ -38,10 +38,10 @@ Especifica o segmento de dados em que as variáveis inicializadas são armazenad
 
 *identificador* habilita vários registros a serem exibidos com uma única **pop-up** comando.
 
-*"nome do segmento"*<br/>
+*"segment-name"*<br/>
 (Opcional) O nome de um segmento. Quando usado com **pop-up**, a pilha é exibida e *nome do segmento* se torna o nome do segmento ativo.
 
-*"segmento-class"*<br/>
+*"segment-class"*<br/>
 (Opcional) Incluído para compatibilidade com o C++ antes da versão 2.0. É ignorado.
 
 ## <a name="remarks"></a>Comentários

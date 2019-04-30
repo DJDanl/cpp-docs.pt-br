@@ -43,11 +43,11 @@ helpviewer_keywords:
 - string conversion, to floating point values
 ms.assetid: 0444f74a-ba2a-4973-b7f0-1d77ba88c6ed
 ms.openlocfilehash: c8c2b3b491e2e7265829fa88580529dc757ace8c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50469323"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62376462"
 ---
 # <a name="strtod-strtodl-wcstod-wcstodl"></a>strtod, _strtod_l, wcstod, _wcstod_l
 
@@ -101,8 +101,8 @@ Cada função converte a cadeia de caracteres de entrada *strSource* para um **d
 
 |Rotina TCHAR.H|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**tcstod**|**strtod**|**strtod**|**wcstod**|
-|**tcstod_l**|**_strtod_l**|**_strtod_l**|**_wcstod_l**|
+|**_tcstod**|**strtod**|**strtod**|**wcstod**|
+|**_tcstod_l**|**_strtod_l**|**_strtod_l**|**_wcstod_l**|
 
 O **LC_NUMERIC** configuração da categoria da localidade atual determina o reconhecimento do caractere de ponto fracionário *strSource*. Para obter mais informações sobre, consulte [setlocale](setlocale-wsetlocale.md). As funções sem o **l** sufixo usam a localidade atual; **strtod_l** é idêntico ao **strtod_l** , exceto que eles usam o *localidade* passado em seu lugar. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
@@ -120,8 +120,8 @@ As versões UCRT dessas funções não têm suporte para conversão do estilo Fo
 
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|
-|**strtod**, **strtod_l**|C: &lt;stdlib.h> C++: &lt;cstdlib> ou &lt;stdlib.h> |
-|**wcstod**, **wcstod_l**|C: &lt;stdlib.h> ou &lt;wchar.h> C++: &lt;cstdlib>, &lt;stdlib.h> ou &lt;wchar.h> |
+|**strtod**, **_strtod_l**|C: &lt;stdlib.h> C++: &lt;cstdlib> ou &lt;stdlib.h> |
+|**wcstod**, **_wcstod_l**|C: &lt;stdlib.h> ou &lt;wchar.h> C++: &lt;cstdlib>, &lt;stdlib.h> ou &lt;wchar.h> |
 
 Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 

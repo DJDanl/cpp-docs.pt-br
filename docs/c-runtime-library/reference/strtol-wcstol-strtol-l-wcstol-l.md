@@ -38,11 +38,11 @@ helpviewer_keywords:
 - strtol function
 ms.assetid: 1787c96a-f283-4a83-9325-33cfc1c7e240
 ms.openlocfilehash: 73df5dd3ffcd4a9b2fca8b6b713b645ef94addb5
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326713"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62379149"
 ---
 # <a name="strtol-wcstol-strtoll-wcstoll"></a>strtol, wcstol, _strtol_l, _wcstol_l
 
@@ -105,7 +105,7 @@ O **strtol** função converte *strSource* para um **longo**. **strtol** deixa d
 
 |Rotina TCHAR.H|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**tcstol**|**strtol**|**strtol**|**wcstol**|
+|**_tcstol**|**strtol**|**strtol**|**wcstol**|
 |**_tcstol_l**|**_strtol_l**|**_strtol_l**|**_wcstol_l**|
 
 A localidade atual **LC_NUMERIC** configuração de categoria determina o reconhecimento do caractere fracionário em *strSource*; para obter mais informações, consulte [setlocale](setlocale-wsetlocale.md). As funções sem o **l** sufixo usam a localidade atual; **strtol_l** e **wcstol_l** são idênticas às funções correspondentes sem o **l** sufixo, exceto que eles usam a localidade passada em vez disso. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).

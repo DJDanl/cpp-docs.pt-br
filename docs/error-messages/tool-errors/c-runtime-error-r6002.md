@@ -1,5 +1,5 @@
 ---
-title: R6002 de erro de tempo de execução do C
+title: Erro em tempo de execução de C R6002
 ms.date: 11/04/2016
 f1_keywords:
 - R6002
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - R6002
 ms.assetid: 8fbbe65a-9c43-459e-8342-e1f6d1cef7d0
 ms.openlocfilehash: f8b5fe69c9fd688f4d0a181176cda247cde9ac11
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50648637"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62380533"
 ---
-# <a name="c-runtime-error-r6002"></a>R6002 de erro de tempo de execução do C
+# <a name="c-runtime-error-r6002"></a>Erro em tempo de execução de C R6002
 
 suporte de ponto flutuante não carregado
 

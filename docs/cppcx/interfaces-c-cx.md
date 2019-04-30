@@ -3,11 +3,11 @@ title: Interfaces (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: 11034314-d54a-426d-923b-5ab7a6b9f8ce
 ms.openlocfilehash: 04aaf25817cade47e89f0a06c423b68538d947b4
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57740747"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62375776"
 ---
 # <a name="interfaces-ccx"></a>Interfaces (C++/CX)
 
@@ -63,7 +63,7 @@ Quando uma classe ref implementa várias interfaces e estas têm métodos cujos 
 
 ## <a name="generic-interfaces"></a>Interfaces genéricas
 
-No C + + c++ /CX, o `generic` palavra-chave é usada para representar um tipo de tempo de execução do Windows com parâmetros. Um tipo parametrizado é emitido nos metadados e pode ser consumido pelo código que está escrito em qualquer linguagem que ofereça suporte aos parâmetros de tipo. O tempo de execução do Windows define algumas interfaces genéricas — por exemplo, [Windows::Foundation::Collections::IVector\<T >](Windows::Foundation::Collections::IVector)— mas não suporta a criação de interfaces genéricas públicas definidas pelo usuário no C + + c++ /CLI CX. No entanto, é possível criar interfaces genéricas privadas.
+No C++/CX, o `generic` palavra-chave é usada para representar um tipo de tempo de execução do Windows com parâmetros. Um tipo parametrizado é emitido nos metadados e pode ser consumido pelo código que está escrito em qualquer linguagem que ofereça suporte aos parâmetros de tipo. O tempo de execução do Windows define algumas interfaces genéricas — por exemplo, [Windows::Foundation::Collections::IVector\<T >](Windows::Foundation::Collections::IVector)— mas ele não dá suporte a criação de públicos definido pelo usuário interfaces genéricas no C++/ CX. No entanto, é possível criar interfaces genéricas privadas.
 
 Aqui está como tipos de tempo de execução do Windows podem ser usados para criar uma interface genérica:
 

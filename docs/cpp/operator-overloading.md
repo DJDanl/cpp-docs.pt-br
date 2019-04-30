@@ -12,11 +12,11 @@ helpviewer_keywords:
 - operator overloading
 ms.assetid: 56ad4c4f-dd0c-45e0-adaa-08fe98cb1f8e
 ms.openlocfilehash: d6a294af3ea7ef6085eae0f7069ea2d1fdbb30e4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50621735"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62377355"
 ---
 # <a name="operator-overloading"></a>Sobrecarga de operador
 
@@ -24,7 +24,7 @@ O **operador** palavra-chave declara uma função especificando quais *símbolo 
 
 ## <a name="syntax"></a>Sintaxe
 
-> *tipo de* **operador** *símbolo do operador* **(** *lista de parâmetros* **)**
+> *type* **operator** *operator-symbol* **(** *parameter-list* **)**
 
 ## <a name="remarks"></a>Comentários
 
@@ -65,11 +65,11 @@ Você pode redefinir a função da maioria dos operadores internos globalmente o
 |**\<**|Menor que|Binário|
 |**<<**|Shift esquerda|Binário|
 |**<<=**|Atribuição de deslocamento para a esquerda|Binário|
-|**<=**|Menor que ou igual a|Binário|
+|**<=**|Menor ou igual a|Binário|
 |**=**|Atribuição|Binário|
 |**==**|Igualdade|Binário|
 |**>**|Maior que|Binário|
-|**>=**|Maior que ou igual a|Binário|
+|**>=**|Maior ou igual a|Binário|
 |**>>**|Shift direita|Binário|
 |**>>=**|Atribuição de deslocamento para a direita|Binário|
 |**[ ]**|Subscrito de matriz|—|

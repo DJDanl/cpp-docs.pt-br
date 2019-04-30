@@ -41,11 +41,11 @@ helpviewer_keywords:
 - std::basic_filebuf [C++], underflow
 ms.assetid: 3196ba5c-bf38-41bd-9a95-70323ddfca1a
 ms.openlocfilehash: 817e7fb2b434d06d6c0dfdfc100be8004f6fa4ef
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51332641"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62377134"
 ---
 # <a name="basicfilebuf-class"></a>Classe basic_filebuf
 
@@ -402,10 +402,10 @@ basic_filebuf<Elem, Tr> *open(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Nome de arquivo*<br/>
+*_Filename*<br/>
 O nome do arquivo a ser aberto.
 
-*Modo*<br/>
+*_Mode*<br/>
 Uma das enumerações em [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
 *_Prot*<br/>
@@ -433,7 +433,7 @@ A função membro abre o arquivo com o nome do arquivo *filename*, chamando [fop
 
 Se **mode & ios_base:: Binary** é diferente de zero, a função acrescentará `b` para `strmode` para abrir um fluxo binário, em vez de um fluxo de texto. Em seguida, armazena o valor retornado por `fopen` no ponteiro do arquivo `fp`. Se **mode & ios_base::ate** for diferente de zero e o ponteiro do arquivo não for um ponteiro nulo, a função chamará `fseek`( **fp**, 0, `SEEK_END`) para posicionar o fluxo no final do arquivo. Se essa operação posicionamento falhar, a função chamará [feche](#close)( `fp`) e armazena um ponteiro nulo no ponteiro do arquivo.
 
-Se o ponteiro do arquivo não for um ponteiro nulo, a função determinará a faceta de conversão de arquivo: `use_facet`< `codecvt`< **Elem**, `char`, **traits_type::**[state_type](../standard-library/char-traits-struct.md#state_type)> >( [getloc](../standard-library/basic-streambuf-class.md#getloc)), para uso por [underflow](#underflow) e [overflow](#overflow).
+Se o ponteiro do arquivo não for um ponteiro nulo, a função determina a faceta de conversão de arquivo: `use_facet`< `codecvt`< **Elem**, `char`, **traits_type::**[state_type](../standard-library/char-traits-struct.md#state_type)>> ( [getloc](../standard-library/basic-streambuf-class.md#getloc)), para uso por [estouro negativo](#underflow) e [estouro](#overflow).
 
 Se o ponteiro do arquivo for um ponteiro nulo, a função retornará um ponteiro nulo. Caso contrário, retornará **this**.
 
@@ -536,10 +536,10 @@ virtual pos_type seekoff(off_type _Off,
 
 ### <a name="parameters"></a>Parâmetros
 
-*Off*<br/>
+*_Off*<br/>
 A posição para buscar com relação a *Way*.
 
-*Way*<br/>
+*_Way*<br/>
 O ponto de partida para operações de deslocamento. Consulte [seekdir](../standard-library/ios-base-class.md#seekdir) para valores possíveis.
 
 *_Which*<br/>

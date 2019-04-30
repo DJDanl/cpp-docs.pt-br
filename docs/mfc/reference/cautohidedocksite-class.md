@@ -23,11 +23,11 @@ helpviewer_keywords:
 - CAutoHideDockSite [MFC], m_nExtraSpace
 ms.assetid: 2a0f6bec-c369-4ab7-977d-564e7946ebad
 ms.openlocfilehash: f24827e2dc1f4d1131f5b63aebeb0e2b09bc2281
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57302956"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62388469"
 ---
 # <a name="cautohidedocksite-class"></a>Classe CAutoHideDockSite
 
@@ -41,7 +41,7 @@ class CAutoHideDockSite : public CDockSite
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |||
 |-|-|

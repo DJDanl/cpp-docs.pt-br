@@ -1,5 +1,5 @@
 ---
-title: C R6027 de erro de tempo de execução
+title: Erro em tempo de execução de C R6027
 ms.date: 11/04/2016
 f1_keywords:
 - R6027
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - R6027
 ms.assetid: c06a62b3-08d9-4bf5-bcad-8340ec552f69
 ms.openlocfilehash: 2884f148091d9407d3229f0690a161639b5195e1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50446509"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62395138"
 ---
-# <a name="c-runtime-error-r6027"></a>C R6027 de erro de tempo de execução
+# <a name="c-runtime-error-r6027"></a>Erro em tempo de execução de C R6027
 
 Não há espaço suficiente para a inicialização de lowio
 

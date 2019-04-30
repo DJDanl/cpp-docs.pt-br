@@ -64,11 +64,11 @@ helpviewer_keywords:
 - value_type member [STL/CLR]
 ms.assetid: 9ea7dec3-ea98-48ff-87d0-a5afc924aaf2
 ms.openlocfilehash: 2cf0467c2b4799c2009f866b7aa22be5e421f762
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50569592"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384694"
 ---
 # <a name="queue-stlclr"></a>queue (STL/CLR)
 
@@ -93,7 +93,7 @@ template<typename Value,
 *Valor*<br/>
 O tipo de um elemento na sequência controlada.
 
-*Contêiner*<br/>
+*Container*<br/>
 O tipo do contêiner subjacente.
 
 ## <a name="requirements"></a>Requisitos
@@ -156,7 +156,7 @@ O objeto aloca e libera armazenamento para a sequência que controla por meio de
 
 ## <a name="members"></a>Membros
 
-## <a name="assign"></a> Queue::Assign (STL/CLR)
+## <a name="assign"></a> queue::assign (STL/CLR)
 
 Substitui todos os elementos.
 
@@ -210,7 +210,7 @@ a b c
 a b c
 ```
 
-## <a name="back"></a> Queue:: back (STL/CLR)
+## <a name="back"></a> queue::back (STL/CLR)
 
 Acessa o último elemento.
 
@@ -262,7 +262,7 @@ back() = c
 a b x
 ```
 
-## <a name="back_item"></a> Queue::back_item (STL/CLR)
+## <a name="back_item"></a> queue::back_item (STL/CLR)
 
 Acessa o último elemento.
 
@@ -314,7 +314,7 @@ back_item = c
 a b x
 ```
 
-## <a name="const_reference"></a> Queue::const_reference (STL/CLR)
+## <a name="const_reference"></a> queue::const_reference (STL/CLR)
 
 O tipo de uma referência de constante para um elemento.
 
@@ -358,7 +358,7 @@ int main()
 a b c
 ```
 
-## <a name="container_type"></a> Queue:: container_type (STL/CLR)
+## <a name="container_type"></a> queue::container_type (STL/CLR)
 
 O tipo do contêiner subjacente.
 
@@ -400,7 +400,7 @@ int main()
 a b c
 ```
 
-## <a name="difference_type"></a> Queue::difference_type (STL/CLR)
+## <a name="difference_type"></a> queue::difference_type (STL/CLR)
 
 Os tipos de uma distância com sinal entre dois elementos.
 
@@ -458,7 +458,7 @@ pushing 2 = -2
 popping 3 = 3
 ```
 
-## <a name="empty"></a> Queue:: Empty (STL/CLR)
+## <a name="empty"></a> queue::empty (STL/CLR)
 
 Testa se nenhum elemento está presente.
 
@@ -512,7 +512,7 @@ size() = 0
 empty() = True
 ```
 
-## <a name="front"></a> Queue:: front (STL/CLR)
+## <a name="front"></a> queue::front (STL/CLR)
 
 Acessa o primeiro elemento.
 
@@ -564,7 +564,7 @@ front() = a
 x b c
 ```
 
-## <a name="front_item"></a> Queue::front_item (STL/CLR)
+## <a name="front_item"></a> queue::front_item (STL/CLR)
 
 Acessa o primeiro elemento.
 
@@ -616,7 +616,7 @@ front_item = a
 x b c
 ```
 
-## <a name="generic_container"></a> Queue::generic_container (STL/CLR)
+## <a name="generic_container"></a> queue::generic_container (STL/CLR)
 
 O tipo da interface genérica para o adaptador de contêiner.
 
@@ -679,7 +679,7 @@ a b c d
 a b c d e
 ```
 
-## <a name="generic_value"></a> Queue::generic_value (STL/CLR)
+## <a name="generic_value"></a> queue::generic_value (STL/CLR)
 
 O tipo de um elemento para uso com a interface genérica para o contêiner.
 
@@ -737,7 +737,7 @@ a b c
 a b c
 ```
 
-## <a name="get_container"></a> Queue::get_container (STL/CLR)
+## <a name="get_container"></a> queue::get_container (STL/CLR)
 
 Acessa o contêiner subjacente.
 
@@ -778,7 +778,7 @@ int main()
 a b c
 ```
 
-## <a name="op_as"></a> Queue::Operator = (STL/CLR)
+## <a name="op_as"></a> queue::operator= (STL/CLR)
 
 Substitui a sequência controlada.
 
@@ -832,7 +832,7 @@ a b c
 a b c
 ```
 
-## <a name="pop"></a> Queue:: pop (STL/CLR)
+## <a name="pop"></a> queue::pop (STL/CLR)
 
 Remove o último elemento.
 
@@ -880,7 +880,7 @@ a b c
 b c
 ```
 
-## <a name="push"></a> Queue:: push (STL/CLR)
+## <a name="push"></a> queue::push (STL/CLR)
 
 Adiciona um novo último elemento.
 
@@ -921,7 +921,7 @@ int main()
 a b c
 ```
 
-## <a name="queue"></a> Queue:: Queue (STL/CLR)
+## <a name="queue"></a> queue::queue (STL/CLR)
 
 Constrói um objeto de adaptador de contêiner.
 
@@ -939,7 +939,7 @@ explicit queue(container_type% wrapped);
 *right*<br/>
 Objeto a ser copiado.
 
-*encapsulado*<br/>
+*wrapped*<br/>
 Contêiner encapsulado para ser usado.
 
 ### <a name="remarks"></a>Comentários
@@ -1014,7 +1014,7 @@ x x x x x
 x x x x x
 ```
 
-## <a name="reference"></a> Queue::Reference (STL/CLR)
+## <a name="reference"></a> queue::reference (STL/CLR)
 
 O tipo de uma referência para um elemento.
 
@@ -1063,7 +1063,7 @@ a b c
 a b x
 ```
 
-## <a name="size"></a> Queue:: Size (STL/CLR)
+## <a name="size"></a> queue::size (STL/CLR)
 
 Conta o número de elementos.
 
@@ -1117,7 +1117,7 @@ size() = 2 after popping
 size() = 4 after adding 2
 ```
 
-## <a name="size_type"></a> Queue:: size_type (STL/CLR)
+## <a name="size_type"></a> queue::size_type (STL/CLR)
 
 O tipo de uma distância com sinal entre dois elementos.
 
@@ -1166,7 +1166,7 @@ a b c
 size difference = 2
 ```
 
-## <a name="to_array"></a> Queue::to_array (STL/CLR)
+## <a name="to_array"></a> queue::to_array (STL/CLR)
 
 Copia a sequência controlada para uma nova matriz.
 
@@ -1216,7 +1216,7 @@ a b c d
 a b c
 ```
 
-## <a name="value_type"></a> Queue:: value_type (STL/CLR)
+## <a name="value_type"></a> queue::value_type (STL/CLR)
 
 O tipo de um elemento.
 
@@ -1261,7 +1261,7 @@ int main()
 a b c
 ```
 
-## <a name="op_neq"></a> operador! = (queue) (STL/CLR)
+## <a name="op_neq"></a> operator!= (queue) (STL/CLR)
 
 Fila não igual a comparação.
 
@@ -1332,7 +1332,7 @@ a b d
 [a b c] != [a b d] is True
 ```
 
-## <a name="op_lt"></a> operador&lt; (queue) (STL/CLR)
+## <a name="op_lt"></a> operator&lt; (queue) (STL/CLR)
 
 Fila inferior a comparação.
 
@@ -1403,7 +1403,7 @@ a b d
 [a b c] < [a b d] is True
 ```
 
-## <a name="op_lteq"></a> operador&lt;= (queue) (STL/CLR)
+## <a name="op_lteq"></a> operator&lt;= (queue) (STL/CLR)
 
 Fila menor ou igual comparação.
 
@@ -1474,7 +1474,7 @@ a b d
 [a b d] <= [a b c] is False
 ```
 
-## <a name="op_eq"></a> operador = = (queue) (STL/CLR)
+## <a name="op_eq"></a> operator== (queue) (STL/CLR)
 
 Comparação de igualdade de fila.
 
@@ -1545,7 +1545,7 @@ a b d
 [a b c] == [a b d] is False
 ```
 
-## <a name="op_gt"></a> operador&gt; (queue) (STL/CLR)
+## <a name="op_gt"></a> operator&gt; (queue) (STL/CLR)
 
 Comparação de maior que a fila.
 
@@ -1616,7 +1616,7 @@ a b d
 [a b d] > [a b c] is True
 ```
 
-## <a name="op_gteq"></a> operador&gt;= (queue) (STL/CLR)
+## <a name="op_gteq"></a> operator&gt;= (queue) (STL/CLR)
 
 Enfileirar maior que ou igual a comparação.
 
