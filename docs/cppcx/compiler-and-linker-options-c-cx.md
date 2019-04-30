@@ -3,15 +3,15 @@ title: Opções de compilador e vinculador (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: ecfadce8-3a3f-40cc-bb01-b4731f8d2fcb
 ms.openlocfilehash: cc1964c57d6700995bb283c245e4c63c8e9e313b
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57750904"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62383354"
 ---
 # <a name="compiler-and-linker-options-ccx"></a>Opções de compilador e vinculador (C++/CX)
 
-Uma variável de ambiente, C + + c++ /CLI opções do compilador CX e opções do vinculador dão suporte a compilação de aplicativos para o tempo de execução do Windows.
+Uma variável de ambiente C++opções do compilador /CX e opções do vinculador dão suporte a criação de aplicativos para o tempo de execução do Windows.
 
 ## <a name="library-path"></a>Caminho da biblioteca
 
@@ -43,4 +43,4 @@ Quando você usa o **/ZW**, o compilador é vinculado automaticamente à versão
 
 ## <a name="see-also"></a>Consulte também
 
-[Compilando aplicativos e bibliotecas](../cppcx/building-apps-and-libraries-c-cx.md)
+[Como compilar aplicativos e bibliotecas](../cppcx/building-apps-and-libraries-c-cx.md)

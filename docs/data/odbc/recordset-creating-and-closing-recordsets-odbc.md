@@ -10,11 +10,11 @@ helpviewer_keywords:
 - ODBC recordsets, opening
 ms.assetid: 8d2aac23-4396-4ce2-8c60-5ecf1b360d3d
 ms.openlocfilehash: 5d5dae5bc766c0cfc31b4fb76f7fe104be0dbd74
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59041261"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62395580"
 ---
 # <a name="recordset-creating-and-closing-recordsets-odbc"></a>Conjunto de registros: Criando e fechando conjuntos de registros (ODBC)
 
@@ -110,5 +110,5 @@ Quando você terminar com seu conjunto de registros, você deve descartá-la e d
 ## <a name="see-also"></a>Consulte também
 
 [Conjunto de registros (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Conjunto de registros: Rolando (ODBC)](../../data/odbc/recordset-scrolling-odbc.md)<br/>
-[Conjunto de registros: Adicionando, atualizando e excluindo registros (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)
+[Conjunto de registros: rolagem (ODBC)](../../data/odbc/recordset-scrolling-odbc.md)<br/>
+[Conjunto de registros: adicionar, atualizar e excluir registros (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)

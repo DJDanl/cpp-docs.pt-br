@@ -64,11 +64,11 @@ helpviewer_keywords:
 - unary_negate function [STL/CLR]
 ms.assetid: 88738b8c-5d37-4375-970e-a4442bf5efde
 ms.openlocfilehash: f4a99ea972c6d2ea9b9721664cc75dec257fd7b3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50472898"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62393747"
 ---
 # <a name="functional-stlclr"></a>functional (STL/CLR)
 
@@ -141,7 +141,7 @@ generic<typename Arg1,
 
 #### <a name="parameters"></a>Parâmetros
 
-*arg1*<br/>
+*Arg1*<br/>
 O tipo do primeiro argumento.
 
 *Arg2*<br/>
@@ -216,7 +216,7 @@ generic<typename Arg1,
 
 #### <a name="parameters"></a>Parâmetros
 
-*arg1*<br/>
+*Arg1*<br/>
 O tipo do primeiro argumento.
 
 *Arg2*<br/>
@@ -401,7 +401,7 @@ template<typename Fun,
 
 #### <a name="template-parameters"></a>Parâmetros de modelo
 
-*arg*<br/>
+*Arg*<br/>
 O tipo do argumento.
 
 *Diversão*<br/>
@@ -482,7 +482,7 @@ template<typename Fun,
 
 #### <a name="template-parameters"></a>Parâmetros de modelo
 
-*arg*<br/>
+*Arg*<br/>
 O tipo do argumento.
 
 *Diversão*<br/>
@@ -758,7 +758,7 @@ int main()
 0 -1
 ```
 
-## <a name="divides"></a> Divide (STL/CLR)
+## <a name="divides"></a> divides (STL/CLR)
 
 A classe de modelo descreve um funtor que, quando chamado, retorna o primeiro argumento dividido pelo segundo. Você usá-lo especificar um objeto de função em termos de seu tipo de argumento.
 
@@ -787,7 +787,7 @@ public:
 
 #### <a name="parameters"></a>Parâmetros
 
-*arg*<br/>
+*Arg*<br/>
 O tipo do valor de retorno e argumentos.
 
 ### <a name="member-functions"></a>Funções membro
@@ -888,7 +888,7 @@ public:
 
 #### <a name="parameters"></a>Parâmetros
 
-*arg*<br/>
+*Arg*<br/>
 O tipo dos argumentos.
 
 ### <a name="member-functions"></a>Funções membro
@@ -989,7 +989,7 @@ public:
 
 #### <a name="parameters"></a>Parâmetros
 
-*arg*<br/>
+*Arg*<br/>
 O tipo dos argumentos.
 
 ### <a name="member-functions"></a>Funções membro
@@ -1090,7 +1090,7 @@ public:
 
 #### <a name="parameters"></a>Parâmetros
 
-*arg*<br/>
+*Arg*<br/>
 O tipo dos argumentos.
 
 ### <a name="member-functions"></a>Funções membro
@@ -1162,7 +1162,7 @@ int main()
 1 0
 ```
 
-## <a name="less"></a> menor (STL/CLR)
+## <a name="less"></a> less (STL/CLR)
 
 A classe de modelo descreve um funtor que, quando chamado, retornará true somente se o primeiro argumento for menor que o segundo. Você usá-lo especificar um objeto de função em termos de seu tipo de argumento.
 
@@ -1191,7 +1191,7 @@ public:
 
 #### <a name="parameters"></a>Parâmetros
 
-*arg*<br/>
+*Arg*<br/>
 O tipo dos argumentos.
 
 ### <a name="member-functions"></a>Funções membro
@@ -1292,7 +1292,7 @@ public:
 
 #### <a name="parameters"></a>Parâmetros
 
-*arg*<br/>
+*Arg*<br/>
 O tipo dos argumentos.
 
 ### <a name="member-functions"></a>Funções membro
@@ -1393,7 +1393,7 @@ public:
 
 #### <a name="parameters"></a>Parâmetros
 
-*arg*<br/>
+*Arg*<br/>
 O tipo dos argumentos.
 
 ### <a name="member-functions"></a>Funções membro
@@ -1492,7 +1492,7 @@ public:
 
 #### <a name="parameters"></a>Parâmetros
 
-*arg*<br/>
+*Arg*<br/>
 O tipo dos argumentos.
 
 ### <a name="member-functions"></a>Funções membro
@@ -1584,7 +1584,7 @@ public:
 
 #### <a name="parameters"></a>Parâmetros
 
-*arg*<br/>
+*Arg*<br/>
 O tipo dos argumentos.
 
 ### <a name="member-functions"></a>Funções membro
@@ -1656,7 +1656,7 @@ int main()
 1 0
 ```
 
-## <a name="minus"></a> subtração (STL/CLR)
+## <a name="minus"></a> minus (STL/CLR)
 
 A classe de modelo descreve um funtor que, quando chamado, retorna o primeiro argumento, menos o segundo. Você usá-lo especificar um objeto de função em termos de seu tipo de argumento.
 
@@ -1685,7 +1685,7 @@ public:
 
 #### <a name="parameters"></a>Parâmetros
 
-*arg*<br/>
+*Arg*<br/>
 O tipo do valor de retorno e argumentos.
 
 ### <a name="member-functions"></a>Funções membro
@@ -1786,7 +1786,7 @@ public:
 
 #### <a name="parameters"></a>Parâmetros
 
-*arg*<br/>
+*Arg*<br/>
 O tipo do valor de retorno e argumentos.
 
 ### <a name="member-functions"></a>Funções membro
@@ -1887,7 +1887,7 @@ public:
 
 #### <a name="parameters"></a>Parâmetros
 
-*arg*<br/>
+*Arg*<br/>
 O tipo do valor de retorno e argumentos.
 
 ### <a name="member-functions"></a>Funções membro
@@ -1959,7 +1959,7 @@ int main()
 8 3
 ```
 
-## <a name="negate"></a> Negar (STL/CLR)
+## <a name="negate"></a> negate (STL/CLR)
 
 A classe de modelo descreve um funtor que, quando chamado, retorna o argumento negado. Você usá-lo especificar um objeto de função em termos de seu tipo de argumento.
 
@@ -1986,7 +1986,7 @@ public:
 
 #### <a name="parameters"></a>Parâmetros
 
-*arg*<br/>
+*Arg*<br/>
 O tipo dos argumentos.
 
 ### <a name="member-functions"></a>Funções membro
@@ -2078,7 +2078,7 @@ public:
 
 #### <a name="parameters"></a>Parâmetros
 
-*arg*<br/>
+*Arg*<br/>
 O tipo dos argumentos.
 
 ### <a name="member-functions"></a>Funções membro
@@ -2303,7 +2303,7 @@ int main()
 1 0
 ```
 
-## <a name="plus"></a> Além de (STL/CLR)
+## <a name="plus"></a> plus (STL/CLR)
 
 A classe de modelo descreve um funtor que, quando chamado, retorna o primeiro argumento e o segundo. Você usá-lo especificar um objeto de função em termos de seu tipo de argumento.
 
@@ -2332,7 +2332,7 @@ public:
 
 #### <a name="parameters"></a>Parâmetros
 
-*arg*<br/>
+*Arg*<br/>
 O tipo do valor de retorno e argumentos.
 
 ### <a name="member-functions"></a>Funções membro
@@ -2418,7 +2418,7 @@ generic<typename Arg,
 
 #### <a name="parameters"></a>Parâmetros
 
-*arg*<br/>
+*Arg*<br/>
 O tipo do argumento.
 
 *Result*<br/>
@@ -2483,7 +2483,7 @@ generic<typename Arg>
 
 #### <a name="parameters"></a>Parâmetros
 
-*arg*<br/>
+*Arg*<br/>
 O tipo do argumento.
 
 ### <a name="remarks"></a>Comentários
@@ -2579,7 +2579,7 @@ O tipo do functor armazenado.
 |Operador|Descrição|
 |--------------|-----------------|
 |operator()|Calcula a função desejada.|
-|delegate_type ^|Converte o functor a um delegado.|
+|delegate_type^|Converte o functor a um delegado.|
 
 ### <a name="remarks"></a>Comentários
 

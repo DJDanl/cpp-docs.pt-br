@@ -3,11 +3,11 @@ title: Classes parciais (C++/CX)
 ms.date: 12/30/2016
 ms.assetid: 69d93575-636c-4564-8cca-6dfba0c7e328
 ms.openlocfilehash: 71df19e98192a7704d4528fe730ce79977383a9b
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57740429"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384992"
 ---
 # <a name="partial-classes-ccx"></a>Classes parciais (C++/CX)
 

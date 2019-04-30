@@ -12,11 +12,11 @@ helpviewer_keywords:
 - BEGIN_EVENTSINK_MAP macro
 ms.assetid: f9c106db-052f-4e32-82ad-750646aa760b
 ms.openlocfilehash: 8087d84d2203e4f910200acdd1b00e58d14f920e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57293557"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62394891"
 ---
 # <a name="activex-control-containers-handling-events-from-an-activex-control"></a>Contêineres de controle ActiveX: Manipulando eventos a partir de um controle ActiveX
 

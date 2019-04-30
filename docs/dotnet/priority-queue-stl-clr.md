@@ -52,11 +52,11 @@ helpviewer_keywords:
 - value_type member [STL/CLR]
 ms.assetid: 4d0000d3-68ff-4c4b-8157-7060540136f5
 ms.openlocfilehash: ed5e190f0c64aca3876d1cd1f05c9d75224355cc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548714"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384758"
 ---
 # <a name="priorityqueue-stlclr"></a>priority_queue (STL/CLR)
 
@@ -80,7 +80,7 @@ template<typename Value,
 *Valor*<br/>
 O tipo de um elemento na sequência controlada.
 
-*Contêiner*<br/>
+*Container*<br/>
 O tipo do contêiner subjacente.
 
 ## <a name="requirements"></a>Requisitos
@@ -161,7 +161,7 @@ Portanto, os candidatos para o contêiner subjacente incluem [deque (STL/CLR)](.
 
 ## <a name="members"></a>Membros
 
-## <a name="assign"></a> priority_queue::Assign (STL/CLR)
+## <a name="assign"></a> priority_queue::assign (STL/CLR)
 
 Substitui todos os elementos.
 
@@ -259,7 +259,7 @@ int main()
 c b a
 ```
 
-## <a name="container_type"></a> priority_queue:: container_type (STL/CLR)
+## <a name="container_type"></a> priority_queue::container_type (STL/CLR)
 
 O tipo do contêiner subjacente.
 
@@ -359,7 +359,7 @@ pushing 2 = -2
 popping 3 = 3
 ```
 
-## <a name="empty"></a> priority_queue:: Empty (STL/CLR)
+## <a name="empty"></a> priority_queue::empty (STL/CLR)
 
 Testa se nenhum elemento está presente.
 
@@ -575,7 +575,7 @@ int main()
 c a b
 ```
 
-## <a name="op_as"></a> priority_queue::Operator = (STL/CLR)
+## <a name="op_as"></a> priority_queue::operator= (STL/CLR)
 
 Substitui a sequência controlada.
 
@@ -629,7 +629,7 @@ c a b
 c a b
 ```
 
-## <a name="pop"></a> priority_queue:: pop (STL/CLR)
+## <a name="pop"></a> priority_queue::pop (STL/CLR)
 
 Remove o elemento mais alto proirity.
 
@@ -677,7 +677,7 @@ c a b
 b a
 ```
 
-## <a name="priority_queue"></a> priority_queue:: priority_queue (STL/CLR)
+## <a name="priority_queue"></a> priority_queue::priority_queue (STL/CLR)
 
 Constrói um objeto de adaptador de contêiner.
 
@@ -701,7 +701,7 @@ template<typename InIt>
 
 #### <a name="parameters"></a>Parâmetros
 
-*Cont*<br/>
+*cont*<br/>
 O contêiner a ser copiado.
 
 *first*<br/>
@@ -710,7 +710,7 @@ Início do intervalo a ser inserido.
 *last*<br/>
 Fim do intervalo a inserir.
 
-*Pred*<br/>
+*pred*<br/>
 Ordenação de predicado para a sequência controlada.
 
 *right*<br/>
@@ -864,7 +864,7 @@ c a b
 a c b
 ```
 
-## <a name="push"></a> priority_queue:: push (STL/CLR)
+## <a name="push"></a> priority_queue::push (STL/CLR)
 
 Adiciona um novo elemento.
 
@@ -905,7 +905,7 @@ int main()
 c a b
 ```
 
-## <a name="reference"></a> priority_queue::Reference (STL/CLR)
+## <a name="reference"></a> priority_queue::reference (STL/CLR)
 
 O tipo de uma referência para um elemento.
 
@@ -954,7 +954,7 @@ c a b
 x a b
 ```
 
-## <a name="size"></a> priority_queue:: Size (STL/CLR)
+## <a name="size"></a> priority_queue::size (STL/CLR)
 
 Conta o número de elementos.
 
@@ -1008,7 +1008,7 @@ size() = 2 after popping
 size() = 4 after adding 2
 ```
 
-## <a name="size_type"></a> priority_queue:: size_type (STL/CLR)
+## <a name="size_type"></a> priority_queue::size_type (STL/CLR)
 
 O tipo de uma distância com sinal entre dois elementos.
 
@@ -1107,7 +1107,7 @@ d c b a
 c a b
 ```
 
-## <a name="top"></a> priority_queue:: Top (STL/CLR)
+## <a name="top"></a> priority_queue::top (STL/CLR)
 
 Acessa o elemento de prioridade mais alta.
 
@@ -1323,7 +1323,7 @@ compare(L'a', L'b') = False
 compare(L'b', L'a') = True
 ```
 
-## <a name="value_type"></a> priority_queue:: value_type (STL/CLR)
+## <a name="value_type"></a> priority_queue::value_type (STL/CLR)
 
 O tipo de um elemento.
 

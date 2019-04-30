@@ -24,11 +24,11 @@ helpviewer_keywords:
 - environment variables, setting time
 ms.assetid: 3f6ed537-b414-444d-b272-5dd377481930
 ms.openlocfilehash: 6312297e6daa9b4790674bd26d21812d5bee34c6
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330249"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62385187"
 ---
 # <a name="tzset"></a>_tzset
 
@@ -47,7 +47,7 @@ void _tzset( void );
 
 O **tzset** função usa a configuração atual da variável de ambiente **TZ** para atribuir valores a três variáveis globais: **Daylight**, **TimeZone** , e **tzname**. Essas variáveis são usadas pelo [ftime](ftime-ftime32-ftime64.md) e [localtime](localtime-localtime32-localtime64.md) funções para fazer correções de hora universal coordenada (UTC) para a hora local e pela [tempo](time-time32-time64.md) função Calcule o UTC de horário do sistema. Use a sintaxe a seguir para definir a **TZ** variável de ambiente:
 
-> **Definir TZ =**_tzn_ \[ **+** &#124; **-**]*hh* \[ **:**_mm_\[**:**_ss_]] [*dzn*]
+> **set TZ=**_tzn_ \[**+**&#124;**-**]*hh*\[**:**_mm_\[**:**_ss_] ][*dzn*]
 
 |Parâmetro|Descrição|
 |-|-|
@@ -62,7 +62,7 @@ O **tzset** função usa a configuração atual da variável de ambiente **TZ** 
 
 Por exemplo, para definir a **TZ** variável de ambiente para corresponder ao fuso horário atual na Alemanha, insira o seguinte na linha de comando:
 
-> **Definir TZ = 1GDT GST**
+> **set TZ=GST-1GDT**
 
 Esse comando usa o GST para indicar o horário padrão alemão, pressupõe que o UTC está uma hora atrás da Alemanha (ou, em outras palavras, que a Alemanha está uma hora à frente do UTC) e assume que a Alemanha observa o horário de verão.
 
@@ -72,10 +72,10 @@ Com base nas **TZ** valor de variável de ambiente, os seguintes valores são at
 
 |Variável global|Descrição|Valor padrão|
 |---------------------|-----------------|-------------------|
-|**Daylight**|Um valor diferente de zero se uma zona-o horário de verão for especificada na **TZ** configuração; caso contrário, 0.|1|
-|**TimeZone**|Diferença em segundos entre a hora local e o UTC.|28800 (28.800 segundos é igual a 8 horas)|
-|**tzname**[0]|O valor do nome do fuso horário de cadeia de caracteres **TZ** variável de ambiente; vazio se **TZ** não foi definido.|PST|
-|**tzname**[1]|Valor de cadeia de caracteres de horário de verão-fuso horário; vazio se o horário de verão-fuso horário for omitido da **TZ** variável de ambiente.|PDT|
+|**_daylight**|Um valor diferente de zero se uma zona-o horário de verão for especificada na **TZ** configuração; caso contrário, 0.|1|
+|**_timezone**|Diferença em segundos entre a hora local e o UTC.|28800 (28.800 segundos é igual a 8 horas)|
+|**_tzname**[0]|O valor do nome do fuso horário de cadeia de caracteres **TZ** variável de ambiente; vazio se **TZ** não foi definido.|PST|
+|**_tzname**[1]|Valor de cadeia de caracteres de horário de verão-fuso horário; vazio se o horário de verão-fuso horário for omitido da **TZ** variável de ambiente.|PDT|
 
 Os valores padrão mostrados na tabela anterior para **Daylight** e o **tzname** matriz correspondem a "PST8PDT." Se o fuso horário de verão for omitido dos **TZ** variável de ambiente, o valor de **Daylight** é 0 e o [ftime](ftime-ftime32-ftime64.md), [gmtime](gmtime-gmtime32-gmtime64.md)e [localtime](localtime-localtime32-localtime64.md) funções retornarão 0 para seus sinalizadores de DST.
 

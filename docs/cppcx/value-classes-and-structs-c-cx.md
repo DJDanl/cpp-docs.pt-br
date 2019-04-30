@@ -6,11 +6,11 @@ helpviewer_keywords:
 - value class
 ms.assetid: 262a0992-9721-4c02-8297-efc07d90e5a4
 ms.openlocfilehash: 5b9b50ba7200439e9ce648c53d52ce37226f61d3
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57747430"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384979"
 ---
 # <a name="value-classes-and-structs-ccx"></a>Classes e estruturas de valor (C++/CX)
 

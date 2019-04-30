@@ -8,11 +8,11 @@ helpviewer_keywords:
 - derived classes [C++], abstract classes [C++]
 ms.assetid: f0c5975b-39de-4d68-9640-6ce57f4632e6
 ms.openlocfilehash: a7b41a2cabc2cff2eca24cf50c6c30d5190d39a9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50461302"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62385083"
 ---
 # <a name="abstract-classes-c"></a>Classes abstratas (C++)
 
@@ -53,7 +53,7 @@ Outra restrição é que se o construtor para uma classe abstrata chamar uma fun
 
 As funções virtuais puras podem ser definidas para classes abstratas, mas podem ser chamadas diretamente somente usando a sintaxe:
 
-*nome da classe abstrata*::*nome da função*)
+*abstract-class-name*::*function-name*()
 
 Isso ajuda a criar hierarquias de classes cujas classes base incluem destruidores virtuais puros, porque os destruidores de classe base sempre são chamados no processo de destruição de um objeto. Considere o exemplo a seguir:
 

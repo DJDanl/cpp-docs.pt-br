@@ -50,11 +50,11 @@ helpviewer_keywords:
 - range_adapter member [STL/CLR]
 ms.assetid: 71ce7e51-42b6-4f70-9595-303791a97677
 ms.openlocfilehash: d5c554439d9bb418b9b62484ee10cd6917cf1777
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50436121"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62397673"
 ---
 # <a name="adapter-stlclr"></a>adapter (STL/CLR)
 
@@ -213,7 +213,7 @@ x x x x x x
 base() same = True
 ```
 
-## <a name="begin"></a> collection_adapter::Begin (STL/CLR)
+## <a name="begin"></a> collection_adapter::begin (STL/CLR)
 
 Designa o início da sequência controlada.
 
@@ -455,7 +455,7 @@ int main()
 a b c
 ```
 
-## <a name="iterator"></a> collection_adapter::Iterator (STL/CLR)
+## <a name="iterator"></a> collection_adapter::iterator (STL/CLR)
 
 O tipo de um iterador para a sequência controlada.
 
@@ -600,7 +600,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="op_eq"></a> collection_adapter::Operator = (STL/CLR)
+## <a name="op_eq"></a> collection_adapter::operator= (STL/CLR)
 
 Substitui o identificador BCL armazenado.
 
@@ -657,7 +657,7 @@ a b c
 a b c
 ```
 
-## <a name="reference"></a> collection_adapter::Reference (STL/CLR)
+## <a name="reference"></a> collection_adapter::reference (STL/CLR)
 
 O tipo de uma referência para um elemento.
 
@@ -705,7 +705,7 @@ int main()
 a b c
 ```
 
-## <a name="size"></a> collection_adapter::Size (STL/CLR)
+## <a name="size"></a> collection_adapter::size (STL/CLR)
 
 Conta o número de elementos.
 
@@ -1034,7 +1034,7 @@ O tipo associado com os iteradores encapsulados.
 
 O range_adapter armazena um par de iteradores, que por sua vez delimitar uma sequência de elementos. O objeto implementa quatro interfaces BCL que lhe permitem iterar pelos elementos na ordem. Você pode usar essa classe de modelo para manipular os intervalos STL/CLR como contêineres BCL.
 
-## <a name="range_adapter_op_eq"></a> range_adapter::Operator = (STL/CLR)
+## <a name="range_adapter_op_eq"></a> range_adapter::operator= (STL/CLR)
 
 Substitui o par iterador armazenado.
 

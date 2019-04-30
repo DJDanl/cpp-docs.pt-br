@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4996
 ms.assetid: 926c7cc2-921d-43ed-ae75-634f560dd317
 ms.openlocfilehash: ef1bc46b64ccbe1374fd795a9b5d56e091b47f48
-ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "57816419"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62401495"
 ---
 # <a name="compiler-warning-level-3-c4996"></a>Compilador aviso (nível 3) C4996
 
@@ -19,7 +19,7 @@ O compilador encontrou uma declaração preterida. **Esse aviso é sempre uma me
 
 Essas são algumas mensagens C4996 comuns geradas pela biblioteca de tempo de execução C e a biblioteca padrão, mas não uma lista completa. Siga os links ou continue lendo para maneiras de corrigir o problema ou desativar o aviso.
 
-- [O nome do POSIX para este item está obsoleto. Em vez disso, use o nome compatível com ISO C e C++: *new_name*. Consulte a ajuda online para obter detalhes.](#posix-function-names)
+- [O nome do POSIX para este item está obsoleto. Em vez disso, use o ISO C e C++ nome de acordo com as conformidades: *new_name*. Consulte a ajuda online para obter detalhes.](#posix-function-names)
 
 - [Essa função ou variável pode não ser seguro. Considere o uso de *safe_version* em vez disso. Para desabilitar a substituição, use \_CRT\_SECURE\_não\_avisos.  Consulte a ajuda online para obter detalhes.](#unsafe-crt-library-functions)
 
@@ -65,7 +65,7 @@ Aqui estão algumas das fontes comuns de erros e avisos C4996.
 
 ### <a name="posix-function-names"></a>Nomes de função POSIX
 
-**O nome do POSIX para este item está obsoleto. Em vez disso, use o nome compatível com ISO C e C++:** *new_name*. **Consulte a Ajuda online para obter detalhes.**
+**O nome do POSIX para este item está obsoleto. Em vez disso, use o ISO C e C++ nome de acordo com as conformidades:** *new_name*. **Consulte a Ajuda online para obter detalhes.**
 
 Microsoft renomeou algumas funções POSIX no CRT para estar em conformidade com C99 e C++11 03 as regras para nomes de função global definido pela implementação. Somente os nomes originais POSIX foram preteridos, não as próprias funções. Na maioria dos casos, um sublinhado à esquerda foi adicionado ao nome da função POSIX para criar um nome de conformidade padrão. O compilador emite um aviso de substituição para o nome da função original e sugere o nome preferido.
 

@@ -28,11 +28,11 @@ helpviewer_keywords:
 - char_traits class
 ms.assetid: 568e59f0-4521-4207-9223-9dcf6a16d620
 ms.openlocfilehash: 2975c839e07093a22d910f295be730fdd68839cf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50640369"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62379435"
 ---
 # <a name="chartraits-struct"></a>Struct char_traits
 
@@ -255,7 +255,7 @@ static char_type *copy(char_type* _To,
 
 ### <a name="parameters"></a>Parâmetros
 
-*Dese_jo*<br/>
+*_To*<br/>
 O elemento no início da matriz de cadeia de caracteres ou caractere direcionado para receber a sequência de caracteres copiada.
 
 *_From*<br/>
@@ -384,7 +384,7 @@ O caractere EOF.
 
 Um valor que representa o fim do arquivo (como EOF ou WEOF).
 
-Os padrão C++ determina que esse valor não deve corresponder a um valor `char_type` válido. O compilador do Visual C++ impõe essa restrição para o tipo **char**, mas não para o tipo **wchar_t**. O exemplo abaixo demonstra isso.
+Os padrão C++ determina que esse valor não deve corresponder a um valor `char_type` válido. O Visual C++ compilador impõe essa restrição para o tipo **char**, mas não para o tipo **wchar_t**. O exemplo abaixo demonstra isso.
 
 ### <a name="example"></a>Exemplo
 
@@ -582,7 +582,7 @@ O primeiro caractere na cadeia de caracteres a ser pesquisado.
 *_Num*<br/>
 O número de posições, contando da primeira, no intervalo a ser pesquisado.
 
-*CH*<br/>
+*_Ch*<br/>
 O caractere a ser pesquisado no intervalo.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -763,7 +763,7 @@ static char_type *move(char_type* _To,
 
 ### <a name="parameters"></a>Parâmetros
 
-*Dese_jo*<br/>
+*_To*<br/>
 O elemento no início da matriz de cadeia de caracteres ou caractere direcionado para receber a sequência de caracteres copiada.
 
 *_From*<br/>
@@ -916,7 +916,7 @@ static int_type not_eof(const int_type& _Ch);
 
 ### <a name="parameters"></a>Parâmetros
 
-*CH*<br/>
+*_Ch*<br/>
 O caractere representado como um `int_type` a ser testado para determinar se ele é o caractere EOF ou não.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1024,7 +1024,7 @@ static char_type to_char_type(const int_type& _Ch);
 
 ### <a name="parameters"></a>Parâmetros
 
-*CH*<br/>
+*_Ch*<br/>
 O caractere `int_type` a ser representado como um `char_type`.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1130,7 +1130,7 @@ static int_type to_int_type(const char_type& _Ch);
 
 ### <a name="parameters"></a>Parâmetros
 
-*CH*<br/>
+*_Ch*<br/>
 O caractere `char_type` a ser representada como um `int_type`.
 
 ### <a name="return-value"></a>Valor de retorno

@@ -7,17 +7,17 @@ helpviewer_keywords:
 - C3899
 ms.assetid: 14e07e4a-f7a7-4309-baaa-649d69e12e23
 ms.openlocfilehash: 26860ba0e8fd92f491ee389147605ba82cecf25c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50598387"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62376023"
 ---
 # <a name="compiler-error-c3899"></a>Erro do compilador C3899
 
 'var': uso l-value de membro de dados initonly não é permitido diretamente dentro de uma região parallel na classe 'class'
 
-Uma [initonly (C + + c++ CLI)](../../dotnet/initonly-cpp-cli.md) membro de dados não pode ser inicializado dentro dessa parte de um construtor que está em um [paralela](../../parallel/openmp/reference/parallel.md) região.  Isso é porque o compilador faz uma realocação interna desse código, de modo que ela efetivamente não é parte do construtor.
+Uma [initonly (C++/CLI)](../../dotnet/initonly-cpp-cli.md) membro de dados não pode ser inicializado dentro dessa parte de um construtor que está em um [paralelo](../../parallel/openmp/reference/parallel.md) região.  Isso é porque o compilador faz uma realocação interna desse código, de modo que ela efetivamente não é parte do construtor.
 
 Para resolver, inicialize o membro de dados initonly no construtor, mas fora da região paralela.
 

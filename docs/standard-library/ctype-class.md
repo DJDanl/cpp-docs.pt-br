@@ -37,11 +37,11 @@ helpviewer_keywords:
 - std::ctype [C++], widen
 ms.assetid: 3627154c-49d9-47b5-b28f-5bbedee38e3b
 ms.openlocfilehash: e7c474e9112acadc11af889471b1e126dfeeb23f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50438942"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62394137"
 ---
 # <a name="ctype-class"></a>Classe ctype
 
@@ -147,11 +147,11 @@ Valor inteiro usado para especificar o tipo de gerenciamento de memória do obje
 
 Os valores possíveis para o *_Refs* parâmetro e sua significância são:
 
-- 0: o tempo de vida do objeto é gerenciado pelas localidades que o contêm.
+- 0: O tempo de vida do objeto é gerenciado pelas localidades que o contêm.
 
-- 1: o tempo de vida do objeto deve ser gerenciado manualmente.
+- 1: O tempo de vida do objeto deve ser gerenciado manualmente.
 
-- \> 1: esses valores não estão definidos.
+- \> 1: Esses valores não estão definidos.
 
 Nenhum exemplo direto é possível, pois o destruidor está protegido.
 

@@ -17,11 +17,11 @@ helpviewer_keywords:
 - std::money_get [C++], get
 ms.assetid: 692d3374-3fe7-4b46-8aeb-f8d91ed66b2e
 ms.openlocfilehash: 40ce364d768e682c9e85506d2af9e46a01c76e65
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50537781"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62383523"
 ---
 # <a name="moneyget-class"></a>Classe money_get
 
@@ -114,13 +114,13 @@ Iterador de entrada que trata o fim da sequência a ser convertido.
 *Intl*<br/>
 Um valor booliano que indica o tipo do símbolo de moeda esperado na sequência: **true** se internacional, **false** se nacional.
 
-*iosbase*<br/>
+*Iosbase*<br/>
 Um sinalizador de formato que quando definido indica que o símbolo de moeda é opcional; caso contrário, será obrigatório.
 
 *Estado*<br/>
 Define os elementos de bitmask apropriados para o estado de fluxo, dependendo se as operações foram bem-sucedidas ou não.
 
-*Val*<br/>
+*val*<br/>
 Uma cadeia de caracteres que armazena a sequência convertida.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -196,13 +196,13 @@ Iterador de entrada que trata o fim da sequência a ser convertido.
 *Intl*<br/>
 Um valor booliano que indica o tipo do símbolo de moeda esperado na sequência: **true** se internacional, **false** se nacional.
 
-*iosbase*<br/>
+*Iosbase*<br/>
 Um sinalizador de formato que quando definido indica que o símbolo de moeda é opcional; caso contrário, será obrigatório
 
 *Estado*<br/>
 Define os elementos de bitmask apropriados para o estado de fluxo, dependendo se as operações foram bem-sucedidas.
 
-*Val*<br/>
+*val*<br/>
 Uma cadeia de caracteres que armazena a sequência convertida.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -291,11 +291,11 @@ Valor inteiro usado para especificar o tipo de gerenciamento de memória do obje
 
 Os valores possíveis para o *_Refs* parâmetro e sua significância são:
 
-- 0: o tempo de vida do objeto é gerenciado pelas localidades que o contêm.
+- 0: O tempo de vida do objeto é gerenciado pelas localidades que o contêm.
 
-- 1: o tempo de vida do objeto deve ser gerenciado manualmente.
+- 1: O tempo de vida do objeto deve ser gerenciado manualmente.
 
-- \> 1: esses valores não estão definidos.
+- \> 1: Esses valores não estão definidos.
 
 Nenhum exemplo direto é possível, pois o destruidor está protegido.
 

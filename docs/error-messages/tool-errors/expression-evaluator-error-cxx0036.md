@@ -8,11 +8,11 @@ helpviewer_keywords:
 - CAN0036
 ms.assetid: 383404be-df5b-4eec-b113-df21bb5d269d
 ms.openlocfilehash: d7961d92760cc5ac325b4bc9f187d4ee2298479a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50576785"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62397023"
 ---
 # <a name="expression-evaluator-error-cxx0036"></a>Erro CXX0036 (avaliador de expressão)
 
@@ -24,7 +24,7 @@ Essa mensagem pode ser gerada por qualquer um dos vários erros no uso do operad
 
    A sintaxe do operador de contexto é:
 
-     {*função*,*módulo*,*dll*}*expressão*
+     {*function*,*module*,*dll*}*expression*
 
    Isso especifica o contexto do *expressão*. O operador de contexto tem a mesma precedência e o uso como uma conversão de tipo.
 

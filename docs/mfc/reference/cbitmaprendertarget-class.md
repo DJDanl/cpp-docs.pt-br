@@ -19,11 +19,11 @@ helpviewer_keywords:
 - CBitmapRenderTarget [MFC], m_pBitmapRenderTarget
 ms.assetid: c89a4437-812e-4943-acb2-b429a04cc4d2
 ms.openlocfilehash: 8c110ec8f7c232180bf054e8e4ba90a18f1902c1
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283547"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62388430"
 ---
 # <a name="cbitmaprendertarget-class"></a>Classe CBitmapRenderTarget
 
@@ -37,7 +37,7 @@ class CBitmapRenderTarget : public CRenderTarget;
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|

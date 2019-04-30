@@ -15,11 +15,11 @@ helpviewer_keywords:
 - decrement operators [C++]
 ms.assetid: 0204d5c8-51b0-4108-b8a1-074c5754d89c
 ms.openlocfilehash: e1a87fe4815a75b97616d7b11a4b9aa4ae65eb9f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50438813"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392135"
 ---
 # <a name="postfix-increment-and-decrement-operators--and---"></a>Operadores de incremento e de decremento pós-fixados: ++ e --
 
