@@ -60,11 +60,11 @@ helpviewer_keywords:
 - value_type member [STL/CLR]
 ms.assetid: 6ee96b9f-8a33-4cf7-b7e0-6535c24bdefb
 ms.openlocfilehash: ec3863796f7c49c155af61576c15c1ca8a9d5109
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50513874"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384602"
 ---
 # <a name="stack-stlclr"></a>stack (STL/CLR)
 
@@ -89,7 +89,7 @@ template<typename Value,
 *Valor*<br/>
 O tipo de um elemento na sequência controlada.
 
-*Contêiner*<br/>
+*Container*<br/>
 O tipo do contêiner subjacente.
 
 ## <a name="requirements"></a>Requisitos
@@ -150,7 +150,7 @@ O objeto aloca e libera armazenamento para a sequência que controla por meio de
 
 ## <a name="members"></a>Membros
 
-## <a name="assign"></a> Stack::Assign (STL/CLR)
+## <a name="assign"></a> stack::assign (STL/CLR)
 
 Substitui todos os elementos.
 
@@ -204,7 +204,7 @@ a b c
 a b c
 ```
 
-## <a name="const_reference"></a> Stack::const_reference (STL/CLR)
+## <a name="const_reference"></a> stack::const_reference (STL/CLR)
 
 O tipo de uma referência de constante para um elemento.
 
@@ -248,7 +248,7 @@ int main()
 c b a
 ```
 
-## <a name="container_type"></a> Stack:: container_type (STL/CLR)
+## <a name="container_type"></a> stack::container_type (STL/CLR)
 
 O tipo do contêiner subjacente.
 
@@ -290,7 +290,7 @@ int main()
 a b c
 ```
 
-## <a name="difference_type"></a> Stack::difference_type (STL/CLR)
+## <a name="difference_type"></a> stack::difference_type (STL/CLR)
 
 Os tipos de uma distância com sinal entre dois elementos.
 
@@ -348,7 +348,7 @@ pushing 2 = -2
 popping 3 = 3
 ```
 
-## <a name="empty"></a> Stack:: Empty (STL/CLR)
+## <a name="empty"></a> stack::empty (STL/CLR)
 
 Testa se nenhum elemento está presente.
 
@@ -402,7 +402,7 @@ size() = 0
 empty() = True
 ```
 
-## <a name="generic_container"></a> Stack::generic_container (STL/CLR)
+## <a name="generic_container"></a> stack::generic_container (STL/CLR)
 
 O tipo da interface genérica para o adaptador de contêiner.
 
@@ -465,7 +465,7 @@ a b c d
 a b c d e
 ```
 
-## <a name="generic_value"></a> Stack::generic_value (STL/CLR)
+## <a name="generic_value"></a> stack::generic_value (STL/CLR)
 
 O tipo de um elemento para uso com a interface genérica para o contêiner.
 
@@ -523,7 +523,7 @@ a b c
 c b a
 ```
 
-## <a name="get_container"></a> Stack::get_container (STL/CLR)
+## <a name="get_container"></a> stack::get_container (STL/CLR)
 
 Acessa o contêiner subjacente.
 
@@ -565,7 +565,7 @@ int main()
 a b c
 ```
 
-## <a name="op_as"></a> Stack:: Operator = (STL/CLR)
+## <a name="op_as"></a> stack::operator= (STL/CLR)
 
 Substitui a sequência controlada.
 
@@ -619,7 +619,7 @@ a b c
 a b c
 ```
 
-## <a name="pop"></a> Stack:: pop (STL/CLR)
+## <a name="pop"></a> stack::pop (STL/CLR)
 
 Remove o último elemento.
 
@@ -667,7 +667,7 @@ a b c
 a b
 ```
 
-## <a name="push"></a> Stack:: push (STL/CLR)
+## <a name="push"></a> stack::push (STL/CLR)
 
 Adiciona um novo último elemento.
 
@@ -708,7 +708,7 @@ int main()
 a b c
 ```
 
-## <a name="reference"></a> Stack::Reference (STL/CLR)
+## <a name="reference"></a> stack::reference (STL/CLR)
 
 O tipo de uma referência para um elemento.
 
@@ -757,7 +757,7 @@ a b c
 a b x
 ```
 
-## <a name="size"></a> Stack:: Size (STL/CLR)
+## <a name="size"></a> stack::size (STL/CLR)
 
 Conta o número de elementos.
 
@@ -811,7 +811,7 @@ size() = 2 after popping
 size() = 4 after adding 2
 ```
 
-## <a name="size_type"></a> Stack:: size_type (STL/CLR)
+## <a name="size_type"></a> stack::size_type (STL/CLR)
 
 O tipo de uma distância com sinal entre dois elementos.
 
@@ -860,7 +860,7 @@ a b c
 size difference = 2
 ```
 
-## <a name="stack"></a> Stack:: Stack (STL/CLR)
+## <a name="stack"></a> stack::stack (STL/CLR)
 
 Constrói um objeto de adaptador de contêiner.
 
@@ -878,7 +878,7 @@ explicit stack(container_type% wrapped);
 *right*<br/>
 Objeto a ser copiado.
 
-*encapsulado*<br/>
+*wrapped*<br/>
 Contêiner encapsulado para ser usado.
 
 ### <a name="remarks"></a>Comentários
@@ -953,7 +953,7 @@ x x x x x
 x x x x x
 ```
 
-## <a name="to_array"></a> Stack::to_array (STL/CLR)
+## <a name="to_array"></a> stack::to_array (STL/CLR)
 
 Copia a sequência controlada para uma nova matriz.
 
@@ -1003,7 +1003,7 @@ a b c d
 a b c
 ```
 
-## <a name="top"></a> Top (STL/CLR)
+## <a name="top"></a> stack::top (STL/CLR)
 
 Acessa o último elemento.
 
@@ -1055,7 +1055,7 @@ top() = c
 a b x
 ```
 
-## <a name="top_item"></a> Stack::top_item (STL/CLR)
+## <a name="top_item"></a> stack::top_item (STL/CLR)
 
 Acessa o último elemento.
 
@@ -1107,7 +1107,7 @@ top_item = c
 a b x
 ```
 
-## <a name="value_type"></a> Stack:: value_type (STL/CLR)
+## <a name="value_type"></a> stack::value_type (STL/CLR)
 
 O tipo de um elemento.
 
@@ -1152,7 +1152,7 @@ int main()
 c b a
 ```
 
-## <a name="op_neq"></a> operador! = (stack) (STL/CLR)
+## <a name="op_neq"></a> operator!= (stack) (STL/CLR)
 
 A comparação não é igual a pilha.
 
@@ -1223,7 +1223,7 @@ a b d
 [a b c] != [a b d] is True
 ```
 
-## <a name="op_lt"></a> operador&lt; (stack) (STL/CLR)
+## <a name="op_lt"></a> operator&lt; (stack) (STL/CLR)
 
 Pilha inferior a comparação.
 
@@ -1294,7 +1294,7 @@ a b d
 [a b c] < [a b d] is True
 ```
 
-## <a name="op_lteq"></a> operador&lt;= (stack) (STL/CLR)
+## <a name="op_lteq"></a> operator&lt;= (stack) (STL/CLR)
 
 Menor ou igual de pilha comparação.
 
@@ -1365,7 +1365,7 @@ a b d
 [a b d] <= [a b c] is False
 ```
 
-## <a name="op_eq"></a> operador = = (stack) (STL/CLR)
+## <a name="op_eq"></a> operator== (stack) (STL/CLR)
 
 Comparação de igualdade de pilha.
 
@@ -1436,7 +1436,7 @@ a b d
 [a b c] == [a b d] is False
 ```
 
-## <a name="op_gt"></a> operador&gt; (stack) (STL/CLR)
+## <a name="op_gt"></a> operator&gt; (stack) (STL/CLR)
 
 Comparação de maior que a pilha.
 
@@ -1507,7 +1507,7 @@ a b d
 [a b d] > [a b c] is True
 ```
 
-## <a name="op_gteq"></a> operador&gt;= (stack) (STL/CLR)
+## <a name="op_gteq"></a> operator&gt;= (stack) (STL/CLR)
 
 Pilha de maior que ou igual a comparação.
 

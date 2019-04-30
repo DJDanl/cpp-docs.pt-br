@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C3505
 ms.assetid: ed73c99e-93a1-4f3a-bac7-ba7ed5d836e4
 ms.openlocfilehash: 5730102371d00ebaf3ae05fdefb70184b58d7c18
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481764"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62400325"
 ---
 # <a name="compiler-error-c3505"></a>Erro do compilador C3505
 
@@ -23,6 +23,6 @@ Você pode resolver esse erro, criando versões de 32 bits e 64 bits da bibliote
 
 Para obter mais informações, consulte
 
-- [Como habilitar um conjunto de ferramentas Visual C++ de 64 bits na linha de comando](../../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md)
+- [Como: Habilitar um conjunto de ferramentas Visual C++ de 64 bits na linha de comando](../../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md)
 
-- [Como configurar projetos do Visual C++ para terem plataformas x64 de 64 bits como destino](../../build/how-to-configure-visual-cpp-projects-to-target-64-bit-platforms.md)
+- [Como: Configurar projetos do Visual C++ para terem plataformas x64 de 64 bits como destino](../../build/how-to-configure-visual-cpp-projects-to-target-64-bit-platforms.md)

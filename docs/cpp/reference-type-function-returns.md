@@ -7,11 +7,11 @@ helpviewer_keywords:
 - functions [C++], return types
 ms.assetid: 5b73be1d-2dc7-41df-ab0a-adcba36f2ad1
 ms.openlocfilehash: a2d7fa9ddbc1d4a2f922b5a20930e150ae991f38
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50461315"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62403432"
 ---
 # <a name="reference-type-function-returns"></a>Retornos de funções de tipo de referência
 

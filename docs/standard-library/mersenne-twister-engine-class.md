@@ -7,11 +7,11 @@ helpviewer_keywords:
 - mersenne_twister_engine class
 ms.assetid: 7ee968fa-a1cc-450f-890f-7305de062685
 ms.openlocfilehash: c0f30eacb308da61064a0383a6433b7127032a3e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607448"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62410962"
 ---
 # <a name="mersennetwisterengine-class"></a>Classe mersenne_twister_engine
 
@@ -50,7 +50,7 @@ O tipo de resultado inteiro sem sinal. Para encontrar os tipos possíveis, consu
 *U*, *S*, *T*, *L*<br/>
 **Parâmetros de deformação do deslocamento**. Usados como valores de deslocamento durante a codificação (deformação). Pré-condição: `U,S,T,L ≤ W`
 
-*1!D*, *B*, *C*<br/>
+*D*, *B*, *C*<br/>
 **Parâmetros de deformação da máscara de bits**. Usados como valores da máscara de bits durante a codificação (deformação). Pré-condição: `D,B,C ≤ (1u<<W) - 1u`
 
 *F*<br/>
@@ -77,7 +77,7 @@ O argumento do modelo `UIntType` deve ser suficientemente grande para comportar 
 
 Embora seja possível construir um gerador diretamente do mecanismo, recomendamos que você use um desses typedefs predefinidos:
 
-`mt19937`: mecanismo Mersenne Twister de 32 bits (Matsumoto e Nishimura, 1998).
+`mt19937`: Mecanismo Mersenne Twister de 32 bits (Matsumoto e Nishimura, 1998).
 
 ```cpp
 typedef mersenne_twister_engine<unsigned int, 32, 624, 397,
@@ -88,7 +88,7 @@ typedef mersenne_twister_engine<unsigned int, 32, 624, 397,
     18, 1812433253> mt19937;
 ```
 
-`mt19937_64`: mecanismo Mersenne Twister de 64 bits (Matsumoto e Nishimura, 2000).
+`mt19937_64`: Mecanismo Mersenne Twister de 64 bits (Matsumoto e Nishimura, 2000).
 
 ```cpp
 typedef mersenne_twister_engine<unsigned long long, 64, 312, 156,

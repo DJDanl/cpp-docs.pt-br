@@ -56,11 +56,11 @@ helpviewer_keywords:
 - std::basic_ios [C++], widen
 ms.assetid: 4fdcd8e1-62d2-4611-8a70-1e4f58434007
 ms.openlocfilehash: c22e048d01665deed83a9474525f414dfd874fe0
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524905"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62400650"
 ---
 # <a name="basicios-class"></a>Classe basic_ios
 
@@ -528,7 +528,7 @@ void init(basic_streambuf<Elem,Traits>* _Sb, bool _Isstd = false);
 
 ### <a name="parameters"></a>Parâmetros
 
-*SB*<br/>
+*_Sb*<br/>
 Buffer padrão para armazenar elementos de entrada ou saída.
 
 *_Isstd*<br/>
@@ -728,7 +728,7 @@ basic_streambuf<Elem, Traits>* _Sb);
 
 ### <a name="parameters"></a>Parâmetros
 
-*SB*<br/>
+*_Sb*<br/>
 Um fluxo.
 
 ### <a name="remarks"></a>Comentários
@@ -820,7 +820,7 @@ void setstate(iostate _State);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Estad_o*<br/>
+*_State*<br/>
 Sinalizadores adicionais a serem definidos.
 
 ### <a name="remarks"></a>Comentários

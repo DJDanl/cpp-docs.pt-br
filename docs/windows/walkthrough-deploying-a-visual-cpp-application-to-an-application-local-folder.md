@@ -1,15 +1,15 @@
 ---
 title: Implantar um aplicativo do Visual C++ em uma pasta local do aplicativo
-ms.date: 09/17/2018
+ms.date: 04/23/2019
 helpviewer_keywords:
 - deploying Visual C++ applications
 ms.assetid: 47a81c47-9dbe-47c6-96cc-fbb2fda5e6ad
 ms.openlocfilehash: 33edf4bb736fad62928e11dd0550af6640d411ac
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
-ms.translationtype: MT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58786109"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62387689"
 ---
 # <a name="walkthrough-deploying-a-visual-c-application-to-an-application-local-folder"></a>Passo a passo: Implantação de um aplicativo em Visual C++ em uma pasta do aplicativo local
 

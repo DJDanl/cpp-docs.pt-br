@@ -3,29 +3,29 @@ title: Sistema de tipos (C++/CX)
 ms.date: 02/03/2017
 ms.assetid: b67bee8a-b526-4872-969e-ef22724e88fe
 ms.openlocfilehash: fbc7a178621624e396c80509703ce1b5b4c19162
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57745948"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392083"
 ---
 # <a name="type-system-ccx"></a>Sistema de tipos (C++/CX)
 
-Usando a arquitetura de tempo de execução do Windows, você pode usar C + + c++ /CLI CX, Visual Basic, Visual c# e JavaScript para escrever aplicativos e componentes que diretamente acessar a API do Windows e interoperem com outros aplicativos do Windows Runtime e os componentes. Aplicativos da plataforma do Windows universal escritos em C++ são compilados para código nativo executado diretamente na CPU. Aplicativos da plataforma do Windows universal escritos em c# ou Visual Basic são compilados para Microsoft intermediate language (MSIL) e executar no common language runtime (CLR). Aplicativos da plataforma do Windows universal escritos em JavaScript são executam em um ambiente de tempo de execução. Os próprios componentes de sistema operacional de tempo de execução do Windows são escritos em C++ e executados como código nativo. Todos esses componentes e aplicativos da plataforma Universal do Windows se comunicam diretamente por meio da interface de binária de aplicativo (ABI) do tempo de execução do Windows.
+Usando a arquitetura de tempo de execução do Windows, você pode usar C++/CX, Visual Basic, Visual C# e o JavaScript para escrever aplicativos e componentes que diretamente acessar a API do Windows e interoperem com outros aplicativos do Windows Runtime e os componentes. Aplicativos da plataforma do Windows universal escritos em C++ são compilados para código nativo executado diretamente na CPU. Aplicativos da plataforma do Windows universal escritos em c# ou Visual Basic são compilados para Microsoft intermediate language (MSIL) e executar no common language runtime (CLR). Aplicativos da plataforma do Windows universal escritos em JavaScript são executam em um ambiente de tempo de execução. Os próprios componentes de sistema operacional de tempo de execução do Windows são escritos em C++ e executados como código nativo. Todos esses componentes e aplicativos da plataforma Universal do Windows se comunicam diretamente por meio da interface de binária de aplicativo (ABI) do tempo de execução do Windows.
 
-Para habilitar o suporte para o tempo de execução do Windows em uma linguagem C++ moderna, a Microsoft criou o C + + c++ /CLI CX. C + + c++ /CLI CX fornece tipos básicos internos e implementações de tipos fundamentais do tempo de execução do Windows que permitem que aplicativos e componentes se comuniquem na ABI com aplicativos que são escritos em outras linguagens C++. Você pode consumir qualquer tipo de tempo de execução do Windows, ou criar classes, structs, interfaces e outros tipos definidos pelo usuário que podem ser consumidos por outros componentes e aplicativos da plataforma Universal do Windows. um aplicativo de plataforma Universal do Windows que é escrito em C + + c++ /CX também pode usar classes regulares C++ e estruturas, desde que eles não tenham acessibilidade pública.
+Para habilitar o suporte para o tempo de execução do Windows em um moderno C++ idioma, a Microsoft criada o C++/CX. C++/CX fornece tipos básicos internos e implementações de tempo de execução do Windows fundamentais tipos que permitem C++ aplicativos e componentes se comuniquem na ABI com aplicativos que são escritos em outras linguagens. Você pode consumir qualquer tipo de tempo de execução do Windows, ou criar classes, structs, interfaces e outros tipos definidos pelo usuário que podem ser consumidos por outros componentes e aplicativos da plataforma Universal do Windows. um aplicativo de plataforma Universal do Windows que é escrito em C++/CX regulares também pode usar C++ classes e estruturas, desde que eles não tenham acessibilidade pública.
 
 Para uma discussão mais profunda da projeção de idioma C++/CX e como ela funciona sob as coberturas, veja estas postagens do blog:
 
-1. [C + + c++ /CX parte 0 de \[n\]: Uma introdução](https://blogs.msdn.microsoft.com/vcblog/2012/08/29/ccx-part-0-of-n-an-introduction)
+1. [C++/CX parte 0 de \[n\]: Uma introdução](https://blogs.msdn.microsoft.com/vcblog/2012/08/29/ccx-part-0-of-n-an-introduction)
 
-1. [C + + c++ /CX parte 1 de \[n\]: Uma classe simples](https://blogs.msdn.microsoft.com/vcblog/2012/09/05/ccx-part-1-of-n-a-simple-class)
+1. [C++/CX parte 1 de \[n\]: Uma classe simples](https://blogs.msdn.microsoft.com/vcblog/2012/09/05/ccx-part-1-of-n-a-simple-class)
 
-1. [C + + c++ /CX parte 2 de \[n\]: Tipos que desempenham funções diferentes](https://blogs.msdn.microsoft.com/vcblog/2012/09/17/ccx-part-2-of-n-types-that-wear-hats)
+1. [C++/CX parte 2 de \[n\]: Tipos que desempenham funções diferentes](https://blogs.msdn.microsoft.com/vcblog/2012/09/17/ccx-part-2-of-n-types-that-wear-hats)
 
-1. [C + + c++ /CX parte 3 de \[n\]: Em construção](https://blogs.msdn.microsoft.com/vcblog/2012/10/05/ccx-part-3-of-n-under-construction/)
+1. [C++/CX parte 3 de \[n\]: Em construção](https://blogs.msdn.microsoft.com/vcblog/2012/10/05/ccx-part-3-of-n-under-construction/)
 
-1. [C + + c++ /CX parte 4 de \[n\]: Funções de membro estático](https://blogs.msdn.microsoft.com/vcblog/2012/10/19/ccx-part-4-of-n-static-member-functions)
+1. [C++/CX parte 4 de \[n\]: Funções de membro estático](https://blogs.msdn.microsoft.com/vcblog/2012/10/19/ccx-part-4-of-n-static-member-functions)
 
 ## <a name="windows-metadata-winmd-files"></a>Arquivos de metadados do Windows (.winmd)
 
@@ -42,14 +42,14 @@ Se um tipo ou um método estará visível nos metadados dependerá de quais modi
 |protected|interno|
 |público protegido|privado protegido|
 
-Use o **Pesquisador de objetos** para exibir o conteúdo de arquivos .winmd. Os componentes de tempo de execução do Windows que estão incluídos com o Windows estão no arquivo winmd. O arquivo Default winmd contém tipos fundamentais que são usados no C + + c++ /CX e Platform. winmd contém tipos adicionais do namespace de plataforma. Por padrão, esses três arquivos. winmd são incluídos em cada projeto de C++ para aplicativos da plataforma Universal do Windows.
+Use o **Pesquisador de objetos** para exibir o conteúdo de arquivos .winmd. Os componentes de tempo de execução do Windows que estão incluídos com o Windows estão no arquivo winmd. O arquivo Default winmd contém tipos fundamentais que são usados em C++/CX e Platform. winmd contém tipos adicionais do namespace de plataforma. Por padrão, esses três arquivos. winmd são incluídos em cada projeto de C++ para aplicativos da plataforma Universal do Windows.
 
 > [!TIP]
 > Os tipos no [Platform::Collections Namespace](../cppcx/platform-collections-namespace.md) não aparecem no arquivo .winmd porque não são públicos. Eles são implementações particulares específicas do C++ das interfaces definidas em `Windows::Foundation::Collections`. Um aplicativo de tempo de execução do Windows que é escrito em JavaScript ou c# não sabe o que um [Platform::Collections::Vector&lt;2](../cppcx/platform-collections-vector-class.md) for, mas pode consumir um `Windows::Foundation::Collections::IVector`. Os tipos `Platform::Collections` são definidos em collection.h.
 
-## <a name="windows-runtime-type-system-in-ccx"></a>Sistema de tipo de tempo de execução do Windows no C + + c++ /CX
+## <a name="windows-runtime-type-system-in-ccx"></a>Sistema de tipo de tempo de execução do Windows no C++/CX
 
-As seções a seguir descrevem os principais recursos do sistema de tipo de tempo de execução do Windows e como eles são suportados no C + + c++ /CLI CX.
+As seções a seguir descrevem os principais recursos do sistema de tipo de tempo de execução do Windows e como eles são suportados no C++/CX.
 
 ### <a name="namespaces"></a>Namespaces
 
@@ -61,9 +61,9 @@ Para obter mais informações, consulte [Namespaces e visibilidade de tipo](../c
 
 ### <a name="fundamental-types"></a>Tipos fundamentais
 
-O tempo de execução do Windows define a seguintes tipos fundamentais, UInt8, Int16, UInt16, Int32, UInt32, Int64, UInt64, Single, Double, Char16, Boolean e cadeia de caracteres. C + + c++ /CX oferece suporte aos tipos numéricos fundamentais em seu namespace padrão como uint16, uint32, uint64, int16, int32, int64, float32, float64 e char16. Boolean e String também são definidos no namespace Platform.
+O tempo de execução do Windows define a seguintes tipos fundamentais, UInt8, Int16, UInt16, Int32, UInt32, Int64, UInt64, Single, Double, Char16, Boolean e cadeia de caracteres. C++/CX oferece suporte a tipos numéricos fundamentais em seu namespace padrão como uint16, uint32, uint64, int16, int32, int64, float32, float64 e char16. Boolean e String também são definidos no namespace Platform.
 
-C + + c++ /CX também define uint8, equivalente a `unsigned char`, que não há suporte para o tempo de execução do Windows e não pode ser usado em APIs públicas.
+C++/CX também define uint8, equivalente a `unsigned char`, que não há suporte para o tempo de execução do Windows e não pode ser usado em APIs públicas.
 
 Um tipo fundamental pode ser transformado em anulável convertendo-o em uma interface [Platform::IBox Interface](../cppcx/platform-ibox-interface.md) . Para obter mais informações, consulte [Classes e estruturas de valor](../cppcx/value-classes-and-structs-c-cx.md).
 
@@ -77,13 +77,13 @@ Para obter mais informações, consulte [Cadeias de caracteres](../cppcx/strings
 
 ### <a name="arrays"></a>Matrizes
 
-O tempo de execução do Windows oferece suporte a matrizes dimensionais 1 de qualquer tipo. Não há suporte para matrizes de matrizes.  No C + + c++ /CLI CX, matrizes de tempo de execução do Windows são projetadas como o [classe Platform:: array](../cppcx/platform-array-class.md).
+O tempo de execução do Windows oferece suporte a matrizes dimensionais 1 de qualquer tipo. Não há suporte para matrizes de matrizes.  Em C++/CX, matrizes de tempo de execução do Windows são projetadas como o [classe Platform:: array](../cppcx/platform-array-class.md).
 
 Para obter mais informações, consulte [matriz e WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md)
 
 ### <a name="ref-classes-and-structs"></a>Classes e estruturas ref
 
-Uma classe de tempo de execução do Windows é projetada no C + + c++ /CX como uma classe ou estrutura ref, porque eles são copiados por referência. O gerenciamento de memória para classes e estruturas ref é manipulado de forma transparente por meio da contagem de referência. Quando a última referência a um objeto fica fora do escopo, o objeto é destruído. Uma classe ou estrutura ref pode:
+Uma classe de tempo de execução do Windows é projetada no C++/CX como uma classe ou estrutura ref, pois eles são copiados por referência. O gerenciamento de memória para classes e estruturas ref é manipulado de forma transparente por meio da contagem de referência. Quando a última referência a um objeto fica fora do escopo, o objeto é destruído. Uma classe ou estrutura ref pode:
 
 - Conter como membros construtores, métodos, propriedades e eventos. Esses membros podem ter acessibilidade pública, privada, protegida ou interna.
 
@@ -115,9 +115,9 @@ Uma propriedade é um membro de dados públicos de qualquer tipo de tempo de exe
 
 Para obter mais informações, consulte [Propriedades](../cppcx/properties-c-cx.md).
 
-### <a name="windows-runtime-collections-in-ccx"></a>Coleções de tempo de execução do Windows no C + + c++ /CX
+### <a name="windows-runtime-collections-in-ccx"></a>Coleções de tempo de execução do Windows no C++/CX
 
-O tempo de execução do Windows define um conjunto de interfaces para tipos de coleção que cada linguagem implementa sua própria maneira. C + + c++ /CLI CX fornece implementações na [Platform::Collections::Vector&lt;2](../cppcx/platform-collections-vector-class.md), [2&gt;classe Platform::Collections::Map&lt;2](../cppcx/platform-collections-map-class.md)e outros tipos de coleção concreta relacionadas, que são compatíveis com suas Contrapartes padrão do modelo STL (biblioteca).
+O tempo de execução do Windows define um conjunto de interfaces para tipos de coleção que cada linguagem implementa sua própria maneira. C++/CX fornece implementações na [Platform::Collections::Vector&lt;2](../cppcx/platform-collections-vector-class.md), [2&gt;classe Platform::Collections::Map&lt;2](../cppcx/platform-collections-map-class.md)e outros tipos de coleção concreta relacionadas, que são compatíveis com suas Contrapartes padrão do modelo STL (biblioteca).
 
 Para obter mais informações, consulte [coleções](../cppcx/collections-c-cx.md).
 

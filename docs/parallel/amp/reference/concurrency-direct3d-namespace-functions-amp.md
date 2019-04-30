@@ -22,11 +22,11 @@ f1_keywords:
 - amp/Concurrency::direct3d::umin
 ms.assetid: 28943b62-52c9-42dc-baf1-ca7b095c1a19
 ms.openlocfilehash: 0a2977faf094aafb6290063e39e062ffaeaaec81
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57281324"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405580"
 ---
 # <a name="concurrencydirect3d-namespace-functions-amp"></a>Funções do namespace Concurrency::Direct3D (AMP)
 
@@ -156,7 +156,7 @@ O tempo de execução C++ AMP fornece informações de erro detalhadas no modo d
 
 ##  <a name="d3d_access_lock"></a>  d3d_access_lock
 
-Adquira um bloqueio em um accelerator_view com a finalidade de executar operações de D3D em recursos compartilhados com o accelerator_view de forma segura. O accelerator_view e todos os recursos de C++ AMP associados a esse accelerator_view internamente utilizam esse bloqueio ao executar operações e bloquearão enquanto outro thread mantém o bloqueio de acesso D3D. Esse bloqueio não é recursivo: Ele é um comportamento indefinido para chamar essa função a partir de um thread que já mantém o bloqueio. Ele é um comportamento indefinido executar operações no accelerator_view ou em qualquer contêiner de dados associado ao accelerator_view do thread que mantém o bloqueio de acesso D3D. Consulte também scoped_d3d_access_lock, uma classe de estilo de RAII para um bloqueio de acesso D3D com base no escopo.
+Adquira um bloqueio em um accelerator_view com a finalidade de executar operações de D3D em recursos compartilhados com o accelerator_view de forma segura. O accelerator_view e todos os C++ recursos de AMP associados a esse accelerator_view internamente utilizam esse bloqueio ao executar operações e bloquearão enquanto outro thread mantém o bloqueio de acesso D3D. Esse bloqueio não é recursivo: Ele é um comportamento indefinido para chamar essa função a partir de um thread que já mantém o bloqueio. Ele é um comportamento indefinido executar operações no accelerator_view ou em qualquer contêiner de dados associado ao accelerator_view do thread que mantém o bloqueio de acesso D3D. Consulte também scoped_d3d_access_lock, uma classe de estilo de RAII para um bloqueio de acesso D3D com base no escopo.
 
 ```
 void __cdecl d3d_access_lock(accelerator_view& _Av);

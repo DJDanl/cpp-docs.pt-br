@@ -87,11 +87,11 @@ helpviewer_keywords:
 - stdext::hash_multimap::value_comp
 ms.assetid: f41a6db9-67aa-43a3-a3c5-dbfe9ec3ae7d
 ms.openlocfilehash: 8510bbc89a22fe3eb8df6bbf8ce77db44c7a65a0
-ms.sourcegitcommit: d441305fb19131afbd7fc259d8cda63ea26f2343
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51678529"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405073"
 ---
 # <a name="hashmultimap-class"></a>Classe hash_multimap
 
@@ -121,7 +121,7 @@ O tipo de dados do elemento a ser armazenado no hash_multimap.
 *Características*<br/>
 O tipo que inclui dois objetos de função, um da classe *Traits* que é capaz de comparar dois valores de elemento como chaves de classificação para determinar sua ordem relativa e uma função de hash que é um unário predicado de mapeamento de valores de chave dos elementos a serem inteiros do tipo sem sinal `size_t`. Esse argumento é opcional e o `hash_compare<Key, less<Key>>` é o valor padrão.
 
-*Alocador*<br/>
+*Allocator*<br/>
 O tipo que representa o objeto de alocador armazenado que encapsula detalhes sobre a alocação e a desalocação de memória do hash_multimap. Esse argumento é opcional e o valor padrão é `allocator<pair <const Key, Type>>`.
 
 ## <a name="remarks"></a>Comentários
@@ -849,7 +849,7 @@ iterator emplace(ValTy&& val);
 
 |Parâmetro|Descrição|
 |-|-|
-|*Val*|O valor usado para construir um elemento a ser inserido no [hash_multimap](../standard-library/hash-multimap-class.md).|
+|*val*|O valor usado para construir um elemento a ser inserido no [hash_multimap](../standard-library/hash-multimap-class.md).|
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -906,7 +906,7 @@ iterator emplace_hint(
 
 |Parâmetro|Descrição|
 |-|-|
-|*Val*|O valor usado para construir um elemento a ser inserido no [hash_multimap](../standard-library/hash-multimap-class.md), a menos que o `hash_multimap` já contenha o elemento (ou, de modo geral, um elemento cuja chave seja ordenada de maneira equivalente).|
+|*val*|O valor usado para construir um elemento a ser inserido no [hash_multimap](../standard-library/hash-multimap-class.md), a menos que o `hash_multimap` já contenha o elemento (ou, de modo geral, um elemento cuja chave seja ordenada de maneira equivalente).|
 |*_Where*|Uma dica relacionada ao local do qual se começa a procurar pelo ponto de inserção correto.|
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1518,8 +1518,8 @@ hash_multimap(
 |*Al*|A classe do alocador de armazenamento a ser usado neste objeto de hash_multimap, cujo padrão é `Allocator`.|
 |*Comp*|A função de comparação do tipo `const Traits` usada para ordenar os elementos no mapa, cujo padrão é `Traits`.|
 |*Direita*|O mapa do qual o conjunto criado é uma cópia.|
-|*Primeiro*|A posição do primeiro elemento no intervalo de elementos a serem copiados.|
-|*último*|A posição do primeiro elemento além do intervalo de elementos a serem copiados.|
+|*First*|A posição do primeiro elemento no intervalo de elementos a serem copiados.|
+|*Last*|A posição do primeiro elemento além do intervalo de elementos a serem copiados.|
 |*IList*|A initializer_list da qual fazer a cópia.|
 
 ### <a name="remarks"></a>Comentários
@@ -1577,8 +1577,8 @@ iterator insert(
 |-|-|
 |*Val*|O valor de um elemento a ser inserido no hash_multimap, a menos que ele já contenha o elemento ou, de modo geral, a menos que ele já contenha um elemento cuja chave seja ordenada de maneira equivalente.|
 |*Where*|Uma dica de onde começar a procurar pelo ponto de inserção correto.|
-|*Primeiro*|A posição do primeiro elemento a ser copiado de um mapa.|
-|*último*|A posição logo após o último elemento a ser copiado de um mapa.|
+|*First*|A posição do primeiro elemento a ser copiado de um mapa.|
+|*Last*|A posição logo após o último elemento a ser copiado de um mapa.|
 
 ### <a name="return-value"></a>Valor de retorno
 

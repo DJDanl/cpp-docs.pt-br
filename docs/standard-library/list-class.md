@@ -99,11 +99,11 @@ helpviewer_keywords:
 - std::list [C++], unique
 ms.assetid: d3707f4a-10fd-444f-b856-f9ca2077c1cd
 ms.openlocfilehash: d990efb7d4c363b8d8e38f42f9edac7eea0a3882
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51522526"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62413210"
 ---
 # <a name="list-class"></a>Classe list
 
@@ -121,7 +121,7 @@ class list
 *Tipo*<br/>
 O tipo de dados do elemento a ser armazenado na lista.
 
-*Alocador*<br/>
+*Allocator*<br/>
 O tipo que representa o objeto alocador armazenado que encapsula detalhes sobre a alocação e desalocação de memória da lista. Esse argumento é opcional e o valor padrão é **allocator**\<*tipo*>.
 
 ## <a name="remarks"></a>Comentários
@@ -242,10 +242,10 @@ void assign(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Primeiro*<br/>
+*First*<br/>
 Posição do elemento primeiro no intervalo de elementos ser copiado da lista de argumentos.
 
-*último*<br/>
+*Last*<br/>
 Posição do primeiro elemento além do intervalo de elementos a ser copiado da lista de argumentos.
 
 *Contagem*<br/>
@@ -758,7 +758,7 @@ void emplace(iterator Where, Type&& val);
 |Parâmetro|Descrição|
 |-|-|
 |*Where*|A posição na [lista](../standard-library/list-class.md) de destino em que o primeiro elemento é inserido.|
-|*Val*|O elemento adicionado ao final da `list`.|
+|*val*|O elemento adicionado ao final da `list`.|
 
 ### <a name="remarks"></a>Comentários
 
@@ -800,7 +800,7 @@ void emplace_back(Type&& val);
 
 |Parâmetro|Descrição|
 |-|-|
-|*Val*|O elemento adicionado ao final da [lista](../standard-library/list-class.md).|
+|*val*|O elemento adicionado ao final da [lista](../standard-library/list-class.md).|
 
 ### <a name="remarks"></a>Comentários
 
@@ -842,7 +842,7 @@ void emplace_front(Type&& val);
 
 |Parâmetro|Descrição|
 |-|-|
-|*Val*|O elemento adicionado ao início da [lista](../standard-library/list-class.md).|
+|*val*|O elemento adicionado ao início da [lista](../standard-library/list-class.md).|
 
 ### <a name="remarks"></a>Comentários
 
@@ -1153,8 +1153,8 @@ void insert(iterator Where, InputIterator First, InputIterator Last);
 |*Where*|A posição na lista de destino em que o primeiro elemento é inserido.|
 |*Val*|O valor do elemento sendo inserido na lista.|
 |*Contagem*|O número de elementos sendo inseridos na lista.|
-|*Primeiro*|A posição do primeiro elemento no intervalo de elementos na lista de argumentos a ser copiada.|
-|*último*|A posição do primeiro elemento além do intervalo de elementos na lista de argumentos a ser copiada.|
+|*First*|A posição do primeiro elemento no intervalo de elementos na lista de argumentos a ser copiada.|
+|*Last*|A posição do primeiro elemento além do intervalo de elementos na lista de argumentos a ser copiada.|
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -1276,8 +1276,8 @@ list(InputIterator First, InputIterator Last, const Allocator& Al);
 |*Contagem*|O número de elementos na lista construída.|
 |*Val*|O valor dos elementos na lista.|
 |*Direita*|A lista da qual a lista construída é uma cópia.|
-|*Primeiro*|A posição do primeiro elemento no intervalo de elementos a serem copiados.|
-|*último*|A posição do primeiro elemento além do intervalo de elementos a serem copiados.|
+|*First*|A posição do primeiro elemento no intervalo de elementos a serem copiados.|
+|*Last*|A posição do primeiro elemento além do intervalo de elementos a serem copiados.|
 |*IList*|O initializer_list que contém os elementos a serem copiados.|
 
 ### <a name="remarks"></a>Comentários
@@ -1678,7 +1678,7 @@ void push_back(void push_back(Type&& val);
 
 |Parâmetro|Descrição|
 |-|-|
-|*Val*|O elemento adicionado ao final da lista.|
+|*val*|O elemento adicionado ao final da lista.|
 
 ### <a name="remarks"></a>Comentários
 
@@ -1734,7 +1734,7 @@ void push_front(Type&& val);
 
 |Parâmetro|Descrição|
 |-|-|
-|*Val*|O elemento adicionado ao início da lista.|
+|*val*|O elemento adicionado ao início da lista.|
 
 ### <a name="remarks"></a>Comentários
 
@@ -1894,7 +1894,7 @@ void remove(const Type& val);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Val*<br/>
+*val*<br/>
 O valor que, se mantido por um elemento, resultará na remoção de tal elemento da lista.
 
 ### <a name="remarks"></a>Comentários
@@ -1952,7 +1952,7 @@ void remove_if(Predicate pred)
 
 ### <a name="parameters"></a>Parâmetros
 
-*Pred*<br/>
+*pred*<br/>
 O predicado unário que, se atendido por um elemento, resultará na exclusão de tal elemento da lista.
 
 ### <a name="example"></a>Exemplo
@@ -2106,7 +2106,7 @@ void resize(size_type _Newsize, Type val);
 *_Newsize*<br/>
 O novo tamanho da lista.
 
-*Val*<br/>
+*val*<br/>
 O valor dos novos elementos a serem adicionados à lista, caso o novo tamanho seja maior que o tamanho original. Se o valor for omitido, os novos elementos receberão o valor padrão para a classe.
 
 ### <a name="remarks"></a>Comentários
@@ -2366,10 +2366,10 @@ A lista de origem a ser inserida na lista de destino.
 *Iter*<br/>
 O elemento a ser inserido da lista de origem.
 
-*Primeiro*<br/>
+*First*<br/>
 O primeiro elemento no intervalo a ser inserido da lista de origem.
 
-*último*<br/>
+*Last*<br/>
 A primeira posição além do último elemento no intervalo a ser inserido da lista de origem.
 
 ### <a name="remarks"></a>Comentários
@@ -2538,7 +2538,7 @@ void unique(BinaryPredicate pred);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Pred*<br/>
+*pred*<br/>
 O predicado binário usado para comparar elementos sucessivos.
 
 ### <a name="remarks"></a>Comentários

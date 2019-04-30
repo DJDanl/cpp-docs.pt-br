@@ -14,11 +14,11 @@ helpviewer_keywords:
 - m_nFields data member, recordsets
 ms.assetid: 47555ddb-11be-4b9e-9b9a-f2931764d298
 ms.openlocfilehash: 5904a69f81dd1fbf22171a46040da5d4f5511588
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59039644"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62395632"
 ---
 # <a name="recordset-architecture-odbc"></a>Conjunto de registros: Arquitetura (ODBC)
 
@@ -94,5 +94,5 @@ Para obter mais informações e exemplos, consulte [troca de campos do registro:
 ## <a name="see-also"></a>Consulte também
 
 [Conjunto de registros (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Conjunto de registros: Declarando uma classe para uma tabela (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)<br/>
+[Conjunto de registros: declarar uma classe para uma tabela (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)<br/>
 [RFX (troca de campo de registro)](../../data/odbc/record-field-exchange-rfx.md)

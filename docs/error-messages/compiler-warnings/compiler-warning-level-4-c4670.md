@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4670
 ms.assetid: e172b134-b1fb-4dfe-8e9d-209ea08b73c7
 ms.openlocfilehash: 1ce32ef4d07ea5e2c6f328578837f805eed5c897
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50633462"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62408128"
 ---
 # <a name="compiler-warning-level-4-c4670"></a>Compilador aviso (nível 4) C4670
 

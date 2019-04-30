@@ -9,11 +9,11 @@ helpviewer_keywords:
 - locale header
 ms.assetid: ca56f9d2-7128-44da-8df1-f4c78c17fbf2
 ms.openlocfilehash: 16248a93b557a92d89e35aac8eba912a8294af76
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524248"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62413145"
 ---
 # <a name="ltlocalegt"></a>&lt;locale&gt;
 
@@ -55,7 +55,7 @@ Define funções e classes de modelo que os programas C++ podem usar para encaps
 |[collate](../standard-library/collate-class.md)|Uma classe de modelo de agrupamento que fornece uma faceta que trata convenções de classificação de cadeia de caracteres.|
 |[collate_byname](../standard-library/collate-byname-class.md)|Uma classe de modelo derivada que descreve um objeto que pode funcionar como uma faceta de agrupamento de uma determinada localidade, permitindo a recuperação de informações específicas a uma área cultural no que diz respeito a convenções de classificação de cadeia de caracteres.|
 |[ctype](../standard-library/ctype-class.md)|Uma classe de modelo que fornece uma faceta usada para classificar caracteres, fazer conversões de letras maiúsculas e minúsculas, bem como entre o conjunto de caracteres nativos e o conjunto usado pela localidade.|
-|[CType\<char >](../standard-library/ctype-char-class.md)|Uma classe que é uma especialização explícita da classe de modelo `ctype<CharType>` digitar **char**, que descreve um objeto que pode servir como uma faceta de localidade para caracterizar várias propriedades de um caractere do tipo **char**.|
+|[ctype\<char>](../standard-library/ctype-char-class.md)|Uma classe que é uma especialização explícita da classe de modelo `ctype<CharType>` digitar **char**, que descreve um objeto que pode servir como uma faceta de localidade para caracterizar várias propriedades de um caractere do tipo **char**.|
 |[ctype_base](../standard-library/ctype-base-class.md)|Uma classe base da classe ctype que é usada para definir tipos de enumeração usados para classificar ou testar caracteres individualmente ou dentro de intervalos inteiros.|
 |[ctype_byname](../standard-library/ctype-byname-class.md)|Uma classe de modelo derivada que descreve um objeto que pode funcionar como uma faceta ctype de uma determinada localidade, permitindo a classificação de caracteres e a conversão de caracteres entre letras maiúsculas e minúsculas, assim como entre conjuntos de caracteres especificados de localidade e nativos.|
 |[locale](../standard-library/locale-class.md)|Uma classe que descreve um objeto de localidade que encapsula informações específicas à cultura como um conjunto de facetas que definem coletivamente um ambiente localizado específico.|

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - recordsets, updating
 ms.assetid: 0353a742-d226-4fe2-8881-a7daeffe86cd
 ms.openlocfilehash: c29ff110fc507c4e449b2f3d082d98c159a35107
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59040762"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62397764"
 ---
 # <a name="recordset-more-about-updates-odbc"></a>Conjunto de registros: Mais informações sobre atualizações (ODBC)
 
@@ -105,7 +105,7 @@ Quando essas exceções forem geradas, você permanecer na `AddNew` ou `Edit` es
 ## <a name="see-also"></a>Consulte também
 
 [Conjunto de registros (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Conjunto de registros: Como conjuntos de registros selecionam registros (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)<br/>
+[Conjunto de registros: como conjuntos de registros selecionam registros (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)<br/>
 [RFX (troca de campo de registro)](../../data/odbc/record-field-exchange-rfx.md)<br/>
 [SQL](../../data/odbc/sql.md)<br/>
-[Exceções: Exceções de banco de dados](../../mfc/exceptions-database-exceptions.md)
+[Exceções: exceções do banco de dados](../../mfc/exceptions-database-exceptions.md)

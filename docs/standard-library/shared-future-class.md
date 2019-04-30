@@ -19,11 +19,11 @@ helpviewer_keywords:
 - std::shared_future [C++], wait_for
 - std::shared_future [C++], wait_until
 ms.openlocfilehash: 2280c17c4ce58fe06365c107ad26d646c7ae2d72
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50575624"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412599"
 ---
 # <a name="sharedfuture-class"></a>Classe shared_future
 
@@ -44,13 +44,13 @@ Objetos `shared_future` não estão sincronizados. Chamar métodos no mesmo obje
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
 |[shared_future](#shared_future)|Constrói um objeto `shared_future`.|
 
-### <a name="public-methods"></a>Métodos Públicos
+### <a name="public-methods"></a>Métodos públicos
 
 |Nome|Descrição|
 |----------|-----------------|
@@ -142,7 +142,7 @@ Os segundo e terceiro construtores criam um `shared_future` do objeto e transfer
 
 O quarto construtor cria um `shared_future` objeto que tem o mesmo estado assíncrono associado que *direita*.
 
-## <a name="valid"></a>  shared_future:: valid
+## <a name="valid"></a>  shared_future::valid
 
 Especifica se o objeto tem um *estado assíncrono associado*.
 
@@ -154,7 +154,7 @@ bool valid() noexcept;
 
 **Verdadeiro** se o objeto tiver um estado assíncrono associado; caso contrário, **falso**.
 
-## <a name="wait"></a>  shared_future:: wait
+## <a name="wait"></a>  shared_future::wait
 
 Bloqueia o thread atual até que o *estado assíncrono associado* esteja *pronto*.
 

@@ -87,11 +87,11 @@ helpviewer_keywords:
 - stdext::hash_set::value_comp
 ms.assetid: c765c06e-cbb6-48c2-93ca-d15468eb28d7
 ms.openlocfilehash: c7d5df87dc6c8529d18b9f5fb960148c7362129a
-ms.sourcegitcommit: d441305fb19131afbd7fc259d8cda63ea26f2343
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51678568"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405034"
 ---
 # <a name="hashset-class"></a>Classe hash_set
 
@@ -117,7 +117,7 @@ O tipo de dados do elemento a ser armazenado no hash_set.
 *Características*<br/>
 O tipo que inclui dois objetos de função: um da classe compare que é um predicado binário capaz de comparar dois valores de elemento como chaves de classificação para determinar sua ordem relativa e uma função de hash que é um valores de chave de mapeamento de predicado unário dos elementos para sem sinal inteiros do tipo `size_t`. Esse argumento é opcional e o `hash_compare<Key, less<Key> >` é o valor padrão.
 
-*Alocador*<br/>
+*Allocator*<br/>
 O tipo que representa o objeto alocador armazenado que encapsula detalhes sobre a alocação e a desalocação de memória do hash_set. Esse argumento é opcional e o valor padrão é `allocator<Key>`.
 
 ## <a name="remarks"></a>Comentários
@@ -803,7 +803,7 @@ emplace(
 
 |Parâmetro|Descrição|
 |-|-|
-|*Val*|O valor de um elemento a ser inserido no [hash_set](../standard-library/hash-set-class.md), a menos que o `hash_set` já contenha o elemento ou, de modo geral, um elemento cuja chave seja ordenada de maneira equivalente.|
+|*val*|O valor de um elemento a ser inserido no [hash_set](../standard-library/hash-set-class.md), a menos que o `hash_set` já contenha o elemento ou, de modo geral, um elemento cuja chave seja ordenada de maneira equivalente.|
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -855,7 +855,7 @@ iterator emplace(
 
 |Parâmetro|Descrição|
 |-|-|
-|*Val*|O valor de um elemento a ser inserido no [hash_set](../standard-library/hash-set-class.md), a menos que o `hash_set` já contenha o elemento ou, de modo geral, um elemento cuja chave seja ordenada de maneira equivalente.|
+|*val*|O valor de um elemento a ser inserido no [hash_set](../standard-library/hash-set-class.md), a menos que o `hash_set` já contenha o elemento ou, de modo geral, um elemento cuja chave seja ordenada de maneira equivalente.|
 |*_Where*|O local a partir do qual se começa a procurar pelo ponto de inserção correto. (Inserção poderá ocorrer em tempo constante amortizado, em vez de no tempo logarítmico, se o ponto de inserção segue imediatamente *_Where*.)|
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1424,8 +1424,8 @@ hash_set(
 |*Al*|A classe do alocador de armazenamento a ser usado para este objeto `hash_set`, cujo padrão é `Allocator`.|
 |*Comp*|A função de comparação do tipo `const Traits` usada para ordenar os elementos no `hash_set`, cujo padrão é `hash_compare`.|
 |*Direita*|O `hash_set` do qual o `hash_set` construído é uma cópia.|
-|*Primeiro*|A posição do primeiro elemento no intervalo de elementos a serem copiados.|
-|*último*|A posição do primeiro elemento além do intervalo de elementos a serem copiados.|
+|*First*|A posição do primeiro elemento no intervalo de elementos a serem copiados.|
+|*Last*|A posição do primeiro elemento além do intervalo de elementos a serem copiados.|
 
 ### <a name="remarks"></a>Comentários
 
@@ -1476,8 +1476,8 @@ void insert(
 |-|-|
 |*Val*|O valor de um elemento a ser inserido no `hash_set`, a menos que o `hash_set` já contenha o elemento ou, de modo geral, um elemento cuja chave seja ordenada de maneira equivalente.|
 |*Where*|O local a partir do qual se começa a procurar pelo ponto de inserção correto. (A inserção poderá ocorrer em um tempo constante amortizado, em vez de no tempo logarítmico, se o ponto de inserção seguir `_Where` imediatamente.)|
-|*Primeiro*|A posição do primeiro elemento a ser copiado de um `hash_set`.|
-|*último*|A posição logo após o último elemento a ser copiado de um `hash_set`.|
+|*First*|A posição do primeiro elemento a ser copiado de um `hash_set`.|
+|*Last*|A posição logo após o último elemento a ser copiado de um `hash_set`.|
 |*IList*|O initializer_list do qual copiar os elementos.|
 
 ### <a name="return-value"></a>Valor de retorno

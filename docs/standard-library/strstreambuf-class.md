@@ -21,11 +21,11 @@ helpviewer_keywords:
 - std::strstreambuf [C++], underflow
 ms.assetid: b040b8ea-0669-4eba-8908-6a9cc159c54b
 ms.openlocfilehash: 75c9a96b727ef60280055536296f850f492d16ac
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327298"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412274"
 ---
 # <a name="strstreambuf-class"></a>Classe strstreambuf
 
@@ -270,10 +270,10 @@ virtual streampos seekoff(streamoff _Off,
 
 ### <a name="parameters"></a>Parâmetros
 
-*Off*<br/>
+*_Off*<br/>
 A posição para buscar com relação a *Way*.
 
-*Way*<br/>
+*_Way*<br/>
 O ponto de partida para operações de deslocamento. Consulte [seekdir](../standard-library/ios-base-class.md#seekdir) para valores possíveis.
 
 *_Which*<br/>

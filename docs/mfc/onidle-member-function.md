@@ -11,11 +11,11 @@ helpviewer_keywords:
 - message handling [MFC], OnIdle method [MFC]
 ms.assetid: 51adc874-0075-4f76-be1c-79283f46c10b
 ms.openlocfilehash: c7cdd5cd2327be1b90e7fdb3694353acf8adcafe
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304426"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62394541"
 ---
 # <a name="onidle-member-function"></a>Função de membro OnIdle
 
@@ -30,4 +30,4 @@ Para obter mais informações sobre o que você pode fazer o loop ocioso, consul
 
 ## <a name="see-also"></a>Consulte também
 
-[CWinApp: A classe do aplicativo](../mfc/cwinapp-the-application-class.md)
+[CWinApp: a classe do aplicativo](../mfc/cwinapp-the-application-class.md)

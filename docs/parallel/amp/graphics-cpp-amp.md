@@ -3,11 +3,11 @@ title: Elementos gráficos (C++ AMP)
 ms.date: 11/04/2016
 ms.assetid: 190a98a4-5f7d-442e-866b-b374ca74c16f
 ms.openlocfilehash: 4a40575d84c9a0efedcb3c7c9717fc310870b530
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57260875"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405658"
 ---
 # <a name="graphics-c-amp"></a>Elementos gráficos (C++ AMP)
 
@@ -263,7 +263,7 @@ Você também pode copiar de uma textura para outra usando o [Texture:: copy_to]
 
 ## <a name="texture-view-classes"></a>Classes de exibição de textura
 
-C++ AMP introduz o [classe texture_view](../../parallel/amp/reference/texture-view-class.md) no Visual Studio 2013. Exibições de textura suportam os mesmos tipos e ordens que o [classe texture](../../parallel/amp/reference/texture-class.md), mas diferentemente de texturas, eles fornecem acesso aos recursos de hardware adicionais como amostragem de textura e mapas MIP. Exibições de textura suportam acesso somente leitura, somente gravação e leitura / gravação aos dados subjacentes de textura.
+C++AMP introduz o [classe texture_view](../../parallel/amp/reference/texture-view-class.md) no Visual Studio 2013. Exibições de textura suportam os mesmos tipos e ordens que o [classe texture](../../parallel/amp/reference/texture-class.md), mas diferentemente de texturas, eles fornecem acesso aos recursos de hardware adicionais como amostragem de textura e mapas MIP. Exibições de textura suportam acesso somente leitura, somente gravação e leitura / gravação aos dados subjacentes de textura.
 
 - Acesso somente leitura é fornecido pela `texture_view<const T, N>` textura de especialização de modelo, que dá suporte a elementos que têm 1, 2 ou 4 componentes, amostragem e dinâmico acesso a uma variedade de mipmaps que são determinados quando a exibição é instanciada.
 
@@ -275,7 +275,7 @@ Exibições de textura são análogas a exibições de matriz, mas não fornecem
 
 ### <a name="writeonlytextureview-deprecated"></a>writeonly_texture_view preterido
 
-Para Visual Studio 2013, o C++ AMP apresenta melhor suporte para recursos de textura de hardware, como amostragem e mipmaps, que não pôde ser compatível com o [classe writeonly_texture_view](../../parallel/amp/reference/writeonly-texture-view-class.md). A recém-lançada `texture_view` classe dá suporte a um superconjunto da funcionalidade no `writeonly_texture_view`; assim, `writeonly_texture_view` foi preterido.
+Para Visual Studio 2013, C++ AMP apresenta melhor suporte para recursos de textura de hardware, como amostragem e mipmaps, que não pôde ser compatível com o [classe writeonly_texture_view](../../parallel/amp/reference/writeonly-texture-view-class.md). A recém-lançada `texture_view` classe dá suporte a um superconjunto da funcionalidade no `writeonly_texture_view`; assim, `writeonly_texture_view` foi preterido.
 
 É recomendável — pelo menos para o novo código — que você usa `texture_view` para acessar a funcionalidade que foi fornecida anteriormente por `writeonly_texture_view`. Compare os dois exemplos a seguir que gravam em um objeto de textura que tem dois componentes (int_2). Observe que em ambos os casos, o modo de exibição, `wo_tv4`, devem ser capturadas por valor na expressão lambda. Aqui está o exemplo que usa o novo `texture_view` classe:
 
