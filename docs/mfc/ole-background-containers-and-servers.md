@@ -15,11 +15,11 @@ helpviewer_keywords:
 - server applications [MFC]
 ms.assetid: dafbb31d-096c-4654-b774-12900d832919
 ms.openlocfilehash: c154562e58cf8f37d77df61556fe25b19ca54c70
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304815"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64346107"
 ---
 # <a name="ole-background-containers-and-servers"></a>Tela de fundo OLE: Contêineres e servidores
 
@@ -36,8 +36,8 @@ Usando esse meios de comunicação, um contêiner não precisa saber os detalhes
 ## <a name="see-also"></a>Consulte também
 
 [Tela de fundo OLE](../mfc/ole-background.md)<br/>
-[Tela de fundo OLE: Implementação do MFC](../mfc/ole-background-mfc-implementation.md)<br/>
+[Tela de fundo OLE: implementação do MFC](../mfc/ole-background-mfc-implementation.md)<br/>
 [Contêineres](../mfc/containers.md)<br/>
 [Servidores](../mfc/servers.md)<br/>
-[Contêineres: Itens de cliente](../mfc/containers-client-items.md)<br/>
-[servidores: Itens do servidor](../mfc/servers-server-items.md)
+[Contêineres: itens de cliente](../mfc/containers-client-items.md)<br/>
+[Servidores: itens de servidor](../mfc/servers-server-items.md)

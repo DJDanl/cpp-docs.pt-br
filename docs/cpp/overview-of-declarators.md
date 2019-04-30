@@ -5,11 +5,11 @@ helpviewer_keywords:
 - declarators, about declarators
 ms.assetid: 0f2e2312-80bd-4154-8345-718bd9ed2173
 ms.openlocfilehash: e651b4422a159bf947e364c82cc4aac1b888d30d
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52177076"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64345838"
 ---
 # <a name="overview-of-declarators"></a>Visão geral dos declaradores
 
@@ -158,15 +158,15 @@ int a, *b, c[5], **d, &e=a;
 
   - identifier
   - nome qualificado
-  - Declarador (-lista de argumentos) [cv-qualfiers] [especificação de exceção]
-  - Declarador de [[expressão constante]]
+  - declarator ( argument-list ) [cv-qualfiers] [exception-spec]
+  - declarator [ [ constant-expression ] ]
   - Declarador de operador de ponteiro
   - (declarador)
 
 - e *operador de ponteiro* é um dos:
 
-  - \* [qualificadores cv]
-  - & [qualificadores cv]:: especificador aninhados de nome \* [qualificadores cv]
+  - \* [cv-qualifiers]
+  - & [cv-qualifiers] ::nested-name-specifier \* [cv-qualifiers]
 
 Como um declarador pode conter declaradores, é possível criar os tipos derivados mais complexos, como matrizes de ponteiros, funções que retornam matrizes de ponteiros de função, usando as regras acima.  Para formar cada etapa da construções, comece com o identificador que representa o tipo de dados base e aplique a regra de sintaxe acima com a expressão anterior como `declarator`.  A ordem que você aplica as regras de sintaxe deve ser contrária à forma que a expressão é indicada em inglês.  Se aplicar a *operador de ponteiro* regra de sintaxe em uma expressão de matriz ou função, use parênteses se você quiser que um ponteiro para a matriz ou função, como a última linha na tabela a seguir.
 
