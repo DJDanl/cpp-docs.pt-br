@@ -1,56 +1,46 @@
 ---
-title: Erros em tempo de execução de C R6002 a R6035
-ms.date: 11/17/2017
+title: Erros de tempo de execução de C
+ms.date: 04/16/2019
 f1_keywords:
 - c.errors
+- R6000
+- R6003
+- R6010
+- R6022
+- R6023
+- R6034
 ms.assetid: 78019050-9a30-4b61-8250-a5702e0e2393
-ms.openlocfilehash: b1a4aa5114965451791f44d88eb9e5ca61ff9c57
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
-ms.translationtype: MT
+ms.openlocfilehash: 8fc1c5365d4c09908235336575c80b9df6892f90
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58766879"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62400026"
 ---
-# <a name="c-runtime-errors-r6002-through-r6035"></a>Erros em tempo de execução de C R6002 a R6035
+# <a name="c-runtime-errors-rxxxx"></a>Erros de tempo de execução de C (Rxxxx)
 
-Esta seção é uma referência para os erros que podem ser gerados pela biblioteca de tempo de execução C (CRT) quando seu aplicativo for carregado ou em execução. Mesmo que a mensagem se refere ao tempo de execução do Microsoft Visual C++, esses erros indicam um bug no código do seu aplicativo ou uma condição de que a biblioteca de tempo de execução não pode processar, como memória insuficiente. Os usuários finais de seu aplicativo poderá ver esses erros se você não codifique seu aplicativo para impedir que as condições que causam-los ou escrever código para capturar esses erros e apresentar uma mensagem amigável para seus usuários.
+A biblioteca de tempo de execução C (CRT) pode relatar um erro de tempo de execução quando seu aplicativo for carregado ou em execução. Mesmo que cada mensagem refere-se ao Microsoft Visual C++ biblioteca de tempo de execução, isso não significa que há um bug na biblioteca. Esses erros indicam um bug no código do seu aplicativo ou uma condição de que a biblioteca de tempo de execução não pode processar, como memória insuficiente. Os usuários finais de seu aplicativo poderá ver esses erros, a menos que sua gravação seu aplicativo para impedi-los, ou para capturar os erros e apresentar um erro amigáveis de mensagem para os usuários em vez disso.
 
-Você pode obter assistência adicional para erros e avisos em fóruns públicos da Microsoft. Você pode procurar o erro ou o número de aviso sobre a [comunidade de desenvolvedores](https://developercommunity.visualstudio.com) site. O [geral do Visual C++](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=vcgeneral) é de fórum para perguntas sobre o Visual C++ que não são discutidas em outros fóruns. Você também pode procurar erros e avisos e faça perguntas no [Stack Overflow](http://stackoverflow.com/) para encontrar soluções.
+[!INCLUDE[error-boilerplate](../../error-messages/includes/error-boilerplate.md)]
 
-Para obter links para ajuda adicional e recursos da comunidade, consulte [Ajuda do Visual C++ e a comunidade](../../overview/visual-cpp-help-and-community.md).
+## <a name="c-runtime-errors"></a>Erros de tempo de execução de C
 
-## <a name="c-runtime-errors"></a>Erros de tempo de execução C
-
-[Erro em tempo de execução de C R6002](../../error-messages/tool-errors/c-runtime-error-r6002.md)
-
-[Erro em tempo de execução de C R6008](../../error-messages/tool-errors/c-runtime-error-r6008.md)
-
-[Erro em tempo de execução de C R6009](../../error-messages/tool-errors/c-runtime-error-r6009.md)
-
-[Erro em tempo de execução de C R6016](../../error-messages/tool-errors/c-runtime-error-r6016.md)
-
-[Erro em tempo de execução de C R6017](../../error-messages/tool-errors/c-runtime-error-r6017.md)
-
-[Erro em tempo de execução de C R6018](../../error-messages/tool-errors/c-runtime-error-r6018.md)
-
-[Erro em tempo de execução de C R6019](../../error-messages/tool-errors/c-runtime-error-r6019.md)
-
-[Erro em tempo de execução de C R6024](../../error-messages/tool-errors/c-runtime-error-r6024.md)
-
-[Erro em tempo de execução de C R6025](../../error-messages/tool-errors/c-runtime-error-r6025.md)
-
-[Erro em tempo de execução de C R6028](../../error-messages/tool-errors/c-runtime-error-r6028.md)
-
-[Erro em tempo de execução de C R6030](../../error-messages/tool-errors/c-runtime-error-r6030.md)
-
-[Erro em tempo de execução de C R6031](../../error-messages/tool-errors/c-runtime-error-r6031.md)
-
-[Erro em tempo de execução de C R6032](../../error-messages/tool-errors/c-runtime-error-r6032.md)
-
-[Erro em tempo de execução de C R6033](../../error-messages/tool-errors/c-runtime-error-r6033.md)
-
+[R6002 de erro de tempo de execução do C](../../error-messages/tool-errors/c-runtime-error-r6002.md) \
+[C Runtime Error R6008](../../error-messages/tool-errors/c-runtime-error-r6008.md) \
+[C R6009 de erro de tempo de execução](../../error-messages/tool-errors/c-runtime-error-r6009.md) \
+[R6016 de erro de tempo de execução do C](../../error-messages/tool-errors/c-runtime-error-r6016.md) \
+[C R6017 de erro de tempo de execução](../../error-messages/tool-errors/c-runtime-error-r6017.md) \
+[C Runtime Error R6018](../../error-messages/tool-errors/c-runtime-error-r6018.md) \
+[C R6019 de erro de tempo de execução](../../error-messages/tool-errors/c-runtime-error-r6019.md) \
+[C Runtime Error R6024](../../error-messages/tool-errors/c-runtime-error-r6024.md) \
+[C R6025 de erro de tempo de execução](../../error-messages/tool-errors/c-runtime-error-r6025.md) \
+[C Runtime Error R6028](../../error-messages/tool-errors/c-runtime-error-r6028.md) \
+[C Runtime Error R6030](../../error-messages/tool-errors/c-runtime-error-r6030.md) \
+[C R6031 de erro de tempo de execução](../../error-messages/tool-errors/c-runtime-error-r6031.md) \
+[C R6032 de erro de tempo de execução](../../error-messages/tool-errors/c-runtime-error-r6032.md) \
+[C R6033 de erro de tempo de execução](../../error-messages/tool-errors/c-runtime-error-r6033.md) \
 [Erro em tempo de execução de C R6035](../../error-messages/tool-errors/c-runtime-error-r6035.md)
 
 ## <a name="see-also"></a>Consulte também
 
-[Erros de build do C/C++](../../error-messages/compiler-errors-1/c-cpp-build-errors.md)
+[C /C++ ferramentas de compilador e build erros e avisos](../compiler-errors-1/c-cpp-build-errors.md)

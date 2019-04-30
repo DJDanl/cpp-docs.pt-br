@@ -3,15 +3,15 @@ title: Cadeias de caracteres (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: 5b34e1df-7c2b-4269-aba8-b767d36c49d9
 ms.openlocfilehash: 8f7cbdd02cb1d38231c476ba939009a95533a046
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57744318"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62403237"
 ---
 # <a name="strings-ccx"></a>Cadeias de caracteres (C++/CX)
 
-Texto em tempo de execução do Windows é representado no C + + c++ /CLI CX pela [4&gt;classe](../cppcx/platform-string-class.md). Use o `Platform::String Class` ao passar cadeias de caracteres e voltar para métodos nas classes de tempo de execução do Windows, ou quando você estiver interagindo com outros componentes de tempo de execução do Windows nos limites da ABI (interface binária) de aplicativo. `Platform::String Class` fornece métodos para várias operações comuns de cadeia de caracteres, mas não foi projetado para ser uma classe de cadeia de caracteres completa. Em seu módulo C++, use tipos de cadeia de caracteres C++ padrão, como [wstring](../standard-library/basic-string-class.md) para qualquer processamento de texto significativo e, em seguida, converta o resultado final em [Platform::String^](../cppcx/platform-string-class.md) antes de transmiti-lo de ou para uma interface pública. A conversão entre `wstring` ou `wchar_t*` e `Platform::String`é fácil e eficiente.
+O texto no tempo de execução do Windows é representado na C++/CX pela [4&gt;classe](../cppcx/platform-string-class.md). Use o `Platform::String Class` ao passar cadeias de caracteres e voltar para métodos nas classes de tempo de execução do Windows, ou quando você estiver interagindo com outros componentes de tempo de execução do Windows nos limites da ABI (interface binária) de aplicativo. `Platform::String Class` fornece métodos para várias operações comuns de cadeia de caracteres, mas não foi projetado para ser uma classe de cadeia de caracteres completa. Em seu módulo C++, use tipos de cadeia de caracteres C++ padrão, como [wstring](../standard-library/basic-string-class.md) para qualquer processamento de texto significativo e, em seguida, converta o resultado final em [Platform::String^](../cppcx/platform-string-class.md) antes de transmiti-lo de ou para uma interface pública. A conversão entre `wstring` ou `wchar_t*` e `Platform::String`é fácil e eficiente.
 
 **Passagem rápida**
 

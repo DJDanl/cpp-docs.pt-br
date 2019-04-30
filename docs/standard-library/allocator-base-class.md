@@ -39,11 +39,11 @@ helpviewer_keywords:
 - stdext::allocator_base [C++], max_size
 ms.assetid: f920b45f-2a88-4bb0-8ead-b6126b426ed4
 ms.openlocfilehash: 59d5834b941791a659815ff0a03f1c68c8ce68bd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50591640"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62411065"
 ---
 # <a name="allocatorbase-class"></a>Classe allocator_base
 
@@ -153,7 +153,7 @@ const_pointer address(const_reference val);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Val*<br/>
+*val*<br/>
 O valor const ou não const do objeto cujo endereço está sendo pesquisado.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -240,7 +240,7 @@ void construct(pointer ptr, const Type& val);
 |Parâmetro|Descrição|
 |---------------|-----------------|
 |*ptr*|Um ponteiro para o local no qual o objeto deve ser construído.|
-|*Val*|O valor com o qual o objeto que está sendo construído deve ser inicializado.|
+|*val*|O valor com o qual o objeto que está sendo construído deve ser inicializado.|
 
 ### <a name="remarks"></a>Comentários
 

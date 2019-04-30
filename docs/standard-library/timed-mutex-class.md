@@ -19,11 +19,11 @@ helpviewer_keywords:
 - std::timed_mutex [C++], try_lock_until
 - std::timed_mutex [C++], unlock
 ms.openlocfilehash: 9aae1205866a0bf982ab7c41b792aac0f63ea149
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50524816"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62411949"
 ---
 # <a name="timedmutex-class"></a>Classe timed_mutex
 
@@ -37,7 +37,7 @@ class timed_mutex;
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|

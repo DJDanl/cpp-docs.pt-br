@@ -10,11 +10,11 @@ f1_keywords:
 - chrono/std::chrono::system_clock::is_steady Constant
 ms.assetid: a97bd46e-267a-4836-9f7d-af1f664e99ae
 ms.openlocfilehash: 66710f94d96f069d6d388d6b49c76747c618a0d0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50557973"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412144"
 ---
 # <a name="systemclock-structure"></a>Estrutura system_clock
 
@@ -50,7 +50,7 @@ Um relógio será *estável* se ele for *monotônico* e se o tempo entre os tiqu
 |Nome|Descrição|
 |----------|-----------------|
 |[from_time_t](#from_time_t)|Estático. Retorna um `time_point` que mais se aproxima de um tempo especificado.|
-|[Agora](#now)|Estático. Retorna a data atual.|
+|[now](#now)|Estático. Retorna a data atual.|
 |[to_time_t](#to_time_t)|Estático. Retorna um objeto `time_t` que mais se aproxima de um `time_point` especificado.|
 
 ### <a name="public-constants"></a>Constantes públicas

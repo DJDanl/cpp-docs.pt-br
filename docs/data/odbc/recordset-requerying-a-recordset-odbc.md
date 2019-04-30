@@ -9,11 +9,11 @@ helpviewer_keywords:
 - refreshing recordsets
 ms.assetid: 4ebc3b5b-5b91-4f51-a967-245223c6b8e1
 ms.openlocfilehash: 7edc1c04da617f96165b25a47ce169b266ae0003
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59024589"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62397699"
 ---
 # <a name="recordset-requerying-a-recordset-odbc"></a>Conjunto de registros: Repetindo consulta a um conjunto de registros (ODBC)
 
@@ -58,5 +58,5 @@ Se o `Requery` chamar falhar, você pode repetir a chamada; caso contrário, seu
 ## <a name="see-also"></a>Consulte também
 
 [Conjunto de registros (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Conjunto de registros: Associando dinamicamente colunas de dados (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)<br/>
-[Conjunto de registros: Criando e fechando conjuntos de registros (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md)
+[Conjunto de registros: associar dinamicamente colunas de dados (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)<br/>
+[Conjunto de registros: criar e fechar conjuntos de registros (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md)

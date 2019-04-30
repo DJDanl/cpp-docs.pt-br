@@ -8,11 +8,11 @@ helpviewer_keywords:
 - enable_if
 ms.assetid: c6b8d41c-a18f-4e30-a39e-b3aa0e8fd926
 ms.openlocfilehash: b6990dba20643b35dde36a492d40c3e3e76ae0b4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50591874"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62413756"
 ---
 # <a name="enableif-class"></a>Classe enable_if
 
@@ -50,7 +50,7 @@ Em C++, a falha de substituição de parâmetros de modelo não é um erro em si
 
 Seguem quatro cenários de exemplo:
 
-- Cenário 1: Definindo a disposição do tipo de retorno de uma função:
+- Cenário 1: O tipo de retorno de uma função de disposição:
 
 ```cpp
     template <your_stuff>
@@ -64,7 +64,7 @@ yourfunction(args) {// ...
 }
 ```
 
-- Cenário 2: Adicionando um parâmetro de função com um argumento padrão:
+- Cenário 2: Adicionando um parâmetro de função que tem um argumento padrão:
 
 ```cpp
     template <your_stuff>
@@ -73,14 +73,14 @@ your_return_type_if_present
 }
 ```
 
-- Cenário 3: Adicionando um parâmetro de modelo com um argumento padrão:
+- Cenário 3: Adicionando um parâmetro de modelo que tem um argumento padrão:
 
 ```cpp
     template <your_stuff, typename Dummy = enable_if_t<your_condition>>
 rest_of_function_declaration_goes_here
 ```
 
-- Cenário 4: Se a sua função tiver um argumento não modelado, você poderá encapsular seu tipo:
+- Cenário 4: Se sua função tem um argumento não modelado, você pode encapsular seu tipo:
 
 ```cpp
     template <typename T>

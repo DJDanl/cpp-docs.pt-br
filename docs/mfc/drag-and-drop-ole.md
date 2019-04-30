@@ -10,11 +10,11 @@ helpviewer_keywords:
 - OLE drag and drop [MFC]
 ms.assetid: a4595350-ca06-4400-88a1-f0175c76b77b
 ms.openlocfilehash: 98bd58745e56a62bf5700e9b5fe4963a7b584953
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58766789"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405918"
 ---
 # <a name="drag-and-drop-ole"></a>Arrastar e soltar (OLE)
 
@@ -32,11 +32,11 @@ Se você não leu a [objetos de dados e fontes de dados (OLE)](../mfc/data-objec
 
 Para obter mais informações sobre como arrastar e soltar, consulte:
 
-- [Arrastar e soltar: Implementando uma origem para soltar](../mfc/drag-and-drop-implementing-a-drop-source.md)
+- [Arrastar e soltar: implementar uma fonte para soltar](../mfc/drag-and-drop-implementing-a-drop-source.md)
 
-- [Arrastar e soltar: Implementando um destino de soltar](../mfc/drag-and-drop-implementing-a-drop-target.md)
+- [Arrastar e soltar: implementar um destino para soltar](../mfc/drag-and-drop-implementing-a-drop-target.md)
 
-- [Arrastar e soltar: Personalizando](../mfc/drag-and-drop-customizing.md)
+- [Arrastar e soltar: personalizar](../mfc/drag-and-drop-customizing.md)
 
 ## <a name="see-also"></a>Consulte também
 

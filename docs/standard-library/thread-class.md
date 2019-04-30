@@ -24,11 +24,11 @@ helpviewer_keywords:
 - std::thread [C++], native_handle
 - std::thread [C++], swap
 ms.openlocfilehash: d1405062ef553dbfea3b60b5f39e0546707343b6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519490"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412066"
 ---
 # <a name="thread-class"></a>Classe thread
 
@@ -152,7 +152,7 @@ void join();
 
 Se a chamada tiver êxito, as chamadas posteriores a [get_id](#get_id) do objeto de chamada retornarão um [thread::id](#id_class) padrão que não é comparado como igual ao `thread::id` de qualquer thread existente; se a chamada não tiver êxito, o valor retornado por `get_id` ficará inalterado.
 
-## <a name="joinable"></a>  thread:: joinable
+## <a name="joinable"></a>  thread::joinable
 
 Especifica se o thread associado *permite junções*.
 
@@ -168,7 +168,7 @@ bool joinable() const noexcept;
 
 Um objeto de thread *permitirá junções* se `get_id() != id()`.
 
-## <a name="native_handle"></a>  thread:: native_handle
+## <a name="native_handle"></a>  thread::native_handle
 
 Retorna o tipo específico à implementação que representa o identificador de thread. O identificador de thread pode ser usado de maneiras específicas à implementação.
 

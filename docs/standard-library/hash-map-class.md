@@ -89,11 +89,11 @@ helpviewer_keywords:
 - stdext::hash_map::value_comp
 ms.assetid: 40879dfc-51ba-4a59-9f9e-26208de568a8
 ms.openlocfilehash: da046a467333fba9aa106b97e21cf583c8cef75d
-ms.sourcegitcommit: d441305fb19131afbd7fc259d8cda63ea26f2343
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51678555"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405060"
 ---
 # <a name="hashmap-class"></a>Classe hash_map
 
@@ -123,7 +123,7 @@ O tipo de dados do elemento a ser armazenado no hash_map.
 *Características*<br/>
 O tipo que inclui dois objetos de função: um da classe compare, para comparar dois valores de elemento como chaves de classificação para determinar sua ordem relativa e uma função de hash, que é um predicado unário que mapeia valores chave dos elementos para inteiros sem sinal do tipo `size_t`. Esse argumento é opcional e hash_compare <`Key`, less <`Key`>> é o valor padrão.
 
-*Alocador*<br/>
+*Allocator*<br/>
 O tipo que representa o objeto alocador armazenado que encapsula detalhes sobre a alocação e a desalocação de memória do hash_map. Esse argumento é opcional e o valor padrão é allocator<pair <const `Key`, `Type`>>.
 
 ## <a name="remarks"></a>Comentários
@@ -648,7 +648,7 @@ O valor de chave dos elementos a serem correspondidos do hash_map.
 
 A função membro retorna o número de elementos *x* no intervalo
 
-\[ lower_bound (*chave*), upper_bound (*chave*))
+\[ lower_bound(*key*), upper_bound(*key*) )
 
 que será 0 ou 1, no caso do hash_map, que é um contêiner associativo exclusivo.
 
@@ -891,7 +891,7 @@ emplace(
 
 |Parâmetro|Descrição|
 |-|-|
-|*Val*|O valor usado para construir um elemento a ser inserido no [hash_map](../standard-library/hash-map-class.md), a menos que o `hash_map` já contenha o elemento (ou, de modo geral, um elemento cuja chave seja ordenada de maneira equivalente).|
+|*val*|O valor usado para construir um elemento a ser inserido no [hash_map](../standard-library/hash-map-class.md), a menos que o `hash_map` já contenha o elemento (ou, de modo geral, um elemento cuja chave seja ordenada de maneira equivalente).|
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -950,7 +950,7 @@ iterator emplace_hint(
 
 |Parâmetro|Descrição|
 |-|-|
-|*Val*|O valor usado para construir um elemento a ser inserido no [hash_map](../standard-library/hash-map-class.md), a menos que o `hash_map` já contenha o elemento (ou, de modo geral, um elemento cuja chave seja ordenada de maneira equivalente).|
+|*val*|O valor usado para construir um elemento a ser inserido no [hash_map](../standard-library/hash-map-class.md), a menos que o `hash_map` já contenha o elemento (ou, de modo geral, um elemento cuja chave seja ordenada de maneira equivalente).|
 |*_Where*|Uma dica relacionada ao local do qual se começa a procurar pelo ponto de inserção correto.|
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1538,8 +1538,8 @@ hash_map(
 |*Al*|A classe de alocador de armazenamento a ser usado para este objeto hash_map, cujo padrão é `Allocator`.|
 |*Comp*|A função de comparação do tipo const `Traits` usada para ordenar os elementos no hash_map, cujo padrão é `hash_compare`.|
 |*Direita*|O hash_map do qual o mapa construído deve ser uma cópia.|
-|*Primeiro*|A posição do primeiro elemento no intervalo de elementos a serem copiados.|
-|*último*|A posição do primeiro elemento além do intervalo de elementos a serem copiados.|
+|*First*|A posição do primeiro elemento no intervalo de elementos a serem copiados.|
+|*Last*|A posição do primeiro elemento além do intervalo de elementos a serem copiados.|
 |*IList*|A initializer_list|
 
 ### <a name="remarks"></a>Comentários
@@ -1593,7 +1593,7 @@ iterator insert(
 
 |Parâmetro|Descrição|
 |-|-|
-|*Val*|O valor de um elemento a ser inserido no hash_map, a menos que o hash_map já contenha o elemento (ou, de modo geral, um elemento cuja chave seja ordenada de maneira equivalente).|
+|*val*|O valor de um elemento a ser inserido no hash_map, a menos que o hash_map já contenha o elemento (ou, de modo geral, um elemento cuja chave seja ordenada de maneira equivalente).|
 |*_Where*|Uma dica relacionada ao local do qual se começa a procurar pelo ponto de inserção correto.|
 |*first*|A posição do primeiro elemento a ser copiado de um hash_map.|
 |*last*|A posição logo após o último elemento a ser copiado de um hash_map.|

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Creating C++ async operations
 ms.assetid: a57cecf4-394a-4391-a957-1d52ed2e5494
 ms.openlocfilehash: 8815861e525a2824bb1bc7a7d0e40f96b053c6a4
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57426778"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62413969"
 ---
 # <a name="creating-asynchronous-operations-in-c-for-uwp-apps"></a>Criando operações assíncronas em C++ para aplicativos UWP
 
@@ -23,7 +23,7 @@ O uso de programação assíncrona é um componente fundamental no modelo de apl
 
 ## <a name="key-points"></a>Pontos-chave
 
-- Use [Concurrency:: create_async](reference/concurrency-namespace-functions.md#create_async) para criar operações assíncronas que podem ser usadas por outros componentes (que podem ser escritos em linguagens diferentes do C++).
+- Use [Concurrency:: create_async](reference/concurrency-namespace-functions.md#create_async) para criar operações assíncronas que podem ser usadas por outros componentes (que podem ser escrito em linguagens diferentes de C++).
 
 - Use [Concurrency:: progress_reporter](../../parallel/concrt/reference/progress-reporter-class.md) para notificações de progresso de relatório para componentes que chamam as operações assíncronas.
 

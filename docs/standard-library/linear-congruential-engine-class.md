@@ -7,11 +7,11 @@ helpviewer_keywords:
 - linear_congruential_engine class
 ms.assetid: 30e00ca6-1933-4701-9561-54f3e810a5a1
 ms.openlocfilehash: 83306e47995f652014682d6bcc94966aab75c062
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50568137"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62413249"
 ---
 # <a name="linearcongruentialengine-class"></a>Classe linear_congruential_engine
 
@@ -49,13 +49,13 @@ class linear_congruential_engine{
 O tipo de resultado inteiro sem sinal. Para encontrar os tipos possíveis, consulte [\<random>](../standard-library/random.md).
 
 *A*<br/>
-**Multiplicador**. **Pré-condição**: consulte a seção Comentários.
+**Multiplicador**. **Pré-condição**: Consulte a seção Observações.
 
 *C*<br/>
-**Incremento**. **Pré-condição**: consulte a seção Comentários.
+**Incremento**. **Pré-condição**: Consulte a seção Observações.
 
 *M*<br/>
-**Módulo**. **Pré-condição**: consulte os comentários.
+**Módulo**. **Pré-condição**: Consulte Observações.
 
 ## <a name="members"></a>Membros
 
@@ -80,13 +80,13 @@ Se *M* for diferente de zero, os valores dos argumentos do modelo *um* e *C* dev
 
 Embora seja possível construir um gerador diretamente desse mecanismo, também é possível usar um dos typedefs predefinidos.
 
-`minstd_rand0`: mecanismo padrão mínimo de 1988 (Lewis, Goodman e Miller, 1969).
+`minstd_rand0`: Mecanismo padrão mínimo de 1988 (Lewis, Goodman e Miller, 1969).
 
 ```cpp
 typedef linear_congruential_engine<unsigned int, 16807, 0, 2147483647> minstd_rand0;
 ```
 
-`minstd_rand`: mecanismo padrão mínimo atualizado `minstd_rand0` (Park, Miller e Stockmeyer, 1993).
+`minstd_rand`: Mecanismo padrão mínimo atualizado `minstd_rand0` (Park, Miller e Stockmeyer, 1993).
 
 ```cpp
 typedef linear_congruential_engine<unsigned int, 48271, 0, 2147483647> minstd_rand;

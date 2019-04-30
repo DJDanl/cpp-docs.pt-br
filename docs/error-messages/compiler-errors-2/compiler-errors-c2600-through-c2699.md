@@ -1,6 +1,6 @@
 ---
-title: Erros de compilador C2600 a C2699
-ms.date: 11/17/2017
+title: Erros do compilador C2600 a C2699
+ms.date: 04/21/2019
 f1_keywords:
 - C2604
 - C2606
@@ -52,14 +52,14 @@ helpviewer_keywords:
 - C2686
 - C2697
 ms.assetid: 73c6319f-cbea-4a2f-913b-90dc1af61f64
-ms.openlocfilehash: af173a04f9ae1e8a3ec4c9b3c869a4e51867cf1b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.openlocfilehash: 9ac5f5724490574aecf0e5b542f6fdd42b0ae5bb
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50518645"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62406503"
 ---
-# <a name="compiler-errors-c2600-through-c2699"></a>Erros de compilador C2600 a C2699
+# <a name="compiler-errors-c2600-through-c2699"></a>Erros do compilador C2600 a C2699
 
 Os artigos nesta seção da documentação explicam um subconjunto das mensagens de erro que são gerados pelo compilador.
 
@@ -72,35 +72,35 @@ Os artigos nesta seção da documentação explicam um subconjunto das mensagens
 |[Erro do compilador C2600](compiler-error-c2600.md)|'*função*': não é possível definir uma função de membro especial gerado pelo compilador (deve ser declarada na classe pela primeira vez)|
 |[Erro do compilador C2601](compiler-error-c2601.md)|'*função*': definições de função local são inválidas|
 |[Erro do compilador C2602](compiler-error-c2602.md)|'*classe*::*identificador*'não é um membro de uma classe base de'*classe*'|
-|[Erro do compilador C2603](compiler-error-c2603.md)|'*função*': muitos bloco objetos static de escopo com construtores/destrutores na função|
-|C2604 de erro do compilador|'*identificador*': não é possível implementar mais de um método de interface|
+|[Erro do compilador C2603](compiler-error-c2603.md)|'*função*': Objetos estáticos do excesso escopo de bloco com construtores/destrutores na função|
+|Erro do compilador C2604|'*identifier*': Não é possível implementar mais de um método de interface|
 |[Erro do compilador C2605](compiler-error-c2605.md)|'*identificador*': este método é reservado dentro de uma classe gerenciada/WinRT|
-|C2606 de erro do compilador|'*class1*': não pode reimplementar '*membro*', pois é herdado da base de tempo de execução'*class2*'|
-|C2607 de erro do compilador|Falha na declaração estática|
-|C2608 de erro do compilador|Obsoleto.|
-|C2609 de erro do compilador|Obsoleto.|
-|C2610 de erro do compilador|'*classe*::*membro*': não é uma função de membro especial que pode ser usada como padrão|
+|Erro do compilador C2606|'*class1*': não pode reimplementar '*membro*', pois é herdado da base de tempo de execução'*class2*'|
+|Erro do compilador C2607|Falha na declaração estática|
+|Erro do compilador C2608|Obsoleto.|
+|Erro do compilador C2609|Obsoleto.|
+|Erro do compilador C2610|'*classe*::*membro*': não é uma função de membro especial que pode ser usada como padrão|
 |[Erro do compilador C2611](compiler-error-c2611.md)|'*token*': seguinte ilegal ' ~' (identificador esperado)|
 |[Erro do compilador C2612](compiler-error-c2612.md)|à direita '*caractere*' inválido na lista de inicializadores de base/membro|
 |[Erro do compilador C2613](compiler-error-c2613.md)|à direita '*caractere*' inválido na lista de classes base|
 |[Erro do compilador C2614](compiler-error-c2614.md)|'*classe*': inicialização de membro inválida: '*identificador*' não é uma base ou membro|
-|C2615 de erro do compilador|Obsoleto.|
+|Erro do compilador C2615|Obsoleto.|
 |[Erro do compilador C2616](compiler-error-c2616.md)|'*conversão*': não é possível converter implicitamente não lvalue '*type1*' para um '*type2*' que não seja const|
 |[Erro do compilador C2617](compiler-error-c2617.md)|'*função*': instrução return inconsistente|
-|C2618 de erro do compilador|Obsoleto.|
+|Erro do compilador C2618|Obsoleto.|
 |[Erro do compilador C2619](compiler-error-c2619.md)|'*identificador*': um membro de dados estáticos não é permitido em um struct/union anônima|
-|C2620 de erro do compilador|Obsoleto.|
-|C2621 de erro do compilador|Obsoleto.|
-|C2622 de erro do compilador|Obsoleto.|
-|C2623 de erro do compilador|Obsoleto.|
+|Erro do compilador C2620|Obsoleto.|
+|Erro do compilador C2621|Obsoleto.|
+|Erro do compilador C2622|Obsoleto.|
+|Erro do compilador C2623|Obsoleto.|
 |[Erro do compilador C2624](compiler-error-c2624.md)|'*escopo*::*tipo*': classes locais não podem ser usadas para declarar as variáveis 'extern'|
-|C2625 de erro do compilador|'*identificador*': membro de união inválido; o tipo '*tipo*' é do tipo de referência|
+|Erro do compilador C2625|'*identificador*': membro de união inválido; o tipo '*tipo*' é do tipo de referência|
 |[Erro do compilador C2626](compiler-error-c2626.md)|'*identificador*': um membro de dados protegidos de forma privada/não é permitido em um struct/union anônima|
 |[Erro do compilador C2627](compiler-error-c2627.md)|'*função*': função membro não permitida em union anônima|
 |[Erro do compilador C2628](compiler-error-c2628.md)|'*type1*'seguido por'*type2*' é inválido (você esqueceu um ';'?)|
-|C2629 de erro do compilador|'*identificador*': um struct/union anônima não pode declarar um tipo aninhado|
+|Erro do compilador C2629|'*identificador*': um struct/union anônima não pode declarar um tipo aninhado|
 |[Erro do compilador C2630](compiler-error-c2630.md)|'*símbolo*' encontrado no qual deve ser uma lista separada por vírgulas|
-|C2631 de erro do compilador|'*identificador*': uma classe ou enumeração não pode ser definida em um modelo de alias|
+|Erro do compilador C2631|'*identificador*': uma classe ou enumeração não pode ser definida em um modelo de alias|
 |[Erro do compilador C2632](compiler-error-c2632.md)|'*type1*'seguido por'*type2*' é ilegal|
 |[Erro do compilador C2633](compiler-error-c2633.md)|'*identificador*': 'inline' é a classe de armazenamento válida somente para construtores|
 |[Erro do compilador C2634](compiler-error-c2634.md)|'*classe*::*membro*': ponteiro para membro de referência é inválido|
@@ -108,12 +108,12 @@ Os artigos nesta seção da documentação explicam um subconjunto das mensagens
 |[Erro do compilador C2636](compiler-error-c2636.md)|'*identificador*': ponteiro para membro de referência é inválido|
 |[Erro do compilador C2637](compiler-error-c2637.md)|'*identificador*': não é possível modificar ponteiros para membros de dados|
 |[Erro do compilador C2638](compiler-error-c2638.md)|'*identificador*': based modificador inválido em ponteiro para membro|
-|C2639 de erro do compilador|Obsoleto.|
+|Erro do compilador C2639|Obsoleto.|
 |[Erro do compilador C2640](compiler-error-c2640.md)|'*identificador*': based modificador inválido em referência|
-|C2641 de erro do compilador|Obsoleto.|
-|C2642 de erro do compilador|Obsoleto.|
-|C2643 de erro do compilador|Obsoleto.|
-|C2644 de erro do compilador|Obsoleto.|
+|Erro do compilador C2641|Obsoleto.|
+|Erro do compilador C2642|Obsoleto.|
+|Erro do compilador C2643|Obsoleto.|
+|Erro do compilador C2644|Obsoleto.|
 |[Erro do compilador C2645](compiler-error-c2645.md)|Nenhum nome qualificado de ponteiro para membro (encontrado ':: *')|
 |[Erro do compilador C2646](compiler-error-c2646.md)|um struct/union anônima em global ou escopo de namespace deve ser declarado como static|
 |[Erro do compilador C2647](compiler-error-c2647.md)|'*operador*': não é possível desreferenciar um '*type1*' em um '*type2*'|
@@ -153,9 +153,9 @@ Os artigos nesta seção da documentação explicam um subconjunto das mensagens
 |[Erro do compilador C2681](compiler-error-c2681.md)|'*tipo*': tipo de expressão inválido para *cast*|
 |[Erro do compilador C2682](compiler-error-c2682.md)|não é possível usar '*cast*' para converter de'*type1*'para'*type2*'|
 |[Erro do compilador C2683](compiler-error-c2683.md)|'*cast*': '*tipo*' não é um tipo polimórfico|
-|C2684 de erro do compilador|'*declarador*': funções excluídas e padronizadas não têm suporte nas classes do WinRT/gerenciado|
-|C2685 de erro do compilador|'*declarador*': funções excluídas e padronizadas não têm suporte com especificadores de restrição explícitos|
-|C2686 de erro do compilador|não é possível sobrecarregar funções membro estáticas e não-estático com os mesmos tipos de parâmetro|
+|Erro do compilador C2684|'*declarador*': funções excluídas e padronizadas não têm suporte nas classes do WinRT/gerenciado|
+|Erro do compilador C2685|'*declarador*': funções excluídas e padronizadas não têm suporte com especificadores de restrição explícitos|
+|Erro do compilador C2686|não é possível sobrecarregar funções membro estáticas e não-estático com os mesmos tipos de parâmetro|
 |[Erro do compilador C2687](compiler-error-c2687.md)|'*tipo*': declaração de exceção não pode ser 'void' ou denotar um tipo incompleto ou um ponteiro ou uma referência a um tipo incompleto|
 |[Erro do compilador C2688](compiler-error-c2688.md)|'*tipo*::*membro*': retornos covariantes com múltiplas heranças ou herança virtual não tem suportada para funções varargs|
 |[Erro do compilador C2689](compiler-error-c2689.md)|'*função*': uma função friend não pode ser definida dentro de uma classe local|
@@ -166,5 +166,10 @@ Os artigos nesta seção da documentação explicam um subconjunto das mensagens
 |[Erro do compilador C2694](compiler-error-c2694.md)|'*override_function*': função virtual de substituição possui especificação de exceção menos restritiva do que a função de membro virtual da classe base '*base_function*'|
 |[Erro do compilador C2695](compiler-error-c2695.md)|'*override_function*': função virtual de substituição difere de '*base_function*' apenas pela convenção de chamada|
 |[Erro do compilador C2696](compiler-error-c2696.md)|Não é possível criar um objeto temporário do tipo gerenciado/WinRT '*tipo*'|
-|C2697 de erro do compilador|Obsoleto.|
+|Erro do compilador C2697|Obsoleto.|
 |[Erro do compilador C2698](compiler-error-c2698.md)|a declaração de using para '*declaration1*' não pode coexistir com a declaração de using existente para'*declaration2*'|
+
+## <a name="see-also"></a>Consulte também
+
+[C /C++ ferramentas de compilador e build erros e avisos](../compiler-errors-1/c-cpp-build-errors.md) \
+[Erros do compilador C2000 - C3999](../compiler-errors-1/compiler-errors-c2000-c3999.md)

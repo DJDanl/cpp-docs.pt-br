@@ -11,11 +11,11 @@ helpviewer_keywords:
 - assigning values to copy objects
 ms.assetid: a94fe1f9-0289-4fb9-8633-77c654002c0d
 ms.openlocfilehash: 59f463d103e233a1d9b25da3243a16f67263c815
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50535038"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392291"
 ---
 # <a name="copy-constructors-and-copy-assignment-operators-c"></a>Operadores de construtores de cópia e de atribuição de cópia (C++)
 
@@ -24,7 +24,7 @@ ms.locfileid: "50535038"
 >
 > Tanto a operação de atribuição como a operação de inicialização fazem com que os objetos sejam copiados.
 
-- **Atribuição**: quando o valor do objeto é atribuído a outro objeto, o primeiro objeto é copiado para o segundo objeto. Portanto,
+- **Atribuição**: Quando o valor do objeto é atribuído a outro objeto, o primeiro objeto é copiado para o segundo objeto. Portanto,
 
     ```cpp
     Point a, b;
@@ -34,7 +34,7 @@ ms.locfileid: "50535038"
 
    faz com que o valor de `b` seja copiado para `a`.
 
-- **Inicialização**: a inicialização ocorre quando um novo objeto for declarado, quando os argumentos são passados para funções por valor, ou quando valores são retornados de funções por valor.
+- **Inicialização**: A inicialização ocorre quando um novo objeto for declarado, quando os argumentos são passados para funções por valor, ou quando valores são retornados de funções por valor.
 
 Você pode definir a semântica de “cópia” para objetos do tipo classe. Por exemplo, pense neste código:
 
@@ -76,13 +76,13 @@ int main()
 
 Construtores de cópia gerado pelo compilador, como construtores de cópia definido pelo usuário, tem um único argumento do tipo "referência a *nome da classe*." Uma exceção é quando todas as classes base e membro tem construtores de cópia declarados como usuários de um único argumento do tipo **const** <em>nome da classe</em><strong>&</strong>. Nesse caso, o argumento do construtor de cópia gerado pelo compilador também estiver **const**.
 
-Quando o tipo de argumento para o construtor de cópia não é **const**, a inicialização copiando um **const** objeto gera um erro. O inverso não é verdadeiro: se o argumento for **const**, você pode inicializar copiando um objeto que não seja **const**.
+Quando o tipo de argumento para o construtor de cópia não é **const**, a inicialização copiando um **const** objeto gera um erro. O inverso não é verdadeiro: Se o argumento for **const**, você pode inicializar copiando um objeto que não seja **const**.
 
 Operadores de atribuição gerado pelo compilador seguem o mesmo padrão em relação a **const.** Eles usam um único argumento do tipo <em>nome da classe</em> <strong>&</strong> , a menos que os operadores de atribuição em todas as classes básicas e de membros usem argumentos do tipo **const** <em>nome da classe</em><strong>&</strong>. Nesse caso, a classe gerada pelo leva de operador de atribuição uma **const** argumento.
 
 > [!NOTE]
 > Quando classes básicas virtuais são inicializadas por construtores de cópia, geradas pelo compilador ou definidas pelo usuário, elas são inicializadas somente uma vez: no ponto em que são construídas.
 
-As implicações são semelhantes às do construtor de cópia. Quando o tipo de argumento não é **const**, a atribuição de uma **const** objeto gera um erro. O inverso não é verdadeiro: se um **const** valor é atribuído a um valor que não seja **const**, a atribuição será bem-sucedida.
+As implicações são semelhantes às do construtor de cópia. Quando o tipo de argumento não é **const**, a atribuição de uma **const** objeto gera um erro. O inverso não é verdadeiro: Se um **const** valor é atribuído a um valor que não seja **const**, a atribuição será bem-sucedida.
 
 Para obter mais informações sobre operadores de atribuição sobrecarregados, consulte [atribuição](../cpp/assignment.md).
