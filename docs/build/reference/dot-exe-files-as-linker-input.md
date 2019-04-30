@@ -6,11 +6,11 @@ helpviewer_keywords:
 - .exe files
 ms.assetid: 73714c30-6f03-4e72-881e-090e5240ba93
 ms.openlocfilehash: 855847067fb726816a1b23ac8e54afc0b9d7927f
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57808412"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64342835"
 ---
 # <a name="exe-files-as-linker-input"></a>Arquivos .Exe como entrada de vinculador
 
@@ -19,4 +19,4 @@ O [nome de arquivo de Stub do MS-DOS](stub-ms-dos-stub-file-name.md) (/ STUB) op
 ## <a name="see-also"></a>Consulte também
 
 [Arquivos de entrada de LINK](link-input-files.md)<br/>
-[Opções do vinculador MSVC](linker-options.md)
+[Opções de vinculador MSVC](linker-options.md)

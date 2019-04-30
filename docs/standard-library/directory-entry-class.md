@@ -35,11 +35,11 @@ helpviewer_keywords:
 - std::experimental::filesystem::directory_entry::operator&gt;
 - std::experimental::filesystem::directory_entry::operator&gt;=
 ms.openlocfilehash: c1b68aefd44d8f0ac60c36307dee93333d801bb9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50533816"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64342986"
 ---
 # <a name="directoryentry-class"></a>Classe directory_entry
 
@@ -104,7 +104,7 @@ void assign(const std::experimental::filesystem::path& pval,
 
 ### <a name="parameters"></a>Parâmetros
 
-*PVal*<br/>
+*pval*<br/>
 O caminho do nome de arquivo armazenado.
 
 *stat_arg*<br/>
@@ -128,7 +128,7 @@ explicit directory_entry(const std::experimental::filesystem::path& pval,
 
 ### <a name="parameters"></a>Parâmetros
 
-*PVal*<br/>
+*pval*<br/>
 O caminho do nome de arquivo armazenado.
 
 *stat_arg*<br/>
@@ -150,7 +150,7 @@ bool operator!=(const directory_entry& right) const noexcept;
 *right*<br/>
 O [directory_entry](../standard-library/directory-entry-class.md) que estão sendo comparados para o `directory_entry`.
 
-## <a name="op_as"></a> operador =
+## <a name="op_as"></a> operator=
 
 Os operadores de atribuição de membro usados como padrão se comportam como esperado.
 
@@ -164,7 +164,7 @@ directory_entry& operator=(directory_entry&&) noexcept = default;
 *right*<br/>
 O [directory_entry](../standard-library/directory-entry-class.md) que está sendo copiado para o `directory_entry`.
 
-## <a name="op_eq"></a> operador = =
+## <a name="op_eq"></a> operator==
 
 A função membro retorna `mypath == right.mypath`.
 
@@ -177,7 +177,7 @@ bool operator==(const directory_entry& right) const noexcept;
 *right*<br/>
 O [directory_entry](../standard-library/directory-entry-class.md) que estão sendo comparados para o `directory_entry`.
 
-## <a name="op_lt"></a> operador&lt;
+## <a name="op_lt">Operador </a>&lt;
 
 A função membro retorna `mypath < right.mypath`.
 
@@ -203,7 +203,7 @@ bool operator&lt;=(const directory_entry& right) const noexcept;
 *right*<br/>
 O [directory_entry](../standard-library/directory-entry-class.md) que estão sendo comparados para o `directory_entry`.
 
-## <a name="op_gt"></a> operador&gt;
+## <a name="op_gt">Operador </a>&gt;
 
 A função membro retorna `right < *this`.
 
@@ -258,7 +258,7 @@ void replace_filename(
 
 ### <a name="parameters"></a>Parâmetros
 
-*PVal*<br/>
+*pval*<br/>
 O caminho do nome de arquivo armazenado.
 
 *stat_arg*<br/>
@@ -282,12 +282,12 @@ file_status status(error_code& ec) const noexcept;
 
 ### <a name="parameters"></a>Parâmetros
 
-*EC*<br/>
+*ec*<br/>
 O código de erro de status.
 
 ## <a name="symlink_status"></a> symlink_status
 
-Ambas as funções membro retornam `mysymstat` , possivelmente, primeiro alterado da seguinte maneira: se `status_known(mysymstat)` , em seguida, não faça nada. Caso contrário, `mysymstat = symlink_status(mypval)`.
+Ambas as funções membro retornam `mysymstat` , possivelmente, primeiro alterado da seguinte maneira: Se `status_known(mysymstat)` , em seguida, não faça nada. Caso contrário, `mysymstat = symlink_status(mypval)`.
 
 ```cpp
 file_status symlink_status() const;
@@ -296,7 +296,7 @@ file_status symlink_status(error_code& ec) const noexcept;
 
 ### <a name="parameters"></a>Parâmetros
 
-*EC*<br/>
+*ec*<br/>
 O código de erro de status.
 
 ## <a name="see-also"></a>Consulte também
