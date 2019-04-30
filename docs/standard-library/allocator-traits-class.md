@@ -41,11 +41,11 @@ helpviewer_keywords:
 - std::allocator_traits [C++], max_size
 - std::allocator_traits [C++], select_on_container_copy_construction
 ms.openlocfilehash: 66c8c998a91ddd3e6550b57415a513fae55856da
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50537755"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62410961"
 ---
 # <a name="allocatortraits-class"></a>Classe allocator_traits
 
@@ -106,13 +106,13 @@ static pointer allocate(Alloc& al, size_type count,
 
 ### <a name="parameters"></a>Parâmetros
 
-*Al*<br/>
+*al*<br/>
 Um objeto alocador.
 
 *count*<br/>
 O número de elementos a serem alocados.
 
-*Dica*<br/>
+*hint*<br/>
 Um `const_pointer` que pode ajudar o objeto alocador a atender à solicitação de armazenamento, localizando o endereço de um objeto alocado antes da solicitação. Um ponteiro nulo é tratado como nenhuma dica.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -134,7 +134,7 @@ static void construct(Alloc& al, Uty* ptr, Types&&... args);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Al*<br/>
+*al*<br/>
 Um objeto alocador.
 
 *ptr*<br/>
@@ -159,7 +159,7 @@ static void deallocate(Alloc al,
 
 ### <a name="parameters"></a>Parâmetros
 
-*Al*<br/>
+*al*<br/>
 Um objeto alocador.
 
 *ptr*<br/>
@@ -185,7 +185,7 @@ static void destroy(Alloc& al, Uty* ptr);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Al*<br/>
+*al*<br/>
 Um objeto alocador.
 
 *ptr*<br/>
@@ -195,7 +195,7 @@ Um ponteiro para o local do objeto.
 
 Esse método chamará `al.destroy(ptr)`, se essa expressão for bem formada, caso contrário, será avaliado como `ptr->~Uty()`.
 
-## <a name="max_size"></a>  allocator_traits:: max_size
+## <a name="max_size"></a>  allocator_traits::max_size
 
 Método estático que usa um alocador especificado para determinar o número máximo de objetos que podem ser alocados.
 
@@ -205,7 +205,7 @@ static size_type max_size(const Alloc& al);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Al*<br/>
+*al*<br/>
 Um objeto alocador.
 
 ### <a name="remarks"></a>Comentários
@@ -222,7 +222,7 @@ static Alloc select_on_container_copy_construction(const Alloc& al);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Al*<br/>
+*al*<br/>
 Um objeto alocador.
 
 ### <a name="return-value"></a>Valor de retorno

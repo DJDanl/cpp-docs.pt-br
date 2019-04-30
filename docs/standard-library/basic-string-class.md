@@ -117,11 +117,11 @@ helpviewer_keywords:
 - std::basic_string [C++], swap
 ms.assetid: a9c3e0a2-39bf-4c8a-b093-9abe30839591
 ms.openlocfilehash: ab93f8b225e27c0cf4d294d176c566bd6f2b5d02
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50518567"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62409779"
 ---
 # <a name="basicstring-class"></a>Classe basic_string
 
@@ -137,12 +137,12 @@ class basic_string;
 ### <a name="parameters"></a>Parâmetros
 
 *CharType*<br/>
-O tipo de dados de um único caractere a ser armazenado na cadeia de caracteres. A biblioteca padrão C++ oferece especializações desta classe de modelo, com as definições de tipo [cadeia de caracteres](../standard-library/string-typedefs.md#string) para elementos do tipo **char**, [wstring](../standard-library/string-typedefs.md#wstring), para **wchar_t**, [u16string](../standard-library/string-typedefs.md#u16string) para `char16_t`, e [u32string](../standard-library/string-typedefs.md#u32string) para `char32_t`.
+O tipo de dados de um único caractere a ser armazenado na cadeia de caracteres. O C++ biblioteca padrão oferece especializações desta classe de modelo, com as definições de tipo [cadeia de caracteres](../standard-library/string-typedefs.md#string) para elementos do tipo **char**, [wstring](../standard-library/string-typedefs.md#wstring), para **wchar_t**, [u16string](../standard-library/string-typedefs.md#u16string) para `char16_t`, e [u32string](../standard-library/string-typedefs.md#u32string) para `char32_t`.
 
 *Características*<br/>
 Várias propriedades importantes dos `CharType` elementos em uma especialização basic_string são descritos pela classe `Traits`. O valor padrão é `char_traits`< `CharType`>.
 
-*Alocador*<br/>
+*Allocator*<br/>
 O tipo que representa o objeto alocador armazenado que encapsula detalhes sobre a alocação e desalocação de memória da cadeia de caracteres. O valor padrão é **allocator**< `CharType`>.
 
 ### <a name="constructors"></a>Construtores
@@ -313,13 +313,13 @@ A cadeia de caracteres do C a ser acrescentada.
 *str*<br/>
 A cadeia de caracteres cujos caracteres devem ser acrescentados.
 
-*Off*<br/>
+*_Off*<br/>
 O índice da parte da cadeia de caracteres de origem que fornece os caracteres a serem acrescentados.
 
 *count*<br/>
 O número máximo de caracteres a serem acrescentados da cadeia de caracteres de origem.
 
-*CH*<br/>
+*_Ch*<br/>
 O valor de caractere a ser acrescentados.
 
 *first*<br/>
@@ -477,7 +477,7 @@ O número de caracteres a ser atribuído da cadeia de caracteres de origem.
 *str*<br/>
 A cadeia de caracteres de origem cujos caracteres devem ser atribuídos à cadeia de caracteres de destino.
 
-*CH*<br/>
+*_Ch*<br/>
 O valor do caractere a ser atribuído.
 
 *first*<br/>
@@ -486,7 +486,7 @@ Um iterador de entrada, const_pointer ou const_iterator, que trata do primeiro c
 *last*<br/>
 Um iterador de entrada, const_pointer ou const_iterator, que trata do caractere logo após o último caractere no intervalo da cadeia de caracteres de origem a ser atribuído ao intervalo de destino.
 
-*Desativar*<br/>
+*off*<br/>
 A posição em que novos caracteres começarão a ser atribuídos.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -601,7 +601,7 @@ reference at(size_type _Off);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Off*<br/>
+*_Off*<br/>
 O índice da posição do elemento a ser referenciado.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -762,7 +762,7 @@ A cadeia de caracteres para inicializar a cadeia de caracteres que está sendo c
 *_Roff*<br/>
 O índice de um caractere em uma cadeia de caracteres que será o primeiro a ser usado para inicializar os valores de caracteres para a cadeia de caracteres que está sendo construída.
 
-*CH*<br/>
+*_Ch*<br/>
 O valor de caractere a ser copiado para a cadeia de caracteres que está sendo construída.
 
 *first*<br/>
@@ -1168,7 +1168,7 @@ O número máximo de caracteres da cadeia de caracteres do operando a serem comp
 *_Num2*<br/>
 O número máximo de caracteres da cadeia de caracteres do parâmetro a serem comparados.
 
-*Off*<br/>
+*_Off*<br/>
 O índice da cadeia de caracteres do parâmetro na qual a comparação começa.
 
 *count*<br/>
@@ -1490,7 +1490,7 @@ A matriz de caracteres de destino à qual os elementos devem ser copiados.
 
 _ *Contagem* o número de caracteres a ser copiado, no máximo, da cadeia de caracteres de origem.
 
-*Off*<br/>
+*_Off*<br/>
 A posição inicial na cadeia de caracteres de origem da qual as cópias devem ser feitas.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1598,7 +1598,7 @@ O tamanho de *dest*.
 
 _ *Contagem* o número de caracteres a ser copiado, no máximo, da cadeia de caracteres de origem.
 
-*Off*<br/>
+*_Off*<br/>
 A posição inicial na cadeia de caracteres de origem da qual as cópias devem ser feitas.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1919,7 +1919,7 @@ Um iterador que trata da posição logo após o último elemento no intervalo a 
 *_It*<br/>
 Um iterador que trata da posição do elemento na cadeia de caracteres a ser apagado.
 
-*POS*<br/>
+*_Pos*<br/>
 O índice do primeiro caractere na cadeia de caracteres a ser removido.
 
 *count*<br/>
@@ -2019,10 +2019,10 @@ size_type find(
 
 ### <a name="parameters"></a>Parâmetros
 
-*CH*<br/>
+*_Ch*<br/>
 O valor de caractere que a função membro deve pesquisar.
 
-*Off*<br/>
+*_Off*<br/>
 Índice da posição em que a pesquisa deve começar.
 
 *ptr*<br/>
@@ -2194,10 +2194,10 @@ size_type find_first_not_of(
 
 ### <a name="parameters"></a>Parâmetros
 
-*CH*<br/>
+*_Ch*<br/>
 O valor de caractere que a função membro deve pesquisar.
 
-*Off*<br/>
+*_Off*<br/>
 Índice da posição em que a pesquisa deve começar.
 
 *ptr*<br/>
@@ -2382,10 +2382,10 @@ size_type find_first_of(
 
 ### <a name="parameters"></a>Parâmetros
 
-*CH*<br/>
+*_Ch*<br/>
 O valor de caractere que a função membro deve pesquisar.
 
-*Off*<br/>
+*_Off*<br/>
 Índice da posição em que a pesquisa deve começar.
 
 *ptr*<br/>
@@ -2569,10 +2569,10 @@ size_type find_last_not_of(
 
 ### <a name="parameters"></a>Parâmetros
 
-*CH*<br/>
+*_Ch*<br/>
 O valor de caractere que a função membro deve pesquisar.
 
-*Off*<br/>
+*_Off*<br/>
 Índice da posição em que a pesquisa deve terminar.
 
 *ptr*<br/>
@@ -2758,10 +2758,10 @@ size_type find_last_of(
 
 ### <a name="parameters"></a>Parâmetros
 
-*CH*<br/>
+*_Ch*<br/>
 O valor de caractere que a função membro deve pesquisar.
 
-*Off*<br/>
+*_Off*<br/>
 Índice da posição em que a pesquisa deve terminar.
 
 *ptr*<br/>
@@ -3037,10 +3037,10 @@ O número de caracteres a serem inseridos.
 *str*<br/>
 A cadeia de caracteres a ser totalmente ou parcialmente inserida na cadeia de caracteres de destino.
 
-*Off*<br/>
+*_Off*<br/>
 O índice da parte da cadeia de caracteres de origem que fornece os caracteres a serem acrescentados.
 
-*CH*<br/>
+*_Ch*<br/>
 O valor de caractere dos elementos a serem inseridos.
 
 *_It*<br/>
@@ -3330,7 +3330,7 @@ basic_string<CharType, Traits, Allocator>& operator+=(
 
 ### <a name="parameters"></a>Parâmetros
 
-*CH*<br/>
+*_Ch*<br/>
 O caractere a ser acrescentado.
 
 *ptr*<br/>
@@ -3422,7 +3422,7 @@ basic_string<CharType, Traits, Allocator>& operator=(
 
 ### <a name="parameters"></a>Parâmetros
 
-*CH*<br/>
+*_Ch*<br/>
 O valor do caractere a ser atribuído.
 
 *ptr*<br/>
@@ -3507,7 +3507,7 @@ reference operator[](size_type _Off);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Off*<br/>
+*_Off*<br/>
 O índice da posição do elemento a ser referenciado.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -3624,7 +3624,7 @@ void push_back(value_type _Ch);
 
 ### <a name="parameters"></a>Parâmetros
 
-*CH*<br/>
+*_Ch*<br/>
 O caractere a ser adicionado ao final da cadeia de caracteres.
 
 ### <a name="remarks"></a>Comentários
@@ -3939,7 +3939,7 @@ O número máximo de caracteres a serem usados da cadeia de caracteres do C do p
 *ptr*<br/>
 A cadeia de caracteres do C que deve ser uma fonte de caracteres para a cadeia de caracteres do operando.
 
-*CH*<br/>
+*_Ch*<br/>
 O caractere a ser copiado para a cadeia de caracteres do operando.
 
 *first0*<br/>
@@ -4248,7 +4248,7 @@ void resize(
 *count*<br/>
 O novo tamanho da cadeia de caracteres.
 
-*CH*<br/>
+*_Ch*<br/>
 O valor com o qual os caracteres acrescentados serão inicializados se forem necessários elementos adicionais.
 
 ### <a name="remarks"></a>Comentários
@@ -4381,10 +4381,10 @@ size_type rfind(
 
 ### <a name="parameters"></a>Parâmetros
 
-*CH*<br/>
+*_Ch*<br/>
 O valor de caractere que a função membro deve pesquisar.
 
-*Off*<br/>
+*_Off*<br/>
 Índice da posição em que a pesquisa deve começar.
 
 *ptr*<br/>
@@ -4664,7 +4664,7 @@ basic_string<CharType, Traits, Allocator> substr(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Off*<br/>
+*_Off*<br/>
 Um índice que localiza o elemento na posição da qual é feita a cópia da cadeia de caracteres, com um valor padrão igual a 0.
 
 *count*<br/>

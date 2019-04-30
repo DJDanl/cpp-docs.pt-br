@@ -9,11 +9,11 @@ helpviewer_keywords:
 - CD2DPointU [MFC], CD2DPointU
 ms.assetid: 04733f96-b6de-4a89-82e3-caad1e8087a9
 ms.openlocfilehash: d66793abbb83015891df348eef8384e5c97baf2c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57281116"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62396308"
 ---
 # <a name="cd2dpointu-class"></a>Classe CD2DPointU
 
@@ -27,7 +27,7 @@ class CD2DPointU : public D2D1_POINT_2U;
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|

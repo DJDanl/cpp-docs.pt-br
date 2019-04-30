@@ -3,15 +3,15 @@ title: Usando objetos accelerator e accelerator_view
 ms.date: 11/04/2016
 ms.assetid: 18f0dc66-8236-4420-9f46-1a14f2c3fba1
 ms.openlocfilehash: 05ca53d075867fefa43f7471bb795040d075274e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57272887"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405385"
 ---
 # <a name="using-accelerator-and-acceleratorview-objects"></a>Usando objetos accelerator e accelerator_view
 
-Você pode usar o [accelerator](../../parallel/amp/reference/accelerator-class.md) e [accelerator_view](../../parallel/amp/reference/accelerator-view-class.md) classes para especificar o dispositivo ou emulador para executar seu código C++ AMP em. Um sistema pode ter vários dispositivos ou emuladores que diferem pela quantidade de memória, suporte à memória compartilhada, suporte à depuração ou suporte de precisão dupla. C++ Accelerated Massive Parallelism (C++ AMP) fornece APIs que você pode usar para examinar os Aceleradores disponíveis, definir um como padrão, especificar várias accelerator_views para chamadas múltiplas ao parallel_for_each e executar tarefas de depuração especiais.
+Você pode usar o [accelerator](../../parallel/amp/reference/accelerator-class.md) e [accelerator_view](../../parallel/amp/reference/accelerator-view-class.md) classes para especificar o dispositivo ou emulador para executar sua C++ código de AMP no. Um sistema pode ter vários dispositivos ou emuladores que diferem pela quantidade de memória, suporte à memória compartilhada, suporte à depuração ou suporte de precisão dupla. C++Accelerated Massive Parallelism (C++ AMP) fornece APIs que você pode usar para examinar os Aceleradores disponíveis, definir um como padrão, especificar várias accelerator_views para chamadas múltiplas ao parallel_for_each e executar tarefas de depuração especiais.
 
 ## <a name="using-the-default-accelerator"></a>Usando o acelerador padrão
 

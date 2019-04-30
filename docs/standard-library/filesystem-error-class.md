@@ -5,11 +5,11 @@ f1_keywords:
 - filesystem/std::experimental::filesystem::filesystem_error
 ms.assetid: c53aac27-c1fa-43e4-8967-48ea8ba1f172
 ms.openlocfilehash: add1e0da43a44c35f39c96e8d65e36aeea0d3afb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50628976"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405151"
 ---
 # <a name="filesystemerror-class"></a>Classe filesystem_error
 
@@ -37,7 +37,7 @@ A classe serve como a classe base para todas as exceções geradas para relatar 
 |-|-|
 |[path1](#path1)|Retorna `mypval1`|
 |[path2](#path2)|Retorna `mypval2`|
-|[o que](#what)|Retorna um ponteiro para um `NTBS`.|
+|[what](#what)|Retorna um ponteiro para um `NTBS`.|
 
 ## <a name="requirements"></a>Requisitos
 
@@ -45,7 +45,7 @@ A classe serve como a classe base para todas as exceções geradas para relatar 
 
 **Namespace:** std::experimental::filesystem
 
-## <a name="filesystem_error"></a> filesystem_error:: filesystem_error
+## <a name="filesystem_error"></a> filesystem_error::filesystem_error
 
 O primeiro construtor constrói sua mensagem de *what_arg* e *ec*. O segundo construtor também constrói sua mensagem de *pval1*, que armazena em `mypval1`. O terceiro construtor também constrói sua mensagem de *pval1*, que armazena em `mypval1`e de *pval2*, que armazena em `mypval2`.
 
@@ -68,7 +68,7 @@ filesystem_error(const string& what_arg,
 *what_arg*<br/>
 Mensagem especificada.
 
-*EC*<br/>
+*ec*<br/>
 Código de erro especificado.
 
 *mypval1*<br/>
@@ -93,7 +93,7 @@ A função membro retorna `mypval2`
 const path& path2() const noexcept;
 ```
 
-## <a name="what"></a> filesystem_error::What
+## <a name="what"></a> filesystem_error::what
 
 A função membro retorna um ponteiro para um `NTBS`, preferencialmente composto por `runtime_error::what()`, `system_error::what()`, `mymesg`, `mypval1.native_string()`, e `mypval2.native_string()`.
 

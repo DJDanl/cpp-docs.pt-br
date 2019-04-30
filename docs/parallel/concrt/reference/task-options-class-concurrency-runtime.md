@@ -5,11 +5,11 @@ f1_keywords:
 - ppltasks/concurrency::task_options
 ms.assetid: f93d146b-70f7-46ec-8c2f-c33b8bb0af69
 ms.openlocfilehash: c832ce759c556765fa412b2ef77333bc6612b8c3
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57265204"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62407868"
 ---
 # <a name="taskoptions-class-concurrency-runtime"></a>task_options Classe (Tempo de Execução de Simultaneidade)
 
@@ -23,13 +23,13 @@ class task_options;
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
 |[task_options:: task_options (tempo de execução de simultaneidade) do construtor](#ctor)|Sobrecarregado. Lista padrão de opções de criação de tarefas|
 
-### <a name="public-methods"></a>Métodos Públicos
+### <a name="public-methods"></a>Métodos públicos
 
 |Nome|Descrição|
 |----------|-----------------|

@@ -5,11 +5,11 @@ f1_keywords:
 - istream/std::operator&gt;&gt;
 ms.assetid: 7174da41-f301-4a34-b631-0ab918b188d2
 ms.openlocfilehash: 05b10c27d8e0cf4c0300bb307d8b7ceda43ddb2f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50474081"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62413301"
 ---
 # <a name="ltistreamgt-operators"></a>Operadores &lt;istream&gt;
 
@@ -56,7 +56,7 @@ basic_istream<Elem, Tr>& operator>>(
 
 ### <a name="parameters"></a>Parâmetros
 
-*CH*<br/>
+*Ch*<br/>
 Um caractere.
 
 *ISTR*<br/>
@@ -65,7 +65,7 @@ Um fluxo.
 *str*<br/>
 Uma cadeia de caracteres.
 
-*Val*<br/>
+*val*<br/>
 Um tipo.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -84,7 +84,7 @@ basic_istream<Elem, Tr>& operator>>(
     basic_istream<Elem, Tr>& Istr, Elem* str);
 ```
 
-extrai até *N* - 1 elementos e os armazena na matriz que começa em _ *Str*. Se `Istr`. [width](../standard-library/ios-base-class.md#width) for maior que zero, *N* será `Istr`. **largura**; caso contrário, ele é o tamanho da matriz maior de `Elem` que pode ser declarado. A função sempre armazena o valor `Elem()` após quaisquer elementos extraídos que armazene. A extração é interrompida prematuramente no final do arquivo, em um caractere com valor **Elem**(0) (que não é extraído) ou em qualquer elemento (que não é extraído) que seria descartado por [ws](../standard-library/istream-functions.md#ws). Se a função não extrair nenhum elemento, ela chamará `Istr`. [SetState](../standard-library/basic-ios-class.md#setstate)(**failbit**). Em qualquer caso, chamará `Istr`. **largura**(0) e retorna *Istr*.
+extrai até *N* - 1 elementos e os armazena na matriz que começa em _ *Str*. Se `Istr`. [width](../standard-library/ios-base-class.md#width) for maior que zero, *N* será `Istr`. **largura**; caso contrário, ele é o tamanho da matriz maior de `Elem` que pode ser declarado. A função sempre armazena o valor `Elem()` após quaisquer elementos extraídos que armazene. A extração é interrompida prematuramente no final do arquivo, em um caractere com valor **Elem**(0) (que não é extraído) ou em qualquer elemento (que não é extraído) que seria descartado por [ws](../standard-library/istream-functions.md#ws). Se a função não extrair nenhum elemento, ela chamará `Istr`. [setstate](../standard-library/basic-ios-class.md#setstate)(**failbit**). Em qualquer caso, chamará `Istr`. **largura**(0) e retorna *Istr*.
 
 **Observação de segurança** a cadeia de caracteres terminada em nulo que está sendo extraída do fluxo de entrada não deve exceder o tamanho do buffer de destino *str*. Para obter mais informações, consulte [Avoiding Buffer Overruns](/windows/desktop/SecBP/avoiding-buffer-overruns) (Evitando estouros de buffer).
 

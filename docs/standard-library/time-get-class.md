@@ -39,11 +39,11 @@ helpviewer_keywords:
 - std::time_get [C++], get_year
 ms.assetid: 869d5f5b-dbab-4628-8333-bdea7e272023
 ms.openlocfilehash: df5a6da3995b1485585a3105ac027f19a27dc8eb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505177"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412027"
 ---
 # <a name="timeget-class"></a>Classe time_get
 
@@ -232,10 +232,10 @@ Um campo na iosbase no qual os elementos de bitmask apropriados são definidos p
 *ptm*<br/>
 Um ponteiro para a estrutura de tempo na qual o tempo deve ser armazenado.
 
-*FMT*<br/>
+*fmt*<br/>
 Um caractere especificador de conversão.
 
-*Mod*<br/>
+*mod*<br/>
 Um caractere modificador opcional.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -568,10 +568,10 @@ Os elementos de bitmask apropriados são definidos para o estado de fluxo para i
 *ptm*<br/>
 Ponteiro para a estrutura de tempo na qual o tempo deve ser armazenado.
 
-*FMT*<br/>
+*fmt*<br/>
 Um caractere especificador de conversão.
 
-*Mod*<br/>
+*mod*<br/>
 Um caractere modificador opcional.
 
 *fmt_first*<br/>
@@ -590,7 +590,7 @@ A primeira função membro retorna `do_get(first, last, iosbase, state, ptm, fmt
 
 A segunda função membro chama `do_get` sob o controle do formato delimitado por `[fmt_first, fmt_last)`. Ela trata o formato como uma sequência de campos, em que cada uma delas determina a conversão de zero ou mais elementos de entrada delimitados por `[first, last)`. Ela retorna um iterador que designa o primeiro elemento não convertido. Há três tipos de campos:
 
-Um por cento (%) no formato, seguido por um modificador opcional *mod* no conjunto [EOQ #], seguido por um especificador de conversão *fmt*, substitui *primeiro* com o valor retornado por `do_get(first, last, iosbase, state, ptm, fmt, mod)`. Uma falha de conversão define `ios_base::failbit` na *estado* e retorna.
+Um por cento (%) o formato, seguido por um modificador opcional *mod* no conjunto [EOQ #], seguido por um especificador de conversão *fmt*, substitui *primeiro* com o valor retornado por `do_get(first, last, iosbase, state, ptm, fmt, mod)`. Uma falha de conversão define `ios_base::failbit` na *estado* e retorna.
 
 Um elemento de espaço em branco no formato ignora após zero ou mais elementos de espaço em branco de entrada.
 
@@ -1047,11 +1047,11 @@ Valor inteiro usado para especificar o tipo de gerenciamento de memória do obje
 
 Os valores possíveis para o *refs* parâmetro e sua significância são:
 
-- 0: o tempo de vida do objeto é gerenciado pelas localidades que o contêm.
+- 0: O tempo de vida do objeto é gerenciado pelas localidades que o contêm.
 
-- 1: o tempo de vida do objeto deve ser gerenciado manualmente.
+- 1: O tempo de vida do objeto deve ser gerenciado manualmente.
 
-- \> 1: esses valores não estão definidos.
+- \> 1: Esses valores não estão definidos.
 
 Nenhum exemplo direto é possível, pois o destruidor está protegido.
 

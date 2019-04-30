@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C2032
 ms.assetid: 625d7c83-70b6-42c2-a558-81fbc0026324
 ms.openlocfilehash: 5743aba880f23d7706940936fc4a3a1973a84ca1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50558243"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62400507"
 ---
 # <a name="compiler-error-c2032"></a>Erro do compilador C2032
 

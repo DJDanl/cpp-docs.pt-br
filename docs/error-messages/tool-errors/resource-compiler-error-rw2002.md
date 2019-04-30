@@ -7,11 +7,11 @@ helpviewer_keywords:
 - RW2002
 ms.assetid: b1d1a49b-b50b-4b0b-9f09-c7762e2dbe8f
 ms.openlocfilehash: 4cd922fff691b524ec9d278ac5948992fc096e09
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523482"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62396763"
 ---
 # <a name="resource-compiler-error-rw2002"></a>Erro RW2002 (compilador de recurso)
 
@@ -69,7 +69,7 @@ Erro de análise
 
 1. **nome de classe de controle esperado**
 
-   O `class` campo de um **controle** instrução no **caixa de diálogo** instrução deve ser um dos seguintes tipos: botão, COMBOBOX, editar, LISTBOX, barra de ROLAGEM, estático, ou definido pelo usuário. Verifique se que a classe está escrita corretamente.
+   O `class` campo de um **controle** instrução no **caixa de diálogo** instrução deve ser um dos seguintes tipos: BOTÃO, COMBOBOX, editar, LISTBOX, barra de ROLAGEM, estático, ou definido pelo usuário. Verifique se que a classe está escrita corretamente.
 
 1. **Esperado nome de face da fonte**
 
@@ -141,7 +141,7 @@ Erro de análise
 
 1. **Tipo de controle inválido**
 
-   Cada instrução de controle em uma **caixa de diálogo** instrução deve ser um dos seguintes: caixa de seleção, caixa de COMBINAÇÃO, controle, CTEXT, DEFPUSHBUTTON, EDITTEXT, GROUPBOX, ícone, LISTBOX, LTEXT, PUSHBUTTON, RADIOBUTTON, RTEXT, barra de ROLAGEM. Verifique se essas instruções de controle foram escritas corretamente.
+   Cada instrução de controle em uma **caixa de diálogo** instrução deve ser um dos seguintes: CAIXA DE SELEÇÃO, CAIXA DE COMBINAÇÃO, CONTROLE, CTEXT, DEFPUSHBUTTON, EDITTEXT, GROUPBOX, ÍCONE, LISTBOX, LTEXT, PUSHBUTTON, RADIOBUTTON, RTEXT, BARRA DE ROLAGEM. Verifique se essas instruções de controle foram escritas corretamente.
 
 1. **Tipo inválido**
 
