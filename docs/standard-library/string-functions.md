@@ -29,11 +29,11 @@ helpviewer_keywords:
 - std::to_string [C++]
 - std::to_wstring [C++]
 ms.openlocfilehash: d10af9bc32acd730db1fe9da3775ac2aa84e5fff
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519204"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412339"
 ---
 # <a name="ltstringgt-functions"></a>Funções &lt;de cadeia de caracteres&gt;
 
@@ -82,7 +82,7 @@ O fluxo de entrada do qual uma cadeia de caracteres será extraída.
 *str*<br/>
 A cadeia de caracteres na qual são lidos os caracteres do fluxo de entrada.
 
-*Delim*<br/>
+*delim*<br/>
 O delimitador de linha.
 
 ### <a name="return-value"></a>Valor de retorno
