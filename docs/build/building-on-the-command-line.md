@@ -11,11 +11,11 @@ helpviewer_keywords:
 - command line [C++], compilers
 ms.assetid: 7ca9daed-a003-4162-842d-908f79058365
 ms.openlocfilehash: 21d1c9063a1d6dd154de8d2caca913ea3fd0ce37
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
-ms.translationtype: MT
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57812116"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64342161"
 ---
 # <a name="use-the-msvc-toolset-from-the-command-line"></a>Usar o conjunto de ferramentas do MSVC da linha de comando
 
@@ -184,7 +184,7 @@ Descreve como usar essas opções do compilador para usar uma biblioteca de temp
 [Opções do compilador do C/C++](reference/compiler-options.md)<br/>
 Fornece links a artigos que falam sobre as opções de compilador da linguagem C e C++ e sobre o CL.exe.
 
-[Opções do vinculador MSVC](reference/linker-options.md)<br/>
+[Opções de vinculador MSVC](reference/linker-options.md)<br/>
 Fornece links a artigos que falam sobre as opções do vinculador e sobre o LINK.exe.
 
 [Ferramentas de Build do MSVC adicionais](reference/c-cpp-build-tools.md)<br/>
@@ -192,4 +192,4 @@ Fornece links para o C/C++ criam ferramentas que estão incluídas no Visual Stu
 
 ## <a name="see-also"></a>Consulte também
 
-[Projetos e sistemas de build](projects-and-build-systems-cpp.md)
+[Sistemas de Compilação e Projetos](projects-and-build-systems-cpp.md)

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Concurrency namespace
 ms.assetid: b5aab265-3bac-42c5-8ead-f92ce05ef267
 ms.openlocfilehash: e0870eb046f1cec091a72d49c94a2fea41484340
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57278685"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64346031"
 ---
 # <a name="concurrency-namespace-c-amp"></a>Namespace Concurrency (C++ AMP)
 
@@ -72,7 +72,7 @@ namespace Concurrency;
 |[operador Operator-(C++ AMP)](concurrency-namespace-operators-amp.md#operator-)|Calcula a diferença em entre os argumentos especificados.|
 |[operador * operador (C++ AMP)](concurrency-namespace-operators-amp.md#operator_star)|Calcula o produto em todo componente dos argumentos especificados.|
 |[operador / operador (C++ AMP)](concurrency-namespace-operators-amp.md#operator_div)|Calcula o quociente em todo componente dos argumentos especificados.|
-|[operador % operador (C++ AMP)](concurrency-namespace-operators-amp.md#operator_mod)|Calcula o módulo do primeiro argumento especificado pelo segundo argumento especificado.|
+|[operador Operator % (C++ AMP)](concurrency-namespace-operators-amp.md#operator_mod)|Calcula o módulo do primeiro argumento especificado pelo segundo argumento especificado.|
 
 ### <a name="functions"></a>Funções
 
@@ -92,12 +92,12 @@ namespace Concurrency;
 |[atomic_fetch_sub](concurrency-namespace-functions-amp.md#atomic_fetch_sub)|Sobrecarregado. Define o valor armazenado no local especificado para a diferença desse valor e um valor especificado como uma operação atômica.|
 |[atomic_fetch_xor](concurrency-namespace-functions-amp.md#atomic_fetch_xor)|Sobrecarregado. Define o valor armazenado no local especificado para o bit a bit `xor` desse valor e um valor especificado como uma operação atômica.|
 |[copy](concurrency-namespace-functions-amp.md#copy)|Copia um objeto C++ AMP. Todos os requisitos de transferência de dados síncronos são atendidos. Dados não podem ser copiados quando o código está executando código em um acelerador. A forma geral dessa função é `copy(src, dest)`.|
-|[copy_async](concurrency-namespace-functions-amp.md#copy_async)|Copia um objeto C++ AMP e retorna [completion_future](completion-future-class.md) que pode ser esperado. Dados não podem ser copiados quando o código está em execução em um acelerador. A forma geral dessa função é `copy(src, dest)`.|
+|[copy_async](concurrency-namespace-functions-amp.md#copy_async)|Copia um C++ objeto AMP e retorna [completion_future](completion-future-class.md) que pode ser esperado. Dados não podem ser copiados quando o código está em execução em um acelerador. A forma geral dessa função é `copy(src, dest)`.|
 |[direct3d_abort](concurrency-namespace-functions-amp.md#direct3d_abort)|Anula a execução de uma função que tem o `restrict(amp)` cláusula de restrição.|
 |[direct3d_errorf](concurrency-namespace-functions-amp.md#direct3d_errorf)|Imprime uma cadeia de caracteres formatada para o Visual Studio **saída** janela e gera um [runtime_exception](runtime-exception-class.md) exceção que tem a mesma formatação de cadeia de caracteres.|
 |[direct3d_printf](concurrency-namespace-functions-amp.md#direct3d_printf)|Imprime uma cadeia de caracteres formatada para o Visual Studio **saída** janela. Ele é chamado de uma função que tem o `restrict(amp)` cláusula de restrição.|
 |[global_memory_fence](concurrency-namespace-functions-amp.md#global_memory_fence)|Impede a execução de todos os threads em um bloco até que toda a memória global acessa tenha sido concluído.|
-|[Função (C++ AMP) parallel_for_each](concurrency-namespace-functions-amp.md#parallel_for_each)|Executa uma função entre o domínio de cálculo.|
+|[Função parallel_for_each (C++ AMP)](concurrency-namespace-functions-amp.md#parallel_for_each)|Executa uma função entre o domínio de cálculo.|
 |[tile_static_memory_fence](concurrency-namespace-functions-amp.md#tile_static_memory_fence)|Impede a execução de todos os threads em um bloco até que `tile_static` acessos de memória sejam concluídos.|
 
 ## <a name="constants"></a>Constantes

@@ -10,17 +10,17 @@ helpviewer_keywords:
 - delete keyword [C++], syntax
 ms.assetid: fa721b9e-0374-4f04-bb87-032ea775bcc8
 ms.openlocfilehash: 1ac6282ecbf45f22e7dd66b94f8bccdbc4e505ce
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50441295"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64345889"
 ---
 # <a name="new-and-delete-operators"></a>Operadores new e delete
 
 C++ oferece suporte a alocação dinâmica e desalocação de objetos usando o [novos](../cpp/new-operator-cpp.md) e [excluir](../cpp/delete-operator-cpp.md) operadores. Esses operadores alocam memória para objetos de um pool chamado de repositório livre. O **novos** operador chama a função especial [operador new](../cpp/new-operator-cpp.md)e o **excluir** operador chama a função especial [operador delete](../cpp/delete-operator-cpp.md).
 
-O **novo** função na biblioteca padrão C++ oferece suporte o comportamento especificado no padrão do C++, que deve lançar uma exceção std:: bad_alloc se a alocação de memória falhar. Se você ainda desejar a versão de não lançamento do **novo**, vincule seu programa com nothrownew. No entanto, quando você vincular com nothrownew, o padrão **operador new** na biblioteca padrão C++ não funciona mais.
+O **novos** funcionar no C++ biblioteca padrão suporta o comportamento especificado na C++ padrão, o que é lançar uma exceção std:: bad_alloc se a alocação de memória falhar. Se você ainda desejar a versão de não lançamento do **novo**, vincule seu programa com nothrownew. No entanto, quando você vincular com nothrownew, o padrão **operador new** na biblioteca padrão C++ não funciona mais.
 
 Para obter uma lista dos arquivos de biblioteca que compõem a biblioteca de tempo de execução do C e a biblioteca padrão C++, consulte [recursos da biblioteca CRT](../c-runtime-library/crt-library-features.md).
 

@@ -13,11 +13,11 @@ helpviewer_keywords:
 - CSettingsStoreSP [MFC], SetRuntimeClass
 ms.assetid: bcd37f40-cfd4-4d17-a5ce-3bfabe995dcc
 ms.openlocfilehash: 5c7a992b983552340ebe21e59d2ee9a667841ec0
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57275188"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64339526"
 ---
 # <a name="csettingsstoresp-class"></a>Classe CSettingsStoreSP
 
@@ -31,13 +31,13 @@ class CSettingsStoreSP
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
 |[CSettingsStoreSP::CSettingsStoreSP](#csettingsstoresp)|Constrói um objeto `CSettingsStoreSP`.|
 
-### <a name="public-methods"></a>Métodos Públicos
+### <a name="public-methods"></a>Métodos públicos
 
 |Nome|Descrição|
 |----------|-----------------|

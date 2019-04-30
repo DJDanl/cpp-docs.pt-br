@@ -40,11 +40,11 @@ helpviewer_keywords:
 - _printf_p_l function
 ms.assetid: 1b7e9ef9-a069-45db-af9d-c2730168322e
 ms.openlocfilehash: c7d798bde3ab68541bdcd64b768275b864694284
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50660350"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64345192"
 ---
 # <a name="printfp-printfpl-wprintfp-wprintfpl"></a>_printf_p, _printf_p_l, _wprintf_p, _wprintf_p_l
 
@@ -108,14 +108,14 @@ Se *formato* ou *argumento* são **nulo**, ou do formato de cadeia de caracteres
 |Rotina Tchar.h|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tprintf_p**|**_printf_p**|**_printf_p**|**_wprintf_p**|
-|**tprintf_p_l**|**_printf_p_l**|**_printf_p_l**|**_wprintf_p_l**|
+|**_tprintf_p_l**|**_printf_p_l**|**_printf_p_l**|**_wprintf_p_l**|
 
 ## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|
-|**printf_p**, **printf_p_l**|\<stdio.h>|
-|**wprintf_p**, **wprintf_p_l**|\<stdio.h> ou \<wchar.h>|
+|**_printf_p**, **_printf_p_l**|\<stdio.h>|
+|**_wprintf_p**, **_wprintf_p_l**|\<stdio.h> ou \<wchar.h>|
 
 Não há suporte para o console em aplicativos da plataforma Universal do Windows (UWP). Os identificadores de fluxo padrão que estão associados com o console **stdin**, **stdout**, e **stderr**, deverá ser redirecionado para funções de tempo de execução C possam ser usados em aplicativos UWP . Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 

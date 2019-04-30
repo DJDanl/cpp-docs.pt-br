@@ -17,11 +17,11 @@ helpviewer_keywords:
 - join class
 ms.assetid: d2217119-70a1-40b6-809f-c1c13a571c3f
 ms.openlocfilehash: d04ef90750c609d77fc8bf963bb996a90444f079
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57281584"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64343871"
 ---
 # <a name="join-class"></a>Classe join
 
@@ -46,7 +46,7 @@ O tipo de `join` bloco é `greedy` ou `non_greedy`
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|

@@ -3,11 +3,11 @@ title: Resolução de nome para nomes declarados localmente
 ms.date: 11/04/2016
 ms.assetid: 743b88f3-de11-48f4-ae83-931449ea3886
 ms.openlocfilehash: 91ed065a6c8aca6c7f740f0236cb13c8133fc96f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50602547"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64345913"
 ---
 # <a name="name-resolution-for-locally-declared-names"></a>Resolução de nome para nomes declarados localmente
 

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - calling conventions
 ms.assetid: 11b1e45c-8fd1-420b-bca0-a19e294c1d85
 ms.openlocfilehash: cc79a0636f900aa49e31f0dc35ee19657c3e1ccb
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53626728"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64345126"
 ---
 # <a name="calling-conventions"></a>Convenções de chamada
 
@@ -23,7 +23,7 @@ Para obter informações sobre convenções de chamada para x64 processadores, c
 
 - [Passagem de argumento e convenções de nomenclatura](../cpp/argument-passing-and-naming-conventions.md) (`__cdecl`, `__stdcall`, `__fastcall`e outros)
 
-- [Exemplo de chamada: Chamada e o protótipo de função](../cpp/calling-example-function-prototype-and-call.md)
+- [Exemplo de chamada: protótipo de função e chamada](../cpp/calling-example-function-prototype-and-call.md)
 
 - [Usando chamadas de função naked para escrever código de prólogo/epílogo personalizado](../cpp/naked-function-calls.md)
 

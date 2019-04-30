@@ -34,11 +34,11 @@ helpviewer_keywords:
 - out-of-memory exceptions [MFC]
 ms.assetid: 0926627d-2ba7-44a6-babe-d851a4a2517c
 ms.openlocfilehash: afa49a4d54397cf79a3bd0af28e4a0f0a4c7639e
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57818629"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64346043"
 ---
 # <a name="exception-handling-in-mfc"></a>Tratamento de exceções em MFC
 
@@ -109,25 +109,25 @@ A tabela a seguir mostra as exceções predefinidas fornecidas pelo MFC.
 
 Os artigos a seguir explicam usando a biblioteca do MFC para tratamento de exceção:
 
-- [Exceções: Obtendo e excluindo exceções](../mfc/exceptions-catching-and-deleting-exceptions.md)
+- [Exceções: obter e excluir exceções](../mfc/exceptions-catching-and-deleting-exceptions.md)
 
-- [Exceções: Examinando o conteúdo da exceção](../mfc/exceptions-examining-exception-contents.md)
+- [Exceções: examinar o conteúdo da exceção](../mfc/exceptions-examining-exception-contents.md)
 
-- [Exceções: Liberando objetos em exceções](../mfc/exceptions-freeing-objects-in-exceptions.md)
+- [Exceções: liberar objetos em exceções](../mfc/exceptions-freeing-objects-in-exceptions.md)
 
-- [Exceções: Lançando exceções das suas próprias funções](../mfc/exceptions-throwing-exceptions-from-your-own-functions.md)
+- [Exceções: lançar exceções a partir das funções próprias](../mfc/exceptions-throwing-exceptions-from-your-own-functions.md)
 
-- [Exceções: Exceções de banco de dados](../mfc/exceptions-database-exceptions.md)
+- [Exceções: exceções do banco de dados](../mfc/exceptions-database-exceptions.md)
 
-- [Exceções: Exceções OLE](../mfc/exceptions-ole-exceptions.md)
+- [Exceções: exceções OLE](../mfc/exceptions-ole-exceptions.md)
 
 Os artigos a seguir comparam as macros de exceção do MFC com as palavras-chave de exceção C++ e explicam como você pode adaptar seu código:
 
-- [Exceções: Alterações feitas em Macros de exceção na versão 3.0](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md)
+- [Exceções: alterações feitas em macros de exceção na versão 3.0](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md)
 
-- [Exceções: Convertendo de Macros de exceção MFC](../mfc/exceptions-converting-from-mfc-exception-macros.md)
+- [Exceções: converter a partir de macros de exceção MFC](../mfc/exceptions-converting-from-mfc-exception-macros.md)
 
-- [Exceções: Usando Macros MFC e exceções do C++](../mfc/exceptions-using-mfc-macros-and-cpp-exceptions.md)
+- [Exceções: usar macros MFC e exceções do C++](../mfc/exceptions-using-mfc-macros-and-cpp-exceptions.md)
 
 ## <a name="see-also"></a>Consulte também
 
