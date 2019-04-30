@@ -5,11 +5,11 @@ helpviewer_keywords:
 - lambda expressions [C++], examples
 ms.assetid: 52506b15-0771-4190-a966-2f302049ca86
 ms.openlocfilehash: 6854c5710d8a27093078c0f2013d691ac22c5870
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50663939"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392187"
 ---
 # <a name="examples-of-lambda-expressions"></a>Exemplos de expressões lambda
 
@@ -271,7 +271,7 @@ int main()
 ### <a name="example"></a>Exemplo
 
 Você pode usar expressões lambda no corpo de uma função. A expressão lambda pode acessar qualquer membro de dados ou função que a função pode acessar. Você pode capturar explicita ou implicitamente a **isso** ponteiro para fornecer acesso a membros de funções e os dados da classe delimitadora.
-**Visual Studio 2017 versão 15.3 e posterior** (disponível com [/std:c++17 + + 17](../build/reference/std-specify-language-standard-version.md)): capturar **isso** por valor (`[*this]`) quando o lambda será usado em operações assíncronas ou paralelas em que o código pode ser executado após o objeto original sai do escopo.
+**Visual Studio 2017 versão 15.3 e posterior** (disponível com [/std: c + + 17](../build/reference/std-specify-language-standard-version.md)): Capturar **isso** por valor (`[*this]`) quando o lambda será usado em operações assíncronas ou paralelas em que o código pode executar depois que o objeto original sai do escopo.
 
 Você pode usar o **isso** ponteiro explicitamente em uma função, conforme mostrado aqui:
 
@@ -479,7 +479,7 @@ Para obter mais informações sobre o tratamento de exceção, consulte [tratame
 
 [[Neste artigo](#top)]
 
-##  <a name="managedLambdaExpressions"></a> Usando expressões Lambda com tipos gerenciados (C + + / CLI)
+##  <a name="managedLambdaExpressions"></a> Usando expressões Lambda com tipos gerenciados (C++/CLI)
 
 ### <a name="example"></a>Exemplo
 

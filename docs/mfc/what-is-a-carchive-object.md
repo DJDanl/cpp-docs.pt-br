@@ -11,11 +11,11 @@ helpviewer_keywords:
 - buffering, serializable objects
 ms.assetid: 843f1825-288d-4d89-a1fa-70e1f92d9b8b
 ms.openlocfilehash: 4bae451168449ce3e120ba9d172a615864ac2157
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270391"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64346373"
 ---
 # <a name="what-is-a-carchive-object"></a>O que é um objeto CArchive
 
@@ -29,4 +29,4 @@ Como os dados são serializados para um arquivo morto, o arquivo morto acumula o
 
 ## <a name="see-also"></a>Consulte também
 
-[Serialização: Serializando um objeto](../mfc/serialization-serializing-an-object.md)
+[Serialização: serializar um objeto](../mfc/serialization-serializing-an-object.md)

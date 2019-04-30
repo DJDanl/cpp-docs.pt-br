@@ -9,17 +9,17 @@ helpviewer_keywords:
 - try-catch keyword [C++], mixed-language
 ms.assetid: a149154e-36dd-4d1a-980b-efde2a563a56
 ms.openlocfilehash: 94d6dc249cb130aaf09d3202b9e8f437d00a9597
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548194"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64345964"
 ---
 # <a name="mixing-c-structured-and-c-exceptions"></a>Combinando C (estruturada) e exceções do C++
 
-Se você quiser escrever um código portátil, não é recomendado o uso estruturado de manipulação de exceção (SEH) em um programa C++. No entanto, às vezes, convém compilar usando [/EHa](../build/reference/eh-exception-handling-model.md) e combinar exceções estruturadas e código-fonte C++ e precisar de algum recurso para lidar com ambos os tipos de exceções. Como um manipulador de exceção estruturada não tem nenhum conceito de objetos ou exceções tipadas, ela não pode manipular as exceções geradas por código C++. No entanto, C++ **catch** manipuladores podem tratar exceções estruturadas. Sintaxe de tratamento de exceções C++ (**tente**, **throw**, **catch**) não é aceito pelo compilador C, mas a sintaxe de tratamento de exceções estruturado (**Try**, **EXCEPT**, **Finally**) é suportado pelo compilador do C++.
+Se você quiser escrever um código portátil, não é recomendado o uso estruturado de manipulação de exceção (SEH) em um programa C++. No entanto, às vezes, convém compilar usando [/EHa](../build/reference/eh-exception-handling-model.md) e combinar exceções estruturadas e código-fonte C++ e precisar de algum recurso para lidar com ambos os tipos de exceções. Como um manipulador de exceção estruturada não tem nenhum conceito de objetos ou exceções tipadas, ela não pode manipular as exceções geradas por código C++. No entanto, C++ **catch** manipuladores podem tratar exceções estruturadas. C++sintaxe de tratamento de exceção (**tente**, **throw**, **catch**) não é aceito pelo compilador C, mas a sintaxe de tratamento de exceções estruturado (**Try**, **EXCEPT**, **Finally**) é compatível com o C++ compilador.
 
-Ver [set_se_translator](../c-runtime-library/reference/set-se-translator.md) para obter informações sobre como lidar com exceções estruturadas como exceções C++.
+Ver [set_se_translator](../c-runtime-library/reference/set-se-translator.md) para obter informações sobre como lidar com exceções estruturadas como C++ exceções.
 
 Se você combinar a estruturadas e exceções do C++, esteja ciente desses problemas potenciais:
 
