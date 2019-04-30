@@ -3,11 +3,11 @@ title: Usando o C++ AMP em aplicativos UWP
 ms.date: 11/04/2016
 ms.assetid: 85577298-2c28-4209-9470-eb21048615db
 ms.openlocfilehash: 31fede0a2419e56d53cb16521b08067dac5facc6
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57272653"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405346"
 ---
 # <a name="using-c-amp-in-uwp-apps"></a>Usando o C++ AMP em aplicativos UWP
 
@@ -15,7 +15,7 @@ Você pode usar o C++ AMP (C++ Accelerated Massive Parallelism) em seu aplicativ
 
 ## <a name="performance-considerations"></a>Considerações sobre desempenho
 
-Se você estiver usando extensões de componentes do Visual C++ C + + c++ /CX para criar seu aplicativo da plataforma Universal do Windows (UWP), é recomendável que você use tipos simples-dados antigos (POD) juntamente com o armazenamento contíguo — por exemplo, `std::vector` ou matrizes C-style — para dados que serão usado com o C++ AMP. Isso pode ajudá-lo a alcançar um desempenho mais alto do que usando tipos não POD ou contêineres do Windows RT porque nenhum empacotamento deve ocorrer.
+Se você estiver usando o Visual C++ extensões de componentes C++/CX para criar seu aplicativo da plataforma Universal do Windows (UWP), é recomendável que você use tipos simples-dados antigos (POD) juntamente com o armazenamento contíguo — por exemplo, `std::vector` ou matrizes C-style — para dados que serão usados com C++ AMP. Isso pode ajudá-lo a alcançar um desempenho mais alto do que usando tipos não POD ou contêineres do Windows RT porque nenhum empacotamento deve ocorrer.
 
 Em um kernel do C++ AMP, para acessar os dados são armazenados dessa forma, basta encapsular a `std::vector` ou o armazenamento de matriz em um `concurrency::array_view` e, em seguida, usar a visualização de matriz em um `concurrency::parallel_for_each` loop:
 

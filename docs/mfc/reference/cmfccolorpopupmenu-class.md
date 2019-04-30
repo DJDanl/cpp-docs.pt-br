@@ -15,11 +15,11 @@ helpviewer_keywords:
 - CMFCColorPopupMenu [MFC], SetPropList
 ms.assetid: 0bf9efe8-aed5-4ab7-b23b-eb284b4668be
 ms.openlocfilehash: 0c2fed4aa239faa96abf692a46a27102ce9820a1
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283391"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62403679"
 ---
 # <a name="cmfccolorpopupmenu-class"></a>Classe CMFCColorPopupMenu
 
@@ -33,7 +33,7 @@ class CMFCColorPopupMenu : public CMFCPopupMenu
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |||
 |-|-|
@@ -141,7 +141,7 @@ O rótulo padrão do botão automático estiver **automática**.
 *lpszOtherColor*<br/>
 [in] O rótulo de texto a *outros* botão, que exibe mais opções de cores, ou nulo.
 
-É o rótulo padrão para o outro botão **mais cores...** .
+É o rótulo padrão para o outro botão **mais cores...**.
 
 *lpszDocColors*<br/>
 [in] O rótulo de texto do botão de cores do documento. A paleta de cores do documento lista todas as cores que atualmente usa o documento.

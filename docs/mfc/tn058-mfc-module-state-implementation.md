@@ -1,5 +1,5 @@
 ---
-title: 'TN058: implementação de estado do módulo MFC'
+title: 'TN058: Implementação do estado do módulo MFC'
 ms.date: 06/28/2018
 f1_keywords:
 - vc.mfc.implementation
@@ -13,13 +13,13 @@ helpviewer_keywords:
 - process state [MFC]
 ms.assetid: 72f5b36f-b3da-4009-a144-24258dcd2b2f
 ms.openlocfilehash: db34f528e70a7dcc437836684656b3ce8a4078fd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50626038"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62399585"
 ---
-# <a name="tn058-mfc-module-state-implementation"></a>TN058: implementação de estado do módulo MFC
+# <a name="tn058-mfc-module-state-implementation"></a>TN058: Implementação do estado do módulo MFC
 
 > [!NOTE]
 > A nota técnica a seguir não foi atualizada desde que foi incluído pela primeira vez na documentação online. Como resultado, alguns procedimentos e tópicos podem estar desatualizadas ou incorretas. Para obter as informações mais recentes, é recomendável que você pesquise o tópico de interesse no índice da documentação online.
@@ -30,7 +30,7 @@ Antes de ler esta nota, consulte "Gerenciando o dados do estado dos módulos de 
 
 ## <a name="overview"></a>Visão geral
 
-Há três tipos de informações de estado do MFC: estado do módulo, o estado do processo e o estado de Thread. Às vezes, esses tipos de estado podem ser combinados. Por exemplo, mapas de identificador do MFC são módulo local e o local de thread. Isso permite que os dois módulos diferentes ter mapas diferentes em cada um dos seus threads.
+Há três tipos de informações de estado do MFC: Estado do módulo, estado do processo e o estado de Thread. Às vezes, esses tipos de estado podem ser combinados. Por exemplo, mapas de identificador do MFC são módulo local e o local de thread. Isso permite que os dois módulos diferentes ter mapas diferentes em cada um dos seus threads.
 
 Estado do processo e o estado de Thread são semelhantes. Esses itens de dados são coisas que têm sido, tradicionalmente, as variáveis globais, mas têm precisam ser específicos para um determinado processo ou thread para Win32s adequado de suporte ou para suporte de multithreading apropriado. Qual categoria um determinado item de dados se encaixa no depende desse item e a semântica desejada em relação a limites de processo e thread.
 

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - recordsets, declaring classes for tables
 ms.assetid: 3fe286c2-3f3d-493d-9d8c-762310939d08
 ms.openlocfilehash: 17adc6e26dcbb39453d9009d82843d213271cc78
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59038234"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62397868"
 ---
 # <a name="recordset-declaring-a-class-for-a-table-odbc"></a>Conjunto de registros: Declarando uma classe para uma tabela (ODBC)
 
@@ -27,6 +27,6 @@ Outros usos para conjuntos de registros incluem:
 ## <a name="see-also"></a>Consulte também
 
 [Conjunto de registros (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Conjunto de registros: Criando e fechando conjuntos de registros (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md)<br/>
-[Conjunto de registros: Declarando uma classe para uma consulta predefinida (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)<br/>
-[Conjunto de registros: Realizando uma junção (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)
+[Conjunto de registros: criar e fechar conjuntos de registros (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md)<br/>
+[Conjunto de registros: declarar uma classe para uma consulta predefinida (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)<br/>
+[Conjunto de registros: realizar uma junção (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)

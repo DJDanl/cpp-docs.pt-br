@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4396
 ms.assetid: 7cd6b283-db17-4574-b299-03e0b913ad70
 ms.openlocfilehash: 84045ea2c285be8b1c1c9d1fd62b417db00dd29c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445312"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62402444"
 ---
 # <a name="compiler-warning-level-2-c4396"></a>Compilador aviso (nível 2) C4396
 

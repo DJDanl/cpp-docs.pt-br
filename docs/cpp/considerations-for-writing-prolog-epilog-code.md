@@ -9,11 +9,11 @@ helpviewer_keywords:
 - stack, stack frame layout
 ms.assetid: c7814de2-bb5c-4f5f-96d0-bcfd2ad3b182
 ms.openlocfilehash: a70c444af9e1622b3f46837fcfa2d5e8856abf30
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50660558"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62399129"
 ---
 # <a name="considerations-for-writing-prologepilog-code"></a>Considerações para escrever o código de prólogo/epílogo
 
@@ -43,7 +43,7 @@ ret                       ; Return from function
 
 A pilha sempre vai para baixo (dos endereços de memória mais altos para os mais baixos). O ponteiro de base (`ebp`) aponta para o valor enviados por push de `ebp`. A área de locais começa em `ebp-4`. Para acessar variáveis locais, calcule um deslocamento de `ebp` subtraindo o valor apropriado de `ebp`.
 
-##  <a name="_pluslang___local_size"></a> LOCAL_SIZE
+##  <a name="_pluslang___local_size"></a> __LOCAL_SIZE
 
 O compilador fornece um símbolo, `__LOCAL_SIZE`, para uso no bloco embutido do assembler do código de prólogo da função. Esse símbolo é usado para alocar espaço para as variáveis locais no quadro da pilha no código personalizado de prólogo.
 

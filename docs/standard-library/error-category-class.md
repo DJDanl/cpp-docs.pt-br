@@ -17,11 +17,11 @@ helpviewer_keywords:
 - std::error_category::name
 ms.assetid: e0a71e14-852d-4905-acd6-5f8ed426706d
 ms.openlocfilehash: 55ff55b2026b741a2b7062d815fe43d6d19b078b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50451955"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62413704"
 ---
 # <a name="errorcategory-class"></a>Classe error_category
 
@@ -104,7 +104,7 @@ virtual bool equivalent(const error_code& _Code,
 |---------------|-----------------|
 |*_Errval*|O valor do código de erro a ser comparado.|
 |*_Cond*|O objeto [error_condition](../standard-library/error-condition-class.md) a ser comparado.|
-|*Code*|O objeto [error_code](../standard-library/error-code-class.md) a ser comparado.|
+|*_Code*|O objeto [error_code](../standard-library/error-code-class.md) a ser comparado.|
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -128,7 +128,7 @@ virtual string message(error_code::value_type val) const = 0;
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|*Val*|O valor do código de erro a ser descrito.|
+|*val*|O valor do código de erro a ser descrito.|
 
 ### <a name="return-value"></a>Valor de retorno
 

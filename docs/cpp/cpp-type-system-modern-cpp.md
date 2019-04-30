@@ -4,11 +4,11 @@ ms.date: 11/19/2018
 ms.topic: conceptual
 ms.assetid: 553c0ed6-77c4-43e9-87b1-c903eec53e80
 ms.openlocfilehash: 4dfbf408654ccc92c92d6855c15238cb07c01b58
-ms.sourcegitcommit: 6e4dd21759caaed262a7255735cf8d6e8fb9f4d7
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58476897"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392266"
 ---
 # <a name="c-type-system-modern-c"></a>Sistema do tipo C++ (C++ moderno)
 
@@ -94,7 +94,7 @@ Um **const** tipo é diferente da sua versão não const; por exemplo, **const i
 
 ## <a name="string-types"></a>Tipos de cadeia de caracteres
 
-Estritamente falando, a linguagem C++ não tem nenhum tipo de cadeia de caracteres internas; **char** e **wchar_t** armazenam caracteres simples – você deve declarar uma matriz desses tipos para aproximar uma cadeia de caracteres, adicionando um valor nulo de terminação (por exemplo, ASCII `'\0'`) para o elemento matriz Após o último caractere válido (também chamado de um *cadeia de caracteres de estilo C*). As cadeias de caracteres de estilo C exigiam que muito mais códigos fossem escritos ou o uso de funções da biblioteca de utilitários de cadeia de caracteres externos. Mas em C++ moderno, temos os tipos de biblioteca padrão `std::string` (de 8 bits **char**-cadeias de caracteres de tipo) ou `std::wstring` (para 16 bits **wchar_t**-cadeias de caracteres de tipo). Esses contêineres da biblioteca padrão C++ podem ser pensados como tipos de cadeia de caracteres nativos porque fazem parte das bibliotecas padrão que estão incluídos em qualquer ambiente de compilação C++ em conformidade. Basta usar a diretiva `#include <string>` para tornar esses tipos disponíveis em seu programa. (Se você estiver usando o MFC ou o ATL, a classe CString também estará disponível, mas não fará parte do padrão C++.) O uso de matrizes de caracteres de terminação nula (as cadeias de caracteres de estilo C mencionadas anteriormente) não é nada aconselhável em C++ moderno.
+Estritamente falando, o C++ linguagem não tem nenhum tipo de cadeia de caracteres internas; **char** e **wchar_t** armazenam caracteres simples – você deve declarar uma matriz desses tipos para aproximar uma cadeia de caracteres, adicionando um valor nulo de terminação (por exemplo, ASCII `'\0'`) para o elemento de matriz logo após o último caractere válido (também chamado de um *cadeia de caracteres de estilo C*). As cadeias de caracteres de estilo C exigiam que muito mais códigos fossem escritos ou o uso de funções da biblioteca de utilitários de cadeia de caracteres externos. Mas no moderno C++, temos os tipos de biblioteca padrão `std::string` (de 8 bits **char**-as cadeias de caracteres de tipo) ou `std::wstring` (para 16 bits **wchar_t**-cadeias de caracteres de tipo). Esses contêineres da biblioteca padrão C++ podem ser pensados como tipos de cadeia de caracteres nativos porque fazem parte das bibliotecas padrão que estão incluídos em qualquer ambiente de compilação C++ em conformidade. Basta usar a diretiva `#include <string>` para tornar esses tipos disponíveis em seu programa. (Se você estiver usando o MFC ou o ATL, a classe CString também estará disponível, mas não fará parte do padrão C++.) O uso de matrizes de caracteres de terminação nula (as cadeias de caracteres de estilo C mencionadas anteriormente) não é nada aconselhável em C++ moderno.
 
 ## <a name="user-defined-types"></a>Tipos definidos pelo usuário
 

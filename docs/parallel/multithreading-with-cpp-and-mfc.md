@@ -14,11 +14,11 @@ helpviewer_keywords:
 - user interface threads [C++]
 ms.assetid: 979605f8-3988-44b5-ac9c-b8cce7fcce14
 ms.openlocfilehash: bcffc2964d8e15fd47f437366863748175e12622
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57258340"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62407660"
 ---
 # <a name="multithreading-with-c-and-mfc"></a>Multithread com C++ e MFC
 
@@ -40,17 +40,17 @@ Para obter mais informações sobre como o sistema operacional trata processos e
 
 Para obter mais informações sobre suporte multithreading MFC, consulte os tópicos a seguir:
 
-- [Multithreading: Criando Threads de Interface do usuário](multithreading-creating-user-interface-threads.md)
+- [Multithreading: criar threads de interface de usuário](multithreading-creating-user-interface-threads.md)
 
-- [Multithreading: Criando Threads de trabalho](multithreading-creating-worker-threads.md)
+- [Multithreading: criar threads de trabalho](multithreading-creating-worker-threads.md)
 
-- [Multithreading: Como usar as Classes de sincronização](multithreading-how-to-use-the-synchronization-classes.md)
+- [Multithreading: como usar as classes de sincronização](multithreading-how-to-use-the-synchronization-classes.md)
 
-- [Multithreading: Encerrando Threads](multithreading-terminating-threads.md)
+- [Multithreading: terminar threads](multithreading-terminating-threads.md)
 
-- [Multithreading: Dicas de programação](multithreading-programming-tips.md)
+- [Multithreading: dicas de programação](multithreading-programming-tips.md)
 
-- [Multithreading: Quando usar as Classes de sincronização](multithreading-when-to-use-the-synchronization-classes.md)
+- [Multithreading: quando usar as classes de sincronização](multithreading-when-to-use-the-synchronization-classes.md)
 
 ## <a name="see-also"></a>Consulte também
 

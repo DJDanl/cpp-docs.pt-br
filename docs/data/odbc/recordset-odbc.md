@@ -14,11 +14,11 @@ helpviewer_keywords:
 - dynasets
 ms.assetid: 333337c5-575e-4d26-b5f6-47166ad7874d
 ms.openlocfilehash: b201e152d83d3812253aa4803eebe715d726219d
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59034489"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62397738"
 ---
 # <a name="recordset-odbc"></a>Conjunto de registros (ODBC)
 
@@ -77,49 +77,49 @@ Os tópicos a seguir explicam os detalhes de como usar objetos de conjunto de re
 
 ### <a name="topics-about-the-mechanics-of-opening-reading-and-closing-recordsets"></a>Tópicos sobre a mecânica de abrir, ler e fechando conjuntos de registros
 
-- [Conjunto de registros: Arquitetura (ODBC)](../../data/odbc/recordset-architecture-odbc.md)
+- [Conjunto de registros: arquitetura (ODBC)](../../data/odbc/recordset-architecture-odbc.md)
 
-- [Conjunto de registros: Declarando uma classe para uma tabela (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)
+- [Conjunto de registros: declarar uma classe para uma tabela (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)
 
-- [Conjunto de registros: Criando e fechando conjuntos de registros (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md)
+- [Conjunto de registros: criar e fechar conjuntos de registros (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md)
 
-- [Conjunto de registros: Rolando (ODBC)](../../data/odbc/recordset-scrolling-odbc.md)
+- [Conjunto de registros: rolagem (ODBC)](../../data/odbc/recordset-scrolling-odbc.md)
 
-- [Conjunto de registros: Indicadores e posições absolutas (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md)
+- [Conjunto de registros: indicadores e posições absolutas (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md)
 
-- [Conjunto de registros: Filtrando registros (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md)
+- [Conjunto de registros: filtrar registros (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md)
 
-- [Conjunto de registros: Classificando registros (ODBC)](../../data/odbc/recordset-sorting-records-odbc.md)
+- [Conjunto de registros: classificar registros (ODBC)](../../data/odbc/recordset-sorting-records-odbc.md)
 
-- [Conjunto de registros: Parametrizando um conjunto de registros (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)
+- [Conjunto de registros: parametrizar um conjunto de registros (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)
 
 ### <a name="topics-about-the-mechanics-of-modifying-recordsets"></a>Tópicos sobre a mecânica de como modificar conjuntos de registros
 
-- [Conjunto de registros: Adicionando, atualizando e excluindo registros (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)
+- [Conjunto de registros: adicionar, atualizar e excluir registros (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)
 
-- [Conjunto de registros: Bloqueio de registros (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)
+- [Conjunto de registros: bloquear registros (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)
 
-- [Conjunto de registros: Repetindo consulta a um conjunto de registros (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)
+- [Conjunto de registros: repetir consulta a um conjunto de registros (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)
 
 ### <a name="topics-about-somewhat-more-advanced-techniques"></a>Tópicos sobre um pouco mais avançadas técnicas
 
-- [Conjunto de registros: Realizando uma junção (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)
+- [Conjunto de registros: realizar uma junção (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)
 
-- [Conjunto de registros: Declarando uma classe para uma consulta predefinida (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)
+- [Conjunto de registros: declarar uma classe para uma consulta predefinida (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)
 
-- [Conjunto de registros: Associando dinamicamente colunas de dados (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)
+- [Conjunto de registros: associar dinamicamente colunas de dados (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)
 
-- [Conjunto de registros: Buscando registros em massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)
+- [Conjunto de registros: buscar registros em massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)
 
-- [Conjunto de registros: Trabalhando com itens de dados grandes (ODBC)](../../data/odbc/recordset-working-with-large-data-items-odbc.md)
+- [Conjunto de registros: trabalhar com itens de dados grandes (ODBC)](../../data/odbc/recordset-working-with-large-data-items-odbc.md)
 
-- [Conjunto de registros: Obtendo SUMs e outros resultados agregados (ODBC)](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md)
+- [Conjunto de registros: obter SUMs e outros resultados agregados (ODBC)](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md)
 
 ### <a name="topics-about-how-recordsets-work"></a>Tópicos sobre o funcionam dos conjuntos de registros
 
-- [Conjunto de registros: Como conjuntos de registros selecionam registros (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)
+- [Conjunto de registros: como conjuntos de registros selecionam registros (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)
 
-- [Conjunto de registros: Como conjuntos de registros atualizam registros (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)
+- [Conjunto de registros: como conjuntos de registros atualizam registros (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)
 
 ## <a name="see-also"></a>Consulte também
 

@@ -7,15 +7,15 @@ helpviewer_keywords:
 - C4290
 ms.assetid: d1c6d85b-28e0-4a1f-9d48-23593337a6fb
 ms.openlocfilehash: c585294686298a1197d437d41a0d541f1268985f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50512730"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62402080"
 ---
 # <a name="compiler-warning-level-3-c4290"></a>Compilador aviso (nível 3) C4290
 
-Especificação de exceção de C++ ignorada, exceto to indicam uma função não é __declspec(nothrow)
+C++especificação de exceção ignorada, exceto to indicam uma função não é __declspec(nothrow)
 
 Uma função é declarada usando a especificação de exceção, o que o Visual C++ aceita, mas não implementa. Codifique com exceção de especificações que são ignoradas durante a compilação precisa ser recompilado e vinculado para ser reutilizado em futuras versões que dão suporte a especificações de exceção.
 

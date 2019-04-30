@@ -6,11 +6,11 @@ helpviewer_keywords:
 - preprocessor, reference overview
 ms.assetid: e4a52843-7016-4f6d-8b40-cb1ace18f805
 ms.openlocfilehash: a9e5be5895d8a90d93d0060e2bd2a7d0a9f84dbd
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57814417"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62403510"
 ---
 # <a name="cc-preprocessor-reference"></a>Referência de pré-processador C/C++
 O *referência de pré-processador C/C++* explica o pré-processador como implementado no Microsoft C/C++. O pré-processador executa operações preliminares em arquivos do C e C++ antes de serem passados para o compilador. É possível usar o pré-processador para compilar o código condicionalmente, inserir arquivos, especificar mensagens de erro de tempo de compilação e aplicar regras de máquina específicas para seções de código.

@@ -7,17 +7,17 @@ helpviewer_keywords:
 - C3069
 ms.assetid: ca94291b-2bb4-4e3f-9acf-534234b83513
 ms.openlocfilehash: 6c6451d31da2bb708d3f233225be713981b062e6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50474432"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62406750"
 ---
 # <a name="compiler-error-c3069"></a>Erro do compilador C3069
 
 'operator': não é permitido para tipo de enumeração
 
-Não há suporte para um operador para enumerações de CLR.  Para obter mais informações, consulte [como: definir e consumir enums no c++ /CLI CLI](../../dotnet/how-to-define-and-consume-enums-in-cpp-cli.md).
+Não há suporte para um operador para enumerações de CLR.  Para obter mais informações, confira [Como: Definir e consumir enumerações em C++/CLI](../../dotnet/how-to-define-and-consume-enums-in-cpp-cli.md).
 
 ## <a name="example"></a>Exemplo
 

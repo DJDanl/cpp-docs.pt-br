@@ -6,11 +6,11 @@ f1_keywords:
 - VCCORLIB/Platform::Box
 ms.assetid: b3d7ea37-e98a-4fbc-80b0-ad35e50250c6
 ms.openlocfilehash: ca8c9229d0ef5fa654f462282f257b1684984102
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57742934"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62404644"
 ---
 # <a name="platformbox-class"></a>Classe Platform::Box
 
@@ -168,5 +168,5 @@ Retorna o valor demarcado com o mesmo tipo que ele tinha originalmente antes de 
 
 ## <a name="see-also"></a>Consulte também
 
-[Namespace Platform](../cppcx/platform-namespace-c-cx.md)<br/>
+[Namespace de plataforma](../cppcx/platform-namespace-c-cx.md)<br/>
 [Conversão boxing](../cppcx/boxing-c-cx.md)

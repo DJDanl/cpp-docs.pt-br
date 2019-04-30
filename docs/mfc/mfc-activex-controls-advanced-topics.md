@@ -13,11 +13,11 @@ helpviewer_keywords:
 - ThrowError method [MFC]
 ms.assetid: e9e34abb-8e2d-461e-bb9c-a1aec5dcecbd
 ms.openlocfilehash: df71e2e59763644bd4aefb5d3e3afa46f82f538a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57277320"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392707"
 ---
 # <a name="mfc-activex-controls-advanced-topics"></a>Controles ActiveX MFC: Tópicos avançados
 
@@ -174,7 +174,7 @@ Você pode criar controles de caixa de diálogo que não tem nenhuma interface d
 
 - Usando o Assistente de adição membro variável, selecione **variável de controle** e, em seguida, selecione a ID. do controle Insira um nome de variável de membro e selecione a classe de wrapper do controle como o **tipo de controle**.
 
-     -ou-
+     - ou -
 
 - Declare uma variável local e a subclasse como o item de caixa de diálogo. Inserir código semelhante ao seguinte (`CMyCtrl` é a classe de wrapper, IDC_MYCTRL1 é a ID do controle):
 

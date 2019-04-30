@@ -8,11 +8,11 @@ helpviewer_keywords:
 - wizards [MFC]
 ms.assetid: ad3b0989-d307-43b2-9417-3f9a78889024
 ms.openlocfilehash: fa9b947ae6fc0e48aaecde61e35a5f4152c85f27
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304087"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412717"
 ---
 # <a name="mfc-add-class-wizard"></a>Assistente para adicionar classe MFC
 

@@ -87,11 +87,11 @@ helpviewer_keywords:
 - std::vector [C++], swap
 ms.assetid: a3e0a8f8-7565-4fe0-93e4-e4d74ae1b70d
 ms.openlocfilehash: 80416e3af18774a7a8bf64264dca2906995ae202
-ms.sourcegitcommit: 185b8ee6dd4e10045df730c5b957b9729813da2d
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53411956"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62410896"
 ---
 # <a name="vector-class"></a>Classe vector
 
@@ -109,7 +109,7 @@ class vector
 *Tipo*<br/>
 O tipo de dados do elemento a ser armazenado no vetor
 
-*Alocador*<br/>
+*Allocator*<br/>
 O tipo que representa o objeto allocator armazenado que encapsula detalhes sobre a alocação e a desalocação de memória do vetor. Esse argumento é opcional e o valor padrão é `allocator<Type>`.
 
 ## <a name="remarks"></a>Comentários
@@ -224,10 +224,10 @@ void assign(InputIterator First, InputIterator Last);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Primeiro*<br/>
+*First*<br/>
 A posição do primeiro elemento no intervalo de elementos a ser copiado.
 
-*último*<br/>
+*Last*<br/>
 A posição do primeiro elemento após o intervalo de elementos a ser copiado.
 
 *Contagem*<br/>
@@ -302,7 +302,7 @@ const_reference at(size_type _Pos) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*POS*<br/>
+*_Pos*<br/>
 O número da posição ou subscrito do elemento para referência no vetor.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -898,7 +898,7 @@ iterator emplace(
 |Parâmetro|Descrição|
 |-|-|
 |*_Where*|A posição no [vetor](../standard-library/vector-class.md) em que o primeiro elemento é inserido.|
-|*Val*|O valor do elemento que está sendo inserido no `vector`.|
+|*val*|O valor do elemento que está sendo inserido no `vector`.|
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -1248,7 +1248,7 @@ void insert(
 |Parâmetro|Descrição|
 |-|-|
 |*_Where*|A posição no vetor em que o primeiro elemento é inserido.|
-|*Val*|O valor do elemento sendo inserido no vetor.|
+|*val*|O valor do elemento sendo inserido no vetor.|
 |*count*|O número de elementos sendo inseridos no vetor.|
 |*first*|A posição do primeiro elemento no intervalo de elementos a serem copiados.|
 |*last*|A posição do primeiro elemento além do intervalo de elementos a serem copiados.|
@@ -2102,8 +2102,8 @@ vector(InputIterator First, InputIterator Last, const Allocator& Al);
 |*Contagem*|O número de elementos no vetor construído.|
 |*Val*|O valor dos elementos no vetor construído.|
 |*Direita*|O vetor do qual o vetor construído deve ser uma cópia.|
-|*Primeiro*|A posição do primeiro elemento no intervalo de elementos a ser copiado.|
-|*último*|A posição do primeiro elemento após o intervalo de elementos a ser copiado.|
+|*First*|A posição do primeiro elemento no intervalo de elementos a ser copiado.|
+|*Last*|A posição do primeiro elemento após o intervalo de elementos a ser copiado.|
 |*IList*|A initializer_list que contém os elementos a serem copiados.|
 
 ### <a name="remarks"></a>Comentários

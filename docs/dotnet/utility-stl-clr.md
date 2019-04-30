@@ -40,11 +40,11 @@ helpviewer_keywords:
 - operator< member [STL/CLR]
 ms.assetid: fb48cb75-d5ef-47ce-b526-bf60dc86c552
 ms.openlocfilehash: 1a884a75fbc3ba979402c94c67d2915863a847e9
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51331458"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384459"
 ---
 # <a name="utility-stlclr"></a>utility (STL/CLR)
 
@@ -73,7 +73,7 @@ Inclua o cabeçalho STL/CLR `<cliext/utility>` para definir a classe de modelo `
 |[operator== (pair) (STL/CLR)](#op_eq)|Comparação de igualdade de par.|
 |[operator!= (pair) (STL/CLR)](#op_neq)|Par não igual a comparação.|
 |[operator< (pair) (STL/CLR)](#op_lt)|Par menor do que a comparação.|
-|[operador\<= (pair) (STL/CLR)](#op_lteq)|Emparelhe menor ou igual comparação.|
+|[operator\<= (pair) (STL/CLR)](#op_lteq)|Emparelhe menor ou igual comparação.|
 |[operator> (pair) (STL/CLR)](#op_gt)|Maior que a comparação do par.|
 |[operator>= (pair) (STL/CLR)](#op_gteq)|Par de maior que ou igual comparação.|
 
@@ -83,7 +83,7 @@ Inclua o cabeçalho STL/CLR `<cliext/utility>` para definir a classe de modelo `
 
 ## <a name="members"></a>Membros
 
-## <a name="pair"></a> par (STL/CLR)
+## <a name="pair"></a> pair (STL/CLR)
 A classe de modelo descreve um objeto que encapsula um par de valores.
 
 ### <a name="syntax"></a>Sintaxe
@@ -96,7 +96,7 @@ template<typename Value1,
 
 #### <a name="parameters"></a>Parâmetros
 
-*Valor1*<br/>
+*Value1*<br/>
 O tipo do primeiro valor encapsulado.
 
 *Value2*<br/>
@@ -127,7 +127,7 @@ O tipo do segundo valor encapsulado.
 
 O objeto armazena um par de valores. Você pode usar essa classe de modelo para combinar dois valores em um único objeto. Além disso, o objeto `cliext::pair` (descrita aqui) armazena apenas os tipos gerenciados; para armazenar um par de não gerenciado tipos usam `std::pair`, declarado em `<utility>`.
 
-## <a name="first"></a> Pair::First (STL/CLR)
+## <a name="first"></a> pair::first (STL/CLR)
 
 O primeiro valor encapsulado.
 
@@ -164,7 +164,7 @@ int main()
 [x, 3]
 ```
 
-## <a name="first_type"></a> Pair::first_type (STL/CLR)
+## <a name="first_type"></a> pair::first_type (STL/CLR)
 
 O tipo do primeiro valor encapsulado.
 
@@ -201,7 +201,7 @@ int main()
 [x, 3]
 ```
 
-## <a name="op_as"></a> Pair::Operator = (STL/CLR)
+## <a name="op_as"></a> pair::operator= (STL/CLR)
 
 Substitui o par de valores armazenado.
 
@@ -245,7 +245,7 @@ int main()
 [x, 3]
 ```
 
-## <a name="pair_pair"></a> Pair::Pair (STL/CLR)
+## <a name="pair_pair"></a> pair::pair (STL/CLR)
 
 Constrói um objeto do par.
 
@@ -263,10 +263,10 @@ pair(Value1 val1, Value2 val2);
 *right*<br/>
 Par para armazenar.
 
-*Val1*<br/>
+*val1*<br/>
 Primeiro valor para armazenar.
 
-*Val2*<br/>
+*val2*<br/>
 Segundo valor para armazenar.
 
 ### <a name="remarks"></a>Comentários
@@ -330,7 +330,7 @@ int main()
 [x, 3]
 ```
 
-## <a name="second"></a> Pair::Second (STL/CLR)
+## <a name="second"></a> pair::second (STL/CLR)
 
 O segundo valor encapsulado.
 
@@ -367,7 +367,7 @@ int main()
 [x, 3]
 ```
 
-## <a name="second_type"></a> Pair::second_type (STL/CLR)
+## <a name="second_type"></a> pair::second_type (STL/CLR)
 
 O tipo do segundo valor encapsulado.
 
@@ -404,7 +404,7 @@ int main()
 [x, 3]
 ```
 
-## <a name="swap"></a> Pair::swap (STL/CLR)
+## <a name="swap"></a> pair::swap (STL/CLR)
 
 Troca o conteúdo de dois pares.
 
@@ -487,7 +487,7 @@ template<typename Value1,
 
 #### <a name="parameters"></a>Parâmetros
 
-*Valor1*<br/>
+*Value1*<br/>
 O tipo do primeiro valor encapsulado.
 
 *Value2*<br/>
@@ -526,7 +526,7 @@ int main()
 [y, 4]
 ```
 
-## <a name="op_neq"></a> operador! = (pair) (STL/CLR)
+## <a name="op_neq"></a> operator!= (pair) (STL/CLR)
 
 Par não igual a comparação.
 
@@ -688,7 +688,7 @@ int main()
 [x 4] <= [x 3] is False
 ```
 
-## <a name="op_eq"></a> operador = = (pair) (STL/CLR)
+## <a name="op_eq"></a> operator== (pair) (STL/CLR)
 
 Comparação de igualdade de par.
 

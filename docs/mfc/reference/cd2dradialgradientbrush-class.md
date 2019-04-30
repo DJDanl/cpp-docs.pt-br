@@ -39,11 +39,11 @@ helpviewer_keywords:
 - CD2DRadialGradientBrush [MFC], m_RadialGradientBrushProperties
 ms.assetid: 6c76d84a-d831-4ee2-96f1-82c1f5b0d6a9
 ms.openlocfilehash: 22029ebcf8cf519571e81e11c84de146c9d54b26
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57277268"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62396321"
 ---
 # <a name="cd2dradialgradientbrush-class"></a>Classe CD2DRadialGradientBrush
 
@@ -57,7 +57,7 @@ class CD2DRadialGradientBrush : public CD2DGradientBrush;
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
 |Nome|Descrição|
 |----------|-----------------|

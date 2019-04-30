@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4414
 ms.assetid: bc81d3ad-55dc-4a6b-a6f2-ec0ef38347df
 ms.openlocfilehash: 0a9ceb332888e306b8cb3bcbe1832f773d02d63d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50629808"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62401937"
 ---
 # <a name="compiler-warning-level-3-c4414"></a>Compilador aviso (nível 3) C4414
 

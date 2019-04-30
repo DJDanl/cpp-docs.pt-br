@@ -15,15 +15,15 @@ helpviewer_keywords:
 - move exceptions between threads
 ms.assetid: 5c95d57b-acf5-491f-8122-57c5df0edd98
 ms.openlocfilehash: f403b1448855b60f323ed582794a00c3e6ae1b3a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50464437"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62404735"
 ---
 # <a name="transporting-exceptions-between-threads"></a>Transportando exceções entre threads
 
-Visual C++ suporta *transportar uma exceção* de um thread para outro. O transporte de exceções permite que você capture uma exceção em um thread e faça parecer que ela tenha sido lançada em outro thread. Você pode usar esse recurso, por exemplo, para gravar um aplicativo multi-threaded em que o thread primário trata todas as exceções lançadas por seus threads secundários. O transporte de exceções é útil para a maioria dos desenvolvedores que cria bibliotecas ou sistemas de programação paralela. Para implementar o transporte de exceções, o Visual C++ fornece as [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) tipo e o [current_exception](../standard-library/exception-functions.md#current_exception), [rethrow_exception](../standard-library/exception-functions.md#rethrow_exception), e [make_ exception_ptr](../standard-library/exception-functions.md#make_exception_ptr) funções.
+Visual C++ suporta *transportar uma exceção* de um thread para outro. O transporte de exceções permite que você capture uma exceção em um thread e faça parecer que ela tenha sido lançada em outro thread. Você pode usar esse recurso, por exemplo, para gravar um aplicativo multi-threaded em que o thread primário trata todas as exceções lançadas por seus threads secundários. O transporte de exceções é útil para a maioria dos desenvolvedores que cria bibliotecas ou sistemas de programação paralela. Para implementar o transporte de exceções, Visual C++ fornece o [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) tipo e o [current_exception](../standard-library/exception-functions.md#current_exception), [rethrow_exception](../standard-library/exception-functions.md#rethrow_exception)e [make_exception_ptr](../standard-library/exception-functions.md#make_exception_ptr) funções.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -42,7 +42,7 @@ namespace std
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|*não especificado*|Uma classe interna não especificada que é usada para implementar o tipo `exception_ptr`.|
+|*unspecified*|Uma classe interna não especificada que é usada para implementar o tipo `exception_ptr`.|
 |*p*|Um objeto `exception_ptr` que faz referência a uma exceção.|
 |*E*|Uma classe que representa uma exceção.|
 |*e*|Uma instância da classe `E` do parâmetro.|

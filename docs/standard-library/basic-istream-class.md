@@ -35,11 +35,11 @@ helpviewer_keywords:
 - std::basic_istream [C++], unget
 ms.assetid: c7c27111-de6d-42b4-95a3-a7e65259bf17
 ms.openlocfilehash: 5e7f6ae0728a7d28af1992cf4186d533f1a97330
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51522500"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62414159"
 ---
 # <a name="basicistream-class"></a>Classe basic_istream
 
@@ -275,7 +275,7 @@ O caractere que deve terminar a leitura se for encontrado antes *contagem*.
 *str*<br/>
 Uma cadeia de caracteres na qual gravar.
 
-*CH*<br/>
+*Ch*<br/>
 Um caractere a obter.
 
 *strbuf*<br/>
@@ -471,13 +471,13 @@ basic_istream& operator>>(long double& val);
 
 ### <a name="parameters"></a>Parâmetros
 
-*pfn*<br/>
+*Pfn*<br/>
 Um ponteiro de função.
 
 *strbuf*<br/>
 Um objeto do tipo `stream_buf`.
 
-*Val*<br/>
+*val*<br/>
 O valor a ser lido do fluxo.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -651,7 +651,7 @@ basic_istream<Elem, Tr>& putback(
 
 ### <a name="parameters"></a>Parâmetros
 
-*CH*<br/>
+*Ch*<br/>
 Um caractere a colocar de volta no fluxo.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -818,13 +818,13 @@ basic_istream<Elem, Tr>& seekg(off_type off, ios_base::seekdir way);
 
 ### <a name="parameters"></a>Parâmetros
 
-*POS*<br/>
+*pos*<br/>
 A posição absoluta na qual mover o ponteiro de leitura.
 
-*Desativar*<br/>
+*off*<br/>
 Um deslocamento para mover o ponteiro de leitura relativo a *maneira*.
 
-*forma*<br/>
+*way*<br/>
 Uma das enumerações de [ios_base::seekdir](../standard-library/ios-base-class.md#seekdir).
 
 ### <a name="return-value"></a>Valor de retorno
@@ -838,7 +838,7 @@ A primeira função membro realiza uma busca absoluta, a segunda função membro
 > [!NOTE]
 > Não use a segunda função membro com arquivos de texto, porque C++ Padrão não dá suporte a buscas relativas em arquivos de texto.
 
-Se [falhar](../standard-library/basic-ios-class.md#fail) for falsa, a primeira função membro chamará **newpos** = [rdbuf](../standard-library/basic-ios-class.md#rdbuf) -> [pubseekpos](../standard-library/basic-streambuf-class.md#pubseekpos)( `pos`), para algumas `pos_type` objeto temporário `newpos`. Se `fail` for false, a segunda função chamará **newpos** = **rdbuf** -> [pubseekoff](../standard-library/basic-streambuf-class.md#pubseekoff)( `off`, `way`). Em ambos os casos, se ( `off_type`) **newpos** = = ( `off_type`)(-1) (a operação de posicionamento falhar), as chamadas de função `istr`. [SetState](../standard-library/basic-ios-class.md#setstate)(`failbit`). Ambas as funções retornam **\*this**.
+Se [falhar](../standard-library/basic-ios-class.md#fail) for falsa, a primeira função membro chamará **newpos** = [rdbuf](../standard-library/basic-ios-class.md#rdbuf) -> [pubseekpos](../standard-library/basic-streambuf-class.md#pubseekpos)( `pos`), para algumas `pos_type` objeto temporário `newpos`. Se `fail` for false, a segunda função chamará **newpos** = **rdbuf** -> [pubseekoff](../standard-library/basic-streambuf-class.md#pubseekoff)( `off`, `way`). Em ambos os casos, se ( `off_type`) **newpos** = = ( `off_type`)(-1) (a operação de posicionamento falhar), as chamadas de função `istr`. [setstate](../standard-library/basic-ios-class.md#setstate)(`failbit`). Ambas as funções retornam **\*this**.
 
 Se [fail](../standard-library/basic-ios-class.md#fail) for true, as funções membro não farão nada.
 
@@ -867,7 +867,7 @@ int main ( )
 
 A classe aninhada descreve um objeto cuja declaração estrutura as funções de entrada formatadas e não formatadas.
 
-Sentinela de classe {public: sentry explícita (basic_istream\<Elem, Tr > & _Istr, bool _Noskip = false); operador bool () const;};
+class sentry { public: explicit sentry( basic_istream\<Elem, Tr>& _Istr, bool _Noskip = false); operator bool() const; };
 
 ### <a name="remarks"></a>Comentários
 
@@ -877,7 +877,7 @@ Se `_Istr.`[good](../standard-library/basic-ios-class.md#good) for true, o const
 
 - Efetivamente chama [ws](../standard-library/istream-functions.md#ws)( `_Istr`) se `_Istr`. [flags](../standard-library/ios-base-class.md#flags)**&**[skipws](../standard-library/ios-functions.md#skipws) é diferente de zero
 
-Se, depois de qualquer preparação assim, `_Istr`. `good` é false, o construtor chama `_Istr`. [SetState](../standard-library/basic-ios-class.md#setstate)(`failbit`). Em qualquer caso, o construtor armazena o valor retornado por `_Istr`. `good` no `status`. Uma chamada posterior a `operator bool` entrega esse valor armazenado.
+Se, depois de qualquer preparação assim, `_Istr`. `good` é false, o construtor chama `_Istr`. [setstate](../standard-library/basic-ios-class.md#setstate)(`failbit`). Em qualquer caso, o construtor armazena o valor retornado por `_Istr`. `good` no `status`. Uma chamada posterior a `operator bool` entrega esse valor armazenado.
 
 ## <a name="swap"></a>  basic_istream::swap
 
