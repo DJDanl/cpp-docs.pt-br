@@ -157,7 +157,7 @@ Use esta página do Assistente de Adição de Propriedade para especificar as co
 
 - `helpstring`
 
-  Especifica uma cadeia de caracteres que é usada para descrever o elemento ao qual ela se aplica. Por padrão, é definido como o nome `property`&nbsp;*Propriedade&nbsp;*. Confira [helpstring](/windows/desktop/Midl/helpstring) na *Referência de MIDL*.
+  Especifica uma cadeia de caracteres que é usada para descrever o elemento ao qual ela se aplica. Por padrão, ele é definido como `property` &nbsp; *propriedade&nbsp;nome*. Confira [helpstring](/windows/desktop/Midl/helpstring) na *Referência de MIDL*.
 
 ### <a name="other-options"></a>Outras opções
 
