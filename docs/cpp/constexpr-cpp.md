@@ -21,7 +21,7 @@ Para limitar a complexidade dos cálculos de tempo de compilação constante e s
 
 ## <a name="syntax"></a>Sintaxe
 
-> **constexpr** *tipo de literal* *identificador* ** = ** *expressão constante* **;** 
+> **constexpr** *tipo de literal* *identificador* **=** *expressão constante* **;** 
 >  **constexpr** *tipo de literal* *identificador* **{** *expressão constante * **}** **;** 
 >  **constexpr** *tipo de literal* *identificador* **(** *params* **)** **;** 
 >  **constexpr** *ctor* **(** *params* **)** **;**
