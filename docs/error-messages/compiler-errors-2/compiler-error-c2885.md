@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2885
 ms.assetid: 7743e5f3-a034-44b4-9ee8-5a6254c27f8c
-ms.openlocfilehash: 8174faed09bdffbdc6974390cceb7c17661eab4b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ff5e770052301e95f694d3712f95b82732c2faba
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388759"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447690"
 ---
 # <a name="compiler-error-c2885"></a>Erro do compilador C2885
 
@@ -21,7 +21,7 @@ Você usou uma [usando](../../cpp/using-declaration.md) declaração incorretame
 
 ## <a name="example"></a>Exemplo
 
-Esse erro pode ser gerado como resultado do trabalho de conformidade do compilador que foi feito para o Visual C++ 2005: não é válido ter um `using` declaração para um tipo aninhado, você deve qualificar explicitamente cada feitas para o tipo aninhado, coloque o tipo em um nome de referência espaço ou criar um typedef.
+Esse erro pode ser gerado como resultado do trabalho de conformidade do compilador que foi feito para o Visual Studio 2005: ele não é mais válido para ter um `using` declaração para um tipo aninhado, você deve qualificar explicitamente cada referência feitas para o tipo aninhado, coloque o tipo em um n amespace, ou crie um typedef.
 
 O exemplo a seguir gera C2885.
 

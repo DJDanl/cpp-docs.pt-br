@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4459
 ms.assetid: ee9f6287-9c70-4b10-82a0-add82a13997f
-ms.openlocfilehash: 0cbab7c7cca1fc88bb99210262be45c56b6be7a8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 441d01eca7c8266b6d7948508eeb561341e64c57
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391420"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447761"
 ---
 # <a name="compiler-warning-level-4-c4459"></a>Compilador aviso (nível 4) C4459
 
@@ -19,7 +19,7 @@ ms.locfileid: "62391420"
 
 A declaração de *identificador* no escopo local oculta a declaração do idêntico *identificador* no escopo global. Este aviso informa que faz referência à *identificador* nesse escopo resolver para a versão declarada localmente, não a versão global, que pode ou não ser sua intenção. Em geral, recomendamos que você minimize o uso de variáveis globais como uma boa prática de engenharia. Para minimizar a poluição de namespace global, é recomendável o uso de um namespace nomeado para as variáveis globais.
 
-Esse aviso era novo no Visual Studio 2015, no Visual C++ versão do compilador 18h00 Hora. Para suprimir avisos do que a versão do compilador ou posterior ao migrar seu código, use o [/wv:18](../../build/reference/compiler-option-warning-level.md) opção de compilador.
+Esse aviso era novo no Visual Studio 2015, no Microsoft C++ versão do compilador 18h00 Hora. Para suprimir avisos do que a versão do compilador ou posterior ao migrar seu código, use o [/wv:18](../../build/reference/compiler-option-warning-level.md) opção de compilador.
 
 ## <a name="example"></a>Exemplo
 
