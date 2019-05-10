@@ -35,12 +35,12 @@ helpviewer_keywords:
 - LIBCMTD.lib
 - -MT compiler option [C++]
 ms.assetid: cf7ed652-dc3a-49b3-aab9-ad60e5395579
-ms.openlocfilehash: 59b0483d76a2a98c1f278a323a827b243d21adea
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 4ae63f2d45d5a1170f94de0480711bc719e4a2e0
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62321287"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65217623"
 ---
 # <a name="md-mt-ld-use-run-time-library"></a>/MD, /MT, /LD (Usar biblioteca de tempo de execução)
 
@@ -71,7 +71,7 @@ Todos os módulos passados para determinada invocação do vinculador devem ter 
 
 Para obter mais informações sobre como usar as versões de depuração das bibliotecas de tempo de execução, consulte [referência de biblioteca de tempo de execução C](../../c-runtime-library/c-run-time-library-reference.md).
 
-Para obter mais informações sobre DLLs, consulte [DLLs no Visual C++](../dlls-in-visual-cpp.md).
+Para obter mais informações sobre DLLs, consulte [criar C /C++ DLLs no Visual Studio](../dlls-in-visual-cpp.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio
 

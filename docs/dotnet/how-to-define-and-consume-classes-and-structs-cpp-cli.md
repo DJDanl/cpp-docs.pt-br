@@ -5,12 +5,12 @@ helpviewer_keywords:
 - structs [C++]
 - classes [C++], instantiating
 ms.assetid: 1c03cb0d-1459-4b5e-af65-97d6b3094fd7
-ms.openlocfilehash: 090259a4ad6b46eccf66dca6c99b4eb532b7ae5c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 5fe7d6876b094c84fe3d4cdbba417106edcca528
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387470"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447276"
 ---
 # <a name="how-to-define-and-consume-classes-and-structs-ccli"></a>Como: Definir e consumir Classes e Structs (C++ /CLI CLI)
 
@@ -127,7 +127,7 @@ Você pode controlar a visibilidade dos tipos common language runtime (CLR) para
 
 `public` indica que um tipo é visível para qualquer arquivo de origem que contém um `#using` diretiva para o assembly que contém o tipo.  `private` indica que um tipo não é visível para os arquivos de origem que contêm um `#using` diretiva para o assembly que contém o tipo. No entanto, os tipos privados são visíveis dentro do mesmo assembly. Por padrão, a visibilidade de uma classe é `private`.
 
-Por padrão, antes do Visual C++ 2005, os tipos nativos tinham acessibilidade pública fora do assembly. Habilitar [aviso do compilador (nível 1) C4692](../error-messages/compiler-warnings/compiler-warning-level-1-c4692.md) para ajudá-lo a ver onde privados tipos nativos são usados incorretamente. Use o [make_public](../preprocessor/make-public.md) pragma dar acessibilidade pública para um tipo nativo em um arquivo de código fonte que você não pode modificar.
+Por padrão, antes do Visual Studio 2005, os tipos nativos tinham acessibilidade pública fora do assembly. Habilitar [aviso do compilador (nível 1) C4692](../error-messages/compiler-warnings/compiler-warning-level-1-c4692.md) para ajudá-lo a ver onde privados tipos nativos são usados incorretamente. Use o [make_public](../preprocessor/make-public.md) pragma dar acessibilidade pública para um tipo nativo em um arquivo de código fonte que você não pode modificar.
 
 Para obter mais informações, confira [Diretiva #using](../preprocessor/hash-using-directive-cpp.md).
 
@@ -588,7 +588,7 @@ int main() {
 Base::Test
 ```
 
-O próximo exemplo mostra que o compilador do Visual C++ chama uma função na classe mais derivada — mesmo se uma conversão é necessária para corresponder a uma ou mais dos parâmetros — e chamar uma função em uma classe base que é uma correspondência melhor para a chamada de função.
+O próximo exemplo mostra que o Microsoft C++ compilador chama uma função na classe mais derivada — mesmo se uma conversão é necessária para corresponder a uma ou mais dos parâmetros — e chamar uma função em uma classe base que é uma correspondência melhor para a chamada de função.
 
 ```cpp
 // compile with: /clr
@@ -736,7 +736,7 @@ O coletor de lixo do CLR exclui objetos gerenciados não usados e libera sua mem
 
 Um finalizador do Visual C++ não é o mesmo que o <xref:System.Object.Finalize%2A> método. (Documentação do CLR usa finalizador e o <xref:System.Object.Finalize%2A> método como sinônimos). O <xref:System.Object.Finalize%2A> método é chamado pelo coletor de lixo, que chama cada finalizador em uma cadeia de herança de classe. Ao contrário de destruidores do Visual C++, uma chamada de finalizador da classe derivada não faz com que o compilador chamar o finalizador em todas as classes base.
 
-Como o compilador do Visual C++ oferece suporte a liberação determinística dos recursos, não tente implementar o <xref:System.IDisposable.Dispose%2A> ou <xref:System.Object.Finalize%2A> métodos. No entanto, se você estiver familiarizado com esses métodos, aqui está como um finalizador do Visual C++ e um destruidor que chamará o finalizador mapeados para o <xref:System.IDisposable.Dispose%2A> padrão:
+Porque o Microsoft C++ compilador é compatível com a liberação determinística dos recursos, não tente implementar o <xref:System.IDisposable.Dispose%2A> ou <xref:System.Object.Finalize%2A> métodos. No entanto, se você estiver familiarizado com esses métodos, aqui está como um finalizador do Visual C++ e um destruidor que chamará o finalizador mapeados para o <xref:System.IDisposable.Dispose%2A> padrão:
 
 ```cpp
 // Visual C++ code
@@ -757,7 +757,7 @@ void Dispose(bool disposing) {
 
 Um tipo gerenciado também pode usar os recursos gerenciados que preferir para liberar de forma determinista e não deixar para o coletor de lixo libere forma não determinística em algum momento depois que o objeto não é mais necessário. A liberação determinística dos recursos pode melhorar significativamente o desempenho.
 
-O compilador do Visual C++ permite a definição de um destruidor para limpar os objetos de forma determinista. Use o destruidor para liberar todos os recursos que você deseja liberar de forma determinista.  Se um finalizador estiver presente, chamá-lo de destruidor, para evitar a duplicação de código.
+O Microsoft C++ compilador permite a definição de um destruidor para limpar os objetos de forma determinista. Use o destruidor para liberar todos os recursos que você deseja liberar de forma determinista.  Se um finalizador estiver presente, chamá-lo de destruidor, para evitar a duplicação de código.
 
 ```cpp
 // compile with: /clr /c

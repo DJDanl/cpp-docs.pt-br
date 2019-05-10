@@ -1,6 +1,6 @@
 ---
 title: Classe CComSafeArray
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 f1_keywords:
 - CComSafeArray
 - ATLSAFE/ATL::CComSafeArray
@@ -28,12 +28,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComSafeArray class
 ms.assetid: ee349aef-33db-4c85-bd08-5d86a3c9d53a
-ms.openlocfilehash: 0262764c950b01acdb610873a995a9a6fd912997
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: dec6bbad0aa4a8409b9f3d24476dcc94b8eaefe3
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62259437"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221163"
 ---
 # <a name="ccomsafearray-class"></a>Classe CComSafeArray
 
@@ -318,7 +318,7 @@ Retorna S_OK no êxito ou um erro HRESULT em caso de falha.
 
 ### <a name="remarks"></a>Comentários
 
-Um `CComSafeArray` objeto pode ser criado de uma já existente `SAFEARRAYBOUND` estrutura e o número de dimensões ou especificando o número de elementos na matriz e o limite inferior. Se a matriz deve ser acessado a partir do Visual C++, o limite inferior deve ser 0. Outras linguagens podem permitir que outros valores para o limite inferior (por exemplo, Visual Basic é compatível com matrizes com elementos com um intervalo como -10 a 10).
+Um `CComSafeArray` objeto pode ser criado de uma já existente `SAFEARRAYBOUND` estrutura e o número de dimensões ou especificando o número de elementos na matriz e o limite inferior. Se a matriz deve ser acessado do C++, o limite inferior deve ser 0. Outras linguagens podem permitir que outros valores para o limite inferior (por exemplo, Visual Basic é compatível com matrizes com elementos com um intervalo como -10 a 10).
 
 ##  <a name="destroy"></a>  CComSafeArray::Destroy
 

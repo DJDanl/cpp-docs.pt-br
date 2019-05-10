@@ -6,12 +6,12 @@ f1_keywords:
 - -std
 - VC.Project.VCCLCompilerTool.CppLanguageStandard
 ms.assetid: 0acb74ba-1aa8-4c05-b96c-682988dc19bd
-ms.openlocfilehash: 32c63240f578b6170ae351cdf0cd1628167464b6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: de3389a52781f541143268e3ede79eae375ff1d3
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62317881"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446231"
 ---
 # <a name="std-specify-language-standard-version"></a>/STD (especificar versão de idioma padrão)
 
@@ -48,10 +48,10 @@ O **/std:c++17 + + mais recente** opção permite que o post-C + + 17 recursos d
 
 O **/std** opção em vigor durante a compilação de C++ pode ser detectada pelo uso das [ \_MSVC\_LANG](../../preprocessor/predefined-macros.md) macro do pré-processador. Para obter mais informações, consulte [Macros de pré-processador](../../preprocessor/predefined-macros.md).
 
-O **/std:c++17 + + 14** e **/std: c + + mais recente** opções estão disponíveis no Visual C++ 2015 atualização 3. O **/std: c + + 17** opção está disponível a partir Visual C++ 2017 versão 15.3. Conforme observado acima, algumas padrão c++17 comportamento é habilitado pela **/std:c++17 + + 14** opção, mas todos os outros recursos do c++17 são habilitadas por **/std: c + + 17**.
+O **/std:c++17 + + 14** e **/std: c + + mais recente** opções estão disponíveis no Visual Studio 2015 atualização 3. O **/std: c + + 17** opção está disponível a partir no Visual Studio 2017 versão 15.3. Conforme observado acima, algumas padrão c++17 comportamento é habilitado pela **/std:c++17 + + 14** opção, mas todos os outros recursos do c++17 são habilitadas por **/std: c + + 17**.
 
 > [!NOTE]
-> Dependendo do MSVC compilador versão ou atualização do nível, determinados C + + 14 ou C + + 17 recursos talvez não estejam totalmente implementados ou totalmente compatível com quando você especifica o **/std:c++17 + + 14** ou **/std:c++17 + + 17** opções. Por exemplo, o Visual C++ compilador do 2017 RTM não suporta completamente C + + 14-compatível com `constexpr`, a expressão SFINAE ou pesquisa de nome de fase 2. Para uma visão geral de conformidade com a linguagem C++ no Visual C++ por versão de lançamento, consulte [conformidade com a linguagem Visual C++](../../overview/visual-cpp-language-conformance.md).
+> Dependendo do MSVC compilador versão ou atualização do nível, determinados C + + 14 ou C + + 17 recursos talvez não estejam totalmente implementados ou totalmente compatível com quando você especifica o **/std:c++17 + + 14** ou **/std:c++17 + + 17** opções. Por exemplo, o compilador do Visual Studio 2017 RTM não suporta totalmente C + + 14-compatível com `constexpr`, expressão SFINAE ou pesquisa de nome de fase 2. Para uma visão geral de conformidade com a linguagem C++ no Visual C++ por versão de lançamento, consulte [conformidade com a linguagem Visual C++](../../overview/visual-cpp-language-conformance.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio
 

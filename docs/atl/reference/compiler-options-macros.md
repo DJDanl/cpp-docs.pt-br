@@ -1,6 +1,6 @@
 ---
 title: Macros de opções do compilador
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 f1_keywords:
 - _ATL_ALL_WARNINGS
 - _ATL_APARTMENT_THREADED
@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - compiler options, macros
 ms.assetid: a869adc6-b3de-4299-b040-9ae20b45f82c
-ms.openlocfilehash: 79b1cabc0304e905012db5f6dd73ed71073c0c1e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: e1d0f6e068989179dd9498e399ca5304a2b378b8
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62278417"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221120"
 ---
 # <a name="compiler-options-macros"></a>Macros de opções do compilador
 
@@ -32,10 +32,10 @@ Essas macros controlam os recursos de compilador específica.
 |[_ATL_ALL_WARNINGS](#_atl_all_warnings)|Um símbolo que habilita os erros em projetos convertidos de versões anteriores do ATL.|
 |[_ATL_APARTMENT_THREADED](#_atl_apartment_threaded)|Defina se um ou mais dos seus objetos usam apartamento de threading.|
 |[_ATL_CSTRING_EXPLICIT_CONSTRUCTORS](#_atl_cstring_explicit_constructors)|Faz com que determinados `CString` construtores explícitos, impedindo que as conversões não intencionais.|
-|[_ATL_ENABLE_PTM_WARNING](#_atl_enable_ptm_warning)|Defina essa macro para usar a sintaxe de conformidade padrão C++, que gera o erro do compilador C4867 quando uma sintaxe padrão não é usada para inicializar um ponteiro para uma função de membro.|
+|[_ATL_ENABLE_PTM_WARNING](#_atl_enable_ptm_warning)|Definir essa macro para usar o C++ sintaxe de conformidade padrão, que gera o erro do compilador C4867 quando uma sintaxe não padrão é usada para inicializar um ponteiro para uma função de membro.|
 |[_ATL_FREE_THREADED](#_atl_free_threaded)|Defina se um ou mais dos seus objetos usam threading livre ou neutra.|
 |[_ATL_MULTI_THREADED](#_atl_multi_threaded)|Um símbolo que indica o projeto terá objetos que são marcados como "ambas", gratuito ou neutra. A macro [atl_free_threaded](#_atl_free_threaded) deve ser usado em vez disso.|
-|[_ATL_NO_AUTOMATIC_NAMESPACE](#_atl_no_automatic_namespace)|Um símbolo que impede o uso do padrão de namespace como ATL.|
+|[_ATL_NO_AUTOMATIC_NAMESPACE](#_atl_no_automatic_namespace)|Um símbolo que impede o uso padrão do namespace como ATL.|
 |[_ATL_NO_COM_SUPPORT](#_atl_no_com_support)|Um símbolo que impede que o código relacionado ao COM que está sendo compilado com o seu projeto.|
 |[ATL_NO_VTABLE](#atl_no_vtable)|Um símbolo que impede que o ponteiro vtable que está sendo inicializado no construtor e o destruidor da classe.|
 |[ATL_NOINLINE](#atl_noinline)|Um símbolo que indica uma função não deve ser embutido.|
@@ -63,7 +63,7 @@ Antes do Visual C++ .NET 2002, o ATL desabilitado muitos avisos e deixou desativ
 
 - C4291 'declaração': Nenhum operador delete encontrado; memória não será liberada se inicialização lançar uma exceção
 
-- C4268 'identifier': 'const' dados estático/global inicializados com o construtor de padrão gerado pelo compilador preenche o objeto com zeros
+- C4268 'identifier': 'const' dados estático/global inicializados com o construtor padrão gerado pelo compilador preenche o objeto com zeros
 
 - Código inacessível de C4702
 
@@ -113,7 +113,7 @@ Defina essa macro para forçar o uso da sintaxe de C++ ANSI compatíveis com o p
 
 ### <a name="remarks"></a>Comentários
 
-As bibliotecas ATL e MFC foram alteradas para corresponder melhor conformidade de C++ padrão do compilador Visual C++. Segundo o padrão ANSI C++, a sintaxe de um ponteiro para uma função de membro de classe deve ser `&CMyClass::MyFunc`.
+As bibliotecas ATL e MFC foram alteradas para coincidir com o Microsoft C++ padrão de aprimorada do compilador C++ conformidade. Segundo o padrão ANSI C++, a sintaxe de um ponteiro para uma função de membro de classe deve ser `&CMyClass::MyFunc`.
 
 Quando [_ATL_ENABLE_PTM_WARNING](#_atl_enable_ptm_warning) não está definido (o caso padrão), ATL/MFC desabilita o erro C4867 em mapas de macro (particularmente mensagem mapeia) para que o código que foi criado em versões anteriores pode continuar a compilação como antes. Se você definir **_ATL_ENABLE_PTM_WARNING**, seu código deve ser C++ padrão em conformidade.
 
@@ -153,7 +153,7 @@ Se esse símbolo é definido, o ATL efetuará pull no código que será sincroni
 
 ##  <a name="_atl_no_automatic_namespace"></a>  _ATL_NO_AUTOMATIC_NAMESPACE
 
-Um símbolo que impede o uso do padrão de namespace como ATL.
+Um símbolo que impede o uso padrão do namespace como ATL.
 
 ```
 _ATL_NO_AUTOMATIC_NAMESPACE

@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C1010
 ms.assetid: dfd035f1-a7a2-40bc-bc92-dc4d7f456767
-ms.openlocfilehash: 6974f0d82653203973be50b5ea709bd9487a215f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 204c7ef94d82513338f6635ec9eb22f26fc090a7
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62363967"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448025"
 ---
 # <a name="fatal-error-c1010"></a>Erro fatal C1010
 
 fim de arquivo inesperado durante a procura de cabeçalho pré-compilado. Você esqueceu de adicionar ' #include nome ' à sua fonte?
 
-Um arquivo de inclusão especificado com [/Yu](../../build/reference/yu-use-precompiled-header-file.md) não estiver listado no arquivo de origem.  Essa opção é habilitada por padrão na maioria dos tipos de projeto do Visual C++ e "Stdafx. h" é o padrão incluem o arquivo especificado por essa opção.
+Um arquivo de inclusão especificado com [/Yu](../../build/reference/yu-use-precompiled-header-file.md) não estiver listado no arquivo de origem.  Essa opção é habilitada por padrão no Visual Studio a maioria dos C++ tipos de projeto e "Stdafx. h" é o padrão incluem o arquivo especificado por essa opção.
 
 No ambiente do Visual Studio, use um dos seguintes métodos para resolver esse erro:
 

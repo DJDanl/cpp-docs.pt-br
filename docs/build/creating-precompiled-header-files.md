@@ -1,20 +1,18 @@
 ---
 title: Arquivos de cabeçalho pré-compilado
-ms.date: 12/10/2018
-f1_keywords:
-- pch
+ms.date: 05/06/2019
 helpviewer_keywords:
 - precompiled header files, creating
 - PCH files, creating
 - cl.exe compiler, precompiling code
 - .pch files, creating
 ms.assetid: e2cdb404-a517-4189-9771-c869c660cb1b
-ms.openlocfilehash: 5afda50c43f93baa2d73e6afb68f436560c3243e
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
-ms.translationtype: MT
+ms.openlocfilehash: 1dc6ff9de94f98a4eef3d3827bec177f22672674
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64341755"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220825"
 ---
 # <a name="precompiled-header-files"></a>Arquivos de cabeçalho pré-compilado
 
@@ -43,7 +41,7 @@ Você pode pré-compilar programas em C e C++. Na programação do C++, é prát
 
 ## <a name="two-choices-for-precompiling-code"></a>Duas escolhas para pré-compilar código
 
-Com o Visual C++, você pode pré-compilar qualquer código C ou C++; Você não está limitado a pré-compilar somente os arquivos de cabeçalho.
+Você pode pré-compilar qualquer C ou C++ de código; Você não está limitado a pré-compilar somente os arquivos de cabeçalho.
 
 Pré-compilação requer um planejamento, mas oferece compilações significativamente mais rápidas se você pré-compilar o código-fonte que não sejam arquivos de cabeçalho simples.
 
@@ -133,7 +131,7 @@ Esta tabela lista as opções do compilador que podem disparar um aviso de incon
 
 As seções anteriores apresentam uma visão geral dos cabeçalhos pré-compilados: /Yc e /Yu, a opção /Fp e o [hdrstop](../preprocessor/hdrstop.md) pragma. Esta seção descreve um método para usar as opções de cabeçalho pré-compilado manuais em um projeto; ele termina com um makefile de exemplo e o código que ele gerencia.
 
-Para outra abordagem para usar as opções de cabeçalho pré-compilado manuais em um projeto, estude uma das makefiles localizados no diretório MFC\SRC que é criado durante a configuração padrão do Visual C++. Esses makefiles adotar uma abordagem semelhante ao apresentado nesta seção, mas usar mais de macros do Microsoft programa manutenção Utility (NMAKE) e oferecem maior controle do processo de compilação.
+Para outra abordagem para usar as opções de cabeçalho pré-compilado manuais em um projeto, estude uma das makefiles localizados no diretório MFC\SRC que é criado durante a configuração padrão do Visual Studio. Esses makefiles adotar uma abordagem semelhante ao apresentado nesta seção, mas usar mais de macros do Microsoft programa manutenção Utility (NMAKE) e oferecem maior controle do processo de compilação.
 
 ## <a name="pch-files-in-the-build-process"></a>Arquivos PCH no processo de compilação
 

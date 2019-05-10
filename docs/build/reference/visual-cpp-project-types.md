@@ -8,25 +8,25 @@ helpviewer_keywords:
 - projects [C++], types
 - templates [C++], projects
 - applications [C++], projects
-- Visual C++ projects, types
+- C++ projects, types
 ms.assetid: 7337987e-1e7b-4120-9a4b-94f0401f15e7
-ms.openlocfilehash: cac194ed2c830541711161dc139a42ed0529340f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: dce96a221804e5538929d63fa3c125a27e7fc36d
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62316750"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65217779"
 ---
 # <a name="c-project-templates"></a>Modelos de projeto C++
 
-Modelos de projeto do Visual Studio geram arquivos de código-fonte, opções do compilador, menus, barras de ferramentas, ícones, referências, e `#include` instruções que são apropriadas para o tipo de projeto que você deseja criar. O Visual Studio inclui vários tipos de modelos de projeto do Visual C++ e fornece assistentes para muitos deles, de modo que você pode personalizar seus projetos conforme os cria. Imediatamente depois de criar um projeto, você pode compilá-lo e executar o aplicativo; é uma boa prática compilar o projeto de forma intermitente durante o desenvolvimento do aplicativo.
+Modelos de projeto do Visual Studio geram arquivos de código-fonte, opções do compilador, menus, barras de ferramentas, ícones, referências, e `#include` instruções que são apropriadas para o tipo de projeto que você deseja criar. O Visual Studio inclui vários tipos de C++ modelos de projeto e fornece assistentes para muitos deles, para que você possa personalizar seus projetos conforme você criá-los. Imediatamente depois de criar um projeto, você pode compilá-lo e executar o aplicativo; é uma boa prática compilar o projeto de forma intermitente durante o desenvolvimento do aplicativo.
 
 > [!NOTE]
 > Você pode criar um projeto de linguagem C, utilizando modelos de projeto C++. No projeto gerado, localize os arquivos que têm uma extensão de nome de arquivo .cpp e mude para .c. Em seguida, na página **Propriedades do Projeto** do projeto (não da solução), expanda **Propriedades de Configuração**, **C/C++** e selecione **Avançado**. Altere as configurações de **Compilar como** para **Compilar como Código C (/TC)**.
 
 ## <a name="project-templates"></a>Modelos de projeto
 
-Os modelos de projeto incluídos no Visual Studio dependem da versão do produto e das cargas de trabalho instaladas. Se você instalou a carga de trabalho Desenvolvimento para desktop com C++, isso significa que o Visual Studio tem esses modelos de projeto do Visual C++.
+Os modelos de projeto incluídos no Visual Studio dependem da versão do produto e das cargas de trabalho instaladas. Se você tiver instalado o desenvolvimento para Desktop com C++ carga de trabalho, o Visual Studio possui os seguintes C++ modelos de projeto.
 
 ### <a name="windows-desktop"></a>Área de Trabalho do Windows
 

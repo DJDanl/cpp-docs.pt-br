@@ -9,16 +9,16 @@ helpviewer_keywords:
 - thread attribute
 - Thread Local Storage [C++]
 ms.assetid: 80801907-d792-45ca-b776-df0cf2e9f197
-ms.openlocfilehash: f5a75f7964b0291a980b22d36e7ce6a0a87d3dc3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5c7bf2ae7cb5bfe71be9a1d72147e97c894064b3
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62362712"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448902"
 ---
 # <a name="thread-local-storage-tls"></a>Armazenamento local de thread (TLS)
 
-Armazenamento Local do thread (TLS) é o método pelo qual cada thread em um processo multithread determinado pode alocar locais para armazenar dados específicos de segmento. Dinamicamente dados específicos de segmento de limite (tempo de execução) são suportados por meio da API de TLS ([TlsAlloc](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsalloc).  Win32 e o compilador do Visual C++ agora dão suporte a dados associados estaticamente (tempo de carregamento) por thread, além da implementação da API existente.
+Armazenamento Local do thread (TLS) é o método pelo qual cada thread em um processo multithread determinado pode alocar locais para armazenar dados específicos de segmento. Dinamicamente dados específicos de segmento de limite (tempo de execução) são suportados por meio da API de TLS ([TlsAlloc](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsalloc).  Win32 e o Microsoft C++ compilador agora suporte estaticamente vinculados a dados (tempo de carregamento) por thread, além da implementação da API existente.
 
 ##  <a name="_core_compiler_implementation_for_tls"></a> Implementação do compilador para TLS
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - idl_quote attribute
 ms.assetid: a370e1b7-948b-4e67-9a25-58facf24e4c9
-ms.openlocfilehash: fd7455298c9a1b69926d85766b6cd7f96bd374cc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3fbec210d973926a312d3e750e806dd9ef13f5f9
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409480"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448537"
 ---
 # <a name="idlquote"></a>idl_quote
 
@@ -26,7 +26,7 @@ Permite que você use construções IDL que não têm suporte na versão atual d
 ### <a name="parameters"></a>Parâmetros
 
 *text*<br/>
-O nome do atributo que você pretende que o compilador do Visual C++ para passar para o arquivo. idl gerado sem retornar um erro do compilador.
+O nome do atributo que você pretende que o Microsoft C++ compilador para passar para o arquivo. idl gerado sem retornar um erro do compilador.
 
 ## <a name="remarks"></a>Comentários
 

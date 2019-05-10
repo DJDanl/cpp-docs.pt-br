@@ -4,12 +4,12 @@ ms.date: 04/22/2019
 helpviewer_keywords:
 - warnings, by compiler version
 - cl.exe compiler, setting warning options
-ms.openlocfilehash: a84c3f14b8e6a6c877a13c3c9b1b851b0fc5ad05
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: e417de57292e4b21d81e8d6643ba77d8b169af07
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62359898"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448181"
 ---
 # <a name="compiler-warnings-by-compiler-version"></a>Avisos do compilador pela versão do compilador
 
@@ -19,25 +19,25 @@ Essas versões do compilador introduziram novos avisos:
 
 | Produto | Número de versão do compilador |
 |-|-|
-| Visual C++ 2002 | 13.00.9466 |
-| Visual C++ 2003 | 13.10.3077 |
-| Visual C++ 2005 | 14.00.50727.762 |
-| Visual C++ 2008 | 15.00.21022.08 |
-| Visual C++ 2010 | 16.00.40219.01 |
-| Visual C++ 2012 | 17.00.51106.1 |
-| Visual C++ 2013 | 18.00.21005.1 |
-| Visual C++ 2015 RTM | 19.00.23026.0 |
-| Visual C++ 2015 atualização 1 | 19.00.23506.0 |
-| Visual C++ 2015 atualização 2 | 19.00.23918.0 |
-| Visual C++ 2015 atualização 3 | 19.00.24215.1 |
-| Visual C++ 2017 RTM | 19.10.25017.0 |
-| Visual C++ 2017 versão 15.3 | 19.11.25506.0 |
-| Visual C++ 2017 versão 15.5 | 19.12.25830.0 |
-| Visual C++ 2017 versão 15.6 | 19.13.26128.0 |
-| Visual C++ 2017 versão 15.7 | 19.14.26428.0 |
-| Visual C++ 2017 versão 15,8 | 19.15.26726.0 |
-| Visual C++ 2017 versão 15,9 | 19.16.26926.0 |
-| Visual C++ 2019 RTM | 19.20.27004.0 |
+| Visual Studio 2002 | 13.00.9466 |
+| Visual Studio 2003 | 13.10.3077 |
+| Visual Studio 2005 | 14.00.50727.762 |
+| Visual Studio 2008 | 15.00.21022.08 |
+| Visual Studio 2010 | 16.00.40219.01 |
+| Visual Studio 2012 | 17.00.51106.1 |
+| Visual Studio 2013 | 18.00.21005.1 |
+| Visual Studio 2015 RTM | 19.00.23026.0 |
+| Visual Studio 2015 Atualização 1 | 19.00.23506.0 |
+| Visual Studio 2015 Atualização 2 | 19.00.23918.0 |
+| Visual Studio 2015 Atualização 3 | 19.00.24215.1 |
+| Visual Studio 2017 RTM | 19.10.25017.0 |
+| Visual Studio 2017 versão 15.3 | 19.11.25506.0 |
+| Visual Studio 2017 versão 15.5 | 19.12.25830.0 |
+| Visual Studio 2017 versão 15.6 | 19.13.26128.0 |
+| Visual Studio 2017 versão 15.7 | 19.14.26428.0 |
+| Visual Studio 2017 versão 15.8 | 19.15.26726.0 |
+| Visual Studio 2017 versão 15,9 | 19.16.26926.0 |
+| Visual Studio RTM de 2019 | 19.20.27004.0 |
 
 Você pode especificar apenas o número principal, os números principais e secundárias ou major, minor e criar números das `/Wv` opção. O compilador relata todos os avisos que correspondem a versões que começam com o número especificado e suprime todos os avisos para as versões superiores do número especificado. Por exemplo, `/Wv:17` relata avisos introduzidos em ou antes de qualquer versão do Visual Studio 2012 e suprime os avisos introduzidos por qualquer compilador do Visual Studio 2013 (versão de 18) ou posterior. Para suprimir avisos introduzidos no Visual Studio 2015 atualização 2 e posterior, você pode usar `/Wv:19.00.23506`. Use `/Wv:19.11` relate os avisos introduzidos em qualquer versão do Visual Studio anteriores ao Visual Studio 2017 versão 15.5, mas suprimir avisos introduzidos no Visual Studio 2017 versão 15.5 e posteriores.
 
@@ -45,7 +45,7 @@ As seções a seguir listam os avisos introduzidos por cada versão do Visual C+
 
 ::: moniker range=">= vs-2019"
 
-## <a name="warnings-introduced-in-visual-c-2019-rtw-compiler-version-1920270040"></a>Avisos introduzidos no Visual C++ 2019 RTW (versão do compilador 19.20.27004.0)
+## <a name="warnings-introduced-in-visual-studio-2019-rtw-compiler-version-1920270040"></a>Avisos introduzidos no Visual Studio 2019 RTW (versão do compilador 19.20.27004.0)
 
 Esses avisos e todos os avisos em versões posteriores são suprimidos usando a opção de compilador `/Wv:19.15`.
 
@@ -57,7 +57,7 @@ Esses avisos e todos os avisos em versões posteriores são suprimidos usando a 
 ::: moniker range=">= vs-2017"
 
 
-## <a name="warnings-introduced-in-visual-c-2017-version-158-compiler-version-1915267260"></a>Avisos introduzidos no Visual C++ 2017 versão 15,8 (versão do compilador 19.15.26726.0)
+## <a name="warnings-introduced-in-visual-studio-2017-version-158-compiler-version-1915267260"></a>Avisos introduzidos no Visual Studio 2017 versão 15,8 (versão do compilador 19.15.26726.0)
 
 Esses avisos e todos os avisos em versões posteriores são suprimidos usando a opção de compilador `/Wv:19.14`.
 
@@ -83,7 +83,7 @@ Esses avisos e todos os avisos em versões posteriores são suprimidos usando a 
 | C5106 | `macro redefined with different parameter names` |
 | C5107 | `missing terminating 'char' character` |
 
-## <a name="warnings-introduced-in-visual-c-2017-version-157-compiler-version-1914264280"></a>Avisos introduzidos no Visual C++ 2017 versão 15.7 (versão do compilador 19.14.26428.0)
+## <a name="warnings-introduced-in-visual-studio-2017-version-157-compiler-version-1914264280"></a>Avisos introduzidos no Visual Studio 2017 versão 15.7 (versão do compilador 19.14.26428.0)
 
 Esses avisos e todos os avisos em versões posteriores são suprimidos usando a opção de compilador `/Wv:19.13`.
 
@@ -92,7 +92,7 @@ Esses avisos e todos os avisos em versões posteriores são suprimidos usando a 
 | C4642 | `'issue': could not import the constraints for generic parameter 'parameter'` |
 | C5045 | `Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified` |
 
-## <a name="warnings-introduced-in-visual-c-2017-version-156-compiler-version-1913261280"></a>Avisos introduzidos no Visual C++ 2017 versão 15.6 (versão do compilador 19.13.26128.0)
+## <a name="warnings-introduced-in-visual-studio-2017-version-156-compiler-version-1913261280"></a>Avisos introduzidos no Visual Studio 2017 versão 15.6 (versão do compilador 19.13.26128.0)
 
 Esses avisos e todos os avisos em versões posteriores são suprimidos usando a opção de compilador `/Wv:19.12`.
 
@@ -100,7 +100,7 @@ Esses avisos e todos os avisos em versões posteriores são suprimidos usando a 
 |-|-|
 | C5044 | `An argument to command-line option option points to a path 'path' that does not exist` |
 
-## <a name="warnings-introduced-in-visual-c-2017-version-155-compiler-version-1912258300"></a>Avisos introduzidos no Visual C++ 2017 versão 15.5 (versão do compilador 19.12.25830.0)
+## <a name="warnings-introduced-in-visual-studio-2017-version-155-compiler-version-1912258300"></a>Avisos introduzidos no Visual Studio 2017 versão 15.5 (versão do compilador 19.12.25830.0)
 
 Esses avisos e todos os avisos em versões posteriores são suprimidos usando a opção de compilador `/Wv:19.11`.
 
@@ -114,7 +114,7 @@ Esses avisos e todos os avisos em versões posteriores são suprimidos usando a 
 | C5042 | `'declaration': function declarations at block scope cannot be specified 'inline' in standard C++; remove 'inline' specifier` |
 | C5043 | `'specification': exception specification does not match previous declaration` |
 
-## <a name="warnings-introduced-in-visual-c-2017-version-153-compiler-version-1911255060"></a>Avisos introduzidos no Visual C++ 2017 versão 15.3 (versão do compilador 19.11.25506.0)
+## <a name="warnings-introduced-in-visual-studio-2017-version-153-compiler-version-1911255060"></a>Avisos introduzidos no Visual Studio 2017 versão 15.3 (versão do compilador 19.11.25506.0)
 
 Esses avisos e todos os avisos em versões posteriores são suprimidos usando a opção de compilador `/Wv:19.10`.
 
@@ -135,7 +135,7 @@ Esses avisos e todos os avisos em versões posteriores são suprimidos usando a 
 | C5037 | `'*member-function*': an out-of-line definition of a member of a class template cannot have default arguments` |
 | C5038 | `data member 'member1' will be initialized after data member 'member2'` |
 
-## <a name="warnings-introduced-in-visual-c-2017-rtm-compiler-version-1910250170"></a>Avisos introduzidos no Visual C++ 2017 RTM (versão do compilador 19.10.25017.0)
+## <a name="warnings-introduced-in-visual-studio-2017-rtm-compiler-version-1910250170"></a>Avisos introduzidos no Visual Studio 2017 RTM (versão do compilador 19.10.25017.0)
 
 Esses avisos e todos os avisos em versões posteriores são suprimidos usando a opção de compilador `/Wv:19.00`.
 
@@ -148,7 +148,7 @@ Esses avisos e todos os avisos em versões posteriores são suprimidos usando a 
 
 ::: moniker-end
 
-## <a name="warnings-introduced-in-visual-c-2015-update-3-compiler-version-1900242151"></a>Avisos introduzidos no Visual C++ 2015 atualização 3 (versão do compilador 19.00.24215.1)
+## <a name="warnings-introduced-in-visual-studio-2015-update-3-compiler-version-1900242151"></a>Avisos introduzidos no Visual Studio 2015 atualização 3 (versão do compilador 19.00.24215.1)
 
 Esses avisos e todos os avisos em versões posteriores são suprimidos usando a opção de compilador `/Wv:19.00.23918`.
 
@@ -159,7 +159,7 @@ Esses avisos e todos os avisos em versões posteriores são suprimidos usando a 
 | C4598 | `'#include <header>': header number number in the source does not match source at that position` |
 | C4599 | `'argument': source argument number number does not match source` |
 
-## <a name="warnings-introduced-in-visual-c-2015-update-2-compiler-version-1900239180"></a>Avisos introduzidos no Visual C++ 2015 atualização 2 (versão do compilador 19.00.23918.0)
+## <a name="warnings-introduced-in-visual-studio-2015-update-2-compiler-version-1900239180"></a>Avisos introduzidos no Visual Studio 2015 atualização 2 (versão do compilador 19.00.23918.0)
 
 Esses avisos e todos os avisos em versões posteriores são suprimidos usando a opção de compilador `/Wv:19.00.23506`.
 
@@ -170,7 +170,7 @@ Esses avisos e todos os avisos em versões posteriores são suprimidos usando a 
 | C4828 | `The file contains a character starting at offset 0xvalue that is illegal in the current source character set (codepage number).` |
 | C4868 | `compiler may not enforce left-to-right evaluation order in braced initializer list` |
 
-## <a name="warnings-introduced-in-visual-c-2015-update-1-compiler-version-1900235060"></a>Avisos introduzidos no Visual C++ 2015 atualização 1 (versão do compilador 19.00.23506.0)
+## <a name="warnings-introduced-in-visual-studio-2015-update-1-compiler-version-1900235060"></a>Avisos introduzidos no Visual Studio 2015 atualização 1 (versão do compilador 19.00.23506.0)
 
 Esses avisos e todos os avisos em versões posteriores são suprimidos usando a opção de compilador `/Wv:19.00.23026`.
 
@@ -181,7 +181,7 @@ Esses avisos e todos os avisos em versões posteriores são suprimidos usando a 
 | C5031 | `#pragma warning(pop): likely mismatch, popping warning state pushed in different file` |
 | C5032 | `detected #pragma warning(push) with no corresponding #pragma warning(pop)` |
 
-## <a name="warnings-introduced-in-visual-c-2015-rtm-compiler-version-1900230260"></a>Avisos introduzidos no Visual C++ 2015 RTM (versão do compilador 19.00.23026.0)
+## <a name="warnings-introduced-in-visual-studio-2015-rtm-compiler-version-1900230260"></a>Avisos introduzidos no Visual Studio 2015 RTM (versão do compilador 19.00.23026.0)
 
 Esses avisos e todos os avisos em versões posteriores são suprimidos usando a opção de compilador `/Wv:18`.
 
@@ -240,7 +240,7 @@ Esses avisos e todos os avisos em versões posteriores são suprimidos usando a 
 | C5029 | `nonstandard extension used: alignment attributes in C++ apply to variables, data members and tag types only` |
 | C5030 | `attribute 'attribute' is not recognized` |
 
-## <a name="warnings-introduced-in-visual-c-2013-compiler-version-1800210051"></a>Avisos introduzidos no Visual C++ 2013 (versão do compilador 18.00.21005.1)
+## <a name="warnings-introduced-in-visual-studio-2013-compiler-version-1800210051"></a>Avisos introduzidos no Visual Studio 2013 (versão do compilador 18.00.21005.1)
 
 Esses avisos e todos os avisos em versões posteriores são suprimidos usando a opção de compilador `/Wv:17`.
 
@@ -269,7 +269,7 @@ Esses avisos e todos os avisos em versões posteriores são suprimidos usando a 
 | C4991 | `Warbird: function 'declaration' marked as __forceinline not inlined because protection level of inlinee is greater than the parent` |
 | C4992 | `Warbird: function 'declaration' marked as __forceinline not inlined because it contains inline assembly which cannot be protected` |
 
-## <a name="warnings-introduced-in-visual-c-2012-compiler-version-1700511061"></a>Avisos introduzidos no Visual C++ 2012 (versão do compilador 17.00.51106.1)
+## <a name="warnings-introduced-in-visual-studio-2012-compiler-version-1700511061"></a>Avisos introduzidos no Visual Studio 2012 (versão do compilador 17.00.51106.1)
 
 Esses avisos e todos os avisos em versões posteriores são suprimidos usando a opção de compilador `/Wv:16`.
 
@@ -312,7 +312,7 @@ Esses avisos e todos os avisos em versões posteriores são suprimidos usando a 
 | C4988 | `'type': variable declared outside class/function scope` |
 | C4989 | `'description': type has conflicting definitions.` |
 
-## <a name="warnings-introduced-in-visual-c-2010-compiler-version-16004021901"></a>Avisos introduzidos no Visual C++ 2010 (versão do compilador 16.00.40219.01)
+## <a name="warnings-introduced-in-visual-studio-2010-compiler-version-16004021901"></a>Avisos introduzidos no Visual Studio 2010 (versão do compilador 16.00.40219.01)
 
 Esses avisos e todos os avisos em versões posteriores são suprimidos usando a opção de compilador `/Wv:15`.
 
@@ -328,7 +328,7 @@ Esses avisos e todos os avisos em versões posteriores são suprimidos usando a 
 | C4986 | `'declaration': exception specification does not match previous declaration` |
 | C4987 | `nonstandard extension used: 'throw (...)'` |
 
-## <a name="warnings-introduced-in-visual-c-2008-compiler-version-15002102208"></a>Avisos introduzidos no Visual C++ 2008 (versão do compilador 15.00.21022.08)
+## <a name="warnings-introduced-in-visual-studio-2008-compiler-version-15002102208"></a>Avisos introduzidos no Visual Studio 2008 (versão do compilador 15.00.21022.08)
 
 Esses avisos e todos os avisos em versões posteriores são suprimidos usando a opção de compilador `/Wv:14`.
 
@@ -343,7 +343,7 @@ Esses avisos e todos os avisos em versões posteriores são suprimidos usando a 
 | C4910 | `'type': '__declspec(dllexport)' and 'extern' are incompatible on an explicit instantiation` |
 | C4985 | `'declaration': attributes not present on previous declaration.` |
 
-## <a name="warnings-introduced-in-visual-c-2005-compiler-version-140050727762"></a>Avisos introduzidos no Visual C++ 2005 (versão do compilador 14.00.50727.762)
+## <a name="warnings-introduced-in-visual-studio-2005-compiler-version-140050727762"></a>Avisos introduzidos no Visual Studio 2005 (versão do compilador 14.00.50727.762)
 
 Esses avisos e todos os avisos em versões posteriores são suprimidos usando a opção de compilador `/Wv:13`.
 
@@ -486,7 +486,7 @@ Esses avisos e todos os avisos em versões posteriores são suprimidos usando a 
 | C4971 | `Argument order: <target object>, <target function> for delegate constructor is deprecated, use <target function>, <target object>` |
 | C4972 | `Directly modifying or treating the result of an unbox operation as an lvalue is unverifiable` |
 
-## <a name="warnings-introduced-in-visual-c-2003-compiler-version-13103077"></a>Avisos introduzidos no Visual C++ 2003 (versão do compilador 13.10.3077)
+## <a name="warnings-introduced-in-visual-studio-2003-compiler-version-13103077"></a>Avisos introduzidos no Visual Studio 2003 (versão do compilador 13.10.3077)
 
 Esses avisos e todos os avisos em versões posteriores são suprimidos usando a opção de compilador `/Wv:13.00.9466`.
 
@@ -522,7 +522,7 @@ Esses avisos e todos os avisos em versões posteriores são suprimidos usando a 
 | C4953 | `Inlinee 'description' has been edited since profile data was collected, profile data not used` |
 | C4954 | `'description': not profiled (contains __int64 switch expression)` |
 
-## <a name="warnings-introduced-in-visual-c-2002-compiler-version-13009466"></a>Avisos introduzidos no Visual C++ 2002 (versão do compilador 13.00.9466)
+## <a name="warnings-introduced-in-visual-studio-2002-compiler-version-13009466"></a>Avisos introduzidos no Visual Studio 2002 (versão do compilador 13.00.9466)
 
 Esses avisos e todos os avisos em versões posteriores são suprimidos usando a opção de compilador `/Wv:12`.
 

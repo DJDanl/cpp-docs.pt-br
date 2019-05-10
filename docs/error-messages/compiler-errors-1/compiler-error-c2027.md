@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2027
 ms.assetid: a39150c0-ec04-45ec-934c-a838bfe76627
-ms.openlocfilehash: 3f3fac9d5410595fe5653e257d97d2fd7c858545
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 901e9b791616c5684b352c1fda7687f67b895d9c
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62303483"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447367"
 ---
 # <a name="compiler-error-c2027"></a>Erro do compilador C2027
 
@@ -43,7 +43,7 @@ int main() {
 
 ## <a name="example"></a>Exemplo
 
-É possível declarar um ponteiro para um tipo declarado mas indefinido.  Mas o Visual C++ não permite uma referência a um tipo indefinido.
+É possível declarar um ponteiro para um tipo declarado mas indefinido. Mas C++ não permite uma referência a um tipo indefinido.
 
 O exemplo a seguir gera C2027.
 
