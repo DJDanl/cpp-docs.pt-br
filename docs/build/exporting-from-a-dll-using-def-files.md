@@ -1,17 +1,17 @@
 ---
 title: Exportando a partir de uma DLL usando arquivos DEF
-ms.date: 01/09/2018
+ms.date: 05/06/2019
 helpviewer_keywords:
 - def files [C++], exporting from DLLs
 - .def files [C++], exporting from DLLs
 - exporting DLLs [C++], DEF files
 ms.assetid: 9d31eda2-184e-47de-a2ee-a93ebd603f8e
-ms.openlocfilehash: 35f55ea525bd03c5b0b1b1750d25c1223bc608fc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 92a140c6491e9e3f0d356509862dee39ebe3fae6
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62195469"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220775"
 ---
 # <a name="exporting-from-a-dll-using-def-files"></a>Exportando a partir de uma DLL usando arquivos DEF
 
@@ -36,7 +36,10 @@ EXPORTS
 
 Se você usar o [Assistente de DLL MFC](../mfc/reference/mfc-dll-wizard.md) para criar uma DLL MFC, o assistente cria um arquivo DEF de esqueleto para você e a adiciona automaticamente a seu projeto. Adicione os nomes das funções a serem exportadas para este arquivo. Para DLLs não MFC, crie o arquivo DEF por conta própria e adicioná-lo ao seu projeto. Em seguida, vá para **Project** > **as propriedades** > **vinculador** > **entrada**  >  **Arquivo de definição de módulo** e insira o nome do arquivo DEF. Repita essa etapa para cada configuração e plataforma ou fazê-lo ao mesmo tempo, selecionando **configuração = todas as configurações**, e **plataforma = todas as plataformas**.
 
-Se você estiver exportando funções em um arquivo do C++, você precisa colocar os nomes decorados no arquivo DEF ou definir suas funções exportadas com ligação padrão de C usando extern "C". Se você precisar colocar os nomes decorados no arquivo DEF, você pode obtê-los usando o [DUMPBIN](../build/reference/dumpbin-reference.md) ferramenta ou, usando o vinculador [/Map](../build/reference/map-generate-mapfile.md) opção. Observe que os nomes decorados produzidos pelo compilador são específicos de compilador. Se você colocar os nomes decorados produzidos pelo compilador do Visual C++ em um arquivo DEF, aplicativos vinculados à DLL também deverão ser compilados usando a mesma versão do Visual C++ para que os nomes decorados no aplicativo de chamada correspondam aos nomes exportados no f DEF da DLL ile.
+Se você estiver exportando funções em um arquivo do C++, você precisa colocar os nomes decorados no arquivo DEF ou definir suas funções exportadas com ligação padrão de C usando extern "C". Se você precisar colocar os nomes decorados no arquivo DEF, você pode obtê-los usando o [DUMPBIN](../build/reference/dumpbin-reference.md) ferramenta ou, usando o vinculador [/Map](../build/reference/map-generate-mapfile.md) opção. Observe que os nomes decorados produzidos pelo compilador são específicos de compilador. Se você colocar os nomes decorados produzidos pelo Microsoft C++ compilador (MSVC) em um arquivo DEF, aplicativos vinculados à DLL também deverão ser compilados usando a mesma versão do MSVC para que os nomes decorados no aplicativo de chamada correspondam aos nomes exportados no arquivo DEF da DLL. 
+
+> [!NOTE]
+> Uma DLL compilada com Visual Studio 2015 pode ser consumida por aplicativos criados com o Visual Studio 2017 ou Visual Studio de 2019.
 
 Se você estiver criando um [DLL de extensão](../build/extension-dlls-overview.md), e exportar usando um arquivo DEF, coloque o seguinte código no início e no final dos arquivos de cabeçalho que contêm as classes exportadas:
 

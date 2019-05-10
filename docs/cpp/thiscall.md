@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - __thiscall keyword [C++]
 ms.assetid: a6a22dd2-0101-4885-b33b-22f6057965df
-ms.openlocfilehash: fc5a32fedf52377889b61103856e2125733cd696
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: e51879ae62b2881e0adadbe59859605f6cc58947
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62266771"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221918"
 ---
 # <a name="thiscall"></a>__thiscall
 
@@ -24,7 +24,7 @@ Um motivo para usar **thiscall** está em classes cujas funções membro usam `_
 
 Ao compilar com [/clr: pure](../build/reference/clr-common-language-runtime-compilation.md), todas as funções e ponteiros de função são `__clrcall` , a menos que especificado o contrário. O **/clr: pure** e **/CLR: safe** opções do compilador são preteridas no Visual Studio 2015 e sem suporte no Visual Studio 2017.
 
-Nas versões anteriores do Visual C++ 2005, o **thiscall** convenção de chamada não pôde ser explicitamente especificada em um programa, porque **thiscall** não era uma palavra-chave.
+Nas versões anteriores do Visual Studio 2005, o **thiscall** convenção de chamada não pôde ser explicitamente especificada em um programa, porque **thiscall** não era uma palavra-chave.
 
 `vararg` funções membro usam o **cdecl** convenção de chamada. Todos os argumentos de função são enviados por push na pilha, com o **isso** ponteiro é colocado na pilha pela última vez
 

@@ -1,6 +1,6 @@
 ---
 title: Exportando a partir de uma DLL usando __declspec(dllexport)
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 f1_keywords:
 - dllexport
 - __declspec
@@ -10,18 +10,16 @@ helpviewer_keywords:
 - export directives [C++]
 - exporting DLLs [C++], __declspec(dllexport) keyword
 ms.assetid: a35e25e8-7263-4a04-bad4-00b284458679
-ms.openlocfilehash: 3b6b9733776f30fc8dcbfeee709b7d24e0f0187b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 167060d0270004b8648d32af206865bfe66c3b4b
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62195310"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220797"
 ---
 # <a name="exporting-from-a-dll-using-declspecdllexport"></a>Exportando a partir de uma DLL usando __declspec(dllexport)
 
-Microsoft introduzido **export** na versão de compilador de 16 bits do Visual C++ para permitir que o compilador a gerar os nomes de exportação automaticamente e colocá-los em um arquivo. lib. Esse arquivo. lib, em seguida, pode ser usado como um. lib estático para vincular a uma DLL.
-
-Em versões mais recentes do compilador, você pode exportar dados, funções, classes ou funções de membro de classe de uma DLL usando o **dllexport** palavra-chave. **dllexport** adiciona a diretiva de exportação para o arquivo de objeto, você não precisa usar um arquivo. def.
+Você pode exportar dados, funções, classes ou funções de membro de classe de uma DLL usando o **dllexport** palavra-chave. **dllexport** adiciona a diretiva de exportação para o arquivo de objeto, você não precisa usar um arquivo. def.
 
 Esta conveniência é mais aparente quando tentar exportar nomes de função de C++ decorados. Como não há nenhuma especificação padrão para a decoração de nome, o nome de uma função exportada pode alterar entre versões do compilador. Se você usar **dllexport**, recompilação da DLL e arquivos dependentes .exe é necessário apenas para conta quaisquer alterações de convenção de nomenclatura.
 
@@ -50,11 +48,6 @@ Ao criar sua DLL, você normalmente cria um arquivo de cabeçalho que contém os
 ```
 
 **dllexport** armazena nomes na tabela de exportação da DLL de função. Se você deseja otimizar o tamanho da tabela, consulte [exportar funções de uma DLL por Ordinal em vez de por nome](exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md).
-
-> [!NOTE]
->  Ao portar o código-fonte DLL do Win16 para Win32, substitua cada instância do **export** com **dllexport**.
-
-Como uma referência, pesquise por meio do arquivo de cabeçalho WinBase Win32. Ele contém exemplos de **__declspec(dllimport)** uso.
 
 ## <a name="what-do-you-want-to-do"></a>O que você deseja fazer?
 

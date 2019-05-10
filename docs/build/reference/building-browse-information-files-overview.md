@@ -1,24 +1,28 @@
 ---
 title: 'Compilando arquivos de informações de navegação: Visão geral'
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 helpviewer_keywords:
 - .bsc files, about .bsc files
 - bsc files, about bsc files
 - browse information files (.bsc)
 - browse information files (.bsc), creating
 ms.assetid: b5c12832-51f6-4953-8044-4264dd0fb242
-ms.openlocfilehash: 4f12bd25ca3ab718a845dbb04aba3169cc6d4b19
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 5d33460ba63e50d31e44384be382e98cfbea4c91
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62272878"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220538"
 ---
 # <a name="building-browse-information-files-overview"></a>Compilando arquivos de informações de navegação: Visão geral
 
+
+> [!WARNING]
+> Embora BSCMAKE ainda está instalado com o Visual Studio, ele não é mais usado pelo IDE. Desde o Visual Studio 2008, as informações de símbolo e procura são armazenadas automaticamente em um arquivo. sdf de SQL Server na pasta da solução.
+
 Para criar informações de procura para navegação de símbolo, o compilador cria um arquivo. SBR para cada arquivo de origem em seu projeto, em seguida, BSCMAKE. EXE concatena os arquivos. SBR em um único arquivo. bsc.
 
-Gerando arquivos. SBR e. bsc leva tempo, portanto, o Visual C++ desativa a essas funções por padrão. Se você deseja procurar informações atuais, você deve ativar as opções de pesquisa e compile o projeto novamente.
+Gerando arquivos. SBR e. bsc leva tempo, portanto, o Visual Studio desativa a essas funções por padrão. Se você deseja procurar informações atuais, você deve ativar as opções de pesquisa e compile o projeto novamente.
 
 Use [/FR](fr-fr-create-dot-sbr-file.md) ou [/Fr](fr-fr-create-dot-sbr-file.md) para indicar ao compilador para criar arquivos. SBR. Para criar arquivos. bsc, você pode chamar [BSCMAKE](bscmake-command-line.md) da linha de comando. Usar BSCMAKE da linha de comando lhe dá controle mais preciso sobre a manipulação de arquivos de informações de procura. Ver [referência de BSCMAKE](bscmake-reference.md) para obter mais informações.
 

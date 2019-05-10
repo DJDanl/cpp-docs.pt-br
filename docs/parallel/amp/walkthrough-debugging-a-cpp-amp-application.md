@@ -1,18 +1,18 @@
 ---
 title: 'Passo a passo: Depurando um aplicativo C++ AMP'
-ms.date: 11/19/2018
+ms.date: 04/23/2019
 helpviewer_keywords:
 - debugging, C++ Accelerated Massive Parallelism
 - C++ AMP, debugging
 - C++ Accelerated Massive Parallelism, debugging
 - debugging, C++ AMP
 ms.assetid: 40e92ecc-f6ba-411c-960c-b3047b854fb5
-ms.openlocfilehash: 5312ba7354c28286cafb092711d66d56a920581a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3f358f66d1e8a64c5042b60d7385de26a559642e
+ms.sourcegitcommit: 18d3b1e9cdb4fc3a76f7a650c31994bdbd2bde64
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62237906"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64877543"
 ---
 # <a name="walkthrough-debugging-a-c-amp-application"></a>Passo a passo: Depurando um aplicativo C++ AMP
 
@@ -38,15 +38,37 @@ Antes de começar este passo a passo:
 
 - Certifique-se de que a linha números são exibidos no editor de texto. Para obter mais informações, confira [Como: Exibir números de linha no Editor de](/visualstudio/ide/reference/how-to-display-line-numbers-in-the-editor).
 
-- Verifique se que você estiver executando o Windows 8 ou Windows Server 2012 para dar suporte à depuração no emulador de software.
+- Verifique se você estiver executando pelo menos o Windows 8 ou Windows Server 2012 para dar suporte à depuração no emulador de software. 
 
 [!INCLUDE[note_settings_general](../../mfc/includes/note_settings_general_md.md)]
 
 ### <a name="to-create-the-sample-project"></a>Para criar o projeto de exemplo
 
+As instruções para criar um projeto variam, dependendo de qual versão do Visual Studio que você está usando. Verifique se que você tem a versão correta selecionada na parte superior esquerda desta página.
+
+::: moniker range="vs-2019"
+
+### <a name="to-create-the-sample-project-in-visual-studio-2019"></a>Para criar o projeto de exemplo no Visual Studio de 2019
+
+1. Na barra de menus, escolha **arquivo** > **New** > **projeto** para abrir o **criar um novo projeto** caixa de diálogo.
+
+1. Na parte superior da caixa de diálogo, defina **linguagem** à **C++**, defina **plataforma** para **Windows**e defina **tipodeprojeto** ao **Console**. 
+
+1. Na lista filtrada de tipos de projeto, escolha **aplicativo de Console** , em seguida, escolha **próxima**. Na próxima página, insira `AMPMapReduce` no **nome** caixa para especificar um nome para o projeto e especifique o local do projeto, se desejado.
+
+   ![Nomeie o projeto](../../build/media/mathclient-project-name-2019.png "Nomeie o projeto")
+
+1. Escolha o **criar** botão para criar o projeto do cliente.
+
+::: moniker-end
+
+::: moniker range="<=vs-2017"
+
+### <a name="to-create-the-sample-project-in-visual-studio-2017-or-visual-studio-2015"></a>Para criar o projeto de exemplo no Visual Studio 2017 ou Visual Studio 2015
+
 1. Inicie o Visual Studio.
 
-2. Na barra de menus, selecione **Arquivo** > **Novo** > **Projeto**.
+2. Na barra de menus, escolha **Arquivo** > **Novo** > **Projeto**.
 
 3. Sob **Installed** no painel modelos, escolha **Visual C++**.
 
@@ -57,6 +79,9 @@ Antes de começar este passo a passo:
 6. Desmarque a **cabeçalho pré-compilado** caixa de seleção e, em seguida, escolha o **concluir** botão.
 
 7. Na **Gerenciador de soluções**, excluí a Stdafx. h, targetver e Stdafx do projeto.
+
+::: moniker-end
+
 
 8. Abra AMPMapReduce.cpp e substitua seu conteúdo pelo código a seguir.
 

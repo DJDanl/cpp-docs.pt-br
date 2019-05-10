@@ -10,12 +10,12 @@ helpviewer_keywords:
 - migration [C++], /clr compiler option
 - /clr compiler option [C++], porting to
 ms.assetid: c9290b8b-436a-4510-8b56-eae51f4a9afc
-ms.openlocfilehash: 6ac470b85a14bfe32c7f3fe47168180687669ec6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 9abc85227d6091005d7e097d3305150f4ca347a1
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387247"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448089"
 ---
 # <a name="how-to-migrate-to-clr"></a>Como: Migrar para /clr
 
@@ -41,13 +41,13 @@ Antes de usar **/clr** em qualquer módulo em seu projeto, primeiro compilar e v
 
 As etapas a seguir, seguidas na ordem, fornecem o caminho mais fácil para um **/clr** compilação. É importante compilar e executar seu projeto depois de cada uma dessas etapas.
 
-### <a name="versions-prior-to-visual-c-2003"></a>Versões anteriores do Visual C++ 2003
+### <a name="versions-prior-to-visual-studio-2003"></a>Versões anteriores do Visual Studio 2003
 
-Se você estiver atualizando para o Visual Studio 2010 de uma versão anterior à Visual C++ 2003, você poderá ver erros de compilador relacionados à conformidade padrão C++ aprimorada no Visual C++ 2003
+Se você estiver atualizando para o Visual Studio 2010 de uma versão anterior à Visual Studio 2003, você poderá ver erros de compilador relacionados à aprimorada C++ conformidade com a standard no Visual Studio 2003
 
-### <a name="upgrading-from-visual-c-2003"></a>Atualizando do Visual C++ 2003
+### <a name="upgrading-from-visual-studio-2003"></a>Atualização do Visual Studio 2003
 
-Projetos anteriores criados com o Visual C++ 2003 também primeiro devem ser compilados sem **/clr** Visual Studio agora tem maior conformidade com ANSI/ISO e algumas alterações. É a alteração que provavelmente exigirá mais atenção [recursos de segurança no CRT](../c-runtime-library/security-features-in-the-crt.md). O código que usa o CRT é muito provável produzir os avisos de depreciação. Esses avisos podem ser suprimidos, mas a migração para o novo [Security-Enhanced versões das funções de CRT](../c-runtime-library/security-enhanced-versions-of-crt-functions.md) é preferencial, pois eles fornecem maior segurança e podem revelar problemas de segurança em seu código.
+Projetos anteriores criados com o Visual Studio 2003 também primeiro devem ser compilados sem **/clr** Visual Studio agora tem maior conformidade com ANSI/ISO e algumas alterações. É a alteração que provavelmente exigirá mais atenção [recursos de segurança no CRT](../c-runtime-library/security-features-in-the-crt.md). O código que usa o CRT é muito provável produzir os avisos de depreciação. Esses avisos podem ser suprimidos, mas a migração para o novo [Security-Enhanced versões das funções de CRT](../c-runtime-library/security-enhanced-versions-of-crt-functions.md) é preferencial, pois eles fornecem maior segurança e podem revelar problemas de segurança em seu código.
 
 ### <a name="upgrading-from-managed-extensions-for-c"></a>Atualizando de extensões gerenciadas para C++
 
@@ -98,7 +98,7 @@ Essa etapa tem implicações diferentes para projetos que usam makefiles. Neste 
 **/CLR** podem ser selecionadas no ambiente de desenvolvimento, seguindo as instruções [/clr (compilação de tempo de execução de linguagem comum)](../build/reference/clr-common-language-runtime-compilation.md). Conforme mencionado anteriormente, esta etapa desabilitará automaticamente as configurações conflitantes do projeto.
 
 > [!NOTE]
->  Ao atualizar uma biblioteca gerenciada ou o projeto de serviço web do Visual C++ 2003, o **/Zl** será de opção de compilador adicionado para o **linha de comando** página de propriedades. Isso fará com que LNK2001. Remova **/Zl** da **linha de comando** página de propriedades para resolver. Ver [/Zl (omitir nome da biblioteca padrão)](../build/reference/zl-omit-default-library-name.md) e [definir compilador e propriedades de compilação](../build/working-with-project-properties.md) para obter mais informações. Ou, adicionar Msvcrt. lib e msvcmrt para o vinculador **dependências adicionais** propriedade.
+>  Ao atualizar uma biblioteca gerenciada ou o projeto de serviço web do Visual Studio 2003, o **/Zl** será de opção de compilador adicionado para o **linha de comando** página de propriedades. Isso fará com que LNK2001. Remova **/Zl** da **linha de comando** página de propriedades para resolver. Ver [/Zl (omitir nome da biblioteca padrão)](../build/reference/zl-omit-default-library-name.md) e [definir compilador e propriedades de compilação](../build/working-with-project-properties.md) para obter mais informações. Ou, adicionar Msvcrt. lib e msvcmrt para o vinculador **dependências adicionais** propriedade.
 
 Para projetos criados com makefiles, opções do compilador incompatível devem estar desabilitadas manualmente uma vez **/clr** é adicionado. Consulte /[/clr restrições](../build/reference/clr-restrictions.md) para obter informações sobre opções de compilador que não são compatíveis com **/clr**.
 

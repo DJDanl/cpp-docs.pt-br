@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Array Class
 ms.assetid: 7815ab40-88c5-42b0-83b8-081cef0cda31
-ms.openlocfilehash: 597f8e32e2da95370169cdbfe2ccd209296322cc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 94166dfcb222d5cfece146e7ad67bb04d6ad06e9
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62161649"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221830"
 ---
 # <a name="platformarray-class"></a>Classe Platform::Array
 
@@ -56,8 +56,6 @@ A classe da matriz é fechada e não pode ser herdada.
 O sistema de tipo de tempo de execução do Windows não suporta o conceito de matrizes denteadas e, portanto, você não pode passar um IVector < Platform:: array\<T >> como um parâmetro de método ou valor de retorno. Para passar uma matriz denteada ou uma sequência de sequências através da ABI, use `IVector<IVector<T>^>`.
 
 Para obter mais informações sobre quando e como usar Platform:: array, consulte [matriz e WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md).
-
-O sistema de tipo de tempo de execução do Windows não suporta o conceito de matrizes denteadas e, portanto, você não pode passar um IVector < Platform:: array\<T >> como um parâmetro de método ou valor de retorno. Para passar uma matriz denteada ou uma sequência de sequências através da ABI, use `IVector<IVector<T>^>`.
 
 Essa classe é definida no cabeçalho vccorlib.h, que é incluído automaticamente pelo compilador. Ele é visível no IntelliSense mas não no Pesquisador de objetos porque ele não é um tipo público definido em Platform. winmd.
 

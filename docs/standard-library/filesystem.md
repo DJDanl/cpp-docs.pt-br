@@ -9,12 +9,12 @@ f1_keywords:
 - filesystem/std::experimental::filesystem::directory_iterator
 - <filesystem>
 ms.assetid: 5005753b-46fa-43e1-8d4e-1b38617d3cfd
-ms.openlocfilehash: 54817eeeba0b885cbf3de558c04fe2eb5d6e14fa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0f397d8b0c39769fde20b6aa50412c979237f70a
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159841"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220381"
 ---
 # <a name="ltfilesystemgt"></a>&lt;filesystem&gt;
 
@@ -29,7 +29,7 @@ using namespace std::experimental::filesystem::v1;
 ```
 
 > [!IMPORTANT]
-> A partir da versão do Visual Studio 2017, o \<filesystem > cabeçalho ainda não era um padrão de C++. O Visual C++ 2017 implementa o padrão final de rascunho, encontrado em [ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf).
+> A partir da versão do Visual Studio 2017, o \<filesystem > cabeçalho ainda não era um padrão de C++. C++no Visual Studio 2017 (v141 MSVC) implementa o padrão de final de rascunho, encontrado no [ISO/IEC JTC 1/SC/22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf).
 
 Esse cabeçalho dá suporte a sistemas de arquivos para uma das duas classes amplas de sistemas operacionais host: Microsoft Windows e Posix.
 

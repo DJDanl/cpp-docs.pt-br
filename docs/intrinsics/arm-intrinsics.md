@@ -1931,24 +1931,24 @@ helpviewer_keywords:
 - cl.exe compiler, intrinsics
 - intrinsics, ARM
 ms.assetid: d3d7dadd-7bd5-4508-8bff-371a66913e20
-ms.openlocfilehash: 47fd2f449568494bafde993e035d3ec37c44f6fe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8590f6ac056bf561960f9c02ff4a4cc6a4d3bfa0
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62264290"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447726"
 ---
 # <a name="arm-intrinsics"></a>Intrínsecos ARM
 
-O compilador do Visual C++ disponibiliza os seguintes intrínsecos na arquitetura ARM. Para obter mais informações sobre o ARM, consulte o [manuais de referência de arquitetura do ARM](http://go.microsoft.com/fwlink/p/?LinkId=522049) e [guia de ferramentas de Assembler do ARM](http://go.microsoft.com/fwlink/p/?LinkId=246102) no site do Centro de informações do ARM.
+O Microsoft C++ (MSVC) do compilador disponibiliza os seguintes intrínsecos na arquitetura ARM. Para obter mais informações sobre o ARM, consulte o [manuais de referência de arquitetura do ARM](http://go.microsoft.com/fwlink/p/?LinkId=522049) e [guia de ferramentas de Assembler do ARM](http://go.microsoft.com/fwlink/p/?LinkId=246102) no site do Centro de informações do ARM.
 
 ##  <a name="top"></a> NEON
 
 As extensões de conjunto de instruções de vetor NEON para ARM fornecem recursos SIMD (Single Instruction Multiple Data) semelhantes aos conjuntos de instrução de vetor do MMX e SSE, que são comuns em processadores de arquitetura x86 e x64.
 
-Intrínsecos do NEON são suportados, conforme fornecido no arquivo de cabeçalho `arm_neon.h`. O suporte do compilador do Visual C++ para intrínsecos do NEON são semelhantes do compilador ARM, que está documentado no Apêndice G dos [cadeia de ferramentas do compilador ARM, referência de versão 4.1 do compilador](http://go.microsoft.com/fwlink/p/?LinkId=251083) no site do Centro de informações do ARM.
+Intrínsecos do NEON são suportados, conforme fornecido no arquivo de cabeçalho `arm_neon.h`. O suporte do MSVC para intrínsecos do NEON são semelhantes do compilador ARM, que está documentado no Apêndice G dos [cadeia de ferramentas do compilador ARM, referência de versão 4.1 do compilador](http://go.microsoft.com/fwlink/p/?LinkId=251083) no site do Centro de informações do ARM.
 
-A principal diferença entre o compilador do Visual C++ e o compilador ARM é que o compilador do Visual C++ adiciona `_ex` variantes da carga de vetor `vldX` e `vstX` instruções de armazenamento. As variantes `_ex` usam um parâmetro adicional que especifica o alinhamento do argumento de ponteiro, mas que são idênticas a suas não `_ex` equivalentes.
+A principal diferença entre o MSVC e o compilador ARM é que o MSVC adiciona `_ex` variantes do `vldX` e `vstX` carga de vetor e instruções de armazenamento. As variantes `_ex` usam um parâmetro adicional que especifica o alinhamento do argumento de ponteiro, mas que são idênticas a suas não `_ex` equivalentes.
 
 ##  <a name="A"></a> Listagem de intrínsecos específicos de ARM
 

@@ -4,17 +4,17 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - container classes
 ms.assetid: dc5a1998-a31b-4adf-b888-8abe5b87a4e0
-ms.openlocfilehash: 28d726bbf2b756c047523954fd4d5f843ee11d2f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ce9cf7207537f2605c0883f5a6f4d2959c14f493
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386311"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220338"
 ---
 # <a name="sample-container-members"></a>Exemplos de Membros de Recipiente
 
 > [!NOTE]
-> Este tópico faz parte da documentação do Visual C++ como um exemplo não funcional de contêineres usados na Biblioteca Padrão C++. Para obter mais informações, consulte [Contêineres da biblioteca padrão C++](../standard-library/stl-containers.md).
+> Este tópico é no Microsoft C++ como um exemplo não funcional de contêineres usados na documentação do C++ biblioteca padrão. Para obter mais informações, consulte [Contêineres da biblioteca padrão C++](../standard-library/stl-containers.md).
 
 ## <a name="reference"></a>Referência
 

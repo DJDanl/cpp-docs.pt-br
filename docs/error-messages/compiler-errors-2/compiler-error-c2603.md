@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C2603
 ms.assetid: 9ca520d0-f082-4b65-933d-17c3bcf8b02c
-ms.openlocfilehash: 5391aed09b7fd448a9d72ea7cc17cd5c26fc5f04
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e4540180058c890a1dec9c4060f796f1f044c934
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62215395"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448000"
 ---
 # <a name="compiler-error-c2603"></a>Erro do compilador C2603
 
 > '*função*': Objetos estáticos do excesso escopo de bloco com construtores/destrutores na função
 
-Nas versões do compilador do Visual C++ antes do Visual Studio 2015, ou quando o [/Zc:threadSafeInit-](../../build/reference/zc-threadsafeinit-thread-safe-local-static-initialization.md) opção de compilador for especificada, há um limite de 31 no número de objetos estáticos, você pode ter em uma função embutida visível externamente .
+Nas versões do Microsoft C++ compilador antes do Visual Studio 2015, ou quando o [/Zc:threadSafeInit-](../../build/reference/zc-threadsafeinit-thread-safe-local-static-initialization.md) opção de compilador for especificada, há um limite de 31 no número de objetos estáticos, você pode ter em um visível externamente função embutida.
 
-Para resolver esse problema, é recomendável adotar uma versão mais recente do conjunto de ferramentas de compilador do Visual C++, ou se for possível, remova a opção do compilador /Zc:threadSafeInit-. Se isso não for possível, considere a combinação de seus objetos estáticos. Se os objetos forem do mesmo tipo, considere o uso de uma única matriz estática desse tipo e fazer referência a membros individuais conforme necessário.
+Para resolver esse problema, recomendamos que você adotar uma versão mais recente do Microsoft C++ conjunto de ferramentas do compilador, ou se for possível, remova a opção do compilador /Zc:threadSafeInit-. Se isso não for possível, considere a combinação de seus objetos estáticos. Se os objetos forem do mesmo tipo, considere o uso de uma única matriz estática desse tipo e fazer referência a membros individuais conforme necessário.
 
 ## <a name="example"></a>Exemplo
 

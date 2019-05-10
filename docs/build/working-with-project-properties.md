@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Visual C++ projects, properties
 - projects [C++], properties
 ms.assetid: 9b0d6f8b-7d4e-4e61-aa75-7d14944816cd
-ms.openlocfilehash: ab5456bfc8a1b8305813f4ee4a4399091de15aee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: a8c15de43a3843b8ff12cb4ad3d951d76b90c039
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62314046"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446187"
 ---
 # <a name="set-compiler-and-build-properties"></a>Defina o compilador e propriedades de compilação
 
@@ -23,7 +23,7 @@ No IDE, todas as informações necessárias para compilar um projeto são expost
 
 Quando você cria um projeto, o sistema atribui valores para várias propriedades. Os padrões variam um pouco dependendo do tipo de projeto e das opções escolhidas no assistente de aplicativo. Por exemplo, um projeto ATL tem propriedades relacionadas a arquivos MIDL, mas eles estão ausentes em um aplicativo de console básico. As propriedades padrão são mostradas no painel Geral nas Páginas de Propriedades:
 
-![Visual C#&#43;&#43; Padrões de Projeto](media/visual-c---project-defaults.png "Padrões de Projeto do Visual C++")
+![Visual C&#43; &#43; padrões de projeto](media/visual-c---project-defaults.png "Visual C++ padrões do projeto")
 
 ## <a name="applying-properties-to-build-configurations-and-target-platforms"></a>Aplicação de propriedades para criar configurações e plataformas de destino
 
@@ -61,7 +61,7 @@ O **páginas de propriedade** caixa de diálogo mostra somente as páginas de pr
 
 MSBuild oferece suporte ao uso de constantes de tempo de compilação chamado "macros" para determinados valores de cadeia de caracteres incluem diretórios e caminhos. Esses são expostos nas páginas de propriedade, em que você possa consultar e modificá-los usando o [Editor de propriedade](#property_editor). 
 
-A ilustração a seguir mostra as páginas de propriedades para um projeto do Visual C++. No painel esquerdo, a **regra** *Diretórios do VC++* está selecionada e o painel direito lista as propriedades associadas a essa regra. O `$(...)` valores são chamados *macros*. Uma *macro* é uma constante em tempo de compilação que pode se referir a um valor definido pelo Visual Studio ou pelo sistema do MSBuild, ou a um valor definido pelo usuário. Usando macros em vez de valores embutidos, como caminhos de diretório, você pode compartilhar mais facilmente as configurações de propriedade entre máquinas e entre versões do Visual Studio, e você pode garantir melhor que as configurações do projeto participem corretamente no [ herança de propriedade](project-property-inheritance.md). 
+A ilustração a seguir mostra as páginas de propriedades para um Visual Studio C++ project. No painel esquerdo, a **regra** *Diretórios do VC++* está selecionada e o painel direito lista as propriedades associadas a essa regra. O `$(...)` valores são chamados *macros*. Uma *macro* é uma constante em tempo de compilação que pode se referir a um valor definido pelo Visual Studio ou pelo sistema do MSBuild, ou a um valor definido pelo usuário. Usando macros em vez de valores embutidos, como caminhos de diretório, você pode compartilhar mais facilmente as configurações de propriedade entre máquinas e entre versões do Visual Studio, e você pode garantir melhor que as configurações do projeto participem corretamente no [ herança de propriedade](project-property-inheritance.md). 
 
 ![Páginas de propriedades do projeto](media/project_property_pages_vc.png "Project_Property_Pages_VC")
 

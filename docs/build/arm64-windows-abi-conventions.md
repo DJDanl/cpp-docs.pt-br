@@ -1,12 +1,12 @@
 ---
 title: Visão geral das convenções de ABI ARM64
 ms.date: 03/27/2019
-ms.openlocfilehash: 4c0f89f97529d4cd70e1449c90b131d25d30f9ee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bfb1b5b6be6a7a368c2ed7cab255da90ae7a22df
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62195495"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220995"
 ---
 # <a name="overview-of-arm64-abi-conventions"></a>Visão geral das convenções de ABI ARM64
 
@@ -50,6 +50,24 @@ Como com o ARM32 versão do Windows, no Windows ARM64 é executado em modo littl
 Em execução em ARM64 do Windows permite que o hardware de CPU para manipular acessos desalinhados de maneira transparente. Em uma melhoria de AArch32, esse suporte agora também funciona para todos os acessos de inteiro (incluindo acessos de várias palavras) e acessos de ponto flutuantes.
 
 No entanto, os acessos à memória fora do cache (dispositivo) ainda devem sempre ser alinhados. Se o código possivelmente pode ler ou gravar dados desalinhados de memória sem cache, que ele deve certificar-se alinhe todos os acessos.
+
+Alinhamento de layout padrão para variáveis locais:
+
+| Tamanho em bytes | Alinhamento em bytes |
+| - | - |
+| 1 | 1 |
+| 2 | 2 |
+| 3, 4 | 4 |
+| > 4 | 8 |
+
+Alinhamento de layout padrão para globais e estáticos:
+
+| Tamanho em bytes | Alinhamento em bytes |
+| - | - |
+| 1 | 1 |
+| 2 - 7 | 4 |
+| 8 - 63 | 8 |
+| >= 64 | 16 |
 
 ## <a name="integer-registers"></a>Registros de inteiros
 
@@ -185,7 +203,9 @@ Na verdade, é o mesmo que as regras a seguir C.12–C.15 alocar argumentos em u
 
 Valores integrais são retornados em x0.
 
-Valores de ponto flutuante são retornados em s0/d0/v0 conforme apropriado.
+Valores de ponto flutuante são retornados em s0, d0 ou v0, conforme apropriado.
+
+Valores HFA e HVA são retornados em s3 s0, d0 d3 ou v0 v3, conforme apropriado.
 
 Tipos retornados por valor são tratados diferentemente dependendo se eles têm determinadas propriedades. Tipos que têm todas essas propriedades,
 

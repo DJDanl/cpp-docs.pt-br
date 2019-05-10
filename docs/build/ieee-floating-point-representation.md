@@ -1,6 +1,6 @@
 ---
 title: Representação de ponto flutuante IEEE
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 helpviewer_keywords:
 - float keyword
 - real*8 value
@@ -11,16 +11,16 @@ helpviewer_keywords:
 - long double
 - real*4 value
 ms.assetid: 537833e8-fe05-49fc-8169-55fd0314b195
-ms.openlocfilehash: 69686e7e1c8994b799607eebf7e50387ed688272
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 130a79ae6846df27ffabfd6cb6649e0a0de03e4b
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188828"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220626"
 ---
 # <a name="ieee-floating-point-representation"></a>Representação de ponto flutuante IEEE
 
-Microsoft Visual C++ é consistente com os padrões do IEEE numéricos. O padrão IEEE-754 descreve os formatos de ponto flutuantes, uma forma de representar números reais em hardware. Há pelo menos cinco formatos internos para números de ponto flutuante representáveis no hardware direcionada pelo compilador MSVC, mas o compilador usa apenas dois deles. O *precisão simples* (4 bytes) e *precisão dupla* formatos (8 bytes) são usados no Visual C++. Precisão única é declarado usando a palavra-chave **float**. Precisão dupla é declarado usando a palavra-chave **duplas**. Também especifica o padrão IEEE *meia precisão* (2 bytes) e *quádruplo precisão* formatos (16 bytes), bem como um *precisão estendida dupla* (10 bytes) formato, o que alguns compiladores C e C++ implementam como o **longo duplo** tipo de dados. No compilador MSVC, o **longo duplo** tipo de dados é tratado como um tipo distinto, mas o tipo de armazenamento mapeia para **duplo**. Há, no entanto, intrínsecos e suporte de linguagem de assembly para cálculos usando outros formatos, incluindo o formato de (10 bytes) de precisão estendida dupla, onde houver suporte pelo hardware.
+Microsoft C++ (MSVC) é consistente com os padrões do IEEE numéricos. O padrão IEEE-754 descreve os formatos de ponto flutuantes, uma forma de representar números reais em hardware. Há pelo menos cinco formatos internos para números de ponto flutuante representáveis no hardware direcionada pelo compilador MSVC, mas o compilador usa apenas dois deles. O *precisão simples* (4 bytes) e *precisão dupla* formatos (8 bytes) são usados no MSVC. Precisão única é declarado usando a palavra-chave **float**. Precisão dupla é declarado usando a palavra-chave **duplas**. Também especifica o padrão IEEE *meia precisão* (2 bytes) e *quádruplo precisão* formatos (16 bytes), bem como um *precisão estendida dupla* (10 bytes) formato, o que alguns compiladores C e C++ implementam como o **longo duplo** tipo de dados. No compilador MSVC, o **longo duplo** tipo de dados é tratado como um tipo distinto, mas o tipo de armazenamento mapeia para **duplo**. Há, no entanto, intrínsecos e suporte de linguagem de assembly para cálculos usando outros formatos, incluindo o formato de (10 bytes) de precisão estendida dupla, onde houver suporte pelo hardware.
 
 Os valores são armazenados da seguinte maneira:
 

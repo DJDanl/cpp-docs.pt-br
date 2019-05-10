@@ -1,14 +1,14 @@
 ---
 title: Tipos de valor (C++ moderno)
-ms.date: 11/04/2016
+ms.date: 05/07/2019
 ms.topic: conceptual
 ms.assetid: f63bb62c-60da-40d5-ac14-4366608fe260
-ms.openlocfilehash: 32cdb29ec1c59081ad7e0493888f290f21561d2b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 204ea9f86377eb8a5796f01cb81a9161163d9649
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390900"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221889"
 ---
 # <a name="value-types-modern-c"></a>Tipos de valor (C++ moderno)
 
@@ -49,7 +49,7 @@ test.cpp(15) : error C2248: 'MyRefType::operator =' : cannot access private memb
 
 ## <a name="value-types-and-move-efficiency"></a>Tipos de valor e mova a eficiência
 
-Sobrecarga de alocação de cópia é evitada devido a novas otimizações de cópia. Por exemplo, quando você insere uma cadeia de caracteres no meio de um vetor de cadeias de caracteres, haverá sem sobrecarga de realocação de cópia, apenas uma mudança - mesmo que ele resulta em um aumento do vetor em si. Isso também se aplica a outras operações, por exemplo, executando uma operação de adição em dois objetos muito grandes. Como você pode habilitar essas otimizações de operação do valor? Alguns compiladores de C++, o compilador habilitará isso para você implicitamente, assim como os construtores de cópia podem ser automaticamente gerados pelo compilador. No entanto, no Visual C++, sua classe precisará "opt-in" para mover a atribuição e construtores, declarando-o em sua definição de classe. Isso é feito por meio de duplo e comercial (& &) referência de rvalue no membro apropriado declarações de função e definição de construtor de movimentação e mover os métodos de atribuição.  Você também precisará inserir o código correto para "roubar as entranhas" fora do objeto de origem.
+Sobrecarga de alocação de cópia é evitada devido a novas otimizações de cópia. Por exemplo, quando você insere uma cadeia de caracteres no meio de um vetor de cadeias de caracteres, haverá sem sobrecarga de realocação de cópia, apenas uma mudança - mesmo que ele resulta em um aumento do vetor em si. Isso também se aplica a outras operações, por exemplo, executando uma operação de adição em dois objetos muito grandes. Como você pode habilitar essas otimizações de operação do valor? Alguns compiladores de C++, o compilador habilitará isso para você implicitamente, assim como os construtores de cópia podem ser automaticamente gerados pelo compilador. No entanto, em C++, sua classe precisará "opt-in" para mover a atribuição e construtores, declarando-o em sua definição de classe. Isso é feito por meio de duplo e comercial (& &) referência de rvalue no membro apropriado declarações de função e definição de construtor de movimentação e mover os métodos de atribuição.  Você também precisará inserir o código correto para "roubar as entranhas" fora do objeto de origem.
 
 Como você decide se você precisa mover habilitado? Se você já sabe que você precisa copiar construção habilitada, você provavelmente desejará mover habilitado se ele pode ser mais barato do que uma cópia em profundidade. No entanto, se você souber que você precisa mover o suporte, ele não significa necessariamente que cópia habilitado. Neste último caso seria chamado "somente de movimentação typ". Um exemplo já está na biblioteca padrão é `unique_ptr`. Como uma observação, o antigo `auto_ptr` foi preterido e foi substituído pelo `unique_ptr` exatamente, devido à falta de suporte de semântica de movimentação na versão anterior do C++.
 

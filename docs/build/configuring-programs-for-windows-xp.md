@@ -2,12 +2,12 @@
 title: Configurando programas para Windows XP
 ms.date: 02/02/2018
 ms.assetid: 1e4487b3-d815-4123-878b-5718b22f0fd5
-ms.openlocfilehash: 989a4e2c7e91c05498902bf1c5cb9d838ee47c3b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: f27921e062fd8abb7bc9b63bfbb9b050f25ee54b
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62273796"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446364"
 ---
 # <a name="configuring-programs-for-windows-xp"></a>Configurando programas para Windows XP
 
@@ -25,7 +25,7 @@ O conjunto de ferramentas da plataforma Windows XP que está incluído no Visual
 
 1. No **Gerenciador de Soluções**, abra o menu de atalho do projeto e escolha **Propriedades**.
 
-1. No **páginas de propriedades** caixa de diálogo do projeto, em **propriedades de configuração** > **geral**, defina o **doconjuntodeferramentasdeplataforma** propriedade para o conjunto de ferramentas desejado do Windows XP. Por exemplo, escolha **Visual Studio 2017 – Windows XP (v141_xp)** para criar o código para o Windows XP e Windows Server 2003 usando o Microsoft Visual C++ compilador 2017.
+1. No **páginas de propriedades** caixa de diálogo do projeto, em **propriedades de configuração** > **geral**, defina o **doconjuntodeferramentasdeplataforma** propriedade para o conjunto de ferramentas desejado do Windows XP. Por exemplo, escolha **Visual Studio 2017 – Windows XP (v141_xp)** para criar o código para o Windows XP e Windows Server 2003 usando o Microsoft C++ compilador no Visual Studio 2017.
 
 ### <a name="c-runtime-support"></a>Suporte de tempo de execução do C++
 

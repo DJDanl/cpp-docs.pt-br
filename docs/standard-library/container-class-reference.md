@@ -4,17 +4,17 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - reference method
 ms.assetid: ab85a9fb-c628-4761-9a5f-a0231fad7690
-ms.openlocfilehash: 4204571dba320de6248dac2cfb10ae21dc31e72c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bd58ffafb9be65067cbff5571fe9cbf9fcd0a55d
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62210933"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221584"
 ---
 # <a name="container-classreference"></a>Classe de Contêiner::reference
 
 > [!NOTE]
-> Este tópico faz parte da documentação do Visual C++ como um exemplo não funcional de contêineres usados na Biblioteca Padrão C++. Para obter mais informações, consulte [Contêineres da biblioteca padrão C++](../standard-library/stl-containers.md).
+> Este tópico é no Microsoft C++ como um exemplo não funcional de contêineres usados na documentação do C++ biblioteca padrão. Para obter mais informações, consulte [Contêineres da biblioteca padrão C++](../standard-library/stl-containers.md).
 
 Descreve um objeto que pode servir como uma referência para um elemento da sequência controlada.
 

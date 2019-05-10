@@ -1,16 +1,16 @@
 ---
 title: 'Passo a passo: Adicionando animação a um projeto MFC'
-ms.date: 09/20/2018
+ms.date: 04/25/2019
 helpviewer_keywords:
 - animation [MFC]
 - MFC, animation
 ms.assetid: 004f832c-9fd5-4f88-9ca9-ae65dececdc2
-ms.openlocfilehash: 25e29654f1e192e03a078e4a963f27abeea6056d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 07b0c5f712cd645246ecfb4e8c93543377a340a3
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62358598"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64558190"
 ---
 # <a name="walkthrough-adding-animation-to-an-mfc-project"></a>Passo a passo: Adicionando animação a um projeto MFC
 
@@ -38,9 +38,9 @@ Para concluir este passo a passo, você deve ter o Visual Studio.
 
 ### <a name="to-create-an-mfc-application"></a>Para criar um aplicativo do MFC
 
-1. No menu **Arquivo**, aponte para **Novo** e clique em **Projeto**.
+1. Use o **Assistente de aplicativo MFC** para criar um aplicativo do MFC. Confira [Passo a passo: Usando os novos controles de Shell MFC](walkthrough-using-the-new-mfc-shell-controls.md) para obter instruções sobre como abrir o Assistente para a sua versão do Visual Studio.
 
-1. No **novo projeto** caixa de diálogo, no painel esquerdo, em **modelos instalados**, expanda **Visual C++** e, em seguida, selecione **MFC**. No painel central, selecione **aplicativo do MFC**. No **nome** , digite *MFCAnimationWalkthrough*. Clique em **OK**.
+1. No **nome** , digite *MFCAnimationWalkthrough*. Clique em **OK**.
 
 1. No **Assistente de aplicativo MFC** diálogo caixa, verifique **tipo de aplicativo** é **vários documentos**, **estilo de projeto** é  **Visual Studio**e o **suporte de arquitetura de documento/exibição** opção está selecionada. Clique em **Finalizar**.
 

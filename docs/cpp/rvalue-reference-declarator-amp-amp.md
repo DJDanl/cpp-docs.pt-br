@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - '&& rvalue reference declarator'
 ms.assetid: eab0ce3a-c5a3-4992-aa70-6a8ab1f7491d
-ms.openlocfilehash: 185c2de5dc21dd305a2792d4ee8e6baf69c35b28
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 663b639dbfecf9253547e1dd3b4e40480c27b470
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331084"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222036"
 ---
 # <a name="rvalue-reference-declarator-ampamp"></a>Declarador de referência Rvalue: &amp;&amp;
 
@@ -35,7 +35,7 @@ A implementação de dar suporte a referências de Rvalue *semântica de movimen
 
 Para implementar a semântica de movimentação, você normalmente fornece um *construtor de movimentação,* e, opcionalmente, um operador de atribuição de movimentação (**operador =**), à sua classe. As operações de cópia e atribuição cujas origens são rvalues aproveitam automaticamente as vantagens da semântica de movimentação. Diferente do construtor de cópia padrão, o compilador não fornece um construtor de movimentação padrão. Para obter mais informações sobre como escrever um construtor de movimento e como usá-lo em seu aplicativo, consulte [construtores Move e operadores de atribuição Move (C++)](../cpp/move-constructors-and-move-assignment-operators-cpp.md).
 
-Você também pode sobrecarregar as funções e operadores comuns para aproveitar a semântica de movimentação. Visual C++ 2010 introduz a semântica de movimentação na biblioteca padrão C++. Por exemplo, a classe `string` implementa as operações que executam a semântica de movimentação. Considere o exemplo a seguir, que concatena várias cadeias de caracteres e imprime o resultado:
+Você também pode sobrecarregar as funções e operadores comuns para aproveitar a semântica de movimentação. Visual Studio 2010 introduz a semântica de movimentação para o C++ biblioteca padrão. Por exemplo, a classe `string` implementa as operações que executam a semântica de movimentação. Considere o exemplo a seguir, que concatena várias cadeias de caracteres e imprime o resultado:
 
 ```cpp
 // string_concatenation.cpp
@@ -51,15 +51,15 @@ int main()
 }
 ```
 
-Antes do Visual C++ 2010, cada chamada para **operador +** aloca e retorna um novo temporário `string` objeto (um rvalue). **operador +** não é possível acrescentar uma cadeia de caracteres para o outro, porque ele não sabe se as cadeias de caracteres de origem são lvalues ou rvalues. Se as cadeias de caracteres de origem forem lvalues, poderão ser referenciadas em outro local do programa e, portanto, não devem ser modificadas. Usando referências de rvalue **operador +** pode ser modificado para receber os rvalues, que não podem ser referenciadas em outro lugar no programa. Portanto, **operador +** agora pode acrescentar uma cadeia de caracteres para outra. Isso pode reduzir significativamente o número de alocações de memória dinâmica que a classe `string` deve executar. Para obter mais informações sobre o `string` classe, consulte [classe basic_string](../standard-library/basic-string-class.md).
+Antes do Visual Studio 2010, cada chamada para **operador +** aloca e retorna um novo temporário `string` objeto (um rvalue). **operador +** não é possível acrescentar uma cadeia de caracteres para o outro, porque ele não sabe se as cadeias de caracteres de origem são lvalues ou rvalues. Se as cadeias de caracteres de origem forem lvalues, poderão ser referenciadas em outro local do programa e, portanto, não devem ser modificadas. Usando referências de rvalue **operador +** pode ser modificado para receber os rvalues, que não podem ser referenciadas em outro lugar no programa. Portanto, **operador +** agora pode acrescentar uma cadeia de caracteres para outra. Isso pode reduzir significativamente o número de alocações de memória dinâmica que a classe `string` deve executar. Para obter mais informações sobre o `string` classe, consulte [classe basic_string](../standard-library/basic-string-class.md).
 
-A semântica de movimentação também ajuda quando o compilador não pode usar a Otimização de Valor de Retorno (RVO) ou a Otimização de Valor de Retorno (NRVO). Nesses casos, o compilador chama o construtor de movimentação caso o tipo o defina. Para obter mais informações sobre a otimização de valor de retorno de chamada, consulte [denominada otimização de valor de retorno no Visual C++ 2005](https://msdn.microsoft.com/library/ms364057.aspx).
+A semântica de movimentação também ajuda quando o compilador não pode usar a Otimização de Valor de Retorno (RVO) ou a Otimização de Valor de Retorno (NRVO). Nesses casos, o compilador chama o construtor de movimentação caso o tipo o defina. Para obter mais informações sobre a otimização de valor de retorno de chamada, consulte [denominada otimização de valor de retorno no Visual Studio 2005](https://msdn.microsoft.com/library/ms364057.aspx).
 
 Para compreender melhor a semântica de movimentação, considere o exemplo de inserção de um elemento em um objeto `vector`. Se a capacidade do objeto `vector` for excedida, o objeto `vector` deverá realocar memória para os seus elementos e então copiar cada elemento para outro local da memória para dar espaço ao elemento inserido. Quando uma operação de inserção copia um elemento, ele cria um novo elemento, chama o construtor de cópia para copiar os dados do elemento anterior para o novo elemento e destrói o elemento anterior. A semântica de movimentação permite que você mova objetos diretamente sem ter que executar operações caras de alocação de memória e de cópia.
 
 Para aproveitar a semântica de movimentação no exemplo `vector`, você pode escrever um construtor de movimentação para mover dados de um objeto para outro.
 
-Para obter mais informações sobre a introdução da semântica de movimentação na biblioteca padrão C++ no Visual C++ 2010, consulte [biblioteca padrão C++](../standard-library/cpp-standard-library-reference.md).
+Para obter mais informações sobre a introdução da semântica de movimentação para o C++ biblioteca padrão no Visual Studio 2010, consulte [ C++ biblioteca padrão](../standard-library/cpp-standard-library-reference.md).
 
 ## <a name="perfect-forwarding"></a>Encaminhamento perfeito
 

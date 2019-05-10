@@ -1,6 +1,6 @@
 ---
 title: Instrução switch (C++)
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 f1_keywords:
 - default_cpp
 - switch_cpp
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - case keyword [C++], in switch statements
 - default keyword [C++]
 ms.assetid: 6c3f3ed3-5593-463c-8f4b-b33742b455c6
-ms.openlocfilehash: 67918b7df747d3bee923da500729e60b4fe04336
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 8136b03d9e54b4d49bcb1417238066bd86bc6b89
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62267083"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221942"
 ---
 # <a name="switch-statement-c"></a>Instrução switch (C++)
 
@@ -78,7 +78,7 @@ int main() {
 
 No exemplo acima, `capa` será incrementado se `c` for `A` maiúsculo. O **quebra** instrução após `capa++` finaliza a execução do **alternar** corpo da instrução e o controle passa para o **enquanto** loop. Sem o **quebra** instrução, execução seria "passar" para a próxima instrução rotulada, para que `lettera` e `nota` também seriam incrementados. Uma finalidade similar é atendida pela **quebra** instrução para `case 'a'`. Se `c` está em letras minúsculas `a`, `lettera` é incrementado e a **quebra** instrução finaliza a **alternar** corpo da instrução. Se `c` não é um `a` ou `A`, o **padrão** instrução é executada.
 
-**Visual Studio 2017 e posterior:** (disponível com [/std:c++17 + + 17](../build/reference/std-specify-language-standard-version.md)) o `[[fallthrough]]` atributo é especificado no C++ 17 standard. Ele pode ser usado em uma **alternar** instrução como uma dica para o compilador (ou para qualquer pessoa que leia o código) destina-se que o comportamento fall-through. O compilador do Visual C++ no momento não avisa sobre o comportamento de fallthrough, para que esse atributo não tem nenhum efeito no comportamento do compilador. Observe que o atributo é aplicado a uma instrução vazia dentro da instrução rotulada; em outras palavras, o ponto e vírgula é necessário.
+**Visual Studio 2017 e posterior:** (disponível com [/std:c++17 + + 17](../build/reference/std-specify-language-standard-version.md)) o `[[fallthrough]]` atributo é especificado no C++ 17 standard. Ele pode ser usado em uma **alternar** instrução como uma dica para o compilador (ou para qualquer pessoa que leia o código) destina-se que o comportamento fall-through. O Microsoft C++ compilador atualmente não avisa sobre o comportamento de fallthrough, portanto, esse atributo não tem nenhum efeito no comportamento do compilador. Observe que o atributo é aplicado a uma instrução vazia dentro da instrução rotulada; em outras palavras, o ponto e vírgula é necessário.
 
 ```cpp
 int main()

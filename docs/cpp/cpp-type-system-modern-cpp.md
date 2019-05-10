@@ -3,12 +3,12 @@ title: Sistema do tipo C++ (C++ moderno)
 ms.date: 11/19/2018
 ms.topic: conceptual
 ms.assetid: 553c0ed6-77c4-43e9-87b1-c903eec53e80
-ms.openlocfilehash: 4dfbf408654ccc92c92d6855c15238cb07c01b58
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 3fa13d2f0b274361c2ad34b0eb64421d2d1d037e
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392266"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222136"
 ---
 # <a name="c-type-system-modern-c"></a>Sistema do tipo C++ (C++ moderno)
 
@@ -53,7 +53,7 @@ int maxValue;                // Not recommended! maxValue contains
 
 ## <a name="fundamental-built-in-types"></a>Tipos (internos) fundamentais
 
-Ao contrário de algumas linguagens, C++ não tem tipo base universal do qual todos os outros tipos são derivados. A implementação da linguagem do Visual C++ inclui muitos *tipos fundamentais*, também conhecido como *tipos internos*. Isso inclui tipos numéricos, como **int**, **duplo**, **longo**, **bool**, mais o **char** e **wchar_t** tipos para caracteres ASCII e UNICODE, respectivamente. Tipos mais fundamentais (exceto **bool**, **duplo**, **wchar_t** e tipos relacionados) todos têm versões sem sinal, que modificam o intervalo de valores que a variável pode armazenar. Por exemplo, um **int**, que armazena um inteiro com sinal de 32 bits, pode representar um valor de -2.147.483.648 a 2.147.483.647. Uma **unsigned int**, que também é armazenado como 32 bits, pode armazenar um valor de 0 a 4.294.967.295. O número total de valores possíveis em cada caso é o mesmo; somente o intervalo é diferente.
+Ao contrário de algumas linguagens, C++ não tem tipo base universal do qual todos os outros tipos são derivados. A linguagem inclui muitos *tipos fundamentais*, também conhecido como *tipos internos*. Isso inclui tipos numéricos, como **int**, **duplo**, **longo**, **bool**, mais o **char** e **wchar_t** tipos para caracteres ASCII e UNICODE, respectivamente. Tipos mais fundamentais (exceto **bool**, **duplo**, **wchar_t** e tipos relacionados) todos têm versões sem sinal, que modificam o intervalo de valores que a variável pode armazenar. Por exemplo, um **int**, que armazena um inteiro com sinal de 32 bits, pode representar um valor de -2.147.483.648 a 2.147.483.647. Uma **unsigned int**, que também é armazenado como 32 bits, pode armazenar um valor de 0 a 4.294.967.295. O número total de valores possíveis em cada caso é o mesmo; somente o intervalo é diferente.
 
 Os tipos fundamentais são reconhecidos pelo compilador, que tem regras internas que controlam que operações você poderá executar neles e como eles serão convertidos em outros tipos fundamentais. Para obter uma lista completa de tipos internos e seu tamanho e limites numéricos, consulte [tipos fundamentais](../cpp/fundamental-types-cpp.md).
 

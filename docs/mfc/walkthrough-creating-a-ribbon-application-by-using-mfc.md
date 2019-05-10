@@ -1,16 +1,16 @@
 ---
 title: 'Passo a passo: Criando um aplicativo de faixa de opções usando MFC'
-ms.date: 11/04/2016
+ms.date: 04/25/2019
 helpviewer_keywords:
 - ribbon application, creating (MFC)
 - creating a ribbon aplication (MFC)
 ms.assetid: e61393e2-1d6b-4594-a7ce-157d3d1b0d9f
-ms.openlocfilehash: 29991a389a09e1fe3dc0074b80fd9a255458f673
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: a45df5258a16885b50e11d4cca8ba99eb4b3d458
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62358301"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64558233"
 ---
 # <a name="walkthrough-creating-a-ribbon-application-by-using-mfc"></a>Passo a passo: Criando um aplicativo de faixa de opções usando MFC
 
@@ -22,9 +22,7 @@ Este passo a passo pressupõe que você configurou o Visual Studio para usar **c
 
 ### <a name="to-create-an-mfc-application-that-has-a-ribbon"></a>Para criar um aplicativo do MFC que tenha uma faixa de opções
 
-1. Use o **Assistente de aplicativo MFC** para criar um aplicativo do MFC que tenha uma faixa de opções. Para executar o assistente, nos **arquivo** , aponte para **New**e, em seguida, clique em **projeto**.
-
-1. No **novo projeto** diálogo caixa, expanda o **Visual C++** nó sob **modelos instalados**, selecione **MFC**e, em seguida, selecione  **Aplicativo MFC**. Digite um nome para o projeto, por exemplo, *MFCRibbonApp*e, em seguida, clique em **Okey**.
+1. Use o **Assistente de aplicativo MFC** para criar um aplicativo do MFC que tenha uma faixa de opções. Confira [Passo a passo: Usando os novos controles de Shell MFC](walkthrough-using-the-new-mfc-shell-controls.md) para obter instruções sobre como abrir o Assistente para a sua versão do Visual Studio.
 
 1. Defina as seguintes opções **Assistente de aplicativo MFC**:
 
@@ -34,7 +32,7 @@ Este passo a passo pressupõe que você configurou o Visual Studio para usar **c
 
     1. No **propriedades do modelo de documento** seção, o **extensão de arquivo** , digite uma extensão de nome de arquivo para documentos que esse aplicativo cria, por exemplo, *mfcrbnapp*.
 
-    1. No **suporte do banco de dados** seção, certifique-se de que **None** está selecionado.
+    1. No **suporte do banco de dados** seção (somente Visual Studio 2015), certifique-se de que **None** está selecionado.
 
     1. No **recursos de Interface do usuário** seção, certifique-se de que **usar uma faixa de opções** está selecionado.
 

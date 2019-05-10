@@ -14,17 +14,17 @@ helpviewer_keywords:
 - < operator
 - operator <, valarrays
 ms.assetid: 31027dd6-53be-428b-b950-1dcb25393597
-ms.openlocfilehash: 57796cc69dd734ea4c619db4bd8fedbfa09ce15b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e5e53f02da52837b29b6bca4b49662174d6392a1
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62371305"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220531"
 ---
 # <a name="operatorlt-ltsample-containergt"></a>operator&lt; (&lt;sample container&gt;)
 
 > [!NOTE]
-> Este tópico faz parte da documentação do Visual C++ como um exemplo não funcional de contêineres usados na Biblioteca Padrão C++. Para obter mais informações, consulte [Contêineres da biblioteca padrão C++](../standard-library/stl-containers.md).
+> Este tópico é no Microsoft C++ como um exemplo não funcional de contêineres usados na documentação do C++ biblioteca padrão. Para obter mais informações, consulte [Contêineres da biblioteca padrão C++](../standard-library/stl-containers.md).
 
 Sobrecarrega **operator<** para comparar dois objetos da classe de modelo [Container](../standard-library/sample-container-class.md).
 

@@ -2,16 +2,16 @@
 title: DLLs (C++/CX)
 ms.date: 02/06/2018
 ms.assetid: 5b8bcc57-64dd-4c54-9f24-26a25bd5dddd
-ms.openlocfilehash: 1a72ecc5eb46abfbc7b9a52a168510ce0873ee04
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 13e733f0be27fe532af6109bdd6fc53291265e66
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62183264"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447246"
 ---
 # <a name="dlls-ccx"></a>DLLs (C++/CX)
 
-Você pode usar o Visual Studio para criar uma DLL Win32 padrão ou um DLL que pode ser consumido por aplicativos de plataforma Universal do Windows (UWP) do componente de tempo de execução do Windows. Uma DLL padrão que foi criada usando uma versão do Visual Studio ou o compilador Visual C++ anterior ao Visual Studio 2012 pode não carregar corretamente em um aplicativo UWP e não pode passar o teste de verificação do aplicativo em que a Microsoft Store.
+Você pode usar o Visual Studio para criar uma DLL Win32 padrão ou um DLL que pode ser consumido por aplicativos de plataforma Universal do Windows (UWP) do componente de tempo de execução do Windows. Uma DLL padrão que foi criada usando uma versão do Visual Studio ou o Microsoft C++ compilador do anterior ao Visual Studio 2012 pode não carregar corretamente em um aplicativo UWP e não pode passar o teste de verificação do aplicativo em que a Microsoft Store.
 
 ## <a name="windows-runtime-component-dlls"></a>DLLs de componentes de tempo de execução do Windows
 

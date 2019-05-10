@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CWinThread [MFC], m_pActiveWnd
 - CWinThread [MFC], m_pMainWnd
 ms.assetid: 10cdc294-4057-4e76-ac7c-a8967a89af0b
-ms.openlocfilehash: 0e02f123580696519e59d828ec590456cbd2a81c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9f17561941d785e5eb7b5fd8c52ab452aa6369e7
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62323275"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220429"
 ---
 # <a name="cwinthread-class"></a>Classe CWinThread
 
@@ -311,7 +311,7 @@ BOOL m_bAutoDelete;
 
 O `m_bAutoDelete` membro de dados é uma variável pública do tipo BOOL.
 
-O valor de `m_bAutoDelete` não afeta como o identificador de thread subjacente é fechado. O identificador de thread sempre é fechado quando o `CWinThread` objeto é destruído.
+O valor de `m_bAutoDelete` não afeta como o identificador de thread subjacente é fechado, mas ele afeta o tempo de fechamento do identificador. O identificador de thread sempre é fechado quando o `CWinThread` objeto é destruído.
 
 ##  <a name="m_hthread"></a>  CWinThread::m_hThread
 
@@ -323,7 +323,9 @@ HANDLE m_hThread;
 
 ### <a name="remarks"></a>Comentários
 
-O `m_hThread` membro de dados é uma variável pública do tipo de identificador. Ele é válido somente se existir subjacente thread no momento.
+O `m_hThread` membro de dados é uma variável pública do tipo de identificador. Ele é válido somente se o objeto de thread de kernel subjacente existe atualmente e o identificador não foi fechado ainda.
+
+O destruidor CWinThread chama CloseHandle no `m_hThread`. Se [m_bAutoDelete](#m_bautodelete) é verdadeiro quando o thread é encerrado, o CWinThread objeto é destruído, o que invalida todos os ponteiros para o objeto CWinThread e suas variáveis de membro. Talvez seja necessário o `m_hThread` membro para verificar o valor de saída de thread, ou para esperar um sinal. Para manter o objeto CWinThread e sua `m_hThread` conjunto de membros durante a execução do thread e depois é encerrado, `m_bAutoDelete` como FALSE antes de permitir a execução do thread continuar. Caso contrário, o thread pode encerrar, destruir o objeto CWinThread e fechar o identificador antes de tentar usá-lo. Se você usar essa técnica, você é responsável por exclusão do objeto CWinThread.
 
 ##  <a name="m_nthreadid"></a>  CWinThread::m_nThreadID
 
@@ -335,7 +337,8 @@ DWORD m_nThreadID;
 
 ### <a name="remarks"></a>Comentários
 
-O `m_nThreadID` membro de dados é uma variável pública do tipo DWORD. Ele é válido somente se existir subjacente thread no momento.
+O `m_nThreadID` membro de dados é uma variável pública do tipo DWORD. Ele é válido somente se o objeto de thread de kernel subjacente existe atualmente.
+Consulte também os comentários [m_hThread](#m_hthread) tempo de vida.
 
 ### <a name="example"></a>Exemplo
 

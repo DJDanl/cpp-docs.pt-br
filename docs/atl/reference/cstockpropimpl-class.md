@@ -1,6 +1,6 @@
 ---
 title: Classe CStockPropImpl
-ms.date: 11/06/2018
+ms.date: 05/06/2019
 f1_keywords:
 - CStockPropImpl
 - ATLCTL/ATL::CStockPropImpl
@@ -64,12 +64,12 @@ helpviewer_keywords:
 - controls [ATL], stock properties
 - stock properties, ATL controls
 ms.assetid: 45f11d7d-6580-4a0e-872d-3bc8b836cfda
-ms.openlocfilehash: 148c9571bb37e2b9063ca9290f51caa1fabb2d21
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 246e2a26db6adde0fec06523c1b8db09c5f552f3
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62277481"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221066"
 ---
 # <a name="cstockpropimpl-class"></a>Classe CStockPropImpl
 
@@ -182,7 +182,7 @@ A classe usada para gerenciar as informações de tipo de *T*. O valor padrão �
 
 `CStockPropImpl` Fornece **colocar** e **obter** métodos para cada propriedade de estoque. Esses métodos fornecem o código necessário para definir ou obter o membro de dados associado a cada propriedade para notificar e sincronizar com o contêiner quando qualquer propriedade for alterada.
 
-Visual C++ fornece suporte para propriedades de estoque por meio de seus assistentes. Para obter mais informações sobre como adicionar propriedades de estoque a um controle, consulte o [Tutorial da ATL](../../atl/active-template-library-atl-tutorial.md).
+Visual Studio fornece suporte para propriedades de estoque por meio de seus assistentes. Para obter mais informações sobre como adicionar propriedades de estoque a um controle, consulte o [Tutorial da ATL](../../atl/active-template-library-atl-tutorial.md).
 
 Para fins de compatibilidade `CStockPropImpl` também expõe `get_Window` e `put_Window` métodos que simplesmente chamam `get_HWND` e `put_HWND`, respectivamente. A implementação padrão de `put_HWND` retornará E_FAIL como HWND deve ser uma propriedade somente leitura.
 
