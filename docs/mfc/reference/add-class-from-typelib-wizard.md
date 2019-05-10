@@ -1,25 +1,27 @@
 ---
 title: Assistente para adicionar classe de Typelib
-ms.date: 10/03/2018
-f1_keywords:
-- vc.codewiz.class.typelib
+ms.date: 05/09/2019
 helpviewer_keywords:
-- Add Class from TypeLib Wizard [MFC]
 - COM interfaces, adding classes
 ms.assetid: 96152afd-9374-4649-a6ab-b0fa2a5592a3
-ms.openlocfilehash: a2c291e1c9e78d288bdb2d15f224520d764dfa1b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 794df6c207c2f2e93cdcc63a6b83cd3434764e87
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62297002"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65525468"
 ---
 # <a name="add-class-from-typelib-wizard"></a>Assistente para adicionar classe de Typelib
 
-Use este assistente para adicionar uma classe MFC de uma biblioteca de tipos disponíveis. O assistente cria uma classe para cada interface que você adicione da biblioteca de tipo selecionado.
+::: moniker range="vs-2019"
 
-> [!WARNING]
-> No Visual Studio 2017 versão 15.9, esse assistente de código foi preterido e será removido em uma versão futura do Visual Studio. Este assistente é raramente usado. O suporte geral para ATL e MFC não é afetado pela remoção do assistente. Se você quiser compartilhar seus comentários sobre essa alteração, participe [desta pesquisa](https://www.surveymonkey.com/r/QDWKKCN). Seus comentários são importantes para nós.
+Este assistente não está disponível no Visual Studio de 2019 e posterior.
+
+::: moniker-end
+
+::: moniker range="vs-2017"
+
+Use este assistente para adicionar uma classe MFC de uma biblioteca de tipos disponíveis. O assistente cria uma classe para cada interface que você adicione da biblioteca de tipo selecionado.
 
 - **Adicione uma classe de**
 
@@ -66,6 +68,8 @@ Use este assistente para adicionar uma classe MFC de uma biblioteca de tipos dis
    Define o nome do arquivo de cabeçalho para a nova classe. Por padrão, esse nome baseia-se no nome fornecido em **Classes geradas**. Clique no botão de reticências para salvar o nome de arquivo no local de sua escolha, ou para acrescentar a declaração de classe a um arquivo existente. Se você escolher um arquivo existente, o assistente não o salvará no local selecionado até que você clique em **Concluir** no assistente.
 
    O assistente não substitui um arquivo. Se você selecionar o nome de um arquivo existente, quando clicar em **Concluir**, o assistente solicitará que você indique se a declaração de classe deve ser acrescentada ao conteúdo do arquivo. Clique em **Sim** para acrescentar o arquivo; clique em **Não** para retornar ao assistente e especificar outro nome de arquivo.
+
+::: moniker-end
 
 ## <a name="see-also"></a>Consulte também
 

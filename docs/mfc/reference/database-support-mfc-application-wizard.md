@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - MFC Application Wizard, database support
 ms.assetid: 9ddf4558-fd41-4ac7-8d9b-c93d9c68ab59
-ms.openlocfilehash: a1e0519e1351a48bbd969168d62f163c9dde7e7e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 94ed75ffd59294d5beb076ef4d66e57ef763f10e
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62323106"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65525463"
 ---
 # <a name="database-support-mfc-application-wizard"></a>Suporte ao banco de dados, Assistente de Aplicativo MFC
 
@@ -46,15 +46,15 @@ Esta página fornece opções que permitem que você especifique o nível de ban
 
 - **Fonte de dados**
 
+   > [!NOTE]
+   > O Assistente de ATL OLE DB consumidor e o Assistente de consumidor de ODBC do MFC não estão disponíveis no Visual Studio de 2019 e posterior. Você ainda pode adicionar manualmente a funcionalidade. Para obter mais informações, consulte [criando um consumidor sem usar um assistente](../../data/oledb/creating-a-consumer-without-using-a-wizard.md).
+
    Clique o **fonte de dados** botão para configurar uma fonte de dados usando o driver especificado ou o provedor e o banco de dados. Se você tiver selecionado o OLE DB na **tipo de cliente** opção, esse botão exibe a **propriedades de vínculo de dados** caixa de diálogo. Se você tiver selecionado o ODBC na **tipo de cliente** opção, esse botão fornece a **Selecionar fonte de dados** caixa de diálogo. Essa opção está disponível somente se você optar por incluir um modo de exibição de banco de dados em seu aplicativo.
 
    |Opção|Descrição|
    |------------|-----------------|
    |**Propriedades de vínculo de dados** (OLE DB)|Estabelece a fonte de dados especificado usando o provedor OLE DB especificado. Você deve especificar o provedor OLE DB, o local dos dados, a fonte de dados, ID de logon e (opcionalmente) uma senha. Para obter detalhes sobre essa caixa de diálogo, consulte **fonte de dados** na [ATL OLE DB Assistente de consumidor](../../atl/reference/atl-ole-db-consumer-wizard.md).|
    |**Selecionar fonte de dados** (ODBC)|Estabelece a fonte de dados especificado usando o driver ODBC especificado. Você deve selecionar um nome de fonte de dados para escolher uma tabela da fonte de dados. O assistente é associado a todas as colunas da tabela para as variáveis de membro de um `CRecordset`-classe derivada. Para obter detalhes sobre essa caixa de diálogo, consulte **fonte de dados** na [Assistente de consumidor ODBC MFC](../../mfc/reference/mfc-odbc-consumer-wizard.md).|
-
-   > [!NOTE]
-   > Em versões anteriores, Shift + clique a **fonte de dados** botão aberta uma caixa de diálogo Abrir arquivo para permitir que você selecione um arquivo de Link de dados (. udl). Não há suporte para essa funcionalidade.
 
 - **Gerar a classe de banco de dados atribuído**
 
