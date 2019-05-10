@@ -1,6 +1,6 @@
 ---
 title: Versões de biblioteca MFC
-ms.date: 1/09/2018
+ms.date: 05/08/2019
 helpviewer_keywords:
 - class libraries [MFC], building versions
 - version information [MFC], MFC library
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - MFC libraries
 - MFC, library versions
 - libraries [MFC], versions
-ms.openlocfilehash: c0dc724566063066175ea54e2b7734892e3c6e05
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b8e32366d9ff43bd6e5770f64f0ba9d8bf6e56ab
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62238479"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65524791"
 ---
 # <a name="mfc-library-versions"></a>Versões de biblioteca MFC
 
@@ -129,7 +129,7 @@ As bibliotecas de importação necessárias para criar aplicativos ou a extensã
 
 Se você estiver vinculando dinamicamente para a versão DLL compartilhada do MFC, se ele é de um aplicativo ou de uma DLL de extensão do MFC, você deve incluir o MFC correspondente*versão*. DLL ou MFC*versão*U.DLL quando você implanta seu produto.
 
-Para obter uma lista de DLLs do Visual C++ que pode ser distribuído com seus aplicativos, consulte [Código distribuível para o Microsoft Visual Studio 2017 e Microsoft Visual Studio 2017 SDK (inclui utilitários e arquivos do BuildServer)](http://go.microsoft.com/fwlink/p/?LinkId=823098).
+Para obter uma lista de Visual C++ DLLs que podem ser distribuídos com seus aplicativos, consulte [Código distribuível para o Microsoft Visual Studio 2017 e Microsoft Visual Studio 2017 SDK (inclui utilitários e arquivos do BuildServer)](/visualstudio/productinfo/2017-redistribution-vs) ou [ Código distribuível para o Visual Studio de 2019](/visualstudio/releases/2019/redistribution).
 
 Para obter mais informações sobre o suporte MBCS e Unicode em MFC, consulte [suporte a Unicode e conjunto de caracteres Multibyte (MBCS)](../atl-mfc-shared/unicode-and-multibyte-character-set-mbcs-support.md).
 
