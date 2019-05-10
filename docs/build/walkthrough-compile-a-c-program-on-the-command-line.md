@@ -1,19 +1,19 @@
 ---
 title: 'Passo a passo: Compilar um programa em C na linha de comando'
 ms.custom: conceptual
-ms.date: 09/24/2018
+ms.date: 04/25/2019
 helpviewer_keywords:
 - command-line applications [C++], C programs
 - Visual C, compiling
 - compiling programs [C++]
 - C program compiling [C++]
 ms.assetid: 7e74cc2d-54b1-49de-b7ad-d3ae6b39ab8d
-ms.openlocfilehash: 54f5810e60cdaada6a99651a732570c88ea883ce
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 03876ba47270252caa21d7e2994a4f8321a6d59e
+ms.sourcegitcommit: 18d3b1e9cdb4fc3a76f7a650c31994bdbd2bde64
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62314176"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64877195"
 ---
 # <a name="walkthrough-compile-a-c-program-on-the-command-line"></a>Passo a passo: Compilar um programa em C na linha de comando
 
@@ -27,40 +27,65 @@ Para concluir este passo a passo, você deve ter instalado o Visual Studio e os 
 
 Visual Studio é um ambiente de desenvolvimento integrado que oferece suporte a um editor completo e compiladores, depuradores e gerenciadores de recursos para várias linguagens e plataformas. Para obter informações sobre esses recursos e como baixar e instalar o Visual Studio, incluindo o Visual Studio Community edition gratuito, consulte [instalar o Visual Studio](/visualstudio/install/install-visual-studio).
 
-As ferramentas de Build de versão do Visual Studio do Visual Studio instala apenas o conjunto de ferramentas de linha de comando, os compiladores, ferramentas e bibliotecas que necessárias para compilar programas em C e C++. Ele é perfeito para a criação de laboratórios ou sala de aula exercícios e instala relativamente rápido. Para instalar somente o conjunto de ferramentas de linha de comando, baixe [ferramentas de Build para o Visual Studio](https://go.microsoft.com/fwlink/p/?linkid=875721) e execute o instalador.
+As ferramentas de Build de versão do Visual Studio do Visual Studio instala apenas o conjunto de ferramentas de linha de comando, os compiladores, ferramentas e bibliotecas que necessárias para compilar programas em C e C++. Ele é perfeito para a criação de laboratórios ou sala de aula exercícios e instala relativamente rápido. Para instalar somente o conjunto de ferramentas de linha de comando, baixe as ferramentas de Build para o Visual Studio do [downloads do Visual Studio](https://visualstudio.microsoft.com/downloads/) página e execute o instalador.
 
 Antes de compilar um programa C ou C++ na linha de comando, você deve verificar se as ferramentas são instaladas e que você pode acessá-los na linha de comando. Visual C++ tem requisitos complexos para o ambiente de linha de comando encontrar as ferramentas, cabeçalhos e bibliotecas que ele usa. **Não é possível usar o Visual C++ em uma janela de prompt de comando simples** sem um pouco de preparação. Você precisa de uma *prompt de comando do desenvolvedor* janela, que é uma janela do prompt de comando regular com todas as variáveis de ambiente necessárias definidas. Felizmente, o Visual C++ instala atalhos para inicializar os prompts de comando do desenvolvedor que têm a configuração de ambiente para compilações de linha de comando. Infelizmente, os nomes dos atalhos de prompt de comando do desenvolvedor e onde elas estão localizadas são diferentes em quase todas as versões do Visual C++ e em versões diferentes do Windows. A primeira tarefa do passo a passo é encontrar o atalho correto para usar.
 
 > [!NOTE]
 > Um atalho de prompt de comando do desenvolvedor define automaticamente os caminhos corretos para o compilador e ferramentas e para quaisquer cabeçalhos necessários e bibliotecas. Alguns desses valores são diferentes para cada configuração de build. Você deve definir esses valores de ambiente por conta própria se você não usar um dos atalhos. Para obter mais informações, consulte [definir o caminho e variáveis de ambiente para Builds de linha de comando](setting-the-path-and-environment-variables-for-command-line-builds.md). Como o ambiente de compilação é complexo, é altamente recomendável que usar um atalho de prompt de comando do desenvolvedor em vez de criar seus próprios.
 
-## <a name="open-a-developer-command-prompt"></a>Abra um prompt de comando do desenvolvedor
+Essas instruções variam, dependendo de qual versão do Visual Studio que você está usando. Antes de continuar, certifique-se de que o seletor de versão na parte superior esquerda desta página está definido corretamente.
 
-1. Se você tiver instalado o Visual Studio 2017 no Windows 10, abra o menu Iniciar e, em seguida, role para baixo e abra o **Visual Studio 2017** pasta (não o aplicativo do Visual Studio 2017). Escolher **Prompt de comando do desenvolvedor para VS 2017** para abrir a janela de prompt de comando.
+::: moniker range="vs-2019"
 
-   Se você tiver instalado o Microsoft Visual C++ Build Tools 2015 no Windows 10, abra o **inicie** menu e, em seguida, role para baixo e abra o **ferramentas de Build do Visual C++** pasta. Escolher **Prompt de comando de ferramentas nativas do Visual C++ 2015 x86** para abrir a janela de prompt de comando.
+## <a name="open-a-developer-command-prompt-in-visual-studio-2019"></a>Abra um prompt de comando do desenvolvedor no Visual Studio de 2019
 
-   Se você estiver usando uma versão diferente do Visual Studio ou estiver executando uma versão diferente do Windows, procure no seu menu Iniciar ou página inicial para uma pasta de ferramentas do Visual Studio que contém um atalho de prompt de comando do desenvolvedor. Você também pode usar a função de pesquisa do Windows para procurar por "prompt de comando do desenvolvedor" e escolha aquela que corresponde à sua versão instalada do Visual Studio. Use o atalho para abrir a janela de prompt de comando.
+Se você tiver instalado o Visual Studio de 2019 no Windows 10, abra o menu Iniciar e, em seguida, role para baixo e abra o **Visual Studio de 2019** pasta (não o aplicativo do Visual Studio de 2019). Escolher **Prompt de comando do desenvolvedor para VS 2019** para abrir a janela de prompt de comando.
 
-1. Em seguida, verifique se o prompt de comando do desenvolvedor de Visual C++ está definido corretamente. Na janela do prompt de comando, digite `cl` e verifique se que a saída é semelhante a:
+Se você estiver usando uma versão diferente do Windows, procure no seu menu Iniciar ou página inicial para uma pasta de ferramentas do Visual Studio que contém um atalho de prompt de comando do desenvolvedor. Você também pode usar a função de pesquisa do Windows para procurar por "prompt de comando do desenvolvedor" e escolha aquela que corresponde à sua versão instalada do Visual Studio. Use o atalho para abrir a janela de prompt de comando.
 
-   ```Output
-   C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise>cl
-   Microsoft (R) C/C++ Optimizing Compiler Version 19.10.25017 for x86
-   Copyright (C) Microsoft Corporation.  All rights reserved.
+::: moniker-end
 
-   usage: cl [ option... ] filename... [ /link linkoption... ]
-   ```
+::: moniker range="vs-2017"
 
-   Pode haver diferenças no diretório atual ou os números de versão, dependendo da versão do Visual C++ e qualquer atualização instalada. Se a saída acima é semelhante ao que você vê, em seguida, você estará pronto para compilar programas C ou C++ na linha de comando.
+## <a name="open-a-developer-command-prompt-in-visual-studio-2017"></a>Abra um prompt de comando do desenvolvedor no Visual Studio 2017
 
-   > [!NOTE]
-   > Se você receber um erro, como "'cl' não é reconhecido como um comando interno ou externo, programa operável ou arquivo em lotes," Erro C1034 ou erro LNK1104 quando você executa o **cl** de comando, em seguida, ou você não estiver usando um prompt de comando do desenvolvedor, ou algo está errado com sua instalação do Visual C++. Você deve corrigir esse problema antes de continuar.
+Se você tiver instalado o Visual Studio 2017 no Windows 10, abra o menu Iniciar e, em seguida, role para baixo e abra o **Visual Studio 2017** pasta (não o aplicativo do Visual Studio 2017). Escolher **Prompt de comando do desenvolvedor para VS 2017** para abrir a janela de prompt de comando.
 
-   Se você não encontrar o desenvolvedor de atalho do prompt de comando, ou se você receber uma mensagem de erro quando você insere `cl`, em seguida, a instalação do Visual C++ pode ter um problema. Se você estiver usando o Visual Studio 2017, tente reinstalar o **desenvolvimento para Desktop com C++** carga de trabalho no instalador do Visual Studio. Para obter detalhes, consulte [suporte de instalar o C++ no Visual Studio](vscpp-step-0-installation.md). Ou então, reinstalar o [ferramentas de Build para o Visual Studio](https://go.microsoft.com/fwlink/p/?linkid=875721). Não vá para a próxima seção até que isso funciona. Para obter mais informações sobre como instalar e solução de problemas de Visual Studio, consulte [instalar o Visual Studio](/visualstudio/install/install-visual-studio).
+Se você estiver executando uma versão diferente do Windows, procure no seu menu Iniciar ou página inicial para uma pasta de ferramentas do Visual Studio que contém um atalho de prompt de comando do desenvolvedor. Você também pode usar a função de pesquisa do Windows para procurar por "prompt de comando do desenvolvedor" e escolha aquela que corresponde à sua versão instalada do Visual Studio. Use o atalho para abrir a janela de prompt de comando.
 
-   > [!NOTE]
-   > Dependendo da versão do Windows no computador e a configuração de segurança do sistema, talvez seja necessário com o botão direito para abrir o menu de atalho para o atalho de prompt de comando do desenvolvedor e, em seguida, escolha **executar como administrador** para compilar e executar o programa que você criar seguindo este passo a passo com êxito.
+::: moniker-end
+
+::: moniker range="vs-2015"
+
+## <a name="open-a-developer-command-prompt-in-visual-studio-2015"></a>Abra um prompt de comando do desenvolvedor no Visual Studio 2015
+
+Se você tiver instalado o Microsoft Visual C++ Build Tools 2015 no Windows 10, abra o **inicie** menu e, em seguida, role para baixo e abra o **ferramentas de Build do Visual C++** pasta. Escolher **Prompt de comando de ferramentas nativas do Visual C++ 2015 x86** para abrir a janela de prompt de comando.
+
+Se você estiver executando uma versão diferente do Windows, procure no seu menu Iniciar ou página inicial para uma pasta de ferramentas do Visual Studio que contém um atalho de prompt de comando do desenvolvedor. Você também pode usar a função de pesquisa do Windows para procurar por "prompt de comando do desenvolvedor" e escolha aquela que corresponde à sua versão instalada do Visual Studio. Use o atalho para abrir a janela de prompt de comando.
+   
+::: moniker-end
+
+
+Em seguida, verifique se o prompt de comando do desenvolvedor de Visual C++ está definido corretamente. Na janela do prompt de comando, digite `cl` e verifique se que a saída é semelhante a:
+
+```Output
+C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise>cl
+Microsoft (R) C/C++ Optimizing Compiler Version 19.10.25017 for x86
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+usage: cl [ option... ] filename... [ /link linkoption... ]
+```
+
+Pode haver diferenças no diretório atual ou os números de versão, dependendo da versão do Visual C++ e qualquer atualização instalada. Se a saída acima é semelhante ao que você vê, em seguida, você estará pronto para compilar programas C ou C++ na linha de comando.
+
+> [!NOTE]
+> Se você receber um erro, como "'cl' não é reconhecido como um comando interno ou externo, programa operável ou arquivo em lotes," Erro C1034 ou erro LNK1104 quando você executa o **cl** de comando, em seguida, ou você não estiver usando um prompt de comando do desenvolvedor, ou algo está errado com sua instalação do Visual C++. Você deve corrigir esse problema antes de continuar.
+
+Se você não encontrar o desenvolvedor de atalho do prompt de comando, ou se você receber uma mensagem de erro quando você insere `cl`, em seguida, a instalação do Visual C++ pode ter um problema. Se você estiver usando o Visual Studio 2017 ou posterior, tente reinstalar o **desenvolvimento para Desktop com C++**  carga de trabalho no instalador do Visual Studio. Para obter detalhes, consulte [suporte de instalar o C++ no Visual Studio](vscpp-step-0-installation.md). Ou, reinstale as ferramentas de Build do [downloads do Visual Studio](https://visualstudio.microsoft.com/downloads/) página. Não vá para a próxima seção até que isso funciona. Para obter mais informações sobre como instalar e solução de problemas de Visual Studio, consulte [instalar o Visual Studio](/visualstudio/install/install-visual-studio).
+
+> [!NOTE]
+> Dependendo da versão do Windows no computador e a configuração de segurança do sistema, talvez seja necessário com o botão direito para abrir o menu de atalho para o atalho de prompt de comando do desenvolvedor e, em seguida, escolha **executar como administrador** para compilar e executar o programa que você criar seguindo este passo a passo com êxito.
 
 ## <a name="create-a-c-source-file-and-compile-it-on-the-command-line"></a>Criar um arquivo de código-fonte C e compilá-lo na linha de comando
 
@@ -154,9 +179,9 @@ O compilador, cl.exe, tem muito mais opções se aplicam para compilar, otimizar
 
 Você pode usar o MSBuild e arquivos de projeto e makefiles ou NMAKE para configurar e criar projetos mais complexos na linha de comando. Para obter mais informações sobre como usar essas ferramentas, consulte [referência de NMAKE](reference/nmake-reference.md) e [MSBuild](msbuild-visual-cpp.md).
 
-As linguagens C e C++ são semelhantes, mas não o mesmo. O compilador MSVC usa uma regra simples para determinar qual idioma usar quando ele compila seu código. Por padrão, o compilador MSVC trata todos os arquivos que terminam em. c como código-fonte C e todos os arquivos que terminam em. cpp como código-fonte C++. Para forçar o compilador trate todos os arquivos como C independente de extensão de nome de arquivo, use o [/Tc](reference/tc-tp-tc-tp-specify-source-file-type.md) opção de compilador.
+As linguagens C e C++ são semelhantes, mas não o mesmo. O Microsoft C /C++ compilador (MSVC) usa uma regra simples para determinar qual idioma usar quando ele compila seu código. Por padrão, o compilador MSVC trata todos os arquivos que terminam em. c como código-fonte C e todos os arquivos que terminam em. cpp como código-fonte C++. Para forçar o compilador trate todos os arquivos como C independente de extensão de nome de arquivo, use o [/Tc](reference/tc-tp-tc-tp-specify-source-file-type.md) opção de compilador.
 
-O compilador do Visual C++ C é compatível com o padrão ISO C99, mas não estritamente em conformidade. Na maioria dos casos, o código do C portátil compilará e executará conforme o esperado. Visual C++ não oferece suporte a maioria das alterações no ISO C11. Determinadas funções de biblioteca e nomes de função POSIX foram preteridos pelo compilador MSVC. As funções têm suporte, mas os nomes preferenciais foram alterados. Para obter mais informações, consulte [recursos de segurança no CRT](../c-runtime-library/security-features-in-the-crt.md) e [aviso do compilador (nível 3) C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md).
+MSVC é compatível com o padrão ISO C99, mas não estritamente em conformidade. Na maioria dos casos, o código do C portátil compilará e executará conforme o esperado. Visual C++ não oferece suporte a maioria das alterações no ISO C11. Determinadas funções de biblioteca e os nomes de função POSIX foram preteridos por MSVC. As funções têm suporte, mas os nomes preferenciais foram alterados. Para obter mais informações, consulte [recursos de segurança no CRT](../c-runtime-library/security-features-in-the-crt.md) e [aviso do compilador (nível 3) C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md).
 
 ## <a name="see-also"></a>Consulte também
 

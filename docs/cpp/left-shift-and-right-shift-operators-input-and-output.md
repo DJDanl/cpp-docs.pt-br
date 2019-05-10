@@ -13,12 +13,12 @@ helpviewer_keywords:
 - shift operators [C++]
 - operators [C++], shift
 ms.assetid: 25fa0cbb-5fdd-4657-8745-b35f7d8f1606
-ms.openlocfilehash: 2f118c11aab9fb2bbdd6cfa4f23425077b382b23
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: fd048bedc45b14bdc7b83120ad039296b54aa850
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62216415"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222056"
 ---
 # <a name="left-shift-and-right-shift-operators-gtgt-and-ltlt"></a>Operadores de deslocamento de deslocamento à esquerda e direita (&gt; &gt; e &lt; &lt;)
 
@@ -61,7 +61,7 @@ int main() {
 }
 ```
 
-Se você deslocar um número com sinal para a esquerda de forma que o bit de sinal seja afetado, o resultado será indefinido. O exemplo a seguir mostra o que acontece no Visual C++ quando 1 bit é deslocado para a esquerda na posição de bit de sinal.
+Se você deslocar um número com sinal para a esquerda de forma que o bit de sinal seja afetado, o resultado será indefinido. O exemplo a seguir mostra o que acontece quando um 1 bit é deslocado à esquerda para a posição de bit de sinal.
 
 ```cpp
 #include <iostream>
@@ -89,7 +89,7 @@ int main() {
 O operador de deslocamento para a direita faz com que o padrão de bits na *shift-Expression&lt;2}{3&gt;Additive* ser deslocados para a direita pelo número de posições especificado por *additive-expression*. Para números sem sinal, as posições de bits que foram liberadas pela operação de deslocamento são preenchidas com zeros. Para números com sinal, o bit de sinal é usado para preencher as posições de bit vagas. Ou seja, se o número for positivo, 0 será usado, e se o número for negativo, 1 será usado.
 
 > [!IMPORTANT]
-> O resultado do deslocamento de um número negativo para a direita dependerá da implementação. Embora o Visual C++ use o bit de sinal para preencher as posições de bits vagas, não há garantia de que outras implementações também façam isso.
+> O resultado do deslocamento de um número negativo para a direita dependerá da implementação. Embora o Microsoft C++ compilador usa o bit de sinal para preencher as posições de bit vagas, não há nenhuma garantia de que outras implementações também façam isso.
 
 Este exemplo mostra operações de deslocamento para a direita usando números sem sinal:
 
