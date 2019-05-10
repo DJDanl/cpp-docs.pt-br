@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - file types [C++], MFC source and header
 ms.assetid: f61419a8-bf69-4bbb-8f7c-1734be5e6db6
-ms.openlocfilehash: a46fedc9f9bbc888e9b59d2ed313eaf7146394ff
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 89e02054b72946c4b1b773ce79b1c380da6ef01a
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62321313"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446250"
 ---
 # <a name="mfc-program-or-control-source-and-header-files"></a>Programa MFC ou origem de controle e arquivos de cabeçalho
 
@@ -34,6 +34,6 @@ Todos esses arquivos estão localizados no diretório *Nome_do_projeto* e na pas
 
 ## <a name="see-also"></a>Consulte também
 
-[Tipos de arquivo criados para projetos do Visual C++](file-types-created-for-visual-cpp-projects.md)<br>
+[Arquivo tipos criados para o Visual C++ projetos](file-types-created-for-visual-cpp-projects.md)<br>
 [Programa ATL ou origem de controle e arquivos de cabeçalho](atl-program-or-control-source-and-header-files.md)<br>
 [Projetos CLR](files-created-for-clr-projects.md)

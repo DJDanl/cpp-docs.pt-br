@@ -1,8 +1,6 @@
 ---
 title: Arquivos de projeto e solução
-ms.date: 11/04/2016
-f1_keywords:
-- vc.files.projectandsolution
+ms.date: 05/06/2019
 helpviewer_keywords:
 - project files [C++]
 - file types [C++], makefiles
@@ -11,12 +9,12 @@ helpviewer_keywords:
 - browsing database file, .sdf
 - file types [C++], project files
 ms.assetid: 5823b954-36cf-42d3-8fd5-25bab3ef63d9
-ms.openlocfilehash: b4b82aa3837558b2c325fb6cba6819422c0db7ff
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 153480331d3300555c78a3489ca603d854893f5b
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62319571"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446592"
 ---
 # <a name="project-and-solution-files"></a>Arquivos de projeto e solução
 
@@ -26,14 +24,14 @@ Os arquivos a seguir são criados quando você cria um projeto no Visual Studio.
 |--------------|------------------------|--------------------------------|-----------------|
 |*Solname*.sln|*Nome_do_projeto*|Não exibido no Gerenciador de Soluções|O arquivo de *solução*. Organiza todos os elementos de um projeto ou de vários projetos em uma só solução.|
 |*Nome_do_projeto*.suo|*Nome_do_projeto*|Não exibido no Gerenciador de Soluções|O arquivo de *opções da solução*. Armazena as personalizações da solução, de modo que ele tenha a aparência e o comportamento desejado, sempre que você abrir um projeto ou um arquivo na solução.|
-|*Nome_do_projeto*.vcxproj|*Nome_do_projeto*|Não exibido no Gerenciador de Soluções|O arquivo de *projeto*. Armazena informações específicas a cada projeto. (Nas versões anteriores, esse arquivo era nomeado *Nome_do_projeto*.vcproj ou *Nome_do_projeto*.dsp.) Para obter um exemplo de arquivo de projeto do Visual C++, confira [Arquivos de projeto](project-files.md).|
+|*Nome_do_projeto*.vcxproj|*Nome_do_projeto*|Não exibido no Gerenciador de Soluções|O arquivo de *projeto*. Armazena informações específicas a cada projeto. (Nas versões anteriores, esse arquivo era nomeado *Nome_do_projeto*.vcproj ou *Nome_do_projeto*.dsp.) Para obter um exemplo de um C++ (. vcxproj) do arquivo de projeto, consulte [arquivos de projeto](project-files.md).|
 |*Nome_do_projeto*.vcxitems|*Nome_do_projeto*|Não exibido no Gerenciador de Soluções|O arquivo de *projeto Itens Compartilhados*. O projeto não é compilado.  Em vez disso, ele pode ser referenciado por outro projeto do C++ e seus arquivos se tornarão parte do processo de build do projeto de referência. Isso pode ser usado para compartilhar um código comum com projetos do C++ multiplataforma.|
 |*Nome_do_projeto*.sdf|*Nome_do_projeto*|Não exibido no Gerenciador de Soluções|O arquivo de *navegação no banco de dados*. Dá suporte às funcionalidades de procura e de navegação como **Ir para definição**, **Localizar Todas as Referências** e **Modo de Exibição de Classe**. É gerado pela análise dos arquivos de cabeçalho.|
 |*Projname*.vcxproj.filters|*Nome_do_projeto*|Não exibido no Gerenciador de Soluções|O arquivo de *filtros*. Especifica o local em que colocar um arquivo adicionado à solução. Por exemplo, um arquivo .h é colocado no nó **Arquivos de Cabeçalho**.|
 |*Projname*.vcxproj.user|*Nome_do_projeto*|Não exibido no Gerenciador de Soluções|O arquivo de *usuário de migração*. Depois que um projeto é migrado do Visual Studio 2008, esse arquivo contém informações que foram convertidas de qualquer arquivo .vsprops.|
-|*Nome_do_projeto*.idl|*Nome_do_projeto*|Source|(Específico ao projeto) Contém o código-fonte da linguagem IDL para uma biblioteca de tipos de controle. Esse arquivo é usado pelo Visual C++ para gerar uma biblioteca de tipos. A biblioteca gerada expõe a interface do controle para outros clientes de Automação. Para obter mais informações, confira [Arquivo IDL](/windows/desktop/Rpc/the-interface-definition-language-idl-file) no SDK do Windows.|
+|*Nome_do_projeto*.idl|*Nome_do_projeto*|Origem|(Específico ao projeto) Contém o código-fonte da linguagem IDL para uma biblioteca de tipos de controle. Esse arquivo é usado pelo Visual C++ para gerar uma biblioteca de tipos. A biblioteca gerada expõe a interface do controle para outros clientes de Automação. Para obter mais informações, confira [Arquivo IDL](/windows/desktop/Rpc/the-interface-definition-language-idl-file) no SDK do Windows.|
 |Readme.txt|*Nome_do_projeto*|Projeto|O arquivo *Leiame*. É gerado pelo assistente de aplicativo e descreve os arquivos em um projeto.|
 
 ## <a name="see-also"></a>Consulte também
 
-[Tipos de arquivo criados para projetos do Visual C++](file-types-created-for-visual-cpp-projects.md)
+[Arquivo tipos criados para o Visual C++ projetos](file-types-created-for-visual-cpp-projects.md)

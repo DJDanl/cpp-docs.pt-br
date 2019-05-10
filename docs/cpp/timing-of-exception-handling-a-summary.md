@@ -1,6 +1,6 @@
 ---
 title: 'Tempo de tratamento de exceção de: Um resumo'
-ms.date: 11/04/2016
+ms.date: 05/07/2019
 helpviewer_keywords:
 - sequence [C++]
 - sequence, of handlers
@@ -11,19 +11,19 @@ helpviewer_keywords:
 - handlers [C++], order of exception
 - structured exception handling [C++], timing
 ms.assetid: 5d1da546-73fd-4673-aa1a-7ac0f776c420
-ms.openlocfilehash: cbff7c4153646fcb3471e18d20a0e633fbd1307f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 7b52252454e27d622e412f490360a025dfc97838
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62330447"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221898"
 ---
 # <a name="timing-of-exception-handling-a-summary"></a>Tempo de tratamento de exceção de: Um resumo
 
 Um manipulador de término é executado, independentemente de como o **Try** bloco de instrução é encerrado. Causas estão: saltar para fora dos **Try** bloco, um `longjmp` instrução que transfere o controle para fora do bloco e desenrolar a pilha devido à manipulação de exceção.
 
 > [!NOTE]
->  O Visual C++ oferece suporte a dois formatos das instruções `setjmp` e `longjmp`. A versão rápida ignora a manipulação de término, mas é mais eficiente. Para usar esta versão, inclua o arquivo \<setjmp >. A outra versão oferece suporte à manipulação de término conforme descrito no parágrafo anterior. Para usar esta versão, inclua o arquivo \<setjmpex >. O aumento no desempenho da versão rápida depende da configuração de hardware.
+>  O Microsoft C++ compilador dá suporte a duas formas dos `setjmp` e `longjmp` instruções. A versão rápida ignora a manipulação de término, mas é mais eficiente. Para usar esta versão, inclua o arquivo \<setjmp >. A outra versão oferece suporte à manipulação de término conforme descrito no parágrafo anterior. Para usar esta versão, inclua o arquivo \<setjmpex >. O aumento no desempenho da versão rápida depende da configuração de hardware.
 
 O sistema operacional executa todos os manipuladores de término na ordem apropriada antes que qualquer outro código possa ser executado, incluindo o corpo de um manipulador de exceção.
 

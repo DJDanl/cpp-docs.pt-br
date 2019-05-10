@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Conformance compiler options
 - Zc compiler options [C++]
 ms.assetid: b0de5a84-da72-4e5a-9a4e-541099f939e0
-ms.openlocfilehash: b2563ba0ae2a07bc9f9d81128745ed4b9651fb6c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 962bb2aaa2f05ad0dc4c9c86cd5cc9694cfad98b
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62315632"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446165"
 ---
 # <a name="zcwchart-wchart-is-native-type"></a>/Zc:wchar_t (wchar_t é do tipo nativo)
 
@@ -31,7 +31,7 @@ Analise `wchar_t` como um tipo interno de acordo com o padrão C++.
 
 Se **/ZC: wchar_t** estiver ativado, `wchar_t` é uma palavra-chave para um tipo integral interna no código compilado como C++. Se **/Zc:wchar_t-** (com um sinal de subtração) é especificado, ou no código compilado como C, `wchar_t` não é um tipo interno. Em vez disso, `wchar_t` é definido como um `typedef` para `unsigned short` em stddef. h do cabeçalho canônico. (A implementação da Microsoft define-lo em outro cabeçalho é incluído por stddef. h e outros cabeçalhos padrão.)
 
-Não recomendamos **/Zc:wchar_t-** porque o C++ padrão requer que `wchar_t` seja um tipo interno. Usar a versão `typedef` pode causar problemas de portabilidade. Se você atualizar de versões anteriores do Visual C++ e encontrar o erro do compilador [C2664](../../error-messages/compiler-errors-2/compiler-error-c2664.md) porque o código está tentando converter implicitamente um `wchar_t` para `unsigned short`, é recomendável que você altere o código para corrigir o erro, em vez de definir **/Zc:wchar_t-**.
+Não recomendamos **/Zc:wchar_t-** porque o C++ padrão requer que `wchar_t` seja um tipo interno. Usar a versão `typedef` pode causar problemas de portabilidade. Se você atualizar de versões anteriores do Visual Studio e encontrar o erro do compilador [C2664](../../error-messages/compiler-errors-2/compiler-error-c2664.md) porque o código está tentando converter implicitamente um `wchar_t` para `unsigned short`, recomendamos que você altere o código para corrigir o erro, em vez de definir **/Zc:wchar_t-**.
 
 O **/ZC: wchar_t** opção permanece ativada por padrão em C++ compilações e é ignorada em compilações de C. O [/permissive--](permissive-standards-conformance.md) opção não afeta **/ZC: wchar_t**.
 

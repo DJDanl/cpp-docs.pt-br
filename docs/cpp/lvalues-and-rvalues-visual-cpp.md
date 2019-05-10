@@ -1,18 +1,18 @@
 ---
-title: 'Categorias de valor: Lvalues e Rvalues (Visual C++)'
-ms.date: 04/06/2018
+title: 'Categorias de valor: Lvalues e Rvalues (C++)'
+ms.date: 05/07/2019
 helpviewer_keywords:
 - R-values [C++]
 - L-values [C++]
 ms.assetid: a8843344-cccc-40be-b701-b71f7b5cdcaf
-ms.openlocfilehash: 74bfac5f5bb56549eee41a5479babf8e71b00aa6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 4e3cfa87a8f1ae9b17f7c08afd8faeabea7102b3
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62245539"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222010"
 ---
-# <a name="lvalues-and-rvalues-visual-c"></a>Lvalues e Rvalues (Visual C++)
+# <a name="lvalues-and-rvalues-c"></a>Lvalues e Rvalues (C++)
 
 Cada expressão C++ tem um tipo e pertence a um *categoria de valor*. As categorias de valor são a base para regras que os compiladores devem seguir ao criar, copiar e mover objetos temporários durante a avaliação da expressão.
 

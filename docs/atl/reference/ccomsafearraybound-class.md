@@ -1,6 +1,6 @@
 ---
 title: Classe CComSafeArrayBound
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 f1_keywords:
 - CComSafeArrayBound
 - ATLSAFE/ATL::CComSafeArrayBound
@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComSafeArrayBound class
 ms.assetid: dd6299db-5f84-4630-bbf0-f5add5318437
-ms.openlocfilehash: a79079c95536746cf5a4fa4b35caf39a55ca0f42
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 6d4650273661c0ce40558a37ef02bb2a3ff81809
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62246134"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221144"
 ---
 # <a name="ccomsafearraybound-class"></a>Classe CComSafeArrayBound
 
@@ -76,7 +76,7 @@ O limite inferior do qual a matriz é numerada.
 
 ### <a name="remarks"></a>Comentários
 
-Se a matriz deve ser acessado a partir de um programa do Visual C++, é recomendável que o limite inferior ser definido como 0. Ele pode ser preferível usar um valor de limite inferior diferente se a matriz deve ser usado com outras linguagens, como Visual Basic.
+Se a matriz deve ser acessado de um C++ programa, é recomendável que o limite inferior ser definido como 0. Ele pode ser preferível usar um valor de limite inferior diferente se a matriz deve ser usado com outras linguagens, como Visual Basic.
 
 ##  <a name="getcount"></a>  CComSafeArrayBound::GetCount
 

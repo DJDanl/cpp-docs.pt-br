@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - debug executable, preparing a test machine to run
 ms.assetid: f0400989-cc2e-4dce-9788-6bdbe91c6f5a
-ms.openlocfilehash: 9598d7a0480ee762892d1026a1eb64dcc5c64399
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6d7e9c2e0a29c2871fd86922151f2226dd9078fc
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62362303"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448451"
 ---
 # <a name="preparing-a-test-machine-to-run-a-debug-executable"></a>Preparando uma máquina de teste para executar um executável de depuração
 
@@ -25,7 +25,7 @@ Há três maneiras de implantar versões de depuração de DLLs da biblioteca do
 - Use a implantação local para instalar uma versão de depuração de uma DLL específica do Visual C++ no diretório de instalação do aplicativo usando os arquivos fornecidos no diretório Arquivos de Programas ou Arquivos de Programas (x86) em \Microsoft Visual Studio \<versão>\VC\redist\Debug_NonRedist\\.
 
     > [!NOTE]
-    >  Para a depuração remota do aplicativo compilado com o Visual C++ 2005 ou o Visual C++ 2008 em outro computador, é necessário implantar versões de depuração de DLLs da biblioteca do Visual C++ como assemblies lado a lado compartilhados. Use um projeto de Instalação ou o Windows Installer para instalar os módulos de mesclagem correspondentes.
+    >  Para depuração remota de seu aplicativo criado usando o Visual Studio 2005 ou Visual Studio 2008 em outro computador, você deve implantar versões de depuração do Visual C++ biblioteca de DLLs como assemblies lado a lado a lado compartilhados. Use um projeto de Instalação ou o Windows Installer para instalar os módulos de mesclagem correspondentes.
 
 - Use a opção _**Deploy** na caixa de diálogo **Configuration Manager** do Visual Studio para copiar a saída do projeto e outros arquivos para o computador remoto.
 

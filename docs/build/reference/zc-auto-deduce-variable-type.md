@@ -9,12 +9,12 @@ helpviewer_keywords:
 - /Zc compiler options (C++)
 - Zc compiler options (C++)
 ms.assetid: 5f5bc102-44c3-4688-bbe1-080594dcee5c
-ms.openlocfilehash: ea977020286d720ed3a6b1b13bf8ff8f5c85e5b2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 9609bc484310fbc9999182add384eb4e438378bf
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62315957"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446236"
 ---
 # <a name="zcauto-deduce-variable-type"></a>/Zc:auto (deduzir tipo variável)
 
@@ -26,7 +26,7 @@ O **/ZC: auto [-]** opção de compilador informa ao compilador como usar o [pal
 
 ## <a name="remarks"></a>Comentários
 
-O padrão C++ define um significado original e um significado revisado para a palavra-chave `auto`. Antes do Visual C++ 2010, a palavra-chave declara uma variável na classe de armazenamento automática; ou seja, uma variável que tem um tempo de vida local. Começando com o Visual C++ 2010, a palavra-chave deduz o tipo de uma variável da expressão de inicialização da declaração. Use o **/ZC: auto [-]** para informar ao compilador para usar o significado original ou revisado da opção do compilador o `auto` palavra-chave. O **/ZC: auto** opção permanece ativada por padrão. O [/permissive--](permissive-standards-conformance.md) opção não altera a configuração padrão de **/ZC: auto**.
+O padrão C++ define um significado original e um significado revisado para a palavra-chave `auto`. Antes do Visual Studio 2010, a palavra-chave declara uma variável na classe de armazenamento automática; ou seja, uma variável que tem um tempo de vida local. Começando com o Visual Studio 2010, a palavra-chave deduz o tipo de uma variável da expressão de inicialização da declaração. Use o **/ZC: auto [-]** para informar ao compilador para usar o significado original ou revisado da opção do compilador o `auto` palavra-chave. O **/ZC: auto** opção permanece ativada por padrão. O [/permissive--](permissive-standards-conformance.md) opção não altera a configuração padrão de **/ZC: auto**.
 
 O compilador emite uma mensagem de diagnóstico apropriada se o uso do `auto` palavra-chave contradiz atual **/ZC: auto** opção de compilador. Para obter mais informações, consulte [palavra-chave auto](../../cpp/auto-keyword.md). Para obter mais informações sobre problemas de conformidade com o Visual C++, consulte [comportamento não padrão](../../cpp/nonstandard-behavior.md).
 

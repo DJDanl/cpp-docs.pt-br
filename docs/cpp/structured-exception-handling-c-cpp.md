@@ -9,16 +9,16 @@ helpviewer_keywords:
 - try-catch keyword [C++], termination handlers
 - C++ exception handling, exception handlers
 ms.assetid: dd3b647d-c269-43a8-aab9-ad1458712976
-ms.openlocfilehash: b77a218340399578e3c9428100476787e2e60b25
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: e948d941afa1459623619e385aa67b1c60490245
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62330564"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221952"
 ---
 # <a name="structured-exception-handling-cc"></a>Tratamento de exceções estruturado (C/C++)
 
-Manipulação de exceção estruturada (SEH) é uma extensão da Microsoft para C para lidar com certas situações excepcionais de código, como falhas de hardware, normalmente. Embora o Windows e Visual C++ ofereçam suporte para SEH, recomendamos que você use o tratamento de exceções C++ padrão ISO, pois ele torna seu código mais portável e flexível. No entanto, para manter o código existente ou para tipos específicos de programas, você ainda pode precisar usar o SEH.
+Manipulação de exceção estruturada (SEH) é uma extensão da Microsoft para C para lidar com certas situações excepcionais de código, como falhas de hardware, normalmente. Embora o Windows e o Microsoft C++ oferecem suporte ao SEH, recomendamos que você use o padrão ISO C++ tratamento de exceções, pois ele torna seu código mais portável e flexível. No entanto, para manter o código existente ou para tipos específicos de programas, você ainda pode precisar usar o SEH.
 
 **Específico da Microsoft:**
 
@@ -34,7 +34,7 @@ Manipulação de exceção estruturada (SEH) é uma extensão da Microsoft para 
 
 Com o SEH, é possível garantir que recursos como blocos de memória e os arquivos sejam liberados corretamente se a execução for finalizada inesperadamente. Você também pode lidar com problemas específicos — por exemplo, memória insuficiente — usando código estruturado e conciso que não dependem **goto** instruções ou em testes elaborados de códigos de retorno.
 
-As instruções try-except e try-finally mencionadas neste artigo são extensões da Microsoft para a linguagem C. Elas oferecem suporte ao SEH permitindo que os aplicativos controlem um programa após os eventos que, caso contrário, finalizariam a execução. Ainda que o SEH funcione com arquivos de origem C++, ele não é projetado especificamente para C++. Se você usar SEH em um programa de C++ que você compila usando o [/EHa ou /EHsc](../build/reference/eh-exception-handling-model.md) opção, os destruidores para objetos locais são chamados, mas outros comportamentos de execução podem não ser o esperado. Para obter uma ilustração, consulte o exemplo mais adiante neste artigo. Na maioria dos casos, em vez do SEH é recomendável que você use o padrão ISO [tratamento de exceções C++](../cpp/try-throw-and-catch-statements-cpp.md), que também suporta Visual C++. Usando o tratamento de exceções C++, é possível garantir que o seu código seja mais portátil e tratar exceções de qualquer tipo.
+As instruções try-except e try-finally mencionadas neste artigo são extensões da Microsoft para a linguagem C. Elas oferecem suporte ao SEH permitindo que os aplicativos controlem um programa após os eventos que, caso contrário, finalizariam a execução. Ainda que o SEH funcione com arquivos de origem C++, ele não é projetado especificamente para C++. Se você usar SEH em um programa de C++ que você compila usando o [/EHa ou /EHsc](../build/reference/eh-exception-handling-model.md) opção, os destruidores para objetos locais são chamados, mas outros comportamentos de execução podem não ser o esperado. Para obter uma ilustração, consulte o exemplo mais adiante neste artigo. Na maioria dos casos, em vez do SEH é recomendável que você use o padrão ISO [ C++ tratamento de exceção](../cpp/try-throw-and-catch-statements-cpp.md), que a Microsoft C++ compilador também oferece suporte. Usando o tratamento de exceções C++, é possível garantir que o seu código seja mais portátil e tratar exceções de qualquer tipo.
 
 Se você tiver código em C que usa SEH, pode combiná-lo com o código C++ que usa o tratamento de exceções C++. Para obter informações, consulte [tratar exceções estruturadas em C++](../cpp/exception-handling-differences.md).
 

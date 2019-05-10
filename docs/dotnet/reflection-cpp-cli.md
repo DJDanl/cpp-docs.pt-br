@@ -18,12 +18,12 @@ helpviewer_keywords:
 - data types [C++], enumerating
 - public members [C++]
 ms.assetid: 46b6ff4a-e441-4022-8892-78e69422f230
-ms.openlocfilehash: a17910e0288b81723aa837ba9204bb40713d5d49
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 5f18a7faa4e77571a87cc0d76a43240aaf1fd52c
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384680"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447230"
 ---
 # <a name="reflection-ccli"></a>Reflexão (C++/CLI)
 
@@ -34,7 +34,7 @@ Observe que o nome do assembly fornecido é o nome forte (consulte [criando e us
 A maneira mais comum para acessar recursos de reflexão é por meio de <xref:System.Object.GetType%2A> método. Este método é fornecido por <xref:System.Object?displayProperty=nameWithType>, da qual derivam todas as classes de coleta de lixo.
 
 > [!NOTE]
-> Reflexão em um .exe criados com o compilador do Visual C++ só será permitido se o .exe baseia-se com o **/clr: pure** ou **/CLR: safe** opções do compilador. O **/clr: pure** e **/CLR: safe** opções do compilador são preteridos no Visual Studio 2015 e não está disponível no Visual Studio 2017. Ver [/clr (compilação de tempo de execução de linguagem comum)](../build/reference/clr-common-language-runtime-compilation.md) para obter mais informações.
+> Reflexão em um .exe criados com o Microsoft C++ compilador só será permitido se o .exe baseia-se com o **/clr: pure** ou **/CLR: safe** opções do compilador. O **/clr: pure** e **/CLR: safe** opções do compilador são preteridos no Visual Studio 2015 e não está disponível no Visual Studio 2017. Ver [/clr (compilação de tempo de execução de linguagem comum)](../build/reference/clr-common-language-runtime-compilation.md) para obter mais informações.
 
 Para obter mais informações, consulte <xref:System.Reflection>.
 
@@ -181,7 +181,7 @@ Se o código acima é compilado em uma DLL chamada vcpp_reflection_6.dll, você 
 
 Depois que o sistema de reflexão com êxito carrega o assembly, uma matriz de **tipo** objetos é recuperada com o <xref:System.Reflection.Assembly.GetTypes%2A?displayProperty=nameWithType> função. Cada elemento da matriz contém informações sobre um tipo diferente, embora nesse caso, apenas uma classe é definida. Usando um loop, cada **tipo** nessa matriz é consultado sobre os membros de tipo usando o **Type::GetMembers** função. Essa função retorna uma matriz de **MethodInfo** objetos, cada objeto que contém informações sobre a função de membro, um membro de dados ou uma propriedade no tipo.
 
-Observe que a lista de métodos inclui as funções explicitamente definidas em **TestClass** e as funções herdados implicitamente do **System:: Object** classe. Como parte do que está sendo descrito no .NET, em vez de na sintaxe do Visual C++, as propriedades aparecem como o membro de dados subjacente, acessado pelas funções de get/set. As funções get/set aparecem nessa lista como métodos regulares. Reflexão suporte por meio do common language runtime, não o compilador do Visual C++.
+Observe que a lista de métodos inclui as funções explicitamente definidas em **TestClass** e as funções herdados implicitamente do **System:: Object** classe. Como parte do que está sendo descrito no .NET, em vez de na sintaxe do Visual C++, as propriedades aparecem como o membro de dados subjacente, acessado pelas funções de get/set. As funções get/set aparecem nessa lista como métodos regulares. Reflexão é suportada por meio do common language runtime, não pelo Microsoft C++ compilador.
 
 Embora você utilizou este código para inspecionar um assembly que você definiu, você também pode usar esse código para inspecionar os assemblies do .NET. Por exemplo, se você alterar TestAssembly para mscorlib, você verá uma lista de todos os tipos e método definido em mscorlib. dll.
 

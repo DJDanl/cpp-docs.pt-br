@@ -4,12 +4,12 @@ ms.date: 09/18/2018
 helpviewer_keywords:
 - .vcxproj file structure
 ms.assetid: 14d0c552-29db-480e-80c1-7ea89d6d8e9c
-ms.openlocfilehash: 3b7c7bdad8848a3755db4ea565117459c72e939b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: a1052d0a0eeeff177f0a22883fe06cd07d7b03f6
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62317114"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446495"
 ---
 # <a name="vcxproj-and-props-file-structure"></a>Estrutura de arquivos .vcxproj e .props
 
@@ -21,13 +21,13 @@ Caso você opte por editar um arquivo .vcxproj manualmente, lembre-se destes fat
 
 1. A estrutura do arquivo precisa seguir um formato prescrito, que é descrito neste artigo.
 
-1. Atualmente, o sistema de projeto do Visual C++ não dá suporte a curingas em itens de projeto. Por exemplo, não há suporte para o seguinte:
+1. O Visual Studio C++ sistema de projeto atualmente não suporta curingas em itens de projeto. Por exemplo, não há suporte para o seguinte:
 
    ```xml
    <ClCompile Include="*.cpp"/>
    ```
 
-1. Atualmente, o sistema de projeto do Visual C++ não dá suporte a macros em caminhos de itens de projeto. Por exemplo, não há suporte para o seguinte:
+1. O Visual Studio C++ sistema de projeto atualmente não dá suporte as macros em caminhos de item de projeto. Por exemplo, não há suporte para o seguinte:
 
    ```xml
    <ClCompile Include="$(IntDir)\generated.cpp"/>
@@ -224,7 +224,7 @@ Os metadados deverão ter condições de configuração para cada configuração
 </ItemGroup>
 ```
 
-Atualmente, o sistema de projeto do Visual C++ não dá suporte a curingas em itens de projeto.
+O Visual Studio C++ sistema de projeto atualmente não suporta curingas em itens de projeto.
 
 ```xml
 <ItemGroup>
@@ -232,7 +232,7 @@ Atualmente, o sistema de projeto do Visual C++ não dá suporte a curingas em it
 </ItemGroup>
 ```
 
-Atualmente, o sistema de projeto do Visual C++ não dá suporte a macros em itens de projeto.
+O Visual Studio C++ sistema de projeto atualmente não dá suporte as macros em itens de projeto.
 
 ```xml
 <ItemGroup>

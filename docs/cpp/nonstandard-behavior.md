@@ -1,21 +1,21 @@
 ---
 title: Comportamento não padrão
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 helpviewer_keywords:
 - compatibility and compliance, nonstandard behavior
 - Microsoft-specific, compiler behavior
 - nonstandard behavior, compliance and compatibility
 ms.assetid: a57dea27-dc79-4f64-8a83-017e84841773
-ms.openlocfilehash: b7546914f4cd417f127af56fb7342903989d8330
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 82c5faae68f9da747017119d76578cc88163d8bb
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62245368"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222035"
 ---
 # <a name="nonstandard-behavior"></a>Comportamento não padrão
 
-As seções a seguir listam alguns dos locais em que a implementação de C++ do Visual C++ não cumpre o padrão C++. Os números de seção fornecidos abaixo se referem aos números da seção no padrão C++ 11 (ISO/IEC 14882:2011(E)).
+As seções a seguir listam alguns dos locais em que a implementação da Microsoft C++ não é compatível com o C++ padrão. Os números de seção fornecidos abaixo se referem aos números da seção no padrão C++ 11 (ISO/IEC 14882:2011(E)).
 
 A lista de limites do compilador que diferem daqueles definidos no padrão C++ é fornecida em [limites do compilador](../cpp/compiler-limits.md).
 
@@ -38,7 +38,7 @@ class B : virtual A
 
 ## <a name="binding-nondependent-names-in-templates"></a>Associação de nomes não dependentes nos modelos
 
-O compilador do Visual C++, atualmente, não oferece suporte à associação de nomes não dependentes ao analisar inicialmente um modelo. Isso não está em conformidade com a seção 14.6.3 da especificação ISO do C++. Isso pode fazer com que sobrecargas declaradas após o modelo (mas antes do modelo ser instanciado) sejam vistas.
+O Microsoft C++ compilador não oferece suporte a nomes de associação não dependentes ao analisar inicialmente um modelo. Isso não está em conformidade com a seção 14.6.3 da especificação ISO do C++. Isso pode fazer com que sobrecargas declaradas após o modelo (mas antes do modelo ser instanciado) sejam vistas.
 
 ```cpp
 #include <iostream>
@@ -75,7 +75,7 @@ Para obter mais informações sobre especificações de exceção, consulte [esp
 
 ## <a name="chartraitseof"></a>char_traits::eof()
 
-O C++ padrão declara que [char_traits:: EOF](../standard-library/char-traits-struct.md#eof) não deve corresponder a um válido `char_type` valor. O Visual C++ compilador impõe essa restrição para o tipo **char**, mas não para o tipo **wchar_t**. Isso não está em conformidade com o requisito da Tabela 62, na seção 12.1.1 da especificação ISO do C++. O exemplo abaixo demonstra isso.
+O C++ padrão declara que [char_traits:: EOF](../standard-library/char-traits-struct.md#eof) não deve corresponder a um válido `char_type` valor. O Microsoft C++ compilador impõe essa restrição para o tipo **char**, mas não para o tipo **wchar_t**. Isso não está em conformidade com o requisito da Tabela 62, na seção 12.1.1 da especificação ISO do C++. O exemplo abaixo demonstra isso.
 
 ```cpp
 #include <iostream>
@@ -94,4 +94,4 @@ int main()
 
 ## <a name="storage-location-of-objects"></a>Local de armazenamento de objetos
 
-O padrão C++ (seção 1.8, parágrafo 6) exige que objetos completos do C++ tenham locais exclusivos de armazenamento. No entanto, com o Visual C++, há casos em que tipos sem membros de dados compartilharão um local de armazenamento com outros tipos pelo tempo de vida do objeto.
+O padrão C++ (seção 1.8, parágrafo 6) exige que objetos completos do C++ tenham locais exclusivos de armazenamento. No entanto com a Microsoft C++, há casos em que o tipos sem membros de dados compartilharão um local de armazenamento com outros tipos para o tempo de vida do objeto.

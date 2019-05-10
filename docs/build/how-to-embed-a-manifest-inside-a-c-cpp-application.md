@@ -1,21 +1,21 @@
 ---
 title: 'Como: Inserir um manifesto em um aplicativo C/C++'
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 helpviewer_keywords:
 - manifests [C++]
 - embedding manifests
 - makefiles, updating to embed manifest
 ms.assetid: ec0bac69-2fdc-466c-ab0d-710a22974e5d
-ms.openlocfilehash: 332d6d75080be3fdde6b8238ab79b8e5b1d1121e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: ee60620f2815bb20e2d0f3ecec768d99533437a9
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62274376"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220706"
 ---
 # <a name="how-to-embed-a-manifest-inside-a-cc-application"></a>Como: Inserir um manifesto em um aplicativo C/C++
 
-É recomendável que um aplicativo C/C++ (ou biblioteca) tem seu manifesto inserido no final binário, porque isso garante que o comportamento de tempo de execução correto na maioria dos cenários. Por padrão, o Visual Studio tenta inserir o manifesto quando ele cria um projeto de arquivos de origem; ver [geração de manifesto no Visual Studio](manifest-generation-in-visual-studio.md) para obter mais informações. No entanto se um aplicativo é criado, usando nmake, algumas alterações para o makefile existente são necessárias. Esta seção demonstra como alterar makefiles existentes para inserir automaticamente o manifesto em final binário.
+É recomendável que você inserir o manifesto do aplicativo ou da biblioteca no final binário porque isso garante que o comportamento de tempo de execução correto na maioria dos cenários. Por padrão, o Visual Studio tenta inserir o manifesto quando ele cria um projeto. Para obter mais informações, consulte [geração de manifesto no Visual Studio](manifest-generation-in-visual-studio.md). No entanto, se você compilar seu aplicativo, usando nmake, você precisa fazer algumas alterações para o makefile. Esta seção mostra como alterar os makefiles, de modo que ele incorpora automaticamente o manifesto do final binário.
 
 ## <a name="two-approaches"></a>Duas abordagens
 
@@ -23,15 +23,19 @@ Há duas maneiras de inserir o manifesto dentro de um aplicativo ou uma bibliote
 
 - Se você não estiver fazendo uma compilação incremental, você pode inserir diretamente o manifesto usando uma linha de comando semelhante ao seguinte como uma etapa de pós-compilação:
 
-   **mt.exe -manifest MyApp.exe.manifest -outputresource:MyApp.exe;1**
+   ```cmd
+   mt.exe -manifest MyApp.exe.manifest -outputresource:MyApp.exe;1
+   ```
 
    ou
 
-   **mt.exe -manifest MyLibrary.dll.manifest -outputresource:MyLibrary.dll;2**
+   ```cmd
+   mt.exe -manifest MyLibrary.dll.manifest -outputresource:MyLibrary.dll;2
+   ```
 
-   (1 para que um EXE, 2 para uma DLL).
+   Use 1 para um EXE e 2 para uma DLL.
 
-- Se você estiver fazendo uma compilação incremental, editando diretamente o recurso, como mostrado aqui será desabilitar a compilação incremental e causar uma recompilação completa; cuidado, portanto, uma abordagem diferente:
+- Se você estiver fazendo uma compilação incremental, use as seguintes etapas:
 
    - Vincule o binário para gerar o arquivo MyApp.exe.manifest.
 
@@ -63,7 +67,7 @@ clean :
     del MyApp.obj MyApp.exe
 ```
 
-Se esse script é executado inalterado com o Visual C++, ele cria MyApp.exe com êxito. Ele também cria o arquivo de manifesto externo MyApp.exe.manifest, para uso pelo sistema operacional para carregar assemblies de dependentes em tempo de execução.
+Se esse script é executado inalterado com o Visual Studio, ele cria MyApp.exe com êxito. Ele também cria o arquivo de manifesto externo MyApp.exe.manifest, para uso pelo sistema operacional para carregar assemblies de dependentes em tempo de execução.
 
 O script de nmake MyLibrary parece muito semelhante:
 
@@ -226,7 +230,7 @@ _VC_MANIFEST_CLEAN=
 ####################################################
 ```
 
-Agora crie makefile.targ.inc e copie o seguinte para ele:
+Agora, crie **makefile.targ.inc** e copie o seguinte para ele:
 
 ```
 # makefile.targ.inc - include this at the very bottom of the existing makefile

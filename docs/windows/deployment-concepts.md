@@ -8,12 +8,12 @@ helpviewer_keywords:
 - deploying applications [C++], about deploying applications
 - libraries [C++], application deployment issues
 ms.assetid: ebd7f246-ab54-40e8-87fa-dac02c0047b3
-ms.openlocfilehash: ec472e506e78a57b65186bf6a5b801419fb141fb
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: ac3565b4ec465ec60672d2238fbe81b71613a6c1
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64346417"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65449033"
 ---
 # <a name="deployment-concepts"></a>Conceitos de implantação
 
@@ -21,7 +21,7 @@ Esta seção aborda as principais considerações sobre a implantação de aplic
 
 ## <a name="windows-installer-deployment-in-c"></a>Implantação do Windows Installer no C++
 
-Em geral, os projetos do Visual C++ usam a instalação tradicional do Windows Installer para implantação. Para preparar uma implantação do Windows Installer, você pode empacotar o aplicativo em um arquivo setup.exe e distribuí-lo, junto com um pacote do instalador (.msi). Em seguida, os usuários executam setup.exe para instalar o aplicativo.
+Visual Studio C++ projetos normalmente usam a instalação tradicional do Windows Installer para implantação. Para preparar uma implantação do Windows Installer, você pode empacotar o aplicativo em um arquivo setup.exe e distribuí-lo, junto com um pacote do instalador (.msi). Em seguida, os usuários executam setup.exe para instalar o aplicativo.
 
 Empacote o aplicativo adicionando um projeto de Instalação à solução; quando compilado, ele cria os arquivos de instalação e do pacote do instalador que você distribui para os usuários. Para obter mais informações, confira [Escolhendo um método de implantação](choosing-a-deployment-method.md).
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - resource files, multiple
 - TN035
 ms.assetid: 1f08ce5e-a912-44cc-ac56-7dd93ad73fb6
-ms.openlocfilehash: 0493dd45caf5eb78da435987a4590442a908a5a3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8ce38c2f3f4effa993dfa32221d82bece65096dd
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62305509"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448538"
 ---
 # <a name="tn035-using-multiple-resource-files-and-header-files-with-visual-c"></a>TN035: Usando vários arquivos de recurso e arquivos de cabeçalho com o Visual C++
 
@@ -204,7 +204,7 @@ RESOURCE.H     AFXRES.H
     AFXPRINT.RC
 ```
 
-Usando diretivas de tempo de compilação, você pode organizar seus recursos do Visual C++ editáveis e não editáveis em vários. Arquivos RC, onde o "mestre" MYAPP. RC não faz nada, mas #include a outra. Arquivos RC. Se você estiver usando um projeto do Visual C++. Arquivo MAK, em seguida, você deve incluir o "mestre". RC do arquivo no projeto até que todos os o # include ' d recursos são compilados com o seu aplicativo.
+Usando diretivas de tempo de compilação, você pode organizar seus recursos do Visual C++ editáveis e não editáveis em vários. Arquivos RC, onde o "mestre" MYAPP. RC não faz nada, mas #include a outra. Arquivos RC. Se você estiver usando um Visual Studio C++ project. Arquivo MAK, em seguida, você deve incluir o "mestre". RC do arquivo no projeto até que todos os o # include ' d recursos são compilados com o seu aplicativo.
 
 **Imposição de arquivos não editáveis do Visual C++**
 

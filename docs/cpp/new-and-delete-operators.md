@@ -1,20 +1,19 @@
 ---
 title: Operadores new e delete
-ms.date: 11/04/2016
+ms.date: 05/07/2019
 f1_keywords:
 - delete_cpp
 - new
 helpviewer_keywords:
-- new keyword [C++], dynamic allocation of objects
-- nothrownew.obj
-- delete keyword [C++], syntax
+- new keyword [C++]
+- delete keyword [C++]
 ms.assetid: fa721b9e-0374-4f04-bb87-032ea775bcc8
-ms.openlocfilehash: 1ac6282ecbf45f22e7dd66b94f8bccdbc4e505ce
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
-ms.translationtype: MT
+ms.openlocfilehash: 8dd5e6a555872c443e32e9ea464ea49d4ae18f99
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345889"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222371"
 ---
 # <a name="new-and-delete-operators"></a>Operadores new e delete
 
@@ -85,9 +84,7 @@ O argumento fornecido entre parênteses para **novos** é passado para `Blanks::
 Blanks *SomeBlanks = new Blanks;
 ```
 
-Em tipos do Visual C++ 5.0 e anterior, sem classe e todas as matrizes (independentemente de serem de **classe** tipo) alocados usando o **novos** operador sempre usado global **operador new** função.
-
-Começando com o Visual C++ 5.0, o compilador dá suporte a matriz de membros **novos** e **excluir** operadores em uma declaração de classe. Por exemplo:
+O compilador dá suporte a matriz de membros **novos** e **excluir** operadores em uma declaração de classe. Por exemplo:
 
 ```cpp
 // spec1_the_operator_new_function2.cpp
@@ -203,7 +200,7 @@ int main( int argc, char *argv[] ) {
 
 O código anterior pode ser usado para detectar "vazamento de memória” – ou seja, a memória atribuída no repositório livre, mas nunca liberada. Para executar essa detecção global **novos** e **excluir** operadores são redefinidos para contar a alocação e desalocação de memória.
 
-Começando com o Visual C++ 5.0, o compilador dá suporte a matriz de membros **novos** e **excluir** operadores em uma declaração de classe. Por exemplo:
+O compilador dá suporte a matriz de membros **novos** e **excluir** operadores em uma declaração de classe. Por exemplo:
 
 ```cpp
 // spec1_the_operator_delete_function2.cpp

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Desktop Wizard
 - Win32 Project Wizard
 ms.assetid: 5d7b3a5e-8461-479a-969a-67b7883725b9
-ms.openlocfilehash: 43a47366475b227ccfc5918b07760cc582326e82
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b86536cb6177390ab89d235ecb8e093006dd8cff
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387716"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448569"
 ---
 # <a name="windows-desktop-wizard"></a>Assistente da Área de Trabalho do Windows
 
@@ -83,8 +83,8 @@ Depois de criar um aplicativo de desktop do Windows, você pode adicionar classe
 > [!NOTE]
 > Não é possível adicionar classes da ATL, e você pode adicionar classes MFC somente para os tipos de aplicativo da área de trabalho do Windows que dão suporte a MFC (consulte a tabela anterior).
 
-Você pode exibir os arquivos que o assistente cria para seu projeto no **Gerenciador de soluções**. Para obter mais informações sobre os arquivos que o assistente cria para seu projeto, consulte o arquivo de projeto gerado, `ReadMe.txt`. Para obter mais informações sobre os tipos de arquivo [tipos de arquivo criados para projetos do Visual C++](../build/reference/file-types-created-for-visual-cpp-projects.md).
+Você pode exibir os arquivos que o assistente cria para seu projeto no **Gerenciador de soluções**. Para obter mais informações sobre os arquivos que o assistente cria para seu projeto, consulte o arquivo de projeto gerado, `ReadMe.txt`. Para obter mais informações sobre os tipos de arquivo [tipos de arquivo criados para o Visual C++ projetos](../build/reference/file-types-created-for-visual-cpp-projects.md).
 
 ## <a name="see-also"></a>Consulte também
 
-[Tipos de projeto do Visual C++](../build/reference/visual-cpp-project-types.md)
+[C++tipos de projeto no Visual Studio](../build/reference/visual-cpp-project-types.md)
