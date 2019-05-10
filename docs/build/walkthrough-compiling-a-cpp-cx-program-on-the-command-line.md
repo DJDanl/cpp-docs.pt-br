@@ -1,17 +1,20 @@
 ---
 title: 'Passo a passo: Compilando um c++ /CLI programa CX na linha de comando'
-ms.date: 09/24/2018
+ms.date: 04/23/2019
 ms.assetid: 626f5544-69ed-4736-83a9-f11389b371b2
-ms.openlocfilehash: 099bef402d22abc12a31f105f63e5405c65a1d82
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: cbf5a48de3c029e36fc6daabe2b3f0db55dc173c
+ms.sourcegitcommit: 18d3b1e9cdb4fc3a76f7a650c31994bdbd2bde64
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62314020"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64877172"
 ---
 # <a name="walkthrough-compiling-a-ccx-program-on-the-command-line"></a>Passo a passo: Compilando um c++ /CLI programa CX na linha de comando
 
-Você pode criar programas Visual C++ destinados ao Windows Runtime e compilá-los na linha de comando. O Visual C++ oferece suporte a extensões de componente do Visual C++ (C++/CX), que possuem tipos e operadores adicionais destinados ao modelo de programação do Windows Runtime. Você pode usar C++/CX para criar aplicativos para a plataforma Universal do Windows (UWP), Windows Phone 8.1 e Windows desktop. Para obter mais informações, consulte [um Tour do c++ c++ /CX](https://msdn.microsoft.com/magazine/dn166929.aspx) e [extensões de componentes para plataformas de tempo de execução](../extensions/component-extensions-for-runtime-platforms.md).
+> [!NOTE] 
+> Para novos aplicativos UWP e componentes, é recomendável que você use [ C++/WinRT](/windows/uwp/cpp-and-winrt-apis/), uma padrão C + + 17 projeção de linguagem para APIs do Windows Runtime. C++/ WinRT está disponível no SDK do Windows 10, versão 1803 em diante. C++/ WinRT é implementado inteiramente em arquivos de cabeçalho e foi projetado para fornecer acesso de primeira classe à moderna API do Windows.
+
+O Microsoft C++ dá suporte ao compilador (MSVC) C++ extensões de componentes (C++/CX), que tem tipos e operadores adicionais destinados ao modelo de programação do tempo de execução do Windows. Você pode usar C++/CX para criar aplicativos para a plataforma Universal do Windows (UWP) e área de trabalho do Windows. Para obter mais informações, consulte [um Tour do c++ c++ /CX](https://msdn.microsoft.com/magazine/dn166929.aspx) e [extensões de componentes para plataformas de tempo de execução](../extensions/component-extensions-for-runtime-platforms.md).
 
 Neste passo a passo, você usa um editor de texto para criar um programa de C++/CX básico e, em seguida, o compila na linha de comandos. (Você pode usar seu próprio programa de C++/CX ao invés de digitar o que é mostrado ou, ainda, usar uma amostra de código de C++/CX de outro artigo de ajuda. Essa técnica é útil para compilar e testar pequenos módulos que têm sem elementos de interface do usuário.)
 
@@ -49,7 +52,7 @@ Para habilitar a compilação para C++/CX, você deve usar o [/ZW](reference/zw-
 
 1. Na barra de menus, escolha **arquivo** > **salvar**.
 
-   Você criou um arquivo de origem do Visual C++ que usa o tempo de execução do Windows [namespace de plataforma](../cppcx/platform-namespace-c-cx.md) namespace.
+   Você criou um C++ arquivo de origem que usa o tempo de execução do Windows [namespace Platform](../cppcx/platform-namespace-c-cx.md) namespace.
 
 1. No prompt de comando, digite **cl /EHsc /ZW basiccx /link /Subsystem: console**. O compilador cl.exe compila o código-fonte em um arquivo .obj e executa o vinculador para gerar um programa executável denominado basiccx.exe. (O [/EHsc](reference/eh-exception-handling-model.md) opção de compilador Especifica o modelo de tratamento de exceções do C++ e o [/link](reference/link-pass-options-to-linker.md) sinalizador Especifica que um aplicativo de console.)
 

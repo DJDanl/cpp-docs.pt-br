@@ -1,14 +1,14 @@
 ---
 title: Conversões e segurança de tipo (C++ moderno)
-ms.date: 11/04/2016
+ms.date: 05/07/2019
 ms.topic: conceptual
 ms.assetid: 629b361a-2ce1-4700-8b5d-ab4f57b245d5
-ms.openlocfilehash: 79285e4870b73ff01ed3b230a0162f87c0400aa8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: e06ea3f9c3ea427f205764c35988ea3316c3794a
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404683"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221855"
 ---
 # <a name="type-conversions-and-type-safety-modern-c"></a>Conversões e segurança de tipo (C++ moderno)
 
@@ -84,7 +84,7 @@ O compilador não avisa sobre conversões implícitas entre tipos integrais assi
 
 ### <a name="pointer-conversions"></a>Conversões de ponteiro
 
-Em várias expressões, uma matriz C-style é convertida implicitamente em um ponteiro para o primeiro elemento na matriz e conversões de constante podem acontecer silenciosamente. Embora isso seja conveniente, também é potencialmente sujeito a erros. Por exemplo, o seguinte exemplo de código projetado inadequadamente parece não fizer sentido e ainda assim ele será compilado no Visual C++ e produz um resultado de 'p'. Primeiro, o literal de constante de cadeia de caracteres "Help" é convertido em um `char*` que aponta para o primeiro elemento da matriz; em seguida, esse ponteiro é incrementado por três elementos para que ele agora aponta para o último elemento 'p'.
+Em várias expressões, uma matriz C-style é convertida implicitamente em um ponteiro para o primeiro elemento na matriz e conversões de constante podem acontecer silenciosamente. Embora isso seja conveniente, também é potencialmente sujeito a erros. Por exemplo, o seguinte exemplo de código projetado inadequadamente parece não fizer sentido e ainda assim ele será compilado e produz um resultado de 'p'. Primeiro, o literal de constante de cadeia de caracteres "Help" é convertido em um `char*` que aponta para o primeiro elemento da matriz; em seguida, esse ponteiro é incrementado por três elementos para que ele agora aponta para o último elemento 'p'.
 
 ```cpp
 char* s = "Help" + 3;

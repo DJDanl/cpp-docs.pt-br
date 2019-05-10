@@ -1,6 +1,6 @@
 ---
 title: 'Como: Criar um projeto em C++ de um código existente'
-ms.date: 01/15/2019
+ms.date: 05/06/2019
 helpviewer_keywords:
 - C++, creating projects from existing code
 - Create New Project From Existing Code Files Wizard, project settings
@@ -10,12 +10,12 @@ f1_keywords:
 - vc.appwiz.importwiz.debugsettings
 - vc.appwiz.importwiz.releasesettings
 ms.assetid: e328a938-395c-48ea-9e35-dd433de12b31
-ms.openlocfilehash: 1658e19595d8cfc7966ca881abfdd2aa8acf76ab
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: a899fe7f1b038ac1497465171098183f63f40564
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62189002"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221462"
 ---
 # <a name="how-to-create-a-c-project-from-existing-code"></a>Como: Criar um projeto em C++ de um código existente
 
@@ -26,8 +26,6 @@ A portabilidade dos arquivos de código existentes para um projeto em C++ permit
 ### <a name="to-create-a-c-project-from-existing-code"></a>Para criar um projeto em C++ a partir de um código existente
 
 1. No menu **Arquivo**, selecione **Novo** > **Projeto de Código Existente**.
-
-1. Na primeira página do assistente para **Criar Novo Projeto com base em Arquivos de Código Existentes**, selecione **Visual C++** na lista **Que tipo de projeto deseja criar?**. Escolha **Avançar** para continuar.
 
 1. Especifique o local do projeto, o diretório para os arquivos de origem e os tipos de arquivos que o assistente importa para o novo projeto. Escolha **Avançar** para continuar.
 
@@ -44,7 +42,7 @@ A portabilidade dos arquivos de código existentes para um projeto em C++ permit
 
     | Configuração | Descrição |
     | --- | --- |
-    | **Usar o Visual Studio** | Especifica o uso das ferramentas de build incluídas no Visual Studio para compilar o novo projeto. Essa opção é habilitada por padrão.<br/><br/>Selecione **Tipo de Projeto** para especificar o tipo de projeto que o assistente gera. Escolha **Projeto de aplicativos do Windows**, **Projeto de aplicativo de console**, **Projeto de DLL (biblioteca de vínculos dinâmicos)** ou **Projeto de LIB (biblioteca estática)**.<br/><br/>Marque **Adicionar suporte para ATL** para adicionar suporte de ATL ao novo projeto.<br/><br/>Marque **Adicionar suporte para MFC** para adicionar suporte de MFC ao novo projeto.<br/><br/>Marque **Adicionar suporte a Common Language Runtime** para adicionar suporte de programação CLR ao projeto. Escolha o **Suporte a Common Language Runtime** para o tipo de conformidade, como **Common Language Runtime (sintaxe antiga)** para conformidade com a sintaxe Managed Extensions for C++, a sintaxe de programação CLR anterior ao Visual C++ 2005. |
+    | **Usar o Visual Studio** | Especifica o uso das ferramentas de build incluídas no Visual Studio para compilar o novo projeto. Essa opção é habilitada por padrão.<br/><br/>Selecione **Tipo de Projeto** para especificar o tipo de projeto que o assistente gera. Escolha **Projeto de aplicativos do Windows**, **Projeto de aplicativo de console**, **Projeto de DLL (biblioteca de vínculos dinâmicos)** ou **Projeto de LIB (biblioteca estática)**.<br/><br/>Marque **Adicionar suporte para ATL** para adicionar suporte de ATL ao novo projeto.<br/><br/>Marque **Adicionar suporte para MFC** para adicionar suporte de MFC ao novo projeto.<br/><br/>Marque **Adicionar suporte a Common Language Runtime** para adicionar suporte de programação CLR ao projeto. Escolha o **Common Language Runtime Support** para o tipo de conformidade, como **Common Language Runtime (sintaxe antiga)** quanto à conformidade com as extensões gerenciadas para C++ sintaxe, a sintaxe de programação de CLR antes do Visual Studio 2005. |
     | **Usar sistema de build externo** | Especifica o uso das ferramentas de build não incluídas no Visual Studio para compilar o novo projeto. Quando essa opção é selecionada, você pode especificar as linhas de comando de build nas páginas **Especificar Definições de Configuração de Depuração** e **Especificar Configurações de Versão**. |
 
     ![Configurações de projeto](media/settings.png)

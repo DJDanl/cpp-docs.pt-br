@@ -1,33 +1,32 @@
 ---
 title: Problemas de migração de 64 bits do Visual C++comuns
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 helpviewer_keywords:
 - 64-bit programming [C++], migration
 - 64-bit compiler [C++], migration
 - porting 32-bit code to 64-bit code
-- upgrading Visual C++ applications, 32-bit code
 - migration [C++], 64-bit code issues
 - 32-bit code porting [C++]
 - 64-bit applications [C++]
 - 64-bit compiler [C++], porting 32-bit code
 - Win64 [C++]
 ms.assetid: d17fb838-7513-4e2d-8b27-a1666f17ad76
-ms.openlocfilehash: 937c00b7d3c40d9a5b92d53582ab1ebf4418ebc7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: b03ccc76163d79688a98ec89df241292e3eef112
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62200071"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220878"
 ---
 # <a name="common-visual-c-64-bit-migration-issues"></a>Problemas de migração de 64 bits do Visual C++comuns
 
-Quando você usa o Visual C++ para criar aplicativos para execução em um sistema de operacional do Windows de 64 bits, você deve estar ciente dos seguintes problemas:
+Quando você usa o Microsoft C++ (MSVC) para criar aplicativos para execução em um sistema de operacional do Windows de 64 bits do compilador, você deve conhecer os problemas a seguir:
 
 - Uma `int` e um `long` são valores de 32 bits em sistemas de operacionais do Windows de 64 bits. Por programas que você pretende compilar para plataformas de 64 bits, você deve ter cuidado para não atribuir ponteiros para variáveis de 32 bits. Os ponteiros são 64 bits em plataformas de 64 bits e você irá truncar o valor do ponteiro, se ela for atribuída a uma variável de 32 bits.
 
 - `size_t`, `time_t`, e `ptrdiff_t` são valores de 64 bits em sistemas de operacionais do Windows de 64 bits.
 
-- `time_t` é um valor de 32 bits em sistemas de operacionais Windows 32 bits em versões do Visual C++ antes do Visual C++ 2005. `time_t` Agora é um inteiro de 64 bits por padrão. Para obter mais informações, consulte [gerenciamento de tempo](../c-runtime-library/time-management.md).
+- `time_t` é um valor de 32 bits em sistemas de operacionais para Windows de 32 bits no Visual Studio 2005 e versões anteriores. `time_t` Agora é um inteiro de 64 bits por padrão. Para obter mais informações, consulte [gerenciamento de tempo](../c-runtime-library/time-management.md).
 
    Você deve estar ciente de onde seu código usa um `int` de valor e processa-o como uma `size_t` ou `time_t` valor. É possível que o número pode aumentar para ser maior do que um número de 32 bits e os dados serão truncados quando ele é passado de volta para o `int` armazenamento.
 

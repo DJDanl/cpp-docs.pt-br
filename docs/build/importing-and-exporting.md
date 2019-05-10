@@ -1,6 +1,6 @@
 ---
 title: Importando e exportando
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 helpviewer_keywords:
 - DLLs [C++], importing
 - exporting DLLs [C++]
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - DLLs [C++], exporting from
 - __declspec(dllimport) keyword [C++]
 ms.assetid: 7c44c2aa-2117-4cec-9615-a65bfd3f8f7b
-ms.openlocfilehash: 882010cd28c291e9f49ca0f7dd9d646c70130184
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 03931f7f128ab0666890bb8e76677db67dda8fc7
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188841"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220635"
 ---
 # <a name="importing-and-exporting"></a>Importando e exportando
 
@@ -31,8 +31,6 @@ Você pode usar arquivos. def [importar para um aplicativo](importing-using-def-
 
 ## <a name="using-declspec"></a>Usando declspec
 
-O Visual C++ usa **__declspec(dllimport)** e **dllexport** para substituir o **export** palavra-chave usada anteriormente nas versões de 16 bits do Visual C++.
-
 Não é necessário usar **__declspec(dllimport)** para seu código seja compilado corretamente, mas fazer isso permite que o compilador gere um código melhor. O compilador é capaz de gerar um código melhor, porque ele pode determinar se existe uma função em uma DLL ou não, que permite que o compilador a produzir um código que ignora um nível de indireção que normalmente estaria presente em uma chamada de função que cruzaram um limite de DLL. No entanto, você deve usar **__declspec(dllimport)** para importar as variáveis usadas em uma DLL.
 
 Na seção de exportações do arquivo. def adequada, **dllexport** não é necessária. **dllexport** foi adicionada para fornecer uma maneira fácil de exportar funções de um arquivo. dll ou. .exe sem usar um arquivo. def.
@@ -47,4 +45,4 @@ O formato de executável portátil do Win32 é projetado para minimizar o númer
 
 ## <a name="see-also"></a>Consulte também
 
-[DLLs no Visual C++](dlls-in-visual-cpp.md)
+[Criar DLLs de C/C++ no Visual Studio](dlls-in-visual-cpp.md)

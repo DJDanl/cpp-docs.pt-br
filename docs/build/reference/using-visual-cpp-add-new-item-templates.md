@@ -1,24 +1,24 @@
 ---
 title: Usando modelos para adicionar novo item do Visual C++
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 helpviewer_keywords:
 - Add New Item
 - Add New Item templates
 - Add New Item command
 - templates, Add New Item
 ms.assetid: 286d1be6-0473-407f-9a51-437dff1bfab7
-ms.openlocfilehash: afa6f7e3a1e3a6ac293a23fc18ecd0834d70555f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: e6ef78d1a43bc649a31b715afd4ce1d44f25a8c6
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62317140"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65217766"
 ---
 # <a name="using-visual-c-add-new-item-templates"></a>Usando modelos para adicionar novo item do Visual C++
 
-Adicione com facilidade itens que são comuns a projetos do Visual C++ usando o comando **Adicionar Novo Item**. Quando você usa o comando **Adicionar Novo Item**, a caixa de diálogo `Add New Item` é exibida com uma lista de modelos de item, que adiciona os arquivos apropriados ao projeto.
+Você pode adicionar facilmente os itens que são comuns para projetos do Visual Studio usando o **Adicionar Novo Item** comando. Quando você usa o comando **Adicionar Novo Item**, a caixa de diálogo `Add New Item` é exibida com uma lista de modelos de item, que adiciona os arquivos apropriados ao projeto.
 
-A tabela a seguir é uma lista alfabética de modelos de Adicionar Novo Item do Visual C++.
+A tabela a seguir é uma lista alfabética de modelos Adicionar Novo Item do Visual Studio.
 
 |Modelo|Descrição|
 |--------------|-----------------|
@@ -38,7 +38,7 @@ A tabela a seguir é uma lista alfabética de modelos de Adicionar Novo Item do 
 |Classe do Instalador|Adiciona uma classe que herda do <xref:System.Configuration.Install.Installer> usando recursos de CLR.|
 |Arquivo MIDL (.idl)|Cria um arquivo de linguagem IDL.|
 |Arquivo de Definição de Módulo (.def)|Cria um arquivo de definição de exportação de DLL.|
-|Folha de Propriedades (.props)|Cria um arquivo de folha de propriedades do Visual C++.|
+|Folha de Propriedades (.props)|Cria um arquivo de folha de propriedades.|
 |Script de Registro (.rgs)|Cria um arquivo de script de registro ATL.|
 |Relatório (.rdlc)|Cria um arquivo de relatório.|
 |Arquivo de Recurso (.rc)|Cria um arquivo de recurso do Win32.|

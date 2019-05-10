@@ -11,16 +11,16 @@ helpviewer_keywords:
 - cpp.stop
 - Class View, hint file
 ms.assetid: 17194f66-cf62-4523-abec-77db0675ab65
-ms.openlocfilehash: 3d8b3be76fea454ed3b3dd3fd2a44174f34c065c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 919cbedd0c0d7c610273d597328979d1fb449f8f
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62291872"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446300"
 ---
 # <a name="hint-files"></a>Arquivos de dica
 
-Um *arquivo de dica* contém macros que de outro modo fariam regiões de código serem ignoradas pelo Analisador de Banco de Dados de Navegação C++. Quando você abre um projeto do Visual C++, o analisador revisa o código em cada arquivo de origem no projeto e compila o banco de dados com informações sobre cada identificador. O IDE usa essas informações para dar suporte a recursos de navegação de código como o navegador do **Modo de Exibição de Classe** e a **Barra de Navegação**.
+Um *arquivo de dica* contém macros que de outro modo fariam regiões de código serem ignoradas pelo Analisador de Banco de Dados de Navegação C++. Quando você abre um Visual Studio C++ projeto, o analisador analisa o código em cada arquivo de origem no projeto e cria um banco de dados com informações sobre cada identificador. O IDE usa essas informações para dar suporte a recursos de navegação de código como o navegador do **Modo de Exibição de Classe** e a **Barra de Navegação**.
 
 O Analisador de Banco de Dados de Navegação C++ é um analisador difuso que pode revisar grandes quantidades de código em um curto período. Um dos motivos da sua rapidez é que ele ignora o conteúdo de blocos. Por exemplo, ele só registra o local e os parâmetros de uma função e ignora o seu conteúdo. Algumas macros podem causar problemas para a heurística usada para determinar o início e o término de um bloco. Esses problemas fazem regiões do código serem gravadas incorretamente.
 
@@ -118,7 +118,7 @@ O sistema de análise pesquisa diretórios em busca de arquivos de dica na ordem
 
 - O diretório que contém o pacote de instalação do Visual C++ (**vcpackages**). Esse diretório contém um arquivo de dica interno que descreve os símbolos nos arquivos de sistema usados com frequência, como **windows.h**. Como consequência, o projeto herda automaticamente a maioria das dicas de que precisa.
 
-- O caminho do diretório raiz de um arquivo de origem para o diretório que contém o próprio arquivo de origem. Em um projeto típico do Visual C++, o diretório raiz contém o arquivo de solução ou de projeto.
+- O caminho do diretório raiz de um arquivo de origem para o diretório que contém o próprio arquivo de origem. Em um típico do Visual Studio C++ projeto, o diretório raiz contém o arquivo de solução ou projeto.
 
    A exceção a essa regra ocorrerá se um *arquivo de parada* estiver no caminho para o arquivo de origem. Um arquivo de parada é qualquer arquivo chamado **cpp.stop**. Um arquivo de parada fornece controle adicional sobre a ordem de pesquisa. Em vez de começar no diretório raiz, o sistema de análise começa a pesquisa no diretório que contém o arquivo de parada para o diretório que contém o arquivo de origem. Em um projeto típico, não é necessário ter um arquivo de parada.
 
@@ -162,7 +162,7 @@ Dicas usam a seguinte sintaxe:
 
 Este exemplo mostra como as dicas são acumuladas de arquivos de dica. Os arquivos de parada não são usados neste exemplo.
 
-A ilustração mostra alguns dos diretórios físicos em um projeto do Visual C++. Há arquivos de dica nos diretórios `vcpackages`, `Debug`, `A1` e `A2`.
+A ilustração mostra alguns dos diretórios físicos em um Visual Studio C++ project. Há arquivos de dica nos diretórios `vcpackages`, `Debug`, `A1` e `A2`.
 
 ### <a name="hint-file-directories"></a>Diretórios de arquivos de dica
 
@@ -244,7 +244,7 @@ Estas notas se aplicam à lista anterior:
 
 ## <a name="see-also"></a>Consulte também
 
-[Tipos de arquivo criados para projetos do Visual C++](file-types-created-for-visual-cpp-projects.md)<br>
+[Arquivo tipos criados para o Visual C++ projetos](file-types-created-for-visual-cpp-projects.md)<br>
 [Diretiva #define (C/C++)](../../preprocessor/hash-define-directive-c-cpp.md)<br>
 [Diretiva #undef (C/C++)](../../preprocessor/hash-undef-directive-c-cpp.md)<br>
 [Anotações de SAL](../../c-runtime-library/sal-annotations.md)<br>

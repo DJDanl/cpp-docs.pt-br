@@ -1,6 +1,6 @@
 ---
 title: volatile (C++)
-ms.date: 11/04/2016
+ms.date: 05/07/2019
 f1_keywords:
 - volatile_cpp
 helpviewer_keywords:
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - volatile objects
 - objects [C++], volatile
 ms.assetid: 81db4a85-ed5a-4a2c-9a53-5d07a771d2de
-ms.openlocfilehash: 73243841b2ad02bcc165b2910ac54283028e6cf3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 2396b5afaed09a28fd83f22fccde0be04e3d7790
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62243920"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221867"
 ---
 # <a name="volatile-c"></a>volatile (C++)
 
@@ -50,7 +50,7 @@ Objetos que são declarados como **volátil** não são usados em determinadas o
 
 ## <a name="iso-compliant"></a>Compatível com ISO
 
-Se você estiver familiarizado com a c# palavra-chave volátil ou familiarizado com o comportamento de **volátil** em versões anteriores do Visual C++, lembre-se que o ISO padrão C++11 **volátil** palavra-chave é diferente e é com suporte no Visual Studio quando o [/volatile: ISO](../build/reference/volatile-volatile-keyword-interpretation.md) for especificada a opção de compilador. (Para ARM, ela é especificada por padrão). O **volátil** palavra-chave no C + + 11 padrão ISO código deve ser usada somente para acesso de hardware; não a use para comunicação entre threads. Para comunicação entre threads, use mecanismos como [std:: Atomic\<T >](../standard-library/atomic.md) partir os [biblioteca padrão C++](../standard-library/cpp-standard-library-reference.md).
+Se você estiver familiarizado com o C# palavra-chave volátil, ou está familiarizado com o comportamento de **volátil** nas versões anteriores do Microsoft C++ compilador (MSVC), lembre-se que o ISO padrão C++11 **volátil** palavra-chave é diferente e tem suporte no MSVC quando o [/volatile: ISO](../build/reference/volatile-volatile-keyword-interpretation.md) for especificada a opção de compilador. (Para ARM, ela é especificada por padrão). O **volátil** palavra-chave no C + + 11 padrão ISO código deve ser usada somente para acesso de hardware; não a use para comunicação entre threads. Para comunicação entre threads, use mecanismos como [std:: Atomic\<T >](../standard-library/atomic.md) partir os [biblioteca padrão C++](../standard-library/cpp-standard-library-reference.md).
 
 ## <a name="end-of-iso-compliant"></a>Fim de compatível com ISO
 

@@ -5,16 +5,16 @@ helpviewer_keywords:
 - .vcxproj files
 - C++ projects, project file format
 ms.assetid: 5261cf45-3136-40a6-899e-dc1339551401
-ms.openlocfilehash: cfe40d6520187212ab77607273c555f12012fd02
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 306b6a7b39db758c3712b1d57460268fc6414726
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62319818"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65217735"
 ---
 # <a name="project-files"></a>Os arquivos de projeto
 
-Um arquivo de projeto do Visual C++ é um arquivo baseado em XML que tem a extensão de nome de arquivo .vcxproj e contém as informações necessárias para compilar um projeto do Visual C++. Observe que o arquivo de projeto importa vários arquivos de projeto que têm a extensão *.props* ou *.targets*. Esses arquivos contem informações de build adicionais e eles mesmos podem se referir a outros arquivos *.props* ou *.targets*. As macros no caminho do arquivo (por exemplo, `$(VCTargetsPath)`) dependem de sua instalação do Visual Studio. Para obter mais informações sobre essas macros e *. Props* e *. targets* arquivos, consulte [página de propriedade dos diretórios VC + +](vcpp-directories-property-page.md), [definido C++ compilador e build as propriedades no Visual Studio](../working-with-project-properties.md) e [macros comuns para compilar comandos e propriedades](common-macros-for-build-commands-and-properties.md).
+Um C++ arquivo de projeto no Visual Studio é um arquivo baseado em XML que tem a extensão de nome de arquivo. vcxproj e contém informações que é necessário para criar um C++ project. Observe que o arquivo de projeto importa vários arquivos de projeto que têm a extensão *.props* ou *.targets*. Esses arquivos contem informações de build adicionais e eles mesmos podem se referir a outros arquivos *.props* ou *.targets*. As macros no caminho do arquivo (por exemplo, `$(VCTargetsPath)`) dependem de sua instalação do Visual Studio. Para obter mais informações sobre essas macros e *. Props* e *. targets* arquivos, consulte [página de propriedade dos diretórios VC + +](vcpp-directories-property-page.md), [definido C++ compilador e build as propriedades no Visual Studio](../working-with-project-properties.md) e [macros comuns para compilar comandos e propriedades](common-macros-for-build-commands-and-properties.md).
 
 ## <a name="example"></a>Exemplo
 

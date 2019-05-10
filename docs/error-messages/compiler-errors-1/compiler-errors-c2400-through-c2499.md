@@ -27,11 +27,11 @@ helpviewer_keywords:
 - C2497
 ms.assetid: f1f05572-af0b-497b-bde4-4c81ec01af3b
 ms.openlocfilehash: 569780a0716d26406c1703fa91fe5216d92ce653
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404345"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64857619"
 ---
 # <a name="compiler-errors-c2400-through-c2499"></a>Erros do compilador C2400 a C2499
 

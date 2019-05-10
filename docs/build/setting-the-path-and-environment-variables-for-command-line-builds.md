@@ -1,11 +1,7 @@
 ---
 title: Defina o caminho e variáveis de ambiente para compilações de linha de comando
 ms.custom: conceptual
-ms.date: 11/04/2016
-f1_keywords:
-- include
-- Lib
-- Path
+ms.date: 05/06/2019
 helpviewer_keywords:
 - environment variables [C++]
 - VCVARS32.bat file
@@ -18,18 +14,18 @@ helpviewer_keywords:
 - compiling source code [C++], from command line
 - environment variables [C++], CL compiler
 ms.assetid: 99389528-deb5-43b9-b99a-03c8773ebaf4
-ms.openlocfilehash: fed3360294bec724af09b87e5abd7c6bb22fa285
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 30dadf365186ae74144a3225889c08eedfb89b47
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62315385"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65217609"
 ---
 # <a name="set-the-path-and-environment-variables-for-command-line-builds"></a>Defina o caminho e variáveis de ambiente para compilações de linha de comando
 
-As ferramentas de linha de comando de compilação do Visual C++ requerem diversas variáveis de ambiente que são personalizadas para a sua configuração de instalação e compilação. Quando uma carga de trabalho do C++ é instalada pelo instalador do Visual Studio, ele cria arquivos de comando personalizado ou arquivos em lotes, defina as variáveis de ambiente necessárias. O instalador, em seguida, usa esses arquivos de comando para criar atalhos para o menu Iniciar do Windows abrir uma janela de prompt de comando do desenvolvedor. Esses atalhos, definido as variáveis de ambiente para uma determinada configuração de compilação. Quando você quiser usar as ferramentas de linha de comando, você pode executar um destes atalhos ou você pode abrir uma janela de prompt de comando simples e, em seguida, execute um dos arquivos de comando personalizado para definir o ambiente de configuração de build por conta própria. Para obter mais informações, consulte [usar o conjunto de ferramentas da linha de comando MSVC](building-on-the-command-line.md).
+O Microsoft C++ ferramentas de linha de comando de compilação (MSVC) requerem diversas variáveis de ambiente que são personalizadas para a sua configuração de instalação e compilação. Quando uma carga de trabalho do C++ é instalada pelo instalador do Visual Studio, ele cria arquivos de comando personalizado ou arquivos em lotes, defina as variáveis de ambiente necessárias. O instalador, em seguida, usa esses arquivos de comando para criar atalhos para o menu Iniciar do Windows abrir uma janela de prompt de comando do desenvolvedor. Esses atalhos, definido as variáveis de ambiente para uma determinada configuração de compilação. Quando você quiser usar as ferramentas de linha de comando, você pode executar um destes atalhos ou você pode abrir uma janela de prompt de comando simples e, em seguida, execute um dos arquivos de comando personalizado para definir o ambiente de configuração de build por conta própria. Para obter mais informações, consulte [usar o conjunto de ferramentas da linha de comando MSVC](building-on-the-command-line.md).
 
-As ferramentas de linha de comando do Visual C++ usam as variáveis de ambiente PATH, TMP, INCLUDE, LIB e LIBPATH e também usam outras variáveis de ambiente específicas para suas ferramentas instaladas, plataformas e SDKs. Até mesmo uma instalação simples do Visual Studio pode definir vinte ou mais variáveis de ambiente. Como os valores dessas variáveis de ambiente são específicos para sua instalação e sua opção de configuração de compilação e podem ser alterados por atualizações do produto, é altamente recomendável que você use um atalho de prompt de comando do desenvolvedor ou um do arquivos de comando personalizadas para defini-las, em vez de defini-las no ambiente do Windows por conta própria.
+As ferramentas de linha de comando do MSVC usam as variáveis de ambiente PATH, TMP, INCLUDE, LIB e LIBPATH e também usam outras variáveis de ambiente específicas para suas ferramentas instaladas, plataformas e SDKs. Até mesmo uma instalação simples do Visual Studio pode definir vinte ou mais variáveis de ambiente. Como os valores dessas variáveis de ambiente são específicos para sua instalação e sua opção de configuração de compilação e podem ser alterados por atualizações do produto, é altamente recomendável que você use um atalho de prompt de comando do desenvolvedor ou um do arquivos de comando personalizadas para defini-las, em vez de defini-las no ambiente do Windows por conta própria.
 
 Para ver quais variáveis de ambiente são definidas por um atalho de prompt de comando do desenvolvedor, você pode usar o comando SET. Abra uma janela de prompt de comando simples e capturar a saída do comando SET de uma linha de base. Abra uma janela de prompt de comando do desenvolvedor e capturar a saída do comando SET para comparação. Uma ferramenta de comparação, como no IDE do Visual Studio pode ser útil para comparar as variáveis de ambiente e ver o que é definido pelo prompt de comando do desenvolvedor. Para obter informações sobre as variáveis de ambiente específicas usadas pelo compilador e vinculador, consulte [variáveis de ambiente CL](reference/cl-environment-variables.md).
 

@@ -1,17 +1,15 @@
 ---
 title: 'Como: Usar eventos de Build em projetos do MSBuild'
 ms.date: 11/04/2016
-f1_keywords:
-- msbuild.cpp.howto.usebuildevents
 helpviewer_keywords:
 - 'msbuild (c++), howto: use build events in projects'
 ms.assetid: 2a58dc9d-3d50-4e49-97c1-86c5a05ce218
-ms.openlocfilehash: 7678b975558b245fb730bff35fb156bf21d7f895
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 8f4ccea66f7346512df88fc4c6078752c624aaa9
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62273476"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221465"
 ---
 # <a name="how-to-use-build-events-in-msbuild-projects"></a>Como: Usar eventos de Build em projetos do MSBuild
 
@@ -39,7 +37,7 @@ A tabela a seguir lista cada *uso no build* elemento:
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir pode ser adicionado dentro do elemento de projeto do myproject. vcxproj arquivo criado no [passo a passo: Usando MSBuild para criar um projeto do Visual C++](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md). Um *pré-Build* evento faz uma cópia de cpp; um *pré-vínculo* evento faz uma cópia de Main; e um *pós-compilação* evento faz uma cópia do myproject.exe. Se o projeto é compilado usando uma configuração de versão, os eventos de build serão executados. Se o projeto é compilado usando uma configuração de depuração, os eventos de build não são executados.
+O exemplo a seguir pode ser adicionado dentro do elemento de projeto do myproject. vcxproj arquivo criado no [passo a passo: Usando MSBuild para criar um C++ Project](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md). Um *pré-Build* evento faz uma cópia de cpp; um *pré-vínculo* evento faz uma cópia de Main; e um *pós-compilação* evento faz uma cópia do myproject.exe. Se o projeto é compilado usando uma configuração de versão, os eventos de build serão executados. Se o projeto é compilado usando uma configuração de depuração, os eventos de build não são executados.
 
 ```
 <ItemDefinitionGroup>
@@ -73,4 +71,4 @@ O exemplo a seguir pode ser adicionado dentro do elemento de projeto do myprojec
 ## <a name="see-also"></a>Consulte também
 
 [MSBuild na linha de comando – C++](msbuild-visual-cpp.md)<br/>
-[Passo a passo: Usando o MSBuild para criar um projeto em Visual C++](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)
+[Passo a passo: usar o MSBuild para a criação de um projeto C++](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)

@@ -1,17 +1,17 @@
 ---
 title: Expressões lambda em C++
-ms.date: 11/19/2018
+ms.date: 05/07/2019
 helpviewer_keywords:
 - lambda expressions [C++]
 - lambda expressions [C++], overview
 - lambda expressions [C++], vs. function objects
 ms.assetid: 713c7638-92be-4ade-ab22-fa33417073bf
-ms.openlocfilehash: 9ebe4fec06996e908c619b6ac14af098b1c07a01
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: c7543b3558da88b41102fa7b790bb9d9f3f18463
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62216480"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222374"
 ---
 # <a name="lambda-expressions-in-c"></a>Expressões lambda em C++
 
@@ -157,7 +157,7 @@ Normalmente, o operador de chamada de função de uma lambda é constante por va
 
 ### <a name="exception-specification"></a>Especificação de exceção
 
-É possível usar a especificação de exceção `noexcept` para indicar que a expressão lambda não lança nenhuma exceção. Como funções regulares, o compilador do Visual C++ gera o aviso [C4297](../error-messages/compiler-warnings/compiler-warning-level-1-c4297.md) se uma expressão lambda declarar a `noexcept` especificação de exceção e o corpo lambda lançar uma exceção, conforme mostrado aqui:
+É possível usar a especificação de exceção `noexcept` para indicar que a expressão lambda não lança nenhuma exceção. Assim como acontece com as funções comuns, o Microsoft C++ aviso do compilador gera [C4297](../error-messages/compiler-warnings/compiler-warning-level-1-c4297.md) se uma expressão lambda declarar a `noexcept` especificação de exceção e o corpo lambda lançar uma exceção, conforme mostrado aqui:
 
 ```cpp
 // throw_lambda_expression.cpp

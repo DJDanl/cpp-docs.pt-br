@@ -1,26 +1,26 @@
 ---
 title: Melhores práticas de otimização
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 helpviewer_keywords:
-- Visual C++, optimization
+- C++, optimization
 - optimization, best practices
 ms.assetid: f3433148-7255-4ca6-8a4f-7c31aac88508
-ms.openlocfilehash: edb036292b87593a3f8bb9b3f5ec5f7beb84c3a5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 42178f8326def78f37bfcc905b96f37c7fc3affc
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62274164"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220275"
 ---
 # <a name="optimization-best-practices"></a>Melhores práticas de otimização
 
-Este documento descreve algumas práticas recomendadas para otimização no Visual C++.
+Este documento descreve algumas práticas recomendadas para otimizar C++ programas no Visual Studio.
 
 ## <a name="compiler-and-linker-options"></a>Compilador e as opções do vinculador
 
 ### <a name="profile-guided-optimization"></a>Otimização Guiada por perfil
 
-Visual C++ suporta *Otimização Guiada por perfil* (PGO). Essa otimização usa dados de perfil de execuções de treinamento de uma versão instrumentada de um aplicativo para direcionar a otimização mais recente do aplicativo. Usar a PGO pode ser demorado, portanto, não pode ser algo que todo desenvolvedor usa, mas recomendamos usar a PGO para a compilação de lançamento final de um produto. Para obter mais informações, consulte [otimizações guiadas pelo perfil](profile-guided-optimizations.md).
+O Visual Studio suporta *Otimização Guiada por perfil* (PGO). Essa otimização usa dados de perfil de execuções de treinamento de uma versão instrumentada de um aplicativo para direcionar a otimização mais recente do aplicativo. Usar a PGO pode ser demorado, portanto, não pode ser algo que todo desenvolvedor usa, mas recomendamos usar a PGO para a compilação de lançamento final de um produto. Para obter mais informações, consulte [otimizações guiadas pelo perfil](profile-guided-optimizations.md).
 
 Além disso, *otimização de programa inteiro* (também conhecidos como geração de código de tempo de vinculação) e o **/O1** e **/O2** otimizações foram aprimoradas. Em geral, um aplicativo compilado com uma dessas opções será mais rápido do que o mesmo aplicativo compilado com um compilador anterior.
 
@@ -93,13 +93,13 @@ Outro pragma útil para limitar a profundidade do inlining é `#pragma inline_de
 
 ## <a name="restrict-and-assume"></a>Restrict e \__assume
 
-Há algumas das palavras-chave no Visual C++ que pode ajudar o desempenho: [Restrict](../cpp/extension-restrict.md) e [assume](../intrinsics/assume.md).
+Há algumas das palavras-chave no Visual Studio que pode ajudar o desempenho: [Restrict](../cpp/extension-restrict.md) e [assume](../intrinsics/assume.md).
 
 Primeiro, é importante observar que `__restrict` e `__declspec(restrict)` são duas coisas diferentes. Enquanto eles estiverem ligeiramente relacionados sua semântica é diferente. `__restrict` é um qualificador de tipo, como `const` ou `volatile`, mas exclusivamente para tipos de ponteiro.
 
 Um ponteiro que é modificado com `__restrict` é conhecido como um *Restrict ponteiro*. Um ponteiro de Restrict é um ponteiro que só pode ser acessado por meio de \__restrict ponteiro. Em outras palavras, o outro ponteiro não pode ser usado para acessar os dados apontados pelo \__restrict ponteiro.
 
-`__restrict` pode ser uma ferramenta poderosa para o otimizador do Visual C++, mas usá-lo com muito cuidado. Se usado incorretamente, o otimizador pode executar uma otimização que interromperia a seu aplicativo.
+`__restrict` pode ser uma ferramenta poderosa para o Microsoft C++ otimizador, mas usá-lo com muito cuidado. Se usado incorretamente, o otimizador pode executar uma otimização que interromperia a seu aplicativo.
 
 O `__restrict` palavra-chave substitui o **/Oa** mudar de versões anteriores.
 

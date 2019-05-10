@@ -1,15 +1,15 @@
 ---
 title: Exemplos de expressões lambda
-ms.date: 11/04/2016
+ms.date: 05/07/2019
 helpviewer_keywords:
 - lambda expressions [C++], examples
 ms.assetid: 52506b15-0771-4190-a966-2f302049ca86
-ms.openlocfilehash: 6854c5710d8a27093078c0f2013d691ac22c5870
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: f9f2c3e014e44c9f6a9ce10dd8388a1578ba3987
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392187"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222099"
 ---
 # <a name="examples-of-lambda-expressions"></a>Exemplos de expressões lambda
 
@@ -61,7 +61,7 @@ Embora as expressões lambda geralmente são declaradas no corpo de uma função
 
 ### <a name="example-2"></a>Exemplo 2
 
-O compilador do Visual C++ associa uma expressão lambda às suas variáveis capturadas quando a expressão é declarada, e não quando a expressão é chamada. O exemplo a seguir mostra uma expressão lambda que captura a variável local `i` por valor e a variável local `j` por referência. Como a expressão lambda é capturada `i` por valor, a reatribuição posterior de `i` no programa não afetará o resultado da expressão. No entanto, como a expressão lambda captura `j` por referência, a reatribuição de `j` afetará o resultado da expressão.
+O Microsoft C++ compilador associa uma expressão lambda às suas variáveis capturadas quando a expressão é declarada em vez de quando a expressão é chamada. O exemplo a seguir mostra uma expressão lambda que captura a variável local `i` por valor e a variável local `j` por referência. Como a expressão lambda é capturada `i` por valor, a reatribuição posterior de `i` no programa não afetará o resultado da expressão. No entanto, como a expressão lambda captura `j` por referência, a reatribuição de `j` afetará o resultado da expressão.
 
 ### <a name="code"></a>Código
 

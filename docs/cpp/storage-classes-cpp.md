@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - storage classes [C++], basic concepts
 ms.assetid: f10e1c56-6249-4eb6-b08f-09ab1eef1992
-ms.openlocfilehash: e50e5da5ea24d59131f123bb0c772897f9a30218
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 92435b2bab670dd366f26c981443e98e4a4e3c29
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62266927"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221992"
 ---
 # <a name="storage-classes-c"></a>Classes de armazenamento (C++)
 
@@ -24,7 +24,7 @@ Um *classe de armazenamento* no contexto do C++ declarações de variável é um
 
 1. O [mutável](../cpp/mutable-data-members-cpp.md) palavra-chave pode ser considerada um especificador de classe de armazenamento. No entanto, ela só está disponível na lista de membros de uma definição de classe.
 
-1. **Visual C++ 2010 e posterior:** O **automática** palavra-chave não é mais um especificador de classe de armazenamento do C++ e o **registrar** palavra-chave é preterida. **Visual Studio 2017 versão 15.7 e posterior:** (disponível com [/std: c + + 17](../build/reference/std-specify-language-standard-version.md)): O **registrar** palavra-chave é removida da linguagem C++.
+1. **Visual Studio 2010 e posterior:** O **automática** palavra-chave não é mais um especificador de classe de armazenamento do C++ e o **registrar** palavra-chave é preterida. **Visual Studio 2017 versão 15.7 e posterior:** (disponível com [/std: c + + 17](../build/reference/std-specify-language-standard-version.md)): O **registrar** palavra-chave é removida da linguagem C++.
 
 ```cpp
    register int val; // warning C5033: 'register' is no longer a supported storage class

@@ -4,12 +4,12 @@ ms.date: 10/26/2017
 f1_keywords:
 - C4868
 ms.assetid: fc6aa7e5-34dd-4ec2-88bd-16e430361dc7
-ms.openlocfilehash: d0bc8716e53e71c52f6a31036a95d0b4cefedd79
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 72700091fcd22271e6913228a1206b3d5efcbdef
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388703"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447170"
 ---
 # <a name="compiler-warning-level-4-c4868"></a>(Nível 4) de aviso do compilador C4868
 
@@ -17,7 +17,7 @@ ms.locfileid: "62388703"
 
 Os elementos de uma lista de inicializadores entre chaves devem ser avaliados em ordem da esquerda para a direita. Há dois casos em que o compilador é capaz de garantir nesta ordem: a primeira é quando alguns dos elementos são objetos passados por valor; o segundo é ao compilar com `/clr` e alguns dos elementos são campos de objetos ou elementos da matriz. Quando o compilador não pode garantir a avaliação da esquerda para a direita, ele emitirá o aviso C4868.
 
-Esse aviso pode ser gerado como resultado do trabalho de conformidade do compilador que foi feito para o Visual C++ 2015 atualização 2. O código compilado antes do Visual C++ 2015 atualização 2 agora pode gerar C4868.
+Esse aviso pode ser gerado como resultado do trabalho de conformidade do compilador que foi feito para Visual Studio 2015 atualização 2. O código compilado antes do Visual Studio 2015 atualização 2 agora pode gerar C4868.
 
 Esse aviso é desativado por padrão. Use `/Wall` para ativar esse aviso.
 

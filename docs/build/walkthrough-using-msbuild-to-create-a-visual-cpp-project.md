@@ -1,21 +1,19 @@
 ---
 title: 'Passo a passo: Usando MSBuild para criar um projeto do Visual C++'
-ms.date: 09/24/2018
-f1_keywords:
-- msbuild.cpp.walkthrough.createproject
+ms.date: 05/06/2019
 helpviewer_keywords:
 - 'msbuild (c++), walkthrough: create a project'
 ms.assetid: 52350d1c-c373-4868-923c-5e8be6f67adb
-ms.openlocfilehash: c7b038ede8c03f7016c5e9f81a9db785c49da448
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 8fb985cbf4e471589946e730e8bb09b43f0a5d84
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62313591"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446216"
 ---
 # <a name="walkthrough-using-msbuild-to-create-a-visual-c-project"></a>Passo a passo: Usando MSBuild para criar um projeto do Visual C++
 
-Este passo a passo demonstra como usar o MSBuild para compilar um projeto do Visual C++ em um prompt de comando. Você aprenderá a criar os arquivos de origem do C++ e um arquivo de projeto com base em XML para um aplicativo de console do Visual C++. Depois de criar o projeto, você aprenderá como personalizar o processo de compilação.
+Este passo a passo demonstra como usar o MSBuild para criar um Visual Studio C++ projeto em um prompt de comando. Você aprenderá a criar os arquivos de origem do C++ e um arquivo de projeto com base em XML para um aplicativo de console do Visual C++. Depois de criar o projeto, você aprenderá como personalizar o processo de compilação.
 
 Esta explicação passo a passo ilustra as seguintes tarefas:
 
@@ -39,7 +37,7 @@ Você precisa dos seguintes itens para concluir esta explicação:
 > Não use essa abordagem se você pretende editar o arquivo de projeto mais tarde usando o IDE do Visual Studio. Se você criar manualmente um arquivo. vcxproj, o IDE do Visual Studio pode não ser capaz de editar ou carregá-lo, especialmente se o projeto usa caracteres curinga em itens de projeto.
 
 > [!NOTE]
-> A maioria das instruções de compilação de nível inferior está contida na **. targets** e **Props** arquivos que são definidos no diretório VCTargets, armazenado na propriedade `$(VCTargetsPath)`. O caminho padrão para esses arquivos no Visual Studio 2017 Enterprise Edition é c:\\arquivos de programas (x86)\\Microsoft Visual Studio\\2017\\Enterprise\\Common7\\IDE\\ VC\\VCTargets\\.
+> A maioria das instruções de compilação de nível inferior está contida na **. targets** e **Props** arquivos que são definidos no diretório VCTargets, armazenado na propriedade `$(VCTargetsPath)`. O caminho padrão para esses arquivos no Visual Studio 2019 Enterprise Edition é C:\Program Files (x86) \Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.Cpp.Common.props.
 
 ## <a name="creating-the-c-source-files"></a>Criando os arquivos de origem do C++
 
@@ -81,10 +79,10 @@ Um arquivo de projeto do MSBuild é um arquivo XML que contém um elemento raiz 
 
 ### <a name="to-create-the-msbuild-project-file"></a>Para criar o arquivo de projeto do MSBuild
 
-1. Use um editor de texto para criar um arquivo de projeto é denominado `myproject.vcxproj`e em seguida, adicione a seguinte raiz `<Project>` elemento. Inserir os elementos nas etapas do procedimento a seguir entre a raiz do `<Project>` marcas:
+1. Use um editor de texto para criar um arquivo de projeto é denominado `myproject.vcxproj`e em seguida, adicione a seguinte raiz `<Project>` elemento. Inserir os elementos nas etapas do procedimento a seguir entre a raiz do `<Project>` marcas. (Use ToolsVersion = "15.0" Se você estiver usando o Visual Studio 2017.)
 
     ```xml
-    <Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
     </Project>
     ```
 
@@ -109,12 +107,12 @@ Um arquivo de projeto do MSBuild é um arquivo XML que contém um elemento raiz 
     <Import Project="$(VCTargetsPath)\Microsoft.Cpp.default.props" />
     ```
 
-1. Adicione o seguinte elemento de grupo de propriedade (`<PropertyGroup>`) que especifica duas propriedades do projeto:
+1. Adicione o seguinte elemento de grupo de propriedade (`<PropertyGroup>`) que especifica duas propriedades do projeto. (Use v141 se você estiver usando o Visual Studio 2017).
 
     ```xml
     <PropertyGroup>
       <ConfigurationType>Application</ConfigurationType>
-      <PlatformToolset>v141</PlatformToolset>
+      <PlatformToolset>v142</PlatformToolset>
     </PropertyGroup>
     ```
 
@@ -151,10 +149,10 @@ Um arquivo de projeto do MSBuild é um arquivo XML que contém um elemento raiz 
 
 ### <a name="complete-project-file"></a>Arquivo de projeto completo
 
-O código a seguir mostra o arquivo de projeto completo que você criou no procedimento anterior.
+O código a seguir mostra o arquivo de projeto completo que você criou no procedimento anterior. (Use ToolsVersion = "15.0" para o Visual Studio 2017.)
 
 ```xml
-<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ProjectConfiguration Include="Debug|Win32">
       <Configuration>Debug</Configuration>
@@ -168,7 +166,7 @@ O código a seguir mostra o arquivo de projeto completo que você criou no proce
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.default.props" />
   <PropertyGroup>
     <ConfigurationType>Application</ConfigurationType>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ItemGroup>
@@ -235,7 +233,7 @@ No prompt de comando, digite o seguinte comando para criar um build de versão p
 
 ### <a name="using-msbuild-with-the-64-bit-compiler-and-tools"></a>Usando o MSBuild com o compilador de 64 bits e ferramentas
 
-Se você tiver instalado o Visual C++ no Windows de 64 bits, por padrão, 64 bits x64 nativos e cruzados ferramentas são instaladas. Você pode configurar o MSBuild para usar o compilador de 64 bits e ferramentas para compilar seu aplicativo definindo o `PreferredToolArchitecture` propriedade. Essa propriedade não afeta as propriedades de configuração ou da plataforma do projeto. Por padrão, a versão de 32 bits das ferramentas é usada. Para especificar a versão de 64 bits do compilador e ferramentas, adicione o seguinte elemento de grupo de propriedade ao arquivo de projeto myproject. vcxproj após o `Microsoft.Cpp.default.props` \<importação / > elemento:
+Se você tiver instalado o Visual Studio no Windows de 64 bits, por padrão, 64 bits x64 nativos e cruzados ferramentas são instaladas. Você pode configurar o MSBuild para usar o compilador de 64 bits e ferramentas para compilar seu aplicativo definindo o `PreferredToolArchitecture` propriedade. Essa propriedade não afeta as propriedades de configuração ou da plataforma do projeto. Por padrão, a versão de 32 bits das ferramentas é usada. Para especificar a versão de 64 bits do compilador e ferramentas, adicione o seguinte elemento de grupo de propriedade ao arquivo de projeto myproject. vcxproj após o `Microsoft.Cpp.default.props` \<importação / > elemento:
 
 ```xml
 <PropertyGroup>

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2653
 ms.assetid: 3f49e731-affd-43a0-a8d0-181db7650bc3
-ms.openlocfilehash: d4a3a8a74483317b87e16458f44016f0aeca1379
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2882764e1c0a84634c500d920f327fbebc4b19a9
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62350774"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447944"
 ---
 # <a name="compiler-error-c2653"></a>Erro do compilador C2653
 
@@ -21,7 +21,7 @@ A sintaxe de linguagem requer uma classe, estrutura, união ou nome do namespace
 
 Esse erro pode ocorrer quando você usa um nome que não foi declarado como uma classe, estrutura, união ou namespace na frente de um operador de escopo. Para corrigir esse problema, declare o nome ou incluir o cabeçalho que declara o nome antes de ser usada.
 
-C2653 também é possível se você tentar definir uma *composta namespace*, um namespace que contém um ou mais nomes de namespace aninhado de escopo. Composta namespace definições não são permitidas em C++ antes do c++17. Namespaces compostas têm suporte no Visual Studio 2015 atualização 3 quando você especifica o [/std:c++17 + + mais recente](../../build/reference/std-specify-language-standard-version.md) opção de compilador. A partir do Visual C++ 2017 versão 15.5, o compilador dá suporte a definições de namespace compostas quando o [/std:c++17 + + 17](../../build/reference/std-specify-language-standard-version.md) opção for especificada.
+C2653 também é possível se você tentar definir uma *composta namespace*, um namespace que contém um ou mais nomes de namespace aninhado de escopo. Composta namespace definições não são permitidas em C++ antes do c++17. Namespaces compostas têm suporte no Visual Studio 2015 atualização 3 quando você especifica o [/std:c++17 + + mais recente](../../build/reference/std-specify-language-standard-version.md) opção de compilador. Começando no Visual Studio 2017 versão 15.5, o compilador dá suporte a definições de namespace composta quando o [/std: c + + 17](../../build/reference/std-specify-language-standard-version.md) opção for especificada.
 
 ## <a name="examples"></a>Exemplos
 
@@ -42,7 +42,7 @@ No código que não é compilado para o c++17 ou posteriores padrões, namespace
 
 ```cpp
 // C2653b.cpp
-namespace a::b {int i;}   // C2653 prior to Visual C++ 2015 Update 3,
+namespace a::b {int i;}   // C2653 prior to Visual Studio 2015 Update 3,
                           // C2429 thereafter. Use /std:c++17 or /std:c++latest to fix.
 
 namespace a {             // Use this form for compliant code under /std:c++14 (the default)

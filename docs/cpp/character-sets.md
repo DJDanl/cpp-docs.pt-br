@@ -1,26 +1,26 @@
 ---
 title: Conjuntos de caracteres
-ms.date: 04/12/2018
+ms.date: 05/06/2019
 helpviewer_keywords:
 - Character sets
 - basic source character set (C++)
 - universal character names
 - basic execution character set (C++)
 ms.assetid: 379a2af6-6422-425f-8352-ef0bca6c0d74
-ms.openlocfilehash: 5282d5b227e71c0ba6f822a9534a8a31cbd86db9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 92d60e3383abd7e3b3fa2d689958cf02a9b91e75
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331227"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222523"
 ---
 # <a name="character-sets"></a>Conjuntos de caracteres
 
-O texto de um programa C++ é armazenado em arquivos de origem que usam uma codificação de caracteres em particular. O padrão de C++ especifica um caractere de origem básicos definidas para arquivos de origem e um caractere de execução básico definidas para arquivos compilados. Visual C++ permite que um conjunto de caracteres específica de localidade a ser usado nos arquivos de origem adicionais e os arquivos compilados.
+O texto de um programa C++ é armazenado em arquivos de origem que usam uma codificação de caracteres em particular. O padrão de C++ especifica um caractere de origem básicos definidas para arquivos de origem e um caractere de execução básico definidas para arquivos compilados. O Microsoft C++ compilador (MSVC) permite que um conjunto de caracteres específica de localidade a ser usado nos arquivos de origem adicionais e arquivos compilados.
 
 ## <a name="character-sets"></a>Conjuntos de caracteres
 
-O padrão de C++ especifica um *conjunto de caracteres de origem básicos* que podem ser usados nos arquivos de origem. Para representar caracteres fora esse conjunto, os caracteres adicionais podem ser especificados usando um *nome de caractere universal*. Quando compilado, o *conjunto de caracteres de execução básico* e *conjunto de caractere largo de execução básico* representam os caracteres e cadeias de caracteres que podem aparecer em um programa. A implementação do Visual C++ permite que os caracteres adicionais no código-fonte e código compilado.
+O padrão de C++ especifica um *conjunto de caracteres de origem básicos* que podem ser usados nos arquivos de origem. Para representar caracteres fora esse conjunto, os caracteres adicionais podem ser especificados usando um *nome de caractere universal*. Quando compilado, o *conjunto de caracteres de execução básico* e *conjunto de caractere largo de execução básico* representam os caracteres e cadeias de caracteres que podem aparecer em um programa. A implementação do MSVC permite caracteres adicionais no código-fonte e código compilado.
 
 ### <a name="basic-source-character-set"></a>Conjunto de caracteres de origem básicos
 
@@ -36,7 +36,7 @@ O *conjunto de caracteres de origem básicos* consiste em 96 caracteres que pode
 
 **Seção específica da Microsoft**
 
-O Visual C++ inclui o `$` caractere como um membro do conjunto de caracteres de origem básicos. Visual C++ também permite que um conjunto de caracteres a ser usado nos arquivos de origem, com base na codificação de arquivo adicionais. Por padrão, o Visual Studio armazena arquivos de origem usando a página de código padrão. Quando os arquivos de origem são salvos usando uma página de código específica de localidade ou uma página de código Unicode, Visual C++ permite que você use qualquer um dos caracteres da página de código em seu código-fonte, exceto para os códigos de controle não são explicitamente permitidos no caractere de origem básicos definido. Por exemplo, você pode colocar caracteres japoneses em comentários, identificadores ou literais de cadeia de caracteres, se você salvar o arquivo usando uma página de código japonesa. Visual C++ não permite a sequências de caracteres que não podem ser convertidas em caracteres multibyte válidos ou pontos de código Unicode. Dependendo das opções do compilador, não todos os permitidos caracteres podem aparecer em identificadores. Para obter mais informações, consulte [Identificadores](../cpp/identifiers-cpp.md).
+MSVC inclui o `$` caractere como um membro do conjunto de caracteres de origem básicos. MSVC também permite que um conjunto de caracteres a ser usado nos arquivos de origem, com base na codificação de arquivo adicionais. Por padrão, o Visual Studio armazena arquivos de origem usando a página de código padrão. Quando os arquivos de origem são salvos usando uma página de código específica de localidade ou uma página de código Unicode, MSVC permite que você use qualquer um dos caracteres da página de código em seu código-fonte, exceto para os códigos de controle não são explicitamente permitidos no caractere de origem básicos definido. Por exemplo, você pode colocar caracteres japoneses em comentários, identificadores ou literais de cadeia de caracteres, se você salvar o arquivo usando uma página de código japonesa. MSVC não permite que as sequências de caracteres que não podem ser convertidas em caracteres multibyte válidos ou pontos de código Unicode. Dependendo das opções do compilador, não todos os permitidos caracteres podem aparecer em identificadores. Para obter mais informações, consulte [Identificadores](../cpp/identifiers-cpp.md).
 
 **Fim da seção específica da Microsoft**
 
@@ -48,7 +48,7 @@ Nomes de caracteres universais podem ser usados em identificadores em literais d
 
 **Seção específica da Microsoft**
 
-O compilador do Visual C++ trata um caractere no formulário de nome de caractere universal e formulário literal alternadamente. Por exemplo, você pode declarar um identificador com formato de nome de caractere universal e usá-lo no formulário literal:
+O Microsoft C++ compilador trata um caractere no formulário de nome de caractere universal e formulário literal alternadamente. Por exemplo, você pode declarar um identificador com formato de nome de caractere universal e usá-lo no formulário literal:
 
 ```cpp
 auto \u30AD = 42; // \u30AD is 'キ'

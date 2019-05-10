@@ -93,12 +93,12 @@ helpviewer_keywords:
 - $(PlatformShortName) macro
 - SolutionPath macro $(SolutionPath)
 ms.assetid: 239bd708-2ea9-4687-b264-043f1febf98b
-ms.openlocfilehash: 46fdd5e356ded96388a154ff459ef4cc3c02267f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: abb42db6a44f1c48d120eff1f117e06c970b6b44
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62294429"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221786"
 ---
 # <a name="common-macros-for-msbuild-commands-and-properties"></a>Macros comuns para comandos do MSBuild e propriedades
 
@@ -121,7 +121,7 @@ Esta tabela descreve um subconjunto usado com frequência das macros disponívei
 |**$(FrameworkDir)**|O diretório no qual o .NET Framework foi instalado.|
 |**$(FrameworkSDKDir)**|O diretório no qual você instalou o .NET Framework. O .NET Framework pode ter sido instalado como parte do Visual Studio ou separadamente.|
 |**$(FrameworkVersion)**|A versão do .NET Framework usada pelo Visual Studio. Combinado com **$(FrameworkDir)**, o caminho completo para a versão do uso do .NET Framework pelo Visual Studio.|
-|**$(FxCopDir)**|O caminho para o arquivo fxcop.cmd. O arquivo fxcop.cmd não está instalado em todas as edições do Visual C++.|
+|**$(FxCopDir)**|O caminho para o arquivo fxcop.cmd. O arquivo fxcop.cmd não é instalado com todas as edições do Visual Studio.|
 |**$(IntDir)**|Caminho para o diretório especificado para arquivos intermediários. Se esse for um caminho relativo, os arquivos intermediários acessarão esse caminho acrescentado ao diretório do projeto. Esse caminho deve ter uma barra à direita. Isso é resolvido para o valor da propriedade **Diretório Intermediário**. Não use **$(OutDir)** para definir essa propriedade.|
 |**$(OutDir)**|Caminho para o diretório de arquivo de saída. Se esse for um caminho relativo, os arquivos de saída acessarão esse caminho acrescentado ao diretório do projeto. Esse caminho deve ter uma barra à direita. Isso é resolvido para o valor da propriedade **Diretório de Saída**. Não use **$(IntDir)** para definir essa propriedade.|
 |**$(Platform)**|O nome da plataforma do projeto atual, por exemplo, "Win32".|
@@ -143,7 +143,7 @@ Esta tabela descreve um subconjunto usado com frequência das macros disponívei
 |**$(TargetFileName)**|O nome do arquivo de saída primária do build (definido como nome base + extensão de arquivo).|
 |**$(TargetName)**|O nome base do arquivo de saída primária para o build.|
 |**$(TargetPath)**|O nome de caminho absoluto do arquivo de saída primária do build (definido como unidade + caminho + nome base + extensão de arquivo).|
-|**$(VCInstallDir)**|O diretório que contém o conteúdo do C++ da instalação do Visual Studio. Essa propriedade contém a versão do conjunto de ferramentas do Visual C++ de destino, que pode ser diferente do Visual Studio de host. Por exemplo, ao compilar com `$(PlatformToolset) = v140`, **$(VCInstallDir)** contém o caminho para a instalação do Visual C++ 2015.|
+|**$(VCInstallDir)**|O diretório que contém o conteúdo do C++ da instalação do Visual Studio. Esta propriedade contém a versão do Microsoft destino C++ conjunto de ferramentas (MSVC), que pode ser diferente que o host do Visual Studio. Por exemplo, ao compilar com `$(PlatformToolset) = v140`, **$ (vcinstalldir)** contém o caminho para a instalação do Visual Studio 2015.|
 |**$(VSInstallDir)**|O diretório no qual você instalou o Visual Studio. Essa propriedade contém a versão do conjunto de ferramentas do Visual Studio de destino, que pode ser diferente do Visual Studio de host. Por exemplo, ao compilar com `$(PlatformToolset) = v110`, **$(VSInstallDir)** contém o caminho para a instalação do Visual Studio 2012.|
 |**$(WebDeployPath)**|O caminho relativo da raiz de implantação da Web ao qual as saídas do projeto pertencem. Retorna o mesmo valor que <xref:Microsoft.VisualStudio.VCProjectEngine.VCWebDeploymentTool.RelativePath%2A>.|
 |**$(WebDeployRoot)**|O caminho absoluto para o local de **\<localhost>**. Por exemplo, c:\inetpub\wwwroot.|

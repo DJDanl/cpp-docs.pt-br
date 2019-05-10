@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - file types [C++], WinHelp files
 ms.assetid: 4fdcbd66-66b0-4866-894a-fd7b4c2557e4
-ms.openlocfilehash: 376d9faa87868cce842a1cb70273e220ff691fa4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 835300d2fe39688f3b9c41dad801f1a79984c803
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62270176"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446551"
 ---
 # <a name="help-files-winhelp"></a>Arquivos de ajuda (WinHelp)
 
@@ -35,4 +35,4 @@ Adicione o suporte do WinHelp a um projeto de Controle ActiveX do MFC selecionan
 
 ## <a name="see-also"></a>Consulte também
 
-[Tipos de arquivo criados para projetos do Visual C++](file-types-created-for-visual-cpp-projects.md)
+[Arquivo tipos criados para o Visual C++ projetos](file-types-created-for-visual-cpp-projects.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Internet applications [MFC], ActiveX controls
 - networks [MFC], downloading with ActiveX controls
 ms.assetid: 7ab943c8-2022-41df-9065-d629b616eeec
-ms.openlocfilehash: c019c922a5690d4ead861c40bed3c0c1c76cea28
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d268da8bef4facfb9259e6ce43648c8713464ec9
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394816"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448195"
 ---
 # <a name="activex-controls-on-the-internet"></a>Controles ActiveX na Internet
 
@@ -85,7 +85,7 @@ Ao criar um novo controle usando o Assistente de aplicativo, você pode optar po
 
 1. Clique em **New** sobre o **arquivo** menu.
 
-1. Selecione **Assistente de controle ActiveX MFC** do Visual C++, projetos e nomeie o projeto.
+1. Selecione **Assistente de controle ActiveX MFC** do Visual Studio C++ projetos e nomeie o projeto.
 
 1. Sobre o **configurações de controle** página, selecione **carrega as propriedades de forma assíncrona**. Selecionar esta opção define a propriedade de estado pronto e o evento alterado de estado pronto para você.
 

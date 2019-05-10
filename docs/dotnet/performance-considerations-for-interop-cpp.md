@@ -8,12 +8,12 @@ helpviewer_keywords:
 - mixed assemblies [C++], performance considerations
 - interoperability [C++], performance considerations
 ms.assetid: bb9a282e-c3f8-40eb-a2fa-45d80d578932
-ms.openlocfilehash: c6b4456d9c75061c9a8c93f37f98b58f92adc899
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 29dbfa6465f6bcbcf4d0618b1820e59a8edbd3a3
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384745"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447257"
 ---
 # <a name="performance-considerations-for-interop-c"></a>Considerações sobre desempenho para interop (C++)
 
@@ -21,7 +21,7 @@ Este tópico fornece diretrizes para reduzir o efeito de transições de interop
 
 Visual C++ oferece suporte os mesmos mecanismos de interoperabilidade que outras linguagens .NET como Visual Basic e c# (P/Invoke), mas ele também fornece suporte de interoperabilidade que é específico para o Visual C++ (interop do C++). Para aplicativos críticos de desempenho, é importante entender as implicações de desempenho de cada técnica de interoperabilidade.
 
-Independentemente da interoperabilidade técnica usada, sequências de transição especial, chamadas de conversões, são necessárias sempre que uma função gerenciada chama uma função e vice-versa não gerenciada. Essas conversões são inseridos automaticamente pelo compilador do Visual C++, mas é importante ter em mente que cumulativamente, essas transições podem ser caras em termos de desempenho.
+Independentemente da interoperabilidade técnica usada, sequências de transição especial, chamadas de conversões, são necessárias sempre que uma função gerenciada chama uma função e vice-versa não gerenciada. Essas conversões são inseridos automaticamente pelo Microsoft C++ compilador, mas é importante ter em mente que cumulativamente, essas transições podem ser caras em termos de desempenho.
 
 ## <a name="reducing-transitions"></a>Reduzindo as transições
 

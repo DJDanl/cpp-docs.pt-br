@@ -1,6 +1,6 @@
 ---
 title: Referência de BSCMAKE
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 helpviewer_keywords:
 - BSCMAKE, reference
 - Microsoft Browse Information Maintenance Utility
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - bsc files, building
 - BSCMAKE
 ms.assetid: b97ad994-1355-4809-98db-6abc12c6fb13
-ms.openlocfilehash: 4303e48e3d02f0f69b177e8a888157a6f90aaa89
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 72ad297ee5a24bc0c7ffd3ed25959031d0b8a309
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62294883"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220562"
 ---
 # <a name="bscmake-reference"></a>Referência de BSCMAKE
 
@@ -24,7 +24,7 @@ ms.locfileid: "62294883"
 
 O utilitário de manutenção de informações de procura da Microsoft (BSCMAKE. EXE) cria um arquivo de informações de procura (. bsc) dos arquivos. SBR criados durante a compilação. Determinadas ferramentas de terceiros usam arquivos. BSC para análise de código.
 
-Quando você compila seu programa, você pode criar um arquivo de informações de procura para o seu programa automaticamente, usando BSCMAKE para criar o arquivo. Você não precisa saber como executar BSCMAKE se você criar o arquivo de informações de procura no ambiente de desenvolvimento do Visual C++. No entanto, você talvez queira ler este tópico para entender as opções disponíveis.
+Quando você compila seu programa, você pode criar um arquivo de informações de procura para o seu programa automaticamente, usando BSCMAKE para criar o arquivo. Você não precisa saber como executar BSCMAKE se você criar o arquivo de informações de procura no ambiente de desenvolvimento do Visual Studio. No entanto, você talvez queira ler este tópico para entender as opções disponíveis.
 
 Se você compilar seu programa fora do ambiente de desenvolvimento, você ainda pode criar um. bsc personalizado que você pode examinar no ambiente. Execute BSCMAKE em arquivos. SBR que você criou durante a compilação.
 

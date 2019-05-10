@@ -1,16 +1,16 @@
 ---
 title: 'Passo a passo: Adicionando um CTaskDialog a um aplicativo'
-ms.date: 09/19/2018
+ms.date: 04/25/2019
 helpviewer_keywords:
 - CTaskDialog, adding
 - walkthroughs [MFC], dialogs
 ms.assetid: 3a62abb8-2d86-4bec-bdb8-5784d5f9a9f8
-ms.openlocfilehash: f0992d476326e5175db799ea0f9e5667eab3704b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 8cf2223b2859a2dfa6ecc7582ec2f171a056152c
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62358227"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64558203"
 ---
 # <a name="walkthrough-adding-a-ctaskdialog-to-an-application"></a>Passo a passo: Adicionando um CTaskDialog a um aplicativo
 
@@ -37,7 +37,9 @@ O procedimento a seguir demonstra o uso mais básico do `CTaskDialog`, que é su
 
 ### <a name="to-replace-a-windows-message-box-with-a-ctaskdialog"></a>Para substituir uma caixa de mensagem do Windows com um CTaskDialog
 
-1. Crie um novo projeto de aplicativo do MFC com as configurações padrão. Chamá-lo *MyProject*.
+1. Use o **Assistente de aplicativo MFC** para criar um aplicativo MFC com todas as configurações padrão. Confira [Passo a passo: Usando os novos controles de Shell MFC](walkthrough-using-the-new-mfc-shell-controls.md) para obter instruções sobre como abrir o Assistente para a sua versão do Visual Studio.
+
+1. Chamá-lo *MyProject*. 
 
 1. Use o **Gerenciador de soluções** para abrir o arquivo MyProject.cpp.
 

@@ -1,21 +1,21 @@
 ---
 title: Classes de banco de dados ATL (modelos de banco de dados OLE)
-ms.date: 11/04/2016
+ms.date: 05/02/2019
 helpviewer_keywords:
 - OLE DB templates [C++], ATL database classes
 - database classes [C++], OLE DB
 - database classes [C++], ATL
 ms.assetid: 219766aa-e18a-405f-9e36-d7a0fdb31b2b
-ms.openlocfilehash: 2ecde060f10a7c2a056869525f58d0bb4da67963
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: dc016a5e1e1d9652f6a69f73b5760f42dec5e889
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393812"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222564"
 ---
 # <a name="atl-database-classes-ole-db-templates"></a>Classes de banco de dados ATL (modelos de banco de dados OLE)
 
-A Microsoft fornece várias implementações do OLE DB, um conjunto de interfaces que fornecem acesso uniforme a dados em várias fontes de informação e formatos.  OLE DB foi oficialmente preterido; Esta documentação é para desenvolvedores que estiver mantendo o código herdado. Novos aplicativos devem usar ODBC para se conectar a fontes de dados SQL.
+A Microsoft fornece várias implementações do OLE DB, um conjunto de interfaces que fornecem acesso uniforme a dados em várias fontes de informação e formatos.
 
 Os modelos OLE DB são modelos de C++ em ATL que facilitam a tecnologia de banco de dados OLE DB usar, fornecendo classes que implementam muitas das interfaces do OLE DB comumente usadas.
 

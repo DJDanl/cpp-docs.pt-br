@@ -8,12 +8,12 @@ helpviewer_keywords:
 - security [C++]
 - security [C++], best practices
 ms.assetid: 86acaccf-cdb4-4517-bd58-553618e3ec42
-ms.openlocfilehash: bc449d0bbf222391868dc7586e0245fd6e8cd2ac
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b43658eda749e68c17659fcb41248b88fd843792
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411260"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448506"
 ---
 # <a name="security-best-practices-for-c"></a>Práticas recomendadas de segurança para C++
 
@@ -21,7 +21,7 @@ Este artigo contém informações sobre ferramentas e práticas de segurança. E
 
 ## <a name="visual-c-security-features"></a>Recursos de segurança do Visual C++
 
-Estes recursos de segurança foram incorporados ao vinculador e ao compilador do Visual C++:
+Esses recursos de segurança são criados no Microsoft C++ compilador e vinculador:
 
 [/guard (habilitar proteção de fluxo de controle)](../build/reference/guard-enable-control-flow-guard.md)<br/>
 Faz com que o compilador analisar o fluxo de controle para destinos de chamada indireta em tempo de compilação e, em seguida, inserir o código para verificar se os destinos em tempo de execução.

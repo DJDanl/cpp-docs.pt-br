@@ -1,6 +1,6 @@
 ---
 title: thread
-ms.date: 11/04/2016
+ms.date: 05/07/2019
 f1_keywords:
 - thread_cpp
 helpviewer_keywords:
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - TLS (thread local storage), compiler implementation
 - __declspec keyword [C++], thread
 ms.assetid: 667f2a77-6d1f-4b41-bee8-05e67324fab8
-ms.openlocfilehash: 089f339e5d203fe44789a7df1607f73ab13b8a24
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 59a1af8a7eb73207f84ddf2194d5fe9e77d7d46a
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62330512"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221967"
 ---
 # <a name="thread"></a>thread
 
@@ -40,7 +40,7 @@ Ao usar variáveis locais de thread nas bibliotecas carregado dinamicamente, voc
 
 1. Se a variável é inicializada com uma chamada de função (incluindo construtores), essa função será chamada somente para o thread que causou a binário/DLL carregar no processo de e para esses threads iniciadas depois que o binário/DLL foi carregado. As funções de inicialização não são chamadas para qualquer outro thread que já estava executando quando a DLL foi carregada. Inicialização dinâmica ocorre na chamada para DLL_THREAD_ATTACH DllMain, mas a DLL nunca obtém a mensagem se a DLL não está no processo de quando o thread é iniciado.
 
-1. Variáveis locais de thread que são inicializadas estaticamente com valores constantes geralmente são inicializadas corretamente em todos os threads. No entanto, a partir de dezembro de 2017 há um problema de compatibilidade conhecidos no compilador do Microsoft Visual C++ no qual variáveis constexpr recebem dinâmica em vez de inicialização estática.
+1. Variáveis locais de thread que são inicializadas estaticamente com valores constantes geralmente são inicializadas corretamente em todos os threads. No entanto, a partir de dezembro de 2017 há um problema de compatibilidade conhecidos no Microsoft C++ no qual variáveis constexpr recebem dinâmica em vez de inicialização estática de compilador.
 
    Observação: Esses dois problemas devem ser corrigidos em futuras atualizações do compilador.
 

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - iterator conventions
 - C++ Standard Library, iterator conventions
 ms.assetid: 2f746be7-b37d-4bfc-bf05-be4336ca982f
-ms.openlocfilehash: 3b6713a80244d7063baac2c75ffead76fe93facc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ae4193b8e6edf94ab0f8d839ac36fc1addfd8d04
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396128"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220317"
 ---
 # <a name="iterators"></a>Iterators
 
@@ -86,7 +86,7 @@ Um iterador `Iterator` diferente de um ponteiro de objeto também deve definir o
 > [!NOTE]
 > É possível evitar o uso de iteradores explicitamente usando loops range-for. Para obter mais informações, consulte [baseado em intervalo para a instrução](../cpp/range-based-for-statement-cpp.md).
 
-Visual C++ agora oferece iteradores verificados e iteradores de depuração para garantir que você não substituir os limites de seu contêiner. Para obter mais informações, consulte [Iteradores verificados](../standard-library/checked-iterators.md) e [Suporte para iterador de depuração](../standard-library/debug-iterator-support.md).
+Microsoft C++ agora oferece iteradores verificados e iteradores de depuração para garantir que você não substituir os limites de seu contêiner. Para obter mais informações, consulte [Iteradores verificados](../standard-library/checked-iterators.md) e [Suporte para iterador de depuração](../standard-library/debug-iterator-support.md).
 
 ## <a name="see-also"></a>Consulte também
 

@@ -1,16 +1,16 @@
 ---
 title: 'Passo a passo: Implementando futuros'
-ms.date: 11/04/2016
+ms.date: 04/25/2019
 helpviewer_keywords:
 - implementing futures [Concurrency Runtime]
 - futures, implementing [Concurrency Runtime]
 ms.assetid: 82ea75cc-aaec-4452-b10d-8abce0a87e5b
-ms.openlocfilehash: 7164919d649751ac11fefa5be3cb2e5b7798ee4f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 00ad8bbe6f950ad531bad751686393dce66643bb
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407842"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64857062"
 ---
 # <a name="walkthrough-implementing-futures"></a>Passo a passo: Implementando futuros
 

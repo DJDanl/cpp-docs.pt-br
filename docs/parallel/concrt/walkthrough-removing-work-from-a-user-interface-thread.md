@@ -1,16 +1,16 @@
 ---
 title: 'Passo a passo: Removendo trabalho de um Thread de Interface do usuário'
-ms.date: 11/19/2018
+ms.date: 04/25/2019
 helpviewer_keywords:
 - user-interface threads, removing work from [Concurrency Runtime]
 - removing work from user-interface threads [Concurrency Runtime]
 ms.assetid: a4a65cc2-b3bc-4216-8fa8-90529491de02
-ms.openlocfilehash: 1838ad0d6adb146adacb8b3a395f44f76e2a8d3f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 3bd41b1815737730067929c4728b32181cb2fc03
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407791"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64856999"
 ---
 # <a name="walkthrough-removing-work-from-a-user-interface-thread"></a>Passo a passo: Removendo trabalho de um Thread de Interface do usuário
 
@@ -54,9 +54,9 @@ Esta seção descreve como criar o aplicativo básico do MFC.
 
 ### <a name="to-create-a-visual-c-mfc-application"></a>Para criar um aplicativo do MFC do Visual C++
 
-1. No menu **Arquivo**, clique em **Novo** e clique em **Projeto**.
+1. Use o **Assistente de aplicativo MFC** para criar um aplicativo MFC com todas as configurações padrão. Confira [Passo a passo: Usando os novos controles de Shell MFC](../../mfc/walkthrough-using-the-new-mfc-shell-controls.md) para obter instruções sobre como abrir o Assistente para a sua versão do Visual Studio.
 
-1. No **novo projeto** na caixa de **modelos instalados** painel, selecione **Visual C++** e, em seguida, no **modelos** painel, selecione **Aplicativo do MFC**. Digite um nome para o projeto, por exemplo, `Mandelbrot`e, em seguida, clique em **Okey** para exibir o **Assistente de aplicativo MFC**.
+1. Digite um nome para o projeto, por exemplo, `Mandelbrot`e, em seguida, clique em **Okey** para exibir o **Assistente de aplicativo MFC**.
 
 1. No **tipo de aplicativo** painel, selecione **único documento**. Certifique-se de que o **suporte de arquitetura de documento/exibição** caixa de seleção está desmarcada.
 

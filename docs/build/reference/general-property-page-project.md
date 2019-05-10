@@ -25,12 +25,12 @@ helpviewer_keywords:
 - Clean Build option
 - output files, setting directory
 - Unicode, creating C++ build configuration
-ms.openlocfilehash: c9b0eae9c0a1e074fb4f3f12ac38a737ef14c644
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: e6d418c1668a0757349c7e5c3bb38f7cda801223
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62270883"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446571"
 ---
 # <a name="general-property-page-project"></a>Página de propriedade geral (projeto)
 
@@ -98,7 +98,7 @@ As propriedades na seção Geral afetam o local dos arquivos criados no processo
 
 - **Conjunto de Ferramentas da Plataforma**
 
-   Permite que o projeto seja direcionado a uma versão diferente do compilador e das bibliotecas do Visual C++. Os projetos do Visual C++ podem ser direcionados ao conjunto de ferramentas padrão instalado pelo Visual Studio ou a um dos conjuntos de ferramentas instalados por várias versões anteriores do Visual Studio, incluindo conjuntos de ferramentas que criam executáveis que podem ser executados no Windows XP. Para obter informações sobre como alterar o conjunto de ferramentas de plataforma, consulte [como: Modificar a estrutura de destino e o conjunto de ferramentas da plataforma](../how-to-modify-the-target-framework-and-platform-toolset.md).
+   Permite que o projeto seja direcionado a uma versão diferente do compilador e das bibliotecas do Visual C++. Visual Studio C++ projetos podem direcionar qualquer conjunto de ferramentas padrão instalado pelo Visual Studio, ou um dos conjuntos de ferramentas que instalado por várias versões anteriores do Visual Studio, incluindo conjuntos de ferramentas que cria executáveis que podem executar em Windowx XP. Para obter informações sobre como alterar o conjunto de ferramentas de plataforma, consulte [como: Modificar a estrutura de destino e o conjunto de ferramentas da plataforma](../how-to-modify-the-target-framework-and-platform-toolset.md).
 
 - **Habilitar Build Incremental Gerenciado**
 

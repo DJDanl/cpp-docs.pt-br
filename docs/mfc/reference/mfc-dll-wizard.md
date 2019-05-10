@@ -11,12 +11,12 @@ helpviewer_keywords:
 - MFC DLLs [MFC]
 - DLLs [MFC], creating
 ms.assetid: 4e936031-7e39-4f40-a295-42a09c5ff264
-ms.openlocfilehash: c0c8edfd26fc6abdcef1cbb2cfa93d88f9a37cde
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e607a27cbb06efd86d3a50aae5e62edf5ba3d400
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62310272"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65217583"
 ---
 # <a name="mfc-dll-wizard"></a>Assistente de DLL MFC
 
@@ -40,7 +40,7 @@ Você pode executar as seguintes tarefas e tipos de aprimoramentos para um proje
 
 ## <a name="see-also"></a>Consulte também
 
-[Criando e gerenciando projetos do Visual C++](../../build/creating-and-managing-visual-cpp-projects.md)<br/>
+[Projetos do Visual Studio – C++](../../build/creating-and-managing-visual-cpp-projects.md)<br/>
 [Páginas de propriedade](../../build/reference/property-pages-visual-cpp.md)<br/>
 [Defina propriedades de build e compilador](../../build/working-with-project-properties.md)<br/>
 [Classe MFC](../../mfc/reference/adding-an-mfc-class.md)<br/>
