@@ -1,13 +1,13 @@
 ---
 title: 3. Funções da biblioteca em tempo de execução
-ms.date: 01/17/2019
+ms.date: 05/13/2019
 ms.assetid: b226e512-6822-4cbe-a2ca-74cc2bb7e880
-ms.openlocfilehash: 3eb6dc4110145a6c45dbdd772deaee3023e68e9d
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.openlocfilehash: 7ecb2a79ad61169cdeabc9bd4893147a5de6a210
+ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65525041"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65611178"
 ---
 # <a name="3-run-time-library-functions"></a>3. Funções da biblioteca em tempo de execução
 
@@ -55,6 +55,8 @@ Essa função tem os efeitos descritos acima, quando chamado a partir de uma par
 
 Essa chamada tem precedência sobre o `OMP_NUM_THREADS` variável de ambiente. O valor padrão para o número de threads, o que pode ser estabelecida chamando `omp_set_num_threads` ou definindo o `OMP_NUM_THREADS` variável de ambiente podem ser substituídos explicitamente em uma única `parallel` diretiva especificando o `num_threads` cláusula.
 
+Para obter mais informações, consulte [omp_set_dynamic](#317-omp_set_dynamic-function).
+
 #### <a name="cross-references"></a>Referências cruzadas
 
 - [omp_set_dynamic](#317-omp_set_dynamic-function) function
@@ -74,6 +76,8 @@ int omp_get_num_threads(void);
 O `num_threads` cláusula, o `omp_set_num_threads` função e o `OMP_NUM_THREADS` variável de ambiente controla o número de threads em uma equipe.
 
 Se o número de threads não foi explicitamente definido pelo usuário, o padrão é definido pela implementação. Essa função é associado a mais próxima circunscrição `parallel` diretiva. Se chamado de uma parte serial de um programa ou de uma região paralela aninhada que é serializada, essa função retorna 1.
+
+Para obter mais informações, consulte [omp_set_dynamic](#317-omp_set_dynamic-function).
 
 #### <a name="cross-references"></a>Referências cruzadas
 
@@ -165,6 +169,12 @@ Uma chamada para `omp_set_dynamic` tem precedência sobre o `OMP_DYNAMIC` variá
 
 O padrão para o ajuste dinâmico de threads é definido pela implementação. Como resultado, os códigos de usuário que dependem de um número específico de threads para execução correta devem desabilitar explicitamente threads dinâmicos. Implementações não são necessários para fornecer a capacidade de ajustar dinamicamente o número de threads, mas eles são necessários para fornecer a interface para dar suporte à portabilidade entre todas as plataformas.
 
+#### <a name="microsoft-specific"></a>específica da Microsoft
+
+O suporte atual de `omp_get_dynamic` e `omp_set_dynamic` é da seguinte maneira: 
+
+O parâmetro de entrada para `omp_set_dynamic` não afeta a política de threading e não altera o número de threads. `omp_get_num_threads` sempre retorna o número definido pelo usuário, se o que é definido ou o número de threads padrão. Na implementação atual da Microsoft, `omp_set_dynamic(0)` desliga dinâmicas de threading para que o conjunto de threads existente pode ser reutilizado para a seguinte região paralela. `omp_set_dynamic(1)` ativa o threading dinâmico descartando o conjunto existente de threads e criando um novo conjunto para a próxima região paralela. O número de threads no novo conjunto é o mesmo que o conjunto antigo e se baseia no valor de retorno de `omp_get_num_threads`. Portanto, para melhor desempenho, use `omp_set_dynamic(0)` reutilizar os threads existentes.
+
 #### <a name="cross-references"></a>Referências cruzadas
 
 - [omp_get_num_threads](#312-omp_get_num_threads-function)
@@ -180,7 +190,7 @@ O `omp_get_dynamic` função retorna um valor diferente de zero se o ajuste din�
 int omp_get_dynamic(void);
 ```
 
-Se a implementação não implementa o ajuste dinâmico do número de threads, essa função sempre retorna 0.
+Se a implementação não implementa o ajuste dinâmico do número de threads, essa função sempre retorna 0. Para obter mais informações, consulte [omp_set_dynamic](#317-omp_set_dynamic-function).
 
 #### <a name="cross-references"></a>Referências cruzadas
 
