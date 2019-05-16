@@ -7,12 +7,12 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], creating
 - ActiveX controls [MFC], creating
 ms.assetid: 8bd5a93c-d04d-414e-bb28-163fdc1c0dd5
-ms.openlocfilehash: 27b82fb7a688c8cc7a3df734a7e60a17f7ffa184
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: c67f925773854258111b3a2aa1967f51de4df127
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446757"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65708245"
 ---
 # <a name="creating-an-mfc-activex-control"></a>Criando um controle ActiveX MFC
 
@@ -36,7 +36,7 @@ A maneira mais fácil de criar um controle ActiveX do MFC é usar o [Assistente 
 
 1. Clique em **concluir** para fechar o assistente e abrir o novo projeto no ambiente de desenvolvimento.
 
-Depois de ter criado seu projeto, você pode exibir os arquivos criados na **Gerenciador de soluções**. Para obter mais informações sobre os arquivos que o assistente cria para seu projeto, consulte o arquivo gerado pelo projeto Readme. txt. Para obter mais informações sobre os tipos de arquivo, consulte [tipos de arquivo criados para o Visual C++ projetos](../../build/reference/file-types-created-for-visual-cpp-projects.md).
+Depois de ter criado seu projeto, você pode exibir os arquivos criados na **Gerenciador de soluções**. Para obter mais informações sobre os arquivos que o assistente cria para seu projeto, consulte o arquivo gerado pelo projeto Readme. txt. Para obter mais informações sobre os tipos de arquivo, consulte [tipos de arquivo criados para o Visual Studio C++ projetos](../../build/reference/file-types-created-for-visual-cpp-projects.md).
 
 Depois de ter criado seu projeto, você pode usar os assistentes de código para adicionar [funções](../../ide/add-member-function-wizard.md), [variáveis](../../ide/add-member-variable-wizard.md), [eventos](../../ide/add-event-wizard.md), [propriedades](../../ide/names-add-property-wizard.md), e [métodos](../../ide/add-method-wizard.md). Para obter mais informações sobre como personalizar o seu controle ActiveX, consulte [controles ActiveX do MFC](../../mfc/mfc-activex-controls.md).
 

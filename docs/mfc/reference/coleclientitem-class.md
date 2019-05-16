@@ -164,12 +164,12 @@ helpviewer_keywords:
 - COleClientItem [MFC], OnScrollBy
 - COleClientItem [MFC], OnShowItem
 ms.assetid: 7f571b7c-2758-4839-847a-0cf1ef643128
-ms.openlocfilehash: 2687dfc9941a512523a7cb771cb872c78b97ce2d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cd04b2aa6dd1d539e357a69666bafc80e3ea5eba
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62152159"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65708154"
 ---
 # <a name="coleclientitem-class"></a>Classe COleClientItem
 
@@ -2151,7 +2151,7 @@ BOOL SetPrintDevice(const PRINTDLG* ppd);
 Ponteiro para um [DVTARGETDEVICE](/windows/desktop/api/objidl/ns-objidl-tagdvtargetdevice) estrutura de dados, que contém informações sobre o novo dispositivo de destino de impressão. Pode ser NULL.
 
 *ppd*<br/>
-Ponteiro para um [PRINTDLG](https://msdn.microsoft.com/library/windows/desktop/ms646940) estrutura de dados, que contém informações sobre o novo dispositivo de destino de impressão. Pode ser NULL.
+Ponteiro para um [PRINTDLG](/windows/desktop/ms646940) estrutura de dados, que contém informações sobre o novo dispositivo de destino de impressão. Pode ser NULL.
 
 ### <a name="return-value"></a>Valor de retorno
 
