@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - static libraries, MFC
 ms.assetid: c3f62b0e-3f13-42c5-9859-d3890d0c3e1d
-ms.openlocfilehash: 2c7fc8c1d04105bbdf2fe05ff65283e1beeda810
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: c6d8a57c577dad20ac7bb8f579220a77d2a34850
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446439"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65708262"
 ---
 # <a name="application-type-mfc-application-wizard"></a>Tipo de aplicativo, Assistente de Aplicativo MFC
 
@@ -101,4 +101,4 @@ Use esta página do [Assistente de aplicativo MFC](../../mfc/reference/mfc-appli
 ## <a name="see-also"></a>Consulte também
 
 [Assistente de aplicativo do MFC](../../mfc/reference/mfc-application-wizard.md)<br/>
-[Arquivo tipos criados para o Visual C++ projetos](../../build/reference/file-types-created-for-visual-cpp-projects.md)
+[Criar tipos de arquivo para o Visual Studio C++ projetos](../../build/reference/file-types-created-for-visual-cpp-projects.md)
