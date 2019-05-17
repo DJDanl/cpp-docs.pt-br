@@ -1,5 +1,5 @@
 ---
-title: 'Passo a passo: Criar e usar sua própria biblioteca de vínculo dinâmico (C++)'
+title: 'Passo a passo: Criar e usar sua própria Biblioteca de vínculo dinâmico (C++)'
 description: Use C++ para criar uma biblioteca de vínculo dinâmico (DLL) do Windows no Visual Studio.
 ms.custom: conceptual
 ms.date: 04/22/2019
@@ -7,16 +7,16 @@ helpviewer_keywords:
 - libraries [C++], DLLs
 - DLLs [C++], walkthroughs
 ms.assetid: 3ae94848-44e7-4955-bbad-7d40f493e941
-ms.openlocfilehash: 954d87b2ab325f764213f01724e542aaa134d141
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 53cde029973c14bfc5aae521946ebeadbed738ca
+ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65217678"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65611990"
 ---
-# <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>Passo a passo: Criar e usar sua própria biblioteca de vínculo dinâmico (C++)
+# <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>Passo a passo: Criar e usar sua própria Biblioteca de vínculo dinâmico (C++)
 
-Este passo a passo mostra como usar o IDE do Visual Studio para criar sua própria biblioteca de vínculo dinâmico (DLL) escrita em C++ e, em seguida, usá-la de outro aplicativo C++. DLLs (também conhecido como bibliotecas compartilhadas em sistemas operacionais baseados no UNIX) são um dos tipos mais úteis dos componentes do Windows. Você pode usá-los como uma maneira de compartilhar código e recursos, para reduzir o tamanho de seus aplicativos e para torná-lo mais fácil de serviço e estenda seus aplicativos. Neste passo a passo, você cria uma DLL que implementa algumas funções matemáticas e, em seguida, cria um aplicativo de console que usa as funções da DLL. Ao longo do caminho, você obter uma introdução a algumas das técnicas de programação e convenções usadas nas DLLs do Windows.
+Este passo a passo mostra como usar o IDE do Visual Studio para criar sua própria biblioteca de vínculo dinâmico (DLL) em C++ e, em seguida, usá-la a partir de outro aplicativo C++. DLLs (também conhecidas como bibliotecas compartilhadas em sistemas operacionais baseados em UNIX) são um dos tipos mais úteis de componentes do Windows. Você pode usá-las como uma forma de compartilhar código e recursos, reduzir o tamanho dos aplicativos e facilitar o serviço e estender seus aplicativos. Neste passo a passo, você cria uma DLL que implementa algumas funções matemáticas e, em seguida, cria um aplicativo de console que usa as funções da DLL. Ao longo do processo, você terá uma introdução a algumas técnicas de programação e convenções usadas nas DLLs do Windows.
 
 Este passo a passo apresenta estas tarefas:
 
@@ -28,124 +28,124 @@ Este passo a passo apresenta estas tarefas:
 
 - Use as funções e variáveis importadas da DLL no aplicativo de console.
 
-- Execute o aplicativo concluído.
+- Execute o aplicativo finalizado.
 
-Como uma biblioteca vinculada estaticamente, uma DLL _exporta_ variáveis, funções e recursos por nome e o seu aplicativo _importa_ esses nomes para usar essas variáveis, funções e recursos. Ao contrário de uma biblioteca vinculada estaticamente, o Windows se conecta as importações em seu aplicativo para as exportações em uma DLL em tempo de carga ou em tempo de execução, em vez de conectá-las em tempo de vinculação. Windows requer que informações adicionais que não faz parte do modelo de compilação C++ padrão para fazer essas conexões. O compilador MSVC implementa algumas extensões específicas da Microsoft para C++ para fornecer essas informações extras. À medida que avançarmos, vamos explicar essas extensões.
+Como uma biblioteca vinculada estaticamente, uma DLL _exporta_ variáveis, funções e recursos pelo nome e seu aplicativo _importa_ esses nomes para usar essas variáveis, funções e recursos. Ao contrário de uma biblioteca vinculada estaticamente, o Windows conecta as importações em seu aplicativo às exportações em uma DLL no momento do carregamento ou no tempo de execução, ao invés de conectá-las ao link de vinculação. O Windows requer informações adicionais que não fazem parte do modelo de compilação em C++ padrão para fazer essas conexões. O compilador MSVC implementa algumas extensões específicas da Microsoft para C++ para fornecer essas informações adicionais. Explicaremos essas extensões à medida que avançarmos.
 
-Este passo a passo cria duas soluções do Visual Studio; uma que cria a DLL e outra que compila o aplicativo cliente. A DLL usa a convenção de chamada de C para que ele pode ser chamado de aplicativos criados usando outras linguagens, desde que a plataforma e chamar e convenções de vinculação coincidam. O aplicativo de cliente usa _vinculação implícita_, em que o Windows vincula o aplicativo para a DLL no tempo de carregamento. Essa vinculação permite que o aplicativo chamar as funções fornecidas pelo DLL assim como as funções em uma biblioteca vinculada estaticamente.
+Este passo a passo cria duas soluções do Visual Studio: uma que cria a DLL e outra que compila o aplicativo cliente. A DLL usa a convenção de chamada C para que possa ser chamada a partir de aplicativos criados em outras linguagens, desde que a plataforma e as convenções de chamada e vinculação sejam correspondentes. O aplicativo cliente usa a _vinculação implícita_, em que o Windows vincula o aplicativo à DLL no tempo de carregamento. Essa vinculação permite que o aplicativo chame as funções fornecidas pela DLL como as funções de uma biblioteca vinculada estaticamente.
 
-Este passo a passo não cobre algumas situações comuns. Ele não mostra o uso de DLLs em C++ por outras linguagens de programação. Ele não mostra como criar uma DLL somente recurso. Ele também não mostra o uso da vinculação explícita para carregar DLLs em tempo de execução em vez de em tempo de carregamento. Fique tranquilo, você pode usar o Visual C++ para fazer todas essas coisas. Para obter links para obter mais informações sobre DLLs, consulte [criar C /C++ DLLs no Visual Studio](dlls-in-visual-cpp.md). Para obter mais informações sobre vinculação implícita e explícita de vinculação, consulte [determinar qual vincular método Use](linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use). Para obter informações sobre como criar DLLs em C++ para uso com linguagens de programação que usam convenções de vinculação da linguagem C, consulte [exportar funções de C++ para uso em executáveis da linguagem C](exporting-cpp-functions-for-use-in-c-language-executables.md). Para obter informações sobre como criar DLLs para uso com linguagens .NET, consulte [chamando funções de DLL de aplicativos Visual Basic](calling-dll-functions-from-visual-basic-applications.md).
+Este passo a passo não aborda algumas situações comuns. Ele não mostra o uso de DLLs de C++ por outras linguagens de programação. Não mostra como criar uma DLL somente recurso. Também não mostra a utilização da vinculação explícita para carregar DLLs no tempo de execução em vez de no tempo de carregamento. Fique tranquilo, você pode usar o Visual C++ para fazer todas essas coisas. Para saber mais sobre DLLs, consulte [Criar DLLs C/C ++ no Visual Studio](dlls-in-visual-cpp.md). Para saber mais sobre vinculação implícita e explícita, confira [Determinando qual método de associação usar](linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use). Para saber mais sobre como criar DLLs C++ para usar com linguagens de programação que usam convenções de vinculação de linguagem C, consulte [Exportando funções do C++ a serem usadas em executáveis da linguagem C](exporting-cpp-functions-for-use-in-c-language-executables.md). Para saber mais sobre como criar DLLs para usar com linguagens .NET, consulte [Chamando funções DLL a partir de aplicativos Visual Basic](calling-dll-functions-from-visual-basic-applications.md).
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-- Um computador que executa o Microsoft Windows 7 ou versões posteriores. Recomendamos o Windows 10 para uma melhor experiência de desenvolvimento.
+- Um computador que executa o Microsoft Windows 7 ou versões posteriores. Recomendamos o Windows 10 para obter a melhor experiência de desenvolvimento.
 
-- Uma cópia do Visual Studio. Para obter informações sobre como baixar e instalar o Visual Studio, consulte [instalar o Visual Studio](/visualstudio/install/install-visual-studio). Ao executar o instalador, certifique-se de que o **desenvolvimento para Desktop com C++** carga de trabalho está marcada. Não se preocupe se você não instalou essa carga de trabalho quando você instalou o Visual Studio. Você pode executar o instalador novamente e instale-o agora.
+- Uma cópia do Visual Studio. Para saber mais sobre como fazer o download e instalar o Visual Studio, consulte [Instalar o Visual Studio](/visualstudio/install/install-visual-studio). Quando executar o instalador, certifique-se de que a carga de trabalho de **Desenvolvimento para desktop com C++** esteja marcada. Não se preocupe se não tiver instalado essa carga de trabalho quando instalou o Visual Studio. Você pode executar o instalador novamente e instalá-la agora.
 
-   ![Desenvolvimento para desktop com C++](media/desktop-development-with-cpp.png "desenvolvimento para Desktop com C++")
+   ![Desenvolvimento para desktop com C++](media/desktop-development-with-cpp.png "Desenvolvimento para desktop com C++")
 
-- Um entendimento dos fundamentos de como usar o IDE do Visual Studio. Se você já usou os aplicativos da área de trabalho do Windows antes, você provavelmente pode manter-se. Para obter uma introdução, consulte [tour pelos recursos do IDE do Visual Studio](/visualstudio/ide/visual-studio-ide).
+- Um reconhecimento dos princípios básicos do uso do IDE do Visual Studio. Se já tiver usado aplicativos de desktop do Windows, você provavelmente não terá problemas. Para ver uma introdução, consulte [Tour pelos recursos do IDE do Visual Studio](/visualstudio/ide/visual-studio-ide).
 
-- Uma compreensão de suficiente dos fundamentos da linguagem C++ acompanhá-los. Não se preocupe, não fazemos nada muito complicado.
+- Um reconhecimento dos princípios básicos da linguagem C++ a seguir. Não se preocupe, não faremos nada muito complicado.
 
-## <a name="create-the-dll-project"></a>Criar o projeto DLL
+## <a name="create-the-dll-project"></a>Criar o projeto de DLL
 
-Neste conjunto de tarefas, crie um projeto para a sua DLL, adicione o código e compilá-lo. Para começar, inicie o IDE do Visual Studio e entrar se você precisar. As instruções variam um pouco dependendo de qual versão do Visual Studio que você está usando. Verifique se que você tem a versão correta selecionada no controle na parte superior esquerda desta página.
+Neste conjunto de tarefas, você cria um projeto para sua DLL, adiciona código e o compila. Para começar, inicie o IDE do Visual Studio e, se necessário, entre. As instruções variam um pouco dependendo da versão do Visual Studio que você está usando. Verifique se tem a versão correta marcada no controle na parte superior esquerda desta página.
 
 ::: moniker range="=vs-2019"
 
-### <a name="to-create-a-dll-project-in-visual-studio-2019"></a>Para criar um projeto de DLL no Visual Studio de 2019
+### <a name="to-create-a-dll-project-in-visual-studio-2019"></a>Para criar um projeto de DLL no Visual Studio 2019
 
-1. Na barra de menus, escolha **arquivo** > **New** > **projeto** para abrir o **criar um novo projeto** caixa de diálogo.
+1. Na barra de menus, escolha **Arquivo** > **Novo** > **Projeto** para abrir a caixa de diálogo **Criar um novo projeto**.
 
-   ![Criar um novo projeto DLL](media/create-new-dll-project-2019.png "criar o projeto MathLibrary")
+   ![Criar um novo projeto de DLL](media/create-new-dll-project-2019.png "Criar o projeto MathLibrary")
 
-1. Na parte superior da caixa de diálogo, defina **linguagem** à **C++**, defina **plataforma** para **Windows**e defina **tipodeprojeto** ao **biblioteca**. 
+1. Na parte superior da caixa de diálogo, defina **Linguagem** como **C++**, **Plataforma** como **Windows** e **Tipo de projeto** como **Biblioteca**. 
 
-1. Na lista filtrada de tipos de projeto, escolha **biblioteca de vínculo dinâmico (DLL)** , em seguida, escolha **próxima**. Na próxima página, insira `MathLibrary` no **nome** caixa para especificar um nome para o projeto e especifique o local do projeto, se desejado.
+1. Na lista filtrada de tipos de projeto, escolha **Biblioteca de vínculo dinâmico (DLL)** e, em seguida, escolha **Avançar**. Na próxima página, insira `MathLibrary` na caixa **Nome** para especificar um nome para o projeto e, se quiser, especifique o local do projeto.
 
-1. Escolha o **criar** botão para criar o projeto.
+1. Escolha o botão **Criar** para criar o projeto.
 
 ::: moniker-end
 
 ::: moniker range="vs-2017"
 
-### <a name="to-create-a-dll-project-in-visual-studio-2017"></a>Para criar um projeto DLL no Visual Studio 2017
+### <a name="to-create-a-dll-project-in-visual-studio-2017"></a>Para criar um projeto de DLL no Visual Studio 2017
 
-1. Na barra de menus, escolha **arquivo** > **New** > **projeto** para abrir o **novo projeto** caixa de diálogo.
+1. Na barra de menus, escolha **Arquivo** > **Novo** > **Projeto** para abrir a caixa de diálogo **Novo Projeto**.
 
-1. No painel esquerdo do **novo projeto** diálogo caixa, expanda **instalado** e **Visual C++** se necessário e, em seguida, escolha **Windows Desktop** . No painel central, selecione **Assistente de área de trabalho do Windows**. Insira `MathLibrary` no **nome** caixa para especificar um nome para o projeto.
+1. No painel à esquerda da caixa de diálogo **Novo Projeto**, expanda **Instalado** e **Visual C++** se necessário e, em seguida, escolha **Windows Desktop**. No painel central, escolha **Assistente do Windows Desktop**. Insira `MathLibrary` na caixa **Nome** para especificar um nome para o projeto.
 
-   ![Nomeie o projeto MathLibrary](media/mathlibrary-new-project-name-153.png "Nomeie o projeto MathLibrary")
+   ![Nomear o projeto MathLibrary](media/mathlibrary-new-project-name-153.png "Nomear o projeto MathLibrary")
 
-1. Escolha o **Okey** botão para ignorar a **novo projeto** caixa de diálogo e iniciar o **projeto de área de trabalho do Windows** assistente.
+1. Escolha o botão **OK** para ignorar a caixa de diálogo **Novo Projeto** e iniciar o assistente do **Projeto do Windows Desktop**.
 
-1. No **projeto de área de trabalho do Windows** do assistente, sob **tipo de aplicativo**, selecione **biblioteca de vínculo dinâmico (. dll)**.
+1. No assistente do **Projeto do Windows Desktop**, em **Tipo de Aplicativo**, escolha **Biblioteca de Vínculo Dinâmico (.dll)**.
 
-   ![Criar a DLL no Assistente de projeto da área de trabalho do Windows](media/mathlibrary-desktop-project-wizard-dll.png "criar DLL no Assistente de projeto para desktops Windows")
+   ![Criar a DLL no Assistente de Projeto do Windows Desktop](media/mathlibrary-desktop-project-wizard-dll.png "Criar a DLL no Assistente de Projeto do Windows Desktop")
 
 1. Escolha o botão **OK** para criar o projeto.
 
 > [!NOTE]
-> Etapas adicionais são necessárias para corrigir um problema no Visual Studio 2017 versão 15.3. Siga estas instruções para verificar se é necessário fazer essa alteração.
+> São necessárias outras etapas para corrigir um problema no Visual Studio 2017 versão 15.3. Siga estas instruções para verificar se é necessário fazer essa alteração.
 >
->1. Na **Gerenciador de soluções**, se ele não ainda estiver selecionado, selecione o **MathLibrary** projeto **solução 'MathLibrary'**.
+>1. No **Gerenciador de Soluções**, se ele não ainda estiver marcado, escolha o projeto **MathLibrary** em **Solução 'MathLibrary'**.
 >
->1. Na barra de menus, escolha **Project** > **propriedades**.
+>1. Na barra de menus, escolha **Projeto** > **Propriedades**.
 >
->1. No painel esquerdo do **páginas de propriedades** caixa de diálogo, selecione **pré-processador** sob **propriedades de configuração** > **C/C++**. Verifique o conteúdo do **definições de pré-processador** propriedade.<br/><br/>![Verifique a propriedade de definições de pré-processador](media/mathlibrary-153bug-preprocessor-definitions-check.png "Verifique a propriedade de definições de pré-processador")<br/><br/>Se você vir **MATHLIBRARY&#95;exportações** no **definições de pré-processador** listar, então você não precisa alterar nada. Se você vir **MathLibrary&#95;exportações** em vez disso, em seguida, continue seguindo estas etapas.
+>1. No painel esquerdo da caixa de diálogo **Páginas de Propriedades**, escolha **Pré-processador** em **Propriedades de Configuração** > **C/C++**. Verifique o conteúdo da propriedade **Definições de Pré-processador**.<br/><br/>![Verificar a propriedade Definições do Pré-processador](media/mathlibrary-153bug-preprocessor-definitions-check.png "Verificar a propriedade Definições do Pré-processador")<br/><br/>Se você vê **MATHLIBRARY&#95;EXPORTS** na lista **Definições do Pré-processador**, nada precisa ser alterado. No entanto, se você vê **MathLibrary&#95;EXPORTS**, continue seguindo estas etapas.
 >
->1. Na parte superior dos **páginas de propriedades** caixa de diálogo, altere o **Configuration** lista suspensa para **todas as configurações de**.
+>1. Na parte superior da caixa de diálogo **Páginas de Propriedades**, altere o valor suspenso **Configuração** para **Todas as configurações**.
 >
->1. No painel de propriedade, selecione o controle de lista suspensa ao lado da caixa de edição para **definições de pré-processador**e, em seguida, escolha **editar**.<br/><br/>![Editar a propriedade de definições de pré-processador](media/mathlibrary-153bug-preprocessor-definitions-property.png "editar a propriedade de definições de pré-processador")
+>1. No painel de propriedade, selecione o controle suspenso ao lado da caixa de edição para **Definições do Pré-processador** e, em seguida, escolha **Editar**.<br/><br/>![Editar a propriedade Definições do Pré-processador](media/mathlibrary-153bug-preprocessor-definitions-property.png "Editar a propriedade Definições do Pré-processador")
 >
->1. No painel de superior a **definições de pré-processador** caixa de diálogo, adicionar um novo símbolo, `MATHLIBRARY_EXPORTS`.<br/><br/>![Adicionar o símbolo MATHLIBRARY_EXPORTS](media/mathlibrary-153bug-preprocessor-definitions-dialog.png "adicionar o símbolo MATHLIBRARY_EXPORTS")
+>1. No painel superior da caixa de diálogo **Definições do Pré-processador**, adicione um novo símbolo, `MATHLIBRARY_EXPORTS`.<br/><br/>![Adicionar o símbolo MATHLIBRARY_EXPORTS](media/mathlibrary-153bug-preprocessor-definitions-dialog.png "Adicionar o símbolo MATHLIBRARY_EXPORTS")
 >
->1. Escolher **Okey** para ignorar a **definições de pré-processador** caixa de diálogo e, em seguida, escolha **Okey** para salvar suas alterações às propriedades do projeto.
+>1. Escolha **OK** para ignorar a caixa de diálogo **Definições do Pré-processador** e, em seguida, escolha **OK** para salvar suas alterações nas propriedades do projeto.
 
 ::: moniker-end
 
 ::: moniker range="=vs-2015"
 
-### <a name="to-create-a-dll-project-in-older-versions-of-visual-studio"></a>Para criar um projeto DLL em versões mais antigas do Visual Studio
+### <a name="to-create-a-dll-project-in-older-versions-of-visual-studio"></a>Para criar um projeto de DLL em versões mais antigas do Visual Studio
 
 1. Na barra de menus, escolha **Arquivo** > **Novo** > **Projeto**.
 
-1. No painel esquerdo do **novo projeto** diálogo caixa, expanda **instalado** > **modelos**e selecione **Visual C++**, e em seguida, no painel central, selecione **aplicativo do Console Win32**. Insira `MathLibrary` no **nome** caixa para especificar um nome para o projeto de edição.
+1. No painel esquerdo da caixa de diálogo **Novo Projeto**, expanda **Modelos** > **Instalados** e escolha **Visual C++**. Em seguida, no painel central, escolha **Aplicativo de Console Win32**. Insira `MathLibrary` na caixa de edição **Nome** para especificar um nome para o projeto.
 
-   ![Nomeie o projeto MathLibrary](media/mathlibrary-project-name.png "Nomeie o projeto MathLibrary")
+   ![Nomear o projeto MathLibrary](media/mathlibrary-project-name.png "Nomear o projeto MathLibrary")
 
-1. Escolha o **Okey** botão para ignorar a **novo projeto** caixa de diálogo e iniciar o **Assistente de aplicativo Win32**.
+1. Escolha o botão **OK** para ignorar a caixa de diálogo **Novo Projeto** e iniciar o **Assistente de Aplicativo Win32**.
 
-   ![Visão geral do Assistente de aplicativo Win32](media/mathlibrary-project-wizard-1.png "visão geral do Assistente de aplicativo Win32")
+   ![Visão geral do Assistente de Aplicativo Win32](media/mathlibrary-project-wizard-1.png "Visão geral do Assistente de Aplicativo Win32")
 
-1. Escolha o botão **Avançar**. Sobre o **configurações do aplicativo** página, em **tipo de aplicativo**, selecione **DLL**.
+1. Escolha o botão **Avançar**. Na página **Configurações do Aplicativo**, em **Tipo de Aplicativo**, escolha **DLL**.
 
-   ![Criar a DLL no Assistente de aplicativo Win32](media/mathlibrary-project-wizard-2.png "criar DLL no Assistente de aplicativo Win32")
+   ![Criar DLL no Assistente de Aplicativo Win32](media/mathlibrary-project-wizard-2.png "Criar DLL no Assistente de Aplicativo Win32")
 
-1. Escolha o **concluir** botão para criar o projeto.
+1. Escolha o botão **Concluir** para criar o projeto.
 
-Quando o assistente concluir a solução, você pode ver os arquivos de projeto e código-fonte gerados na **Gerenciador de soluções** janela no Visual Studio.
+Quando o assistente concluir a solução, você verá os arquivos de projeto e de origem gerados na janela do **Gerenciador de Soluções** no Visual Studio.
 
-![Gerado solução no Visual Studio](media/mathlibrary-solution-explorer-153.png "gerado solução no Visual Studio")
+![Solução gerada no Visual Studio](media/mathlibrary-solution-explorer-153.png "Solução gerada no Visual Studio")
 
-Direita agora, essa DLL não faz muita coisa. Em seguida, você cria um arquivo de cabeçalho para declarar as funções de DLL exporta e, em seguida, adicione as definições de função para a DLL para torná-lo mais útil.
+No momento, essa DLL não faz muita coisa. Em seguida, crie um arquivo de cabeçalho para declarar as funções que sua DLL exporta e, em seguida, adicione as definições de função à DLL para torná-la mais útil.
 
 ::: moniker-end
 
-### <a name="to-add-a-header-file-to-the-dll"></a>Para adicionar um arquivo de cabeçalho para a DLL
+### <a name="to-add-a-header-file-to-the-dll"></a>Para adicionar um arquivo de cabeçalho à DLL
 
-1. Para criar um arquivo de cabeçalho para suas funções, na barra de menus, escolha **Project** > **Adicionar Novo Item**.
+1. Para criar um arquivo de cabeçalho para suas funções, na barra de menus, escolha **Projeto** > **Adicionar Novo Item**.
 
-1. No **Adicionar Novo Item** caixa de diálogo, no painel esquerdo, selecione **Visual C++**. No painel central, selecione **arquivo de cabeçalho (. h)**. Especificar `MathLibrary.h` como o nome para o arquivo de cabeçalho.
+1. Na caixa de diálogo **Adicionar Novo Item**, no painel à esquerda, escolha **Visual C++**. No painel central, escolha **Arquivo de Cabeçalho (.h)**. Especifique `MathLibrary.h` como o nome para o arquivo de cabeçalho.
 
-   ![Adicionar cabeçalho na caixa de diálogo Adicionar Novo Item](media/mathlibrary-add-new-item-header-file.png "adicionar o arquivo de cabeçalho na caixa de diálogo Adicionar Novo Item")
+   ![Adicionar cabeçalho na caixa de diálogo Adicionar Novo Item](media/mathlibrary-add-new-item-header-file.png "Adicionar arquivo de cabeçalho na caixa de diálogo Adicionar Novo Item")
 
-1. Escolha o **adicionar** botão para gerar um arquivo de cabeçalho em branco, que é exibido em uma nova janela do editor.
+1. Escolha o botão **Adicionar** para gerar um arquivo de cabeçalho em branco, que é exibido em uma nova janela do editor.
 
-   ![Arquivo MathLibrary.h vazio no editor](media/edit-empty-mathlibrary-header.png "MathLibrary.h vazio o arquivo no editor")
+   ![Esvaziar o arquivo MathLibrary.h no editor](media/edit-empty-mathlibrary-header.png "Esvaziar o arquivo MathLibrary.h no editor")
 
-1. Substitua o conteúdo do arquivo de cabeçalho com este código:
+1. Substitua o conteúdo do arquivo de cabeçalho por este código:
 
    ```cpp
    // MathLibrary.h - Contains declarations of math functions
@@ -184,29 +184,29 @@ Direita agora, essa DLL não faz muita coisa. Em seguida, você cria um arquivo 
    extern "C" MATHLIBRARY_API unsigned fibonacci_index();
    ```
 
-Esse arquivo de cabeçalho declara algumas funções para produzir uma sequência de Fibonacci generalizada, determinados dois valores iniciais. Uma chamada para `fibonacci_init(1, 1)` gera a sequência de número de Fibonacci familiarizado.
+Este arquivo de cabeçalho declara algumas funções para produzir uma sequência de Fibonacci generalizada, tendo em conta dois valores iniciais. Uma chamada para `fibonacci_init(1, 1)` gera a conhecida sequência de números de Fibonacci.
 
-Observe as instruções do pré-processador na parte superior do arquivo. Por padrão, o modelo de novo projeto para uma DLL adiciona  **\<eme > PROJECTNAME\</em >&#95;exportações** para as macros de pré-processador definidas para o projeto DLL. Neste exemplo, o Visual Studio define **MATHLIBRARY&#95;exportações** quando seu projeto de DLL MathLibrary é compilado. 
+Observe as instruções do pré-processador na parte superior do arquivo. Por padrão, o modelo Novo Projeto de uma DLL acrescenta **\<em>NOMEPROJETO\</em>&#95;EXPORTS** às macros do pré-processador para o projeto da DLL. Neste exemplo, o Visual Studio define **MATHLIBRARY&#95;EXPORTS** quando seu projeto de DLL MathLibrary é compilado. 
 
 ::: moniker range="=vs-2017"
 
-(O assistente no Visual Studio 2017 versão 15.3 não força a essa definição de símbolo em letras maiusculas. Se você nomear o projeto "MathLibrary", o símbolo definido será MathLibrary&#95;exportações em vez de MATHLIBRARY&#95;exportações. That's por isso que há etapas adicionais acima para adicionar esse símbolo.)
+(O assistente da versão 15.3 do Visual Studio 2017 não exige que a definição desse símbolo esteja em maiúsculas. Se você nomear o projeto como "MathLibrary", o símbolo definido será MathLibrary&#95;EXPORTS ao invés de MATHLIBRARY&#95;EXPORTS. Isso acontece porque há mais etapas acima para adicionar esse símbolo.)
 
 ::: moniker-end
 
-Quando o **MATHLIBRARY&#95;exportações** macro é definida, o **MATHLIBRARY&#95;API** conjuntos de macro a `__declspec(dllexport)` modificador em declarações de função. Esse modificador informa ao compilador e vinculador para exportar uma função ou variável da DLL para que ele pode ser usado por outros aplicativos. Quando **MATHLIBRARY&#95;exportações** é indefinido, por exemplo, quando o arquivo de cabeçalho é incluído por um aplicativo de cliente **MATHLIBRARY&#95;API** aplica-se a `__declspec(dllimport)` modificador para o declarações. Esse modificador otimiza a importação da função ou variável em um aplicativo. Para obter mais informações, consulte [dllexport, dllimport](../cpp/dllexport-dllimport.md).
+Quando a macro **MATHLIBRARY&#95;EXPORTS** é definida, a macro **MATHLIBRARY&#95;API** define o modificador `__declspec(dllexport)` nas declarações da função. Esse modificador informa ao compilador e ao vinculador para exportar uma função ou variável da DLL para que ela possa ser usada por outros aplicativos. Quando **MATHLIBRARY&#95;EXPORTS** está indefinido, por exemplo, quando o arquivo de cabeçalho é incluído por um aplicativo cliente, **MATHLIBRARY&#95;API** aplica o modificador `__declspec(dllimport)` às declarações. Esse modificador otimiza a importação da função ou variáveis em aplicativos. Para saber mais, confira [dllexport, dllimport](../cpp/dllexport-dllimport.md).
 
-### <a name="to-add-an-implementation-to-the-dll"></a>Para adicionar uma implementação para a DLL
+### <a name="to-add-an-implementation-to-the-dll"></a>Para adicionar uma implementação à DLL
 
 ::: moniker range="vs-2019"
 
-1. No **Gerenciador de soluções**, clique com botão direito no **arquivos de origem** nó e adicionar um novo arquivo. cpp chamado `MathLibrary.cpp` da mesma maneira que você adicionou um novo arquivo de cabeçalho na etapa anterior.
+1. No **Gerenciador de Soluções**, clique com o botão direito do mouse no nó **Arquivos de origem** e inclua um novo arquivo .cpp chamado `MathLibrary.cpp`, da mesma forma que o novo arquivo de cabeçalho foi adicionado na etapa anterior.
 
 ::: moniker-end
 
-1. Na janela do editor, selecione a guia para **MathLibrary.cpp** se já estiver aberto. Caso contrário, na **Gerenciador de soluções**, abra **MathLibrary.cpp** no **arquivos de origem** pasta do **MathLibrary** projeto.
+1. Na janela do editor, escolha a guia para **MathLibrary.cpp** se já estiver aberta. Caso contrário, no **Gerenciador de Soluções**, abra **MathLibrary.cpp** na pasta **Arquivos de origem** do projeto **MathLibrary**.
 
-1. No editor, substitua o conteúdo do arquivo MathLibrary.cpp com o código a seguir:
+1. No editor, substitua o conteúdo do arquivo MathLibrary.cpp pelo código a seguir:
 
    ```cpp
    // MathLibrary.cpp : Defines the exported functions for the DLL.
@@ -267,11 +267,10 @@ Quando o **MATHLIBRARY&#95;exportações** macro é definida, o **MATHLIBRARY&#9
    }
    ```
 
-Para verificar se tudo funciona até agora, compile a biblioteca de vínculo dinâmico. Para compilar, escolha **construir** > **compilar solução** na barra de menus. A saída deve ser algo como:
+Para verificar se tudo está funcionando bem, compile a biblioteca de vínculo dinâmico. Para compilar, escolha **Compilar** > **Compilar solução** na barra de menus. O resultado deve ter uma aparência semelhante a esta:
 
 ```Output
 1>------ Build started: Project: MathLibrary, Configuration: Debug Win32 ------
-1>stdafx.cpp
 1>MathLibrary.cpp
 1>dllmain.cpp
 1>Generating Code...
@@ -281,27 +280,27 @@ Para verificar se tudo funciona até agora, compile a biblioteca de vínculo din
 ========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========
 ```
 
-Parabéns, você criou uma DLL usando o Visual C++! Em seguida, você criará um aplicativo cliente que usa as funções exportadas pela DLL.
+Parabéns, você criou uma DLL usando o Visual C++! A seguir, você criará um aplicativo cliente que usa as funções exportadas pela DLL.
 
 ## <a name="create-a-client-app-that-uses-the-dll"></a>Criar um aplicativo cliente que usa a DLL
 
-Quando você cria uma DLL, você deve pensar sobre como a sua DLL pode ser usado. Para compilar o código que chama as funções exportadas por uma DLL, as declarações devem ser incluídas no código de origem do cliente. Em tempo de vinculação, quando essas chamadas de funções de DLL são resolvidas, o vinculador deve ter uma *biblioteca de importação*, um arquivo de biblioteca especial que contém informações para o Windows sobre como localizar as funções, em vez do código real. E, em tempo de execução, a DLL deve estar disponível para o cliente, em um local que o sistema operacional pode encontrar.
+Quando você cria uma DLL, precisa pensar como ela poderá ser usada. Para compilar o código que chama as funções exportadas por uma DLL, as declarações devem ser incluídas no código-fonte do cliente. No tempo de vinculação, quando essas chamadas para funções DLL são resolvidas, o vinculador deve ter uma *biblioteca de importação*, um arquivo de biblioteca especial com informações para o Windows sobre como localizar as funções e não o código real. E no tempo de execução a DLL deve estar disponível para o cliente, em um local que o sistema operacional possa localizá-la.
 
-Para fazer uso de uma DLL, se seu proprietário ou uma DLL de terceiros, seu projeto de aplicativo cliente deve localizar os cabeçalhos que declarar a DLL exporta, as bibliotecas de importação para o vinculador e a própria DLL. Uma maneira, é copiar todos esses arquivos em seu projeto de cliente. DLLs de terceiros que são improvável de ser alterado enquanto seu cliente está em desenvolvimento, esse método pode ser a melhor maneira de usá-los. No entanto, quando você também pode criar a DLL, é melhor evitar a duplicação. Se você fizer uma cópia dos arquivos DLL que estão em desenvolvimento, pode acidentalmente alterar um arquivo de cabeçalho em uma cópia, mas não o outro ou usar uma biblioteca desatualizada. Para evitar esse problema, recomendamos que você defina o caminho de inclusão no seu projeto de cliente para incluir os arquivos de cabeçalho DLL do projeto de DLL. Além disso, defina o caminho da biblioteca em seu projeto de cliente para incluir as bibliotecas de importação DLL do projeto de DLL. E, por fim, copie a DLL compilada do projeto de DLL em seu diretório de saída de compilação. Esta etapa permite que seu aplicativo cliente usar o mesmo código DLL que você criar.
+Para usar uma DLL, seja ela sua própria DLL ou de terceiros, seu projeto de aplicativo cliente deve localizar os cabeçalhos que declaram as exportações da DLL, as bibliotecas de importação do vinculador e a DLL em si. Isso pode ser feito copiando todos esses arquivos para o projeto de cliente. No caso de DLLs de terceiros que provavelmente não serão alteradas enquanto seu cliente estiver em desenvolvimento, esse método pode ser a melhor maneira de usá-las. No entanto, quando você também compila a DLL, é melhor evitar a duplicação. Se você fizer uma cópia dos arquivos DLL que estão em desenvolvimento, poderá acidentalmente alterar um arquivo de cabeçalho em uma cópia, mas não o outro arquivo, ou usar uma biblioteca desatualizada. Para evitar esse problema, recomendamos definir o caminho de inclusão no projeto de cliente para incluir os arquivos de cabeçalho da DLL do projeto da DLL. Além disso, defina o caminho da biblioteca em seu projeto de cliente para incluir as bibliotecas de importação de DLLs do projeto da DLL. Por fim, copie a DLL compilada do projeto da DLL para seu diretório de saída compilado. Esta etapa permite que seu aplicativo cliente use o mesmo código de DLL que você compilou.
 
 ::: moniker range="vs-2019"
 
-### <a name="to-create-a-client-app-in-visual-studio-2019"></a>Para criar um aplicativo cliente no Visual Studio de 2019
+### <a name="to-create-a-client-app-in-visual-studio-2019"></a>Para criar um aplicativo cliente no Visual Studio 2019
 
-1. Na barra de menus, escolha **arquivo** > **New** > **projeto** para abrir o **criar um novo projeto** caixa de diálogo.
+1. Na barra de menus, escolha **Arquivo** > **Novo** > **Projeto** para abrir a caixa de diálogo **Criar um novo projeto**.
 
-1. Na parte superior da caixa de diálogo, defina **linguagem** à **C++**, defina **plataforma** para **Windows**e defina **tipodeprojeto** ao **Console**. 
+1. Na parte superior da caixa de diálogo, defina **Linguagem** como **C++**, **Plataforma** como **Windows** e **Tipo de projeto** como **Console**. 
 
-1. Na lista filtrada de tipos de projeto, escolha **aplicativo de Console** , em seguida, escolha **próxima**. Na próxima página, insira `MathClient` no **nome** caixa para especificar um nome para o projeto e especifique o local do projeto, se desejado.
+1. Na lista filtrada de tipos de projeto, escolha **Aplicativo de Console** e, em seguida, escolha **Avançar**. Na próxima página, insira `MathClient` na caixa **Nome** para especificar um nome para o projeto e, se quiser, especifique o local do projeto.
 
-   ![Nomeie o projeto de cliente](media/mathclient-project-name-2019.png "Nomeie o projeto de cliente")
+   ![Nomear o projeto de cliente](media/mathclient-project-name-2019.png "Nomear o projeto de cliente")
 
-1. Escolha o **criar** botão para criar o projeto do cliente.
+1. Escolha o botão **Criar** para criar o projeto do cliente.
 
 ::: moniker-end
 
@@ -309,13 +308,13 @@ Para fazer uso de uma DLL, se seu proprietário ou uma DLL de terceiros, seu pro
 
 ### <a name="to-create-a-client-app-in-visual-studio-2017"></a>Para criar um aplicativo cliente no Visual Studio 2017
 
-1. Para criar um C++ aplicativo que usa a DLL que você criou, na barra de menus, escolha **arquivo** > **New** > **projeto**.
+1. Para criar um aplicativo C++ que use a DLL que você criou, escolha **Arquivo** > **Novo** > **Projeto** na barra de menus.
 
-1. No painel esquerdo do **novo projeto** caixa de diálogo, selecione **área de trabalho do Windows** sob **instalado** > **Visual C++**. No painel central, selecione **Assistente de área de trabalho do Windows**. Especifique o nome do projeto `MathClient`, no **nome** caixa de edição.
+1. No painel esquerdo da caixa de diálogo **Novo Projeto**, escolha **Windows Desktop** em **Visual C++** > **Instalado**. No painel central, escolha **Assistente do Windows Desktop**. Especifique o nome do projeto, `MathClient`, na caixa de edição **Nome**.
 
-   ![Nomeie o projeto de cliente](media/mathclient-new-project-name-153.png "Nomeie o projeto de cliente")
+   ![Nomear o projeto de cliente](media/mathclient-new-project-name-153.png "Nomear o projeto de cliente")
 
-1. Escolher **Okey** para iniciar o **projeto de área de trabalho do Windows** assistente. No assistente, escolha **Okey** para criar o projeto de aplicativo do cliente.
+1. Escolha **OK** para iniciar o assistente **Projeto do Windows Desktop**. No assistente, escolha **OK** para criar o projeto de aplicativo cliente.
 
 ::: moniker-end
 
@@ -323,49 +322,49 @@ Para fazer uso de uma DLL, se seu proprietário ou uma DLL de terceiros, seu pro
 
 ### <a name="to-create-a-client-app-in-older-versions-of-visual-studio-2017"></a>Para criar um aplicativo cliente em versões mais antigas do Visual Studio 2017
 
-1. Para criar um C++ aplicativo que usa a DLL que você criou, na barra de menus, escolha **arquivo** > **New** > **projeto**.
+1. Para criar um aplicativo C++ que use a DLL que você criou, escolha **Arquivo** > **Novo** > **Projeto** na barra de menus.
 
-1. No painel esquerdo do **novo projeto** caixa de diálogo, selecione **Win32** sob **instalado** > **modelos**  >  **Visual C++**. No painel central, selecione **aplicativo do Console Win32**. Especifique o nome do projeto `MathClient`, no **nome** caixa de edição.
+1. No painel esquerdo da caixa de diálogo **Novo Projeto**, escolha **Win32** em **Modelos** > **Instalados do** > **Visual C++**. No painel central, escolha **Aplicativo de Console Win32**. Especifique o nome do projeto, `MathClient`, na caixa de edição **Nome**.
 
-   ![Nomeie o projeto de cliente](media/mathclient-project-name.png "Nomeie o projeto de cliente")
+   ![Nomear o projeto de cliente](media/mathclient-project-name.png "Nomear o projeto de cliente")
 
-1. Escolha o **Okey** botão para ignorar a **novo projeto** caixa de diálogo e iniciar o **Assistente de aplicativo Win32**. No **visão geral** página do **Assistente de aplicativo Win32** caixa de diálogo, escolha o **próxima** botão.
+1. Escolha o botão **OK** para ignorar a caixa de diálogo **Novo Projeto** e iniciar o **Assistente de Aplicativo Win32**. Na página **Visão geral** da caixa de diálogo **Assistente de Aplicativo Win32**, clique no botão **Avançar**.
 
-1. Sobre o **configurações do aplicativo** página, em **tipo de aplicativo**, selecione **aplicativo de Console** se ainda não estiver selecionado.
+1. Na página **Configurações do Aplicativo**, em **Tipo de Aplicativo**, escolha **Aplicativo de Console**, caso ainda não esteja marcado.
 
-1. Escolha o **concluir** botão para criar o projeto.
+1. Escolha o botão **Concluir** para criar o projeto.
 
 ::: moniker-end
 
-Quando o assistente for concluído, um projeto de aplicativo de console mínimo é criado para você. O nome do arquivo de origem principal é o mesmo que o nome do projeto que você inseriu anteriormente. Neste exemplo, ela é nomeada **MathClient.cpp**. Você pode compilá-lo, mas ele não usa a DLL ainda.
+Quando o assistente for concluído, um projeto de aplicativo de console mínimo será criado para você. O nome do arquivo de origem principal é o mesmo nome do projeto inserido anteriormente. Neste exemplo, o nome usado é **MathClient.cpp**. Você pode compilá-lo, mas ele ainda não usa a DLL.
 
-Em seguida, para chamar as funções MathLibrary em seu código-fonte, seu projeto deve incluir o arquivo MathLibrary.h. Você poderia copiar esse arquivo de cabeçalho para o projeto de aplicativo do cliente e adicioná-lo ao projeto como um item existente. Esse método pode ser uma boa opção para bibliotecas de terceiros. No entanto, se você estiver trabalhando no código para seu DLL ao mesmo tempo como seu cliente, que pode levar a alterações no arquivo de um cabeçalho que não são mostradas no outro. Para evitar esse problema, você pode alterar o **diretórios de inclusão adicionais** caminho em seu projeto para incluir o caminho para o cabeçalho original.
+Em seguida, para chamar as funções MathLibrary em seu código-fonte, seu projeto deve incluir o arquivo MathLibrary.h. Você poderia copiar esse arquivo de cabeçalho para o projeto do aplicativo cliente e adicioná-lo ao projeto como um item existente. Esse método pode ser uma boa opção para bibliotecas de terceiros. No entanto, se você estiver trabalhando no código da DLL ao mesmo tempo que seu cliente, poderá haver alterações em um arquivo de cabeçalho que não serão mostradas no outro arquivo. Para evitar esse problema, altere o caminho de **Diretórios de Inclusão Adicionais** em seu projeto para incluir o caminho no cabeçalho original.
 
-### <a name="to-add-the-dll-header-to-your-include-path"></a>Para adicionar o cabeçalho DLL a seu caminho de inclusão
+### <a name="to-add-the-dll-header-to-your-include-path"></a>Para adicionar o cabeçalho da DLL ao caminho de inclusão
 
-1. Clique com botão direito no **MathClient** nó no **Gerenciador de soluções** para abrir o **páginas de propriedade** caixa de diálogo.
+1. Clique com botão direito do mouse no nó **MathClient** no **Gerenciador de Soluções** para abrir a caixa de diálogo **Páginas de Propriedades**.
 
-1. No **Configuration** caixa de lista suspensa, selecione **todas as configurações de** se ainda não estiver selecionado.
+1. Na caixa da lista suspensa **Configuração**, escolha **Todas as Configurações** caso a opção ainda não esteja marcada.
 
-1. No painel esquerdo, selecione **gerais** sob **propriedades de configuração** > **C/C++**.
+1. No painel à esquerda, escolha **Geral** em **Propriedades da Configuração** > **C/C++**.
 
-1. No painel de propriedades, selecione o controle de lista suspensa ao lado de **diretórios de inclusão adicionais** caixa de edição e, em seguida, escolha **editar**.
+1. No painel de propriedades, escolha o controle suspenso ao lado da caixa de edição **Diretórios de Inclusão Adicionais** e, em seguida, escolha **Editar**.
 
-   ![Editar a propriedade de diretórios de inclusão adicionais](media/mathclient-additional-include-directories-property.png "editar a propriedade de diretórios de inclusão adicionais")
+   ![Editar a propriedade Diretórios de Inclusão Adicionais](media/mathclient-additional-include-directories-property.png "Editar a propriedade Diretórios de Inclusão Adicionais")
 
-1. Clique duas vezes no painel de superior a **diretórios de inclusão adicionais** caixa de diálogo para habilitar um controle de edição.
+1. Clique duas vezes no painel superior da caixa de diálogo **Diretórios de Inclusão Adicionais** para ativar um controle de edição.
 
-1. No controle de edição, especifique o caminho para o local do **MathLibrary.h** arquivo de cabeçalho. Nesse caso, você pode usar um caminho relativo da pasta que contém os arquivos. cpp no projeto do cliente para a pasta que contém o arquivo. h no projeto de DLL. Se seu projeto de cliente estiver em uma solução separada na mesma pasta que a solução DLL, o caminho relativo deve ter esta aparência:
+1. No controle de edição, especifique o caminho para o local do arquivo de cabeçalho **MathLibrary.h**. Nesse caso, você pode usar um caminho relativo da pasta que contém os arquivos .cpp no projeto de cliente para a pasta que contém o arquivo .h no projeto da DLL. Se seu projeto de cliente estiver em uma solução separada na mesma pasta que a solução DLL, o caminho relativo deverá ter esta aparência:
 
    `..\..\MathLibrary\MathLibrary`
 
-   Se seus projetos DLL e o cliente estiverem na mesma solução, ou as soluções em pastas diferentes, você deve ajustar o caminho relativo adequadamente.
+   Se seus projetos de DLL e cliente estiverem na mesma solução ou se as soluções estiverem em pastas diferentes, você deverá ajustar o caminho relativo adequadamente.
 
-   ![Adicione o local do cabeçalho para a propriedade de diretórios de inclusão adicionais](media/mathclient-additional-include-directories.png "adicionar o local do cabeçalho para a propriedade de diretórios de inclusão adicionais")
+   ![Adicionar o local do cabeçalho à propriedade Diretórios de Inclusão Adicionais](media/mathclient-additional-include-directories.png "Adicionar o local do cabeçalho à propriedade Diretórios de Inclusão Adicionais")
 
-1. Depois de inserir o caminho para o arquivo de cabeçalho na **diretórios de inclusão adicionais** diálogo caixa, escolha o **Okey** botão Voltar para o **páginas de propriedades** caixa de diálogo, e em seguida, escolha o **Okey** botão para salvar suas alterações.
+1. Depois de inserir o caminho para o arquivo de cabeçalho na caixa de diálogo **Diretórios de Inclusão Adicionais**, escolha o botão **OK** para voltar para a caixa de diálogo **Páginas de Propriedades** e, em seguida, escolha o botão **OK** para salvar suas alterações.
 
-Agora você pode incluir a **MathLibrary.h** de arquivo e usar as funções que ele declara em seu aplicativo cliente. Substitua o conteúdo do **MathClient.cpp** usando este código:
+Agora você pode incluir o arquivo **MathLibrary.h** e usar as funções que ele declara em seu aplicativo cliente. Substitua o conteúdo de **MathClient.cpp** usando este código:
 
 ```cpp
 // MathClient.cpp : Client app for MathLibrary DLL.
@@ -389,55 +388,55 @@ int main()
 }
 ```
 
-Esse código pode ser compilado, mas não vinculado, porque o vinculador não pode localizar a biblioteca de importação necessária para compilar o aplicativo ainda. O vinculador deve localizar o arquivo de MathLibrary.lib para vincular com êxito. Adicionar o arquivo MathLibrary.lib à compilação definindo a **dependências adicionais** propriedade. Mais uma vez, você pode copiar o arquivo de biblioteca em seu projeto de aplicativo do cliente, mas se a biblioteca e o aplicativo cliente estão em desenvolvimento, que pode resultar em alterações em uma cópia que não são mostradas no outro. Para evitar esse problema, você pode alterar o **diretórios de biblioteca adicionais** caminho em seu projeto para incluir o caminho para a biblioteca original quando você os vincula.
+Esse código pode ser compilado, mas não vinculado, porque o vinculador ainda não consegue localizar a biblioteca de importação necessária para compilar o aplicativo. O vinculador deve localizar o arquivo MathLibrary.lib para vinculá-lo com eficiência. Adicione o arquivo MathLibrary.lib à compilação definindo a propriedade **Dependências Adicionais**. Mais uma vez, você pode copiar o arquivo da biblioteca para o projeto de aplicativo cliente, mas se a biblioteca e o aplicativo cliente estiverem em desenvolvimento, isso pode levar a alterações em uma cópia que não são mostradas na outra. Para evitar esse problema, altere o caminho de **Diretórios de Biblioteca Adicionais** em seu projeto para incluir o caminho para a biblioteca original quando a vinculação ocorrer.
 
-### <a name="to-add-the-dll-import-library-to-your-project"></a>Para adicionar a biblioteca de importação DLL ao seu projeto
+### <a name="to-add-the-dll-import-library-to-your-project"></a>Para adicionar a biblioteca de importação da DLL ao projeto
 
-1. Clique com botão direito no **MathClient** nó no **Gerenciador de soluções** para abrir o **páginas de propriedade** caixa de diálogo.
+1. Clique com botão direito do mouse no nó **MathClient** no **Gerenciador de Soluções** para abrir a caixa de diálogo **Páginas de Propriedades**.
 
-1. No **Configuration** caixa de lista suspensa, selecione **todas as configurações de** se ainda não estiver selecionado. Essa configuração garante que o caminho é definido para ambos de depuração e libere compilações.
+1. Na caixa da lista suspensa **Configuração**, escolha **Todas as Configurações** caso a opção ainda não esteja marcada. Essa configuração garante que o caminho seja definido para as compilações de depuração e de versão.
 
-1. No painel esquerdo, selecione **entrada** sob **propriedades de configuração** > **vinculador**. No painel de propriedades, selecione o controle de lista suspensa ao lado de **dependências adicionais** caixa de edição e, em seguida, escolha **editar**.
+1. No painel à esquerda, escolha **Entrada** em **Propriedades da Configuração** > **Vinculador**. No painel de propriedades, escolha o controle suspenso ao lado da caixa de edição **Dependências Adicionais** e, em seguida, escolha **Editar**.
 
-   ![Edite a propriedade dependências adicionais](media/mathclient-additional-dependencies-property.png "editar a propriedade dependências adicionais")
+   ![Editar a propriedade Dependências Adicionais](media/mathclient-additional-dependencies-property.png "Editar a propriedade Dependências Adicionais")
 
-1. No **dependências adicionais** caixa de diálogo Adicionar `MathLibrary.lib` controle de edição à lista na parte superior.
+1. Na caixa de diálogo **Dependências Adicionais**, adicione `MathLibrary.lib` à lista no controle de edição superior.
 
-   ![Adicione a dependência de biblioteca](media/mathclient-additional-dependencies.png "adicionar a dependência de biblioteca")
+   ![Adicionar a dependência de biblioteca](media/mathclient-additional-dependencies.png "Adicionar a dependência de biblioteca")
 
-1. Escolher **Okey** para voltar para o **páginas de propriedade** caixa de diálogo.
+1. Escolha **OK** para voltar para a caixa de diálogo **Páginas de Propriedades**.
 
-1. No painel esquerdo, selecione **gerais** sob **propriedades de configuração** > **vinculador**. No painel de propriedades, selecione o controle de lista suspensa ao lado de **diretórios de biblioteca adicionais** caixa de edição e, em seguida, escolha **editar**.
+1. No painel à esquerda, escolha **Geral** em **Propriedades da Configuração** > **Vinculador**. No painel de propriedades, selecione o controle suspenso ao lado da caixa de edição **Diretórios de Biblioteca Adicionais** e, em seguida, escolha **Editar**.
 
-   ![Editar a propriedade de diretórios de biblioteca adicionais](media/mathclient-additional-library-directories-property.png "editar a propriedade de diretórios de biblioteca adicionais")
+   ![Editar a propriedade Diretórios de Biblioteca Adicionais](media/mathclient-additional-library-directories-property.png "Editar a propriedade Diretórios de Biblioteca Adicionais")
 
-1. Clique duas vezes no painel de superior a **diretórios de biblioteca adicionais** caixa de diálogo para habilitar um controle de edição. No controle de edição, especifique o caminho para o local do **MathLibrary.lib** arquivo. Insira esse valor para usar uma macro que funciona para depuração e lançamento cria:
+1. Clique duas vezes no painel superior da caixa de diálogo **Diretórios de Biblioteca Adicionais** para ativar um controle de edição. No controle de edição, especifique o caminho para o local do arquivo **MathLibrary.lib**. Insira esse valor para usar uma macro que funciona para compilações de depuração e de versão:
 
    `..\..\MathLibrary\$(IntDir)`
 
-   ![Adicione o diretório de biblioteca](media/mathclient-additional-library-directories.png "adicionar o diretório de biblioteca")
+   ![Adicionar o diretório de biblioteca](media/mathclient-additional-library-directories.png "Adicionar o diretório de biblioteca")
 
-1. Depois de inserir o caminho para o arquivo de biblioteca na **diretórios de biblioteca adicionais** diálogo caixa, escolha o **Okey** botão Voltar para o **páginas de propriedade** caixa de diálogo.
+1. Depois de inserir o caminho para o arquivo de biblioteca na caixa de diálogo **Diretórios de Biblioteca Adicionais**, escolha o botão **OK** para voltar para a caixa de diálogo **Páginas de Propriedades**.
 
-Seu aplicativo cliente pode compilar e vincular com êxito, mas ele ainda não tem tudo o que precisa para ser executado. Quando o sistema operacional carregará seu aplicativo, ele procura a DLL MathLibrary. Se ele não é possível localizar a DLL em determinados diretórios do sistema, o caminho de ambiente ou o diretório de aplicativo local, o carregamento falha. Uma maneira para evitar esse problema é copiar a DLL para o diretório que contém o executável do cliente como parte do processo de compilação. Para copiar a DLL, você pode adicionar um **evento pós-compilação** ao seu projeto, adicionar um comando que copia a DLL seu diretório de saída de compilação. O comando especificado aqui copia a DLL somente se ele está ausente ou foi alterada e usa as macros para copiar para e do correto depurar ou locais para a sua configuração de versão.
+Seu aplicativo cliente pode compilar e vincular com êxito, mas ainda não tem tudo aquilo que precisa para ser executado. Quando o sistema operacional carrega seu aplicativo, ele procura a DLL MathLibrary. Se não conseguir encontrar a DLL em determinados diretórios do sistema, o caminho do ambiente ou o diretório local do aplicativo, o carregamento falhará. Uma maneira de evitar esse problema é copiar a DLL para o diretório que contém o executável do cliente como parte do processo de compilação. Para copiar a DLL, você pode adicionar um **Evento Pós-Build** ao projeto para adicionar um comando que copia a DLL para o diretório de saída da compilação. O comando especificado aqui copia a DLL somente se ela estiver ausente ou tiver sido alterada, e usa macros para copiar de e para os locais corretos de depuração ou versão para sua configuração.
 
-### <a name="to-copy-the-dll-in-a-post-build-event"></a>Para copiar a DLL em um evento de pós-compilação
+### <a name="to-copy-the-dll-in-a-post-build-event"></a>Para copiar a DLL em um evento pós-compilação
 
-1. Clique com botão direito no **MathClient** nó no **Gerenciador de soluções** para abrir o **páginas de propriedade** caixa de diálogo.
+1. Clique com botão direito do mouse no nó **MathClient** no **Gerenciador de Soluções** para abrir a caixa de diálogo **Páginas de Propriedades**.
 
-1. Na caixa de lista suspensa de configuração, selecione **todas as configurações de** se ainda não estiver selecionado.
+1. Na caixa da lista suspensa Configuração, escolha **Todas as Configurações** caso a opção ainda não esteja marcada.
 
-1. No painel esquerdo, selecione **evento de pós-build** sob **propriedades de configuração** > **eventos de Build**.
+1. No painel à esquerda, escolha **Evento Pós-Build** em **Propriedades da Configuração** > **Eventos de Compilação**.
 
-1. No painel de propriedades, selecione o controle de edição na **linha de comando** campo e, em seguida, digite este comando:
+1. No painel de propriedades, escolha o controle de edição no campo **Linha de Comando** e, em seguida, insira este comando:
 
    `xcopy /y /d "..\..\MathLibrary\$(IntDir)MathLibrary.dll" "$(OutDir)"`
 
-   ![Adicione o comando de pós-compilação](media/mathclient-post-build-command-line.png "adicionar o comando de pós-compilação")
+   ![Adicionar o comando de pós-compilação](media/mathclient-post-build-command-line.png "Adicionar o comando de pós-compilação")
 
-1. Escolha o **Okey** botão para salvar suas alterações às propriedades do projeto.
+1. Escolha o botão **OK** para salvar suas alterações nas propriedades do projeto.
 
-Agora o aplicativo cliente tem tudo o que precisa para compilar e executar. Compile o aplicativo escolhendo **construir** > **compilar solução** na barra de menus. O **saída** janela no Visual Studio deve encontrar algo como:
+Agora, seu aplicativo cliente tem tudo aquilo que precisa para ser compilado e executado. Compile o aplicativo escolhendo **Compilar** > **Compilar Solução** na barra de menus. A janela **Saída** no Visual Studio deve ter uma aparência como esta:
 
 ```Output
 1>------ Build started: Project: MathClient, Configuration: Debug Win32 ------
@@ -449,15 +448,15 @@ Agora o aplicativo cliente tem tudo o que precisa para compilar e executar. Comp
 ========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========
 ```
 
-Parabéns, você criou um aplicativo que chama as funções na DLL. Agora execute seu aplicativo para ver o que ele faz. Na barra de menus, escolha **Debug** > **Start Without Debugging**. Visual Studio abre uma janela de comando para o programa seja executado. A última parte da saída deve se parecer com:
+Parabéns, você criou um aplicativo que chama as funções na sua DLL. Agora, execute seu aplicativo para ver o que ele faz. Na barra de menus, escolha **Depurar** > **Iniciar Sem Depurar**. O Visual Studio abre uma janela de comando para o programa ser executado. A última parte da saída deverá se parecer com:
 
-![Iniciar o aplicativo cliente sem depuração](media/mathclient-run-without-debugging.png "iniciar o aplicativo cliente sem depuração")
+![Iniciar o aplicativo cliente sem depuração](media/mathclient-run-without-debugging.png "Iniciar o aplicativo cliente sem depuração")
 
 Pressione qualquer tecla para fechar a janela de comando.
 
-Agora que você criou uma DLL e um aplicativo cliente, você pode experimentar. Tente definir pontos de interrupção no código do aplicativo cliente e executar o aplicativo no depurador. Veja o que acontece quando você entra em uma chamada de biblioteca. Adicione outras funções na biblioteca, ou escrever outro aplicativo de cliente que usa sua DLL.
+Agora que você criou uma DLL e um aplicativo cliente, comece a fazer experimentos. Tente definir pontos de interrupção no código do aplicativo cliente e executar o aplicativo no depurador. Veja o que acontece quando você entra em uma chamada de biblioteca. Adicione outras funções à biblioteca ou crie outro aplicativo cliente que usa sua DLL.
 
-Quando você implanta seu aplicativo, você também deve implantar as DLLs que ele usa. A maneira mais simples para disponibilizar as DLLs que você cria ou que você incluir de terceiros para seu aplicativo é colocá-los no mesmo diretório que seu aplicativo, também conhecido como *implantação de aplicativo local*. Para obter mais informações sobre a implantação, consulte [implantação no Visual C++](../windows/deployment-in-visual-cpp.md).
+Quando implantar seu aplicativo, implante também as DLLs que ele usa. A maneira mais simples de disponibilizar as DLLs que você compila ou que inclui de terceiros em seu aplicativo é colocá-las no mesmo diretório do seu aplicativo, também conhecido como *implantação de aplicativo local*. Para saber mais sobre implantação, confira [Implantação no Visual C++](../windows/deployment-in-visual-cpp.md).
 
 ## <a name="see-also"></a>Consulte também
 
