@@ -1,23 +1,22 @@
 ---
 title: Arquivos de recurso (C++)
-ms.date: 11/04/2016
+ms.date: 05/14/2019
 helpviewer_keywords:
 - resource files
 - resources [C++]
-- file types [C++], resource files
 ms.assetid: 338a4a0f-0c62-4ef1-a34f-5d86262d93a4
-ms.openlocfilehash: f1e32ba4776f3e975dc0fbc72334a85d6c793c93
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 20e57aa51cff8c4e3392c313645468387c2a4244
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446347"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707399"
 ---
 # <a name="resource-files-c"></a>Arquivos de recurso (C++)
 
-Recursos são elementos de interface que fornecem informações para o usuário. Bitmaps, ícones, barras de ferramentas e cursores são todos recursos. Alguns recursos podem ser manipulados para executar uma ação, como selecionar uma opção em um menu ou inserir dados em uma caixa de diálogo.
+Recursos são elementos de interface que fornecem informações para o usuário. Bitmaps, ícones, barras de ferramentas e cursores são todos recursos. Alguns recursos podem executar uma ação, como selecionar uma opção em um menu ou inserir dados em uma caixa de diálogo.
 
-Confira [Trabalhando com recursos](../../windows/working-with-resource-files.md) para obter mais informações.
+ Para saber mais, confira [Como trabalhar com recursos](../../windows/working-with-resource-files.md).
 
 |Nome do arquivo|Local do diretório|Local do Gerenciador de Soluções|Descrição|
 |---------------|------------------------|--------------------------------|-----------------|
@@ -32,4 +31,4 @@ Confira [Trabalhando com recursos](../../windows/working-with-resource-files.md)
 
 ## <a name="see-also"></a>Consulte também
 
-[Arquivo tipos criados para o Visual C++ projetos](file-types-created-for-visual-cpp-projects.md)
+[Tipos de arquivo criados para projetos do Visual Studio C++](file-types-created-for-visual-cpp-projects.md)

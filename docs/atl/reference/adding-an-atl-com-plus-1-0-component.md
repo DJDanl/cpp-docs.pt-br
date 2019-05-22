@@ -1,32 +1,40 @@
 ---
-title: Adicionando um componente ATL COM+ 1.0
-ms.date: 11/04/2016
-helpviewer_keywords:
-- ATL COM+ 1.0
-- ATL projects, adding components
-- components [C++], adding ATL COM+ 1.0
-- objects [C++], supporting ATL COM+ 1.0
+title: Como adicionar um Componente COM+ 1.0 da ATL
+ms.date: 05/09/2019
 ms.assetid: c6c95e64-9ee4-4a6e-8804-5930202ce1b9
-ms.openlocfilehash: 6add7e9d77272960125615f0aac076fdd547094a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 6b8ffd71dd7e743bcbb7ff6ccac333dfd235156f
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62249123"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65706950"
 ---
-# <a name="adding-an-atl-com-10-component"></a>Adicionando um componente ATL COM+ 1.0
+# <a name="adding-an-atl-com-10-component"></a>Como adicionar um Componente COM+ 1.0 da ATL
 
-Este assistente adiciona um objeto ao seu projeto que oferece suporte aos serviços COM+ 1.0, incluindo transações.
 
-## <a name="to-add-an-atl-com-10-component-to-your-project"></a>Para adicionar um componente ATL COM+ 1.0 ao seu projeto
+::: moniker range="vs-2019"
 
-1. Em ambos **Gerenciador de soluções** ou [exibição de classe](/visualstudio/ide/viewing-the-structure-of-code), clique no nome do projeto ao qual você deseja adicionar o componente ATL COM+ 1.0.
+O assistente do Componente COM+ 1.0 da ATL não está disponível no Visual Studio 2019 e posterior.
 
-1. No menu de atalho, clique em **Add**e, em seguida, clique em **Adicionar classe**.
+::: moniker-end
 
-1. No [Add Class](../../ide/add-class-dialog-box.md) na caixa a **modelos** painel, clique em **componente ATL COM+ 1.0**e, em seguida, clique em **abrir** para exibir o [ ATL COM+ 1.0 do componente assistente](../../atl/reference/atl-com-plus-1-0-component-wizard.md).
+::: moniker range="<=vs-2017"
+
+Este assistente adiciona um objeto ao seu projeto que é compatível com serviços COM+ 1.0, incluindo transações.
+
+## <a name="to-add-an-atl-com-10-component-to-your-project"></a>Para adicionar um componente COM+ 1.0 da ATL ao seu projeto
+
+1. No **Gerenciador de Soluções** ou no [Modo de Exibição de Classe](/visualstudio/ide/viewing-the-structure-of-code), clique com o botão direito do mouse no nome do projeto ao qual deseja adicionar o componente COM+ 1.0 da ATL.
+
+1. No menu de atalho, clique em **Adicionar** e, em seguida, em **Adicionar Classe**.
+
+1. Na caixa de diálogo [Adicionar Classe](../../ide/add-class-dialog-box.md), no painel **Modelos**, clique em **Componente COM+ 1.0 da ATL** e, em seguida, clique em **Abrir** para exibir o [Assistente do Componente COM+ 1.0 da ATL](../../atl/reference/atl-com-plus-1-0-component-wizard.md).
 
 ## <a name="see-also"></a>Consulte também
 
 [Adicionando uma classe](../../ide/adding-a-class-visual-cpp.md)<br/>
 [Adicionando um método](../../ide/adding-a-method-visual-cpp.md)
+
+::: moniker-end
+
+
