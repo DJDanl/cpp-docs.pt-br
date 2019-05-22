@@ -1,5 +1,5 @@
 ---
-title: Criando um projeto ATL
+title: Como criar um projeto da ATL
 ms.date: 05/06/2019
 f1_keywords:
 - vc.appwiz.ATL.project
@@ -9,31 +9,31 @@ helpviewer_keywords:
 - _ATL_MIN_CRT macro
 - distributing files with ATL components
 ms.assetid: 061d5f98-f669-440e-9380-42f017a0f9e8
-ms.openlocfilehash: c36200d7f0d41aa4f116fdee3f5d95ff1e80e839
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 971d6c05ad4669f32e3b232d5e91c501e197be30
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65445997"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707420"
 ---
-# <a name="creating-an-atl-project"></a>Criando um projeto ATL
+# <a name="creating-an-atl-project"></a>Como criar um projeto da ATL
 
-A maneira mais fácil para criar um projeto ATL é usar a ATL Project Wizard, localizado na **projetos do Win32** pasta da **novo projeto** caixa de diálogo.
+A maneira mais fácil de criar um projeto da ATL é usar o Assistente de Projeto da ATL, localizado na pasta **Projetos do Win32** da caixa de diálogo **Novo Projeto**.
 
-## <a name="to-create-an-atl-project-using-the-atl-project-wizard"></a>Para criar um projeto ATL usando o Assistente de projeto do ATL
+## <a name="to-create-an-atl-project-using-the-atl-project-wizard"></a>Para criar um projeto da ATL usando o Assistente de Projeto da ATL
 
-1. No Visual Studio, escolha **arquivo > Novo > projeto** no menu principal.
+1. No Visual Studio, selecione **Arquivo -> Novo -> Projeto** no menu principal.
 
-1. Selecione o **projeto da ATL** ícone na **modelos** painel para abrir o **ATL Project Wizard**.
+1. Selecione o ícone **Projeto da ATL** no painel **Modelos** para abrir o **Assistente de Projeto da ATL**.
 
-1. Definir as configurações do aplicativo usando o [configurações do aplicativo](../../atl/reference/application-settings-atl-project-wizard.md) página do **ATL Project Wizard**.
+1. Defina as configurações do aplicativo usando a página [Configurações do Aplicativo](../../atl/reference/application-settings-atl-project-wizard.md) do **Assistente de Projeto da ATL**.
 
    > [!NOTE]
-   > Ignore esta etapa para manter o Assistente de configurações padrão.
+   > Ignore esta etapa para manter as configurações padrão do assistente.
 
-1. Clique em **concluir** para fechar o assistente e abrir o novo projeto no ambiente de desenvolvimento.
+1. Clique em **Concluir** para fechar o assistente e abrir o novo projeto no ambiente de desenvolvimento.
 
-Depois que o projeto é criado, você pode exibir os arquivos criados na **Gerenciador de soluções**. Para obter mais informações sobre os arquivos que o assistente cria para seu projeto, consulte o arquivo gerado pelo projeto Readme. txt. Para obter mais informações sobre os tipos de arquivo, consulte [tipos de arquivo criados para o Visual C++ projetos](../../build/reference/file-types-created-for-visual-cpp-projects.md). Para obter mais informações sobre as configurações para o novo projeto ATL e como alterá-las, consulte [as configurações padrão de projeto de ATL](../../atl/reference/default-atl-project-configurations.md).
+Após a criação do seu projeto, será possível exibir os arquivos criados no **Gerenciador de Soluções**. Para saber mais sobre os arquivos que o assistente cria para seu projeto, veja o arquivo ReadMe.txt gerado pelo projeto. Para saber mais sobre os tipos de arquivo, confira [Tipos de arquivos criados para projetos do Visual Studio C++](../../build/reference/file-types-created-for-visual-cpp-projects.md). Para saber mais sobre as configurações do novo projeto da ATL e como alterá-las, confira [Configurações Padrão do Projeto da ATL](../../atl/reference/default-atl-project-configurations.md).
 
 ## <a name="see-also"></a>Consulte também
 

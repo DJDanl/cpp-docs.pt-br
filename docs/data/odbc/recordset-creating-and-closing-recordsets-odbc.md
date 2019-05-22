@@ -1,6 +1,6 @@
 ---
-title: 'Conjunto de registros: Criando e fechando conjuntos de registros (ODBC)'
-ms.date: 11/04/2016
+title: 'Conjunto de registros: como criar e fechar conjuntos de registros (ODBC)'
+ms.date: 05/09/2019
 helpviewer_keywords:
 - ODBC recordsets, creating
 - recordsets, creating
@@ -9,56 +9,59 @@ helpviewer_keywords:
 - ODBC recordsets, closing
 - ODBC recordsets, opening
 ms.assetid: 8d2aac23-4396-4ce2-8c60-5ecf1b360d3d
-ms.openlocfilehash: 5d5dae5bc766c0cfc31b4fb76f7fe104be0dbd74
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: b4896dff711d87db05334afc0345c15da2fa23e6
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395580"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707991"
 ---
-# <a name="recordset-creating-and-closing-recordsets-odbc"></a>Conjunto de registros: Criando e fechando conjuntos de registros (ODBC)
+# <a name="recordset-creating-and-closing-recordsets-odbc"></a>Conjunto de registros: como criar e fechar conjuntos de registros (ODBC)
 
-Este tópico se aplica às classes ODBC do MFC.
+> [!NOTE] 
+> O Assistente de consumidor ODBC do MFC não está disponível no Visual Studio 2019 e posterior. É possível criar um consumidor manualmente.
 
-Para usar um conjunto de registros, construa um objeto de conjunto de registros e, em seguida, chame seu `Open` função de membro para executar a consulta do conjunto de registros e selecionar registros. Quando você terminar com o conjunto de registros, feche e destrua o objeto.
+Este tópico aplica-se às classes ODBC do MFC.
+
+Para usar um conjunto de registros, construa um objeto de conjunto de registros e, em seguida, chame sua função de membro `Open` para executar a consulta do conjunto de registros e selecionar registros. Quando você conclui o conjunto de registros, feche e destrua o objeto.
 
 Este tópico explica:
 
-- [Quando e como criar um objeto recordset](#_core_creating_recordsets_at_run_time).
+- [Quando e como criar um objeto de conjunto de registros](#_core_creating_recordsets_at_run_time).
 
-- [Quando e como você pode qualificar o comportamento do conjunto de registros por parametrização, filtragem, classificação ou bloqueá-lo](#_core_setting_recordset_options).
+- [Quando e como é possível qualificar o comportamento do conjunto de registros por meio da parametrização, filtragem, classificação ou bloqueio dele](#_core_setting_recordset_options).
 
-- [Quando e como fechar um objeto recordset](#_core_closing_a_recordset).
+- [Quando e como fechar um objeto de conjunto de registros](#_core_closing_a_recordset).
 
-##  <a name="_core_creating_recordsets_at_run_time"></a> Criando conjuntos de registros em tempo de execução
+##  <a name="_core_creating_recordsets_at_run_time"></a> Como criar conjuntos de registros em tempo de execução
 
-Antes de criar objetos de conjunto de registros em seu programa, você normalmente escreve classes de conjunto de registros específicos do aplicativo. Para obter mais informações sobre esta etapa preliminar, consulte [adicionando um consumidor de ODBC do MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md).
+Antes de poder criar objetos recordset em seu programa, normalmente você escreve classes de conjunto de registros específicas do aplicativo. Para saber mais sobre essa etapa preliminar, confira [Como adicionar um consumidor ODBC do MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md).
 
-Abra um objeto de dynaset ou instantâneo quando você precisa selecionar registros da fonte de dados. O tipo de objeto a ser criado depende do que você precisa fazer com os dados em seu aplicativo e em que o driver ODBC dá suporte. Para obter mais informações, consulte [Dynaset](../../data/odbc/dynaset.md) e [instantâneo](../../data/odbc/snapshot.md).
+Abra um objeto de instantâneo ou dynaset quando você precisar selecionar registros de uma fonte de dados. O tipo de objeto a ser criado depende do que você precisa fazer com os dados em seu aplicativo e daquilo com o que o driver ODBC é compatível. Para saber mais, confira [Dynaset](../../data/odbc/dynaset.md) e [Instantâneo](../../data/odbc/snapshot.md).
 
 #### <a name="to-open-a-recordset"></a>Para abrir um conjunto de registros
 
-1. Construa um objeto da sua `CRecordset`-classe derivada.
+1. Construa um objeto da classe derivada pelo `CRecordset`.
 
-   Você pode construir o objeto no heap ou no quadro da pilha de uma função.
+   É possível construir o objeto no heap ou no registro de ativação de uma função.
 
-1. Opcionalmente, modificar o comportamento do conjunto de registros padrão. Para as opções disponíveis, consulte [definindo opções de conjunto de registros](#_core_setting_recordset_options).
+1. Ou modifique o comportamento do conjunto de registros padrão. Para ver as opções disponíveis, confira [Como definir opções de conjunto de registros](#_core_setting_recordset_options).
 
-1. Chamar o objeto [abrir](../../mfc/reference/crecordset-class.md#open) função de membro.
+1. Chame a função de membro [Open](../../mfc/reference/crecordset-class.md#open) do objeto.
 
-No construtor, passe um ponteiro para um `CDatabase` do objeto ou passar nulo para usar um objeto de banco de dados temporário que constrói a estrutura e é aberto com base na cadeia de conexão retornada pelo [GetDefaultConnect](../../mfc/reference/crecordset-class.md#getdefaultconnect) função de membro. O `CDatabase` objeto já pode estar conectado a uma fonte de dados.
+No construtor, passe um ponteiro para um objeto `CDatabase` ou passe NULL para usar um objeto de banco de dados temporário que a estrutura constrói e abre com base na cadeia de conexão retornada pela função de membro [GetDefaultConnect](../../mfc/reference/crecordset-class.md#getdefaultconnect). O objeto `CDatabase` já pode estar conectado a uma fonte de dados.
 
-A chamada para `Open` usa SQL para selecionar registros da fonte de dados. O primeiro registro selecionado (se houver) é o registro atual. Os valores dos campos desse registro são armazenados em membros de dados de campo do objeto de conjunto de registros. Se todos os registros tiverem sido selecionados, tanto a `IsBOF` e `IsEOF` funções membro retornam 0.
+A chamada para `Open` usa o SQL para selecionar registros da fonte de dados. O primeiro registro selecionado (se houver) é o registro atual. Os valores dos campos deste registro são armazenados nos membros de dados de campo do objeto de conjunto de registros. Se registros foram selecionados, as funções de membro `IsBOF` e `IsEOF` retornarão 0.
 
-No seu [abrir](../../mfc/reference/crecordset-class.md#open) chamada, você pode:
+Em sua chamada [Open](../../mfc/reference/crecordset-class.md#open), você pode:
 
-- Especifique se o conjunto de registros é um dynaset ou instantâneo. Conjuntos de registros aberto como instantâneos por padrão. Ou, você pode especificar um recordset somente de encaminhamento, o que permite que apenas roll-forward, um registro de cada vez.
+- Especificar se o conjunto de registros é um dynaset ou um instantâneo. Os conjuntos de registros são abertos como instantâneos por padrão. Ou pode especificar um conjunto de registros somente de encaminhamento, que permite apenas rolagem para frente, um registro por vez.
 
-   Por padrão, um conjunto de registros usa o tipo de padrão armazenado na `CRecordset` membro de dados `m_nDefaultType`. Assistentes de escrever código para inicializar `m_nDefaultType` para o tipo de conjunto de registros escolhida no assistente. Em vez de aceitar esse padrão, você pode substituir o outro tipo de conjunto de registros.
+   Por padrão, um conjunto de registros usa o tipo padrão armazenado no membro de dados `CRecordset` `m_nDefaultType`. Os assistentes escrevem código para inicializar `m_nDefaultType` para o tipo de conjunto de registros escolhido no assistente. Em vez de aceitar este padrão, é possível substituir outro tipo de conjunto de registros.
 
-- Especifique uma cadeia de caracteres para substituir o padrão SQL **selecionar** instrução que constrói o conjunto de registros.
+- Especificar uma cadeia de caracteres para substituir a instrução **SELECT** SQL padrão construída pelo conjunto de registros.
 
-- Especifique se o conjunto de registros é somente leitura ou somente de acréscimo. Conjuntos de registros permitem completos de atualização por padrão, mas você pode limitar o que para adicionar novos registros somente ou você pode proibir todas as atualizações.
+- Especificar se o conjunto de registros é somente leitura ou somente de acréscimo. Os conjuntos de registros permitem a atualização completa por padrão, mas é possível limitar isso à adição de novos registros somente ou é possível cancelar a permissão de todas as atualizações.
 
 O exemplo a seguir mostra como abrir um objeto de instantâneo somente leitura da classe `CStudentSet`, uma classe específica do aplicativo:
 
@@ -71,41 +74,41 @@ if(!rsStudent.Open(CRecordset::snapshot, NULL, CRecordset::readOnly))
 // Use the snapshot to operate on its records...
 ```
 
-Depois de chamar `Open`, use os membros de dados e funções de membro do objeto para trabalhar com os registros. Em alguns casos, talvez você queira requery ou atualizar o conjunto de registros para incluir as alterações que ocorreram na fonte de dados. Para obter mais informações, consulte [conjunto de registros: Repetindo consulta a um conjunto de registros (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md).
+Após chamar `Open`, use as funções de membro e membros de dados do objeto para trabalhar com os registros. Em alguns casos, talvez convenha repetir a consulta ou atualizar o conjunto de registros para incluir alterações que ocorreram na fonte de dados. Para saber mais, confira [Conjunto de registros: como repetir a consulta de um conjunto de registros (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md).
 
 > [!TIP]
->  A cadeia de conexão que usar durante o desenvolvimento pode não ser a mesma cadeia de conectar-se que os usuários eventuais precisam. Para obter ideias sobre como generalizar o seu aplicativo em relação a isso, consulte [fonte de dados: Gerenciando conexões (ODBC)](../../data/odbc/data-source-managing-connections-odbc.md).
+>  A cadeia de conexão usada durante o desenvolvimento pode não ser a mesma cadeia de conexão de que seus usuários eventuais precisam. Para obter ideias sobre como generalizar o seu aplicativo com relação a isso, confira [Fonte de dados: como gerenciar conexões (ODBC)](../../data/odbc/data-source-managing-connections-odbc.md).
 
-##  <a name="_core_setting_recordset_options"></a> Definindo opções de conjunto de registros
+##  <a name="_core_setting_recordset_options"></a> Como definir opções de conjunto de registros
 
-Depois de construir o objeto de conjunto de registros, mas antes de chamar `Open` para selecionar registros, você talvez queira definir algumas opções para controlar o comportamento do conjunto de registros. Para todos os conjuntos de registros, você pode:
+Após construir seu objeto de conjunto de registros, mas antes de chamar `Open` para selecionar registros, talvez convenha definir algumas opções para controlar o comportamento do conjunto de registros. Para todos os conjuntos de registros, você pode:
 
-- Especifique um [filtro](../../data/odbc/recordset-filtering-records-odbc.md) para restringir a seleção de registros.
+- Especificar um [filtro](../../data/odbc/recordset-filtering-records-odbc.md) para restringir a seleção de registros.
 
-- Especifique um [classificação](../../data/odbc/recordset-sorting-records-odbc.md) para que os registros.
+- Especificar uma ordem de [classificação](../../data/odbc/recordset-sorting-records-odbc.md) para os registros.
 
-- Especificar [parâmetros](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md) para que você possa selecionar registros usando as informações obtidas ou calculados em tempo de execução.
+- Especificar [parâmetros](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md) para que você possa selecionar registros usando as informações obtidas ou calculadas em tempo de execução.
 
-Você também pode definir a opção a seguir se as condições forem atendidas:
+Também será possível definir a opção a seguir se as condições estiverem corretas:
 
-- Se o conjunto de registros é atualizável e dá suporte a opções de bloqueio, especifique o [bloqueio](../../data/odbc/recordset-locking-records-odbc.md) método usado para atualizar.
+- Se o conjunto de registros for atualizável e for compatível com opções de bloqueio, especifique o método de [bloqueio](../../data/odbc/recordset-locking-records-odbc.md) usado para atualizações.
 
 > [!NOTE]
->  Para afetar a seleção de registro, você deve definir essas opções antes de chamar o `Open` função de membro.
+>  Para afetar a seleção de registros, é necessário definir essas opções antes de chamar a função de membro `Open`.
 
-##  <a name="_core_closing_a_recordset"></a> Fechando um conjunto de registros
+##  <a name="_core_closing_a_recordset"></a> Como fechar um conjunto de registros
 
-Quando você terminar com seu conjunto de registros, você deve descartá-la e desalocar sua memória.
+Quando você concluir seu conjunto de registros, deverá descartá-lo e desalocar sua memória.
 
 #### <a name="to-close-a-recordset"></a>Para fechar um conjunto de registros
 
-1. Chamar sua [fechar](../../mfc/reference/crecordset-class.md#close) função de membro.
+1. Chame sua função de membro [Close](../../mfc/reference/crecordset-class.md#close).
 
 1. Destrua o objeto de conjunto de registros.
 
-   Se você declarou no quadro da pilha de uma função, o objeto é destruído automaticamente quando o objeto sai do escopo. Caso contrário, use o **excluir** operador.
+   Se você o declarou no registro de ativação de uma função, o objeto é destruído automaticamente quando ele sai do escopo. Caso contrário, use o operador **delete**.
 
-`Close` libera o conjunto de registros `HSTMT` manipular. Ele não destrói o objeto de C++.
+`Close` libera o manipulador `HSTMT` do conjunto de registros. Ele não destrói o objeto C++.
 
 ## <a name="see-also"></a>Consulte também
 
