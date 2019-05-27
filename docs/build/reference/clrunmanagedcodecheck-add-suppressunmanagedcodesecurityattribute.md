@@ -1,6 +1,6 @@
 ---
-title: /CLRUNMANAGEDCODECHECK (remova SuppressUnmanagedCodeSecurityAttribute)
-ms.date: 09/27/2018
+title: /CLRUNMANAGEDCODECHECK (Remover SuppressUnmanagedCodeSecurityAttribute)
+ms.date: 05/16/2019
 ms.topic: reference
 f1_keywords:
 - /CLRUNMANAGEDCODECHECK
@@ -10,16 +10,16 @@ helpviewer_keywords:
 ms.assetid: 73abc426-dab0-45e2-be85-0f9a14206cc2
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: cb23106648e3325755a857d0b962112e9bdcfac4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ecc560673a8e98752289ef0e0f89d3abfc1938e4
+ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62294415"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65837235"
 ---
-# <a name="clrunmanagedcodecheck-remove-suppressunmanagedcodesecurityattribute"></a>/CLRUNMANAGEDCODECHECK (remova SuppressUnmanagedCodeSecurityAttribute)
+# <a name="clrunmanagedcodecheck-remove-suppressunmanagedcodesecurityattribute"></a>/CLRUNMANAGEDCODECHECK (Remover SuppressUnmanagedCodeSecurityAttribute)
 
-**/CLRUNMANAGEDCODECHECK** Especifica que o vinculador não se aplica <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute> como gerada pelo vinculador `PInvoke` chamadas de código gerenciado nas DLLs nativas.
+**/CLRUNMANAGEDCODECHECK** especifica que o vinculador não aplica <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute> às chamadas `PInvoke` geradas pelo vinculador do código gerenciado em DLLs nativas.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -27,27 +27,27 @@ ms.locfileid: "62294415"
 
 ## <a name="remarks"></a>Comentários
 
-Por padrão, o vinculador aplica-se a **SuppressUnmanagedCodeSecurityAttribute** como gerada pelo vinculador `PInvoke` chamadas. Quando **/CLRUNMANAGEDCODECHECK** está em vigor, **SuppressUnmanagedCodeSecurityAttribute** é removido. Para aplicar explicitamente o **SuppressUnmanagedCodeSecurityAttribute** como gerada pelo vinculador `PInvoke` chamadas, você pode usar **/CLRUNMANAGEDCODECHECK:NO**.
+Por padrão, o vinculador aplica o **SuppressUnmanagedCodeSecurityAttribute** às chamadas `PInvoke` geradas pelo vinculador. Quando **/CLRUNMANAGEDCODECHECK** está em vigor, **SuppressUnmanagedCodeSecurityAttribute** é removido. Para aplicar explicitamente o **SuppressUnmanagedCodeSecurityAttribute** às chamadas `PInvoke` geradas pelo vinculador, use **/CLRUNMANAGEDCODECHECK:NO**.
 
-O vinculador só adiciona o atributo para objetos que são compilados usando **/clr** ou **/clr: pure**. No entanto, o **/clr: pure** opção do compilador é preterida no Visual Studio 2015 e sem suporte no Visual Studio 2017.
+O vinculador só adiciona o atributo a objetos que são compilados usando **/clr** ou **/clr:pure**. No entanto, a opção do compilador **/clr:pure** foi preterida no Visual Studio 2015 e está sem suporte no Visual Studio 2017 e posterior.
 
-Um `PInvoke` chamada será gerada pelo vinculador quando o vinculador não é possível encontrar um símbolo gerenciado para satisfazer uma referência de um chamador gerenciado, mas pode encontrar um símbolo de nativo para atender a essa referência. Para obter mais informações sobre `PInvoke`, consulte [Calling Native Functions from Managed Code](../../dotnet/calling-native-functions-from-managed-code.md).
+Uma chamada `PInvoke` é gerada pelo vinculador quando ele não pode encontrar um símbolo gerenciado para atender a uma referência de um chamador gerenciado, mas pode encontrar um símbolo nativo para atender a essa referência. Para obter mais informações sobre `PInvoke`, confira [Como chamar funções nativas do código gerenciado](../../dotnet/calling-native-functions-from-managed-code.md).
 
-Observe que, se você usar <xref:System.Security.AllowPartiallyTrustedCallersAttribute> em seu código, você deve definir explicitamente **/CLRUNMANAGEDCODECHECK** para remover o **SuppressUnmanagedCodeSecurity** atributo. É uma possível vulnerabilidade de segurança se uma imagem contém o **SuppressUnmanagedCodeSecurity** e **AllowPartiallyTrustedCallers** atributos.
+Observe que, se você usar <xref:System.Security.AllowPartiallyTrustedCallersAttribute> no código, você deverá definir explicitamente **/CLRUNMANAGEDCODECHECK** para remover o atributo **SuppressUnmanagedCodeSecurity**. É uma possível vulnerabilidade de segurança se uma imagem contém os atributos **SuppressUnmanagedCodeSecurity** e **AllowPartiallyTrustedCallers**.
 
-Ver [diretrizes de codificação segura para código não gerenciado](/dotnet/framework/security/secure-coding-guidelines-for-unmanaged-code) para obter mais informações sobre as implicações do uso **SuppressUnmanagedCodeSecurityAttribute**.
+Confira [Diretrizes de codificação segura para código não gerenciado](/dotnet/framework/security/secure-coding-guidelines-for-unmanaged-code) para obter mais informações sobre as implicações do uso de **SuppressUnmanagedCodeSecurityAttribute**.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do vinculador no ambiente de desenvolvimento do Visual Studio
 
-1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [propriedades de compilador e de build definida C++ no Visual Studio](../working-with-project-properties.md).
+1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, confira [Definir as propriedades de build e do compilador do C++ no Visual Studio](../working-with-project-properties.md).
 
 1. Expanda o nó **Propriedades de Configuração**.
 
-1. Expanda o **vinculador** nó.
+1. Expanda o nó **Vinculador**.
 
-1. Selecione o **avançado** página de propriedades.
+1. Selecione a página de propriedades **Avançado**.
 
-1. Modificar a **verificar código não gerenciado do CLR** propriedade.
+1. Modifique a propriedade **Verificação de Código não Gerenciado CLR**.
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Para definir esta opção do vinculador por meio de programação
 

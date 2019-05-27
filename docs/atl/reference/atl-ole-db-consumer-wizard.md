@@ -1,110 +1,114 @@
 ---
 title: Assistente de consumidor OLE DB da ATL
-ms.date: 08/31/2018
-f1_keywords:
-- vc.codewiz.class.atl.consumer.overview
+ms.date: 05/09/2019
 helpviewer_keywords:
 - ATL projects, adding ATL OLE DB consumers
-- connection strings [C++], OLE DB consumers
-- ATL OLE DB Consumer Wizard
 ms.assetid: dcb68ed1-2224-422f-9f7b-108a74864204
-ms.openlocfilehash: 59ad635f62ab7a20a31de7255ec4522136e102ec
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bd7af5c9788f5075f38f85bd035ba8cd09e8baec
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62261254"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65706986"
 ---
 # <a name="atl-ole-db-consumer-wizard"></a>Assistente de consumidor OLE DB da ATL
 
-Este assistente define uma classe de consumidor do OLE DB com as associações de dados necessário para acessar a fonte de dados especificado por meio do provedor OLE DB especificado.
+::: moniker range="vs-2019"
+
+Esse assistente não está disponível no Visual Studio 2019 e versões posteriores.
+
+::: moniker-end
+
+::: moniker range="<=vs-2017"
+
+Esse assistente configura uma classe de consumidor do OLE DB com as associações de dados necessárias para acessar a fonte de dados especificada por meio do provedor OLE DB especificado.
 
 > [!NOTE]
-> Este assistente exige que você clique o **fonte de dados** botão para selecionar uma fonte de dados antes de inserir os nomes na `Class` e **arquivo. h** campos.
+> Esse assistente exige que você clique no botão **Fonte de Dados** para selecionar uma fonte de dados antes de inserir os nomes nos campos `Class` e **arquivo.h**.
 
 ## <a name="uielement-list"></a>Lista UIElement
 
-- **Fonte de dados**
+- **Fonte de Dados**
 
-   O **fonte de dados** botão permite que você defina a fonte de dados especificado usando o provedor OLE DB especificado. Quando você clica nesse botão, o **propriedades de vínculo de dados** caixa de diálogo é exibida. Para obter mais informações sobre a criação de cadeias de caracteres de conexão e o **propriedades de vínculo de dados** caixa de diálogo, consulte [visão geral da API de Link de dados](/previous-versions/windows/desktop/ms718102) na documentação do SDK do Windows.
+   O botão **Fonte de Dados** permite que você configure a fonte de dados especificada usando o provedor OLE DB especificado. Quando você clica nesse botão, a caixa de diálogo **Propriedades do Link de Dados** é exibida. Saiba mais sobre como criar cadeias de conexão e a caixa de diálogo **Propriedades do Link de Dados** em [Visão geral da API do link de dados](/previous-versions/windows/desktop/ms718102) na documentação de SDK do Windows.
 
-   As informações adicionais a seguir descrevem as guias na **propriedades de vínculo de dados** caixa de diálogo.
+   As informações adicionais a seguir descrevem as guias na caixa de diálogo **Propriedades do Link de Dados**.
 
-   - **Provedor** guia
+   - Guia **Provedor**
 
-      Selecione um provedor apropriado para gerenciar a conexão à fonte de dados. O tipo do provedor normalmente é determinado pelo tipo de banco de dados ao qual você está se conectando. Clique o **próxima** botão ou clique no **Conexão** guia.
+      Selecione um provedor apropriado para gerenciar a conexão com a fonte de dados. O tipo do provedor normalmente é determinado pelo tipo de banco de dados ao qual você está se conectando. Clique no botão **Avançar** ou clique na guia **Conexão**.
 
-   - **Conexão** guia
+   - Guia **Conexão**
 
-      O conteúdo dessa guia depende do provedor selecionado. Embora haja muitos tipos de provedores, esta seção aborda as conexões para as duas mais comuns: Dados SQL e ODBC. Os outros são semelhantes variações nos campos descritos aqui.
+      O conteúdo dessa guia depende do provedor selecionado. Embora haja muitos tipos de provedor, esta seção aborda conexões para os dois mais comuns: Dados SQL e ODBC. Os outros são variações semelhantes nos campos descritos aqui.
 
       Para dados do SQL:
 
-      1. **Selecione ou insira um nome de servidor:** Clique no menu de lista suspensa para exibir todos os servidores de dados registrados na rede e selecione um.
+      1. **Selecione ou digite um nome de servidor:** Clique no menu da lista suspensa para exibir todos os servidores de dados registrados na rede e selecione um.
 
-      1. **Insira informações para fazer logon no servidor:** Insira um nome de usuário e senha para fazer logon no servidor de dados.
+      1. **Insira as informações para fazer logon no servidor:** Insira um nome de usuário e senha para fazer logon no servidor de dados.
 
          > [!NOTE]
-         > Há um problema de segurança com o recurso de "Permitir salvamento de senha" da caixa de diálogo Propriedades do Link de dados. "Insira as informações de logon para o servidor", há dois botões de opção:
+         > Há um problema de segurança com o recurso "Permitir salvamento de senha" da caixa de diálogo Propriedades do Link de Dados. Em "Digite as informações para fazer logon no servidor", há dois botões de opção:
          >
          > - **Usar segurança integrada do Windows NT**
-         > - **Use um nome de usuário específico e uma senha**
+         > - **Usar nome de usuário e senha específicos**
          >
-         > Se você selecionar **usar um determinado nome de usuário e senha**, você tem a opção de salvar a senha (usando a caixa de seleção para "Permitir salvamento de senha"); no entanto, essa opção não é segura. É recomendável que você selecione **a segurança integrada Use Windows NT**; essa opção é segura porque ele criptografa a senha.
-         > Pode haver situações em que você deseja selecionar "Permitir salvamento de senha". Por exemplo, se você estiver liberando uma biblioteca com uma solução de banco de dados particular, você deve não acessar o banco de dados diretamente, mas em vez disso, use um aplicativo de camada intermediária para verificar se o usuário (por meio de qualquer esquema de autenticação escolhido) e, em seguida, limitar a classificação de dados disponível para o usuário.
+         > Selecionando **Usar nome de usuário e senha específicos**, você terá a opção de salvar a senha (usando a caixa de seleção "Permitir salvamento de senha"). No entanto, essa opção não é segura. É recomendável selecionar **Usar segurança integrada do Windows NT**. Essa opção é segura porque criptografa a senha.
+         > Pode haver situações em que você queira selecionar "Permitir salvamento de senha". Por exemplo, se estiver liberando uma biblioteca com uma solução de banco de dados particular, você não deverá acessar o banco de dados diretamente, mas em vez disso, usar um aplicativo de camada intermediária para verificar o usuário (por meio de qualquer esquema de autenticação escolhido) e, em seguida, limitar a classificação de dados disponível para o usuário.
 
-      1. **Selecione o banco de dados no servidor:** Clique no menu de lista suspensa para exibir todos os bancos de dados no servidor de data e selecione um.
+      1. **Selecione o banco de dados no servidor:** Clique no menu da lista suspensa para exibir todos os bancos de dados registrados no servidor de dados e selecione um.
 
          \- ou -
 
-         **Anexe um arquivo de banco de dados como um nome de banco de dados:** Especificar um arquivo a ser usado como o banco de dados; Insira o nome do caminho explícito.
+         **Anexe um arquivo de banco de dados como um nome de banco de dados:** Especifique um arquivo a ser usado como o banco de dados; Insira o nome do caminho explícito.
 
       Para dados ODBC:
 
-      1. **Especifique a fonte de dados:** Você pode usar um nome de fonte de dados ou uma cadeia de caracteres de conexão.
+      1. **Especifique a fonte dos dados:** É possível usar um nome de fonte de dados ou uma cadeia de conexão.
 
-         **Use o nome da fonte de dados:** Essa lista suspensa exibe fontes de dados registrados no seu computador. Você pode configurar fontes de dados antes do tempo usando o administrador de fonte de dados ODBC
+         **Use o nome da fonte de dados:** Essa lista suspensa exibe fontes de dados registrados no seu computador. Você pode configurar fontes de dados antecipadamente usando o Administrador de Fonte de Dados ODBC
 
          \- ou -
 
-         **Use a cadeia de caracteres de conexão:** Insira uma cadeia de caracteres de conexão já tenham obtido, ou clique no **construir** botão; o **Selecionar fonte de dados** caixa de diálogo é exibida. Selecione uma fonte de dados de arquivo ou de máquina e clique em **Okey**.
+         **Use a cadeia de conexão:** Insira uma cadeia de conexão que você já obteve ou clique no botão **Compilar**; a caixa de diálogo **Selecionar Fonte de Dados** é exibida. Selecione uma fonte de dados de computador ou arquivo e clique em **OK**.
 
          > [!NOTE]
-         > Você pode obter uma cadeia de caracteres de conexão ao exibir as propriedades de uma conexão existente na **Gerenciador de servidores**, ou você pode criar uma conexão clicando duas vezes em **Adicionar Conexão** em **Server Explorer**.
+         > Você pode obter uma cadeia de conexão ao exibir as propriedades de uma conexão existente no **Gerenciador de Servidores** ou criar uma conexão clicando duas vezes em **Adicionar Conexão** no **Gerenciador de Servidores**.
 
-      1. **Insira informações para fazer logon no servidor:** Insira um nome de usuário e senha para fazer logon no servidor de dados.
+      1. **Insira as informações para fazer logon no servidor:** Insira um nome de usuário e senha para fazer logon no servidor de dados.
 
       1. Insira o catálogo inicial a ser usado.
 
-      1. Clique em **Testar Conexão**; se o teste for bem-sucedido, clique em **Okey**. Caso contrário, verifique suas informações de logon, tente outro banco de dados ou tente outro servidor de dados.
+      1. Clique em **Testar Conexão**; se o teste for bem-sucedido, clique em **OK**. Caso contrário, verifique suas informações de logon, tente outro banco de dados ou tente outro servidor de dados.
 
-   - **Advanced** guia
+   - Guia **Avançado**
 
-      **Configurações de rede:** Especifique o **nível de representação** (o nível de representação que o servidor tem permissão para usar ao representar o cliente; corresponde diretamente aos níveis de representação do RPC) e **nível de proteção** ( o nível de proteção de dados enviados entre cliente e servidor. corresponde diretamente aos níveis de proteção do RPC).
+      **Configurações de rede:** Especifique o **Nível de representação** (o nível de representação que o servidor tem permissão para usar ao representar o cliente; corresponde diretamente aos níveis de representação do RPC) e **Nível de proteção** (o nível de proteção de dados enviados entre cliente e servidor; corresponde diretamente aos níveis de proteção do RPC).
 
-      **Outros:** Na **tempo limite de conexão**, especifique o número de segundos de tempo ocioso permitido antes que ocorra um tempo limite. Na **permissões de acesso**, especifique as permissões de acesso na conexão de dados.
+      **Outros**: Em **Tempo limite de conexão**, especifique o número de segundos de tempo ocioso permitido antes que o tempo limite seja atingido. Em **Permissões de acesso**, especifique as permissões de acesso na conexão de dados.
 
-      Para obter mais informações sobre propriedades de inicialização avançadas, consulte a documentação fornecida com cada provedor do OLE DB específico.
+      Saiba mais sobre propriedades de inicialização avançadas na documentação fornecida com cada provedor OLE DB específico.
 
-   - **Todos os** guia
+   - Guia **Todos**
 
       Essa guia exibe um resumo das propriedades de inicialização para a fonte de dados e a conexão que você especificou. Você pode editar esses valores.
 
-      Clique em **Okey** para concluir. O **Selecionar objeto de banco de dados** caixa de diálogo é exibida. Na caixa de diálogo, selecione a tabela, exibição ou procedimento armazenado que o consumidor usará.
+      Clique em **OK** para concluir. A caixa de diálogo **Selecionar Objeto do Banco de Dados** é exibida. Nessa caixa de diálogo, selecione a tabela, a exibição ou o procedimento armazenado que o consumidor usará.
 
 - **Class**
 
-   Depois de selecionar uma fonte de dados, essa caixa é preenchida com um nome de classe padrão com base na tabela ou procedimento armazenado que você selecionou (consulte **selecionar uma fonte de dados** abaixo). Você pode editar o nome da classe.
+   Depois de selecionar uma fonte de dados, essa caixa é preenchida com um nome de classe padrão com base na tabela ou no procedimento armazenado selecionado (confira **Selecionar uma fonte de dados** abaixo). É possível editar o nome da classe.
 
 - **Arquivo .h**
 
-   Depois de selecionar uma fonte de dados, essa caixa é preenchida com um nome de classe de cabeçalho padrão com base na tabela ou procedimento armazenado que você selecionou (consulte **selecionar uma fonte de dados** abaixo). Você pode editar o nome do arquivo de cabeçalho ou selecionar um arquivo de cabeçalho existente.
+   Depois de selecionar uma fonte de dados, essa caixa é preenchida com um nome de classe de cabeçalho padrão com base na tabela ou no procedimento armazenado selecionado (confira **Selecionar uma fonte de dados** abaixo). Você pode editar o nome do arquivo de cabeçalho ou selecionar um arquivo de cabeçalho existente.
 
 - **Atribuído**
 
-   Esta opção especifica se o assistente criará as classes de consumidor usando atributos ou declarações de modelo. Quando você seleciona essa opção, o assistente usa atributos em vez de declarações de modelo (Isso é a opção padrão). Quando você desmarca essa opção, o assistente usa declarações de modelo em vez de atributos.
+   Essa opção especifica se o assistente criará as classes de consumidor usando atributos ou declarações de modelo. Quando essa opção é selecionada, o assistente usa atributos em vez de declarações de modelo (essa é a opção padrão). Quando você desmarca essa opção, o assistente usa declarações de modelo em vez de atributos.
 
-   - Se você selecionar um consumidor **tipo** de **tabela**, o assistente usa os `db_source` e `db_table` atributos para criar a tabela e o acessador de tabela de declarações de classe e usa `db_column` para Crie o mapa de coluna. Por exemplo, ele cria esse mapa:
+   - Se você selecionar um consumidor **Tipo** de **Tabela**, o assistente usará os atributos `db_source` e `db_table` para criar a tabela e as declarações de classe do acessador de tabela, assim como usará `db_column` para criar o mapa de coluna. Por exemplo, ele cria este mapa:
 
         ```cpp
         // Inject table class and table accessor class declarations
@@ -116,7 +120,7 @@ Este assistente define uma classe de consumidor do OLE DB com as associações d
         ...
         ```
 
-      em vez de usar o `CTable` classe de modelo para declarar a tabela e a classe de acessador de tabela e as macros BEGIN_COLUMN_MAP e END_COLUMN_MAP para criar o mapa de coluna, como neste exemplo:
+      em vez de usar a classe de modelo `CTable` para declarar a tabela e a classe de acessador da tabela, e as macros BEGIN_COLUMN_MAP e END_COLUMN_MAP para criar o mapa de coluna, como neste exemplo:
 
         ```cpp
         // Table accessor class
@@ -131,7 +135,7 @@ Este assistente define uma classe de consumidor do OLE DB com as associações d
             END_COLUMN_MAP()
         ```
 
-   - Se você selecionar um consumidor **tipo** de **comando**, o assistente usa os `db_source` e `db_command` atributos e usa `db_column` para criar o mapa de coluna. Por exemplo, ele cria esse mapa:
+   - Se você selecionar um consumidor **Tipo** de **Comando**, o assistente usará os atributos `db_source` e `db_command`, bem como usará `db_column` para criar o mapa de coluna. Por exemplo, ele cria este mapa:
 
         ```cpp
         [db_source("<initialization_string>"), db_command("SQL_command")]
@@ -139,7 +143,7 @@ Este assistente define uma classe de consumidor do OLE DB com as associações d
         // Column map using db_column is the same as for consumer type of 'table'
         ```
 
-      em vez de usar o comando e declarações de classe de acessador de comando no arquivo. h a classe de comando, por exemplo:
+      em vez de usar o comando e as declarações de classe do acessador de comando no arquivo. h da classe de comando, por exemplo:
 
         ```cpp
         // Command accessor class:
@@ -151,7 +155,7 @@ Este assistente define uma classe de consumidor do OLE DB com as associações d
         // for consumer type of 'table'
         ```
 
-      Ver [mecânica básica de atributos](../../windows/basic-mechanics-of-attributes.md) para obter mais informações.
+      Confira mais informações em [Mecânica básica de atributos](../../windows/basic-mechanics-of-attributes.md).
 
 - **Tipo**
 
@@ -159,30 +163,32 @@ Este assistente define uma classe de consumidor do OLE DB com as associações d
 
    - **Tabela**
 
-      Selecione esta opção se você quiser usar `CTable` ou `db_table` para criar a tabela e o acessador de tabela de declarações de classe.
+      Selecione essa opção se quiser usar `CTable` ou `db_table` para criar a tabela e a definição de classe do acessador de tabela.
 
    - **Comando**
 
-      Selecione esta opção se você quiser usar `CCommand` ou `db_command` para criar o comando e o acessador de comando declarações de classe. Essa é a seleção padrão.
+      Selecione essa opção se quiser usar `CCommand` ou `db_command` para criar o comando e as declarações de classe do acessador de comando. Essa é a seleção padrão.
 
 - **Suporte**
 
-   Marque as caixas de seleção para especificar os tipos de atualizações com suporte no consumidor (o padrão é none). Cada um dos seguintes definirá [DBPROP_IRowsetChange](/previous-versions/windows/desktop/ms715892) e as entradas apropriadas para [DBPROP_UPDATABILITY](/previous-versions/windows/desktop/ms722676) no conjunto de propriedades mapa.
+   Marque as caixas de seleção para especificar os tipos de atualização a ser suportados no consumidor (o padrão é nenhum). Cada um definirá [DBPROP_IRowsetChange](/previous-versions/windows/desktop/ms715892) e as entradas apropriadas para [DBPROP_UPDATABILITY](/previous-versions/windows/desktop/ms722676) no mapa do conjunto de propriedades.
 
    - **Alteração**
 
-      Especifica que o consumidor dão suporte a atualizações de dados de linha no conjunto de linhas.
+      Especifica que o consumidor é compatível com as atualizações dos dados da linha no conjunto de linhas.
 
    - **Inserir**
 
-      Especifica que o consumidor dá suporte a inserção de linhas no conjunto de linhas.
+      Especifica que o consumidor é compatível com a inserção de linhas no conjunto de linhas.
 
    - **Excluir**
 
-      Especifica que o consumidor dá suporte a exclusão de linhas do conjunto de linhas.
+      Especifica que o consumidor é compatível com a exclusão de linhas do conjunto de linhas.
+
+::: moniker-end
 
 ## <a name="see-also"></a>Consulte também
 
-[Consumidor do OLE DB da ATL](../../atl/reference/adding-an-atl-ole-db-consumer.md)<br/>
+[Consumidor OLE DB da ATL](../../atl/reference/adding-an-atl-ole-db-consumer.md)<br/>
 [Adicionando funcionalidade com assistentes de código](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
-[Cadeias de caracteres de Conexão e Links de dados (OLE DB)](/previous-versions/windows/desktop/ms718376)
+[Cadeias de conexão e links de dados (OLE DB)](/previous-versions/windows/desktop/ms718376)

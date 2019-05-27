@@ -1,26 +1,36 @@
 ---
 title: Criando um provedor somente leitura simples
-ms.date: 10/26/2018
+ms.date: 05/09/2019
 helpviewer_keywords:
 - OLE DB providers, creating
 - OLE DB provider templates, creating providers
 ms.assetid: ade8ccdd-9ea4-4e46-a964-18460c2a2401
-ms.openlocfilehash: a80678f6bc512c45c0df2ea5cbfc4708f1252ac0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: c0f31818002ce4611926d942b3bc556e31c1ae6f
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62361943"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65524717"
 ---
 # <a name="creating-a-simple-read-only-provider"></a>Criando um provedor somente leitura simples
 
-Quando você criar um provedor OLE DB usando o **ATL Project Wizard** e **ATL OLE DB Provider Wizard**, você pode adicionar outras funcionalidades que você deseja dar suporte. Começar a projetar seu provedor, examinando o tipo de dados será enviado para o consumidor e sob quais condições. É especialmente importante determinar se é necessário dar suporte a comandos, transações e outros objetos opcionais. Um bom design com antecedência irá acelerar a implementação e teste.
+::: moniker range="vs-2019"
+
+O assistente de Provedor OLE DB da ATL não está disponível no Visual Studio 2019 e posteriores.
+
+::: moniker-end
+
+::: moniker range="vs-2017"
+
+Ao criar um provedor de OLE DB usando o **Assistente de Projeto da ATL** e o **Assistente de Provedor ATL OLE DB**, você pode adicionar outras funcionalidades desejadas. Para começar a projetar seu provedor, examine o tipo de dados que você enviará para o consumidor e sob quais condições. É especialmente importante determinar se é necessário dar suporte a comandos, transações e outros objetos opcionais. Um bom design criado com antecedência acelera a implementação e o teste.
 
 O exemplo é apresentado em duas partes:
 
-- O primeiro mostra parte como [criar um provedor somente leitura simples](../../data/oledb/implementing-the-simple-read-only-provider.md) que lê um par de cadeias de caracteres.
+- A primeira parte mostra como [criar um provedor somente leitura simples](../../data/oledb/implementing-the-simple-read-only-provider.md) que lê um par de cadeias de caracteres.
 
-- O segundo mostra parte como [aprimorar o provedor somente leitura simples](../../data/oledb/enhancing-the-simple-read-only-provider.md) adicionando o `IRowsetLocate` interface.
+- A segunda parte mostra como [aprimorar o provedor somente leitura simples](../../data/oledb/enhancing-the-simple-read-only-provider.md) adicionando a interface `IRowsetLocate`.
+
+::: moniker-end
 
 ## <a name="see-also"></a>Consulte também
 

@@ -1,21 +1,29 @@
 ---
 title: Criando um consumidor de banco de dados OLE sem usar um assistente
-ms.date: 10/22/2018
+ms.date: 05/09/2019
 helpviewer_keywords:
 - OLE DB consumers, creating
 ms.assetid: efefd4c0-4491-4072-aa9b-59545641efb3
-ms.openlocfilehash: e4de4070b1662e33d4b0c0c355cabde851746662
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: dd731862adb741db068fc3465acb64b42e673522
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62362316"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707599"
 ---
 # <a name="creating-an-ole-db-consumer-using-a-wizard"></a>Criando um consumidor de banco de dados OLE sem usar um assistente
 
-Este procedimento demonstra como você pode usar o **ATL Project Wizard** e **ATL OLE DB Assistente de consumidor** para gerar um consumidor de modelos OLE DB e, em seguida, modifique o código principal do aplicativo de console recuperar e exibir dados de uma tabela de banco de dados.
+::: moniker range="vs-2019"
 
-As duas últimas seções explicam o código gerado pelo Assistente do consumidor OLE DB.
+O Assistente de Consumidor OLE DB da ATL não está disponível no Visual Studio 2019 e posteriores. Ainda é possível adicionar a funcionalidade manualmente. Saiba mais em [Criação de um consumidor sem usar um assistente](creating-a-consumer-without-using-a-wizard.md).
+
+::: moniker-end
+
+::: moniker range="<=vs-2017"
+
+Esse procedimento demonstra como é possível usar o **Assistente de Projeto da ATL** e o **Assistente de Consumidor OLE DB do ATL** para gerar um consumidor de modelos OLE DB e, em seguida, alterar o código principal do aplicativo de console para recuperar e exibir dados de uma tabela de banco de dados.
+
+As duas últimas seções explicam o código de consumidor de OLE DB gerado pelo assistente.
 
 Esta seção abrange os seguintes tópicos:
 
@@ -26,6 +34,8 @@ Esta seção abrange os seguintes tópicos:
 - [Classes geradas pelo Assistente do Consumidor](../../data/oledb/consumer-wizard-generated-classes.md)
 
 - [Métodos gerados pelo Assistente do Consumidor](../../data/oledb/consumer-wizard-generated-methods.md)
+
+::: moniker-end
 
 ## <a name="see-also"></a>Consulte também
 

@@ -1,21 +1,21 @@
 ---
-title: /STD (especificar versão de idioma padrão)
-ms.date: 11/26/2018
+title: /std (Especificar versão padrão da linguagem)
+ms.date: 05/16/2019
 f1_keywords:
 - /std
 - -std
 - VC.Project.VCCLCompilerTool.CppLanguageStandard
 ms.assetid: 0acb74ba-1aa8-4c05-b96c-682988dc19bd
-ms.openlocfilehash: de3389a52781f541143268e3ede79eae375ff1d3
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
-ms.translationtype: HT
+ms.openlocfilehash: 0f45727c61d55ff57befc7ff23a3d434e86673bc
+ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446231"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65837526"
 ---
-# <a name="std-specify-language-standard-version"></a>/STD (especificar versão de idioma padrão)
+# <a name="std-specify-language-standard-version"></a>/std (Especificar versão padrão da linguagem)
 
-Habilitar suporte para recursos da linguagem C++ da versão especificada da linguagem C++ padrão.
+Habilite as funcionalidades da linguagem C++ compatíveis da versão especificada do padrão da linguagem C++.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -23,43 +23,43 @@ Habilitar suporte para recursos da linguagem C++ da versão especificada da ling
 
 ## <a name="remarks"></a>Comentários
 
-O **/std** opção está disponível no Visual Studio 2017 e posterior. Ele é usado para controlar a versão específica de programação ISO C++ recursos padrão de idioma habilitados durante a compilação do seu código. Essa opção permite que você desabilite o suporte para determinados recursos de linguagem e biblioteca novos que podem quebrar o código existente que esteja de acordo com uma versão específica do idioma padrão. Por padrão, **/std: c + + 14** for especificado, que desabilita recursos de linguagem e biblioteca padrão encontrados nas versões posteriores do C++ padrão da linguagem. Use **/std: c + + 17** para habilitar o comportamento e específicas do padrão de recursos do c++17. Para habilitar explicitamente o compilador implementado atualmente e recursos da biblioteca padrão propostos para o próximo padrão de rascunho, use **/std: c + + mais recente**.
+A opção **/std** está disponível no Visual Studio 2017 e posterior. Ela é usada para controlar as funcionalidades padrão da linguagem de programação C++ do ISO específico da versão habilitadas durante a compilação do código. Essa opção permite que você desabilite o suporte para algumas novas funcionalidades de linguagem e biblioteca que possam interromper o código existente em conformidade com uma versão específica do padrão da linguagem. Por padrão, **/std:c++14** é especificado, o que desabilita funcionalidades da linguagem e da biblioteca padrão encontradas nas versões posteriores do padrão da linguagem C++. Use **/std:c++17** para habilitar o comportamento e as funcionalidades específicas do padrão do C++17. Para habilitar explicitamente o compilador atualmente implementado e as funcionalidades da biblioteca padrão propostas para o próximo padrão de rascunho, use **/std:c++latest**. Todas as funcionalidades do C++20 exigem **/std:latest**; quando a implementação for concluída, uma nova opção **/std:c++20** será habilitada.
 
-O padrão **/std: c + + 14** opção permite que o conjunto de recursos do c++14 implementado pelo compilador MSVC. Esta opção desabilita o compilador e suporte de biblioteca padrão para recursos que são alterados ou novos em versões mais recentes do idioma padrão, com exceção de alguns recursos do c++17 já implementados em versões anteriores do compilador MSVC. Para evitar alterações interruptivas para os usuários que já obtiveram dependências nos recursos disponíveis a partir do Visual Studio 2015 atualização 2, esses recursos permanecerão habilitados quando o **/std: c + + 14** opção for especificada:
+A opção **/std:c++14** padrão habilita o conjunto de funcionalidades do C++14 implementado pelo compilador do MSVC. Essa opção desabilita o suporte do compilador e da biblioteca padrão para as funcionalidades que são alteradas ou novas em versões mais recentes do padrão da linguagem, com exceção de algumas funcionalidades do C++17 já implementadas em versões anteriores do compilador do MSVC. Para evitar alterações da falha para os usuários que já usaram dependências nas funcionalidades disponíveis no Visual Studio 2015 Atualização 2 em diante, essas funcionalidades permanecerão habilitadas quando a opção **/std:c++14** for especificada:
 
 - [Regras para automático com listas de inicialização entre chaves](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n3922.html)
 
-- [TypeName nos parâmetros de modelo do modelo](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4051.html)
+- [Nome de tipo em parâmetros de modelo do modelo](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4051.html)
 
-- [Removendo trígrafos](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4086.html)
+- [Como remover trígrafos](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4086.html)
 
 - [Atributos para namespaces e enumeradores](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4266.html)
 
-- [literais de caracteres U8](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4267.html)
+- [Literais de caracteres u8](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4267.html)
 
-Para obter mais informações sobre quais C + + 14 e C + + 17 recursos estão habilitados quando **/std:c++17 + + 14** é especificado, consulte as observações [Visual C++ conformidade com a linguagem](../../overview/visual-cpp-language-conformance.md).
+Para obter mais informações sobre quais funcionalidades do C++14 e C++17 são habilitadas quando **/std:c++14** é especificado, confira as observações em [Conformidade com a linguagem Visual C++](../../overview/visual-cpp-language-conformance.md).
 
-O **/std: c + + 17** opção habilita o conjunto completo de recursos do c++17 implementado pelo compilador MSVC. Essa opção desabilita o suporte ao compilador e à biblioteca padrão para funcionalidades alteradas ou novas nas versões das atualizações de defeito e de rascunho de trabalho do C++ Standard após o C++17.
+A opção **/std:c++17** habilita o conjunto completo de funcionalidades do C++17 implementado pelo compilador do MSVC. Essa opção desabilita o suporte ao compilador e à biblioteca padrão para funcionalidades alteradas ou novas nas versões das atualizações de defeito e de rascunho de trabalho do C++ Standard após o C++17.
 
-O **/std:c++17 + + mais recente** opção permite que o post-C + + 17 recursos de linguagem e biblioteca atualmente implementados no compilador e bibliotecas. Eles podem incluir recursos das C + + 20 defeito e rascunho de trabalho atualizações do C++ padrão que não estão incluídos no c++17, bem como propostas experimentais para o padrão de rascunho. Para obter uma lista de idiomas com suporte e recursos de biblioteca, consulte [o que há de novo para o Visual C++](../../overview/what-s-new-for-visual-cpp-in-visual-studio.md). O **/std:c++17 + + mais recente** opção não permite recursos protegidos pela **/ experimental** mudar, mas pode ser necessário habilitá-los.
+A opção **/std:c++latest** habilita as funcionalidades de linguagem e biblioteca pós C++17 atualmente implementadas no compilador e nas bibliotecas. Elas podem incluir funcionalidades do Rascunho de Trabalho do C++20 e atualizações de defeitos do Padrão do C++ que não estão incluídos no C++17, bem como propostas experimentais para o padrão de rascunho. Para obter uma lista de funcionalidades de linguagem e biblioteca compatíveis, confira [Novidades do Visual C++](../../overview/what-s-new-for-visual-cpp-in-visual-studio.md). A opção **/std:c++latest** não habilita as funcionalidades protegidas pela opção **/experimental**, mas pode ser necessário habilitá-las.
 
 > [!IMPORTANT]
-> Os recursos de biblioteca e compilador habilitados pela **/std:c++17 + + mais recente** são fornecidos como-está e sem suporte. Eles estão sujeitos às últimas alterações ou remoção sem aviso prévio. Eles destinam-se como uma visualização dos recursos de linguagem que podem aparecer na próxima versão do padrão, mas o padrão é um trabalho em andamento. Use **/std: c + + 17** para usar os recursos no ISO do mais recente C++ padrão.
+> As funcionalidades de compilador e de biblioteca habilitadas por **/std:c++latest** representam as funcionalidades que podem aparecer em um padrão futuro do C++, bem como as funcionalidades aprovadas do C++20. As funcionalidades que não foram aprovadas estão sujeitas à alteração da falha ou à remoção sem aviso prévio e são fornecidas no estado em que se encontram. 
 
-O **/std** opção em vigor durante a compilação de C++ pode ser detectada pelo uso das [ \_MSVC\_LANG](../../preprocessor/predefined-macros.md) macro do pré-processador. Para obter mais informações, consulte [Macros de pré-processador](../../preprocessor/predefined-macros.md).
+A opção **/std** em vigor durante uma compilação do C++ pode ser detectada por meio do uso da macro do pré-processador [\_MSVC\_LANG](../../preprocessor/predefined-macros.md). Para obter mais informações, confira [Macros do pré-processador](../../preprocessor/predefined-macros.md).
 
-O **/std:c++17 + + 14** e **/std: c + + mais recente** opções estão disponíveis no Visual Studio 2015 atualização 3. O **/std: c + + 17** opção está disponível a partir no Visual Studio 2017 versão 15.3. Conforme observado acima, algumas padrão c++17 comportamento é habilitado pela **/std:c++17 + + 14** opção, mas todos os outros recursos do c++17 são habilitadas por **/std: c + + 17**.
+As opções **/std:c++14** e **/std:c++latest** estão disponíveis no Visual Studio 2015 Atualização 3. A opção **/std:c++17** está disponível no Visual Studio 2017 versão 15.3 em diante. Conforme indicado acima, alguns comportamentos padrão do C++17 são habilitados pela opção **/std:c++14**, mas todas as outras funcionalidades do C++17 são habilitadas por **/std:c++17**. As funcionalidades do C++20 são habilitadas por **/std:latest** até a implementação ser concluída.
 
 > [!NOTE]
-> Dependendo do MSVC compilador versão ou atualização do nível, determinados C + + 14 ou C + + 17 recursos talvez não estejam totalmente implementados ou totalmente compatível com quando você especifica o **/std:c++17 + + 14** ou **/std:c++17 + + 17** opções. Por exemplo, o compilador do Visual Studio 2017 RTM não suporta totalmente C + + 14-compatível com `constexpr`, expressão SFINAE ou pesquisa de nome de fase 2. Para uma visão geral de conformidade com a linguagem C++ no Visual C++ por versão de lançamento, consulte [conformidade com a linguagem Visual C++](../../overview/visual-cpp-language-conformance.md).
+> Dependendo da versão do compilador do MSVC ou do nível da atualização, as funcionalidades do C++17 talvez não sejam totalmente implementadas nem estejam totalmente em conformidade quando você especificar as opções **/std:c++17**. Para obter uma visão geral da conformidade com a linguagem C++ no Visual C++ por versão de lançamento, confira [Conformidade com a linguagem Visual C++](../../overview/visual-cpp-language-conformance.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio
 
-1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [propriedades de compilador e de build definida C++ no Visual Studio](../working-with-project-properties.md).
+1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, confira [Definir as propriedades de build e do compilador do C++ no Visual Studio](../working-with-project-properties.md).
 
-1. Selecione **propriedades de configuração**, **C/C++**, **idioma**.
+1. Selecione **Propriedades de Configuração**, **C/C++**, **Linguagem**.
 
-1. Na **padrão de linguagem C++**, escolha o padrão de linguagem para dar suporte a partir do controle de lista suspensa, em seguida, escolha **Okey** ou **aplicar** para salvar suas alterações.
+1. Em **Padrão de Linguagem C++**, escolha o padrão de linguagem para dar suporte no controle suspenso e, em seguida, escolha **OK** ou **Aplicar** para salvar as alterações.
 
 ## <a name="see-also"></a>Consulte também
 

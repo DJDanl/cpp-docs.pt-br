@@ -1,42 +1,45 @@
 ---
 title: Atualizando conjuntos de linhas
-ms.date: 10/19/2018
+ms.date: 05/09/2019
 helpviewer_keywords:
 - rowsets, updating data
 - updating data, rowsets
 - updating rowsets
 - rowsets
 ms.assetid: 39588758-5c72-4254-a10d-cc2b1f473357
-ms.openlocfilehash: 7151d897469993b2f9be3575eb11a08844af3c69
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: e0ee5cf97170cd9293abcb9039771f8fe23962aa
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389054"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65525298"
 ---
 # <a name="updating-rowsets"></a>Atualizando conjuntos de linhas
 
-É uma operação de banco de dados básico atualizar ou gravar dados para o armazenamento de dados. No OLE DB, o mecanismo de atualização é simple: seu aplicativo de consumidor define os valores dos membros de dados associados e, em seguida, grava esses valores no conjunto de linhas; o consumidor solicita que o provedor de atualizar o armazenamento de dados.
+Uma operação de banco de dados básica consiste em atualizar ou gravar dados no armazenamento de dados. No OLE DB, o mecanismo de atualização é simples: o aplicativo de consumidor define os valores dos membros de dados associados e, em seguida, grava esses valores no conjunto de linhas; o consumidor, então, solicita que o provedor atualize o armazenamento de dados.
 
-Os consumidores podem concluir os seguintes tipos de atualizações nos dados do conjunto de linhas: definindo valores de coluna dentro de uma linha, inserindo uma linha e exclusão de uma linha. Para concluir essas operações, a classe de modelo de banco de dados OLE [CRowset](../../data/oledb/crowset-class.md) implementa a [IRowsetChange](/previous-versions/windows/desktop/ms715790(v=vs.85)) de interface e substitui os seguintes métodos de interface:
+Os consumidores podem realizar os seguintes tipos de atualizações nos dados do conjunto de linhas: definir valores de coluna dentro de uma linha, inserir uma linha e excluir uma linha. Para concluir essas operações, a classe de modelo do OLE DB [CRowset](../../data/oledb/crowset-class.md) implementa a interface [IRowsetChange](/previous-versions/windows/desktop/ms715790(v=vs.85)) e substitui os seguintes métodos de interface:
 
-- [SetData](../../data/oledb/crowset-setdata.md) valores de coluna de alterações em uma linha de um conjunto de linhas; ele equivale ao comando SQL UPDATE.
+- [SetData](../../data/oledb/crowset-setdata.md) altera os valores de coluna em uma linha de um conjunto de linhas; equivale ao comando SQL UPDATE.
 
-- [Inserir](../../data/oledb/crowset-insert.md) insere uma linha em um conjunto de linhas; ele equivale ao comando SQL INSERT.
+- [Insert](../../data/oledb/crowset-insert.md) insere uma linha em um conjunto de linhas; equivale ao comando SQL INSERT.
 
-- [Excluir](../../data/oledb/crowset-delete.md) exclui linhas de um conjunto de linhas; ele equivale ao comando SQL DELETE.
+- [Delete](../../data/oledb/crowset-delete.md) exclui linhas de um conjunto de linhas; equivale ao comando SQL DELETE.
 
 ## <a name="supporting-update-operations"></a>Suporte a operações de atualização
 
-Quando você cria um consumidor com o **ATL OLE DB Assistente de consumidor**, você pode dar suporte as operações de atualização, selecionando uma ou mais das três caixas de seleção **alteração**, **inserir**, e **excluir**. Se você selecionar essas opções, o assistente modifica o código adequadamente para dar suporte o tipo de alterações que você escolher. No entanto, se você não usar o assistente, você precisa definir as seguintes propriedades de conjunto de linhas `VARIANT_TRUE` para dar suporte a atualizações:
+> [!NOTE]
+> O Assistente de Consumidor OLE DB da ATL não está disponível no Visual Studio 2019 e posteriores. Ainda é possível adicionar a funcionalidade manualmente. Saiba mais em [Criação de um consumidor sem usar um assistente](creating-a-consumer-without-using-a-wizard.md).
 
-- `DBPROPVAL_UP_CHANGE` permite que você altere os valores de dados em uma linha.
+Ao criar um consumidor com o **Assistente de Consumidor OLE DB do ATL**, é possível ser compatível com as operações de atualização selecionando uma ou mais das três caixas de seleção **Alterar**, **Inserir** e **Excluir**. Se você selecionar essas opções, o assistente modificará o código adequadamente para ser compatível com o tipo de alteração escolhido. No entanto, se você não usar o assistente, precisará definir as seguintes propriedades do conjunto de linhas como `VARIANT_TRUE` para ser compatível com atualizações:
 
-- `DBPROPVAL_UP_INSERT` permite que você inserir uma linha.
+- `DBPROPVAL_UP_CHANGE` permite alterar os valores de dados em uma linha.
 
-- `DBPROPVAL_UP_DELETE` permite que você excluir uma linha.
+- `DBPROPVAL_UP_INSERT` permite inserir uma linha.
 
-Você pode definir as propriedades da seguinte maneira:
+- `DBPROPVAL_UP_DELETE` permite excluir uma linha.
+
+Defina as propriedades da seguinte maneira:
 
 ```cpp
 CDBPropSet ps(DBPROPSET_ROWSET);
@@ -45,11 +48,11 @@ ps.AddProperty(DBPROP_IRowsetChange, true);
 ps.AddProperty(DBPROP_UPDATABILITY, DBPROPVAL_UP_CHANGE | DBPROPVAL_UP_INSERT | DBPROPVAL_UP_DELETE);
 ```
 
-Operações de exclusão, inserção ou alteração poderá falhar se uma ou mais colunas não é gravável. Modifique seu mapa de cursor para corrigir esse problema.
+Operações de exclusão, inserção ou alteração poderão falhar se uma ou mais colunas não forem graváveis. Modifique seu mapa de cursor para corrigir esse problema.
 
-## <a name="setting-data-in-rows"></a>Dados de configuração em linhas
+## <a name="setting-data-in-rows"></a>Definir dados em linhas
 
-[Crowset:: SetData](../../data/oledb/crowset-setdata.md) define valores de dados em uma ou mais colunas da linha atual. O código a seguir define os valores de membros de dados associados às colunas de `Name` e `Units in Stock` da tabela `Products` e, em seguida, chama `SetData` escrever esses valores para a linha do 100 º do conjunto de linhas:
+[CRowset::SetData](../../data/oledb/crowset-setdata.md) define valores de dados em uma ou mais colunas da linha atual. O código a seguir define os valores de membros de dados associados às colunas `Name` e `Units in Stock` da tabela `Products` e, em seguida, chama `SetData` para gravar esses valores na linha 100 do conjunto de linhas:
 
 ```cpp
 // Instantiate a rowset based on the user record class
@@ -69,19 +72,19 @@ product.m_UnitsInStock = 10000;
 HRESULT hr = product.SetData();
 ```
 
-## <a name="inserting-rows-into-rowsets"></a>Inserindo linhas em conjuntos de linhas
+## <a name="inserting-rows-into-rowsets"></a>Inserir linhas em conjuntos de linhas
 
-[Crowset:: Insert](../../data/oledb/crowset-insert.md) cria e inicializa uma nova linha usando os dados do acessador. `Insert` cria uma totalmente nova linha após a linha atual; Você precisa especificar se deseja incrementar a linha atual para a próxima linha ou deixá-lo inalterado. Você pode fazer isso definindo a *bGetRow* parâmetro:
+[CRowset::Insert](../../data/oledb/crowset-insert.md) cria e inicia uma nova linha usando os dados do acessador. `Insert` cria uma linha totalmente nova após a linha atual; especifique se deseja incrementar a linha atual na próxima linha ou deixá-la inalterada. Para fazer isso, defina o parâmetro *bGetRow*:
 
 ```cpp
 HRESULT Insert(int nAccessor = 0, bool bGetRow = false)
 ```
 
-- **False** (o valor padrão) Especifica que a linha atual aumentam para a próxima linha (nesse caso, ele aponta para a linha inserida).
+- **false** (o valor padrão) especifica que a linha atual seja incrementada para a próxima linha (nesse caso, aponta para a linha inserida).
 
-- **True** Especifica que a linha atual fique onde ele está.
+- **true** especifica que a linha atual fique como está.
 
-O código a seguir define os valores de membros de dados associados às colunas da tabela `Products` e, em seguida, chama `Insert` para inserir uma nova linha com esses valores após a linha do 100 º do conjunto de linhas. É recomendável que você defina todos os valores de coluna para evitar dados indefinidos na nova linha:
+O código a seguir define os valores de membros de dados associados às colunas da tabela `Products` e, em seguida, chama `Insert` para inserir uma nova linha com esses valores após a linha 100 do conjunto de linhas. É recomendável definir todos os valores de coluna para evitar dados indefinidos na nova linha:
 
 ```cpp
 // Instantiate a rowset based on the user record class
@@ -128,13 +131,13 @@ m_dwQuantityPerUnitLength = 10;        // "Pack of 10" has 10 characters
 HRESULT hr = product.Insert();
 ```
 
-Para obter um exemplo mais detalhado, consulte [crowset:: Insert](../../data/oledb/crowset-insert.md).
+Confira um exemplo mais detalhado em [CRowset::Insert](../../data/oledb/crowset-insert.md).
 
-Para obter mais informações sobre como definir o status e o comprimento de membros de dados, consulte [membros de dados de Status de campo em acessadores de Wizard-Generated](../../data/oledb/field-status-data-members-in-wizard-generated-accessors.md).
+Saiba mais sobre como definir o status e o comprimento de membros de dados em [Membros de dados de status de campo em acessadores gerados pelo assistente](../../data/oledb/field-status-data-members-in-wizard-generated-accessors.md).
 
-## <a name="deleting-rows-from-rowsets"></a>Excluindo linhas de conjuntos de linhas
+## <a name="deleting-rows-from-rowsets"></a>Excluir linhas dos conjuntos de linhas
 
-[Crowset:: delete](../../data/oledb/crowset-delete.md) exclui a linha atual do conjunto de linhas. O código a seguir chama `Delete` para remover a linha do 100 º do conjunto de linhas:
+[CRowset::Delete](../../data/oledb/crowset-delete.md) exclui a linha atual do conjunto de linhas. O código a seguir chama `Delete` para remover a linha 100 do conjunto de linhas:
 
 ```cpp
 // Instantiate a rowset based on the user record class
@@ -151,23 +154,23 @@ HRESULT hr = product.Delete();
 
 ## <a name="immediate-and-deferred-updates"></a>Atualizações imediatas e adiadas
 
-A menos que você especifique de outra forma, chamadas para o `SetData`, `Insert`, e `Delete` métodos de atualizar o armazenamento de dados imediatamente. No entanto, você pode, adiar atualizações de forma que o consumidor armazena todas as alterações em um cache local e, em seguida, transfere para o armazenamento de dados quando você chama um dos seguintes métodos de atualização:
+A menos que você especifique de outra forma, as chamadas para os métodos `SetData`, `Insert` e `Delete` atualizam o armazenamento de dados imediatamente. No entanto, você pode adiar as atualizações de forma que o consumidor armazene todas as alterações em um cache local e, em seguida, transfira-as para o armazenamento de dados ao chamar um dos seguintes métodos de atualização:
 
-- [Crowset:: Update](../../data/oledb/crowset-update.md) transfere todas as alterações feitas na linha atual desde o último fetch pendentes ou `Update` chamar nela.
+- [CRowset::Update](../../data/oledb/crowset-update.md) transfere todas as alterações pendentes feitas na linha atual desde o último fetch ou chamada de `Update`.
 
-- [Crowset:: UpdateAll](../../data/oledb/crowset-updateall.md) transfere todas as alterações feitas a todas as linhas desde o último fetch pendentes ou `Update` chamar nela.
+- [CRowset::UpdateAll](../../data/oledb/crowset-updateall.md) transfere todas as alterações pendentes feitas em todas as linhas desde o último fetch ou chamada de `Update`.
 
-Têm significado específico de fazer alterações no comando conforme usado por métodos de atualização, atualização e não deve ser confundido com o SQL **atualize** comando (`SetData` é equivalente ao SQL **atualizar** comando) .
+Update, conforme usado pelos métodos de atualização, tem a função específica de fazer alterações no comando e não deve ser confundido com o comando **UPDATE** (`SetData` é equivalente ao comando SQL **UPDATE**).
 
-Atualizações adiadas são úteis, por exemplo, em situações como uma série de transações bancárias; Se uma transação for cancelada, você pode desfazer a alteração, porque você não envia a série de alterações até depois que o último é confirmada. Além disso, o provedor pode agrupar as alterações em chamada de uma rede, o que é mais eficiente.
+Atualizações adiadas são úteis, por exemplo, em situações como uma série de transações bancárias; se uma transação for cancelada, é possível desfazer a alteração, porque você não envia a série de alterações até que a última seja confirmada. Além disso, o provedor pode agrupar as alterações em uma chamada de rede, o que é mais eficiente.
 
-Para dar suporte a atualizações adiadas, você deve definir a `DBPROP_IRowsetChange` propriedade junto com as propriedades descritas na **que dão suporte a operações de atualização**:
+Para ser compatível com atualizações adiadas, defina a propriedade `DBPROP_IRowsetChange` com as propriedades descritas em **Suporte a operações de atualização**:
 
 ```cpp
 pPropSet->AddProperty(DBPROP_IRowsetUpdate, true);
 ```
 
-Quando você chama `Update` ou `UpdateAll`, os métodos de transferir as alterações do cache local para o armazenamento de dados e, em seguida, apagar o cache local. Como atualizar transfere as alterações somente para a linha atual, é importante que seu aplicativo mantém o controle de qual linha deve ser update e quando para atualizá-lo. O exemplo a seguir mostra como atualizar duas linhas consecutivas:
+Ao chamar `Update` ou `UpdateAll`, os métodos transferem as alterações do cache local para o armazenamento de dados e, em seguida, apagam o cache local. Como a atualização transfere as alterações somente para a linha atual, é importante que seu aplicativo mantenha o controle de qual linha deve ser atualizada e de quando isso deve ser feito. O exemplo a seguir mostra como atualizar duas linhas consecutivas:
 
 ```cpp
 // Instantiate a rowset based on the user record class
@@ -197,11 +200,11 @@ HRESULT hr = product.SetData();  // No changes made to row 101 yet
 product.Update();                 // Update row 101 now
 ```
 
-Para garantir que as alterações pendentes são transferidos, você deve chamar `Update` antes de passar para outra linha. No entanto, quando isso é entediante ou ineficiente, por exemplo, quando seu aplicativo precisa para atualizar a centenas de linhas, você pode usar `UpdateAll` para atualizar todas as linhas ao mesmo tempo.
+Para garantir que as alterações pendentes sejam transferidas, você deve chamar `Update` antes de passar para outra linha. No entanto, quando isso é entediante ou ineficiente, por exemplo, quando seu aplicativo precisa atualizar centenas de linhas, é possível usar `UpdateAll` para atualizar todas as linhas ao mesmo tempo.
 
-Por exemplo, se o primeiro `Update` chamada estavam faltando no código acima, a linha 100 permanece inalterada, enquanto a linha 101 seria alterada. Depois desse ponto, seu aplicativo tem que chamar `UpdateAll` ou mover de volta para a linha 100 e chamada `Update` para aquela linha a ser atualizada.
+Por exemplo, se a primeira chamada `Update` estiver ausente do código acima, a linha 100 permanecerá inalterada, enquanto a linha 101 será alterada. Depois desse ponto, seu aplicativo teria que chamar `UpdateAll` ou retornar à linha 100 e chamar `Update` para que essa linha fosse atualizada.
 
-Por fim, um motivo principal para adiar as alterações é ser capaz de desfazê-las. Chamando [crowset:: Undo](../../data/oledb/crowset-undo.md) reverte o estado do cache local de alteração para o estado do repositório de dados antes que todas as alterações pendentes foram feitas. É importante observar que `Undo` não reverter de volta o estado do cache local por uma única etapa (o estado antes de apenas a alteração mais recente); em vez disso, ele limpa o cache local para aquela linha. Além disso, `Undo` afeta somente a linha atual.
+Por fim, um motivo principal para adiar as alterações é ser capaz de desfazê-las. Chamar [CRowset::Undo](../../data/oledb/crowset-undo.md) reverte o estado do cache de alterações local para o estado em que o armazenamento de dados estava antes que todas as alterações pendentes fossem feitas. É importante observar que `Undo` não reverte o estado do cache local em uma única etapa (o estado antes da alteração mais recente); em vez disso, ele limpa o cache local para aquela linha. Além disso, `Undo` afeta somente a linha atual.
 
 ## <a name="see-also"></a>Consulte também
 

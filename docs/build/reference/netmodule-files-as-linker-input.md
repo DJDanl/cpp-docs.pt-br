@@ -1,48 +1,48 @@
 ---
 title: Arquivos .netmodule como entrada de vinculador
-ms.date: 11/04/2016
+ms.date: 05/16/2019
 helpviewer_keywords:
 - MSIL linking
 - linking [C++], modules
 - .netmodules
 - modules, Visual C++
 ms.assetid: a4bcbe8a-4255-451d-853b-f88cfd82f4e1
-ms.openlocfilehash: fcba363cff567c69ac0fbd0a541953dfe2c8e910
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 50a0f0a1ff5f65a7512e8372de2fe5296c866dca
+ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62320663"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65837432"
 ---
 # <a name="netmodule-files-as-linker-input"></a>Arquivos .netmodule como entrada de vinculador
 
-link.exe agora aceita MSIL obj e. netmodules como entrada. O arquivo de saída produzido pelo vinculador é um assembly ou um. netmodule sem dependência de tempo de execução em qualquer um dos netmodules eram de entrada para o vinculador ou. obj.
+link.exe agora aceita .obj e .netmodules da MSIL como entrada. O arquivo de saída produzido pelo vinculador é um assembly ou um .netmodule sem dependência em tempo de execução de nenhum dos .netmodules ou .obj de entrada para o vinculador.
 
-netmodules são criadas pelo compilador MSVC com [/LN (Criar módulo de MSIL)](ln-create-msil-module.md) ou pelo vinculador com [/NOASSEMBLY (criar um módulo de MSIL)](noassembly-create-a-msil-module.md). .objs são sempre criadas em uma compilação do Visual C++. Para outros compiladores do Visual Studio, use o **/target: Module** opção de compilador.
+.netmodules são criados pelo compilador do MSVC com [/LN (Criar módulo da MSIL)](ln-create-msil-module.md) ou pelo vinculador com [/NOASSEMBLY (Criar um módulo da MSIL)](noassembly-create-a-msil-module.md). .objs são sempre criados em uma compilação do Visual C++. Para outros compiladores do Visual Studio, use a opção do compilador **/target:module**.
 
-Você deve passar para o vinculador de arquivo. obj da compilação do Visual C++ que criou o. netmodule. Passando um. netmodule não é mais suportado porque o **/clr: pure** e **/CLR: safe** opções do compilador são preteridas no Visual Studio 2015 e sem suporte no Visual Studio 2017.
+É necessário passar para o vinculador o arquivo .obj da compilação do Visual C++ que criou o .netmodule. Não há mais suporte para a passagem de um .netmodule, porque as opções do compilador **/clr:pure** e **/clr:safe** foram preteridas no Visual Studio 2015 e estão sem suporte no Visual Studio 2017 e posterior.
 
-Para obter informações sobre como invocar o vinculador da linha de comando, consulte [sintaxe de linha de comando do vinculador](linking.md), [usam o conjunto de ferramentas da linha de comando MSVC](../building-on-the-command-line.md), e [definir o caminho e variáveis de ambiente para compilações de linha de comando](../setting-the-path-and-environment-variables-for-command-line-builds.md).
+Para obter informações sobre como invocar o vinculador na linha de comando, confira [Sintaxe de linha de comando do vinculador](linking.md), [Usar o Conjunto de ferramentas do MSVC na linha de comando](../building-on-the-command-line.md) e [Definir o caminho e as variáveis de ambiente para builds de linha de comando](../setting-the-path-and-environment-variables-for-command-line-builds.md).
 
-Passando um arquivo. netmodule ou. dll para o vinculador que foi compilado pelo compilador MSVC com **/clr** pode resultar em um erro de vinculador. Para obter mais informações, consulte [escolhendo o formato dos arquivos de entrada. netmodule](choosing-the-format-of-netmodule-input-files.md).
+Passar um arquivo .dll ou .netmodule para o vinculador que foi compilado pelo compilador do MSVC com **/clr** poderá resultar em um erro do vinculador. Para obter mais informações, confira [Como escolher o formato dos arquivos de entrada .netmodule](choosing-the-format-of-netmodule-input-files.md).
 
-O vinculador aceita arquivos. obj nativo, bem como arquivos do MSIL. obj compilados com **/clr**. Ao passar .objs mistos na mesma compilação, a capacidade de verificação do arquivo de saída resultante, por padrão, será igual ao nível mais baixo de capacidade de verificação dos módulos de entrada.
+O vinculador aceita arquivos .obj nativos, bem como arquivos .obj da MSIL compilados com **/clr**. Ao passar .objs mistos no mesmo build, a capacidade de verificação do arquivo de saída resultante, por padrão, será igual ao nível mais baixo da capacidade de verificação dos módulos de entrada.
 
-Se você tiver um aplicativo que é composto de dois ou mais assemblies e você deseja que o aplicativo a ser contido em um assembly, você deve recompilar os assemblies e, em seguida, vincule o .objs ou netmodules para produzir um único assembly.
+Se, atualmente, você tiver um aplicativo que seja composto por dois ou mais assemblies e desejar que o aplicativo fique contido em um assembly, recompile os assemblies e, em seguida, vincule os .objs ou os .netmodules para produzir um único assembly.
 
-Você deve especificar um ponto de entrada usando [/ENTRY (símbolo de ponto de entrada)](entry-entry-point-symbol.md) durante a criação de uma imagem executável.
+É necessário especificar um ponto de entrada usando [/ENTRY (Símbolo de ponto de entrada)](entry-entry-point-symbol.md) durante a criação de uma imagem executável.
 
-Ao vincular com um arquivo. obj ou. netmodule MSIL, use [/LTCG (geração de código Link-time)](ltcg-link-time-code-generation.md), caso contrário, quando o vinculador encontra o. netmodule ou. obj MSIL, ele reiniciará o link com /LTCG.
+Durante a vinculação com um arquivo .obj ou .netmodule da MSIL, use [/LTCG (Geração de Código Durante o Tempo de Vinculação)](ltcg-link-time-code-generation.md); caso contrário, quando o vinculador encontrar o .obj ou o .netmodule da MSIL, ele reiniciará a vinculação com /LTCG.
 
-Arquivos. obj ou. netmodule MSIL também podem ser passados para cl.exe.
+Os arquivos .obj ou .netmodule da MSIL também podem ser passados para cl.exe.
 
-Arquivos de. obj ou. netmodule MSIL entrada não podem ter recursos inseridos. Um recurso é inserido em um arquivo de saída (módulo ou assembly) com [/ASSEMBLYRESOURCE. (inserir um recurso gerenciado)](assemblyresource-embed-a-managed-resource.md) opção de vinculador ou com o **/resource** opção do compilador em outros compiladores do Visual Studio.
+Os arquivos de entrada .obj ou .netmodule da MSIL não podem ter recursos inseridos. Um recurso é inserido em um arquivo de saída (módulo ou assembly) com a opção do vinculador [/ASSEMBLYRESOURCE (Inserir um recurso gerenciado)](assemblyresource-embed-a-managed-resource.md) ou com a opção do compilador **/resource** em outros compiladores do Visual Studio.
 
-Ao executar a vinculação MSIL, e se você não especificar também [/LTCG (geração de código Link-time)](ltcg-link-time-code-generation.md), você verá uma mensagem informativa relatar que o link está reiniciando. Essa mensagem pode ser ignorado, mas to melhorar performance do vinculador com vinculação MSIL, especifique explicitamente **/LTCG**.
+Ao executar a vinculação da MSIL e se você não especificar também [/LTCG (Geração de Código Durante o Tempo de Vinculação)](ltcg-link-time-code-generation.md), verá uma mensagem informativa relatando que a vinculação está sendo reiniciada. Essa mensagem pode ser ignorada, mas para melhorar o desempenho com a vinculação da MSIL, especifique **/LTCG** explicitamente.
 
 ## <a name="example"></a>Exemplo
 
-No código C++ a **catch** bloco de um correspondente **tente** será invocado para uma exceção não são do sistema. No entanto, por padrão, o CLR encapsula exceções não são do sistema com <xref:System.Runtime.CompilerServices.RuntimeWrappedException>. Quando um assembly é criado a partir de módulos do Visual C++ e não do Visual C++ e você desejar uma **catch** bloquear em código C++ para ser invocado a partir de seu correspondente **tente** cláusula quando o **tente**bloco lançar uma exceção não são do sistema, você deve adicionar o `[assembly:System::Runtime::CompilerServices::RuntimeCompatibility(WrapNonExceptionThrows=false)]` de atributo no código-fonte para os módulos não C++.
+No código C++, o bloco **catch** de um **try** correspondente será invocado para uma exceção que não seja do sistema. No entanto, por padrão, o CLR encapsula as exceções que não são do sistema com <xref:System.Runtime.CompilerServices.RuntimeWrappedException>. Quando um assembly for criado com base em módulos do Visual C++ e não Visual C++ e você desejar que um bloco **catch** no código C++ seja invocado de sua cláusula **try** correspondente quando o bloco **try** gerar uma exceção que não seja do sistema, você precisará adicionar o atributo `[assembly:System::Runtime::CompilerServices::RuntimeCompatibility(WrapNonExceptionThrows=false)]` ao código-fonte para esses módulos que não são do C++.
 
 ```cpp
 // MSIL_linking.cpp
@@ -69,7 +69,7 @@ int main() {
 
 ## <a name="example"></a>Exemplo
 
-Alterando o valor booliano do `WrapNonExceptionThrows` atributo, você modifica a capacidade do código do Visual C++ para capturar uma exceção não são do sistema.
+Alterando o valor booliano do atributo `WrapNonExceptionThrows`, você modifica a capacidade de o código do Visual C++ capturar uma exceção que não seja do sistema.
 
 ```cpp
 // MSIL_linking_2.cs

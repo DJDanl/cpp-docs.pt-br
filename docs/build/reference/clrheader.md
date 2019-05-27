@@ -1,6 +1,6 @@
 ---
 title: /CLRHEADER
-ms.date: 11/04/2016
+ms.date: 05/16/2019
 f1_keywords:
 - /CLRHEADER
 helpviewer_keywords:
@@ -8,39 +8,39 @@ helpviewer_keywords:
 - /CLRHEADER dumpbin option
 - CLRHEADER dumpbin option
 ms.assetid: cf73424f-4541-47e2-b94e-69b95266ef2a
-ms.openlocfilehash: 6a1240e2d3ad2ac3a454c610a6f49d07e50951e5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5974606448dad103c8f12a126b8d17c688927c88
+ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62272559"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65837158"
 ---
 # <a name="clrheader"></a>/CLRHEADER
 
-Exibir informações específicas de CLR.
+Exiba informações específicas do CLR.
 
 ## <a name="syntax"></a>Sintaxe
 
-> /CLRHEADER *file*
+> *Arquivo* /CLRHEADER
 
 ### <a name="arguments"></a>Arguments
 
 *file*<br/>
-Um arquivo de imagem criado com [/clr](clr-common-language-runtime-compilation.md).
+Um arquivo de imagem compilado com [/clr](clr-common-language-runtime-compilation.md).
 
 ## <a name="remarks"></a>Comentários
 
-**/CLRHEADER** exibe informações sobre os cabeçalhos de .NET usados em qualquer programa gerenciado. A saída mostra o local e o tamanho em bytes, do cabeçalho do .NET e seções no cabeçalho.
+**/CLRHEADER** exibe informações sobre os cabeçalhos do .NET usados em qualquer programa gerenciado. A saída mostra a localização e o tamanho em bytes, do cabeçalho do .NET e seções no cabeçalho.
 
-Somente o [/HEADERS](headers.md) opção DUMPBIN está disponível para uso em arquivos produzidos com o [/GL](gl-whole-program-optimization.md) opção de compilador.
+Somente a opção [/HEADERS](headers.md) DUMPBIN está disponível para uso em arquivos produzidos com a opção do compilador [/GL](gl-whole-program-optimization.md).
 
-Quando **/clrheader.** é usado em um arquivo que foi compilado com /clr, haverá uma **cabeçalho do clr:** seção na saída (DUMPBIN). O valor de **sinalizadores** indica qual opção /clr foi usada:
+Quando **/CLRHEADER** é usado em um arquivo que foi compilado com /clr, há uma seção **Cabeçalho clr:** na saída do compartimento de despejo. O valor de **flags** indica qual opção /clr foi usada:
 
-- 0 – /clr (a imagem pode conter código nativo).
+- 0 -- /clr (a imagem pode conter um código nativo).
 
-Você também pode verificar programaticamente se uma imagem foi criada para o common language runtime.  Para obter mais informações, confira [Como: Determinar se uma imagem é nativa ou CLR](../../dotnet/how-to-determine-if-an-image-is-native-or-clr.md).
+Verifique também de forma programática se uma imagem foi compilada para o Common Language Runtime.  Para obter mais informações, confira [Como: Determinar se uma imagem é nativa ou CLR](../../dotnet/how-to-determine-if-an-image-is-native-or-clr.md).
 
-O **/clr: pure** e **/CLR: safe** opções do compilador são preteridas no Visual Studio 2015 e sem suporte no Visual Studio 2017. Código que deve ser "pura" ou "segura" deve ser movido para C#.
+As opções do compilador **/clr:pure** e **/clr:safe** foram preteridas no Visual Studio 2015 e estão sem suporte no Visual Studio 2017 e posterior. O código que precisa ser "puro" ou "seguro" deve ser portado para o C#.
 
 ## <a name="see-also"></a>Consulte também
 

@@ -1,39 +1,42 @@
 ---
-title: Adicionando uma página de propriedades ATL
-ms.date: 11/04/2016
+title: Adição de uma página de propriedades da ATL
+ms.date: 05/09/2019
 helpviewer_keywords:
 - property pages, adding
 - ATL projects, adding property pages
 - controls [ATL], property pages
 ms.assetid: ddf92b49-42a2-46d2-b6b8-d37baedebeca
-ms.openlocfilehash: c61f666865d3e1db4cdcf2dc6d3e07c2113a79c7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 81f793fbdc6d9dda567051b8c35a96f3d3f2f470
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62249093"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65524622"
 ---
-# <a name="adding-an-atl-property-page"></a>Adicionando uma página de propriedades ATL
+# <a name="adding-an-atl-property-page"></a>Adição de uma página de propriedades da ATL
 
-Para adicionar uma página de propriedade da biblioteca ATL (Active Template) ao seu projeto, seu projeto deve ter sido criado como um aplicativo ATL ou como um aplicativo do MFC que contém suporte ATL. Você pode usar o [ATL Project Wizard](../../atl/reference/atl-project-wizard.md) para criar um aplicativo ATL ou [adicionar um objeto ATL ao seu aplicativo do MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md) para implementar o suporte ATL para um aplicativo do MFC.
+> [!NOTE] 
+> O assistente de Página de Propriedades da ATL não está disponível no Visual Studio 2019 e versões posteriores.
 
-Se você estiver adicionando uma página de propriedades para um controle, seu controle deve oferecer suporte a [ISpecifyPropertyPagesImpl](../../atl/reference/ispecifypropertypagesimpl-class.md) interface. Por padrão, essa interface é na lista de derivação de seu controle quando você [criar um controle ATL](../../atl/reference/adding-an-atl-control.md) usando o [Assistente de controle ATL](../../atl/reference/atl-control-wizard.md).
+Para adicionar uma página de propriedades ATL (Active Template Library) ao seu projeto, ele deve ter sido criado como um aplicativo ATL ou como um aplicativo MFC compatível com ATL. Use o [Assistente de Projeto ATL](../../atl/reference/atl-project-wizard.md) para criar um aplicativo ATL ou [adicione um objeto ATL ao aplicativo MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md) para implementar o suporte à ATL para um aplicativo MFC.
+
+Se estiver adicionando uma página de propriedades para um controle, este deverá ser compatível com a interface [ISpecifyPropertyPagesImpl](../../atl/reference/ispecifypropertypagesimpl-class.md). Por padrão, essa interface está na lista de derivação da sua classe de controle quando você [cria um controle de ATL](../../atl/reference/adding-an-atl-control.md) usando o [Assistente de Controle de ATL](../../atl/reference/atl-control-wizard.md).
 
 > [!NOTE]
-> Se sua classe de controle não tem [ISpecifyPropertyPagesImpl](../../atl/reference/ispecifypropertypagesimpl-class.md) em sua lista de derivação, você deve adicioná-lo manualmente.
+> Se sua classe de controle não tiver [ISpecifyPropertyPagesImpl](../../atl/reference/ispecifypropertypagesimpl-class.md) na própria lista de derivação, você deverá adicioná-la manualmente.
 
-## <a name="to-add-an-atl-property-page-to-your-project"></a>Para adicionar uma página de propriedades ATL ao seu projeto
+## <a name="to-add-an-atl-property-page-to-your-project"></a>Adição de uma página de propriedades da ATL ao seu projeto
 
-1. Em ambos **Gerenciador de soluções** ou [exibição de classe](/visualstudio/ide/viewing-the-structure-of-code), clique no nome do projeto ao qual você deseja adicionar a página de propriedades ATL.
+1. No **Gerenciador de Soluções** ou no [Modo de Exibição de Classe](/visualstudio/ide/viewing-the-structure-of-code), clique com o botão direito do mouse no nome do projeto ao qual deseja adicionar a página de propriedades da ATL.
 
-1. No menu de atalho, clique em **Add** e, em seguida, clique em **Adicionar classe**.
+1. No menu de atalho, clique em **Adicionar** e em **Adicionar Classe**.
 
-1. No [Add Class](../../ide/add-class-dialog-box.md) na caixa a **modelos** painel, clique em **página de propriedades ATL** e, em seguida, clique em **abrir** para exibir o [Assistente de página de propriedades ATL](../../atl/reference/atl-property-page-wizard.md).
+1. Na caixa de diálogo [Adicionar Classe](../../ide/add-class-dialog-box.md), no painel **Modelos**, clique em **Página de Propriedades da ATL** e em **Abrir** para exibir o [Assistente da Página de Propriedades da ATL](../../atl/reference/atl-property-page-wizard.md).
 
-Depois de criar uma página de propriedades para um controle, você deve fornecer o [PROP_PAGE](property-map-macros.md#prop_page) entrada no mapa de propriedade para o controle.
+Depois de criar uma página de propriedades para um controle, você deve fornecer a entrada [PROP_PAGE](property-map-macros.md#prop_page) no mapa de propriedades do controle.
 
 ## <a name="see-also"></a>Consulte também
 
 [Páginas de propriedade](../../atl/atl-com-property-pages.md)<br/>
 [Princípios básicos de objetos COM da ATL](../../atl/fundamentals-of-atl-com-objects.md)<br/>
-[Exemplo: implementar uma página de propriedades](../../atl/example-implementing-a-property-page.md)
+[Exemplo: Implementação de uma página de propriedades](../../atl/example-implementing-a-property-page.md)

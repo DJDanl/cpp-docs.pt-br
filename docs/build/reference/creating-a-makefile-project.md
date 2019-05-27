@@ -1,38 +1,55 @@
 ---
-title: Criar um projeto de makefile do C++ no Visual Studio
-ms.date: 12/08/2018
+title: Criar um projeto de makefile C++ no Visual Studio
+ms.date: 05/16/2019
 f1_keywords:
 - vc.appwiz.makefile.project
 helpviewer_keywords:
 - Makefile projects, creating
 - project files [C++], Makefile projects
 ms.assetid: dd077af3-97a8-48fb-baaa-cf7e07ddef61
-ms.openlocfilehash: 9c2edfe35233672e8117d336ba40cfea497b1a22
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b460b16b3a64818501187b00e503ad0179d26443
+ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62272341"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65837387"
 ---
-# <a name="create-a-c-makefile-project"></a>Criar um projeto de makefile do C++
+# <a name="create-a-c-makefile-project"></a>Criar um projeto de makefile C++
 
-Um *makefile* é um arquivo de texto que contém instruções sobre como criar e vincular (ou *compilar*) um conjunto de arquivos de código-fonte do C++. Um programa *make* lê o makefile e invoca um compilador, vinculador e possivelmente outros programas para criar um arquivo executável. Implementação da Microsoft a *tornar* programa é chamado [NMAKE](nmake-reference.md);
+Um *makefile* é um arquivo de texto que contém instruções sobre como criar e vincular (ou *compilar*) um conjunto de arquivos de código-fonte do C++. Um programa *make* lê o makefile e invoca um compilador, vinculador e possivelmente outros programas para criar um arquivo executável. A implementação do programa *make* pela Microsoft é chamada [NMAKE](nmake-reference.md);
 
 Se tiver um projeto makefile existente, você terá estas opções se desejar codificar e/ou depurá-lo no Visual Studio IDE:
 
-- Crie um projeto do makefile do Visual Studio que usa o makefile existente para configurar um arquivo. vcxproj que usará o Visual Studio para o IntelliSense. (Você não terá todos os recursos do IDE que tem com um projeto MSBuild nativo). Consulte [Para criar um projeto makefile](#create_a_makefile_project) abaixo.
-- Use o assistente para **Criar Novo Projeto com base em Arquivos de Código Existentes** para criar um projeto nativo do MSBuild com base no código-fonte. O makefile original não será usado depois de fazer isso. Para obter mais informações, confira [Como: Criar um projeto em C++ de um código existente](../how-to-create-a-cpp-project-from-existing-code.md).
-- **Visual Studio 2017 e posterior**: Use o **Abrir pasta** recurso Editar e compilar um projeto do makefile como-está, sem qualquer envolvimento do sistema MSBuild. Para saber mais, veja [Projetos Open Folder para C++](../open-folder-projects-cpp.md).
+- Crie um projeto de makefile no Visual Studio que usa o makefile existente para configurar um arquivo .vcxproj que será usado pelo Visual Studio para o IntelliSense. (Você não terá todos os recursos do IDE que tem com um projeto MSBuild nativo). Consulte [Para criar um projeto makefile](#create_a_makefile_project) abaixo.
+- Use o assistente para **Criar Novo Projeto com base em Arquivos de Código Existentes** para criar um projeto nativo do MSBuild com base no código-fonte. O makefile original não será usado depois disso. Para obter mais informações, confira [Como: Criar um projeto em C++ de um código existente](../how-to-create-a-cpp-project-from-existing-code.md).
+- **Visual Studio 2017 e posterior**: Use a funcionalidade **Abrir Pasta** para editar e compilar um projeto de makefile no estado em que se encontra, sem nenhum envolvimento do sistema MSBuild. Para saber mais, veja [Projetos Open Folder para C++](../open-folder-projects-cpp.md).
+- **Visual Studio 2019 e posterior**: Crie um projeto de makefile do UNIX para o Linux.
 
-## <a name="a-namecreateamakefileproject-to-create-a-makefile-project-with-the-makefile-project-template"></a><a name="create_a_makefile_project"> Para criar um projeto do makefile com o modelo de projeto makefile
+## <a name="a-namecreateamakefileproject-to-create-a-makefile-project-with-the-makefile-project-template"></a><a name="create_a_makefile_project"> Para criar um projeto de makefile com o modelo de projeto de makefile
 
 No Visual Studio 2017 e posterior, o modelo de projeto Makefile estará disponível quando a carga de trabalho de Desenvolvimento do C++ da área de trabalho for instalada.
 
-Siga o assistente para especificar os comandos e o ambiente usado pelo seu makefile. Em seguida, você pode usar esse projeto para compilar seu código no Visual Studio.
+Siga o assistente para especificar os comandos e o ambiente usado pelo seu makefile. Em seguida, use esse projeto para compilar o código no Visual Studio.
 
 Por padrão, o projeto de makefile não exibe nenhum arquivo no Gerenciador de Soluções. O projeto de makefile especifica as configurações de build, que são refletidas na página de propriedades do projeto.
 
 O arquivo de saída que você especifica no projeto não tem efeito no nome que o script de compilação gera; ele declara apenas uma intenção. O makefile ainda controla o processo de build e especifica os destinos de build.
+
+::: moniker range="vs-2019"
+
+### <a name="to-create-a-makefile-project-in-visual-studio-2019"></a>Para criar um projeto de makefile no Visual Studio 2019
+
+1. No menu principal do Visual Studio, escolha **Arquivo** > **Novo** > **Projeto** e digite "makefile" na caixa de pesquisa. Ou, na caixa de diálogo **Novo Projeto**, expanda **Visual C++** > **Geral** (Visual Studio 2015) ou **Outros** (Visual Studio 2017) e, em seguida, selecione uma das duas opções, dependendo se o Windows ou o Linux será direcionado.
+
+1. **Somente Windows**: Na página **Definições da Configuração de Depuração**, forneça as informações de comando, saída, limpeza e recompilação para builds de depuração e varejo. Clique em **Avançar** se desejar especificar configurações diferentes para uma configuração de Versão.
+
+1. Clique em **Concluir** para fechar a caixa de diálogo e abra o projeto recém-criado no **Gerenciador de Soluções**.
+
+::: moniker-end
+
+::: moniker range="<=vs-2017"
+
+### <a name="to-create-a-makefile-project-in-visual-studio-2015-or-visual-studio-2017"></a>Para criar um projeto de makefile no Visual Studio 2015 ou no Visual Studio 2017
 
 1. Na página inicial do Visual Studio, digite "makefile" na caixa de pesquisa **Novo projeto**. Ou, na caixa de diálogo **Novo Projeto**, expanda **Visual C++** > **Geral** (Visual Studio 2015) ou **Outro** (Visual Studio 2017) e, em seguida, selecione **Projeto Makefile** no painel Modelos para abrir o assistente de projeto.
 
@@ -40,25 +57,27 @@ O arquivo de saída que você especifica no projeto não tem efeito no nome que 
 
 1. Clique em **Concluir** para fechar o assistente e abrir o projeto recém-criado no **Gerenciador de Soluções**.
 
-Você pode ver e editar as propriedades do projeto em sua página de propriedades. Ver [propriedades de compilador e de build definida C++ no Visual Studio](../working-with-project-properties.md) para obter informações sobre como exibir a página de propriedades.
+::: moniker-end
 
-## <a name="makefile-project-wizard"></a>Assistente de projeto makefile
+Você pode ver e editar as propriedades do projeto em sua página de propriedades. Confira [Definir propriedades de build e do compilador do C++ no Visual Studio](../working-with-project-properties.md) para obter informações sobre como exibir a página de propriedades.
 
-Depois de criar um projeto makefile, você pode exibir e editar cada uma das seguintes opções de **Nmake** página da página de propriedades do projeto.
+## <a name="makefile-project-wizard"></a>Assistente de projeto de makefile
 
-- **Linha de comando de compilação:** Especifica a linha de comando para executar quando o usuário seleciona o Build no menu Build. Exibido no campo de linha de comando de compilação na página de Nmake da página de propriedades do projeto.
+Depois de criar um projeto de makefile, exiba e edite cada uma das opções a seguir na página **NMake** da página de propriedades do projeto.
 
-- **Saída:** Especifica o nome do arquivo de saída que conterá a saída da linha de comando. Por padrão, essa opção baseia-se no nome do projeto. Exibido no campo de saída na página de Nmake da página de propriedades do projeto.
+- **Linha de comando de build:** Especifica a linha de comando a ser executada quando o usuário seleciona Compilar no menu Build. Exibida no campo Linha de comando de build na página NMake da página de propriedades do projeto.
 
-- **Comandos de limpo:** Especifica a linha de comando para executar quando o usuário seleciona Limpar no menu Build. Exibido no campo de linha de comando de limpeza na página de Nmake da página de propriedades do projeto.
+- **Saída:** Especifica o nome do arquivo de saída que conterá a saída da linha de comando. Por padrão, essa opção baseia-se no nome do projeto. Exibida no campo Saída na página NMake da página de propriedades do projeto.
 
-- **Recrie a linha de comando:** Especifica a linha de comando para executar quando o usuário seleciona a recompilação no menu Build. Exibido na recompilação de todos os campos de linha de comando na página de Nmake da página de propriedades do projeto.
+- **Comandos de limpeza:** Especifica a linha de comando a ser executada quando o usuário seleciona Limpar no menu Build. Exibida no campo Linha de comando de limpeza na página NMake da página de propriedades do projeto.
+
+- **Linha de comando de recompilação:** Especifica a linha de comando a ser executada quando o usuário seleciona Recompilar no menu Build. Exibida no campo Linha de comando de Recompilar tudo na página NMake da página de propriedades do projeto.
 
 ## <a name="how-to-enable-intellisense-for-makefile-projects"></a>Como: Habilitar o IntelliSense para projetos Makefile
 
-Falha do IntelliSense em projetos makefile quando determinadas configurações do projeto ou as opções do compilador estiverem configuradas incorretamente. Siga estas etapas para configurar projetos makefile para que o IntelliSense funcione conforme o esperado:
+O IntelliSense falha em projetos de makefile quando algumas configurações de projeto ou opções do compilador estão definidas incorretamente. Siga estas etapas para configurar projetos de makefile para que o IntelliSense funcione conforme o esperado:
 
-1. Abra a caixa de diálogo **Páginas de Propriedades**. Para obter detalhes, consulte [propriedades de compilador e de build definida C++ no Visual Studio](../working-with-project-properties.md).
+1. Abra a caixa de diálogo **Páginas de Propriedades**. Para obter detalhes, confira [Definir as propriedades de build e do compilador do C++ no Visual Studio](../working-with-project-properties.md).
 
 1. Expanda o nó **Propriedades de Configuração**.
 
@@ -88,6 +107,6 @@ Na próxima vez que você abrir o projeto makefile no ambiente de desenvolviment
 
 [Usando o IntelliSense](/visualstudio/ide/using-intellisense)<br>
 [Referência a NMAKE](nmake-reference.md)<br>
-[Como: Criar um projeto C++ de código existente](../how-to-create-a-cpp-project-from-existing-code.md)
-[caracteres especiais em um Makefile](special-characters-in-a-makefile.md)<br/>
+[Como: Criar um projeto C++ com base em um código existente](../how-to-create-a-cpp-project-from-existing-code.md)
+[Caracteres especiais em um makefile](special-characters-in-a-makefile.md)<br/>
 [Conteúdo de um makefile](contents-of-a-makefile.md)<br/>

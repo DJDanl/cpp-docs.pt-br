@@ -1,41 +1,39 @@
 ---
 title: Métodos gerados pelo Assistente do Consumidor
-ms.date: 11/04/2016
+ms.date: 05/09/2019
 helpviewer_keywords:
-- OpenAll method
-- attribute-injected classes and methods
-- wizard-generated classes and methods
 - OLE DB consumers, wizard-generated classes and methods
-- methods [C++], OLE DB Consumer Wizard-generated
-- CloseDataSource method
-- consumer wizard-generated classes and methods
-- OpenDataSource method
-- CloseAll method
-- OpenRowset method
-- GetRowsetProperties method
 ms.assetid: d80ee51c-8bb3-4dca-8760-5808e0fb47b4
-ms.openlocfilehash: 60ca0af25a0556c4a3d42d91ba3b0c52daa5f530
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 5d5c7aa680ca6b764e2ee9710e46cf6fa3af1c89
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409129"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707725"
 ---
 # <a name="consumer-wizard-generated-methods"></a>Métodos gerados pelo Assistente do Consumidor
 
-O **ATL OLE DB Assistente de consumidor** e o **Assistente de aplicativo MFC** gerar determinadas funções das quais você deve estar ciente. Alguns métodos são implementados de forma diferente em projetos atribuídos, portanto, há algumas advertências; cada caso é abordado abaixo. Para obter informações sobre como exibir o código injetado, consulte [depurando código injetado](/visualstudio/debugger/how-to-debug-injected-code).
+::: moniker range="vs-2019"
 
-- `OpenAll` Abre a fonte de dados, conjuntos de linhas e ativa indicadores se elas estão disponíveis.
+O Assistente de Consumidor OLE DB da ATL não está disponível no Visual Studio 2019 e posteriores. Ainda é possível adicionar a funcionalidade manualmente.
 
-- `CloseAll` Fecha todos os conjuntos de linhas e libera todas as execuções de comando.
+::: moniker-end
 
-- `OpenRowset` é chamado pelo `OpenAll` para abrir o conjunto de linhas ou a conjuntos de linhas do consumidor.
+::: moniker range="<=vs-2017"
 
-- `GetRowsetProperties` recupera um ponteiro para a propriedade do conjunto de linhas definido com as propriedades que podem ser definidas.
+O **Assistente de Consumidor OLE DB da ATL** e o **Assistente para Aplicativo do MFC** geram determinadas funções sobre as quais você deve estar ciente. Alguns métodos são implementados de forma diferente em projetos atribuídos, portanto, há algumas advertências; cada caso é abordado abaixo. Saiba mais sobre como exibir o código injetado em [Depuração de código injetado](/visualstudio/debugger/how-to-debug-injected-code).
 
-- `OpenDataSource` Abre a fonte de dados usando a cadeia de caracteres de inicialização que você especificou na **propriedades de vínculo de dados** caixa de diálogo.
+- `OpenAll` abre a fonte de dados, os conjuntos de linhas e ativa indicadores se estiverem disponíveis.
 
-- `CloseDataSource` Fecha a fonte de dados de forma apropriada.
+- `CloseAll` fecha todos os conjuntos de linhas abertos e libera todas as execuções de comando.
+
+- `OpenRowset` é chamado por `OpenAll` para abrir o conjunto de linhas ou conjuntos de linhas do consumidor.
+
+- `GetRowsetProperties` recupera um ponteiro para a propriedade do conjunto de linhas definido com o qual as propriedades podem ser definidas.
+
+- `OpenDataSource` abre a fonte de dados usando a cadeia de caracteres de inicialização especificada na caixa de diálogo **Propriedades do Link de Dados**.
+
+- `CloseDataSource` fecha a fonte de dados de forma apropriada.
 
 ## <a name="openall-and-closeall"></a>OpenAll e CloseAll
 
@@ -45,7 +43,7 @@ HRESULT OpenAll();
 void CloseAll();
 ```
 
-O exemplo a seguir mostra como você pode chamar `OpenAll` e `CloseAll` quando você executa o mesmo comando repetidamente. Compare o exemplo de código [ccommand:: Close](../../data/oledb/ccommand-close.md), que mostra uma variação que chama `Close` e `ReleaseCommand` em vez de `CloseAll`.
+O exemplo a seguir mostra como você pode chamar `OpenAll` e `CloseAll` quando executa o mesmo comando repetidamente. Compare o exemplo de código [ccommand::Close](../../data/oledb/ccommand-close.md), que mostra uma variação que chama `Close` e `ReleaseCommand` em vez de `CloseAll`.
 
 ```cpp
 int main(int argc, char* argv[])
@@ -80,7 +78,7 @@ int main(int argc, char* argv[])
 
 ### <a name="remarks"></a>Comentários
 
-Se você definir um `HasBookmark` método, o `OpenAll` código define o `DBPROP_IRowsetLocate` propriedade; Certifique-se de fazer isso se seu provedor oferecer suporte a essa propriedade.
+Se você definir um método `HasBookmark`, o código `OpenAll` definirá a propriedade `DBPROP_IRowsetLocate`; certifique-se de fazer isso somente se seu provedor der o suporte adequado.
 
 ## <a name="openrowset"></a>OpenRowset
 
@@ -91,7 +89,7 @@ HRESULT OpenRowset(DBPROPSET* pPropSet = NULL)
 HRESULT OpenRowset(const CSession& session, LPCWSTR szCommand = NULL);
 ```
 
-`OpenAll` chama esse método para abrir o conjunto de linhas ou conjuntos de linhas no consumidor. Normalmente, você não precisa chamar `OpenRowset` , a menos que você deseja trabalhar com vários dados fontes/sessões/conjuntos de linhas. `OpenRowset` é declarado no arquivo de cabeçalho de classe comando ou de tabela:
+`OpenAll` chama esse método para abrir o conjunto de linhas ou conjuntos de linhas no consumidor. Normalmente, você não precisa chamar `OpenRowset`, a menos que queira trabalhar com vários conjuntos de linhas/fontes de dados/sessões. `OpenRowset` é declarado no arquivo de cabeçalho da classe de comando ou de tabela:
 
 ```cpp
 // OLE DB Template version:
@@ -106,7 +104,7 @@ HRESULT OpenRowset(DBPROPSET *pPropSet = NULL)
 }
 ```
 
-Os atributos implementam esse método de forma diferente. Essa versão usa um objeto de sessão e uma cadeia de caracteres de comando padrão é a cadeia de caracteres de comando especificada no db_command, embora você pode passar um diferente. Se você definir um `HasBookmark` método, o `OpenRowset` código define o `DBPROP_IRowsetLocate` propriedade; Certifique-se de fazer isso se seu provedor oferecer suporte a essa propriedade.
+Os atributos implementam esse método de forma diferente. Essa versão usa um objeto de sessão e uma cadeia de caracteres de comando que é padronizada para a cadeia de caracteres de comando especificada em db_command, embora você possa passar uma diferente. Se você definir um método `HasBookmark`, o código `OpenRowset` definirá a propriedade `DBPROP_IRowsetLocate`; certifique-se de fazer isso somente se seu provedor der o suporte adequado.
 
 ```cpp
 // Attribute-injected version:
@@ -131,7 +129,7 @@ HRESULT OpenRowset(const CSession& session, LPCWSTR szCommand=NULL)
 void GetRowsetProperties(CDBPropSet* pPropSet);
 ```
 
-Esse método recupera um ponteiro para o conjunto de propriedades do conjunto de linhas; Você pode usar esse ponteiro para definir propriedades como `DBPROP_IRowsetChange`. `GetRowsetProperties` é usado na classe de registro de usuário da seguinte maneira. Você pode modificar este código para definir as propriedades do conjunto de linhas adicionais:
+Esse método recupera um ponteiro para o conjunto de propriedades do conjunto de linhas. Você pode usar esse ponteiro para definir propriedades como `DBPROP_IRowsetChange`. `GetRowsetProperties` é usado na classe de registro de usuário como se segue. Você pode modificar esse código para definir as propriedades adicionais do conjunto de linhas:
 
 ```cpp
 void GetRowsetProperties(CDBPropSet* pPropSet)
@@ -145,7 +143,7 @@ void GetRowsetProperties(CDBPropSet* pPropSet)
 
 ### <a name="remarks"></a>Comentários
 
-Você não deve definir um global `GetRowsetProperties` método porque poderia entrar em conflito com aquele definido pelo assistente. Esse é um método gerado pelo assistente que você obtém com projetos de modelo e atribuídos; os atributos não injetam esse código.
+Você não deve definir um método `GetRowsetProperties` global porque ele poderia entrar em conflito com o que foi definido pelo assistente. Esse é um método gerado pelo assistente que você obtém com projetos de modelo e atribuídos; os atributos não injetam esse código.
 
 ## <a name="opendatasource-and-closedatasource"></a>OpenDataSource e CloseDataSource
 
@@ -157,7 +155,9 @@ void CloseDataSource();
 
 ### <a name="remarks"></a>Comentários
 
-O assistente define os métodos `OpenDataSource` e `CloseDataSource`; `OpenDataSource` chamadas [cdatasource:: Openfrominitializationstring](../../data/oledb/cdatasource-openfrominitializationstring.md).
+O assistente define os métodos `OpenDataSource` e `CloseDataSource`; `OpenDataSource` chama [CDataSource::OpenFromInitializationString](../../data/oledb/cdatasource-openfrominitializationstring.md).
+
+::: moniker-end
 
 ## <a name="see-also"></a>Consulte também
 

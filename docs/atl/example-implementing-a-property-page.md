@@ -1,146 +1,154 @@
 ---
-title: Implementando uma página de propriedades (ATL)
-ms.date: 11/19/2018
+title: Implementação de uma página de propriedades (ATL)
+ms.date: 05/09/2019
 helpviewer_keywords:
 - property pages, implementing
 ms.assetid: c30b67fe-ce08-4249-ae29-f3060fa8d61e
-ms.openlocfilehash: 9aaf75916196f33904a51289d0a49725e042aa9e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1f2c0387cd0a78ad0179e251654d2fa82b1eef13
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62262094"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707094"
 ---
-# <a name="example-implementing-a-property-page"></a>Exemplo: Implementando uma página de propriedades
+# <a name="example-implementing-a-property-page"></a>Exemplo: implementação de uma página de propriedades
 
-Este exemplo mostra como criar uma página de propriedades que exibe as propriedades de (e permite que você altere uma) a [Classes de documento](../mfc/document-classes.md) interface.
+::: moniker range="vs-2019"
 
-O exemplo se baseia a [ATLPages exemplo](../overview/visual-cpp-samples.md).
+O assistente de Página de Propriedades da ATL não está disponível no Visual Studio 2019 e versões posteriores.
 
-Para concluir este exemplo, você irá:
+::: moniker-end
 
-- [Adicione a classe de página de propriedades ATL](#vcconusing_the_atl_object_wizard) usando a caixa de diálogo Adicionar classe e o Assistente de página de propriedades da ATL.
+::: moniker range="<=vs-2017"
 
-- [Editar o recurso de caixa de diálogo](#vcconediting_the_dialog_resource) adicionando novos controles para as propriedades interessantes do `Document` interface.
+Este exemplo mostra como criar uma página de propriedades que exibe (e permite alterar) propriedades da interface [Classes de documento](../mfc/document-classes.md).
 
-- [Adicionar manipuladores de mensagens](#vcconadding_message_handlers) manter o site da página de propriedade informado sobre alterações feitas pelo usuário.
+O exemplo se baseia na [amostra de ATLPages](../overview/visual-cpp-samples.md).
 
-- Adicione algum `#import` instruções e um typedef na [Housekeeping](#vcconhousekeeping) seção.
+Para concluir este exemplo, você vai:
+
+- [Adicionar a classe de página de propriedades da ATL](#vcconusing_the_atl_object_wizard) usando a caixa de diálogo Adicionar Classe e o Assistente de Página de Propriedades da ATL.
+
+- [Editar o recurso de caixa de diálogo](#vcconediting_the_dialog_resource) adicionando novos controles para as propriedades interessantes da interface `Document`.
+
+- [Adicionar manipuladores de mensagens](#vcconadding_message_handlers) para manter o site da página de propriedades informado sobre as alterações feitas pelo usuário.
+
+- Adicionar algumas instruções `#import` e um typedef na seção [Manutenção](#vcconhousekeeping).
 
 - [Substituir IPropertyPageImpl::SetObjects](#vcconoverriding_ipropertypageimpl_setobjects) para validar os objetos que estão sendo passados para a página de propriedades.
 
-- [Substituir IPropertyPageImpl::Activate](#vcconoverriding_ipropertypageimpl_activate) inicializar a interface da página de propriedades.
+- [Substituir IPropertyPageImpl::Activate](#vcconoverriding_ipropertypageimpl_activate) para inicializar a interface da página de propriedades.
 
 - [Substituir IPropertyPageImpl::Apply](#vcconoverride_ipropertypageimpl_apply) para atualizar o objeto com os valores de propriedade mais recentes.
 
-- [Exibir a página de propriedade](#vccontesting_the_property_page) , criando um objeto auxiliar simples.
+- [Exibir a página de propriedades](#vccontesting_the_property_page) criando um objeto auxiliar simples.
 
-- [Criar uma macro](#vcconcreating_a_macro) que irá testar a página de propriedades.
+- [Criar uma macro](#vcconcreating_a_macro) que testará a página de propriedades.
 
-##  <a name="vcconusing_the_atl_object_wizard"></a> Adicionando a classe de página de propriedades ATL
+##  <a name="vcconusing_the_atl_object_wizard"></a> Como adicionar a classe de página de propriedades da ATL
 
-Primeiro, crie um novo projeto ATL para um servidor DLL denominado `ATLPages7`. Agora use o [Assistente de página de propriedades ATL](../atl/reference/atl-property-page-wizard.md) para gerar uma página de propriedades. Dar a página de propriedades de um **nome curto** de **DocProperties** , em seguida, alterne para o **cadeias de caracteres** página definir itens específicos de páginas de propriedade, conforme mostrado na tabela a seguir.
+Primeiro, crie um novo projeto ATL para um servidor DLL denominado `ATLPages7`. Agora, use o [Assistente de Página de Propriedades da ATL](../atl/reference/atl-property-page-wizard.md) para gerar uma página de propriedades. Dê à página de propriedades um **Nome Curto** de **DocProperties**, em seguida, alterne para a página **Cadeias de Caracteres** para definir itens específicos da página de propriedades, conforme mostrado na tabela abaixo.
 
 |Item|Valor|
 |----------|-----------|
 |Título|TextDocument|
-|Cadeia de caracteres doc|Propriedades de TextDocument VCUE|
+|Doc String|Propriedades de TextDocument VCUE|
 |Helpfile|*\<blank>*|
 
-Os valores que podem ser definidas nesta página do assistente serão retornados para o contêiner de página de propriedade quando ele chama `IPropertyPage::GetPageInfo`. O que acontece com as cadeias de caracteres após o que é dependente no contêiner, mas normalmente serão usados para identificar sua página para o usuário. Geralmente, o título será exibido em uma guia acima de sua página e a cadeia de caracteres Doc podem ser exibida em uma barra de status ou dica de ferramenta (embora o quadro de propriedades padrão não usa essa cadeia de caracteres em todos os).
+Os valores que você define nessa página do assistente serão retornados ao contêiner da página de propriedades quando ele chamar `IPropertyPage::GetPageInfo`. O que acontece com as cadeias de caracteres depois disso depende do contêiner, mas, normalmente, elas são usadas para identificar sua página para o usuário. Geralmente, o Título aparece em uma guia acima da sua página e o Doc String pode ser exibido em uma barra de status ou Dica de Ferramenta (embora o quadro da propriedade padrão não use essa cadeia de caracteres).
 
 > [!NOTE]
->  As cadeias de caracteres que você definiu aqui são armazenadas como recursos de cadeia de caracteres em seu projeto pelo assistente. Você pode editar facilmente essas cadeias de caracteres usando o editor de recursos se você precisar alterar essas informações após a geração de código para sua página.
+>  As cadeias de caracteres que você define aqui são armazenadas pelo assistente como recursos de cadeia de caracteres em seu projeto. É possível editar com facilidade essas cadeias de caracteres usando o editor de recursos se precisar alterar essas informações depois que o código da página tiver sido gerado.
 
-Clique em **Okey** para que o Assistente para gerar a sua página de propriedades.
+Clique em **OK** para que o assistente gere a página de propriedades.
 
-##  <a name="vcconediting_the_dialog_resource"></a> O recurso de caixa de diálogo de edição
+##  <a name="vcconediting_the_dialog_resource"></a> Editando o recurso de caixa de diálogo
 
-Agora que sua página de propriedades foi gerada, você precisará adicionar alguns controles para o recurso de caixa de diálogo que representa sua página. Adicione uma caixa de edição, um controle de texto estático e uma caixa de seleção e defina suas IDs, conforme mostrado abaixo:
+Agora que sua página de propriedades foi gerada, você precisará adicionar alguns controles ao recurso de caixa de diálogo que representem a página. Adicione uma caixa de edição, um controle de texto estático e uma caixa de seleção e defina as respectivas IDs, conforme mostrado abaixo:
 
-![Editando um recurso de caixa de diálogo](../atl/media/ppgresourcelabeled.gif "editando um recurso de caixa de diálogo")
+![Como editar um recurso de caixa de diálogo](../atl/media/ppgresourcelabeled.gif "Como editar um recurso de caixa de diálogo")
 
-Esses controles serão usados para exibir o nome de arquivo do documento e seu status de somente leitura.
+Esses controles serão usados para exibir o nome de arquivo do documento e seu status somente leitura.
 
 > [!NOTE]
->  O recurso de caixa de diálogo não inclui um quadro ou comando botões nem tem a aparência com guias que você talvez esperasse. Esses recursos são fornecidos por um quadro de página de propriedade, como aquele criado chamando [OleCreatePropertyFrame](/windows/desktop/api/olectl/nf-olectl-olecreatepropertyframe).
+>  O recurso de caixa de diálogo não inclui um quadro ou botões de comando, e o seu layout não apresenta guias como talvez você esperasse. Esses recursos são fornecidos por um quadro de página de propriedades, como o que foi criado chamando [OleCreatePropertyFrame](/windows/desktop/api/olectl/nf-olectl-olecreatepropertyframe).
 
-##  <a name="vcconadding_message_handlers"></a> Adicionando manipuladores de mensagens
+##  <a name="vcconadding_message_handlers"></a> Como adicionar manipuladores de mensagens
 
-Com os controles em vigor, você pode adicionar manipuladores de mensagens para atualizar o status de falta de limpeza da página quando o valor de qualquer um dos controles é alterado:
+Com os controles definidos, você pode adicionar manipuladores de mensagens para atualizar o status anormal da página quando o valor de qualquer um dos controles é alterado:
 
 [!code-cpp[NVC_ATL_Windowing#73](../atl/codesnippet/cpp/example-implementing-a-property-page_1.h)]
 
-Esse código responde às alterações feitas no controle de edição ou a caixa de seleção chamando [IPropertyPageImpl::SetDirty](../atl/reference/ipropertypageimpl-class.md#setdirty), que informa ao site do que a página foi alterado. Normalmente o site da página responderá habilitando ou desabilitando uma **aplicar** botão no quadro de página de propriedade.
+Esse código responde às alterações feitas no controle de edição ou na caixa de seleção chamando [IPropertyPageImpl::SetDirty](../atl/reference/ipropertypageimpl-class.md#setdirty), que informa o site da página que a página foi alterada. Normalmente, o site da página responderá habilitando ou desabilitando um botão **Aplicar** no quadro da página de propriedades.
 
 > [!NOTE]
->  Em suas próprias páginas de propriedade, pode ser necessário controlar exatamente quais propriedades foram alteradas pelo usuário para que você pode evitar a atualização de propriedades que não foram alteradas. Este exemplo implementa esse código por manter o controle dos valores de propriedade originais e compará-los com os valores atuais da interface do usuário quando é hora de aplicar as alterações.
+>  Em suas próprias páginas de propriedades, talvez você precise acompanhar quais propriedades precisamente foram alteradas pelo usuário para que seja possível evitar a atualização de propriedades que não foram alteradas. Este exemplo implementa esse código acompanhando os valores da propriedade original e comparando-os com os valores atuais da interface do usuário no momento de aplicar as alterações.
 
-##  <a name="vcconhousekeeping"></a> Manutenção do sistema
+##  <a name="vcconhousekeeping"></a> Manutenção
 
-Agora adicione alguns `#import` instruções para DocProperties.h para que o compilador sabe sobre o `Document` interface:
+Agora, adicione algumas instruções `#import` a DocProperties.h para que o compilador saiba sobre a interface `Document`:
 
 [!code-cpp[NVC_ATL_Windowing#74](../atl/codesnippet/cpp/example-implementing-a-property-page_2.h)]
 
-Você também precisará fazer referência a `IPropertyPageImpl` classe base; adicione o seguinte **typedef** para o `CDocProperties` classe:
+Você também precisará fazer referência à classe base `IPropertyPageImpl`; adicione o seguinte **typedef** à classe `CDocProperties`:
 
 [!code-cpp[NVC_ATL_Windowing#75](../atl/codesnippet/cpp/example-implementing-a-property-page_3.h)]
 
-##  <a name="vcconoverriding_ipropertypageimpl_setobjects"></a> Substituindo IPropertyPageImpl::SetObjects
+##  <a name="vcconoverriding_ipropertypageimpl_setobjects"></a> Substituição de IPropertyPageImpl::SetObjects
 
-A primeira `IPropertyPageImpl` é o método que você precisa substituir [SetObjects](../atl/reference/ipropertypageimpl-class.md#setobjects). Aqui, você adicionará código para verificar que apenas um único objeto foi passado e que ele oferece suporte a `Document` interface que você está esperando:
+O primeiro método `IPropertyPageImpl` que você precisa substituir é [SetObjects](../atl/reference/ipropertypageimpl-class.md#setobjects). Aqui, você adicionará código para verificar que apenas um único objeto foi passado e que ele é compatível com a interface `Document` que você está esperando:
 
 [!code-cpp[NVC_ATL_Windowing#76](../atl/codesnippet/cpp/example-implementing-a-property-page_4.h)]
 
 > [!NOTE]
->  Faz sentido para dar suporte a apenas um único objeto para esta página porque você permitirá que o usuário definir o nome de arquivo do objeto — apenas um arquivo pode existir em qualquer local.
+>  Faz sentido dar suporte apenas a um único objeto para essa página, pois você permitirá que o usuário defina o nome do arquivo do objeto – apenas um arquivo pode existir em qualquer local.
 
-##  <a name="vcconoverriding_ipropertypageimpl_activate"></a> Substituindo IPropertyPageImpl::Activate
+##  <a name="vcconoverriding_ipropertypageimpl_activate"></a> Substituição de IPropertyPageImpl::Activate
 
 A próxima etapa é inicializar a página de propriedades com os valores de propriedade do objeto subjacente quando a página é criada pela primeira vez.
 
-Nesse caso, você deve adicionar os seguintes membros à classe, pois você também usará os valores de propriedade inicial para comparação quando os usuários da página aplicar suas alterações:
+Nesse caso, será preciso adicionar os seguintes membros à classe, uma vez que você também usará os valores iniciais da propriedade para comparação quando os usuários da página aplicarem as alterações:
 
 [!code-cpp[NVC_ATL_Windowing#77](../atl/codesnippet/cpp/example-implementing-a-property-page_5.h)]
 
-A implementação da classe base a [ativar](../atl/reference/ipropertypageimpl-class.md#activate) método é responsável por criar a caixa de diálogo e seus controles, para que você pode substituir esse método e adicionar seu próprios inicialização depois de chamar a classe base:
+A implementação da classe base do método [Activate](../atl/reference/ipropertypageimpl-class.md#activate) é responsável por criar a caixa de diálogo e seus controles, de modo que você possa substituir esse método e adicionar sua própria inicialização após chamar a classe base:
 
 [!code-cpp[NVC_ATL_Windowing#78](../atl/codesnippet/cpp/example-implementing-a-property-page_6.h)]
 
-Esse código usa os métodos de COM do `Document` interface para obter as propriedades que você está interessado. Ele usa os wrappers de API do Win32 fornecidos pelo [CDialogImpl](../atl/reference/cdialogimpl-class.md) e suas classes base para exibir os valores de propriedade para o usuário.
+Esse código usa os métodos COM da interface `Document` para obter as propriedades em que você está interessado. Ele usa os wrappers de API do Win32 fornecidos por [CDialogImpl](../atl/reference/cdialogimpl-class.md) e suas classes base para exibir os valores de propriedade ao usuário.
 
-##  <a name="vcconoverride_ipropertypageimpl_apply"></a> Substituindo IPropertyPageImpl::Apply
+##  <a name="vcconoverride_ipropertypageimpl_apply"></a> Substituição de IPropertyPageImpl::Apply
 
-Quando os usuários desejam aplicar suas alterações aos objetos, o site da página de propriedade chamará o [aplicar](../atl/reference/ipropertypageimpl-class.md#apply) método. Este é o lugar para fazer o inverso do código em `Activate` —, enquanto `Activate` levou valores do objeto e enviados por push para os controles na página de propriedades, `Apply` usa os valores dos controles na página de propriedades e envia-los para o objeto.
+Quando os usuários quiserem aplicar suas alterações nos objetos, o site da página de propriedades chamará o método [Apply](../atl/reference/ipropertypageimpl-class.md#apply). Esse é o lugar para fazer o inverso do código em `Activate` – enquanto `Activate` extraiu valores do objeto e efetuou push deles nos controles da página de propriedades, `Apply` usa os valores dos controles na página de propriedades e os envia ao objeto.
 
 [!code-cpp[NVC_ATL_Windowing#79](../atl/codesnippet/cpp/example-implementing-a-property-page_7.h)]
 
 > [!NOTE]
->  A verificação em relação a [m_bDirty](../atl/reference/ipropertypageimpl-class.md#m_bdirty) no início dessa implementação é uma verificação inicial para evitar atualizações desnecessárias de objetos se `Apply` é chamado mais de uma vez. Também há verificações em relação a cada um dos valores de propriedade para garantir que somente as alterações resultem em uma chamada de método para o `Document`.
+>  A verificação em relação a [m_bDirty](../atl/reference/ipropertypageimpl-class.md#m_bdirty) no início dessa implementação é uma verificação inicial para evitar atualizações desnecessárias de objetos se `Apply` for chamado mais de uma vez. Também há verificações em relação a cada um dos valores de propriedade para garantir que somente as alterações resultem em uma chamada de método para `Document`.
 
 > [!NOTE]
-> `Document` expõe `FullName` como uma propriedade somente leitura. Para atualizar o nome do arquivo do documento com base nas alterações feitas na página de propriedade, você precisa usar o `Save` método para salvar o arquivo com um nome diferente. Assim, o código em uma página de propriedades não precise se limitar ao obter ou definir propriedades.
+> `Document` expõe `FullName` como uma propriedade somente leitura. Para atualizar o nome do arquivo do documento com base nas alterações feitas na página de propriedades, é preciso usar o método `Save` para salvar o arquivo com outro nome. Assim, o código em uma página de propriedades não precisa se limitar a obter ou definir propriedades.
 
-##  <a name="vccontesting_the_property_page"></a> Exibindo a página de propriedade
+##  <a name="vccontesting_the_property_page"></a> Exibição da página de propriedades
 
-Para exibir esta página, você precisará criar um objeto auxiliar simples. O objeto auxiliar fornecerá um método que simplifica o `OleCreatePropertyFrame` API para a exibição de uma única página conectado a um único objeto. Esse auxiliar será criado para que possa ser usado no Visual Basic.
+Para exibir essa página, você precisa criar um objeto auxiliar simples. O objeto auxiliar fornecerá um método que simplifica a API `OleCreatePropertyFrame` para a exibição de uma única página conectada a um único objeto. Esse auxiliar será criado para que possa ser usado no Visual Basic.
 
-Use o [caixa de diálogo Adicionar classe](../ide/add-class-dialog-box.md) e o [ATL Simple Object Wizard](../atl/reference/atl-simple-object-wizard.md) para gerar uma nova classe e usar `Helper` como seu nome curto. Depois de criado, adicione um método, conforme mostrado na tabela a seguir.
+Use a [caixa de diálogo Adicionar Classe](../ide/add-class-dialog-box.md) e o [Assistente de Objeto Simples de ATL](../atl/reference/atl-simple-object-wizard.md) para gerar uma nova classe e usar `Helper` como seu nome curto. Depois de criado, adicione um método, conforme mostrado na tabela abaixo.
 
 |Item|Valor|
 |----------|-----------|
 |Nome do método|`ShowPage`|
 |Parâmetros|`[in] BSTR bstrCaption, [in] BSTR bstrID, [in] IUnknown* pUnk`|
 
-O *bstrCaption* parâmetro é a legenda a ser exibido como o título da caixa de diálogo. O *bstrID* parâmetro é uma cadeia de caracteres que representa um CLSID ou ProgID da página de propriedades para exibir. O *pUnk* parâmetro será o `IUnknown` ponteiro do objeto cujas propriedades serão definidas pela página de propriedades.
+O parâmetro *bstrCaption* é a legenda a ser exibida como o título da caixa de diálogo. O parâmetro *bstrID* é uma cadeia de caracteres que representa uma CLSID ou ProgID da página de propriedades a ser exibida. O parâmetro *pUnk* será o ponteiro `IUnknown` do objeto cujas propriedades serão definidas pela página de propriedades.
 
 Implemente o método, conforme mostrado abaixo:
 
 [!code-cpp[NVC_ATL_Windowing#80](../atl/codesnippet/cpp/example-implementing-a-property-page_8.cpp)]
 
-##  <a name="vcconcreating_a_macro"></a> Criando uma Macro
+##  <a name="vcconcreating_a_macro"></a> Criação de uma macro
 
-Depois que você criou o projeto, você pode testar a página de propriedades e o objeto auxiliar usando uma macro simple que você pode criar e executar no ambiente de desenvolvimento do Visual Studio. Essa macro criará um auxiliar de objeto, em seguida, chame seu `ShowPage` método usando o ProgID do **DocProperties** página de propriedades e o `IUnknown` ponteiro do documento ativo no momento no editor do Visual Studio. O código que necessário para esta macro é mostrado abaixo:
+Após criação do projeto, você poderá testar a página de propriedades e o objeto auxiliar que está usando uma macro simples que pode ser criada e executada no ambiente de desenvolvimento do Visual Studio. Essa macro criará um objeto auxiliar e chamará seu método `ShowPage` usando ProgID da página de propriedades **DocProperties** e o ponteiro `IUnknown` do documento ativo no momento no editor do Visual Studio. O código necessário para essa macro é mostrado abaixo:
 
 ```vb
 Imports EnvDTE
@@ -159,9 +167,11 @@ End Sub
 End Module
 ```
 
-Quando você executa essa macro, a página de propriedades será exibida mostrando o nome do arquivo e o status de somente leitura do documento de texto ativo no momento. O estado somente leitura do documento reflete somente a capacidade de gravar o documento no ambiente de desenvolvimento; ela não afeta o atributo somente leitura do arquivo no disco.
+Quando você executar essa macro, a página de propriedades será exibida mostrando o nome do arquivo e o status somente leitura do documento de texto ativo no momento. O estado somente leitura do documento reflete somente a capacidade de gravar no documento no ambiente de desenvolvimento; ele não afeta o atributo somente leitura do arquivo no disco.
+
+::: moniker-end
 
 ## <a name="see-also"></a>Consulte também
 
 [Páginas de propriedade](../atl/atl-com-property-pages.md)<br/>
-[Exemplo de ATLPages](../overview/visual-cpp-samples.md)
+[Exemplo de páginas ATL](../overview/visual-cpp-samples.md)

@@ -5,16 +5,16 @@ ms.technology: cpp-language
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 6a0e296e4a5542c1aad848c55d35d3e40244478d
-ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
+ms.openlocfilehash: 726d9f6573b4a3457205001875dac80b3a2997d7
+ms.sourcegitcommit: 61121faf879cc581a4d39e4baccabf7cf1f673a5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/03/2019
-ms.locfileid: "58899442"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65934163"
 ---
 # <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-157improvements157-158update158-159improvements159"></a>Aprimoramentos de conformidade do C++ no Visual Studio 2017 versões 15.0, [15.3](#improvements_153), [15.5](#improvements_155), [15.6](#improvements_156), [15.7](#improvements_157), [15.8](#update_158) e [15.9](#improvements_159)
 
-Com suporte para constexpr generalizado e NSDMI para agregações, agora o compilador do Microsoft Visual C++ está completo com relação aos recursos adicionados no padrão C++14. Observe que o compilador ainda não tem alguns recursos dos padrões C++11 e C++98. Confira [Conformidade com a linguagem Visual C++](../visual-cpp-language-conformance.md) para ver uma tabela que mostra o estado atual do compilador.
+Com suporte para constexpr generalizado e NSDMI para agregações, agora o compilador do Microsoft C++ está completo com relação aos recursos adicionados no C++14 Standard. Observe que o compilador ainda não tem alguns recursos dos padrões C++11 e C++98. Confira [Conformidade com a linguagem Visual C++](../visual-cpp-language-conformance.md) para ver uma tabela que mostra o estado atual do compilador.
 
 ## <a name="c11"></a>C++11
 
@@ -70,7 +70,7 @@ Nova sintaxe para permitir apenas um único identificador de namespace em uma li
 
 ### <a name="structured-bindings"></a>Associações estruturadas
 
-Agora é possível em uma única declaração armazenar um valor com os nomes individuais de seus componentes, quando o valor é uma matriz, std::tuple ou std::pair ou tem todos os membros de dados não estáticos públicos. Para saber mais, veja [Associações estruturadas](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0144r0.pdf) e [Retornar vários valores de uma função](../../cpp/functions-cpp.md#multi_val).
+Agora é possível em uma única declaração armazenar um valor com os nomes individuais de seus componentes, quando o valor é uma matriz, `std::tuple` ou `std::pair`, ou tem todos os membros de dados não estáticos públicos. Para saber mais, veja [Associações estruturadas](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0144r0.pdf) e [Retornar vários valores de uma função](../../cpp/functions-cpp.md#multi_val).
 
 ### <a name="construction-rules-for-enum-class-values"></a>Regras de construção para valores de classe de enumeração
 
@@ -826,7 +826,7 @@ void f()
 
 ### <a name="default-arguments-are-not-allowed-on-out-of-line-definitions-of-member-functions"></a>Os argumentos padrão não são permitidos em definições fora de linha de funções de membro
 
-Argumentos padrão não são permitidos em definições fora de linha de funções de membro em classes de modelo. O compilador emitirá um aviso em **/permissive** e um erro de hardware em **/permissive-**.
+Argumentos padrão não são permitidos em definições fora de linha de funções de membro em classes de modelo. O compilador emitirá um aviso em **/permissive** e um erro de hardware em **/permissive-** .
 
 Nas versões anteriores do Visual Studio, o código malformado a seguir pode causar uma falha de tempo de execução. Visual Studio 2017 versão 15.3 produz o aviso C5034: 'A\<T>::f': uma definição fora de linha de um membro de um modelo de classe não pode ter argumentos padrão:
 
@@ -955,7 +955,7 @@ O aviso é excluído em **/Wv:18** e é ativado por padrão em W2 de nível de a
 
 ### <a name="stdisconvertible-for-array-types"></a>std::is_convertible para tipos de matriz
 
-As versões anteriores do compilador forneciam resultados incorretos para [std::is_convertible](../../standard-library/is-convertible-class.md) para tipos de matriz. Isso exigia que gravadores de biblioteca tratassem o compilador Microsoft Visual C++ de forma especial ao usar a característica de tipo `std::is_convertible<...>`. No exemplo a seguir, as declarações de estática passam em versões anteriores do Visual Studio, mas falham no Visual Studio 2017 versão 15.3:
+As versões anteriores do compilador forneciam resultados incorretos para [std::is_convertible](../../standard-library/is-convertible-class.md) para tipos de matriz. Isso exigia que gravadores de biblioteca tratassem o compilador do Microsoft C++ de forma especial ao usar a característica de tipo `std::is_convertible<...>`. No exemplo a seguir, as declarações de estática passam em versões anteriores do Visual Studio, mas falham no Visual Studio 2017 versão 15.3:
 
 ```cpp
 #include <type_traits>
@@ -1309,7 +1309,7 @@ Esse novo aviso C4768 é determinado em alguns cabeçalhos do SDK do Windows que
 
 ### <a name="extern_linkage"></a>Vinculação de constexpr externo
 
-Em versões anteriores do Visual Studio, o compilador sempre forneceu uma ligação interna variável `constexpr`, mesmo quando a variável era marcada como `extern`. No Visual Studio 2017 versão 15.5, uma nova opção de compilador, (**/Zc:externConstexpr**), habilita o comportamento correto em conformidade com os padrões. Eventualmente, isso se tornará o padrão.
+Em versões anteriores do Visual Studio, o compilador sempre forneceu uma ligação interna variável `constexpr`, mesmo quando a variável era marcada como `extern`. No Visual Studio 2017 versão 15.5, uma nova opção de compilador, ( **/Zc:externConstexpr**), habilita o comportamento correto em conformidade com os padrões. Eventualmente, isso se tornará o padrão.
 
 ```cpp
 extern constexpr int x = 10;
@@ -1420,7 +1420,7 @@ O aviso foi adicionado no Visual Studio versão 2017 versão 15.3, mas era desat
 
 ### <a name="defaulted-functions-and-declspecnothrow"></a>Funções padronizadas e __declspec(nothrow)
 
-O compilador permitia anteriormente que funções padronizadas fossem declaradas com `__declspec(nothrow)` quando as funções de base/membro correspondente permitiam exceções. Esse comportamento é contrário ao C++ Standard e pode causar um comportamento indefinido no tempo de execução. O padrão exige que tais funções sejam definidas como excluídas se houver uma incompatibilidade de especificação de exceção.  No **/std:c++17**, o código a seguir aciona um C2280 *tentativa de fazer referência a uma função excluída. A função foi excluída implicitamente porque a especificação de exceção explícita é incompatível com aquela da declaração implícita.*:
+O compilador permitia anteriormente que funções padronizadas fossem declaradas com `__declspec(nothrow)` quando as funções de base/membro correspondente permitiam exceções. Esse comportamento é contrário ao C++ Standard e pode causar um comportamento indefinido no tempo de execução. O padrão exige que tais funções sejam definidas como excluídas se houver uma incompatibilidade de especificação de exceção.  No **/std:c++17**, o código a seguir aciona um C2280 *tentativa de fazer referência a uma função excluída. A função foi excluída implicitamente porque a especificação de exceção explícita é incompatível com aquela da declaração implícita.* :
 
 ```cpp
 struct A {
@@ -1464,7 +1464,7 @@ int main()
 
 Com noexcept no sistema de tipos, as especializações parciais para correspondência de tipos “chamáveis” específicos podem falhar ao compilar ou escolher o modelo primário devido a uma especialização parcial ausente para ponteiros para funções noexcept.
 
-Nesses casos, pode ser necessário acrescentar especializações parciais adicionais para tratar os ponteiros de função noexcept e ponteiros noexcept para funções de membro. Essas sobrecargas só são válidas no modo **/std:c++17**. Se for necessário manter a compatibilidade com a C++14 e você estiver escrevendo código que outras pessoas consumirão, será necessário proteger essas novas sobrecargas dentro de diretivas `#ifdef`. Se você estiver trabalhando em um módulo independente, em vez de usar proteções `#ifdef`, será possível compilar simplesmente com a opção **/Zc:noexceptTypes-**.
+Nesses casos, pode ser necessário acrescentar especializações parciais adicionais para tratar os ponteiros de função noexcept e ponteiros noexcept para funções de membro. Essas sobrecargas só são válidas no modo **/std:c++17**. Se for necessário manter a compatibilidade com a C++14 e você estiver escrevendo código que outras pessoas consumirão, será necessário proteger essas novas sobrecargas dentro de diretivas `#ifdef`. Se você estiver trabalhando em um módulo independente, em vez de usar proteções `#ifdef`, será possível compilar simplesmente com a opção **/Zc:noexceptTypes-** .
 
 O código a seguir é compilado em **/std:c++14**, mas falha em **/std:c++17** com "erro C2027: uso do tipo indefinido 'A\<T>'":
 
@@ -1570,7 +1570,7 @@ struct D : B<T*> {
 };
 ```
 
-O Visual Studio 2017 versão 15.7, no modo **/std:c ++17**, requer a palavra-chave `typename` na instrução `using` em D. Sem `typename`, o compilador gera um aviso C4346: *'B<T\*>::type': o nome dependente não é um tipo*  e erro C2061: *erro de sintaxe: identificador 'type'*:
+O Visual Studio 2017 versão 15.7, no modo **/std:c ++17**, requer a palavra-chave `typename` na instrução `using` em D. Sem `typename`, o compilador gera um aviso C4346: *'B<T\*>::type': o nome dependente não é um tipo*  e erro C2061: *erro de sintaxe: identificador 'type'* :
 
 ```cpp
 template<typename T>
@@ -1677,7 +1677,7 @@ Para corrigir o erro, basta alterar a segunda linha para `using  X = T;`.
 
 [__declspec](../../cpp/declspec.md) não é mais permitido no lado direito de uma definição de modelo de alias. Ele era aceito anteriormente pelo compilador, mas era completamente ignorado e nunca resultava em um aviso de preterimento quando o alias era usado.
 
-O atributo C++ padrão [\[\[preterido\]\]](../../cpp/attributes.md) pode ser usado nesse caso e será respeitado a partir do Visual Studio 2017 versão 15.6. O código a seguir agora produz C2760 *erro de sintaxe: token inesperado '__declspec', era esperado 'type specifier'*:
+O atributo C++ padrão [\[\[preterido\]\]](../../cpp/attributes.md) pode ser usado nesse caso e será respeitado a partir do Visual Studio 2017 versão 15.6. O código a seguir agora produz C2760 *erro de sintaxe: token inesperado '__declspec', era esperado 'type specifier'* :
 
 ```cpp
 template <typename T>
@@ -1697,7 +1697,7 @@ A pesquisa de nome em duas fases requer que os nomes não dependentes usados nos
 
 Uma forma em que isso se manifesta é com a pesquisa em classes base dependentes. Anteriormente, o compilador permitia o uso de nomes definidos nas classes base dependentes porque a pesquisa deles acontecia durante o tempo de instanciação quando todos os tipos eram resolvidos. Agora, esse código é tratado como um erro. Nesses casos, você pode forçar a pesquisa da variável no tempo de instanciação qualificando-a com o tipo de classe base ou, de outro modo, tornando-a dependente, por exemplo, adicionando um ponteiro `this->`.
 
-No modo **/permissive-**, o código a seguir agora gera C3861: *'base_value': identificador não encontrado*:
+No modo **/permissive-** , o código a seguir agora gera C3861: *'base_value': identificador não encontrado*:
 
 ```cpp
 template <class T>
@@ -1764,11 +1764,11 @@ public:
 
 ### <a name="offsetof-with-constant-expressions"></a>offsetof com expressões de constantes
 
-[offsetof](../../c-runtime-library/reference/offsetof-macro.md) normalmente tem sido implementado usando uma macro que requer um [reinterpret_cast](../../cpp/reinterpret-cast-operator.md). Isso não é válido em contextos que requerem uma expressão de constante, mas usualmente o compilador C++ da Microsoft tem permitido isso. A macro offsetof que é fornecida como parte do STL usa corretamente um compilador intrínseco (**__builtin_offsetof**), mas muitas pessoas têm usado o truque da macro para definir seu próprio **offsetof**.
+[offsetof](../../c-runtime-library/reference/offsetof-macro.md) normalmente tem sido implementado usando uma macro que requer um [reinterpret_cast](../../cpp/reinterpret-cast-operator.md). Isso não é válido em contextos que requerem uma expressão de constante, mas usualmente o compilador C++ da Microsoft tem permitido isso. A macro offsetof que é fornecida como parte do STL usa corretamente um compilador intrínseco ( **__builtin_offsetof**), mas muitas pessoas têm usado o truque da macro para definir seu próprio **offsetof**.
 
 No Visual Studio 2017 versão 15.8, o compilador restringe as áreas em que esses reinterpret_casts podem aparecer no modo padrão para ajudar o código a ficar em conformidade com o comportamento do C++ Standard. Em [/permissive-](../../build/reference/permissive-standards-conformance.md), as restrições são ainda mais rígidas. O uso do resultado de um offsetof em locais que requerem expressões de constante pode resultar em um código que emite o aviso C4644 *uso do padrão offsetof baseado em macro em expressões de constantes não padrão; nesse caso, use offsetof definido na biblioteca C++ Standard* ou C2975 *argumento de modelo inválido, uma expressão de constante em tempo de compilação é esperada*.
 
-O código a seguir gera C4644 nos modos **/default** e **/std:c++17** e C2975 no modo **/permissive-**:
+O código a seguir gera C4644 nos modos **/default** e **/std:c++17** e C2975 no modo **/permissive-** :
 
 ```cpp
 struct Data {
@@ -1826,7 +1826,7 @@ int main()
 
 ### <a name="template-keyword-and-nested-name-specifiers"></a>Palavra-chave de modelo e especificadores de nome aninhados
 
-No modo **/permissive-**, o compilador agora requer que a palavra-chave `template` preceda um nome de modelo quando ela vier após um especificador de nome aninhado que seja dependente.
+No modo **/permissive-** , o compilador agora requer que a palavra-chave `template` preceda um nome de modelo quando ela vier após um especificador de nome aninhado que seja dependente.
 
 O código a seguir no modo **/permissive-** agora gera C7510: *'foo': o uso do nome de modelo dependente precisa ser prefixado com 'template'. Observação: confira a referência à instanciação do modelo de classe ' X<T>' que está sendo compilado*:
 
@@ -1887,7 +1887,7 @@ struct A
 A<>::from_template_t<A<int>> a;
 ```
 
-No Visual Studio 2017 versão 15.9, no modo **/permissive-**, o compilador gera C3861: *'from_template': identificador não encontrado*.
+No Visual Studio 2017 versão 15.9, no modo **/permissive-** , o compilador gera C3861: *'from_template': identificador não encontrado*.
 
 Para corrigir o erro, declare `from_template` antes de `from_template_t`.
 
@@ -1903,13 +1903,13 @@ cl /EHsc /std:c++17 m.ixx /experimental:module
 cl /experimental:module /module:reference m.ifc main.cpp /std:c++14
 ```
 
-O compilador gera C5050 para ambos os casos: *aviso C5050: Possível ambiente incompatível durante a importação do módulo 'm': versões incompatíveis do C++.  Versão do módulo "201402" atual "201703"*.
+O compilador gera C5050 para ambos os casos: *aviso C5050: Possível ambiente incompatível durante a importação do módulo 'm': versões incompatíveis do C++.  Versão do módulo "201402" atual "201703"* .
 
-Além disso, o compilador gera C7536 sempre que o arquivo .ifc é adulterado. O cabeçalho da interface do módulo contém um hash SHA2 do conteúdo abaixo dele. Na importação, o arquivo .ifc é transformado em hash da mesma forma e, em seguida, comparado com o hash fornecido no cabeçalho. Se eles não correspondem, o erro C7536 é gerado: *O ifc não foi aprovado nas verificações de integridade.  Esperado SHA2: '66d5c8154df0c71d4cab7665bab4a125c7ce5cb9a401a4d8b461b706ddd771c6'*.
+Além disso, o compilador gera C7536 sempre que o arquivo .ifc é adulterado. O cabeçalho da interface do módulo contém um hash SHA2 do conteúdo abaixo dele. Na importação, o arquivo .ifc é transformado em hash da mesma forma e, em seguida, comparado com o hash fornecido no cabeçalho. Se eles não correspondem, o erro C7536 é gerado: *O ifc não foi aprovado nas verificações de integridade.  Esperado SHA2: '66d5c8154df0c71d4cab7665bab4a125c7ce5cb9a401a4d8b461b706ddd771c6'* .
 
 ### <a name="partial-ordering-involving-aliases-and-non-deduced-contexts"></a>Ordenação parcial envolvendo aliases e contextos não deduzidos
 
-Há uma divergência de implementação nas regras de ordenação parciais que envolvem aliases em contextos não deduzidos. No exemplo a seguir, a GCC e o compilador de C++ da Microsoft (no modo **/permissive-**) geram um erro, enquanto o Clang aceita o código. 
+Há uma divergência de implementação nas regras de ordenação parciais que envolvem aliases em contextos não deduzidos. No exemplo a seguir, a GCC e o compilador de C++ da Microsoft (no modo **/permissive-** ) geram um erro, enquanto o Clang aceita o código. 
 
 ```cpp
 #include <utility>
@@ -2035,7 +2035,7 @@ constexpr void S<int>::f()
 }
 ```
 
-No Visual Studio 2017 versão 15.9, o código gera este erro: *erro C3615: a função constexpr 'S<int>::f' não pode resultar em uma expressão de constante. Observação: a falha foi causada pela chamada de uma função indefinida ou um 'constexpr' não declarado. Observação: consulte o uso de 'g'*. Para evitar o erro, remova o qualificador `constexpr` da instanciação explícita da função f(). 
+No Visual Studio 2017 versão 15.9, o código gera este erro: *erro C3615: a função constexpr 'S<int>::f' não pode resultar em uma expressão de constante. Observação: a falha foi causada pela chamada de uma função indefinida ou um 'constexpr' não declarado. Observação: consulte o uso de 'g'* . Para evitar o erro, remova o qualificador `constexpr` da instanciação explícita da função f(). 
 
 ## <a name="see-also"></a>Consulte também
 

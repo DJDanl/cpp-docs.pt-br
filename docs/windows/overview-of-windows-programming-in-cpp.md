@@ -2,12 +2,12 @@
 title: Visão geral de programação do Windows no C++
 ms.date: 05/06/2019
 ms.assetid: efc691d7-21f3-47ae-ae56-cab999ccf59d
-ms.openlocfilehash: 036da87c24eef38f3c88bb5f73808a434b9da6a1
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.openlocfilehash: 957e3565ad4caa12da5e7d10915ca159d00954b8
+ms.sourcegitcommit: 79e985d3c6e8ccaf94f6e641972887cae8c6eeb0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837556"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66197745"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>Visão geral de programação do Windows no C++
 
@@ -100,7 +100,7 @@ O Visual Studio inclui um depurador potente para código nativo, ferramentas de 
 |[Passo a passo: como criar aplicativos de área de trabalho do Windows (C++)](walkthrough-creating-windows-desktop-applications-cpp.md)|Crie um aplicativo da área de trabalho do Windows nativo.|
 |[Assistente da Área de Trabalho do Windows](windows-desktop-wizard.md)|Use o Assistente para criar novos projetos do Windows.|
 |[ATL (Active Template Library)](../atl/atl-com-desktop-components.md)|Use a biblioteca ATL para criar componentes COM em C++.|
-|[MFC (Microsoft Foundation Classes)](../mfc/TOC.md)|Usar o MFC para criar grandes ou pequenos aplicativos do Windows com caixas de diálogo e controles|
+|[MFC (Microsoft Foundation Classes)](../mfc/mfc-desktop-applications.md)|Usar o MFC para criar grandes ou pequenos aplicativos do Windows com caixas de diálogo e controles|
 |[Classes compartilhadas da ATL e do MFC](../atl-mfc-shared/TOC.md)|Use classes como CString que são compartilhadas em ATL e MFC.|
 |[Acesso a dados](../data/data-access-in-cpp.md)| OLE DB e ODBC|
 |[Texto e cadeias de caracteres](../text/text-and-strings-in-visual-cpp.md)|Vários tipos de cadeia de caracteres no Windows.|

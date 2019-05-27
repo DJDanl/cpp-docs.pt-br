@@ -1,36 +1,43 @@
 ---
-title: Implementando um consumidor simples
-ms.date: 10/12/2018
+title: Implementação de um consumidor simples
+ms.date: 05/09/2019
 helpviewer_keywords:
-- clients, creating
 - OLE DB consumers, implementing
 ms.assetid: 13828167-23a4-4e94-8b6c-878262fda464
-ms.openlocfilehash: 9067e8645fac9a06bd85ca5ef18fbaff45d16aae
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 592a51dd77f7a2e115ee67a481e56dc558209253
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390796"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65525075"
 ---
-# <a name="implementing-a-simple-consumer"></a>Implementando um consumidor simples
+# <a name="implementing-a-simple-consumer"></a>Implementação de um consumidor simples
 
-Os tópicos a seguir mostram como editar os arquivos criados com o **Assistente de aplicativo MFC** e **ATL OLE DB Assistente de consumidor** para criar um consumidor simples. Este exemplo tem as seguintes partes:
+::: moniker range="vs-2019"
 
-- [Recuperando dados com o consumidor](#retrieve) mostra como implementar o código no consumidor que lê todos os dados, linha por linha, de uma tabela de banco de dados.
+O Assistente de Consumidor OLE DB da ATL não está disponível no Visual Studio 2019 e posteriores. Ainda é possível adicionar a funcionalidade manualmente. Saiba mais em [Criação de um consumidor sem usar um assistente](creating-a-consumer-without-using-a-wizard.md).
 
-- [Adição de suporte a indicadores para o consumidor](#bookmark) mostra como adicionar suporte a indicadores para o consumidor.
+::: moniker-end
+
+::: moniker range="vs-2017"
+
+Os tópicos a seguir mostram como editar os arquivos criados pelo **Assistente para Aplicativo do MFC** e **Assistente de Cliente OLE DB da ATL** para criar um consumidor simples. Este exemplo tem as seguintes partes:
+
+- [Recuperação de dados com o consumidor](#retrieve) mostra como implementar o código no consumidor que lê todos os dados, linha por linha, de uma tabela de banco de dados.
+
+- [Adição de suporte a indicadores ao consumidor](#bookmark) mostra como adicionar suporte a indicadores ao consumidor.
 
 > [!NOTE]
-> Você pode usar o aplicativo do consumidor descrito nesta seção para testar o `MyProv` e `Provider` provedores de exemplo.
+> O aplicativo do consumidor descrito nesta seção pode ser usado para testar a amostra de provedores `MyProv` e `Provider`.
 
 > [!NOTE]
-> Para criar um aplicativo de consumidor para testar `MyProv` (o mesmo provedor descrito em [melhorando o provedor somente leitura simples](../../data/oledb/enhancing-the-simple-read-only-provider.md)), você deve incluir suporte a indicadores, conforme descrito em [adicionando suporte a indicadores para o Consumidor](#bookmark).
+> Para criar um aplicativo de consumidor para teste `MyProv` (o mesmo provedor descrito em [Melhoria do provedor simples somente leitura](../../data/oledb/enhancing-the-simple-read-only-provider.md)), você deve incluir suporte a indicadores, conforme descrito em [Adição de suporte a indicadores ao consumidor](#bookmark).
 
-## <a name="retrieve" ></a> Recuperando dados com o consumidor
+## <a name="retrieve" ></a> Recuperação de dados com o consumidor
 
 ### <a name="to-modify-the-console-application-to-use-the-ole-db-consumer"></a>Para modificar o aplicativo de console para usar o consumidor do OLE DB
 
-1. No `MyCons.cpp`, altere o código principal inserindo o texto em negrito, da seguinte maneira:
+1. Em `MyCons.cpp`, altere o código principal inserindo o texto em negrito da seguinte maneira:
 
     ```cpp
     // MyCons.cpp : Defines the entry point for the console application.
@@ -57,32 +64,32 @@ Os tópicos a seguir mostram como editar os arquivos criados com o **Assistente 
     }
     ```
 
-## <a name="bookmark" ></a> Adicionando suporte a indicadores ao consumidor
+## <a name="bookmark" ></a> Adição de suporte a indicadores ao consumidor
 
-Um indicador é uma coluna que identifica exclusivamente linhas na tabela. Geralmente é a coluna de chave, mas nem sempre; ele é específico do provedor. Esta seção mostra como adicionar suporte a indicadores. Para fazer isso, você precisará fazer as etapas a seguir na classe de registro de usuário:
+Um indicador é uma coluna que identifica exclusivamente linhas na tabela. Geralmente, é a coluna de chave, mas nem sempre; ela é específica do provedor. Esta seção mostra como adicionar suporte a indicadores. Para fazer isso, siga as etapas abaixo na classe de registro do usuário:
 
-- Criar uma instância de indicadores. Esses são objetos do tipo [CBookmark](../../data/oledb/cbookmark-class.md).
+- Crie uma instância de indicadores. Esses são objetos do tipo [CBookmark](../../data/oledb/cbookmark-class.md).
 
-- Solicitar uma coluna de indicador do provedor definindo o `DBPROP_IRowsetLocate` propriedade.
+- Solicite uma coluna de indicadores do provedor configurando a propriedade `DBPROP_IRowsetLocate`.
 
-- Adicionar uma entrada de indicador no mapa coluna usando o [BOOKMARK_ENTRY](../../data/oledb/bookmark-entry.md) macro.
+- Adicione uma entrada de indicador ao mapa de coluna usando a macro [BOOKMARK_ENTRY](../../data/oledb/bookmark-entry.md).
 
-As etapas anteriores oferecem suporte a indicadores e um objeto de indicador com o qual trabalhar. Este exemplo de código demonstra um indicador da seguinte maneira:
+As etapas anteriores dão suporte a indicadores e a um objeto de indicador com o qual trabalhar. Este exemplo de código demonstra um indicador da seguinte maneira:
 
 - Abra um arquivo para gravação.
 
-- Dados do conjunto de linhas de saída para o arquivo linha por linha.
+- Gere dados do conjunto de linhas para o arquivo linha por linha.
 
-- Mover o cursor de conjunto de linhas para o indicador chamando [MoveToBookmark](../../data/oledb/crowset-movetobookmark.md).
+- Mova o cursor do conjunto de linhas para o indicador chamando [MoveToBookmark](../../data/oledb/crowset-movetobookmark.md).
 
-- A linha marcada com indicador, acrescentando-o ao final do arquivo de saída.
+- Gere a linha marcada com indicador, acrescendo-a ao fim do arquivo.
 
 > [!NOTE]
-> Se você usar esse aplicativo de consumidor para testar o `Provider` provedor de aplicativo de exemplo, deixar o suporte a indicadores descrito nesta seção.
+> Se você usar esse aplicativo de consumidor para testar a amostra de aplicativo do provedor `Provider`, omita o suporte a indicadores descrito nesta seção.
 
-### <a name="to-instantiate-the-bookmark"></a>Para instanciar o indicador
+### <a name="to-instantiate-the-bookmark"></a>Criação de uma instância do indicador
 
-1. O acessador precisa armazenar um objeto do tipo [CBookmark](../../data/oledb/cbookmark-class.md). O *nSize* parâmetro especifica o tamanho do buffer indicador em bytes (normalmente 4 para plataformas de 32 bits) e 8 para plataformas de 64 bits. Adicione a seguinte declaração para os membros de dados de coluna na classe de registro de usuário:
+1. O acessador precisa manter um objeto do tipo [CBookmark](../../data/oledb/cbookmark-class.md). O parâmetro *nSize* especifica o tamanho do buffer de indicadores em bytes (normalmente 4 para plataformas de 32 bits e 8 para plataformas de 64 bits). Adicione a seguinte declaração aos membros de dados da coluna na classe de registro do usuário:
 
     ```cpp
     //////////////////////////////////////////////////////////////////////
@@ -95,9 +102,9 @@ As etapas anteriores oferecem suporte a indicadores e um objeto de indicador com
        ...
     ```
 
-### <a name="to-request-a-bookmark-column-from-the-provider"></a>Para solicitar uma coluna de indicador do provedor
+### <a name="to-request-a-bookmark-column-from-the-provider"></a>Solicitação de uma coluna de indicadores do provedor
 
-1. Adicione o seguinte código no `GetRowsetProperties` método na classe de registro de usuário:
+1. Adicione o seguinte código ao método `GetRowsetProperties` da classe de registro do usuário:
 
     ```cpp
     // Set the DBPROP_IRowsetLocate property.
@@ -109,9 +116,9 @@ As etapas anteriores oferecem suporte a indicadores e um objeto de indicador com
     }
     ```
 
-### <a name="to-add-a-bookmark-entry-to-the-column-map"></a>Para adicionar uma entrada de indicador para o mapa de coluna
+### <a name="to-add-a-bookmark-entry-to-the-column-map"></a>Adição de uma entrada de indicador ao mapa de coluna
 
-1. Adicione a seguinte entrada no mapa de coluna na classe de registro de usuário:
+1. Adicione a seguinte entrada ao mapa de coluna na classe de registro do usuário:
 
     ```cpp
     // Set a bookmark entry in the column map.
@@ -123,9 +130,9 @@ As etapas anteriores oferecem suporte a indicadores e um objeto de indicador com
     END_COLUMN_MAP()
     ```
 
-### <a name="to-use-a-bookmark-in-your-main-code"></a>Para usar um indicador em seu código principal
+### <a name="to-use-a-bookmark-in-your-main-code"></a>Uso de um indicador em seu código principal
 
-1. No `MyCons.cpp` arquivo do aplicativo de console anteriormente criado, altere o código principal para ler o seguinte. Para usar indicadores, o código principal precisa instanciar seu próprio objeto de indicador (`myBookmark`); isso é um indicador diferente no acessador (`m_bookmark`).
+1. No arquivo `MyCons.cpp` do aplicativo de console anteriormente criado, altere o código principal para ler como se segue. Para usar indicadores, o código principal precisa criar uma instância de seu próprio objeto de indicador (`myBookmark`); esse é um indicador diferente daquele no acessador (`m_bookmark`).
 
     ```cpp
     ///////////////////////////////////////////////////////////////////////
@@ -194,7 +201,9 @@ As etapas anteriores oferecem suporte a indicadores e um objeto de indicador com
     }
     ```
 
-Para obter mais informações sobre os indicadores, consulte [usando indicadores](../../data/oledb/using-bookmarks.md). Exemplos de indicadores também são mostrados na [atualizando conjuntos de linhas](../../data/oledb/updating-rowsets.md).
+Saiba mais sobre os indicadores em [Uso de indicadores](../../data/oledb/using-bookmarks.md). Exemplos de indicadores também são mostrados em [Atualizando conjuntos de linhas](../../data/oledb/updating-rowsets.md).
+
+::: moniker-end
 
 ## <a name="see-also"></a>Consulte também
 
