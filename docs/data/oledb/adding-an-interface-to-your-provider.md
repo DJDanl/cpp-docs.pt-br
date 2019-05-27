@@ -1,21 +1,24 @@
 ---
 title: Adicionando uma interface ao provedor
-ms.date: 10/29/2018
+ms.date: 05/09/2019
 helpviewer_keywords:
 - OLE DB provider templates, object interfaces
 ms.assetid: b0fc7cf8-428a-4584-9d64-ce9074d0eb66
-ms.openlocfilehash: c0452ca74509b65de3787af93bff41b3cb399c99
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: a1d219568c1787558674c47edd55436b8690a61c
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384966"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65524802"
 ---
 # <a name="adding-an-interface-to-your-provider"></a>Adicionando uma interface ao provedor
 
-Determinar quais objetos você deseja adicionar a interface para (normalmente, os objetos de dados de origem, conjunto de linhas, comando ou sessão criado pelo **OLE DB Provider Wizard**). É possível que o objeto que você precisa adicionar o adaptador é aquele que atualmente não dá suporte a seu provedor. Nesse caso, execute as **ATL OLE DB Provider Wizard** para criar o objeto. Clique com botão direito no projeto no **Class View**, clique em **Add** > **Novo Item** no menu, selecione **instalado**  >  **Visual C++** > **ATL**e, em seguida, clique em **provedor de OLEDB do ATL**. Você talvez queira colocar o código da interface em um diretório separado e, em seguida, copie os arquivos para seu projeto de provedor.
+> [!NOTE]
+> O assistente de Provedor OLE DB da ATL não está disponível no Visual Studio 2019 e posteriores.
 
-Se você criou uma nova classe para oferecer suporte à interface, tornar o objeto que herdam dessa classe. Por exemplo, você pode adicionar a classe `IRowsetIndexImpl` a um objeto de conjunto de linhas:
+Determine a qual objeto você deseja adicionar a interface (geralmente fonte de dados, conjunto de linhas, comando ou objetos de sessão criados pelo **Assistente de Provedor OLE DB**). É possível que o objeto ao qual você precise adicionar a interface não seja compatível no momento com o provedor. Nesse caso, execute o **Assistente de Provedor OLE DB da ATL** para criar o objeto. Clique com o botão direito do mouse no projeto no **Modo de Exibição de Classe**, clique em **Adicionar** > **Novo Item** no menu, selecione **Instalado** > **Visual C++** > **ATL** e, em seguida, clique em **provedor OLEDB do ATL**. Convém colocar o código da interface em um diretório separado e copiar os arquivos no seu projeto de provedor.
+
+Se você criou uma nova classe para dar suporte à interface, faça o objeto ser herdado dessa classe. Por exemplo, você pode adicionar a classe `IRowsetIndexImpl` a um objeto de conjunto de linhas:
 
 ```cpp
 template <class Creator>
@@ -24,7 +27,7 @@ class CCustomRowset :
     public IRowsetIndexImpl< ... >
 ```
 
-Adicione a interface para COM_MAP no objeto usando a macro COM_INTERFACE_ENTRY. Se não há nenhum mapa, crie um. Por exemplo:
+Adicione a interface a COM_MAP no objeto usando a macro COM_INTERFACE_ENTRY. Se não houver mapa, crie um. Por exemplo:
 
 ```cpp
 BEGIN_COM_MAP(CCustomRowset)
@@ -32,7 +35,7 @@ BEGIN_COM_MAP(CCustomRowset)
 END_COM_MAP()
 ```
 
-Para o objeto de conjunto de linhas, cadeia o mapa de seu pai do objeto para que o objeto possa delegar para a classe pai. Neste exemplo, adicione a macro COM_INTERFACE_ENTRY_CHAIN no mapa:
+Para o objeto de conjunto de linhas, encadeie o mapa de seu objeto pai para que o objeto possa ser delegado à classe pai. Neste exemplo, adicione a macro COM_INTERFACE_ENTRY_CHAIN ao mapa:
 
 ```cpp
 BEGIN_COM_MAP(CCustomRowset)

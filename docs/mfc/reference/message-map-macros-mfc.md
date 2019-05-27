@@ -28,12 +28,12 @@ helpviewer_keywords:
 - ranges, message map
 - message map ranges
 ms.assetid: 531b15ce-32b5-4ca0-a849-bb519616c731
-ms.openlocfilehash: f739dd8a74a106fb7a0e14baefcda59663ec66e0
-ms.sourcegitcommit: a61d17cffdd50f1c3c6e082a01bbcbc85b6cc5a7
+ms.openlocfilehash: ec6e638a1099db8baeefe220215485b6480c30e4
+ms.sourcegitcommit: bde3279f70432f819018df74923a8bb895636f81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65975133"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66174767"
 ---
 # <a name="message-map-macros-mfc"></a>Macros de mapa de mensagem (MFC)
 
@@ -108,7 +108,7 @@ END_MESSAGE_MAP()
 
 **Cabeçalho:** afxwin. h
 
-## <a name="begin_template_message_map"></a> begin_template_message_map
+## <a name="begin_template_message_map"></a> BEGIN_TEMPLATE_MESSAGE_MAP
 
 Inicia a definição de um mapa de mensagem em um tipo de classe que contém um argumento de modelo único.
 

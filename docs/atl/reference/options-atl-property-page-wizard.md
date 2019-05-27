@@ -1,44 +1,55 @@
 ---
-title: Opções, Assistente de página de propriedades da ATL
-ms.date: 11/04/2016
+title: Opções, Assistente de Página de Propriedades da ATL
+ms.date: 05/09/2019
 f1_keywords:
 - vc.codewiz.class.atl.ppg.options
 helpviewer_keywords:
 - ATL Property Page Wizard, options
 ms.assetid: a7107779-b2ea-4f99-b84b-7f3e0c504bc8
-ms.openlocfilehash: c92c7a3f03c3ddedbea02647e2317d77a7655609
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: c883b3e79bd857bb457da0a1bd540a08ddddf017
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62275393"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65524549"
 ---
-# <a name="options-atl-property-page-wizard"></a>Opções, Assistente de página de propriedades da ATL
+# <a name="options-atl-property-page-wizard"></a>Opções, Assistente de Página de Propriedades da ATL
 
-Use esta página do Assistente para definir o nível de agregação e o modelo de threading da página de propriedades que você está criando.
 
-- **Modelo de Threading**
+::: moniker range="vs-2019"
 
-   Especifica o modelo de threading usado pela página de propriedade.
+O assistente de Página de Propriedades da ATL não está disponível no Visual Studio 2019 e versões posteriores.
 
-   Ver [especificando o modelo de Threading do projeto](../../atl/specifying-the-threading-model-for-a-project-atl.md) para obter mais informações.
+::: moniker-end
+
+::: moniker range="vs-2017"
+
+Use esta página do assistente para definir o modelo de threading e o nível de agregação da página de propriedades que você está criando.
+
+- **Modelo de threading**
+
+   Especifica o modelo de threading usado pela página de propriedades.
+
+   Confira mais informações em [Como especificar o modelo de threading para um projeto](../../atl/specifying-the-threading-model-for-a-project-atl.md).
 
    |Opção|Descrição|
    |------------|-----------------|
-   |**Simples**|A página de propriedades é executado somente no thread COM primário.|
-   |**Apartment**|A página de propriedades pode ser criada em qualquer apartment de thread único. O padrão.|
+   |**Simples**|A página de propriedades é executada apenas no thread COM primário.|
+   |**Apartment**|A página de propriedades pode ser criada em qualquer apartament de thread único. O padrão.|
 
 - **Agregação**
 
-   Adiciona o suporte de agregação para a página de propriedades que você está criando. Ver [agregação](../../atl/aggregation.md) para obter mais informações.
+   Adiciona suporte de agregação para a página de propriedades que você está criando. Confira mais informações em [Agregação](../../atl/aggregation.md).
 
    |Opção|Descrição|
    |------------|-----------------|
-   |**Sim**|Crie uma página de propriedades que pode ser agregada.|
-   |**No**|Crie uma página de propriedades que não pode ser agregada.|
-   |**Only**|Crie uma página de propriedades só pode ser instanciada por meio de agregação.|
+   |**Sim**|Cria uma página de propriedades que pode ser agregada.|
+   |**No**|Cria uma página de propriedades que não pode ser agregada.|
+   |**Apenas**|Cria uma página de propriedades que só pode ser instanciada por meio de uma agregação.|
+
+::: moniker-end
 
 ## <a name="see-also"></a>Consulte também
 
 [Assistente de página de propriedades da ATL](../../atl/reference/atl-property-page-wizard.md)<br/>
-[Cadeias de caracteres, o Assistente de página de propriedades ATL](../../atl/reference/strings-atl-property-page-wizard.md)
+[Cadeias de caracteres, Assistente de Página de Propriedades da ATL](../../atl/reference/strings-atl-property-page-wizard.md)

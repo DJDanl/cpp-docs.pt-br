@@ -1,19 +1,23 @@
 ---
 title: Armazenando cadeias de caracteres no provedor de banco de dados OLE
-ms.date: 10/26/2018
+ms.date: 05/09/2019
 helpviewer_keywords:
 - user records, editing
 ms.assetid: 36cb9635-067c-4cad-8f85-962f28026f6a
-ms.openlocfilehash: 5dce7dac84ef69da17baac135a68bd78698c4456
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
-ms.translationtype: MT
+ms.openlocfilehash: f0ae4a3718858c4de5417aaf5a4f9bc0c0ba9984
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344979"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65525350"
 ---
 # <a name="storing-strings-in-the-ole-db-provider"></a>Armazenando cadeias de caracteres no provedor de banco de dados OLE
 
-Na *personalizado*RS.h, o **Assistente da ATL OLE DB Provider** cria um registro de usuário padrão chamado `CWindowsFile`. Para lidar com duas cadeias de caracteres, modifique `CWindowsFile` conforme mostrado no código a seguir:
+> [!NOTE] 
+> O assistente de Provedor OLE DB da ATL não está disponível no Visual Studio 2019 e posteriores.
+
+
+Em *Custom*RS.h, o **Assistente de Provedor OLE DB da ATL** cria um registro de usuário padrão chamado `CWindowsFile`. Para lidar com duas cadeias de caracteres, modifique `CWindowsFile` conforme mostrado no seguinte código:
 
 ```cpp
 ////////////////////////////////////////////////////////////////////////
@@ -48,9 +52,9 @@ END_PROVIDER_COLUMN_MAP()
 };
 ```
 
-Os membros de dados `szCommand` e `szText` representam as duas cadeias de caracteres, com `szCommand2` e `szText2` com colunas adicionais, se necessário. O membro de dados `dwBookmark` não é necessário para esse provedor somente leitura simple, mas é usado posteriormente para adicionar um `IRowsetLocate` interface, consulte [melhorando a simples leitura apenas provedor](../../data/oledb/enhancing-the-simple-read-only-provider.md). O `==` operador compara instâncias (implementar esse operador é opcional).
+Os membros de dados `szCommand` e `szText` representam as duas cadeias de caracteres, com `szCommand2` e `szText2` com colunas adicionais, se necessário. O membro de dados `dwBookmark` não é necessário para esse provedor simples somente leitura, mas é usado posteriormente para adicionar uma interface `IRowsetLocate`. Confira [Aprimoramento do provedor simples somente leitura](../../data/oledb/enhancing-the-simple-read-only-provider.md). O operador `==` compara instâncias (a implementação desse operador é opcional).
 
-Quando isso for feito, você pode adicionar a funcionalidade do [lendo cadeias de caracteres no provedor de OLE DB](../../data/oledb/reading-strings-into-the-ole-db-provider.md).
+Quando isso for feito, você poderá adicionar a funcionalidade de [ler cadeias de caracteres no provedor OLE DB](../../data/oledb/reading-strings-into-the-ole-db-provider.md).
 
 ## <a name="see-also"></a>Consulte também
 

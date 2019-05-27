@@ -1,22 +1,30 @@
 ---
 title: Membros de dados do status de campo em acessadores gerados por assistente
-ms.date: 10/24/2018
+ms.date: 05/09/2019
 helpviewer_keywords:
 - OLE DB consumer templates, field status
 - field status in OLE DB templates
 ms.assetid: 66e4e223-c60c-471e-860d-d23abcdfe371
-ms.openlocfilehash: dd650b7cafef78e23c23ddfef791c88b6b93727f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: c92a450a00e6218d2ccc679d56aeff0f379762a3
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408999"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65525064"
 ---
 # <a name="field-status-data-members-in-wizard-generated-accessors"></a>Membros de dados do status de campo em acessadores gerados por assistente
 
-Quando você usa o **ATL OLE DB Assistente de consumidor** para criar um consumidor, o assistente gera um membro de dados na classe de registro de usuário de cada campo que você especificar no seu mapa de coluna. Cada membro de dados é do tipo `DWORD` e contém um valor de status correspondente ao seu respectivo campo.
+::: moniker range="vs-2019"
 
-Por exemplo, para um membro de dados *m_OwnerID*, o assistente gera um membro de dados adicionais para o status de campo (*dwOwnerIDStatus*) e outra para o tamanho do campo (*dwOwnerIDLength*). Ele também gera um mapa de coluna com entradas COLUMN_ENTRY_LENGTH_STATUS.
+O Assistente de Consumidor OLE DB da ATL não está disponível no Visual Studio 2019 e posteriores. Ainda é possível adicionar a funcionalidade manualmente. Saiba mais em [Criação de um consumidor sem usar um assistente](creating-a-consumer-without-using-a-wizard.md).
+
+::: moniker-end
+
+::: moniker range="vs-2017"
+
+Quando você usa o **Assistente de Consumidor OLE DB do ATL** para criar um consumidor, o assistente gera um membro de dados na classe de registro de usuário de cada campo que você especifica no seu mapa de coluna. Cada membro de dados é do tipo `DWORD` e contém um valor de status correspondente ao seu respectivo campo.
+
+Por exemplo, para um membro de dados *m_OwnerID*, o assistente gera um membro de dados adicional para o status de campo (*dwOwnerIDStatus*) e outro para o tamanho do campo (*dwOwnerIDLength*). Ele também gera um mapa de coluna com entradas COLUMN_ENTRY_LENGTH_STATUS.
 
 Isso é mostrado no código a seguir:
 
@@ -52,17 +60,17 @@ public:
 ```
 
 > [!NOTE]
-> Se você modificar a classe de registro de usuário ou escrever seu próprios consumidor, as variáveis de dados devem vir antes das variáveis de status e o comprimento.
+> Se você modificar a classe de registro de usuário ou escrever seu próprio consumidor, as variáveis de dados deverão vir antes das variáveis de status e comprimento.
 
-Você pode usar os valores de status para fins de depuração. Se o código gerado pelo **ATL OLE DB Assistente de consumidor** gera erros de compilação como DB_S_ERRORSOCCURRED ou DB_E_ERRORSOCCURRED, você deve primeiro examinar os valores atuais dos membros de dados de status de campo. Aqueles que têm valores diferentes de zero correspondem às colunas incorretas.
+É possível usar os valores de status para fins de depuração. Se o código gerado pelo **Assistente de Consumidor OLE DB do ATL** gerar erros de compilação, como DB_S_ERRORSOCCURRED ou DB_E_ERRORSOCCURRED, primeiro examine os valores atuais dos membros de dados do status de campo. Aqueles que têm valores diferentes de zero correspondem às colunas incorretas.
 
-Você também pode usar os valores de status para definir um valor NULL para um determinado campo. Isso ajuda você em casos em que você deseja distinguir um valor de campo como NULL em vez de zero. Cabe a você decidir se NULL é um valor válido ou um valor especial e decidir como seu aplicativo deve tratá-la. OLE DB define DBSTATUS_S_ISNULL como o meio correto de especificar um valor nulo genérico. Se o consumidor lê os dados e o valor for nulo, o campo de status é definido como DBSTATUS_S_ISNULL. Se o consumidor deseja definir um valor NULL, o consumidor define o valor de status como DBSTATUS_S_ISNULL antes de chamar o provedor.
+Você também pode usar os valores de status para definir um valor NULL para determinado campo. Isso ajuda nos casos em que você quer distinguir um valor de campo como NULL em vez de zero. Cabe a você decidir se NULL é um valor válido ou um valor especial e como seu aplicativo deve tratá-lo. O OLE DB define DBSTATUS_S_ISNULL como o meio correto de especificar um valor NULL genérico. Se o consumidor lê os dados e o valor é nulo, o campo de status é definido como DBSTATUS_S_ISNULL. Se o consumidor deseja definir um valor NULL, deve definir o valor de status como DBSTATUS_S_ISNULL antes de chamar o provedor.
 
-Em seguida, abra o OLEDB e procure DBSTATUSENUM. Em seguida, você pode combinar o valor numérico do status diferente de zero em relação a valores de enumeração DBSTATUSENUM. Se o nome da enumeração não é suficiente para dizer o que está errado, consulte o **Status** tópico na **valores de dados de associação** seção o [guia do programador do DB OLE](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming). Este tópico contém tabelas de valores de status usados ao obter ou definir os dados. Para obter informações sobre valores de comprimento, consulte a **comprimento** tópico na mesma seção.
+Em seguida, abra o OLEDB e procure DBSTATUSENUM. Em seguida, você pode corresponder o valor numérico do status diferente de zero com valores de enumeração DBSTATUSENUM. Se o nome da enumeração não for suficiente para informar o que está errado, confira o tópico **Status** na seção **Associar valores de dados** do [Guia do Programador de OLE DB](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming). Este tópico contém tabelas de valores de status usados ao obter ou definir dados. Saiba mais sobre valores de comprimento no tópico **Comprimento** na mesma seção.
 
-## <a name="retrieving-the-length-or-status-of-a-column"></a>Recuperando o Status de uma coluna ou de comprimento
+## <a name="retrieving-the-length-or-status-of-a-column"></a>Recuperar o comprimento ou status de uma coluna
 
-Você pode recuperar o status de uma coluna (para verificar se há DBSTATUS_S_ISNULL, por exemplo) ou o comprimento de uma coluna de comprimento variável:
+É possível recuperar o comprimento de uma coluna de comprimento variável ou o status de uma coluna (para verificar se há DBSTATUS_S_ISNULL, por exemplo):
 
 - Para obter o comprimento, use a macro COLUMN_ENTRY_LENGTH.
 
@@ -86,7 +94,7 @@ Você pode recuperar o status de uma coluna (para verificar se há DBSTATUS_S_IS
     };
     ```
 
-- Em seguida, acesse o tamanho e/ou o status conforme mostrado:
+- Em seguida, acesse o comprimento e/ou status conforme mostrado:
 
     ```cpp
     CTable<CAccessor<CProducts >> product;
@@ -102,7 +110,9 @@ Você pode recuperar o status de uma coluna (para verificar se há DBSTATUS_S_IS
     }
     ```
 
-Quando você usa `CDynamicAccessor`, o comprimento e o status associados para você automaticamente. Para recuperar os valores de comprimento e o status, use o `GetLength` e `GetStatus` funções de membro.
+Quando você usa `CDynamicAccessor`, o comprimento e o status são associados automaticamente. Para recuperar os valores de comprimento e status, use as funções de membro `GetLength` e `GetStatus`.
+
+::: moniker-end
 
 ## <a name="see-also"></a>Consulte também
 

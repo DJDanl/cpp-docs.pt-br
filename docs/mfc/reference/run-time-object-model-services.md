@@ -4,12 +4,12 @@ ms.date: 03/27/2019
 helpviewer_keywords:
 - run-time object model services macros
 ms.assetid: 4a3e79df-2ee3-43a4-8193-20298828de85
-ms.openlocfilehash: 2dccb1c2081996ce7336652b207f3a68b20a3f9e
-ms.sourcegitcommit: a61d17cffdd50f1c3c6e082a01bbcbc85b6cc5a7
+ms.openlocfilehash: 3e9c3dcc02cb4307787f3e0baf5e99ac31b3d183
+ms.sourcegitcommit: bde3279f70432f819018df74923a8bb895636f81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65975113"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66174841"
 ---
 # <a name="run-time-object-model-services"></a>Serviços do modelo de objeto de tempo de execução
 
@@ -60,7 +60,7 @@ Determina se a biblioteca de controles comuns implementa a API especificada.
 
 ### <a name="syntax"></a>Sintaxe
 
-  ```
+```
 AFX_COMCTL32_IF_EXISTS(  proc );
 ```
 
@@ -165,7 +165,7 @@ Veja o exemplo de [IMPLEMENT_DYNCREATE](#implement_dyncreate).
 
 **Cabeçalho:** AFX. h
 
-## <a name="declare_olectltype"></a> declare_olectltype
+## <a name="declare_olectltype"></a> DECLARE_OLECTLTYPE
 
 Declara o `GetUserTypeNameID` e `GetMiscStatus` funções de membro de sua classe de controle.
 
@@ -188,7 +188,7 @@ O nome da classe do controle.
 
 **Cabeçalho:** afxctl. h
 
-## <a name="a-namedeclareproppageids-declareproppageids"></a><a name="declare_proppageids"> declare_proppageids
+## <a name="declare_proppageids"></a> DECLARE_PROPPAGEIDS
 
 Declara que o controle OLE fornece uma lista das páginas de propriedades para exibir suas propriedades.
 
@@ -361,7 +361,7 @@ A ID de classe OLE é um identificador exclusivo de 128 bits para o objeto. Ele 
 
 **Header:** afxdisp.h
 
-## <a name="a-nameimplementolectltype-implementolectltype"></a><a name="implement_olectltype"> implement_olectltype
+## <a name="implement_olectltype"></a> IMPLEMENT_OLECTLTYPE
 
 Implementa o `GetUserTypeNameID` e `GetMiscStatus` funções de membro de sua classe de controle.
 

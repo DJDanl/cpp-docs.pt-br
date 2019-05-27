@@ -1,41 +1,44 @@
 ---
 title: Problemas de design arquitetônico de banco de dados OLE
-ms.date: 10/22/2018
+ms.date: 05/09/2019
 helpviewer_keywords:
 - OLE DB, application design considerations
 ms.assetid: 8caa7d99-d2bb-42c9-8884-74f228bb6ecc
-ms.openlocfilehash: 2f0a7a114c671e17d8f95280ab00ed93570e8609
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: ef2837ea80c61f074cf567ee1fe61fa2cfa0ae73
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395554"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65525313"
 ---
 # <a name="ole-db-architectural-design-issues"></a>Problemas de design arquitetônico de banco de dados OLE
+
+> [!NOTE]
+> O Assistente de Consumidor OLE DB da ATL não está disponível no Visual Studio 2019 e posteriores. Ainda é possível adicionar a funcionalidade manualmente. Saiba mais em [Criação de um consumidor sem usar um assistente](creating-a-consumer-without-using-a-wizard.md).
 
 Considere os seguintes problemas antes de iniciar seu aplicativo OLE DB:
 
 ## <a name="what-programming-implementation-will-you-use-to-write-your-ole-db-application"></a>Qual implementação de programação você usará para escrever seu aplicativo OLE DB?
 
-A Microsoft oferece várias bibliotecas para realizar essa tarefa: uma biblioteca de modelos OLE DB, OLE DB atributos e as interfaces OLE DB brutas no SDK do OLE DB. Além disso, há assistentes que o ajudam a escrever o seu programa. Essas implementações são descritas em [modelos OLE DB, atributos e outras implementações](../../data/oledb/ole-db-templates-attributes-and-other-implementations.md).
+A Microsoft oferece várias bibliotecas para realizar essa tarefa: uma biblioteca de Modelos OLE DB, OLE DB atributos e as interfaces OLE DB brutas no SDK do OLE DB. Além disso, há assistentes que o ajudam a escrever o seu programa. Essas implementações são descritas em [Modelos, atributos e outras implementações de OLE DB](../../data/oledb/ole-db-templates-attributes-and-other-implementations.md).
 
 ## <a name="do-you-need-to-write-your-own-provider"></a>Você precisa escrever seu próprio provedor?
 
-A maioria dos desenvolvedores não precisa escrever seu próprio provedor. A Microsoft fornece vários provedores. Sempre que você cria uma conexão de dados (por exemplo, quando você adiciona um consumidor ao seu projeto usando o **ATL OLE DB Assistente de consumidor**), o **propriedades de vínculo de dados** caixa de diálogo lista todos os provedores disponíveis registrado em seu sistema. Se um dos provedores é apropriado para seu próprio aplicativo de acesso de dados e armazenamento de dados, fazer a coisa mais fácil é usar uma destas opções. No entanto, se o armazenamento de dados não couber uma dessas categorias, você precisa criar seu próprio provedor. Para obter informações sobre como criar provedores, consulte [modelos OLE DB Provider](../../data/oledb/ole-db-provider-templates-cpp.md).
+A maioria dos desenvolvedores não precisa escrever seu próprio provedor. A Microsoft fornece vários provedores. Sempre que você cria uma conexão de dados (por exemplo, ao adicionar um consumidor ao seu projeto usando o **Assistente de Consumidor OLE DB da ATL**), a caixa de diálogo **Propriedades do Link de Dados** lista todos os provedores disponíveis registrados em seu sistema. Se um dos provedores for apropriado para seu próprio armazenamento de dados e aplicativo de acesso a dados, a coisa mais fácil a ser feita é usar um deles. No entanto, se o armazenamento de dados não for adequado a uma dessas categorias, será preciso criar o seu próprio provedor. Saiba mais sobre como criar provedores em [Modelos de provedor OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md).
 
-## <a name="what-level-of-support-do-you-need-for-your-consumer"></a>O nível de suporte precisa para que o consumidor?
+## <a name="what-level-of-support-do-you-need-for-your-consumer"></a>De qual nível de suporte você precisa para seu consumidor?
 
-Alguns consumidores podem ser básicas; enquanto outros podem ser complexos. A funcionalidade dos objetos de banco de dados OLE especificada pelas propriedades. Quando você usa o **ATL OLE DB Assistente de consumidor** para criar um consumidor ou o **Assistente de provedor de banco de dados** para criar um provedor, ele define as propriedades de objeto apropriado para você dar a você um conjunto padrão de funcionalidades. No entanto, se as classes de provedor ou consumidor gerado pelo assistente não dão suporte a tudo que você precisa que eles façam, você precisa para se referir às interfaces para essas classes na [OLE DB modelos de biblioteca](../../data/oledb/ole-db-templates.md). Essas interfaces encapsulam as interfaces OLE DB brutas, fornecendo uma implementação adicional para tornar a usá-los mais fácil para você.
+Alguns consumidores podem ser básicos; enquanto outros podem ser complexos. A funcionalidade dos objetos OLE DB é especificada pelas propriedades. Quando você usa o **Assistente de Consumidor OLE DB da ATL** para criar um consumidor ou o **Assistente de Provedor de Banco de Dados** para criar um provedor, ele define as propriedades de objeto apropriadas para oferecer um conjunto padrão de funcionalidades. No entanto, se as classes de consumidor ou provedor geradas pelo assistente não forem compatíveis com tudo o que você precisa, será preciso fazer referência às interfaces dessas classes na [Biblioteca de Modelos OLE DB](../../data/oledb/ole-db-templates.md). Essas interfaces encapsulam as interfaces OLE DB brutas, fornecendo implementação adicional para tornar o uso delas mais fácil para você.
 
-Por exemplo, se você deseja atualizar dados em um conjunto de linhas, mas esqueceu de especificar isso quando você criou o consumidor com o assistente, você pode especificar a funcionalidade após o fato, definindo o `DBPROP_IRowsetChange` e `DBPROP_UPDATABILITY` propriedades no objeto de comando. Em seguida, quando o conjunto de linhas é criado, ele tem o `IRowsetChange` interface.
+Por exemplo, se você deseja atualizar dados em um conjunto de linhas, mas esqueceu de especificar isso quando criou o consumidor com o assistente, é possível especificar a funcionalidade após o fato definindo as propriedades `DBPROP_IRowsetChange` e `DBPROP_UPDATABILITY` no objeto de comando. Assim, quando o conjunto de linhas for criado, ele terá a interface `IRowsetChange`.
 
 ## <a name="do-you-have-older-code-using-another-data-access-technology-ado-odbc-or-dao"></a>Você tem código mais antigo usando outra tecnologia de acesso de dados (ADO, ODBC ou DAO)?
 
-Considerando as combinações possíveis de tecnologias (por exemplo, usando componentes ADO com componentes de OLE DB e migrar o código do ODBC para OLE DB), que abrange todas as situações está além do escopo da documentação do Visual C++. No entanto, muitos artigos que abordam vários cenários estão disponíveis nos seguintes sites da Microsoft:
+Considerando as possíveis combinações de tecnologias (por exemplo, usando componentes ADO com componentes OLE DB e migrando o código ODBC para OLE DB), cobrir todas as situações está além do escopo da documentação do Visual C++. No entanto, muitos artigos que abordam vários cenários estão disponíveis nos seguintes sites da Microsoft:
 
 - [Ajuda e Suporte da Microsoft](https://support.microsoft.com/)
 
-- [Visão geral do Microsoft Data Access artigos técnicos](https://msdn.microsoft.com/library/ms810811.aspx)
+- [Visão geral dos artigos técnicos do Microsoft Data Access](https://msdn.microsoft.com/library/ms810811.aspx)
 
 ## <a name="see-also"></a>Consulte também
 

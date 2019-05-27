@@ -1,25 +1,21 @@
 ---
 title: Nuvem e programação da Web no Visual C++
-ms.date: 11/04/2016
+ms.date: 05/14/2019
 ms.assetid: b63611f1-9723-44d0-ba7f-c3ebef341313
-ms.openlocfilehash: 3d71e36b6209c693940f2ebe6b5e9c73bc0c9d9d
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: 677e9da18e8d171f523994d21bfbd0411270e3c8
+ms.sourcegitcommit: bc1b14f29a02685f97c7ef5c098d16db6eaf369f
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65708037"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65790356"
 ---
 # <a name="cloud-and-web-programming-in-visual-c"></a>Nuvem e programação da Web no Visual C++
 
 No C++ há várias opções para conectar-se com a Web e com a nuvem.
 
-## <a name="cloud-programming-options"></a>Opções de programação em nuvem
+## <a name="microsoft-azure-sdks-and-rest-services"></a>Serviços REST e SDKs do Microsoft Azure
 
-- [Serviços Móveis do Microsoft Azure](http://www.windowsazure.com/develop/mobile/)
-
-  Fornece APIs nativas que podem ser usadas em aplicativos UWP (Plataforma Universal do Windows) ou aplicativos de área de trabalho do Windows para se conectar aos Serviços Móveis do Microsoft Azure. Embora a maioria dos exemplos no site sejam em C#, também é possível usar C++. Para obter mais informações, confira [Início Rápido: Como adicionar um serviço móvel usando C++](https://msdn.microsoft.com/library/windows/apps/dn263181.aspx).
-
-- [Biblioteca de Clientes do Armazenamento do Microsoft Azure para C++](https://blogs.msdn.microsoft.com/windowsazurestorage/2015/04/29/microsoft-azure-storage-client-library-for-c-v1-0-0-general-availability/)
+- [Biblioteca de Clientes do Armazenamento do Microsoft Azure para C++](https://azure.github.io/azure-storage-cpp/)
 
   A Biblioteca de Clientes do Armazenamento do Azure para C++ oferece uma API abrangente para trabalhar com o armazenamento do Azure, incluindo, entre outras, as seguintes capacidades:
 
@@ -29,9 +25,13 @@ No C++ há várias opções para conectar-se com a Web e com a nuvem.
   - Enfileirar e desenfileirar mensagens em uma fila do Azure.
   - Listar lentamente contêineres, blobs, tabelas e filas e consultar lentamente entidades
 
-- [API do OneDrive](https://dev.onedrive.com/README.htm)
+- O ANSI C99 [SDKs do Hub IoT do Azure](/azure/iot-hub/iot-hub-devguide-sdks) para a Internet das Coisas permite que os aplicativos de IoT sejam executados no dispositivo ou no back-end.
+
+- [OneDrive e SharePoint no Microsoft Graph](https://dev.onedrive.com/README.htm)
 
   A API do OneDrive fornece um conjunto de serviços HTTP para conectar seu aplicativo a arquivos e pastas no Office 365 e no SharePoint Server 2016.
+
+## <a name="windows-and-cross-platform-networking-apis"></a>APIs de rede do Windows e de multiplataforma
 
 - [C++ REST SDK (codinome "Casablanca")](https://github.com/Microsoft/cpprestsdk)
 
@@ -40,7 +40,7 @@ No C++ há várias opções para conectar-se com a Web e com a nuvem.
   - Realize chamadas REST com relação a qualquer servidor HTTP, com suporte interno para análise e serialização de documento JSON
   - É compatível com OAuth 1 e 2, incluindo um ouvinte de redirecionamento local
   - Realize conexões WebSockets com relação a serviços remotos
-  - Uma API de tarefa totalmente assíncrona baseada em PPL, incluindo um threadpool interno
+  - Uma API de tarefa totalmente assíncrona baseada em PPL, incluindo um pool de thread interno
 
   É compatível com Área de Trabalho do Windows (7+), Windows Server (2012+), Plataforma Universal do Windows, Linux, OSX, Android e iOS.
 
@@ -59,4 +59,5 @@ No C++ há várias opções para conectar-se com a Web e com a nuvem.
 ## <a name="see-also"></a>Consulte também
 
 [C++ no Visual Studio](../overview/visual-cpp-in-visual-studio.md) <br/>
-[Redes e serviços Web](/windows/uwp/networking/)
+[Central de Desenvolvedores do Microsoft Azure C e C++](https://azure.microsoft.com/develop/cpp/) <br/>
+[Redes e serviços Web (UWP)](/windows/uwp/networking/)

@@ -1,90 +1,92 @@
 ---
 title: Assistente de provedor OLE DB da ATL
-ms.date: 10/03/2018
-f1_keywords:
-- vc.codewiz.class.atl.provider.overview
+ms.date: 05/09/2019
 helpviewer_keywords:
-- ATL OLE DB Provider Wizard
 - ATL projects, adding ATL OLE DB providers
 ms.assetid: cf91ba78-01d1-4d12-b673-e95d96bfbebe
-ms.openlocfilehash: 3f8ff69fd80056bc2ac5a52cf3f42c69f8e8c543
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 91384d6c61368ee56ed303622e5c1bdfad09bd8a
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62248257"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65706971"
 ---
 # <a name="atl-ole-db-provider-wizard"></a>Assistente de provedor OLE DB da ATL
 
-Este assistente cria as classes que compõem um provedor OLE DB.
+::: moniker range="vs-2019"
 
-> [!WARNING]
-> No Visual Studio 2017 versão 15.9, esse assistente de código foi preterido e será removido em uma versão futura do Visual Studio. Este assistente é raramente usado. O suporte geral para ATL e MFC não é afetado pela remoção do assistente. Se você quiser compartilhar seus comentários sobre essa alteração, participe [desta pesquisa](https://www.surveymonkey.com/r/QDWKKCN). Seus comentários são importantes para nós.
+Esse assistente não está disponível no Visual Studio 2019 e versões posteriores.
+
+::: moniker-end
+
+::: moniker range="<=vs-2017"
 
 ## <a name="remarks"></a>Comentários
 
-A partir do Visual Studio 2008, o script de registro produzido por este assistente registrará seus componentes COM sob **HKEY_CURRENT_USER** em vez de **HKEY_LOCAL_MACHINE**. Para modificar esse comportamento, defina as **registrar o componente para todos os usuários** opção do Assistente da ATL.
+A partir do Visual Studio 2008, o script de registro produzido por esse assistente registra seus componentes COM em **HKEY_CURRENT_USER**, e não em **HKEY_LOCAL_MACHINE**. Para modificar esse comportamento, defina a opção **Registrar componente para todos os usuários** do Assistente da ATL.
 
-A tabela a seguir descreve as opções para o ATL OLE DB Provider Wizard:
+A tabela a seguir descreve as opções para o Assistente de Provedor OLE DB da ATL:
 
 - **Nome curto**
 
-   Digite o nome curto do provedor a ser criado. As outras caixas de edição do assistente serão preenchido automaticamente com base no que você digitar aqui. Se desejar, você pode editar as outras caixas de nome.
+   Digite o nome curto do provedor a ser criado. As outras caixas de edição do assistente serão preenchidas automaticamente com base no que você digitar aqui. É possível editar as outras caixas de nome se desejar.
 
 - **Coclass**
 
-   O nome da coclass. O nome de ProgID será alterado de acordo com esse nome.
+   O nome da coclass. O nome de ProgID será alterado para corresponder a esse nome.
 
 - **Atribuído**
 
-   Esta opção especifica se o assistente criará as classes de provedor usando atributos ou declarações de modelo. Quando você seleciona essa opção, o assistente usa atributos em vez de declarações de modelo (essa é a opção padrão se você tiver criado um projeto atribuído). Quando você desmarca essa opção, o assistente usa declarações de modelo em vez de atributos (essa é a opção padrão se você tiver criado um projeto não atribuído).
+   Essa opção especifica se o assistente criará as classes de provedor usando atributos ou declarações de modelo. Quando essa opção é selecionada, o assistente usa atributos em vez de declarações de modelo (essa será a opção padrão se você tiver criado um projeto atribuído). Ao desmarcar essa opção, o assistente usa declarações de modelo no lugar de atributos (isto é, a opção padrão se você tiver criado um projeto não atribuído).
 
-   Se você selecionar essa opção quando você criou um projeto não atribuído, o assistente o avisará que o projeto será convertido em um projeto atribuído e pergunta se você deseja continuar ou não.
+   Se você tiver selecionado essa opção quando criou um projeto não atribuído, o assistente avisará que o projeto será convertido em um projeto atribuído e pedirá que opte por continuar ou não.
 
 - **ProgID**
 
-   O ProgID ou o identificador programático, é uma cadeia de caracteres de texto que seu aplicativo pode usar em vez de um GUID. O nome de ProgID tem o formato *nomedacoclass*.
+   ProgID, ou identificador programático, é uma cadeia de caracteres de texto que o aplicativo pode usar no lugar de um GUID. O nome de ProgID tem o formato *Projectname.Coclassname*.
 
 - **Versão**
 
-   O número de versão do seu provedor. O padrão é 1.
+   O número da versão do seu provedor. O padrão é 1.
 
-- **Classe de fonte de dados**
+- **Classe DataSource**
 
-   O nome da classe de fonte de dados do formulário C*Shortname*código-fonte.
+   O nome da classe da fonte de dados, no formato C*Nomecurto*Origem.
 
-- **Arquivo. h da fonte de dados**
+- **Arquivo .h de DataSource**
 
-   O arquivo de cabeçalho para a classe de fonte de dados. Você pode editar o nome do arquivo ou selecionar um arquivo de cabeçalho existente.
+   O arquivo de cabeçalho para a classe da fonte de dados. Você pode editar o nome desse arquivo ou selecionar um arquivo de cabeçalho existente.
 
 - **Classe da sessão**
 
-   O nome da classe de sessão, de forma C*Shortname*sessão.
+   O nome da classe da sessão, no formato C*Nomecurto*Sessão.
 
-- **Arquivo. h de sessão**
+- **Arquivo. h da sessão**
 
-   O arquivo de cabeçalho para a classe de sessão. Você pode editar o nome do arquivo ou selecionar um arquivo de cabeçalho existente.
+   O arquivo de cabeçalho da classes da sessão. Você pode editar o nome desse arquivo ou selecionar um arquivo de cabeçalho existente.
 
-- **Classe de comando**
+- **Classe do comando**
 
-   O nome da classe de comando, da forma C*Shortname*comando.
+   O nome da classe do comando, no formato C*Nomecurto*Comando.
 
-- **Arquivo. h de comando**
+- **Arquivo .h do comando**
 
-   O arquivo de cabeçalho para a classe de comando. Esse nome não pode ser editado e depende do nome do arquivo de cabeçalho do conjunto de linhas.
+   O arquivo de cabeçalho da classe do comando. Esse nome não pode ser editado e depende do nome do arquivo de cabeçalho do conjunto de linhas.
 
-- **Classe de conjunto de linhas**
+- **Classe do conjunto de linhas**
 
-   O nome da classe de conjunto de linhas, da forma C*Shortname*conjunto de linhas.
+   O nome da classe do conjunto de linhas, no formato C*Nomecurto*ConjuntoDeLinhas.
 
-- **Arquivo do conjunto de linhas. h**
+- **Arquivo. h do conjunto de linhas**
 
-   O arquivo de cabeçalho para a classe de conjunto de linhas. Você pode editar o nome do arquivo ou selecionar um arquivo de cabeçalho existente.
+   O arquivo de cabeçalho da classe do conjunto de linhas. Você pode editar o nome desse arquivo ou selecionar um arquivo de cabeçalho existente.
 
-- **Arquivo. cpp do conjunto de linhas**
+- **Arquivo .cpp do conjunto de linhas**
 
-   Arquivo de implementação do provedor. Você pode editar o nome do arquivo ou selecionar um arquivo de implementação existente.
+   O arquivo de implementação do provedor. Você pode editar o nome desse arquivo ou selecionar um arquivo de implementação existente.
+
+::: moniker-end
 
 ## <a name="see-also"></a>Consulte também
 
-[Provedor ATL OLE DB](../../atl/reference/adding-an-atl-ole-db-provider.md)
+[Provedor OLE DB da ATL](../../atl/reference/adding-an-atl-ole-db-provider.md)

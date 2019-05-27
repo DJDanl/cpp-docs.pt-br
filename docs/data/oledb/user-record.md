@@ -1,6 +1,6 @@
 ---
 title: Registro de usuário
-ms.date: 11/04/2016
+ms.date: 05/09/2019
 helpviewer_keywords:
 - records, user
 - OLE DB providers, user record
@@ -8,16 +8,19 @@ helpviewer_keywords:
 - user records, described
 - rowsets, user record
 ms.assetid: 9c0d2864-2738-4f62-a750-1016d9c3523f
-ms.openlocfilehash: b37835f1a3161edd10f61f9b4e76cfb5f558e07b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: d6920a73f107f226cc31cb27fd15178f6d2f1c26
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389106"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65525259"
 ---
 # <a name="user-record"></a>Registro de usuário
 
-O registro de usuário fornece a estrutura de código e os dados que representa os dados da coluna para um conjunto de linhas. Um registro de usuário pode ser criado em tempo de compilação ou tempo de execução. Quando você cria um provedor usando o **ATL OLE DB Provider Wizard**, o assistente cria um registro de usuário padrão que se parece com isso (supondo que você especificou um nome de provedor [nome curto] de *MyProvider*):
+> [!NOTE] 
+> O assistente de Provedor OLE DB da ATL não está disponível no Visual Studio 2019 e posteriores.
+
+O registro de usuário fornece a estrutura de dados e código que representa os dados da coluna para um conjunto de linhas. Um registro de usuário pode ser criado no tempo de compilação ou tempo de execução. Quando você cria um provedor usando o **Assistente de Provedor OLE DB da ATL**, o assistente cria um registro de usuário padrão que se parece com isto (supondo que você especificou um nome de provedor [nome curto] como *MyProvider*):
 
 ```cpp
 class CWindowsFile:
@@ -36,7 +39,7 @@ END_PROVIDER_COLUMN_MAP()
 };
 ```
 
-Os modelos de provedor do OLE DB lidar com todas as especificações do OLE DB em interações com o cliente. Para obter os dados de coluna necessários para uma resposta, o provedor chamará o `GetColumnInfo` função, que você deve colocar no registro do usuário. Você pode substituir explicitamente `GetColumnInfo` no registro do usuário, por exemplo, por declará-la no arquivo. h como mostrado aqui:
+Os modelos de provedor OLE DB tratam de todas as especificações OLE DB em interações com o cliente. Para obter os dados de coluna necessários para uma resposta, o provedor chama a função `GetColumnInfo`, que você deve colocar no registro de usuário. Você pode substituir explicitamente `GetColumnInfo` no registro de usuário; por exemplo, declarando-o no arquivo .h, como mostrado aqui:
 
 ```cpp
 template <class T>
@@ -50,21 +53,21 @@ static ATLCOLUMNINFO* GetColumnInfo(CommandClass* pThis, ULONG* pcCols)
 static ATLCOLUMNINFO* GetColumnInfo(RowsetClass* pThis, ULONG* pcCols)
 ```
 
-Em seguida, implemente `GetColumnInfo` no arquivo. cpp do registro do usuário.
+Em seguida, implemente `GetColumnInfo` no arquivo .cpp do registro de usuário.
 
-As macros PROVIDER_COLUMN_MAP auxiliam na criação de um `GetColumnInfo` função:
+As macros PROVIDER_COLUMN_MAP auxiliam na criação de uma função `GetColumnInfo`:
 
-- BEGIN_PROVIDER_COLUMN_MAP define o protótipo de função e uma matriz estática de `ATLCOLUMNINFO` estruturas.
+- BEGIN_PROVIDER_COLUMN_MAP define o protótipo de função e uma matriz estática de estruturas `ATLCOLUMNINFO`.
 
 - PROVIDER_COLUMN_ENTRY define e inicializa um único `ATLCOLUMNINFO`.
 
-- END_PROVIDER_COLUMN_MAP fechará a matriz e a função. Ele também coloca a contagem de elementos de matriz para o *pcCols* parâmetro.
+- END_PROVIDER_COLUMN_MAP fecha a matriz e a função. Ela também coloca a contagem de elementos de matriz no parâmetro *pcCols*.
 
-Quando um registro de usuário é criado em tempo de execução `GetColumnInfo` usa o *pEsse* parâmetro para receber um ponteiro para uma instância de conjunto de linhas ou de comando. Comandos e conjuntos de linhas devem dar suporte a `IColumnsInfo` de interface, portanto, as informações de coluna podem ser retiradas desse ponteiro.
+Quando um registro de usuário é criado em tempo de execução, `GetColumnInfo` usa o parâmetro *pThis* para receber um ponteiro para uma instância do conjunto de linhas ou do comando. Os comandos e conjuntos de linhas devem ser compatíveis com a interface `IColumnsInfo` para que as informações de coluna possam ser extraídas desse ponteiro.
 
-`CommandClass` e `RowsetClass` são o comando e o conjunto de linhas que usam o registro do usuário.
+`CommandClass` e `RowsetClass` são os comandos e o conjunto de linhas que usam o registro de usuário.
 
-Para obter um exemplo mais detalhado de como substituir `GetColumnInfo` em um registro de usuário, consulte [dinamicamente determinando colunas retornadas ao consumidor](../../data/oledb/dynamically-determining-columns-returned-to-the-consumer.md).
+Veja um exemplo mais detalhado de como substituir `GetColumnInfo` em um registro de usuário em [Determinando dinamicamente as colunas retornadas ao consumidor](../../data/oledb/dynamically-determining-columns-returned-to-the-consumer.md).
 
 ## <a name="see-also"></a>Consulte também
 

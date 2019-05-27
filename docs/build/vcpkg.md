@@ -3,19 +3,19 @@ title: vcpkg-- um gerenciador de pacotes do C++ para Windows, Linux e MacOS
 description: O vcpkg é um gerenciador de pacote de linha de comando que simplifica bastante a aquisição e instalação de bibliotecas de C++ de software livre no Windows.
 author: mikeblome
 ms.author: mblome
-ms.date: 03/18/2019
+ms.date: 05/16/2019
 ms.technology: cpp-ide
 ms.assetid: f50d459a-e18f-4b4e-814b-913e444cedd6
-ms.openlocfilehash: 5dba6877c4489337625eed016c77b853f84af990
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 58f8a9b8223dc54bf083ebbac97528f88890777c
+ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65217658"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65837014"
 ---
 # <a name="vcpkg-a-c-package-manager-for-windows-linux-and-macos"></a>vcpkg: Um gerenciador de pacotes do C++ para Windows, Linux e MacOS
 
-O vcpkg é um gerenciador de pacotes de linha de comando que simplifica bastante a aquisição e instalação de bibliotecas de terceiros no Windows, Linux e MacOS. Se seu projeto usa bibliotecas de terceiros, é recomendável que você use o vcpkg para instalá-las. O vcpkg dá suporte a bibliotecas de software livre e proprietárias. Todas as bibliotecas do catálogo do vcpkg no Windows foram testadas quanto à compatibilidade com o Visual Studio 2015 e Visual Studio 2017. A partir de maio de 2018, há mais de 900 bibliotecas no catálogo do Windows e mais de 350 no catálogo do Linux/MacOS. A comunidade do C++ é adicionando mais bibliotecas a ambos os catálogos de forma contínua.
+O vcpkg é um gerenciador de pacotes de linha de comando que simplifica bastante a aquisição e instalação de bibliotecas de terceiros no Windows, Linux e MacOS. Se seu projeto usa bibliotecas de terceiros, é recomendável que você use o vcpkg para instalá-las. O vcpkg dá suporte a bibliotecas de software livre e proprietárias. Todas as bibliotecas do catálogo do vcpkg no Windows foram testadas quanto à compatibilidade com o Visual Studio 2015, o Visual Studio 2017 e o Visual Studio 2019. A partir de maio de 2018, há mais de 900 bibliotecas no catálogo do Windows e mais de 350 no catálogo do Linux/MacOS. A comunidade do C++ é adicionando mais bibliotecas a ambos os catálogos de forma contínua.
 
 ## <a name="simple-yet-flexible"></a>Simples e flexível
 
@@ -23,7 +23,7 @@ Com um único comando, você pode baixar fontes e compilar uma biblioteca. O pr�
 
 ## <a name="sources-not-binaries"></a>Fontes não binárias
 
-Para bibliotecas no catálogo do Windows, o vcpkg baixa fontes em vez de binários[1]. Ele compila essas fontes usando o Visual Studio 2017 ou o Visual Studio 2015 se o 2017 não estiver instalado. No C++, é muito importante que todas bibliotecas que você usar sejam compiladas com o mesmo compilador e com a mesma versão de compilador que o código de aplicativo que vincula-se a ela. Ao usar o vcpkg, você elimina ou, pelo menos, reduz bastante o potencial de binários não correspondentes e os problemas que eles podem causar. Em equipes que são padronizadas com uma versão específica de um compilador, um membro da equipe pode usar o vcpkg para baixar fontes e compilar um conjunto de binários e, em seguida, usar o comando de exportação para compactar os binários e os cabeçalhos para outros membros da equipe. Para obter mais informações, confira abaixo [Exportação de binários compilados e cabeçalhos](#export_binaries_per_project).
+Para bibliotecas no catálogo do Windows, o vcpkg baixa fontes em vez de binários[1]. Ele compila essas fontes usando a versão mais recente do Visual Studio que ele possa encontrar. No C++, é muito importante que todas bibliotecas que você usar sejam compiladas com o mesmo compilador e com a mesma versão de compilador que o código de aplicativo que vincula-se a ela. Ao usar o vcpkg, você elimina ou, pelo menos, reduz bastante o potencial de binários não correspondentes e os problemas que eles podem causar. Em equipes que são padronizadas com uma versão específica de um compilador, um membro da equipe pode usar o vcpkg para baixar fontes e compilar um conjunto de binários e, em seguida, usar o comando de exportação para compactar os binários e os cabeçalhos para outros membros da equipe. Para obter mais informações, confira abaixo [Exportação de binários compilados e cabeçalhos](#export_binaries_per_project).
 
 Se você criar um clone de vcpkg com bibliotecas particulares na coleção de portas, você poderá adicionar uma porta que baixa os cabeçalhos e os binários pré-criados e grave um arquivo portfile.cmake que simplesmente copia esses arquivos para o local desejado.
 
@@ -178,7 +178,7 @@ Digite **vcpkg remove** para remover uma biblioteca instalada. Se houver outras 
 
 ## <a name="customize-vcpkg"></a>Personalizar o vcpkg
 
-Você pode modificar seu clone do vcpkg da maneira que desejar. Você pode criar vários clones de vcpkg e modificar os portfiles em cada um para obter versões específicas de bibliotecas ou especificar parâmetros de linha de comando. Por exemplo, em uma empresa, um grupo de desenvolvedores pode estar trabalhando em um software que tenha um conjunto de dependências e outro grupo pode ter outro conjunto de dependências. Você pode configurar dois clones de vcpkg e modificar cada um para baixar as versões das bibliotecas e as opções de compilação, etc., de acordo com suas necessidades.
+Você pode modificar seu clone do vcpkg da maneira que desejar. Você pode criar vários clones de vcpkg e modificar os portfiles em cada um para obter versões específicas de bibliotecas ou especificar parâmetros de linha de comando. Por exemplo, em uma empresa, um grupo de desenvolvedores pode estar trabalhando em um software que tenha um conjunto de dependências e outro grupo pode ter outro conjunto de dependências. Configure dois clones do vcpkg e modifique cada um para baixar as versões das bibliotecas, as opções de build e assim por diante de acordo com suas necessidades.
 
 ## <a name="uninstall-vcpkg"></a>Desinstalar o vcpkg
 
