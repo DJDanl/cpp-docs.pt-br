@@ -1,6 +1,6 @@
 ---
 title: _setmaxstdio
-ms.date: 11/04/2016
+ms.date: 05/21/2019
 apiname:
 - _setmaxstdio
 apilocation:
@@ -25,48 +25,48 @@ helpviewer_keywords:
 - setmaxstdio function
 - open files, maximum
 ms.assetid: 9e966875-9ff5-47c4-9b5f-e79e83b70249
-ms.openlocfilehash: 58cffedf673e23a69c2d8040071b2e3353ff4502
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 94b768d920ffd86a5bd762f8994244dda67fb15f
+ms.sourcegitcommit: bde3279f70432f819018df74923a8bb895636f81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62356336"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66174828"
 ---
 # <a name="setmaxstdio"></a>_setmaxstdio
 
-Define o máximo para o número de arquivos abertos simultaneamente na **stdio** nível.
+Define o máximo de arquivos abertos simultaneamente no nível de E/S de fluxo.
 
 ## <a name="syntax"></a>Sintaxe
 
 ```C
 int _setmaxstdio(
-   int newmax
+   int new_max
 );
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*newmax*<br/>
-Novo máximo para o número de arquivos abertos simultaneamente na **stdio** nível.
+*new_max*<br/>
+Novo valor máximo de arquivos abertos simultaneamente no nível de E/S de fluxo.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Retorna *newmax* se bem-sucedido; caso contrário, de -1.
+Retorna *new_max*, se bem-sucedido; caso contrário, -1.
 
-Se *newmax* é menor que **_IOB_ENTRIES** ou maior que o número máximo de identificadores disponíveis no sistema operacional, o manipulador de parâmetro inválido é invocado, conforme descrito em [ Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essa função retornará -1 e definirá **errno** à **EINVAL**.
+Se *new_max* for menor que **_IOB_ENTRIES** ou superior ao número máximo de identificadores disponíveis no sistema operacional, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essa função retornará um valor -1 e definirá **errno** como **EINVAL**.
 
 Para obter informações sobre esses e outros códigos de erro, consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Comentários
 
-O **setmaxstdio** função altera o valor máximo para o número de arquivos que podem ser abertos simultaneamente na **stdio** nível.
+A função **_setmaxstdio** altera o valor máximo para o número de arquivos que podem ser abertos simultaneamente no nível de E/S do fluxo.
 
-A E/S em tempo de execução de C agora dá suporte a muito mais arquivos abertos em plataformas Win32 do que nas versões anteriores. Até 2.048 arquivos podem ser aberto simultaneamente na [nível lowio](../../c-runtime-library/low-level-i-o.md) (ou seja, abertos e acessados por meio das **Open**, **Read**, **Write**, e assim por diante família de funções de e/s). Até 512 arquivos podem ser aberto simultaneamente na [nível stdio](../../c-runtime-library/stream-i-o.md) (ou seja, abertos e acessados por meio das **fopen**, **fgetc**, **fputc** e assim por diante família de funções). O limite de 512 arquivos abertos na **stdio** nível pode ser aumentado para um máximo de 2.048 por meio das **setmaxstdio** função.
+A E/S do tempo de execução C agora é compatível com até 8.192 arquivos abertos simultaneamente no [nível de E/S baixo](../../c-runtime-library/low-level-i-o.md). Esse nível inclui os arquivos abertos e acessados usando a família **_open**, **_read** e **_write** de funções de E/S. Por padrão, até 512 arquivos podem ser abertos simultaneamente no [nível de E/S de fluxo](../../c-runtime-library/stream-i-o.md). Esse nível inclui os arquivos abertos e acessados usando a família **fopen**, **fgetc** e **fputc** de funções. O limite de 512 arquivos abertos no nível de E/S do fluxo pode ser elevado para um máximo de 8.192 usando a função **_setmaxstdio**.
 
-Porque **stdio**-funções no nível, como **fopen**, baseiam-se na parte superior dos **lowio** funções, o máximo de 2.048 é um limite superior rígido para o número de simultaneamente Abra arquivos acessados por meio da biblioteca de tempo de execução C.
+Devido às funções no nível de E/S do fluxo, como **fopen**, serem compiladas sobre as funções de nível de E/S baixo, o número máximo de 8.192 é um limite superior rígido para o número de arquivos abertos simultaneamente acessados por meio da biblioteca em tempo de execução C.
 
 > [!NOTE]
-> Esse limite pode estar além do que tem suporte por uma determinada plataforma Win32 e sua respectiva configuração.
+> Esse limite superior pode estar além do que é compatível com uma determinada plataforma Win32 e sua respectiva configuração.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -78,7 +78,7 @@ Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](
 
 ## <a name="example"></a>Exemplo
 
-Ver [getmaxstdio](getmaxstdio.md) para obter um exemplo de como usar **setmaxstdio**.
+Consulte [_getmaxstdio](getmaxstdio.md) para obter um exemplo de como usar **_setmaxstdio**.
 
 ## <a name="see-also"></a>Consulte também
 
