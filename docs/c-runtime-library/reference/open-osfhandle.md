@@ -1,6 +1,6 @@
 ---
 title: _open_osfhandle
-ms.date: 05/29/2018
+ms.date: 05/21/2019
 apiname:
 - _open_osfhandle
 apilocation:
@@ -24,12 +24,12 @@ helpviewer_keywords:
 - file handles [C++], associating
 - _open_osfhandle function
 ms.assetid: 30d94df4-7868-4667-a401-9eb67ecb7855
-ms.openlocfilehash: f45ca46cae459c8606f88a98d03b64c40e5d5f01
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8527dade37f20b7341d5a26f5752ece668ab7fc9
+ms.sourcegitcommit: bde3279f70432f819018df74923a8bb895636f81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156091"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66174796"
 ---
 # <a name="openosfhandle"></a>_open_osfhandle
 
@@ -54,13 +54,13 @@ Tipos de operações permitidas.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Se for bem-sucedido, **open_osfhandle** retorna um descritor de arquivo de tempo de execução C. Caso contrário, ele retornará -1.
+Se for bem-sucedido, **_open_osfhandle** retornará um descritor de arquivo de tempo de execução C. Caso contrário, retornará -1.
 
 ## <a name="remarks"></a>Comentários
 
-O **open_osfhandle** função aloca um descritor de arquivo de tempo de execução do C e a associa com o identificador de arquivo do sistema operacional especificado por *osfhandle*. Para evitar um aviso do compilador, converta a *osfhandle* argumento de **MANIPULAR** para **intptr_t**. O *sinalizadores* argumento é uma expressão inteira formada por uma ou mais das constantes de manifesto definidas em \<fcntl. h >. Quando duas ou mais constantes manifestas são usadas para formar o *sinalizadores* argumento, as constantes são combinadas com o operador OR bit a bit ( **&#124;** ).
+A função **_open_osfhandle** aloca um descritor de arquivo de tempo de execução C e o associa ao identificador de arquivo do sistema operacional especificado por *osfhandle*. Para evitar um aviso do compilador, converta o argumento *osfhandle* de **HANDLE** para **intptr_t**. O argumento *flags* é uma expressão inteira formada por uma ou mais constantes de manifesto definidas em \<fcntl.h>. Quando duas ou mais constantes de manifesto são usadas para formar o argumento *flags*, as constantes são combinadas com o operador OR bit a bit (**&#124;**).
 
-Essas constantes de manifesto são definidas em \<fcntl. h >:
+As constantes de manifesto são definidas em \<fcntl.h>:
 
 |||
 |-|-|
@@ -69,7 +69,7 @@ Essas constantes de manifesto são definidas em \<fcntl. h >:
 | **\_O\_TEXT** | Abre o arquivo no modo de texto (convertido). |
 | **\_O\_WTEXT** | Abre o arquivo no modo Unicode (convertido em UTF-16). |
 
-O **open_osfhandle** chamada transfere a propriedade do identificador de arquivo do Win32 para o descritor de arquivo. Para fechar um arquivo aberto com **open_osfhandle**, chame [ \_fechar](close.md). O identificador de arquivo do sistema operacional subjacente também é fechado por uma chamada para **Close**, portanto, não é necessário chamar a função Win32 **CloseHandle** no identificador original. Se o descritor de arquivo pertence a um **arquivo &#42;**  fluxo, em seguida, chamar [fclose](fclose-fcloseall.md) em que **arquivo &#42;**  fluxo também fecha o descritor do arquivo e o Identificador subjacente. Nesse caso, não chame **Close** no descritor de arquivo.
+A chamada **_open_osfhandle** transfere a propriedade do identificador de arquivo do Win32 para o descritor de arquivo. Para fechar um arquivo aberto usando **_open_osfhandle**, chame [\_close](close.md). O identificador de arquivo do sistema operacional subjacente também é fechado por uma chamada para **_close**. Não chame a função **CloseHandle** do Win32 no identificador original. Se o descritor de arquivo pertencer a um fluxo **FILE &#42;**, uma chamada para [fclose](fclose-fcloseall.md) no fluxo **FILE &#42;** fechará o descritor de arquivo e o identificador subjacente. Nesse caso, não chame **_close** no descritor de arquivo ou **CloseHandle** no identificador original.
 
 ## <a name="requirements"></a>Requisitos
 
