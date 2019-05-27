@@ -5,12 +5,12 @@ helpviewer_keywords:
 - OLE DB consumer templates, field status
 - field status in OLE DB templates
 ms.assetid: 66e4e223-c60c-471e-860d-d23abcdfe371
-ms.openlocfilehash: c92a450a00e6218d2ccc679d56aeff0f379762a3
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.openlocfilehash: a6623cb02f14650d92e4adabed749b0b37725d45
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65525064"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707556"
 ---
 # <a name="field-status-data-members-in-wizard-generated-accessors"></a>Membros de dados do status de campo em acessadores gerados por assistente
 
@@ -20,7 +20,7 @@ O Assistente de Consumidor OLE DB da ATL não está disponível no Visual Studio
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="<=vs-2017"
 
 Quando você usa o **Assistente de Consumidor OLE DB do ATL** para criar um consumidor, o assistente gera um membro de dados na classe de registro de usuário de cada campo que você especifica no seu mapa de coluna. Cada membro de dados é do tipo `DWORD` e contém um valor de status correspondente ao seu respectivo campo.
 

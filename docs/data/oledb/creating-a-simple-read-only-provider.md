@@ -5,12 +5,12 @@ helpviewer_keywords:
 - OLE DB providers, creating
 - OLE DB provider templates, creating providers
 ms.assetid: ade8ccdd-9ea4-4e46-a964-18460c2a2401
-ms.openlocfilehash: c0f31818002ce4611926d942b3bc556e31c1ae6f
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.openlocfilehash: 466530cb8c2ebca7f1c87370389309d3a0486e26
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65524717"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707616"
 ---
 # <a name="creating-a-simple-read-only-provider"></a>Criando um provedor somente leitura simples
 
@@ -20,7 +20,7 @@ O assistente de Provedor OLE DB da ATL não está disponível no Visual Studio 2
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="<=vs-2017"
 
 Ao criar um provedor de OLE DB usando o **Assistente de Projeto da ATL** e o **Assistente de Provedor ATL OLE DB**, você pode adicionar outras funcionalidades desejadas. Para começar a projetar seu provedor, examine o tipo de dados que você enviará para o consumidor e sob quais condições. É especialmente importante determinar se é necessário dar suporte a comandos, transações e outros objetos opcionais. Um bom design criado com antecedência acelera a implementação e o teste.
 
