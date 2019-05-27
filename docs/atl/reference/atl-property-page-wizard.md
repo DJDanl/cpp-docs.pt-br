@@ -7,12 +7,12 @@ helpviewer_keywords:
 - ATL projects, adding property pages
 - ATL Property Page Wizard
 ms.assetid: 6113e325-facd-4f68-b491-144d75209922
-ms.openlocfilehash: 47fee2291d201fca04674b07926ed88aaed0a95c
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
-ms.translationtype: HT
+ms.openlocfilehash: 5808a99d376ab3640c955156688d64bc0285e67e
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65524527"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65706999"
 ---
 # <a name="atl-property-page-wizard"></a>Assistente de página de propriedades da ATL
 
@@ -22,7 +22,7 @@ Esse assistente não está disponível no Visual Studio 2019 e versões posterio
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="<=vs-2017"
 
 Este assistente [adiciona uma página de propriedades a um projeto da ATL](../../atl/reference/adding-an-atl-property-page.md) ou a um projeto do MFC compatível com ATL. Uma página de propriedades da ATL fornece uma interface de usuário para definir as propriedades (ou chamar os métodos) de um ou mais objetos do COM.
 
@@ -75,4 +75,4 @@ Fornece informações sobre a funcionalidade COM do objeto.
 
 [Opções, Assistente de Página de Propriedades da ATL](../../atl/reference/options-atl-property-page-wizard.md)<br/>
 [Cadeias de caracteres, Assistente de Página de Propriedades da ATL](../../atl/reference/strings-atl-property-page-wizard.md)<br/>
-[Exemplo: Implementação de uma página de propriedades](../../atl/example-implementing-a-property-page.md)
+[Exemplo: implementar uma página de propriedades](../../atl/example-implementing-a-property-page.md)

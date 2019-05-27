@@ -4,12 +4,12 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - user record classes in OLE DB consumer
 ms.assetid: dba0538f-2afe-4354-8cbb-f202ea8ade5a
-ms.openlocfilehash: f172da3aefb3f2440ddb4bba41dc549b0bf4a926
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.openlocfilehash: 3442ff484876aec9b2cd3fa93e95c4d503649ee9
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65525135"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707746"
 ---
 # <a name="consumer-wizard-generated-classes"></a>Classes geradas pelo Assistente do Consumidor
 
@@ -20,7 +20,7 @@ O Assistente de Consumidor OLE DB da ATL não está disponível no Visual Studio
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="<=vs-2017"
 
 Ao usar o **Assistente de Consumidor OLE DB do ATL** para gerar um consumidor, você tem a opção de usar modelos ou atributos de OLE DB. Em ambos os casos, o assistente gera uma classe de comando e uma classe de registro de usuário. A classe de comando contém código para abrir a fonte de dados e o conjunto de linhas especificado no assistente. A classe de registro de usuário contém um mapa de coluna para a tabela de banco de dados selecionada. No entanto, o código gerado é diferente em cada caso:
 
