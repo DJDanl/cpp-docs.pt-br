@@ -7,11 +7,11 @@ ms.topic: tutorial
 ms.devlang: cpp
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
 ms.openlocfilehash: b15bc7551c4bf99b6dd52f99bb5e69064ddb8308
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58866958"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "66182796"
 ---
 # <a name="create-a-c-console-app-project"></a>Criar um projeto de aplicativo de console C++
 
@@ -113,7 +113,7 @@ Agora vamos examinar o código neste modelo em um aplicativo de calculadora.
 
    > Noções básicas sobre o código:
    >
-   > - As instruções `#include` permitem que você consulte a código localizado em outros arquivos. Às vezes, você poderá ver um nome de arquivo delimitado por colchetes angulares (**\<\>**); outras vezes, entre aspas (**" "**). Em geral, os colchetes angulares são usados ao fazer referência à biblioteca padrão C++, enquanto as aspas são usadas para outros arquivos.
+   > - As instruções `#include` permitem que você consulte a código localizado em outros arquivos. Às vezes, você poderá ver um nome de arquivo delimitado por colchetes angulares ( **\<\>** ); outras vezes, entre aspas ( **" "** ). Em geral, os colchetes angulares são usados ao fazer referência à biblioteca padrão C++, enquanto as aspas são usadas para outros arquivos.
    > - A linha `#include "pch.h"` (ou em versões mais antigas do Visual Studio, `#include "stdafx.h"`) faz referência a algo conhecido como um cabeçalho pré-compilado. Isso costuma ser usado por programadores profissionais para melhorar os tempos de compilação, mas estão além do escopo deste tutorial.
    > - A linha `using namespace std;` informa ao compilador para esperar que coisas da Biblioteca Padrão C++ sejam usadas nesse arquivo. Sem essa linha, cada palavra-chave da biblioteca precisaria ser precedida por um `std::` para indicar seu escopo. Por exemplo, sem essa linha, cada referência a `cout` precisaria ser escrito como `std::cout`. A instrução `using` é adicionada para fazer com que o código tenha uma aparência mais limpa.
    > - A palavra-chave `cout` é usada para imprimir a saída padrão em C++. O operador **\<\<** informa ao compilador para enviar o que estiver à direita para a saída padrão.
