@@ -818,12 +818,12 @@ helpviewer_keywords:
 - CWnd [MFC], WindowProc
 - CWnd [MFC], m_hWnd
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
-ms.openlocfilehash: e88c375560c617e970c70adda245125ac8242ae4
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: fc92497c4d43238f9cf6aea7132afb8c8dc27fbd
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220345"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66451224"
 ---
 # <a name="cwnd-class"></a>Classe CWnd
 
@@ -1652,7 +1652,7 @@ void BringWindowToTop();
 
 Além disso, `BringWindowToTop` ativa janelas filho MDI, pop-up e de nível superior. A função membro `BringWindowToTop` deve ser usada para descobrir qualquer janela que esteja parcial ou completamente obscurecida por qualquer janela sobreposta.
 
-Essa função apenas chama o Win32 [BringWindowToTop](/windows/desktop/api/winuser/nf-winuser-bringwindowtotop) função. Chame o [SetWindowPos](#setwindowpos) função para alterar a posição de uma janela na ordem Z. A função `BringWindowToTop` não altera o estilo da janela para torná-la uma janela de nível superior. Para obter mais informações, consulte [qual é a diferença entre HWND_TOP e HWND_TOPMOST](http://blogs.msdn.com/b/oldnewthing/archive/2005/11/21/495246.aspx)
+Essa função apenas chama o Win32 [BringWindowToTop](/windows/desktop/api/winuser/nf-winuser-bringwindowtotop) função. Chame o [SetWindowPos](#setwindowpos) função para alterar a posição de uma janela na ordem Z. A função `BringWindowToTop` não altera o estilo da janela para torná-la uma janela de nível superior. Para obter mais informações, consulte [qual é a diferença entre HWND_TOP e HWND_TOPMOST](https://devblogs.microsoft.com/oldnewthing/?p=33263)
 
 ### <a name="example"></a>Exemplo
 
@@ -2455,7 +2455,7 @@ O *lpPathSpec* parâmetro tem o seguinte formato:
 
 `[drive:] [ [\u]directory[\idirectory]...\u] [filename]`
 
-Neste exemplo, *unidade* é uma letra de unidade *diretório* é um nome de diretório válido, e *filename* é um nome de arquivo válido deve conter pelo menos um curinga. Os curingas são um ponto de interrogação (**?**), que significa corresponde qualquer caractere e um asterisco (<strong>\*</strong>), que significa corresponder a qualquer número de caracteres.
+Neste exemplo, *unidade* é uma letra de unidade *diretório* é um nome de diretório válido, e *filename* é um nome de arquivo válido deve conter pelo menos um curinga. Os curingas são um ponto de interrogação ( **?** ), que significa corresponde qualquer caractere e um asterisco (<strong>\*</strong>), que significa corresponder a qualquer número de caracteres.
 
 Se você especificar uma cadeia de caracteres de comprimento de 0 para *lpPathSpec*, ou se você especificar apenas um nome de diretório, mas não inclua qualquer especificação de arquivo, a cadeia de caracteres será alterada para "\*.\*".
 
@@ -2523,7 +2523,7 @@ O *lpPathSpec* parâmetro tem o seguinte formato:
 
 `[drive:] [ [\u]directory[\idirectory]...\u] [filename]`
 
-Neste exemplo, *unidade* é uma letra de unidade *diretório* é um nome de diretório válido, e *filename* é um nome de arquivo válido deve conter pelo menos um curinga. Os curingas são um ponto de interrogação (**?**), que significa corresponde qualquer caractere e um asterisco (<strong>\*</strong>), que significa corresponde a qualquer número de caracteres.
+Neste exemplo, *unidade* é uma letra de unidade *diretório* é um nome de diretório válido, e *filename* é um nome de arquivo válido deve conter pelo menos um curinga. Os curingas são um ponto de interrogação ( **?** ), que significa corresponde qualquer caractere e um asterisco (<strong>\*</strong>), que significa corresponde a qualquer número de caracteres.
 
 Se você especificar uma cadeia de caracteres de comprimento zero para *lpPathSpec*, o diretório atual será usado e *lpPathSpec* não será modificado. Se você especificar apenas um nome de diretório, mas não inclua qualquer especificação de arquivo, a cadeia de caracteres será alterada para "\*".
 

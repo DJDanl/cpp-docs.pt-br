@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, overview
 - C++ Accelerated Massive Parallelism
 ms.assetid: 9e593b06-6e3c-43e9-8bae-6d89efdd39fc
-ms.openlocfilehash: 258266768d3f456fb761a9d5a403a92c502dbe32
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4098a1467b0f81b5f66a2e45a4bb2138e8c1c262
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62349888"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449955"
 ---
 # <a name="c-amp-overview"></a>Visão geral do C++ AMP
 
@@ -431,7 +431,7 @@ for (int i = 0; i <4; i++) {
 
 ## <a name="math-libraries"></a>Bibliotecas de matemática
 
-O C++ AMP inclui duas bibliotecas matemáticas. A biblioteca de precisão dupla na [Namespace Concurrency:: precise_math](../../parallel/amp/reference/concurrency-precise-math-namespace.md) fornece suporte para funções de precisão dupla. Ele também fornece suporte para funções de precisão simples, embora o suporte de precisão dupla no hardware ainda seja necessário. Ele está em conformidade com o [especificação C99 (ISO/IEC 9899)](http://go.microsoft.com/fwlink/p/?linkid=225887). O acelerador deve oferecer suporte de precisão dupla completo. Você pode determinar se ele tem verificando o valor da [Accelerator:: supports_double_precision membro de dados](reference/accelerator-class.md#supports_double_precision). A biblioteca de matemática rápida, além de [Namespace Concurrency:: fast_math](../../parallel/amp/reference/concurrency-fast-math-namespace.md), contém outro conjunto de funções matemáticas. Essas funções, que dão suporte apenas `float` operandos, executar mais rapidamente, mas não são tão precisos quanto aquelas na biblioteca de matemática de precisão dupla. As funções estão contidas na \<amp_math. h > arquivo de cabeçalho e todas são declaradas com `restrict(amp)`. As funções na \<cmath > arquivo de cabeçalho são importadas em ambos os `fast_math` e `precise_math` namespaces. O **restringir** palavra-chave é usado para distinguir o \<cmath > versão e a versão do C++ AMP. O código a seguir calcula o logaritmo de base 10, usando o método rápido, de cada valor que está no domínio do cálculo.
+O C++ AMP inclui duas bibliotecas matemáticas. A biblioteca de precisão dupla na [Namespace Concurrency:: precise_math](../../parallel/amp/reference/concurrency-precise-math-namespace.md) fornece suporte para funções de precisão dupla. Ele também fornece suporte para funções de precisão simples, embora o suporte de precisão dupla no hardware ainda seja necessário. Ele está em conformidade com o [especificação C99 (ISO/IEC 9899)](https://go.microsoft.com/fwlink/p/?linkid=225887). O acelerador deve oferecer suporte de precisão dupla completo. Você pode determinar se ele tem verificando o valor da [Accelerator:: supports_double_precision membro de dados](reference/accelerator-class.md#supports_double_precision). A biblioteca de matemática rápida, além de [Namespace Concurrency:: fast_math](../../parallel/amp/reference/concurrency-fast-math-namespace.md), contém outro conjunto de funções matemáticas. Essas funções, que dão suporte apenas `float` operandos, executar mais rapidamente, mas não são tão precisos quanto aquelas na biblioteca de matemática de precisão dupla. As funções estão contidas na \<amp_math. h > arquivo de cabeçalho e todas são declaradas com `restrict(amp)`. As funções na \<cmath > arquivo de cabeçalho são importadas em ambos os `fast_math` e `precise_math` namespaces. O **restringir** palavra-chave é usado para distinguir o \<cmath > versão e a versão do C++ AMP. O código a seguir calcula o logaritmo de base 10, usando o método rápido, de cada valor que está no domínio do cálculo.
 
 ```cpp
 #include <amp.h>
@@ -473,13 +473,13 @@ Como em outras bibliotecas de C++, você pode usar o C++ AMP em seus aplicativos
 
 - [Usando C++ AMP em aplicativos UWP](../../parallel/amp/using-cpp-amp-in-windows-store-apps.md)
 
-- [Passo a passo: Criando um componente básico do tempo de execução do Windows em C++ e chamá-lo a partir do JavaScript](http://go.microsoft.com/fwlink/p/?linkid=249077)
+- [Passo a passo: Criando um componente básico do tempo de execução do Windows em C++ e chamá-lo a partir do JavaScript](https://go.microsoft.com/fwlink/p/?linkid=249077)
 
-- [O Bing Maps Trip Optimizer, um aplicativo de janela Store em JavaScript e C++](http://go.microsoft.com/fwlink/p/?linkid=249078)
+- [O Bing Maps Trip Optimizer, um aplicativo de janela Store em JavaScript e C++](https://go.microsoft.com/fwlink/p/?linkid=249078)
 
-- [Como usar o C++ AMP do c# usando o tempo de execução do Windows](http://go.microsoft.com/fwlink/p/?linkid=249080)
+- [Como usar o C++ AMP do c# usando o tempo de execução do Windows](https://go.microsoft.com/fwlink/p/?linkid=249080)
 
-- [Como usar o C++ AMP do c#](http://go.microsoft.com/fwlink/p/?linkid=249081)
+- [Como usar o C++ AMP do c#](https://go.microsoft.com/fwlink/p/?linkid=249081)
 
 - [Chamando funções nativas de código gerenciado](../../dotnet/calling-native-functions-from-managed-code.md)
 
@@ -508,4 +508,4 @@ Módulo e a divisão de inteiros sem sinal têm desempenho significativamente me
 [C++ AMP (C++ Accelerated Massive Parallelism)](../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)<br/>
 [Sintaxe da expressão lambda](../../cpp/lambda-expression-syntax.md)<br/>
 [Referência (C++ AMP)](../../parallel/amp/reference/reference-cpp-amp.md)<br/>
-[Programação paralela no Blog de código nativo](http://go.microsoft.com/fwlink/p/?linkid=238472)
+[Programação paralela no Blog de código nativo](https://go.microsoft.com/fwlink/p/?linkid=238472)

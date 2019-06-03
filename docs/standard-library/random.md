@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - random header
 ms.assetid: 60afc25c-b162-4811-97c1-1b65398d4c57
-ms.openlocfilehash: 5b246be02c860ede6691db1c4d21af7e6b4da26a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3fd6272ebcb58d48cc943541f32d1195c3fab498
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62369795"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450798"
 ---
 # <a name="ltrandomgt"></a>&lt;random&gt;
 
@@ -49,7 +49,7 @@ Aqui estão algumas dicas para ter em mente ao usar \<aleatório >:
 
 - O emparelhamento mais útil para a maioria dos aplicativos é o mecanismo `mt19937` com `uniform_int_distribution`, como mostrado no [exemplo de código](#code) posteriormente neste artigo.
 
-Há muitas opções para escolher na \<random > cabeçalho e qualquer um deles é preferível para a função de tempo de execução C desatualizada `rand()`. Para obter informações sobre o que há de errado com `rand()` e como \<random > lida com esses imprevistos, veja [este vídeo](http://go.microsoft.com/fwlink/p/?linkid=397615).
+Há muitas opções para escolher na \<random > cabeçalho e qualquer um deles é preferível para a função de tempo de execução C desatualizada `rand()`. Para obter informações sobre o que há de errado com `rand()` e como \<random > lida com esses imprevistos, veja [este vídeo](https://go.microsoft.com/fwlink/p/?linkid=397615).
 
 ## <a name="code"></a> Exemplos
 
@@ -500,7 +500,7 @@ Há dois URNGs bastante úteis no Visual Studio — `mt19937` e `random_device` 
 
 <sup>* Quando fornecido com uma semente conhecida.</sup>
 
-Embora o Padrão ISO C++ não exija que o `random_device` seja protegido por criptografia, no Visual Studio, ele é implementado com proteção criptográfica. (O termo “proteção criptográfica” não implica em garantias, mas se refere ao nível mínimo de entropia e, portanto, ao nível de previsibilidade, que um determinado algoritmo aleatório oferece. Para obter mais informações, consulte o artigo da Wikipédia [Cryptographically secure pseudorandom number generator](http://go.microsoft.com/fwlink/p/?linkid=398017) (Gerador de número pseudoaleatório protegido criptograficamente.) Como o Padrão ISO C++ não requer isso, outras plataformas podem implementar `random_device` como um gerador de número pseudoaleatório simples (sem proteção criptográfica) e pode ser adequado somente como uma fonte de semeação para outro gerador. Verifique a documentação dessas plataformas ao usar `random_device` no código entre plataformas.
+Embora o Padrão ISO C++ não exija que o `random_device` seja protegido por criptografia, no Visual Studio, ele é implementado com proteção criptográfica. (O termo “proteção criptográfica” não implica em garantias, mas se refere ao nível mínimo de entropia e, portanto, ao nível de previsibilidade, que um determinado algoritmo aleatório oferece. Para obter mais informações, consulte o artigo da Wikipédia [Cryptographically secure pseudorandom number generator](https://go.microsoft.com/fwlink/p/?linkid=398017) (Gerador de número pseudoaleatório protegido criptograficamente.) Como o Padrão ISO C++ não requer isso, outras plataformas podem implementar `random_device` como um gerador de número pseudoaleatório simples (sem proteção criptográfica) e pode ser adequado somente como uma fonte de semeação para outro gerador. Verifique a documentação dessas plataformas ao usar `random_device` no código entre plataformas.
 
 Por definição, resultados do `random_device` não são reproduzíveis e um efeito colateral é que ele pode ser executado de maneira significativamente mais lenta do que outros URNGs. A maioria dos aplicativos que não exige proteção criptográfica usa o `mt19937` ou um mecanismo semelhante, embora possa ser útil propagá-lo com uma chamada para `random_device`, como mostrado no [exemplo de código](#code).
 

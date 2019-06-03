@@ -12,12 +12,12 @@ helpviewer_keywords:
 - upgrading ActiveX controls
 - licensing ActiveX controls
 ms.assetid: 4d12ddfa-b491-4f9f-a0b7-b51458e05651
-ms.openlocfilehash: fc7313c862d3536326894c947fa371d833e8fab8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 57d94a51d9dfb78dfaf3a690c43c74a2d6ab6db3
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180753"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450607"
 ---
 # <a name="upgrading-an-existing-activex-control"></a>Atualizando um controle ActiveX existente
 
@@ -181,7 +181,7 @@ Para usar um controle ActiveX licenciado no Internet Explorer, você deve verifi
 
 - Uso do parâmetro de base de código
 
-Para usar um controle licenciado em uma página HTML em um computador nonlicensed, você deve gerar um arquivo de pacote de licença (LPK). O arquivo LPK contém as licenças de tempo de execução para controles licenciados na página HTML. Esse arquivo é gerado por meio de LPK_TOOL. EXE que vem com o SDK do ActiveX. Para obter mais informações, consulte o site do MSDN em [ http://msdn.microsoft.com ](http://msdn.microsoft.com).
+Para usar um controle licenciado em uma página HTML em um computador nonlicensed, você deve gerar um arquivo de pacote de licença (LPK). O arquivo LPK contém as licenças de tempo de execução para controles licenciados na página HTML. Esse arquivo é gerado por meio de LPK_TOOL. EXE que vem com o SDK do ActiveX. Para obter mais informações, consulte o site do MSDN em [ https://msdn.microsoft.com ](https://msdn.microsoft.com).
 
 #### <a name="to-create-an-lpk-file"></a>Para criar um arquivo LPK
 

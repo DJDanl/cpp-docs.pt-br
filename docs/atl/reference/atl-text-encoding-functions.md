@@ -25,12 +25,12 @@ f1_keywords:
 - atlenc/ATL::UUEncode
 - atlenc/ATL::UUEncodeGetRequiredLength
 ms.assetid: 2ae1648b-2b87-4112-92aa-0069fcfd23da
-ms.openlocfilehash: 13c521bae6790a030212c4a8edac460c960ecfc0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1e3e44e99e6f3a53a930ed5b3ac1f7cd5ae23063
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62247858"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449564"
 ---
 # <a name="atl-text-encoding-functions"></a>Funções de codificação de texto da ATL
 
@@ -295,7 +295,7 @@ Retorna verdadeiro em caso de êxito, FALSE em caso de falha.
 
 ### <a name="remarks"></a>Comentários
 
-O esquema de codificação "B" é descrito na RFC 2047 ([http://www.ietf.org/rfc/rfc2047.txt](http://www.ietf.org/rfc/rfc2047.txt)).
+O esquema de codificação "B" é descrito na RFC 2047 ([https://www.ietf.org/rfc/rfc2047.txt](https://www.ietf.org/rfc/rfc2047.txt)).
 
 ## <a name="bencodegetrequiredlength"></a> BEncodeGetRequiredLength
 
@@ -319,7 +319,7 @@ O número de caracteres necessários para um buffer que pode conter dados codifi
 
 ### <a name="remarks"></a>Comentários
 
-O esquema de codificação "B" é descrito na RFC 2047 ([http://www.ietf.org/rfc/rfc2047.txt](http://www.ietf.org/rfc/rfc2047.txt)).
+O esquema de codificação "B" é descrito na RFC 2047 ([https://www.ietf.org/rfc/rfc2047.txt](https://www.ietf.org/rfc/rfc2047.txt)).
 
 ## <a name="escapexml"></a> EscapeXML
 
@@ -362,7 +362,7 @@ O comprimento em caracteres da cadeia de caracteres convertida.
 
 Possíveis conversões executadas por essa função são mostradas na tabela:
 
-|Source|Destino|
+|Origem|Destino|
 |------------|-----------------|
 |\<|&lt;|
 |>|&gt;|
@@ -447,7 +447,7 @@ Retorna verdadeiro em caso de êxito, FALSE em caso de falha.
 
 ### <a name="remarks"></a>Comentários
 
-O esquema de codificação "Q" é descrito na RFC 2047 ([http://www.ietf.org/rfc/rfc2047.txt](http://www.ietf.org/rfc/rfc2047.txt)).
+O esquema de codificação "Q" é descrito na RFC 2047 ([https://www.ietf.org/rfc/rfc2047.txt](https://www.ietf.org/rfc/rfc2047.txt)).
 
 ## <a name="qencodegetrequiredlength"></a> QEncodeGetRequiredLength
 
@@ -471,7 +471,7 @@ O número de caracteres necessários para um buffer que pode conter dados codifi
 
 ### <a name="remarks"></a>Comentários
 
-O esquema de codificação "Q" é descrito na RFC 2047 ([http://www.ietf.org/rfc/rfc2047.txt](http://www.ietf.org/rfc/rfc2047.txt)).
+O esquema de codificação "Q" é descrito na RFC 2047 ([https://www.ietf.org/rfc/rfc2047.txt](https://www.ietf.org/rfc/rfc2047.txt)).
 
 ## <a name="qpdecode"></a> QPDecode
 
@@ -509,7 +509,7 @@ Retorna verdadeiro em caso de êxito, FALSE em caso de falha.
 
 ### <a name="remarks"></a>Comentários
 
-O esquema de codificação entre aspas imprimível é descrito na RFC 2045 ([http://www.ietf.org/rfc/rfc2045.txt](http://www.ietf.org/rfc/rfc2045.txt)).
+O esquema de codificação entre aspas imprimível é descrito na RFC 2045 ([https://www.ietf.org/rfc/rfc2045.txt](https://www.ietf.org/rfc/rfc2045.txt)).
 
 ## <a name="qpdecodegetrequiredlength"></a> QPDecodeGetRequiredLength
 
@@ -530,7 +530,7 @@ O número de bytes necessários para um buffer que pode conter uma cadeia de car
 
 ### <a name="remarks"></a>Comentários
 
-O esquema de codificação entre aspas imprimível é descrito na RFC 2045 ([http://www.ietf.org/rfc/rfc2045.txt](http://www.ietf.org/rfc/rfc2045.txt)).
+O esquema de codificação entre aspas imprimível é descrito na RFC 2045 ([https://www.ietf.org/rfc/rfc2045.txt](https://www.ietf.org/rfc/rfc2045.txt)).
 
 ## <a name="qpencode"></a> QPEncode
 
@@ -566,7 +566,7 @@ Sinalizadores ATLSMTP_QPENCODE que descreve como a conversão é para ser execut
 
 - Acrescenta ATLSMTP_QPENCODE_TRAILING_SOFT `=\r\n` a cadeia de caracteres codificada.
 
-O esquema de codificação entre aspas imprimível é descrito em [RFC 2045](http://www.ietf.org/rfc/rfc2045.txt).
+O esquema de codificação entre aspas imprimível é descrito em [RFC 2045](https://www.ietf.org/rfc/rfc2045.txt).
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -574,7 +574,7 @@ Retorna verdadeiro em caso de êxito, FALSE em caso de falha.
 
 ### <a name="remarks"></a>Comentários
 
-O esquema de codificação entre aspas imprimível é descrito na RFC 2045 ([http://www.ietf.org/rfc/rfc2045.txt](http://www.ietf.org/rfc/rfc2045.txt)).
+O esquema de codificação entre aspas imprimível é descrito na RFC 2045 ([https://www.ietf.org/rfc/rfc2045.txt](https://www.ietf.org/rfc/rfc2045.txt)).
 
 ## <a name="qpencodegetrequiredlength"></a> QPEncodeGetRequiredLength
 
@@ -595,7 +595,7 @@ O número de caracteres necessários para um buffer que pode conter dados codifi
 
 ### <a name="remarks"></a>Comentários
 
-O esquema de codificação entre aspas imprimível é descrito na RFC 2045 ([http://www.ietf.org/rfc/rfc2045.txt](http://www.ietf.org/rfc/rfc2045.txt)).
+O esquema de codificação entre aspas imprimível é descrito na RFC 2045 ([https://www.ietf.org/rfc/rfc2045.txt](https://www.ietf.org/rfc/rfc2045.txt)).
 
 ## <a name="uudecode"></a> UUDecode
 

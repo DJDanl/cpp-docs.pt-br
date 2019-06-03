@@ -200,12 +200,12 @@ helpviewer_keywords:
 - std::count_if [C++]
 - std::partition_copy [C++]
 - std::swap [C++]
-ms.openlocfilehash: 260b2ee780956550678fcb01b3a018a60fb58deb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b914b3d2ed61c81629c06739eac86692d1444e58
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411159"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450424"
 ---
 # <a name="ltalgorithmgt-functions"></a>Funções &lt;algorithm&gt;
 
@@ -3681,7 +3681,7 @@ Um iterador de entrada que trata da posição do primeiro elemento no segundo en
 *last2*<br/>
 Um iterador de entrada que trata da posição logo após o último elemento no segundo entre dois intervalos de origem classificados consecutivos a serem combinados e classificados em um único intervalo.
 
-*result*<br/>
+*resultado*<br/>
 Um iterador de saída que trata da posição do primeiro elemento no intervalo de destino no qual os dois intervalos de origem devem ser combinados em um único intervalo classificado.
 
 *comp*<br/>
@@ -5561,7 +5561,7 @@ int main() {
 
 ## <a name="random_shuffle"></a>  random_shuffle
 
-A função std::random_shuffle() é preterida e substituída por [std:: embaralhar](../standard-library/algorithm-functions.md#shuffle). Para obter um exemplo de código e obter mais informações, consulte [ \<random >](../standard-library/random.md) e a postagem de Stack Overflow [por que os métodos std:: random_shuffle estão sendo preteridos no c++14?](http://go.microsoft.com/fwlink/p/?linkid=397954).
+A função std::random_shuffle() é preterida e substituída por [std:: embaralhar](../standard-library/algorithm-functions.md#shuffle). Para obter um exemplo de código e obter mais informações, consulte [ \<random >](../standard-library/random.md) e a postagem de Stack Overflow [por que os métodos std:: random_shuffle estão sendo preteridos no c++14?](https://go.microsoft.com/fwlink/p/?linkid=397954).
 
 ## <a name="remove"></a>  remove
 
@@ -5662,7 +5662,7 @@ Um iterador de entrada que trata da posição do primeiro elemento no intervalo 
 *last*<br/>
 Um iterador de entrada que trata da posição logo após o elemento final no intervalo do qual os elementos estão sendo removidos.
 
-*result*<br/>
+*resultado*<br/>
 Um iterador de saída que trata da posição do primeiro elemento no intervalo de destino para o qual os elementos estão sendo removidos.
 
 *val*<br/>
@@ -5744,7 +5744,7 @@ Um iterador de entrada que trata da posição do primeiro elemento no intervalo 
 *last*<br/>
 Um iterador de entrada que trata da posição logo após o elemento final no intervalo do qual os elementos estão sendo removidos.
 
-*result*<br/>
+*resultado*<br/>
 Um iterador de saída que trata da posição do primeiro elemento no intervalo de destino para o qual os elementos estão sendo removidos.
 
 *_Pred*<br/>
@@ -6004,7 +6004,7 @@ Um iterador de entrada que aponta para a posição do primeiro elemento no inter
 *last*<br/>
 Um iterador de entrada que aponta para a posição logo após o elemento final no intervalo cujos elementos estão sendo substituídos.
 
-*result*<br/>
+*resultado*<br/>
 Um iterador de saída que aponta para o primeiro elemento no intervalo de destino para o qual a sequência alterada de elementos está sendo copiada.
 
 *_OldVal*<br/>
@@ -6106,7 +6106,7 @@ Um iterador de entrada que aponta para a posição do primeiro elemento no inter
 *last*<br/>
 Um iterador de entrada que aponta para a posição logo após o elemento final no intervalo cujos elementos estão sendo substituídos.
 
-*result*<br/>
+*resultado*<br/>
 Um iterador de saída que aponta para a posição do primeiro elemento no intervalo de destino para o qual os elementos estão sendo copiados.
 
 *_Pred*<br/>
@@ -6359,7 +6359,7 @@ Um iterador bidirecional que aponta para a posição do primeiro elemento no int
 *last*<br/>
 Um iterador bidirecional que aponta para a posição logo após o elemento final no intervalo de origem no qual os elementos estão sendo permutados.
 
-*result*<br/>
+*resultado*<br/>
 Um iterador de saída que aponta para a posição do primeiro elemento no intervalo de destino para o qual os elementos estão sendo copiados.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -6537,7 +6537,7 @@ Um iterador de avanço que define o limite dentro do intervalo que trata da posi
 
 _ *Último* um iterador de avanço que trata da posição logo após o elemento final no intervalo a ser girado.
 
-*result*<br/>
+*resultado*<br/>
 Um iterador de saída que trata da posição do primeiro elemento no intervalo de destino.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -6927,7 +6927,7 @@ Um iterador de entrada que trata da posição do primeiro elemento no segundo en
 *last2*<br/>
 Um iterador de entrada que trata da posição logo após o último elemento no segundo entre dois intervalos de origem classificados consecutivos, a serem unidos e classificados em um único intervalo, representando a diferença entre os dois intervalos de origem.
 
-*result*<br/>
+*resultado*<br/>
 Um iterador de saída que trata da posição do primeiro elemento no intervalo de destino, em que os dois intervalos de origem devem ser unidos em um único intervalo classificado, representando a diferença entre os dois intervalos de origem.
 
 *comp*<br/>
@@ -8215,7 +8215,7 @@ Um iterador de entrada que trata da posição logo após o elemento final no pri
 *first2*<br/>
 Um iterador de entrada que trata da posição do primeiro elemento no segundo intervalo de origem no qual a operação ocorrerá.
 
-*result*<br/>
+*resultado*<br/>
 Um iterador de saída que trata da posição do primeiro elemento no intervalo de destino.
 
 *_Func*<br/>
@@ -8478,7 +8478,7 @@ Um iterador de avanço que trata da posição do primeiro elemento no intervalo 
 *last*<br/>
 Um iterador de avanço que trata da posição logo após o elemento final no intervalo de origem a ser copiado.
 
-*result*<br/>
+*resultado*<br/>
 Um iterador de saída que trata da posição do primeiro elemento no intervalo de destino que está recebendo a cópia com as duplicatas consecutivas removidas.
 
 *comp*<br/>

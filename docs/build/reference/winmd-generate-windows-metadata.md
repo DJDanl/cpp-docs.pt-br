@@ -4,18 +4,18 @@ ms.date: 11/04/2016
 f1_keywords:
 - VC.Project.VCLinkerTool.GenerateWindowsMetadata
 ms.assetid: bcfb4901-411e-4c9e-9f78-23028b6e5fcc
-ms.openlocfilehash: 93db20d14d3477734e35d33111246f9459310b90
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 45d6492c87b7543a54d031f02dcf09e319150131
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62317153"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449713"
 ---
 # <a name="winmd-generate-windows-metadata"></a>/WINMD (Gera metadados do Windows
 
 Habilita a geração de um arquivo de metadados de tempo de execução do Windows (. winmd).
 
-> **/WINMD**\[**:**{**NO**\|**ONLY**}]
+> **/WINMD**\[ **:** {**NO**\|**ONLY**}]
 
 ## <a name="arguments"></a>Arguments
 
@@ -30,13 +30,13 @@ O vinculador gera apenas o arquivo. winmd, mas não o arquivo executável binár
 
 ## <a name="remarks"></a>Comentários
 
-O **/WINMD** a opção de vinculador é usada para aplicativos UWP e componentes de tempo de execução do Windows para controlar a criação de um arquivo de metadados (. winmd) de tempo de execução do Windows. Um arquivo. winmd é um tipo de DLL que contém metadados para tipos de tempo de execução do Windows e, no caso de componentes de tempo de execução, as implementações desses tipos. Os metadados seguem a [ECMA-335](http://www.ecma-international.org/publications/standards/Ecma-335.htm) padrão.
+O **/WINMD** a opção de vinculador é usada para aplicativos UWP e componentes de tempo de execução do Windows para controlar a criação de um arquivo de metadados (. winmd) de tempo de execução do Windows. Um arquivo. winmd é um tipo de DLL que contém metadados para tipos de tempo de execução do Windows e, no caso de componentes de tempo de execução, as implementações desses tipos. Os metadados seguem a [ECMA-335](https://www.ecma-international.org/publications/standards/Ecma-335.htm) padrão.
 
 Por padrão, o nome do arquivo de saída tem a forma *binaryname*. winmd. Para especificar um nome de arquivo diferente, use o [/WINMDFILE](winmdfile-specify-winmd-file.md) opção.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do vinculador no ambiente de desenvolvimento do Visual Studio
 
-1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [propriedades de compilador e de build definida C++ no Visual Studio](../working-with-project-properties.md).
+1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, confira [Definir as propriedades de build e do compilador do C++ no Visual Studio](../working-with-project-properties.md).
 
 1. Selecione o **propriedades de configuração** > **vinculador** > **Windows metadados** página de propriedades.
 

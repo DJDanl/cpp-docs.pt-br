@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows 8.x apps, creating C++ async operations
 - Creating C++ async operations
 ms.assetid: a57cecf4-394a-4391-a957-1d52ed2e5494
-ms.openlocfilehash: 8815861e525a2824bb1bc7a7d0e40f96b053c6a4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 92226d8db9fa87ce829ae96b4802ad2f45bc3e54
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413969"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450192"
 ---
 # <a name="creating-asynchronous-operations-in-c-for-uwp-apps"></a>Criando operações assíncronas em C++ para aplicativos UWP
 
@@ -126,7 +126,7 @@ A ilustração a seguir mostra o `Primes` aplicativo depois de cada opção foi 
 
 ![Tempo de execução do Windows inicia o aplicativo](../../parallel/concrt/media/concrt_windows_primes.png "tempo de execução do Windows inicia o aplicativo")
 
-Para obter exemplos que usam `create_async` para criar tarefas assíncronas que podem ser consumidas por outros idiomas, consulte [usando o C++ no exemplo Bing Maps Trip Optimizer](https://msdn.microsoft.com/library/windows/apps/hh699891.aspx) e [operações assíncronas do Windows 8 em C++ com PPL](http://code.msdn.microsoft.com/windowsapps/windows-8-asynchronous-08009a0d).
+Para obter exemplos que usam `create_async` para criar tarefas assíncronas que podem ser consumidas por outros idiomas, consulte [usando o C++ no exemplo Bing Maps Trip Optimizer](https://msdn.microsoft.com/library/windows/apps/hh699891.aspx) e [operações assíncronas do Windows 8 em C++ com PPL](https://code.msdn.microsoft.com/windowsapps/windows-8-asynchronous-08009a0d).
 
 ##  <a name="exethread"></a> Controlando o Thread de execução
 

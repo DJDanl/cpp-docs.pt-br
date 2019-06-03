@@ -2,12 +2,12 @@
 title: Como configurar programas para o Windows XP
 ms.date: 05/16/2019
 ms.assetid: 1e4487b3-d815-4123-878b-5718b22f0fd5
-ms.openlocfilehash: 6c94c6a66d0f22b8707012856a65df4b19965acb
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.openlocfilehash: 55753737b4868f33487ed980eaf37a8801f59638
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837132"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450696"
 ---
 # <a name="configuring-programs-for-windows-xp"></a>Como configurar programas para o Windows XP
 
@@ -69,4 +69,4 @@ Devido às diferenças no suporte de plataforma e biblioteca, a experiência de 
 
 - **Como compilar o HLSL**
 
-   Por padrão, o Conjunto de ferramentas do Windows XP não compila arquivos de código-fonte HLSL. Para compilar arquivos HLSL, baixe e instale o SDK do DirectX de junho de 2010 e, em seguida, defina os diretórios VC do projeto para incluí-lo. Para obter mais informações, confira a seção "O SDK do DirectX não registra os caminhos de inclusão/biblioteca no Visual Studio 2010" da [página de download do SDK do DirectX de junho de 2010](http://www.microsoft.com/download/details.aspx?displaylang=en&id=6812).
+   Por padrão, o Conjunto de ferramentas do Windows XP não compila arquivos de código-fonte HLSL. Para compilar arquivos HLSL, baixe e instale o SDK do DirectX de junho de 2010 e, em seguida, defina os diretórios VC do projeto para incluí-lo. Para obter mais informações, confira a seção "O SDK do DirectX não registra os caminhos de inclusão/biblioteca no Visual Studio 2010" da [página de download do SDK do DirectX de junho de 2010](https://www.microsoft.com/download/details.aspx?displaylang=en&id=6812).

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - Internet content [MFC]
 - WinInet classes [MFC]
 ms.assetid: 6df2dfd0-6e3f-4587-9d01-2a32f00f8a6f
-ms.openlocfilehash: 814e63272058200850424e9d5355637111527e1c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eee045e198f61c088e302c40deb2de406adab428
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62239120"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449737"
 ---
 # <a name="mfc-internet-programming-basics"></a>Noções básicas de programação da Internet MFC
 
@@ -70,11 +70,11 @@ O MFC fornece classes que dão suporte à programação da Internet. Você pode 
 
 ##  <a name="_core_web_sites_for_more_information"></a> Sites da Web para obter mais informações
 
-Para obter informações adicionais sobre a tecnologia de Internet da Microsoft, consulte o [Microsoft Developer Network (MSDN)](http://go.microsoft.com/fwlink/p/?linkid=56322) site da Web. (Links podem ser alteradas sem aviso prévio.)
+Para obter informações adicionais sobre a tecnologia de Internet da Microsoft, consulte o [Microsoft Developer Network (MSDN)](https://go.microsoft.com/fwlink/p/?linkid=56322) site da Web. (Links podem ser alteradas sem aviso prévio.)
 
 Este site da Web para os desenvolvedores contém informações sobre como usar ferramentas de desenvolvimento da Microsoft e as tecnologias e as principais histórias sobre conferências recentes e futuras. Nessa página, você pode ir para muitos sites relacionados para desenvolvedores, incluindo o .NET e XML Developer Centers. Você também pode baixar exemplos e SDKs de beta.
 
-O [World Wide Web Consortium (W3C)](http://go.microsoft.com/fwlink/p/?linkid=37125) publica as especificações do HTML, HTTP, CGI e outras tecnologias de World Wide Web.
+O [World Wide Web Consortium (W3C)](https://go.microsoft.com/fwlink/p/?linkid=37125) publica as especificações do HTML, HTTP, CGI e outras tecnologias de World Wide Web.
 
 ##  <a name="_core_more_internet_help"></a> Mais ajuda da Internet
 

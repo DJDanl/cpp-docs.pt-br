@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1104
 ms.assetid: 9ca6f929-0efc-4055-8354-3cf5b4e636dc
-ms.openlocfilehash: bc6305ab2e96496aa212004e186150d4a51cf3fc
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: fcd3c06ae2db5c43aacbf781800870a83d2d77c1
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446973"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66451140"
 ---
 # <a name="linker-tools-error-lnk1104"></a>Erro das Ferramentas de Vinculador LNK1104
 
@@ -81,7 +81,7 @@ Quando você especifica bibliotecas individuais na **dependências adicionais** 
 
 Você pode ver este erro quando o caminho para o *filename* se expande para mais de 260 caracteres. Alterar os nomes ou reorganizar sua estrutura de diretório, se necessário, para reduzir os caminhos para os arquivos necessários.
 
-Esse erro pode ocorrer porque o arquivo é muito grande. Objeto ou bibliotecas de arquivos mais do que um gigabyte de tamanho pode causar problemas para o vinculador de 32 bits. Uma correção possíveis para esse problema é usar o conjunto de ferramentas de 64 bits. Para obter mais informações sobre como fazer isso na linha de comando, consulte [como: Habilitar um 64-Bit Visual C++ conjunto de ferramentas na linha de comando](../../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md). Para obter informações sobre como fazer isso no IDE, consulte [usando o MSBuild com o compilador de 64 bits e ferramentas](../../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md#using-msbuild-to-build-your-project) e esta postagem de Stack Overflow: [Como fazer com que o Visual Studio usa a cadeia de ferramentas nativo amd64](http://stackoverflow.com/questions/19820718/how-to-make-visual-studio-use-the-native-amd64-toolchain/23793055).
+Esse erro pode ocorrer porque o arquivo é muito grande. Objeto ou bibliotecas de arquivos mais do que um gigabyte de tamanho pode causar problemas para o vinculador de 32 bits. Uma correção possíveis para esse problema é usar o conjunto de ferramentas de 64 bits. Para obter mais informações sobre como fazer isso na linha de comando, consulte [como: Habilitar um 64-Bit Visual C++ conjunto de ferramentas na linha de comando](../../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md). Para obter informações sobre como fazer isso no IDE, consulte [usando o MSBuild com o compilador de 64 bits e ferramentas](../../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md#using-msbuild-to-build-your-project) e esta postagem de Stack Overflow: [Como fazer com que o Visual Studio usa a cadeia de ferramentas nativo amd64](https://stackoverflow.com/questions/19820718/how-to-make-visual-studio-use-the-native-amd64-toolchain/23793055).
 
 Esse erro pode ocorrer se você tiver permissões de arquivo suficientes para acessar *filename*. Isso pode acontecer se você usa uma conta de usuário comum e uma tentativa para acessar arquivos de biblioteca em diretórios protegidos do sistema ou usar os arquivos copiados de outros usuários que têm suas permissões originais definido. Para corrigir esse problema, mova o arquivo para um diretório do projeto gravável. Se o arquivo está em um diretório gravável, mas tem permissões inacessíveis, você pode usar um prompt de comando de administrador e execute o comando de takeown.exe assumir a propriedade do arquivo.
 
