@@ -7,12 +7,12 @@ helpviewer_keywords:
 - enable_if class
 - enable_if
 ms.assetid: c6b8d41c-a18f-4e30-a39e-b3aa0e8fd926
-ms.openlocfilehash: b6990dba20643b35dde36a492d40c3e3e76ae0b4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 450664f71851778cc40160e55cbb80bcb51330d5
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413756"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66451259"
 ---
 # <a name="enableif-class"></a>Classe enable_if
 
@@ -46,7 +46,7 @@ template <bool B, class T = void>
 using enable_if_t = typename enable_if<B,T>::type;
 ```
 
-Em C++, a falha de substituição de parâmetros de modelo não é um erro em si – isso é chamado de *SFINAE* (Falha de substituição não é um erro). Em geral, `enable_if` é usado para remover candidatos da resolução de sobrecarga (ou seja, seleciona o conjunto de sobrecarga) de modo que uma definição possa ser rejeitada a favor de outra. Isso está de acordo com o comportamento SFINAE. Para obter informações sobre SFINAE, consulte [Falha de substituição não é um erro](http://go.microsoft.com/fwlink/p/?linkid=394798) na Wikipédia.
+Em C++, a falha de substituição de parâmetros de modelo não é um erro em si – isso é chamado de *SFINAE* (Falha de substituição não é um erro). Em geral, `enable_if` é usado para remover candidatos da resolução de sobrecarga (ou seja, seleciona o conjunto de sobrecarga) de modo que uma definição possa ser rejeitada a favor de outra. Isso está de acordo com o comportamento SFINAE. Para obter informações sobre SFINAE, consulte [Falha de substituição não é um erro](https://go.microsoft.com/fwlink/p/?linkid=394798) na Wikipédia.
 
 Seguem quatro cenários de exemplo:
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - cpuid instruction
 - cpuid intrinsic
 ms.assetid: f8c344d3-91bf-405f-8622-cb0e337a6bdc
-ms.openlocfilehash: 30b66c78c6c3477c4da634901058d77d0e362101
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c66a3fe7b923b214c4cf2bd84fc03f535d5f4973
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62349076"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449990"
 ---
 # <a name="cpuid-cpuidex"></a>__cpuid, __cpuidex
 
@@ -63,9 +63,9 @@ Esse intrínseco armazena os recursos com suporte e informações de CPU retorna
 
 O intrínseco `__cpuid` limpa o registro do ECX antes de chamar a instrução `cpuid`. O `__cpuidex` intrínseco define o valor do registrador ecx para *subfunction_id* antes de gerar o `cpuid` instrução. Isso permite coletar informações adicionais sobre o processador.
 
-Para obter mais informações sobre parâmetros específicos a usar e os valores retornados pelos intrínsecos em processadores Intel, consulte a documentação para o `cpuid` instrução no [Intel 64 e IA-32 Manual de desenvolvedores de Software de arquiteturas Volume 2: Referência do conjunto de instruções](http://go.microsoft.com/fwlink/p/?LinkID=510021) e [referência de programação de extensões do conjunto de instruções de arquitetura](http://go.microsoft.com/fwlink/p/?LinkID=506627). Documentação da Intel usa os termos "folha" e "subfolha" para o *function_id* e *subfunction_id* parâmetros passados no EAX e no ECX.
+Para obter mais informações sobre parâmetros específicos a usar e os valores retornados pelos intrínsecos em processadores Intel, consulte a documentação para o `cpuid` instrução no [Intel 64 e IA-32 Manual de desenvolvedores de Software de arquiteturas Volume 2: Referência do conjunto de instruções](https://go.microsoft.com/fwlink/p/?LinkID=510021) e [referência de programação de extensões do conjunto de instruções de arquitetura](https://go.microsoft.com/fwlink/p/?LinkID=506627). Documentação da Intel usa os termos "folha" e "subfolha" para o *function_id* e *subfunction_id* parâmetros passados no EAX e no ECX.
 
-Para obter mais informações sobre parâmetros específicos a usar e os valores retornados pelos intrínsecos em processadores AMD, consulte a documentação para o `cpuid` instrução no Volume de Manual 3 do programador da arquitetura AMD64: Uso geral e instruções do sistema e nos guias de revisão para famílias de processador específico. Para obter links para esses documentos e outras informações, consulte o AMD [documentos ISA, guias do desenvolvedor e manuais](http://go.microsoft.com/fwlink/p/?LinkId=510023) página. Documentação do AMD usa os termos "número de função" e "número de subfunção" para o *function_id* e *subfunction_id* parâmetros passados no EAX e no ECX.
+Para obter mais informações sobre parâmetros específicos a usar e os valores retornados pelos intrínsecos em processadores AMD, consulte a documentação para o `cpuid` instrução no Volume de Manual 3 do programador da arquitetura AMD64: Uso geral e instruções do sistema e nos guias de revisão para famílias de processador específico. Para obter links para esses documentos e outras informações, consulte o AMD [documentos ISA, guias do desenvolvedor e manuais](https://go.microsoft.com/fwlink/p/?LinkId=510023) página. Documentação do AMD usa os termos "número de função" e "número de subfunção" para o *function_id* e *subfunction_id* parâmetros passados no EAX e no ECX.
 
 Quando o *function_id* argumento é 0, o *cpuInfo*[0] retorna o mais alto disponível não estendido *function_id* valor suportado pelo processador. O fabricante do processador é codificado no *cpuInfo*[1] *cpuInfo*[2], e *cpuInfo*[3].
 

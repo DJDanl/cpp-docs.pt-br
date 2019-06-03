@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CButton [MFC], SetState
 - CButton [MFC], SetTextMargin
 ms.assetid: cdc76d5b-31da-43c5-bc43-fde4cb39de5b
-ms.openlocfilehash: b1a02d995594f5e079359151167ac970a3d1ab37
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3283e974dc2b933049599fba0b6cf51c32a18ef3
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348686"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450839"
 ---
 # <a name="cbutton-class"></a>Classe CButton
 
@@ -153,7 +153,7 @@ Se você quiser manipular mensagens de notificação do Windows enviadas por um 
 
 Cada entrada de mapa de mensagem usa o seguinte formato:
 
-**ON\_**_Notification_ **(** _id_, _memberFxn_ **)**
+**ON\_** _Notification_ **(** _id_, _memberFxn_ **)**
 
 em que *identificação* Especifica a ID de janela filho do controle que está enviando a notificação e *memberFxn* é o nome da função de membro pai que você tenha escrito para manipular a notificação.
 
@@ -808,7 +808,7 @@ TRUE se esse método for bem-sucedida; Caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-Se um controle de link do botão ou comando requer a permissão de segurança com privilégios elevados para executar uma ação, defina o controle como `elevation required` estado. Subsequentemente, o Windows exibe o ícone de escudo de controle de conta de usuário (UAC) no controle. Para obter mais informações, consulte "Controle de conta de usuário" em [MSDN](http://go.microsoft.com/fwlink/p/?linkid=18507).
+Se um controle de link do botão ou comando requer a permissão de segurança com privilégios elevados para executar uma ação, defina o controle como `elevation required` estado. Subsequentemente, o Windows exibe o ícone de escudo de controle de conta de usuário (UAC) no controle. Para obter mais informações, consulte "Controle de conta de usuário" em [MSDN](https://go.microsoft.com/fwlink/p/?linkid=18507).
 
 Esse método envia o [BCM_SETSHIELD](/windows/desktop/Controls/bcm-setshield) mensagem, que é descrita no SDK do Windows.
 

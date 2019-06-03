@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - MFC ActiveX Control Wizard, control settings
 ms.assetid: 2ccaa4fc-0d52-413e-afa3-ecd474c3f6f0
-ms.openlocfilehash: 34cc49fff88399a6c3cf5f7db71410c88e5c9bab
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9d7653e61e6aada9205f599cf7a7ca6187dd139d
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62373268"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450551"
 ---
 # <a name="control-settings-mfc-activex-control-wizard"></a>Configurações de controle, Assistente de Controle ActiveX MFC
 
@@ -57,7 +57,7 @@ Para obter mais informações sobre como selecionar as opções desta página pa
    Especifica que o controle tem o Windows standard **sobre** caixa de diálogo que exibe o número de versão e informações de direitos autorais.
 
    > [!NOTE]
-   > Como o usuário acessa a Ajuda para o controle depende de como você implementou a Ajuda e se você tiver integrado a Ajuda de controle com a Ajuda do contêiner. Para obter mais informações sobre como integrar o ajuda, o [biblioteca MSDN](http://go.microsoft.com/fwlink/p/?linkid=150542) site, pesquise por "Adicionando contextual ajuda para um controle ActiveX do MFC".
+   > Como o usuário acessa a Ajuda para o controle depende de como você implementou a Ajuda e se você tiver integrado a Ajuda de controle com a Ajuda do contêiner. Para obter mais informações sobre como integrar o ajuda, o [biblioteca MSDN](https://go.microsoft.com/fwlink/p/?linkid=150542) site, pesquise por "Adicionando contextual ajuda para um controle ActiveX do MFC".
 
    Quando você seleciona essa opção, ele insere o `AboutBox` controlar o método na classe de controle de projeto (C*NomeDoProjeto*Ctrl.cpp) e adiciona AboutBox ao mapa de expedição do projeto. Por padrão, essa opção é selecionada.
 
@@ -87,7 +87,7 @@ Para obter mais informações sobre como selecionar as opções desta página pa
 
 - **Atua como um controle de quadro simples**
 
-   Especifica que o controle é um contêiner para outros controles, definindo o OLEMISC_SIMPLEFRAME bit para o controle. Para obter mais informações, sobre o [biblioteca MSDN](http://go.microsoft.com/fwlink/p/?linkid=150542) site, pesquise por "Confinamento simples do quadro de Site".
+   Especifica que o controle é um contêiner para outros controles, definindo o OLEMISC_SIMPLEFRAME bit para o controle. Para obter mais informações, sobre o [biblioteca MSDN](https://go.microsoft.com/fwlink/p/?linkid=150542) site, pesquise por "Confinamento simples do quadro de Site".
 
 - **Carrega as propriedades de forma assíncrona**
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK2001
 ms.assetid: dc1cf267-c984-486c-abd2-fd07c799f7ef
-ms.openlocfilehash: 824fa9108e6322b1bcf77d6c28c7fb843b743833
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 916c37e3283f40ff5ded865a573ff45839de6e2a
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62161011"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449626"
 ---
 # <a name="linker-tools-error-lnk2001"></a>Erro das Ferramentas de Vinculador LNK2001
 
@@ -71,7 +71,7 @@ Esse erro pode ocorrer se seu código se refere a um símbolo de uma versão de 
 
 Atualmente, há um padrão para [C++ nomenclatura](../../error-messages/tool-errors/name-decoration.md) entre fornecedores de compilador ou até mesmo entre diferentes versões de um compilador. Portanto, vinculação de arquivos de objeto compilados com outros compiladores pode não produzir o mesmo esquema de nomenclatura e, portanto, causam erro LNK2001.
 
-[Opções de compilação de mixagem embutido e não ser embutida](../../error-messages/tool-errors/function-inlining-problems.md) em módulos diferentes pode causar LNK2001. Se uma biblioteca C++ é criada com o inlining de função ativada (**/Ob1** ou **/Ob2**), mas o arquivo de cabeçalho correspondente que descreve as funções tem inlining desativado (nenhum `inline` palavra-chave), esse erro ocorre. Para corrigir esse problema, defina as funções `inline` no arquivo de cabeçalho que você incluir em outros arquivos de origem.
+[Opções de compilação de mixagem embutido e não ser embutida](../../error-messages/tool-errors/function-inlining-problems.md) em módulos diferentes pode causar LNK2001. Se uma biblioteca C++ é criada com o inlining de função ativada ( **/Ob1** ou **/Ob2**), mas o arquivo de cabeçalho correspondente que descreve as funções tem inlining desativado (nenhum `inline` palavra-chave), esse erro ocorre. Para corrigir esse problema, defina as funções `inline` no arquivo de cabeçalho que você incluir em outros arquivos de origem.
 
 Se você usar o `#pragma inline_depth` compilador a diretiva, verifique se você tem uma [valor de 2 ou maior conjunto](../../error-messages/tool-errors/function-inlining-problems.md)e verifique se você usa também o [/Ob1](../../build/reference/ob-inline-function-expansion.md) ou [/Ob2](../../build/reference/ob-inline-function-expansion.md) opção de compilador.
 
@@ -101,5 +101,5 @@ Em alguns casos, o vinculador só pode relatar o nome decorado de um símbolo. V
 
 ## <a name="additional-resources"></a>Recursos adicionais
 
-Para obter mais informações sobre possíveis causas e soluções para LNK2001, consulte a pergunta do Stack Overflow [o que é um erro de símbolo externo indefinido referência/não resolvido e como corrigi-lo?](http://stackoverflow.com/q/12573816/2002113).
+Para obter mais informações sobre possíveis causas e soluções para LNK2001, consulte a pergunta do Stack Overflow [o que é um erro de símbolo externo indefinido referência/não resolvido e como corrigi-lo?](https://stackoverflow.com/q/12573816/2002113).
 

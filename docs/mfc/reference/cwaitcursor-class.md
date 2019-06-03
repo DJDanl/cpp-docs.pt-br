@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CWaitCursor [MFC], CWaitCursor
 - CWaitCursor [MFC], Restore
 ms.assetid: 5dfae2ff-d7b6-4383-b0ad-91e0868c67b3
-ms.openlocfilehash: 7ce81e62ec6498ad84349108b4c4a07090b17de5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 87ac87019f127d3956caf959a28fc889fdecad50
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62323328"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450810"
 ---
 # <a name="cwaitcursor-class"></a>Classe CWaitCursor
 
@@ -121,4 +121,4 @@ Se você precisar restaurar o cursor de espera enquanto estiver em uma função 
 [CCmdTarget::EndWaitCursor](../../mfc/reference/ccmdtarget-class.md#endwaitcursor)<br/>
 [CCmdTarget::RestoreWaitCursor](../../mfc/reference/ccmdtarget-class.md#restorewaitcursor)<br/>
 [CWinApp::DoWaitCursor](../../mfc/reference/cwinapp-class.md#dowaitcursor)<br/>
-[Como faço Alterar o Cursor do Mouse em um aplicativo do Microsoft Foundation classe](http://go.microsoft.com/fwlink/p/?linkid=128044)
+[Como faço Alterar o Cursor do Mouse em um aplicativo do Microsoft Foundation classe](https://go.microsoft.com/fwlink/p/?linkid=128044)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - MFC Feature Pack, update existing application
 - walkthroughs [MFC], update existing application
 ms.assetid: aa6330d3-6cfc-4c79-8fcb-0282263025f7
-ms.openlocfilehash: cba28039cb7755149b35a47ddee82b6274fe4c72
-ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.openlocfilehash: a12c2bd2c1c1963630a1bd74b56f2c832573cc94
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64558215"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450517"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-1"></a>Passo a passo: Atualizando o aplicativo de rabisco MFC (parte 1)
 
@@ -24,7 +24,7 @@ Este passo a passo modifica o exemplo de rabisco MFC de 1.0 clássico que permit
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-O [exemplo de rabisco MFC de 1.0](http://download.microsoft.com/download/4/0/9/40946FEC-EE5C-48C2-8750-B0F8DA1C99A8/MFC/general/Scribble.zip.exe). Para obter ajuda sobre como converter para o Visual Studio 2017 ou posterior, consulte [guia de portabilidade: Scribble do MFC](../porting/porting-guide-mfc-scribble.md).
+O [exemplo de rabisco MFC de 1.0](https://download.microsoft.com/download/4/0/9/40946FEC-EE5C-48C2-8750-B0F8DA1C99A8/MFC/general/Scribble.zip.exe). Para obter ajuda sobre como converter para o Visual Studio 2017 ou posterior, consulte [guia de portabilidade: Scribble do MFC](../porting/porting-guide-mfc-scribble.md).
 
 ##  <a name="top"></a> Seções
 
@@ -171,7 +171,7 @@ Consiste em uma faixa de opções de **aplicativo** botão, que é o botão gran
 
 1. No modo design, clique o **aplicativo** botão para exibir suas propriedades. Altere valores de propriedade da seguinte maneira: **Imagem** à `IDB_RIBBON_MAIN`, **Prompt** para `File`, **chaves** para `f`, **imagens grandes** para `IDB_RIBBON_FILELARGE`e **Imagens pequenas** para `IDB_RIBBON_FILESMALL`.
 
-1. As modificações a seguir cria um menu que aparece quando o usuário clica o **aplicativo** botão. Clique no botão de reticências (**...** ) ao lado **Main itens** para abrir o **Editor itens**.
+1. As modificações a seguir cria um menu que aparece quando o usuário clica o **aplicativo** botão. Clique no botão de reticências ( **...** ) ao lado **Main itens** para abrir o **Editor itens**.
 
    1. Com o **Item** tipo **botão** selecionado, clique em **Add** para adicionar um botão. Alteração **legenda** à `&New`, **ID** para `ID_FILE_NEW`, **imagem** para `0`, **imagem grande** para `0`.
 
@@ -199,7 +199,7 @@ Consiste em uma faixa de opções de **aplicativo** botão, que é o botão gran
 
 1. A seguinte modificação cria um botão de sair que aparece na parte inferior a **aplicativo** menu do botão.
 
-   1. No **propriedades** janela, clique no botão de reticências (**...** ) ao lado **botão** para abrir o **Editor itens**.
+   1. No **propriedades** janela, clique no botão de reticências ( **...** ) ao lado **botão** para abrir o **Editor itens**.
 
    1. Com o **Item** tipo **botão** selecionado, clique em **Add** para adicionar um botão. Alteração **legenda** à `E&xit`, **ID** para `ID_APP_EXIT`, **imagem** para `8`.
 

@@ -2,12 +2,12 @@
 title: Tratamento de exceção ARM
 ms.date: 07/11/2018
 ms.assetid: fe0e615f-c033-4ad5-97f4-ff96af45b201
-ms.openlocfilehash: 8a2bae8e42ac6a624bebe7c185ac7e0ade8d5491
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f4e56284ce8db18ec76b0143253ee1e25f3fd82c
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62195349"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450485"
 ---
 # <a name="arm-exception-handling"></a>Tratamento de exceção ARM
 
@@ -21,7 +21,7 @@ A EABI (interface binária do aplicativo inserido) do ARM especifica um modelo d
 
 ### <a name="assumptions"></a>Suposições
 
-As imagens executáveis do Windows baseado em ARM usam o formato PE (executável portátil). Para obter mais informações, consulte [especificação Microsoft PE e COFF](http://go.microsoft.com/fwlink/p/?linkid=84140). As informações de tratamento de exceção são armazenadas nas seções .pdata e .xdata da imagem.
+As imagens executáveis do Windows baseado em ARM usam o formato PE (executável portátil). Para obter mais informações, consulte [especificação Microsoft PE e COFF](https://go.microsoft.com/fwlink/p/?linkid=84140). As informações de tratamento de exceção são armazenadas nas seções .pdata e .xdata da imagem.
 
 O mecanismo de tratamento de exceção faz determinadas suposições sobre código que segue a ABI para Windows baseado em ARM:
 

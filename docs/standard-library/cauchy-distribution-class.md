@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::cauchy_distribution [C++], param_type
 - std::cauchy_distribution [C++], param_type
 ms.assetid: 21522351-f2f1-46d9-97f0-d358c932356c
-ms.openlocfilehash: 2aeb45054a06446c1fae092d4c07f297580684ad
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 680ceb29514265ff77be6f6ae708fea0a8e769af
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62351229"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450229"
 ---
 # <a name="cauchydistribution-class"></a>Classe cauchy_distribution
 
@@ -97,7 +97,7 @@ As funções membro `operator()` retornam o próximo valor gerado com base no me
 
 Para obter mais informações sobre as classes de distribuição e seus membros, consulte [\<random>](../standard-library/random.md).
 
-Para obter informações detalhadas sobre a distribuição cauchy, consulte o artigo [Cauchy Distribution](http://go.microsoft.com/fwlink/p/?linkid=400523) (Distribuição cauchy), da Wolfram MathWorld.
+Para obter informações detalhadas sobre a distribuição cauchy, consulte o artigo [Cauchy Distribution](https://go.microsoft.com/fwlink/p/?linkid=400523) (Distribuição cauchy), da Wolfram MathWorld.
 
 ## <a name="example"></a>Exemplo
 

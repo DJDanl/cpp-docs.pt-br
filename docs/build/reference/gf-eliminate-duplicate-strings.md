@@ -14,12 +14,12 @@ helpviewer_keywords:
 - GF compiler option [C++]
 - strings [C++], pooling
 ms.assetid: bb7b5d1c-8e1f-453b-9298-8fcebf37d16c
-ms.openlocfilehash: 2f2bec446fcec522857b4c05a34311e6c26c9b75
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 90d3fb5c601d9534215a46594884be5d168fe0aa
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62270881"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449549"
 ---
 # <a name="gf-eliminate-duplicate-strings"></a>/GF (eliminar cadeias de caracteres duplicadas)
 
@@ -50,11 +50,11 @@ char *t = "This is a character buffer";
 > [!NOTE]
 >  O **/GF** opção de compilador cria uma seção endereçável para cada cadeia de caracteres exclusiva. E, por padrão, um arquivo de objeto pode conter até 65.536 seções endereçáveis. Se seu programa contiver mais de 65.536 cadeias de caracteres, use o [/bigobj](bigobj-increase-number-of-sections-in-dot-obj-file.md) opção de compilador para criar mais seções.
 
-**/GF** está em vigor quando [/O1](o1-o2-minimize-size-maximize-speed.md) ou **/O2** é usado.
+**/GF** está em vigor quando [/O1](o1-o2-minimize-size-maximize-speed.md) ou [/O2](o1-o2-minimize-size-maximize-speed.md) é usado.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio
 
-1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [propriedades de compilador e de build definida C++ no Visual Studio](../working-with-project-properties.md).
+1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, confira [Definir as propriedades de build e do compilador do C++ no Visual Studio](../working-with-project-properties.md).
 
 1. Clique o **C/C++** pasta.
 

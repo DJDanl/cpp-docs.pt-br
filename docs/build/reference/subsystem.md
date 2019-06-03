@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -SUBSYSTEM editbin option
 - SUBSYSTEM editbin option
 ms.assetid: 515e4cdf-3cc4-4659-8764-1f2757b49215
-ms.openlocfilehash: b13313d57226719086cb73584543488f842057c1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e67ec57c3a8d74fdd97a94ed04c29cad53af1ea5
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62317712"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450734"
 ---
 # <a name="subsystem"></a>/SUBSYSTEM
 
@@ -43,7 +43,7 @@ Um aplicativo de modo de caractere do Windows. O sistema operacional fornece um 
 **EFI_RUNTIME_DRIVER**<br/>
 Imagem do Extensible Firmware Interface (EFI)
 
-As opções do subsistema EFI descrevem imagens executáveis que são executados no ambiente de Interface de Firmware extensível. Esse ambiente normalmente é fornecido com o hardware e é executado antes que o sistema operacional é carregado. As principais diferenças entre tipos de imagem do EFI são o local da memória que a imagem é carregada e a ação que é executada quando a chamada para a imagem retorna. Uma imagem EFI_APPLICATION é descarregada quando o controle retorna. Um EFI_BOOT_SERVICE_DRIVER ou um EFI_RUNTIME_DRIVER é descarregado somente se o controle retorna com um código de erro. Uma imagem EFI_ROM é executada de ROM. Para obter mais informações, consulte as especificações sobre o [Unified EFI Forum](http://www.uefi.org/) site.
+As opções do subsistema EFI descrevem imagens executáveis que são executados no ambiente de Interface de Firmware extensível. Esse ambiente normalmente é fornecido com o hardware e é executado antes que o sistema operacional é carregado. As principais diferenças entre tipos de imagem do EFI são o local da memória que a imagem é carregada e a ação que é executada quando a chamada para a imagem retorna. Uma imagem EFI_APPLICATION é descarregada quando o controle retorna. Um EFI_BOOT_SERVICE_DRIVER ou um EFI_RUNTIME_DRIVER é descarregado somente se o controle retorna com um código de erro. Uma imagem EFI_ROM é executada de ROM. Para obter mais informações, consulte as especificações sobre o [Unified EFI Forum](https://www.uefi.org/) site.
 
 **NATIVO**<br/>
 Código que é executado sem um ambiente de subsistema — por exemplo, drivers de dispositivo de modo kernel e processos do sistema nativo. Essa opção normalmente é reservada para recursos de sistema do Windows.

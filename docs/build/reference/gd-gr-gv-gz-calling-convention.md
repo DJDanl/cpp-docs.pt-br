@@ -21,12 +21,12 @@ helpviewer_keywords:
 - Gv compiler option [C++]
 - /Gr compiler option [C++]
 ms.assetid: fd3110cb-2d77-49f2-99cf-a03f9ead00a3
-ms.openlocfilehash: 4e3da750b174fa92e28c1d0d5a8cbc035738ee51
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.openlocfilehash: 72d65ce7471ed047ab8347a45c58a6b8a9f39a7a
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837275"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450850"
 ---
 # <a name="gd-gr-gv-gz-calling-convention"></a>/Gd, /Gr, /Gv, /Gz (convenção de chamada)
 
@@ -47,7 +47,7 @@ Essas opções determinam a ordem na qual os argumentos de função são enviado
 
 **/Gz** especifica a convenção de chamada `__stdcall` para todas as funções, exceto funções de membro C++, funções chamadas `main` e funções marcadas como `__cdecl`, `__fastcall` ou `__vectorcall`. Todas as funções `__stdcall` precisam ter protótipos. Essa convenção de chamada só está disponível nos compiladores direcionados ao x86 e é ignorada pelos compiladores direcionados a outras arquiteturas.
 
-**/Gv** especifica a convenção de chamada `__vectorcall` para todas as funções, exceto funções de membro C++, funções chamadas main, funções com uma lista de argumentos variáveis `vararg` ou funções marcadas com um argumento `__cdecl`, `__stdcall` ou `__fastcall` conflitante. Essa convenção de chamada só está disponível em arquiteturas x86 e x64 que dão suporte a /arch:SSE2 e posterior e é ignorada pelos compiladores direcionados à arquitetura ARM.
+**/GV** Especifica o `__vectorcall` convenção de chamada para todas as funções, exceto C++ funções de membro, funções nomeadas `main`, funções com uma `vararg` lista de argumentos variáveis ou funções que são marcadas com um conflito `__cdecl`, `__stdcall`, ou `__fastcall` atributo. Essa convenção de chamada só está disponível em arquiteturas x86 e x64 que dão suporte a /arch:SSE2 e posterior e é ignorada pelos compiladores direcionados à arquitetura ARM.
 
 As funções que usam um número variável de argumentos precisam ser marcadas como `__cdecl`.
 
@@ -75,7 +75,7 @@ Alguns argumentos da função de um `__fastcall` são passados em registros (par
 > [!NOTE]
 > Tenha cuidado ao usar a convenção de chamada `__fastcall` para qualquer função que seja escrita na linguagem assembly embutido. O uso de registros pode entrar em conflito com o uso do compilador.
 
-Para o C, a convenção de nomenclatura `__fastcall` usa o nome da função precedido por um sinal de arroba (**\@**) seguido pelo tamanho dos argumentos da função em bytes. Nenhuma conversão de maiúsculas e minúsculas é realizada. O compilador usa este modelo para a convenção de nomenclatura:
+Para o C, a convenção de nomenclatura `__fastcall` usa o nome da função precedido por um sinal de arroba ( **\@** ) seguido pelo tamanho dos argumentos da função em bytes. Nenhuma conversão de maiúsculas e minúsculas é realizada. O compilador usa este modelo para a convenção de nomenclatura:
 
 `@function_name@number`
 
@@ -85,7 +85,7 @@ Ao usar a convenção de nomenclatura `__fastcall`, use os arquivos de inclusão
 
 Os argumentos da função de um `__stdcall` são enviados para a pilha da direita para a esquerda, sendo que e a função chamada remove esses argumentos da pilha antes de retornar.
 
-Para o C, a convenção de nomenclatura `__stdcall` usa o nome da função precedido por um sublinhado (**\_**) e seguido por um sinal de arroba (**\@**) e pelo tamanho dos argumentos da função em bytes. Nenhuma tradução realizada. O compilador usa este modelo para a convenção de nomenclatura:
+Para o C, a convenção de nomenclatura `__stdcall` usa o nome da função precedido por um sublinhado ( **\_** ) e seguido por um sinal de arroba ( **\@** ) e pelo tamanho dos argumentos da função em bytes. Nenhuma tradução realizada. O compilador usa este modelo para a convenção de nomenclatura:
 
 `_functionname@number`
 
@@ -93,7 +93,7 @@ Para o C, a convenção de nomenclatura `__stdcall` usa o nome da função prece
 
 Os argumentos de inteiro da função de um `__vectorcall` são passados por valor, usando até dois (no x86) ou quatro (no x64) registros de inteiros e até seis registros de XMM para valores de ponto flutuante e de vetor, sendo que o restante é passado na pilha da direita para a esquerda. A função chamada limpa a pilha antes de retornar. Os valores retornados de vetor e de ponto flutuante são retornados em XMM0.
 
-Para o C, a convenção de nomenclatura `__vectorcall` usa o nome da função seguido por dois sinais de arroba (**\@\@**) e pelo tamanho dos argumentos da função em bytes. Nenhuma tradução realizada. O compilador usa este modelo para a convenção de nomenclatura:
+Para o C, a convenção de nomenclatura `__vectorcall` usa o nome da função seguido por dois sinais de arroba ( **\@\@** ) e pelo tamanho dos argumentos da função em bytes. Nenhuma tradução realizada. O compilador usa este modelo para a convenção de nomenclatura:
 
 `functionname@@number`
 
@@ -101,7 +101,7 @@ Para o C, a convenção de nomenclatura `__vectorcall` usa o nome da função se
 
 1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, confira [Definir as propriedades de build e do compilador do C++ no Visual Studio](../working-with-project-properties.md).
 
-1. Selecione a página de propriedades **C/C++** > **Avançado**.
+1. Selecione a página de propriedades **C/C++**  > **Avançado**.
 
 1. Modifique a propriedade **Convenção de Chamada**.
 

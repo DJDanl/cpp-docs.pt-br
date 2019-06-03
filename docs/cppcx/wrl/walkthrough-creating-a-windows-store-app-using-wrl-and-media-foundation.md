@@ -3,12 +3,12 @@ title: 'Passo a passo: Criando um aplicativo UWP usando WRL e Media Foundation'
 ms.date: 04/23/2019
 ms.topic: reference
 ms.assetid: 0336c550-fbeb-4dc4-aa9b-660f9fc45382
-ms.openlocfilehash: 28e8d4b2871dbd3bef0f30bae5480d346af50706
-ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
-ms.translationtype: HT
+ms.openlocfilehash: 1eee353bb13a3fa03fda42c3d0f7a4103dc5ad13
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64558263"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450150"
 ---
 # <a name="walkthrough-creating-a-uwp-app-using-wrl-and-media-foundation"></a>Passo a passo: Criando um aplicativo UWP usando WRL e Media Foundation
 
@@ -25,7 +25,7 @@ Este exemplo cria uma transformação personalizada do Media Foundation que se a
 Na maioria dos casos, você pode usar C++/CX para criar o tempo de execução do Windows. No entanto, às vezes, você precisa usar a WRL. Por exemplo, quando você cria uma extensão de mídia para o Microsoft Media Foundation, você deve criar um componente que implementa as interfaces COM e o tempo de execução do Windows. Porque C++/CX só pode criar objetos de tempo de execução do Windows, para criar uma extensão de mídia você deve usar a WRL porque ela permite que a implementação de interfaces COM e o tempo de execução do Windows.
 
 > [!NOTE]
-> Embora este exemplo de código for longo, ele demonstra o mínimo necessário para criar uma transformação do Media Foundation úteis. Você pode usá-lo como um ponto de partida para sua própria transformação personalizada. Este exemplo é adaptado do [exemplo de extensões de mídia](http://code.msdn.microsoft.com/windowsapps/Media-extensions-sample-7b466096), quais extensões de mídia usa para aplicar efeitos de vídeo, decodificar vídeo e criar manipuladores de esquema que produzem fluxos de mídia.
+> Embora este exemplo de código for longo, ele demonstra o mínimo necessário para criar uma transformação do Media Foundation úteis. Você pode usá-lo como um ponto de partida para sua própria transformação personalizada. Este exemplo é adaptado do [exemplo de extensões de mídia](https://code.msdn.microsoft.com/windowsapps/Media-extensions-sample-7b466096), quais extensões de mídia usa para aplicar efeitos de vídeo, decodificar vídeo e criar manipuladores de esquema que produzem fluxos de mídia.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -98,7 +98,7 @@ Na maioria dos casos, você pode usar C++/CX para criar o tempo de execução do
 
    1. Também no **entrada**, adicione `runtimeobject.lib`, `mfuuid.lib`, e `mfplat.lib` para o **dependências adicionais** propriedade.
 
-   1. Sob **metadados do Windows**, defina **gerar metadados do Windows** para **Sim (/ WINMD)**.
+   1. Sob **metadados do Windows**, defina **gerar metadados do Windows** para **Sim (/ WINMD)** .
 
 ### <a name="to-use-the-wrl-the-custom-media-foundation-component-from-a-c-app"></a>Para usar a WRL o componente personalizado do Media Foundation de um aplicativo c#
 
@@ -122,10 +122,10 @@ A ilustração a seguir mostra o `MediaCapture app`.
 
 ## <a name="next-steps"></a>Próximas etapas
 
-O exemplo mostra como capturar fotos da webcam padrão, um por vez. O [exemplo de extensões de mídia](http://code.msdn.microsoft.com/windowsapps/Media-extensions-sample-7b466096) faz muito mais. Ele demonstra como enumerar os dispositivos de webcam e trabalhar com os manipuladores de esquema local e demonstra os efeitos de mídia adicionais que funcionam em fotos individuais e fluxos de vídeo.
+O exemplo mostra como capturar fotos da webcam padrão, um por vez. O [exemplo de extensões de mídia](https://code.msdn.microsoft.com/windowsapps/Media-extensions-sample-7b466096) faz muito mais. Ele demonstra como enumerar os dispositivos de webcam e trabalhar com os manipuladores de esquema local e demonstra os efeitos de mídia adicionais que funcionam em fotos individuais e fluxos de vídeo.
 
 ## <a name="see-also"></a>Consulte também
 
 [WRL (Biblioteca de Modelos C++ do Tempo de Execução do Windows)](windows-runtime-cpp-template-library-wrl.md)<br/>
 [Microsoft Media Foundation](/windows/desktop/medfound/microsoft-media-foundation-sdk)<br/>
-[Exemplo de extensões de mídia](http://code.msdn.microsoft.com/windowsapps/Media-extensions-sample-7b466096)
+[Exemplo de extensões de mídia](https://code.msdn.microsoft.com/windowsapps/Media-extensions-sample-7b466096)

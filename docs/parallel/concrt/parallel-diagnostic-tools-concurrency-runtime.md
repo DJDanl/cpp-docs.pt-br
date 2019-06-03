@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Parallel Diagnostic Tools [Concurrency Runtime]
 ms.assetid: b1a3f1d2-f5df-4f29-852e-906b3d8341fc
-ms.openlocfilehash: 2af1898312a4f448d618fcfc4e43ea93f5f0bc76
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 182171bfcfbaf1476cc25fe3160114bc1d96ca7e
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64346310"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449240"
 ---
 # <a name="parallel-diagnostic-tools-concurrency-runtime"></a>Ferramentas de diagnóstico em paralelo (Tempo de Execução de Simultaneidade)
 
@@ -27,7 +27,7 @@ As ferramentas de criação de perfil fornecem três modos de exibição de dado
 
 Usa o tempo de execução de simultaneidade [rastreamento de eventos para Windows](/windows/desktop/ETW/event-tracing-portal) (ETW) para notificar as ferramentas de instrumentação, como os criadores de perfil, quando eventos diversos ocorrem. Esses eventos incluem quando um agendador é ativado ou desativado, quando um contexto de inicia, encerra, bloqueia, desbloqueia ou produz, e quando um algoritmo paralelo começa ou termina.
 
-Ferramentas como o [simultânea](/visualstudio/profiling/concurrency-visualizer) utilizar esta funcionalidade; portanto, geralmente, você precisa trabalhar diretamente com esses eventos. No entanto, esses eventos são úteis quando você estiver desenvolvendo um criador de perfil personalizado ou quando você usa ferramentas de rastreamento de eventos, como [Xperf](http://go.microsoft.com/fwlink/p/?linkid=160628).
+Ferramentas como o [simultânea](/visualstudio/profiling/concurrency-visualizer) utilizar esta funcionalidade; portanto, geralmente, você precisa trabalhar diretamente com esses eventos. No entanto, esses eventos são úteis quando você estiver desenvolvendo um criador de perfil personalizado ou quando você usa ferramentas de rastreamento de eventos, como [Xperf](https://go.microsoft.com/fwlink/p/?linkid=160628).
 
 O tempo de execução de simultaneidade gera esses eventos somente quando o rastreamento está habilitado. Chame o [concurrency::EnableTracing](reference/concurrency-namespace-functions.md#enabletracing) função para habilitar o rastreamento de eventos e o [concurrency::DisableTracing](reference/concurrency-namespace-functions.md#disabletracing) função para desabilitar o rastreamento.
 

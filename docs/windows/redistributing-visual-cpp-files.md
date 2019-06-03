@@ -8,17 +8,17 @@ helpviewer_keywords:
 - file redistribution [C++]
 - redistributing applications [C++], about redistributing applications
 ms.assetid: d201b2ce-36f1-44e5-a96c-0db81a1ba652
-ms.openlocfilehash: 2bf4297a6c61d16c68d6a9cb893aed78b9d7609d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b64fac7086dcc22199ca359a163074b967c56f95
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388157"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450623"
 ---
 # <a name="redistributing-visual-c-files"></a>Redistribuindo arquivos do Visual C++
 
 > [!NOTE]
-> Você está aqui porque procura um download de um dos arquivos do Tempo de Execução do Visual C++? Vá para o [site da Microsoft](http://www.microsoft.com/) e insira **Visual C++ redistribuível** na caixa de pesquisa. Baixe e instale o pacote redistribuível para a arquitetura de seu computador (por exemplo, x64 se estiver executando o Windows de 64 bits) e a versão do Visual C++ (por exemplo, 2015) necessária.
+> Você está aqui porque procura um download de um dos arquivos do Tempo de Execução do Visual C++? Vá para o [site da Microsoft](https://www.microsoft.com/) e insira **Visual C++ redistribuível** na caixa de pesquisa. Baixe e instale o pacote redistribuível para a arquitetura de seu computador (por exemplo, x64 se estiver executando o Windows de 64 bits) e a versão do Visual C++ (por exemplo, 2015) necessária.
 
 Ao implantar um aplicativo, você também deve implantar os arquivos que são necessários para o suporte. Se qualquer um desses arquivos for fornecido pela Microsoft, verifique se você tem permissão para redistribuí-lo. Para examinar os termos de licença do Visual Studio, confira o link dos Termos de licença na caixa de diálogo Sobre o Microsoft Visual Studio no IDE ou baixe o arquivo [Termos de Licença para Software Microsoft](https://visualstudio.microsoft.com/license-terms/mlt687465/). Para exibir a "lista REDIST" referenciada na seção "Código distribuível" dos Termos de Licença para Software Microsoft para algumas edições do Visual Studio, confira [Código distribuível para o Microsoft Visual Studio 2017 e o SDK do Microsoft Visual Studio 2017 (inclui utilitários e arquivos do BuildServer)](/visualstudio/productinfo/2017-redistribution-vs), ou, para o Visual Studio 2015, confira [Código distribuível para o Microsoft Visual Studio 2015 e o SDK do Microsoft Visual Studio 2015](/visualstudio/productinfo/2015-redistribution-vs). Para obter mais informações sobre arquivos redistribuíveis, confira [Determinando quais DLLs devem ser redistribuídas](determining-which-dlls-to-redistribute.md) e [Exemplos de implantação](deployment-examples.md).
 

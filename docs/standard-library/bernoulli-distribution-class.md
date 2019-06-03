@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::bernoulli_distribution [C++], param_type
 - std::bernoulli_distribution [C++], param_type
 ms.assetid: 586bcde1-95ca-411a-bf17-4aaf19482f34
-ms.openlocfilehash: b5ddbadea4d16d7a76df332074ec5c80fae57eb4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dbd5229e8b8a2c2b368688635d9d596a8538356b
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62414120"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450870"
 ---
 # <a name="bernoullidistribution-class"></a>Classe bernoulli_distribution
 
@@ -90,7 +90,7 @@ As funções membro `operator()` retornam o próximo valor gerado com base no me
 
 Para obter mais informações sobre as classes de distribuição e seus membros, consulte [\<random>](../standard-library/random.md).
 
-Para obter informações detalhadas sobre a função de probabilidade discreta da distribuição Bernoulli, consulte o artigo da Wolfram MathWorld [Bernoulli Distribution](http://go.microsoft.com/fwlink/p/?linkid=398467) (Distribuição Bernoulli).
+Para obter informações detalhadas sobre a função de probabilidade discreta da distribuição Bernoulli, consulte o artigo da Wolfram MathWorld [Bernoulli Distribution](https://go.microsoft.com/fwlink/p/?linkid=398467) (Distribuição Bernoulli).
 
 ## <a name="example"></a>Exemplo
 

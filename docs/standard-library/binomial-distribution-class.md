@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::binomial_distribution [C++], param_type
 - std::binomial_distribution [C++], param_type
 ms.assetid: b7c8a26a-da8c-45a5-a3a8-208f7a3609ce
-ms.openlocfilehash: 1cbb7aff254cee848d711b22414b38deee8cfc07
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ee61b79848a5649d44cf02384f32ad8e0226feb0
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62380215"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66451114"
 ---
 # <a name="binomialdistribution-class"></a>Classe binomial_distribution
 
@@ -98,7 +98,7 @@ As funções membro `operator()` retornam o próximo valor gerado com base no me
 
 Para obter mais informações sobre as classes de distribuição e seus membros, consulte [\<random>](../standard-library/random.md).
 
-Para obter informações detalhadas sobre a função de probabilidade discreta da distribuição binomial, consulte o artigo da Wolfram MathWorld [Binomial Distribution](http://go.microsoft.com/fwlink/p/?linkid=398469) (Distribuição Binomial).
+Para obter informações detalhadas sobre a função de probabilidade discreta da distribuição binomial, consulte o artigo da Wolfram MathWorld [Binomial Distribution](https://go.microsoft.com/fwlink/p/?linkid=398469) (Distribuição Binomial).
 
 ## <a name="example"></a>Exemplo
 
