@@ -18,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - COM interfaces, COM interface entry macros
 ms.assetid: 19dcb768-2e1f-4b8d-a618-453a01a4bd00
-ms.openlocfilehash: ed2b8445a0f13b82338d2904d43fd17688d05b9e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f8439e973c935108d645076bb7e2bfae7207e65d
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62245576"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503339"
 ---
 # <a name="cominterfaceentry-macros"></a>COM_INTERFACE_ENTRY Macros
 
@@ -39,7 +39,7 @@ Essas macros inserir interfaces de um objeto em seu mapa COM, para que eles poss
 |[COM_INTERFACE_ENTRY_AGGREGATE_BLIND](#com_interface_entry_aggregate_blind)|Mesmo que [COM_INTERFACE_ENTRY_AGGREGATE](#com_interface_entry_aggregate), exceto que consultar qualquer IID resulta na consulta de encaminhamento *punk*.|
 |[COM_INTERFACE_ENTRY_AUTOAGGREGATE](#com_interface_entry_autoaggregate)|Mesmo que [COM_INTERFACE_ENTRY_AGGREGATE](#com_interface_entry_aggregate), exceto se *punk* for NULL, ele cria automaticamente a agregação descrita pelo *clsid*.|
 |[COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND](#com_interface_entry_autoaggregate_blind)|Mesmo que [COM_INTERFACE_ENTRY_AUTOAGGREGATE](#com_interface_entry_autoaggregate), exceto que consultar qualquer IID resulta na consulta de encaminhamento *punk*e se *punk* for NULL, a criação automática a agregação descrita pelo *clsid*.|
-|[COM_INTERFACE_ENTRY_BREAK](#com_interface_entry_break)|Faz com que o programa chamar [DebugBreak](https://msdn.microsoft.com/library/windows/desktop/ms679297) quando a interface especificada é consultada para.|
+|[COM_INTERFACE_ENTRY_BREAK](#com_interface_entry_break)|Faz com que o programa chamar [DebugBreak](/windows/desktop/api/debugapi/nf-debugapi-debugbreak) quando a interface especificada é consultada para.|
 |[COM_INTERFACE_ENTRY_CACHED_TEAR_OFF](#com_interface_entry_cached_tear_off)|Salva os dados específicos à interface para todas as instâncias.|
 |[COM_INTERFACE_ENTRY_TEAR_OFF](#com_interface_entry_tear_off)|Expõe as interfaces destacáveis.|
 |[COM_INTERFACE_ENTRY_CHAIN](#com_interface_entry_chain)|Processa o mapa COM da classe base quando o processamento atinge essa entrada no mapa COM.|
@@ -243,7 +243,7 @@ Se a consulta de interface falhar, o processamento do mapa COM continuará.
 
 ##  <a name="com_interface_entry_break"></a>  COM_INTERFACE_ENTRY_BREAK
 
-Faz com que o programa chamar [DebugBreak](https://msdn.microsoft.com/library/windows/desktop/ms679297) quando a interface especificada é consultada para.
+Faz com que o programa chamar [DebugBreak](/windows/desktop/api/debugapi/nf-debugapi-debugbreak) quando a interface especificada é consultada para.
 
 ```
 COM_INTERFACE_ENTRY_BREAK(x)
@@ -328,7 +328,7 @@ Por exemplo, no código a seguir:
 
 [!code-cpp[NVC_ATL_Windowing#116](../../atl/codesnippet/cpp/com-map-macros_9.h)]
 
-Observe que a primeira entrada no mapa COM deve ser uma interface no objeto que contém o mapa COM. Assim, você não pode iniciar suas entradas de mapa COM COM_INTERFACE_ENTRY_CHAIN, que faz com que o mapa de COM de um objeto diferente a ser pesquisado no ponto em que **COM_INTERFACE_ENTRY_CHAIN (**`COtherObject`**)** aparece no mapa de COM do objeto. Se você desejar pesquisar o mapa de COM de outro objeto pela primeira vez, adicione uma entrada de interface para `IUnknown` no mapa de COM, em seguida, encadear mapa de COM do outro objeto. Por exemplo:
+Observe que a primeira entrada no mapa COM deve ser uma interface no objeto que contém o mapa COM. Assim, você não pode iniciar suas entradas de mapa COM COM_INTERFACE_ENTRY_CHAIN, que faz com que o mapa de COM de um objeto diferente a ser pesquisado no ponto em que **COM_INTERFACE_ENTRY_CHAIN (** `COtherObject` **)** aparece no mapa de COM do objeto. Se você desejar pesquisar o mapa de COM de outro objeto pela primeira vez, adicione uma entrada de interface para `IUnknown` no mapa de COM, em seguida, encadear mapa de COM do outro objeto. Por exemplo:
 
 [!code-cpp[NVC_ATL_Windowing#111](../../atl/codesnippet/cpp/com-map-macros_10.h)]
 

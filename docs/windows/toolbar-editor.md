@@ -50,12 +50,12 @@ helpviewer_keywords:
 - buttons [C++], tool tips
 - Toolbar editor [C++], creating tool tips
 ms.assetid: aa9f0adf-60f6-4f79-ab05-bc330f15ec43
-ms.openlocfilehash: 9d50561c598f17e251425972590c0663efe6e832
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f0faa93cd4ea1fdc2fad90a5d4d47f2feeef65e6
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387885"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504211"
 ---
 # <a name="toolbar-editor-c"></a>Editor de barra de ferramentas (C++)
 
@@ -107,7 +107,7 @@ O **barra de ferramentas do Editor** permite que você:
 
 1. No **adicionar recurso** caixa de diálogo, selecione **barra de ferramentas** no **tipo de recurso** lista e, em seguida, escolha **novo**.
 
-   Se um sinal de adição (**+**) é exibido ao lado de **barra de ferramentas** tipo de recurso, isso significa que os modelos de barra de ferramentas estão disponíveis. Selecione o sinal de adição para expandir a lista de modelos, selecione um modelo e escolha **New**.
+   Se um sinal de adição ( **+** ) é exibido ao lado de **barra de ferramentas** tipo de recurso, isso significa que os modelos de barra de ferramentas estão disponíveis. Selecione o sinal de adição para expandir a lista de modelos, selecione um modelo e escolha **New**.
 
 ### <a name="to-convert-bitmaps-to-toolbar-resources"></a>Para converter os bitmaps aos recursos da barra de ferramentas
 
@@ -204,6 +204,5 @@ MFC ou ATL
 ## <a name="see-also"></a>Consulte também
 
 [Editores de recursos](../windows/resource-editors.md)
-<!--
-[Menus and Other Resources](https://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)<br/>
-[Toolbar Button Properties](../windows/toolbar-button-properties.md)<br/>-->
+[Menus e outros recursos](/windows/desktop/menurc/resources)<br/>
+[Propriedades do botão de barra de ferramentas](../windows/toolbar-button-properties.md)<br/>

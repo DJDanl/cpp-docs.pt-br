@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CCmdTarget [MFC], OnFinalRelease
 - CCmdTarget [MFC], RestoreWaitCursor
 ms.assetid: 8883b132-2057-4ce0-a5f2-88979f8f2b13
-ms.openlocfilehash: 9314717fab53b1a89b87d657ec617a4c6bd45b8b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4db220ce28ecd762796f196e611a69ce157d2efa
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62206435"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504457"
 ---
 # <a name="ccmdtarget-class"></a>Classe CCmdTarget
 
@@ -284,7 +284,7 @@ virtual BOOL GetDispatchIID(IID* pIID);
 ### <a name="parameters"></a>Parâmetros
 
 *pIID*<br/>
-Um ponteiro para uma ID de interface (um [GUID](https://msdn.microsoft.com/library/windows/desktop/aa373931)).
+Um ponteiro para uma ID de interface (um [GUID](/previous-versions/aa373931\(v=vs.80\))).
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -350,7 +350,7 @@ HRESULT GetTypeInfoOfGuid(
 Um identificador de localidade ( `LCID`).
 
 *guid*<br/>
-O [GUID](https://msdn.microsoft.com/library/windows/desktop/aa373931) da descrição de tipo.
+O [GUID](/previous-versions/aa373931\(v=vs.80\)) da descrição de tipo.
 
 *ppTypeInfo*<br/>
 Ponteiro para um ponteiro para o `ITypeInfo` interface.

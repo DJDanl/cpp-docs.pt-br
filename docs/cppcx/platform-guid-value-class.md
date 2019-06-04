@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Guid Struct
 ms.assetid: 25c0bfb2-7f93-44d8-bdf4-ef4fbac3424a
-ms.openlocfilehash: 64c70b619380d7c2ed4aaaecad3ee01a1d0f79c7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8d6c71028e4f93064c7b4df978678b5f7c26d6bc
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383315"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504528"
 ---
 # <a name="platformguid-value-class"></a>Platform::classe de valor Guid
 
-Representa um tipo de [GUID](https://msdn.microsoft.com/library/windows/desktop/aa373931) no sistema de tipos do Tempo de Execução do Windows.
+Representa um tipo de [GUID](/previous-versions/aa373931\(v=vs.80\)) no sistema de tipos do Tempo de Execução do Windows.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -115,7 +115,7 @@ O próximo byte do `GUID`.
 O próximo byte do `GUID`.
 
 *m*<br/>
-Um `GUID` no formulário de uma [estrutura de GUID](https://msdn.microsoft.com/library/windows/desktop/aa373931).
+Um `GUID` no formulário de uma [estrutura de GUID](/previous-versions/aa373931\(v=vs.80\)).
 
 *n*<br/>
 8 bytes restantes de `GUID`.
@@ -194,7 +194,7 @@ Esse operador é fornecido para que `Guid` objetos podem ser mais facilmente con
 
 ## <a name="operator-call"></a> Operador GUID
 
-Converte implicitamente um `Platform::Guid` para um [estrutura de GUID](https://msdn.microsoft.com/library/windows/desktop/aa373931).
+Converte implicitamente um `Platform::Guid` para um [estrutura de GUID](/previous-versions/aa373931\(v=vs.80\)).
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -204,7 +204,7 @@ const GUID& Platform::Guid::operator();
 
 ### <a name="return-value"></a>Valor de retorno
 
-Um [estrutura de GUID](https://msdn.microsoft.com/library/windows/desktop/aa373931).
+Um [estrutura de GUID](/previous-versions/aa373931\(v=vs.80\)).
 
 ## <a name="see-also"></a>Consulte também
 

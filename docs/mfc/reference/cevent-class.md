@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CEvent [MFC], SetEvent
 - CEvent [MFC], Unlock
 ms.assetid: df676042-ce27-4702-800a-e73ff4f44395
-ms.openlocfilehash: d7731c87c6d6b0ebdec9a0c72c24b04334aa0662
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 54501e5ff690b855ca65652e76d45b9c6cfb6259
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62206037"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503714"
 ---
 # <a name="cevent-class"></a>Classe CEvent
 
@@ -110,7 +110,7 @@ Se for TRUE, especifica que o objeto de evento é um evento manual, caso contrá
 Nome do objeto de `CEvent` . Deve ser fornecido se o objeto será usado em limites de processo. Se o nome corresponder a um evento existente, o construtor cria um novo `CEvent` objeto que referencia o evento desse nome. Se o nome corresponder a um objeto de sincronização existente que não é um evento, a construção falhará. Se for NULL, o nome será nulo.
 
 *lpsaAttribute*<br/>
-Atributos de segurança para o objeto de evento. Para obter uma descrição completa dessa estrutura, consulte [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) no SDK do Windows.
+Atributos de segurança para o objeto de evento. Para obter uma descrição completa dessa estrutura, consulte [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) no SDK do Windows.
 
 ### <a name="remarks"></a>Comentários
 
@@ -119,7 +119,7 @@ Para acessar ou liberar um `CEvent` do objeto, crie um [CMultiLock](../../mfc/re
 Para alterar o estado de um `CEvent` objeto sinalizado (threads é preciso esperar), chame [SetEvent](#setevent) ou [PulseEvent](#pulseevent). Para definir o estado de um `CEvent` objeto como não sinalizado (segmentos devem aguardar), chame [ResetEvent](#resetevent).
 
 > [!IMPORTANT]
->  Depois de criar o `CEvent` do objeto, use [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) para garantir que o mutex já não existia. Se o mutex existia inesperadamente, isso poderá indicar um processo não autorizado é apropriação indevida e pode ser pretendendo usar o mutex de maneira mal-intencionada. Nesse caso, o procedimento recomendado de valorizam a segurança é fechar o identificador e continuará como se houve uma falha na criação do objeto.
+>  Depois de criar o `CEvent` do objeto, use [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) para garantir que o mutex já não existia. Se o mutex existia inesperadamente, isso poderá indicar um processo não autorizado é apropriação indevida e pode ser pretendendo usar o mutex de maneira mal-intencionada. Nesse caso, o procedimento recomendado de valorizam a segurança é fechar o identificador e continuará como se houve uma falha na criação do objeto.
 
 ##  <a name="pulseevent"></a>  CEvent::PulseEvent
 

@@ -18,12 +18,12 @@ helpviewer_keywords:
 - CMonikerFile [MFC], Open
 - CMonikerFile [MFC], CreateBindContext
 ms.assetid: 87be5966-f4f7-4235-bce2-1fa39e9417de
-ms.openlocfilehash: ecffdb3a6f44f60004cf4f039bdab9c98e212ce1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7fb0ad3eef781be1b5ca358e825c09a88c0109e3
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62338032"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503823"
 ---
 # <a name="cmonikerfile-class"></a>Classe CMonikerFile
 
@@ -117,7 +117,7 @@ Um ponteiro para uma exceção de arquivo. Em caso de erro, ele será definido c
 
 ### <a name="return-value"></a>Valor de retorno
 
-Um ponteiro para o contexto de associação [IBindCtx](/windows/desktop/api/objidl/nn-objidl-ibindctx) a ser associado, se for bem-sucedido; caso contrário, NULL. Se a instância foi aberta com um `IBindHost` interface, o contexto de associação é recuperado do `IBindHost`. Se não houver nenhum `IBindHost` interface ou a interface não retornar um contexto de associação, um contexto de associação é criado. Para obter uma descrição de [IBindHost](https://msdn.microsoft.com/library/ie/ms775076) interface, consulte o SDK do Windows.
+Um ponteiro para o contexto de associação [IBindCtx](/windows/desktop/api/objidl/nn-objidl-ibindctx) a ser associado, se for bem-sucedido; caso contrário, NULL. Se a instância foi aberta com um `IBindHost` interface, o contexto de associação é recuperado do `IBindHost`. Se não houver nenhum `IBindHost` interface ou a interface não retornar um contexto de associação, um contexto de associação é criado. Para obter uma descrição de [IBindHost](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms775076\(v=vs.85\)) interface, consulte o SDK do Windows.
 
 ### <a name="remarks"></a>Comentários
 

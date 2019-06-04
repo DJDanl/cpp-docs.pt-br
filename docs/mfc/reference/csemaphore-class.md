@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSemaphore [MFC], CSemaphore
 ms.assetid: 385fc7e4-8f86-4be2-85e1-d23b38c12f7f
-ms.openlocfilehash: f2a05963f39393bcc73650beb44c5dbb8e5535ee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6c518b6a9ad0fe857b0878bcecd3020ba97174e6
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324201"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504706"
 ---
 # <a name="csemaphore-class"></a>Classe CSemaphore
 
@@ -83,14 +83,14 @@ A contagem de uso máximo para o semáforo. Deve ser maior que 0.
 O nome do sinal. Deve ser fornecido se o semáforo será acessado pelos limites do processo. Se `NULL`, o objeto estará sem nome. Se o nome corresponder a um semáforo existente, o construtor cria um novo `CSemaphore` objeto que referencia o semáforo desse nome. Se o nome corresponder a um objeto de sincronização existente que não é um sinal, a construção falhará.
 
 *lpsaAttributes*<br/>
-Atributos de segurança para o objeto de semáforo. Para obter uma descrição completa dessa estrutura, consulte [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) no SDK do Windows.
+Atributos de segurança para o objeto de semáforo. Para obter uma descrição completa dessa estrutura, consulte [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) no SDK do Windows.
 
 ### <a name="remarks"></a>Comentários
 
 Para acessar ou liberar um `CSemaphore` do objeto, crie um [CMultiLock](../../mfc/reference/cmultilock-class.md) ou [CSingleLock](../../mfc/reference/csinglelock-class.md) objeto e chame seu [bloqueio](../../mfc/reference/csinglelock-class.md#lock) e [Unlock](../../mfc/reference/csinglelock-class.md#unlock) funções de membro.
 
 > [!IMPORTANT]
->  Depois de criar o `CSemaphore` do objeto, use [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) para garantir que o mutex ainda não existia. Se o mutex existia inesperadamente, isso poderá indicar um processo não autorizado é apropriação indevida e pode ser pretendendo usar o mutex de maneira mal-intencionada. Nesse caso, o procedimento recomendado de valorizam a segurança é fechar o identificador e continuará como se houve uma falha na criação do objeto.
+>  Depois de criar o `CSemaphore` do objeto, use [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) para garantir que o mutex ainda não existia. Se o mutex existia inesperadamente, isso poderá indicar um processo não autorizado é apropriação indevida e pode ser pretendendo usar o mutex de maneira mal-intencionada. Nesse caso, o procedimento recomendado de valorizam a segurança é fechar o identificador e continuará como se houve uma falha na criação do objeto.
 
 ## <a name="see-also"></a>Consulte também
 

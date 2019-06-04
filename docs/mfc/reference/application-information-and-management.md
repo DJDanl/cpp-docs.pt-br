@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - applications [MFC], managing
 ms.assetid: b72f4154-24db-4e75-bca3-6873e2459c15
-ms.openlocfilehash: 84d11b5c2d456a55e09b8512a3c0af06409939e8
-ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
+ms.openlocfilehash: b106a8874d1b0243f408a6c6c7311a9ce791e019
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65612292"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504504"
 ---
 # <a name="application-information-and-management"></a>Informações e gerenciamento do aplicativo
 
@@ -98,7 +98,7 @@ Especifica um sinalizador adicional que controla a criação do thread. Este sin
 - **0** iniciar o thread imediatamente após a criação.
 
 *lpSecurityAttrs*<br/>
-Aponta para um [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) estrutura que especifica os atributos de segurança para o thread. Se for NULL, os mesmos atributos de segurança que o thread de criação serão usados. Para obter mais informações sobre essa estrutura, consulte o SDK do Windows.
+Aponta para um [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) estrutura que especifica os atributos de segurança para o thread. Se for NULL, os mesmos atributos de segurança que o thread de criação serão usados. Para obter mais informações sobre essa estrutura, consulte o SDK do Windows.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -110,7 +110,7 @@ A primeira forma de `AfxBeginThread` cria um thread de trabalho. O segundo forma
 
 `AfxBeginThread` cria um novo `CWinThread` object, chamadas de seu [CreateThread](../../mfc/reference/cwinthread-class.md#createthread) funcionar para iniciar a execução do thread e retorna um ponteiro para o thread. Verificações são feitas em todo o procedimento para garantir que todos os objetos são desalocados corretamente caso de falha de qualquer parte da criação. Para encerrar o thread, chame [AfxEndThread](#afxendthread) de dentro do thread ou o retorno da função de controle do thread de trabalho.
 
-Multithreading deve ser habilitado pelo aplicativo; Caso contrário, essa função falhará. Para obter mais informações sobre como habilitar o multithreading, consulte [/MD, /MT, /LD (usar biblioteca em tempo de execução)](../../build/reference/md-mt-ld-use-run-time-library.md) sob *opções de compilador do Visual C++*.
+Multithreading deve ser habilitado pelo aplicativo; Caso contrário, essa função falhará. Para obter mais informações sobre como habilitar o multithreading, consulte [/MD, /MT, /LD (usar biblioteca em tempo de execução)](../../build/reference/md-mt-ld-use-run-time-library.md) sob *opções de compilador do Visual C++* .
 
 Para obter mais informações sobre `AfxBeginThread`, consulte os artigos [Multithreading: Criando Threads de trabalho](../../parallel/multithreading-creating-worker-threads.md) e [Multithreading: Criando Threads de Interface do usuário](../../parallel/multithreading-creating-user-interface-threads.md).
 
@@ -648,7 +648,7 @@ LPCTSTR AFXAPI AfxRegisterWndClass(
 ### <a name="parameters"></a>Parâmetros
 
 *nClassStyle*<br/>
-Especifica o estilo de classe do Windows ou uma combinação de estilos, criados com o uso de OR bit a bit ( **&#124;**) operador, para a classe de janela. Para obter uma lista de estilos de classe, consulte o [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa) estrutura no SDK do Windows. Se for NULL, os padrões serão definidos da seguinte maneira:
+Especifica o estilo de classe do Windows ou uma combinação de estilos, criados com o uso de OR bit a bit ( **&#124;** ) operador, para a classe de janela. Para obter uma lista de estilos de classe, consulte o [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa) estrutura no SDK do Windows. Se for NULL, os padrões serão definidos da seguinte maneira:
 
 - Define o estilo de mouse para CS_DBLCLKS, que envia duas vezes em mensagens para o procedimento de janela quando o usuário clica duas vezes no mouse.
 

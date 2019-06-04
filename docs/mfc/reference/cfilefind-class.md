@@ -56,12 +56,12 @@ helpviewer_keywords:
 - CFileFind [MFC], CloseContext
 - CFileFind [MFC], m_pTM
 ms.assetid: 9990068c-b023-4114-9580-a50182d15240
-ms.openlocfilehash: da08b04b314df4916a290d4929a4cbaac87434d8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5534b61b3c588c79c0120f1a5bc8064b5a605e8a
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62296625"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503789"
 ---
 # <a name="cfilefind-class"></a>Classe CFileFind
 
@@ -212,7 +212,7 @@ Reservado para tornar `FindFile` polimórfico com as classes derivadas. Precisa 
 
 ### <a name="return-value"></a>Valor de retorno
 
-Diferente de zero se bem-sucedido; Caso contrário, 0. Para obter outras informações de erro, chame a função Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360).
+Diferente de zero se bem-sucedido; Caso contrário, 0. Para obter outras informações de erro, chame a função Win32 [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
 
 ### <a name="remarks"></a>Comentários
 
@@ -270,7 +270,7 @@ virtual BOOL FindNextFile();
 
 ### <a name="return-value"></a>Valor de retorno
 
-Diferente de zero se não houver mais arquivos; zero se o arquivo encontrado é o último no diretório ou se ocorreu um erro. Para obter outras informações de erro, chame a função Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360). Se o arquivo encontrado é o último arquivo no diretório, ou se nenhuma correspondência de arquivos podem ser encontrados, o `GetLastError` função retorna ERROR_NO_MORE_FILES.
+Diferente de zero se não houver mais arquivos; zero se o arquivo encontrado é o último no diretório ou se ocorreu um erro. Para obter outras informações de erro, chame a função Win32 [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror). Se o arquivo encontrado é o último arquivo no diretório, ou se nenhuma correspondência de arquivos podem ser encontrados, o `GetLastError` função retorna ERROR_NO_MORE_FILES.
 
 ### <a name="remarks"></a>Comentários
 
@@ -824,7 +824,7 @@ Especifica um ou mais atributos de arquivo, identificados na [WIN32_FIND_DATA](/
 
 ### <a name="return-value"></a>Valor de retorno
 
-Diferente de zero se bem-sucedido; Caso contrário, 0. Para obter outras informações de erro, chame a função Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360).
+Diferente de zero se bem-sucedido; Caso contrário, 0. Para obter outras informações de erro, chame a função Win32 [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
 
 ### <a name="remarks"></a>Comentários
 

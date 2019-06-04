@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CWinFormsControl [MFC], GetControl
 - CWinFormsControl [MFC], GetControlHandle
 ms.assetid: 6406dd7b-fb89-4a18-ac3a-c010d6b6289a
-ms.openlocfilehash: 91691203f88f07f597aaad6a5db32b03e7ad11c4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c1c7a394317fefba7911e9500126919e83389f20
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62323290"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504672"
 ---
 # <a name="cwinformscontrol-class"></a>Classe CWinFormsControl
 
@@ -108,7 +108,7 @@ inline BOOL CreateManagedControl(
 ### <a name="parameters"></a>Parâmetros
 
 *pType*<br/>
-O tipo de dados do controle a ser criado. Deve ser um [tipo](https://msdn.microsoft.com/library/system.type) tipo de dados.
+O tipo de dados do controle a ser criado. Deve ser um [tipo](/dotnet/api/system.type) tipo de dados.
 
 *dwStyle*<br/>
 O estilo de janela a ser aplicado ao controle. Especifica uma combinação de [estilos de janela](../../mfc/reference/styles-used-by-mfc.md#window-styles). Atualmente, há suporte para apenas os seguintes estilos: WS_TABSTOP, WS_VISIBLE, WS_DISABLED and WS_GROUP.
@@ -136,7 +136,7 @@ Se for bem-sucedido, retorna um valor diferente de zero. Caso contrário, retorn
 
 Esse método cria uma instância de um controle Windows Forms do .NET Framework em um contêiner do MFC.
 
-A primeira sobrecarga do método aceita um tipo de dados do .NET Framework *PDigite* , de modo que o MFC pode instanciar um novo objeto desse tipo. *PDigite* deve ser um [tipo](https://msdn.microsoft.com/library/system.type) tipo de dados.
+A primeira sobrecarga do método aceita um tipo de dados do .NET Framework *PDigite* , de modo que o MFC pode instanciar um novo objeto desse tipo. *PDigite* deve ser um [tipo](/dotnet/api/system.type) tipo de dados.
 
 A segunda sobrecarga do método cria um controle de formulários do Windows com base nas `TManagedControl` parâmetro de modelo do `CWinFormsControl` classe. O tamanho e posição do controle se baseia o `RECT` estrutura é passado para o método. Somente *dwStyle* é importante para os estilos.
 

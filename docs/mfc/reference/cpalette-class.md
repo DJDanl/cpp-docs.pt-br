@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CPalette [MFC], ResizePalette
 - CPalette [MFC], SetPaletteEntries
 ms.assetid: 8cd95498-53ed-4852-85e1-70e522541114
-ms.openlocfilehash: f0105a8ee33a57f7431a9c6a97b4b132f291f42a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1dc29a675f6ab3883683b3afae7e22e7ed0f1cc3
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62373174"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504758"
 ---
 # <a name="cpalette-class"></a>Classe CPalette
 
@@ -111,7 +111,7 @@ Especifica a primeira entrada na paleta a ser animada.
 Especifica o número de entradas na paleta a ser animada.
 
 *lpPaletteColors*<br/>
-Aponta para o primeiro membro de uma matriz de [PALETTEENTRY](https://msdn.microsoft.com/library/windows/desktop/dd162769) estruturas para substituir as entradas da paleta identificadas pelo *nStartIndex* e *nNumEntries*.
+Aponta para o primeiro membro de uma matriz de [PALETTEENTRY](/previous-versions/dd162769\(v=vs.85\)) estruturas para substituir as entradas da paleta identificadas pelo *nStartIndex* e *nNumEntries*.
 
 ### <a name="remarks"></a>Comentários
 
@@ -245,7 +245,7 @@ Especifica a primeira entrada na paleta lógica a ser recuperado.
 Especifica o número de entradas na paleta lógica a ser recuperado.
 
 *lpPaletteColors*<br/>
-Aponta para uma matriz de [PALETTEENTRY](https://msdn.microsoft.com/library/windows/desktop/dd162769) estruturas de dados para receber as entradas da paleta. A matriz deve conter pelo menos o mesmo número de estruturas de dados conforme especificado por *nNumEntries*.
+Aponta para uma matriz de [PALETTEENTRY](/previous-versions/dd162769\(v=vs.85\)) estruturas de dados para receber as entradas da paleta. A matriz deve conter pelo menos o mesmo número de estruturas de dados conforme especificado por *nNumEntries*.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -312,7 +312,7 @@ Especifica a primeira entrada na paleta lógica a ser definido.
 Especifica o número de entradas na paleta lógica a ser definido.
 
 *lpPaletteColors*<br/>
-Aponta para uma matriz de [PALETTEENTRY](https://msdn.microsoft.com/library/windows/desktop/dd162769) estruturas de dados para receber as entradas da paleta. A matriz deve conter pelo menos o mesmo número de estruturas de dados conforme especificado por *nNumEntries*.
+Aponta para uma matriz de [PALETTEENTRY](/previous-versions/dd162769\(v=vs.85\)) estruturas de dados para receber as entradas da paleta. A matriz deve conter pelo menos o mesmo número de estruturas de dados conforme especificado por *nNumEntries*.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -322,7 +322,7 @@ O número de entradas definido na paleta lógica; 0 se a função falhou.
 
 Se a paleta lógica está selecionada em um contexto de dispositivo quando o aplicativo chama `SetPaletteEntries`, as alterações não entrarão em vigor até que o aplicativo chama [CDC::RealizePalette](../../mfc/reference/cdc-class.md#realizepalette).
 
-Para obter mais informações sobre a estrutura do Windows `PALETTEENTRY`, consulte [PALETTEENTRY](https://msdn.microsoft.com/library/windows/desktop/dd162769) no SDK do Windows.
+Para obter mais informações, consulte [PALETTEENTRY](/previous-versions/dd162769\(v=vs.85\)) no SDK do Windows.
 
 ## <a name="see-also"></a>Consulte também
 

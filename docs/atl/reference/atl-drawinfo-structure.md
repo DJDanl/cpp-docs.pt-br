@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - ATL_DRAWINFO structure
 ms.assetid: dd2e2aa8-e8c5-403b-b4df-35c0f6f57fb7
-ms.openlocfilehash: 70329d3b2c18c8cd8e94854f40ff971c0b39a8f4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 77ef56f73be1ed9ddfc63c459b6bab3ad4decb3f
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62261059"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503423"
 ---
 # <a name="atldrawinfo-structure"></a>Estrutura ATL_DRAWINFO
 
@@ -60,7 +60,7 @@ Informações de contexto para o dispositivo de destino apontado pelo `ptd` do q
 O contexto de dispositivo no qual desenhar. Para um objeto sem janelas, o `hdcDraw` membro se encontra o `MM_TEXT` modo de mapeamento com suas coordenadas lógicas correspondência as coordenadas do cliente da janela. Além disso, o contexto do dispositivo deve ser no mesmo estado que normalmente é passada por um `WM_PAINT` mensagem.
 
 `prcBounds`<br/>
-Ponteiro para um [RECTL](https://msdn.microsoft.com/library/windows/desktop/dd162907) estrutura especificando o retângulo em `hdcDraw` e no qual o objeto deve ser desenhado. Esse membro controla o posicionamento e alongamento do objeto. Esse membro deve ser NULL para desenhar um objeto de ativo in-loco sem janelas. Em todas as outras situações, NULL não é um valor válido e deve resultar em um `E_INVALIDARG` código de erro. Se o contêiner passa um valor não nulo para um objeto sem janelas, o objeto deve renderizar o aspecto solicitado para o contexto de dispositivo especificado e o retângulo. Um contêiner pode solicitá-la de um objeto sem janelas para renderizar uma exibição em segundo lugar, não ativo do objeto ou para imprimir o objeto.
+Ponteiro para um [RECTL](/previous-versions//dd162907\(v=vs.85\)) estrutura especificando o retângulo em `hdcDraw` e no qual o objeto deve ser desenhado. Esse membro controla o posicionamento e alongamento do objeto. Esse membro deve ser NULL para desenhar um objeto de ativo in-loco sem janelas. Em todas as outras situações, NULL não é um valor válido e deve resultar em um `E_INVALIDARG` código de erro. Se o contêiner passa um valor não nulo para um objeto sem janelas, o objeto deve renderizar o aspecto solicitado para o contexto de dispositivo especificado e o retângulo. Um contêiner pode solicitá-la de um objeto sem janelas para renderizar uma exibição em segundo lugar, não ativo do objeto ou para imprimir o objeto.
 
 `prcWBounds`<br/>
 Se `hdcDraw` é um contexto de dispositivo de metarquivo (consulte [GetDeviceCaps](/windows/desktop/api/wingdi/nf-wingdi-getdevicecaps) no SDK do Windows), isso é um ponteiro para um `RECTL` estrutura especificando o retângulo delimitador no metarquivo subjacente. A estrutura de retângulo contém a extensão da janela e a origem de janela. Esses valores são úteis para desenhar metarquivos. O retângulo indicado por `prcBounds` está aninhado em isso `prcWBounds` retângulo; eles estão no mesmo espaço de coordenadas.

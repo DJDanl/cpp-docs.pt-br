@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - ATL Active Server Page Component Wizard, ASP
 ms.assetid: 4d8cafd6-5e12-4461-8911-29288896af3c
-ms.openlocfilehash: efc82edf00a9bb2f2facbd883ef88f1d093e0133
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b88dffe2874d29918315af65c6ea093c24695f97
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62261319"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503405"
 ---
 # <a name="asp-atl-active-server-page-component-wizard"></a>ASP, o Assistente de componente de página de servidor ativo do ATL
 
@@ -23,7 +23,7 @@ Use esta página do Assistente de componentes do ATL Active Server página para 
 
 - **OnStartPage/OnEndPage**
 
-   [OnStartPage](https://msdn.microsoft.com/library/ms691624.aspx) é chamado na primeira vez em que o script tenta acessar o objeto. **OnEndPage** é chamado quando o objeto é concluído o script de processamento.
+   [OnStartPage](/previous-versions//ms691624\(v=vs.85\)) é chamado na primeira vez em que o script tenta acessar o objeto. **OnEndPage** é chamado quando o objeto é concluído o script de processamento.
 
 - **Objeto intrínseco**
 
@@ -40,4 +40,4 @@ Use esta página do Assistente de componentes do ATL Active Server página para 
 ## <a name="see-also"></a>Consulte também
 
 [Assistente do componente Active Server Page da ATL](../../atl/reference/atl-active-server-page-component-wizard.md)<br/>
-[Componente de página de servidor ativo do ATL](../../atl/reference/adding-an-atl-active-server-page-component.md)
+[Componente Active Server Page da ATL](../../atl/reference/adding-an-atl-active-server-page-component.md)

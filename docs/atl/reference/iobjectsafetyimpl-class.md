@@ -13,12 +13,12 @@ helpviewer_keywords:
 - IObjectSafety, ATL implementation
 - IObjectSafetyImpl class
 ms.assetid: 64e32082-d910-4a8a-a5bf-ebed9145359d
-ms.openlocfilehash: e75c52b016fff5bf04fefc86d4289021efc4db8e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 17a1b362f2cfe40be99c10298a780a6bf4f6419f
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62277018"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503132"
 ---
 # <a name="iobjectsafetyimpl-class"></a>Classe IObjectSafetyImpl
 
@@ -97,7 +97,7 @@ A implementação retorna os valores apropriados para qualquer interface compat�
 > [!IMPORTANT]
 >  Qualquer objeto que dá suporte a `IObjectSafety` é responsável por sua própria segurança e de qualquer objeto que ela delega. O programador deve levar em conta surgirem devido a executem o código no contexto do usuário, scripts entre sites e executar a verificação de zona adequada.
 
-Ver [IObjectSafety::GetInterfaceSafetyOptions](https://msdn.microsoft.com/library/aa768223.aspx) no Windows SDK.
+Ver [IObjectSafety::GetInterfaceSafetyOptions](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768223\(v=vs.85\)) no Windows SDK.
 
 ##  <a name="m_dwcurrentsafety"></a>  IObjectSafetyImpl::m_dwCurrentSafety
 
@@ -125,9 +125,9 @@ A implementação retorna E_NOINTERFACE para qualquer interface que não tem sup
 > [!IMPORTANT]
 >  Qualquer objeto que dá suporte a `IObjectSafety` é responsável por sua própria segurança e de qualquer objeto que ela delega. O programador deve levar em conta surgirem devido a executem o código no contexto do usuário, scripts entre sites e executar a verificação de zona adequada.
 
-Ver [IObjectSafety::SetInterfaceSafetyOptions](https://msdn.microsoft.com/library/aa768225.aspx) no Windows SDK.
+Ver [IObjectSafety::SetInterfaceSafetyOptions](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768225\(v=vs.85\)) no Windows SDK.
 
 ## <a name="see-also"></a>Consulte também
 
-[Interface IObjectSafety](https://msdn.microsoft.com/library/aa768224.aspx)<br/>
+[Interface IObjectSafety](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768224\(v=vs.85\))<br/>
 [Visão geral da classe](../../atl/atl-class-overview.md)

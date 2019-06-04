@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CInternetSession [MFC], SetCookie
 - CInternetSession [MFC], SetOption
 ms.assetid: ef54feb4-9d0f-4e65-a45d-7a4cf6c40e51
-ms.openlocfilehash: 5ad1a1a0dde32358828d58a8f237337c4f62f3e5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e3d6d319a963fbc24e89bf8c4c0858cd80ec5a9d
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62345585"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503454"
 ---
 # <a name="cinternetsession-class"></a>Classe CInternetSession
 
@@ -156,7 +156,7 @@ Indica várias opções de cache. O padrão é definido como 0. Os valores poss�
 
 - INTERNET_FLAG_DONT_CACHE não armazenar em cache os dados, localmente ou em todos os servidores gateway.
 
-- Baixar INTERNET_FLAG_OFFLINE operações são atendidas por meio de cache persistente. Se o item não existe no cache, um código de erro apropriado será retornado. Este sinalizador pode ser combinado com o bit a bit **ou** ( **&#124;**) operador.
+- Baixar INTERNET_FLAG_OFFLINE operações são atendidas por meio de cache persistente. Se o item não existe no cache, um código de erro apropriado será retornado. Este sinalizador pode ser combinado com o bit a bit **ou** ( **&#124;** ) operador.
 
 ### <a name="remarks"></a>Comentários
 
@@ -258,7 +258,7 @@ A variável especificando o tamanho do *pstrCookieData* buffer. Se a função fo
 
 ### <a name="return-value"></a>Valor de retorno
 
-Caso contrário, retornará TRUE se for bem-sucedido, ou FALSE. Se a chamada falhar, chame a função Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) para determinar a causa do erro. Os valores de erro a seguir se aplicam:
+Caso contrário, retornará TRUE se for bem-sucedido, ou FALSE. Se a chamada falhar, chame a função Win32 [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) para determinar a causa do erro. Os valores de erro a seguir se aplicam:
 
 - ERROR_NO_MORE_ITEMS não há nenhum cookie para a URL especificada e todos os seus pais.
 
@@ -536,7 +536,7 @@ O ponteiro que `OpenURL` retorna depende *pstrURL*do tipo de serviço. A tabela 
 
 ### <a name="remarks"></a>Comentários
 
-O parâmetro *dwFlags* deve incluir INTERNET_FLAG_TRANSFER_ASCII ou INTERNET_FLAG_TRANSFER_BINARY, mas não ambos. Os sinalizadores restantes podem ser combinados com o bit a bit **ou** operador ( **&#124;**).
+O parâmetro *dwFlags* deve incluir INTERNET_FLAG_TRANSFER_ASCII ou INTERNET_FLAG_TRANSFER_BINARY, mas não ambos. Os sinalizadores restantes podem ser combinados com o bit a bit **ou** operador ( **&#124;** ).
 
 `OpenURL`, que encapsula a função Win32 `InternetOpenURL`, permite somente download, recuperar e ler os dados de um servidor de Internet. `OpenURL` permite que nenhuma manipulação de arquivos em um local remoto, para que ele não requer nenhuma [CInternetConnection](../../mfc/reference/cinternetconnection-class.md) objeto.
 
@@ -616,11 +616,11 @@ Indica várias opções de cache. O padrão é definido como 0. Os valores poss�
 
 - INTERNET_FLAG_DONT_CACHE não armazenar em cache os dados, localmente ou em todos os servidores gateway.
 
-- Baixar INTERNET_FLAG_OFFLINE operações são atendidas por meio de cache persistente. Se o item não existe no cache, um código de erro apropriado será retornado. Este sinalizador pode ser combinado com o bit a bit **ou** ( **&#124;**) operador.
+- Baixar INTERNET_FLAG_OFFLINE operações são atendidas por meio de cache persistente. Se o item não existe no cache, um código de erro apropriado será retornado. Este sinalizador pode ser combinado com o bit a bit **ou** ( **&#124;** ) operador.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Se a operação foi bem-sucedida, um valor TRUE será retornado. Se ocorreu um erro, um valor FALSE será retornado. Se a chamada falhar, a função Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) pode ser chamado para determinar a causa do erro.
+Se a operação foi bem-sucedida, um valor TRUE será retornado. Se ocorreu um erro, um valor FALSE será retornado. Se a chamada falhar, a função Win32 [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) pode ser chamado para determinar a causa do erro.
 
 ## <a name="see-also"></a>Consulte também
 

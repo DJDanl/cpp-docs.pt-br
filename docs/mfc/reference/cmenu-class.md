@@ -84,12 +84,12 @@ helpviewer_keywords:
 - CMenu [MFC], TrackPopupMenuEx
 - CMenu [MFC], m_hMenu
 ms.assetid: 40cacfdc-d45c-4ec7-bf28-991c72812499
-ms.openlocfilehash: 464b59f7e598ea1901cf88c47c5887cbbf308607
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5df6515573cfca784d1e59f34342466dde2e42e4
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375789"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504853"
 ---
 # <a name="cmenu-class"></a>Classe CMenu
 
@@ -769,7 +769,7 @@ Valor que especifica o significado de `nIDItem`. Por padrão, `ByPos` é FALSE, 
 
 ### <a name="return-value"></a>Valor de retorno
 
-Se a função for bem-sucedida, o valor de retorno é diferente de zero. Se a função falhar, o valor retornado será zero. Para obter outras informações de erro, use a função Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360), conforme descrito no SDK do Windows.
+Se a função for bem-sucedida, o valor de retorno é diferente de zero. Se a função falhar, o valor retornado será zero. Para obter outras informações de erro, use a função Win32 [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror), conforme descrito no SDK do Windows.
 
 ### <a name="remarks"></a>Comentários
 
@@ -1267,7 +1267,7 @@ Valor que especifica o significado dos *uItem*. Se esse parâmetro for FALSE, o 
 
 ### <a name="return-value"></a>Valor de retorno
 
-Se a função for bem-sucedida, o valor de retorno é diferente de zero. Se a função falhar, o valor retornado será zero. Para obter outras informações de erro, use a função Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360), conforme descrito no SDK do Windows.
+Se a função for bem-sucedida, o valor de retorno é diferente de zero. Se a função falhar, o valor retornado será zero. Para obter outras informações de erro, use a função Win32 [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror), conforme descrito no SDK do Windows.
 
 ### <a name="remarks"></a>Comentários
 
@@ -1476,7 +1476,7 @@ Ponteiro para um [TPMPARAMS](/windows/desktop/api/winuser/ns-winuser-tagtpmparam
 
 Se você especificar TPM_RETURNCMD na *fuFlags* parâmetro, o valor de retorno é o identificador do item de menu do item selecionado pelo usuário. Se o usuário cancelar o menu sem fazer uma seleção, ou se ocorrer um erro, o valor de retorno é 0.
 
-Se você não especificar TPM_RETURNCMD na *fuFlags* parâmetro, o valor de retorno é diferente de zero se a função for bem-sucedida e 0 se ele falhar. Para obter outras informações de erro, chame [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360).
+Se você não especificar TPM_RETURNCMD na *fuFlags* parâmetro, o valor de retorno é diferente de zero se a função for bem-sucedida e 0 se ele falhar. Para obter outras informações de erro, chame [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
 
 ### <a name="remarks"></a>Comentários
 
