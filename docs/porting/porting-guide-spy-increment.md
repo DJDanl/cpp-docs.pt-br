@@ -2,12 +2,12 @@
 title: 'Guia de portabilidade: Spy++'
 ms.date: 11/19/2018
 ms.assetid: e558f759-3017-48a7-95a9-b5b779d5e51d
-ms.openlocfilehash: b28de2396ba94578a8d06038a1191be42dce49ea
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: bca5e912d28124e8d5d6e56cc234ef7bf9bceb89
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57751368"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66451129"
 ---
 # <a name="porting-guide-spy"></a>Guia de portabilidade: Spy++
 
@@ -39,7 +39,7 @@ Um dos arquivos que não puderam ser encontrados em Spy++ foi verstamp.h. De uma
 1>C:\Program Files (x86)\Windows Kits\8.1\Include\shared\common.ver(212): error RC2104: undefined keyword or key name: VER_FILEFLAGSMASK
 ```
 
-A maneira mais fácil de encontrar um símbolo nos arquivos de inclusão disponíveis é usar **Localizar em Arquivos** (**Ctrl**+**Shift**+**F**) e especificar **Diretórios de Inclusão do Visual C++**. Nós o encontramos em ntverp.h. Substituímos a inclusão de verstamp.h por ntverp.h e esse erro desapareceu.
+A maneira mais fácil de encontrar um símbolo nos arquivos de inclusão disponíveis é usar **Localizar em Arquivos** (**Ctrl**+**Shift**+**F**) e especificar **Diretórios de Inclusão do Visual C++** . Nós o encontramos em ntverp.h. Substituímos a inclusão de verstamp.h por ntverp.h e esse erro desapareceu.
 
 ##  <a name="linker_output_settings"></a> Etapa 3. Configuração OutputFile do vinculador
 
@@ -51,7 +51,7 @@ O MSBuild reclama que a propriedade **Link.OutputFile** não corresponde aos val
 warning MSB8012: TargetPath(...\spyxx\spyxxhk\.\..\Debug\SpyxxHk.dll) does not match the Linker's OutputFile property value (...\spyxx\Debug\SpyHk55.dll). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).warning MSB8012: TargetName(SpyxxHk) does not match the Linker's OutputFile property value (SpyHk55). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
 ```
 
-**Link.OutputFile** é a saída de build (por exemplo, EXE, DLL) e normalmente é construído de `$(TargetDir)$(TargetName)$(TargetExt)`, fornecendo o caminho, o nome do arquivo e a extensão. Esse é um erro comum ao migrar projetos da ferramenta de build do Visual C++ antiga (vcbuild.exe) para a nova ferramenta de build (MSBuild.exe). Visto que a alteração da ferramenta de build ocorreu no Visual Studio 2010, você poderá encontrar esse problema sempre que migrar um projeto de versão anterior a 2010 para uma versão 2010 ou posterior. O problema básico é que o assistente de migração de projeto não atualiza o valor de **Link.OutputFile**, pois nem sempre é possível determinar o que seu valor deve ser com base nas outras configurações do projeto. Portanto, você geralmente precisa defini-lo manualmente. Para obter mais detalhes, consulte esta [postagem](http://blogs.msdn.com/b/vcblog/archive/2010/03/02/visual-studio-2010-c-project-upgrade-guide.aspx) no blog do Visual C++.
+**Link.OutputFile** é a saída de build (por exemplo, EXE, DLL) e normalmente é construído de `$(TargetDir)$(TargetName)$(TargetExt)`, fornecendo o caminho, o nome do arquivo e a extensão. Esse é um erro comum ao migrar projetos da ferramenta de build do Visual C++ antiga (vcbuild.exe) para a nova ferramenta de build (MSBuild.exe). Visto que a alteração da ferramenta de build ocorreu no Visual Studio 2010, você poderá encontrar esse problema sempre que migrar um projeto de versão anterior a 2010 para uma versão 2010 ou posterior. O problema básico é que o assistente de migração de projeto não atualiza o valor de **Link.OutputFile**, pois nem sempre é possível determinar o que seu valor deve ser com base nas outras configurações do projeto. Portanto, você geralmente precisa defini-lo manualmente. Para obter mais detalhes, consulte esta [postagem](https://devblogs.microsoft.com/cppblog/visual-studio-2010-c-project-upgrade-guide/) no blog do Visual C++.
 
 Nesse caso, a propriedade **Link.OutputFile** no projeto convertido foi definida como .\Debug\Spyxx.exe e .\Release\Spyxx.exe para o projeto Spy++, dependendo da configuração. A melhor opção é simplesmente substituir esses valores codificados por `$(TargetDir)$(TargetName)$(TargetExt)` para **Todas as Configurações**. Se isso não funcionar, você poderá personalizar daí ou então alterar as propriedades na seção **Geral**, em que esses valores são definidos (as propriedades são **Diretório de Saída**, **Nome do Destino** e **Extensão de Destino**. Lembre-se de que se a propriedade que você está exibindo utiliza macros, você pode escolher **Editar** na lista suspensa para exibir uma caixa de diálogo que mostra a cadeia de caracteres final com as substituições de macro feitas. Você pode exibir todas as macros disponíveis e seus valores atuais, escolhendo o botão **Macros**.
 
@@ -502,7 +502,7 @@ O problema ocorre quando uma variável é primeiro declarada como **extern** e p
 
 ##  <a name="porting_to_unicode"></a> Etapa 11. Portabilidade de MBCS para Unicode
 
-Observe que, no mundo do Windows, quando dizemos Unicode, normalmente queremos dizer UTF-16. Outros sistemas operacionais como o Linux usam UTF-8, mas o Windows geralmente não. A versão MBCS do MFC foi preterida no Visual Studio 2013 e 2015, mas isso não ocorre mais no Visual Studio 2017. Se você estiver usando o Visual Studio 2013 ou 2015, antes de tomar a decisão de transferir o código MBCS para Unicode UTF-16, elimine temporariamente os avisos de que o MBCS foi preterido, para realizar outros trabalhos ou adiar a portabilidade até um momento conveniente. O código atual usa MBCS e para continuar com isso, precisamos instalar a versão ANSI / MBCS do MFC. A biblioteca do MFC, bastante grande, não faz parte da instalação padrão do Visual Studio **Desenvolvimento para desktop com C++**, portanto, deve ser selecionada por meio dos componentes opcionais no instalador. Veja o [Complemento de DLL do MBCS do MFC](../mfc/mfc-mbcs-dll-add-on.md). Depois de baixar isso e reiniciar o Visual Studio, compile e vincule com a versão MBCS do MFC, mas, para se livrar dos avisos sobre o MBCS, se você estiver usando Visual Studio 2013 ou 2015, adicione também NO_WARN_MBCS_MFC_DEPRECATION à lista de macros predefinidas na seção **Pré-processador** das propriedades do projeto ou ao início do arquivo de cabeçalho stdafx.h ou outro arquivo de cabeçalho comum.
+Observe que, no mundo do Windows, quando dizemos Unicode, normalmente queremos dizer UTF-16. Outros sistemas operacionais como o Linux usam UTF-8, mas o Windows geralmente não. A versão MBCS do MFC foi preterida no Visual Studio 2013 e 2015, mas isso não ocorre mais no Visual Studio 2017. Se você estiver usando o Visual Studio 2013 ou 2015, antes de tomar a decisão de transferir o código MBCS para Unicode UTF-16, elimine temporariamente os avisos de que o MBCS foi preterido, para realizar outros trabalhos ou adiar a portabilidade até um momento conveniente. O código atual usa MBCS e para continuar com isso, precisamos instalar a versão ANSI / MBCS do MFC. A biblioteca do MFC, bastante grande, não faz parte da instalação padrão do Visual Studio **Desenvolvimento para desktop com C++** , portanto, deve ser selecionada por meio dos componentes opcionais no instalador. Veja o [Complemento de DLL do MBCS do MFC](../mfc/mfc-mbcs-dll-add-on.md). Depois de baixar isso e reiniciar o Visual Studio, compile e vincule com a versão MBCS do MFC, mas, para se livrar dos avisos sobre o MBCS, se você estiver usando Visual Studio 2013 ou 2015, adicione também NO_WARN_MBCS_MFC_DEPRECATION à lista de macros predefinidas na seção **Pré-processador** das propriedades do projeto ou ao início do arquivo de cabeçalho stdafx.h ou outro arquivo de cabeçalho comum.
 
 Agora temos alguns erros de vinculador.
 
