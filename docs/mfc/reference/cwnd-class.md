@@ -818,12 +818,12 @@ helpviewer_keywords:
 - CWnd [MFC], WindowProc
 - CWnd [MFC], m_hWnd
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
-ms.openlocfilehash: fc92497c4d43238f9cf6aea7132afb8c8dc27fbd
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 50558e6959789dddc8223804394a0b242f793de5
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66451224"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504253"
 ---
 # <a name="cwnd-class"></a>Classe CWnd
 
@@ -5607,7 +5607,7 @@ Diferente de zero se a função for bem-sucedida. É 0 se ocorrer uma falha ou s
 
 Uma janela bloqueada não pode ser movida. Apenas uma janela pode ser bloqueada por vez. Para desbloquear uma janela bloqueada com `LockWindowUpdate`, chame [UnlockWindowUpdate](#unlockwindowupdate).
 
-Se um aplicativo com uma janela bloqueada (ou todas as janelas filho bloqueado) chama o [GetDC,](https://msdn.microsoft.com/library/windows/desktop/dd144871) [GetDCEx,](https://msdn.microsoft.com/library/windows/desktop/dd144873) ou [BeginPaint](/windows/desktop/api/winuser/nf-winuser-beginpaint) função do Windows, a função chamada retorna um dispositivo contexto cuja região visível está vazio. Isso ocorrerá até que o aplicativo desbloqueia a janela chamando o `UnlockWindowUpdate` função de membro.
+Se um aplicativo com uma janela bloqueada (ou todas as janelas filho bloqueado) chama o [GetDC,](/windows/desktop/api/winuser/nf-winuser-getdc) [GetDCEx,](/windows/desktop/api/winuser/nf-winuser-getdcex) ou [BeginPaint](/windows/desktop/api/winuser/nf-winuser-beginpaint) função do Windows, a função chamada retorna um dispositivo contexto cuja região visível está vazio. Isso ocorrerá até que o aplicativo desbloqueia a janela chamando o `UnlockWindowUpdate` função de membro.
 
 Enquanto as atualizações de janela são bloqueadas, o sistema mantém controle sobre o retângulo delimitador de qualquer operação de desenho para contextos de dispositivo associados a uma janela bloqueada. Quando o desenho é habilitado novamente, esse retângulo delimitador é invalidado na janela de bloqueado e suas janelas filho para forçar uma eventual [WM_PAINT](/windows/desktop/gdi/wm-paint) mensagem para atualizar a tela. Se nenhum desenho ocorreu enquanto a janela é atualizada foram bloqueada, nenhuma área é invalidada.
 
@@ -10038,7 +10038,7 @@ afx_msg void OnUserChanged();
 
 ### <a name="remarks"></a>Comentários
 
-Esse método recebe o [WM_USERCHANGED](https://msdn.microsoft.com/library/windows/desktop/ms632651) mensagem de notificação, que é descrita no SDK do Windows. Quando o usuário faz logon ou logoff, o sistema operacional atualiza configurações específicas do usuário. O sistema envia essa mensagem imediatamente depois de atualizar as configurações.
+Esse método recebe o [WM_USERCHANGED](/windows/desktop/winmsg/wm-userchanged) mensagem de notificação, que é descrita no SDK do Windows. Quando o usuário faz logon ou logoff, o sistema operacional atualiza configurações específicas do usuário. O sistema envia essa mensagem imediatamente depois de atualizar as configurações.
 
 > [!NOTE]
 > Essa função membro é chamada pelo framework para permitir que seu aplicativo lidar com uma mensagem do Windows. Os parâmetros passados para a função refletem os parâmetros recebidos pelo framework quando a mensagem foi recebida. Se você chamar a implementação de classe base dessa função, o que a implementação usará os parâmetros passados originalmente com a mensagem e não os parâmetros que você fornecer para a função.

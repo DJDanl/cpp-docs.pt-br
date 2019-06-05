@@ -1,29 +1,29 @@
 ---
 title: Erro do compilador C2362
-ms.date: 11/04/2016
+ms.date: 06/03/2019
 f1_keywords:
 - C2362
 helpviewer_keywords:
 - C2362
 ms.assetid: 7aafecbc-b3cf-45a6-9ec3-a17e3f222511
-ms.openlocfilehash: 17656b2a48a3680a9269d3ca300fd4188eda6b84
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d48806982bbb6cdda4d29e47f6692e7e3601d6de
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62364318"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503205"
 ---
 # <a name="compiler-error-c2362"></a>Erro do compilador C2362
 
-inicialização de 'identifier' é ignorada por 'goto rótulo'
+> inicialização de '*identificador*' é ignorada por ' goto *rótulo*'
 
-Ao compilar com [/Za](../../build/reference/za-ze-disable-language-extensions.md), saltar para o rótulo impede que o identificador que está sendo inicializado.
+Quando compilado usando [/Za](../../build/reference/za-ze-disable-language-extensions.md), um salto para o rótulo impede que o identificador que está sendo inicializado.
 
-Não é possível saltar após uma declaração com um inicializador, a menos que a declaração é incluída em um bloco que não é inserido, ou a variável já foi inicializada.
+Você só pode saltar após uma declaração com um inicializador que a declaração seja colocada em um bloco que não é inserido, ou se a variável já foi inicializada.
 
-O exemplo a seguir gera C2326:
+O exemplo a seguir gera C2362:
 
-```
+```cpp
 // C2362.cpp
 // compile with: /Za
 int main() {
@@ -35,7 +35,7 @@ label1:;
 
 Solução possível:
 
-```
+```cpp
 // C2362b.cpp
 // compile with: /Za
 int main() {

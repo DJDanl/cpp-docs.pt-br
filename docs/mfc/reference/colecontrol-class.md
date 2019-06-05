@@ -334,12 +334,12 @@ helpviewer_keywords:
 - COleControl [MFC], IsInvokeAllowed
 - COleControl [MFC], SetInitialDataFormats
 ms.assetid: 53e95299-38e8-447b-9c5f-a381d27f5123
-ms.openlocfilehash: 30d73d546ee68a25f1e59776020477d038da65e8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: edad2ca391639868e7af1db6e13aaec66733f383
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160309"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503859"
 ---
 # <a name="colecontrol-class"></a>Classe COleControl
 
@@ -738,7 +738,7 @@ A seguir está uma lista de valores de retornados válidos:
 |------------------|-------------|
 |0|Alinhamento geral (números no texto à direita, à esquerda).|
 |1|Justificar à esquerda|
-|2|Centralizado |
+|2|Centralizado|
 |3|Justificar à direita|
 
 ### <a name="remarks"></a>Comentários
@@ -1184,7 +1184,7 @@ Um descritor para tipos de parâmetro do evento.
 
 Normalmente, essa função não deve ser chamada diretamente. Em vez disso, você chamará as funções de acionamento do evento na seção de mapa de evento da declaração de classe do seu controle.
 
-O *pbParams* argumento é uma lista separada por espaço **VTS_**. Um ou mais desses valores, separados por espaços (não a vírgula), especifica a lista de parâmetros da função. Os valores possíveis são:
+O *pbParams* argumento é uma lista separada por espaço **VTS_** . Um ou mais desses valores, separados por espaços (não a vírgula), especifica a lista de parâmetros da função. Os valores possíveis são:
 
 |Símbolo|Tipo de parâmetro|
 |------------|--------------------|
@@ -2811,7 +2811,7 @@ DWORD que descreve qual formulário ou o aspecto de um objeto deve ser exibido. 
 - Retângulo DVASPECT_TRANSPARENT que abrange todas as partes transparentes ou irregulares.
 
 *pRect*<br/>
-Aponta para o [RECTL](https://msdn.microsoft.com/library/windows/desktop/dd162907) estrutura especificando o retângulo no qual o objeto deve ser desenhado. Este parâmetro controla o posicionamento e alongamento do objeto.
+Aponta para o [RECTL](/previous-versions/dd162907\(v=vs.85\)) estrutura especificando o retângulo no qual o objeto deve ser desenhado. Este parâmetro controla o posicionamento e alongamento do objeto.
 
 ### <a name="return-value"></a>Valor de retorno
 

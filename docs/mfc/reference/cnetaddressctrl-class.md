@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CNetAddressCtrl [MFC], GetAllowType
 - CNetAddressCtrl [MFC], SetAllowType
 ms.assetid: cb4c6aca-3f49-4b52-b76c-65f57096155b
-ms.openlocfilehash: ec4d7aa6f2a1061e632b81a27a0233cf5fdd1c63
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 23160c51466ce1a2857d3648dd5f4970dfe172f7
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62373799"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504195"
 ---
 # <a name="cnetaddressctrl-class"></a>CNetAddressCtrl Class
 
@@ -74,7 +74,7 @@ O exemplo de código a seguir é uma parte de uma caixa de diálogo que valida u
 
 ## <a name="example"></a>Exemplo
 
-O seguinte exemplo de código do arquivo de cabeçalho da caixa de diálogo define a [NC_ADDRESS](/windows/desktop/api/shellapi/ns-shellapi-tagnc_address) e [NET_ADDRESS_INFO](https://msdn.microsoft.com/library/windows/desktop/bb773346) variáveis que são exigidas pelo [CNetAddressCtrl::GetAddress](#getaddress)método.
+O seguinte exemplo de código do arquivo de cabeçalho da caixa de diálogo define a [NC_ADDRESS](/windows/desktop/api/shellapi/ns-shellapi-tagnc_address) e [NET_ADDRESS_INFO](/windows/desktop/shell/hkey-type) variáveis que são exigidas pelo [CNetAddressCtrl::GetAddress](#getaddress)método.
 
 [!code-cpp[NVC_MFC_CNetAddressCtrl_s1#2](../../mfc/reference/codesnippet/cpp/cnetaddressctrl-class_2.h)]
 
@@ -191,7 +191,7 @@ HRESULT GetAddress(PNC_ADDRESS pAddress) const;
 ### <a name="parameters"></a>Parâmetros
 
 *pAddress*<br/>
-[no, out] Ponteiro para um [NC_ADDRESS](/windows/desktop/api/shellapi/ns-shellapi-tagnc_address) estrutura.  Defina as *pAddrInfo* membro dessa estrutura para o endereço de uma [NET_ADDRESS_INFO](https://msdn.microsoft.com/library/windows/desktop/bb773346) estrutura antes de chamar o método GetAddress.
+[no, out] Ponteiro para um [NC_ADDRESS](/windows/desktop/api/shellapi/ns-shellapi-tagnc_address) estrutura.  Defina as *pAddrInfo* membro dessa estrutura para o endereço de uma [NET_ADDRESS_INFO](/windows/desktop/shell/hkey-type) estrutura antes de chamar o método GetAddress.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -199,7 +199,7 @@ O valor S_OK se esse método for bem-sucedida; Caso contrário, um código de er
 
 ### <a name="remarks"></a>Comentários
 
-Se esse método for bem-sucedida, o [NET_ADDRESS_INFO](https://msdn.microsoft.com/library/windows/desktop/bb773346) estrutura contém informações adicionais sobre o endereço de rede.
+Se esse método for bem-sucedida, o [NET_ADDRESS_INFO](/windows/desktop/shell/hkey-type) estrutura contém informações adicionais sobre o endereço de rede.
 
 Use o [CNetAddressCtrl::SetAllowType](#setallowtype) método para especificar os tipos de endereços pode dar suporte a controle de endereço de rede atual. Use o [CNetAddressCtrl::GetAddress](#getaddress) método para validar e analisar o endereço de rede que o usuário insere. Use o [CNetAddressCtrl::DisplayErrorTip](#displayerrortip) método para exibir uma InfoDica de mensagem de erro se o [CNetAddressCtrl::GetAddress](#getaddress) método for bem-sucedido.
 
@@ -215,7 +215,7 @@ DWORD GetAllowType() const;
 
 ### <a name="return-value"></a>Valor de retorno
 
-Uma combinação bit a bit (OR) de sinalizadores que especifica os tipos de endereços de controle de endereço de rede pode dar suporte. Para obter mais informações, consulte [NET_STRING](https://msdn.microsoft.com/library/windows/desktop/bb762586).
+Uma combinação bit a bit (OR) de sinalizadores que especifica os tipos de endereços de controle de endereço de rede pode dar suporte. Para obter mais informações, consulte [NET_STRING](/windows/desktop/shell/net-string).
 
 ### <a name="remarks"></a>Comentários
 
@@ -233,7 +233,7 @@ HRESULT SetAllowType(DWORD dwAddrMask);
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|*dwAddrMask*|[in] Uma combinação bit a bit (OR) de sinalizadores que especifica os tipos de endereços de controle de endereço de rede pode dar suporte. Para obter mais informações, consulte [NET_STRING](https://msdn.microsoft.com/library/windows/desktop/bb762586).|
+|*dwAddrMask*|[in] Uma combinação bit a bit (OR) de sinalizadores que especifica os tipos de endereços de controle de endereço de rede pode dar suporte. Para obter mais informações, consulte [NET_STRING](/windows/desktop/shell/net-string).|
 
 ### <a name="return-value"></a>Valor de retorno
 

@@ -402,12 +402,12 @@ helpviewer_keywords:
 - CDC [MFC], m_hAttribDC
 - CDC [MFC], m_hDC
 ms.assetid: 715b3334-cb2b-4c9c-8067-02eb7c66c8b2
-ms.openlocfilehash: 2ff6cd6e0817f74c7688fc573d4b98f70704f96c
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: a6b6c872963dbbdf991d013cceba66ffd20bac5c
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65222578"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504396"
 ---
 # <a name="cdc-class"></a>Classe CDC
 
@@ -3220,7 +3220,7 @@ Retorna o modo gráfico atual em caso de sucesso. Para obter uma lista dos valor
 
 Retorna 0 em caso de falha.
 
-Para obter outras informações de erro, chame [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360).
+Para obter outras informações de erro, chame [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
 
 ### <a name="remarks"></a>Comentários
 
@@ -3276,7 +3276,7 @@ DWORD GetLayout() const;
 
 ### <a name="return-value"></a>Valor de retorno
 
-Se for bem-sucedido, o layout sinaliza para o contexto de dispositivo atual. Caso contrário, GDI_ERROR. Para obter informações estendidas de erro, chame [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360). Para obter uma lista dos sinalizadores de layout, consulte [CDC::SetLayout](#setlayout).
+Se for bem-sucedido, o layout sinaliza para o contexto de dispositivo atual. Caso contrário, GDI_ERROR. Para obter informações estendidas de erro, chame [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror). Para obter uma lista dos sinalizadores de layout, consulte [CDC::SetLayout](#setlayout).
 
 ### <a name="remarks"></a>Comentários
 
@@ -4012,7 +4012,7 @@ Retorna um valor diferente de zero em caso de sucesso.
 
 Retorna 0 em caso de falha.
 
-Para obter outras informações de erro, chame [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360).
+Para obter outras informações de erro, chame [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
 
 ### <a name="remarks"></a>Comentários
 
@@ -4459,7 +4459,7 @@ Retorna um valor diferente de zero em caso de sucesso.
 
 Retorna 0 em caso de falha.
 
-Para obter outras informações de erro, chame [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360).
+Para obter outras informações de erro, chame [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
 
 ### <a name="remarks"></a>Comentários
 
@@ -6003,7 +6003,7 @@ Especifica o modo de gráfico. Para obter uma lista dos valores de que esse par�
 
 Retorna o modo de gráfico antigos em caso de sucesso.
 
-Retorna 0 em caso de falha. Para obter outras informações de erro, chame [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360).
+Retorna 0 em caso de falha. Para obter outras informações de erro, chame [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
 
 ### <a name="remarks"></a>Comentários
 
@@ -6032,7 +6032,7 @@ Sinalizadores de controle de layout de contexto de dispositivo e bitmap. Ele pod
 
 Se for bem-sucedido, o layout anterior do contexto do dispositivo.
 
-Se não for bem-sucedido, GDI_ERROR. Para obter outras informações de erro, chame [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360).
+Se não for bem-sucedido, GDI_ERROR. Para obter outras informações de erro, chame [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
 
 ### <a name="remarks"></a>Comentários
 
@@ -6657,7 +6657,7 @@ Retorna um valor diferente de zero em caso de sucesso.
 
 Retorna 0 em caso de falha.
 
-Para obter outras informações de erro, chame [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360).
+Para obter outras informações de erro, chame [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
 
 ### <a name="remarks"></a>Comentários
 

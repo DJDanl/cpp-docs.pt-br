@@ -98,12 +98,12 @@ helpviewer_keywords:
 - CReBarCtrl [MFC], ShowBand
 - CReBarCtrl [MFC], SizeToRect
 ms.assetid: 154570d7-e48c-425d-8c7e-c64542bcb4cc
-ms.openlocfilehash: db72dbab14db69f14d7c3d813562ec661df4b424
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a6996f978305472ec7a3af171ecf0987724751d5
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62372343"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504743"
 ---
 # <a name="crebarctrl-class"></a>Classe CReBarCtrl
 
@@ -317,7 +317,7 @@ Diferente de zero se bem-sucedido; Caso contrário, 0.
 
 ### <a name="remarks"></a>Comentários
 
-Use `CreateEx` em vez de [Create](#create) para aplicar estilos estendidos do Windows, especificados pelo prefácio de estilo estendido do Windows **WS_EX_**.
+Use `CreateEx` em vez de [Create](#create) para aplicar estilos estendidos do Windows, especificados pelo prefácio de estilo estendido do Windows **WS_EX_** .
 
 ##  <a name="crebarctrl"></a>  CReBarCtrl::CReBarCtrl
 
@@ -678,7 +678,7 @@ O índice baseado em zero da faixa em determinado ponto, ou -1 se nenhuma faixa 
 
 ##  <a name="idtoindex"></a>  CReBarCtrl::IDToIndex
 
-Implementa o comportamento da mensagem do Win32 [RB_IDTOINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774496), conforme descrito no SDK do Windows.
+Implementa o comportamento da mensagem do Win32 [RB_IDTOINDEX](/windows/desktop/controls/rb-idtoindex), conforme descrito no SDK do Windows.
 
 ```
 int IDToIndex(UINT uBandID) const;

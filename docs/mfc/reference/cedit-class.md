@@ -94,12 +94,12 @@ helpviewer_keywords:
 - CEdit [MFC], ShowBalloonTip
 - CEdit [MFC], Undo
 ms.assetid: b1533c30-7f10-4663-88d3-8b7f2c9f7024
-ms.openlocfilehash: 45c03d142c34186660aa2715081ffb0f45e85ccc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 295a58a86f35fca3b8d25706857162facc9cb3ea
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62164066"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503739"
 ---
 # <a name="cedit-class"></a>Classe CEdit
 
@@ -181,7 +181,7 @@ Se você quiser manipular mensagens de notificação do Windows enviadas por um 
 
 Cada entrada de mapa de mensagem usa o seguinte formato:
 
-  **ON_**_NOTIFICATION_**(** _id_**,** _memberFxn_ **)**
+  **ON_** _NOTIFICATION_ **(** _id_ **,** _memberFxn_ **)**
 
 em que `id` Especifica a ID de janela filho do controle de edição, enviando a notificação e `memberFxn` é o nome da função de membro pai que você tenha escrito para manipular a notificação.
 
@@ -708,7 +708,7 @@ Especifica o caractere a ser exibido em vez do caractere digitado pelo usuário.
 
 ### <a name="remarks"></a>Comentários
 
-Se você criar um controle de edição com o estilo ES_PASSWORD, a DLL que suporta o controle determina o caractere de senha padrão. O manifesto ou o [InitCommonControlsEx](/windows/desktop/api/commctrl/nf-commctrl-initcommoncontrolsex) método determina qual DLL dá suporte a controle de edição. Se o User32 dá suporte a controle de edição, o caractere de senha padrão é o asterisco ('* ', U + 002A). Se o comctl32.dll versão 6 dá suporte a controle de edição, o caractere padrão é CÍRCULO preto ('●', U + 25CF). Para obter mais informações sobre o que dá suporte a DLL e versão controles comuns, consulte [Shell e versões de controles comuns](https://msdn.microsoft.com/library/windows/desktop/bb776779).
+Se você criar um controle de edição com o estilo ES_PASSWORD, a DLL que suporta o controle determina o caractere de senha padrão. O manifesto ou o [InitCommonControlsEx](/windows/desktop/api/commctrl/nf-commctrl-initcommoncontrolsex) método determina qual DLL dá suporte a controle de edição. Se o User32 dá suporte a controle de edição, o caractere de senha padrão é o asterisco ('* ', U + 002A). Se o comctl32.dll versão 6 dá suporte a controle de edição, o caractere padrão é CÍRCULO preto ('●', U + 25CF). Para obter mais informações sobre o que dá suporte a DLL e versão controles comuns, consulte [Shell e versões de controles comuns](/previous-versions/windows/desktop/legacy/bb776779\(v=vs.85\)).
 
 Esse método envia o [EM_GETPASSWORDCHAR](/windows/desktop/Controls/em-getpasswordchar) mensagem, que é descrita no SDK do Windows.
 
@@ -867,7 +867,7 @@ O índice de caracteres é o número de caracteres do início do controle de edi
 
 Essa função membro é processada somente por controles de edição de várias linhas.
 
-Para obter mais informações, consulte [EM_LINEINDEX](https://msdn.microsoft.com/library/windows/desktop/bb761611) no SDK do Windows.
+Para obter mais informações, consulte [EM_LINEINDEX](/windows/desktop/controls/em-lineindex) no SDK do Windows.
 
 ### <a name="example"></a>Exemplo
 

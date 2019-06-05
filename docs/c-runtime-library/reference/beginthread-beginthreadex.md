@@ -29,12 +29,12 @@ helpviewer_keywords:
 - _beginthreadex function
 - beginthread function
 ms.assetid: 0df64740-a978-4358-a88f-fb0702720091
-ms.openlocfilehash: d70d2fb0ecb647d4854a6277d6c69cd9886e072f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f64fd7b945fc8ea2e5c111d300266e07faade0e7
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62349258"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504520"
 ---
 # <a name="beginthread-beginthreadex"></a>_beginthread, _beginthreadex
 
@@ -83,7 +83,7 @@ Tamanho da pila para um novo thread ou 0.
 Lista de argumentos a serem passados para um novo thread, ou **nulo**.
 
 *Segurança*<br/>
-Ponteiro para uma estrutura [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) que determina se o identificador retornado pode ser herdado por processos filhos. Se *segurança* é **nulo**, o identificador não pode ser herdado. Deve ser **nulo** para aplicativos do Windows 95.
+Ponteiro para uma estrutura [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) que determina se o identificador retornado pode ser herdado por processos filhos. Se *segurança* é **nulo**, o identificador não pode ser herdado. Deve ser **nulo** para aplicativos do Windows 95.
 
 *initflag*<br/>
 Sinalizadores que controlam o estado inicial de um novo thread. Definir *initflag* como 0 para executar imediatamente, ou a **CREATE_SUSPENDED** para criar o thread em um estado suspenso; use [ResumeThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-resumethread) para executar o thread. Definir *initflag* à **STACK_SIZE_PARAM_IS_A_RESERVATION** sinalizador usar *stack_size* conforme o tamanho da pilha em bytes de reserva inicial; se esse sinalizador é não especificado, *stack_size* Especifica o tamanho de confirmação.

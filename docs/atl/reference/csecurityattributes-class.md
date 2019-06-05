@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSecurityAttributes class
 ms.assetid: a094880c-52e1-4a28-97ff-752d5869908e
-ms.openlocfilehash: 66188a2c944379cfae813220937ac1e7e98fb41d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b26de7a2a3426ed2fe86bd7ef50f6c5410fa5364
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62278027"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503201"
 ---
 # <a name="csecurityattributes-class"></a>Classe CSecurityAttributes
 
@@ -99,7 +99,7 @@ Esse método é usado pelo construtor para inicializar o `CSecurityAttributes` o
 ## <a name="see-also"></a>Consulte também
 
 [Exemplo de segurança](../../overview/visual-cpp-samples.md)<br/>
-[SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560)<br/>
+[SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\))<br/>
 [descritor de segurança](/windows/desktop/api/winnt/ns-winnt-_security_descriptor)<br/>
 [Visão geral da classe](../../atl/atl-class-overview.md)<br/>
 [Funções globais de segurança](../../atl/reference/security-global-functions.md)

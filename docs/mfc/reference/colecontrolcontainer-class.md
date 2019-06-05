@@ -72,12 +72,12 @@ helpviewer_keywords:
 - COleControlContainer [MFC], m_pWnd
 - COleControlContainer [MFC], m_siteMap
 ms.assetid: f7ce9246-0fb7-4f07-a83a-6c2390d0fdf8
-ms.openlocfilehash: 6e97f7ceafb92098d701cba64b4ec01d26d3991a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1d386072b67568ecf58afd0853df2d7fbaeac68d
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62310429"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504562"
 ---
 # <a name="colecontrolcontainer-class"></a>Classe COleControlContainer
 
@@ -473,7 +473,7 @@ O identificador do controle.
 Ponteiro para uma variável booliana que recebe um valor de êxito/falha de função (verdadeiro indica êxito, FALSE indica falha).
 
 *bSigned*<br/>
-Especifica se a função deve examinar o texto para um sinal de subtração no início e retornar um valor inteiro assinado se ele encontrar um. Se o *bSigned* parâmetro for TRUE, especificando-se de que o valor a ser recuperado é um valor inteiro com sinal, converta o valor de retorno para um **int** tipo. Para obter outras informações de erro, chame [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360).
+Especifica se a função deve examinar o texto para um sinal de subtração no início e retornar um valor inteiro assinado se ele encontrar um. Se o *bSigned* parâmetro for TRUE, especificando-se de que o valor a ser recuperado é um valor inteiro com sinal, converta o valor de retorno para um **int** tipo. Para obter outras informações de erro, chame [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -515,7 +515,7 @@ Especifica o comprimento máximo, em caracteres, da cadeia de caracteres a serem
 
 Se a função for bem-sucedida, o valor de retorno Especifica o número de caracteres copiados para o buffer, não incluindo o caractere nulo de terminação.
 
-Se a função falhar, o valor retornado será zero. Para obter outras informações de erro, chame [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360).
+Se a função falhar, o valor retornado será zero. Para obter outras informações de erro, chame [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
 
 ##  <a name="handlesetfocus"></a>  COleControlContainer::HandleSetFocus
 

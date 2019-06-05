@@ -264,12 +264,12 @@ helpviewer_keywords:
 - CListCtrl [MFC], SubItemHitTest
 - CListCtrl [MFC], Update
 ms.assetid: fe08a1ca-4b05-4ff7-a12a-ee4c765a2197
-ms.openlocfilehash: eea37d03ca5a4fab450fbca0c4c3f6c76fefb407
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1cdc4bfacee4913d3a38aaa45aadf0a430e547ab
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62225238"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503451"
 ---
 # <a name="clistctrl-class"></a>Classe CListCtrl
 
@@ -681,7 +681,7 @@ Diferente de zero se bem-sucedido; Caso contrário, 0.
 
 ### <a name="remarks"></a>Comentários
 
-Use `CreateEx` em vez de [Create](#create) para aplicar estilos estendidos do Windows, especificados pelo prefácio de estilo estendido do Windows **WS_EX_**.
+Use `CreateEx` em vez de [Create](#create) para aplicar estilos estendidos do Windows, especificados pelo prefácio de estilo estendido do Windows **WS_EX_** .
 
 `CreateEx` cria o controle com os estilos estendidos do Windows especificados pela *dwExStyle*. Para definir estilos estendidos específicos a um controle, chame [SetExtendedStyle](#setextendedstyle). Por exemplo, use `CreateEx` para definir esses estilos como WS_EX_CONTEXTHELP, mas use `SetExtendedStyle` para definir esses estilos como LVS_EX_FULLROWSELECT. Para obter mais informações, consulte os estilos descritos no tópico [estilos de exibição de lista estendida](/windows/desktop/Controls/extended-list-view-styles) no SDK do Windows.
 
@@ -1367,7 +1367,7 @@ TRUE se esse método for bem-sucedida; Caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-Esse método envia o [LVM_GETGROUPINFOBYINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774933) mensagem, que é descrita no SDK do Windows-->.
+Esse método envia o [LVM_GETGROUPINFOBYINDEX](/windows/desktop/controls/lvm-getgroupinfobyindex) mensagem, que é descrita no SDK do Windows-->.
 
 ### <a name="example"></a>Exemplo
 
@@ -1787,7 +1787,7 @@ BOOL GetItemIndexRect(
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|*pItemIndex*|[in] Ponteiro para um [LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762) estrutura para o item pai do subitem.<br /><br /> O chamador é responsável por alocar e definir os membros de [LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762) estrutura. Esse parâmetro não pode ser NULL.|
+|*pItemIndex*|[in] Ponteiro para um [LVITEMINDEX](/windows/desktop/api/commctrl/ns-commctrl-lvitemindex) estrutura para o item pai do subitem.<br /><br /> O chamador é responsável por alocar e definir os membros de [LVITEMINDEX](/windows/desktop/api/commctrl/ns-commctrl-lvitemindex) estrutura. Esse parâmetro não pode ser NULL.|
 |*iColumn*|[in] Índice baseado em zero de uma coluna no controle.|
 |*rectType*|[in] Parte do subitem de exibição de lista para o qual o retângulo delimitador é recuperado. Especifique um dos seguintes valores:<br /><br /> LVIR_BOUNDS - retorna o retângulo delimitador do subitem inteiro, incluindo o ícone e o rótulo.<br /><br /> LVIR_ICON - retorna o retângulo delimitador do ícone ou ícone pequeno do subitem.<br /><br /> LVIR_LABEL - retorna o retângulo delimitador do texto do subitem.|
 |*pRect*|[out] Ponteiro para um [RECT](/previous-versions/dd162897\(v=vs.85\)) estrutura que recebe informações sobre o retângulo delimitador do subitem.<br /><br /> O chamador é responsável por alocar o [RECT](/previous-versions/dd162897\(v=vs.85\)) estrutura. Esse parâmetro não pode ser NULL.|
@@ -2093,8 +2093,8 @@ BOOL GetNextItemIndex(
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|*pItemIndex*|[no, out] Ponteiro para o [LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762) estrutura que descreve o item no qual a pesquisa será iniciada, ou -1 para localizar o primeiro item que coincide com os sinalizadores na *nFlags* parâmetro.<br /><br /> Se esse método for bem-sucedida, o `LVITEMINDEX` estrutura descreve o item encontrado pela pesquisa.|
-|*nFlags*|[in] Uma combinação bit a bit (OR) de sinalizadores que especificam como executar a pesquisa.<br /><br /> A pesquisa pode depender do índice, o estado ou a aparência do item de destino ou a posição física do item de destino em relação ao item especificado pela *pItemIndex* parâmetro. Para obter mais informações, consulte o *sinalizadores* parâmetro na [LVM_GETNEXTITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb761059) mensagem.|
+|*pItemIndex*|[no, out] Ponteiro para o [LVITEMINDEX](/windows/desktop/api/commctrl/ns-commctrl-lvitemindex) estrutura que descreve o item no qual a pesquisa será iniciada, ou -1 para localizar o primeiro item que coincide com os sinalizadores na *nFlags* parâmetro.<br /><br /> Se esse método for bem-sucedida, o `LVITEMINDEX` estrutura descreve o item encontrado pela pesquisa.|
+|*nFlags*|[in] Uma combinação bit a bit (OR) de sinalizadores que especificam como executar a pesquisa.<br /><br /> A pesquisa pode depender do índice, o estado ou a aparência do item de destino ou a posição física do item de destino em relação ao item especificado pela *pItemIndex* parâmetro. Para obter mais informações, consulte o *sinalizadores* parâmetro na [LVM_GETNEXTITEMINDEX](/windows/desktop/controls/lvm-getnextitemindex) mensagem.|
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -2104,7 +2104,7 @@ TRUE se esse método for bem-sucedida; Caso contrário, FALSE.
 
 O chamador é responsável por alocar e definir os membros de `LVITEMINDEX` estrutura apontada pela *pItemIndex* parâmetro.
 
-Esse método envia o [LVM_GETNEXTITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb761059) mensagem, que é descrita no SDK do Windows.
+Esse método envia o [LVM_GETNEXTITEMINDEX](/windows/desktop/controls/lvm-getnextitemindex) mensagem, que é descrita no SDK do Windows.
 
 ## <a name="getnextselecteditem"></a>  CListCtrl::GetNextSelectedItem
 
@@ -2909,7 +2909,7 @@ Um controle de exibição de lista controla internamente itens por índice. Isso
 
 Observe que, em um ambiente multithreaded, o índice é garantido somente no thread que hospeda o controle de exibição de lista, não em threads em segundo plano.
 
-Esse método envia o [LVM_MAPIDTOINDEX](https://msdn.microsoft.com/library/windows/desktop/bb761137) mensagem, que é descrita no SDK do Windows.
+Esse método envia o [LVM_MAPIDTOINDEX](/windows/desktop/controls/lvm-mapidtoindex) mensagem, que é descrita no SDK do Windows.
 
 ## <a name="mapindextoid"></a>  CListCtrl::MapIndexToID
 
@@ -3822,7 +3822,7 @@ BOOL SetItemIndexState(
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|*pItemIndex*|[in] Ponteiro para um [LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762) estrutura que descreve um item. O chamador é responsável por alocar esta estrutura e definindo seus membros.|
+|*pItemIndex*|[in] Ponteiro para um [LVITEMINDEX](/windows/desktop/api/commctrl/ns-commctrl-lvitemindex) estrutura que descreve um item. O chamador é responsável por alocar esta estrutura e definindo seus membros.|
 |*dwState*|[in] O estado para definir o item, que é uma combinação bit a bit de [estados de item de exibição de lista](/windows/desktop/Controls/list-view-item-states). Especifique zero para a redefinição ou um para definir um estado.|
 |*dwMask*|[in] Uma máscara de bits válidas de estado especificado pelo *dwState* parâmetro. Especifica uma combinação bit a bit (OR) de [estados de item de exibição de lista](/windows/desktop/Controls/list-view-item-states).|
 
