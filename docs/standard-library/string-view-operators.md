@@ -26,7 +26,7 @@ ms.locfileid: "64346914"
 ---
 # <a name="ltstringviewgt-operators"></a>&lt;string_view&gt; operadores
 
-Use esses operadores para comparar dois objetos string_view, ou um string_view e algum outro objeto de cadeia de caracteres (por exemplo [std:: string](basic-string-class.md), ou **char\***) para que uma conversão implícita é fornecida. 
+Use esses operadores para comparar dois objetos string_view, ou um string_view e algum outro objeto de cadeia de caracteres (por exemplo [std:: string](basic-string-class.md), ou **char\*** ) para que uma conversão implícita é fornecida. 
 
 ||||
 |-|-|-|
@@ -113,7 +113,7 @@ Uma conversão implícita deve existir na *convertible_string_type* para a strin
 A comparação é baseada em um par comparação lexicográfica de sequências de caracteres. Se eles tiverem o mesmo número de elementos e os elementos são todas iguais, os dois objetos são iguais.
 
 
-## <a name="op_lt">Operador </a>&lt;
+## <a name="op_lt"> Operador</a>&lt;
 
 Testa se o objeto no lado esquerdo do operador é menor que o objeto a sidestring_view à direita
 ```cpp
@@ -236,7 +236,7 @@ um fluxo de saída que estão sendo gravado.
 
 Use este operador para inserir o conteúdo de um string_view em um fluxo de saída, por exemplo, usando [std:: cout](iostream.md#cout).
 
-## <a name="op_gt">Operador </a>&gt;
+## <a name="op_gt"> Operador</a>&gt;
 
 Testa se o objeto à esquerda do operador é maior do que o objeto à direita.
 
