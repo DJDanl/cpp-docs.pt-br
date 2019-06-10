@@ -1,8 +1,7 @@
 ---
 title: Adicionar uma classe
-ms.date: 11/08/2018
+ms.date: 05/14/2019
 f1_keywords:
-- vc.codewiz.classes.adding
 - vc.addclass
 helpviewer_keywords:
 - ATL projects, adding classes
@@ -10,16 +9,16 @@ helpviewer_keywords:
 - classes [C++], adding
 - Add Class dialog box
 ms.assetid: c34b5f70-4e72-4faa-ba21-e2b05361c4d9
-ms.openlocfilehash: 21dd4b1936eda201df8283146ba9f41fa81e11de
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: fa53c2af5cd3e81c2d4877ef255430eac9525aad
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693569"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "66182676"
 ---
 # <a name="add-a-class"></a>Adicionar uma classe
 
-Para adicionar uma classe a um projeto do Visual C++, no **Gerenciador de Soluções**, clique com o botão direito do mouse no projeto, escolha **Adicionar** e, em seguida, **Classe**. Isso abrirá a [caixa de diálogo Adicionar Classe](#add-class-dialog-box).
+Para adicionar uma classe a um projeto do Visual Studio C++, no **Gerenciador de Soluções**, clique com o botão direito do mouse no projeto, escolha **Adicionar** e, em seguida, **Classe**. Isso abrirá a [caixa de diálogo Adicionar Classe](#add-class-dialog-box).
 
 Ao adicionar uma classe, é necessário especificar um nome que seja diferente das classes já existentes no MFC ou na ATL. Se você especificar um nome já existente em uma das bibliotecas, o IDE mostrará uma mensagem de erro.
 
@@ -32,7 +31,7 @@ Caso a convenção de nomenclatura do projeto exija o uso de um nome existente, 
 
 ## <a name="what-kind-of-class-do-you-want-to-add"></a>Qual tipo de classe você deseja adicionar?
 
-Na caixa de diálogo **Adicionar Classe**, quando você expande o nó **Visual C++** no painel esquerdo, vários agrupamentos de modelos instalados são exibidos. Os grupos incluem **CLR**, **ATL**, **MFC** e **C++**. Quando você seleciona um grupo, uma lista dos modelos disponíveis nesse grupo é exibida no painel central. Cada modelo contém os arquivos e o código-fonte necessários para uma classe.
+Na caixa de diálogo **Adicionar Classe**, quando você expande o nó **Visual C++** no painel esquerdo, vários agrupamentos de modelos instalados são exibidos. Os grupos incluem **CLR**, **ATL**, **MFC** e **C++** . Quando você seleciona um grupo, uma lista dos modelos disponíveis nesse grupo é exibida no painel central. Cada modelo contém os arquivos e o código-fonte necessários para uma classe.
 
 Para gerar uma nova classe, selecione um modelo no painel central, digite um nome para a classe na caixa **Nome** e selecione **Adicionar**. Isso abrirá o **Assistente de Adição de Classe**, de modo que você possa especificar opções para a classe.
 
@@ -81,13 +80,8 @@ Há quatro categorias de modelos **Adicionar Classe**: .NET, ATL, MFC e Genéric
 |Modelo|Wizard|
 |--------------|------------|
 |Adicionar Suporte para ATL ao MFC|Não disponível|
-|Componente Active Server Page da ATL|[Assistente do componente Active Server Page da ATL](../atl/reference/atl-active-server-page-component-wizard.md)|
 |Controle da ATL|[Assistente de controle da ATL](../atl/reference/atl-control-wizard.md)|
 |Caixa de Diálogo da ATL|[Assistente de caixa de diálogo da ATL](../atl/reference/atl-dialog-wizard.md)|
-|Componente COM+ 1.0 da ATL|[Assistente de componente de COM+ 1.0 da ATL](../atl/reference/atl-com-plus-1-0-component-wizard.md)|
-|Consumidor OLEDB da ATL|[Assistente de consumidor OLE DB da ATL](../atl/reference/atl-ole-db-consumer-wizard.md)|
-|Provedor OLEDB da ATL|[Assistente de provedor OLE DB da ATL](../atl/reference/atl-ole-db-provider-wizard.md)|
-|Página de Propriedades da ATL|[Assistente de página de propriedades da ATL](../atl/reference/atl-property-page-wizard.md)|
 |Objeto ATL Simples|[Assistente de objeto simples da ATL](../atl/reference/atl-simple-object-wizard.md)|
 |Provedor de Eventos WMI|Assistente do provedor de eventos WMI|
 |Provedor de Instâncias da WMI|Assistente do provedor de instâncias da WMI|
@@ -97,9 +91,6 @@ Há quatro categorias de modelos **Adicionar Classe**: .NET, ATL, MFC e Genéric
 |Modelo|Wizard|
 |--------------|------------|
 |MFC Class|[Assistente para adicionar classe do MFC](../mfc/reference/mfc-add-class-wizard.md)|
-|Classe MFC em Controle ActiveX|[Assistente para adicionar classe por meio de controle ActiveX](../ide/add-class-from-activex-control-wizard.md)|
-|Classe MFC em TypeLib|[Assistente para adicionar classe por meio de TypeLib](../mfc/reference/add-class-from-typelib-wizard.md)|
-|Consumidor ODBC do MFC|[Assistente de consumidor ODBC do MFC](../mfc/reference/mfc-odbc-consumer-wizard.md)|
 
 #### <a name="generic-classes"></a>Classes genéricas
 

@@ -1,21 +1,21 @@
 ---
 title: 'Passo a passo: Compilando um projeto (C++)'
-ms.date: 09/14/2018
+ms.date: 04/25/2019
 helpviewer_keywords:
 - building projects [C++]
 - projects [C++], building
 - project building [C++]
 ms.assetid: d459bc03-88ef-48d0-9f9a-82d17f0b6a4d
-ms.openlocfilehash: 8aadb6983cc096ff75785c6bab7ace6bd5f0c632
-ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
+ms.openlocfilehash: ea477e7b2f5435e049b242e68d151cc1f2d20624
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57808996"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "66182686"
 ---
 # <a name="walkthrough-building-a-project-c"></a>Passo a passo: Compilando um projeto (C++)
 
-Neste passo a passo, você introduzirá um erro de sintaxe do Visual C++ no código deliberadamente para saber o que é um erro de compilação e como corrigi-lo. Quando você compila o projeto, uma mensagem de erro indica qual é o problema e em que local ele ocorreu.
+Neste passo a passo, você introduzirá um erro de sintaxe do C++ no código deliberadamente para saber o que é um erro de compilação e como corrigi-lo. Quando você compila o projeto, uma mensagem de erro indica qual é o problema e em que local ele ocorreu.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 

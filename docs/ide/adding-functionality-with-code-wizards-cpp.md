@@ -1,35 +1,39 @@
 ---
 title: Adicionando funcionalidade com assistentes de código (C++)
-ms.date: 10/03/2018
-f1_keywords:
-- vc.codewiz.classes
+ms.date: 05/14/2019
 helpviewer_keywords:
 - code wizards [C++]
-- wizards [C++], code
-- Visual C++ projects, adding functionality
-- projects [C++], adding functionality
-- class wizards [C++]
 ms.assetid: 6afb7ef9-7056-423d-b244-91bb4236d1d7
-ms.openlocfilehash: 87c46be17c20bf9d592dd2b5c537897fa629e9c2
-ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
+ms.openlocfilehash: 8c88936edcb9110fe7482281f483f11c542b83c1
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57822568"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "66182646"
 ---
 # <a name="adding-functionality-with-code-wizards-c"></a>Adicionando funcionalidade com assistentes de código (C++)
 
 Depois de criar um projeto, você desejará alterar ou adicionar funcionalidades ao projeto. Essas tarefas incluem criação de classes, adição de novas variáveis e funções de membro e adição de métodos e propriedades de Automação. Os assistentes de código foram projetados para permitir que você faça tudo isso.
 
-> [!WARNING]
-> Vários assistentes de código do ATL e do MFC foram preteridos e serão removidos em uma versão futura do Visual Studio. Esses assistentes são usados raramente. O suporte geral para ATL e MFC não é afetado pela remoção desses assistentes. Se você quiser compartilhar seus comentários sobre essa alteração, participe [desta pesquisa](https://www.surveymonkey.com/r/QDWKKCN). Seus comentários são importantes para nós.
+> [!NOTE]
+> Os assistentes de código raramente usados a seguir são removidos no Visual Studio 2019. O suporte geral para ATL e MFC não é afetado pela remoção desses assistentes. O código de exemplo para essas tecnologias está arquivado em Microsoft Docs e no repositório GitHub VCSamples.
+
+- Assistente de componente de COM+ 1.0 da ATL
+- Assistente do componente Active Server Page da ATL
+- Assistente de provedor OLE DB da ATL
+- Assistente de página de propriedades da ATL
+- Assistente de consumidor OLE DB da ATL
+- Consumidor ODBC do MFC
+- Classe MFC em Controle ActiveX
+- Classe MFC em TypeLib.
+
 
 > [!NOTE]
 >  Agora você pode adicionar manipuladores de mensagens e mapear as mensagens para eles e substituir funções virtuais MFC usando a [janela Propriedades](/visualstudio/ide/reference/properties-window).
 
-## <a name="accessing-visual-c-code-wizards"></a>Acessando os assistentes de código do Visual C++
+## <a name="accessing-c-code-wizards"></a>Como acessar assistentes de código do C++
 
-Há três locais em que você pode acessar os assistentes de código do Visual C++:
+Há três locais em que você pode acessar os assistentes de código do C++:
 
 - No menu **Projeto**, o comando **Adicionar Novo Item** permite que você abra a caixa de diálogo `Add New Item`, que ajuda você a adicionar novos arquivos ao projeto. O comando **Adicionar Classe** exibe a caixa de diálogo [Adicionar Classe](../ide/add-class-dialog-box.md), que, por sua vez, abre assistentes para cada um dos tipos de classe que podem ser adicionados ao projeto. O comando **Adicionar Recurso** exibe a caixa de diálogo [Adicionar Recurso](../windows/add-resource-dialog-box.md), na qual você pode criar ou selecionar um recurso a ser adicionado ao projeto.
 
@@ -73,5 +77,5 @@ Há três locais em que você pode acessar os assistentes de código do Visual C
 
 [Substituindo uma função virtual](../ide/overriding-a-virtual-function-visual-cpp.md)<br>
 [Navegando pela estrutura de classe](../ide/navigating-the-class-structure-visual-cpp.md)<br>
-[Tipos de projeto do Visual C++](../build/reference/visual-cpp-project-types.md)<br>
-[Tipos de arquivo criados para projetos do Visual C++](../build/reference/file-types-created-for-visual-cpp-projects.md)
+[Tipos de projeto do C++ no Visual Studio](../build/reference/visual-cpp-project-types.md)<br>
+[Tipos de arquivo criados para projetos do Visual Studio C++](../build/reference/file-types-created-for-visual-cpp-projects.md)

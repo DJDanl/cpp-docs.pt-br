@@ -1,17 +1,18 @@
 ---
 title: Escrevendo e refatorando um código (C++)
-ms.date: 04/30/2018
+description: Use o editor de código C++ no Visual Studio para formatar, navegar, entender e refatorar seu código.
+ms.date: 05/14/2019
 ms.assetid: 56ffb9e9-514f-41f4-a3cf-fd9ce2daf3b6
-ms.openlocfilehash: bc839a759d2ff3f403ca001ab32702d3fe27833e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 04f738cd6fdd456c432c334df42f37339e7fa49e
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50570424"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "66182626"
 ---
 # <a name="writing-and-refactoring-code-c"></a>Escrevendo e refatorando um código (C++)
 
-O editor de códigos e o IDE do Visual C++ fornecem muitos recursos de codificação. Alguns são exclusivos ao C++ e outros são essencialmente os mesmos para todas as linguagens Visual Studio. Para obter mais informações sobre as funcionalidades compartilhadas, confira [Escrevendo um código no Editor de Códigos e de Texto](/visualstudio/ide/writing-code-in-the-code-and-text-editor). As opções para habilitar e configurar funcionalidades específicas ao C++ estão localizadas em **Ferramentas &#124; Opções &#124; Editor de Texto &#124; C/C++**. Depois de escolher a opção que deseja definir, você obtenha mais ajuda pressionando **F1** quando a caixa de diálogo estiver no foco. Para obter opções gerais de formatação de código, digite `Editor C++` em **QuickLaunch**.
+O editor de códigos e o IDE do Visual Studio fornecem muitos recursos de codificação. Alguns são exclusivos ao C++ e outros são essencialmente os mesmos para todas as linguagens Visual Studio. Para obter mais informações sobre as funcionalidades compartilhadas, confira [Escrevendo um código no Editor de Códigos e de Texto](/visualstudio/ide/writing-code-in-the-code-and-text-editor). As opções para habilitar e configurar funcionalidades específicas ao C++ estão localizadas em **Ferramentas &#124; Opções &#124; Editor de Texto &#124; C/C++** . Depois de escolher a opção que deseja definir, você obtenha mais ajuda pressionando **F1** quando a caixa de diálogo estiver no foco. Para obter opções gerais de formatação de código, digite `Editor C++` em **QuickLaunch**.
 
 As funcionalidades experimentais, que podem ou não ser incluídas em uma versão futura do Visual Studio, são encontradas na caixa de diálogo [Experimental do C++ do Editor de Texto](/visualstudio/ide/reference/options-text-editor-c-cpp-experimental). No Visual Studio 2017, você pode habilitar o **IntelliSense Preditivo** nessa caixa de diálogo.
 
@@ -37,7 +38,7 @@ Para obter informações completas, confira [Visual C++ IntelliSense](/visualstu
 
 Um snippet é uma parte predefinida do código-fonte. Clique com o botão direito do mouse em um único ponto ou no texto selecionado para inserir um snippet ou colocar o texto selecionado entre o snippet. A ilustração a seguir mostra as três etapas para colocar uma instrução selecionada entre um loop for. Os realces em amarelo na imagem final são campos editáveis acessados com a tecla TAB. Para obter mais informações, consulte [Snippets de Código](/visualstudio/ide/code-snippets).
 
-![Lista suspensa Inserir Snippet do Visual C#&amp;#43; &amp;#43;](../ide/media/vs2015_cpp_surround_with.png "vs2015_cpp_surround_with")
+![Lista suspensa Inserir Snippet do Visual C#&#43; &#43;](../ide/media/vs2015_cpp_surround_with.png "vs2015_cpp_surround_with")
 
 ## <a name="add-class"></a>Adicionar Classe
 
@@ -91,7 +92,7 @@ Focalize uma variável ou uma declaração da função, clique com o botão dire
 
 ## <a name="view-call-hierarchy"></a>Exibir Hierarquia de Chamada
 
-Clique com o botão direito do mouse em qualquer chamada de função e exiba uma lista recursiva de todas as funções chamadas por ela e todas as funções que a chamam. Cada função na lista pode ser expandida da mesma maneira. Para obter mais informações, confira [Hierarquia de chamada](/visualstudio/ide/reference/call-hierarchy).
+Clique com o botão direito do mouse em qualquer chamada de função e exiba uma lista recursiva de todas as funções chamadas por ela e de todas as funções que a chamam. Cada função na lista pode ser expandida da mesma maneira. Para obter mais informações, confira [Hierarquia de chamada](/visualstudio/ide/reference/call-hierarchy).
 
 ![Hierarquia de chamada do Visual C&#43;&#43;](../ide/media/vs2015_cpp_call_hierarchy.png "vs2015_cpp_call_hierarchy")
 
@@ -107,7 +108,7 @@ Clique com o botão direito do mouse em qualquer lugar em um arquivo de código-
 
 ## <a name="scrollbar-map-mode"></a>Modo de mapa de barra de rolagem
 
-O modo de mapa de barra de rolagem permite que você role e navegue por um arquivo de código rapidamente sem, de fato, sair do local atual. Se preferir, clique em qualquer lugar no mapa de códigos para ir diretamente para esse local. Para obter mais informações, confira [Como acompanhar o código personalizando a barra de rolagem](/visualstudio/ide/how-to-track-your-code-by-customizing-the-scrollbar).
+O modo de mapa de barra de rolagem permite que você role e navegue por um arquivo de código rapidamente sem, de fato, sair do local atual. Se preferir, clique em qualquer lugar no mapa de códigos para ir diretamente para esse local. Para obter mais informações, confira [Como: Acompanhar o código personalizando a barra de rolagem](/visualstudio/ide/how-to-track-your-code-by-customizing-the-scrollbar).
 
 ![Mapa de códigos no Visual C&#43;&#43;](../ide/media/vs2015_cpp_code_map.png "vs2015_cpp_code_map")
 

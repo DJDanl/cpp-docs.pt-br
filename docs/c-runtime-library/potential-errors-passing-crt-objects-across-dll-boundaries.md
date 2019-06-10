@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - DLL conflicts [C++]
 ms.assetid: c217ffd2-5d9a-4678-a1df-62a637a96460
-ms.openlocfilehash: 31f9d9aceba167b516c9d37724e240f1bc4586e1
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 10fbb128698b6422779d09a15fe3c1d25e8de5b5
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57749887"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446659"
 ---
 # <a name="potential-errors-passing-crt-objects-across-dll-boundaries"></a>Erros em potencial passando por objetos CRT em limites de DLL
 
@@ -23,7 +23,7 @@ HEAP[]: endereço inválido especificado para RtlValidateHeap(#,#)
 
 ## <a name="causes"></a>Causas
 
-Cada cópia da biblioteca de CRT tem um estado separado e distinto, mantido no armazenamento local de thread por seu aplicativo ou DLL. Dessa forma, objetos CRT, como identificadores de arquivos, variáveis de ambiente e localidades, só serão válidos para a cópia do CRT no aplicativo ou DLL em que esses objetos estiverem alocados ou definidos. Quando uma DLL e seus clientes de aplicativo usam cópias diferentes da biblioteca de CRT, não é possível passar esses objetos CRT além do limite da DLL e esperar que eles sejam recebidos corretamente do outro lado. Isso vale particularmente para as versões de CRT anteriores ao CRT Universal no Visual Studio 2015 e posterior. Havia uma biblioteca de CRT específica de versão para cada versão do Visual Studio, compilada com o Visual C++ 2013 ou anterior. Os detalhes da implementação interna do CRT, por exemplo, suas estruturas de dados e convenções de nomenclatura, eram diferentes em cada versão. Nunca houve suporte à vinculação dinâmica do código compilado para uma versão do CRT com outra versão da DLL do CRT, embora isso pudesse funcionar ocasionalmente, mais por sorte do que por design.
+Cada cópia da biblioteca de CRT tem um estado separado e distinto, mantido no armazenamento local de thread por seu aplicativo ou DLL. Dessa forma, objetos CRT, como identificadores de arquivos, variáveis de ambiente e localidades, só serão válidos para a cópia do CRT no aplicativo ou DLL em que esses objetos estiverem alocados ou definidos. Quando uma DLL e seus clientes de aplicativo usam cópias diferentes da biblioteca de CRT, não é possível passar esses objetos CRT além do limite da DLL e esperar que eles sejam recebidos corretamente do outro lado. Isso vale particularmente para as versões de CRT anteriores ao CRT Universal no Visual Studio 2015 e posterior. Havia uma biblioteca de CRT específica de versão para cada versão do Visual Studio, compilada com o Visual Studio 2013 ou anterior. Os detalhes da implementação interna do CRT, por exemplo, suas estruturas de dados e convenções de nomenclatura, eram diferentes em cada versão. Nunca houve suporte à vinculação dinâmica do código compilado para uma versão do CRT com outra versão da DLL do CRT, embora isso pudesse funcionar ocasionalmente, mais por sorte do que por design.
 
 Além disso, como cada cópia da biblioteca de CRT tem seu próprio gerenciador de heap, a alocação de memória em uma biblioteca de CRT e a passagem do ponteiro por um limite de DLL para ser liberado por outra cópia da biblioteca de CRT é uma possível causa de corrupção de heap. Se você criar sua DLL para que ela passe objetos CRT além do limite, ou aloque memória e espere a liberação fora da DLL, você restringe os clientes de aplicativo da DLL a usar a mesma cópia da biblioteca de CRT que a DLL. A DLL e seus clientes normalmente usam a mesma cópia da biblioteca de CRT somente se estiverem vinculados no momento do carregamento à mesma versão da DLL do CRT. Como a versão da DLL da biblioteca CRT Universal usada pelo Visual Studio 2015 e posterior no Windows 10 agora é um componente do Windows implantado centralmente, ucrtbase.dll, é a mesma para aplicativos compilados com o Visual Studio 2015 e versões posteriores. No entanto, mesmo quando o código CRT seja idêntico, não é possível fornecer memória alocada em um heap para um componente que usa um heap diferente.
 

@@ -12,16 +12,16 @@ helpviewer_keywords:
 - Build system changes, $(Inherit)
 - Build system changes, $(NoInherit)
 ms.assetid: e564d95f-a6cc-4d97-b57e-1a71daf66f4a
-ms.openlocfilehash: 621e62379657da66d6eaec7a3ceff780fd610066
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: c3e51aa7e5a4346137e94191b551b0d53452e460
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57828165"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65449013"
 ---
 # <a name="build-system-changes"></a>Alterações no sistema de compilação
 
-O sistema MSBuild é usado para compilar projetos do Visual C++. No entanto, no Visual Studio 2008 e em versões anteriores, o sistema VCBuild foi usado. Determinados tipos de arquivo e conceitos que dependem do VCBuild não existem ou são representados de maneira diferente no sistema atual. Este documento discute as diferenças no sistema de build atual.
+O sistema MSBuild é usado para compilar projetos do Visual Studio C++. No entanto, no Visual Studio 2008 e em versões anteriores, o sistema VCBuild foi usado. Determinados tipos de arquivo e conceitos que dependem do VCBuild não existem ou são representados de maneira diferente no sistema atual. Este documento discute as diferenças no sistema de build atual.
 
 ## <a name="vcproj-is-now-vcxproj"></a>.vcproj agora é .vcxproj
 
@@ -37,7 +37,7 @@ Na versão atual, a extensão de nome de arquivo para uma folha de propriedades 
 
 ## <a name="custom-build-rules-and-rules-files"></a>Regras de build personalizadas e arquivos .rules
 
-Em versões anteriores, um *arquivo de regra* é um arquivo baseado em XML que tem uma extensão de nome de arquivo .rules. Um arquivo de regra permite definir regras de build personalizadas e incorporá-las ao processo de build de um projeto do Visual C++. Uma regra de build personalizada, que pode ser associada a uma ou mais extensões de nome de arquivo, permite que você passe os arquivos de entrada para uma ferramenta que cria um ou mais arquivos de saída.
+Em versões anteriores, um *arquivo de regra* é um arquivo baseado em XML que tem uma extensão de nome de arquivo .rules. Um arquivo de regra permite definir regras de build personalizadas e incorporá-las ao processo de build de um projeto do Visual Studio C++. Uma regra de build personalizada, que pode ser associada a uma ou mais extensões de nome de arquivo, permite que você passe os arquivos de entrada para uma ferramenta que cria um ou mais arquivos de saída.
 
 Nesta versão, as regras de build personalizadas são representadas por três tipos de arquivo: .xml, .props e .targets, em vez de um arquivo .rules. Quando um arquivo .rules que foi criado usando uma versão anterior do Visual C++ é migrado para a versão atual, arquivos .xml, .props e .targets equivalentes são criados e armazenados em seu projeto junto com o arquivo .rules original.
 
@@ -48,9 +48,9 @@ Nesta versão, as regras de build personalizadas são representadas por três ti
 
 Em versões anteriores, a macro **$(Inherit)** especifica a ordem na qual as propriedades herdadas são exibidas na linha de comando que é composta pelo sistema de build do projeto. A macro **$(NoInherit)** faz com que qualquer ocorrência de $(Inherit) seja ignorada e faz com que as propriedades que seriam herdadas não sejam mais. Por exemplo, por padrão a macro $(Inherit) faz com que arquivos especificados usando a opção do compilador [/I (diretórios de inclusão adicionais)](../build/reference/i-additional-include-directories.md) sejam acrescentados à linha de comando.
 
-Na versão atual, a herança é compatível especificando o valor de uma propriedade como a concatenação de um ou mais valores literais e macros de propriedade. Não há suporte para as macros **$(Inherit)** e **$(NoInherit)**.
+Na versão atual, a herança é compatível especificando o valor de uma propriedade como a concatenação de um ou mais valores literais e macros de propriedade. Não há suporte para as macros **$(Inherit)** e **$(NoInherit)** .
 
-No exemplo a seguir, uma lista delimitada por ponto e vírgula é atribuída a uma propriedade em uma página de propriedades. A lista consiste na concatenação do *\<value>* literal e do valor da propriedade `MyProperty`, que é acessada usando a notação de macro, **$(**<em>MyProperty</em>**)**.
+No exemplo a seguir, uma lista delimitada por ponto e vírgula é atribuída a uma propriedade em uma página de propriedades. A lista consiste na concatenação do *\<value>* literal e do valor da propriedade `MyProperty`, que é acessada usando a notação de macro, **$(** <em>MyProperty</em> **)** .
 
 ```
 Property=<value>;$(MyProperty)

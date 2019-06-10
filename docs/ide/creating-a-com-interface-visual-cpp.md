@@ -1,25 +1,22 @@
 ---
 title: Criar uma interface COM
-ms.date: 11/12/2018
-f1_keywords:
-- vc.codewiz.com.creating.interfaces
-- vc.codewiz.com.editing.interfaces
+ms.date: 05/14/2019
 helpviewer_keywords:
 - COM interfaces, creating
 - methods [C++], adding to COM interfaces
 - COM interfaces, editing
 - properties [C++], adding to COM interfaces
 ms.assetid: 1be84d3c-6886-4d1e-8493-56c4d38a96d4
-ms.openlocfilehash: dfc4b09f4fa42b179bdef91877e0a004caa69187
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 09ddc113450fadb208e4f8471bc9aacf596a53f1
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693695"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "66182606"
 ---
 # <a name="create-a-com-interface"></a>Criar uma interface COM
 
-O Visual C++ fornece assistentes e modelos para criar projetos que usam interfaces e dispinterfaces de definição COM para classes de automação e objetos COM.
+O Visual Studio fornece assistentes e modelos para criar projetos que usam interfaces e dispinterfaces de definição COM para classes de automação e objetos COM.
 
 Use esses assistentes para executar as três tarefas comuns a seguir:
 
@@ -74,7 +71,7 @@ No Modo de Exibição de Classe e em seus menus de atalho, você pode trabalhar 
 
 ## <a name="edit-a-com-interface"></a>Editar uma interface COM
 
-Usando comandos do menu de atalho de Modo de Exibição de Classe, você pode definir novos métodos e novas propriedades para as interfaces COM nos projetos do Visual C++. Na Caixa de Ferramentas, você também pode definir eventos para controles ActiveX.
+Usando comandos do menu de atalho de Modo de Exibição de Classe, é possível definir novos métodos e novas propriedades para as interfaces COM nos projetos do Visual Studio C++. Na Caixa de Ferramentas, você também pode definir eventos para controles ActiveX.
 
 Para classes de objeto COM baseadas em ATL e MFC, você pode editar a implementação da classe ao mesmo tempo que edita a interface.
 
