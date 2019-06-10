@@ -4,12 +4,12 @@ ms.custom: how-to
 ms.date: 05/22/2019
 ms.topic: conceptual
 ms.assetid: 7d6ebb73-fa0d-4b0b-a528-bf05de96518e
-ms.openlocfilehash: 4e7d63840f60c00f97b02825965cc247cddc38fd
-ms.sourcegitcommit: bde3279f70432f819018df74923a8bb895636f81
+ms.openlocfilehash: ac6db74122383ef8adb0f208860a6f6fba02dcc7
+ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66174808"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66821689"
 ---
 # <a name="how-to-create-and-use-sharedptr-instances"></a>Como: Criar e usar instâncias shared_ptr
 
@@ -108,7 +108,7 @@ Você pode passar um `shared_ptr` para outra função das seguintes maneiras:
 
 - Se tiver que fornecer um acesso de função auxiliar para o ponteiro subjacente e souber que a função auxiliar apenas usará o ponteiro e retornará antes de a função de chamada retornar, então essa função não precisará compartilhar a propriedade do ponteiro subjacente. Ela precisa apenas acessar o ponteiro dentro do tempo de vida do `shared_ptr` do chamador. Nesse caso, é seguro passar o `shared_ptr` por referência ou passar o ponteiro bruto ou uma referência ao objeto subjacente. Passar dessa maneira fornece um pequeno benefício de desempenho e também pode ajudar a expressar sua intenção de programação.
 
-- Às vezes, por exemplo em um `std:vector<shared_ptr<T>>`, você poderá precisar passar cada `shared_ptr` a um corpo da expressão lambda ou a um objeto de função. Se o lambda ou a função não armazenar o ponteiro, passe `shared_ptr` por referência para evitar invocar o construtor de cópia para cada elemento.
+- Às vezes, por exemplo em um `std::vector<shared_ptr<T>>`, você poderá precisar passar cada `shared_ptr` a um corpo da expressão lambda ou a um objeto de função. Se o lambda ou a função não armazenar o ponteiro, passe `shared_ptr` por referência para evitar invocar o construtor de cópia para cada elemento.
 
 ## <a name="example-6"></a>Exemplo 6
 
