@@ -4,12 +4,12 @@ ms.date: 09/01/2017
 helpviewer_keywords:
 - UNIX [C++]
 ms.assetid: 36108b31-e7fa-49a8-a1f7-7077fcbec873
-ms.openlocfilehash: 2b0736bca9cc0b67f9ea8ac83dc18fadaeefdb3c
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: 17f8082ac0442f65b9195b37da18b04f795d3d66
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58780815"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448973"
 ---
 # <a name="introduction-to-visual-c-for-unix-users"></a>Introdução ao Visual C++ para usuários do UNIX
 
@@ -43,13 +43,13 @@ Você pode usar o compilador do C++ para compilar o código existente que está 
 
 É possível criar novos projetos no ambiente de desenvolvimento. O Visual Studio oferece vários modelos que fornecem código padrão para vários projetos comuns. É possível usar assistentes de aplicativo para gerar projetos com estruturas de tópicos de código para vários tipos de aplicativo.
 
-É possível começar com um projeto vazio usando o **Assistente de aplicativo de console (Win32)**. Marque a caixa de seleção **Projeto vazio**. Em seguida, é possível adicionar arquivos novos e existentes ao projeto mais tarde.
+É possível começar com um projeto vazio usando o **Assistente de aplicativo de console (Win32)** . Marque a caixa de seleção **Projeto vazio**. Em seguida, é possível adicionar arquivos novos e existentes ao projeto mais tarde.
 
 Quando você cria um projeto, é necessário nomeá-lo. Por padrão, o nome do projeto é igual ao nome da DLL (biblioteca de vínculo dinâmico) ou do executável compilado com base no projeto. Para obter mais informações, consulte [Criando soluções e projetos](/visualstudio/ide/creating-solutions-and-projects).
 
 ## <a name="microsoft-specific-modifiers"></a>Modificadores específicos da Microsoft
 
-O compilador do Microsoft Visual C++ implementa várias extensões da linguagem de programação C++ padrão para dar suporte à programação para sistemas operacionais Windows. Essas extensões são usadas para especificar atributos de classe de armazenamento, convenções de chamada de função e endereçamento baseado, entre outros. Para obter uma lista completa de todas as extensões do C++ compatíveis, consulte [Modificadores específicos da Microsoft](../cpp/microsoft-specific-modifiers.md).
+O compilador do Microsoft C++ implementa várias extensões da linguagem de programação C++ padrão para dar suporte à programação para sistemas operacionais Windows. Essas extensões são usadas para especificar atributos de classe de armazenamento, convenções de chamada de função e endereçamento baseado, entre outros. Para obter uma lista completa de todas as extensões do C++ compatíveis, consulte [Modificadores específicos da Microsoft](../cpp/microsoft-specific-modifiers.md).
 
 Você pode desabilitar todas as extensões específicas da Microsoft para C++ usando a opção do compilador `/Za`. Essa opção é recomendada se você desejar escrever um código para ser executado em várias plataformas. Para obter mais informações sobre a opção do compilador `/Za`, confira [/Za, /Ze (desabilitar extensões de linguagem)](../build/reference/za-ze-disable-language-extensions.md). Para obter mais informações sobre a conformidade do compilador C++, consulte [Conformidade com a linguagem Visual C++](../overview/visual-cpp-language-conformance.md) e [Comportamento não padrão](../cpp/nonstandard-behavior.md).
 

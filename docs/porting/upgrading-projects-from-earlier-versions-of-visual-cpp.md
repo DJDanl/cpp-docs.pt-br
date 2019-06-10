@@ -1,16 +1,17 @@
 ---
 title: Atualizando projetos a partir de versões anteriores do Visual C++
-ms.date: 11/04/2016
+description: Como atualizar os projetos do Microsoft C++ de versões anteriores do Visual Studio.
+ms.date: 05/03/2019
 helpviewer_keywords:
 - 32-bit code porting
 - upgrading Visual C++ applications, 32-bit code
 ms.assetid: 18cdacaa-4742-43db-9e4c-2d9e73d8cc84
-ms.openlocfilehash: 41cac1b23d5ab16825891ef654341016958ab826
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: fca4a87310f7ba0c21a6a7512dd93dce0f915f6b
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59034907"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220391"
 ---
 # <a name="upgrading-projects-from-earlier-versions-of-visual-c"></a>Atualizando projetos a partir de versões anteriores do Visual C++
 
@@ -45,6 +46,6 @@ Para obter informações sobre como atualizar as versões de destino do Windows,
 
 ## <a name="see-also"></a>Consulte também
 
-[Novidades do Visual C++ no Visual Studio 2017](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)<br/>
+[Novidades do Visual C++ no Visual Studio](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)<br/>
 [Histórico de alterações de 2003 a 2015 do Visual C++](../porting/visual-cpp-change-history-2003-2015.md)<br/>
 [Comportamento não padrão](../cpp/nonstandard-behavior.md)

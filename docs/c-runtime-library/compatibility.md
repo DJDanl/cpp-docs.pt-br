@@ -8,12 +8,12 @@ helpviewer_keywords:
 - compatibility, C run-time libraries
 - compatibility
 ms.assetid: 346709cb-edda-4909-9a19-3d253eddb6b7
-ms.openlocfilehash: f562a6a214cd1fb3feba2caf26831797d4b182fb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5e9d2edca8da128343bd14ea86a8c1c0023a244b
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50465267"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446673"
 ---
 # <a name="compatibility"></a>Compatibilidade
 
@@ -21,9 +21,9 @@ A biblioteca UCRT (Biblioteca Em Tempo de Execução do C Universal) dá suporte
 
 Funções específicas para a implementação pela Microsoft do Visual C++ são encontradas na biblioteca vcruntime.  Muitas dessas funções são para uso interno e não podem ser chamadas pelo código do usuário. Algumas estão documentadas para uso em compatibilidade de implementação e depuração.
 
-O padrão C++ reserva nomes que começam com um sublinhado no namespace global para a implementação. Como as funções POSIX estão no namespace global, mas não fazem parte da biblioteca em tempo de execução do C padrão, as implementações específicas da Microsoft dessas funções têm um sublinhado inicial. Para fins de portabilidade, o UCRT também dá suporte a nomes padrão, mas o compilador do Visual C++ emite um aviso de substituição quando o código que os usa é compilado. Somente os nomes POSIX padrão são preteridos, não as funções. Para suprimir o aviso, defina `_CRT_NONSTDC_NO_WARNINGS` antes de incluir cabeçalhos no código que usa os nomes originais POSIX.
+O padrão C++ reserva nomes que começam com um sublinhado no namespace global para a implementação. Como as funções POSIX estão no namespace global, mas não fazem parte da biblioteca em tempo de execução do C padrão, as implementações específicas da Microsoft dessas funções têm um sublinhado inicial. Para fins de portabilidade, o UCRT também dá suporte a nomes padrão, mas o compilador do Microsoft C++ emite um aviso de substituição quando o código que os usa é compilado. Somente os nomes POSIX padrão são preteridos, não as funções. Para suprimir o aviso, defina `_CRT_NONSTDC_NO_WARNINGS` antes de incluir cabeçalhos no código que usa os nomes originais POSIX.
 
-Determinadas funções na biblioteca C padrão têm um histórico de uso não seguro, devido a parâmetros mal empregados e buffers não verificados. Essas funções geralmente são a origem dos problemas de segurança no código. A Microsoft criou um conjunto de versões mais seguras dessas funções que verificam o uso do parâmetro e invocam o manipulador de parâmetro inválido quando um problema é detectado no tempo de execução.  Por padrão, o compilador do Visual C++ emite um aviso de substituição quando uma função é usada com uma variante mais segura disponível. Quando você compila seu código em C++, é possível definir `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` como 1 para eliminar a maioria dos avisos. Isso usa sobrecargas do modelo para chamar as variantes mais seguras ao manter o código-fonte portátil. Para suprimir o aviso, defina `_CRT_SECURE_NO_WARNINGS` antes de incluir cabeçalhos no código que usa essas funções. Para obter mais informações, consulte [Recursos de segurança no CRT](../c-runtime-library/security-features-in-the-crt.md).
+Determinadas funções na biblioteca C padrão têm um histórico de uso não seguro, devido a parâmetros mal empregados e buffers não verificados. Essas funções geralmente são a origem dos problemas de segurança no código. A Microsoft criou um conjunto de versões mais seguras dessas funções que verificam o uso do parâmetro e invocam o manipulador de parâmetro inválido quando um problema é detectado no tempo de execução.  Por padrão, o compilador do Microsoft C++ emite um aviso de substituição quando uma função é usada com uma variante mais segura disponível. Quando você compila seu código em C++, é possível definir `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` como 1 para eliminar a maioria dos avisos. Isso usa sobrecargas do modelo para chamar as variantes mais seguras ao manter o código-fonte portátil. Para suprimir o aviso, defina `_CRT_SECURE_NO_WARNINGS` antes de incluir cabeçalhos no código que usa essas funções. Para obter mais informações, consulte [Recursos de segurança no CRT](../c-runtime-library/security-features-in-the-crt.md).
 
 Exceto conforme indicado na documentação para funções específicas, o UCRT é compatível com a API do Windows.  Algumas funções não são compatíveis com os aplicativos da Store para o Windows 8 ou com os aplicativos da UWP (Plataforma Universal do Windows) no Windows 10. Essas funções estão listadas na página [Funções de CRT sem suporte em aplicativos da Plataforma Universal do Windows](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md), que enumera as funções com as quais o Windows Runtime e a [UWP](/uwp) não são compatíveis.
 

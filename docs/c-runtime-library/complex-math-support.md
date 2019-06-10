@@ -1,18 +1,18 @@
 ---
 title: Suporte a expressões matemáticas complexas de C
-ms.date: 03/30/2018
+ms.date: 05/14/2019
 f1_keywords:
 - c.complex
 helpviewer_keywords:
 - complex numbers, math routines
 - math routines
 - complex numbers
-ms.openlocfilehash: 12ba858993d3712cbf390288df60faedc602c90a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 493886fcf1dbfd3dc16487dd8650206c428bb06d
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50452605"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "66186087"
 ---
 # <a name="c-complex-math-support"></a>Suporte a expressões matemáticas complexas de C
 
@@ -28,15 +28,15 @@ A implementação da Microsoft do cabeçalho complex.h define esses tipos como e
 
 |Tipo padrão|Tipo da Microsoft|
 |-|-|
-|**float complex** ou **float _Complex**|**_FComplex**|
-|**double complex** ou **double _Complex**|**_DComplex**|
-|**long double complex** ou **long double _Complex**|**_LComplex**|
+|**float complex** ou **float _Complex**|**_Fcomplex**|
+|**double complex** ou **double _Complex**|**_Dcomplex**|
+|**long double complex** ou **long double _Complex**|**_Lcomplex**|
 
 O cabeçalho math.h define um tipo separado, **struct _complex**, usado para a função [_cabs](../c-runtime-library/reference/cabs.md). O tipo **struct _complex** não é usado pelas funções matemáticas complexas equivalentes [cabs, cabsf, cabsl](../c-runtime-library/reference/cabs-cabsf-cabsl.md).
 
 ## <a name="complex-constants-and-macros"></a>Constantes e macros complexas
 
-**I** é definido como o tipo complexo **float** **_FComplex** inicializado pelo `{ 0.0f, 1.0f }`.
+**I** é definido como o tipo complexo de **float** **_Fcomplex** inicializado por `{ 0.0f, 1.0f }`.
 
 ## <a name="trigonometric-functions"></a>Funções trigonométricas
 

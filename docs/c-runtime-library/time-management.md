@@ -9,12 +9,12 @@ helpviewer_keywords:
 - date functions
 - time functions
 ms.assetid: 93599220-c011-45d5-978f-12182abfdd2f
-ms.openlocfilehash: b763361d2cdd732025e492a25ac63fc01f06c2b8
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: e9842d8c24089c7fbb33745c3bf5d4edb1d29343
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57739734"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446790"
 ---
 # <a name="time-management"></a>Gerenciamento de tempo
 
@@ -47,7 +47,7 @@ As rotinas **_ftime** e **localtime** usam a variável de ambiente **TZ**. Se **
 > Em todas as versões do Microsoft C/C++, exceto na versão 7.0 do Microsoft C/C++, e em todas as versões do Visual C++, a função time retorna a hora atual como o número de segundos passados desde a meia-noite de 1º de janeiro de 1970. Na versão 7.0 do Microsoft C/C++, **time** retornava a hora atual como o número de segundos passados desde a meia-noite de 31 de dezembro de 1899.
 
 > [!NOTE]
-> Em versões do Visual C++ e do Microsoft C/C++ anteriores ao Visual C++ 2005, **time_t** era um **long** **int** (32 bits) e, portanto, não pode ser usado para datas anteriores a 3:14:07 de 19 de janeiro de 2038, UTC. **time_t** agora é equivalente a **__time64_t** por padrão, mas definir **_USE_32BIT_TIME_T** altera **time_t** para **__time32_t** e força muitas funções de tempo para chamar as versões que usam **time_t** 32 bits. Para saber mais, veja [tipos padrão](../c-runtime-library/standard-types.md) e comentários na documentação para as funções de tempo individuais.
+> Em versões do Visual C++ e do Microsoft C/C++ anteriores ao Visual Studio 2005, **time_t** era um **long** **int** (32 bits) e, portanto, não pode ser usado para datas anteriores a 3:14:07 de 19 de janeiro de 2038, UTC. **time_t** agora é equivalente a **__time64_t** por padrão, mas definir **_USE_32BIT_TIME_T** altera **time_t** para **__time32_t** e força muitas funções de tempo para chamar as versões que usam **time_t** 32 bits. Para saber mais, veja [tipos padrão](../c-runtime-library/standard-types.md) e comentários na documentação para as funções de tempo individuais.
 
 ## <a name="see-also"></a>Consulte também
 

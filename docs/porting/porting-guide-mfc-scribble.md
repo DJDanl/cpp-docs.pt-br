@@ -2,16 +2,16 @@
 title: 'Guia de portabilidade: Scribble do MFC'
 ms.date: 11/19/2018
 ms.assetid: 8ddb517d-89ba-41a1-ab0d-4d2c6d9047e8
-ms.openlocfilehash: 436dd27d8c2669e21ddc8a9e453f369cdd14f70c
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 0424b5e8c87c0103b4ebee65765244b40e8fa553
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57741300"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448963"
 ---
 # <a name="porting-guide-mfc-scribble"></a>Guia de portabilidade: Scribble do MFC
 
-Este tópico é o primeiro de vários tópicos que apresentam o procedimento de atualização para projetos do Visual C++ que foram criados em versões anteriores do Visual Studio para Visual Studio 2017. Estes tópicos apresentam o processo de atualização por exemplos, começando com um projeto muito simples e passando para outros um pouco mais complexos. Neste tópico, trabalhamos pelo processo de atualização para um projeto específico, o Scribble do MFC. Ele é adequado como uma introdução básica sobre o processo de atualização para projetos do C++.
+Este tópico é o primeiro de vários que apresentam o procedimento de atualização para projetos do Visual Studio C++ que foram criados em versões anteriores do Visual Studio para Visual Studio 2017. Estes tópicos apresentam o processo de atualização por exemplos, começando com um projeto muito simples e passando para outros um pouco mais complexos. Neste tópico, trabalhamos pelo processo de atualização para um projeto específico, o Scribble do MFC. Ele é adequado como uma introdução básica sobre o processo de atualização para projetos do C++.
 
 Cada versão do Visual Studio apresenta possíveis incompatibilidades que podem complicar a mudança de um código de uma versão mais antiga do Visual Studio para uma mais nova. Às vezes, as alterações necessárias estão em seu código, portanto, você deve recompilá-lo e atualizado e às vezes as alterações necessárias são para os arquivos do projeto. Quando você abre um projeto que foi criado com uma versão anterior do Visual Studio, o Visual Studio automaticamente pergunta se você deseja atualizar um projeto ou solução para a versão mais recente. Essas ferramentas normalmente atualizam somente os arquivos de projeto, eles não modificam o código-fonte.
 
@@ -49,7 +49,7 @@ Nesse caso, os problemas eram todos avisos e Visual Studio fez as alterações a
 
 ### <a name="step-2-getting-it-to-build"></a>Etapa 2. Realização do build
 
-Antes de compilar, verificamos o conjunto de ferramentas de plataforma para que saibamos qual versão do compilador o sistema de projeto está usando. Na caixa de diálogo de propriedades do projeto, em **Propriedades de Configuração**, na categoria **Geral**, observe a propriedade **Conjunto de Ferramentas da Plataforma**. Ela contém a versão do Visual Studio e o número de versão da ferramenta de plataforma, que nesse caso é v141 para a versão do Visual Studio 2017 das ferramentas. Quando você converte um projeto que foi compilado originalmente com o Visual C++ 2010, 2012, 2013 ou 2015, o conjunto de ferramentas não é atualizado automaticamente para o conjunto de ferramentas do Visual Studio 2017.
+Antes de compilar, verificamos o conjunto de ferramentas de plataforma para que saibamos qual versão do compilador o sistema de projeto está usando. Na caixa de diálogo de propriedades do projeto, em **Propriedades de Configuração**, na categoria **Geral**, observe a propriedade **Conjunto de Ferramentas da Plataforma**. Ela contém a versão do Visual Studio e o número de versão da ferramenta de plataforma, que nesse caso é v141 para a versão do Visual Studio 2017 das ferramentas. Quando você converte um projeto que foi compilado originalmente com o Visual Studio C++ 2010, 2012, 2013 ou 2015, o conjunto de ferramentas não é atualizado automaticamente para o conjunto de ferramentas do Visual Studio 2017.
 
 Para fazer a transição para Unicode, abra as propriedades do projeto, em **Propriedades de Configuração**, escolha a seção **Geral** e localize a propriedade **Conjunto de Caracteres**. Altere-a de **Usar Conjunto de Caracteres Multibyte** para **Usar Conjunto de Caracteres Unicode**. O efeito dessa alteração é que agora as macros _UNICODE e UNICODE estão definidas e _MBCS não está, o que pode ser verificado na caixa de diálogo de propriedades na categoria **C/C++** na propriedade **Linha de Comando**.
 
@@ -65,7 +65,7 @@ Agora compile a solução. Na janela de saída, o compilador nos diz que _WINNT3
 _WIN32_WINNT not defined. Defaulting to _WIN32_WINNT_MAXVER (see WinSDKVer.h)
 ```
 
-Isso é um aviso, não um erro e é muito comum ao atualizar um projeto do Visual C++. Essa é a macro que define qual é a menor versão do Windows em que o aplicativo será executado. Se ignorarmos o aviso, aceitamos o valor padrão, _WIN32_WINNT_MAXVER, que significa a versão atual do Windows. Para encontrar uma tabela dos valores possíveis, consulte [Using the Windows Headers](/windows/desktop/WinProg/using-the-windows-headers) (Usando os cabeçalhos do Windows). Por exemplo, podemos defini-lo para ser executado em qualquer versão do Vista em diante.
+Isso é um aviso, não um erro, e é muito comum ao atualizar um projeto do Visual Studio C++. Essa é a macro que define qual é a menor versão do Windows em que o aplicativo será executado. Se ignorarmos o aviso, aceitamos o valor padrão, _WIN32_WINNT_MAXVER, que significa a versão atual do Windows. Para encontrar uma tabela dos valores possíveis, consulte [Using the Windows Headers](/windows/desktop/WinProg/using-the-windows-headers) (Usando os cabeçalhos do Windows). Por exemplo, podemos defini-lo para ser executado em qualquer versão do Vista em diante.
 
 ```cpp
 #define _WIN32_WINNT _WIN32_WINNT_VISTA
