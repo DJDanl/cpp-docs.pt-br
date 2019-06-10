@@ -24,16 +24,16 @@ helpviewer_keywords:
 - file handles [C++], associating
 - _open_osfhandle function
 ms.assetid: 30d94df4-7868-4667-a401-9eb67ecb7855
-ms.openlocfilehash: 8527dade37f20b7341d5a26f5752ece668ab7fc9
-ms.sourcegitcommit: bde3279f70432f819018df74923a8bb895636f81
+ms.openlocfilehash: 9e940844eb5e37755c10999feb294981afc8683a
+ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66174796"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66821591"
 ---
 # <a name="openosfhandle"></a>_open_osfhandle
 
-Associa um descritor de arquivo de tempo de execução C a um identificador de arquivo do sistema operacional existente.
+Associa um descritor de arquivo de tempo de execução do C com um identificador de arquivo do sistema operacional existente.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -58,7 +58,7 @@ Se for bem-sucedido, **_open_osfhandle** retornará um descritor de arquivo de t
 
 ## <a name="remarks"></a>Comentários
 
-A função **_open_osfhandle** aloca um descritor de arquivo de tempo de execução C e o associa ao identificador de arquivo do sistema operacional especificado por *osfhandle*. Para evitar um aviso do compilador, converta o argumento *osfhandle* de **HANDLE** para **intptr_t**. O argumento *flags* é uma expressão inteira formada por uma ou mais constantes de manifesto definidas em \<fcntl.h>. Quando duas ou mais constantes de manifesto são usadas para formar o argumento *flags*, as constantes são combinadas com o operador OR bit a bit (**&#124;**).
+O **open_osfhandle** função aloca um descritor de arquivo de tempo de execução C. Associa esse descritor de arquivo com o identificador de arquivo do sistema operacional especificado pelo *osfhandle*. Para evitar um aviso do compilador, converta o argumento *osfhandle* de **HANDLE** para **intptr_t**. O argumento *flags* é uma expressão inteira formada por uma ou mais constantes de manifesto definidas em \<fcntl.h>. Você pode usar o operador OR bit a bit ( **&#124;** ) para combinar duas ou mais constantes de manifesto para formar o *sinalizadores* argumento.
 
 As constantes de manifesto são definidas em \<fcntl.h>:
 
@@ -69,7 +69,7 @@ As constantes de manifesto são definidas em \<fcntl.h>:
 | **\_O\_TEXT** | Abre o arquivo no modo de texto (convertido). |
 | **\_O\_WTEXT** | Abre o arquivo no modo Unicode (convertido em UTF-16). |
 
-A chamada **_open_osfhandle** transfere a propriedade do identificador de arquivo do Win32 para o descritor de arquivo. Para fechar um arquivo aberto usando **_open_osfhandle**, chame [\_close](close.md). O identificador de arquivo do sistema operacional subjacente também é fechado por uma chamada para **_close**. Não chame a função **CloseHandle** do Win32 no identificador original. Se o descritor de arquivo pertencer a um fluxo **FILE &#42;**, uma chamada para [fclose](fclose-fcloseall.md) no fluxo **FILE &#42;** fechará o descritor de arquivo e o identificador subjacente. Nesse caso, não chame **_close** no descritor de arquivo ou **CloseHandle** no identificador original.
+A chamada **_open_osfhandle** transfere a propriedade do identificador de arquivo do Win32 para o descritor de arquivo. Para fechar um arquivo aberto usando **_open_osfhandle**, chame [\_close](close.md). O identificador de arquivo do sistema operacional subjacente também é fechado por uma chamada para **_close**. Não chame a função **CloseHandle** do Win32 no identificador original. Se o descritor de arquivo pertence a um **arquivo &#42;**  stream e, em seguida, uma chamada para [fclose](fclose-fcloseall.md) fecha o descritor de arquivo e o identificador subjacente. Nesse caso, não chame **_close** no descritor de arquivo ou **CloseHandle** no identificador original.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -82,3 +82,4 @@ Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](
 ## <a name="see-also"></a>Consulte também
 
 [Manipulação de Arquivos](../../c-runtime-library/file-handling.md)<br/>
+[\_get_osfhandle](get-osfhandle.md)

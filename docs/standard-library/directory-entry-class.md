@@ -203,7 +203,7 @@ bool operator&lt;=(const directory_entry& right) const noexcept;
 *right*<br/>
 O [directory_entry](../standard-library/directory-entry-class.md) que estão sendo comparados para o `directory_entry`.
 
-## <a name="op_gt">Operador </a>&gt;
+## <a name="op_gt"></a> Operador&gt;
 
 A função membro retorna `right < *this`.
 
