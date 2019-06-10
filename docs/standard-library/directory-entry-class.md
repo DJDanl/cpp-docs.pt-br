@@ -177,7 +177,7 @@ bool operator==(const directory_entry& right) const noexcept;
 *right*<br/>
 O [directory_entry](../standard-library/directory-entry-class.md) que estão sendo comparados para o `directory_entry`.
 
-## <a name="op_lt">Operador </a>&lt;
+## <a name="op_lt"></a> Operador&lt;
 
 A função membro retorna `mypath < right.mypath`.
 
