@@ -2,16 +2,16 @@
 layout: LandingPage
 title: Documentação de desenvolvimento em Linux com C++
 description: Criar e depurar aplicativos em execução no Linux.
-ms.openlocfilehash: 516b57ca976ddd89081581978c6ac5f86c64876e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f57777451e861a8ea0df1eb81fc97553c176ebec
+ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393136"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66821642"
 ---
 # <a name="linux-development-with-c-documentation"></a>Documentação de desenvolvimento em Linux com C++
 
-Use o Visual Studio 2017 para criar e depurar aplicativos em execução no Linux.
+Use o Visual Studio 2017 e versões posteriores para criar e depurar aplicativos executados em computadores remotos do Linux ou no Subsistema do Windows para Linux.
 
 <ul class="panelContent cardsF">
     <li>
@@ -64,8 +64,8 @@ Use o Visual Studio 2017 para criar e depurar aplicativos em execução no Linux
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardText">
-                        <h3><a href="/cpp/overview/visual-cpp-in-visual-studio.md">Visual C++</a></h3>
-                        <p><a href="/cpp/overview-of-cpp-development">IDE e ferramentas para desenvolvimento no Visual C++</a></p>
+                        <h3><a href="/cpp/overview/visual-cpp-in-visual-studio.md">C++ no Visual Studio</a></h3>
+                        <p><a href="/cpp/overview-of-cpp-development">Visão geral do desenvolvimento em C++ no Visual Studio</a></p>
                     </div>
                 </div>
             </div>
