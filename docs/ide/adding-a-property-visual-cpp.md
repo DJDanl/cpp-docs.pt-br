@@ -12,12 +12,12 @@ helpviewer_keywords:
 - stock properties, about stock properties
 - stock properties
 ms.assetid: 37bd4db7-efd3-4faa-87ad-64902ed16a36
-ms.openlocfilehash: 06940bb72f9113e0a8148e15418504b35fc95099
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 79938cb5c762292c5e1802832477c3a568ae2fdb
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694251"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504470"
 ---
 # <a name="add-a-property"></a>Adicionar uma propriedade
 
@@ -191,5 +191,5 @@ Caso esteja adicionando uma propriedade a uma dispinterface MFC usando o [assist
 |`Font`|Retorna ou define a fonte de ambiente do controle. Nulo se o controle não tem nenhuma fonte.|
 |`ForeColor`|Retorna ou define a propriedade `ForeColor` de ambiente do controle.|
 |`hWnd`|Retorna ou define a propriedade `hWnd` do controle. `hWnd` não tem nenhum tipo de implementação **Variável de membro**.|
-|`ReadyState`|Retorna ou define a propriedade `ReadyState` do controle. Um controle pode estar nos seguintes estados: inicialização cancelada, inicializado, carregando, interativo ou completo. Para obter mais informações, confira [READYSTATE](https://msdn.microsoft.com/library/aa768362.aspx) no *SDK da Internet*.|
+|`ReadyState`|Retorna ou define a propriedade `ReadyState` do controle. Um controle pode estar nos seguintes estados: inicialização cancelada, inicializado, carregando, interativo ou completo. Para obter mais informações, confira [READYSTATE](/previous-versions//aa768362\(v=vs.85\)) no *SDK da Internet*.|
 |`Text`|Retorna ou define o texto contido em um controle. `Text` não tem nenhum tipo de implementação **Variável de membro**.|
