@@ -1,15 +1,23 @@
 ---
 title: Propriedades gerais (Projeto do Linux C++ Makefile) | Microsoft Docs
-ms.date: 9/26/2017
+ms.date: 06/07/2019
 ms.assetid: 3dec6853-43f6-412b-9806-9bfad333a204
-ms.openlocfilehash: fb742d552d0b70ba5f5c406dd43bdf4cf8d1914b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a64066ad3c8d7e6ca8bfa9d3d82670ff1da4b527
+ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50524586"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66821447"
 ---
 # <a name="makefile-project-properties-linux-c"></a>Propriedades do projeto makefile (Linux C++)
+
+::: moniker range="vs-2015"
+
+O suporte ao Linux está disponível no Visual Studio 2017 e posterior.
+
+::: moniker-end
+
+::: moniker range=">=vs-2017"
 
 Esta é uma lista parcial das propriedades disponíveis em um projeto do Linux Makefile. Muitas propriedades de projeto makefile são idênticas às propriedades do projeto de Aplicativo de Console C++ do Linux.
 
@@ -101,3 +109,5 @@ Linha de comando de build | Especifica a linha de comando a ser executada para o
 Linha de Comando de Rebuild All | Especifica a linha de comando a ser executada para o comando “Rebuild All”. Isso é executado no sistema remoto.
 Linha de Comando Clean | Especifica a linha de comando a ser executada para o comando 'Clean'. Isso é executado no sistema remoto.
 Saídas | Especifica as saídas geradas pelo build remoto no sistema remoto.
+
+::: moniker-end
