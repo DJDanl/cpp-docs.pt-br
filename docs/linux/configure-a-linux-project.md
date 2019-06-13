@@ -1,79 +1,104 @@
 ---
 title: Configurar um projeto do C++ Linux no Visual Studio
-ms.date: 11/12/2018
+ms.date: 06/07/2019
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
-ms.openlocfilehash: 8e8bf2b12462a18c8a0e6c1c4d6677f18e2f0f34
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 5acd9edeef8f09f86c394c39939d8408821dd691
+ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66451155"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66821575"
 ---
 # <a name="configure-a-linux-project"></a>Configurar um projeto do Linux
 
-Este tópico descreve como configurar um projeto do C++ Linux com base em um modelo de projeto do Linux no Visual Studio. Para obter mais informações sobre Projetos CMake do Linux no Visual Studio, consulte [Configurar um Projeto CMake do Linux ](cmake-linux-project.md).
+::: moniker range="vs-2015"
+
+O suporte ao Linux está disponível no Visual Studio 2017 e posterior.
+
+::: moniker-end
+
+Este tópico descreve como configurar um projeto do C++ Linux, conforme descrito em [Criar um projeto do C++ Linux no Visual Studio](create-a-new-linux-project.md). Para projetos do CMake Linux, confira [Configurar um projeto do CMake Linux](cmake-linux-project.md). 
+
+Configure um projeto do Linux para ter como destino um computador Linux físico, uma máquina virtual ou o [WSL](/windows/wsl/about) (Subsistema do Windows para Linux). 
+
+::: moniker range="vs-2019"
+
+**Visual Studio 2019 versão 16.1**:
+
+- Ao ter o WSL como destino, você pode evitar as operações de cópia necessárias para build e o IntelliSense ao ter como destino sistemas Linux remotos.
+
+- Especifique destinos do Linux separados para build e depuração.
+
+::: moniker-end
 
 ## <a name="general-settings"></a>Configurações gerais
 
-Uma variedade de opções podem ser configurada para um projeto do Linux com o Visual Studio.  Para exibir essas opções, selecione o menu **Projeto > Propriedades** ou clique com o botão direito do mouse em **Gerenciador de Soluções** e selecione **Propriedades** no menu de contexto. As **Configurações gerais** são exibidas.
+Para exibir as opções de configuração, selecione o menu **Projeto > Propriedades** ou clique com o botão direito do mouse no projeto em **Gerenciador de Soluções** e selecione **Propriedades** no menu de contexto. As **Configurações gerais** são exibidas.
 
 ![Configuração geral](media/settings_general.png)
 
-Por padrão, um executável (.out) é criado com a ferramenta.  Para criar uma biblioteca estática ou dinâmica ou para usar um Makefile existente, use a seleção **Tipo de Configuração**.
+Por padrão, um executável (.out) é criado com a ferramenta. Para criar uma biblioteca estática ou dinâmica ou usar um Makefile existente, use a configuração **Tipo de Configuração**.
 
-Para obter mais informações sobre as opções nas páginas de propriedades, consulte [Linux Project Property Page Reference](prop-pages-linux.md) (Referência de página de propriedades do projeto do Linux).
+Para obter mais informações sobre as configurações nas páginas de propriedades, confira [Referência da página de propriedades do projeto do Linux](prop-pages-linux.md).
 
 ## <a name="remote-settings"></a>Configurações remotas
 
-Para alterar as configurações relacionadas ao computador Linux remoto, defina as opções remotas exibidas nas [Configurações gerais](prop-pages/general-linux.md):
+Para alterar as configurações relacionadas ao computador Linux remoto, defina as configurações remotas exibidas em [Geral](prop-pages/general-linux.md).
 
-- Para alterar o computador Linux de destino, use a entrada **Computador de Build Remoto**.  Isso permitirá selecionar uma das conexões criadas anteriormente.  Para criar uma nova entrada, consulte a seção [Connecting to Your Remote Linux Computer (Conectando-se ao seu computador Linux remoto)](connect-to-your-remote-linux-computer.md).
+- Para especificar um computador Linux de destino remoto, use a entrada **Computador de Build Remoto**. Isso permitirá selecionar uma das conexões criadas anteriormente. Para criar uma entrada, confira a seção [Como se conectar ao computador Linux remoto](connect-to-your-remote-linux-computer.md).
 
-- O **Diretório Raiz de Build Remoto** determina o local raiz de onde o projeto é compilado no computador Linux remoto.  Isso definirá **~/projects** como padrão, a menos que tenha sido alterado.
+   ![Computador de build](media/remote-build-machine-vs2019.png)
 
-- O **Diretório de Projeto de Build Remoto** é onde esse projeto específico será criado no computador Linux remoto.  Isso definirá **$(RemoteRootDir)/$(ProjectName)** como padrão, que será expandido para um diretório nomeado depois do projeto atual, no diretório raiz definido acima.
+   ::: moniker range="vs-2019"
+
+   **Visual Studio 2019 versão 16.1**: Para ter o Subsistema do Windows para Linux como destino, clique na seta para baixo em **Conjunto de ferramentas da plataforma** e escolha **WSL_1_0**. As outras opções remotas desaparecerão e o caminho para o shell padrão do WSL será exibido em seu lugar:
+
+   ![Computador de build do WSL](media/wsl-remote-vs2019.png)
+
+   Se você tiver instalações do WSL lado a lado, especifique outro caminho aqui. Para obter mais informações sobre como gerenciar várias distribuições, confira [Gerenciar e configurar o Subsistema do Windows para Linux](/windows/wsl/wsl-config#set-a-default-distribution).
+
+   Especifique outro destino para depuração na página **Propriedades de Configuração** > **Depuração**.
+
+   ::: moniker-end
+
+- O **Diretório Raiz de Build Remoto** determina o local raiz de onde o projeto é compilado no computador Linux remoto. Isso definirá **~/projects** como padrão, a menos que tenha sido alterado.
+
+- O **Diretório de Projeto de Build Remoto** é onde esse projeto específico será criado no computador Linux remoto. Isso definirá **$(RemoteRootDir)/$(ProjectName)** como padrão, que será expandido para um diretório nomeado depois do projeto atual, no diretório raiz definido acima.
 
 > [!NOTE]
-> Para alterar os compiladores padrão C e C++ ou o Vinculador e o Arquivador usados para compilar o projeto, use as entradas apropriadas nas seções **C/C++ > Geral** e **Vinculador > Geral**.  Isso pode ser definido para usar uma determinada versão de GCC ou até mesmo o compilador Clang, por exemplo. Para obter mais informações, consulte [Propriedades do C/C++ (Linux C++)](prop-pages/c-cpp-linux.md) e [Propriedades de vinculador (Linux C++)](prop-pages/linker-linux.md).
+> Para alterar os compiladores padrão C e C++ ou o Vinculador e o Arquivador usados para compilar o projeto, use as entradas apropriadas nas seções **C/C++ > Geral** e **Vinculador > Geral**. Você pode especificar uma versão específica do GCC ou do Clang, por exemplo. Para obter mais informações, consulte [Propriedades do C/C++ (Linux C++)](prop-pages/c-cpp-linux.md) e [Propriedades de vinculador (Linux C++)](prop-pages/linker-linux.md).
 
-## <a name="include-directories-and-intellisense-support"></a>Diretórios de inclusão e suporte do IntelliSense
+## <a name="copy-sources-remote-systems-only"></a>Copiar fontes (apenas sistemas remotos)
 
-**Visual Studio 2017 versão 15.6 e anterior:**<br/>
-Por padrão, o Visual Studio não inclui os arquivos de inclusão de nível de sistema do computador Linux.  Por exemplo, os itens no diretório **/usr/incluem** não estão presentes no Visual Studio.
-Para obter suporte [IntelliSense](/visualstudio/ide/using-intellisense) completo, será necessário copiar esses arquivos para algum local em seu computador de desenvolvimento e apontar o Visual Studio para esse local.  Uma opção é usar scp (Cópia Segura) para copiar os arquivos.  No Windows 10, é possível usar [Bash no Windows](https://msdn.microsoft.com/commandline/wsl/about) para executar o scp.  Para versões anteriores do Windows, seria possível usar algo como [PSCP (Cópia segura PuTTY)](https://www.chiark.greenend.org.uk/~sgtatham/putty/download.html).
+::: moniker range="vs-2019"
 
-É possível copiar os arquivos usando um comando semelhante ao seguinte:
+Esta seção não se aplica quando o WSL é o destino.
 
-`scp -r linux_username@remote_host:/usr/include .`
+::: moniker-end
 
-É claro, substitua os valores **linux_username** e **remote_host** acima pelo que for adequado em seu próprio ambiente.
+Durante o build em sistemas remotos, os arquivos de origem no computador de desenvolvimento são copiados para o computador Linux e compilados nele. Por padrão, todas as fontes no projeto do Visual Studio são copiadas para os locais definidos nas configurações acima. No entanto, outras fontes também podem ser adicionadas à lista ou copiar fontes pode ser totalmente desativado, que é o padrão para um projeto Makefile.
 
-Quando os arquivos forem copiados, use o item **Diretórios VC ++** item nas Propriedades do projeto para informar ao Visual Studio onde encontrar os arquivos de inclusão adicionais que acabaram de ser copiados.
-
-![Diretórios VC++](media/settings_directories.png)
-
-**Visual Studio 2017 versão 15.7 e posteriores:**<br/>
-Consulte [Manage Remote Headers for IntelliSense](#remote_intellisense) (Gerenciar cabeçalhos remotos para o IntelliSense).
-
-## <a name="copy-sources"></a>Copiar fontes
-
-Durante a criação, os arquivos de origem em seu computador de desenvolvimento são copiados para o computador Linux e compilados lá.  Por padrão, todas as fontes no projeto do Visual Studio são copiadas para os locais definidos nas configurações acima.  No entanto, outras fontes também podem ser adicionadas à lista ou copiar fontes pode ser totalmente desativado, que é o padrão para um projeto Makefile.
-
-- **Fontes a serem copiadas** determina quais fontes são copiadas para o computador remoto.  Por padrão, o **\@(SourcesToCopyRemotely)** define todos os arquivos de código-fonte do projeto como padrão, mas não inclui arquivos de ativo/recurso, como imagens.
+- **Fontes a serem copiadas** determina quais fontes são copiadas para o computador remoto. Por padrão, o **\@(SourcesToCopyRemotely)** define todos os arquivos de código-fonte do projeto como padrão, mas não inclui arquivos de ativo/recurso, como imagens.
 
 - **Copiar fontes** pode ser ativado e desativado para habilitar e desabilitar a cópia de arquivos de origem para o computador remoto.
 
-- **Fontes adicionais a serem copiadas** permite que você adicione outros arquivos de origem que serão copiados para o sistema remoto.  É possível especificar uma lista delimitada por ponto-e-vírgula ou usar a sintaxe **:=** para especificar um nome local e remoto a ser usado:
+- **Fontes adicionais a serem copiadas** permite que você adicione outros arquivos de origem que serão copiados para o sistema remoto. É possível especificar uma lista delimitada por ponto-e-vírgula ou usar a sintaxe **:=** para especificar um nome local e remoto a ser usado:
 
 `C:\Projects\ConsoleApplication1\MyFile.cpp:=~/projects/ConsoleApplication1/ADifferentName.cpp;C:\Projects\ConsoleApplication1\MyFile2.cpp:=~/projects/ConsoleApplication1/ADifferentName2.cpp;`
 
 ## <a name="build-events"></a>Eventos de build
 
-Como toda o build está acontecendo em um computador remoto, vários outros eventos de build foram adicionados à seção Eventos de Build nas Propriedades do Projeto.  Eles são os **Evento de pré-build remoto**, **Evento de pré-link remoto** e **Evento de pós-build remoto**, que ocorrerão no computador remoto antes ou após as etapas individuais no processo.
+Como toda a compilação está acontecendo em um computador remoto (ou no WSL), vários outros eventos de build foram adicionados à seção Eventos de Build em Propriedades do Projeto. Eles são os **Evento de pré-build remoto**, **Evento de pré-link remoto** e **Evento de pós-build remoto**, que ocorrerão no computador remoto antes ou após as etapas individuais no processo.
 
 ![Compilar Eventos](media/settings_buildevents.png)
 
-## <a name="remote_intellisense"></a> IntelliSense para cabeçalhos remotos (Visual Studio 2017 versão 15.7 e posterior)
+## <a name="remote_intellisense"></a> IntelliSense para cabeçalhos em sistemas remotos
+
+::: moniker range="vs-2019"
+
+Esta seção não se aplica quando o WSL é o destino.
+
+::: moniker-end
 
 Quando você adiciona uma nova conexão no **Gerenciador de Conexões**, o Visual Studio detecta automaticamente os diretórios de inclusão para o compilador no sistema remoto. Visual Studio compacta e copia os arquivos para um diretório no seu computador local do Windows. Depois disso, sempre que você usar essa conexão em um projeto do Visual Studio ou CMake, os cabeçalhos nesses diretórios serão usados para fornecer IntelliSense.
 
@@ -83,9 +108,23 @@ Essa funcionalidade depende de o computador Linux ter zip instalado. Você pode 
 apt install zip
 ```
 
-Para gerenciar o cache do cabeçalho, navegue até **Ferramentas > Opções, Plataforma Cruzada > Gerenciador de Conexões > Gerenciador dos Cabeçalhos Remotos IntelliSense**. Para atualizar o cache do cabeçalho depois de fazer alterações no computador Linux, selecione a conexão remota e, em seguida, selecione **Atualizar**. Selecione **Excluir** para remover os cabeçalhos sem excluir a conexão em si. Selecione **Explorar** para abrir o diretório local no **Explorador de Arquivos**. Trate essa pasta como somente leitura. Para baixar os cabeçalhos para uma conexão existente criada antes da versão 15.3, selecione a conexão e selecione **Baixar**.
+Para gerenciar o cache do cabeçalho, navegue até **Ferramentas > Opções, Plataforma Cruzada > Gerenciador de Conexões > Gerenciador dos Cabeçalhos Remotos IntelliSense**. Para atualizar o cache do cabeçalho depois de fazer alterações no computador Linux, selecione a conexão remota e, em seguida, selecione **Atualizar**. Selecione **Excluir** para remover os cabeçalhos sem excluir a conexão em si. Selecione **Explorar** para abrir o diretório local no **Explorador de Arquivos**. Trate essa pasta como somente leitura. Para baixar os cabeçalhos para uma conexão existente criada antes do Visual Studio 2017 versão 15.3, selecione a conexão e, em seguida, selecione **Baixar**.
+
+::: moniker range="vs-2017"
 
 ![Cabeçalho remoto IntelliSense](media/remote-header-intellisense.png)
+
+::: moniker-end
+
+::: moniker range="vs-2019"
+
+![Cabeçalho remoto IntelliSense](media/connection-manager-vs2019.png)
+
+Habilite o log ajudar a solucionar problemas:
+
+![Log remoto](media/remote-logging-vs2019.png)
+
+::: moniker-end
 
 ## <a name="see-also"></a>Consulte também
 

@@ -1,15 +1,23 @@
 ---
 title: Propriedades de vinculador (Linux C++)
-ms.date: 9/26/2017
+ms.date: 06/07/2019
 ms.assetid: a0243a94-8164-425b-b2fe-b84ff363d546
-ms.openlocfilehash: 2e5c3446d8daeeb052937b5e172fc9fa4b6ad302
-ms.sourcegitcommit: d441305fb19131afbd7fc259d8cda63ea26f2343
+ms.openlocfilehash: 01e8a9e45272ff55db6bbf738b48c75f4e1f6c48
+ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51678334"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66821297"
 ---
 # <a name="linker-properties-linux-c"></a>Propriedades de vinculador (Linux C++)
+
+::: moniker range="vs-2015"
+
+O suporte ao Linux está disponível no Visual Studio 2017 e posterior.
+
+::: moniker-end
+
+::: moniker range=">=vs-2017"
 
 ## <a name="general"></a>Geral
 
@@ -55,3 +63,5 @@ Marcar Variáveis ReadOnly Após a Realocação | Essa opção marca as variáve
 Habilitar associação de função imediata | Essa opção marca o objeto para associação de função imediata.
 Não Exigir Pilha Executável | Essa opção marca que a saída não exigirá pilha executável.
 Arquivo morto inteiro | O Arquivo Inteiro usa todo o código de Fontes e Dependências Adicionais.
+
+::: moniker-end
