@@ -3,12 +3,12 @@ title: Personalizar as configurações de build do CMake no Visual Studio
 ms.date: 05/16/2019
 helpviewer_keywords:
 - CMake build settings
-ms.openlocfilehash: d8102250fa59dc787cc48fc293ac740b81b4446c
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.openlocfilehash: a00b18f163758be0238a05c4d2af3195014d79b0
+ms.sourcegitcommit: fde637f823494532314790602c2819f889706ff6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837103"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67042543"
 ---
 # <a name="customize-cmake-build-settings"></a>Personalizar as configurações de build do CMake
 
@@ -94,7 +94,7 @@ Corresponde a **generator**: é mapeado para a opção **-G** do CMake e especif
   - "UNIX Makefiles"
   - "Visual Studio 16 2019"
   - "Visual Studio 16 2019 Win64"
-  - - "Visual Studio 16 2019 ARM"
+  - "Visual Studio 16 2019 ARM"
   - "Visual Studio 15 2017"
   - "Visual Studio 15 2017 Win64"
   - "Visual Studio 15 2017 ARM"
