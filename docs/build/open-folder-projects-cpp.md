@@ -4,24 +4,24 @@ ms.date: 03/21/2019
 helpviewer_keywords:
 - Open Folder Projects in Visual Studio
 ms.assetid: abd1985e-3717-4338-9e80-869db5435175
-ms.openlocfilehash: 4f59781833a303ad2db837549eddca2f2ce291b1
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 8856a5b1782c75c5a59dfdc93a8203627059ea12
+ms.sourcegitcommit: fde637f823494532314790602c2819f889706ff6
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220487"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67042727"
 ---
 # <a name="open-folder-projects-for-c"></a>Projetos Open Folder para C++
 
 No Visual Studio 2017 e posteriores, o recurso "Abrir Pasta" permite que você abra uma pasta de arquivos de origem e comece a codificar imediatamente, com suporte para IntelliSense, navegação, refatoração, depuração e assim por diante. Nenhum arquivo .sln ou .vcxproj é carregado; se necessário, especifique tarefas personalizadas, além de compilar e iniciar parâmetros por meio de arquivos .json simples. Para obter informações gerais sobre Open Folder, confira [Desenvolver código no Visual Studio sem projetos nem soluções](/visualstudio/ide/develop-code-in-visual-studio-without-projects-or-solutions).
 
-O CMake é integrado ao IDE do Visual Studio como as Ferramentas CMake para Visual Studio, um componente da carga de trabalho de área de trabalho do C++. Para saber mais, confira [Projetos CMake no Visual Studio](cmake-projects-in-visual-studio.md). Para qualquer outro sistema de build, você pode usar o recurso Open Folder. O Open Folder efetivamente separa o editor de códigos, o depurador e os analisadores do sistema de build e o conjunto de ferramentas do compilador. Você pode usar o editor de código C++ com seus recursos avançados do IntelliSense, analisadores de código e depurador do Visual Studio com praticamente qualquer sistema de build, incluindo CMake, Ninja, QMake (para projetos Qt), gyp, SCons, Gradle, Buck, make, entre outros. Ele funciona inclusive até mesmo com um único arquivo ou um conjunto flexível de arquivos sem nenhum sistema de build.
+CMake está integrado no IDE do Visual Studio como um componente do C++ carga de trabalho da área de trabalho. Para saber mais, confira [Projetos CMake no Visual Studio](cmake-projects-in-visual-studio.md). Para qualquer outro sistema de build, você pode usar o recurso Open Folder. O Open Folder efetivamente separa o editor de códigos, o depurador e os analisadores do sistema de build e o conjunto de ferramentas do compilador. Você pode usar o editor de código C++ com seus recursos avançados do IntelliSense, analisadores de código e depurador do Visual Studio com praticamente qualquer sistema de build, incluindo CMake, Ninja, QMake (para projetos Qt), gyp, SCons, Gradle, Buck, make, entre outros. Ele funciona inclusive até mesmo com um único arquivo ou um conjunto flexível de arquivos sem nenhum sistema de build.
 
 Para usar o recurso Abrir Pasta, no menu principal, selecione **Arquivo | Abrir | Pasta** ou pressione **Ctrl+Shift+Alt+O**. Imediatamente, o Gerenciador de Soluções exibe todos os arquivos da pasta. Você pode clicar em qualquer arquivo para começar a editá-lo. Em segundo plano, o Visual Studio inicia a indexação dos arquivos para habilitar os recursos de IntelliSense, navegação e refatoração. À medida que você edita, cria, move ou exclui arquivos, o Visual Studio rastreia as alterações automaticamente e atualiza continuamente seu índice do IntelliSense. 
 
 ## <a name="qmake-projects-that-target-the-qt-framework"></a>Projetos QMake direcionados à estrutura Qt
 
-Você pode usar as Ferramentas CMake para Visual Studio para direcionar o Qt para criar projetos Qt ou usar a [Extensão Qt Visual Studio](https://download.qt.io/development_releases/vsaddin/) para Visual Studio 2015 ou Visual Studio 2017.
+Você pode usar o CMake para compilar projetos Qt, ou você pode usar o [extensão do Visual Studio Qt](https://download.qt.io/development_releases/vsaddin/) para Visual Studio 2015 ou Visual Studio 2017.
 
 ## <a name="gyp-cons-scons-buck-etc"></a>gyp, Cons, SCons, Buck, etc.
 
