@@ -1,6 +1,6 @@
 ---
 title: /VERBOSE (imprimir mensagens de progresso)
-ms.date: 11/04/2016
+ms.date: 06/13/2019
 f1_keywords:
 - /verbose
 - VC.Project.VCLinkerTool.ShowProgress
@@ -13,40 +13,42 @@ helpviewer_keywords:
 - dependencies [C++], dependency information in linker output
 - VERBOSE linker option
 ms.assetid: 9c347d98-4c37-4724-a39e-0983934693ab
-ms.openlocfilehash: 7aed1e17034b40ffdad4da4136fc5a64361b3d77
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bbf7b5966c741535f26202979cbfd71f839cc537
+ms.sourcegitcommit: e79188287189b76b34eb7e8fb1bfe646bdb586bc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62317296"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67141662"
 ---
 # <a name="verbose-print-progress-messages"></a>/VERBOSE (imprimir mensagens de progresso)
 
-```
-/VERBOSE[:{ICF|INCR|LIB|REF|SAFESEH|UNUSEDLIBS}]
-```
+Produz mensagens de progresso durante o processo de link.
+
+## <a name="syntax"></a>Sintaxe
+
+> **/VERBOSE**\[ **:** {**CLR**|**ICF**|**INCR**|**LIB**|**REF**|**SAFESEH**|**UNUSEDDELAYLOAD**|**UNUSEDLIBS**}\]
 
 ## <a name="remarks"></a>Comentários
 
-O vinculador envia informações sobre o progresso da sessão de vinculação para o **saída** janela. Na linha de comando, as informações são enviadas para a saída padrão e podem ser redirecionadas para um arquivo.
+O vinculador envia informações sobre o progresso da sessão de vinculação para o **saída** janela. Na linha de comando, as informações são enviadas para a saída padrão em podem ser redirecionadas para um arquivo.
 
-|Opção|Descrição|
-|------------|-----------------|
-|/VERBOSE|Exibe detalhes sobre o processo de vinculação.|
-|/VERBOSE:ICF|Exibir informações sobre a atividade do vinculador que resulta do uso de [/OPT: ICF](opt-optimizations.md).|
-|/VERBOSE:INCR|Exibe informações sobre o processo de vinculação incremental.|
-|/VERBOSE:LIB|Exibe mensagens de progresso que indicam apenas as bibliotecas pesquisadas.<br /><br /> As informações exibidas inclui o processo de pesquisa de biblioteca e lista cada nome de biblioteca e objeto (com o caminho completo), o símbolo que está sendo resolvido da biblioteca e uma lista de objetos que referenciam o símbolo.|
-|/VERBOSE:REF|Exibe informações sobre a atividade do vinculador que resulta do uso de [/OPT: REF](opt-optimizations.md).|
-|/VERBOSE:SAFESEH|Exibe informações sobre os módulos que não são compatíveis com tratamento processamento de exceção segura [/SAFESEH](safeseh-image-has-safe-exception-handlers.md) não for especificado.|
-|/VERBOSE:UNUSEDLIBS|Exibe informações sobre quaisquer arquivos de biblioteca que são usados quando a imagem é criada.|
+| Opção | Descrição |
+| ------------ | ----------------- |
+| /VERBOSE | Exibe detalhes sobre o processo de vinculação. |
+| /VERBOSE: CLR | Exibe informações sobre a atividade do vinculador específica para objetos e metadados compilado usando [/clr](clr-common-language-runtime-compilation.md). |
+| /VERBOSE:ICF | Exibe informações sobre a atividade do vinculador que resulta do uso de [/OPT: ICF](opt-optimizations.md). |
+| /VERBOSE:INCR | Exibe informações sobre o processo de vinculação incremental. |
+| /VERBOSE:LIB | Exibe mensagens de progresso que indicam apenas as bibliotecas pesquisadas.<br/> As informações exibidas incluem o processo de pesquisa de biblioteca. Ele lista cada nome de biblioteca e objeto (com o caminho completo), o símbolo sendo resolvido da biblioteca e uma lista de objetos que referenciam o símbolo. |
+| /VERBOSE:REF | Exibe informações sobre a atividade do vinculador que resulta do uso de [/OPT: REF](opt-optimizations.md). |
+| /VERBOSE:SAFESEH | Exibe informações sobre os módulos que são incompatíveis com tratamento quando de exceções estruturado segura [/SAFESEH](safeseh-image-has-safe-exception-handlers.md) não for especificado. |
+| /VERBOSE:UNUSEDDELAYLOAD | Exibe informações sobre qualquer atraso DLLs carregadas que não tenham nenhum símbolo usado quando a imagem é criada. |
+| /VERBOSE:UNUSEDLIBS | Exibe informações sobre quaisquer arquivos de biblioteca que são usados quando a imagem é criada. |
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do vinculador no ambiente de desenvolvimento do Visual Studio
 
-1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [propriedades de compilador e de build definida C++ no Visual Studio](../working-with-project-properties.md).
+1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, confira [Definir as propriedades de build e do compilador do C++ no Visual Studio](../working-with-project-properties.md).
 
-1. Expanda o **vinculador** pasta.
-
-1. Selecione o **linha de comando** página de propriedades.
+1. Selecione o **propriedades de configuração** > **vinculador** > **linha de comando** página de propriedades.
 
 1. Adicione a opção para o **opções adicionais** caixa.
 
