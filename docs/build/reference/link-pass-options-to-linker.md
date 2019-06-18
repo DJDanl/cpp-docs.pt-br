@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -link compiler option [C++]
 - cl.exe compiler [C++], passing options to linker
 ms.assetid: 16902a94-c094-4328-841f-3ac94ca04848
-ms.openlocfilehash: ef81a6617df811660506c08434f3b65e29155794
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 37743e855c933b6236b5e7a837db257f332a3037
+ms.sourcegitcommit: bbaf65f8ed1af12828b38f8eacd24f934ac0e538
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62290671"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67155778"
 ---
 # <a name="link-pass-options-to-linker"></a>/link (passar opções para o vinculador)
 
@@ -33,7 +33,7 @@ As opções a serem passados para o vinculador ou opção de vinculador.
 
 ## <a name="remarks"></a>Comentários
 
-O **/link** opção e suas opções de vinculador devem aparecer após quaisquer nomes de arquivo e opções de CL. Um espaço é necessário entre **/link** e `linkeroptions`. Para obter mais informações, consulte [referência de vinculador MSVC](linking.md).
+O **/link** opção e suas opções de vinculador devem aparecer após quaisquer nomes de arquivo e opções de CL. Um espaço é necessário entre **/link** e quaisquer opções de vinculador. Para obter mais informações, consulte [referência de vinculador MSVC](linking.md).
 
 ## <a name="example"></a>Exemplo
 
@@ -45,7 +45,7 @@ Essa linha de comando de exemplo compila *hello.cpp* e o vincula ao arquivo de o
 
 Normalmente, o IDE envia comandos separados para compilar e vincular o seu código. Você pode definir as opções do vinculador em suas páginas de propriedade do projeto.
 
-1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [propriedades de compilador e de build definida C++ no Visual Studio](../working-with-project-properties.md).
+1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, confira [Definir as propriedades de build e do compilador do C++ no Visual Studio](../working-with-project-properties.md).
 
 1. Selecione o **propriedades de configuração** > **vinculador** pasta.
 
