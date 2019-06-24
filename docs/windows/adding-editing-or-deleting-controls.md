@@ -43,12 +43,12 @@ helpviewer_keywords:
 - RichEdit 1.0 control
 - rich edit controls [C++], RichEdit 1.0
 ms.assetid: 73cef03f-5c8c-456a-87d1-1458dff185cf
-ms.openlocfilehash: 2e3e671cd92313ad120d2cd6aae3f7e815e09e65
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 01116116ad6bb455d3b0fd8966e65b2fec4c5a35
+ms.sourcegitcommit: 6cf0c67acce633b07ff31b56cebd5de3218fd733
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390978"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67344363"
 ---
 # <a name="how-to-add-edit-or-delete-controls-c"></a>Como: Adicionar, editar ou excluir controles (C++)
 
@@ -69,9 +69,9 @@ O **Editor de caixa de diálogo** guia é exibida na [janela caixa de ferramenta
 
    - Marque a caixa de diálogo no local onde você deseja colocar o controle e o controle aparece em que você selecionou.
 
-   - Arraste e solte o controle a partir de **caixa de ferramentas** janela para o local em sua caixa de diálogo e, em seguida, pode mover os controles ou alterar seu tamanho e forma.
+   - Arraste e solte o controle a partir de **caixa de ferramentas** janela para o local em sua caixa de diálogo. Você pode, em seguida, mova o controle ou alterar seu tamanho e forma.
 
-   - Clique duas vezes no controle de **caixa de ferramentas** janela e aparece em sua caixa de diálogo, em seguida, reposicionar o controle para o local de sua preferência.
+   - Clique duas vezes no controle de **caixa de ferramentas** janela e aparece em sua caixa de diálogo. Reposicione o controle para o local de que sua preferência.
 
 ### <a name="to-add-multiple-controls"></a>Para adicionar vários controles
 
@@ -87,7 +87,7 @@ O **Editor de caixa de diálogo** guia é exibida na [janela caixa de ferramenta
 
 1. Coloque o cursor que aparece como miras, onde você deseja que o canto superior esquerdo do novo controle esteja em sua caixa de diálogo.
 
-1. Selecione e mantenha pressionado o botão do mouse para o canto superior esquerdo do seu controle na caixa de diálogo de ancoragem e arraste o cursor para a direita e para baixo até que o controle é o tamanho desejado.
+1. Selecione e mantenha pressionado o botão do mouse para o canto superior esquerdo do seu controle na caixa de diálogo de ancoragem. Em seguida, arraste o cursor para a direita e para baixo, até que o controle é o tamanho desejado.
 
    > [!NOTE]
    > É possível ancorar qualquer um dos quatro cantos do controle que está sendo desenhado. Esse procedimento usado no canto superior esquerdo como um exemplo.
@@ -99,7 +99,7 @@ O **Editor de caixa de diálogo** guia é exibida na [janela caixa de ferramenta
 
 ### <a name="to-add-a-custom-control"></a>Para adicionar um controle personalizado
 
-Você pode adicionar controles personalizados à caixa de diálogo, selecionando o **controle personalizado** ícone na **caixa de ferramentas** e arrastando-o para sua caixa de diálogo. Para adicionar um **Syslink** controlar, adicionar um controle personalizado e, em seguida, alterar o controle **classe** propriedade a ser **Syslink**. Essa ação fará com que as propriedades atualizar e mostrar o **Syslink** propriedades do controle. Para obter informações sobre a classe de wrapper do MFC, consulte [CLinkCtrl](../mfc/reference/clinkctrl-class.md).
+Você pode adicionar controles personalizados à caixa de diálogo. Selecione o **Custom Control** ícone na **caixa de ferramentas** e arraste-o para sua caixa de diálogo. Para adicionar um `Syslink` controlar, adicionar um controle personalizado e, em seguida, alterar o controle **classe** propriedade `Syslink`. Essa ação fará com que as propriedades atualizar e mostrar o `Syslink` propriedades do controle. Para obter informações sobre a classe de wrapper do MFC, consulte [CLinkCtrl](../mfc/reference/clinkctrl-class.md).
 
 ## <a name="edit-controls"></a>Controles de edição
 
@@ -139,7 +139,7 @@ Você pode adicionar controles personalizados à caixa de diálogo, selecionando
 > [!TIP]
 > Para saltar de qualquer controle de caixa de diálogo para seu manipulador existente, clique duas vezes no controle.
 
-Você também pode usar o **variáveis de membro** guia o [MFC Class Wizard](../mfc/reference/mfc-class-wizard.md) para adicionar novas variáveis de membro para uma classe especificada e exibir as variáveis de membro que já foram definidas.
+Você também pode usar o **variáveis de membro** guia o [MFC Class Wizard](../mfc/reference/mfc-class-wizard.md) para adicionar novas variáveis de membro para uma classe especificada e exibir as variáveis de membro já definida.
 
 ## <a name="delete-controls"></a>Excluir controles
 
@@ -149,7 +149,7 @@ Na caixa de diálogo, selecione o controle, em seguida, pressione a **excluir** 
 
 ### <a name="troubleshooting"></a>Solução de problemas
 
-Depois de adicionar um controle comum ou um controle rich edit para uma caixa de diálogo, ela não aparecerá quando você testa a caixa de diálogo ou a própria caixa de diálogo não aparecerá, por exemplo:
+Depois de adicionar um controle comum ou um controle rich edit para uma caixa de diálogo, ela não aparecerá quando você testa a caixa de diálogo. Ou, a própria caixa de diálogo não aparecerá. Por exemplo:
 
 1. Crie um projeto do Win32, modificando as configurações do aplicativo, portanto, você cria um aplicativo do Windows (não um aplicativo de console).
 
@@ -215,7 +215,7 @@ O **Inserir controle ActiveX** caixa de diálogo permite que você inserir contr
 
 #### <a name="to-edit-properties-for-an-activex-control"></a>Para editar as propriedades de um controle ActiveX
 
-Controles ActiveX fornecidos por fornecedores independentes podem vir equipados com suas próprias propriedades e características. Essas propriedades são exibidas na **propriedades** janela, incluindo qualquer propriedade páginas criadas pelos gravadores do controle ActiveX são exibidas na **páginas de propriedades** caixa de diálogo (para exibir as  **Página de propriedades** para um controle ActiveX específico, selecione o **página de propriedades** botão o [janela propriedades](/visualstudio/ide/reference/properties-window)).
+Controles ActiveX fornecidos por fornecedores independentes podem vir equipados com suas próprias propriedades e características. Essas propriedades são exibidas na **propriedades** janela. As páginas de propriedade criadas pelos gravadores do controle ActiveX são exibidas na **páginas de propriedades** caixa de diálogo. (Para exibir o **página de propriedades** para um controle ActiveX específico, selecione o **página de propriedades** botão o [janela propriedades](/visualstudio/ide/reference/properties-window)).
 
 - Selecione o **ActiveX** controlar e vá para o menu **exibição** > **página de propriedades** para exibir as propriedades. Faça as alterações necessárias na página de propriedades.
 
