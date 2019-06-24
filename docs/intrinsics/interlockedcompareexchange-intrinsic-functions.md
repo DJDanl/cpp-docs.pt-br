@@ -1,5 +1,5 @@
 ---
-title: Funções intrínsecas interlockedcompareexchange
+title: Funções intrínsecas _InterlockedCompareExchange
 ms.date: 12/17/2018
 f1_keywords:
 - _InterlockedCompareExchange_HLERelease
@@ -48,18 +48,18 @@ helpviewer_keywords:
 - InterlockedCompareExchange64_rel intrinsic
 - _InterlockedCompareExchange64_rel intrinsic
 ms.assetid: c3ad79c0-a523-4930-a3a4-69a65d7d5c81
-ms.openlocfilehash: 6c0fabe7cbada87253960faca8e207bb10dd07bd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6ac3ea1c97fe78cf2a145cd2ce62f7b3f198ab3c
+ms.sourcegitcommit: 6cf0c67acce633b07ff31b56cebd5de3218fd733
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62263731"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67344447"
 ---
-# <a name="interlockedcompareexchange-intrinsic-functions"></a>Funções intrínsecas interlockedcompareexchange
+# <a name="interlockedcompareexchange-intrinsic-functions"></a>Funções intrínsecas _InterlockedCompareExchange
 
 **Seção específica da Microsoft**
 
-Executa uma comparação e troca sincronizada.
+Um interlocked compare e do exchange.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -202,15 +202,15 @@ O valor retornado é o valor inicial do ponteiro `Destination`.
 
 ## <a name="remarks"></a>Comentários
 
-`_InterlockedCompareExchange` realiza uma comparação atômica do valor `Destination` com o valor `Comparand`. Se o valor `Destination` for igual ao valor `Comparand`, o valor `Exchange` será armazenado no endereço especificado pelo `Destination`. Caso contrário, nenhuma operação será executada.
+`_InterlockedCompareExchange` faz uma comparação atômica do `Destination` valor com o `Comparand` valor. Se o valor `Destination` for igual ao valor `Comparand`, o valor `Exchange` será armazenado no endereço especificado pelo `Destination`. Caso contrário, não faz nenhuma operação.
 
 `_InterlockedCompareExchange` fornece suporte intrínseco ao compilador para o SDK do Windows Win32 [{3&gt;interlockedcompareexchange&lt;3](/windows/desktop/api/winnt/nf-winnt-interlockedcompareexchange) função.
 
-Há diversas variações em `_InterlockedCompareExchange` que têm base no tipo de dados que envolvem e se a semântica acquire ou release é usada.
+Há diversas variações em `_InterlockedCompareExchange` que variam de acordo com os tipos de dados que envolvem e se o processador específico adquirir ou semântica de liberação é usada.
 
-Enquanto a função `_InterlockedCompareExchange` opera em valores de inteiro longo, `_InterlockedCompareExchange8` opera em valores inteiros de 8 bits `_InterlockedCompareExchange16` opera em valores inteiros curtos e `_InterlockedCompareExchange64` opera em valores inteiros de 64 bits.
+Enquanto o `_InterlockedCompareExchange` função opera em valores de inteiro longo `_InterlockedCompareExchange8` opera em valores inteiros de 8 bits `_InterlockedCompareExchange16` opera em valores inteiros curtos e `_InterlockedCompareExchange64` opera em valores inteiros de 64 bits.
 
-Em plataformas ARM, use intrínsecos com os sufixos `_acq` e `_rel` para semântica de aquisição e liberação, como no início e no final de uma seção crítica. Os intrínsecos de ARM com um sufixo `_nf` ("no fence") não funcionam como uma barreira de memória.
+Em plataformas ARM, use intrínsecos com os sufixos `_acq` e `_rel` para semântica de aquisição e liberação, como no início e no final de uma seção crítica. Intrínsecos ARM com um `_nf` sufixo ("sem isolamento") não funcionam como uma barreira de memória.
 
 Intrínsecos com um sufixo `_np` ("no prefetch") impedem que uma possível operação de pré-busca seja inserida pelo compilador.
 
@@ -248,7 +248,7 @@ using namespace std;
 //#define SKIP_LOCKING
 
 // A common way of locking using _InterlockedCompareExchange.
-// Please refer to other sources for a discussion of the many issues
+// Refer to other sources for a discussion of the many issues
 // involved. For example, this particular locking scheme performs well
 // when lock contention is low, as the while loop overhead is small and
 // locks are acquired very quickly, but degrades as many callers want

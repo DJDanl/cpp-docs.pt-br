@@ -3,18 +3,18 @@ title: Colocando o controle em uma página da Web (Tutorial ATL, parte 7)
 ms.custom: get-started-article
 ms.date: 05/06/2019
 ms.assetid: 50dc4c95-c95b-4006-b88a-9826f7bdb222
-ms.openlocfilehash: aab9557fd73e870c0362f876642e828616b538bd
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: db6dcc57ff9f3748d802e76617ef18dea8f9506c
+ms.sourcegitcommit: 6cf0c67acce633b07ff31b56cebd5de3218fd733
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221241"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67344351"
 ---
 # <a name="putting-the-control-on-a-web-page-atl-tutorial-part-7"></a>Colocando o controle em uma página da Web (Tutorial ATL, parte 7)
 
 O controle está concluído. Para ver seu controle funcionar em uma situação de mundo real, coloque-o em uma página da Web. Um arquivo HTML que contém o controle foi criado quando você definiu o seu controle. Abrir o arquivo Polyctl **Gerenciador de soluções**, e você pode ver seu controle em uma página da Web.
 
-Nesta etapa, você irá adicionar funcionalidade ao controle e a página da Web para responder a eventos de script. Você também modificará o controle para permitir que o Internet Explorer sabe que o controle é seguro para script.
+Nesta etapa, você adicionar funcionalidade ao controle e a página da Web para responder a eventos de script. Você também modificará o controle para permitir que o Internet Explorer sabe que o controle é seguro para script.
 
 ## <a name="adding-new-functionality"></a>Adicionando novas funcionalidades
 
@@ -49,7 +49,7 @@ A forma agora adicionará ou removerá os lados, dependendo de onde você clicar
 
 ## <a name="scripting-the-web-page"></a>A página da Web de script
 
-O controle não faz nada ainda. Portanto, altere a página da Web para responder aos eventos que você enviar.
+O controle não faz nada ainda, portanto, altere a página da Web para responder aos eventos que você enviar.
 
 ### <a name="to-script-the-web-page"></a>Para gerar script de página da Web
 
@@ -70,21 +70,21 @@ O controle não faz nada ainda. Portanto, altere a página da Web para responder
 
 1. Salve o arquivo HTM.
 
-Você adicionou código VBScript que obtém a propriedade dos lados do controle e aumenta o número de lados por um, se você clicar no controle. Se você clicar fora do controle, você reduzir o número de lados por um.
+Você adicionou código VBScript que obtém a propriedade dos lados do controle. Ele aumenta o número de lados por um se você clicar no controle. Se você clicar fora do controle, você reduzir o número de lados por um.
 
 ## <a name="indicating-that-the-control-is-safe-for-scripting"></a>Que indica que o controle é seguro para script
 
-Você pode exibir a página da Web com o controle apenas no Internet Explorer. Outros navegadores não dão suporte a controles ActiveX devido a vulnerabilidades de segurança. 
+Você pode exibir a página da Web com o controle apenas no Internet Explorer. Outros navegadores não dão suporte a controles ActiveX devido a vulnerabilidades de segurança.
 
 > [!NOTE]
 > Se o controle não estiver visível, sabe que alguns navegadores exigem ajustes de configurações para executar controles ActiveX. Consulte a documentação do navegador sobre como habilitar os controles ActiveX.
 
-Com base em suas configurações de segurança atuais do Internet Explorer, você poderá receber um alerta de segurança caixa de diálogo informando que o controle pode não ser seguro para script e poderia potencialmente causar danos. Por exemplo, se você tivesse um controle que exibia um arquivo, mas também tinha um `Delete` método que um arquivo excluído, seria seguro se você simplesmente o exibisse em uma página. Não seria seguro criar um script, no entanto, porque alguém poderia chamar o `Delete` método.
+Com base em suas configurações de segurança atuais do Internet Explorer, você pode receber uma caixa de diálogo de alerta de segurança. Ele declara que o controle pode não ser seguro para script e poderia potencialmente causar danos. Por exemplo, se você tivesse um controle que exibia um arquivo, mas também tinha um `Delete` método que um arquivo excluído, seria seguro se você simplesmente o exibisse em uma página. Não seria seguro criar um script, no entanto, porque alguém poderia chamar o `Delete` método.
 
 > [!IMPORTANT]
 > Para este tutorial, você pode alterar as configurações de segurança no Internet Explorer para executar controles ActiveX não marcados como seguros. No painel de controle, clique em **propriedades da Internet** e clique em **segurança** para alterar as configurações apropriadas. Quando você concluiu o tutorial, altere as configurações de segurança para seu estado original.
 
-Você pode programaticamente alertar do Internet Explorer que ele não precisa exibir a caixa de diálogo de alerta de segurança para este controle específico. Você pode fazer isso com o `IObjectSafety` interface e o ATL fornece uma implementação dessa interface na classe [IObjectSafetyImpl](../atl/reference/iobjectsafetyimpl-class.md). Para adicionar a interface ao seu controle, adicione `IObjectSafetyImpl` à sua lista de classes herdadas e adicione uma entrada para ele no seu mapa COM.
+Você pode programaticamente alertar do Internet Explorer que não precisa exibir a caixa de diálogo de alerta de segurança para este controle específico. Você pode fazer isso usando o `IObjectSafety` interface. ATL fornece uma implementação dessa interface na classe [IObjectSafetyImpl](../atl/reference/iobjectsafetyimpl-class.md). Para adicionar a interface ao seu controle, adicione `IObjectSafetyImpl` à sua lista de classes herdadas e adicione uma entrada para ele no seu mapa COM.
 
 ### <a name="to-add-iobjectsafetyimpl-to-the-control"></a>Para adicionar IObjectSafetyImpl ao controle
 
@@ -96,15 +96,15 @@ Você pode programaticamente alertar do Internet Explorer que ele não precisa e
 
     [!code-cpp[NVC_ATL_Windowing#63](../atl/codesnippet/cpp/putting-the-control-on-a-web-page-atl-tutorial-part-7_2.h)]
 
-## <a name="building-and-testing-the-control"></a>Compilar e testar o controle
+## <a name="building-and-testing-the-control"></a>Compilação e teste do controle
 
-Compile o controle. Depois que a compilação for concluída, abra Polyctl no modo de exibição de navegador novamente. Neste momento, a página da Web deve ser exibida diretamente sem a **alerta de segurança** caixa de diálogo. Clique dentro do polígono; o número de lados aumenta em um. Clique fora do polígono para reduzir o número de lados.
+Compile o controle. Depois que a compilação for concluída, abra Polyctl no modo de exibição de navegador novamente. Neste momento, a página da Web deve ser exibida diretamente sem a **alerta de segurança** caixa de diálogo. Se você clicar dentro do polígono, o número de lados aumenta em um. Clique fora do polígono para reduzir o número de lados.
 
 [Volte para a etapa 6](../atl/adding-a-property-page-atl-tutorial-part-6.md)
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Isso conclui o tutorial da ATL. Para obter links para obter mais informações sobre o ATL, consulte o [página inicial do ATL](../atl/active-template-library-atl-concepts.md).
+Esta etapa conclui o tutorial da ATL. Para obter links para obter mais informações sobre o ATL, consulte o [página inicial do ATL](../atl/active-template-library-atl-concepts.md).
 
 ## <a name="see-also"></a>Consulte também
 

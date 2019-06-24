@@ -14,12 +14,12 @@ helpviewer_keywords:
 - dialog boxes [C++], size
 - dialog boxes [C++], positioning
 ms.assetid: 303de801-c4f8-42e1-b622-353f6423f688
-ms.openlocfilehash: c5f026683881ba8e608bd00089879e0e2a7b4af2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 28ed6c8be262e0446b828cfa3e6e9fe2ba53672a
+ms.sourcegitcommit: 6cf0c67acce633b07ff31b56cebd5de3218fd733
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62223565"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67344217"
 ---
 # <a name="how-to-create-a-dialog-box-c"></a>Como: Criar uma caixa de diálogo (C++)
 
@@ -38,7 +38,7 @@ O **Editor de caixa de diálogo** permite que você:
 
 1. No **adicionar recurso** caixa de diálogo, selecione **caixa de diálogo** no **tipo de recurso** lista e, em seguida, escolha **novo**.
 
-   Se um sinal de adição (**+**) é exibido ao lado de **caixa de diálogo** tipo de recurso, isso significa que os modelos de caixa de diálogo estão disponíveis. Selecione o sinal de adição para expandir a lista de modelos, selecione um modelo e escolha **New**.
+   Se um sinal de adição ( **+** ) é exibido ao lado de **caixa de diálogo** tipo de recurso, isso significa que os modelos de caixa de diálogo estão disponíveis. Selecione o sinal de adição para expandir a lista de modelos, selecione um modelo e escolha **New**.
 
    A nova caixa de diálogo é aberta na **Editor de caixa de diálogo**.
 
