@@ -3,22 +3,22 @@ title: Adicionando um controle (Tutorial ATL, parte 2)
 ms.custom: get-started-article
 ms.date: 09/26/2018
 ms.assetid: c9575a75-1064-41f1-9697-7aada560c669
-ms.openlocfilehash: 45841c33ad30ff427f9b792a779d135b4f6e7eca
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 53f38d63a44328bf014f04635a24989a875ddf1e
+ms.sourcegitcommit: 6cf0c67acce633b07ff31b56cebd5de3218fd733
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62223539"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67344322"
 ---
 # <a name="adding-a-control-atl-tutorial-part-2"></a>Adicionando um controle (Tutorial ATL, parte 2)
 
-Nesta etapa, adicione um controle ao seu projeto, compilá-lo e testá-la em uma página da Web.
+Nesta etapa, você adicionar um controle ao seu projeto, compilá-lo e testá-la em uma página da Web.
 
 ## <a name="procedures"></a>Procedimentos
 
 ### <a name="to-add-an-object-to-an-atl-project"></a>Para adicionar um objeto para um projeto ATL
 
-1. Na **Gerenciador de soluções**, clique com botão direito do `Polygon` projeto.
+1. No **Gerenciador de Soluções**, clique com o botão direito do mouse no projeto `Polygon`.
 
 1. Aponte para **Add** no menu de atalho e clique em **Novo Item** no submenu.
 
@@ -26,9 +26,9 @@ Nesta etapa, adicione um controle ao seu projeto, compilá-lo e testá-la em uma
 
 1. Clique o **ATL** pasta.
 
-1. Na lista de modelos à direita, selecione **controle ATL**. Clique em **Adicionar**. O **controle ATL** assistente será aberto e você pode configurar o controle.
+1. Na lista de modelos à direita, selecione **controle ATL**. Clique em **Adicionar** . O **controle ATL** assistente será aberto e você pode configurar o controle.
 
-1. Tipo `PolyCtl` como o nome curto e observe que os outros campos são concluídos automaticamente. Não clique **concluir** ainda, porque você precisa fazer algumas alterações.
+1. Tipo `PolyCtl` como o nome curto e observe que os outros campos são concluídos automaticamente. Não clique **concluir** ainda, porque você deve fazer algumas alterações mais.
 
 O **controle ATL** do assistente **nomes** página contém os seguintes campos:
 
@@ -43,13 +43,13 @@ O **controle ATL** do assistente **nomes** página contém os seguintes campos:
 |**Tipo**|Uma descrição para o controle.|
 |**ProgID**|O nome legível que pode ser usado para procurar o CLSID do controle.|
 
-Você precisará fazer várias configurações adicionais na **controle ATL** assistente.
+Você encontrará várias configurações adicionais devem ser alteradas na **controle ATL** assistente.
 
 ### <a name="to-enable-support-for-rich-error-information-and-connection-points"></a>Para habilitar o suporte para pontos de conexão e informações de erros completa
 
 1. Clique em **opções** para abrir o **opções** página.
 
-1. Selecione o **pontos de Conexão** caixa de seleção. Isso criará o suporte para uma interface de saída no arquivo IDL.
+1. Selecione o **pontos de Conexão** caixa de seleção. Essa opção cria o suporte para uma interface de saída no arquivo IDL.
 
 Você também pode adicionar interfaces para estender a funcionalidade do controle.
 
@@ -61,7 +61,7 @@ Você também pode adicionar interfaces para estender a funcionalidade do contro
 
 1. Selecione `ISpecifyPropertyPages` e clique em de **backup** seta para movê-la para o **com suporte** lista.
 
-Você também pode fazer o controle insertable, o que significa que ele pode ser inserido em aplicativos que suportam objetos inseridos, como Excel ou Word.
+Você também pode fazer o controle *inserível*, que significa que ela pode ser incorporada em aplicativos que suportam objetos inseridos, como Excel ou Word.
 
 ### <a name="to-make-the-control-insertable"></a>Para tornar o controle inserível
 
@@ -77,9 +77,9 @@ O polígono exibido pelo objeto terá uma cor de preenchimento sólida, portanto
 
 1. Sob **não tem suporte**, role para baixo a lista de possíveis propriedades pré-definidas. Selecione `Fill Color` e clique em de **backup** seta para movê-la para o **com suporte** lista.
 
-1. Isso conclui as opções para o controle. Clique em **Finalizar**.
+1. Escolha **Concluir**.
 
-Como o assistente criou o controle, várias alterações de código e adições de arquivos ocorreram. Os seguintes arquivos foram criados:
+Como o assistente cria o controle, ocorrem várias alterações de código e adições de arquivos. Os seguintes arquivos são criados:
 
 |Arquivo|Descrição|
 |----------|-----------------|
@@ -88,29 +88,29 @@ Como o assistente criou o controle, várias alterações de código e adições 
 |PolyCtl.rgs|Um arquivo de texto que contém o script de registro usado para registrar o controle.|
 |PolyCtl.htm|Uma página da Web que contém uma referência ao controle recém-criado.|
 
-O assistente também executou as seguintes alterações de código:
+O assistente também faz as alterações de código a seguir:
 
-- Adicionado um `#include` instrução aos arquivos Stdafx. h e Stdafx. cpp para incluir a ATL arquivos necessária para dar suporte a controles.
+- Adiciona um `#include` instrução aos arquivos Stdafx. h e Stdafx. cpp para incluir a ATL arquivos necessária para dar suporte a controles.
 
-- Polygon.idl alterada para incluir detalhes do novo controle.
+- Polygon.idl para incluir os detalhes do novo controle de alterações.
 
-- Adicionado o novo controle ao mapa de objeto em Polygon.
+- Adiciona o novo controle ao mapa de objeto em Polygon.
 
 Agora você pode compilar o controle para vê-lo em ação.
 
-## <a name="building-and-testing-the-control"></a>Compilar e testar o controle
+## <a name="building-and-testing-the-control"></a>Compilação e teste do controle
 
 ### <a name="to-build-and-test-the-control"></a>Para compilar e testar o controle
 
 1. Sobre o **construir** menu, clique em **compilar polígono**.
 
-    Depois que o controle de build é concluído, clique com botão direito Polyctl na **Gerenciador de soluções** e selecione **exibir no navegador**. A página da HTML Web que contém o controle será exibida. Você deve ver uma página com o título "Página de ATL 8.0 de teste para o objeto PolyCtl" e o texto PolyCtl. Este é o seu controle.
+    Depois que o controle de build é concluído, clique com botão direito Polyctl na **Gerenciador de soluções** e selecione **exibir no navegador**. A página da HTML Web que contém o controle é exibida. Você deve ver uma página com a título "ATL 8.0 página de teste para o objeto PolyCtl" e seu controle, o texto PolyCtl.
 
 > [!NOTE]
 > Se o controle não estiver visível, sabe que alguns navegadores exigem ajustes de configurações para executar controles ActiveX. Consulte a documentação do navegador sobre como habilitar os controles ActiveX.
 
 > [!NOTE]
-> Ao concluir este tutorial, se você receber uma mensagem de erro onde o arquivo DLL não pode ser criado, feche o arquivo Polyctl htm e o contêiner de teste do controle ActiveX e crie a solução novamente. Se você ainda não é possível criar a DLL, reinicialize o computador ou fazer logoff (se você estiver usando os serviços de Terminal).
+> Ao concluir este tutorial, se você receber uma mensagem de erro que o arquivo DLL não pode ser criado, feche o arquivo Polyctl htm e o contêiner de teste do controle ActiveX e crie a solução novamente. Se você ainda não é possível criar a DLL, reinicialize o computador ou fazer logoff, se você estiver usando os serviços de Terminal.
 
 Em seguida, você adicionará uma propriedade personalizada ao controle.
 
