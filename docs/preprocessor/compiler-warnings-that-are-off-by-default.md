@@ -5,14 +5,14 @@ helpviewer_keywords:
 - warnings, compiler
 - cl.exe compiler, setting options
 ms.assetid: 69809cfb-a38a-4035-b154-283a61938df8
-ms.openlocfilehash: ee2b6097a62a8f1030dc631354f96ec7a33d2f11
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0f306ef11b17ac94281dc9a5fdba55a34d236eb1
+ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62236542"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400918"
 ---
-# <a name="compiler-warnings-that-are-off-by-default"></a>Avisos do compilador que são desativados por padrão
+# <a name="compiler-warnings-that-are-off-by-default"></a>Avisos de compilador desativados por padrão
 
 O compilador suporta os avisos que são desativados por padrão, porque a maioria dos desenvolvedores não sejam úteis. Em alguns casos, eles avisam sobre uma opção estilísticas ou sobre linguagens comuns no código mais antigo. Outros avisos são sobre o uso de uma extensão da Microsoft para o idioma. Em outros casos, elas indicam uma área em que os programadores geralmente fazem suposições incorretas, que podem resultar em comportamento inesperado ou indefinido. Se habilitada, alguns desses avisos podem aparecer várias vezes nos cabeçalhos da biblioteca. As bibliotecas de tempo de execução do C e as bibliotecas padrão do C++ são destinadas para não emitir nenhum aviso somente no nível de aviso [/W4](../build/reference/compiler-option-warning-level.md).
 
@@ -159,7 +159,7 @@ Os seguintes avisos são desativados por padrão no Visual Studio 2015 e versõe
 ::: moniker range=">= vs-2019"
 <sup>16.0</sup> esse aviso está disponível a partir do Visual Studio 2019 RTM.<br/>
 ::: moniker-end
-<sup>Perm</sup> esse aviso é desativado, a menos que o [/permissive--](../build/reference/permissive-standards-conformance.md) é definir a opção de compilador.<br/>
+<sup>Perm</sup> esse aviso é desativado, a menos que o [/permissive--](../build/reference/permissive-standards-conformance.md) é definir a opção de compilador.
 
 ## <a name="warnings-off-by-default-in-earlier-versions"></a>Avisos desativado por padrão em versões anteriores
 

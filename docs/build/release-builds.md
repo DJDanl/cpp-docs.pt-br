@@ -6,12 +6,12 @@ helpviewer_keywords:
 - release builds
 - debug builds, converting to release build
 ms.assetid: fa9a78fa-f4b5-4722-baf4-aec655c4ff0f
-ms.openlocfilehash: cf11e63354502be000ba5f7259d9e36dfa774060
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b1db396136af4a6ce8cc005753dded9eea2bfbeb
+ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62315060"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400477"
 ---
 # <a name="release-builds"></a>Builds de lançamento
 
@@ -25,7 +25,7 @@ Um build de versão usa otimizações. Quando você usa otimizações para criar
 [Usando o build de depuração para verificar se há substituição de memória](using-the-debug-build-to-check-for-memory-overwrite.md)<br/>
 [Como: depurar um build da versão](how-to-debug-a-release-build.md)<br/>
 [Verificando se há substituições de memória](checking-for-memory-overwrites.md)<br/>
-[Otimizando seu código](optimizing-your-code.md)<br/>
+[Otimizando seu código](optimizing-your-code.md)
 
 ## <a name="see-also"></a>Consulte também
 
