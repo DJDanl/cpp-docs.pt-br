@@ -45,10 +45,10 @@ HRESULT CreateInstance(
 O `CLSID` de um objeto.
 
 *clsidString*<br/>
-Uma cadeia de caracteres Unicode que contém um `CLSID` (começando com "**{**") ou um `ProgID`.
+Uma cadeia de caracteres Unicode que contém um `CLSID` (começando com " **{** ") ou um `ProgID`.
 
 *clsidStringA*<br/>
-Uma cadeia de caracteres multibyte, usando a página de código ANSI, que contém um `CLSID` (começando com "**{**") ou um `ProgID`.
+Uma cadeia de caracteres multibyte, usando a página de código ANSI, que contém um `CLSID` (começando com " **{** ") ou um `ProgID`.
 
 *dwClsContext*<br/>
 Contexto para execução do código executável.
@@ -60,11 +60,11 @@ O externo desconhecido para [agregação](../atl/aggregation.md).
 
 Essas funções membro chamam `CoCreateInstance` para criar um novo objeto COM e, em seguida, buscam o tipo de interface desse ponteiro inteligente. O ponteiro resultante é encapsulado nesse objeto `_com_ptr_t`. `Release` é chamado para diminuir a contagem de referência para o ponteiro anteriormente encapsulado. Essa rotina retorna o HRESULT para indicar êxito ou falha.
 
-- **CreateInstance (***rclsid* **,***dwClsContext***)** cria uma nova instância em execução de um objeto dado um `CLSID`.
+- **CreateInstance (** *rclsid* **,** *dwClsContext* **)** cria uma nova instância em execução de um objeto dado um `CLSID`.
 
-- **CreateInstance (***clsidString* **,***dwClsContext***)** cria uma nova instância em execução de um objeto dado um Cadeia de caracteres Unicode que contém um `CLSID` (começando com "**{**") ou um `ProgID`.
+- **CreateInstance (** *clsidString* **,** *dwClsContext* **)** cria uma nova instância em execução de um objeto dado um Cadeia de caracteres Unicode que contém um `CLSID` (começando com " **{** ") ou um `ProgID`.
 
-- **CreateInstance (***clsidStringA* **,***dwClsContext***)** cria uma nova instância em execução de um objeto dado um cadeia de caracteres multibyte que contém um `CLSID` (começando com "**{**") ou um `ProgID`. Chamadas [MultiByteToWideChar](/windows/desktop/api/stringapiset/nf-stringapiset-multibytetowidechar), que presume que a cadeia de caracteres está em página de código ANSI em vez de uma página de código OEM.
+- **CreateInstance (** *clsidStringA* **,** *dwClsContext* **)** cria uma nova instância em execução de um objeto dado um cadeia de caracteres multibyte que contém um `CLSID` (começando com " **{** ") ou um `ProgID`. Chamadas [MultiByteToWideChar](/windows/desktop/api/stringapiset/nf-stringapiset-multibytetowidechar), que presume que a cadeia de caracteres está em página de código ANSI em vez de uma página de código OEM.
 
 **Fim da seção específica da Microsoft**
 

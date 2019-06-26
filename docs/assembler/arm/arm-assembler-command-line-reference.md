@@ -26,7 +26,7 @@ Uma combinação de zero ou mais das seguintes opções:
 - **-errors** *filename*<br/>
    Redirecionamento de erro e mensagens de advertência *filename*.
 
-- **-i** *dir*[**;**<em>dir</em>]<br/>
+- **-i** *dir*[ **;** <em>dir</em>]<br/>
    Adicione diretórios especificados ao caminho de pesquisa de inclusão.
 
 - **-predefine** *directive*<br/>

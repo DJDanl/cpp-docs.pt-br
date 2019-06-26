@@ -5,18 +5,18 @@ helpviewer_keywords:
 - iterator conventions
 - C++ Standard Library, iterator conventions
 ms.assetid: 2f746be7-b37d-4bfc-bf05-be4336ca982f
-ms.openlocfilehash: ae4193b8e6edf94ab0f8d839ac36fc1addfd8d04
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: d72cd26f2642816efae2ec826df1bd9fa02e7531
+ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220317"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400420"
 ---
 # <a name="iterators"></a>Iterators
 
 Um iterador é um objeto que pode iterar em elementos em um contêiner da Biblioteca Padrão do C++ e fornecer acesso a elementos individuais. Os contêineres da Biblioteca Padrão do C++ fornecem iteradores de modo que todos os algoritmos possam acessar seus elementos de maneira padrão sem precisar se preocupar com o tipo do contêiner em que os elementos estão armazenados.
 
-Você pode usar iteradores explicitamente usando funções membro e globais, como `begin()` e `end()` e operadores, como **++** e **--** para mover para frente ou com versões anteriores. Você também pode usar iteradores implicitamente com um intervalo de-loop for ou (para alguns tipos de iterador) o operador subscrito  **\[]**.
+Você pode usar iteradores explicitamente usando funções membro e globais, como `begin()` e `end()` e operadores, como **++** e **--** para mover para frente ou com versões anteriores. Você também pode usar iteradores implicitamente com um intervalo de-loop for ou (para alguns tipos de iterador) o operador subscrito  **\[]** .
 
 Na Biblioteca Padrão do C++, o início de uma sequência ou intervalo é o primeiro elemento. O final de uma sequência ou intervalo sempre é definido como um após o último elemento. As funções globais `begin` e `end` retornam iteradores a um contêiner especificado. O loop do iterador explícito típico sobre todos os elementos em um contêiner tem esta aparência:
 
@@ -49,7 +49,7 @@ Há cinco categorias de iteradores. Em ordem crescente de potência, as categori
 
 - **Bidirecional**. Um *iterador bidirecional* `X` pode tomar o lugar de um iterador de avanço. Você pode, no entanto, decrementar um iterador bidirecional, como em `--X`, `X--`, ou `(V = *X--)`. É possível acessar membros do elemento e comparar iteradores bidirecionais da mesma forma que ocorre com iteradores de avanço.
 
-- **Acesso aleatório**. Um *iterador de acesso aleatório* `X` pode tomar o lugar de um iterador bidirecional. Com um iterador de acesso aleatório, você pode usar o operador subscrito  **\[]** para acessar elementos. Você pode usar o **+**, **-**, **+=** e **-=** operadores para mover Avançar ou retroceder um número especificado de elementos e para calcular a distância entre iteradores. Você pode comparar iteradores bidirecionais usando **==**, **! =**, **\<**, **>**, **\< =**, e **>=**.
+- **Acesso aleatório**. Um *iterador de acesso aleatório* `X` pode tomar o lugar de um iterador bidirecional. Com um iterador de acesso aleatório, você pode usar o operador subscrito  **\[]** para acessar elementos. Você pode usar o **+** , **-** , **+=** e **-=** operadores para mover Avançar ou retroceder um número especificado de elementos e para calcular a distância entre iteradores. Você pode comparar iteradores bidirecionais usando **==** , **! =** , **\<** , **>** , **\< =** , e **>=** .
 
 Todos os iteradores podem ser atribuídos ou copiados. Eles são considerados objetos leves e geralmente são passados e retornados por valor, não por referência. Observe também que nenhuma das operações descritas anteriormente pode gerar uma exceção quando executada em um iterador válido.
 
@@ -58,7 +58,7 @@ A hierarquia das categorias de iterador pode ser resumida mostrando três sequê
 > iterador de saída<br/>
 > -> iterador de avanço<br/>
 > -> iterador bidirecional<br/>
-> -> iterador de acesso aleatório<br/>
+> -> iterador de acesso aleatório
 
 A seta para a direita significa "pode ser substituído por". Qualquer algoritmo que chama um iterador de saída deve funcionar bem com um iterador de avanço, por exemplo, mas *não* o oposto.
 
@@ -67,7 +67,7 @@ Para acesso somente leitura a uma sequência, você pode usar qualquer um entre:
 > iterador de entrada<br/>
 > -> iterador de avanço<br/>
 > -> iterador bidirecional<br/>
-> -> iterador de acesso aleatório<br/>
+> -> iterador de acesso aleatório
 
 Um iterador de entrada é a mais fraca de todas as categorias, nesse caso.
 
@@ -75,7 +75,7 @@ Por fim, para acesso de leitura/gravação a uma sequência, você pode usar qua
 
 > iterador de avanço<br/>
 > -> iterador bidirecional<br/>
-> -> iterador de acesso aleatório<br/>
+> -> iterador de acesso aleatório
 
 Um ponteiro de objeto sempre pode servir como um iterador de acesso aleatório, de modo que ele pode servir como qualquer categoria de iterador se der suporte para o acesso de leitura/gravação adequado para a sequência que designa.
 

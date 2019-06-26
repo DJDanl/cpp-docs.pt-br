@@ -45,13 +45,13 @@ Uma cadeia de caracteres Unicode.
 
 Esses operadores executam a concatenação de cadeias de caracteres:
 
-- **Operator + = (***s1***)** anexa os caracteres em encapsulado `BSTR` de *s1* ao final da deencapsuladodesteobjeto`BSTR`.
+- **Operator + = (** *s1* **)** anexa os caracteres em encapsulado `BSTR` de *s1* ao final da deencapsuladodesteobjeto`BSTR`.
 
-- **operador + (***s1***)** retorna o novo `_bstr_t` que é formado pela concatenação desse objeto `BSTR` com do *s1*.
+- **operador + (** *s1* **)** retorna o novo `_bstr_t` que é formado pela concatenação desse objeto `BSTR` com do *s1*.
 
-- **operador + (***s2***&#124;***s1***)** retorna um novo `_bstr_t` formado pela concatenação de um cadeia de caracteres multibyte *s2*, convertido em Unicode, com o `BSTR` encapsulada na *s1*.
+- **operador + (** *s2* **&#124;** *s1* **)** retorna um novo `_bstr_t` formado pela concatenação de um cadeia de caracteres multibyte *s2*, convertido em Unicode, com o `BSTR` encapsulada na *s1*.
 
-- **operador + (***s3* **,***s1***)** retorna um novo `_bstr_t` formado pela concatenação de uma cadeia de caracteres Unicode *s3* com o `BSTR` encapsulada na *s1*.
+- **operador + (** *s3* **,** *s1* **)** retorna um novo `_bstr_t` formado pela concatenação de uma cadeia de caracteres Unicode *s3* com o `BSTR` encapsulada na *s1*.
 
 **Fim da seção específica da Microsoft**
 
