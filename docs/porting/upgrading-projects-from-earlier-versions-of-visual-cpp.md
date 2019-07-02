@@ -6,12 +6,12 @@ helpviewer_keywords:
 - 32-bit code porting
 - upgrading Visual C++ applications, 32-bit code
 ms.assetid: 18cdacaa-4742-43db-9e4c-2d9e73d8cc84
-ms.openlocfilehash: fca4a87310f7ba0c21a6a7512dd93dce0f915f6b
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 25cf8d451c0efb5234fba5e56b6bfe7ceb7c2c08
+ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220391"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400823"
 ---
 # <a name="upgrading-projects-from-earlier-versions-of-visual-c"></a>Atualizando projetos a partir de versões anteriores do Visual C++
 
@@ -42,7 +42,7 @@ Para obter informações sobre como atualizar as versões de destino do Windows,
 [Problemas de migração de ponto flutuante](floating-point-migration-issues.md)<br/>
 [Usar direcionamento múltiplo nativo no Visual Studio para compilar projetos antigos](use-native-multi-targeting.md)<br/>
 [Recursos do Visual C++ preteridos na versão prévia do Visual Studio 2019](features-deprecated-in-visual-studio.md)<br/>
-[Alterações no sistema de build](build-system-changes.md)<br/>
+[Alterações no sistema de build](build-system-changes.md)
 
 ## <a name="see-also"></a>Consulte também
 

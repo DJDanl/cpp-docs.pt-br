@@ -4,12 +4,12 @@ ms.date: 02/27/2018
 helpviewer_keywords:
 - integer constants
 ms.assetid: fcf6b83c-2038-49ec-91ca-3d5ca1f83037
-ms.openlocfilehash: 4a3d6b945f3611b8e51029c0a5ec5dc77b2cbaa0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 48561599896bb8a6f9ee159630ff15df6c0454be
+ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620214"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400518"
 ---
 # <a name="c-integer-constants"></a>Constantes de inteiro C
 
@@ -20,33 +20,33 @@ Uma *constante de inteiro* é um número decimal (base 10), octal (base 8) ou he
 *integer-constant*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*decimal-constant* *integer-suffix*<sub>opt</sub><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*octal-constant* *integer-suffix*<sub>opt</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*hexadecimal-constant* *integer-suffix*<sub>opt</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*hexadecimal-constant* *integer-suffix*<sub>opt</sub>
 
 *decimal-constant*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*nonzero-digit*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*decimal-constant* *digit*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*decimal-constant* *digit*
 
 *octal-constant*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**0**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*octal-constant* *octal-digit*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*octal-constant* *octal-digit*
 
 *hexadecimal-constant*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*hexadecimal-prefix* *hexadecimal-digit*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*hexadecimal-constant* *hexadecimal-digit*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*hexadecimal-constant* *hexadecimal-digit*
 
 *hexadecimal-prefix*: um de<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**0x**  **0X**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**0x**  **0X**
 
 *nonzero-digit*: one of<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**1 2 3 4 5 6 7 8 9**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**1 2 3 4 5 6 7 8 9**
 
 *octal-digit*: one of<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**0 1 2 3 4 5 6 7**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**0 1 2 3 4 5 6 7**
 
 *hexadecimal-digit*: one of<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**0 1 2 3 4 5 6 7 8 9**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**a b c d e f**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**A B C D E F**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**A B C D E F**
 
 *integer-suffix*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*unsigned-suffix* *long-suffix*<sub>opt</sub><br/>
@@ -54,23 +54,23 @@ Uma *constante de inteiro* é um número decimal (base 10), octal (base 8) ou he
 &nbsp;&nbsp;&nbsp;&nbsp;*unsigned-suffix* *64-bit-integer-suffix*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*long-suffix* *unsigned-suffix*<sub>opt</sub><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*long-long-suffix* *unsigned-suffix*<sub>opt</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*64-bit-integer-suffix*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*64-bit-integer-suffix*
 
 *unsigned-suffix*: one of<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**u U**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**u U**
 
 *long-suffix*: one of<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**l L**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**l L**
 
 *long-long-suffix*: um de<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**ll LL**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**ll LL**
 
 *64-bit-integer-suffix*: um de<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**i64 I64**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**i64 I64**
 
 Os sufixos **i64** e **I64** são específicos da Microsoft.
 
-As constantes de inteiro são positivas a menos que sejam precedidas por um sinal de subtração (**-**). O sinal de subtração é interpretado como o operador aritmético unário de negação. (Consulte [Operadores aritméticos unários](../c-language/unary-arithmetic-operators.md) para obter informações sobre este operador.)
+As constantes de inteiro são positivas a menos que sejam precedidas por um sinal de subtração ( **-** ). O sinal de subtração é interpretado como o operador aritmético unário de negação. (Consulte [Operadores aritméticos unários](../c-language/unary-arithmetic-operators.md) para obter informações sobre este operador.)
 
 Se uma constante inteira começar com **0x** ou **0X**, ela é hexadecimal. Se ela começar com o dígito **0**, é octal. Caso contrário, pressupõe-se que é decimal.
 
