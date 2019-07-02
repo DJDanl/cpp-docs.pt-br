@@ -6,12 +6,12 @@ helpviewer_keywords:
 - project debugging [C++]
 - debugging projects
 ms.assetid: a5cade77-ba51-4b03-a7a0-6897e3cd6a59
-ms.openlocfilehash: 55124bc2f240499cc163fca6d0004a79047060a4
-ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.openlocfilehash: ce792345b045a1e647de6363ca094fb3f3826b73
+ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64857244"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400973"
 ---
 # <a name="walkthrough-debugging-a-project-c"></a>Passo a passo: Depurando um projeto (C++)
 
@@ -54,7 +54,7 @@ Neste passo a passo, você modificará o programa para corrigir o problema encon
 ## <a name="next-steps"></a>Próximas etapas
 
 **Anterior:** [Passo a passo: Teste de um projeto (C++)](../ide/walkthrough-testing-a-project-cpp.md)<br/>
-**Avançar:** [Passo a passo: Implantação do programa (C++)](../ide/walkthrough-deploying-your-program-cpp.md)<br/>
+**Avançar:** [Passo a passo: Implantação do programa (C++)](../ide/walkthrough-deploying-your-program-cpp.md)
 
 ## <a name="see-also"></a>Consulte também
 

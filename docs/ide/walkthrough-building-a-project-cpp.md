@@ -6,12 +6,12 @@ helpviewer_keywords:
 - projects [C++], building
 - project building [C++]
 ms.assetid: d459bc03-88ef-48d0-9f9a-82d17f0b6a4d
-ms.openlocfilehash: ea477e7b2f5435e049b242e68d151cc1f2d20624
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: d23412bcc740cbbda4227e0271842b4d44b436af
+ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "66182686"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400986"
 ---
 # <a name="walkthrough-building-a-project-c"></a>Passo a passo: Compilando um projeto (C++)
 
@@ -55,7 +55,7 @@ Neste passo a passo, você introduzirá um erro de sintaxe do C++ no código del
 ## <a name="next-steps"></a>Próximas etapas
 
 **Anterior:** [Passo a passo: Como trabalhar com Projetos e Soluções (C++)](../ide/walkthrough-working-with-projects-and-solutions-cpp.md)<br/>
-**Avançar:** [Passo a passo: Teste de um projeto (C++)](../ide/walkthrough-testing-a-project-cpp.md)<br/>
+**Avançar:** [Passo a passo: Teste de um projeto (C++)](../ide/walkthrough-testing-a-project-cpp.md)
 
 ## <a name="see-also"></a>Consulte também
 
