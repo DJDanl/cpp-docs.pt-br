@@ -1,13 +1,13 @@
 ---
 title: Visão geral de programação do Windows no C++
-ms.date: 05/06/2019
+ms.date: 07/02/2019
 ms.assetid: efc691d7-21f3-47ae-ae56-cab999ccf59d
-ms.openlocfilehash: 585fda614acce85e286e25b807d0fda57d03758b
-ms.sourcegitcommit: af580f3a11b19d22288424eac7ceae1bc24ab312
+ms.openlocfilehash: 1f49c9f8f78f83d6ae991b7427b28f7f5cbf7f0c
+ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66355559"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67552314"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>Visão geral de programação do Windows no C++
 
@@ -118,5 +118,5 @@ O Visual Studio inclui um depurador potente para código nativo, ferramentas de 
 |[C++ no Visual Studio](../overview/visual-cpp-in-visual-studio.md)|Tópico pai para o conteúdo para desenvolvedores do Visual C++.|
 [Desenvolvimento .NET com C++/CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)|Crie wrappers para bibliotecas de C++ nativas que habilitá-lo para a comunicação com aplicativos .NET e componentes.|
 |[Extensões de componentes para .NET e UWP](../extensions/component-extensions-for-runtime-platforms.md)|Referência para elementos de sintaxe compartilhados pelo C++/CX e C++/CLI.|
-|[Aplicativos universais do Windows (C++)](universal-windows-apps-cpp.md)|Escrever aplicativos UWP usando C++/CX ou biblioteca de modelos de tempo de execução do Windows (WRL).|
+|[Aplicativos universais do Windows (C++)](../cppcx/universal-windows-apps-cpp.md)|Escrever aplicativos UWP usando C++/CX ou biblioteca de modelos de tempo de execução do Windows (WRL).|
 |[Atributos C++ para COM e .NET](attributes/cpp-attributes-com-net.md)|Atributos não padrão para a programação somente para Windows usando o .NET ou COM.|

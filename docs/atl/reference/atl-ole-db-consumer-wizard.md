@@ -1,15 +1,15 @@
 ---
 title: Assistente de consumidor OLE DB da ATL
-ms.date: 05/09/2019
+ms.date: 07/02/2019
 helpviewer_keywords:
 - ATL projects, adding ATL OLE DB consumers
 ms.assetid: dcb68ed1-2224-422f-9f7b-108a74864204
-ms.openlocfilehash: bd7af5c9788f5075f38f85bd035ba8cd09e8baec
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: 7195d712474765258ac0319539697b3517cb91b3
+ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65706986"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67552236"
 ---
 # <a name="atl-ole-db-consumer-wizard"></a>Assistente de consumidor OLE DB da ATL
 
@@ -30,7 +30,7 @@ Esse assistente configura uma classe de consumidor do OLE DB com as associaçõe
 
 - **Fonte de Dados**
 
-   O botão **Fonte de Dados** permite que você configure a fonte de dados especificada usando o provedor OLE DB especificado. Quando você clica nesse botão, a caixa de diálogo **Propriedades do Link de Dados** é exibida. Saiba mais sobre como criar cadeias de conexão e a caixa de diálogo **Propriedades do Link de Dados** em [Visão geral da API do link de dados](/previous-versions/windows/desktop/ms718102) na documentação de SDK do Windows.
+   O botão **Fonte de Dados** permite que você configure a fonte de dados especificada usando o provedor OLE DB especificado. Quando você clica nesse botão, a caixa de diálogo **Propriedades do Link de Dados** é exibida. Saiba mais sobre como criar cadeias de conexão e a caixa de diálogo **Propriedades do Link de Dados** em [Visão geral da API do link de dados](/previous-versions/windows/desktop/ms718102(v=vs.85)) na documentação de SDK do Windows.
 
    As informações adicionais a seguir descrevem as guias na caixa de diálogo **Propriedades do Link de Dados**.
 
@@ -171,7 +171,7 @@ Esse assistente configura uma classe de consumidor do OLE DB com as associaçõe
 
 - **Suporte**
 
-   Marque as caixas de seleção para especificar os tipos de atualização a ser suportados no consumidor (o padrão é nenhum). Cada um definirá [DBPROP_IRowsetChange](/previous-versions/windows/desktop/ms715892) e as entradas apropriadas para [DBPROP_UPDATABILITY](/previous-versions/windows/desktop/ms722676) no mapa do conjunto de propriedades.
+   Marque as caixas de seleção para especificar os tipos de atualização a ser suportados no consumidor (o padrão é nenhum). Cada um definirá [DBPROP_IRowsetChange](/previous-versions/windows/desktop/ms715892(v=vs.85)) e as entradas apropriadas para [DBPROP_UPDATABILITY](/previous-versions/windows/desktop/ms722676(v=vs.85)) no mapa do conjunto de propriedades.
 
    - **Alteração**
 
@@ -191,4 +191,4 @@ Esse assistente configura uma classe de consumidor do OLE DB com as associaçõe
 
 [Consumidor OLE DB da ATL](../../atl/reference/adding-an-atl-ole-db-consumer.md)<br/>
 [Adicionando funcionalidade com assistentes de código](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
-[Cadeias de conexão e links de dados (OLE DB)](/previous-versions/windows/desktop/ms718376)
+[Cadeias de conexão e links de dados (OLE DB)](/previous-versions/windows/desktop/ms718376(v=vs.85))
