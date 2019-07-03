@@ -1,20 +1,20 @@
 ---
 title: PgoAutoSweep
-ms.date: 03/14/2018
+ms.date: 07/02/2019
 f1_keywords:
 - PgoAutoSweep
 - PogoAutoSweepA
 - PogoAutoSweepW
-ms.openlocfilehash: 2d9804e5ce90663d44ac389ab4f71d10290e6470
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 57bcd1b2e9f0a3312867c4373fd1e50bcf91576e
+ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62295307"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67552238"
 ---
 # <a name="pgoautosweep"></a>PgoAutoSweep
 
-`PgoAutoSweep` salva as informações do contador de perfil atual em um arquivo e, em seguida, redefine os contadores. Use a função durante a Otimização Guiada por perfil de treinamento para gravar todos os dados de perfil de programa em execução em um arquivo. PGC para uso posterior na compilação de otimização.
+`PgoAutoSweep` salva as informações do contador de perfil atual em um arquivo e, em seguida, redefine os contadores. Use a função durante a Otimização Guiada por perfil treinamento para gravar todos os dados de perfil do programa em execução para um `.pgc` arquivo para uso posterior na compilação de otimização.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -26,7 +26,7 @@ void PgoAutoSweep(const wchar_t* name); // UNICODE
 ### <a name="parameters"></a>Parâmetros
 
 *name*<br/>
-Uma cadeia de identifica para o arquivo. PGC salvo.
+Uma cadeia de caracteres de identifica para o salvo `.pgc` arquivo.
 
 ## <a name="remarks"></a>Comentários
 
@@ -34,11 +34,11 @@ Você pode chamar `PgoAutoSweep` do seu aplicativo para salvar e redefinir os da
 
 Os dados do contador de perfil salvo são colocados em um arquivo chamado *base_name*-*nome*! *valor*. PGC, onde *base_name* é o nome base do executável, *nome* é o parâmetro passado para `PgoAutoSweep`, e *valor* é um valor exclusivo, geralmente monotônica, para evitar colisões de nome de arquivo.
 
-Os arquivos. PGC criados pelo `PgoAutoSweep` deverão ser mesclados em um arquivo. PGD para ser usado para criar um executável otimizado. Você pode usar o [pgomgr](pgomgr.md) comando para executar a mesclagem.
+O `.pgc` arquivos criados pelo `PgoAutoSweep` devem ser mesclados em um `.pgd` arquivo a ser usado para criar um executável otimizado. Você pode usar o [pgomgr](pgomgr.md) comando para executar a mesclagem.
 
-Você pode passar o nome do arquivo. PGD mesclado para o vinculador durante a compilação de otimização usando o **PGD =**_filename_ argumento para o [/USEPROFILE](reference/useprofile.md) opção de vinculador, ou por usando preteridas **/PGD.** a opção de vinculador. Se você mesclar os arquivos. PGC em um arquivo denominado *base_name*PGD, você não precisa especificar o nome do arquivo na linha de comando, porque o vinculador escolherá este nome de arquivo por padrão.
+Você pode passar o nome da mesclado `.pgd` arquivo para o vinculador durante a compilação de otimização usando o **PGD =** _filename_ argumento para o [/USEPROFILE](reference/useprofile.md) vinculador opção ou pelo uso preteridas **/PGD.** a opção de vinculador. Se você mesclar os `.pgc` arquivos em um arquivo denominado *base_name*PGD, você não precisa especificar o nome do arquivo na linha de comando, porque o vinculador escolherá este nome de arquivo por padrão.
 
-O `PgoAutoSweep` função mantém a configuração de acesso thread-safe especificado quando o build instrumentado é criado. Se você usar a configuração padrão ou especificar o **NOEXACT** argumento para o [/GENPROFILE ou /FASTGENPROFILE]() opção de vinculador, chamadas para `PgoAutoSweep` não são thread-safe. O **EXACT** argumento cria um thread-safe e mais preciso, mas executável instrumentado e mais lento.
+O `PgoAutoSweep` função mantém a configuração de acesso thread-safe especificado quando o build instrumentado é criado. Se você usar a configuração padrão ou especificar o **NOEXACT** argumento para o [/GENPROFILE ou /FASTGENPROFILE](reference/genprofile-fastgenprofile-generate-profiling-instrumented-build.md) opção de vinculador, chamadas para `PgoAutoSweep` não são thread-safe. O **EXACT** argumento cria um thread-safe e mais preciso, mas executável instrumentado e mais lento.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -50,7 +50,7 @@ O executável deve incluir o arquivo pgobootrun nas bibliotecas vinculadas. Esse
 
 ## <a name="example"></a>Exemplo
 
-O exemplo abaixo usa `PgoAutoSweep` para criar dois. Arquivos PGC em pontos diferentes durante a execução. O primeiro contém dados que descreve o comportamento de tempo de execução até `count` é igual a 3, e o segundo contém os dados coletados depois desse ponto até que apenas antes do encerramento do aplicativo.
+O exemplo abaixo usa `PgoAutoSweep` para criar dois `.pgc` arquivos em pontos diferentes durante a execução. O primeiro contém dados que descreve o comportamento de tempo de execução até `count` é igual a 3, e o segundo contém os dados coletados depois desse ponto até que apenas antes do encerramento do aplicativo.
 
 ```cpp
 // pgoautosweep.cpp

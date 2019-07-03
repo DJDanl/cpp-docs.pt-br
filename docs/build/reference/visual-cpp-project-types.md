@@ -1,6 +1,6 @@
 ---
 title: Tipos de projeto do Visual C++
-ms.date: 11/29/2018
+ms.date: 07/02/2019
 helpviewer_keywords:
 - programs [C++], projects
 - project templates [Visual Studio], C++
@@ -10,19 +10,19 @@ helpviewer_keywords:
 - applications [C++], projects
 - C++ projects, types
 ms.assetid: 7337987e-1e7b-4120-9a4b-94f0401f15e7
-ms.openlocfilehash: dce96a221804e5538929d63fa3c125a27e7fc36d
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 98f8ea11cce61ca91fbdc8f8afb900a7ba5b42c9
+ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65217779"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67552223"
 ---
 # <a name="c-project-templates"></a>Modelos de projeto C++
 
 Modelos de projeto do Visual Studio geram arquivos de código-fonte, opções do compilador, menus, barras de ferramentas, ícones, referências, e `#include` instruções que são apropriadas para o tipo de projeto que você deseja criar. O Visual Studio inclui vários tipos de C++ modelos de projeto e fornece assistentes para muitos deles, para que você possa personalizar seus projetos conforme você criá-los. Imediatamente depois de criar um projeto, você pode compilá-lo e executar o aplicativo; é uma boa prática compilar o projeto de forma intermitente durante o desenvolvimento do aplicativo.
 
 > [!NOTE]
-> Você pode criar um projeto de linguagem C, utilizando modelos de projeto C++. No projeto gerado, localize os arquivos que têm uma extensão de nome de arquivo .cpp e mude para .c. Em seguida, na página **Propriedades do Projeto** do projeto (não da solução), expanda **Propriedades de Configuração**, **C/C++** e selecione **Avançado**. Altere as configurações de **Compilar como** para **Compilar como Código C (/TC)**.
+> Você pode criar um projeto de linguagem C, utilizando modelos de projeto C++. No projeto gerado, localize os arquivos que têm uma extensão de nome de arquivo .cpp e mude para .c. Em seguida, na página **Propriedades do Projeto** do projeto (não da solução), expanda **Propriedades de Configuração**, **C/C++** e selecione **Avançado**. Altere as configurações de **Compilar como** para **Compilar como Código C (/TC)** .
 
 ## <a name="project-templates"></a>Modelos de projeto
 
@@ -72,7 +72,7 @@ Se você adicionar o componente de suporte para MFC e ATL à instalação do Vis
 
 Se você adicionar o componente de ferramentas da Plataforma Universal do Windows do C++ à instalação do Visual Studio, esses modelos de projeto serão adicionados ao Visual Studio.
 
-Para obter uma visão geral dos aplicativos Universais do Windows no C++, confira [Aplicativos Universais do Windows (C++)](../../windows/universal-windows-apps-cpp.md).
+Para obter uma visão geral dos aplicativos Universais do Windows no C++, confira [Aplicativos Universais do Windows (C++)](../../cppcx/universal-windows-apps-cpp.md).
 
 |Modelo de projeto|Descrição|
 |----------------------|-----------------------------|

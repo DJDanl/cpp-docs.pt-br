@@ -1,15 +1,15 @@
 ---
 title: Preparando uma máquina de teste para executar um executável de depuração
-ms.date: 11/04/2016
+ms.date: 07/02/2019
 helpviewer_keywords:
 - debug executable, preparing a test machine to run
 ms.assetid: f0400989-cc2e-4dce-9788-6bdbe91c6f5a
-ms.openlocfilehash: 6d7e9c2e0a29c2871fd86922151f2226dd9078fc
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 87d2bf434aef3a85bf7fa19f5886bec106515809
+ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65448451"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67552334"
 ---
 # <a name="preparing-a-test-machine-to-run-a-debug-executable"></a>Preparando uma máquina de teste para executar um executável de depuração
 
@@ -29,11 +29,11 @@ Há três maneiras de implantar versões de depuração de DLLs da biblioteca do
 
 - Use a opção _**Deploy** na caixa de diálogo **Configuration Manager** do Visual Studio para copiar a saída do projeto e outros arquivos para o computador remoto.
 
-Após a instalação das DLLs do Visual C++, execute um depurador remoto em um compartilhamento de rede. Para obter mais informações sobre a depuração remota, confira [Depuração remota](/visualstudio/debugger/remote-debugging.md).
+Após a instalação das DLLs do Visual C++, execute um depurador remoto em um compartilhamento de rede. Para obter mais informações sobre a depuração remota, confira [Depuração remota](/visualstudio/debugger/remote-debugging).
 
 ## <a name="see-also"></a>Consulte também
 
 [Implantação no Visual C++](deployment-in-visual-cpp.md)<br>
 [Opções de linha de comando do Windows Installer](/windows/desktop/Msi/command-line-options)<br>
 [Exemplos de implantação](deployment-examples.md)<br>
-[Depuração remota](/visualstudio/debugger/remote-debugging.md)
+[Depuração remota](/visualstudio/debugger/remote-debugging)
