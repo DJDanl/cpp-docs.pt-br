@@ -1,13 +1,13 @@
 ---
 title: Configurar um projeto do C++ Linux no Visual Studio
-ms.date: 06/07/2019
+ms.date: 06/11/2019
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
-ms.openlocfilehash: 5acd9edeef8f09f86c394c39939d8408821dd691
-ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
+ms.openlocfilehash: a4e20222cc0b04f496989bf2d51fc12c85f5d162
+ms.sourcegitcommit: fde637f823494532314790602c2819f889706ff6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66821575"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67042625"
 ---
 # <a name="configure-a-linux-project"></a>Configurar um projeto do Linux
 
@@ -37,7 +37,7 @@ Para exibir as opções de configuração, selecione o menu **Projeto > Propried
 
 ![Configuração geral](media/settings_general.png)
 
-Por padrão, um executável (.out) é criado com a ferramenta. Para criar uma biblioteca estática ou dinâmica ou usar um Makefile existente, use a configuração **Tipo de Configuração**.
+Por padrão, um executável (.out) é criado. Para criar uma biblioteca estática ou dinâmica ou usar um Makefile existente, use a configuração **Tipo de Configuração**.
 
 Para obter mais informações sobre as configurações nas páginas de propriedades, confira [Referência da página de propriedades do projeto do Linux](prop-pages-linux.md).
 
@@ -105,7 +105,7 @@ Quando você adiciona uma nova conexão no **Gerenciador de Conexões**, o Visua
 Essa funcionalidade depende de o computador Linux ter zip instalado. Você pode instalar o zip usando este comando apt-get:
 
 ```cmd
-apt install zip
+sudo apt install zip
 ```
 
 Para gerenciar o cache do cabeçalho, navegue até **Ferramentas > Opções, Plataforma Cruzada > Gerenciador de Conexões > Gerenciador dos Cabeçalhos Remotos IntelliSense**. Para atualizar o cache do cabeçalho depois de fazer alterações no computador Linux, selecione a conexão remota e, em seguida, selecione **Atualizar**. Selecione **Excluir** para remover os cabeçalhos sem excluir a conexão em si. Selecione **Explorar** para abrir o diretório local no **Explorador de Arquivos**. Trate essa pasta como somente leitura. Para baixar os cabeçalhos para uma conexão existente criada antes do Visual Studio 2017 versão 15.3, selecione a conexão e, em seguida, selecione **Baixar**.

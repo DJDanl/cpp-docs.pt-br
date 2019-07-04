@@ -3,12 +3,12 @@ title: Implantar, executar e depurar seu projeto Linux em C++ no Visual Studio
 description: Descreve como compilar, executar e depurar o código no destino remoto de dentro de um projeto do Linux em C++ no Visual Studio.
 ms.date: 06/07/2019
 ms.assetid: f7084cdb-17b1-4960-b522-f84981bea879
-ms.openlocfilehash: 707915a502aafefee47af7e84b534e06ba678b3d
-ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
+ms.openlocfilehash: 70770385bde859d47532b130463a1cc54e32a570
+ms.sourcegitcommit: fde637f823494532314790602c2819f889706ff6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66821624"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67042756"
 ---
 # <a name="deploy-run-and-debug-your-linux-project"></a>Implantar, executar e depurar o projeto do Linux
 
@@ -22,7 +22,7 @@ Depois de criar um projeto do Linux em C++ no Visual Studio e se conectar a ele 
 
 ::: moniker range="vs-2019"
 
-**Visual Studio 2019 versão 16.1** Você pode ter como destino diferentes sistemas Linux para depuração e build. Especifique o computador de build na página de propriedades **Geral** e o computador de depuração na página de propriedades **Depuração**.
+**Visual Studio 2019 versão 16.1** Você pode ter como destino diferentes sistemas Linux para depuração e build. Por exemplo, você pode fazer uma compilação cruzada no x64 e implantar em um dispositivo ARM ao visar cenários de IoT. Para saber mais, confira [Especificar computadores diferentes para compilação e depuração](#separate_build_debug), mais adiante neste artigo.
 
 ::: moniker-end
 
@@ -35,8 +35,6 @@ Há várias maneiras de interagir com o projeto do Linux e depurá-lo.
 ## <a name="debug-your-linux-project"></a>Depurar o projeto do Linux
 
 1. Selecione o modo de depuração na página de propriedades **Depuração**.
-
-   
    
    ::: moniker range="vs-2019"
 
@@ -94,15 +92,19 @@ Há várias maneiras de interagir com o projeto do Linux e depurá-lo.
 
    ![Janela do Console do Linux](media/consolewindow.png)
 
-## <a name="configure-other-debugging-options"></a>Configurar outras opções de depuração
+## <a name="configure-other-debugging-options-msbuild-based-projects"></a>Configurar outras opções de depuração (projetos baseados em MSBuild)
 
 - Argumentos de linha de comando podem ser passados para o executável usando o item **Argumentos do Programa** na página de propriedades **Depuração** do projeto.
 
    ![Argumentos do Programa](media/settings_programarguments.png)
 
-- Opções específicas do depurador podem ser passadas para o GDB usando a entrada **Comandos adicionais do depurador**.  Por exemplo, talvez você deseje ignorar os sinais SIGILL (instrução inválida).  Você poderá usar o comando **handle** para fazer isso.  adicionando o seguinte à entrada **Comandos adicionais do depurador**, conforme mostrado acima:
+- Opções específicas do depurador podem ser passadas para o GDB usando a entrada **Comandos adicionais do depurador**.  Por exemplo, talvez você deseje ignorar os sinais SIGILL (instrução inválida).  Seria possível usar o comando **handle** para isso, adicionando o seguinte à entrada **Comandos Adicionais do Depurador**, como mostrado acima:
 
    `handle SIGILL nostop noprint`
+
+## <a name="configure-other-debugging-options-cmake-projects"></a>Configurar outras opções de depuração (projetos do CMake)
+
+Você pode especificar argumentos de linha de comando adicionais para um projeto do CMake no arquivo launch.vs.json. Para saber mais, veja [Depurar o projeto do CMake](cmake-linux-project.md#debug_cmake_project)
 
 ## <a name="debug-with-attach-to-process"></a>Depuração com Anexar ao Processo
 
@@ -124,6 +126,72 @@ ExePath="C:\temp\ConsoleApplication17\ConsoleApplication17\bin\x64\Debug\Console
 ```
 
 **AttachOptionsForConnection** tem a maioria dos atributos que você poderá precisar. O exemplo acima mostra como especificar uma localização para pesquisar bibliotecas .so adicionais. O elemento filho **ServerOptions** permite anexar ao processo remoto com gdbserver. Para fazer isso, você precisará especificar um cliente local do gdb (aquele fornecido no Visual Studio 2017 é mostrado acima) e uma cópia local do binário com símbolos. O elemento **SetupCommands** permite passar comandos diretamente para o gdb. Encontre todas as opções disponíveis no [esquema LaunchOptions.xsd](https://github.com/Microsoft/MIEngine/blob/master/src/MICore/LaunchOptions.xsd) no GitHub.
+
+::: moniker range="vs-2019"
+
+## <a name="separate_build_debug"></a> Especificar computadores diferentes para compilação e depuração
+
+No Visual Studio de 2019 versão 16.1, você pode separar o computador de compilação remoto do seu computador de depuração remoto para projetos do CMake e projetos do Linux baseados no MSBuild destinados a um computador Linux remoto. Por exemplo, você pode fazer uma compilação cruzada no x64 e implantar em um dispositivo ARM ao visar cenários de IoT.
+
+### <a name="msbuild-based-projects"></a>Projetos baseados em MSBuild
+
+Por padrão, o computador de depuração remoto é o mesmo que o computador de compilação remoto (**Propriedades da Configuração** > **Geral** > **Computador de Compilação Remoto**). Para especificar um novo computador de depuração remoto, clique com botão direito no projeto no **Gerenciador de Soluções** e vá para **Propriedades da Configuração** > **Depuração** > **Computador de Depuração Remoto**.  
+
+![Computador de depuração remoto do Linux](media/linux-remote-debug-machine.png)
+
+O menu suspenso para **Computador de Depuração Remoto** é preenchido com todas as conexões remotas estabelecidas. Para adicionar uma nova conexão remota, navegue até **Ferramentas** > **Opções** > **Plataforma Cruzada** > **Gerenciador de Conexões** ou pesquise "Gerenciador de Conexões" no **Início Rápido**. Você também pode especificar um novo diretório de implantação remoto nas Páginas de Propriedades do projeto (**Propriedades da Configuração** > **Geral** > **Diretório de Implantação Remoto**).
+
+Por padrão, somente os arquivos necessários para depurar o processo serão implantados no computador de depuração remoto. Você pode usar o **Gerenciador de Soluções** para configurar os arquivos de origem que serão implantados no computador de depuração remoto. Ao clicar em um arquivo de origem, você verá uma visualização de suas Propriedades de Arquivo logo abaixo do Gerenciador de Soluções.
+
+![Arquivos implantáveis do Linux](media/linux-deployable-content.png)
+
+A propriedade **Content** especifica se o arquivo será implantado no computador de depuração remoto. Você pode desabilitar totalmente a implantação navegando até **Páginas de Propriedades** > **Configuration Manager** e desmarcando a opção **Implantar** da configuração desejada.
+
+Em alguns casos, você pode exigir mais controle sobre a implantação do projeto. Por exemplo, alguns arquivos que você quer implantar podem estar fora da sua solução ou você quer personalizar o seu diretório de implantação remoto por arquivo ou diretório. Nesses casos, acrescente os seguintes blocos de código ao arquivo .vcxproj e substitua "example.cpp" pelos nomes de arquivo reais:
+
+```xml
+
+<ItemGroup>
+   <RemoteDeploy Include="__example.cpp">
+<!-- This is the source Linux machine, can be empty if DeploymentType is LocalRemote -->
+      <SourceMachine>$(RemoteTarget)</SourceMachine>
+      <TargetMachine>$(RemoteDebuggingTarget)</TargetMachine>
+      <SourcePath>~/example.cpp</SourcePath>
+      <TargetPath>~/example.cpp</TargetPath>
+<!-- DeploymentType can be LocalRemote, in which case SourceMachine will be empty and SourcePath is a local file on Windows -->
+      <DeploymentType>RemoteRemote</DeploymentType>
+<!-- Indicates whether the deployment contains executables -->
+      <Executable>true</Executable>
+   </RemoteDeploy>
+</ItemGroup>
+```
+
+### <a name="cmake-projects"></a>Projetos do CMake
+
+Para projetos do CMake que se destinam a um computador Linux remoto, você pode especificar um novo computador de depuração remoto em launch.vs.json. Por padrão, o valor de "remoteMachineName" é sincronizado com a propriedade "remoteMachineName" em CMakeSettings.json, que corresponde ao seu computador de compilação remoto. Essas propriedades não precisam mais corresponder, e o valor de "remoteMachineName" em launch.vs.json determinará qual computador remoto será usado para implantação e depuração.
+
+![Computador de depuração remoto do CMake](media/cmake-remote-debug-machine.png)
+
+O IntelliSense sugere uma lista de todas as conexões remotas estabelecidas. É possível adicionar uma nova conexão remota navegando até **Ferramentas** > **Opções** > **Plataforma Cruzada** > **Gerenciador de Conexões** ou pesquisando "Gerenciador de Conexões" no **Início Rápido**.
+
+Se quiser controle completo sobre a implantação, você poderá acrescentar os seguintes blocos de código ao arquivo launch.vs.json. Lembre-se de substituir os valores do espaço reservado pelos valores reais:
+
+```json
+
+"disableDeploy": false,
+"deployDirectory": "~\foo",
+"deploy" : [
+   {
+      "sourceMachine": "127.0.0.1 (username=example1, port=22, authentication=Password)",
+      "targetMachine": "192.0.0.1 (username=example2, port=22, authentication=Password)",
+      "sourcePath": "~/example.cpp",
+      "targetPath": "~/example.cpp",
+      "executable": "false"
+   }
+]
+
+```
+::: moniker-end
 
 ## <a name="next-steps"></a>Próximas etapas
 
