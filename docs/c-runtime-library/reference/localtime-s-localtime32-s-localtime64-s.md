@@ -1,6 +1,6 @@
 ---
 title: localtime_s, _localtime32_s, _localtime64_s
-ms.date: 11/04/2016
+ms.date: 07/09/2019
 apiname:
 - _localtime64_s
 - _localtime32_s
@@ -32,12 +32,12 @@ helpviewer_keywords:
 - time, converting values
 - localtime_s function
 ms.assetid: 842d1dc7-d6f8-41d3-b340-108d4b90df54
-ms.openlocfilehash: 44b2eb2515035d56143a2aab251437a92515e652
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 454ab492fbe8a31b9ceeca518fa5e590271dbf06
+ms.sourcegitcommit: 07b34ca1c1fecced9fadc95de15dc5fee4f31e5a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157261"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67693421"
 ---
 # <a name="localtimes-localtime32s-localtime64s"></a>localtime_s, _localtime32_s, _localtime64_s
 
@@ -84,9 +84,9 @@ Caso as duas primeiras condições de erro ocorram, o manipulador de parâmetro 
 
 ## <a name="remarks"></a>Comentários
 
-O **_localtime32_s** função converte uma hora armazenada como um [time_t](../../c-runtime-library/standard-types.md) valor e armazena o resultado em uma estrutura do tipo [tm](../../c-runtime-library/standard-types.md). O **longo** valor *sourceTime* representa os segundos passados desde a meia-noite (00: 00:00) de 1º de janeiro de 1970, UTC. Esse valor geralmente é obtido do [tempo](time-time32-time64.md) função.
+O **localtime_s** função converte uma hora armazenada como um [time_t](../../c-runtime-library/standard-types.md) valor e armazena o resultado em uma estrutura do tipo [tm](../../c-runtime-library/standard-types.md). O **time_t** valor *sourceTime* representa os segundos passados desde a meia-noite (00: 00:00) de 1º de janeiro de 1970, UTC. Esse valor geralmente é obtido do [tempo](time-time32-time64.md) função.
 
-**_localtime32_s** corrige de acordo com o fuso horário local se o usuário define primeiramente a variável de ambiente global **TZ**. Quando **TZ** for definido, três outras variáveis de ambiente (**TimeZone**, **Daylight**, e **tzname**) são definidas automaticamente também. Se o **TZ** variável não for definida, **localtime32_s** tenta usar as informações de fuso horário especificadas no aplicativo de data/hora no painel de controle. Se tais informações não puderem ser obtidas, o PST8PDT (fuso horário do Pacífico) será usado por padrão. Consulte [tzset](tzset.md) para obter uma descrição dessas variáveis. **TZ** é uma extensão da Microsoft e não faz parte da definição do padrão ANSI **localtime**.
+**localtime_s** corrige de acordo com o fuso horário local se o usuário define primeiramente a variável de ambiente global **TZ**. Quando **TZ** for definido, três outras variáveis de ambiente (**TimeZone**, **Daylight**, e **tzname**) são definidas automaticamente também. Se o **TZ** variável não for definida, **localtime_s** tenta usar as informações de fuso horário especificadas no aplicativo de data/hora no painel de controle. Se tais informações não puderem ser obtidas, o PST8PDT (fuso horário do Pacífico) será usado por padrão. Consulte [tzset](tzset.md) para obter uma descrição dessas variáveis. **TZ** é uma extensão da Microsoft e não faz parte da definição do padrão ANSI **localtime**.
 
 > [!NOTE]
 > O ambiente de destino deve tentar determinar se o horário de verão está em vigor.
