@@ -3,12 +3,12 @@ title: Opções do compilador listadas em ordem alfabética
 ms.date: 05/06/2019
 helpviewer_keywords:
 - compiler options, C++
-ms.openlocfilehash: ba4357f4c14e5cca9363ad2029374ede93529a2a
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 7e69aa501dd0a7dbf2af51b6fa2c5bf4339eb416
+ms.sourcegitcommit: 07b34ca1c1fecced9fadc95de15dc5fee4f31e5a
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221768"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67693424"
 ---
 # <a name="compiler-options-listed-alphabetically"></a>Opções do compilador listadas em ordem alfabética
 
@@ -158,6 +158,7 @@ Esta é uma lista alfabética abrangente das opções de compilador. Para obter 
 |[/Zi](z7-zi-zi-debug-information-format.md)|Gera informações completas de depuração.|
 |[/Zl](zl-omit-default-library-name.md)|Remove o nome da biblioteca padrão do arquivo .obj (somente x86).|
 |[/Zm](zm-specify-precompiled-header-memory-allocation-limit.md)|Especifica o limite de alocação da memória do cabeçalho pré-compilado.|
+|[/Zo](zo-enhance-optimized-debugging.md)|Gera informações de depuração aprimoradas para código otimizado.|
 |[/Zp](zp-struct-member-alignment.md)|Empacota membros da estrutura.|
 |[/Zs](zs-syntax-check-only.md)|Verifica apenas a sintaxe.|
 |[/ZW](zw-windows-runtime-compilation.md)|Produz um arquivo de saída para ser executado no tempo de execução do Windows.|
