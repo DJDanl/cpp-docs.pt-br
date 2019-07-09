@@ -1,22 +1,22 @@
 ---
 title: Novidades do C++ no Visual Studio
-ms.date: 06/17/2019
+ms.date: 07/02/2019
 ms.technology: cpp-ide
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: b408036fdee3d8163ef48cdbdab6e0f0a9c939ab
-ms.sourcegitcommit: 6cf0c67acce633b07ff31b56cebd5de3218fd733
+ms.openlocfilehash: f02c5878f5f741c216499f619bfd1392483bfa86
+ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/24/2019
-ms.locfileid: "67344180"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67552351"
 ---
 # <a name="whats-new-for-c-in-visual-studio"></a>Novidades do C++ no Visual Studio
 
 ::: moniker range=">=vs-2019"
 
-O Visual Studio 2019 traz muitas atualizações e correções para o ambiente do Microsoft C++. Corrigimos vários bugs e problemas no compilador e nas ferramentas. Muitos deles enviados pelos clientes pelas opções [Relatar um Problema](/visualstudio/how-to-report-a-problem-with-visual-studio-2017) e [Fornecer uma Sugestão](https://developercommunity.visualstudio.com/spaces/62/index.html) em **Enviar Comentários**. Obrigado por relatar bugs! Para saber mais sobre todas as novidades do Visual Studio, visite [Novidades no Visual Studio 2019](/visualstudio/ide/whats-new-visual-studio-2019). Para saber mais sobre novidades de C++ no Visual Studio 2017, confira [Novidades de C++ no Visual Studio 2017](/cpp/overview/what-s-new-for-visual-cpp-in-visual-studio?view=vs-2017). Para saber mais sobre as novidades de C++ no Visual Studio 2015 e em versões anteriores, confira [O que há de novo no Visual C++ de 2003 a 2015](/cpp/porting/visual-cpp-what-s-new-2003-through-2015).
+O Visual Studio 2019 traz muitas atualizações e correções para o ambiente do Microsoft C++. Corrigimos vários bugs e problemas no compilador e nas ferramentas. Muitos deles enviados pelos clientes pelas opções [Relatar um Problema](/visualstudio/ide/how-to-report-a-problem-with-visual-studio?view=vs-2019) e [Fornecer uma Sugestão](https://developercommunity.visualstudio.com/spaces/62/index.html) em **Enviar Comentários**. Obrigado por relatar bugs! Para saber mais sobre todas as novidades do Visual Studio, visite [Novidades no Visual Studio 2019](/visualstudio/ide/whats-new-visual-studio-2019). Para saber mais sobre novidades de C++ no Visual Studio 2017, confira [Novidades de C++ no Visual Studio 2017](/cpp/overview/what-s-new-for-visual-cpp-in-visual-studio?view=vs-2017). Para saber mais sobre as novidades de C++ no Visual Studio 2015 e em versões anteriores, confira [O que há de novo no Visual C++ de 2003 a 2015](/cpp/porting/visual-cpp-what-s-new-2003-through-2015).
 
 ## <a name="c-compiler"></a>compilador C++
 
@@ -241,7 +241,7 @@ O modelo de projeto de teste do C++ gerenciado não está mais disponível. Voc�
 
 ::: moniker range="=vs-2017"
 
-O Visual Studio 2017 traz muitas atualizações e correções para o ambiente do C++. Corrigimos mais de 250 bugs e problemas relatados no compilador e nas ferramentas, muitos deles enviados pelos clientes pelas opções Relatar um Problema e [Fornecer uma Sugestão](/visualstudio/how-to-report-a-problem-with-visual-studio-2017) em **Enviar Comentários**. Obrigado por relatar bugs! Para saber mais sobre todas as novidades do Visual Studio, visite [Novidades no Visual Studio 2017](/visualstudio/ide/whats-new-visual-studio-2017?view=vs-2017). Para saber mais sobre novidades de C++ no Visual Studio 2019, confira [Novidades de C++ no Visual Studio](/cpp/overview/what-s-new-for-visual-cpp-in-visual-studio?view=vs-2019). Para saber mais sobre as novidades de C++ no Visual Studio 2015 e em versões anteriores, confira [O que há de novo no Visual C++ de 2003 a 2015](/cpp/porting/visual-cpp-what-s-new-2003-through-2015).
+O Visual Studio 2017 traz muitas atualizações e correções para o ambiente do C++. Corrigimos mais de 250 bugs e problemas relatados no compilador e nas ferramentas, muitos deles enviados pelos clientes pelas opções Relatar um Problema e [Fornecer uma Sugestão](/visualstudio/ide/how-to-report-a-problem-with-visual-studio?view=vs-2017) em **Enviar Comentários**. Obrigado por relatar bugs! Para saber mais sobre todas as novidades do Visual Studio, visite [Novidades no Visual Studio 2017](/visualstudio/ide/whats-new-visual-studio-2017?view=vs-2017). Para saber mais sobre novidades de C++ no Visual Studio 2019, confira [Novidades de C++ no Visual Studio](/cpp/overview/what-s-new-for-visual-cpp-in-visual-studio?view=vs-2019). Para saber mais sobre as novidades de C++ no Visual Studio 2015 e em versões anteriores, confira [O que há de novo no Visual C++ de 2003 a 2015](/cpp/porting/visual-cpp-what-s-new-2003-through-2015).
 
 ## <a name="c-compiler"></a>compilador C++
 

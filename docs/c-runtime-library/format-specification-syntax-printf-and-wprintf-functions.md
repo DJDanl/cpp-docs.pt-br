@@ -1,6 +1,6 @@
 ---
 title: 'Sintaxe de especificação de formato: funções printf e and wprintf'
-ms.date: 11/04/2016
+ms.date: 07/02/2019
 helpviewer_keywords:
 - format specification fields for printf function
 - printf function format specification fields
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - width fields, printf function
 - precision fields, printf function
 ms.assetid: 664b1717-2760-4c61-bd9c-22eee618d825
-ms.openlocfilehash: bccbe435d926a75990a4ca35b98c9b352dd40e8b
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 07565da17eb53274e0c3203abbc8cddb9e61da90
+ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57740308"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67552261"
 ---
 # <a name="format-specification-syntax-printf-and-wprintf-functions"></a>Sintaxe de especificação de formato: funções printf e wprintf
 
@@ -22,7 +22,7 @@ As várias funções `printf` e `wprintf` usam uma cadeia de caracteres de forma
 
 Uma especificação de conversão consiste em campos obrigatórios e opcionais neste formulário:
 
-**%**[[*sinalizadores*](#flags)][[*largura*](#width)][.[*precisão*](#precision)][[*tamanho*](#size)][*tipo*](#type)
+**%** [[*sinalizadores*](#flags)][[*largura*](#width)][.[*precisão*](#precision)][[*tamanho*](#size)][*tipo*](#type)
 
 Cada campo da especificação de conversão é um caractere ou um número que representa um especificador de conversão ou opção de formato específico. O campo *tipo* obrigatório especifica o tipo de conversão a ser aplicado a um argumento. Os campos opcionais *sinalizadores*, *largura* e *precisão* controlam aspectos de formato adicionais, como zeros ou espaços à esquerda, justificativa e precisão exibida. O campo *tamanho* especifica o tamanho do argumento consumido e convertido.
 
@@ -64,7 +64,7 @@ Tipos de inteiro como `short`, `int`, `long`, `long long` e suas variações `un
 |**X**|Inteiro|Inteiro hexadecimal não assinado; usa "ABCDEF".|
 |**e**|Ponto flutuante|O valor assinado que tem a forma [-]*d.dddd*__e±__*dd*[*d*], em que *d* é um dígito decimal, *dddd* é um ou mais dígitos decimais dependendo da precisão especificada ou seis, por padrão e *dd*[*d*] é dois ou três dígitos decimais dependendo do [formato de saída](../c-runtime-library/set-output-format.md) e do tamanho do expoente.|
 |**E**|Ponto flutuante|Idêntico ao formato **e**, exceto pelo fato de que **E** em vez de **e** apresenta o expoente.|
-|**f**|Ponto flutuante|Valor assinado que tem a forma [-]*dddd*__.__*dddd*, em que *dddd* é um ou mais dígitos decimais. O número de dígitos antes do ponto decimal depende da magnitude do número e o número de dígitos após o ponto decimal depende da precisão solicitada ou é seis, por padrão.|
+|**f**|Ponto flutuante|Valor assinado que tem a forma [-]*dddd* __.__ *dddd*, em que *dddd* é um ou mais dígitos decimais. O número de dígitos antes do ponto decimal depende da magnitude do número e o número de dígitos após o ponto decimal depende da precisão solicitada ou é seis, por padrão.|
 |**F**|Ponto flutuante|Idêntico ao formato **f**, exceto pelo fato de que a saída de infinito e de nan está em maiúsculas.|
 |**g**|Ponto flutuante|Valores assinados são exibidos no formato **f** ou **e**, dependendo do que é mais compacto para o valor e a precisão especificados. O formato **e** será usado somente quando o expoente do valor for menor do que -4 ou maior ou igual ao argumento de *precisão*. Zeros à esquerda são truncados, e o ponto decimal é exibido somente se um ou mais dígitos vierem na sequência.|
 |**G**|Ponto flutuante|Idêntico ao formato **g**, com a exceção de que **E** em vez de **e** apresenta o expoente (quando apropriado).|
@@ -74,7 +74,7 @@ Tipos de inteiro como `short`, `int`, `long`, `long long` e suas variações `un
 |**p**|Tipo ponteiro|Exibe o argumento como um endereço usando dígitos hexadecimais.|
 |**s**|Cadeia de Caracteres|Quando usado com funções `printf`, especifica uma cadeia de caracteres de byte único ou uma cadeia de caracteres de bytes múltiplos; quando usado com funções `wprintf`, especifica uma cadeia de caracteres largos. Os caracteres são exibidos até o primeiro caractere nulo ou até que o valor de *precisão* seja atingido.|
 |**S**|Cadeia de Caracteres|Quando usado com funções `printf`, especifica uma cadeia de caracteres largos; quando usado com funções `wprintf`, especifica uma cadeia de caracteres de byte único ou uma cadeia de caracteres de bytes múltiplos. Os caracteres são exibidos até o primeiro caractere nulo ou até que o valor de *precisão* seja atingido.|
-|**Z**|Estrutura `ANSI_STRING` ou `UNICODE_STRING`|Quando o endereço de uma estrutura [ANSI_STRING](/windows/desktop/api/ntdef/ns-ntdef-_string) ou [UNICODE_STRING](/windows-hardware/drivers/ddi/content/wudfwdm/ns-wudfwdm-_unicode_string) é passado como o argumento, exibe a cadeia de caracteres contida no buffer apontado pelo campo `Buffer` da estrutura. Use um prefixo modificador de *tamanho* de **w** para especificar um argumento `UNICODE_STRING` – por exemplo, `%wZ`. O campo `Length` da estrutura deve ser definido como a duração, em bytes, da cadeia de caracteres. O campo `MaximumLength` da estrutura deve ser definido como a duração, em bytes, do buffer.<br /><br /> Normalmente, o caractere de tipo **Z** é usado somente em funções de depuração de driver que usam uma especificação de conversão, como `dbgPrint` e `kdPrint`.|
+|**Z**|Estrutura `ANSI_STRING` ou `UNICODE_STRING`|Quando o endereço de uma estrutura [ANSI_STRING](/windows/desktop/api/ntdef/ns-ntdef-_string) ou [UNICODE_STRING](/windows/win32/api/ntdef/ns-ntdef-_unicode_string) é passado como o argumento, exibe a cadeia de caracteres contida no buffer apontado pelo campo `Buffer` da estrutura. Use um prefixo modificador de *tamanho* de **w** para especificar um argumento `UNICODE_STRING` – por exemplo, `%wZ`. O campo `Length` da estrutura deve ser definido como a duração, em bytes, da cadeia de caracteres. O campo `MaximumLength` da estrutura deve ser definido como a duração, em bytes, do buffer.<br /><br /> Normalmente, o caractere de tipo **Z** é usado somente em funções de depuração de driver que usam uma especificação de conversão, como `dbgPrint` e `kdPrint`.|
 
 A partir do Visual Studio 2015, se o argumento que corresponde a um especificador de conversão de ponto flutuante (**a**, **A**, **e**, **E**, **f**, **F**, **g**, **G**) for infinito, indefinido ou NaN, a saída formatada estará em conformidade com o padrão C99. Esta tabela lista a saída formatada:
 
@@ -129,7 +129,7 @@ O primeiro campo opcional em uma especificação de conversão contém *diretiva
 
 ## <a name="width-specification"></a>Especificação de largura
 
-Em uma especificação de conversão, o campo de especificação de largura opcional aparece após quaisquer caracteres *sinalizadores*. O argumento de *largura* é um inteiro decimal não negativo que controla o número mínimo de caracteres de saída. Se o número de caracteres no valor de saída for menor que a largura especificada, espaços em branco serão adicionados à esquerda ou à direita dos valores – dependendo se o sinalizador de alinhamento à esquerda (**-**) for especificado – até que a largura mínima seja atingida. Se a *largura* tiver 0 como prefixo, zeros à esquerda serão adicionados ao inteiro ou a conversões de ponto flutuante até que a largura mínima seja atingida, exceto quando a conversão for a um infinito ou NaN.
+Em uma especificação de conversão, o campo de especificação de largura opcional aparece após quaisquer caracteres *sinalizadores*. O argumento de *largura* é um inteiro decimal não negativo que controla o número mínimo de caracteres de saída. Se o número de caracteres no valor de saída for menor que a largura especificada, espaços em branco serão adicionados à esquerda ou à direita dos valores – dependendo se o sinalizador de alinhamento à esquerda ( **-** ) for especificado – até que a largura mínima seja atingida. Se a *largura* tiver 0 como prefixo, zeros à esquerda serão adicionados ao inteiro ou a conversões de ponto flutuante até que a largura mínima seja atingida, exceto quando a conversão for a um infinito ou NaN.
 
 A especificação de largura nunca faz com que um valor seja truncado. Se o número de caracteres no valor de saída for maior que a largura especificada ou se a *largura* não for fornecida, todos os caracteres do valor serão de saída, sujeitos à especificação de *precisão*.
 
