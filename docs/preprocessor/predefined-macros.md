@@ -143,12 +143,12 @@ helpviewer_keywords:
 - _WINRT_DLL macro
 - __func__ identifier
 ms.assetid: 1cc5f70a-a225-469c-aed0-fe766238e23f
-ms.openlocfilehash: dedcab9b0addd3696749b50fef92b70081981c03
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bf74bc3b5293cba018c07b6b5c56c85695db7635
+ms.sourcegitcommit: 6cb0670ca7d40e8ec55f162b8ce2847f5ae15f5c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179900"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67787361"
 ---
 # <a name="predefined-macros"></a>Macros predefinidas
 
@@ -381,6 +381,9 @@ MSVC dá suporte a essas macros predefinidas adicionais.
    |Visual Studio 2017 versão 15.8|1915|
    |Visual Studio 2017 versão 15,9|1916|
    |Visual Studio 2019 RTW (16.0)|1920|
+   |Visual Studio 2019 versão 16.1|1921|
+   |Visual Studio 2019 versão 16.2|1922|
+   |Visual Studio 2019 versão 16.3|1923|
 
    Para testar versões do compilador ou atualizações em uma determinada versão do Visual Studio ou depois, use o **>=** operador. Você pode usá-lo em uma diretiva condicional a ser comparado  **&#95;MSC&#95;VIDOR** em relação a essa versão conhecida. Se você tiver várias versões mutuamente exclusivas para comparar, ordene nas comparações em ordem decrescente de número de versão. Por exemplo, esse código verifica para compiladores lançados no Visual Studio 2017 e versões posteriores. Em seguida, ele verifica os compiladores lançados em ou após o Visual Studio 2015. Em seguida, ele verifica todos os compiladores lançados antes do Visual Studio 2015:
 
