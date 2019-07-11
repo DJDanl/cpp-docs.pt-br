@@ -16,7 +16,7 @@ Este artigo fornece informações de linha de comando sobre o assembler Microsof
 ## <a name="syntax"></a>Sintaxe
 
 > **armasm** [*opções*] *sourcefile* *objectfile*
-> **armasm** [*opções *] **-o** *objectfile* *sourcefile*
+> **armasm** [*opções*] **-o** *objectfile* *sourcefile*
 
 ### <a name="parameters"></a>Parâmetros
 

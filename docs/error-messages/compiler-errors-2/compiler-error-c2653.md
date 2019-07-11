@@ -25,7 +25,7 @@ C2653 também é possível se você tentar definir uma *composta namespace*, um 
 
 ## <a name="examples"></a>Exemplos
 
-Este exemplo gera C2653 porque um nome de escopo é usado, mas não declarado. O compilador espera que uma classe, estrutura, união ou nome do namespace antes de um operador de escopo (:).
+Este exemplo gera C2653 porque um nome de escopo é usado, mas não declarado. O compilador espera que uma classe, estrutura, união ou nome do namespace antes de um operador de escopo (::).
 
 ```cpp
 // C2653.cpp
