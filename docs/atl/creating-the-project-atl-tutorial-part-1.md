@@ -3,12 +3,12 @@ title: Criando o projeto (Tutorial ATL, parte 1)
 ms.custom: get-started-article
 ms.date: 05/06/2019
 ms.assetid: f6b727d1-390a-4b27-b82f-daadcd9fc059
-ms.openlocfilehash: 292faf1769baa2e1c3fc6e52ba6df065cf08766e
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 0df793b23aaec57835774252eeac21b092f8a9e9
+ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221409"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67861016"
 ---
 # <a name="creating-the-project-atl-tutorial-part-1"></a>Criando o projeto (Tutorial ATL, parte 1)
 
@@ -44,15 +44,10 @@ Este tutorial orienta você passo a passo por meio de um projeto ATL nonattribut
 
     O local para o código-fonte normalmente padrão será \Users\\\<username > \source\repos e uma nova pasta serão criada automaticamente.
 
-1. Clique em **Okey** e o **projeto ATL** assistente é aberto.
+1. No Visual Studio de 2019, aceite os valores padrão e clique em **Okey**. 
+   No Visual Studio 2017, clique em **Okey** para abrir o **projeto ATL** assistente. Clique em **configurações do aplicativo** para ver as opções disponíveis. Como esse projeto cria um controle e um controle deve ser um servidor em processo, deixe o **tipo de aplicativo** como uma DLL. Clique em **OK**.
 
-1. Clique em **configurações do aplicativo** para ver as opções disponíveis.
-
-1. À medida que você está criando um controle e um controle deve ser um servidor em processo, deixar o **tipo de aplicativo** como uma DLL.
-
-1. Deixe as outras opções com seus valores padrão e, em seguida, clique em **Okey**.
-
-O **ATL Project Wizard** criará o projeto por meio da geração de vários arquivos. Você pode exibir esses arquivos no **Gerenciador de soluções** expandindo o `Polygon` objeto. Os arquivos estão listados abaixo.
+Visual Studio criará o projeto por meio da geração de vários arquivos. Você pode exibir esses arquivos no **Gerenciador de soluções** expandindo o `Polygon` objeto. Os arquivos estão listados abaixo.
 
 |Arquivo|Descrição|
 |----------|-----------------|
@@ -66,7 +61,7 @@ O **ATL Project Wizard** criará o projeto por meio da geração de vários arqu
 |stdafx.cpp|O arquivo que será `#include` os arquivos de implementação de ATL.|
 |stdafx.h|O arquivo que será `#include` os arquivos de cabeçalho da ATL.|
 
-1. Na **Gerenciador de soluções**, clique com botão direito do `Polygon` projeto.
+1. No **Gerenciador de Soluções**, clique com o botão direito do mouse no projeto `Polygon`.
 
 1. No menu de atalho, clique em **propriedades**.
 
