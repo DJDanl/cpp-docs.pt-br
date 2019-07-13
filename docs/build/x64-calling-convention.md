@@ -1,16 +1,16 @@
 ---
-title: convenção de chamada de x64
+title: Convenção de chamada x64
 description: Detalhes de convenção de chamada de ABI x64 padrão.
 ms.date: 12/17/2018
 ms.assetid: 41ca3554-b2e3-4868-9a84-f1b46e6e21d9
-ms.openlocfilehash: 02bf4719766366049b600b148ad88fc238f4e54e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2cad00ac7f2cb5fe086fa262a0f512330997391f
+ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62313604"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67861161"
 ---
-# <a name="x64-calling-convention"></a>convenção de chamada de x64
+# <a name="x64-calling-convention"></a>Convenção de chamada x64
 
 Esta seção descreve os processos padrão e convenções que uma função (o chamador) usa para fazer chamadas para outra função (receptor) no x64 código.
 
@@ -142,12 +142,12 @@ Struct2 func4(int a, double b, int c, float d);
 
 ## <a name="callercallee-saved-registers"></a>Registros salvo de chamador/receptor
 
-Os registros RAX, RCX, RDX, R8, R9, R10, R11 são considerados voláteis e devem ser considerados destruídos em chamadas de função (a menos que caso contrário, segurança-possível prová-los por análise como otimização de programa inteiro).
+Os registros RAX, RCX, RDX, R8, R9, R10, R11, XMM0-5 e as partes superiores do YMM0 15 e ZMM0-15 são consideradas voláteis e devem ser consideradas destruídos em chamadas de função (a menos que caso contrário, segurança-possível prová-los por análise como otimização de programa inteiro). Em AVX512VL, os registros de MMX, YMM e ZMM 16-31 são voláteis.
 
-Os registros RBX, RBP, RDI, RSI, RSP, versão 12, R13, R14 e R15 são considerados não-volátil e devem ser salvo e restaurado por uma função que usa-los.
+Os registros de RBX, RBP, RDI, RSI, RSP, versão 12, R13, R14, R15 e XMM6-15 são considerados não-volátil e devem ser salvo e restaurado por uma função que usa-los.
 
 ## <a name="function-pointers"></a>Ponteiros de função
-
+ 
 Ponteiros de função são simplesmente os ponteiros para o rótulo da respectiva função. Não há nenhuma tabela de requisitos de sumário (TOC) para ponteiros de função.
 
 ## <a name="floating-point-support-for-older-code"></a>Suporte de ponto flutuante para código anterior
