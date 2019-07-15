@@ -7,14 +7,17 @@ helpviewer_keywords:
 - class types [C++], unions as
 - union keyword [C++]
 ms.assetid: 25c4e219-fcbb-4b7b-9b64-83f3252a92ca
-ms.openlocfilehash: 58f4940d209b783b00c7167265ff1a2a733c947c
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: c15ec782d16aebab85d57de2dea1e91b91620c74
+ms.sourcegitcommit: fd466f2e14ad001f52f3dbe54f46d77be10f2d7b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65222337"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67894466"
 ---
 # <a name="unions"></a>Uniões
+
+> [!NOTE]
+> No C++ 17 e versões posteriores, o **std::variant** classe é uma alternativa de tipo seguro para uniões.
 
 Um **união** é um tipo definido pelo usuário na qual todos os membros compartilham o mesmo local da memória. Isso significa que qualquer dado momento uma união pode conter não mais de um objeto da lista de membros. Isso também significa que, independentemente de quantos membros de uma união tem, ela sempre usa apenas memória suficiente para armazenar o membro maior.
 

@@ -1,6 +1,6 @@
 ---
 title: Classe CWinApp
-ms.date: 11/04/2016
+ms.date: 07/15/2019
 f1_keywords:
 - CWinApp
 - AFXWIN/CWinApp
@@ -192,12 +192,12 @@ helpviewer_keywords:
 - CWinApp [MFC], m_nAutosaveInterval
 - CWinApp [MFC], m_pDataRecoveryHandler
 ms.assetid: e426a3cd-0d15-40d6-bd55-beaa5feb2343
-ms.openlocfilehash: 6366638ebfd5e78ad517a8913e4276d5cd820670
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a4ec6c976b6611563eb95cce1173d7c77c3b5ef0
+ms.sourcegitcommit: fd466f2e14ad001f52f3dbe54f46d77be10f2d7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62323353"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67894492"
 ---
 # <a name="cwinapp-class"></a>Classe CWinApp
 
@@ -1033,10 +1033,10 @@ virtual void HtmlHelp(
 ### <a name="parameters"></a>Parâmetros
 
 *dwData*<br/>
-Especifica os dados adicionais. O valor usado depende do valor da *nCmd* parâmetro.
+Especifica os dados adicionais. O valor usado depende do valor da *nCmd* parâmetro. O padrão é `0x000F` significando [HH_HELP_CONTEXT](/previous-versions/windows/desktop/htmlhelp/hh-help-context-command).
 
 *nCmd*<br/>
-Especifica o tipo de ajuda solicitado. Para obter uma lista de valores possíveis e como eles afetam os *dwData* parâmetro, consulte o *uCommand* parâmetro descrito no sobre o HTMLHelp função de API no SDK do Windows.
+Especifica o tipo de ajuda solicitado. Para obter uma lista de valores possíveis e como eles afetam os *dwData* parâmetro, consulte o *uCommand* parâmetro descrito no [HtmlHelpW](/windows/desktop/api/htmlhelp/nf-htmlhelp-htmlhelpw) ou [HtmlHelpA](/windows/desktop/api/htmlhelp/nf-htmlhelp-htmlhelpa) Funções de API no SDK do Windows.  
 
 ### <a name="remarks"></a>Comentários
 
@@ -1811,7 +1811,7 @@ virtual BOOL ProcessMessageFilter(
 
 ### <a name="parameters"></a>Parâmetros
 
-*code*<br/>
+*código*<br/>
 Especifica um código de gancho. Essa função membro usa o código para determinar como processar *lpMsg.*
 
 *lpMsg*<br/>
@@ -2395,4 +2395,4 @@ Especifica a ID de modelo de usuário de aplicativo.
 
 [Classe CWinThread](../../mfc/reference/cwinthread-class.md)<br/>
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
-[Como: Adicionar suporte ao Gerenciador de reinicialização](../../mfc/how-to-add-restart-manager-support.md)
+[Como: adicionar suporte ao gerenciador de reinicialização](../../mfc/how-to-add-restart-manager-support.md)

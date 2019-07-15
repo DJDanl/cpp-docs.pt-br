@@ -1,17 +1,17 @@
 ---
 title: Modelos de função
-ms.date: 11/04/2016
+ms.date: 07/15/2019
 helpviewer_keywords:
 - function templates
 - templates, function
 - function templates, about function templates
 ms.assetid: 59b56a4b-0689-4161-9c07-25021562e2a7
-ms.openlocfilehash: 77f3d1ee704c8094fd3bd94597311976e54ba6a6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d430ad7650ffa47f0d6334a827b416cfb05ae6c2
+ms.sourcegitcommit: fd466f2e14ad001f52f3dbe54f46d77be10f2d7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154160"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67894368"
 ---
 # <a name="function-templates"></a>Modelos de função
 
@@ -55,7 +55,7 @@ int main(int j) {
 }
 ```
 
-Quando o argumento de modelo é especificado explicitamente, as conversões implícitas normais são realizadas para converter o argumento da função no tipo dos parâmetros correspondentes do modelo de função. No exemplo acima, o compilador converterá `char j` digitar **int**.
+Quando o argumento de modelo é especificado explicitamente, as conversões implícitas normais são realizadas para converter o argumento da função no tipo dos parâmetros correspondentes do modelo de função. No exemplo acima, o compilador converterá `j` digitar **char**.
 
 ## <a name="see-also"></a>Consulte também
 

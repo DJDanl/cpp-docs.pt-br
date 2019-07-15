@@ -1,6 +1,6 @@
 ---
 title: friend (C++)
-ms.date: 11/19/2018
+ms.date: 07/15/2019
 f1_keywords:
 - friend_cpp
 helpviewer_keywords:
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - friend classes [C++]
 - friend keyword [C++]
 ms.assetid: 8fe9ee55-d56f-40cd-9075-d9fb1375aff4
-ms.openlocfilehash: 769720877cc58de530791b268811d7d01adad3e6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 03b6cb7f856ec59c10f5e410c947f74d17ec4e46
+ms.sourcegitcommit: fd466f2e14ad001f52f3dbe54f46d77be10f2d7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154472"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67894414"
 ---
 # <a name="friend-c"></a>friend (C++)
 
@@ -119,7 +119,7 @@ Para declarar duas classes que são amigas da outro, a segunda classe inteira de
 
 ## <a name="friend-functions"></a>funções friend
 
-Um **amigo** é uma função que não é um membro de uma classe, mas tem acesso a membros particulares e protegidos da classe. As funções friend não são consideradas membros de classe; elas são funções externas normais que recebem privilégios de acesso especiais. Friends não estão no escopo da classe, e eles não são chamados usando os operadores de seleção de membro (**.** e -**>**), a menos que eles são membros de outra classe. Um **amigo** função é declarada pela classe que está concedendo acesso. O **amigo** declaração pode ser colocada em qualquer lugar na declaração da classe. Ela não é afetada pelas palavras-chave de controle de acesso.
+Um **amigo** é uma função que não é um membro de uma classe, mas tem acesso a membros particulares e protegidos da classe. As funções friend não são consideradas membros de classe; elas são funções externas normais que recebem privilégios de acesso especiais. Friends não estão no escopo da classe, e eles não são chamados usando os operadores de seleção de membro ( **.** e - **>** ), a menos que eles são membros de outra classe. Um **amigo** função é declarada pela classe que está concedendo acesso. O **amigo** declaração pode ser colocada em qualquer lugar na declaração da classe. Ela não é afetada pelas palavras-chave de controle de acesso.
 
 O exemplo a seguir mostra uma classe `Point` e uma função friend, `ChangePrivate`. O **amigo** função tem acesso ao membro de dados privados de `Point` ele recebe como um parâmetro de objeto.
 
@@ -224,7 +224,7 @@ int main() {
 
 A amizade não é mútua a menos que explicitamente especificada como tal. No exemplo anterior, as funções membro de `YourClass` não podem acessar os membros privados de `YourOtherClass`.
 
-Um tipo gerenciado não pode ter nenhuma função de amigo, classes de amigo ou interfaces de amigo.
+Um tipo gerenciado (no C++/CLI) não pode ter quaisquer funções de amigo, classes de amigo ou interfaces de amigo.
 
 A amizade não é herdada, o que significa que as classes derivadas de `YourOtherClass` não podem acessar os membros privados de `YourClass`. A amizade não é transitiva, assim as classes que são amigos de `YourOtherClass` não podem acessar membros privados de `YourClass`.
 
@@ -235,9 +235,7 @@ Implicações da relação de amigo
 
 ## <a name="inline-friend-definitions"></a>Definições de amigo embutida
 
-As funções friend podem ser definidas nas declarações de classe. Essas funções são funções embutidas, e como funções membro embutidas, se comportam como se fossem definidas imediatamente após todos os membros de classe terem sido vistos, mas antes que o escopo de classe seja fechado (o final da declaração de classe).
-
-As funções friend definidas dentro de declarações de classe não são consideradas no escopo da classe delimitadora; elas estão no escopo do arquivo.
+Funções Friend podem ser definidas (dada um corpo de função) nas declarações de classe. Essas funções são funções embutidas, e como funções membro embutidas, se comportam como se fossem definidas imediatamente após todos os membros de classe terem sido vistos, mas antes que o escopo de classe seja fechado (o final da declaração de classe). Funções Friend definidas dentro de declarações de classe estão no escopo da classe delimitadora.
 
 ## <a name="see-also"></a>Consulte também
 
