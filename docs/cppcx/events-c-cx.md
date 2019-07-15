@@ -1,13 +1,13 @@
 ---
 title: Eventos (C++/CX)
-ms.date: 01/22/2017
+ms.date: 07/15/2019
 ms.assetid: 31c8e08a-00ad-40f9-8f7e-124864aaad58
-ms.openlocfilehash: 8e7e8616831e66a7f59ed849fc92ef2553aadb5b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d0a3ab01628487dcca081eb300470cbd1bf3bb83
+ms.sourcegitcommit: fd466f2e14ad001f52f3dbe54f46d77be10f2d7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62301533"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67894451"
 ---
 # <a name="events-ccx"></a>Eventos (C++/CX)
 
@@ -15,7 +15,7 @@ Um Windows tempo de execução do tipo pode declarar (isto é, publicar) eventos
 
 ## <a name="consuming-events-in-windows-components"></a>Consumindo eventos em componentes do Windows
 
-Muitos componentes em tempo de execução do Windows expõem eventos. Por exemplo, um objeto LightSensor dispara um evento ReadingChanged quando o sensor relata um novo valor de luminescência. Ao usar um objeto LightSensor em seu programa, você pode definir um método que será chamado quando o evento ReadingChanged for acionado. O método pode fazer tudo o que você deseja fazer. o único requisito é que sua assinatura deve corresponder à assinatura do delegado que é para obter mais informações sobre como criar um manipulador de eventos delegate e assinar um evento, consulte [delegados](../cppcx/delegates-c-cx.md).
+Muitos componentes em tempo de execução do Windows expõem eventos. Por exemplo, um objeto LightSensor dispara um evento ReadingChanged quando o sensor relata um novo valor de luminescência. Ao usar um objeto LightSensor em seu programa, você pode definir um método que será chamado quando o evento ReadingChanged for acionado. O método pode fazer tudo o que você deseja fazer. o único requisito é que sua assinatura deve corresponder à assinatura do delegado que é invocado. Para obter mais informações sobre como criar um manipulador de eventos delegate e assinar um evento, consulte [delegados](../cppcx/delegates-c-cx.md).
 
 ## <a name="creating-custom-events"></a>Criando eventos personalizados
 

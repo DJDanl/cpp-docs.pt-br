@@ -1,6 +1,6 @@
 ---
 title: Classe HString
-ms.date: 09/24/2018
+ms.date: 07/15/2019
 ms.topic: reference
 f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::HString
@@ -8,6 +8,7 @@ f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::HString::CopyTo
 - corewrappers/Microsoft::WRL::Wrappers::HString::Detach
 - corewrappers/Microsoft::WRL::Wrappers::HString::Get
+- corewrappers/Microsoft::WRL::Wrappers::HString::GetRawBuffer
 - corewrappers/Microsoft::WRL::Wrappers::HString::GetAddressOf
 - corewrappers/Microsoft::WRL::Wrappers::HString::HString
 - corewrappers/Microsoft::WRL::Wrappers::HString::IsValid
@@ -37,12 +38,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HString::Set method
 - Microsoft::WRL::Wrappers::HString::~HString, destructor
 ms.assetid: 6709dd2e-8d72-4675-8ec7-1baa7d71854d
-ms.openlocfilehash: 19ef11a5d33e69bb77049e450df1b386528b7f7b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 884efb2a69b05589ad9458148409533880073878
+ms.sourcegitcommit: fd466f2e14ad001f52f3dbe54f46d77be10f2d7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398284"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67894399"
 ---
 # <a name="hstring-class"></a>Classe HString
 
@@ -76,6 +77,7 @@ Nome                                     | Descrição
 [HString::Detach](#detach)               | Desassocia especificado `HString` objeto do valor subjacente.
 [HString::Get](#get)                     | Recupera o valor do identificador subjacente de HSTRING.
 [HString::GetAddressOf](#getaddressof)   | Recupera um ponteiro para o identificador subjacente de HSTRING.
+[HString::GetRawBuffer](#getrawbuffer)   | Recupera um ponteiro para os dados de cadeia de caracteres subjacente.
 [HString::IsValid](#isvalid)             | Indica se o atual `HString` objeto é válido.
 [HString::MakeReference](#makereference) | Cria um `HStringReference` objeto a partir de um parâmetro de cadeia de caracteres especificada.
 [HString::Release](#release)             | Exclui o valor de cadeia de caracteres subjacente e inicializa atual `HString` objeto para um valor vazio.
@@ -181,6 +183,22 @@ Um ponteiro para o identificador subjacente de HSTRING.
 ### <a name="remarks"></a>Comentários
 
 Depois dessa operação, o valor de cadeia de caracteres do identificador subjacente de HSTRING é destruído.
+
+## <a name="getrawbuffer"></a>HString::GetRawBuffer
+
+Recupera um ponteiro para os dados de cadeia de caracteres subjacente.
+
+```cpp
+const wchar_t* GetRawBuffer(unsigned int* length) const;
+```
+### <a name="parameters"></a>Parâmetros
+
+*comprimento* ponteiro para um **int** variável que recebe o comprimento dos dados.
+
+### <a name="return-value"></a>Valor de retorno
+
+Um **const** ponteiro para os dados de cadeia de caracteres subjacente.
+
 
 ## <a name="hstring"></a>HString::HString
 

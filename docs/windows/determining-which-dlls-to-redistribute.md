@@ -1,6 +1,6 @@
 ---
 title: Determinando quais DLLs devem ser redistribuídas
-ms.date: 03/25/2019
+ms.date: 07/15/2019
 helpviewer_keywords:
 - redistributing DLLs
 - DLLs [C++], redistributing
@@ -8,18 +8,18 @@ helpviewer_keywords:
 - application deployment [C++], DLL redistribution
 - deploying applications [C++], DLL redistribution
 ms.assetid: f7a2cb42-fb48-42ab-abd2-b35e2fd5601a
-ms.openlocfilehash: 4e4b53745c76a8e5b630bdd92633779e84262188
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 82fb582cae129b517a96deb3d4a9572ef8370a9d
+ms.sourcegitcommit: fd466f2e14ad001f52f3dbe54f46d77be10f2d7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66451271"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67894476"
 ---
 # <a name="determining-which-dlls-to-redistribute"></a>Determinando quais DLLs devem ser redistribuídas
 
 Quando você compila um aplicativo que usa as DLLs de biblioteca fornecidas pelo Visual Studio, os usuários do seu aplicativo também devem ter essas DLLs em seus computadores para que o aplicativo seja executado. Como a maioria dos usuários provavelmente não tem o Visual Studio instalado, você deve fornecer essas DLLs para eles. O Visual Studio disponibiliza essas DLLs como *arquivos redistribuíveis* que podem ser incluídos no instalador do aplicativo.
 
-Para facilitar a inclusão das DLLs redistribuíveis com o instalador, elas estão disponíveis como *pacotes redistribuíveis* autônomos. Esses são executáveis específicos a uma arquitetura que usa a implantação central para instalar os arquivos redistribuíveis no computador de um usuário. Por exemplo, vcredist\_x86.exe instala as bibliotecas de 32 bits para x86 computadores, vcredist\_x64.exe instala as bibliotecas de 64 bits para x64 computadores e vcredist\_ARM.exe instala as bibliotecas para computadores ARM. Recomendamos a implantação central, pois a Microsoft pode usar o serviço Windows Update para atualizar essas bibliotecas de maneira independente. Além da cópia em sua instalação do Visual Studio, os pacotes redistribuíveis atuais estão disponíveis para download. Para obter links para os últimos pacotes redistribuíveis compatíveis com conjuntos de ferramentas atuais e antigos, confira [Os downloads do Visual C++ mais recentes com suporte](https://support.microsoft.com/help/2977003/the-latest-supported-visual-c-downloads). Encontre versões anteriores específicas dos pacotes redistribuíveis pesquisando "Pacotes Redistribuíveis do Visual C++" no [Centro de Download da Microsoft](https://go.microsoft.com/fwlink/p/?LinkId=158431).
+Para facilitar a inclusão das DLLs redistribuíveis com o instalador, elas estão disponíveis como *pacotes redistribuíveis* autônomos. Esses são executáveis específicos a uma arquitetura que usa a implantação central para instalar os arquivos redistribuíveis no computador de um usuário. Por exemplo, vcredist\_x86.exe instala as bibliotecas de 32 bits para computadores x86 e x64, vcredist\_x64.exe instala as bibliotecas de 64 bits para x64 computadores e vcredist\_ARM.exe instala as bibliotecas para ARM computadores. Recomendamos a implantação central, pois a Microsoft pode usar o serviço Windows Update para atualizar essas bibliotecas de maneira independente. Além da cópia em sua instalação do Visual Studio, os pacotes redistribuíveis atuais estão disponíveis para download. Para obter links para os últimos pacotes redistribuíveis compatíveis com conjuntos de ferramentas atuais e antigos, confira [Os downloads do Visual C++ mais recentes com suporte](https://support.microsoft.com/help/2977003/the-latest-supported-visual-c-downloads). Encontre versões anteriores específicas dos pacotes redistribuíveis pesquisando "Pacotes Redistribuíveis do Visual C++" no [Centro de Download da Microsoft](https://go.microsoft.com/fwlink/p/?LinkId=158431).
 
 O número de versão principal do pacote redistribuível implantado precisa corresponder à versão do conjunto de ferramentas do Visual Studio usado para criar o aplicativo e a versão secundária deve ser igual ou posterior. O Visual Studio 2017 e o Visual Studio 2015 têm números de versão do conjunto de ferramentas compatíveis, o que significa que os arquivos redistribuíveis do Visual Studio 2017 podem ser usados por aplicativos compilados usando o conjunto de ferramentas da versão 2015. Embora eles possam ser compatíveis, não damos suporte ao uso dos arquivos redistribuíveis da versão 2015 em aplicativos compilados com o conjunto de ferramentas da versão 2017. Só damos suporte ao uso de um pacote redistribuível que seja igual ou mais recente do que a versão do conjunto de ferramentas.
 
