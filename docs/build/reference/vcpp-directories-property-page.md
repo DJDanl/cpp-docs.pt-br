@@ -1,6 +1,6 @@
 ---
 title: Página de propriedade dos diretórios do VC++
-ms.date: 10/09/2018
+ms.date: 07/17/2019
 f1_keywords:
 - VC.Project.VCDirectories.IncludePath
 - VC.Project.VCDirectories.ReferencePath
@@ -13,16 +13,16 @@ f1_keywords:
 helpviewer_keywords:
 - VC++ Directories Property Page
 ms.assetid: 428eeef6-f127-4271-b3ea-0ae6f2c3d624
-ms.openlocfilehash: aff143fca47cb5958b90e4a3f4c7ec284f2129f5
-ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
+ms.openlocfilehash: 9b005a89156db48615ec6ea8dfc4f07a7414fc3b
+ms.sourcegitcommit: 7f5b29e24e1be9b5985044a030977485fea0b50c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67861052"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68299784"
 ---
 # <a name="vc-directories-property-page-windows"></a>Página de propriedades de Diretórios do VC++ (Windows)
 
-Use esta página de propriedades para informar o Visual Studio de quais diretórios devem ser usados ao compilar o projeto atualmente selecionado. Para definir os diretórios para vários projetos em uma solução, use uma folha de propriedades personalizadas, conforme descrito em [compartilhamento ou reutilização Visual Studio C++ configurações do projeto](../create-reusable-property-configurations.md).
+Use esta página de propriedades para informar o Visual Studio de quais diretórios devem ser usados ao compilar o projeto atualmente selecionado. Para definir diretórios para vários projetos em uma solução, use uma folha de propriedades Personalizada, conforme descrito em [compartilhar ou reutilizar configurações de C++ projeto do Visual Studio](../create-reusable-property-configurations.md).
 
 Para obter a versão do Linux desta página, confira [Diretórios do VC++ (Linux C++)](../../linux/prop-pages/directories-linux.md).
 
@@ -38,7 +38,7 @@ As propriedades de Diretórios do VC++ se aplicam a um projeto, não ao nó da s
 
 Observe que a página de propriedades de **Diretórios do VC++** para projetos multiplataforma tem outra aparência. Para obter informações específicas a projetos do Linux C++, confira [Diretórios do VC++ (Linux C++)](../../linux/prop-pages/directories-linux.md).
 
-Se você não estiver familiarizado com o *propriedades do projeto* no Visual Studio, talvez seja útil ler primeiro [propriedades de compilador e de build definida C++ no Visual Studio](../working-with-project-properties.md).
+Se você não estiver familiarizado com *as propriedades do projeto* no Visual Studio, talvez seja útil primeiro ler o [compilador C++ de conjunto e as propriedades de compilação no Visual Studio](../working-with-project-properties.md).
 
 As configurações padrão para as propriedades de **Diretórios do VC++** dependem do tipo de projeto. Para projetos da área de trabalho, elas incluem os locais das ferramentas do C++ de determinado Conjunto de Ferramentas da Plataforma e o local do SDK do Windows. Altere o **Conjunto de Ferramentas da Plataforma** e a **versão do SDK do Windows** na página **Propriedades de Configuração** > **Geral**.
 
@@ -54,7 +54,7 @@ Agora você verá uma caixa de diálogo como esta:
 
 ![Mostrar Diretórios de Biblioteca](../media/vcppdir_libdir.png "Caixa de diálogo para adicionar ou remover caminhos da biblioteca")
 
-Use essa caixa de diálogo para exibir os diretórios atuais. No entanto, caso deseje alterar ou adicionar um diretório, será melhor usar o **Gerenciador de Propriedades** para criar uma folha de propriedades ou modificar a folha de propriedades do usuário padrão. Para obter mais informações, consulte [compartilhamento ou reutilização Visual Studio C++ configurações do projeto](../create-reusable-property-configurations.md).
+Use essa caixa de diálogo para exibir os diretórios atuais. No entanto, caso deseje alterar ou adicionar um diretório, será melhor usar o **Gerenciador de Propriedades** para criar uma folha de propriedades ou modificar a folha de propriedades do usuário padrão. Para obter mais informações, consulte [compartilhar ou reutilizar C++ configurações de projeto do Visual Studio](../create-reusable-property-configurations.md).
 
 Conforme mostrado acima, muitos dos caminhos herdados são fornecidos como macros.  Para examinar o valor atual de uma macro, escolha o botão **Macros** no canto inferior direito da caixa de diálogo. Observe que muitas macros dependem do tipo de configuração. Uma macro em um build de depuração pode ser avaliada como um caminho diferente comparado à mesma macro em um build de versão.
 
@@ -64,9 +64,9 @@ Pesquise correspondências parciais ou completas na caixa de edição. A ilustra
 
 Observação: A lista é preenchida conforme você digita. Não pressione **Enter**.
 
-Para obter mais informações sobre as macros e por que você deve usá-los em vez de caminhos embutidos sempre que possível, consulte [propriedades de compilador e de build definida C++ no Visual Studio](../working-with-project-properties.md).
+Para obter mais informações sobre macros e por que você deve usá-las em vez de caminhos embutidos em código sempre que possível, consulte [ C++ definir compilador e propriedades de compilação no Visual Studio](../working-with-project-properties.md).
 
-Para obter uma lista de macros comumente usadas, consulte [macros comuns para compilar comandos e propriedades](common-macros-for-build-commands-and-properties.md).
+Para obter uma lista de macros usadas com frequência, consulte [macros comuns para comandos e propriedades de compilação](common-macros-for-build-commands-and-properties.md).
 
 Defina suas próprias macros de duas maneiras:
 
@@ -74,7 +74,7 @@ Defina suas próprias macros de duas maneiras:
 
 - Defina macros do usuário em um arquivo .props. Para obter mais informações, confira [Macros da página de propriedades](../working-with-project-properties.md).
 
-Para obter mais informações, consulte essas postagens de blog: [Diretórios VC + +](https://blogs.msdn.com/b/vsproject/archive/2009/07/07/vc-directories.aspx), [herdadas Properties and Property Sheets](https://blogs.msdn.com/b/vsproject/archive/2009/06/23/inherited-properties-and-property-sheets.aspx), e [Visual Studio 2010 C++ guia de atualização de projeto](https://devblogs.microsoft.com/cppblog/visual-studio-2010-c-project-upgrade-guide/).
+Para obter mais informações, consulte estas postagens no blog: [Diretórios vc + +](https://blogs.msdn.com/b/vsproject/archive/2009/07/07/vc-directories.aspx), [propriedades herdadas e folhas de propriedades](https://blogs.msdn.com/b/vsproject/archive/2009/06/23/inherited-properties-and-property-sheets.aspx)e [Guia de C++ atualização de projeto do Visual Studio 2010](https://devblogs.microsoft.com/cppblog/visual-studio-2010-c-project-upgrade-guide/).
 
 ## <a name="directory-types"></a>Tipos de diretório
 
