@@ -7,12 +7,12 @@ helpviewer_keywords:
 - logical_or class
 - logical_or struct
 ms.assetid: ec8143f8-5755-4e7b-8025-507fb6bf6911
-ms.openlocfilehash: d9a4bf5b72a134bf166fe9297aaa41610718aa8b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ec3637c1d5a2d0d916aec012783cecd37a179468
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413080"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246444"
 ---
 # <a name="logicalor-struct"></a>Struct logical_or
 
@@ -39,12 +39,13 @@ struct logical_or<void>
 
 ### <a name="parameters"></a>Parâmetros
 
-*Tipo de*, *T*, *U* qualquer tipo que dá suporte a um `operator||` que usa operandos dos tipos especificados ou inferidos.
+*Tipo de*, *T*, *U*\
+Qualquer tipo que dê suporte a um `operator||` que usa operandos dos tipos especificados ou inferidos.
 
-*Esquerda*<br/>
+*À esquerda*\
 O operando à esquerda da operação de disjunção lógica. O modelo não especializado usa um argumento de referência de lvalue do tipo *tipo*. O modelo especializado realiza o encaminhamento de lvalue perfeito e inferidos de argumentos de referência de rvalue do tipo *T*.
 
-*Direita*<br/>
+*Certo*\
 O operando à direita da operação de disjunção lógica. O modelo não especializado usa um argumento de referência de lvalue do tipo *tipo*. O modelo especializado realiza o encaminhamento de lvalue perfeito e inferidos de argumentos de referência de rvalue do tipo *U*.
 
 ## <a name="return-value"></a>Valor de retorno
@@ -104,23 +105,13 @@ int main( )
       cout << *iter3 << " ";
    cout << ")" << endl;
 }
-/* Output:
+```
+
+```Output
 Original deque:
 d1 = ( true true false false true false false )
 Original deque:
 d2 = ( false false false true true true true )
 The deque which is the disjuction of d1 & d2 is:
 d3 = ( true true false true true true true )
-*/
 ```
-
-## <a name="requirements"></a>Requisitos
-
-**Cabeçalho:** \<functional>
-
-**Namespace:** std
-
-## <a name="see-also"></a>Consulte também
-
-[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Referência da biblioteca padrão C++](../standard-library/cpp-standard-library-reference.md)<br/>

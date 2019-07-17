@@ -22,12 +22,12 @@ helpviewer_keywords:
 - std::queue [C++], push
 - std::queue [C++], size
 ms.assetid: 28c20ab0-3a72-4185-9e0f-5a44eea0e204
-ms.openlocfilehash: 2b82e4237a525b09758323ae2483d8818fc938af
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 78479a05f8957aea5ca0f78fd3a086a49b9ef009
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62369937"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68240396"
 ---
 # <a name="queue-class"></a>Classe queue
 
@@ -42,10 +42,10 @@ class queue
 
 ### <a name="parameters"></a>Parâmetros
 
-*Tipo*<br/>
+*Tipo*\
 O tipo de dados do elemento a ser armazenado na fila
 
-*Container*<br/>
+*Contêiner*\
 O tipo do contêiner subjacente usado para implementar a fila.
 
 ## <a name="remarks"></a>Comentários
@@ -64,23 +64,25 @@ Há três tipos de adaptadores de contêiner definidos pela Biblioteca Padrão C
 
 - A [classe priority_queue](../standard-library/priority-queue-class.md) ordena seus elementos para que o elemento maior sempre esteja na posição superior. Ele dá suporte à inserção de um elemento e a inspeção e remoção do elemento superior. Uma boa comparação é pensar em pessoas em fila organizadas por idade, altura ou algum outro critério.
 
+## <a name="members"></a>Membros
+
 ### <a name="constructors"></a>Construtores
 
-|Construtor|Descrição|
+|||
 |-|-|
 |[queue](#queue)|Constrói um `queue` que é vazio ou que é uma cópia de um objeto de contêiner base.|
 
 ### <a name="typedefs"></a>Typedefs
 
-|Nome de tipo|Descrição|
+|||
 |-|-|
 |[container_type](#container_type)|Um tipo que fornece o contêiner base para ser adaptado pelo `queue`.|
 |[size_type](#size_type)|Um tipo de inteiro sem sinal que pode representar o número de elementos em um `queue`.|
 |[value_type](#value_type)|Um tipo que representa o tipo de objeto armazenado como um elemento em um `queue`.|
 
-### <a name="member-functions"></a>Funções de membro
+### <a name="functions"></a>Funções
 
-|Função de membro|Descrição|
+|||
 |-|-|
 |[back](#back)|Retorna uma referência para o último e recém-adicionado elemento na parte final de `queue`.|
 |[empty](#empty)|Testa se `queue` está vazio.|
@@ -89,13 +91,7 @@ Há três tipos de adaptadores de contêiner definidos pela Biblioteca Padrão C
 |[push](#push)|Adiciona um elemento na parte traseira do `queue`.|
 |[size](#size)|Retorna o número de elementos no `queue`.|
 
-## <a name="requirements"></a>Requisitos
-
-**Cabeçalho:** \<queue>
-
-**Namespace:** std
-
-## <a name="back"></a>  queue::back
+## <a name="back"></a> Voltar
 
 Retorna uma referência para o último e recém-adicionado elemento na parte final da fila.
 
@@ -141,7 +137,7 @@ int main( )
 }
 ```
 
-## <a name="container_type"></a>  queue::container_type
+## <a name="container_type"></a> container_type
 
 Um tipo que fornece o contêiner base a ser adaptado.
 
@@ -159,7 +155,7 @@ Para obter mais informações sobre `Container`, consulte a seção Comentários
 
 Veja o exemplo de [queue](#queue) para saber como declarar e usar `container_type`.
 
-## <a name="empty"></a>  queue::empty
+## <a name="empty"></a> vazio
 
 Testa se uma fila está vazia.
 
@@ -205,7 +201,7 @@ The queue q1 is not empty.
 The queue q2 is empty.
 ```
 
-## <a name="front"></a>  queue::front
+## <a name="front"></a> front
 
 Retorna uma referência ao primeiro elemento na parte inicial da fila.
 
@@ -257,7 +253,7 @@ int main() {
 }
 ```
 
-## <a name="pop"></a>  queue::pop
+## <a name="pop"></a> pop
 
 Remove um elemento no início da fila.
 
@@ -313,7 +309,7 @@ After a pop the queue length is 2.
 After a pop, the element at the front of the queue is 20.
 ```
 
-## <a name="push"></a>  queue::push
+## <a name="push"></a> envio por push
 
 Adiciona um elemento na parte final da fila.
 
@@ -323,7 +319,7 @@ void push(const Type& val);
 
 ### <a name="parameters"></a>Parâmetros
 
-*val*<br/>
+*Val*\
 O elemento adicionado na parte final da fila.
 
 ### <a name="remarks"></a>Comentários
@@ -362,7 +358,7 @@ The queue length is 3.
 The element at the front of the queue is 10.
 ```
 
-## <a name="queue"></a>  queue::queue
+## <a name="queue"></a> fila
 
 Constrói uma fila que é vazia ou que é uma cópia de um objeto de contêiner base.
 
@@ -374,7 +370,7 @@ explicit queue(const container_type& right);
 
 ### <a name="parameters"></a>Parâmetros
 
-*right*<br/>
+*Certo*\
 O contêiner **const** do qual a fila construída será uma cópia.
 
 ### <a name="remarks"></a>Comentários
@@ -429,7 +425,7 @@ The element at the front of queue q5 is 1.
 The element at the back of queue q5 is 2.
 ```
 
-## <a name="size"></a>  queue::size
+## <a name="size"></a> Tamanho
 
 Retorna o número de elementos na fila.
 
@@ -470,7 +466,7 @@ The queue length is 1.
 The queue length is now 2.
 ```
 
-## <a name="size_type"></a>  queue::size_type
+## <a name="size_type"></a> size_type
 
 Um tipo de inteiro sem sinal que pode representar o número de elementos em uma fila.
 
@@ -486,7 +482,7 @@ O tipo é um sinônimo do `size_type` do contêiner base adaptado pela fila.
 
 Veja o exemplo de [queue::front](#front) para saber como declarar e usar `size_type`.
 
-## <a name="value_type"></a>  queue::value_type
+## <a name="value_type"></a> value_type
 
 Um tipo que representa o tipo de objeto armazenado como um elemento em uma fila.
 

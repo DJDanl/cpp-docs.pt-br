@@ -7,12 +7,12 @@ helpviewer_keywords:
 - greater struct
 - greater function
 ms.assetid: ebc348e1-edcd-466b-b21a-db95bd8f9079
-ms.openlocfilehash: 7867de3a56893499f8d705e81ac3b34fabcf188c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aca47223810bdae31e7711492d107fbfa2814391
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159477"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243731"
 ---
 # <a name="greater-struct"></a>Struct greater
 
@@ -42,12 +42,13 @@ struct greater<void>
 
 ### <a name="parameters"></a>Parâmetros
 
-*Tipo de*, *T*, *U* qualquer tipo que dá suporte a um `operator>` que usa operandos dos tipos especificados ou inferidos.
+*Tipo de*, *T*, *U*\
+Qualquer tipo que dê suporte a um `operator>` que usa operandos dos tipos especificados ou inferidos.
 
-*Esquerda*<br/>
+*À esquerda*\
 O operando esquerdo da operação "maior que". O modelo não especializado usa um argumento de referência de lvalue do tipo *tipo*. O modelo especializado realiza o encaminhamento de lvalue perfeito e inferidos de argumentos de referência de rvalue do tipo *T*.
 
-*Direita*<br/>
+*Certo*\
 O operando direito da operação "maior que". O modelo não especializado usa um argumento de referência de lvalue do tipo *tipo*. O modelo especializado realiza o encaminhamento de lvalue perfeito e inferidos de argumentos de referência de rvalue do tipo *U*.
 
 ## <a name="return-value"></a>Valor de retorno
@@ -56,7 +57,7 @@ O resultado de `Left > Right`. O modelo especializado realiza o encaminhamento p
 
 ## <a name="remarks"></a>Comentários
 
-O predicado binário `greater` <  `Type`> fornece uma ordenação fraca estrita de um conjunto de valores de elemento do tipo *tipo* em classes de equivalência, se e somente se esse tipo satisfizer o padrão de matemático requisitos para ser ordenado dessa forma. As especializações de qualquer tipo de ponteiro produzem uma ordenação total dos elementos, pois todos os elementos de valores distintos são ordenados em relação uns aos outros.
+O predicado binário `greater` < `Type`> fornece uma ordenação fraca estrita de um conjunto de valores de elemento do tipo *tipo* em classes de equivalência, se e somente se esse tipo satisfizer o padrão de matemático requisitos para ser ordenado dessa forma. As especializações de qualquer tipo de ponteiro produzem uma ordenação total dos elementos, pois todos os elementos de valores distintos são ordenados em relação uns aos outros.
 
 ## <a name="example"></a>Exemplo
 
@@ -109,13 +110,3 @@ Original vector v1 = (41 18467 6334 26500 19169 15724 11478 29358)
 Sorted vector v1 = (41 6334 11478 15724 18467 19169 26500 29358)
 Resorted vector v1 = (29358 26500 19169 18467 15724 11478 6334 41)
 ```
-
-## <a name="requirements"></a>Requisitos
-
-**Cabeçalho:** \<functional>
-
-**Namespace:** std
-
-## <a name="see-also"></a>Consulte também
-
-[Referência da biblioteca padrão C++](../standard-library/cpp-standard-library-reference.md)<br/>

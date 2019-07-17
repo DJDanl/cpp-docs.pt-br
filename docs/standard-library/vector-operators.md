@@ -16,21 +16,16 @@ helpviewer_keywords:
 - std::operator&lt; (vector)
 - std::operator&lt;= (vector)
 - std::operator== (vector)
-ms.openlocfilehash: f659f1291c4111d83cc8715fd0deb104a9685f4f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f6717add93c489f536bd0c0b0f82b74bbd915985
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62185939"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68240992"
 ---
 # <a name="ltvectorgt-operators"></a>Operadores &lt;vector&gt;
 
-||||
-|-|-|-|
-|[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|
-|[operator&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|[operator==](#op_eq_eq)|
-
-## <a name="op_neq"></a>  operator!=
+## <a name="op_neq"></a> operador! =
 
 Testa se o objeto à esquerda do operador é diferente do objeto à direita.
 
@@ -40,10 +35,10 @@ bool operator!=(const vector<Type, Allocator>& left, const vector<Type, Allocato
 
 ### <a name="parameters"></a>Parâmetros
 
-*left*<br/>
+*À esquerda*\
 Um objeto do tipo `vector`.
 
-*right*<br/>
+*Certo*\
 Um objeto do tipo `vector`.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -81,7 +76,7 @@ int main( )
 Vectors not equal.
 ```
 
-## <a name="op_lt"></a>  operator&lt;
+## <a name="op_lt"></a> Operador&lt;
 
 Testa se o objeto à esquerda do operador é menor do que o objeto à direita.
 
@@ -91,10 +86,10 @@ bool operator<(const vector<Type, Allocator>& left, const vector<Type, Allocator
 
 ### <a name="parameters"></a>Parâmetros
 
-*left*<br/>
+*À esquerda*\
 Um objeto do tipo `vector`.
 
-*right*<br/>
+*Certo*\
 Um objeto do tipo `vector`.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -132,7 +127,7 @@ int main( )
 Vector v1 is less than vector v2.
 ```
 
-## <a name="op_lt_eq"></a>  operator&lt;=
+## <a name="op_lt_eq"></a> operador&lt;=
 
 Testa se o objeto à esquerda do operador é menor que ou igual ao objeto à direita.
 
@@ -142,10 +137,10 @@ bool operator<=(const vector<Type, Allocator>& left, const vector<Type, Allocato
 
 ### <a name="parameters"></a>Parâmetros
 
-*left*<br/>
+*À esquerda*\
 Um objeto do tipo `vector`.
 
-*right*<br/>
+*Certo*\
 Um objeto do tipo `vector`.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -183,7 +178,7 @@ int main( )
 Vector v1 is less than or equal to vector v2.
 ```
 
-## <a name="op_eq_eq"></a>  operator==
+## <a name="op_eq_eq"></a> operador = =
 
 Testa se o objeto à esquerda do operador é igual ao objeto à direita.
 
@@ -193,10 +188,10 @@ bool operator==(const vector<Type, Allocator>& left, const vector<Type, Allocato
 
 ### <a name="parameters"></a>Parâmetros
 
-*left*<br/>
+*À esquerda*\
 Um objeto do tipo `vector`.
 
-*right*<br/>
+*Certo*\
 Um objeto do tipo `vector`.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -234,7 +229,7 @@ int main( )
 Vectors equal.
 ```
 
-## <a name="op_gt"></a>  operator&gt;
+## <a name="op_gt"></a> Operador&gt;
 
 Testa se o objeto à esquerda do operador é maior do que o objeto à direita.
 
@@ -244,10 +239,10 @@ bool operator>(const vector<Type, Allocator>& left, const vector<Type, Allocator
 
 ### <a name="parameters"></a>Parâmetros
 
-*left*<br/>
+*À esquerda*\
 Um objeto do tipo `vector`.
 
-*right*<br/>
+*Certo*\
 Um objeto do tipo `vector`.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -286,7 +281,7 @@ int main( )
 Vector v1 is greater than vector v2.
 ```
 
-## <a name="op_gt_eq"></a>  operator&gt;=
+## <a name="op_gt_eq"></a> operador&gt;=
 
 Testa se o objeto à esquerda do operador é maior que ou igual ao objeto à direita.
 
@@ -296,10 +291,10 @@ bool operator>=(const vector<Type, Allocator>& left, const vector<Type, Allocato
 
 ### <a name="parameters"></a>Parâmetros
 
-*left*<br/>
+*À esquerda*\
 Um objeto do tipo `vector`.
 
-*right*<br/>
+*Certo*\
 Um objeto do tipo `vector`.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -337,7 +332,3 @@ int main( )
 ```Output
 Vector v1 is greater than or equal to vector v2.
 ```
-
-## <a name="see-also"></a>Consulte também
-
-[\<vector>](../standard-library/vector.md)<br/>

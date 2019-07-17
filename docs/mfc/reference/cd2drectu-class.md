@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CD2DRectU [MFC], CD2DRectU
 - CD2DRectU [MFC], IsNull
 ms.assetid: a62f17d1-011d-4867-8f51-fd7e7c00561d
-ms.openlocfilehash: feb8af3992b9f56164ded0e3b6a4529a46fe2a1d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4bbf7014fc1b612804289dcb647f85b5e7905aeb
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396282"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68244397"
 ---
 # <a name="cd2drectu-class"></a>Classe CD2DRectU
 
@@ -64,7 +64,7 @@ Constrói um objeto CD2DRectU objeto CRect.
 ```
 CD2DRectU(const CRect& rect);
 CD2DRectU(const D2D1_RECT_U& rect);
-  CD2DRectU(const D2D1_RECT_U* rect);
+CD2DRectU(const D2D1_RECT_U* rect);
 
 CD2DRectU(
     UINT32 uLeft = 0,
@@ -102,7 +102,7 @@ BOOL IsNull() const;
 
 TRUE se a parte superior, esquerda, inferior e valores corretos do retângulo são todas iguais a 0; Caso contrário, FALSE.
 
-##  <a name="operator_crect"></a>  CD2DRectU::operator CRect
+##  <a name="operator_crect"></a>  CD2DRectU::Operator CRect
 
 Converte CD2DRectU objeto CRect.
 

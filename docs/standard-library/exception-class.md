@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - exception class
 ms.assetid: 4f181f67-5888-4b50-89a6-745091ffb2fe
-ms.openlocfilehash: 009ef74d810976eb9f054b45e388ceb0fe612b2e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 90906469e923d29dd886930bd36944e4292bd9cd
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400611"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246077"
 ---
 # <a name="exception-class"></a>Classe exception
 
@@ -29,7 +29,7 @@ class exception {
    exception& operator=(const exception &right);
    virtual ~exception();
    virtual const char *what() const;
-   };
+};
 ```
 
 ## <a name="remarks"></a>Comentários
@@ -44,13 +44,3 @@ O **int** parâmetro permite que você especifique que a memória não deve ser 
 ## <a name="example"></a>Exemplo
 
 Para obter exemplos de uso das classes de exceção padrão que herdam da classe `exception`, consulte uma das classes definidas em [\<stdexcept>](../standard-library/stdexcept.md).
-
-## <a name="requirements"></a>Requisitos
-
-**Cabeçalho:** \<exception>
-
-**Namespace:** std
-
-## <a name="see-also"></a>Consulte também
-
-[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

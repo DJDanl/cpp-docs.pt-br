@@ -102,12 +102,12 @@ helpviewer_keywords:
 - CListBox [MFC], SetTopIndex
 - CListBox [MFC], VKeyToItem
 ms.assetid: 7ba3c699-c286-4cd9-9066-532c41ec05d1
-ms.openlocfilehash: b448f725bac68c2b67dc44d660c664c075aa86da
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f7b62ecf64c70c554fe14883c45d6b7936c668d7
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62225263"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243575"
 ---
 # <a name="clistbox-class"></a>Classe CListBox
 
@@ -146,7 +146,7 @@ class CListBox : public CWnd
 |[CListBox::GetCount](#getcount)|Retorna o número de cadeias de caracteres em uma caixa de listagem.|
 |[CListBox::GetCurSel](#getcursel)|Retorna o índice baseado em zero da cadeia de caracteres selecionada no momento em uma caixa de listagem.|
 |[CListBox::GetHorizontalExtent](#gethorizontalextent)|Retorna a largura em pixels, uma caixa de listagem pode ser rolada horizontalmente.|
-|[CListBox::GetItemData](#getitemdata)|Retorna o valor de 32 bits associado ao item de caixa de listagem.|
+|[CListBox::GetItemData](#getitemdata)|Retorna um valor associado ao item de caixa de listagem.|
 |[CListBox::GetItemDataPtr](#getitemdataptr)|Retorna um ponteiro para um item de caixa de listagem.|
 |[CListBox::GetItemHeight](#getitemheight)|Determina a altura dos itens em uma caixa de listagem.|
 |[CListBox::GetItemRect](#getitemrect)|Retorna o retângulo delimitador do item de caixa de listagem como ele é exibido no momento.|
@@ -170,7 +170,7 @@ class CListBox : public CWnd
 |[CListBox::SetColumnWidth](#setcolumnwidth)|Define a largura da coluna de uma caixa de listagem de várias colunas.|
 |[CListBox::SetCurSel](#setcursel)|Seleciona uma cadeia de caracteres da caixa de listagem.|
 |[CListBox::SetHorizontalExtent](#sethorizontalextent)|Define a largura em pixels, uma caixa de listagem pode ser rolada horizontalmente.|
-|[CListBox::SetItemData](#setitemdata)|Define o valor de 32 bits associado ao item de caixa de listagem.|
+|[CListBox::SetItemData](#setitemdata)|Define um valor associado ao item de caixa de listagem.|
 |[CListBox::SetItemDataPtr](#setitemdataptr)|Define um ponteiro para o item de caixa de listagem.|
 |[CListBox::SetItemHeight](#setitemheight)|Define a altura dos itens em uma caixa de listagem.|
 |[CListBox::SetLocale](#setlocale)|Define o identificador de localidade para uma caixa de listagem.|
@@ -702,7 +702,7 @@ Especifica o índice baseado em zero do item na caixa de listagem.
 
 ### <a name="return-value"></a>Valor de retorno
 
-O valor de 32 bits associado com o item ou LB_ERR se ocorrer um erro.
+O valor associado com o item ou LB_ERR se ocorrer um erro.
 
 ### <a name="remarks"></a>Comentários
 
@@ -1288,7 +1288,7 @@ Essa função de membro não é útil para caixas de listagem de várias colunas
 
 ##  <a name="setitemdata"></a>  CListBox::SetItemData
 
-Define um valor de 32 bits associado com o item especificado em uma caixa de listagem.
+Define um valor associado ao item especificado em uma caixa de listagem.
 
 ```
 int SetItemData(

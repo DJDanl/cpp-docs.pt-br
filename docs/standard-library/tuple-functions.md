@@ -13,20 +13,41 @@ helpviewer_keywords:
 - std::get [C++]
 - std::make_tuple [C++]
 - std::tie [C++]
-ms.openlocfilehash: 93c11a89f7cdfa3949be2d97e401fad199a17d97
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 46c386ecffb8fbbf7c07d40b334afd91d261ebcf
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62278950"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68241669"
 ---
 # <a name="lttuplegt-functions"></a>Funções &lt;tuple&gt;
 
-||||
-|-|-|-|
-|[get](#get)|[make_tuple](#make_tuple)|[tie](#tie)|
+## <a name="apply"></a> Aplicar
 
-## <a name="get"></a>  get
+```cpp
+template <class F, class Tuple> constexpr decltype(auto) apply(F&& f, Tuple&& t);
+```
+
+### <a name="remarks"></a>Comentários
+
+Chama a função *F* com uma tupla *t*.
+
+## <a name="forward"></a> forward_as_tuple
+
+```cpp
+template <class... TTypes>
+    constexpr tuple<TTypes&&...> forward_as_tuple(TTypes&&...) noexcept;
+```
+
+### <a name="return-value"></a>Valor de retorno
+
+Retorna `tuple<TTypes&&...>(std::forward<TTypes>(t)...)`.
+
+### <a name="remarks"></a>Comentários
+
+Constrói uma tupla de referências para os argumentos na *t* adequado para encaminhamento como argumentos para uma função.
+
+## <a name="get"></a> Obter
 
 Obtém um elemento de um objeto `tuple`, por índice ou (em C++14) por tipo.
 
@@ -60,17 +81,17 @@ template <class T, class... Types>
 
 ### <a name="parameters"></a>Parâmetros
 
-*Índice*<br/>
+*Índice*\
 O índice do elemento a ser obtido.
 
-*Tipos*<br/>
+*Tipos*\
 A sequência de tipos declarados na tupla, em ordem de declaração.
 
-*T*<br/>
+*T*\
 O tipo do elemento a ser obtido.
 
-*Tuple*<br/>
-Um std::tuple que contém qualquer número de elementos.
+*tupla*\
+Um `std::tuple` que contém qualquer número de elementos.
 
 ### <a name="remarks"></a>Comentários
 
@@ -107,7 +128,17 @@ int main() {
 0 1.42 Call me Tuple
 ```
 
-## <a name="make_tuple"></a>  make_tuple
+## <a name="make_from_tuple"></a> make_from_tuple
+
+```cpp
+template <class T, class Tuple> constexpr T make_from_tuple(Tuple&& t);
+```
+
+### <a name="remarks"></a>Comentários
+
+Mesmo que `return make_from_tuple_impl<T>(forward<Tuple>(t), make_index_sequence<tuple_size_v<decay_t<Tuple>>>{})`.
+
+## <a name="make_tuple"></a> make_tuple
 
 Constitui uma `tuple` dos valores de elemento.
 
@@ -118,10 +149,10 @@ template <class T1, class T2, ..., class TN>
 
 ### <a name="parameters"></a>Parâmetros
 
-*TN*<br/>
+*TN*\
 O tipo do enésimo parâmetro de função.
 
-*tN*<br/>
+*TN*\
 O valor do enésimo parâmetro de função.
 
 ### <a name="remarks"></a>Comentários
@@ -165,7 +196,14 @@ int main() {
 4 5 6 7
 ```
 
-## <a name="tie"></a>  tie
+## <a name="swap"></a> troca
+
+```cpp
+template <class... Types>
+    void swap(tuple<Types...>& x, tuple<Types...>& y) noexcept(see below );
+```
+
+## <a name="tie"></a> tie
 
 Constitui um `tuple` das referências do elemento.
 
@@ -176,7 +214,7 @@ tuple<T1&, T2&, ..., TN&> tie(T1& t1, T2& t2, ..., TN& tN);
 
 ### <a name="parameters"></a>Parâmetros
 
-*TN*<br/>
+*TN*\
 O tipo de base do enésimo elemento de tupla.
 
 ### <a name="remarks"></a>Comentários
@@ -224,6 +262,26 @@ int main() {
 0 1 2 3
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="tuple_cat"></a> tuple_cat
 
-[\<tuple>](../standard-library/tuple.md)<br/>
+```cpp
+template <class... Tuples> constexpr tuple<CTypes...> tuple_cat(Tuples&&...);
+```
+
+### <a name="return-value"></a>Valor de retorno
+
+Um objeto de tupla construído por inicializar cada elemento de tipo.
+
+## <a name="tuple_element_t"></a> tuple_element_t
+
+```cpp
+template <size_t I, class T>
+    using tuple_element_t = typename tuple_element<I, T>::type;
+```
+
+## <a name="tuple_size_v"></a> tuple_size_v
+
+```cpp
+template <class T>
+    inline constexpr size_t tuple_size_v = tuple_size<T>::value;
+```

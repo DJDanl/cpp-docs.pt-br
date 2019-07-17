@@ -6,26 +6,31 @@ f1_keywords:
 helpviewer_keywords:
 - <forward_list>
 ms.assetid: 8b4ab09e-1475-434a-b4e0-fdbc07a08b5b
-ms.openlocfilehash: cbde6268be0f501a220721cae498254dd0588eb4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d20c5b83e0ce00c7634d32e6b63c92242c24d1b2
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159373"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68240647"
 ---
 # <a name="ltforwardlistgt"></a>&lt;forward_list&gt;
 
 Define a classe de modelo de contêiner forward_list, bem como diversos modelos de suporte.
 
-## <a name="syntax"></a>Sintaxe
+## <a name="requirements"></a>Requisitos
 
-```cpp
-#include <forward_list>
-```
+**Cabeçalho:** \<forward_list>
+
+**Namespace:** std
+
+> [!NOTE]
+> O \<forward_list > biblioteca também usa o `#include <initializer_list>` instrução.
+
+## <a name="members"></a>Membros
 
 ### <a name="operators"></a>Operadores
 
-|Operador|Descrição|
+|||
 |-|-|
 |[operator==](../standard-library/forward-list-operators.md#op_eq_eq)|Testa se o objeto da lista de encaminhamento à esquerda do operador é igual ao objeto da lista de encaminhamento à direita.|
 |[operator!=](../standard-library/forward-list-operators.md#op_neq)|Testa se o objeto da lista de encaminhamento à esquerda do operador não é igual ao objeto da lista de encaminhamento à direita.|
@@ -36,13 +41,13 @@ Define a classe de modelo de contêiner forward_list, bem como diversos modelos 
 
 ### <a name="functions"></a>Funções
 
-|Função|Descrição|
+|||
 |-|-|
 |[swap](../standard-library/forward-list-functions.md#swap)|Troca os elementos de duas listas de encaminhamento.|
 
 ### <a name="classes"></a>Classes
 
-|Classe|Descrição|
+|||
 |-|-|
 |[forward_list](../standard-library/forward-list-class.md)|Descreve um objeto que controla uma sequência de elementos de tamanho variado. A sequência é armazenada como uma lista de elementos vinculada exclusivamente, com cada um contendo um membro do tipo `Type`.|
 

@@ -2,26 +2,26 @@
 title: '&lt;ctgmath&gt;'
 ms.date: 11/04/2016
 ms.assetid: ff521893-f445-4dc8-a2f6-699185bb7024
-ms.openlocfilehash: 64d72bb643e792fe39978d5c2e92e1bcf23cfc4f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 85099f3cb206dd791aade59bf9a531a714e68ac3
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394189"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246599"
 ---
 # <a name="ltctgmathgt"></a>&lt;ctgmath&gt;
 
-Na prática, inclui os cabeçalhos da Biblioteca Padrão C++ \<ccomplex> e \<cmath>, que fornecem macros matemáticas de tipo genérico equivalentes a \<tgmath.h>.
+Na prática, inclui o C++ cabeçalhos da biblioteca padrão \<complexo > e \<cmath >, que fornecem macros matemáticas de tipo genérico equivalentes a \<tgmath. h >.
 
-## <a name="syntax"></a>Sintaxe
+## <a name="requirements"></a>Requisitos
 
-```cpp
-#include <ctgmath>
-```
+**Cabeçalho:** \<ctgmath >
+
+**Namespace:** std
 
 ## <a name="remarks"></a>Comentários
 
-A funcionalidade do cabeçalho da biblioteca C Padrão \<tgmath.h> é fornecida pelas sobrecargas em \<ccomplex> e \<cmath>.
+A funcionalidade do cabeçalho da biblioteca C padrão \<tgmath. h > é fornecida pelas sobrecargas em \<complexo > e \<cmath >.
 
 A inclusão desse cabeçalho garante que os nomes declarados usando vinculação externa no cabeçalho da biblioteca C Padrão sejam declarados no namespace `std`.
 

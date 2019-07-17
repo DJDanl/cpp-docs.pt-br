@@ -200,48 +200,16 @@ helpviewer_keywords:
 - std::count_if [C++]
 - std::partition_copy [C++]
 - std::swap [C++]
-ms.openlocfilehash: 7dc5554b2d49e4c306aa64c32d7c9f8cc8a5bb6a
-ms.sourcegitcommit: 1acb6755e11379026a96f63facac4d33f4dc47ae
+ms.openlocfilehash: 7b0a8b427b919b624928a7d37d67937ac04884db
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67314276"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245983"
 ---
 # <a name="ltalgorithmgt-functions"></a>Funções &lt;algorithm&gt;
 
-||||
-|-|-|-|
-|[move](#alg_move)|[adjacent_find](#adjacent_find)|[all_of](#all_of)|
-|[any_of](#any_of)|[binary_search](#binary_search)|[copy](#copy)|
-|[copy_backward](#copy_backward)|[copy_if](#copy_if)|[copy_n](#copy_n)|
-|[count](#count)|[count_if](#count_if)|[equal](#equal)|
-|[equal_range](#equal_range)|[fill](#fill)|[fill_n](#fill_n)|
-|[find](#find)|[find_end](#find_end)|[find_first_of](#find_first_of)|
-|[find_if](#find_if)|[find_if_not](#find_if_not)|[for_each](#for_each)|
-|[generate](#generate)|[generate_n](#generate_n)|[includes](#includes)|
-|[inplace_merge](#inplace_merge)|[is_heap](#is_heap)|[is_heap_until](#is_heap_until)|
-|[is_partitioned](#is_partitioned)|[is_permutation](#is_permutation)|[is_sorted](#is_sorted)|
-|[is_sorted_until](#is_sorted_until)|[iter_swap](#iter_swap)|[lexicographical_compare](#lexicographical_compare)|
-|[lower_bound](#lower_bound)|[make_heap](#make_heap)|[max](#max)|
-|[max_element](#max_element)|[merge](#merge)|[min](#min)|
-|[min_element](#min_element)|[minmax](#minmax)|[minmax_element](#minmax_element)|
-|[mismatch](#mismatch)|[move_backward](#move_backward)|[next_permutation](#next_permutation)|
-|[none_of](#none_of)|[nth_element](#nth_element)|[partial_sort](#partial_sort)|
-|[partial_sort_copy](#partial_sort_copy)|[partition](#partition)|[partition_copy](#partition_copy)|
-|[partition_point](#partition_point)|[pop_heap](#pop_heap)|[prev_permutation](#prev_permutation)|
-|[push_heap](#push_heap)|[random_shuffle](#random_shuffle)|[remove](#remove)|
-|[remove_copy](#remove_copy)|[remove_copy_if](#remove_copy_if)|[remove_if](#remove_if)|
-|[replace](#replace)|[replace_copy](#replace_copy)|[replace_copy_if](#replace_copy_if)|
-|[replace_if](#replace_if)|[reverse](#reverse)|[reverse_copy](#reverse_copy)|
-|[rotate](#rotate)|[rotate_copy](#rotate_copy)|[search](#search)|
-|[search_n](#search_n)|[set_difference](#set_difference)|[set_intersection](#set_intersection)|
-|[set_symmetric_difference](#set_symmetric_difference)|[set_union](#set_union)|[sort](#sort)|
-|[sort_heap](#sort_heap)|[stable_partition](#stable_partition)|[stable_sort](#stable_sort)|
-|[shuffle](#shuffle)|[swap](#swap)|[swap_ranges](#swap_ranges)|
-|[transform](#transform)|[unique](#unique)|[unique_copy](#unique_copy)|
-|[upper_bound](#upper_bound)|
-
-## <a name="adjacent_find"></a>  adjacent_find
+## <a name="adjacent_find"></a> adjacent_find
 
 Procura dois elementos adjacentes que sejam iguais ou atendam a uma condição especificada.
 
@@ -256,17 +224,30 @@ ForwardIterator adjacent_find(
     ForwardIterator first,
     ForwardIterator last,
     BinaryPredicate comp);
+
+template<class ExecutionPolicy, class ForwardIterator>
+ForwardIterator adjacent_find(
+    ExecutionPolicy&& exec,
+    ForwardIterator first,
+    ForwardIterator last);
+
+template<class ExecutionPolicy, class ForwardIterator, class BinaryPredicate>
+ForwardIterator adjacent_find(
+    ExecutionPolicy&& exec,
+    ForwardIterator first,
+    ForwardIterator last,
+    BinaryPredicate pred);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*first*<br/>
+*Primeiro*\
 Um iterador de avanço que aborda a posição do primeiro elemento do intervalo a ser pesquisado.
 
-*last*<br/>
+*último*\
 Um iterador de avanço que aborda a posição um após o elemento final do intervalo a ser pesquisado.
 
-*comp*<br/>
+*Comp*\
 O predicado binário que fornece a condição a ser atendida pelos valores dos elementos adjacentes no intervalo pesquisado.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -343,7 +324,7 @@ There are two adjacent elements where the second is twice the first.
 They have values of 10 & 20.
 ```
 
-## <a name="all_of"></a>  all_of
+## <a name="all_of"></a> all_of
 
 Retorna **verdadeira** quando uma condição está presente em cada elemento no intervalo determinado.
 
@@ -353,14 +334,21 @@ bool all_of(
     InputIterator first,
     InputIterator last,
     BinaryPredicatecomp);
+
+template <class ExecutionPolicy, class ForwardIterator, class Predicate>
+bool all_of(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, 
+    ForwardIterator last, 
+    Predicate pred);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*first*<br/>
+*Primeiro*\
 Um iterador de entrada que indica onde começar a verificar uma condição. O iterador marca onde um intervalo de elementos começa.
 
-*last*<br/>
+*último*\
 Um iterador de entrada que indica o fim do intervalo de elementos para verificar uma condição.
 
 *comp*<br/>
@@ -409,7 +397,7 @@ li = ( 50 40 10 20 20 )
 All the elements are even numbers.
 ```
 
-## <a name="any_of"></a>  any_of
+## <a name="any_of"></a> any_of
 
 Retorna **verdadeira** quando uma condição está presente pelo menos uma vez no intervalo especificado de elementos.
 
@@ -419,17 +407,24 @@ bool any_of(
     InputIterator first,
     InputIterator last,
     UnaryPredicate comp);
+
+template <class ExecutionPolicy, class ForwardIterator, class Predicate>
+bool any_of(
+    ExecutionPolicy&& exec,
+    ForwardIterator first,
+    ForwardIterator last,
+    Predicate pred);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*first*<br/>
+*Primeiro*\
 Um iterador de entrada que indica onde começar a verificar um intervalo de elementos quanto a uma condição.
 
-*last*<br/>
+*último*\
 Um iterador de entrada que indica o fim do intervalo de elementos para verificar uma condição.
 
-*comp*<br/>
+*Comp*\
 Uma condição a ser testada. Ela é fornecida por um objeto de função de predicado definido pelo usuário. O predicado define a condição a ser atendida pelo elemento que está sendo testado. Um predicado usa um único argumento e retorna **true** ou **false**.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -476,7 +471,7 @@ li = ( 51 41 11 21 20 )
 There's an even element in li.
 ```
 
-## <a name="binary_search"></a>  binary_search
+## <a name="binary_search"></a> binary_search
 
 Testa se há um elemento em um intervalo classificado que seja igual a um valor especificado ou equivalente a ele de modo especificado por um predicado binário.
 
@@ -497,16 +492,16 @@ bool binary_search(
 
 ### <a name="parameters"></a>Parâmetros
 
-*first*<br/>
+*Primeiro*\
 Um iterador de avanço que aborda a posição do primeiro elemento do intervalo a ser pesquisado.
 
-*last*<br/>
+*último*\
 Um iterador de avanço que aborda a posição um após o elemento final do intervalo a ser pesquisado.
 
-*value*<br/>
+*value*\
 O valor que deve ser correspondido pelo valor do elemento ou que deve atender à condição com o valor do elemento especificado pelo predicado binário.
 
-*comp*<br/>
+*Comp*\
 Objeto de função de predicado definido pelo usuário que define o sentido em que um elemento é menor que outro. Um predicado binário usa dois argumentos e retorna **true** quando é atendido e **false** quando não é atendido.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -607,7 +602,16 @@ int main()
 }
 ```
 
-## <a name="copy"></a>  copy
+## <a name="clamp"></a> Clamp
+
+```cpp
+template<class T>
+constexpr const T& clamp(const T& v, const T& lo, const T& hi);
+template<class T, class Compare>
+constexpr const T& clamp(const T& v, const T& lo, const T& hi, Compare comp);
+```
+
+## <a name="copy"></a> Cópia
 
 Atribui os valores dos elementos de um intervalo de origem a um intervalo de destino, iterando pela sequência de elementos de origem e atribuindo-lhes novas posições em uma direção progressiva.
 
@@ -617,17 +621,23 @@ OutputIterator copy(
     InputIterator first,
     InputIterator last,
     OutputIterator destBeg);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2>
+ForwardIterator2 copy(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first, ForwardIterator1 last,
+    ForwardIterator2 result);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*first*<br/>
+*Primeiro*\
 Um iterador de entrada que trata da posição do primeiro elemento no intervalo de origem.
 
-*last*<br/>
+*último*\
 Um iterador de entrada que trata da posição que está logo após o elemento final no intervalo de origem.
 
-*destBeg*<br/>
+*destBeg*\
 Um iterador de saída que trata da posição do primeiro elemento no intervalo de destino.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -700,7 +710,7 @@ v2 with v1 insert = ( 0 3 6 9 0 10 20 21 24 27 30 )
 v2 with shifted insert = ( 0 3 0 10 20 10 20 21 24 27 30 )
 ```
 
-## <a name="copy_backward"></a>  copy_backward
+## <a name="copy_backward"></a> copy_backward
 
 Atribui os valores dos elementos de um intervalo de origem a um intervalo de destino, iterando pela sequência de elementos de origem e atribuindo-lhes novas posições em uma direção retroativa.
 
@@ -714,13 +724,13 @@ BidirectionalIterator2 copy_backward(
 
 ### <a name="parameters"></a>Parâmetros
 
-*first*<br/>
+*Primeiro*\
 Um iterador bidirecional que trata da posição do primeiro elemento no intervalo de origem.
 
-*last*<br/>
+*último*\
 Um iterador bidirecional que trata da posição que está logo atrás do elemento final no intervalo de origem.
 
-*destEnd*<br/>
+*destEnd*\
 Um iterador bidirecional que trata da posição que está logo atrás do elemento final no intervalo de destino.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -790,7 +800,7 @@ int main() {
 }
 ```
 
-## <a name="copy_if"></a>  copy_if
+## <a name="copy_if"></a> copy_if
 
 Em um intervalo de elementos, copia os elementos que são **verdadeira** a condição especificada.
 
@@ -801,20 +811,27 @@ OutputIterator copy_if(
     InputIterator last,
     OutputIterator dest,
     Predicate pred);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
+class Predicate>
+ForwardIterator2 copy_if(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first, ForwardIterator1 last,
+    ForwardIterator2 result, Predicate pred);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*first*<br/>
+*Primeiro*\
 Um iterador de entrada que indica o início de um intervalo em que a condição deve verificada.
 
-*last*<br/>
+*último*\
 Um iterador de entrada que indica o fim do intervalo.
 
-*dest*<br/>
+*dest*\
 O iterador de saída que indica o destino para os elementos copiados.
 
-*_Pred*<br/>
+*Pred*\
 A condição usada para testar cada elemento no intervalo. Essa condição é fornecida por um objeto de função de predicado definido pelo usuário. Um predicado usa um argumento e retorna **verdadeira** ou **falso**.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -829,7 +846,7 @@ A função de modelo avalia
 
 uma única vez para cada `N` no intervalo `[0, last - first)`, para aumentar estritamente os valores de `N`, começando com o valor mais baixo. Se *dest* e *primeiro* designarem regiões de armazenamento, *dest* não deve estar no intervalo `[ first, last )`.
 
-## <a name="copy_n"></a>  copy_n
+## <a name="copy_n"></a> copy_n
 
 Copia um número especificado de elementos.
 
@@ -839,17 +856,24 @@ OutputIterator copy_n(
     InputIterator first,
     Size count,
     OutputIterator dest);
+
+template<class ExecutionPolicy, class ForwardIterator1, class Size,
+class ForwardIterator2>
+ForwardIterator2 copy_n(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first, Size n,
+    ForwardIterator2 result);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*first*<br/>
+*Primeiro*\
 Um iterador de entrada que indica de onde copiar elementos.
 
-*count*<br/>
+*Contagem*\
 Um tipo de inteiro marcado ou desmarcado que especifica o número de elementos a copiar.
 
-*dest*<br/>
+*dest*\
 Um iterador de saída que indica onde copiar os elementos.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -889,7 +913,7 @@ int main()
 dandelion + badger = danger
 ```
 
-## <a name="count"></a>  count
+## <a name="count"></a> Contagem
 
 Retorna o número de elementos em um intervalo cujos valores correspondem a um valor especificado.
 
@@ -899,17 +923,25 @@ typename iterator_traits<InputIterator>::difference_type count(
     InputIterator first,
     InputIterator last,
     const Type& val);
+    
+template<class ExecutionPolicy, class ForwardIterator, class T>
+typename iterator_traits<ForwardIterator>::difference_type
+count(
+    ExecutionPolicy&& exec,
+    ForwardIterator first,
+    ForwardIterator last,
+    const T& value);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*first*<br/>
+*Primeiro*\
 Um iterador de entrada que trata da posição do primeiro elemento no intervalo a ser percorrido.
 
-*last*<br/>
+*último*\
 Um iterador de entrada que trata da posição logo após o elemento final no intervalo a ser percorrido.
 
-*val*<br/>
+*Val*\
 O valor dos elementos a serem contados.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -959,7 +991,7 @@ v1 = ( 10 20 10 40 10 )
 The number of 10s in v2 is: 3.
 ```
 
-## <a name="count_if"></a>  count_if
+## <a name="count_if"></a> count_if
 
 Retorna o número de elementos em um intervalo cujos valores atendem a uma condição especificada.
 
@@ -969,17 +1001,25 @@ typename iterator_traits<InputIterator>::difference_type count_if(
     InputIterator first,
     InputIterator last,
     Predicate pred);
+    
+template<class ExecutionPolicy, class ForwardIterator, class Predicate>
+typename iterator_traits<ForwardIterator>::difference_type
+count_if(
+    ExecutionPolicy&& exec,
+    ForwardIterator first,
+    ForwardIterator last,
+    Predicate pred);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*first*<br/>
+*Primeiro*\
 Um iterador de entrada que aborda a posição do primeiro elemento do intervalo a ser pesquisado.
 
-*last*<br/>
+*último*\
 Um iterador de entrada que aborda a posição um após o elemento final do intervalo a ser pesquisado.
 
-*_Pred*<br/>
+*Pred*\
 Objeto de função de predicado definido pelo usuário que define a condição a ser atendida para que um elemento seja contado. Um predicado usa um único argumento e retorna **true** ou **false**.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1033,7 +1073,7 @@ v1 = ( 10 20 10 40 10 )
 The number of elements in v1 greater than 10 is: 2.
 ```
 
-## <a name="equal"></a>  equal
+## <a name="equal"></a> igual
 
 Compara dois intervalos, elemento por elemento, quanto à igualdade ou equivalência, em um sentido especificado por um predicado binário.
 
@@ -1069,23 +1109,50 @@ bool equal(
     InputIterator2  First2,
     InputIterator2  Last2,
     BinaryPredicate Comp);
+    
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2>
+bool equal(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, ForwardIterator1 last1,
+    ForwardIterator2 first2);
+    
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
+class BinaryPredicate>
+bool equal(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, ForwardIterator1 last1,
+    ForwardIterator2 first2, BinaryPredicate pred);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2>
+bool equal(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, ForwardIterator1 last1,
+    ForwardIterator2 first2, ForwardIterator2 last2);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
+class BinaryPredicate>
+bool equal(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, ForwardIterator1 last1,
+    ForwardIterator2 first2, ForwardIterator2 last2,
+    BinaryPredicate pred);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*First1*<br/>
+*first1*\
 Um iterador de entrada que trata da posição do primeiro elemento no primeiro intervalo a ser testado.
 
-*Last1*<br/>
+*last1*\
 Um iterador de entrada que trata da posição logo após o último elemento no primeiro intervalo a ser testado.
 
-*First2*<br/>
+*first2*\
 Um iterador de entrada que trata da posição do primeiro elemento no segundo intervalo a ser testado.
 
-*First2*<br/>
+*first2*\
 Um iterador de entrada que trata da posição logo após o último elemento no segundo intervalo a ser testado.
 
-*Comp*<br/>
+*Comp*\
 Objeto de função de predicado definido pelo usuário, que define a condição a ser atendida se dois elementos forem executados como equivalentes. Um predicado binário usa dois argumentos e retorna **true** quando é atendido e **false** quando não é atendido.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1133,7 +1200,7 @@ int main()
 }
 ```
 
-## <a name="equal_range"></a>  equal_range
+## <a name="equal_range"></a> equal_range
 
 Dado um intervalo ordenado, localiza o subintervalo no qual todos os elementos são equivalentes a um determinado valor.
 
@@ -1154,16 +1221,16 @@ pair<ForwardIterator, ForwardIterator> equal_range(
 
 ### <a name="parameters"></a>Parâmetros
 
-*first*<br/>
+*Primeiro*\
 Um iterador de avanço que aborda a posição do primeiro elemento do intervalo a ser pesquisado.
 
-*last*<br/>
+*último*\
 Um iterador de avanço que aborda a posição um após o elemento final do intervalo a ser pesquisado.
 
-*val*<br/>
+*Val*\
 O valor que está sendo pesquisado no intervalo ordenado.
 
-*comp*<br/>
+*Comp*\
 Objeto de função de predicado definido pelo usuário que define o sentido em que um elemento é menor que outro.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1299,7 +1366,7 @@ int main()
 }
 ```
 
-## <a name="fill"></a>  fill
+## <a name="fill"></a> preenchimento
 
 Atribui o mesmo novo valor para cada elemento em um intervalo especificado.
 
@@ -1309,17 +1376,24 @@ void fill(
     ForwardIterator first,
     ForwardIterator last,
     const Type& val);
+
+template<class ExecutionPolicy, class ForwardIterator, class T>
+void fill(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, 
+    ForwardIterator last, 
+    const T& value);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*first*<br/>
+*Primeiro*\
 Um iterador de avanço que trata da posição do primeiro elemento no intervalo a ser percorrido.
 
-*last*<br/>
+*último*\
 Um iterador de avanço que trata da posição logo após o elemento final no intervalo a ser percorrido.
 
-*val*<br/>
+*Val*\
 O valor a ser atribuído aos elementos no intervalo [ *primeira*, *última*).
 
 ### <a name="remarks"></a>Comentários
@@ -1367,7 +1441,7 @@ Vector v1 = ( 0 5 10 15 20 25 30 35 40 45 )
 Modified v1 = ( 0 5 10 15 20 2 2 2 2 2 )
 ```
 
-## <a name="fill_n"></a>  fill_n
+## <a name="fill_n"></a> fill_n
 
 Atribui um novo valor a um número especificado de elementos em um intervalo começando com um elemento específico.
 
@@ -1377,17 +1451,25 @@ OutputIterator fill_n(
     OutputIterator First,
     Size Count,
     const Type& Val);
+
+template<class ExecutionPolicy, class ForwardIterator,
+class Size, class T>
+ForwardIterator fill_n(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, 
+    Size n, 
+    const T& value);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*First*<br/>
+*Primeiro*\
 Um iterador de saída que trata da posição do primeiro elemento no intervalo a ser atribuído o valor *Val*.
 
-*Contagem*<br/>
+*Contagem*\
 Um tipo de inteiro com sinal ou sem sinal que especifica o número de elementos aos quais o valor será atribuído.
 
-*Val*<br/>
+*Val*\
 O valor a ser atribuído aos elementos no intervalo [ *primeira*, *First + Count*).
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1446,7 +1528,7 @@ int main()
 }
 ```
 
-## <a name="find"></a>  find
+## <a name="find"></a> localizar
 
 Localiza a posição da primeira ocorrência de um elemento em um intervalo que tem um valor especificado.
 
@@ -1456,17 +1538,24 @@ InputIterator find(
     InputIterator first,
     InputIterator last,
     const T& val);
+
+template<class ExecutionPolicy, class ForwardIterator, class T>
+ForwardIterator find(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, 
+    ForwardIterator last,
+    const T& value);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*first*<br/>
+*Primeiro*\
 Um iterador de entrada que aborda a posição do primeiro elemento do intervalo a ser pesquisado quanto ao valor especificado.
 
-*last*<br/>
+*último*\
 Um iterador de entrada que aborda a posição um após o elemento final do intervalo a ser pesquisado quanto ao valor especificado.
 
-*val*<br/>
+*Val*\
 O valor a ser procurado.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1479,7 +1568,7 @@ O `operator==` usado para determinar a correspondência entre um elemento e o va
 
 Para obter um exemplo de código usando `find()`, consulte [find_if](../standard-library/algorithm-functions.md#find_if).
 
-## <a name="find_end"></a>  find_end
+## <a name="find_end"></a> find_end
 
 Examina um intervalo em busca da última subsequência que seja idêntica a uma sequência especificada ou que seja equivalente de certo modo especificado por um predicado binário.
 
@@ -1498,23 +1587,43 @@ ForwardIterator1 find_end(
     ForwardIterator2 First2,
     ForwardIterator2 Last2,
     Pred Comp);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2>
+ForwardIterator1
+find_end(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, 
+    ForwardIterator1 last1,
+    ForwardIterator2 first2, 
+    ForwardIterator2 last2);
+    
+template<class ExecutionPolicy, class ForwardIterator1,
+class ForwardIterator2, class BinaryPredicate>
+ForwardIterator1
+find_end(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, 
+    ForwardIterator1 last1,
+    ForwardIterator2 first2, 
+    ForwardIterator2 last2,
+    BinaryPredicate pred);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*First1*<br/>
+*first1*\
 Um iterador de avanço que aborda a posição do primeiro elemento do intervalo a ser pesquisado.
 
-*Last1*<br/>
+*last1*\
 Um iterador de avanço que trata da posição logo após o último elemento no intervalo a ser pesquisado.
 
-*First2*<br/>
+*first2*\
 Um iterador de avanço que trata da posição do primeiro elemento no intervalo a ser pesquisado.
 
-*Last2*<br/>
+*last2*\
 Um iterador de avanço que trata da posição logo após o último elemento no intervalo a ser pesquisado.
 
-*Comp*<br/>
+*Comp*\
 Objeto de função de predicado definido pelo usuário, que define a condição a ser atendida se dois elementos forem executados como equivalentes. Um predicado binário usa dois argumentos e retorna **true** quando é atendido e **false** quando não é atendido.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1623,7 +1732,7 @@ There is a sequence of elements in v1 that are equivalent to those
 in v2 under the binary predicate twice and that begins at position 8.
 ```
 
-## <a name="find_first_of"></a>  find_first_of
+## <a name="find_first_of"></a> find_first_of
 
 Procura a primeira ocorrência de qualquer um dos vários valores em um intervalo de destino ou a primeira ocorrência de qualquer um dos vários elementos que são equivalentes de certo modo especificado por um predicado binário a um conjunto especificado dos elementos.
 
@@ -1642,23 +1751,43 @@ ForwardIterator1 find_first_of(
     ForwardIterator2  first2,
     ForwardIterator2 Last2,
     BinaryPredicate  comp);
+    
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2>
+ForwardIterator1
+find_first_of(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, 
+    ForwardIterator1 last1,
+    ForwardIterator2 first2, 
+    ForwardIterator2 last2);
+
+template<class ExecutionPolicy, class ForwardIterator1,
+class ForwardIterator2, class BinaryPredicate>
+ForwardIterator1
+find_first_of(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, 
+    ForwardIterator1 last1,
+    ForwardIterator2 first2, 
+    ForwardIterator2 last2,
+    BinaryPredicate pred);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*first1*<br/>
+*first1*\
 Um iterador de avanço que aborda a posição do primeiro elemento do intervalo a ser pesquisado.
 
-*last1*<br/>
+*last1*\
 Um iterador de avanço que aborda a posição um após o elemento final do intervalo a ser pesquisado.
 
-*first2*<br/>
+*first2*\
 Um iterador de avanço que aborda a posição do primeiro elemento do intervalo a ser correspondido.
 
-*last2*<br/>
+*last2*\
 Um iterador de avanço que aborda a posição um após o elemento final do intervalo a ser correspondido.
 
-*comp*<br/>
+*Comp*\
 Objeto de função de predicado definido pelo usuário, que define a condição a ser atendida se dois elementos forem executados como equivalentes. Um predicado binário usa dois argumentos e retorna **true** quando é atendido e **false** quando não é atendido.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1770,7 +1899,7 @@ to those in v2 under the binary predicate twice
 and the first one begins at position 2.
 ```
 
-## <a name="find_if"></a>  find_if
+## <a name="find_if"></a> find_if
 
 Localiza a posição da primeira ocorrência de um elemento em um intervalo que atende a uma condição especificada.
 
@@ -1780,17 +1909,23 @@ InputIterator find_if(
     InputIterator first,
     InputIterator last,
     Predicate pred);
+
+template<class ExecutionPolicy, class ForwardIterator, class Predicate>
+ForwardIterator find_if(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, ForwardIterator last,
+    Predicate pred);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*first*<br/>
+*Primeiro*\
 Um iterador de entrada que aborda a posição do primeiro elemento do intervalo a ser pesquisado.
 
-*last*<br/>
+*último*\
 Um iterador de entrada que aborda a posição um após o elemento final do intervalo a ser pesquisado.
 
-*pred*<br/>
+*Pred*\
 O objeto de função de predicado definido pelo usuário ou a [expressão lambda](../cpp/lambda-expressions-in-cpp.md) que define a condição a ser atendida pelo elemento que está sendo pesquisado. Um predicado usa único argumento e retorna **verdadeira** (atendido) ou **falso** (não atendido). A assinatura do *pred* deve ser efetivamente `bool pred(const T& arg);`, onde `T` é um tipo ao qual `InputIterator` pode ser convertido implicitamente quando cancelado. O **const** palavra-chave é mostrado apenas para ilustrar que o objeto de função ou lambda não deve modificar o argumento.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1886,7 +2021,7 @@ int main()
 }
 ```
 
-## <a name="find_if_not"></a>  find_if_not
+## <a name="find_if_not"></a> find_if_not
 
 Retorna o primeiro elemento no intervalo indicado que não atende a uma condição.
 
@@ -1896,17 +2031,23 @@ InputIterator find_if_not(
     InputIterator first,
     InputIterator last,
     Predicate pred);
+
+template<class ExecutionPolicy, class ForwardIterator, class Predicate>
+ForwardIterator find_if_not(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, ForwardIterator last,
+    Predicate pred);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*first*<br/>
+*Primeiro*\
 Um iterador de entrada que aborda a posição do primeiro elemento do intervalo a ser pesquisado.
 
-*last*<br/>
+*último*\
 Um iterador de entrada que aborda a posição um após o elemento final do intervalo a ser pesquisado.
 
-*pred*<br/>
+*Pred*\
 O objeto de função de predicado definido pelo usuário ou a [expressão lambda](../cpp/lambda-expressions-in-cpp.md) que define a condição que não deve ser atendida pelo elemento que está sendo pesquisado. Um predicado usa único argumento e retorna **verdadeira** (atendido) ou **falso** (não atendido). A assinatura do *pred* deve ser efetivamente `bool pred(const T& arg);`, onde `T` é um tipo ao qual `InputIterator` pode ser convertido implicitamente quando cancelado. O **const** palavra-chave é mostrado apenas para ilustrar que o objeto de função ou lambda não deve modificar o argumento.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1919,7 +2060,7 @@ Essa função de modelo é uma generalização do algoritmo [find](../standard-l
 
 Para obter um exemplo de código que se adapta imediatamente a `find_if_not()`, consulte [find_if](../standard-library/algorithm-functions.md#find_if).
 
-## <a name="for_each"></a>  for_each
+## <a name="for_each"></a> for_each
 
 Aplica um objeto de função especificado a cada elemento em uma ordem progressiva dentro de um intervalo e retorna o objeto de função.
 
@@ -1929,17 +2070,24 @@ Function for_each(
     InputIterator first,
     InputIterator last,
     Function func);
+    
+template<class ExecutionPolicy, class ForwardIterator, class Function>
+void for_each(
+    ExecutionPolicy&& exec,
+    ForwardIterator first,
+    ForwardIterator last,
+    Function f);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*first*<br/>
+*Primeiro*\
 Um iterador de entrada que trata da posição do primeiro elemento no intervalo no qual a operação ocorrerá.
 
-*last*<br/>
+*último*\
 Um iterador de entrada que trata da posição logo após o elemento final no intervalo no qual a operação ocorre.
 
-*_Func*<br/>
+*_Func*\
 Objeto de função definido pelo usuário que é aplicado a cada elemento no intervalo.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1952,7 +2100,7 @@ O algoritmo `for_each` é muito flexível, permitindo a modificação de cada el
 
 O intervalo referenciado deve ser válido; todos os ponteiros devem ser desreferenciáveis e, dentro da sequência, a última posição deve ser acessível desde a primeira por incrementação.
 
-A complexidade é linear com no máximo ( *última* -  *primeiro*) comparações.
+A complexidade é linear com no máximo (*última* - *primeiro*) comparações.
 
 ### <a name="example"></a>Exemplo
 
@@ -2067,7 +2215,24 @@ The average of the elements of v1 is:
 Average ( v1mod2 ) = 10.
 ```
 
-## <a name="generate"></a>  generate
+## <a name="for_each_n"></a> for_each_n
+
+```cpp
+template<class InputIterator, class Size, class Function>
+InputIterator for_each_n(
+    InputIterator first, 
+    Size n, 
+    Function f);
+
+template<class ExecutionPolicy, class ForwardIterator, class Size, class Function>
+ForwardIterator for_each_n(
+    ExecutionPolicy&& exec, 
+    ForwardIterator first, 
+    Size n, 
+    Function f);
+```
+
+## <a name="generate"></a> Gerar
 
 Atribui os valores gerados por um objeto de função a cada elemento em um intervalo.
 
@@ -2077,17 +2242,23 @@ void generate(
     ForwardIterator first,
     ForwardIterator last,
     Generator _Gen);
+    
+template<class ExecutionPolicy, class ForwardIterator, class Generator>
+void generate(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, ForwardIterator last,
+    Generator gen);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*first*<br/>
+*Primeiro*\
 Um iterador de avanço que trata da posição do primeiro elemento no intervalo ao qual os valores devem ser atribuídos.
 
-*last*<br/>
+*último*\
 Um iterador de avanço que trata da posição logo após o elemento final no intervalo ao qual os valores devem ser atribuídos.
 
-*_Gen*<br/>
+*_Gen*\
 Um objeto de função que é chamado sem argumentos e usado para gerar os valores a serem atribuídos a cada um dos elementos no intervalo.
 
 ### <a name="remarks"></a>Comentários
@@ -2141,7 +2312,7 @@ Vector v1 is ( 41 18467 6334 26500 19169 ).
 Deque deq1 is ( 15724 11478 29358 26962 24464 ).
 ```
 
-## <a name="generate_n"></a>  generate_n
+## <a name="generate_n"></a> generate_n
 
 Atribui os valores gerados por um objeto de função a um número especificado de elementos em um intervalo e retorna para uma posição antes do último valor atribuído.
 
@@ -2151,17 +2322,24 @@ void generate_n(
     OutputIterator First,
     Diff Count,
     Generator Gen);
+
+template<class ExecutionPolicy, class ForwardIterator, class Size, class Generator>
+ForwardIterator generate_n(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, 
+    Size n, 
+    Generator gen);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*First*<br/>
+*Primeiro*\
 Um iterador de saída que trata da posição do primeiro elemento no intervalo ao qual os valores são atribuídos.
 
-*Contagem*<br/>
+*Contagem*\
 Um tipo de inteiro com sinal e sem sinal que especifica o número de elementos a terem um valor atribuído pela função do gerador.
 
-*Gen*<br/>
+*Gen*\
 Um objeto de função que é chamado sem argumentos e usado para gerar os valores a serem atribuídos a cada um dos elementos no intervalo.
 
 ### <a name="remarks"></a>Comentários
@@ -2215,7 +2393,7 @@ int main()
 }
 ```
 
-## <a name="includes"></a>  includes
+## <a name="includes"></a> inclui
 
 Testa se um intervalo classificado contém todos os elementos contidos em um segundo intervalo classificado, em que o critério de equivalência ou ordenação entre elementos pode ser especificado por um predicado binário.
 
@@ -2234,23 +2412,41 @@ bool includes(
     InputIterator2 first2,
     InputIterator2 last2,
     BinaryPredicate comp );
+    
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2>
+bool includes(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, 
+    ForwardIterator1 last1,
+    ForwardIterator2 first2, 
+    ForwardIterator2 last2);
+    
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
+class Compare>
+bool includes(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, 
+    ForwardIterator1 last1,
+    ForwardIterator2 first2, 
+    ForwardIterator2 last2, 
+    Compare comp);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*first1*<br/>
+*first1*\
 Um iterador de entrada que trata da posição do primeiro elemento no primeiro entre dois intervalos de origem classificados a serem testados para verificar se todos os elementos do segundo estão contidos no primeiro.
 
-*last1*<br/>
+*last1*\
 Um iterador de entrada que trata da posição logo após o último elemento no primeiro entre dois intervalos de origem classificados a serem testados para verificar se todos os elementos do segundo estão contidos no primeiro.
 
-*first2*<br/>
+*first2*\
 Um iterador de entrada que trata da posição do primeiro elemento no segundo entre dois intervalos de origem classificados consecutivos a serem testados para verificar se todos os elementos do segundo estão contidos no primeiro.
 
-*last2*<br/>
+*last2*\
 Um iterador de entrada que trata da posição logo após o último elemento no segundo entre dois intervalos de origem classificados consecutivos a serem testados para verificar se todos os elementos do segundo estão contidos no primeiro.
 
-*comp*<br/>
+*Comp*\
 Objeto de função de predicado definido pelo usuário que define o sentido em que um elemento é menor que outro. Um predicado binário usa dois argumentos e retorna **true** quando é atendido e **false** quando não é atendido.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -2420,7 +2616,7 @@ At least one of the elements in vector v2b is not contained in vector v2a.
 At least one of the elements in vector v3b is  not contained under mod_lesser in vector v3a.
 ```
 
-## <a name="inplace_merge"></a>  inplace_merge
+## <a name="inplace_merge"></a> inplace_merge
 
 Combina os elementos de dois intervalos classificados consecutivos em um único intervalo classificado, em que o critério de ordenação pode ser especificado por um predicado binário.
 
@@ -2437,20 +2633,35 @@ void inplace_merge(
     BidirectionalIterator middle,
     BidirectionalIterator last,
     Predicate comp);
+    
+template<class ExecutionPolicy, class BidirectionalIterator>
+void inplace_merge(
+    ExecutionPolicy&& exec,
+    BidirectionalIterator first,
+    BidirectionalIterator middle,
+    BidirectionalIterator last);
+    
+template<class ExecutionPolicy, class BidirectionalIterator, class Compare>
+void inplace_merge(
+    ExecutionPolicy&& exec,
+    BidirectionalIterator first,
+    BidirectionalIterator middle,
+    BidirectionalIterator last, 
+    Compare comp);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*first*<br/>
+*Primeiro*\
 Um iterador bidirecional que trata da posição do primeiro elemento no primeiro entre dois intervalos classificados consecutivos a serem combinados e classificados em um único intervalo.
 
-*middle*<br/>
+*intermediária*\
 Um iterador bidirecional que trata da posição do primeiro elemento no segundo entre dois intervalos classificados consecutivos a serem combinados e classificados em um único intervalo.
 
-*last*<br/>
+*último*\
 Um iterador bidirecional que trata da posição logo após o último elemento no segundo entre dois intervalos classificados consecutivos a serem combinados e classificados em um único intervalo.
 
-*comp*<br/>
+*Comp*\
 Objeto de função de predicado definido pelo usuário que define o sentido em que um elemento é maior que outro. O predicado binário usa dois argumentos e deve retornar **true** quando o primeiro elemento é menor que o segundo elemento, caso contrário, **false**.
 
 ### <a name="remarks"></a>Comentários
@@ -2572,7 +2783,7 @@ Merged inplace with binary predicate mod_lesser specified,
 vector v3mod = ( 0 0 1 -1 2 -2 3 -3 4 -4 5 -5 )
 ```
 
-## <a name="is_heap"></a>  is_heap
+## <a name="is_heap"></a> is_heap
 
 Retorna **verdadeira** se os elementos no intervalo especificado formarem um heap.
 
@@ -2587,17 +2798,30 @@ bool is_heap(
     RandomAccessIterator first,
     RandomAccessIterator last,
     BinaryPredicate comp);
+    
+template<class ExecutionPolicy, class RandomAccessIterator>
+bool is_heap(
+    ExecutionPolicy&& exec,
+    RandomAccessIterator first, 
+    RandomAccessIterator last);
+
+template<class ExecutionPolicy, class RandomAccessIterator, class Compare>
+bool is_heap(
+    ExecutionPolicy&& exec,
+    RandomAccessIterator first, 
+    RandomAccessIterator last, 
+    Compare comp);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*first*<br/>
+*Primeiro*\
 Um iterador de acesso aleatório que indica o início de um intervalo a ser verificado quanto a um heap.
 
-*last*<br/>
+*último*\
 Um iterador de acesso aleatório que indica o final de um intervalo.
 
-*comp*<br/>
+*Comp*\
 Uma condição a ser testada para ordenar elementos. Um predicado binário usa um único argumento e retorna **verdadeira** ou **falso**.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -2612,7 +2836,7 @@ A segunda função de modelo retorna
 
 `is_heap_until(first, last, comp) == last`.
 
-## <a name="is_heap_until"></a>  is_heap_until
+## <a name="is_heap_until"></a> is_heap_until
 
 Retorna um iterador posicionado no primeiro elemento no intervalo [ `begin`, `end`) que não satisfaz a condição de ordenação de heap ou *final* se o intervalo formar um heap.
 
@@ -2627,17 +2851,30 @@ RandomAccessIterator is_heap_until(
     RandomAccessIterator begin,
     RandomAccessIterator end,
     BinaryPredicate compare);
+    
+template<class ExecutionPolicy, class RandomAccessIterator>
+RandomAccessIterator is_heap_until(
+    ExecutionPolicy&& exec,
+    RandomAccessIterator first, 
+    RandomAccessIterator last);
+
+template<class ExecutionPolicy, class RandomAccessIterator, class Compare>
+RandomAccessIterator is_heap_until(
+    ExecutionPolicy&& exec,
+    RandomAccessIterator first, 
+    RandomAccessIterator last,
+    Compare comp);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*begin*<br/>
+*começar*\
 Um iterador de acesso aleatório que especifica o primeiro elemento de um intervalo para verificar se há um heap.
 
-*end*<br/>
+*final*\
 Um iterador de acesso aleatório que especifica o final do intervalo para verificar se há um heap.
 
-*compare*<br/>
+*Comparar*\
 Um predicado binário que especifica a condição de ordenação fraca estrita que define um heap. O predicado padrão quando *compare* não for especificado é `std::less<>`.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -2646,11 +2883,11 @@ Retorna *final* se o intervalo especificado formar um heap ou contiver um ou men
 
 ### <a name="remarks"></a>Comentários
 
-A primeira função de modelo retorna o último iterador `next` na `[ begin , end ]` onde `[ begin , next)` é um heap ordenado pelo objeto de função `std::less<>`. Se a distância `end - begin < 2`, a função retornará *final*.
+A primeira função de modelo retorna o último iterador `next` na `[begin , end]` onde `[begin , next)` é um heap ordenado pelo objeto de função `std::less<>`. Se a distância `end - begin < 2`, a função retornará *final*.
 
 A segunda função de modelo comporta-se da mesma maneira que a primeira, exceto que ela usa o predicado `compare` em vez de `std::less<>` como a condição de ordenação do heap.
 
-## <a name="is_partitioned"></a>  is_partitioned
+## <a name="is_partitioned"></a> is_partitioned
 
 Retorna **verdadeira** se todos os elementos no intervalo determinado testar **verdadeiro** para uma condição vierem antes de quaisquer elementos que testarem **false**.
 
@@ -2660,17 +2897,24 @@ bool is_partitioned(
     InputIterator first,
     InputIterator last,
     BinaryPredicate comp);
+    
+template <class ExecutionPolicy, class ForwardIterator, class Predicate>
+bool is_partitioned(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, 
+    ForwardIterator last, 
+    Predicate pred);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*first*<br/>
+*Primeiro*\
 Um iterador de entrada que indica onde um intervalo começa a verificar uma condição.
 
-*last*<br/>
+*último*\
 Um iterador de entrada que indica o final de um intervalo.
 
-*comp*<br/>
+*Comp*\
 A condição a ser testada. Ela é fornecida por um objeto de função de predicado definido pelo usuário que define a condição a ser atendida pelo elemento que está sendo pesquisado. Um predicado usa um único argumento e retorna **true** ou **false**.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -2679,9 +2923,9 @@ Retorna verdadeiro quando todos os elementos no intervalo determinado que testam
 
 ### <a name="remarks"></a>Comentários
 
-Retorna a função de modelo **verdadeira** somente se todos os elementos na `[` `first ,` `last )` são particionados por *comp*; ou seja, todos os elementos `X` no `[` `first ,` `last )` para os quais `comp (X)` for true ocorrerem antes de todos os elementos `Y` para o qual `comp (Y)` está **false**.
+Retorna a função de modelo **verdadeira** somente se todos os elementos no `[first, last)` são particionados por *comp*; ou seja, todos os elementos `X` no `[first, last)` para o qual `comp (X)` é verdadeiro Ocorre antes de todos os elementos `Y` para o qual `comp (Y)` é **falso**.
 
-## <a name="is_permutation"></a>  is_permutation
+## <a name="is_permutation"></a> is_permutation
 
 Retornará true se os dois intervalos contiverem os mesmos elementos, estando os elementos na mesma ordem ou não. Use as sobrecargas de intervalo duplo no código do C++14, porque as sobrecargas que usam apenas um único iterador para o segundo intervalo não detectarão as diferenças se o segundo intervalo for maior que o primeiro intervalo e resultarão em um comportamento indefinido se o segundo intervalo for menor que o primeiro intervalo.
 
@@ -2718,19 +2962,19 @@ bool is_permutation(
 
 ### <a name="parameters"></a>Parâmetros
 
-*First1*<br/>
+*first1*\
 Um iterador de avanço que se refere ao primeiro elemento do intervalo.
 
-*Last1*<br/>
+*last1*\
 Um iterador de avanço que se refere ao elemento logo após o último do intervalo.
 
-*First2*<br/>
+*first2*\
 Um iterador de avanço que se refere ao primeiro elemento de um segundo intervalo, usado para comparação.
 
-*Last2*<br/>
+*last2*\
 Um iterador de avanço que se refere a um elemento logo após o último de um segundo intervalo, usado para comparação.
 
-*Pred*<br/>
+*Pred*\
 Um predicado que testa quanto à equivalência e retorna um **bool**.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -2801,7 +3045,7 @@ int main()
 }
 ```
 
-## <a name="is_sorted"></a>  is_sorted
+## <a name="is_sorted"></a> is_sorted
 
 Retorna **verdadeira** se os elementos no intervalo especificado estiverem em ordem classificada.
 
@@ -2816,17 +3060,30 @@ bool is_sorted(
     ForwardIterator first,
     ForwardIterator last,
     BinaryPredicate comp);
+    
+template<class ExecutionPolicy, class ForwardIterator>
+bool is_sorted(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, 
+    ForwardIterator last);
+    
+template<class ExecutionPolicy, class ForwardIterator, class Compare>
+bool is_sorted(
+    ExecutionPolicy&& exec,
+    ForwardIterator first,
+    ForwardIterator last,
+    Compare comp);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*first*<br/>
+*Primeiro*\
 Um iterador de avanço que indica onde começa o intervalo a ser verificado.
 
-*last*<br/>
+*último*\
 Um iterador de avanço que indica o final de um intervalo.
 
-*comp*<br/>
+*Comp*\
 A condição de teste para determinar uma ordem entre dois elementos. Um predicado usa um único argumento e retorna **true** ou **false**. Executa a mesma tarefa que `operator<`.
 
 ### <a name="remarks"></a>Comentários
@@ -2835,7 +3092,7 @@ Retorna a primeira função de modelo [is_sorted_until](#is_sorted_until)`( firs
 
 A segunda função de modelo retorna `is_sorted_until( first, last , comp ) == last`. O *comp* executa a função de predicado de comparação de ordem.
 
-## <a name="is_sorted_until"></a>  is_sorted_until
+## <a name="is_sorted_until"></a> is_sorted_until
 
 Retorna um `ForwardIterator` que é definido como o último elemento que está na ordem classificada de um intervalo especificado.
 
@@ -2851,17 +3108,30 @@ ForwardIterator is_sorted_until(
     ForwardIterator first,
     ForwardIterator last,
     BinaryPredicate comp);
+    
+template<class ExecutionPolicy, class ForwardIterator>
+ForwardIterator is_sorted_until(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, 
+    ForwardIterator last);
+
+template<class ExecutionPolicy, class ForwardIterator, class Compare>
+ForwardIterator is_sorted_until(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, 
+    ForwardIterator last,
+    Compare comp);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*first*<br/>
+*Primeiro*\
 Um iterador de avanço que indica onde começa o intervalo a ser verificado.
 
-*last*<br/>
+*último*\
 Um iterador de avanço que indica o final de um intervalo.
 
-*comp*<br/>
+*Comp*\
 A condição de teste para determinar uma ordem entre dois elementos. Um predicado usa um único argumento e retorna **true** ou **false**.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -2870,11 +3140,11 @@ Retorna um `ForwardIterator` definido como o último elemento na ordem classific
 
 ### <a name="remarks"></a>Comentários
 
-A primeira função de modelo retorna o último iterador `next` em `[` `first ,` `last ]` para que `[` `first , next)` seja uma sequência classificada ordenada por `operator<`. Se `distance()` `< 2` a função retorna *última*.
+A primeira função de modelo retorna o último iterador `next` na `[first, last]` , de modo que `[first, next)` é uma sequência classificada ordenada por `operator<`. Se `distance()` `< 2` a função retorna *última*.
 
 A segunda função de modelo comporta-se da mesma forma, exceto que ela substitui `operator<(X, Y)` por `comp (X, Y)`.
 
-## <a name="iter_swap"></a>  iter_swap
+## <a name="iter_swap"></a> iter_swap
 
 Troca dois valores referenciados por um par de iteradores especificados.
 
@@ -2885,15 +3155,15 @@ void iter_swap( ForwardIterator1 left, ForwardIterator2 right );
 
 ### <a name="parameters"></a>Parâmetros
 
-*left*<br/>
+*À esquerda*\
 Um dos iteradores de avanço cujo valor deverá ser trocado.
 
-*right*<br/>
+*Certo*\
 O segundo dos iteradores de avanço cujo valor deverá ser trocado.
 
 ### <a name="remarks"></a>Comentários
 
-`swap` deve ser usado preferencialmente em vez de i **ter_swap**, que foi incluído no Padrão C++ para manter a compatibilidade com versões anteriores. Se `Fit1` e `Fit2` forem iteradores de avanço, em seguida, `iter_swap` ( `Fit1`, `Fit2` ), é equivalente a `swap` ( \* `Fit1`, \* `Fit2` ).
+`swap` deve ser usado preferencialmente em vez de i **ter_swap**, que foi incluído no Padrão C++ para manter a compatibilidade com versões anteriores. Se `Fit1` e `Fit2` forem iteradores de avanço, em seguida, `iter_swap(Fit1, Fit2)`, é equivalente a `swap( *Fit1, *Fit2)`.
 
 Os tipos de valor dos iteradores de avanço de entrada devem ter o mesmo valor.
 
@@ -3030,7 +3300,7 @@ vector v1 is: v1 = ( 4 1 2 3 ).
 & deque deq2 is: deq2 = ( 0 5 ).
 ```
 
-## <a name="lexicographical_compare"></a>  lexicographical_compare
+## <a name="lexicographical_compare"></a> lexicographical_compare
 
 Compara elemento por elemento entre duas sequências para determinar qual é o menor dos dois.
 
@@ -3049,23 +3319,41 @@ bool lexicographical_compare(
     InputIterator2  first2,
     InputIterator2 Last2,
     BinaryPredicate  comp  );
+    
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2>
+bool lexicographical_compare(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, 
+    ForwardIterator1 last1,
+    ForwardIterator2 first2, 
+    ForwardIterator2 last2);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
+class Compare>
+bool lexicographical_compare(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, 
+    ForwardIterator1 last1,
+    ForwardIterator2 first2, 
+    ForwardIterator2 last2,
+    Compare comp);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*first1*<br/>
+*first1*\
 Um iterador de entrada que trata da posição do primeiro elemento no primeiro intervalo a ser comparado.
 
-*last1*<br/>
+*last1*\
 Um iterador de entrada que trata da posição logo após o elemento final no primeiro intervalo a ser comparado.
 
-*first2*<br/>
+*first2*\
 Um iterador de entrada que trata da posição do primeiro elemento no segundo intervalo a ser comparado.
 
-*last2*<br/>
+*last2*\
 Um iterador de entrada que trata da posição logo após o elemento final no segundo intervalo a ser comparado.
 
-*comp*<br/>
+*Comp*\
 Objeto de função de predicado definido pelo usuário que define o sentido em que um elemento é menor que outro. Um predicado binário usa dois argumentos e retorna **true** quando é atendido e **false** quando não é atendido.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -3177,7 +3465,7 @@ Vector v1 is lexicographically_less than L1.
 Vector v1 is not lexicographically_less than v2 under twice.
 ```
 
-## <a name="lower_bound"></a>  lower_bound
+## <a name="lower_bound"></a> lower_bound
 
 Localiza a posição do primeiro elemento em um intervalo ordenado com um valor que é maior ou equivalente a um valor especificado, em que o critério de ordenação pode ser especificado por um predicado binário.
 
@@ -3198,16 +3486,16 @@ ForwardIterator lower_bound(
 
 ### <a name="parameters"></a>Parâmetros
 
-*first*<br/>
+*Primeiro*\
 Um iterador de avanço que aborda a posição do primeiro elemento do intervalo a ser pesquisado.
 
-*last*<br/>
+*último*\
 Um iterador de avanço que aborda a posição um após o elemento final do intervalo a ser pesquisado.
 
-*value*<br/>
+*value*\
 O valor cuja primeira posição ou primeira posição possível está sendo pesquisado no intervalo ordenado.
 
-*comp*<br/>
+*Comp*\
 Objeto de função de predicado definido pelo usuário que define o sentido em que um elemento é menor que outro. Um predicado binário usa dois argumentos e retorna **true** quando é atendido e **false** quando não é atendido.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -3316,7 +3604,7 @@ int main()
 }
 ```
 
-## <a name="make_heap"></a>  make_heap
+## <a name="make_heap"></a> make_heap
 
 Converte os elementos de um intervalo especificado em um heap no qual o primeiro elemento é o maior e para o qual um critério de classificação pode ser especificado com um predicado binário.
 
@@ -3335,13 +3623,13 @@ void make_heap(
 
 ### <a name="parameters"></a>Parâmetros
 
-*first*<br/>
+*Primeiro*\
 Um iterador de acesso aleatório que trata da posição do primeiro elemento no intervalo a ser convertido em um heap.
 
-*last*<br/>
+*último*\
 Um iterador de acesso aleatório que trata da posição logo após o elemento final no intervalo a ser convertido em um heap.
 
-*comp*<br/>
+*Comp*\
 Objeto de função de predicado definido pelo usuário que define o sentido em que um elemento é menor que outro. Um predicado binário usa dois argumentos e retorna **true** quando é atendido e **false** quando não é atendido.
 
 ### <a name="remarks"></a>Comentários
@@ -3398,7 +3686,7 @@ int main() {
 }
 ```
 
-## <a name="max"></a>  max
+## <a name="max"></a> Max
 
 Compara dois objetos e retorna o maior dos dois, em que o critério de ordenação pode ser especificado por um predicado binário.
 
@@ -3423,16 +3711,16 @@ constexpr Type& max(
 
 ### <a name="parameters"></a>Parâmetros
 
-*left*<br/>
+*À esquerda*\
 O primeiro dos dois objetos que estão sendo comparados.
 
-*right*<br/>
+*Certo*\
 O segundo dos dois objetos que estão sendo comparados.
 
-*comp*<br/>
+*Comp*\
 Um predicado binário usado para comparar os dois objetos.
 
-*_IList*<br/>
+*_IList*\
 A lista do inicializador que contém os objetos a serem comparados.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -3611,7 +3899,7 @@ Vector v4 = max (v1,v2) is ( 0 1 2 ).
 Vector v5 = max (v1,v3) is ( 0 2 4 ).
 ```
 
-## <a name="max_element"></a>  max_element
+## <a name="max_element"></a> max_element
 
 Localiza a primeira ocorrência do maior elemento em um intervalo especificado, em que o critério de ordenação pode ser especificado por um predicado binário.
 
@@ -3621,17 +3909,30 @@ constexpr ForwardIterator max_element(ForwardIterator first, ForwardIterator las
 
 template<class ForwardIterator, class BinaryPredicate>
 constexpr ForwardIterator max_element(ForwardIterator first, ForwardIterator last, BinaryPredicate comp );
+
+template<class ExecutionPolicy, class ForwardIterator>
+ForwardIterator max_element(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, 
+    ForwardIterator last);
+
+template<class ExecutionPolicy, class ForwardIterator, class Compare>
+ForwardIterator max_element(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, 
+    ForwardIterator last,
+    Compare comp);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*first*<br/>
+*Primeiro*\
 Um iterador de avanço que trata da posição do primeiro elemento do intervalo no qual será pesquisado o maior elemento.
 
-*last*<br/>
+*último*\
 Um iterador de avanço que trata da posição logo após o elemento final do intervalo no qual será pesquisado o maior elemento.
 
-*comp*<br/>
+*Comp*\
 Objeto de função de predicado definido pelo usuário que define o sentido em que um elemento é maior que outro. O predicado binário usa dois argumentos e deve retornar **true** quando o primeiro elemento é menor que o segundo elemento, caso contrário, **false**.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -3744,7 +4045,7 @@ int main()
 }
 ```
 
-## <a name="merge"></a>  merge
+## <a name="merge"></a> mesclagem
 
 Combina todos os elementos de dois intervalos de origem classificados em um único intervalo de destino classificado, no qual o critério de ordenação pode ser especificado por um predicado binário.
 
@@ -3765,26 +4066,47 @@ OutputIterator merge(
     InputIterator2 last2,
     OutputIterator result,
     BinaryPredicate comp );
+    
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
+class ForwardIterator>
+ForwardIterator merge(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, 
+    ForwardIterator1 last1,
+    ForwardIterator2 first2, 
+    ForwardIterator2 last2,
+    ForwardIterator result);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
+class ForwardIterator, class Compare>
+ForwardIterator merge(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, 
+    ForwardIterator1 last1,
+    ForwardIterator2 first2, 
+    ForwardIterator2 last2,
+    ForwardIterator result, 
+    Compare comp);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*first1*<br/>
+*first1*\
 Um iterador de entrada que trata da posição do primeiro elemento no primeiro entre dois intervalos de origem classificados a serem combinados e classificados em um único intervalo.
 
-*last1*<br/>
+*last1*\
 Um iterador de entrada que trata da posição logo após o último elemento no primeiro entre dois intervalos de origem classificados a serem combinados e classificados em um único intervalo.
 
-*first2*<br/>
+*first2*\
 Um iterador de entrada que trata da posição do primeiro elemento no segundo entre dois intervalos de origem classificados consecutivos a serem combinados e classificados em um único intervalo.
 
-*last2*<br/>
+*last2*\
 Um iterador de entrada que trata da posição logo após o último elemento no segundo entre dois intervalos de origem classificados consecutivos a serem combinados e classificados em um único intervalo.
 
-*resultado*<br/>
+*resultado*\
 Um iterador de saída que trata da posição do primeiro elemento no intervalo de destino no qual os dois intervalos de origem devem ser combinados em um único intervalo classificado.
 
-*comp*<br/>
+*Comp*\
 Objeto de função de predicado definido pelo usuário que define o sentido em que um elemento é maior que outro. O predicado binário usa dois argumentos e deve retornar **true** quando o primeiro elemento é menor que o segundo elemento, caso contrário, **false**.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -3917,7 +4239,7 @@ int main() {
 }
 ```
 
-## <a name="min"></a>  min
+## <a name="min"></a> min
 
 Compara dois objetos e retorna o menor dos dois, em que o critério de ordenação pode ser especificado por um predicado binário.
 
@@ -3942,16 +4264,16 @@ constexpr Type min(
 
 ### <a name="parameters"></a>Parâmetros
 
-*left*<br/>
+*À esquerda*\
 O primeiro dos dois objetos que estão sendo comparados.
 
-*right*<br/>
+*Certo*\
 O segundo dos dois objetos que estão sendo comparados.
 
-*comp*<br/>
+*Comp*\
 Um predicado binário usado para comparar os dois objetos.
 
-*_IList*<br/>
+*_IList*\
 O initializer_list que contém os membros a serem comparados.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -4129,7 +4451,7 @@ Vector v4 = min ( v1,v2 ) is ( 0 1 2 ).
 Vector v5 = min ( v1,v3 ) is ( 0 1 2 ).
 ```
 
-## <a name="min_element"></a>  min_element
+## <a name="min_element"></a> min_element
 
 Localiza a primeira ocorrência do menor elemento em um intervalo especificado, em que o critério de ordenação pode ser especificado por um predicado binário.
 
@@ -4142,17 +4464,30 @@ constexpr ForwardIterator min_element(
     ForwardIterator first,
     ForwardIterator last,
     BinaryPredicate comp);
+
+template<class ExecutionPolicy, class ForwardIterator>
+ForwardIterator min_element(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, 
+    ForwardIterator last);
+
+template<class ExecutionPolicy, class ForwardIterator, class Compare>
+ForwardIterator min_element(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, 
+    ForwardIterator last,
+    Compare comp);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*first*<br/>
+*Primeiro*\
 Um iterador de avanço que trata da posição do primeiro elemento do intervalo no qual será pesquisado o menor elemento.
 
-*last*<br/>
+*último*\
 Um iterador de avanço que trata da posição logo após o elemento final do intervalo no qual o menor elemento será pesquisado.
 
-*comp*<br/>
+*Comp*\
 Objeto de função de predicado definido pelo usuário que define o sentido em que um elemento é maior que outro. O predicado binário usa dois argumentos e deve retornar **true** quando o primeiro elemento é menor que o segundo elemento, caso contrário, **false**.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -4275,7 +4610,7 @@ The smallest element in v1 under the mod_lesser
 binary predicate is: 0
 ```
 
-## <a name="minmax_element"></a>  minmax_element
+## <a name="minmax_element"></a> minmax_element
 
 Executa o trabalho realizado por `min_element` e `max_element` em uma chamada.
 
@@ -4289,17 +4624,32 @@ constexpr pair<ForwardIterator, ForwardIterator> minmax_element(
     ForwardIterator  first,
     ForwardIterator Last,
     BinaryPredicate  comp);
+    
+template<class ExecutionPolicy, class ForwardIterator>
+pair<ForwardIterator, ForwardIterator>
+minmax_element(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, 
+    ForwardIterator last);
+
+template<class ExecutionPolicy, class ForwardIterator, class Compare>
+pair<ForwardIterator, ForwardIterator>
+minmax_element(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, 
+    ForwardIterator last, 
+    Compare comp);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*first*<br/>
+*Primeiro*\
 Um iterador de avanço que indica o início de um intervalo.
 
-*last*<br/>
+*último*\
 Um iterador de avanço que indica o final de um intervalo.
 
-*comp*<br/>
+*Comp*\
 Um teste opcional usado para ordenar elementos.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -4322,7 +4672,7 @@ A segunda função de modelo comporta-se da mesma forma, exceto que ela substitu
 
 Se a sequência estiver vazio, a função executa no máximo `3 * (last - first - 1) / 2` comparações.
 
-## <a name="minmax"></a>  minmax
+## <a name="minmax"></a> MinMax
 
 Compara dois parâmetros de entrada e retorna-os como um par, na ordem do menor para o maior.
 
@@ -4347,16 +4697,16 @@ constexpr pair<Type&, Type&> minmax(
 
 ### <a name="parameters"></a>Parâmetros
 
-*left*<br/>
+*À esquerda*\
 O primeiro dos dois objetos que estão sendo comparados.
 
-*right*<br/>
+*Certo*\
 O segundo dos dois objetos que estão sendo comparados.
 
-*comp*<br/>
+*Comp*\
 Um predicado binário usado para comparar os dois objetos.
 
-*_IList*<br/>
+*_IList*\
 O initializer_list que contém os membros a serem comparados.
 
 ### <a name="remarks"></a>Comentários
@@ -4369,7 +4719,7 @@ As funções restantes do modelo se comportam da mesma, exceto que elas substitu
 
 A função executa exatamente uma comparação.
 
-## <a name="mismatch"></a>  mismatch
+## <a name="mismatch"></a> incompatibilidade de
 
 Compara dois intervalos, elemento por elemento e localiza a primeira posição em que ocorre uma diferença.
 
@@ -4406,23 +4756,62 @@ mismatch(
     InputIterator2 First2,
     InputIterator2 Last2,
     BinaryPredicate Comp);
+
+//C++17
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2>
+pair<ForwardIterator1, ForwardIterator2>
+mismatch(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, 
+    ForwardIterator1 last1,
+    ForwardIterator2 first2);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
+class BinaryPredicate>
+pair<ForwardIterator1, ForwardIterator2>
+mismatch(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, 
+    ForwardIterator1 last1,
+    ForwardIterator2 first2, 
+    BinaryPredicate pred);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2>
+pair<ForwardIterator1, ForwardIterator2>
+mismatch(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, 
+    ForwardIterator1 last1,
+    ForwardIterator2 first2, 
+    ForwardIterator2 last2);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
+class BinaryPredicate>
+pair<ForwardIterator1, ForwardIterator2>
+mismatch(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, 
+    ForwardIterator1 last1,
+    ForwardIterator2 first2, 
+    ForwardIterator2 last2,
+    BinaryPredicate pred);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*First1*<br/>
+*first1*\
 Um iterador de entrada que trata da posição do primeiro elemento no primeiro intervalo a ser testado.
 
-*Last1*<br/>
+*last1*\
 Um iterador de entrada que trata da posição logo após o último elemento no primeiro intervalo a ser testado.
 
-*First2*<br/>
+*first2*\
 Um iterador de entrada que trata da posição do primeiro elemento no segundo intervalo a ser testado.
 
-*Last2*<br/>
+*last2*\
 Um iterador de entrada que trata da posição logo após o último elemento no segundo intervalo a ser testado.
 
-*Comp*<br/>
+*Comp*\
 Objeto de função de predicado definido pelo usuário que compara os elementos atuais em cada intervalo e determina se eles são equivalentes. Retorna **true** quando é atendido e **false** quando não é atendido.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -4522,9 +4911,9 @@ int main()
     cin >> c;
 
 }
+```
 
-/*
-Output:
+```Output
 C++03: vec_1 and vec_2 are a mismatch: false
 C++14: vec_1 and vec_2: mismatch. Left iterator at end right iterator at 30
 C++14 vec_1 v. vec_2 modified: mismatch. Left iterator at 15 right iterator at 42
@@ -4532,10 +4921,9 @@ C++14 vec_3 v. vec_4 with pred:  match.
 C++14 vec_3 v. modified vec_4 with pred: mismatch. Left iterator at 60 right iterator at 31
 C++14: vec_1 and list_1 are a mismatch: false
 Press a key
-*/
 ```
 
-## <a name="alg_move"></a>  &lt;alg&gt; move
+## <a name="alg_move"></a> &lt;ALG&gt; mover
 
 Move elementos associados a um intervalo especificado.
 
@@ -4545,24 +4933,32 @@ OutputIterator move(
     InputIterator first,
     InputIterator last,
     OutputIterator dest);
+    
+template<class ExecutionPolicy, class ForwardIterator1,
+class ForwardIterator2>
+ForwardIterator2 move(
+    ExecutionPolicy&& exec, 
+    ForwardIterator1 first, 
+    ForwardIterator1 last,
+    ForwardIterator2 result);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*first*<br/>
+*Primeiro*\
 Um iterador de entrada que indica onde começa o intervalo de elementos a ser movido.
 
-*last*<br/>
+*último*\
 Um iterador de entrada que indica o final de um intervalo de elementos a ser movido.
 
-*dest*<br/>
+*dest*\
 O iterador de saída que deve conter os elementos movidos.
 
 ### <a name="remarks"></a>Comentários
 
 A função de modelo avalia `*(dest + N) = move(*(first + N))` uma vez para cada `N` no intervalo `[0, last - first)`, para aumentar estritamente os valores de `N` começando com o valor mais baixo. Em seguida, ele retorna `dest + N`. Se `dest` e *primeiro* designarem regiões de armazenamento, *dest* não deve estar no intervalo `[first, last)`.
 
-## <a name="move_backward"></a>  move_backward
+## <a name="move_backward"></a> move_backward
 
 Move os elementos de um iterador para outro. O movimento inicia com o último elemento em um intervalo especificado e termina com o primeiro elemento desse intervalo.
 
@@ -4576,13 +4972,13 @@ template<class BidirectionalIterator1, class BidirectionalIterator2>
 
 ### <a name="parameters"></a>Parâmetros
 
-*first*<br/>
+*Primeiro*\
 Um iterador que indica o início de um intervalo do qual elementos serão movidos.
 
-*last*<br/>
+*último*\
 Um iterador que indica o final de um intervalo do qual elementos serão movidos. Esse elemento não é movido.
 
-*destEnd*<br/>
+*destEnd*\
 Um iterador bidirecional que trata da posição que está logo atrás do elemento final no intervalo de destino.
 
 ### <a name="remarks"></a>Comentários
@@ -4591,7 +4987,7 @@ A função de modelo avalia `*(destEnd - N - 1) = move(*(last - N - 1))` uma vez
 
 `move` e `move_backward` são funcionalmente equivalentes ao uso de `copy` e `copy_backward` com um iterador de movimentação.
 
-## <a name="next_permutation"></a>  next_permutation
+## <a name="next_permutation"></a> next_permutation
 
 Reordena os elementos em um intervalo para que a ordenação original seja substituída pela próxima permutação lexicograficamente maior, se ela existir, em que o sentido de próxima pode ser especificado com um predicado binário.
 
@@ -4605,13 +5001,13 @@ bool next_permutation(BidirectionalIterator first, BidirectionalIterator last, B
 
 ### <a name="parameters"></a>Parâmetros
 
-*first*<br/>
+*Primeiro*\
 Um iterador bidirecional que aponta para a posição do primeiro elemento no intervalo a ser permutado.
 
-*last*<br/>
+*último*\
 Um iterador bidirecional que aponta para uma posição após o elemento final no intervalo para ser permutado.
 
-*comp*<br/>
+*Comp*\
 Objeto de função de predicado definido pelo usuário que define os critérios de comparação a serem atendidos pelo sucessivos elementos na ordem. Um predicado binário usa dois argumentos e retorna **true** quando é atendido e **false** quando não é atendido.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -4765,7 +5161,7 @@ After another next_permutation of vector v1,
 v1 =   ( -3 -2 -1 1 0 2 3 ).
 ```
 
-## <a name="nth_element"></a>  nth_element
+## <a name="nth_element"></a> nth_element
 
 Particiona um intervalo de elementos, localizando corretamente o *n*º elemento da sequência no intervalo, para que todos os elementos anteriores sejam menores ou iguais a ele e todos os elementos posteriores, na sequência, sejam maiores ou iguais a ele.
 
@@ -4775,20 +5171,35 @@ void nth_element( RandomAccessIterator first, RandomAccessIterator _Nth, RandomA
 
 template<class RandomAccessIterator, class BinaryPredicate>
 void nth_element( RandomAccessIterator first, RandomAccessIterator _Nth, RandomAccessIterator last, BinaryPredicate comp);
+
+template<class ExecutionPolicy, class RandomAccessIterator>
+void nth_element(
+    ExecutionPolicy&& exec,
+    RandomAccessIterator first, 
+    RandomAccessIterator nth,
+    RandomAccessIterator last);
+
+template<class ExecutionPolicy, class RandomAccessIterator, class Compare>
+void nth_element(
+    ExecutionPolicy&& exec,
+    RandomAccessIterator first, 
+    RandomAccessIterator nth,
+    RandomAccessIterator last, 
+    Compare comp);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*first*<br/>
+*Primeiro*\
 Um iterador de acesso aleatório que trata da posição do primeiro elemento no intervalo a ser particionado.
 
-*_Nth*<br/>
+*_Nth*\
 Um iterador de acesso aleatório que trata da posição do elemento a ser ordenado corretamente no limite da partição.
 
-*last*<br/>
+*último*\
 Um iterador de acesso aleatório que trata da posição logo após o elemento final no intervalo a ser particionado.
 
-*comp*<br/>
+*Comp*\
 Objeto de função de predicado definido pelo usuário que define os critérios de comparação a serem atendidos pelo sucessivos elementos na ordem. Um predicado binário usa dois argumentos e retorna **true** quando é atendido e **false** quando não é atendido.
 
 ### <a name="remarks"></a>Comentários
@@ -4867,24 +5278,31 @@ int main() {
 }
 ```
 
-## <a name="none_of"></a>  none_of
+## <a name="none_of"></a> none_of
 
 Retorna **verdadeira** quando uma condição nunca é apresentada entre os elementos no intervalo determinado.
 
 ```cpp
 template<class InputIterator, class BinaryPredicate>
 bool none_of(InputIterator first, InputIterator last, BinaryPredicate comp);
+
+template <class ExecutionPolicy, class ForwardIterator, class Predicate>
+bool none_of(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, 
+    ForwardIterator last, 
+    Predicate pred);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*first*<br/>
+*Primeiro*\
 Um iterador de entrada que indica onde começar a verificar um intervalo de elementos quanto a uma condição.
 
-*last*<br/>
+*último*\
 Um iterador de entrada que indica o final de um intervalo de elementos.
 
-*comp*<br/>
+*Comp*\
 A condição a ser testada. Ela é fornecida por um objeto de função de predicado definido pelo usuário que define a condição. Um predicado usa um único argumento e retorna **true** ou **false**.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -4895,7 +5313,7 @@ Retorna **verdadeira** se a condição não for detectada pelo menos uma vez no 
 
 Retorna a função de modelo **verdadeira** somente se, para alguns `N` no intervalo `[0, last - first)`, o predicado `comp(*(first + N))` sempre **false**.
 
-## <a name="partial_sort"></a>  partial_sort
+## <a name="partial_sort"></a> partial_sort
 
 Organiza um número especificado de elementos menores em um intervalo em ordem não decrescente ou de acordo com um critério de ordenação especificado por um predicado binário.
 
@@ -4912,20 +5330,35 @@ void partial_sort(
     RandomAccessIterator sortEnd,
     RandomAccessIterator last
     BinaryPredicate comp);
+    
+template<class ExecutionPolicy, class RandomAccessIterator>
+void partial_sort(
+    ExecutionPolicy&& exec,
+    RandomAccessIterator first,
+    RandomAccessIterator middle,
+    RandomAccessIterator last);
+
+template<class ExecutionPolicy, class RandomAccessIterator, class Compare>
+void partial_sort(
+    ExecutionPolicy&& exec,
+    RandomAccessIterator first,
+    RandomAccessIterator middle,
+    RandomAccessIterator last, 
+    Compare comp);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*first*<br/>
+*Primeiro*\
 Um iterador de acesso aleatório que trata da posição do primeiro elemento no intervalo a ser classificado.
 
-*sortEnd*<br/>
+*sortEnd*\
 Um iterador de acesso aleatório que trata da posição logo após o elemento final no subintervalo a ser classificado.
 
-*last*<br/>
+*último*\
 Um iterador de acesso aleatório que trata da posição logo após o elemento final no intervalo a ser classificado parcialmente.
 
-*comp*<br/>
+*Comp*\
 Objeto de função de predicado definido pelo usuário que define os critérios de comparação a serem atendidos pelo sucessivos elementos na ordem. Um predicado binário usa dois argumentos e retorna **true** quando é atendido e **false** quando não é atendido.
 
 ### <a name="remarks"></a>Comentários
@@ -5009,7 +5442,7 @@ Partially resorted (UDgreater) vector:
 v1 = ( 11 10 9 8 7 6 5 4 0 1 2 3 )
 ```
 
-## <a name="partial_sort_copy"></a>  partial_sort_copy
+## <a name="partial_sort_copy"></a> partial_sort_copy
 
 Copia elementos de um intervalo de origem em um intervalo de destino, em que os elementos de origem são ordenados por menor que ou outro predicado binário especificado.
 
@@ -5028,23 +5461,41 @@ RandomAccessIterator partial_sort_copy(
     RandomAccessIterator first2,
     RandomAccessIterator last2,
     BinaryPredicate comp);
+    
+template<class ExecutionPolicy, class ForwardIterator, class RandomAccessIterator>
+RandomAccessIterator partial_sort_copy(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, 
+    ForwardIterator last,
+    RandomAccessIterator result_first,
+    RandomAccessIterator result_last);
+
+template<class ExecutionPolicy, class ForwardIterator, class RandomAccessIterator,
+class Compare>
+RandomAccessIterator partial_sort_copy(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, 
+    ForwardIterator last,
+    RandomAccessIterator result_first,
+    RandomAccessIterator result_last,
+    Compare comp);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*first1*<br/>
+*first1*\
 Um iterador de entrada que trata da posição do primeiro elemento no intervalo de origem.
 
-*last1*<br/>
+*last1*\
 Um iterador de entrada que trata da posição logo após o elemento final no intervalo de origem.
 
-*first2*<br/>
+*first2*\
 Um iterador de acesso aleatório que trata da posição do primeiro elemento no intervalo de destino classificado.
 
-*last2*<br/>
+*last2*\
 Um iterador de acesso aleatório que trata da posição logo após o elemento final no intervalo de destino classificado.
 
-*comp*<br/>
+*Comp*\
 Objeto de função de predicado definido pelo usuário, que define a condição a ser atendida se dois elementos forem executados como equivalentes. Um predicado binário usa dois argumentos e retorna **true** quando é atendido e **false** quando não é atendido.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -5133,7 +5584,7 @@ int main() {
 }
 ```
 
-## <a name="partition"></a>  partition
+## <a name="partition"></a> partição
 
 Classifica os elementos de um intervalo em dois conjuntos separados, com esses elementos atendendo a um predicado unário que precede aqueles que não o atendem.
 
@@ -5143,17 +5594,24 @@ BidirectionalIterator partition(
     BidirectionalIterator first,
     BidirectionalIterator last,
     Predicate comp);
+    
+template<class ExecutionPolicy, class ForwardIterator, class Predicate>
+ForwardIterator partition(
+    ExecutionPolicy&& exec,
+    ForwardIterator first,
+    ForwardIterator last,
+    Predicate pred);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*first*<br/>
+*Primeiro*\
 Um iterador bidirecional que trata da posição do primeiro elemento no intervalo a ser particionado.
 
-*last*<br/>
+*último*\
 Um iterador bidirecional que trata da posição logo após o elemento final no intervalo a ser particionado.
 
-*comp*<br/>
+*Comp*\
 Objeto de função de predicado definido pelo usuário que define a condição a ser atendida se um elemento precisar ser classificado. Um predicado usa um único argumento e retorna **true** ou **false**.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -5207,7 +5665,7 @@ int main() {
 }
 ```
 
-## <a name="partition_copy"></a>  partition_copy
+## <a name="partition_copy"></a> partition_copy
 
 Copia elementos para os quais uma condição for **verdadeira** para um destino e para o qual é a condição **falso** para outro. Os elementos devem vir de um intervalo especificado.
 
@@ -5220,30 +5678,41 @@ pair<OutputIterator1, OutputIterator2>
     OutputIterator1 dest1,
     OutputIterator2 dest2,
     Predicate pred);
+    
+template <class ExecutionPolicy, class ForwardIterator, class ForwardIterator1,
+class ForwardIterator2, class Predicate>
+pair<ForwardIterator1, ForwardIterator2>
+partition_copy(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, 
+    ForwardIterator last,
+    ForwardIterator1 out_true, 
+    ForwardIterator2 out_false,
+    Predicate pred);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*first*<br/>
+*Primeiro*\
 Um iterador de entrada que indica o início de um intervalo no qual uma condição será verificada.
 
-*last*<br/>
+*último*\
 Um iterador de entrada que indica o final de um intervalo.
 
-*dest1*<br/>
+*dest1*\
 Um iterador de saída usado para copiar elementos que retornam valores verdadeiros uma condição testada usando *Pred*.
 
-*dest2*<br/>
+*dest2*\
 Um iterador de saída usado para copiar elementos que retornam falsos para uma condição testada usando *Pred*.
 
-*_Pred*<br/>
+*Pred*\
 A condição a ser testada. Ela é fornecida por um objeto de função de predicado definido pelo usuário que define a condição a ser testada. Um predicado usa um único argumento e retorna **true** ou **false**.
 
 ### <a name="remarks"></a>Comentários
 
 A função de modelo copiará cada elemento `X` na `[first,last)` à `*dest1++` se `_Pred(X)` for true, ou para `*dest2++` se não for. Ele retorna `pair<OutputIterator1, OutputIterator2>(dest1, dest2)`.
 
-## <a name="partition_point"></a>  partition_point
+## <a name="partition_point"></a> partition_point
 
 Retorna o primeiro elemento no intervalo fornecido que não atende à condição. Os elementos são armazenados para que aqueles que atendem à condição venham antes daqueles que não atendem.
 
@@ -5257,13 +5726,13 @@ ForwardIterator partition_point(
 
 ### <a name="parameters"></a>Parâmetros
 
-*first*<br/>
+*Primeiro*\
 Um `ForwardIterator` que indica o início de um intervalo no qual uma condição será verificada.
 
-*last*<br/>
+*último*\
 Um `ForwardIterator` que indica o final de um intervalo.
 
-*comp*<br/>
+*Comp*\
 A condição a ser testada. Ela é fornecida por um objeto de função de predicado definido pelo usuário que define a condição a ser atendida pelo elemento que está sendo pesquisado. Um predicado usa um único argumento e retorna **true** ou **false**.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -5274,7 +5743,7 @@ Retorna um `ForwardIterator` que se refere ao primeiro elemento que não atende 
 
 O modelo de função localiza o primeiro iterador `it` na `[first, last)` para o qual `comp(*it)` é **false**. A sequência deve ser ordenada por *comp*.
 
-## <a name="pop_heap"></a>  pop_heap
+## <a name="pop_heap"></a> pop_heap
 
 Remove o maior elemento da frente de um heap para a penúltima posição no intervalo e, em seguida, forma um novo heap com os elementos restantes.
 
@@ -5288,13 +5757,13 @@ void pop_heap(RandomAccessIterator first, RandomAccessIterator last, BinaryPredi
 
 ### <a name="parameters"></a>Parâmetros
 
-*first*<br/>
+*Primeiro*\
 Um iterador de acesso aleatório que trata da posição do primeiro elemento no heap.
 
-*last*<br/>
+*último*\
 Um iterador de acesso aleatório que trata da posição logo após o elemento final no heap.
 
-*comp*<br/>
+*Comp*\
 Objeto de função de predicado definido pelo usuário que define o sentido em que um elemento é menor que outro. Um predicado binário usa dois argumentos e retorna **true** quando é atendido e **false** quando não é atendido.
 
 ### <a name="remarks"></a>Comentários
@@ -5377,7 +5846,7 @@ int main()  {
 }
 ```
 
-## <a name="prev_permutation"></a>  prev_permutation
+## <a name="prev_permutation"></a> prev_permutation
 
 Reordena os elementos em um intervalo para que a ordenação original seja substituída pela permutação lexicograficamente maior anterior caso exista, em que o sentido de anterior pode ser especificado com um predicado binário.
 
@@ -5396,13 +5865,13 @@ bool prev_permutation(
 
 ### <a name="parameters"></a>Parâmetros
 
-*first*<br/>
+*Primeiro*\
 Um iterador bidirecional que aponta para a posição do primeiro elemento no intervalo a ser permutado.
 
-*last*<br/>
+*último*\
 Um iterador bidirecional que aponta para uma posição após o elemento final no intervalo para ser permutado.
 
-*comp*<br/>
+*Comp*\
 Objeto de função de predicado definido pelo usuário que define os critérios de comparação a serem atendidos pelo sucessivos elementos na ordem. Um predicado binário usa dois argumentos e retorna **true** quando é atendido e **false** quando não é atendido.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -5551,7 +6020,7 @@ After another prev_permutation of vector v1,
 v1 =   ( -3 -2 0 2 -1 1 3 ).
 ```
 
-## <a name="push_heap"></a>  push_heap
+## <a name="push_heap"></a> push_heap
 
 Adiciona um elemento que está no fim de um intervalo a um heap existente que consiste em elementos anteriores no intervalo.
 
@@ -5565,13 +6034,13 @@ void push_heap( RandomAccessIterator first, RandomAccessIterator last, BinaryPre
 
 ### <a name="parameters"></a>Parâmetros
 
-*first*<br/>
+*Primeiro*\
 Um iterador de acesso aleatório que trata da posição do primeiro elemento no heap.
 
-*last*<br/>
+*último*\
 Um iterador de acesso aleatório que trata da posição logo após o elemento final no intervalo a ser convertido em um heap.
 
-*comp*<br/>
+*Comp*\
 Objeto de função de predicado definido pelo usuário que define o sentido em que um elemento é menor que outro. Um predicado binário usa dois argumentos e retorna **true** quando é atendido e **false** quando não é atendido.
 
 ### <a name="remarks"></a>Comentários
@@ -5659,28 +6128,35 @@ int main() {
 }
 ```
 
-## <a name="random_shuffle"></a>  random_shuffle
+## <a name="random_shuffle"></a> random_shuffle
 
 A função std::random_shuffle() é preterida e substituída por [std:: embaralhar](../standard-library/algorithm-functions.md#shuffle). Para obter um exemplo de código e obter mais informações, consulte [ \<random >](../standard-library/random.md) e a postagem de Stack Overflow [por que os métodos std:: random_shuffle estão sendo preteridos no c++14?](https://go.microsoft.com/fwlink/p/?linkid=397954).
 
-## <a name="remove"></a>  remove
+## <a name="remove"></a> Remover
 
 Elimina um valor especificado de um determinado intervalo sem afetar a ordem dos elementos restantes e retornando ao fim de um novo intervalo livre do valor especificado.
 
 ```cpp
 template<class ForwardIterator, class Type>
 ForwardIterator remove(ForwardIterator first, ForwardIterator last, const Type& val);
+
+template<class ExecutionPolicy, class ForwardIterator, class T>
+ForwardIterator remove(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, 
+    ForwardIterator last,
+    const T& value);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*first*<br/>
+*Primeiro*\
 Um iterador de avanço que trata da posição do primeiro elemento no intervalo do qual os elementos estão sendo removidos.
 
-*last*<br/>
+*último*\
 Um iterador de avanço que da primeira posição após o elemento final no intervalo do qual os elementos estão sendo removidos.
 
-*val*<br/>
+*Val*\
 O valor a ser removido do intervalo.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -5745,27 +6221,36 @@ int main() {
 }
 ```
 
-## <a name="remove_copy"></a>  remove_copy
+## <a name="remove_copy"></a> remove_copy
 
 Copia os elementos de um intervalo de origem em um intervalo de destino, exceto os elementos de um valor especificado não são copiados, sem afetar a ordem dos elementos restantes e retornando ao fim de um novo intervalo de destino.
 
 ```cpp
 template<class InputIterator, class OutputIterator, class Type>
 OutputIterator remove_copy(InputIterator first, InputIterator last, OutputIterator result, const Type& val);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
+class T>
+ForwardIterator2 remove_copy(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first, 
+    ForwardIterator1 last,
+    ForwardIterator2 result, 
+    const T& value);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*first*<br/>
+*Primeiro*\
 Um iterador de entrada que trata da posição do primeiro elemento no intervalo do qual os elementos estão sendo removidos.
 
-*last*<br/>
+*último*\
 Um iterador de entrada que trata da posição logo após o elemento final no intervalo do qual os elementos estão sendo removidos.
 
-*resultado*<br/>
+*resultado*\
 Um iterador de saída que trata da posição do primeiro elemento no intervalo de destino para o qual os elementos estão sendo removidos.
 
-*val*<br/>
+*Val*\
 O valor a ser removido do intervalo.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -5827,27 +6312,36 @@ int main() {
 }
 ```
 
-## <a name="remove_copy_if"></a>  remove_copy_if
+## <a name="remove_copy_if"></a> remove_copy_if
 
 Copia os elementos de um intervalo de origem em um intervalo de destino, exceto os que atendem a um predicado não são copiados, sem afetar a ordem dos elementos restantes e retornando ao fim de um novo intervalo de destino.
 
 ```cpp
 template<class InputIterator, class OutputIterator, class Predicate>
 OutputIterator remove_copy_if(InputIterator first, InputIterator Last, OutputIterator result, Predicate pred);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
+class Predicate>
+ForwardIterator2 remove_copy_if(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first, 
+    ForwardIterator1 last,
+    ForwardIterator2 result, 
+    Predicate pred);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*first*<br/>
+*Primeiro*\
 Um iterador de entrada que trata da posição do primeiro elemento no intervalo do qual os elementos estão sendo removidos.
 
-*last*<br/>
+*último*\
 Um iterador de entrada que trata da posição logo após o elemento final no intervalo do qual os elementos estão sendo removidos.
 
-*resultado*<br/>
+*resultado*\
 Um iterador de saída que trata da posição do primeiro elemento no intervalo de destino para o qual os elementos estão sendo removidos.
 
-*_Pred*<br/>
+*Pred*\
 O predicado unário que deve ser atendido é o valor de um elemento que deve ser substituído.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -5918,7 +6412,7 @@ int main() {
 }
 ```
 
-## <a name="remove_if"></a>  remove_if
+## <a name="remove_if"></a> remove_if
 
 Elimina elementos que atendem a um predicado de um determinado intervalo sem afetar a ordem dos elementos restantes e retornando ao fim de um novo intervalo livre do valor especificado.
 
@@ -5928,17 +6422,24 @@ ForwardIterator remove_if(
     ForwardIterator first,
     ForwardIterator last,
     Predicate pred);
+    
+template<class ExecutionPolicy, class ForwardIterator, class Predicate>
+ForwardIterator remove_if(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, 
+    ForwardIterator last,
+    Predicate pred);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*first*<br/>
+*Primeiro*\
 Um iterador de avanço que aponta para a posição do primeiro elemento no intervalo do qual os elementos estão sendo removidos.
 
-*last*<br/>
+*último*\
 Um iterador de avanço que aponta para a posição logo após o elemento final no intervalo do qual os elementos estão sendo removidos.
 
-*_Pred*<br/>
+*Pred*\
 O predicado unário que deve ser atendido é o valor de um elemento que deve ser substituído.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -6007,7 +6508,7 @@ int main() {
 }
 ```
 
-## <a name="replace"></a>  replace
+## <a name="replace"></a> Substituir
 
 Examina cada elemento em um intervalo e o substitui se ele corresponder a um valor especificado.
 
@@ -6018,20 +6519,28 @@ void replace(
     ForwardIterator last,
     const Type& oldVal,
     const Type& newVal);
+    
+template<class ExecutionPolicy, class ForwardIterator, class T>
+void replace(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, 
+    ForwardIterator last,
+    const T& old_value, 
+    const T& new_value);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*first*<br/>
+*Primeiro*\
 Um iterador de avanço que aponta para a posição do primeiro elemento no intervalo cujos elementos estão sendo substituídos.
 
-*last*<br/>
+*último*\
 Um iterador de avanço que aponta para a posição logo após o elemento final no intervalo cujos elementos estão sendo substituídos.
 
-*_OldVal*<br/>
+*_OldVal*\
 O valor anterior dos elementos que estão sendo substituídos.
 
-*_NewVal*<br/>
+*_NewVal*\
 O novo valor que está sendo atribuído aos elementos com o valor anterior.
 
 ### <a name="remarks"></a>Comentários
@@ -6082,7 +6591,7 @@ int main() {
 }
 ```
 
-## <a name="replace_copy"></a>  replace_copy
+## <a name="replace_copy"></a> replace_copy
 
 Examina cada elemento em um intervalo de origem e o substitui se ele corresponder a um valor especificado ao copiar o resultado em um novo intervalo de destino.
 
@@ -6094,23 +6603,32 @@ OutputIterator replace_copy(
     OutputIterator result,
     const Type& oldVal,
     const Type& newVal);
+    
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class T>
+ForwardIterator2 replace_copy(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first, 
+    ForwardIterator1 last,
+    ForwardIterator2 result,
+    const T& old_value, 
+    const T& new_value);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*first*<br/>
+*Primeiro*\
 Um iterador de entrada que aponta para a posição do primeiro elemento no intervalo cujos elementos estão sendo substituídos.
 
-*last*<br/>
+*último*\
 Um iterador de entrada que aponta para a posição logo após o elemento final no intervalo cujos elementos estão sendo substituídos.
 
-*resultado*<br/>
+*resultado*\
 Um iterador de saída que aponta para o primeiro elemento no intervalo de destino para o qual a sequência alterada de elementos está sendo copiada.
 
-*_OldVal*<br/>
+*_OldVal*\
 O valor anterior dos elementos que estão sendo substituídos.
 
-*_NewVal*<br/>
+*_NewVal*\
 O novo valor que está sendo atribuído aos elementos com o valor anterior.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -6184,7 +6702,7 @@ int main() {
 }
 ```
 
-## <a name="replace_copy_if"></a>  replace_copy_if
+## <a name="replace_copy_if"></a> replace_copy_if
 
 Examina cada elemento em um intervalo de origem e o substitui se ele atender a um predicado especificado ao copiar o resultado em um novo intervalo de destino.
 
@@ -6196,23 +6714,33 @@ OutputIterator replace_copy_if(
     OutputIterator result,
     Predicate pred,
     const Type& val);
+    
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
+class Predicate, class T>
+ForwardIterator2 replace_copy_if(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first, 
+    ForwardIterator1 last,
+    ForwardIterator2 result,
+    Predicate pred, 
+    const T& new_value);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*first*<br/>
+*Primeiro*\
 Um iterador de entrada que aponta para a posição do primeiro elemento no intervalo cujos elementos estão sendo substituídos.
 
-*last*<br/>
+*último*\
 Um iterador de entrada que aponta para a posição logo após o elemento final no intervalo cujos elementos estão sendo substituídos.
 
-*resultado*<br/>
+*resultado*\
 Um iterador de saída que aponta para a posição do primeiro elemento no intervalo de destino para o qual os elementos estão sendo copiados.
 
-*_Pred*<br/>
+*Pred*\
 O predicado unário que deve ser atendido é o valor de um elemento que deve ser substituído.
 
-*val*<br/>
+*Val*\
 O novo valor que está sendo atribuído aos elementos cujos valores anteriores atendem ao predicado.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -6293,7 +6821,7 @@ int main() {
 }
 ```
 
-## <a name="replace_if"></a>  replace_if
+## <a name="replace_if"></a> replace_if
 
 Examina cada elemento em um intervalo e o substitui se ele atender a um predicado especificado.
 
@@ -6304,20 +6832,28 @@ void replace_if(
     ForwardIterator last,
     Predicate pred,
     const Type& val);
+    
+template<class ExecutionPolicy, class ForwardIterator, class Predicate, class T>
+void replace_if(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, 
+    ForwardIterator last,
+    Predicate pred, 
+    const T& new_value);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*first*<br/>
+*Primeiro*\
 Um iterador de avanço que aponta para a posição do primeiro elemento no intervalo cujos elementos estão sendo substituídos.
 
-*last*<br/>
+*último*\
 Um iterador que aponta para a posição logo após o elemento final no intervalo cujos elementos estão sendo substituídos.
 
-*_Pred*<br/>
+*Pred*\
 O predicado unário que deve ser atendido é o valor de um elemento que deve ser substituído.
 
-*val*<br/>
+*Val*\
 O novo valor que está sendo atribuído aos elementos cujos valores anteriores atendem ao predicado.
 
 ### <a name="remarks"></a>Comentários
@@ -6376,21 +6912,27 @@ int main() {
 }
 ```
 
-## <a name="reverse"></a>  reverse
+## <a name="reverse"></a> inversa
 
 Inverte a ordem dos elementos em um intervalo.
 
 ```cpp
 template<class BidirectionalIterator>
 void reverse(BidirectionalIterator first, BidirectionalIterator last);
+
+template<class ExecutionPolicy, class BidirectionalIterator>
+void reverse(
+    ExecutionPolicy&& exec,
+    BidirectionalIterator first, 
+    BidirectionalIterator last);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*first*<br/>
+*Primeiro*\
 Um iterador bidirecional que aponta para a posição do primeiro elemento no intervalo no qual os elementos estão sendo permutados.
 
-*last*<br/>
+*último*\
 Um iterador bidirecional que aponta para a posição logo após o elemento final no intervalo no qual os elementos estão sendo permutados.
 
 ### <a name="remarks"></a>Comentários
@@ -6439,7 +6981,7 @@ The modified vector v1 with values reversed is:
 ( 9 8 7 6 5 4 3 2 1 0 ).
 ```
 
-## <a name="reverse_copy"></a>  reverse_copy
+## <a name="reverse_copy"></a> reverse_copy
 
 Inverte a ordem dos elementos em um intervalo de origem ao copiá-los em um intervalo de destino
 
@@ -6449,17 +6991,24 @@ OutputIterator reverse_copy(
     BidirectionalIterator first,
     BidirectionalIterator Last,
     OutputIterator result);
+    
+template<class ExecutionPolicy, class BidirectionalIterator, class ForwardIterator>
+ForwardIterator reverse_copy(
+    ExecutionPolicy&& exec,
+    BidirectionalIterator first,
+    BidirectionalIterator last,
+    ForwardIterator result);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*first*<br/>
+*Primeiro*\
 Um iterador bidirecional que aponta para a posição do primeiro elemento no intervalo de origem no qual os elementos estão sendo permutados.
 
-*last*<br/>
+*último*\
 Um iterador bidirecional que aponta para a posição logo após o elemento final no intervalo de origem no qual os elementos estão sendo permutados.
 
-*resultado*<br/>
+*resultado*\
 Um iterador de saída que aponta para a posição do primeiro elemento no intervalo de destino para o qual os elementos estão sendo copiados.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -6510,7 +7059,7 @@ int main() {
 }
 ```
 
-## <a name="rotate"></a>  rotate
+## <a name="rotate"></a> Girar
 
 Troca os elementos em dois intervalos adjacentes.
 
@@ -6520,17 +7069,24 @@ void rotate(
     ForwardIterator first,
     ForwardIterator middle,
     ForwardIterator last);
+    
+template<class ExecutionPolicy, class ForwardIterator>
+ForwardIterator rotate(
+    ExecutionPolicy&& exec,
+    ForwardIterator first,
+    ForwardIterator middle,
+    ForwardIterator last);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*first*<br/>
+*Primeiro*\
 Um iterador de avanço que trata da posição do primeiro elemento do intervalo a ser girado.
 
-*middle*<br/>
+*intermediária*\
 Um iterador de avanço que define o limite dentro do intervalo que trata da posição do primeiro elemento na segunda parte do intervalo cujos elementos devem ser trocados com os que estão na primeira parte do intervalo.
 
-*Last*<br/>
+*último*\
 Um iterador de avanço que trata da posição logo após o elemento final no intervalo a ser girado.
 
 ### <a name="remarks"></a>Comentários
@@ -6614,7 +7170,7 @@ After the rotation of a single deque element to the back,
 d1 is   ( 0 1 2 3 4 5 ).
 ```
 
-## <a name="rotate_copy"></a>  rotate_copy
+## <a name="rotate_copy"></a> rotate_copy
 
 Troca os elementos em dois intervalos adjacentes em um intervalo de origem e copia o resultado em um intervalo de destino.
 
@@ -6625,19 +7181,28 @@ OutputIterator rotate_copy(
     ForwardIterator middle,
     ForwardIterator last,
     OutputIterator result );
+    
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2>
+ForwardIterator2 rotate_copy(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first, 
+    ForwardIterator1 middle,
+    ForwardIterator1 last, 
+    ForwardIterator2 result);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*first*<br/>
+*Primeiro*\
 Um iterador de avanço que trata da posição do primeiro elemento do intervalo a ser girado.
 
-*middle*<br/>
+*intermediária*\
 Um iterador de avanço que define o limite dentro do intervalo que trata da posição do primeiro elemento na segunda parte do intervalo cujos elementos devem ser trocados com os que estão na primeira parte do intervalo.
 
-_ *Último* um iterador de avanço que trata da posição logo após o elemento final no intervalo a ser girado.
+*último*\
+Um iterador de avanço que trata da posição logo após o elemento final no intervalo a ser girado.
 
-*resultado*<br/>
+*resultado*\
 Um iterador de saída que trata da posição do primeiro elemento no intervalo de destino.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -6709,7 +7274,17 @@ int main() {
 }
 ```
 
-## <a name="search"></a>  search
+## <a name="sample"></a> Exemplo
+
+```cpp
+template<class PopulationIterator, class SampleIterator,
+class Distance, class UniformRandomBitGenerator>
+SampleIterator sample(PopulationIterator first, PopulationIterator last,
+SampleIterator out, Distance n,
+UniformRandomBitGenerator&& g);
+```
+
+## <a name="search"></a> Pesquisa
 
 Procura a primeira ocorrência de uma sequência em um intervalo de destino cujos elementos são iguais àqueles em uma determinada sequência de elementos ou cujos elementos são equivalentes de certo modo especificado por um predicado binário para os elementos na sequência determinada.
 
@@ -6728,23 +7303,47 @@ ForwardIterator1 search(
     ForwardIterator2 first2,
     ForwardIterator2 last2
     Predicate comp);
+    
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2>
+ForwardIterator1 search(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, 
+    ForwardIterator1 last1,
+    ForwardIterator2 first2, 
+    ForwardIterator2 last2);
+    
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
+class BinaryPredicate>
+ForwardIterator1 search(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, 
+    ForwardIterator1 last1,
+    ForwardIterator2 first2, 
+    ForwardIterator2 last2,
+    BinaryPredicate pred);
+    
+template <class ForwardIterator, class Searcher>
+ForwardIterator search(
+    ForwardIterator first, 
+    ForwardIterator last,
+    const Searcher& searcher);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*first1*<br/>
+*first1*\
 Um iterador de avanço que aborda a posição do primeiro elemento do intervalo a ser pesquisado.
 
-*last1*<br/>
+*last1*\
 Um iterador de avanço que aborda a posição um após o elemento final do intervalo a ser pesquisado.
 
-*first2*<br/>
+*first2*\
 Um iterador de avanço que aborda a posição do primeiro elemento do intervalo a ser correspondido.
 
-*last2*<br/>
+*last2*\
 Um iterador de avanço que aborda a posição um após o elemento final do intervalo a ser correspondido.
 
-*comp*<br/>
+*Comp*\
 Objeto de função de predicado definido pelo usuário, que define a condição a ser atendida se dois elementos forem executados como equivalentes. Um predicado binário usa dois argumentos e retorna **true** quando é atendido e **false** quando não é atendido.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -6857,7 +7456,7 @@ to those in v2 under the binary predicate twice
 and the first one begins at position 2.
 ```
 
-## <a name="search_n"></a>  search_n
+## <a name="search_n"></a> search_n
 
 Procura a primeira subsequência em um intervalo de um número especificado de elementos com um valor particular ou uma relação com esse valor, conforme especificado por um predicado binário.
 
@@ -6876,23 +7475,40 @@ ForwardIterator1 search_n(
     Diff2 count,
     const Type& val,
     BinaryPredicate comp);
+    
+template<class ExecutionPolicy, class ForwardIterator, class Size, class T>
+ForwardIterator search_n(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, 
+    ForwardIterator last,
+    Size count, const T& value);
+
+template<class ExecutionPolicy, class ForwardIterator, class Size, class T,
+class BinaryPredicate>
+ForwardIterator search_n(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, 
+    ForwardIterator last,
+    Size count, 
+    const T& value,
+    BinaryPredicate pred);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*first1*<br/>
+*first1*\
 Um iterador de avanço que aborda a posição do primeiro elemento do intervalo a ser pesquisado.
 
-*last1*<br/>
+*last1*\
 Um iterador de avanço que aborda a posição um após o elemento final do intervalo a ser pesquisado.
 
-*count*<br/>
+*Contagem*\
 O tamanho da subsequência que está sendo pesquisada.
 
-*val*<br/>
+*Val*\
 O valor dos elementos na sequência que está sendo pesquisada.
 
-*comp*<br/>
+*Comp*\
 Objeto de função de predicado definido pelo usuário, que define a condição a ser atendida se dois elementos forem executados como equivalentes. Um predicado binário usa dois argumentos e retorna **true** quando é atendido e **false** quando não é atendido.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -6990,7 +7606,7 @@ There is a match of a sequence ( 5 5 5 ) under the equivalence
 predicate one_half in v1 and the first one begins at position 15.
 ```
 
-## <a name="set_difference"></a>  set_difference
+## <a name="set_difference"></a> set_difference
 
 Une todos os elementos que pertencem a um intervalo de origem classificado, mas não a um segundo intervalo de origem classificado, em um único intervalo de destino classificado, em que o critério de ordenação pode ser especificado por um predicado específico.
 
@@ -7011,26 +7627,47 @@ OutputIterator set_difference(
     InputIterator2  last2,
     OutputIterator  result,
     BinaryPredicate  comp );
+    
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
+class ForwardIterator>
+ForwardIterator set_difference(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, 
+    ForwardIterator1 last1,
+    ForwardIterator2 first2, 
+    ForwardIterator2 last2,
+    ForwardIterator result);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
+class ForwardIterator, class Compare>
+ForwardIterator set_difference(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, 
+    ForwardIterator1 last1,
+    ForwardIterator2 first2, 
+    ForwardIterator2 last2,
+    ForwardIterator result, 
+    Compare comp);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*first1*<br/>
+*first1*\
 Um iterador de entrada que trata da posição do primeiro elemento no primeiro entre dois intervalos de origem classificados, a serem unidos e classificados em um único intervalo, representando a diferença entre os dois intervalos de origem.
 
-*last1*<br/>
+*last1*\
 Um iterador de entrada que trata da posição logo após o último elemento no primeiro entre dois intervalos de origem classificados, a serem unidos e classificados em um único intervalo, representando a diferença entre os dois intervalos de origem.
 
-*first2*<br/>
+*first2*\
 Um iterador de entrada que trata da posição do primeiro elemento no segundo entre dois intervalos de origem classificados consecutivos, a serem unidos e classificados em um único intervalo, representando a diferença entre os dois intervalos de origem.
 
-*last2*<br/>
+*last2*\
 Um iterador de entrada que trata da posição logo após o último elemento no segundo entre dois intervalos de origem classificados consecutivos, a serem unidos e classificados em um único intervalo, representando a diferença entre os dois intervalos de origem.
 
-*resultado*<br/>
+*resultado*\
 Um iterador de saída que trata da posição do primeiro elemento no intervalo de destino, em que os dois intervalos de origem devem ser unidos em um único intervalo classificado, representando a diferença entre os dois intervalos de origem.
 
-*comp*<br/>
+*Comp*\
 Objeto de função de predicado definido pelo usuário que define o sentido em que um elemento é maior que outro. O predicado binário usa dois argumentos e deve retornar **true** quando o primeiro elemento é menor que o segundo elemento, caso contrário, **false**.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -7170,7 +7807,7 @@ int main()
 }
 ```
 
-## <a name="set_intersection"></a>  set_intersection
+## <a name="set_intersection"></a> set_intersection
 
 Une todos os elementos que pertencem a ambos os intervalos de origem classificados em um único intervalo de destino classificado, em que o critério de ordenação pode ser especificado por um predicado binário.
 
@@ -7191,25 +7828,46 @@ OutputIterator set_intersection(
     InputIterator2 last2,
     OutputIterator result,
     BinaryPredicate comp );
+    
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
+class ForwardIterator>
+ForwardIterator set_intersection(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, 
+    ForwardIterator1 last1,
+    ForwardIterator2 first2, 
+    ForwardIterator2 last2,
+    ForwardIterator result);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
+class ForwardIterator, class Compare>
+ForwardIterator set_intersection(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, 
+    ForwardIterator1 last1,
+    ForwardIterator2 first2, 
+    ForwardIterator2 last2,
+    ForwardIterator result, 
+    Compare comp);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*first1*<br/>
+*first1*\
 Um iterador de entrada que trata da posição do primeiro elemento no primeiro entre dois intervalos de origem classificados, a serem unidos e classificados em um único intervalo, representando a intersecção entre os dois intervalos de origem.
 
-*last1*<br/>
+*last1*\
 Um iterador de entrada que trata da posição logo após o último elemento no primeiro entre dois intervalos de origem classificados, a serem unidos e classificados em um único intervalo, representando a intersecção entre os dois intervalos de origem.
 
-*first2*<br/>
+*first2*\
 Um iterador de entrada que trata da posição do primeiro elemento no segundo entre dois intervalos de origem classificados consecutivos, a serem unidos e classificados em um único intervalo, representando a intersecção entre os dois intervalos de origem.
 
-*last2*<br/>
+*last2*\
 Um iterador de entrada que trata da posição logo após o último elemento no segundo entre dois intervalos de origem classificados consecutivos, a serem unidos e classificados em um único intervalo, representando a intersecção entre os dois intervalos de origem.
 
 **_** *Resultado* um iterador de saída que trata da posição do primeiro elemento no intervalo de destino em que os dois intervalos de origem devem ser Unidos em um único intervalo classificado, que representa a interseção de duas origens intervalos.
 
-*comp*<br/>
+*Comp*\
 Objeto de função de predicado definido pelo usuário que define o sentido em que um elemento é maior que outro. O predicado binário usa dois argumentos e deve retornar **true** quando o primeiro elemento é menor que o segundo elemento, caso contrário, **false**.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -7343,7 +8001,7 @@ int main() {
 }
 ```
 
-## <a name="set_symmetric_difference"></a>  set_symmetric_difference
+## <a name="set_symmetric_difference"></a> set_symmetric_difference
 
 Une todos os elementos que pertencem a um (mas não a ambos) dos intervalos de origem classificados em um único intervalo de destino classificado, em que o critério de ordenação pode ser especificado por um predicado binário.
 
@@ -7364,20 +8022,41 @@ OutputIterator set_symmetric_difference(
     InputIterator2 last2,
     OutputIterator result,
     BinaryPredicate comp );
+    
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
+class ForwardIterator>
+ForwardIterator set_symmetric_difference(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, 
+    ForwardIterator1 last1,
+    ForwardIterator2 first2, 
+    ForwardIterator2 last2,
+    ForwardIterator result);
+    
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
+class ForwardIterator, class Compare>
+ForwardIterator set_symmetric_difference(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, 
+    ForwardIterator1 last1,
+    ForwardIterator2 first2, 
+    ForwardIterator2 last2,
+    ForwardIterator result, 
+    Compare comp);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*first1*<br/>
+*first1*\
 Um iterador de entrada que trata da posição do primeiro elemento no primeiro entre dois intervalos de origem classificados, a serem unidos e classificados em um único intervalo, representando a diferença simétrica entre os dois intervalos de origem.
 
-*last1*<br/>
+*last1*\
 Um iterador de entrada que trata da posição logo após o último elemento no primeiro entre dois intervalos de origem classificados, a serem unidos e classificados em um único intervalo, representando a diferença simétrica entre os dois intervalos de origem.
 
-*first2*<br/>
+*first2*\
 Um iterador de entrada que trata da posição do primeiro elemento no segundo entre dois intervalos de origem classificados consecutivos, a serem unidos e classificados em um único intervalo, representando a diferença simétrica entre os dois intervalos de origem.
 
-*last2*<br/>
+*last2*\
 Um iterador de entrada que trata da posição logo após o último elemento no segundo entre dois intervalos de origem classificados consecutivos, a serem unidos e classificados em um único intervalo, representando a diferença simétrica entre os dois intervalos de origem.
 
 **_** *Resultado* um iterador de saída que trata da posição do primeiro elemento no intervalo de destino em que os dois intervalos de origem devem ser Unidos em um único intervalo classificado, representando a diferença simétrica entre os dois intervalos de origem.
@@ -7522,7 +8201,7 @@ int main()
 }
 ```
 
-## <a name="set_union"></a>  set_union
+## <a name="set_union"></a> set_union
 
 Une todos os elementos que pertencem a pelo menos um dos dois intervalos de origem classificados em um único intervalo de destino classificado, em que o critério de ordenação pode ser especificado por um predicado binário.
 
@@ -7543,20 +8222,41 @@ OutputIterator set_union(
     InputIterator2 last2,
     OutputIterator result,
     BinaryPredicate comp );
+    
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
+class ForwardIterator>
+ForwardIterator set_union(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, 
+    ForwardIterator1 last1,
+    ForwardIterator2 first2, 
+    ForwardIterator2 last2,
+    ForwardIterator result);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
+class ForwardIterator, class Compare>
+ForwardIterator set_union(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, 
+    ForwardIterator1 last1,
+    ForwardIterator2 first2, 
+    ForwardIterator2 last2,
+    ForwardIterator result, 
+    Compare comp);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*first1*<br/>
+*first1*\
 Um iterador de entrada que trata da posição do primeiro elemento no primeiro entre dois intervalos de origem classificados, a serem unidos e classificados em um único intervalo, representando a união entre os dois intervalos de origem.
 
-*last1*<br/>
+*last1*\
 Um iterador de entrada que trata da posição logo após o último elemento no primeiro entre dois intervalos de origem classificados, a serem unidos e classificados em um único intervalo, representando a união entre os dois intervalos de origem.
 
-*first2*<br/>
+*first2*\
 Um iterador de entrada que trata da posição do primeiro elemento no segundo entre dois intervalos de origem classificados consecutivos, a serem unidos e classificados em um único intervalo, representando a união entre os dois intervalos de origem.
 
-*last2*<br/>
+*last2*\
 Um iterador de entrada que trata da posição logo após o último elemento no segundo entre dois intervalos de origem classificados consecutivos, a serem unidos e classificados em um único intervalo, representando a união entre os dois intervalos de origem.
 
 **_** *Resultado* um iterador de saída que trata da posição do primeiro elemento no intervalo de destino em que os dois intervalos de origem devem ser Unidos em um único intervalo classificado, representando a união entre dois intervalos de origem.
@@ -7701,7 +8401,7 @@ int main()
 }
 ```
 
-## <a name="shuffle"></a>  shuffle
+## <a name="shuffle"></a> ordem aleatória
 
 Embaralha (reorganiza) elementos para um determinado intervalo usando um gerador de número aleatório.
 
@@ -7714,20 +8414,20 @@ void shuffle(RandomAccessIterator first,
 
 ### <a name="parameters"></a>Parâmetros
 
-*first*<br/>
+*Primeiro*\
 Um iterador para o primeiro elemento no intervalo a ser embaralhado, incluindo-o. Deve atender os requisitos de `RandomAccessIterator` e `ValueSwappable`.
 
-*last*<br/>
+*último*\
 Um iterador para o último elemento no intervalo a ser embaralhado, excluindo-o. Deve atender os requisitos de `RandomAccessIterator` e `ValueSwappable`.
 
-*gen*<br/>
+*Gen*\
 Um gerador de número aleatório que a função `shuffle()` usará para a operação. Deve atender aos requisitos de um `UniformRandomNumberGenerator`.
 
 ### <a name="remarks"></a>Comentários
 
 Para obter mais informações e um exemplo de código que usa `shuffle()`, consulte [\<random>](../standard-library/random.md).
 
-## <a name="sort"></a>  sort
+## <a name="sort"></a> Classificação
 
 Organiza os elementos de um intervalo especificado em ordem não decrescente ou de acordo com um critério de ordenação especificado por um predicado binário.
 
@@ -7742,17 +8442,30 @@ template<class RandomAccessIterator, class Predicate>
       RandomAccessIterator first,
       RandomAccessIterator last,
       Predicate comp);
+      
+template<class ExecutionPolicy, class RandomAccessIterator>
+void sort(
+    ExecutionPolicy&& exec,
+    RandomAccessIterator first, 
+    RandomAccessIterator last);
+
+template<class ExecutionPolicy, class RandomAccessIterator, class Compare>
+void sort(
+    ExecutionPolicy&& exec,
+    RandomAccessIterator first, 
+    RandomAccessIterator last,
+    Compare comp);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*first*<br/>
+*Primeiro*\
 Um iterador de acesso aleatório que trata da posição do primeiro elemento no intervalo a ser classificado.
 
-*last*<br/>
+*último*\
 Um iterador de acesso aleatório que trata da posição logo após o elemento final no intervalo a ser classificado.
 
-*comp*<br/>
+*Comp*\
 Objeto de função de predicado definido pelo usuário que define os critérios de comparação a serem atendidos pelo sucessivos elementos na ordem. Este predicado binário usa dois argumentos e retorna **verdadeira** se os dois argumentos estão na ordem e **falso** caso contrário. Essa função de comparador deve impor uma ordenação fraca estrita aos pares de elementos da sequência. Para obter mais informações, consulte [Algoritmos](../standard-library/algorithms.md).
 
 ### <a name="remarks"></a>Comentários
@@ -7831,7 +8544,7 @@ Resorted (greater) vector v1 = ( 11 10 9 8 7 6 5 4 3 2 1 0 )
 Resorted (UDgreater) vector v1 = ( 11 10 9 8 7 6 5 4 3 2 1 0 )
 ```
 
-## <a name="sort_heap"></a>  sort_heap
+## <a name="sort_heap"></a> sort_heap
 
 Converte um heap em um intervalo classificado.
 
@@ -7850,13 +8563,13 @@ template<class RandomAccessIterator, class Predicate>
 
 ### <a name="parameters"></a>Parâmetros
 
-*first*<br/>
+*Primeiro*\
 Um iterador de acesso aleatório que trata da posição do primeiro elemento no heap de destino.
 
-*last*<br/>
+*último*\
 Um iterador de acesso aleatório que trata da posição logo após o elemento final no heap de destino.
 
-*comp*<br/>
+*Comp*\
 Objeto de função de predicado definido pelo usuário que define o sentido em que um elemento é menor que outro. Um predicado binário usa dois argumentos e retorna **true** quando é atendido e **false** quando não é atendido.
 
 ### <a name="remarks"></a>Comentários
@@ -7927,7 +8640,7 @@ int main() {
 }
 ```
 
-## <a name="stable_partition"></a>  stable_partition
+## <a name="stable_partition"></a> stable_partition
 
 Classifica os elementos de um intervalo em dois conjuntos separados, com esses elementos atendendo a um predicado unário que precede aqueles que não o atendem, preservando a ordem relativa dos elementos equivalentes.
 
@@ -7937,17 +8650,24 @@ BidirectionalIterator stable_partition(
     BidirectionalIterator first,
     BidirectionalIterator last,
     Predicate pred );
+    
+template<class ExecutionPolicy, class BidirectionalIterator, class Predicate>
+BidirectionalIterator stable_partition(
+    ExecutionPolicy&& exec,
+    BidirectionalIterator first,
+    BidirectionalIterator last,
+    Predicate pred);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*first*<br/>
+*Primeiro*\
 Um iterador bidirecional que trata da posição do primeiro elemento no intervalo a ser particionado.
 
-*last*<br/>
+*último*\
 Um iterador bidirecional que trata da posição logo após o elemento final no intervalo a ser particionado.
 
-*_Pred*<br/>
+*Pred*\
 Objeto de função de predicado definido pelo usuário que define a condição a ser atendida se um elemento precisar ser classificado. Um predicado usa um único argumento e retorna **true** ou **false**.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -8005,7 +8725,7 @@ int main() {
 }
 ```
 
-## <a name="stable_sort"></a>  stable_sort
+## <a name="stable_sort"></a> stable_sort
 
 Organiza os elementos de um intervalo especificado em ordem não decrescente ou de acordo com um critério de ordenação especificado por um predicado binário e preserva a ordenação relativa de elementos equivalentes.
 
@@ -8018,17 +8738,30 @@ void stable_sort(
     BidirectionalIterator first,
     BidirectionalIterator last,
     BinaryPredicate comp );
+    
+template<class ExecutionPolicy, class RandomAccessIterator>
+void stable_sort(
+    ExecutionPolicy&& exec,
+    RandomAccessIterator first, 
+    RandomAccessIterator last);
+
+template<class ExecutionPolicy, class RandomAccessIterator, class Compare>
+void stable_sort(
+    ExecutionPolicy&& exec,
+    RandomAccessIterator first, 
+    RandomAccessIterator last,
+    Compare comp);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*first*<br/>
+*Primeiro*\
 Um iterador bidirecional que trata da posição do primeiro elemento no intervalo a ser classificado.
 
-*last*<br/>
+*último*\
 Um iterador bidirecional que trata da posição logo após o elemento final no intervalo a ser classificado.
 
-*comp*<br/>
+*Comp*\
 Objeto de função de predicado definido pelo usuário que define os critérios de comparação a serem atendidos pelo sucessivos elementos na ordem. Um predicado binário usa dois argumentos e retorna **true** quando é atendido e **false** quando não é atendido.
 
 ### <a name="remarks"></a>Comentários
@@ -8106,7 +8839,7 @@ Resorted (greater) vector v1 = ( 10 10 8 8 6 6 4 4 2 2 0 0 )
 Resorted (UDgreater) vector v1 = ( 10 10 8 8 6 6 4 4 2 2 0 0 )
 ```
 
-## <a name="swap"></a>  swap
+## <a name="swap"></a> troca
 
 A primeira substituição troca os valores de dois objetos. A segunda substituição troca os valores entre duas matrizes de objetos.
 
@@ -8123,10 +8856,10 @@ template<class Type, size_t N>
 
 ### <a name="parameters"></a>Parâmetros
 
-*left*<br/>
+*À esquerda*\
 Para a primeira substituição, o primeiro objeto a ter seu conteúdo trocado. Para a segunda substituição, a primeira matriz de objetos a ter seu conteúdo trocado.
 
-*right*<br/>
+*Certo*\
 Para a primeira substituição, o segundo objeto a ter seu conteúdo trocado. Para a segunda substituição, a segunda matriz de objetos a ter seu conteúdo trocado.
 
 ### <a name="remarks"></a>Comentários
@@ -8189,7 +8922,7 @@ Vector v1 is ( 5 5 5 5 5 ).
 Vector v2 is ( 0 1 2 3 4 5 6 7 8 9 10 ).
 ```
 
-## <a name="swap_ranges"></a>  swap_ranges
+## <a name="swap_ranges"></a> swap_ranges
 
 Troca os elementos de um intervalo com os elementos de outro, de tamanho igual.
 
@@ -8199,17 +8932,24 @@ ForwardIterator2 swap_ranges(
    ForwardIterator1 first1,
    ForwardIterator1 last1,
    ForwardIterator2 first2 );
+   
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2>
+ForwardIterator2 swap_ranges(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, 
+    ForwardIterator1 last1,
+    ForwardIterator2 first2);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*first1*<br/>
+*first1*\
 Um iterador de avanço que aponta para a primeira posição do primeiro intervalo cujos elementos devem ser trocados.
 
-*last1*<br/>
+*last1*\
 Um iterador de avanço que aponta para a posição logo após a posição final do primeiro intervalo cujos elementos devem ser trocados.
 
-*first2*<br/>
+*first2*\
 Um iterador de avanço que aponta para a primeira posição do segundo intervalo cujos elementos devem ser trocados.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -8283,7 +9023,7 @@ After the swap_range, vector v1 is ( 6 6 6 6 6 6 ).
 After the swap_range deque d1 is   ( 0 1 2 3 4 5 ).
 ```
 
-## <a name="transform"></a>  transform
+## <a name="transform"></a> Transformação
 
 Aplica um objeto de função especificado a cada elemento em um intervalo de origem ou a um par de elementos de dois intervalos de origem e copia os valores de retorno do objeto de função em um intervalo de destino.
 
@@ -8302,23 +9042,42 @@ OutputIterator transform(
     InputIterator2 first2,
     OutputIterator result,
     BinaryFunction func );
+    
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
+class UnaryOperation>
+ForwardIterator2 transform(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first, 
+    ForwardIterator1 last,
+    ForwardIterator2 result, 
+    UnaryOperation op);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
+class ForwardIterator, class BinaryOperation>
+ForwardIterator transform(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, 
+    ForwardIterator1 last1,
+    ForwardIterator2 first2, 
+    ForwardIterator result,
+    BinaryOperation binary_op);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*first1*<br/>
+*first1*\
 Um iterador de entrada que trata da posição do primeiro elemento no primeiro intervalo de origem no qual a operação ocorrerá.
 
-*last1*<br/>
+*last1*\
 Um iterador de entrada que trata da posição logo após o elemento final no primeiro intervalo de origem no qual a operação ocorrerá.
 
-*first2*<br/>
+*first2*\
 Um iterador de entrada que trata da posição do primeiro elemento no segundo intervalo de origem no qual a operação ocorrerá.
 
-*resultado*<br/>
+*resultado*\
 Um iterador de saída que trata da posição do primeiro elemento no intervalo de destino.
 
-*_Func*<br/>
+*_Func*\
 Objeto de função unário definido pelo usuário usado na primeira versão do algoritmo que é aplicado a cada elemento no primeiro intervalo de origem ou um objeto de função binário UD (definido pelo usuário) usado na segunda versão do algoritmo que é aplicado em pares, em uma ordem progressiva, nos dois intervalos de origem.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -8420,7 +9179,7 @@ Multiplying elements of the vectors v1mod and v2 pairwise gives:
 v3 = ( 320 180 80 20 0 20 80 ).
 ```
 
-## <a name="unique"></a>  unique
+## <a name="unique"></a> exclusivo
 
 Remove elementos duplicados que são adjacentes um ao outro em um intervalo especificado.
 
@@ -8435,17 +9194,30 @@ template<class ForwardIterator, class Predicate>
       ForwardIterator first,
       ForwardIterator last,
       Predicate comp);
+      
+template<class ExecutionPolicy, class ForwardIterator>
+ForwardIterator unique(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, 
+    ForwardIterator last);
+
+template<class ExecutionPolicy, class ForwardIterator, class BinaryPredicate>
+ForwardIterator unique(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, 
+    ForwardIterator last,
+    BinaryPredicate pred);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*first*<br/>
+*Primeiro*\
 Um iterador de avanço que trata da posição do primeiro elemento no intervalo a ser verificado quanto à remoção de duplicatas.
 
-*last*<br/>
+*último*\
 Um iterador de avanço que trata da posição logo após o elemento final no intervalo a ser verificado quanto à remoção de duplicatas.
 
-*comp*<br/>
+*Comp*\
 Objeto de função de predicado definido pelo usuário, que define a condição a ser atendida se dois elementos forem executados como equivalentes. Um predicado binário usa dois argumentos e retorna **true** quando é atendido e **false** quando não é atendido.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -8553,7 +9325,7 @@ Removing adjacent elements satisfying the binary
   predicate mod_equal from vector v1 gives ( 5 7 ).
 ```
 
-## <a name="unique_copy"></a>  unique_copy
+## <a name="unique_copy"></a> unique_copy
 
 Copia elementos de um intervalo de origem em um intervalo de destino, exceto os elementos duplicados que são adjacentes um ao outro.
 
@@ -8568,20 +9340,34 @@ OutputIterator unique_copy( InputIterator first,
     InputIterator last,
     OutputIterator result,
     BinaryPredicate comp );
+    
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2>
+ForwardIterator2 unique_copy(ExecutionPolicy&& exec,
+    ForwardIterator1 first, 
+    ForwardIterator1 last,
+    ForwardIterator2 result);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
+class BinaryPredicate>
+ForwardIterator2 unique_copy(ExecutionPolicy&& exec,
+    ForwardIterator1 first, 
+    ForwardIterator1 last,
+    ForwardIterator2 result, 
+    BinaryPredicate pred);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*first*<br/>
+*Primeiro*\
 Um iterador de avanço que trata da posição do primeiro elemento no intervalo de origem a ser copiado.
 
-*last*<br/>
+*último*\
 Um iterador de avanço que trata da posição logo após o elemento final no intervalo de origem a ser copiado.
 
-*resultado*<br/>
+*resultado*\
 Um iterador de saída que trata da posição do primeiro elemento no intervalo de destino que está recebendo a cópia com as duplicatas consecutivas removidas.
 
-*comp*<br/>
+*Comp*\
 Objeto de função de predicado definido pelo usuário, que define a condição a ser atendida se dois elementos forem executados como equivalentes. Um predicado binário usa dois argumentos e retorna **true** quando é atendido e **false** quando não é atendido.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -8670,7 +9456,7 @@ int main() {
 }
 ```
 
-## <a name="upper_bound"></a>  upper_bound
+## <a name="upper_bound"></a> upper_bound
 
 Localiza a posição do primeiro elemento em um intervalo ordenado com um valor que é maior a um valor especificado, em que o critério de ordenação pode ser especificado por um predicado binário.
 
@@ -8691,16 +9477,16 @@ template<class ForwardIterator, class Type, class Predicate>
 
 ### <a name="parameters"></a>Parâmetros
 
-*first*<br/>
+*Primeiro*\
 A posição do primeiro elemento no intervalo a ser pesquisado.
 
-*last*<br/>
+*último*\
 A posição logo após o elemento final no intervalo a ser pesquisado.
 
-*value*<br/>
+*value*\
 O valor no intervalo ordenado que precisa ser excedido pelo valor do elemento tratado pelo iterador retornado.
 
-*comp*<br/>
+*Comp*\
 Objeto de função de predicado definido pelo usuário que define o sentido em que um elemento é menor que outro. Um predicado binário usa dois argumentos e retorna **true** quando é atendido e **false** quando não é atendido.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -8808,7 +9594,3 @@ int main()
         << *Result << "." << endl;
 }
 ```
-
-## <a name="see-also"></a>Consulte também
-
-[\<algorithm>](../standard-library/algorithm.md)<br/>

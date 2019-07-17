@@ -2,22 +2,25 @@
 title: '&lt;cstdbool&gt;'
 ms.date: 11/04/2016
 ms.assetid: 44ccb8b2-d808-4715-8097-58ba09ab33ed
-ms.openlocfilehash: 8d9b0ec81e0364b409b4518beb291a56648a6ab1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0bc21753b108dbdbfee86ea1319223e49753b8dc
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394267"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68244498"
 ---
 # <a name="ltcstdboolgt"></a>&lt;cstdbool&gt;
 
 Inclui o cabeçalho \<stdbool.h> da biblioteca C Padrão e adiciona os nomes associados ao namespace `std`.
 
-## <a name="syntax"></a>Sintaxe
+> [!NOTE]
+> Esse cabeçalho foi preterido no C++ 17.
 
-```cpp
-#include <cstdbool>
-```
+## <a name="requirements"></a>Requisitos
+
+**Cabeçalho:** \<cstdbool >
+
+**Namespace:** std
 
 ## <a name="remarks"></a>Comentários
 

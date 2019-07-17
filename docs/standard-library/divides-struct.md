@@ -7,12 +7,12 @@ helpviewer_keywords:
 - divides struct
 - divides class
 ms.assetid: b9cf8e9c-6981-43a6-a6a3-8f761987dd7a
-ms.openlocfilehash: 9632227619d0cad337a1cb026a20c9af0ec9d2a7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6c7297fa7c31470591b473ab5eadcde54e8c3b34
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413808"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68244146"
 ---
 # <a name="divides-struct"></a>Struct divides
 
@@ -39,12 +39,13 @@ struct divides<void>
 
 ### <a name="parameters"></a>Parâmetros
 
-*Tipo de*, *T*, *U* um tipo que dá suporte a um `operator/` que usa operandos dos tipos especificados ou inferidos.
+*Tipo de*, *T*, *U*\
+Um tipo que dê suporte a um `operator/` que usa operandos dos tipos especificados ou inferidos.
 
-*Esquerda*<br/>
+*À esquerda*\
 O operando esquerdo da operação de divisão. O modelo não especializado usa um argumento de referência de lvalue do tipo *tipo*. O modelo especializado realiza o encaminhamento de lvalue perfeito e inferidos de argumentos de referência de rvalue do tipo *T*.
 
-*Direita*<br/>
+*Certo*\
 O operando direito da operação de divisão. O modelo não especializado usa um argumento de referência de lvalue do tipo *tipo*. O modelo especializado realiza o encaminhamento de lvalue perfeito e inferidos de argumentos de referência de rvalue do tipo *U*.
 
 ## <a name="return-value"></a>Valor de retorno
@@ -99,21 +100,10 @@ int main( )
       cout << *Iter3 << " ";
    cout << ")" << endl;
 }
+```
 
-/* Output:
+```Output
 The vector v1 = ( 0 7 14 21 28 35 )
 The vector v2 = ( 2 4 6 8 10 12 )
 The element-wise quotients are: ( 0 1.75 2.33333 2.625 2.8 2.91667 )
-*/
 ```
-
-## <a name="requirements"></a>Requisitos
-
-**Cabeçalho:** \<functional>
-
-**Namespace:** std
-
-## <a name="see-also"></a>Consulte também
-
-[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Referência da biblioteca padrão C++](../standard-library/cpp-standard-library-reference.md)<br/>

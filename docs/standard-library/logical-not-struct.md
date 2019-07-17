@@ -7,12 +7,12 @@ helpviewer_keywords:
 - logical_not class
 - logical_not struct
 ms.assetid: 892db678-31da-4540-974b-17b05efc0849
-ms.openlocfilehash: 7fd554a28775a6b625332ac250a46171dd369f50
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 731b99faed6515268b93ec3a1a43c96796e49dd3
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413093"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246480"
 ---
 # <a name="logicalnot-struct"></a>Struct logical_not
 
@@ -39,10 +39,10 @@ struct logical_not<void>
 
 ### <a name="parameters"></a>Parâmetros
 
-*Tipo*<br/>
+*Tipo*\
 Qualquer tipo que dê suporte a um `operator!` que usa um operando do tipo especificado ou inferido.
 
-*Esquerda*<br/>
+*À esquerda*\
 O operando da operação de expressão not lógica. O modelo não especializado usa um argumento de referência de lvalue do tipo *tipo*. O modelo especializado realiza o encaminhamento de lvalue perfeito e inferidos de argumentos de referência de rvalue do tipo *tipo*.
 
 ## <a name="return-value"></a>Valor de retorno
@@ -86,21 +86,11 @@ int main( )
       cout << *iter2 << " ";
    cout << ")" << endl;
 }
-/* Output:
+```
+
+```Output
 Original deque:
 d1 = ( false true false true false true false )
 The deque with its values negated is:
 d2 = ( true false true false true false true )
-*/
 ```
-
-## <a name="requirements"></a>Requisitos
-
-**Cabeçalho:** \<functional>
-
-**Namespace:** std
-
-## <a name="see-also"></a>Consulte também
-
-[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Referência da biblioteca padrão C++](../standard-library/cpp-standard-library-reference.md)<br/>

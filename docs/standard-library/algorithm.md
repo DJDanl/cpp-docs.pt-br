@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C++ Standard Library, algorithms
 - <algorithm> header
 ms.assetid: 19f97711-7a67-4a65-8fd1-9a2bd3ca327d
-ms.openlocfilehash: 042523cddf640e7cf6fd7f9a1dac9f3adbc360b6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 36dfca8418cbbabd7dcfb30b2cece483406a5667
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411143"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245952"
 ---
 # <a name="ltalgorithmgt"></a>&lt;algorithm&gt;
 
@@ -24,6 +24,9 @@ Define as funções de modelo do contêiner da Biblioteca Padrão do C++ que exe
 ```cpp
 (see relevant links below for specific algorithm syntax)
 ```
+
+> [!NOTE]
+> O \<algoritmo > biblioteca também usa o `#include <initializer_list>` instrução.
 
 ## <a name="remarks"></a>Comentários
 
@@ -43,12 +46,13 @@ Os algoritmos numéricos da Biblioteca Padrão do C++ que são fornecidos para p
 
 ### <a name="function-templates"></a>Modelos de função
 
-|Modelo de função|Descrição|
+|||
 |-|-|
 |[adjacent_find](../standard-library/algorithm-functions.md#adjacent_find)|Procura dois elementos adjacentes que sejam iguais ou atendam a uma condição especificada.|
 |[all_of](../standard-library/algorithm-functions.md#all_of)|Retorna **verdadeira** quando uma condição está presente em cada elemento no intervalo determinado.|
 |[any_of](../standard-library/algorithm-functions.md#any_of)|Retorna **verdadeira** quando uma condição está presente pelo menos uma vez no intervalo especificado de elementos.|
 |[binary_search](../standard-library/algorithm-functions.md#binary_search)|Testa se há um elemento em um intervalo classificado que seja igual a um valor especificado ou equivalente a ele de modo especificado por um predicado binário.|
+|[clamp](../standard-library/algorithm-functions.md#clamp)||
 |[copy](../standard-library/algorithm-functions.md#copy)|Atribui os valores dos elementos de um intervalo de origem a um intervalo de destino, iterando pela sequência de elementos de origem e atribuindo-lhes novas posições em uma direção progressiva.|
 |[copy_backward](../standard-library/algorithm-functions.md#copy_backward)|Atribui os valores dos elementos de um intervalo de origem a um intervalo de destino, iterando pela sequência de elementos de origem e atribuindo-lhes novas posições em uma direção retroativa.|
 |[copy_if](../standard-library/algorithm-functions.md#copy_if)|Copiar todos os elementos em um determinado intervalo que testam **verdadeira** uma condição especificada|
@@ -65,6 +69,7 @@ Os algoritmos numéricos da Biblioteca Padrão do C++ que são fornecidos para p
 |[find_if](../standard-library/algorithm-functions.md#find_if)|Localiza a posição da primeira ocorrência de um elemento em um intervalo que atende a uma condição especificada.|
 |[find_if_not](../standard-library/algorithm-functions.md#find_if_not)|Retorna o primeiro elemento no intervalo indicado que não atende a uma condição.|
 |[for_each](../standard-library/algorithm-functions.md#for_each)|Aplica um objeto de função especificado a cada elemento em uma ordem progressiva dentro de um intervalo e retorna o objeto de função.|
+|[for_each_n](../standard-library/algorithm-functions.md#for_each_n)||
 |[generate](../standard-library/algorithm-functions.md#generate)|Atribui os valores gerados por um objeto de função a cada elemento em um intervalo.|
 |[generate_n](../standard-library/algorithm-functions.md#generate_n)|Atribui os valores gerados por um objeto de função a um número especificado de elementos em um intervalo e retorna para uma posição antes do último valor atribuído.|
 |[includes](../standard-library/algorithm-functions.md#includes)|Testa se um intervalo classificado contém todos os elementos contidos em um segundo intervalo classificado, em que o critério de equivalência ou ordenação entre elementos pode ser especificado por um predicado binário.|
@@ -113,6 +118,7 @@ Os algoritmos numéricos da Biblioteca Padrão do C++ que são fornecidos para p
 |[reverse_copy](../standard-library/algorithm-functions.md#reverse_copy)|Inverte a ordem dos elementos em um intervalo de origem ao copiá-los em um intervalo de destino|
 |[rotate](../standard-library/algorithm-functions.md#rotate)|Troca os elementos em dois intervalos adjacentes.|
 |[rotate_copy](../standard-library/algorithm-functions.md#rotate_copy)|Troca os elementos em dois intervalos adjacentes em um intervalo de origem e copia o resultado em um intervalo de destino.|
+|[sample](../standard-library/algorithm-functions.md#sample)||
 |[search](../standard-library/algorithm-functions.md#search)|Procura a primeira ocorrência de uma sequência em um intervalo de destino cujos elementos são iguais àqueles em uma determinada sequência de elementos ou cujos elementos são equivalentes de certo modo especificado por um predicado binário para os elementos na sequência determinada.|
 |[search_n](../standard-library/algorithm-functions.md#search_n)|Procura a primeira subsequência em um intervalo de um número especificado de elementos com um valor particular ou uma relação com esse valor, conforme especificado por um predicado binário.|
 |[set_difference](../standard-library/algorithm-functions.md#set_difference)|Une todos os elementos que pertencem a um intervalo de origem classificado, mas não a um segundo intervalo de origem classificado, em um único intervalo de destino classificado, em que o critério de ordenação pode ser especificado por um predicado específico.|

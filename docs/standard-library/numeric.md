@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - <numeric> header
 ms.assetid: 6d6ccb94-48cc-479b-b4a9-bd9c78d4896a
-ms.openlocfilehash: ee93d254dcf49b38cb817ba460060fa72b81e01f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ce195742605c3dd2e127c84ac2f4e1e696c75bd0
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62371445"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246692"
 ---
 # <a name="ltnumericgt"></a>&lt;numeric&gt;
 
 Define as funções de modelo de contêiner que executam algoritmos para processamento numérico.
 
-## <a name="syntax"></a>Sintaxe
+## <a name="requirements"></a>Requisitos
 
-```cpp
-#include <numeric>
-```
+**Cabeçalho**: \<numérico >
+
+**Namespace:** std
 
 ## <a name="remarks"></a>Comentários
 
@@ -29,15 +29,25 @@ Os algoritmos numéricos parecem com os algoritmos da biblioteca padrão C++ em 
 
 Os algoritmos estendem as ações que têm suporte pelas funções membro e operações de cada um dos contêineres da biblioteca padrão C++ e permitem a interação com diferentes tipos de objeto de contêiner ao mesmo tempo.
 
+## <a name="members"></a>Membros
+
 ### <a name="functions"></a>Funções
 
-|Função|Descrição|
+|||
 |-|-|
 |[accumulate](../standard-library/numeric-functions.md#accumulate)|Calcula a soma de todos os elementos em um intervalo especificado, incluindo qualquer valor inicial, calculando somas parciais sucessivas ou calcula o resultado de resultados parciais sucessivos que são obtidos usando uma operação binária especificada no lugar da operação de soma.|
 |[adjacent_difference](../standard-library/numeric-functions.md#adjacent_difference)|Calcula as diferenças sucessivas entre cada elemento e seu predecessor em um intervalo de entrada e gera os resultados em um intervalo de destino ou calcula o resultado de um procedimento generalizado, em que a operação de diferença é substituída por outra operação binária especificada.|
+|[exclusive_scan](../standard-library/numeric-functions.md#exclusive_scan)||
+|[GCD](../standard-library/numeric-functions.md#gcd)||
+|[inclusive_scan](../standard-library/numeric-functions.md#inclusive_scan)||
 |[inner_product](../standard-library/numeric-functions.md#inner_product)|Calcula a soma do produto em relação ao elemento de dois intervalos e a adiciona a um valor inicial especificado ou calcula o resultado de um procedimento generalizado, em que as operações de produto e a soma são substituídas por outras operações binárias especificadas.|
 |[iota](../standard-library/numeric-functions.md#iota)|Armazena um valor inicial, começando com o primeiro elemento e preenchendo com incrementos sucessivos do valor (`value++`) em cada um dos elementos no intervalo `[first, last)`.|
+|[LCM](../standard-library/numeric-functions.md#lcm)||
 |[partial_sum](../standard-library/numeric-functions.md#partial_sum)|Calcula uma série de somas em um intervalo de entrada, do primeiro ao *i*-ésimo elemento e armazena o resultado de cada soma no *i*-ésimo elemento de um intervalo de destino ou calcula o resultado de um procedimento generalizado, em que a operação de soma é substituída por outra operação binária especificada.|
+|[reduzir](../standard-library/numeric-functions.md#reduce)||
+|[transform_exclusive_scan](../standard-library/numeric-functions.md#transform_exclusive_scan)||
+|[transform_inclusive_scan](../standard-library/numeric-functions.md#transform_inclusive_scan)||
+|[transform_reduce](../standard-library/numeric-functions.md#transform_reduce)||
 
 ## <a name="see-also"></a>Consulte também
 

@@ -6,18 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - vector header
 ms.assetid: c1431ad8-c0b6-4dbb-89c4-5f651e432d7f
-ms.openlocfilehash: 348b5c53ecd3fb7900d03fed7c1209a2c94eeb4c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 96f329bfdcc13bb557ef0cc487a1f414612e96c5
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410845"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68240958"
 ---
 # <a name="ltvectorgt"></a>&lt;vector&gt;
 
 Define o vetor da classe de modelo de contêiner e diversos modelos de suporte.
 
 O `vector` é um contêiner que organiza os elementos de um determinado tipo em uma sequência linear. Ele permite acesso aleatório rápido a qualquer elemento, bem como adições e remoções dinâmicas em relação à sequência. O `vector` é o contêiner preferencial para uma sequência quando o desempenho de acesso aleatório é reduzido.
+
+> [!NOTE]
+> O \<vector > biblioteca também usa o `#include <initializer_list>` instrução.
 
 Para obter mais informações sobre a classe `vector`, consulte [Classe vector](../standard-library/vector-class.md). Para obter informações sobre a especialização `vector<bool>`, consulte [Classe vector\<bool>](../standard-library/vector-bool-class.md).
 
@@ -74,21 +77,23 @@ void swap (
 
 ### <a name="parameters"></a>Parâmetros
 
-*Tipo*<br/>
+*Tipo*\
 O parâmetro de modelo do tipo de dados armazenados no vetor.
 
-*Allocator*<br/>
+*Alocador*\
 O parâmetro de modelo do objeto allocator armazenado responsável pela alocação e desalocação de memória.
 
-*left*<br/>
+*À esquerda*\
 O primeiro vetor (à esquerda) em uma operação de comparação
 
-*right*<br/>
+*Certo*\
 O segundo vetor (à direita) em uma operação de comparação.
+
+## <a name="members"></a>Membros
 
 ### <a name="operators"></a>Operadores
 
-|Operador|Descrição|
+|||
 |-|-|
 |[operator! =](../standard-library/vector-operators.md#op_neq)|Testa se o objeto vector do lado esquerdo do operador não é igual ao objeto vector do lado direito.|
 |[operator<](../standard-library/vector-operators.md#op_lt)|Testa se o objeto vector do lado esquerdo do operador é menor que o objeto vector do lado direito.|
@@ -99,7 +104,7 @@ O segundo vetor (à direita) em uma operação de comparação.
 
 ### <a name="classes"></a>Classes
 
-|Classe|Descrição|
+|||
 |-|-|
 |[Classe vector](../standard-library/vector-class.md)|Uma classe de modelo de contêineres de sequências que organiza os elementos de um determinado tipo de maneira linear e permite o acesso aleatório rápido a qualquer elemento.|
 
@@ -107,6 +112,7 @@ O segundo vetor (à direita) em uma operação de comparação.
 
 |||
 |-|-|
+|[hash]()||
 |[Classe vector\<bool>](../standard-library/vector-bool-class.md)|Uma especialização completa do vetor de classe de modelo dos elementos do tipo `bool` com um alocador para o tipo subjacente usado pela especialização.|
 
 ## <a name="requirements"></a>Requisitos

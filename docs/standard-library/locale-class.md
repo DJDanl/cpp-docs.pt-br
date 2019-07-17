@@ -21,12 +21,12 @@ helpviewer_keywords:
 - std::locale [C++], facet
 - std::locale [C++], id
 ms.assetid: 7dd6d271-472d-4750-8fb5-ea8f55fbef62
-ms.openlocfilehash: a1f5ace58af427645a0ad4eb8706506cc52ab08c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dedc1b5812357c84944654d1c352be2a51e9393c
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413171"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245405"
 ---
 # <a name="locale-class"></a>Classe locale
 
@@ -168,6 +168,7 @@ As regras de formatação numérica para inserções subsequentes em `cout` perm
 
 |Operador|Descrição|
 |-|-|
+|[operator=](#op_eq)|Atribui uma localidade.|
 |[operator!=](#op_neq)|Testa a desigualdade de duas localidades.|
 |[operator( )](#op_call)|Compara dois objetos `basic_string`.|
 |[operator==](#op_eq_eq)|Testa a igualdade de duas localidades.|
@@ -417,7 +418,7 @@ A classe membro descreve o objeto de membro estático exigido por cada faceta de
 
 ## <a name="locale"></a>  locale::locale
 
-Cria uma localidade, ou uma cópia de uma localidade, ou uma cópia da localidade em que uma faceta ou uma categoria foi substituída por uma faceta ou categoria de outra localidade.
+Cria uma localidade, ou uma cópia de uma localidade, ou uma cópia da localidade em que uma faceta ou uma categoria foi substituída por uma faceta ou categoria de outra localidade. Também inclui um destruidor.
 
 ```cpp
 locale();
@@ -430,6 +431,8 @@ locale(const locale& Loc, const char* Locname, category Cat);
 
 template <class Facet>
 locale(const locale& Loc, const Facet* Fac);
+
+~locale();
 ```
 
 ### <a name="parameters"></a>Parâmetros
@@ -443,7 +446,7 @@ Uma localidade que deve ser copiada ao construir uma nova localidade.
 *Outros*<br/>
 Uma localidade da qual se deve selecionar uma categoria.
 
-*Cat*<br/>
+*CAT*<br/>
 A categoria a ser substituída na localidade construída.
 
 *Fac*<br/>
@@ -546,6 +549,14 @@ int main( )
 ```Output
 The name of the previous locale is: C.
 The name of the current locale is: German_Germany.1252.
+```
+
+## <a name="op_eq"></a>  Locale:: Operator =
+
+Atribui uma localidade.
+
+```cpp
+const locale& operator=(const locale& other) noexcept;
 ```
 
 ## <a name="op_neq"></a>  locale::operator!=

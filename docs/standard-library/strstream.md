@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - strstream header
 ms.assetid: eaa9d0d4-d217-4f28-8a68-9b9ad7b1c0f5
-ms.openlocfilehash: 72b96c300aba1729823462ce6671e2f9a5285761
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 212223f98db09097e596fc6fe2ddd31bbe16e6b7
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412261"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245367"
 ---
 # <a name="ltstrstreamgt"></a>&lt;strstream&gt;
 
 Define várias classes que oferecem suporte a operações de iostreams em sequências armazenadas em uma matriz alocada do **char** objeto. Essas sequências facilmente são convertidas em cadeias de caracteres C.
 
-## <a name="syntax"></a>Sintaxe
+## <a name="requirements"></a>Requisitos
 
-```cpp
-#include <strstream>
-```
+**Cabeçalho:** \<strstream>
+
+**Namespace:** std
 
 ## <a name="remarks"></a>Comentários
 
@@ -30,14 +30,24 @@ Objetos do tipo `strstream` funcionam com `char` *, que são cadeias de caracter
 > [!NOTE]
 > As classes no \<strstream > são preteridos. Considere o uso de classes em \<sstream > em vez disso.
 
+## <a name="members"></a>Membros
+
 ### <a name="classes"></a>Classes
 
-|Classe|Descrição|
+|||
 |-|-|
 |[Classe strstreambuf](../standard-library/strstreambuf-class.md)|A classe descreve um buffer de fluxo que controla a transmissão de elementos em uma sequência de elementos armazenados em uma **char** objeto de matriz.|
 |[Classe istrstream](../standard-library/istrstream-class.md)|A classe descreve um objeto que controla a extração de elementos e objetos codificados de um buffer de fluxo da classe [strstreambuf](../standard-library/strstreambuf-class.md).|
 |[Classe ostrstream](../standard-library/ostrstream-class.md)|A classe descreve um objeto que controla a inserção de elementos e objetos codificados de um buffer de fluxo da classe [strstreambuf](../standard-library/strstreambuf-class.md).|
 |[Classe strstream](../standard-library/strstream-class.md)|A classe descreve um objeto que controla a inserção e extração de elementos e objetos codificados usando um buffer de fluxo da classe [strstreambuf](../standard-library/strstreambuf-class.md).|
+
+### <a name="functions"></a>Funções
+
+```cpp
+void freeze(bool freezefl = true);
+char* str();
+int pcount();
+```
 
 ## <a name="see-also"></a>Consulte também
 

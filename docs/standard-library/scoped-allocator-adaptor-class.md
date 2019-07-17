@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::scoped_allocator_adaptor::outer_allocator
 - std::scoped_allocator_adaptor::select_on_container_copy_construction
 ms.assetid: 0d9b06a1-9a4a-4669-9470-8805cae48e89
-ms.openlocfilehash: c02f5171fac862b6f79e194f5940b0adeb2e93e0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5101f5c7b6ae1a032df94b912252c24f2c2853bf
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348205"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245586"
 ---
 # <a name="scopedallocatoradaptor-class"></a>Classe scoped_allocator_adaptor
 
@@ -104,6 +104,14 @@ Três tipos são definidos para fins de exposição:
 |[max_size](#max_size)|Determina o número máximo de objetos que podem ser alocados pelo alocador externo.|
 |[outer_allocator](#outer_allocator)|Recupera uma referência ao objeto armazenado do tipo `outer_allocator_type`.|
 |[select_on_container_copy_construction](#select_on_container_copy_construction)|Cria um novo objeto `scoped_allocator_adaptor` com cada objeto de alocador armazenado inicializado, por meio da chamada de `select_on_container_copy_construction` para cada alocador correspondente.|
+
+### <a name="operators"></a>Operadores
+
+|Operador|Descrição|
+|-|-|
+|[operator=](#op_as)||
+|[operator==](#op_eq_eq)||
+|[operator!=](#op_noeq)||
 
 ## <a name="requirements"></a>Requisitos
 
@@ -254,6 +262,29 @@ size_type max_size();
 
 `Outer_traits::max_size(outer_allocator())`
 
+## <a name="a-nameopas--scopedallocatoradaptoroperator"></a><a name="op_as">  scoped_allocator_adaptor::Operator =
+
+```cpp
+scoped_allocator_adaptor& operator=(const scoped_allocator_adaptor&) = default;
+scoped_allocator_adaptor& operator=(scoped_allocator_adaptor&&) = default;
+```
+
+## <a name="a-nameopeqeq--scopedallocatoradaptoroperator"></a><a name="op_eq_eq">  scoped_allocator_adaptor::Operator = =
+
+```cpp
+template <class OuterA1, class OuterA2, class... InnerAllocs>
+bool operator==(const scoped_allocator_adaptor<OuterA1, InnerAllocs...>& a,
+const scoped_allocator_adaptor<OuterA2, InnerAllocs...>& b) noexcept;
+```
+
+## <a name="a-nameopnoeq--scopedallocatoradaptoroperator"></a><a name="op_noeq">  scoped_allocator_adaptor::Operator! =
+
+```cpp
+template <class OuterA1, class OuterA2, class... InnerAllocs>
+bool operator!=(const scoped_allocator_adaptor<OuterA1, InnerAllocs...>& a,
+const scoped_allocator_adaptor<OuterA2, InnerAllocs...>& b) noexcept;
+```
+
 ## <a name="outer_allocator"></a>  scoped_allocator_adaptor::outer_allocator
 
 Recupera uma referência ao objeto armazenado do tipo `outer_allocator_type`.
@@ -275,7 +306,7 @@ struct reassociação {typedef Other_traits::rebind\<outros > Other_alloc; typed
 
 ## <a name="scoped_allocator_adaptor"></a> Construtor scoped_allocator_adaptor::scoped_allocator_adaptor
 
-Constrói um objeto `scoped_allocator_adaptor`.
+Constrói um objeto `scoped_allocator_adaptor`. Também inclui um destruidor.
 
 ```cpp
 scoped_allocator_adaptor();
@@ -290,6 +321,8 @@ scoped_allocator_adaptor<Outer2, Inner...>&& right) noexcept;
 template <class Outer2>
 scoped_allocator_adaptor(Outer2&& al,
     const Inner&... rest) noexcept;
+
+~scoped_allocator_adaptor();
 ```
 
 ### <a name="parameters"></a>Parâmetros
