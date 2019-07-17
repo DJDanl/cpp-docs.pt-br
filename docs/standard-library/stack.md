@@ -7,26 +7,31 @@ helpviewer_keywords:
 - stack, stack header
 - stack header
 ms.assetid: 89d8999e-c773-46f2-86c1-4b3b5aedb1c1
-ms.openlocfilehash: b8f2bb6cf74d0607bd3105196336a515adcade9e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 65f2197a4a9ac37ad5910bfa8dbef457fda5f611
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412456"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68244126"
 ---
 # <a name="ltstackgt"></a>&lt;stack&gt;
 
 Define a pilha de classe de modelo e os dois modelos de suporte.
 
-## <a name="syntax"></a>Sintaxe
+## <a name="requirements"></a>Requisitos
 
-```cpp
-#include <stack>
-```
+**Cabeçalho:** \<stack>
+
+**Namespace:** std
+
+> [!NOTE]
+> O \<pilha > biblioteca também usa o `#include <initializer_list>` instrução.
+
+## <a name="members"></a>Membros
 
 ### <a name="operators"></a>Operadores
 
-|Operador|Descrição|
+|||
 |-|-|
 |[operator!=](../standard-library/stack-operators.md#op_neq)|Testa se o objeto stack do lado esquerdo do operador não é igual ao objeto stack do lado direito.|
 |[operator<](../standard-library/stack-operators.md#op_lt)|Testa se o objeto stack do lado esquerdo do operador é menor que o objeto stack do lado direito.|
@@ -35,9 +40,15 @@ Define a pilha de classe de modelo e os dois modelos de suporte.
 |[operator>](../standard-library/stack-operators.md#op_gt)|Testa se o objeto stack do lado esquerdo do operador é maior que o objeto stack do lado direito.|
 |[operator>=](../standard-library/stack-operators.md#op_gt_eq)|Testa se o objeto stack do lado esquerdo do operador é maior ou igual ao objeto stack do lado direito.|
 
+### <a name="functions"></a>Funções
+
+|||
+|-|-|
+|[swap]()||
+
 ### <a name="classes"></a>Classes
 
-|Classe|Descrição|
+|||
 |-|-|
 |[Classe stack](../standard-library/stack-class.md)|Uma classe do adaptador de contêiner de modelo que fornece uma restrição de funcionalidade que limita o acesso ao elemento mais recentemente adicionado a alguns tipos de contêiner subjacentes.|
 

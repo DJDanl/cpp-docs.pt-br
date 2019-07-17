@@ -6,22 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - random header
 ms.assetid: 60afc25c-b162-4811-97c1-1b65398d4c57
-ms.openlocfilehash: 3fd6272ebcb58d48cc943541f32d1195c3fab498
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 1448ad2b703aa6dcf26fad2e4adcbeb2aec2c956
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66450798"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68240409"
 ---
 # <a name="ltrandomgt"></a>&lt;random&gt;
 
 Define instalações para a geração aleatória de números, permitindo a criação de números aleatórios distribuídos uniformemente.
 
-## <a name="syntax"></a>Sintaxe
+## <a name="requirements"></a>Requisitos
 
-```cpp
-#include <random>
-```
+**Cabeçalho**: \<aleatório >
+
+**Namespace:** std
+
+> [!NOTE]
+> O \<aleatório > biblioteca usa o ' #include < initializer_list >' instrução.
 
 ## <a name="summary"></a>Resumo
 

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - tuple class
 ms.assetid: c38749be-ae4d-41f3-98ea-6aa3250de9a3
-ms.openlocfilehash: 7e85ad445743cc02ba078eb3c09342f69915c09c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aca5cc90566fb1fa602b96568d4cda9dd5ab26b9
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62279042"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68241832"
 ---
 # <a name="tuple-class"></a>Classe tupla
 
@@ -22,7 +22,6 @@ Encapsula uma sequência de comprimento fixo de elementos.
 
 ```
 class tuple {
-public:
    tuple();
    explicit tuple(P1, P2, ..., PN); // 0 < N
    tuple(const tuple&);
@@ -37,12 +36,12 @@ public:
       tuple& operator=(const tuple<U1, U2, ..., UN>&);
    template <class U1, class U2>
       tuple& operator=(const pair<U1, U2>&); // N == 2
-   };
+};
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*TN*<br/>
+*TN*\
 O tipo do enésimo elemento de tupla.
 
 ## <a name="remarks"></a>Comentários
@@ -117,13 +116,7 @@ The tuples in the vector are
 ( 3, 0.033, three ).
 ```
 
-## <a name="requirements"></a>Requisitos
-
-**Cabeçalho:** \<tuple>
-
-**Namespace:** std
-
-## <a name="op_eq"></a> tuple::operator=
+## <a name="op_eq"></a> operador =
 
 Atribui um objeto `tuple`.
 
@@ -144,10 +137,10 @@ template <class U1, class U2>
 
 ### <a name="parameters"></a>Parâmetros
 
-*UN*<br/>
+*CANCELAR*\
 O tipo do enésimo elemento de tupla copiado.
 
-*right*<br/>
+*Certo*\
 A tupla da qual copiar.
 
 ### <a name="remarks"></a>Comentários
@@ -196,7 +189,7 @@ int main()
     std::cout << std::endl;
 
     return (0);
-    }
+}
 ```
 
 ```Output
@@ -205,7 +198,7 @@ int main()
 x 4
 ```
 
-## <a name="tuple_swap"></a> tuple:swap
+## <a name="tuple_swap"></a> troca
 
 Troca os elementos das duas tuplas.
 
@@ -216,16 +209,17 @@ template <class... Types>
 
 ### <a name="parameters"></a>Parâmetros
 
-|Parâmetro|Descrição|
-|---------------|-----------------|
-|*left*|Uma tupla cujos elementos deverão ser trocados por aqueles da tupla *certa*.|
-|*right*|Uma tupla cujos elementos deverão ser trocados por aqueles da tupla *esquerdo*.|
+*À esquerda*\
+Uma tupla cujos elementos deverão ser trocados por aqueles da tupla *certa*.
+
+*Certo*\
+Uma tupla cujos elementos deverão ser trocados por aqueles da tupla *esquerdo*.
 
 ### <a name="remarks"></a>Comentários
 
 A função executa `left.swap(right)`.
 
-## <a name="tuple"></a> tuple::tuple
+## <a name="tuple"></a> tupla
 
 Constrói um objeto `tuple`.
 
@@ -252,10 +246,10 @@ template <class U1, class U2>
 
 ### <a name="parameters"></a>Parâmetros
 
-*UN*<br/>
+*CANCELAR*\
 O tipo do enésimo elemento de tupla copiado.
 
-*right*<br/>
+*Certo*\
 A tupla da qual copiar.
 
 ### <a name="remarks"></a>Comentários
@@ -338,8 +332,3 @@ x 4
 0 1 2 3
 4 5 6 7
 ```
-
-## <a name="see-also"></a>Consulte também
-
-[\<tuple>](../standard-library/tuple.md)<br/>
-[make_tuple](../standard-library/tuple-functions.md#make_tuple)<br/>

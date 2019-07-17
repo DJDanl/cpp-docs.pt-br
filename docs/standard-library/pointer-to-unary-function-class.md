@@ -7,12 +7,12 @@ helpviewer_keywords:
 - pointer_to_unary_function function
 - pointer_to_unary_function class
 ms.assetid: 05600207-b916-4759-beca-6b6facd2d6f6
-ms.openlocfilehash: 710453711e60f4607a20eb3e71b65127c8dd5316
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cff84f1f15eea34c60162f702dfe05350d1383d1
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62370262"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68240463"
 ---
 # <a name="pointertounaryfunction-class"></a>Classe pointer_to_unary_function
 
@@ -25,7 +25,6 @@ template <class Arg, class Result>
 class pointer_to_unary_function
     : public unary_function<Arg, Result>
 {
-public:
     explicit pointer_to_unary_function(Result(*pfunc)(Arg));
     Result operator()(Arg left) const;
 };
@@ -33,10 +32,10 @@ public:
 
 ### <a name="parameters"></a>Parâmetros
 
-*pfunc*<br/>
+*pfunc*\
 A função binária a ser convertida.
 
-*left*<br/>
+*À esquerda*\
 O objeto no qual o  *\*pfunc* é chamado.
 
 ## <a name="return-value"></a>Valor de retorno
@@ -50,13 +49,3 @@ Um ponteiro de função unária é um objeto de função e pode ser passado para
 ## <a name="example"></a>Exemplo
 
 O construtor de `pointer_to_unary_function` raramente é usado diretamente. Consulte a função auxiliar [ptr_fun](../standard-library/functional-functions.md#ptr_fun) para ver um exemplo de como declarar e usar o predicado do adaptador `pointer_to_unary_function`.
-
-## <a name="requirements"></a>Requisitos
-
-**Cabeçalho:** \<functional>
-
-**Namespace:** std
-
-## <a name="see-also"></a>Consulte também
-
-[Referência da biblioteca padrão C++](../standard-library/cpp-standard-library-reference.md)<br/>

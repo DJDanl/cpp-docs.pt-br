@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - <condition_variable>
 ms.assetid: 8567f7cc-20bd-42a7-9137-87c46f878009
-ms.openlocfilehash: 3ce9125a13f0dd2f2e4f98a217c4373f2be2f8a8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ed98966f651df76078fa47b05f5a2d8ae1b71d05
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62212060"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68244571"
 ---
 # <a name="ltconditionvariablegt"></a>&lt;condition_variable&gt;
 
@@ -17,11 +17,11 @@ Define as classes [condition_variable](../standard-library/condition-variable-cl
 
 Esse cabeçalho usa ConcRT (Tempo de Execução de Simultaneidade) para que você possa usá-lo juntamente com outros mecanismos ConcRT. Para obter mais informações sobre o ConcRT, consulte [Tempo de execução de simultaneidade](../parallel/concrt/concurrency-runtime.md).
 
-## <a name="syntax"></a>Sintaxe
+## <a name="requirements"></a>Requisitos
 
-```cpp
-#include <condition_variable>
-```
+**Cabeçalho:** \<condition_variable >
+
+**Namespace:** std
 
 > [!NOTE]
 > No código que é compilado usando **/clr**, esse cabeçalho é bloqueado.
@@ -56,6 +56,14 @@ Cada classe também tem dois métodos que são usados para notificar uma variáv
 - `notify_one` ativa um dos threads que está aguardando a variável de condição.
 
 - `notify_all` ativa todos os threads que estão aguardando a variável de condição.
+
+## <a name="functions-and-enums"></a>Funções e Enums
+
+```cpp
+void notify_all_at_thread_exit(condition_variable& cond, unique_lock<mutex> lk);
+
+enum class cv_status { no_timeout, timeout };
+```
 
 ## <a name="see-also"></a>Consulte também
 

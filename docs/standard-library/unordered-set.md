@@ -6,33 +6,38 @@ f1_keywords:
 helpviewer_keywords:
 - unordered_set header
 ms.assetid: a3364d54-147d-4796-8728-9e62a2e4c226
-ms.openlocfilehash: 8e79d05512a53b8fc2d4cb305cecf8d9095a9728
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5065d1f2d0ea710dbaaaa09ec9079dbf502065af
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62362849"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243412"
 ---
 # <a name="ltunorderedsetgt"></a>&lt;unordered_set&gt;
 
 Define as classes de modelo do contêiner [unordered_multiset](../standard-library/unordered-multiset-class.md) e [unordered_set](../standard-library/unordered-set-class.md) e seus modelos de suporte.
 
-## <a name="syntax"></a>Sintaxe
+## <a name="requirements"></a>Requisitos
 
-```cpp
-#include <unordered_set>
-```
+**Cabeçalho:** \<unordered_set>
+
+**Namespace:** std
+
+> [!NOTE]
+> O \<unordered_set > biblioteca também usa o `#include <initializer_list>` instrução.
+
+## <a name="members"></a>Membros
 
 ### <a name="classes"></a>Classes
 
-|Classe|Descrição|
+|||
 |-|-|
 |[Classe unordered_multiset](../standard-library/unordered-multiset-class.md)|Armazena tabela de hash das chaves.|
 |[Classe unordered_set](../standard-library/unordered-set-class.md)|Armazena tabela de hash das chaves.|
 
 ### <a name="functions"></a>Funções
 
-|Função|Descrição|
+|||
 |-|-|
 |[operator!=](../standard-library/unordered-set-operators.md#op_neq)|Testa se o objeto unordered_multiset à esquerda do operador é diferente do objeto unordered_multiset à direita.|
 |[operator==](../standard-library/unordered-set-operators.md#op_eq_eq)|Testa se o objeto unordered_multiset à esquerda do operador é igual ao objeto unordered_multiset à direita.|

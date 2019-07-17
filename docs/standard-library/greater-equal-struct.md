@@ -7,12 +7,12 @@ helpviewer_keywords:
 - greater_equal struct
 - greater_equal function
 ms.assetid: a8ba911b-7af8-4653-b972-d8618f4df7d5
-ms.openlocfilehash: 91d8265fa699bbaafe946c44a55dd63c13f44b42
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f09364203c905407d8ce4607f527d58108eec778
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159347"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243742"
 ---
 # <a name="greaterequal-struct"></a>Struct greater_equal
 
@@ -39,12 +39,13 @@ struct greater_equal<void>
 
 ### <a name="parameters"></a>Parâmetros
 
-*Tipo de*, *T*, *U* qualquer tipo que dá suporte a um `operator>=` que usa operandos dos tipos especificados ou inferidos.
+*Tipo de*, *T*, *U*\
+Qualquer tipo que dê suporte a um `operator>=` que usa operandos dos tipos especificados ou inferidos.
 
-*Esquerda*<br/>
+*À esquerda*\
 O operando esquerdo da operação "maior ou igual a". O modelo não especializado usa um argumento de referência de lvalue do tipo *tipo*. O modelo especializado realiza o encaminhamento de lvalue perfeito e inferidos de argumentos de referência de rvalue do tipo *T*.
 
-*Direita*<br/>
+*Certo*\
 O operando direito da operação "maior ou igual a". O modelo não especializado usa um argumento de referência de lvalue do tipo *tipo*. O modelo especializado realiza o encaminhamento de lvalue perfeito e inferidos de argumentos de referência de rvalue do tipo *U*.
 
 ## <a name="return-value"></a>Valor de retorno
@@ -53,7 +54,7 @@ O resultado de `Left >= Right`. O modelo especializado realiza o encaminhamento 
 
 ## <a name="remarks"></a>Comentários
 
-O predicado binário `greater_equal` <  `Type`> fornece uma ordenação fraca estrita de um conjunto de valores de elemento do tipo *tipo* em classes de equivalência, se e somente se esse tipo satisfizer o padrão de matemático requisitos para ser ordenado dessa forma. As especializações de qualquer tipo de ponteiro produzem uma ordenação total dos elementos, pois todos os elementos de valores distintos são ordenados em relação uns aos outros.
+O predicado binário `greater_equal` < `Type`> fornece uma ordenação fraca estrita de um conjunto de valores de elemento do tipo *tipo* em classes de equivalência, se e somente se esse tipo satisfizer o padrão de matemático requisitos para ser ordenado dessa forma. As especializações de qualquer tipo de ponteiro produzem uma ordenação total dos elementos, pois todos os elementos de valores distintos são ordenados em relação uns aos outros.
 
 ## <a name="example"></a>Exemplo
 
@@ -108,13 +109,3 @@ Original vector v1 = (6262 6262 41 18467 6334 26500 19169)
 Sorted vector v1 = (41 6262 6262 6334 18467 19169 26500)
 Resorted vector v1 = (26500 19169 18467 6334 6262 6262 41)
 ```
-
-## <a name="requirements"></a>Requisitos
-
-**Cabeçalho:** \<functional>
-
-**Namespace:** std
-
-## <a name="see-also"></a>Consulte também
-
-[Referência da biblioteca padrão C++](../standard-library/cpp-standard-library-reference.md)<br/>

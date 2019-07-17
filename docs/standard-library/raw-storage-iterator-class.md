@@ -10,12 +10,12 @@ helpviewer_keywords:
 - std::raw_storage_iterator [C++], element_type
 - std::raw_storage_iterator [C++], iter_type
 ms.assetid: 6f033f15-f48e-452a-a326-647ea2cf346f
-ms.openlocfilehash: 8e13d03e577df4c64e85704993cfc0ff81af5f8f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eb32d1846c4e94fbd275dcc416de4f37d9bb53f1
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62369755"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68240371"
 ---
 # <a name="rawstorageiterator-class"></a>Classe raw_storage_iterator
 
@@ -25,15 +25,15 @@ Uma classe de adaptador que é fornecida para permitir que algoritmos armazenem 
 
 ```cpp
 template <class OutputIterator, class Type>
-class raw_storage_iterator
+    class raw_storage_iterator
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*OutputIterator*<br/>
+*OutputIterator*\
 Especifica o iterador de saída para o objeto que está sendo armazenado.
 
-*Tipo*<br/>
+*Tipo*\
 O tipo de objeto para o qual o armazenamento está sendo alocado.
 
 ## <a name="remarks"></a>Comentários
@@ -46,32 +46,26 @@ Essa classe de adaptador é usada quando é necessário separar a alocação de 
 
 ### <a name="constructors"></a>Construtores
 
-|Construtor|Descrição|
+|||
 |-|-|
 |[raw_storage_iterator](#raw_storage_iterator)|Constrói um iterador de armazenamento bruto com um iterador de saída subjacente especificado.|
 
 ### <a name="typedefs"></a>Typedefs
 
-|Nome de tipo|Descrição|
+|||
 |-|-|
 |[element_type](#element_type)|Fornece um tipo que descreve um elemento a ser armazenado em um iterador de armazenamento bruto.|
 |[iter_type](#iter_type)|Fornece um tipo que descreve um iterador que dá suporte a um iterador de armazenamento bruto.|
 
 ### <a name="operators"></a>Operadores
 
-|Operador|Descrição|
+|||
 |-|-|
 |[operator*](#op_star)|Um operador de desreferenciamento usado para implementar a expressão do iterador de saída \* `ii`  =  `x`.|
 |[operator=](#op_eq)|Um operador de atribuição usado para implementar a expressão do iterador de armazenamento bruto \* `i`  =  `x` para armazenamento na memória.|
 |[operator++](#op_add_add)|Operadores pré e pós-incremento para iteradores de armazenamento brutos.|
 
-## <a name="requirements"></a>Requisitos
-
-**Cabeçalho:** \<memory>
-
-**Namespace:** std
-
-## <a name="element_type"></a>  raw_storage_iterator::element_type
+### <a name="element_type"></a> ELEMENT_TYPE
 
 Fornece um tipo que descreve um elemento a ser armazenado em um iterador de armazenamento bruto.
 
@@ -79,11 +73,11 @@ Fornece um tipo que descreve um elemento a ser armazenado em um iterador de arma
 typedef Type element_type;
 ```
 
-### <a name="remarks"></a>Comentários
+#### <a name="remarks"></a>Comentários
 
 O tipo é um sinônimo do parâmetro de modelo de classe raw_storage_iterator `Type`.
 
-## <a name="iter_type"></a>  raw_storage_iterator::iter_type
+### <a name="iter_type"></a> iter_type
 
 Fornece um tipo que descreve um iterador que dá suporte a um iterador de armazenamento bruto.
 
@@ -91,11 +85,11 @@ Fornece um tipo que descreve um iterador que dá suporte a um iterador de armaze
 typedef ForwardIterator iter_type;
 ```
 
-### <a name="remarks"></a>Comentários
+#### <a name="remarks"></a>Comentários
 
 O tipo é um sinônimo do parâmetro de modelo `ForwardIterator`.
 
-## <a name="op_star"></a>  raw_storage_iterator::operator\*
+### <a name="op_star"></a> Operador\*
 
 Um operador de desreferenciamento usado para implementar a expressão do iterador de armazenamento bruto \* *ii* = *x*.
 
@@ -103,15 +97,15 @@ Um operador de desreferenciamento usado para implementar a expressão do iterado
 raw_storage_iterator<ForwardIterator, Type>& operator*();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+#### <a name="return-value"></a>Valor de retorno
 
 Uma referência ao iterador de armazenamento bruto
 
-### <a name="remarks"></a>Comentários
+#### <a name="remarks"></a>Comentários
 
 Os requisitos para um `ForwardIterator` são que o raw iterador de armazenamento deve satisfazer exigem somente que a expressão \* *ii* = *t* seja válida e que ela não diz nada sobre o **operador** ou o `operator=` por conta própria. Os operadores de membro nesta implementação retorna  **\*isso**, de modo que [operador =](#op_eq)(**constType**&) pode executar o repositório real em uma expressão como \* *ptr* = `val`.
 
-### <a name="example"></a>Exemplo
+#### <a name="example"></a>Exemplo
 
 ```cpp
 // raw_storage_iterator_op_deref.cpp
@@ -155,14 +149,15 @@ int main( void)
    raw_storage_iterator< Int*, Int > it( pInt );
 *it = 5;
 }
-/* Output:
+```
+
+```Output
 Not constructed.
 Copying 5
 Constructing 5
-*/
 ```
 
-## <a name="op_eq"></a>  raw_storage_iterator::operator=
+### <a name="op_eq"></a> operador =
 
 Um operador de atribuição usado para implementar a expressão do iterador de armazenamento bruto \* *i* = *x* para armazenamento na memória.
 
@@ -171,22 +166,22 @@ raw_storage_iterator<ForwardIterator, Type>& operator=(
     const Type& val);
 ```
 
-### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>Parâmetros
 
-*val*<br/>
+*Val*\
 O valor do objeto do tipo `Type` a ser inserido na memória.
 
-### <a name="return-value"></a>Valor de retorno
+#### <a name="return-value"></a>Valor de retorno
 
 O operador insere `val` na memória e, em seguida, retorna uma referência ao iterador de armazenamento bruto.
 
-### <a name="remarks"></a>Comentários
+#### <a name="remarks"></a>Comentários
 
 Os requisitos para um `ForwardIterator` estado que o iterador de armazenamento bruto deve satisfazer exigem somente que a expressão \* *ii* = *t* seja válida e que ela não diz nada sobre o **operador** ou o `operator=` por conta própria. Esses operadores de membros retornam **\*this**.
 
 O operador de atribuição constrói o próximo objeto na sequência da saída usando o valor de iterador armazenado primeiro, avaliando a expressão de novo posicionamento **new** ( ( `void` \*)&\* **first**) **Type**( `val`).
 
-### <a name="example"></a>Exemplo
+#### <a name="example"></a>Exemplo
 
 ```cpp
 // raw_storage_iterator_op_assign.cpp
@@ -228,14 +223,15 @@ int main( void )
    raw_storage_iterator<Int*, Int> it( pInt );
 *it = 5;
 }
-/* Output:
+```
+
+```Output
 Not constructed.
 Copying 5
 Constructing 5
-*/
 ```
 
-## <a name="op_add_add"></a>  raw_storage_iterator::operator++
+### <a name="op_add_add"></a> operador + +
 
 Operadores pré e pós-incremento para iteradores de armazenamento brutos.
 
@@ -245,11 +241,11 @@ raw_storage_iterator<ForwardIterator, Type>& operator++();
 raw_storage_iterator<ForwardIterator, Type> operator++(int);
 ```
 
-### <a name="return-value"></a>Valor de retorno
+#### <a name="return-value"></a>Valor de retorno
 
 Um iterador de armazenamento bruto ou uma referência a um iterador de armazenamento bruto.
 
-### <a name="remarks"></a>Comentários
+#### <a name="remarks"></a>Comentários
 
 O primeiro operador eventualmente tenta extrair e armazenar um objeto do tipo `CharType` do fluxo de entrada associado. O segundo operador faz uma cópia do objeto, incrementa o objeto e, em seguida, retorna a cópia.
 
@@ -259,7 +255,7 @@ O segundo operador pós-incremento faz uma cópia de **\*this**, incrementa o ob
 
 O construtor armazena `first` como o objeto de iterador de saída.
 
-### <a name="example"></a>Exemplo
+#### <a name="example"></a>Exemplo
 
 ```cpp
 // raw_storage_iterator_op_incr.cpp
@@ -282,16 +278,17 @@ int main( void )
 
    delete[] pInt;
 }
-/* Output:
+```
+
+```Output
 array 0 = 0
 array 1 = 2
 array 2 = 4
 array 3 = 6
 array 4 = 8
-*/
 ```
 
-## <a name="raw_storage_iterator"></a>  raw_storage_iterator::raw_storage_iterator
+### <a name="raw_storage_iterator"></a> raw_storage_iterator
 
 Constrói um iterador de armazenamento bruto com um iterador de saída subjacente especificado.
 
@@ -299,12 +296,12 @@ Constrói um iterador de armazenamento bruto com um iterador de saída subjacent
 explicit raw_storage_iterator(ForwardIterator first);
 ```
 
-### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>Parâmetros
 
-*first*<br/>
+*Primeiro*\
 O iterador de avanço que dá suporte ao objeto `raw_storage_iterator` que está sendo construído.
 
-### <a name="example"></a>Exemplo
+#### <a name="example"></a>Exemplo
 
 ```cpp
 // raw_storage_iterator_ctor.cpp
@@ -360,7 +357,9 @@ int main( void )
 
    free(pInt);
 }
-/* Output:
+```
+
+```Output
 Error! I'm not constructed!
 Copying 1
 Error! I'm not constructed!
@@ -381,9 +380,4 @@ array 0 = 1
 array 1 = 2
 array 2 = 3
 array 3 = 4
-*/
 ```
-
-## <a name="see-also"></a>Consulte também
-
-[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

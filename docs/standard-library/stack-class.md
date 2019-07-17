@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::stack [C++], size
 - std::stack [C++], top
 ms.assetid: 02151c1e-eab0-41b8-be94-a839ead78ecf
-ms.openlocfilehash: cc18a62db3f39bc85c0a3bb7e84e6a27011c2b5a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 36074f75830f92ba3fb9e5edb4e1507aa5ae1407
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412430"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68241061"
 ---
 # <a name="stack-class"></a>Classe de pilha
 
@@ -40,11 +40,11 @@ class stack
 
 ### <a name="parameters"></a>Parâmetros
 
-*Tipo*<br/>
+*Tipo*\
 O tipo de dados do elemento a ser armazenado na stack.
 
-*Container*<br/>
-O tipo do contêiner subjacente usado para implementar a stack. O valor padrão é a classe `deque`*\<Type>*.
+*Contêiner*\
+O tipo do contêiner subjacente usado para implementar a stack. O valor padrão é a classe `deque` *\<Type>* .
 
 ## <a name="remarks"></a>Comentários
 
@@ -60,23 +60,25 @@ A pilha de objetos será igualdade comparável somente se os elementos da classe
 
 - A [classe priority_queue](../standard-library/priority-queue-class.md) ordena seus elementos para que o elemento maior sempre esteja na posição superior. Ele dá suporte à inserção de um elemento e a inspeção e remoção do elemento superior. Uma boa comparação é pensar em pessoas em fila organizadas por idade, altura ou algum outro critério.
 
+## <a name="members"></a>Membros
+
 ### <a name="constructors"></a>Construtores
 
-|Construtor|Descrição|
+|||
 |-|-|
 |[stack](#stack)|Constrói um `stack` que é vazio ou que é uma cópia de um objeto de contêiner base.|
 
 ### <a name="typedefs"></a>Typedefs
 
-|Nome de tipo|Descrição|
+|||
 |-|-|
 |[container_type](#container_type)|Um tipo que fornece o contêiner base para ser adaptado por um `stack`.|
 |[size_type](#size_type)|Um tipo de inteiro sem sinal que pode representar o número de elementos em um `stack`.|
 |[value_type](#value_type)|Um tipo que representa o tipo de objeto armazenado como um elemento em um `stack`.|
 
-### <a name="member-functions"></a>Funções de membro
+### <a name="functions"></a>Funções
 
-|Função de membro|Descrição|
+|||
 |-|-|
 |[empty](#empty)|Testa se `stack` está vazio.|
 |[pop](#pop)|Remove o elemento da parte superior do `stack`.|
@@ -84,13 +86,7 @@ A pilha de objetos será igualdade comparável somente se os elementos da classe
 |[size](#size)|Retorna o número de elementos no `stack`.|
 |[top](#top)|Retorna uma referência a um elemento na parte superior do `stack`.|
 
-## <a name="requirements"></a>Requisitos
-
-**Cabeçalho:** \<stack>
-
-**Namespace:** std
-
-## <a name="container_type"></a>  stack::container_type
+## <a name="container_type"></a> container_type
 
 Um tipo que fornece o contêiner base a ser adaptado.
 
@@ -108,7 +104,7 @@ Para obter mais informações sobre `Container`, consulte a seção Comentários
 
 Veja o exemplo de [stack::stack](#stack) para obter um exemplo de como declarar e usar `container_type`.
 
-## <a name="empty"></a>  stack::empty
+## <a name="empty"></a> vazio
 
 Testa se uma stack está vazia.
 
@@ -153,7 +149,7 @@ The stack s1 is not empty.
 The stack s2 is empty.
 ```
 
-## <a name="pop"></a>  stack::pop
+## <a name="pop"></a> pop
 
 Remove o elemento da parte superior da stack.
 
@@ -209,7 +205,7 @@ After a pop, the stack length is 2.
 After a pop, the element at the top of the stack is 20.
 ```
 
-## <a name="push"></a>  stack::push
+## <a name="push"></a> envio por push
 
 Adiciona um elemento na parte superior da pilha.
 
@@ -219,7 +215,7 @@ void push(const Type& val);
 
 ### <a name="parameters"></a>Parâmetros
 
-*val*<br/>
+*Val*\
 O elemento adicionado à parte superior da stack.
 
 ### <a name="remarks"></a>Comentários
@@ -258,7 +254,7 @@ The stack length is 3.
 The element at the top of the stack is 30.
 ```
 
-## <a name="size"></a>  stack::size
+## <a name="size"></a> Tamanho
 
 Retorna o número de elementos na stack.
 
@@ -299,7 +295,7 @@ The stack length is 1.
 The stack length is now 2.
 ```
 
-## <a name="size_type"></a>  stack::size_type
+## <a name="size_type"></a> size_type
 
 Um tipo de inteiro sem sinal que pode representar o número de elementos em uma stack.
 
@@ -315,7 +311,7 @@ O tipo é um sinônimo de `size_type` do contêiner base adaptado pela stack.
 
 Veja o exemplo de [size](#size) que demonstra como declarar e usar `size_type`.
 
-## <a name="stack"></a>  stack::stack
+## <a name="stack"></a> Pilha
 
 Constrói uma stack que é vazia ou que é uma cópia de uma classe de contêiner base.
 
@@ -327,7 +323,7 @@ explicit stack(const container_type& right);
 
 ### <a name="parameters"></a>Parâmetros
 
-*right*<br/>
+*Certo*\
 O contêiner do qual a stack construída será uma cópia.
 
 ### <a name="example"></a>Exemplo
@@ -369,7 +365,7 @@ int main( )
 The element at the top of stack vsi2 is 1.
 ```
 
-## <a name="top"></a>  stack::top
+## <a name="top"></a> Início
 
 Retorna uma referência a um elemento na parte superior da stack.
 
@@ -420,7 +416,7 @@ The top integer of the stack s1 is 2.
 The next integer down is 1.
 ```
 
-## <a name="value_type"></a>  stack::value_type
+## <a name="value_type"></a> value_type
 
 Um tipo que representa o tipo de objeto armazenado como um elemento em uma stack.
 

@@ -5,20 +5,16 @@ f1_keywords:
 - unordered_set/std::swap (set)
 - unordered_set/std::swap (unordered_multiset)
 ms.assetid: 66b35671-4023-4411-ad50-83786580d8ee
-ms.openlocfilehash: a6e005918730a2ca1f52469130e2ea2cf1547fc8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f34d818c1829baba1740bf2776b2d47a8808bf68
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62376988"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243423"
 ---
 # <a name="ltunorderedsetgt-functions"></a>Funções &lt;unordered_set&gt;
 
-|||
-|-|-|
-|[swap (set)](#swap)|[swap (unordered_multiset)](#swap_unordered_multiset)|
-
-## <a name="swap"></a>  swap (unordered_set)
+## <a name="swap"></a> swap (unordered_set)
 
 Alterna o conteúdo de dois contêineres.
 
@@ -32,22 +28,22 @@ void swap(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Chave*<br/>
+*Chave*\
 O tipo principal.
 
-*Hash*<br/>
+*hash*\
 O tipo de objeto da função de hash.
 
-*Pred*<br/>
+*Pred*\
 O tipo de objeto da função de comparação de igualdade.
 
-*ALLOC*<br/>
+*ALLOC*\
 A classe do alocador.
 
-*left*<br/>
+*À esquerda*\
 O primeiro contêiner para alternância.
 
-*right*<br/>
+*Certo*\
 O segundo contêiner para alternância.
 
 ### <a name="remarks"></a>Comentários
@@ -102,18 +98,16 @@ return (0);
 ```
 
 ```Output
-
 [c] [b] [a]
 [f] [e] [d]
 [c] [b] [a]
 ```
 
-## <a name="swap_unordered_multiset"></a>  swap (unordered_multiset)
+## <a name="swap_unordered_multiset"></a> swap (unordered_multiset)
 
 Alterna o conteúdo de dois contêineres.
 
 ```
-
 template <class Key, class Hash, class Pred, class Alloc>
 void swap(
    unordered_multiset <Key, Hash, Pred, Alloc>& left,
@@ -122,22 +116,22 @@ void swap(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Chave*<br/>
+*Chave*\
 O tipo principal.
 
-*Hash*<br/>
+*hash*\
 O tipo de objeto da função de hash.
 
-*Pred*<br/>
+*Pred*\
 O tipo de objeto da função de comparação de igualdade.
 
-*ALLOC*<br/>
+*ALLOC*\
 A classe do alocador.
 
-*left*<br/>
+*À esquerda*\
 O primeiro contêiner para alternância.
 
-*right*<br/>
+*Certo*\
 O segundo contêiner para alternância.
 
 ### <a name="remarks"></a>Comentários
@@ -194,12 +188,7 @@ int main()
 ```
 
 ```Output
-
 [c] [b] [a]
 [f] [e] [d]
 [c] [b] [a]
 ```
-
-## <a name="see-also"></a>Consulte também
-
-[<unordered_set>](../standard-library/unordered-set.md)<br/>

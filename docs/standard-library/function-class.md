@@ -18,12 +18,12 @@ helpviewer_keywords:
 - std::function [C++], target
 - std::function [C++], target_type
 ms.assetid: 7b5ca76b-9ca3-4d89-8fcf-cad70a4aeae6
-ms.openlocfilehash: 44c7691cc967b13b4fa94a7c51da57b7bf4d511f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d775af68b8238093c794a0f78d7e24f2a515ee56
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159711"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243799"
 ---
 # <a name="function-class"></a>Classe function
 
@@ -79,10 +79,10 @@ public:
 
 ### <a name="parameters"></a>Parâmetros
 
-*Fty*<br/>
+*Fty*\
 O tipo de função a ser encapsulada.
 
-*Ax*<br/>
+*AX*\
 A função do alocador.
 
 ## <a name="remarks"></a>Comentários
@@ -103,21 +103,23 @@ Em todos os casos, `INVOKE(f, t1, t2, ..., tN)`, em que `f` é o objeto que pode
 
 Um objeto `function` vazio não tem um objeto que pode ser chamado ou uma referência a um objeto que pode ser chamado.
 
+## <a name="members"></a>Membros
+
 ### <a name="constructors"></a>Construtores
 
-|Construtor|Descrição|
+|||
 |-|-|
 |[function](#function)|Constrói um wrapper que é vazio ou armazena um objeto que pode ser chamado, de tipo arbitrário com uma assinatura fixa.|
 
 ### <a name="typedefs"></a>Typedefs
 
-|Nome de tipo|Descrição|
+|||
 |-|-|
 |[result_type](#result_type)|O tipo retornado do objeto que pode ser chamado armazenado.|
 
-### <a name="member-functions"></a>Funções de membro
+### <a name="functions"></a>Funções
 
-|Função de membro|Descrição|
+|||
 |-|-|
 |[assign](#assign)|Atribui um objeto que pode ser chamado a esse objeto de função.|
 |[swap](#swap)|Troca dois objetos resgatáveis.|
@@ -126,19 +128,13 @@ Um objeto `function` vazio não tem um objeto que pode ser chamado ou uma refer�
 
 ### <a name="operators"></a>Operadores
 
-|Operador|Descrição|
+|||
 |-|-|
-|[function::operator unspecified](#op_unspecified)|Testa se o objeto que pode ser chamado armazenado existe.|
-|[function::operator()](#op_call)|Chama um objeto que pode ser chamado.|
-|[function::operator=](#op_eq)|Substitui o objeto que pode ser chamado armazenado.|
+|[operador não especificado](#op_unspecified)|Testa se o objeto que pode ser chamado armazenado existe.|
+|[operator()](#op_call)|Chama um objeto que pode ser chamado.|
+|[operator=](#op_eq)|Substitui o objeto que pode ser chamado armazenado.|
 
-## <a name="requirements"></a>Requisitos
-
-**Cabeçalho:** \<functional>
-
-**Namespace:** std
-
-## <a name="assign"></a>  function::assign
+## <a name="assign"></a> Atribuir
 
 Atribui um objeto que pode ser chamado a esse objeto de função.
 
@@ -156,20 +152,20 @@ template <class Fx, class Alloc>
 
 ### <a name="parameters"></a>Parâmetros
 
-*_Func*<br/>
+*_Func*\
 Um objeto que pode ser chamado.
 
-*_Fnref*<br/>
+*_Fnref*\
 Um wrapper de referência que contém um objeto que pode ser chamado.
 
-*Ax*<br/>
+*AX*\
 Um objeto alocador.
 
 ### <a name="remarks"></a>Comentários
 
 As funções membro substituem o `callable object` mantido por `*this` pelo objeto que pode ser chamado passado como o `operand`. Ambas alocam o armazenamento com o objeto de alocador *Ax*.
 
-## <a name="function"></a>  function::function
+## <a name="function"></a> função
 
 Constrói um wrapper que é vazio ou armazena um objeto que pode ser chamado, de tipo arbitrário com uma assinatura fixa.
 
@@ -194,22 +190,22 @@ template <class Fx, class Alloc>
 
 ### <a name="parameters"></a>Parâmetros
 
-*right*<br/>
+*Certo*\
 O objeto de função a ser copiado.
 
-*Fx*<br/>
+*FX*\
 O tipo do objeto que pode ser chamado.
 
-*_Func*<br/>
+*_Func*\
 O objeto que pode ser chamado a ser encapsulado.
 
-*ALLOC*<br/>
+*ALLOC*\
 O tipo do alocador.
 
-*Ax*<br/>
+*AX*\
 O alocador.
 
-*_Fnref*<br/>
+*_Fnref*\
 A referência do objeto que pode ser chamado a ser encapsulado.
 
 ### <a name="remarks"></a>Comentários
@@ -286,7 +282,7 @@ f is non-empty (correct).
 g is empty (correct).
 ```
 
-## <a name="op_unspecified"></a>  function::operator unspecified
+## <a name="op_unspecified"></a> operador não especificado
 
 Testa se o objeto que pode ser chamado armazenado existe.
 
@@ -328,7 +324,7 @@ not empty == false
 not empty == true
 ```
 
-## <a name="op_call"></a>  function::operator()
+## <a name="op_call"></a> Operator)
 
 Chama um objeto que pode ser chamado.
 
@@ -341,10 +337,10 @@ result_type operator()(
 
 ### <a name="parameters"></a>Parâmetros
 
-*TN*<br/>
+*TN*\
 O tipo do enésimo argumento de chamada.
 
-*tN*<br/>
+*TN*\
 O enésimo argumento de chamada.
 
 ### <a name="remarks"></a>Comentários
@@ -379,7 +375,7 @@ empty == false
 val == -3
 ```
 
-## <a name="op_eq"></a>  function::operator=
+## <a name="op_eq"></a> operador =
 
 Substitui o objeto que pode ser chamado armazenado.
 
@@ -394,16 +390,16 @@ template <class Fty>
 
 ### <a name="parameters"></a>Parâmetros
 
-*npc*<br/>
+*npc*\
 Uma constante de ponteiro nulo.
 
-*right*<br/>
+*Certo*\
 O objeto de função a ser copiado.
 
-*fn*<br/>
+*Fn*\
 O objeto que pode ser chamado a ser encapsulado.
 
-*fnref*<br/>
+*fnref*\
 A referência do objeto que pode ser chamado a ser encapsulado.
 
 ### <a name="remarks"></a>Comentários
@@ -461,7 +457,7 @@ empty == false
 val == -3
 ```
 
-## <a name="result_type"></a>  function::result_type
+## <a name="result_type"></a> result_type
 
 O tipo retornado do objeto que pode ser chamado armazenado.
 
@@ -503,7 +499,7 @@ empty == false
 val == -3
 ```
 
-## <a name="swap"></a>  function::swap
+## <a name="swap"></a> troca
 
 Troca dois objetos resgatáveis.
 
@@ -513,7 +509,7 @@ void swap(function& right);
 
 ### <a name="parameters"></a>Parâmetros
 
-*right*<br/>
+*Certo*\
 O objeto de função com o qual será feita a troca.
 
 ### <a name="remarks"></a>Comentários
@@ -562,7 +558,7 @@ empty == false
 val == -3
 ```
 
-## <a name="target"></a>  function::target
+## <a name="target"></a> Destino
 
 Testa se o objeto pode ser chamado conforme especificado.
 
@@ -575,7 +571,7 @@ template <class Fty2>
 
 ### <a name="parameters"></a>Parâmetros
 
-*Fty2*<br/>
+*Fty2*\
 O tipo de objeto que pode ser chamado de destino a ser testado.
 
 ### <a name="remarks"></a>Comentários
@@ -623,7 +619,7 @@ empty == true
 no target == true
 ```
 
-## <a name="target_type"></a>  function::target_type
+## <a name="target_type"></a> target_type
 
 Obtém informações de tipo sobre o objeto que pode ser chamado.
 
@@ -668,8 +664,3 @@ type == int (__cdecl*)(int)
 empty == true
 type == void
 ```
-
-## <a name="see-also"></a>Consulte também
-
-[mem_fn](../standard-library/functional-functions.md#mem_fn)<br/>
-[Classe reference_wrapper](../standard-library/reference-wrapper-class.md)<br/>

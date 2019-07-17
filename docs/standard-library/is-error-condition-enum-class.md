@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_error_condition_enum class
 ms.assetid: 752bb87a-c61c-4304-9254-5aaf228b59c0
-ms.openlocfilehash: 1b5b55431db806bb109a58199ad9d2d7c16f38ff
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 213970d6260eaf55ac1bd678e6317cf2346ed9bc
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62162428"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245175"
 ---
 # <a name="iserrorconditionenum-class"></a>Classe is_error_condition_enum
 
@@ -21,7 +21,7 @@ Representa um predicado de tipo que testa a enumeração [error_condition](../st
 
 ```cpp
 template <_Enum>
-class is_error_condition_enum;
+    class is_error_condition_enum;
 ```
 
 ## <a name="remarks"></a>Comentários
@@ -30,13 +30,6 @@ Uma instância deste [predicado de tipo](../standard-library/type-traits.md) ser
 
 É permitido adicionar especializações a este tipo para tipos definidos pelo usuário.
 
-## <a name="requirements"></a>Requisitos
-
-**Cabeçalho:** \<system_error>
-
-**Namespace:** std
-
 ## <a name="see-also"></a>Consulte também
 
 [<type_traits>](../standard-library/type-traits.md)<br/>
-[<system_error>](../standard-library/system-error.md)<br/>

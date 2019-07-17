@@ -16,21 +16,16 @@ helpviewer_keywords:
 - std::operatoroperator&gt=; (forward_list)
 - std::operatoroperator&lt; (forward_list)
 - std::operatoroperator&lt;= (forward_list)
-ms.openlocfilehash: 4126b81f61bd37a7a12e0621c323ec832c5b2ab7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 64a49273cafd72158f176ee34ec271557ebee097
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159425"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68240654"
 ---
 # <a name="ltforwardlistgt-operators"></a>Operadores &lt;forward_list&gt;
 
-||||
-|-|-|-|
-|[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|
-|[operator&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|[operator==](#op_eq_eq)|
-
-## <a name="op_eq_eq"></a>  operator==
+## <a name="op_eq_eq"></a> operador = =
 
 Testa se o objeto da lista de encaminhamento à esquerda do operador é igual ao objeto da lista de encaminhamento à direita.
 
@@ -42,16 +37,17 @@ bool operator==(
 
 ### <a name="parameters"></a>Parâmetros
 
-|Parâmetro|Descrição|
-|---------------|-----------------|
-|*left*|Um objeto do tipo `forward_list`.|
-|*right*|Um objeto do tipo `forward_list`.|
+*À esquerda*\
+Um objeto do tipo `forward_list`.
+
+*Certo*\
+Um objeto do tipo `forward_list`.
 
 ### <a name="remarks"></a>Comentários
 
 Esta função de modelo sobrecarrega `operator==` para comparar dois objetos da classe de modelo `forward_list`. A função retorna `distance(left.begin(), end()) == distance(right.begin(),right.end()) && equal(left. begin(),left. end(),right.begin())`.
 
-## <a name="op_neq"></a>  operator!=
+## <a name="op_neq"></a> operador! =
 
 Testa se o objeto da lista de encaminhamento à esquerda do operador não é igual ao objeto da lista de encaminhamento à direita.
 
@@ -63,10 +59,11 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parâmetros
 
-|Parâmetro|Descrição|
-|---------------|-----------------|
-|*left*|Um objeto do tipo `forward_list`.|
-|*right*|Um objeto do tipo `forward_list`.|
+*À esquerda*\
+Um objeto do tipo `forward_list`.
+
+*Certo*\
+Um objeto do tipo `forward_list`.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -76,7 +73,7 @@ bool operator!=(
 
 Esta função do modelo retorna `!(left == right)`.
 
-## <a name="op_lt"></a>  operator&lt;
+## <a name="op_lt"></a> Operador&lt;
 
 Testa se o objeto da lista de encaminhamento à esquerda do operador é menor que o objeto da lista de encaminhamento à direita.
 
@@ -88,10 +85,11 @@ bool operator<(
 
 ### <a name="parameters"></a>Parâmetros
 
-|Parâmetro|Descrição|
-|---------------|-----------------|
-|*left*|Um objeto do tipo `forward_list`.|
-|*right*|Um objeto do tipo `forward_list`.|
+*À esquerda*\
+Um objeto do tipo `forward_list`.
+
+*Certo*\
+Um objeto do tipo `forward_list`.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -101,7 +99,7 @@ bool operator<(
 
 Esta função de modelo sobrecarrega `operator<` para comparar dois objetos da classe de modelo `forward_list`. A função retorna `lexicographical_compare(lhs. begin(), lhs. end(), rhs.begin(), rhs.end())`.
 
-## <a name="op_lt_eq"></a>  operator&lt;=
+## <a name="op_lt_eq"></a> operador&lt;=
 
 Testa se o objeto da lista de encaminhamento à esquerda do operador é menor ou igual ao objeto da lista de encaminhamento à direita.
 
@@ -113,10 +111,11 @@ bool operator<=(
 
 ### <a name="parameters"></a>Parâmetros
 
-|Parâmetro|Descrição|
-|---------------|-----------------|
-|*left*|Um objeto do tipo `forward_list`.|
-|*right*|Um objeto do tipo `forward_list`.|
+*À esquerda*\
+Um objeto do tipo `forward_list`.
+
+*Certo*\
+Um objeto do tipo `forward_list`.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -126,7 +125,7 @@ bool operator<=(
 
 Esta função do modelo retorna `!(right < left)`.
 
-## <a name="op_gt"></a>  operator&gt;
+## <a name="op_gt"></a> Operador&gt;
 
 Testa se o objeto da lista de encaminhamento à esquerda do operador é maior que o objeto da lista de encaminhamento à direita.
 
@@ -138,10 +137,11 @@ bool operator>(
 
 ### <a name="parameters"></a>Parâmetros
 
-|Parâmetro|Descrição|
-|---------------|-----------------|
-|*left*|Um objeto do tipo `forward_list`.|
-|*right*|Um objeto do tipo `forward_list`.|
+*À esquerda*\
+Um objeto do tipo `forward_list`.
+
+*Certo*\
+Um objeto do tipo `forward_list`.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -151,7 +151,7 @@ bool operator>(
 
 Esta função do modelo retorna `right < left`.
 
-## <a name="op_gt_eq"></a>  operator&gt;=
+## <a name="op_gt_eq"></a> operador&gt;=
 
 Testa se o objeto da lista de encaminhamento à esquerda do operador é maior ou igual ao objeto da lista de encaminhamento à direita.
 
@@ -163,10 +163,11 @@ bool operator>=(
 
 ### <a name="parameters"></a>Parâmetros
 
-|Parâmetro|Descrição|
-|---------------|-----------------|
-|*left*|Um objeto do tipo `forward_list`.|
-|*right*|Um objeto do tipo `forward_list`.|
+*À esquerda*\
+Um objeto do tipo `forward_list`.
+
+*Certo*\
+Um objeto do tipo `forward_list`.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -175,7 +176,3 @@ bool operator>=(
 ### <a name="remarks"></a>Comentários
 
 A função do modelo retorna `!(left < right)`.
-
-## <a name="see-also"></a>Consulte também
-
-[<forward_list>](../standard-library/forward-list.md)<br/>

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - exceptions [C++], bad_cast
 - bad_cast keyword [C++]
 ms.assetid: 31eae1e7-d8d5-40a0-9fef-64a6a4fc9021
-ms.openlocfilehash: 028fa8cc90b33aca6a37fb3b7f58b8c5fad81bd7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b40f64671e7c259b7dc04b31a11d20d0fc76c5c4
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62284767"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68242387"
 ---
 # <a name="badcast-exception"></a>Exceção bad_cast
 
@@ -31,12 +31,7 @@ catch (bad_cast)
 A interface para **bad_cast** é:
 
 ```cpp
-class bad_cast : public exception {
-public:
-   bad_cast(const char * _Message = "bad cast");
-   bad_cast(const bad_cast &);
-   virtual ~bad_cast();
-};
+class bad_cast : public exception
 ```
 
 O código a seguir contém um exemplo de uma falha na **dynamic_cast** que gera a **bad_cast** exceção.
@@ -81,6 +76,49 @@ Em seguida, inverta o sentido da conversão na **tente** bloquear da seguinte ma
 
 ```cpp
 Shape& ref_shape = dynamic_cast<Shape&>(ref_circle);
+```
+
+## <a name="members"></a>Membros
+
+### <a name="constructors"></a>Construtores
+
+|Construtor|Descrição|
+|-|-|
+|[bad_cast](#bad_cast)|O construtor para objetos do tipo `bad_cast`.|
+
+### <a name="functions"></a>Funções
+
+|Função|Descrição|
+|-|-|
+|[what](#what)|TBD|
+
+### <a name="operators"></a>Operadores
+
+|Operador|Descrição|
+|-|-|
+|[operator=](#op_eq)|Um operador de atribuição que atribui um `bad_cast` objeto para outro.|
+
+## <a name="bad_cast"></a> bad_cast
+
+O construtor para objetos do tipo `bad_cast`.
+
+```cpp
+bad_cast(const char * _Message = "bad cast");
+bad_cast(const bad_cast &);
+```
+
+## <a name="op_eq"></a> operador =
+
+Um operador de atribuição que atribui um `bad_cast` objeto para outro.
+
+```cpp
+bad_cast& operator=(const bad_cast&) noexcept;
+```
+
+## <a name="what"></a> o que
+
+```cpp
+const char* what() const noexcept override;
 ```
 
 ## <a name="see-also"></a>Consulte também

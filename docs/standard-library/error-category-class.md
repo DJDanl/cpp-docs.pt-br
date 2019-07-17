@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::error_category::message
 - std::error_category::name
 ms.assetid: e0a71e14-852d-4905-acd6-5f8ed426706d
-ms.openlocfilehash: 55ff55b2026b741a2b7062d815fe43d6d19b078b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 308fa1a2309ddfda1a02fe6a687360185c1e7c6e
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413704"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245848"
 ---
 # <a name="errorcategory-class"></a>Classe error_category
 
@@ -31,42 +31,45 @@ Representa a base abstrata e comum para objetos e descreve uma categoria de cód
 
 ```cpp
 class error_category;
+
+constexpr error_category() noexcept;
+virtual ~error_category();
+error_category(const error_category&) = delete
 ```
 
 ## <a name="remarks"></a>Comentários
 
 Dois objetos predefinidos implementam `error_category`: [generic_category](../standard-library/system-error-functions.md#generic_category) e [system_category](../standard-library/system-error-functions.md#system_category).
 
+## <a name="members"></a>Membros
+
 ### <a name="typedefs"></a>Typedefs
 
-|Nome de tipo|Descrição|
+|||
 |-|-|
 |[value_type](#value_type)|Um tipo que representa o valor do código de erro armazenado.|
 
-### <a name="member-functions"></a>Funções de membro
+### <a name="functions"></a>Funções
 
-|Função de membro|Descrição|
+|||
 |-|-|
 |[default_error_condition](#default_error_condition)|Armazena o valor de código de erro para um objeto de condição de erro.|
 |[equivalent](#equivalent)|Retorna um valor que especifica se os objetos de erro são equivalentes.|
+|[generic_category](#generic)||
 |[message](#message)|Retorna o nome do código de erro especificado.|
 |[name](#name)|Retorna o nome da categoria.|
+|[system_category](#system)||
 
 ### <a name="operators"></a>Operadores
 
-|Operador|Descrição|
+|||
 |-|-|
+|[operator=](#op_as)||
 |[operator==](#op_eq_eq)|Testa a igualdade entre objetos `error_category`.|
 |[operator!=](#op_neq)|Testa a desigualdade entre objetos `error_category`.|
 |[operator<](#op_lt)|Testa se um objeto [error_category](../standard-library/error-category-class.md) é menor que o objeto `error_category` passado para comparação.|
 
-## <a name="requirements"></a>Requisitos
-
-**Cabeçalho:** \<system_error>
-
-**Namespace:** std
-
-## <a name="default_error_condition"></a>  error_category::default_error_condition
+## <a name="default_error_condition"></a> default_error_condition
 
 Armazena o valor de código de erro para um objeto de condição de erro.
 
@@ -76,9 +79,8 @@ virtual error_condition default_error_condition(int _Errval) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-|Parâmetro|Descrição|
-|---------------|-----------------|
-|*_Errval*|O valor de código de erro para armazenar em [error_condition](../standard-library/error-condition-class.md).|
+*_Errval*\
+O valor de código de erro para armazenar em [error_condition](../standard-library/error-condition-class.md).
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -86,7 +88,7 @@ Retorna `error_condition(_Errval, *this)`.
 
 ### <a name="remarks"></a>Comentários
 
-## <a name="equivalent"></a>  error_category::equivalent
+### <a name="equivalent"></a> equivalente
 
 Retorna um valor que especifica se os objetos de erro são equivalentes.
 
@@ -98,25 +100,34 @@ virtual bool equivalent(const error_code& _Code,
     value_type _Errval) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>Parâmetros
 
-|Parâmetro|Descrição|
-|---------------|-----------------|
-|*_Errval*|O valor do código de erro a ser comparado.|
-|*_Cond*|O objeto [error_condition](../standard-library/error-condition-class.md) a ser comparado.|
-|*_Code*|O objeto [error_code](../standard-library/error-code-class.md) a ser comparado.|
+*_Errval*\
+O valor do código de erro a ser comparado.
 
-### <a name="return-value"></a>Valor de retorno
+*_Cond*\
+O objeto [error_condition](../standard-library/error-condition-class.md) a ser comparado.
+
+*Code*\
+O objeto [error_code](../standard-library/error-code-class.md) a ser comparado.
+
+#### <a name="return-value"></a>Valor de retorno
 
 **Verdadeiro** se a categoria e valor forem iguais; caso contrário, **falso**.
 
-### <a name="remarks"></a>Comentários
+#### <a name="remarks"></a>Comentários
 
 A primeira função membro retorna `*this == _Cond.category() && _Cond.value() == _Errval`.
 
 A segunda função membro retorna `*this == _Code.category() && _Code.value() == _Errval`.
 
-## <a name="message"></a>  error_category::message
+### <a name="generic"></a> generic_category
+
+```cpp
+const error_category& generic_category();
+```
+
+### <a name="message"></a> Mensagem
 
 Retorna o nome do código de erro especificado.
 
@@ -124,19 +135,18 @@ Retorna o nome do código de erro especificado.
 virtual string message(error_code::value_type val) const = 0;
 ```
 
-### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>Parâmetros
 
-|Parâmetro|Descrição|
-|---------------|-----------------|
-|*val*|O valor do código de erro a ser descrito.|
+*Val*\
+O valor do código de erro a ser descrito.
 
-### <a name="return-value"></a>Valor de retorno
+#### <a name="return-value"></a>Valor de retorno
 
 Retorna um nome descritivo do código de erro *val* para a categoria.
 
-### <a name="remarks"></a>Comentários
+#### <a name="remarks"></a>Comentários
 
-## <a name="name"></a>  error_category::name
+### <a name="name"></a> Nome
 
 Retorna o nome da categoria.
 
@@ -144,13 +154,18 @@ Retorna o nome da categoria.
 virtual const char *name() const = 0;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+#### <a name="return-value"></a>Valor de retorno
 
 Retorna o nome da categoria como uma cadeia de caracteres de byte com terminação nula.
 
-### <a name="remarks"></a>Comentários
+### <a name="op_as"></a> operador =
 
-## <a name="op_eq_eq"></a>  error_category::operator==
+```cpp
+error_category& operator=(const error_category&) = delete;
+```
+
+
+### <a name="op_eq_eq"></a> operador = =
 
 Testa a igualdade entre objetos `error_category`.
 
@@ -158,21 +173,20 @@ Testa a igualdade entre objetos `error_category`.
 bool operator==(const error_category& right) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>Parâmetros
 
-|Parâmetro|Descrição|
-|---------------|-----------------|
-|*right*|O objeto a ser testado quanto à igualdade.|
+*Certo*\
+O objeto a ser testado quanto à igualdade.
 
-### <a name="return-value"></a>Valor de retorno
+#### <a name="return-value"></a>Valor de retorno
 
 **true** se os objetos forem iguais; **false** se os objetos não forem iguais.
 
-### <a name="remarks"></a>Comentários
+#### <a name="remarks"></a>Comentários
 
 Esse operador de membro retorna `this == &right`.
 
-## <a name="op_neq"></a>  error_category::operator!=
+### <a name="op_neq"></a> operador! =
 
 Testa a desigualdade entre objetos `error_category`.
 
@@ -180,21 +194,20 @@ Testa a desigualdade entre objetos `error_category`.
 bool operator!=(const error_category& right) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>Parâmetros
 
-|Parâmetro|Descrição|
-|---------------|-----------------|
-|*right*|O objeto a ser testado quanto à desigualdade.|
+*Certo*\
+O objeto a ser testado quanto à desigualdade.
 
-### <a name="return-value"></a>Valor de retorno
+#### <a name="return-value"></a>Valor de retorno
 
 **True** se o `error_category` objeto não é igual ao `error_category` objeto passado *direita*; caso contrário **false**.
 
-### <a name="remarks"></a>Comentários
+#### <a name="remarks"></a>Comentários
 
 O operador de membro retorna `(!*this == right)`.
 
-## <a name="op_lt"></a>  error_category::operator&lt;
+### <a name="op_lt"></a> Operador&lt;
 
 Testa se um objeto [error_category](../standard-library/error-category-class.md) é menor que o objeto `error_category` passado para comparação.
 
@@ -202,21 +215,26 @@ Testa se um objeto [error_category](../standard-library/error-category-class.md)
 bool operator<(const error_category& right) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>Parâmetros
 
-|Parâmetro|Descrição|
-|---------------|-----------------|
-|*right*|O objeto `error_category` a ser comparado.|
+*Certo*\
+O objeto `error_category` a ser comparado.
 
-### <a name="return-value"></a>Valor de retorno
+#### <a name="return-value"></a>Valor de retorno
 
 **true** se o objeto `error_category` for menor que o objeto `error_category` passado para comparação. Caso contrário, **false**.
 
-### <a name="remarks"></a>Comentários
+#### <a name="remarks"></a>Comentários
 
 O operador de membro retorna `this < &right`.
 
-## <a name="value_type"></a>  error_category::value_type
+### <a name="system"></a> system_category
+
+```cpp
+const error_category& system_category();
+```
+
+### <a name="value_type"></a> value_type
 
 Um tipo que representa o valor do código de erro armazenado.
 
@@ -224,10 +242,6 @@ Um tipo que representa o valor do código de erro armazenado.
 typedef int value_type;
 ```
 
-### <a name="remarks"></a>Comentários
+#### <a name="remarks"></a>Comentários
 
 Essa definição de tipo é um sinônimo de **int**.
-
-## <a name="see-also"></a>Consulte também
-
-[<system_error>](../standard-library/system-error.md)<br/>

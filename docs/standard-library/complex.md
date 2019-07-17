@@ -7,22 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - complex header
 ms.assetid: 5e728995-3059-496a-9ce9-61d1bfbe4f2b
-ms.openlocfilehash: afcdb1246d9c02f83dbc8708326d10e802ad2779
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e3d4330f8b0fcbce940f6647ebb8920f0b1969b6
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62212086"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68244680"
 ---
 # <a name="ltcomplexgt"></a>&lt;complex&gt;
 
 Define a classe de modelo do contêiner `complex` e seus modelos de suporte.
 
-## <a name="syntax"></a>Sintaxe
+## <a name="requirements"></a>Requisitos
 
-```cpp
-#include <complex>
-```
+**Cabeçalho**: \<complexo>
+
+**Namespace:** std
 
 ## <a name="remarks"></a>Comentários
 
@@ -54,7 +54,7 @@ Há três formas comuns de representar um número complexo *z*:
 
 - Polar: *z* = *r* (cos *p* + *eu* sin *p*)
 
-- Exponential: *z* = *r* \* *e*<sup>*ip*</sup>
+- Exponencial: *z* = *r* \* *eletrônico*<sup>*ip*</sup>
 
 Os termos usados nessas representações padrão de um número complexo são referidas como o seguinte:
 
@@ -68,12 +68,20 @@ Os termos usados nessas representações padrão de um número complexo são ref
 
 A menos que especificado de outra forma, funções que podem retornar vários valores são necessárias para retornar um valor de entidade de segurança para seus argumentos de maior que - π e menor que ou igual a + π para manter a eles com valor único. Todos os ângulos devem ser expresso em radianos, em que há 2π radianos (360 graus) em um círculo.
 
+## <a name="members"></a>Membros
+
 ### <a name="functions"></a>Funções
 
-|Função|Descrição|
+|||
 |-|-|
 |[abs](../standard-library/complex-functions.md#abs)|Calcula o módulo de um número complexo.|
+|[acos](../standard-library/complex-functions.md#acos)||
+|[acosh](../standard-library/complex-functions.md#acosh)||
 |[arg](../standard-library/complex-functions.md#arg)|Extrai o argumento de um número complexo.|
+|[asin](../standard-library/complex-functions.md#asin)||
+|[asinh](../standard-library/complex-functions.md#asinh)||
+|[atan](../standard-library/complex-functions.md#atan)||
+|[atanh](../standard-library/complex-functions.md#atanh)||
 |[conj](../standard-library/complex-functions.md#conj)|Retorna o conjugado complexo de um número complexo.|
 |[cos](../standard-library/complex-functions.md#cos)|Retorna o cosseno de um número complexo.|
 |[cosh](../standard-library/complex-functions.md#cosh)|Retorna o cosseno hiperbólico de um número complexo.|
@@ -84,6 +92,7 @@ A menos que especificado de outra forma, funções que podem retornar vários va
 |[norm](../standard-library/complex-functions.md#norm)|Extrai a norma de um número complexo.|
 |[polar](../standard-library/complex-functions.md#polar)|Retorna o número complexo, que corresponde a um módulo e um argumento especificado, na forma cartesiana.|
 |[pow](../standard-library/complex-functions.md#pow)|Avalia o número complexo obtido elevando uma base que é um número complexo à potência de outro número complexo.|
+|[PROJ](../standard-library/complex-functions.md#proj)||
 |[real](../standard-library/complex-functions.md#real)|Extrai o componente real de um número complexo.|
 |[sin](../standard-library/complex-functions.md#sin)|Retorna o seno de um número complexo.|
 |[sinh](../standard-library/complex-functions.md#sinh)|Retorna o seno hiperbólico de um número complexo.|
@@ -93,7 +102,7 @@ A menos que especificado de outra forma, funções que podem retornar vários va
 
 ### <a name="operators"></a>Operadores
 
-|Operador|Descrição|
+|||
 |-|-|
 |[operator!=](../standard-library/complex-operators.md#op_neq)|Testa a desigualdade entre dois números complexos, um ou ambos podem pertencer ao subconjunto do tipo das partes reais e imaginárias.|
 |[operator*](../standard-library/complex-operators.md#op_star)|Multiplica dois números complexos, um ou ambos podem pertencer ao subconjunto do tipo das partes reais e imaginárias.|
@@ -106,7 +115,7 @@ A menos que especificado de outra forma, funções que podem retornar vários va
 
 ### <a name="classes"></a>Classes
 
-|Classe|Descrição|
+|||
 |-|-|
 |[complex\<double>](../standard-library/complex-double.md)|A classe de modelo explicitamente especializada descreve um objeto que armazena um par ordenado de objetos, ambos do tipo **duplas**, em que o primeiro representa a parte real de um número complexo e o segundo representa a parte imaginária.|
 |[complex\<float>](../standard-library/complex-float.md)|A classe de modelo explicitamente especializada descreve um objeto que armazena um par ordenado de objetos, ambos do tipo **float**, em que o primeiro representa a parte real de um número complexo e o segundo representa a parte imaginária.|

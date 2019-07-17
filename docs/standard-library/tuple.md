@@ -6,49 +6,64 @@ f1_keywords:
 helpviewer_keywords:
 - tuple header
 ms.assetid: e4ef5c2d-318b-44f6-8bce-fce4ecd796a3
-ms.openlocfilehash: 2e46b3997096c6e61f7dd6140131e3f10223b8e7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ce6e005990d05676fb20752b5808d32ec88dd7b3
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399415"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68241544"
 ---
 # <a name="lttuplegt"></a>&lt;tuple&gt;
 
 Define um modelo `tuple` cujas instâncias mantêm objetos de tipos variados.
 
-## <a name="syntax"></a>Sintaxe
+## <a name="requirements"></a>Requisitos
 
-```cpp
-#include <tuple>
-```
+**Cabeçalho:** \<tuple>
 
-### <a name="classes"></a>Classes
+**Namespace:** std
 
-|Classe|Descrição|
+## <a name="members"></a>Membros
+
+### <a name="classes-and-structs"></a>Classes e structs
+
+|||
 |-|-|
-|[tuple](../standard-library/tuple-class.md)|Encapsula uma sequência de comprimento fixo de elementos.|
+|[Classe tuple](../standard-library/tuple-class.md)|Encapsula uma sequência de comprimento fixo de elementos.|
 |[Classe tuple_element](../standard-library/tuple-element-class-tuple.md)|Encapsula o tipo de um elemento `tuple`.|
 |[Classe tuple_size](../standard-library/tuple-size-class-tuple.md)|Encapsula contagem de elemento `tuple`.|
+|[uses_allocator](../standard-library/uses-allocator-structure.md)||
+
+### <a name="objects"></a>Objetos
+
+|||
+|-|-|
+|[tuple_element_t](../standard-library/tuple-functions.md#tuple_element_t)||
+|[tuple_size_v](../standard-library/tuple-functions.md#tuple_size_v)||
 
 ### <a name="operators"></a>Operadores
 
-|Operador|Descrição|
+|||
 |-|-|
-|[operator==](../standard-library/tuple-operators.md#op_eq_eq)|Comparação de objetos `tuple`, igual a|
-|[operator!=](../standard-library/tuple-operators.md#op_neq)|Comparação de objetos `tuple`, diferente de|
-|[operator<](../standard-library/tuple-operators.md#op_lt)|Comparação de objetos `tuple`, menor que|
-|[operator<=](../standard-library/tuple-operators.md#op_lt_eq)|Comparação de objetos `tuple`, menor que ou igual a|
-|[operator>](../standard-library/tuple-operators.md#op_gt)|Comparação de objetos `tuple`, maior que|
-|[operator>=](../standard-library/tuple-operators.md#op_gt_eq)|Comparação de objetos `tuple`, maior que ou igual a|
+|[operator==](../standard-library/tuple-operators.md#op_eq_eq)|Comparação de `tuple` objetos, é igual.|
+|[operator!=](../standard-library/tuple-operators.md#op_neq)|Comparação de `tuple` objetos, não é iguais.|
+|[operator<](../standard-library/tuple-operators.md#op_lt)|Comparação de `tuple` objetos, menor que.|
+|[operator<=](../standard-library/tuple-operators.md#op_lt_eq)|Comparação de `tuple` objetos, menor ou igual.|
+|[operator>](../standard-library/tuple-operators.md#op_gt)|Comparação de `tuple` objetos, maior que.|
+|[operator>=](../standard-library/tuple-operators.md#op_gt_eq)|Comparação de `tuple` objetos, maiores que ou iguais.|
 
 ### <a name="functions"></a>Funções
 
-|Função|Descrição|
+|||
 |-|-|
+|[apply](../standard-library/tuple-functions.md#apply)|Chama uma função com uma tupla.|
+|[forward_as_tuple](../standard-library/tuple-functions.md#forward)|Constrói uma tupla de referências.|
 |[get](../standard-library/tuple-functions.md#get)|Obtém um elemento de um objeto `tuple`.|
+|[make_from_tuple](../standard-library/tuple-functions.md#make_from_tuple)|Abreviação para tornar um `tuple`.|
 |[make_tuple](../standard-library/tuple-functions.md#make_tuple)|Constitui uma `tuple` dos valores de elemento.|
+|[swap](../standard-library/tuple-functions.md#swap)||
 |[tie](../standard-library/tuple-functions.md#tie)|Constitui um `tuple` das referências do elemento.|
+|[tuple_cat](../standard-library/tuple-functions.md#tuple_cat)|Constrói um objeto de tupla com um intervalo de elementos do tipo.|
 
 ## <a name="see-also"></a>Consulte também
 

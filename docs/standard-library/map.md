@@ -6,22 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - map header
 ms.assetid: bbf76680-7362-456e-88fa-ecda93561b6a
-ms.openlocfilehash: 0ea47a28599df543987831ee13a2c645f72a0113
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 96ca19b2562c3f145555c3c1b1d8db4fc700ed91
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412989"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243318"
 ---
 # <a name="ltmapgt"></a>&lt;map&gt;
 
 Define o mapa e o multimapa das classes de modelo do contêiner e seus modelos de suporte.
 
-## <a name="syntax"></a>Sintaxe
+## <a name="requirements"></a>Requisitos
 
-```cpp
-#include <map>
-```
+**Cabeçalho:** \<map>
+
+**Namespace:** std
+
+> [!NOTE]
+> O \<map > biblioteca também usa o `#include <initializer_list>` instrução.
 
 ## <a name="members"></a>Membros
 
@@ -44,7 +47,7 @@ Define o mapa e o multimapa das classes de modelo do contêiner e seus modelos d
 
 ### <a name="classes"></a>Classes
 
-|Classe|Descrição|
+|||
 |-|-|
 |[Classe value_compare](../standard-library/value-compare-class-map.md)|Fornece um objeto de função que pode comparar os elementos de um mapa ao comparar os valores de suas chaves para determinar sua ordem relativa no mapa.|
 |[Classe map](../standard-library/map-class.md)|Usada para o armazenamento e recuperação de dados de uma coleção em que cada um dos elementos tem uma chave exclusiva, com a qual os dados são automaticamente ordenados.|

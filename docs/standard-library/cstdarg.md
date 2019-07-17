@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - cstdarg header
 ms.assetid: 639b4ef7-8408-4640-9343-41631f0ab663
-ms.openlocfilehash: 25a7cbdccf1287043659772b760a14fefd52e4ea
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f8d2d3b886cfa46905e8f17f1e13b51881b80191
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394294"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68244479"
 ---
 # <a name="ltcstdarggt"></a>&lt;cstdarg&gt;
 
-Inclui o cabeçalho \<stdarg.h> da biblioteca C Padrão e adiciona os nomes associados ao namespace `std`.
+Inclui o cabeçalho da biblioteca C padrão \<stdarg. h > e adiciona os nomes associados ao `std` namespace. Inclusão desse cabeçalho garante que os nomes declarados usando vinculação externa no cabeçalho da biblioteca C padrão sejam declarados no `std` namespace.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -23,9 +23,18 @@ Inclui o cabeçalho \<stdarg.h> da biblioteca C Padrão e adiciona os nomes asso
 #include <cstdarg>
 ```
 
-## <a name="remarks"></a>Comentários
+## <a name="namespace-and-macros"></a>Namespace e Macros
 
-A inclusão desse cabeçalho garante que os nomes declarados usando vinculação externa no cabeçalho da biblioteca C Padrão sejam declarados no namespace `std`.
+```cpp
+namespace std {
+    using va_list = see below;
+}
+
+#define va_arg(V, P)
+#define va_copy(VDST, VSRC)
+#define va_end(V)
+#define va_start(V, P)
+```
 
 ## <a name="see-also"></a>Consulte também
 

@@ -10,22 +10,16 @@ f1_keywords:
 - memory/std::operator<<
 - memory/std::operator==
 ms.assetid: 257e3ba9-c4c2-4ae8-9b11-b156ba9c28de
-ms.openlocfilehash: ca1412efb4d095ef9a371b3739d4c282683821dc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 661f1bb4c0f5734d88dd23f73c69b362f59a76c2
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348452"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243828"
 ---
 # <a name="ltmemorygt-operators"></a>Operadores &lt;memory&gt;
 
-||||
-|-|-|-|
-|[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|
-|[operator&lt;](#op_lt)|[operator&lt;&lt;](#op_lt_lt)|[operator&lt;=](#op_lt_eq)|
-|[operator==](#op_eq_eq)|
-
-## <a name="op_neq"></a>  operator!=
+## <a name="op_neq"></a> operador! =
 
 Testa a desigualdade entre objetos.
 
@@ -48,16 +42,16 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parâmetros
 
-*left*<br/>
+*À esquerda*\
 Um dos objetos a ser testado quanto à desigualdade.
 
-*right*<br/>
+*Certo*\
 Um dos objetos a ser testado quanto à desigualdade.
 
-*Ty1*<br/>
+*Ty1*\
 O tipo controlado pelo ponteiro compartilhado esquerdo.
 
-*Ty2*<br/>
+*Ty2*\
 O tipo controlado pelo ponteiro compartilhado direito.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -126,7 +120,7 @@ sp0 != sp0 == false
 sp0 != sp1 == true
 ```
 
-## <a name="op_eq_eq"></a>  operator==
+## <a name="op_eq_eq"></a> operador = =
 
 Testa a igualdade entre objetos.
 
@@ -149,16 +143,16 @@ bool operator==(
 
 ### <a name="parameters"></a>Parâmetros
 
-*left*<br/>
+*À esquerda*\
 Um dos objetos a ser testado quanto à igualdade.
 
-*right*<br/>
+*Certo*\
 Um dos objetos a ser testado quanto à igualdade.
 
-*Ty1*<br/>
+*Ty1*\
 O tipo controlado pelo ponteiro compartilhado esquerdo.
 
-*Ty2*<br/>
+*Ty2*\
 O tipo controlado pelo ponteiro compartilhado direito.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -238,7 +232,7 @@ sp0 == sp0 == true
 sp0 == sp1 == false
 ```
 
-## <a name="op_gt_eq"></a>  operator&gt;=
+## <a name="op_gt_eq"></a> operador&gt;=
 
 Testa um objeto que é maior que ou igual a um segundo objeto.
 
@@ -256,23 +250,23 @@ bool operator>=(
 
 ### <a name="parameters"></a>Parâmetros
 
-*left*<br/>
+*À esquerda*\
 Um dos objetos a ser comparado.
 
-*right*<br/>
+*Certo*\
 Um dos objetos a ser comparado.
 
-*Ty1*<br/>
+*Ty1*\
 O tipo controlado pelo ponteiro compartilhado esquerdo.
 
-*Ty2*<br/>
+*Ty2*\
 O tipo controlado pelo ponteiro compartilhado direito.
 
 ### <a name="remarks"></a>Comentários
 
 Os operadores de modelo retornam `left.get() >= right.get()`.
 
-## <a name="op_lt"></a>  operator&lt;
+## <a name="op_lt"></a> Operador&lt;
 
 Testa um objeto que é menor que um segundo objeto.
 
@@ -290,19 +284,19 @@ bool operator<(
 
 ### <a name="parameters"></a>Parâmetros
 
-*left*<br/>
+*À esquerda*\
 Um dos objetos a ser comparado.
 
-*right*<br/>
+*Certo*\
 Um dos objetos a ser comparado.
 
-*Ty1*<br/>
+*Ty1*\
 O tipo controlado pelo ponteiro esquerdo.
 
-*Ty2*<br/>
+*Ty2*\
 O tipo controlado pelo ponteiro direito.
 
-## <a name="op_lt_eq"></a>  operator&lt;=
+## <a name="op_lt_eq"></a> operador&lt;=
 
 Testa um objeto que é maior ou igual a um segundo objeto de uma classe especificada.
 
@@ -320,23 +314,23 @@ bool operator<=(
 
 ### <a name="parameters"></a>Parâmetros
 
-*left*<br/>
+*À esquerda*\
 Um dos objetos a ser comparado.
 
-*right*<br/>
+*Certo*\
 Um dos objetos a ser comparado.
 
-*Ty1*<br/>
+*Ty1*\
 O tipo controlado pelo ponteiro compartilhado esquerdo.
 
-*Ty2*<br/>
+*Ty2*\
 O tipo controlado pelo ponteiro compartilhado direito.
 
 ### <a name="remarks"></a>Comentários
 
 O operador de modelo retorna `left.get() <= right.get()`
 
-## <a name="op_gt"></a>  operator&gt;
+## <a name="op_gt"></a> Operador&gt;
 
 Testa um objeto que é maior que um segundo objeto.
 
@@ -354,19 +348,19 @@ bool operator>(
 
 ### <a name="parameters"></a>Parâmetros
 
-*left*<br/>
+*À esquerda*\
 Um dos objetos a ser comparado.
 
-*right*<br/>
+*Certo*\
 Um dos objetos a ser comparado.
 
-*Ty1*<br/>
+*Ty1*\
 O tipo controlado pelo ponteiro compartilhado esquerdo.
 
-*Ty2*<br/>
+*Ty2*\
 O tipo controlado pelo ponteiro compartilhado direito.
 
-## <a name="op_lt_lt"></a>  operator&lt;&lt;
+## <a name="op_lt_lt"></a> operador&lt;&lt;
 
 Grava o ponteiro compartilhado no fluxo.
 
@@ -378,19 +372,19 @@ std::basic_ostream<Elem, Tr>& operator<<(std::basic_ostream<Elem, Tr>& out,
 
 ### <a name="parameters"></a>Parâmetros
 
-*Elem*<br/>
+*Elem*\
 O tipo do elemento de fluxo.
 
-*Tr*<br/>
+*TR*\
 O tipo de características do elemento de fluxo.
 
-*Ty*<br/>
+*Ty*\
 O tipo controlado pelo ponteiro compartilhado.
 
-*out*<br/>
+*out*\
 O fluxo de saída.
 
-*sp*<br/>
+*SP*\
 O ponteiro compartilhado.
 
 ### <a name="remarks"></a>Comentários
@@ -418,7 +412,3 @@ int main()
 ```Output
 sp0 == 3f3040 (varies)
 ```
-
-## <a name="see-also"></a>Consulte também
-
-[\<memory>](../standard-library/memory.md)<br/>

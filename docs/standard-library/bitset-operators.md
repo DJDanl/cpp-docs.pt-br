@@ -12,21 +12,16 @@ helpviewer_keywords:
 - std::operator&amp; (bitset)
 - std::operator&gt;&gt; (bitset)
 - std::operator&lt;&lt; (bitset)
-ms.openlocfilehash: 1c4c1b6f6c023514a1d3ae46f6670247e4bf99d4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 30367e003d2dad95e870854098e7fcae34f50efa
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62380189"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243327"
 ---
 # <a name="ltbitsetgt-operators"></a>Operadores &lt;bitset&gt;
 
-||||
-|-|-|-|
-|[operator&amp;](#op_amp)|[operator&gt;&gt;](#op_gt_gt)|[operator&lt;&lt;](#op_lt_lt)|
-|[operator^](#op_xor)|[operator&#124;](#op_or)| |
-
-## <a name="op_amp"></a>  operator&amp;
+## <a name="op_amp"></a> Operador&amp;
 
 Executa um `AND` bit a bit entre dois bitsets.
 
@@ -40,10 +35,10 @@ operator&(
 
 ### <a name="parameters"></a>Parâmetros
 
-*left*<br/>
+*À esquerda*\
 O primeiro dos dois bitsets cujos respectivos elementos devem ser combinados com o `AND` bit a bit.
 
-*right*<br/>
+*Certo*\
 A segunda das duas valarrays cujos respectivos elementos devem ser combinados com o `AND` bit a bit.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -78,7 +73,7 @@ bitset 2: 0011
 bitset 3: 0001
 ```
 
-## <a name="op_lt_lt"></a>  operator&lt;&lt;
+## <a name="op_lt_lt"></a> operador&lt;&lt;
 
 Insere uma representação de texto da sequência de bits no fluxo de saída.
 
@@ -91,7 +86,7 @@ basic_ostream<CharType, Traits>& operator<<(
 
 ### <a name="parameters"></a>Parâmetros
 
-*right*<br/>
+*Certo*\
 Um objeto do tipo **bitset\<N>** que deve ser inserido no fluxo de saída como uma cadeia de caracteres.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -102,7 +97,7 @@ Uma representação de texto de sequência de bits em `ostr`.
 
 As sobrecargas de função de modelo `operator<<`, permitindo que um bitset seja gravado primeiro ser convertido em uma cadeia de caracteres. A função de modelo é executada efetivamente:
 
-**ostr** << _ *Right*. [to_string](bitset-class.md) < **CharType**, **Traits**, **allocator**\< **CharType**> > ( )
+**ostr** << _*direita*. [to_string](bitset-class.md) <**CharType**, **Traits**, **allocator**\<**CharType**>>)
 
 ### <a name="example"></a>Exemplo
 
@@ -135,7 +130,7 @@ int main( )
 }
 ```
 
-## <a name="op_gt_gt"></a>  operator&gt;&gt;
+## <a name="op_gt_gt"></a> operador&gt;&gt;
 
 Lê uma cadeia de caracteres de bit em um bitset.
 
@@ -150,10 +145,10 @@ _Istr,
 
 ### <a name="parameters"></a>Parâmetros
 
-*_Istr*<br/>
+*_Istr*\
 A cadeia de caracteres que é inserida no fluxo de entrada a ser inserido no bitset.
 
-*right*<br/>
+*Certo*\
 O bitset que está recebendo os bits do fluxo de entrada.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -221,7 +216,7 @@ int main()
 }
 ```
 
-## <a name="op_xor"></a> operator^
+## <a name="op_xor"></a> operador ^
 
 Executa um `EXCLUSIVE-OR` bit a bit entre dois bitsets.
 
@@ -235,10 +230,10 @@ operator^(
 
 ### <a name="parameters"></a>Parâmetros
 
-*left*<br/>
+*À esquerda*\
 O primeiro dos dois bitsets cujos respectivos elementos devem ser combinados com o `EXCLUSIVE-OR` bit a bit.
 
-*right*<br/>
+*Certo*\
 A segunda das duas valarrays cujos respectivos elementos devem ser combinados com o `EXCLUSIVE-OR` bit a bit.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -273,7 +268,7 @@ bitset 2: 0011
 bitset 3: 0110
 ```
 
-## <a name="op_or"></a> operator&#124;
+## <a name="op_or"></a> operador&#124;
 
 Executa um `OR` bit a bit entre dois bitsets.
 
@@ -287,10 +282,10 @@ operator|(
 
 ### <a name="parameters"></a>Parâmetros
 
-*left*<br/>
+*À esquerda*\
 O primeiro dos dois bitsets cujos respectivos elementos devem ser combinados com o `OR` bit a bit.
 
-*right*<br/>
+*Certo*\
 A segunda das duas valarrays cujos respectivos elementos devem ser combinados com o `OR` bit a bit.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -324,7 +319,3 @@ bitset 1: 0101
 bitset 2: 0011
 bitset 3: 0111
 ```
-
-## <a name="see-also"></a>Consulte também
-
-[\<bitset>](../standard-library/bitset.md)<br/>
