@@ -16,38 +16,36 @@ helpviewer_keywords:
 - std::operator&lt; (utility)
 - std::operator&lt;= (utility)
 - std::operator== (utility)
-ms.openlocfilehash: 418b18851aaf8da44ee0ed2df7ff9e60a0b5ef1f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ec6c996487dc2e6c5ce628fe5e080b4f601479d9
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62167563"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246286"
 ---
 # <a name="ltutilitygt-operators"></a>Operadores &lt;utility&gt;
 
-||||
-|-|-|-|
-|[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|
-|[operator&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|[operator==](#op_eq_eq)|
+> [!NOTE]
+> Operadores usando `Type&` estão incluídos em `namespace rel_ops`.
 
-## <a name="op_neq"></a>  operator!=
+## <a name="op_neq"></a> operador! =
 
 Testa se o objeto pair à esquerda do operador é diferente do objeto pair à direita.
 
 ```cpp
 template <class Type>
-constexpr bool operator!=(const Type& left, const Type& right);
+    constexpr bool operator!=(const Type& left, const Type& right);
 
 template <class T, class U>
-constexpr bool operator!=(const pair<T, U>& left, const pair<T, U>& right);
+    constexpr bool operator!=(const pair<T, U>& left, const pair<T, U>& right);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*left*<br/>
+*À esquerda*\
 Um objeto do tipo `pair`.
 
-*right*<br/>
+*Certo*\
 Um objeto do tipo `pair`.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -105,7 +103,7 @@ The pairs p1 and p2 are not equal.
 The pairs p1 and p3 are equal.
 ```
 
-## <a name="op_eq_eq"></a>  operator==
+## <a name="op_eq_eq"></a> operador = =
 
 Testa se o objeto pair à esquerda do operador é igual ao objeto pair à direita.
 
@@ -116,10 +114,10 @@ constexpr bool operator==(const pair<T, U>& left, const pair<T, U>& right);
 
 ### <a name="parameters"></a>Parâmetros
 
-*left*<br/>
+*À esquerda*\
 Um objeto do tipo `pair`.
 
-*right*<br/>
+*Certo*\
 Um objeto do tipo `pair`.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -168,7 +166,7 @@ int main( )
 }
 ```
 
-## <a name="op_lt"></a>  operator&lt;
+## <a name="op_lt"></a> Operador&lt;
 
 Testa se o objeto pair à esquerda do operador é menor que o objeto pair à direita.
 
@@ -179,10 +177,10 @@ constexpr bool operator<(const pair<T, U>& left, const pair<T, U>& right);
 
 ### <a name="parameters"></a>Parâmetros
 
-*left*<br/>
+*À esquerda*\
 Um objeto do tipo `pair` ao lado esquerdo do operador.
 
-*right*<br/>
+*Certo*\
 Um objeto do tipo `pair` ao lado direito do operador.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -242,7 +240,7 @@ The pair p1 is less than the pair p2.
 The pair p1 is not less than the pair p3.
 ```
 
-## <a name="op_lt_eq"></a>  operator&lt;=
+## <a name="op_lt_eq"></a> operador&lt;=
 
 Testa se o objeto pair à esquerda do operador é menor que ou igual ao objeto pair à direita.
 
@@ -256,10 +254,10 @@ constexpr bool operator<=(const pair<T, U>& left, const pair<T, U>& right);
 
 ### <a name="parameters"></a>Parâmetros
 
-*left*<br/>
+*À esquerda*\
 Um objeto do tipo `pair` ao lado esquerdo do operador.
 
-*right*<br/>
+*Certo*\
 Um objeto do tipo `pair` ao lado direito do operador.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -327,7 +325,7 @@ The pair p1 is greater than the pair p3.
 The pair p1 is less than or equal to the pair p4.
 ```
 
-## <a name="op_gt"></a>  operator&gt;
+## <a name="op_gt"></a> Operador&gt;
 
 Testa se o objeto pair à esquerda do operador é maior que o objeto pair à direita.
 
@@ -341,10 +339,10 @@ constexpr bool operator>(const pair<T, U>& left, const pair<T, U>& right);
 
 ### <a name="parameters"></a>Parâmetros
 
-*left*<br/>
+*À esquerda*\
 Um objeto do tipo `pair` ao lado esquerdo do operador.
 
-*right*<br/>
+*Certo*\
 Um objeto do tipo `pair` ao lado direito do operador.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -414,24 +412,24 @@ The pair p1 is greater than the pair p3.
 The pair p1 is not greater than the pair p4.
 ```
 
-## <a name="op_gt_eq"></a>  operator&gt;=
+## <a name="op_gt_eq"></a> operador&gt;=
 
 Testa se o objeto pair à esquerda do operador é maior que ou igual ao objeto pair à direita.
 
 ```cpp
 template <class Type>
-constexpr bool operator>=(const Type& left, const Type& right);
+    constexpr bool operator>=(const Type& left, const Type& right);
 
 template <class T, class U>
-constexpr bool operator>=(const pair<T, U>& left, const pair<T, U>& right);
+    constexpr bool operator>=(const pair<T, U>& left, const pair<T, U>& right);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*left*<br/>
+*À esquerda*\
 Um objeto do tipo `pair` ao lado esquerdo do operador.
 
-*right*<br/>
+*Certo*\
 Um objeto do tipo `pair` ao lado direito do operador.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -498,7 +496,3 @@ The pair p1 is less than the pair p2.
 Pair p1 is greater than or equal to pair p3.
 Pair p1 is greater than or equal to pair p4.
 ```
-
-## <a name="see-also"></a>Consulte também
-
-[\<utility>](../standard-library/utility.md)<br/>

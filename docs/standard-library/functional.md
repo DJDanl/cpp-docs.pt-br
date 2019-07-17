@@ -9,22 +9,22 @@ helpviewer_keywords:
 - functors
 - functional header
 ms.assetid: 7dd463e8-a29f-49bc-aedd-8fa53b54bfbc
-ms.openlocfilehash: 317344db856a7a0568aca422ecfe8280b80db097
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7a72941c7b8c351f7b4fb8fa0e40afb809ea7cbe
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159412"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243753"
 ---
 # <a name="ltfunctionalgt"></a>&lt;functional&gt;
 
 Define as funções de biblioteca padrão C++ que ajudam a construir *objetos de função*, também conhecido como *functors*e seus associadores. Um objeto de função é um objeto de um tipo que define `operator()`. Um objeto de função pode ser um ponteiro de função, mas normalmente o objeto é usado para armazenar informações adicionais que possam ser acessadas durante uma chamada de função.
 
-## <a name="syntax"></a>Sintaxe
+## <a name="requirements"></a>Requisitos
 
-```cpp
-#include <functional>
-```
+**Cabeçalho:** \<functional>
+
+**Namespace:** std
 
 ## <a name="remarks"></a>Comentários
 
@@ -72,18 +72,23 @@ Se um wrapper de chamada tiver um *tipo de resultado fraco*, o tipo de seu membr
 
 Cada wrapper de chamada tem um construtor de movimentação e um construtor de cópia. Um *wrapper de chamada simples* é um wrapper de chamada que tem um operador de atribuição e cujo construtor de cópia, construtor de movimentação e operador de atribuição não geram exceções. Um *wrapper de chamada de encaminhamento* é um wrapper de chamada que pode ser chamado usando uma lista de argumentos arbitrários e que fornece os argumentos como referências ao objeto que pode ser chamado encapsulado. Todos os argumentos rvalue são fornecidos como referências de rvalue e os argumentos de lvalue são entregues como referências de lvalue.
 
-## <a name="classes"></a>Classes
+## <a name="members"></a>Membros
 
-|Classe|Descrição|
+### <a name="classes"></a>Classes
+
+|||
 |-|-|
 |[bad_function_call](../standard-library/bad-function-call-class.md)|Uma classe que descreve uma exceção gerada para indicar que uma chamada para `operator()` em um objeto [function](../standard-library/function-class.md) falhou porque o objeto estava vazio.|
 |[binary_negate](../standard-library/binary-negate-class.md)|Uma classe de modelo que fornece uma função membro que nega o valor retornado de uma função binária especificada.<br/> (Preterido no C++ 17). |
 |[binder1st](../standard-library/binder1st-class.md)|Uma classe de modelo que fornece um construtor que converte um objeto de função binária em um objeto de função unária, associando o primeiro argumento da função binária a um valor especificado.<br/> (Preterido no c++11, removido do c++17). |
 |[binder2nd](../standard-library/binder2nd-class.md)|Uma classe de modelo que fornece um construtor que converte um objeto de função binária em um objeto de função unária associando o segundo argumento da função binária a um valor especificado.<br/> (Preterido no c++11, removido do c++17). |
+|[boyer_moore_horspool_searcher](../standard-library/boyer-moore-horspool-searcher-class.md)||
+|[boyer_moore_searcher](../standard-library/boyer-moore-searcher-class.md)||
 |[const_mem_fun_ref_t](../standard-library/const-mem-fun-ref-t-class.md)|Uma classe de adaptador que permite que uma função de membro const que não usa argumentos seja chamada como um objeto de função unária quando inicializado com um argumento de referência.<br/> (Preterido no c++11, removido do c++17). |
 |[const_mem_fun_t](../standard-library/const-mem-fun-t-class.md)|Uma classe de adaptador que permite que uma função de membro const que não usa argumentos seja chamada como um objeto de função unária quando inicializado com um argumento de ponteiro.<br/> (Preterido no c++11, removido do c++17). |
 |[const_mem_fun1_ref_t](../standard-library/const-mem-fun1-ref-t-class.md)|Uma classe de adaptador que permite que uma função membro const que usa um único argumento seja chamada como um objeto de função binária quando inicializado com um argumento de referência.<br/> (Preterido no c++11, removido do c++17). |
 |[const_mem_fun1_t](../standard-library/const-mem-fun1-t-class.md)|Uma classe de adaptador que permite que uma função de membro const que usa um único argumento seja chamada como um objeto de função binário quando inicializada com um argumento de ponteiro.<br/> (Preterido no c++11, removido do c++17). |
+|[default_searcher](../standard-library/default-searcher-class.md)||
 |[function](../standard-library/function-class.md)|Uma classe que encapsula um objeto que pode ser chamado.|
 |[hash](../standard-library/hash-class.md)|Uma classe que computa um código hash para um valor.|
 |[is_bind_expression](../standard-library/is-bind-expression-class.md)|Uma classe que testa se um tipo específico é gerado chamando `bind`.|
@@ -97,9 +102,9 @@ Cada wrapper de chamada tem um construtor de movimentação e um construtor de c
 |[reference_wrapper](../standard-library/reference-wrapper-class.md)|Uma classe que encapsula uma referência.|
 |[unary_negate](../standard-library/unary-negate-class.md)|Uma classe de modelo que fornece uma função membro que nega o valor retornado de uma função unária especificado.<br/> (Preterido no C++ 17).  |
 
-## <a name="functions"></a>Funções
+### <a name="functions"></a>Funções
 
-|Função|Descrição|
+|||
 |-|-|
 |[bind](../standard-library/functional-functions.md#bind)|Associa argumentos a um objeto que pode ser chamado.|
 |[bind1st](../standard-library/functional-functions.md#bind1st)|Uma função de modelo auxiliar que cria um adaptador para converter um objeto de função binária em um objeto de função unária, associando o primeiro argumento da função binária a um valor especificado.<br/> (Preterido no c++11, removido do c++17). |
@@ -109,6 +114,7 @@ Cada wrapper de chamada tem um construtor de movimentação e um construtor de c
 |[bit_or](../standard-library/functional-functions.md#bit_or)|Retorna o OR lógico bit a bit (operador &#124;) dos dois parâmetros.|
 |[bit_xor](../standard-library/functional-functions.md#bit_xor)|Retorna o XOR lógico bit a bit (operador ^) dos dois parâmetros.|
 |[cref](../standard-library/functional-functions.md#cref)|Constrói uma constante `reference_wrapper` de um argumento.|
+|[invoke](../standard-library/functional-functions.md#invoke)||
 |[mem_fn](../standard-library/functional-functions.md#mem_fn)|Gera um wrapper de chamada simples.|
 |[mem_fun](../standard-library/functional-functions.md#mem_fun)|Funções de modelo auxiliares usadas para construir adaptadores de objeto de função para funções membro, quando inicializadas com argumentos de ponteiro.<br/> (Preterido no c++11, removido do c++17). |
 |[mem_fun_ref](../standard-library/functional-functions.md#mem_fun_ref)|Uma função de modelo auxiliar usada para construir adaptadores de objeto de função para funções membro, quando inicializada com argumentos de referência.|
@@ -119,9 +125,9 @@ Cada wrapper de chamada tem um construtor de movimentação e um construtor de c
 |[ref](../standard-library/functional-functions.md#ref)|Constrói um `reference_wrapper` de um argumento.|
 |[swap](../standard-library/functional-functions.md#swap)|Troca dois objetos `function`.|
 
-## <a name="structs"></a>Structs
+### <a name="structs"></a>Structs
 
-|Estrutura|Descrição|
+|||
 |-|-|
 |[binary_function](../standard-library/binary-function-struct.md)|Uma classe base vazia que define tipos que podem ser herdados por uma classe derivada que fornece um objeto de função binária.<br/> (Preterido no c++11, removido do c++17). |
 |[divides](../standard-library/divides-struct.md)|A classe fornece um objeto de função predefinida que executa a operação de divisão aritmética em elementos de um tipo de valor especificado.|
@@ -141,15 +147,15 @@ Cada wrapper de chamada tem um construtor de movimentação e um construtor de c
 |[plus](../standard-library/plus-struct.md)|A classe fornece um objeto de função predefinida que executa a operação aritmética de adição em elementos de um tipo de valor especificado.|
 |[unary_function](../standard-library/unary-function-struct.md)|Uma classe base vazia que define tipos que podem ser herdados por uma classe derivada que fornece um objeto de função unária.<br/> (Preterido no c++11, removido do c++17). |
 
-## <a name="objects"></a>Objetos
+### <a name="objects"></a>Objetos
 
-|Objeto|Descrição|
+|||
 |-|-|
 |[_1.._M](../standard-library/1-object.md)|Espaços reservados para argumentos substituíveis.|
 
-## <a name="operators"></a>Operadores
+### <a name="operators"></a>Operadores
 
-|Operador|Descrição|
+|||
 |-|-|
 |[operator==](../standard-library/functional-operators.md#op_eq_eq)|Não permite comparações de igualdade de objetos que podem ser chamados.|
 |[operator!=](../standard-library/functional-operators.md#op_neq)|Não permite comparações de desigualdade de objetos que podem ser chamados.|
