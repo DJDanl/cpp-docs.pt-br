@@ -6,51 +6,72 @@ f1_keywords:
 helpviewer_keywords:
 - utility header
 ms.assetid: c4491103-5da9-47a1-9c2b-ed8bc64b0599
-ms.openlocfilehash: 3e3904bda2a20392724f86df2443cd71a14a1ad6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 76b04c3c26f6ec49f1d816feaeec7e21312d79a9
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62168252"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246280"
 ---
 # <a name="ltutilitygt"></a>&lt;utility&gt;
 
 Define os tipos, funções e operadores da Biblioteca Padrão C++ que ajudam a construir e gerenciar pares de objetos úteis sempre que dois objetos precisam ser tratados como se fossem um.
 
-## <a name="syntax"></a>Sintaxe
+## <a name="requirements"></a>Requisitos
 
-```cpp
-#include <utility>
-```
+**Cabeçalho:** \<utility>
+
+**Namespace:** std
 
 ## <a name="remarks"></a>Comentários
 
 Os pares são amplamente usados na Biblioteca Padrão C++. Eles são necessários como os argumentos e valores retornados para diversas funções e como tipos de elemento para contêineres como a [classe map](../standard-library/map-class.md) e a [classe multimap](../standard-library/multimap-class.md). O cabeçalho \<utility> é incluído automaticamente por \<map> para auxiliar no gerenciamento de elementos do tipo par chave/valor.
 
+> [!NOTE]
+> O \<utilitário > cabeçalho usa a instrução `#include <initializer_list>`. Ele também se refere à `class tuple` conforme definido em \<tupla >.
+
+## <a name="members"></a>Membros
+
 ### <a name="classes"></a>Classes
 
-|Classe|Descrição|
+|||
 |-|-|
+|[chars_format](../standard-library/chars-format-class.md)|Formato de ponto flutuante para conversão numérico primitivo.|
 |[tuple_element](../standard-library/tuple-element-class-tuple.md)|Uma classe que encapsula o tipo de um elemento `pair`.|
 |[tuple_size](../standard-library/tuple-size-class-tuple.md)|Uma classe que encapsula a contagem do elemento `pair`.|
 
+### <a name="objects"></a>Objetos
+
+|||
+|-|-|
+|[index_sequence](../standard-library/utility-functions.md#index_sequence)||
+|[index_sequence_for](../standard-library/utility-functions.md#index_sequence_for)||
+|[make_index_sequence](../standard-library/utility-functions.md#make_index_sequence)||
+|[make_integer_sequence](../standard-library/utility-functions.md#make_integer_sequence)||
+
 ### <a name="functions"></a>Funções
 
-|Função|Descrição|
+|||
 |-|-|
+|[as_const](../standard-library/utility-functions.md#asconst)|Retorna de tipo.|
+|[declval](../standard-library/utility-functions.md#declval)|Avaliação de expressão de forma abreviada.|
+|[exchange](../standard-library/utility-functions.md#exchange)|Atribui um novo valor a um objeto e retorna seu valor antigo.|
 |[forward](../standard-library/utility-functions.md#forward)|Evita que o tipo de referência (`lvalue` ou `rvalue`) do argumento seja obscurecido por encaminhamento perfeito.|
+|[from_chars](../standard-library/utility-functions.md#from_chars)||
 |[get](../standard-library/utility-functions.md#get)|Uma função que obtém um elemento de um objeto `pair`.|
 |[make_pair](../standard-library/utility-functions.md#make_pair)|Uma função modelo auxiliar usada para construir objetos do tipo `pair`, em que os tipos de componente são baseados nos tipos de dados transmitidos como parâmetros.|
 |[move](../standard-library/utility-functions.md#move)|Retorna o que foi passado no argumento como uma referência `rvalue`.|
+|[move_if_noexcept](../standard-library/utility-functions.md#moveif)||
 |[swap](../standard-library/utility-functions.md#swap)|Troca os elementos de dois objetos `pair`.|
+|[to_chars](../standard-library/utility-functions.md#to_chars)|Converte o valor em uma cadeia de caracteres.|
 
 ### <a name="operators"></a>Operadores
 
-|Operador|Descrição|
+|||
 |-|-|
 |[operator!=](../standard-library/utility-operators.md#op_neq)|Testa se o objeto pair à esquerda do operador é diferente do objeto pair à direita.|
 |[operator==](../standard-library/utility-operators.md#op_eq_eq)|Testa se o objeto pair à esquerda do operador é igual ao objeto pair à direita.|
-|[operator<](../standard-library/utility-operators.md#op_lt)|Testa se o objeto pair à esquerda do operador é menor que o objeto pair à direita.|
+|[operator\<](../standard-library/utility-operators.md#op_lt)|Testa se o objeto pair à esquerda do operador é menor que o objeto pair à direita.|
 |[operator\<=](../standard-library/utility-operators.md#op_gt_eq)|Testa se o objeto pair à esquerda do operador é menor que ou igual ao objeto pair à direita.|
 |[operator>](../standard-library/utility-operators.md#op_gt)|Testa se o objeto pair à esquerda do operador é maior que o objeto pair à direita.|
 |[operator>=](../standard-library/utility-operators.md#op_gt_eq)|Testa se o objeto pair à esquerda do operador é maior que ou igual ao objeto pair à direita.|
@@ -59,8 +80,13 @@ Os pares são amplamente usados na Biblioteca Padrão C++. Eles são necessário
 
 |||
 |-|-|
-|[identity](../standard-library/identity-structure.md)||
+|[from_chars_result](../standard-library/from-chars-result-structure.md)|Um struct usado para `from_chars`.|
+|[identity](../standard-library/identity-structure.md)|Um struct que fornece uma definição de tipo como o parâmetro do modelo.|
+|[in_place_t](../standard-library/in-place-t-struct.md)|Também inclui structs `in_place_type_t` e `in_place_index_t`.|
+|[integer_sequence](../standard-library/integer-sequence-class.md)|Representa uma sequência de inteiros.|
 |[pair](../standard-library/pair-structure.md)|Um tipo que fornece a capacidade de tratar dois objetos como um único objeto.|
+|[piecewise_construct_t](../standard-library/piecewise-construct-t-structure.md)|Um tipo usado para manter o construtor separado e o sobrecarregamento de função.|
+|[to_chars_result](../standard-library/to-chars-result-structure.md)|Um struct usado para `to_chars`.|
 
 ## <a name="see-also"></a>Consulte também
 

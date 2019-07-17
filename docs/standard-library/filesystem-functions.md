@@ -84,33 +84,16 @@ helpviewer_keywords:
 - std::experimental::filesystem::system_complete
 - std::experimental::filesystem::temp_directory_path
 - std::experimental::filesystem::u8path
-ms.openlocfilehash: 11a1857052dd7c242993e8a19afe26aae3c97c06
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fa54a68d22bfabe1efa8ae3c78e7e3c9350fb950
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405099"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68240708"
 ---
 # <a name="ltfilesystemgt-functions"></a>Funções &lt;filesystem&gt;
 
-Essas funções livres no cabeçalho [\<filesystem>](../standard-library/filesystem.md) realizam operações de modificação e consulta em caminhos, arquivos, symlinks, diretórios e volumes. Para obter mais informações e exemplos de código, consulte [Navegação do Sistema de Arquivos (C++)](../standard-library/file-system-navigation.md).
-
-||||
-|-|-|-|
-|[absolute](#absolute)|[begin](#begin)|[canonical](#canonical)|
-|[copy](#copy)|[copy_file](#copy_file)|[copy_symlink](#copy_symlink)|
-|[create_directories](#create_directories)|[create_directory](#create_directory)|[create_directory_symlink](#create_directory_symlink)|
-|[create_hard_link](#create_hard_link)|[create_symlink](#create_symlink)|[current_path](#current_path)|
-|[end](#end)|[equivalent](#equivalent)|[exists](#exists)|
-|[file_size](#file_size)|[hard_link_count](#hard_link_count)|[hash_value](#hash_value)|
-|[is_block_file](#is_block_file)|[is_character_file](#is_character_file)|[is_directory](#is_directory)|
-|[is_empty](#is_empty)|[is_fifo](#is_fifo)|[is_other](#is_other)|
-|[is_regular_file](#is_regular_file)|[is_socket](#is_socket)|[is_symlink](#is_symlink)|
-|[last_write_time](#last_write_time)|[permissions](#permissions)|[read_symlink](#read_symlink)|
-|[remove](#remove)|[remove_all](#remove_all)|[rename](#rename)|
-|[resize_file](#resize_file)|[space](#space)|[status](#status)|
-|[status_known](#status_known)|[swap](#swap)|[symlink_status](#symlink_status)|
-|[system_complete](#system_complete)|[temp_directory_path](#temp_directory_path)|[u8path](#u8path)|
+Essas funções livres na [ \<filesystem >](../standard-library/filesystem.md) cabeçalho usar operações de modificação e consulta em caminhos, arquivos, symlinks, diretórios e volumes. Para obter mais informações e exemplos de código, consulte [Navegação do Sistema de Arquivos (C++)](../standard-library/file-system-navigation.md).
 
 ## <a name="absolute"></a> absoluto
 
@@ -128,7 +111,7 @@ A função retorna o nome de caminho absoluto correspondente *pval* em relação
 
 1. Se `!pval.has_root_name() && !pval.has_root_directory()` a função retornará `absolute(base)`  /  *pval*.
 
-## <a name="begin"></a>  begin
+## <a name="begin"></a> começar
 
 ```cpp
 const directory_iterator& begin(const directory_iterator& iter) noexcept;
@@ -138,7 +121,7 @@ const recursive_directory_iterator&
 
 Ambas as funções retornam *iter*.
 
-## <a name="canonical"></a>  canonical
+## <a name="canonical"></a> Canonical
 
 ```cpp
 path canonical(const path& pval, const path& base = current_path());
@@ -156,7 +139,7 @@ Todas as funções formam um nome de caminho absoluto `pabs = absolute(pval, bas
 
 A função retorna `pabs`.
 
-## <a name="copy"></a>  copy
+## <a name="copy"></a> Cópia
 
 ```cpp
 void copy(const path& from, const path& to);
@@ -185,25 +168,25 @@ Se `!exists(f) || equivalent(f, t) || is_other(f) || is_other(t) || is_directory
 
 Caso contrário, se `is_symlink(f)` então:
 
-- Se `options & copy_options::skip_symlinks` , em seguida, não faça nada.
+- Se `options & copy_options::skip_symlinks`, não faça nada.
 
-- Caso contrário, se `!exists(t)&& options & copy_options::copy_symlinks` , em seguida, `copy_symlink(from, to, opts)`.
+- Caso contrário, se `!exists(t)&& options & copy_options::copy_symlinks`, em seguida, `copy_symlink(from, to, opts)`.
 
-- Caso contrário, geram um erro.
+- Caso contrário, relate um erro.
 
-Caso contrário, se `is_regular_file(f)` então:
+Caso contrário, se `is_regular_file(f)`, então:
 
-- Se `opts & copy_options::directories_only` , em seguida, não faça nada.
+- Se `opts & copy_options::directories_only`, não faça nada.
 
-- Caso contrário, se `opts & copy_options::create_symlinks` , em seguida, `create_symlink(to, from)`.
+- Caso contrário, se `opts & copy_options::create_symlinks`, em seguida, `create_symlink(to, from)`.
 
-- Caso contrário, se `opts & copy_options::create_hard_links` , em seguida, `create_hard_link(to, from)`.
+- Caso contrário, se `opts & copy_options::create_hard_links`, em seguida, `create_hard_link(to, from)`.
 
-- Caso contrário, se `is_directory(f)` , em seguida, `copy_file(from, to`  /  `from.filename(), opts)`.
+- Caso contrário, se `is_directory(f)`, em seguida, `copy_file(from, to`  /  `from.filename(), opts)`.
 
 - Caso contrário, `copy_file(from, to, opts)`.
 
-Caso contrário, se `is_directory(f) && (opts & copy_options::recursive || !opts)` então:
+Caso contrário, se `is_directory(f) && (opts & copy_options::recursive || !opts)`, então:
 
 ```cpp
 if (!exists(t))
@@ -219,7 +202,7 @@ if (!exists(t))
 
 Caso contrário, não faça nada.
 
-## <a name="copy_file"></a>  copy_file
+## <a name="copy_file"></a> copy_file
 
 ```cpp
 bool copy_file(const path& from, const path& to);
@@ -230,31 +213,31 @@ bool copy_file(const path& from, const path& to, copy_options opts, error_code& 
 
 As funções de tudo, possivelmente, copiam o arquivo *de* para *ao* sob controle do *opts*, que é interpretado como `copy_options::none` para as sobrecargas sem *opts*  parâmetro. *opts* deve conter no máximo um dos `skip_existing`, `overwrite_existing`, ou `update_existing`.
 
-Se `exists(to) && !(opts & (copy_options::skip_existing | copy_options::overwrite_existing | copy_options::update_existing))` , em seguida, o relatório como um erro se o arquivo já existe.
+Se `exists(to) && !(opts & (copy_options::skip_existing | copy_options::overwrite_existing | copy_options::update_existing))`, em seguida, o relatório como um erro se o arquivo já existe.
 
-Caso contrário, se `!exists(to) || opts & copy_options::overwrite_existing || opts & copy_options::update_existing&& last_write_time(to) < last_write_time(from) || !(opts & (copy_options::skip_existing | copy_options::overwrite_existing | copy_options:update_existing))` , em seguida, tente copiar o conteúdo e os atributos do arquivo *partir* para o arquivo *para*. Relatar um erro se a tentativa de cópia falhar.
+Caso contrário, se `!exists(to) || opts & copy_options::overwrite_existing || opts & copy_options::update_existing&& last_write_time(to) < last_write_time(from) || !(opts & (copy_options::skip_existing | copy_options::overwrite_existing | copy_options:update_existing))`, em seguida, tentar copiar o conteúdo e os atributos do arquivo *de* para o arquivo *para*. Relatar um erro se a tentativa de cópia falhar.
 
 As funções retornam **verdadeira** se a tentativa de cópia for for bem-sucedida, caso contrário **falso**.
 
-## <a name="copy_symlink"></a>  copy_symlink
+## <a name="copy_symlink"></a> copy_symlink
 
 ```cpp
 void copy_symlink(const path& from, const path& to);
 void copy_symlink(const path& from, const path& to, error_code& ec) noexcept;
 ```
 
-Se `is_directory(from)` as chamadas de função `create_directory_symlink(from, to)`. Caso contrário, ele chama `create_symlink(from, to)`.
+Se `is_directory(from)`, as chamadas de função `create_directory_symlink(from, to)`. Caso contrário, ele chama `create_symlink(from, to)`.
 
-## <a name="create_directories"></a>  create_directories
+## <a name="create_directories"></a> create_directories
 
 ```cpp
 bool create_directories(const path& pval);
 bool create_directories(const path& pval, error_code& ec) noexcept;
 ```
 
-Para um nome de caminho como a\/b\/c, a função cria os diretórios a e a\/b conforme necessário, para que possa criar o diretório a\/b\/c conforme necessário. Ele retorna **verdadeira** somente se ele realmente cria o diretório *pval*.
+Para um nome de caminho, como um\/b\/c, a função cria diretórios um e um\/b conforme necessário para que ele possa criar o diretório de uma\/b\/c conforme necessário. Ele retorna **verdadeira** somente se ele realmente cria o diretório *pval*.
 
-## <a name="create_directory"></a>  create_directory
+## <a name="create_directory"></a> create_directory
 
 ```cpp
 bool create_directory(const path& pval);
@@ -266,7 +249,7 @@ bool create_directory(const path& pval, const path& attr, error_code& ec) noexce
 
 A função cria o diretório *pval* conforme necessário. Ela retorna true somente se ele realmente cria o diretório *pval*, caso em que ele copia as permissões do arquivo existente *attr*, ou usa `perms::all` para as sobrecargas sem *attr*  parâmetro.
 
-## <a name="create_directory_symlink"></a>  create_directory_symlink
+## <a name="create_directory_symlink"></a> create_directory_symlink
 
 ```cpp
 void create_directory_symlink(const path& to, const path& link);
@@ -275,7 +258,7 @@ void create_directory_symlink(const path& to, const path& link, error_code& ec) 
 
 A função cria o link como um symlink para o diretório *para*.
 
-## <a name="create_hard_link"></a>  create_hard_link
+## <a name="create_hard_link"></a> create_hard_link
 
 ```cpp
 void create_hard_link(const path& to,  const path& link);
@@ -284,17 +267,17 @@ void create_hard_link(const path& to, const path& link, error_code& ec) noexcept
 
 A função cria o link como um link físico para o arquivo ou diretório *para*.
 
-## <a name="create_symlink"></a>  create_symlink
+## <a name="create_symlink"></a> create_symlink
 
 ```cpp
-void create_symlink(const path& to,  const path& link);
+void create_symlink(const path& to, const path& link);
 
 void create_symlink(const path& to, const path& link, error_code& ec) noexcept;
 ```
 
 A função cria *link* como um symlink para o arquivo *para*.
 
-## <a name="current_path"></a>  current_path
+## <a name="current_path"></a> current_path
 
 ```cpp
 path current_path();
@@ -314,14 +297,14 @@ recursive_directory_iterator& end(const recursive_directory_iterator& iter) noex
 
 A primeira função retorna `directory_iterator()` e a segunda função retorna `recursive_directory_iterator()`
 
-## <a name="equivalent"></a>  equivalent
+## <a name="equivalent"></a> equivalente
 
 ```cpp
 bool equivalent(const path& left, const path& right);
 bool equivalent(const path& left, const path& right, error_code& ec) noexcept;
 ```
 
-As funções retornam **verdadeira** somente se *esquerdo* e *direita* designar a mesma entidade de sistema de arquivos.
+As funções retornam **verdadeira** somente se *esquerdo* e *direita* escolha a mesma entidade de sistema de arquivos.
 
 ## <a name="exists"></a>  exists
 
@@ -333,16 +316,16 @@ bool exists(const path& pval, error_code& ec) noexcept;
 
 A primeira função retorna `status_known && stat.type() != file_not_found`. A segunda e terceira funções retornam `exists(status(pval))`.
 
-## <a name="file_size"></a>  file_size
+## <a name="file_size"></a> file_size
 
 ```cpp
 uintmax_t file_size(const path& pval);
 uintmax_t file_size(const path& pval, error_code& ec) noexcept;
 ```
 
-As funções retornam o tamanho em bytes do arquivo designado por *pval*, se `exists(pval) && is_regular_file(pval)` e o tamanho do arquivo pode ser determinado. Caso contrário, eles relatam um erro e retornam `uintmax_t(-1)`.
+As funções retornam o tamanho em bytes do arquivo escolhido pelo *pval*, se `exists(pval) && is_regular_file(pval)` e o tamanho do arquivo pode ser determinado. Caso contrário, eles relatam um erro e retornam `uintmax_t(-1)`.
 
-## <a name="hard_link_count"></a>  hard_link_count
+## <a name="hard_link_count"></a> hard_link_count
 
 ```cpp
 uintmax_t hard_link_count(const path& pval);
@@ -351,7 +334,7 @@ uintmax_t hard_link_count(const path& pval, error_code& ec) noexcept;
 
 A função retorna o número de links físicos para *pval*, ou \-1 se ocorrer um erro.
 
-## <a name="hash_value"></a>  hash_value
+## <a name="hash_value"></a> hash_value
 
 ```cpp
 size_t hash_value(const path& pval) noexcept;
@@ -359,7 +342,7 @@ size_t hash_value(const path& pval) noexcept;
 
 A função retorna um valor de hash para `pval.native()`.
 
-## <a name="is_block_file"></a>  is_block_file
+## <a name="is_block_file"></a> is_block_file
 
 ```cpp
 bool is_block_file(file_status stat) noexcept;
@@ -369,7 +352,7 @@ bool is_block_file(const path& pval, error_code& ec) noexcept;
 
 A primeira função retorna `stat.type() == file_type::block`. As funções restantes retornam `is_block_file(status(pval))`.
 
-## <a name="is_character_file"></a>  is_character_file
+## <a name="is_character_file"></a> is_character_file
 
 ```cpp
 bool is_character_file(file_status stat) noexcept;
@@ -379,7 +362,7 @@ bool is_character_file(const path& pval, error_code& ec) noexcept;
 
 A primeira função retorna `stat.type() == file_type::character`. As funções restantes retornam `is_character_file(status(pval))`.
 
-## <a name="is_directory"></a>  is_directory
+## <a name="is_directory"></a> is_directory
 
 ```cpp
 bool is_directory(file_status stat) noexcept;
@@ -389,7 +372,7 @@ bool is_directory(const path& pval, error_code& ec) noexcept;
 
 A primeira função retorna `stat.type() == file_type::directory`. As funções restantes retornam `is_directory_file(status(pval))`.
 
-## <a name="is_empty"></a>  is_empty
+## <a name="is_empty"></a> is_empty
 
 ```cpp
 bool is_empty(file_status stat) noexcept;
@@ -397,9 +380,9 @@ bool is_empty(const path& pval);
 bool is_empty(const path& pval, error_code& ec) noexcept;
 ```
 
-Se `is_directory(pval)` a função retornará `directory_iterator(pval) == directory_iterator()`; caso contrário, retornará `file_size(pval) == 0`.
+Se `is_directory(pval)`, a função retornará `directory_iterator(pval) == directory_iterator()`; caso contrário, retornará `file_size(pval) == 0`.
 
-## <a name="is_fifo"></a>  is_fifo
+## <a name="is_fifo"></a> is_fifo
 
 ```cpp
 bool is_fifo(file_status stat) noexcept;
@@ -409,7 +392,7 @@ bool is_fifo(const path& pval, error_code& ec) noexcept;
 
 A primeira função retorna `stat.type() == file_type::fifo`. As funções restantes retornam `is_fifo(status(pval))`.
 
-## <a name="is_other"></a>  is_other
+## <a name="is_other"></a> is_other
 
 ```cpp
 bool is_other(file_status stat) noexcept;
@@ -419,7 +402,7 @@ bool is_other(const path& pval, error_code& ec) noexcept;
 
 A primeira função retorna `stat.type() == file_type::other`. As funções restantes retornam `is_other(status(pval))`.
 
-## <a name="is_regular_file"></a>  is_regular_file
+## <a name="is_regular_file"></a> is_regular_file
 
 ```cpp
 bool is_regular_file(file_status stat) noexcept;
@@ -429,7 +412,7 @@ bool is_regular_file(const path& pval, error_code& ec) noexcept;
 
 A primeira função retorna `stat.type() == file_type::regular`. As funções restantes retornam `is_regular_file(status(pval))`.
 
-## <a name="is_socket"></a>  is_socket
+## <a name="is_socket"></a> is_socket
 
 ```cpp
 bool is_socket(file_status stat) noexcept;
@@ -439,7 +422,7 @@ bool is_socket(const path& pval, error_code& ec) noexcept;
 
 A primeira função retorna `stat.type() == file_type::socket`. As funções restantes retornam `is_socket(status(pval))`.
 
-## <a name="is_symlink"></a>  is_symlink
+## <a name="is_symlink"></a> is_symlink
 
 ```cpp
 bool is_symlink(file_status stat) noexcept;
@@ -449,7 +432,7 @@ bool is_symlink(const path& pval, error_code& ec) noexcept;
 
 A primeira função retorna `stat.type() == file_type::symlink`. As funções restantes retornam `is_symlink(status(pval))`.
 
-## <a name="last_write_time"></a>  last_write_time
+## <a name="last_write_time"></a> last_write_time
 
 ```cpp
 file_time_type last_write_time(const path& pval);
@@ -460,18 +443,26 @@ void last_write_time(const path& pval, file_time_type new_time, error_code& ec) 
 
 As duas primeiras funções retornam a hora da última modificação de dados para *pval*, ou `file_time_type(-1)` se ocorrer um erro. As duas últimas funções definem a hora da última modificação de dados para *pval* à *new_time*.
 
-## <a name="permissions"></a>  permissions
+## <a name="permissions"></a> Permissões
 
 ```cpp
 void permissions(const path& pval, perms mask);
 void permissions(const path& pval, perms mask, error_code& ec) noexcept;
 ```
 
-As funções definem as permissões para o caminho de arquivo designado por *pval* à `mask & perms::mask` sob o controle de `perms & (perms::add_perms | perms::remove_perms)`. *máscara* deve conter no máximo um dos `perms::add_perms` e `perms::remove_perms`.
+As funções definem as permissões para o nome do caminho escolhido pelo *pval* à `mask & perms::mask` sob o controle de `perms & (perms::add_perms | perms::remove_perms)`. *máscara* deve conter no máximo um dos `perms::add_perms` e `perms::remove_perms`.
 
-Se `mask & perms::add_perms` as funções definem as permissões como `status(pval).permissions() | mask & perms::mask`. Caso contrário, se `mask & perms::remove_perms` as funções definem as permissões como `status(pval).permissions() & ~(mask & perms::mask)`. Caso contrário, as funções definem as permissões como `mask & perms::mask`.
+Se `mask & perms::add_perms`, as funções definem as permissões como `status(pval).permissions() | mask & perms::mask`. Caso contrário, se `mask & perms::remove_perms`, as funções definem as permissões como `status(pval).permissions() & ~(mask & perms::mask)`. Caso contrário, as funções definem as permissões como `mask & perms::mask`.
 
-## <a name="read_symlink"></a>  read_symlink
+## <a name="proximate"></a> proximidade
+
+```cpp
+path proximate(const path& p, error_code& ec);
+path proximate(const path& p, const path& base = current_path());
+path proximate(const path& p, const path& base, error_code& ec);
+```
+
+## <a name="read_symlink"></a> read_symlink
 
 ```cpp
 path read_symlink(const path& pval);
@@ -480,16 +471,24 @@ path read_symlink(const path& pval, error_code& ec);
 
 As funções relatam um erro e retornam `path()` se `!is_symlink(pval)`. Caso contrário, as funções retornam um objeto do tipo `path` contendo o link simbólico.
 
-## <a name="remove"></a>  remove
+## <a name="relative"></a> relativo
+
+```cpp
+path relative(const path& p, error_code& ec);
+path relative(const path& p, const path& base = current_path());
+path relative(const path& p, const path& base, error_code& ec);
+```
+
+## <a name="remove"></a> Remover
 
 ```cpp
 bool remove(const path& pval);
 bool remove(const path& pval, error_code& ec) noexcept;
 ```
 
-As funções retornam **verdadeira** somente se `exists(symlink_status(pval))` e o arquivo for removido com êxito. O próprio symlink é removido e não o arquivo que ele designa.
+As funções retornam **verdadeira** somente se `exists(symlink_status(pval))` e o arquivo for removido com êxito. O próprio symlink é removido, não o arquivo que escolher.
 
-## <a name="remove_all"></a>  remove_all
+## <a name="remove_all"></a> remove_all
 
 ```cpp
 uintmax_t remove_all(const path& pval);
@@ -498,16 +497,16 @@ uintmax_t remove_all(const path& pval, error_code& ec) noexcept;
 
 Se *pval* é um diretório, as funções removem recursivamente todas as entradas de diretório e, em seguida, a entrada em si. Caso contrário, as funções chamam `remove`. Elas retornam uma contagem de todos os elementos removidos com êxito.
 
-## <a name="rename"></a>  rename
+## <a name="rename"></a> Renomear
 
 ```cpp
-void rename(const path& from,  const path& to);
-void rename(const path& from,  const path& to, error_code& ec) noexcept;
+void rename(const path& from, const path& to);
+void rename(const path& from, const path& to, error_code& ec) noexcept;
 ```
 
-As funções renomeiam *partir* para *para*. O próprio symlink é renomeado e não o arquivo que ele designa.
+As funções renomeiam *partir* para *para*. O próprio symlink é renomeado, não o arquivo que escolher.
 
-## <a name="resize_file"></a>  resize_file
+## <a name="resize_file"></a> resize_file
 
 ```cpp
 void resize(const path& pval, uintmax_t size);
@@ -516,25 +515,25 @@ void resize(const path& pval, uintmax_t size, error_code& ec) noexcept;
 
 As funções alteram o tamanho de um arquivo, de modo que `file_size(pval) == size`
 
-## <a name="space"></a>  space
+## <a name="space"></a> Espaço
 
 ```cpp
 space_info space(const path& pval);
 space_info space(const path& pval, error_code& ec) noexcept;
 ```
 
-A função retorna informações sobre o volume designado por *pval*, em uma estrutura do tipo `space_info`. A estrutura contém `uintmax_t(-1)` para qualquer valor que não pode ser determinado.
+A função retorna informações sobre o volume escolhido pelo *pval*, em uma estrutura do tipo `space_info`. A estrutura contém `uintmax_t(-1)` para qualquer valor que não pode ser determinado.
 
-## <a name="status"></a>  status
+## <a name="status"></a> status
 
 ```cpp
 file_status status(const path& pval);
 file_status status(const path& pval, error_code& ec) noexcept;
 ```
 
-As funções retornam o status do nome do caminho, o tipo de arquivo e as permissões, associados *pval*. O próprio symlink não é testado e sim o arquivo que ele designa.
+As funções retornam o status do nome do caminho, o tipo de arquivo e as permissões, associados *pval*. Um symlink é testado não, mas o arquivo, ele escolhe.
 
-## <a name="status_known"></a>  status_known
+## <a name="status_known"></a> status_known
 
 ```cpp
 bool status_known(file_status stat) noexcept;
@@ -542,7 +541,7 @@ bool status_known(file_status stat) noexcept;
 
 A função retorna `stat.type() != file_type::none`
 
-## <a name="swap"></a>  swap
+## <a name="swap"></a> troca
 
 ```cpp
 void swap(path& left, path& right) noexcept;
@@ -550,16 +549,16 @@ void swap(path& left, path& right) noexcept;
 
 A função troca o conteúdo do *esquerdo* e *direita*.
 
-## <a name="symlink_status"></a>  symlink_status
+## <a name="symlink_status"></a> symlink_status
 
 ```cpp
 file_status symlink_status(const path& pval);
 file_status symlink_status(const path& pval, erroxr_code& ec) noexcept;
 ```
 
-As funções retornam o status do symlink do nome do caminho, o tipo de arquivo e as permissões, associados *pval*. As funções se comportam da mesma como `status(pval)` , exceto que o próprio symlink é testado, não o arquivo que ele designa.
+As funções retornam o status do symlink do nome do caminho, o tipo de arquivo e as permissões, associados *pval*. As funções se comportam da mesma como `status(pval)` , exceto que o próprio symlink é testado, não o arquivo que ele escolhe.
 
-## <a name="system_complete"></a>  system_complete
+## <a name="system_complete"></a> system_complete
 
 ```cpp
 path system_complete(const path& pval);
@@ -568,7 +567,7 @@ path system_complete(const path& pval, error_code& ec);
 
 As funções retornam um nome de caminho absoluto que leva em conta, conforme necessário, o diretório atual associado ao seu nome de raiz. \(Para Posix, as funções retornam `absolute(pval)`.\)
 
-## <a name="temp_directory_path"></a>  temp_directory_path
+## <a name="temp_directory_path"></a> temp_directory_path
 
 ```cpp
 path temp_directory_path();
@@ -577,7 +576,7 @@ path temp_directory_path(error_code& ec);
 
 As funções retornam um nome de caminho para um diretório adequado para armazenar arquivos temporários.
 
-## <a name="u8path"></a>  u8path
+## <a name="u8path"></a> u8path
 
 ```cpp
 template <class Source>
@@ -587,4 +586,11 @@ template <class InIt>
 path u8path(InIt first, InIt last);
 ```
 
-A primeira função tem o mesmo comportamento `path(source)` e a segunda função se comporta da mesma como `path(first, last)` , exceto que a origem designada em cada caso é interpretada como uma sequência de elementos char codificados como UTF-8, independentemente do sistema de arquivos.
+A primeira função tem o mesmo comportamento `path(source)` e a segunda função se comporta da mesma como `path(first, last)` , exceto que a fonte escolhida em cada caso é obtida como uma sequência de elementos char codificados como UTF-8, seja qual for o sistema de arquivos.
+
+## <a name="weakly_canonical"></a> weakly_canonical
+
+```cpp
+path weakly_canonical(const path& p);
+path weakly_canonical(const path& p, error_code& ec);
+```

@@ -9,12 +9,12 @@ f1_keywords:
 - filesystem/std::experimental::filesystem::directory_iterator
 - <filesystem>
 ms.assetid: 5005753b-46fa-43e1-8d4e-1b38617d3cfd
-ms.openlocfilehash: 0f397d8b0c39769fde20b6aa50412c979237f70a
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: a44fc3c6c6a37c20e1e1c294929ae3cb15cece58
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220381"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68240702"
 ---
 # <a name="ltfilesystemgt"></a>&lt;filesystem&gt;
 
@@ -89,10 +89,12 @@ Por fim, um recurso importante dos objetos de caminho é que você pode usá-los
 
 Para obter mais informações e exemplos de código, consulte [Navegação do Sistema de Arquivos (C++)](../standard-library/file-system-navigation.md).
 
-## <a name="classes"></a>Classes
+## <a name="members"></a>Membros
 
-|Nome|Descrição|
-|----------|-----------------|
+### <a name="classes"></a>Classes
+
+|||
+|-|-|
 |[Classe directory_entry](../standard-library/directory-entry-class.md)|Descreve um objeto retornado por um `directory_iterator` ou um `recursive_directory_iterator` e contém um caminho.|
 |[Classe directory_iterator](../standard-library/directory-iterator-class.md)|Descreve um iterador de entrada que percorre em sequência os nomes de arquivo no diretório de um sistema de arquivos.|
 |[Classe filesystem_error](../standard-library/filesystem-error-class.md)|Uma classe base para exceções que são geradas para relatar um estouro de baixo nível no sistema.|
@@ -100,10 +102,10 @@ Para obter mais informações e exemplos de código, consulte [Navegação do Si
 |[Classe recursive_directory_iterator](../standard-library/recursive-directory-iterator-class.md)|Descreve um iterador de entrada que percorre em sequência os nomes de arquivo no diretório de um sistema de arquivos. O iterador também pode descer para subdiretórios.|
 |[Classe file_status](../standard-library/file-status-class.md)|Encapsula um `file_type`.|
 
-## <a name="structs"></a>Structs
+### <a name="structs"></a>Structs
 
-|Nome|Descrição|
-|----------|-----------------|
+|||
+|-|-|
 |[Estrutura space_info](../standard-library/space-info-structure.md)|Mantém informações sobre um volume.|
 
 ## <a name="functions"></a>Funções
@@ -116,13 +118,14 @@ Para obter mais informações e exemplos de código, consulte [Navegação do Si
 
 ## <a name="enumerations"></a>Enumerações
 
-|Nome|Descrição|
-|----------|-----------------|
+|||
+|-|-|
 |[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|Uma enumeração que é usada com [copy_file](../standard-library/filesystem-functions.md#copy_file) e determina o comportamento se um arquivo de destino já existir.|
 |[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|Uma enumeração que é usada com [copy_file](../standard-library/filesystem-functions.md#copy_file) e determina o comportamento se um arquivo de destino já existir.|
 |[directory_options](../standard-library/filesystem-enumerations.md#directory_options)|Uma enumeração que especifica opções para iteradores de diretório.|
 |[file_type](../standard-library/filesystem-enumerations.md#file_type)|Uma enumeração de tipos de arquivo.|
-|[perms](../standard-library/filesystem-enumerations.md#perms)|Um tipo de bitmask usado para transmitir permissões e opções de permissões|
+|[perm_options](../standard-library/filesystem-enumerations.md#perm_options)||
+|[Perms](../standard-library/filesystem-enumerations.md#perms)|Um tipo de bitmask usado para transmitir permissões e opções de permissões|
 
 ## <a name="see-also"></a>Consulte também
 
