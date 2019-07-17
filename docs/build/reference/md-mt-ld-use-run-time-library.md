@@ -1,6 +1,6 @@
 ---
-title: / MD, -MT, -LD (usar biblioteca de tempo de execução)
-ms.date: 11/04/2016
+title: /MD,-MT,-LD (usar biblioteca de tempo de execução)
+ms.date: 07/17/2019
 f1_keywords:
 - /ld
 - /mt
@@ -35,12 +35,12 @@ helpviewer_keywords:
 - LIBCMTD.lib
 - -MT compiler option [C++]
 ms.assetid: cf7ed652-dc3a-49b3-aab9-ad60e5395579
-ms.openlocfilehash: 4ae63f2d45d5a1170f94de0480711bc719e4a2e0
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 4e734233d94bf57d6838bd4d37c023d55f1d5f6b
+ms.sourcegitcommit: 7f5b29e24e1be9b5985044a030977485fea0b50c
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65217623"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68299756"
 ---
 # <a name="md-mt-ld-use-run-time-library"></a>/MD, /MT, /LD (Usar biblioteca de tempo de execução)
 
@@ -58,30 +58,30 @@ Indica se um módulo com multithread é uma DLL e especifica versões comerciais
 
 |Opção|Descrição|
 |------------|-----------------|
-|**/MD**|Faz com que o aplicativo use a versão específica de multithread e a versão específica de DLL da biblioteca em tempo de execução. Define `_MT` e `_DLL` e faz com que o compilador coloque o nome da biblioteca MSVCRT.lib no arquivo .obj.<br /><br /> Os aplicativos criados com esta opção são vinculados a MSVCRT.lib estaticamente. Essa biblioteca fornece uma camada de código que permite que o vinculador resolva referências externas. O código de trabalho real está contido em MSVCR*versionnumber*. DLL, que deve estar disponível em tempo de execução para aplicativos vinculados a Msvcrt. lib.|
+|**/MD**|Faz com que o aplicativo use a versão específica de multithread e a versão específica de DLL da biblioteca em tempo de execução. Define `_MT` e `_DLL` e faz com que o compilador coloque o nome da biblioteca MSVCRT.lib no arquivo .obj.<br /><br /> Os aplicativos criados com esta opção são vinculados a MSVCRT.lib estaticamente. Essa biblioteca fornece uma camada de código que permite que o vinculador resolva referências externas. O código de trabalho real está contido no MSVCR*versionNumber*. DLL, que deve estar disponível em tempo de execução para aplicativos vinculados a MSVCRT. lib.|
 |**/MDd**|Define `_DEBUG`, `_MT` e `_DLL`, e faz com que o aplicativo use a versão específica de multithread de depuração e a versão específica de DLL da biblioteca em tempo de execução. Também faz com que o compilador coloque o nome da biblioteca MSVCRTD.lib no arquivo .obj.|
 |**/MT**|Faz com que o aplicativo use a versão estática de multithread da biblioteca em tempo de execução. Define `_MT` e faz com que o compilador coloque o nome da biblioteca LIBCMT.lib no arquivo .obj para que o vinculador use LIBCMT.lib para resolver símbolos externos.|
 |**/MTd**|Define `_DEBUG` e `_MT`. Essa opção também faz com que o compilador coloque o nome da biblioteca LIBCMTD.lib no arquivo .obj para que o vinculador use LIBCMTD.lib para resolver símbolos externos.|
-|**/LD**|Cria uma DLL.<br /><br /> Passa o **/DLL** opção de vinculador. O vinculador procura, mas não requer, uma função `DllMain`. Se você não grava uma função `DllMain`, o vinculador insere uma função `DllMain` que retorna TRUE.<br /><br /> Vincula o código de inicialização da DLL.<br /><br /> Cria uma biblioteca da importação (.lib), se um arquivo de exportação (.exp) não é especificado na linha de comando. Você vinculará a biblioteca de importação aos aplicativos que chamam a DLL.<br /><br /> Interpreta [/Fe (nomear o arquivo EXE)](fe-name-exe-file.md) como uma DLL em vez de um arquivo de .exe de nomenclatura. Por padrão, o nome do programa se torna *basename*. dll em vez de *basename*.exe.<br /><br /> Implica **/MT** , a menos que você especifique explicitamente **/MD**.|
+|**/LD**|Cria uma DLL.<br /><br /> Passa a opção **/dll** para o vinculador. O vinculador procura, mas não requer, uma função `DllMain`. Se você não grava uma função `DllMain`, o vinculador insere uma função `DllMain` que retorna TRUE.<br /><br /> Vincula o código de inicialização da DLL.<br /><br /> Cria uma biblioteca da importação (.lib), se um arquivo de exportação (.exp) não é especificado na linha de comando. Você vinculará a biblioteca de importação aos aplicativos que chamam a DLL.<br /><br /> Interpreta [/FE (arquivo exe de nome)](fe-name-exe-file.md) como nomear uma dll em vez de um arquivo. exe. Por padrão, o nome do programa se torna *basename*. dll em vez de *basename*. exe.<br /><br /> Implica **/MT** , a menos que você especifique explicitamente **/MD**.|
 |**/LDd**|Cria uma DLL de depuração. Define `_MT` e `_DEBUG`.|
 
-Para obter mais informações sobre bibliotecas de tempo de execução do C e quais bibliotecas são usadas quando você compila com [/clr (compilação de tempo de execução de linguagem comum)](clr-common-language-runtime-compilation.md), consulte [recursos da biblioteca CRT](../../c-runtime-library/crt-library-features.md).
+Para obter mais informações sobre bibliotecas de tempo de execução do C e quais bibliotecas são usadas quando você compila com [/CLR (compilação em tempo de execução de linguagem comum)](clr-common-language-runtime-compilation.md), consulte [recursos da biblioteca do CRT](../../c-runtime-library/crt-library-features.md).
 
-Todos os módulos passados para determinada invocação do vinculador devem ter sido compilados com a mesma opção de compilador da biblioteca de tempo de execução (**/MD**, **/MT**, **/LD**).
+Todos os módulos passados para uma determinada invocação do vinculador devem ter sido compilados com a mesma opção de compilador de biblioteca de tempo de execução ( **/MD**, **/MT**, **/LD**).
 
-Para obter mais informações sobre como usar as versões de depuração das bibliotecas de tempo de execução, consulte [referência de biblioteca de tempo de execução C](../../c-runtime-library/c-run-time-library-reference.md).
+Para obter mais informações sobre como usar as versões de depuração das bibliotecas de tempo de execução, consulte [C Run-time library Reference](../../c-runtime-library/c-run-time-library-reference.md).
 
-Para obter mais informações sobre DLLs, consulte [criar C /C++ DLLs no Visual Studio](../dlls-in-visual-cpp.md).
+Para saber mais sobre DLLs, confira [criarC++ C/DLLs no Visual Studio](../dlls-in-visual-cpp.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio
 
-1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [propriedades de compilador e de build definida C++ no Visual Studio](../working-with-project-properties.md).
+1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, confira [Definir as propriedades de build e do compilador do C++ no Visual Studio](../working-with-project-properties.md).
 
-1. Expanda o **C/C++** pasta.
+1. Selecione a página de propriedades **Propriedades da Configuração** > **C/C++**  > **Linha de Comando**.
 
-1. Selecione o **geração de código** página de propriedades.
+1. Selecione a página de propriedades **geração de código** .
 
-1. Modificar a **biblioteca de tempo de execução** propriedade.
+1. Modifique a propriedade da **biblioteca de tempo de execução** .
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Para definir essa opção do compilador via programação
 
