@@ -2,12 +2,12 @@
 title: 'Como: Usar o código C++ existente em um aplicativo da Plataforma Universal do Windows'
 ms.date: 04/08/2019
 ms.assetid: 87e5818c-3081-42f3-a30d-3dca2cf0645c
-ms.openlocfilehash: 3aeef205effe072a25fc0b3dabb9145245461d45
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: b46cbdc088908f59d6cbdc0ecd7cd6475da370d8
+ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59424190"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67861126"
 ---
 # <a name="how-to-use-existing-c-code-in-a-universal-windows-platform-app"></a>Como: Usar o código C++ existente em um aplicativo da Plataforma Universal do Windows
 
@@ -135,7 +135,7 @@ O procedimento a seguir se aplica ao caso em que há uma DLL nativa que expõe f
 
 2. Abra as **Propriedades do Projeto** do projeto de DLL e defina a **Configuração** como **Todas as Configurações**.
 
-3. Nas **Propriedades do Projeto**, na guia **C/C++** > **Geral**, defina **Consumir extensão do Windows Runtime** para **Yes (/ZW)**. Isso habilita extensões de componente (C++/CX).
+3. Nas **Propriedades do Projeto**, na guia **C/C++**  > **Geral**, defina **Consumir extensão do Windows Runtime** para **Yes (/ZW)** . Isso habilita extensões de componente (C++/CX).
 
 4. No **Gerenciador de Soluções**, selecione o nó do projeto, abra o menu de atalho e escolha **Descarregar Projeto**. Em seguida, abra o menu de atalho no nó do projeto descarregado e escolha editar o arquivo de projeto. Localize o elemento `WindowsTargetPlatformVersion` e substitua-o pelos seguintes elementos.
 
@@ -157,7 +157,7 @@ O procedimento a seguir se aplica ao caso em que há uma DLL nativa que expõe f
 
    O problema é que os Projetos Universais do Windows usam uma convenção de nomenclatura diferente para o arquivo de cabeçalho pré-compilado.
 
-6. Compile o projeto. Você pode obter alguns erros sobre as opções de linha de comando incompatíveis. Por exemplo, a opção usada com frequência, mas agora preterida **Habilitar Recompilação Mínima (/Gm)**, é definida por padrão em muitos projetos C++ mais antigos e é incompatível com `/ZW`.
+6. Compile o projeto. Você pode obter alguns erros sobre as opções de linha de comando incompatíveis. Por exemplo, a opção usada com frequência, mas agora preterida **Habilitar Recompilação Mínima (/Gm)** , é definida por padrão em muitos projetos C++ mais antigos e é incompatível com `/ZW`.
 
    Algumas funções não estão disponíveis ao compilar para a Plataforma Universal do Windows. Você verá erros de compilador sobre quaisquer problemas. Resolva-os até ter um build limpo.
 
@@ -193,9 +193,9 @@ No entanto, você pode usar uma biblioteca estática em uma UWP sem recompilá-l
 
 ### <a name="to-use-a-native-c-static-library-in-a-uwp-project"></a>Para usar uma biblioteca estática em C++ nativa em um projeto UWP
 
-1. Nas propriedades do projeto UWP, na seção **Vinculador**, adicione o caminho para a biblioteca na propriedade **Entrada**. Por exemplo, para uma biblioteca no projeto que coloca a saída em *SolutionFolder*\Debug\MyNativeLibrary\MyNativeLibrary.lib, adicione o caminho relativo `Debug\MyNativeLibrary\MyNativeLibrary.lib`.
+1. Nas propriedades do projeto para o projeto UWP, escolha **Propriedades de Configuração** > **Vinculador** > **Entrada** no painel esquerdo. No painel direito, adicione o caminho para a biblioteca na propriedade **Dependências Adicionais**. Por exemplo, para uma biblioteca no projeto que coloca a saída em *SolutionFolder*\Debug\MyNativeLibrary\MyNativeLibrary.lib, adicione o caminho relativo `Debug\MyNativeLibrary\MyNativeLibrary.lib`.
 
-2. Adicione uma instrução include para fazer referência ao arquivo de cabeçalho para o pch.h no projeto UWP e comece a adicionar código que usa a biblioteca.
+2. Adicione uma instrução include para fazer referência ao arquivo de cabeçalho no seu arquivo pch.h (se presente), ou em qualquer arquivo .cpp, conforme necessário, e comece a adicionar o código que usa a biblioteca.
 
    ```cpp
    #include "..\MyNativeLibrary\giraffe.h"
@@ -221,7 +221,7 @@ Se desejar consumir APIs nativas em uma biblioteca estática de um aplicativo UW
 
 6. Agora você pode ter alguns códigos duplicados. Se você tiver mais de um cabeçalho pré-compilado (digamos stdafx.h e pch.h), escolha um para manter. Copie qualquer código necessário, como instruções include, no que você está mantendo. Em seguida, exclua o outro e, nas propriedades do projeto, em **Cabeçalhos Pré-compilados**, certifique-se de que o nome do arquivo de cabeçalho esteja correto.
 
-   Se você alterou o arquivo a ser usado como o cabeçalho pré-compilado, certifique-se de que as opções de cabeçalho pré-compilado estejam corretas para cada arquivo. Selecione cada arquivo .cpp separadamente, abra sua janela Propriedades e certifique-se de que todos estejam definidos como **Usar (/Yu)**, exceto o cabeçalho pré-compilado desejado, que deve ser definido como **Criar (/Yc)**.
+   Se você alterou o arquivo a ser usado como o cabeçalho pré-compilado, certifique-se de que as opções de cabeçalho pré-compilado estejam corretas para cada arquivo. Selecione cada arquivo .cpp separadamente, abra sua janela Propriedades e certifique-se de que todos estejam definidos como **Usar (/Yu)** , exceto o cabeçalho pré-compilado desejado, que deve ser definido como **Criar (/Yc)** .
 
 7. Compile o projeto e resolva quaisquer erros. Esses erros podem ser causados pelo uso da opção `/ZW` ou por uma nova versão do SDK do Windows ou podem refletir dependências, como arquivos de cabeçalho, dos quais sua biblioteca depende, ou diferenças nas configurações do projeto antigo e do novo.
 
