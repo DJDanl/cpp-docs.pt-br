@@ -1,18 +1,18 @@
 ---
-title: Compartilhar ou reutilizar configurações de projeto do Visual Studio – C++
-ms.date: 03/27/2019
+title: Compartilhar ou reutilizar configurações do projeto do Visual Studio-C++
+ms.date: 07/17/2019
 helpviewer_keywords:
 - project properties [C++], reusable
-ms.openlocfilehash: b49c125e0341a2de68bbcd992dd8f9afaa99233d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9a8f6da3dc754aa9d47d46e26207a02bd1685ea8
+ms.sourcegitcommit: 610751254a01cba6ad15fb1e1764ecb2e71f66bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62196868"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "68313186"
 ---
-# <a name="share-or-reuse-visual-studio-project-settings"></a>Compartilhe ou reutilize as configurações de projeto do Visual Studio
+# <a name="share-or-reuse-visual-studio-project-settings"></a>Compartilhamento ou reutilização das configurações de projeto do Visual Studio
 
-Para criar um grupo personalizado de configurações que você pode compartilhar com outras pessoas ou reutilizar em vários projetos, use **Gerenciador de propriedades** para criar um *folha de propriedades* (arquivo. Props) para armazenar as configurações para cada tipo de projeto que você deseja ser capaz de reutilizar ou compartilhar com outras pessoas. Usando a propriedade folhas são muito menos propenso a erro de outras maneiras de criar configurações "globais". 
+Para criar um grupo personalizado de configurações que você pode compartilhar com outras pessoas ou reutilizar em vários projetos, use **Gerenciador de propriedades** para criar uma *folha de propriedades* (arquivo. props) para armazenar as configurações de cada tipo de projeto que você deseja que seja possível reutilizar ou compartilhar com outras pessoas. O uso de folhas de propriedades é muito menos propenso a erros do que outras maneiras de criar configurações "globais". 
 
 > [!IMPORTANT]
 > **Arquivos .user e por que eles são problemáticos**
@@ -21,13 +21,13 @@ Para criar um grupo personalizado de configurações que você pode compartilhar
 >
 > Embora os arquivos .user ainda sejam instalados pelo Visual Studio e participem da herança de propriedade, eles são vazios por padrão. A melhor prática é excluir a referência a eles no **Gerenciador de Propriedades** para garantir que os projetos operem independentemente de qualquer configuração por usuário e por computador. É importante garantir o comportamento correto em um ambiente de SCC (controle do código-fonte).
 
-Para exibir o **Gerenciador de Propriedades**, na barra de menus, escolha **Exibir**, **Outras Janelas**, **Gerenciador de Propriedades**.
+Para exibir **Gerenciador de propriedades**, na barra de menus, escolha **Exibir** > **Gerenciador de propriedades** ou **Exibir** > **outros** > **Gerenciador de propriedades**do Windows, dependendo de suas configurações.
 
-Se você tiver um conjunto de propriedades comuns usadas com frequência que deseje aplicar a vários projetos, use o **Gerenciador de Propriedades** para capturá-las em um arquivo de *folha de propriedades* reutilizável que, por convenção, tem uma extensão de nome de arquivo .props. Você pode aplicar a folha (ou folhas) a novos projetos para que não precisar definir suas propriedades a partir do zero. Para acessar o **Gerenciador de Propriedades**, na barra de menus, escolha **Exibir**, **Gerenciador de Propriedades**.
+Se você tiver um conjunto de propriedades comuns usadas com frequência que deseje aplicar a vários projetos, use o **Gerenciador de Propriedades** para capturá-las em um arquivo de *folha de propriedades* reutilizável que, por convenção, tem uma extensão de nome de arquivo .props. Você pode aplicar a folha (ou folhas) a novos projetos para que não precisar definir suas propriedades a partir do zero.
 
 ![Menu de atalho do Gerenciador de Propriedades](media/sharingnew.png "SharingNew")
 
-Em cada nó de configuração, você verá os nós de cada folha de propriedades que se aplica a essa configuração. O sistema adiciona folhas de propriedades que definem valores com base nas opções escolhidas no assistente de aplicativo no momento da criação do projeto. Clique com o botão direito do mouse em qualquer nó e escolha Propriedades para ver as propriedades que se aplicam a esse nó. Todas as folhas de propriedades são importadas automaticamente para a folha de propriedades "mestre" do projeto (ms.cpp.props) e são avaliadas na ordem em que são exibidas no Gerenciador de Propriedades. Mova-as para alterar a ordem de avaliação. As folhas de propriedades que são avaliadas posteriormente substituirão os valores nas planilhas avaliadas anteriormente. Ver [herança de propriedade do projeto](project-property-inheritance.md) para obter mais informações sobre a ordem de avaliação no arquivo. vcxproj, os arquivos. Props nem. targets, variáveis de ambiente e a linha de comando.
+Em cada nó de configuração, você verá os nós de cada folha de propriedades que se aplica a essa configuração. O sistema adiciona folhas de propriedades que definem valores com base nas opções escolhidas no assistente de aplicativo no momento da criação do projeto. Clique com o botão direito do mouse em qualquer nó e escolha Propriedades para ver as propriedades que se aplicam a esse nó. Todas as folhas de propriedades são importadas automaticamente para a folha de propriedades "mestre" do projeto (ms.cpp.props) e são avaliadas na ordem em que são exibidas no Gerenciador de Propriedades. Mova-as para alterar a ordem de avaliação. As folhas de propriedades que são avaliadas posteriormente substituirão os valores nas planilhas avaliadas anteriormente. Consulte [herança de Propriedade do projeto](project-property-inheritance.md) para obter mais informações sobre a ordem de avaliação no arquivo. vcxproj, os arquivos. props e. targets, variáveis de ambiente e a linha de comando.
 
 Se você escolher **Adicionar Nova Folha de Propriedades do Projeto** e, em seguida, selecionar, por exemplo, a folha de propriedades MyProps.props, uma caixa de diálogo da página de propriedades será aberta. Observe que isso se aplica à folha de propriedades MyProps; as alterações feitas são gravadas na folha, não no arquivo de projeto (.vcxproj).
 
@@ -44,7 +44,7 @@ Em grandes soluções que terão vários projetos, pode ser útil criar uma folh
 
 #### <a name="to-create-a-property-sheet"></a>Para criar uma folha de propriedades
 
-1. Na barra de menus, escolha **Exibir**, **Gerenciador de Propriedades**. O **Gerenciador de Propriedades** será aberto.
+1. Na barra de menus, escolha **Exibir** > **Gerenciador de propriedades** ou **Exibir** > **outros** > **Gerenciador de propriedades**do Windows. O **Gerenciador de Propriedades** será aberto.
 
 2. Para definir o escopo da folha de propriedades, selecione o item ao qual se aplica. Isso pode ser uma configuração específica ou outra folha de propriedades. Abra o menu de atalho desse item e, em seguida, escolha **Adicionar Nova Folha de Propriedades do Projeto**. Especifique um nome e um local.
 
