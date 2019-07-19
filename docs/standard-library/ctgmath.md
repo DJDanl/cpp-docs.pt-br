@@ -1,34 +1,40 @@
 ---
 title: '&lt;ctgmath&gt;'
-ms.date: 11/04/2016
+ms.date: 07/11/2019
+f1_keywords:
+- <ctgmath>
+- ctgmath
+helpviewer_keywords:
+- ctgmath header
 ms.assetid: ff521893-f445-4dc8-a2f6-699185bb7024
-ms.openlocfilehash: 85099f3cb206dd791aade59bf9a531a714e68ac3
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 30eca273ac41139251c024c27c16d4adefe7f784
+ms.sourcegitcommit: 0867d648e0955ebad7260b5fbebfd6cd4d58f3c7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246599"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68341114"
 ---
 # <a name="ltctgmathgt"></a>&lt;ctgmath&gt;
 
-Na prática, inclui o C++ cabeçalhos da biblioteca padrão \<complexo > e \<cmath >, que fornecem macros matemáticas de tipo genérico equivalentes a \<tgmath. h >.
+Na verdade, inclui os C++ cabeçalhos \<de biblioteca padrão complexos > \<e cmath >, que fornecem macros de matemática de tipo \<-Generic equivalentes a tgmath. h >.
+
+> [!NOTE]
+> O cabeçalho de > \<. h da biblioteca padrão C não é \<incluído pelo ctgmath >, pois ele é efetivamente substituído C++ pelas sobrecargas \<em > complexas \<e cmath >. Isso torna o \<cabeçalho de > ctgmath redundante. O \<cabeçalho de > tgmath. h é preterido em. C++ O \<cabeçalho de > ctgmath é preterido em c++ 17 e removido no rascunho de c++ 20 padrão.
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** \<ctgmath >
+**Cabeçalho:** \<> ctgmath
 
 **Namespace:** std
 
 ## <a name="remarks"></a>Comentários
 
-A funcionalidade do cabeçalho da biblioteca C padrão \<tgmath. h > é fornecida pelas sobrecargas em \<complexo > e \<cmath >.
-
-A inclusão desse cabeçalho garante que os nomes declarados usando vinculação externa no cabeçalho da biblioteca C Padrão sejam declarados no namespace `std`.
+A funcionalidade do cabeçalho \<de biblioteca padrão C tgmath. h > é fornecida pelas sobrecargas em \<> > complexas e \<cmath.
 
 ## <a name="see-also"></a>Consulte também
 
-[\<ccomplex>](../standard-library/ccomplex.md)<br/>
-[\<cmath>](../standard-library/cmath.md)<br/>
-[Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Visão geral da biblioteca padrão C++](../standard-library/cpp-standard-library-overview.md)<br/>
-[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[\<> complexos](complex.md)\
+[\<cmath>](cmath.md)\
+[Referência de arquivos de cabeçalho](cpp-standard-library-header-files.md)\
+[C++Visão geral da biblioteca padrão](cpp-standard-library-overview.md)\
+[Segurança de thread na C++ biblioteca padrão](thread-safety-in-the-cpp-standard-library.md)
