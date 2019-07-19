@@ -1,33 +1,38 @@
 ---
 title: '&lt;cstdbool&gt;'
-ms.date: 11/04/2016
+ms.date: 07/11/2019
+f1_keywords:
+- <cstdbool>
+- cstdbool
+helpviewer_keywords:
+- cstdbool header
 ms.assetid: 44ccb8b2-d808-4715-8097-58ba09ab33ed
-ms.openlocfilehash: 0bc21753b108dbdbfee86ea1319223e49753b8dc
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: ed780e059a5e456731fd6a4f651639e282016f5e
+ms.sourcegitcommit: 0867d648e0955ebad7260b5fbebfd6cd4d58f3c7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244498"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68341093"
 ---
 # <a name="ltcstdboolgt"></a>&lt;cstdbool&gt;
 
-Inclui o cabeçalho \<stdbool.h> da biblioteca C Padrão e adiciona os nomes associados ao namespace `std`.
+Inclui o cabeçalho \<de biblioteca padrão C stdbool. h > e adiciona os nomes associados `std` ao namespace.
 
 > [!NOTE]
-> Esse cabeçalho foi preterido no C++ 17.
+> Como o \<cabeçalho de >. h stdbool define macros que são palavras- C++chave no, inclusive não tem nenhum efeito. O \<cabeçalho de > stdbool. h é preterido em. C++ O \<cabeçalho de > cstdbool é preterido em c++ 17 e removido no rascunho de c++ 20 padrão.
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** \<cstdbool >
+**Cabeçalho:** \<> cstdbool
 
 **Namespace:** std
 
 ## <a name="remarks"></a>Comentários
 
-A inclusão desse cabeçalho garante que os nomes declarados usando vinculação externa no cabeçalho da biblioteca C Padrão sejam declarados no namespace `std`.
+A inclusão desse cabeçalho garante que os nomes declarados usando vínculo externo no cabeçalho da biblioteca padrão C sejam `std` declarados no namespace.
 
 ## <a name="see-also"></a>Consulte também
 
-[Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Visão geral da biblioteca padrão C++](../standard-library/cpp-standard-library-overview.md)<br/>
-[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Referência de arquivos de cabeçalho](cpp-standard-library-header-files.md)\
+[C++Visão geral da biblioteca padrão](cpp-standard-library-overview.md)\
+[Segurança de thread na C++ biblioteca padrão](thread-safety-in-the-cpp-standard-library.md)

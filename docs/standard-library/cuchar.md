@@ -1,42 +1,34 @@
 ---
 title: '&lt;cuchar&gt;'
-ms.date: 04/04/2019
+ms.date: 07/17/2019
 f1_keywords:
 - <cuchar>
+- cuchar
 helpviewer_keywords:
 - cuchar header
-ms.openlocfilehash: 9fe161d5079aa2fe82dfaef0a483c3a3e600408b
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 004ca23ea86134fb7cd6149015ac31cc51b5a403
+ms.sourcegitcommit: 0867d648e0955ebad7260b5fbebfd6cd4d58f3c7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68268568"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68341064"
 ---
-# <a name="ltcwchargt"></a>&lt;cwchar&gt;
+# <a name="ltcuchargt"></a>&lt;cuchar&gt;
 
-Inclui o cabeçalho da biblioteca C padrão \<uchar.h > e adiciona os nomes associados ao `std` namespace.
+Inclui o cabeçalho \<de biblioteca padrão C UCHAR. h > e adiciona os nomes associados `std` ao namespace.
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** \<cuchar >
+**Cabeçalho:** \<> cuchar
 
 **Namespace:** std
 
-## <a name="member-functions"></a>Funções de membro
-
-|||
-|-|-|
-|[c16rtomb](../standard-library/cuchar-functions.md#c16rtomb)|Sem descrição.|
-|[c32rtomb](../standard-library/cuchar-functions.md#c32rtomb)|Sem descrição.|
-|[mbrtoc16](../standard-library/cuchar-functions.md#mbrtoc16)|Sem descrição.|
-|[mbrtoc32](../standard-library/cuchar-functions.md#mbrtoc32)|Sem descrição.|
-
 ## <a name="remarks"></a>Comentários
 
-A inclusão desse cabeçalho garante que os nomes declarados usando vinculação externa no cabeçalho da biblioteca C Padrão sejam declarados no namespace `std`.
+Esse cabeçalho adiciona os `mbstate_t` tipos de biblioteca padrão C e `size_t`, e as [funções c16rtomb](../c-runtime-library/reference/c16rtomb-c32rtomb1.md), `std` [c32rtomb](../c-runtime-library/reference/c16rtomb-c32rtomb1.md), [mbrtoc16](../c-runtime-library/reference/mbrtoc16-mbrtoc323.md)e [mbrtoc32](../c-runtime-library/reference/mbrtoc16-mbrtoc323.md) ao namespace.
 
 ## <a name="see-also"></a>Consulte também
 
-[Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Visão geral da biblioteca padrão C++](../standard-library/cpp-standard-library-overview.md)<br/>
-[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Referência de arquivos de cabeçalho](cpp-standard-library-header-files.md)\
+[C++Visão geral da biblioteca padrão](cpp-standard-library-overview.md)\
+[Segurança de thread na C++ biblioteca padrão](thread-safety-in-the-cpp-standard-library.md)

@@ -1,10 +1,11 @@
 ---
 title: /X (ignorar caminhos de inclusão padrão)
-ms.date: 11/04/2016
+ms.date: 07/18/2019
 f1_keywords:
 - /x
 - VC.Project.VCCLCompilerTool.OVERWRITEStandardIncludePath
 - VC.Project.VCCLWCECompilerTool.OVERWRITEStandardIncludePath
+- VC.Project.VCCLCompilerTool.IgnoreStandardIncludePath
 helpviewer_keywords:
 - /X compiler option [C++]
 - include files, ignore standard path
@@ -13,16 +14,16 @@ helpviewer_keywords:
 - X compiler option
 - Ignore Standard Include Paths compiler option
 ms.assetid: 16bdf2cc-c8dc-46e4-bdcc-f3caeba5e1ef
-ms.openlocfilehash: dba7e49880307002a3dee983264e93666adfef17
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 16f903b98d69472fe1a33b084fe6393ecf9ec001
+ms.sourcegitcommit: 0867d648e0955ebad7260b5fbebfd6cd4d58f3c7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62316308"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68341042"
 ---
 # <a name="x-ignore-standard-include-paths"></a>/X (ignorar caminhos de inclusão padrão)
 
-Impede que o compilador procurar pelos arquivos de inclusão em diretórios especificados nas variáveis de ambiente PATH e INCLUDE.
+Impede que o compilador procure arquivos de inclusão em diretórios especificados no caminho e inclua variáveis de ambiente.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -32,17 +33,17 @@ Impede que o compilador procurar pelos arquivos de inclusão em diretórios espe
 
 ## <a name="remarks"></a>Comentários
 
-Você pode usar essa opção com o [/I (diretórios de inclusão adicionais)](i-additional-include-directories.md) (**/I**`directory`) opção.
+Você pode usar essa opção com a opção [/i (diretórios de inclusão adicionais)](i-additional-include-directories.md) ( **/i**`directory`).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio
 
-1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [propriedades de compilador e de build definida C++ no Visual Studio](../working-with-project-properties.md).
+1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, confira [Definir as propriedades de build e do compilador do C++ no Visual Studio](../working-with-project-properties.md).
 
-1. Clique o **C/C++** pasta.
+1. Clique na pasta **CC++ /** .
 
-1. Clique o **pré-processador** página de propriedades.
+1. Clique na página de propriedades do **pré-processador** .
 
-1. Modificar a **ignorar caminho de inclusão padrão** propriedade.
+1. Modifique a propriedade **Ignorar caminho de inclusão padrão** .
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Para definir essa opção do compilador via programação
 
@@ -50,7 +51,7 @@ Você pode usar essa opção com o [/I (diretórios de inclusão adicionais)](i-
 
 ## <a name="example"></a>Exemplo
 
-No comando a seguir `/X` informa ao compilador para ignorar os locais especificados pelas variáveis de ambiente PATH e INCLUDE, e `/I` Especifica o diretório no qual procurar arquivos de inclusão:
+No comando a seguir, `/X` diz ao compilador para ignorar os locais especificados pelo caminho e incluir as variáveis `/I` de ambiente e especifica o diretório no qual procurar por arquivos de inclusão:
 
 ```
 CL /X /I \ALT\INCLUDE MAIN.C
