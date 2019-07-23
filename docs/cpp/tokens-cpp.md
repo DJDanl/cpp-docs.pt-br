@@ -1,5 +1,5 @@
 ---
-title: Tokens (C++)
+title: TokensC++()
 ms.date: 11/04/2016
 helpviewer_keywords:
 - tokens [C++]
@@ -7,18 +7,18 @@ helpviewer_keywords:
 - translation units
 - white space, in C++ tokens
 ms.assetid: aa812fd0-6d47-4f3f-aee0-db002ee4d8b9
-ms.openlocfilehash: 1606df56191ec00ffea543dedd3fd4eda98d01c2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cd104b7308716ca182374bbff2df61731c84d574
+ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62330434"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68376260"
 ---
-# <a name="tokens-c"></a>Tokens (C++)
+# <a name="tokens-c"></a>TokensC++()
 
 Um token é o menor elemento de um programa em C/C++ que é significativo para o compilador. O analisador C++ reconhece os seguintes tipos de tokens: identificadores, palavra-chave, literais, operadores, pontuadores e outros separadores. Um fluxo desses tokens compõe uma unidade de tradução.
 
-Geralmente, os tokens são separados por *espaço em branco*. O espaço em branco pode ser um ou vários:
+Os tokens são geralmente separados por *espaço em branco*. O espaço em branco pode ser um ou vários:
 
 - Espaços em branco
 
@@ -26,13 +26,13 @@ Geralmente, os tokens são separados por *espaço em branco*. O espaço em branc
 
 - Novas linhas
 
-- Avanços de página
+- Feeds de formulário
 
 - Comentários
 
-O analisador reconhece pontuadores, identificadores, literais, operadores e palavras-chave. Para obter informações sobre tipos específicos de token, consulte [palavras-chave](../cpp/keywords-cpp.md), [identificadores](../cpp/identifiers-cpp.md), [numérico, booliano e literais de ponteiro](../cpp/numeric-boolean-and-pointer-literals-cpp.md), [cadeia de caracteres e literais de caracteres ](../cpp/string-and-character-literals-cpp.md), [Literais definidos pelo usuário](../cpp/user-defined-literals-cpp.md), [operadores C++ internos, precedência e associatividade](../cpp/cpp-built-in-operators-precedence-and-associativity.md), e [pontuadores](../cpp/punctuators-cpp.md). Espaço em branco é ignorado, exceto conforme necessário separar os tokens.
+O analisador reconhece palavras-chave, identificadores, literais, operadores e pontuadores. Para obter informações sobre tipos de token específicos, consulte [palavras-chave](../cpp/keywords-cpp.md), [identificadores](../cpp/identifiers-cpp.md), [números numéricos, booleanos e de ponteiro](../cpp/numeric-boolean-and-pointer-literals-cpp.md), literais [de cadeia de caracteres e caracteres](../cpp/string-and-character-literals-cpp.md), [literais definidos pelo usuário](../cpp/user-defined-literals-cpp.md), [ C++ operadores internos, Precedência e Associação](../cpp/cpp-built-in-operators-precedence-and-associativity.md)e [pontuadores](../cpp/punctuators-cpp.md). O espaço em branco é ignorado, exceto conforme necessário para separar os tokens.
 
-Tokens de pré-processamento é usado nas fases do pré-processamento para gerar o fluxo do token passado para o compilador. As categorias de token de pré-processamento são nomes de cabeçalho, identificadores, números de pré-processamento, literais de caracteres, literais de cadeia de caracteres, operadores de pré-processamento e pontuadores e caracteres de espaço em branco não únicos que não correspondem a uma das outras categorias. Literais de caracteres e cadeia de caracteres podem ser literais definidos pelo usuário. Tokens de pré-processamento podem ser separados por espaço em branco ou comentários.
+Os tokens de pré-processamento são usados nas fases de pré-processamento para gerar o fluxo de token passado para o compilador. As categorias de token de pré-processamento são nomes de cabeçalho, identificadores, números de pré-processamento, literais de caracteres, literais de cadeia de caracteres, operadores de pré-processamento e pontuadores e caracteres de espaço não-branco únicos que não correspondem a uma das outras categorias. Literais de caracteres e de cadeia de caracteres podem ser literais definidos pelo usuário. Os tokens de pré-processamento podem ser separados por espaços em branco ou comentários.
 
 O analisador separa os tokens do fluxo de entrada criando o maior token possível usando os caracteres de entrada em uma verificação da esquerda para a direita. Considere este fragmento de código:
 
