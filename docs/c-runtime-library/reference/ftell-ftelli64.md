@@ -27,12 +27,12 @@ helpviewer_keywords:
 - file pointers [C++], getting current position
 - file pointers [C++]
 ms.assetid: 40149cd8-65f2-42ff-b70c-68e3e918cdd7
-ms.openlocfilehash: cc76ad0776ae82637b95d32cdc6254d3c40da5b5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f9548d4684bd2df734be2b0b703f98d8c7982884
+ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62332774"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68376129"
 ---
 # <a name="ftell-ftelli64"></a>ftell, _ftelli64
 
@@ -52,23 +52,23 @@ __int64 _ftelli64(
 ### <a name="parameters"></a>Parâmetros
 
 *stream*<br/>
-Destino **arquivo** estrutura.
+Estrutura do **arquivo** de destino.
 
 ## <a name="return-value"></a>Valor de retorno
 
-**ftell** e **_ftelli64** retornar a posição atual do arquivo. O valor retornado por **ftell** e **_ftelli64** podem não refletir o deslocamento de bytes físico para fluxos abertos no modo de texto, porque o modo de texto faz com que a conversão de linha de retorno de carro. Use **ftell** com [fseek](fseek-fseeki64.md) ou **_ftelli64** com [_fseeki64](fseek-fseeki64.md) para retornar para locais de arquivo corretamente. Em erro, **ftell** e **_ftelli64** invocarão o manipulador de parâmetro inválido, conforme descrito na [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções retornarão-1l e definirão **errno** a uma das duas constantes, definida em ERRNO. H. O **EBADF** constante significa que o *fluxo* argumento não é um valor de ponteiro de arquivo válido ou não faz referência a um arquivo aberto. **EINVAL** significa um inválido *stream* argumento foi passado para a função. Em dispositivos incapazes de fazer buscas (como terminais e impressoras), ou quando *stream* não faz referência a um arquivo aberto, o valor retornado será indefinido.
+**ftell** e **_ftelli64** retornam a posição atual do arquivo. O valor retornado por **ftell** e **_ftelli64** pode não refletir o deslocamento de byte físico para fluxos abertos no modo de texto, pois o modo de texto faz a tradução de retorno de carro-linha de alimentação. Use **ftell** com [fseek](fseek-fseeki64.md) ou **_ftelli64** com [_fseeki64](fseek-fseeki64.md) para retornar aos locais de arquivo corretamente. Se houver erro, **ftell** e **_ftelli64** invocarão o manipulador de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, essas funções retornam-1L e definem **errno** como uma das duas constantes, definidas em errno. T. A constante **EBADF** significa que o argumento de *fluxo* não é um valor de ponteiro de arquivo válido ou não se refere a um arquivo aberto. **EINVAL** significa que um argumento de *fluxo* inválido foi passado para a função. Em dispositivos sem capacidade de busca (como terminais e impressoras) ou quando o *fluxo* não se refere a um arquivo aberto, o valor de retorno é indefinido.
 
 Consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obter mais informações sobre esses e outros códigos de retorno.
 
 ## <a name="remarks"></a>Comentários
 
-O **ftell** e **_ftelli64** funções de recuperar a posição atual do ponteiro do arquivo (se houver) associado *fluxo*. A posição é expressa como um deslocamento relativo ao início do fluxo.
+As funções **ftell** e **_ftelli64** recuperam a posição atual do ponteiro do arquivo (se houver) associado ao *fluxo*. A posição é expressa como um deslocamento relativo ao início do fluxo.
 
 Observe que quando um arquivo é aberto para acrescentar dados, a posição do arquivo atual é determinada pela última operação de E/S e não por onde a gravação seguinte ocorreria. Por exemplo, se um arquivo for aberto para fazer um acréscimo e a última operação tiver sido uma leitura, a posição do arquivo será o ponto em que a operação de leitura seguinte começaria e não onde a próxima gravação começaria. (Quando um arquivo é aberto para fazer um acréscimo, a posição do arquivo é movida para o final do arquivo antes de qualquer operação de gravação.) Se nenhuma operação de E/S tiver ocorrido em um arquivo aberto para acréscimo, a posição do arquivo será o início do arquivo.
 
-No modo de texto, CTRL+Z é interpretado como um caractere de fim do arquivo na entrada. Em arquivos abertos para leitura/gravação **fopen** e todas as rotinas relacionadas a verificar se há um CTRL + Z no final do arquivo e removem-la se possível. Isso é feito porque usar a combinação de **ftell** e [fseek](fseek-fseeki64.md) ou **_ftelli64** e [_fseeki64](fseek-fseeki64.md)para movimentação dentro de um arquivo que termina com CTRL + Z pode causar **ftell** ou **_ftelli64** se comportar incorretamente perto do fim do arquivo.
+No modo de texto, CTRL+Z é interpretado como um caractere de fim do arquivo na entrada. Em arquivos abertos para leitura/gravação, **fopen** e todas as rotinas relacionadas verificam um CTRL + Z no final do arquivo e removem-no, se possível. Isso é feito porque usar a combinação de **ftell** e [fseek](fseek-fseeki64.md) ou **_ftelli64** e [_fseeki64](fseek-fseeki64.md), para mover dentro de um arquivo que termina com um CTRL + Z pode fazer com que **ftell** ou **_ftelli64** se comporte de forma inadequada próximo ao final do Grupo.
 
-Essa função bloqueia o thread de chamada durante a execução e, portanto, é thread-safe. Para obter uma versão sem bloqueio, consulte **ftell_nolock**.
+Essa função bloqueia o thread de chamada durante a execução e, portanto, é thread-safe. Para uma versão sem bloqueio, consulte **_ftell_nolock**.
 
 ## <a name="requirements"></a>Requisitos
 

@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - RC1004
 ms.assetid: f9b703d4-6767-4721-9450-37079bcc7152
-ms.openlocfilehash: e7a91d7caeffd45ff77a76935e3d0a01e1d9f2cf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2c3792b7d6f266efd239cd693750a3c1a6b747c5
+ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62297782"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68375902"
 ---
 # <a name="resource-compiler-fatal-error-rc1004"></a>Erro fatal RC1004 (compilador de recurso)
 
 fim de arquivo inesperado encontrado
 
-Esse erro pode ser causado por falta de avanço de linha e caracteres de retorno de carro na última linha de um arquivo de texto.
+Esse erro pode ser causado por falta de caracteres de alimentação de linha e de retorno de carro na última linha de um arquivo de texto.

@@ -1,40 +1,28 @@
 ---
 title: Funções de Membro de Fluxo de Entrada
-ms.date: 11/04/2016
+ms.date: 07/19/2019
 helpviewer_keywords:
 - input stream objects
 - input streams, member functions
 ms.assetid: b4b9465d-0da9-4ccf-859d-72a68418982e
-ms.openlocfilehash: b046ea1995d5a8eaa39dced9feb7a5e4c422c253
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3b028090c9b91c7f0dde195243a5d2daef55fbbc
+ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159275"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68376237"
 ---
 # <a name="input-stream-member-functions"></a>Funções de Membro de Fluxo de Entrada
 
-Funções de membro de fluxo de entrada são usadas para entrada de disco. As funções de membro incluem:
+Funções de membro de fluxo de entrada são usadas para entrada de disco.
 
-- [A função open para fluxos de entrada](#vclrftheopenfunctionforinputstreamsanchor11)
+## <a name="vclrftheopenfunctionforinputstreamsanchor11"></a>abrir
 
-- [Get](#vclrfthegetfunctionanchor12)
+Se você estiver usando um fluxo de arquivo de`ifstream`entrada (), deverá associar esse fluxo a um arquivo de disco específico. Você pode fazer isso no construtor ou pode usar a `open` função. Nos dois casos, os argumentos são os mesmos.
 
-- [A getline](#vclrfthegetlinefunctionanchor13)
+Geralmente, você especifica um sinalizador [ios_base:: OpenMode](../standard-library/ios-base-class.md#openmode) quando abre o arquivo associado a um fluxo de entrada (o modo padrão `ios::in`é). Para obter uma lista dos `openmode` sinalizadores, consulte [ios_base:: OpenMode](../standard-library/ios-base-class.md#openmode). Os sinalizadores podem ser combinados com o operador bit a bit OR ( &#124; ).
 
-- [A leitura](#vclrfthereadfunctionanchor14)
-
-- [As funções seekg e tellg](#vclrftheseekgandtellgfunctionsanchor7)
-
-- [A função close para fluxos de entrada](#vclrftheclosefunctionforinputstreamsanchor15)
-
-## <a name="vclrftheopenfunctionforinputstreamsanchor11"></a> A função open para fluxos de entrada
-
-Se estiver usando um fluxo de arquivo de entrada (ifstream), você deverá associar o fluxo a um arquivo de disco específico. Você pode fazer isso no construtor, ou você pode usar o `open` função. Nos dois casos, os argumentos são os mesmos.
-
-Normalmente, você especifica um [ios_base:: OpenMode](../standard-library/ios-base-class.md#openmode) sinalizador quando você abre o arquivo associado a um fluxo de entrada (o modo padrão é `ios::in`). Para obter uma lista de `open_mode` sinalizadores, consulte [abrir](#vclrftheopenfunctionforinputstreamsanchor11). Os sinalizadores podem ser combinados com o operador bit a bit OR ( &#124; ).
-
-Para ler um arquivo, primeiro use o `fail` a função de membro para determinar se ele existe:
+Para ler um arquivo, primeiro use a `fail` função de membro para determinar se ele existe:
 
 ```cpp
 istream ifile("FILENAME");
@@ -43,11 +31,11 @@ if (ifile.fail())
 // The file does not exist ...
 ```
 
-## <a name="vclrfthegetfunctionanchor12"></a> Get
+## <a name="vclrfthegetfunctionanchor12"></a>Obter
 
-Não formatada `get` função de membro funciona como o `>>` operador com duas exceções. Primeiro, o `get` função inclui caracteres de espaço em branco, enquanto o extrator exclui espaços em branco quando o `skipws` sinalizador é definido (o padrão). Segundo, o `get` função tem menos probabilidade de causar um fluxo de saída associado (`cout`, por exemplo) para ser liberado.
+A função de `get` membro não formatada funciona como `>>` o operador com duas exceções. Primeiro, a `get` função inclui caracteres de espaço em branco, enquanto o extrator exclui espaço em branco `skipws` quando o sinalizador é definido (o padrão). Em segundo lugar `get` , a função tem menos probabilidade de fazer com que um`cout`fluxo de saída associado (, por exemplo) seja liberado.
 
-Uma variação do `get` função especifica um endereço do buffer e o número máximo de caracteres a serem lidos. Isso é útil para limitar o número de caracteres enviados para uma variável específica, como este exemplo mostra:
+Uma variação da `get` função especifica um endereço de buffer e o número máximo de caracteres a serem lidos. Isso é útil para limitar o número de caracteres enviados para uma variável específica, como este exemplo mostra:
 
 ```cpp
 // ioo_get_function.cpp
@@ -78,9 +66,9 @@ int main()
 1234
 ```
 
-## <a name="vclrfthegetlinefunctionanchor13"></a> A getline
+## <a name="vclrfthegetlinefunctionanchor13"></a>getline
 
-O `getline` função de membro é semelhante ao `get` função. As duas funções permitem um terceiro argumento que especifica o caractere de encerramento para a entrada. O valor padrão é o caractere newline. As duas funções reservam um caractere para o caractere de encerramento necessário. No entanto, `get` deixa o caractere de terminação no fluxo e `getline` remove o caractere de terminação.
+A `getline` função de membro é semelhante `get` à função. As duas funções permitem um terceiro argumento que especifica o caractere de encerramento para a entrada. O valor padrão é o caractere newline. As duas funções reservam um caractere para o caractere de encerramento necessário. No entanto, `get` deixa o caractere de terminação `getline` no fluxo e remove o caractere de terminação.
 
 O exemplo a seguir especifica um caractere de encerramento para o fluxo de entrada:
 
@@ -105,9 +93,9 @@ int main( )
 test
 ```
 
-## <a name="vclrfthereadfunctionanchor14"></a> A leitura
+## <a name="vclrfthereadfunctionanchor14"></a>leitura
 
-O `read` função de membro lê bytes de um arquivo para uma área de memória especificada. O argumento de tamanho especifica o número de bytes lidos. Se você não incluir esse argumento, a leitura para quando o final de arquivo físico é atingido ou, no caso de um arquivo de modo de texto, quando o caractere `EOF` inserido é lido.
+A `read` função de membro lê bytes de um arquivo para uma área especificada da memória. O argumento de tamanho especifica o número de bytes lidos. Se você não incluir esse argumento, a leitura para quando o final de arquivo físico é atingido ou, no caso de um arquivo de modo de texto, quando o caractere `EOF` inserido é lido.
 
 Este exemplo lê um registro binário de um arquivo de folha de pagamento em uma estrutura:
 
@@ -135,9 +123,9 @@ int main()
 }
 ```
 
-O programa presume que os registros de dados estão formatados exatamente conforme especificado pela estrutura, sem nenhum caractere de avanço de linha ou de retorno de carro de encerramento.
+O programa pressupõe que os registros de dados sejam formatados exatamente conforme especificado pela estrutura sem retorno de carro de encerramento ou caracteres de alimentação de linha.
 
-## <a name="vclrftheseekgandtellgfunctionsanchor7"></a> As funções seekg e tellg
+## <a name="vclrftheseekgandtellgfunctionsanchor7"></a>seekg e tellg
 
 Fluxos de arquivo de entrada mantêm um ponteiro interno para a posição no arquivo em que os dados devem ser lidos em seguida. Defina esse ponteiro com a função `seekg`, conforme mostrado aqui:
 
@@ -165,7 +153,7 @@ int main( )
 }
 ```
 
-Para usar `seekg` para implementar sistemas de gerenciamento de dados orientados a registros, multiplique o tamanho de registro de comprimento fixo pelo número do registro para obter a posição do byte em relação ao final do arquivo e, em seguida, usar o `get` objeto para ler o registro.
+Para usar `seekg` o para implementar sistemas de gerenciamento de dados orientados a registros, multiplique o tamanho do registro de comprimento fixo pelo número do registro para obter a posição do byte em relação ao final do arquivo `get` e, em seguida, use o objeto para ler o registro.
 
 A função membro `tellg` retorna a posição do arquivo atual para leitura. Esse valor é do tipo `streampos`, um `typedef` definido em \<iostream>. O exemplo a seguir lê um arquivo e exibe mensagens mostrando as posições de espaços.
 
@@ -192,9 +180,9 @@ int main( )
 }
 ```
 
-## <a name="vclrftheclosefunctionforinputstreamsanchor15"></a> A função close para fluxos de entrada
+## <a name="vclrftheclosefunctionforinputstreamsanchor15"></a>inclui
 
-O `close` fecha o arquivo de disco associado a um fluxo de arquivo de entrada de função de membro e libera o identificador de arquivo do sistema operacional. O [ifstream](../standard-library/basic-ifstream-class.md) destruidor fecha o arquivo para você, mas você pode usar o `close` funcionar se você precisar abrir um outro arquivo para o mesmo objeto de fluxo.
+A `close` função membro fecha o arquivo de disco associado a um fluxo de arquivo de entrada e libera o identificador de arquivo do sistema operacional. O [`ifstream`](../standard-library/basic-ifstream-class.md) destruidor fecha o arquivo para você, mas você pode usar a `close` função se precisar abrir outro arquivo para o mesmo objeto de fluxo.
 
 ## <a name="see-also"></a>Consulte também
 

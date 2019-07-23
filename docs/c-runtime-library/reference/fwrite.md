@@ -22,12 +22,12 @@ helpviewer_keywords:
 - streams, writing data to
 - fwrite function
 ms.assetid: 7afacf3a-72d7-4a50-ba2e-bea1ab9f4124
-ms.openlocfilehash: b4d6b9ce4fb66ee545f52946e28e4984d9e4f924
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f05e39390f3a2d0ad41627f6aed1aecd77b57cca
+ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287541"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68376056"
 ---
 # <a name="fwrite"></a>fwrite
 
@@ -60,15 +60,15 @@ Ponteiro para a estrutura **FILE**.
 
 ## <a name="return-value"></a>Valor de retorno
 
-**fwrite** retorna o número de completo itens são gravados, que pode ser menor que *contagem* se ocorrer um erro. Além disso, em caso de erro, não será possível determinar o indicador de posição do arquivo. Se qualquer um dos *stream* ou *buffer* for um ponteiro nulo ou se um número ímpar de bytes a serem gravados for especificado no modo Unicode, a função invocará o manipulador de parâmetro inválido, conforme descrito em [ Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essa função definirá **errno** à **EINVAL** e retornará 0.
+**fwrite** retorna o número de itens completos gravados, o que pode ser menor que a *contagem* se ocorrer um erro. Além disso, em caso de erro, não será possível determinar o indicador de posição do arquivo. Se o *fluxo* ou o *buffer* for um ponteiro nulo ou se um número ímpar de bytes a serem gravados for especificado no modo Unicode, a função invocará o manipulador de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, essa função definirá **errno** como **EINVAL** e retornará 0.
 
 ## <a name="remarks"></a>Comentários
 
-O **fwrite** função grava até *contagem* itens, de *tamanho* comprimento cada um, de *buffer* para a saída *fluxo*. O ponteiro de arquivo associado *stream* (se houver) é incrementado pelo número de bytes gravados. Se *stream* é aberto no modo de texto, cada avanço de linha é substituído por um retorno de carro - alimentação de linha par. A substituição não interfere no valor retornado.
+A função **fwrite** grava até a *contagem* de itens, com *tamanho* de comprimento cada, do *buffer* para o *fluxo*de saída. O ponteiro de arquivo associado ao *fluxo* (se houver) é incrementado pelo número de bytes realmente gravados. Se o *fluxo* for aberto no modo de texto, cada alimentação de linha será substituído por um par de retorno de carro-alimentação de linha. A substituição não interfere no valor retornado.
 
-Quando *stream* é aberto no modo de conversão de Unicode – por exemplo, se *fluxo* é aberta chamando **fopen** e usando um parâmetro de modo que inclui **ccs = UNICODE**, **ccs = UTF-16LE**, ou **ccs = UTF-8**, ou se o modo for alterado para um modo de translação Unicode usando **setmode** e um modo parâmetro que inclui **o_wtext**, **_O_U16TEXT**, ou **_O_U8TEXT**—*buffer* é interpretado como um ponteiro para um matriz de **wchar_t** que contém dados UTF-16. Tentar gravar uma quantidade ímpar de bytes nesse modo gera um erro de validação de parâmetro.
+Quando o *fluxo* é aberto no modo de conversão Unicode — por exemplo, se o *fluxo* for aberto chamando **fopen** e usando um parâmetro de modo que inclui **CCS = Unicode**, **CCS = UTF-16LE**ou **CCS = UTF-8**, ou se o modo for alterado para um modo de conversão Unicode usando **_setmode** e um parâmetro de modo que inclui **_O_WTEXT**, **_O_U16TEXT**ou **_O_U8TEXT**— o*buffer* é interpretado como um ponteiro para uma matriz de **wchar_t** que contém Dados UTF-16. Tentar gravar uma quantidade ímpar de bytes nesse modo gera um erro de validação de parâmetro.
 
-Como essa função bloqueia o thread da chamada, ela é thread-safe. Para obter uma versão sem bloqueio, consulte **fwrite_nolock**.
+Como essa função bloqueia o thread da chamada, ela é thread-safe. Para uma versão sem bloqueio, consulte **_fwrite_nolock**.
 
 ## <a name="requirements"></a>Requisitos
 
