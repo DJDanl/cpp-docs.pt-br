@@ -26,12 +26,12 @@ helpviewer_keywords:
 - reading data [C++]
 - files [C++], reading
 ms.assetid: 2ce9c433-57ad-47fe-9ac1-4a7d4c883d30
-ms.openlocfilehash: 40f52ea37ae5419fe986aa505aad4fddfe8403ff
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f4dd599f227192b8c3ce17a0321d6399319e1925
+ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357649"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68376307"
 ---
 # <a name="read"></a>_read
 
@@ -60,19 +60,19 @@ Número máximo de bytes a serem lidos.
 
 ## <a name="return-value"></a>Valor de retorno
 
-**Read** retorna o número de bytes lidos, que pode ser menor que *buffer_size* se houver menos *buffer_size* bytes deixado no arquivo, ou se o arquivo foi aberto no modo de texto. No modo de texto de cada retorno de carro – linha feed par `\r\n` é substituído por um caractere de avanço de linha única `\n`. Apenas o caractere de avanço de linha único é contado no valor retornado. A substituição não afeta o ponteiro do arquivo.
+**_read** retorna o número de bytes lidos, que pode ser menor que *buffer_size* se houver menos de *buffer_size* bytes restantes no arquivo ou se o arquivo tiver sido aberto no modo de texto. No modo de texto, cada par `\r\n` retorno de carro-alimentação de linha é substituído por um caractere `\n`de alimentação de linha única. Somente o caractere de alimentação de linha única é contado no valor de retorno. A substituição não afeta o ponteiro do arquivo.
 
-Se a função tentar ler o final do arquivo, ela retornará 0. Se *fd* é inválido, o arquivo não está aberto para leitura, ou o arquivo está bloqueado, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, a função retornará -1 e definirá **errno** à **EBADF**.
+Se a função tentar ler o final do arquivo, ela retornará 0. Se *FD* não for válido, o arquivo não está aberto para leitura ou o arquivo está bloqueado, o manipulador de parâmetro inválido é invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, a função retornará-1 e definirá **errno** como **EBADF**.
 
-Se *buffer* é **nulo**, ou se *buffer_size* > **INT_MAX**, o manipulador de parâmetro inválido será invocado. Se a execução puder continuar, a função retornará -1 e **errno** é definido como **EINVAL**.
+Se o *buffer* for **nulo**ou se *buffer_size* > **INT_MAX**, o manipulador de parâmetro inválido será invocado. Se a execução puder continuar, a função retornará-1 e **errno** será definida como **EINVAL**.
 
 Para obter mais informações sobre este e outros códigos retornados, consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Comentários
 
-O **Read** função lê um máximo de *buffer_size* bytes no *buffer* do arquivo associado *fd*. A operação de leitura começa na posição atual do ponteiro de arquivo associado ao arquivo em questão. Após a operação de leitura, o ponteiro do arquivo aponta para o próximo caractere não lido.
+A função **_read** lê um máximo de *buffer_size* bytes no *buffer* do arquivo associado ao *FD*. A operação de leitura começa na posição atual do ponteiro de arquivo associado ao arquivo em questão. Após a operação de leitura, o ponteiro do arquivo aponta para o próximo caractere não lido.
 
-Se o arquivo foi aberto no modo de texto, a leitura termina quando **Read** encontrar um caractere CTRL + Z, que é tratado como um indicador de final de arquivo. Use [_lseek](lseek-lseeki64.md) para limpar o indicador de fim do arquivo.
+Se o arquivo tiver sido aberto no modo de texto, a leitura será encerrada quando **_read** encontrar um caractere CTRL + Z, que é tratado como um indicador de fim de arquivo. Use [_lseek](lseek-lseeki64.md) para limpar o indicador de fim do arquivo.
 
 ## <a name="requirements"></a>Requisitos
 

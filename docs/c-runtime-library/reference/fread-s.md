@@ -20,12 +20,12 @@ f1_keywords:
 - fread_s
 - stdio/fread_s
 ms.assetid: ce735de0-f005-435d-a8f2-6f4b80ac775e
-ms.openlocfilehash: 898e813c19fd53cfdacd536c2e9819743a62a8da
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1adc999d37025392f03a11daebfffdeeb637d92b
+ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287805"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68376140"
 ---
 # <a name="freads"></a>fread_s
 
@@ -62,15 +62,15 @@ Ponteiro para a estrutura **FILE**.
 
 ## <a name="return-value"></a>Valor de retorno
 
-**fread_s** retorna o número de (inteiro) de itens que foram lidos no buffer, que pode ser menor que *contagem* se um erro de leitura ou o final do arquivo é encontrado antes *contagem* for atingido. Use o **feof** ou **ferror** função para diferenciar um erro de uma condição de fim-de-arquivo. Se *tamanho* ou *contagem* é 0, o **fread_s** retorna 0 e o conteúdo do buffer é as mesmas. Se *stream* ou *buffer* é um ponteiro nulo, **fread_s** invocará o manipulador de parâmetro inválido, conforme descrito na [validação de parâmetro](../../c-runtime-library/parameter-validation.md) . Se a execução puder continuar, essa função definirá **errno** à **EINVAL** e retornará 0.
+**fread_s** retorna o número de itens (inteiros) que foram lidos no buffer, o que pode ser menor que a *contagem* se um erro de leitura ou o final do arquivo for encontrado antes que a *contagem* seja atingida. Use a função **feof** ou **referenciadora** para distinguir um erro de uma condição de fim de arquivo. Se *tamanho* ou *contagem* for 0, **fread_s** retornará 0 e o conteúdo do buffer não será alterado. Se *Stream* ou *buffer* for um ponteiro NULL, **fread_s** invocará o manipulador de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, essa função definirá **errno** como **EINVAL** e retornará 0.
 
 Para obter mais informações sobre códigos de erro, consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Comentários
 
-O **fread_s** função lê até *contagem* itens do *elementSize* bytes de entrada *fluxo* e as armazena no *buffer*.  O ponteiro do arquivo que está associado com *stream* (se houver) é aumentado pelo número de bytes realmente lidos. Se o fluxo em questão for aberto no modo de texto, pares de alimentação de linha de retorno de carro são substituídos por caracteres de avanço de linha única. A substituição não interfere no ponteiro do arquivo ou no valor retornado. A posição do ponteiro do arquivo será indeterminada se ocorrer um erro. O valor de um item lido parcialmente não pode ser determinado.
+A função **fread_s** lê para *contar* os itens de *elementos* de elementar bytes do *fluxo* de entrada e os armazena no *buffer*.  O ponteiro de arquivo que está associado ao *fluxo* (se houver) é aumentado pelo número de bytes realmente lidos. Se o fluxo fornecido for aberto no modo de texto, os pares de retorno de carro-alimentação de linha serão substituídos por caracteres de alimentação de linha única. A substituição não interfere no ponteiro do arquivo ou no valor retornado. A posição do ponteiro do arquivo será indeterminada se ocorrer um erro. O valor de um item lido parcialmente não pode ser determinado.
 
-Essa função bloqueia outros threads. Se você precisar de uma versão sem bloqueio, use **fread_nolock**.
+Essa função bloqueia outros threads. Se você precisar de uma versão sem bloqueio, use **_fread_nolock**.
 
 ## <a name="requirements"></a>Requisitos
 

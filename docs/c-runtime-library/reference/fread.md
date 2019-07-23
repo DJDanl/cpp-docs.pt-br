@@ -24,12 +24,12 @@ helpviewer_keywords:
 - data [C++], reading from input stream
 - streams [C++], reading data from
 ms.assetid: 9a3c1538-93dd-455e-ae48-77c1e23c53f0
-ms.openlocfilehash: 7248eb08409b50d855dbb70c7638a856302b345b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: da3828142a06ed89a6447ccaef4a0d8ff0063cca
+ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287870"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68376172"
 ---
 # <a name="fread"></a>fread
 
@@ -62,17 +62,17 @@ Ponteiro para a estrutura **FILE**.
 
 ## <a name="return-value"></a>Valor de retorno
 
-**fread** retorna o número de itens completos realmente lidos, que pode ser menor que *contagem* se ocorrer um erro ou se o final do arquivo for encontrado antes de alcançar *contagem*. Use o **feof** ou **ferror** função para diferenciar um erro de leitura de uma condição de fim-de-arquivo. Se *tamanho* ou *contagem* é 0, o **fread** retorna 0 e o conteúdo do buffer é as mesmas. Se *stream* ou *buffer* é um ponteiro nulo, **fread** invocará o manipulador de parâmetro inválido, conforme descrito na [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essa função definirá **errno** à **EINVAL** e retornará 0.
+**fread** retorna o número de itens completos realmente lidos, o que pode ser menor que a *contagem* se ocorrer um erro ou se o final do arquivo for encontrado antes de atingir a *contagem*. Use a função **feof** ou **referenciadora** para distinguir um erro de leitura de uma condição de fim de arquivo. Se *tamanho* ou *contagem* for 0, **fread** retornará 0 e o conteúdo do buffer não será alterado. Se *Stream* ou *buffer* for um ponteiro NULL, **fread** invocará o manipulador de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, essa função definirá **errno** como **EINVAL** e retornará 0.
 
-Ver [ \_doserrno, errno, \_sys\_errlist, e \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obter mais informações sobre esses códigos de erro.
+Consulte [ \_\_doserrno, errno, \_sys errlist e sys\_nerr para obter mais informações sobre esses códigos de erro. \_](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)
 
 ## <a name="remarks"></a>Comentários
 
-O **fread** função lê até *contagem* itens do *tamanho* bytes de entrada *fluxo* e armazena-os no *buffer* . O ponteiro de arquivo associado *stream* (se houver) é aumentado pelo número de bytes realmente lidos. Se o fluxo em questão for aberto no [modo de texto](../../c-runtime-library/text-and-binary-mode-file-i-o.md), novas linhas de estilo do Windows são convertidas em novas linhas de estilo Unix. Ou seja, pares de retorno e avanço de linha (CRLF) do carro serão substituídos por caracteres de única linha (LF). A substituição não interfere no ponteiro do arquivo ou no valor retornado. A posição do ponteiro do arquivo será indeterminada se ocorrer um erro. O valor de um item lido parcialmente não pode ser determinado.
+A função **fread** lê até *contar* itens de *tamanho* bytes do *fluxo* de entrada e os armazena no *buffer*. O ponteiro de arquivo associado ao *fluxo* (se houver) é aumentado pelo número de bytes realmente lidos. Se o fluxo fornecido for aberto no [modo de texto](../../c-runtime-library/text-and-binary-mode-file-i-o.md), as linhas do estilo do Windows serão convertidas em novas linhas no estilo UNIX. Ou seja, os pares de linha de retorno de carro (CRLF) são substituídos por caracteres LF (single line feed). A substituição não interfere no ponteiro do arquivo ou no valor retornado. A posição do ponteiro do arquivo será indeterminada se ocorrer um erro. O valor de um item lido parcialmente não pode ser determinado.
 
-Quando usado em um fluxo de modo de texto, se a quantidade de dados solicitada (ou seja, *tamanho* \* *contagem*) é maior que ou igual a interno **arquivo** \*tamanho do buffer (por padrão é 4096 bytes configuráveis por meio [setvbuf](../../c-runtime-library/reference/setvbuf.md)), o fluxo de dados é copiado diretamente para o buffer fornecido pelo usuário e conversão de nova linha é feita no buffer. Como os dados convertidos podem ser menores do que os dados de fluxo copiados no buffer de dados anteriores *buffer*\[*return_value* \* *tamanho*] ( em que *return_value* é o valor de retorno **fread**) pode conter os dados do arquivo não convertidos. Por esse motivo, recomendamos que você null terminar com dados de caractere em *buffer*\[*return_value* \* *tamanho*] se for a intenção do buffer para atuar como uma cadeia de caracteres de estilo C. Ver [fopen](fopen-wfopen.md) para obter detalhes sobre os efeitos de modo de texto e o modo binário.
+Quando usado em um fluxo de modo de texto, se a quantidade de dados solicitada (ou seja, *contagem*de *tamanho* \* ) for maior ou igual ao tamanho do buffer de **arquivo** \* interno (por padrão, é 4096 bytes, configuráveis usando [ setvbuf](../../c-runtime-library/reference/setvbuf.md)), os dados de fluxo são copiados diretamente no buffer fornecido pelo usuário e a conversão de nova linha é feita nesse buffer. Como os dados convertidos podem ser menores do que os dados de fluxo copiados para o buffer, os dados após o *buffer*\[*return_value* \* *tamanho*] (em que *return_value* é o valor de retorno de **fread**) podem conter dados não convertidos do arquivo. Por esse motivo, recomendamos que você destermine dados de caracteres de caractere nulo no *buffer*\[*return_value* \* *tamanho*] se a intenção do buffer for agir como uma cadeia de estilo C. Consulte [fopen](fopen-wfopen.md) para obter detalhes sobre os efeitos do modo de texto e do modo binário.
 
-Essa função bloqueia outros threads. Se você precisar de uma versão sem bloqueio, use **fread_nolock**.
+Essa função bloqueia outros threads. Se você precisar de uma versão sem bloqueio, use **_fread_nolock**.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -135,7 +135,7 @@ Contents of buffer = zyxwvutsrqponmlkjihgfedcb
 ## <a name="see-also"></a>Consulte também
 
 [E/S de fluxo](../../c-runtime-library/stream-i-o.md)<br/>
-[E/s de texto e arquivo binário](../../c-runtime-library/text-and-binary-mode-file-i-o.md)<br/>
+[Texto e e/s de arquivo binário](../../c-runtime-library/text-and-binary-mode-file-i-o.md)<br/>
 [fopen](fopen-wfopen.md)<br/>
 [fwrite](fwrite.md)<br/>
 [_read](read.md)<br/>
