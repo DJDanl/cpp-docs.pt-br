@@ -1,31 +1,31 @@
 ---
-title: Defina o compilador C++ e compilar propriedades no Visual Studio
-description: Use o IDE do Visual Studio para alterar as opções de compilador e vinculador C++ e outras configurações de compilação.
-ms.date: 03/27/2019
+title: Definição das propriedades de compilação do C++ no Visual Studio
+description: Use o IDE do Visual Studio para C++ alterar as opções do compilador e do vinculador e outras configurações de compilação.
+ms.date: 07/17/2019
 helpviewer_keywords:
 - project properties [C++], modifying
 - properties [C++]
 - Visual C++ projects, properties
 - projects [C++], properties
 ms.assetid: 9b0d6f8b-7d4e-4e61-aa75-7d14944816cd
-ms.openlocfilehash: a8c15de43a3843b8ff12cb4ad3d951d76b90c039
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
-ms.translationtype: HT
+ms.openlocfilehash: 436c9c47d7e08176860144ce62cc874919351029
+ms.sourcegitcommit: 610751254a01cba6ad15fb1e1764ecb2e71f66bf
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446187"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "68313444"
 ---
-# <a name="set-compiler-and-build-properties"></a>Defina o compilador e propriedades de compilação
+# <a name="set-compiler-and-build-properties"></a>Definir propriedades do compilador e de compilação
 
-No IDE, todas as informações necessárias para compilar um projeto são expostas como *propriedades*. Essas informações incluem nome do aplicativo, extensão (como DLL, LIB, EXE), opções do compilador, opções do vinculador, configurações do depurador, etapas de build personalizadas e muitas outras. Normalmente, você usa as *páginas de propriedades* (**Projeto &#124; Propriedades**) para exibir e modificar essas propriedades. Para acessar as páginas de propriedades, escolha **projeto > \<nome do projeto > propriedades** do menu principal, ou o botão direito do mouse no nó do projeto no **Gerenciador de soluções** e escolha **Propriedades**.
+No IDE, todas as informações necessárias para compilar um projeto são expostas como *propriedades*. Essas informações incluem nome do aplicativo, extensão (como DLL, LIB, EXE), opções do compilador, opções do vinculador, configurações do depurador, etapas de build personalizadas e muitas outras. Normalmente, você usa *páginas de propriedades* para exibir e modificar essas propriedades. Para acessar as páginas de propriedades, escolha **Project** >  **_ProjectName_ Properties** no menu principal ou clique com o botão direito do mouse no nó do projeto em **Gerenciador de soluções** e escolha **Propriedades**.
 
 ## <a name="default-properties"></a>Propriedades padrão
 
 Quando você cria um projeto, o sistema atribui valores para várias propriedades. Os padrões variam um pouco dependendo do tipo de projeto e das opções escolhidas no assistente de aplicativo. Por exemplo, um projeto ATL tem propriedades relacionadas a arquivos MIDL, mas eles estão ausentes em um aplicativo de console básico. As propriedades padrão são mostradas no painel Geral nas Páginas de Propriedades:
 
-![Visual C&#43; &#43; padrões de projeto](media/visual-c---project-defaults.png "Visual C++ padrões do projeto")
+![&#43; &#43; ]Padrões do projeto Visual C padrões de(media/visual-c---project-defaults.png "projeto Visual C++ ")
 
-## <a name="applying-properties-to-build-configurations-and-target-platforms"></a>Aplicação de propriedades para criar configurações e plataformas de destino
+## <a name="applying-properties-to-build-configurations-and-target-platforms"></a>Aplicando Propriedades a configurações de compilação e plataformas de destino
 
 Algumas propriedades, como o nome do aplicativo, se aplicam a todas as variações de build, independentemente da plataforma de destino ou se o build é de depuração ou de versão. No entanto, a maioria das propriedades é dependente de configuração. Isso ocorre porque o compilador precisa saber em qual plataforma específica o programa será executado e as opções específicas do compilador a serem usadas para gerar o código correto. Portanto, quando você define uma propriedade, é importante ficar atento à qual configuração e plataforma o novo valor deve se aplicar. Ele deve aplicar-se apenas a builds de Depuração Win32 ou também à Depuração ARM e à Depuração x64? Por exemplo, a propriedade **Otimização**, por padrão, é definida como **Maximizar Velocidade (/O2)** em uma configuração de Versão, mas está desabilitada na configuração de Depuração.
 
@@ -43,25 +43,24 @@ A ilustração a seguir mostra a mesma página de propriedades do projeto, mas a
 
 O valor de plataforma de destino **Qualquer CPU** que pode ser visto no **Configuration Manager** não tem nenhum efeito em projetos do C++ nativo; ele é relevante para o C++/CLI e outros tipos de projeto .NET. Para obter mais informações, consulte, [/CLRIMAGETYPE (Especificar Tipo de Imagem CLR)](reference/clrimagetype-specify-type-of-clr-image.md).
 
-
 Para obter mais informações sobre como definir propriedades para uma compilação de depuração, consulte:
 
 - [Configurações do projeto para uma configuração de depuração de C++](/visualstudio/debugger/project-settings-for-a-cpp-debug-configuration)
 - [Preparação e configurações do depurador](/visualstudio/debugger/debugger-settings-and-preparation)
-- [Preparação de depuração: Tipos de projeto do Visual C++](/visualstudio/debugger/debugging-preparation-visual-cpp-project-types)
+- [Preparação da depuração: Tipos C++ de projeto Visual](/visualstudio/debugger/debugging-preparation-visual-cpp-project-types)
 - [Especificar arquivos de símbolo (.pdb) e de origem no depurador do Visual Studio](/visualstudio/debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger)
 
-## <a name="c-compiler-and-linker-options"></a>Opções do compilador e vinculador C++
+## <a name="c-compiler-and-linker-options"></a>C++opções do compilador e do vinculador
 
-Opções do compilador e vinculador C++ estão localizadas sob o **C/C++** e **vinculador** nós no painel esquerdo, sob **propriedades de configuração**. Elas são convertidas diretamente às opções de linha de comando que serão passadas para o compilador. Para ler a documentação sobre uma opção específica, selecione a opção no painel central e pressione **F1**. Ou, você pode procurar a documentação para todas as opções na [opções do compilador MSVC](reference/compiler-options.md) e [opções de vinculador MSVC](reference/linker-options.md). 
+C++as opções de compilador e vinculador estão localizadas nos nós **C/C++**  e **vinculador** no painel esquerdo em Propriedades de **configuração**. Eles são convertidos diretamente nas opções de linha de comando que serão passadas para o compilador. Para ler a documentação sobre uma opção específica, selecione a opção no painel central e pressione **F1**. Ou, você pode procurar a documentação de todas as opções em [Opções do compilador MSVC](reference/compiler-options.md) e [Opções do vinculador MSVC](reference/linker-options.md). 
 
-O **páginas de propriedade** caixa de diálogo mostra somente as páginas de propriedades que são relevantes para o projeto atual. Por exemplo, se o projeto não tiver um arquivo .idl, a página de propriedades MIDL não será exibida. Para obter mais informações sobre a configuração em cada páginas de propriedade, consulte [páginas de propriedade (C++)](reference/property-pages-visual-cpp.md). 
+A caixa de diálogo **páginas de propriedades** mostra apenas as páginas de propriedades que são relevantes para o projeto atual. Por exemplo, se o projeto não tiver um arquivo .idl, a página de propriedades MIDL não será exibida. Para obter mais informações sobre a configuração em cada página de propriedades, consulte [páginasC++de Propriedades ()](reference/property-pages-visual-cpp.md). 
 
-## <a name="directory-and-path-values"></a>Valores de caminho e diretório
+## <a name="directory-and-path-values"></a>Valores de diretório e caminho
 
-MSBuild oferece suporte ao uso de constantes de tempo de compilação chamado "macros" para determinados valores de cadeia de caracteres incluem diretórios e caminhos. Esses são expostos nas páginas de propriedade, em que você possa consultar e modificá-los usando o [Editor de propriedade](#property_editor). 
+O MSBuild dá suporte ao uso de constantes de tempo de compilação chamadas "macros" para determinados valores de cadeia de caracteres, incluindo diretórios e caminhos. Elas são expostas nas páginas de propriedades, nas quais você pode consultá-las e modificá-las usando o [Editor de propriedades](#property_editor). 
 
-A ilustração a seguir mostra as páginas de propriedades para um Visual Studio C++ project. No painel esquerdo, a **regra** *Diretórios do VC++* está selecionada e o painel direito lista as propriedades associadas a essa regra. O `$(...)` valores são chamados *macros*. Uma *macro* é uma constante em tempo de compilação que pode se referir a um valor definido pelo Visual Studio ou pelo sistema do MSBuild, ou a um valor definido pelo usuário. Usando macros em vez de valores embutidos, como caminhos de diretório, você pode compartilhar mais facilmente as configurações de propriedade entre máquinas e entre versões do Visual Studio, e você pode garantir melhor que as configurações do projeto participem corretamente no [ herança de propriedade](project-property-inheritance.md). 
+A ilustração a seguir mostra as páginas de propriedades de um C++ projeto do Visual Studio. No painel esquerdo, a **regra** *Diretórios do VC++* está selecionada e o painel direito lista as propriedades associadas a essa regra. Os `$(...)` valores são chamados de macros. Uma *macro* é uma constante em tempo de compilação que pode se referir a um valor definido pelo Visual Studio ou pelo sistema do MSBuild, ou a um valor definido pelo usuário. Usando macros em vez de valores embutidos em código, como caminhos de diretório, você pode compartilhar com mais facilidade as configurações de propriedade entre computadores e entre versões do Visual Studio, e pode garantir melhor que as configurações do projeto participem corretamente na [Propriedade herança](project-property-inheritance.md). 
 
 ![Páginas de propriedades do projeto](media/project_property_pages_vc.png "Project_Property_Pages_VC")
 
@@ -77,21 +76,21 @@ Tem a sintaxe `%(name)`. Para um arquivo, uma macro de item se aplica somente a 
 
 ### <a name="user-defined-macros"></a>Macros definidas pelo usuário
 
-Crie *macros definidas pelo usuário* para usar como variáveis em builds do projeto. Por exemplo, você pode criar uma macro definida pelo usuário que forneça um valor a uma etapa personalizada de compilação ou a uma ferramenta personalizada de compilação. Uma macro definida é um par de nome/valor. Em um arquivo de projeto, use a notação **$(**<em>name</em>**)** para acessar o valor.
+Crie *macros definidas pelo usuário* para usar como variáveis em builds do projeto. Por exemplo, você pode criar uma macro definida pelo usuário que forneça um valor a uma etapa personalizada de compilação ou a uma ferramenta personalizada de compilação. Uma macro definida é um par de nome/valor. Em um arquivo de projeto, use a notação **$(** <em>name</em> **)** para acessar o valor.
 
-Uma macro definida pelo usuário é armazenada em uma folha de propriedades. Se seu projeto ainda não contiver uma folha de propriedades, você pode criar um seguindo as etapas descritas em [reutilização ou compartilhamento de configurações de projeto do Visual Studio](create-reusable-property-configurations.md).
+Uma macro definida pelo usuário é armazenada em uma folha de propriedades. Se o seu projeto ainda não contiver uma folha de propriedades, você poderá criar uma seguindo as etapas em [compartilhar ou reutilizar as configurações do projeto do Visual Studio](create-reusable-property-configurations.md).
 
 #### <a name="to-create-a-user-defined-macro"></a>Para criar uma macro definida pelo usuário
 
-1. Na janela **Gerenciador de Propriedades** (na barra de menus, escolha **Exibir**, **Gerenciador de Propriedades**), abra o menu de atalho de uma folha de propriedades (o nome termina com .user) e, em seguida, escolha Propriedades. A caixa de diálogo **Páginas de Propriedades** dessa folha de propriedades será aberta.
+1. Abra a janela **Gerenciador de propriedades** . (Na barra de menus, escolha **Exibir** > **Gerenciador de propriedades** ou **Exibir** > **outro** > **Gerenciador de propriedades**do Windows.) Abra o menu de atalho para uma folha de Propriedades (seu nome termina em. User) e escolha **Propriedades**. A caixa de diálogo **Páginas de Propriedades** dessa folha de propriedades será aberta.
 
 1. No painel esquerdo da caixa de diálogo, selecione **Macros de Usuário**. No painel direito, escolha o botão **Adicionar Macro** para abrir a caixa de diálogo **Adicionar Macro de Usuário**.
 
 1. Na caixa de diálogo, especifique um nome e um valor para a macro. Opcionalmente, marque a caixa de seleção **Definir esta macro como uma variável de ambiente no ambiente de build**.
 
-## <a name="property_editor">Editor de propriedades</a>
+## <a name="property_editor">Editor de propriedade</a>
 
-Você pode usar o Editor de Propriedades para alterar certas propriedades da cadeia de caracteres e selecionar macros como valores. Para acessar o Editor de Propriedades, selecione uma propriedade em uma página de propriedades e, em seguida, selecione o botão de seta para a direita. Se a lista suspensa contiver **\<Editar>**, você poderá escolher essa opção para exibir o Editor de Propriedades dessa propriedade.
+Você pode usar o Editor de Propriedades para alterar certas propriedades da cadeia de caracteres e selecionar macros como valores. Para acessar o Editor de Propriedades, selecione uma propriedade em uma página de propriedades e, em seguida, selecione o botão de seta para a direita. Se a lista suspensa contiver **\<Editar>** , você poderá escolher essa opção para exibir o Editor de Propriedades dessa propriedade.
 
 ![Lista&#95;Suspensa&#95;do&#95;Editor&#95;de&#95;Propriedades](media/property_editor_dropdown.png "Property_Editor_Dropdown")
 
@@ -103,7 +102,7 @@ No Editor de Propriedades, escolha o botão **Macros** para exibir as macros dis
 
 Quando você adiciona um diretório de inclusão a um projeto, é importante não substituir todos os diretórios padrão. A maneira correta de adicionar um diretório é acrescentar o novo caminho, por exemplo, "C:\MyNewIncludeDir\" e, em seguida, acrescentar a macro **$(IncludePath)** ao valor da propriedade.
 
-## <a name="quickly-browse-and-search-all-properties"></a>E procurar rapidamente todas as propriedades
+## <a name="quickly-browse-and-search-all-properties"></a>Procurar e pesquisar rapidamente todas as propriedades
 
 A página de propriedades **Todas as Opções** (no nó **Propriedades de Configuração &#124; C/C++** da caixa de diálogo **Páginas de Propriedades**) oferece uma maneira rápida de navegar e pesquisar as propriedades disponíveis no contexto atual. Tem uma caixa de pesquisa especial e uma sintaxe simples para ajudar você a filtrar resultados:
 
@@ -118,7 +117,7 @@ Pesquisar somente em valores (subcadeia de caracteres sem diferenciação de mai
 
 ## <a name="set-environment-variables-for-a-build"></a>Definir variáveis de ambiente para uma compilação
 
-O compilador MSVC (cl.exe) reconhece determinadas variáveis de ambiente, especificamente LIB, LIBPATH, PATH e INCLUDE. Quando você compila com o IDE, as propriedades definidas na página de propriedades [Página de Propriedades de Diretórios do VC++](reference/vcpp-directories-property-page.md) são usadas para definir essas variáveis de ambiente. Se os valores LIB, LIBPATH e INCLUDE já tiverem sido definidos, por exemplo, por um prompt de comando do desenvolvedor, eles serão substituídos pelos valores das propriedades correspondentes do MSBuild. A compilação, em seguida, anexa o valor da propriedade de diretórios executáveis dos Diretórios VC++ como PATH. Defina uma variável de ambiente definida pelo usuário criando uma macro definida pelo usuário e, em seguida, marcando a caixa que indica **Definir esta macro como uma variável de ambiente no ambiente de build**.
+O compilador MSVC (CL. exe) reconhece determinadas variáveis de ambiente, especificamente LIB, LIBPATH, PATH e INCLUDE. Quando você compila com o IDE, as propriedades definidas na página de propriedades [Página de Propriedades de Diretórios do VC++](reference/vcpp-directories-property-page.md) são usadas para definir essas variáveis de ambiente. Se os valores LIB, LIBPATH e INCLUDE já tiverem sido definidos, por exemplo, por um prompt de comando do desenvolvedor, eles serão substituídos pelos valores das propriedades correspondentes do MSBuild. A compilação, em seguida, anexa o valor da propriedade de diretórios executáveis dos Diretórios VC++ como PATH. Defina uma variável de ambiente definida pelo usuário criando uma macro definida pelo usuário e, em seguida, marcando a caixa que indica **Definir esta macro como uma variável de ambiente no ambiente de build**.
 
 ## <a name="set-environment-variables-for-a-debugging-session"></a>Definir variáveis de ambiente para uma sessão de depuração
 
@@ -129,13 +128,13 @@ No painel direito, modifique as configurações do projeto **Ambiente** ou **Amb
 ## <a name="in-this-section"></a>Nesta seção
 
 [Compartilhamento ou reutilização das configurações de projeto do Visual Studio](create-reusable-property-configurations.md)<br/>
-Como criar um arquivo. Props com as configurações de compilação personalizados que podem ser compartilhadas ou resused.
+Como criar um arquivo. props com configurações de compilação personalizadas que podem ser compartilhadas ou reutilizadas.
 
 [Herança de propriedade do projeto](project-property-inheritance.md)<br/>
-Descreve a ordem de avaliação para. Props,. targets, arquivos. vcxproj e variáveis de ambiente no processo de compilação.
+Descreve a ordem de avaliação para os arquivos. props,. targets,. vcxproj e variáveis de ambiente no processo de compilação.
 
 [Modificação de propriedades e destinos sem alteração do arquivo de projeto](modify-project-properties-without-changing-project-file.md)<br/>
-Como criar configurações de build temporários sem ter que modificar um arquivo de projeto. 
+Como criar configurações de compilação temporárias sem precisar modificar um arquivo de projeto. 
 
 ## <a name="see-also"></a>Consulte também
 
