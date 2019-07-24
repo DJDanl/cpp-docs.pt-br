@@ -13,7 +13,7 @@ helpviewer_keywords:
 - tab 	 escape sequence
 - "\f escape sequence"
 - quotation marks, single
-- "formfeed \f escape sequence"
+- "form feed \f escape sequence"
 - "\v escape sequence"
 - control character escape sequences
 - " symbol in escape sequences"
@@ -30,20 +30,20 @@ helpviewer_keywords:
 - "	 escape sequence"
 - backspace escape sequence
 ms.assetid: 5aef377f-a76c-4d5c-aa04-8308758ad6a8
-ms.openlocfilehash: 9aeb8ca549cce8bddbf5d6ddadb6292c05f573d5
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.openlocfilehash: 5de0b5f1a73fcfb6ea0325bea3247ebe4c85d411
+ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56151410"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68375828"
 ---
 # <a name="escape-sequences"></a>Sequências de Escape
 
-As combinações de caracteres que consistem em uma barra invertida (**\\**) seguida por uma letra ou por uma combinação de dígitos são chamadas de "sequências de escape". Para representar um caractere de nova linha, aspas simples ou alguns outros caracteres em uma constante de caractere, você deve usar sequências de escape. Uma sequência de escape é considerada um único caractere e, portanto, é válida como uma constante de caractere.
+As combinações de caracteres que consistem em uma barra invertida ( **\\** ) seguida por uma letra ou por uma combinação de dígitos são chamadas de "sequências de escape". Para representar um caractere de nova linha, aspas simples ou alguns outros caracteres em uma constante de caractere, você deve usar sequências de escape. Uma sequência de escape é considerada um único caractere e, portanto, é válida como uma constante de caractere.
 
-Geralmente, as sequências de escape são usadas para especificar ações como retornos de carro e movimentos de tabulação em terminais e impressoras. Também são usadas para fornecer representações literais de caracteres não imprimíveis e de caracteres que normalmente têm significados especiais, como as aspas duplas (**"**). A tabela a seguir lista as sequências de escape ANSI e o que elas representam.
+Geralmente, as sequências de escape são usadas para especificar ações como retornos de carro e movimentos de tabulação em terminais e impressoras. Também são usadas para fornecer representações literais de caracteres não imprimíveis e de caracteres que normalmente têm significados especiais, como as aspas duplas ( **"** ). A tabela a seguir lista as sequências de escape ANSI e o que elas representam.
 
-Observe que o ponto de interrogação precedido por uma barra invertida (**\\?**) especifica um ponto de interrogação literal nos casos em que a sequência de caracteres seria interpretada incorretamente como um trígrafo. Consulte [Trígrafos](../c-language/trigraphs.md) para obter mais informações.
+Observe que o ponto de interrogação precedido por uma barra invertida ( **\\?** ) especifica um ponto de interrogação literal nos casos em que a sequência de caracteres seria interpretada incorretamente como um trígrafo. Consulte [Trígrafos](../c-language/trigraphs.md) para obter mais informações.
 
 ### <a name="escape-sequences"></a>Sequências de Escape
 
@@ -70,9 +70,9 @@ Se uma barra invertida precede um caractere que não consta da tabela, o compila
 
 **Fim da seção específica da Microsoft**
 
-As sequências de escape permitem que você envie caracteres de controle não gráficos a um dispositivo de exibição. Por exemplo, o caractere de ESC (**\033**) costuma ser usado como o primeiro caractere de um comando de controle para um terminal ou uma impressora. Algumas sequências de escape são específicas ao dispositivo. Por exemplo, as sequências de escape de tabulação vertical e de avanço de página (**\v** e **\f**) não afetam a saída da tela, mas executam operações de impressora apropriadas.
+As sequências de escape permitem que você envie caracteres de controle não gráficos a um dispositivo de exibição. Por exemplo, o caractere de ESC ( **\033**) costuma ser usado como o primeiro caractere de um comando de controle para um terminal ou uma impressora. Algumas sequências de escape são específicas ao dispositivo. Por exemplo, as sequências de escape de tabulação vertical e de avanço de página ( **\v** e **\f**) não afetam a saída da tela, mas executam operações de impressora apropriadas.
 
-Também é possível usar a barra invertida (**\\**) como um caractere de continuação. Quando um caractere de nova linha (equivalente a pressionar a tecla RETURN) vem logo após a barra invertida, o compilador ignora a barra invertida e o caractere de nova linha e trata a próxima linha como parte da linha anterior. Isso é útil principalmente para definições de pré-processador que ocupam mais do que uma única linha. Por exemplo:
+Também é possível usar a barra invertida ( **\\** ) como um caractere de continuação. Quando um caractere de nova linha (equivalente a pressionar a tecla RETURN) vem logo após a barra invertida, o compilador ignora a barra invertida e o caractere de nova linha e trata a próxima linha como parte da linha anterior. Isso é útil principalmente para definições de pré-processador que ocupam mais do que uma única linha. Por exemplo:
 
 ```
 #define assert(exp) \

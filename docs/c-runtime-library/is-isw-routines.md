@@ -16,12 +16,12 @@ helpviewer_keywords:
 - is routines
 - isw routines
 ms.assetid: 1e171a57-2cde-41f6-a75f-a080fa3c12e5
-ms.openlocfilehash: 961ad52070928ba755625747546c8dc7b1c215ba
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 1550f8f012802e03e9228e67c381915b1b4e1d64
+ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57750814"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68376039"
 ---
 # <a name="is-isw-routines"></a>Rotinas is, isw
 
@@ -156,7 +156,7 @@ Caractere largo imprimível, incluindo caractere de espaço largo (L' ').
 Caractere largo imprimível que não é um caractere largo de espaço (L' ') ou um caractere largo para o qual `iswalnum` é diferente de zero.
 
 `iswspace`<br/>
-Caracteres largo que corresponde ao caractere de espaço em branco padrão, ou que seja de um conjunto de caracteres largos definido pela implementação para o qual `iswalnum` é false. Os caracteres de espaço em branco padrão são: espaço (L' '), tabulação (L'\f'), nova linha (L'\n'), retorno de carro (L'\r'), tabulação horizontal (L'\t') e tabulação vertical (L'\v').
+Caracteres largo que corresponde ao caractere de espaço em branco padrão, ou que seja de um conjunto de caracteres largos definido pela implementação para o qual `iswalnum` é false. Os caracteres de espaço em branco padrão são: espaço (L' '), avanço de página (L'\f'), nova linha (L'\n'), retorno de carro (L'\r'), tabulação horizontal (L'\t') e tabulação vertical (L'\v').
 
 `iswupper`<br/>
 Caractere largo maiúsculo ou um que faça parte de um conjunto de caracteres largos definidos pela implementação para o qual nenhum dos `iswcntrl`, `iswdigit`, `iswpunct` ou `iswspace` é diferente de zero. `iswupper` retorna não zero somente para caracteres largos que correspondem a caracteres maiúsculos.
