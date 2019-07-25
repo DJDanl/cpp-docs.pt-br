@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_const class
 - is_const
 ms.assetid: 55b8e887-9c3f-4a1d-823a-4a257337b205
-ms.openlocfilehash: 25f10d8a8aed8bad6c11663687ace56a0b65afee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 92059f43e73c4b76f45ea9aeae61daf573367b43
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62336862"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452871"
 ---
 # <a name="isconst-class"></a>Classe is_const
 
@@ -27,12 +27,12 @@ struct is_const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*Ty*<br/>
+*Ty*\
 O tipo a ser consultado.
 
 ## <a name="remarks"></a>Comentários
 
-Uma instância do predicado de tipo será verdadeira se *Ty* é `const-qualified`.
+Uma instância do predicado de tipo se  aplica true `const-qualified`se Ty for.
 
 ## <a name="example"></a>Exemplo
 
@@ -77,5 +77,5 @@ is_const<const int> == true
 
 ## <a name="see-also"></a>Consulte também
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[Classe is_volatile](../standard-library/is-volatile-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[Classe is_volatile](../standard-library/is-volatile-class.md)

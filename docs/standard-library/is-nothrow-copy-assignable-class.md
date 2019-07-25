@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_nothrow_copy_assignable
 ms.assetid: baa8abd6-4f53-489f-abba-8d5d5c53bbbc
-ms.openlocfilehash: bb3aca47b61bdcc5b28eeedc1a6b4edefc303c4e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 330c97cd945e161d2bf47deb377dd732bf53b3c9
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383588"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455986"
 ---
 # <a name="isnothrowcopyassignable-class"></a>Classe is_nothrow_copy_assignable
 
@@ -26,12 +26,12 @@ struct is_nothrow_copy_assignable;
 
 ### <a name="parameters"></a>Parâmetros
 
-*T*<br/>
+*T*\
 O tipo a ser consultado.
 
 ## <a name="remarks"></a>Comentários
 
-Uma instância do predicado de tipo se aplica a um tipo pode ser referenciado *T* onde `is_nothrow_assignable<T&, const T&>` contém true; caso contrário, será falsa.
+Uma instância do predicado de tipo se aplica true para um  tipo de `is_nothrow_assignable<T&, const T&>` referência T onde se aplica true; caso contrário, ela será falsa.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -41,5 +41,5 @@ Uma instância do predicado de tipo se aplica a um tipo pode ser referenciado *T
 
 ## <a name="see-also"></a>Consulte também
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[Classe is_nothrow_assignable](../standard-library/is-nothrow-assignable-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[Classe is_nothrow_assignable](../standard-library/is-nothrow-assignable-class.md)

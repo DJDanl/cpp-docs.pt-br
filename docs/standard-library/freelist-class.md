@@ -10,12 +10,12 @@ helpviewer_keywords:
 - stdext::freelist [C++], pop
 - stdext::freelist [C++], push
 ms.assetid: 8ad7e35c-4c80-4479-8ede-1a2497b06d71
-ms.openlocfilehash: ef1f2e617e93869a1084dc030c6496c819f1ed96
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8a504f58f9f64aa8b0d26b17090387c5c2b5de21
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159386"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454137"
 ---
 # <a name="freelist-class"></a>Classe freelist
 
@@ -37,7 +37,7 @@ class freelist : public Max
 
 ## <a name="remarks"></a>Comentários
 
-Essa classe de modelo gerencia uma lista de blocos de memória de tamanho *Sz* com o comprimento máximo da lista determinado pela classe max passada *Max*.
+Essa classe de modelo gerencia uma lista de blocos de memória de tamanho *sz* com o comprimento máximo da lista determinada pela classe máxima passada no *máximo*.
 
 ### <a name="constructors"></a>Construtores
 
@@ -82,7 +82,7 @@ Retorna um ponteiro para o bloco de memória removido da lista.
 
 ### <a name="remarks"></a>Comentários
 
-A função membro retorna NULL se a lista estiver vazia. Caso contrário, remove o primeiro bloco de memória da lista.
+A função de membro retornará NULL se a lista estiver vazia. Caso contrário, remove o primeiro bloco de memória da lista.
 
 ## <a name="push"></a>  freelist::push
 
@@ -100,12 +100,12 @@ bool push(void* ptr);
 
 ### <a name="return-value"></a>Valor de retorno
 
-**Verdadeiro** se o `full` função da classe max retornar **falso**; caso contrário, o `push` retornos de função **false**.
+**true** se a `full` função da classe Max retornar **false**; caso contrário, a `push` função retornará **false**.
 
 ### <a name="remarks"></a>Comentários
 
-Se o `full` função da classe max retornar **falsos**, essa função membro adiciona o bloco de memória apontado por *ptr* ao topo da lista.
+Se a `full` função da classe Max retornar **false**, essa função de membro adicionará o bloco de memória apontado por *PTR* ao início da lista.
 
 ## <a name="see-also"></a>Consulte também
 
-[\<allocators>](../standard-library/allocators-header.md)<br/>
+[\<allocators>](../standard-library/allocators-header.md)

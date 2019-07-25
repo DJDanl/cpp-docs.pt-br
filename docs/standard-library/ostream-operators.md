@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - ostream/std::operator&lt;&lt;
 ms.assetid: 9282a62e-a3d1-4371-a284-fbc9515bb9a2
-ms.openlocfilehash: ee1a9a6829dbef13b034300d696c43ddba48d9d1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c80abcb08423b4bb269e7d60ac43ef97d197a0e9
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62370939"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68453531"
 ---
 # <a name="ltostreamgt-operators"></a>Operadores &lt;ostream&gt;
 
@@ -80,22 +80,22 @@ basic_ostream <_Elem, _Tr>& operator<<(
 
 ### <a name="parameters"></a>Parâmetros
 
-*_Ch*<br/>
+*_Ch*\
 Um caractere.
 
-*_Elem*<br/>
+*_Elem*\
 O tipo de elemento.
 
-*_Ostr*<br/>
+*_Ostr*\
 Um objeto `basic_ostream`.
 
-*str*<br/>
+*Str*\
 Uma cadeia de caracteres.
 
-*_Tr*<br/>
+*_Tr*\
 Características de caractere.
 
-*val*<br/>
+*Val*\
 O tipo
 
 ### <a name="return-value"></a>Valor de retorno
@@ -115,7 +115,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     const Elem *str);
 ```
 
-Determina o tamanho de N = `traits_type::` [comprimento](../standard-library/char-traits-struct.md#length)(`str`) do início da sequência no *str*e insere a sequência. Se N < `_Ostr.`[width](../standard-library/ios-base-class.md#width), a função também insere uma repetição de `_Ostr.width` - N caracteres de preenchimento. A repetição precede a sequência se (`_Ostr`. [flags](../standard-library/ios-base-class.md#flags) & `adjustfield` != [left](../standard-library/ios-functions.md#left). Caso contrário, a repetição segue a sequência. A função retornará *_Ostr*.
+determina o comprimento N = `traits_type::` [comprimento](../standard-library/char-traits-struct.md#length)(`str`) da sequência que começa em *Str*e insere a sequência. Se N < `_Ostr.`[width](../standard-library/ios-base-class.md#width), a função também insere uma repetição de `_Ostr.width` - N caracteres de preenchimento. A repetição precede a sequência se (`_Ostr`. [flags](../standard-library/ios-base-class.md#flags) & `adjustfield` != [left](../standard-library/ios-functions.md#left). Caso contrário, a repetição segue a sequência. A função retorna *_Ostr*.
 
 A função do modelo
 
@@ -146,7 +146,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     const Elem *str);
 ```
 
-exceto pelo fato de cada elemento *CH* do início da sequência em *str* é convertido em um objeto do tipo `Elem` chamando `_Ostr.` [colocar](../standard-library/basic-ostream-class.md#put)(`_Ostr.` [widen](../standard-library/basic-ios-class.md#widen)(`_Ch`)).
+Exceto que cada elemento *_Ch* da sequência que começa em *Str* é convertido em um objeto do tipo `Elem` chamando `_Ostr.` [Put](../standard-library/basic-ostream-class.md#put)(`_Ostr.`[ampliação](../standard-library/basic-ios-class.md#widen)(`_Ch`)).
 
 A função do modelo
 
@@ -166,7 +166,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     Elem _Ch);
 ```
 
-exceto que *CH* é convertido em um objeto do tipo `Elem` chamando `_Ostr.put`( `_Ostr.widen`( `_Ch`)).
+Exceto que *_Ch* é convertido em um objeto do tipo `Elem` chamando `_Ostr.put`( `_Ostr.widen`( `_Ch`)).
 
 A função do modelo
 
@@ -206,7 +206,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     Elem _Ch);
 ```
 
-(Ele não precisa ampliar *CH* antes de inseri-lo.)
+(Não é necessário ampliar o *_Ch* antes de inseri-lo.)
 
 A função do modelo
 
@@ -217,7 +217,7 @@ basic_ostream<char, _Tr>& operator<<(
     const signed char *str);
 ```
 
-Retorna `_Ostr` << (`const char *`) `str`.
+retorna `_Ostr` < < (`const char *`) `str`.
 
 A função do modelo
 
@@ -228,7 +228,7 @@ basic_ostream<char, _Tr>& operator<<(
     signed char _Ch);
 ```
 
-Retorna `_Ostr` << (`char`) `_Ch`.
+retorna `_Ostr` < < (`char`) `_Ch`.
 
 A função de modelo:
 
@@ -239,7 +239,7 @@ basic_ostream<char, _Tr>& operator<<(
     const unsigned char *str);
 ```
 
-Retorna `_Ostr` << (`const char *`) `str`.
+retorna `_Ostr` < < (`const char *`) `str`.
 
 A função de modelo:
 
@@ -250,7 +250,7 @@ basic_ostream<char, _Tr>& operator<<(
     unsigned char _Ch);
 ```
 
-Retorna `_Ostr` << (`char`) `_Ch`.
+retorna `_Ostr` < < (`char`) `_Ch`.
 
 A função de modelo:
 
@@ -269,4 +269,4 @@ Consulte [flush](../standard-library/ostream-functions.md#flush) para ver um exe
 
 ## <a name="see-also"></a>Consulte também
 
-[\<ostream>](../standard-library/ostream.md)<br/>
+[\<ostream>](../standard-library/ostream.md)

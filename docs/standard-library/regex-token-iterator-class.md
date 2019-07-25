@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::regex_token_iterator [C++], pointer
 - std::regex_token_iterator [C++], reference
 ms.assetid: a213ba48-8e4e-4b6b-871a-2637acf05f15
-ms.openlocfilehash: 2cb66ce4cbee0936211e5e991b18f3ae4b8a7fe5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 78d01ed8606e65e55af7e0c8dc24c02b51c53a39
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62369417"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451552"
 ---
 # <a name="regextokeniterator-class"></a>Classe regex_token_iterator
 
@@ -45,13 +45,13 @@ class regex_token_iterator
 
 ## <a name="parameters"></a>Parâmetros
 
-*BidIt*<br/>
+*Bidirecional*\
 O tipo de iterador para subcorrespondências.
 
-*Elem*<br/>
+*Elem*\
 O tipo de elemento a ser correspondido.
 
-*RXtraits*<br/>
+*RXtraits*\
 Classe de características para elementos.
 
 ## <a name="remarks"></a>Comentários
@@ -231,7 +231,7 @@ bool operator!=(const regex_token_iterator& right);
 
 ### <a name="parameters"></a>Parâmetros
 
-*right*<br/>
+*Certo*\
 O iterador a ser comparado.
 
 ### <a name="remarks"></a>Comentários
@@ -276,7 +276,7 @@ bool operator==(const regex_token_iterator& right);
 
 ### <a name="parameters"></a>Parâmetros
 
-*right*<br/>
+*Certo*\
 O iterador a ser comparado.
 
 ### <a name="remarks"></a>Comentários
@@ -342,16 +342,16 @@ regex_token_iterator(BidIt first, BidIt last,
 
 ### <a name="parameters"></a>Parâmetros
 
-*first*<br/>
+*primeiro*\
 Início da sequência de correspondência.
 
-*last*<br/>
+*última*\
 Fim da sequência de correspondência.
 
-*re*<br/>
+*outra*\
 Expressão regular para correspondências.
 
-*f*<br/>
+*fixo*\
 Sinalizadores de correspondências.
 
 ### <a name="remarks"></a>Comentários
@@ -390,11 +390,11 @@ O tipo é um sinônimo de `sub_match<BidIt>`, em que `BidIt` é o parâmetro de 
 
 ## <a name="see-also"></a>Consulte também
 
-[\<regex>](../standard-library/regex.md)<br/>
-[Classe regex_constants](../standard-library/regex-constants-class.md)<br/>
-[Classe regex_error](../standard-library/regex-error-class.md)<br/>
-[\<Funções regex>](../standard-library/regex-functions.md)<br/>
-[Classe regex_iterator](../standard-library/regex-iterator-class.md)<br/>
-[\<Operadores regex>](../standard-library/regex-operators.md)<br/>
-[Classe regex_traits](../standard-library/regex-traits-class.md)<br/>
-[\<Typedef regex>](../standard-library/regex-typedefs.md)<br/>
+[\<regex>](../standard-library/regex.md)\
+[Classe regex_constants](../standard-library/regex-constants-class.md)\
+[Classe regex_error](../standard-library/regex-error-class.md)\
+[\<funções > Regex](../standard-library/regex-functions.md)\
+[Classe regex_iterator](../standard-library/regex-iterator-class.md)\
+[\<operadores de > Regex](../standard-library/regex-operators.md)\
+[Classe regex_traits](../standard-library/regex-traits-class.md)\
+[\<Typedef regex>](../standard-library/regex-typedefs.md)

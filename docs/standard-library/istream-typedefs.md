@@ -7,12 +7,12 @@ f1_keywords:
 - istream/std::wiostream
 - istream/std::wistream
 ms.assetid: 55bc1f84-53a7-46ca-a36f-ac6ef75d0374
-ms.openlocfilehash: f647fba2036f6c69cb02393e30553c66df34b9dc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 864854fa2697a76c2f3476bcb050d5f5d084dc9d
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413288"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458757"
 ---
 # <a name="ltistreamgt-typedefs"></a>Typedefs &lt;istream&gt;
 
@@ -23,7 +23,7 @@ ms.locfileid: "62413288"
 
 ## <a name="iostream"></a>  iostream
 
-Um tipo `basic_iostream` especializado em **char**.
+Um tipo `basic_iostream` especializado em **Char**.
 
 ```cpp
 typedef basic_iostream<char, char_traits<char>> iostream;
@@ -31,11 +31,11 @@ typedef basic_iostream<char, char_traits<char>> iostream;
 
 ### <a name="remarks"></a>Comentários
 
-O tipo é um sinônimo para a classe de modelo [basic_iostream](../standard-library/basic-iostream-class.md), especializado para elementos do tipo **char** com características de caractere padrão.
+O tipo é um sinônimo para a classe de modelo [basic_iostream](../standard-library/basic-iostream-class.md), especializado para elementos do tipo **Char** com características de caractere padrão.
 
 ## <a name="istream"></a>  istream
 
-Um tipo `basic_istream` especializado em **char**.
+Um tipo `basic_istream` especializado em **Char**.
 
 ```cpp
 typedef basic_istream<char, char_traits<char>> istream;
@@ -43,7 +43,7 @@ typedef basic_istream<char, char_traits<char>> istream;
 
 ### <a name="remarks"></a>Comentários
 
-O tipo é um sinônimo para a classe de modelo [basic_istream](../standard-library/basic-istream-class.md), especializado para elementos do tipo **char** com características de caractere padrão.
+O tipo é um sinônimo para a classe de modelo [basic_istream](../standard-library/basic-istream-class.md), especializado para elementos do tipo **Char** com características de caractere padrão.
 
 ## <a name="wiostream"></a>  wiostream
 
@@ -71,4 +71,4 @@ O tipo é um sinônimo para a classe de modelo [basic_istream](../standard-libra
 
 ## <a name="see-also"></a>Consulte também
 
-[\<istream>](../standard-library/istream.md)<br/>
+[\<istream>](../standard-library/istream.md)

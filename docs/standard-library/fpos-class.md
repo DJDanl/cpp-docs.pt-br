@@ -11,12 +11,12 @@ helpviewer_keywords:
 - std::fpos [C++], seekpos
 - std::fpos [C++], state
 ms.assetid: ffd0827c-fa34-47f4-b10e-5cb707fcde47
-ms.openlocfilehash: 78b136d72067fa5fff58e8a7acc044fb4e1a409e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 60d7d00e6b9426df9b3086d9b82deaf1fdd1463c
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159451"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454152"
 ---
 # <a name="fpos-class"></a>Classe fpos
 
@@ -24,7 +24,7 @@ A classe de modelo descreve um objeto que pode armazenar todas as informações 
 
 - Um deslocamento de bytes, do tipo [streamoff](../standard-library/ios-typedefs.md#streamoff).
 
-- Um estado de conversão, para uso por um objeto da classe basic_filebuf, do tipo `St`, normalmente `mbstate_t`.
+- Um estado de conversão, para uso por um objeto da classe basic_filebuf, do `St`tipo, `mbstate_t`normalmente.
 
 Ele também pode armazenar uma posição de arquivo arbitrária, para uso por um objeto da classe [basic_filebuf](../standard-library/basic-filebuf-class.md), do tipo `fpos_t`. Para um ambiente com tamanho do arquivo limitado, no entanto, `streamoff` e `fpos_t` podem às vezes ser usados de maneira intercambiável. Para um ambiente sem fluxos com uma codificação dependente do estado, `mbstate_t` pode ficar sem uso. Portanto, o número de objetos membro armazenados pode variar.
 
@@ -37,7 +37,7 @@ class fpos
 
 ### <a name="parameters"></a>Parâmetros
 
-*Statetype*<br/>
+*Statetype*\
 Informações de estado.
 
 ### <a name="constructors"></a>Construtores
@@ -83,20 +83,20 @@ fpos(Statetype _State, fpos_t _Filepos);
 
 ### <a name="parameters"></a>Parâmetros
 
-*_Off*<br/>
+*_Off*\
 O deslocamento no fluxo.
 
-*_State*<br/>
+*_State*\
 O estado inicial do objeto `fpos`.
 
-*_Filepos*<br/>
+*_Filepos*\
 O deslocamento no fluxo.
 
 ### <a name="remarks"></a>Comentários
 
-O primeiro construtor armazena o deslocamento *off*, relativo ao início do arquivo e no estado de conversão inicial (se for importante). Se *off* é -1, o objeto resultante representará uma posição de fluxo inválida.
+O primeiro Construtor armazena o deslocamento *_Off*, em relação ao início do arquivo e no estado de conversão inicial (se isso for importante). Se *_Off* for-1, o objeto resultante representará uma posição de fluxo inválida.
 
-O segundo construtor armazena um deslocamento zero e o objeto *estad_o*.
+O segundo Construtor armazena um deslocamento zero e o objeto *_State*.
 
 ## <a name="op_neq"></a>  fpos::operator!=
 
@@ -108,7 +108,7 @@ bool operator!=(const fpos<Statetype>& right) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*right*<br/>
+*Certo*\
 O indicador de posição do arquivo para comparação.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -181,7 +181,7 @@ fpos<Statetype> operator+(streamoff _Off) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*_Off*<br/>
+*_Off*\
 O deslocamento segundo o qual você deseja incrementar o indicador de posição do arquivo.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -206,7 +206,7 @@ fpos<Statetype>& operator+=(streamoff _Off);
 
 ### <a name="parameters"></a>Parâmetros
 
-*_Off*<br/>
+*_Off*\
 O deslocamento segundo o qual você deseja incrementar o indicador de posição do arquivo.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -215,7 +215,7 @@ A posição no arquivo.
 
 ### <a name="remarks"></a>Comentários
 
-Adiciona a função de membro *off* ao objeto de membro do deslocamento armazenado e, em seguida, retorna  **\*isso**. Para o posicionamento dentro de um arquivo, o resultado normalmente é válido apenas para fluxos binários que não têm uma codificação dependente do estado.
+A função de membro adiciona *_Off* ao objeto de membro de deslocamento armazenado e, em seguida, retorna  **\*isso**. Para o posicionamento dentro de um arquivo, o resultado normalmente é válido apenas para fluxos binários que não têm uma codificação dependente do estado.
 
 ### <a name="example"></a>Exemplo
 
@@ -233,10 +233,10 @@ fpos<Statetype> operator-(streamoff _Off) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*right*<br/>
+*Certo*\
 Posição do arquivo.
 
-*_Off*<br/>
+*_Off*\
 Deslocamento do fluxo.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -257,7 +257,7 @@ fpos<Statetype>& operator-=(streamoff _Off);
 
 ### <a name="parameters"></a>Parâmetros
 
-*_Off*<br/>
+*_Off*\
 Deslocamento do fluxo.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -282,7 +282,7 @@ bool operator==(const fpos<Statetype>& right) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*right*<br/>
+*Certo*\
 O indicador de posição do arquivo para comparação.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -356,7 +356,7 @@ void state(Statetype _State);
 
 ### <a name="parameters"></a>Parâmetros
 
-*_State*<br/>
+*_State*\
 O novo estado de conversão.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -365,7 +365,7 @@ O estado de conversão.
 
 ### <a name="remarks"></a>Comentários
 
-A primeira função membro retorna o valor armazenado no `St` objeto membro. O segunda função membro armazena *estad_o* no `St` objeto membro.
+A primeira função de membro retorna o valor armazenado no `St` objeto member. A segunda função de membro armazena *_State* no `St` objeto member.
 
 ### <a name="example"></a>Exemplo
 
@@ -394,6 +394,6 @@ int main() {
 
 ## <a name="see-also"></a>Consulte também
 
-[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Programação de iostream](../standard-library/iostream-programming.md)<br/>
-[Convenções de iostreams](../standard-library/iostreams-conventions.md)<br/>
+[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Programação de iostream](../standard-library/iostream-programming.md)\
+[Convenções de iostreams](../standard-library/iostreams-conventions.md)

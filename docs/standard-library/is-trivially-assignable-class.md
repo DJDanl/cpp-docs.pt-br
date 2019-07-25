@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_trivially_assignable
 ms.assetid: 1284a8f7-4093-426d-9c9a-dabb46f90d6d
-ms.openlocfilehash: eeef85a0b26c25eb745258c7e0e35394f0cab979
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 11aed7fbe2540984d8ed69f88b2a95649e8fee70
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413483"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457486"
 ---
 # <a name="istriviallyassignable-class"></a>Classe is_trivially_assignable
 
@@ -26,15 +26,15 @@ struct is_trivially_assignable;
 
 ### <a name="parameters"></a>Parâmetros
 
-*To*<br/>
+*Para*\
 O tipo do objeto que recebe a atribuição.
 
-*From*<br/>
+*De*\
 O tipo do objeto que fornece o valor.
 
 ## <a name="remarks"></a>Comentários
 
-A expressão `declval<To>() = declval<From>()` deve ser bem formada e o compilador deve ter o conhecimento de que ela não requer operações não triviais. Ambos `From` e `To` devem ser tipos completos, **void**, ou matrizes de limite desconhecido.
+A expressão `declval<To>() = declval<From>()` deve ser bem formada e o compilador deve ter o conhecimento de que ela não requer operações não triviais. Ambos `From` e`To` devem ser tipos completos, **void**ou matrizes de associação desconhecida.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -44,4 +44,4 @@ A expressão `declval<To>() = declval<From>()` deve ser bem formada e o compilad
 
 ## <a name="see-also"></a>Consulte também
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

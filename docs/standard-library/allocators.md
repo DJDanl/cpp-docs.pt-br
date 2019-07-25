@@ -5,12 +5,12 @@ helpviewer_keywords:
 - allocators
 - C++ Standard Library, allocators
 ms.assetid: ac95023b-9e7d-49f5-861a-bf7a9a340746
-ms.openlocfilehash: 1f11d1b007a728b32d27afd733df271f361864e7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cb1b0e0d1466d4af5ba255bdf3d00b11cd921fd6
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62252721"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457539"
 ---
 # <a name="allocators"></a>Alocadores
 
@@ -28,7 +28,7 @@ A Biblioteca Padrão do C++ fornece uma implementação padrão de um alocador. 
 
 ## <a name="writing-your-own-allocator-c11"></a>Criando seu próprio alocador (C++11)
 
-O alocador padrão usa **novos** e **excluir** para alocar e desalocar a memória. Se quiser usar um método de alocação de memória diferente, como usar memória compartilhada, você deverá criar seu próprio alocador. Se você estiver usando o C++11 e precisar criar um novo alocador personalizado, crie-o como um alocador mínimo, se possível. Mesmo se você já implementou um alocador do estilo antigo, considere modificá-lo para transformá-lo em um *alocador mínimo* e aproveitar o método `construct()` mais eficiente que será fornecido automaticamente.
+O alocador padrão usa **novo** e **excluir** para alocar e desalocar memória. Se quiser usar um método de alocação de memória diferente, como usar memória compartilhada, você deverá criar seu próprio alocador. Se você estiver usando o C++11 e precisar criar um novo alocador personalizado, crie-o como um alocador mínimo, se possível. Mesmo se você já implementou um alocador do estilo antigo, considere modificá-lo para transformá-lo em um *alocador mínimo* e aproveitar o método `construct()` mais eficiente que será fornecido automaticamente.
 
 Um alocador mínimo requer muito menos clichê e permite que você se concentre nas funções de membro `allocate` e `deallocate` que fazem todo o trabalho. Ao criar um alocador mínimo, não implemente nenhum membro, exceto os que são mostrados no exemplo a seguir:
 
@@ -123,4 +123,4 @@ Para obter mais informações sobre esses métodos e definições de tipo, consu
 
 ## <a name="see-also"></a>Consulte também
 
-[Referência da biblioteca padrão C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[Referência da biblioteca padrão C++](../standard-library/cpp-standard-library-reference.md)

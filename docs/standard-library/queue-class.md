@@ -22,12 +22,12 @@ helpviewer_keywords:
 - std::queue [C++], push
 - std::queue [C++], size
 ms.assetid: 28c20ab0-3a72-4185-9e0f-5a44eea0e204
-ms.openlocfilehash: 78479a05f8957aea5ca0f78fd3a086a49b9ef009
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 512b9499e63933a71a27a87f91a3bef8a65339e1
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240396"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458351"
 ---
 # <a name="queue-class"></a>Classe queue
 
@@ -42,19 +42,19 @@ class queue
 
 ### <a name="parameters"></a>Parâmetros
 
-*Tipo*\
+*Escreva*\
 O tipo de dados do elemento a ser armazenado na fila
 
-*Contêiner*\
+*Container*\
 O tipo do contêiner subjacente usado para implementar a fila.
 
 ## <a name="remarks"></a>Comentários
 
-Os elementos da classe `Type` estipulados no primeiro modelo de parâmetro de um objeto de fila são sinônimo [value_type](#value_type) e deve corresponder ao tipo de elemento na classe de contêiner subjacente `Container` estipulado pela segundo parâmetro de modelo. O `Type` deve ser atribuível, para que seja possível copiar objetos desse tipo e atribuir valores às variáveis desse tipo.
+Os elementos da classe `Type` estipulados no primeiro parâmetro de modelo de um objeto de fila são sinônimos de [value_type](#value_type) e devem corresponder ao tipo de elemento na classe `Container` de contêiner subjacente estipulada pelo segundo modelo meter. O `Type` deve ser atribuível, para que seja possível copiar objetos desse tipo e atribuir valores a variáveis desse tipo.
 
-Classes de contêiner subjacente adequadas para a fila incluem [deque](../standard-library/deque-class.md) e [lista](../standard-library/list-class.md), ou qualquer outro contêiner de sequência que dá suporte a operações de `front`, `back`, `push_back`, e `pop_front`. A classe de contêiner subjacente é encapsulada dentro do adaptador do contêiner, que expõe apenas o conjunto limitado de funções membro de contêiner de sequência como uma interface pública.
+As classes de contêiner subjacentes adequadas para a fila incluem [deque](../standard-library/deque-class.md) e [list](../standard-library/list-class.md), ou qualquer outro contêiner de sequência `front`que `back`ofereça suporte às `pop_front`operações do,, `push_back`e. A classe de contêiner subjacente é encapsulada dentro do adaptador do contêiner, que expõe apenas o conjunto limitado de funções membro de contêiner de sequência como uma interface pública.
 
-Será igualdade comparável somente se os elementos da classe dos objetos de fila `Type` são igualdade comparável e são menor-que comparáveis se e somente se os elementos da classe `Type` são menores-que comparável.
+Os objetos de fila são comparáveis de igualdade se e somente se os elementos `Type` da classe forem comparáveis de igualdade e forem menores que o comparável se e somente se os elementos `Type` da classe forem menores que o comparável.
 
 Há três tipos de adaptadores de contêiner definidos pela Biblioteca Padrão C++: stack, queue e priority_queue. Cada um deles restringe a funcionalidade de uma classe de contêiner subjacente para fornecer uma interface com precisão controlada a uma estrutura de dados padrão.
 
@@ -91,7 +91,7 @@ Há três tipos de adaptadores de contêiner definidos pela Biblioteca Padrão C
 |[push](#push)|Adiciona um elemento na parte traseira do `queue`.|
 |[size](#size)|Retorna o número de elementos no `queue`.|
 
-## <a name="back"></a> Voltar
+## <a name="back"></a>Voltar
 
 Retorna uma referência para o último e recém-adicionado elemento na parte final da fila.
 
@@ -107,7 +107,7 @@ O último elemento da fila. Se a fila estiver vazia, o valor retornado será ind
 
 ### <a name="remarks"></a>Comentários
 
-Se o valor retornado de `back` for atribuído a um `const_reference`, o objeto da fila não poderá ser modificado. Se o valor de retorno `back` for atribuído a um `reference`, o objeto de fila pode ser modificado.
+Se o valor retornado de `back` for atribuído a um `const_reference`, o objeto da fila não poderá ser modificado. Se o valor de retorno `back` de for atribuído a `reference`um, o objeto de fila poderá ser modificado.
 
 Quando compilado usando [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) definido como 1 ou 2, um erro em tempo de execução ocorrerá se você tentar acessar um elemento em uma fila vazia.  Consulte [Iteradores Verificados](../standard-library/checked-iterators.md) para obter mais informações.
 
@@ -137,7 +137,7 @@ int main( )
 }
 ```
 
-## <a name="container_type"></a> container_type
+## <a name="container_type"></a>container_type
 
 Um tipo que fornece o contêiner base a ser adaptado.
 
@@ -155,7 +155,7 @@ Para obter mais informações sobre `Container`, consulte a seção Comentários
 
 Veja o exemplo de [queue](#queue) para saber como declarar e usar `container_type`.
 
-## <a name="empty"></a> vazio
+## <a name="empty"></a>esvaziá
 
 Testa se uma fila está vazia.
 
@@ -201,7 +201,7 @@ The queue q1 is not empty.
 The queue q2 is empty.
 ```
 
-## <a name="front"></a> front
+## <a name="front"></a>dianteiro
 
 Retorna uma referência ao primeiro elemento na parte inicial da fila.
 
@@ -217,7 +217,7 @@ O primeiro elemento da fila. Se a fila estiver vazia, o valor retornado será in
 
 ### <a name="remarks"></a>Comentários
 
-Se o valor retornado de `front` for atribuído a um `const_reference`, o objeto da fila não poderá ser modificado. Se o valor de retorno `front` for atribuído a um `reference`, o objeto de fila pode ser modificado.
+Se o valor retornado de `front` for atribuído a um `const_reference`, o objeto da fila não poderá ser modificado. Se o valor de retorno `front` de for atribuído a `reference`um, o objeto de fila poderá ser modificado.
 
 A função membro retorna um `reference` para o primeiro elemento da sequência controlada, que deve ser não vazio.
 
@@ -253,7 +253,7 @@ int main() {
 }
 ```
 
-## <a name="pop"></a> pop
+## <a name="pop"></a>pop
 
 Remove um elemento no início da fila.
 
@@ -309,7 +309,7 @@ After a pop the queue length is 2.
 After a pop, the element at the front of the queue is 20.
 ```
 
-## <a name="push"></a> envio por push
+## <a name="push"></a>pressionado
 
 Adiciona um elemento na parte final da fila.
 
@@ -358,7 +358,7 @@ The queue length is 3.
 The element at the front of the queue is 10.
 ```
 
-## <a name="queue"></a> fila
+## <a name="queue"></a>Espera
 
 Constrói uma fila que é vazia ou que é uma cópia de um objeto de contêiner base.
 
@@ -425,7 +425,7 @@ The element at the front of queue q5 is 1.
 The element at the back of queue q5 is 2.
 ```
 
-## <a name="size"></a> Tamanho
+## <a name="size"></a>tamanho
 
 Retorna o número de elementos na fila.
 
@@ -466,7 +466,7 @@ The queue length is 1.
 The queue length is now 2.
 ```
 
-## <a name="size_type"></a> size_type
+## <a name="size_type"></a>size_type
 
 Um tipo de inteiro sem sinal que pode representar o número de elementos em uma fila.
 
@@ -526,5 +526,5 @@ The element at the front of the queue is 69.
 
 ## <a name="see-also"></a>Consulte também
 
-[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Referência da biblioteca padrão C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Referência da biblioteca padrão C++](../standard-library/cpp-standard-library-reference.md)

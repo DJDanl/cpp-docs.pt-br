@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - moneypunct_byname class
 ms.assetid: e8a544d2-6aee-420d-b513-deb385c9b416
-ms.openlocfilehash: 003ba2136e779c444c7edad9b1759a861a8b0803
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 47c9d2281973cb57288bfdcf865926fb6dd9ed0e
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383549"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68460205"
 ---
 # <a name="moneypunctbyname-class"></a>Classe moneypunct_byname
 
@@ -50,4 +50,4 @@ Seu comportamento é determinado pela localidade nomeada `_Locname`. Cada constr
 
 ## <a name="see-also"></a>Consulte também
 
-[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

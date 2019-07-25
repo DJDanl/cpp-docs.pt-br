@@ -1,16 +1,16 @@
 ---
-title: Fluxos de entrada e saída
+title: Fluxos de entrada-saída
 ms.date: 11/04/2016
 helpviewer_keywords:
 - I/O [C++], stream
 - stream I/O
 ms.assetid: 21a97566-91a7-42d6-b2f8-a4c16bc926f1
-ms.openlocfilehash: d426baacb52095ab2d933263fdac8e312fc29558
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3d5344ede3a62375c4c8102d1fc39445518eb0c4
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159230"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455267"
 ---
 # <a name="inputoutput-streams"></a>Fluxos de Entrada/Saída
 
@@ -22,7 +22,7 @@ Para obter mais informações, consulte [Classe basic_iostream](../standard-libr
 
 Derivado de `basic_iostream`, há o modelo de classe `basic_fstream`, que é usado para transmitir dados de caractere para arquivos e de arquivos.
 
-Também há typedefs que fornecem especializações específicas do caractere de `basic_fstream`. Eles são `fstream`, que é um fluxo de e/s de arquivo com base no **char**, e `wfstream`, que é um fluxo de e/s de arquivo com base no **wchar_t**. Para obter mais informações, consulte [Classe basic_fstream](../standard-library/basic-fstream-class.md), [fstream](../standard-library/basic-fstream-class.md) e [wfstream](../standard-library/basic-fstream-class.md). Usar esses typedefs requer a inclusão do arquivo de cabeçalho \<fstream>.
+Também há typedefs que fornecem especializações específicas do caractere de `basic_fstream`. Eles são `fstream`, que é um fluxo de e/s de arquivo baseado em **Char**, e `wfstream`, que é um fluxo de e/s de arquivo baseado no **wchar_t**. Para obter mais informações, consulte [Classe basic_fstream](../standard-library/basic-fstream-class.md), [fstream](../standard-library/basic-fstream-class.md) e [wfstream](../standard-library/basic-fstream-class.md). Usar esses typedefs requer a inclusão do arquivo de cabeçalho \<fstream>.
 
 > [!NOTE]
 > Quando um objeto `basic_fstream` é usado para realizar E/S de arquivo, embora o buffer subjacente contenha posições designadas separadamente para leitura e gravação, as posições atuais de entrada e saída são vinculadas e, portanto, ler alguns dados move a posição de saída.
@@ -31,8 +31,8 @@ O modelo de classe `basic_stringstream` e sua especialização comum, `stringstr
 
 ## <a name="see-also"></a>Consulte também
 
-[stringstream](../standard-library/basic-stringstream-class.md)<br/>
-[Classe basic_stringstream](../standard-library/basic-stringstream-class.md)<br/>
-[\<sstream>](../standard-library/sstream.md)<br/>
-[Programação de iostream](../standard-library/iostream-programming.md)<br/>
-[Biblioteca Padrão do C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[stringstream](../standard-library/basic-stringstream-class.md)\
+[Classe basic_stringstream](../standard-library/basic-stringstream-class.md)\
+[\<sstream>](../standard-library/sstream.md)\
+[Programação de iostream](../standard-library/iostream-programming.md)\
+[Biblioteca padrão C++](../standard-library/cpp-standard-library-reference.md)
