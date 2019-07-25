@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - runtime_error class
 ms.assetid: 4d0227bf-847b-45a2-a320-2351ebf98368
-ms.openlocfilehash: 8c5453ef7ced55535806570f458c5e08c0a64962
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c4c4436c32f5f23c6bea119e95b165631384f583
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409714"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451117"
 ---
 # <a name="runtimeerror-class"></a>Classe runtime_error
 
@@ -69,5 +69,5 @@ Type class std::runtime_error
 
 ## <a name="see-also"></a>Consulte também
 
-[Classe exception](../standard-library/exception-class.md)<br/>
-[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Classe de exceção](../standard-library/exception-class.md)\
+[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

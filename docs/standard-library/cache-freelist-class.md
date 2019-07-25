@@ -10,12 +10,12 @@ helpviewer_keywords:
 - stdext::cache_freelist [C++], allocate
 - stdext::cache_freelist [C++], deallocate
 ms.assetid: 840694de-36ba-470f-8dae-2b723d5a8cd9
-ms.openlocfilehash: 56fdfb191f9208a5ffa692e1d599545ddeaeb36c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 05260d6800597b64908ff0aeffac47b09fed9a0e
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62352106"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449695"
 ---
 # <a name="cachefreelist-class"></a>Classe cache_freelist
 
@@ -37,9 +37,9 @@ class cache_freelist
 
 ## <a name="remarks"></a>Comentários
 
-A classe de modelo cache_freelist mantém uma lista livre de blocos de memória de tamanho *Sz*. Quando a lista livre estiver cheia, ele usa **operador delete** desalocar memória bloqueia. Quando a lista livre estiver vazia, ele usa **operador new** para alocar novos blocos de memória. O tamanho máximo da lista livre é determinado pela classe classe max passada a *máx* parâmetro.
+A classe de modelo cache_freelist mantém uma lista gratuita de blocos de memória de tamanho *sz*. Quando a lista livre está cheia, ela usa o **operador Delete** para desalocar os blocos de memória. Quando a lista livre está vazia, ela usa o **operador novo** para alocar novos blocos de memória. O tamanho máximo da lista livre é determinado pela classe máxima da classe passada no parâmetro *Max* .
 
-Cada bloco de memória contém *Sz* bytes de memória utilizável e os dados que **operador new** e **operador delete** exigem.
+Cada bloco de memória contém os bytes de *sz* de memória utilizável e os dados que o **operador New** e o **operador Delete** exigem.
 
 ### <a name="constructors"></a>Construtores
 
@@ -109,4 +109,4 @@ void deallocate(void* ptr, std::size_t count);
 
 ## <a name="see-also"></a>Consulte também
 
-[\<allocators>](../standard-library/allocators-header.md)<br/>
+[\<allocators>](../standard-library/allocators-header.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_trivially_copy_assignable
 ms.assetid: 7410133e-f367-493f-92a7-e34e3ec5e879
-ms.openlocfilehash: 831e7c5afdd39980876a8e8284a68fec2084a4e5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c0019257a032d3becc268513336ed59e58a2e1d5
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413457"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448003"
 ---
 # <a name="istriviallycopyassignable-class"></a>Classe is_trivially_copy_assignable
 
@@ -26,14 +26,14 @@ struct is_trivially_copy_assignable;
 
 ### <a name="parameters"></a>Parâmetros
 
-*T*<br/>
+*T*\
 O tipo a ser consultado.
 
 ## <a name="remarks"></a>Comentários
 
-Uma instância do predicado de tipo será verdadeira se o tipo *T* é uma classe que tem um cópia trivial operador de atribuição, caso contrário, será falsa.
+Uma instância do predicado de tipo fica true se o tipo *T* é uma classe que tem um operador de atribuição de cópia trivial, caso contrário, ela mantém false.
 
-Um construtor de atribuição para uma classe *T* será trivial se for implicitamente fornecido, a classe *T* não tiver funções virtuais, a classe *T* não tiver bases virtuais, as classes de todos os membros de dados não estáticos do tipo de classe tiverem operadores de atribuição triviais e as classes de todos os membros de dados não estáticos da matriz de tipo de classe tiverem operadores de atribuição trivial.
+Um construtor de atribuição para uma classe *t* é trivial se for fornecido implicitamente, a classe *t* não tem nenhuma função virtual, a classe *t* não tem bases virtuais, as classes de todos os membros de dados não estáticos do tipo de classe têm atribuição trivial os operadores e as classes de todos os membros de dados não estáticos do tipo matriz de classe têm operadores de atribuição triviais.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -43,4 +43,4 @@ Um construtor de atribuição para uma classe *T* será trivial se for implicita
 
 ## <a name="see-also"></a>Consulte também
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

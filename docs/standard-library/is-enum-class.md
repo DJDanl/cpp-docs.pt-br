@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_enum class
 - is_enum
 ms.assetid: df3b00b7-4f98-4b3a-96ce-10ad958ee69c
-ms.openlocfilehash: 623bda13a12ac311618e1b9fffdbc3f676013df6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4c8ac69bacf72cc9a281e239263a14a42f4a0efe
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62336493"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452678"
 ---
 # <a name="isenum-class"></a>Classe is_enum
 
@@ -27,12 +27,12 @@ struct is_enum;
 
 ### <a name="parameters"></a>Parâmetros
 
-*Ty*<br/>
+*Ty*\
 O tipo a ser consultado.
 
 ## <a name="remarks"></a>Comentários
 
-Uma instância do predicado de tipo será verdadeira se o tipo *Ty* é um tipo de enumeração ou um `cv-qualified` forma de um tipo de enumeração, caso contrário, será falsa.
+Uma instância do predicado de tipo fica true se o tipo *Ty* é um tipo de `cv-qualified` enumeração ou uma forma de um tipo de enumeração, caso contrário, ela mantém false.
 
 ## <a name="example"></a>Exemplo
 
@@ -77,5 +77,5 @@ is_enum<int> == false
 
 ## <a name="see-also"></a>Consulte também
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[Classe is_integral](../standard-library/is-integral-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[Classe is_integral](../standard-library/is-integral-class.md)

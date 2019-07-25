@@ -12,12 +12,12 @@ helpviewer_keywords:
 - stdext::sync_shared [C++], deallocate
 - stdext::sync_shared [C++], equals
 ms.assetid: cab3af9e-3d1a-4f2c-8580-0f89e5687d8e
-ms.openlocfilehash: c368e99eb9f128963e90cdc1d39bdb9d4569efe9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 72ed21d3a0fb519bca2e19b7fbface05d5ac64ce
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412235"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450243"
 ---
 # <a name="syncshared-class"></a>Classe sync_shared
 
@@ -108,10 +108,10 @@ bool equals(const sync_shared<Cache>& Other) const;
 
 ### <a name="return-value"></a>Valor de retorno
 
-**Verdadeiro** se o resultado da `cache.equals(Other.cache)`, onde `cache` representa o objeto de cache, é **verdadeira**; caso contrário, **false**.
+**true** se o resultado de `cache.equals(Other.cache)`, onde `cache` representa o objeto de cache, é **true**; caso contrário, **false**.
 
 ### <a name="remarks"></a>Comentários
 
 ## <a name="see-also"></a>Consulte também
 
-[\<allocators>](../standard-library/allocators-header.md)<br/>
+[\<allocators>](../standard-library/allocators-header.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_trivial
 ms.assetid: 6beb11d4-2f38-4c7e-9959-ca5d26250df7
-ms.openlocfilehash: 609fdd9c3d0d00eea607db4aefd31163234a9a00
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1d218848fd65ca68022e3e66df02201582626711
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413509"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457430"
 ---
 # <a name="istrivial-class"></a>Classe is_trivial
 
@@ -26,12 +26,12 @@ struct is_trivial;
 
 ### <a name="parameters"></a>Parâmetros
 
-*T*<br/>
+*T*\
 O tipo a ser consultado.
 
 ## <a name="remarks"></a>Comentários
 
-Uma instância do predicado de tipo será verdadeira se o tipo *T* é um tipo trivial, de outra forma, será falsa. Tipos triviais são tipos escalares, tipos de classe copiados de forma trivial, matrizes desses tipos e versões desses tipos qualificadas por CV.
+Uma instância do predicado de tipo se manterá true se o tipo *T* for um tipo trivial, caso contrário, será false. Tipos triviais são tipos escalares, tipos de classe copiados de forma trivial, matrizes desses tipos e versões desses tipos qualificadas por CV.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -41,4 +41,4 @@ Uma instância do predicado de tipo será verdadeira se o tipo *T* é um tipo tr
 
 ## <a name="see-also"></a>Consulte também
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

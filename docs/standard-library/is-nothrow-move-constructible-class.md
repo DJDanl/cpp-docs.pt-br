@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_nothrow_move_constructible
 ms.assetid: d186d97b-7b89-470a-8d30-993046a83379
-ms.openlocfilehash: f1f98a6172e37bd72182ccc043ca4612b71675d9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7f1ccdba11f62fcbeaf54162f80f0717feaa2fa1
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413640"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455870"
 ---
 # <a name="isnothrowmoveconstructible-class"></a>Classe is_nothrow_move_constructible
 
@@ -26,12 +26,12 @@ struct is_nothrow_move_constructible;
 
 ### <a name="parameters"></a>Parâmetros
 
-*Ty*<br/>
+*Ty*\
 O tipo a ser consultado.
 
 ## <a name="remarks"></a>Comentários
 
-Uma instância do predicado de tipo será verdadeira se o tipo *Ty* tem um nothrow; construtor de movimentação, caso contrário, será falsa.
+Uma instância do predicado de tipo se aplica true se o tipo *Ty* tiver um construtor de movimentação nothrow; caso contrário, ele será false.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -41,4 +41,4 @@ Uma instância do predicado de tipo será verdadeira se o tipo *Ty* tem um nothr
 
 ## <a name="see-also"></a>Consulte também
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - regex_error class
 ms.assetid: 3333a1a3-ca6f-4612-84b2-1b4c7e3db5a4
-ms.openlocfilehash: eed961ea698591935c22fc748ff79583ae636b27
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 52b6bfd74a08200f7d924d2601b85718a941dd85
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62369612"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451648"
 ---
 # <a name="regexerror-class"></a>Classe regex_error
 
@@ -39,7 +39,7 @@ A classe descreve um objeto de exceção gerado para relatar um erro na constru�
 
 |Função de membro|Descrição|
 |-|-|
-|[code](#code)|Retorna o código de erro.|
+|[código](#code)|Retorna o código de erro.|
 
 ## <a name="requirements"></a>Requisitos
 
@@ -104,20 +104,20 @@ regex_error(regex_constants::error_code error);
 
 ### <a name="parameters"></a>Parâmetros
 
-*error*<br/>
+*ao*\
 O código de erro.
 
 ### <a name="remarks"></a>Comentários
 
-O construtor constrói um objeto que contém o valor *erro*.
+O construtor constrói um objeto que contém o *erro*de valor.
 
 ## <a name="see-also"></a>Consulte também
 
-[\<regex>](../standard-library/regex.md)<br/>
-[Classe regex_constants](../standard-library/regex-constants-class.md)<br/>
-[\<Funções regex>](../standard-library/regex-functions.md)<br/>
-[Classe regex_iterator](../standard-library/regex-iterator-class.md)<br/>
-[\<Operadores regex>](../standard-library/regex-operators.md)<br/>
-[Classe regex_token_iterator](../standard-library/regex-token-iterator-class.md)<br/>
-[Classe regex_traits](../standard-library/regex-traits-class.md)<br/>
-[\<Typedef regex>](../standard-library/regex-typedefs.md)<br/>
+[\<regex>](../standard-library/regex.md)\
+[Classe regex_constants](../standard-library/regex-constants-class.md)\
+[\<funções > Regex](../standard-library/regex-functions.md)\
+[Classe regex_iterator](../standard-library/regex-iterator-class.md)\
+[\<operadores de > Regex](../standard-library/regex-operators.md)\
+[Classe regex_token_iterator](../standard-library/regex-token-iterator-class.md)\
+[Classe regex_traits](../standard-library/regex-traits-class.md)\
+[\<Typedef regex>](../standard-library/regex-typedefs.md)

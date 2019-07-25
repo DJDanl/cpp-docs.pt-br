@@ -10,12 +10,12 @@ f1_keywords:
 - regex/std::operator==
 - regex/std::operator<<
 ms.assetid: ec623e65-c186-491f-aa18-6b12b47e1127
-ms.openlocfilehash: ee0d9ba820cff55a9cfbb130c8f90ca02fbee84a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 829b4cf50b02db0a88d61a8801c1e21ddb470344
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62369547"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68460127"
 ---
 # <a name="ltregexgt-operators"></a>Operadores &lt;regex&gt;
 
@@ -66,19 +66,19 @@ bool operator!=(const match_results<BidIt, Alloc>& left,
 
 ### <a name="parameters"></a>Parâmetros
 
-*BidIt*<br/>
+*Bidirecional*\
 O tipo de iterador.
 
-*IOtraits*<br/>
+*IOtraits*\
 A classe de característica da cadeia de caracteres.
 
-*ALLOC*<br/>
+*Alocação*\
 A classe do alocador.
 
-*left*<br/>
+*mantida*\
 O objeto à esquerda a ser comparado.
 
-*right*<br/>
+*Certo*\
 O objeto à direita a ser comparado.
 
 ### <a name="remarks"></a>Comentários
@@ -181,24 +181,24 @@ bool operator<(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>Parâmetros
 
-*BidIt*<br/>
+*Bidirecional*\
 O tipo de iterador.
 
-*IOtraits*<br/>
+*IOtraits*\
 A classe de característica da cadeia de caracteres.
 
-*ALLOC*<br/>
+*Alocação*\
 A classe do alocador.
 
-*left*<br/>
+*mantida*\
 O objeto à esquerda a ser comparado.
 
-*right*<br/>
+*Certo*\
 O objeto à direita a ser comparado.
 
 ### <a name="remarks"></a>Comentários
 
-Cada operador de modelo converte seus argumentos em um tipo de cadeia de caracteres e retorna true somente se o valor convertido do *esquerdo* comparado como menor que o valor convertido do *direita*.
+Cada operador de modelo converte seus argumentos em um tipo de cadeia de caracteres e retorna true somente se o valor convertido de *Left* compara menor que o valor convertido de *Right*.
 
 ### <a name="example"></a>Exemplo
 
@@ -266,22 +266,22 @@ basic_ostream<Elem, IOtraits>& operator<<(basic_ostream<Elem, IOtraits>& os,
 
 ### <a name="parameters"></a>Parâmetros
 
-*Elem*<br/>
+*Elem*\
 O tipo de elemento.
 
-*IOtraits*<br/>
+*IOtraits*\
 A classe de característica da cadeia de caracteres.
 
-*ALLOC*<br/>
+*Alocação*\
 A classe do alocador.
 
-*BidIt*<br/>
+*Bidirecional*\
 O tipo de iterador.
 
-*os*<br/>
+*sistemas*\
 O fluxo de saída.
 
-*right*<br/>
+*Certo*\
 O objeto a ser inserido.
 
 ### <a name="remarks"></a>Comentários
@@ -351,19 +351,19 @@ bool operator<=(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>Parâmetros
 
-*BidIt*<br/>
+*Bidirecional*\
 O tipo de iterador.
 
-*IOtraits*<br/>
+*IOtraits*\
 A classe de característica da cadeia de caracteres.
 
-*ALLOC*<br/>
+*Alocação*\
 A classe do alocador.
 
-*left*<br/>
+*mantida*\
 O objeto à esquerda a ser comparado.
 
-*right*<br/>
+*Certo*\
 O objeto à direita a ser comparado.
 
 ### <a name="remarks"></a>Comentários
@@ -465,19 +465,19 @@ bool operator==(const match_results<BidIt, Alloc>& left,
 
 ### <a name="parameters"></a>Parâmetros
 
-*BidIt*<br/>
+*Bidirecional*\
 O tipo de iterador.
 
-*IOtraits*<br/>
+*IOtraits*\
 A classe de característica da cadeia de caracteres.
 
-*ALLOC*<br/>
+*Alocação*\
 A classe do alocador.
 
-*left*<br/>
+*mantida*\
 O objeto à esquerda a ser comparado.
 
-*right*<br/>
+*Certo*\
 O objeto à direita a ser comparado.
 
 ### <a name="remarks"></a>Comentários
@@ -588,19 +588,19 @@ bool operator>(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>Parâmetros
 
-*BidIt*<br/>
+*Bidirecional*\
 O tipo de iterador.
 
-*IOtraits*<br/>
+*IOtraits*\
 A classe de característica da cadeia de caracteres.
 
-*ALLOC*<br/>
+*Alocação*\
 A classe do alocador.
 
-*left*<br/>
+*mantida*\
 O objeto à esquerda a ser comparado.
 
-*right*<br/>
+*Certo*\
 O objeto à direita a ser comparado.
 
 ### <a name="remarks"></a>Comentários
@@ -698,19 +698,19 @@ bool operator>=(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>Parâmetros
 
-*BidIt*<br/>
+*Bidirecional*\
 O tipo de iterador.
 
-*IOtraits*<br/>
+*IOtraits*\
 A classe de característica da cadeia de caracteres.
 
-*ALLOC*<br/>
+*Alocação*\
 A classe do alocador.
 
-*left*<br/>
+*mantida*\
 O objeto à esquerda a ser comparado.
 
-*right*<br/>
+*Certo*\
 O objeto à direita a ser comparado.
 
 ### <a name="remarks"></a>Comentários
@@ -773,11 +773,11 @@ sub >= 'a' == true
 
 ## <a name="see-also"></a>Consulte também
 
-[\<regex>](../standard-library/regex.md)<br/>
-[Classe regex_constants](../standard-library/regex-constants-class.md)<br/>
-[Classe regex_error](../standard-library/regex-error-class.md)<br/>
-[\<Funções regex>](../standard-library/regex-functions.md)<br/>
-[Classe regex_iterator](../standard-library/regex-iterator-class.md)<br/>
-[Classe regex_token_iterator](../standard-library/regex-token-iterator-class.md)<br/>
-[Classe regex_traits](../standard-library/regex-traits-class.md)<br/>
-[\<Typedef regex>](../standard-library/regex-typedefs.md)<br/>
+[\<regex>](../standard-library/regex.md)\
+[Classe regex_constants](../standard-library/regex-constants-class.md)\
+[Classe regex_error](../standard-library/regex-error-class.md)\
+[\<funções > Regex](../standard-library/regex-functions.md)\
+[Classe regex_iterator](../standard-library/regex-iterator-class.md)\
+[Classe regex_token_iterator](../standard-library/regex-token-iterator-class.md)\
+[Classe regex_traits](../standard-library/regex-traits-class.md)\
+[\<Typedef regex>](../standard-library/regex-typedefs.md)

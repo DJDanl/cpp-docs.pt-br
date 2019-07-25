@@ -15,12 +15,12 @@ helpviewer_keywords:
 - std::shuffle_order_engine [C++], base_type
 - std::shuffle_order_engine [C++], seed
 ms.assetid: 0bcd1fb0-44d7-4e59-bb1b-4a9b673a960d
-ms.openlocfilehash: bf767c12a19e4ae47c34a8f01e1b1a2f1e028eb3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 972ba83afb5478cd89314817ba823b8d5657c9c8
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399428"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450424"
 ---
 # <a name="shuffleorderengine-class"></a>Classe shuffle_order_engine
 
@@ -35,10 +35,10 @@ class shuffle_order_engine;
 
 ### <a name="parameters"></a>Parâmetros
 
-*mecanismo*<br/>
+*Motores*\
 O tipo de mecanismo de base.
 
-*K*<br/>
+*C*\
 **Tamanho da tabela**. Número de elementos no buffer (tabela). **Pré-condição**: `0 < K`
 
 ## <a name="members"></a>Membros
@@ -52,7 +52,7 @@ Para obter mais informações sobre membros do mecanismo, consulte [\<random>](.
 
 ## <a name="remarks"></a>Comentários
 
-Essa classe de modelo descreve um *adaptador de mecanismo* que produz valores ao reorganizar os valores retornados por seu mecanismo básico. Cada construtor preenche a tabela interna com *K* valores retornados pelo mecanismo de base e um elemento aleatório é selecionado da tabela quando um valor é solicitado.
+Essa classe de modelo descreve um *adaptador de mecanismo* que produz valores ao reorganizar os valores retornados por seu mecanismo básico. Cada construtor preenche a tabela interna com valores *K* retornados pelo mecanismo base e um elemento aleatório é selecionado na tabela quando um valor é solicitado.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -62,4 +62,4 @@ Essa classe de modelo descreve um *adaptador de mecanismo* que produz valores ao
 
 ## <a name="see-also"></a>Consulte também
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

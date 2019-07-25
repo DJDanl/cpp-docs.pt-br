@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - output streams, one-argument manipulators
 ms.assetid: e381dee8-6b16-4cef-805a-4a6a1d2b696b
-ms.openlocfilehash: b5f24033d8da0933b8252fdace60fb419ef2e605
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c9e9e7531733ac40022b477980297c80ac488221
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62370814"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68453442"
 ---
 # <a name="other-one-argument-output-stream-manipulators"></a>Outros Manipuladores de Fluxo de Saída de um Argumento
 
-O exemplo a seguir usa uma classe `money`, que é um **longo** tipo. O manipulador `setpic` anexa uma cadeia de caracteres de “imagem” de formatação à classe que pode ser usada pelo operador de inserção de fluxo sobrecarregado da classe `money`. A cadeia de caracteres de imagem é armazenada como uma variável estática na classe `money` em vez de como membro de dados de uma classe de fluxo, portanto não é necessário derivar uma nova classe de fluxo de saída.
+O exemplo a seguir usa uma `money`classe, que é um tipo **longo** . O manipulador `setpic` anexa uma cadeia de caracteres de “imagem” de formatação à classe que pode ser usada pelo operador de inserção de fluxo sobrecarregado da classe `money`. A cadeia de caracteres de imagem é armazenada como uma variável estática na classe `money` em vez de como membro de dados de uma classe de fluxo, portanto não é necessário derivar uma nova classe de fluxo de saída.
 
 ## <a name="example"></a>Exemplo
 
@@ -77,4 +77,4 @@ int main( )
 
 ## <a name="see-also"></a>Consulte também
 
-[Manipuladores personalizados com argumentos](../standard-library/custom-manipulators-with-arguments.md)<br/>
+[Manipuladores personalizados com argumentos](../standard-library/custom-manipulators-with-arguments.md)

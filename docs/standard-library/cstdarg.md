@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - cstdarg header
 ms.assetid: 639b4ef7-8408-4640-9343-41631f0ab663
-ms.openlocfilehash: f8d2d3b886cfa46905e8f17f1e13b51881b80191
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 0b45d5f591c5394ffa861e75169dce70f53b1baf
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244479"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448020"
 ---
 # <a name="ltcstdarggt"></a>&lt;cstdarg&gt;
 
-Inclui o cabeçalho da biblioteca C padrão \<stdarg. h > e adiciona os nomes associados ao `std` namespace. Inclusão desse cabeçalho garante que os nomes declarados usando vinculação externa no cabeçalho da biblioteca C padrão sejam declarados no `std` namespace.
+Inclui o cabeçalho \<de biblioteca padrão C STDARG. h > e adiciona os nomes associados `std` ao namespace. A inclusão desse cabeçalho garante que os nomes declarados usando vínculo externo no cabeçalho da biblioteca padrão C sejam `std` declarados no namespace.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -23,7 +23,7 @@ Inclui o cabeçalho da biblioteca C padrão \<stdarg. h > e adiciona os nomes as
 #include <cstdarg>
 ```
 
-## <a name="namespace-and-macros"></a>Namespace e Macros
+## <a name="namespace-and-macros"></a>Namespace e macros
 
 ```cpp
 namespace std {
@@ -38,6 +38,6 @@ namespace std {
 
 ## <a name="see-also"></a>Consulte também
 
-[Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Visão geral da biblioteca padrão C++](../standard-library/cpp-standard-library-overview.md)<br/>
-[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)\
+[Visão geral da biblioteca padrão C++](../standard-library/cpp-standard-library-overview.md)\
+[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

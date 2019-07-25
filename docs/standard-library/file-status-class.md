@@ -12,12 +12,12 @@ helpviewer_keywords:
 - std::experimental::filesystem::file_status::operator=
 - std::experimental::filesystem::file_status::type
 - std::experimental::filesystem::file_status::permissions
-ms.openlocfilehash: 81ce4ecc1673087db8e985f94e297798dd712a6e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 60ced1f60c811f585928f47c6cfd5e695d0c4085
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160011"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457747"
 ---
 # <a name="filestatus-class"></a>Classe file_status
 
@@ -33,7 +33,7 @@ class file_status;
 
 |Construtor|Descrição|
 |-|-|
-|[file_status](#file_status)|Constrói um wrapper para [file_type](../standard-library/filesystem-enumerations.md#file_type) e o arquivo [perms](../standard-library/filesystem-enumerations.md#perms).|
+|[file_status](#file_status)|Constrói um wrapper para [file_type](../standard-library/filesystem-enumerations.md#file_type) e arquivo [perms](../standard-library/filesystem-enumerations.md#perms).|
 
 ### <a name="member-functions"></a>Funções de membro
 
@@ -50,13 +50,13 @@ class file_status;
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** \<filesystem >
+**Cabeçalho:** \<> do sistema de arquivos
 
 **Namespace:** std::experimental::filesystem, std::experimental::filesystem
 
 ## <a name="file_status"></a> file_status::file_status
 
-Constrói um wrapper para [file_type](../standard-library/filesystem-enumerations.md#file_type) e o arquivo [perms](../standard-library/filesystem-enumerations.md#perms).
+Constrói um wrapper para [file_type](../standard-library/filesystem-enumerations.md#file_type) e arquivo [perms](../standard-library/filesystem-enumerations.md#perms).
 
 ```cpp
 explicit file_status(
@@ -72,13 +72,13 @@ file_status(file_status&&) noexcept = default;
 
 ### <a name="parameters"></a>Parâmetros
 
-*ftype*<br/>
+*fType*\
 Especificado `file_type`, o padrão é `file_type::none`.
 
-*mask*<br/>
-Arquivo especificado `perms`, o padrão é `perms::unknown`.
+*mascara*\
+Arquivo `perms`especificado, o padrão é `perms::unknown`.
 
-*file_status*<br/>
+*file_status*\
 O objeto armazenado.
 
 ## <a name="op_as"></a> file_status::operator=
@@ -92,10 +92,10 @@ file_status& operator=(file_status&&) nexcept = default;
 
 ### <a name="parameters"></a>Parâmetros
 
-*file_status*<br/>
+*file_status*\
 O [file_status](../standard-library/file-status-class.md) que está sendo copiado para o `file_status`.
 
-## <a name="type"></a> Tipo
+## <a name="type"></a>Escreva
 
 Obtém ou define o `file_type`.
 
@@ -106,14 +106,14 @@ void type(file_type ftype) noexcept
 
 ### <a name="parameters"></a>Parâmetros
 
-*ftype*<br/>
+*fType*\
 Especificado `file_type`.
 
-## <a name="permissions"></a> Permissões
+## <a name="permissions"></a>permissões
 
 Obtém ou define as permissões de arquivo.
 
-Use o setter para tornar um arquivo `readonly` ou remova o `readonly` atributo.
+Use o setter para criar um arquivo `readonly` ou remover o `readonly` atributo.
 
 ```cpp
 perms permissions() const noexcept
@@ -122,11 +122,11 @@ void permissions(perms mask) noexcept
 
 ### <a name="parameters"></a>Parâmetros
 
-*mask*<br/>
+*mascara*\
 Especificado `perms`.
 
 ## <a name="see-also"></a>Consulte também
 
-[Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Classe path](../standard-library/path-class.md)<br/>
-[\<filesystem>](../standard-library/filesystem.md)<br/>
+[Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)\
+[Classe path](../standard-library/path-class.md)\
+[\<filesystem>](../standard-library/filesystem.md)

@@ -18,12 +18,12 @@ helpviewer_keywords:
 - std::operator&lt;&lt; (thread)
 - std::operator&lt;= (thread)
 - std::operator== (thread)
-ms.openlocfilehash: 5a2fd845598ac9f9c983bf53cbd7665ef66ffb70
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c0593b8016cf45abe64114958ccda84eb3704844
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412040"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458439"
 ---
 # <a name="ltthreadgt-operators"></a>Operadores &lt;thread&gt;
 
@@ -45,10 +45,10 @@ bool operator>= (
 
 ### <a name="parameters"></a>Parâmetros
 
-*Esquerda*<br/>
+*Mantida*\
 O objeto `thread::id` à esquerda.
 
-*Direita*<br/>
+*Certo*\
 O objeto `thread::id` à direita.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -71,10 +71,10 @@ bool operator> (
 
 ### <a name="parameters"></a>Parâmetros
 
-*Esquerda*<br/>
+*Mantida*\
 O objeto `thread::id` à esquerda.
 
-*Direita*<br/>
+*Certo*\
 O objeto `thread::id` à direita.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -97,10 +97,10 @@ bool operator<= (
 
 ### <a name="parameters"></a>Parâmetros
 
-*Esquerda*<br/>
+*Mantida*\
 O objeto `thread::id` à esquerda.
 
-*Direita*<br/>
+*Certo*\
 O objeto `thread::id` à direita.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -123,15 +123,15 @@ bool operator<(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Esquerda*<br/>
+*Mantida*\
 O objeto `thread::id` à esquerda.
 
-*Direita*<br/>
+*Certo*\
 O objeto `thread::id` à direita.
 
 ### <a name="return-value"></a>Valor de retorno
 
-**Verdadeiro** se *esquerda* precede *direita* na ordenação total; caso contrário, **false**.
+**verdadeiro** se a *esquerda* precede *na* ordenação total; caso contrário, **false**.
 
 ### <a name="remarks"></a>Comentários
 
@@ -151,10 +151,10 @@ bool operator!= (
 
 ### <a name="parameters"></a>Parâmetros
 
-*Esquerda*<br/>
+*Mantida*\
 O objeto `thread::id` à esquerda.
 
-*Direita*<br/>
+*Certo*\
 O objeto `thread::id` à direita.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -177,15 +177,15 @@ bool operator== (
 
 ### <a name="parameters"></a>Parâmetros
 
-*Esquerda*<br/>
+*Mantida*\
 O objeto `thread::id` à esquerda.
 
-*Direita*<br/>
+*Certo*\
 O objeto `thread::id` à direita.
 
 ### <a name="return-value"></a>Valor de retorno
 
-**Verdadeiro** se os dois objetos representarem o mesmo thread de execução ou se nenhum dos objetos representar um thread de execução; caso contrário, **falso**.
+**true** se os dois objetos representarem o mesmo thread de execução ou se nenhum objeto representar um thread de execução; caso contrário, **false**.
 
 ### <a name="remarks"></a>Comentários
 
@@ -203,22 +203,22 @@ basic_ostream<Elem, Tr>& operator<<(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Ostr*<br/>
+*Ostr*\
 Um objeto [basic_ostream](../standard-library/basic-ostream-class.md).
 
-*ID*<br/>
+*Sessão*\
 Um objeto `thread::id`.
 
 ### <a name="return-value"></a>Valor de retorno
 
-*Ostr*.
+*OSTR*.
 
 ### <a name="remarks"></a>Comentários
 
-Essa função insere *identificação* em *Ostr*.
+Essa função insere a *ID* em *OSTR*.
 
 Se dois objetos `thread::id` forem comparados como iguais, as representações de texto inseridas desses objetos serão as mesmas.
 
 ## <a name="see-also"></a>Consulte também
 
-[\<thread>](../standard-library/thread.md)<br/>
+[\<thread>](../standard-library/thread.md)

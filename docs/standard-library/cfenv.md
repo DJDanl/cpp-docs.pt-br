@@ -2,12 +2,12 @@
 title: '&lt;cfenv&gt;'
 ms.date: 11/04/2016
 ms.assetid: 6a17ad51-2182-4e91-8108-65997382acd3
-ms.openlocfilehash: dcaf49d19009ac831776134cf3d5b6cbce7e14d4
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: b1ae987d49c95b781cb255a4d7e3a9a04ab6043a
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244966"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449867"
 ---
 # <a name="ltcfenvgt"></a>&lt;cfenv&gt;
 
@@ -62,6 +62,6 @@ int feupdateenv(const fenv_t* penv);
 
 ## <a name="see-also"></a>Consulte também
 
-[Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Visão geral da biblioteca padrão C++](../standard-library/cpp-standard-library-overview.md)<br/>
-[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)\
+[Visão geral da biblioteca padrão C++](../standard-library/cpp-standard-library-overview.md)\
+[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_literal_type
 ms.assetid: a03a4ebb-ee66-48d6-91bb-41cf72b2401f
-ms.openlocfilehash: 804ef0462308b967fc0c4c95d8dfa96476475aab
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 450c32d050a18f64e71992bd7a30412ebafe93de
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62336461"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456222"
 ---
 # <a name="isliteraltype-class"></a>Classe is_literal_type
 
@@ -26,12 +26,12 @@ struct is_literal_type;
 
 ### <a name="parameters"></a>Parâmetros
 
-*T*<br/>
+*T*\
 O tipo a ser consultado.
 
 ## <a name="remarks"></a>Comentários
 
-Uma instância do predicado de tipo será verdadeira se o tipo *T* é um *tipo literal*, caso contrário, será falsa. É um tipo literal **void**, um tipo escalar, um tipo de referência, uma matriz de tipo literal ou um tipo de classe literal. Um tipo de classe literal é um tipo de classe que tem um destruidor trivial, é um tipo agregado ou tem pelo menos construtor `constexpr` que não é de movimentação e não é de cópia, e todas as suas classes base e membros de dados não estáticos são tipos literais não voláteis. Embora o tipo de um literal sempre seja um tipo literal, o conceito de um tipo literal inclui tudo que o compilador puder avaliar como `constexpr` em tempo de compilação.
+Uma instância do predicado de tipo se manterá true se o tipo *T* for um *tipo literal*, caso contrário, será false. Um tipo literal é **void**, um tipo escalar, um tipo de referência, uma matriz de tipo literal ou um tipo de classe literal. Um tipo de classe literal é um tipo de classe que tem um destruidor trivial, é um tipo agregado ou tem pelo menos construtor `constexpr` que não é de movimentação e não é de cópia, e todas as suas classes base e membros de dados não estáticos são tipos literais não voláteis. Embora o tipo de um literal sempre seja um tipo literal, o conceito de um tipo literal inclui tudo que o compilador puder avaliar como `constexpr` em tempo de compilação.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -41,4 +41,4 @@ Uma instância do predicado de tipo será verdadeira se o tipo *T* é um *tipo l
 
 ## <a name="see-also"></a>Consulte também
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

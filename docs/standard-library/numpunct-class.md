@@ -30,12 +30,12 @@ helpviewer_keywords:
 - std::numpunct [C++], thousands_sep
 - std::numpunct [C++], truename
 ms.assetid: 73fb93cc-ac11-4c98-987c-bfa6267df596
-ms.openlocfilehash: 6084392c5cae151f6c7111fbe9fe7a45e103b74d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c23f23172894ce0b5adcbff1d2db58c78caf7a03
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62371471"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454194"
 ---
 # <a name="numpunct-class"></a>Classe numpunct
 
@@ -50,7 +50,7 @@ class numpunct : public locale::facet;
 
 ### <a name="parameters"></a>Parâmetros
 
-*CharType*<br/>
+*CharType*\
 O tipo usado em um programa para codificar caracteres em uma localidade.
 
 ## <a name="remarks"></a>Comentários
@@ -76,7 +76,7 @@ Como qualquer faceta de localidade, a ID de objeto estático tem um valor armaze
 |-|-|
 |[decimal_point](#decimal_point)|Retorna um elemento específico de localidade a ser usado como uma vírgula decimal.|
 |[do_decimal_point](#do_decimal_point)|Uma função membro virtual protegida que é chamada para retornar um elemento específico de localidade a ser usado como uma vírgula decimal.|
-|[do_falsename](#do_falsename)|Uma função de membro virtual que é chamada para retornar uma cadeia de caracteres a ser usado como uma representação de texto do valor protegida **falsos**.|
+|[do_falsename](#do_falsename)|Uma função de membro virtual protegida que é chamada para retornar uma cadeia de caracteres a ser usada como uma representação de texto do valor **false**.|
 |[do_grouping](#do_grouping)|Uma função membro virtual protegida que é chamada para retornar uma regra específica de localidade para determinar como os dígitos são agrupados à esquerda de qualquer vírgula decimal.|
 |[do_thousands_sep](#do_thousands_sep)|Uma função membro virtual protegida que é chamada para retornar um elemento específico de localidade a ser usado como um separador de milhares.|
 |[do_truename](#do_truename)|Uma função membro virtual protegida que é chamada para retornar uma cadeia de caracteres a ser usada como uma representação de texto do valor **true**.|
@@ -200,7 +200,7 @@ A função membro virtual protegida retorna uma regra específica de localidade 
 
 ### <a name="example"></a>Exemplo
 
-Veja o exemplo de [agrupando](#grouping), em que a função membro virtual é chamada `grouping`.
+Consulte o exemplo de [agrupamento](#grouping), onde a função membro virtual é chamada por `grouping`.
 
 ## <a name="do_thousands_sep"></a>  numpunct::do_thousands_sep
 
@@ -216,7 +216,7 @@ Retorna um elemento específico de localidade a ser usado como um separador de m
 
 ### <a name="remarks"></a>Comentários
 
-A função de membro virtual protegida retorna um elemento específico de localidade do tipo `CharType` a ser usado como separador de grupo à esquerda da vírgula decimal.
+A função de membro virtual protegido retorna um elemento específico de localidade do `CharType` tipo a ser usado como um separador de grupo à esquerda de qualquer ponto decimal.
 
 ### <a name="example"></a>Exemplo
 
@@ -250,7 +250,7 @@ string_type falsename() const;
 
 ### <a name="return-value"></a>Valor de retorno
 
-Uma cadeia de caracteres que contém uma sequência de `CharType`s para usar como uma representação de texto do valor **falso**.
+Uma cadeia de caracteres que contém `CharType`uma sequência de s a ser usada como uma representação de texto do valor **false**.
 
 ### <a name="remarks"></a>Comentários
 
@@ -345,12 +345,12 @@ explicit numpunct(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Parâmetros
 
-*_Refs*<br/>
+*_Refs*\
 Valor inteiro usado para especificar o tipo de gerenciamento de memória do objeto.
 
 ### <a name="remarks"></a>Comentários
 
-Os valores possíveis para o *_Refs* parâmetro e sua significância são:
+Os valores possíveis para o parâmetro *_Refs* e seu significado são:
 
 - 0: O tempo de vida do objeto é gerenciado pelas localidades que o contêm.
 
@@ -360,7 +360,7 @@ Os valores possíveis para o *_Refs* parâmetro e sua significância são:
 
 Nenhum exemplo direto é possível, pois o destruidor está protegido.
 
-O construtor inicializa seu objeto base com **localidade::**[faceta](../standard-library/locale-class.md#facet_class)(`_Refs`).
+O construtor inicializa seu objeto base com **locale::** [faceta](../standard-library/locale-class.md#facet_class)(`_Refs`).
 
 ## <a name="string_type"></a>  numpunct::string_type
 
@@ -468,6 +468,6 @@ French_France.1252 falsename false
 
 ## <a name="see-also"></a>Consulte também
 
-[\<locale>](../standard-library/locale.md)<br/>
-[Classe facet](../standard-library/locale-class.md#facet_class)<br/>
-[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[\<locale>](../standard-library/locale.md)\
+[Classe facet](../standard-library/locale-class.md#facet_class)\
+[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

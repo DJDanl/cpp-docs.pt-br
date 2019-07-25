@@ -5,12 +5,12 @@ f1_keywords:
 - mutex/std::lock_guard
 - mutex/std::lock_guard::lock_guard
 ms.assetid: 57121f0d-9c50-481c-b971-54e64df864e0
-ms.openlocfilehash: 45a01c5fdd431bcfad1eeb5ab0531c11c89e9767
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f59860c3aaa9ef7458fe5e30b85b119dede52c72
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413132"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68453850"
 ---
 # <a name="lockguard-class"></a>Classe lock_guard
 
@@ -44,7 +44,7 @@ O argumento de modelo `Mutex` deve nomear um *tipo mutex*.
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** \<mutex >
+**Cabeçalho:** \<> mutex
 
 **Namespace:** std
 
@@ -60,14 +60,14 @@ lock_guard(mutex_type& Mtx, adopt_lock_t);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Mtx*<br/>
+*MTX*\
 Um objeto do *tipo mutex*.
 
 ### <a name="remarks"></a>Comentários
 
-O primeiro construtor constrói um objeto do tipo `lock_guard` e bloqueios *Mtx*. Se *Mtx* não é um mutex recursivo, ele deve ser desbloqueado quando esse construtor é chamado.
+O primeiro construtor constrói um objeto do tipo `lock_guard` e bloqueia *MTX*. Se *MTX* não for um mutex recursivo, ele deverá ser desbloqueado quando esse construtor for chamado.
 
-O segundo construtor não bloqueia *Mtx*. *Mtx* deve ser bloqueado quando esse construtor é chamado. O construtor não lança exceções.
+O segundo construtor não bloqueia *MTX*. *MTX* deve ser bloqueado quando este construtor é chamado. O construtor não lança exceções.
 
 ## <a name="dtorlock_guard_destructor"></a>  Destruidor lock_guard::~lock_guard
 
@@ -83,5 +83,5 @@ Se o `mutex` não existir quando o destruidor for executado, o comportamento ser
 
 ## <a name="see-also"></a>Consulte também
 
-[Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<mutex>](../standard-library/mutex.md)<br/>
+[Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)\
+[\<mutex>](../standard-library/mutex.md)

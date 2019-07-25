@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - complex<long double> function
 ms.assetid: 37591991-b385-46e9-b727-d534dbc10432
-ms.openlocfilehash: 19d4569523879911209bf0c05e762eba2c9852a1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 280fb4c15219b11d2325ff37a296e133810bf2b5
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389158"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449486"
 ---
 # <a name="complexltlong-doublegt"></a>complex&lt;long double&gt;
 
-Essa classe de modelo explicitamente especializada descreve um objeto que armazena um par ordenado de objetos, ambos do tipo **longo duplo**, o primeiro representando a parte real de um número complexo e o segundo representando a parte imaginária.
+Essa classe de modelo explicitamente especializada descreve um objeto que armazena um par ordenado de objetos, ambos os dois tipos duplos, o primeiro que representa a parte real de um número complexo e o segundo que representa a parte imaginária.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -38,26 +38,26 @@ complex(
 
 ### <a name="parameters"></a>Parâmetros
 
-*_RealVal*<br/>
+*_RealVal*\
 O valor do tipo **long double** da parte real do número complexo que está sendo construído.
 
-*_ImagVal*<br/>
-O valor do tipo **longo duplo** da parte imaginária do número complexo que está sendo construído.
+*_ImagVal*\
+O valor do tipo **Long double** para a parte imaginário do número complexo que está sendo construído.
 
-*complexNum*<br/>
-O número complexo do tipo **duplas** ou do tipo **float** cujas partes reais e imaginárias são usados para inicializar um número complexo do tipo **longo duplo** que está sendo construído.
+*complexNum*\
+O número complexo do tipo **Double** ou do tipo **float** cujas partes reais e imaginários são usadas para inicializar um número complexo de tipo **Long duplo** que está sendo construído.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Um número complexo do tipo **longo duplo**.
+Um número complexo de tipo **longo Duplo**.
 
 ## <a name="remarks"></a>Comentários
 
-A especialização explícita da classe de modelo `complex` para uma classe complexa do tipo **longo duplo** difere somente nos construtores ele define a classe de modelo. A conversão de **longo duplo** à **float** pode ser implícita, mas a conversão de **double** para **longo duplo** é necessária para ser **explícita**. O uso de **explícito** exclui a iniciação com conversão de tipo usando a sintaxe de atribuição.
+A especialização explícita da classe `complex` template para uma classe complexa do tipo **Long** difere da classe template somente nos construtores que ele define. A conversão de **longa dupla** para **flutuante** pode ser implícita, mas a conversão de **duplo** para **longo Duplo** é necessária para ser **explícita**. O uso de **explícito** exclui a iniciação com conversão de tipo usando a sintaxe de atribuição.
 
-Para obter mais informações sobre a classe de modelo `complex` e seus membros, consulte [classe complexa](../standard-library/complex-class.md).
+Para obter mais informações sobre a classe `complex` de modelo e seus membros, consulte [classe complexa](../standard-library/complex-class.md).
 
-**Específico da Microsoft**: O **longo duplo** e **duplo** tipos têm a mesma representação, mas são tipos distintos. Para obter mais informações, consulte [tipos fundamentais](../cpp/fundamental-types-cpp.md).
+**Específico da Microsoft**: Os tipos **longos duplos** e **duplos** têm a mesma representação, mas são tipos distintos. Para obter mais informações, consulte [tipos fundamentais](../cpp/fundamental-types-cpp.md).
 
 ## <a name="example"></a>Exemplo
 
@@ -123,5 +123,5 @@ arg( c3 ) = 0.927295 radians, which is 53.1301 degrees.
 
 ## <a name="see-also"></a>Consulte também
 
-[Classe complex](../standard-library/complex-class.md)<br/>
-[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Classe complex](../standard-library/complex-class.md)\
+[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

@@ -86,12 +86,12 @@ helpviewer_keywords:
 - std::multimap [C++], upper_bound
 - std::multimap [C++], value_comp
 ms.assetid: 8796ae05-37c4-475a-9e61-75fde9d4a463
-ms.openlocfilehash: caffa84052f774803b92730f7906bf53cb3c824a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e78997745ca1fae740b1ee2de2b29f1fa22a954b
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348361"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448449"
 ---
 # <a name="multimap-class"></a>Classe multimap
 
@@ -109,18 +109,18 @@ class multimap;
 
 ### <a name="parameters"></a>Parâmetros
 
-*Chave*<br/>
+*Chaves*\
 O tipo de dados da chave a ser armazenado no multimapa.
 
-*Tipo*<br/>
+*Escreva*\
 O tipo de dados do elemento a ser armazenado no multimapa.
 
-*Características*<br/>
+*Características*\
 O tipo que fornece um objeto de função que pode comparar dois valores de elemento como chaves de classificação para determinar sua ordem relativa no multimapa. O predicado binário `less<Key>` é o valor padrão.
 
 No C++ 14, você pode habilitar a pesquisa heterogênea ao especificar o predicado `std::less<>` ou o `std::greater<>`, que não tem nenhum parâmetro de tipo. Para obter mais informações, consulte [Pesquisa heterogênea em contêineres associativos](../standard-library/stl-containers.md#heterogeneous-lookup-in-associative-containers-c14)
 
-*Allocator*<br/>
+*Alocador*\
 O tipo que representa o objeto de alocador armazenado que encapsula detalhes sobre a alocação e a desalocação do mapa da memória. Esse argumento é opcional e o valor padrão é `allocator<pair <const Key, Type> >`.
 
 ## <a name="remarks"></a>Comentários
@@ -162,19 +162,19 @@ No C++ 14, você pode habilitar a pesquisa heterogênea ao especificar o predica
 |Nome de tipo|Descrição|
 |-|-|
 |[allocator_type](#allocator_type)|Um tipo que representa a classe `allocator` para o objeto `multimap`.|
-|[const_iterator](#const_iterator)|Um tipo que fornece um iterador bidirecional que pode ler um **const** elemento o `multimap`.|
-|[const_pointer](#const_pointer)|Um tipo que fornece um ponteiro para um **const** elemento em um `multimap`.|
-|[const_reference](#const_reference)|Um tipo que fornece uma referência a um **const** elemento armazenado em um `multimap` para leitura e execução **const** operações.|
-|[const_reverse_iterator](#const_reverse_iterator)|Um tipo que fornece um iterador bidirecional que pode ler qualquer **const** elemento o `multimap`.|
+|[const_iterator](#const_iterator)|Um tipo que fornece um iterador bidirecional que pode ler um elemento **const** no `multimap`.|
+|[const_pointer](#const_pointer)|Um tipo que fornece um ponteiro para um elemento **const** em um `multimap`.|
+|[const_reference](#const_reference)|Um tipo que fornece uma referência a um elemento **const** armazenado em um `multimap` para leitura e execução de operações **const** .|
+|[const_reverse_iterator](#const_reverse_iterator)|Um tipo que fornece um iterador bidirecional que pode ler qualquer elemento **const** no `multimap`.|
 |[difference_type](#difference_type)|Um tipo de inteiro com sinal que pode ser usado para representar o número de elementos de um `multimap` em um intervalo entre os elementos apontado pelos iteradores.|
 |[iterator](#iterator)|Um tipo que fornece a diferença entre dois iteradores que se referem a elementos no mesmo `multimap`.|
 |[key_compare](#key_compare)|Um tipo que fornece um objeto de função que pode comparar duas chaves de classificação para determinar a ordem relativa de dois elementos no `multimap`.|
 |[key_type](#key_type)|Um tipo que descreve o objeto de chave de classificação que constitui cada elemento do `multimap`.|
 |[mapped_type](#mapped_type)|Um tipo que representa o tipo de dados armazenado em um `multimap`.|
-|[pointer](#pointer)|Um tipo que fornece um ponteiro para um **const** elemento em um `multimap`.|
+|[pointer](#pointer)|Um tipo que fornece um ponteiro para um elemento **const** em um `multimap`.|
 |[reference](#reference)|Um tipo que fornece uma referência a um elemento armazenado em um `multimap`.|
 |[reverse_iterator](#reverse_iterator)|Um tipo que fornece um iterador bidirecional que pode ler ou modificar um elemento em um `multimap` invertido.|
-|[size_type](#size_type)|Um tipo inteiro sem sinal que fornece um ponteiro para um **const** elemento em um `multimap`.|
+|[size_type](#size_type)|Um tipo inteiro sem sinal que fornece um ponteiro para um elemento **const** em um `multimap`.|
 |[value_type](#value_type)|Um tipo que fornece um objeto de função que pode comparar dois elementos como chaves de classificação para determinar sua ordem relativa no `multimap`.|
 
 ### <a name="member-functions"></a>Funções de membro
@@ -290,7 +290,7 @@ First element of m1 is now 1
 
 ## <a name="cbegin"></a>  multimap::cbegin
 
-Retorna um **const** iterador que trata o primeiro elemento no intervalo.
+Retorna um iterador **const** que aborda o primeiro elemento no intervalo.
 
 ```cpp
 const_iterator cbegin() const;
@@ -298,13 +298,13 @@ const_iterator cbegin() const;
 
 ### <a name="return-value"></a>Valor de retorno
 
-Um **const** iterador de acesso bidirecional que aponta para o primeiro elemento do intervalo ou o local logo após o final de um intervalo vazio (para um intervalo vazio, `cbegin() == cend()`).
+Um iterador de acesso bidirecional **const** que aponta para o primeiro elemento do intervalo ou o local logo após o final de um intervalo vazio (para um intervalo vazio, `cbegin() == cend()`).
 
 ### <a name="remarks"></a>Comentários
 
 Com o valor de retorno `cbegin`, os elementos do intervalo não podem ser modificados.
 
-Você pode usar essa função membro no lugar da função membro `begin()`, de modo a garantir que o valor de retorno seja `const_iterator`. Normalmente, é usada juntamente com a palavra-chave de dedução de tipo [auto](../cpp/auto-cpp.md), conforme mostrado no exemplo a seguir. No exemplo, considere `Container` seja um modificáveis (não - **const**) o contêiner de qualquer tipo que dá suporte à `begin()` e `cbegin()`.
+Você pode usar essa função membro no lugar da função membro `begin()`, de modo a garantir que o valor de retorno seja `const_iterator`. Normalmente, é usada juntamente com a palavra-chave de dedução de tipo [auto](../cpp/auto-cpp.md), conforme mostrado no exemplo a seguir. `Container` No exemplo, considere ser um contêiner modificável (não **const**) de qualquer tipo que dê suporte `begin()` a e. `cbegin()`
 
 ```cpp
 auto i1 = Container.begin();
@@ -316,7 +316,7 @@ auto i2 = Container.cbegin();
 
 ## <a name="cend"></a>  multimap::cend
 
-Retorna um **const** iterador que trata o local logo após o último elemento em um intervalo.
+Retorna um iterador **const** que aborda o local logo após o último elemento em um intervalo.
 
 ```cpp
 const_iterator cend() const;
@@ -324,13 +324,13 @@ const_iterator cend() const;
 
 ### <a name="return-value"></a>Valor de retorno
 
-Um **const** iterador de acesso bidirecional que aponta para além do final do intervalo.
+Um iterador de acesso bidirecional **const** que aponta apenas além do fim do intervalo.
 
 ### <a name="remarks"></a>Comentários
 
 `cend` é usado para testar se um iterador passou do fim de seu intervalo.
 
-Você pode usar essa função membro no lugar da função membro `end()`, de modo a garantir que o valor de retorno seja `const_iterator`. Normalmente, é usada juntamente com a palavra-chave de dedução de tipo [auto](../cpp/auto-cpp.md), conforme mostrado no exemplo a seguir. No exemplo, considere `Container` seja um modificáveis (não - **const**) o contêiner de qualquer tipo que dá suporte à `end()` e `cend()`.
+Você pode usar essa função membro no lugar da função membro `end()`, de modo a garantir que o valor de retorno seja `const_iterator`. Normalmente, é usada juntamente com a palavra-chave de dedução de tipo [auto](../cpp/auto-cpp.md), conforme mostrado no exemplo a seguir. `Container` No exemplo, considere ser um contêiner modificável (não **const**) de qualquer tipo que dê suporte `end()` a e. `cend()`
 
 ```cpp
 auto i1 = Container.end();
@@ -398,11 +398,11 @@ typedef implementation-defined const_iterator;
 
 Um tipo de `const_iterator` não pode ser usado para modificar o valor de um elemento.
 
-O `const_iterator` definido pelo multimap aponta para objetos do [value_type](#value_type), que são do tipo `pair<const Key, Type>`. O valor da chave está disponível por meio do primeiro par de membros e o valor do elemento mapeado está disponível por meio do segundo membro do par.
+O `const_iterator` definido por Multimap aponta para objetos de [value_type](#value_type), que são do tipo `pair<const Key, Type>`. O valor da chave está disponível por meio do primeiro par de membros e o valor do elemento mapeado está disponível por meio do segundo membro do par.
 
-A referência a um `const_iterator` *cIter* que aponta para um elemento em um multimap, use o **->** operador.
+Para desreferenciar `const_iterator` um *citador* que aponta para um elemento em um Multimap, **->** use o operador.
 
-Para acessar o valor da chave do elemento, use `cIter->first`, que é equivalente a `(*cIter).first`. Para acessar o valor dos dados mapeados para o elemento, use `cIter->second`, que é equivalente a `(*cIter).second`.
+Para acessar o valor da chave do elemento, use `cIter->first`, que é equivalente a. `(*cIter).first` Para acessar o valor da Datum mapeada para o elemento, use `cIter->second`, que é equivalente a. `(*cIter).second`
 
 ### <a name="example"></a>Exemplo
 
@@ -484,11 +484,11 @@ typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
 
 Um tipo `const_reverse_iterator` não pode modificar o valor de um elemento e é usado para iterar no multimap em ordem inversa.
 
-O `const_reverse_iterator` definido pelo multimap aponta para objetos do [value_type](#value_type), que são do tipo `pair<const Key, Type>`. O valor da chave está disponível por meio do primeiro par de membros e o valor do elemento mapeado está disponível por meio do segundo membro do par.
+O `const_reverse_iterator` definido por Multimap aponta para objetos de [value_type](#value_type), que são do tipo `pair<const Key, Type>`. O valor da chave está disponível por meio do primeiro par de membros e o valor do elemento mapeado está disponível por meio do segundo membro do par.
 
-A referência a um `const_reverse_iterator` *crIter* que aponta para um elemento em um multimap, use o **->** operador.
+Para desreferenciar `const_reverse_iterator` um *crIter* apontando para um elemento em um Multimap, use **->** o operador.
 
-Para acessar o valor da chave do elemento, use `crIter->first`, que é equivalente a `(*crIter).first`. Para acessar o valor dos dados mapeados para o elemento, use `crIter->second`, que é equivalente a `(*crIter).first`.
+Para acessar o valor da chave do elemento, use `crIter->first`, que é equivalente a. `(*crIter).first` Para acessar o valor da Datum mapeada para o elemento, use `crIter->second`, que é equivalente a. `(*crIter).first`
 
 ### <a name="example"></a>Exemplo
 
@@ -504,7 +504,7 @@ size_type count(const Key& key) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*key*<br/>
+*chaves*\
 A chave dos elementos a serem correspondidos do multimap.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -515,9 +515,9 @@ O número de elementos cujas chaves de classificação correspondem à chave de 
 
 A função membro retorna o número de elementos no intervalo
 
-\[ lower_bound(*key*), upper_bound(*key*) )
+\[lower_bound (*chave*), upper_bound (*chave*))
 
-que têm um valor de chave *chave*.
+que têm uma *chave*de valor de chave.
 
 ### <a name="example"></a>Exemplo
 
@@ -676,7 +676,7 @@ typedef typename allocator_type::difference_type difference_type;
 
 ### <a name="remarks"></a>Comentários
 
-`difference_type` é o tipo retornado ao subtrair ou incrementar por meio de iteradores do contêiner. O `difference_type` normalmente é usado para representar o número de elementos no intervalo [*primeiro*, *último*) entre os iteradores `first` e `last`, inclui o elemento apontado por `first` e o intervalo de elementos até, mas sem incluir, o elemento apontado por `last`.
+`difference_type` é o tipo retornado ao subtrair ou incrementar por meio de iteradores do contêiner. Normalmente `difference_type` , o é usado para representar o número de elementos no intervalo [*primeiro*, *último*) entre os iteradores `first` e `last`, incluindo o elemento apontado por `first` e o intervalo de elementos até, mas não incluindo, o elemento apontado por `last`.
 
 Observe que, embora `difference_type` esteja disponível para todos os iteradores que atendem aos requisitos de um iterador de entrada, que inclui a classe de iteradores bidirecionais com suporte pelos contêineres reversíveis, como conjunto, a subtração entre iteradores só tem suporte pelos iteradores de acesso aleatório fornecidos por um contêiner de acesso aleatório, como vetor.
 
@@ -808,7 +808,7 @@ iterator emplace_hint(
 |Parâmetro|Descrição|
 |-|-|
 |*args*|Os argumentos encaminhados para construir um elemento a ser inserido no multimap.|
-|*where*|O local a partir do qual se começa a procurar pelo ponto de inserção correto. (Se esse ponto preceder imediatamente *onde*, inserção poderá ocorrer em tempo constante amortizado, em vez de no tempo logarítmico.)|
+|*where*|O local a partir do qual se começa a procurar pelo ponto de inserção correto. (Se esse ponto precede imediatamente *onde*, a inserção pode ocorrer no tempo constante amortizado em vez da hora logarítmica.)|
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -903,7 +903,7 @@ pair <iterator, iterator> equal_range (const Key& key);
 
 ### <a name="parameters"></a>Parâmetros
 
-*key*<br/>
+*chaves*\
 A chave do argumento a ser comparada com a chave de classificação de um elemento do multimap que está sendo pesquisado.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -990,16 +990,16 @@ size_type erase(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Where*<br/>
+*Posição*\
 A posição do elemento a ser removido.
 
-*First*<br/>
+*Primeiro*\
 A posição do primeiro elemento a ser removido.
 
-*Last*<br/>
+*Última*\
 A posição logo após o último elemento a ser removido.
 
-*Chave*<br/>
+*Chaves*\
 A chave de elementos a serem removidos.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1024,7 +1024,7 @@ const_iterator find(const Key& key) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*key*<br/>
+*chaves*\
 O valor da chave a ser comparado pela chave de classificação de um elemento do multimap que está sendo pesquisado.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1035,7 +1035,7 @@ Um iterador que se refere ao local de um elemento com uma chave especificada ou 
 
 A função de membro retorna um iterador que se refere a um elemento no multimap, cuja chave é equivalente à chave de argumento em um predicado binário que induz uma ordenação com base em uma relação de comparação menor.
 
-Se o valor retornado de `find` for atribuído a um `const_iterator`, o objeto multimap não poderá ser modificado. Se o valor de retorno `find` for atribuído a um `iterator`, o objeto multimap poderá ser modificado.
+Se o valor retornado de `find` for atribuído a um `const_iterator`, o objeto multimap não poderá ser modificado. Se o valor de retorno `find` de for atribuído a `iterator`um, o objeto Multimap poderá ser modificado.
 
 ### <a name="example"></a>Exemplo
 
@@ -1214,10 +1214,10 @@ IList);
 |Parâmetro|Descrição|
 |-|-|
 |*Val*|O valor de um elemento a ser inserido no multimapa.|
-|*Where*|O local a partir do qual se começa a procurar pelo ponto de inserção correto. (Se esse ponto preceder imediatamente *onde*, inserção poderá ocorrer em tempo constante amortizado, em vez de no tempo logarítmico.)|
-|*ValTy*|Parâmetro de modelo que especifica o tipo de argumento que o mapa pode usar para construir um elemento de [value_type](../standard-library/map-class.md#value_type)e perfect-forwards *Val* como um argumento.|
-|*First*|A posição do primeiro elemento a ser copiado.|
-|*Last*|A posição imediatamente após o último elemento a ser copiado.|
+|*Where*|O local a partir do qual se começa a procurar pelo ponto de inserção correto. (Se esse ponto precede imediatamente *onde*, a inserção pode ocorrer no tempo constante amortizado em vez da hora logarítmica.)|
+|*ValTy*|Parâmetro de modelo que especifica o tipo de argumento que o mapa pode usar para construir um elemento de [value_type](../standard-library/map-class.md#value_type)e o *Val* de encaminhamentos perfeitos como um argumento.|
+|*Primeiro*|A posição do primeiro elemento a ser copiado.|
+|*Última*|A posição imediatamente após o último elemento a ser copiado.|
 |*InputIterator*|Argumento da função de modelo que atende aos requisitos de um [iterador de entrada](../standard-library/input-iterator-tag-struct.md) que aponta para elementos de um tipo que pode ser usado para construir objetos [value_type](../standard-library/map-class.md#value_type).|
 |*IList*|O [initializer_list](../standard-library/initializer-list.md) do qual os elementos serão copiados.|
 
@@ -1235,7 +1235,7 @@ Durante a inserção de apenas um elemento, se uma exceção for lançada, o est
 
 O [value_type](../standard-library/map-class.md#value_type) de um contêiner é um typedef que pertence ao contêiner e para o mapa, `multimap<K, V>::value_type` é `pair<const K, V>`. O valor de um elemento é um par ordenado no qual o primeiro componente é igual ao valor chave e o segundo componente é igual ao valor dos dados do elemento.
 
-A função de membro de intervalo (5) insere a sequência de valores de elemento em um multimapa que corresponde a cada elemento tratado por um iterador no intervalo `[First, Last)`; portanto, *última* não é inserido. A função de membro do contêiner `end()` refere-se à posição logo após o último elemento no contêiner, por exemplo, a instrução `m.insert(v.begin(), v.end());` insere todos os elementos de `v` em `m`.
+A função de membro Range (5) insere a sequência de valores de elemento em um Multimap que corresponde a cada elemento endereçado por um iterador no intervalo `[First, Last)`; portanto, *Last* não é inserido. A função de membro do contêiner `end()` refere-se à posição logo após o último elemento no contêiner, por exemplo, a instrução `m.insert(v.begin(), v.end());` insere todos os elementos de `v` em `m`.
 
 A função membro da lista do inicializador (6) usa um [initializer_list](../standard-library/initializer-list.md) para copiar elementos para um mapa.
 
@@ -1341,11 +1341,11 @@ typedef implementation-defined iterator;
 
 ### <a name="remarks"></a>Comentários
 
-O `iterator` definido pelo multimap aponta para objetos do [value_type](#value_type), que são do tipo `pair<const Key, Type>`. O valor da chave está disponível por meio do primeiro par de membros e o valor do elemento mapeado está disponível por meio do segundo membro do par.
+O `iterator` definido por Multimap aponta para objetos de [value_type](#value_type), que são do tipo `pair<const Key, Type>`. O valor da chave está disponível por meio do primeiro par de membros e o valor do elemento mapeado está disponível por meio do segundo membro do par.
 
-A referência a um `iterator` *Iter* que aponta para um elemento em um multimap, use o **->** operador.
+Para desreferenciar `iterator` um *ITER* que aponta para um elemento em um Multimap, **->** use o operador.
 
-Para acessar o valor da chave do elemento, use `Iter->first`, que é equivalente a `(*Iter).first`. Para acessar o valor dos dados mapeados para o elemento, use `Iter->second`, que é equivalente a `(*Iter).second`.
+Para acessar o valor da chave do elemento, use `Iter->first`, que é equivalente a. `(*Iter).first` Para acessar o valor da Datum mapeada para o elemento, use `Iter->second`, que é equivalente a. `(*Iter).second`
 
 Um tipo `iterator` pode ser usado para modificar o valor de um elemento.
 
@@ -1472,7 +1472,7 @@ const_iterator lower_bound(const Key& key) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*key*<br/>
+*chaves*\
 A chave do argumento a ser comparada com a chave de classificação de um elemento do multimap que está sendo pesquisado.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1653,11 +1653,11 @@ multimap(
 
 |Parâmetro|Descrição|
 |-|-|
-|*Al*|A classe do alocador de armazenamento a ser usado neste objeto multimap, cujo padrão é Allocator.|
-|*Comp*|A função de comparação do tipo `constTraits` usada para ordenar os elementos no mapa, cujo padrão é `Traits`.|
+|*&*|A classe do alocador de armazenamento a ser usado neste objeto multimap, cujo padrão é Allocator.|
+|*Às*|A função de comparação do tipo `constTraits` usada para ordenar os elementos no mapa, cujo padrão é `Traits`.|
 |*Direita*|O mapa do qual o conjunto criado é uma cópia.|
-|*First*|A posição do primeiro elemento no intervalo de elementos a serem copiados.|
-|*Last*|A posição do primeiro elemento além do intervalo de elementos a serem copiados.|
+|*Primeiro*|A posição do primeiro elemento no intervalo de elementos a serem copiados.|
+|*Última*|A posição do primeiro elemento além do intervalo de elementos a serem copiados.|
 |*IList*|O initializer_list do qual copiar os elementos.|
 
 ### <a name="remarks"></a>Comentários
@@ -1668,11 +1668,11 @@ Todos os construtores inicializam seu multimap.
 
 Todos os construtores armazenam um objeto de função do tipo `Traits`, que é usado para estabelecer uma ordem entre as chaves do multimap e que posteriormente pode ser retornado ao chamar [key_comp](#key_comp).
 
-Os primeiros três construtores especificam um mapa inicial vazio, o segundo Especifica o tipo de função de comparação (*Comp*) para ser utilizado para estabelecer explicitamente a ordem dos elementos e o terceiro Especifica o tipo de alocador (*Al*) a ser usado. A palavra-chave **explícita** suprime determinados tipos de conversão de tipo automática.
+Os três primeiros construtores especificam um Multimap inicial vazio, o segundo que especifica o tipo de função de comparação (*comp*) a ser usado no estabelecimento da ordem dos elementos e o terceiro que especifica explicitamente o tipo de alocador (*Al*) a ser utiliza. A palavra-chave **Explicit** suprime determinados tipos de conversão automática de tipo.
 
-O quarto construtor Especifica uma cópia do multimap *direita*.
+O quarto construtor Especifica uma cópia do *direito*Multimap.
 
-O quinto construtor Especifica uma cópia do multimap ao mover *direita*.
+O quinto Construtor especifica uma cópia do Multimap movendo para a *direita*.
 
 O sexto, sétimo e oitavo construtores usam um initializer_list do qual os membros são copiados.
 
@@ -1804,7 +1804,7 @@ multimap& operator=(multimap&& right);
 
 ### <a name="remarks"></a>Comentários
 
-Depois de apagar os elementos existentes em uma `multimap`, `operator=` copiará ou moverá o conteúdo do *à direita* para o `multimap`.
+Depois de apagar todos os elementos existentes em `multimap`um `operator=` , o copia ou move o conteúdo do *lado* para `multimap`o.
 
 ### <a name="example"></a>Exemplo
 
@@ -2090,11 +2090,11 @@ typedef std::reverse_iterator<iterator> reverse_iterator;
 
 Um tipo `reverse_iterator` é usado para iterar pelo multimap em ordem inversa.
 
-O `reverse_iterator` definido pelo multimap aponta para objetos do [value_type](#value_type), que são do tipo `pair<const Key, Type>`. O valor da chave está disponível por meio do primeiro par de membros e o valor do elemento mapeado está disponível por meio do segundo membro do par.
+O `reverse_iterator` definido por Multimap aponta para objetos de [value_type](#value_type), que são do tipo `pair<const Key, Type>`. O valor da chave está disponível por meio do primeiro par de membros e o valor do elemento mapeado está disponível por meio do segundo membro do par.
 
-A referência a um `reverse_iterator` *rIter* que aponta para um elemento em um multimap, use o **->** operador.
+Para desreferenciar `reverse_iterator` um *Sprite* que aponta para um elemento em um Multimap, use **->** o operador.
 
-Para acessar o valor da chave do elemento, use `rIter->first`, que é equivalente a `(*rIter).first`. Para acessar o valor dos dados mapeados para o elemento, use `rIter->second`, que é equivalente a `(*rIter).second`.
+Para acessar o valor da chave do elemento, use `rIter->first`, que é equivalente a. `(*rIter).first` Para acessar o valor da Datum mapeada para o elemento, use `rIter->second`, que é equivalente a. `(*rIter).second`
 
 ### <a name="example"></a>Exemplo
 
@@ -2167,7 +2167,7 @@ void swap(
 
 ### <a name="parameters"></a>Parâmetros
 
-*right*<br/>
+*Certo*\
 O multimap que fornece os elementos que serão trocados ou o multimap cujos elementos deverão ser trocados com aqueles do multimap `left`.
 
 ### <a name="remarks"></a>Comentários
@@ -2237,14 +2237,14 @@ const_iterator upper_bound(const Key& key) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*key*<br/>
+*chaves*\
 A chave do argumento a ser comparada com a chave de classificação de um elemento do multimap que está sendo pesquisado.
 
 ### <a name="return-value"></a>Valor de retorno
 
 Um iterador ou `const_iterator` que tratará a localização de um elemento em um multimap com uma chave, que é maior que a chave de argumento ou que tratará o local após o último elemento no multimap se nenhuma correspondência for encontrada para a chave.
 
-Se o valor retornado for atribuído a um `const_iterator`, o objeto multimap não poderá ser modificado. Se o valor retornado for atribuído a um `iterator`, o objeto multimap poderá ser modificado.
+Se o valor retornado for atribuído a um `const_iterator`, o objeto multimap não poderá ser modificado. Se o valor de retorno for atribuído a `iterator`um, o objeto Multimap poderá ser modificado.
 
 ### <a name="example"></a>Exemplo
 
@@ -2318,7 +2318,7 @@ Retorna o objeto da função de comparação que um multimap usa para ordenar se
 
 ### <a name="remarks"></a>Comentários
 
-Para um multimap *m*, se dois elementos *e1*(*k1*, *d1*) e *e2*(*k2*, *d2*) são objetos do tipo `value_type`, onde *k1* e *k2* são suas chaves de tipo `key_type` e *d1*  e *d2* são seus dados do tipo `mapped_type`, em seguida, `m.value_comp(e1, e2)` é equivalente a `m.key_comp(k1, k2)`.
+Para um Multimap *m*, se dois elementos *E1*(*K1*, *D1*) e *E2*(*K2*, *D2*) são objetos do tipo `value_type`, em que *K1* e *K2* são suas chaves do `key_type` tipo e *D1* e *D2* são seus dados do tipo `mapped_type`e, `m.value_comp(e1, e2)` em seguida, `m.key_comp(k1, k2)`é equivalente a.
 
 ### <a name="example"></a>Exemplo
 
@@ -2438,6 +2438,6 @@ The values of the mapped elements are: 10 20.
 
 ## <a name="see-also"></a>Consulte também
 
-[Contêineres](../cpp/containers-modern-cpp.md)<br/>
-[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Referência da biblioteca padrão C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[Contêineres](../cpp/containers-modern-cpp.md)\
+[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Referência da biblioteca padrão C++](../standard-library/cpp-standard-library-reference.md)

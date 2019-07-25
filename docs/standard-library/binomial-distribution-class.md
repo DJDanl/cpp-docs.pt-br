@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::binomial_distribution [C++], param_type
 - std::binomial_distribution [C++], param_type
 ms.assetid: b7c8a26a-da8c-45a5-a3a8-208f7a3609ce
-ms.openlocfilehash: ee61b79848a5649d44cf02384f32ad8e0226feb0
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 525e448a130f33df478627f7ae7ca682ff4a556d
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66451114"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448058"
 ---
 # <a name="binomialdistribution-class"></a>Classe binomial_distribution
 
@@ -71,22 +71,22 @@ public:
 
 ### <a name="parameters"></a>Parâmetros
 
-*IntType*<br/>
-O tipo de resultado do inteiro assume como padrão **int**. Para encontrar os tipos possíveis, consulte [\<random>](../standard-library/random.md).
+*IntType*\
+O tipo de resultado inteiro, o padrão é **int**. Para encontrar os tipos possíveis, consulte [\<random>](../standard-library/random.md).
 
-*URNG*<br/>
-O uniform aleatório mecanismo gerador de números. Para encontrar os tipos possíveis, consulte [\<random>](../standard-library/random.md).
+*URNG*\
+O mecanismo do gerador de número aleatório uniforme. Para encontrar os tipos possíveis, consulte [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Comentários
 
-A classe de modelo descreve uma distribuição que produz valores de um integral especificado pelo usuário tipo ou tipo **int** caso nenhum seja fornecido, distribuído de acordo com a função de probabilidade discreta distribuição Binomial. A tabela a seguir contém links para artigos sobre cada um dos membros.
+A classe de modelo descreve uma distribuição que produz valores de um tipo integral especificado pelo usuário ou o tipo **int** se nenhum for fornecido, distribuído de acordo com a função de probabilidade discreta de distribuição binomial. A tabela a seguir contém links para artigos sobre cada um dos membros.
 
 ||||
 |-|-|-|
 |[binomial_distribution](#binomial_distribution)|`binomial_distribution::t`|`binomial_distribution::param`|
 |`binomial_distribution::operator()`|`binomial_distribution::p`|[param_type](#param_type)|
 
-Os membros da propriedade `t()` e `p()` retornar valores de parâmetro de distribuição atualmente armazenada *t* e *p* , respectivamente.
+Os membros `t()` da propriedade `p()` e retornam os valores de parâmetro de distribuição atualmente armazenados *t* e *p* , respectivamente.
 
 O membro da propriedade `param()` define ou retorna o pacote de parâmetros de distribuição armazenado `param_type`.
 
@@ -242,20 +242,20 @@ explicit binomial_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parâmetros
 
-*t*<br/>
+*t*\
 O parâmetro de distribuição `t`.
 
-*p*<br/>
+*DTI*\
 O parâmetro de distribuição `p`.
 
-*parm*<br/>
+*Parm*\
 A estrutura `param_type` usada para construir a distribuição.
 
 ### <a name="remarks"></a>Comentários
 
 **Precondição:** `0 ≤ t` e `0.0 ≤ p ≤ 1.0`
 
-O primeiro construtor constrói um objeto cujo armazenado *p* valor contém o valor *p* e cujo armazenado *t* valor contém o valor de *t*.
+O primeiro construtor constrói um objeto cujo valor de *p* armazenado contém o valor *p* e cujo valor *t* armazenado contém o valor *t*.
 
 O segundo construtor cria um objeto cujos parâmetros armazenados são inicializados de *parm*. Você pode chamar a função de membro `param()` para obter e definir os parâmetros atuais de uma distribuição existente.
 
@@ -277,13 +277,13 @@ struct param_type {
 
 ### <a name="parameters"></a>Parâmetros
 
-*t*<br/>
+*t*\
 O parâmetro de distribuição `t`.
 
-*p*<br/>
+*DTI*\
 O parâmetro de distribuição `p`.
 
-*right*<br/>
+*Certo*\
 O objeto `param_type` a ser comparado a este.
 
 ### <a name="remarks"></a>Comentários
@@ -294,4 +294,4 @@ Essa estrutura pode ser enviada ao construtor de classe de distribuição na ins
 
 ## <a name="see-also"></a>Consulte também
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

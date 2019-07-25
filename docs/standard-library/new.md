@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - new header
 ms.assetid: 218e2a15-34e8-4ef3-9122-1e90eccf8559
-ms.openlocfilehash: bc873f278461fcdc6dbb42e7c968c691e3dc7f73
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 6155a89c9cbba67ce27253aa64ff70ca7871e748
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243544"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457685"
 ---
 # <a name="ltnewgt"></a>&lt;new&gt;
 
@@ -33,7 +33,7 @@ Algumas das funções declaradas nesse cabeçalho são substituíveis. A impleme
 
 |||
 |-|-|
-|[nothrow](../standard-library/new-functions.md#nothrow)|Fornece um objeto a ser usado como um argumento para o **nothrow** as versões do **novos** e **excluir**.|
+|[nothrow](../standard-library/new-functions.md#nothrow)|Fornece um objeto a ser usado como um argumento para as  versões nothrow de **New** e **delete**.|
 
 ### <a name="typedefs"></a>Typedefs
 
@@ -71,10 +71,10 @@ Algumas das funções declaradas nesse cabeçalho são substituíveis. A impleme
 |||
 |-|-|
 |[Classe bad_alloc](../standard-library/bad-alloc-class.md)|A classe descreve uma exceção gerada para indicar que uma solicitação de alocação não teve êxito.|
-|[Classe de bad_array_new_length](../standard-library/bad-array-new-length.md)||
+|[Classe bad_array_new_length](../standard-library/bad-array-new-length.md)||
 |[Classe nothrow_t](../standard-library/nothrow-t-structure.md)|A classe é usada como um parâmetro de função para o operador new para indicar que a função deve retornar um ponteiro nulo para relatar uma falha de alocação, em vez de lançar uma exceção.|
 
 ## <a name="see-also"></a>Consulte também
 
-[Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)\
+[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

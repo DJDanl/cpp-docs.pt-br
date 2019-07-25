@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - linear_congruential_engine class
 ms.assetid: 30e00ca6-1933-4701-9561-54f3e810a5a1
-ms.openlocfilehash: 41ce5590476a8327c9449ece5e3173146a04760f
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: f5b448fbf158cf9e9cfb8331c6ec7a228859fffc
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66449898"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447584"
 ---
 # <a name="linearcongruentialengine-class"></a>Classe linear_congruential_engine
 
@@ -45,16 +45,16 @@ class linear_congruential_engine{
 
 ### <a name="parameters"></a>Parâmetros
 
-*UIntType*<br/>
+*UInttype*\
 O tipo de resultado inteiro sem sinal. Para encontrar os tipos possíveis, consulte [\<random>](../standard-library/random.md).
 
-*A*<br/>
+*UM*\
 **Multiplicador**. **Pré-condição**: Consulte a seção Observações.
 
-*C*<br/>
+*&* \
 **Incremento**. **Pré-condição**: Consulte a seção Observações.
 
-*M*<br/>
+*D*\
 **Módulo**. **Pré-condição**: Consulte Observações.
 
 ## <a name="members"></a>Membros
@@ -74,9 +74,9 @@ A classe de modelo `linear_congruential_engine` é o mecanismo gerador mais simp
 
 Esse mecanismo produz valores de um tipo integral não assinado especificado pelo usuário usando a relação de recorrência (*ponto final*) `x(i) = (A * x(i-1) + C) mod M`.
 
-Se *M* for zero, o valor usado para essa operação de módulo é `numeric_limits<result_type>::max() + 1`. O estado do mecanismo é o último valor retornado ou o valor semente, se nenhuma chamada tiver sido feita a `operator()`.
+Se *M* for zero, o valor usado para essa operação de módulo `numeric_limits<result_type>::max() + 1`será. O estado do mecanismo é o último valor retornado ou o valor semente, se nenhuma chamada tiver sido feita a `operator()`.
 
-Se *M* for diferente de zero, os valores dos argumentos do modelo *um* e *C* deve ser menor que *M*.
+Se *M* não for zero, os valores dos argumentos de modelo *a* e *C* devem ser menores que *M*.
 
 Embora seja possível construir um gerador diretamente desse mecanismo, também é possível usar um dos typedefs predefinidos.
 
@@ -102,4 +102,4 @@ Para obter informações detalhadas sobre o algoritmo de mecanismo congruente li
 
 ## <a name="see-also"></a>Consulte também
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

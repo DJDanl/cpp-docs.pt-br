@@ -7,16 +7,16 @@ helpviewer_keywords:
 - iterator class
 - iterator struct
 ms.assetid: c74c8000-8b18-4829-9b71-6103c4229b74
-ms.openlocfilehash: 1dd62a6141e690d3bd4dcad69aa107c126a0f386
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 64c9be76cb92d818e40714dd141ded3a8cc17c8a
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62224097"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455614"
 ---
 # <a name="iterator-struct"></a>Struct iterator
 
-Um struct vazio de base usado para garantir que uma classe de iterador definida pelo usuário funcione corretamente com `iterator_trait`s.
+Uma estrutura base vazia usada para garantir que uma classe de iterador definida pelo usuário funcione `iterator_trait`corretamente com s.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -47,7 +47,7 @@ O struct de modelo atua como um tipo base para todos os iteradores. Ele define o
 
 - `reference` (um sinônimo do parâmetro de modelo `Reference`).
 
-Observe que `value_type` não deve ser um tipo constante mesmo que `pointer` aponte para um objeto de **const** `Type` e a referência designe um objeto do **const** `Type`.
+Observe que `value_type` não deve ser um tipo constante, mesmo `pointer` se os pontos em um objeto de **const** `Type` e referência designarem um objeto de **const** `Type`.
 
 ## <a name="example"></a>Exemplo
 
@@ -61,6 +61,6 @@ Consulte [iterator_traits](../standard-library/iterator-traits-struct.md) para v
 
 ## <a name="see-also"></a>Consulte também
 
-[\<iterator>](../standard-library/iterator.md)<br/>
-[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Referência da biblioteca padrão C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[\<iterator>](../standard-library/iterator.md)\
+[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Referência da biblioteca padrão C++](../standard-library/cpp-standard-library-reference.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - indirect_array class
 ms.assetid: 10e1eaea-ba5a-405c-a25e-7bdd3eee7fc7
-ms.openlocfilehash: 43c54bf3dae02eb117b15cae0dd7de9bb4a9db51
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5db5f2ce60038267b70ae8e77d9dd929d972af6a
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404982"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456336"
 ---
 # <a name="indirectarray-class"></a>Classe indirect_array
 
@@ -21,11 +21,11 @@ Uma classe de modelo auxiliar interna, que dá suporte a objetos que são subcon
 
 ## <a name="remarks"></a>Comentários
 
-A classe descreve um objeto que armazena uma referência a um objeto `va` da classe [valarray](../standard-library/valarray-class.md)**\<tipo >**, bem como um objeto `xa` da classe `valarray<size_t>`, que descreve a sequência de elementos a serem selecionados do `valarray<Type>` objeto.
+A classe descreve um objeto que armazena uma referência a um objeto `va` da classe [valarray](../standard-library/valarray-class.md) **\<do tipo >** , juntamente com um `xa` objeto da `valarray<size_t>`classe, que descreve a sequência de elementos a serem selecionados o `valarray<Type>` objeto.
 
-Você constrói uma `indirect_array<Type>` objeto apenas escrevendo uma expressão do formulário `va[xa]`. As funções de membro da classe indirect_array, em seguida, se comportam como as assinaturas de função correspondentes definidas para `valarray<Type>`, exceto que somente a sequência de elementos selecionados ser afetada.
+Você constrói um `indirect_array<Type>` objeto apenas escrevendo uma expressão do formulário. `va[xa]` As funções de membro da classe indirect_array se comportam como as assinaturas de `valarray<Type>`função correspondentes definidas para, exceto que apenas a sequência de elementos selecionados é afetada.
 
-A sequência consiste **xa.** [tamanho](../standard-library/valarray-class.md#size) elementos, no qual elemento `I` torna-se o índice **xa**[ `I`] dentro de `va`.
+A sequência consiste em **XA.** elementos de [tamanho](../standard-library/valarray-class.md#size) , em `I` que o elemento se torna `I`o índice `va` **XA**[] em.
 
 ## <a name="example"></a>Exemplo:
 
@@ -81,4 +81,4 @@ The modified operand valarray is:  (0 -1 10 -1 10 -1 10 -1 8 -1).
 
 ## <a name="see-also"></a>Consulte também
 
-[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

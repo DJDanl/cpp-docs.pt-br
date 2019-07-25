@@ -10,16 +10,16 @@ helpviewer_keywords:
 - std::complex [C++], imag
 - std::complex [C++], real
 ms.assetid: d6492e1c-5eba-4bc5-835b-2a88001a5868
-ms.openlocfilehash: db04569d3938c673653ac36eeebdabc9cb725c1e
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 44d44d48f66c9bdbf03d4e36e752ea3dee5ff9c9
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244735"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68453172"
 ---
 # <a name="complex-class"></a>Classe complex
 
-A classe de modelo descreve um objeto que armazena dois objetos do tipo `Type`, um que representa a parte real de um número complexo e outro que representa a parte imaginária.
+A classe de modelo descreve um objeto que armazena dois objetos do `Type`tipo, um que representa a parte real de um número complexo e um que representa a parte imaginária.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -38,9 +38,9 @@ Um objeto da classe `Type`:
 
 - Define os operadores aritméticos e funções matemáticas, conforme necessário, definidos para os tipos de ponto flutuante com comportamento convencional.
 
-Em particular, talvez não exista nenhuma diferença sutil entre a construção da cópia e a construção padrão seguida pela atribuição. Nenhuma das operações em objetos da classe `Type` pode lançar exceções.
+Em particular, talvez não exista nenhuma diferença sutil entre a construção da cópia e a construção padrão seguida pela atribuição. Nenhuma das operações em objetos da classe `Type` pode gerar exceções.
 
-Existem especializações explícitas do complexo de classe de modelo para os três tipos de ponto flutuante. Nessa implementação, um valor de qualquer outro tipo `Type` é estereotipado para **duplo** para cálculos reais, com o **double** atribuído de volta ao objeto armazenado do tipo de resultado `Type`.
+Existem especializações explícitas do complexo de classe de modelo para os três tipos de ponto flutuante. Nessa implementação, um valor de qualquer `Type` outro tipo é conversão a **dobrar** para cálculos reais, com o resultado **duplo** atribuído de volta ao objeto armazenado do tipo. `Type`
 
 ## <a name="members"></a>Membros
 
@@ -75,7 +75,7 @@ Existem especializações explícitas do complexo de classe de modelo para os tr
 
 
 
-## <a name="complex"></a> complexos
+## <a name="complex"></a>complexos
 
 Constrói um número complexo com partes reais e imaginárias especificadas ou como uma cópia de algum outro número complexo.
 
@@ -102,7 +102,7 @@ O número complexo cujas partes reais e imaginárias são usadas para inicializa
 
 ### <a name="remarks"></a>Comentários
 
-O primeiro construtor inicializa o armazenado parte real para  *\_RealVal* e a parte imaginária armazenada  *\_Imagval*. O segundo construtor inicializa o armazenado parte real para `complexNum.real()` e a parte imaginária armazenada para `complexNum.imag()`.
+O primeiro construtor inicializa a parte real armazenada em  *\_RealVal* e a parte imaginário armazenada em  *\_Imagval*. O segundo construtor inicializa a parte real armazenada `complexNum.real()` para e a parte imaginário armazenada em. `complexNum.imag()`
 
 Nessa implementação, se um tradutor não dá suporte a funções membro de modelo, o modelo:
 
@@ -159,7 +159,7 @@ int main( )
 }
 ```
 
-## <a name="imag"></a> Imag
+## <a name="imag"></a>imagem
 
 Extrai o componente imaginário de um número complexo.
 
@@ -180,7 +180,7 @@ A parte imaginária do número complexo.
 
 ### <a name="remarks"></a>Comentários
 
-Para um número complexo *a + bi*, é a parte ou componente imaginário *Im(a + BI) = b*.
+Para um número complexo *de a + bi*, a parte imaginário ou o componente é *im (a + bi) = b*.
 
 ### <a name="example"></a>Exemplo
 
@@ -213,7 +213,7 @@ The real part of c1 is c1.real() = 4.
 The imaginary part of c1 is c1.imag() = 3.
 ```
 
-## <a name="op_star_eq"></a> operador * =
+## <a name="op_star_eq"></a>operador * =
 
 Multiplica um número complexo de destino por um fator, que pode ser complexo ou ser do mesmo tipo que as partes reais e imaginárias do número complexo.
 
@@ -298,7 +298,7 @@ int main()
 }
 ```
 
-## <a name="op_add_eq"></a> Operator + =
+## <a name="op_add_eq"></a>operador + =
 
 Adiciona um número a um número complexo de destino, em que o número adicionado pode ser complexo ou do mesmo tipo que as partes reais e imaginárias do número complexo ao qual ele é adicionado.
 
@@ -401,7 +401,7 @@ The modulus of cl2 is: 5
 The argument of cl2 is: 0.927295 radians, which is 53.1301 degrees.
 ```
 
-## <a name="operator-_eq"></a> operador =
+## <a name="operator-_eq"></a>operador-=
 
 Subtrai um número de um número complexo de destino, em que o número subtraído pode ser complexo ou do mesmo tipo que as partes reais e imaginárias do número complexo ao qual ele é adicionado.
 
@@ -509,7 +509,7 @@ The modulus of cl2 is: 5
 The argument of cl2 is: 2.2143 radians, which is 126.87 degrees.
 ```
 
-## <a name="op_div_eq"></a> operador / =
+## <a name="op_div_eq"></a>operador/=
 
 Divide um número complexo de destino por um divisor, que pode ser complexo ou ser do mesmo tipo que as partes reais e imaginárias do número complexo.
 
@@ -613,7 +613,7 @@ The modulus of cl2 is: 0.6
 The argument of cl2 is: 0.523599 radians, which is 30 degrees.
 ```
 
-## <a name="op_eq"></a> operador =
+## <a name="op_eq"></a>operador =
 
 Atribui um número a um número complexo de destino, em que o número atribuído pode ser complexo ou do mesmo tipo que as partes reais e imaginárias do número complexo ao qual ele está sendo atribuído.
 
@@ -691,7 +691,7 @@ The complex number (3, 4) assigned to the complex number cl2 is:
 cl2 = (3,4)
 ```
 
-## <a name="real"></a> real
+## <a name="real"></a>foto
 
 Obtém ou define o componente real de um número complexo.
 
@@ -712,7 +712,7 @@ A parte real do número complexo.
 
 ### <a name="remarks"></a>Comentários
 
-Para um número complexo *a + bi*, a parte real ou o componente é *Re(a + BI) = um*.
+Para um número complexo *a + bi*, a parte real ou o componente é *re (a + bi) = a*.
 
 ### <a name="example"></a>Exemplo
 
@@ -755,7 +755,7 @@ typedef Type value_type;
 
 ### <a name="remarks"></a>Comentários
 
-`value_type` é um sinônimo para a classe complexa `Type` parâmetro de modelo.
+`value_type`é um sinônimo para o parâmetro de `Type` modelo complexo de classe.
 
 ### <a name="example"></a>Exemplo
 
@@ -784,4 +784,4 @@ of type value_type: c1 = (3,4).
 
 ## <a name="see-also"></a>Consulte também
 
-[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

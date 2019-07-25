@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_compound class
 - is_compound
 ms.assetid: bdad1167-cf3f-4f37-8321-62a5df159ead
-ms.openlocfilehash: f270a1a58bb8023d91d84b0d1ca3395d36298c95
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 003ddcf77c30bc2dc5491218dfbf00731517bdeb
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62337096"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452897"
 ---
 # <a name="iscompound-class"></a>Classe is_compound
 
@@ -27,12 +27,12 @@ struct is_compound;
 
 ### <a name="parameters"></a>Parâmetros
 
-*Ty*<br/>
+*Ty*\
 O tipo a ser consultado.
 
 ## <a name="remarks"></a>Comentários
 
-Uma instância do predicado de tipo mantém **falsos** se o tipo de *Ty* é um tipo fundamental (ou seja, se [is_fundamental](../standard-library/is-fundamental-class.md)\<Ty > mantém  **True**); Caso contrário, ele mantém **verdadeira**. Portanto, o predicado mantém **verdadeira** se *Ty* é um tipo de matriz, um tipo de função, um ponteiro para **void** ou um objeto ou uma função, uma referência, uma classe, uma união, uma enumeração ou uma ponteiro para membro de classe não estática ou uma *qualificada por cv* formulário de um deles.
+Uma instância do predicado de tipo é **false** se o tipo de *Ty* é um tipo fundamental (ou seja, se [is_fundamental](../standard-library/is-fundamental-class.md)\<Ty > se aplica **true**); caso contrário, ele será **true**. Assim, o predicado se aplica **true** se *Ty* for um tipo de matriz, um tipo de função, um ponteiro para **void** ou um objeto ou uma função, uma referência, uma classe, uma União, uma enumeração ou um ponteiro para um membro de classe não estático ou uma forma *qualificada por CV* de um deles.
 
 ## <a name="example"></a>Exemplo
 
@@ -83,5 +83,5 @@ is_compound<int> == false
 
 ## <a name="see-also"></a>Consulte também
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[Classe is_class](../standard-library/is-class-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[Classe is_class](../standard-library/is-class-class.md)
