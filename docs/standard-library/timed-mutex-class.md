@@ -18,12 +18,12 @@ helpviewer_keywords:
 - std::timed_mutex [C++], try_lock_for
 - std::timed_mutex [C++], try_lock_until
 - std::timed_mutex [C++], unlock
-ms.openlocfilehash: 9aae1205866a0bf982ab7c41b792aac0f63ea149
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6b9785dc41791be63d585d18802953eade370b2a
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411949"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459921"
 ---
 # <a name="timedmutex-class"></a>Classe timed_mutex
 
@@ -56,7 +56,7 @@ class timed_mutex;
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** \<mutex >
+**Cabeçalho:** \<> mutex
 
 **Namespace:** std
 
@@ -102,7 +102,7 @@ bool try_lock();
 
 ### <a name="return-value"></a>Valor de retorno
 
-**Verdadeiro** se o método obtiver a propriedade com êxito o `mutex`; caso contrário, **falso**.
+**true** se o método obtiver com êxito a propriedade de `mutex`; caso contrário, **false**.
 
 ### <a name="remarks"></a>Comentários
 
@@ -119,12 +119,12 @@ bool try_lock_for(const chrono::duration<Rep, Period>& Rel_time);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Rel_time*<br/>
+*Rel_time*\
 Um objeto [chrono::duration](../standard-library/duration-class.md) que especifica o tempo máximo que o método tenta obter a propriedade do `mutex`.
 
 ### <a name="return-value"></a>Valor de retorno
 
-**Verdadeiro** se o método obtiver a propriedade com êxito o `mutex`; caso contrário, **falso**.
+**true** se o método obtiver com êxito a propriedade de `mutex`; caso contrário, **false**.
 
 ### <a name="remarks"></a>Comentários
 
@@ -143,12 +143,12 @@ bool try_lock_until(const xtime* Abs_time);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Abs_time*<br/>
+*Abs_time*\
 Um ponto no tempo que especifica o limite após o qual o método não tenta mais obter a propriedade do `mutex`.
 
 ### <a name="return-value"></a>Valor de retorno
 
-**Verdadeiro** se o método obtiver a propriedade com êxito o `mutex`; caso contrário, **falso**.
+**true** se o método obtiver com êxito a propriedade de `mutex`; caso contrário, **false**.
 
 ### <a name="remarks"></a>Comentários
 
@@ -168,5 +168,5 @@ Se o thread de chamada não for o proprietário do `mutex`, o comportamento ser�
 
 ## <a name="see-also"></a>Consulte também
 
-[Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<mutex>](../standard-library/mutex.md)<br/>
+[Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)\
+[\<mutex>](../standard-library/mutex.md)

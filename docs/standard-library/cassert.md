@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - cassert header
 ms.assetid: 6ead15a3-ac45-4075-be8e-350bca995c26
-ms.openlocfilehash: 14dda03e835ec411013b2d827bd1ccaa77f8982e
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 58ebd91fb4fa32cf31d2c49429d0445b92fe0c82
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68245012"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449916"
 ---
 # <a name="ltcassertgt"></a>&lt;cassert&gt;
 
-Inclui o cabeçalho da biblioteca C padrão \<Assert > e adiciona os nomes associados ao `std` namespace. Inclusão desse cabeçalho garante que os nomes declarados usando vinculação externa no cabeçalho da biblioteca C padrão sejam declarados no `std` namespace.
+Inclui o cabeçalho \<de biblioteca padrão C > Assert. h e adiciona os nomes associados `std` ao namespace. A inclusão desse cabeçalho garante que os nomes declarados usando vínculo externo no cabeçalho da biblioteca padrão C sejam `std` declarados no namespace.
 
 > [!NOTE]
-> \<Assert > não define o `static_assert` macro.
+> \<Assert. h > não define a `static_assert` macro.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -34,11 +34,11 @@ Inclui o cabeçalho da biblioteca C padrão \<Assert > e adiciona os nomes assoc
 
 ### <a name="remarks"></a>Comentários
 
-`assert(E)` só é constante, se NDEBUG for definido em que `assert` está definido ou redefinido, pela última vez ou *eletrônico* convertido em bool é avaliada como **true**.
+`assert(E)`é constante, se NDEBUG é definido onde `assert` é definido pela última vez ou redefinido, ou *E* convertido em bool é avaliado como **true**.
 
 ## <a name="see-also"></a>Consulte também
 
-[assert Macro, _assert, _wassert](../c-runtime-library/reference/assert-macro-assert-wassert.md)<br/>
-[Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Visão geral da biblioteca padrão C++](../standard-library/cpp-standard-library-overview.md)<br/>
-[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[assert Macro, _assert, _wassert](../c-runtime-library/reference/assert-macro-assert-wassert.md)\
+[Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)\
+[Visão geral da biblioteca padrão C++](../standard-library/cpp-standard-library-overview.md)\
+[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

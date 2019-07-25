@@ -14,12 +14,12 @@ helpviewer_keywords:
 - std::sleep_until [C++]
 - std::swap [C++]
 - std::yield [C++]
-ms.openlocfilehash: c0a8e42cb7ee78c399459be82e50ef37ab203816
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8064cec7e94a909d7dc2e1b22142d362bb7b9488
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62279028"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458508"
 ---
 # <a name="ltthreadgt-functions"></a>Funções &lt;thread&gt;
 
@@ -52,12 +52,12 @@ inline void sleep_for(const chrono::duration<Rep, Period>& Rel_time);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Rel_time*<br/>
+*Rel_time*\
 O objeto [duration](../standard-library/duration-class.md) que especifica um intervalo de tempo.
 
 ### <a name="remarks"></a>Comentários
 
-A função bloqueia o thread de chamada pelo menos o tempo especificado por *Rel_time*. Essa função não gera exceções.
+A função bloqueia o thread de chamada para pelo menos o tempo especificado por *Rel_time*. Essa função não gera exceções.
 
 ## <a name="sleep_until"></a>  sleep_until
 
@@ -72,7 +72,7 @@ void sleep_until(const xtime *Abs_time);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Abs_time*<br/>
+*Abs_time*\
 Representa um ponto no tempo.
 
 ### <a name="remarks"></a>Comentários
@@ -81,7 +81,7 @@ Essa função não gera exceções.
 
 ## <a name="swap"></a>  swap
 
-Troca os estados de dois **thread** objetos.
+Permuta os Estados de dois objetos de **thread** .
 
 ```cpp
 void swap(thread& Left, thread& Right) noexcept;
@@ -89,11 +89,11 @@ void swap(thread& Left, thread& Right) noexcept;
 
 ### <a name="parameters"></a>Parâmetros
 
-*Esquerda*<br/>
-À esquerda **thread** objeto.
+*Mantida*\
+O objeto de **thread** à esquerda.
 
-*Direita*<br/>
-O direito **thread** objeto.
+*Certo*\
+O objeto de **thread** certo.
 
 ### <a name="remarks"></a>Comentários
 
@@ -109,4 +109,4 @@ inline void yield() noexcept;
 
 ## <a name="see-also"></a>Consulte também
 
-[\<thread>](../standard-library/thread.md)<br/>
+[\<thread>](../standard-library/thread.md)

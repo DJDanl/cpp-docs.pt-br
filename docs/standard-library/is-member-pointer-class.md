@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_member_pointer class
 - is_member_pointer
 ms.assetid: da07ff4e-9ee0-4baa-ad93-1741f10913d1
-ms.openlocfilehash: a02d8a156a861367f34ac0cda4744c3de9e43efe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f07e32c8ab1ea82a0c3616e96baca920a95e3042
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404774"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456143"
 ---
 # <a name="ismemberpointer-class"></a>Classe is_member_pointer
 
@@ -27,12 +27,12 @@ struct is_member_pointer;
 
 ### <a name="parameters"></a>Parâmetros
 
-*Ty*<br/>
+*Ty*\
 O tipo a ser consultado.
 
 ## <a name="remarks"></a>Comentários
 
-Uma instância do predicado de tipo será verdadeira se o tipo *Ty* é um ponteiro para função de membro ou um ponteiro para membro de objeto, ou um `cv-qualified` forma de um deles, caso contrário, será falsa.
+Uma instância do predicado de tipo se aplica true se o tipo *Ty* é um ponteiro para uma função membro ou um ponteiro para objeto `cv-qualified` membro, ou uma forma de um deles, caso contrário, ele mantém false.
 
 ## <a name="example"></a>Exemplo
 
@@ -85,7 +85,7 @@ is_member_pointer<int (functional::*)()> == true
 
 ## <a name="see-also"></a>Consulte também
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[Classe is_member_function_pointer](../standard-library/is-member-function-pointer-class.md)<br/>
-[Classe is_member_object_pointer](../standard-library/is-member-object-pointer-class.md)<br/>
-[Classe is_pointer](../standard-library/is-pointer-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[Classe is_member_function_pointer](../standard-library/is-member-function-pointer-class.md)\
+[Classe is_member_object_pointer](../standard-library/is-member-object-pointer-class.md)\
+[Classe is_pointer](../standard-library/is-pointer-class.md)

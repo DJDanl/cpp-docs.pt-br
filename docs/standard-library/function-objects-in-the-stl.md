@@ -7,12 +7,12 @@ helpviewer_keywords:
 - C++ Standard Library, function objects
 - function objects
 ms.assetid: 85f8a735-2c7b-4f10-9c4d-95c666ec4192
-ms.openlocfilehash: 310d846285612ad94ec9d66672fcb996557b07e2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4df8096603b53d05e050750a860c76528a44b28c
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159360"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454070"
 ---
 # <a name="function-objects-in-the-c-standard-library"></a>Objetos de função na Biblioteca Padrão C++
 
@@ -43,7 +43,7 @@ int main()
 }
 ```
 
-A última linha da função `main` mostra como chamar o objeto de função. Essa chamada é semelhante uma chamada para uma função, mas é, na verdade, chamada Operator () do tipo Functor. É dessa semelhança entre chamar um objeto de função e uma função que surgiu o termo objeto de função.
+A última linha da função `main` mostra como chamar o objeto de função. Essa chamada é semelhante a uma chamada para uma função, mas ela está realmente chamando operator () do tipo functor. É dessa semelhança entre chamar um objeto de função e uma função que surgiu o termo objeto de função.
 
 ## <a name="function-objects-and-containers"></a>Contêineres e objetos de função
 
@@ -56,7 +56,7 @@ template <class Key,
 class set
 ```
 
-O segundo argumento de modelo é o objeto de função `less`. Esse objeto de função retorna **verdadeira** se o primeiro parâmetro for menor que o segundo parâmetro. Como alguns contêineres classificam seus elementos, o contêiner precisa de uma maneira de comparar dois elementos. A comparação é feita usando o objeto de função. Você pode definir seus próprios critérios de classificação para contêineres criando um objeto de função e especificando-o na lista de modelos para o contêiner.
+O segundo argumento de modelo é o objeto de função `less`. Esse objeto de função retornará **true** se o primeiro parâmetro for menor do que o segundo parâmetro. Como alguns contêineres classificam seus elementos, o contêiner precisa de uma maneira de comparar dois elementos. A comparação é feita usando o objeto de função. Você pode definir seus próprios critérios de classificação para contêineres criando um objeto de função e especificando-o na lista de modelos para o contêiner.
 
 ## <a name="function-objects-and-algorithms"></a>Algoritmos e objetos de função
 
@@ -70,8 +70,8 @@ ForwardIterator remove_if(
     Predicate pred);
 ```
 
-O último argumento para `remove_if` é um objeto de função que retorna um valor booliano (um *predicado*). Se o resultado do objeto de função for **verdadeira**, em seguida, o elemento é removido do contêiner que está sendo acessado pelos iteradores `first` e `last`. Você pode usar qualquer um dos objetos de função declarados no cabeçalho [\<functional>](../standard-library/functional.md) para o argumento `pred` ou pode criar seus próprios objetos.
+O último argumento para `remove_if` é um objeto de função que retorna um valor booliano (um *predicado*). Se o resultado do objeto de função for **true**, o elemento será removido do contêiner que está sendo acessado pelos `first` iteradores `last`e. Você pode usar qualquer um dos objetos de função declarados no cabeçalho [\<functional>](../standard-library/functional.md) para o argumento `pred` ou pode criar seus próprios objetos.
 
 ## <a name="see-also"></a>Consulte também
 
-[Referência da biblioteca padrão C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[Referência da biblioteca padrão C++](../standard-library/cpp-standard-library-reference.md)

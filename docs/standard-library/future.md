@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - <future>
 ms.assetid: 2f5830fc-455d-44f9-9e3d-94ea051596a2
-ms.openlocfilehash: 189a9f16b65ae74fc2a86bee62bf8bd548c486aa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d33b67ed17a95b6717878aaca2f61682b1807c15
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159854"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454003"
 ---
 # <a name="ltfuturegt"></a>&lt;future&gt;
 
@@ -26,7 +26,7 @@ Esse cabeçalho usa ConcRT (Tempo de Execução de Simultaneidade) para que voc�
 ## <a name="remarks"></a>Comentários
 
 > [!NOTE]
-> No código que é compilado usando **/clr**, esse cabeçalho é bloqueado.
+> No código que é compilado usando **/CLR**, esse cabeçalho é bloqueado.
 
 Um *provedor assíncrono* armazena o resultado de uma chamada de função. Um *objeto de retorno assíncrono* é usado para recuperar o resultado de uma chamada de função. Um *estado assíncrono associado* fornece comunicação entre um provedor assíncrono e um ou mais objetos de retorno assíncronos.
 
@@ -38,9 +38,9 @@ Um estado assíncrono associado ficará *pronto* somente se seu provedor assínc
 
 A função de modelo `async` e as classes de modelo `promise` e `packaged_task` são provedores assíncronos. As classes de modelo `future` e `shared_future` descrevem objetos de retorno assíncronos.
 
-Cada uma das classes de modelo `promise`, `future`, e `shared_future` tem uma especialização para o tipo **void** e uma especialização parcial para armazenar e recuperar um valor por referência. Essas especializações diferem do modelo primário somente quanto às assinaturas e à semântica das funções que armazenam e recuperam o valor retornado.
+`promise`Cada uma das classes de modelo, `future`e `shared_future` tem uma especialização para o tipo **void** e uma especialização parcial para armazenar e recuperar um valor por referência. Essas especializações diferem do modelo primário somente quanto às assinaturas e à semântica das funções que armazenam e recuperam o valor retornado.
 
-As classes de modelo `future` e `shared_future` nunca bloquear em seus destruidores, exceto em um caso é preservado para compatibilidade com versões anteriores: Ao contrário de todos os outros futures, para um `future`— ou o último `shared_future`— anexado a uma tarefa iniciada com `std::async`, os destruidor é bloqueado se a tarefa tiver sido concluída, ou seja, ele é bloqueado se esse thread ainda não tiver chamado `.get()` ou `.wait()`e a tarefa ainda está em execução. A observação de usabilidade a seguir foi adicionada à descrição do `std::async` no padrão de rascunho: "[Observação: Se um futuro obtido do std::async é movido para fora do escopo local, outro código que usa o futuro deve estar ciente de que o destruidor do futuro pode ser bloqueado para o estado compartilhado fique pronto. — nota final] "em todos os outros casos, `future` e `shared_future` Os destruidores são necessários e são garantidos nunca será bloqueada.
+As classes `future` de modelo `shared_future` e nunca são bloqueadas em seus destruidores, exceto em um caso que seja preservado para compatibilidade com versões anteriores: Ao contrário de todos os outros futuros, `future`para um — ou `shared_future`o último — que está anexado a uma tarefa `std::async`iniciada com o, o destruidor bloqueia se a tarefa não foi concluída; ou seja, bloqueia se esse thread ainda `.get()` não chamou ou `.wait()`e a tarefa ainda está em execução. A seguinte observação de usabilidade foi adicionada à descrição de `std::async` no padrão de rascunho: "[Observação: Se um futuro obtido a partir de std:: Async for movido para fora do escopo local, outro código que usa o futuro deve estar ciente de que o destruidor futuro pode impedir que o estado compartilhado se torne pronto. — fim da nota] "em `future` todos `shared_future` os outros casos e os destruidores são necessários e garantem que nunca sejam bloqueados.
 
 ## <a name="members"></a>Membros
 
@@ -81,4 +81,4 @@ As classes de modelo `future` e `shared_future` nunca bloquear em seus destruido
 
 ## <a name="see-also"></a>Consulte também
 
-[Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)<br/>
+[Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)

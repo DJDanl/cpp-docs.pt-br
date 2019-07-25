@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - independent_bits_engine class
 ms.assetid: 889e9a82-f457-49a7-9d2e-26e0fc3cd907
-ms.openlocfilehash: 8f420ca054d20cd222b8eda9a4a35a383a8e535a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a90e4be4ff6e92734f6b2e6804f8059be78e66b9
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159217"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456349"
 ---
 # <a name="independentbitsengine-class"></a>Classe independent_bits_engine
 
@@ -26,13 +26,13 @@ class independent_bits_engine;
 
 ### <a name="parameters"></a>Parâmetros
 
-*mecanismo*<br/>
+*Motores*\
 O tipo de mecanismo de base.
 
-*W*<br/>
+*MOSTRAR*\
 **Tamanho da palavra**. Tamanho, em bits, de cada número gerado. **Pré-condição**: `0 < W ≤ numeric_limits<UIntType>::digits`
 
-*UIntType*<br/>
+*UInttype*\
 O tipo de resultado inteiro sem sinal. Para encontrar os tipos possíveis, consulte [\<random>](../standard-library/random.md).
 
 ## <a name="members"></a>Membros
@@ -46,7 +46,7 @@ Para obter mais informações sobre membros do mecanismo, consulte [\<random>](.
 
 ## <a name="remarks"></a>Comentários
 
-Essa classe de modelo descreve uma *adaptador de mecanismo* que produz valores recompactando bits dos valores retornados pelo mecanismo básico, resultando em *W*-valores de bit.
+Essa classe de modelo descreve um *adaptador de mecanismo* que produz valores ao reempacotar bits de valores retornados por seu mecanismo base, resultando em valores de bit *W*.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -56,4 +56,4 @@ Essa classe de modelo descreve uma *adaptador de mecanismo* que produz valores r
 
 ## <a name="see-also"></a>Consulte também
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

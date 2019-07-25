@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - time_get_byname class
 ms.assetid: 6e54153e-da40-4bb9-a942-1a6ce57b30c9
-ms.openlocfilehash: e18f210dba03d66fa3a4ea111a6dfc61f0d0c12a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b466f8a893a14f7a94ee7b9e54b72e43aa6cf6e3
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412001"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68460022"
 ---
 # <a name="timegetbyname-class"></a>Classe time_get_byname
 
@@ -40,10 +40,10 @@ protected:
 
 ### <a name="parameters"></a>Parâmetros
 
-*_Locname*<br/>
+*_Locname*\
 Uma localidade nomeada.
 
-*_Refs*<br/>
+*_Refs*\
 Uma contagem de referência inicial.
 
 ## <a name="requirements"></a>Requisitos
@@ -58,4 +58,4 @@ Seu comportamento é determinado pela localidade nomeada *_Locname*. Cada constr
 
 ## <a name="see-also"></a>Consulte também
 
-[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

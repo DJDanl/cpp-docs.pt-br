@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - cstddef header
 ms.assetid: be8d1e39-5974-41ee-b41d-eafa6c82ffce
-ms.openlocfilehash: 15d13a3af35cb41950df8aeba0c86d779e701ddb
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 87d268977ee46112fedce517e66a9e68071863db
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244441"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457566"
 ---
 # <a name="ltcstddefgt"></a>&lt;cstddef&gt;
 
-Inclui o cabeçalho da biblioteca padrão C \<stddef. h > e adiciona os nomes associados ao `std` namespace. Inclusão desse cabeçalho garante que os nomes declarados usando vinculação externa no cabeçalho da biblioteca padrão C são declarados no `std` namespace.
+Inclui o cabeçalho \<de biblioteca padrão C stddef. h > e adiciona nomes associados `std` ao namespace. A inclusão desse cabeçalho garante que os nomes declarados usando vínculo externo no cabeçalho da biblioteca padrão C sejam `std` declarados no namespace.
 
 > [!NOTE]
-> \<cstddef > inclui o tipo **bytes** e não inclui o tipo **wchar_t**.
+> \<cstddef > inclui o tipo **byte** e não inclui o tipo **wchar_t**.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -26,7 +26,7 @@ Inclui o cabeçalho da biblioteca padrão C \<stddef. h > e adiciona os nomes as
 #include <cstddef>
 ```
 
-## <a name="namespace-and-macros"></a>Namespace e Macros
+## <a name="namespace-and-macros"></a>Namespace e macros
 
 ```cpp
 namespace std {
@@ -43,16 +43,16 @@ namespace std {
 ### <a name="parameters"></a>Parâmetros
 
 *ptrdiff_t*\
-Uma implementação definida, tipo de inteiro que pode conter a diferença de dois subscritos em um objeto de matriz com sinal.
+Um tipo de inteiro assinado definido por implementação que pode conter a diferença de dois subscritos em um objeto de matriz.
 
 *size_t*\
 Um tipo de inteiro sem sinal definido pela implementação que é grande o suficiente para conter o tamanho em bytes de qualquer objeto.
 
 *max_align_t*\
-Um tipo POD cujo requisito de alinhamento é pelo menos tão grande que todos os tipos escalares, e cujo requisito de alinhamento é suportado em cada contexto.
+Um tipo de POD cujo requisito de alinhamento é, pelo menos, tão grande quanto o de cada tipo escalar, e cujo requisito de alinhamento tem suporte em cada contexto.
 
 *nullptr_t*\
-Um sinônimo para o tipo de um **nullptr** expressão. Embora uma **nullptr** endereço não pode ser usado, o endereço de outro *nullptr_t* objeto que é um lvalue pode ser executado.
+Um sinônimo para o tipo de uma expressão **nullptr** . Embora um endereço **nullptr** não possa ser obtido, o endereço de outro objeto *nullptr_t* que é um lvalue pode ser obtido.
 
 ## <a name="byte-class"></a>Classe de byte
 
@@ -79,6 +79,6 @@ template <class IntType>
 
 ## <a name="see-also"></a>Consulte também
 
-[Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Visão geral da biblioteca padrão C++](../standard-library/cpp-standard-library-overview.md)<br/>
-[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)\
+[Visão geral da biblioteca padrão C++](../standard-library/cpp-standard-library-overview.md)\
+[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

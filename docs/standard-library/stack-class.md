@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::stack [C++], size
 - std::stack [C++], top
 ms.assetid: 02151c1e-eab0-41b8-be94-a839ead78ecf
-ms.openlocfilehash: 36074f75830f92ba3fb9e5edb4e1507aa5ae1407
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: d282d3ea54528b422509f4259e2d9a191f88e091
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68241061"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68453783"
 ---
 # <a name="stack-class"></a>Classe de pilha
 
@@ -40,19 +40,19 @@ class stack
 
 ### <a name="parameters"></a>Parâmetros
 
-*Tipo*\
+*Escreva*\
 O tipo de dados do elemento a ser armazenado na stack.
 
-*Contêiner*\
+*Container*\
 O tipo do contêiner subjacente usado para implementar a stack. O valor padrão é a classe `deque` *\<Type>* .
 
 ## <a name="remarks"></a>Comentários
 
-Os elementos da classe `Type` estipulados no primeiro modelo de parâmetro de um objeto stack são sinônimo [value_type](#value_type) e deve corresponder ao tipo de elemento na classe de contêiner subjacente `Container` estipulado pela segundo parâmetro de modelo. O `Type` deve ser atribuível, para que seja possível copiar objetos desse tipo e atribuir valores às variáveis desse tipo.
+Os elementos da classe `Type` estipulados no primeiro parâmetro de modelo de um objeto de pilha são sinônimos de [value_type](#value_type) e devem corresponder ao tipo de elemento na classe `Container` de contêiner subjacente estipulada pelo segundo modelo meter. O `Type` deve ser atribuível, para que seja possível copiar objetos desse tipo e atribuir valores a variáveis desse tipo.
 
-Classes de contêiner subjacente adequadas para pilha incluem [deque](../standard-library/deque-class.md), [classe list](../standard-library/list-class.md), e [classe vector](../standard-library/vector-class.md), ou qualquer outro contêiner de sequência que dá suporte a operações do `back`, `push_back`, e `pop_back`. A classe de contêiner subjacente é encapsulada dentro do adaptador do contêiner, que expõe apenas o conjunto limitado de funções membro de contêiner de sequência como uma interface pública.
+Classes de contêiner subjacentes adequadas para pilha incluem [deque](../standard-library/deque-class.md), [classe de lista](../standard-library/list-class.md)e classe de [vetor](../standard-library/vector-class.md), ou qualquer outro contêiner de sequência que `back`ofereça `push_back`suporte às `pop_back`operações de, e. A classe de contêiner subjacente é encapsulada dentro do adaptador do contêiner, que expõe apenas o conjunto limitado de funções membro de contêiner de sequência como uma interface pública.
 
-A pilha de objetos será igualdade comparável somente se os elementos da classe `Type` são comparáveis a igualdade e são menos-que somente se os elementos da classe `Type` são menores-que comparável.
+Os objetos de pilha são comparáveis de igualdade se e somente se os elementos `Type` da classe forem comparáveis de igualdade e forem menores que comparáveis se e somente se os elementos `Type` da classe forem menores-que o comparável.
 
 - A classe stack dá suporte a uma estrutura de dados UEPS (último a entrar, primeiro a sair). Uma boa comparação é pensar em uma pilha de pratos. Os elementos (os pratos) podem inseridos, inspecionados ou removidos somente da parte superior da pilha, que é o último elemento no final do contêiner base. A restrição para acessar apenas o elemento superior é o motivo para usar a classe stack.
 
@@ -86,7 +86,7 @@ A pilha de objetos será igualdade comparável somente se os elementos da classe
 |[size](#size)|Retorna o número de elementos no `stack`.|
 |[top](#top)|Retorna uma referência a um elemento na parte superior do `stack`.|
 
-## <a name="container_type"></a> container_type
+## <a name="container_type"></a>container_type
 
 Um tipo que fornece o contêiner base a ser adaptado.
 
@@ -104,7 +104,7 @@ Para obter mais informações sobre `Container`, consulte a seção Comentários
 
 Veja o exemplo de [stack::stack](#stack) para obter um exemplo de como declarar e usar `container_type`.
 
-## <a name="empty"></a> vazio
+## <a name="empty"></a>esvaziá
 
 Testa se uma stack está vazia.
 
@@ -149,7 +149,7 @@ The stack s1 is not empty.
 The stack s2 is empty.
 ```
 
-## <a name="pop"></a> pop
+## <a name="pop"></a>pop
 
 Remove o elemento da parte superior da stack.
 
@@ -205,9 +205,9 @@ After a pop, the stack length is 2.
 After a pop, the element at the top of the stack is 20.
 ```
 
-## <a name="push"></a> envio por push
+## <a name="push"></a>pressionado
 
-Adiciona um elemento na parte superior da pilha.
+Adiciona um elemento à parte superior da pilha.
 
 ```cpp
 void push(const Type& val);
@@ -254,7 +254,7 @@ The stack length is 3.
 The element at the top of the stack is 30.
 ```
 
-## <a name="size"></a> Tamanho
+## <a name="size"></a>tamanho
 
 Retorna o número de elementos na stack.
 
@@ -295,7 +295,7 @@ The stack length is 1.
 The stack length is now 2.
 ```
 
-## <a name="size_type"></a> size_type
+## <a name="size_type"></a>size_type
 
 Um tipo de inteiro sem sinal que pode representar o número de elementos em uma stack.
 
@@ -311,7 +311,7 @@ O tipo é um sinônimo de `size_type` do contêiner base adaptado pela stack.
 
 Veja o exemplo de [size](#size) que demonstra como declarar e usar `size_type`.
 
-## <a name="stack"></a> Pilha
+## <a name="stack"></a>sobreposta
 
 Constrói uma stack que é vazia ou que é uma cópia de uma classe de contêiner base.
 
@@ -365,7 +365,7 @@ int main( )
 The element at the top of stack vsi2 is 1.
 ```
 
-## <a name="top"></a> Início
+## <a name="top"></a>Início
 
 Retorna uma referência a um elemento na parte superior da stack.
 
@@ -383,7 +383,7 @@ Uma referência ao último elemento no contêiner na parte superior da stack.
 
 A stack não pode estar vazia para que seja possível aplicar a função membro. O início da stack é a posição ocupada pelo elemento adicionado mais recentemente e é o último elemento no fim do contêiner.
 
-Se o valor de retorno `top` for atribuído a um `const_reference`, o objeto stack não pode ser modificado. Se o valor de retorno `top` for atribuído a um `reference`, o objeto stack poderá ser modificado.
+Se o valor de retorno `top` de for atribuído a `const_reference`um, o objeto de pilha não poderá ser modificado. Se o valor de retorno `top` de for atribuído a `reference`um, o objeto de pilha poderá ser modificado.
 
 ### <a name="example"></a>Exemplo
 
@@ -459,5 +459,5 @@ The element at the top of the stack is 69.
 
 ## <a name="see-also"></a>Consulte também
 
-[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Referência da biblioteca padrão C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Referência da biblioteca padrão C++](../standard-library/cpp-standard-library-reference.md)

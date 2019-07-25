@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - random header
 ms.assetid: 60afc25c-b162-4811-97c1-1b65398d4c57
-ms.openlocfilehash: 1448ad2b703aa6dcf26fad2e4adcbeb2aec2c956
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 5738a1ea5ab950466f347090649e72471edf5608
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240409"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458302"
 ---
 # <a name="ltrandomgt"></a>&lt;random&gt;
 
@@ -19,12 +19,12 @@ Define instalações para a geração aleatória de números, permitindo a cria�
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho**: \<aleatório >
+**Cabeçalho**: \<> aleatório
 
 **Namespace:** std
 
 > [!NOTE]
-> O \<aleatório > biblioteca usa o ' #include < initializer_list >' instrução.
+> A \<biblioteca de > aleatória usa a instrução ' #include < initializer_list > '.
 
 ## <a name="summary"></a>Resumo
 
@@ -42,7 +42,7 @@ Esses links levam para as seções principais deste artigo:
 
 ### <a name="quick-tips"></a>Dicas rápidas
 
-Aqui estão algumas dicas para ter em mente ao usar \<aleatório >:
+Aqui estão algumas dicas para ter em mente ao usar \<> aleatórios:
 
 - Para a maioria dos propósitos, os URNGs produzem bits brutos que podem ser moldados pelas distribuições. (Uma exceção notável disso é [std::shuffle()](../standard-library/algorithm-functions.md#shuffle), pois ele utiliza um URNG diretamente.)
 
@@ -52,7 +52,7 @@ Aqui estão algumas dicas para ter em mente ao usar \<aleatório >:
 
 - O emparelhamento mais útil para a maioria dos aplicativos é o mecanismo `mt19937` com `uniform_int_distribution`, como mostrado no [exemplo de código](#code) posteriormente neste artigo.
 
-Há muitas opções para escolher na \<random > cabeçalho e qualquer um deles é preferível para a função de tempo de execução C desatualizada `rand()`. Para obter informações sobre o que há de errado com `rand()` e como \<random > lida com esses imprevistos, veja [este vídeo](https://go.microsoft.com/fwlink/p/?linkid=397615).
+Há muitas opções a serem escolhidas no \<cabeçalho > aleatório e qualquer uma delas é preferível à função `rand()`de tempo de execução C desatualizada. Para obter informações sobre o que há `rand()` de errado \<com e como > aleatório resolve essas deficiências, consulte [este vídeo](https://go.microsoft.com/fwlink/p/?linkid=397615).
 
 ## <a name="code"></a> Exemplos
 
@@ -221,7 +221,7 @@ URNGs geralmente são descritos de acordo com essas propriedades:
 
 3. **Qualidade**: Qual a proximidade de uma sequência gerada de números verdadeiramente aleatórios. Isso geralmente é chamado de “*aleatoriedade*”.
 
-As seções a seguir listam os uniformes geradores de números aleatórios (URNGs) fornecidos no \<aleatório > cabeçalho.
+As seções a seguir listam os geradores de número aleatório uniforme (URNGs) \<fornecidos no cabeçalho de > aleatório.
 
 ####  <a name="rd"></a> Gerador não determinístico
 
@@ -329,7 +329,7 @@ Adaptadores de mecanismo são modelos que adaptam outros mecanismos (básicos). 
 
 ###  <a name="distributions"></a> Distribuições de Número Aleatório
 
-As seções a seguir listam as distribuições fornecidas no \<aleatório > cabeçalho. As distribuições são um mecanismo de pós-processamento, que geralmente usam uma saída de URNG como entrada e distribuem a saída de acordo com uma função de densidade probabilística estatística definida. Para obter mais informações, consulte a seção [Mecanismos e Distribuições](#engdist).
+As seções a seguir listam as distribuições fornecidas \<no cabeçalho > aleatório. As distribuições são um mecanismo de pós-processamento, que geralmente usam uma saída de URNG como entrada e distribuem a saída de acordo com uma função de densidade probabilística estatística definida. Para obter mais informações, consulte a seção [Mecanismos e Distribuições](#engdist).
 
 #### <a name="uniform-distributions"></a>Distribuições Uniformes
 
@@ -345,7 +345,7 @@ As seções a seguir listam as distribuições fornecidas no \<aleatório > cabe
 
 |||
 |-|-|
-|[Classe bernoulli_distribution](../standard-library/bernoulli-distribution-class.md)|Produz uma distribuição Bernoulli **bool** valores.|
+|[Classe bernoulli_distribution](../standard-library/bernoulli-distribution-class.md)|Produz uma distribuição de Bernoulli de valores **bool** .|
 |[Classe binomial_distribution](../standard-library/binomial-distribution-class.md)|Produz uma distribuição binomial de valores inteiros.|
 |[Classe geometric_distribution](../standard-library/geometric-distribution-class.md)|Produz uma distribuição geométrica de valores inteiros.|
 |[Classe negative_binomial_distribution](../standard-library/negative-binomial-distribution-class.md)|Produz uma distribuição binomial negativa de valores inteiros.|
@@ -358,7 +358,7 @@ As seções a seguir listam as distribuições fornecidas no \<aleatório > cabe
 |-|-|
 |[Classe cauchy_distribution](../standard-library/cauchy-distribution-class.md)|Produz uma distribuição de Cauchy de valores reais (ponto flutuante).|
 |[Classe chi_squared_distribution](../standard-library/chi-squared-distribution-class.md)|Produz uma distribuição qui-quadrada de valores reais (ponto flutuante).|
-|[Classe fisher_f_distribution](../standard-library/fisher-f-distribution-class.md)|Produz uma distribuição F (também conhecido como F de snedecor distribuição ou distribuição Fisher Snedecor) de valores reais (ponto flutuante).|
+|[Classe fisher_f_distribution](../standard-library/fisher-f-distribution-class.md)|Produz uma distribuição F (também conhecida como distribuição F do Snedecor ou a distribuição Fisher-Snedecor) de valores reais (ponto flutuante).|
 |[Classe lognormal_distribution](../standard-library/lognormal-distribution-class.md)|Produz uma distribuição normal de log de valores reais (ponto flutuante).|
 |[Classe normal_distribution](../standard-library/normal-distribution-class.md)|Produz uma distribuição normal (Gaussian) de valores reais (ponto flutuante).|
 |[Classe student_t_distribution](../standard-library/student-t-distribution-class.md)|Produz uma *t*-distribution de valores reais (ponto flutuante).|
@@ -389,7 +389,7 @@ As seções a seguir listam as distribuições fornecidas no \<aleatório > cabe
 
 ### <a name="utility-functions"></a>Funções do Utilitário
 
-Esta seção lista as funções de utilitário gerais fornecidas no \<aleatório > cabeçalho.
+Esta seção lista as funções de utilitário gerais fornecidas no \<cabeçalho > aleatório.
 
 |||
 |-|-|
@@ -397,7 +397,7 @@ Esta seção lista as funções de utilitário gerais fornecidas no \<aleatório
 
 ### <a name="operators"></a>Operadores
 
-Esta seção lista os operadores fornecidos no \<aleatório > cabeçalho.
+Esta seção lista os operadores fornecidos no \<cabeçalho > aleatório.
 
 |||
 |-|-|
@@ -408,13 +408,13 @@ Esta seção lista os operadores fornecidos no \<aleatório > cabeçalho.
 
 ## <a name="engdist"></a> Mecanismos e distribuições
 
-Consulte as seções a seguir para obter informações sobre cada uma dessas categorias de classe de modelo definidas no \<aleatória >. Ambas essas categorias de classe de modelo assumem um tipo como um argumento e usam nomes de parâmetro de modelo compartilhados para descrever as propriedades de tipo que são permitidas como um tipo de argumento real, como a seguir:
+Consulte as seções a seguir para obter informações sobre cada uma dessas categorias de classe de \<modelo definidas em > aleatórios. Ambas essas categorias de classe de modelo assumem um tipo como um argumento e usam nomes de parâmetro de modelo compartilhados para descrever as propriedades de tipo que são permitidas como um tipo de argumento real, como a seguir:
 
-- `IntType` indica um **curto**, **int**, **longo**, **long long**, **unsigned short**,  **int sem sinal**, **unsigned long**, ou **longo longo sem sinal**.
+- `IntType`indica um **curto**, **inteiro**, **longo**, **longo**, demorado, não assinado, **inteiro**, sem sinal, **longo**ou **sem**sinal longo.
 
-- `UIntType` indica **unsigned short**, **unsigned int**, **unsigned long**, ou **longo longo sem sinal**.
+- `UIntType`indica **não assinado**, **int**sem sinal, **longo**não assinado ou longo e **não assinado**.
 
-- `RealType` indica um **float**, **duplo**, ou **longo duplo**.
+- `RealType`indica um ponto **flutuante**, **duplo**ou **longo Duplo**.
 
 ### <a name="engines"></a>Mecanismos
 
@@ -440,7 +440,7 @@ Cada mecanismo e adaptador do mecanismo possuem os seguintes membros:
 
 - Um construtor explícito com o argumento `seed_seq& seq` que cria uma gerador propagado como se fosse chamando `seed(seq)`.
 
-- `void discard(unsigned long long count)` efetivamente chama `operator()` `count` vezes e descarta cada valor.
+- `void discard(unsigned long long count)``operator()` chama`count` efetivamente os horários e descarta cada valor.
 
 **Adaptadores do mecanismo** também dão suporte a esses membros (`Engine` é o primeiro parâmetro de modelo de um adaptador do mecanismo, designando o tipo do mecanismo básico):
 
@@ -509,4 +509,4 @@ Por definição, resultados do `random_device` não são reproduzíveis e um efe
 
 ## <a name="see-also"></a>Consulte também
 
-[Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)<br/>
+[Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)

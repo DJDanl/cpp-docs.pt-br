@@ -7,16 +7,16 @@ helpviewer_keywords:
 - random_access_iterator_tag class
 - random_access_iterator_tag struct
 ms.assetid: 59f5b741-c5b4-459c-ad0a-3b67cddeea23
-ms.openlocfilehash: 81e958750ab13c12e92b61e6971c40f3362ba22d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: edbd7ad33b2487060840ec690b363d7b934fec27
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62369872"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458313"
 ---
 # <a name="randomaccessiteratortag-struct"></a>Struct random_access_iterator_tag
 
-Uma classe que fornece um tipo de retorno para `iterator_category` função que representa um iterador de acesso aleatório.
+Uma classe que fornece um tipo de retorno `iterator_category` para a função que representa um iterador de acesso aleatório.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -26,9 +26,9 @@ struct random_access_iterator_tag    : public bidirectional_iterator_tag {};
 
 ## <a name="remarks"></a>Comentários
 
-As classes de marca de categoria são usadas como marcas de compilação para seleção de algoritmos. A função de modelo precisa encontrar a categoria mais específica do argumento iterador para que ela possa usar o algoritmo mais eficiente em tempo de compilação. Para cada iterador do tipo `Iterator`, `iterator_traits`< `Iterator`> **::iterator_category** deve ser definido para ser a marca de categoria mais específica que descreve o comportamento do iterador.
+As classes de marca de categoria são usadas como marcas de compilação para seleção de algoritmos. A função de modelo precisa encontrar a categoria mais específica do argumento iterador para que ela possa usar o algoritmo mais eficiente em tempo de compilação. Para cada iterador do tipo `Iterator`, `iterator_traits`< `Iterator`>  **::iterator_category** deve ser definido para ser a marca de categoria mais específica que descreve o comportamento do iterador.
 
-O tipo é o mesmo que **iterador** \< **Iter**> **:: iterator_category** quando `Iter` descreve um objeto que pode servir como um iterador de acesso aleatório.
+O tipo é o mesmo que  \< o iterador **ITER**>  **:: iterator_category** quando `Iter` descreve um objeto que pode servir como um iterador de acesso aleatório.
 
 ## <a name="example"></a>Exemplo
 
@@ -104,6 +104,6 @@ The iterators are not the same.
 
 ## <a name="see-also"></a>Consulte também
 
-[Struct bidirectional_iterator_tag](../standard-library/bidirectional-iterator-tag-struct.md)<br/>
-[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Referência da biblioteca padrão C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[Struct bidirectional_iterator_tag](../standard-library/bidirectional-iterator-tag-struct.md)\
+[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Referência da biblioteca padrão C++](../standard-library/cpp-standard-library-reference.md)

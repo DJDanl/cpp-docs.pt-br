@@ -31,12 +31,12 @@ f1_keywords:
 - ratio/std::deci
 - ratio/std::deca
 ms.assetid: 8543e912-2d84-45ea-b3c0-bd7bfacee405
-ms.openlocfilehash: 4279aa75bf4e9b8a0c7a86f102f70164bbb620e0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f84bea2e3f4a01bb9428eddde3efbf53b73bc2f3
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62369625"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458160"
 ---
 # <a name="ltratiogt"></a>&lt;ratio&gt;
 
@@ -48,7 +48,7 @@ Inclua o cabeçalho padrão \<ratio> para definir as constantes e os modelos que
 #include <ratio>
 ```
 
-### <a name="ratio-template"></a>taxa de modelo
+### <a name="ratio-template"></a>Modelo de taxa
 
 ```cpp
 template<std::intmax_t Numerator, std::intmax_t Denominator = 1>
@@ -60,7 +60,7 @@ struct ratio // holds the ratio of Numerator to Denominator
 }
 ```
 
-O modelo `ratio` define as constantes estáticas `num` e `den` , de modo que `num`  /  `den` = = Numerador / Denominador e `num` e `den` têm nenhum fator comum. `num` / `den` é o valor que é representado pela classe de modelo. Portanto, `type` designa a instanciação `ratio<num, den>`.
+O modelo `ratio` define as constantes `num` estáticas `den` e, `num` por exemplo,  /  `den` = = numerador `den` /denominador e `num` não têm fatores comuns. `num` / `den`é o valor que é representado pela classe de modelo. Portanto, `type` designa a `ratio<num, den>`instanciação.
 
 ### <a name="specializations"></a>Especializações
 
@@ -85,7 +85,7 @@ Cada especialização adota dois parâmetros de modelo que também devem ser esp
 
 ### <a name="typedefs"></a>typedefs
 
-Para sua conveniência, o cabeçalho define as taxas para os prefixos de SI padrão:
+Para sua conveniência, o cabeçalho define as proporções para os prefixos de SI padrão:
 
 ```cpp
 typedef ratio<1, 1000000000000000000> atto;
@@ -108,4 +108,4 @@ typedef ratio<1000000000000000000, 1> exa;
 
 ## <a name="see-also"></a>Consulte também
 
-[Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)<br/>
+[Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)

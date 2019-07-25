@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - is_nothrow_assignable
 ms.assetid: aa3aca92-308b-4b1d-b3f3-c54216c48fe7
-ms.openlocfilehash: c59c3623f9c9548a7b7e59d0c56a2acd4d3883a3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9ee8b5f97c92b6eb378db40f93696e5e6c554205
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383614"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456015"
 ---
 # <a name="isnothrowassignable-class"></a>Classe is_nothrow_assignable
 
-Testa se um valor de *partir* tipo pode ser atribuído a *para* tipo e a atribuição não efetua lançamentos.
+Testa se um valor de *do* tipo pode ser atribuído ao *tipo e* a atribuição é conhecida como não acionada.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -26,15 +26,15 @@ struct is_nothrow_assignable;
 
 ### <a name="parameters"></a>Parâmetros
 
-*To*<br/>
+*Para*\
 O tipo do objeto que recebe a atribuição.
 
-*From*<br/>
+*De*\
 O tipo do objeto que fornece o valor.
 
 ## <a name="remarks"></a>Comentários
 
-A expressão `declval<To>() = declval<From>()` deve ser bem formada e o compilador deve ter o conhecimento de que ela não efetua lançamentos. Ambos *partir* e *à* devem ser tipos completos, **void**, ou matrizes de limite desconhecido.
+A expressão `declval<To>() = declval<From>()` deve ser bem formada e o compilador deve ter o conhecimento de que ela não efetua lançamentos. Tanto *de* e *para* devem ser tipos completos, **void**ou matrizes de associação desconhecida.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -44,4 +44,4 @@ A expressão `declval<To>() = declval<From>()` deve ser bem formada e o compilad
 
 ## <a name="see-also"></a>Consulte também
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)
