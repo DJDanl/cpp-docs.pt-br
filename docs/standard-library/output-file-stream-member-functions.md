@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - output streams [C++], member functions
 ms.assetid: 38aaf710-8035-4a34-a0c4-123a5327f28a
-ms.openlocfilehash: eba627c69437754a9c0a819167443aa00c025fef
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8c23008d0c46a532f11e89442328ed25cc203077
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62370834"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68453060"
 ---
 # <a name="output-file-stream-member-functions"></a>Funções de Membro de Fluxo de Arquivo de Saída
 
@@ -17,9 +17,9 @@ Funções de membro de fluxo de saída têm três tipos: aqueles que são equiva
 
 ## <a name="the-open-function-for-output-streams"></a>A função open para fluxos de saída
 
-Para usar um fluxo de arquivo de saída ([ofstream](../standard-library/basic-ofstream-class.md)), você deve associar esse fluxo com um arquivo de disco específico no construtor ou o `open` função. Se você usar o `open` função, você pode reutilizar o mesmo objeto de fluxo com uma série de arquivos. Em ambos os casos, os argumentos que descrevem o arquivo são os mesmos.
+Para usar um fluxo de arquivo de saída ([ofstream](../standard-library/basic-ofstream-class.md)), você deve associar esse fluxo a um arquivo de disco específico no construtor `open` ou na função. Se você usar a `open` função, poderá reutilizar o mesmo objeto de fluxo com uma série de arquivos. Em ambos os casos, os argumentos que descrevem o arquivo são os mesmos.
 
-Quando você abre o arquivo associado a um fluxo de saída, normalmente, você especifica um `open_mode` sinalizador. Você pode combinar esses sinalizadores, que são definidos como enumeradores na classe `ios`, com o operador OR bit a bit ( &#124; ). Consulte [ios_base::openmode](../standard-library/ios-base-class.md#openmode) para obter uma lista dos enumeradores.
+Quando você abre o arquivo associado a um fluxo de saída, geralmente especifica um `open_mode` sinalizador. Você pode combinar esses sinalizadores, que são definidos como enumeradores na classe `ios`, com o operador OR bit a bit ( &#124; ). Consulte [ios_base::openmode](../standard-library/ios-base-class.md#openmode) para obter uma lista dos enumeradores.
 
 Três situações de fluxo de saída comuns envolvem as opções de modo:
 
@@ -65,7 +65,7 @@ cout <<'A'; // Format arguments 'width' and 'fill' apply
 
 ## <a name="the-write"></a>A gravação
 
-O `write` função grava um bloco de memória em um fluxo de arquivo de saída. O argumento de tamanho especifica o número de bytes gravados. Este exemplo cria um fluxo de arquivo de saída e grava o valor binário da estrutura `Date` nele:
+A `write` função grava um bloco de memória em um fluxo de arquivo de saída. O argumento de tamanho especifica o número de bytes gravados. Este exemplo cria um fluxo de arquivo de saída e grava o valor binário da estrutura `Date` nele:
 
 ```cpp
 // write_function.cpp
@@ -86,7 +86,7 @@ int main( )
 }
 ```
 
-O `write` função não é interrompida quando atinge um caractere nulo, portanto, a estrutura de classe completa é gravada. A função leva dois argumentos: um **char** ponteiro e uma contagem de caracteres a serem gravados. Observe a conversão necessária para **char** <strong>\*</strong> antes do endereço do objeto de estrutura.
+A `write` função não é interrompida quando atinge um caractere nulo, portanto, a estrutura de classe completa é gravada. A função usa dois argumentos: um ponteiro de **caractere** e uma contagem de caracteres a serem gravados. Observe a conversão necessária para **Char** <strong>\*</strong> antes do endereço do objeto de estrutura.
 
 ## <a name="the-seekp-and-tellp-functions"></a>As funções seekp e tellp
 
@@ -94,9 +94,9 @@ Um fluxo de arquivo de saída mantém um ponteiro interno que aponta para a posi
 
 ## <a name="the-close-function-for-output-streams"></a>A função close para fluxos de saída
 
-O `close` função de membro fecha o arquivo de disco associado a um fluxo de arquivo de saída. O arquivo deve ser fechado para concluir todas as saídas de disco. Se necessário, o `ofstream` destruidor fecha o arquivo para você, mas você pode usar o `close` funcionar se você precisar abrir um outro arquivo para o mesmo objeto de fluxo.
+A `close` função membro fecha o arquivo de disco associado a um fluxo de arquivo de saída. O arquivo deve ser fechado para concluir todas as saídas de disco. Se necessário, o `ofstream` destruidor fecha o arquivo para você, mas você pode usar a `close` função se precisar abrir outro arquivo para o mesmo objeto de fluxo.
 
-O destruidor de fluxo de saída fecha automaticamente somente se do arquivo de um fluxo construtor ou o `open` função de membro abriu o arquivo. Se você passar para o construtor um descritor de arquivo para um arquivo já aberto ou usar o `attach` função de membro, você deve fechá-lo explicitamente.
+O destruidor de fluxo de saída fechará automaticamente o arquivo de um fluxo somente se `open` o construtor ou a função de membro abrir o arquivo. Se você passar o construtor de um descritor de arquivo para um arquivo já aberto ou `attach` usar a função membro, deverá fechar o arquivo explicitamente.
 
 ## <a name="vclrferrorprocessingfunctionsanchor10"></a> Erro ao processar funções
 
@@ -105,13 +105,13 @@ Use essas funções membro para testar se há erros ao gravar em um fluxo:
 |Função|Valor retornado|
 |--------------|------------------|
 |[bad](basic-ios-class.md#bad)|Retorna **true** se houver um erro irrecuperável.|
-|[fail](basic-ios-class.md#fail)|Retorna **true** se houver um erro irrecuperável ou uma condição “esperada”, como um erro de conversão ou se o arquivo não for encontrado. Processamento geralmente pode retomar após uma chamada para `clear` com um argumento de zero.|
+|[fail](basic-ios-class.md#fail)|Retorna **true** se houver um erro irrecuperável ou uma condição “esperada”, como um erro de conversão ou se o arquivo não for encontrado. O processamento pode ser retomado com `clear` frequência após uma chamada para com um argumento zero.|
 |[good](basic-ios-class.md#good)|Retorna **true** não se houver nenhuma condição de erro (recuperável ou não) e o sinalizador de fim de arquivo não estiver definido.|
 |[eof](basic-ios-class.md#eof)|Retorna **true** na condição de fim de arquivo.|
 |[clear](basic-ios-class.md#clear)|Define o estado de erro interno. Se chamado com os argumentos padrão, limpa todos os bits de erro.|
 |[rdstate](basic-ios-class.md#rdstate|Retorna o estado de erro atual.|
 
-O **!** operador está sobrecarregado para executar a mesma função que o `fail` função. Portanto, a expressão:
+O **!** o operador está sobrecarregado para executar a mesma função que a `fail` função. Portanto, a expressão:
 
 ```cpp
 if(!cout)...
@@ -135,8 +135,8 @@ if(cout)...
 if(!cout.fail())...
 ```
 
-O **void\*()** operador não é equivalente a `good` porque ele não testa o fim do arquivo.
+O **operador\*void ()** não é equivalente a `good` porque não é testado para o final do arquivo.
 
 ## <a name="see-also"></a>Consulte também
 
-[Fluxos de saída](../standard-library/output-streams.md)<br/>
+[Fluxos de saída](../standard-library/output-streams.md)

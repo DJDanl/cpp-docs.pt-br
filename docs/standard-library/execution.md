@@ -1,19 +1,19 @@
 ---
-title: '&lt;Execução&gt;'
+title: '&lt;chão&gt;'
 ms.date: 04/18/2019
 f1_keywords:
 - <execution>
 - std::<execution>
 helpviewer_keywords:
 - execution header
-ms.openlocfilehash: 3bce34019f9ed4880d72a9d16c3c8b78dde0e0e3
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 3b0ccd540c56500c2f265aa6192a12fc2d5078b0
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68268418"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457976"
 ---
-# <a name="ltexecutiongt"></a>&lt;Execução&gt;
+# <a name="ltexecutiongt"></a>&lt;chão&gt;
 
 Descreve as políticas de execução para algoritmos paralelos.
 
@@ -33,19 +33,19 @@ namespace std::execution {
 
 |||
 |-|-|
-|[is_execution_policy Struct](is-execution-policy-struct.md)|Detecta as políticas de execução com a finalidade de excluindo assinaturas de função de participação de resolução de sobrecarga ambígua caso contrário.|
-|[Classe de parallel_policy](parallel-policy-class.md)|Usado como um tipo exclusivo para resolver a ambiguidade de sobrecarga de algoritmo paralelo e indicam que a execução de um algoritmo paralelo pode ser paralelizada.|
-|[Classe de parallel_unsequenced_policy](parallel-unsequenced-policy-class.md)|Usado como um tipo exclusivo para resolver a ambiguidade de sobrecarga de algoritmo paralelo e indicam que a execução de um algoritmo paralelo pode ser colocados em paralelo e vetorizada.|
-|[Classe de sequenced_policy](sequenced-policy-class.md)|Usado como um tipo exclusivo para resolver a ambiguidade de sobrecarga de algoritmo paralelo e exigem a execução de um algoritmo paralelo não pode ser paralelizada.|
+|[Estrutura is_execution_policy](is-execution-policy-struct.md)|Detecta políticas de execução para a finalidade de excluir assinaturas de função da participação de resolução de sobrecarga ambígua de outra forma.|
+|[Classe parallel_policy](parallel-policy-class.md)|Usado como um tipo exclusivo para desambiguar a sobrecarga de algoritmo paralelo e indicar que a execução de um algoritmo paralelo pode ser paralelizada.|
+|[Classe parallel_unsequenced_policy](parallel-unsequenced-policy-class.md)|Usado como um tipo exclusivo para desambiguar a sobrecarga de algoritmo paralelo e indicar que a execução de um algoritmo paralelo pode ser paralelizada e vetorizada.|
+|[Classe sequenced_policy](sequenced-policy-class.md)|Usado como um tipo exclusivo para desambiguar a sobrecarga de algoritmo paralelo e exigir que a execução de um algoritmo paralelo não seja paralelizada.|
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** \<execução >
+**Cabeçalho:** \<> de execução
 
 **Namespace:** stdext
 
 ## <a name="see-also"></a>Consulte também
 
-[Referência de Arquivos de Cabeçalho](cpp-standard-library-header-files.md)<br/>
-[Acesso Thread-Safe na Biblioteca Padrão C++](thread-safety-in-the-cpp-standard-library.md)<br/>
+[Referência de Arquivos de Cabeçalho](cpp-standard-library-header-files.md)\
+[Acesso Thread-Safe na Biblioteca Padrão C++](thread-safety-in-the-cpp-standard-library.md)\
 [Referência da biblioteca padrão C++](cpp-standard-library-reference.md)

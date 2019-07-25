@@ -8,19 +8,19 @@ f1_keywords:
 helpviewer_keywords:
 - swap function
 ms.assetid: d8dd6436-fb97-46ed-bec5-052cfd710462
-ms.openlocfilehash: 48238e4a67fb656eac714a8732ee071e26847768
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 8d89a59e90c3e4258c8ca7bf9e981536f3779d4b
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220300"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450344"
 ---
 # <a name="swap-ltsample-containergt"></a>swap (&lt;sample container&gt;)
 
 > [!NOTE]
-> Este tópico é no Microsoft C++ como um exemplo não funcional de contêineres usados na documentação do C++ biblioteca padrão. Para obter mais informações, consulte [Contêineres da biblioteca padrão C++](../standard-library/stl-containers.md).
+> Este tópico está na documentação da C++ Microsoft como um exemplo não funcional de contêineres usados na biblioteca C++ padrão. Para obter mais informações, consulte [Contêineres da biblioteca padrão C++](../standard-library/stl-containers.md).
 
-Executa `left.` [permuta](../standard-library/container-class-swap.md)`(right)`.
+Executa a [permuta](../standard-library/container-class-swap.md)`(right)`. `left.`
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -33,4 +33,4 @@ void swap(
 
 ## <a name="see-also"></a>Consulte também
 
-[\<sample container>](../standard-library/sample-container.md)<br/>
+[\<sample container>](../standard-library/sample-container.md)

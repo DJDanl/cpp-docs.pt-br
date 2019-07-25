@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_empty class
 - is_empty
 ms.assetid: 44a6fc92-7e55-4fbe-9a24-2a0ce2dccba0
-ms.openlocfilehash: f5ab0798e0074547d62a4bcff4db412445346189
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6300107ecf9c4ea1e237a60bf18f26b6416f7fba
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62336591"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452705"
 ---
 # <a name="isempty-class"></a>Classe is_empty
 
@@ -27,12 +27,12 @@ struct is_empty;
 
 ### <a name="parameters"></a>Parâmetros
 
-*Ty*<br/>
+*Ty*\
 O tipo a ser consultado.
 
 ## <a name="remarks"></a>Comentários
 
-Uma instância do predicado de tipo será verdadeira se o tipo *Ty* é uma classe vazia, de outra forma, será falsa.
+Uma instância do predicado de tipo se manterá true se o tipo *Ty* for uma classe vazia, caso contrário, ela terá false.
 
 ## <a name="example"></a>Exemplo
 
@@ -78,4 +78,4 @@ is_empty<int> == false
 
 ## <a name="see-also"></a>Consulte também
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

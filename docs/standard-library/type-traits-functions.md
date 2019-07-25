@@ -24,12 +24,12 @@ helpviewer_keywords:
 - std::is_trivially_copy_assignable
 - std::is_trivially_move_assignable
 - std::is_trivially_move_constructible
-ms.openlocfilehash: d607e68bd61a4f9aa6c00ab66c5ded3ecd508082
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 48ca51d56994f3d487af6744801acedf5c6cc79c
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68241503"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447037"
 ---
 # <a name="lttypetraitsgt-functions"></a>Funções &lt;type_traits&gt;
 
@@ -43,7 +43,7 @@ ms.locfileid: "68241503"
 
 ## <a name="is_assignable"></a> is_assignable
 
-Testa se um valor de *partir* tipo pode ser atribuído a um *para* tipo.
+Testa se um valor do tipo *from* pode ser atribuído a um tipo *to* .
 
 ```cpp
 template <class To, class From>
@@ -52,15 +52,15 @@ struct is_assignable;
 
 ### <a name="parameters"></a>Parâmetros
 
-*To*<br/>
+*Para*\
 O tipo do objeto que recebe a atribuição.
 
-*From*<br/>
+*De*\
 O tipo do objeto que fornece o valor.
 
 ### <a name="remarks"></a>Comentários
 
-A expressão não avaliada `declval<To>() = declval<From>()` deve ser bem formada. Ambos *partir* e *à* devem ser tipos completos, **void**, ou matrizes de limite desconhecido.
+A expressão não avaliada `declval<To>() = declval<From>()` deve ser bem formada. Tanto *de* e *para* devem ser tipos completos, **void**ou matrizes de associação desconhecida.
 
 ## <a name="is_copy_assignable"></a> is_copy_assignable
 
@@ -73,12 +73,12 @@ struct is_copy_assignable;
 
 ### <a name="parameters"></a>Parâmetros
 
-*Ty*<br/>
+*Ty*\
 O tipo a ser consultado.
 
 ### <a name="remarks"></a>Comentários
 
-Uma instância do predicado de tipo será verdadeira se o tipo *Ty* é uma classe que tem um operador de atribuição, caso contrário, será falsa. Equivalente a is_assignable\<Ty&, const Ty&>.
+Uma instância do predicado de tipo se aplica true se o tipo *Ty* é uma classe que tem um operador de atribuição de cópia, caso contrário, ela mantém false. Equivalente a is_assignable\<Ty&, const Ty&>.
 
 ## <a name="is_copy_constructible"></a> is_copy_constructible
 
@@ -91,12 +91,12 @@ struct is_copy_constructible;
 
 ### <a name="parameters"></a>Parâmetros
 
-*Ty*<br/>
+*Ty*\
 O tipo a ser consultado.
 
 ### <a name="remarks"></a>Comentários
 
-Uma instância do predicado de tipo será verdadeira se o tipo *Ty* é uma classe que tem um construtor de cópia, caso contrário, será falsa.
+Uma instância do predicado de tipo se aplica true se o tipo *Ty* é uma classe que tem um construtor de cópia, caso contrário, ela mantém false.
 
 ### <a name="example"></a>Exemplo
 
@@ -143,12 +143,12 @@ struct is_default_constructible;
 
 ### <a name="parameters"></a>Parâmetros
 
-*T*<br/>
+*T*\
 O tipo a ser consultado.
 
 ### <a name="remarks"></a>Comentários
 
-Uma instância do predicado de tipo será verdadeira se o tipo *T* é um tipo de classe que tem um construtor padrão, caso contrário, será falsa. Isso é equivalente ao predicado `is_constructible<T>`. Tipo de *T* deve ser um tipo completo, **void**, ou uma matriz de limite desconhecido.
+Uma instância do predicado de tipo fica true se o tipo *T* é um tipo de classe que tem um construtor padrão, caso contrário, ele mantém false. Isso é equivalente ao predicado `is_constructible<T>`. O tipo *T* deve ser um tipo completo, **void**ou uma matriz de limite desconhecido.
 
 ### <a name="example"></a>Exemplo
 
@@ -195,7 +195,7 @@ struct is_move_assignable;
 
 ### <a name="parameters"></a>Parâmetros
 
-*T*<br/>
+*T*\
 O tipo a ser consultado.
 
 ### <a name="remarks"></a>Comentários
@@ -213,12 +213,12 @@ struct is_move_constructible;
 
 ### <a name="parameters"></a>Parâmetros
 
-*T*<br/>
+*T*\
 O tipo a ser avaliado
 
 ### <a name="remarks"></a>Comentários
 
-Um predicado de tipo que é avaliada como true se o tipo *T* podem ser construídos por meio de uma operação de movimentação. Esse predicado é equivalente a `is_constructible<T, T&&>`.
+Um predicado de tipo que será avaliado como true se o tipo *T* puder ser construído usando uma operação de movimentação. Esse predicado é equivalente a `is_constructible<T, T&&>`.
 
 ## <a name="is_nothrow_move_assignable"></a> is_nothrow_move_assignable
 
@@ -231,32 +231,32 @@ struct is_nothrow_move_assignable;
 
 ### <a name="parameters"></a>Parâmetros
 
-*Ty*<br/>
+*Ty*\
 O tipo a ser consultado.
 
 ### <a name="remarks"></a>Comentários
 
-Uma instância do predicado de tipo será verdadeira se o tipo *Ty* tem um nothrow mover operador de atribuição, caso contrário, será falsa.
+Uma instância do predicado de tipo se aplica true se o tipo *Ty* tiver um operador de atribuição de movimentação nothrow; caso contrário, ele será false.
 
-## <a name="is_nothrow_swappable"></a>  is_nothrow_swappable
+## <a name="is_nothrow_swappable"></a>is_nothrow_swappable
 
 ```cpp
 template <class T> struct is_nothrow_swappable;
 ```
 
-## <a name="is_nothrow_swappable_with"></a>  is_nothrow_swappable_with
+## <a name="is_nothrow_swappable_with"></a>is_nothrow_swappable_with
 
 ```cpp
 template <class T, class U> struct is_nothrow_swappable_with;
 ```
 
-## <a name="is_swappable"></a>  is_swappable
+## <a name="is_swappable"></a>is_swappable
 
 ```cpp
 template <class T> struct is_swappable;
 ```
 
-## <a name="is_swappable_with"></a>  is_swappable_with
+## <a name="is_swappable_with"></a>is_swappable_with
 
 ```cpp
 template <class T, class U> struct is_swappable_with;
@@ -273,14 +273,14 @@ struct is_trivially_copy_assignable;
 
 ### <a name="parameters"></a>Parâmetros
 
-*T*<br/>
+*T*\
 O tipo a ser consultado.
 
 ### <a name="remarks"></a>Comentários
 
-Uma instância do predicado de tipo será verdadeira se o tipo *T* é uma classe que tem um cópia trivial operador de atribuição, caso contrário, será falsa.
+Uma instância do predicado de tipo fica true se o tipo *T* é uma classe que tem um operador de atribuição de cópia trivial, caso contrário, ela mantém false.
 
-Um construtor de atribuição para uma classe *T* será trivial se for implicitamente fornecido, a classe *T* não tiver funções virtuais, a classe *T* não tiver bases virtuais, as classes de todos os membros de dados não estáticos do tipo de classe tiverem operadores de atribuição triviais e as classes de todos os membros de dados não estáticos da matriz de tipo de classe tiverem operadores de atribuição trivial.
+Um construtor de atribuição para uma classe *t* é trivial se for fornecido implicitamente, a classe *t* não tem nenhuma função virtual, a classe *t* não tem bases virtuais, as classes de todos os membros de dados não estáticos do tipo de classe têm atribuição trivial os operadores e as classes de todos os membros de dados não estáticos do tipo matriz de classe têm operadores de atribuição triviais.
 
 ## <a name="is_trivially_move_assignable"></a> is_trivially_move_assignable
 
@@ -293,20 +293,20 @@ struct is_trivially_move_assignable;
 
 ### <a name="parameters"></a>Parâmetros
 
-*Ty*<br/>
+*Ty*\
 O tipo a ser consultado.
 
 ### <a name="remarks"></a>Comentários
 
-Uma instância do predicado de tipo será verdadeira se o tipo *Ty* é uma classe que tem um movimentação trivial operador de atribuição, caso contrário, será falsa.
+Uma instância do predicado de tipo se aplica true se o tipo *Ty* é uma classe que tem um operador de atribuição de movimento trivial, caso contrário, ela mantém false.
 
 Um operador de atribuição de movimentação para uma classe *Ty* é trivial se:
 
 for fornecido implicitamente
 
-a classe *Ty* não tiver funções virtuais
+a classe *Ty* não tem nenhuma função virtual
 
-a classe *Ty* não tiver bases virtuais
+a classe *Ty* não tem bases virtuais
 
 as classes de todos os membros de dados não estáticos do tipo de classe tiverem operadores de atribuição de movimentação trivial
 
@@ -323,26 +323,26 @@ struct is_trivially_move_constructible;
 
 ### <a name="parameters"></a>Parâmetros
 
-*Ty*<br/>
+*Ty*\
 O tipo a ser consultado.
 
 ### <a name="remarks"></a>Comentários
 
-Uma instância do predicado de tipo será verdadeira se o tipo *Ty* é uma classe que tem um construtor de movimentação trivial caso contrário, será falsa.
+Uma instância do predicado de tipo se aplica true se o tipo *Ty* é uma classe que tem um construtor de movimentação trivial, caso contrário, ela mantém false.
 
-Um construtor de movimentação de uma classe *Ty* é trivial se:
+Um construtor de movimentação para uma classe *Ty* é trivial se:
 
 for implicitamente declarado
 
 seus tipos de parâmetro forem equivalentes aos de uma declaração implícita
 
-a classe *Ty* não tiver funções virtuais
+a classe *Ty* não tem nenhuma função virtual
 
-a classe *Ty* não tiver bases virtuais
+a classe *Ty* não tem bases virtuais
 
 a classe não tiver membros de dados não estáticos voláteis
 
-todas as bases diretas da classe *Ty* tiverem construtores de movimentação trivial
+todas as bases diretas da classe *Ty* têm construtores de movimentação trivial
 
 as classes de todos os membros de dados não estáticos do tipo de classe tiverem construtores de movimentação trivial
 
@@ -350,4 +350,4 @@ as classes de todos os membros de dados não estáticos da matriz de tipo de cla
 
 ## <a name="see-also"></a>Consulte também
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

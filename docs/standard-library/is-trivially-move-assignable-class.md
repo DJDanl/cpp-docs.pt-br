@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_trivially_move_assignable
 ms.assetid: 374f7322-0706-4bc1-a1a5-4191d0315e28
-ms.openlocfilehash: b25d16658def4e3cf620ab707d2dabacb2620f33
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 324e4a1f1bd3528f09f21c5e485ac814038b7517
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413380"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448375"
 ---
 # <a name="istriviallymoveassignable-class"></a>Classe is_trivially_move_assignable
 
@@ -26,20 +26,20 @@ struct is_trivially_move_assignable;
 
 ### <a name="parameters"></a>Parâmetros
 
-*Ty*<br/>
+*Ty*\
 O tipo a ser consultado.
 
 ## <a name="remarks"></a>Comentários
 
-Uma instância do predicado de tipo será verdadeira se o tipo *Ty* é uma classe que tem um movimentação trivial operador de atribuição, caso contrário, será falsa.
+Uma instância do predicado de tipo se aplica true se o tipo *Ty* é uma classe que tem um operador de atribuição de movimento trivial, caso contrário, ela mantém false.
 
 Um operador de atribuição de movimentação para uma classe *Ty* é trivial se:
 
 for fornecido implicitamente
 
-a classe *Ty* não tiver funções virtuais
+a classe *Ty* não tem nenhuma função virtual
 
-a classe *Ty* não tiver bases virtuais
+a classe *Ty* não tem bases virtuais
 
 as classes de todos os membros de dados não estáticos do tipo de classe tiverem operadores de atribuição de movimentação trivial
 
@@ -53,4 +53,4 @@ as classes de todos os membros de dados não estáticos da matriz de tipo da cla
 
 ## <a name="see-also"></a>Consulte também
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

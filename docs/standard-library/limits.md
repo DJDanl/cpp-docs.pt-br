@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - limits header
 ms.assetid: e07d6379-5b00-4a3d-a789-40d41538b59e
-ms.openlocfilehash: e23c47b3eaecec92e462af7b2cc47627c5bad86a
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: de8f815cd59b84a1e63c231e18e4882d0b5d6f09
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68245311"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447566"
 ---
 # <a name="ltlimitsgt"></a>&lt;limites&gt;
 
@@ -26,7 +26,7 @@ Define a classe de modelo `numeric_limits` e duas enumerações relacionadas a r
 
 ## <a name="remarks"></a>Comentários
 
-Especializações explícitas a `numeric_limits` classe descrevem muitas propriedades dos tipos fundamentais, incluindo o caractere, inteiro e tipos de ponto flutuante e **bool** que são implementação definida e não fixados pelas as regras da linguagem C++. Propriedades descritas em \<limits> incluem precisão, representações de tamanho mínimo e máximo, arredondamento e erros de tipo de sinalização.
+Especializações explícitas da `numeric_limits` classe descrevem muitas propriedades dos tipos fundamentais, incluindo o caractere, o inteiro e os tipos de ponto flutuante e **bool** que são definidos em vez de serem corrigidos pelas regras do C++idioma. Propriedades descritas em \<limits> incluem precisão, representações de tamanho mínimo e máximo, arredondamento e erros de tipo de sinalização.
 
 ## <a name="members"></a>Membros
 
@@ -45,5 +45,5 @@ Especializações explícitas a `numeric_limits` classe descrevem muitas proprie
 
 ## <a name="see-also"></a>Consulte também
 
-[Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)\
+[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

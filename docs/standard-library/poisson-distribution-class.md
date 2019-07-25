@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::poisson_distribution [C++], param_type
 - std::poisson_distribution [C++], param_type
 ms.assetid: 09614281-349a-45f7-8e95-c0196be0a937
-ms.openlocfilehash: 2653af7b0582995f8a2643486585fca6a5edc395
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 19fab66c3ffca428114e4586c4ad6d6de3fdbf83
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66450163"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458459"
 ---
 # <a name="poissondistribution-class"></a>Classe poisson_distribution
 
@@ -67,8 +67,8 @@ public:
 
 ### <a name="parameters"></a>Parâmetros
 
-*IntType*<br/>
-O tipo de resultado do inteiro assume como padrão **int**. Para encontrar os tipos possíveis, consulte [\<random>](../standard-library/random.md).
+*IntType*\
+O tipo de resultado inteiro, o padrão é **int**. Para encontrar os tipos possíveis, consulte [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Comentários
 
@@ -207,10 +207,10 @@ explicit binomial_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parâmetros
 
-*mean*<br/>
+*significa*\
 O parâmetro de distribuição `mean`.
 
-*parm*<br/>
+*Parm*\
 A estrutura do parâmetro usada para construir a distribuição.
 
 ### <a name="remarks"></a>Comentários
@@ -248,4 +248,4 @@ Essa estrutura pode ser enviada ao construtor de classe de distribuição na ins
 
 ## <a name="see-also"></a>Consulte também
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

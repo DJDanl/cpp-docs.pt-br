@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::extreme_value_distribution [C++], param_type
 - std::extreme_value_distribution [C++], param_type
 ms.assetid: a0cd8370-0a54-4e26-9388-8b9678fb57da
-ms.openlocfilehash: 5bc0270cb24fcff93d995e8908daaec62c956371
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 810a02e620e6b38732daf611d3b44a4a277322a5
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66451193"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457769"
 ---
 # <a name="extremevaluedistribution-class"></a>Classe extreme_value_distribution
 
@@ -71,15 +71,15 @@ public:
 
 ### <a name="parameters"></a>Parâmetros
 
-*RealType*<br/>
-O tipo de resultado de ponto flutuante assume como padrão **duplas**. Para encontrar os tipos possíveis, consulte [\<random>](../standard-library/random.md).
+*RealType*\
+O tipo de resultado de ponto flutuante, assume o padrão de **Double**. Para encontrar os tipos possíveis, consulte [\<random>](../standard-library/random.md).
 
-*URNG*<br/>
-O mecanismo gerador números aleatórios. Para encontrar os tipos possíveis, consulte [\<random>](../standard-library/random.md).
+*URNG*\
+O mecanismo do gerador de número aleatório. Para encontrar os tipos possíveis, consulte [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Comentários
 
-A classe de modelo descreve uma distribuição que produz valores de um usuário especificado pelo ponto flutuantes tipo ou tipo **duplas** caso nenhum seja fornecido, distribuído de acordo com a distribuição Extreme Value. A tabela a seguir contém links para artigos sobre cada um dos membros.
+A classe de modelo descreve uma distribuição que produz valores de um tipo de ponto flutuante especificado pelo usuário ou tipo **Double** se nenhum for fornecido, distribuído de acordo com a distribuição de valor extremo. A tabela a seguir contém links para artigos sobre cada um dos membros.
 
 ||||
 |-|-|-|
@@ -192,13 +192,13 @@ explicit extreme_value_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parâmetros
 
-*a_value*<br/>
+*a_value*\
 O parâmetro de distribuição `a`.
 
-*b_value*<br/>
+*b_value*\
 O parâmetro de distribuição `b`.
 
-*parm*<br/>
+*Parm*\
 A estrutura `param_type` usada para construir a distribuição.
 
 ### <a name="remarks"></a>Comentários
@@ -227,13 +227,13 @@ struct param_type {
 
 ### <a name="parameters"></a>Parâmetros
 
-*a_value*<br/>
+*a_value*\
 O parâmetro de distribuição `a`.
 
-*b_value*<br/>
+*b_value*\
 O parâmetro de distribuição `b`.
 
-*right*<br/>
+*Certo*\
 O objeto `param_type` a ser comparado a este.
 
 ### <a name="remarks"></a>Comentários
@@ -244,4 +244,4 @@ Essa estrutura pode ser enviada ao construtor de classe de distribuição na ins
 
 ## <a name="see-also"></a>Consulte também
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

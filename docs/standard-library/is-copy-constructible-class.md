@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_copy_constructible
 ms.assetid: d8db9d4c-21ed-4884-bead-0b0b562de007
-ms.openlocfilehash: c85d036efda2509885a079cf59a130a63c0389bc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 70de134fa0cb3e9d6b0259135372f37b9c017e92
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62336625"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452802"
 ---
 # <a name="iscopyconstructible-class"></a>Classe is_copy_constructible
 
@@ -26,12 +26,12 @@ struct is_copy_constructible;
 
 ### <a name="parameters"></a>Parâmetros
 
-*Ty*<br/>
+*Ty*\
 O tipo a ser consultado.
 
 ## <a name="remarks"></a>Comentários
 
-Uma instância do predicado de tipo será verdadeira se o tipo *Ty* é uma classe que tem um construtor de cópia, caso contrário, será falsa.
+Uma instância do predicado de tipo se aplica true se o tipo *Ty* é uma classe que tem um construtor de cópia, caso contrário, ela mantém false.
 
 ## <a name="example"></a>Exemplo
 
@@ -75,4 +75,4 @@ is_copy_constructible<NotCopyable > == false
 
 ## <a name="see-also"></a>Consulte também
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

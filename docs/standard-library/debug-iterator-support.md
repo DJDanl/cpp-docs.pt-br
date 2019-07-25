@@ -11,12 +11,12 @@ helpviewer_keywords:
 - incompatible iterators
 - debug iterator support
 ms.assetid: f3f5bd15-4be8-4d64-a4d0-8bc0761c68b6
-ms.openlocfilehash: 9042093bb073807e9bb1476ab514c82010aeab70
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3ccb618c9a3c6b21d6ffe3fbbce7b6c1140e0564
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394046"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450582"
 ---
 # <a name="debug-iterator-support"></a>Suporte a Iterador de Depuração
 
@@ -54,7 +54,7 @@ int main() {
 }
 ```
 
-## <a name="using-iteratordebuglevel"></a>Using _ITERATOR_DEBUG_LEVEL
+## <a name="using-iteratordebuglevel"></a>Usando _ITERATOR_DEBUG_LEVEL
 
 É possível usar a macro do pré-processador [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) para desligar o recurso do iterador de depuração em um build de depuração. Esse programa não é declarado, mas ainda dispara um comportamento indefinido.
 
@@ -87,7 +87,7 @@ int main() {
 -572662307
 ```
 
-## <a name="unitialized-iterators"></a>Iteradores não inicializados
+## <a name="unitialized-iterators"></a>Iteradores unitialized
 
 Uma declaração também ocorrerá se você tentar usar um iterador antes de ele ser inicializado, conforme mostrado aqui:
 
@@ -128,9 +128,9 @@ int main()
 
 Observe que esse exemplo usa a expressão lambda `[] (int& elem) { elem *= 2; }` em vez de um functor. Embora essa escolha não tenha efeito sobre a falha de declaração – um functor semelhante causaria a mesma falha –, lambdas são uma maneira muito útil de realizar tarefas compactas de objeto de função. Para obter mais informações sobre expressões lambda, consulte [Expressões lambda](../cpp/lambda-expressions-in-cpp.md).
 
-## <a name="iterators-going-out-of-scope"></a>Iteradores indo fora do escopo
+## <a name="iterators-going-out-of-scope"></a>Iteradores saindo do escopo
 
-Verificações do iterador de depuração também fazem com que uma variável do iterador declarada em um **para** loop fique fora do escopo quando o **para** término do escopo de loop.
+As verificações do iterador de depuração também causam uma variável de iterador que é declarada em um loop **for** fora do escopo quando o escopo **do loop for** termina.
 
 ```cpp
 // iterator_debugging_4.cpp
@@ -148,7 +148,7 @@ int main() {
 
 ## <a name="destructors-for-debug-iterators"></a>Destruidores para iteradores de depuração
 
-Iteradores de depuração têm destruidores não triviais. Se um destruidor não é executado, mas a memória do objeto é liberada, pode ocorrer corrupção de dados e violações de acesso. Considere este exemplo:
+Iteradores de depuração têm destruidores não triviais. Se um destruidor não for executado, mas a memória do objeto for liberada, poderão ocorrer violações de acesso e corrupção de dados. Considere este exemplo:
 
 ```cpp
 // iterator_debugging_5.cpp
@@ -175,4 +175,4 @@ struct derived : base {
 
 ## <a name="see-also"></a>Consulte também
 
-[Visão geral da biblioteca padrão C++](../standard-library/cpp-standard-library-overview.md)<br/>
+[Visão geral da biblioteca padrão C++](../standard-library/cpp-standard-library-overview.md)

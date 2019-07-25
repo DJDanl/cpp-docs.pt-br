@@ -4,17 +4,17 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - clear method
 ms.assetid: 725f2717-5dc2-428f-a19a-05f046aafb2b
-ms.openlocfilehash: c3579603b55ed3b0c00f5cd256fc71d4a20afd27
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 7d617a1eb83a96c5d219e2de28a1fa6d053e1253
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221714"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457249"
 ---
 # <a name="container-classclear"></a>Classe de Contêiner::clear
 
 > [!NOTE]
-> Este tópico é no Microsoft C++ como um exemplo não funcional de contêineres usados na documentação do C++ biblioteca padrão. Para obter mais informações, consulte [Contêineres da biblioteca padrão C++](../standard-library/stl-containers.md).
+> Este tópico está na documentação da C++ Microsoft como um exemplo não funcional de contêineres usados na biblioteca C++ padrão. Para obter mais informações, consulte [Contêineres da biblioteca padrão C++](../standard-library/stl-containers.md).
 
 Chama [erase](../standard-library/container-class-erase.md)([begin](../standard-library/container-class-begin.md), [end](../standard-library/container-class-end.md)).
 
@@ -27,4 +27,4 @@ void clear();
 
 ## <a name="see-also"></a>Consulte também
 
-[Classe de contêiner de amostra](../standard-library/sample-container-class.md)<br/>
+[Classe de contêiner de amostra](../standard-library/sample-container-class.md)

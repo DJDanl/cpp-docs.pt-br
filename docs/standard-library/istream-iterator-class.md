@@ -12,12 +12,12 @@ helpviewer_keywords:
 - std::istream_iterator [C++], istream_type
 - std::istream_iterator [C++], traits_type
 ms.assetid: fb52a8cd-7f71-48d1-b73e-4b064e2a8d16
-ms.openlocfilehash: f8fc1593db8ddacefb4a231be76ca6d7cbd30849
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 941d625e388edc75dfe25a2de0e609c6d955ff19
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413314"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447753"
 ---
 # <a name="istreamiterator-class"></a>Classe istream_iterator
 
@@ -36,16 +36,16 @@ class istream_iterator
 
 ### <a name="parameters"></a>Parâmetros
 
-*Tipo*<br/>
+*Escreva*\
 O tipo de objeto a ser extraído do fluxo de entrada.
 
-*CharType*<br/>
-O tipo que representa o tipo de caractere para `istream_iterator`. Esse argumento é opcional e o valor padrão é **char**.
+*CharType*\
+O tipo que representa o tipo de caractere para `istream_iterator`. Esse argumento é opcional e o valor padrão é **Char**.
 
-*Características*<br/>
+*Características*\
 O tipo que representa o tipo de caractere para `istream_iterator`. Esse argumento é opcional e o valor padrão é `char_traits`< `CharType`>.
 
-*Distância*<br/>
+*Alcance*\
 Um tipo integral com sinal que representa o tipo de diferença para `istream_iterator`. Esse argumento é opcional e o valor padrão é `ptrdiff_t`.
 
 Depois de construir ou incrementar um objeto da classe istream_iterator com um ponteiro armazenado não nulo, o objeto tenta extrair e armazenar um objeto do tipo `Type` do fluxo de entrada associado. Se a extração falhar, o objeto substitui eficientemente o ponteiro armazenado por um ponteiro nulo, criando um indicador de fim de sequência.
@@ -138,12 +138,12 @@ istream_iterator(istream_type& _Istr);
 
 ### <a name="parameters"></a>Parâmetros
 
-*_Istr*<br/>
+*_Istr*\
 O fluxo de entrada a ser lido usado para inicializar o `istream_iterator`.
 
 ### <a name="remarks"></a>Comentários
 
-O primeiro construtor inicializa o ponteiro de fluxo de entrada com um ponteiro nulo e cria um iterador de fim do fluxo. O segundo construtor inicializa o ponteiro de fluxo de entrada com *& _Istr*, em seguida, tenta extrair e armazenar um objeto do tipo `Type`.
+O primeiro construtor inicializa o ponteiro de fluxo de entrada com um ponteiro nulo e cria um iterador de fim do fluxo. O segundo construtor inicializa o ponteiro de fluxo de entrada com *& _Istr*e, em seguida, tenta extrair e armazenar `Type`um objeto do tipo.
 
 O iterador de fim do fluxo pode ser usado para testar se um `istream_iterator` atingiu o final de um fluxo.
 
@@ -255,7 +255,7 @@ O valor de um membro, se houver.
 
 ### <a name="remarks"></a>Comentários
 
-`i->m` é equivalente a `(*i).m`
+`i->m`é equivalente a`(*i).m`
 
 O operador retorna `&*this`.
 
@@ -303,7 +303,7 @@ istream_iterator<Type, CharType, Traits, Distance> operator++(int);
 
 ### <a name="return-value"></a>Valor de retorno
 
-O primeiro operador membro retorna uma referência ao objeto incrementado do tipo `Type` extraído do fluxo de entrada e a segunda função de membro retorna uma cópia do objeto.
+O primeiro operador de membro retorna uma referência ao objeto incrementado do tipo `Type` extraído do fluxo de entrada e a segunda função de membro retorna uma cópia do objeto.
 
 ### <a name="example"></a>Exemplo
 
@@ -386,8 +386,8 @@ int main( )
 
 ## <a name="see-also"></a>Consulte também
 
-[Struct input_iterator_tag](../standard-library/input-iterator-tag-struct.md)<br/>
-[Struct iterator](../standard-library/iterator-struct.md)<br/>
-[\<iterator>](../standard-library/iterator.md)<br/>
-[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Referência da biblioteca padrão C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[Struct input_iterator_tag](../standard-library/input-iterator-tag-struct.md)\
+[Struct iterator](../standard-library/iterator-struct.md)\
+[\<iterator>](../standard-library/iterator.md)\
+[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Referência da biblioteca padrão C++](../standard-library/cpp-standard-library-reference.md)

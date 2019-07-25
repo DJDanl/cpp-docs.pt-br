@@ -12,12 +12,12 @@ helpviewer_keywords:
 - stdext::sync_per_thread [C++], deallocate
 - stdext::sync_per_thread [C++], equals
 ms.assetid: 47bf75f8-5b02-4760-b1d3-3099d08fe14c
-ms.openlocfilehash: 3cb1946ee68642065488cfd13c146abab818ec60
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a08aa13aa46d5181e7c874b132b2bcbd5ec26dee
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412313"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450261"
 ---
 # <a name="syncperthread-class"></a>Classe sync_per_thread
 
@@ -108,10 +108,10 @@ bool equals(const sync<Cache>& Other) const;
 
 ### <a name="return-value"></a>Valor de retorno
 
-**False** se nenhum objeto de cache foi alocado para esse objeto ou para *outros* no thread atual. Caso contrário, retornará o resultado da aplicação de `operator==` aos dois objetos de cache.
+**false** se nenhum objeto de cache tiver sido alocado para esse objeto ou para *outro* no thread atual. Caso contrário, retornará o resultado da aplicação de `operator==` aos dois objetos de cache.
 
 ### <a name="remarks"></a>Comentários
 
 ## <a name="see-also"></a>Consulte também
 
-[\<allocators>](../standard-library/allocators-header.md)<br/>
+[\<allocators>](../standard-library/allocators-header.md)

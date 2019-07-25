@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::piecewise_linear_distribution [C++], param_type
 - std::piecewise_linear_distribution [C++], param_type
 ms.assetid: cd141152-7163-4754-8f98-c6d6500005e0
-ms.openlocfilehash: 327da9c6793e4e74f099bdc313ce34720561bbd0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9221daa002f19c3f73e65a49efb8da9c6f96b258
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62370366"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455232"
 ---
 # <a name="piecewiselineardistribution-class"></a>Classe piecewise_linear_distribution
 
@@ -80,8 +80,8 @@ public:
 
 ### <a name="parameters"></a>Parâmetros
 
-*RealType*<br/>
-O tipo de resultado, o padrão é ponto flutuante **duplas**. Para encontrar os tipos possíveis, consulte [\<random>](../standard-library/random.md).
+*RealType*\
+O tipo de resultado de ponto flutuante, assume o padrão de **Double**. Para encontrar os tipos possíveis, consulte [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Comentários
 
@@ -249,31 +249,31 @@ explicit piecewise_linear_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parâmetros
 
-*firstI*<br/>
+*Primeiro,* \
 Um iterador de entrada do primeiro elemento no intervalo de distribuição.
 
-*lastI*<br/>
+*último*\
 Um iterador de entrada do último elemento no intervalo de distribuição.
 
-*firstW*<br/>
+*firstW*\
 Um iterador de entrada do primeiro elemento no intervalo de pesos.
 
-*intervals*<br/>
+*específicos*\
 Uma [initializer_list](../cpp/initializers.md) com os intervalos da distribuição.
 
-*count*<br/>
+*contar*\
 O número de elementos no intervalo de distribuição.
 
-*xmin*<br/>
+*xmin*\
 O valor mais baixo no intervalo de distribuição.
 
-*xmax*<br/>
+*xmax*\
 O valor mais alto no intervalo de distribuição. Deve ser maior que *xmin*.
 
-*weightfunc*<br/>
-O objeto que representa a função de probabilidade para a distribuição. O parâmetro e o valor de retorno devem ser conversíveis em **duplas**.
+*weightfunc*\
+O objeto que representa a função de probabilidade para a distribuição. O parâmetro e o valor de retorno devem ser conversíveis em **Double**.
 
-*parm*<br/>
+*Parm*\
 A estrutura do parâmetro usada para construir a distribuição.
 
 ### <a name="remarks"></a>Comentários
@@ -290,7 +290,7 @@ piecewise_linear_distribution(
     InputIteratorW firstW);
 ```
 
-constrói um objeto de distribuição com intervalos de iteradores sobre a sequência [ `firstI`, `lastI`) e uma de peso correspondente começando de sequência *firstW*.
+Constrói um objeto de distribuição com itnervals de iteradores na sequência [ `firstI`, `lastI`) e uma sequência de peso correspondente, começando em *firstW*.
 
 O construtor da lista do inicializador
 
@@ -301,7 +301,7 @@ piecewise_linear_distribution(
     UnaryOperation weightfunc);
 ```
 
-constrói um objeto de distribuição com intervalos da lista de inicializador *intervalos* e pesos gerados da função *weightfunc*.
+Constrói um objeto de distribuição com intervalos de *intervalos* de lista de inicializadores e pesos gerados da função *weightfunc*.
 
 O construtor definido como
 
@@ -314,7 +314,7 @@ piecewise_linear_distribution(
     UnaryOperation weightfunc);
 ```
 
-constrói um objeto de distribuição com *contagem* intervalos distribuídos uniformemente por [ `xmin,xmax`], atribuindo a cada intervalo pesos de acordo com a função *weightfunc*, e  *weightfunc* deve aceitar um parâmetro e ter um valor de retorno, sendo que ambos são conversíveis para `double`. **Pré-condição:**`xmin < xmax`.
+Constrói um objeto de distribuição com intervalos de *contagem* distribuídos uniformemente sobre `xmin,xmax`[], atribuindo cada peso de intervalo de acordo com a função *weightfunc*e *weightfunc* deve aceitar um parâmetro e ter um retorno o valor, ambos, são conversíveis `double`para. **Pré-condição:** `xmin < xmax`.
 
 O construtor definido como
 
@@ -322,7 +322,7 @@ O construtor definido como
 explicit piecewise_linear_distribution(const param_type& parm);
 ```
 
-constrói um objeto de distribuição usando *parm* como a estrutura de parâmetro armazenada.
+Constrói um objeto de distribuição usando *Parm* como a estrutura de parâmetro armazenada.
 
 ## <a name="param_type"></a>  piecewise_linear_distribution::param_type
 
@@ -358,4 +358,4 @@ Essa estrutura pode ser enviada ao construtor de classe de distribuição na ins
 
 ## <a name="see-also"></a>Consulte também
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

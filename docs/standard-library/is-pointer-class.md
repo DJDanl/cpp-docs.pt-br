@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_pointer class
 - is_pointer
 ms.assetid: 44e0a403-7241-4e0a-8922-32877bcb9a4c
-ms.openlocfilehash: 7e46d692f76f80302dcd181aa1cee2efd1b189d8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d8b15f9eb5ef817f5576387b0d8119b86aa86af7
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413600"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455738"
 ---
 # <a name="ispointer-class"></a>Classe is_pointer
 
@@ -27,12 +27,12 @@ struct is_pointer;
 
 ### <a name="parameters"></a>Parâmetros
 
-*Ty*<br/>
+*Ty*\
 O tipo a ser consultado.
 
 ## <a name="remarks"></a>Comentários
 
-Uma instância do predicado de tipo será verdadeira se o tipo *Ty* é um ponteiro para **void**, um ponteiro para um objeto, ou um ponteiro para uma função ou um `cv-qualified` forma de um deles, caso contrário, será falsa. Observe que `is_pointer` será FALSO se *Ty* é um ponteiro para membro ou um ponteiro para função de membro.
+Uma instância do predicado de tipo se aplica true se o tipo *Ty* é um ponteiro para **void**, um ponteiro para um objeto ou um ponteiro para uma função, `cv-qualified` ou uma forma de um deles, caso contrário, ele mantém false. Observe que `is_pointer` é false se *Ty* é um ponteiro para membro ou um ponteiro para uma função membro.
 
 ## <a name="example"></a>Exemplo
 
@@ -80,6 +80,6 @@ is_pointer<int *> == true
 
 ## <a name="see-also"></a>Consulte também
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[Classe is_member_pointer](../standard-library/is-member-pointer-class.md)<br/>
-[Classe is_reference](../standard-library/is-reference-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[Classe is_member_pointer](../standard-library/is-member-pointer-class.md)\
+[Classe is_reference](../standard-library/is-reference-class.md)

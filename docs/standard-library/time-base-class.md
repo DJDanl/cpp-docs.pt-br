@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - time_base class
 ms.assetid: 9ae37f0b-9a42-496e-9870-3d9b71bab8fb
-ms.openlocfilehash: e790237e506aa32bafdb39938d841307bbc4d9c3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 85565dc0c0ec904551eb8dd981cfacc9a2e1f256
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412014"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68460032"
 ---
 # <a name="timebase-class"></a>Classe time_base
 
-A classe serve como uma classe base para facetas de modelo classe time_get, definindo apenas o tipo enumerado `dateorder` e várias constantes desse tipo.
+A classe serve como uma classe base para facetas da classe template time_get, definindo apenas o tipo `dateorder` enumerado e várias constantes desse tipo.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -38,15 +38,15 @@ public:
 
 Cada constante caracteriza uma maneira diferente de ordenar os componentes de uma data. As constantes são:
 
-- `no_order` não especifica nenhuma ordem específica.
+- `no_order`especifica nenhuma ordem específica.
 
-- `dmy` Especifica a ordem dia, mês e ano, como em 2 de dezembro de 1979.
+- `dmy`Especifica o dia, mês e ano do pedido, como em 2 de dezembro de 1979.
 
-- `mdy` Especifica o mês do pedido, dia e ano, como em 2 de dezembro de 1979.
+- `mdy`Especifica o mês, o dia e o ano do pedido, como em 2 de dezembro de 1979.
 
-- `ymd` Especifica a ordem ano, mês e dia, como em 1979/12/2.
+- `ymd`Especifica o ano, o mês e o dia do pedido, como em 1979/12/2.
 
-- `ydm` Especifica a ordem ano, dia e mês, como em 1979: 2 de dezembro.
+- `ydm`Especifica o ano, o dia e o mês do pedido, como em 1979: 2 de dezembro.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -56,4 +56,4 @@ Cada constante caracteriza uma maneira diferente de ordenar os componentes de um
 
 ## <a name="see-also"></a>Consulte também
 
-[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

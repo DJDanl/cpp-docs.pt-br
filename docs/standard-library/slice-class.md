@@ -12,12 +12,12 @@ helpviewer_keywords:
 - std::slice [C++], start
 - std::slice [C++], stride
 ms.assetid: 00f0b03d-d657-4b81-ba53-5a9034bb2bf2
-ms.openlocfilehash: f2c054626b36083d67f9dbc4c87cf6283c12f001
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 830e345eb7522cef44dbf6e727a976fb79c1e081
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412521"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450352"
 ---
 # <a name="slice-class"></a>Classe slice
 
@@ -25,7 +25,7 @@ Uma classe de utilitário para valarray que é usada para definir subconjuntos u
 
 ## <a name="remarks"></a>Comentários
 
-A classe armazena os parâmetros que caracterizam um objeto do tipo [slice_array](../standard-library/slice-array-class.md). O subconjunto de um valarray é indiretamente criado quando um objeto da classe slice aparece como um argumento para um objeto da classe [valarray](../standard-library/valarray-class.md#op_at)**\<Type>**. Os valores armazenados que especificam o subconjunto selecionado do valarray pai incluem:
+A classe armazena os parâmetros que caracterizam um objeto do tipo [slice_array](../standard-library/slice-array-class.md). O subconjunto de um valarray é indiretamente criado quando um objeto da classe slice aparece como um argumento para um objeto da classe [valarray](../standard-library/valarray-class.md#op_at) **\<Type>** . Os valores armazenados que especificam o subconjunto selecionado do valarray pai incluem:
 
 - O índice inicial no valarray.
 
@@ -136,18 +136,18 @@ slice(
 
 ### <a name="parameters"></a>Parâmetros
 
-*_StartIndex*<br/>
+*_StartIndex*\
 O índice de valarray do primeiro elemento no subconjunto.
 
-*_Len*<br/>
+*_Len*\
 O número de elementos no subconjunto.
 
-*stride*<br/>
+*Stride*\
 A distância entre elementos no subconjunto.
 
 ### <a name="return-value"></a>Valor de retorno
 
-O construtor padrão armazena zeros para o índice inicial, o comprimento total e o stride. O segundo construtor armazena *_StartIndex* para o índice inicial, *_Len* para o comprimento total, e *stride* para o stride.
+O construtor padrão armazena zeros para o índice inicial, o comprimento total e o stride. O segundo Construtor armazena *_StartIndex* para o índice inicial, *_Len* para o comprimento total e *Stride* para o Stride.
 
 ### <a name="remarks"></a>Comentários
 
@@ -312,4 +312,4 @@ The stride of slice vaSlice is: 3.
 
 ## <a name="see-also"></a>Consulte também
 
-[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

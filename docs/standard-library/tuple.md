@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - tuple header
 ms.assetid: e4ef5c2d-318b-44f6-8bce-fce4ecd796a3
-ms.openlocfilehash: ce6e005990d05676fb20752b5808d32ec88dd7b3
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: a391a77ea65a203a7eddde12046c5df89a77194a
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68241544"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447156"
 ---
 # <a name="lttuplegt"></a>&lt;tuple&gt;
 
@@ -45,12 +45,12 @@ Define um modelo `tuple` cujas instâncias mantêm objetos de tipos variados.
 
 |||
 |-|-|
-|[operator==](../standard-library/tuple-operators.md#op_eq_eq)|Comparação de `tuple` objetos, é igual.|
-|[operator!=](../standard-library/tuple-operators.md#op_neq)|Comparação de `tuple` objetos, não é iguais.|
+|[operator==](../standard-library/tuple-operators.md#op_eq_eq)|Comparação de `tuple` objetos, igual.|
+|[operator!=](../standard-library/tuple-operators.md#op_neq)|Comparação de `tuple` objetos, não igual.|
 |[operator<](../standard-library/tuple-operators.md#op_lt)|Comparação de `tuple` objetos, menor que.|
-|[operator<=](../standard-library/tuple-operators.md#op_lt_eq)|Comparação de `tuple` objetos, menor ou igual.|
+|[operator<=](../standard-library/tuple-operators.md#op_lt_eq)|Comparação de `tuple` objetos, menor ou igual a.|
 |[operator>](../standard-library/tuple-operators.md#op_gt)|Comparação de `tuple` objetos, maior que.|
-|[operator>=](../standard-library/tuple-operators.md#op_gt_eq)|Comparação de `tuple` objetos, maiores que ou iguais.|
+|[operator>=](../standard-library/tuple-operators.md#op_gt_eq)|Comparação de `tuple` objetos, maior ou igual a.|
 
 ### <a name="functions"></a>Funções
 
@@ -59,12 +59,12 @@ Define um modelo `tuple` cujas instâncias mantêm objetos de tipos variados.
 |[apply](../standard-library/tuple-functions.md#apply)|Chama uma função com uma tupla.|
 |[forward_as_tuple](../standard-library/tuple-functions.md#forward)|Constrói uma tupla de referências.|
 |[get](../standard-library/tuple-functions.md#get)|Obtém um elemento de um objeto `tuple`.|
-|[make_from_tuple](../standard-library/tuple-functions.md#make_from_tuple)|Abreviação para tornar um `tuple`.|
+|[make_from_tuple](../standard-library/tuple-functions.md#make_from_tuple)|Abreviar para criar `tuple`um.|
 |[make_tuple](../standard-library/tuple-functions.md#make_tuple)|Constitui uma `tuple` dos valores de elemento.|
 |[swap](../standard-library/tuple-functions.md#swap)||
 |[tie](../standard-library/tuple-functions.md#tie)|Constitui um `tuple` das referências do elemento.|
-|[tuple_cat](../standard-library/tuple-functions.md#tuple_cat)|Constrói um objeto de tupla com um intervalo de elementos do tipo.|
+|[tuple_cat](../standard-library/tuple-functions.md#tuple_cat)|Constrói um objeto de tupla com um intervalo dos elementos de tipo.|
 
 ## <a name="see-also"></a>Consulte também
 
-[\<array>](../standard-library/array.md)<br/>
+[\<array>](../standard-library/array.md)

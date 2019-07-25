@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - cwchar header
 ms.assetid: 7380b1bf-a220-46e5-b832-9f9f4e543aac
-ms.openlocfilehash: 8a82a821ab8cb705b6244b2763f3f0b022c0e3e5
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: e1406bf154cb677be6400bf1cf4122627f64f2ad
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243646"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454171"
 ---
 # <a name="ltcwchargt"></a>&lt;cwchar&gt;
 
@@ -120,6 +120,6 @@ size_t wcsrtombs(char* dst, const wchar_t** src, size_t len, mbstate_t* ps);
 
 ## <a name="see-also"></a>Consulte também
 
-[Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Visão geral da biblioteca padrão C++](../standard-library/cpp-standard-library-overview.md)<br/>
-[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)\
+[Visão geral da biblioteca padrão C++](../standard-library/cpp-standard-library-overview.md)\
+[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

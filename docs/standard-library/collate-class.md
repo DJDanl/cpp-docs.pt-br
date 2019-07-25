@@ -22,12 +22,12 @@ helpviewer_keywords:
 - std::collate [C++], hash
 - std::collate [C++], transform
 ms.assetid: 92168798-9628-4a2e-be6e-fa62dcd4d6a6
-ms.openlocfilehash: 21d5825f8d9ea00359f2aa1c87291b831d1f330f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c506a6a2e1e2c0610f8a6129d2bfb42f762e998a
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405164"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458590"
 ---
 # <a name="collate-class"></a>Classe collate
 
@@ -42,7 +42,7 @@ class collate : public locale::facet;
 
 ### <a name="parameters"></a>Parâmetros
 
-*CharType*<br/>
+*CharType*\
 O tipo usado em um programa para codificar caracteres.
 
 ## <a name="remarks"></a>Comentários
@@ -108,15 +108,15 @@ const char* _Locname,
 
 ### <a name="parameters"></a>Parâmetros
 
-*_Refs*<br/>
+*_Refs*\
 Valor inteiro usado para especificar o tipo de gerenciamento de memória do objeto.
 
-*_Locname*<br/>
+*_Locname*\
 O nome da localidade.
 
 ### <a name="remarks"></a>Comentários
 
-Os valores possíveis para o *_Refs* parâmetro e sua significância são:
+Os valores possíveis para o parâmetro *_Refs* e seu significado são:
 
 - 0: O tempo de vida do objeto é gerenciado pelas localidades que o contêm.
 
@@ -124,7 +124,7 @@ Os valores possíveis para o *_Refs* parâmetro e sua significância são:
 
 - \> 1: Esses valores não estão definidos.
 
-O construtor inicializa seu objeto base com **localidade::**[faceta](../standard-library/locale-class.md#facet_class)(`_Refs`).
+O construtor inicializa seu objeto base com **locale::** [faceta](../standard-library/locale-class.md#facet_class)(`_Refs`).
 
 ## <a name="compare"></a>  collate::compare
 
@@ -139,16 +139,16 @@ int compare(const CharType* first1,
 
 ### <a name="parameters"></a>Parâmetros
 
-*first1*<br/>
+*first1*\
 Ponteiro para o primeiro elemento na primeira sequência a ser comparada.
 
-*last1*<br/>
+*last1*\
 Ponteiro para o último elemento na primeira sequência a ser comparada.
 
-*first2*<br/>
+*first2*\
 Ponteiro para o primeiro elemento na segunda sequência a ser comparada.
 
-*last2*<br/>
+*last2*\
 Ponteiro para o último elemento na segunda sequência a ser comparada.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -205,16 +205,16 @@ virtual int do_compare(const CharType* first1,
 
 ### <a name="parameters"></a>Parâmetros
 
-*first1*<br/>
+*first1*\
 Ponteiro para o primeiro elemento na primeira sequência a ser comparada.
 
-*last1*<br/>
+*last1*\
 Ponteiro para o último elemento na primeira sequência a ser comparada.
 
-*first2*<br/>
+*first2*\
 Ponteiro para o primeiro elemento na segunda sequência a ser comparada.
 
-*last2*<br/>
+*last2*\
 Ponteiro para o último elemento na segunda sequência a ser comparada.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -229,7 +229,7 @@ A função membro retornará:
 
 ### <a name="remarks"></a>Comentários
 
-A função membro virtual protegida compara a sequência em [* first1, Last1) * com a sequência em *[first2, last2*). Ele compara valores aplicando `operator<` entre pares de elementos correspondentes de tipo `CharType`. A primeira sequência comparará menos se ela tiver o elemento menor do par desigual mais antigo nas sequências ou, se não existir nenhum par desigual, mas a primeira sequência for menor.
+A função de membro virtual protegido compara a sequência em [* first1, Last1) * com a sequência em *[first2, last2*). Ele compara valores aplicando `operator<` -se entre pares de elementos correspondentes `CharType`do tipo. A primeira sequência comparará menos se ela tiver o elemento menor do par desigual mais antigo nas sequências ou, se não existir nenhum par desigual, mas a primeira sequência for menor.
 
 ### <a name="example"></a>Exemplo
 
@@ -245,10 +245,10 @@ virtual long do_hash(const CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*first*<br/>
+*primeiro*\
 Um ponteiro para o primeiro caractere na sequência cujo valor será determinado.
 
-*last*<br/>
+*última*\
 Um ponteiro para o último caractere na sequência cujo valor será determinado.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -273,10 +273,10 @@ virtual string_type do_transform(const CharType* first, const CharType* last) co
 
 ### <a name="parameters"></a>Parâmetros
 
-*first*<br/>
+*primeiro*\
 Um ponteiro para o primeiro caractere na sequência a ser convertida.
 
-*last*<br/>
+*última*\
 Um ponteiro para o último caractere na sequência a ser convertida.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -301,10 +301,10 @@ long hash(const CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*first*<br/>
+*primeiro*\
 Um ponteiro para o primeiro caractere na sequência cujo valor será determinado.
 
-*last*<br/>
+*última*\
 Um ponteiro para o último caractere na sequência cujo valor será determinado.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -371,10 +371,10 @@ string_type transform(const CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*first*<br/>
+*primeiro*\
 Um ponteiro para o primeiro caractere na sequência a ser convertida.
 
-*last*<br/>
+*última*\
 Um ponteiro para o último caractere na sequência a ser convertida.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -383,7 +383,7 @@ Uma cadeia de caracteres que contém a sequência de caracteres transformados.
 
 ### <a name="remarks"></a>Comentários
 
-A função membro retorna [do_transform](#do_transform)(`first`, `last`).
+A função member retorna [do_transform](#do_transform)(`first`, `last`).
 
 ### <a name="example"></a>Exemplo
 
@@ -429,5 +429,5 @@ int main( )
 
 ## <a name="see-also"></a>Consulte também
 
-[\<locale>](../standard-library/locale.md)<br/>
-[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[\<locale>](../standard-library/locale.md)\
+[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

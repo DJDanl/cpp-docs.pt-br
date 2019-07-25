@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - <numeric> header
 ms.assetid: 6d6ccb94-48cc-479b-b4a9-bd9c78d4896a
-ms.openlocfilehash: ce195742605c3dd2e127c84ac2f4e1e696c75bd0
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 5862ddd812308c7bf81a5029249caf7e9b4a1168
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246692"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68453547"
 ---
 # <a name="ltnumericgt"></a>&lt;numeric&gt;
 
@@ -44,13 +44,13 @@ Os algoritmos estendem as ações que têm suporte pelas funções membro e oper
 |[iota](../standard-library/numeric-functions.md#iota)|Armazena um valor inicial, começando com o primeiro elemento e preenchendo com incrementos sucessivos do valor (`value++`) em cada um dos elementos no intervalo `[first, last)`.|
 |[LCM](../standard-library/numeric-functions.md#lcm)||
 |[partial_sum](../standard-library/numeric-functions.md#partial_sum)|Calcula uma série de somas em um intervalo de entrada, do primeiro ao *i*-ésimo elemento e armazena o resultado de cada soma no *i*-ésimo elemento de um intervalo de destino ou calcula o resultado de um procedimento generalizado, em que a operação de soma é substituída por outra operação binária especificada.|
-|[reduzir](../standard-library/numeric-functions.md#reduce)||
+|[diminu](../standard-library/numeric-functions.md#reduce)||
 |[transform_exclusive_scan](../standard-library/numeric-functions.md#transform_exclusive_scan)||
 |[transform_inclusive_scan](../standard-library/numeric-functions.md#transform_inclusive_scan)||
 |[transform_reduce](../standard-library/numeric-functions.md#transform_reduce)||
 
 ## <a name="see-also"></a>Consulte também
 
-[Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Referência da biblioteca padrão C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)\
+[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Referência da biblioteca padrão C++](../standard-library/cpp-standard-library-reference.md)

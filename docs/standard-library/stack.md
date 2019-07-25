@@ -7,16 +7,16 @@ helpviewer_keywords:
 - stack, stack header
 - stack header
 ms.assetid: 89d8999e-c773-46f2-86c1-4b3b5aedb1c1
-ms.openlocfilehash: 65f2197a4a9ac37ad5910bfa8dbef457fda5f611
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 8a31ccd553638b9b548db89a191da40bc513a05f
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244126"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68453767"
 ---
 # <a name="ltstackgt"></a>&lt;stack&gt;
 
-Define a pilha de classe de modelo e os dois modelos de suporte.
+Define a pilha de classes de modelo e dois modelos de suporte.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -25,7 +25,7 @@ Define a pilha de classe de modelo e os dois modelos de suporte.
 **Namespace:** std
 
 > [!NOTE]
-> O \<pilha > biblioteca também usa o `#include <initializer_list>` instrução.
+> A \<biblioteca de > de pilha também `#include <initializer_list>` usa a instrução.
 
 ## <a name="members"></a>Membros
 
@@ -33,10 +33,10 @@ Define a pilha de classe de modelo e os dois modelos de suporte.
 
 |||
 |-|-|
-|[operator!=](../standard-library/stack-operators.md#op_neq)|Testa se o objeto stack do lado esquerdo do operador não é igual ao objeto stack do lado direito.|
+|[operator!=](../standard-library/stack-operators.md#op_neq)|Testa se o objeto de pilha no lado esquerdo do operador não é igual ao objeto de pilha no lado direito.|
 |[operator<](../standard-library/stack-operators.md#op_lt)|Testa se o objeto stack do lado esquerdo do operador é menor que o objeto stack do lado direito.|
 |[operator\<=](../standard-library/stack-operators.md#op_lt_eq)|Testa se o objeto stack do lado esquerdo do operador é menor ou igual ao objeto stack do lado direito.|
-|[operator==](../standard-library/stack-operators.md#op_eq_eq)|Testa se o objeto stack do lado esquerdo do operador é igual ao objeto stack do lado direito.|
+|[operator==](../standard-library/stack-operators.md#op_eq_eq)|Testa se o objeto de pilha no lado esquerdo do operador é igual ao objeto de pilha no lado direito.|
 |[operator>](../standard-library/stack-operators.md#op_gt)|Testa se o objeto stack do lado esquerdo do operador é maior que o objeto stack do lado direito.|
 |[operator>=](../standard-library/stack-operators.md#op_gt_eq)|Testa se o objeto stack do lado esquerdo do operador é maior ou igual ao objeto stack do lado direito.|
 
@@ -54,6 +54,6 @@ Define a pilha de classe de modelo e os dois modelos de suporte.
 
 ## <a name="see-also"></a>Consulte também
 
-[Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Referência da biblioteca padrão C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)\
+[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Referência da biblioteca padrão C++](../standard-library/cpp-standard-library-reference.md)

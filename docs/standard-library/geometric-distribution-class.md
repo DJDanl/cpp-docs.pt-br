@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::geometric_distribution [C++], param_type
 - std::geometric_distribution [C++], param_type
 ms.assetid: 38f933af-3b49-492e-9d26-b6b272a60013
-ms.openlocfilehash: 115d1c6f3298ea08b7c97061d37d4e27829247ea
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: ead6382e61066a72f97eacea91bba5b38aa00677
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66450677"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68453927"
 ---
 # <a name="geometricdistribution-class"></a>Classe geometric_distribution
 
@@ -66,11 +66,11 @@ public:
 
 ### <a name="parameters"></a>Parâmetros
 
-*IntType*<br/>
-O tipo de resultado do inteiro assume como padrão **int**. Para encontrar os tipos possíveis, consulte [\<random>](../standard-library/random.md).
+*IntType*\
+O tipo de resultado inteiro, o padrão é **int**. Para encontrar os tipos possíveis, consulte [\<random>](../standard-library/random.md).
 
-*URNG*<br/>
-O uniform aleatório mecanismo gerador de números. Para encontrar os tipos possíveis, consulte [\<random>](../standard-library/random.md).
+*URNG*\
+O mecanismo do gerador de número aleatório uniforme. Para encontrar os tipos possíveis, consulte [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Comentários
 
@@ -220,10 +220,10 @@ explicit geometric_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parâmetros
 
-*p*<br/>
+*DTI*\
 O parâmetro de distribuição `p`.
 
-*parm*<br/>
+*Parm*\
 A estrutura do parâmetro usada para construir a distribuição.
 
 ### <a name="remarks"></a>Comentários
@@ -251,10 +251,10 @@ struct param_type {
 
 ### <a name="parameters"></a>Parâmetros
 
-*p*<br/>
+*DTI*\
 O parâmetro de distribuição `p`.
 
-*right*<br/>
+*Certo*\
 O instância de `param_type` a ser comparada com isto.
 
 ### <a name="remarks"></a>Comentários
@@ -265,4 +265,4 @@ Essa estrutura pode ser enviada ao construtor de classe de distribuição na ins
 
 ## <a name="see-also"></a>Consulte também
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

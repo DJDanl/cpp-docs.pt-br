@@ -1,62 +1,62 @@
 ---
-title: 'Como: Configurar o Visual Studio C++ plataformas de projetos para o destino de 64 bits, x64'
+title: 'Como: Configurar projetos do C++ Visual Studio para direcionar plataformas de 64 bits e x64'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - platforms [C++], 64-bit
 - 64-bit programming [C++], configuring projects
 - project configurations [C++]
 ms.assetid: 2b9ae001-df36-4750-83b2-982145d632ad
-ms.openlocfilehash: a063c2f333a755ab86a4f91c9d14d0c65a6d1414
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
-ms.translationtype: HT
+ms.openlocfilehash: 762fd5d6ddbb55713cf2fc5e34cb33fb91b08eb9
+ms.sourcegitcommit: ce3393846c86e7905ff0c86e4cd6610476809585
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446401"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68492238"
 ---
-# <a name="how-to-configure-visual-studio-c-projects-to-target-64-bit-x64-platforms"></a>Como: Configurar o Visual Studio C++ plataformas de projetos para o destino de 64 bits, x64
+# <a name="how-to-configure-visual-studio-c-projects-to-target-64-bit-x64-platforms"></a>Como: Configurar projetos do C++ Visual Studio para direcionar plataformas de 64 bits e x64
 
-Você pode usar as configurações do projeto no IDE do Visual Studio para configurar plataformas de aplicativos do C++ para ter como destino de 64 bits x64. Também é possível migrar as configurações de projeto do Win32 em uma configuração de projeto de 64 bits.
+Você pode usar as configurações do projeto no IDE do Visual Studio para configurar C++ aplicativos para as plataformas de 64 bits e x64 de destino. Você também pode migrar as configurações de projeto do Win32 para uma configuração de projeto de 64 bits.
 
-### <a name="to-set-up-c-applications-to-target-64-bit-platforms"></a>Para configurar aplicativos do C++ para direcionar as plataformas de 64 bits
+### <a name="to-set-up-c-applications-to-target-64-bit-platforms"></a>Para configurar C++ aplicativos para plataformas de 64 bits de destino
 
-1. Abra o projeto de C++ que você deseja configurar.
+1. Abra o C++ projeto que você deseja configurar.
 
-1. Abra as páginas de propriedades para o projeto. Para obter mais informações, consulte [propriedades de compilador e de build definida C++ no Visual Studio](working-with-project-properties.md).
-
-   > [!NOTE]
-   > Para projetos do .NET, certifique-se de que o **propriedades de configuração** nó ou um de seus nós filho, é selecionado na  **\<Projectname > páginas de propriedade** caixa de diálogo; caso contrário, o  **Configuration Manager** botão permanece indisponível.
-
-1. Escolha o **Configuration Manager** para abrir o **Configuration Manager** caixa de diálogo.
-
-1. No **plataforma de solução ativa** lista suspensa, selecione o  **\<novo... >** opção para abrir o **nova plataforma de solução** caixa de diálogo.
-
-1. No **digite ou selecione a nova plataforma** lista suspensa, selecione um valor de 64-bit plataforma de destino.
+1. Abra as páginas de propriedades para esse projeto. Para obter mais informações, confira [Definir as propriedades de build e do compilador do C++ no Visual Studio](working-with-project-properties.md).
 
    > [!NOTE]
-   > No **nova plataforma de solução** caixa de diálogo, você pode usar o **copiar configurações de** opção para copiar as configurações de projeto existente para a nova configuração de projeto de 64 bits.
+   > Para projetos .net, certifique-se de que o nó **Propriedades de configuração** , ou um de seus nós filho, esteja selecionado na caixa de diálogo páginas de propriedades do  **\<ProjectName >** ; caso contrário, o botão **Configuration Manager** permanecerá indisponível.
 
-1. Escolha o botão **OK**. A plataforma que você selecionou na etapa anterior aparece sob **plataforma de solução ativa** na **Configuration Manager** caixa de diálogo.
+1. Escolha o botão **Configuration Manager** para abrir a caixa de diálogo **Configuration Manager** .
 
-1. Escolha o **fechar** botão na **Configuration Manager** caixa de diálogo caixa e, em seguida, escolha o **Okey** botão no  **\<Projectname > Páginas de propriedade** caixa de diálogo.
+1. Na lista suspensa **plataforma de solução ativa** , selecione a  **\<nova... >** opção para abrir a caixa de diálogo **nova plataforma de solução** .
+
+1. Na lista suspensa **digite ou selecione a nova plataforma** , selecione uma plataforma de destino de 64 bits.
+
+   > [!NOTE]
+   > Na caixa de diálogo **nova plataforma de solução** , você pode usar a opção **copiar configurações de** para copiar as configurações de projeto existentes para a nova configuração de projeto de 64 bits.
+
+1. Escolha o botão **OK**. A plataforma que você selecionou na etapa anterior aparece em **plataforma de solução ativa** na caixa de diálogo **Configuration Manager** .
+
+1. Escolha o botão **fechar** na caixa de diálogo **Configuration Manager** e, em seguida, escolha o botão **OK** na caixa de diálogo páginas de  **\<Propriedades do ProjectName >** .
 
 ### <a name="to-copy-win32-project-settings-into-a-64-bit-project-configuration"></a>Para copiar as configurações de projeto do Win32 em uma configuração de projeto de 64 bits
 
-- Quando o **nova plataforma de solução** caixa de diálogo estiver aberta enquanto você configurar um projeto tenha como destino uma plataforma de 64 bits, além de **copiar configurações de** lista suspensa, selecione **Win32**. Essas configurações do projeto são atualizadas automaticamente no nível do projeto:
+- Quando a caixa de diálogo **nova plataforma de solução** é aberta enquanto você configura um projeto para direcionar uma plataforma de 64 bits, na lista suspensa **configurações de cópia** , selecione **Win32**. Essas configurações de projeto são atualizadas automaticamente no nível do projeto:
 
-  - O [/máquina](reference/machine-specify-target-platform.md) opção de vinculador é definida como **/MACHINE:X 64**.
+  - A opção vinculador [/Machine](reference/machine-specify-target-platform.md) é definida como **/Machine: x64**.
 
-  - **Registrar saída** é desativada. Para obter mais informações, consulte [páginas de propriedade do vinculador](reference/linker-property-pages.md).
+  - A **saída do registro** está desativada. Para obter mais informações, consulte [páginas de propriedades](reference/linker-property-pages.md)do vinculador.
 
-  - **Ambiente de destino** é definido como **/env x64**. Para obter mais informações, consulte [páginas de propriedade MIDL: Geral](reference/midl-property-pages-general.md).
+  - O **ambiente de destino** é definido como **/env x64**. Para obter mais informações, consulte [páginas de propriedades de MIDL](reference/midl-property-pages.md).
 
-  - **Validar parâmetros** é apagado e redefinido para o valor padrão. Para obter mais informações, consulte [páginas de propriedade MIDL: Advanced](reference/midl-property-pages-advanced.md).
+  - Os **parâmetros de validação** são desmarcados e redefinidos para o valor padrão. Para obter mais informações, consulte [páginas de propriedades de MIDL](reference/midl-property-pages.md).
 
-  - Se **formato de informações de depuração** foi definida como **/ZI** na configuração do projeto do Win32, em seguida, ele é definido como **/Zi** na configuração do projeto de 64 bits. Para obter mais informações, consulte [/Z7, /Zd, /Zi, /ZI (formato de informação de depuração)](reference/z7-zi-zi-debug-information-format.md).
+  - Se o **formato de informações de depuração** tiver sido definido como **/Zi** na configuração de projeto do Win32, ele será definido como **/Zi** na configuração de projeto de 64 bits. Para obter mais informações, consulte [/Z7, /Zd, /Zi, /ZI (formato de informação de depuração)](reference/z7-zi-zi-debug-information-format.md).
 
   > [!NOTE]
-  > Nenhuma dessas propriedades de projeto são alteradas se elas são substituídas no nível de arquivo.
+  > Nenhuma dessas propriedades de projeto será alterada se elas forem substituídas no nível de arquivo.
 
 ## <a name="see-also"></a>Consulte também
 
-[Configurar projetos do C++ para x64 de 64 bits, destinos](configuring-programs-for-64-bit-visual-cpp.md)<br/>
+[Configurar projetos C++ para destinos x64 de 64 bits](configuring-programs-for-64-bit-visual-cpp.md)<br/>
 [Depurar aplicativos de 64 bits](/visualstudio/debugger/debug-64-bit-applications)

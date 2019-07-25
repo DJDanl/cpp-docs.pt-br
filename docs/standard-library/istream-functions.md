@@ -5,12 +5,12 @@ f1_keywords:
 - istream/std::swap
 - istream/std::ws
 ms.assetid: 0301ea0d-4ded-4841-83dd-4253b55b3188
-ms.openlocfilehash: b590559b01bb8f5db21fca9f78d220d8bad5c27e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fc512558969bc25d2b16afa2b93219e13d0b28ca
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413327"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458758"
 ---
 # <a name="ltistreamgt-functions"></a>Função &lt;istream&gt;
 
@@ -36,10 +36,10 @@ void swap(
 
 ### <a name="parameters"></a>Parâmetros
 
-*left*<br/>
+*mantida*\
 Um fluxo.
 
-*right*<br/>
+*Certo*\
 Um fluxo.
 
 ## <a name="ws"></a>  ws
@@ -52,7 +52,7 @@ template class<Elem, Tr> basic_istream<Elem, Tr>& ws(basic_istream<Elem, Tr>& _I
 
 ### <a name="parameters"></a>Parâmetros
 
-*_Istr*<br/>
+*_Istr*\
 Um fluxo.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -71,4 +71,4 @@ Consulte [operator>>](../standard-library/istream-operators.md#op_gt_gt) para ve
 
 ## <a name="see-also"></a>Consulte também
 
-[\<istream>](../standard-library/istream.md)<br/>
+[\<istream>](../standard-library/istream.md)

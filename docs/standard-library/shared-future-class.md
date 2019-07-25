@@ -18,12 +18,12 @@ helpviewer_keywords:
 - std::shared_future [C++], wait
 - std::shared_future [C++], wait_for
 - std::shared_future [C++], wait_until
-ms.openlocfilehash: 2280c17c4ce58fe06365c107ad26d646c7ae2d72
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3b08a1341ed450dd5d5cee93cdfcbab57f8d6760
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412599"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450500"
 ---
 # <a name="sharedfuture-class"></a>Classe shared_future
 
@@ -68,7 +68,7 @@ Objetos `shared_future` não estão sincronizados. Chamar métodos no mesmo obje
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** \<futuro >
+**Cabeçalho:** \<> futuro
 
 **Namespace:** std
 
@@ -92,7 +92,7 @@ Antes de recuperar o resultado, este método bloqueia o thread atual até que o 
 
 Para a especialização parcial `shared_future<Ty&>`, o valor armazenado será efetivamente uma referência ao objeto que foi passado para o *provedor assíncrono* como o valor retornado.
 
-Porque não existe nenhum valor armazenado para a especialização `shared_future<void>`, o método retornará **void**.
+Como não existe nenhum valor armazenado para a `shared_future<void>`especialização, o método retorna **void**.
 
 ## <a name="op_eq"></a>  shared_future::operator=
 
@@ -105,7 +105,7 @@ shared_future& operator=(const shared_future& Right);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Direita*<br/>
+*Certo*\
 Um objeto `shared_future`.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -114,9 +114,9 @@ Um objeto `shared_future`.
 
 ### <a name="remarks"></a>Comentários
 
-Para o primeiro operador, *direita* não tem mais um estado assíncrono associado após a operação.
+Para o primeiro operador, o *direito* não tem mais um estado assíncrono associado após a operação.
 
-Para o segundo método, *direita* mantém seu estado assíncrono associado.
+Para o segundo método, *Right* mantém seu estado assíncrono associado.
 
 ## <a name="shared_future"></a> Construtor shared_future::shared_future
 
@@ -131,16 +131,16 @@ shared_future(const shared_future& Right);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Direita*<br/>
+*Certo*\
 Um objeto [future](../standard-library/future-class.md) ou `shared_future`.
 
 ### <a name="remarks"></a>Comentários
 
 O primeiro construtor cria um objeto `shared_future` que não tem nenhum *estado assíncrono associado*.
 
-Os segundo e terceiro construtores criam um `shared_future` do objeto e transferir o estado assíncrono associado de *direita*. *Direita* não tem mais um estado assíncrono associado.
+O segundo e o terceiro construtores conconstróim um `shared_future` objeto e transferem o estado assíncrono associado da *direita*. A *direita* não tem mais um estado assíncrono associado.
 
-O quarto construtor cria um `shared_future` objeto que tem o mesmo estado assíncrono associado que *direita*.
+O quarto construtor constrói um `shared_future` objeto que tem o mesmo estado assíncrono associado que o *direito*.
 
 ## <a name="valid"></a>  shared_future::valid
 
@@ -152,7 +152,7 @@ bool valid() noexcept;
 
 ### <a name="return-value"></a>Valor de retorno
 
-**Verdadeiro** se o objeto tiver um estado assíncrono associado; caso contrário, **falso**.
+**true** se o objeto tiver um estado assíncrono associado; caso contrário, **false**.
 
 ## <a name="wait"></a>  shared_future::wait
 
@@ -178,7 +178,7 @@ future_status wait_for(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Rel_time*<br/>
+*Rel_time*\
 Um objeto [chrono::duration](../standard-library/duration-class.md) que especifica um intervalo de tempo máximo durante o qual o thread fica bloqueado.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -201,7 +201,7 @@ future_status wait_until(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Abs_time*<br/>
+*Abs_time*\
 Um objeto [chrono::time_point](../standard-library/time-point-class.md) que especifica um tempo após o qual o thread pode ser desbloqueado.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -214,5 +214,5 @@ Um estado assíncrono associado ficará pronto somente se seu provedor assíncro
 
 ## <a name="see-also"></a>Consulte também
 
-[Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<future>](../standard-library/future.md)<br/>
+[Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)\
+[\<future>](../standard-library/future.md)

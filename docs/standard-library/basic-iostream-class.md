@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - basic_iostream class
 ms.assetid: 294b680b-eb49-4066-8db2-6d52dac9d6e3
-ms.openlocfilehash: 80aad69f05b7473b508447d6f69f1d92edbeeca3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 052271e2e2cc929875489e27abde2147bc5c070a
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400637"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68460094"
 ---
 # <a name="basiciostream-class"></a>Classe basic_iostream
 
@@ -75,10 +75,10 @@ basic_iostream();
 
 ### <a name="parameters"></a>Parâmetros
 
-*strbuf*<br/>
+*strbuf*\
 Um objeto `basic_streambuf` existente.
 
-*right*<br/>
+*Certo*\
 Um objeto `basic_iostream` Existente usado para construir um novo `basic_iostream`.
 
 ### <a name="remarks"></a>Comentários
@@ -97,12 +97,12 @@ basic_iostream& operator=(basic_iostream&& right);
 
 ### <a name="parameters"></a>Parâmetros
 
-*right*<br/>
+*Certo*\
 Uma referência `rvalue` a um objeto `basic_iostream` do qual atribuir.
 
 ### <a name="remarks"></a>Comentários
 
-A operador de membro chama `swap(right)`.
+As chamadas `swap(right)`de operador de membro.
 
 ## <a name="swap"></a>  basic_iostream::swap
 
@@ -114,15 +114,15 @@ void swap(basic_iostream& right);
 
 ### <a name="parameters"></a>Parâmetros
 
-*right*<br/>
+*Certo*\
 O objeto `basic_iostream` a trocar.
 
 ### <a name="remarks"></a>Comentários
 
-A função membro chama `swap(right)`.
+As chamadas `swap(right)`de função de membro.
 
 ## <a name="see-also"></a>Consulte também
 
-[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Programação de iostream](../standard-library/iostream-programming.md)<br/>
-[Convenções de iostreams](../standard-library/iostreams-conventions.md)<br/>
+[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Programação de iostream](../standard-library/iostream-programming.md)\
+[Convenções de iostreams](../standard-library/iostreams-conventions.md)

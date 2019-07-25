@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - vector header
 ms.assetid: c1431ad8-c0b6-4dbb-89c4-5f651e432d7f
-ms.openlocfilehash: 96f329bfdcc13bb557ef0cc487a1f414612e96c5
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 5992e368031b59c9b892167b135fa30a870c73f9
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240958"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448061"
 ---
 # <a name="ltvectorgt"></a>&lt;vector&gt;
 
@@ -20,7 +20,7 @@ Define o vetor da classe de modelo de contêiner e diversos modelos de suporte.
 O `vector` é um contêiner que organiza os elementos de um determinado tipo em uma sequência linear. Ele permite acesso aleatório rápido a qualquer elemento, bem como adições e remoções dinâmicas em relação à sequência. O `vector` é o contêiner preferencial para uma sequência quando o desempenho de acesso aleatório é reduzido.
 
 > [!NOTE]
-> O \<vector > biblioteca também usa o `#include <initializer_list>` instrução.
+> A \<biblioteca de > de vetor também `#include <initializer_list>` usa a instrução.
 
 Para obter mais informações sobre a classe `vector`, consulte [Classe vector](../standard-library/vector-class.md). Para obter informações sobre a especialização `vector<bool>`, consulte [Classe vector\<bool>](../standard-library/vector-bool-class.md).
 
@@ -77,13 +77,13 @@ void swap (
 
 ### <a name="parameters"></a>Parâmetros
 
-*Tipo*\
+*Escreva*\
 O parâmetro de modelo do tipo de dados armazenados no vetor.
 
 *Alocador*\
 O parâmetro de modelo do objeto allocator armazenado responsável pela alocação e desalocação de memória.
 
-*À esquerda*\
+*mantida*\
 O primeiro vetor (à esquerda) em uma operação de comparação
 
 *Certo*\
@@ -123,6 +123,6 @@ O segundo vetor (à direita) em uma operação de comparação.
 
 ## <a name="see-also"></a>Consulte também
 
-[Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Referência da biblioteca padrão C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)\
+[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Referência da biblioteca padrão C++](../standard-library/cpp-standard-library-reference.md)

@@ -46,16 +46,16 @@ helpviewer_keywords:
 - std::moneypunct [C++], positive_sign
 - std::moneypunct [C++], thousands_sep
 ms.assetid: cf2650da-3e6f-491c-95d5-23e57f582ee6
-ms.openlocfilehash: 750b61100f7e3fe15851fffbedeb5b60d4d7034f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b6cd2524f8ae010e81d06a30d9a001398a106622
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62349115"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68460200"
 ---
 # <a name="moneypunct-class"></a>Classe moneypunct
 
-A classe de modelo descreve um objeto que pode servir como uma faceta de localidade para descrever as sequências do tipo *CharType* usado para representar um campo de entrada monetário ou um campo de saída monetário. Se o parâmetro de modelo *Intl* é *verdadeiro*, as convenções internacionais serão observadas.
+A classe de modelo descreve um objeto que pode servir como uma faceta de localidade para descrever as sequências do tipo *CharType* usado para representar um campo de entrada monetário ou um campo de saída monetária. Se o parâmetro de modelo *intl* for *true*, as convenções internacionais serão observadas.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -66,10 +66,10 @@ class moneypunct;
 
 ### <a name="parameters"></a>Parâmetros
 
-*CharType*<br/>
+*CharType*\
 O tipo usado em um programa para codificar caracteres.
 
-*Intl*<br/>
+*Intl*\
 Um sinalizador que especifica se as convenções internacionais devem ser observadas.
 
 ## <a name="remarks"></a>Comentários
@@ -277,7 +277,7 @@ Uma regra específica de localidade para determinar como os dígitos são agrupa
 
 ### <a name="example"></a>Exemplo
 
-Veja o exemplo de [agrupando](#grouping), em que a função membro virtual é chamada `grouping`.
+Consulte o exemplo de [agrupamento](#grouping), onde a função membro virtual é chamada por `grouping`.
 
 ## <a name="do_neg_format"></a>  moneypunct::do_neg_format
 
@@ -291,17 +291,17 @@ virtual pattern do_neg_format() const;
 
 A função membro virtual protegida retorna uma regra específica de localidade para determinar como gerar o campo de saída monetário para um valor negativo. Cada um dos quatro elementos de `pattern::field` pode ter os valores:
 
-- `none` para corresponder a zero ou mais espaços ou gerar nada.
+- `none`para corresponder a zero ou mais espaços ou não gerar nada.
 
-- `sign` para corresponder ou gerar um sinal positivo ou negativo.
+- `sign`para corresponder ou gerar um sinal positivo ou negativo.
 
-- `space` para corresponder a zero ou mais espaços ou gerar um espaço.
+- `space`para corresponder a zero ou mais espaços ou gerar um espaço.
 
-- `symbol` para corresponder ou gerar um símbolo de moeda.
+- `symbol`para corresponder ou gerar um símbolo de moeda.
 
-- `value` para corresponder ou gerar um valor monetário.
+- `value`para corresponder ou gerar um valor monetário.
 
-Componentes de um campo de saída monetário são gerados e componentes de um campo de entrada monetário são correspondidos na ordem em que esses elementos aparecem no `pattern::field`. Cada um dos valores `sign`, `symbol`, `value`e ambos `none` ou `space` deve aparecer exatamente uma vez. O valor `none` não devem aparecer primeiro. O valor space não **deve** não devem aparecer primeiro ou por último. Se `Intl` for true, a ordem é `symbol`, `sign`, `none`, em seguida, `value`.
+Os componentes de um campo de saída monetária são gerados e os componentes de um campo de entrada monetária são correspondidos na ordem em `pattern::field`que esses elementos aparecem. `sign`Cada um `value` `symbol` dosvalores`space` ,, e ou deve aparecer exatamente uma vez. `none` O valor `none` não deve aparecer primeiro. O valor space não **deve** não devem aparecer primeiro ou por último. Se `Intl` for true, Order será `symbol`, `sign` `none` ,`value`, e.
 
 A versão de modelo `moneypunct`\< **CharType**, **Intl**> retorna `{`**money_base::symbol**, **money_base::sign**, **money_base::value**, **money_base::none**`}`.
 
@@ -523,12 +523,12 @@ explicit moneypunct(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Parâmetros
 
-*_Refs*<br/>
+*_Refs*\
 Valor inteiro usado para especificar o tipo de gerenciamento de memória do objeto.
 
 ### <a name="remarks"></a>Comentários
 
-Os valores possíveis para o *_Refs* parâmetro e sua significância são:
+Os valores possíveis para o parâmetro *_Refs* e seu significado são:
 
 - 0: O tempo de vida do objeto é gerenciado pelas localidades que o contêm.
 
@@ -835,5 +835,5 @@ English_Canada.1252 domestic thousands separator: ,
 
 ## <a name="see-also"></a>Consulte também
 
-[\<locale>](../standard-library/locale.md)<br/>
-[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[\<locale>](../standard-library/locale.md)\
+[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

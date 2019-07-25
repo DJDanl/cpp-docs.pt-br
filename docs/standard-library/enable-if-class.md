@@ -7,16 +7,16 @@ helpviewer_keywords:
 - enable_if class
 - enable_if
 ms.assetid: c6b8d41c-a18f-4e30-a39e-b3aa0e8fd926
-ms.openlocfilehash: 450664f71851778cc40160e55cbb80bcb51330d5
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 6e6b8a286dca8c451e6920e7f25f07829d3b453f
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66451259"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454212"
 ---
 # <a name="enableif-class"></a>Classe enable_if
 
-Condicionalmente cria uma instância de um tipo para resolução de sobrecarga SFINAE. O typedef aninhado `enable_if<Condition,Type>::type` existe — e é um sinônimo de `Type`— se e somente se `Condition` é **true**.
+Condicionalmente cria uma instância de um tipo para resolução de sobrecarga SFINAE. O typedef `enable_if<Condition,Type>::type` aninhado existe — e é um sinônimo `Type`para – If e only `Condition` if is **true**.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -27,17 +27,17 @@ struct enable_if;
 
 ### <a name="parameters"></a>Parâmetros
 
-*B*<br/>
+*B*\
 O valor que determina a existência do tipo resultante.
 
-*T*<br/>
-O tipo a instanciar se *B* é verdadeiro.
+*T*\
+O tipo a ser instanciado se *B* for verdadeiro.
 
 ## <a name="remarks"></a>Comentários
 
-Se *B* for true, `enable_if<B, T>` tem um typedef aninhado chamado "tipo" que é um sinônimo de *T*.
+Se *B* for true, `enable_if<B, T>` terá um typedef aninhado chamado "Type", que é um sinônimo para *T*.
 
-Se *B* é false, `enable_if<B, T>` não tem um typedef aninhado chamado "tipo".
+Se *B* for false, `enable_if<B, T>` não terá um typedef aninhado chamado "Type".
 
 Este modelo de alias é fornecido:
 
@@ -50,7 +50,7 @@ Em C++, a falha de substituição de parâmetros de modelo não é um erro em si
 
 Seguem quatro cenários de exemplo:
 
-- Cenário 1: O tipo de retorno de uma função de disposição:
+- Cenário 1: Encapsulando o tipo de retorno de uma função:
 
 ```cpp
     template <your_stuff>
@@ -80,7 +80,7 @@ your_return_type_if_present
 rest_of_function_declaration_goes_here
 ```
 
-- Cenário 4: Se sua função tem um argumento não modelado, você pode encapsular seu tipo:
+- Cenário 4: Se sua função tiver um argumento não-modelo, você poderá encapsular seu tipo:
 
 ```cpp
     template <typename T>
@@ -92,7 +92,7 @@ s) {// ...
 
 O Cenário 1 não funciona com construtores e operadores de conversão porque eles não possuem tipos de retorno.
 
-O Cenário 2 deixa o parâmetro sem nome. Você poderia dizer `::type Dummy = BAR`, mas o nome `Dummy` é irrelevante, e atribuir um nome a ele provavelmente acionará um aviso de "parâmetro sem referência". Você precisa escolher um tipo de parâmetro de função `FOO` e um argumento padrão `BAR`.  Você poderia dizer **int** e `0`, mas, em seguida, os usuários do seu código acidentalmente enviariam à função um número inteiro extra que seria ignorado. Em vez disso, é recomendável que você use `void **` e qualquer um dos `0` ou **nullptr** porque quase nada pode ser convertido para `void **`:
+O Cenário 2 deixa o parâmetro sem nome. Você poderia dizer `::type Dummy = BAR`, mas o nome `Dummy` é irrelevante, e atribuir um nome a ele provavelmente acionará um aviso de "parâmetro sem referência". Você precisa escolher um tipo de parâmetro de função `FOO` e um argumento padrão `BAR`.  Você poderia dizer **int** e `0`, mas os usuários do seu código poderiam acidentalmente passar para a função um inteiro extra que seria ignorado. Em vez disso, recomendamos que `void **` você use `0` e ou **nullptr** porque quase nada é conversível em `void **`:
 
 ```cpp
 template <your_stuff>
@@ -127,7 +127,7 @@ void func(const pair<string, string>&);
 func(make_pair("foo", "bar"));
 ```
 
-Neste exemplo, `make_pair("foo", "bar")` retorna `pair<const char *, const char *>`. A resolução de sobrecarga precisa determinar que `func()` você deseja. `pair<A, B>` tem um construtor de conversão implícita de `pair<X, Y>`.  Isso não é novidade, tinha no C++98. Porém, no C++98/03, a assinatura do construtor de conversão implícita sempre existe, mesmo que seja `pair<int, int>(const pair<const char *, const char *>&)`.  Resolução de sobrecarga não se importa com que uma tentativa de instanciar esse construtor exploda terrivelmente porque `const char *` não é implicitamente conversível para **int**; ele olha apenas assinaturas, antes da função são definições criar uma instância.  Portanto, o código de exemplo é ambíguo, pois não existem assinaturas para converter `pair<const char *, const char *>` para `pair<int, int>` e `pair<string, string>`.
+Neste exemplo, `make_pair("foo", "bar")` retorna `pair<const char *, const char *>`. A resolução de sobrecarga precisa determinar que `func()` você deseja. `pair<A, B>` tem um construtor de conversão implícita de `pair<X, Y>`.  Isso não é novidade, tinha no C++98. Porém, no C++98/03, a assinatura do construtor de conversão implícita sempre existe, mesmo que seja `pair<int, int>(const pair<const char *, const char *>&)`.  A resolução de sobrecarga não se importa para que uma tentativa de instanciar esse `const char *` Construtor explodir terrivelmente porque não é implicitamente conversível para **int**; só está vendo assinaturas, antes que as definições de função sejam instanciadas.  Portanto, o código de exemplo é ambíguo, pois não existem assinaturas para converter `pair<const char *, const char *>` para `pair<int, int>` e `pair<string, string>`.
 
 C++11 solucionou essa ambiguidade usando `enable_if` para garantir que `pair<A, B>(const pair<X, Y>&)` exista **apenas** quando `const X&` puder ser implicitamente convertido para `A` e `const Y&` puder ser implicitamente convertido para `B`.  Isso permite que a resolução de sobrecarga determine que `pair<const char *, const char *>` não pode ser convertido para `pair<int, int>` e que a sobrecarga que obtém `pair<string, string>` é viável.
 
@@ -139,4 +139,4 @@ C++11 solucionou essa ambiguidade usando `enable_if` para garantir que `pair<A, 
 
 ## <a name="see-also"></a>Consulte também
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

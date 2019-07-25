@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_trivially_constructible
 ms.assetid: 3fa918c1-e66f-4d0e-a11b-be1fb2c02e7b
-ms.openlocfilehash: c83bea8be5c88876ffa25337464caa62b998ab45
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6f177463b985d3e7b2f7ab7783f9c3db0dcd5722
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413470"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448009"
 ---
 # <a name="istriviallyconstructible-class"></a>Classe is_trivially_constructible
 
@@ -26,15 +26,15 @@ struct is_trivially_constructible;
 
 ### <a name="parameters"></a>Parâmetros
 
-*T*<br/>
+*T*\
 O tipo a ser consultado.
 
-*Args*<br/>
-Os tipos de argumento para corresponder a um construtor *T*.
+*Argumento*\
+Os tipos de argumento a serem correspondentes em um construtor de *T*.
 
 ## <a name="remarks"></a>Comentários
 
-Uma instância do predicado de tipo será verdadeira se o tipo *T* é trivialmente construível usando os tipos de argumento na *Args*, caso contrário, será falsa. Tipo de *T* trivialmente pode ser construído se a definição da variável `T t(std::declval<Args>()...);` está bem formado e é conhecido para chamar operações não triviais. Ambos *T* e todos os tipos *Args* devem ser tipos completos, **void**, ou matrizes de limite desconhecido.
+Uma instância do predicado de tipo fica true se o tipo *T* é trivialmente constructible usando os tipos de argumento em *args*, caso contrário, ele mantém false. O tipo *T* é trivialmente constructible se a definição `T t(std::declval<Args>()...);` da variável é bem formada e é conhecida por não chamar nenhuma operação não trivial. Tanto *T* quanto todos os tipos em *args* devem ser tipos completos, **void**ou matrizes de associação desconhecida.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -44,4 +44,4 @@ Uma instância do predicado de tipo será verdadeira se o tipo *T* é trivialmen
 
 ## <a name="see-also"></a>Consulte também
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

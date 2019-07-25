@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::subtract_with_carry_engine [C++], max
 - std::subtract_with_carry_engine [C++], seed
 ms.assetid: 94a055f2-a620-4a22-ac34-c156924bab31
-ms.openlocfilehash: 76981df1f4a642cca1a57a9619f20aa4cebd63bb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 17091e33c504df60c0b6b8e346d2a6fd3893679c
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412183"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447410"
 ---
 # <a name="subtractwithcarryengine-class"></a>Classe subtract_with_carry_engine
 
@@ -36,16 +36,16 @@ class subtract_with_carry_engine;
 
 ### <a name="parameters"></a>Parâmetros
 
-*UIntType*<br/>
+*UInttype*\
 O tipo de resultado inteiro sem sinal. Para encontrar os tipos possíveis, consulte [\<random>](../standard-library/random.md).
 
-*W*<br/>
+*MOSTRAR*\
 **Tamanho da palavra**. Tamanho de cada palavra da sequência de estado, em bits. **Pré-condição**: `0 < W ≤ numeric_limits<UIntType>::digits`
 
-*S*<br/>
+*&* \
 **Curto retardo**. Número de valores inteiros. **Pré-condição**: `0 < S < R`
 
-*R*<br/>
+*R*\
 **Longo retardo**. Determina a recorrência na série gerada.
 
 ## <a name="members"></a>Membros
@@ -62,7 +62,7 @@ Para obter mais informações sobre membros do mecanismo, consulte [\<random>](.
 
 A classe de modelo `substract_with_carry_engine` é uma melhoria em relação a [linear_congruential_engine](../standard-library/linear-congruential-engine-class.md). Nenhum desses mecanismos é tão rápido nem apresenta resultados de qualidade tão altos quanto o [mersenne_twister_engine](../standard-library/mersenne-twister-engine-class.md).
 
-Esse mecanismo produz valores de um tipo integral sem sinal especificado pelo usuário usando a relação de recorrência (*ponto final*) `x(i) = (x(i - R) - x(i - S) - cy(i - 1)) mod M`, em que `cy(i)` terá o valor `1` se `x(i - S) - x(i - R) - cy(i - 1) < 0`; caso contrário, `0` e `M` terão o valor `2`<sup>W</sup>. O estado do mecanismo é uma realização indicador de adição *R* valores. Esses valores consistem em último *R* valores retornado se `operator()` tiver sido chamado pelo menos *R* vezes, caso contrário, o `N` valores que foram retornados e o último `R - N` valores de semente.
+Esse mecanismo produz valores de um tipo integral sem sinal especificado pelo usuário usando a relação de recorrência (*ponto final*) `x(i) = (x(i - R) - x(i - S) - cy(i - 1)) mod M`, em que `cy(i)` terá o valor `1` se `x(i - S) - x(i - R) - cy(i - 1) < 0`; caso contrário, `0` e `M` terão o valor `2`<sup>W</sup>. O estado do mecanismo é um indicador de transporte mais valores de *R* . Esses valores consistem nos últimos valores de *r* retornados `operator()` se tiverem sido chamados pelo menos do *r* vezes, `N` caso contrário, os valores retornados e os `R - N` últimos valores da semente.
 
 O argumento de modelo `UIntType` deve ser grande o suficiente para manter valores até `M - 1`.
 
@@ -84,4 +84,4 @@ Para obter informações detalhadas sobre o algoritmo de mecanismo de subtraçã
 
 ## <a name="see-also"></a>Consulte também
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

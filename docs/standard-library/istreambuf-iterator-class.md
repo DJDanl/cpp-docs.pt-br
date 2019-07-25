@@ -18,12 +18,12 @@ helpviewer_keywords:
 - std::istreambuf_iterator [C++], traits_type
 - std::istreambuf_iterator [C++], equal
 ms.assetid: 39002da2-61a6-48a5-9d0c-5df8271f6038
-ms.openlocfilehash: 41298909b53de1c7acf3cb8ae4b999eb6260765d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0a2bbc69d4f2d3af0ee6e00a2672436a5f15ab67
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413262"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448125"
 ---
 # <a name="istreambufiterator-class"></a>Classe istreambuf_iterator
 
@@ -39,10 +39,10 @@ class istreambuf_iterator
 
 ### <a name="parameters"></a>Parâmetros
 
-*CharType*<br/>
+*CharType*\
 O tipo que representa o tipo de caractere para istreambuf_iterator.
 
-*Características*<br/>
+*Características*\
 O tipo que representa o tipo de caractere para istreambuf_iterator. Esse argumento é opcional e o valor padrão é `char_traits`\< *CharType>.*
 
 ## <a name="remarks"></a>Comentários
@@ -142,7 +142,7 @@ bool equal(const istreambuf_iterator<CharType, Traits>& right) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*right*<br/>
+*Certo*\
 O iterador com relação ao qual verificar quanto à igualdade.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -151,7 +151,7 @@ O iterador com relação ao qual verificar quanto à igualdade.
 
 ### <a name="remarks"></a>Comentários
 
-Um intervalo é definido pela `istreambuf_iterator` para a posição atual e o iterador de fim do fluxo, mas desde que todos os não-final de fluxo iteradores são equivalentes a `equal` função de membro, não é possível definir subintervalos usando `istreambuf_iterator`s. Os operadores `==` e `!=` têm a mesma semântica.
+Um intervalo é definido pelo `istreambuf_iterator` para a posição atual e o iterador de fim de fluxo, mas como todos os iteradores de fluxo não-end são equivalentes `equal` na função membro, não é possível definir nenhum subintervalo usando `istreambuf_iterator`s. Os operadores `==` e `!=` têm a mesma semântica.
 
 ### <a name="example"></a>Exemplo
 
@@ -239,15 +239,15 @@ istreambuf_iterator(istream_type& _Istr) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*strbuf*<br/>
+*strbuf*\
 O buffer do fluxo de entrada ao qual o `istreambuf_iterator` está sendo anexado.
 
-*_Istr*<br/>
+*_Istr*\
 O fluxo de entrada ao qual o `istreambuf_iterator` está sendo anexado.
 
 ### <a name="remarks"></a>Comentários
 
-O primeiro construtor inicializa o ponteiro de buffer de fluxo de entrada com *strbuf*. O segundo construtor inicializa o ponteiro de buffer de fluxo de entrada com *_Istr*. `rdbuf`e, em seguida, eventualmente tenta extrair e armazenar um objeto do tipo `CharType`.
+O primeiro construtor inicializa o ponteiro de buffer de fluxo de entrada com *strbuf*. O segundo construtor inicializa o ponteiro de buffer de fluxo de entrada com *_Istr*. `rdbuf`e, eventualmente, tenta extrair e armazenar um objeto do tipo `CharType`.
 
 ### <a name="example"></a>Exemplo
 
@@ -336,7 +336,7 @@ Um `istreambuf_iterator` ou uma referência a um `istreambuf_iterator`.
 
 ### <a name="remarks"></a>Comentários
 
-O primeiro operador eventualmente tenta extrair e armazenar um objeto do tipo `CharType` do fluxo de entrada associado. O segundo operador faz uma cópia do objeto, incrementa o objeto e, em seguida, retorna a cópia.
+O primeiro operador eventualmente tenta extrair e armazenar um objeto do tipo `CharType` a partir do fluxo de entrada associado. O segundo operador faz uma cópia do objeto, incrementa o objeto e, em seguida, retorna a cópia.
 
 ### <a name="example"></a>Exemplo
 
@@ -441,7 +441,7 @@ int main( )
 
 ## <a name="see-also"></a>Consulte também
 
-[Struct iterator](../standard-library/iterator-struct.md)<br/>
-[\<iterator>](../standard-library/iterator.md)<br/>
-[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Referência da biblioteca padrão C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[Struct iterator](../standard-library/iterator-struct.md)\
+[\<iterator>](../standard-library/iterator.md)\
+[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Referência da biblioteca padrão C++](../standard-library/cpp-standard-library-reference.md)

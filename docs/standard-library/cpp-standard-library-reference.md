@@ -7,12 +7,12 @@ helpviewer_keywords:
 - template libraries
 - libraries, Standard C++
 ms.assetid: a37d3ba3-58af-47c7-9ee2-441ccd7b77ee
-ms.openlocfilehash: ea8bae08def17093a2e663bb21dfe617ae851651
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 60bfed322985b1345f4b3842a21f836953813657
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62210743"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452438"
 ---
 # <a name="c-standard-library-reference"></a>Referência da Biblioteca Padrão C++
 
@@ -22,11 +22,11 @@ Para obter mais informações sobre as bibliotecas em tempo de execução Visual
 
 ## <a name="in-this-section"></a>Nesta seção
 
-[Visão geral da biblioteca padrão C++](../standard-library/cpp-standard-library-overview.md)<br/>
+[Visão geral da biblioteca padrão C++](../standard-library/cpp-standard-library-overview.md)\
 Fornece uma visão geral da implementação da Microsoft da Biblioteca Padrão C++.
 
-[Programação de iostream](../standard-library/iostream-programming.md)<br/>
+[Programação de iostream](../standard-library/iostream-programming.md)\
 Fornece uma visão geral da programação de iostream.
 
-[Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)<br/>
+[Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)\
 Fornece links para tópicos de referência que abordam os arquivos de cabeçalho da Biblioteca Padrão C++, com exemplos de código.

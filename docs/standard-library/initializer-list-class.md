@@ -12,12 +12,12 @@ helpviewer_keywords:
 - std::initializer_list::begin
 - std::initializer_list::end
 - std::initializer_list::size
-ms.openlocfilehash: de925f73ac206113aafb8661a8d5b347503150c5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: acd11f3b3a3bf0ba17e34a802cc8988410e17b12
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159295"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455354"
 ---
 # <a name="initializerlist-class"></a>Classe initializer_list
 
@@ -116,8 +116,8 @@ initializer_list(const InputIterator First, const InputIterator Last);
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|*First*|A posição do primeiro elemento no intervalo de elementos a serem copiados.|
-|*Last*|A posição do primeiro elemento além do intervalo de elementos a serem copiados.|
+|*Primeiro*|A posição do primeiro elemento no intervalo de elementos a serem copiados.|
+|*Última*|A posição do primeiro elemento além do intervalo de elementos a serem copiados.|
 
 ### <a name="remarks"></a>Comentários
 
@@ -202,4 +202,4 @@ O número de elementos na lista.
 
 ## <a name="see-also"></a>Consulte também
 
-[<forward_list>](../standard-library/forward-list.md)<br/>
+[<forward_list>](../standard-library/forward-list.md)

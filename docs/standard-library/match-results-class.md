@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - match_results class
 ms.assetid: b504fdca-e5dd-429d-9960-6e27c9167fa6
-ms.openlocfilehash: 32a5f9d20999740d4368f7901c797d87acce0be9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 72a948c7f8422b36b94a16cdb2c815bca92d20c7
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412963"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456380"
 ---
 # <a name="matchresults-class"></a>Classe match_results
 
@@ -26,10 +26,10 @@ class match_results
 
 ## <a name="parameters"></a>Parâmetros
 
-*BidIt*<br/>
+*Bidirecional*\
 O tipo de iterador para subcorrespondências.
 
-*ALLOC*<br/>
+*Alocação*\
 O tipo de um distribuidor para gerenciar o armazenamento.
 
 ## <a name="remarks"></a>Comentários
@@ -68,7 +68,7 @@ A classe de modelo descreve um objeto que controla uma sequência de elementos n
 |[get_allocator](#get_allocator)|Retorna o alocador armazenado.|
 |[length](#length)|Retorna o comprimento de uma subcorrespondência.|
 |[max_size](#max_size)|Obtém o maior número de subcorrespondências.|
-|[position](#position)|Iniciar o deslocamento de um subgrupo.|
+|[propostas](#position)|Iniciar o deslocamento de um subgrupo.|
 |[prefix](#prefix)|Obtém a sequência antes da primeira subcorrespondência.|
 |[size](#size)|Número de contagens de subcorrespondências.|
 |[str](#str)|Retorna uma subcorrespondência.|
@@ -198,7 +198,7 @@ typedef Alloc allocator_type;
 
 ### <a name="remarks"></a>Comentários
 
-O typedef é um sinônimo para o argumento de modelo *Alloc*.
+O typedef é um sinônimo para a *alocação*de argumento de modelo.
 
 ## <a name="begin"></a>  match_results::begin
 
@@ -298,21 +298,21 @@ string_type format(const string_type& fmt, match_flag_type flags = format_defaul
 
 ### <a name="parameters"></a>Parâmetros
 
-*OutIt*<br/>
+*OutIt*\
 O tipo de iterador de saída.
 
-*out*<br/>
+*out*\
 O fluxo de saída no qual gravar.
 
-*fmt*<br/>
+*fmt*\
 A cadeia de caracteres de formato.
 
-*flags*<br/>
+*flags*\
 Os sinalizadores de formato.
 
 ### <a name="remarks"></a>Comentários
 
-Cada função de membro gera texto formatado no controle do formato *fmt*. A primeira função membro grava o texto formatado na sequência definida por seu argumento *horizontalmente* e retorna *out*. A segunda função membro retorna um objeto de cadeia de caracteres que mantém uma cópia do texto formatado.
+Cada função de membro gera texto formatado sob o controle do formato *fmt*. A primeira função de membro grava o texto formatado na sequência definida por *seu argumento e* *retorna.* A segunda função membro retorna um objeto de cadeia de caracteres que mantém uma cópia do texto formatado.
 
 Para gerar texto formatado. o texto literal na cadeia de caracteres de formato é copiado normalmente para a sequência de destino. Cada sequência de escape na cadeia de caracteres de formato é substituída pelo texto que ela representa. Os detalhes da cópia e da substituição são controlados pelos sinalizadores de formato transmitidos à função.
 
@@ -350,7 +350,7 @@ difference_type length(size_type sub = 0) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*sub*<br/>
+*projeto*\
 O índice da subcorrespondência.
 
 ### <a name="remarks"></a>Comentários
@@ -369,15 +369,15 @@ match_results(const match_results& right);
 
 ### <a name="parameters"></a>Parâmetros
 
-*alloc*<br/>
+*alocação*\
 O objeto de alocador a ser armazenado.
 
-*right*<br/>
+*Certo*\
 O objeto match_results a ser copiado.
 
 ### <a name="remarks"></a>Comentários
 
-O primeiro construtor cria um objeto `match_results` que não mantém nenhuma subcorrespondência. O segundo construtor cria um `match_results` que é uma cópia do objeto *direito*.
+O primeiro construtor cria um objeto `match_results` que não mantém nenhuma subcorrespondência. O segundo construtor constrói um `match_results` objeto que é uma cópia do *lado direito*.
 
 ## <a name="max_size"></a>  match_results::max_size
 
@@ -401,12 +401,12 @@ match_results& operator=(const match_results& right);
 
 ### <a name="parameters"></a>Parâmetros
 
-*right*<br/>
+*Certo*\
 O objeto match_results a ser copiado.
 
 ### <a name="remarks"></a>Comentários
 
-O operador membro substitui a sequência controlada por `*this` com uma cópia da sequência controlada pelo *direito*.
+O operador member substitui a sequência controlada por `*this` por uma cópia da sequência controlada pela *direita*.
 
 ## <a name="op_at"></a>  match_results::operator[]
 
@@ -418,12 +418,12 @@ const_reference operator[](size_type n) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*n*<br/>
+*n*\
 Índice da subcorrespondência.
 
 ### <a name="remarks"></a>Comentários
 
-A função membro retorna uma referência ao elemento *n* da sequência controlada ou uma referência a um vazio `sub_match` do objeto se `size() <= n` ou, se o grupo de captura *n* não fazia parte da correspondência.
+A função membro retorna uma referência ao elemento *n* da sequência controlada, ou uma referência a um objeto vazio `sub_match` se `size() <= n` ou se o grupo de captura *n* não fizer parte da correspondência.
 
 ## <a name="position"></a>  match_results::position
 
@@ -435,7 +435,7 @@ difference_type position(size_type sub = 0) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*sub*<br/>
+*projeto*\
 Índice da subcorrespondência.
 
 ### <a name="remarks"></a>Comentários
@@ -500,7 +500,7 @@ string_type str(size_type sub = 0) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*sub*<br/>
+*projeto*\
 Índice da subcorrespondência.
 
 ### <a name="remarks"></a>Comentários
@@ -541,12 +541,12 @@ void swap(const match_results& right) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*right*<br/>
+*Certo*\
 O objeto match_results a ser trocado.
 
 ### <a name="remarks"></a>Comentários
 
-A função membro troca o conteúdo do `*this` e *direito* em tempo constante e não lança exceções.
+A função membro troca o conteúdo de `*this` e *à direita* em tempo constante e não gera exceções.
 
 ## <a name="value_type"></a>  match_results::value_type
 
@@ -562,4 +562,4 @@ O typedef é um sinônimo para o tipo `sub_match<BidIt>`.
 
 ## <a name="see-also"></a>Consulte também
 
-[\<regex>](../standard-library/regex.md)<br/>
+[\<regex>](../standard-library/regex.md)

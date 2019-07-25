@@ -10,12 +10,12 @@ helpviewer_keywords:
 - std::insert_iterator [C++], container_type
 - std::insert_iterator [C++], reference
 ms.assetid: d5d86405-872e-4e3b-9e68-c69a2b7e8221
-ms.openlocfilehash: fb18c67b6e7949486c33e95c7daf6bc6868d0baa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 15041e21b53c29aedda831fd73b37a65e57a3680
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404878"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447656"
 ---
 # <a name="insertiterator-class"></a>Classe insert_iterator
 
@@ -30,12 +30,12 @@ class insert_iterator;
 
 ### <a name="parameters"></a>Parâmetros
 
-*Container*<br/>
+*Container*\
 O tipo de contêiner no qual os elementos deverão ser inseridos por um `insert_iterator`.
 
 ## <a name="remarks"></a>Comentários
 
-O contêiner do tipo `Container` deve satisfazer os requisitos para um contêiner de tamanho variável e ter uma função de membro de inserção de dois argumentos em que os parâmetros são do tipo `Container::iterator` e `Container::value_type` e que retorna um tipo `Container::iterator`. Os contêineres associativos classificados e de sequência da Biblioteca Padrão do C++ atendem a esses requisitos e podem ser adaptados para uso com `insert_iterator`s. Para contêineres associativos, o argumento de posição é tratado como uma dica, que tem o potencial de aumentar ou degradar o desempenho, dependendo da qualidade da dica. Um `insert_iterator` sempre deve ser inicializado com seu contêiner.
+O contêiner do tipo `Container` deve satisfazer os requisitos para um contêiner de tamanho variável e ter uma função de membro de inserção de dois argumentos onde os parâmetros são `Container::iterator` do `Container::value_type` tipo e e que retorna `Container::iterator`um tipo. Os contêineres associativos classificados e de sequência da Biblioteca Padrão do C++ atendem a esses requisitos e podem ser adaptados para uso com `insert_iterator`s. Para contêineres associativos, o argumento de posição é tratado como uma dica, que tem o potencial de aumentar ou degradar o desempenho, dependendo da qualidade da dica. Um `insert_iterator` sempre deve ser inicializado com seu contêiner.
 
 ### <a name="constructors"></a>Construtores
 
@@ -116,10 +116,10 @@ insert_iterator(Container& _Cont, typename Container::iterator _It);
 
 ### <a name="parameters"></a>Parâmetros
 
-*_Cont*<br/>
+*_Cont*\
 O contêiner no qual o `insert_iterator` deve inserir elementos.
 
-*_It*<br/>
+*_It*\
 A posição da inserção.
 
 ### <a name="remarks"></a>Comentários
@@ -186,7 +186,7 @@ A função membro retorna o valor do elemento de destino.
 
 ### <a name="remarks"></a>Comentários
 
-Usado para implementar a expressão do iterador de saída **\*Iter** = **value**. Se `Iter` é um iterador que trata de um elemento em uma sequência, em seguida,  **\*Iter** = **valor** substituirá esse elemento pelo valor e não altera o número total de elementos na sequência.
+Usado para implementar a expressão do iterador de saída **\*Iter** = **value**. Se `Iter` for um iterador que resolve um elemento em uma sequência  **\*** , o**valor** iter = substituirá esse elemento por um valor e não alterará o número total de elementos na sequência.
 
 ### <a name="example"></a>Exemplo
 
@@ -310,7 +310,7 @@ insert_iterator<Container>& operator=(
 
 ### <a name="parameters"></a>Parâmetros
 
-*val*<br/>
+*Val*\
 O valor a ser atribuído ao contêiner.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -429,6 +429,6 @@ The first element in the list L is: 10.
 
 ## <a name="see-also"></a>Consulte também
 
-[\<iterator>](../standard-library/iterator.md)<br/>
-[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Referência da biblioteca padrão C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[\<iterator>](../standard-library/iterator.md)\
+[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Referência da biblioteca padrão C++](../standard-library/cpp-standard-library-reference.md)
