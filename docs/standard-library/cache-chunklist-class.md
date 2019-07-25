@@ -10,12 +10,12 @@ helpviewer_keywords:
 - stdext::cache_chunklist [C++], allocate
 - stdext::cache_chunklist [C++], deallocate
 ms.assetid: af19eccc-4ae7-4a34-bbb2-81e397424cb9
-ms.openlocfilehash: 94ae4dfc8f5f9073c0a39f315adfbed3e5c14daf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 73730e0a4a22e7f5e63809cc2c1603cbda1ab596
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62380163"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449660"
 ---
 # <a name="cachechunklist-class"></a>Classe cache_chunklist
 
@@ -36,9 +36,9 @@ class cache_chunklist
 
 ## <a name="remarks"></a>Comentários
 
-Essa classe de modelo usa **operador new** para alocar partes de memória bruta, Subalocando blocos para alocar armazenamento para um bloco de memória quando necessário; ele armazena os blocos de memória desalocados em uma lista livre separada para cada parte e usa **operador delete** para desalocar uma parte quando nenhum dos seus blocos de memória está em uso.
+Essa classe de modelo usa o **operador New** para alocar partes de memória bruta, Subalocando blocos para alocar armazenamento para um bloco de memória quando necessário; Ele armazena blocos de memória desalocados em uma lista gratuita separada para cada parte e usa o **operador Delete** para desalocar uma parte quando nenhum de seus blocos de memória está em uso.
 
-Cada bloco de memória contém *Sz* bytes de memória utilizável e um ponteiro para a parte à qual ele pertence. Cada parte contém `Nelts` blocos de memória, três ponteiros, int e os dados que **operador new** e **operador delete** exigem.
+Cada bloco de memória contém os bytes de *sz* de memória utilizável e um ponteiro para a parte à qual ele pertence. Cada parte contém `Nelts` blocos de memória, três ponteiros, um int e os dados que o **operador New** e o **operador Delete** exigem.
 
 ### <a name="constructors"></a>Construtores
 
@@ -108,4 +108,4 @@ void deallocate(void* ptr, std::size_t count);
 
 ## <a name="see-also"></a>Consulte também
 
-[\<allocators>](../standard-library/allocators-header.md)<br/>
+[\<allocators>](../standard-library/allocators-header.md)

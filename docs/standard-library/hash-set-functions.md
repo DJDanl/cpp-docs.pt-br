@@ -5,12 +5,12 @@ f1_keywords:
 - hash_set/std::swap
 - hash_set/std::swap (hash_multiset)
 ms.assetid: 557a0162-3728-4537-97dc-f9f6cc7ece94
-ms.openlocfilehash: 05a7ffd1e3bf02a88fe6a6cce841a440550c1057
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2fbc05c16ba6629397bbb07bab30cb9315a16e1f
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159126"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448602"
 ---
 # <a name="lthashsetgt-functions"></a>Funções &lt;hash_set&gt;
 
@@ -33,15 +33,15 @@ void swap(
 
 ### <a name="parameters"></a>Parâmetros
 
-*right*<br/>
-O hash_set que fornece os elementos a serem trocados ou o hash_set cujos elementos deverão ser trocados do hash_set *esquerdo*.
+*Certo*\
+O hash_set que fornece os elementos a serem trocados ou o hash_set cujos elementos devem ser alterados com aqueles do hash_set *Left*.
 
-*left*<br/>
-O hash_set cujos elementos deverão ser trocados do hash_set *certa*.
+*mantida*\
+O hash_set cujos elementos devem ser trocados pelos do hash_set *direito*.
 
 ### <a name="remarks"></a>Comentários
 
-O `swap` função de modelo é um algoritmo especializado na classe de contêiner hash_set para executar a função de membro `left.` [swap](../standard-library/hash-set-class.md#swap)(`right`). Trata-se de uma instância da ordenação parcial de modelos de função pelo compilador. Quando as funções de modelo são sobrecarregadas de forma que a correspondência do modelo com a chamada de função não é exclusiva, o compilador seleciona a versão mais especializada do modelo de função. A versão geral da função de modelo
+A `swap` função de modelo é um algoritmo especializado na classe de contêiner hash_set para executar a função `left.`de membro`right` [swap](../standard-library/hash-set-class.md#swap)(). Trata-se de uma instância da ordenação parcial de modelos de função pelo compilador. Quando as funções de modelo são sobrecarregadas de forma que a correspondência do modelo com a chamada de função não é exclusiva, o compilador seleciona a versão mais especializada do modelo de função. A versão geral da função de modelo
 
 **modelo \<classe T> void swap(T&, T&),**
 
@@ -64,15 +64,15 @@ void swap(hash_multiset <Key, Traits, Allocator>& left, hash_multiset <Key, Trai
 
 ### <a name="parameters"></a>Parâmetros
 
-*right*<br/>
-O hash_multiset que fornece os elementos a serem trocados ou o hash_multiset cujos elementos deverão ser trocados do hash_multiset *esquerdo*.
+*Certo*\
+O hash_multiset que fornece os elementos a serem trocados ou o hash_multiset cujos elementos devem ser alterados com aqueles do hash_multiset *Left*.
 
-*left*<br/>
-O hash_multiset cujos elementos deverão ser trocados do hash_multiset *certa*.
+*mantida*\
+O hash_multiset cujos elementos devem ser trocados pelos do hash_multiset *direito*.
 
 ### <a name="remarks"></a>Comentários
 
-O `swap` função de modelo é um algoritmo especializado na classe de contêiner hash_multiset para executar a função de membro `left.` [swap](../standard-library/hash-multiset-class.md#swap)(`right`). Trata-se de uma instância da ordenação parcial de modelos de função pelo compilador. Quando as funções de modelo são sobrecarregadas de forma que a correspondência do modelo com a chamada de função não é exclusiva, o compilador seleciona a versão mais especializada do modelo de função. A versão geral da função de modelo
+A `swap` função de modelo é um algoritmo especializado na classe de contêiner hash_multiset para executar a função `left.`de membro`right` [swap](../standard-library/hash-multiset-class.md#swap)(). Trata-se de uma instância da ordenação parcial de modelos de função pelo compilador. Quando as funções de modelo são sobrecarregadas de forma que a correspondência do modelo com a chamada de função não é exclusiva, o compilador seleciona a versão mais especializada do modelo de função. A versão geral da função de modelo
 
 **modelo \<classe T> void swap(T&, T&),**
 
@@ -84,4 +84,4 @@ Veja o exemplo de código da classe de membro [hash_multiset::swap](../standard-
 
 ## <a name="see-also"></a>Consulte também
 
-[<hash_set>](../standard-library/hash-set.md)<br/>
+[<hash_set>](../standard-library/hash-set.md)

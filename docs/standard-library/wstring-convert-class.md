@@ -22,12 +22,12 @@ helpviewer_keywords:
 - std::wstring_convert [C++], converted
 - std::wstring_convert [C++], state
 ms.assetid: e34f5b65-d572-4bdc-ac69-20778712e376
-ms.openlocfilehash: df3b003289dcd86e8033521d8cb0cacdbb7dfbd8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 35689f79f8987cb55c4578869369f35d8656faec
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410792"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450893"
 ---
 # <a name="wstringconvert-class"></a>Classe wstring_convert
 
@@ -42,10 +42,10 @@ class wstring_convert
 
 ### <a name="parameters"></a>Parâmetros
 
-*Codecvt*<br/>
+*Codecvt*\
 A faceta de [locale](../standard-library/locale-class.md) que representa o objeto de conversão.
 
-*Elem*<br/>
+*Elem*\
 O tipo de elemento de caractere largo.
 
 ## <a name="remarks"></a>Comentários
@@ -139,7 +139,7 @@ wide_string from_bytes(const char* first, const char* last);
 |---------------|-----------------|
 |*Byte*|A sequência de bytes de elemento único a ser convertida.|
 |*ptr*|A sequência de caracteres terminada em nulo de estilo C a ser convertida.|
-|*Bstr*|A [byte_string](#byte_string) a ser convertida.|
+|*BSTR*|A [byte_string](#byte_string) a ser convertida.|
 |*first*|O primeiro caractere em um intervalo de caracteres a ser convertido.|
 |*last*|O último caractere em um intervalo de caracteres a ser convertido.|
 
@@ -149,7 +149,7 @@ Um objeto de cadeia de caracteres largos resultante da conversão.
 
 ### <a name="remarks"></a>Comentários
 
-Se o [estado de conversão](../standard-library/wstring-convert-class.md) objeto era *não* construído com um valor explícito, ele é definido como seu valor padrão (o estado de conversão inicial) antes do início da conversão. Caso contrário, ele permanecerá inalterado.
+Se o objeto de [estado de conversão](../standard-library/wstring-convert-class.md) *não* tiver sido construído com um valor explícito, ele será definido como seu valor padrão (o estado de conversão inicial) antes do início da conversão. Caso contrário, ele permanecerá inalterado.
 
 O número de elementos de entrada convertidos com êxito é armazenado no objeto de contagem de conversões. Se não houver erro de conversão, a função membro retornará a cadeia de caracteres largos convertida. Caso contrário, se o objeto for construído com um inicializador para a mensagem de erro de cadeia de caracteres largos, a função membro retornará o objeto da mensagem de erro de cadeia de caracteres largos. Caso contrário, a função membro gerará um objeto da classe [range_error](../standard-library/range-error-class.md).
 
@@ -214,7 +214,7 @@ byte_string to_bytes(const Elem* first, const Elem* last);
 
 ### <a name="remarks"></a>Comentários
 
-Se o [estado de conversão](../standard-library/wstring-convert-class.md) objeto era *não* construído com um valor explícito, ele é definido como seu valor padrão (o estado de conversão inicial) antes do início da conversão. Caso contrário, ele permanecerá inalterado.
+Se o objeto de [estado de conversão](../standard-library/wstring-convert-class.md) *não* tiver sido construído com um valor explícito, ele será definido como seu valor padrão (o estado de conversão inicial) antes do início da conversão. Caso contrário, ele permanecerá inalterado.
 
 O número de elementos de entrada convertidos com êxito é armazenado no objeto de contagem de conversões. Se não houver erro de conversão, a função membro retornará a cadeia de caracteres de bytes convertida. Caso contrário, se o objeto for construído com um inicializador para a mensagem de erro de cadeia de caracteres de bytes, a função membro retornará o objeto da mensagem de erro de cadeia de caracteres de bytes. Caso contrário, a função membro gerará um objeto da classe [range_error](../standard-library/range-error-class.md).
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - stdext::cache_suballoc [C++], allocate
 - stdext::cache_suballoc [C++], deallocate
 ms.assetid: 9ea9c5e9-1dcc-45d0-b3a7-a56a93d88898
-ms.openlocfilehash: 06d0ef390e6ae1980b9ab20b8ceb67213837148b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aa0ceda69fc169593719c3a4f81d308bb6cde284
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62380111"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449652"
 ---
 # <a name="cachesuballoc-class"></a>Classe cache_suballoc
 
@@ -36,9 +36,9 @@ class cache_suballoc
 
 ## <a name="remarks"></a>Comentários
 
-A classe de modelo cache_suballoc armazena blocos de memória desalocados em uma lista livre com comprimento ilimitado, usando `freelist<sizeof(Type), max_unbounded>`e os subaloca blocos de memória de uma parte maior alocada com **operador new** quando a lista livre está vazio.
+A classe de modelo cache_suballoc armazena blocos de memória desalocados em uma lista livre com comprimento não associado `freelist<sizeof(Type), max_unbounded>`, usando e subaloca blocos de memória de um bloco maior alocado com o **operador novo** quando a lista livre está vazia.
 
-Cada parte contém `Sz * Nelts` bytes de memória utilizável e os dados que **operador new** e **operador delete** exigem. Partes alocadas nunca são liberadas.
+Cada parte contém `Sz * Nelts` bytes de memória utilizável e os dados que o **operador New** e o **operador Delete** exigem. Partes alocadas nunca são liberadas.
 
 ### <a name="constructors"></a>Construtores
 
@@ -108,4 +108,4 @@ void deallocate(void* ptr, std::size_t count);
 
 ## <a name="see-also"></a>Consulte também
 
-[\<allocators>](../standard-library/allocators-header.md)<br/>
+[\<allocators>](../standard-library/allocators-header.md)

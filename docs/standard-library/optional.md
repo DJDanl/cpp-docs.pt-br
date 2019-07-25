@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - <optional>
 ms.assetid: 8b4ab09e-1475-434a-b4e0-fdbc07a08b5b
-ms.openlocfilehash: c73ad2ad94a5de29bc2c457fdf6ca8b9c783615c
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 83a0ad52735f92d731dafb32ad1be5a8278776b4
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68268478"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447176"
 ---
 # <a name="ltoptionalgt"></a>&lt;optional&gt;
 
-Define a classe de modelo do contêiner opcional e vários modelos de suporte.
+Define a classe de modelo de contêiner opcional e vários modelos de suporte.
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** \<opcional >
+**Cabeçalho:** \<> opcional
 
 **Namespace:** std
 
@@ -29,21 +29,21 @@ Define a classe de modelo do contêiner opcional e vários modelos de suporte.
 
 |||
 |-|-|
-|[operator==](../standard-library/optional-operators.md#op_eq_eq)|Testa se o `optional` objeto no lado esquerdo do operador é igual ao `optional` objeto no lado direito.|
-|[operator!=](../standard-library/optional-operators.md#op_neq)|Testa se o `optional` objeto no lado esquerdo do operador não é igual ao `optional` objeto no lado direito.|
-|[operator<](../standard-library/optional-operators.md#op_lt)|Testa se o `optional` objeto no lado esquerdo do operador é menor do que o `optional` objeto no lado direito.|
-|[operator<=](../standard-library/optional-operators.md#op_lt_eq)|Testa se o `optional` objeto no lado esquerdo do operador é menor ou igual ao `optional` objeto no lado direito.|
+|[operator==](../standard-library/optional-operators.md#op_eq_eq)|Testa se o `optional` objeto no lado esquerdo do operador é igual `optional` ao objeto no lado direito.|
+|[operator!=](../standard-library/optional-operators.md#op_neq)|Testa se o `optional` objeto no lado esquerdo do operador não é igual `optional` ao objeto no lado direito.|
+|[operator<](../standard-library/optional-operators.md#op_lt)|Testa se o `optional` objeto no lado esquerdo do operador é menor que o `optional` objeto no lado direito.|
+|[operator<=](../standard-library/optional-operators.md#op_lt_eq)|Testa se o `optional` objeto no lado esquerdo do operador é menor ou igual `optional` ao objeto no lado direito.|
 |[operator>](../standard-library/optional-operators.md#op_gt)|Testa se o `optional` objeto no lado esquerdo do operador é maior que o `optional` objeto no lado direito.|
-|[operator>=](../standard-library/optional-operators.md#op_lt_eq)|Testa se o `optional` objeto no lado esquerdo do operador é maior que ou igual ao `optional` objeto no lado direito.|
+|[operator>=](../standard-library/optional-operators.md#op_lt_eq)|Testa se o `optional` objeto no lado esquerdo do operador é maior ou igual `optional` ao objeto no lado direito.|
 
 > [!NOTE]
-> Além do relacional compara, \<opcional > operadores também dão suporte a comparação com **nullopt** e `T`.
+> Além das comparações relacionais \<, os operadores de > opcionais também dão `T`suporte à comparação com **nullopt** e.
 
 ### <a name="functions"></a>Funções
 
 |||
 |-|-|
-|[make_optional](../standard-library/optional-functions.md#make_optional)|Faz com que um objeto opcional.|
+|[make_optional](../standard-library/optional-functions.md#make_optional)|Torna um objeto opcional.|
 |[swap](../standard-library/optional-functions.md#swap)||
 
 ### <a name="classes-and-structs"></a>Classes e structs
@@ -51,9 +51,9 @@ Define a classe de modelo do contêiner opcional e vários modelos de suporte.
 |||
 |-|-|
 |[hash]()||
-|[Classe opcional](../standard-library/optional-class.md)|Descreve um objeto que pode ou não pode conter um valor.|
-|[nullopt_t Struct](../standard-library/nullopt-t-structure.md)|Descreve um objeto que não contém um valor.|
-|[Classe de bad_optional_access](../standard-library/bad-optional-access-class.md)|Descreve um objeto lançado como uma exceção para relatar uma tentativa de acessar um valor não existe.|
+|[Classe opcional](../standard-library/optional-class.md)|Descreve um objeto que pode ou não conter um valor.|
+|[Estrutura nullopt_t](../standard-library/nullopt-t-structure.md)|Descreve um objeto que não contém um valor.|
+|[Classe bad_optional_access](../standard-library/bad-optional-access-class.md)|Descreve um objeto gerado como uma exceção para relatar uma tentativa de acessar um valor que não está lá.|
 
 ### <a name="objects"></a>Objetos
 
@@ -63,4 +63,4 @@ Define a classe de modelo do contêiner opcional e vários modelos de suporte.
 
 ## <a name="see-also"></a>Consulte também
 
-[Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)<br/>
+[Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)

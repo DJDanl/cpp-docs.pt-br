@@ -1,5 +1,5 @@
 ---
-title: Classe de invoke_result
+title: Classe invoke_result
 ms.date: 02/21/2019
 f1_keywords:
 - type_traits/std::invoke_result
@@ -9,16 +9,16 @@ helpviewer_keywords:
 - std::invoke_result
 - std::invoke_result_t
 - std::invoke_result::type
-ms.openlocfilehash: 7c03240d3ee666fcda30562279a8dbda2ca8dc7b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2b2051b0c854151cff9b439f5ec0a951c25a6387
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404839"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447634"
 ---
-# <a name="invokeresult-class"></a>Classe de invoke_result
+# <a name="invokeresult-class"></a>Classe invoke_result
 
-Determina o tipo de retorno do tipo callable que usa os tipos de argumento especificado em tempo de compilação. Adicionado no c++17.
+Determina o tipo de retorno do tipo callable que usa os tipos de argumento especificados no momento da compilação. Adicionado em C++ 17.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -33,15 +33,15 @@ template<lass Callable, class... Args>
 
 ### <a name="parameters"></a>Parâmetros
 
-*pode ser chamado*<br/>
+*Acessível*\
 O tipo callable para consulta.
 
-*Args*<br/>
+*Argumento*\
 Os tipos de lista de argumentos para o tipo callable para consulta.
 
 ## <a name="remarks"></a>Comentários
 
-Use este modelo para determinar o tipo de resultado *Callable*(*Args*...) em tempo de compilação, onde *Callable* e todos os tipos no *Args* são qualquer tipo completo, uma matriz de limite desconhecido ou uma possivelmente qualificada por cv `void`. O `type` membro da classe modelo nomeia o tipo de retorno *Callable* quando invocada usando os argumentos *Args*... O `type` membro é definido somente se *Callable* pode ser chamado quando invocado usando os argumentos *Args*... em um contexto não avaliado. Caso contrário, a classe de modelo não tem nenhum membro `type`, que permite a SFINAE testes em um determinado conjunto de tipos de argumento em tempo de compilação.
+Use este modelo para determinar o tipo de resultado de *callable*(*args*...) no momento da compilação, onde *callable* e todos os tipos em *args* são de qualquer tipo completo, uma matriz de associação desconhecida ou uma possivelmente `void`qualificada para CV. O `type` membro da classe de modelo nomeia o tipo de retorno de *callable* quando invocado usando os *argumentos Arguments*.... O `type` membro só será definido se *chamável* puder ser chamado quando invocado usando os *argumentos Arguments*... em um contexto não avaliado. Caso contrário, a classe de modelo não `type`tem nenhum membro, que permite testes SFINAE em um determinado conjunto de tipos de argumentos no momento da compilação.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -51,5 +51,5 @@ Use este modelo para determinar o tipo de resultado *Callable*(*Args*...) em tem
 
 ## <a name="see-also"></a>Consulte também
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
 [invoke](functional-functions.md#invoke)
