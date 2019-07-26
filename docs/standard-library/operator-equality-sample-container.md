@@ -13,17 +13,17 @@ helpviewer_keywords:
 - operator==, containers
 - == operator, with specific standard C++ objects
 ms.assetid: d3d8754e-5157-4b8b-bf9c-da41856f5eed
-ms.openlocfilehash: 9313df5d75efa043f2fb9df6090c125de75a2636
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 168785abb09ca198435c301040d7628a6dd12b26
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220262"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68460151"
 ---
 # <a name="operator-ltsample-containergt"></a>operator== (&lt;sample container&gt;)
 
 > [!NOTE]
-> Este tópico é no Microsoft C++ como um exemplo não funcional de contêineres usados na documentação do C++ biblioteca padrão. Para obter mais informações, consulte [Contêineres da biblioteca padrão C++](../standard-library/stl-containers.md).
+> Este tópico está na documentação da C++ Microsoft como um exemplo não funcional de contêineres usados na biblioteca C++ padrão. Para obter mais informações, consulte [Contêineres da biblioteca padrão C++](../standard-library/stl-containers.md).
 
 Sobrecarrega `operator==` para comparar dois objetos da classe de modelo [Container](../standard-library/sample-container-class.md).
 
@@ -38,8 +38,8 @@ bool operator==(
 
 ## <a name="return-value"></a>Valor de retorno
 
-Retorna `left.` [tamanho](../standard-library/container-class-size.md) ` == right.size && equal(left.` [começar](../standard-library/container-class-begin.md)`, left.`[final](../standard-library/container-class-end.md)`, right.begin)`.
+Retorna `left.`o [tamanho](../standard-library/container-class-size.md) ` == right.size && equal(left.`[](../standard-library/container-class-end.md)final`, left.`do início. [](../standard-library/container-class-begin.md)`, right.begin)`
 
 ## <a name="see-also"></a>Consulte também
 
-[\<sample container>](../standard-library/sample-container.md)<br/>
+[\<sample container>](../standard-library/sample-container.md)

@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - insertion operators
 ms.assetid: cdefe986-6548-4cd1-8a67-b431d7d36a1c
-ms.openlocfilehash: 8c04cc6d5deeaf5dfea65a7f8e92a8569084c077
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2cf399501c0eab32e8bee80dfcb98d870c0193cb
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62362264"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458020"
 ---
 # <a name="using-insertion-operators-and-controlling-format"></a>Usando operadores de inserção e controlando o formato
 
-Este tópico mostra como controlar o formato e a criação de operadores de inserção para suas próprias classes. O operador de inserção (**<<**), que é programado previamente para todos os tipos de dados C++, envia bytes a um objeto de fluxo de saída. Operadores de inserção trabalham com "manipuladores" predefinidos, que são elementos que alteram o formato padrão de argumentos inteiros.
+Este tópico mostra como controlar o formato e a criação de operadores de inserção para suas próprias classes. O operador de inserção ( **<<** ), que é programado previamente para todos os tipos de dados C++, envia bytes a um objeto de fluxo de saída. Operadores de inserção trabalham com "manipuladores" predefinidos, que são elementos que alteram o formato padrão de argumentos inteiros.
 
 É possível controlar o formato com as seguintes opções:
 
@@ -27,7 +27,7 @@ Este tópico mostra como controlar o formato e a criação de operadores de inse
 
 ## <a name="vclrfoutputwidthanchor3"></a> Largura da Saída
 
-Para alinhar a saída, especifique a largura da saída para cada item colocando o `setw` manipulador no fluxo ou chamando o `width` função de membro. Este exemplo alinha à direita os valores em uma coluna com pelo menor 10 caracteres de largura:
+Para alinhar a saída, especifique a largura de saída para cada item colocando `setw` o manipulador no fluxo ou chamando a função `width` de membro. Este exemplo alinha à direita os valores em uma coluna com pelo menor 10 caracteres de largura:
 
 ```cpp
 // output_width.cpp
@@ -55,7 +55,7 @@ int main( )
 
 Os espaços em branco são adicionados a qualquer valor menor do que 10 caracteres de largura.
 
-Para preencher um campo, use o `fill` função de membro, que define o valor do caractere de preenchimento para os campos que têm uma largura especificada. O padrão é um espaço em branco. Para preencher a coluna de números com asteriscos, modifique o loop **for** anterior, da seguinte maneira:
+Para preencher um campo, use a `fill` função membro, que define o valor do caractere de preenchimento para campos que têm uma largura especificada. O padrão é um espaço em branco. Para preencher a coluna de números com asteriscos, modifique o loop **for** anterior, da seguinte maneira:
 
 ```cpp
 for (int i = 0; i <4; i++)
@@ -94,7 +94,7 @@ int main( )
 }
 ```
 
-O `width` função de membro é declarada no \<iostream >. Se você usar `setw` ou qualquer outro manipulador com argumentos, inclua \<iomanip>. Na saída, as cadeias de caracteres são impressas em um campo de largura 6 e inteiros em um campo de largura 10:
+A `width` função de membro é declarada em \<iostream >. Se você usar `setw` ou qualquer outro manipulador com argumentos, inclua \<iomanip>. Na saída, as cadeias de caracteres são impressas em um campo de largura 6 e inteiros em um campo de largura 10:
 
 ```Output
    Zoot      1.23
@@ -103,7 +103,7 @@ O `width` função de membro é declarada no \<iostream >. Se você usar `setw` 
    Stan   4358.24
 ```
 
-Nem `setw` nem `width` trunca os valores. Se a saída formatada exceder a largura, o valor inteiro será impresso, sujeito a configuração de precisão do fluxo. Ambos `setw` e `width` afetam apenas o campo a seguir. A largura do campo será revertida para seu comportamento padrão (a largura necessária) após a impressão de um campo. No entanto, as outras opções de formato de fluxo permanecerão em vigor até serem alteradas.
+`setw` Nem`width` trunca valores. Se a saída formatada exceder a largura, o valor inteiro será impresso, sujeito a configuração de precisão do fluxo. Ambos `setw` e`width` afetam apenas o campo a seguir. A largura do campo será revertida para seu comportamento padrão (a largura necessária) após a impressão de um campo. No entanto, as outras opções de formato de fluxo permanecerão em vigor até serem alteradas.
 
 ## <a name="vclrfalignmentanchor4"></a> Alinhamento
 
@@ -126,7 +126,7 @@ Al         653.7
 Stan     4358.24
 ```
 
-O sinalizador de alinhamento à esquerda é definido usando o manipulador [setiosflags](../standard-library/iomanip-functions.md#setiosflags) com o enumerador `left`. Esse enumerador é definido na classe [ios](../standard-library/basic-ios-class.md), então, sua referência deve incluir o prefixo **ios::**. O manipulador [resetiosflags](../standard-library/iomanip-functions.md#resetiosflags) desativa o sinalizador de alinhamento à esquerda. Diferentemente `width` e `setw`, o efeito da `setiosflags` e `resetiosflags` é permanente.
+O sinalizador de alinhamento à esquerda é definido usando o manipulador [setiosflags](../standard-library/iomanip-functions.md#setiosflags) com o enumerador `left`. Esse enumerador é definido na classe [ios](../standard-library/basic-ios-class.md), então, sua referência deve incluir o prefixo **ios::** . O manipulador [resetiosflags](../standard-library/iomanip-functions.md#resetiosflags) desativa o sinalizador de alinhamento à esquerda. Ao `width` contrário `setw`de e, o `setiosflags` efeito `resetiosflags` de e é permanente.
 
 ## <a name="vclrfprecisionanchor5"></a> Precisão
 
@@ -170,7 +170,7 @@ Al         653.7
 Stan      4358.2
 ```
 
-Se você alterar o `ios::fixed` sinalizador como `ios::scientific`, o programa imprimirá:
+Se você alterar o `ios::fixed` sinalizador para `ios::scientific`, o programa imprime isto:
 
 ```cpp
 Zoot    1.2e+00
@@ -179,11 +179,11 @@ Al      6.5e+02
 Stan    4.4e+03
 ```
 
-Novamente, o programa imprimirá um dígito após a vírgula decimal. Se qualquer um dos `ios::fixed` ou `ios::scientific` for definido, o valor de precisão determina o número de dígitos após o ponto decimal. Se nenhum sinalizador for definido, o valor de precisão determinará o número total de dígitos significativos. O manipulador `resetiosflags` limpará esses sinalizadores.
+Novamente, o programa imprimirá um dígito após a vírgula decimal. `ios::fixed` Se ou `ios::scientific` for definido, o valor de precisão determinará o número de dígitos após o ponto decimal. Se nenhum sinalizador for definido, o valor de precisão determinará o número total de dígitos significativos. O manipulador `resetiosflags` limpará esses sinalizadores.
 
 ## <a name="vclrfradixanchor6"></a> Base
 
-O `dec`, `oct`, e `hex` manipuladores definem a base de padrão para entrada e saída. Por exemplo, se você inserir o `hex` manipulador no fluxo de saída, o objeto moverá corretamente a representação interna dos dados de inteiros em um formato de saída hexadecimal. Os números serão exibidos com dígitos de a-f, em minúsculas se o sinalizador [maiúsculas](../standard-library/ios-functions.md#uppercase) estiver limpo (padrão); caso contrário, eles serão exibidos em maiúsculas. A base padrão é `dec` (decimal).
+Os `dec`manipuladores `oct`, `hex` e definem a base padrão para entrada e saída. Por exemplo, se você inserir o `hex` manipulador no fluxo de saída, o objeto converterá corretamente a representação de dados internos de inteiros em um formato de saída hexadecimal. Os números serão exibidos com dígitos de a-f, em minúsculas se o sinalizador [maiúsculas](../standard-library/ios-functions.md#uppercase) estiver limpo (padrão); caso contrário, eles serão exibidos em maiúsculas. A base padrão é `dec` (Decimal).
 
 ## <a name="quoted-strings-c14"></a>Cadeias de caracteres entre aspas (C++14)
 
@@ -201,14 +201,14 @@ std::cout << inserted;     //  This is a sentence.
 std::cout << extracted;    //  This
 ```
 
-Esse comportamento pode ser corrigido manualmente, mas tornar o ciclo completo de cadeia de caracteres mais conveniente, c++14 adiciona o `std::quoted` manipulador de fluxo \<iomanip >. Após a inserção, `quoted()` envolve a cadeia de caracteres com um delimitador (aspas duplas ' " ', por padrão) e, após a extração, manipula o fluxo para extrair todos os caracteres até encontrar o delimitador final. Quaisquer aspas inseridas serão ignoradas com um caractere de escape ('\\\\' por padrão).
+Esse comportamento pode ser superado manualmente, mas para tornar a cadeia de caracteres de ida e volta mais conveniente, `std::quoted` o c++ 14 \<adiciona o fluxo manipulador no iomanip >. Após a inserção, `quoted()` envolve a cadeia de caracteres com um delimitador (aspas duplas ' " ', por padrão) e, após a extração, manipula o fluxo para extrair todos os caracteres até encontrar o delimitador final. Quaisquer aspas inseridas serão ignoradas com um caractere de escape ('\\\\' por padrão).
 
-Os delimitadores estão presentes apenas no objeto de fluxo; eles não estão presentes na cadeia de caracteres extraída, mas eles estão presentes na cadeia de caracteres retornada por [basic_stringstream:: STR](../standard-library/basic-stringstream-class.md#str).
+Os delimitadores estão presentes apenas no objeto de fluxo; Eles não estão presentes na cadeia de caracteres extraída, mas estão presentes na cadeia de caracteres retornada por [basic_stringstream:: Str](../standard-library/basic-stringstream-class.md#str).
 
 O comportamento de espaço em branco das operações de inserção e extração é independe de como uma cadeia de caracteres é representada no código, assim, o operador entre aspas será útil mesmo se a cadeia de caracteres de entrada for uma cadeia de caracteres bruta, literal ou regular. A cadeia de caracteres de entrada, seja qual for seu formato, pode ter aspas incorporadas, quebras de linha, guias e assim por diante e todos esses serão preservados pelo manipulador quoted().
 
-Para obter mais informações e exemplos de código completo, consulte [entre aspas](../standard-library/iomanip-functions.md#quoted).
+Para obter mais informações e exemplos de código completo [](../standard-library/iomanip-functions.md#quoted), consulte quoted.
 
 ## <a name="see-also"></a>Consulte também
 
-[Fluxos de saída](../standard-library/output-streams.md)<br/>
+[Fluxos de saída](../standard-library/output-streams.md)
