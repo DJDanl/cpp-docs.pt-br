@@ -10,12 +10,12 @@ helpviewer_keywords:
 - std::integral_constant [C++]
 - std::bool_constant [C++]
 ms.assetid: 11c002c6-4d31-4042-9341-f2543f43e108
-ms.openlocfilehash: f7b9217560bc94c536a7c819276266fd16fa4b07
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c85da1f3be7821f8d82cd2b19dab2a5864426a5a
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404865"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452040"
 ---
 # <a name="integralconstant-class-boolconstant-class"></a>Classe integral_constant, classe bool_constant
 
@@ -36,17 +36,17 @@ struct integral_constant {
 
 ### <a name="parameters"></a>Parâmetros
 
-*T*<br/>
+*T*\
 O tipo da constante.
 
-*v*<br/>
+*l*\
 O valor da constante.
 
 ## <a name="remarks"></a>Comentários
 
 A classe de modelo `integral_constant`, quando especializada com um tipo integral *T* e um valor *v* desse tipo, representa um objeto que contém uma constante desse tipo integral com o valor especificado. O membro denominado `type` é um alias para o tipo da especialização de modelo gerada e o membro `value` contém o valor *v* usado para criar a especialização.
 
-O `bool_constant` classe de modelo é uma especialização parcial explícita de `integral_constant` que usa **bool** como o *T* argumento.
+A `bool_constant` classe de modelo é uma especialização parcial `integral_constant` explícita de que usa **bool** como o argumento *T* .
 
 ## <a name="example"></a>Exemplo
 
@@ -80,6 +80,6 @@ integral_constant<bool, false> == false
 
 ## <a name="see-also"></a>Consulte também
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[false_type](../standard-library/type-traits-typedefs.md#false_type)<br/>
-[true_type](../standard-library/type-traits-typedefs.md#true_type)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[false_type](../standard-library/type-traits-typedefs.md#false_type)\
+[true_type](../standard-library/type-traits-typedefs.md#true_type)

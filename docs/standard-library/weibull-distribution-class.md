@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::weibull_distribution [C++], param_type
 - std::weibull_distribution [C++], param_type
 ms.assetid: f20b49d3-1b9a-41af-8db4-baf800eaa02b
-ms.openlocfilehash: bbcfa23ae84d0a035d4b00d1c154da4b4281be32
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f3c5a2a3d8e4b5f2c8a13ef7525b29683b94acc4
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410831"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459627"
 ---
 # <a name="weibulldistribution-class"></a>Classe weibull_distribution
 
@@ -70,12 +70,12 @@ class weibull_distribution
 
 ### <a name="parameters"></a>Parâmetros
 
-*RealType*<br/>
-O tipo de resultado de ponto flutuante assume como padrão **duplas**. Para encontrar os tipos possíveis, consulte [\<random>](../standard-library/random.md).
+*RealType*\
+O tipo de resultado de ponto flutuante, assume o padrão de **Double**. Para encontrar os tipos possíveis, consulte [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Comentários
 
-A classe de modelo descreve uma distribuição que produz valores de um ponto flutuante especificado pelo usuário tipo ou tipo **duplas** caso nenhum seja fornecido, distribuído de acordo com a distribuição Weibull. A tabela a seguir contém links para artigos sobre cada um dos membros.
+A classe de modelo descreve uma distribuição que produz valores de um tipo de ponto flutuante especificado pelo usuário ou tipo **Double** se nenhum for fornecido, distribuído de acordo com a distribuição Weibull. A tabela a seguir contém links para artigos sobre cada um dos membros.
 
 ||||
 |-|-|-|
@@ -222,13 +222,13 @@ explicit weibull_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parâmetros
 
-*a*<br/>
+*um*\
 O parâmetro de distribuição `a`.
 
-*b*<br/>
+*b*\
 O parâmetro de distribuição `b`.
 
-*parm*<br/>
+*Parm*\
 A estrutura `param_type` usada para construir a distribuição.
 
 ### <a name="remarks"></a>Comentários
@@ -257,13 +257,13 @@ struct param_type {
 
 ### <a name="parameters"></a>Parâmetros
 
-*a*<br/>
+*um*\
 O parâmetro de distribuição `a`.
 
-*b*<br/>
+*b*\
 O parâmetro de distribuição `b`.
 
-*right*<br/>
+*Certo*\
 O objeto `param_type` a ser comparado a este.
 
 ### <a name="remarks"></a>Comentários
@@ -274,4 +274,4 @@ Essa estrutura pode ser enviada ao construtor de classe de distribuição na ins
 
 ## <a name="see-also"></a>Consulte também
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

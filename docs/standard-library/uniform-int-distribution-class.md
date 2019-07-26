@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::uniform_int_distribution [C++], param_type
 - std::uniform_int_distribution [C++], param_type
 ms.assetid: a1867dcd-3bd9-4787-afe3-4b62692c1d04
-ms.openlocfilehash: 5e37f21e19be730d3437507e83f2417fa2dc020a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1307f64fb5f92b59337665d108d950b28c6ff63e
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348166"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454949"
 ---
 # <a name="uniformintdistribution-class"></a>Classe uniform_int_distribution
 
@@ -71,8 +71,8 @@ public:
 
 ### <a name="parameters"></a>Parâmetros
 
-*IntType*<br/>
-O tipo de resultado do inteiro assume como padrão **int**. Para encontrar os tipos possíveis, consulte [\<random>](../standard-library/random.md).
+*IntType*\
+O tipo de resultado inteiro, o padrão é **int**. Para encontrar os tipos possíveis, consulte [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Comentários
 
@@ -191,20 +191,20 @@ explicit uniform_int_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parâmetros
 
-*a*<br/>
+*um*\
 O limite inferior para valor aleatório (inclusivo).
 
-*b*<br/>
+*b*\
 O limite superior para valor aleatório (inclusivo).
 
-*parm*<br/>
+*Parm*\
 A estrutura `param_type` usada para construir a distribuição.
 
 ### <a name="remarks"></a>Comentários
 
 **Pré-condição:** `a ≤ b`
 
-O primeiro construtor constrói um objeto cujo armazenado *uma* valor contém o valor *um* e cujo armazenado *b* valor contém o valor de *b*.
+O primeiro construtor constrói um objeto cujo *valor armazenado contém* o valor a e cujo valor *de* *b* armazenado contém o valor *b*.
 
 O segundo construtor cria um objeto cujos parâmetros armazenados são inicializados de *parm*. Você pode chamar a função de membro `param()` para obter e definir os parâmetros atuais de uma distribuição existente.
 
@@ -227,13 +227,13 @@ struct param_type {
 
 ### <a name="parameters"></a>Parâmetros
 
-*a*<br/>
+*um*\
 O limite inferior para valor aleatório (inclusivo).
 
-*b*<br/>
+*b*\
 O limite superior para valor aleatório (inclusivo).
 
-*right*<br/>
+*Certo*\
 O objeto `param_type` a ser comparado a este.
 
 ### <a name="remarks"></a>Comentários
@@ -244,4 +244,4 @@ Essa estrutura pode ser enviada ao construtor de classe de distribuição na ins
 
 ## <a name="see-also"></a>Consulte também
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - string header
 ms.assetid: a2fb9d00-d7ae-4170-bfea-2dc337aa37cf
-ms.openlocfilehash: 3f3874b1d439326c97b015007ad8d5ede06341f7
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: fda00cd5a8f8768688c8e10f25a0d1f2370a256f
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68245399"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459199"
 ---
 # <a name="ltstringgt"></a>&lt;string&gt;
 
@@ -32,14 +32,14 @@ A linguagem C++ e a biblioteca C++ padrão dão suporte a dois tipos de cadeias 
 
 - Matrizes de caracteres com terminação nula geralmente conhecidas como cadeias de caracteres C.
 
-- Objetos de classe de modelo, do tipo `basic_string`, que lidam com todos os **char**-como argumentos de modelo.
+- Objetos de classe de modelo, `basic_string`do tipo, que lidam com todos os argumentos de modelo semelhantes a **caracteres**.
 
 ### <a name="typedefs"></a>Typedefs
 
 |Nome de tipo|Descrição|
 |-|-|
-|[string](../standard-library/string-typedefs.md#string)|Um tipo que descreve uma especialização da classe de modelo `basic_string` com elementos do tipo **char** como um `string`.|
-|[wstring](../standard-library/string-typedefs.md#wstring)|Um tipo que descreve uma especialização da classe de modelo `basic_string` com elementos do tipo **wchar_t** como um `wstring`.|
+|[string](../standard-library/string-typedefs.md#string)|Um tipo que descreve uma especialização da classe `basic_string` de modelo com elementos do tipo **Char** como `string`um.|
+|[wstring](../standard-library/string-typedefs.md#wstring)|Um tipo que descreve uma especialização da classe `basic_string` de modelo com elementos do tipo **wchar_t** como `wstring`um.|
 |[u16string](../standard-library/string-typedefs.md#u16string)|Um tipo que descreve uma especialização da classe modelo `basic_string` com base em elementos do tipo `char16_t`.|
 |[u32string](../standard-library/string-typedefs.md#u32string)|Um tipo que descreve uma especialização da classe modelo `basic_string` com base em elementos do tipo `char32_t`.|
 
@@ -63,13 +63,13 @@ A linguagem C++ e a biblioteca C++ padrão dão suporte a dois tipos de cadeias 
 |-|-|
 |[hash]()||
 |[swap](../standard-library/string-functions.md#swap)|Troca as matrizes de caracteres de duas cadeias de caracteres.|
-|[stod](../standard-library/string-functions.md#stod)|Converte uma sequência de caracteres em uma **duplas**.|
-|[stof](../standard-library/string-functions.md#stof)|Converte uma sequência de caracteres em uma **float**.|
+|[stod](../standard-library/string-functions.md#stod)|Converte uma sequência de caracteres em um **duplo**.|
+|[stof](../standard-library/string-functions.md#stof)|Converte uma sequência de caracteres em um **float**.|
 |[stoi](../standard-library/string-functions.md#stoi)|Converte uma sequência de caracteres em um número inteiro.|
-|[stold](../standard-library/string-functions.md#stold)|Converte uma sequência de caracteres em uma **longo duplo**.|
-|[stoll](../standard-library/string-functions.md#stoll)|Converte uma sequência de caracteres em uma **long long**.|
-|[stoul](../standard-library/string-functions.md#stoul)|Converte uma sequência de caracteres em uma **unsigned long**.|
-|[stoull](../standard-library/string-functions.md#stoull)|Converte uma sequência de caracteres em uma **longo longo sem sinal**.|
+|[stold](../standard-library/string-functions.md#stold)|Converte uma sequência de caracteres em um **longo Duplo**.|
+|[stoll](../standard-library/string-functions.md#stoll)|Converte uma sequência de caracteres em um **longo**tempo.|
+|[stoul](../standard-library/string-functions.md#stoul)|Converte uma sequência de caracteres em um **longo não assinado**.|
+|[stoull](../standard-library/string-functions.md#stoull)|Converte uma sequência de caracteres em um **longo tempo não assinado**.|
 |[to_string](../standard-library/string-functions.md#to_string)|Converte um valor em uma `string`.|
 |[to_wstring](../standard-library/string-functions.md#to_wstring)|Converte um valor em uma `string` larga.|
 
@@ -77,7 +77,7 @@ A linguagem C++ e a biblioteca C++ padrão dão suporte a dois tipos de cadeias 
 
 |Função|Descrição|
 |-|-|
-|[getline modelo](../standard-library/string-functions.md#getline)|Extrai cadeias de caracteres do fluxo de entrada linha por linha.|
+|[Modelo getline](../standard-library/string-functions.md#getline)|Extrai cadeias de caracteres do fluxo de entrada linha por linha.|
 
 ### <a name="classes"></a>Classes
 
@@ -103,5 +103,5 @@ A linguagem C++ e a biblioteca C++ padrão dão suporte a dois tipos de cadeias 
 
 ## <a name="see-also"></a>Consulte também
 
-[Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)\
+[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

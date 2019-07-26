@@ -48,12 +48,12 @@ f1_keywords:
 - atomic/std::atomic_int64_t
 - atomic/std::atomic_uint_least64_t
 ms.assetid: e79a6b9f-52ff-48da-9554-654c4e1999f6
-ms.openlocfilehash: e2146c7424d4903523372ad54b0cd2eece525cbe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4c46eb2b9bea30bf37800b33ce0dcf44c0d807f0
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62376595"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456720"
 ---
 # <a name="ltatomicgt"></a>&lt;atomic&gt;
 
@@ -68,7 +68,7 @@ Define classes e classes de modelo para usar para criar tipos que dão suporte a
 ## <a name="remarks"></a>Comentários
 
 > [!NOTE]
-> No código que é compilado usando **/clr**, esse cabeçalho é bloqueado.
+> No código que é compilado usando **/CLR**, esse cabeçalho é bloqueado.
 
 Uma operação atômica tem duas propriedades-chave que o ajudarão a usar vários threads para manipular um objeto corretamente sem usar bloqueios de mutex.
 
@@ -78,9 +78,9 @@ Uma operação atômica tem duas propriedades-chave que o ajudarão a usar vári
 
 Em algumas plataformas, pode não ser possível implementar operações atômicas com eficiência para alguns tipos sem usar bloqueios `mutex`. Um tipo atômico será *livre de bloqueio* se nenhuma operação atômica no tipo usar bloqueios.
 
-**C++11**: Você pode executar operações atômicas em um objeto em manipuladores de sinal `obj` se `obj.is_lock_free()` ou `atomic_is_lock_free(x)` forem verdadeiras.
+**C++11**: Em manipuladores de sinal, você pode executar operações atômicas em `obj` um `obj.is_lock_free()` objeto `atomic_is_lock_free(x)` se ou for true.
 
-A classe [atomic_flag](../standard-library/atomic-flag-structure.md) fornece um tipo atômico mínimo que contém uma **bool** sinalizador. Suas operações são sempre livres de bloqueio.
+A classe [atomic_flag](../standard-library/atomic-flag-structure.md) fornece um tipo atômico mínimo que contém um sinalizador **bool** . Suas operações são sempre livres de bloqueio.
 
 A classe de modelo `atomic<T>` armazena um objeto de seu tipo de argumento `T` e fornece acesso atômico para o valor armazenado. Você pode instanciá-la usando qualquer tipo que possa ser copiado usando [memcpy](../c-runtime-library/reference/memcpy-wmemcpy.md) e testadas quanto à igualdade usando [memcmp](../c-runtime-library/reference/memcmp-wmemcmp.md). Em particular, você pode usá-la com tipos definidos pelo usuário que atendam a esses requisitos e, em muitos casos, os tipos de ponto flutuante.
 
@@ -101,7 +101,7 @@ Para cada um dos tipos integrais, há um tipo atômico nomeado correspondente qu
 |Tipo `atomic_integral`|Tipo integral|Macro `atomic_is_lock_free`|
 |----------------------------|-------------------|---------------------------------|
 |`atomic_char`|**char**|ATOMIC_CHAR_LOCK_FREE|
-|`atomic_schar`|**signed char**|ATOMIC_CHAR_LOCK_FREE|
+|`atomic_schar`|**caractere assinado**|ATOMIC_CHAR_LOCK_FREE|
 |`atomic_uchar`|**unsigned char**|ATOMIC_CHAR_LOCK_FREE|
 |`atomic_char16_t`|`char16_t`|ATOMIC_CHAR16_T_LOCK_FREE|
 |`atomic_char32_t`|`char32_t`|ATOMIC_CHAR32_T_LOCK_FREE|
@@ -113,7 +113,7 @@ Para cada um dos tipos integrais, há um tipo atômico nomeado correspondente qu
 |`atomic_long`|**long**|ATOMIC_LONG_LOCK_FREE|
 |`atomic_ulong`|**unsigned long**|ATOMIC_LONG_LOCK_FREE|
 |`atomic_llong`|**long long**|ATOMIC_LLONG_LOCK_FREE|
-|`atomic_ullong`|**unsigned long long**|ATOMIC_LLONG_LOCK_FREE|
+|`atomic_ullong`|**longo longo sem sinal**|ATOMIC_LLONG_LOCK_FREE|
 
 Os nomes Typedef existem para especializações do modelo atômico para alguns dos tipos definidos no cabeçalho \<inttypes.h>.
 
@@ -155,7 +155,7 @@ Os nomes Typedef existem para especializações do modelo atômico para alguns d
 |Nome|Descrição|
 |----------|-----------------|
 |[Estrutura atomic](../standard-library/atomic-structure.md)|Descreve um objeto que executa operações atômicas em um valor armazenado.|
-|[Estrutura atomic_flag](../standard-library/atomic-flag-structure.md)|Descreve um objeto que define e limpa atomicamente um **bool** sinalizador.|
+|[Estrutura atomic_flag](../standard-library/atomic-flag-structure.md)|Descreve um objeto que define atomicamente e limpa um sinalizador **bool** .|
 
 ## <a name="enums"></a>Enums
 
@@ -185,10 +185,10 @@ Na lista a seguir, as funções que não terminam em `_explicit` têm a semânti
 |[atomic_fetch_sub_explicit](../standard-library/atomic-functions.md#atomic_fetch_sub_explicit)|Subtrai um valor especificado de um valor armazenado existente.|
 |[atomic_fetch_xor](../standard-library/atomic-functions.md#atomic_fetch_xor)|Executa um `exclusive or` bit a bit em um valor especificado e um valor armazenado existente.|
 |[atomic_fetch_xor_explicit](../standard-library/atomic-functions.md#atomic_fetch_xor_explicit)|Executa um `exclusive or` bit a bit em um valor especificado e um valor armazenado existente.|
-|[atomic_flag_clear](../standard-library/atomic-functions.md#atomic_flag_clear)|Define o sinalizador em uma `atomic_flag` o objeto para a **falso**.|
-|[atomic_flag_clear_explicit](../standard-library/atomic-functions.md#atomic_flag_clear_explicit)|Define o sinalizador em uma `atomic_flag` o objeto para a **falso**.|
-|[atomic_flag_test_and_set](../standard-library/atomic-functions.md#atomic_flag_test_and_set)|Define o sinalizador em uma `atomic_flag` o objeto para a **verdadeiro**.|
-|[atomic_flag_test_and_set_explicit](../standard-library/atomic-functions.md#atomic_flag_test_and_set_explicit)|Define o sinalizador em uma `atomic_flag` o objeto para a **verdadeiro**.|
+|[atomic_flag_clear](../standard-library/atomic-functions.md#atomic_flag_clear)|Define o sinalizador em um `atomic_flag` objeto como **false**.|
+|[atomic_flag_clear_explicit](../standard-library/atomic-functions.md#atomic_flag_clear_explicit)|Define o sinalizador em um `atomic_flag` objeto como **false**.|
+|[atomic_flag_test_and_set](../standard-library/atomic-functions.md#atomic_flag_test_and_set)|Define o sinalizador em um `atomic_flag` objeto como **true**.|
+|[atomic_flag_test_and_set_explicit](../standard-library/atomic-functions.md#atomic_flag_test_and_set_explicit)|Define o sinalizador em um `atomic_flag` objeto como **true**.|
 |[atomic_init](../standard-library/atomic-functions.md#atomic_init)|Define o valor armazenado em um objeto `atomic`.|
 |[atomic_is_lock_free](../standard-library/atomic-functions.md#atomic_is_lock_free)|Especifica se operações atômicas em um objeto especificado estão livres de bloqueio.|
 |[atomic_load](../standard-library/atomic-functions.md#atomic_load)|Recupera um valor atomicamente.|
@@ -201,5 +201,5 @@ Na lista a seguir, as funções que não terminam em `_explicit` têm a semânti
 
 ## <a name="see-also"></a>Consulte também
 
-[Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Referência da biblioteca padrão C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)\
+[Referência da biblioteca padrão C++](../standard-library/cpp-standard-library-reference.md)

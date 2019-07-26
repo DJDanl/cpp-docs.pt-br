@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - <forward_list>
 ms.assetid: 8b4ab09e-1475-434a-b4e0-fdbc07a08b5b
-ms.openlocfilehash: d20c5b83e0ce00c7634d32e6b63c92242c24d1b2
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: a8b343fbe5e175828b4b8470da486a6dea9f3455
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240647"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457007"
 ---
 # <a name="ltforwardlistgt"></a>&lt;forward_list&gt;
 
@@ -24,7 +24,7 @@ Define a classe de modelo de contêiner forward_list, bem como diversos modelos 
 **Namespace:** std
 
 > [!NOTE]
-> O \<forward_list > biblioteca também usa o `#include <initializer_list>` instrução.
+> A \<biblioteca de > forward_list também usa `#include <initializer_list>` a instrução.
 
 ## <a name="members"></a>Membros
 
@@ -53,4 +53,4 @@ Define a classe de modelo de contêiner forward_list, bem como diversos modelos 
 
 ## <a name="see-also"></a>Consulte também
 
-[Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)<br/>
+[Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)

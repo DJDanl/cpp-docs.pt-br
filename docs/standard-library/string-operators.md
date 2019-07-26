@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::operator&lt; (string)
 - std::operator&lt;&lt; (string)
 - std::operator&lt;= (string), std::operator== (string)
-ms.openlocfilehash: a3ca469058ba65f83b0df60a93c63895e34f916e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bb66e7c0120da9f140ce33da7ecc61299a4d2867
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412352"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459255"
 ---
 # <a name="ltstringgt-operators"></a>Operadores de &lt;cadeia de caracteres&gt;
 
@@ -103,10 +103,10 @@ basic_string<CharType, Traits, Allocator>&& operator+(
 
 ### <a name="parameters"></a>Parâmetros
 
-*left*<br/>
+*mantida*\
 Uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser concatenado.
 
-*right*<br/>
+*Certo*\
 Uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser concatenado.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -115,7 +115,7 @@ A cadeia de caracteres que é a concatenação de cadeias de caracteres de entra
 
 ### <a name="remarks"></a>Comentários
 
-As funções de cada sobrecarga `operator+` para concatenar dois objetos da classe de modelo [Classe basic_string](../standard-library/basic-string-class.md). Todos efetivamente retornam `basic_string< CharType, Traits, Allocator>(Left).append(right)`. Para obter mais informações, consulte [acrescentar](../standard-library/basic-string-class.md#append).
+As funções de cada sobrecarga `operator+` para concatenar dois objetos da classe de modelo [Classe basic_string](../standard-library/basic-string-class.md). Efetivamente retornam `basic_string< CharType, Traits, Allocator>(Left).append(right)`. Para obter mais informações, consulte [Append](../standard-library/basic-string-class.md#append).
 
 ### <a name="example"></a>Exemplo
 
@@ -192,10 +192,10 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parâmetros
 
-*left*<br/>
+*mantida*\
 Uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser comparado.
 
-*right*<br/>
+*Certo*\
 Uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser comparado.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -283,10 +283,10 @@ bool operator==(
 
 ### <a name="parameters"></a>Parâmetros
 
-*left*<br/>
+*mantida*\
 Uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser comparado.
 
-*right*<br/>
+*Certo*\
 Uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser comparado.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -374,10 +374,10 @@ bool operator<(
 
 ### <a name="parameters"></a>Parâmetros
 
-*left*<br/>
+*mantida*\
 Uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser comparado.
 
-*right*<br/>
+*Certo*\
 Uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser comparado.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -470,10 +470,10 @@ bool operator<=(
 
 ### <a name="parameters"></a>Parâmetros
 
-*left*<br/>
+*mantida*\
 Uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser comparado.
 
-*right*<br/>
+*Certo*\
 Uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser comparado.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -563,19 +563,19 @@ basic_ostream<CharType, Traits>& operator<<(
 
 ### <a name="parameters"></a>Parâmetros
 
-*_Ostr*<br/>
+*_Ostr*\
 O fluxo de saída que está sendo gravado.
 
-*str*<br/>
+*Str*\
 A cadeia de caracteres a ser inserida no fluxo de saída.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Grava o valor de cadeia de caracteres especificada no fluxo de saída *_Ostr*.
+Grava o valor da cadeia de caracteres especificada no fluxo de saída *_Ostr*.
 
 ### <a name="remarks"></a>Comentários
 
-As sobrecargas de função de modelo **operador <<** inserir um objeto *str* da classe de modelo [basic_string](../standard-library/basic-string-class.md) no fluxo  *\_ Ostr*. A função retorna efetivamente `_Ostr.write( str.c_str, str.size )`.
+O operador função de modelo sobrecarrega **< <** para inserir um objeto *Str* da classe template [basic_string](../standard-library/basic-string-class.md) no fluxo  *\_OSTR*. A função retorna `_Ostr.write( str.c_str, str.size )`efetivamente.
 
 ## <a name="op_gt"></a>  operator&gt;
 
@@ -600,10 +600,10 @@ bool operator>(
 
 ### <a name="parameters"></a>Parâmetros
 
-*left*<br/>
+*mantida*\
 Uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser comparado.
 
-*right*<br/>
+*Certo*\
 Uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser comparado.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -703,10 +703,10 @@ bool operator>=(
 
 ### <a name="parameters"></a>Parâmetros
 
-*left*<br/>
+*mantida*\
 Uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser comparado.
 
-*right*<br/>
+*Certo*\
 Uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser comparado.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -796,21 +796,21 @@ basic_istream<CharType, Traits>& operator>>(
 
 ### <a name="parameters"></a>Parâmetros
 
-*_Istr*<br/>
+*_Istr*\
 O fluxo de entrada usado para extrair a sequência
 
-*right*<br/>
+*Certo*\
 A cadeia de caracteres que está sendo extraída do fluxo de entrada.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Lê o valor da cadeia de caracteres especificada de *_Istr* e retorna-o na *direita*.
+Lê o valor da cadeia de caracteres especificada de *_Istr* e retorna-o à *direita*.
 
 ### <a name="remarks"></a>Comentários
 
 O operador ignora os espaços em branco à esquerda, a menos que o sinalizador `skipws` é definido. Ele lê todos os caracteres seguintes até o próximo caractere ser um espaço em branco ou o final do arquivo for atingido.
 
-As sobrecargas de função de modelo **operador >>** para substituir a sequência controlada por *à direita* com uma sequência de elementos extraídos do fluxo *_Istr*. Extração para:
+A função de modelo sobrecarrega o **operador > >** para substituir a sequência controlada por *direita* por uma sequência de elementos extraídos do fluxo *_Istr*. Extração para:
 
 - Ao final do arquivo.
 
@@ -820,7 +820,7 @@ Depois que a função extrai `_Istr`. [max_size](../standard-library/basic-strin
 
 - Depois que a função extrai um elemento *ch* para o qual [use_facet](../standard-library/basic-filebuf-class.md#open)< **ctype** \< **CharType**> > ( `getloc`). **é**( **ctype** \< **CharType**>:: **space**, *ch*) é verdadeiro, caso em que o caractere é colocado de volta.
 
-Se a função não extrair nenhum elemento, ela chamará [setstate](../standard-library/basic-ios-class.md#setstate)(`ios_base::failbit`). Em qualquer caso, chama **istr**. **largura**(0) e retorna \* **isso**.
+Se a função extrair nenhum elemento, ela chamará [SetState](../standard-library/basic-ios-class.md#setstate)(`ios_base::failbit`). Em qualquer caso, chama **istr**. **largura**(0) e retorna \* **isso**.
 
 ### <a name="example"></a>Exemplo
 
@@ -843,4 +843,4 @@ int main( )
 
 ## <a name="see-also"></a>Consulte também
 
-[\<string>](../standard-library/string.md)<br/>
+[\<string>](../standard-library/string.md)

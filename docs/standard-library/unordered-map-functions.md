@@ -8,12 +8,12 @@ f1_keywords:
 ms.assetid: cf2e4115-f205-4a0e-90be-a143ffcc1f44
 helpviewer_keywords:
 - std::swap (unordered_map/multimap)
-ms.openlocfilehash: ae00a9204e2bd5dc5220f3b2755e16b895193df3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8ad81157d12de017198afeeb48f3b329ef20dbde
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62158541"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454831"
 ---
 # <a name="ltunorderedmapgt-functions"></a>Funções &lt;unordered_map&gt;
 
@@ -34,25 +34,25 @@ void swap(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Chave*<br/>
+*Chaves*\
 O tipo principal.
 
-*Ty*<br/>
+*Ty*\
 O tipo mapeado.
 
-*Hash*<br/>
+*Tralha*\
 O tipo de objeto da função de hash.
 
-*Pred*<br/>
+*Pred*\
 O tipo de objeto da função de comparação de igualdade.
 
-*ALLOC*<br/>
+*Alocação*\
 A classe do alocador.
 
-*left*<br/>
+*mantida*\
 O primeiro contêiner para alternância.
 
-*right*<br/>
+*Certo*\
 O segundo contêiner para alternância.
 
 ### <a name="remarks"></a>Comentários
@@ -127,25 +127,25 @@ void swap(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Chave*<br/>
+*Chaves*\
 O tipo principal.
 
-*Ty*<br/>
+*Ty*\
 O tipo mapeado.
 
-*Hash*<br/>
+*Tralha*\
 O tipo de objeto da função de hash.
 
-*Pred*<br/>
+*Pred*\
 O tipo de objeto da função de comparação de igualdade.
 
-*ALLOC*<br/>
+*Alocação*\
 A classe do alocador.
 
-*left*<br/>
+*mantida*\
 O primeiro contêiner para alternância.
 
-*right*<br/>
+*Certo*\
 O segundo contêiner para alternância.
 
 ### <a name="remarks"></a>Comentários
@@ -209,4 +209,4 @@ int main()
 
 ## <a name="see-also"></a>Consulte também
 
-[<unordered_map>](../standard-library/unordered-map.md)<br/>
+[<unordered_map>](../standard-library/unordered-map.md)

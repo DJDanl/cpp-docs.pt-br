@@ -7,16 +7,16 @@ helpviewer_keywords:
 - add_cv class
 - add_cv
 ms.assetid: a5572c78-a097-45d7-b476-ed4876889dea
-ms.openlocfilehash: 37001815710b197ec77ed0d45a16ea971ad1edce
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0cc63558ea392976bd6a3c5a43735c592e4606b4
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411221"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456588"
 ---
 # <a name="addcv-class"></a>Classe add_cv
 
-Faz **const volátil** tipo de tipo.
+Torna **const volatile** tipo do tipo.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -30,12 +30,12 @@ using add_cv_t = typename add_cv<T>::type;
 
 ### <a name="parameters"></a>Parâmetros
 
-*T*<br/>
+*T*\
 O tipo a ser modificado.
 
 ## <a name="remarks"></a>Comentários
 
-Uma instância do tipo modificado `add_cv<T>` tem uma `type` membro **typedef** equivalente a *T* modificado por [add_volatile](../standard-library/add-volatile-class.md) e [ add_const](../standard-library/add-const-class.md), a menos que *T* já tem os qualificadores cv, é uma referência ou é uma função.
+Uma instância do tipo `add_cv<T>` modificado tem um  `type` typedef de membro equivalente a *T* modificado por [add_volatile](../standard-library/add-volatile-class.md) e [add_const](../standard-library/add-const-class.md), a menos que *T* já tenha os qualificadores CV, seja uma referência ou seja um funcionamento.
 
 O tipo auxiliar `add_cv_t<T>` é um atalho para acessar o typedef `type` do membro `add_cv<T>`.
 
@@ -92,6 +92,6 @@ invoked const volatile S.f()
 
 ## <a name="see-also"></a>Consulte também
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[Classe remove_const](../standard-library/remove-const-class.md)<br/>
-[Classe remove_volatile](../standard-library/remove-volatile-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[Classe remove_const](../standard-library/remove-const-class.md)\
+[Classe remove_volatile](../standard-library/remove-volatile-class.md)

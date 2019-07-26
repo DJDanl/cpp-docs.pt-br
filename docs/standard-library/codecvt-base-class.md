@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - codecvt_base class
 ms.assetid: 7e95c083-91b4-4b3f-8918-0d4ea244a040
-ms.openlocfilehash: 6f957c39f9c78fd182b7ba2a14bdab7f27db56ac
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1a32ba5e583fdb20118a3397f1ddb326302f2de1
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405294"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459382"
 ---
 # <a name="codecvtbase-class"></a>Classe codecvt_base
 
-Uma classe base para a classe codecvt que é usada para definir um tipo de enumeração referenciado como `result`, usado como o tipo de retorno para as funções de membro de faceta para indicar o resultado de uma conversão.
+Uma classe base para a classe codecvt que é usada para definir um tipo de enumeração referenciado `result`como, usado como o tipo de retorno para as funções de membro da faceta para indicar o resultado de uma conversão.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -40,11 +40,11 @@ protected:
 
 A classe descreve uma enumeração comum a todas as especializações da classe de modelo [codecvt](../standard-library/codecvt-class.md). O resultado da enumeração descreve os possíveis valores de retornos de [do_in](../standard-library/codecvt-class.md#do_in) ou [do_out](../standard-library/codecvt-class.md#do_out):
 
-- `ok` Se a conversão entre codificações de caracteres internos e externos for bem-sucedida.
+- `ok`se a conversão entre as codificações de caracteres internas e externas for bem sucedido.
 
-- `partial` Se o destino não é grande o suficiente para a conversão seja bem-sucedida.
+- `partial`Se o destino não for grande o suficiente para que a conversão tenha sucesso.
 
-- `error` Se a sequência de origem estiver mal formada.
+- `error`se a sequência de origem estiver mal formada.
 
 - `noconv` se a função não realizar nenhuma conversão.
 
@@ -56,4 +56,4 @@ A classe descreve uma enumeração comum a todas as especializações da classe 
 
 ## <a name="see-also"></a>Consulte também
 
-[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

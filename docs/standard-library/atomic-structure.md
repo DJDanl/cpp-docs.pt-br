@@ -4,12 +4,12 @@ ms.date: 04/20/2018
 f1_keywords:
 - atomic/std::atomic
 ms.assetid: 261628ed-7049-41ac-99b9-cfe49f696b44
-ms.openlocfilehash: 258812f033d34f040d96847581d6f51692a933b6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1b3b60d71fcdf68fdf215820535c3bfb3d4dfb2b
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62376663"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456739"
 ---
 # <a name="atomic-structure"></a>Estrutura atomic
 
@@ -29,52 +29,52 @@ struct atomic;
 |**Construtor**||
 |[atomic](#atomic)|Constrói um objeto atômico.|
 |**Operadores**||
-|[operador Atomic:: Ty](#op_ty)|Lê e retorna o valor armazenado. ([Atomic:: Load](#load))|
+|[Atomic:: Operator Ty](#op_ty)|Lê e retorna o valor armazenado. ([Atomic:: Load](#load))|
 |[atomic::operator=](#op_eq)|Usa um valor especificado para substituir o valor armazenado. ([atomic::store](#store))|
-|[atomic::operator++](#op_inc)|Incrementa o valor armazenado. Usado somente por especializações integrais e de ponteiro.|
+|[Atomic:: operador + +](#op_inc)|Incrementa o valor armazenado. Usado somente por especializações integrais e de ponteiro.|
 |[atomic::operator+=](#op_add_eq)|Adiciona um valor especificado ao valor armazenado. Usado somente por especializações integrais e de ponteiro.|
 |[atomic::operator--](#op_dec)|Decrementa o valor armazenado. Usado somente por especializações integrais e de ponteiro.|
 |[atomic::operator-=](#op_sub_eq)|Subtrai um valor especificado do valor armazenado. Usado somente por especializações integrais e de ponteiro.|
-|[atomic::operator&=](#op_and_eq)|Executa um bit a bit e de um valor especificado e o valor armazenado. Usado somente por especializações integrais.|
-|[atomic::operator&#124;=](#op_or_eq)|Executa um bit a bit ou em um valor especificado e o valor armazenado. Usado somente por especializações integrais.|
-|[atomic::operator^=](#op_xor_eq)|Executa um exclusivo bit a bit ou em um valor especificado e o valor armazenado. Usado somente por especializações integrais.|
+|[atomic::operator&=](#op_and_eq)|Executa um valor bit e com um e o valor armazenado. Usado somente por especializações integrais.|
+|[Atomic:: Operator&#124;=](#op_or_eq)|Executa uma operação OR em um valor especificado e o valor armazenado. Usado somente por especializações integrais.|
+|[atomic::operator^=](#op_xor_eq)|Executa um OR exclusivo de bit a bit em um valor especificado e o valor armazenado. Usado somente por especializações integrais.|
 |**Funções**||
-|[compare_exchange_strong](#compare_exchange_strong)|Executa um *atomic_compare_and_exchange* operação no **isso** e retorna o resultado.|
-|[compare_exchange_weak](#compare_exchange_weak)|Executa um *weak_atomic_compare_and_exchange* operação no **isso** e retorna o resultado.|
+|[compare_exchange_strong](#compare_exchange_strong)|Executa uma operação *atomic_compare_and_exchange* e **retorna** o resultado.|
+|[compare_exchange_weak](#compare_exchange_weak)|Executa uma operação *weak_atomic_compare_and_exchange* e **retorna** o resultado.|
 |[fetch_add](#fetch_add)|Adiciona um valor especificado ao valor armazenado.|
-|[fetch_and](#fetch_and)|Executa um bit a bit e de um valor especificado e o valor armazenado.|
-|[fetch_or](#fetch_or)|Executa um bit a bit ou em um valor especificado e o valor armazenado.|
+|[fetch_and](#fetch_and)|Executa um valor bit e com um e o valor armazenado.|
+|[fetch_or](#fetch_or)|Executa uma operação OR em um valor especificado e o valor armazenado.|
 |[fetch_sub](#fetch_sub)|Subtrai um valor especificado do valor armazenado.|
-|[fetch_xor](#fetch_xor)|Executa um exclusivo bit a bit ou em um valor especificado e o valor armazenado.|
-|[is_lock_free](#is_lock_free)|Especifica se operações atômicas **isso** são *livre de bloqueio*. Um tipo atômico é *livre de bloqueio* se nenhuma operação atômica no tipo usar bloqueios.|
+|[fetch_xor](#fetch_xor)|Executa um OR exclusivo de bit a bit em um valor especificado e o valor armazenado.|
+|[is_lock_free](#is_lock_free)|Especifica se as operações atômicas **neste são de** *bloqueio livre*. Um tipo atômico é *livre de bloqueio* se nenhuma operação atômica no tipo usar bloqueios.|
 |[load](#load)|Lê e retorna o valor armazenado.|
 |[repositório](#store)|Usa um valor especificado para substituir o valor armazenado.|
 
 ## <a name="remarks"></a>Comentários
 
-O tipo *Ty* deve ser *trivialmente copiável*. Ou seja, usando [memcpy](../c-runtime-library/reference/memcpy-wmemcpy.md) copiar seus bytes deve produzir uma validade *Ty* objeto que compara como igual ao objeto original. O [compare_exchange_weak](#compare_exchange_weak) e [compare_exchange_strong](#compare_exchange_strong) funções membro usam [memcmp](../c-runtime-library/reference/memcmp-wmemcmp.md) para determinar se dois *Ty* valores são iguais. Essas funções não usará uma *Ty*-definido `operator==`. As funções membro da `atomic` usar `memcpy` para copiar valores do tipo *Ty*.
+O tipo *Ty* deve ser *trivialmente copiável*. Ou seja, o uso de [memcpy](../c-runtime-library/reference/memcpy-wmemcpy.md) para copiar seus bytes deve produzir um objeto *Ty* válido que compare igual ao objeto original. As funções de membro [compare_exchange_weak](#compare_exchange_weak) e [compare_exchange_strong](#compare_exchange_strong) usam [memcmp](../c-runtime-library/reference/memcmp-wmemcmp.md) para determinar se dois valores *Ty* são iguais. Essas funções não usarão um *Ty*definido `operator==`. As funções de membro `atomic` de `memcpy` usar para copiar valores do tipo *Ty*.
 
-Uma especialização parcial, **atômica\<Ty \* >** , existe para todos os tipos de ponteiro. A especialização permite a adição de um deslocamento para o valor do ponteiro gerenciado ou subtração de um deslocamento dele. Operações aritméticas obtêm um argumento do tipo `ptrdiff_t` e ajustam esse argumento de acordo com o tamanho de *Ty* para ser consistente com endereço comum aritmético.
+Uma especialização parcial **,\<Atomic \*Ty >** , existe para todos os tipos de ponteiro. A especialização permite a adição de um deslocamento para o valor do ponteiro gerenciado ou subtração de um deslocamento dele. As operações aritméticas usam um argumento do `ptrdiff_t` tipo e ajustam esse argumento de acordo com o tamanho de *Ty* para ser consistente com a aritmética de endereço comum.
 
 Existe uma especialização para cada tipo integral, exceto **bool**. Cada especialização fornece um rico conjunto de métodos para operações aritméticas e lógicas atômicas.
 
 ||||
 |-|-|-|
-|**atomic\<char>**|**Atomic\<assinado char >**|**atomic\<unsigned char>**|
+|**atomic\<char>**|**>\<de caracteres com sinal atômico**|**>\<de caracteres Atomic não assinados**|
 |**atomic\<char16_t>**|**atomic\<char32_t>**|**atomic\<wchar_t>**|
-|**atomic\<short>**|**atomic\<unsigned short>**|**atomic\<int>**|
-|**Atomic\<unsigned int >**|**atomic\<long>**|**Atomic\<unsigned long >**|
-|**atomic\<long long>**|**Atomic\<longo longo sem sinal >**|
+|**atomic\<short>**|**>\<curto sem sinal atômico**|**atomic\<int>**|
+|**>\<INT não assinados atômicos**|**atomic\<long>**|**>\<longo sem sinal atômico**|
+|**>\<longo muito atômica**|**longo\<Long não assinado Atomic >**|
 
-Especializações integrais são derivadas de tipos `atomic_integral` correspondentes. Por exemplo, **atômica\<unsigned int >** é derivado de `atomic_uint`.
+Especializações integrais são derivadas de tipos `atomic_integral` correspondentes. Por exemplo, **a\<> int não assinada atômica** é derivada `atomic_uint`de.
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** \<atomic >
+**Cabeçalho:** \<> atômica
 
 **Namespace:** std
 
-## <a name="atomic"></a> Atomic:: Atomic
+## <a name="atomic"></a>Atomic:: Atomic
 
 Constrói um objeto atômico.
 
@@ -86,23 +86,23 @@ atomic( Ty Value ) noexcept;
 
 ### <a name="parameters"></a>Parâmetros
 
-*Valor*<br/>
+*Valor*\
 Valor de inicialização.
 
 ### <a name="remarks"></a>Comentários
 
-Os objetos atômicos não podem ser copiados ou movidos.
+Objetos atômicos não podem ser copiados ou movidos.
 
-Objetos que são instanciações de atômicas\<*Ty*> podem ser inicializados somente pelo construtor que aceita um argumento do tipo *Ty* e não usando a inicialização de agregação. No entanto, objetos atomic_integral podem ser inicializados somente usando a inicialização de agregação.
+Os objetos que são instanciações de\<Atomic*Ty*> podem ser inicializados somente pelo construtor que usa um argumento do tipo *Ty* e não usando a inicialização de agregação. No entanto, os objetos atomic_integral podem ser inicializados somente usando a inicialização de agregação.
 
 ```cpp
 atomic<int> ai0 = ATOMIC_VAR_INIT(0);
 atomic<int> ai1(0);
 ```
 
-## <a name="op_ty"></a> operador Atomic:: *Ty*
+## <a name="op_ty"></a>Atomic:: Operator *Ty*
 
-O operador para o tipo especificado para o modelo atômico\<*Ty*>. Recupera o valor armazenado em  **\*isso**.
+O operador para o tipo especificado para o modelo, Atomic\<*Ty*>. Recupera o valor armazenado neste  **\*.**
 
 ```cpp
 atomic<Ty>::operator Ty() const volatile noexcept;
@@ -111,7 +111,7 @@ atomic<Ty>::operator Ty() const noexcept;
 
 ### <a name="remarks"></a>Comentários
 
-Esse operador aplica-se a `memory_order_seq_cst` [memory_order](atomic-enums.md).
+Esse operador aplica o `memory_order_seq_cst` [memory_order](atomic-enums.md).
 
 ## <a name="op_eq"></a> atomic::operator=
 
@@ -128,14 +128,14 @@ Ty operator=(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Valor*<br/>
-Um *Ty* objeto.
+*Valor*\
+Um objeto *Ty* .
 
 ### <a name="return-value"></a>Valor de retorno
 
-Retorna *valor*.
+Retorna o *valor*.
 
-## <a name="op_inc"></a> operador Atomic:: + +
+## <a name="op_inc"></a>Atomic:: operador + +
 
 Incrementa o valor armazenado. Usado somente por especializações integrais e de ponteiro.
 
@@ -148,9 +148,9 @@ Ty atomic<Ty>::operator++() noexcept;
 
 ### <a name="return-value"></a>Valor de retorno
 
-Os primeiros dois operadores retornam o valor incrementado; os últimos dois operadores retornam o valor antes do incremento. Usam os operadores de `memory_order_seq_cst` [memory_order](atomic-enums.md).
+Os primeiros dois operadores retornam o valor incrementado; os dois últimos operadores retornam o valor antes do incremento. Os operadores usam o `memory_order_seq_cst` [memory_order](atomic-enums.md).
 
-## <a name="op_add_eq"></a> atomic::operator+=
+## <a name="op_add_eq"></a>Atomic:: Operator + =
 
 Adiciona um valor especificado ao valor armazenado. Usado somente por especializações integrais e de ponteiro.
 
@@ -165,18 +165,18 @@ Ty atomic<Ty>::operator+=(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Valor*<br/>
-Um valor integral ou ponteiro.
+*Valor*\
+Um valor integral ou de ponteiro.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Um *Ty* objeto que contém o resultado da adição.
+Um objeto *Ty* que contém o resultado da adição.
 
 ### <a name="remarks"></a>Comentários
 
 Esse operador usa o `memory_order_seq_cst` [memory_order](atomic-enums.md).
 
-## <a name="op_dec"></a> atomic::operator--
+## <a name="op_dec"></a>Atomic:: Operator--
 
 Decrementa o valor armazenado. Usado somente por especializações integrais e de ponteiro.
 
@@ -189,9 +189,9 @@ Ty atomic<Ty>::operator--() noexcept;
 
 ### <a name="return-value"></a>Valor de retorno
 
-Os primeiros dois operadores retornam o valor diminuído; os últimos dois operadores retornam o valor antes do decremento. Usam os operadores de `memory_order_seq_cst` [memory_order](atomic-enums.md).
+Os primeiros dois operadores retornam o valor decrementado; os dois últimos operadores retornam o valor antes do decréscimo. Os operadores usam o `memory_order_seq_cst` [memory_order](atomic-enums.md).
 
-## <a name="op_sub_eq"></a> atomic::operator-=
+## <a name="op_sub_eq"></a>Atomic:: Operator-=
 
 Subtrai um valor especificado do valor armazenado. Usado somente por especializações integrais e de ponteiro.
 
@@ -206,20 +206,20 @@ Ty atomic<Ty>::operator-=(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Valor*<br/>
-Um valor integral ou ponteiro.
+*Valor*\
+Um valor integral ou de ponteiro.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Um *Ty* objeto que contém o resultado da subtração.
+Um objeto *Ty* que contém o resultado da subtração.
 
 ### <a name="remarks"></a>Comentários
 
 Esse operador usa o `memory_order_seq_cst` [memory_order](atomic-enums.md).
 
-## <a name="op_and_eq"></a> operador Atomic:: & =
+## <a name="op_and_eq"></a>& Atomic:: Operator =
 
-Executa um bit a bit em um valor especificado e o valor armazenado de  **\*isso**. Usado somente por especializações integrais.
+Executa um valor bit e com um e o valor  **\*armazenado dele.** Usado somente por especializações integrais.
 
 ```cpp
 atomic<Ty>::operator&= (
@@ -232,20 +232,20 @@ atomic<Ty>::operator&= (
 
 ### <a name="parameters"></a>Parâmetros
 
-*Valor*<br/>
+*Valor*\
 Um valor do tipo *Ty*.
 
 ### <a name="return-value"></a>Valor de retorno
 
-O resultado da operação bit a bit e.
+O resultado de e/.
 
 ### <a name="remarks"></a>Comentários
 
-Este operador executa uma operação de leitura, gravação e alteração para substituir o valor armazenado de  **\*isso** com um bit a bit e de *valor* e o valor atual armazenado em  **\*isso**, dentro das restrições da `memory_order_seq_cst` [memory_order](atomic-enums.md).
+Esse operador executa uma operação de leitura-modificação-gravação para substituir o valor armazenado  **\*disso por um** bit e de *valor* e o valor atual que é armazenado neste  **\*, dentro**das restrições do `memory_order_seq_cst` [memory_order](atomic-enums.md).
 
-## <a name="op_or_eq"></a> operador Atomic::&#124;=
+## <a name="op_or_eq"></a>Atomic:: Operator&#124;=
 
-Executa um bit a bit ou em um valor especificado e o valor armazenado de  **\*isso**. Usado somente por especializações integrais.
+Executa uma operação OR em um valor especificado e o valor armazenado disso  **\*.** Usado somente por especializações integrais.
 
 ```cpp
 atomic<Ty>::operator|= (
@@ -258,20 +258,20 @@ atomic<Ty>::operator|= (
 
 ### <a name="parameters"></a>Parâmetros
 
-*Valor*<br/>
+*Valor*\
 Um valor do tipo *Ty*.
 
 ### <a name="return-value"></a>Valor de retorno
 
-O resultado da operação bit a bit ou.
+O resultado da operação OR.
 
 ### <a name="remarks"></a>Comentários
 
-Este operador executa uma operação de leitura, gravação e alteração para substituir o valor armazenado de  **\*isso** com um bit a bit ou de *valor* e o valor atual armazenado em  **\*isso**, dentro das restrições da `memory_order_seq_cst` [memory_order](atomic-enums.md) restrições.
+Esse operador executa uma operação Read-Modify-Write para substituir o valor armazenado dele  **\*por um** *valor* de bits ou bit e o valor atual que é armazenado neste  **\*, dentro**das restrições do `memory_order_seq_cst`restrições de [memory_order](atomic-enums.md) .
 
-## <a name="op_xor_eq"></a> atomic::operator^=
+## <a name="op_xor_eq"></a>Atomic:: Operator ^ =
 
-Executa um exclusivo bit a bit ou em um valor especificado e o valor armazenado de  **\*isso**. Usado somente por especializações integrais.
+Executa um OR exclusivo de bit a bit em um valor especificado e o valor armazenado  **\*disso.** Usado somente por especializações integrais.
 
 ```cpp
 atomic<Ty>::operator^= (
@@ -284,20 +284,20 @@ atomic<Ty>::operator^= (
 
 ### <a name="parameters"></a>Parâmetros
 
-*Valor*<br/>
+*Valor*\
 Um valor do tipo *Ty*.
 
 ### <a name="return-value"></a>Valor de retorno
 
-O resultado de bit a bit exclusivo ou.
+O resultado do or exclusivo de bit a bit.
 
 ### <a name="remarks"></a>Comentários
 
-Este operador executa uma operação de leitura, gravação e alteração para substituir o valor armazenado de  **\*isso** com um bit a bit exclusivo ou de *valor* e o valor atual armazenado em  **\*isso**, dentro das restrições da `memory_order_seq_cst` [memory_order](atomic-enums.md) restrições.
+Esse operador executa uma operação Read-Modify-Write para substituir o valor  **\*armazenado dele por** um OR exclusivo de *bit e de* -valor e o valor atual que é armazenado  **\*neste, dentro**das restrições do restrições de [memory_order.](atomic-enums.md) `memory_order_seq_cst`
 
 ## <a name="compare_exchange_strong"></a> atomic::compare_exchange_strong
 
-Executa uma operação de comparação e troca atômica em  **\*isso**.
+Executa uma operação atômica de comparação e do Exchange sobre  **\*isso**.
 
 ```cpp
 bool compare_exchange_strong(
@@ -326,16 +326,16 @@ bool compare_exchange_strong(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Exp*<br/>
+*Exp*\
 Um valor do tipo *Ty*.
 
-*Valor*<br/>
+*Valor*\
 Um valor do tipo *Ty*.
 
-*Diffgr:ID="Order1*<br/>
+*Order1*\
 Primeiro `memory_order` argumento.
 
-*Order2*<br/>
+*Order2*\
 Segundo argumento `memory_order`.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -344,15 +344,15 @@ Um **bool** que indica o resultado da comparação de valor.
 
 ### <a name="remarks"></a>Comentários
 
-Essa operação de comparação e troca atômica compara o valor armazenado no  **\*isso** com *Exp*. Se os valores forem iguais, a operação substitui o valor que é armazenado no  **\*isso** com *valor* usando uma operação de leitura, gravação e alteração e aplicando as restrições de ordem de memória são especificado pelo *diffgr:ID="Order1*. Se os valores não forem iguais, a operação usa o valor que é armazenado no  **\*isso** substituir *Exp* e aplica as restrições de ordem de memória que são especificadas pelo *Order2* .
+Essa operação atômica de comparação e do Exchange compara o valor que é  **\*armazenado** com *exp*. Se os valores forem iguais, a operação substituirá o valor que é armazenado  **\*com** o *valor* usando uma operação Read-Modify-Write e aplicando as restrições de ordem de memória que são especificadas por *Order1*. Se os valores não forem iguais, a operação usará o valor que é armazenado  **\*nele para** substituir *exp* e aplica as restrições de ordem de memória que são especificadas por *Order2*.
 
-Sobrecargas que não têm uma segunda `memory_order` usar implícito *Order2* que se baseia no valor de *diffgr:ID="Order1*. Se *diffgr:ID="Order1* é `memory_order_acq_rel`, *Order2* é `memory_order_acquire`. Se *diffgr:ID="Order1* é `memory_order_release`, *Order2* é `memory_order_relaxed`. Em todos os outros casos, *Order2* é igual a *diffgr:ID="Order1*.
+Sobrecargas que não têm um segundo `memory_order` usam um *Order2* implícito com base no valor de *Order1*. Se *Order1* for `memory_order_acq_rel`, *Order2* será `memory_order_acquire`. Se *Order1* for `memory_order_release`, *Order2* será `memory_order_relaxed`. Em todos os outros casos, *Order2* é igual a *Order1*.
 
-Para sobrecargas que usam dois `memory_order` parâmetros, o valor da *Order2* não deve ser `memory_order_release` ou `memory_order_acq_rel`e não deve ser maior que o valor de *diffgr:ID="Order1*.
+Para sobrecargas que usam dois `memory_order` parâmetros, o valor de *Order2* não deve ser `memory_order_release` ou `memory_order_acq_rel`e não deve ser mais forte que o valor de *Order1*.
 
 ## <a name="compare_exchange_weak"></a> atomic::compare_exchange_weak
 
-Executa uma operação de comparação e troca atômica fraca em  **\*isso**.
+Executa uma operação de comparação atômica frágil e do Exchange sobre  **\*isso**.
 
 ```cpp
 bool compare_exchange_weak(
@@ -381,16 +381,16 @@ bool compare_exchange_weak(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Exp*<br/>
+*Exp*\
 Um valor do tipo *Ty*.
 
-*Valor*<br/>
+*Valor*\
 Um valor do tipo *Ty*.
 
-*Diffgr:ID="Order1*<br/>
+*Order1*\
 Primeiro `memory_order` argumento.
 
-*Order2*<br/>
+*Order2*\
 Segundo argumento `memory_order`.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -399,17 +399,17 @@ Um **bool** que indica o resultado da comparação de valor.
 
 ### <a name="remarks"></a>Comentários
 
-Essa operação de comparação e troca atômica compara o valor armazenado no  **\*isso** com *Exp*. Se os valores forem iguais, a operação substitui o valor que é armazenado no  **\*isso** com*valor* usando uma operação de leitura, gravação e alteração e aplicando as restrições de ordem de memória são especificado pelo *diffgr:ID="Order1*. Se os valores não forem iguais, a operação usa o valor que é armazenado no  **\*isso** substituir *Exp* e aplica as restrições de ordem de memória que são especificadas pelo *Order2* .
+Essa operação atômica de comparação e do Exchange compara o valor que é  **\*armazenado** com *exp*. Se os valores forem iguais, a operação substituirá o valor que é armazenado  **\*com** o*valor* usando uma operação Read-Modify-Write e aplicando as restrições de ordem de memória que são especificadas por *Order1*. Se os valores não forem iguais, a operação usará o valor que é armazenado  **\*nele para** substituir *exp* e aplica as restrições de ordem de memória que são especificadas por *Order2*.
 
-Comparar um atômica fraca e operação do exchange executará uma troca se os valores comparados forem iguais. Se os valores não forem iguais, a operação não é garantida para executar uma troca.
+Uma operação de comparação atômica fraca e do Exchange executa uma troca se os valores comparados forem iguais. Se os valores não forem iguais, a operação não será garantida para executar uma troca.
 
-Sobrecargas que não têm uma segunda `memory_order` usar implícito *Order2* que se baseia no valor de *diffgr:ID="Order1*. Se *diffgr:ID="Order1* é `memory_order_acq_rel`, *Order2* é `memory_order_acquire`. Se *diffgr:ID="Order1* é `memory_order_release`, *Order2* é `memory_order_relaxed`. Em todos os outros casos, *Order2* é igual a *diffgr:ID="Order1*.
+Sobrecargas que não têm um segundo `memory_order` usam um *Order2* implícito com base no valor de *Order1*. Se *Order1* for `memory_order_acq_rel`, *Order2* será `memory_order_acquire`. Se *Order1* for `memory_order_release`, *Order2* será `memory_order_relaxed`. Em todos os outros casos, *Order2* é igual a *Order1*.
 
-Para sobrecargas que usam dois `memory_order` parâmetros, o valor da *Order2* não deve ser `memory_order_release` ou `memory_order_acq_rel`e não deve ser maior que o valor de *diffgr:ID="Order1*.
+Para sobrecargas que usam dois `memory_order` parâmetros, o valor de *Order2* não deve ser `memory_order_release` ou `memory_order_acq_rel`e não deve ser mais forte que o valor de *Order1*.
 
 ## <a name="exchange"></a> atomic::exchange
 
-Usa um valor especificado para substituir o valor armazenado de  **\*isso**.
+Usa um valor especificado para substituir o valor  **\*armazenado disso.**
 
 ```cpp
 Ty atomic<Ty>::exchange(
@@ -424,23 +424,23 @@ Ty atomic<Ty>::exchange(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Valor*<br/>
+*Valor*\
 Um valor do tipo *Ty*.
 
-*Ordem*<br/>
+*Ordene*\
 Um `memory_order`.
 
 ### <a name="return-value"></a>Valor de retorno
 
-O valor armazenado de  **\*isso** antes da troca.
+O valor  **\*armazenado disso antes da** troca.
 
 ### <a name="remarks"></a>Comentários
 
-Esta operação executa uma operação de leitura, gravação e alteração para usar *valor* para substituir o valor armazenado em  **\*isso**, dentro das restrições de memória que são especificadas pelo  *Ordem*.
+Esta operação executa uma operação Read-Modify-Write para usar o *valor* para substituir o valor armazenado  **\*nele, dentro**das restrições de memória que são especificadas por *Order*.
 
 ## <a name="fetch_add"></a> atomic::fetch_add
 
-Busca o valor armazenado no  **\*isso**e, em seguida, adiciona um valor especificado para o valor armazenado.
+Busca o valor  **\*armazenado nele e**, em seguida, adiciona um valor especificado ao valor armazenado.
 
 ```cpp
 Ty atomic<Ty>::fetch_add (
@@ -455,23 +455,23 @@ Ty atomic<Ty>::fetch_add (
 
 ### <a name="parameters"></a>Parâmetros
 
-*Valor*<br/>
+*Valor*\
 Um valor do tipo *Ty*.
 
-*Ordem*<br/>
+*Ordene*\
 Um `memory_order`.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Um *Ty* que contém o valor armazenado no objeto  **\*isso** antes da adição.
+Um objeto *Ty* que contém o valor armazenado nele  **\*antes da** adição.
 
 ### <a name="remarks"></a>Comentários
 
-O `fetch_add` método executa uma operação de leitura-modify-write para adicionar atomicamente *valor* para o valor armazenado na  **\*isso**e aplica as restrições de memória que são especificadas pelo *Ordem*.
+O `fetch_add` método executa uma operação Read-Modify-Write para adicionar  **\*** o *valor* atomicamente ao valor armazenado e aplica as restrições de memória especificadas por *Order*.
 
 ## <a name="fetch_and"></a> atomic::fetch_and
 
-Executa um bit a bit e em um valor e um valor existente que é armazenado no  **\*isso**.
+Executa um valor de bit e um e um valor existente que é armazenado nesse  **\*.**
 
 ```cpp
 Ty atomic<Ty>::fetch_and (
@@ -486,23 +486,23 @@ Ty atomic<Ty>::fetch_and (
 
 ### <a name="parameters"></a>Parâmetros
 
-*Valor*<br/>
+*Valor*\
 Um valor do tipo *Ty*.
 
-*Ordem*<br/>
+*Ordene*\
 Um `memory_order`.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Um *Ty* objeto que contém o resultado de bit a bit e.
+Um objeto *Ty* que contém o resultado da e/.
 
 ### <a name="remarks"></a>Comentários
 
-O `fetch_and` método executa uma operação de leitura, gravação e alteração para substituir o valor armazenado de  **\*isso** com um bit a bit e de *valor* e o valor atual armazenado no  **\*isso**, dentro das restrições de memória que são especificadas por *ordem*.
+O `fetch_and` método executa uma operação Read-Modify-Write para substituir o valor armazenado dele  **\*por um** bit e de *valor* e o valor atual que é armazenado  **\*nele, dentro**da memória restrições que são especificadas por *ordem*.
 
-## <a name="fetch_or"></a> Atomic:: fetch_or
+## <a name="fetch_or"></a>Atomic:: fetch_or
 
-Executa um bit a bit ou em um valor e um valor existente que é armazenado no  **\*isso**.
+Executa uma operação OR em um valor e um valor existente que é armazenado nesse  **\*.**
 
 ```cpp
 Ty atomic<Ty>::fetch_or (
@@ -517,19 +517,19 @@ Ty atomic<Ty>::fetch_or (
 
 ### <a name="parameters"></a>Parâmetros
 
-*Valor*<br/>
+*Valor*\
 Um valor do tipo *Ty*.
 
-*Ordem*<br/>
+*Ordene*\
 Um `memory_order`.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Um *Ty* objeto que contém o resultado de bit a bit ou.
+Um objeto *Ty* que contém o resultado da operação OR.
 
 ### <a name="remarks"></a>Comentários
 
-O `fetch_or` método executa uma operação de leitura, gravação e alteração para substituir o valor armazenado de  **\*isso** com um bit a bit ou de *valor* e o valor atual armazenado no  **\*isso**, dentro das restrições de memória que são especificadas por *ordem*.
+O `fetch_or` método executa uma operação Read-Modify-Write para substituir o valor armazenado dele  **\*por um** *valor* de bits ou bit e o valor atual que é armazenado nele  **\*, dentro**da memória restrições que são especificadas por *ordem*.
 
 ## <a name="fetch_sub"></a> atomic::fetch_sub
 
@@ -548,23 +548,23 @@ Ty atomic<Ty>::fetch_sub (
 
 ### <a name="parameters"></a>Parâmetros
 
-*Valor*<br/>
+*Valor*\
 Um valor do tipo *Ty*.
 
-*Ordem*<br/>
+*Ordene*\
 Um `memory_order`.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Um *Ty* objeto que contém o resultado da subtração.
+Um objeto *Ty* que contém o resultado da subtração.
 
 ### <a name="remarks"></a>Comentários
 
-O `fetch_sub` método executa uma operação de leitura, gravação e alteração para subtrair atomicamente *valor* do valor armazenado na  **\*isso**, dentro das restrições de memória que são especificadas pelo *Ordem*.
+O `fetch_sub` método executa uma operação Read-Modify-Write para *subtrair* atomicamente  **\*** o valor do valor armazenado, dentro das restrições de memória que são especificadas por *Order*.
 
-## <a name="fetch_xor"></a> atomic::fetch_xor
+## <a name="fetch_xor"></a>Atomic:: fetch_xor
 
-Executa um exclusivo bit a bit ou em um valor e um valor existente que é armazenado no  **\*isso**.
+Executa um OR exclusivo de bit a bit em um valor e um valor existente que é armazenado  **\*nesse.**
 
 ```cpp
 Ty atomic<Ty>::fetch_xor (
@@ -579,23 +579,23 @@ Ty atomic<Ty>::fetch_xor (
 
 ### <a name="parameters"></a>Parâmetros
 
-*Valor*<br/>
+*Valor*\
 Um valor do tipo *Ty*.
 
-*Ordem*<br/>
+*Ordene*\
 Um `memory_order`.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Um *Ty* objeto que contém o resultado de bit a bit exclusivo ou.
+Um objeto *Ty* que contém o resultado do or exclusivo de bit a bit.
 
 ### <a name="remarks"></a>Comentários
 
-O `fetch_xor` método executa uma operação de leitura, gravação e alteração para substituir o valor armazenado de  **\*isso** com um bit a bit exclusivo ou de *valor* e o valor atual armazenado em  **\*isso**e aplica as restrições de memória que são especificadas por *ordem*.
+O `fetch_xor` método executa uma operação Read-Modify-Write para substituir o valor  **\*armazenado dele por** um OR exclusivo de bit e de *valor* e o valor atual que é armazenado  **\*nesse e**aplica o restrições de memória que são especificadas por *ordem*.
 
-## <a name="is_lock_free"></a> atomic::is_lock_free
+## <a name="is_lock_free"></a>Atomic:: is_lock_free
 
-Especifica se operações atômicas  **\*isso** são sem bloqueio.
+Especifica se as operações atômicas  **\*neste são de** bloqueio livre.
 
 ```cpp
 bool is_lock_free() const volatile noexcept;
@@ -603,15 +603,15 @@ bool is_lock_free() const volatile noexcept;
 
 ### <a name="return-value"></a>Valor de retorno
 
-True se atômica operações nos  **\*isso** são bloqueio livre; caso contrário, false.
+true se as operações atômicas sobre  **\*isso** estiverem livres de bloqueio; caso contrário, false.
 
 ### <a name="remarks"></a>Comentários
 
-Um tipo atômico será livre de bloqueio se nenhuma operação atômica no tipo usar bloqueios.
+Um tipo atômico é livre de bloqueio se nenhuma operação atômica nesse tipo usar bloqueios.
 
-## <a name="load"></a> Atomic:: Load
+## <a name="load"></a>Atomic:: Load
 
-Recupera o valor armazenado em  **\*isso**, dentro das restrições de memória especificado.
+Recupera o valor armazenado neste  **\*, dentro**das restrições de memória especificadas.
 
 ```cpp
 Ty atomic::load(
@@ -624,14 +624,14 @@ Ty atomic::load(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Ordem*<br/>
-Um `memory_order`. *Ordem* não deve ser `memory_order_release` ou `memory_order_acq_rel`.
+*Ordene*\
+Um `memory_order`. A *ordem* não deve `memory_order_release` ser `memory_order_acq_rel`ou.
 
 ### <a name="return-value"></a>Valor de retorno
 
-O valor recuperado armazenado em  **\*isso**.
+O valor recuperado que é armazenado neste  **\*.**
 
-## <a name="store"></a> atomic::store
+## <a name="store"></a>Atomic:: Store
 
 Armazena um valor especificado.
 
@@ -648,17 +648,17 @@ void atomic<Ty>::store(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Valor*<br/>
-Um *Ty* objeto.
+*Valor*\
+Um objeto *Ty* .
 
-*Ordem*<br/>
-Um `memory_order` restrição.
+*Ordene*\
+Uma `memory_order` restrição.
 
 ### <a name="remarks"></a>Comentários
 
-Essa função membro armazena atomicamente *valor* na `*this`, dentro das restrições de memória que são especificadas por *ordem*.
+Essa função de membro armazena atomicamente o `*this` *valor* em, dentro das restrições de memória que são especificadas por *ordem*.
 
 ## <a name="see-also"></a>Consulte também
 
-[\<atomic>](../standard-library/atomic.md)<br/>
-[Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)<br/>
+[\<atomic>](../standard-library/atomic.md)\
+[Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)

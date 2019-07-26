@@ -11,12 +11,12 @@ f1_keywords:
 ms.assetid: 06b863b3-65be-4ded-a72e-6e1eb1531077
 helpviewer_keywords:
 - std::chrono [C++], duration
-ms.openlocfilehash: 49c68b1650ced36ebcf949ae2594508480e15136
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4c537b7dfdd23ba641438e0caf6306cf5549b2d7
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413795"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454300"
 ---
 # <a name="duration-class"></a>Classe duration
 
@@ -50,7 +50,7 @@ O argumento de modelo `Rep` descreve o tipo que é usado para manter o número d
 
 |Nome|Descrição|
 |----------|-----------------|
-|[duration](#duration)|Constrói um objeto `duration`.|
+|[permanência](#duration)|Constrói um objeto `duration`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
@@ -77,7 +77,7 @@ O argumento de modelo `Rep` descreve o tipo que é usado para manter o número d
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** \<chrono >
+**Cabeçalho:** \<> Chrono
 
 **Namespace:** std::chrono
 
@@ -109,29 +109,29 @@ constexpr duration(const duration<Rep2, Period2>& Dur);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Rep2*<br/>
+*Rep2*\
 Um tipo aritmético para representar o número de tiques.
 
-*Period2*<br/>
+*Period2*\
 Uma especialização de modelo `std::ratio` para representar o período de tiques em unidades de segundos.
 
-*R*<br/>
+*R*\
 O número de tiques de período padrão.
 
-*Dur*<br/>
+*Duração*\
 O número de tiques do período especificado por *Period2*.
 
 ### <a name="remarks"></a>Comentários
 
 O construtor padrão constrói um objeto que não foi inicializado. A inicialização de valor usando chaves vazias inicializa um objeto que representa um intervalo de tempo de zero tique do relógio.
 
-O segundo, o argumento de modelo de um construtor constrói um objeto que representa um intervalo de tempo *R* tiques de relógio usando um período padrão de `std::ratio<1>`. Para evitar o arredondamento de contagens de tique, é um erro construir um objeto de duração de um tipo de representação *Rep2* que pode ser tratado como um ponto flutuante de tipo quando `duration::rep` não pode ser tratado como um tipo de ponto flutuante.
+O segundo, um construtor de argumento de modelo, constrói um objeto que representa um intervalo  de tempo de tiques de relógio de R `std::ratio<1>`usando um período padrão de. Para evitar arredondamento de contagens em escala, é um erro construir um objeto Duration de um tipo de representação *Rep2* que pode ser tratado como um tipo de ponto flutuante quando `duration::rep` não pode ser tratado como um tipo de ponto flutuante.
 
-O terceiro construtor de argumento de modelo duas constrói um objeto que representa um intervalo de tempo cujo tamanho é o intervalo de tempo especificado por *Dur*. Para evitar o truncamento de contagens de tique, é um erro construir um objeto de duração de outro objeto de duração cujo tipo é *incomensurável* com o tipo de destino.
+O terceiro construtor de argumento de dois modelos constrói um objeto que representa um intervalo de tempo cujo comprimento é o intervalo de tempo especificado por *dur*. Para evitar o truncamento de contagens de tique, é um erro construir um objeto de duração de outro objeto de duração cujo tipo é *incomensurável* com o tipo de destino.
 
 Um tipo de duração `D1` é *incomensurável* com outro tipo de duração `D2` se `D2` não puder ser tratado como um tipo de ponto flutuante e [ratio_divide\<D1::period, D2::period>::type::den](../standard-library/ratio.md) não for 1.
 
-A menos que *Rep2* é implicitamente conversível para `rep` e qualquer um dos `treat_as_floating_point<rep>` *se aplica* ou `treat_as_floating_point<Rep2>` *será falsa*, o segundo construtor não participará na resolução de sobrecarga. Para obter mais informações, consulte [<type_traits>](../standard-library/type-traits.md).
+A menos que *Rep2* seja implicitamente `rep` conversível `treat_as_floating_point<rep>`e *mantenha true* ou `treat_as_floating_point<Rep2>` *mantenha false*, o segundo construtor não participará da resolução de sobrecarga. Para obter mais informações, consulte [<type_traits>](../standard-library/type-traits.md).
 
 A menos que nenhum estouro seja induzido na conversão e for `treat_as_floating_point<rep>`*verdadeiro* ou `ratio_divide<Period2, period>::den` for igual a 1 e `treat_as_floating_point<Rep2>`*falso*, o terceiro construtor não participará da resolução de sobrecarga. Para obter mais informações, consulte [<type_traits>](../standard-library/type-traits.md).
 
@@ -195,8 +195,8 @@ duration& operator%=(const duration& Div);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Div*<br/>
-Para o primeiro método, *Div* representa uma contagem de tiques. Para o segundo método, *Div* é um `duration` objeto que contém uma contagem de tiques.
+*Marca*\
+Para o primeiro método, *div* representa uma contagem de tiques. Para o segundo método, *div* é um `duration` objeto que contém uma contagem de tiques.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -212,7 +212,7 @@ duration& operator*=(const rep& Mult);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Mult*<br/>
+*Mult*\
 Um valor do tipo especificado por `duration::rep`.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -229,7 +229,7 @@ duration& operator/=(const rep& Div);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Div*<br/>
+*Marca*\
 Um valor do tipo especificado por `duration::rep`.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -270,7 +270,7 @@ duration& operator+=(const duration& Dur);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Dur*<br/>
+*Duração*\
 Um objeto `duration`.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -287,7 +287,7 @@ duration& operator-=(const duration& Dur);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Dur*<br/>
+*Duração*\
 Um objeto `duration`.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -312,7 +312,7 @@ duration& operator%=(const rep& Div);duration& operator%=(const duration& Div);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Div*<br/>
+*Marca*\
 O divisor, que é um objeto de duração ou um valor que representa as contagens de tiques.
 
 ### <a name="remarks"></a>Comentários
@@ -321,6 +321,6 @@ A primeira função de membro reduz do módulo de contagem de tiques armazenados
 
 ## <a name="see-also"></a>Consulte também
 
-[Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<chrono>](../standard-library/chrono.md)<br/>
-[Estrutura duration_values](../standard-library/duration-values-structure.md)<br/>
+[Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)\
+[\<chrono>](../standard-library/chrono.md)\
+[Estrutura duration_values](../standard-library/duration-values-structure.md)

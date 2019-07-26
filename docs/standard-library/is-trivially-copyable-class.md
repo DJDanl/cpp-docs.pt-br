@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_trivially_copyable
 ms.assetid: 89a53bf8-036c-4108-91e1-fe34adbde8b3
-ms.openlocfilehash: 181152bff1d7c2e4f97678b48310f744080822ce
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d3062ae311b63be76ba07185f4f8173afa4229cc
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413444"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459756"
 ---
 # <a name="istriviallycopyable-class"></a>Classe is_trivially_copyable
 
@@ -26,12 +26,12 @@ struct is_trivially_copyable;
 
 ### <a name="parameters"></a>Parâmetros
 
-*T*<br/>
+*T*\
 O tipo a ser consultado.
 
 ## <a name="remarks"></a>Comentários
 
-Uma instância do predicado de tipo será verdadeira se o tipo *T* é um tipo facilmente copiado, de outra forma, será falsa. Tipos que podem ser copiados de forma trivial não têm operações de cópia não triviais, operações de movimentação ou destruidores. De modo geral, uma operação de cópia será considerada trivial se puder ser implementada como uma cópia bit a bit. Tipos internos e matrizes de tipos que podem ser copiados de forma trivial.
+Uma instância do predicado de tipo se manterá true se o tipo *T* for um tipo trivialmente copiável, caso contrário, será false. Tipos que podem ser copiados de forma trivial não têm operações de cópia não triviais, operações de movimentação ou destruidores. De modo geral, uma operação de cópia será considerada trivial se puder ser implementada como uma cópia bit a bit. Tipos internos e matrizes de tipos que podem ser copiados de forma trivial.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -41,4 +41,4 @@ Uma instância do predicado de tipo será verdadeira se o tipo *T* é um tipo fa
 
 ## <a name="see-also"></a>Consulte também
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

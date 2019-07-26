@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - clocale header
 ms.assetid: 5bde3e01-cf67-4f1f-a383-447ec814d00e
-ms.openlocfilehash: 624a1afdbe0e73c81a324273836eff6b89705236
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 60d15795328de567a8ba626f5344b2fb08e57aa7
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244753"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459345"
 ---
 # <a name="ltclocalegt"></a>&lt;clocale&gt;
 
@@ -19,7 +19,7 @@ Inclui o cabeçalho \<locale.h> da biblioteca C Padrão e adiciona os nomes asso
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** \<clocale >
+**Cabeçalho:** \<> clocale
 
 **Namespace:** std
 
@@ -54,6 +54,6 @@ lconv* localeconv();
 
 ## <a name="see-also"></a>Consulte também
 
-[Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Visão geral da biblioteca padrão C++](../standard-library/cpp-standard-library-overview.md)<br/>
-[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)\
+[Visão geral da biblioteca padrão C++](../standard-library/cpp-standard-library-overview.md)\
+[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

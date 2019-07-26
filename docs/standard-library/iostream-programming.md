@@ -17,12 +17,12 @@ helpviewer_keywords:
 - programming [C++], iostream programming
 - text input [C++]
 ms.assetid: 1aa0a0be-4dd8-4dac-ac1f-d2afdaeab769
-ms.openlocfilehash: 56b6d2a69372c9c8232823feb085780c38c00f0e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 883050c8ad838d642156dc6dac4c779d2dd3420a
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385148"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449061"
 ---
 # <a name="iostream-programming"></a>Programação iostream
 
@@ -44,5 +44,5 @@ Também há uma discussão em [Acesso Thread-Safe na Biblioteca Padrão C++](../
 
 ## <a name="see-also"></a>Consulte também
 
-[Biblioteca Padrão do C++](../standard-library/cpp-standard-library-reference.md)<br/>
-[Convenções de iostreams](../standard-library/iostreams-conventions.md)<br/>
+[Biblioteca padrão C++](../standard-library/cpp-standard-library-reference.md)\
+[Convenções de iostreams](../standard-library/iostreams-conventions.md)

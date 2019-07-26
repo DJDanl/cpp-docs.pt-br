@@ -9,12 +9,12 @@ f1_keywords:
 - filesystem/std::experimental::filesystem::directory_iterator
 - <filesystem>
 ms.assetid: 5005753b-46fa-43e1-8d4e-1b38617d3cfd
-ms.openlocfilehash: a44fc3c6c6a37c20e1e1c294929ae3cb15cece58
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 6f97ad75dcf3f01406f305b713b9d14cbe527c52
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240702"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457017"
 ---
 # <a name="ltfilesystemgt"></a>&lt;filesystem&gt;
 
@@ -29,9 +29,9 @@ using namespace std::experimental::filesystem::v1;
 ```
 
 > [!IMPORTANT]
-> A partir da versão do Visual Studio 2017, o \<filesystem > cabeçalho ainda não era um padrão de C++. C++no Visual Studio 2017 (v141 MSVC) implementa o padrão de final de rascunho, encontrado no [ISO/IEC JTC 1/SC/22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf).
+> Desde o lançamento do Visual Studio 2017, o cabeçalho \<de > do sistema de arquivos ainda C++ não era um padrão. C++no Visual Studio 2017 (MSVC v141) implementa o padrão final de rascunho, encontrado em [ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf).
 
-Esse cabeçalho dá suporte a sistemas de arquivos para uma das duas classes amplas de sistemas operacionais host: Microsoft Windows e Posix.
+Esse cabeçalho dá suporte a sistemas de sistema para uma das duas classes amplas de sistemas operacionais de host: Microsoft Windows e POSIX.
 
 Enquanto a maioria das funcionalidades são comuns para ambos os sistemas operacionais, este documento identifica onde ocorrem as diferenças. Por exemplo:
 
@@ -125,8 +125,8 @@ Para obter mais informações e exemplos de código, consulte [Navegação do Si
 |[directory_options](../standard-library/filesystem-enumerations.md#directory_options)|Uma enumeração que especifica opções para iteradores de diretório.|
 |[file_type](../standard-library/filesystem-enumerations.md#file_type)|Uma enumeração de tipos de arquivo.|
 |[perm_options](../standard-library/filesystem-enumerations.md#perm_options)||
-|[Perms](../standard-library/filesystem-enumerations.md#perms)|Um tipo de bitmask usado para transmitir permissões e opções de permissões|
+|[perms](../standard-library/filesystem-enumerations.md#perms)|Um tipo de bitmask usado para transmitir permissões e opções de permissões|
 
 ## <a name="see-also"></a>Consulte também
 
-[Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)<br/>
+[Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)

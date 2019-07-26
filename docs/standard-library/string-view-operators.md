@@ -1,5 +1,5 @@
 ---
-title: '&lt;string_view&gt; operadores'
+title: '&lt;operadores&gt; string_view'
 ms.date: 04/19/2019
 f1_keywords:
 - xstring/basic_string_view::operator!=
@@ -17,16 +17,16 @@ helpviewer_keywords:
 - std::basic_string_view::operator&lt;
 - std::basic_string_view::operator&lt;&lt;
 - std::basic_string_view::operator&lt;=, std::basic_string_view::operator==
-ms.openlocfilehash: 1fbb7faf7d6fc92a053c0f4d47575c5c53c7968e
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: caa6e515428cc0ea767eef20e819753c8f7ff8f9
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64346914"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459213"
 ---
-# <a name="ltstringviewgt-operators"></a>&lt;string_view&gt; operadores
+# <a name="ltstringviewgt-operators"></a>&lt;operadores&gt; string_view
 
-Use esses operadores para comparar dois objetos string_view, ou um string_view e algum outro objeto de cadeia de caracteres (por exemplo [std:: string](basic-string-class.md), ou **char\*** ) para que uma conversão implícita é fornecida. 
+Use esses operadores para comparar dois objetos string_view ou um string_view e algum outro objeto de cadeia de caracteres (por exemplo [std:: String](basic-string-class.md)ou **Char\*** ) para o qual uma conversão implícita é fornecida. 
 
 ||||
 |-|-|-|
@@ -34,7 +34,7 @@ Use esses operadores para comparar dois objetos string_view, ou um string_view e
 |[operator&lt;](#op_lt)|[operator&lt;&lt;](#op_lt_lt)|[operator&lt;=](#op_lt_eq)|
 |[operator==](#op_eq_eq)|[operator""sv](#op_sv)|
 
-## <a name="op_neq"></a> operador! =
+## <a name="op_neq"></a>operador! =
 
 Testa se o objeto à esquerda do operador é diferente do objeto à direita.
 
@@ -57,23 +57,23 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parâmetros
 
-*left*<br/>
-Um objeto do tipo ou qualquer tipo de cadeia de caracteres conversíveis `basic_string_view` a ser comparado.
+*mantida*\
+Qualquer tipo de cadeia de caracteres conversível ou `basic_string_view` um objeto do tipo a ser comparado.
 
-*right*<br/>
-Um objeto do tipo ou qualquer tipo de cadeia de caracteres conversíveis `basic_string_view` a ser comparado.
+*Certo*\
+Qualquer tipo de cadeia de caracteres conversível ou `basic_string_view` um objeto do tipo a ser comparado.
 
 ### <a name="return-value"></a>Valor de retorno
 
-**Verdadeiro** se o objeto no lado esquerdo do operador não é lexicograficamente igual ao objeto no lado direito; caso contrário **falso**.
+**true** se o objeto no lado esquerdo do operador não for modo lexicográfico igual ao objeto no lado direito; caso contrário, **false**.
 
 ### <a name="remarks"></a>Comentários
 
-Uma conversão implícita deve existir na *convertible_string_type* para a string_view no outro lado. 
+Uma conversão implícita deve existir de *convertible_string_type* para string_view no outro lado. 
 
-A comparação é baseada em um par comparação lexicográfica de sequências de caracteres. Se eles tiverem o mesmo número de elementos e os elementos são todas iguais, os dois objetos são iguais. Caso contrário, são diferentes.
+A comparação é baseada em uma comparação de lexicográfica emparelhada das sequências de caracteres. Se eles tiverem o mesmo número de elementos e os elementos forem iguais, os dois objetos serão iguais. Caso contrário, são diferentes.
 
-## <a name="op_eq_eq"></a> operator==
+## <a name="op_eq_eq"></a>operador = =
 
 Testa se o objeto à esquerda do operador é igual ao objeto à direita.
 
@@ -96,26 +96,26 @@ bool operator==(
 
 ### <a name="parameters"></a>Parâmetros
 
-*left*<br/>
-Um objeto do tipo ou qualquer tipo de cadeia de caracteres conversíveis `basic_string_view` a ser comparado.
+*mantida*\
+Qualquer tipo de cadeia de caracteres conversível ou `basic_string_view` um objeto do tipo a ser comparado.
 
-*right*<br/>
-Um objeto do tipo ou qualquer tipo de cadeia de caracteres conversíveis `basic_string_view` a ser comparado.
+*Certo*\
+Qualquer tipo de cadeia de caracteres conversível ou `basic_string_view` um objeto do tipo a ser comparado.
 
 ### <a name="return-value"></a>Valor de retorno
 
-**Verdadeiro** se o objeto no lado esquerdo do operador é lexicograficamente igual ao objeto no lado direito; caso contrário **falso**.
+**true** se o objeto no lado esquerdo do operador for modo lexicográfico igual ao objeto no lado direito; caso contrário, **false**.
 
 ### <a name="remarks"></a>Comentários
 
-Uma conversão implícita deve existir na *convertible_string_type* para a string_view no outro lado. 
+Uma conversão implícita deve existir de *convertible_string_type* para string_view no outro lado. 
 
-A comparação é baseada em um par comparação lexicográfica de sequências de caracteres. Se eles tiverem o mesmo número de elementos e os elementos são todas iguais, os dois objetos são iguais.
+A comparação é baseada em uma comparação de lexicográfica emparelhada das sequências de caracteres. Se eles tiverem o mesmo número de elementos e os elementos forem iguais, os dois objetos serão iguais.
 
 
 ## <a name="op_lt"></a> Operador&lt;
 
-Testa se o objeto no lado esquerdo do operador é menor que o objeto a sidestring_view à direita
+Testa se o objeto no lado esquerdo do operador é menor que o objeto no sidestring_view direito
 ```cpp
 template <class CharType, class Traits>
 bool operator<(
@@ -135,21 +135,21 @@ bool operator<(
 
 ### <a name="parameters"></a>Parâmetros
 
-*left*<br/>
-Um objeto do tipo ou qualquer tipo de cadeia de caracteres conversíveis `basic_string_view` a ser comparado.
+*mantida*\
+Qualquer tipo de cadeia de caracteres conversível ou `basic_string_view` um objeto do tipo a ser comparado.
 
-*right*<br/>
-Um objeto do tipo ou qualquer tipo de cadeia de caracteres conversíveis `basic_string_view` a ser comparado.
+*Certo*\
+Qualquer tipo de cadeia de caracteres conversível ou `basic_string_view` um objeto do tipo a ser comparado.
 
 ### <a name="return-value"></a>Valor de retorno
 
-**Verdadeiro** se o objeto no lado esquerdo do operador é lexicograficamente menor que o objeto no lado direito; caso contrário **falso**.
+**true** se o objeto no lado esquerdo do operador for modo lexicográfico menor que o objeto no lado direito; caso contrário, **false**.
 
 ### <a name="remarks"></a>Comentários
 
-Uma conversão implícita deve existir na *convertible_string_type* para a string_view no outro lado. 
+Uma conversão implícita deve existir de *convertible_string_type* para string_view no outro lado. 
 
-A comparação é baseada em um par comparação lexicográfica de sequências de caracteres. Quando o primeiro par desigual de caracteres for encontrado, o resultado da comparação é retornado. Se nenhum caractere diferente é encontrado, mas uma sequência for menor, a sequência mais curta for menor que a mais longa. Em outras palavras, "gato" é menor que "gatos".
+A comparação é baseada em uma comparação de lexicográfica emparelhada das sequências de caracteres. Quando o primeiro par de caracteres desiguals é encontrado, o resultado dessa comparação é retornado. Se nenhum caractere diferente for encontrado, mas uma sequência for menor, a sequência mais curta será menor do que a mais longa. Em outras palavras, "Cat" é menor que "gatos".
 
 ### <a name="example"></a>Exemplo
 
@@ -196,19 +196,19 @@ bool operator<=(
 
 ### <a name="parameters"></a>Parâmetros
 
-*left*<br/>
-Um objeto do tipo ou qualquer tipo de cadeia de caracteres conversíveis `basic_string_view` a ser comparado.
+*mantida*\
+Qualquer tipo de cadeia de caracteres conversível ou `basic_string_view` um objeto do tipo a ser comparado.
 
-*right*<br/>
-Um objeto do tipo ou qualquer tipo de cadeia de caracteres conversíveis `basic_string_view` a ser comparado.
+*Certo*\
+Qualquer tipo de cadeia de caracteres conversível ou `basic_string_view` um objeto do tipo a ser comparado.
 
 ### <a name="return-value"></a>Valor de retorno
 
-**Verdadeiro** se o objeto no lado esquerdo do operador é lexicograficamente menor ou igual ao objeto no lado direito; caso contrário **falso**.
+**true** se o objeto no lado esquerdo do operador for modo lexicográfico menor ou igual ao objeto no lado direito; caso contrário, **false**.
 
 ### <a name="remarks"></a>Comentários
 
-Ver [operador&lt;](#op_lt).
+Consulte [operador&lt;](#op_lt).
 
 ## <a name="op_lt_lt"></a> operador&lt;&lt;
 
@@ -222,15 +222,15 @@ inline basic_ostream<CharType, Traits>& operator<<(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Ostr*<br/>
-um fluxo de saída que estão sendo gravado.
+*Ostr*\
+um fluxo de saída no qual está sendo gravado.
 
-*Str*<br/>
-String_view serem inseridos em um fluxo de saída.
+*Str*\
+O string_view a ser inserido em um fluxo de saída.
 
 ### <a name="return-value"></a>Valor de retorno
 
-um fluxo de saída que estão sendo gravado.
+um fluxo de saída no qual está sendo gravado.
 
 ### <a name="remarks"></a>Comentários
 
@@ -259,19 +259,19 @@ bool operator>(
 
 ### <a name="parameters"></a>Parâmetros
 
-*left*<br/>
-Um objeto do tipo ou qualquer tipo de cadeia de caracteres conversíveis `basic_string_view` a ser comparado.
+*mantida*\
+Qualquer tipo de cadeia de caracteres conversível ou `basic_string_view` um objeto do tipo a ser comparado.
 
-*right*<br/>
-Um objeto do tipo ou qualquer tipo de cadeia de caracteres conversíveis `basic_string_view` a ser comparado.
+*Certo*\
+Qualquer tipo de cadeia de caracteres conversível ou `basic_string_view` um objeto do tipo a ser comparado.
 
 ### <a name="return-value"></a>Valor de retorno
 
-**Verdadeiro** se o objeto no lado esquerdo do operador é lexicograficamente maior que o objeto string_view no lado direito; caso contrário **falso**.
+**true** se o objeto no lado esquerdo do operador for modo lexicográfico maior que o objeto string_view no lado direito; caso contrário, **false**.
 
 ### <a name="remarks"></a>Comentários
 
-Ver [operador&lt;](#op_lt).
+Consulte [operador&lt;](#op_lt).
 
 ## <a name="op_gt_eq"></a> operador&gt;=
 
@@ -296,23 +296,23 @@ bool operator>=(
 
 ### <a name="parameters"></a>Parâmetros
 
-*left*<br/>
-Um objeto do tipo ou qualquer tipo de cadeia de caracteres conversíveis `basic_string_view` a ser comparado.
+*mantida*\
+Qualquer tipo de cadeia de caracteres conversível ou `basic_string_view` um objeto do tipo a ser comparado.
 
-*right*<br/>
-Um objeto do tipo ou qualquer tipo de cadeia de caracteres conversíveis `basic_string_view` a ser comparado.
+*Certo*\
+Qualquer tipo de cadeia de caracteres conversível ou `basic_string_view` um objeto do tipo a ser comparado.
 
 ### <a name="return-value"></a>Valor de retorno
 
-**Verdadeiro** se o objeto no lado esquerdo do operador é lexicograficamente maior que ou igual ao objeto no lado direito; caso contrário **falso**.
+**true** se o objeto no lado esquerdo do operador for modo lexicográfico maior ou igual ao objeto no lado direito; caso contrário, **false**.
 
 ### <a name="remarks"></a>Comentários
 
-Ver [operador&lt;](#op_lt).
+Consulte [operador&lt;](#op_lt).
 
-## <a name="op_sv"></a> operador"" sv (string_view literal)
+## <a name="op_sv"></a>Operator "" VA (string_view literal)
 
-Constrói um string_view de um literal de cadeia de caracteres. Requer o namespace `std::literals::string_view_literals`. 
+Constrói um string_view de um literal de cadeia de caracteres. Requer namespace `std::literals::string_view_literals`. 
 
 ### <a name="example"></a>Exemplo
 
@@ -329,4 +329,4 @@ using namespace literals::string_view_literals;
 
 ## <a name="see-also"></a>Consulte também
 
-[\<string_view>](../standard-library/string-view.md)<br/>
+[\<string_view>](../standard-library/string-view.md)

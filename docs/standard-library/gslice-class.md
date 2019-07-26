@@ -12,12 +12,12 @@ helpviewer_keywords:
 - std::gslice [C++], start
 - std::gslice [C++], stride
 ms.assetid: f47cffd0-ea59-4b13-848b-7a5ce1d7e2a3
-ms.openlocfilehash: bee6fec3e09f7c5758112ba8b0c171a300797f9a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9290fabc86ffbdb051b7c61fe1600cd2f7f17dca
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159464"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448894"
 ---
 # <a name="gslice-class"></a>Classe gslice
 
@@ -25,13 +25,13 @@ Uma classe de utilitário para valarray que é usada para definir subconjuntos m
 
 ## <a name="remarks"></a>Comentários
 
-A classe armazena os parâmetros que caracterizam a um objeto do tipo [gslice_array](../standard-library/gslice-array-class.md). O subconjunto de um valarray é construído indiretamente quando um objeto da classe gslice aparece como um argumento para um objeto da classe [valarray](../standard-library/valarray-class.md#op_at)**\<Tipo>**. Os valores armazenados que especificam o subconjunto selecionado do valarray pai incluem:
+A classe armazena os parâmetros que caracterizam a um objeto do tipo [gslice_array](../standard-library/gslice-array-class.md). O subconjunto de um valarray é construído indiretamente quando um objeto da classe gslice aparece como um argumento para um objeto da classe [valarray](../standard-library/valarray-class.md#op_at) **\<Tipo>** . Os valores armazenados que especificam o subconjunto selecionado do valarray pai incluem:
 
 - Um índice inicial.
 
-- Um vetor de tamanho da classe `valarray<size_t>`.
+- Um vetor de comprimento de `valarray<size_t>`classe.
 
-- Um vetor de distância da classe `valarray<size_t>`.
+- Um vetor Stride da classe `valarray<size_t>`.
 
 Os dois vetores devem ter o mesmo tamanho.
 
@@ -74,22 +74,22 @@ gslice(
 
 ### <a name="parameters"></a>Parâmetros
 
-*_StartIndex*<br/>
+*_StartIndex*\
 O índice de valarray do primeiro elemento no subconjunto.
 
-*_LenArray*<br/>
+*_LenArray*\
 Uma matriz que especifica o número de elementos em cada fatia.
 
-*_IncArray*<br/>
+*_IncArray*\
 Uma matriz que especifica a distância em cada fatia.
 
 ### <a name="return-value"></a>Valor de retorno
 
-O construtor padrão armazena zero para o índice inicial e vetores de comprimento zero para os vetores de comprimento e distância. O segundo construtor armazena *_StartIndex* para o índice inicial, *_LenArray* para a matriz de comprimento, e *_IncArray* para a matriz de distância.
+O construtor padrão armazena zero para o índice inicial e vetores de comprimento zero para os vetores de comprimento e distância. O segundo Construtor armazena *_StartIndex* para o índice inicial, *_LenArray* para a matriz de comprimento e *_IncArray* para a matriz Stride.
 
 ### <a name="remarks"></a>Comentários
 
-**gslice** define um subconjunto de um valarray que consiste em várias fatias do valarray, cada uma iniciada com o mesmo elemento especificado. A capacidade de usar matrizes para definir várias fatias é a única diferença entre `gslice` e [slice::slice](../standard-library/slice-class.md#slice). A primeira fatia tem um primeiro elemento com um índice de *_StartIndex*, um número de elementos especificado pelo primeiro elemento da *_LenArray*e uma distância fornecida pelo primeiro elemento da *_IncArray* . O conjunto seguinte de fatias ortogonais tem os primeiros elementos fornecidos pela primeira fatia. O segundo elemento da *_LenArray* Especifica o número de elementos. A distância é fornecida pelo segundo elemento da *_IncArray*. Uma terceira dimensão de fatias usaria os elementos da matriz bidimensional como elementos iniciais e continuaria da mesma forma
+**gslice** define um subconjunto de um valarray que consiste em várias fatias do valarray, cada uma iniciada com o mesmo elemento especificado. A capacidade de usar matrizes para definir várias fatias é a única diferença entre `gslice` e [slice::slice](../standard-library/slice-class.md#slice). A primeira fatia tem um primeiro elemento com um índice de *_StartIndex*, vários elementos especificados pelo primeiro elemento de *_LenArray*e um stride fornecido pelo primeiro elemento de *_IncArray*. O conjunto seguinte de fatias ortogonais tem os primeiros elementos fornecidos pela primeira fatia. O segundo elemento de *_LenArray* especifica o número de elementos. O stride é fornecido pelo segundo elemento de *_IncArray*. Uma terceira dimensão de fatias usaria os elementos da matriz bidimensional como elementos iniciais e continuaria da mesma forma
 
 ### <a name="example"></a>Exemplo
 
@@ -349,4 +349,4 @@ vaGSlice.stride ( ) = ( 7 4 ).
 
 ## <a name="see-also"></a>Consulte também
 
-[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

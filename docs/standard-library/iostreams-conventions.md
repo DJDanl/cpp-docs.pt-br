@@ -5,12 +5,12 @@ helpviewer_keywords:
 - iostream header
 - C++ Standard Library, iostreams
 ms.assetid: 9fe5ded0-37a1-48d1-9671-c81ffc4760ad
-ms.openlocfilehash: 52cdd06385994e49ff793e40318ca4cbbbcfcda0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 222a65f60b231ba4b3768131c15d6e0d736f211e
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404826"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449008"
 ---
 # <a name="iostreams-conventions"></a>Convenções iostreams
 
@@ -32,6 +32,6 @@ Os cabeçalhos restantes fornecem serviços de suporte, normalmente de interesse
 
 ## <a name="see-also"></a>Consulte também
 
-[Visão geral da biblioteca padrão C++](../standard-library/cpp-standard-library-overview.md)<br/>
-[Programação de iostream](../standard-library/iostream-programming.md)<br/>
-[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Visão geral da biblioteca padrão C++](../standard-library/cpp-standard-library-overview.md)\
+[Programação de iostream](../standard-library/iostream-programming.md)\
+[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
