@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - ctype_base class
 ms.assetid: ccffe891-d7ab-4d22-baf8-8eb6d438a96d
-ms.openlocfilehash: 83ef35f9fac438cfa217decf222abd365ff84269
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f23b9528cf9a921e1d005756aa82751f3fdb745e
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394176"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449353"
 ---
 # <a name="ctypebase-class"></a>Classe ctype_base
 
@@ -69,7 +69,7 @@ Define uma máscara de enumeração. Cada constante de enumeração caracteriza 
 
 - **graph** (função [isgraph](../standard-library/locale-functions.md#isgraph))
 
-É possível caracterizar uma combinação de classificações pelo uso de OR nessas constantes. Em particular, ele é sempre verdadeiro que **alnum** = = ( **alpha** &#124; **dígito** \) e **graph** \= \= \( **alnum** &#124; **punct**).
+É possível caracterizar uma combinação de classificações pelo uso de OR nessas constantes. Em particular, é sempre verdade que **alnum** = = ( **Alpha** &#124; **digit** \) e **Graph** \=  &#124;  \= \( alnum punct).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -79,4 +79,4 @@ Define uma máscara de enumeração. Cada constante de enumeração caracteriza 
 
 ## <a name="see-also"></a>Consulte também
 
-[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

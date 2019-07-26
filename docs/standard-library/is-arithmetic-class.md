@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_arithmetic class
 - is_arithmetic
 ms.assetid: ea427b7e-0141-4a04-848f-561054c53001
-ms.openlocfilehash: 7aff4b051786c3d77dacb65ddbdbd29fa695ca48
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e2c148b7cb58cf38e5f73d4e3d2297eac099ef7e
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404800"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456684"
 ---
 # <a name="isarithmetic-class"></a>Classe is_arithmetic
 
@@ -27,12 +27,12 @@ struct is_arithmetic;
 
 ### <a name="parameters"></a>Parâmetros
 
-*Ty*<br/>
+*Ty*\
 O tipo a ser consultado.
 
 ## <a name="remarks"></a>Comentários
 
-Uma instância do predicado de tipo será verdadeira se o tipo *Ty* é um tipo aritmético, ou seja, um tipo integral ou flutuante tipo de ponto ou um `cv-qualified` forma de um deles, caso contrário, será falsa.
+Uma instância do predicado de tipo se aplica true se o tipo *Ty* é um tipo aritmético, ou seja, um tipo integral ou um tipo de ponto `cv-qualified` flutuante, ou uma forma de um deles, caso contrário, ele mantém false.
 
 ## <a name="example"></a>Exemplo
 
@@ -74,6 +74,6 @@ is_arithmetic<float> == true
 
 ## <a name="see-also"></a>Consulte também
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[Classe is_floating_point](../standard-library/is-floating-point-class.md)<br/>
-[Classe is_integral](../standard-library/is-integral-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[Classe is_floating_point](../standard-library/is-floating-point-class.md)\
+[Classe is_integral](../standard-library/is-integral-class.md)

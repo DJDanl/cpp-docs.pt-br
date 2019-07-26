@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_base_of class
 - is_base_of
 ms.assetid: 436f6213-1d4c-4ffc-a588-fc7c4887dd86
-ms.openlocfilehash: 345301b5eeed7b66f18a54e56b9bee6346078634
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d56222f218033d00583e5e3def9790720ef7bb94
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383666"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456619"
 ---
 # <a name="isbaseof-class"></a>Classe is_base_of
 
@@ -27,15 +27,15 @@ struct is_base_of;
 
 ### <a name="parameters"></a>Parâmetros
 
-*Base*<br/>
+*Polybase*\
 A classe base com relação à qual testar.
 
-*Derivado*<br/>
+*Gerados*\
 O tipo derivado com relação ao qual testar.
 
 ## <a name="remarks"></a>Comentários
 
-Uma instância do predicado de tipo será verdadeira se o tipo *Base* é uma classe base do tipo *derivada*, caso contrário, será falsa.
+Uma instância do tipo de predicado é verdadeira se o tipo *base* é uma classe base do tipo *derivado*, caso contrário, ele mantém false.
 
 ## <a name="example"></a>Exemplo
 
@@ -80,5 +80,5 @@ is_base_of<derived, base> == false
 
 ## <a name="see-also"></a>Consulte também
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[Classe is_convertible](../standard-library/is-convertible-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[Classe is_convertible](../standard-library/is-convertible-class.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - aligned_storage class
 - aligned_storage
 ms.assetid: f255e345-1f05-4d07-81e4-017f420839fb
-ms.openlocfilehash: 6a3145cb1837a3ea95c48022db391ddbccf55199
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8a4e907faa6175b9e03f5367d09501aaea388bce
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411091"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456473"
 ---
 # <a name="alignedstorage-class"></a>Classe aligned_storage
 
@@ -30,15 +30,15 @@ using aligned_storage_t = typename aligned_storage<Len, Align>::type;
 
 ### <a name="parameters"></a>Parâmetros
 
-*Len*<br/>
+*Len*\
 O tamanho do objeto.
 
-*Alinhar*<br/>
+*Alinha*\
 O alinhamento do objeto.
 
 ## <a name="remarks"></a>Comentários
 
-O membro de modelo typedef `type` é um sinônimo de um tipo POD com alinhamento *alinhar* e o tamanho *Len*. *Alinhar* deve ser igual a `alignment_of<T>::value` para algum tipo `T`, ou para o alinhamento padrão.
+O typedef `type` do membro do modelo é um sinônimo para um tipo de Pod com *alinhamento e* *Len*de tamanho. *Align* deve ser igual a `alignment_of<T>::value` para algum tipo `T`ou para o alinhamento padrão.
 
 ## <a name="example"></a>Exemplo
 
@@ -72,5 +72,5 @@ aligned to double == 8
 
 ## <a name="see-also"></a>Consulte também
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[Classe alignment_of](../standard-library/alignment-of-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[Classe alignment_of](../standard-library/alignment-of-class.md)

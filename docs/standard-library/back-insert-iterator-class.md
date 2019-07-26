@@ -10,12 +10,12 @@ helpviewer_keywords:
 - std::back_insert_iterator [C++], container_type
 - std::back_insert_iterator [C++], reference
 ms.assetid: a1ee07f2-cf9f-46a1-8608-cfaf207f9713
-ms.openlocfilehash: 2a0510b6df656b7925fd42a4c97d768336537424
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d8f48b1f714697aff63a4ee658a69fce6dab8041
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62376439"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459534"
 ---
 # <a name="backinsertiterator-class"></a>Classe back_insert_iterator
 
@@ -30,7 +30,7 @@ class back_insert_iterator;
 
 ### <a name="parameters"></a>Parâmetros
 
-*Container*<br/>
+*Container*\
 O tipo de contêiner na parte de trás dos elementos a serem inseridos por um `back_insert_iterator`.
 
 ## <a name="remarks"></a>Comentários
@@ -54,9 +54,9 @@ O contêiner deve atender aos requisitos de uma sequência de inserção posteri
 
 |Operador|Descrição|
 |-|-|
-|[operator*](#op_star)|Operador de desreferenciamento usado para implementar a expressão do iterador de saída \* `i`  =  `x` para uma inserção posterior.|
+|[operator*](#op_star)|Operador de desreferenciação usado para implementar a expressão \* `i`  =  `x` de iterador de saída para uma inserção de retorno.|
 |[operator++](#op_add_add)|Incrementa o `back_insert_iterator` para o próximo local no qual um valor pode ser armazenado.|
-|[operator=](#op_eq)|Operador de atribuição usado para implementar a expressão do iterador de saída \* `i`  =  `x` para uma inserção posterior.|
+|[operator=](#op_eq)|Operador de atribuição usado \* para implementar a expressão `i`  =  `x` de iterador de saída para uma inserção de retorno.|
 
 ## <a name="requirements"></a>Requisitos
 
@@ -74,7 +74,7 @@ explicit back_insert_iterator(Container& _Cont);
 
 ### <a name="parameters"></a>Parâmetros
 
-*_Cont*<br/>
+*_Cont*\
 O contêiner em que o `back_insert_iterator` deve inserir um elemento.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -315,7 +315,7 @@ back_insert_iterator<Container>& operator=(typename Container::value_type&& val)
 
 ### <a name="parameters"></a>Parâmetros
 
-*val*<br/>
+*Val*\
 O valor a ser inserido no contêiner.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -423,6 +423,6 @@ The last element in the vector vec is: 3.
 
 ## <a name="see-also"></a>Consulte também
 
-[\<iterator>](../standard-library/iterator.md)<br/>
-[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Referência da biblioteca padrão C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[\<iterator>](../standard-library/iterator.md)\
+[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Referência da biblioteca padrão C++](../standard-library/cpp-standard-library-reference.md)

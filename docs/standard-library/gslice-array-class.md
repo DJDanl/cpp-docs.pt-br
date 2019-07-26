@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - gslice_array class
 ms.assetid: ad1b4514-b14a-4baf-a293-d5a8e8674c75
-ms.openlocfilehash: 1485b68f29651c0c42048fea02a8320ced8748aa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 37c54d09fdfe920c832c4baa7984fee4e090d04a
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159536"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448927"
 ---
 # <a name="gslicearray-class"></a>Classe gslice_array
 
@@ -54,15 +54,15 @@ public:
 
 ## <a name="remarks"></a>Comentários
 
-A classe descreve um objeto que armazena uma referência a um objeto `va` da classe [valarray](../standard-library/valarray-class.md)**\<tipo >**, bem como um objeto `gs` da classe [ gslice](../standard-library/gslice-class.md) que descreve a sequência de elementos a serem selecionados do `valarray<Type>` objeto.
+A classe descreve um objeto que armazena uma referência a um objeto `va` da classe [valarray](../standard-library/valarray-class.md) **\<do tipo >** , juntamente com um `gs` objeto da classe [GSlice](../standard-library/gslice-class.md) que descreve a sequência de elementos a serem selecionados o `valarray<Type>` objeto.
 
-Você constrói uma `gslice_array<Type>` objeto apenas escrevendo uma expressão do formulário [va&#91;gs&#93;](../standard-library/valarray-class.md#op_at). As funções de membro da classe gslice_array, em seguida, se comportam como as assinaturas de função correspondentes definidas para `valarray<Type>`, exceto que somente a sequência de elementos selecionados ser afetada.
+Você constrói um `gslice_array<Type>` objeto apenas escrevendo uma expressão do formulário [VA&#91;GS&#93;](../standard-library/valarray-class.md#op_at). As funções de membro da classe gslice_array se comportam como as assinaturas de `valarray<Type>`função correspondentes definidas para, exceto que apenas a sequência de elementos selecionados é afetada.
 
 A classe de modelo é criada indiretamente por determinadas operações de valarray e não pode ser usada diretamente no programa. Em vez disso, uma classe de modelo auxiliar interna é usada pelo operador de subscrito da fatia:
 
-`gslice_array`\< **Tipo**> `valarray`\< **Tipo**>:: `operator[]` ( **constgslice&**).
+`gslice_array`\< **Tipo**> `valarray`\< **Tipo**>:: `operator[]` ( **constgslice&** ).
 
-Você constrói uma `gslice_array<Type>` objeto apenas escrevendo uma expressão do formulário `va[gsl]`, para uma fatia `gsl` de valarray `va`. As funções de membro da classe gslice_array, em seguida, se comportam como as assinaturas de função correspondentes definidas para `valarray<Type>`, exceto que somente a sequência de elementos selecionados ser afetada. A sequência controlada por gslice_array é definida pelos três parâmetros do construtor de fatia, o índice do primeiro elemento na primeira fatia, o número de elementos em cada fatia e a distância entre os elementos de cada fatia.
+Você constrói um `gslice_array<Type>` objeto apenas escrevendo uma expressão do formulário `va[gsl]`, para uma fatia `gsl` de valarray `va`. As funções de membro da classe gslice_array se comportam como as assinaturas de `valarray<Type>`função correspondentes definidas para, exceto que apenas a sequência de elementos selecionados é afetada. A sequência controlada por gslice_array é definida pelos três parâmetros do construtor de fatia, o índice do primeiro elemento na primeira fatia, o número de elementos em cada fatia e a distância entre os elementos de cada fatia.
 
 No exemplo a seguir:
 
@@ -89,4 +89,4 @@ Veja o exemplo de [gslice::gslice](../standard-library/gslice-class.md#gslice) p
 
 ## <a name="see-also"></a>Consulte também
 
-[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

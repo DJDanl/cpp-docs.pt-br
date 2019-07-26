@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - cmath header
 ms.assetid: 80df1dba-60ca-4918-9c2e-fbf446eaa7d6
-ms.openlocfilehash: 1b581e19d53be6faddb983f12d739f2a199b2e9c
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: d01b02d8fa169aa7fddbc3e51d75e5328b400d2b
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244746"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459277"
 ---
 # <a name="ltcmathgt"></a>&lt;cmath&gt;
 
@@ -217,7 +217,7 @@ float hypotf(float x, float y);
 long double hypotl(long double x, long double y);
 ```
 
-## <a name="three-dimensional-hypotenuse"></a>Tridimensional hipotenusa
+## <a name="three-dimensional-hypotenuse"></a>Hipotenusa tridimensionais
 
 ```cpp
 float hypot(float x, float y, float z);
@@ -358,7 +358,7 @@ float fmaf(float x, float y, float z);
 long double fmal(long double x, long double y, long double z);
 ```
 
-## <a name="classification--comparison-functions"></a>Classificação / funções de comparação
+## <a name="classification--comparison-functions"></a>Funções de classificação/comparação
 
 ```cpp
 int fpclassify(float x);
@@ -401,7 +401,7 @@ int isunordered(long double x, long double y);
 
 ## <a name="mathematical-special-functions"></a>Funções matemáticas especiais
 
-### <a name="associated-laguerre-polynomials"></a>Polynomials de Laguerre associados
+### <a name="associated-laguerre-polynomials"></a>Laguerre polinomiais associados
 
 ```cpp
 double assoc_laguerre(unsigned n, unsigned m, double x);
@@ -409,7 +409,7 @@ float assoc_laguerref(unsigned n, unsigned m, float x);
 long double assoc_laguerrel(unsigned n, unsigned m, long double x);
 ```
 
-### <a name="associated-legendre-functions"></a>Funções de Legendre associadas
+### <a name="associated-legendre-functions"></a>Funções Legendre associadas
 
 ```cpp
 double assoc_legendre(unsigned l, unsigned m, double x);
@@ -449,7 +449,7 @@ float comp_ellint_3f(float k, float nu);
 long double comp_ellint_3l(long double k, long double nu);
 ```
 
-### <a name="regular-modified-cylindrical-bessel-functions"></a>Regular modificado cilíndricas funções de Bessel
+### <a name="regular-modified-cylindrical-bessel-functions"></a>Funções de Bessel cilíndricas modificadas regulares
 
 ```cpp
 double cyl_bessel_i(double nu, double x);
@@ -457,7 +457,7 @@ float cyl_bessel_if(float nu, float x);
 long double cyl_bessel_il(long double nu, long double x);
 ```
 
-### <a name="cylindrical-bessel-functions-of-the-first-kind"></a>Cilíndricas funções Bessel do primeiro tipo
+### <a name="cylindrical-bessel-functions-of-the-first-kind"></a>Funções de Bessel cilíndricas do primeiro tipo
 
 ```cpp
 double cyl_bessel_j(double nu, double x);
@@ -465,7 +465,7 @@ float cyl_bessel_jf(float nu, float x);
 long double cyl_bessel_jl(long double nu, long double x);
 ```
 
-### <a name="irregular-modified-cylindrical-bessel-functions"></a>Irregular modificado cilíndricas funções de Bessel
+### <a name="irregular-modified-cylindrical-bessel-functions"></a>Funções de Bessel cilíndricas modificadas irregulares
 
 ```cpp
 double cyl_bessel_k(double nu, double x);
@@ -473,7 +473,7 @@ float cyl_bessel_kf(float nu, float x);
 long double cyl_bessel_kl(long double nu, long double x);
 ```
 
-### <a name="cylindrical-neumann-functions"></a>Funções de Neumann cilíndricas
+### <a name="cylindrical-neumann-functions"></a>Funções Neumann cilíndricas
 
 ```cpp
 double cyl_neumann(double nu, double x);
@@ -513,7 +513,7 @@ float expintf(float x);
 long double expintl(long double x);
 ```
 
-### <a name="hermite-polynomials"></a>Polynomials hermite
+### <a name="hermite-polynomials"></a>Hermite polinomiais
 
 ```cpp
 double hermite(unsigned n, double x);
@@ -521,7 +521,7 @@ float hermitef(unsigned n, float x);
 long double hermitel(unsigned n, long double x);
 ```
 
-### <a name="laguerre-polynomials"></a>Laguerre polynomials
+### <a name="laguerre-polynomials"></a>Laguerre polinomiais
 
 ```cpp
 double laguerre(unsigned n, double x);
@@ -529,7 +529,7 @@ float laguerref(unsigned n, float x);
 long double laguerrel(unsigned n, long double x);
 ```
 
-### <a name="legendre-polynomials"></a>Polynomials Legendre
+### <a name="legendre-polynomials"></a>Legendre polinomiais
 
 ```cpp
 double legendre(unsigned l, double x);
@@ -537,7 +537,7 @@ float legendref(unsigned l, float x);
 long double legendrel(unsigned l, long double x);
 ```
 
-### <a name="riemann-zeta-function"></a>Função de zeta Reimann
+### <a name="riemann-zeta-function"></a>Função zeta de Riemann
 
 ```cpp
 double riemann_zeta(double x);
@@ -545,7 +545,7 @@ float riemann_zetaf(float x);
 long double riemann_zetal(long double x);
 ```
 
-### <a name="spherical-bessel-functions-of-the-first-kind"></a>Esféricas funções Bessel do primeiro tipo
+### <a name="spherical-bessel-functions-of-the-first-kind"></a>Funções de Bessel esférica do primeiro tipo
 
 ```cpp
 double sph_bessel(unsigned n, double x);
@@ -553,7 +553,7 @@ float sph_besself(unsigned n, float x);
 long double sph_bessell(unsigned n, long double x);
 ```
 
-### <a name="spherical-associated-legendre-functions"></a>Esféricas funções Legendre associadas
+### <a name="spherical-associated-legendre-functions"></a>Funções Legendre associadas a esféricos
 
 ```cpp
 double sph_legendre(unsigned l, unsigned m, double theta);
@@ -561,7 +561,7 @@ float sph_legendref(unsigned l, unsigned m, float theta);
 long double sph_legendrel(unsigned l, unsigned m, long double theta);
 ```
 
-### <a name="spherical-neumann-functions"></a>Funções de Neumann esféricas
+### <a name="spherical-neumann-functions"></a>Funções Neumann esférica
 
 ```cpp
 double sph_neumann(unsigned n, double x);
@@ -575,6 +575,6 @@ A inclusão desse cabeçalho garante que os nomes declarados usando vinculação
 
 ## <a name="see-also"></a>Consulte também
 
-[Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Visão geral da biblioteca padrão C++](../standard-library/cpp-standard-library-overview.md)<br/>
-[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)\
+[Visão geral da biblioteca padrão C++](../standard-library/cpp-standard-library-overview.md)\
+[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

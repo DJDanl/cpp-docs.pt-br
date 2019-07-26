@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C++ Standard Library, algorithms
 - <algorithm> header
 ms.assetid: 19f97711-7a67-4a65-8fd1-9a2bd3ca327d
-ms.openlocfilehash: 36dfca8418cbbabd7dcfb30b2cece483406a5667
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 0b9b259d49808002442492ce2912b4f9aa96d2b8
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68245952"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456497"
 ---
 # <a name="ltalgorithmgt"></a>&lt;algorithm&gt;
 
@@ -26,7 +26,7 @@ Define as funções de modelo do contêiner da Biblioteca Padrão do C++ que exe
 ```
 
 > [!NOTE]
-> O \<algoritmo > biblioteca também usa o `#include <initializer_list>` instrução.
+> O \<algoritmo > biblioteca também usa a `#include <initializer_list>` instrução.
 
 ## <a name="remarks"></a>Comentários
 
@@ -40,7 +40,7 @@ Os algoritmos da Biblioteca Padrão do C++ ampliam as ações com suporte das op
 
 - O sufixo _copy indica que o algoritmo, além de manipular os valores dos elementos, também copia os valores modificados em um intervalo de destino. O algoritmo `reverse` inverte a ordem dos elementos dentro de um intervalo e o algoritmo `reverse_copy` também copia o resultado em um intervalo de destino.
 
-Os algoritmos da Biblioteca Padrão do C++ geralmente são classificados em grupos que indicam algo sobre sua finalidade ou seus requisitos. Eles incluem algoritmos modificadores que alteram o valor de elementos, em comparação com os algoritmos não modificadores. Os algoritmos mutantes alteram a ordem dos elementos, mas não os valores de seus elementos. A remoção dos algoritmos pode eliminar elementos de um intervalo ou uma cópia de um intervalo. Algoritmos de classificação reordenar os elementos em um intervalo de várias maneiras e algoritmos de intervalo classificado atuam somente em intervalos cujos elementos foram classificados de uma maneira específica.
+Os algoritmos da Biblioteca Padrão do C++ geralmente são classificados em grupos que indicam algo sobre sua finalidade ou seus requisitos. Eles incluem algoritmos modificadores que alteram o valor de elementos, em comparação com os algoritmos não modificadores. Os algoritmos mutantes alteram a ordem dos elementos, mas não os valores de seus elementos. A remoção dos algoritmos pode eliminar elementos de um intervalo ou uma cópia de um intervalo. Os algoritmos de classificação reordenam os elementos em um intervalo de várias maneiras e os algoritmos de intervalo classificados só atuam em intervalos cujos elementos foram classificados de uma maneira específica.
 
 Os algoritmos numéricos da Biblioteca Padrão do C++ que são fornecidos para processamento numérico têm seu próprio arquivo de cabeçalho [\<numeric>](../standard-library/numeric.md) e objetos de função e adaptadores de função são definidos no cabeçalho [\<functional>](../standard-library/functional.md). Os objetos de função que retornam valores boolianos são conhecidos como predicados. O predicado binário padrão é a comparação `operator<`. De modo geral, os elementos que estão sendo ordenados precisam ser menores que os comparáveis, de modo que, considerando dois elementos, possa ser determinado que, ou eles são equivalentes (no sentido de que nenhum deles é menor que o outro), ou que um é menor que o outro. Isso resulta em uma ordenação entre os elementos não equivalentes.
 
@@ -49,13 +49,13 @@ Os algoritmos numéricos da Biblioteca Padrão do C++ que são fornecidos para p
 |||
 |-|-|
 |[adjacent_find](../standard-library/algorithm-functions.md#adjacent_find)|Procura dois elementos adjacentes que sejam iguais ou atendam a uma condição especificada.|
-|[all_of](../standard-library/algorithm-functions.md#all_of)|Retorna **verdadeira** quando uma condição está presente em cada elemento no intervalo determinado.|
-|[any_of](../standard-library/algorithm-functions.md#any_of)|Retorna **verdadeira** quando uma condição está presente pelo menos uma vez no intervalo especificado de elementos.|
+|[all_of](../standard-library/algorithm-functions.md#all_of)|Retorna **true** quando uma condição está presente em cada elemento no intervalo especificado.|
+|[any_of](../standard-library/algorithm-functions.md#any_of)|Retorna **true** quando uma condição está presente pelo menos uma vez no intervalo de elementos especificado.|
 |[binary_search](../standard-library/algorithm-functions.md#binary_search)|Testa se há um elemento em um intervalo classificado que seja igual a um valor especificado ou equivalente a ele de modo especificado por um predicado binário.|
 |[clamp](../standard-library/algorithm-functions.md#clamp)||
 |[copy](../standard-library/algorithm-functions.md#copy)|Atribui os valores dos elementos de um intervalo de origem a um intervalo de destino, iterando pela sequência de elementos de origem e atribuindo-lhes novas posições em uma direção progressiva.|
 |[copy_backward](../standard-library/algorithm-functions.md#copy_backward)|Atribui os valores dos elementos de um intervalo de origem a um intervalo de destino, iterando pela sequência de elementos de origem e atribuindo-lhes novas posições em uma direção retroativa.|
-|[copy_if](../standard-library/algorithm-functions.md#copy_if)|Copiar todos os elementos em um determinado intervalo que testam **verdadeira** uma condição especificada|
+|[copy_if](../standard-library/algorithm-functions.md#copy_if)|Copiar todos os elementos em um determinado intervalo que o teste **verdadeiro** para uma condição especificada|
 |[copy_n](../standard-library/algorithm-functions.md#copy_n)|Copia um número especificado de elementos.|
 |[count](../standard-library/algorithm-functions.md#count)|Retorna o número de elementos em um intervalo cujos valores correspondem a um valor especificado.|
 |[count_if](../standard-library/algorithm-functions.md#count_if)|Retorna o número de elementos em um intervalo cujos valores correspondem a uma condição especificada.|
@@ -74,12 +74,12 @@ Os algoritmos numéricos da Biblioteca Padrão do C++ que são fornecidos para p
 |[generate_n](../standard-library/algorithm-functions.md#generate_n)|Atribui os valores gerados por um objeto de função a um número especificado de elementos em um intervalo e retorna para uma posição antes do último valor atribuído.|
 |[includes](../standard-library/algorithm-functions.md#includes)|Testa se um intervalo classificado contém todos os elementos contidos em um segundo intervalo classificado, em que o critério de equivalência ou ordenação entre elementos pode ser especificado por um predicado binário.|
 |[inplace_merge](../standard-library/algorithm-functions.md#inplace_merge)|Combina os elementos de dois intervalos classificados consecutivos em um único intervalo classificado, em que o critério de ordenação pode ser especificado por um predicado binário.|
-|[is_heap](../standard-library/algorithm-functions.md#is_heap)|Retorna **verdadeira** se os elementos no intervalo especificado formarem um heap.|
-|[is_heap_until](../standard-library/algorithm-functions.md#is_heap_until)|Retorna **verdadeira** se o intervalo especificado formar um heap até o último elemento.|
-|[is_partitioned](../standard-library/algorithm-functions.md#is_partitioned)|Retorna **verdadeira** se todos os elementos no intervalo determinado testar **verdadeiro** para uma condição vierem antes de quaisquer elementos que testarem **false**.|
+|[is_heap](../standard-library/algorithm-functions.md#is_heap)|Retorna **true** se os elementos no intervalo especificado formam um heap.|
+|[is_heap_until](../standard-library/algorithm-functions.md#is_heap_until)|Retorna **true** se o intervalo especificado forma um heap até o último elemento.|
+|[is_partitioned](../standard-library/algorithm-functions.md#is_partitioned)|Retorna **true** se todos os elementos no intervalo especificado que testam **true** para uma condição vierem antes de qualquer elemento que teste **false**.|
 |[is_permutation](../standard-library/algorithm-functions.md#is_permutation)|Determina se os elementos em determinado intervalo formam uma permutação válida.|
-|[is_sorted](../standard-library/algorithm-functions.md#is_sorted)|Retorna **verdadeira** se os elementos no intervalo especificado estiverem em ordem classificada.|
-|[is_sorted_until](../standard-library/algorithm-functions.md#is_sorted_until)|Retorna **verdadeira** se os elementos no intervalo especificado estiverem em ordem classificada.|
+|[is_sorted](../standard-library/algorithm-functions.md#is_sorted)|Retornará **true** se os elementos no intervalo especificado estiverem em ordem classificada.|
+|[is_sorted_until](../standard-library/algorithm-functions.md#is_sorted_until)|Retornará **true** se os elementos no intervalo especificado estiverem em ordem classificada.|
 |[iter_swap](../standard-library/algorithm-functions.md#iter_swap)|Troca dois valores referenciados por um par de iteradores especificados.|
 |[lexicographical_compare](../standard-library/algorithm-functions.md#lexicographical_compare)|Compara elemento por elemento entre duas sequências para determinar qual é o menor dos dois.|
 |[lower_bound](../standard-library/algorithm-functions.md#lower_bound)|Localiza a posição do primeiro elemento em um intervalo ordenado com um valor que é maior ou equivalente a um valor especificado, em que o critério de ordenação pode ser especificado por um predicado binário.|
@@ -95,12 +95,12 @@ Os algoritmos numéricos da Biblioteca Padrão do C++ que são fornecidos para p
 |[&lt;alg&gt; move](../standard-library/algorithm-functions.md#alg_move)|Move elementos associados a um intervalo especificado.|
 |[move_backward](../standard-library/algorithm-functions.md#move_backward)|Move os elementos de um iterador para outro. O movimento inicia com o último elemento em um intervalo especificado e termina com o primeiro elemento desse intervalo.|
 |[next_permutation](../standard-library/algorithm-functions.md#next_permutation)|Reordena os elementos em um intervalo para que a ordenação original seja substituída pela próxima permutação lexicograficamente maior, se ela existir, em que o sentido de próxima pode ser especificado com um predicado binário.|
-|[none_of](../standard-library/algorithm-functions.md#none_of)|Retorna **verdadeira** quando uma condição nunca é apresentada entre os elementos no intervalo determinado.|
+|[none_of](../standard-library/algorithm-functions.md#none_of)|Retorna **true** quando uma condição nunca está presente entre os elementos no intervalo especificado.|
 |[nth_element](../standard-library/algorithm-functions.md#nth_element)|Particiona um intervalo de elementos, localizando corretamente o *n*º elemento da sequência no intervalo para que todos os elementos anteriores sejam menores ou iguais a ele e todos os elementos posteriores na sequência sejam maiores ou iguais a ele.|
 |[partial_sort](../standard-library/algorithm-functions.md#partial_sort)|Organiza um número especificado de elementos menores em um intervalo em ordem não decrescente ou de acordo com um critério de ordenação especificado por um predicado binário.|
 |[partial_sort_copy](../standard-library/algorithm-functions.md#partial_sort_copy)|Copia elementos de um intervalo de origem em um intervalo de destino, em que os elementos de origem são ordenados por menor que ou outro predicado binário especificado.|
 |[partition](../standard-library/algorithm-functions.md#partition)|Classifica os elementos de um intervalo em dois conjuntos separados, com esses elementos atendendo a um predicado unário que precede aqueles que não o atendem.|
-|[partition_copy](../standard-library/algorithm-functions.md#partition_copy)|Copia elementos para os quais uma condição for **verdadeira** para um destino e para o qual é a condição **falso** para outro. Os elementos devem vir de um intervalo especificado.|
+|[partition_copy](../standard-library/algorithm-functions.md#partition_copy)|Copia os elementos para os quais uma condição é **verdadeira** para um destino e para o qual a condição é **falsa** para outra. Os elementos devem vir de um intervalo especificado.|
 |[partition_point](../standard-library/algorithm-functions.md#partition_point)|Retorna o primeiro elemento no intervalo fornecido que não atende à condição. Os elementos são armazenados para que aqueles que atendem à condição venham antes daqueles que não atendem.|
 |[pop_heap](../standard-library/algorithm-functions.md#pop_heap)|Remove o maior elemento da frente de um heap para a penúltima posição no intervalo e, em seguida, forma um novo heap com os elementos restantes.|
 |[prev_permutation](../standard-library/algorithm-functions.md#prev_permutation)|Reordena os elementos em um intervalo para que a ordenação original seja substituída pela próxima permutação lexicograficamente maior, se ela existir, em que o sentido de próxima pode ser especificado com um predicado binário.|
@@ -139,6 +139,6 @@ Os algoritmos numéricos da Biblioteca Padrão do C++ que são fornecidos para p
 
 ## <a name="see-also"></a>Consulte também
 
-[Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Referência da biblioteca padrão C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)\
+[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Referência da biblioteca padrão C++](../standard-library/cpp-standard-library-reference.md)

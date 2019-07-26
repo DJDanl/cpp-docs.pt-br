@@ -1,18 +1,18 @@
 ---
-title: Classe de is_aggregate
+title: Classe is_aggregate
 ms.date: 11/04/2016
 f1_keywords:
 - type_traits/std::is_aggregate
 helpviewer_keywords:
 - is_aggregate
-ms.openlocfilehash: 7d979d4e4019ada12b72fb563c0b969fffe2c12d
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 89749e2b4c0e6aaf00de074718cfb598333bc739
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68268978"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456700"
 ---
-# <a name="isaggregate-class"></a>Classe de is_aggregate
+# <a name="isaggregate-class"></a>Classe is_aggregate
 
 Testa se o tipo é um tipo de classe marcado como `aggregate`.
 
@@ -25,12 +25,12 @@ struct is_aggregate;
 
 ### <a name="parameters"></a>Parâmetros
 
-*T*<br/>
+*T*\
 O tipo a ser consultado.
 
 ## <a name="remarks"></a>Comentários
 
-Uma instância do predicado de tipo será verdadeira se o tipo *T* é um tipo de classe marcado `aggregate`, caso contrário, será falsa. Se *T* é um tipo de classe, ele deve ser um tipo completo.
+Uma instância do predicado de tipo se manterá true se o tipo *T* for `aggregate`um tipo de classe marcado, caso contrário, será false. Se *T* for um tipo de classe, ele deverá ser um tipo completo.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -40,4 +40,4 @@ Uma instância do predicado de tipo será verdadeira se o tipo *T* é um tipo de
 
 ## <a name="see-also"></a>Consulte também
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

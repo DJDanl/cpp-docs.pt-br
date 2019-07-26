@@ -12,12 +12,12 @@ helpviewer_keywords:
 - std::strstream [C++], rdbuf
 - std::strstream [C++], str
 ms.assetid: 63f3be31-9e36-42b1-9715-a474a5997e2a
-ms.openlocfilehash: 9494f7ee2508df1971d56c94b929a7212bedb254
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 53baa350121796d5198211e1fdb08f4341df6b80
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412287"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459098"
 ---
 # <a name="strstream-class"></a>Classe strstream
 
@@ -67,7 +67,7 @@ void freeze(bool _Freezeit = true);
 
 ### <a name="parameters"></a>Parâmetros
 
-*_Freezeit*<br/>
+*_Freezeit*\
 Um **bool** que indica se você deseja que o fluxo seja congelado.
 
 ### <a name="remarks"></a>Comentários
@@ -76,7 +76,7 @@ A função membro chama [rdbuf](#rdbuf) -> [freeze](../standard-library/strstrea
 
 ### <a name="example"></a>Exemplo
 
-Ver [Freeze](../standard-library/strstreambuf-class.md#freeze) para obter um exemplo que usa `freeze`.
+Consulte [strstreambuf:: Freeze](../standard-library/strstreambuf-class.md#freeze) para obter um exemplo que `freeze`usa.
 
 ## <a name="pcount"></a>  strstream::pcount
 
@@ -112,7 +112,7 @@ Um ponteiro para o objeto strstreambuf associado ao fluxo.
 
 ### <a name="remarks"></a>Comentários
 
-A função membro retorna o endereço do buffer de fluxo armazenado do tipo `pointer` à [strstreambuf](../standard-library/strstreambuf-class.md).
+A função membro retorna o endereço do buffer de fluxo armazenado do tipo `pointer` para [strstreambuf](../standard-library/strstreambuf-class.md).
 
 ### <a name="example"></a>Exemplo
 
@@ -136,7 +136,7 @@ A função membro retorna [rdbuf](#rdbuf) -> [str](../standard-library/strstream
 
 ### <a name="example"></a>Exemplo
 
-Ver [strstreambuf:: STR](../standard-library/strstreambuf-class.md#str) para obter um exemplo que usa `str`.
+Consulte [strstreambuf:: Str](../standard-library/strstreambuf-class.md#str) para obter um exemplo que `str`usa.
 
 ## <a name="strstream"></a>  strstream::strstream
 
@@ -152,26 +152,26 @@ strstream(char* ptr,
 
 ### <a name="parameters"></a>Parâmetros
 
-*count*<br/>
+*contar*\
 O tamanho do buffer.
 
-*_Mode*<br/>
+*_Mode*\
 O modo de entrada e saída do buffer. Consulte [ios_base::openmode](../standard-library/ios-base-class.md#openmode) para obter mais informações.
 
-*ptr*<br/>
+*PTR*\
 O buffer.
 
 ### <a name="remarks"></a>Comentários
 
-Ambos os construtores inicializam a classe base chamando [streambuf](../standard-library/streambuf-typedefs.md#streambuf)( **sb**), onde `sb` é o objeto armazenado da classe [strstreambuf](../standard-library/strstreambuf-class.md). O primeiro construtor também inicializa `sb` chamando [strstreambuf](../standard-library/strstreambuf-class.md#strstreambuf). O segundo construtor inicializa a classe base com uma de duas maneiras:
+Ambos os construtores inicializam a classe base chamando [streambuf](../standard-library/streambuf-typedefs.md#streambuf)( **SB**), em `sb` que é o objeto armazenado da classe [strstreambuf](../standard-library/strstreambuf-class.md). O primeiro construtor também é `sb` inicializado chamando [strstreambuf](../standard-library/strstreambuf-class.md#strstreambuf). O segundo construtor inicializa a classe base com uma de duas maneiras:
 
-- Se `_Mode`  &  **ios_base:: App**= = 0, em seguida, *ptr* deve designar o primeiro elemento de uma matriz de `count` elementos e o construtor chama `strstreambuf`( `ptr`, `count`, `ptr`).
+- Se `_Mode` `strstreambuf` `ptr` `count` `count` `ptr`  ios_base:: App = = 0, PTR deverá designar o primeiro elemento de uma matriz de elementos e o Construtor chamará (,,)  &  .
 
-- Caso contrário, *ptr* deve designar o primeiro elemento de uma matriz de elementos de contagem que contém uma cadeia de caracteres C cujo primeiro elemento é designado por *ptr*e o construtor chama `strstreambuf`( `ptr`, `count`, `ptr` + `strlen`( `ptr`) ).
+- Caso contrário *, PTR* deve designar o primeiro elemento de uma matriz de elementos de contagem que contém uma cadeia de caracteres C cujo primeiro elemento é designado por *PTR*e `strstreambuf`o construtor `count`chama `ptr` ( `ptr`,,  +  `strlen`( `ptr`) ).
 
 ## <a name="see-also"></a>Consulte também
 
-[iostream](../standard-library/istream-typedefs.md#iostream)<br/>
-[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Programação de iostream](../standard-library/iostream-programming.md)<br/>
-[Convenções de iostreams](../standard-library/iostreams-conventions.md)<br/>
+[iostream](../standard-library/istream-typedefs.md#iostream)\
+[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Programação de iostream](../standard-library/iostream-programming.md)\
+[Convenções de iostreams](../standard-library/iostreams-conventions.md)

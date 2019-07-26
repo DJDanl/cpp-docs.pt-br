@@ -5,16 +5,16 @@ f1_keywords:
 - <memory_resource>
 helpviewer_keywords:
 - memory_resource header
-ms.openlocfilehash: b5957412d2beff0dc709dc71a77834f13eeacb41
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: d4b25c6ee575191f1e17b0202d33298e2e9e67f0
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68269338"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451897"
 ---
 # <a name="ltmemoryresourcegt"></a>&lt;memory_resource&gt;
 
-Define o memory_resource de classe de modelo do contêiner e seus modelos de suporte.
+Define a classe de modelo de contêiner memory_resource e seus modelos de suporte.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -50,14 +50,14 @@ Define o memory_resource de classe de modelo do contêiner e seus modelos de sup
 
 |||
 |-|-|
-|[Classe de memory_resource](../standard-library/memory-resource-class.md)||
-|[Classe de monotonic_buffer_resource](../standard-library/monotonic-buffer-resource-class.md)||
-|[pool_options Struct](../standard-library/pool-options-structure.md)||
-|[Classe de synchronized_pool_resource](../standard-library/synchronized-pool-resource-class.md)||
-|[Classe de unsynchronized_pool_resource](../standard-library/unsynchronized-pool-resource-class.md)||
+|[Classe memory_resource](../standard-library/memory-resource-class.md)||
+|[Classe monotonic_buffer_resource](../standard-library/monotonic-buffer-resource-class.md)||
+|[Estrutura pool_options](../standard-library/pool-options-structure.md)||
+|[Classe synchronized_pool_resource](../standard-library/synchronized-pool-resource-class.md)||
+|[Classe unsynchronized_pool_resource](../standard-library/unsynchronized-pool-resource-class.md)||
 
 ## <a name="see-also"></a>Consulte também
 
-[Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Referência da biblioteca padrão C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)\
+[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Referência da biblioteca padrão C++](../standard-library/cpp-standard-library-reference.md)

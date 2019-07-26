@@ -4,16 +4,16 @@ ms.date: 04/18/2019
 helpviewer_keywords:
 - string_view header
 ms.assetid: a2fb9d00-d7ae-4170-bfea-2dc337aa37cf
-ms.openlocfilehash: 8952416cf37fc4d8d281d6ced9b8264495ec3799
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 47924c3d6bd1a2f45cdbac648f4f563c57ce8939
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64346974"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459111"
 ---
 # <a name="ltstringviewgt"></a>&lt;string_view&gt;
 
-Define o modelo de classe `basic_string_view` e relacionadas a tipos e operadores. (Requer a opção de compilador [/std: c + + 17](../build/reference/std-specify-language-standard-version.md) ou posterior.)
+Define o modelo `basic_string_view` de classe e os tipos e operadores relacionados. (Requer a opção de compilação [std: c++ 17](../build/reference/std-specify-language-standard-version.md) ou posterior.)
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -23,52 +23,52 @@ Define o modelo de classe `basic_string_view` e relacionadas a tipos e operadore
 
 ## <a name="remarks"></a>Comentários
 
-A família de string_view de especializações de modelo fornece uma maneira eficiente de passar um identificador somente leitura, à prova de exceções, não proprietário para os dados de caracteres de qualquer objeto de cadeia de caracteres semelhante com o primeiro elemento da sequência na posição zero. Um parâmetro de função do tipo `string_view` (que é um typedef para `basic_string_view<char>`) podem aceitar argumentos como `std::string`, **char\***, ou qualquer outra classe de tipo de cadeia de caracteres de caracteres estreitos para os quais implícito a conversão em `string_view` está definido. Da mesma forma, um parâmetro de `wstring_view`, `u16string_view` ou `u32string_view` pode aceitar qualquer tipo de cadeia de caracteres para o qual uma conversão implícita é definida. Para obter mais informações, consulte [basic_string_view classe](../standard-library/basic-string-view-class.md).
+A família string_view de especializações de modelo fornece uma maneira eficiente de passar um identificador não proprietário, com exceção segura e somente leitura para os dados de caractere de qualquer objeto como cadeia de caracteres com o primeiro elemento da sequência na posição zero. Um parâmetro de função do `string_view` tipo (que é um typedef `basic_string_view<char>`para) `std::string`pode aceitar argumentos como **Char\*** , ou qualquer outra classe semelhante à de cadeia de caracteres, para a `string_view`qualumaconversãoimplícitaé definido. Da mesma forma, um `wstring_view`parâmetro `u16string_view` de `u32string_view` ou pode aceitar qualquer tipo de cadeia de caracteres para o qual uma conversão implícita é definida. Para obter mais informações, consulte [classe basic_string_view](../standard-library/basic-string-view-class.md).
 
 ### <a name="typedefs"></a>Typedefs
 
 |Nome de tipo|Descrição|
 |-|-|
-|[string_view](../standard-library/string-view-typedefs.md#string_view)|Uma especialização do modelo de classe `basic_string_view` com elementos do tipo **char**.|
-|[wstring_view](../standard-library/string-view-typedefs.md#wstring_view)|Uma especialização do modelo de classe `basic_string_view` com elementos do tipo **wchar_t**.|
-|[u16string_view](../standard-library/string-view-typedefs.md#u16string_view)|Uma especialização do modelo de classe `basic_string_view` com elementos do tipo `char16_t`.|
-|[u32string_view](../standard-library/string-view-typedefs.md#u32string_view)|Uma especialização do modelo de classe `basic_string_view` com elementos do tipo `char32_t`.|
+|[string_view](../standard-library/string-view-typedefs.md#string_view)|Uma especialização do modelo `basic_string_view` de classe com elementos do tipo **Char**.|
+|[wstring_view](../standard-library/string-view-typedefs.md#wstring_view)|Uma especialização do modelo `basic_string_view` de classe com elementos do tipo **wchar_t**.|
+|[u16string_view](../standard-library/string-view-typedefs.md#u16string_view)|Uma especialização do modelo `basic_string_view` de classe com elementos do tipo. `char16_t`|
+|[u32string_view](../standard-library/string-view-typedefs.md#u32string_view)|Uma especialização do modelo `basic_string_view` de classe com elementos do tipo. `char32_t`|
 
 ### <a name="operators"></a>Operadores
 
-O \<string_view > operadores podem comparar `string_view` objetos em objetos de qualquer podem ser convertidas em tipos de cadeia de caracteres.
+Os \<operadores de > string_view podem `string_view` comparar objetos com objetos de qualquer tipo de cadeia de caracteres conversível.
 
 |Operador|Descrição|
 |-|-|
 |[operator!=](../standard-library/string-view-operators.md#op_neq)|Testa se o objeto à esquerda do operador é diferente do objeto à direita.|
 |[operator==](../standard-library/string-view-operators.md#op_eq_eq)|Testa se o objeto à esquerda do operador é igual ao objeto à direita.|
-|[operator<](../standard-library/string-view-operators.md#op_lt)|Testa se o objeto no lado esquerdo do operador é menor que o objeto no lado direito.|
+|[operator<](../standard-library/string-view-operators.md#op_lt)|Testa se o objeto no lado esquerdo do operador é menor do que o objeto no lado direito.|
 |[operator<=](../standard-library/string-view-operators.md#op_lt_eq)|Testa se o objeto à esquerda do operador é menor que ou igual ao objeto à direita.|
-|[operator<\<](../standard-library/string-view-operators.md#op_lt_lt)|Uma função de modelo que insere um `string_view` em um fluxo de saída.|
-|[operator>](../standard-library/string-view-operators.md#op_gt)|Testa se o objeto no lado esquerdo do operador é maior do que para o objeto no lado direito.|
+|[operator<\<](../standard-library/string-view-operators.md#op_lt_lt)|Uma função de modelo que insere `string_view` um em um fluxo de saída.|
+|[operator>](../standard-library/string-view-operators.md#op_gt)|Testa se o objeto no lado esquerdo do operador é maior que o objeto no lado direito.|
 |[operator>=](../standard-library/string-view-operators.md#op_gt_eq)|Testa se o objeto à esquerda do operador é maior que ou igual ao objeto à direita.|
 
 ### <a name="literals"></a>Literais
 
 |Operador|Descrição|
 |-|-|
-|[sv](../standard-library/string-view-operators.md#op_sv)|Constrói uma `string_view`, `wstring_view`, `u16string_view`, ou `u32string_view` dependendo do tipo de cadeia de caracteres literal ao qual ele é acrescentado.|
+|[sv](../standard-library/string-view-operators.md#op_sv)|Constrói um `string_view`, `wstring_view`, `u16string_view`ou dependendodotipodeliteraldecadeiadecaracteresaoqualeleéanexado.`u32string_view`|
 
 ### <a name="classes"></a>Classes
 
 |Classe|Descrição|
 |-|-|
-|[Classe basic_string_view](../standard-library/basic-string-view-class.md)|Um modelo de classe que fornece uma exibição somente leitura em uma sequência de objetos arbitrários do tipo caractere.|
+|[Classe basic_string_view](../standard-library/basic-string-view-class.md)|Um modelo de classe que fornece uma exibição somente leitura em uma sequência de objetos de tipo caractere arbitrários.|
 |[hash](string-view-hash.md)|Objeto de função que produz um valor de hash para um string_view.|
 
 ## <a name="requirements"></a>Requisitos
 
-- **Cabeçalho:** \<string_view >
+- **Cabeçalho:** \<> string_view
 
 - **Namespace:** std
 
-- **Opção de compilador:** /std: c + + 17 (ou posterior)
+- **Opção do compilador:** std: c++ 17 (ou posterior)
 
 ## <a name="see-also"></a>Consulte também
 
-[Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)<br/>
+[Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - deque header
 ms.assetid: 4521fe92-5a91-4853-9e9f-59600bf9e46f
-ms.openlocfilehash: 167bdc324a67d8b1379f279e8fcc363ee6b0fca2
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 145ce22091ea1a42619ad7b1fd25507c6315a9ec
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246729"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454491"
 ---
 # <a name="ltdequegt"></a>&lt;deque&gt;
 
@@ -22,7 +22,7 @@ Define o deque de classes de modelo do contêiner e diversos modelos de suporte.
 **Cabeçalho**: \<deque>
 
 > [!NOTE]
-> O \<deque > biblioteca também usa o `#include <initializer_list>` instrução.
+> A \<biblioteca de > deque também usa `#include <initializer_list>` a instrução.
 
 ## <a name="members"></a>Membros
 
@@ -51,6 +51,6 @@ Define o deque de classes de modelo do contêiner e diversos modelos de suporte.
 
 ## <a name="see-also"></a>Consulte também
 
-[Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Referência da biblioteca padrão C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)\
+[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Referência da biblioteca padrão C++](../standard-library/cpp-standard-library-reference.md)

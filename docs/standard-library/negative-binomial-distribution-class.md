@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::negative_binomial_distribution [C++], param_type
 - std::negative_binomial_distribution [C++], param_type
 ms.assetid: 7f5f0967-7fdd-4578-99d4-88f292b4fe9c
-ms.openlocfilehash: 8f6552d9f9b0b34b1cb721e726c95845210c8bb9
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 11e705629675903803f7230d540417846417cc77
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66449271"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456955"
 ---
 # <a name="negativebinomialdistribution-class"></a>Classe negative_binomial_distribution
 
@@ -71,19 +71,19 @@ public:
 
 ### <a name="parameters"></a>Parâmetros
 
-*IntType*<br/>
-O tipo de resultado do inteiro assume como padrão **int**. Para encontrar os tipos possíveis, consulte [\<random>](../standard-library/random.md).
+*IntType*\
+O tipo de resultado inteiro, o padrão é **int**. Para encontrar os tipos possíveis, consulte [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Comentários
 
-A classe de modelo descreve uma distribuição que produz valores de um integral especificado pelo usuário tipo ou tipo **int** caso nenhum seja fornecido, distribuído de acordo com a função de probabilidade discreta distribuição Binomial negativa. A tabela a seguir contém links para artigos sobre cada um dos membros.
+A classe de modelo descreve uma distribuição que produz valores de um tipo integral especificado pelo usuário ou o tipo **int** se nenhum for fornecido, distribuído de acordo com a função de probabilidade discreta de distribuição binomial negativa. A tabela a seguir contém links para artigos sobre cada um dos membros.
 
 ||||
 |-|-|-|
 |[negative_binomial_distribution](#negative_binomial_distribution)|`negative_binomial_distribution::k`|`negative_binomial_distribution::param`|
 |`negative_binomial_distribution::operator()`|`negative_binomial_distribution::p`|[param_type](#param_type)|
 
-Os membros da propriedade `k()` e `p()` retornar valores de parâmetro de distribuição atualmente armazenada *k* e *p* , respectivamente.
+Os membros `k()` de propriedade `p()` e retornam os valores de parâmetro de distribuição armazenados no momento, *k* e *p* , respectivamente.
 
 O membro da propriedade `param()` define ou retorna o pacote de parâmetros de distribuição armazenado `param_type`.
 
@@ -95,7 +95,7 @@ As funções membro `operator()` retornam o próximo valor gerado com base no me
 
 Para obter mais informações sobre as classes de distribuição e seus membros, consulte [\<random>](../standard-library/random.md).
 
-Para obter informações detalhadas sobre a função de probabilidade discreta distribuição binomial negativa, consulte o artigo da Wolfram MathWorld [distribuição Binomial negativa](https://go.microsoft.com/fwlink/p/?linkid=400516).
+Para obter informações detalhadas sobre a função de probabilidade discreta de distribuição binomial negativa, consulte o artigo Wolfram MathWorld [distribuição binomial negativa](https://go.microsoft.com/fwlink/p/?linkid=400516).
 
 ## <a name="example"></a>Exemplo
 
@@ -232,13 +232,13 @@ explicit negative_binomial_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parâmetros
 
-*k*<br/>
+*c*\
 O parâmetro de distribuição `k`.
 
-*p*<br/>
+*DTI*\
 O parâmetro de distribuição `p`.
 
-*parm*<br/>
+*Parm*\
 A estrutura do parâmetro usada para construir a distribuição.
 
 ### <a name="remarks"></a>Comentários
@@ -253,19 +253,19 @@ O segundo construtor cria um objeto cujos parâmetros armazenados são inicializ
 
 Armazena os parâmetros da distribuição.
 
-struct param_type { typedef negative_binomial_distribution`<`result_type> distribution_type; param_type(result_type k = 1, double p = 0.5); result_type k() const; double p() const;
+struct param_type {typedef negative_binomial_distribution`<`result_type > distribution_type; param_type (result_type k = 1, Double p = 0,5); result_type k () const; Double p () const;
 
    bool operator==(const param_type& right) const; bool operator!=(const param_type& right) const; };
 
 ### <a name="parameters"></a>Parâmetros
 
-*k*<br/>
+*c*\
 O parâmetro de distribuição `k`.
 
-*p*<br/>
+*DTI*\
 O parâmetro de distribuição `p`.
 
-*right*<br/>
+*Certo*\
 A estrutura `param_type` usada para comparar.
 
 ### <a name="remarks"></a>Comentários
@@ -276,4 +276,4 @@ Essa estrutura pode ser enviada ao construtor de classe de distribuição na ins
 
 ## <a name="see-also"></a>Consulte também
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

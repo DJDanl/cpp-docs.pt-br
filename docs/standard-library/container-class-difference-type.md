@@ -4,17 +4,17 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - difference_type typedef
 ms.assetid: fae52485-d424-484e-9856-13505cfe528c
-ms.openlocfilehash: 5cef7bc44c2339e4ef2771cac346443dd67f94aa
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: a62e5094a7994ac70df65f609a1822de9fd24b01
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221668"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457091"
 ---
 # <a name="container-classdifferencetype"></a>Classe de Contêiner::difference_type
 
 > [!NOTE]
-> Este tópico é no Microsoft C++ como um exemplo não funcional de contêineres usados na documentação do C++ biblioteca padrão. Para obter mais informações, consulte [Contêineres da biblioteca padrão C++](../standard-library/stl-containers.md).
+> Este tópico está na documentação da C++ Microsoft como um exemplo não funcional de contêineres usados na biblioteca C++ padrão. Para obter mais informações, consulte [Contêineres da biblioteca padrão C++](../standard-library/stl-containers.md).
 
 Descreve um objeto que pode representar a diferença entre os endereços de dois elementos na sequência controlada.
 
@@ -27,8 +27,8 @@ typedef T1 difference_type;
 
 ## <a name="remarks"></a>Comentários
 
-Ele é descrito aqui como um sinônimo para o tipo não especificado `T1` (normalmente `Alloc::difference_type`).
+Ele é descrito aqui como um sinônimo para o tipo `T1` não especificado (normalmente `Alloc::difference_type`).
 
 ## <a name="see-also"></a>Consulte também
 
-[Classe de contêiner de amostra](../standard-library/sample-container-class.md)<br/>
+[Classe de contêiner de amostra](../standard-library/sample-container-class.md)
