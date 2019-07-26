@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::packaged_task [C++], reset
 - std::packaged_task [C++], swap
 - std::packaged_task [C++], valid
-ms.openlocfilehash: e759b1bc8cb47c5c943f29545e3b03ee535f3df7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5bb04b84b723f239c338c02befa8cd3468cec3f2
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62370665"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450075"
 ---
 # <a name="packagedtask-class"></a>Classe packaged_task
 
@@ -67,7 +67,7 @@ class packaged_task;
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** \<futuro >
+**Cabeçalho:** \<> futuro
 
 **Namespace:** std
 
@@ -113,7 +113,7 @@ packaged_task& operator=(packaged_task&& Right);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Direita*<br/>
+*Certo*\
 Um objeto `packaged_task`.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -122,7 +122,7 @@ Um objeto `packaged_task`.
 
 ### <a name="remarks"></a>Comentários
 
-Após a operação *direita* não tem mais um estado assíncrono associado.
+Após a operação, o *direito* não terá mais um estado assíncrono associado.
 
 ## <a name="op_call"></a>  packaged_task::operator()
 
@@ -150,7 +150,7 @@ operator bool() const noexcept;
 
 ### <a name="return-value"></a>Valor de retorno
 
-**Verdadeiro** se o objeto tiver um estado assíncrono associado; caso contrário, **falso**.
+**true** se o objeto tiver um estado assíncrono associado; caso contrário, **false**.
 
 ## <a name="packaged_task"></a>  Construtor packaged_task::packaged_task
 
@@ -169,24 +169,24 @@ template <class Fn, class Alloc>
 
 ### <a name="parameters"></a>Parâmetros
 
-*Direita*<br/>
+*Certo*\
 Um objeto `packaged_task`.
 
-*alloc*<br/>
+*alocação*\
 Um alocador de memória. Para obter mais informações, consulte [\<allocators>](../standard-library/allocators-header.md).
 
-*fn*<br/>
+*FN*\
 Um objeto de função.
 
 ### <a name="remarks"></a>Comentários
 
 O primeiro construtor cria um objeto `packaged_task` que não tem nenhum *estado assíncrono associado*.
 
-O segundo construtor cria um `packaged_task` do objeto e transfere o estado assíncrono associado de *direita*. Após a operação *direita* não tem mais um estado assíncrono associado.
+O segundo construtor constrói um `packaged_task` objeto e transfere o estado assíncrono associado da *direita*. Após a operação, o *direito* não terá mais um estado assíncrono associado.
 
-O terceiro construtor cria um `packaged_task` que tem uma cópia do objeto *fn* armazenados em seu estado assíncrono associado.
+O terceiro construtor constrói um `packaged_task` objeto que tem uma cópia de *FN* armazenado em seu estado assíncrono associado.
 
-O quarto construtor cria um `packaged_task` que tem uma cópia do objeto *fn* armazenadas em seu estado assíncrono associado e usa `alloc` para alocação de memória.
+O quarto construtor constrói um `packaged_task` objeto que tem uma cópia de *FN* armazenado em seu estado assíncrono associado e usa `alloc` para alocação de memória.
 
 ## <a name="dtorpackaged_task_destructor"></a>  Destruidor packaged_task::~packaged_task
 
@@ -222,7 +222,7 @@ void swap(packaged_task& Right) noexcept;
 
 ### <a name="parameters"></a>Parâmetros
 
-*Direita*<br/>
+*Certo*\
 Um objeto `packaged_task`.
 
 ## <a name="valid"></a>  packaged_task::valid
@@ -235,9 +235,9 @@ bool valid() const;
 
 ### <a name="return-value"></a>Valor de retorno
 
-**Verdadeiro** se o objeto tiver um estado assíncrono associado; caso contrário, **falso**.
+**true** se o objeto tiver um estado assíncrono associado; caso contrário, **false**.
 
 ## <a name="see-also"></a>Consulte também
 
-[Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<future>](../standard-library/future.md)<br/>
+[Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)\
+[\<future>](../standard-library/future.md)

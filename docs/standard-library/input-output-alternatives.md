@@ -1,19 +1,19 @@
 ---
-title: Alternativas de entrada e saída
+title: Alternativas de saída de entrada
 ms.date: 05/07/2019
 helpviewer_keywords:
 - I/O [C++], alternatives
 ms.assetid: 9f8401c7-d90d-4285-8918-63573df74a80
-ms.openlocfilehash: 5fb98714a96dedf725ea17332d7c1627e3390896
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: b46ff242fc263be5069eb691dd0ea9e8fb00b0f9
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221393"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455297"
 ---
 # <a name="inputoutput-alternatives"></a>Alternativas de Entrada/Saída
 
-O Microsoft C++ compilador fornece várias alternativas para programação de e/s:
+O compilador C++ da Microsoft fornece várias alternativas para a programação de e/s:
 
 - E/S não armazenada em buffer, direta, da biblioteca em tempo de execução C.
 
@@ -31,4 +31,4 @@ As classes iostream são úteis para E/S de texto formatado, armazenada em buffe
 
 ## <a name="see-also"></a>Consulte também
 
-[O que é um fluxo](../standard-library/what-a-stream-is.md)<br/>
+[O que é um fluxo](../standard-library/what-a-stream-is.md)
