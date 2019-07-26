@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::basic_fstream [C++], rdbuf
 - std::basic_fstream [C++], swap
 ms.assetid: 8473817e-42a4-430b-82b8-b476c86bcf8a
-ms.openlocfilehash: 894ac0bf7703bf68c9125d11023dbc32cfbb5941
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8d26d0fe0e4e4152cf05476f546b753650209dfe
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400665"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459594"
 ---
 # <a name="basicfstream-class"></a>Classe basic_fstream
 
@@ -36,10 +36,10 @@ class basic_fstream : public basic_iostream<Elem, Tr>
 
 ### <a name="parameters"></a>Parâmetros
 
-*Elem*<br/>
+*Elem*\
 O elemento básico no buffer de arquivo.
 
-*Tr*<br/>
+*TR*\
 As características do elemento básico no buffer de arquivo (geralmente `char_traits` <  `Elem`>).
 
 ## <a name="remarks"></a>Comentários
@@ -127,20 +127,20 @@ basic_fstream(basic_fstream&& right);
 
 ### <a name="parameters"></a>Parâmetros
 
-*_Filename*<br/>
+*_Filename*\
 O nome do arquivo a ser aberto.
 
-*_Mode*<br/>
+*_Mode*\
 Uma das enumerações em [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
-*_Prot*<br/>
-Proteção, equivalente de abertura de arquivo padrão a *shflag* parâmetro na [fsopen, wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md).
+*_Prot*\
+O arquivo padrão que abre a proteção, equivalente ao parâmetro *shflag* em [_fsopen, _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md).
 
 ### <a name="remarks"></a>Comentários
 
-O primeiro construtor inicializa a classe base chamando [basic_iostream](../standard-library/basic-iostream-class.md)(`sb`), onde `sb` é o objeto armazenado da classe [basic_filebuf](../standard-library/basic-filebuf-class.md) \< **Elem**, **Tr**>. Também inicializa `sb` chamando `basic_filebuf` \< **Elem**, **Tr**>.
+O primeiro construtor inicializa a classe base chamando [basic_iostream](../standard-library/basic-iostream-class.md)(`sb`), em que `sb` é o objeto armazenado da classe [basic_filebuf](../standard-library/basic-filebuf-class.md) \< **elem**, **TR**>. Ele também é `sb` inicializado `basic_filebuf` chamando \< **elem**, **TR**>.
 
-O segundo e o terceiro construtores inicializam a classe base chamando `basic_iostream`( **sb**). Também inicializa `sb` chamando `basic_filebuf` \< **Elem**, **Tr**> e então **SB.**[abrir](../standard-library/basic-filebuf-class.md#open)( _ *Filename*, `_Mode`). Se a última função retornará um ponteiro nulo, o construtor chamará [setstate](../standard-library/basic-ios-class.md#setstate)(`failbit`).
+O segundo e o terceiro construtores inicializam a classe base chamando `basic_iostream`( **sb**). Ele também é `sb` inicializado `basic_filebuf` \< chamando **elem**, **TR**> e, em seguida, **SB.** [Open](../standard-library/basic-filebuf-class.md#open)( `_Mode`_ *filename*,). Se a última função retornar um ponteiro NULL, o Construtor chamará SetState ( [](../standard-library/basic-ios-class.md#setstate)`failbit`).
 
 O quarto construtor inicializa o objeto com o conteúdo de `right`, tratados como uma referência rvalue.
 
@@ -158,7 +158,7 @@ void close();
 
 ### <a name="remarks"></a>Comentários
 
-A função membro chama [rdbuf](#rdbuf)**->** [close](../standard-library/basic-filebuf-class.md#close).
+A função membro chama [rdbuf](#rdbuf) **->** [close](../standard-library/basic-filebuf-class.md#close).
 
 ### <a name="example"></a>Exemplo
 
@@ -178,7 +178,7 @@ bool is_open() const;
 
 ### <a name="remarks"></a>Comentários
 
-A função membro retorna [rdbuf](#rdbuf)**->**[is_open](../standard-library/basic-filebuf-class.md#is_open).
+A função membro retorna [rdbuf](#rdbuf) **->** [is_open](../standard-library/basic-filebuf-class.md#is_open).
 
 ### <a name="example"></a>Exemplo
 
@@ -210,22 +210,22 @@ void open(
 
 ### <a name="parameters"></a>Parâmetros
 
-*_Filename*<br/>
+*_Filename*\
 O nome do arquivo a ser aberto.
 
-*_Mode*<br/>
+*_Mode*\
 Uma das enumerações em [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
-*_Prot*<br/>
-Proteção, equivalente de abertura de arquivo padrão a *shflag* parâmetro na [fsopen, wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md).
+*_Prot*\
+O arquivo padrão que abre a proteção, equivalente ao parâmetro *shflag* em [_fsopen, _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md).
 
 ### <a name="remarks"></a>Comentários
 
-A função membro chama [rdbuf](#rdbuf) **->** [open](../standard-library/basic-filebuf-class.md#open)(_ *Filename*, `_Mode`). Se essa função retorna um ponteiro nulo, a função chamará [setstate](../standard-library/basic-ios-class.md#setstate)( `failbit`).
+A função membro chama [rdbuf](#rdbuf) **->** [open](../standard-library/basic-filebuf-class.md#open)(_ *Filename*, `_Mode`). Se essa função retornar um ponteiro NULL, a função chamará SetState ( [](../standard-library/basic-ios-class.md#setstate) `failbit`).
 
 ### <a name="example"></a>Exemplo
 
-Ver [basic_filebuf:: Open](../standard-library/basic-filebuf-class.md#open) para obter um exemplo de como usar `open`.
+Consulte [basic_filebuf:: Open](../standard-library/basic-filebuf-class.md#open) para obter um exemplo de como usar `open`.
 
 ## <a name="op_eq"></a>  basic_fstream::operator=
 
@@ -237,7 +237,7 @@ basic_fstream& operator=(basic_fstream&& right);
 
 ### <a name="parameters"></a>Parâmetros
 
-*right*<br/>
+*Certo*\
 Uma referência lvalue a um objeto `basic_fstream`.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -246,7 +246,7 @@ Retorna `*this`.
 
 ### <a name="remarks"></a>Comentários
 
-O operador membro substitui o conteúdo do objeto usando o conteúdo de *certa*, tratado como uma referência de rvalue.
+O operador member substitui o conteúdo do objeto usando o conteúdo de *Right*, tratado como uma referência rvalue.
 
 ## <a name="rdbuf"></a>  basic_fstream::rdbuf
 
@@ -274,15 +274,15 @@ void swap(basic_fstream& right);
 
 ### <a name="parameters"></a>Parâmetros
 
-*right*<br/>
+*Certo*\
 Uma referência `lvalue` a um objeto `basic_fstream`.
 
 ### <a name="remarks"></a>Comentários
 
-A função membro troca o conteúdo deste objeto e o conteúdo do *certa*.
+A função membro troca o conteúdo desse objeto e o conteúdo *à direita*.
 
 ## <a name="see-also"></a>Consulte também
 
-[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Programação de iostream](../standard-library/iostream-programming.md)<br/>
-[Convenções de iostreams](../standard-library/iostreams-conventions.md)<br/>
+[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Programação de iostream](../standard-library/iostream-programming.md)\
+[Convenções de iostreams](../standard-library/iostreams-conventions.md)
