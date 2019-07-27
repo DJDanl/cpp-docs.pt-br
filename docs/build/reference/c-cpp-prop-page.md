@@ -3,14 +3,12 @@ title: Propriedades deC++ projeto/C (Visual Studio)
 ms.date: 7/18/2019
 ms.topic: article
 ms.assetid: 16375038-4917-4bd0-9a2a-26343c1708b7
-author: mikeblome
-ms.author: mblome
-ms.openlocfilehash: bf457366f1818593e937d4c9e95651f48db64528
-ms.sourcegitcommit: 0867d648e0955ebad7260b5fbebfd6cd4d58f3c7
+ms.openlocfilehash: 91edf30ef0e5f38088727c0280d2edf07cdebfa5
+ms.sourcegitcommit: 7b039b5f32f6c59be6c6bb1cffafd69c3bfadd35
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68342257"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68537567"
 ---
 # <a name="cc-property-pages"></a>Páginas CC++ /Property
 
@@ -436,7 +434,7 @@ Selecione a Convenção de chamada padrão para seu aplicativo (pode ser substit
 **Durante**
 
 - **__cdecl** -especifica a Convenção de chamada __cdecl para todas as C++ funções, exceto funções de membro e funções marcadas como __stdcall ou __fastcall.
-- **__fastcall** -especifica a Convenção de chamada __fastcall para todas as C++ funções, exceto assinaladas do membro e funções marcadas __cdecl ou __stdcall. Todas as funções __fastcall devem ter protótipos.
+- **__fastcall** -especifica a Convenção de chamada __fastcall para todas as C++ funções, exceto funções de membro e funções marcadas como __cdecl ou __stdcall. Todas as funções __fastcall devem ter protótipos.
 - **__stdcall** -especifica a Convenção de chamada __stdcall para todas as C++ funções, exceto funções de membro e funções marcadas como __cdecl ou __fastcall. Todas as funções __stdcall devem ter protótipos.
 - **__vectorcall** -especifica a Convenção de chamada __vectorcall para todas as C++ funções, exceto funções de membro e funções marcadas como __cdecl, __fastcall ou __stdcall. Todas as funções __vectorcall devem ter protótipos.
 
@@ -482,7 +480,7 @@ Especifica como erros de ferramenta interna devem ser relatados de volta à Micr
 
 - Não **Enviar relatório** -relatórios sobre erros de compilador interno não serão coletados ou enviados à Microsoft.
 - **Avisar imediatamente** -solicita que você envie um relatório quando recebe um erro de compilador interno.
-- **Fila para o próximo logon** – enfileira o relatório de erros. Quando você faz logon com privilégios de administrador, uma janela pop-up é exibida e permite relatar falhas desde a última vez que você fez logon (não será solicitado que você envie relatórios para falhas mais de uma vez a cada três dias). fila é o padrão ao compilar um aplicativo na linha de comando.
+- **Fila para o próximo logon** – enfileira o relatório de erros. Quando você entra com privilégios de administrador, uma janela pop-up é exibida e permite relatar quaisquer falhas desde a última vez que você fez logon (não será solicitado que você envie relatórios para falhas mais de uma vez a cada três dias). fila é o padrão ao compilar um aplicativo na linha de comando.
 - **Enviar automaticamente** – envia automaticamente relatórios de erros de compilador interno para a Microsoft. Para habilitar essa opção, primeiro você deve concordar com a política de coleta de dados do Microsoft% 27s. Na primeira vez que você especificar/errorReport: send em um computador, uma mensagem do compilador fará referência a um site que contém a política de coleta de dados do Microsoft% 27s.
 
 ### <a name="treat-specific-warnings-as-errors"></a>Tratar avisos específicos como erros
