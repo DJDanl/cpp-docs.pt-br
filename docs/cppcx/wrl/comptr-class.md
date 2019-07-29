@@ -1,6 +1,6 @@
 ---
 title: Classe ComPtr
-ms.date: 10/01/2018
+ms.date: 07/26/2019
 ms.topic: reference
 f1_keywords:
 - client/Microsoft::WRL::ComPtr
@@ -51,16 +51,16 @@ helpviewer_keywords:
 - Microsoft::WRL::ComPtr::Swap method
 - Microsoft::WRL::ComPtr::~ComPtr, destructor
 ms.assetid: a6551902-6819-478a-8df7-b6f312ab1fb0
-ms.openlocfilehash: 9e5b2419f070ead17e72b1642f510f74bad8260e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 889b722c91fd56613c5902eb4ce6439763a49bd9
+ms.sourcegitcommit: 720b74dddb1cdf4e570d55103158304ee1df81f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398674"
+ms.lasthandoff: 07/29/2019
+ms.locfileid: "68606492"
 ---
 # <a name="comptr-class"></a>Classe ComPtr
 
-Cria uma *ponteiro inteligente* tipo que representa a interface especificada pelo parâmetro de modelo. `ComPtr` automaticamente mantém uma contagem de referência para o ponteiro de interface subjacente e libera a interface quando a contagem de referência chega a zero.
+Cria um tipo de *ponteiro inteligente* que representa a interface especificada pelo parâmetro de modelo. `ComPtr`mantém automaticamente uma contagem de referência para o ponteiro de interface subjacente e libera a interface quando a contagem de referência chega a zero.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -78,13 +78,13 @@ friend class ComPtr;
 A interface que o `ComPtr` representa.
 
 *U*<br/>
-Uma classe à qual atual `ComPtr` é um amigo. (O modelo que usa esse parâmetro é protegido).
+Uma classe à qual o atual `ComPtr` é um amigo. (O modelo que usa esse parâmetro é protegido.)
 
 ## <a name="remarks"></a>Comentários
 
-`ComPtr<>` declara um tipo que representa o ponteiro de interface subjacente. Use `ComPtr<>` para declarar uma variável e, em seguida, use o operador de acesso de membro de seta (`->`) para acessar uma função de membro de interface.
+`ComPtr<>`declara um tipo que representa o ponteiro de interface subjacente. Use `ComPtr<>` para declarar uma variável e, em seguida, use a seta member-`->`Access Operator () para acessar uma função de membro de interface.
 
-Para obter mais informações sobre ponteiros inteligentes, consulte a subseção "Ponteiros inteligentes COM" a [práticas recomendadas de codificação COM](/windows/desktop/LearnWin32/com-coding-practices) tópico na biblioteca MSDN.
+Para obter mais informações sobre os apontadores inteligentes, consulte a subseção "ponteiros inteligentes COM" do tópico [práticas de codificação com](/windows/desktop/LearnWin32/com-coding-practices) na biblioteca MSDN.
 
 ## <a name="members"></a>Membros
 
@@ -92,54 +92,54 @@ Para obter mais informações sobre ponteiros inteligentes, consulte a subseçã
 
 Nome            | Descrição
 --------------- | ---------------------------------------------------------------
-`InterfaceType` | Um sinônimo para o tipo especificado o *T* parâmetro de modelo.
+`InterfaceType` | Um sinônimo para o tipo especificado pelo parâmetro *T* template.
 
 ### <a name="public-constructors"></a>Construtores públicos
 
 Nome                             | Descrição
 -------------------------------- | --------------------------------------------------------------------------------------------------------------------
-[ComPtr::ComPtr](#comptr)        | Inicializa uma nova instância do `ComPtr` classe. Sobrecargas fornecem construtores padrão, copiar, mover e conversão.
-[ComPtr::~ComPtr](#tilde-comptr) | Realiza o desligamento de uma instância de `ComPtr`.
+[ComPtr::ComPtr](#comptr)        | Intializes uma nova instância da `ComPtr` classe. Sobrecargas fornecem construtores padrão, copiar, mover e conversão.
+[ComPtr:: ~ ComPtr](#tilde-comptr) | Desinicializa uma instância do `ComPtr`.
 
 ### <a name="public-methods"></a>Métodos públicos
 
 Nome                                                      | Descrição
 --------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-[ComPtr::As](#as)                                         | Retorna um `ComPtr` objeto que representa a interface identificada pelo parâmetro de modelo especificado.
-[ComPtr::AsIID](#asiid)                                   | Retorna um `ComPtr` objeto que representa a interface identificada pela ID da interface especificada.
-[ComPtr::AsWeak](#asweak)                                 | Recupera uma referência fraca ao objeto atual.
-[ComPtr::Attach](#attach)                                 | Associa isso `ComPtr` com o tipo de interface especificado pelo parâmetro de tipo de modelo atual.
-[ComPtr::CopyTo](#copyto)                                 | Copia a interface atual ou especificada associada a este `ComPtr` para o ponteiro de saída especificado.
+[ComPtr:: as](#as)                                         | Retorna um `ComPtr` objeto que representa a interface identificada pelo parâmetro de modelo especificado.
+[ComPtr::AsIID](#asiid)                                   | Retorna um `ComPtr` objeto que representa a interface identificada pela ID de interface especificada.
+[ComPtr:: asfraca](#asweak)                                 | Recupera uma referência fraca para o objeto atual.
+[ComPtr:: Attach](#attach)                                 | Associa isso `ComPtr` ao tipo de interface especificado pelo parâmetro de tipo de modelo atual.
+[ComPtr::CopyTo](#copyto)                                 | Copia a interface atual ou especificada associada a isso `ComPtr` para o ponteiro de saída especificado.
 [ComPtr::Detach](#detach)                                 | Desassocia isso `ComPtr` da interface que ele representa.
-[ComPtr::Get](#get)                                       | Recupera um ponteiro para a interface que está associado a este `ComPtr`.
-[ComPtr::GetAddressOf](#getaddressof)                     | Recupera o endereço do [PTR _](#ptr) membro de dados, que contém um ponteiro para a interface representado por este `ComPtr`.
-[ComPtr::ReleaseAndGetAddressOf](#releaseandgetaddressof) | Libera a interface associada a este `ComPtr` e, em seguida, recupera o endereço do [PTR _](#ptr) membro de dados, que contém um ponteiro para a interface que foi lançado.
-[ComPtr::Reset](#reset)                                   | Libera todas as referências para o ponteiro para a interface que está associado a este `ComPtr`.
-[ComPtr::Swap](#swap)                                     | Troca a interface gerenciada pelo atual `ComPtr` com a interface gerenciada pelo especificado `ComPtr`.
+[ComPtr:: Get](#get)                                       | Recupera um ponteiro para a interface que está associada a isso `ComPtr`.
+[ComPtr::GetAddressOf](#getaddressof)                     | Recupera o endereço do membro de dados [ptr_](#ptr) , que contém um ponteiro para a interface representada por isso `ComPtr`.
+[ComPtr::ReleaseAndGetAddressOf](#releaseandgetaddressof) | Libera a interface associada a essa `ComPtr` e, em seguida, recupera o endereço do membro de dados [ptr_](#ptr) , que contém um ponteiro para a interface que foi lançada.
+[ComPtr::Reset](#reset)                                   | Libera Todas as referências para o ponteiro para a interface que está associada a `ComPtr`isso.
+[ComPtr:: swap](#swap)                                     | Troca a interface gerenciada pelo atual `ComPtr` com a interface gerenciada pelo especificado. `ComPtr`
 
 ### <a name="protected-methods"></a>Métodos Protegidos
 
 Nome                                        | Descrição
 ------------------------------------------- | --------------------------------------------------------------------------------
-[ComPtr::InternalAddRef](#internaladdref)   | Incrementa a contagem de referência da interface associada a este `ComPtr`.
-[ComPtr::InternalRelease](#internalrelease) | Executa uma operação de lançamento COM na interface associado a este `ComPtr`.
+[ComPtr::InternalAddRef](#internaladdref)   | Incrementa a contagem de referência da interface associada a isso `ComPtr`.
+[ComPtr:: InternalRelease](#internalrelease) | Executa uma operação de liberação COM na interface associada a isso `ComPtr`.
 
 ### <a name="public-operators"></a>Operadores públicos
 
 Nome                                                                                           | Descrição
 ---------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------
-[ComPtr::operator&](#operator-ampersand)                                                       | Recupera o endereço da atual `ComPtr`.
+[Operador ComPtr:: operator &](#operator-ampersand)                                                       | Recupera o endereço do atual `ComPtr`.
 [ComPtr::operator->](#operator-arrow)                                                          | Recupera um ponteiro para o tipo especificado pelo parâmetro de modelo atual.
-[ComPtr::operator=](#operator-assign)                                                          | Atribui um valor para a atual `ComPtr`.
+[ComPtr::operator=](#operator-assign)                                                          | Atribui um valor ao atual `ComPtr`.
 [ComPtr::operator==](#operator-equality)                                                       | Indica se dois objetos `ComPtr` são iguais.
 [ComPtr::operator!=](#operator-inequality)                                                     | Indica se dois objetos `ComPtr` não são iguais.
-[Comptr:: Operator booltype](#operator-microsoft-wrl-details-booltype) | Indica se um `ComPtr` está gerenciando o tempo de vida do objeto de uma interface.
+[ComPtr:: Operator Microsoft:: WRL::D etalhes:: Booltype](#operator-microsoft-wrl-details-booltype) | Indica se um `ComPtr` está gerenciando o tempo de vida do objeto de uma interface.
 
 ### <a name="protected-data-members"></a>Membros de dados protegidos
 
 Nome                 | Descrição
 -------------------- | ------------------------------------------------------------------------------------------
-[ComPtr::ptr_](#ptr) | Contém um ponteiro para a interface que está associado e gerenciada por esse `ComPtr`.
+[ComPtr::ptr_](#ptr) | Contém um ponteiro para a interface que está associada e gerenciada por isso `ComPtr`.
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -147,19 +147,19 @@ Nome                 | Descrição
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** client.h
+**Cabeçalho:** Client. h
 
 **Namespace:** Microsoft::WRL
 
-## <a name="tilde-comptr"></a>ComPtr::~ComPtr
+## <a name="tilde-comptr"></a>ComPtr:: ~ ComPtr
 
-Realiza o desligamento de uma instância de `ComPtr`.
+Desinicializa uma instância do `ComPtr`.
 
 ```cpp
 WRL_NOTHROW ~ComPtr();
 ```
 
-## <a name="as"></a>ComPtr::As
+## <a name="as"></a>ComPtr:: as
 
 Retorna um `ComPtr` objeto que representa a interface identificada pelo parâmetro de modelo especificado.
 
@@ -178,22 +178,22 @@ HRESULT As(
 ### <a name="parameters"></a>Parâmetros
 
 *U*<br/>
-A interface a ser representado pelo parâmetro *p*.
+A interface a ser representada pelo parâmetro *p*.
 
 *p*<br/>
-Um `ComPtr` objeto que representa a interface especificada pelo parâmetro *U*. Parâmetro *p* não deve se referir a atual `ComPtr` objeto.
+Um `ComPtr` objeto que representa a interface especificada pelo parâmetro *U*. O parâmetro *p* não deve se referir `ComPtr` ao objeto atual.
 
 ### <a name="remarks"></a>Comentários
 
-O primeiro modelo é a forma que você deve usar em seu código. O segundo modelo é uma especialização de auxiliar interno, que dá suporte a recursos da linguagem C++, como o [automática](../../cpp/auto-cpp.md) palavra-chave de dedução de tipo.
+O primeiro modelo é o formulário que você deve usar em seu código. O segundo modelo é uma especialização interna e auxiliar que C++ dá suporte a recursos de idioma, como a palavra-chave auto-dedução de tipo [automático](../../cpp/auto-cpp.md) .
 
 ### <a name="return-value"></a>Valor de retorno
 
-S_OK se bem-sucedido; Caso contrário, um HRESULT que indica o erro.
+S_OK se for bem-sucedido; caso contrário, um HRESULT que indica o erro.
 
 ## <a name="asiid"></a>ComPtr::AsIID
 
-Retorna um `ComPtr` objeto que representa a interface identificada pela ID da interface especificada.
+Retorna um `ComPtr` objeto que representa a interface identificada pela ID de interface especificada.
 
 ```cpp
 WRL_NOTHROW HRESULT AsIID(
@@ -208,15 +208,15 @@ WRL_NOTHROW HRESULT AsIID(
 Uma ID de interface.
 
 *p*<br/>
-Se o objeto tem uma interface cuja ID é igual a *riid*, um ponteiro indireto duplamente para a interface especificada pelo *riid* parâmetro; caso contrário, um ponteiro para `IUnknown`.
+Se o objeto tiver uma interface cuja ID é igual a *riid*, um ponteiro de indireto duplo para a interface especificado pelo parâmetro *riid* ; caso contrário, um ponteiro `IUnknown`para.
 
 ### <a name="return-value"></a>Valor de retorno
 
-S_OK se bem-sucedido; Caso contrário, um HRESULT que indica o erro.
+S_OK se for bem-sucedido; caso contrário, um HRESULT que indica o erro.
 
-## <a name="asweak"></a>ComPtr::AsWeak
+## <a name="asweak"></a>ComPtr:: asfraca
 
-Recupera uma referência fraca ao objeto atual.
+Recupera uma referência fraca para o objeto atual.
 
 ```cpp
 HRESULT AsWeak(
@@ -227,15 +227,15 @@ HRESULT AsWeak(
 ### <a name="parameters"></a>Parâmetros
 
 *pWeakRef*<br/>
-Quando essa operação for concluída, um ponteiro para um objeto de referência fraca.
+Quando essa operação é concluída, um ponteiro para um objeto de referência fraca.
 
 ### <a name="return-value"></a>Valor de retorno
 
-S_OK se bem-sucedido; Caso contrário, um HRESULT que indica o erro.
+S_OK se for bem-sucedido; caso contrário, um HRESULT que indica o erro.
 
-## <a name="attach"></a>ComPtr::Attach
+## <a name="attach"></a>ComPtr:: Attach
 
-Associa isso `ComPtr` com o tipo de interface especificado pelo parâmetro de tipo de modelo atual.
+Associa isso `ComPtr` ao tipo de interface especificado pelo parâmetro de tipo de modelo atual.
 
 ```cpp
 void Attach(
@@ -248,43 +248,46 @@ void Attach(
 *other*<br/>
 Um tipo de interface.
 
-## <a name="comptr"></a>ComPtr::ComPtr
+## <a name="comptr"></a>ComPtr:: ComPtr
 
-Inicializa uma nova instância do `ComPtr` classe. Sobrecargas fornecem construtores padrão, copiar, mover e conversão.
+Intializes uma nova instância da `ComPtr` classe. Sobrecargas fornecem construtores padrão, copiar, mover e conversão.
 
 ```cpp
 WRL_NOTHROW ComPtr();
+
 WRL_NOTHROW ComPtr(
    decltype(__nullptr)
 );
+
 template<class U>
 WRL_NOTHROW ComPtr(
    _In_opt_ U *other
 );
+
 WRL_NOTHROW ComPtr(
    const ComPtr& other
 );
+
 template<class U>
 WRL_NOTHROW ComPtr(
    const ComPtr<U> &other,
-   typename ENABLE_IF<__is_convertible_to(U*,
-   T*),
-   void *>;
+   typename ENABLE_IF<__is_convertible_to(U*, T*), void *>
+);
+
 WRL_NOTHROW ComPtr(
    _Inout_ ComPtr &&other
 );
+
 template<class U>
 WRL_NOTHROW ComPtr(
-   _Inout_ ComPtr<U>&& other,
-   typename ENABLE_IF<__is_convertible_to(U*,
-   T*),
-   void *>;
+   _Inout_ ComPtr<U>&& other, typename ENABLE_IF<__is_convertible_to(U*, T*), void *>
+);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
 *U*<br/>
-O tipo dos *outros* parâmetro.
+O tipo do *outro* parâmetro.
 
 *other*<br/>
 Um objeto do tipo *U*.
@@ -293,17 +296,17 @@ Um objeto do tipo *U*.
 
 ### <a name="remarks"></a>Comentários
 
-O primeiro construtor é o construtor padrão, quais implícita cria um objeto vazio. Especifica o segundo construtor [nullptr](../../extensions/nullptr-cpp-component-extensions.md), que cria explicitamente um objeto vazio.
+O primeiro construtor é o construtor padrão, que especificada implícita cria um objeto vazio. O segundo construtor Especifica [__nullptr](../../extensions/nullptr-cpp-component-extensions.md), que cria explicitamente um objeto vazio.
 
-O terceiro construtor cria um objeto do objeto especificado por um ponteiro.
+O terceiro construtor cria um objeto do objeto especificado por um ponteiro. O ComPtr agora possui a memória apontada para e mantém uma contagem de referência para ele.
 
-Os construtores quarto e quintas são construtores de cópia. O quinto construtor copia um objeto se ele for conversível para o tipo atual.
+Os quarto e quinto construtores são construtores de cópia. O quinto Construtor copiará um objeto se ele for convertido para o tipo atual.
 
-Os sexto e sétimo construtores são construtores de movimentação. O sétimo construtor move um objeto se ele for conversível para o tipo atual.
+O sexto e o sétimo construtores são construtores de movimentação. O sétimo Construtor moverá um objeto se ele for convertido para o tipo atual.
 
-## <a name="copyto"></a>ComPtr::CopyTo
+## <a name="copyto"></a>ComPtr:: CopyTo
 
-Copia a interface atual ou especificada associada a este `ComPtr` para o ponteiro especificado.
+Copia a interface atual ou especificada associada a ela `ComPtr` para o ponteiro especificado.
 
 ```cpp
 HRESULT CopyTo(
@@ -334,19 +337,19 @@ Uma ID de interface.
 
 ### <a name="return-value"></a>Valor de retorno
 
-S_OK se bem-sucedido; Caso contrário, um HRESULT que indica por que o implícita `QueryInterface` Falha na operação.
+S_OK se for bem-sucedido; caso contrário, um HRESULT que indica por que `QueryInterface` a operação implícita falhou.
 
 ### <a name="remarks"></a>Comentários
 
-A primeira função retorna uma cópia de um ponteiro para a interface associada a este `ComPtr`. Esta função sempre retorna S_OK.
+A primeira função retorna uma cópia de um ponteiro para a interface associada a isso `ComPtr`. Essa função sempre retorna S_OK.
 
-A segunda função executa um `QueryInterface` operação na interface associado a este `ComPtr` para a interface especificada pelo *riid* parâmetro.
+A segunda função executa uma `QueryInterface` operação na interface associada a ela `ComPtr` para a interface especificada pelo parâmetro *riid* .
 
-A terceira função executa um `QueryInterface` operação na interface associado a este `ComPtr` para a interface subjacente dos *U* parâmetro.
+A terceira função executa uma `QueryInterface` operação na interface associada a ela `ComPtr` para a interface subjacente do parâmetro *U* .
 
 ## <a name="detach"></a>ComPtr::Detach
 
-Desassocia isso `ComPtr` objeto da interface que ele representa.
+Desassocia esse `ComPtr` objeto da interface que ele representa.
 
 ```cpp
 T* Detach();
@@ -354,11 +357,11 @@ T* Detach();
 
 ### <a name="return-value"></a>Valor de retorno
 
-Um ponteiro para a interface que fosse representado por este `ComPtr` objeto.
+Um ponteiro para a interface que foi representada por esse `ComPtr` objeto.
 
-## <a name="get"></a>ComPtr::Get
+## <a name="get"></a>ComPtr:: Get
 
-Recupera um ponteiro para a interface que está associado a este `ComPtr`.
+Recupera um ponteiro para a interface que está associada a isso `ComPtr`.
 
 ```cpp
 T* Get() const;
@@ -366,11 +369,11 @@ T* Get() const;
 
 ### <a name="return-value"></a>Valor de retorno
 
-Ponteiro para a interface que está associado a este `ComPtr`.
+Ponteiro para a interface que está associada a isso `ComPtr`.
 
 ## <a name="getaddressof"></a>ComPtr::GetAddressOf
 
-Recupera o endereço do [PTR _](#ptr) membro de dados, que contém um ponteiro para a interface representado por este `ComPtr`.
+Recupera o endereço do membro de dados [ptr_](#ptr) , que contém um ponteiro para a interface representada por isso `ComPtr`.
 
 ```cpp
 T* const* GetAddressOf() const;
@@ -383,7 +386,7 @@ O endereço de uma variável.
 
 ## <a name="internaladdref"></a>ComPtr::InternalAddRef
 
-Incrementa a contagem de referência da interface associada a este `ComPtr`.
+Incrementa a contagem de referência da interface associada a isso `ComPtr`.
 
 ```cpp
 void InternalAddRef() const;
@@ -393,9 +396,9 @@ void InternalAddRef() const;
 
 Esse método é protegido.
 
-## <a name="internalrelease"></a>ComPtr::InternalRelease
+## <a name="internalrelease"></a>ComPtr:: InternalRelease
 
-Executa uma operação de lançamento COM na interface associado a este `ComPtr`.
+Executa uma operação de liberação COM na interface associada a isso `ComPtr`.
 
 ```cpp
 void InternalRelease();
@@ -407,7 +410,7 @@ Esse método é protegido.
 
 ## <a name="operator-ampersand"></a>ComPtr::operator&amp;
 
-Libera a interface associada a este `ComPtr` do objeto e, em seguida, recupera o endereço do `ComPtr` objeto.
+Libera a interface associada a esse `ComPtr` objeto e, em seguida, recupera o `ComPtr` endereço do objeto.
 
 ```cpp
 Details::ComPtrRef<WeakRef> operator&()
@@ -421,7 +424,7 @@ Uma referência fraca para a atual `ComPtr`.
 
 ### <a name="remarks"></a>Comentários
 
-Esse método difere [comptr:: Getaddressof](#getaddressof) em que esse método libera uma referência para o ponteiro de interface. Use `ComPtr::GetAddressOf` quando você exigir o endereço do ponteiro da interface, mas não deseja liberar essa interface.
+Esse método difere de [ComPtr:: Getaddressof](#getaddressof) , pois esse método libera uma referência ao ponteiro da interface. Use `ComPtr::GetAddressOf` quando você precisar do endereço do ponteiro da interface, mas não quiser liberar essa interface.
 
 ## <a name="operator-arrow"></a>ComPtr::operator-&gt;
 
@@ -437,11 +440,11 @@ Ponteiro para o tipo especificado pelo nome do tipo de modelo atual.
 
 ### <a name="remarks"></a>Comentários
 
-Essa função auxiliar remove causada pelo uso a macro STDMETHOD uma sobrecarga desnecessária. Essa função faz `IUnknown` tipos `private` em vez de `virtual`.
+Essa função auxiliar remove a sobrecarga desnecessária causada pelo uso da macro STDMETHOD. Essa função faz `IUnknown` tipos `private` em vez `virtual`de.
 
-## <a name="operator-assign"></a>ComPtr::operator=
+## <a name="operator-assign"></a>ComPtr:: Operator =
 
-Atribui um valor para a atual `ComPtr`.
+Atribui um valor ao atual `ComPtr`.
 
 ```cpp
 WRL_NOTHROW ComPtr& operator=(
@@ -476,7 +479,7 @@ WRL_NOTHROW ComPtr& operator=(
 Uma classe.
 
 *other*<br/>
-Um ponteiro, referência ou referência rvalue para um tipo ou outro `ComPtr`.
+Uma referência de ponteiro, referência ou rvalue para um tipo ou outro `ComPtr`.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -484,21 +487,21 @@ Uma referência ao atual `ComPtr`.
 
 ### <a name="remarks"></a>Comentários
 
-A primeira versão deste operador atribui um valor vazio para a atual `ComPtr`.
+A primeira versão desse operador atribui um valor vazio ao atual `ComPtr`.
 
-Na segunda versão, se o ponteiro de interface de atribuição não é o mesmo que o atual `ComPtr` ponteiro de interface, o segundo ponteiro de interface é atribuído ao atual `ComPtr`.
+Na segunda versão, se o ponteiro de interface de atribuição não for o mesmo que o ponteiro de `ComPtr` interface atual, o segundo ponteiro de interface será atribuído ao atual `ComPtr`.
 
-A terceira versão, o ponteiro de interface de atribuição é atribuído a atual `ComPtr`.
+Na terceira versão, o ponteiro de interface de atribuição é atribuído ao atual `ComPtr`.
 
-Na quarta versão, se o ponteiro de interface do valor de atribuição não é o mesmo que o atual `ComPtr` ponteiro de interface, o segundo ponteiro de interface é atribuído ao atual `ComPtr`.
+Na quarta versão, se o ponteiro de interface do valor de atribuição não for igual ao ponteiro de interface atual `ComPtr` , o segundo ponteiro de interface será atribuído ao atual. `ComPtr`
 
-A quinta versão é um operador de cópia; uma referência a um `ComPtr` for atribuído a atual `ComPtr`.
+A quinta versão é um operador de cópia; uma referência a um `ComPtr` é atribuída ao atual. `ComPtr`
 
-A versão do sexta é um operador de cópia que usa semântica; uma referência rvalue para um `ComPtr` se qualquer tipo for estático, converter e, em seguida, é atribuído ao atual `ComPtr`.
+A sexta versão é um operador de cópia que usa semântica de movimentação; uma referência rvalue a um `ComPtr` se qualquer tipo é uma conversão estática e, em seguida, `ComPtr`atribuída ao atual.
 
-A versão do sétima é um operador de cópia que usa semântica; uma referência rvalue para um `ComPtr` do tipo *U* é estático convertido, em seguida e atribuído a atual `ComPtr`.
+A sétima versão é um operador de cópia que usa semântica de movimentação; uma referência rvalue a um `ComPtr` do tipo *U* é uma conversão estática e atribuída ao atual `ComPtr`.
 
-## <a name="operator-equality"></a>ComPtr::operator==
+## <a name="operator-equality"></a>ComPtr:: Operator = =
 
 Indica se dois objetos `ComPtr` são iguais.
 
@@ -529,11 +532,11 @@ Uma referência a outro `ComPtr` objeto.
 
 ### <a name="return-value"></a>Valor de retorno
 
-A primeira produz do operador `true` se objeto *um* é igual ao objeto *b*; caso contrário, `false`.
+O primeiro operador `true` produz se o objeto *a* é igual a Object *b*; caso contrário `false`,.
 
-Os operadores de segundo e terceiro yield `true` se objeto *um* é igual a `nullptr`; caso contrário, `false`.
+O segundo e o terceiro operadores `true` produzem se *o objeto a* é `nullptr`igual a; `false`caso contrário,.
 
-## <a name="operator-inequality"></a>ComPtr::operator!=
+## <a name="operator-inequality"></a>ComPtr:: Operator! =
 
 Indica se dois objetos `ComPtr` não são iguais.
 
@@ -564,11 +567,11 @@ Uma referência a outro `ComPtr` objeto.
 
 ### <a name="return-value"></a>Valor de retorno
 
-A primeira produz do operador `true` se objeto *um* não é igual ao objeto *b*; caso contrário, `false`.
+O primeiro operador `true` produz se o objeto *a* não é igual a Object *b*; caso contrário `false`,.
 
-Os operadores de segundo e terceiro yield `true` se objeto *um* não é igual a `nullptr`; caso contrário, `false`.
+O segundo e o terceiro operadores `true` produzem se *o objeto a* não for `nullptr`igual a; `false`caso contrário,.
 
-## <a name="operator-microsoft-wrl-details-booltype"></a>Comptr:: Operator booltype
+## <a name="operator-microsoft-wrl-details-booltype"></a>ComPtr:: Operator Microsoft:: WRL::D etalhes:: Booltype
 
 Indica se um `ComPtr` está gerenciando o tempo de vida do objeto de uma interface.
 
@@ -578,11 +581,11 @@ WRL_NOTHROW operator Microsoft::WRL::Details::BoolType() const;
 
 ### <a name="return-value"></a>Valor de retorno
 
-Se uma interface é associada a este `ComPtr`, o endereço do [boolstruct::](boolstruct-structure.md#member) membro de dados; caso contrário, `nullptr`.
+Se uma interface estiver associada a isso `ComPtr`, o endereço do membro de dados [BoolStruct:: member](boolstruct-structure.md#member) ; caso contrário `nullptr`,.
 
 ## <a name="ptr"></a>ComPtr::ptr_
 
-Contém um ponteiro para a interface que está associado e gerenciada por esse `ComPtr`.
+Contém um ponteiro para a interface que está associada e gerenciada por isso `ComPtr`.
 
 ```cpp
 InterfaceType *ptr_;
@@ -590,11 +593,11 @@ InterfaceType *ptr_;
 
 ### <a name="remarks"></a>Comentários
 
-`ptr_` é um membro de dados interno, protegido.
+`ptr_`é um membro de dados interno e protegido.
 
 ## <a name="releaseandgetaddressof"></a>ComPtr::ReleaseAndGetAddressOf
 
-Libera a interface associada a este `ComPtr` e, em seguida, recupera o endereço do [PTR _](#ptr) membro de dados, que contém um ponteiro para a interface que foi lançado.
+Libera a interface associada a essa `ComPtr` e, em seguida, recupera o endereço do membro de dados [ptr_](#ptr) , que contém um ponteiro para a interface que foi lançada.
 
 ```cpp
 T** ReleaseAndGetAddressOf();
@@ -602,11 +605,11 @@ T** ReleaseAndGetAddressOf();
 
 ### <a name="return-value"></a>Valor de retorno
 
-O endereço do [PTR _](#ptr) membro de dados desta `ComPtr`.
+O endereço do membro de dados [ptr_](#ptr) deste `ComPtr`.
 
 ## <a name="reset"></a>ComPtr::Reset
 
-Libera todas as referências para o ponteiro para a interface que está associado a este `ComPtr`.
+Libera Todas as referências para o ponteiro para a interface que está associada a `ComPtr`isso.
 
 ```cpp
 unsigned long Reset();
@@ -614,11 +617,11 @@ unsigned long Reset();
 
 ### <a name="return-value"></a>Valor de retorno
 
-O número de referências liberado, se houver.
+O número de referências liberadas, se houver.
 
-## <a name="swap"></a>ComPtr::Swap
+## <a name="swap"></a>ComPtr:: swap
 
-Troca a interface gerenciada pelo atual `ComPtr` com a interface gerenciada pelo especificado `ComPtr`.
+Troca a interface gerenciada pelo atual `ComPtr` com a interface gerenciada pelo especificado. `ComPtr`
 
 ```cpp
 void Swap(
