@@ -429,18 +429,7 @@
                 - name: Página de propriedades NMake
                   href: build/reference/nmake-property-page.md
                 - name: Páginas de propriedades Ferramenta de Manifesto
-                  expanded: false
-                  items:
-                    - name: Páginas de propriedades Ferramenta de Manifesto
-                      href: build/reference/manifest-tool-property-pages.md
-                    - name: 'Caixa de diálogo Geral, Ferramenta de Manifesto, Propriedades de Configuração, páginas de propriedades de <Projectname>'
-                      href: build/reference/general-manifest-tool-configuration-properties.md
-                    - name: 'Caixa de diálogo Entrada e Saída, Ferramenta de Manifesto, Propriedades de Configuração, páginas de propriedade de <Projectname>'
-                      href: build/reference/input-and-output-manifest-tool.md
-                    - name: 'Caixa de diálogo COM Isolado, Ferramenta de Manifesto, Propriedades de Configuração, páginas de propriedade de <Projectname>'
-                      href: build/reference/isolated-com-manifest-tool.md
-                    - name: 'Avançado, Ferramenta de Manifesto, Propriedades de Configuração, páginas de propriedade de <Projectname>'
-                      href: build/reference/advanced-manifest-tool.md
+                  href: build/reference/manifest-tool-property-pages.md
                 - name: Páginas de propriedades de Recursos
                   href: build/reference/resources-property-pages.md
                 - name: Página de propriedades de Recursos Gerenciados
@@ -456,16 +445,7 @@
                 - name: 'Página de propriedades da etapa de build personalizado: Geral'
                   href: build/reference/custom-build-step-property-page-general.md
                 - name: Páginas de propriedade HLSL
-                  expanded: false
-                  items:
-                    - name: Páginas de propriedade HLSL
-                      href: build/reference/hlsl-property-pages.md
-                    - name: 'Páginas de propriedade HLSL: Geral'
-                      href: build/reference/hlsl-property-pages-general.md
-                    - name: 'Páginas de propriedade HLSL: Avançado'
-                      href: build/reference/hlsl-property-pages-advanced.md
-                    - name: 'Páginas de propriedade HLSL: Arquivos de saída'
-                      href: build/reference/hlsl-property-pages-output-files.md
+                  href: build/reference/hlsl-property-pages.md
         - name: Referência de compilador MSVC
           expanded: false
           items:
@@ -1607,10 +1587,10 @@
 - name: Desenvolvimento da área de trabalho do Windows
   expanded: false
   items:
-    - name: Aplicativos da área de trabalho (em C++)
-      href: windows/desktop-applications-visual-cpp.md
     - name: Visão geral de programação do Windows no C++
       href: windows/overview-of-windows-programming-in-cpp.md
+    - name: Aplicativos da área de trabalho (em C++)
+      href: windows/desktop-applications-visual-cpp.md
     - name: 'Passo a passo: Criar um programa C++ Padrão'
       href: windows/walkthrough-creating-a-standard-cpp-program-cpp.md
     - name: 'Passo a passo: Criar aplicativos de Área de Trabalho do Windows'

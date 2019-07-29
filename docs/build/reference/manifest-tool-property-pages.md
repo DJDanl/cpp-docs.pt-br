@@ -1,30 +1,143 @@
 ---
 title: Páginas de propriedades Ferramenta de Manifesto
-ms.date: 11/04/2016
-helpviewer_keywords:
-- Manifest Tool property pages
+ms.date: 7/24/2019
+ms.topic: article
+f1_keywords:
+- VC.Project.VCManifestTool.SuppressStartupBanner
+- VC.Project.VCManifestTool.VerboseOutput
+- VC.Project.VCManifestTool.AssemblyIdentity
+- VC.Project.VCManifestTool.AdditionalManifestFiles
+- VC.Project.VCManifestTool.InputResourceManifests
+- VC.Project.VCManifestTool.EmbedManifest
+- VC.Project.VCManifestTool.OutputManifestFile
+- VC.Project.VCManifestTool.ResourceOutputFileName
+- VC.Project.VCManifestTool.GenerateCatalogFiles
+- VC.Project.VCManifestTool.ManifestFromManagedAssembly
+- VC.Project.VCManifestTool.SuppressDependencyElement
+- VC.Project.VCManifestTool.GenerateCategoryTags
+- VC.Project.VCManifestTool.EnableDPIAwareness
+- VC.Project.VCManifestTool.TypeLibraryFile
+- VC.Project.VCManifestTool.RegistrarScriptFile
+- VC.Project.VCManifestTool.ComponentFileName
+- VC.Project.VCManifestTool.ReplacementsFile
+- VC.Project.VCManifestTool.UpdateFileHashes
+- VC.Project.VCManifestTool.UpdateFileHashesSearchPath
+- vc.project.AdditionalOptionsPage
 ms.assetid: f33499c4-7733-42d9-80e3-8a5018786965
-ms.openlocfilehash: 7dd58c2958b0ca608c23574d8e0812093cc1a573
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: adc821370201eeb83b6c6b4b875e5e62b0fa523f
+ms.sourcegitcommit: 720b74dddb1cdf4e570d55103158304ee1df81f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62321404"
+ms.lasthandoff: 07/29/2019
+ms.locfileid: "68606432"
 ---
 # <a name="manifest-tool-property-pages"></a>Páginas de propriedades Ferramenta de Manifesto
 
-Use as páginas de propriedades da **Ferramenta de Manifesto** para definir opções de build para mt.exe.
+Use essas páginas para especificar opções gerais para [Mt. exe](https://msdn.microsoft.com/library/aa375649). Essas páginas são encontradas em**Propriedades** > do **projeto** > ferramentas de**configuração** > de**manifesto ferramenta**.
 
-Para obter mais informações sobre a ferramenta de manifesto, confira [Mt.exe](/windows/desktop/sbscs/mt-exe).
+## <a name="general-property-page"></a>Página de propriedades geral
 
-[Caixa de diálogo Geral, Ferramenta de Manifesto, Propriedades de Configuração, Páginas de Propriedades de \<Projectname>](general-manifest-tool-configuration-properties.md)
+### <a name="suppress-startup-banner"></a>Suprimir Faixa de Inicialização
 
-[Caixa de diálogo Entrada e Saída, Ferramenta de Manifesto, Propriedades de Configuração, Páginas de Propriedades de \<Projectname>](input-and-output-manifest-tool.md)
+   **Sim (/nologo)** especifica que os dados padrão de direitos autorais da Microsoft ficarão ocultos quando a ferramenta de manifesto for iniciada. Use essa opção para suprimir a saída indesejada em arquivos de log quando você executar mt.exe como parte de um processo de build ou em um ambiente de build.
 
-[Caixa de diálogo COM Isolado, Ferramenta de Manifesto, Propriedades de Configuração, Páginas de Propriedades de \<Projectname>](isolated-com-manifest-tool.md)
+### <a name="verbose-output"></a>Saída detalhada
 
-[Caixa de diálogo Avançado, Ferramenta de Manifesto, Propriedades de Configuração, Páginas de Propriedades de \<Projectname>](advanced-manifest-tool.md)
+   **Sim (/verbose)** especifica que as informações de build adicionais serão exibidas durante a geração do manifesto.
+
+### <a name="assembly-identity"></a>Identidade do assembly * *
+
+Usa a opção /identity para especificar uma cadeia de caracteres de identidade, que inclui os atributos para o [\<Elemento assemblyIdentity>](/visualstudio/deployment/assemblyidentity-element-clickonce-application). Uma cadeia de caracteres de identidade começa com o valor do atributo `name` e é seguida por pares *atributo* = *valor*. Os atributos de uma cadeia de caracteres de identidade são delimitados por uma vírgula.
+
+Este é um exemplo de cadeia de caracteres de identidade:`Microsoft.Windows.Common-Controls, processorArchitecture=x86, version=6.0.0.0, type=win32, publicKeyToken=6595b64144ccf1df`
+
+## <a name="input-and-output-property-page"></a>Página de propriedades de entrada e saída     
+
+###  <a name="additional-manifest-files"></a>Arquivos de manifesto adicionais
+
+Usa a opção **/manifest** para especificar os caminhos completos de arquivos de manifesto adicionais que serão processados ou mesclados pela ferramenta de manifesto. Os caminhos completos são delimitados por ponto e vírgula. (-manifest [manifest1] [manifest2]...)
+
+###  <a name="input-resource-manifests"></a>Manifestos de recurso de entrada
+
+Usa a opção **/inputresource** para especificar o caminho completo de um recurso do tipo RT_MANIFEST, a ser inserido na ferramenta de manifesto. O caminho pode ser seguido pela ID de recurso especificada. Por exemplo:
+
+`dll_with_manifest.dll;#1`
+
+###  <a name="embed-manifest"></a>Inserir manifesto
+
+- **Sim** especifica que o sistema de projeto inserirá o arquivo de manifesto do aplicativo no assembly.
+
+- **Não** especifica que o sistema de projeto criará o arquivo de manifesto do aplicativo como um arquivo autônomo.
+
+###  <a name="output-manifest-file"></a>Arquivo de manifesto de saída
+
+Especifica o nome do arquivo de manifesto de saída. Essa propriedade é opcional quando apenas um arquivo de manifesto é operado pela ferramenta de manifesto. (-out: [arquivo]; # [ID do recurso])
+
+###  <a name="manifest-resource-file"></a>Arquivo de recurso de manifesto
+
+Especifica o arquivo de recurso de saída usado para inserir o manifesto na saída do projeto.
+
+###  <a name="generate-catalog-files"></a>Gerar arquivos de catálogo
+
+Usa a opção **/makecdfs** para especificar que a ferramenta de manifesto gerará arquivos de definição de catálogo (arquivos .cdf), que são usados para criar catálogos. /makecdfs
+
+###  <a name="generate-manifest-from-managedassembly"></a>Gerar manifesto de ManagedAssembly
+
+Gera um manifesto com base em um assembly gerenciado. (-managedassemblyname: [arquivo])
+
+###  <a name="suppress-dependency-element"></a>Suprimir elemento de dependência
+
+Usado com-ManagedAssembly. suprime a geração de elementos de dependência no manifesto final. (-nodependency)
+
+###  <a name="generate-category-tags"></a>Gerar marcas de categoria
+
+Usado com-ManagedAssembly. -Category faz com que as marcas de categoria sejam geradas. (-categoria)
+
+###  <a name="dpi-awareness"></a>Reconhecimento de DPI
+
+Especifica se o aplicativo tem reconhecimento de DPI. Por padrão, a configuração é **Sim** para projetos MFC e **Não** caso contrário, porque apenas os projetos MFC têm reconhecimento de DPI interno. Você poderá substituir a configuração por **Sim** se adicionar um código para lidar com diferentes configurações de DPI. O aplicativo poderá parecer difuso ou pequeno se você defini-lo como tendo reconhecimento de DPI quando ele não tiver.
+
+**Durante**
+
+- **Nenhum**
+- **Alto reconhecimento de DPI**
+- **Reconhecimento de DPI alto por monitor**
+
+## <a name="isolated-com-property-page"></a>Página de propriedades COM isolada
+
+Para obter mais informações sobre com isolado, consulte [aplicativos isolados](/windows/desktop/SbsCs/isolated-applications) e [como: Crie aplicativos isolados para consumir componentes](../how-to-build-isolated-applications-to-consume-com-components.md)com.
+
+###  <a name="type-library-file"></a>Arquivo de biblioteca de tipos
+
+Especifica a biblioteca de tipos a ser usada para suporte ao manifesto COM do RegFree. (-tlb: [arquivo])
+
+###  <a name="registrar-script-file"></a>Arquivo de script do registrador
+
+Especifica o arquivo de script do registrador a ser usado para o suporte ao manifesto COM do RegFree. (-RGS: [arquivo])
+
+###  <a name="component-file-name"></a>Nome do arquivo de componente
+
+Especifica o nome do arquivo do componente que é criado a partir do. tlb ou. rgs especificado. (-DLL: [arquivo])
+
+###  <a name="replacements-file"></a>Arquivo de substituições
+
+Especifica o arquivo que contém valores para cadeias de caracteres substituíveis no arquivo RGS. (substituições: [arquivo])
+
+## <a name="advanced-property-page"></a>Página de propriedades avançada
+
+###  <a name="update-file-hashes"></a>Atualizar hashes de arquivo
+
+Computa o hash de arquivos especificados nos elementos de arquivo e atualiza o atributo de hash com esse valor. (hashupdate: [caminho])
+
+###  <a name="update-file-hashes-search-path"></a>Atualizar caminho de pesquisa de hashes de arquivo
+
+Especifica o caminho de pesquisa a ser usado ao atualizar os hashes de arquivo.
+
+###  <a name="additional-options"></a>Opções Adicionais
+
+Opções Adicionais
+
 
 ## <a name="see-also"></a>Consulte também
 
-[Referência de página de propriedades do projeto C++](property-pages-visual-cpp.md)
+[C++referência de página de propriedades do projeto](property-pages-visual-cpp.md)
