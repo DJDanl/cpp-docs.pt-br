@@ -405,7 +405,7 @@
                   href: build/reference/vcxproj-file-structure.md
                 - name: Arquivo de projeto de exemplo
                   href: build/reference/project-files.md
-            - name: Referência de propriedades de projeto C++
+            - name: Páginas de propriedades de projeto C++
               expanded: false
               items:
                 - name: Referência de propriedades de projeto C++
@@ -416,6 +416,8 @@
                   href: build/reference/general-property-page-file.md
                 - name: Página de propriedades avançadas
                   href: build/reference/advanced-property-page.md
+                - name: Páginas de propriedades de depuração
+                  href: build/reference/debugging-prop-pages.md
                 - name: Página de propriedades dos diretórios do VC++
                   href: build/reference/vcpp-directories-property-page.md
                 - name: Páginas de propriedades C/C++
@@ -4351,6 +4353,13 @@
                   href: cpp/assertion-and-user-supplied-messages-cpp.md
                 - name: static_assert
                   href: cpp/static-assert.md
+            - name: Módulos
+              expanded: false
+              items:
+                - name: Visão geral dos módulos no C++
+                  href: cpp/modules-cpp.md
+                - name: 'module, import e export'
+                  href: cpp/import-export-module.md
             - name: Modelos
               expanded: false
               items:
