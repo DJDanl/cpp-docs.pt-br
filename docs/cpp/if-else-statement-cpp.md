@@ -1,29 +1,29 @@
 ---
 title: Instrução if-else (C++)
-ms.date: 07/17/2017
+ms.date: 07/20/2019
+description: Use as instruções if-else C++ no para controlar a ramificação condicional.
 f1_keywords:
 - else_cpp
 - if_cpp
 helpviewer_keywords:
 - if keyword [C++]
 - else keyword [C++]
-- if keyword [C++], if-else
 ms.assetid: f8c45cde-6bce-42ae-81db-426b3dbd4caa
-ms.openlocfilehash: 16aa65ab64d9fd855ae3306da88f8eb14eec759c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0e9de2d39e09e148c7e4f3ea82c3dadb173c2d0c
+ms.sourcegitcommit: 20a1356193fbe0ddd1002e798b952917eafc3439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62183642"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68661633"
 ---
 # <a name="if-else-statement-c"></a>Instrução if-else (C++)
 
-Controla a ramificação condicional. As instruções na *bloco if* são executados somente se o *expressão if* é avaliada como um valor diferente de zero (ou TRUE). Se o valor de *expressão* for diferente de zero *instrução1* e quaisquer outras instruções no bloco são executadas e o-bloco else, se presente, será ignorado. Se o valor de *expressão* for zero, em seguida, o bloco de if é ignorado e o-bloco else, se presente, é executado. São expressões que são avaliadas como diferente de zero
+Controla a ramificação condicional. As instruções em *If-Block* serão executadas somente se a *expressão If* for avaliada como um valor diferente de zero (ou true). Se o valor de *expression* for diferente de zero, *instrução1* e quaisquer outras instruções no bloco serão executadas e o else-Block, se presente, será ignorado. Se o valor de *expression* for zero, o If-Block será ignorado e o else-Block, se presente, será executado. Expressões que são avaliadas como não zero são
 
 - TRUE
 - um ponteiro não nulo,
-- qualquer valor aritmético diferente de zero, ou
-- tipo de um tipo de classe que define uma conversão inequívoca para uma aritmética, booliano ou ponteiro. (Para obter informações sobre conversões, consulte [conversões padrão](../cpp/standard-conversions.md).)
+- qualquer valor aritmético diferente de zero ou
+- um tipo de classe que define uma conversão não ambígua para um tipo aritmético, booliano ou de ponteiro. (Para obter informações sobre conversões, consulte [conversões padrão](../cpp/standard-conversions.md).)
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -39,7 +39,7 @@ else  // optional
    ...
 }
 
-// Visual Studio 2017 version 15.3 and later:
+// C++17 - Visual Studio 2017 version 15.3 and later:
 if ( initialization; expression )
 {
    statement1;
@@ -51,7 +51,7 @@ else  // optional
    ...
 }
 
-// Visual Studio 2017 version 15.3 and later:
+// C++17 - Visual Studio 2017 version 15.3 and later:
 if constexpr (expression)
 {
     statement1;
@@ -111,9 +111,9 @@ int main()
 }
 ```
 
-## <a name="if_with_init"></a> Se a instrução com um inicializador
+## <a name="if_with_init"></a>instrução If com um inicializador
 
-**Visual Studio 2017 versão 15.3 e posterior** (disponível com [/std: c + + 17](../build/reference/std-specify-language-standard-version.md)): Uma **se** instrução também pode conter uma expressão que declara e inicializa uma variável nomeada. Use este formulário da instrução if quando a variável é necessária somente dentro do escopo do bloco if.
+**Visual Studio 2017 versão 15,3 e posterior** (disponível com [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)): Uma instrução **If** também pode conter uma expressão que declara e Inicializa uma variável nomeada. Use essa forma da instrução If-quando a variável só for necessária dentro do escopo do bloco If.
 
 ## <a name="example"></a>Exemplo
 
@@ -159,13 +159,13 @@ int main()
 }
 ```
 
-Em todas as formas dos **se** instrução *expressão*, que pode ter qualquer valor exceto uma estrutura, é avaliada, inclusive todos os efeitos colaterais. Controle passa do **se** instrução para a próxima instrução no programa, a menos que um dos *instrução*s contém um [quebra](../cpp/break-statement-cpp.md), [continuar](../cpp/continue-statement-cpp.md), ou [goto](../cpp/goto-statement-cpp.md).
+Em todas as formas da instrução **If** , a *expressão*, que pode ter qualquer valor, exceto uma estrutura, é avaliada, incluindo todos os efeitos colaterais. O controle passa da instrução **If** para a próxima instrução no programa, a menos que um dos s da *instrução*contenha um [Break](../cpp/break-statement-cpp.md), [continue](../cpp/continue-statement-cpp.md)ou [goto](../cpp/goto-statement-cpp.md).
 
-O **else** cláusula de uma `if...else` instrução está associada com o mais próximo anterior **se** instrução no mesmo escopo que não tem um correspondente **else** instrução.
+A cláusula **else** de uma `if...else` instrução é associada à instrução **If** anterior mais próxima no mesmo escopo que não tem uma instrução **else** correspondente.
 
-## <a name="a-nameifconstexpr-if-constexpr-statements"></a><a name="if_constexpr"> Se as instruções de constexpr
+## <a name="a-nameifconstexpr-if-constexpr-statements"></a><a name="if_constexpr">instruções constexpr If
 
-**Visual Studio 2017 versão 15.3 e posterior** (disponível com [/std: c + + 17](../build/reference/std-specify-language-standard-version.md)): Em modelos de função, você pode usar um **se constexpr** instrução para tomar decisões de ramificação de tempo de compilação sem a necessidade de recorrer a várias sobrecargas de função. Por exemplo, você pode escrever uma única função esse parâmetro de identificadores desempacotar (nenhuma sobrecarga de parâmetro de zero é necessária):
+**Visual Studio 2017 versão 15,3 e posterior** (disponível com [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)): Nos modelos de função, você pode usar uma instrução **If constexpr** para tomar decisões de ramificação em tempo de compilação sem a necessidade de recorrer a várias sobrecargas de função. Por exemplo, você pode escrever uma única função que manipula o desempacotamento de parâmetro (nenhuma sobrecarga de parâmetro zero é necessária):
 
 ```cpp
 template <class T, class... Rest>
