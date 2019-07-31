@@ -1,39 +1,39 @@
 ---
 title: OpenMP Referência de biblioteca
-ms.date: 03/20/2019
+ms.date: 07/30/2019
 ms.assetid: a25188c6-edde-43d0-84b5-780e797b08fc
-ms.openlocfilehash: 6f4bbeca54bff1fc44a3576362edca9c30926d5a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c78c2677741714ab48d49a4443ad753369ec4500
+ms.sourcegitcommit: 725e86dabe2901175ecc63261c3bf05802dddff4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62362511"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68682588"
 ---
 # <a name="openmp-library-reference"></a>OpenMP Referência de biblioteca
 
-Fornece links para construções usadas na API OpenMP.
+Fornece links para construções usadas na API de OpenMP.
 
-A implementação do Visual C++ do OpenMP padrão inclui as seguintes construções.
+A implementação C++ visual do padrão de OpenMP inclui as seguintes construções.
 
 |Constructo|Descrição|
 |---------------|-----------------|
-|[Diretivas](openmp-directives.md)|Fornece links para as diretivas usadas na API OpenMP.|
-|[Cláusulas](openmp-directives.md)|Fornece links para as cláusulas usadas na API OpenMP.|
-|[Funções](openmp-functions.md)|Fornece links para as funções usadas na API OpenMP.|
-|[Variáveis de ambiente](openmp-environment-variables.md)|Fornece links para as variáveis de ambiente usadas na API OpenMP.|
+|[Diretivas](openmp-directives.md)|Fornece links para diretivas usadas na API de OpenMP.|
+|[Cláusulas](openmp-clauses.md)|Fornece links para as cláusulas usadas na API de OpenMP.|
+|[Funções](openmp-functions.md)|Fornece links para funções usadas na API de OpenMP.|
+|[Variáveis de ambiente](openmp-environment-variables.md)|Fornece links para variáveis de ambiente usadas na API de OpenMP.|
 
-O Visual C++ funções de biblioteca em tempo de execução OpenMP estão contidas em bibliotecas a seguir.
+As funções C++ de biblioteca de tempo de execução de OpenMP do Visual estão contidas nas bibliotecas a seguir.
 
-|Biblioteca de tempo de execução OpenMP|Características|
+|Biblioteca de tempo de execução de OpenMP|Características|
 |------------------------------|---------------------|
-|VCOMP.LIB|Threaded, vínculo dinâmico (biblioteca de importação para VCOMP. LIB).|
-|VCOMPD.LIB|Threaded, vínculo dinâmico (biblioteca de importação para VCOMPD. TAMPA) (depuração)|
+|VCOMP.LIB|Link dinâmico multithread (biblioteca de importação para VCOMP. LIB).|
+|VCOMPD.LIB|Link dinâmico multithread (biblioteca de importação para VCOMPD. TAMPA) (depuração)|
 
-Se Debug é definido em uma compilação e se `#include omp.h` está no código-fonte, VCOMPD. LIB será a biblioteca de padrão, caso contrário, VCOMP. LIB será usado.
+Se _DEBUG for definido em uma compilação e se `#include omp.h` estiver no código-fonte, VCOMPD. LIB será a lib padrão, caso contrário, VCOMP. LIB será usado.
 
-Você pode usar [/NODEFAULTLIB (ignorar bibliotecas)](../../../build/reference/nodefaultlib-ignore-libraries.md) para remover a biblioteca padrão e vincular explicitamente com a biblioteca de sua escolha.
+Você pode usar [/NODEFAULTLIB (ignorar bibliotecas)](../../../build/reference/nodefaultlib-ignore-libraries.md) para remover a lib padrão e vincular explicitamente com a lib de sua escolha.
 
-As DLLs de OpenMP estão no diretório de pacotes redistribuíveis do Visual C++ e precisam ser distribuídas com aplicativos que usam o OpenMP.
+As DLLs de OpenMP estão no diretório C++ Visual redistribuível e precisam ser distribuídas com aplicativos que usam OpenMP.
 
 ## <a name="see-also"></a>Consulte também
 
