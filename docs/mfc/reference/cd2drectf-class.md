@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CD2DRectF [MFC], CD2DRectF
 - CD2DRectF [MFC], IsNull
 ms.assetid: 87c12d87-9d18-4a19-ba14-0f51d6b6835a
-ms.openlocfilehash: 8e5c22fe15ce0d930f81dd16673927d5299bf630
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9b91cfaec3827a61152c4116b56e817a436606be
+ms.sourcegitcommit: 725e86dabe2901175ecc63261c3bf05802dddff4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396269"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68682396"
 ---
 # <a name="cd2drectf-class"></a>Classe CD2DRectF
 
@@ -33,19 +33,19 @@ class CD2DRectF : public D2D1_RECT_F;
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CD2DRectF::CD2DRectF](#cd2drectf)|Sobrecarregado. Constrói uma `CD2DRectF` do objeto de `D2D1_RECT_F` objeto.|
+|[CD2DRectF::CD2DRectF](#cd2drectf)|Sobrecarregado. Constrói um `CD2DRectF` objeto do `D2D1_RECT_F` objeto.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CD2DRectF::IsNull](#isnull)|Retorna um **boolean** valor que indica se uma expressão não contém dados válidos (nulo).|
+|[CD2DRectF::IsNull](#isnull)|Retorna um valor booliano que indica se uma expressão não contém dados válidos (nulo).|
 
 ### <a name="public-operators"></a>Operadores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CD2DRectF::Operator CRect](#operator_crect)|Converte `CD2DRectF` para `CRect` objeto.|
+|[Operador CD2DRectF:: Operator CRect](#operator_crect)|Converte `CD2DRectF` para`CRect` objeto.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -55,16 +55,16 @@ class CD2DRectF : public D2D1_RECT_F;
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** afxrendertarget.h
+**Cabeçalho:** afxrendertarget. h
 
 ##  <a name="cd2drectf"></a>  CD2DRectF::CD2DRectF
 
-Constrói um objeto CD2DRectF objeto CRect.
+Constrói um objeto CD2DRectF do objeto CRect.
 
 ```
 CD2DRectF(const CRect& rect);
 CD2DRectF(const D2D1_RECT_F& rect);
-  CD2DRectF(const D2D1_RECT_F* rect);
+CD2DRectF(const D2D1_RECT_F* rect);
 
 CD2DRectF(
     FLOAT fLeft = 0.,
@@ -79,13 +79,13 @@ CD2DRectF(
 retângulo de origem
 
 *fLeft*<br/>
-coordenada esquerda do código-fonte
+coordenada esquerda de origem
 
 *fTop*<br/>
-coordenada superior do código-fonte
+coordenada superior de origem
 
 *fRight*<br/>
-origem de coordenada direita
+coordenada direita de origem
 
 *fBottom*<br/>
 coordenada inferior de origem
@@ -100,11 +100,11 @@ BOOL IsNull() const;
 
 ### <a name="return-value"></a>Valor de retorno
 
-TRUE se a parte superior, esquerda, inferior e valores corretos do retângulo são todas iguais a 0; Caso contrário, FALSE.
+TRUE se os valores superior, esquerdo, inferior e direito do retângulo forem todos iguais a 0; caso contrário, FALSE.
 
-##  <a name="operator_crect"></a>  CD2DRectF::operator CRect
+##  <a name="operator_crect"></a>Operador CD2DRectF:: Operator CRect
 
-Converte CD2DRectF objeto CRect.
+Converte CD2DRectF em objeto CRect.
 
 ```
 operator CRect();
