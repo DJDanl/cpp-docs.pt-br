@@ -1,25 +1,25 @@
 ---
-title: 'Como: Criar e usar instâncias weak_ptr'
+title: 'Como: Criar e usar instâncias de weak_ptr'
 ms.custom: how-to
 ms.date: 07/12/2018
 ms.topic: conceptual
 ms.assetid: 8dd6909b-b070-4afa-9696-f2fc94579c65
-ms.openlocfilehash: 1a0e2880e97a77a0c9975553631a6024072745f0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 63eed40117d1a79c69bd05e5bd1503d4222f556d
+ms.sourcegitcommit: af4ab63866ed09b5988ed53f1bb6996a54f02484
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62184695"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68787084"
 ---
-# <a name="how-to-create-and-use-weakptr-instances"></a>Como: Criar e usar instâncias weak_ptr
+# <a name="how-to-create-and-use-weak_ptr-instances"></a>Como: Criar e usar instâncias de weak_ptr
 
-Às vezes, um objeto deve armazenar uma maneira de acessar o objeto subjacente de um `shared_ptr` sem fazer com que a contagem de referência seja incrementada. Normalmente, essa situação ocorre quando você tem referências cíclicas entre `shared_ptr` instâncias.
+Às vezes, um objeto deve armazenar uma maneira de acessar o objeto subjacente `shared_ptr` de um sem fazer com que a contagem de referência seja incrementada. Normalmente, essa situação ocorre quando você tem referências cíclicas `shared_ptr` entre instâncias.
 
-O melhor design é impedir a propriedade compartilhada de ponteiros sempre que possível. No entanto, se você deve ter a propriedade compartilhada de `shared_ptr` instâncias, evite referências cíclicas entre elas. Quando as referências cíclicas forem inevitáveis, ou mesmo preferíveis por algum motivo, use `weak_ptr` para dar a um ou mais dos proprietários uma referência fraca para outro `shared_ptr`. Usando um `weak_ptr`, você pode criar um `shared_ptr` que une a um conjunto existente de instâncias relacionadas, mas somente se o recurso de memória subjacente ainda é válido. Um `weak_ptr` em si não participa da contagem de referência e, portanto, ele não pode impedir que a contagem de referência de Zerar. No entanto, você pode usar um `weak_ptr` para tentar obter uma nova cópia do `shared_ptr` com o qual ele foi inicializado. Se a memória já tiver sido excluída, um `bad_weak_ptr` exceção é lançada. Se a memória ainda for válida, o novo ponteiro compartilhado incrementa a contagem de referência e garante que a memória seja válida, desde o `shared_ptr` variável permanece no escopo.
+O melhor design é evitar a propriedade compartilhada de ponteiros sempre que possível. No entanto, se você precisar ter propriedade `shared_ptr` compartilhada de instâncias, evite referências cíclicas entre elas. Quando as referências cíclicas são inevitáveis ou até mesmo preferíveis por algum `weak_ptr` motivo, use para dar a um ou mais dos proprietários uma referência `shared_ptr`fraca a outra. Usando um `weak_ptr`, você pode criar um `shared_ptr` que une a um conjunto existente de instâncias relacionadas, mas somente se o recurso de memória subjacente ainda for válido. Uma `weak_ptr` em si não participa da contagem de referência e, portanto, não pode impedir que a contagem de referência vá para zero. No entanto, você pode `weak_ptr` usar um para tentar obter uma nova cópia do `shared_ptr` com a qual ela foi inicializada. Se a memória já tiver sido excluída, `bad_weak_ptr` uma exceção será lançada. Se a memória ainda for válida, o novo ponteiro compartilhado incrementará a contagem de referência e garantirá que a memória será válida, desde que `shared_ptr` a variável permaneça no escopo.
 
 ## <a name="example"></a>Exemplo
 
-O exemplo de código a seguir mostra um caso onde `weak_ptr` é usado para garantir a exclusão apropriada de objetos que têm dependências circulares. Ao examinar o exemplo, suponha que ele foi criado somente depois que as soluções alternativas foram consideradas. O `Controller` objetos representam algum aspecto de um processo de máquina, e eles operam independentemente. Cada controlador deve ser capaz de consultar o status dos outros controladores a qualquer momento, e cada um deles contém uma privada `vector<weak_ptr<Controller>>` para essa finalidade. Cada vetor contém uma referência circular e, portanto, `weak_ptr` instâncias são usadas em vez de `shared_ptr`.
+O exemplo de código a seguir mostra um `weak_ptr` caso em que é usado para garantir a exclusão adequada de objetos que têm dependências circulares. Ao examinar o exemplo, suponha que ele foi criado somente depois que as soluções alternativas foram consideradas. Os `Controller` objetos representam algum aspecto de um processo de máquina e operam de forma independente. Cada controlador deve ser capaz de consultar o status dos outros controladores a qualquer momento, e cada um deles contém um privado `vector<weak_ptr<Controller>>` para essa finalidade. Cada vetor contém uma referência circular e, portanto, `weak_ptr` as instâncias são usadas em `shared_ptr`vez de.
 
 [!code-cpp[stl_smart_pointers#222](../cpp/codesnippet/CPP/how-to-create-and-use-weak-ptr-instances_1.cpp)]
 
@@ -65,8 +65,8 @@ Status of 1 = On
 Status of 3 = On
 Status of 4 = On
 use_count = 1
-Status of 0 = O
-nStatus of 1 = On
+Status of 0 = On
+Status of 1 = On
 Status of 2 = On
 Status of 4 = On
 use_count = 1
@@ -82,7 +82,7 @@ Destroying Controller4
 Press any key
 ```
 
-Para experimentar, modifique o vetor `others` seja um `vector<shared_ptr<Controller>>`e, em seguida, na saída, observe que nenhum destruidor é invocado quando `TestRun` retorna.
+Como um experimento, modifique o vetor `others` para ser um `vector<shared_ptr<Controller>>`e, em seguida, na saída, observe que nenhum destruidor é invocado quando `TestRun` retorna.
 
 ## <a name="see-also"></a>Consulte também
 
