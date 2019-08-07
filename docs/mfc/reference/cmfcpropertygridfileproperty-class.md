@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCPropertyGridFileProperty [MFC], CMFCPropertyGridFileProperty
 ms.assetid: 2bb8b8b4-47fc-4798-bd5e-dc8ea0b4cd9d
-ms.openlocfilehash: 20a0a50198357602d70a2111c6884058f7578af7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4b64d18a67ea499c202b81481684227200846483
+ms.sourcegitcommit: c3bf94210bdb73be80527166264d49e33784152c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62326687"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68821286"
 ---
 # <a name="cmfcpropertygridfileproperty-class"></a>Classe CMFCPropertyGridFileProperty
 
-O `CMFCPropertyGridFileProperty` classe dá suporte a um item de controle de lista de propriedade que abre uma caixa de diálogo de seleção de arquivo.
+A `CMFCPropertyGridFileProperty` classe oferece suporte a um item de controle de lista de propriedades que abre uma caixa de diálogo de seleção de arquivo.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -38,8 +38,8 @@ class CMFCPropertyGridFileProperty : public CMFCPropertyGridProperty
 
 |Nome|Descrição|
 |----------|-----------------|
-|`CMFCPropertyGridFileProperty::GetThisClass`|Usado pelo framework para obter um ponteiro para o [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objeto que está associado com esse tipo de classe.|
-|`CMFCPropertyGridFileProperty::OnClickButton`|(Substitui [CMFCPropertyGridProperty::OnClickButton](../../mfc/reference/cmfcpropertygridproperty-class.md#onclickbutton).)|
+|`CMFCPropertyGridFileProperty::GetThisClass`|Usado pela estrutura para obter um ponteiro para o objeto [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) que está associado a esse tipo de classe.|
+|`CMFCPropertyGridFileProperty::OnClickButton`|(Substitui [CMFCPropertyGridProperty:: OnClickButton](../../mfc/reference/cmfcpropertygridproperty-class.md#onclickbutton).)|
 
 ### <a name="remarks"></a>Comentários
 
@@ -53,9 +53,9 @@ class CMFCPropertyGridFileProperty : public CMFCPropertyGridProperty
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** afxpropertygridctrl.h
+**Cabeçalho:** afxPropertyGridCtrl. h
 
-##  <a name="cmfcpropertygridfileproperty"></a>  CMFCPropertyGridFileProperty::CMFCPropertyGridFileProperty
+##  <a name="cmfcpropertygridfileproperty"></a>CMFCPropertyGridFileProperty::CMFCPropertyGridFileProperty
 
 Constrói um objeto `CMFCPropertyGridFileProperty`.
 
@@ -74,38 +74,38 @@ CMFCPropertyGridFileProperty(
 ### <a name="parameters"></a>Parâmetros
 
 *strName*<br/>
-[in] O nome da propriedade.
+no O nome da propriedade.
 
 *bOpenFileDialog*<br/>
-[in] True para abrir um **abrir arquivo** caixa de diálogo. FALSE para abrir um **salvar arquivo** caixa de diálogo.
+no TRUE para abrir uma caixa de diálogo **Abrir arquivo** ; FALSE para abrir uma caixa de diálogo **salvar arquivo** .
 
 *strFileName*<br/>
-[in] O nome do arquivo inicial.
+no O nome de arquivo inicial.
 
 *lpszDefExt*<br/>
-[in] Uma cadeia de caracteres de um ou mais extensões de nome de arquivo. O valor padrão é NULL.
+no Uma cadeia de caracteres de uma ou mais extensões de nome de arquivo. O valor padrão é NULL.
 
 *dwFlags*<br/>
-[in] Sinalizadores de caixa de diálogo. O valor padrão é uma combinação bit a bit (OR) de OFN_HIDEREADONLY e OFN_OVERWRITEPROMPT.
+no Sinalizadores da caixa de diálogo. O valor padrão é uma combinação de bits (ou) de OFN_HIDEREADONLY e OFN_OVERWRITEPROMPT.
 
 *lpszFilter*<br/>
-[in] Uma cadeia de caracteres de um ou mais filtros de arquivo. O valor padrão é NULL.
+no Uma cadeia de caracteres de um ou mais filtros de arquivo. O valor padrão é NULL.
 
 *lpszDescr*<br/>
-[in] A descrição do item de propriedade. O valor padrão é NULL.
+no A descrição do item de propriedade. O valor padrão é NULL.
 
 *dwData*<br/>
-[in] Dados específicos do aplicativo que está associados com o item de propriedade. Por exemplo, um inteiro de 32 bits ou um ponteiro para outros dados. O valor padrão é 0.
+no Dados específicos do aplicativo que estão associados ao item de propriedade. Por exemplo, um inteiro de 32 bits ou um ponteiro para outros dados. O valor padrão é 0.
 
 ### <a name="return-value"></a>Valor de retorno
 
 ### <a name="remarks"></a>Comentários
 
-Para obter uma lista completa dos sinalizadores disponíveis, consulte [estrutura OPENFILENAME](/windows/desktop/api/commdlg/ns-commdlg-tagofna).
+Para obter uma lista completa dos sinalizadores disponíveis, consulte [estrutura da OPENFILENAME](/windows/win32/api/commdlg/ns-commdlg-openfilenamew).
 
 ### <a name="example"></a>Exemplo
 
-O exemplo a seguir demonstra como criar um objeto usando o construtor do `CMFCPropertyGridFileProperty` classe. Este exemplo faz parte do [amostra de demonstração do Visual Studio](../../overview/visual-cpp-samples.md).
+O exemplo a seguir demonstra como criar um objeto usando o construtor da `CMFCPropertyGridFileProperty` classe. Este exemplo faz parte do [exemplo de demonstração do Visual Studio](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#22](../../mfc/codesnippet/cpp/cmfcpropertygridfileproperty-class_1.cpp)]
 

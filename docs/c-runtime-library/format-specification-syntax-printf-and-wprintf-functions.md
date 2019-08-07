@@ -1,6 +1,6 @@
 ---
 title: 'Sintaxe de especificação de formato: funções printf e and wprintf'
-ms.date: 07/02/2019
+ms.date: 07/30/2019
 helpviewer_keywords:
 - format specification fields for printf function
 - printf function format specification fields
@@ -9,16 +9,16 @@ helpviewer_keywords:
 - width fields, printf function
 - precision fields, printf function
 ms.assetid: 664b1717-2760-4c61-bd9c-22eee618d825
-ms.openlocfilehash: 07565da17eb53274e0c3203abbc8cddb9e61da90
-ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
+ms.openlocfilehash: 95573821ff2b213765184e7c121e693e1eb0ac0a
+ms.sourcegitcommit: 725e86dabe2901175ecc63261c3bf05802dddff4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67552261"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68682363"
 ---
 # <a name="format-specification-syntax-printf-and-wprintf-functions"></a>Sintaxe de especificação de formato: funções printf e wprintf
 
-As várias funções `printf` e `wprintf` usam uma cadeia de caracteres de formato e argumentos opcionais e produzem uma sequência formatada de caracteres de saída. A cadeia de caracteres de formato contém zero ou mais *diretivas*, que são caracteres literais para saída, ou *especificações de conversão* codificadas, que descrevem como formatar um argumento na saída. Este tópico descreve a sintaxe usada para codificar as especificações de conversão na cadeia de caracteres de formato. Para obter uma lista dessas funções, veja [E/S de fluxo](../c-runtime-library/stream-i-o.md).
+As várias funções `printf` e `wprintf` usam uma cadeia de caracteres de formato e argumentos opcionais e produzem uma sequência formatada de caracteres de saída. A cadeia de caracteres de formato contém zero ou mais *diretivas*, que são caracteres literais para saída, ou *especificações de conversão* codificadas, que descrevem como formatar um argumento na saída. Este artigo descreve a sintaxe usada para codificar as especificações de conversão na cadeia de caracteres de formato. Para obter uma lista dessas funções, veja [E/S de fluxo](../c-runtime-library/stream-i-o.md).
 
 Uma especificação de conversão consiste em campos obrigatórios e opcionais neste formulário:
 
@@ -62,7 +62,7 @@ Tipos de inteiro como `short`, `int`, `long`, `long long` e suas variações `un
 |**u**|Inteiro|Inteiro decimal sem sinal.|
 |**x**|Inteiro|Inteiro hexadecimal não assinado; usa "abcdef".|
 |**X**|Inteiro|Inteiro hexadecimal não assinado; usa "ABCDEF".|
-|**e**|Ponto flutuante|O valor assinado que tem a forma [-]*d.dddd*__e±__*dd*[*d*], em que *d* é um dígito decimal, *dddd* é um ou mais dígitos decimais dependendo da precisão especificada ou seis, por padrão e *dd*[*d*] é dois ou três dígitos decimais dependendo do [formato de saída](../c-runtime-library/set-output-format.md) e do tamanho do expoente.|
+|**e**|Ponto flutuante|O valor assinado que tem a forma [-]*d.dddd*__e±__*dd*\[*d*], em que *d* é um dígito decimal, *dddd* é um ou mais dígitos decimais dependendo da precisão especificada ou seis por padrão e *dd*\[*d*] é dois ou três dígitos decimais, dependendo do [formato de saída](../c-runtime-library/set-output-format.md) e do tamanho do expoente.|
 |**E**|Ponto flutuante|Idêntico ao formato **e**, exceto pelo fato de que **E** em vez de **e** apresenta o expoente.|
 |**f**|Ponto flutuante|Valor assinado que tem a forma [-]*dddd* __.__ *dddd*, em que *dddd* é um ou mais dígitos decimais. O número de dígitos antes do ponto decimal depende da magnitude do número e o número de dígitos após o ponto decimal depende da precisão solicitada ou é seis, por padrão.|
 |**F**|Ponto flutuante|Idêntico ao formato **f**, exceto pelo fato de que a saída de infinito e de nan está em maiúsculas.|
@@ -82,7 +82,7 @@ A partir do Visual Studio 2015, se o argumento que corresponde a um especificado
 |-----------|------------|
 |infinity|`inf`|
 |NaN silencioso|`nan`|
-|Sinalização NaN|`nan(snan)`|
+|Sinalização de NaN|`nan(snan)`|
 |NaN indefinido|`nan(ind)`|
 
 Qualquer um desses valores pode ser ter um sinal como prefixo. Se um caractere especificador de conversão de *tipo* de ponto flutuante for uma letra maiúscula, a saída também será formatada em letras maiúsculas. Por exemplo, se o especificador de formato for `%F` em vez de `%f`, um infinito será formatado como `INF` em vez de `inf`. As funções `scanf` também podem analisar essas cadeias de caracteres, para que esses valores possam fazer uma viagem de ida e volta nas funções `printf` e `scanf`.
@@ -135,9 +135,9 @@ A especificação de largura nunca faz com que um valor seja truncado. Se o núm
 
 Se a especificação de precisão for um asterisco (`*`), um argumento `int` da lista de argumentos fornecerá o valor. Na lista de argumentos, o argumento *largura* deve preceder o valor que está sendo formatado, conforme mostrado neste exemplo:
 
-`printf("%0*f", 5, 3);  /* 00003 is output */`
+`printf("%0*d", 5, 3);  /* 00003 is output */`
 
-Um valor de *largura* ausente ou pequeno em uma especificação de formato não causa o truncamento de um valor de saída. Se o resultado de uma conversão for maior do que o valor de *largura*, o campo se expandirá para conter o resultado da conversão.
+Um valor ausente ou pequeno de *largura* em uma especificação de formato não causa o truncamento de um valor de saída. Se o resultado de uma conversão for maior do que o valor de *largura*, o campo se expandirá para conter o resultado da conversão.
 
 <a name="precision"></a>
 
@@ -171,7 +171,7 @@ O caractere de *tipo* determina a interpretação de *precisão* ou a precisão 
 
 ## <a name="argument-size-specification"></a>Especificação de tamanho de argumento
 
-Em uma especificação de conversão, o campo *tamanho* é um modificador de comprimento do argumento para o especificador de conversão de *tipo*. O campo *tamanho* é prefixado para o campo *tipo* – **hh**, **h**, **j**, **l** (L minúsculo), **L**, **ll**, **t**, **w**, **z**, **I** (i maiúsculo), **I32** e **I64** – especifique o "tamanho" do argumento correspondente – longo ou curto, 32 bits ou 64 bits, caracteres de byte único ou de caractere largo – dependendo do especificador de conversão que eles modificam. Esses prefixos de tamanho são usados com caracteres de *tipo* nas famílias de funções `printf` e `wprintf` para especificar a interpretação dos tamanhos de argumento, como mostrado na tabela a seguir. O campo *tamanho* é opcional para alguns tipos de argumentos. Quando nenhum prefixo de tamanho for especificado, o formatador consumirá argumentos inteiros – por exemplo, `char`, `short`, `int`, `long` com sinal ou sem sinal e tipos de enumeração – como tipos `int` de 32 bits, e argumentos de ponto flutuante `float`, `double` e `long double` serão consumidos como tipos `double` de 64 bits. Isso coincide com as regras de promoção de argumento padrão para listas de argumentos variáveis. Para saber mais sobre a promoção de argumento, veja reticências e argumentos padrão em [expressões de sufixo](../cpp/postfix-expressions.md). Em sistemas de 32 bits e 64 bits, a especificação de conversão de um argumento de inteiro de 64 bits deve incluir um prefixo de tamanho de **ll** ou **I64**. Caso contrário, o comportamento do formatador será indefinido.
+Em uma especificação de conversão, o campo *tamanho* é um modificador de comprimento do argumento para o especificador de conversão de *tipo*. O campo *tamanho* é prefixado para o campo *tipo* – **hh**, **h**, **j**, **l** (L minúsculo), **L**, **ll**, **t**, **w**, **z**, **I** (i maiúsculo), **I32** e **I64** – especifique o "tamanho" do argumento correspondente – longo ou curto, 32 bits ou 64 bits, caracteres de byte único ou de caractere largo – dependendo do especificador de conversão que eles modificam. Esses prefixos de tamanho são usados com caracteres de *tipo* nas famílias de funções `printf` e `wprintf` para especificar a interpretação dos tamanhos de argumento, como mostrado na tabela a seguir. O campo *tamanho* é opcional para alguns tipos de argumentos. Quando nenhum prefixo de tamanho for especificado, o formatador consumirá argumentos inteiros – por exemplo, `char`, `short`, `int`, `long` com sinal ou sem sinal e tipos de enumeração – como tipos `int` de 32 bits, e argumentos de ponto flutuante `float`, `double` e `long double` serão consumidos como tipos `double` de 64 bits. Esse comportamento corresponde às regras de promoção de argumento padrão para listas de argumentos variáveis. Para saber mais sobre a promoção de argumento, veja reticências e argumentos padrão em [expressões de sufixo](../cpp/postfix-expressions.md). Em sistemas de 32 bits e 64 bits, a especificação de conversão de um argumento de inteiro de 64 bits deve incluir um prefixo de tamanho de **ll** ou **I64**. Caso contrário, o comportamento do formatador será indefinido.
 
 Alguns tipos têm tamanhos diferentes no código de 32 bits e 64 bits. Por exemplo, `size_t` é de 32 bits longa no código compilado para x86 e 64 bits no código compilado para x64. Para criar o código de formatação independente de plataforma para tipos de largura variável, você pode usar um modificador de tamanho do argumento de largura variável. Como alternativa, use um modificador de tamanho do argumento de 64 bits e promova explicitamente o tipo de argumento de largura variável 64 bits. O modificador de tamanho de argumento específicos da Microsoft **I** (i maiúsculo) lida com argumentos inteiros de largura variável, mas é recomendável os modificadores **j**, **t** e **z** específicos de tipo para portabilidade.
 

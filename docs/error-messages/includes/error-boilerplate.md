@@ -1,19 +1,19 @@
 ---
 ms.openlocfilehash: 980cdc1c4ac82015cab61133a64fa54fbd030843
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66451299"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68821108"
 ---
 > [!IMPORTANT]
-> Os compiladores do Visual Studio e ferramentas de compilação podem relatar muitos tipos de erros e avisos. Depois que um erro ou aviso for encontrado, as ferramentas de compilação podem fazer suposições sobre a intenção do código e tentar continuar, para que mais problemas podem ser relatados ao mesmo tempo. Se as ferramentas fizerem uma suposição incorreta, erros ou avisos posteriores podem não se aplicar ao seu projeto. Ao corrigir problemas em seu projeto, sempre começam com o primeiro erro ou aviso é relatado e recompilação com frequência. Uma correção pode fazer muitos erros subsequentes desaparecer.
+> Os compiladores e as ferramentas de compilação do Visual Studio podem relatar muitos tipos de erros e avisos. Depois que um erro ou aviso for encontrado, as ferramentas de compilação poderão fazer suposições sobre a intenção de código e tentar continuar, para que mais problemas possam ser relatados ao mesmo tempo. Se as ferramentas fizerem a suposição errada, erros ou avisos posteriores talvez não se apliquem ao seu projeto. Quando você corrigir problemas em seu projeto, sempre comece com o primeiro erro ou aviso que é relatado e reconstrua com frequência. Uma correção pode fazer com que muitos erros subsequentes desapareçam.
 
-Para obter ajuda sobre uma determinada mensagem de diagnóstico no Visual Studio, selecione-o na **saída** janela e pressione a **F1** chave. Visual Studio abre a página de documentação para esse erro, se houver. Você também pode usar a ferramenta de pesquisa acima para encontrar artigos sobre erros ou avisos específicos. Ou então, navegue pela lista de erros e avisos por ferramenta e tipo no painel de navegação nesta página.
+Para obter ajuda sobre uma mensagem de diagnóstico específica no Visual Studio, selecione-a na janela **saída** e pressione a tecla **F1** . O Visual Studio abre a página de documentação para esse erro, se houver. Você também pode usar a ferramenta de pesquisa acima para encontrar artigos sobre erros ou avisos específicos. Ou procure a lista de erros e avisos por ferramenta e digite no painel de navegação desta página.
 
 > [!NOTE]
-> Nem todos os erros do Visual Studio ou o aviso está documentado. Em muitos casos, a mensagem de diagnóstico fornece todas as informações que está disponíveis. Se você chegou nesta página, quando você usava **F1** e você acha que o erro ou mensagem de aviso precisa de explicação adicional, informe-nos. Você pode usar os botões de comentários nesta página para gerar um problema de documentação em [GitHub](https://github.com/MicrosoftDocs/cpp-docs/issues), ou um problema do produto sobre o [comunidade de desenvolvedores](https://developercommunity.visualstudio.com/spaces/8/index.html) site. Você também pode enviar comentários e insira bugs dentro do IDE. No Visual Studio, vá para a barra de menus e escolha **Ajuda > Enviar Comentários > relatar um problema**, ou envie uma sugestão usando **Ajuda > Enviar Comentários > enviar uma sugestão**.
+> Nem todo erro ou aviso do Visual Studio está documentado. Em muitos casos, a mensagem de diagnóstico fornece todas as informações disponíveis. Se você descarregou nesta página quando usou **F1** e considera que a mensagem de erro ou de aviso precisa de uma explicação adicional, informe-nos. Você pode usar os botões de comentários nesta página para gerar um problema de documentação no [GitHub](https://github.com/MicrosoftDocs/cpp-docs/issues)ou um problema de produto no site [da comunidade de desenvolvedores](https://developercommunity.visualstudio.com/spaces/8/index.html) . Você também pode enviar comentários e inserir bugs dentro do IDE. No Visual Studio, vá para a barra de menus e escolha **ajuda > enviar comentários > relatar um problema**ou enviar uma sugestão usando **a ajuda > enviar comentários > enviar uma sugestão**.
 
-Você pode obter assistência adicional para erros e avisos em fóruns públicos da Microsoft. Ou, procure o erro ou o número de aviso sobre o Visual Studio C++ [comunidade de desenvolvedores](https://developercommunity.visualstudio.com/spaces/8/index.html) site. Você também pode procurar erros e avisos e faça perguntas no [Stack Overflow](https://stackoverflow.com/) para encontrar soluções.
+Você pode encontrar assistência adicional para erros e avisos nos fóruns públicos da Microsoft. Ou então, procure o erro ou o número de aviso no site C++ [da comunidade de desenvolvedores](https://developercommunity.visualstudio.com/spaces/8/index.html) do Visual Studio. Você também pode procurar erros e avisos e fazer perguntas sobre [Stack Overflow](https://stackoverflow.com/) encontrar soluções.
 
-Para obter links para ajuda adicional e recursos da comunidade, consulte [Ajuda do Visual C++ e a comunidade](../../overview/visual-cpp-help-and-community.md).
+Para obter links para ajuda adicional e recursos da Comunidade, consulte [ajuda visual C++ e comunidade](../../overview/visual-cpp-help-and-community.md).
