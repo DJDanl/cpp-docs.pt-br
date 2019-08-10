@@ -78,17 +78,17 @@ helpviewer_keywords:
 - CMFCRibbonGallery [MFC], SetPaletteID
 - CMFCRibbonGallery [MFC], OnDrawPaletteIcon
 ms.assetid: 9734c9c9-981c-4b3f-8c59-264fd41811b4
-ms.openlocfilehash: 818ce55e44d91520e568308a1a1e8a1fa0c8658d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5a723af1e32a7a2e78bfb099680dce3e9b710838
+ms.sourcegitcommit: bd7ddc044f9083246614b602ef6a758775313214
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62236764"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68866204"
 ---
 # <a name="cmfcribbongallery-class"></a>Classe CMFCRibbonGallery
 
-Galerias de faixa de opções de estilo do Office 2007 implementa.
-Para obter mais detalhes, consulte o código-fonte localizado na **VC\\atlmfc\\src\\mfc** pasta de instalação do Visual Studio.
+Implementa galerias de faixa de faixas de estilo do Office 2007.
+Para obter mais detalhes, consulte o código-fonte localizado na pasta **vc\\atlmfc\\src\\MFC** da instalação do Visual Studio.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -108,62 +108,63 @@ class CMFCRibbonGallery : public CMFCRibbonButton
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CMFCRibbonGallery::AddGroup](#addgroup)|Adiciona um novo grupo na Galeria.|
+|[CMFCRibbonGallery::AddGroup](#addgroup)|Adiciona um novo grupo à galeria.|
 |[CMFCRibbonGallery::AddSubItem](#addsubitem)|Adiciona um novo item de menu ao menu suspenso.|
-|[CMFCRibbonGallery::Clear](#clear)|Limpa o conteúdo da Galeria.|
-|[CMFCRibbonGallery::EnableMenuResize](#enablemenuresize)|Habilita ou desabilita o redimensionamento do painel do menu.|
+|[CMFCRibbonGallery::Clear](#clear)|Limpa o conteúdo da galeria.|
+|[CMFCRibbonGallery::EnableMenuResize](#enablemenuresize)|Habilita ou desabilita o redimensionamento do painel de menus.|
 |[CMFCRibbonGallery::EnableMenuSideBar](#enablemenusidebar)|Habilita ou desabilita a barra lateral à esquerda do menu pop-up.|
-|[CMFCRibbonGallery::GetCompactSize](#getcompactsize)|(Substitui [CMFCRibbonButton::GetCompactSize](../../mfc/reference/cmfcribbonbutton-class.md#getcompactsize).)|
-|[CMFCRibbonGallery::GetDroppedDown](#getdroppeddown)|(Substitui [CMFCRibbonBaseElement::GetDroppedDown](../../mfc/reference/cmfcribbonbaseelement-class.md#getdroppeddown).)|
-|[CMFCRibbonGallery::GetGroupName](#getgroupname)|Retorna o nome do grupo que está localizado no índice especificado.|
+|[CMFCRibbonGallery::GetCompactSize](#getcompactsize)|(Substitui [CMFCRibbonButton:: GetCompactSize](../../mfc/reference/cmfcribbonbutton-class.md#getcompactsize).)|
+|[CMFCRibbonGallery::GetDroppedDown](#getdroppeddown)|(Substitui [CMFCRibbonBaseElement:: GetDroppedDown](../../mfc/reference/cmfcribbonbaseelement-class.md#getdroppeddown).)|
+|[CMFCRibbonGallery::GetGroupName](#getgroupname)|Retorna o nome do grupo localizado no índice especificado.|
 |[CMFCRibbonGallery::GetGroupOffset](#getgroupoffset)||
-|[CMFCRibbonGallery::GetIconsInRow](#geticonsinrow)|Retorna o número de itens em uma linha da Galeria da faixa de opções.|
-|[CMFCRibbonGallery::GetItemToolTip](#getitemtooltip)|Retorna o texto de dica de ferramenta que está associado um item na Galeria.|
-|[CMFCRibbonGallery::GetLastSelectedItem](#getlastselecteditem)|Retorna o índice do último item na Galeria do que o usuário selecionado.|
+|[CMFCRibbonGallery::GetIconsInRow](#geticonsinrow)|Retorna o número de itens em uma linha da Galeria de faixa de das faixas.|
+|[CMFCRibbonGallery::GetItemToolTip](#getitemtooltip)|Retorna o texto da dica de ferramenta que está associado a um item na galeria.|
+|[CMFCRibbonGallery::GetLastSelectedItem](#getlastselecteditem)|Retorna o índice do último item da galeria que o usuário selecionou.|
 |[CMFCRibbonGallery::GetPaletteID](#getpaletteid)|Retorna a ID de comando da Galeria atual.|
-|[CMFCRibbonGallery::GetRegularSize](#getregularsize)|(Substitui [CMFCRibbonButton::GetRegularSize](../../mfc/reference/cmfcribbonbutton-class.md#getregularsize).)|
+|[CMFCRibbonGallery::GetRegularSize](#getregularsize)|(Substitui [CMFCRibbonButton:: GetRegularSize](../../mfc/reference/cmfcribbonbutton-class.md#getregularsize).)|
 |[CMFCRibbonGallery::GetSelectedItem](#getselecteditem)||
-|[CMFCRibbonGallery::HasMenu](#hasmenu)|(Substitui [CMFCRibbonButton::HasMenu](../../mfc/reference/cmfcribbonbutton-class.md#hasmenu).)|
-|[CMFCRibbonGallery::IsButtonMode](#isbuttonmode)|Especifica se a Galeria está contida em um botão na Galeria.|
+|[CMFCRibbonGallery::HasMenu](#hasmenu)|(Substitui [CMFCRibbonButton:: HasMenu](../../mfc/reference/cmfcribbonbutton-class.md#hasmenu).)|
+|[CMFCRibbonGallery::IsButtonMode](#isbuttonmode)|Especifica se a galeria está contida em um botão da galeria.|
 |[CMFCRibbonGallery::IsMenuResizeEnabled](#ismenuresizeenabled)|Especifica se o redimensionamento de menu está habilitado ou desabilitado.|
 |[CMFCRibbonGallery::IsMenuResizeVertical](#ismenuresizevertical)||
 |[CMFCRibbonGallery::IsMenuSideBar](#ismenusidebar)|Especifica se a barra lateral está habilitada ou desabilitada.|
 |[CMFCRibbonGallery::OnAfterChangeRect](#onafterchangerect)|(Substitui `CMFCRibbonButton::OnAfterChangeRect`.)|
-|[CMFCRibbonGallery::OnDraw](#ondraw)|(Substitui [CMFCRibbonButton::OnDraw](../../mfc/reference/cmfcribbonbutton-class.md#ondraw).)|
+|[CMFCRibbonGallery::OnDraw](#ondraw)|(Substitui [CMFCRibbonButton:: OnDraw](../../mfc/reference/cmfcribbonbutton-class.md#ondraw).)|
 |[CMFCRibbonGallery::OnEnable](#onenable)|(Substitui `CMFCRibbonBaseElement::OnEnable`.)|
-|[CMFCRibbonGallery::OnRTLChanged](#onrtlchanged)|(Substitui [CMFCRibbonBaseElement::OnRTLChanged](../../mfc/reference/cmfcribbonbaseelement-class.md#onrtlchanged).)|
-|[CMFCRibbonGallery::RedrawIcons](#redrawicons)|Redesenha a Galeria.|
-|[CMFCRibbonGallery::RemoveItemToolTips](#removeitemtooltips)|Remove as dicas de ferramentas de todos os itens da Galeria.|
+|[CMFCRibbonGallery::OnRTLChanged](#onrtlchanged)|(Substitui [CMFCRibbonBaseElement:: OnRTLChanged](../../mfc/reference/cmfcribbonbaseelement-class.md#onrtlchanged).)|
+|[CMFCRibbonGallery::RedrawIcons](#redrawicons)|Redesenha a galeria.|
+|[CMFCRibbonGallery::RemoveItemToolTips](#removeitemtooltips)|Remove as dicas de ferramenta de todos os itens na galeria.|
 |[CMFCRibbonGallery::SelectItem](#selectitem)||
-|[CMFCRibbonGallery::SetACCData](#setaccdata)|(Substitui [CMFCRibbonButton::SetACCData](../../mfc/reference/cmfcribbonbutton-class.md#setaccdata).)|
-|[CMFCRibbonGallery::SetButtonMode](#setbuttonmode)|Especifica se deve exibir a Galeria de faixa de opções, como um botão suspenso ou como uma paleta diretamente na faixa de opções.|
+|[CMFCRibbonGallery::SetACCData](#setaccdata)|(Substitui [CMFCRibbonButton:: SetACCData](../../mfc/reference/cmfcribbonbutton-class.md#setaccdata).)|
+|[CMFCRibbonGallery::SetButtonMode](#setbuttonmode)|Especifica se a Galeria de faixas de faixa será exibida como um botão suspenso ou como uma paleta diretamente na faixa de bits.|
 |[CMFCRibbonGallery::SetGroupName](#setgroupname)|Define o nome de um grupo.|
-|[CMFCRibbonGallery::SetIconsInRow](#seticonsinrow)|Define o número de itens por linha na Galeria.|
-|[CMFCRibbonGallery::SetItemToolTip](#setitemtooltip)|Define o texto de dica de ferramenta para um item na Galeria.|
-|[CMFCRibbonGallery::SetPalette](#setpalette)|Anexa uma paleta em uma galeria da faixa de opções.|
-|[CMFCRibbonGallery::SetPaletteID](#setpaletteid)|Define a ID de comando é enviada na mensagem WM_COMMAND, quando um item da Galeria foi selecionado.|
+|[CMFCRibbonGallery::SetIconsInRow](#seticonsinrow)|Define o número de itens por linha na galeria.|
+|[CMFCRibbonGallery::SetItemToolTip](#setitemtooltip)|Define o texto da dica de ferramenta para um item na galeria.|
+|[CMFCRibbonGallery::SetPalette](#setpalette)|Anexa uma paleta a uma galeria de faixa de faixas.|
+|[CMFCRibbonGallery::SetPaletteID](#setpaletteid)|Define a ID de comando que é enviada na mensagem WM_COMMAND quando um item de galeria é selecionado.|
 
 ### <a name="protected-methods"></a>Métodos Protegidos
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CMFCRibbonGallery::OnDrawPaletteIcon](#ondrawpaletteicon)|Chamado pelo framework quando um ícone de galeria é desenhado.|
+|[CMFCRibbonGallery::OnDrawPaletteIcon](#ondrawpaletteicon)|Chamado pelo Framework quando um ícone da galeria é desenhado.|
 
 ## <a name="remarks"></a>Comentários
 
-Um botão na Galeria se comporta exatamente como um botão de menu regular, exceto pelo fato de que ele exibe uma galeria quando um usuário o abre. Quando você seleciona um item em uma galeria, o framework envia a mensagem WM_COMMAND junto com a ID de comando do botão. Quando você processa a mensagem, você deve chamar [CMFCRibbonGallery::GetLastSelectedItem](#getlastselecteditem) para determinar qual item foi selecionado da Galeria.
+Um botão da Galeria se comporta exatamente como um botão de menu normal, exceto que ele exibe uma galeria quando um usuário a abre. Quando você seleciona um item em uma galeria, a estrutura envia a mensagem WM_COMMAND junto com a ID de comando do botão. Ao manipular a mensagem, você deve chamar [CMFCRibbonGallery:: GetLastSelectedItem](#getlastselecteditem) para determinar qual item foi selecionado na galeria.
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir demonstra como usar vários métodos na `CMFCRibbonGallery` classe para configurar um `CMFCRibbonGallery` objeto. O exemplo ilustra como especificar o número de itens por linha na galeria, habilitar o redimensionamento do painel do menu, a barra lateral à esquerda do menu pop-up e exibir a Galeria de faixa de opções como uma paleta diretamente na barra de faixa de opções. Este trecho de código é parte do [desenhar o cliente de exemplo](../../overview/visual-cpp-samples.md).
+O exemplo a seguir demonstra como usar vários métodos na `CMFCRibbonGallery` classe para configurar um `CMFCRibbonGallery` objeto. O exemplo ilustra como especificar o número de itens por linha na Galeria, habilitar o redimensionamento do painel de menus, habilitar a barra lateral à esquerda do menu pop-up e exibir a Galeria de faixas de faixa como uma paleta diretamente na barra da faixa de faixas. Este trecho de código faz parte do [exemplo de cliente de desenho](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_DrawClient#6](../../mfc/reference/codesnippet/cpp/cmfcribbongallery-class_1.cpp)]
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
-[CObject](../../mfc/reference/cobject-class.md) [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md) [CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md)
-
-[CMFCRibbonGallery](../../mfc/reference/cmfcribbongallery-class.md)
+[CObject](../../mfc/reference/cobject-class.md)\
+└&nbsp;[CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;└&nbsp;[CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└&nbsp;[CMFCRibbonGallery](../../mfc/reference/cmfcribbongallery-class.md)
 
 ## <a name="requirements"></a>Requisitos
 
@@ -171,7 +172,7 @@ O exemplo a seguir demonstra como usar vários métodos na `CMFCRibbonGallery` c
 
 ##  <a name="addgroup"></a>  CMFCRibbonGallery::AddGroup
 
-Adiciona um novo grupo na Galeria.
+Adiciona um novo grupo à galeria.
 
 ```
 void AddGroup(
@@ -191,25 +192,25 @@ void AddGroup(
 ### <a name="parameters"></a>Parâmetros
 
 *lpszGroupName*<br/>
-[in] Especifica o nome do grupo.
+no Especifica o nome do grupo.
 
 *uiImagesPaletteResID*<br/>
-[in] Especifica a ID do recurso da lista de imagens que contém as imagens para o grupo.
+no Especifica a ID de recurso da lista de imagens que contém as imagens do grupo.
 
 *cxPaletteImage*<br/>
-[in] Especifica a largura em pixels de uma imagem.
+no Especifica a largura em pixels de uma imagem.
 
 *imagesGroup*<br/>
-[in] Uma referência à lista de imagens que contém imagens de grupo.
+no Uma referência à lista de imagens que contém imagens de grupo.
 
 *nIconsNum*<br/>
-[in] Especifica o número de ícones do grupo. Esse parâmetro deve ser especificado apenas para personalizado (desenhados pelo proprietário) grupos.
+no Especifica o número de ícones no grupo. Esse parâmetro deve ser especificado somente para grupos personalizados (de desenho proprietário).
 
 ### <a name="remarks"></a>Comentários
 
-Você pode dividir os itens em uma galeria da faixa de opções em vários grupos ao chamar esse método. Cada grupo pode ter uma legenda.
+Você pode dividir os itens em uma galeria de faixas de faixa em vários grupos chamando esse método. Cada grupo pode ter uma legenda.
 
-##  <a name="addsubitem"></a>  CMFCRibbonGallery::AddSubItem
+##  <a name="addsubitem"></a>CMFCRibbonGallery::AddSubItem
 
 Adiciona um novo item de menu ao menu suspenso.
 
@@ -223,26 +224,26 @@ void AddSubItem(
 ### <a name="parameters"></a>Parâmetros
 
 *pSubItem*<br/>
-[in] Um ponteiro para o item a ser adicionado ao menu.
+no Um ponteiro para o item a ser adicionado ao menu.
 
 *nIndex*<br/>
-[in] Especifica o índice baseado em zero de um local de onde inserir o item.
+no Especifica o índice de base zero de um local onde inserir o item.
 
 *bOnTop*<br/>
-[in] TRUE para especificar que o item deve ser inserido antes da Galeria da faixa de opções; Caso contrário, FALSE.
+no TRUE para especificar que o item deve ser inserido antes da Galeria de faixa de das faixas; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-Você pode combinar galerias de pop-up com itens de menu pop-up ao chamar esse método. Itens de menu podem ser colocados antes ou depois da Galeria.
+Você pode combinar galerias pop-up com itens de menu pop-up chamando este método. Os itens de menu podem ser colocados antes ou depois da galeria.
 
-Para inserir o item antes da galeria, defina *bOnTop* como TRUE. Definir *bOnTop* como FALSE para inserir o item abaixo da Galeria.
+Para inserir o item antes da galeria, defina *bOnTop* como true. Defina *bOnTop* como false para inserir o item abaixo da galeria.
 
 > [!NOTE]
->  O parâmetro *nIndex* Especifica o índice de inserção na parte superior da galeria e na parte inferior da Galeria. Por exemplo, se você precisa inserir um item para uma posição antes do meio da galeria, defina *nIndex* como 1 e *bOnTop* como TRUE. Da mesma forma, se você precisa inserir um item para uma posição abaixo da galeria, defina *nIndex* como 1 e *bOnTop* como FALSE.
+>  O parâmetro *nIndex* especifica o índice de inserção na parte superior da galeria e na parte inferior da galeria. Por exemplo, se você precisar inserir um item com uma posição antes da galeria, defina *nIndex* como 1 e *bOnTop* como true. Da mesma forma, se você precisar inserir um item com uma posição abaixo da galeria, defina *nIndex* como 1 e *bOnTop* como false.
 
-##  <a name="clear"></a>  CMFCRibbonGallery::Clear
+##  <a name="clear"></a>CMFCRibbonGallery:: Clear
 
-Limpa o conteúdo da Galeria.
+Limpa o conteúdo da galeria.
 
 ```
 virtual void Clear();
@@ -250,11 +251,11 @@ virtual void Clear();
 
 ### <a name="remarks"></a>Comentários
 
-Chame esse método para remover todo o conteúdo da Galeria da faixa de opções. Isso deve ser feito antes de anexar uma nova Galeria de faixa de opções ou um conjunto de grupos na Galeria da faixa de opções.
+Chame esse método para remover todo o conteúdo da Galeria de faixa de das faixas. Isso deve ser feito antes de anexar uma nova galeria de faixas de faixa ou um conjunto de grupos à galeria de faixa de das faixas.
 
-##  <a name="cmfcribbongallery"></a>  CMFCRibbonGallery::CMFCRibbonGallery
+##  <a name="cmfcribbongallery"></a>CMFCRibbonGallery::CMFCRibbonGallery
 
-Constrói e inicializa um [CMFCRibbonGallery](../../mfc/reference/cmfcribbongallery-class.md) objeto.
+Constrói e inicializa um objeto [CMFCRibbonGallery](../../mfc/reference/cmfcribbongallery-class.md) .
 
 ```
 CMFCRibbonGallery (
@@ -285,40 +286,40 @@ CMFCRibbonGallery (
 ### <a name="parameters"></a>Parâmetros
 
 *nID*<br/>
-Especifica a ID do comando a ser executado quando um usuário clica no botão de comando.
+Especifica a ID de comando do comando a ser executado quando um usuário clica no botão.
 
 *lpszText*<br/>
 Especifica o texto a ser exibido no botão.
 
 *nSmallImageIndex*<br/>
-O índice baseado em zero da imagem pequena apareça no botão.
+O índice de base zero da imagem pequena a ser exibido no botão.
 
 *nLargeImageIndex*<br/>
-O índice baseado em zero da imagem grande para ser exibido no botão.
+O índice de base zero da imagem grande a ser exibido no botão.
 
 *imagesPalette*<br/>
-Uma referência para o [CMFCToolBarImages](../../mfc/reference/cmfctoolbarimages-class.md) objeto que contém as imagens para aparecer na Galeria.
+Uma referência ao objeto [CMFCToolBarImages](../../mfc/reference/cmfctoolbarimages-class.md) que contém as imagens a serem exibidas na galeria.
 
 *uiImagesPaletteResID*<br/>
-A ID de recurso da lista de imagens para exibir na Galeria.
+A ID de recurso da lista de imagens a serem exibidas na galeria.
 
 *cxPaletteImage*<br/>
-Especifica a largura, em pixels, da imagem na Galeria.
+Especifica a largura, em pixels, da imagem na galeria.
 
 *sizeIcon*<br/>
-Especifica o tamanho, em pixels, da imagem da Galeria.
+Especifica o tamanho, em pixels, da imagem da galeria.
 
 *nIconsNum*<br/>
-Especifica o número de ícones na Galeria.
+Especifica o número de ícones na galeria.
 
 *bDefaultButtonStyle*<br/>
-Especifica se deve usar o padrão ou o estilo de botão desenhado pelo proprietário.
+Especifica se o estilo de botão padrão ou desenhado no proprietário deve ser usado.
 
 ### <a name="remarks"></a>Comentários
 
 ##  <a name="enablemenuresize"></a>  CMFCRibbonGallery::EnableMenuResize
 
-Habilita ou desabilita o redimensionamento do painel do menu.
+Habilita ou desabilita o redimensionamento do painel de menus.
 
 ```
 void EnableMenuResize(
@@ -329,16 +330,16 @@ void EnableMenuResize(
 ### <a name="parameters"></a>Parâmetros
 
 *bEnable*<br/>
-[in] TRUE para habilitar o redimensionamento de menu; Caso contrário, FALSE.
+no TRUE para habilitar o redimensionamento do menu; caso contrário, FALSE.
 
 *bVertcalOnly*<br/>
-[in] TRUE para especificar que a Galeria pode ser redimensionada apenas verticalmente; FALSO para especificar que a Galeria pode ser redimensionada verticalmente e horizontalmente.
+no TRUE para especificar que a galeria pode ser redimensionada somente verticalmente; FALSE para especificar que a galeria pode ser redimensionada vertical e horizontalmente.
 
 ### <a name="remarks"></a>Comentários
 
-Use esse método para habilitar ou desabilitar o redimensionamento de galeria da faixa de opções. Quando o redimensionamento é habilitado, a Galeria de faixa de opções exibe uma garra em que um usuário pode usar para redimensioná-la.
+Use este método para habilitar ou desabilitar o redimensionamento da Galeria de faixa de das. Quando o redimensionamento está habilitado, a Galeria de faixa de faixas exibe uma garra que um usuário pode usar para redimensioná-lo.
 
-##  <a name="enablemenusidebar"></a>  CMFCRibbonGallery::EnableMenuSideBar
+##  <a name="enablemenusidebar"></a>CMFCRibbonGallery::EnableMenuSideBar
 
 Habilita ou desabilita a barra lateral à esquerda do menu pop-up.
 
@@ -349,13 +350,13 @@ void EnablMenuSideBar(BOOL bEnable=TRUE);
 ### <a name="parameters"></a>Parâmetros
 
 *bEnable*<br/>
-[in] TRUE para especificar que a barra lateral estiver habilitada; Caso contrário, FALSE.
+no TRUE para especificar que a barra lateral está habilitada; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-Chame esse método para habilitar ou desabilitar a barra lateral do estilo do Office XP, no lado esquerdo do menu.
+Chame esse método para habilitar ou desabilitar a barra lateral no estilo do Office XP no lado esquerdo do menu.
 
-##  <a name="getcompactsize"></a>  CMFCRibbonGallery::GetCompactSize
+##  <a name="getcompactsize"></a>CMFCRibbonGallery::GetCompactSize
 
 ```
 virtual CSize GetCompactSize(CDC* pDC);
@@ -363,7 +364,7 @@ virtual CSize GetCompactSize(CDC* pDC);
 
 ### <a name="parameters"></a>Parâmetros
 
-[in] *pDC*<br/>
+no *PDC*<br/>
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -381,7 +382,7 @@ virtual CMFCRibbonBaseElement* GetDroppedDown();
 
 ##  <a name="getgroupname"></a>  CMFCRibbonGallery::GetGroupName
 
-Retorna o nome do grupo que está localizado no índice especificado.
+Retorna o nome do grupo localizado no índice especificado.
 
 ```
 LPCTSTR GetGroupName(int nGroupIndex) const;
@@ -390,11 +391,11 @@ LPCTSTR GetGroupName(int nGroupIndex) const;
 ### <a name="parameters"></a>Parâmetros
 
 *nGroupIndex*<br/>
-[in] Especifica o índice baseado em zero para o grupo cujo nome você deseja recuperar.
+no Especifica o índice de base zero para o grupo cujo nome você deseja recuperar.
 
 ### <a name="return-value"></a>Valor de retorno
 
-O nome do grupo localizado no índice especificado. Passar um índice inválido resultará em uma declaração com falha.
+O nome do grupo localizado no índice especificado. A passagem de um índice inválido resultará em uma asserção com falha.
 
 ### <a name="remarks"></a>Comentários
 
@@ -410,7 +411,7 @@ virtual int GetGroupOffset() const;
 
 ##  <a name="geticonsinrow"></a>  CMFCRibbonGallery::GetIconsInRow
 
-Retorna o número de itens em uma linha da Galeria da faixa de opções.
+Retorna o número de itens em uma linha da Galeria de faixa de das faixas.
 
 ```
 int GetIconsInRow() const;
@@ -424,7 +425,7 @@ O número de itens em uma linha.
 
 ##  <a name="getitemtooltip"></a>  CMFCRibbonGallery::GetItemToolTip
 
-Retorna o texto de dica de ferramenta que está associado um item na Galeria.
+Retorna o texto da dica de ferramenta que está associado a um item na galeria.
 
 ```
 LPCTSTR GetItemToolTip(int nItemIndex) const;
@@ -433,17 +434,17 @@ LPCTSTR GetItemToolTip(int nItemIndex) const;
 ### <a name="parameters"></a>Parâmetros
 
 *nItemIndex*<br/>
-[in] Especifica o índice baseado em zero do item para o qual recuperar o texto de dica de ferramenta.
+no Especifica o índice de base zero do item para o qual recuperar o texto da dica de ferramenta.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Um ponteiro para a cadeia de caracteres de dica de ferramenta atribuído a um item na Galeria da faixa de opções. Ele pode ser NULL se nenhuma dica de ferramenta é atribuída a esse item.
+Um ponteiro para a cadeia de caracteres de dica de ferramenta atribuída a um item na Galeria de faixas. Ele poderá ser nulo se nenhuma dica de ferramenta for atribuída a esse item.
 
 ### <a name="remarks"></a>Comentários
 
 ##  <a name="getlastselecteditem"></a>  CMFCRibbonGallery::GetLastSelectedItem
 
-Retorna o índice do último item na Galeria da faixa de opções que o usuário selecionado.
+Retorna o índice do último item na Galeria da faixa de faixas que o usuário selecionou.
 
 ```
 static int GetLastSelectedItem(UINT uiCmdID);
@@ -452,17 +453,17 @@ static int GetLastSelectedItem(UINT uiCmdID);
 ### <a name="parameters"></a>Parâmetros
 
 *uiCmdID*<br/>
-[in] Especifica a ID do item de menu que abriu a Galeria de faixa de opções de comando.
+no Especifica a ID de comando do item de menu que abriu a Galeria de faixa de das faixas.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Quando o usuário seleciona qualquer item na Galeria da faixa de opções, a biblioteca envia a mensagem WM_COMMAND, juntamente com a ID de comando do botão de menu que abriu a Galeria de faixa de opções.
+Quando o usuário seleciona qualquer item na Galeria de faixa de das faixas, a biblioteca envia a mensagem WM_COMMAND junto com a ID de comando do botão de menu que abriu a Galeria de faixa de das.
 
 ### <a name="remarks"></a>Comentários
 
 ##  <a name="getpaletteid"></a>  CMFCRibbonGallery::GetPaletteID
 
-Retorna a ID de comando da paleta do atual.
+Retorna a ID de comando da paleta atual.
 
 ```
 int GetPaletteID() const;
@@ -482,7 +483,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 
 ### <a name="parameters"></a>Parâmetros
 
-[in] *pDC*<br/>
+no *PDC*<br/>
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -508,9 +509,9 @@ virtual BOOL HasMenu() const;
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="isbuttonmode"></a>  CMFCRibbonGallery::IsButtonMode
+##  <a name="isbuttonmode"></a>CMFCRibbonGallery:: isbuttonmode
 
-Especifica se a paleta está contida em um botão na Galeria.
+Especifica se a paleta está contida em um botão da galeria.
 
 ```
 BOOL IsButtonMode() const;
@@ -518,7 +519,7 @@ BOOL IsButtonMode() const;
 
 ### <a name="return-value"></a>Valor de retorno
 
-TRUE se a paleta é exibida como um botão de menu suspenso; FALSE se a paleta é exibida diretamente na faixa de opções.
+TRUE se a paleta for exibida como um botão de menu suspenso; FALSE se a paleta for exibida diretamente na faixa de faixas.
 
 ### <a name="remarks"></a>Comentários
 
@@ -532,7 +533,7 @@ BOOL IsMenuResizeEnabled() const;
 
 ### <a name="return-value"></a>Valor de retorno
 
-TRUE se o redimensionamento do menu estiver habilitado; Caso contrário, FALSE.
+TRUE se o redimensionamento do menu tiver sido habilitado; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
@@ -556,7 +557,7 @@ BOOL IsMenuSideBar() const;
 
 ### <a name="return-value"></a>Valor de retorno
 
-TRUE se a barra lateral do estilo do Office XP é desenhada no lado esquerdo do menu pop-up; Caso contrário, FALSE.
+TRUE se a barra lateral do estilo do Office XP for desenhada no lado esquerdo do menu pop-up; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
@@ -568,11 +569,11 @@ virtual void OnAfterChangeRect(CDC* pDC);
 
 ### <a name="parameters"></a>Parâmetros
 
-[in] *pDC*<br/>
+no *PDC*<br/>
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="ondraw"></a>  CMFCRibbonGallery::OnDraw
+##  <a name="ondraw"></a>CMFCRibbonGallery:: OnDraw
 
 ```
 virtual void OnDraw(CDC* pDC);
@@ -580,13 +581,13 @@ virtual void OnDraw(CDC* pDC);
 
 ### <a name="parameters"></a>Parâmetros
 
-[in] *pDC*<br/>
+no *PDC*<br/>
 
 ### <a name="remarks"></a>Comentários
 
 ##  <a name="ondrawpaletteicon"></a>  CMFCRibbonGallery::OnDrawPaletteIcon
 
-Chamado pelo framework quando um ícone de galeria é desenhado.
+Chamado pelo Framework quando um ícone da galeria é desenhado.
 
 ```
 virtual void OnDrawPaletteIcon(
@@ -600,23 +601,23 @@ virtual void OnDrawPaletteIcon(
 ### <a name="parameters"></a>Parâmetros
 
 *pDC*<br/>
-[in] Um ponteiro para o contexto de dispositivo que é usado para desenhar.
+no Um ponteiro para o contexto do dispositivo que é usado para desenhar.
 
 *rectIcon*<br/>
-[in] Especifica o retângulo delimitador do ícone para desenhar.
+no Especifica o retângulo delimitador do ícone a ser desenhado.
 
 *nIconIndex*<br/>
-[in] Especifica o índice baseado em zero na lista de imagens de ícones da Galeria do ícone para desenhar.
+no Especifica o índice de base zero na lista de imagens de ícones da galeria do ícone a ser desenhado.
 
 *pIcon*<br/>
-[in] Um ponteiro para o ícone que está sendo desenhado.
+no Um ponteiro para o ícone que está sendo desenhado.
 
 *clrText*<br/>
-[in] Especifica a cor do texto do item a ser desenhado.
+no Especifica a cor do texto do item a ser desenhado.
 
 ### <a name="remarks"></a>Comentários
 
-Você pode substituir esse método em uma classe derivada para personalizar a aparência de uma galeria da faixa de opções.
+Você pode substituir esse método em uma classe derivada para personalizar a aparência de uma galeria de faixas de uma.
 
 ##  <a name="onenable"></a>  CMFCRibbonGallery::OnEnable
 
@@ -626,11 +627,11 @@ virtual void OnEnable(BOOL bEnable);
 
 ### <a name="parameters"></a>Parâmetros
 
-[in] *bAtivar*<br/>
+no *bEnable*<br/>
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="onrtlchanged"></a>  CMFCRibbonGallery::OnRTLChanged
+##  <a name="onrtlchanged"></a>CMFCRibbonGallery::OnRTLChanged
 
 ```
 virtual void OnRTLChanged(BOOL bIsRTL);
@@ -644,7 +645,7 @@ virtual void OnRTLChanged(BOOL bIsRTL);
 
 ##  <a name="redrawicons"></a>  CMFCRibbonGallery::RedrawIcons
 
-Redesenha a Galeria.
+Redesenha a galeria.
 
 ```
 void RedrawIcons();
@@ -652,11 +653,11 @@ void RedrawIcons();
 
 ### <a name="remarks"></a>Comentários
 
-Chame essa função para redesenhar a Galeria. Você deve chamar esse método se você tiver alterado o conteúdo da galeria no tempo de execução.
+Chame essa função para redesenhar a galeria. Você deve chamar esse método se tiver alterado o conteúdo da galeria em tempo de execução.
 
 ##  <a name="removeitemtooltips"></a>  CMFCRibbonGallery::RemoveItemToolTips
 
-Remove as dicas de ferramentas de todos os itens da Galeria.
+Remove as dicas de ferramenta de todos os itens na galeria.
 
 ```
 void RemoveItemToolTips();
@@ -664,7 +665,7 @@ void RemoveItemToolTips();
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="selectitem"></a>  CMFCRibbonGallery::SelectItem
+##  <a name="selectitem"></a>CMFCRibbonGallery::SelectItem
 
 ```
 void SelectItem(int nItemIndex);
@@ -672,13 +673,13 @@ void SelectItem(int nItemIndex);
 
 ### <a name="parameters"></a>Parâmetros
 
-[in] *nItemIndex*<br/>
+no *nItemIndex*<br/>
 
 ### <a name="remarks"></a>Comentários
 
 ##  <a name="setaccdata"></a>  CMFCRibbonGallery::SetACCData
 
-Popula especificado `CAccessibilityData` objeto usando os dados de acessibilidade da Galeria da faixa de opções.
+Popula o objeto especificado `CAccessibilityData` usando dados de acessibilidade da Galeria de faixa de das faixas.
 
 ```
 virtual BOOL SetACCData(
@@ -689,20 +690,20 @@ virtual BOOL SetACCData(
 ### <a name="parameters"></a>Parâmetros
 
 *pParent*<br/>
-[in] A janela pai da janela de galeria da faixa de opções.
+no A janela pai da janela da Galeria da faixa de faixas.
 
 *data*<br/>
-[out] Um `CAccessibilityData` objeto que recebe os dados de acessibilidade da Galeria da faixa de opções.
+fora Um `CAccessibilityData` objeto que recebe os dados de acessibilidade da Galeria de faixa de das faixas.
 
 ### <a name="return-value"></a>Valor de retorno
 
 ### <a name="remarks"></a>Comentários
 
-TRUE se o método for bem-sucedido; Caso contrário, FALSE.
+TRUE se o método for bem-sucedido; caso contrário, FALSE.
 
 ##  <a name="setbuttonmode"></a>  CMFCRibbonGallery::SetButtonMode
 
-Determina se deve exibir a Galeria de faixa de opções, como um botão suspenso ou como uma paleta diretamente na faixa de opções.
+Determina se a Galeria de faixa de faixas será exibida como um botão suspenso ou como uma paleta diretamente na faixa de bits.
 
 ```
 void SetButtonMode(BOOL bSet=TRUE);
@@ -711,7 +712,7 @@ void SetButtonMode(BOOL bSet=TRUE);
 ### <a name="parameters"></a>Parâmetros
 
 *bSet*<br/>
-[in] TRUE para exibir a Galeria de faixa de opções como um botão de menu suspenso; FALSO para exibir o conteúdo da Galeria da faixa de opções diretamente na faixa de opções.
+no TRUE para exibir a Galeria de faixa de bits como um botão de menu suspenso; FALSE para exibir o conteúdo da Galeria de faixas de faixa diretamente na faixa de faixas.
 
 ### <a name="remarks"></a>Comentários
 
@@ -728,18 +729,18 @@ void SetGroupName(
 ### <a name="parameters"></a>Parâmetros
 
 *nGroupIndex*<br/>
-[in] Especifica o índice baseado em zero para o grupo para o qual o nome está sendo alterado.
+no Especifica o índice de base zero para o grupo para o qual o nome está sendo alterado.
 
 *lpszGroupName*<br/>
-[in] Especifica o novo nome para o grupo.
+no Especifica o novo nome do grupo.
 
 ### <a name="remarks"></a>Comentários
 
-O grupo que está sendo alterado cujo nome deve ter sido adicionado usando o [CMFCRibbonGallery::AddGroup](#addgroup) método.
+O grupo cujo nome está sendo alterado deve ter sido adicionado usando o método [CMFCRibbonGallery:: addgroup](#addgroup) .
 
 ##  <a name="seticonsinrow"></a>  CMFCRibbonGallery::SetIconsInRow
 
-Especifica o número de itens por linha na Galeria.
+Especifica o número de itens por linha na galeria.
 
 ```
 void SetIconsInRow(int nIconsInRow);
@@ -748,15 +749,15 @@ void SetIconsInRow(int nIconsInRow);
 ### <a name="parameters"></a>Parâmetros
 
 *nIconsInRow*<br/>
-[in] Especifica o número de itens sejam exibidos em cada linha da Galeria.
+no Especifica o número de itens a serem exibidos em cada linha da galeria.
 
 ### <a name="remarks"></a>Comentários
 
-Use esse método para especificar a largura da Galeria da faixa de opções.
+Use este método para especificar a largura da Galeria de faixas de bits.
 
 ##  <a name="setitemtooltip"></a>  CMFCRibbonGallery::SetItemToolTip
 
-Define o texto de dica de ferramenta para um item na Galeria.
+Define o texto da dica de ferramenta para um item na galeria.
 
 ```
 void SetItemToolTip(
@@ -767,16 +768,16 @@ void SetItemToolTip(
 ### <a name="parameters"></a>Parâmetros
 
 *nItemIndex*<br/>
-[in] O índice baseado em zero do item da paleta ao qual associar a dica de ferramenta.
+no O índice de base zero do item de paleta ao qual associar a dica de ferramenta.
 
 *lpszToolTip*<br/>
-[in] O texto a ser exibido na dica de ferramenta.
+no O texto a ser exibido na dica de ferramenta.
 
 ### <a name="remarks"></a>Comentários
 
 ##  <a name="setpalette"></a>  CMFCRibbonGallery::SetPalette
 
-Anexa uma paleta em uma galeria da faixa de opções.
+Anexa uma paleta a uma galeria de faixa de faixas.
 
 ```
 void SetPalette(CMFCToolBarImages& imagesPalette);
@@ -789,19 +790,19 @@ void SetPalette(
 ### <a name="parameters"></a>Parâmetros
 
 *imagesPalette*<br/>
-[in] Especifica a lista de imagens que contém os ícones para aparecer na Galeria.
+no Especifica a lista de imagens que contém os ícones a serem exibidos na galeria.
 
 *uiImagesPaletteResID*<br/>
-[in] Especifica a ID do recurso da lista de imagens que contém os ícones para aparecer na Galeria.
+no Especifica a ID de recurso da lista de imagens que contém os ícones a serem exibidos na galeria.
 
 *cxPaletteImage*<br/>
-[in] Especifica a largura, em pixels, de uma imagem na Galeria.
+no Especifica a largura, em pixels, de uma imagem na galeria.
 
 ### <a name="remarks"></a>Comentários
 
 ##  <a name="setpaletteid"></a>  CMFCRibbonGallery::SetPaletteID
 
-Define a ID de comando é enviada na mensagem WM_COMMAND quando um usuário seleciona um item da Galeria.
+Define a ID de comando que é enviada na mensagem WM_COMMAND quando um usuário seleciona um item da galeria.
 
 ```
 void SetPaletteID(UINT nID);
@@ -810,11 +811,11 @@ void SetPaletteID(UINT nID);
 ### <a name="parameters"></a>Parâmetros
 
 *nID*<br/>
-[in] Especifica a ID de comando é enviada na mensagem WM_COMMAND quando um usuário seleciona um item da Galeria.
+no Especifica a ID de comando que é enviada na mensagem WM_COMMAND quando um usuário seleciona um item da galeria.
 
 ### <a name="remarks"></a>Comentários
 
-Para determinar o item específico que um usuário selecionado da galeria, chame o [CMFCRibbonGallery::GetLastSelectedItem](#getlastselecteditem) método estático.
+Para determinar o item específico que um usuário selecionou na Galeria, chame o método estático [CMFCRibbonGallery:: GetLastSelectedItem](#getlastselecteditem) .
 
 ## <a name="see-also"></a>Consulte também
 

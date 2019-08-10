@@ -7,28 +7,28 @@ helpviewer_keywords:
 - rich edit controls [MFC], notifications
 - notifications [MFC], from CRichEditCtrl
 ms.assetid: eb5304fe-f4f3-4557-9ebf-3095dea383c4
-ms.openlocfilehash: fcb1dda1d915dc13e01effed9ba99070b825a15e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bc4c027ff26df89539b22c6d04f1d1dc95fc459a
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62238204"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68916395"
 ---
 # <a name="notifications-from-a-rich-edit-control"></a>Notificações de um controle de edição avançada
 
-Mensagens de notificação de eventos que afetam uma avançada de controle de edição de relatório ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)). Eles podem ser processados pela janela pai ou, usando a reflexão de mensagem, por sofisticada Editar controle em si. Controles de edição de rich dar suporte a todas as mensagens de notificação usadas com controles de edição, bem como vários outros adicionais. Você pode determinar quais mensagens de notificação um controle rich edit envia sua janela pai, definindo sua "máscara de evento".
+Mensagens de notificação relatam eventos que afetam um[CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)(Rich Edit Control). Eles podem ser processados pela janela pai ou, usando a reflexão de mensagem, pelo próprio controle de edição. Os controles de edição avançados dão suporte a todas as mensagens de notificação usadas com controles de edição, bem como várias outras. Você pode determinar quais mensagens de notificação um controle de edição avançado envia sua janela pai definindo sua "máscara de evento".
 
-Para definir a máscara de evento de controle de edição de um ricos, use o [SetEventMask](../mfc/reference/cricheditctrl-class.md#seteventmask) função de membro. Você pode recuperar a máscara de evento atual para o controle de edição de um avançado usando o [GetEventMask](../mfc/reference/cricheditctrl-class.md#geteventmask) função de membro.
+Para definir a máscara de evento para um controle de edição rico, use a função de membro [SetEventMask](../mfc/reference/cricheditctrl-class.md#seteventmask) . Você pode recuperar a máscara de evento atual para um controle de edição rico usando a função de membro [GetEventMask](../mfc/reference/cricheditctrl-class.md#geteventmask) .
 
 Os parágrafos a seguir listam várias notificações específicas e seus usos:
 
-- EN_MSGFILTER tratando a notificação EN_MSGFILTER permite que uma classe, ou o controle rich edit ou sua janela pai, todos os teclado e mouse ao controle de entrada de filtro. O manipulador pode impedir que a mensagem do teclado ou mouse que está sendo processado ou pode alterar a mensagem modificando especificado [filtro de mensagens](/windows/desktop/api/richedit/ns-richedit-_msgfilter) estrutura.
+- EN_MSGFILTER manipular a notificação EN_MSGFILTER permite que uma classe, o controle de edição rico ou sua janela pai, filtre todas as entradas de teclado e mouse para o controle. O manipulador pode impedir que a mensagem de teclado ou mouse seja processada ou pode alterar a mensagem modificando a estrutura [MSGFILTER](/windows/desktop/api/richedit/ns-richedit-msgfilter) especificada.
 
-- EN_PROTECTED lidar com a mensagem de notificação EN_PROTECTED para detectar quando o usuário tenta modificar texto protegido. Para marcar um intervalo de texto como protegido, você pode definir o efeito de caractere protegido. Para obter mais informações, consulte [formatação de caracteres em controles de edição de Rich](../mfc/character-formatting-in-rich-edit-controls.md).
+- EN_PROTECTED manipule a mensagem de notificação EN_PROTECTED para detectar quando o usuário tenta modificar o texto protegido. Para marcar um intervalo de texto como protegido, você pode definir o efeito de caractere protegido. Para obter mais informações, consulte [formatação de caracteres em controles de edição avançados](../mfc/character-formatting-in-rich-edit-controls.md).
 
-- EN_DROPFILES você pode habilitar o usuário soltar arquivos em um controle rich edit processando a mensagem de notificação EN_DROPFILES. Especificado [ENDROPFILES](/windows/desktop/api/richedit/ns-richedit-_endropfiles) estrutura contém informações sobre os arquivos que está sendo descartada.
+- EN_DROPFILES você pode habilitar o usuário a soltar arquivos em um controle de edição rico processando a mensagem de notificação EN_DROPFILES. A estrutura [ENDROPFILES](/windows/desktop/api/richedit/ns-richedit-endropfiles) especificada contém informações sobre os arquivos que estão sendo removidos.
 
-- EN_SELCHANGE um aplicativo pode detectar quando a seleção atual é alterado pelo processamento da mensagem de notificação EN_SELCHANGE. Especifica a mensagem de notificação de um [SELCHANGE](/windows/desktop/api/richedit/ns-richedit-_selchange) estrutura que contém informações sobre a nova seleção.
+- EN_SELCHANGE um aplicativo pode detectar quando a seleção atual muda processando a mensagem de notificação EN_SELCHANGE. A mensagem de notificação especifica uma estrutura [SELCHANGE](/windows/desktop/api/richedit/ns-richedit-selchange) que contém informações sobre a nova seleção.
 
 ## <a name="see-also"></a>Consulte também
 

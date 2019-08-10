@@ -4,14 +4,14 @@ ms.custom: how-to
 ms.date: 05/22/2019
 ms.topic: conceptual
 ms.assetid: 7d6ebb73-fa0d-4b0b-a528-bf05de96518e
-ms.openlocfilehash: ac6db74122383ef8adb0f208860a6f6fba02dcc7
-ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
+ms.openlocfilehash: d0ee1a5e8c5d26e8e0bec060ffe3d5fea30ce0fa
+ms.sourcegitcommit: bd7ddc044f9083246614b602ef6a758775313214
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66821689"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68866144"
 ---
-# <a name="how-to-create-and-use-sharedptr-instances"></a>Como: Criar e usar instâncias shared_ptr
+# <a name="how-to-create-and-use-shared_ptr-instances"></a>Como: Criar e usar instâncias shared_ptr
 
 O tipo `shared_ptr` é um ponteiro inteligente na biblioteca padrão do C++ que foi projetado para cenários em que mais de um proprietário pode ter que gerenciar o tempo de vida do objeto na memória. Depois de inicializar um `shared_ptr`, você pode copiá-lo, passá-lo pelo valor em argumentos de função e atribuí-lo a outras instâncias `shared_ptr`. Todas as instâncias apontam para o mesmo objeto e compartilham o acesso a um "bloco de controle" que incrementa e decrementa a contagem de referência sempre que um novo `shared_ptr` é adicionado, sai do escopo ou é redefinido. Quando a contagem de referência alcança zero, o bloco de controle exclui o recurso de memória e ele mesmo.
 
@@ -84,7 +84,7 @@ O exemplo a seguir mostra como declarar e inicializar instâncias `shared_ptr` q
 
 ## <a name="example-3"></a>Exemplo 3:
 
-`shared_ptr` também será útil em contêineres da Biblioteca Padrão do C++ quando você estiver usando algoritmos que copiam elementos. Você pode encapsular os elementos em um `shared_ptr` e, em seguida, copiá-lo em outros contêineres sabendo que a memória subjacente é válida somente pelo tempo em que for necessária. O exemplo a seguir mostra como usar o algoritmo `replace_copy_if` em instâncias `shared_ptr` em um vetor.
+`shared_ptr` também será útil em contêineres da Biblioteca Padrão do C++ quando você estiver usando algoritmos que copiam elementos. Você pode encapsular os elementos em um `shared_ptr` e, em seguida, copiá-lo em outros contêineres sabendo que a memória subjacente é válida somente pelo tempo em que for necessária. O exemplo a seguir mostra como usar o algoritmo `remove_copy_if` em instâncias `shared_ptr` em um vetor.
 
 [!code-cpp[stl_smart_pointers#4](../cpp/codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_3.cpp)]
 
