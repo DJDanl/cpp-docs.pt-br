@@ -1,22 +1,21 @@
 ---
 title: Criar um projeto de makefile C++ no Visual Studio
-ms.date: 05/16/2019
+ms.date: 08/05/2019
 f1_keywords:
 - vc.appwiz.makefile.project
 helpviewer_keywords:
-- Makefile projects, creating
-- project files [C++], Makefile projects
+- Makefile projects [C++]
 ms.assetid: dd077af3-97a8-48fb-baaa-cf7e07ddef61
-ms.openlocfilehash: b460b16b3a64818501187b00e503ad0179d26443
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.openlocfilehash: 861cd88440a697ce5a3abc83109526227ae42f8e
+ms.sourcegitcommit: bd7ddc044f9083246614b602ef6a758775313214
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837387"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68866128"
 ---
 # <a name="create-a-c-makefile-project"></a>Criar um projeto de makefile C++
 
-Um *makefile* é um arquivo de texto que contém instruções sobre como criar e vincular (ou *compilar*) um conjunto de arquivos de código-fonte do C++. Um programa *make* lê o makefile e invoca um compilador, vinculador e possivelmente outros programas para criar um arquivo executável. A implementação do programa *make* pela Microsoft é chamada [NMAKE](nmake-reference.md);
+Um *makefile* é um arquivo de texto que contém instruções sobre como criar e vincular (ou *compilar*) um conjunto de arquivos de código-fonte do C++. Um programa *make* lê o makefile e invoca um compilador, vinculador e possivelmente outros programas para criar um arquivo executável. A implementação do programa *make* pela Microsoft é chamada [NMAKE](nmake-reference.md).
 
 Se tiver um projeto makefile existente, você terá estas opções se desejar codificar e/ou depurá-lo no Visual Studio IDE:
 
@@ -25,7 +24,7 @@ Se tiver um projeto makefile existente, você terá estas opções se desejar co
 - **Visual Studio 2017 e posterior**: Use a funcionalidade **Abrir Pasta** para editar e compilar um projeto de makefile no estado em que se encontra, sem nenhum envolvimento do sistema MSBuild. Para saber mais, veja [Projetos Open Folder para C++](../open-folder-projects-cpp.md).
 - **Visual Studio 2019 e posterior**: Crie um projeto de makefile do UNIX para o Linux.
 
-## <a name="a-namecreateamakefileproject-to-create-a-makefile-project-with-the-makefile-project-template"></a><a name="create_a_makefile_project"> Para criar um projeto de makefile com o modelo de projeto de makefile
+## <a name="a-namecreate_a_makefile_project-to-create-a-makefile-project-with-the-makefile-project-template"></a><a name="create_a_makefile_project"> Para criar um projeto de makefile com o modelo de projeto de makefile
 
 No Visual Studio 2017 e posterior, o modelo de projeto Makefile estará disponível quando a carga de trabalho de Desenvolvimento do C++ da área de trabalho for instalada.
 
@@ -39,7 +38,7 @@ O arquivo de saída que você especifica no projeto não tem efeito no nome que 
 
 ### <a name="to-create-a-makefile-project-in-visual-studio-2019"></a>Para criar um projeto de makefile no Visual Studio 2019
 
-1. No menu principal do Visual Studio, escolha **Arquivo** > **Novo** > **Projeto** e digite "makefile" na caixa de pesquisa. Ou, na caixa de diálogo **Novo Projeto**, expanda **Visual C++** > **Geral** (Visual Studio 2015) ou **Outros** (Visual Studio 2017) e, em seguida, selecione uma das duas opções, dependendo se o Windows ou o Linux será direcionado.
+1. No menu principal do Visual Studio, escolha **Arquivo** > **Novo** > **Projeto** e digite "makefile" na caixa de pesquisa. Ou, na caixa de diálogo **Novo Projeto**, expanda **Visual C++**  > **Geral** (Visual Studio 2015) ou **Outros** (Visual Studio 2017) e, em seguida, selecione uma das duas opções, dependendo se o Windows ou o Linux será direcionado.
 
 1. **Somente Windows**: Na página **Definições da Configuração de Depuração**, forneça as informações de comando, saída, limpeza e recompilação para builds de depuração e varejo. Clique em **Avançar** se desejar especificar configurações diferentes para uma configuração de Versão.
 
@@ -51,7 +50,7 @@ O arquivo de saída que você especifica no projeto não tem efeito no nome que 
 
 ### <a name="to-create-a-makefile-project-in-visual-studio-2015-or-visual-studio-2017"></a>Para criar um projeto de makefile no Visual Studio 2015 ou no Visual Studio 2017
 
-1. Na página inicial do Visual Studio, digite "makefile" na caixa de pesquisa **Novo projeto**. Ou, na caixa de diálogo **Novo Projeto**, expanda **Visual C++** > **Geral** (Visual Studio 2015) ou **Outro** (Visual Studio 2017) e, em seguida, selecione **Projeto Makefile** no painel Modelos para abrir o assistente de projeto.
+1. Na página inicial do Visual Studio, digite "makefile" na caixa de pesquisa **Novo projeto**. Ou, na caixa de diálogo **Novo Projeto**, expanda **Visual C++**  > **Geral** (Visual Studio 2015) ou **Outro** (Visual Studio 2017) e, em seguida, selecione **Projeto Makefile** no painel Modelos para abrir o assistente de projeto.
 
 1. Na página **Configurações de Aplicativo**, forneça as informações de comando, saída, limpeza e recompilação para builds de depuração e varejo.
 

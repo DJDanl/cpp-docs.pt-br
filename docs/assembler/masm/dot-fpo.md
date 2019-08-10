@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - .FPO directive
 ms.assetid: 35f4cd61-32f9-4262-b657-73f04f775d09
-ms.openlocfilehash: 83d6e81ea7dd35038f27f2721f3cc41fe49ef1bc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3bdb6af98aa71fef3d4af24091dc7463d917ce15
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62204052"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68915956"
 ---
 # <a name="fpo"></a>.FPO
 
-A. Diretiva FPO controla a emissão de registros de depuração para o segmento de F. Debug$ ou seção.
+Dos. A diretiva FPO controla a emissão de registros de depuração para o segmento. Debug $ F ou a seção.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -24,22 +24,22 @@ A. Diretiva FPO controla a emissão de registros de depuração para o segmento 
 ### <a name="parameters"></a>Parâmetros
 
 *cdwLocals*<br/>
-Número de variáveis locais, um valor sem sinal de 32 bits.
+Número de variáveis locais, um valor de bit de 32 não assinado.
 
 *cdwParams*<br/>
-Tamanho dos parâmetros no DWORDS, um valor sem sinal de 16 bits.
+Tamanho dos parâmetros em DWORDs, um valor de 16 bits não assinado.
 
 *cbProlog*<br/>
-Número de bytes no código de prólogo da função, um valor de 8 bits sem sinal.
+Número de bytes no código de prólogo da função, um valor de 8 bits não assinado.
 
 *cbRegs*<br/>
 Número de registros salvos.
 
 *fUseBP*<br/>
-Indica se o registro EBP foi alocado. 0 ou 1.
+Indica se o Registro EBP foi alocado. 0 ou 1.
 
 *cbFrame*<br/>
-Indica o tipo de quadro.  Ver [FPO_DATA](/windows/desktop/api/winnt/ns-winnt-_fpo_data) para obter mais informações.
+Indica o tipo de quadro.  Consulte [FPO_DATA](/windows/desktop/api/winnt/ns-winnt-fpo_data) para obter mais informações.
 
 ## <a name="see-also"></a>Consulte também
 

@@ -7,28 +7,28 @@ helpviewer_keywords:
 - image lists [MFC], drawing images from
 - images [MFC], drawing
 ms.assetid: 2f6063fb-1c28-45f8-a333-008c064db11c
-ms.openlocfilehash: e2058c727620c9aae4ccd9a3fbeaae02c78ce8c6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e4e60f0e6e4ee22712e4bbce344fd6437cf3db7e
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62262795"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68916419"
 ---
 # <a name="drawing-images-from-an-image-list"></a>Desenhando imagens a partir de uma lista de imagens
 
-Para desenhar uma imagem, use o [CImageList::Draw](../mfc/reference/cimagelist-class.md#draw) função de membro. Você especificará um ponteiro para um objeto de contexto de dispositivo, o índice da imagem para desenhar o local no contexto de dispositivo no qual desenhar a imagem e um conjunto de sinalizadores para indicar o estilo de desenho.
+Para desenhar uma imagem, use a função de membro [bruto CImageList::D](../mfc/reference/cimagelist-class.md#draw) . Você especificará um ponteiro para um objeto de contexto do dispositivo, o índice da imagem a ser desenhado, o local no contexto do dispositivo no qual desenhar a imagem e um conjunto de sinalizadores para indicar o estilo do desenho.
 
-Quando você especifica o **ILD_TRANSPARENT** estilo, `Draw` usa um processo em duas etapas para desenhar uma imagem mascarada. Primeiro, ele executa uma operação lógica – e operação nos bits da imagem e os bits da máscara. Em seguida, ele executa uma operação de XOR lógico sobre os resultados da primeira operação e os bits de plano de fundo do contexto de dispositivo de destino. Esse processo cria áreas transparentes na imagem resultante. ou seja, cada branco bit na máscara faz com que o bit correspondente na imagem resultante para ser transparente.
+Quando você especifica o estilo **ILD_TRANSPARENT** , `Draw` o usa um processo de duas etapas para desenhar uma imagem mascarada. Primeiro, ele executa uma operação AND lógica nos bits da imagem e nos bits da máscara. Em seguida, ele executa uma operação XOR lógico nos resultados da primeira operação e nos bits de segundo plano do contexto do dispositivo de destino. Esse processo cria áreas transparentes na imagem resultante; ou seja, cada bit branco na máscara faz com que o bit correspondente na imagem resultante seja transparente.
 
-Antes de desenhar uma imagem mascarada em um plano de fundo de cor sólida, você deve usar o [SetBkColor](../mfc/reference/cimagelist-class.md#setbkcolor) a função de membro para definir a cor de plano de fundo da lista de imagens para a mesma cor como o destino. Configurando a cor elimina a necessidade de criar áreas transparentes da imagem e habilita `Draw` simplesmente copiar a imagem para o contexto de dispositivo de destino, resultando em um aumento significativo no desempenho. Para desenhar a imagem, especifique o **ILD_NORMAL** estilo quando você chamar `Draw`.
+Antes de desenhar uma imagem mascarada em um plano de fundo de cor sólida, você deve usar a função de membro [SetBkColor](../mfc/reference/cimagelist-class.md#setbkcolor) para definir a cor do plano de fundo da lista de imagens com a mesma cor que o destino. A definição da cor elimina a necessidade de criar áreas transparentes na imagem `Draw` e permite simplesmente copiar a imagem para o contexto do dispositivo de destino, resultando em um aumento significativo no desempenho. Para desenhar a imagem, especifique o estilo **ILD_NORMAL** quando você chamar `Draw`.
 
-Você pode definir a cor de plano de fundo para obter uma lista de imagem mascarado ([CImageList](../mfc/reference/cimagelist-class.md)) a qualquer momento para que ele desenha corretamente em qualquer tela de fundo sólida. Definir a cor do plano de fundo como **CLR_NONE** faz com que imagens a ser desenhado de forma transparente por padrão. Para recuperar a cor do plano de fundo de uma lista de imagens, use o [GetBkColor](../mfc/reference/cimagelist-class.md#getbkcolor) função de membro.
+Você pode definir a cor do plano de fundo para uma[CImageList](../mfc/reference/cimagelist-class.md)(lista de imagens mascaradas) a qualquer momento para que ela seja redesenhada corretamente em qualquer plano de fundo sólido. Definir a cor do plano de fundo como **CLR_NONE** faz com que as imagens sejam desenhadas de forma transparente por padrão. Para recuperar a cor do plano de fundo de uma lista de imagens, use a função de membro [GetBkColor](../mfc/reference/cimagelist-class.md#getbkcolor) .
 
-O **ILD_BLEND25** e **ILD_BLEND50** estilos pontilhamento a imagem com a cor de realce do sistema. Esses estilos são úteis se você usar uma imagem mascarada para representar um objeto que o usuário pode selecionar. Por exemplo, você pode usar o **ILD_BLEND50** estilo para desenhar a imagem quando o usuário seleciona a ele.
+Os estilos **ILD_BLEND25** e **ILD_BLEND50** pontilham a imagem com a cor de realce do sistema. Esses estilos serão úteis se você usar uma imagem mascarada para representar um objeto que o usuário pode selecionar. Por exemplo, você pode usar o estilo **ILD_BLEND50** para desenhar a imagem quando o usuário a seleciona.
 
-Uma imagem nonmasked é copiada para o contexto de dispositivo de destino usando o `SRCCOPY` operação de varredura. As cores da imagem aparecem o mesmo, independentemente da cor do plano de fundo do contexto do dispositivo. Os estilos de desenho especificados no `Draw` também não têm nenhum efeito na aparência de uma imagem nonmasked.
+Uma imagem não mascarada é copiada para o contexto do dispositivo de `SRCCOPY` destino usando a operação de varredura. As cores na imagem são iguais, independentemente da cor do plano de fundo do contexto do dispositivo. Os estilos de desenho especificados `Draw` em também não têm efeito sobre a aparência de uma imagem não mascarada.
 
-A função de membro Draw, outra função, além de [DrawIndirect](../mfc/reference/cimagelist-class.md#drawindirect), estende a capacidade de renderizar uma imagem. `DrawIndirect` aceita, como um parâmetro, uma [IMAGELISTDRAWPARAMS](/windows/desktop/api/commctrl/ns-commctrl-_imagelistdrawparams) estrutura. Essa estrutura pode ser usada para personalizar a renderização da imagem atual, incluindo o uso de códigos de operação (ROP) de varredura. Para obter mais informações sobre códigos de ROP, consulte [códigos de operação de varredura](/windows/desktop/gdi/raster-operation-codes) e [Bitmaps como pincéis](/windows/desktop/gdi/bitmaps-as-brushes) no SDK do Windows.
+Além da função de membro Draw, outra função, [DrawIndirect](../mfc/reference/cimagelist-class.md#drawindirect), estende a capacidade de renderizar uma imagem. `DrawIndirect`usa, como um parâmetro, uma estrutura [IMAGELISTDRAWPARAMS](/windows/desktop/api/commctrl/ns-commctrl-imagelistdrawparams) . Essa estrutura pode ser usada para personalizar a renderização da imagem atual, incluindo o uso de códigos de operação de varredura (ROP). Para obter mais informações sobre códigos de ROP, consulte [rasterizar códigos de operação](/windows/desktop/gdi/raster-operation-codes) e bitmaps [como pincéis](/windows/desktop/gdi/bitmaps-as-brushes) na SDK do Windows.
 
 ## <a name="see-also"></a>Consulte também
 

@@ -7,16 +7,16 @@ helpviewer_keywords:
 - TOOLTIPTEXT structure [MFC]
 - tool tips [MFC], notifications
 ms.assetid: 547591bf-80f5-400e-a2a7-0708cfffbb5d
-ms.openlocfilehash: 7d77ca7dc55273e6084e919323ed71e55fa68a2c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2eb899e66acbadbe45aae2c8adbb356bf4730191
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62181841"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68915245"
 ---
 # <a name="tooltiptext-structure"></a>Estrutura TOOLTIPTEXT
 
-Escrever seus [manipulador de notificação de dica de ferramenta](../mfc/handling-ttn-needtext-notification-for-tool-tips.md), você precisa usar o **TOOLTIPTEXT** estrutura. Os membros de **TOOLTIPTEXT** estrutura são:
+Ao escrever seu [manipulador de notificação de dica de ferramenta](../mfc/handling-ttn-needtext-notification-for-tool-tips.md), você precisa usar a estrutura **ToolTipText** . Os membros da estrutura **ToolTipText** são:
 
 ```cpp
 typedef struct {
@@ -31,24 +31,24 @@ typedef struct {
 ```
 
 *hdr*<br/>
-Identifica a ferramenta de que precisa de texto. O único membro dessa estrutura, que talvez seja necessário é a ID de comando. do controle ID de comando do controle estará na *idFrom* membro do **NMHDR** estrutura, acessada com a sintaxe `hdr.idFrom`. Ver [NMHDR](/windows/desktop/api/richedit/ns-richedit-_nmhdr) para uma discussão sobre os membros a **NMHDR** estrutura.
+Identifica a ferramenta que precisa de texto. O único membro dessa estrutura que você pode precisar é a ID de comando do controle. A ID de comando do controle estará no membro *idFrom* da estrutura **NMHDR** , acessada com a sintaxe `hdr.idFrom`. Consulte [NMHDR](/windows/desktop/api/richedit/ns-richedit-nmhdr) para obter uma discussão dos membros da estrutura **NMHDR** .
 
 *lpszText*<br/>
-Endereço de uma cadeia de caracteres para receber o texto para uma ferramenta.
+Endereço de uma cadeia de caracteres para receber o texto de uma ferramenta.
 
 *szText*<br/>
-Buffer que recebe o texto da dica de ferramenta. Um aplicativo pode copiar o texto a esse buffer como uma alternativa para especificar um endereço de cadeia de caracteres.
+Buffer que recebe o texto da dica de ferramenta. Um aplicativo pode copiar o texto para esse buffer como uma alternativa para especificar um endereço de cadeia de caracteres.
 
 *hinst*<br/>
-Identificador da instância que contém uma cadeia de caracteres a ser usado como o texto da dica de ferramenta. Se *lpszText* é o endereço do texto da dica de ferramenta, esse membro é NULL.
+Identificador da instância do que contém uma cadeia de caracteres a ser usada como texto da dica de ferramenta. Se *lpszText* for o endereço do texto da dica de ferramenta, esse membro será nulo.
 
-Quando você manipula a `TTN_NEEDTEXT` notificação de mensagem, especifique a cadeia de caracteres a ser exibido em uma das seguintes maneiras:
+Ao manipular a `TTN_NEEDTEXT` mensagem de notificação, especifique a cadeia de caracteres a ser exibida de uma das seguintes maneiras:
 
-- Copie o texto para o buffer especificado o *szText* membro.
+- Copie o texto para o buffer especificado pelo membro *szText* .
 
-- Copie o endereço do buffer que contém o texto para o *lpszText* membro.
+- Copie o endereço do buffer que contém o texto para o membro *lpszText* .
 
-- Copie o identificador de um recurso de cadeia de caracteres para o *lpszText* membro e copie o identificador da instância que contém o recurso para o *hinst* membro.
+- Copie o identificador de um recurso de cadeia de caracteres para o membro *lpszText* e copie o identificador da instância que contém o recurso para o membro *hinst* .
 
 ## <a name="see-also"></a>Consulte também
 

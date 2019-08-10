@@ -11,24 +11,24 @@ f1_keywords:
 - atlconv/ATL::DEVMODEW2A
 - atlconv/ATL::TEXTMETRICW2A
 ms.assetid: 2ff7c0b6-2bde-45fe-897f-6128e18e0c27
-ms.openlocfilehash: 889f8459e81418197420bc2efd410225d4f220bc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6a84424de81eba2e6ab1e1baf60f567ebf2739ee
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62197249"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68915500"
 ---
 # <a name="string-conversion-macros"></a>Macros de conversão de cadeia de caracteres
 
 Essas macros fornecem recursos de conversão de cadeia de caracteres.
 
-##  <a name="atl_and_mfc_string_conversion_macros"></a>  ATL e Macros de conversão de cadeia de caracteres MFC
+##  <a name="atl_and_mfc_string_conversion_macros"></a>Macros de conversão de cadeia de caracteres ATL e MFC
 
-As macros de conversão de cadeia de caracteres discutidas neste documento são válidas para ATL e MFC. Para obter mais informações sobre conversão de cadeia de caracteres MFC, consulte [TN059: Usando Macros de conversão MBCS/Unicode MFC](../../mfc/tn059-using-mfc-mbcs-unicode-conversion-macros.md) e [Macros e globais MFC](../../mfc/reference/mfc-macros-and-globals.md).
+As macros de conversão de cadeia de caracteres discutidas neste documento são válidas para ATL e MFC. Para obter mais informações sobre conversão de cadeia de [caracteres MFC, consulte TN059: Usando macros](../../mfc/tn059-using-mfc-mbcs-unicode-conversion-macros.md) de conversão do MFC MBCS/Unicode e [macros MFC e globais](../../mfc/reference/mfc-macros-and-globals.md).
 
-##  <a name="devmode_and_textmetric_string_conversion_macros"></a>  Macros de conversão de cadeia de caracteres TEXTMETRIC e DEVMODE
+##  <a name="devmode_and_textmetric_string_conversion_macros"></a>Macros de conversão DEVMODE e TEXTMETRIC String
 
-Essas macros de criar uma cópia de um [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) ou [TEXTMETRIC](/windows/desktop/api/wingdi/ns-wingdi-tagtextmetrica) estruturar e converter as cadeias de caracteres dentro da nova estrutura para um novo tipo de cadeia de caracteres. As macros de alocar memória na pilha para a nova estrutura e retornam um ponteiro para a nova estrutura.
+Essas macros criam uma cópia de uma estrutura [DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea) ou [TEXTMETRIC](/windows/desktop/api/wingdi/ns-wingdi-tagtextmetrica) e convertem as cadeias de caracteres dentro da nova estrutura para um novo tipo de cadeia. As macros alocam memória na pilha para a nova estrutura e retornam um ponteiro para a nova estrutura.
 
 ```cpp
 MACRONAME( address_of_structure )
@@ -44,24 +44,24 @@ e:
 
 [!code-cpp[NVC_ATL_Utilities#129](../../atl/codesnippet/cpp/string-conversion-macros_2.cpp)]
 
-Os nomes de macro, o tipo de cadeia de caracteres na estrutura de origem está à esquerda (por exemplo, **um**) e o tipo de cadeia de caracteres na estrutura de destino está à direita (por exemplo, **W**). **Um** LPSTR, significa **OLE** LPOLESTR, significa **T** significa LPTSTR, e **W** significa LPWSTR.
+Nos nomes de macro, o tipo de cadeia de caracteres na estrutura de origem está à esquerda (por exemplo, **a**) e o tipo de cadeia de caracteres na estrutura de destino está à direita (por exemplo, **W**). **Um** significa que se refere a LPStr, **OLE** significa LPOLESTR, **T** significa LPTSTR e **W** significa LPWSTR.
 
-Assim, DEVMODEA2W copia uma `DEVMODE` estrutura com LPSTR cadeias de caracteres em um `DEVMODE` estrutura com cadeias de caracteres LPWSTR, cópias TEXTMETRICOLE2T uma `TEXTMETRIC` estrutura com LPOLESTR cadeias de caracteres em um `TEXTMETRIC` estrutura com cadeias de caracteres LPTSTR e assim por diante.
+Assim, DEVMODEA2W copia uma `DEVMODE` estrutura com cadeias de LPSTR `DEVMODE` em uma estrutura com cadeias de caracteres `TEXTMETRIC` LPWStr, TEXTMETRICOLE2T copia uma estrutura `TEXTMETRIC` com cadeias de caracteres LPOLESTR em uma estrutura com cadeias de caracteres de LPTSTR e assim por diante.
 
-As duas cadeias de caracteres convertidas na `DEVMODE` estrutura são o nome do dispositivo (`dmDeviceName`) e o nome do formulário (`dmFormName`). O `DEVMODE` macros de conversão de cadeia de caracteres também atualizar o tamanho da estrutura (`dmSize`).
+As duas cadeias de caracteres `DEVMODE` convertidas na estrutura são`dmDeviceName`o nome do dispositivo ()`dmFormName`e o nome do formulário (). As `DEVMODE` macros de conversão de cadeia de caracteres também`dmSize`atualizam o tamanho da estrutura ().
 
-As quatro cadeias de caracteres convertidas na `TEXTMETRIC` estrutura são o primeiro caractere (`tmFirstChar`), o último caractere (`tmLastChar`), o caractere padrão (`tmDefaultChar`) e o caractere de quebra (`tmBreakChar`).
+As quatro cadeias de caracteres `TEXTMETRIC` convertidas na estrutura são`tmFirstChar`o primeiro caractere (),`tmLastChar`o último caractere (),`tmDefaultChar`o caractere padrão () e o`tmBreakChar`caractere de quebra ().
 
-O comportamento do `DEVMODE` e `TEXTMETRIC` macros de conversão de cadeia de caracteres depende da diretiva de compilador em vigor, se houver. Se os tipos de origem e de destino forem o mesmo, a conversão não ocorre. Alteram as diretivas de compilador **T** e **OLE** da seguinte maneira:
+O comportamento das `DEVMODE` macros `TEXTMETRIC` e de conversão de cadeia de caracteres depende da diretiva do compilador em vigor, se houver. Se os tipos de origem e de destino forem o mesmo, a conversão não ocorre. As diretivas do compilador alteram **T** e **OLE** da seguinte maneira:
 
 |Diretriz do compilador em vigor|T torna-se|OLE torna-se|
 |----------------------------------|---------------|-----------------|
 |nenhum|**A**|**W**|
 |**\_UNICODE**|**W**|**W**|
 |**OLE2ANSI**|**A**|**A**|
-|**\_UNICODE** e **OLE2ANSI**|**W**|**A**|
+|Unicode e **OLE2ANSI**  **\_**|**W**|**A**|
 
-A seguinte tabela lista os `DEVMODE` e `TEXTMETRIC` macros de conversão de cadeia de caracteres.
+A tabela a seguir lista `DEVMODE` as `TEXTMETRIC` macros de conversão de cadeia de caracteres e.
 
 |||
 |-|-|

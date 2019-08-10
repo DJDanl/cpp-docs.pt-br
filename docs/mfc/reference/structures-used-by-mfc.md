@@ -5,31 +5,31 @@ helpviewer_keywords:
 - structures
 - structures, MFC
 ms.assetid: 2168fcc6-e800-4814-aabf-0bca86ff790d
-ms.openlocfilehash: cb888c1f3efe3ae0ecf35bc0f14ac0cda66112f9
-ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
+ms.openlocfilehash: 3370736ebea81bdd19350f6236d2716cb9e54844
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65611704"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68917017"
 ---
 # <a name="structures-used-by-mfc"></a>Estruturas usadas pelo MFC
 
-A tabela a seguir lista as estruturas que são chamadas de várias funções de membro. Para obter mais informações sobre o uso de estrutura individual, consulte as classes e funções de membro indicadas na lista Consulte também para cada estrutura.
+A tabela a seguir lista as estruturas que são chamadas de várias funções de membro. Para obter mais informações sobre o uso de estrutura individual, consulte as classes e funções de membro indicadas na lista consulte também para cada estrutura.
 
 |||
 |-|-|
-|[Estrutura ABC](/windows/desktop/api/wingdi/ns-wingdi-_abc)|[Estrutura HSE_VERSION_INFO](../../mfc/reference/hse-version-info-structure.md)|
-|[Estrutura ABCFLOAT](/windows/desktop/api/wingdi/ns-wingdi-_abcfloat)|[Estrutura LINGER](/windows/desktop/api/winsock/ns-winsock-linger)|
+|[Estrutura ABC](/windows/desktop/api/wingdi/ns-wingdi-abc)|[Estrutura HSE_VERSION_INFO](../../mfc/reference/hse-version-info-structure.md)|
+|[Estrutura ABCFLOAT](/windows/desktop/api/wingdi/ns-wingdi-abcfloat)|[Estrutura LINGER](/windows/desktop/api/winsock/ns-winsock-linger)|
 |[Estrutura AFX_EXTENSION_MODULE](../../mfc/reference/afx-extension-module-structure.md)|[Estrutura LOGBRUSH](/windows/desktop/api/wingdi/ns-wingdi-taglogbrush)|
 |[Estrutura BITMAP](/windows/desktop/api/wingdi/ns-wingdi-tagbitmap)|[Estrutura LOGPEN](/windows/desktop/api/Wingdi/ns-wingdi-taglogpen)|
 |[Estrutura BITMAPINFO](/windows/desktop/api/wingdi/ns-wingdi-tagbitmapinfo)|[Estrutura MEASUREITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagmeasureitemstruct)|
 |[Estrutura CDaoDatabaseInfo](../../mfc/reference/cdaodatabaseinfo-structure.md)|[Estrutura MINMAXINFO](/windows/desktop/api/winuser/ns-winuser-tagminmaxinfo)|
-|[Estrutura CDaoErrorInfo](../../mfc/reference/cdaoerrorinfo-structure.md)|[Estrutura MSG](/windows/desktop/api/winuser/ns-winuser-tagmsg)|
+|[Estrutura CDaoErrorInfo](../../mfc/reference/cdaoerrorinfo-structure.md)|[Estrutura de MSG](/windows/desktop/api/winuser/ns-winuser-tagmsg)|
 |[Estrutura CDaoFieldInfo](../../mfc/reference/cdaofieldinfo-structure.md)|[Estrutura NCCALCSIZE_PARAMS](/windows/desktop/api/winuser/ns-winuser-tagnccalcsize_params)|
 |[Estrutura CDaoIndexFieldInfo](../../mfc/reference/cdaoindexfieldinfo-structure.md)|[Estrutura PAINTSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagpaintstruct)|
-|[Estrutura CDaoIndexInfo](../../mfc/reference/cdaoindexinfo-structure.md)|[Estrutura POINT](/windows/desktop/api/windef/ns-windef-tagpoint)|
+|[Estrutura CDaoIndexInfo](../../mfc/reference/cdaoindexinfo-structure.md)|[Estrutura de ponto](/windows/desktop/api/windef/ns-windef-tagpoint)|
 |[Estrutura CDaoParameterInfo](../../mfc/reference/cdaoparameterinfo-structure.md)|[Estrutura RECT](/windows/desktop/api/windef/ns-windef-tagrect)|
-|[Estrutura CDaoQueryDefInfo](../../mfc/reference/cdaoquerydefinfo-structure.md)|[Estrutura RGNDATA](/windows/desktop/api/wingdi/ns-wingdi-_rgndata)|
+|[Estrutura CDaoQueryDefInfo](../../mfc/reference/cdaoquerydefinfo-structure.md)|[Estrutura RGNDATA](/windows/desktop/api/wingdi/ns-wingdi-rgndata)|
 |[Estrutura CDaoRelationFieldInfo](../../mfc/reference/cdaorelationfieldinfo-structure.md)|[Estrutura SOCKADDR](/windows/desktop/winsock/sockaddr-2)|
 |[Estrutura CDaoRelationInfo](../../mfc/reference/cdaorelationinfo-structure.md)|[Estrutura SOCKADDR_IN](/windows/desktop/winsock/sockaddr-2)|
 |[Estrutura CDaoTableDefInfo](../../mfc/reference/cdaotabledefinfo-structure.md)|[Estrutura SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime)

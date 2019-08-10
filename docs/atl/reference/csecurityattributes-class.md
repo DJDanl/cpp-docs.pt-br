@@ -9,19 +9,19 @@ f1_keywords:
 helpviewer_keywords:
 - CSecurityAttributes class
 ms.assetid: a094880c-52e1-4a28-97ff-752d5869908e
-ms.openlocfilehash: b26de7a2a3426ed2fe86bd7ef50f6c5410fa5364
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: 2139c25cb6d941d9debe0655ba91ba458b1f8c09
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66503201"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68915722"
 ---
 # <a name="csecurityattributes-class"></a>Classe CSecurityAttributes
 
-Essa classe é um wrapper fino em que a estrutura de atributos de segurança.
+Essa classe é um wrapper fino para a estrutura de atributos de segurança.
 
 > [!IMPORTANT]
->  Essa classe e seus membros não podem ser usados em aplicativos executados no tempo de execução do Windows.
+>  Essa classe e seus membros não podem ser usados em aplicativos que são executados no Windows Runtime.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -45,7 +45,7 @@ class CSecurityAttributes : public SECURITY_ATTRIBUTES
 
 ## <a name="remarks"></a>Comentários
 
-O `SECURITY_ATTRIBUTES` estrutura contém uma [descritor de segurança](/windows/desktop/api/winnt/ns-winnt-_security_descriptor) usada para a criação de um objeto e especifica se o identificador recuperado especificando essa estrutura é herdável.
+A `SECURITY_ATTRIBUTES` estrutura contém um [descritor de segurança](/windows/desktop/api/winnt/ns-winnt-security_descriptor) usado para a criação de um objeto e especifica se o identificador recuperado por meio da especificação dessa estrutura é herdável.
 
 Para obter uma introdução ao modelo de controle de acesso no Windows, consulte [controle de acesso](/windows/desktop/SecAuthZ/access-control) no SDK do Windows.
 
@@ -57,7 +57,7 @@ Para obter uma introdução ao modelo de controle de acesso no Windows, consulte
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** atlsecurity. h
+**Cabeçalho:** ATLSecurity. h
 
 ##  <a name="csecurityattributes"></a>  CSecurityAttributes::CSecurityAttributes
 
@@ -74,9 +74,9 @@ explicit CSecurityAttributes(const CSecurityDesc& rSecurityDescriptor, bool bInh
 Referência a um descritor de segurança.
 
 *bInheritsHandle*<br/>
-Especifica se o identificador retornado é herdado quando um novo processo é criado. Se esse membro for true, o novo processo herda o identificador.
+Especifica se o identificador retornado é herdado quando um novo processo é criado. Se esse membro for true, o novo processo herdará o identificador.
 
-##  <a name="set"></a>  CSecurityAttributes::Set
+##  <a name="set"></a>CSecurityAttributes:: Set
 
 Chame esse método para definir os atributos do `CSecurityAttributes` objeto.
 
@@ -90,7 +90,7 @@ void Set(const CSecurityDesc& rSecurityDescriptor, bool bInheritHandle = false) 
 Referência a um descritor de segurança.
 
 *bInheritHandle*<br/>
-Especifica se o identificador retornado é herdado quando um novo processo é criado. Se esse membro for true, o novo processo herda o identificador.
+Especifica se o identificador retornado é herdado quando um novo processo é criado. Se esse membro for true, o novo processo herdará o identificador.
 
 ### <a name="remarks"></a>Comentários
 
@@ -100,6 +100,6 @@ Esse método é usado pelo construtor para inicializar o `CSecurityAttributes` o
 
 [Exemplo de segurança](../../overview/visual-cpp-samples.md)<br/>
 [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\))<br/>
-[descritor de segurança](/windows/desktop/api/winnt/ns-winnt-_security_descriptor)<br/>
+[descritor de segurança](/windows/desktop/api/winnt/ns-winnt-security_descriptor)<br/>
 [Visão geral da classe](../../atl/atl-class-overview.md)<br/>
 [Funções globais de segurança](../../atl/reference/security-global-functions.md)
