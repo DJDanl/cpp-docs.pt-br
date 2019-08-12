@@ -1052,7 +1052,7 @@
                       href: build/reference/rules-for-module-definition-statements.md
                     - name: EXPORTS
                       href: build/reference/exports.md
-                    - name: BIBLIOTECA
+                    - name: LIBRARY
                       href: build/reference/library.md
                     - name: HEAPSIZE
                       href: build/reference/heapsize.md
@@ -1611,7 +1611,7 @@
           items:
             - name: Conceitos de ATL-MFC
               href: atl-mfc-shared/atl-mfc-concepts.md
-            - name: Data e hora
+            - name: Data e Hora
               expanded: false
               items:
                 - name: Visão geral de data e hora
@@ -1949,7 +1949,7 @@
               href: cppcx/value-classes-and-structs-c-cx.md
             - name: Classes parciais
               href: cppcx/partial-classes-c-cx.md
-            - name: propriedades
+            - name: Propriedades
               href: cppcx/properties-c-cx.md
             - name: Coleções
               href: cppcx/collections-c-cx.md
@@ -2775,10 +2775,10 @@
           items:
             - name: Sincronização (classe lock)
               href: dotnet/synchronization-lock-class.md
-            - name: lock
+            - name: bloqueio
               expanded: false
               items:
-                - name: lock
+                - name: bloqueio
                   href: dotnet/lock.md
                 - name: Classe lock
                   href: dotnet/lock-class.md
@@ -2900,7 +2900,7 @@
     - name: Referência de linguagens
       expanded: false
       items:
-        - name: Languages
+        - name: Linguagens
           href: overview/languages-cpp.md
         - name: Referência de linguagem C
           expanded: false
@@ -3010,7 +3010,7 @@
                       href: c-language/c-declarations-and-definitions.md
                     - name: Declarações e definições de função
                       href: c-language/function-declarations-and-definitions.md
-                    - name: Bloqueios
+                    - name: Blocos
                       href: c-language/blocks.md
                     - name: Programa de exemplo
                       href: c-language/example-program.md
@@ -3401,7 +3401,7 @@
                       href: c-language/storage-class.md
                     - name: Tipo de retorno
                       href: c-language/return-type.md
-                    - name: parâmetros
+                    - name: Parâmetros
                       href: c-language/parameters.md
                     - name: Corpo da função
                       href: c-language/function-body.md
@@ -3412,7 +3412,7 @@
                   items:
                     - name: Chamadas de função
                       href: c-language/function-calls.md
-                    - name: Argumentos
+                    - name: Arguments
                       href: c-language/arguments.md
                     - name: Chamadas com um número variável de argumentos
                       href: c-language/calls-with-a-variable-number-of-arguments.md
@@ -3462,7 +3462,7 @@
               items:
                 - name: Comportamento definido pela implementação
                   href: c-language/implementation-defined-behavior.md
-                - name: 'Translação: Diagnósticos'
+                - name: 'Translação: Diagnóstico'
                   href: c-language/translation-diagnostics.md
                 - name: Ambiente
                   expanded: false
@@ -4120,7 +4120,7 @@
               items:
                 - name: Classes e structs
                   href: cpp/classes-and-structs-cpp.md
-                - name: class
+                - name: classe
                   href: cpp/class-cpp.md
                 - name: struct
                   href: cpp/struct-cpp.md
@@ -4133,11 +4133,11 @@
                       href: cpp/member-access-control-cpp.md
                     - name: friend
                       href: cpp/friend-cpp.md
-                    - name: privado
+                    - name: particulares
                       href: cpp/private-cpp.md
                     - name: protegidos
                       href: cpp/protected-cpp.md
-                    - name: público
+                    - name: públicos
                       href: cpp/public-cpp.md
                 - name: Inicializando classes e structs sem construtores
                   href: cpp/initializing-classes-and-structs-without-constructors-cpp.md
@@ -4265,10 +4265,10 @@
               items:
                 - name: Tratamento de exceções em C++
                   href: cpp/exception-handling-in-visual-cpp.md
-                - name: Manipulação de exceção
+                - name: Tratamento de exceções
                   expanded: false
                   items:
-                    - name: Manipulação de exceção
+                    - name: Tratamento de exceções
                       href: cpp/cpp-exception-handling.md
                     - name: 'Instruções try, throw e catch'
                       href: cpp/try-throw-and-catch-statements-cpp.md
@@ -5601,7 +5601,7 @@
                   href: assembler/masm/textequ.md
                 - name: .TFCOND
                   href: assembler/masm/dot-tfcond.md
-                - name: TÍTULO
+                - name: TITLE
                   href: assembler/masm/title.md
                 - name: TYPEDEF (MASM)
                   href: assembler/masm/typedef-masm.md
@@ -6001,7 +6001,7 @@
               href: extensions/enum-class-cpp-component-extensions.md
             - name: evento
               href: extensions/event-cpp-component-extensions.md
-            - name: Manipulação de exceção
+            - name: Tratamento de exceções
               href: extensions/exception-handling-cpp-component-extensions.md
             - name: Substituições explícitas
               href: extensions/explicit-overrides-cpp-component-extensions.md
@@ -6050,7 +6050,7 @@
               href: extensions/property-cpp-component-extensions.md
             - name: safe_cast
               href: extensions/safe-cast-cpp-component-extensions.md
-            - name: Cadeia de caracteres
+            - name: Cadeia de Caracteres
               href: extensions/string-cpp-component-extensions.md
             - name: sealed
               href: extensions/sealed-cpp-component-extensions.md
@@ -6170,7 +6170,7 @@
                   href: windows/attributes/coclass.md
                 - name: com_interface_entry
                   href: windows/attributes/com-interface-entry-cpp.md
-                - name: controle
+                - name: Controle
                   href: windows/attributes/control.md
                 - name: cpp_quote
                   href: windows/attributes/cpp-quote.md
@@ -6188,7 +6188,7 @@
                   href: windows/attributes/db-source.md
                 - name: db_table
                   href: windows/attributes/db-table.md
-                - name: padrão
+                - name: default
                   href: windows/attributes/default-cpp.md
                 - name: defaultbind
                   href: windows/attributes/defaultbind.md
@@ -6228,7 +6228,7 @@
                   href: windows/attributes/helpstringdll.md
                 - name: oculto
                   href: windows/attributes/hidden.md
-                - name: ID
+                - name: id
                   href: windows/attributes/id.md
                 - name: idl_module
                   href: windows/attributes/idl-module.md
@@ -6242,13 +6242,13 @@
                   href: windows/attributes/implements-cpp.md
                 - name: implements_category
                   href: windows/attributes/implements-category.md
-                - name: importar
+                - name: import
                   href: windows/attributes/import.md
                 - name: importidl
                   href: windows/attributes/importidl.md
                 - name: importlib
                   href: windows/attributes/importlib.md
-                - name: mergulhar
+                - name: em
                   href: windows/attributes/in-cpp.md
                 - name: include
                   href: windows/attributes/include-cpp.md
@@ -6286,7 +6286,7 @@
                   href: windows/attributes/odl.md
                 - name: oleautomation
                   href: windows/attributes/oleautomation.md
-                - name: opcional
+                - name: optional
                   href: windows/attributes/optional-cpp.md
                 - name: out
                   href: windows/attributes/out-cpp.md
@@ -6328,7 +6328,7 @@
                   href: windows/attributes/satype.md
                 - name: size_is
                   href: windows/attributes/size-is.md
-                - name: source
+                - name: origem
                   href: windows/attributes/source-cpp.md
                 - name: cadeia de caracteres
                   href: windows/attributes/string-cpp.md
@@ -6365,7 +6365,7 @@
     - name: Referência de bibliotecas
       expanded: false
       items:
-        - name: Bibliotecas
+        - name: Libraries
           href: overview/libraries-cpp.md
         - name: Referência da CRT (biblioteca em tempo de execução) C
           expanded: false
@@ -6487,7 +6487,7 @@
                   items:
                     - name: Internacionalização
                       href: c-runtime-library/internationalization.md
-                    - name: Local
+                    - name: Localidade
                       href: c-runtime-library/locale.md
                     - name: Páginas de código
                       href: c-runtime-library/code-pages.md
@@ -7329,7 +7329,7 @@
                   href: c-runtime-library/reference/fread-nolock.md
                 - name: _fread_nolock_s2
                   href: c-runtime-library/reference/fread-nolock-s2.md
-                - name: livre
+                - name: free
                   href: c-runtime-library/reference/free.md
                 - name: _free_dbg
                   href: c-runtime-library/reference/free-dbg.md
@@ -7763,7 +7763,7 @@
                   href: c-runtime-library/reference/nextafter-functions.md
                 - name: 'norm, normf, norml'
                   href: c-runtime-library/reference/norm-normf-norml1.md
-                - name: não
+                - name: not
                   href: c-runtime-library/reference/not.md
                 - name: not_eq
                   href: c-runtime-library/reference/not-eq.md
@@ -7771,7 +7771,7 @@
                   href: c-runtime-library/reference/offsetof-macro.md
                 - name: '_onexit, _onexit_m'
                   href: c-runtime-library/reference/onexit-onexit-m.md
-                - name: Abrir
+                - name: open
                   href: c-runtime-library/reference/open.md
                 - name: '_open, _wopen'
                   href: c-runtime-library/reference/open-wopen.md
@@ -7779,7 +7779,7 @@
                   href: c-runtime-library/reference/open-osfhandle.md
                 - name: or_eq
                   href: c-runtime-library/reference/or-eq.md
-                - name: ou o
+                - name: ou
                   href: c-runtime-library/reference/or.md
                 - name: _pclose
                   href: c-runtime-library/reference/pclose.md
@@ -7841,7 +7841,7 @@
                   href: c-runtime-library/reference/rand.md
                 - name: rand_s
                   href: c-runtime-library/reference/rand-s.md
-                - name: leitura
+                - name: read
                   href: c-runtime-library/reference/posix-read.md
                 - name: _read
                   href: c-runtime-library/reference/read.md
@@ -8317,7 +8317,7 @@
                   href: c-runtime-library/reference/wctrans.md
                 - name: wctype
                   href: c-runtime-library/reference/wctype.md
-                - name: gravação
+                - name: write
                   href: c-runtime-library/reference/posix-write.md
                 - name: _write
                   href: c-runtime-library/reference/write.md
@@ -10492,7 +10492,7 @@
                       href: parallel/openmp/3-run-time-library-functions.md
                     - name: Variáveis de ambiente
                       href: parallel/openmp/4-environment-variables.md
-                    - name: Anexos
+                    - name: Apêndices
                       items:
                         - name: Exemplos
                           href: parallel/openmp/a-examples.md
@@ -10529,22 +10529,8 @@
                   items:
                     - name: Multithread com C e Win32
                       href: parallel/multithreading-with-c-and-win32.md
-                    - name: Programas multithread
-                      href: parallel/multithread-programs.md
-                    - name: Suporte de biblioteca para multithread
-                      href: parallel/library-support-for-multithreading.md
-                    - name: Incluir arquivos para multithread
-                      href: parallel/include-files-for-multithreading.md
-                    - name: Funções de biblioteca em tempo de execução C para controle de thread
-                      href: parallel/c-run-time-library-functions-for-thread-control.md
                     - name: Programa C multithread de exemplo
                       href: parallel/sample-multithread-c-program.md
-                    - name: Escrevendo um programa Win32 multithread
-                      href: parallel/writing-a-multithreaded-win32-program.md
-                    - name: Compilando e vinculando programas multithread
-                      href: parallel/compiling-and-linking-multithread-programs.md
-                    - name: Evitando áreas de problema com programas multithread
-                      href: parallel/avoiding-problem-areas-with-multithread-programs.md
                     - name: Armazenamento local de thread (TLS)
                       href: parallel/thread-local-storage-tls.md
                 - name: Multithread com C++ e MFC
