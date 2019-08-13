@@ -1,25 +1,33 @@
 ---
-title: Classe de bad_optional_access
-ms.date: 11/04/2016
+title: Classe bad_optional_access
+ms.date: 08/06/2019
 f1_keywords:
 - optional/std::bad_optional_access
-ms.assetid: 89a3b805-ab60-4858-b772-5855130c11b1
-ms.openlocfilehash: f898d1e30dd173339192bdb3b75581d12b62fca7
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 043b0360c7e0be48267c8f406dbfea50eeb5a8e3
+ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68269138"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68957094"
 ---
-# <a name="badoptionalaccess-class"></a>Classe de bad_optional_access
+# <a name="bad_optional_access-class"></a>Classe bad_optional_access
 
-Define o tipo de objetos gerados como exceções para reportar a situação em que uma tentativa de acessar o valor de um `optional` objeto que não contém um valor.
+Define o tipo de objetos lançados como exceções para relatar a situação em que é feita uma tentativa de acessar o valor `optional` de um objeto que não contém um valor.
 
 ## <a name="syntax"></a>Sintaxe
 
 ```cpp
 class bad_optional_access : public exception
 {
-    public: bad_optional_access();
+public:
+    bad_optional_access() noexcept;
+    bad_optional_access(const bad_optional_access&) noexcept;
+    bad_optional_access& operator=(const bad_optional_access&) noexcept;
+    const char* what() const noexcept override;
 };
 ```
+
+## <a name="see-also"></a>Consulte também
+
+[\<> opcional](optional.md)\
+[classe opcional](optional-class.md)

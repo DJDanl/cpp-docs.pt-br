@@ -7,11 +7,11 @@ helpviewer_keywords:
 - subscript expressions
 ms.assetid: 4ba5c360-1f17-4575-b370-45f62e1f2bc2
 ms.openlocfilehash: 34f5c60ba9ba5da869426ae4971808a5d75fee2f
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56151007"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "62233357"
 ---
 # <a name="multidimensional-arrays-c"></a>Matrizes multidimensionais (C)
 
@@ -21,7 +21,7 @@ Uma expressão subscrita também pode ter vários subscritos, como segue:
 expression1 [ expression2 ] [ expression3 ] ...
 ```
 
-As expressões subscritas são associadas da esquerda para a direita. A expressão subscrita mais à esquerda, *expression1* **[** *expression2* **]**, é avaliada primeiro. O endereço resultante da adição de *expression1* e *expression2* forma uma expressão do ponteiro; *expression3* é adicionada a essa expressão de ponteiro para formar uma nova expressão de ponteiro e assim por diante até que a última expressão subscrita seja adicionada. O operador de indireção (<strong>\*</strong>) é aplicado depois que a última expressão subscrita é avaliada, a menos que o valor do ponteiro final trate de um tipo de matriz (veja os exemplos abaixo).
+As expressões subscritas são associadas da esquerda para a direita. A expressão subscrita mais à esquerda, *expression1* **[** *expression2* **]** , é avaliada primeiro. O endereço resultante da adição de *expression1* e *expression2* forma uma expressão do ponteiro; *expression3* é adicionada a essa expressão de ponteiro para formar uma nova expressão de ponteiro e assim por diante até que a última expressão subscrita seja adicionada. O operador de indireção (<strong>\*</strong>) é aplicado depois que a última expressão subscrita é avaliada, a menos que o valor do ponteiro final trate de um tipo de matriz (veja os exemplos abaixo).
 
 As expressões com vários subscritos referem-se aos elementos de "matrizes multidimensionais". Uma matriz multidimensional é uma matriz cujos elementos são matrizes. Por exemplo, o primeiro elemento de uma matriz tridimensional é uma matriz com duas dimensões.
 

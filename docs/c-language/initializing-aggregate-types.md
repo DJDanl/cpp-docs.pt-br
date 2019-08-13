@@ -9,11 +9,11 @@ helpviewer_keywords:
 - aggregates [C++], initializing
 ms.assetid: a8f8ed75-39db-4592-93b9-d3920d915810
 ms.openlocfilehash: f6816a6f63de262b927a3c5aeed8774ba29c2eaa
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56151488"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "62326073"
 ---
 # <a name="initializing-aggregate-types"></a>Inicializando tipos agregados
 
@@ -22,8 +22,8 @@ Um tipo de *agregação* é um tipo de estrutura, união ou matriz. Se um tipo d
 ## <a name="syntax"></a>Sintaxe
 
 *initializer*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**{**  *initializer-list*  **}** /* Para inicialização de agregação \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**{**  *initializer-list*  **, }**
+&nbsp;&nbsp;&nbsp;&nbsp; **{**  *initializer-list*  **}** /* Para inicialização de agregação \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **{**  *initializer-list*  **, }**
 
 *initializer-list*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*initializer*<br/>
@@ -35,7 +35,7 @@ Para cada lista de inicializadores, os valores das expressões constantes são a
 
 Se *initializer-list* tiver menos valores do que um tipo de agregação, os membros ou os elementos restantes do tipo de agregação serão inicializados como 0. O valor inicial de um identificador automático não inicializado explicitamente será indefinido. Se *initializer-list* tiver mais valores do que um tipo de agregação, ocorrerá um erro. Essas regras se aplicam a cada lista de inicializadores inserida, bem como à agregação como um todo.
 
-O inicializador de uma estrutura é uma expressão do mesmo tipo ou uma lista de inicializadores para seus membros incluídos entre chaves (**{ }**). Os membros sem nome de campo de bits não são inicializados.
+O inicializador de uma estrutura é uma expressão do mesmo tipo ou uma lista de inicializadores para seus membros incluídos entre chaves ( **{ }** ). Os membros sem nome de campo de bits não são inicializados.
 
 Quando uma união é inicializada, *initializer-list* deve ser uma expressão constante única. O valor da expressão constante é atribuído ao primeiro membro de união.
 

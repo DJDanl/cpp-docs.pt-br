@@ -1,18 +1,18 @@
 ---
 title: '&lt;memory&gt;'
-ms.date: 04/04/2019
+ms.date: 08/04/2019
 f1_keywords:
 - memory/std::<memory>
 - <memory>
 - std::<memory>
 helpviewer_keywords:
 - memory header
-ms.openlocfilehash: 7c30a44de70675af69648fdba79325a173ab62fc
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 869a7590d880beba7ccc1d324fd1ba227eeac4e0
+ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68451882"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68957084"
 ---
 # <a name="ltmemorygt"></a>&lt;memory&gt;
 
@@ -93,7 +93,7 @@ Define uma classe, um operador e vários modelos que ajudam a alocar e a liberar
 |-|-|
 |[allocator](../standard-library/allocator-class.md)|A classe de modelo descreve um objeto que gerencia a alocação de armazenamento e a liberação de matrizes de objetos do tipo **Type**.|
 |[allocator_traits](../standard-library/allocator-traits-class.md)|Descreve um objeto que determina todas as informações necessárias a um contêiner habilitado para alocador.|
-|[auto_ptr](../standard-library/auto-ptr-class.md)|A classe de modelo descreve um objeto que armazena um ponteiro para um objeto alocado do  <strong>\*</strong> tipo Type que garante o objeto ao qual os pontos de ti são excluídos quando o auto_ptr delimitador é destruído.|
+|[auto_ptr](../standard-library/auto-ptr-class.md)|A classe de modelo descreve um objeto que armazena um ponteiro para um objeto alocado do <strong>\*</strong> tipo Type que garante o objeto ao qual os pontos de ti são excluídos quando o auto_ptr delimitador é destruído.|
 |[bad_weak_ptr](../standard-library/bad-weak-ptr-class.md)|Relata a exceção weak_ptr incorreta.|
 |[enabled_shared_from_this](../standard-library/enable-shared-from-this-class.md)|Ajuda a gerar um `shared_ptr`.|
 |[pointer_traits](../standard-library/pointer-traits-struct.md)|Fornece informações que são necessárias a um objeto da classe de modelo `allocator_traits` para descrever um alocador com o tipo de ponteiro `Ptr`.|
@@ -108,7 +108,7 @@ Define uma classe, um operador e vários modelos que ajudam a alocar e a liberar
 |-|-|
 |[allocator_arg_t](../standard-library/allocator-class.md#allocator_arg_t)||
 |[default_delete](../standard-library/default-delete-struct.md)||
-|[hash]()||
+|hash|Fornece sobrecargas especializadas `unique_ptr` para `shared_ptr`e.|
 |[owner_less](../standard-library/memory-functions.md#owner_less)|Permite comparações mistas baseadas em propriedade de ponteiros compartilhados e fracos.|
 |[uses_allocator](../standard-library/allocator-class.md#uses_allocator)||
 
@@ -116,7 +116,7 @@ Define uma classe, um operador e vários modelos que ajudam a alocar e a liberar
 
 |||
 |-|-|
-|[allocator\<void>](../standard-library/allocator-void-class.md)|Uma especialização do alocador de classe de modelo para o tipo void, definindo os únicos tipos de membro que fazem sentido neste contexto especializado.|
+|[allocator\<void>](../standard-library/allocator-void-class.md)|Uma especialização do alocador de classe de modelo para digitar **void**, definindo apenas os tipos de membro que fazem sentido nesse contexto especializado.|
 
 ## <a name="see-also"></a>Consulte também
 

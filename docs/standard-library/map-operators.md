@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::operator&lt; (map)
 - std::operator&lt;= (map)
 - std::operator== (map)
-ms.openlocfilehash: e05aca75f527e1bc78912ab6b4b5a9de6dcd54c5
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: deb442d0ba1fbd180fdb41b66de73df92bee7fc9
+ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246416"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68956953"
 ---
 # <a name="ltmapgt-operators"></a>&lt;map&gt; operadores
 
@@ -37,7 +37,7 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parâmetros
 
-*À esquerda*\
+*mantida*\
 Um objeto do tipo `map`.
 
 *Certo*\
@@ -102,7 +102,7 @@ bool operator<(
 
 ### <a name="parameters"></a>Parâmetros
 
-*À esquerda*\
+*mantida*\
 Um objeto do tipo `map`.
 
 *Certo*\
@@ -167,7 +167,7 @@ bool operator<=(
 
 ### <a name="parameters"></a>Parâmetros
 
-*À esquerda*\
+*mantida*\
 Um objeto do tipo `map`.
 
 *Certo*\
@@ -223,7 +223,7 @@ The map m1 is greater than the map m3.
 The map m1 is less than or equal to the map m4.
 ```
 
-## <a name="op_eq_eq"></a> operador = =
+## <a name="op_eq_eq"></a>operador = =
 
 Testa se o objeto de mapa à esquerda do operador é igual ao objeto de mapa à direita.
 
@@ -235,7 +235,7 @@ bool operator==(
 
 ### <a name="parameters"></a>Parâmetros
 
-*À esquerda*\
+*mantida*\
 Um objeto do tipo `map`.
 
 *Certo*\
@@ -300,7 +300,7 @@ bool operator>(
 
 ### <a name="parameters"></a>Parâmetros
 
-*À esquerda*\
+*mantida*\
 Um objeto do tipo `map`.
 
 *Certo*\
@@ -364,7 +364,7 @@ bool operator>=(
 
 ### <a name="parameters"></a>Parâmetros
 
-*À esquerda*\
+*mantida*\
 Um objeto do tipo `map`.
 
 *Certo*\
@@ -420,7 +420,7 @@ Map m1 is greater than or equal to map m3.
 Map m1 is greater than or equal to map m4.
 ```
 
-## <a name="op_neq_multimap"></a> operador! = (multimap)
+## <a name="op_neq_multimap"></a>operador! = (Multimap)
 
 Testa se o objeto multimapa à esquerda do operador é diferente do objeto multimapa à direita.
 
@@ -432,7 +432,7 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parâmetros
 
-*À esquerda*\
+*mantida*\
 Um objeto do tipo `multimap`.
 
 *Certo*\
@@ -497,7 +497,7 @@ bool operator<(
 
 ### <a name="parameters"></a>Parâmetros
 
-*À esquerda*\
+*mantida*\
 Um objeto do tipo `multimap`.
 
 *Certo*\
@@ -550,11 +550,7 @@ The multimap m1 is less than the multimap m2.
 The multimap m1 is not less than the multimap m3.
 ```
 
-<<<<<<< CABEÇALHO
-## <a name="eq_multimap"></a> operador&lt;=
-=======
 ## <a name="op_lt_eq_multimap"></a>  operator&lt;=
->>>>>>> 009c7ce384664f2a62ffb0bc61d6586b585ed38a
 
 Testa se o objeto multimapa à esquerda do operador é menor ou igual ao objeto multimapa à direita.
 
@@ -566,7 +562,7 @@ bool operator<=(
 
 ### <a name="parameters"></a>Parâmetros
 
-*À esquerda*\
+*mantida*\
 Um objeto do tipo `multimap`.
 
 *Certo*\
@@ -622,7 +618,7 @@ m1 is greater than m3
 m1 is less than or equal to m4
 ```
 
-## <a name="op_eq_eq_multimap"></a> operador = =
+## <a name="op_eq_eq_multimap"></a>operador = =
 
 Testa se o objeto multimapa à esquerda do operador é igual ao objeto multimapa à direita.
 
@@ -634,7 +630,7 @@ bool operator==(
 
 ### <a name="parameters"></a>Parâmetros
 
-*À esquerda*\
+*mantida*\
 Um objeto do tipo `multimap`.
 
 *Certo*\
@@ -699,7 +695,7 @@ bool operator>(
 
 ### <a name="parameters"></a>Parâmetros
 
-*À esquerda*\
+*mantida*\
 Um objeto do tipo `multimap`.
 
 *Certo*\
@@ -764,7 +760,7 @@ bool operator>=(
 
 ### <a name="parameters"></a>Parâmetros
 
-*À esquerda*\
+*mantida*\
 Um objeto do tipo `multimap`.
 
 *Certo*\
