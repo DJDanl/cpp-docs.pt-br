@@ -1,6 +1,6 @@
 ---
 title: Operador delete (C++)
-ms.date: 11/04/2016
+ms.date: 08/12/2019
 f1_keywords:
 - delete_cpp
 helpviewer_keywords:
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - delete keyword [C++], deallocating objects
 - delete keyword [C++]
 ms.assetid: de39c900-3f57-489c-9598-dcb73c4b3930
-ms.openlocfilehash: 5e4f5685ea1bb8cd7c405373ba774fe36af08672
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d6e1be0b06beed8cf68a1ec90571281b592af21d
+ms.sourcegitcommit: db1ed91fa7451ade91c3fb76bc7a2b857f8a5eef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398960"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68980459"
 ---
 # <a name="delete-operator-c"></a>Operador delete (C++)
 
@@ -21,14 +21,11 @@ Desaloca um bloco de memória.
 
 ## <a name="syntax"></a>Sintaxe
 
-```
-[::] delete cast-expression
-[::] delete [ ] cast-expression
-```
+> [`::``::` `delete []` ] `delete` conversão *-* expressão CAST [] *Cast-Expression*
 
 ## <a name="remarks"></a>Comentários
 
-O *cast-expression* argumento deve ser um ponteiro para um bloco de memória alocado anteriormente para um objeto criado com o [operador new](../cpp/new-operator-cpp.md). O **exclua** operador tem um resultado do tipo **void** e, portanto, não retorna um valor. Por exemplo:
+O argumento *Cast-Expression* deve ser um ponteiro para um bloco de memória alocada anteriormente para um objeto criado com o [operador New](../cpp/new-operator-cpp.md). O operador **delete** tem um resultado do tipo **void** e, portanto, não retorna um valor. Por exemplo:
 
 ```cpp
 CDialog* MyDialog = new CDialog;
@@ -36,9 +33,9 @@ CDialog* MyDialog = new CDialog;
 delete MyDialog;
 ```
 
-Usando o **exclua** em um ponteiro para um objeto não alocado com **novos** tem resultados imprevisíveis. No entanto, você pode usar **excluir** em um ponteiro com o valor 0. Esse provisionamento significa que, quando **novos** retorna 0 em caso de falha, excluindo o resultado de uma falha na **novos** operação é inofensiva. Ver [novo e excluir operadores](../cpp/new-and-delete-operators.md) para obter mais informações.
+O uso de **delete** em um ponteiro para um objeto não alocado com **New** fornece resultados imprevisíveis. No entanto, você pode usar **delete** em um ponteiro com o valor 0. Essa provisão significa que, quando o **novo** retorna 0 em caso de falha, a exclusão do resultado de uma **nova** operação com falha é inofensiva. Para obter mais informações, consulte [os operadores New e Delete](../cpp/new-and-delete-operators.md).
 
-O **novos** e **excluir** operadores também podem ser usados para tipos internos, inclusive matrizes. Se `pointer` fizer referência a uma matriz, coloque parênteses vazios antes de `pointer`:
+Os operadores **New** e **delete** também podem ser usados para tipos internos, incluindo matrizes. Se `pointer` fizer referência a uma matriz, coloque parênteses vazios antes de `pointer`:
 
 ```cpp
 int* set = new int[100];
@@ -46,15 +43,17 @@ int* set = new int[100];
 delete [] set;
 ```
 
-Usando o **excluir** operador em um objeto desaloca sua memória. Um programa que remova a referência de um ponteiro após a exclusão do objeto pode ter resultados imprevisíveis ou falhar.
+O uso do operador **delete** em um objeto desaloca sua memória. Um programa que remova a referência de um ponteiro após a exclusão do objeto pode ter resultados imprevisíveis ou falhar.
 
-Quando **excluir** é usado para desalocar a memória para um objeto de classe do C++, o destruidor do objeto é chamado antes que a memória do objeto seja desalocada (se o objeto tem um destruidor).
+Quando **delete** é usado para desalocar memória para C++ um objeto de classe, o destruidor do objeto é chamado antes de a memória do objeto ser desalocada (se o objeto tiver um destruidor).
 
-Se o operando para o **excluir** operador é um l-value modificável, seu valor será indefinido após a exclusão do objeto.
+Se o operando para o operador **delete** for um valor l modificável, seu valor será indefinido depois que o objeto for excluído.
+
+Se a opção de compilador [/SDL (habilitar verificações de segurança adicionais)](/cpp/build/reference/sdl-enable-additional-security-checks) for especificada, o operando para o operador **delete** será definido como um valor inválido depois que o objeto for excluído.
 
 ## <a name="using-delete"></a>Usando delete
 
-Há duas variantes sintáticas para o [operador delete](../cpp/delete-operator-cpp.md): uma para objetos únicos e outra para matrizes de objetos. O fragmento de código a seguir mostra como elas são diferentes:
+Há duas variantes sintáticas para o [operador Delete](../cpp/delete-operator-cpp.md): uma para objetos únicos e a outra para matrizes de objetos. O fragmento de código a seguir mostra como diferem:
 
 ```cpp
 // expre_Using_delete.cpp
@@ -80,17 +79,17 @@ int main()
 }
 ```
 
-Os dois casos a seguir produzem resultados indefinidos: usando o formato da matriz de exclusão (delete [ ]) em um objeto e usando o formulário que não de matriz de exclusão em uma matriz.
+Os dois casos a seguir produzem resultados indefinidos: usando a forma de matriz`delete []`de Delete () em um objeto e usando a forma nonarray de Delete em uma matriz.
 
 ## <a name="example"></a>Exemplo
 
-Para exemplos de uso **exclua**, consulte [operador new](../cpp/new-operator-cpp.md).
+Para obter exemplos de como usar **delete**, consulte [New Operator](../cpp/new-operator-cpp.md).
 
-## <a name="how-delete-works"></a>Como delete funciona
+## <a name="how-delete-works"></a>Como excluir funciona
 
-O operador delete invoca a função **operador delete**.
+O operador Delete invoca a função de **exclusão do operador**.
 
-Para objetos não é do tipo de classe ([classe](../cpp/class-cpp.md), [struct](../cpp/struct-cpp.md), ou [união](../cpp/unions.md)), o operador delete global é invocado. Em objetos do tipo de classe, o nome da função de desalocação é resolvido no escopo global se a expressão de exclusão começar com o operador unário de resolução de escopo (::). Caso contrário, o operador Delete invoca o destruidor para um objeto antes de desalocar a memória (se o ponteiro não for nulo). O operador delete pode ser definido em uma base por classe; se não houver nenhuma definição para uma classe específica, a exclusão global do operador é chamada. Se a expressão de exclusão for usada para desalocar um objeto da classe cujo tipo estático tem um destruidor virtual, a função de desalocação é resolvida pelo destruidor virtual do tipo dinâmico do objeto.
+Para objetos que não são do tipo de classe ([Class](../cpp/class-cpp.md), [struct](../cpp/struct-cpp.md)ou [Union](../cpp/unions.md)), o operador global Delete é invocado. Em objetos do tipo de classe, o nome da função de desalocação é resolvido no escopo global se a expressão de exclusão começar com o operador unário de resolução de escopo (::). Caso contrário, o operador Delete invoca o destruidor para um objeto antes de desalocar a memória (se o ponteiro não for nulo). O operador delete pode ser definido em uma base por classe; se não houver nenhuma definição para uma classe específica, a exclusão global do operador é chamada. Se a expressão de exclusão for usada para desalocar um objeto da classe cujo tipo estático tem um destruidor virtual, a função de desalocação é resolvida pelo destruidor virtual do tipo dinâmico do objeto.
 
 ## <a name="see-also"></a>Consulte também
 
