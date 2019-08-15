@@ -5,46 +5,46 @@ helpviewer_keywords:
 - managing a scheduler instance [Concurrency Runtime]
 - scheduler instances, managing [Concurrency Runtime]
 ms.assetid: 2cc804f0-5ff3-498b-97f1-a9f67a005448
-ms.openlocfilehash: bc7adfaeb4c96245488bbcb5cd70cdae9daf9e26
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f402e82a18f7b804f2c25ebf0a4392d19694d25c
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413873"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69510533"
 ---
 # <a name="how-to-manage-a-scheduler-instance"></a>Como: Gerenciar uma instância do Agendador
 
-Instâncias de Agendador permitem que você associar políticas de agendamento específicas com vários tipos de cargas de trabalho. Este tópico contém dois exemplos básicos que mostram como criar e gerenciar uma instância do Agendador.
+As instâncias do Agendador permitem associar políticas de agendamento específicas com vários tipos de cargas de trabalho. Este tópico contém dois exemplos básicos que mostram como criar e gerenciar uma instância do Agendador.
 
-Os exemplos criam agendadores que usam as políticas de agendador padrão. Para um exemplo que cria um agendador que usa uma política personalizada, consulte [como: Especificar políticas de Agendador específicas](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md).
+Os exemplos criam agendadores que usam as políticas padrão do Agendador. Para obter um exemplo que cria um Agendador que usa uma política personalizada, [consulte Como: Especifique políticas](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md)específicas do Agendador.
 
 ### <a name="to-manage-a-scheduler-instance-in-your-application"></a>Para gerenciar uma instância do agendador no aplicativo
 
-1. Criar uma [concurrency::SchedulerPolicy](../../parallel/concrt/reference/schedulerpolicy-class.md) valores de objeto que contém a política para o Agendador a ser usado.
+1. Crie um objeto [Concurrency:: SchedulerPolicy](../../parallel/concrt/reference/schedulerpolicy-class.md) que contém os valores de política para o Agendador usar.
 
-1. Chame o [concurrency::CurrentScheduler::Create](reference/currentscheduler-class.md#create) método ou o [concurrency::Scheduler::Create](reference/scheduler-class.md#create) método para criar uma instância do Agendador.
+1. Chame o método [Concurrency:: CurrentScheduler:: Create](reference/currentscheduler-class.md#create) ou o método [Concurrency:: Scheduler:: Create](reference/scheduler-class.md#create) para criar uma instância do Agendador.
 
-   Se você usar o `Scheduler::Create` método, a chamada a [concurrency::Scheduler::Attach](reference/scheduler-class.md#attach) método quando você precisa associar o Agendador com o contexto atual.
+   Se você usar o `Scheduler::Create` método, chame o método [Concurrency:: Scheduler:: Attach](reference/scheduler-class.md#attach) quando precisar associar o Agendador ao contexto atual.
 
-1. Chame o [CreateEvent](/windows/desktop/api/synchapi/nf-synchapi-createeventa) função para criar um identificador para um objeto de evento de redefinição automática não sinalizado.
+1. Chame a função [CreateEvent](/windows/win32/api/synchapi/nf-synchapi-createeventw) para criar um identificador para um objeto de evento de redefinição automática não sinalizado.
 
-1. Passar o identificador para o objeto de evento que você acabou de criar para o [concurrency::CurrentScheduler::RegisterShutdownEvent](reference/currentscheduler-class.md#registershutdownevent) método ou o [concurrency::Scheduler::RegisterShutdownEvent](reference/scheduler-class.md#registershutdownevent) método. Isso registra o evento a ser definido quando o Agendador é destruído.
+1. Passe o identificador para o objeto de evento que você acabou de criar ao método [Concurrency:: CurrentScheduler:: RegisterShutdownEvent](reference/currentscheduler-class.md#registershutdownevent) ou o método [Concurrency:: Scheduler:: RegisterShutdownEvent](reference/scheduler-class.md#registershutdownevent) . Isso registra o evento a ser definido quando o Agendador é destruído.
 
-1. Execute as tarefas que você deseja que o Agendador atual para agendar.
+1. Execute as tarefas que você deseja que o Agendador atual agende.
 
-1. Chame o [concurrency::CurrentScheduler::Detach](reference/currentscheduler-class.md#detach) método para desanexar o Agendador atual e restaurar o Agendador anterior que o atual.
+1. Chame o método [Concurrency:: CurrentScheduler::D Etach](reference/currentscheduler-class.md#detach) para desanexar o Agendador atual e restaurar o Agendador anterior como o atual.
 
-   Se você usar o `Scheduler::Create` método, a chamada a [concurrency::Scheduler::Release](reference/scheduler-class.md#release) método para diminuir a contagem de referência do `Scheduler` objeto.
+   Se você usar o `Scheduler::Create` método, chame o método [Concurrency:: Scheduler:: Release](reference/scheduler-class.md#release) para diminuir a contagem de `Scheduler` referência do objeto.
 
-1. Passar o identificador para o evento para o [WaitForSingleObject](/windows/desktop/api/synchapi/nf-synchapi-waitforsingleobject) função esperar o Agendador desligar.
+1. Passe o identificador para o evento para a função [WaitForSingleObject](/windows/win32/api/synchapi/nf-synchapi-waitforsingleobject) para aguardar o desligamento do Agendador.
 
-1. Chame o [CloseHandle](/windows/desktop/api/handleapi/nf-handleapi-closehandle) função para fechar o identificador para o objeto de evento.
+1. Chame a função [CloseHandle](/windows/win32/api/handleapi/nf-handleapi-closehandle) para fechar o identificador para o objeto de evento.
 
 ## <a name="example"></a>Exemplo
 
-O código a seguir mostra duas maneiras para gerenciar uma instância do Agendador. Primeiro, cada exemplo utiliza o agendador padrão para executar uma tarefa que imprime o identificador exclusivo do Agendador atual. Cada exemplo, em seguida, usa uma instância do Agendador para executar a mesma tarefa novamente. Por fim, cada exemplo restaura o agendador padrão que o atual e executa a tarefa mais uma vez.
+O código a seguir mostra duas maneiras de gerenciar uma instância do Agendador. Cada exemplo usa primeiro o agendador padrão para executar uma tarefa que imprime o identificador exclusivo do Agendador atual. Cada exemplo usa uma instância do Agendador para executar a mesma tarefa novamente. Por fim, cada exemplo restaura o agendador padrão como o atual e executa a tarefa mais uma vez.
 
-O primeiro exemplo usa o [concurrency::CurrentScheduler](../../parallel/concrt/reference/currentscheduler-class.md) classe para criar uma instância do Agendador e associá-la com o contexto atual. O segundo exemplo usa o [Concurrency:: Scheduler](../../parallel/concrt/reference/scheduler-class.md) classe para executar a mesma tarefa. Normalmente, o `CurrentScheduler` classe é usada para trabalhar com o Agendador atual. O segundo exemplo usa o `Scheduler` de classe, é útil quando você deseja controlar quando o Agendador está associado com o contexto atual ou quando você deseja associar a agendadores específicos a tarefas específicas.
+O primeiro exemplo usa a classe [Concurrency:: CurrentScheduler](../../parallel/concrt/reference/currentscheduler-class.md) para criar uma instância do Agendador e associá-la ao contexto atual. O segundo exemplo usa a classe [Concurrency:: Scheduler](../../parallel/concrt/reference/scheduler-class.md) para executar a mesma tarefa. Normalmente, a `CurrentScheduler` classe é usada para trabalhar com o Agendador atual. O segundo exemplo, que usa a `Scheduler` classe, é útil quando você deseja controlar quando o Agendador está associado ao contexto atual ou quando você deseja associar agendadores específicos a tarefas específicas.
 
 [!code-cpp[concrt-scheduler-instance#1](../../parallel/concrt/codesnippet/cpp/how-to-manage-a-scheduler-instance_1.cpp)]
 
@@ -71,9 +71,9 @@ Current scheduler id: 0
 
 ## <a name="compiling-the-code"></a>Compilando o código
 
-Copie o código de exemplo e cole-o em um projeto do Visual Studio ou colá-lo em um arquivo chamado `scheduler-instance.cpp` e, em seguida, execute o seguinte comando em uma janela de Prompt de comando do Visual Studio.
+Copie o código de exemplo e cole-o em um projeto do Visual Studio ou cole-o em um arquivo `scheduler-instance.cpp` chamado e, em seguida, execute o comando a seguir em uma janela de prompt de comando do Visual Studio.
 
-**cl.exe /EHsc Agendador-instance.cpp**
+**CL. exe/EHsc Scheduler-instance. cpp**
 
 ## <a name="see-also"></a>Consulte também
 

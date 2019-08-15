@@ -7,18 +7,18 @@ helpviewer_keywords:
 - CTreeCtrl class [MFC], item selection
 - item selection in tree controls
 ms.assetid: 7bcb3b16-b9c8-4c06-9350-7bc3c1c5009b
-ms.openlocfilehash: a88a2c8ea5b935bbcb1f40b705337ff676d8b8a5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 07c7b673e0f9029f8ece928b0ab17760b3863cc7
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62363539"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69513343"
 ---
 # <a name="tree-control-item-selection"></a>Seleção do item de controle de árvore
 
-Quando a seleção é alterada de um item para outro, um controle de árvore ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) envia [TVN_SELCHANGING](/windows/desktop/Controls/tvn-selchanging) e [TVN_SELCHANGED](/windows/desktop/Controls/tvn-selchanged) mensagens de notificação. Ambas as notificações incluem um valor que especifica se a alteração é o resultado de um clique do mouse ou um pressionamento de tecla. As notificações também incluem informações sobre o item que está ganhando a seleção e o item que está perdendo a seleção. Você pode usar essas informações para definir atributos de itens que dependem do estado de seleção do item. Retornando **verdadeira** em resposta à `TVN_SELCHANGING` impede que a seleção mudando; retornando **FALSE** permite que a alteração.
+Quando a seleção é alterada de um item para outro, um controle de árvore ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) envia mensagens de notificação [TVN_SELCHANGING](/windows/win32/Controls/tvn-selchanging) e [TVN_SELCHANGED](/windows/win32/Controls/tvn-selchanged) . Ambas as notificações incluem um valor que especifica se a alteração é o resultado de um clique do mouse ou de um pressionamento de tecla. As notificações também incluem informações sobre o item que está recebendo a seleção e o item que está perdendo a seleção. Você pode usar essas informações para definir atributos de item que dependem do estado de seleção do item. Retornar **true** em resposta para `TVN_SELCHANGING` impedir que a seleção seja alterada; retornar **false** permite a alteração.
 
-Um aplicativo pode alterar a seleção chamando o [SelectItem](../mfc/reference/ctreectrl-class.md#selectitem) função de membro.
+Um aplicativo pode alterar a seleção chamando a função de membro [SelectItem](../mfc/reference/ctreectrl-class.md#selectitem) .
 
 ## <a name="see-also"></a>Consulte também
 

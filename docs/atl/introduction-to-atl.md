@@ -6,18 +6,18 @@ helpviewer_keywords:
 - COM objects, creating in ATL
 - ATL
 ms.assetid: 77f565e8-c4ec-4a80-af4b-7278fcfe5c98
-ms.openlocfilehash: 8c2dcab962cd9863acf0f8e7070727f3b18117d5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5eba816bc87eeebea2c41489a5d15c48645739e8
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62261911"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492102"
 ---
 # <a name="introduction-to-atl"></a>Introdução à ATL
 
-ATL é o Active Template Library, um conjunto de C++ com base no modelo de classes com o qual você pode criar facilmente pequena, rápida de objetos de modelo de objeto de componente (COM). Ele possui suporte especial para recursos COM chave, incluindo: implementações de estoque [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown), [IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory), [IClassFactory2](/windows/desktop/api/ocidl/nn-ocidl-iclassfactory2), e `IDispatch`; dupla interfaces; interfaces de enumerador COM padrão; pontos de conexão; interfaces destacáveis; e controles ActiveX.
+A ATL é a Active Template Library, um conjunto de classes baseadas C++ em modelo com as quais você pode criar facilmente objetos COM (com) pequenos e Component Object Model rápidos. Ele tem suporte especial para os principais recursos de com, incluindo: implementações de estoque de [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown), `IDispatch` [IClassFactory](/windows/win32/api/unknwnbase/nn-unknwnbase-iclassfactory), [IClassFactory2](/windows/win32/api/ocidl/nn-ocidl-iclassfactory2)e; interfaces duplas; interfaces padrão de enumerador com; pontos de conexão; divisão interface e controles ActiveX.
 
-Código ATL pode ser usado para criar objetos single-threaded, objetos de modelo-apartamento, objetos de modelo de Threading livre ou objetos de thread livre e o modelo de apartment.
+O código ATL pode ser usado para criar objetos de thread único, objetos de modelo de apartamento, objetos de modelo com threads livres ou objetos de modelo de apartamento e de segmento livre.
 
 Os tópicos abordados nesta seção incluem:
 

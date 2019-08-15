@@ -52,14 +52,14 @@ helpviewer_keywords:
 - formatted text [C++]
 - vsnwprintf function
 ms.assetid: a97f92df-c2f8-4ea0-9269-76920d2d566a
-ms.openlocfilehash: 7c3416397d8f43963d3be2ce9bc39707ea7865db
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2e665562f3dd8ee0be70b4e50068955a91233c60
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383458"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499073"
 ---
-# <a name="vsnprintf-vsnprintf-vsnprintfl-vsnwprintf-vsnwprintfl"></a>vsnprintf, _vsnprintf, _vsnprintf_l, _vsnwprintf, _vsnwprintf_l
+# <a name="vsnprintf-_vsnprintf-_vsnprintf_l-_vsnwprintf-_vsnwprintf_l"></a>vsnprintf, _vsnprintf, _vsnprintf_l, _vsnwprintf, _vsnwprintf_l
 
 Grave saída formatada usando um ponteiro para uma lista de argumentos. Versões mais seguras dessas funções estão disponíveis; consulte [vsnprintf_s, _vsnprintf_s, _vsnprintf_s_l, _vsnwprintf_s, _vsnwprintf_s_l](vsnprintf-s-vsnprintf-s-vsnprintf-s-l-vsnwprintf-s-vsnwprintf-s-l.md).
 
@@ -158,29 +158,29 @@ Para obter mais informações, consulte [Especificações de formato](../../c-ru
 
 ## <a name="return-value"></a>Valor de retorno
 
-O **vsnprintf** função retorna o número de caracteres gravados, sem contar o caractere nulo de terminação. Se o tamanho do buffer especificado por *contagem* não for grande o suficiente para conter a saída especificada por *formato* e *argptr*, o valor de retorno  **vsnprintf** é o número de caracteres que seria gravado, sem contar o caractere nulo, se *contagem* fosse suficientemente grande. Se o valor retornado for maior que *contagem* - 1, a saída foi truncada. Um valor retornado -1 indica que ocorreu um erro de codificação.
+A função **vsnprintf** retorna o número de caracteres gravados, não contando o caractere nulo de terminação. Se o tamanho do buffer especificado por *Count* não for suficientemente grande para conter a saída especificada por *Format* e *argptr*, o valor de retorno de **vsnprintf** será o número de caracteres que seriam gravados, não contando o NULL caractere, se a *contagem* fosse suficientemente grande. Se o valor de retorno for maior que *Count* -1, a saída será truncada. Um valor retornado -1 indica que ocorreu um erro de codificação.
 
-Ambos **vsnprintf** e **vsnwprintf** funções retornam o número de caracteres gravados se o número de caracteres a serem gravados for menor ou igual a *contagem*; se o número de caracteres a serem gravados for maior que *contagem*, essas funções retornarão -1, indicando que a saída foi truncada.
+As funções **_vsnprintf** e **_vsnwprintf** retornam o número de caracteres gravados se o número de caracteres a serem gravados for menor ou igual à *contagem*; Se o número de caracteres a serem gravados for maior que a *contagem*, essas funções retornarão-1 indicando que a saída foi truncada.
 
-O valor retornado por todas essas funções não inclui o nulo de terminação, quer seja gravado um ou não. Quando *contagem* for zero, o valor retornado é o número de caracteres, as funções gravariam, sem incluir nulos de terminação. Você pode usar esse resultado para alocar espaço suficiente no buffer para a cadeia de caracteres e seu nulo de terminação e, em seguida, chamar a função novamente para preencher o buffer.
+O valor retornado por todas essas funções não inclui o nulo de terminação, quer seja gravado um ou não. Quando *Count* for zero, o valor retornado será o número de caracteres que as funções gravaria, não incluindo nenhum nulo de terminação. Você pode usar esse resultado para alocar espaço suficiente no buffer para a cadeia de caracteres e seu nulo de terminação e, em seguida, chamar a função novamente para preencher o buffer.
 
-Se *formato* é **nulo**, ou se *buffer* é **nulo** e *contagem* não é igual a zero, essas funções invocar o manipulador de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções retornarão -1 e defina **errno** à **EINVAL**.
+Se o *formato* for **nulo**ou se *o buffer* for **nulo** e a *contagem* não for igual a zero, essas funções invocarão o manipulador de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, essas funções retornam-1 e definem **errno** como **EINVAL**.
 
 ## <a name="remarks"></a>Comentários
 
-Cada uma dessas funções usa um ponteiro para uma lista de argumentos, em seguida, formata os dados e grava até *contagem* caracteres na memória apontado por *buffer*. O **vsnprintf** função sempre grava um terminador nulo, mesmo que ele Trunque a saída. Ao usar **vsnprintf** e **vsnwprintf**, o buffer será ser terminada em nulo somente se houver espaço no final (ou seja, se o número de caracteres a serem gravados for menor que *contagem*).
+Cada uma dessas funções usa um ponteiro para uma lista de argumentos e, em seguida, formata os dados e grava até a *contagem* de caracteres para a memória apontada por *buffer*. A função **vsnprintf** sempre grava um terminador nulo, mesmo se ele truncar a saída. Ao usar **_vsnprintf** e **_vsnwprintf**, o buffer será encerrado em nulo somente se houver espaço no final (ou seja, se o número de caracteres a serem gravados for menor que *Count*).
 
 > [!IMPORTANT]
-> Para impedir que certos tipos de riscos de segurança, certifique-se de que *formato* não é uma cadeia de caracteres definida pelo usuário. Para obter mais informações, consulte [Avoiding Buffer Overruns](/windows/desktop/SecBP/avoiding-buffer-overruns) (Evitando estouros de buffer).
+> Para evitar certos tipos de riscos de segurança, verifique se o *formato* não é uma cadeia de caracteres definida pelo usuário. Para obter mais informações, consulte [Avoiding Buffer Overruns](/windows/win32/SecBP/avoiding-buffer-overruns) (Evitando estouros de buffer).
 
 > [!NOTE]
-> Para garantir que haja espaço para o nulo de terminação ao chamar **vsnprintf**, **vsnprintf_l**, **vsnwprintf** e **vsnwprintf_l**, certifique-se de que *contagem* for estritamente menor que o comprimento do buffer e inicialize o buffer para nulo antes de chamar a função.
+> Para garantir que haja espaço para o nulo de terminação ao chamar **_vsnprintf**, **_vsnprintf_l**, **_vsnwprintf** e **_vsnwprintf_l**, certifique-se de que *Count* seja estritamente menor que o comprimento do buffer e inicialize o buffer para NULL antes de chamar a função.
 >
-> Porque **vsnprintf** sempre grava o nulo de terminação, o *contagem* parâmetro pode ser igual ao tamanho do buffer.
+> Como **vsnprintf** sempre grava o nulo de terminação, o parâmetro de *contagem* pode ser igual ao tamanho do buffer.
 
-Começando com o UCRT no Visual Studio 2015 e Windows 10 **vsnprintf** não é mais idêntico ao **vsnprintf**. O **vsnprintf** função está em conformidade com o padrão C99; **_vnsprintf** é mantido para compatibilidade com versões anteriores com o código anterior do Visual Studio.
+A partir do UCRT no Visual Studio 2015 e no Windows 10, o **vsnprintf** não é mais idêntico ao **_vsnprintf**. A função **vsnprintf** está em conformidade com o C99 Standard; o **_vnsprintf** é mantido para compatibilidade com versões anteriores com o Visual Studio Code mais antigo.
 
-As versões dessas funções com o **l** sufixo são idênticas, exceto que eles usam o parâmetro de localidade passado em vez da localidade do thread atual.
+As versões dessas funções com o sufixo **_L** são idênticas, exceto pelo fato de que usam o parâmetro de localidade passado em vez da localidade do thread atual.
 
 No C++, essas funções têm sobrecargas de modelo que invocam os equivalentes mais novos e seguros dessas funções. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../../c-runtime-library/secure-template-overloads.md).
 
@@ -198,7 +198,7 @@ No C++, essas funções têm sobrecargas de modelo que invocam os equivalentes m
 |**vsnprintf**, **_vsnprintf**, **_vsnprintf_l**|\<stdio.h>|\<stdio.h> ou \<cstdio>|
 |**_vsnwprintf**, **_vsnwprintf_l**|\<stdio.h> ou \<wchar.h>|\<stdio.h>, \<wchar.h>, \<cstdio> ou \<cwchar>|
 
-O **vsnprintf**, **vsnprintf_l**, **vsnwprintf** e **vsnwprintf_l** funções são específicas da Microsoft. Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+As funções **_vsnprintf**, **_vsnprintf_l**, **_vsnwprintf** e **_vsnwprintf_l** são específicas da Microsoft. Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemplo
 
@@ -240,7 +240,7 @@ nSize: 9, buff: Hi there!
 nSize: -1, buff: Hi there!
 ```
 
-O comportamento será alterado se você usar vsnprintf em vez disso, juntamente com parâmetros de cadeia estreita. O *contagem* parâmetro pode ser o tamanho inteiro do buffer e o valor de retorno é o número de caracteres que teriam sido gravados se *contagem* era grande o suficiente:
+O comportamento será alterado se você usar vsnprintf em vez disso, juntamente com parâmetros de cadeia estreita. O parâmetro *Count* pode ser o tamanho inteiro do buffer, e o valor de retorno é o número de caracteres que teriam sido gravados se *Count* fosse grande o suficiente:
 
 ## <a name="example"></a>Exemplo
 

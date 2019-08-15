@@ -2,27 +2,27 @@
 title: Referência de linguagem Visual C++ (C++/CX)
 ms.date: 09/15/2017
 ms.assetid: 3f6abf92-4e5e-4ed8-8e11-f9252380d30a
-ms.openlocfilehash: ce0272499b653b9077a891e39e9b29797e7e051d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0b2d344f9889d5669164cd917ba569b5f35d83a5
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384940"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498422"
 ---
 # <a name="visual-c-language-reference-ccx"></a>Referência de linguagem Visual C++ (C++/CX)
 
-C++/CX é um conjunto de extensões para o C++ linguagem que permitem a criação de aplicativos do Windows e os componentes de tempo de execução do Windows em um idioma que é o mais próximo possível moderno C++. Use C++/CX para escrever aplicativos do Windows e componentes no formato nativo de código que facilmente interagir com o Visual C#, Visual Basic e JavaScript e outras linguagens que dão suporte ao tempo de execução do Windows. Nos raros casos em que exigem acesso direto a interfaces COM brutas, ou um código não excepcional, você pode usar o [biblioteca de modelos em C++ Windows Runtime (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md).
+C++O/CX é um conjunto de extensões para C++ a linguagem que permite a criação de aplicativos do Windows e Windows Runtime componentes em um idioma que seja o mais próximo possível C++do moderno. Use C++o/CX para escrever aplicativos e componentes do Windows no código nativo que interagem C#facilmente com o Visual, Visual Basic e JavaScript, além de outras linguagens que dão suporte ao Windows Runtime. Nesses casos raros que exigem acesso direto às interfaces COM brutos ou ao código não-excepcional, você pode usar a [WRL ( C++ biblioteca de modelos de Windows Runtime)](../windows/windows-runtime-cpp-template-library-wrl.md).
 
 > [!NOTE]
-> **[C++/ WinRT](/windows/uwp/cpp-and-winrt-apis/index) é a alternativa recomendada para C++/CX**. É uma nova, o padrão C + + 17 projeção de linguagem para APIs do tempo de execução do Windows, disponível no Windows 10 SDK mais recente da versão 1803 em diante. C++/ WinRT é implementado inteiramente em arquivos de cabeçalho e projetado para fornecer acesso de primeira classe à moderna API do Windows.
+> **/WinRT é a alternativa recomendada para C++o/CX. [ C++](/windows/uwp/cpp-and-winrt-apis/index) É uma nova projeção de linguagem C++ 17 padrão para APIs Windows Runtime, disponível no SDK do Windows 10 mais recente da versão 1803 em diante. C++O/WinRT é implementado inteiramente em arquivos de cabeçalho e projetado para fornecer a você acesso de primeira classe à API moderna do Windows.
 >
-> Com o C++/WinRT, você pode consumir e criar APIs do Windows Runtime usando qualquer compilador que 17 compatível com os padrões C + +. C++/ WinRT normalmente tem um desempenho melhor e produz binários menores do que qualquer outra opção de idioma para o tempo de execução do Windows. Continuaremos a dar suporte a C++/CX e WRL, mas altamente recomendável que novos aplicativos usem C++/WinRT. Para obter mais informações, consulte [ C++/WinRT](/windows/uwp/cpp-and-winrt-apis/index).
+> Com C++o/WinRT, você pode consumir e criar Windows Runtime APIs usando qualquer compilador c++ 17 compatível com padrões. C++O/WinRT normalmente tem um desempenho melhor e produz binários menores do que qualquer outra opção de idioma para o Windows Runtime. Continuaremos a dar suporte a C++/CX e WRL, mas recomendamos que os novos aplicativos usem o C++/WinRT. Saiba mais em [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/index).
 
-Usando C++/CX, você pode criar:
+Usando C++o/CX, você pode criar:
 
-- Aplicativos de C++ Universal Windows Platform (UWP) que usam XAML para definir o usuário de interface e usam a pilha nativa. Para obter mais informações, consulte [criar um aplicativo "hello world" em C++ (UWP)](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp).
+- C++Os aplicativos Plataforma Universal do Windows (UWP) que usam o XAML para definir a interface do usuário e usar a pilha nativa. Para obter mais informações, consulte [criar um aplicativo "Olá mundo" C++ no (UWP)](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp).
 
-- Componentes de tempo de execução do C++ Windows que podem ser consumidos por aplicativos do Windows baseados em JavaScript. Para obter mais informações, consulte [Creating Windows Runtime Components in C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp).
+- C++Windows Runtime componentes que podem ser consumidos por aplicativos do Windows baseados em JavaScript. Para obter mais informações, consulte [Creating Windows Runtime Components in C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp).
 
 - Jogos do Windows DirectX e aplicativos intensivos de elementos gráficos. Para obter mais informações, consulte [criar um jogo UWP simples com o DirectX](/windows/uwp/gaming/tutorial--create-your-first-uwp-directx-game).
 
@@ -31,11 +31,11 @@ Usando C++/CX, você pode criar:
 |||
 |-|-|
 |[Referência rápida](../cppcx/quick-reference-c-cx.md)|Tabela de palavras-chave e operadores para C++/CX.|
-|[Sistema de tipos](../cppcx/type-system-c-cx.md)|Descreve o básico C++tipos /CX e construções de programação e como utilizar C++/CX consumir e criar tipos de tempo de execução do Windows.|
-|[Como compilar aplicativos e bibliotecas](../cppcx/building-apps-and-libraries-c-cx.md)|Discute como usar o IDE para criar aplicativos e vincular a bibliotecas estáticas e DLLs.|
-|[Como interoperar com outras linguagens](../cppcx/interoperating-with-other-languages-c-cx.md)|Discute como componentes que são escritos usando C++/CX pode ser usado com componentes escritos em JavaScript, qualquer gerenciado idioma ou o tempo de execução do Windows C++ biblioteca de modelos.|
+|[Sistema de tipos](../cppcx/type-system-c-cx.md)|Descreve os C++tipos básicos/CX e construções de programação e como utilizar C++o/CX para consumir e criar Windows Runtime tipos.|
+|[Como compilar aplicativos e bibliotecas](../cppcx/building-apps-and-libraries-c-cx.md)|Discute como usar o IDE para criar aplicativos e vincular a bibliotecas e DLLs estáticas.|
+|[Como interoperar com outras linguagens](../cppcx/interoperating-with-other-languages-c-cx.md)|Discute como os componentes escritos usando C++o/CX podem ser usados com componentes que são escritos em JavaScript, qualquer linguagem gerenciada ou a Windows Runtime C++ biblioteca de modelos.|
 |[Threading e Marshaling](../cppcx/threading-and-marshaling-c-cx.md)|Discute como especificar comportamento de threading e marshaling dos componentes que você cria.|
 |[Referência de namespaces](../cppcx/namespaces-reference-c-cx.md)|Consulte a documentação do namespace padrão, do namespace Platform, Platform::Collections e dos namespaces relacionados.|
 |[As funções de CRT não têm suporte em aplicativos da Plataforma Universal do Windows](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)|Relaciona as funções CRT não disponíveis para uso em aplicativos de Tempo de Execução do Windows.|
-|[Manuais de instruções dos aplicativos do Windows 10](https://msdn.microsoft.com/library/windows/apps/xaml/mt244352.aspx)|Fornece instruções de alto nível sobre aplicativos do Windows 10 e links para mais informações.|
-|[C++/CX parte 0 de \[n\]: Uma introdução](https://blogs.msdn.microsoft.com/vcblog/2012/08/29/ccx-part-0-of-n-an-introduction/)<br /><br />[C++/CX parte 1 de \[n\]: Uma classe simples](https://blogs.msdn.microsoft.com/vcblog/2012/09/05/ccx-part-1-of-n-a-simple-class/)<br /><br />[C++/CX parte 2 de \[n\]: Tipos que desempenham funções diferentes](https://blogs.msdn.microsoft.com/vcblog/2012/09/17/ccx-part-2-of-n-types-that-wear-hats/)<br /><br />[C++/CX parte 3 de \[n\]: Em construção](https://blogs.msdn.microsoft.com/vcblog/2012/10/05/ccx-part-3-of-n-under-construction/)<br /><br />[C++/CX parte 4 de \[n\]: Funções de membro estático](https://blogs.msdn.microsoft.com/vcblog/2012/10/19/ccx-part-4-of-n-static-member-functions/)|Um elemento Visual introdutório C++ série de blog sobre C++/CX.|
+|[Introdução aos aplicativos do Windows 10](/windows/uwp/get-started/)|Fornece instruções de alto nível sobre aplicativos do Windows 10 e links para mais informações.|
+|[C++/CX, parte 0 \[de\]n: Uma introdução](https://blogs.msdn.microsoft.com/vcblog/2012/08/29/ccx-part-0-of-n-an-introduction/)<br /><br />[C++/CX parte 1 de \[n\]: Uma classe simples](https://blogs.msdn.microsoft.com/vcblog/2012/09/05/ccx-part-1-of-n-a-simple-class/)<br /><br />[C++/CX parte 2 de \[n\]: Tipos que usam chapéus](https://blogs.msdn.microsoft.com/vcblog/2012/09/17/ccx-part-2-of-n-types-that-wear-hats/)<br /><br />[C++/CX parte 3 de \[n\]: Em construção](https://blogs.msdn.microsoft.com/vcblog/2012/10/05/ccx-part-3-of-n-under-construction/)<br /><br />[C++/CX parte 4 de \[n\]: Funções de membro estático](https://blogs.msdn.microsoft.com/vcblog/2012/10/19/ccx-part-4-of-n-static-member-functions/)|Uma série de C++ Blogs visuais introdutórios sobre C++o/CX.|

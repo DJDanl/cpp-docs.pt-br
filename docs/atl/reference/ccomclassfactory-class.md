@@ -9,16 +9,16 @@ f1_keywords:
 helpviewer_keywords:
 - CComClassFactory class
 ms.assetid: e56dacf7-d5c4-4c42-aef4-a86d91981a1b
-ms.openlocfilehash: 85ef287a905abc7b3151628c0f5dc29b9050b187
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 892153e47ac4e9dd45d5dfc01b76f1ce29d23938
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62246709"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497447"
 ---
 # <a name="ccomclassfactory-class"></a>Classe CComClassFactory
 
-Essa classe implementa a [IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory) interface.
+Essa classe implementa a interface [IClassFactory](/windows/win32/api/unknwnbase/nn-unknwnbase-iclassfactory) .
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -39,25 +39,25 @@ class CComClassFactory
 
 ## <a name="remarks"></a>Comentários
 
-`CComClassFactory` implementa o [IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory) interface, que contém métodos para criação de um objeto de um CLSID particular, bem como a fábrica de classes na memória para permitir que os novos objetos sejam criadas mais rapidamente o bloqueio. `IClassFactory` deve ser implementado para cada classe que você registre-se no registro do sistema e que você atribuir um CLSID.
+`CComClassFactory`implementa a interface [IClassFactory](/windows/win32/api/unknwnbase/nn-unknwnbase-iclassfactory) , que contém métodos para criar um objeto de um CLSID específico, bem como bloquear a fábrica de classes na memória para permitir que novos objetos sejam criados mais rapidamente. `IClassFactory`deve ser implementado para cada classe que você registra no registro do sistema e para o qual você atribui um CLSID.
 
-Objetos ATL normalmente adquirem uma fábrica de classes derivando [CComCoClass](../../atl/reference/ccomcoclass-class.md). Essa classe inclui a macro [DECLARE_CLASSFACTORY](aggregation-and-class-factory-macros.md#declare_classfactory), que declara `CComClassFactory` porque a fábrica de classe padrão. Para substituir esse padrão, especifique um dos `DECLARE_CLASSFACTORY` *XXX* macros em sua definição de classe. Por exemplo, o [DECLARE_CLASSFACTORY_EX](aggregation-and-class-factory-macros.md#declare_classfactory_ex) macro usa a classe especificada para a fábrica de classes:
+Os objetos ATL normalmente adquirem uma fábrica de classes derivando de [CComCoClass](../../atl/reference/ccomcoclass-class.md). Essa classe inclui a macro [DECLARE_CLASSFACTORY](aggregation-and-class-factory-macros.md#declare_classfactory), que declara `CComClassFactory` como a fábrica de classes padrão. Para substituir esse padrão, especifique uma das `DECLARE_CLASSFACTORY`macros *xxx* na definição de sua classe. Por exemplo, a macro [DECLARE_CLASSFACTORY_EX](aggregation-and-class-factory-macros.md#declare_classfactory_ex) usa a classe especificada para a fábrica de classes:
 
 [!code-cpp[NVC_ATL_COM#8](../../atl/codesnippet/cpp/ccomclassfactory-class_1.h)]
 
-A definição de classe acima Especifica que `CMyClassFactory` será usado como a fábrica de classes padrão do objeto. `CMyClassFactory` deve ser derivado de `CComClassFactory` e substituir `CreateInstance`.
+A definição de classe acima Especifica `CMyClassFactory` que será usada como a fábrica de classes padrão do objeto. `CMyClassFactory`deve derivar `CComClassFactory` de e `CreateInstance`substituir.
 
-ATL fornece três outras macros que declaram uma fábrica de classes:
+A ATL fornece três outras macros que declaram uma fábrica de classes:
 
-- [DECLARE_CLASSFACTORY2](aggregation-and-class-factory-macros.md#declare_classfactory2) usa [CComClassFactory2](../../atl/reference/ccomclassfactory2-class.md), que controla a criação por meio de uma licença.
+- [DECLARE_CLASSFACTORY2](aggregation-and-class-factory-macros.md#declare_classfactory2) Usa [CComClassFactory2](../../atl/reference/ccomclassfactory2-class.md), que controla a criação por meio de uma licença.
 
-- [DECLARE_CLASSFACTORY_AUTO_THREAD](aggregation-and-class-factory-macros.md#declare_classfactory_auto_thread) usa [CComClassFactoryAutoThread](../../atl/reference/ccomclassfactoryautothread-class.md), que cria objetos em vários apartments.
+- [DECLARE_CLASSFACTORY_AUTO_THREAD](aggregation-and-class-factory-macros.md#declare_classfactory_auto_thread) Usa [CComClassFactoryAutoThread](../../atl/reference/ccomclassfactoryautothread-class.md), que cria objetos em vários Apartments.
 
-- [DECLARE_CLASSFACTORY_SINGLETON](aggregation-and-class-factory-macros.md#declare_classfactory_singleton) usa [CComClassFactorySingleton](../../atl/reference/ccomclassfactorysingleton-class.md), que constrói um único [CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md) objeto.
+- [DECLARE_CLASSFACTORY_SINGLETON](aggregation-and-class-factory-macros.md#declare_classfactory_singleton) Usa [CComClassFactorySingleton](../../atl/reference/ccomclassfactorysingleton-class.md), que constrói um único objeto [CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md) .
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** atlcom
+**Cabeçalho:** atlcom. h
 
 ##  <a name="createinstance"></a>  CComClassFactory::CreateInstance
 
@@ -70,21 +70,21 @@ STDMETHOD(CreateInstance)(LPUNKNOWN pUnkOuter, REFIID riid, void** ppvObj);
 ### <a name="parameters"></a>Parâmetros
 
 *pUnkOuter*<br/>
-[in] Se o objeto está sendo criado como parte de uma agregação, em seguida *pUnkOuter* deve ser o externo desconhecido. Caso contrário, *pUnkOuter* deve ser NULL.
+no Se o objeto estiver sendo criado como parte de uma agregação, *pUnkOuter* deverá ser o desconhecido como externo. Caso contrário, *pUnkOuter* deverá ser nulo.
 
 *riid*<br/>
-[in] O IID da interface solicitada. Se *pUnkOuter* não for nulo, *riid* deve ser `IID_IUnknown`.
+no O IID da interface solicitada. Se *pUnkOuter* for não nulo, *riid* deverá ser `IID_IUnknown`.
 
 *ppvObj*<br/>
-[out] Um ponteiro para o ponteiro de interface identificado pelo *riid*. Se o objeto não dá suporte a essa interface, *ppvObj* é definido como NULL.
+fora Um ponteiro para o ponteiro de interface identificado por *riid*. Se o objeto não oferecer suporte a essa interface, *ppvObj* será definido como NULL.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Um valor padrão de HRESULT.
+Um valor HRESULT padrão.
 
 ##  <a name="lockserver"></a>  CComClassFactory::LockServer
 
-Incrementa e decrementa a módulo contagem de bloqueio, chamando `_Module::Lock` e `_Module::Unlock`, respectivamente.
+Incrementa e decrementa a contagem de bloqueios de módulo chamando `_Module::Lock` e `_Module::Unlock`, respectivamente.
 
 ```
 STDMETHOD(LockServer)(BOOL fLock);
@@ -93,17 +93,17 @@ STDMETHOD(LockServer)(BOOL fLock);
 ### <a name="parameters"></a>Parâmetros
 
 *fLock*<br/>
-[in] Se for TRUE, a contagem de bloqueio é aumentada. Caso contrário, a contagem de bloqueio é reduzida.
+no Se for TRUE, a contagem de bloqueios será incrementada; caso contrário, a contagem de bloqueios será diminuída.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Um valor padrão de HRESULT.
+Um valor HRESULT padrão.
 
 ### <a name="remarks"></a>Comentários
 
-`_Module` refere-se à instância global do [CComModule](../../atl/reference/ccommodule-class.md) ou a uma classe derivada.
+`_Module`refere-se à instância global de [CComModule](../../atl/reference/ccommodule-class.md) ou a uma classe derivada dela.
 
-Chamar `LockServer` permite que um cliente retenham uma fábrica de classes para que vários objetos podem ser criados rapidamente.
+A `LockServer` chamada permite que um cliente mantenha em uma fábrica de classes para que vários objetos possam ser criados rapidamente.
 
 ## <a name="see-also"></a>Consulte também
 

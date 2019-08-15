@@ -1,5 +1,5 @@
 ---
-title: Editor de imagens para ícones (C++)
+title: Editor de imagem para íconesC++()
 ms.date: 02/15/2019
 f1_keywords:
 - vc.editors.cursor.F1
@@ -42,176 +42,176 @@ helpviewer_keywords:
 - Image editor [C++], grid settings
 - grid settings, Image editor
 ms.assetid: 586d2b8b-0348-4883-a85d-1ff0ddbf14dd
-ms.openlocfilehash: c411c4b95fcd3866c897f04b70da7cbb2b48ba28
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: 0f8fe228b804538b6a0d0377f05d79c34e787587
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66504316"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514225"
 ---
-# <a name="image-editor-for-icons-c"></a>Editor de imagens para ícones (C++)
+# <a name="image-editor-for-icons-c"></a>Editor de imagem para íconesC++()
 
-Quando você seleciona um arquivo de imagem (por exemplo,. ico,. bmp,. png) em **Gerenciador de soluções**, a imagem é aberto na **Editor de imagens** da mesma forma que arquivos de código aberto no **Editor de códigos** . Quando um **Editor de imagens** guia estiver ativa, você verá as barras de ferramentas com várias ferramentas para criar e editar imagens. Além de bitmaps, ícones e cursores, você pode editar imagens no formato GIF ou JPEG usando os comandos a **imagem** menu e as ferramentas na **Editor de imagens** barra de ferramentas.
+Quando você seleciona um arquivo de imagem (como. ico,. bmp,. png) no **Gerenciador de soluções**, a imagem é aberta no **Editor de imagem** da mesma maneira que os arquivos de código são abertos no **Editor de código**. Quando uma guia do **Editor de imagem** estiver ativa, você verá barras de ferramentas com muitas ferramentas para criar e editar imagens. Juntamente com bitmaps, ícones e cursores, você pode editar imagens no formato GIF ou JPEG usando comandos no menu **imagem** e ferramentas na barra de ferramentas do **Editor de imagem** .
 
-Recursos gráficos são as imagens que você define para seu aplicativo. Você pode desenhar à mão livre ou desenhar usando formas. Você pode selecionar partes de uma imagem de edição, inversão ou redimensionamento, ou você pode criar um pincel personalizado de uma parte selecionada de uma imagem e desenhar com esse pincel. Você pode definir propriedades da imagem, salvar imagens em formatos diferentes e converter imagens de um formato para outro.
-
-> [!NOTE]
-> Usando o **Editor de imagens**, você pode exibir imagens de 32 bits, mas você não pode editá-los.
-
-Você também pode usar o **Editor de imagens** e o [Editor binário](binary-editor.md) para trabalhar com arquivos de recursos em projetos gerenciados. Todos os recursos gerenciados que você deseja editar devem ser recursos vinculados. Os editores de recursos do Visual Studio não oferecem suporte a edição de recursos inseridos.
-
-Além de criar novos recursos gráficos, você pode [importar imagens existentes](../windows/how-to-copy-resources.md#import-and-export-resources) para edição e, em seguida, adicioná-los ao seu projeto. Você também pode abrir e editar imagens que não fazem parte de um projeto para [edição de imagem autônoma](../windows/editing-an-image-outside-of-a-project-image-editor-for-icons.md).
-
-Para obter informações sobre o **Editor de imagens**, consulte como [criar um ícone ou outra imagem](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md), [editar uma imagem](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md), [usar uma ferramenta de desenho](../windows/using-a-drawing-tool-image-editor-for-icons.md), [Trabalhar com cores](../windows/working-with-color-image-editor-for-icons.md), e [teclas de aceleração](../windows/accelerator-keys-image-editor-for-icons.md).
+Os recursos gráficos são as imagens que você define para seu aplicativo. Você pode desenhar à mão livre ou desenhar usando formas. Você pode selecionar partes de uma imagem para edição, inversão ou redimensionamento, ou pode criar um pincel personalizado de uma parte selecionada de uma imagem e desenhar com esse pincel. Você pode definir propriedades de imagem, salvar imagens em formatos diferentes e converter imagens de um formato para outro.
 
 > [!NOTE]
-> Download sem nenhum custo a **biblioteca de imagens do Visual Studio** que contém várias animações, bitmaps e ícones que você pode usar em seus aplicativos. Para obter mais informações sobre como baixar a biblioteca, consulte a [biblioteca de imagens do Visual Studio](/visualstudio/designers/the-visual-studio-image-library).
+> Usando o **Editor de imagem**, você pode exibir imagens de 32 bits, mas não pode editá-las.
+
+Você também pode usar o **Editor de imagem** e o [Editor binário](binary-editor.md) para trabalhar com arquivos de recursos em projetos gerenciados. Todos os recursos gerenciados que você deseja editar devem ser recursos vinculados. Os editores de recursos do Visual Studio não oferecem suporte à edição de recursos inseridos.
+
+Além de criar novos recursos gráficos, você pode [importar imagens existentes](../windows/how-to-copy-resources.md#import-and-export-resources) para edição e, em seguida, adicioná-las ao seu projeto. Você também pode abrir e editar imagens que não fazem parte de um projeto para [edição de imagem](../windows/editing-an-image-outside-of-a-project-image-editor-for-icons.md)autônoma.
+
+Para obter informações sobre o **Editor de imagem**, consulte como [criar um ícone ou outra imagem](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md), [Editar uma imagem](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md), [usar uma ferramenta de desenho](../windows/using-a-drawing-tool-image-editor-for-icons.md), [trabalhar com cores](../windows/working-with-color-image-editor-for-icons.md)e [teclas](../windows/accelerator-keys-image-editor-for-icons.md)de aceleração.
+
+> [!NOTE]
+> Baixe sem custo a **biblioteca de imagens do Visual Studio** que contém várias animações, bitmaps e ícones que você pode usar em seus aplicativos. Para obter mais informações sobre como baixar a biblioteca, consulte a [biblioteca de imagens do Visual Studio](/visualstudio/designers/the-visual-studio-image-library).
 
 ## <a name="image-menu"></a>Menu Imagem
 
-O **imagem** menu, que é exibido apenas quando o **Editor de imagens** estiver ativa, tem comandos para edição de imagens, gerenciando paletas de cores e definindo **Editor de imagens** janela Opções. Além disso, os comandos para o uso de imagens de dispositivo estão disponíveis ao trabalhar com ícones e cursores.
+O menu **imagem** , que aparece somente quando o **Editor de imagem** está ativo, tem comandos para editar imagens, gerenciar paletas de cores e definir opções de janela do **Editor de imagem** . Além disso, os comandos para usar imagens de dispositivo estão disponíveis ao trabalhar com ícones e cursores.
 
 |Comando|Descrição|
 |---|---|
 |**Inverter cores**|Inverte suas cores.|
-|**Inverter Horizontalmente**|Inverte a imagem ou seleção horizontalmente.|
-|**Inverter Verticalmente**|Inverte a imagem ou seleção verticalmente.|
-|**Girar 90 graus**|A imagem ou seleção gira 90 graus.|
-|**Mostrar janela de cores**|Abre o **cores** janela, em que você pode escolher as cores a ser usado para sua imagem.|
-|**Usar seleção como Pincel**|Permite que você crie um pincel personalizado de uma parte de uma imagem.<br/><br/>Sua seleção torna-se um pincel personalizado que distribui as cores na seleção entre a imagem. Cópias da seleção são deixadas ao longo do caminho de arrastamento. Quanto mais lentamente do que você arrastar, são feitas as cópias mais.|
-|**Cópia e a seleção de estrutura de tópicos**|Cria uma cópia da seleção atual e a contorna.<br/><br/>Se a cor do plano de fundo estiver contida na seleção atual, ela será excluída se você tiver transparente selecionada.
-|**Ajustar cores**|Abre o **seletor de cores personalizada**, que permite que você personalize as cores que você pode usar para sua imagem.|
-|**Carregar paleta**|Abre o **carregar paleta de cores** caixa de diálogo que permite que você carregue as cores da paleta salvas anteriormente para um arquivo. PAL.|
-|**Salvar paleta**|Salva a paleta de cores em um arquivo. PAL.|
-|**Desenhar opaco**|Quando selecionada, torna a seleção atual opaca.<br/><br/>Quando desmarcada, torna transparente a seleção atual.|
-|**Editor de barra de ferramentas**|Abre o [caixa de diálogo novo recurso da barra de ferramentas](../windows/new-toolbar-resource-dialog-box.md).|
-|**Configurações da grade**|Abre o **configurações da grade** caixa de diálogo na qual você pode especificar grades para sua imagem.|
-|**Novo tipo de imagem**|Abre o [New \<dispositivo > caixa de diálogo de tipo de imagem](../windows/new-device-image-type-dialog-box-image-editor-for-icons.md).<br/><br/>Um recurso de ícone único pode conter várias imagens de tamanhos diferentes e windows podem usar o tamanho de ícone apropriado, dependendo de como ela será a ser exibido. Um novo tipo de dispositivo não modifica o tamanho do ícone, mas em vez disso, cria uma nova imagem dentro do ícone. Aplica-se somente a ícones e cursores.|
-|**Tipo de imagem de ícone/Cursor atual**|Abre um submenu que lista as imagens de ícone ou cursor disponíveis nove primeiros. O último comando no submenu, **mais**, abre o [abra \<dispositivo > caixa de diálogo imagem](../windows/open-device-image-dialog-box-image-editor-for-icons.md).|
-|**Excluir tipo de imagem**|Exclui a imagem do dispositivo selecionado.|
-|**Ferramentas**|Inicia um submenu que contém todas as ferramentas disponíveis a partir de **Editor de imagens** barra de ferramentas.|
+|**Inverter Horizontalmente**|Inverte a imagem ou a seleção horizontalmente.|
+|**Inverter Verticalmente**|Inverte a imagem ou a seleção verticalmente.|
+|**Girar 90 graus**|Gira a imagem ou a seleção de 90 graus.|
+|**Mostrar janela de cores**|Abre a janela **cores** , na qual você pode escolher as cores a serem usadas para a imagem.|
+|**Usar seleção como pincel**|Permite que você crie um pincel personalizado de uma parte de uma imagem.<br/><br/>Sua seleção se torna um pincel personalizado que distribui as cores na seleção na imagem. As cópias da seleção são deixadas ao longo do caminho de arrasto. Quanto mais lentamente você arrastar, mais cópias serão feitas.|
+|**Copiar e estruturar seleção**|Cria uma cópia da seleção atual e a descreve.<br/><br/>Se a cor do plano de fundo estiver contida na seleção atual, ela será excluída se você tiver selecionado transparentemente.
+|**Ajustar cores**|Abre o **seletor de cores personalizado**, que permite que você personalize as cores usadas para a imagem.|
+|**Carregar paleta**|Abre a caixa de diálogo da **paleta de cores de carregamento** , que permite carregar as cores da paleta salvas anteriormente em um arquivo. PAL.|
+|**Salvar paleta**|Salva as cores da paleta em um arquivo. PAL.|
+|**Desenho opaco**|Quando selecionado, torna a seleção atual opaca.<br/><br/>Quando desmarcada, torna a seleção atual transparente.|
+|**Editor de barra de ferramentas**|Abre a [caixa de diálogo novo recurso de barra de ferramentas](../windows/new-toolbar-resource-dialog-box.md).|
+|**Configurações de grade**|Abre a caixa de diálogo **configurações de grade** , na qual é possível especificar grades para a imagem.|
+|**Novo tipo de imagem**|Abre a [caixa \<de diálogo novo dispositivo > tipo de imagem](../windows/new-device-image-type-dialog-box-image-editor-for-icons.md).<br/><br/>Um único recurso de ícone pode conter várias imagens de tamanhos diferentes e o Windows pode usar o tamanho de ícone apropriado dependendo de como será exibido. Um novo tipo de dispositivo não modifica o tamanho do ícone, mas, em vez disso, cria uma nova imagem dentro do ícone. Aplica-se somente a ícones e cursores.|
+|**Ícone atual/tipo de imagem do cursor**|Abre um submenu que lista as nove primeiras imagens de cursor ou ícone disponíveis. O último comando no submenu, **mais**, abre a [caixa de \<diálogo abrir dispositivo > imagem](../windows/open-device-image-dialog-box-image-editor-for-icons.md).|
+|**Excluir tipo de imagem**|Exclui a imagem de dispositivo selecionada.|
+|**Ferramentas**|Inicia um submenu que contém todas as ferramentas disponíveis na barra de ferramentas do **Editor de imagem** .|
 
-O **configurações da grade** caixa de diálogo permite que você especifique as configurações de grade para a sua imagem e exibe linhas de grade sobre a imagem editada. As linhas são úteis para a imagem de edição, mas não são salvas como parte da imagem em si.
+A caixa de diálogo **configurações de grade** permite que você especifique as configurações de grade para a imagem e exibe linhas de grade sobre a imagem editada. As linhas são úteis para editar a imagem, mas não são salvas como parte da própria imagem.
 
 |Propriedade|Descrição|
 |---|---|
-|**Grade de pixels**|Quando marcada, exibe uma grade em torno de cada pixel a **Editor de imagens**.<br/><br/>A grade aparece apenas em 4 × e resoluções mais altas.|
-|**Grade lado a lado**|Quando selecionado, exibe uma grade de blocos de pixels a **Editor de imagens**, especificado pelos valores de espaçamento da grade.|
-|**Largura**|Especifica a largura de cada bloco lado a lado.<br/><br/>Essa propriedade é útil ao desenhar bitmaps que contém várias imagens são organizadas em intervalos regulares.|
-|**Altura**|Especifica a altura de cada bloco lado a lado.<br/><br/>Essa propriedade é útil ao desenhar bitmaps que contém várias imagens são organizadas em intervalos regulares.|
+|**Grade de pixel**|Quando marcada, exibe uma grade em volta de cada pixel no **Editor de imagem**.<br/><br/>A grade aparece apenas a 4 × e resoluções superiores.|
+|**Grade de blocos**|Quando selecionado, exibe uma grade em volta de blocos de pixels no **Editor de imagens**, especificado pelos valores de espaçamento da grade.|
+|**Largura**|Especifica a largura de cada bloco de blocos.<br/><br/>Essa propriedade é útil ao desenhar bitmaps que contêm várias imagens que são organizadas em intervalos regulares.|
+|**Altura**|Especifica a altura de cada bloco de blocos.<br/><br/>Essa propriedade é útil ao desenhar bitmaps que contêm várias imagens que são organizadas em intervalos regulares.|
 
 ## <a name="toolbar"></a>Barra de ferramentas
 
-O **Editor de imagens** barra de ferramentas contém ferramentas para desenho, pintura, inserir texto, apagar e manipulação de exibições. Ele também contém um seletor de opção, com a qual você pode selecionar opções para usar cada ferramenta. Por exemplo, você pode escolher entre várias larguras de pincel, fatores de ampliação e estilos de linha.
+A barra de ferramentas do **Editor de imagem** contém ferramentas para desenhar, pintar, inserir texto, apagar e manipular exibições. Ele também contém um seletor de opção, com o qual você pode selecionar opções para usar cada ferramenta. Por exemplo, você pode escolher entre várias larguras de pincel, fatores de ampliação e estilos de linha.
 
-Disponível em todas as ferramentas, o **Editor de imagens** barra de ferramentas também estão disponíveis no menu **imagem** > **ferramentas**. Para usar o **Editor de imagens** barra de ferramentas e **opção** seletor, selecione a ferramenta ou opção que você deseja.
+Todas as ferramentas disponíveis na barra de ferramentas do **Editor de imagens** também estão disponíveis nas**ferramentas**de **imagem** > de menu. Para usar a barra de ferramentas e o seletor de **Opções** do **Editor de imagem** , selecione a ferramenta ou a opção desejada.
 
-![Barra de ferramentas do Editor de imagens](../mfc/media/vcimageeditortoolbar.gif "vcImageEditorToolbar")<br/>
-**Editor de imagens** barra de ferramentas
+![Barra de ferramentas do editor de imagem](../mfc/media/vcimageeditortoolbar.gif "vcImageEditorToolbar")<br/>
+Barra de ferramentas do **Editor de imagem**
 
 > [!TIP]
-> Dicas de ferramenta aparecem quando você passa o cursor sobre um botão de barra de ferramentas. Estas dicas podem ajudá-lo a identificar a função de cada botão.
+> As dicas de ferramenta são exibidas quando você passa o cursor do mouse sobre um botão da barra de ferramentas. Essas dicas podem ajudá-lo a identificar a função de cada botão.
 
-Uma vez que muitas das ferramentas de desenho estão disponíveis na [teclado](../windows/accelerator-keys-image-editor-for-icons.md), às vezes é útil ocultar o **Editor de imagens** barra de ferramentas.
+Como muitas das ferramentas de desenho estão disponíveis no [teclado](../windows/accelerator-keys-image-editor-for-icons.md), às vezes é útil ocultar a barra de ferramentas do **Editor de imagem** .
 
-- Para exibir ou ocultar a **Editor de imagens** barra de ferramentas, vá ao menu **exibição** > **barras de ferramentas** e escolha **Editor de imagens**.
+- Para exibir ou ocultar a barra de ferramentas do **Editor de imagens** , vá até menu **Exibir** > **barras de ferramentas** e escolha Editor de **imagem**.
 
 > [!NOTE]
-> Elementos nessa barra de ferramentas serão exibida não está disponíveis quando um arquivo de imagem do projeto atual ou a solução não estiver aberta na **Editor de imagens**.
+> Os elementos dessa barra de ferramentas aparecerão indisponíveis quando um arquivo de imagem do projeto ou da solução atual não estiver aberto no **Editor de imagem**.
 
 ### <a name="option-selector"></a>Seletor de opção
 
-Com o **opção** seletor, você pode especificar a largura de uma linha, o pincelada e muito mais. O ícone na **opção** alterações de botão de seletor, dependendo de qual ferramenta você selecionou.
+Com o seletor de **opção** , você pode especificar a largura de uma linha, um traço de pincel e muito mais. O ícone no botão seletor de **Opções** é alterado dependendo de qual ferramenta você selecionou.
 
-![Desenho de&#45;seletor de forma na barra de ferramentas do Editor de imagens](../mfc/media/vcimageeditortoolbaroptionselector.gif "vcImageEditorToolbarOptionSelector")<br/>
-**Opção** seletor do **Editor de imagens** barra de ferramentas
+![Seletor de forma de desenho&#45;na barra de ferramentas do editor de imagens](../mfc/media/vcimageeditortoolbaroptionselector.gif "vcImageEditorToolbarOptionSelector")<br/>
+Seletor de **opção** na barra de ferramentas do **Editor de imagem**
 
 ### <a name="text-tool"></a>Ferramenta de texto
 
-Use o **ferramenta de texto** caixa de diálogo para adicionar texto a um recurso de cursor, bitmap ou ícone.
+Use a caixa de diálogo **ferramenta de texto** para adicionar texto a um recurso de cursor, bitmap ou ícone.
 
-Para acessar essa caixa de diálogo, abra o **Editor de imagens** e vá para o menu **imagem** > **ferramentas**, em seguida, selecione o **ferramenta texto** comando.
+Para acessar essa caixa de diálogo, abra **o editor de imagem** e vá para menu**ferramentas**de **imagem** > e, em seguida, selecione o comando **ferramenta de texto** .
 
 > [!TIP]
-> Clique duas vezes no **ferramenta de texto** caixa de diálogo para acessar um menu de atalho padrão que contém uma lista de comandos do Windows padrão.
+> Você pode clicar com o botão direito do mouse na caixa de diálogo **ferramenta de texto** para acessar um menu de atalho padrão que contém uma lista de comandos padrão do Windows.
 
-Abra o **da fonte de dados da ferramenta texto** caixa de diálogo para alterar a fonte, estilo ou tamanho da fonte do cursor. As alterações são aplicadas ao texto exibido na **texto** área.
+Abra a caixa de diálogo **fonte da ferramenta de texto** para alterar a fonte, o estilo ou o tamanho da fonte do cursor. As alterações são aplicadas ao texto exibido na área de **texto** .
 
-Para acessar essa caixa de diálogo, selecione a **Font** botão na **ferramenta texto** caixa de diálogo. As propriedades disponíveis são:
+Para acessar essa caixa de diálogo, selecione o botão **fonte** na caixa de diálogo **ferramenta de texto** . As propriedades disponíveis são:
 
 |Propriedade|Descrição|
 |---|---|
 |**Fonte**|Lista as fontes disponíveis.|
 |**Estilo da fonte**|Lista os estilos disponíveis para a fonte especificada.|
-|**Size**|Lista os tamanhos de ponto disponíveis para a fonte especificada.|
-|**Amostra**|Mostra um exemplo de como o texto será exibido com as configurações de fonte especificada.|
-|**script**|Lista os scripts de linguagem disponíveis para a fonte especificada.<br/><br/>Quando você seleciona um script de idioma diferente, o conjunto de caracteres desse idioma ficará disponível para a criação de documentos multilíngues.|
+|**Size**|Lista os tamanhos de pontos disponíveis para a fonte especificada.|
+|**Amostra**|Mostra um exemplo de como o texto será exibido com as configurações de fonte especificadas.|
+|**script**|Lista os scripts de idioma disponíveis para a fonte especificada.<br/><br/>Quando você seleciona um script de idioma diferente, o conjunto de caracteres para esse idioma fica disponível para a criação de documentos multilíngües.|
 
 #### <a name="to-change-the-font-of-text-on-an-image"></a>Para alterar a fonte do texto em uma imagem
 
-Aqui está um exemplo de como adicionar texto a um ícone em um aplicativo do Windows e manipular a fonte do texto.
+Aqui está um exemplo de como adicionar texto a um ícone em um aplicativo do Windows e manipular a fonte do seu texto.
 
-1. Crie um aplicativo de formulários do Windows do C++. Para obter detalhes, confira [Como: Criar aplicativos do Windows Forms](/previous-versions/visualstudio/visual-studio-2008/s69bf10x(v%3dvs.90)). Uma *app.ico* arquivo é adicionado ao seu projeto por padrão.
+1. Crie um C++ aplicativo Windows Forms. Para obter detalhes, confira [Como: Crie Windows Forms aplicativos](/previous-versions/visualstudio/visual-studio-2008/s69bf10x(v%3dvs.90)). Um arquivo *app. ico* é adicionado ao seu projeto por padrão.
 
-1. Na **Gerenciador de soluções**, clique duas vezes no arquivo *app.ico*. O **Editor de imagens** será aberta.
+1. Em **Gerenciador de soluções**, clique duas vezes no arquivo *app. ico*. O **Editor de imagem** será aberto.
 
-1. Vá ao menu **imagem** > **ferramentas** e selecione **ferramenta texto**.
+1. Vá para menu**ferramentas** de **imagem** > e selecione **ferramenta de texto**.
 
-1. No **ferramenta de texto** caixa de diálogo, digite *C++* na área de texto vazio. Esse texto será exibido em uma caixa redimensionável localizada no canto superior esquerdo do *app.ico* na **Editor de imagens**.
+1. Na caixa de diálogo **ferramenta de texto** , *C++* digite a área de texto vazia. Esse texto será exibido em uma caixa redimensionável localizada no canto superior esquerdo do *app. ico* no **Editor de imagem**.
 
-1. No **Editor de imagens**, arraste a caixa redimensionável para o centro da *app.ico* para melhorar a legibilidade do texto.
+1. No **Editor de imagem**, arraste a caixa redimensionável para o centro de *app. ico* para melhorar a legibilidade do seu texto.
 
-1. No **ferramenta de texto** caixa de diálogo, selecione o **fonte** botão.
+1. Na caixa de diálogo **ferramenta de texto** , selecione o botão **fonte** .
 
-1. No **da fonte de dados da ferramenta texto** caixa de diálogo:
+1. Na caixa de diálogo **fonte da ferramenta de texto** :
 
-   - Selecione **Times New Roman** na lista de fontes disponíveis que estão listados na **fonte** caixa de listagem.
+   - Selecione **Times New Roman** na lista de fontes disponíveis listadas na caixa de listagem **fonte** .
 
-   - Selecione **Bold** na lista de estilos de fonte disponíveis listadas na **estilo da fonte** caixa de listagem.
+   - Selecione **negrito** na lista de estilos de fonte disponíveis listados na caixa de listagem **estilo de fonte** .
 
-   - Selecione **10** na lista de disponíveis de tamanhos listados no ponto de **tamanho** caixa de listagem.
+   - Selecione **10** na lista de tamanhos de pontos disponíveis listados na caixa de listagem **tamanho** .
 
-   - Escolha **OK**. O **da fonte de dados da ferramenta texto** caixa de diálogo será fechada e as novas configurações de fonte serão aplicada ao texto.
+   - Escolha **OK**. A caixa de diálogo **fonte da ferramenta de texto** será fechada e as novas configurações de fonte serão aplicadas ao seu texto.
 
-1. Escolha **feche** sobre o **ferramenta de texto** caixa de diálogo. A caixa ao redor do texto de redimensionável desaparecerá dos **Editor de imagens**.
+1. Escolha **fechar** na caixa de diálogo **ferramenta de texto** . A caixa redimensionável em volta do texto desaparecerá do **Editor de imagem**.
 
 A área de texto exibe o texto que aparece como parte do recurso. Inicialmente, essa área está vazia.
 
 > [!NOTE]
-> Se **plano de fundo transparente** for definido, somente o texto será colocado na imagem. Se **tela de fundo opaca** for definido, um retângulo delimitador, preenchido com a cor do plano de fundo, será colocado atrás do texto.
+> Se o **plano de fundo transparente** estiver definido, somente o texto será colocado na imagem. Se o **plano de fundo opaco** for definido, um retângulo delimitador, preenchido com a cor do plano de fundo, será colocado atrás do texto.
 
 ## <a name="window-panes"></a>Painéis Janela
 
-O **Editor de imagens** janela mostra dois modos de exibição de uma imagem, com uma barra de divisão que separa os dois painéis. Você pode arrastar a barra de divisão de um lado para o outro para alterar o tamanho relativo dos painéis. O painel ativo exibe uma borda de seleção.
+A janela do **Editor de imagens** mostra duas exibições de uma imagem, com uma barra de divisão separando os dois painéis. Você pode arrastar a barra de divisão de um lado para o outro para alterar o tamanho relativo dos painéis. O painel ativo exibe uma borda de seleção.
 
-Um modo de exibição é o tamanho real e a outra é ampliada por um fator de ampliação de padrão de 6. As exibições desses dois painéis são atualizadas automaticamente, as alterações feitas em um único painel imediatamente são mostradas no outro. Os dois painéis tornam fácil para você trabalhar em uma exibição ampliada da imagem, na qual você pode distinguir pixels individuais e, ao mesmo tempo, observar o efeito de seu trabalho no modo de exibição de tamanho real da imagem.
+Uma exibição é o tamanho real e a outra é ampliada por um fator de ampliação padrão de 6. As exibições nesses dois painéis são atualizadas automaticamente, todas as alterações feitas em um painel são exibidas imediatamente no outro. Os dois painéis facilitam a tarefa de trabalhar em uma exibição ampliada da imagem, na qual você pode distinguir pixels individuais e, ao mesmo tempo, observar o efeito do seu trabalho na exibição de tamanho real da imagem.
 
-O painel esquerdo usa tanto espaço quanto for necessário (até metade dos **imagem** janela) para exibir o modo de exibição padrão 1:1 ampliação da imagem. O painel direito exibe uma imagem ampliada de 6:1 ampliação padrão. Você pode alterar a ampliação em cada painel usando o **ampliar** ferramenta sobre o **Editor de imagens** barra de ferramentas ou usando as teclas de aceleração.
+O painel esquerdo usa o máximo de espaço necessário (até metade da janela de **imagem** ) para exibir a exibição de ampliação 1:1 padrão da imagem. O painel direito exibe uma imagem de ampliação de 6:1 com zoom padrão. Você pode alterar a ampliação em cada painel usando a ferramenta de ampliação na barra de ferramentas do **Editor de imagens** ou usando as teclas de aceleração.
 
-Você pode ampliar o painel de menor do **Editor de imagens** janela e usar os dois painéis para mostrar diferentes regiões de uma imagem grande. Selecione dentro do painel para escolhê-lo.
+Você pode ampliar o painel menor da janela do **Editor de imagem** e usar os dois painéis para mostrar regiões diferentes de uma imagem grande. Selecione dentro do painel para selecioná-lo.
 
-Você pode alterar o tamanho relativo dos painéis de posicionando o ponteiro na barra de divisão e mover a barra de divisão para a direita ou esquerda. A barra de divisão pode mover todo o caminho para ambos os lados se você quiser trabalhar em somente um painel.
+Você pode alterar os tamanhos relativos dos painéis posicionando o ponteiro na barra de divisão e movendo a barra de divisão para a direita ou esquerda. A barra de divisão pode mover-se para cada lado se você quiser trabalhar em apenas um painel.
 
-Se o **Editor de imagens** painel é ampliada por um fator de 4 ou superior, você pode exibir uma grade de pixels que delimita os pixels individuais na imagem.
+Se o painel do **Editor de imagem** for ampliado por um fator de 4 ou maior, você poderá exibir uma grade de pixels que delimite os pixels individuais na imagem.
 
 ### <a name="to-change-the-magnification-factor"></a>Para alterar o fator de ampliação
 
-Por padrão, o **Editor de imagens** exibe o modo de exibição no painel esquerdo em tamanho real e o modo de exibição no painel à direita em tamanho real de 6 vezes. O fator de ampliação (visto na barra de status na parte inferior do espaço de trabalho) é a proporção entre o tamanho real da imagem e o tamanho exibido. O fator de padrão é 6 e o intervalo é de 1 a 10.
+Por padrão, o **Editor de imagem** exibe a exibição no painel esquerdo em tamanho real e a exibição no painel direito em tamanho real de 6 vezes. O fator de ampliação (visto na barra de status na parte inferior do espaço de trabalho) é a razão entre o tamanho real da imagem e o tamanho exibido. O fator padrão é 6 e o intervalo é de 1 a 10.
 
-1. Selecione o **Editor de imagens** painel cujo fator de ampliação que você deseja alterar.
+1. Selecione o painel do **Editor de imagens** cujo fator de ampliação você deseja alterar.
 
-1. Sobre o **Editor de imagens** barra de ferramentas, selecione a seta à direita do **ampliar** de ferramentas e selecione o fator de ampliação do submenu: **1 X**, **2 X**, **6 X**, ou **8 X**.
+1. Na barra de ferramentas do **Editor de imagem** , selecione a seta à direita da ferramenta de **ampliação** e selecione o fator de ampliação no submenu: **1x**, **2x**, **6 vezes**ou **8x**.
 
    > [!NOTE]
-   > Para selecionar um fator de ampliação diferente das listadas as **ampliar** ferramenta, use as teclas de aceleração.
+   > Para selecionar um fator de ampliação diferente daqueles listados na ferramenta de ampliação, use as teclas de aceleração.
 
 ### <a name="to-display-or-hide-the-pixel-grid"></a>Para exibir ou ocultar a grade de pixels
 
-Para todos os **Editor de imagens** painéis com um fator de ampliação de 4 ou superior, você pode exibir uma grade que delimita os pixels individuais na imagem.
+Para todos os painéis do **Editor de imagem** com um fator de ampliação de 4 ou superior, você pode exibir uma grade que delimita os pixels individuais na imagem.
 
-1. Vá ao menu **imagem** > **configurações da grade**.
+1. Vá para o menu**configurações da grade**de **imagem** > .
 
-1. Selecione o **grade de pixels** caixa de seleção para exibir a grade, ou desmarque a caixa para ocultar a grade.
+1. Marque a caixa de seleção **grade de pixels** para exibir a grade ou desmarque a caixa para ocultar a grade.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -220,4 +220,4 @@ Nenhum
 ## <a name="see-also"></a>Consulte também
 
 [Editores de recursos](../windows/resource-editors.md)<br/>
-[Ícones](/windows/desktop/menurc/icons)
+[Ícones](/windows/win32/menurc/icons)

@@ -41,14 +41,14 @@ helpviewer_keywords:
 - _vcwprintf_p_l function
 - _vtcprintf_p function
 ms.assetid: 611024cc-90e7-41db-8e85-145ca95012b1
-ms.openlocfilehash: 59e601d5cd03d58fe2d1725ba509a9fa3b2f3422
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4d2346237181299b3497fade37827a3abc5e7749
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62364877"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499362"
 ---
-# <a name="vcprintfp-vcprintfpl-vcwprintfp-vcwprintfpl"></a>_vcprintf_p, _vcprintf_p_l, _vcwprintf_p, _vcwprintf_p_l
+# <a name="_vcprintf_p-_vcprintf_p_l-_vcwprintf_p-_vcwprintf_p_l"></a>_vcprintf_p, _vcprintf_p_l, _vcwprintf_p, _vcwprintf_p_l
 
 Grava a saída formatada no console usando um ponteiro para uma lista de argumentos e dá suporte a parâmetros posicionais na cadeia de caracteres de formato.
 
@@ -93,22 +93,22 @@ Para obter mais informações, consulte [Sintaxe de especificação de formato: 
 
 ## <a name="return-value"></a>Valor de retorno
 
-O número de caracteres gravados ou um valor negativo se ocorrer erro de saída. Se *formato* for um ponteiro nulo, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, **errno** é definido como **EINVAL** e -1 será retornado.
+O número de caracteres gravados ou um valor negativo se ocorrer erro de saída. Se *Format* for um ponteiro NULL, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, **errno** será definido como **EINVAL** e-1 será retornado.
 
 ## <a name="remarks"></a>Comentários
 
-Cada uma dessas funções usa um ponteiro para uma lista de argumentos e, em seguida, usa o **putch** função para formatar e gravar os dados fornecidos no console. (**vcwprintf_p** usa **putwch** em vez de **putch**. **vcwprintf_p** é a versão de caractere largo de **vcprintf_p**. Uma cadeia de caracteres largos é usada como argumento.)
+Cada uma dessas funções usa um ponteiro para uma lista de argumentos e, em seguida, usa a função **_putch** para formatar e gravar os dados fornecidos no console. ( **_vcwprintf_p** usa **_putwch** em vez de **_putch**. **_vcwprintf_p** é a versão de caractere largo do **_vcprintf_p**. Uma cadeia de caracteres largos é usada como argumento.)
 
-As versões dessas funções que têm o **l** sufixo são idênticas, exceto por usarem o parâmetro de localidade passado em vez da localidade atual.
+As versões dessas funções que têm o sufixo **_L** são idênticas, exceto pelo fato de que usam o parâmetro Locale que é passado em vez da localidade atual.
 
-Cada *argumento* (se houver) é convertido e gerado de acordo com a especificação de formato correspondente em *formato*. A especificação de formato dá suporte a parâmetros posicionais para que você possa especificar a ordem na qual os argumentos são usados na cadeia de caracteres de formato. Para obter mais informações, consulte [Parâmetros posicionais printf_p](../../c-runtime-library/printf-p-positional-parameters.md).
+Cada *argumento* (se houver) é convertido e é apresentado de acordo com a especificação de formato correspondente no *formato*. A especificação de formato dá suporte a parâmetros posicionais para que você possa especificar a ordem na qual os argumentos são usados na cadeia de caracteres de formato. Para obter mais informações, consulte [Parâmetros posicionais printf_p](../../c-runtime-library/printf-p-positional-parameters.md).
 
 Essas funções não traduzem caracteres de alimentação de linha em combinações CR-LF (retorno de carro-alimentação de linha) quando eles são a saída.
 
 > [!IMPORTANT]
-> Verifique se *format* não é uma cadeia de caracteres definida pelo usuário. Para obter mais informações, consulte [Avoiding Buffer Overruns](/windows/desktop/SecBP/avoiding-buffer-overruns) (Evitando estouros de buffer).
+> Verifique se *format* não é uma cadeia de caracteres definida pelo usuário. Para obter mais informações, consulte [Avoiding Buffer Overruns](/windows/win32/SecBP/avoiding-buffer-overruns) (Evitando estouros de buffer).
 
-Essas funções validam o ponteiro de entrada e a cadeia de caracteres de formato. Se *formato* ou *argumento* está **nulo**, ou se a cadeia de caracteres de formato contiver caracteres de formatação inválidos, essas funções invocarão o manipulador de parâmetro inválido, conforme descrito na [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções retornarão -1 e defina **errno** à **EINVAL**.
+Essas funções validam o ponteiro de entrada e a cadeia de caracteres de formato. Se o *formato* ou *argumento* for **nulo**ou se a cadeia de caracteres de formato contiver caracteres de formatação inválidos, essas funções invocarão o manipulador de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, essas funções retornam-1 e definem **errno** como **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 

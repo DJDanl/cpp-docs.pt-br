@@ -1,21 +1,21 @@
 ---
-title: licenciado (C++ COM atributo)
+title: licenciado (C++ atributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.licensed
 helpviewer_keywords:
 - licensed attribute
 ms.assetid: 09cf3b4a-d3f2-43e3-9180-d420333b23bf
-ms.openlocfilehash: 90fba74fb97ce49088145888c3b1925b4ee0829c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0c637f9e3f6d99b9f197474f49a1a9843744f38b
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409324"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514458"
 ---
 # <a name="licensed"></a>licensed
 
-Indica que o objeto COM para o qual ele se aplica é licenciado e deve ser instanciado usando `IClassFactory2`.
+Indica que o objeto COM ao qual se aplica é licenciado e deve ser instanciado usando `IClassFactory2`.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -25,7 +25,7 @@ Indica que o objeto COM para o qual ele se aplica é licenciado e deve ser insta
 
 ## <a name="remarks"></a>Comentários
 
-O **licenciado** atributo C++ tem a mesma funcionalidade que o [licenciado](/windows/desktop/Midl/licensed) atributo MIDL.
+O atributo **licenciado** C++ tem a mesma funcionalidade que o atributo MIDL [licenciado](/windows/win32/Midl/licensed) .
 
 ## <a name="example"></a>Exemplo
 
@@ -50,16 +50,16 @@ public:
 
 ## <a name="requirements"></a>Requisitos
 
-### <a name="attribute-context"></a>Atributo de contexto
+### <a name="attribute-context"></a>Contexto de atributo
 
 |||
 |-|-|
-|**Aplica-se a**|**class**, **struct**|
+|**Aplica-se a**|**classe**, **struct**|
 |**Repetível**|Não|
-|**Atributos obrigatórios**|`coclass`|
+|**Atributos necessários**|`coclass`|
 |**Atributos inválidos**|Nenhum|
 
-Para obter mais informações, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
+Para obter mais informações, consulte contextos de [atributo](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Consulte também
 

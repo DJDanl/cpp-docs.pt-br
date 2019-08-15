@@ -1,5 +1,5 @@
 ---
-title: Classe de CSimpleStringT
+title: Classe CSimpleStringT
 ms.date: 10/18/2018
 f1_keywords:
 - CSimpleStringT
@@ -36,14 +36,14 @@ helpviewer_keywords:
 - strings [C++], ATL class
 - CSimpleStringT class
 ms.assetid: 15814fcb-5b8f-4425-a97e-3b61fc9b48d8
-ms.openlocfilehash: 1ec28ed5b2f5428cabcf7570c7ac53904e9a64f0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c033346b7a687a1c6778ad23e30ee0e73c787ad8
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62252626"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69491441"
 ---
-# <a name="csimplestringt-class"></a>Classe de CSimpleStringT
+# <a name="csimplestringt-class"></a>Classe CSimpleStringT
 
 Essa classe representa um `CSimpleStringT` objeto.
 
@@ -57,9 +57,9 @@ class CSimpleStringT
 ### <a name="parameters"></a>Parâmetros
 
 *BaseType*<br/>
-O tipo de caractere da classe string. Pode ser uma das seguintes opções:
+O tipo de caractere da classe de cadeia de caracteres. Pode ser um dos seguintes:
 
-- **char** (para cadeias de caracteres ANSI).
+- **caractere** (para cadeias de caracteres ANSI).
 
 - **wchar_t** (para cadeias de caracteres Unicode).
 
@@ -78,58 +78,58 @@ O tipo de caractere da classe string. Pode ser uma das seguintes opções:
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CSimpleStringT::CSimpleStringT](#ctor)|Constrói `CSimpleStringT` objetos de várias maneiras.|
+|[CSimpleStringT::CSimpleStringT](#ctor)|`CSimpleStringT` Constrói objetos de várias maneiras.|
 |[CSimpleStringT::~CSimpleStringT](#dtor)|Destruidor.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CSimpleStringT::Append](#append)|Acrescenta uma `CSimpleStringT` objeto a um existente `CSimpleStringT` objeto.|
-|[CSimpleStringT::AppendChar](#appendchar)|Acrescenta um caractere a um existente `CSimpleStringT` objeto.|
-|[CSimpleStringT::CopyChars](#copychars)|Copia um caractere ou caracteres em outra cadeia de caracteres.|
-|[CSimpleStringT::CopyCharsOverlapped](#copycharsoverlapped)|Copia um caractere ou caracteres em outra cadeia de caracteres na qual os buffers se sobrepõem.|
-|[CSimpleStringT::Empty](#empty)|Força uma cadeia de caracteres para ter um comprimento de zero.|
-|[CSimpleStringT::FreeExtra](#freeextra)|Libera a memória extra alocada anteriormente pelo objeto de cadeia de caracteres.|
-|[CSimpleStringT::GetAllocLength](#getalloclength)|Recupera o tamanho alocado de um `CSimpleStringT` objeto.|
-|[CSimpleStringT::GetAt](#getat)|Retorna o caractere na posição especificada.|
+|[CSimpleStringT::Append](#append)|Anexa um `CSimpleStringT` objeto a um objeto existente `CSimpleStringT` .|
+|[CSimpleStringT::AppendChar](#appendchar)|Anexa um caractere a um objeto existente `CSimpleStringT` .|
+|[CSimpleStringT::CopyChars](#copychars)|Copia um caractere ou caracteres para outra cadeia de caracteres.|
+|[CSimpleStringT::CopyCharsOverlapped](#copycharsoverlapped)|Copia um caractere ou caracteres para outra cadeia de caracteres na qual os buffers se sobrepõem.|
+|[CSimpleStringT::Empty](#empty)|Força uma cadeia de caracteres a ter um comprimento igual a zero.|
+|[CSimpleStringT::FreeExtra](#freeextra)|Libera qualquer memória extra alocada anteriormente pelo objeto de cadeia de caracteres.|
+|[CSimpleStringT::GetAllocLength](#getalloclength)|Recupera o comprimento alocado de um `CSimpleStringT` objeto.|
+|[CSimpleStringT::GetAt](#getat)|Retorna o caractere em uma determinada posição.|
 |[CSimpleStringT::GetBuffer](#getbuffer)|Retorna um ponteiro para os caracteres em um `CSimpleStringT`.|
 |[CSimpleStringT::GetBufferSetLength](#getbuffersetlength)|Retorna um ponteiro para os caracteres em um `CSimpleStringT`, truncando para o comprimento especificado.|
 |[CSimpleStringT::GetLength](#getlength)|Retorna o número de caracteres em um `CSimpleStringT` objeto.|
 |[CSimpleStringT::GetManager](#getmanager)|Recupera o Gerenciador de memória do `CSimpleStringT` objeto.|
 |[CSimpleStringT::GetString](#getstring)|Recupera a cadeia de caracteres|
-|[CSimpleStringT::IsEmpty](#isempty)|Testes se um `CSimpleStringT` objeto não contém nenhum caractere.|
+|[CSimpleStringT::IsEmpty](#isempty)|Testa se um `CSimpleStringT` objeto não contém caracteres.|
 |[CSimpleStringT::LockBuffer](#lockbuffer)|Desabilita a contagem de referência e protege a cadeia de caracteres no buffer.|
 |[CSimpleStringT::Preallocate](#preallocate)|Aloca uma quantidade específica de memória para o buffer de caracteres.|
-|[CSimpleStringT::ReleaseBuffer](#releasebuffer)|Libera o controle do buffer retornado pelo `GetBuffer`.|
-|[CSimpleStringT::ReleaseBufferSetLength](#releasebuffersetlength)|Libera o controle do buffer retornado pelo `GetBuffer`.|
-|[CSimpleStringT::SetAt](#setat)|Define um caractere na posição especificada.|
-|[CSimpleStringT::SetManager](#setmanager)|Define o Gerenciador de memória de um `CSimpleStringT` objeto.|
-|[CSimpleStringT::SetString](#setstring)|Define a cadeia de caracteres de um `CSimpleStringT` objeto.|
+|[CSimpleStringT::ReleaseBuffer](#releasebuffer)|Libera o controle do buffer retornado por `GetBuffer`.|
+|[CSimpleStringT::ReleaseBufferSetLength](#releasebuffersetlength)|Libera o controle do buffer retornado por `GetBuffer`.|
+|[CSimpleStringT::SetAt](#setat)|Define um caractere em uma determinada posição.|
+|[CSimpleStringT::SetManager](#setmanager)|Define o Gerenciador de memória de `CSimpleStringT` um objeto.|
+|[CSimpleStringT::SetString](#setstring)|Define a cadeia de caracteres `CSimpleStringT` de um objeto.|
 |[CSimpleStringT::StringLength](#stringlength)|Retorna o número de caracteres na cadeia de caracteres especificada.|
-|[CSimpleStringT::Truncate](#truncate)|Trunca a cadeia de caracteres até um comprimento especificado.|
-|[CSimpleStringT::UnlockBuffer](#unlockbuffer)|Permite que a contagem de referência e libera a cadeia de caracteres no buffer.|
+|[CSimpleStringT::Truncate](#truncate)|Trunca a cadeia de caracteres para um comprimento especificado.|
+|[CSimpleStringT::UnlockBuffer](#unlockbuffer)|Habilita a contagem de referência e libera a cadeia de caracteres no buffer.|
 
 ### <a name="public-operators"></a>Operadores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CSimpleStringT::operator PCXSTR](#operator_pcxstr)|Acessa diretamente caracteres armazenados em uma `CSimpleStringT` objeto como uma cadeia de caracteres de estilo C.|
-|[CSimpleStringT::operator\[\]](#operator_at)|Retorna o caractere na posição especificada, substituição do operador para `GetAt`.|
-|[CSimpleStringT::operator +=](#operator_add_eq)|Concatena uma nova cadeia de caracteres ao final de uma cadeia de caracteres existente.|
-|[CSimpleStringT::operator =](#operator_eq)|Atribui um novo valor para um `CSimpleStringT` objeto.|
+|[Operador CSimpleStringT:: Operator PCXSTR](#operator_pcxstr)|Acessa diretamente os caracteres armazenados em um `CSimpleStringT` objeto como uma cadeia de estilo C.|
+|[CSimpleStringT::operator\[\]](#operator_at)|Retorna o caractere em uma determinada posição — substituição de operador `GetAt`para.|
+|[CSimpleStringT:: Operator + =](#operator_add_eq)|Concatena uma nova cadeia de caracteres ao final de uma cadeia de caracteres existente.|
+|[CSimpleStringT:: Operator =](#operator_eq)|Atribui um novo valor a um `CSimpleStringT` objeto.|
 
 ### <a name="remarks"></a>Comentários
 
-`CSimpleStringT` é a classe base para as várias classes de cadeia de caracteres com suporte pelo Visual C++. Ele fornece um suporte mínimo para o gerenciamento de memória do objeto de cadeia de caracteres e manipulação de buffer básico. Para objetos de cadeia de caracteres mais avançados, consulte [classe CStringT](../../atl-mfc-shared/reference/cstringt-class.md).
+`CSimpleStringT`é a classe base para as várias classes de cadeia de caracteres C++com suporte no Visual. Ele fornece suporte mínimo para o gerenciamento de memória do objeto de cadeia de caracteres e a manipulação básica de buffer. Para objetos de cadeia de caracteres mais avançados, consulte [classe CStringT](../../atl-mfc-shared/reference/cstringt-class.md).
 
 ### <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** atlsimpstr.h
+**Cabeçalho:** atlsimpstr. h
 
-## <a name="append"></a> CSimpleStringT::Append
+## <a name="append"></a>CSimpleStringT:: Append
 
-Acrescenta uma `CSimpleStringT` objeto a um existente `CSimpleStringT` objeto.
+Anexa um `CSimpleStringT` objeto a um objeto existente `CSimpleStringT` .
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -142,17 +142,17 @@ void Append(PCXSTR pszSrc);
 #### <a name="parameters"></a>Parâmetros
 
 *strSrc*<br/>
-O `CSimpleStringT` objeto a ser acrescentado.
+O `CSimpleStringT` objeto a ser anexado.
 
 *pszSrc*<br/>
-Um ponteiro para uma cadeia de caracteres que contém os caracteres a serem acrescentados.
+Um ponteiro para uma cadeia que contém os caracteres a serem acrescentados.
 
 *nLength*<br/>
 O número de caracteres a serem acrescentados.
 
 ### <a name="remarks"></a>Comentários
 
-Chame esse método para acrescentar um existente `CSimpleStringT` objeto para outro `CSimpleStringT` objeto.
+Chame esse método para acrescentar um objeto `CSimpleStringT` existente a outro `CSimpleStringT` objeto.
 
 ### <a name="example"></a>Exemplo
 
@@ -168,7 +168,7 @@ ASSERT(_tcscmp(str1, _T("Soccer is an elegant game")) == 0);
 
 ##  <a name="appendchar"></a> CSimpleStringT::AppendChar
 
-Acrescenta um caractere a um existente `CSimpleStringT` objeto.
+Anexa um caractere a um objeto existente `CSimpleStringT` .
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -183,11 +183,11 @@ O caractere a ser anexado
 
 ### <a name="remarks"></a>Comentários
 
-Chame essa função para acrescentar o caractere especificado ao final de uma existente `CSimpleStringT` objeto.
+Chame essa função para acrescentar o caractere especificado ao final de um objeto existente `CSimpleStringT` .
 
-##  <a name="copychars"></a> CSimpleStringT::CopyChars
+##  <a name="copychars"></a>CSimpleStringT::CopyChars
 
-Copia um caractere ou caracteres a um `CSimpleStringT` objeto.
+Copia um ou mais caracteres em um `CSimpleStringT` objeto.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -204,14 +204,14 @@ static void CopyChars(
 Um ponteiro para uma cadeia de caracteres.
 
 *pchSrc*<br/>
-Um ponteiro para uma cadeia de caracteres que contém os caracteres a serem copiados.
+Um ponteiro para uma cadeia que contém os caracteres a serem copiados.
 
 *nChars*<br/>
-O número de *pchSrc* caracteres a serem copiados.
+O número de caracteres *pchSrc* a serem copiados.
 
 ### <a name="remarks"></a>Comentários
 
-Chame esse método para copiar os caracteres de *pchSrc* para o *pchDest* cadeia de caracteres.
+Chame esse método para copiar os caracteres de *pchSrc* para a cadeia de caracteres *pchDest* .
 
 ### <a name="example"></a>Exemplo
 
@@ -227,7 +227,7 @@ _tprintf_s(_T("%s\n"), str);
 
 ##  <a name="copycharsoverlapped"></a>  CSimpleStringT::CopyCharsOverlapped
 
-Copia um caractere ou caracteres a um `CSimpleStringT` objeto.
+Copia um ou mais caracteres em um `CSimpleStringT` objeto.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -244,18 +244,18 @@ static void CopyCharsOverlapped(
 Um ponteiro para uma cadeia de caracteres.
 
 *pchSrc*<br/>
-Um ponteiro para uma cadeia de caracteres que contém os caracteres a serem copiados.
+Um ponteiro para uma cadeia que contém os caracteres a serem copiados.
 
 *nChars*<br/>
-O número de *pchSrc* caracteres a serem copiados.
+O número de caracteres *pchSrc* a serem copiados.
 
 ### <a name="remarks"></a>Comentários
 
-Chame esse método para copiar os caracteres de *pchSrc* para o *pchDest* cadeia de caracteres. Diferentemente `CopyChars`, `CopyCharsOverlapped` fornece um método seguro para a cópia de buffers de caracteres que podem ser sobrepostos.
+Chame esse método para copiar os caracteres de *pchSrc* para a cadeia de caracteres *pchDest* . Ao `CopyChars`contrário `CopyCharsOverlapped` de, o fornece um método seguro para copiar de buffers de caracteres que podem ser sobrepostos.
 
 ### <a name="example"></a>Exemplo
 
-Veja o exemplo de [CSimpleStringT::CopyChars](#copychars), ou o código-fonte `CSimpleStringT::SetString` (localizado em atlsimpstr.h).
+Consulte o exemplo de [CSimpleStringT:: CopyChars](#copychars)ou o código-fonte para `CSimpleStringT::SetString` (localizado em atlsimpstr. h).
 
 ##  <a name="ctor"></a>  CSimpleStringT::CSimpleStringT
 
@@ -273,27 +273,27 @@ explicit CSimpleStringT(IAtlStringMgr* pStringMgr) throw();
 #### <a name="parameters"></a>Parâmetros
 
 *strSrc*<br/>
-Um existente `CSimpleStringT` o objeto a ser copiado para isso `CSimpleStringT` objeto.
+Um objeto `CSimpleStringT` existente a ser copiado para `CSimpleStringT` este objeto.
 
 *pchSrc*<br/>
-Um ponteiro para uma matriz de caracteres de comprimento *nLength*, não finalizada com null.
+Um ponteiro para uma matriz de caracteres de comprimento *nLength*, não termina com NULL.
 
 *pszSrc*<br/>
-Uma cadeia de caracteres terminada em nulo a ser copiado para isso `CSimpleStringT` objeto.
+Uma cadeia de caracteres terminada em nulo a ser `CSimpleStringT` copiada para este objeto.
 
 *nLength*<br/>
 Uma contagem do número de caracteres em `pch`.
 
 *pStringMgr*<br/>
-Um ponteiro para o Gerenciador de memória do `CSimpleStringT` objeto. Para obter mais informações sobre `IAtlStringMgr` e o gerenciamento de memória para `CSimpleStringT`, consulte [gerenciamento de memória e CStringT](../memory-management-with-cstringt.md).
+Um ponteiro para o Gerenciador de memória do `CSimpleStringT` objeto. Para obter mais informações `IAtlStringMgr` sobre o e o `CSimpleStringT`gerenciamento de memória para o, consulte [Gerenciamento de memória e CStringT](../memory-management-with-cstringt.md).
 
 ### <a name="remarks"></a>Comentários
 
-Construir uma nova `CSimpleStringT` objeto. Porque os construtores copiam os dados de entrada para o novo armazenamento alocado, as exceções de memória podem resultar.
+Construa um novo `CSimpleStringT` objeto. Como os construtores copiam os dados de entrada para o novo armazenamento alocado, as exceções de memória podem resultar.
 
 ### <a name="example"></a>Exemplo
 
-O exemplo a seguir demonstra o uso de `CSimpleStringT::CSimpleStringT` usando a ATL **typedef** `CSimpleString`. `CSimpleString` é uma especialização comumente usada do modelo de classe `CSimpleStringT`.
+O exemplo a seguir demonstra o uso `CSimpleStringT::CSimpleStringT` de usando o **typedef** `CSimpleString`ATL. `CSimpleString`é uma especialização comumente usada do modelo `CSimpleStringT`de classe.
 
 ```cpp
 CSimpleString s1(pMgr);
@@ -312,7 +312,7 @@ CSimpleString s5(_T("xxxxxx"), 6, pMgr);
 
 ##  <a name="empty"></a>  CSimpleStringT::Empty
 
-Torna essa `CSimpleStringT` uma cadeia de caracteres do objeto e libera memória conforme apropriado.
+Torna esse `CSimpleStringT` objeto uma cadeia de caracteres vazia e libera a memória conforme apropriado.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -322,7 +322,7 @@ void Empty() throw();
 
 ### <a name="remarks"></a>Comentários
 
-Para obter mais informações, consulte [cadeias de caracteres: Limpeza de exceção de CString](../cstring-exception-cleanup.md).
+Para obter mais informações, [consulte cadeias de caracteres: Limpeza](../cstring-exception-cleanup.md)de exceção CString.
 
 ### <a name="example"></a>Exemplo
 
@@ -333,9 +333,9 @@ CSimpleString s(pMgr);
 ASSERT(s.IsEmpty());
 ```
 
-##  <a name="freeextra"></a>  CSimpleStringT::FreeExtra
+##  <a name="freeextra"></a>CSimpleStringT::FreeExtra
 
-Libera a memória extra alocado anteriormente pela cadeia de caracteres, mas não for mais necessário.
+Libera qualquer memória extra alocada anteriormente pela cadeia de caracteres, mas não é mais necessária.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -345,7 +345,7 @@ void FreeExtra();
 
 ### <a name="remarks"></a>Comentários
 
-Isso deve reduzir a sobrecarga de memória consumida pelo objeto de cadeia de caracteres. O método realoca buffer para o comprimento exato retornado por [GetLength](#getlength).
+Isso deve reduzir a sobrecarga de memória consumida pelo objeto de cadeia de caracteres. O método realoca o buffer para o tamanho exato retornado por [GetLength](#getlength).
 
 ### <a name="example"></a>Exemplo
 
@@ -376,7 +376,7 @@ _tprintf_s(_T("Alloc length is %d, String length is %d\n"),
 
 ### <a name="remarks"></a>Comentários
 
-A saída deste exemplo é o seguinte:
+A saída deste exemplo é a seguinte:
 
 ```Output
 Alloc length is 1031, String length is 1024
@@ -386,7 +386,7 @@ Alloc length is 15, String length is 15
 
 ##  <a name="getalloclength"></a>  CSimpleStringT::GetAllocLength
 
-Recupera o tamanho alocado de um `CSimpleStringT` objeto.
+Recupera o comprimento alocado de um `CSimpleStringT` objeto.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -396,11 +396,11 @@ int GetAllocLength() const throw();
 
 ### <a name="return-value"></a>Valor de retorno
 
-O número de caracteres alocado para esse objeto.
+O número de caracteres alocados para este objeto.
 
 ### <a name="remarks"></a>Comentários
 
-Chame esse método para determinar o número de caracteres alocado para este `CSimpleStringT` objeto. Ver [FreeExtra](#freeextra) para obter um exemplo de chamar essa função.
+Chame esse método para determinar o número de caracteres alocados para `CSimpleStringT` esse objeto. Consulte [FreeExtra](#freeextra) para obter um exemplo de como chamar essa função.
 
 ##  <a name="getat"></a>  CSimpleStringT::GetAt
 
@@ -415,7 +415,7 @@ XCHAR GetAt(int iChar) const;
 #### <a name="parameters"></a>Parâmetros
 
 *iChar*<br/>
-O índice baseado em zero do caractere no `CSimpleStringT` objeto. O *iChar* parâmetro deve ser maior que ou igual a 0 e menor que o valor retornado por [GetLength](#getlength). Caso contrário, `GetAt` gerará uma exceção.
+Índice de base zero do caractere no `CSimpleStringT` objeto. O parâmetro *iChar* deve ser maior ou igual a 0 e menor que o valor retornado por [GetLength](#getlength). Caso contrário `GetAt` , gerará uma exceção.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -423,7 +423,7 @@ Um `XCHAR` que contém o caractere na posição especificada na cadeia de caract
 
 ### <a name="remarks"></a>Comentários
 
-Chame esse método para retornar o caractere especificado por *iChar*. O subscrito sobrecarregado (**[]**) operador é um alias conveniente para `GetAt`. O terminador nulo será endereçável sem gerar uma exceção usando `GetAt`. No entanto, não é contado por `GetLength`, e o valor retornado será 0.
+Chame esse método para retornar um caractere especificado por *iChar*. O operador de subscript sobrecarregado ( **[]** ) é um alias conveniente para `GetAt`. O terminador nulo é endereçável sem gerar uma exceção usando `GetAt`. No entanto, ele não é `GetLength`contado por e o valor retornado é 0.
 
 ### <a name="example"></a>Exemplo
 
@@ -436,7 +436,7 @@ ASSERT(s.GetAt(2) == _T('c'));
 
 ##  <a name="getbuffer"></a>  CSimpleStringT::GetBuffer
 
-Retorna um ponteiro para o buffer de caracteres interno para o `CSimpleStringT` objeto.
+Retorna um ponteiro para o buffer `CSimpleStringT` de caracteres interno do objeto.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -450,25 +450,25 @@ PXSTR GetBuffer();
 *nMinBufferLength*<br/>
 O número mínimo de caracteres que o buffer de caracteres pode conter. Esse valor não inclui espaço para um terminador nulo.
 
-Se *nMinBufferLength* é maior que o tamanho do buffer atual, `GetBuffer` destrói o buffer atual, substitui por um buffer do tamanho solicitado e redefine a contagem de referência de objeto para zero. Se você tiver sido chamado anteriormente [LockBuffer](#lockbuffer) esse buffer, você perderá o bloqueio de buffer.
+Se *nMinBufferLength* for maior que o comprimento do buffer atual, `GetBuffer` destruirá o buffer atual, o substituirá por um buffer do tamanho solicitado e redefinirá a contagem de referência do objeto como zero. Se você já tiver chamado [LockBuffer](#lockbuffer) nesse buffer, perderá o bloqueio de buffer.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Um `PXSTR` ponteiro ao buffer de caractere (terminada em nulo) do objeto.
+Um `PXSTR` ponteiro para o buffer de caracteres do objeto (terminada em nulo).
 
 ### <a name="remarks"></a>Comentários
 
-Chame esse método para retornar o conteúdo do buffer do `CSimpleStringT` objeto. Retornado `PXSTR` não é uma constante e, portanto, permite a modificação direta de `CSimpleStringT` conteúdo.
+Chame esse método para retornar o conteúdo do buffer do `CSimpleStringT` objeto. O retornado `PXSTR` não é uma constante e, portanto, permite a `CSimpleStringT` modificação direta do conteúdo.
 
-Se você usar o ponteiro retornado por `GetBuffer` para alterar o conteúdo de cadeia de caracteres, você deve chamar [ReleaseBuffer](#releasebuffer) antes de usar qualquer outra `CSimpleStringT` métodos de membro.
+Se você usar o ponteiro retornado pelo `GetBuffer` para alterar o conteúdo da cadeia de caracteres, deverá chamar [ReleaseBuffer](#releasebuffer) antes de usar `CSimpleStringT` qualquer outro método de membro.
 
-O endereço retornado por `GetBuffer` podem não ser válidas após a chamada para `ReleaseBuffer` porque adicionais `CSimpleStringT` operações podem causar o `CSimpleStringT` buffer a ser realocados. O buffer não é realocado se você não alterar o comprimento do `CSimpleStringT`.
+O endereço retornado por `GetBuffer` pode não ser válido após a chamada para `ReleaseBuffer` porque operações `CSimpleStringT` adicionais podem fazer com `CSimpleStringT` que o buffer seja realocado. O buffer não será realocado se você não alterar o comprimento do `CSimpleStringT`.
 
-A memória de buffer é automaticamente liberada quando o `CSimpleStringT` objeto é destruído.
+A memória de buffer é liberada automaticamente `CSimpleStringT` quando o objeto é destruído.
 
-Se você controla o tamanho da cadeia de caracteres por conta própria, você não deve acrescentar o caractere nulo de terminação. No entanto, você deve especificar o comprimento da cadeia de caracteres final ao liberar o buffer com `ReleaseBuffer`. Se você acrescentar um caractere nulo de terminação, você deve passar -1 (o padrão) para o comprimento. `ReleaseBuffer` em seguida, determina o comprimento do buffer.
+Se você mesmo acompanhar o comprimento da cadeia de caracteres, não deverá acrescentar o caractere nulo de terminação. No entanto, você deve especificar o comprimento final da cadeia de caracteres ao `ReleaseBuffer`liberar o buffer com. Se você acrescentar um caractere nulo de terminação, deverá passar-1 (o padrão) para o comprimento. `ReleaseBuffer`em seguida, determina o tamanho do buffer.
 
-Se não houver memória suficiente para satisfazer a `GetBuffer` solicitar, este método lança um CMemoryException *.
+Se não houver memória suficiente para atender à `GetBuffer` solicitação, esse método lançará um CMemoryException *.
 
 ### <a name="example"></a>Exemplo
 
@@ -485,7 +485,7 @@ s.ReleaseBuffer();
 
 ##  <a name="getbuffersetlength"></a>  CSimpleStringT::GetBufferSetLength
 
-Retorna um ponteiro para o buffer de caracteres interno para o `CSimpleStringT` objeto, truncando ou aumentando seu comprimento, se necessário, para corresponder exatamente o comprimento especificado no *nLength*.
+Retorna um ponteiro para o buffer `CSimpleStringT` de caracteres interno do objeto, truncando ou aumentando seu comprimento, se necessário, corresponder exatamente ao comprimento especificado em *nLength*.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -500,27 +500,27 @@ O tamanho exato do `CSimpleStringT` buffer de caracteres em caracteres.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Um `PXSTR` ponteiro ao buffer de caractere (terminada em nulo) do objeto.
+Um `PXSTR` ponteiro para o buffer de caracteres do objeto (terminada em nulo).
 
 ### <a name="remarks"></a>Comentários
 
-Chame esse método para recuperar um comprimento especificado do buffer interno do `CSimpleStringT` objeto. Retornado `PXSTR` ponteiro não é **const** e, portanto, permite a modificação direta de `CSimpleStringT` conteúdo.
+Chame esse método para recuperar um comprimento especificado do buffer interno do `CSimpleStringT` objeto. O ponteiro `PXSTR` retornado não é **const** e, portanto, permite a `CSimpleStringT` modificação direta do conteúdo.
 
-Se você usar o ponteiro retornado por [GetBufferSetLength](#getbuffersetlength) para alterar o conteúdo de cadeia de caracteres, chame `ReleaseBuffer` para atualizar o estado interno do `CsimpleStringT` antes de usar qualquer outra `CSimpleStringT` métodos.
+Se você usar o ponteiro retornado por [GetBufferSetLength](#getbuffersetlength) para alterar o conteúdo da cadeia de `ReleaseBuffer` caracteres, chame para atualizar o `CsimpleStringT` estado interno de antes de `CSimpleStringT` usar qualquer outro método.
 
-O endereço retornado por `GetBufferSetLength` podem não ser válidas após a chamada para `ReleaseBuffer` porque adicionais `CSimpleStringT` operações podem causar o `CSimpleStringT` buffer a ser realocados. O buffer não é reatribuído se você não alterar o comprimento do `CSimpleStringT`.
+O endereço retornado por `GetBufferSetLength` pode não ser válido após a chamada para `ReleaseBuffer` porque operações `CSimpleStringT` adicionais podem fazer com `CSimpleStringT` que o buffer seja realocado. O buffer não será reatribuído se você não alterar o comprimento do `CSimpleStringT`.
 
-A memória de buffer é automaticamente liberada quando o `CSimpleStringT` objeto é destruído.
+A memória de buffer é liberada automaticamente `CSimpleStringT` quando o objeto é destruído.
 
-Se você controla o tamanho da cadeia de caracteres por conta própria, não acrescente o caractere nulo de terminação. Você deve especificar o comprimento da cadeia de caracteres final ao liberar o buffer usando `ReleaseBuffer`. Se você acrescentar um caractere nulo de terminação ao chamar `ReleaseBuffer`, passe -1 (o padrão) para o comprimento `ReleaseBuffer`, e `ReleaseBuffer` executará um `strlen` no buffer para determinar seu comprimento.
+Se você mesmo acompanhar o comprimento da cadeia de caracteres, não acrescente o caractere nulo de terminação. Você deve especificar o comprimento final da cadeia de caracteres ao liberar o buffer `ReleaseBuffer`usando. Se você acrescentar um caractere nulo de terminação quando chamar `ReleaseBuffer`, passe-1 (o padrão) para o `ReleaseBuffer`comprimento e `ReleaseBuffer` executará um `strlen` no buffer para determinar seu comprimento.
 
 Para obter mais informações sobre a contagem de referência, consulte os seguintes artigos:
 
-- [Gerenciando os tempos de vida do objeto por meio de contagem de referência](/windows/desktop/com/managing-object-lifetimes-through-reference-counting) no Windows SDK.
+- [Gerenciamento de tempos de vida de objeto por meio de contagem de referência](/windows/win32/com/managing-object-lifetimes-through-reference-counting) no SDK do Windows.
 
-- [Implementando a contagem de referência](/windows/desktop/com/implementing-reference-counting) no Windows SDK.
+- [Implementando a contagem de referência](/windows/win32/com/implementing-reference-counting) no SDK do Windows.
 
-- [Regras para gerenciar contagens de referência](/windows/desktop/com/rules-for-managing-reference-counts) no Windows SDK.
+- [Regras para gerenciar contagens de referência](/windows/win32/com/rules-for-managing-reference-counts) no SDK do Windows.
 
 ### <a name="example"></a>Exemplo
 
@@ -558,7 +558,7 @@ Uma contagem dos caracteres na cadeia de caracteres.
 
 Chame esse método para retornar o número de caracteres no objeto. A contagem não inclui um terminador nulo.
 
-Para conjuntos de caracteres multibyte (MBCS) `GetLength` contagens de cada byte de caractere; ou seja, um cliente potencial e trilha de 8 bits em um caractere multibyte são contados como dois bytes. Ver [FreeExtra](#freeextra) para obter um exemplo de chamar essa função.
+Para os conjuntos de caracteres multibyte (MBCS `GetLength` ), conta cada caractere de 8 bits; ou seja, um cliente potencial e um byte à direita em um caractere multibyte são contados como dois bytes. Consulte [FreeExtra](#freeextra) para obter um exemplo de como chamar essa função.
 
 ##  <a name="getmanager"></a>  CSimpleStringT::GetManager
 
@@ -572,11 +572,11 @@ IAtlStringMgr* GetManager() const throw();
 
 ### <a name="return-value"></a>Valor de retorno
 
-Um ponteiro para o Gerenciador de memória para o `CSimpleStringT` objeto.
+Um ponteiro para o Gerenciador `CSimpleStringT` de memória do objeto.
 
 ### <a name="remarks"></a>Comentários
 
-Chame esse método para recuperar a memória usado pelo Gerenciador do `CSimpleStringT` objeto. Para obter mais informações sobre gerenciadores de memória e objetos de cadeia de caracteres, consulte [gerenciamento de memória e CStringT](../memory-management-with-cstringt.md).
+Chame esse método para recuperar o Gerenciador de memória usado pelo `CSimpleStringT` objeto. Para obter mais informações sobre os gerenciadores de memória e objetos de cadeia de caracteres, consulte [Gerenciamento de memória e CStringT](../memory-management-with-cstringt.md).
 
 ##  <a name="getstring"></a>  CSimpleStringT::GetString
 
@@ -590,14 +590,14 @@ PCXSTR GetString() const throw();
 
 ### <a name="return-value"></a>Valor de retorno
 
-Um ponteiro para uma cadeia de caracteres terminada em nulo.
+Um ponteiro para uma cadeia de caracteres de caractere terminada em nulo.
 
 ### <a name="remarks"></a>Comentários
 
-Chame esse método para recuperar a cadeia de caracteres associada com o `CSimpleStringT` objeto.
+Chame esse método para recuperar a cadeia de caracteres associada `CSimpleStringT` ao objeto.
 
 > [!NOTE]
->  Retornado `PCXSTR` é de ponteiro **const** e não permite a modificação direta de `CSimpleStringT` conteúdo.
+>  O ponteiro `PCXSTR` retornado é **const** e não permite a modificação direta do `CSimpleStringT` conteúdo.
 
 ### <a name="example"></a>Exemplo
 
@@ -611,7 +611,7 @@ _tprintf_s(_T("%s"), str.GetString());
 
 ##  <a name="isempty"></a>  CSimpleStringT::IsEmpty
 
-Testes de um `CSimpleStringT` objeto para a condição vazia.
+Testa um `CSimpleStringT` objeto para a condição vazia.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -621,7 +621,7 @@ bool IsEmpty() const throw();
 
 ### <a name="return-value"></a>Valor de retorno
 
-Retorna VERDADEIRO se o `CSimpleStringT` objeto tem 0 comprimento; caso contrário, FALSE.
+Retornará true se o `CSimpleStringT` objeto tiver comprimento 0; caso contrário, false.
 
 ### <a name="remarks"></a>Comentários
 
@@ -652,26 +652,26 @@ Um ponteiro para um `CSimpleStringT` objeto ou uma cadeia de caracteres terminad
 
 ### <a name="remarks"></a>Comentários
 
-Chame esse método para bloquear o buffer do `CSimpleStringT` objeto. Chamando `LockBuffer`, você cria uma cópia da cadeia de caracteres, com um -1 para a contagem de referência. Quando o valor da contagem de referência é -1, a cadeia de caracteres no buffer é considerada para estar em um estado "bloqueado". Enquanto estiver em um estado bloqueado, a cadeia de caracteres é protegida de duas maneiras:
+Chame esse método para bloquear o buffer do `CSimpleStringT` objeto. Ao chamar `LockBuffer`, você cria uma cópia da cadeia de caracteres, com um-1 para a contagem de referência. Quando o valor da contagem de referência é-1, a cadeia de caracteres no buffer é considerada como em um estado "bloqueado". Enquanto estiver em um estado bloqueado, a cadeia de caracteres será protegida de duas maneiras:
 
-- Nenhuma outra cadeia de caracteres pode obter uma referência aos dados na cadeia de caracteres bloqueada, mesmo se essa cadeia de caracteres é atribuída à cadeia de caracteres bloqueada.
+- Nenhuma outra cadeia de caracteres pode obter uma referência aos dados na cadeia de caracteres bloqueada, mesmo se essa cadeia de caracteres for atribuída à cadeia de caracteres bloqueada.
 
-- A cadeia de caracteres bloqueada nunca fará referência a outra cadeia de caracteres, mesmo se outra cadeia de caracteres que é copiada para a cadeia de caracteres bloqueada.
+- A cadeia de caracteres bloqueada nunca fará referência a outra cadeia de caracteres, mesmo se essa outra cadeia de caracteres for copiada na cadeia de caracteres bloqueada.
 
-Bloqueando a cadeia de caracteres no buffer, verifique se que a espera exclusivo da cadeia de caracteres no buffer de permanecerão intacta.
+Ao bloquear a cadeia de caracteres no buffer, você garante que a espera exclusiva da cadeia de caracteres no buffer permanecerá intacta.
 
-Depois que tiver terminado `LockBuffer`, chame [UnlockBuffer](#unlockbuffer) para redefinir a contagem de referência para 1.
+Depois de terminar com `LockBuffer`, chame [UnlockBuffer](#unlockbuffer) para redefinir a contagem de referência como 1.
 
 > [!NOTE]
->  Se você chamar [GetBuffer](#getbuffer) em um buffer bloqueado e você definir o `GetBuffer` parâmetro `nMinBufferLength` maior que o comprimento do buffer atual, você perderá o bloqueio de buffer. Essa chamada para `GetBuffer` destrói o buffer atual, substitui-lo com um buffer do tamanho solicitado e redefine a contagem de referência como zero.
+>  Se você chamar [GetBuffer](#getbuffer) em um buffer bloqueado e definir o `GetBuffer` parâmetro `nMinBufferLength` como maior que o comprimento do buffer atual, perderá o bloqueio de buffer. Tal chamada para `GetBuffer` destruir o buffer atual, substitui-lo por um buffer do tamanho solicitado e redefine a contagem de referência como zero.
 
 Para obter mais informações sobre a contagem de referência, consulte os seguintes artigos:
 
-- [Gerenciando os tempos de vida do objeto por meio de contagem de referência](/windows/desktop/com/managing-object-lifetimes-through-reference-counting) no Windows SDK
+- [Gerenciando tempos de vida de objeto por meio de contagem de referência](/windows/win32/com/managing-object-lifetimes-through-reference-counting) no SDK do Windows
 
-- [Implementando a contagem de referência](/windows/desktop/com/implementing-reference-counting) no Windows SDK
+- [Implementando a contagem de referência](/windows/win32/com/implementing-reference-counting) no SDK do Windows
 
-- [Regras para gerenciar contagens de referência](/windows/desktop/com/rules-for-managing-reference-counts) no Windows SDK
+- [Regras para gerenciar contagens de referência](/windows/win32/com/rules-for-managing-reference-counts) no SDK do Windows
 
 ### <a name="example"></a>Exemplo
 
@@ -700,14 +700,14 @@ XCHAR operator[](int iChar) const;
 #### <a name="parameters"></a>Parâmetros
 
 *iChar*<br/>
-Índice baseado em zero de um caractere na cadeia de caracteres.
+Índice de base zero de um caractere na cadeia de caracteres.
 
 ### <a name="remarks"></a>Comentários
 
-O subscrito sobrecarregado (**[]**) operador retorna um único caractere especificado pelo índice baseado em zero na *iChar*. Esse operador é um substituto conveniente para o [GetAt](#getat) função de membro.
+O operador de subscript sobrecarregado ( **[]** ) retorna um único caractere especificado pelo índice de base zero em *iChar*. Esse operador é um substituto conveniente para a função de membro [GetAt](#getat) .
 
 > [!NOTE]
->  Você pode usar o subscrito (**[]**) operador para obter o valor de um caractere em uma `CSimpleStringT`, mas você não pode usá-lo para alterar o valor de um caractere em um `CSimpleStringT`.
+>  Você pode usar o operador de subscript ( **[]** ) para obter o valor de um caractere em `CSimpleStringT`um, mas não pode usá-lo para alterar o valor de um caractere `CSimpleStringT`em um.
 
 ### <a name="example"></a>Exemplo
 
@@ -718,7 +718,7 @@ CSimpleString s(_T("abc"), pMgr);
 ASSERT(s[1] == _T('b'));
 ```
 
-## <a name="operator_at"></a>  CSimpleStringT::operator \[\]
+## <a name="operator_at"></a>Operador CSimpleStringT::\[\]
 
 Chame essa função para acessar um único caractere da matriz de caracteres.
 
@@ -731,18 +731,18 @@ XCHAR operator[](int iChar) const;
 ### <a name="parameters"></a>Parâmetros
 
 *iChar*<br/>
-Índice baseado em zero de um caractere na cadeia de caracteres.
+Índice de base zero de um caractere na cadeia de caracteres.
 
 ### <a name="remarks"></a>Comentários
 
-O subscrito sobrecarregado (**[]**) operador retorna um único caractere especificado pelo índice baseado em zero na *iChar*. Esse operador é um substituto conveniente para o [GetAt](#getat) função de membro.
+O operador de subscript sobrecarregado ( **[]** ) retorna um único caractere especificado pelo índice de base zero em *iChar*. Esse operador é um substituto conveniente para a função de membro [GetAt](#getat) .
 
 > [!NOTE]
->  Você pode usar o subscrito (**[]**) operador para obter o valor de um caractere em uma `CSimpleStringT`, mas você não pode usá-lo para alterar o valor de um caractere em um `CSimpleStringT`.
+>  Você pode usar o operador de subscript ( **[]** ) para obter o valor de um caractere em `CSimpleStringT`um, mas não pode usá-lo para alterar o valor de um caractere `CSimpleStringT`em um.
 
-##  <a name="operator_add_eq"></a>  CSimpleStringT::operator +=
+##  <a name="operator_add_eq"></a>CSimpleStringT:: Operator + =
 
-Une uma nova cadeia de caracteres ou um caractere ao final de uma cadeia de caracteres existente.
+Une uma nova cadeia de caracteres ou caractere ao final de uma cadeia de caracteres existente.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -762,14 +762,14 @@ CSimpleStringT& operator +=(wchar_t ch);
 Um ponteiro para uma cadeia de caracteres terminada em nulo.
 
 *strSrc*<br/>
-Um ponteiro para um existente `CSimpleStringT` objeto.
+Um ponteiro para um objeto `CSimpleStringT` existente.
 
 *ch*<br/>
 O caractere a ser acrescentado.
 
 ### <a name="remarks"></a>Comentários
 
-O operador aceita outro `CSimpleStringT` objeto ou um caractere. Observe que a memória exceções podem ocorrer sempre que você usa esse operador de concatenação, porque o novo armazenamento pode ser alocado para caracteres adicionados a este `CSimpleStringT` objeto.
+O operador aceita outro `CSimpleStringT` objeto ou um caractere. Observe que as exceções de memória podem ocorrer sempre que você usar esse operador de concatenação porque um novo armazenamento pode ser alocado `CSimpleStringT` para caracteres adicionados a esse objeto.
 
 ### <a name="example"></a>Exemplo
 
@@ -780,9 +780,9 @@ CSimpleString str(_T("abc"), pMgr);
 ASSERT(_tcscmp((str += _T("def")), _T("abcdef")) == 0);
 ```
 
-##  <a name="operator_eq"></a>  CSimpleStringT::operator =
+##  <a name="operator_eq"></a>CSimpleStringT:: Operator =
 
-Atribui um novo valor para um `CSimpleStringT` objeto.
+Atribui um novo valor a um `CSimpleStringT` objeto.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -797,11 +797,11 @@ CSimpleStringT& operator =(const CSimpleStringT& strSrc);
 Um ponteiro para uma cadeia de caracteres terminada em nulo.
 
 *strSrc*<br/>
-Um ponteiro para um existente `CSimpleStringT` objeto.
+Um ponteiro para um objeto `CSimpleStringT` existente.
 
 ### <a name="remarks"></a>Comentários
 
-Se a cadeia de caracteres de destino (o lado esquerdo) já for grande o suficiente para armazenar os novos dados, nenhuma nova alocação de memória será executada. Observe que a memória exceções podem ocorrer sempre que você usa o operador de atribuição, porque o novo armazenamento geralmente é alocado para armazenar resultante `CSimpleStringT` objeto.
+Se a cadeia de caracteres de destino (o lado esquerdo) já for grande o suficiente para armazenar os novos dados, nenhuma alocação de memória nova será executada. Observe que as exceções de memória podem ocorrer sempre que você usar o operador de atribuição porque o novo armazenamento geralmente é `CSimpleStringT` alocado para conter o objeto resultante.
 
 ### <a name="example"></a>Exemplo
 
@@ -827,9 +827,9 @@ s1 = _T("x");
 ASSERT(_tcscmp(s1, _T("x")) == 0);
 ```
 
-##  <a name="operator_pcxstr"></a>  CSimpleStringT::operator PCXSTR
+##  <a name="operator_pcxstr"></a>Operador CSimpleStringT:: Operator PCXSTR
 
-Acessa diretamente caracteres armazenados em uma `CSimpleStringT` objeto como uma cadeia de caracteres de estilo C.
+Acessa diretamente os caracteres armazenados em um `CSimpleStringT` objeto como uma cadeia de estilo C.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -839,11 +839,11 @@ operator PCXSTR() const throw();
 
 ### <a name="return-value"></a>Valor de retorno
 
-Um ponteiro de caractere para dados da cadeia de caracteres.
+Um ponteiro de caractere para os dados da cadeia de caracteres.
 
 ### <a name="remarks"></a>Comentários
 
-Caracteres não é copiado; somente um ponteiro é retornado. Tenha cuidado com esse operador. Se você alterar um `CString` objeto depois de obter o ponteiro de caractere, você pode fazer com que a realocação de memória que invalida o ponteiro.
+Nenhum caractere copiado; apenas um ponteiro é retornado. Tenha cuidado com esse operador. Se você alterar um `CString` objeto depois de ter obtido o ponteiro de caractere, poderá causar uma realocação de memória que invalida o ponteiro.
 
 ### <a name="example"></a>Exemplo
 
@@ -906,9 +906,9 @@ O tamanho exato do `CSimpleStringT` buffer de caracteres em caracteres.
 
 ### <a name="remarks"></a>Comentários
 
-Chame esse método para alocar um tamanho de buffer específico para o `CSimpleStringT` objeto.
+Chame esse método para alocar um tamanho de buffer específico `CSimpleStringT` para o objeto.
 
-`CSimpleStringT` gera uma exceção de STATUS_NO_MEMORY se não for possível alocar espaço para o buffer de caracteres. Por padrão, a alocação de memória é executada pelas funções de API do WIN32 `HeapAlloc` ou `HeapReAlloc`.
+`CSimpleStringT`gera uma exceção STATUS_NO_MEMORY se não for possível alocar espaço para o buffer de caracteres. Por padrão, a alocação de memória é executada pelas funções `HeapAlloc` da `HeapReAlloc`API do Win32 ou pelo.
 
 ### <a name="example"></a>Exemplo
 
@@ -933,7 +933,7 @@ typedef ChTraitsBase< BaseType >::PXSTR PXSTR;
 
 ##  <a name="releasebuffer"></a>  CSimpleStringT::ReleaseBuffer
 
-Libera o controle do buffer alocado pelo [GetBuffer](#getbuffer).
+Libera o controle do buffer alocado por [GetBuffer](#getbuffer).
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -944,11 +944,11 @@ void ReleaseBuffer(int nNewLength = -1);
 #### <a name="parameters"></a>Parâmetros
 
 *nNewLength*<br/>
-O novo comprimento da cadeia de caracteres em caracteres, sem contar um terminador nulo. Se a cadeia de caracteres for nula encerrada, o valor padrão de-1 define os `CSimpleStringT` tamanho para o comprimento atual da cadeia de caracteres.
+O novo comprimento da cadeia em caracteres, não contando um terminador nulo. Se a cadeia de caracteres for terminada em nulo, o valor padrão `CSimpleStringT` -1 definirá o tamanho como o comprimento atual da cadeia de caracteres.
 
 ### <a name="remarks"></a>Comentários
 
-Chame esse método para realocar ou liberar o buffer do objeto de cadeia de caracteres. Se você souber que a cadeia de caracteres no buffer é finalizada com null, você poderá omitir as *nNewLength* argumento. Se sua cadeia de caracteres não for nula terminada, use *nNewLength* para especificar seu comprimento. O endereço retornado por [GetBuffer](#getbuffer) é inválido após a chamada para `ReleaseBuffer` ou qualquer outro `CSimpleStringT` operação.
+Chame esse método para realocar ou liberar o buffer do objeto de cadeia de caracteres. Se você souber que a cadeia de caracteres no buffer é terminada em nulo, você pode omitir o argumento *nNewLength* . Se a cadeia de caracteres não for terminada em nulo, use *nNewLength* para especificar seu comprimento. O endereço retornado por [GetBuffer](#getbuffer) é inválido após a chamada para `ReleaseBuffer` ou qualquer outra `CSimpleStringT` operação.
 
 ### <a name="example"></a>Exemplo
 
@@ -974,7 +974,7 @@ ASSERT(s.GetLength() == 3);
 
 ##  <a name="releasebuffersetlength"></a>  CSimpleStringT::ReleaseBufferSetLength
 
-Libera o controle do buffer alocado pelo [GetBuffer](#getbuffer).
+Libera o controle do buffer alocado por [GetBuffer](#getbuffer).
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -985,15 +985,15 @@ void ReleaseBufferSetLength(int nNewLength);
 #### <a name="parameters"></a>Parâmetros
 
 *nNewLength*<br/>
-O comprimento da cadeia de caracteres que está sendo lançado
+O comprimento da cadeia de caracteres que está sendo liberada
 
 ### <a name="remarks"></a>Comentários
 
-Essa função é funcionalmente semelhante a [ReleaseBuffer](#releasebuffer) , exceto que um tamanho válido para o objeto de cadeia de caracteres deve ser passado.
+Essa função é funcionalmente semelhante a [ReleaseBuffer](#releasebuffer) , exceto que um comprimento válido para o objeto de cadeia de caracteres deve ser passado.
 
 ##  <a name="setat"></a>  CSimpleStringT::SetAt
 
-Define um único caractere de um `CSimpleStringT` objeto.
+Define um único caractere a partir `CSimpleStringT` de um objeto.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -1004,14 +1004,14 @@ void SetAt(int iChar, XCHAR ch);
 #### <a name="parameters"></a>Parâmetros
 
 *iChar*<br/>
-O índice baseado em zero do caractere no `CSimpleStringT` objeto. O *iChar* parâmetro deve ser maior que ou igual a 0 e menor que o valor retornado por [GetLength](#getlength).
+Índice de base zero do caractere no `CSimpleStringT` objeto. O parâmetro *iChar* deve ser maior ou igual a 0 e menor que o valor retornado por [GetLength](#getlength).
 
 *ch*<br/>
-O caractere de nova.
+O novo caractere.
 
 ### <a name="remarks"></a>Comentários
 
-Chame esse método para substituir o caractere localizado em *iChar*. Esse método não aumentará a cadeia de caracteres se *iChar* exceder os limites da cadeia de caracteres existente.
+Chame esse método para substituir o caractere localizado em *iChar*. Esse método não ampliará a cadeia de caracteres se *iChar* exceder os limites da cadeia de caracteres existente.
 
 ### <a name="example"></a>Exemplo
 
@@ -1040,7 +1040,7 @@ Um ponteiro para o novo Gerenciador de memória.
 
 ### <a name="remarks"></a>Comentários
 
-Chame esse método para especificar uma nova memória Gerenciador usado pelo `CSimpleStringT` objeto. Para obter mais informações sobre gerenciadores de memória e objetos de cadeia de caracteres, consulte [gerenciamento de memória e CStringT](../memory-management-with-cstringt.md).
+Chame esse método para especificar um novo Gerenciador de memória usado pelo `CSimpleStringT` objeto. Para obter mais informações sobre os gerenciadores de memória e objetos de cadeia de caracteres, consulte [Gerenciamento de memória e CStringT](../memory-management-with-cstringt.md).
 
 ### <a name="example"></a>Exemplo
 
@@ -1053,7 +1053,7 @@ s.SetManager(pCustomMgr);
 
 ##  <a name="setstring"></a>  CSimpleStringT::SetString
 
-Define a cadeia de caracteres de um `CSimpleStringT` objeto.
+Define a cadeia de caracteres `CSimpleStringT` de um objeto.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -1072,15 +1072,15 @@ Uma contagem do número de caracteres em *pszSrc*.
 
 ### <a name="remarks"></a>Comentários
 
-Copiar uma cadeia de caracteres para o `CSimpleStringT` objeto. `SetString` substitui os dados mais antigos de cadeia de caracteres no buffer.
+Copie uma cadeia de `CSimpleStringT` caracteres no objeto. `SetString`substitui os dados de cadeia de caracteres mais antigos no buffer.
 
-Ambas as versões do `SetString` Verifique se *pszSrc* for um ponteiro nulo e se for, lançar um erro E_INVALIDARG.
+Ambas as versões `SetString` do verificam se *pszSrc* é um ponteiro nulo e, se for, geram um erro E_INVALIDARG.
 
 A versão de um parâmetro de `SetString` espera *pszSrc* para apontar para uma cadeia de caracteres terminada em nulo.
 
-A versão de dois parâmetros de `SetString` também espera *pszSrc* seja uma cadeia de caracteres terminada em nulo. Ele usa *nLength* como o comprimento da cadeia de caracteres, a menos que ele encontra um terminador nulo pela primeira vez.
+A versão de dois parâmetros de `SetString` também espera que *pszSrc* seja uma cadeia de caracteres terminada em nulo. Ele usa *nLength* como o comprimento da cadeia de caracteres, a menos que ele encontre um terminador nulo primeiro.
 
-A versão de dois parâmetros de `SetString` também verifica se *pszSrc* aponta para um local no buffer atual em `CSimpleStringT`. Nesse caso especial, `SetString` usa uma função de cópia de memória que não substitui os dados de cadeia de caracteres conforme ele copia os dados de cadeia de caracteres para seu buffer.
+A versão de dois parâmetros do `SetString` também verifica se o *pszSrc* aponta para um local no buffer atual no `CSimpleStringT`. Nesse caso especial, `SetString` o usa uma função de cópia de memória que não substitui os dados de cadeia de caracteres à medida que copia os dados de cadeia de caracteres de volta para seu buffer.
 
 ### <a name="example"></a>Exemplo
 
@@ -1110,7 +1110,7 @@ Um ponteiro para uma cadeia de caracteres terminada em nulo.
 
 ### <a name="return-value"></a>Valor de retorno
 
-O número de caracteres em *psz*; sem contar um terminador nulo.
+O número de caracteres em *psz*; Não contando um terminador nulo.
 
 ### <a name="remarks"></a>Comentários
 
@@ -1126,7 +1126,7 @@ ASSERT(CSimpleString::StringLength(_T("soccer")) == 6);
 
 ##  <a name="truncate"></a>  CSimpleStringT::Truncate
 
-Trunca a cadeia de caracteres com o novo tamanho.
+Trunca a cadeia de caracteres para o novo comprimento.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -1141,10 +1141,10 @@ O novo comprimento da cadeia de caracteres.
 
 ### <a name="remarks"></a>Comentários
 
-Chame esse método para truncar o conteúdo da cadeia de caracteres com o novo tamanho.
+Chame esse método para truncar o conteúdo da cadeia de caracteres para o novo comprimento.
 
 > [!NOTE]
->  Isso não afeta o tamanho alocado do buffer. Para diminuir ou aumentar o buffer atual, consulte [FreeExtra](#freeextra) e [Preallocate](#preallocate).
+>  Isso não afeta o comprimento alocado do buffer. Para diminuir ou aumentar o buffer atual, consulte [FreeExtra](#freeextra) e [preallocate](#preallocate).
 
 ### <a name="example"></a>Exemplo
 
@@ -1171,9 +1171,9 @@ void UnlockBuffer() throw();
 
 ### <a name="remarks"></a>Comentários
 
-Chame esse método para redefinir a contagem de referência da cadeia de caracteres como 1.
+Chame esse método para redefinir a contagem de referência da cadeia de caracteres para 1.
 
-O `CSimpleStringT` destrutor automaticamente chama `UnlockBuffer` para garantir que o buffer não é bloqueado quando o destruidor é chamado. Para obter um exemplo desse método, consulte [LockBuffer](#lockbuffer).
+O `CSimpleStringT` destruidor chama `UnlockBuffer` automaticamente para garantir que o buffer não seja bloqueado quando o destruidor for chamado. Para obter um exemplo desse método, consulte [LockBuffer](#lockbuffer).
 
 ##  <a name="dtor"></a>  CSimpleStringT::~CSimpleStringT
 
@@ -1187,7 +1187,7 @@ Destrói um objeto `CSimpleStringT`.
 
 ### <a name="remarks"></a>Comentários
 
-Chame este método para destruir o `CSimpleStringT` objeto.
+Chame esse método para destruir o `CSimpleStringT` objeto.
 
 ## <a name="see-also"></a>Consulte também
 

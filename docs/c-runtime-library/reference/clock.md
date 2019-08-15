@@ -25,12 +25,12 @@ helpviewer_keywords:
 - processor time used
 - calculating processor time used
 ms.assetid: 3e1853dd-498f-49ba-b06a-f2315f20904e
-ms.openlocfilehash: 4b58b33b533250447cf964134de9869bddee4498
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2fabd18fb28cb5ea13dfb156ea21e8743c2afd49
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62347464"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500253"
 ---
 # <a name="clock"></a>clock
 
@@ -44,13 +44,13 @@ clock_t clock( void );
 
 ## <a name="return-value"></a>Valor de retorno
 
-O tempo decorrido desde a inicialização do CRT no início do processo, medido em **CLOCKS_PER_SEC** unidades por segundo. Se o tempo decorrido não estiver disponível ou excedeu o tempo máximo positivo que pode ser gravado como um **clock_t** tipo, a função retorna o valor `(clock_t)(-1)`.
+O tempo decorrido desde a inicialização do CRT no início do processo, medido em unidades de **CLOCKS_PER_SEC** por segundo. Se o tempo decorrido estiver indisponível ou excedeu o tempo máximo positivo que pode ser registrado como um tipo **clock_t** , a função retornará o valor `(clock_t)(-1)`.
 
 ## <a name="remarks"></a>Comentários
 
-O **relógio** função informa ao tempo de relógio se passou desde a inicialização do CRT durante o início do processo. Observe que essa função não está estritamente em conformidade com ISO C, que especifica o tempo de CPU líquido como o valor retornado. Para obter tempos de CPU, use a função Win32 [GetProcessTimes](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getprocesstimes). Para determinar o tempo decorrido em segundos, divida o valor retornado pela **relógio** função pela macro **CLOCKS_PER_SEC**.
+A função **Clock** informa quanto tempo do relógio de parede passou desde a inicialização do CRT durante o início do processo. Observe que essa função não está estritamente em conformidade com ISO C, que especifica o tempo de CPU líquido como o valor retornado. Para obter tempos de CPU, use a função Win32 [GetProcessTimes](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getprocesstimes). Para determinar o tempo decorrido em segundos, divida o valor retornado pela função **Clock** pela macro **CLOCKS_PER_SEC**.
 
-Dada a tempo suficiente, o valor retornado por **relógio** pode exceder o valor máximo positivo de **clock_t**. Quando o processo foi executado por mais tempo, o valor retornado por **relógio** é sempre `(clock_t)(-1)`, conforme especificado pelo padrão ISO C99 (7.23.2.1) e do ISO C11 (7.27.2.1). A Microsoft implementa **clock_t** como um **longo**, um inteiro com sinal de 32 bits e o **CLOCKS_PER_SEC** macro é definida como 1.000. Isso fornece um máximo **relógio** valor retornado de 2147483,647 segundos ou cerca de 24,8 dias de função. Não confie no valor retornado por **relógio** em processos que foram executados por mais tempo que essa quantidade de tempo. Você pode usar de 64 bits [tempo](time-time32-time64.md) função ou o Windows [QueryPerformanceCounter](https://msdn.microsoft.com/library/windows/desktop/ms644904) função para o tempo decorrido de processo de registro de muitos anos.
+Dado tempo suficiente, o valor retornado pelo **relógio** pode exceder o valor máximo positivo de **clock_t**. Quando o processo tiver sido executado mais tempo, o valor retornado pelo relógio `(clock_t)(-1)`será sempre, conforme especificado pelo C99 padrão ISO (7.23.2.1) e pelo padrão ISO C11 (7.27.2.1). A Microsoft implementa **clock_t** como um **longo**, um inteiro de 32 bits assinado e a macro **CLOCKS_PER_SEC** é definida como 1000. Isso fornece um valor de retorno de função de **relógio** máximo de 2147483,647 segundos ou cerca de 24,8 dias. Não confie no valor retornado pelo **relógio** em processos que foram executados por mais tempo do que esse período. Você pode usar a função de [tempo](time-time32-time64.md) de 64 bits ou a função [QueryPerformanceCounter](/windows/win32/api/profileapi/nf-profileapi-queryperformancecounter) do Windows para registrar tempos decorridos do processo de muitos anos.
 
 ## <a name="requirements"></a>Requisitos
 

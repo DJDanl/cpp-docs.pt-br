@@ -15,36 +15,36 @@ helpviewer_keywords:
 - events [MFC], ActiveX controls
 - MFC ActiveX controls [MFC]
 ms.assetid: c911fb74-3afc-4bf3-a0f5-7922b14d9a1b
-ms.openlocfilehash: d10aad92088a02a1cab0977ea174abdf919a05e9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a1c7bb070a75f4406556817163931f0707706c40
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62239673"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508122"
 ---
 # <a name="mfc-activex-controls"></a>Controles ActiveX MFC
 
 Um controle ActiveX é um componente de software reutilizável baseado no COM (Component Object Model) que dá suporte a uma ampla variedade de funcionalidades OLE e que pode ser personalizado para atender às várias necessidades de software.
 
 >[!IMPORTANT]
-> ActiveX é uma tecnologia herdada que não deve ser usada para novos desenvolvimentos. Para obter mais informações, consulte [controles ActiveX](activex-controls.md).
+> O ActiveX é uma tecnologia herdada que não deve ser usada para novos desenvolvimentos. Para obter mais informações, consulte [controles ActiveX](activex-controls.md).
 
-Controles ActiveX são projetados para uso em contêineres de controle ActiveX comuns e na Internet e, em páginas da Web. Você pode criar controles ActiveX com o MFC, descrito aqui, ou com o [biblioteca ATL (Active Template)](../atl/active-template-library-atl-concepts.md).
+Os controles ActiveX são projetados para uso em contêineres de controle ActiveX comuns e na Internet, em World Wide Web páginas. Você pode criar controles ActiveX com o MFC, descrito aqui ou com o [Active Template Library (ATL)](../atl/active-template-library-atl-concepts.md).
 
-Um controle ActiveX pode desenhar a próprio em sua própria janela, respondem a eventos (como cliques do mouse) e ser gerenciada por meio de uma interface que inclui propriedades e métodos semelhantes aos descritos em objetos de automação.
+Um controle ActiveX pode se desenhar em sua própria janela, responder a eventos (como cliques do mouse) e ser gerenciado por meio de uma interface que inclui propriedades e métodos semelhantes aos em objetos de automação.
 
-Esses controles podem ser desenvolvidos para muitos usos, como o acesso de banco de dados, dados de monitoramento ou representação gráfica. Além de sua portabilidade, os controles ActiveX dão suporte a recursos não disponíveis anteriormente aos controles ActiveX, como compatibilidade com os contêineres OLE existentes e a capacidade de integrar seus menus com os menus de contêiner OLE. Além disso, um controle ActiveX totalmente compatível com a automação, que permite que o controle para expor as propriedades de leitura \ gravação e um conjunto de métodos que podem ser chamados pelo usuário do controle.
+Esses controles podem ser desenvolvidos para muitos usos, como o acesso ao banco de dados, o data Monitoring ou o gráfico. Além de sua portabilidade, os controles ActiveX dão suporte a recursos que anteriormente não estavam disponíveis para controles ActiveX, como compatibilidade com contêineres OLE existentes e a capacidade de integrar seus menus com os menus de contêiner OLE. Além disso, um controle ActiveX dá suporte total à automação, que permite ao controle expor propriedades read\write e um conjunto de métodos que podem ser chamados pelo usuário de controle.
 
-Você pode criar controles ActiveX sem janelas e controles que só criar uma janela quando eles se tornar ativos. Controles sem janelas acelerar a exibição do seu aplicativo e torná-lo possível ter controles transparentes e não retangulares. Você também pode carregar propriedades do controle ActiveX de forma assíncrona.
+Você pode criar controles ActiveX sem janela e controles que só criam uma janela quando se tornam ativas. Controles sem janela aceleram a exibição do seu aplicativo e possibilitam que controles transparentes e não retangulares. Você também pode carregar as propriedades do controle ActiveX de forma assíncrona.
 
-Um controle ActiveX é implementado como um servidor em processo (geralmente um objeto pequeno) que pode ser usado em qualquer contêiner OLE. Observe que a funcionalidade completa de um controle ActiveX está disponível somente quando usado dentro de um contêiner OLE projetado para estar ciente dos controles ActiveX. Ver [controles ActiveX de porta para outros aplicativos](../mfc/containers-for-activex-controls.md) para obter uma lista de contêineres que dão suporte a controles ActiveX. Esse tipo de contêiner, daqui em diante chamado de "recipiente de controle", pode operar um controle ActiveX usando métodos e propriedades do controle e recebe notificações do controle ActiveX na forma de eventos. A figura a seguir demonstra essa interação.
+Um controle ActiveX é implementado como um servidor em processo (normalmente um pequeno objeto) que pode ser usado em qualquer contêiner OLE. Observe que a funcionalidade completa de um controle ActiveX está disponível somente quando usada em um contêiner OLE projetado para estar ciente dos controles ActiveX. Consulte [controles ActiveX de porta para outros aplicativos](../mfc/containers-for-activex-controls.md) para obter uma lista de contêineres que dão suporte a controles ActiveX. Esse tipo de contêiner, em seguida chamado de "contêiner de controle", pode operar um controle ActiveX usando as propriedades e os métodos do controle e recebe notificações do controle ActiveX na forma de eventos. A figura a seguir demonstra essa interação.
 
-![Interação de contêiner de controle ActiveX e o controle](../mfc/media/vc37221.gif "contêiner de controle de interação do ActiveX e controle") <br/>
-Interação entre um contêiner de controle ActiveX e o controle ActiveX em janelas
+Interação ![do contêiner e controle do controle ActiveX] Interação (../mfc/media/vc37221.gif "do contêiner e controle do controle ActiveX") <br/>
+Interação entre um contêiner de controle ActiveX e um controle ActiveX em janelas
 
-Para obter algumas informações recentes sobre como otimizar seus controles ActiveX, consulte [controles ActiveX MFC: Otimização](../mfc/mfc-activex-controls-optimization.md).
+Para obter algumas informações recentes sobre como otimizar seus controles ActiveX, [consulte controles ActiveX do MFC: Otimização](../mfc/mfc-activex-controls-optimization.md).
 
-Para criar um controle ActiveX do MFC, consulte [criar um projeto do controle ActiveX](../mfc/reference/mfc-activex-control-wizard.md).
+Para criar um controle ActiveX do MFC, consulte [criar um projeto de controle ActiveX](../mfc/reference/mfc-activex-control-wizard.md).
 
 Para obter mais informações, consulte:
 
@@ -52,57 +52,57 @@ Para obter mais informações, consulte:
 
 - [Documentos ativos](../mfc/active-documents.md)
 
-- [Noções básicas sobre os controles ActiveX](/windows/desktop/com/activex-controls)
+- [Noções básicas sobre controles ActiveX](/windows/win32/com/activex-controls)
 
-- [Atualizando um controle ActiveX existente a ser usado na Internet](../mfc/upgrading-an-existing-activex-control.md)
+- [Atualizando um controle ActiveX existente para ser usado na Internet](../mfc/upgrading-an-existing-activex-control.md)
 
-##  <a name="_core_basic_components_of_an_activex_control"></a> Componentes básicos de um controle ActiveX
+##  <a name="_core_basic_components_of_an_activex_control"></a>Componentes básicos de um controle ActiveX
 
-Um controle ActiveX usa vários elementos de programação para interagir com eficiência com um contêiner de controle e com o usuário. Esses são a classe [COleControl](../mfc/reference/colecontrol-class.md), um conjunto de funções de acionamento do evento e um despacho de mapa.
+Um controle ActiveX usa vários elementos programáticos para interagir com eficiência com um contêiner de controle e com o usuário. Esses são [COleControl](../mfc/reference/colecontrol-class.md)de classe, um conjunto de funções de acionamento de eventos e um mapa de expedição.
 
-Cada objeto de controle ActiveX que desenvolve herda um poderoso conjunto de recursos de sua classe base do MFC, `COleControl`. Esses recursos incluem ativação in-loco e a lógica de automação. `COleControl` pode fornecer o objeto de controle com a mesma funcionalidade que um objeto de janela MFC, além da capacidade para disparar eventos. `COleControl` também pode fornecer [controles sem janelas](../mfc/providing-windowless-activation.md), que dependem de seu contêiner para obter ajuda com algumas das funcionalidades de uma janela fornece (captura do mouse, o foco do teclado, rolagem), mas oferecem muito mais rápido do vídeo.
+Todo objeto de controle ActiveX que você desenvolve herda um poderoso conjunto de recursos de sua classe `COleControl`base MFC. Esses recursos incluem ativação in-loco e lógica de automação. `COleControl`pode fornecer o objeto de controle com a mesma funcionalidade de um objeto de janela do MFC, além da capacidade de acionar eventos. `COleControl`também pode fornecer [controles sem janela](../mfc/providing-windowless-activation.md), que dependem de seu contêiner para obter ajuda com algumas das funcionalidades que uma janela fornece (captura do mouse, foco do teclado, rolagem), mas oferece uma exibição muito mais rápida.
 
-Porque a classe control deriva `COleControl`, ele herda o recurso para enviar ou "fire", mensagens, chamadas de eventos, para o contêiner de controle quando determinadas condições forem atendidas. Esses eventos são usados para notificar o contêiner de controle quando algo importante acontece no controle. Você pode enviar informações adicionais sobre um evento para o contêiner de controle anexando parâmetros para o evento. Para obter mais informações sobre eventos de controle ActiveX, consulte o artigo [controles ActiveX MFC: Eventos](../mfc/mfc-activex-controls-events.md).
+Como a classe Control é derivada de `COleControl`, ela herda a capacidade de enviar, ou "acionar", mensagens, chamadas eventos, para o contêiner de controle quando determinadas condições são atendidas. Esses eventos são usados para notificar o contêiner de controle quando algo importante acontece no controle. Você pode enviar informações adicionais sobre um evento para o contêiner de controle anexando parâmetros ao evento. Para obter mais informações sobre eventos de controle ActiveX, consulte [o artigo controles ActiveX do MFC: Eventos](../mfc/mfc-activex-controls-events.md).
 
-O elemento final é um mapa de expedição, o que é usado para expor um conjunto de funções (chamadas de métodos) e atributos (chamados propriedades) para o usuário do controle. Propriedades permitem que o contêiner de controle ou o usuário do controle para manipular o controle de várias maneiras. O usuário pode alterar a aparência do controle, alterar certos valores de controle ou fazer solicitações do controle, como acessar uma parte específica de dados que mantém o controle. Essa interface é determinada pelo desenvolvedor do controle e é definida usando **modo de exibição de classe**. Para obter mais informações sobre propriedades e métodos do controle ActiveX, consulte os artigos [controles ActiveX MFC: Métodos](../mfc/mfc-activex-controls-methods.md) e [propriedades](../mfc/mfc-activex-controls-properties.md).
+O elemento final é um mapa de expedição, que é usado para expor um conjunto de funções (chamadas de métodos) e atributos (chamados Propriedades) para o usuário de controle. As propriedades permitem que o contêiner de controle ou o usuário de controle manipule o controle de várias maneiras. O usuário pode alterar a aparência do controle, alterar determinados valores do controle ou fazer solicitações do controle, como acessar uma parte específica dos dados que o controle mantém. Essa interface é determinada pelo desenvolvedor de controle e é definida usando **modo de exibição de classe**. Para obter mais informações sobre métodos e propriedades do controle ActiveX, consulte [os artigos controles ActiveX do MFC: Métodos](../mfc/mfc-activex-controls-methods.md) e [Propriedades](../mfc/mfc-activex-controls-properties.md).
 
-##  <a name="_core_interaction_between_controls_with_windows_and_activex_control_containers"></a> Interação entre os controles com o Windows e contêineres de controle ActiveX
+##  <a name="_core_interaction_between_controls_with_windows_and_activex_control_containers"></a>Interação entre controles com contêineres de controle do Windows e ActiveX
 
-Quando um controle é usado dentro de um contêiner de controle, ele usa dois mecanismos para se comunicar: ele expõe métodos e propriedades, e ele aciona eventos. A figura a seguir demonstra como esses dois mecanismos são implementados.
+Quando um controle é usado dentro de um contêiner de controle, ele usa dois mecanismos para se comunicar: ele expõe propriedades e métodos e dispara eventos. A figura a seguir demonstra como esses dois mecanismos são implementados.
 
-![Controle ActiveX se comunica com seu contêiner](../mfc/media/vc37222.gif "controle ActiveX se comunica com seu contêiner") <br/>
+![O controle ActiveX se comunica com seu contêiner](../mfc/media/vc37222.gif "O controle ActiveX se comunica com seu contêiner") <br/>
 Comunicação entre um contêiner de controle ActiveX e um controle ActiveX
 
-A figura anterior também ilustra como as outras interfaces OLE (além de automação e eventos) são tratados por controles.
+A figura anterior também ilustra como outras interfaces OLE (além da automação e dos eventos) são manipuladas pelos controles.
 
-Todos os de comunicação de um controle com o contêiner é executada por `COleControl`. Para lidar com algumas das solicitações do contêiner, `COleControl` irá chamar funções que são implementadas na classe de controle de membro. Todos os métodos e algumas propriedades são tratadas dessa forma. Sua classe do controle também pode iniciar a comunicação com o contêiner chamando funções de membro de `COleControl`. Os eventos são disparados dessa maneira.
+Toda a comunicação de um controle com o contêiner é executada pelo `COleControl`. Para lidar com algumas das solicitações do contêiner, `COleControl` o chamará as funções de membro que são implementadas na classe de controle. Todos os métodos e algumas propriedades são tratados dessa maneira. A classe do controle também pode iniciar a comunicação com o contêiner chamando funções de membro `COleControl`de. Os eventos são acionados dessa maneira.
 
-##  <a name="_core_active_and_inactive_states_of_an_activex_control"></a> Estados ativo e inativo de um controle ActiveX
+##  <a name="_core_active_and_inactive_states_of_an_activex_control"></a>Estados ativos e inativos de um controle ActiveX
 
-Um controle tem dois estados básicos: ativas e inativas. Tradicionalmente, esses estados foram diferenciados por se o controle tinha uma janela. Um controle ativo tinha uma janela; um controle inativo não faziam isso. Com a introdução da ativação sem janelas, essa distinção não é universal, mas ainda se aplica a muitos controles.
+Um controle tem dois Estados básicos: ativo e inativo. Tradicionalmente, esses Estados foram diferenciados pelo fato de o controle tivesse uma janela. Um controle ativo tinha uma janela; um controle inativo não. Com a introdução da ativação sem janela, essa distinção não é mais universal, mas ainda se aplica a muitos controles.
 
-Quando um [controle sem janelas](../mfc/providing-windowless-activation.md) vai ativo, ele invoca a captura do mouse, o foco do teclado, rolagem e outros serviços da janela de seu contêiner. Você também pode [fornecem a interação do mouse para controles inativos](../mfc/providing-mouse-interaction-while-inactive.md), bem como criar controles que [Aguarde até ser ativado para criar uma janela](../mfc/turning-off-the-activate-when-visible-option.md).
+Quando um [controle sem janela](../mfc/providing-windowless-activation.md) fica ativo, ele invoca a captura do mouse, o foco do teclado, a rolagem e outros serviços do Windows a partir de seu contêiner. Você também pode [fornecer a interação com o mouse para controles](../mfc/providing-mouse-interaction-while-inactive.md)inativos, bem como criar controles que [aguardem até que sejam ativados para criar uma janela](../mfc/turning-off-the-activate-when-visible-option.md).
 
-Quando um controle com uma janela fica ativo, é capaz de interagir completamente com o contêiner de controle, o usuário e o Windows. A figura a seguir demonstra os caminhos de comunicação entre o controle ActiveX, o contêiner de controle e o sistema operacional.
+Quando um controle com uma janela se torna ativo, ele é capaz de interagir totalmente com o contêiner de controle, o usuário e o Windows. A figura a seguir demonstra os caminhos de comunicação entre o controle ActiveX, o contêiner de controle e o sistema operacional.
 
-![Msg no Active Directory controle ActiveX em janelas de processamento](../mfc/media/vc37223.gif "no Active Directory controle ActiveX em janelas de processamento de mensagem") <br/>
-Processamento em um controle ActiveX em janelas (ao Active Directory) de mensagens do Windows
+![Processamento de MSG no controle ActiveX com janela ativa](../mfc/media/vc37223.gif "Processamento de MSG no controle ActiveX com janela ativa") <br/>
+Processamento de mensagens do Windows em um controle ActiveX em janelas (quando ativo)
 
-##  <a name="_core_serializing_activex_elements"></a> Serialização
+##  <a name="_core_serializing_activex_elements"></a>Série
 
-A capacidade de serializar os dados, às vezes chamados de persistência, permite que o controle gravar o valor de suas propriedades para o armazenamento persistente. Controles podem ser recriados, em seguida, lendo o estado do objeto do armazenamento.
+A capacidade de serializar dados, às vezes conhecida como persistência, permite que o controle grave o valor de suas propriedades no armazenamento persistente. Os controles podem ser recriados lendo o estado do objeto do armazenamento.
 
-Observe que um controle não é responsável por obter acesso à mídia de armazenamento. Em vez disso, o contêiner do controle é responsável por fornecer o controle com uma mídia de armazenamento para usar nos momentos apropriados. Para obter mais informações sobre serialização, consulte o artigo [controles ActiveX MFC: Serializando](../mfc/mfc-activex-controls-serializing.md). Para obter informações sobre como otimizar a serialização, consulte [otimizando persistência e inicialização](../mfc/optimizing-persistence-and-initialization.md) em controles ActiveX: Otimização.
+Observe que um controle não é responsável por obter acesso ao meio de armazenamento. Em vez disso, o contêiner do controle é responsável por fornecer o controle com um meio de armazenamento a ser usado nos horários apropriados. Para obter mais informações sobre serialização, consulte o [artigo controles ActiveX do MFC: Serialização](../mfc/mfc-activex-controls-serializing.md). Para obter informações sobre como otimizar a serialização, consulte Otimizando a [persistência e a inicialização](../mfc/optimizing-persistence-and-initialization.md) nos controles ActiveX: Otimização.
 
-##  <a name="_core_installing_activex_control_classes_and_tools"></a> Instalando ferramentas e Classes de controle ActiveX
+##  <a name="_core_installing_activex_control_classes_and_tools"></a>Instalando classes e ferramentas de controle ActiveX
 
-Quando você instala o Visual C++, o ActiveX do MFC controlam as classes e varejo e depurar o controle ActiveX DLLs de tempo de execução são instalados automaticamente se os controles ActiveX são selecionados na instalação (eles são selecionados por padrão).
+Quando você instala o C++Visual, as classes de controle ActiveX do MFC e as DLLs de tempo de execução do controle ActiveX de varejo e depuração são automaticamente instaladas se os controles ActiveX estiverem selecionados na instalação (eles são selecionados por padrão).
 
-Por padrão, as ferramentas e classes de controle ActiveX são instaladas nos seguintes subdiretórios \Program Files\Microsoft Visual Studio .NET:
+Por padrão, as classes e as ferramentas de controle ActiveX são instaladas nos seguintes subdiretórios em \Program Files\Microsoft Visual Studio .NET:
 
 - **\Common7\Tools**
 
-   Contém os arquivos do contêiner de teste (TstCon32.exe, bem como seus arquivos de Ajuda).
+   Contém os arquivos de contêiner de teste (TstCon32. exe, bem como seus arquivos de ajuda).
 
 - **\Vc7\atlmfc\include**
 
@@ -110,14 +110,14 @@ Por padrão, as ferramentas e classes de controle ActiveX são instaladas nos se
 
 - **\Vc7\atlmfc\src\mfc**
 
-   Contém o código-fonte para classes específicas de controle ActiveX no MFC
+   Contém o código-fonte para classes de controle ActiveX específicas no MFC
 
 - **\Vc7\atlmfc\lib**
 
-   Contém as bibliotecas necessárias para desenvolver controles ActiveX com o MFC
+   Contém as bibliotecas necessárias para o desenvolvimento de controles ActiveX com MFC
 
-Também há exemplos para controles ActiveX do MFC. Para obter mais informações sobre esses exemplos, consulte [exemplos de controles: Controles ActiveX com base em MFC](../overview/visual-cpp-samples.md)
+Também há exemplos para controles ActiveX do MFC. Para obter mais informações sobre esses exemplos, [consulte exemplos de controles: Controles ActiveX baseados em MFC](../overview/visual-cpp-samples.md)
 
 ## <a name="see-also"></a>Consulte também
 
-[Elementos da Interface do usuário](../mfc/user-interface-elements-mfc.md)
+[Elementos da interface do usuário](../mfc/user-interface-elements-mfc.md)

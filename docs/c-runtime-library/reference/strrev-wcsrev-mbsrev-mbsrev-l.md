@@ -47,19 +47,19 @@ helpviewer_keywords:
 - tcsrev function
 - _tcsrev function
 ms.assetid: 87863e89-4fa0-421c-af48-25d8516fe72f
-ms.openlocfilehash: a8794177f4f92a1928ffeaaa1d7e183aa67cf886
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 36cbf78c4645c22209892be77f3bf77e7c93c76b
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62366648"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499420"
 ---
-# <a name="strrev-wcsrev-mbsrev-mbsrevl"></a>_strrev, _wcsrev, _mbsrev, _mbsrev_l
+# <a name="_strrev-_wcsrev-_mbsrev-_mbsrev_l"></a>_strrev, _wcsrev, _mbsrev, _mbsrev_l
 
 Reverte os caracteres de uma cadeia de caracteres.
 
 > [!IMPORTANT]
-> **mbsrev** e **mbsrev_l** não pode ser usado em aplicativos executados no tempo de execução do Windows. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsrev** e **_mbsrev_l** não podem ser usados em aplicativos que são executados no Windows Runtime. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -93,14 +93,14 @@ Retorna um ponteiro para a cadeia de caracteres alterada. Nenhum valor retornado
 
 ## <a name="remarks"></a>Comentários
 
-O **strrev** função inverte a ordem dos caracteres na *str*. O caractere nulo de terminação permanece em vigor. **wcsrev** e **mbsrev** são versões de caractere largo e caracteres multibyte **strrev**. Os argumentos e o valor de retorno **wcsrev** são largos cadeias de caracteres; aqueles de **mbsrev** são cadeias de caracteres multibyte. Para **mbsrev**, a ordem de bytes em cada caractere multibyte na *str* não é alterado. Caso contrário, essas três funções se comportam de forma idêntica.
+A função **_strrev** reverte a ordem dos caracteres em *Str*. O caractere nulo de terminação permanece em vigor. **_wcsrev** e **_mbsrev** são versões de caractere largo e de multibyte de **_strrev**. Os argumentos e o valor de retorno de **_wcsrev** são cadeias de caracteres largos; os de **_mbsrev** são cadeias de caracteres multibyte. Para **_mbsrev**, a ordem de bytes em cada caractere multibyte em *Str* não é alterada. Caso contrário, essas três funções se comportam de forma idêntica.
 
-**mbsrev** valida seus parâmetros. Se qualquer um dos *string1* ou *string2* é um ponteiro nulo, o manipulador de parâmetro inválido será invocado, conforme descrito na [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, **mbsrev** retorna **nulo** e define **errno** para **EINVAL**. **strrev** e **wcsrev** não validam seus parâmetros.
+**_mbsrev** valida seus parâmetros. Se *seqüência1* ou *seqüência2* for um ponteiro NULL, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, **_mbsrev** retornará **NULL** e definirá **errno** como **EINVAL**. **_strrev** e **_wcsrev** não validam seus parâmetros.
 
-O valor de saída é afetado pela configuração da **LC_CTYPE** configuração da categoria da localidade; consulte [setlocale, wsetlocale](setlocale-wsetlocale.md) para obter mais informações. As versões dessas funções são idênticas, exceto que aquelas que não têm o **l** sufixo usam a localidade atual e aqueles que têm o **l** sufixo, em vez disso, use o parâmetro de localidade que passado. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+O valor de saída é afetado pela configuração da configuração de categoria **LC_CTYPE** da localidade; consulte [setlocale, _wsetlocale](setlocale-wsetlocale.md) para obter mais informações. As versões dessas funções são idênticas, exceto pelo fato de que aquelas que não têm o sufixo **_L** usam a localidade atual e aquelas que têm o sufixo **_L** , em vez disso, usam o parâmetro Locale que é passado. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
 > [!IMPORTANT]
-> Essas funções podem ser vulneráveis a ameaças de estouro de buffer. Os estouros de buffer podem ser usados em ataques de sistema porque podem causar uma elevação de privilégio não garantida. Para obter mais informações, consulte [Avoiding Buffer Overruns](/windows/desktop/SecBP/avoiding-buffer-overruns) (Evitando estouros de buffer).
+> Essas funções podem ser vulneráveis a ameaças de estouro de buffer. Os estouros de buffer podem ser usados em ataques de sistema porque podem causar uma elevação de privilégio não garantida. Para obter mais informações, consulte [Avoiding Buffer Overruns](/windows/win32/SecBP/avoiding-buffer-overruns) (Evitando estouros de buffer).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 

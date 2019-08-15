@@ -1,21 +1,21 @@
 ---
-title: LCID (C++ COM atributo)
+title: LCID (C++ atributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.lcid
 helpviewer_keywords:
 - LCID attribute
 ms.assetid: 7f248c69-ee1c-42c3-9411-39cf27c9f43d
-ms.openlocfilehash: d97ad86e143102c96e87ae0a32245b0c01042501
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7c737661bb8429e416b515e4e7fcaf54956385d0
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409259"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514543"
 ---
 # <a name="lcid"></a>lcid
 
-Permite que você passar um identificador de localidade para uma função.
+Permite passar um identificador de localidade para uma função.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -25,7 +25,7 @@ Permite que você passar um identificador de localidade para uma função.
 
 ## <a name="remarks"></a>Comentários
 
-O **lcid** atributo C++ implementa a funcionalidade da [lcid](/windows/desktop/Midl/lcid) atributo MIDL. Se você quiser implementar a localidade para um bloco de biblioteca, use o **lcid =** `lcid` parâmetro para o [módulo](module-cpp.md) atributo.
+O atributo **LCID** C++ implementa a funcionalidade do atributo MIDL de [LCID](/windows/win32/Midl/lcid) . Se você quiser implementar a localidade para um bloco de biblioteca, use o parâmetro **LCID =** `lcid` para o atributo [Module](module-cpp.md) .
 
 ## <a name="example"></a>Exemplo
 
@@ -44,16 +44,16 @@ __interface IStatic {
 
 ## <a name="requirements"></a>Requisitos
 
-### <a name="attribute-context"></a>Atributo de contexto
+### <a name="attribute-context"></a>Contexto de atributo
 
 |||
 |-|-|
 |**Aplica-se a**|Parâmetro de interface|
 |**Repetível**|Não|
-|**Atributos obrigatórios**|Nenhum|
+|**Atributos necessários**|Nenhum|
 |**Atributos inválidos**|Nenhum|
 
-Para obter mais informações, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
+Para obter mais informações, consulte contextos de [atributo](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Consulte também
 

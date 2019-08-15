@@ -17,16 +17,16 @@ helpviewer_keywords:
 - aggregation [C++], ATL objects
 - CComAggObject class
 ms.assetid: 7aa90d69-d399-477b-880d-e2cdf0ef7881
-ms.openlocfilehash: 52cdddb1d922ca21e24122422ca14d9c12d13a83
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8b05284104f9d2e5e7704bceaee6f8adf9a33aac
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62259918"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497653"
 ---
 # <a name="ccomaggobject-class"></a>Classe CComAggObject
 
-Essa classe implementa a [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) interface para um objeto agregado. Por definição, um objeto agregado está contido dentro de um objeto externo. O `CComAggObject` classe é semelhante ao [classe CComObject](../../atl/reference/ccomobject-class.md), exceto que ele expõe uma interface que é diretamente acessível para clientes externos.
+Essa classe implementa a interface [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) para um objeto agregado. Por definição, um objeto agregado está contido em um objeto externo. A `CComAggObject` classe é semelhante à [classe CComObject](../../atl/reference/ccomobject-class.md), exceto pelo fato de que ela expõe uma interface que está diretamente acessível a clientes externos.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -38,8 +38,8 @@ class CComAggObject : public IUnknown,
 
 #### <a name="parameters"></a>Parâmetros
 
-*contained*<br/>
-Sua classe, derivada de [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) ou [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), como bem como de outras interfaces que você deseja oferecer suporte no objeto.
+*presente*<br/>
+Sua classe, derivada de [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) ou [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), bem como de quaisquer outras interfaces às quais você deseja dar suporte no objeto.
 
 ## <a name="members"></a>Membros
 
@@ -55,23 +55,23 @@ Sua classe, derivada de [CComObjectRoot](../../atl/reference/ccomobjectroot-clas
 |Nome|Descrição|
 |----------|-----------------|
 |[CComAggObject::AddRef](#addref)|Incrementa a contagem de referência no objeto agregado.|
-|[CComAggObject::CreateInstance](#createinstance)|A função estática permite que você crie uma nova **CComAggObject <** `contained` **>** objeto sem a sobrecarga de [CoCreateInstance](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance).|
-|[CComAggObject::FinalConstruct](#finalconstruct)|Executa a inicialização final de `m_contained`.|
-|[CComAggObject::FinalRelease](#finalrelease)|Executa a destruição de final de `m_contained`.|
+|[CComAggObject::CreateInstance](#createinstance)|Essa função estática permite que você crie um novo objeto **CComAggObject <** `contained` **>** sem a sobrecarga de [CoCreateInstance](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance).|
+|[CComAggObject::FinalConstruct](#finalconstruct)|Executa a inicialização final `m_contained`do.|
+|[CComAggObject::FinalRelease](#finalrelease)|Executa a destruição final `m_contained`do.|
 |[CComAggObject::QueryInterface](#queryinterface)|Recupera um ponteiro para a interface solicitada.|
-|[CComAggObject::Release](#release)|Diminui a contagem de referência no objeto agregado.|
+|[CComAggObject::Release](#release)|Decrementa a contagem de referência no objeto agregado.|
 
 ### <a name="public-data-members"></a>Membros de Dados Públicos
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CComAggObject::m_contained](#m_contained)|Delegados `IUnknown` chamadas para o externo desconhecido.|
+|[CComAggObject::m_contained](#m_contained)|Delega `IUnknown` chamadas para a externa desconhecidas.|
 
 ## <a name="remarks"></a>Comentários
 
-`CComAggObject` implementa [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) para um objeto agregado. `CComAggObject` tem seu próprio `IUnknown` interface, separado do que o objeto externo `IUnknown` de interface e mantém seu próprio contagem de referência.
+`CComAggObject`implementa [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) para um objeto agregado. `CComAggObject`tem sua própria `IUnknown` interface, separada da interface do `IUnknown` objeto externo e mantém sua própria contagem de referência.
 
-Para obter mais informações sobre agregação, consulte o artigo [conceitos básicos de objetos COM de ATL](../../atl/fundamentals-of-atl-com-objects.md).
+Para obter mais informações sobre agregação, consulte o artigo [Fundamentals de objetos com ATL](../../atl/fundamentals-of-atl-com-objects.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -85,7 +85,7 @@ Para obter mais informações sobre agregação, consulte o artigo [conceitos b�
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** atlcom
+**Cabeçalho:** atlcom. h
 
 ##  <a name="addref"></a>  CComAggObject::AddRef
 
@@ -110,15 +110,15 @@ CComAggObject(void* pv);
 ### <a name="parameters"></a>Parâmetros
 
 *pv*<br/>
-[in] O externo desconhecido.
+no O desconhecido externo.
 
 ### <a name="remarks"></a>Comentários
 
-Inicializa o `CComContainedObject` membro, [m_contained](#m_contained)e incrementa a contagem de bloqueios do módulo.
+Inicializa o `CComContainedObject` membro, [m_contained](#m_contained), e incrementa a contagem de bloqueios de módulo.
 
-O destruidor decrementa a módulo contagem de bloqueio.
+O destruidor decrementa a contagem de bloqueios de módulo.
 
-##  <a name="dtor"></a>  CComAggObject::~CComAggObject
+##  <a name="dtor"></a>CComAggObject:: ~ CComAggObject
 
 O destruidor.
 
@@ -128,11 +128,11 @@ O destruidor.
 
 ### <a name="remarks"></a>Comentários
 
-Libera todos os recursos alocados, chamadas [FinalRelease](#finalrelease), e diminui a contagem de bloqueio de módulo.
+Libera todos os recursos alocados, chama [FinalRelease](#finalrelease)e decrementa a contagem de bloqueios de módulo.
 
 ##  <a name="createinstance"></a>  CComAggObject::CreateInstance
 
-A função estática permite que você crie uma nova **CComAggObject <** `contained` **>** objeto sem a sobrecarga de [CoCreateInstance](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance).
+Essa função estática permite que você crie um novo objeto **CComAggObject <** `contained` **>** sem a sobrecarga de [CoCreateInstance](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance).
 
 ```
 static HRESULT WINAPI CreateInstance(
@@ -143,21 +143,21 @@ static HRESULT WINAPI CreateInstance(
 ### <a name="parameters"></a>Parâmetros
 
 *pp*<br/>
-[out] Um ponteiro para um **CComAggObject\<**<em>contido</em> **>** ponteiro. Se `CreateInstance` não for bem-sucedida, *pp* é definido como NULL.
+fora Um ponteiro para um ponteiro<em>contido</em> **>** **CComAggObject\<** . Se `CreateInstance` não for bem-sucedida, *PP* será definido como NULL.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Um valor padrão de HRESULT.
+Um valor HRESULT padrão.
 
 ### <a name="remarks"></a>Comentários
 
-O objeto retornado tem uma contagem de referência de zero, portanto, chame `AddRef` imediatamente, em seguida, use `Release` para liberar a referência no ponteiro de objeto quando você terminar.
+O objeto retornado tem uma contagem de referência igual a zero, `AddRef` portanto, chame imediatamente `Release` e, em seguida, use para liberar a referência no ponteiro do objeto quando terminar.
 
-Se você não precisa de acesso direto ao objeto, mas ainda quiser criar um novo objeto sem a sobrecarga de `CoCreateInstance`, use [CComCoClass::CreateInstance](../../atl/reference/ccomcoclass-class.md#createinstance) em vez disso.
+Se você não precisar de acesso direto ao objeto, mas ainda quiser criar um novo objeto sem a sobrecarga de `CoCreateInstance`, use [CComCoClass:: CreateInstance](../../atl/reference/ccomcoclass-class.md#createinstance) em vez disso.
 
 ##  <a name="finalconstruct"></a>  CComAggObject::FinalConstruct
 
-Chamado durante os estágios finais da construção do objeto, este método executa qualquer inicialização final sobre o [m_contained](#m_contained) membro.
+Chamado durante os estágios finais da construção do objeto, esse método executa qualquer inicialização final no membro [m_contained](#m_contained) .
 
 ```
 HRESULT FinalConstruct();
@@ -165,11 +165,11 @@ HRESULT FinalConstruct();
 
 ### <a name="return-value"></a>Valor de retorno
 
-Um valor padrão de HRESULT.
+Um valor HRESULT padrão.
 
 ##  <a name="finalrelease"></a>  CComAggObject::FinalRelease
 
-Chamado durante a destruição de objeto, esse método libera o [m_contained](#m_contained) membro.
+Chamado durante a destruição de objeto, esse método libera o membro [m_contained](#m_contained) .
 
 ```
 void FinalRelease();
@@ -177,7 +177,7 @@ void FinalRelease();
 
 ##  <a name="m_contained"></a>  CComAggObject::m_contained
 
-Um [CComContainedObject](../../atl/reference/ccomcontainedobject-class.md) objeto derivado da sua classe.
+Um objeto [CComContainedObject](../../atl/reference/ccomcontainedobject-class.md) derivado de sua classe.
 
 ```
 CComContainedObject<contained> m_contained;
@@ -185,12 +185,12 @@ CComContainedObject<contained> m_contained;
 
 ### <a name="parameters"></a>Parâmetros
 
-*contained*<br/>
-[in] Sua classe, derivada de [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) ou [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), como bem como de outras interfaces que você deseja oferecer suporte no objeto.
+*presente*<br/>
+no Sua classe, derivada de [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) ou [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), bem como de quaisquer outras interfaces às quais você deseja dar suporte no objeto.
 
 ### <a name="remarks"></a>Comentários
 
-Todos os `IUnknown` chama por meio de `m_contained` são delegadas ao externo desconhecido.
+Todas `IUnknown` as chamadas `m_contained` por meio são delegadas para o desconhecido externo.
 
 ##  <a name="queryinterface"></a>  CComAggObject::QueryInterface
 
@@ -205,25 +205,25 @@ HRESULT STDMETHODCALLTYPE QueryInterface(Q** pp);
 ### <a name="parameters"></a>Parâmetros
 
 *iid*<br/>
-[in] O identificador da interface que está sendo solicitado.
+no O identificador da interface que está sendo solicitada.
 
 *ppvObject*<br/>
-[out] Um ponteiro para o ponteiro de interface identificado pelo *iid*. Se o objeto não dá suporte a essa interface, *ppvObject* é definido como NULL.
+fora Um ponteiro para o ponteiro de interface identificado pelo *IID*. Se o objeto não oferecer suporte a essa interface, *ppvObject* será definido como NULL.
 
 *pp*<br/>
-[out] Um ponteiro para o ponteiro de interface identificado pelo tipo `Q`. Se o objeto não dá suporte a essa interface, *pp* é definido como NULL.
+fora Um ponteiro para o ponteiro de interface identificado pelo `Q`tipo. Se o objeto não oferecer suporte a essa interface, *PP* será definido como NULL.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Um valor padrão de HRESULT.
+Um valor HRESULT padrão.
 
 ### <a name="remarks"></a>Comentários
 
-Se for a interface solicitada `IUnknown`, `QueryInterface` retorna um ponteiro para o objeto agregado próprio `IUnknown` e incrementa a contagem de referência. Caso contrário, este método consulta para a interface por meio de `CComContainedObject` membro, [m_contained](#m_contained).
+Se a interface solicitada `IUnknown`for `QueryInterface` , retornará um ponteiro para o próprio `IUnknown` objeto agregado e incrementará a contagem de referência. Caso contrário, esse método consultará a interface por `CComContainedObject` meio do membro, [m_contained](#m_contained).
 
 ##  <a name="release"></a>  CComAggObject::Release
 
-Diminui a contagem de referência no objeto agregado.
+Decrementa a contagem de referência no objeto agregado.
 
 ```
 STDMETHOD_(ULONG, Release)();
@@ -231,7 +231,7 @@ STDMETHOD_(ULONG, Release)();
 
 ### <a name="return-value"></a>Valor de retorno
 
-Em compilações de depuração, `Release` retorna um valor que pode ser útil para diagnóstico ou teste. Em compilações sem depuração, `Release` sempre retorna 0.
+Em compilações de `Release` depuração, retorna um valor que pode ser útil para diagnóstico ou teste. Em compilações não depuradas, `Release` sempre retorna 0.
 
 ## <a name="see-also"></a>Consulte também
 

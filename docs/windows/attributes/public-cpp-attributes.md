@@ -1,21 +1,21 @@
 ---
-title: Public (atributos C++) (C++ COM atributo)
+title: Public (C++ atributos) (C++ atributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.public
 helpviewer_keywords:
 - public attribute
 ms.assetid: c42e1fd5-6cb1-48fe-8a03-95f2a2e0137c
-ms.openlocfilehash: a12ab0905064a72057dffac03340b667f07b3ae5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 274af011f2d61521885e93d4ce1eddad149748ad
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407543"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514170"
 ---
 # <a name="public-c-attributes"></a>public (atributos C++)
 
-Garante que um typedef entra em biblioteca de tipos, mesmo se ele não é referenciado de dentro do arquivo. idl.
+Garante que um typedef entrará na biblioteca de tipos, mesmo que não seja referenciado de dentro do arquivo. idl.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -25,11 +25,11 @@ Garante que um typedef entra em biblioteca de tipos, mesmo se ele não é refere
 
 ## <a name="remarks"></a>Comentários
 
-O **pública** atributo C++ tem a mesma funcionalidade que o [público](/windows/desktop/Midl/public) atributo MIDL.
+O atributo **Public** C++ tem a mesma funcionalidade que o atributo MIDL [público](/windows/win32/Midl/public) .
 
 ## <a name="example"></a>Exemplo
 
-O código a seguir mostra como usar o **pública** atributo:
+O código a seguir mostra como usar o atributo **público** :
 
 ```cpp
 // cpp_attr_ref_public.cpp
@@ -47,16 +47,16 @@ __interface IFireTabCtrl : IDispatch
 
 ## <a name="requirements"></a>Requisitos
 
-### <a name="attribute-context"></a>Atributo de contexto
+### <a name="attribute-context"></a>Contexto de atributo
 
 |||
 |-|-|
 |**Aplica-se a**|**typedef**|
 |**Repetível**|Não|
-|**Atributos obrigatórios**|Nenhum|
+|**Atributos necessários**|Nenhum|
 |**Atributos inválidos**|Nenhum|
 
-Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
+Para obter mais informações sobre os contextos de atributo, consulte contextos de [atributo](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Consulte também
 

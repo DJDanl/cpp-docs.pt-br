@@ -8,12 +8,12 @@ helpviewer_keywords:
 - DLLs [C++]
 - DLLs [C++], about DLLs
 ms.assetid: 5216bca4-51e2-466b-b221-0e3e776056f0
-ms.openlocfilehash: 9f5b34fda8a429f8e55631e1e0125ed6f79d5bae
-ms.sourcegitcommit: 0867d648e0955ebad7260b5fbebfd6cd4d58f3c7
+ms.openlocfilehash: 33f002143e306c99b4d17b7a01ddd4a9738e38e7
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68341077"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493283"
 ---
 # <a name="create-cc-dlls-in-visual-studio"></a>Criar C/C++ DLLs no Visual Studio
 
@@ -80,15 +80,15 @@ Discute o código de inicialização de DLL que deve ser executado quando sua DL
 Descreve como a biblioteca em tempo de execução executa a sequência de inicialização da DLL.
 
 [LoadLibrary e AfxLoadLibrary](loadlibrary-and-afxloadlibrary.md)<br/>
-Discute o uso  de LoadLibrary `AfxLoadLibrary` e a vinculação explícita a uma dll em tempo de execução.
+Discute o uso de LoadLibrary `AfxLoadLibrary` e a vinculação explícita a uma dll em tempo de execução.
 
 [GetProcAddress](getprocaddress.md)<br/>
 Discute o uso de **GetProcAddress** para obter o endereço de uma função exportada na dll.
 
 [FreeLibrary e AfxFreeLibrary](freelibrary-and-afxfreelibrary.md)<br/>
-Discute o uso  de FreeLibrary `AfxFreeLibrary` e quando o módulo DLL não é mais necessário.
+Discute o uso de FreeLibrary `AfxFreeLibrary` e quando o módulo DLL não é mais necessário.
 
-[Ordem de pesquisa da biblioteca de vínculo dinâmico](/windows/desktop/Dlls/dynamic-link-library-search-order)<br/>
+[Ordem de pesquisa da biblioteca de vínculo dinâmico](/windows/win32/Dlls/dynamic-link-library-search-order)<br/>
 Descreve o caminho de pesquisa que o sistema operacional Windows usa para localizar uma DLL no sistema.
 
 [Estados de módulo de uma DLL MFC regular vinculada dinamicamente ao MFC](module-states-of-a-regular-dll-dynamically-linked-to-mfc.md)<br/>

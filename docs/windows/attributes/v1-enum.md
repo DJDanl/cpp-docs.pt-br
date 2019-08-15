@@ -1,21 +1,21 @@
 ---
-title: v1_enum (C++ COM atributo)
+title: v1_enum (C++ atributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.v1_enum
 helpviewer_keywords:
 - v1_enum attribute
 ms.assetid: 2fe92d92-81b9-4a1c-b6ce-437d0eb770ca
-ms.openlocfilehash: 08654eed7ad467dc22d2cbbf811c9169e5292f16
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c67f6303e73da42db5efd006bd6cdf3ded5bb8cf
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407140"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69513861"
 ---
-# <a name="v1enum"></a>v1_enum
+# <a name="v1_enum"></a>v1_enum
 
-Direciona-se de que o tipo enumerado especificado ser transmitidas como uma entidade de 32 bits, em vez do padrão de 16 bits.
+Direciona que o tipo enumerado especificado seja transmitido como uma entidade de 32 bits em vez do padrão de 16 bits.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -25,11 +25,11 @@ Direciona-se de que o tipo enumerado especificado ser transmitidas como uma enti
 
 ## <a name="remarks"></a>Comentários
 
-O **v1_enum** C++ atributo tem a mesma funcionalidade que o [v1_enum](/windows/desktop/Midl/v1-enum) atributo MIDL.
+O atributo **v1_enum** C++ tem a mesma funcionalidade que o atributo MIDL [v1_enum](/windows/win32/Midl/v1-enum) .
 
 ## <a name="example"></a>Exemplo
 
-O código a seguir mostra um uso de **v1_enum**:
+O código a seguir mostra o uso de **v1_enum**:
 
 ```cpp
 // cpp_attr_ref_v1_enum.cpp
@@ -44,16 +44,16 @@ enum eList {
 
 ## <a name="requirements"></a>Requisitos
 
-### <a name="attribute-context"></a>Atributo de contexto
+### <a name="attribute-context"></a>Contexto de atributo
 
 |||
 |-|-|
 |**Aplica-se a**|Tipo enumerado|
 |**Repetível**|Não|
-|**Atributos obrigatórios**|Nenhum|
+|**Atributos necessários**|Nenhum|
 |**Atributos inválidos**|Nenhum|
 
-Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
+Para obter mais informações sobre os contextos de atributo, consulte contextos de [atributo](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Consulte também
 

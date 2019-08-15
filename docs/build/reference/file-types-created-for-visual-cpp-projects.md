@@ -1,5 +1,5 @@
 ---
-title: Criar tipos de arquivo para o Visual Studio C++ projetos
+title: Tipos de arquivo criados para projetos C++ do Visual Studio
 ms.date: 04/08/2019
 helpviewer_keywords:
 - header files [C++], Visual Studio projects
@@ -14,16 +14,16 @@ helpviewer_keywords:
 - .def files
 - licensing ActiveX controls
 ms.assetid: 2b0ee2e0-ae81-4185-9bb9-11da3c99a283
-ms.openlocfilehash: 42040854b7a038ebe32d67e305c947d095d5391a
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
-ms.translationtype: HT
+ms.openlocfilehash: 078c83a9c95c1b143af2037240d5cc0a16211827
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446294"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492877"
 ---
-# <a name="file-types-created-for-visual-studio-c-projects"></a>Tipos de arquivo criados para projetos do Visual Studio C++
+# <a name="file-types-created-for-visual-studio-c-projects"></a>Tipos de arquivo criados para projetos C++ do Visual Studio
 
-Muitos tipos de arquivos são associados com projetos do Visual Studio para aplicativos da área de trabalho clássicos. Os arquivos reais incluídos no projeto dependem do tipo de projeto e das opções selecionadas ao usar um assistente.
+Muitos tipos de arquivos são associados a projetos do Visual Studio para aplicativos de área de trabalho clássica. Os arquivos reais incluídos no projeto dependem do tipo de projeto e das opções selecionadas ao usar um assistente.
 
 - [Arquivos de projeto e solução](project-and-solution-files.md)
 
@@ -41,11 +41,11 @@ Muitos tipos de arquivos são associados com projetos do Visual Studio para apli
 
 - [Arquivos de dica](hint-files.md)
 
-Quando você cria um projeto do Visual Studio, você pode criá-lo em uma nova solução, ou você pode adicionar um projeto a uma solução existente. Geralmente, os aplicativos não triviais são desenvolvidos com vários projetos em uma solução.
+Quando você cria um projeto do Visual Studio, você pode criá-lo em uma nova solução ou pode adicionar um projeto a uma solução existente. Geralmente, os aplicativos não triviais são desenvolvidos com vários projetos em uma solução.
 
-Os projetos costumam produzir um EXE ou uma DLL. Projetos podem ser dependentes entre si; durante o processo de compilação, o ambiente do Visual Studio verifica dependências dentro e entre projetos. Normalmente, cada projeto tem código-fonte principal. Dependendo do tipo de projeto, ele pode ter muitos outros arquivos que contém vários aspectos do projeto. O conteúdo desses arquivos é indicado pela extensão de arquivo. O ambiente de desenvolvimento do Visual Studio usa as extensões de arquivo para determinar como manipular o conteúdo do arquivo durante um build.
+Os projetos costumam produzir um EXE ou uma DLL. Os projetos podem ser dependentes uns dos outros; durante o processo de compilação, o ambiente do Visual Studio verifica dependências dentro e entre projetos. Cada projeto geralmente tem código-fonte principal. Dependendo do tipo de projeto, ele pode ter muitos outros arquivos contendo vários aspectos do projeto. O conteúdo desses arquivos é indicado pela extensão de arquivo. O ambiente de desenvolvimento do Visual Studio usa as extensões de arquivo para determinar como manipular o conteúdo do arquivo durante um build.
 
-A tabela a seguir mostra os arquivos comuns em um projeto do Visual Studio e identifica-los com sua extensão de arquivo.
+A tabela a seguir mostra os arquivos comuns em um projeto do Visual Studio e os identifica com sua extensão de arquivo.
 
 |Extensão de arquivo|Tipo|Conteúdo|
 |--------------------|----------|--------------|
@@ -63,11 +63,11 @@ A tabela a seguir mostra os arquivos comuns em um projeto do Visual Studio e ide
 |.htm, .html, .xsp, .asp, .htc, .hta, .xml|Recurso|Arquivos da Web comuns.|
 |.HxC|Projeto|Arquivo de projeto da Ajuda.|
 |.ico|Recurso|Arquivo gráfico de bitmap do ícone.|
-|.idb|Compilando|O arquivo de estado, que contém informações de dependência entre arquivos de origem e as definições de classe. Ele pode ser usado pelo compilador durante a compilação incremental. Use a opção do compilador [/Fd](fd-program-database-file-name.md) para especificar o nome do arquivo .idb.|
-|.idl|Compilando|Um arquivo de linguagem IDL. Para obter mais informações, confira [Arquivo IDL](/windows/desktop/Rpc/the-interface-definition-language-idl-file) no SDK do Windows.|
+|.idb|Compilando|O arquivo de estado, que contém informações de dependência entre os arquivos de origem e as definições de classe. Ele pode ser usado pelo compilador durante a compilação incremental. Use a opção do compilador [/Fd](fd-program-database-file-name.md) para especificar o nome do arquivo .idb.|
+|.idl|Compilando|Um arquivo de linguagem IDL. Para obter mais informações, confira [Arquivo IDL](/windows/win32/Rpc/the-interface-definition-language-idl-file) no SDK do Windows.|
 |.ilk|Vinculação|Arquivo de vínculo incremental. Para obter mais informações, consulte [/incremental](incremental-link-incrementally.md).|
-|.map|Vinculação|Um arquivo de texto que contém informações do vinculador. Use a opção do compilador [/Fm](fm-name-mapfile.md) para nomear o arquivo de mapa. Para obter mais informações, consulte [/Map](map-generate-mapfile.md).|
-|.mfcribbon-ms|Recurso|Um arquivo de recurso que contém o código XML que define os botões, controles e atributos do MFC na faixa de opções. Para obter mais informações, consulte [Fitas](../../mfc/ribbon-designer-mfc.md).|
+|.map|Vinculação|Um arquivo de texto que contém informações do vinculador. Use a opção do compilador [/Fm](fm-name-mapfile.md) para nomear o arquivo de mapa. Para obter mais informações, consulte [/MAP](map-generate-mapfile.md).|
+|.mfcribbon-ms|Recurso|Um arquivo de recurso que contém o código XML que define os botões, controles e atributos do MFC na faixa de faixas. Para obter mais informações, consulte [Fitas](../../mfc/ribbon-designer-mfc.md).|
 |.obj, .o||Arquivos-objeto, compilados mas não vinculados.|
 |.pch|Depurar|Arquivo de cabeçalho pré-compilado.|
 |.rc, .rc2|Recurso|[Arquivos de script de recurso](../../windows/working-with-resource-files.md) para gerar recursos.|
@@ -78,20 +78,20 @@ A tabela a seguir mostra os arquivos comuns em um projeto do Visual Studio e ide
 |.vap|Projeto|Um arquivo de projeto do Visual Studio Analyzer.|
 |.vbg|Solução|Um arquivo de grupo de projetos compatível.|
 |.vbp, .vip, .vbproj|Projeto|O arquivo de projeto do Visual Basic.|
-|.vcxitems|Projeto|Projeto Itens Compartilhados para compartilhar arquivos de código entre vários projetos do C++. Para obter mais informações, consulte [arquivos de projeto e solução](project-and-solution-files.md).|
-|.vcxproj|Projeto|O arquivo de projeto do Visual Studio. Para obter mais informações, consulte [arquivos de projeto e solução](project-and-solution-files.md).|
-|.vcxproj.filters|Projeto|Usado quando você usa o Gerenciador de soluções para adicionar um arquivo a um projeto. O arquivo de filtros define onde na exibição de árvore do Gerenciador de soluções para adicionar o arquivo, com base em sua extensão de nome de arquivo.|
+|.vcxitems|Projeto|Projeto Itens Compartilhados para compartilhar arquivos de código entre vários projetos do C++. Para obter mais informações, consulte [Project and Solution files](project-and-solution-files.md).|
+|.vcxproj|Projeto|O arquivo de projeto do Visual Studio. Para obter mais informações, consulte [Project and Solution files](project-and-solution-files.md).|
+|.vcxproj.filters|Projeto|Usado quando você usa Gerenciador de Soluções para adicionar um arquivo a um projeto. O arquivo de filtros define o local no modo de exibição de árvore de Gerenciador de Soluções para adicionar o arquivo, com base em sua extensão de nome de arquivo.|
 |.vdproj|Projeto|O arquivo de projeto de implantação do Visual Studio.|
 |.vmx|Projeto|O arquivo de projeto de macro.|
 |.vup|Projeto|O arquivo de projeto de utilitário.|
 
 Para obter informações sobre outros arquivos associados ao Visual Studio, confira [Tipos de arquivo e extensões de arquivo no Visual Studio .NET](/visualstudio/ide/reference/project-and-solution-file-types).
 
-Os arquivos de projeto são organizados em pastas no Gerenciador de Soluções. O Visual Studio cria uma pasta para os arquivos de origem, arquivos de cabeçalho e arquivos de recurso, mas você pode reorganizar essas pastas ou criar novos. Use pastas para organizar os clusters lógicos de arquivos explicitamente na hierarquia de um projeto. Por exemplo, você pode criar pastas para conter todos os seus arquivos de origem de interface usuário. Ou pastas para as especificações, documentação ou conjuntos de testes. Todos os nomes de pasta de arquivos devem ser exclusivos.
+Os arquivos de projeto são organizados em pastas no Gerenciador de Soluções. O Visual Studio cria uma pasta para arquivos de origem, arquivos de cabeçalho e arquivos de recurso, mas você pode reorganizar essas pastas ou criar novas. Use pastas para organizar os clusters lógicos de arquivos explicitamente na hierarquia de um projeto. Por exemplo, você pode criar pastas para conter todos os arquivos de origem da interface do usuário. Ou, pastas para especificações, documentação ou conjuntos de testes. Todos os nomes de pasta de arquivos devem ser exclusivos.
 
-Quando você adiciona um item a um projeto, você adiciona o item a todas as configurações para o projeto. O item é adicionado, se ele é compilável ou não. Por exemplo, se você tem um projeto chamado MyProject, a adição de um item o adiciona às configurações de projeto Depuração e Versão.
+Quando você adiciona um item a um projeto, você adiciona o item a todas as configurações para esse projeto. O item é adicionado independentemente de ser compilável ou não. Por exemplo, se você tem um projeto chamado MyProject, a adição de um item o adiciona às configurações de projeto Depuração e Versão.
 
 ## <a name="see-also"></a>Consulte também
 
-[Criando e gerenciando projetos do Visual Studio C++](../creating-and-managing-visual-cpp-projects.md)<br>
-[Tipos de projeto C++ do Visual Studio](visual-cpp-project-types.md)<br>
+[Criando e gerenciando projetos C++ do Visual Studio](../creating-and-managing-visual-cpp-projects.md)<br>
+[Tipos de C++ projeto do Visual Studio](visual-cpp-project-types.md)<br>

@@ -6,21 +6,21 @@ helpviewer_keywords:
 - marshaling
 - COM interfaces, marshaling
 ms.assetid: 40644b0a-1106-4fc8-9dfb-9bee9915d825
-ms.openlocfilehash: 0661a4cdde0a3a875cf27221e884f6c65b9fea55
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9963e261f26daa57cb58e30ffc404b431d781bfa
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62262379"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492040"
 ---
 # <a name="marshaling"></a>Marshaling
 
-A técnica de COM de marshaling permite que as interfaces expostas por um objeto em um processo a ser usado em outro processo. No marshaling, COM fornece código (ou usa o código fornecido pelo implementador da interface) para o pacote de parâmetros de um método em um formato que pode ser movido entre processos (bem como, pela rede para processos em execução em outros computadores) e descompactar os parâmetros na outra extremidade. Da mesma forma, COM deve executar essas mesmas etapas do retorno da chamada.
+A técnica COM de marshaling permite que as interfaces expostas por um objeto em um processo sejam usadas em outro processo. No marshaling, COM fornece código (ou usa código fornecido pelo implementador de interface) para empacotar os parâmetros de um método em um formato que pode ser movido entre processos (bem como, na conexão com os processos em execução em outros computadores) e para desempacotar esses parâmetros na outra extremidade. Da mesma forma, COM deve executar essas mesmas etapas no retorno da chamada.
 
 > [!NOTE]
->  Marshaling normalmente não é necessário quando uma interface fornecida por um objeto que está sendo usada no mesmo processo que o objeto. No entanto, o empacotamento pode ser necessários entre threads.
+>  O marshaling normalmente não é necessário quando uma interface fornecida por um objeto está sendo usada no mesmo processo que o objeto. No entanto, o marshaling pode ser necessário entre os threads.
 
 ## <a name="see-also"></a>Consulte também
 
 [Introdução a COM](../atl/introduction-to-com.md)<br/>
-[Detalhes de marshaling](/windows/desktop/com/marshaling-details)
+[Detalhes de marshaling](/windows/win32/com/marshaling-details)

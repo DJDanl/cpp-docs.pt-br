@@ -12,12 +12,12 @@ helpviewer_keywords:
 - ERROR_SEVERITY_ERROR exception
 - ERROR_MOD_NOT_FOUND exception
 ms.assetid: c03be05d-1c39-4f35-84cf-00c9af3bae9a
-ms.openlocfilehash: cf38af464f08e143ed9073befe30f6aeb8b913b6
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 360acba73278902cc40d10fd975011488742a7a2
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915471"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492926"
 ---
 # <a name="exceptions-cc"></a>Exceções (C/C++)
 
@@ -37,7 +37,7 @@ Aqui estão as informações de exceção:
 #define VcppException(sev,err)  ((sev) | (FACILITY_VISUALCPP<<16) | err)
 ```
 
-Os códigos de exceção lançados são os valores padrão VcppException (ERROR_SEVERITY_ERROR, ERROR_MOD_NOT_FOUND) e VcppException (ERROR_SEVERITY_ERROR, ERROR_PROC_NOT_FOUND). A exceção passa um ponteiro para uma estrutura **DelayLoadInfo** no valor LPDWORD que pode ser recuperado por **GetExceptionInformation** no campo [EXCEPTION_RECORD](/windows/desktop/api/winnt/ns-winnt-exception_record) estrutura, ExceptionInformation [0].
+Os códigos de exceção lançados são os valores padrão VcppException (ERROR_SEVERITY_ERROR, ERROR_MOD_NOT_FOUND) e VcppException (ERROR_SEVERITY_ERROR, ERROR_PROC_NOT_FOUND). A exceção passa um ponteiro para uma estrutura **DelayLoadInfo** no valor LPDWORD que pode ser recuperado por **GetExceptionInformation** no campo [EXCEPTION_RECORD](/windows/win32/api/winnt/ns-winnt-exception_record) estrutura, ExceptionInformation [0].
 
 Além disso, se os bits incorretos forem definidos no campo grAttrs, a exceção ERROR_INVALID_PARAMETER será lançada. Essa exceção é, para todas as intenções e finalidades, fatais.
 

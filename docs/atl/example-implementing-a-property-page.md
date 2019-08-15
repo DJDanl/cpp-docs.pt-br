@@ -4,12 +4,12 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - property pages, implementing
 ms.assetid: c30b67fe-ce08-4249-ae29-f3060fa8d61e
-ms.openlocfilehash: 1f2c0387cd0a78ad0179e251654d2fa82b1eef13
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: 68b4aaef06e40a8ec7b00f9ba744d83ce3388da2
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707094"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492377"
 ---
 # <a name="example-implementing-a-property-page"></a>Exemplo: implementação de uma página de propriedades
 
@@ -71,7 +71,7 @@ Agora que sua página de propriedades foi gerada, você precisará adicionar alg
 Esses controles serão usados para exibir o nome de arquivo do documento e seu status somente leitura.
 
 > [!NOTE]
->  O recurso de caixa de diálogo não inclui um quadro ou botões de comando, e o seu layout não apresenta guias como talvez você esperasse. Esses recursos são fornecidos por um quadro de página de propriedades, como o que foi criado chamando [OleCreatePropertyFrame](/windows/desktop/api/olectl/nf-olectl-olecreatepropertyframe).
+>  O recurso de caixa de diálogo não inclui um quadro ou botões de comando, e o seu layout não apresenta guias como talvez você esperasse. Esses recursos são fornecidos por um quadro de página de propriedades, como o que foi criado chamando [OleCreatePropertyFrame](/windows/win32/api/olectl/nf-olectl-olecreatepropertyframe).
 
 ##  <a name="vcconadding_message_handlers"></a> Como adicionar manipuladores de mensagens
 

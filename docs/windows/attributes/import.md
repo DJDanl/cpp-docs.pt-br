@@ -1,21 +1,21 @@
 ---
-title: Import (C++ COM atributo)
+title: importar (C++ atributo com)
 ms.date: 10/03/2018
 f1_keywords:
 - vc-attr.import
 helpviewer_keywords:
 - import attribute
 ms.assetid: ebf07cae-39fb-4047-8b57-54af0a9a83de
-ms.openlocfilehash: d458ce9d938da5f3650eb2478385165de6a140ec
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f9ed80bdcc04302c0dee85935f377c8e3dbfd37f
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409363"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514627"
 ---
 # <a name="import"></a>import
 
-Especifica outro arquivo. idl, odl ou cabeçalho que contém definições que você deseja referenciar de IDL seu principal.
+Especifica outro arquivo. idl,. odl ou de cabeçalho que contém as definições que você deseja referenciar de seu IDL principal.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -28,13 +28,13 @@ Especifica outro arquivo. idl, odl ou cabeçalho que contém definições que vo
 ### <a name="parameters"></a>Parâmetros
 
 *idl_file*<br/>
-O nome de um arquivo. IDL que você deseja importado para a biblioteca de tipos do projeto atual.
+O nome de um arquivo. idl que você deseja importar para a biblioteca de tipos do projeto atual.
 
 ## <a name="remarks"></a>Comentários
 
-O **importe** C++ atributo faz com que um `#import` instrução a ser colocado abaixo o `import "docobj.idl"` instrução no arquivo. idl gerado. O **importação** atributo tem a mesma funcionalidade que o [importar](/windows/desktop/Midl/import) atributo MIDL.
+O atributo de **importação** C++ faz `#import` com que uma instrução seja colocada `import "docobj.idl"` abaixo da instrução no arquivo. idl gerado. O atributo de **importação** tem a mesma funcionalidade que o atributo MIDL de [importação](/windows/win32/Midl/import) .
 
-O **importação** atributo apenas coloca o arquivo especificado no arquivo. IDL que será gerado pelo seu projeto; o **importar** atributo não permite que você chame construções no arquivo especificado no código-fonte em seu projeto.  Para chamar construtores no arquivo especificado do código-fonte em seu projeto, use [#import](../../preprocessor/hash-import-directive-cpp.md) e o `embedded_idl` atributo, ou você pode incluir o arquivo. h para o *idl_file*, se existir um arquivo. h.
+O atributo de **importação** só coloca o arquivo especificado no arquivo. idl que será gerado pelo seu projeto; o atributo de **importação** não permite que você chame construções no arquivo especificado do código-fonte em seu projeto.  Para chamar construções no arquivo especificado do código-fonte em seu projeto, use [#import](../../preprocessor/hash-import-directive-cpp.md) e o `embedded_idl` atributo ou você pode incluir o arquivo. h para o *idl_file*, se existir um arquivo. h.
 
 ## <a name="example"></a>Exemplo
 
@@ -62,16 +62,16 @@ library MyLib {
 
 ## <a name="requirements"></a>Requisitos
 
-### <a name="attribute-context"></a>Atributo de contexto
+### <a name="attribute-context"></a>Contexto de atributo
 
 |||
 |-|-|
-|**Aplica-se a**|Em qualquer lugar|
+|**Aplica-se a**|Lugares|
 |**Repetível**|Não|
-|**Atributos obrigatórios**|Nenhum|
+|**Atributos necessários**|Nenhum|
 |**Atributos inválidos**|Nenhum|
 
-Para obter mais informações, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
+Para obter mais informações, consulte contextos de [atributo](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Consulte também
 

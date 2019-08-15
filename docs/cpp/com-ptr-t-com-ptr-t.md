@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - _com_ptr_t method [C++]
 ms.assetid: 0c00620a-28d2-4f60-ae4a-1696be36137e
-ms.openlocfilehash: 779fd1008f6763f4b5ca95938018a5129e89aa1f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5a3923ee488771e807600069855299fc240b3212
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154871"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498705"
 ---
-# <a name="comptrtcomptrt"></a>_com_ptr_t::_com_ptr_t
+# <a name="_com_ptr_t_com_ptr_t"></a>_com_ptr_t::_com_ptr_t
 
 **Seção específica da Microsoft**
 
-Constrói uma **com_ptr_t** objeto.
+Constrói um objeto **_com_ptr_t** .
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -139,28 +139,28 @@ explicit _com_ptr_t(
 Um ponteiro de interface bruto.
 
 *fAddRef*<br/>
-Se for TRUE, `AddRef` é chamado para aumentar a contagem de referência de ponteiro de interface encapsulado.
+Se for true `AddRef` , será chamado para incrementar a contagem de referência do ponteiro de interface encapsulado.
 
 *cp*<br/>
-Um **com_ptr_t** objeto.
+Um objeto **_com_ptr_t** .
 
 *p*<br/>
-Um ponteiro de interface bruto, sendo seu tipo diferente do tipo de ponteiro inteligente desse **com_ptr_t** objeto.
+Um ponteiro de interface bruto, seu tipo sendo diferente do tipo de ponteiro inteligente desse objeto **_com_ptr_t** .
 
 *varSrc*<br/>
 Um objeto `_variant_t`.
 
 *clsid*<br/>
-O `CLSID` de coclass.
+O `CLSID` de uma coclass.
 
 *dwClsContext*<br/>
 Contexto para execução do código executável.
 
 *lpcStr*<br/>
-Uma cadeia de caracteres multibyte que contém um `CLSID` (começando com "**{**") ou um `ProgID`.
+Uma cadeia de caracteres multibyte que contém `CLSID` um (começando com " **{** ") ou `ProgID`um.
 
 *pOuter*<br/>
-O externo desconhecido para [agregação](/windows/desktop/com/aggregation).
+O desconhecido externo para [agregação](/windows/win32/com/aggregation).
 
 ## <a name="see-also"></a>Consulte também
 

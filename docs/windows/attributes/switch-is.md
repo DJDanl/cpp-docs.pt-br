@@ -1,21 +1,21 @@
 ---
-title: switch_is (C++ COM atributo)
+title: switch_is (C++ atributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.switch_is
 helpviewer_keywords:
 - switch_is attribute
 ms.assetid: f1fffe5d-12d2-4e0f-8803-ccb715177d2d
-ms.openlocfilehash: ccac405480e415df17b42f02dce74759f578d025
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b72052f4cbd7f94b170ea58b8f7b284b85d7ab00
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407244"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69513985"
 ---
-# <a name="switchis"></a>switch_is
+# <a name="switch_is"></a>switch_is
 
-Especifica a expressão ou um identificador que atua como o discriminador de união que seleciona o membro de união.
+Especifica a expressão ou o identificador que atua como o discriminante de União que seleciona o membro da União.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -25,24 +25,24 @@ Especifica a expressão ou um identificador que atua como o discriminador de uni
 
 ## <a name="remarks"></a>Comentários
 
-O **switch_is** C++ atributo tem a mesma funcionalidade que o [switch_is](/windows/desktop/Midl/switch-is) atributo MIDL.
+O atributo **switch_is** C++ tem a mesma funcionalidade que o atributo MIDL [switch_is](/windows/win32/Midl/switch-is) .
 
 ## <a name="example"></a>Exemplo
 
-Consulte a [caso](case-cpp.md) exemplo para uso do exemplo **switch_is**.
+Consulte o exemplo de [caso](case-cpp.md) para obter um exemplo de uso de **switch_is**.
 
 ## <a name="requirements"></a>Requisitos
 
-### <a name="attribute-context"></a>Atributo de contexto
+### <a name="attribute-context"></a>Contexto de atributo
 
 |||
 |-|-|
 |**Aplica-se a**|**typedef**|
 |**Repetível**|Não|
-|**Atributos obrigatórios**|Nenhum|
+|**Atributos necessários**|Nenhum|
 |**Atributos inválidos**|Nenhum|
 
-Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
+Para obter mais informações sobre os contextos de atributo, consulte contextos de [atributo](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Consulte também
 

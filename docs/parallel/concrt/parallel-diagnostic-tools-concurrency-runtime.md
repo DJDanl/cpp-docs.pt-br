@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Parallel Diagnostic Tools [Concurrency Runtime]
 ms.assetid: b1a3f1d2-f5df-4f29-852e-906b3d8341fc
-ms.openlocfilehash: 182171bfcfbaf1476cc25fe3160114bc1d96ca7e
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 34b2421dfc53deeb35dcc659a8d555983e583737
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66449240"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69510502"
 ---
 # <a name="parallel-diagnostic-tools-concurrency-runtime"></a>Ferramentas de diagnóstico em paralelo (Tempo de Execução de Simultaneidade)
 
@@ -17,35 +17,35 @@ O Visual Studio fornece amplo suporte para depuração e criação de perfil de 
 
 ## <a name="debugging"></a>Depuração
 
-O depurador do Visual Studio inclui o **pilhas paralelas** janela **tarefas paralelas** janela, e **inspeção paralela** janela. Para obter mais informações, confira [Passo a passo: Depurando um aplicativo paralelo](/visualstudio/debugger/walkthrough-debugging-a-parallel-application) e [como: Use a janela Inspeção paralela](/visualstudio/debugger/how-to-use-the-parallel-watch-window).
+O depurador do Visual Studio inclui a janela de **pilhas paralelas** , a janela de **tarefas paralelas** e a janela de **inspeção paralela** . Para obter mais informações, confira [Passo a passo: Depurando um](/visualstudio/debugger/walkthrough-debugging-a-parallel-application) aplicativo [paralelo e como: Use a janela](/visualstudio/debugger/how-to-use-the-parallel-watch-window)de inspeção paralela.
 
 ## <a name="profiling"></a>Criação de perfil
 
-As ferramentas de criação de perfil fornecem três modos de exibição de dados que exibem informações gráficas, tabulares e numéricas sobre como um aplicativo multithread interage com ele próprio e com outros programas. Os modos de exibição que você possa identificar rapidamente as áreas de preocupação e navegar de pontos em que o gráfico exibe a pilhas de chamadas, chamam o código-fonte e sites. Para saber mais, confira [Visualização Simultânea](/visualstudio/profiling/concurrency-visualizer).
+As ferramentas de criação de perfil fornecem três exibições de dados que exibem informações gráficas, tabulares e numéricas sobre como um aplicativo multi-threaded interage com ele mesmo e com outros programas. As exibições permitem que você identifique rapidamente áreas de preocupação e navegue de pontos em exibições gráficas para chamadas de pilha, sites de chamada e código-fonte. Para saber mais, confira [Visualização Simultânea](/visualstudio/profiling/concurrency-visualizer).
 
 ## <a name="event-tracing"></a>Rastreamento de eventos
 
-Usa o tempo de execução de simultaneidade [rastreamento de eventos para Windows](/windows/desktop/ETW/event-tracing-portal) (ETW) para notificar as ferramentas de instrumentação, como os criadores de perfil, quando eventos diversos ocorrem. Esses eventos incluem quando um agendador é ativado ou desativado, quando um contexto de inicia, encerra, bloqueia, desbloqueia ou produz, e quando um algoritmo paralelo começa ou termina.
+O Tempo de Execução de Simultaneidade usa o ETW ( [rastreamento de eventos para Windows](/windows/win32/ETW/event-tracing-portal) ) para notificar ferramentas de instrumentação, como os profileres, quando ocorrem vários eventos. Esses eventos incluem quando um Agendador é ativado ou desativado, quando um contexto começa, termina, bloqueia, desbloqueia ou produz e quando um algoritmo paralelo começa ou termina.
 
-Ferramentas como o [simultânea](/visualstudio/profiling/concurrency-visualizer) utilizar esta funcionalidade; portanto, geralmente, você precisa trabalhar diretamente com esses eventos. No entanto, esses eventos são úteis quando você estiver desenvolvendo um criador de perfil personalizado ou quando você usa ferramentas de rastreamento de eventos, como [Xperf](https://go.microsoft.com/fwlink/p/?linkid=160628).
+Ferramentas como o [Concurrency Visualizer](/visualstudio/profiling/concurrency-visualizer) utilizam essa funcionalidade; Portanto, normalmente você não precisa trabalhar com esses eventos diretamente. No entanto, esses eventos são úteis quando você está desenvolvendo um criador de perfil personalizado ou quando você usa ferramentas de rastreamento de eventos, como [Xperf](https://go.microsoft.com/fwlink/p/?linkid=160628).
 
-O tempo de execução de simultaneidade gera esses eventos somente quando o rastreamento está habilitado. Chame o [concurrency::EnableTracing](reference/concurrency-namespace-functions.md#enabletracing) função para habilitar o rastreamento de eventos e o [concurrency::DisableTracing](reference/concurrency-namespace-functions.md#disabletracing) função para desabilitar o rastreamento.
+O Tempo de Execução de Simultaneidade gera esses eventos somente quando o rastreamento está habilitado. Chame a função [Concurrency:: EnableTracing](reference/concurrency-namespace-functions.md#enabletracing) para habilitar o rastreamento de eventos e a função [Concurrency::D isabletracing](reference/concurrency-namespace-functions.md#disabletracing) para desabilitar o rastreamento.
 
 A tabela a seguir descreve os eventos que o tempo de execução gera quando o rastreamento de eventos está habilitado:
 
 |evento|Descrição|Valor|
 |-----------|-----------------|-----------|
-|[concurrency::ConcRT_ProviderGuid](reference/concurrency-namespace-constants1.md#concrt_providerguid)|O identificador do provedor ETW para o tempo de execução de simultaneidade.|`f7b697a3-4db5-4d3b-be71-c4d284e6592f`|
-|[concurrency::ContextEventGuid](reference/concurrency-namespace-constants1.md#contexteventguid)|Marca os eventos que estão relacionados aos contextos.|`5727a00f-50be-4519-8256-f7699871fecb`|
-|[concurrency::PPLParallelForEventGuid](reference/concurrency-namespace-constants1.md#pplparallelforeventguid)|Marca de entrada e saída em chamadas para o [Concurrency:: parallel_for](reference/concurrency-namespace-functions.md#parallel_for) algoritmo.|`31c8da6b-6165-4042-8b92-949e315f4d84`|
-|[concurrency::PPLParallelForeachEventGuid](reference/concurrency-namespace-constants1.md#pplparallelforeacheventguid)|Marca de entrada e saída em chamadas para o [Concurrency:: parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) algoritmo.|`5cb7d785-9d66-465d-bae1-4611061b5434`|
-|[concurrency::PPLParallelInvokeEventGuid](reference/concurrency-namespace-constants1.md#pplparallelinvokeeventguid)|Marca de entrada e saída em chamadas para o [Concurrency:: parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke) algoritmo.|`d1b5b133-ec3d-49f4-98a3-464d1a9e4682`|
-|[concurrency::SchedulerEventGuid](reference/concurrency-namespace-constants1.md#schedulereventguid)|Marca os eventos relacionados para o [Agendador de tarefas](../../parallel/concrt/task-scheduler-concurrency-runtime.md).|`e2091f8a-1e0a-4731-84a2-0dd57c8a5261`|
-|[concurrency::VirtualProcessorEventGuid](reference/concurrency-namespace-constants1.md#virtualprocessoreventguid)|Marca os eventos relacionados a processadores virtuais.|`2f27805f-1676-4ecc-96fa-7eb09d44302f`|
+|[concurrency::ConcRT_ProviderGuid](reference/concurrency-namespace-constants1.md#concrt_providerguid)|O identificador do provedor de ETW para o Tempo de Execução de Simultaneidade.|`f7b697a3-4db5-4d3b-be71-c4d284e6592f`|
+|[concurrency::ContextEventGuid](reference/concurrency-namespace-constants1.md#contexteventguid)|Marca os eventos relacionados aos contextos.|`5727a00f-50be-4519-8256-f7699871fecb`|
+|[concurrency::PPLParallelForEventGuid](reference/concurrency-namespace-constants1.md#pplparallelforeventguid)|Marca a entrada e saída para chamadas para o algoritmo [Concurrency::p arallel_for](reference/concurrency-namespace-functions.md#parallel_for) .|`31c8da6b-6165-4042-8b92-949e315f4d84`|
+|[concurrency::PPLParallelForeachEventGuid](reference/concurrency-namespace-constants1.md#pplparallelforeacheventguid)|Marca a entrada e saída para chamadas para o algoritmo [Concurrency::p arallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) .|`5cb7d785-9d66-465d-bae1-4611061b5434`|
+|[concurrency::PPLParallelInvokeEventGuid](reference/concurrency-namespace-constants1.md#pplparallelinvokeeventguid)|Marca a entrada e saída para chamadas para o algoritmo [Concurrency::p arallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke) .|`d1b5b133-ec3d-49f4-98a3-464d1a9e4682`|
+|[concurrency::SchedulerEventGuid](reference/concurrency-namespace-constants1.md#schedulereventguid)|Marca os eventos relacionados ao [Agendador de tarefas](../../parallel/concrt/task-scheduler-concurrency-runtime.md).|`e2091f8a-1e0a-4731-84a2-0dd57c8a5261`|
+|[concurrency::VirtualProcessorEventGuid](reference/concurrency-namespace-constants1.md#virtualprocessoreventguid)|Marca os eventos relacionados aos processadores virtuais.|`2f27805f-1676-4ecc-96fa-7eb09d44302f`|
 
-O tempo de execução de simultaneidade define, mas não no momento aumenta, os eventos a seguir. O tempo de execução reserva esses eventos para uso futuro:
+O Tempo de Execução de Simultaneidade define, mas não gera, no momento, os eventos a seguir. O tempo de execução reserva esses eventos para uso futuro:
 
-- [concurrency::ConcRTEventGuid](reference/concurrency-namespace-constants1.md#concrteventguid)
+- [simultaneidade:: ConcRTEventGuid](reference/concurrency-namespace-constants1.md#concrteventguid)
 
 - [concurrency::ScheduleGroupEventGuid](reference/concurrency-namespace-constants1.md#schedulereventguid)
 
@@ -55,13 +55,13 @@ O tempo de execução de simultaneidade define, mas não no momento aumenta, os 
 
 - [concurrency::ResourceManagerEventGuid](reference/concurrency-namespace-constants1.md#resourcemanagereventguid)
 
-O [concurrency::ConcRT_EventType](reference/concurrency-namespace-enums.md#concrt_eventtype) enumeração Especifica as possíveis operações que rastreia um evento. Por exemplo, na entrada dos `parallel_for` algoritmo, o tempo de execução gera a `PPLParallelForEventGuid` eventos e fornece `CONCRT_EVENT_START` como a operação. Antes do `parallel_for` retorna de algoritmo, o tempo de execução gerará novamente a `PPLParallelForEventGuid` eventos e fornece `CONCRT_EVENT_END` como a operação.
+A enumeração [Concurrency:: ConcRT_EventType](reference/concurrency-namespace-enums.md#concrt_eventtype) especifica as possíveis operações que um evento rastreia. Por exemplo, na entrada do `parallel_for` algoritmo, o tempo de execução gera o `PPLParallelForEventGuid` evento e fornece `CONCRT_EVENT_START` como a operação. Antes de `parallel_for` o algoritmo retornar, o tempo de execução `PPLParallelForEventGuid` gera novamente o `CONCRT_EVENT_END` evento e fornece como a operação.
 
-O exemplo a seguir ilustra como habilitar o rastreamento para uma chamada para `parallel_for`. O tempo de execução não rastreia a primeira chamada para `parallel_for` porque o rastreamento não está habilitado. A chamada para `EnableTracing` permite que o tempo de execução rastrear a segunda chamada para `parallel_for`.
+O exemplo a seguir ilustra como habilitar o rastreamento para uma chamada `parallel_for`para. O tempo de execução não rastreia a primeira chamada `parallel_for` para porque o rastreamento não está habilitado. A chamada para `EnableTracing` permite que o tempo de execução rastreie a segunda `parallel_for`chamada para.
 
 [!code-cpp[concrt-etw#1](../../parallel/concrt/codesnippet/cpp/parallel-diagnostic-tools-concurrency-runtime_1.cpp)]
 
-O tempo de execução rastreia o número de vezes que você chame `EnableTracing` e `DisableTracing`. Portanto, se você chamar `EnableTracing` várias vezes, você deve chamar `DisableTracing` o mesmo número de vezes para desabilitar o rastreamento.
+O tempo de execução acompanha o número de vezes que `EnableTracing` você `DisableTracing`chama e. Portanto, se você chamar `EnableTracing` várias vezes, deverá chamar `DisableTracing` o mesmo número de vezes para desabilitar o rastreamento.
 
 ## <a name="see-also"></a>Consulte também
 

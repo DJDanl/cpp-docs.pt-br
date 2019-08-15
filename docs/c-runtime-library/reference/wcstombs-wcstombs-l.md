@@ -30,14 +30,14 @@ helpviewer_keywords:
 - characters, converting
 - string conversion, multibyte character strings
 ms.assetid: 91234252-9ea1-423a-af99-e9d0ce4a40e3
-ms.openlocfilehash: d102cd74061faeb0c41823e6cf5c9a8ef335294f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b5ee2a0e5636e9c1d1f3fc204b2b6cbf8b733d45
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188578"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498977"
 ---
-# <a name="wcstombs-wcstombsl"></a>wcstombs, _wcstombs_l
+# <a name="wcstombs-_wcstombs_l"></a>wcstombs, _wcstombs_l
 
 Converte uma sequência de caracteres largos em uma sequência de caracteres multibyte correspondente. Estão disponíveis versões mais seguras dessas funções; consulte [wcstombs_s, _wcstombs_s_l](wcstombs-s-wcstombs-s-l.md).
 
@@ -86,19 +86,19 @@ A localidade a ser usada.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Se **wcstombs** converte com êxito a cadeia de caracteres multibyte, ele retorna o número de bytes gravados na cadeia de caracteres multibyte de saída, excluindo a terminação nula (se houver). Se o *mbstr* argumento é **nulo**, **wcstombs** retorna o tamanho necessário em bytes da cadeia de caracteres de destino. Se **wcstombs** encontrar um caractere largo que não é possível converter um caractere multibyte, ele retornará -1 convertido para o tipo **size_t** e define **errno** para **EILSEQ** .
+Se **wcstombs** converter com êxito a cadeia de caracteres multibyte, ele retornará o número de bytes gravados na cadeia de caracteres de saída multibyte, excluindo o nulo de terminação (se houver). Se o argumento *mbstr* for **nulo**, **wcstombs** retornará o tamanho necessário em bytes da cadeia de caracteres de destino. Se **wcstombs** encontrar um caractere largo, ele não poderá converter para um caractere multibyte, ele retornará-1 CAST para o tipo **size_t** e definirá **errno** como **EILSEQ**.
 
 ## <a name="remarks"></a>Comentários
 
-O **wcstombs** função converte a cadeia de caracteres largos apontada por *wcstr* para caracteres de multibyte correspondentes e armazena os resultados na *mbstr* matriz. O *contagem* parâmetro indica o número máximo de bytes que pode ser armazenado na cadeia de caracteres multibyte de saída (ou seja, o tamanho da *mbstr*). Em geral, a quantidade de bytes necessária ao converter uma cadeia de caracteres largos não é conhecida. Alguns caracteres largos exigem apenas um byte na cadeia de caracteres saída; outros exigem dois. Se houver dois bytes na cadeia de caracteres multibyte de saída para cada caractere largo na cadeia de entrada (incluindo o nulo de caractere largo), o resultado é garantido para caber.
+A função **wcstombs** converte a cadeia de caracteres largos apontada por *wcstr* para os caracteres multibyte correspondentes e armazena os resultados na matriz *mbstr* . O parâmetro *Count* indica o número máximo de bytes que podem ser armazenados na cadeia de caracteres de saída multibyte (ou seja, o tamanho de *mbstr*). Em geral, a quantidade de bytes necessária ao converter uma cadeia de caracteres largos não é conhecida. Alguns caracteres largos exigem apenas um byte na cadeia de caracteres saída; outros exigem dois. Se houver dois bytes na cadeia de caracteres de saída multibyte para cada caractere largo na cadeia de caracteres de entrada (incluindo o caractere nulo largo), será garantido que o resultado se ajuste.
 
-Se **wcstombs** encontra o caractere nulo de caractere largo (L '\0') antes ou quando *contagem* ocorre, ele converte em um 0 de 8 bits e é interrompido. Dessa forma, a cadeia de caracteres multibyte em *mbstr* é terminada em nulo somente se **wcstombs** encontrar um caractere nulo de caractere largo durante a conversão. Se as sequências apontadas por *wcstr* e *mbstr* se sobrepõem, o comportamento do **wcstombs** é indefinido.
+Se **wcstombs** encontrar o caractere nulo de caractere largo (L ' \ 0 ') antes ou quando ocorrer a *contagem* , ele o converterá em um 0 de 8 bits e será interrompido. Assim, a cadeia de caracteres multibyte em *mbstr* será encerrada em nulo somente se **wcstombs** encontrar um caractere nulo de caractere largo durante a conversão. Se as sequências apontadas por *wcstr* e *mbstr* se sobrepõem, o comportamento de **wcstombs** é indefinido.
 
-Se o *mbstr* argumento é **nulo**, **wcstombs** retorna o tamanho necessário em bytes da cadeia de caracteres de destino.
+Se o argumento *mbstr* for **nulo**, **wcstombs** retornará o tamanho necessário em bytes da cadeia de caracteres de destino.
 
-**wcstombs** valida seus parâmetros. Se *wcstr* é **nulo**, ou se *contagem* é maior que **INT_MAX**, essa função invocará o manipulador de parâmetro inválido, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md) . Se a execução puder continuar, a função definirá **errno** à **EINVAL** e retornará -1.
+**wcstombs** valida seus parâmetros. Se *wcstr* for **nulo**ou se *Count* for maior que **INT_MAX**, essa função invocará o manipulador de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md) . Se a execução tiver permissão para continuar, a função definirá **errno** como **EINVAL** e retornará-1.
 
-**wcstombs** usa a localidade atual para qualquer comportamento dependente da localidade. **wcstombs_l** é idêntico, exceto que ele usa a localidade passada em vez disso. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+**wcstombs** usa a localidade atual para qualquer comportamento dependente de localidade; **_wcstombs_l** é idêntico, exceto pelo fato de que ele usa a localidade transmitida em seu lugar. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
 No C++, essas funções têm sobrecargas de modelo que invocam os equivalentes mais novos e seguros dessas funções. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../../c-runtime-library/secure-template-overloads.md).
 
@@ -113,7 +113,7 @@ Para obter informações adicionais sobre compatibilidade, consulte [Compatibili
 
 ## <a name="example"></a>Exemplo
 
-Este programa ilustra o comportamento do **wcstombs** função.
+Este programa ilustra o comportamento da função **wcstombs** .
 
 ```C
 // crt_wcstombs.c
@@ -161,4 +161,4 @@ Convert wide-character string:
 [mbstowcs, _mbstowcs_l](mbstowcs-mbstowcs-l.md)<br/>
 [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)<br/>
 [wctomb, _wctomb_l](wctomb-wctomb-l.md)<br/>
-[WideCharToMultiByte](/windows/desktop/api/stringapiset/nf-stringapiset-widechartomultibyte)<br/>
+[WideCharToMultiByte](/windows/win32/api/stringapiset/nf-stringapiset-widechartomultibyte)<br/>

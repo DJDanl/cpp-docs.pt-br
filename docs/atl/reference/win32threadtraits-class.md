@@ -10,19 +10,19 @@ helpviewer_keywords:
 - threading [ATL], creation functions
 - Win32ThreadTraits class
 ms.assetid: 50279c38-eae1-4301-9ea6-97ccea580f3e
-ms.openlocfilehash: cae5faea7938918da2656e21648282c1a2e1a66d
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: d086a42f5dcdf005d10c8853776da66b691a8e11
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66503758"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69495470"
 ---
 # <a name="win32threadtraits-class"></a>Classe Win32ThreadTraits
 
-Essa classe fornece a função de criação de um thread do Windows. Use essa classe se o thread não usará as funções de CRT.
+Essa classe fornece a função de criação para um thread do Windows. Use essa classe se o thread não usar funções CRT.
 
 > [!IMPORTANT]
->  Essa classe e seus membros não podem ser usados em aplicativos executados no tempo de execução do Windows.
+>  Essa classe e seus membros não podem ser usados em aplicativos que são executados no Windows Runtime.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -36,19 +36,19 @@ class Win32ThreadTraits
 
 |Nome|Descrição|
 |----------|-----------------|
-|[Win32ThreadTraits::CreateThread](#createthread)|(Estático) Chame essa função para criar um thread que não deve usar funções de CRT.|
+|[Win32ThreadTraits::CreateThread](#createthread)|Auto-estática Chame essa função para criar um thread que não deve usar funções CRT.|
 
 ## <a name="remarks"></a>Comentários
 
-Características de thread são classes que fornecem uma função de criação de um tipo específico de thread. A função de criação tem a mesma assinatura e a semântica de como o Windows [CreateThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createthread) função.
+As características de thread são classes que fornecem uma função de criação para um determinado tipo de thread. A função de criação tem a mesma assinatura e semântica que a função [CreateThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createthread) do Windows.
 
-Características de thread são usadas pelas classes:
+As características de thread são usadas pelas seguintes classes:
 
 - [CThreadPool](../../atl/reference/cthreadpool-class.md)
 
 - [CWorkerThread](../../atl/reference/cworkerthread-class.md)
 
-Se o thread estiver usando funções de CRT, use [CRTThreadTraits](../../atl/reference/crtthreadtraits-class.md) em vez disso.
+Se o thread estiver usando funções CRT, use [CRTThreadTraits](../../atl/reference/crtthreadtraits-class.md) em vez disso.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -56,7 +56,7 @@ Se o thread estiver usando funções de CRT, use [CRTThreadTraits](../../atl/ref
 
 ##  <a name="createthread"></a>  Win32ThreadTraits::CreateThread
 
-Chame essa função para criar um thread que não deve usar funções de CRT.
+Chame essa função para criar um thread que não deve usar funções CRT.
 
 ```
 static HANDLE CreateThread(
@@ -80,21 +80,21 @@ O tamanho da pilha para o novo thread.
 O procedimento de thread do novo thread.
 
 *pvParam*<br/>
-O parâmetro a serem passados ao procedimento de thread.
+O parâmetro a ser passado para o procedimento de thread.
 
 *dwCreationFlags*<br/>
-A criação de sinalizadores (0 ou CREATE_SUSPENDED).
+Os sinalizadores de criação (0 ou CREATE_SUSPENDED).
 
 *pdwThreadId*<br/>
-[out] Endereço da variável DWORD que, em caso de sucesso, recebe a ID do thread do thread recém-criado.
+fora Endereço da variável DWORD que, em êxito, recebe a ID de thread do thread recém-criado.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Retorna o identificador para o thread recém-criado ou nulo, em caso de falha. Chame [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) para obter mais informações sobre o erro.
+Retorna o identificador para o thread recém-criado ou nulo em caso de falha. Chame [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror) para obter informações de erro estendidas.
 
 ### <a name="remarks"></a>Comentários
 
-Ver [CreateThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createthread) para obter mais informações sobre os parâmetros para essa função.
+Consulte [CreateThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createthread) para obter mais informações sobre os parâmetros para essa função.
 
 Essa função chama `CreateThread` para criar o thread.
 

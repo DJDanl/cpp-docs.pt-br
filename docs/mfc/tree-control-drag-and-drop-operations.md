@@ -6,24 +6,24 @@ helpviewer_keywords:
 - drag and drop [MFC], CTreeCtrl
 - tree controls [MFC], drag and drop operations
 ms.assetid: 3cf78b4c-4579-4fe1-9bc9-c5ab876e4af1
-ms.openlocfilehash: c7febeec513d8004df2bd1cc42e4e97e027e9f17
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5d2c5aa511844a3d7cbe64d9a15f8ffb46046b29
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62167693"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69510912"
 ---
 # <a name="tree-control-drag-and-drop-operations"></a>Operações de arrastar e soltar de controle de árvore
 
-Um controle de árvore ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) envia uma notificação quando o usuário começa a arrastar um item. O controle envia uma [TVN_BEGINDRAG](/windows/desktop/Controls/tvn-begindrag) mensagem de notificação quando o usuário começa a arrastar um item com o botão esquerdo do mouse e um [TVN_BEGINRDRAG](/windows/desktop/Controls/tvn-beginrdrag) mensagem de notificação quando o usuário começa a arrastar com o botão direito. Você pode impedir que um controle de árvore envie essas notificações, fornecendo o estilo TVS_DISABLEDRAGDROP de controle de árvore.
+Um controle de árvore ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) envia uma notificação quando o usuário começa a arrastar um item. O controle envia uma mensagem de notificação [TVN_BEGINDRAG](/windows/win32/Controls/tvn-begindrag) quando o usuário começa a arrastar um item com o botão esquerdo do mouse e uma mensagem de notificação [TVN_BEGINRDRAG](/windows/win32/Controls/tvn-beginrdrag) quando o usuário começa a arrastar com o botão à direita. Você pode impedir que um controle de árvore envie essas notificações, dando ao controle de árvore o estilo TVS_DISABLEDRAGDROP.
 
-Obter uma imagem para exibir durante uma operação de arrastar, chamando o [CreateDragImage](../mfc/reference/ctreectrl-class.md#createdragimage) função de membro. O controle de árvore cria um bitmap de arrastar com base no rótulo do item que está sendo arrastado. Em seguida, o controle de árvore cria uma lista de imagens, adiciona o bitmap a ele e retorna um ponteiro para o [CImageList](../mfc/reference/cimagelist-class.md) objeto.
+Você Obtém uma imagem a ser exibida durante uma operação de arrastar chamando a função membro [CreateDragImage](../mfc/reference/ctreectrl-class.md#createdragimage) . O controle de árvore cria um bitmap de arrastar com base no rótulo do item que está sendo arrastado. Em seguida, o controle de árvore cria uma lista de imagens, adiciona o bitmap a ela e retorna um ponteiro para o objeto [CImageList](../mfc/reference/cimagelist-class.md) .
 
-Você deve fornecer o código que realmente arrasta o item. Isso normalmente envolve usando os recursos de arrastar as funções da lista de imagem e processamento de [WM_MOUSEMOVE](/windows/desktop/inputdev/wm-mousemove) e [WM_LBUTTONUP](/windows/desktop/inputdev/wm-lbuttonup) (ou [WM_RBUTTONUP](/windows/desktop/inputdev/wm-rbuttonup)) mensagens enviadas depois de iniciada a operação de arrastar. Para obter mais informações sobre as funções da lista de imagens, consulte [CImageList](../mfc/reference/cimagelist-class.md) na *referência da MFC* e [imagem lista](/windows/desktop/controls/image-lists) no SDK do Windows. Para obter mais informações sobre como arrastar um item de controle de árvore, consulte [arrastar o Item de exibição de árvore](/windows/desktop/Controls/tree-view-controls), também no SDK do Windows.
+Você deve fornecer o código que realmente arrasta o item. Isso normalmente envolve o uso dos recursos de arrastar das funções da lista de imagens e o processamento das mensagens [WM_MOUSEMOVE](/windows/win32/inputdev/wm-mousemove) e [WM_LBUTTONUP](/windows/win32/inputdev/wm-lbuttonup) (ou [WM_RBUTTONUP](/windows/win32/inputdev/wm-rbuttonup)) enviadas após o início da operação de arrastar. Para obter mais informações sobre as funções da lista de imagens, consulte [CImageList](../mfc/reference/cimagelist-class.md) nas listas de referência e [imagem](/windows/win32/controls/image-lists) do *MFC* no SDK do Windows. Para obter mais informações sobre como arrastar um item de controle de árvore, consulte [arrastando o item de exibição de árvore](/windows/win32/Controls/tree-view-controls), também na SDK do Windows.
 
-Se for ser os destinos de uma operação de arrastar e soltar itens em um controle de árvore, você precisa saber quando o cursor do mouse está sobre um item de destino. Você pode descobrir por meio da chamada a [HitTest](../mfc/reference/ctreectrl-class.md#hittest) função de membro. Especifique um ponto e inteiro ou o endereço de uma [TVHITTESTINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtvhittestinfo) estrutura que contém as coordenadas atuais do cursor do mouse. Quando a função retornar, o número inteiro ou a estrutura contém um sinalizador que indica o local do cursor do mouse em relação ao controle de árvore. Se o cursor estiver sobre um item no controle de árvore, a estrutura contém o identificador do item também.
+Se os itens em um controle de árvore forem os destinos de uma operação de arrastar e soltar, você precisará saber quando o cursor do mouse está em um item de destino. Você pode descobrir chamando a função de membro [HitTest](../mfc/reference/ctreectrl-class.md#hittest) . Você especifica um ponto e um inteiro ou o endereço de uma estrutura [TVHITTESTINFO](/windows/win32/api/commctrl/ns-commctrl-tvhittestinfo) que contém as coordenadas atuais do cursor do mouse. Quando a função retorna, o inteiro ou a estrutura contém um sinalizador que indica o local do cursor do mouse relativo ao controle de árvore. Se o cursor estiver sobre um item no controle de árvore, a estrutura também conterá o identificador do item.
 
-Você pode indicar que um item é o destino de uma operação de arrastar e soltar chamando o [SetItem](../mfc/reference/ctreectrl-class.md#setitem) função de membro para definir o estado o `TVIS_DROPHILITED` valor. Um item que tem esse estado é desenhado no estilo usado para indicar um destino de arrastar e soltar.
+Você pode indicar que um item é o destino de uma operação de arrastar e soltar chamando a função de membro [SetItem](../mfc/reference/ctreectrl-class.md#setitem) para definir o estado como o `TVIS_DROPHILITED` valor. Um item que tem esse estado é desenhado no estilo usado para indicar um destino de arrastar e soltar.
 
 ## <a name="see-also"></a>Consulte também
 

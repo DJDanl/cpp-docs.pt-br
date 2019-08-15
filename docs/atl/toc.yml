@@ -240,7 +240,7 @@
             - name: Como criar scripts do Registrador
               href: creating-registrar-scripts.md
             - name: Noções básicas sobre a sintaxe da BNF (forma de Backus-Naur)
-              href: understanding-backus-nauer-form-bnf-syntax.md
+              href: understanding-backus-naur-form-bnf-syntax.md
             - name: Noções básicas sobre árvores de análise
               href: understanding-parse-trees.md
             - name: Exemplos de scripts do Registro
