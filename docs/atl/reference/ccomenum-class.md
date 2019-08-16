@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - CComEnum class
 ms.assetid: bff7dd7b-eb6e-4d6e-96ed-2706e66c8b3b
-ms.openlocfilehash: 4d83b06f37c132c0d2325304e2cc155ccb490690
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7252eb2fa5d34618a1c38484a2506bae27a1106a
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62246389"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497216"
 ---
 # <a name="ccomenum-class"></a>Classe CComEnum
 
-Essa classe define um objeto de enumerador COM base em uma matriz.
+Essa classe define um objeto enumerador COM com base em uma matriz.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -31,8 +31,8 @@ public CComObjectRootEx<ThreadModel>
 
 #### <a name="parameters"></a>Parâmetros
 
-*Base*<br/>
-Uma interface de enumerador de COM. Ver [IEnumString](/windows/desktop/api/objidl/nn-objidl-ienumstring) para obter um exemplo.
+*Polybase*<br/>
+Uma interface de enumerador COM. Consulte [IEnumString](/windows/win32/api/objidl/nn-objidl-ienumstring) para obter um exemplo.
 
 *piid*<br/>
 Um ponteiro para a ID de interface da interface do enumerador.
@@ -41,26 +41,26 @@ Um ponteiro para a ID de interface da interface do enumerador.
 O tipo de item exposto pela interface do enumerador.
 
 *Copiar*<br/>
-Um homogêneos [copie a classe da diretiva](../../atl/atl-copy-policy-classes.md).
+Uma [classe de política de cópia](../../atl/atl-copy-policy-classes.md)homogênea.
 
 *ThreadModel*<br/>
-O modelo de threading da classe. Esse parâmetro assume como padrão para o modelo de thread do objeto global usado no seu projeto.
+O modelo de Threading da classe. Esse parâmetro assume como padrão o modelo de thread de objeto global usado em seu projeto.
 
 ## <a name="remarks"></a>Comentários
 
-`CComEnum` define um objeto de enumerador COM base em uma matriz. Essa classe é análoga à [CComEnumOnSTL](../../atl/reference/ccomenumonstl-class.md) que implementa um enumerador com base em um contêiner de biblioteca padrão C++. Etapas típicas para usar essa classe são descritas abaixo. Para obter mais informações, consulte [ATL coleções e enumeradores](../../atl/atl-collections-and-enumerators.md).
+`CComEnum`define um objeto enumerador COM com base em uma matriz. Essa classe é análoga a [CComEnumOnSTL](../../atl/reference/ccomenumonstl-class.md) que implementa um enumerador com base C++ em um contêiner de biblioteca padrão. As etapas típicas para usar essa classe são descritas abaixo. Para obter mais informações, consulte [coleções e enumeradores do ATL](../../atl/atl-collections-and-enumerators.md).
 
-## <a name="to-use-this-class"></a>Para usar essa classe:
+## <a name="to-use-this-class"></a>Para usar esta classe:
 
-- **TypeDef** uma especialização dessa classe.
+- **typedef** uma especialização desta classe.
 
 - Use o **typedef** como o argumento de modelo em uma especialização de `CComObject`.
 
-- Criar uma instância da `CComObject` especialização.
+- Crie uma instância da `CComObject` especialização.
 
-- Inicializar o objeto de enumerador chamando [CComEnumImpl::Init](../../atl/reference/ccomenumimpl-class.md#init).
+- Inicialize o objeto enumerador chamando [CComEnumImpl:: init](../../atl/reference/ccomenumimpl-class.md#init).
 
-- Retorne a interface de enumerador para o cliente.
+- Retornar a interface do enumerador para o cliente.
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -76,19 +76,19 @@ O modelo de threading da classe. Esse parâmetro assume como padrão para o mode
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** atlcom
+**Cabeçalho:** atlcom. h
 
 ## <a name="example"></a>Exemplo
 
-O código mostrado abaixo fornece uma função reutilizável para criar e inicializar um objeto de enumerador.
+O código mostrado abaixo fornece uma função reutilizável para criar e inicializar um objeto enumerador.
 
 [!code-cpp[NVC_ATL_COM#32](../../atl/codesnippet/cpp/ccomenum-class_1.h)]
 
-Essa função de modelo pode ser usada para implementar o `_NewEnum` propriedade de uma interface de coleção, conforme mostrado abaixo:
+Essa função de modelo pode ser usada para implementar `_NewEnum` a propriedade de uma interface de coleção, conforme mostrado abaixo:
 
 [!code-cpp[NVC_ATL_COM#33](../../atl/codesnippet/cpp/ccomenum-class_2.h)]
 
-Esse código cria uma **typedef** para `CComEnum` que expõe um vetor de variantes por meio de `IEnumVariant` interface. O `CVariantArrayCollection` classe especializada simplesmente `CreateEnumerator` para trabalhar com objetos de enumerador desse tipo e passa os argumentos necessários.
+Esse código cria um **typedef** para `CComEnum` que expõe um vetor de variantes por meio `IEnumVariant` da interface. A `CVariantArrayCollection` classe simplesmente é `CreateEnumerator` especializada em trabalhar com objetos enumeradores desse tipo e passa os argumentos necessários.
 
 ## <a name="see-also"></a>Consulte também
 

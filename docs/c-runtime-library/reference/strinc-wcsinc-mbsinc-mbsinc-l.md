@@ -40,19 +40,19 @@ helpviewer_keywords:
 - _tcsinc function
 - tcsinc function
 ms.assetid: 54685943-8e2c-45e9-a559-2d94930dc6b4
-ms.openlocfilehash: dae14fc7b66b9be4e1016c5409a93cd172691fed
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 48bc7caa5dbc2d2e7eec847bfa5135d13bcd83c0
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62365197"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499464"
 ---
-# <a name="strinc-wcsinc-mbsinc-mbsincl"></a>_strinc, _wcsinc, _mbsinc, _mbsinc_l
+# <a name="_strinc-_wcsinc-_mbsinc-_mbsinc_l"></a>_strinc, _wcsinc, _mbsinc, _mbsinc_l
 
 Avança um ponteiro de cadeia de caracteres em um caractere.
 
 > [!IMPORTANT]
-> **_mbsinc** e **_mbsinc_l** não pode ser usado em aplicativos executados no tempo de execução do Windows. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsinc** e **_mbsinc_l** não podem ser usados em aplicativos que são executados no Windows Runtime. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -84,18 +84,18 @@ Localidade a usar.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Cada uma dessas rotinas retorna um ponteiro para o caractere que segue imediatamente *atual*.
+Cada uma dessas rotinas retorna um ponteiro para o caractere que imediatamente segue o *atual*.
 
 ## <a name="remarks"></a>Comentários
 
-O **_mbsinc** função retorna um ponteiro para o primeiro byte do caractere multibyte que segue imediatamente *atual*. **_mbsinc** reconhece sequências de caracteres multibyte de acordo com o [página de código multibyte](../../c-runtime-library/code-pages.md) que está atualmente em uso. **_mbsinc_l** é idêntico, exceto que em vez disso, ele usa o parâmetro de localidade que é passado. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+A função **_mbsinc** retorna um ponteiro para o primeiro byte do caractere multibyte que segue imediatamente o *atual*. **_mbsinc** reconhece sequências de caracteres multibyte de acordo com a [página de código multibyte](../../c-runtime-library/code-pages.md) em uso no momento; **_mbsinc_l** é idêntico, exceto que ele usa o parâmetro Locale que é passado. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
-A função de texto genérico **_tcsinc**, definido em TCHAR. h, mapeia para **_mbsinc** se **MBCS** tiver sido definida, ou **_wcsinc** se **Unicode** foi definido. Caso contrário, **_tcsinc** mapeia para **_strinc**. **_strinc** e **_wcsinc** são versões de caractere de byte único e caracteres largos **_mbsinc**. **_strinc** e **_wcsinc** são fornecidos apenas para esse mapeamento e não deve ser usado caso contrário. Para obter mais informações, consulte [Usando mapeamentos de texto genérico](../../c-runtime-library/using-generic-text-mappings.md) e [Mapeamentos de Texto Genérico](../../c-runtime-library/generic-text-mappings.md).
+A função de texto genérico **_tcsinc**, definida em TCHAR. h, é mapeada para **_mbsinc** se **_MBCS** tiver sido definido, ou para **_wcsinc** se **_UNICODE** tiver sido definido. Caso contrário, **_tcsinc** será mapeado para **_strinc**. **_strinc** e **_wcsinc** são um caractere de byte único e versões de caractere largo do **_mbsinc**. **_strinc** e **_wcsinc** são fornecidos apenas para esse mapeamento e não devem ser usados de outra forma. Para obter mais informações, consulte [Usando mapeamentos de texto genérico](../../c-runtime-library/using-generic-text-mappings.md) e [Mapeamentos de Texto Genérico](../../c-runtime-library/generic-text-mappings.md).
 
-Se *atual* é **nulo**, o manipulador de parâmetro inválido será invocado, conforme descrito na [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essa função retorna **EINVAL** e define **errno** para **EINVAL**.
+Se *Current* for **NULL**, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, essa função retornará **EINVAL** e definirá **errno** como **EINVAL**.
 
 > [!IMPORTANT]
-> Essas funções podem ser vulneráveis a ameaças de estouro de buffer. Os estouros de buffer podem ser usados em ataques de sistema porque podem causar uma elevação de privilégio não garantida. Para obter mais informações, consulte [Avoiding Buffer Overruns](/windows/desktop/SecBP/avoiding-buffer-overruns) (Evitando estouros de buffer).
+> Essas funções podem ser vulneráveis a ameaças de estouro de buffer. Os estouros de buffer podem ser usados em ataques de sistema porque podem causar uma elevação de privilégio não garantida. Para obter mais informações, consulte [Avoiding Buffer Overruns](/windows/win32/SecBP/avoiding-buffer-overruns) (Evitando estouros de buffer).
 
 ## <a name="requirements"></a>Requisitos
 

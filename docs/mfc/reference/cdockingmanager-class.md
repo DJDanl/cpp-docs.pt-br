@@ -160,12 +160,12 @@ helpviewer_keywords:
 - CDockingManager [MFC], m_nTimeOutBeforeDockingBarDock
 - CDockingManager [MFC], m_nTimeOutBeforeToolBarDock
 ms.assetid: 98e69c43-55d8-4f43-b861-4fda80ec1e32
-ms.openlocfilehash: 6d3bbafa15ada97f53710f0faf6a18ea8e892f6c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8709b3a4eb3f57a3d2700ad7aaed16df994245c5
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391212"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69506866"
 ---
 # <a name="cdockingmanager-class"></a>Classe CDockingManager
 
@@ -184,101 +184,101 @@ class CDockingManager : public CObject
 |Nome|Descrição|
 |----------|-----------------|
 |[CDockingManager::AddDockSite](#adddocksite)|Cria um painel de encaixe e o adiciona à lista de barras de controle.|
-|[CDockingManager::AddHiddenMDITabbedBar](#addhiddenmditabbedbar)|Adiciona um identificador para uma barra de painel para a lista de oculto MDI com guias painéis da barra.|
-|[CDockingManager::AddMiniFrame](#addminiframe)|Adiciona um quadro à lista de quadros minidespejos.|
+|[CDockingManager::AddHiddenMDITabbedBar](#addhiddenmditabbedbar)|Adiciona um identificador a um painel de barras à lista de painéis de barras com guias MDI ocultos.|
+|[CDockingManager::AddMiniFrame](#addminiframe)|Adiciona um quadro à lista de mini quadros.|
 |[CDockingManager::AddPane](#addpane)|Registra um painel com o Gerenciador de encaixe.|
 |[CDockingManager::AdjustDockingLayout](#adjustdockinglayout)|Recalcula e ajusta o layout de todos os painéis em uma janela do quadro.|
-|[CDockingManager::AdjustPaneFrames](#adjustpaneframes)|Faz com que a mensagem WM_NCCALCSIZE seja enviada para todos os painéis e `CPaneFrameWnd` windows.|
+|[CDockingManager::AdjustPaneFrames](#adjustpaneframes)|Faz com que a mensagem WM_NCCALCSIZE seja enviada a todos os painéis `CPaneFrameWnd` e janelas.|
 |[CDockingManager::AdjustRectToClientArea](#adjustrecttoclientarea)|Ajusta o alinhamento de um retângulo.|
-|[CDockingManager::AlignAutoHidePane](#alignautohidepane)|Redimensiona um painel de encaixe no modo de ocultar automaticamente para que ele utiliza a largura total ou altura da área de cliente do quadro cercada por sites de encaixe.|
-|[CDockingManager::AutoHidePane](#autohidepane)|Cria uma barra de ferramentas de ocultar automaticamente.|
-|[CDockingManager::BringBarsToTop](#bringbarstotop)|Traz as barras encaixadas que têm o alinhamento especificado para a parte superior.|
-|[CDockingManager::BuildPanesMenu](#buildpanesmenu)|Adiciona os nomes dos painéis de encaixe e barras de ferramentas a um menu.|
+|[CDockingManager::AlignAutoHidePane](#alignautohidepane)|Redimensiona um painel de encaixe no modo de AutoOcultar para que ele ocupe a largura completa ou a altura da área do cliente do quadro envolvida por sites de encaixe.|
+|[CDockingManager::AutoHidePane](#autohidepane)|Cria uma barra de ferramentas de AutoOcultar.|
+|[CDockingManager::BringBarsToTop](#bringbarstotop)|Coloca as barras encaixadas que têm o alinhamento especificado na parte superior.|
+|[CDockingManager::BuildPanesMenu](#buildpanesmenu)|Adiciona nomes de painéis de encaixe e barras de ferramentas a um menu.|
 |[CDockingManager::CalcExpectedDockedRect](#calcexpecteddockedrect)|Calcula o retângulo esperado de uma janela encaixada.|
 |[CDockingManager::Create](#create)|Cria um Gerenciador de encaixe.|
 |[CDockingManager::DeterminePaneAndStatus](#determinepaneandstatus)|Determina o painel que contém um determinado ponto e seu status de encaixe.|
-|[CDockingManager::DisableRestoreDockState](#disablerestoredockstate)|Habilita ou desabilita o carregamento de layout de encaixe do registro.|
-|[CDockingManager::DockPane](#dockpane)|Encaixa um painel para outro painel ou para uma janela de quadro.|
+|[CDockingManager::DisableRestoreDockState](#disablerestoredockstate)|Habilita ou desabilita o carregamento do layout de encaixe do registro.|
+|[CDockingManager::DockPane](#dockpane)|Encaixa um painel em outro painel ou em uma janela do quadro.|
 |[CDockingManager::DockPaneLeftOf](#dockpaneleftof)|Encaixa um painel à esquerda de outro painel.|
-|[CDockingManager::EnableAutoHidePanes](#enableautohidepanes)|Permite o encaixe do painel para o quadro principal, cria um painel de encaixe e adiciona-o à lista de barras de controle.|
-|[CDockingManager::EnableDocking](#enabledocking)|Cria um painel de encaixe e habilita o encaixe do painel para o quadro principal.|
-|[CDockingManager::EnableDockSiteMenu](#enabledocksitemenu)|Exibe mais um botão que abre um menu pop-up nas legendas de todos os painéis de encaixe.|
-|[CDockingManager::EnablePaneContextMenu](#enablepanecontextmenu)|Informa a biblioteca para exibir um menu de contexto especial que tem uma lista de painéis de encaixe e barras de ferramentas de aplicativo quando o usuário clica no botão direito do mouse e a biblioteca está processando a mensagem WM_CONTEXTMENU.|
-|[CDockingManager::FindDockSite](#finddocksite)|Recupera a barra de painel que está na posição especificada e que tem o alinhamento especificado.|
-|[CDockingManager::FindDockSiteByPane](#finddocksitebypane)|Retorna a barra de painel que tem a id do painel da barra de destino.|
-|[CDockingManager::FindPaneByID](#findpanebyid)|Localiza um painel pela ID do controle especificado.|
-|[CDockingManager::FixupVirtualRects](#fixupvirtualrects)|Confirma todas as posições de barra de ferramentas atual a retângulos virtuais.|
-|[CDockingManager::FrameFromPoint](#framefrompoint)|Retorna o quadro que contém o ponto especificado.|
-|[CDockingManager::GetClientAreaBounds](#getclientareabounds)|Obtém o retângulo que contém os limites da área de cliente.|
-|[CDockingManager::GetDockingMode](#getdockingmode)|Retorna o modo atual de encaixe.|
-|[CDockingManager::GetDockSiteFrameWnd](#getdocksiteframewnd)|Obtém um ponteiro para o quadro de janela pai.|
+|[CDockingManager::EnableAutoHidePanes](#enableautohidepanes)|Habilita o encaixe do painel no quadro principal, cria um painel de encaixe e o adiciona à lista de barras de controle.|
+|[CDockingManager::EnableDocking](#enabledocking)|Cria um painel de encaixe e habilita o encaixe do painel no quadro principal.|
+|[CDockingManager::EnableDockSiteMenu](#enabledocksitemenu)|Exibe um botão adicional que abre um menu pop-up nas legendas de todos os painéis de encaixe.|
+|[CDockingManager::EnablePaneContextMenu](#enablepanecontextmenu)|Informa à biblioteca para exibir um menu de contexto especial que tem uma lista de barras de ferramentas do aplicativo e painéis de encaixe quando o usuário clica no botão direito do mouse e a biblioteca está processando a mensagem WM_CONTEXTMENU.|
+|[CDockingManager::FindDockSite](#finddocksite)|Recupera o painel de barras que está na posição especificada e que tem o alinhamento especificado.|
+|[CDockingManager::FindDockSiteByPane](#finddocksitebypane)|Retorna o painel de barras que tem a ID do painel da barra de destino.|
+|[CDockingManager::FindPaneByID](#findpanebyid)|Localiza um painel pela ID de controle especificada.|
+|[CDockingManager::FixupVirtualRects](#fixupvirtualrects)|Confirma todas as posições da barra de ferramentas atual para retângulos virtuais.|
+|[CDockingManager::FrameFromPoint](#framefrompoint)|Retorna o quadro que contém o ponto determinado.|
+|[CDockingManager::GetClientAreaBounds](#getclientareabounds)|Obtém o retângulo que contém os limites da área do cliente.|
+|[CDockingManager::GetDockingMode](#getdockingmode)|Retorna o modo de encaixe atual.|
+|[CDockingManager::GetDockSiteFrameWnd](#getdocksiteframewnd)|Obtém um ponteiro para o quadro da janela pai.|
 |[CDockingManager::GetEnabledAutoHideAlignment](#getenabledautohidealignment)|Retorna o alinhamento habilitado dos painéis.|
 |[CDockingManager::GetMiniFrames](#getminiframes)|Obtém uma lista de miniframes.|
 |[CDockingManager::GetOuterEdgeBounds](#getouteredgebounds)|Obtém um retângulo que contém as bordas externas do quadro.|
 |[CDockingManager::GetPaneList](#getpanelist)|Retorna uma lista de painéis que pertencem ao Gerenciador de encaixe. Isso inclui todos os painéis flutuantes.|
 |[CDockingManager::GetSmartDockingManager](#getsmartdockingmanager)|Recupera um ponteiro para o Gerenciador de encaixe inteligente.|
 |[CDockingManager::GetSmartDockingManagerPermanent](#getsmartdockingmanagerpermanent)|Recupera um ponteiro para o Gerenciador de encaixe inteligente.|
-|[CDockingManager::GetSmartDockingParams](#getsmartdockingparams)|Retorna os parâmetros de encaixe inteligentes para o Gerenciador de encaixe.|
-|[CDockingManager::GetSmartDockingTheme](#getsmartdockingtheme)|Um método estático que retorna um tema usado para exibir os marcadores inteligentes de encaixe.|
-|[CDockingManager::HideAutoHidePanes](#hideautohidepanes)|Oculta um painel que está no modo de ocultar automaticamente.|
+|[CDockingManager::GetSmartDockingParams](#getsmartdockingparams)|Retorna os parâmetros de encaixe inteligente para o Gerenciador de encaixe.|
+|[CDockingManager::GetSmartDockingTheme](#getsmartdockingtheme)|Um método estático que retorna um tema usado para exibir marcadores de encaixe inteligente.|
+|[CDockingManager::HideAutoHidePanes](#hideautohidepanes)|Oculta um painel que está no modo de AutoOcultar.|
 |[CDockingManager::InsertDockSite](#insertdocksite)|Cria um painel de encaixe e o insere na lista de barras de controle.|
 |[CDockingManager::InsertPane](#insertpane)|Insere um painel de controle na lista de barras de controle.|
 |[CDockingManager::IsDockSiteMenu](#isdocksitemenu)|Especifica se um menu pop-up é exibido nas legendas de todos os painéis.|
 |[CDockingManager::IsInAdjustLayout](#isinadjustlayout)|Determina se os layouts de todos os painéis são ajustados.|
 |[CDockingManager::IsOLEContainerMode](#isolecontainermode)|Especifica se o Gerenciador de encaixe está no modo de contêiner OLE.|
-|[CDockingManager::IsPointNearDockSite](#ispointneardocksite)|Determina se um ponto especificado está perto o local de encaixe.|
+|[CDockingManager::IsPointNearDockSite](#ispointneardocksite)|Determina se um ponto especificado está próximo ao site de encaixe.|
 |[CDockingManager::IsPrintPreviewValid](#isprintpreviewvalid)|Determina se o modo de visualização de impressão está definido.|
 |[CDockingManager::LoadState](#loadstate)|Carrega o estado do Gerenciador de encaixe do registro.|
-|[CDockingManager::LockUpdate](#lockupdate)|Bloqueia a determinada janela.|
-|[CDockingManager::OnActivateFrame](#onactivateframe)|Chamado pelo framework quando a janela do quadro ficará ativa ou está desativada.|
-|[CDockingManager::OnClosePopupMenu](#onclosepopupmenu)|Chamado pelo framework quando um menu pop-up ativo processa uma mensagem WM_DESTROY.|
-|[CDockingManager::OnMoveMiniFrame](#onmoveminiframe)|Chamado pelo framework para mover uma janela com minimoldura.|
-|[CDockingManager::OnPaneContextMenu](#onpanecontextmenu)|Chamado pelo framework quando ele cria um menu que tem uma lista de painéis.|
-|[CDockingManager::PaneFromPoint](#panefrompoint)|Retorna o painel que contém o ponto especificado.|
-|[CDockingManager::ProcessPaneContextMenuCommand](#processpanecontextmenucommand)|Chamado pelo framework para selecionar ou para limpar uma caixa de seleção para o comando especificado e recalcular o layout de um painel mostrado.|
+|[CDockingManager::LockUpdate](#lockupdate)|Bloqueia a janela especificada.|
+|[CDockingManager::OnActivateFrame](#onactivateframe)|Chamado pelo Framework quando a janela do quadro é ativada ou desativada.|
+|[CDockingManager::OnClosePopupMenu](#onclosepopupmenu)|Chamado pelo Framework quando um menu pop-up ativo processa uma mensagem WM_DESTROY.|
+|[CDockingManager::OnMoveMiniFrame](#onmoveminiframe)|Chamado pelo Framework para mover uma janela de mini-quadro.|
+|[CDockingManager::OnPaneContextMenu](#onpanecontextmenu)|Chamado pelo Framework quando ele cria um menu que tem uma lista de painéis.|
+|[CDockingManager::PaneFromPoint](#panefrompoint)|Retorna o painel que contém o ponto determinado.|
+|[CDockingManager::ProcessPaneContextMenuCommand](#processpanecontextmenucommand)|Chamado pelo Framework para marcar ou desmarcar uma caixa de seleção para o comando especificado e recalcular o layout de um painel mostrado.|
 |[CDockingManager::RecalcLayout](#recalclayout)|Recalcula o layout interno dos controles presentes na lista de controles.|
-|[CDockingManager::ReleaseEmptyPaneContainers](#releaseemptypanecontainers)|Libera os contêineres de painel vazio.|
-|[CDockingManager::RemoveHiddenMDITabbedBar](#removehiddenmditabbedbar)|Remove o oculta o painel da barra.|
-|[CDockingManager::RemoveMiniFrame](#removeminiframe)|Remove um intervalo especificado da lista de quadros minidespejos.|
-|[CDockingManager::RemovePaneFromDockManager](#removepanefromdockmanager)|Cancela o registro de um painel e a remove da lista no Gerenciador de encaixe.|
-|[CDockingManager::ReplacePane](#replacepane)|Substitui um painel com outra.|
-|[CDockingManager::ResortMiniFramesForZOrder](#resortminiframesforzorder)|Recorre os quadros na lista de quadros minidespejos.|
+|[CDockingManager::ReleaseEmptyPaneContainers](#releaseemptypanecontainers)|Libera os contêineres de painel vazios.|
+|[CDockingManager::RemoveHiddenMDITabbedBar](#removehiddenmditabbedbar)|Remove o painel de barras ocultos especificado.|
+|[CDockingManager::RemoveMiniFrame](#removeminiframe)|Remove um quadro especificado da lista de mini quadros.|
+|[CDockingManager::RemovePaneFromDockManager](#removepanefromdockmanager)|Cancela o registro de um painel e o Remove da lista no Gerenciador de encaixe.|
+|[CDockingManager::ReplacePane](#replacepane)|Substitui um painel por outro.|
+|[CDockingManager::ResortMiniFramesForZOrder](#resortminiframesforzorder)|Resort os quadros na lista de mini quadros.|
 |[CDockingManager::SaveState](#savestate)|Salva o estado do Gerenciador de encaixe no registro.|
-|[CDockingManager::SendMessageToMiniFrames](#sendmessagetominiframes)|Envia a mensagem especificada para todos os quadros de minidespejos.|
-|[CDockingManager::Serialize](#serialize)|Grava o encaixe Gerenciador em um arquivo morto. (Substitui [CObject::Serialize](../../mfc/reference/cobject-class.md#serialize).)|
-|[CDockingManager::SetAutohideZOrder](#setautohidezorder)|Define o tamanho, largura e altura das barras de controle e o painel especificado.|
+|[CDockingManager::SendMessageToMiniFrames](#sendmessagetominiframes)|Envia a mensagem especificada para todos os mini quadros.|
+|[CDockingManager::Serialize](#serialize)|Grava o Gerenciador de encaixe em um arquivo morto. (Substitui [CObject:: Serialize](../../mfc/reference/cobject-class.md#serialize).)|
+|[CDockingManager::SetAutohideZOrder](#setautohidezorder)|Define o tamanho, a largura e a altura das barras de controle e o painel especificado.|
 |[CDockingManager::SetDockingMode](#setdockingmode)|Define o modo de encaixe.|
-|[CDockingManager::SetDockState](#setdockstate)|Define o estado de encaixe das barras de controle, os quadros minidespejos e as barras de ocultar automaticamente.|
-|[CDockingManager::SetPrintPreviewMode](#setprintpreviewmode)|Define o modo de visualização de impressão das barras que são exibidos na visualização de impressão.|
-|[CDockingManager::SetSmartDockingParams](#setsmartdockingparams)|Define os parâmetros que definem o comportamento de encaixe inteligente.|
-|[CDockingManager::ShowDelayShowMiniFrames](#showdelayshowminiframes)|Mostra ou oculta as janelas dos quadros minidespejos.|
-|[CDockingManager::ShowPanes](#showpanes)|Mostra ou oculta os painéis das barras de controle e ocultar automaticamente.|
-|[CDockingManager::StartSDocking](#startsdocking)|Inicia o encaixe inteligente da janela especificada de acordo com o alinhamento do encaixe Gerenciador inteligente.|
-|[CDockingManager::StopSDocking](#stopsdocking)|Paradas de inteligentes de encaixe.|
+|[CDockingManager::SetDockState](#setdockstate)|Define o estado de encaixe das barras de controle, os mini quadros e as barras de AutoOcultar.|
+|[CDockingManager::SetPrintPreviewMode](#setprintpreviewmode)|Define o modo de visualização de impressão das barras exibidas na visualização de impressão.|
+|[CDockingManager::SetSmartDockingParams](#setsmartdockingparams)|Define os parâmetros que definem o comportamento do encaixe inteligente.|
+|[CDockingManager::ShowDelayShowMiniFrames](#showdelayshowminiframes)|Mostra ou oculta as janelas dos mini quadros.|
+|[CDockingManager::ShowPanes](#showpanes)|Mostra ou oculta os painéis do controle e as barras de AutoOcultar.|
+|[CDockingManager::StartSDocking](#startsdocking)|Inicia o encaixe inteligente da janela especificada de acordo com o alinhamento do Gerenciador de encaixe inteligente.|
+|[CDockingManager::StopSDocking](#stopsdocking)|Para o encaixe inteligente.|
 
 ### <a name="data-members"></a>Membros de Dados
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CDockingManager::m_bHideDockingBarsInContainerMode](#m_bhidedockingbarsincontainermode)|Especifica se o Gerenciador de encaixe oculta os painéis no modo de contêiner OLE.|
+|[CDockingManager::m_bHideDockingBarsInContainerMode](#m_bhidedockingbarsincontainermode)|Especifica se o Gerenciador de encaixe oculta painéis no modo de contêiner OLE.|
 |[CDockingManager::m_dockModeGlobal](#m_dockmodeglobal)|Especifica o modo de encaixe global.|
 |[CDockingManager::m_nDockSensitivity](#m_ndocksensitivity)|Especifica a sensibilidade de encaixe.|
-|[CDockingManager::m_nTimeOutBeforeDockingBarDock](#m_ntimeoutbeforedockingbardock)|Especifica o tempo, em milissegundos, antes de um painel de encaixe é encaixado no modo de encaixe imediato.|
-|[CDockingManager::m_nTimeOutBeforeToolBarDock](#m_ntimeoutbeforetoolbardock)|Especifica o tempo, em milissegundos, antes de uma barra de ferramentas é encaixada na janela do quadro principal.|
+|[CDockingManager::m_nTimeOutBeforeDockingBarDock](#m_ntimeoutbeforedockingbardock)|Especifica o tempo, em milissegundos, antes que um painel de encaixe seja encaixado no modo de encaixe imediato.|
+|[CDockingManager::m_nTimeOutBeforeToolBarDock](#m_ntimeoutbeforetoolbardock)|Especifica o tempo, em milissegundos, antes que uma barra de ferramentas seja encaixada na janela do quadro principal.|
 
 ## <a name="remarks"></a>Comentários
 
 A janela do quadro principal cria e inicializa essa classe automaticamente.
 
-O objeto do Gerenciador de encaixe mantém uma lista de todos os painéis que estão no layout de encaixe e também uma lista de todos os [CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md) windows que pertencem a janela principal do quadro.
+O objeto do Gerenciador de encaixe contém uma lista de todos os painéis que estão no layout de encaixe e também uma lista de todas as janelas [CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md) que pertencem à janela do quadro principal.
 
-O `CDockingManager` classe implementa alguns serviços que você pode usar para localizar um painel ou um `CPaneFrameWnd` janela. Você normalmente não chamar esses serviços diretamente porque eles são encapsulados no objeto de janela de quadro principal. Para obter mais informações, consulte [classe CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md).
+A `CDockingManager` classe implementa alguns serviços que você pode usar para localizar um painel ou uma `CPaneFrameWnd` janela. Normalmente, você não chama esses serviços diretamente porque eles são encapsulados no objeto de janela do quadro principal. Para obter mais informações, consulte [Classe CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md).
 
 ## <a name="customization-tips"></a>Dicas de personalização
 
-As dicas a seguir se aplicam a `CDockingManager` objetos:
+As seguintes dicas se aplicam a `CDockingManager` objetos:
 
-- [Classe CDockingManager](../../mfc/reference/cdockingmanager-class.md) dá suporte a esses modos de encaixe:
+- A [classe CDockingManager](../../mfc/reference/cdockingmanager-class.md) dá suporte a esses modos de encaixe:
 
   - `AFX_DOCK_TYPE::DT_IMMEDIATE`
 
@@ -286,13 +286,13 @@ As dicas a seguir se aplicam a `CDockingManager` objetos:
 
   - `AFX_DOCK_TYPE::DT_SMART`
 
-  Esses modos de encaixe são definidos por [CDockingManager::m_dockModeGlobal](#m_dockmodeglobal) e são definidos chamando [CDockingManager::SetDockingMode](#setdockingmode).
+  Esses modos de encaixe são definidos por [CDockingManager:: m_dockModeGlobal](#m_dockmodeglobal) e são definidos chamando [CDockingManager:: SetDockingMode](#setdockingmode).
 
-- Se você quiser criar um painel flutuante não, não redimensionável, chame o [CDockingManager::AddPane](#addpane) método. Esse método registra o painel com o Gerenciador de encaixe, que é responsável pelo layout do painel.
+- Se você quiser criar um painel não flutuante e não redimensionável, chame o método [CDockingManager:: AddPane](#addpane) . Esse método registra o painel com o Gerenciador de encaixe, que é responsável pelo layout do painel.
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir demonstra como usar vários métodos na `CDockingManager` classe para configurar um `CDockingManager` objeto. O exemplo mostra como exibir mais um botão que abre um menu pop-up nas legendas de todos os painéis de encaixe e como definir o modo de encaixe do objeto. Este trecho de código faz parte do [amostra de demonstração do Visual Studio](../../overview/visual-cpp-samples.md).
+O exemplo a seguir demonstra como usar vários métodos na `CDockingManager` classe para configurar um `CDockingManager` objeto. O exemplo mostra como exibir um botão adicional que abre um menu pop-up nas legendas de todos os painéis de encaixe e como definir o modo de encaixe do objeto. Este trecho de código faz parte do [exemplo de demonstração do Visual Studio](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#24](../../mfc/codesnippet/cpp/cdockingmanager-class_1.cpp)]
 
@@ -304,7 +304,7 @@ O exemplo a seguir demonstra como usar vários métodos na `CDockingManager` cla
 
 ## <a name="requirements"></a>Requisitos
 
-**Header:** afxDockingManager.h
+**Cabeçalho:** afxDockingManager. h
 
 ##  <a name="adddocksite"></a>  CDockingManager::AddDockSite
 
@@ -319,18 +319,18 @@ BOOL AddDockSite(
 ### <a name="parameters"></a>Parâmetros
 
 *info*<br/>
-[in] Uma referência a uma estrutura de informações que contém encaixar o alinhamento do painel.
+no Uma referência a uma estrutura de informações que contém alinhamento de painel de encaixe.
 
 *ppDockBar*<br/>
-[out] Um ponteiro para um ponteiro para o novo painel de encaixe.
+fora Um ponteiro para um ponteiro para o novo painel de encaixe.
 
 ### <a name="return-value"></a>Valor de retorno
 
-VERDADEIRO se o painel de encaixe foi criado com êxito; FALSE caso contrário.
+TRUE se o painel de encaixe tiver sido criado com êxito; Caso contrário, FALSE.
 
 ##  <a name="addhiddenmditabbedbar"></a>  CDockingManager::AddHiddenMDITabbedBar
 
-Adiciona um identificador para uma barra de painel para a lista de oculto MDI com guias painéis da barra.
+Adiciona um identificador a um painel de barras à lista de painéis de barras com guias MDI ocultos.
 
 ```
 void AddHiddenMDITabbedBar(CDockablePane* pBar);
@@ -339,7 +339,7 @@ void AddHiddenMDITabbedBar(CDockablePane* pBar);
 ### <a name="parameters"></a>Parâmetros
 
 *pBar*<br/>
-[in] Um ponteiro para uma barra de painel
+no Um ponteiro para um painel de barras
 
 ##  <a name="addpane"></a>  CDockingManager::AddPane
 
@@ -356,24 +356,24 @@ BOOL AddPane(
 ### <a name="parameters"></a>Parâmetros
 
 *pWnd*<br/>
-[no, out] Especifica o painel para adicionar ao Gerenciador de encaixe.
+[entrada, saída] Especifica o painel a ser adicionado ao Gerenciador de encaixe.
 
 *bTail*<br/>
-[in] TRUE para adicionar o painel ao final da lista de painéis para o Gerenciador de encaixe; Caso contrário, FALSE.
+no TRUE para adicionar o painel ao final da lista de painéis para o Gerenciador de encaixe; caso contrário, FALSE.
 
 *bAutoHide*<br/>
-[in] Somente para uso interno. Sempre use o valor padrão FALSE.
+no Somente para uso interno. Sempre use o valor padrão FALSE.
 
 *bInsertForOuterEdge*<br/>
-[in] Somente para uso interno. Sempre use o valor padrão FALSE.
+no Somente para uso interno. Sempre use o valor padrão FALSE.
 
 ### <a name="return-value"></a>Valor de retorno
 
-TRUE se o painel foi registrado com êxito com o Gerenciador do encaixe. Caso contrário, FALSE.
+TRUE se o painel tiver sido registrado com êxito com o Gerenciador de encaixe; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-Chame esse método para registrar os painéis não redimensionável, não flutuante com o Gerenciador de encaixe. Se você não registrar os painéis, eles não serão exibidos quando o Gerenciador de encaixe é apresentado.
+Chame esse método para registrar painéis não flutuantes e não-redimensionáveis com o Gerenciador de encaixe. Se você não registrar os painéis, eles não serão exibidos corretamente quando o Gerenciador de encaixe for disposto.
 
 ##  <a name="adjustdockinglayout"></a>  CDockingManager::AdjustDockingLayout
 
@@ -386,13 +386,13 @@ virtual void AdjustDockingLayout(HDWP hdwp = NULL);
 ### <a name="parameters"></a>Parâmetros
 
 *hdwp*<br/>
-[in] Especifica a estrutura de posição da janela adiada. Para obter mais informações, consulte [tipos de dados do Windows](/windows/desktop/WinProg/windows-data-types).
+no Especifica a estrutura de posição da janela adiada. Para obter mais informações, consulte [tipos de dados do Windows](/windows/win32/WinProg/windows-data-types).
 
 ### <a name="remarks"></a>Comentários
 
 ##  <a name="addminiframe"></a>  CDockingManager::AddMiniFrame
 
-Adiciona um quadro à lista de quadros minidespejos.
+Adiciona um quadro à lista de mini quadros.
 
 ```
 virtual BOOL AddMiniFrame(CPaneFrameWnd* pWnd);
@@ -401,15 +401,15 @@ virtual BOOL AddMiniFrame(CPaneFrameWnd* pWnd);
 ### <a name="parameters"></a>Parâmetros
 
 *pWnd*<br/>
-[in] Um ponteiro para um quadro.
+no Um ponteiro para um quadro.
 
 ### <a name="return-value"></a>Valor de retorno
 
-TRUE se o quadro não está na lista de quadros minidespejos e foi adicionado com êxito; FALSE caso contrário.
+TRUE se o quadro não estiver na lista de mini quadros e tiver sido adicionado com êxito; Caso contrário, FALSE.
 
 ##  <a name="adjustpaneframes"></a>  CDockingManager::AdjustPaneFrames
 
-Faz com que a mensagem WM_NCCALCSIZE seja enviada para todos os painéis e `CPaneFrameWnd` windows.
+Faz com que a mensagem WM_NCCALCSIZE seja enviada a todos os painéis `CPaneFrameWnd` e janelas.
 
 ```
 virtual void AdjustPaneFrames();
@@ -430,18 +430,18 @@ virtual BOOL AdjustRectToClientArea(
 ### <a name="parameters"></a>Parâmetros
 
 *rectResult*<br/>
-[in] Uma referência a um `CRect` objeto
+no Uma referência a um `CRect` objeto
 
 *dwAlignment*<br/>
-[in] O alinhamento do `CRect` objeto
+no O alinhamento do `CRect` objeto
 
 ### <a name="return-value"></a>Valor de retorno
 
-TRUE se o alinhamento do `CRect` objeto foi ajustado; FALSE caso contrário.
+TRUE se o alinhamento do `CRect` objeto foi ajustado; Caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-O *dwAlignment* parâmetro pode ter um dos seguintes valores:
+O parâmetro *dwAlignment* pode ter um dos seguintes valores:
 
 - CBRS_ALIGN_TOP
 
@@ -453,7 +453,7 @@ O *dwAlignment* parâmetro pode ter um dos seguintes valores:
 
 ##  <a name="alignautohidepane"></a>  CDockingManager::AlignAutoHidePane
 
-Redimensiona um painel de encaixe no modo de ocultar automaticamente para que ele utiliza a largura total ou altura da área de cliente do quadro cercada por sites de encaixe.
+Redimensiona um painel de encaixe no modo de AutoOcultar para que ele ocupe a largura completa ou a altura da área do cliente do quadro envolvida por sites de encaixe.
 
 ```
 void AlignAutoHidePane(
@@ -464,14 +464,14 @@ void AlignAutoHidePane(
 ### <a name="parameters"></a>Parâmetros
 
 *pDefaultSlider*<br/>
-[in] O painel de controle deslizante de encaixe.
+no O painel deslizante de encaixe.
 
 *bIsVisible*<br/>
-[in] TRUE se o painel de encaixe estiver visível; FALSE caso contrário.
+no TRUE se o painel de encaixe estiver visível; Caso contrário, FALSE.
 
 ##  <a name="autohidepane"></a>  CDockingManager::AutoHidePane
 
-Cria uma barra de ferramentas de ocultar automaticamente.
+Cria uma barra de ferramentas de AutoOcultar.
 
 ```
 CMFCAutoHideToolBar* AutoHidePane(
@@ -482,18 +482,18 @@ CMFCAutoHideToolBar* AutoHidePane(
 ### <a name="parameters"></a>Parâmetros
 
 *pBar*<br/>
-[in] Um ponteiro para a barra de painel.
+no Um ponteiro para o painel de barras.
 
 *pCurrAutoHideToolBar*<br/>
-[in] Um ponteiro para um automaticamente ocultar barra de ferramentas.
+no Um ponteiro para uma barra de ferramentas de ocultar automaticamente.
 
 ### <a name="return-value"></a>Valor de retorno
 
-NULL se ocultar a barra de ferramentas automática não foi criada; Caso contrário, um ponteiro para a nova barra de ferramentas.
+NULL se a barra de ferramentas de ocultar automaticamente não tiver sido criada; caso contrário, um ponteiro para a nova barra de ferramentas.
 
 ##  <a name="bringbarstotop"></a>  CDockingManager::BringBarsToTop
 
-Traz as barras encaixadas que têm o alinhamento especificado para a parte superior.
+Coloca as barras encaixadas que têm o alinhamento especificado na parte superior.
 
 ```
 void BringBarsToTop(
@@ -504,14 +504,14 @@ void BringBarsToTop(
 ### <a name="parameters"></a>Parâmetros
 
 *dwAlignment*<br/>
-[in] O alinhamento das barras de encaixe que são colocados na parte superior de outras janelas.
+no O alinhamento das barras de encaixe que são trazidas para a parte superior de outras janelas.
 
 *bExcludeDockedBars*<br/>
-[in] TRUE para impedir que as barras encaixadas sejam na parte superior; Caso contrário, FALSE.
+no TRUE para excluir as barras encaixadas da parte superior; caso contrário, FALSE.
 
 ##  <a name="buildpanesmenu"></a>  CDockingManager::BuildPanesMenu
 
-Adiciona os nomes dos painéis de encaixe e barras de ferramentas a um menu.
+Adiciona nomes de painéis de encaixe e barras de ferramentas a um menu.
 
 ```
 void BuildPanesMenu(
@@ -522,10 +522,10 @@ void BuildPanesMenu(
 ### <a name="parameters"></a>Parâmetros
 
 *menu*<br/>
-[in] Um menu para adicionar os nomes dos painéis de encaixe e barras de ferramentas para.
+no Um menu para adicionar os nomes dos painéis e barras de ferramentas de encaixe ao.
 
 *bToolbarsOnly*<br/>
-[in] TRUE para adicionar nomes de barra de ferramentas apenas para o menu; FALSE caso contrário.
+no TRUE para adicionar apenas os nomes da barra de ferramentas ao menu; Caso contrário, FALSE.
 
 ##  <a name="calcexpecteddockedrect"></a>  CDockingManager::CalcExpectedDockedRect
 
@@ -543,23 +543,23 @@ void CalcExpectedDockedRect(
 ### <a name="parameters"></a>Parâmetros
 
 *pWnd*<br/>
-[in] Um ponteiro para a janela encaixar.
+no Um ponteiro para a janela a ser encaixada.
 
 *ptMouse*<br/>
-[in] O local do mouse.
+no O local do mouse.
 
 *rectResult*<br/>
-[out] O retângulo calculado.
+fora O retângulo calculado.
 
 *bDrawTab*<br/>
-[in] True para desenhar uma guia; Caso contrário, FALSE.
+no TRUE para desenhar uma guia; caso contrário, FALSE.
 
 *ppTargetBar*<br/>
-[out] Um ponteiro para um ponteiro para o painel de destino.
+fora Um ponteiro para um ponteiro para o painel de destino.
 
 ### <a name="remarks"></a>Comentários
 
-Esse método calcula o retângulo que uma janela deve ocupar se um usuário arrastava a janela para o ponto especificado por *ptMouse* e encaixados-lo lá.
+Esse método calcula o retângulo que uma janela ocuparia se um usuário arrastasse a janela para o ponto especificado por *ptMouse* e o encaixava lá.
 
 ##  <a name="create"></a>  CDockingManager::Create
 
@@ -572,11 +572,11 @@ BOOL Create(CFrameWnd* pParentWnd);
 ### <a name="parameters"></a>Parâmetros
 
 *pParentWnd*<br/>
-[in] Um ponteiro para o quadro principal do Gerenciador de encaixe. Esse valor não deve ser NULL.
+no Um ponteiro para o quadro pai do Gerenciador de encaixe. Esse valor não deve ser nulo.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Sempre TRUE.
+Sempre verdadeiro.
 
 ##  <a name="determinepaneandstatus"></a>  CDockingManager::DeterminePaneAndStatus
 
@@ -595,22 +595,22 @@ virtual AFX_CS_STATUS DeterminePaneAndStatus(
 ### <a name="parameters"></a>Parâmetros
 
 *pt*<br/>
-[in] O local do painel para verificar.
+no O local do painel a ser verificado.
 
 *nSensitivity*<br/>
-[in] O valor para aumentar o retângulo da janela de cada painel selecionado. Um painel satisfaz os critérios de pesquisa, se o ponto especificado está nesta região maior.
+no O valor para aumentar o retângulo da janela de cada painel selecionado. Um painel satisfaz os critérios de pesquisa se o ponto determinado estiver nessa região aumentada.
 
 *dwEnabledAlignment*<br/>
-[in] O alinhamento do painel de encaixe.
+no O alinhamento do painel de encaixe.
 
 *ppTargetBar*<br/>
-[out] Um ponteiro para um ponteiro para o painel de destino.
+fora Um ponteiro para um ponteiro para o painel de destino.
 
 *pBarToIgnore*<br/>
-[in] O painel que o método ignora.
+no O painel que o método ignora.
 
 *pBarToDock*<br/>
-[in] O painel que está encaixado.
+no O painel que está encaixado.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -620,16 +620,16 @@ O status de encaixe.
 
 O status de encaixe pode ser um dos seguintes valores:
 
-|Valor AFX_CS_STATUS|Significado|
+|Valor de AFX_CS_STATUS|Significado|
 |---------------------------|-------------|
-|CS_NOTHING|O ponteiro não está sobre um local de encaixe. Portanto, mantenha o painel flutuante.|
-|CS_DOCK_IMMEDIATELY|O ponteiro está sobre o local de encaixe no modo imediato (estilo DT_IMMEDIATE estiver habilitado), portanto, o painel deve ser encaixado imediatamente.|
-|CS_DELAY_DOCK|O ponteiro está sobre um local de encaixe que é outro painel de encaixe ou é uma borda do quadro principal.|
-|CS_DELAY_DOCK_TO_TAB|O ponteiro está sobre um local de encaixe que faz com que o painel seja encaixado em uma janela com guias. Isso ocorre quando o mouse está sobre uma legenda de outro painel de encaixe ou sobre uma área da guia de um painel com guias.|
+|CS_NOTHING|O ponteiro não está sobre um site de encaixe. Portanto, mantenha o painel flutuante.|
+|CS_DOCK_IMMEDIATELY|O ponteiro está sobre o site de encaixe no modo imediato (o estilo DT_IMMEDIATE está habilitado), portanto, o painel deve ser encaixado imediatamente.|
+|CS_DELAY_DOCK|O ponteiro é sobre um site de encaixe que é outro painel de encaixe ou é uma borda do quadro principal.|
+|CS_DELAY_DOCK_TO_TAB|O ponteiro é sobre um site de encaixe que faz com que o painel seja encaixado em uma janela com guias. Isso ocorre quando o mouse está sobre uma legenda de outro painel de encaixe ou sobre uma área de tabulação de um painel com guias.|
 
 ##  <a name="disablerestoredockstate"></a>  CDockingManager::DisableRestoreDockState
 
-Habilita ou desabilita o carregamento de layout de encaixe do registro.
+Habilita ou desabilita o carregamento do layout de encaixe do registro.
 
 ```
 void DisableRestoreDockState(BOOL bDisable = TRUE);
@@ -638,15 +638,15 @@ void DisableRestoreDockState(BOOL bDisable = TRUE);
 ### <a name="parameters"></a>Parâmetros
 
 *bDisable*<br/>
-[in] True para desabilitar o carregamento do layout de encaixe do registro; Caso contrário, FALSE.
+no TRUE para desabilitar o carregamento do layout de encaixe do registro; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-Chame esse método quando você deve preservar o layout atual de painéis de encaixe e barras de ferramentas quando o estado do aplicativo está sendo carregado.
+Chame esse método quando for necessário preservar o layout atual de painéis de encaixe e barras de ferramentas quando o estado do aplicativo estiver sendo carregado.
 
 ##  <a name="dockpane"></a>  CDockingManager::DockPane
 
-Encaixa um painel para outro painel ou para uma janela de quadro.
+Encaixa um painel em outro painel ou em uma janela do quadro.
 
 ```
 void DockPane(
@@ -658,13 +658,13 @@ void DockPane(
 ### <a name="parameters"></a>Parâmetros
 
 *pBar*<br/>
-[in] Um ponteiro para uma barra de painel para encaixar.
+no Um ponteiro para um painel de barras para encaixar.
 
 *nDockBarID*<br/>
-[in] A id da barra para encaixar.
+no A ID da barra a ser encaixada.
 
 *lpRect*<br/>
-[in] O retângulo de destino.
+no O retângulo de destino.
 
 ##  <a name="dockpaneleftof"></a>  CDockingManager::DockPaneLeftOf
 
@@ -679,18 +679,18 @@ BOOL DockPaneLeftOf(
 ### <a name="parameters"></a>Parâmetros
 
 *pBarToDock*<br/>
-[in] Um ponteiro para o painel para ser encaixado à esquerda do *pTargetBar*.
+no Um ponteiro para o painel a ser encaixado à esquerda de *pTargetBar*.
 
 *pTargetBar*<br/>
-[in] Um ponteiro para o painel de destino.
+no Um ponteiro para o painel de destino.
 
 ### <a name="return-value"></a>Valor de retorno
 
-TRUE se o painel foi encaixado com êxito; Caso contrário, FALSE.
+TRUE se o painel foi encaixado com êxito; caso contrário, FALSE.
 
 ##  <a name="enableautohidepanes"></a>  CDockingManager::EnableAutoHidePanes
 
-Permite o encaixe do painel para o quadro principal, cria um painel de encaixe e adiciona-o à lista de barras de controle.
+Habilita o encaixe do painel no quadro principal, cria um painel de encaixe e o adiciona à lista de barras de controle.
 
 ```
 BOOL EnableAutoHidePanes(DWORD dwStyle);
@@ -699,15 +699,15 @@ BOOL EnableAutoHidePanes(DWORD dwStyle);
 ### <a name="parameters"></a>Parâmetros
 
 *dwStyle*<br/>
-[in] O alinhamento de encaixe.
+no O alinhamento de encaixe.
 
 ### <a name="return-value"></a>Valor de retorno
 
-VERDADEIRO se o painel de encaixe foi criado com êxito; FALSE caso contrário.
+TRUE se o painel de encaixe tiver sido criado com êxito; Caso contrário, FALSE.
 
 ##  <a name="enabledocking"></a>  CDockingManager::EnableDocking
 
-Cria um painel de encaixe e habilita o encaixe do painel para o quadro principal.
+Cria um painel de encaixe e habilita o encaixe do painel no quadro principal.
 
 ```
 BOOL EnableDocking(DWORD dwStyle);
@@ -716,15 +716,15 @@ BOOL EnableDocking(DWORD dwStyle);
 ### <a name="parameters"></a>Parâmetros
 
 *dwStyle*<br/>
-[in] O alinhamento de encaixe.
+no O alinhamento de encaixe.
 
 ### <a name="return-value"></a>Valor de retorno
 
-VERDADEIRO se o painel de encaixe foi criado com êxito; FALSE caso contrário.
+TRUE se o painel de encaixe tiver sido criado com êxito; Caso contrário, FALSE.
 
 ##  <a name="enabledocksitemenu"></a>  CDockingManager::EnableDockSiteMenu
 
-Exibe mais um botão que abre um menu pop-up nas legendas de todos os painéis de encaixe.
+Exibe um botão adicional que abre um menu pop-up nas legendas de todos os painéis de encaixe.
 
 ```
 static void EnableDockSiteMenu(BOOL bEnable = TRUE);
@@ -733,25 +733,25 @@ static void EnableDockSiteMenu(BOOL bEnable = TRUE);
 ### <a name="parameters"></a>Parâmetros
 
 *bEnable*<br/>
-[in] TRUE para habilitar o menu de encaixe de site; Caso contrário, FALSE.
+no TRUE para habilitar o menu do site de encaixe; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-O menu de encaixe site exibe as seguintes opções para alterar o estado de encaixe do painel:
+O menu encaixar site exibe as seguintes opções para alterar o estado de encaixe do painel:
 
-- `Floating` -Flutua um painel
+- `Floating`-Flutua um painel
 
-- `Docking` -Encaixa um painel de quadro principal no local onde o painel foi ancorado pela última vez
+- `Docking`-Encaixa um painel no quadro principal no local em que o painel foi encaixado pela última vez
 
-- `AutoHide` – Alterna o painel para o modo de ocultar automaticamente
+- `AutoHide`-Alterna o painel para o modo de AutoOcultar
 
-- `Hide` -Oculta um painel
+- `Hide`-Oculta um painel
 
 Por padrão, esse menu não é exibido.
 
 ##  <a name="enablepanecontextmenu"></a>  CDockingManager::EnablePaneContextMenu
 
-Informa a biblioteca para exibir um menu de contexto especial que tem uma lista de painéis de encaixe e barras de ferramentas de aplicativo quando o usuário clica no botão direito do mouse e a biblioteca está processando a mensagem WM_CONTEXTMENU.
+Informa à biblioteca para exibir um menu de contexto especial que tem uma lista de barras de ferramentas do aplicativo e painéis de encaixe quando o usuário clica no botão direito do mouse e a biblioteca está processando a mensagem WM_CONTEXTMENU.
 
 ```
 void EnablePaneContextMenu(
@@ -764,20 +764,20 @@ void EnablePaneContextMenu(
 ### <a name="parameters"></a>Parâmetros
 
 *bEnable*<br/>
-[in] Se for TRUE, a biblioteca ativa o suporte para o menu de contexto automático: Se FALSE a biblioteca desativa o suporte para o menu de contexto automática.
+no Se for TRUE, a biblioteca ativará o suporte para o menu de contexto automático; Se FALSE, a biblioteca desativa o suporte para o menu de contexto automático.
 
 *uiCustomizeCmd*<br/>
-[in] Uma id de comando para o **personalizar** item no menu.
+no Uma ID de comando para o item de **personalização** no menu.
 
 *strCustomizeText*<br/>
-[in] O texto do **personalizar** item.
+no O texto do item de **personalização** .
 
 *bToolbarsOnly*<br/>
-[in] Se for TRUE, o menu exibe apenas uma lista das barras de ferramentas do aplicativo; Se for FALSE, a biblioteca adiciona os painéis de encaixe de aplicativo a essa lista.
+no Se for TRUE, o menu exibirá apenas uma lista de barras de ferramentas do aplicativo; Se for FALSE, a biblioteca adicionará painéis de encaixe de aplicativo a essa lista.
 
 ##  <a name="finddocksite"></a>  CDockingManager::FindDockSite
 
-Recupera a barra de painel que está na posição especificada e que tem o alinhamento especificado.
+Recupera o painel de barras que está na posição especificada e que tem o alinhamento especificado.
 
 ```
 virtual CDockSite* FindDockSite(
@@ -788,18 +788,18 @@ virtual CDockSite* FindDockSite(
 ### <a name="parameters"></a>Parâmetros
 
 *dwAlignment*<br/>
-[in] O alinhamento da barra de painel.
+no O alinhamento do painel de barras.
 
 *bOuter*<br/>
-[in] Se for TRUE, recupere a barra na posição principal na lista de barras de controle. Caso contrário, recupere a barra na posição final na lista das barras de controle.
+no Se for TRUE, recupere a barra na posição de cabeçalho na lista de barras de controle. Caso contrário, recupere a barra na posição da parte final na lista de barras de controle.
 
 ### <a name="return-value"></a>Valor de retorno
 
-O painel de encaixe que tem o alinhamento especificado; Do contrário, nulo.
+O painel de encaixe que tem o alinhamento especificado; Caso contrário, nulo.
 
 ##  <a name="findpanebyid"></a>  CDockingManager::FindPaneByID
 
-Localiza um painel pela ID do controle especificado.
+Localiza um painel pela ID de controle especificada.
 
 ```
 virtual CBasePane* FindPaneByID(
@@ -810,20 +810,20 @@ virtual CBasePane* FindPaneByID(
 ### <a name="parameters"></a>Parâmetros
 
 *uBarID*<br/>
-[in] Especifica a ID de controle do painel para localizar.
+no Especifica a ID de controle do painel a ser localizado.
 
 *bSearchMiniFrames*<br/>
-[in] TRUE para incluir painéis flutuantes tudo na pesquisa. FALSO para incluir apenas os painéis encaixados.
+no TRUE para incluir todos os painéis flutuantes na pesquisa. FALSE para incluir apenas os painéis encaixados.
 
 ### <a name="return-value"></a>Valor de retorno
 
-O [CBasePane](../../mfc/reference/cbasepane-class.md) objeto que tem o controle especificado ID, ou nulo se o painel especificado não pode ser encontrado.
+O objeto [CBasePane](../../mfc/reference/cbasepane-class.md) que tem a ID de controle especificada ou NULL se o painel especificado não puder ser encontrado.
 
 ### <a name="remarks"></a>Comentários
 
 ##  <a name="finddocksitebypane"></a>  CDockingManager::FindDockSiteByPane
 
-Retorna a barra de painel que tem a id do painel da barra de destino.
+Retorna o painel de barras que tem a ID do painel da barra de destino.
 
 ```
 virtual CDockSite* FindDockSiteByPane(CPane* pTargetBar);
@@ -832,15 +832,15 @@ virtual CDockSite* FindDockSiteByPane(CPane* pTargetBar);
 ### <a name="parameters"></a>Parâmetros
 
 *pTargetBar*<br/>
-[in] Um ponteiro para o painel da barra de destino.
+no Um ponteiro para o painel da barra de destino.
 
 ### <a name="return-value"></a>Valor de retorno
 
-A barra de painel que tem a id do painel de barra de destino; NULO se não há como um painel da barra existe.
+O painel de barras que tem a ID do painel da barra de destino; NULL se não existir esse painel de barras.
 
 ##  <a name="fixupvirtualrects"></a>  CDockingManager::FixupVirtualRects
 
-Confirma todas as posições de barra de ferramentas atual a retângulos virtuais.
+Confirma todas as posições da barra de ferramentas atual para retângulos virtuais.
 
 ```
 virtual void FixupVirtualRects();
@@ -848,11 +848,11 @@ virtual void FixupVirtualRects();
 
 ### <a name="remarks"></a>Comentários
 
-Quando o usuário começa a arrastar uma barra de ferramentas, o aplicativo se lembra de sua posição original na *retângulo virtual*. Quando o usuário move uma barra de ferramentas em seu local de encaixe, a barra de ferramentas pode ser deslocados outras barras de ferramentas. As posições originais das outras barras de ferramentas são armazenadas em retângulos virtuais correspondentes.
+Quando o usuário começa a arrastar uma barra de ferramentas, o aplicativo lembra sua posição original no *retângulo virtual*. Quando o usuário move uma barra de ferramentas pelo site de encaixe, a barra de ferramentas pode mudar outras barras de ferramentas. As posições originais das outras barras de ferramentas são armazenadas nos retângulos virtuais correspondentes.
 
 ##  <a name="framefrompoint"></a>  CDockingManager::FrameFromPoint
 
-Retorna o quadro que contém o ponto especificado.
+Retorna o quadro que contém o ponto determinado.
 
 ```
 virtual CPaneFrameWnd* FrameFromPoint(
@@ -864,21 +864,21 @@ virtual CPaneFrameWnd* FrameFromPoint(
 ### <a name="parameters"></a>Parâmetros
 
 *pt*<br/>
-[in] Especifica o ponto em coordenadas da tela, para verificar.
+no Especifica o ponto, em coordenadas da tela, para verificar.
 
 *pFrameToExclude*<br/>
-[in] Um ponteiro para um quadro a ser excluído.
+no Um ponteiro para um quadro a ser excluído.
 
 *bFloatMultiOnly*<br/>
-[in] True para excluir os registros não são instâncias do `CMultiPaneFrameWnd`; FALSE caso contrário.
+no TRUE para excluir os quadros que não são instâncias `CMultiPaneFrameWnd`de; Caso contrário, FALSE.
 
 ### <a name="return-value"></a>Valor de retorno
 
-O quadro que contém o ponto fornecido; Do contrário, nulo.
+O quadro que contém o ponto determinado; Caso contrário, nulo.
 
 ##  <a name="getclientareabounds"></a>  CDockingManager::GetClientAreaBounds
 
-Obtém o retângulo que contém os limites da área de cliente.
+Obtém o retângulo que contém os limites da área do cliente.
 
 ```
 CRect GetClientAreaBounds() const;
@@ -889,15 +889,15 @@ void GetClientAreaBounds(CRect& rcClient);
 ### <a name="parameters"></a>Parâmetros
 
 *rcClient*<br/>
-[out] Uma referência para o retângulo que contém os limites da área de cliente.
+fora Uma referência ao retângulo que contém os limites da área do cliente.
 
 ### <a name="return-value"></a>Valor de retorno
 
-O retângulo que contém os limites da área de cliente.
+O retângulo que contém os limites da área do cliente.
 
 ##  <a name="getdockingmode"></a>  CDockingManager::GetDockingMode
 
-Retorna o modo atual de encaixe.
+Retorna o modo de encaixe atual.
 
 ```
 static AFX_DOCK_TYPE GetDockingMode();
@@ -905,7 +905,7 @@ static AFX_DOCK_TYPE GetDockingMode();
 
 ### <a name="return-value"></a>Valor de retorno
 
-Um valor de enumerador que representa o modo atual de encaixe. Ele pode ser um dos seguintes valores:
+Um valor de enumerador que representa o modo de encaixe atual. Pode ser um dos seguintes valores:
 
 - DT_STANDARD
 
@@ -915,11 +915,11 @@ Um valor de enumerador que representa o modo atual de encaixe. Ele pode ser um d
 
 ### <a name="remarks"></a>Comentários
 
-Para definir o modo de encaixe, chame [CDockingManager::SetDockingMode](#setdockingmode).
+Para definir o modo de encaixe, chame [CDockingManager:: SetDockingMode](#setdockingmode).
 
 ##  <a name="getdocksiteframewnd"></a>  CDockingManager::GetDockSiteFrameWnd
 
-Obtém um ponteiro para o quadro de janela pai.
+Obtém um ponteiro para o quadro da janela pai.
 
 ```
 CFrameWnd* GetDockSiteFrameWnd() const;
@@ -927,7 +927,7 @@ CFrameWnd* GetDockSiteFrameWnd() const;
 
 ### <a name="return-value"></a>Valor de retorno
 
-Um ponteiro para o quadro de janela pai.
+Um ponteiro para o quadro da janela pai.
 
 ##  <a name="getenabledautohidealignment"></a>  CDockingManager::GetEnabledAutoHideAlignment
 
@@ -939,11 +939,11 @@ DWORD GetEnabledAutoHideAlignment() const;
 
 ### <a name="return-value"></a>Valor de retorno
 
-Uma combinação bit a bit dos sinalizadores CBRS_ALIGN_ ou 0 se os painéis de ocultar automaticamente não estiverem habilitados. Para obter mais informações, consulte [CFrameWnd::EnableDocking](../../mfc/reference/cframewnd-class.md#enabledocking).
+Uma combinação de bits de CBRS_ALIGN_ flags ou 0 se os painéis de AutoOcultar não estiverem habilitados. Para obter mais informações, consulte [CFrameWnd:: EnableDocking](../../mfc/reference/cframewnd-class.md#enabledocking).
 
 ### <a name="remarks"></a>Comentários
 
-O método retorna o alinhamento habilitado para barras de controle de ocultar automaticamente. Para habilitar as barras de ocultar automaticamente, chame [CFrameWndEx::EnableAutoHidePanes](../../mfc/reference/cframewndex-class.md#enableautohidepanes).
+O método retorna o alinhamento habilitado para ocultar barras de controle automaticamente. Para habilitar as barras de AutoOcultar, chame [CFrameWndEx:: EnableAutoHidePanes](../../mfc/reference/cframewndex-class.md#enableautohidepanes).
 
 ##  <a name="getminiframes"></a>  CDockingManager::GetMiniFrames
 
@@ -984,22 +984,22 @@ void GetPaneList(
 ### <a name="parameters"></a>Parâmetros
 
 *lstBars*<br/>
-[no, out] Contém todos os painéis do Gerenciador de encaixe atual.
+[entrada, saída] Contém todos os painéis do Gerenciador de encaixe atual.
 
 *bIncludeAutohide*<br/>
-[in] TRUE para incluir os painéis que estão no modo de ocultar automaticamente; Caso contrário, FALSE.
+no TRUE para incluir os painéis que estão no modo de AutoOcultar; caso contrário, FALSE.
 
 *pRTCFilter*<br/>
-[in] Se não for NULL, a lista retornada contém painéis apenas da classe de tempo de execução especificado.
+no Se não for NULL, a lista retornada conterá painéis somente da classe de tempo de execução especificada.
 
 *bIncludeTabs*<br/>
-[in] TRUE para incluir guias; Caso contrário, FALSE.
+no TRUE para incluir guias; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-Se houver qualquer painéis com guias no Gerenciador de encaixe, o método retorna ponteiros para [classe CBaseTabbedPane](../../mfc/reference/cbasetabbedpane-class.md) objetos e você deve enumerar as guias explicitamente.
+Se houver qualquer painel com guias no Gerenciador de encaixe, o método retornará ponteiros para objetos de [classe CBaseTabbedPane](../../mfc/reference/cbasetabbedpane-class.md) e você deverá enumerar as guias explicitamente.
 
-Use *pRTCFilter* para obter uma classe específica de painéis. Por exemplo, você pode obter somente as barras de ferramentas ao definir esse valor apropriadamente.
+Use *pRTCFilter* para obter uma classe de painéis específica. Por exemplo, você pode obter apenas barras de ferramentas definindo esse valor adequadamente.
 
 ##  <a name="getsmartdockingmanager"></a>  CDockingManager::GetSmartDockingManager
 
@@ -1027,7 +1027,7 @@ Um ponteiro para o Gerenciador de encaixe inteligente.
 
 ##  <a name="getsmartdockingparams"></a>  CDockingManager::GetSmartDockingParams
 
-Retorna os parâmetros de encaixe inteligentes para o Gerenciador de encaixe.
+Retorna os parâmetros de encaixe inteligente para o Gerenciador de encaixe.
 
 ```
 static CSmartDockingInfo& GetSmartDockingParams();
@@ -1035,13 +1035,13 @@ static CSmartDockingInfo& GetSmartDockingParams();
 
 ### <a name="return-value"></a>Valor de retorno
 
-A classe que contém os parâmetros de encaixe inteligentes para o Gerenciador de encaixe atual. Para obter mais informações, consulte [classe CSmartDockingInfo](../../mfc/reference/csmartdockinginfo-class.md).
+A classe que contém os parâmetros de encaixe inteligente para o Gerenciador de encaixe atual. Para obter mais informações, consulte [classe CSmartDockingInfo](../../mfc/reference/csmartdockinginfo-class.md).
 
 ### <a name="remarks"></a>Comentários
 
 ##  <a name="hideautohidepanes"></a>  CDockingManager::HideAutoHidePanes
 
-Oculta um painel que está no modo de ocultar automaticamente.
+Oculta um painel que está no modo de AutoOcultar.
 
 ```
 void HideAutoHidePanes(
@@ -1052,10 +1052,10 @@ void HideAutoHidePanes(
 ### <a name="parameters"></a>Parâmetros
 
 *pBarToExclude*<br/>
-[in] Um ponteiro para uma barra para excluir de ocultação.
+no Um ponteiro para uma barra a ser excluído da ocultação.
 
 *bImmediately*<br/>
-[in] TRUE para ocultar o painel imediatamente; FALSO para ocultar o painel com o efeito de ocultar automaticamente.
+no TRUE para ocultar o painel imediatamente; FALSE para ocultar o painel com o efeito de AutoOcultar.
 
 ##  <a name="insertdocksite"></a>  CDockingManager::InsertDockSite
 
@@ -1071,17 +1071,17 @@ BOOL InsertDockSite(
 ### <a name="parameters"></a>Parâmetros
 
 *info*<br/>
-[in] Uma estrutura que contém as informações de alinhamento sobre o painel de encaixe.
+no Uma estrutura que contém as informações de alinhamento sobre o painel de encaixe.
 
 *dwAlignToInsertAfter*<br/>
-[in] Alinhamento do painel de encaixe.
+no Alinhamento do painel Dock.
 
 *ppDockBar*<br/>
-[out] Um ponteiro para um ponteiro para um painel de encaixe.
+fora Um ponteiro para um ponteiro para um painel de encaixe.
 
 ### <a name="return-value"></a>Valor de retorno
 
-VERDADEIRO se o painel de encaixe foi criado com êxito; FALSE caso contrário.
+TRUE se o painel de encaixe tiver sido criado com êxito; Caso contrário, FALSE.
 
 ##  <a name="insertpane"></a>  CDockingManager::InsertPane
 
@@ -1097,21 +1097,21 @@ BOOL InsertPane(
 ### <a name="parameters"></a>Parâmetros
 
 *pControlBar*<br/>
-[in] Um ponteiro para um painel de controle.
+no Um ponteiro para um painel de controle.
 
 *pTarget*<br/>
-[in] Um ponteiro para um painel de destino.
+no Um ponteiro para um painel de destino.
 
 *bAfter*<br/>
-[in] TRUE para inserir o painel após a posição do painel de destino; FALSE caso contrário.
+no TRUE para inserir o painel após a posição do painel de destino; Caso contrário, FALSE.
 
 ### <a name="return-value"></a>Valor de retorno
 
-TRUE se o painel de controle é adicionado com êxito à lista de barras de controle; FALSE caso contrário.
+TRUE se o painel de controle for adicionado com êxito à lista de barras de controle; Caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-Este método retornará false se o painel de controle já estiver na lista de barras de controle ou se o painel de destino não existe na lista de barras de controle.
+Esse método retornará false se o painel de controle já estiver na lista de barras de controle ou se o painel de destino não existir na lista de barras de controle.
 
 ##  <a name="isdocksitemenu"></a>  CDockingManager::IsDockSiteMenu
 
@@ -1123,11 +1123,11 @@ static BOOL IsDockSiteMenu();
 
 ### <a name="return-value"></a>Valor de retorno
 
-TRUE se um menu do site de encaixe é exibido nas legendas de todos os painéis de encaixe; Caso contrário, FALSE.
+TRUE se um menu do site de encaixe for exibido nas legendas de todos os painéis de encaixe; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-Você pode habilitar o menu de encaixe do site ao chamar [CDockingManager::EnableDockSiteMenu](#enabledocksitemenu).
+Você pode habilitar o menu encaixar site chamando [CDockingManager:: EnableDockSiteMenu](#enabledocksitemenu).
 
 ##  <a name="isinadjustlayout"></a>  CDockingManager::IsInAdjustLayout
 
@@ -1139,7 +1139,7 @@ BOOL IsInAdjustLayout() const;
 
 ### <a name="return-value"></a>Valor de retorno
 
-TRUE se os layouts de todos os painéis são ajustados; FALSE caso contrário.
+TRUE se os layouts de todos os painéis forem ajustados; Caso contrário, FALSE.
 
 ##  <a name="isolecontainermode"></a>  CDockingManager::IsOLEContainerMode
 
@@ -1151,15 +1151,15 @@ BOOL IsOLEContainerMode() const;
 
 ### <a name="return-value"></a>Valor de retorno
 
-TRUE se o Gerenciador de encaixe estiver no modo de contêiner OLE. Caso contrário, FALSE.
+TRUE se o Gerenciador de encaixe estiver no modo de contêiner OLE; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-No modo de contêiner OLE, todos os painéis de encaixe e barras de ferramentas do aplicativo estão ocultos. Os painéis também são ocultos nesse modo, se você tiver definido [CDockingManager::m_bHideDockingBarsInContainerMode](#m_bhidedockingbarsincontainermode) como TRUE.
+No modo de contêiner OLE, todos os painéis de encaixe e as barras de ferramentas do aplicativo ficam ocultos. Os painéis também estarão ocultos nesse modo se você tiver definido [CDockingManager:: m_bHideDockingBarsInContainerMode](#m_bhidedockingbarsincontainermode) como true.
 
 ##  <a name="ispointneardocksite"></a>  CDockingManager::IsPointNearDockSite
 
-Determina se um ponto especificado está perto o local de encaixe.
+Determina se um ponto especificado está próximo ao site de encaixe.
 
 ```
 BOOL IsPointNearDockSite(
@@ -1171,17 +1171,17 @@ BOOL IsPointNearDockSite(
 ### <a name="parameters"></a>Parâmetros
 
 *point*<br/>
-[in] O ponto especificado.
+no O ponto especificado.
 
 *dwBarAlignment*<br/>
-[out] Especifica que o ponto está próximo de borda. Os valores possíveis são CBRS_ALIGN_LEFT, CBRS_ALIGN_RIGHT, CBRS_ALIGN_TOP e CBRS_ALIGN_BOTTOM.
+fora Especifica em qual borda o ponto está próximo. Os valores possíveis são CBRS_ALIGN_LEFT, CBRS_ALIGN_RIGHT, CBRS_ALIGN_TOP e CBRS_ALIGN_BOTTOM.
 
 *bOuterEdge*<br/>
-[out] TRUE se o ponto está próximo a borda externa do local de encaixe; FALSE caso contrário.
+fora TRUE se o ponto estiver próximo à borda externa do site de encaixe; Caso contrário, FALSE.
 
 ### <a name="return-value"></a>Valor de retorno
 
-TRUE se o ponto é quase o local de encaixe; Caso contrário, FALSE.
+TRUE se o ponto estiver próximo do site de encaixe; caso contrário, FALSE.
 
 ##  <a name="isprintpreviewvalid"></a>  CDockingManager::IsPrintPreviewValid
 
@@ -1193,7 +1193,7 @@ BOOL IsPrintPreviewValid() const;
 
 ### <a name="return-value"></a>Valor de retorno
 
-TRUE se o modo de visualização de impressão estiver definido; FALSE caso contrário.
+TRUE se o modo de visualização de impressão estiver definido; Caso contrário, FALSE.
 
 ##  <a name="loadstate"></a>  CDockingManager::LoadState
 
@@ -1208,18 +1208,18 @@ virtual BOOL LoadState(
 ### <a name="parameters"></a>Parâmetros
 
 *lpszProfileName*<br/>
-[in] Nome do perfil.
+no Nome do perfil.
 
 *uiID*<br/>
-[in] A id do Gerenciador de encaixe.
+no A ID do Gerenciador de encaixe.
 
 ### <a name="return-value"></a>Valor de retorno
 
-TRUE se o estado de encaixe Gerenciador foi carregado com êxito; Caso contrário, FALSE.
+TRUE se o estado do Gerenciador de encaixe tiver sido carregado com êxito; caso contrário, FALSE.
 
 ##  <a name="lockupdate"></a>  CDockingManager::LockUpdate
 
-Bloqueia a determinada janela.
+Bloqueia a janela especificada.
 
 ```
 void LockUpdate(BOOL bLock);
@@ -1228,15 +1228,15 @@ void LockUpdate(BOOL bLock);
 ### <a name="parameters"></a>Parâmetros
 
 *bLock*<br/>
-[in] TRUE se a janela está bloqueada; FALSE caso contrário.
+no TRUE se a janela estiver bloqueada; Caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-Quando uma janela é bloqueada, ele não pode ser movido e ele não pode ser redesenhado.
+Quando uma janela é bloqueada, ela não pode ser movida e não pode ser redesenhada.
 
 ##  <a name="m_bhidedockingbarsincontainermode"></a>  CDockingManager::m_bHideDockingBarsInContainerMode
 
-Especifica se o Gerenciador de encaixe oculta os painéis no modo de contêiner OLE.
+Especifica se o Gerenciador de encaixe oculta painéis no modo de contêiner OLE.
 
 ```
 AFX_IMPORT_DATA static BOOL m_bHideDockingBarsInContainerMode;
@@ -1244,7 +1244,7 @@ AFX_IMPORT_DATA static BOOL m_bHideDockingBarsInContainerMode;
 
 ### <a name="remarks"></a>Comentários
 
-Defina esse valor como FALSE se você quiser manter todos os painéis encaixados quadro principal visível quando o aplicativo está no modo de contêiner OLE. Por padrão, esse valor for TRUE.
+Defina esse valor como FALSE se desejar manter todos os painéis encaixados no quadro principal visível quando o aplicativo estiver no modo de contêiner OLE. Por padrão, esse valor é TRUE.
 
 ##  <a name="m_dockmodeglobal"></a>  CDockingManager::m_dockModeGlobal
 
@@ -1256,7 +1256,7 @@ AFX_IMPORT_DATA static AFX_DOCK_TYPE m_dockModeGlobal;
 
 ### <a name="remarks"></a>Comentários
 
-Por padrão, cada painel de encaixe usa esse modo de encaixe. Para obter mais informações sobre os valores que esse campo pode ser definido como, consulte [CBasePane::GetDockingMode](../../mfc/reference/cbasepane-class.md#getdockingmode).
+Por padrão, cada painel de encaixe usa esse modo de encaixe. Para obter mais informações sobre os valores para os quais esse campo pode ser definido, consulte [CBasePane:: GetDockingMode](../../mfc/reference/cbasepane-class.md#getdockingmode).
 
 ##  <a name="m_ndocksensitivity"></a>  CDockingManager::m_nDockSensitivity
 
@@ -1268,11 +1268,11 @@ AFX_IMPORT_DATA static int m_nDockSensitivity;
 
 ### <a name="remarks"></a>Comentários
 
-A sensibilidade de encaixe define quão próximo flutuante painel pode abordar um painel de encaixe, ancoragem site ou outro painel antes que o framework muda seu estado para encaixado.
+A sensibilidade de encaixe define como fechar um painel flutuante pode abordar um painel de encaixe, um site de encaixe ou outro painel antes que a estrutura mude seu estado para encaixado.
 
 ##  <a name="m_ntimeoutbeforedockingbardock"></a>  CDockingManager::m_nTimeOutBeforeDockingBarDock
 
-Especifica o tempo, em milissegundos, antes de um painel de encaixe é encaixado no modo de encaixe imediato.
+Especifica o tempo, em milissegundos, antes que um painel de encaixe seja encaixado no modo de encaixe imediato.
 
 ```
 static UINT m_nTimeOutBeforeDockingBarDock;
@@ -1280,11 +1280,11 @@ static UINT m_nTimeOutBeforeDockingBarDock;
 
 ### <a name="remarks"></a>Comentários
 
-Antes de um painel é encaixado, o framework aguarda o período de tempo especificado. Isso impede que o painel acidentalmente sendo encaixado em um local enquanto o usuário está arrastando ainda.
+Antes que um painel seja encaixado, a estrutura aguarda o período de tempo especificado. Isso impede que o painel seja encaixado acidentalmente em um local enquanto o usuário ainda está arrastando-o.
 
 ##  <a name="m_ntimeoutbeforetoolbardock"></a>  CDockingManager::m_nTimeOutBeforeToolBarDock
 
-Especifica o tempo, em milissegundos, antes de uma barra de ferramentas é encaixada na janela do quadro principal.
+Especifica o tempo, em milissegundos, antes que uma barra de ferramentas seja encaixada na janela do quadro principal.
 
 ```
 static UINT m_nTimeOutBeforeToolBarDock;
@@ -1292,11 +1292,11 @@ static UINT m_nTimeOutBeforeToolBarDock;
 
 ### <a name="remarks"></a>Comentários
 
-Antes de uma barra de ferramentas estiver encaixada, a estrutura aguarda o período de tempo especificado. Isso impede que a barra de ferramentas que está sendo encaixado acidentalmente para um local enquanto o usuário está arrastando ainda.
+Antes que uma barra de ferramentas seja encaixada, a estrutura aguarda o período de tempo especificado. Isso impede que a barra de ferramentas seja encaixada acidentalmente em um local enquanto o usuário ainda está arrastando-a.
 
 ##  <a name="onactivateframe"></a>  CDockingManager::OnActivateFrame
 
-Chamado pelo framework quando a janela do quadro ficará ativa ou está desativada.
+Chamado pelo Framework quando a janela do quadro é ativada ou desativada.
 
 ```
 virtual void OnActivateFrame(BOOL bActivate);
@@ -1305,11 +1305,11 @@ virtual void OnActivateFrame(BOOL bActivate);
 ### <a name="parameters"></a>Parâmetros
 
 *bActivate*<br/>
-[in] Se for TRUE, a janela do quadro é ativada; Se for FALSE, a janela do quadro é desativada.
+no Se for TRUE, a janela do quadro será ativada; Se for FALSE, a janela do quadro será desativada.
 
 ##  <a name="onclosepopupmenu"></a>  CDockingManager::OnClosePopupMenu
 
-Chamado pelo framework quando um menu pop-up ativo processa uma mensagem WM_DESTROY.
+Chamado pelo Framework quando um menu pop-up ativo processa uma mensagem WM_DESTROY.
 
 ```
 void OnClosePopupMenu();
@@ -1317,11 +1317,11 @@ void OnClosePopupMenu();
 
 ### <a name="remarks"></a>Comentários
 
-A estrutura envia uma mensagem WM_DESTROY quando ele está prestes a fechar a janela principal atual. Substitua este método para lidar com notificações de `CMFCPopupMenu` objetos que pertencem à janela do quadro quando uma `CMFCPopupMenu` objeto processa uma mensagem WM_DESTROY.
+A estrutura envia uma mensagem WM_DESTROY quando está prestes a fechar a janela principal atual. Substitua esse método para manipular notificações de `CMFCPopupMenu` objetos que pertencem à janela do quadro quando um `CMFCPopupMenu` objeto processa uma mensagem WM_DESTROY.
 
 ##  <a name="onmoveminiframe"></a>  CDockingManager::OnMoveMiniFrame
 
-Chamado pelo framework para mover uma janela com minimoldura.
+Chamado pelo Framework para mover uma janela de mini-quadro.
 
 ```
 virtual BOOL OnMoveMiniFrame(CWnd* pFrame);
@@ -1330,15 +1330,15 @@ virtual BOOL OnMoveMiniFrame(CWnd* pFrame);
 ### <a name="parameters"></a>Parâmetros
 
 *pFrame*<br/>
-[in] Um ponteiro para uma janela com minimoldura.
+no Um ponteiro para uma janela de mini-quadro.
 
 ### <a name="return-value"></a>Valor de retorno
 
-TRUE se o método for bem-sucedido; Caso contrário, FALSE.
+TRUE se o método for executado com sucesso; caso contrário, FALSE.
 
 ##  <a name="onpanecontextmenu"></a>  CDockingManager::OnPaneContextMenu
 
-Chamado pelo framework quando ele cria um menu que tem uma lista de painéis.
+Chamado pelo Framework quando ele cria um menu que tem uma lista de painéis.
 
 ```
 void OnPaneContextMenu(CPoint point);
@@ -1347,11 +1347,11 @@ void OnPaneContextMenu(CPoint point);
 ### <a name="parameters"></a>Parâmetros
 
 *point*<br/>
-[in] Especifica o local do menu.
+no Especifica o local do menu.
 
 ##  <a name="panefrompoint"></a>  CDockingManager::PaneFromPoint
 
-Retorna o painel que contém o ponto especificado.
+Retorna o painel que contém o ponto determinado.
 
 ```
 virtual CBasePane* PaneFromPoint(
@@ -1373,37 +1373,37 @@ virtual CBasePane* PaneFromPoint(
 ### <a name="parameters"></a>Parâmetros
 
 *point*<br/>
-[in] Especifica o ponto em coordenadas da tela, para verificar.
+no Especifica o ponto, em coordenadas da tela, para verificar.
 
 *nSensitivity*<br/>
-[in] O valor para inflar o retângulo da janela de cada painel selecionado. Um painel satisfaz os critérios de pesquisa, se o ponto especificado está nesta região inflado.
+no O valor para inflar o retângulo da janela de cada painel selecionado. Um painel satisfaz os critérios de pesquisa se o ponto determinado estiver nessa região inplana.
 
 *bExactBar*<br/>
-[in] TRUE para ignorar a *nSensitivity* parâmetro; caso contrário, FALSE.
+no TRUE para ignorar o parâmetro *nSensitivity* ; caso contrário, FALSE.
 
 *pRTCBarType*<br/>
-[in] Se não for NULL, o método procura apenas os painéis do tipo especificado.
+no Se não for NULL, o método pesquisará apenas os painéis do tipo especificado.
 
 *bCheckVisibility*<br/>
-[in] True para painéis de seleção visível somente; Caso contrário, FALSE.
+no TRUE para verificar apenas os painéis visíveis; caso contrário, FALSE.
 
 *dwAlignment*<br/>
-[out] Se um painel for encontrado no ponto especificado, este parâmetro conterá o lado do painel que foi mais próximo ao ponto especificado. Para obter mais informações, consulte a seção Comentários.
+fora Se um painel for encontrado no ponto especificado, esse parâmetro conterá o lado do painel mais próximo do ponto especificado. Para obter mais informações, consulte a seção Comentários.
 
 *pBarToIgnore*<br/>
-[in] Se não for NULL, o método ignora painéis especificados por esse parâmetro.
+no Se não for NULL, o método ignorará os painéis especificados por esse parâmetro.
 
 ### <a name="return-value"></a>Valor de retorno
 
-O [CBasePane](../../mfc/reference/cbasepane-class.md)-objeto derivado que contém o ponto especificado ou nulo se nenhum painel foi encontrado.
+O objeto derivado de [CBasePane](../../mfc/reference/cbasepane-class.md)que contém o ponto determinado, ou NULL se nenhum painel foi encontrado.
 
 ### <a name="remarks"></a>Comentários
 
-Quando a função retornará e um painel foi encontrado, *dwAlignment* contém o alinhamento do ponto especificado. Por exemplo, se o ponto fosse mais próximo à parte superior do painel de *dwAlignment* é definido como CBRS_ALIGN_TOP.
+Quando a função retorna e um painel foi encontrado, *dwAlignment* contém o alinhamento do ponto especificado. Por exemplo, se o ponto estava mais próximo da parte superior do painel, *dwAlignment* é definido como CBRS_ALIGN_TOP.
 
 ##  <a name="processpanecontextmenucommand"></a>  CDockingManager::ProcessPaneContextMenuCommand
 
-Chamado pelo framework para selecionar ou para limpar uma caixa de seleção para o comando especificado e recalcular o layout de um painel mostrado.
+Chamado pelo Framework para marcar ou desmarcar uma caixa de seleção para o comando especificado e recalcular o layout de um painel mostrado.
 
 ```
 BOOL ProcessPaneContextMenuCommand(
@@ -1416,20 +1416,20 @@ BOOL ProcessPaneContextMenuCommand(
 ### <a name="parameters"></a>Parâmetros
 
 *nID*<br/>
-[in] A id de uma barra de controle no menu.
+no A ID de uma barra de controle no menu.
 
 *nCode*<br/>
-[in] O código de notificação do comando.
+no O código de notificação do comando.
 
 *pExtra*<br/>
-[in] Um ponteiro para void que é convertido em um ponteiro para `CCmdUI` se *nCode* é CN_UPDATE_COMMAND_UI.
+no Um ponteiro para void que é convertido em um ponteiro para `CCmdUI` se *nCode* for CN_UPDATE_COMMAND_UI.
 
 *pHandlerInfo*<br/>
-[in] Um ponteiro para uma estrutura de informações. Este parâmetro não é usado.
+no Um ponteiro para uma estrutura de informações. Este parâmetro não é usado.
 
 ### <a name="return-value"></a>Valor de retorno
 
-TRUE se *pEXtra* não for nulo e *nCode* é igual a CN_UPDATE_COMMAND_UI, ou se houver uma barra de controle com especificado *nID*.
+TRUE se *pExtra* não for nulo e *nCode* for igual a CN_UPDATE_COMMAND_UI ou se houver uma barra de controle com a *NID*especificada.
 
 ##  <a name="recalclayout"></a>  CDockingManager::RecalcLayout
 
@@ -1442,11 +1442,11 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 ### <a name="parameters"></a>Parâmetros
 
 *bNotify*<br/>
-[in] Esse parâmetro não é usado.
+no Esse parâmetro não é usado.
 
 ##  <a name="releaseemptypanecontainers"></a>  CDockingManager::ReleaseEmptyPaneContainers
 
-Libera os contêineres de painel vazio.
+Libera os contêineres de painel vazios.
 
 ```
 void ReleaseEmptyPaneContainers();
@@ -1454,7 +1454,7 @@ void ReleaseEmptyPaneContainers();
 
 ##  <a name="removehiddenmditabbedbar"></a>  CDockingManager::RemoveHiddenMDITabbedBar
 
-Remove o oculta o painel da barra.
+Remove o painel de barras ocultos especificado.
 
 ```
 void RemoveHiddenMDITabbedBar(CDockablePane* pBar);
@@ -1463,11 +1463,11 @@ void RemoveHiddenMDITabbedBar(CDockablePane* pBar);
 ### <a name="parameters"></a>Parâmetros
 
 *pBar*<br/>
-[in] Um ponteiro para uma barra de painel a ser removido.
+no Um ponteiro para um painel de barras a ser removido.
 
 ##  <a name="removeminiframe"></a>  CDockingManager::RemoveMiniFrame
 
-Remove um intervalo especificado da lista de quadros minidespejos.
+Remove um quadro especificado da lista de mini quadros.
 
 ```
 virtual BOOL RemoveMiniFrame(CPaneFrameWnd* pWnd);
@@ -1476,15 +1476,15 @@ virtual BOOL RemoveMiniFrame(CPaneFrameWnd* pWnd);
 ### <a name="parameters"></a>Parâmetros
 
 *pWnd*<br/>
-[in] Um ponteiro para um quadro a ser removido.
+no Um ponteiro para um quadro a ser removido.
 
 ### <a name="return-value"></a>Valor de retorno
 
-TRUE se o quadro especificado for removido; FALSE caso contrário.
+TRUE se o quadro especificado for removido; Caso contrário, FALSE.
 
 ##  <a name="removepanefromdockmanager"></a>  CDockingManager::RemovePaneFromDockManager
 
-Cancela o registro de um painel e a remove da lista no Gerenciador de encaixe.
+Cancela o registro de um painel e o Remove da lista no Gerenciador de encaixe.
 
 ```
 void RemovePaneFromDockManager(
@@ -1498,23 +1498,23 @@ void RemovePaneFromDockManager(
 ### <a name="parameters"></a>Parâmetros
 
 *pWnd*<br/>
-[in] Um ponteiro para um painel a ser removido.
+no Um ponteiro para um painel a ser removido.
 
 *bDestroy*<br/>
-[in] Se for TRUE, o painel removido é destruído.
+no Se for TRUE, o painel removido será destruído.
 
 *bAdjustLayout*<br/>
-[in] Se for TRUE, ajuste o layout de encaixe imediatamente.
+no Se for TRUE, ajuste o layout de encaixe imediatamente.
 
 *bAutoHide*<br/>
-[in] Se for TRUE, o painel é removido da lista de barras de ocultar automaticamente. Se for FALSE, o painel é removido da lista de painéis regulares.
+no Se for TRUE, o painel será removido da lista de barras de AutoOcultar. Se for FALSE, o painel será removido da lista de painéis normais.
 
 *pBarReplacement*<br/>
-[in] Um ponteiro para um painel que substitui o painel removido.
+no Um ponteiro para um painel que substitui o painel removido.
 
 ##  <a name="replacepane"></a>  CDockingManager::ReplacePane
 
-Substitui um painel com outra.
+Substitui um painel por outro.
 
 ```
 BOOL ReplacePane(
@@ -1525,18 +1525,18 @@ BOOL ReplacePane(
 ### <a name="parameters"></a>Parâmetros
 
 *pOriginalBar*<br/>
-[in] Um ponteiro para o painel original.
+no Um ponteiro para o painel original.
 
 *pNewBar*<br/>
-[in] Um ponteiro para o painel que substitui o painel de dados original.
+no Um ponteiro para o painel que substitui o painel original.
 
 ### <a name="return-value"></a>Valor de retorno
 
-TRUE se o painel é substituído com êxito; FALSE caso contrário.
+TRUE se o painel for substituído com êxito; Caso contrário, FALSE.
 
 ##  <a name="resortminiframesforzorder"></a>  CDockingManager::ResortMiniFramesForZOrder
 
-Recorre os quadros na lista de quadros minidespejos.
+Resort os quadros na lista de mini quadros.
 
 ```
 void ResortMiniFramesForZOrder();
@@ -1555,22 +1555,22 @@ virtual BOOL SaveState(
 ### <a name="parameters"></a>Parâmetros
 
 *lpszProfileName*<br/>
-[in] Um caminho para uma chave do registro.
+no Um caminho para uma chave do registro.
 
 *uiID*<br/>
-[in] A ID de gerente encaixe.
+no A ID do Gerenciador de encaixe.
 
 ### <a name="return-value"></a>Valor de retorno
 
-TRUE se o estado foi salvo com êxito; Caso contrário, FALSE.
+TRUE se o estado foi salvo com êxito; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-Salvamento do estado de encaixe do gerente para o registro envolve a salvar os estados das barras de controle, os estados das barras de ocultar automaticamente e os estados dos quadros minidespejos presentes no Gerenciador de encaixe.
+Salvar o estado do Gerenciador de encaixe no registro envolve salvar os Estados das barras de controle, os Estados das barras de AutoOcultar e os Estados dos mini quadros presentes no Gerenciador de encaixe.
 
 ##  <a name="sendmessagetominiframes"></a>  CDockingManager::SendMessageToMiniFrames
 
-Envia a mensagem especificada para todos os quadros de minidespejos.
+Envia a mensagem especificada para todos os mini quadros.
 
 ```
 BOOL SendMessageToMiniFrames(
@@ -1582,21 +1582,21 @@ BOOL SendMessageToMiniFrames(
 ### <a name="parameters"></a>Parâmetros
 
 *uMessage*<br/>
-[in] A mensagem a ser enviada.
+no A mensagem a ser enviada.
 
 *wParam*<br/>
-[in] Informações de dependentes adicionais da mensagem.
+no Informações adicionais dependentes da mensagem.
 
 *lParam*<br/>
-[in] Informações de dependentes adicionais da mensagem.
+no Informações adicionais dependentes da mensagem.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Sempre TRUE.
+Sempre verdadeiro.
 
 ##  <a name="serialize"></a>  CDockingManager::Serialize
 
-Grava o encaixe Gerenciador em um arquivo morto.
+Grava o Gerenciador de encaixe em um arquivo morto.
 
 ```
 void Serialize(CArchive& ar);
@@ -1605,15 +1605,15 @@ void Serialize(CArchive& ar);
 ### <a name="parameters"></a>Parâmetros
 
 *ar*<br/>
-[in] Uma referência a um objeto de arquivo morto.
+no Uma referência a um objeto de arquivo morto.
 
 ### <a name="remarks"></a>Comentários
 
-Gravando o encaixe Gerenciador em um arquivo morto envolve a determinação do número de controles deslizantes e barras de controle de encaixe e escrever as barras de controle, os quadros minidespejos, as barras de ocultar automaticamente e as barras MDI com guias para o arquivo morto.
+Escrever o Gerenciador de encaixe em um arquivo envolve determinar o número de barras de controle de encaixe e controles deslizantes e escrever as barras de controle, os mini quadros, as barras de AutoOcultar e as barras com guias MDI para o arquivo morto.
 
 ##  <a name="setautohidezorder"></a>  CDockingManager::SetAutohideZOrder
 
-Define o tamanho, largura e altura das barras de controle e o painel especificado.
+Define o tamanho, a largura e a altura das barras de controle e o painel especificado.
 
 ```
 void SetAutohideZOrder(CDockablePane* pAHDockingBar);
@@ -1622,7 +1622,7 @@ void SetAutohideZOrder(CDockablePane* pAHDockingBar);
 ### <a name="parameters"></a>Parâmetros
 
 *pAHDockingBar*<br/>
-[in] Um ponteiro para um painel encaixável.
+no Um ponteiro para um painel de encaixáveis.
 
 ##  <a name="setdockingmode"></a>  CDockingManager::SetDockingMode
 
@@ -1640,7 +1640,7 @@ static void SetDockingMode(
 Especifica o novo modo de encaixe. Para obter mais informações, consulte a seção Comentários.
 
 *theme*<br/>
-Especifica o tema a ser usado para marcadores inteligentes de encaixe. Ele pode ser um dos seguintes valores enumerados: AFX_SDT_DEFAULT, AFX_SDT_VS2005, AFX_SDT_VS2008.
+Especifica o tema a ser usado para marcadores de encaixe inteligente. Pode ser um dos seguintes valores enumerados: AFX_SDT_DEFAULT, AFX_SDT_VS2005, AFX_SDT_VS2008.
 
 ### <a name="remarks"></a>Comentários
 
@@ -1648,15 +1648,15 @@ Chame esse método estático para definir o modo de encaixe.
 
 *dockMode* pode ser um dos seguintes valores:
 
-- DT_STANDARD - modo de encaixe padrão como implementado no Visual Studio .NET 2003. Painéis são arrastados sem um contexto de arrastar.
+- DT_STANDARD – modo de encaixe padrão conforme implementado no Visual Studio .NET 2003. Os painéis são arrastados sem um contexto de arrastar.
 
-- DT_IMMEDIATE - modo de encaixe imediato como implementado no Microsoft Visio. Painéis são arrastados com um contexto de arrastar, mas nenhum marcadores são exibidos.
+- DT_IMMEDIATE – modo de encaixe imediato conforme implementado no Microsoft Visio. Os painéis são arrastados com um contexto de arrastar, mas nenhum marcador é exibido.
 
-- DT_SMART - modo de encaixe inteligente como implementado no Visual Studio 2005. Painéis são arrastados com um contexto de arrastar e marcadores inteligentes são exibidos para mostrar onde o painel pode ser encaixado.
+- DT_SMART – modo de encaixe inteligente conforme implementado no Visual Studio 2005. Os painéis são arrastados com um contexto de arrastar e os marcadores inteligentes são exibidos mostrando onde o painel pode ser encaixado.
 
 ##  <a name="setdockstate"></a>  CDockingManager::SetDockState
 
-Define o estado de encaixe das barras de controle, os quadros minidespejos e as barras de ocultar automaticamente.
+Define o estado de encaixe das barras de controle, os mini quadros e as barras de AutoOcultar.
 
 ```
 virtual void SetDockState();
@@ -1664,7 +1664,7 @@ virtual void SetDockState();
 
 ##  <a name="setprintpreviewmode"></a>  CDockingManager::SetPrintPreviewMode
 
-Define o modo de visualização de impressão das barras que são exibidos na visualização de impressão.
+Define o modo de visualização de impressão das barras exibidas na visualização de impressão.
 
 ```
 void SetPrintPreviewMode(
@@ -1675,14 +1675,14 @@ void SetPrintPreviewMode(
 ### <a name="parameters"></a>Parâmetros
 
 *bPreview*<br/>
-[in] TRUE se o modo de visualização de impressão estiver definido; FALSE caso contrário.
+no TRUE se o modo de visualização de impressão estiver definido; Caso contrário, FALSE.
 
 *pState*<br/>
-[in] Um ponteiro para um estado de visualização. Este parâmetro não é usado.
+no Um ponteiro para um estado de visualização. Este parâmetro não é usado.
 
 ##  <a name="setsmartdockingparams"></a>  CDockingManager::SetSmartDockingParams
 
-Define os parâmetros que definem o comportamento de encaixe inteligente.
+Define os parâmetros que definem o comportamento do encaixe inteligente.
 
 ```
 static void SetSmartDockingParams(CSmartDockingInfo& params);
@@ -1691,17 +1691,17 @@ static void SetSmartDockingParams(CSmartDockingInfo& params);
 ### <a name="parameters"></a>Parâmetros
 
 *params*<br/>
-[no, out] Define os parâmetros para encaixar inteligente.
+[entrada, saída] Define os parâmetros para encaixe inteligente.
 
 ### <a name="remarks"></a>Comentários
 
-Chame esse método se você quiser personalizar a aparência, a cor ou a forma de marcadores inteligentes de encaixe.
+Chame esse método se desejar personalizar a aparência, a cor ou a forma dos marcadores de encaixe inteligente.
 
-Para usar a aparência padrão de marcadores inteligentes de encaixe, passe uma instância não inicializada de [classe CSmartDockingInfo](../../mfc/reference/csmartdockinginfo-class.md) à *params*.
+Para usar a aparência padrão para marcadores de encaixe inteligente, passe uma instância não inicializada da [classe CSmartDockingInfo](../../mfc/reference/csmartdockinginfo-class.md) para *params*.
 
 ##  <a name="showdelayshowminiframes"></a>  CDockingManager::ShowDelayShowMiniFrames
 
-Mostra ou oculta as janelas dos quadros minidespejos.
+Mostra ou oculta as janelas dos mini quadros.
 
 ```
 void ShowDelayShowMiniFrames(BOOL bshow);
@@ -1710,11 +1710,11 @@ void ShowDelayShowMiniFrames(BOOL bshow);
 ### <a name="parameters"></a>Parâmetros
 
 *bShow*<br/>
-[in] TRUE para ativar a janela do quadro mostrado; FALSO para ocultar a janela do quadro.
+no TRUE para tornar a janela do quadro mostrado ativa; FALSE para ocultar a janela do quadro.
 
 ##  <a name="showpanes"></a>  CDockingManager::ShowPanes
 
-Mostra ou oculta os painéis das barras de controle e ocultar automaticamente.
+Mostra ou oculta os painéis do controle e as barras de AutoOcultar.
 
 ```
 virtual BOOL ShowPanes(BOOL bShow);
@@ -1723,7 +1723,7 @@ virtual BOOL ShowPanes(BOOL bShow);
 ### <a name="parameters"></a>Parâmetros
 
 *bShow*<br/>
-[in] TRUE para mostrar os painéis; FALSO para ocultar os painéis.
+no TRUE para mostrar os painéis; FALSE para ocultar os painéis.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -1731,7 +1731,7 @@ Sempre FALSE.
 
 ##  <a name="startsdocking"></a>  CDockingManager::StartSDocking
 
-Inicia o encaixe inteligente da janela especificada de acordo com o alinhamento do encaixe Gerenciador inteligente.
+Inicia o encaixe inteligente da janela especificada de acordo com o alinhamento do Gerenciador de encaixe inteligente.
 
 ```
 void StartSDocking(CWnd* pDockingWnd);
@@ -1740,11 +1740,11 @@ void StartSDocking(CWnd* pDockingWnd);
 ### <a name="parameters"></a>Parâmetros
 
 *pDockingWnd*<br/>
-[in] Um ponteiro para uma janela de encaixe.
+no Um ponteiro para uma janela a ser encaixada.
 
 ##  <a name="stopsdocking"></a>  CDockingManager::StopSDocking
 
-Paradas de inteligentes de encaixe.
+Para o encaixe inteligente.
 
 ```
 void StopSDocking();
@@ -1752,7 +1752,7 @@ void StopSDocking();
 
 ##  <a name="getsmartdockingtheme"></a>  CDockingManager::GetSmartDockingTheme
 
-Um método estático que retorna um tema usado para exibir os marcadores inteligentes de encaixe.
+Um método estático que retorna um tema usado para exibir marcadores de encaixe inteligente.
 
 ```
 static AFX_SMARTDOCK_THEME __stdcall GetSmartDockingTheme();

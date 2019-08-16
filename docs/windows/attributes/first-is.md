@@ -1,21 +1,21 @@
 ---
-title: first_is (C++ COM atributo)
+title: first_is (C++ atributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.first_is
 helpviewer_keywords:
 - first_is attribute
 ms.assetid: 89acbf56-3b38-4d44-83e8-1ce2f6f74ffd
-ms.openlocfilehash: 79ddcb3a3ca256af4c7c30536d65c820dcef2afe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9d06435caaeb53beb76bd145c92c470446cae3a7
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409597"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501565"
 ---
-# <a name="firstis"></a>first_is
+# <a name="first_is"></a>first_is
 
-Especifica o índice do primeiro elemento da matriz a ser transmitido.
+Especifica o índice do primeiro elemento de matriz a ser transmitido.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -25,16 +25,16 @@ Especifica o índice do primeiro elemento da matriz a ser transmitido.
 
 ### <a name="parameters"></a>Parâmetros
 
-*Expressão*<br/>
-Uma ou mais expressões de linguagem C. Slots de argumentos vazia são permitidos.
+*expression*<br/>
+Uma ou mais expressões em linguagem C. São permitidos slots de argumento vazios.
 
 ## <a name="remarks"></a>Comentários
 
-O **first_is** C++ atributo tem a mesma funcionalidade que o [first_is](/windows/desktop/Midl/first-is) atributo MIDL.
+O atributo **first_is** C++ tem a mesma funcionalidade que o atributo MIDL [first_is](/windows/win32/Midl/first-is) .
 
 ## <a name="example"></a>Exemplo
 
-O código a seguir mostra várias maneiras para especificar uma seção em uma matriz:
+O código a seguir mostra várias maneiras de especificar uma seção em uma matriz:
 
 ```cpp
 // cpp_attr_ref_first_is.cpp
@@ -58,16 +58,16 @@ requestedit] HRESULT get_I([out, retval]long *i);
 
 ## <a name="requirements"></a>Requisitos
 
-### <a name="attribute-context"></a>Atributo de contexto
+### <a name="attribute-context"></a>Contexto de atributo
 
 |||
 |-|-|
-|**Aplica-se a**|Campo do **struct** ou **união**, a interface do parâmetro, o método de interface|
+|**Aplica-se a**|Campo em **struct** ou **Union**, parâmetro de interface, método de interface|
 |**Repetível**|Não|
-|**Atributos obrigatórios**|Nenhum|
+|**Atributos necessários**|Nenhum|
 |**Atributos inválidos**|Nenhum|
 
-Para obter mais informações, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
+Para obter mais informações, consulte contextos de [atributo](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Consulte também
 

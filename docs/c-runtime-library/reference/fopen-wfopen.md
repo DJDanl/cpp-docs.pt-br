@@ -32,14 +32,14 @@ helpviewer_keywords:
 - files [C++], opening
 - fopen function
 ms.assetid: e868993f-738c-4920-b5e4-d8f2f41f933d
-ms.openlocfilehash: 0b1dbc72124188d06da48f47e47c11ae6d06e771
-ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
+ms.openlocfilehash: b57ed2b26428c48efbe544c2b4802e347b915c29
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68376185"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499948"
 ---
-# <a name="fopen-wfopen"></a>fopen, _wfopen
+# <a name="fopen-_wfopen"></a>fopen, _wfopen
 
 Abre um arquivo. Versões mais seguras dessas funções que executam validação de parâmetro adicional e retornam códigos de erro estão disponíveis; consulte [fopen_s, wfopen_s](fopen-s-wfopen-s.md).
 
@@ -72,7 +72,7 @@ Para obter mais informações, consulte [errno, _doserrno, _sys_errlist e _sys_n
 
 ## <a name="remarks"></a>Comentários
 
-A função **fopen** abre o arquivo especificado por *filename*. Por padrão, uma cadeia de caracteres de *nome de arquivo* estreita é interpretada usando a página de código ANSI (CP_ACP). Em aplicativos de área de trabalho do Windows, isso pode ser alterado para a página de código OEM (CP_OEMCP) usando a função [SetFileApisToOEM](/windows/desktop/api/fileapi/nf-fileapi-setfileapistooem). Você pode usar a função [AreFileApisANSI](/windows/desktop/api/fileapi/nf-fileapi-arefileapisansi) para determinar se o *nome do arquivo* é interpretado usando o ANSI ou a página de código OEM padrão do sistema. **_wfopen** é uma versão de caractere largo do **fopen**; os argumentos para **_wfopen** são cadeias de caracteres largos. Caso contrário, **_wfopen** e **fopen** se comportam de forma idêntica. Apenas usar **_wfopen** não afeta o conjunto de caracteres codificado usado no fluxo de arquivos.
+A função **fopen** abre o arquivo especificado por *filename*. Por padrão, uma cadeia de caracteres de *nome de arquivo* estreita é interpretada usando a página de código ANSI (CP_ACP). Em aplicativos de área de trabalho do Windows, isso pode ser alterado para a página de código OEM (CP_OEMCP) usando a função [SetFileApisToOEM](/windows/win32/api/fileapi/nf-fileapi-setfileapistooem). Você pode usar a função [AreFileApisANSI](/windows/win32/api/fileapi/nf-fileapi-arefileapisansi) para determinar se o *nome do arquivo* é interpretado usando o ANSI ou a página de código OEM padrão do sistema. **_wfopen** é uma versão de caractere largo do **fopen**; os argumentos para **_wfopen** são cadeias de caracteres largos. Caso contrário, **_wfopen** e **fopen** se comportam de forma idêntica. Apenas usar **_wfopen** não afeta o conjunto de caracteres codificado usado no fluxo de arquivos.
 
 **fopen** aceita caminhos que são válidos no sistema de arquivos no ponto de execução; o **fopen** aceita caminhos UNC e caminhos que envolvem unidades de rede mapeadas, desde que o sistema que executa o código tenha acesso ao compartilhamento ou à unidade mapeada no momento da execução. Ao construir caminhos para **fopen**, verifique se as unidades, os caminhos ou os compartilhamentos de rede estarão disponíveis no ambiente de execução. É possível usar barras (/) ou barras invertidas (\\) como separadores de diretório em um caminho.
 
@@ -115,7 +115,7 @@ Se *Mode* for **"a, CCS =** _Encoding_ **"** , o **fopen** primeiro tentará abr
 
 O *modo* de cadeia de caracteres especifica o tipo de acesso solicitado para o arquivo, como a seguir.
 
-|*modo*|Acesso|
+|*modo*|Access|
 |-|-|
 | **"r"** | Abre para leitura. Se o arquivo não existir ou não puder ser encontrado, a chamada **fopen** falhará. |
 | **"w"** | Abre um arquivo vazio para gravação. Se o arquivo determinado existir, seus conteúdos são destruídos. |
@@ -160,7 +160,7 @@ As opções a seguir podem ser acrescentadas ao *modo* para especificar comporta
 
 Os caracteres válidos para a cadeia de caracteres de *modo* usada em **fopen** e **_fdopen** correspondem aos argumentos *oflag* usados em [_open](open-wopen.md) e [_sopen](sopen-wsopen.md), da seguinte maneira.
 
-|Caracteres no *modo* String|Valor  equivalente de oflag \_para Open\_/sopen|
+|Caracteres no *modo* String|Valor equivalente de oflag \_para Open\_/sopen|
 |-------------------------------|----------------------------------------------------|
 |**a**|**\_O\_WRONLY** &#124; &#124; **oAppend\_(geralmente o WRONLY o CRI \_**  **\_\_** &#124;  **\_\_**  **\_ O\_Append**)|
 |**a +**|**\_O\_RDWR** &#124; &#124; **oAppend\_(geralmente o RDWR o Append \_**  **\_\_** &#124;  **\_\_**  **\_ O\_cri** )|

@@ -1,21 +1,21 @@
 ---
-title: local (C++ COM atributo)
+title: local (C++ atributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.local
 helpviewer_keywords:
 - local attribute
 ms.assetid: 35cdd668-bd8e-492a-b7b8-263e7b662437
-ms.openlocfilehash: 678968bb7b0f2e7af94124bea5b0967df27e43f7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 853331ce191f8fe41d5967d2d625a3dac8543a4d
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409220"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514407"
 ---
 # <a name="local-c"></a>local (C++)
 
-Quando usado no cabeçalho da interface, permite que você use o compilador MIDL como um gerador de cabeçalho. Quando usado em uma função individual, designa um procedimento de local para o qual nenhuma stubs são gerados.
+Quando usado no cabeçalho da interface, permite que você use o compilador MIDL como um gerador de cabeçalho. Quando usado em uma função individual, o designa um procedimento local para o qual nenhum stub é gerado.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -25,24 +25,24 @@ Quando usado no cabeçalho da interface, permite que você use o compilador MIDL
 
 ## <a name="remarks"></a>Comentários
 
-O **local** atributo C++ tem a mesma funcionalidade que o [local](/windows/desktop/Midl/local) atributo MIDL.
+O atributo **local** C++ tem a mesma funcionalidade que o atributo MIDL [local](/windows/win32/Midl/local) .
 
 ## <a name="example"></a>Exemplo
 
-Ver [call_as](call-as.md) para obter um exemplo de como usar **local**.
+Consulte [call_as](call-as.md) para obter um exemplo de como usar o **local**.
 
 ## <a name="requirements"></a>Requisitos
 
-### <a name="attribute-context"></a>Atributo de contexto
+### <a name="attribute-context"></a>Contexto de atributo
 
 |||
 |-|-|
 |**Aplica-se a**|**interface**, método de interface|
 |**Repetível**|Não|
-|**Atributos obrigatórios**|Nenhum|
+|**Atributos necessários**|Nenhum|
 |**Atributos inválidos**|`dispinterface`|
 
-Para obter mais informações, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
+Para obter mais informações, consulte contextos de [atributo](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Consulte também
 

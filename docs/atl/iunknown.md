@@ -6,18 +6,18 @@ helpviewer_keywords:
 - COM interfaces, base interface
 - IUnknown interface
 ms.assetid: e6b85472-e54b-4b8c-b19f-4454d6c05a8f
-ms.openlocfilehash: 17561092c6cccbad264bb82d68dbef9c0e078f76
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9c9faa4cffcdc8e6840dfbbe141cb63f51155ded
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62250277"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492067"
 ---
 # <a name="iunknown"></a>IUnknown
 
-[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) é a interface base de todas as outras interfaces COM.  Essa interface define três métodos: [QueryInterface](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)), [AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref), e [versão](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release). [QueryInterface](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)) permite que um usuário da interface peça o objeto de um ponteiro para outro de suas interfaces. [AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref) e [versão](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release) implementar a interface de contagem de referência.
+[IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) é a interface base de todas as outras interfaces com.  Essa interface define três métodos: [QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)), [AddRef](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref)e [Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release). [QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)) permite que um usuário de interface solicite ao objeto um ponteiro para outra de suas interfaces. O [AddRef](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref) e o [Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release) implementam a contagem de referência na interface.
 
 ## <a name="see-also"></a>Consulte também
 
 [Introdução a COM](../atl/introduction-to-com.md)<br/>
-[IUnknown e herança da Interface](/windows/desktop/com/iunknown-and-interface-inheritance)
+[IUnknown e herança de interface](/windows/win32/com/iunknown-and-interface-inheritance)

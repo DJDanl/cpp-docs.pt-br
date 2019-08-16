@@ -1,21 +1,21 @@
 ---
-title: importlib (C++ COM atributo)
+title: importlib (C++ atributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.importlib
 helpviewer_keywords:
 - importlib attribute
 ms.assetid: f129e459-b8d3-4aca-a0bc-ee53e18b62ed
-ms.openlocfilehash: 29c7df8fbedbd107a9bb0b05466addc4672fc555
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 92cf335e5c4754595f2c7af2e1aef30d309d2f5f
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409366"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514615"
 ---
 # <a name="importlib"></a>importlib
 
-Torna os tipos que já foram compilados em outra biblioteca de tipos disponível para a biblioteca de tipos que está sendo criada.
+Torna os tipos que já foram compilados em outra biblioteca de tipos disponíveis para a biblioteca de tipos que está sendo criada.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -26,11 +26,11 @@ Torna os tipos que já foram compilados em outra biblioteca de tipos disponível
 ### <a name="parameters"></a>Parâmetros
 
 *tlb_file*<br/>
-O nome de um arquivo. tlb, entre aspas, o que você deseja importado para a biblioteca de tipos do projeto atual.
+O nome de um arquivo. tlb, entre aspas, que você deseja importar para a biblioteca de tipos do projeto atual.
 
 ## <a name="remarks"></a>Comentários
 
-O **importlib** C++ atributo faz com que um `importlib` instrução a ser colocado no bloco de biblioteca do arquivo. idl gerado. O **importlib** atributo tem a mesma funcionalidade que o [importlib](/windows/desktop/Midl/importlib) atributo MIDL.
+O atributo **importlib** C++ faz com `importlib` que uma instrução seja colocada no bloco de biblioteca do arquivo. idl gerado. O atributo **importlib** tem a mesma funcionalidade que o atributo MIDL [importlib](/windows/win32/Midl/importlib) .
 
 ## <a name="example"></a>Exemplo
 
@@ -45,16 +45,16 @@ O código a seguir mostra um exemplo de como usar **importlib**:
 
 ## <a name="requirements"></a>Requisitos
 
-### <a name="attribute-context"></a>Atributo de contexto
+### <a name="attribute-context"></a>Contexto de atributo
 
 |||
 |-|-|
-|**Aplica-se a**|Em qualquer lugar|
+|**Aplica-se a**|Lugares|
 |**Repetível**|Não|
-|**Atributos obrigatórios**|Nenhum|
+|**Atributos necessários**|Nenhum|
 |**Atributos inválidos**|Nenhum|
 
-Para obter mais informações, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
+Para obter mais informações, consulte contextos de [atributo](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Consulte também
 

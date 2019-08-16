@@ -11,19 +11,19 @@ f1_keywords:
 helpviewer_keywords:
 - IPersistPropertyBagImpl class
 ms.assetid: 712af24d-99f8-40f2-9811-53b3ff6e5b19
-ms.openlocfilehash: 569a24fd08801de952e998f772afbc3478096628
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: 15b9c9738d921c4c6f7837f9280c6dd6b09392d6
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66503144"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69495771"
 ---
 # <a name="ipersistpropertybagimpl-class"></a>Classe IPersistPropertyBagImpl
 
-Essa classe implementa `IUnknown` e permite que um objeto salvar suas propriedades em um conjunto de propriedades fornecido pelo cliente.
+Essa classe implementa `IUnknown` e permite que um objeto salve suas propriedades em um recipiente de propriedades fornecido pelo cliente.
 
 > [!IMPORTANT]
->  Essa classe e seus membros não podem ser usados em aplicativos executados no tempo de execução do Windows.
+>  Essa classe e seus membros não podem ser usados em aplicativos que são executados no Windows Runtime.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -44,17 +44,17 @@ Sua classe, derivada de `IPersistPropertyBagImpl`.
 |Nome|Descrição|
 |----------|-----------------|
 |[IPersistPropertyBagImpl::GetClassID](#getclassid)|Recupera o CLSID do objeto.|
-|[IPersistPropertyBagImpl::InitNew](#initnew)|Inicializa um objeto recém-criado. A implementação de ATL Retorna S_OK.|
-|[IPersistPropertyBagImpl::Load](#load)|Carrega as propriedades do objeto de um conjunto de propriedades fornecido pelo cliente.|
-|[IPersistPropertyBagImpl::Save](#save)|Salva as propriedades do objeto em um recipiente fornecido pelo cliente.|
+|[IPersistPropertyBagImpl::InitNew](#initnew)|Inicializa um objeto recém-criado. A implementação da ATL retorna S_OK.|
+|[IPersistPropertyBagImpl::Load](#load)|Carrega as propriedades do objeto de um recipiente de propriedades fornecido pelo cliente.|
+|[IPersistPropertyBagImpl::Save](#save)|Salva as propriedades do objeto em um recipiente de propriedades fornecido pelo cliente.|
 
 ## <a name="remarks"></a>Comentários
 
-O [IPersistPropertyBag](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768205\(v=vs.85\)) interface permite que um objeto salvar suas propriedades em um conjunto de propriedades fornecido pelo cliente. Classe `IPersistPropertyBagImpl` fornece uma implementação padrão dessa interface e implementa `IUnknown` enviando informações para o despejo de compilações de dispositivo na depuração.
+A interface [IPersistPropertyBag](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768205\(v=vs.85\)) permite que um objeto salve suas propriedades em um recipiente de propriedades fornecido pelo cliente. Fornece uma implementação padrão dessa interface e implementa `IUnknown` enviando informações para o dispositivo de despejo em compilações de depuração. `IPersistPropertyBagImpl`
 
-`IPersistPropertyBag` funciona em conjunto com [IPropertyBag](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768196\(v=vs.85\)) e [IErrorLog](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768231\(v=vs.85\)). Essas duas interfaces último devem ser implementadas pelo cliente. Por meio de `IPropertyBag`, o cliente salva e carrega as propriedades do objeto individual. Por meio de `IErrorLog`, o objeto e o cliente podem relatar os erros encontrados.
+`IPersistPropertyBag`funciona em conjunto com [IPropertyBag](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768196\(v=vs.85\)) e [IErrorLog](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768231\(v=vs.85\)). Essas duas últimas interfaces devem ser implementadas pelo cliente. Por `IPropertyBag`meio do, o cliente salva e carrega as propriedades individuais do objeto. Por `IErrorLog`meio do, o objeto e o cliente podem relatar quaisquer erros encontrados.
 
-**Artigos relacionados** [Tutorial da ATL](../../atl/active-template-library-atl-tutorial.md), [criando um projeto ATL](../../atl/reference/creating-an-atl-project.md)
+**Artigos relacionados** [Tutorial do ATL](../../atl/active-template-library-atl-tutorial.md), [criando um projeto ATL](../../atl/reference/creating-an-atl-project.md)
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -64,7 +64,7 @@ O [IPersistPropertyBag](/previous-versions/windows/internet-explorer/ie-develope
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** atlcom
+**Cabeçalho:** atlcom. h
 
 ##  <a name="getclassid"></a>  IPersistPropertyBagImpl::GetClassID
 
@@ -76,7 +76,7 @@ STDMETHOD(GetClassID)(CLSID* pClassID);
 
 ### <a name="remarks"></a>Comentários
 
-Ver [IPersist::GetClassID](/windows/desktop/api/objidl/nf-objidl-ipersist-getclassid) no Windows SDK.
+Consulte [IPersist:: GetClassID](/windows/win32/api/objidl/nf-objidl-ipersist-getclassid) na SDK do Windows.
 
 ##  <a name="initnew"></a>  IPersistPropertyBagImpl::InitNew
 
@@ -92,11 +92,11 @@ Retorna S_OK.
 
 ### <a name="remarks"></a>Comentários
 
-Ver [IPersistPropertyBag::InitNew](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768204\(v=vs.85\)) no Windows SDK.
+Consulte [IPersistPropertyBag:: InitNew](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768204\(v=vs.85\)) na SDK do Windows.
 
 ##  <a name="load"></a>  IPersistPropertyBagImpl::Load
 
-Carrega as propriedades do objeto de um conjunto de propriedades fornecido pelo cliente.
+Carrega as propriedades do objeto de um recipiente de propriedades fornecido pelo cliente.
 
 ```
 STDMETHOD(Load)(LPPROPERTYBAG pPropBag, LPERRORLOG pErrorLog);
@@ -104,13 +104,13 @@ STDMETHOD(Load)(LPPROPERTYBAG pPropBag, LPERRORLOG pErrorLog);
 
 ### <a name="remarks"></a>Comentários
 
-ATL usa o mapa de propriedade do objeto para recuperar essas informações.
+A ATL usa o mapa de propriedades do objeto para recuperar essas informações.
 
-Ver [IPersistPropertyBag::Load](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768206\(v=vs.85\)) no Windows SDK.
+Consulte [IPersistPropertyBag:: Load](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768206\(v=vs.85\)) no SDK do Windows.
 
 ##  <a name="save"></a>  IPersistPropertyBagImpl::Save
 
-Salva as propriedades do objeto em um recipiente fornecido pelo cliente.
+Salva as propriedades do objeto em um recipiente de propriedades fornecido pelo cliente.
 
 ```
 STDMETHOD(Save)(
@@ -121,9 +121,9 @@ STDMETHOD(Save)(
 
 ### <a name="remarks"></a>Comentários
 
-ATL usa o mapa de propriedade do objeto para armazenar essas informações. Por padrão, esse método salva todas as propriedades, independentemente do valor *fSaveAllProperties*.
+A ATL usa o mapa de propriedades do objeto para armazenar essas informações. Por padrão, esse método salva todas as propriedades, independentemente do valor de *fSaveAllProperties*.
 
-Ver [IPersistPropertyBag::Save](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768207\(v=vs.85\)) no Windows SDK.
+Consulte [IPersistPropertyBag:: Save](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768207\(v=vs.85\)) no SDK do Windows.
 
 ## <a name="see-also"></a>Consulte também
 

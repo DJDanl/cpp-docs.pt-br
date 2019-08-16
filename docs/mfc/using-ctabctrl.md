@@ -7,20 +7,20 @@ helpviewer_keywords:
 - CTabCtrl class [MFC], using
 - tab controls [MFC], using
 ms.assetid: 6bda6798-0085-4c09-a5ea-fe0e97af5c95
-ms.openlocfilehash: 97844fea667edab5a4d1f1a49c3908454a203d1f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f07452fd52e2da3187e89ceafcd9f74e3f0cb159
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411676"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69510776"
 ---
 # <a name="using-ctabctrl"></a>Usando CTabCtrl
 
-Um "controle de guia" é análogo a pastas rotuladas de um arquivo ou os divisores de um bloco de anotações. Usar o controle de guia, representado pela classe [CTabCtrl](../mfc/reference/ctabctrl-class.md), para mostrar várias páginas de informações ou controles a um usuário, um de cada vez, em um formato que sugere uma relação lógica entre cada página ou mesmo nível.
+Um "controle de guia" é análogo aos divisores em um bloco de anotações ou às pastas rotuladas em um gabinete de arquivo. Use o controle guia, representado pela classe [CTabCtrl](../mfc/reference/ctabctrl-class.md), para mostrar várias páginas de informações ou controles a um usuário, um de cada vez, em um formato que sugere uma relação de ponto ou lógica entre cada página.
 
-Para obter mais informações sobre controles de guia, consulte [controles de guia](/windows/desktop/Controls/tab-controls) no SDK do Windows.
+Para obter mais informações sobre controles de guia, consulte [controles de guia](/windows/win32/Controls/tab-controls) na SDK do Windows.
 
-## <a name="what-do-you-want-to-know-more-about"></a>O que você deseja saber mais sobre
+## <a name="what-do-you-want-to-know-more-about"></a>Do que você deseja saber mais sobre
 
 - [Controles de guia e folhas de propriedades](../mfc/tab-controls-and-property-sheets.md)
 

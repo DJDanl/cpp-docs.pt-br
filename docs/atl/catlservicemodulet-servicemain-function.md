@@ -1,27 +1,27 @@
 ---
-title: 'Função catlservicemodulet:: Servicemain'
+title: 'Função CAtlServiceModuleT:: usermain'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ServiceMain method
 ms.assetid: f21408c1-1919-4dec-88d8-bf5b39ac9808
-ms.openlocfilehash: 81cd8fcbdf275063b243e215301eff504a2b5cc6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b79767d4c1696174f90a325ea152ccc7939ed9fe
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62223203"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69491719"
 ---
-# <a name="catlservicemoduletservicemain-function"></a>Função catlservicemodulet:: Servicemain
+# <a name="catlservicemoduletservicemain-function"></a>Função CAtlServiceModuleT:: usermain
 
-O Gerenciador de controle de serviços (SCM) chama `ServiceMain` quando você abre o aplicativo de painel de controle de serviços, selecione o serviço e clique em **iniciar**.
+As chamadas `ServiceMain` do Gerenciador de controle de serviço (SCM) quando você abre o aplicativo do painel de controle de serviços, selecionam o serviço e clicam em **Iniciar**.
 
-Depois do SCM chama `ServiceMain`, um serviço deve fornecer o SCM uma função de manipulador. Essa função permite que o SCM obter o status do serviço e passar as instruções específicas (como pausar ou parar). O SCM obtém essa função quando o serviço passa `_Handler` para a função de API do Win32, [RegisterServiceCtrlHandler](/windows/desktop/api/winsvc/nf-winsvc-registerservicectrlhandlera). (`_Handler` é uma função de membro estático que chama a função de membro não estático [manipulador](../atl/reference/catlservicemodulet-class.md#handler).)
+Após as chamadas `ServiceMain`de SCM, um serviço deve dar ao SCM uma função de manipulador. Essa função permite que o SCM obtenha o status do serviço e passe instruções específicas (como pausar ou parar). O SCM obtém essa função quando o serviço passa `_Handler` para a função de API do Win32, [RegisterServiceCtrlHandler](/windows/win32/api/winsvc/nf-winsvc-registerservicectrlhandlerw). (`_Handler` é uma função de membro estático que chama o [manipulador](../atl/reference/catlservicemodulet-class.md#handler)de função de membro não estático.)
 
-Na inicialização, um serviço também deve informar o SCM de seu status atual. Ele faz isso passando SERVICE_START_PENDING para a função de API do Win32, [SetServiceStatus](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus).
+Na inicialização, um serviço também deve informar o SCM de seu status atual. Ele faz isso passando SERVICE_START_PENDING para a função de API do Win32, [falha em SetServiceStatus](/windows/win32/api/winsvc/nf-winsvc-setservicestatus).
 
-`ServiceMain` em seguida, chama `CAtlExeModuleT::InitializeCom`, que chama a função de API do Win32 [CoInitializeEx](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializeex). Por padrão, `InitializeCom` passa o sinalizador COINIT_MULTITHREADED para a função. Esse sinalizador indica que o programa deve ser um servidor de thread livre.
+`ServiceMain`em seguida `CAtlExeModuleT::InitializeCom`, chama, que chama a função de API do Win32 [CoInitializeEx](/windows/win32/api/combaseapi/nf-combaseapi-coinitializeex). Por padrão, `InitializeCom` o passa o sinalizador COINIT_MULTITHREADED para a função. Esse sinalizador indica que o programa deve ser um servidor de thread livre.
 
-Agora, `CAtlServiceModuleT::Run` é chamado para executar o trabalho principal do serviço. `Run` continua sendo executado até que o serviço está parado.
+Agora, `CAtlServiceModuleT::Run` é chamado para executar o trabalho principal do serviço. `Run`continua a ser executado até que o serviço seja interrompido.
 
 ## <a name="see-also"></a>Consulte também
 

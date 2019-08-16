@@ -15,16 +15,16 @@ helpviewer_keywords:
 - tear-off interfaces
 - CComTearOffObject class
 ms.assetid: d974b598-c6b2-42b1-8360-9190d9d0fbf3
-ms.openlocfilehash: fd35b1e9e69c97402dd1ec357fd25fa1dcd5dd49
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0d27a6fa3c0070cd32c78971a7544327c51d4393
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62259411"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496911"
 ---
 # <a name="ccomtearoffobject-class"></a>Classe CComTearOffObject
 
-Essa classe implementa uma interface destacáveis.
+Essa classe implementa uma interface de divisão.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -35,10 +35,10 @@ class CComTearOffObject : public Base
 
 #### <a name="parameters"></a>Parâmetros
 
-*Base*<br/>
-Sua classe destacável, derivada de `CComTearOffObjectBase` e as interfaces que você deseja que o seu objeto destacáveis para dar suporte.
+*Polybase*<br/>
+Sua classe retirada, derivada de `CComTearOffObjectBase` e as interfaces às quais você deseja que o objeto destacável dê suporte.
 
-ATL implementa suas interfaces destacáveis em duas fases — o `CComTearOffObjectBase` métodos lidam com a contagem de referência e `QueryInterface`, enquanto `CComTearOffObject` implementa [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown).
+A ATL implementa suas interfaces retiradas em duas fases: `CComTearOffObjectBase` os métodos manipulam a contagem `QueryInterface`de referência `CComTearOffObject` e, enquanto implementam [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown).
 
 ## <a name="members"></a>Membros
 
@@ -54,30 +54,30 @@ ATL implementa suas interfaces destacáveis em duas fases — o `CComTearOffObje
 |Nome|Descrição|
 |----------|-----------------|
 |[CComTearOffObject::AddRef](#addref)|Incrementa a contagem de referência para um `CComTearOffObject` objeto.|
-|[CComTearOffObject::QueryInterface](#queryinterface)|Retorna um ponteiro para a interface solicitada em sua classe destacáveis ou classe proprietária.|
-|[CComTearOffObject::Release](#release)|Diminui a contagem de referência para um `CComTearOffObject` do objeto e destrói a ele.|
+|[CComTearOffObject::QueryInterface](#queryinterface)|Retorna um ponteiro para a interface solicitada na sua classe destacável ou na classe Owner.|
+|[CComTearOffObject::Release](#release)|Decrementa a contagem de referência de um `CComTearOffObject` objeto e destrói-o.|
 
-### <a name="ccomtearoffobjectbase-methods"></a>Métodos de CComTearOffObjectBase
+### <a name="ccomtearoffobjectbase-methods"></a>Métodos CComTearOffObjectBase
 
 |||
 |-|-|
 |[CComTearOffObjectBase](#ccomtearoffobjectbase)|Construtor.|
 
-### <a name="ccomtearoffobjectbase-data-members"></a>Membros de dados CComTearOffObjectBase
+### <a name="ccomtearoffobjectbase-data-members"></a>Membros de dados do CComTearOffObjectBase
 
 |||
 |-|-|
-|[m_pOwner](#m_powner)|Um ponteiro para um `CComObject` derivado da classe de proprietário.|
+|[m_pOwner](#m_powner)|Um ponteiro para um `CComObject` derivado da classe Owner.|
 
 ## <a name="remarks"></a>Comentários
 
-`CComTearOffObject` implementa uma interface destacáveis como um objeto separado que é instanciado apenas quando essa interface é consultada para. O destacável é excluído quando sua contagem de referência se torna zero. Normalmente, você pode criar uma interface destacáveis para uma interface que raramente é usada, já que usar um destacáveis salva um ponteiro vtable em todas as instâncias do seu objeto principal.
+`CComTearOffObject`implementa uma interface de divisão como um objeto separado que é instanciado somente quando essa interface é consultada. A redivisão é excluída quando sua contagem de referência se torna zero. Normalmente, você cria uma interface retirada para uma interface que raramente é usada, uma vez que usar uma remontagem salva um ponteiro vtable em todas as instâncias do seu objeto principal.
 
-Você deve derivar a classe que implementa o destacáveis de `CComTearOffObjectBase` e de quaisquer interfaces que você deseja que o seu objeto destacáveis para dar suporte. `CComTearOffObjectBase` é modelada na classe proprietária e o modelo de thread. A classe de proprietário é a classe do objeto para o qual um destacável está sendo implementado. Se você não especificar um modelo de thread, o modelo de thread padrão será usado.
+Você deve derivar a classe que implementa a divisão de `CComTearOffObjectBase` e de qualquer uma das interfaces às quais você deseja que o objeto retirado dê suporte. `CComTearOffObjectBase`é modelos na classe Owner e no modelo de thread. A classe Owner é a classe do objeto para o qual uma redivisão está sendo implementada. Se você não especificar um modelo de thread, o modelo de thread padrão será usado.
 
-Você deve criar um mapa de COM para a sua classe destacáveis. Quando ATL instancia o destacáveis, ele criará `CComTearOffObject<CYourTearOffClass>` ou `CComCachedTearOffObject<CYourTearOffClass>`.
+Você deve criar um mapa COM para sua classe destacável. Quando a ATL instancia a divisão, ela criará `CComTearOffObject<CYourTearOffClass>` ou. `CComCachedTearOffObject<CYourTearOffClass>`
 
-Por exemplo, no exemplo de PAGER, a `CBeeper2` é a classe destacáveis e o `CBeeper` é a classe de proprietário:
+Por exemplo, no exemplo de beepr, a `CBeeper2` classe é a classe de divisão e a `CBeeper` classe é a classe de proprietário:
 
 [!code-cpp[NVC_ATL_COM#43](../../atl/codesnippet/cpp/ccomtearoffobject-class_1.h)]
 
@@ -89,11 +89,11 @@ Por exemplo, no exemplo de PAGER, a `CBeeper2` é a classe destacáveis e o `CBe
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** atlcom
+**Cabeçalho:** atlcom. h
 
 ##  <a name="addref"></a>  CComTearOffObject::AddRef
 
-Incrementa a contagem de referência do `CComTearOffObject` objeto por um.
+Incrementa a contagem de referência do `CComTearOffObject` objeto em um.
 
 ```
 STDMETHOD_(ULONG, AddRef)();
@@ -101,7 +101,7 @@ STDMETHOD_(ULONG, AddRef)();
 
 ### <a name="return-value"></a>Valor de retorno
 
-Um valor que pode ser úteis para diagnóstico e teste.
+Um valor que pode ser útil para diagnóstico e teste.
 
 ##  <a name="ccomtearoffobject"></a>  CComTearOffObject::CComTearOffObject
 
@@ -114,7 +114,7 @@ CComTearOffObject(void* pv);
 ### <a name="parameters"></a>Parâmetros
 
 *pv*<br/>
-[in] Ponteiro será convertido em um ponteiro para um `CComObject<Owner>` objeto.
+no Ponteiro que será convertido em um ponteiro para um `CComObject<Owner>` objeto.
 
 ### <a name="remarks"></a>Comentários
 
@@ -130,7 +130,7 @@ O destruidor.
 
 ### <a name="remarks"></a>Comentários
 
-Libera todos os recursos alocados, as chamadas FinalRelease e diminui o módulo de contagem de bloqueio.
+Libera todos os recursos alocados, chama FinalRelease e decrementa a contagem de bloqueios de módulo.
 
 ##  <a name="ccomtearoffobjectbase"></a>  CComTearOffObject::CComTearOffObjectBase
 
@@ -142,11 +142,11 @@ CComTearOffObjectBase();
 
 ### <a name="remarks"></a>Comentários
 
-Inicializa o [m_pOwner](#m_powner) membro como NULL.
+Inicializa o membro [m_pOwner](#m_powner) como nulo.
 
 ##  <a name="m_powner"></a>  CComTearOffObject::m_pOwner
 
-Um ponteiro para um [CComObject](../../atl/reference/ccomobject-class.md) objeto derivado *proprietário*.
+Um ponteiro para um objeto [CComObject](../../atl/reference/ccomobject-class.md) derivado do *proprietário*.
 
 ```
 CComObject<Owner>* m_pOwner;
@@ -155,11 +155,11 @@ CComObject<Owner>* m_pOwner;
 ### <a name="parameters"></a>Parâmetros
 
 *Proprietário*<br/>
-[in] A classe para o qual um destacável está sendo implementado.
+no A classe para a qual uma redivisão está sendo implementada.
 
 ### <a name="remarks"></a>Comentários
 
-O ponteiro é inicializado como NULL durante a construção.
+O ponteiro é inicializado para NULL durante a construção.
 
 ##  <a name="queryinterface"></a>  CComTearOffObject::QueryInterface
 
@@ -172,22 +172,22 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
 ### <a name="parameters"></a>Parâmetros
 
 *iid*<br/>
-[in] O IID da interface que está sendo solicitado.
+no O IID da interface que está sendo solicitada.
 
 *ppvObject*<br/>
-[out] Um ponteiro para o ponteiro de interface identificado pelo *iid*, ou nulo se a interface não foi encontrada.
+fora Um ponteiro para o ponteiro de interface identificado por *IID*ou NULL se a interface não for encontrada.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Um valor padrão de HRESULT.
+Um valor HRESULT padrão.
 
 ### <a name="remarks"></a>Comentários
 
-Consultas primeiro para interfaces em sua classe destacáveis. Se a interface não estiver lá, consultas para a interface no objeto do proprietário. Se for a interface solicitada `IUnknown`, retorna o `IUnknown` do proprietário.
+Consulta primeiro para interfaces em sua classe destacável. Se a interface não existir, o consultará a interface no objeto do proprietário. Se a interface solicitada `IUnknown`for, retornará `IUnknown` o do proprietário.
 
 ##  <a name="release"></a>  CComTearOffObject::Release
 
-Diminui a contagem de referência por um e, se a contagem de referência for zero, exclui o `CComTearOffObject`.
+Decrementa a contagem de referência em um e, se a contagem de referência for zero, excluirá o `CComTearOffObject`.
 
 ```
 STDMETHOD_ULONG Release();
@@ -195,7 +195,7 @@ STDMETHOD_ULONG Release();
 
 ### <a name="return-value"></a>Valor de retorno
 
-Em compilações sem depuração, sempre retornará zero. Em compilações de depuração, retorna um valor que pode ser úteis para diagnóstico ou teste.
+Em compilações não depuradas, o sempre retorna zero. Em compilações de depuração, retorna um valor que pode ser útil para diagnóstico ou teste.
 
 ## <a name="see-also"></a>Consulte também
 

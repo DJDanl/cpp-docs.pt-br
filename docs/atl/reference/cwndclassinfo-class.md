@@ -1,5 +1,5 @@
 ---
-title: Classe de CWndClassInfo
+title: Classe CWndClassInfo
 ms.date: 11/04/2016
 f1_keywords:
 - CWndClassInfo
@@ -15,19 +15,19 @@ f1_keywords:
 helpviewer_keywords:
 - CWndClassInfo class
 ms.assetid: c36fe7e1-75f1-4cf5-a06f-9f59c43fe6fb
-ms.openlocfilehash: 4aeac558c28d0ac89707423433e51f348bc35d29
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c416155ed103f1345c42e6680c2329ab98d35926
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62276712"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496120"
 ---
-# <a name="cwndclassinfo-class"></a>Classe de CWndClassInfo
+# <a name="cwndclassinfo-class"></a>Classe CWndClassInfo
 
-Essa classe fornece métodos para registrar informações de uma classe de janela.
+Essa classe fornece métodos para registrar informações para uma classe de janela.
 
 > [!IMPORTANT]
->  Essa classe e seus membros não podem ser usados em aplicativos executados no tempo de execução do Windows.
+>  Essa classe e seus membros não podem ser usados em aplicativos que são executados no Windows Runtime.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -41,43 +41,43 @@ class CWndClassInfo
 
 |||
 |-|-|
-|[Registro](#register)|Registra a classe de janela.|
+|[Registro](#register)|Registra a classe da janela.|
 
 ### <a name="data-members"></a>Membros de Dados
 
 |||
 |-|-|
 |[m_atom](#m_atom)|Identifica exclusivamente a classe de janela registrada.|
-|[m_bSystemCursor](#m_bsystemcursor)|Especifica se o recurso de cursor se refere a um cursor do sistema ou em um cursor contidos em um recurso de módulo.|
+|[m_bSystemCursor](#m_bsystemcursor)|Especifica se o recurso de cursor se refere a um cursor do sistema ou a um cursor contido em um recurso de módulo.|
 |[m_lpszCursorID](#m_lpszcursorid)|Especifica o nome do recurso de cursor.|
 |[m_lpszOrigName](#m_lpszorigname)|Contém o nome de uma classe de janela existente.|
-|[m_szAutoName](#m_szautoname)|Contém um nome gerado pelo ATL da classe de janela.|
-|[m_wc](#m_wc)|Mantém informações de classe de janela em um `WNDCLASSEX` estrutura.|
+|[m_szAutoName](#m_szautoname)|Mantém um nome gerado pela ATL da classe Window.|
+|[m_wc](#m_wc)|Mantém informações de classe de janela `WNDCLASSEX` em uma estrutura.|
 |[pWndProc](#pwndproc)|Aponta para o procedimento de janela de uma classe de janela existente.|
 
 ## <a name="remarks"></a>Comentários
 
-`CWndClassInfo` gerencia as informações de uma classe de janela. Você normalmente usa `CWndClassInfo` por meio de um dos três macros, DECLARE_WND_CLASS, DECLARE_WND_CLASS_EX ou DECLARE_WND_SUPERCLASS, conforme descrito na tabela a seguir:
+`CWndClassInfo`gerencia as informações de uma classe de janela. Normalmente, você `CWndClassInfo` usa uma das três macros, DECLARE_WND_CLASS, DECLARE_WND_CLASS_EX ou DECLARE_WND_SUPERCLASS, conforme descrito na tabela a seguir:
 
 |Macro|Descrição|
 |-----------|-----------------|
-|[DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class)|`CWndClassInfo` registra informações para uma nova classe de janela.|
-|[DECLARE_WND_CLASS_EX](window-class-macros.md#declare_wnd_class_ex)|`CWndClassInfo` registra informações para uma nova classe de janela, incluindo os parâmetros da classe.|
-|[DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass)|`CWndClassInfo` registra informações de uma classe de janela que se baseia em uma classe existente, mas usa um procedimento de janela diferentes. Essa técnica é chamada superclassing.|
+|[DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class)|`CWndClassInfo`registra informações para uma nova classe de janela.|
+|[DECLARE_WND_CLASS_EX](window-class-macros.md#declare_wnd_class_ex)|`CWndClassInfo`registra informações para uma nova classe de janela, incluindo os parâmetros de classe.|
+|[DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass)|`CWndClassInfo`registra informações para uma classe de janela baseada em uma classe existente, mas usa um procedimento de janela diferente. Essa técnica é chamada de superclasse.|
 
-Por padrão, [CWindowImpl](../../atl/reference/cwindowimpl-class.md) inclui o `DECLARE_WND_CLASS` macro para criar uma janela com base em uma nova classe de janela. DECLARE_WND_CLASS fornece estilos padrão e a cor de plano de fundo para o controle. Se você quiser especificar o estilo e cor do segundo plano por conta própria, derive sua classe de `CWindowImpl` e inclua a macro DECLARE_WND_CLASS_EX em sua definição de classe.
+Por padrão, [CWindowImpl](../../atl/reference/cwindowimpl-class.md) inclui a `DECLARE_WND_CLASS` macro para criar uma janela com base em uma nova classe de janela. DECLARE_WND_CLASS fornece estilos padrão e cor do plano de fundo para o controle. Se você quiser especificar o estilo e a cor do plano de fundo, derive `CWindowImpl` sua classe de e inclua a macro DECLARE_WND_CLASS_EX em sua definição de classe.
 
-Se você quiser criar uma janela com base em uma classe de janela existente, derive sua classe de `CWindowImpl` e inclua a macro DECLARE_WND_SUPERCLASS em sua definição de classe. Por exemplo:
+Se você quiser criar uma janela com base em uma classe de janela existente, derive sua `CWindowImpl` classe de e inclua a macro DECLARE_WND_SUPERCLASS em sua definição de classe. Por exemplo:
 
 [!code-cpp[NVC_ATL_Windowing#43](../../atl/codesnippet/cpp/cwndclassinfo-class_1.h)]
 
-Para obter mais informações sobre classes de janela, consulte [Classes de janela](/windows/desktop/winmsg/window-classes) no SDK do Windows.
+Para obter mais informações sobre classes de janela, consulte [classes de janela](/windows/win32/winmsg/window-classes) no SDK do Windows.
 
-Para obter mais informações sobre como usar o windows em ATL, consulte o artigo [Classes de janela ATL](../../atl/atl-window-classes.md).
+Para obter mais informações sobre como usar o Windows na ATL, consulte o artigo [classes de janela do ATL](../../atl/atl-window-classes.md).
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** atlwin
+**Cabeçalho:** atlwin. h
 
 ##  <a name="m_atom"></a>  CWndClassInfo::m_atom
 
@@ -87,9 +87,9 @@ Contém o identificador exclusivo para a classe de janela registrada.
 ATOM m_atom;
 ```
 
-##  <a name="m_bsystemcursor"></a>  CWndClassInfo::m_bSystemCursor
+##  <a name="m_bsystemcursor"></a>CWndClassInfo::m_bSystemCursor
 
-Se for TRUE, o recurso de cursor do sistema será carregado quando a classe de janela é registrada.
+Se for TRUE, o recurso de cursor do sistema será carregado quando a classe Window for registrada.
 
 ```
 BOOL m_bSystemCursor;
@@ -99,11 +99,11 @@ BOOL m_bSystemCursor;
 
 Caso contrário, o recurso de cursor contido em seu módulo será carregado.
 
-`CWndClassInfo` usa `m_bSystemCursor` somente quando o [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class) (o padrão no [CWindowImpl](../../atl/reference/cwindowimpl-class.md)) ou o [DECLARE_WND_CLASS_EX](window-class-macros.md#declare_wnd_class_ex) macro é especificada. Nesse caso, `m_bSystemCursor` é inicializado como TRUE. Para obter mais informações, consulte o [CWndClassInfo](../../atl/reference/cwndclassinfo-class.md) visão geral.
+`CWndClassInfo`usa `m_bSystemCursor` somente quando [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class) (o padrão em [CWindowImpl](../../atl/reference/cwindowimpl-class.md)) ou a macro [DECLARE_WND_CLASS_EX](window-class-macros.md#declare_wnd_class_ex) é especificada. Nesse caso, `m_bSystemCursor` é inicializado como true. Para obter mais informações, consulte a visão geral do [CWndClassInfo](../../atl/reference/cwndclassinfo-class.md) .
 
 ##  <a name="m_lpszcursorid"></a>  CWndClassInfo::m_lpszCursorID
 
-Especifica o nome do recurso de cursor ou o identificador de recurso na palavra de ordem inferior e zero a palavra de ordem superior.
+Especifica o nome do recurso de cursor ou o identificador de recurso na palavra de ordem inferior e zero na palavra de ordem superior.
 
 ```
 LPCTSTR m_lpszCursorID;
@@ -111,9 +111,9 @@ LPCTSTR m_lpszCursorID;
 
 ### <a name="remarks"></a>Comentários
 
-Quando a classe de janela é registrada, o identificador para o cursor identificado pelo `m_lpszCursorID` é recuperada e armazenada pelo [m_wc](#m_wc).
+Quando a classe Window é registrada, o identificador para o cursor identificado `m_lpszCursorID` por é recuperado e armazenado por [m_wc](#m_wc).
 
-`CWndClassInfo` usa `m_lpszCursorID` somente quando o [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class) (o padrão no [CWindowImpl](../../atl/reference/cwindowimpl-class.md)) ou o [DECLARE_WND_CLASS_EX](window-class-macros.md#declare_wnd_class_ex) macro é especificada. Nesse caso, `m_lpszCursorID` é inicializado como IDC_ARROW. Para obter mais informações, consulte o [CWndClassInfo](../../atl/reference/cwndclassinfo-class.md) visão geral.
+`CWndClassInfo`usa `m_lpszCursorID` somente quando [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class) (o padrão em [CWindowImpl](../../atl/reference/cwindowimpl-class.md)) ou a macro [DECLARE_WND_CLASS_EX](window-class-macros.md#declare_wnd_class_ex) é especificada. Nesse caso, `m_lpszCursorID` é inicializado para IDC_ARROW. Para obter mais informações, consulte a visão geral do [CWndClassInfo](../../atl/reference/cwndclassinfo-class.md) .
 
 ##  <a name="m_lpszorigname"></a>  CWndClassInfo::m_lpszOrigName
 
@@ -125,11 +125,11 @@ LPCTSTR m_lpszOrigName;
 
 ### <a name="remarks"></a>Comentários
 
-`CWndClassInfo` usa `m_lpszOrigName` apenas quando você inclui o [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass) macro em sua definição de classe. Nesse caso, `CWndClassInfo` registros de uma classe de janela com base na classe nomeada pelo `m_lpszOrigName`. Para obter mais informações, consulte o [CWndClassInfo](../../atl/reference/cwndclassinfo-class.md) visão geral.
+`CWndClassInfo`usa `m_lpszOrigName` somente quando você inclui a macro [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass) em sua definição de classe. Nesse caso, `CWndClassInfo` o registra uma classe de janela com base na classe nomeada `m_lpszOrigName`por. Para obter mais informações, consulte a visão geral do [CWndClassInfo](../../atl/reference/cwndclassinfo-class.md) .
 
 ##  <a name="m_szautoname"></a>  CWndClassInfo::m_szAutoName
 
-Contém o nome da classe de janela.
+Mantém o nome da classe da janela.
 
 ```
 TCHAR m_szAutoName[13];
@@ -137,11 +137,11 @@ TCHAR m_szAutoName[13];
 
 ### <a name="remarks"></a>Comentários
 
-`CWndClassInfo` usa `m_szAutoName` somente se NULL for passado o `WndClassName` parâmetro [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class), o [DECLARE_WND_CLASS_EX](window-class-macros.md#declare_wnd_class_ex) ou [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass) . ATL será construir um nome quando a classe de janela é registrada.
+`CWndClassInfo`usa `m_szAutoName` somente se NULL for passado para o `WndClassName` parâmetro para [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class), [DECLARE_WND_CLASS_EX](window-class-macros.md#declare_wnd_class_ex) ou [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass). A ATL criará um nome quando a classe de janela for registrada.
 
 ##  <a name="m_wc"></a>  CWndClassInfo::m_wc
 
-Mantém as informações de classe de janela em um [WNDCLASSEX](/windows/desktop/api/winuser/ns-winuser-tagwndclassexa) estrutura.
+Mantém as informações de classe de janela em uma estrutura [WNDCLASSEX](/windows/win32/api/winuser/ns-winuser-wndclassexw) .
 
 ```
 WNDCLASSEX m_wc;
@@ -149,9 +149,9 @@ WNDCLASSEX m_wc;
 
 ### <a name="remarks"></a>Comentários
 
-Se você tiver especificado a [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class) (o padrão no [CWindowImpl](../../atl/reference/cwindowimpl-class.md)) ou o [DECLARE_WND_CLASS_EX](window-class-macros.md#declare_wnd_class_ex) macro, `m_wc` contém informações sobre um nova classe de janela.
+Se você tiver especificado o [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class) (o padrão em [CWindowImpl](../../atl/reference/cwindowimpl-class.md)) ou a macro [DECLARE_WND_CLASS_EX](window-class-macros.md#declare_wnd_class_ex) , `m_wc` conterá informações sobre uma nova classe de janela.
 
-Se você tiver especificado a [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass) macro, `m_wc` contém informações sobre uma superclasse — uma classe de janela que se baseia em uma classe existente, mas usa um procedimento de janela diferentes. [m_lpszOrigName](#m_lpszorigname) e [pWndProc](#pwndproc) salvar o nome da classe de janela existente e o procedimento de janela, respectivamente.
+Se você tiver especificado a macro [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass) , `m_wc` conterá informações sobre uma superclasse — uma classe de janela baseada em uma classe existente, mas que usa um procedimento de janela diferente. [m_lpszOrigName](#m_lpszorigname) e [pWndProc](#pwndproc) salvam o nome da classe de janela existente e o procedimento de janela, respectivamente.
 
 ##  <a name="pwndproc"></a>  CWndClassInfo::pWndProc
 
@@ -163,11 +163,11 @@ WNDPROC pWndProc;
 
 ### <a name="remarks"></a>Comentários
 
-`CWndClassInfo` usa `pWndProc` apenas quando você inclui o [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass) macro em sua definição de classe. Nesse caso, `CWndClassInfo` registra uma classe de janela que se baseia em uma classe existente, mas usa um procedimento de janela diferentes. O procedimento de janela da classe de janela existente é salvo em `pWndProc`. Para obter mais informações, consulte o [CWndClassInfo](../../atl/reference/cwndclassinfo-class.md) visão geral.
+`CWndClassInfo`usa `pWndProc` somente quando você inclui a macro [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass) em sua definição de classe. Nesse caso, `CWndClassInfo` o registra uma classe de janela baseada em uma classe existente, mas usa um procedimento de janela diferente. O procedimento de janela da classe de janela existente é `pWndProc`salvo em. Para obter mais informações, consulte a visão geral do [CWndClassInfo](../../atl/reference/cwndclassinfo-class.md) .
 
 ##  <a name="register"></a>  CWndClassInfo::Register
 
-Chamado pelo [CWindowImpl::Create](../../atl/reference/cwindowimpl-class.md#create) para registrar a classe de janela, se ele ainda não tiver sido registrado.
+Chamado por [CWindowImpl:: Create](../../atl/reference/cwindowimpl-class.md#create) para registrar a classe de janela se ela ainda não tiver sido registrada.
 
 ```
 ATOM Register(WNDPROC* pProc);
@@ -176,17 +176,17 @@ ATOM Register(WNDPROC* pProc);
 ### <a name="parameters"></a>Parâmetros
 
 *pProc*<br/>
-[out] Especifica o procedimento de janela original de uma classe de janela existente.
+fora Especifica o procedimento de janela original de uma classe de janela existente.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Se for bem-sucedido, um átomo que identifica exclusivamente a classe de janela que está sendo registrada. Otherwise, 0.
+Se for bem-sucedido, um Atom que identifica exclusivamente a classe de janela que está sendo registrada. Caso contrário, 0.
 
 ### <a name="remarks"></a>Comentários
 
-Se você tiver especificado a [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class) (o padrão no [CWindowImpl](../../atl/reference/cwindowimpl-class.md)) ou o [DECLARE_WND_CLASS_EX](window-class-macros.md#declare_wnd_class_ex) macro, `Register` registra uma nova classe de janela. Nesse caso, o *pProc* parâmetro não for usado.
+Se você tiver especificado o [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class) (o padrão em [CWindowImpl](../../atl/reference/cwindowimpl-class.md)) ou a macro [DECLARE_WND_CLASS_EX](window-class-macros.md#declare_wnd_class_ex) , `Register` o registrará uma nova classe de janela. Nesse caso, o parâmetro *pProc* não é usado.
 
-Se você tiver especificado a [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass) macro, `Register` registra uma superclasse — uma classe de janela que se baseia em uma classe existente, mas usa um procedimento de janela diferentes. O procedimento de janela da classe de janela existente é retornado no *pProc*.
+Se você tiver especificado a macro [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass) , `Register` o registrará uma superclasse, uma classe de janela baseada em uma classe existente, mas usará um procedimento de janela diferente. O procedimento de janela da classe de janela existente é retornado em *pProc*.
 
 ## <a name="see-also"></a>Consulte também
 

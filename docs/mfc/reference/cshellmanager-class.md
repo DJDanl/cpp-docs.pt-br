@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CShellManager [MFC], GetParentItem
 - CShellManager [MFC], ItemFromPath
 ms.assetid: f15c4c1a-6fae-487d-9913-9b7369b33da0
-ms.openlocfilehash: 14e8da573621f712ae9e27647122d305be54b7b0
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 8151550dafdd1bdf8593d555008af387cf548bc8
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916692"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502615"
 ---
 # <a name="cshellmanager-class"></a>Classe CShellManager
 
@@ -113,7 +113,7 @@ no Uma cadeia de caracteres que contém a pasta selecionada por padrão quando a
 no O título da caixa de diálogo.
 
 *ulFlags*<br/>
-no Sinalizadores que especificam opções para a caixa de diálogo. Consulte [BROWSEINFO](/windows/desktop/api/shlobj_core/ns-shlobj_core-browseinfoa) para obter a descrição detalhada.
+no Sinalizadores que especificam opções para a caixa de diálogo. Consulte [BROWSEINFO](/windows/win32/api/shlobj_core/ns-shlobj_core-browseinfow) para obter a descrição detalhada.
 
 *piFolderImage*<br/>
 fora Um ponteiro para o valor inteiro em que o método grava o índice de imagem da pasta selecionada.
@@ -156,7 +156,7 @@ Um ponteiro para a nova lista de itens se a função tiver sucesso, caso contrá
 
 ### <a name="remarks"></a>Comentários
 
-Esse método cria uma nova [ITEMIDLIST](/windows/desktop/api/shtypes/ns-shtypes-itemidlist) grande o suficiente para conter *pidl1* e *pidl2*. Em seguida, ele copia *pidl1* e *pidl2* para a nova lista.
+Esse método cria uma nova [ITEMIDLIST](/windows/win32/api/shtypes/ns-shtypes-itemidlist) grande o suficiente para conter *pidl1* e *pidl2*. Em seguida, ele copia *pidl1* e *pidl2* para a nova lista.
 
 ##  <a name="copyitem"></a>  CShellManager::CopyItem
 

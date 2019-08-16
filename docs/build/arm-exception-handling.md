@@ -2,26 +2,26 @@
 title: Tratamento de exceção ARM
 ms.date: 07/11/2018
 ms.assetid: fe0e615f-c033-4ad5-97f4-ff96af45b201
-ms.openlocfilehash: f4e56284ce8db18ec76b0143253ee1e25f3fd82c
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: a3d1a5f3becefc064c5bb38dc566892ae8da8530
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66450485"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493372"
 ---
 # <a name="arm-exception-handling"></a>Tratamento de exceção ARM
 
-O Windows baseado em ARM usa o mesmo mecanismo de tratamento de exceção estruturado para exceções geradas por hardware assíncronas e exceções geradas por software síncronas. Os manipuladores de exceção específicos da linguagem são compilados sobre o tratamento de exceção estruturado do Windows usando funções de auxiliares da linguagem. Este documento descreve o tratamento de exceção no Windows em ARM e os auxiliares da linguagem usados pelo código que é gerado pelo assembler Microsoft ARM e o compilador MSVC.
+O Windows baseado em ARM usa o mesmo mecanismo de tratamento de exceção estruturado para exceções geradas por hardware assíncronas e exceções geradas por software síncronas. Os manipuladores de exceção específicos da linguagem são compilados sobre o tratamento de exceção estruturado do Windows usando funções de auxiliares da linguagem. Este documento descreve a manipulação de exceções no Windows no ARM e os auxiliares de linguagem usados pelo código gerado pelo Microsoft ARM Assembler e o compilador MSVC.
 
 ## <a name="arm-exception-handling"></a>Tratamento de exceção ARM
 
-Usa o Windows em ARM *códigos de desenrolamento* para controlar o desenrolamento de pilha durante [manipulação de exceção estruturada](/windows/desktop/debug/structured-exception-handling) (SEH). Os códigos de desenrolamento são uma sequência de bytes armazenados na seção .xdata da imagem executável. Eles descrevem a operação de código de prólogo e epílogo da função de uma maneira abstrata, para que os efeitos do prólogo de uma função possam ser desfeitos na preparação para desenrolar para o registro de ativação do chamador.
+O Windows no ARM usa *códigos de liberação* para controlar o desenrolamento da pilha durante o tratamento de [exceção estruturado](/windows/win32/debug/structured-exception-handling) (SEH). Os códigos de desenrolamento são uma sequência de bytes armazenados na seção .xdata da imagem executável. Eles descrevem a operação de código de prólogo e epílogo da função de uma maneira abstrata, para que os efeitos do prólogo de uma função possam ser desfeitos na preparação para desenrolar para o registro de ativação do chamador.
 
 A EABI (interface binária do aplicativo inserido) do ARM especifica um modelo de desenrolamento de exceção que usa códigos de desenrolamento, mas que não é suficiente para que o SEH desenrole no Windows, o qual deve manipular casos assíncronos em que o processador esteja no meio do prólogo ou do epílogo de uma função. O Windows também separa o controle de desenrolamento em desenrolamento no nível de função e em desenrolamento de escopo específico da linguagem, o qual é unificado na EABI do ARM. Por esses motivos, o Windows baseado em ARM especifica mais detalhes para os dados e o procedimento de desenrolamento.
 
 ### <a name="assumptions"></a>Suposições
 
-As imagens executáveis do Windows baseado em ARM usam o formato PE (executável portátil). Para obter mais informações, consulte [especificação Microsoft PE e COFF](https://go.microsoft.com/fwlink/p/?linkid=84140). As informações de tratamento de exceção são armazenadas nas seções .pdata e .xdata da imagem.
+As imagens executáveis do Windows baseado em ARM usam o formato PE (executável portátil). Para obter mais informações, consulte [especificação do Microsoft PE e COFF](https://go.microsoft.com/fwlink/p/?linkid=84140). As informações de tratamento de exceção são armazenadas nas seções .pdata e .xdata da imagem.
 
 O mecanismo de tratamento de exceção faz determinadas suposições sobre código que segue a ABI para Windows baseado em ARM:
 
@@ -59,9 +59,9 @@ Cada registro .pdata do ARM tem 8 bytes de comprimento. O formato geral de um re
 
 |Deslocamento da palavra|Bits|Finalidade|
 |-----------------|----------|-------------|
-|0|0-31|*Função RVA iniciar* é o RVA de 32 bits do início da função. Se a função contiver código de posição, o bit baixo deste endereço deverá ser configurado.|
-|1|0-1|*Sinalizador* é um campo de 2 bits que indica como interpretar os 30 bits restantes da segunda palavra. pData. Se *sinalizador* for 0, então os bits restantes formam um *RVA de informações de exceção* (com os dois bits baixos sendo implicitamente 0). Se *sinalizador* for diferente de zero, em seguida, os bits restantes formam um *dados de desenrolamento compactados* estrutura.|
-|1|2-31|*Informações de exceção RVA* ou *empacotadas desenrolar dados*.<br /><br /> *RVA de informações de exceção* é o endereço da estrutura de informações de exceção de comprimento variável, armazenado na seção. XData. Esses dados devem ser alinhados para 4 bytes.<br /><br /> *Empacotadas desenrolar dados* é a descrição compactada das operações necessárias para desenrolar a partir de uma função, supondo uma forma canônica. Nesse caso, nenhum registro .xdata é necessário.|
+|0|0-31|O *RVA de início de função* é o rva de 32 bits do início da função. Se a função contiver código de posição, o bit baixo deste endereço deverá ser configurado.|
+|1|0-1|*Sinalizador* é um campo de 2 bits que indica como interpretar os 30 bits restantes da segunda palavra. pData. Se o *sinalizador* for 0, os bits restantes formam um *RVA de informações de exceção* (com os dois bits baixos implicitamente 0). Se o *sinalizador* for diferente de zero, os bits restantes formam uma estrutura de dados de desenrolamentos *compactados* .|
+|1|2-31|*RVA de informações de exceção* ou *dados*de desenrolamento compactados.<br /><br /> *RVA de informações de exceção* é o endereço da estrutura de informações de exceção de comprimento variável, armazenada na seção. xdata. Esses dados devem ser alinhados para 4 bytes.<br /><br /> Os *dados* desenrolados compactados são uma descrição compactada das operações necessárias para desenrolar de uma função, supondo uma forma canônica. Nesse caso, nenhum registro .xdata é necessário.|
 
 ### <a name="packed-unwind-data"></a>Dados de desenrolamento compactados
 
@@ -71,53 +71,53 @@ Esta tabela mostra o formato de um registro .pdata que possui dados de desenrola
 
 |Deslocamento da palavra|Bits|Finalidade|
 |-----------------|----------|-------------|
-|0|0-31|*Função RVA iniciar* é o RVA de 32 bits do início da função. Se a função contiver código de posição, o bit baixo deste endereço deverá ser configurado.|
-|1|0-1|*Sinalizador* é um campo de 2 bits que possui estes significados:<br /><br />-00 = compactado desenrolar dados não usados; bits restantes apontam para o registro. XData.<br />-01 = compactado dados de desenrolamento.<br />-10 = compactado dados no qual a função deve para ter nenhum prólogo de desenrolamento. É útil para descrever fragmentos de função que são descontínuos com o início da função.<br />-11 = reservado.|
-|1|2-12|*Função comprimento* é um campo de 11 bits que fornece o comprimento da função inteira em bytes dividido por 2. Se a função tiver mais de 4K bytes, um registro completo de .xdata deverá ser usado no lugar.|
-|1|13-14|*RET* é um campo de 2 bits que indica como a função retorna:<br /><br />-00 = retorno via pop {pc} (o *L* bit de sinalizador deve ser definida como 1 nesse caso).<br />-01 = retorno usando uma ramificação de 16 bits.<br />-10 = retorno usando uma ramificação de 32 bits.<br />-11 = nenhum epílogo em todos os. É útil para descrever um fragmento de função descontínuo que pode conter somente um prólogo, mas cujo epílogo está em outro lugar.|
-|1|15|*H* é um sinalizador de 1 bit que indica se a função "hospeda" o parâmetro numérico inteiro registra (r0-r3) enviando-os no início da função e desaloca os 16 bytes de pilha antes de retornar. (0 = não hospeda registros, 1 = hospeda registros.)|
-|1|16-18|*Reg* é salvo de um campo de 3 bits que indica o índice do último registro não volátil. Se o *R* bit for 0, então, apenas registros de inteiros estão sendo salvas e devem para estar no intervalo de r4-rN, onde N é igual a 4 + *Reg*. Se o *R* bit for 1, em seguida, registros de ponto flutuante só estão sendo salvas e devem para estar no intervalo de d8-dN, onde N é igual a 8 + *Reg*. A combinação especial de *R* = 1 e *Reg* = 7 indica que nenhum registro será salvo.|
-|1|19|*R* é um sinalizador de 1 bit que indica se os registros não voláteis salvos são registros de inteiros (0) ou registros de ponto flutuante (1). Se *R* é definido como 1 e o *Reg* é definido como 7, não há registros não voláteis foram enviados por push.|
-|1|20|*L* é um sinalizador de 1 bit que indica se a função salva/restaura LR, junto com outros registros indicados pelo *Reg* campo. (0 = não salva/restaura, 1 = salva/restaura.)|
-|1|21|*C* é um sinalizador de 1 bit que indica se a função inclui instruções extras para configurar uma cadeia de quadros de pilha com rapidez percorrer (1) ou não (0). Se este bit estiver configurado, r11 será implicitamente adicionado à lista de registros não voláteis de inteiros salvos. (Consulte as restrições abaixo se o *C* sinalizador é usado.)|
-|1|22-31|*Ajuste de pilha* é um campo de 10 bits que indica o número de bytes de pilha que são alocados para esta função, dividido por 4. No entanto, apenas valores entre 0x000-0x3F3 podem ser codificados diretamente. As funções que alocam mais de 4044 bytes de pilha devem usar um registro completo de .xdata. Se o *ajuste de pilha* campo é 0x3F4 ou maior, então os 4 bits baixos têm significado especial:<br /><br />-Bits 0-1 indicam o número de palavras de ajuste de pilha (1-4) menos 1.<br />-Bit 2 é definido como 1 se o prólogo combinou esse ajuste em sua operação de envio por push.<br />-3 bit é definido como 1 se o epílogo combinou esse ajuste em sua operação pop.|
+|0|0-31|O *RVA de início de função* é o rva de 32 bits do início da função. Se a função contiver código de posição, o bit baixo deste endereço deverá ser configurado.|
+|1|0-1|*Sinalizador* é um campo de 2 bits que tem estes significados:<br /><br />-00 = dados de desenrolamento compactados não usados; bits restantes apontam para o registro. xdata.<br />-01 = dados de desenrolamento compactados.<br />-10 = dados desenrolados compactados nos quais a função deve ter nenhum prólogo. É útil para descrever fragmentos de função que são descontínuos com o início da função.<br />-11 = reservado.|
+|1|2-12|O *comprimento da função* é um campo de 11 bits que fornece o comprimento da função inteira em bytes dividido por 2. Se a função tiver mais de 4K bytes, um registro completo de .xdata deverá ser usado no lugar.|
+|1|13-14|*RET* é um campo de 2 bits que indica como a função retorna:<br /><br />-00 = retornar via pop {PC} (o bit do sinalizador *L* deve ser definido como 1 nesse caso).<br />-01 = retornar usando uma ramificação de 16 bits.<br />-10 = retornar usando uma ramificação de 32 bits.<br />-11 = nenhum epílogo. É útil para descrever um fragmento de função descontínuo que pode conter somente um prólogo, mas cujo epílogo está em outro lugar.|
+|1|15|*H* é um sinalizador de 1 bit que indica se a função "Homes" registra o parâmetro inteiro (R0-R3) ao enviá-los ao início da função e desaloca os 16 bytes de pilha antes de retornar. (0 = não hospeda registros, 1 = hospeda registros.)|
+|1|16-18|*Reg* é um campo de 3 bits que indica o índice do último registro não volátil salvo. Se o bit *R* for 0, somente os registros inteiros serão salvos e serão considerados no intervalo de R4-rN, em que N é igual a 4 + *reg*. Se o bit *R* for 1, somente os registros de ponto flutuante serão salvos e serão considerados no intervalo de D8-DN, em que N é igual a 8 + *reg*. A combinação especial de *R* = 1 e *reg* = 7 indica que nenhum registro foi salvo.|
+|1|19|*R* é um sinalizador de 1 bit que indica se os registros não voláteis salvos são registros de número inteiro (0) ou registros de ponto flutuante (1). Se *R* for definido como 1 e o campo *reg* for definido como 7, nenhum registro não volátil será enviado por push.|
+|1|20|*L* é um sinalizador de 1 bit que indica se a função salva/restaura o LR, juntamente com outros registros indicados pelo campo *reg* . (0 = não salva/restaura, 1 = salva/restaura.)|
+|1|21|*C* é um sinalizador de 1 bit que indica se a função inclui instruções adicionais para configurar uma cadeia de quadros para movimentação de pilha rápida (1) ou não (0). Se este bit estiver configurado, r11 será implicitamente adicionado à lista de registros não voláteis de inteiros salvos. (Veja as restrições abaixo se o sinalizador *C* for usado.)|
+|1|22-31|O *ajuste de pilha* é um campo de 10 bits que indica o número de bytes de pilha alocados para essa função, dividido por 4. No entanto, apenas valores entre 0x000-0x3F3 podem ser codificados diretamente. As funções que alocam mais de 4044 bytes de pilha devem usar um registro completo de .xdata. Se o campo de *ajuste de pilha* for 0x3F4 ou maior, os 4 bits baixos terão um significado especial:<br /><br />-Bits 0-1 indicam o número de palavras do ajuste de pilha (1-4) menos 1.<br />-Bit 2 é definido como 1 se o prólogo combinou esse ajuste em sua operação de push.<br />-Bit 3 é definido como 1 se o epílogo combinou esse ajuste em sua operação pop.|
 
 Devido a possíveis redundâncias nas codificações acima, estas restrições se aplicam:
 
-- Se o *C* sinalizador é definido como 1:
+- Se o sinalizador *C* estiver definido como 1:
 
-   - O *L* sinalizador também deve ser definido como 1, porque o encadeamento de quadros exigia r11 e LR.
+   - O sinalizador *L* também deve ser definido como 1, porque o encadeamento de quadros exigiu R11 e LR.
 
-   - r11 não deve ser incluído no conjunto de registros descrito por *Reg*. Ou seja, se r4-r11 é enviados por push, *Reg* deverá descrever apenas r4-r10, pois o *C* o sinalizador implica r11.
+   - R11 não deve ser incluído no conjunto de registros descritos pelo *reg*. Ou seja, se R4-R11 forem enviados por push, *reg* só deverá descrever R4-R10, pois o sinalizador *C* implica R11.
 
-- Se o *Ret* campo é definido como 0, o *L* sinalizador deve ser definido como 1.
+- Se o campo *RET* for definido como 0, o sinalizador *L* deverá ser definido como 1.
 
 A violação dessas restrições causará uma sequência incompatível.
 
-Para fins da discussão abaixo, dois pseudossinalizadores são derivados *ajuste de pilha*:
+Para fins da discussão abaixo, dois pseudo sinalizadores são derivados do ajuste de *pilha*:
 
-- *PF* ou "dobramento de prólogo" indica que *ajuste de pilha* é 0x3F4 ou maior e o bit 2 está configurado.
+- *PF* ou "dobramento de prólogo" indica que o *ajuste de pilha* é 0x3F4 ou maior e o bit 2 está definido.
 
-- *O EF* ou "dobramento de epílogo" indica que *ajuste de pilha* é 0x3F4 ou maior e o bit 3 está configurado.
+- *EF* ou "Epílogo dobramento" indica que o *ajuste de pilha* é 0x3F4 ou maior e o bit 3 está definido.
 
 Os prólogos para funções canônicas podem ter até 5 instruções (observe que 3a e 3b são mutuamente exclusivas):
 
-|Instrução|Supõe-se que Opcode esteja presente se:|Tamanho|Opcode|Códigos de desenrolamento|
+|Instrução|Supõe-se que Opcode esteja presente se:|Size|Opcode|Códigos de desenrolamento|
 |-----------------|-----------------------------------|----------|------------|------------------|
 |1|*H*==1|16|`push {r0-r3}`|04|
-|2|*C*= = 1 ou *L*= = 1 ou *R*= = 0 ou PF==1 = = 1|16/32|`push {registers}`|80-BF/D0-DF/EC-ED|
-|3a|*C*= = 1 e (*L*= = 0 e *R*= = 1 e PF==0 = = 0)|16|`mov r11,sp`|C0-CF/FB|
-|3b|*C*= = 1 e (*L*= = 1 ou *R*= = 0 ou PF==1 = = 1)|32|`add r11,sp,#xx`|FC|
-|4|*R*= = 1 e *Reg* ! = 7|32|`vpush {d8-dE}`|E0-E7|
+|2|*C*= = 1 ou *L*= = 1 ou *R*= = 0 ou PF = = 1|16/32|`push {registers}`|80-BF/D0-DF/EC-ED|
+|3a|*C*= = 1 e (*L*= = 0 e *R*= = 1 e PF = = 0)|16|`mov r11,sp`|C0-CF/FB|
+|3b|*C*= = 1 e (*L*= = 1 ou *R*= = 0 ou PF = = 1)|32|`add r11,sp,#xx`|FC|
+|4|*R*= = 1 e *reg* ! = 7|32|`vpush {d8-dE}`|E0-E7|
 |5|*Ajuste de pilha* ! = 0 e PF = = 0|16/32|`sub sp,sp,#xx`|00-7F/E8-EB|
 
-Instrução 1 estará sempre presente se o *H* bit é definido como 1.
+A instrução 1 sempre estará presente se o bit *H* estiver definido como 1.
 
-Para configurar o encadeamento de quadros, a instrução 3a ou 3b está presente se o *C* bit é definido. Ele será um `mov` de 16 bits se nenhum registro diferente de r11 e LR for enviado por push, caso contrário, será um `add` de 32 bits.
+Para configurar o encadeamento de quadros, a instrução 3A ou 3B estará presente se o bit *C* estiver definido. Ele será um `mov` de 16 bits se nenhum registro diferente de r11 e LR for enviado por push, caso contrário, será um `add` de 32 bits.
 
 Se um ajuste não dobrado for especificado, a instrução 5 será o ajuste de pilha explícito.
 
-As instruções 2 e 4 são configuradas com base na necessidade de um envio por push. Esta tabela resume quais registros são salvos com base nas *C*, *L*, *R*, e *PF* campos. Em todos os casos, *N* é igual a *Reg* + 4, *eletrônico* é igual a *Reg* + 8, e *S* é igual a (~*Ajuste de pilha*) & 3.
+As instruções 2 e 4 são configuradas com base na necessidade de um envio por push. Esta tabela resume quais registros são salvos com base nos campos *C*, *L*, *R*e *PF* . Em todos os casos, *N* é igual a *reg* + 4 , e é igual a *reg* + 8, e *S* é igual a (~*Stack ajuste*) & 3.
 
 |C|L|R|PF|Registros de inteiro enviados por push|Registros VFP enviados por push|
 |-------|-------|-------|--------|------------------------------|--------------------------|
@@ -136,59 +136,59 @@ As instruções 2 e 4 são configuradas com base na necessidade de um envio por 
 |1|1|0|0|r4-r*N*, r11, LR|nenhum|
 |1|1|0|1|r*S*-r*N*, r11, LR|nenhum|
 |1|1|1|0|r11, LR|d8-d*E*|
-|1|1|1|1|r*S*-r3, r11, LR|d8-d*E*|
+|1|1|1|1|r*S*-R3, R11, LR|d8-d*E*|
 
 Os epílogos para funções canônicas seguem uma forma semelhante, mas na ordem inversa e com algumas opções adicionais. O epílogo pode ter até 5 instruções de comprimento e sua forma é estritamente ditada pela forma do prólogo.
 
-|Instrução|Supõe-se que Opcode esteja presente se:|Tamanho|Opcode|
+|Instrução|Supõe-se que Opcode esteja presente se:|Size|Opcode|
 |-----------------|-----------------------------------|----------|------------|
 |6|*Ajuste de pilha*! = 0 e *EF*= = 0|16/32|`add   sp,sp,#xx`|
-|7|*R*= = 1 e *Reg*! = 7|32|`vpop  {d8-dE}`|
+|7|*R*= = 1 e *reg*! = 7|32|`vpop  {d8-dE}`|
 |8|*C*= = 1 ou (*L*= = 1 e *H*= = 0) ou *R*= = 0 ou *EF*= = 1|16/32|`pop   {registers}`|
 |9a|*H*= = 1 e *L*= = 0|16|`add   sp,sp,#0x10`|
 |9b|*H*= = 1 e *L*= = 1|32|`ldr   pc,[sp],#0x14`|
 |10a|*RET*= = 1|16|`bx    reg`|
 |10b|*RET*= = 2|32|`b     address`|
 
-A instrução 6 será o ajuste de pilha explícito se um ajuste não dobrado for especificado. Porque *PF* é independente da *EF*, é possível ter a instrução 5 presente sem a instrução 6, ou vice-versa.
+A instrução 6 será o ajuste de pilha explícito se um ajuste não dobrado for especificado. Como o *PF* é independente do *EF*, é possível ter a instrução 5 presente sem a instrução 6, ou vice-versa.
 
-Instruções 7 e 8 usam a mesma lógica de prólogo para determinar quais registros são restaurados da pilha, mas com essas duas alterações: primeira, *EF* é usado no lugar de *PF*; segunda, se *Ret*  = 0, então LR será substituído por PC na lista de registros e o epílogo terminará imediatamente.
+As instruções 7 e 8 usam a mesma lógica que o prólogo para determinar quais registros são restaurados da pilha, mas com essas duas alterações: primeiro, o *EF* é usado no lugar do *PF*; em segundo lugar, se *RET* = 0, a LR será substituída pelo PC na lista de registros e o epílogo terminará imediatamente.
 
-Se *H* for definida, a instrução 9a ou 9b estará presente. Instrução 9a será usada quando *L* é 0, para indicar que o LR não está na pilha. Nesse caso, a pilha é ajustada manualmente e *Ret* deve ser 1 ou 2 para especificar um retorno explícito. Instrução 9b será usada quando *L* é 1 para indicar um término antecipado para o epílogo e para retornar e ajustar a pilha ao mesmo tempo.
+Se *H* for definida, a instrução 9a ou 9B estará presente. Instrução 9a é usada quando *L* é 0, para indicar que a LR não está na pilha. Nesse caso, a pilha é ajustada manualmente e *RET* deve ser 1 ou 2 para especificar um retorno explícito. Instrução 9B é usada quando *L* é 1, para indicar uma extremidade inicial para o epílogo e para retornar e ajustar a pilha ao mesmo tempo.
 
-Se o epílogo não tiver terminado ainda, a instrução 10a ou 10b estará presente, para indicar uma ramificação de 16 bits ou 32 bits, com base no valor de *Ret*.
+Se o epílogo ainda não tiver sido encerrado, a instrução 10A ou 10B estará presente, para indicar uma ramificação de 16 bits ou 32 bits, com base no valor de *RET*.
 
 ### <a name="xdata-records"></a>Registros .xdata
 
 Quando o formato de desenrolamento compactado for insuficiente para descrever o desenrolamento de uma função, um registro .xdata de comprimento variável deverá ser criado. O endereço desse registro é armazenado na segunda palavra do registro .pdata. O formato do .xdata é um conjunto de palavras de comprimento variável compactado que possui quatro seções:
 
-1. Um cabeçalho com 1 ou 2 palavras que descreve o tamanho geral da estrutura .xdata e fornece dados de função-chave. A segunda palavra estará presente somente se o *contagem de epílogo* e *código palavras* campos são definidos como 0. Os campos estão divididos nesta tabela:
+1. Um cabeçalho com 1 ou 2 palavras que descreve o tamanho geral da estrutura .xdata e fornece dados de função-chave. A segunda palavra só estará presente se os campos *contagem de epílogo* e palavras de *código* estiverem definidos como 0. Os campos estão divididos nesta tabela:
 
    |Palavra|Bits|Finalidade|
    |----------|----------|-------------|
-   |0|0-17|*Função comprimento* é um campo de 18 bits que indica o comprimento total da função em bytes dividido por 2. Se uma função tiver mais de 512 KB, então vários registros de .pdata e .xdata deverão ser usados para descrever a função. Para obter detalhes, consulte a seção Funções Grandes neste documento.|
-   |0|18-19|*Vers* é um campo de 2 bits que descreve a versão dos xdata restantes. Apenas a versão 0 está definida atualmente; os valores de 1 a 3 são reservados.|
+   |0|0-17|O *comprimento da função* é um campo de 18 bits que indica o comprimento total da função em bytes, dividido por 2. Se uma função tiver mais de 512 KB, então vários registros de .pdata e .xdata deverão ser usados para descrever a função. Para obter detalhes, consulte a seção Funções Grandes neste documento.|
+   |0|18-19|*Versa* é um campo de 2 bits que descreve a versão do XData restante. Apenas a versão 0 está definida atualmente; os valores de 1 a 3 são reservados.|
    |0|20|*X* é um campo de 1 bit que indica a presença (1) ou a ausência (0) de dados de exceção.|
-   |0|21|*E* é um campo de 1 bit que indica que as informações que descrevem um único epílogo é compactadas no cabeçalho (1) em vez de exigir o escopo adicional palavras posterior (0).|
+   |0|21|*E* é um campo de 1 bit que indica que as informações que descrevem um único epílogo são empacotadas no cabeçalho (1) em vez de exigir palavras de escopo adicionais posteriormente (0).|
    |0|22|*F* é um campo de 1 bit que indica que esse registro descreve um fragmento de função (1) ou uma função completa (0). Um fragmento implica que não há prólogo e que todo o processamento do prólogo deve ser ignorado.|
-   |0|23-27|*Contagem de epílogo* é um campo de 5 bits que tem dois significados, dependendo do estado do *eletrônico* bit:<br /><br /> -Se *eletrônico* é 0, esse campo é uma contagem do número total de escopos de exceção descrita na seção 3. Se mais de 31 escopos existem na função, em seguida, esse campo e o *palavras código* campo deve ser definido como 0 para indicar que uma palavra de extensão é necessária.<br />-Se *eletrônico* é 1, este campo especifica o índice do primeiro código de desenrolamento que descreve o epílogo único.|
-   |0|28-31|*Palavras de código* é um campo de 4 bits que especifica o número de palavras de 32 bits necessário para conter todos os códigos de desenrolamento na seção 4. Se mais de 15 palavras forem necessárias para mais de 63 bytes de código de desenrolamento, esse campo e o *contagem de epílogo* campo deve ser definido como 0 para indicar que uma palavra de extensão é necessária.|
-   |1|0-15|*Estendido a contagem de epílogo* é um campo de 16 bits que fornece mais espaço para codificação de um número excepcionalmente grande de epílogos. A palavra de extensão que contém esse campo estará presente somente se o *contagem de epílogo* e *código palavras* campos da primeira palavra do cabeçalho são definidos como 0.|
-   |1|16-23|*Estendido código palavras* é um campo de 8 bits que fornece mais espaço para codificação de um número excepcionalmente grande de palavras de código de desenrolamento. A palavra de extensão que contém esse campo estará presente somente se o *contagem de epílogo* e *código palavras* campos da primeira palavra do cabeçalho são definidos como 0.|
+   |0|23-27|A *contagem epílogo* é um campo de 5 bits que tem dois significados, dependendo do estado do bit *E* :<br /><br /> -Se *E* for 0, esse campo será uma contagem do número total de escopos de exceção descritos na seção 3. Se houver mais de 31 escopos na função, esse campo e o campo de *palavras de código* deverão ser definidos como 0 para indicar que uma palavra de extensão é necessária.<br />-Se *E* for 1, este campo especificará o índice do primeiro código de desenrolamento que descreve o único epílogo.|
+   |0|28-31|As *palavras de código* são um campo de 4 bits que especifica o número de palavras de 32 bits necessárias para conter todos os códigos de liberação na seção 4. Se mais de 15 palavras forem necessárias para mais de 63 bytes de código de desenrolamento, esse campo e o campo *contagem de epílogo* devem ser definidos como 0 para indicar que uma palavra de extensão é necessária.|
+   |1|0-15|A *contagem epílogo estendida* é um campo de 16 bits que fornece mais espaço para a codificação de um número muito grande de epilogues. A palavra de extensão que contém esse campo só estará presente se os campos *contagem de epílogo* e *palavras de código* na primeira palavra de cabeçalho estiverem definidos como 0.|
+   |1|16-23|As *palavras de código estendido* são um campo de 8 bits que fornece mais espaço para codificar um número incomum de palavras de código de desenrolamento. A palavra de extensão que contém esse campo só estará presente se os campos *contagem de epílogo* e *palavras de código* na primeira palavra de cabeçalho estiverem definidos como 0.|
    |1|24-31|Reservado|
 
-1. Depois que os dados de exceção (se o *eletrônico* bit no cabeçalho foi definido como 0) é uma lista de informações sobre escopos de epílogo, que são compactados um para uma palavra e armazenados em ordem crescente de deslocamento inicial. Cada escopo contém estes campos:
+1. Após os dados de exceção (se o *E* bit no cabeçalho tiver sido definido como 0) é uma lista de informações sobre escopos epílogo, que são empacotados um para uma palavra e armazenados em ordem de aumento de deslocamento de início. Cada escopo contém estes campos:
 
    |Bits|Finalidade|
    |----------|-------------|
-   |0-17|*Deslocamento de início do epílogo* é um campo de 18 bits que descreve o deslocamento do epílogo, em bytes dividido por 2, em relação ao início da função.|
+   |0-17|O *deslocamento de início do epílogo* é um campo de 18 bits que descreve o deslocamento do epílogo, em bytes dividido por 2, em relação ao início da função.|
    |18-19|*Res* é um campo de 2 bits reservado para expansão futura. Seu valor deve ser 0.|
-   |20-23|*Condição* é um campo de 4 bits que oferece a condição sob a qual o epílogo é executado. Para epílogos incondicionais, ele deve ser configurado como 0xE, que indica "sempre". (Um epílogo deve ser inteiramente condicional ou inteiramente incondicional, e no modo Posição 2, o epílogo começa com a primeira instrução após o opcode de TI.)|
-   |24-31|*Índice de início do epílogo* é um campo de 8 bits que indica o índice de bytes do primeiro código de desenrolamento que descreve este epílogo.|
+   |20-23|*Condition* é um campo de 4 bits que fornece a condição sob a qual o epílogo é executado. Para epílogos incondicionais, ele deve ser configurado como 0xE, que indica "sempre". (Um epílogo deve ser inteiramente condicional ou inteiramente incondicional, e no modo Posição 2, o epílogo começa com a primeira instrução após o opcode de TI.)|
+   |24-31|*Epílogo Start index* é um campo de 8 bits que indica o índice de bytes do primeiro código de desenrolação que descreve esse epílogo.|
 
 1. Após a lista de escopos de epílogo, é fornecida uma matriz de bytes que contém códigos de desenrolamento, que são descritos em detalhes na seção Códigos de Desenrolamento neste artigo. Essa matriz é preenchida no final, o mais próximo possível do limite da palavra completa. Os bytes são armazenados em ordem little-endian para que possam ser buscados diretamente no modo little-endian.
 
-1. Se o *X* campo do cabeçalho é 1, os bytes de código de desenrolamento são seguidos pelas informações do manipulador de exceção. Isso consiste em uma *RVA de manipulador de exceção* que contém o endereço do manipulador de exceção, seguido imediatamente pela quantidade de dados exigidos pelo manipulador de exceção (comprimento variável).
+1. Se o campo *X* no cabeçalho for 1, os bytes de código de liberação serão seguidos pelas informações do manipulador de exceção. Isso consiste em um *RVA de manipulador de exceção* que contém o endereço do manipulador de exceção, seguido imediatamente pela quantidade de dados (de comprimento variável) exigida pelo manipulador de exceção.
 
 O registro .xdata é projetado para que seja possível buscar os primeiros 8 bytes e calcular o tamanho total do registro, sem incluir o comprimento dos dados de exceção de tamanho variável que se segue. Este snippet de código calcula o tamanho do registro:
 
@@ -220,7 +220,7 @@ ULONG ComputeXdataSize(PULONG *Xdata)
 }
 ```
 
-Embora o prólogo e cada epílogo tem um índice nos códigos de desenrolamento, a tabela é compartilhada entre eles. Não é incomum que eles possam todos compartilhar os mesmos códigos de desenrolamento. Recomendamos que os gravadores de compiladores sejam otimizados para este caso, pois o maior índice que pode ser especificado é 255, o que limita o número total possível de códigos de desenrolamento para uma função específica.
+Embora o prólogo e cada epílogo tenha um índice nos códigos de liberação, a tabela é compartilhada entre eles. Não é incomum que eles possam todos compartilhar os mesmos códigos de desenrolamento. Recomendamos que os gravadores de compiladores sejam otimizados para este caso, pois o maior índice que pode ser especificado é 255, o que limita o número total possível de códigos de desenrolamento para uma função específica.
 
 ### <a name="unwind-codes"></a>Códigos de desenrolamento
 
@@ -238,32 +238,32 @@ A tabela a seguir mostra o mapeamento de códigos de desenrolamento para opcodes
 
 |Byte 1|Byte 2|Byte 3|Byte 4|Tamanho de opcode|Explicação|
 |------------|------------|------------|------------|------------|-----------------|
-|00-7F||||16|`add   sp,sp,#X`<br /><br /> em que X é (código e 0x7F) \* 4|
-|80-BF|00-FF|||32|`pop   {r0-r12, lr}`<br /><br /> em que LR será exibido se código e 0x2000 e r0-r12 forem exibidos se o bit correspondente é definido no código e 0x1FFF|
-|C0-CF||||16|`mov   sp,rX`<br /><br /> em que X é código e 0x0F|
-|D0-D7||||16|`pop   {r4-rX,lr}`<br /><br /> em que X é (código e 0x03) + 4 e LR será exibido se código e 0x04|
-|D8-DF||||32|`pop   {r4-rX,lr}`<br /><br /> em que X é (código e 0x03) + 8 e LR será exibido se código e 0x04|
-|E0-E7||||32|`vpop  {d8-dX}`<br /><br /> em que X é (código e 0x07) + 8|
-|E8-EB|00-FF|||32|`addw  sp,sp,#X`<br /><br /> em que X é (código e 0x03FF) \* 4|
-|EC-ED|00-FF|||16|`pop   {r0-r7,lr}`<br /><br /> em que LR será exibido se código e 0x0100 e r0-r7 forem exibidos se o bit correspondente é definido no código e 0x00FF|
+|00-7F||||16|`add   sp,sp,#X`<br /><br /> onde X é (código & 0x7f) \* 4|
+|80-BF|00-FF|||32|`pop   {r0-r12, lr}`<br /><br /> em que LR será exibido se o código & 0x2000 e R0-R12 forem retirados se o bit correspondente for definido no código & 0x1FFF|
+|C0-CF||||16|`mov   sp,rX`<br /><br /> onde X é o código & 0x0F|
+|D0-D7||||16|`pop   {r4-rX,lr}`<br /><br /> onde X é (Code & 0x03) + 4 e LR será exibido se o código & 0x04|
+|D8-DF||||32|`pop   {r4-rX,lr}`<br /><br /> onde X é (Code & 0x03) + 8 e LR será exibido se o código & 0x04|
+|E0-E7||||32|`vpop  {d8-dX}`<br /><br /> onde X é (código & 0x07) + 8|
+|E8-EB|00-FF|||32|`addw  sp,sp,#X`<br /><br /> onde X é (código & 0x03FF) \* 4|
+|EC-ED|00-FF|||16|`pop   {r0-r7,lr}`<br /><br /> em que LR será exibido se o código & 0x0100 e R0-R7 forem retirados se o bit correspondente for definido no código & 0x00FF|
 |EE|00-0F|||16|Específico da Microsoft|
 |EE|10-FF|||16|Disponível|
-|EF|00-0F|||32|`ldr   lr,[sp],#X`<br /><br /> em que X é (código e 0x000F) \* 4|
+|EF|00-0F|||32|`ldr   lr,[sp],#X`<br /><br /> onde X é (código & 0x000F) \* 4|
 |EF|10-FF|||32|Disponível|
 |F0-F4||||-|Disponível|
-|F5|00-FF|||32|`vpop  {dS-dE}`<br /><br /> em que S é (código e 0x00F0) >> 4 e E é código e 0x000F|
-|F6|00-FF|||32|`vpop  {dS-dE}`<br /><br /> em que S é ((Code & 0x00F0) >> 4) + 16 e E é (código e 0x000F) + 16|
-|F7|00-FF|00-FF||16|`add   sp,sp,#X`<br /><br /> em que X é (código e 0x00FFFF) \* 4|
-|F8|00-FF|00-FF|00-FF|16|`add   sp,sp,#X`<br /><br /> em que X é (código e 0x00FFFFFF) \* 4|
-|F9|00-FF|00-FF||32|`add   sp,sp,#X`<br /><br /> em que X é (código e 0x00FFFF) \* 4|
-|FA|00-FF|00-FF|00-FF|32|`add   sp,sp,#X`<br /><br /> em que X é (código e 0x00FFFFFF) \* 4|
+|F5|00-FF|||32|`vpop  {dS-dE}`<br /><br /> em que S é (código & 0x00F0) > > 4 e e é o código & 0x000F|
+|F6|00-FF|||32|`vpop  {dS-dE}`<br /><br /> onde S é ((código & 0x00F0) > > 4) + 16 e e é (código & 0x000F) + 16|
+|F7|00-FF|00-FF||16|`add   sp,sp,#X`<br /><br /> onde X é (código & 0x00FFFF) \* 4|
+|F8|00-FF|00-FF|00-FF|16|`add   sp,sp,#X`<br /><br /> onde X é (código & 0x00FFFFFF) \* 4|
+|F9|00-FF|00-FF||32|`add   sp,sp,#X`<br /><br /> onde X é (código & 0x00FFFF) \* 4|
+|FA|00-FF|00-FF|00-FF|32|`add   sp,sp,#X`<br /><br /> onde X é (código & 0x00FFFFFF) \* 4|
 |FB||||16|nop (16 bits)|
 |FC||||32|nop (32 bits)|
 |FD||||16|end + nop de 16 bits no epílogo|
 |FE||||32|end + nop de 32 bits no epílogo|
 |FF||||-|end|
 
-Isso mostra o intervalo de valores hexadecimais para cada byte em um código de desenrolamento *código*, junto com o tamanho do opcode *Opsize* e a interpretação de instrução original correspondente. As células vazias indicam códigos de desenrolamento mais curtos. Em instruções que tenham valores grandes que abrangem vários bytes, os bits mais significativos são armazenados primeiro. O *Opsize* campo mostra o tamanho do opcode implícito associado com cada operação de Thumb-2. As entradas duplicadas aparentes na tabela com diferentes codificações são usadas para distinguir entre tamanhos de opcode diferentes.
+Isso mostra o intervalo de valores hexadecimais para cada byte em um *código*de código de desenrolamento, juntamente com o tamanho de opcode *Opsize* e a interpretação de instrução original correspondente. As células vazias indicam códigos de desenrolamento mais curtos. Em instruções que tenham valores grandes que abrangem vários bytes, os bits mais significativos são armazenados primeiro. O campo *Opsize* mostra o tamanho de opcode implícito associado a cada operação Thumb-2. As entradas duplicadas aparentes na tabela com diferentes codificações são usadas para distinguir entre tamanhos de opcode diferentes.
 
 Os códigos de desenrolamento são projetados para que o primeiro byte do código informe o tamanho total em bytes do código e o tamanho do opcode correspondente no fluxo de instruções. Para calcular o tamanho do prólogo ou do epílogo, percorra os códigos de desenrolamento do início da sequência até o final e use a tabela de consulta ou um método semelhante para determinar o comprimento do opcode correspondente.
 
@@ -298,9 +298,9 @@ Próximo a cada opcode existe o código de desenrolamento apropriado para descre
 
 O código 0xFD é um código especial para o final da sequência que significa que o epílogo é uma instrução de 16 bits maior do que o prólogo. Isso torna possível o compartilhamento de códigos de desenrolamento maiores.
 
-No exemplo, se ocorrer uma exceção enquanto o corpo da função entre o prólogo e o epílogo estiver em execução, o desenrolamento iniciará o caso do epílogo, no deslocamento 0 dentro do código de epílogo. Isso corresponde ao deslocamento 0x140 no exemplo. O desenrolador executa a sequência de desenrolamento completa, pois nenhuma limpeza foi feita. Se em vez da exceção, ocorrer uma instrução após o início do código de epílogo, o desenrolador poderá desenrolar com êxito, ignorando o primeiro código de desenrolamento. Um mapeamento um para um entre opcodes e códigos de desenrolamento, se estiver desenrolando a partir da instrução *n* no epílogo, o desenrolador deverá ignorar os primeiros *n* códigos de desenrolamento.
+No exemplo, se ocorrer uma exceção enquanto o corpo da função entre o prólogo e o epílogo estiver em execução, o desenrolamento iniciará o caso do epílogo, no deslocamento 0 dentro do código de epílogo. Isso corresponde ao deslocamento 0x140 no exemplo. O desenrolador executa a sequência de desenrolamento completa, pois nenhuma limpeza foi feita. Se em vez da exceção, ocorrer uma instrução após o início do código de epílogo, o desenrolador poderá desenrolar com êxito, ignorando o primeiro código de desenrolamento. Dado um mapeamento de um-para-um entre opcodes e códigos de liberação, se estiver desenrolando da instrução *n* no epílogo, o desenrolador deverá ignorar os primeiros *n* códigos de desenrolamento.
 
-A lógica semelhante funciona na ordem inversa para o prólogo. Se estiver desenrolando a partir do deslocamento 0 no prólogo, nada será executado. Se estiver desenrolando de uma instrução em diante, a sequência de desenrolamento deverá iniciar um código de desenrolamento a partir do final, pois os códigos de desenrolamento do prólogo são armazenados na ordem inversa. Em geral, se estiver desenrolando a partir da instrução *n* no prólogo, desenrolamento deverá iniciar executando em *n* códigos do final da lista de códigos de desenrolamento.
+A lógica semelhante funciona na ordem inversa para o prólogo. Se estiver desenrolando a partir do deslocamento 0 no prólogo, nada será executado. Se estiver desenrolando de uma instrução em diante, a sequência de desenrolamento deverá iniciar um código de desenrolamento a partir do final, pois os códigos de desenrolamento do prólogo são armazenados na ordem inversa. Em geral, se estiver desenrolando da instrução *n* no prólogo, o desenrolamento deve começar a ser executado em *n* códigos de desenrolação do final da lista de códigos.
 
 Os códigos de desenrolamento do prólogo e do epílogo nem sempre correspondem exatamente. Nesse caso, a matriz do código de desenrolamento pode precisar conter várias sequências de códigos. Para determinar o deslocamento para começar o processamento dos códigos, use esta lógica:
 
@@ -326,13 +326,13 @@ Supondo que o prólogo da função esteja no início da função e não possa se
 
 - Epílogos somente; prólogo e, possivelmente, epílogos adicionais em outros fragmentos.
 
-No primeiro caso, somente o prólogo deve ser descrito. Isso pode ser feito no formulário. pData compacto, descrevendo o prólogo normalmente e especificando um *Ret* valor 3 para não indicar nenhum epílogo. No formulário .xdata completo, isso pode ser feito ao fornecer os códigos de desenrolamento do prólogo no índice 0 como de costume, especificando uma contagem de epílogo igual a 0.
+No primeiro caso, somente o prólogo deve ser descrito. Isso pode ser feito no formulário Compact. pData descrevendo o prólogo normalmente e especificando um valor de *RET* de 3 para indicar que não há epílogo. No formulário .xdata completo, isso pode ser feito ao fornecer os códigos de desenrolamento do prólogo no índice 0 como de costume, especificando uma contagem de epílogo igual a 0.
 
 O segundo caso funciona exatamente como uma função normal. Se houver apenas um epílogo no fragmento e ele estiver no final do fragmento, um registro .pdata compacto poderá ser usado. Caso contrário, deverá ser usado um registro .xdata completo. Lembre-se de que os deslocamentos especificados para o início do epílogo são relativos ao início do fragmento, e não ao início original da função.
 
 Os terceiro e quarto casos são variantes dos primeiro e segundo casos, respectivamente, exceto que eles não contêm um prólogo. Nessas situações, supõe-se que haja código antes do início do epílogo e ele é considerado parte do corpo da função, que normalmente seria desenrolado desfazendo-se os efeitos do prólogo. Esses casos devem ser, portanto, codificados com um pseudoprólogo, que descreve como desenrolar de dentro do corpo, mas que é tratado como comprimento 0 ao determinar se deve executar um desenrolamento parcial no início do fragmento. Como alternativa, esse pseudoprólogo pode ser descrito ao usar os mesmos códigos de desenrolamento do epílogo, pois eles provavelmente executam operações equivalentes.
 
-No terceiro e quarto casos, a presença de um pseudoprólogo é especificada Configurando o *sinalizador* campo do registro. pData compacto como 2, ou definindo o *F* sinalizador no cabeçalho. XData como 1. Em qualquer dos casos, a verificação do desenrolamento parcial de um prólogo é ignorada e todos os desenrolamentos que não sejam de epílogo são considerados completos.
+No terceiro e quarto casos, a presença de um pseudo prólogo é especificada definindo o campo de *sinalizador* do registro Compact. pData como 2 ou definindo o sinalizador *F* no cabeçalho. xdata como 1. Em qualquer dos casos, a verificação do desenrolamento parcial de um prólogo é ignorada e todos os desenrolamentos que não sejam de epílogo são considerados completos.
 
 #### <a name="large-functions"></a>Funções grandes
 
@@ -344,7 +344,7 @@ Se um fragmento não tiver prólogo nem epílogo, ele ainda exigirá seu própri
 
 #### <a name="shrink-wrapping"></a>Shrink-wrapping
 
-É um caso especial mais complexo de fragmentos de função *wrapping*, uma técnica para adiar salva desde o início da função para mais tarde na função, para otimizar para casos simples que não requerem salvamento do registro. Esse procedimento pode ser descrito como uma região externa que aloca o espaço de pilha, mas salva um conjunto mínimo de registros e uma região interna que salva e restaura registros adicionais.
+Um caso especial mais complexo de fragmentos de função é o *encapsulamento reduzido*, uma técnica para adiar o registro salva desde o início da função para mais tarde na função, para otimizar para casos simples que não exigem o salvamento de registro. Esse procedimento pode ser descrito como uma região externa que aloca o espaço de pilha, mas salva um conjunto mínimo de registros e uma região interna que salva e restaura registros adicionais.
 
 ```asm
 ShrinkWrappedFunction
@@ -386,7 +386,7 @@ ShrinkWrappedFunction
     pop    {r4, pc}          ; C: restore non-volatile registers
 ```
 
-O essencial aqui é que em cada limite de instrução, a pilha seja completamente consistente com os códigos de desenrolamento da região. Se ocorrer um desenrolamento antes do envio por push interno neste exemplo, ele será considerado parte da região A e apenas o prólogo da região A será desenrolado. Se o desenrolamento ocorrer após o envio por push interno, ele é considerado parte da região B, que não possui prólogo, mas possui códigos de desenrolamento que descrevem o envio por push interno e o prólogo original da região de uma lógica semelhante A. é mantida para pop interno.
+O essencial aqui é que em cada limite de instrução, a pilha seja completamente consistente com os códigos de desenrolamento da região. Se ocorrer um desenrolamento antes do envio por push interno neste exemplo, ele será considerado parte da região A e apenas o prólogo da região A será desenrolado. Se o desenrolar ocorrer após o envio por push interno, ele será considerado parte da região B, que não tem um prólogo, mas tem códigos de liberação que descrevem o envio interno e o prólogo original da região A. A lógica semelhante é mantida para o pop interno.
 
 ### <a name="encoding-optimizations"></a>Otimizações de codificação
 
@@ -410,7 +410,7 @@ Se, depois que os epílogos de instrução única forem ignorados, não houver e
 
 Nestes exemplos, a base da imagem está em 0x00400000.
 
-### <a name="example-1-leaf-function-no-locals"></a>Exemplo 1: Função de folha, sem locais
+### <a name="example-1-leaf-function-no-locals"></a>Exemplo 1: Função de folha, nenhum local
 
 ```asm
 Prologue:
@@ -424,27 +424,27 @@ Epilogue:
 
 - Palavra 0
 
-   - *Função Start RVA* = 0x000535F8 (= 0x004535F8 0x00400000)
+   - *Função start RVA* = 0x000535F8 (= 0x004535F8-0x00400000)
 
 - Palavra 1
 
-   - *Sinalizador* = 1, indicando os formatos de prólogo e epílogo canônicos
+   - *Flag* = 1, indicando o prólogo canônico e os formatos epílogo
 
-   - *Função comprimento* = erro:0x31 (= 0x62/2)
+   - *Comprimento da função* = 0x31 (= 0x62/2)
 
-   - *RET* = 1, que indica uma retorno de ramificação de 16 bits
+   - *RET* = 1, indicando um retorno de ramificação de 16 bits
 
-   - *H* = 0, indicando os parâmetros não foram hospedados
+   - *H* = 0, indicando que os parâmetros não foram hospedados
 
-   - *R*= 0 e *Reg* = 1, que indica push/pop de r4-r5
+   - *R*= 0 e *reg* = 1, indicando Push/pop de R4-R5
 
-   - *L* = 0, que indica nenhum salvamento/restauração de LR
+   - *L* = 0, indicando que nenhum salvamento/restauração do LR
 
-   - *C* = 0, indicando que nenhum encadeamento de quadro
+   - *C* = 0, indicando que não há encadeamento de quadros
 
-   - *Ajuste de pilha* = 0, indicando que nenhum ajuste de pilha
+   - *Ajuste de pilha* = 0, indicando que não há ajuste de pilha
 
-### <a name="example-2-nested-function-with-local-allocation"></a>Exemplo 2: Função aninhada com alocação Local
+### <a name="example-2-nested-function-with-local-allocation"></a>Exemplo 2: Função aninhada com alocação local
 
 ```asm
 Prologue:
@@ -459,27 +459,27 @@ Epilogue:
 
 - Palavra 0
 
-   - *Função Start RVA* = 0x000533AC (= 0x004533AC – 0x00400000)
+   - *Função start RVA* = 0x000533AC (= 0x004533AC-0x00400000)
 
 - Palavra 1
 
-   - *Sinalizador* = 1, indicando os formatos de prólogo e epílogo canônicos
+   - *Flag* = 1, indicando o prólogo canônico e os formatos epílogo
 
-   - *Função comprimento* = 0x35 (= 0x6A/2)
+   - *Comprimento da função* = 0x35 (= 0x6A/2)
 
-   - *RET* = 0, indicando que um pop {pc} retorno
+   - *RET* = 0, indicando um retorno de pop {PC}
 
-   - *H* = 0, indicando os parâmetros não foram hospedados
+   - *H* = 0, indicando que os parâmetros não foram hospedados
 
-   - *R*= 0 e *Reg* = 3, que indica push/pop de r4-r7
+   - *R*= 0 e *reg* = 3, indicando Push/pop de R4-R7
 
-   - *L* = 1, indicando o LR foi salvo/restaurado
+   - *L* = 1, indicando que a LR foi salva/restaurada
 
-   - *C* = 0, indicando que nenhum encadeamento de quadro
+   - *C* = 0, indicando que não há encadeamento de quadros
 
    - *Ajuste de pilha* = 3 (= 0x0C/4)
 
-### <a name="example-3-nested-variadic-function"></a>Exemplo 3: Função de Variadic aninhada
+### <a name="example-3-nested-variadic-function"></a>Exemplo 3: Função Variadic aninhada
 
 ```asm
 Prologue:
@@ -494,27 +494,27 @@ Epilogue:
 
 - Palavra 0
 
-   - *Função Start RVA* = 0x00053988 (= 0x00453988 0x00400000)
+   - *Função start RVA* = 0x00053988 (= 0x00453988-0x00400000)
 
 - Palavra 1
 
-   - *Sinalizador* = 1, indicando os formatos de prólogo e epílogo canônicos
+   - *Flag* = 1, indicando o prólogo canônico e os formatos epílogo
 
-   - *Função comprimento* = 0x2A (= 0x54/2)
+   - *Comprimento da função* = 0x2A (= 0x54/2)
 
-   - *RET* = 0, indicando que um pop {pc}-retorno de estilo (nesse caso, um pc de ldr, [sp] PC,[SP],#0x14 retornar)
+   - *RET* = 0, indicando um retorno do estilo pop {PC} (neste caso, um PC LDR, [SP], #0x14 Return)
 
-   - *H* = 1, indicando os parâmetros foram hospedados
+   - *H* = 1, indicando que os parâmetros foram hospedados
 
-   - *R*= 0 e *Reg* = 2, que indica push/pop de r4-r6
+   - *R*= 0 e *reg* = 2, indicando Push/pop de R4-R6
 
-   - *L* = 1, indicando o LR foi salvo/restaurado
+   - *L* = 1, indicando que a LR foi salva/restaurada
 
-   - *C* = 0, indicando que nenhum encadeamento de quadro
+   - *C* = 0, indicando que não há encadeamento de quadros
 
-   - *Ajuste de pilha* = 0, indicando que nenhum ajuste de pilha
+   - *Ajuste de pilha* = 0, indicando que não há ajuste de pilha
 
-### <a name="example-4-function-with-multiple-epilogues"></a>Exemplo 4: Função com vários Epílogos
+### <a name="example-4-function-with-multiple-epilogues"></a>Exemplo 4: Função com vários epilogues
 
 ```asm
 Prologue:
@@ -540,37 +540,37 @@ Epilogues:
 
 - Palavra 0
 
-   - *Função Start RVA* = 0x000592F4 (= 0x004592F4 0x00400000)
+   - *Função start RVA* = 0x000592F4 (= 0x004592F4-0x00400000)
 
 - Palavra 1
 
-   - *Sinalizador* = 0, indicando que o registro. XData está presente (necessário devido a vários epílogos)
+   - *Flag* = 0, indicando que o registro. xdata está presente (necessário devido a vários epilogues)
 
-   - *endereço. XData* -0x00400000
+   - *XData address* -0x00400000
 
 .xdata (variável, 6 palavras):
 
 - Palavra 0
 
-   - *Função comprimento* = 0x0001A3 (= 0x000346/2)
+   - *Comprimento da função* = 0x0001A3 (= 0x000346/2)
 
-   - *Vers* = 0, indicando que a primeira versão de xdata
+   - *Vice-versa* = 0, indicando a primeira versão do XData
 
-   - *X* = 0, indicando que nenhum dado de exceção
+   - *X* = 0, indicando que não há dados de exceção
 
-   - *E* = 0, indicando que uma lista de escopos de epílogo
+   - *E* = 0, indicando uma lista de escopos epílogo
 
    - *F* = 0, indicando uma descrição completa da função, incluindo o prólogo
 
-   - *Contagem de epílogo* = 0x04, que indica os 4 escopos totais do epílogo
+   - *Contagem de epílogo* = 0x04, indicando o total de 4 escopos de epílogo
 
-   - *Palavras de código* = 0x01, que indica uma palavra de 32 bits de códigos de desenrolamento
+   - *Palavras de código* = 0x01, indicando a palavra de 1 32 bits de códigos de liberação
 
 - Palavras de 1 a 4, descrevendo 4 escopos de epílogo em 4 locais. Cada escopo possui um conjunto comum de códigos de desenrolamento, compartilhados com o prólogo, com deslocamento 0x00, e é incondicional, especificando a condição 0x0E (sempre).
 
 - Códigos de desenrolamento, iniciando na Palavra 5: (compartilhado entre o prólogo/epílogo)
 
-   - Código de desenrolamento 0 = 0x06: sp + = (6 << 2)
+   - Código de desenrolação 0 = 0x06: SP + = (6 < < 2)
 
    - Código de desenrolamento 1 = 0xDE: pop {r4-r10, lr}
 
@@ -600,33 +600,33 @@ Epilogue:
 
 - Palavra 0
 
-   - *Função Start RVA* = 0x00085A20 (= 0x00485A20 0x00400000)
+   - *Função start RVA* = 0x00085A20 (= 0x00485A20-0x00400000)
 
 - Palavra 1
 
-   - *Sinalizador* = 0, indicando que o registro. XData está presente (necessário devido a vários epílogos)
+   - *Flag* = 0, indicando que o registro. xdata está presente (necessário devido a vários epilogues)
 
-   - *endereço. XData* -0x00400000
+   - *XData address* -0x00400000
 
 .xdata (variável, 3 palavras):
 
 - Palavra 0
 
-   - *Função comprimento* = 0x0001A3 (= 0x000346/2)
+   - *Comprimento da função* = 0x0001A3 (= 0x000346/2)
 
-   - *Vers* = 0, indicando que a primeira versão de xdata
+   - *Vice-versa* = 0, indicando a primeira versão do XData
 
-   - *X* = 0, indicando que nenhum dado de exceção
+   - *X* = 0, indicando que não há dados de exceção
 
-   - *E* = 0, indicando que uma lista de escopos de epílogo
+   - *E* = 0, indicando uma lista de escopos epílogo
 
    - *F* = 0, indicando uma descrição completa da função, incluindo o prólogo
 
-   - *Contagem de epílogo* = 0x001, que indica 1 escopo total do epílogo
+   - *Contagem de epílogo* = 0x001, indicando o escopo de epílogo total de 1
 
-   - *Palavras de código* = 0x01, que indica uma palavra de 32 bits de códigos de desenrolamento
+   - *Palavras de código* = 0x01, indicando a palavra de 1 32 bits de códigos de liberação
 
-- Word 1: Escopo do epílogo no deslocamento 0xC6 (= 0x18c/2), iniciando o índice de código de desenrolamento em 0x00 e com uma condição de 0x0E (sempre)
+- Palavra 1: Escopo epílogo no deslocamento 0xC6 (= 0x18C/2), iniciando índice de código de desenrolamento em 0x00 e com uma condição de 0x0E (sempre)
 
 - Códigos de desenrolamento, iniciando na Palavra 2: (compartilhado entre o prólogo/epílogo)
 
@@ -634,7 +634,7 @@ Epilogue:
 
    - Código de desenrolamento 1 = 0xDC: pop {r4-r8, lr}
 
-   - Código de desenrolamento 2 = 0x04: sp + = (4 << 2)
+   - Código de desenrolamento 2 = 0x04: SP + = (4 < < 2)
 
    - Código de desenrolamento 3 = 0xFD: end, é considerado uma instrução de 16 bits para o epílogo
 
@@ -658,43 +658,43 @@ Epilogue:
 
 - Palavra 0
 
-   - *Função Start RVA* = 0x00088C24 (= 0x00488C24 0x00400000)
+   - *Função start RVA* = 0x00088C24 (= 0x00488C24-0x00400000)
 
 - Palavra 1
 
-   - *Sinalizador* = 0, indicando que o registro. XData está presente (necessário devido a vários epílogos)
+   - *Flag* = 0, indicando que o registro. xdata está presente (necessário devido a vários epilogues)
 
-   - *endereço. XData* -0x00400000
+   - *XData address* -0x00400000
 
 .xdata (variável, 5 palavras):
 
 - Palavra 0
 
-   - *Função comprimento* = 0x000027 (= 0x00004E/2)
+   - *Comprimento da função* = 0x000027 (= 0x00004E/2)
 
-   - *Vers* = 0, indicando que a primeira versão de xdata
+   - *Vice-versa* = 0, indicando a primeira versão do XData
 
-   - *X* = 1, que indica os dados de exceção presentes
+   - *X* = 1, indicando os dados de exceção presentes
 
    - *E* = 1, indicando um único epílogo
 
    - *F* = 0, indicando uma descrição completa da função, incluindo o prólogo
 
-   - *Contagem de epílogo* = 0x00, que indica o início de códigos de desenrolamento do epílogo com deslocamento 0x00
+   - *Contagem de epílogo* = 0x00, indicando que os códigos de liberação de epílogo começam no deslocamento 0x00
 
-   - *Palavras de código* = 0x02, que indica duas palavras de 32 bits de códigos de desenrolamento
+   - *Palavras de código* = 0x02, indicando as palavras de 2 32 bits de códigos de desenrolamento
 
 - Código de desenrolamento, iniciando na Palavra 1:
 
    - Código de desenrolamento 0 = 0xC7: sp = r7
 
-   - Código de desenrolamento 1 = 0x05: sp + = (5 << 2).
+   - Código de desenrolamento 1 = 0x05: SP + = (5 < < 2)
 
    - Código de desenrolamento 2 = 0xED/0x90: pop {r4, r7, lr}
 
    - Código de desenrolamento 4 = 0xFF: end
 
-- Palavra 3 especifica um manipulador de exceção = 0x0019A7ED (= 0x0059A7ED – 0x00400000)
+- O Word 3 especifica um manipulador de exceção = 0x0019A7ED (= 0x0059A7ED-0x00400000)
 
 - As Palavras 4 e acima são dados de exceção embutidos
 
@@ -717,25 +717,25 @@ Function:
 
 - Palavra 0
 
-   - *Função Start RVA* = 0x00088C72 (= 0x00488C72 0x00400000)
+   - *Função start RVA* = 0x00088C72 (= 0x00488C72-0x00400000)
 
 - Palavra 1
 
-   - *Sinalizador* = 1, indicando os formatos de prólogo e epílogo canônicos
+   - *Flag* = 1, indicando o prólogo canônico e os formatos epílogo
 
-   - *Função comprimento* = 0x0B (= 0x16/2)
+   - *Comprimento da função* = 0x0B (= 0x16/2)
 
-   - *RET* = 0, indicando que um pop {pc} retorno
+   - *RET* = 0, indicando um retorno de pop {PC}
 
-   - *H* = 0, indicando os parâmetros não foram hospedados
+   - *H* = 0, indicando que os parâmetros não foram hospedados
 
-   - *R*= 0 e *Reg* = 7, que indica nenhum registro foi salvo/restaurado
+   - *R*= 0 e *reg* = 7, indicando que nenhum registro foi salvo/restaurado
 
-   - *L* = 1, indicando o LR foi salvo/restaurado
+   - *L* = 1, indicando que a LR foi salva/restaurada
 
-   - *C* = 0, indicando que nenhum encadeamento de quadro
+   - *C* = 0, indicando que não há encadeamento de quadros
 
-   - *Ajuste de pilha* = 1, indicando um ajuste de pilha 1 × 4 bytes
+   - *Ajuste de pilha* = 1, indicando um ajuste de pilha de 1 × 4 bytes
 
 ## <a name="see-also"></a>Consulte também
 

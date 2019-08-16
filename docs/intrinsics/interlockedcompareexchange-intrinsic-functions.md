@@ -48,18 +48,18 @@ helpviewer_keywords:
 - InterlockedCompareExchange64_rel intrinsic
 - _InterlockedCompareExchange64_rel intrinsic
 ms.assetid: c3ad79c0-a523-4930-a3a4-69a65d7d5c81
-ms.openlocfilehash: 6ac3ea1c97fe78cf2a145cd2ce62f7b3f198ab3c
-ms.sourcegitcommit: 6cf0c67acce633b07ff31b56cebd5de3218fd733
+ms.openlocfilehash: baa3131a7ca533af30e9ed73cd2698c06011488e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/24/2019
-ms.locfileid: "67344447"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69509448"
 ---
-# <a name="interlockedcompareexchange-intrinsic-functions"></a>Funções intrínsecas _InterlockedCompareExchange
+# <a name="_interlockedcompareexchange-intrinsic-functions"></a>Funções intrínsecas _InterlockedCompareExchange
 
 **Seção específica da Microsoft**
 
-Um interlocked compare e do exchange.
+Faz uma comparação e um intercâmbio intercadeados.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -179,13 +179,13 @@ __int64 _InterlockedCompareExchange64_rel(
 #### <a name="parameters"></a>Parâmetros
 
 *Destino*<br/>
-[no, out] Ponteiro para o valor de destino. O sinal é ignorado.
+[entrada, saída] Ponteiro para o valor de destino. O sinal é ignorado.
 
 *Exchange*<br/>
-[in] Valor de troca. O sinal é ignorado.
+no Valor do Exchange. O sinal é ignorado.
 
-*Termo de comparação*<br/>
-[in] Valor a ser comparado ao destino. O sinal é ignorado.
+*Termo*<br/>
+no Valor a ser comparado ao destino. O sinal é ignorado.
 
 ## <a name="return-value"></a>Valor de retorno
 
@@ -202,15 +202,15 @@ O valor retornado é o valor inicial do ponteiro `Destination`.
 
 ## <a name="remarks"></a>Comentários
 
-`_InterlockedCompareExchange` faz uma comparação atômica do `Destination` valor com o `Comparand` valor. Se o valor `Destination` for igual ao valor `Comparand`, o valor `Exchange` será armazenado no endereço especificado pelo `Destination`. Caso contrário, não faz nenhuma operação.
+`_InterlockedCompareExchange`faz uma comparação atômica do `Destination` valor com o `Comparand` valor. Se o valor `Destination` for igual ao valor `Comparand`, o valor `Exchange` será armazenado no endereço especificado pelo `Destination`. Caso contrário, o não fará nenhuma operação.
 
-`_InterlockedCompareExchange` fornece suporte intrínseco ao compilador para o SDK do Windows Win32 [{3&gt;interlockedcompareexchange&lt;3](/windows/desktop/api/winnt/nf-winnt-interlockedcompareexchange) função.
+`_InterlockedCompareExchange`fornece suporte intrínseco do compilador para a função [InterlockedCompareExchange](/windows/win32/api/winnt/nf-winnt-interlockedcompareexchange) do Win32 SDK do Windows.
 
-Há diversas variações em `_InterlockedCompareExchange` que variam de acordo com os tipos de dados que envolvem e se o processador específico adquirir ou semântica de liberação é usada.
+Há várias variações sobre `_InterlockedCompareExchange` isso que variam com base nos tipos de dados que envolvem e se são usadas semânticas de compra ou liberação específicas do processador.
 
-Enquanto o `_InterlockedCompareExchange` função opera em valores de inteiro longo `_InterlockedCompareExchange8` opera em valores inteiros de 8 bits `_InterlockedCompareExchange16` opera em valores inteiros curtos e `_InterlockedCompareExchange64` opera em valores inteiros de 64 bits.
+Enquanto a `_InterlockedCompareExchange` função opera em valores inteiros longos, `_InterlockedCompareExchange8` o Opera em valores inteiros de 8 bits `_InterlockedCompareExchange16` , opera em valores inteiros curtos e `_InterlockedCompareExchange64` opera em valores inteiros de 64 bits.
 
-Em plataformas ARM, use intrínsecos com os sufixos `_acq` e `_rel` para semântica de aquisição e liberação, como no início e no final de uma seção crítica. Intrínsecos ARM com um `_nf` sufixo ("sem isolamento") não funcionam como uma barreira de memória.
+Em plataformas ARM, use intrínsecos com os sufixos `_acq` e `_rel` para semântica de aquisição e liberação, como no início e no final de uma seção crítica. O ARM intrínseco com um `_nf` sufixo ("sem limite") não atua como uma barreira de memória.
 
 Intrínsecos com um sufixo `_np` ("no prefetch") impedem que uma possível operação de pré-busca seja inserida pelo compilador.
 
@@ -220,9 +220,9 @@ Essas rotinas somente estão disponíveis como intrínsecos.
 
 ## <a name="example"></a>Exemplo
 
-No exemplo a seguir, `_InterlockedCompareExchange` é usado para sincronização de thread simples de nível inferior. A abordagem tem suas limitações como base para a programação multithreaded; ela é apresentada para ilustrar o uso típico de intrínsecos sincronizados. Para obter melhores resultados, use a API do Windows. Para obter mais informações sobre a programação multithreaded, consulte [escrevendo um programa Win32 multithread](../parallel/writing-a-multithreaded-win32-program.md).
+No exemplo a seguir, `_InterlockedCompareExchange` é usado para sincronização de thread simples de nível inferior. A abordagem tem suas limitações como base para programação multithread; Ele é apresentado para ilustrar o uso típico dos intrínsecos intercadeados. Para obter melhores resultados, use a API do Windows. Para obter mais informações sobre programação multithread, consulte [escrevendo um programa Win32 multithread](../parallel/multithreading-with-c-and-win32.md#writing-a-multithreaded-win32-program).
 
-```
+```cpp
 // intrinExample.cpp
 // compile with: /EHsc /O2
 // Simple example of using _Interlocked* intrinsics to

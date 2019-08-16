@@ -232,16 +232,16 @@ helpviewer_keywords:
 - CMFCRibbonBaseElement [MFC], OnProcessKey
 - CMFCRibbonBaseElement [MFC], OnSetFocus
 ms.assetid: 419ea91b-5062-44cc-b0a3-f87d29566f62
-ms.openlocfilehash: 6daa5b6249c7ff18a8bc01c2309ffb94d3fb88ce
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 20b5e6b38f11a257472713c18ee64559cfb7b9a3
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62351885"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69505013"
 ---
 # <a name="cmfcribbonbaseelement-class"></a>Classe CMFCRibbonBaseElement
 
-O `CMFCRibbonBaseElement` classe é a classe base para todos os elementos que você pode adicionar a um [barra de faixa de opções](../../mfc/reference/cmfcribbonbar-class.md). Exemplos de elementos de faixa de opções são a faixa de opções como botões, caixas de seleção de faixa de opções e caixas de combinação da faixa de opções.
+A `CMFCRibbonBaseElement` classe é a classe base para todos os elementos que você pode adicionar a uma [barra de faixa de faixas](../../mfc/reference/cmfcribbonbar-class.md). Exemplos de elementos de faixa de lista são botões de faixa de, caixas de seleção de faixa de quadros e caixas de combinação de faixa de
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -261,140 +261,140 @@ class CMFCRibbonBaseElement : public CObject
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CMFCRibbonBaseElement::AddToKeyList](#addtokeylist)|Adiciona uma dica de tecla para o elemento de faixa de opções para uma matriz de dicas de tecla.|
-|[CMFCRibbonBaseElement::AddToListBox](#addtolistbox)|Adiciona um elemento de faixa de opções à caixa de listagem de comandos da faixa de opções especificados.|
-|[CMFCRibbonBaseElement::CanBeAddedToQuickAccessToolBar](#canbeaddedtoquickaccesstoolbar)|Indica se o elemento de faixa de opções pode ser adicionado à barra de ferramentas de acesso rápido.|
-|[CMFCRibbonBaseElement::CanBeCompacted](#canbecompacted)|Indica se o tamanho do elemento de faixa de opções pode ser compact.|
-|[CMFCRibbonBaseElement::CanBeStretched](#canbestretched)|Indica se a altura do elemento da faixa de opções pode aumentar verticalmente para a altura de uma linha de faixa de opções.|
-|[CMFCRibbonBaseElement::CanBeStretchedHorizontally](#canbestretchedhorizontally)|Indica se a largura do elemento da faixa de opções pode alterar.|
-|[CMFCRibbonBaseElement::CleanUpSizes](#cleanupsizes)|Limpa as configurações de dimensão para o elemento de faixa de opções.|
-|[CMFCRibbonBaseElement::ClosePopupMenu](#closepopupmenu)|Fecha um menu pop-up para o elemento de faixa de opções.|
-|[CMFCRibbonBaseElement::CopyFrom](#copyfrom)|Copia o estado de especificado `CMFCRibbonBaseElement` ao objeto atual.|
-|[CMFCRibbonBaseElement::DestroyCtrl](#destroyctrl)|Destrói o elemento de faixa de opções.|
-|[CMFCRibbonBaseElement::DrawImage](#drawimage)|Desenha a imagem para o elemento de faixa de opções.|
-|[CMFCRibbonBaseElement::Find](#find)|Retorna o ponteiro especificado para o elemento de faixa de opções, se ele apontar para o objeto atual.|
-|[CMFCRibbonBaseElement::FindByData](#findbydata)|Recupera um ponteiro para o elemento de faixa de opções, se ele contiver os dados especificados.|
-|[CMFCRibbonBaseElement::FindByID](#findbyid)|Recupera um ponteiro para o elemento de faixa de opções, se esse elemento é identificado pela ID de comando especificado.|
-|[CMFCRibbonBaseElement::FindByOriginal](#findbyoriginal)|Recupera um ponteiro para o elemento de faixa de opções se seu elemento de faixa de opções original corresponde ao elemento especificado da faixa de opções.|
-|[CMFCRibbonBaseElement::GetCompactSize](#getcompactsize)|Retorna o tamanho compacto do elemento da faixa de opções.|
-|[CMFCRibbonBaseElement::GetData](#getdata)|Recupera os dados definidos pelo usuário associados ao elemento de faixa de opções.|
-|[CMFCRibbonBaseElement::GetDescription](#getdescription)|Retorna a descrição do elemento da faixa de opções.|
-|[CMFCRibbonBaseElement::GetDroppedDown](#getdroppeddown)|Recupera um ponteiro para o elemento de faixa de opções, se o menu pop-up é descartado para baixo.|
-|[CMFCRibbonBaseElement::GetElements](#getelements)|Adiciona o elemento atual da faixa de opções para a matriz especificada.|
-|[CMFCRibbonBaseElement::GetElementsByID](#getelementsbyid)|Adiciona o elemento atual da faixa de opções para a matriz especificada, se o elemento de faixa de opções atual contém a ID do comando especificado.|
-|[CMFCRibbonBaseElement::GetHighlighted](#gethighlighted)|Recupera um ponteiro para o elemento de faixa de opções, se ele é realçado.|
-|[CMFCRibbonBaseElement::GetID](#getid)|Retorna a ID de comando do elemento da faixa de opções.|
-|[CMFCRibbonBaseElement::GetImageSize](#getimagesize)|Retorna o tamanho da imagem do elemento da faixa de opções.|
-|[CMFCRibbonBaseElement::GetIntermediateSize](#getintermediatesize)|Retorna o tamanho do elemento de faixa de opções em seu estado intermediário.|
-|[CMFCRibbonBaseElement::GetKeys](#getkeys)|Retorna a dica de chave associada ao elemento de faixa de opções.|
-|[CMFCRibbonBaseElement::GetKeyTipRect](#getkeytiprect)|Recupera o retângulo de limite de dica de tecla para o elemento de faixa de opções.|
-|[CMFCRibbonBaseElement::GetKeyTipSize](#getkeytipsize)|Recupera o tamanho do texto de dica de tecla.|
-|[CMFCRibbonBaseElement::GetLocationInGroup](#getlocationingroup)|Indica o local de exibição do elemento da faixa de opções em um grupo de faixa de opções.|
-|[CMFCRibbonBaseElement::GetMenuKeys](#getmenukeys)|Retorna as dicas de tecla associadas com um botão.|
-|[CMFCRibbonBaseElement::GetNotifyID](#getnotifyid)|Recupera a ID de comando de notificação para o elemento de faixa de opções.|
-|[CMFCRibbonBaseElement::GetOriginal](#getoriginal)|Recupera o elemento de faixa de opções original.|
-|[CMFCRibbonBaseElement::GetParentCategory](#getparentcategory)|Recupera a categoria de faixa de opções para o elemento de faixa de opções.|
-|[CMFCRibbonBaseElement::GetParentPanel](#getparentpanel)|Recupera o painel de faixa de opções que contém o elemento de faixa de opções.|
-|[CMFCRibbonBaseElement::GetParentRibbonBar](#getparentribbonbar)|Recupera a barra de faixa de opções do pai do elemento de faixa de opções.|
-|[CMFCRibbonBaseElement::GetParentWnd](#getparentwnd)|Recupera a janela pai para o elemento de faixa de opções.|
-|[CMFCRibbonBaseElement::GetPressed](#getpressed)|Recupera um ponteiro para o elemento de faixa de opções, se o usuário a pressionar no momento.|
-|[CMFCRibbonBaseElement::GetQuickAccessToolBarID](#getquickaccesstoolbarid)|Recupera a ID do elemento da faixa de opções de comando quando ele está localizado na barra de ferramentas de acesso rápido.|
-|[CMFCRibbonBaseElement::GetRect](#getrect)|Retorna o retângulo delimitador do elemento da faixa de opções.|
-|[CMFCRibbonBaseElement::GetRegularSize](#getregularsize)|Retorna o tamanho regular do elemento da faixa de opções.|
-|[CMFCRibbonBaseElement::GetSize](#getsize)|Retorna o tamanho atual do elemento da faixa de opções.|
-|[CMFCRibbonBaseElement::GetText](#gettext)|Retorna o texto associado ao elemento de faixa de opções.|
-|[CMFCRibbonBaseElement::GetToolTipText](#gettooltiptext)|Retorna o texto de dica de ferramenta do elemento da faixa de opções.|
-|[CMFCRibbonBaseElement::GetTopLevelRibbonBar](#gettoplevelribbonbar)|Recupera a barra de faixa de opções de nível superior para o elemento de faixa de opções.|
-|[CMFCRibbonBaseElement::HasCompactMode](#hascompactmode)|Especifica se o elemento de faixa de opções tem um modo compacto.|
+|[CMFCRibbonBaseElement::AddToKeyList](#addtokeylist)|Adiciona um KeyTip para o elemento Ribbon a uma matriz de keytips.|
+|[CMFCRibbonBaseElement::AddToListBox](#addtolistbox)|Adiciona um elemento da faixa de faixas à caixa de listagem de comandos da faixa de lista especificada.|
+|[CMFCRibbonBaseElement::CanBeAddedToQuickAccessToolBar](#canbeaddedtoquickaccesstoolbar)|Indica se o elemento da faixa de faixas pode ser adicionado à barra de ferramentas de acesso rápido.|
+|[CMFCRibbonBaseElement::CanBeCompacted](#canbecompacted)|Indica se o tamanho do elemento da faixa de faixas pode ser compacto.|
+|[CMFCRibbonBaseElement::CanBeStretched](#canbestretched)|Indica se a altura do elemento da faixa de faixas pode aumentar verticalmente para a altura de uma linha da faixa de faixas.|
+|[CMFCRibbonBaseElement::CanBeStretchedHorizontally](#canbestretchedhorizontally)|Indica se a largura do elemento da faixa de faixas pode ser alterada.|
+|[CMFCRibbonBaseElement::CleanUpSizes](#cleanupsizes)|Limpa as configurações de dimensão do elemento da faixa de opções.|
+|[CMFCRibbonBaseElement::ClosePopupMenu](#closepopupmenu)|Fecha o menu pop-up do elemento Ribbon.|
+|[CMFCRibbonBaseElement::CopyFrom](#copyfrom)|Copia o estado do especificado `CMFCRibbonBaseElement` para o objeto atual.|
+|[CMFCRibbonBaseElement::DestroyCtrl](#destroyctrl)|Destrói o elemento da faixa de faixas.|
+|[CMFCRibbonBaseElement::DrawImage](#drawimage)|Desenha a imagem para o elemento Ribbon.|
+|[CMFCRibbonBaseElement::Find](#find)|Retorna o ponteiro especificado para o elemento Ribbon se ele apontar para o objeto atual.|
+|[CMFCRibbonBaseElement::FindByData](#findbydata)|Recupera um ponteiro para o elemento Ribbon se ele contiver os dados especificados.|
+|[CMFCRibbonBaseElement:: FindByID](#findbyid)|Recupera um ponteiro para o elemento Ribbon se esse elemento é identificado pela ID de comando especificada.|
+|[CMFCRibbonBaseElement::FindByOriginal](#findbyoriginal)|Recupera um ponteiro para o elemento Ribbon se seu elemento Ribbon original corresponde ao elemento Ribbon especificado.|
+|[CMFCRibbonBaseElement::GetCompactSize](#getcompactsize)|Retorna o tamanho compacto do elemento da faixa de faixas.|
+|[CMFCRibbonBaseElement::GetData](#getdata)|Recupera os dados definidos pelo usuário associados ao elemento Ribbon.|
+|[CMFCRibbonBaseElement::GetDescription](#getdescription)|Retorna a descrição do elemento Ribbon.|
+|[CMFCRibbonBaseElement::GetDroppedDown](#getdroppeddown)|Recupera um ponteiro para o elemento Ribbon se o menu pop-up é Descartado.|
+|[CMFCRibbonBaseElement::GetElements](#getelements)|Adiciona o elemento da faixa de faixas atual à matriz especificada.|
+|[CMFCRibbonBaseElement::GetElementsByID](#getelementsbyid)|Adiciona o elemento da faixa de faixas atual à matriz especificada se o elemento da faixa de tempo atual contiver a ID de comando especificada.|
+|[CMFCRibbonBaseElement::GetHighlighted](#gethighlighted)|Recupera um ponteiro para o elemento Ribbon se ele estiver realçado.|
+|[CMFCRibbonBaseElement::GetID](#getid)|Retorna a ID de comando do elemento Ribbon.|
+|[CMFCRibbonBaseElement::GetImageSize](#getimagesize)|Retorna o tamanho da imagem do elemento da faixa de faixas.|
+|[CMFCRibbonBaseElement::GetIntermediateSize](#getintermediatesize)|Retorna o tamanho do elemento da faixa de faixas em seu estado intermediário.|
+|[CMFCRibbonBaseElement::GetKeys](#getkeys)|Retorna o KeyTip associado ao elemento Ribbon.|
+|[CMFCRibbonBaseElement::GetKeyTipRect](#getkeytiprect)|Recupera o retângulo de limite KeyTip para o elemento Ribbon.|
+|[CMFCRibbonBaseElement::GetKeyTipSize](#getkeytipsize)|Recupera o tamanho do texto KeyTip.|
+|[CMFCRibbonBaseElement::GetLocationInGroup](#getlocationingroup)|Indica o local de exibição do elemento Ribbon em um grupo de faixa de faixas.|
+|[CMFCRibbonBaseElement::GetMenuKeys](#getmenukeys)|Retorna os keytips associados a um botão.|
+|[CMFCRibbonBaseElement::GetNotifyID](#getnotifyid)|Recupera a ID do comando de notificação para o elemento Ribbon.|
+|[CMFCRibbonBaseElement::GetOriginal](#getoriginal)|Recupera o elemento da faixa de faixas original.|
+|[CMFCRibbonBaseElement::GetParentCategory](#getparentcategory)|Recupera a categoria da faixa de faixas para o elemento da faixa de faixas.|
+|[CMFCRibbonBaseElement::GetParentPanel](#getparentpanel)|Recupera o painel da faixa de faixas que contém o elemento da faixa de faixas.|
+|[CMFCRibbonBaseElement::GetParentRibbonBar](#getparentribbonbar)|Recupera a barra de faixa de faixas pai para o elemento Ribbon.|
+|[CMFCRibbonBaseElement::GetParentWnd](#getparentwnd)|Recupera a janela pai do elemento Ribbon.|
+|[CMFCRibbonBaseElement::GetPressed](#getpressed)|Recupera um ponteiro para o elemento Ribbon se o usuário o pressiona no momento.|
+|[CMFCRibbonBaseElement::GetQuickAccessToolBarID](#getquickaccesstoolbarid)|Recupera a ID de comando do elemento Ribbon quando ele está localizado na barra de ferramentas de acesso rápido.|
+|[CMFCRibbonBaseElement::GetRect](#getrect)|Retorna o retângulo delimitador do elemento Ribbon.|
+|[CMFCRibbonBaseElement::GetRegularSize](#getregularsize)|Retorna o tamanho regular do elemento da faixa de faixas.|
+|[CMFCRibbonBaseElement::GetSize](#getsize)|Retorna o tamanho atual do elemento da faixa de faixas.|
+|[CMFCRibbonBaseElement::GetText](#gettext)|Retorna o texto associado ao elemento Ribbon.|
+|[CMFCRibbonBaseElement::GetToolTipText](#gettooltiptext)|Retorna o texto da dica de ferramenta do elemento da faixa de faixas.|
+|[CMFCRibbonBaseElement::GetTopLevelRibbonBar](#gettoplevelribbonbar)|Recupera a barra de faixa de faixas de nível superior para o elemento Ribbon.|
+|[CMFCRibbonBaseElement::HasCompactMode](#hascompactmode)|Especifica se o elemento Ribbon tem um modo compacto.|
 |[CMFCRibbonBaseElement::HasFocus](#hasfocus)|Indica se o elemento pai tem o foco do teclado.|
-|[CMFCRibbonBaseElement::HasIntermediateMode](#hasintermediatemode)|Especifica se o elemento de faixa de opções tem um modo de intermediário.|
-|[CMFCRibbonBaseElement::HasLargeMode](#haslargemode)|Especifica se o elemento de faixa de opções tem um grande modo.|
-|[CMFCRibbonBaseElement::HasMenu](#hasmenu)|Indica se o elemento de faixa de opções tem um menu.|
-|[CMFCRibbonBaseElement::HitTest](#hittest)|Recupera um ponteiro para o elemento de faixa de opções, se o ponto especificado está localizado nele.|
-|[CMFCRibbonBaseElement::IsAlignByColumn](#isalignbycolumn)|Indica se o elemento de faixa de opções é alinhado verticalmente com outros elementos de faixa de opções.|
-|[CMFCRibbonBaseElement::IsAlwaysLargeImage](#isalwayslargeimage)|Indica se o tamanho da imagem da faixa de opções elemento sempre é grande.|
-|[CMFCRibbonBaseElement::IsAutoRepeatMode](#isautorepeatmode)|Indica se o elemento de faixa de opções está no modo de repetição automática.|
-|[CMFCRibbonBaseElement::IsChecked](#ischecked)|Especifica se o elemento de faixa de opções é verificado.|
-|[CMFCRibbonBaseElement::IsCompactMode](#iscompactmode)|Especifica se o elemento de faixa de opções é em um modo compacto.|
+|[CMFCRibbonBaseElement::HasIntermediateMode](#hasintermediatemode)|Especifica se o elemento Ribbon tem um modo intermediário.|
+|[CMFCRibbonBaseElement::HasLargeMode](#haslargemode)|Especifica se o elemento Ribbon tem um modo grande.|
+|[CMFCRibbonBaseElement::HasMenu](#hasmenu)|Indica se o elemento Ribbon tem um menu.|
+|[CMFCRibbonBaseElement::HitTest](#hittest)|Recupera um ponteiro para o elemento Ribbon se o ponto especificado estiver localizado nele.|
+|[CMFCRibbonBaseElement::IsAlignByColumn](#isalignbycolumn)|Indica se o elemento da faixa de faixas está alinhado verticalmente com outros elementos da faixa de tipos.|
+|[CMFCRibbonBaseElement::IsAlwaysLargeImage](#isalwayslargeimage)|Indica se o tamanho da imagem do elemento da faixa de faixas é sempre grande.|
+|[CMFCRibbonBaseElement::IsAutoRepeatMode](#isautorepeatmode)|Indica se o elemento da faixa de faixas está no modo de repetição automática.|
+|[CMFCRibbonBaseElement::IsChecked](#ischecked)|Especifica se o elemento da faixa de opção está marcado.|
+|[CMFCRibbonBaseElement::IsCompactMode](#iscompactmode)|Especifica se o elemento da faixa de faixas está em um modo compacto.|
 |[CMFCRibbonBaseElement::IsDefaultMenuLook](#isdefaultmenulook)||
-|[CMFCRibbonBaseElement::IsDisabled](#isdisabled)|Especifica se o elemento de faixa de opções está desabilitado.|
-|[CMFCRibbonBaseElement::IsDroppedDown](#isdroppeddown)|Determina se o elemento de faixa de opções exibe um menu pop-up e está aberto.|
-|[CMFCRibbonBaseElement::IsFocused](#isfocused)|Especifica se o elemento de faixa de opções tem o foco.|
-|[CMFCRibbonBaseElement::IsGalleryIcon](#isgalleryicon)|Indica se o elemento de faixa de opções está contido em uma galeria da faixa de opções.|
-|[CMFCRibbonBaseElement::IsHighlighted](#ishighlighted)|Especifica se o elemento de faixa de opções está realçado.|
-|[CMFCRibbonBaseElement::IsIntermediateMode](#isintermediatemode)|Indica se a imagem atual para o elemento de faixa de opções é tamanho intermediário.|
-|[CMFCRibbonBaseElement::IsLargeMode](#islargemode)|Indica se a imagem atual para o elemento de faixa de opções é grande em tamanho.|
-|[CMFCRibbonBaseElement::IsMenuMode](#ismenumode)|Indica se o elemento de faixa de opções está contido em um menu.|
-|[CMFCRibbonBaseElement::IsPressed](#ispressed)|Indica se o usuário clicou com o elemento de faixa de opções.|
-|[CMFCRibbonBaseElement::IsQATMode](#isqatmode)|Indica se o elemento de faixa de opções está contido na barra de ferramentas de acesso rápido.|
-|[CMFCRibbonBaseElement::IsSeparator](#isseparator)|Indica se o elemento de faixa de opções é um separador de exibição.|
-|[CMFCRibbonBaseElement::IsShowGroupBorder](#isshowgroupborder)|Indica se o elemento de faixa de opções está contido em um grupo que exibe uma borda comum.|
-|[CMFCRibbonBaseElement::IsShowTooltipOnBottom](#isshowtooltiponbottom)|Indica se a dica de ferramenta é exibida sob o elemento de faixa de opções.|
-|[CMFCRibbonBaseElement::IsTabStop](#istabstop)|Indica se o elemento de faixa de opções pode ser selecionado com o teclado.|
-|[CMFCRibbonBaseElement::IsTextAlwaysOnRight](#istextalwaysonright)|Indica se o texto para o elemento de faixa de opções é exibido à direita.|
-|[CMFCRibbonBaseElement::IsVisible](#isvisible)|Indica se o elemento de faixa de opções é exibido no momento.|
-|[CMFCRibbonBaseElement::IsWholeRowHeight](#iswholerowheight)|Indica se o heigth de exibição do elemento de faixa de opções é o mesmo que a altura de exibição do painel da faixa de opções que o contém.|
-|[CMFCRibbonBaseElement::NotifyCommand](#notifycommand)|Envia uma notificação de comando para a janela pai do elemento da faixa de opções.|
-|[CMFCRibbonBaseElement::NotifyHighlightListItem](#notifyhighlightlistitem)|Notifica a janela pai da barra de faixa de opções quando um usuário realça um elemento de faixa de opções que está localizado em uma lista.|
-|[CMFCRibbonBaseElement::OnAddToQAToolbar](#onaddtoqatoolbar)|Adiciona o elemento de faixa de opções na barra de ferramentas de acesso rápido especificado.|
-|[CMFCRibbonBaseElement::OnAfterChangeRect](#onafterchangerect)|Atualiza a dica de ferramenta para o elemento de faixa de opções.|
-|[CMFCRibbonBaseElement::OnAutoRepeat](#onautorepeat)|Atualiza o elemento de faixa de opções em resposta à entrada do usuário prolongada.|
-|[CMFCRibbonBaseElement::OnCalcTextSize](#oncalctextsize)|Calcula o tamanho do texto para o elemento de faixa de opções.|
-|[CMFCRibbonBaseElement::OnChangeMenuHighlight](#onchangemenuhighlight)|Chamado pelo framework quando o realce é alterado para um elemento de faixa de opções que está localizado em um menu.|
-|[CMFCRibbonBaseElement::OnDraw](#ondraw)|Chamado pelo framework para desenhar o elemento de faixa de opções.|
-|[CMFCRibbonBaseElement::OnDrawKeyTip](#ondrawkeytip)|Chamado pelo framework para desenhar a dica de tecla para o elemento de faixa de opções.|
-|[CMFCRibbonBaseElement::OnDrawMenuImage](#ondrawmenuimage)|Chamado pelo framework quando a imagem do menu para o elemento de faixa de opções é desenhada.|
-|[CMFCRibbonBaseElement::OnDrawOnList](#ondrawonlist)|Chamado pelo framework para desenhar o elemento de faixa de opções em uma caixa de listagem de comandos.|
-|[CMFCRibbonBaseElement::OnKey](#onkey)|Chamado pelo framework quando o usuário pressiona uma dica de tecla e o elemento de faixa de opções tem o foco.|
+|[CMFCRibbonBaseElement::IsDisabled](#isdisabled)|Especifica se o elemento da faixa de faixas está desabilitado.|
+|[CMFCRibbonBaseElement::IsDroppedDown](#isdroppeddown)|Determina se o elemento da faixa de faixas exibe um menu pop-up e é Descartado.|
+|[CMFCRibbonBaseElement:: IsFocused](#isfocused)|Especifica se o elemento da faixa de faixas tem o foco.|
+|[CMFCRibbonBaseElement::IsGalleryIcon](#isgalleryicon)|Indica se o elemento da faixa de faixas está contido em uma galeria de faixa de uma.|
+|[CMFCRibbonBaseElement::IsHighlighted](#ishighlighted)|Especifica se o elemento da faixa de faixas está realçado.|
+|[CMFCRibbonBaseElement::IsIntermediateMode](#isintermediatemode)|Indica se a imagem atual do elemento da faixa de faixas é de tamanho intermediário.|
+|[CMFCRibbonBaseElement::IsLargeMode](#islargemode)|Indica se a imagem atual do elemento da faixa de faixas é tamanho grande.|
+|[CMFCRibbonBaseElement::IsMenuMode](#ismenumode)|Indica se o elemento Ribbon está contido em um menu.|
+|[CMFCRibbonBaseElement::IsPressed](#ispressed)|Indica se o usuário clicou no elemento Ribbon.|
+|[CMFCRibbonBaseElement::IsQATMode](#isqatmode)|Indica se o elemento da faixa de faixas está contido na barra de ferramentas de acesso rápido.|
+|[CMFCRibbonBaseElement::IsSeparator](#isseparator)|Indica se o elemento Ribbon é um separador de exibição.|
+|[CMFCRibbonBaseElement::IsShowGroupBorder](#isshowgroupborder)|Indica se o elemento Ribbon está contido em um grupo que exibe uma borda comum.|
+|[CMFCRibbonBaseElement::IsShowTooltipOnBottom](#isshowtooltiponbottom)|Indica se a dica de ferramenta é exibida sob o elemento Ribbon.|
+|[CMFCRibbonBaseElement::IsTabStop](#istabstop)|Indica se o elemento da faixa de faixas pode ser selecionado com o teclado.|
+|[CMFCRibbonBaseElement::IsTextAlwaysOnRight](#istextalwaysonright)|Indica se o texto do elemento da faixa de faixas é exibido à direita.|
+|[CMFCRibbonBaseElement::IsVisible](#isvisible)|Indica se o elemento da faixa de faixas está sendo exibido no momento.|
+|[CMFCRibbonBaseElement::IsWholeRowHeight](#iswholerowheight)|Indica se o heigth de exibição do elemento da faixa de faixas é o mesmo da altura de exibição do painel da faixa de faixas que o contém.|
+|[CMFCRibbonBaseElement::NotifyCommand](#notifycommand)|Envia uma notificação de comando para a janela pai do elemento Ribbon.|
+|[CMFCRibbonBaseElement::NotifyHighlightListItem](#notifyhighlightlistitem)|Notifica a janela pai da barra da faixa de forma quando um usuário realça um elemento Ribbon que está localizado em uma lista.|
+|[CMFCRibbonBaseElement::OnAddToQAToolbar](#onaddtoqatoolbar)|Adiciona o elemento da faixa de faixas à barra de ferramentas de acesso rápido especificada.|
+|[CMFCRibbonBaseElement::OnAfterChangeRect](#onafterchangerect)|Atualiza a dica de ferramenta para o elemento Ribbon.|
+|[CMFCRibbonBaseElement::OnAutoRepeat](#onautorepeat)|Atualiza o elemento da faixa de faixas em resposta à entrada de usuário sustentada.|
+|[CMFCRibbonBaseElement::OnCalcTextSize](#oncalctextsize)|Calcula o tamanho do texto para o elemento Ribbon.|
+|[CMFCRibbonBaseElement::OnChangeMenuHighlight](#onchangemenuhighlight)|Chamado pelo Framework quando o realce é alterado para um elemento Ribbon que está localizado em um menu.|
+|[CMFCRibbonBaseElement::OnDraw](#ondraw)|Chamado pelo Framework para desenhar o elemento Ribbon.|
+|[CMFCRibbonBaseElement::OnDrawKeyTip](#ondrawkeytip)|Chamado pelo Framework para desenhar o KeyTip para o elemento Ribbon.|
+|[CMFCRibbonBaseElement::OnDrawMenuImage](#ondrawmenuimage)|Chamado pelo Framework quando a imagem de menu para o elemento Ribbon é desenhada.|
+|[CMFCRibbonBaseElement::OnDrawOnList](#ondrawonlist)|Chamado pelo Framework para desenhar o elemento da faixa de faixas em uma caixa de listagem de comandos.|
+|[CMFCRibbonBaseElement::OnKey](#onkey)|Chamado pelo Framework quando o usuário pressiona um KeyTip e o elemento Ribbon tem o foco.|
 |[CMFCRibbonBaseElement::OnMenuKey](#onmenukey)||
-|[CMFCRibbonBaseElement::OnRTLChanged](#onrtlchanged)|Chamado pelo framework quando o layout muda de direção.|
-|[CMFCRibbonBaseElement::OnShow](#onshow)|Chamado pelo framework para mostrar ou ocultar o elemento de faixa de opções.|
-|[CMFCRibbonBaseElement::OnShowPopupMenu](#onshowpopupmenu)|Chamado pelo framework quando o elemento de faixa de opções está prestes a exibir um menu pop-up.|
+|[CMFCRibbonBaseElement::OnRTLChanged](#onrtlchanged)|Chamado pelo Framework quando o layout muda de direção.|
+|[CMFCRibbonBaseElement::OnShow](#onshow)|Chamado pelo Framework para mostrar ou ocultar o elemento Ribbon.|
+|[CMFCRibbonBaseElement::OnShowPopupMenu](#onshowpopupmenu)|Chamado pelo Framework quando o elemento Ribbon exibirá um menu pop-up.|
 |[CMFCRibbonBaseElement::PostMenuCommand](#postmenucommand)||
-|[CMFCRibbonBaseElement::Redraw](#redraw)|Atualiza a exibição para o elemento de faixa de opções.|
-|[CMFCRibbonBaseElement::SetACCData](#setaccdata)|Define os dados de acessibilidade para o elemento de faixa de opções.|
-|[CMFCRibbonBaseElement::SetCompactMode](#setcompactmode)|Define o tamanho de exibição para o elemento de faixa de opções.|
-|[CMFCRibbonBaseElement::SetData](#setdata)|Associa um item de dados com o elemento de faixa de opções.|
+|[CMFCRibbonBaseElement:: redesenhar](#redraw)|Atualiza a exibição para o elemento Ribbon.|
+|[CMFCRibbonBaseElement::SetACCData](#setaccdata)|Define os dados de acessibilidade para o elemento Ribbon.|
+|[CMFCRibbonBaseElement::SetCompactMode](#setcompactmode)|Define o tamanho de exibição para o elemento Ribbon.|
+|[CMFCRibbonBaseElement::SetData](#setdata)|Associa um item de dados com o elemento Ribbon.|
 |[CMFCRibbonBaseElement::SetDefaultMenuLook](#setdefaultmenulook)||
-|[CMFCRibbonBaseElement::SetDescription](#setdescription)|Define a descrição para o elemento de faixa de opções.|
-|[CMFCRibbonBaseElement::SetID](#setid)|Define a ID de comando do elemento da faixa de opções.|
-|[CMFCRibbonBaseElement::SetInitialMode](#setinitialmode)|Define o tamanho de exibição inicial para o elemento de faixa de opções.|
-|[CMFCRibbonBaseElement::SetKeys](#setkeys)|Define uma dica de tecla para o elemento de faixa de opções.|
-|[CMFCRibbonBaseElement::SetOriginal](#setoriginal)|Define o elemento de faixa de opções original para o elemento de faixa de opções.|
-|[CMFCRibbonBaseElement::SetParentCategory](#setparentcategory)|Define a categoria pai para o elemento de faixa de opções.|
-|[CMFCRibbonBaseElement::SetParentMenu](#setparentmenu)|Define o pai de contêiner para o elemento de faixa de opções do menu.|
-|[CMFCRibbonBaseElement::SetParentRibbonBar](#setparentribbonbar)|Define a barra de faixa de opções do pai do elemento de faixa de opções.|
-|[CMFCRibbonBaseElement::SetRect](#setrect)|Define o fot dimensões que exibir o retângulo para o elemento de faixa de opções.|
-|[CMFCRibbonBaseElement::SetText](#settext)|Define o texto para o elemento de faixa de opções.|
-|[CMFCRibbonBaseElement::SetTextAlwaysOnRight](#settextalwaysonright)|Define o texto para o elemento de faixa de opções para exibir no lado direito.|
-|[CMFCRibbonBaseElement::SetToolTipText](#settooltiptext)|Define o texto de dica de ferramenta para o elemento de faixa de opções.|
-|[CMFCRibbonBaseElement::SetVisible](#setvisible)|Define o estado de visibilidade do elemento da faixa de opções.|
-|[CMFCRibbonBaseElement::StretchHorizontally](#stretchhorizontally)|Aumente a largura do elemento da faixa de opções.|
-|[CMFCRibbonBaseElement::StretchToWholeRow](#stretchtowholerow)|Altera a altura de exibição do elemento de faixa de opções para a altura da linha especificada.|
-|[CMFCRibbonBaseElement::UpdateTooltipInfo](#updatetooltipinfo)|Atualiza o texto de dica de ferramenta usando o recurso de comando para o elemento de faixa de opções.|
+|[CMFCRibbonBaseElement::SetDescription](#setdescription)|Define a descrição para o elemento Ribbon.|
+|[CMFCRibbonBaseElement::SetID](#setid)|Define a ID de comando do elemento Ribbon.|
+|[CMFCRibbonBaseElement::SetInitialMode](#setinitialmode)|Define o tamanho de exibição inicial para o elemento da faixa de faixas.|
+|[CMFCRibbonBaseElement::SetKeys](#setkeys)|Define um KeyTip para o elemento Ribbon.|
+|[CMFCRibbonBaseElement::SetOriginal](#setoriginal)|Define o elemento da faixa de faixas original para o elemento Ribbon.|
+|[CMFCRibbonBaseElement::SetParentCategory](#setparentcategory)|Define a categoria pai para o elemento Ribbon.|
+|[CMFCRibbonBaseElement::SetParentMenu](#setparentmenu)|Define o contêiner de menu pai para o elemento Ribbon.|
+|[CMFCRibbonBaseElement::SetParentRibbonBar](#setparentribbonbar)|Define a barra de faixa de faixas pai para o elemento Ribbon.|
+|[CMFCRibbonBaseElement::SetRect](#setrect)|Define as dimensões Database que ele exibe Rectangle para o elemento Ribbon.|
+|[CMFCRibbonBaseElement::SetText](#settext)|Define o texto para o elemento Ribbon.|
+|[CMFCRibbonBaseElement::SetTextAlwaysOnRight](#settextalwaysonright)|Define o texto para o elemento da faixa de faixas a ser exibido à direita.|
+|[CMFCRibbonBaseElement::SetToolTipText](#settooltiptext)|Define o texto de dica de ferramenta para o elemento Ribbon.|
+|[CMFCRibbonBaseElement::SetVisible](#setvisible)|Define o estado de visibilidade do elemento Ribbon.|
+|[CMFCRibbonBaseElement::StretchHorizontally](#stretchhorizontally)|Amplia a largura do elemento Ribbon.|
+|[CMFCRibbonBaseElement::StretchToWholeRow](#stretchtowholerow)|Altera a altura de exibição do elemento da faixa de faixas para a altura da linha especificada.|
+|[CMFCRibbonBaseElement::UpdateTooltipInfo](#updatetooltipinfo)|Atualiza o texto da dica de ferramenta usando o recurso de comando para o elemento Ribbon.|
 
 ### <a name="protected-methods"></a>Métodos Protegidos
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CMFCRibbonBaseElement::OnProcessKey](#onprocesskey)|Chamado pelo framework quando o usuário pressiona uma tecla de atalho.|
-|[CMFCRibbonBaseElement::OnSetFocus](#onsetfocus)|Chamado pelo framework quando um elemento de faixa de opções recebe ou perde o foco de entrada.|
+|[CMFCRibbonBaseElement::OnProcessKey](#onprocesskey)|Chamado pelo Framework quando o usuário pressiona uma tecla de atalho.|
+|[CMFCRibbonBaseElement::OnSetFocus](#onsetfocus)|Chamado pelo Framework quando um elemento Ribbon recebe ou perde o foco de entrada.|
 
 ## <a name="remarks"></a>Comentários
 
-O `CMFCRibbonBaseElement` classe define as propriedades que são comuns a todos os elementos de faixa de opções que incluem a ID de comando, o rótulo de texto, texto de dica de ferramenta, descrição do elemento e estado (que pode ser focado, realçado, pressionado, desabilitado, check- ou descartado para baixo).
+A `CMFCRibbonBaseElement` classe define as propriedades que são comuns a todos os elementos da faixa de opção que incluem a ID de comando, o rótulo de texto, o texto da dica de ferramenta, a descrição do elemento e o estado (que pode ser focalizado, realçado, pressionado, desabilitado, marcado ou descartado).
 
-O tamanho da imagem de um elemento de faixa de opções é definido pelo `RibbonImageType` membro, que pode ser um dos seguintes valores:
+O tamanho da imagem de um elemento da faixa de opções `RibbonImageType` é definido pelo membro, que pode ser um dos seguintes valores:
 
 - `RibbonImageLarge`
 
 - `RibbonImageSmall`
 
-Dependendo de seu tamanho, um elemento de faixa de opções exibe em uma imagem grande ou pequena.
+Dependendo de seu tamanho, um elemento da faixa de opções exibe uma imagem pequena ou grande.
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir demonstra como usar vários métodos no `CMFCRibbonBaseElement` classe. O exemplo mostra como obter um `CMFCRibbonBaseElement` do objeto de um `CMFCRibbonStatusBar` de classe, defina a descrição para o elemento de faixa de opções, definir o texto, definir uma dica de tecla e definir o texto de dica de ferramenta para o elemento de faixa de opções. Este trecho de código é parte do [desenhar o cliente de exemplo](../../overview/visual-cpp-samples.md).
+O exemplo a seguir demonstra como usar vários métodos na `CMFCRibbonBaseElement` classe. O exemplo mostra como obter um `CMFCRibbonBaseElement` objeto de uma `CMFCRibbonStatusBar` classe, definir a descrição para o elemento Ribbon, definir o texto, definir um KeyTip e definir o texto da dica de ferramenta para o elemento Ribbon. Este trecho de código faz parte do [exemplo de cliente de desenho](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_DrawClient#8](../../mfc/reference/codesnippet/cpp/cmfcribbonbaseelement-class_1.cpp)]
 [!code-cpp[NVC_MFC_DrawClient#9](../../mfc/reference/codesnippet/cpp/cmfcribbonbaseelement-class_2.cpp)]
@@ -407,11 +407,11 @@ O exemplo a seguir demonstra como usar vários métodos no `CMFCRibbonBaseElemen
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** afxbaseribbonelement.h
+**Cabeçalho:** afxbaseribbonelement. h
 
 ##  <a name="addtokeylist"></a>  CMFCRibbonBaseElement::AddToKeyList
 
-Adiciona uma dica de tecla para o elemento de faixa de opções para uma matriz de dicas de tecla.
+Adiciona um KeyTip para o elemento Ribbon a uma matriz de keytips.
 
 ```
 virtual void AddToKeyList(
@@ -421,15 +421,15 @@ virtual void AddToKeyList(
 ### <a name="parameters"></a>Parâmetros
 
 *arElems*<br/>
-[in] Referência a um [CArray](../../mfc/reference/carray-class.md) de dicas de tecla.
+no Referência a um [CArray](../../mfc/reference/carray-class.md) de keytips.
 
 ### <a name="remarks"></a>Comentários
 
-Quando o recurso de dicas de tecla da faixa de opções é habilitado, o framework exibe as dicas de tecla da faixa de opções quando o usuário pressiona a tecla ALT ou a tecla F10.
+Quando o recurso keytips da faixa de faixas está habilitado, a estrutura exibe dicas de faixa de faixas quando o usuário pressiona a tecla ALT ou a tecla F10.
 
 ##  <a name="addtolistbox"></a>  CMFCRibbonBaseElement::AddToListBox
 
-Adiciona um elemento de faixa de opções à caixa de listagem de comandos da faixa de opções especificados.
+Adiciona um elemento da faixa de faixas à caixa de listagem de comandos da faixa de lista especificada.
 
 ```
 virtual int AddToListBox(
@@ -440,22 +440,22 @@ virtual int AddToListBox(
 ### <a name="parameters"></a>Parâmetros
 
 *pWndListBox*<br/>
-[in] Ponteiro para uma caixa de listagem de comandos.
+no Ponteiro para uma caixa de listagem de comandos.
 
 *bDeep*<br/>
-[in] Esse parâmetro não é usado.
+no Esse parâmetro não é usado.
 
 ### <a name="return-value"></a>Valor de retorno
 
-O índice baseado em zero do elemento da faixa de opções adicionada.
+O índice de base zero do elemento da faixa de bits adicionado.
 
 ### <a name="remarks"></a>Comentários
 
-O framework adiciona elementos de faixa de opções para uma caixa de lista de comandos para habilitar o usuário personalize a interface do usuário.
+A estrutura adiciona elementos da faixa de lista a uma caixa de listagem de comandos para permitir que o usuário personalize a interface do usuário.
 
 ##  <a name="canbeaddedtoquickaccesstoolbar"></a>  CMFCRibbonBaseElement::CanBeAddedToQuickAccessToolBar
 
-Indica se o elemento de faixa de opções pode ser adicionado à barra de ferramentas de acesso rápido.
+Indica se o elemento da faixa de faixas pode ser adicionado à barra de ferramentas de acesso rápido.
 
 ```
 virtual BOOL CanBeAddedToQuickAccessToolBar() const;
@@ -463,13 +463,13 @@ virtual BOOL CanBeAddedToQuickAccessToolBar() const;
 
 ### <a name="return-value"></a>Valor de retorno
 
-TRUE se o elemento pode ser adicionado; Caso contrário, FALSE.
+TRUE se o elemento puder ser adicionado; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
 ##  <a name="canbecompacted"></a>  CMFCRibbonBaseElement::CanBeCompacted
 
-Indica se o tamanho do elemento de faixa de opções pode ser compact.
+Indica se o tamanho do elemento da faixa de faixas pode ser compacto.
 
 ```
 virtual BOOL CanBeCompacted() const;
@@ -477,15 +477,15 @@ virtual BOOL CanBeCompacted() const;
 
 ### <a name="return-value"></a>Valor de retorno
 
-TRUE se o tamanho do elemento de faixa de opções pode ser compact; Caso contrário, FALSE.
+TRUE se o tamanho do elemento da faixa de faixas puder ser compactado; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-O tamanho de um elemento de faixa de opções pode ser compact, intermediário ou grandes.
+O tamanho de um elemento da faixa de faixas pode ser compacto, intermediário ou grande.
 
 ##  <a name="canbestretched"></a>  CMFCRibbonBaseElement::CanBeStretched
 
-Indica se a altura do elemento da faixa de opções pode aumentar verticalmente para a altura de uma linha de faixa de opções.
+Indica se a altura do elemento da faixa de faixas pode aumentar verticalmente para a altura de uma linha da faixa de faixas.
 
 ```
 virtual BOOL CanBeStretched();
@@ -497,11 +497,11 @@ Sempre retorna TRUE.
 
 ### <a name="remarks"></a>Comentários
 
-Por padrão, esse método sempre retorna TRUE. Substitua este método para indicar se a altura do elemento da faixa de opções pode aumentar verticalmente para a altura de uma linha de faixa de opções.
+Por padrão, esse método sempre retorna TRUE. Substitua esse método para indicar se a altura do elemento da faixa de faixas pode aumentar verticalmente para a altura de uma linha da faixa de uma.
 
 ##  <a name="canbestretchedhorizontally"></a>  CMFCRibbonBaseElement::CanBeStretchedHorizontally
 
-Indica se a largura do elemento da faixa de opções pode alterar.
+Indica se a largura do elemento da faixa de faixas pode ser alterada.
 
 ```
 virtual BOOL CanBeStretchedHorizontally();
@@ -513,11 +513,11 @@ Sempre retorna FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-Por padrão, esse método sempre retorna FALSE. Substitua este método para indicar se a largura do elemento da faixa de opções pode alterar.
+Por padrão, esse método sempre retorna FALSE. Substitua esse método para indicar se a largura do elemento da faixa de faixas pode ser alterada.
 
-##  <a name="cleanupsizes"></a>  CMFCRibbonBaseElement::CleanUpSizes
+##  <a name="cleanupsizes"></a>CMFCRibbonBaseElement::CleanUpSizes
 
-Limpa as configurações de dimensão para o elemento de faixa de opções.
+Limpa as configurações de dimensão do elemento da faixa de opções.
 
 ```
 virtual void CleanUpSizes();
@@ -525,11 +525,11 @@ virtual void CleanUpSizes();
 
 ### <a name="remarks"></a>Comentários
 
-Por padrão, esse método não fará nada. Substitua este método em uma classe derivada para redefinir as configurações de dimensão para o elemento de faixa de opções.
+Por padrão, esse método não faz nada. Substitua esse método em uma classe derivada para redefinir as configurações de dimensão para o elemento da faixa de opções.
 
 ##  <a name="closepopupmenu"></a>  CMFCRibbonBaseElement::ClosePopupMenu
 
-Fecha um menu pop-up para o elemento de faixa de opções.
+Fecha o menu pop-up do elemento Ribbon.
 
 ```
 virtual void ClosePopupMenu();
@@ -539,7 +539,7 @@ virtual void ClosePopupMenu();
 
 ##  <a name="copyfrom"></a>  CMFCRibbonBaseElement::CopyFrom
 
-Copia o estado do especificado [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md) ao objeto atual.
+Copia o estado do [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md) especificado para o objeto atual.
 
 ```
 virtual void CopyFrom(const CMFCRibbonBaseElement& src);
@@ -548,13 +548,13 @@ virtual void CopyFrom(const CMFCRibbonBaseElement& src);
 ### <a name="parameters"></a>Parâmetros
 
 *src*<br/>
-[in] O código-fonte [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md) objeto.
+no O objeto [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md) de origem.
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="destroyctrl"></a>  CMFCRibbonBaseElement::DestroyCtrl
+##  <a name="destroyctrl"></a>CMFCRibbonBaseElement::D estroyCtrl
 
-Destrói o elemento de faixa de opções.
+Destrói o elemento da faixa de faixas.
 
 ```
 virtual void DestroyCtrl();
@@ -562,11 +562,11 @@ virtual void DestroyCtrl();
 
 ### <a name="remarks"></a>Comentários
 
-Por padrão, esse método não fará nada. Substitua este método em uma classe derivada para destruir o elemento de faixa de opções.
+Por padrão, esse método não faz nada. Substitua esse método em uma classe derivada para destruir o elemento Ribbon.
 
 ##  <a name="drawimage"></a>  CMFCRibbonBaseElement::DrawImage
 
-Desenha a imagem para o elemento de faixa de opções.
+Desenha a imagem para o elemento Ribbon.
 
 ```
 virtual void DrawImage(
@@ -578,26 +578,26 @@ virtual void DrawImage(
 ### <a name="parameters"></a>Parâmetros
 
 *pDC*<br/>
-[in] Ponteiro para um contexto de dispositivo.
+no Ponteiro para um contexto de dispositivo.
 
 *type*<br/>
-[in] Valor enumerado de um tipo de imagem. Consulte a seção de comentários para obter uma lista de valores possíveis.
+no Um valor enumerado de tipo de imagem. Consulte a seção comentários para obter uma lista de valores possíveis.
 
 *rectImage*<br/>
-[in] O retângulo da imagem.
+no O retângulo da imagem.
 
 ### <a name="remarks"></a>Comentários
 
-Por padrão, esse método não fará nada. Substitua este método em uma classe derivada para desenhar a imagem para o elemento de faixa de opções.
+Por padrão, esse método não faz nada. Substitua esse método em uma classe derivada para desenhar a imagem para o elemento Ribbon.
 
-A tabela a seguir lista os possíveis valores para o *tipo* parâmetro:
+A tabela a seguir lista os valores possíveis para o parâmetro de *tipo* :
 
 |||
 |-|-|
-| `RibbonImageLarge`  | Tamanho da imagem grande 32 x 32 pixels.  |
-| `RibbonImageSmall`  | Tamanho da imagem pequena 16 x 16 pixels.  |
+| `RibbonImageLarge`  | Tamanho da imagem em pixels de grande 32x32.  |
+| `RibbonImageSmall`  | Tamanho de imagem pequeno de 16x16 pixels.  |
 
-##  <a name="find"></a>  CMFCRibbonBaseElement::Find
+##  <a name="find"></a>CMFCRibbonBaseElement:: find
 
 Retorna o ponteiro especificado se ele apontar para o objeto atual.
 
@@ -608,17 +608,17 @@ virtual CMFCRibbonBaseElement* Find(const CMFCRibbonBaseElement* pElement);
 ### <a name="parameters"></a>Parâmetros
 
 *pElement*<br/>
-[in] Ponteiro para um elemento de faixa de opções.
+no Ponteiro para um elemento da faixa de faixas.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Um ponteiro para o elemento de faixa de opções se *pElement* aponta para o atual objeto; caso contrário, nulo.
+Um ponteiro para o elemento Ribbon se *pElement* aponta para o objeto atual; caso contrário, NULL.
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="findbydata"></a>  CMFCRibbonBaseElement::FindByData
+##  <a name="findbydata"></a>CMFCRibbonBaseElement::FindByData
 
-Recupera um ponteiro para o elemento de faixa de opções, se ele contiver os dados especificados.
+Recupera um ponteiro para o elemento Ribbon se ele contiver os dados especificados.
 
 ```
 virtual CMFCRibbonBaseElement* FindByData(DWORD_PTR dwData);
@@ -627,17 +627,17 @@ virtual CMFCRibbonBaseElement* FindByData(DWORD_PTR dwData);
 ### <a name="parameters"></a>Parâmetros
 
 *dwData*<br/>
-[in] Os dados associados a um elemento de faixa de opções.
+no Os dados associados a um elemento Ribbon.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Um ponteiro para o elemento de faixa de opções, se ele contiver os dados especificados; Caso contrário, nulo.
+Um ponteiro para o elemento da faixa de faixas se ele contém os dados especificados; caso contrário, NULL.
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="findbyid"></a>  CMFCRibbonBaseElement::FindByID
+##  <a name="findbyid"></a>CMFCRibbonBaseElement:: FindByID
 
-Recupera um ponteiro para o elemento de faixa de opções, se esse elemento é identificado pela ID de comando especificado.
+Recupera um ponteiro para o elemento Ribbon se esse elemento é identificado pela ID de comando especificada.
 
 ```
 virtual CMFCRibbonBaseElement* FindByID(UINT uiCmdID);
@@ -646,17 +646,17 @@ virtual CMFCRibbonBaseElement* FindByID(UINT uiCmdID);
 ### <a name="parameters"></a>Parâmetros
 
 *uiCmdID*<br/>
-[in] ID de comando para um elemento de faixa de opções.
+no ID de comando para um elemento da faixa de faixas.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Um ponteiro para o elemento de faixa de opções, se esse elemento é identificado pela ID de comando especificado; Caso contrário, nulo.
+Um ponteiro para o elemento da faixa de faixas se esse elemento é identificado pela ID de comando especificada; caso contrário, NULL.
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="findbyoriginal"></a>  CMFCRibbonBaseElement::FindByOriginal
+##  <a name="findbyoriginal"></a>CMFCRibbonBaseElement::FindByOriginal
 
-Recupera um ponteiro para o elemento de faixa de opções atual, se seu elemento de faixa de opções original corresponde ao elemento especificado da faixa de opções.
+Recupera um ponteiro para o elemento Ribbon atual se seu elemento da faixa de faixas original corresponde ao elemento Ribbon especificado.
 
 ```
 virtual CMFCRibbonBaseElement* FindByOriginal(CMFCRibbonBaseElement* pOriginal);
@@ -665,19 +665,19 @@ virtual CMFCRibbonBaseElement* FindByOriginal(CMFCRibbonBaseElement* pOriginal);
 ### <a name="parameters"></a>Parâmetros
 
 *pOriginal*<br/>
-[in] Ponteiro para um elemento de faixa de opções.
+no Ponteiro para um elemento da faixa de faixas.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Um ponteiro para o elemento de faixa de opções se seu elemento de faixa de opções original corresponde ao elemento especificado da faixa de opções; Caso contrário, nulo.
+Um ponteiro para o elemento Ribbon se seu elemento Ribbon original corresponde ao elemento Ribbon especificado; caso contrário, NULL.
 
 ### <a name="remarks"></a>Comentários
 
-Elementos de faixa de opções que são copiados para outro contêiner retêm um ponteiro para o elemento de faixa de opções original.
+Os elementos da faixa de faixas que são copiados para outro contêiner retêm um ponteiro para o elemento Ribbon original.
 
-##  <a name="getcompactsize"></a>  CMFCRibbonBaseElement::GetCompactSize
+##  <a name="getcompactsize"></a>CMFCRibbonBaseElement::GetCompactSize
 
-Retorna o tamanho compacto do elemento da faixa de opções.
+Retorna o tamanho compacto do elemento da faixa de faixas.
 
 ```
 virtual CSize GetCompactSize(CDC* pDC);
@@ -686,18 +686,18 @@ virtual CSize GetCompactSize(CDC* pDC);
 ### <a name="parameters"></a>Parâmetros
 
 *pDC*<br/>
-[in] Um ponteiro para um contexto de dispositivo.
+no Um ponteiro para um contexto de dispositivo.
 
 ### <a name="return-value"></a>Valor de retorno
 
-O tamanho compacto de um elemento de faixa de opções.
+O tamanho compacto de um elemento da faixa de faixas.
 
 > [!NOTE]
->  O tamanho do compact significa que o elemento de faixa de opções é truncado (exibe uma imagem pequena, ou uma imagem sem um texto).
+>  O tamanho do Compact significa que o elemento da faixa de faixas está truncado (ele exibe uma imagem pequena ou uma imagem sem um texto).
 
 ##  <a name="getdata"></a>  CMFCRibbonBaseElement::GetData
 
-Recupera os dados definidos pelo usuário associados ao elemento de faixa de opções.
+Recupera os dados definidos pelo usuário associados ao elemento Ribbon.
 
 ```
 DWORD_PTR GetData() const;
@@ -705,11 +705,11 @@ DWORD_PTR GetData() const;
 
 ### <a name="return-value"></a>Valor de retorno
 
-Os dados definidos pelo usuário associados ao elemento de faixa de opções.
+Os dados definidos pelo usuário associados ao elemento Ribbon.
 
 ##  <a name="getdescription"></a>  CMFCRibbonBaseElement::GetDescription
 
-Retorna a descrição do elemento da faixa de opções.
+Retorna a descrição do elemento Ribbon.
 
 ```
 virtual CString GetDescription() const;
@@ -717,11 +717,11 @@ virtual CString GetDescription() const;
 
 ### <a name="return-value"></a>Valor de retorno
 
-A descrição do elemento de faixa de opções. A descrição é exibida na barra de status, ou em uma dica de ferramenta ou sob o botão de menu se o elemento de faixa de opções está localizado na [classe CMFCRibbonMainPanel](../../mfc/reference/cmfcribbonmainpanel-class.md).
+A descrição do elemento da faixa de faixas. A descrição será exibida na barra de status ou em uma dica de ferramenta ou sob o botão de menu se o elemento da faixa de opções estiver localizado na [Classe CMFCRibbonMainPanel](../../mfc/reference/cmfcribbonmainpanel-class.md).
 
 ##  <a name="getdroppeddown"></a>  CMFCRibbonBaseElement::GetDroppedDown
 
-Recupera um ponteiro para o elemento de faixa de opções, se o menu pop-up é descartado para baixo.
+Recupera um ponteiro para o elemento Ribbon se o menu pop-up é Descartado.
 
 ```
 virtual CMFCRibbonBaseElement* GetDroppedDown();
@@ -729,13 +729,13 @@ virtual CMFCRibbonBaseElement* GetDroppedDown();
 
 ### <a name="return-value"></a>Valor de retorno
 
-Um ponteiro para o elemento de faixa de opções, se o menu pop-up é descartado para baixo; Caso contrário, nulo.
+Um ponteiro para o elemento da faixa de faixas se o menu pop-up for descartado; caso contrário, NULL.
 
 ### <a name="remarks"></a>Comentários
 
 ##  <a name="getelements"></a>  CMFCRibbonBaseElement::GetElements
 
-Adiciona o elemento atual da faixa de opções para a matriz especificada.
+Adiciona o elemento da faixa de faixas atual à matriz especificada.
 
 ```
 virtual void GetElements(
@@ -745,13 +745,13 @@ virtual void GetElements(
 ### <a name="parameters"></a>Parâmetros
 
 *arElements*<br/>
-[no, out] Uma matriz de elementos de faixa de opções.
+[entrada, saída] Uma matriz de elementos da faixa de faixas.
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="getelementsbyid"></a>  CMFCRibbonBaseElement::GetElementsByID
+##  <a name="getelementsbyid"></a>CMFCRibbonBaseElement::GetElementsByID
 
-Adiciona o elemento atual da faixa de opções para a matriz especificada, se o elemento de faixa de opções atual contém a ID do comando especificado.
+Adiciona o elemento da faixa de faixas atual à matriz especificada se o elemento da faixa de tempo atual contiver a ID de comando especificada.
 
 ```
 virtual void GetElementsByID(
@@ -762,16 +762,16 @@ virtual void GetElementsByID(
 ### <a name="parameters"></a>Parâmetros
 
 *uiCmdID*<br/>
-[in] ID de comando de um elemento de faixa de opções.
+no ID de comando de um elemento da faixa de faixas.
 
 *arElements*<br/>
-[in] Uma matriz de elementos de faixa de opções.
+no Uma matriz de elementos da faixa de faixas.
 
 ### <a name="remarks"></a>Comentários
 
 ##  <a name="gethighlighted"></a>  CMFCRibbonBaseElement::GetHighlighted
 
-Recupera um ponteiro para o elemento de faixa de opções, se ele é realçado.
+Recupera um ponteiro para o elemento Ribbon se ele estiver realçado.
 
 ```
 virtual CMFCRibbonBaseElement* GetHighlighted();
@@ -779,13 +779,13 @@ virtual CMFCRibbonBaseElement* GetHighlighted();
 
 ### <a name="return-value"></a>Valor de retorno
 
-Um ponteiro para o elemento de faixa de opções, se ele estiver realçado; Caso contrário, nulo.
+Um ponteiro para o elemento da faixa de faixas se ele estiver realçado; caso contrário, NULL.
 
 ### <a name="remarks"></a>Comentários
 
 ##  <a name="getid"></a>  CMFCRibbonBaseElement::GetID
 
-Retorna a ID de comando do elemento da faixa de opções.
+Retorna a ID de comando do elemento Ribbon.
 
 ```
 UINT GetID() const;
@@ -793,11 +793,11 @@ UINT GetID() const;
 
 ### <a name="return-value"></a>Valor de retorno
 
-A ID de comando do elemento da faixa de opções.
+A ID de comando do elemento da faixa de faixas.
 
 ##  <a name="getimagesize"></a>  CMFCRibbonBaseElement::GetImageSize
 
-Retorna o tamanho da imagem do elemento da faixa de opções.
+Retorna o tamanho da imagem do elemento da faixa de faixas.
 
 ```
 virtual CSize GetImageSize(RibbonImageType R) const;
@@ -805,11 +805,11 @@ virtual CSize GetImageSize(RibbonImageType R) const;
 
 ### <a name="return-value"></a>Valor de retorno
 
-O tamanho da imagem do elemento da faixa de opções.
+O tamanho da imagem do elemento da faixa de faixas.
 
-##  <a name="getintermediatesize"></a>  CMFCRibbonBaseElement::GetIntermediateSize
+##  <a name="getintermediatesize"></a>CMFCRibbonBaseElement::GetIntermediateSize
 
-Retorna o tamanho do elemento de faixa de opções em seu estado intermediário.
+Retorna o tamanho do elemento da faixa de faixas em seu estado intermediário.
 
 ```
 virtual CSize GetIntermediateSize(CDC* pDC);
@@ -818,15 +818,15 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 ### <a name="parameters"></a>Parâmetros
 
 *pDC*<br/>
-[in] Um ponteiro para um contexto de dispositivo.
+no Um ponteiro para um contexto de dispositivo.
 
 ### <a name="return-value"></a>Valor de retorno
 
-O tamanho do elemento da faixa de opções em seu estado intermediário.
+O tamanho do elemento da faixa de faixas em seu estado intermediário.
 
 ##  <a name="getkeys"></a>  CMFCRibbonBaseElement::GetKeys
 
-Retorna a dica de chave associada ao elemento de faixa de opções.
+Retorna o KeyTip associado ao elemento Ribbon.
 
 ```
 LPCTSTR GetKeys() const;
@@ -834,11 +834,11 @@ LPCTSTR GetKeys() const;
 
 ### <a name="return-value"></a>Valor de retorno
 
-Uma dica de tecla associada ao elemento de faixa de opções.
+Um KeyTip associado ao elemento Ribbon.
 
 ##  <a name="getkeytiprect"></a>  CMFCRibbonBaseElement::GetKeyTipRect
 
-Recupera o retângulo de limite de dica de tecla para o elemento de faixa de opções.
+Recupera o retângulo de limite KeyTip para o elemento Ribbon.
 
 ```
 virtual CRect GetKeyTipRect(
@@ -849,22 +849,22 @@ virtual CRect GetKeyTipRect(
 ### <a name="parameters"></a>Parâmetros
 
 *pDC*<br/>
-[in] Ponteiro para um contexto de dispositivo.
+no Ponteiro para um contexto de dispositivo.
 
 *bIsMenu*<br/>
-[in] TRUE se o elemento de faixa de opções exibe um menu pop-up. Caso contrário, FALSE.
+no TRUE se o elemento Ribbon exibir um menu pop-up; caso contrário, FALSE.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Sempre retorna um retângulo com valores de 0.
+Sempre retorna um retângulo com 0 valores.
 
 ### <a name="remarks"></a>Comentários
 
-Substitua este método em uma classe derivada para retornar o retângulo de limite de dica de tecla.
+Substitua esse método em uma classe derivada para retornar o retângulo de limite KeyTip.
 
 ##  <a name="getkeytipsize"></a>  CMFCRibbonBaseElement::GetKeyTipSize
 
-Recupera o tamanho do texto de dica de tecla.
+Recupera o tamanho do texto KeyTip.
 
 ```
 virtual CSize GetKeyTipSize(CDC* pDC);
@@ -873,17 +873,17 @@ virtual CSize GetKeyTipSize(CDC* pDC);
 ### <a name="parameters"></a>Parâmetros
 
 *pDC*<br/>
-[in] Ponteiro para um contexto de dispositivo.
+no Ponteiro para um contexto de dispositivo.
 
 ### <a name="return-value"></a>Valor de retorno
 
-O tamanho do texto de dica de tecla.
+O tamanho do texto KeyTip.
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="getlocationingroup"></a>  CMFCRibbonBaseElement::GetLocationInGroup
+##  <a name="getlocationingroup"></a>CMFCRibbonBaseElement::GetLocationInGroup
 
-Indica o local de exibição do elemento da faixa de opções em um grupo de faixa de opções.
+Indica o local de exibição do elemento Ribbon em um grupo de faixa de faixas.
 
 ```
 RibbonElementLocation GetLocationInGroup() const;
@@ -895,19 +895,19 @@ Um valor enumerado de `RibbonElementLocation`. A tabela a seguir lista os valore
 
 |Valor|Descrição|
 |-----------|-----------------|
-|`RibbonElementNotInGroup`|O elemento de faixa de opções não está contido em um grupo de faixa de opções.|
-|`RibbonElementSingleInGroup`|O elemento de faixa de opções é exibido como o único item em um grupo de faixa de opções.|
-|`RibbonElementFirstInGroup`|O elemento de faixa de opções é exibido na extremidade esquerda de um grupo de faixa de opções.|
-|`RibbonElementLastInGroup`|O elemento de faixa de opções é exibido na extremidade direita de um grupo de faixa de opções.|
-|`RibbonElementMiddleInGroup`|O elemento de faixa de opções não é exibido em ambas as extremidades de um grupo de faixa de opções.|
+|`RibbonElementNotInGroup`|O elemento da faixa de faixas não está contido em um grupo de faixa de faixas.|
+|`RibbonElementSingleInGroup`|O elemento Ribbon é exibido como o único item em um grupo de faixa de faixas.|
+|`RibbonElementFirstInGroup`|O elemento Ribbon é exibido na extremidade esquerda de um grupo de faixa de faixas.|
+|`RibbonElementLastInGroup`|O elemento Ribbon é exibido na extremidade direita de um grupo de faixa de faixas.|
+|`RibbonElementMiddleInGroup`|O elemento da faixa de opções não é exibido em nenhuma das extremidades de um grupo de faixa de opções.|
 
 ### <a name="remarks"></a>Comentários
 
-Grupos de elementos de faixa de opções só são alinhados horizontalmente.
+Os grupos de elementos da faixa de faixas são alinhados horizontalmente.
 
 ##  <a name="getmenukeys"></a>  CMFCRibbonBaseElement::GetMenuKeys
 
-Retorna a dica de tecla de menu para o elemento de faixa de opções.
+Retorna o menu KeyTip para o elemento Ribbon.
 
 ```
 LPCTSTR GetMenuKeys() const;
@@ -915,15 +915,15 @@ LPCTSTR GetMenuKeys() const;
 
 ### <a name="return-value"></a>Valor de retorno
 
-A dica de tecla de menu associada ao elemento de faixa de opções.
+O menu KeyTip associado ao elemento Ribbon.
 
 ### <a name="remarks"></a>Comentários
 
-Quando chamado, uma dica de tecla de menu exibe um menu pop-up.
+Quando invocado, um menu KeyTip exibe um menu pop-up.
 
-##  <a name="getnotifyid"></a>  CMFCRibbonBaseElement::GetNotifyID
+##  <a name="getnotifyid"></a>CMFCRibbonBaseElement:: getnotificaid
 
-Recupera a ID de comando de notificação para o elemento de faixa de opções.
+Recupera a ID do comando de notificação para o elemento Ribbon.
 
 ```
 virtual UINT GetNotifyID();
@@ -931,13 +931,13 @@ virtual UINT GetNotifyID();
 
 ### <a name="return-value"></a>Valor de retorno
 
-A ID de comando de notificação.
+A ID do comando de notificação.
 
 ### <a name="remarks"></a>Comentários
 
 ##  <a name="getoriginal"></a>  CMFCRibbonBaseElement::GetOriginal
 
-Recupera o elemento de faixa de opções original.
+Recupera o elemento da faixa de faixas original.
 
 ```
 CMFCRibbonBaseElement* GetOriginal() const;
@@ -945,15 +945,15 @@ CMFCRibbonBaseElement* GetOriginal() const;
 
 ### <a name="return-value"></a>Valor de retorno
 
-Um ponteiro para o elemento de faixa de opções original.
+Um ponteiro para o elemento Ribbon original.
 
 ### <a name="remarks"></a>Comentários
 
-Elementos de faixa de opções que são copiados para outro contêiner retêm um ponteiro para o elemento de faixa de opções original.
+Os elementos da faixa de faixas que são copiados para outro contêiner retêm um ponteiro para o elemento Ribbon original.
 
 ##  <a name="getparentcategory"></a>  CMFCRibbonBaseElement::GetParentCategory
 
-Recupera a categoria de faixa de opções para o elemento de faixa de opções.
+Recupera a categoria da faixa de faixas para o elemento da faixa de faixas.
 
 ```
 CMFCRibbonCategory* GetParentCategory() const;
@@ -961,13 +961,13 @@ CMFCRibbonCategory* GetParentCategory() const;
 
 ### <a name="return-value"></a>Valor de retorno
 
-Um ponteiro para a categoria de faixa de opções.
+Um ponteiro para a categoria da faixa de faixas.
 
 ### <a name="remarks"></a>Comentários
 
 ##  <a name="getparentpanel"></a>  CMFCRibbonBaseElement::GetParentPanel
 
-Recupera o painel de faixa de opções que contém o elemento de faixa de opções.
+Recupera o painel da faixa de faixas que contém o elemento da faixa de faixas.
 
 ```
 virtual CMFCRibbonPanel* GetParentPanel() const;
@@ -975,13 +975,13 @@ virtual CMFCRibbonPanel* GetParentPanel() const;
 
 ### <a name="return-value"></a>Valor de retorno
 
-Um ponteiro para o painel de faixa de opções que contém o elemento de faixa de opções.
+Um ponteiro para o painel da faixa de das faixas que contém o elemento da faixa de faixas.
 
 ### <a name="remarks"></a>Comentários
 
 ##  <a name="getparentribbonbar"></a>  CMFCRibbonBaseElement::GetParentRibbonBar
 
-Recupera a barra de faixa de opções do pai do elemento de faixa de opções.
+Recupera a barra de faixa de faixas pai para o elemento Ribbon.
 
 ```
 CMFCRibbonBar* GetParentRibbonBar() const;
@@ -989,13 +989,13 @@ CMFCRibbonBar* GetParentRibbonBar() const;
 
 ### <a name="return-value"></a>Valor de retorno
 
-Um ponteiro para a barra de faixa de opções do pai do elemento de faixa de opções.
+Um ponteiro para a barra de faixa de faixas pai do elemento da faixa de faixas.
 
 ### <a name="remarks"></a>Comentários
 
 ##  <a name="getparentwnd"></a>  CMFCRibbonBaseElement::GetParentWnd
 
-Recupera a janela pai para o elemento de faixa de opções.
+Recupera a janela pai do elemento Ribbon.
 
 ```
 virtual CWnd* GetParentWnd() const;
@@ -1003,15 +1003,15 @@ virtual CWnd* GetParentWnd() const;
 
 ### <a name="return-value"></a>Valor de retorno
 
-Um ponteiro para a janela pai para o elemento de faixa de opções, se o método foi bem-sucedida; Caso contrário, nulo.
+Um ponteiro para a janela pai do elemento Ribbon se o método foi bem-sucedido; caso contrário, NULL.
 
 ### <a name="remarks"></a>Comentários
 
-A janela pai de um elemento de faixa de opções é um [classe CMFCRibbonBar](../../mfc/reference/cmfcribbonbar-class.md) ou um [CMFCRibbonPanelMenuBar](internal-classes.md).
+A janela pai de um elemento Ribbon é uma [classe CMFCRibbonBar](../../mfc/reference/cmfcribbonbar-class.md) ou um [CMFCRibbonPanelMenuBar](internal-classes.md).
 
-##  <a name="getpressed"></a>  CMFCRibbonBaseElement::GetPressed
+##  <a name="getpressed"></a>CMFCRibbonBaseElement:: getpressioned
 
-Recupera um ponteiro para o elemento de faixa de opções, se o usuário a pressionar no momento.
+Recupera um ponteiro para o elemento Ribbon se o usuário o pressiona no momento.
 
 ```
 virtual CMFCRibbonBaseElement* GetPressed();
@@ -1019,13 +1019,13 @@ virtual CMFCRibbonBaseElement* GetPressed();
 
 ### <a name="return-value"></a>Valor de retorno
 
-Um ponteiro para o elemento de faixa de opções se o usuário pressiona no momento Caso contrário, nulo.
+Um ponteiro para o elemento Ribbon se o usuário o pressiona no momento; caso contrário, NULL.
 
 ### <a name="remarks"></a>Comentários
 
 ##  <a name="getquickaccesstoolbarid"></a>  CMFCRibbonBaseElement::GetQuickAccessToolBarID
 
-Recupera a ID do elemento da faixa de opções de comando quando ele está localizado na barra de ferramentas de acesso rápido.
+Recupera a ID de comando do elemento Ribbon quando ele está localizado na barra de ferramentas de acesso rápido.
 
 ```
 virtual UINT GetQuickAccessToolBarID() const;
@@ -1033,13 +1033,13 @@ virtual UINT GetQuickAccessToolBarID() const;
 
 ### <a name="return-value"></a>Valor de retorno
 
-A ID de comando do elemento da faixa de opções quando ele está localizado na barra de ferramentas de acesso rápido.
+A ID de comando do elemento da faixa de faixas quando ela está localizada na barra de ferramentas de acesso rápido.
 
 ### <a name="remarks"></a>Comentários
 
 ##  <a name="getrect"></a>  CMFCRibbonBaseElement::GetRect
 
-Retorna o retângulo delimitador do elemento da faixa de opções.
+Retorna o retângulo delimitador do elemento Ribbon.
 
 ```
 CRect GetRect() const;
@@ -1047,11 +1047,11 @@ CRect GetRect() const;
 
 ### <a name="return-value"></a>Valor de retorno
 
-O retângulo delimitador do elemento da faixa de opções. A posição do retângulo é nas coordenadas da faixa de opções de controle pai.
+O retângulo delimitador do elemento Ribbon. A posição do retângulo está nas coordenadas do controle da faixa de forma pai.
 
-##  <a name="getregularsize"></a>  CMFCRibbonBaseElement::GetRegularSize
+##  <a name="getregularsize"></a>CMFCRibbonBaseElement::GetRegularSize
 
-Retorna o tamanho regular do elemento da faixa de opções.
+Retorna o tamanho regular do elemento da faixa de faixas.
 
 ```
 virtual CSize GetRegularSize(CDC* pDC) = 0;
@@ -1060,20 +1060,20 @@ virtual CSize GetRegularSize(CDC* pDC) = 0;
 ### <a name="parameters"></a>Parâmetros
 
 *pDC*<br/>
-[in] Um ponteiro para um contexto de dispositivo.
+no Um ponteiro para um contexto de dispositivo.
 
 ### <a name="return-value"></a>Valor de retorno
 
-O tamanho regular do elemento da faixa de opções.
+O tamanho regular do elemento da faixa de faixas.
 
 ### <a name="remarks"></a>Comentários
 
 > [!NOTE]
->  O tamanho regular é o tamanho máximo possível do elemento da faixa de opções.
+>  O tamanho regular é o máximo possível de tamanho do elemento da faixa de faixas.
 
 ##  <a name="getsize"></a>  CMFCRibbonBaseElement::GetSize
 
-Retorna o tamanho atual do elemento da faixa de opções.
+Retorna o tamanho atual do elemento da faixa de faixas.
 
 ```
 virtual CSize GetSize(CDC* pDC);
@@ -1082,15 +1082,15 @@ virtual CSize GetSize(CDC* pDC);
 ### <a name="parameters"></a>Parâmetros
 
 *pDC*<br/>
-[in] Um ponteiro para um contexto de dispositivo.
+no Um ponteiro para um contexto de dispositivo.
 
 ### <a name="return-value"></a>Valor de retorno
 
-O tamanho atual do elemento da faixa de opções.
+O tamanho atual do elemento da faixa de faixas.
 
 ##  <a name="gettext"></a>  CMFCRibbonBaseElement::GetText
 
-Retorna o texto associado ao elemento de faixa de opções.
+Retorna o texto associado ao elemento Ribbon.
 
 ```
 LPCTSTR GetText() const;
@@ -1098,11 +1098,11 @@ LPCTSTR GetText() const;
 
 ### <a name="return-value"></a>Valor de retorno
 
-O texto associado ao elemento de faixa de opções.
+O texto associado ao elemento da faixa de faixas.
 
 ##  <a name="gettooltiptext"></a>  CMFCRibbonBaseElement::GetToolTipText
 
-Retorna o texto de dica de ferramenta do elemento da faixa de opções.
+Retorna o texto da dica de ferramenta do elemento da faixa de faixas.
 
 ```
 virtual CString GetToolTipText() const;
@@ -1110,11 +1110,11 @@ virtual CString GetToolTipText() const;
 
 ### <a name="return-value"></a>Valor de retorno
 
-O texto de dica de ferramenta do elemento da faixa de opções.
+O texto da dica de ferramenta do elemento da faixa de faixas.
 
-##  <a name="gettoplevelribbonbar"></a>  CMFCRibbonBaseElement::GetTopLevelRibbonBar
+##  <a name="gettoplevelribbonbar"></a>CMFCRibbonBaseElement::GetTopLevelRibbonBar
 
-Recupera a barra de faixa de opções de nível superior para o elemento de faixa de opções.
+Recupera a barra de faixa de faixas de nível superior para o elemento Ribbon.
 
 ```
 CMFCRibbonBar* GetTopLevelRibbonBar() const;
@@ -1122,13 +1122,13 @@ CMFCRibbonBar* GetTopLevelRibbonBar() const;
 
 ### <a name="return-value"></a>Valor de retorno
 
-Um ponteiro para a barra de faixa de opções de nível superior para o elemento de faixa de opções, se o método foi bem-sucedida; Caso contrário, nulo.
+Um ponteiro para a barra da faixa de faixas de nível superior do elemento da faixa de faixas se o método foi bem-sucedido; caso contrário, NULL.
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="hascompactmode"></a>  CMFCRibbonBaseElement::HasCompactMode
+##  <a name="hascompactmode"></a>CMFCRibbonBaseElement::HasCompactMode
 
-Especifica se o elemento de faixa de opções tem um modo compacto.
+Especifica se o elemento Ribbon tem um modo compacto.
 
 ```
 virtual BOOL HasCompactMode() const;
@@ -1136,16 +1136,16 @@ virtual BOOL HasCompactMode() const;
 
 ### <a name="return-value"></a>Valor de retorno
 
-TRUE se o elemento de faixa de opções tem um modo compacto. FALSE caso contrário.
+TRUE se o elemento Ribbon tiver um modo compacto. Caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
 > [!NOTE]
 >  No modo compacto, um elemento exibe apenas uma imagem pequena.
 
-##  <a name="hasintermediatemode"></a>  CMFCRibbonBaseElement::HasIntermediateMode
+##  <a name="hasintermediatemode"></a>CMFCRibbonBaseElement::HasIntermediateMode
 
-Especifica se o elemento de faixa de opções tem um modo de intermediário.
+Especifica se o elemento Ribbon tem um modo intermediário.
 
 ```
 virtual BOOL HasIntermediateMode() const;
@@ -1153,13 +1153,13 @@ virtual BOOL HasIntermediateMode() const;
 
 ### <a name="return-value"></a>Valor de retorno
 
-TRUE se o elemento de faixa de opções tem um modo de intermediário, FALSE caso contrário. No modo de intermediários, um elemento exibe uma imagem pequena e o texto à direita da imagem.
+TRUE se o elemento Ribbon tiver um modo intermediário; caso contrário, FALSE. No modo intermediário, um elemento exibe uma imagem pequena e o texto à direita da imagem.
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="haslargemode"></a>  CMFCRibbonBaseElement::HasLargeMode
+##  <a name="haslargemode"></a>CMFCRibbonBaseElement::HasLargeMode
 
-Determina se o elemento de faixa de opções tem um grande modo.
+Determina se o elemento Ribbon tem um modo grande.
 
 ```
 virtual BOOL HasLargeMode() const;
@@ -1167,15 +1167,15 @@ virtual BOOL HasLargeMode() const;
 
 ### <a name="return-value"></a>Valor de retorno
 
-TRUE se o elemento de faixa de opções tem um grande modo. FALSE caso contrário.
+TRUE se o elemento Ribbon tiver um modo grande. Caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-No modo de grande, um elemento pode levar a altura total do painel pai.
+No modo grande, um elemento pode assumir a altura total do painel pai.
 
 ##  <a name="hasmenu"></a>  CMFCRibbonBaseElement::HasMenu
 
-Indica se o elemento de faixa de opções tem um menu.
+Indica se o elemento Ribbon tem um menu.
 
 ```
 virtual BOOL HasMenu() const;
@@ -1187,11 +1187,11 @@ Sempre retorna FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-Por padrão, esse método sempre retorna FALSE. Substitua este método em uma classe derivada para indicar se o elemento de faixa de opções tem um menu.
+Por padrão, esse método sempre retorna FALSE. Substitua esse método em uma classe derivada para indicar se o elemento Ribbon tem um menu.
 
 ##  <a name="hittest"></a>  CMFCRibbonBaseElement::HitTest
 
-Recupera um ponteiro para o elemento de faixa de opções, se o ponto especificado está localizado nele.
+Recupera um ponteiro para o elemento Ribbon se o ponto especificado estiver localizado nele.
 
 ```
 virtual CMFCRibbonBaseElement* HitTest(CPoint point);
@@ -1200,19 +1200,19 @@ virtual CMFCRibbonBaseElement* HitTest(CPoint point);
 ### <a name="parameters"></a>Parâmetros
 
 *point*<br/>
-[in] Esse parâmetro não é usado.
+no Esse parâmetro não é usado.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Um ponteiro para o elemento de faixa de opções, se ele existir. Caso contrário, FALSE.
+Um ponteiro para o elemento da faixa de faixas, se existir; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-Por padrão esse método sempre retorna um ponteiro válido para o elemento de faixa de opções quando ela existe. Substitua este método para indicar se o ponto reside no elemento de faixa de opções.
+Por padrão, esse método sempre retorna um ponteiro válido para o elemento Ribbon quando ele existe. Substitua esse método para indicar se o ponto reside no elemento Ribbon.
 
-##  <a name="isalignbycolumn"></a>  CMFCRibbonBaseElement::IsAlignByColumn
+##  <a name="isalignbycolumn"></a>CMFCRibbonBaseElement::IsAlignByColumn
 
-Indica se o elemento de faixa de opções é alinhado verticalmente com outros elementos de faixa de opções.
+Indica se o elemento da faixa de faixas está alinhado verticalmente com outros elementos da faixa de tipos.
 
 ```
 virtual BOOL IsAlignByColumn() const;
@@ -1224,11 +1224,11 @@ Sempre retorna TRUE.
 
 ### <a name="remarks"></a>Comentários
 
-Por padrão, esse método sempre retorna TRUE. Substitua este método em uma classe derivada para indicar se o elemento de faixa de opções derivada é alinhado verticalmente com outros elementos de faixa de opções.
+Por padrão, esse método sempre retorna TRUE. Substitua esse método em uma classe derivada para indicar se o elemento da faixa de tipos derivado está alinhado verticalmente com outros elementos da faixa de faixas.
 
 ##  <a name="isalwayslargeimage"></a>  CMFCRibbonBaseElement::IsAlwaysLargeImage
 
-Indica se o tamanho da imagem da faixa de opções elemento sempre é grande.
+Indica se o tamanho da imagem do elemento da faixa de faixas é sempre grande.
 
 ```
 virtual BOOL IsAlwaysLargeImage() const;
@@ -1236,15 +1236,15 @@ virtual BOOL IsAlwaysLargeImage() const;
 
 ### <a name="return-value"></a>Valor de retorno
 
-TRUE se o tamanho de imagem do elemento de faixa de opções é sempre grande; Caso contrário, FALSE.
+TRUE se o tamanho da imagem do elemento da faixa de faixas for sempre grande; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-Tamanho da imagem grande é 32 x 32 pixels.
+O tamanho da imagem grande é 32 x 32 pixels.
 
-##  <a name="isautorepeatmode"></a>  CMFCRibbonBaseElement::IsAutoRepeatMode
+##  <a name="isautorepeatmode"></a>CMFCRibbonBaseElement::IsAutoRepeatMode
 
-Indica se o elemento de faixa de opções está no modo de repetição automática.
+Indica se o elemento da faixa de faixas está no modo de repetição automática.
 
 ```
 virtual BOOL IsAutoRepeatMode(int& nDelay) const;
@@ -1253,7 +1253,7 @@ virtual BOOL IsAutoRepeatMode(int& nDelay) const;
 ### <a name="parameters"></a>Parâmetros
 
 *nDelay*<br/>
-[in] Esse parâmetro não é usado.
+no Esse parâmetro não é usado.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -1261,13 +1261,13 @@ Sempre retorna FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-Por padrão, esse método sempre retorna FALSE. Substitua este método para indicar se o elemento de faixa de opções está no modo de repetição automática.
+Por padrão, esse método sempre retorna FALSE. Substitua esse método para indicar se o elemento da faixa de faixas está no modo de repetição automática.
 
-Auto modo de repetição, o elemento de faixa de opções responde em um intervalo definido, medido em milissegundos, a entrada do usuário prolongada.
+No modo de repetição automática, o elemento da faixa de faixas responde em um intervalo definido, medido em milissegundos, para a entrada de usuário sustentada.
 
 ##  <a name="ischecked"></a>  CMFCRibbonBaseElement::IsChecked
 
-Especifica se o elemento de faixa de opções é verificado.
+Especifica se o elemento da faixa de opção está marcado.
 
 ```
 virtual BOOL IsChecked() const;
@@ -1275,11 +1275,11 @@ virtual BOOL IsChecked() const;
 
 ### <a name="return-value"></a>Valor de retorno
 
-TRUE se o elemento de faixa de opções é verificado; Caso contrário, FALSE.
+TRUE se o elemento da faixa de opção estiver marcado; caso contrário, FALSE.
 
-##  <a name="iscompactmode"></a>  CMFCRibbonBaseElement::IsCompactMode
+##  <a name="iscompactmode"></a>CMFCRibbonBaseElement:: iscompactmode
 
-Especifica se o elemento de faixa de opções é em um modo compacto.
+Especifica se o elemento da faixa de faixas está em um modo compacto.
 
 ```
 BOOL IsCompactMode() const;
@@ -1287,11 +1287,11 @@ BOOL IsCompactMode() const;
 
 ### <a name="return-value"></a>Valor de retorno
 
-TRUE se o elemento de faixa de opções está em um modo compacto; Caso contrário, FALSE.
+TRUE se o elemento Ribbon estiver em um modo compacto; caso contrário, FALSE.
 
 ##  <a name="isdefaultmenulook"></a>  CMFCRibbonBaseElement::IsDefaultMenuLook
 
-Indica se o elemento de faixa de opções está definido para aparecer como um comando de pop-up.
+Indica se o elemento Ribbon está definido para aparecer como um comando pop-up.
 
 ```
 BOOL IsDefaultMenuLook() const;
@@ -1299,13 +1299,13 @@ BOOL IsDefaultMenuLook() const;
 
 ### <a name="return-value"></a>Valor de retorno
 
-TRUE se o elemento de faixa de opções é definido como aparecem como um comando de pop-up; Caso contrário, FALSE.
+TRUE se o elemento Ribbon estiver definido para aparecer como um comando pop-up; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="isdisabled"></a>  CMFCRibbonBaseElement::IsDisabled
+##  <a name="isdisabled"></a>CMFCRibbonBaseElement:: isdesabilitoud
 
-Especifica se o elemento de faixa de opções está desabilitado.
+Especifica se o elemento da faixa de faixas está desabilitado.
 
 ```
 virtual BOOL IsDisabled() const;
@@ -1313,11 +1313,11 @@ virtual BOOL IsDisabled() const;
 
 ### <a name="return-value"></a>Valor de retorno
 
-TRUE se o elemento de faixa de opções é desabilitado; Caso contrário, FALSE.
+TRUE se o elemento Ribbon estiver desabilitado; caso contrário, FALSE.
 
-##  <a name="isdroppeddown"></a>  CMFCRibbonBaseElement::IsDroppedDown
+##  <a name="isdroppeddown"></a>CMFCRibbonBaseElement::IsDroppedDown
 
-Especifica se o elemento de faixa de opções exibe um menu pop-up e está aberto.
+Especifica se o elemento da faixa de faixas exibe um menu pop-up e é Descartado.
 
 ```
 virtual BOOL IsDroppedDown() const;
@@ -1325,11 +1325,11 @@ virtual BOOL IsDroppedDown() const;
 
 ### <a name="return-value"></a>Valor de retorno
 
-TRUE se o elemento de faixa de opções está aberto e exibe um menu pop-up. Caso contrário, FALSE.
+TRUE se o elemento Ribbon for descartado e exibir um menu pop-up; caso contrário, FALSE.
 
-##  <a name="isfocused"></a>  CMFCRibbonBaseElement::IsFocused
+##  <a name="isfocused"></a>CMFCRibbonBaseElement:: IsFocused
 
-Especifica se o elemento de faixa de opções tem o foco.
+Especifica se o elemento da faixa de faixas tem o foco.
 
 ```
 virtual BOOL IsFocused() const;
@@ -1337,11 +1337,11 @@ virtual BOOL IsFocused() const;
 
 ### <a name="return-value"></a>Valor de retorno
 
-TRUE se o elemento de faixa de opções tem o foco; Caso contrário, FALSE.
+TRUE se o elemento Ribbon tiver o foco; caso contrário, FALSE.
 
 ##  <a name="isgalleryicon"></a>  CMFCRibbonBaseElement::IsGalleryIcon
 
-Indica se o elemento de faixa de opções está contido em uma galeria da faixa de opções.
+Indica se o elemento da faixa de faixas está contido em uma galeria de faixa de uma.
 
 ```
 virtual BOOL IsGalleryIcon() const;
@@ -1353,11 +1353,11 @@ Sempre retorna FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-Por padrão, esse método sempre retorna FALSE. Substitua este método em uma classe derivada para indicar se o elemento de faixa de opções está contido em uma galeria da faixa de opções.
+Por padrão, esse método sempre retorna FALSE. Substitua esse método em uma classe derivada para indicar se o elemento da faixa de faixas está contido em uma galeria de faixas de uma.
 
 ##  <a name="ishighlighted"></a>  CMFCRibbonBaseElement::IsHighlighted
 
-Especifica se o elemento de faixa de opções está realçado.
+Especifica se o elemento da faixa de faixas está realçado.
 
 ```
 virtual BOOL IsHighlighted() const;
@@ -1365,13 +1365,13 @@ virtual BOOL IsHighlighted() const;
 
 ### <a name="return-value"></a>Valor de retorno
 
-TRUE se o elemento de faixa de opções é realçado; Caso contrário, FALSE.
+TRUE se o elemento Ribbon for realçado; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="isintermediatemode"></a>  CMFCRibbonBaseElement::IsIntermediateMode
+##  <a name="isintermediatemode"></a>CMFCRibbonBaseElement:: isintermediáriamode
 
-Indica se a imagem atual para o elemento de faixa de opções é tamanho intermediário.
+Indica se a imagem atual do elemento da faixa de faixas é de tamanho intermediário.
 
 ```
 BOOL IsIntermediateMode() const;
@@ -1379,15 +1379,15 @@ BOOL IsIntermediateMode() const;
 
 ### <a name="return-value"></a>Valor de retorno
 
-TRUE se a imagem para o elemento de faixa de opções é tamanho intermediário; Caso contrário, FALSE.
+TRUE se a imagem do elemento da faixa de faixas for de tamanho intermediário; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-Tamanho da imagem intermediário é 16 x 16 pixels.
+O tamanho da imagem intermediária é 16 x 16 pixels.
 
-##  <a name="islargemode"></a>  CMFCRibbonBaseElement::IsLargeMode
+##  <a name="islargemode"></a>CMFCRibbonBaseElement:: islargemode
 
-Indica se a imagem atual para o elemento de faixa de opções é de tamanho grande.
+Indica se a imagem atual do elemento da faixa de faixas é de tamanho grande.
 
 ```
 BOOL IsLargeMode() const;
@@ -1395,15 +1395,15 @@ BOOL IsLargeMode() const;
 
 ### <a name="return-value"></a>Valor de retorno
 
-TRUE se a imagem para o elemento de faixa de opções é grande tamanho; Caso contrário, FALSE.
+TRUE se a imagem do elemento da faixa de faixas for tamanho grande; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-Tamanho da imagem grande é 32 x 32 pixels.
+O tamanho da imagem grande é 32 x 32 pixels.
 
-##  <a name="ismenumode"></a>  CMFCRibbonBaseElement::IsMenuMode
+##  <a name="ismenumode"></a>CMFCRibbonBaseElement:: ismenumode
 
-Indica se o elemento de faixa de opções está contido em um menu.
+Indica se o elemento Ribbon está contido em um menu.
 
 ```
 BOOL IsMenuMode() const;
@@ -1411,13 +1411,13 @@ BOOL IsMenuMode() const;
 
 ### <a name="return-value"></a>Valor de retorno
 
-TRUE se o elemento de faixa de opções está contido em um menu. Caso contrário, FALSE.
+TRUE se o elemento Ribbon estiver contido em um menu; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="ispressed"></a>  CMFCRibbonBaseElement::IsPressed
+##  <a name="ispressed"></a>CMFCRibbonBaseElement:: ispressioned
 
-Indica se o usuário clicou com o elemento de faixa de opções.
+Indica se o usuário clicou no elemento Ribbon.
 
 ```
 virtual BOOL IsPressed() const;
@@ -1425,11 +1425,11 @@ virtual BOOL IsPressed() const;
 
 ### <a name="return-value"></a>Valor de retorno
 
-TRUE se o usuário clicou com o elemento de faixa de opções; Caso contrário, FALSE.
+TRUE se o usuário tiver clicado no elemento Ribbon; caso contrário, FALSE.
 
 ##  <a name="isqatmode"></a>  CMFCRibbonBaseElement::IsQATMode
 
-Indica se o elemento de faixa de opções está contido na barra de ferramentas de acesso rápido.
+Indica se o elemento da faixa de faixas está contido na barra de ferramentas de acesso rápido.
 
 ```
 BOOL IsQATMode() const;
@@ -1437,13 +1437,13 @@ BOOL IsQATMode() const;
 
 ### <a name="return-value"></a>Valor de retorno
 
-TRUE se o elemento de faixa de opções está contido na barra de ferramentas de acesso rápido. Caso contrário, FALSE.
+TRUE se o elemento Ribbon estiver contido na barra de ferramentas de acesso rápido; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="isseparator"></a>  CMFCRibbonBaseElement::IsSeparator
+##  <a name="isseparator"></a>CMFCRibbonBaseElement:: isseparatorr
 
-Indica se o elemento de faixa de opções é um separador de exibição.
+Indica se o elemento Ribbon é um separador de exibição.
 
 ```
 virtual BOOL IsSeparator() const;
@@ -1451,13 +1451,13 @@ virtual BOOL IsSeparator() const;
 
 ### <a name="return-value"></a>Valor de retorno
 
-TRUE se o elemento de faixa de opções é um separador de exibição; Caso contrário, FALSE.
+TRUE se o elemento Ribbon for um separador de exibição; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="isshowgroupborder"></a>  CMFCRibbonBaseElement::IsShowGroupBorder
+##  <a name="isshowgroupborder"></a>CMFCRibbonBaseElement::IsShowGroupBorder
 
-Indica se o elemento de faixa de opções está contido em um grupo que exibe uma borda comum.
+Indica se o elemento Ribbon está contido em um grupo que exibe uma borda comum.
 
 ```
 BOOL IsShowGroupBorder() const;
@@ -1465,13 +1465,13 @@ BOOL IsShowGroupBorder() const;
 
 ### <a name="return-value"></a>Valor de retorno
 
-TRUE se o elemento de faixa de opções está contido em um grupo que exibe uma borda comum; Caso contrário, FALSE.
+TRUE se o elemento Ribbon estiver contido em um grupo que exibe uma borda comum; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
 ##  <a name="isshowtooltiponbottom"></a>  CMFCRibbonBaseElement::IsShowTooltipOnBottom
 
-Indica se a dica de ferramenta é exibida sob o elemento de faixa de opções.
+Indica se a dica de ferramenta é exibida sob o elemento Ribbon.
 
 ```
 virtual BOOL IsShowTooltipOnBottom() const;
@@ -1479,13 +1479,13 @@ virtual BOOL IsShowTooltipOnBottom() const;
 
 ### <a name="return-value"></a>Valor de retorno
 
-TRUE se a dica de ferramenta é exibida sob o elemento de faixa de opções; FALSE se a dica de ferramenta é exibida próximo ao ponteiro.
+TRUE se a dica de ferramenta for exibida sob o elemento Ribbon; FALSE se a dica de ferramenta for exibida perto do ponteiro.
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="istabstop"></a>  CMFCRibbonBaseElement::IsTabStop
+##  <a name="istabstop"></a>CMFCRibbonBaseElement:: IsTabStop
 
-Indica se o elemento de faixa de opções pode ser selecionado com o teclado.
+Indica se o elemento da faixa de faixas pode ser selecionado com o teclado.
 
 ```
 virtual BOOL IsTabStop() const;
@@ -1497,11 +1497,11 @@ Sempre retorna TRUE.
 
 ### <a name="remarks"></a>Comentários
 
-Por padrão, esse método sempre retorna TRUE. Substitua este método para indicar se o elemento de faixa de opções pode ser marcado com o teclado.
+Por padrão, esse método sempre retorna TRUE. Substitua esse método para indicar se o elemento da faixa de faixas pode ser selecionado com o teclado.
 
 ##  <a name="istextalwaysonright"></a>  CMFCRibbonBaseElement::IsTextAlwaysOnRight
 
-Indica se o texto para o elemento de faixa de opções é exibido à direita.
+Indica se o texto do elemento da faixa de faixas é exibido à direita.
 
 ```
 BOOL IsTextAlwaysOnRight() const;
@@ -1509,13 +1509,13 @@ BOOL IsTextAlwaysOnRight() const;
 
 ### <a name="return-value"></a>Valor de retorno
 
-TRUE se o texto para o elemento de faixa de opções é exibido da direita; Caso contrário, FALSE.
+TRUE se o texto do elemento Ribbon for exibido à direita; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
 ##  <a name="isvisible"></a>  CMFCRibbonBaseElement::IsVisible
 
-Indica se o elemento de faixa de opções é exibido no momento.
+Indica se o elemento da faixa de faixas está sendo exibido no momento.
 
 ```
 BOOL IsVisible() const;
@@ -1523,13 +1523,13 @@ BOOL IsVisible() const;
 
 ### <a name="return-value"></a>Valor de retorno
 
-TRUE se o elemento de faixa de opções é exibido no momento; Caso contrário, FALSE.
+TRUE se o elemento Ribbon for exibido no momento; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
 ##  <a name="iswholerowheight"></a>  CMFCRibbonBaseElement::IsWholeRowHeight
 
-Indica se a altura de exibição do elemento de faixa de opções é o mesmo que a altura de exibição do painel da faixa de opções que o contém.
+Indica se a altura de exibição do elemento da faixa de faixas é a mesma que a altura de exibição do painel da faixa de faixas que o contém.
 
 ```
 virtual BOOL IsWholeRowHeight() const;
@@ -1541,11 +1541,11 @@ Sempre retorna FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-Por padrão, esse método sempre retorna FALSE. Substitua este método para indicar se a altura de exibição do elemento de faixa de opções é o mesmo que a altura de exibição do painel da faixa de opções que o contém.
+Por padrão, esse método sempre retorna FALSE. Substitua esse método para indicar se a altura de exibição do elemento da faixa de faixas é igual à altura de exibição do painel da faixa de faixas que o contém.
 
-##  <a name="notifycommand"></a>  CMFCRibbonBaseElement::NotifyCommand
+##  <a name="notifycommand"></a>CMFCRibbonBaseElement::NotifyCommand
 
-Envia uma notificação de comando para a janela pai do elemento da faixa de opções.
+Envia uma notificação de comando para a janela pai do elemento Ribbon.
 
 ```
 BOOL NotifyCommand(BOOL bWithDelay = FALSE);
@@ -1554,17 +1554,17 @@ BOOL NotifyCommand(BOOL bWithDelay = FALSE);
 ### <a name="parameters"></a>Parâmetros
 
 *bWithDelay*<br/>
-[in] TRUE para adicionar a notificação de comando para a fila de mensagens da janela do pai. FALSE para enviar a mensagem imediatamente para a janela pai.
+no TRUE para adicionar a notificação de comando à fila de mensagens da janela pai; FALSE para enviar a mensagem imediatamente para a janela pai.
 
 ### <a name="return-value"></a>Valor de retorno
 
-TRUE se a mensagem foi enviada; Caso contrário, FALSE.
+TRUE se a mensagem foi enviada; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
 ##  <a name="notifyhighlightlistitem"></a>  CMFCRibbonBaseElement::NotifyHighlightListItem
 
-Notifica a janela pai da barra de faixa de opções quando um usuário realça um elemento de faixa de opções que está localizado em uma lista.
+Notifica a janela pai da barra da faixa de forma quando um usuário realça um elemento Ribbon que está localizado em uma lista.
 
 ```
 virtual void NotifyHighlightListItem(int nIndex);
@@ -1573,13 +1573,13 @@ virtual void NotifyHighlightListItem(int nIndex);
 ### <a name="parameters"></a>Parâmetros
 
 *nIndex*<br/>
-[in] O índice do elemento da faixa de opções na lista.
+no O índice do elemento da faixa de faixas na lista.
 
 ### <a name="remarks"></a>Comentários
 
 ##  <a name="onaddtoqatoolbar"></a>  CMFCRibbonBaseElement::OnAddToQAToolbar
 
-Adiciona o elemento de faixa de opções na barra de ferramentas de acesso rápido especificado.
+Adiciona o elemento da faixa de faixas à barra de ferramentas de acesso rápido especificada.
 
 ```
 virtual BOOL OnAddToQAToolbar(CMFCRibbonQuickAccessToolBar& qat);
@@ -1588,17 +1588,17 @@ virtual BOOL OnAddToQAToolbar(CMFCRibbonQuickAccessToolBar& qat);
 ### <a name="parameters"></a>Parâmetros
 
 *qat*<br/>
-[in] A barra de ferramentas de acesso rápido.
+no A barra de ferramentas de acesso rápido.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Sempre retorna TRUE, indicando o elemento de faixa de opções foi adicionado à barra de ferramentas de acesso rápido.
+Sempre retorna TRUE indicando que o elemento Ribbon foi adicionado à barra de ferramentas de acesso rápido.
 
 ### <a name="remarks"></a>Comentários
 
 ##  <a name="onafterchangerect"></a>  CMFCRibbonBaseElement::OnAfterChangeRect
 
-Atualiza a dica de ferramenta para o elemento de faixa de opções.
+Atualiza a dica de ferramenta para o elemento Ribbon.
 
 ```
 virtual void OnAfterChangeRect(CDC* pDC);
@@ -1607,15 +1607,15 @@ virtual void OnAfterChangeRect(CDC* pDC);
 ### <a name="parameters"></a>Parâmetros
 
 *pDC*<br/>
-[in] Esse parâmetro não é usado.
+no Esse parâmetro não é usado.
 
 ### <a name="remarks"></a>Comentários
 
-Por padrão, esse método atualiza a dica de ferramenta para o elemento de faixa de opções. Substitua este método para atualizar o elemento de faixa de opções, depois que seu retângulo de exibição foi alterado.
+Por padrão, esse método atualiza a dica de ferramenta para o elemento Ribbon. Substitua esse método para atualizar o elemento da faixa de faixas depois que seu retângulo de exibição for alterado.
 
-##  <a name="onautorepeat"></a>  CMFCRibbonBaseElement::OnAutoRepeat
+##  <a name="onautorepeat"></a>CMFCRibbonBaseElement::OnAutoRepeat
 
-Atualiza o elemento de faixa de opções em resposta à entrada do usuário prolongada.
+Atualiza o elemento da faixa de faixas em resposta à entrada de usuário sustentada.
 
 ```
 virtual BOOL OnAutoRepeat();
@@ -1627,11 +1627,11 @@ Sempre retorna FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-Por padrão esse método sempre retorna FALSE. Substitua este método para processar a entrada do usuário prolongada.
+Por padrão, esse método sempre retorna FALSE. Substitua esse método para processar a entrada de usuário sustentada.
 
-##  <a name="oncalctextsize"></a>  CMFCRibbonBaseElement::OnCalcTextSize
+##  <a name="oncalctextsize"></a>CMFCRibbonBaseElement::OnCalcTextSize
 
-Calcula o tamanho do texto para o elemento de faixa de opções.
+Calcula o tamanho do texto para o elemento Ribbon.
 
 ```
 virtual void OnCalcTextSize(CDC* pDC);
@@ -1640,15 +1640,15 @@ virtual void OnCalcTextSize(CDC* pDC);
 ### <a name="parameters"></a>Parâmetros
 
 *pDC*<br/>
-[in] Esse parâmetro não é usado.
+no Esse parâmetro não é usado.
 
 ### <a name="remarks"></a>Comentários
 
-Por padrão, esse método não fará nada. Substitua este método para calcular o tamanho do texto para o elemento de faixa de opções.
+Por padrão, esse método não faz nada. Substitua esse método para calcular o tamanho do texto para o elemento Ribbon.
 
 ##  <a name="onchangemenuhighlight"></a>  CMFCRibbonBaseElement::OnChangeMenuHighlight
 
-Chamado pelo framework quando o realce é alterado para um elemento de faixa de opções que está localizado em um menu.
+Chamado pelo Framework quando o realce é alterado para um elemento Ribbon que está localizado em um menu.
 
 ```
 virtual void OnChangeMenuHighlight(CMFCRibbonPanelMenuBar* pPanelMenuBar
@@ -1658,18 +1658,18 @@ virtual void OnChangeMenuHighlight(CMFCRibbonPanelMenuBar* pPanelMenuBar
 ### <a name="parameters"></a>Parâmetros
 
 *pPanelMenuBar*<br/>
-[in] Esse parâmetro não é usado.
+no Esse parâmetro não é usado.
 
 *pHot*<br/>
-[in] Esse parâmetro não é usado.
+no Esse parâmetro não é usado.
 
 ### <a name="remarks"></a>Comentários
 
-Por padrão, esse método não fará nada. Substitua este método para atualizar um elemento de faixa de opções que está localizado em um menu quando o realce é alterado.
+Por padrão, esse método não faz nada. Substitua esse método para atualizar um elemento da faixa de faixas que está localizado em um menu quando o realce é alterado.
 
-##  <a name="ondraw"></a>  CMFCRibbonBaseElement::OnDraw
+##  <a name="ondraw"></a>CMFCRibbonBaseElement:: OnDraw
 
-Chamado pelo framework para desenhar o elemento de faixa de opções.
+Chamado pelo Framework para desenhar o elemento Ribbon.
 
 ```
 virtual void OnDraw(CDC* pDC) = 0;
@@ -1678,15 +1678,15 @@ virtual void OnDraw(CDC* pDC) = 0;
 ### <a name="parameters"></a>Parâmetros
 
 *pDC*<br/>
-[in] Um ponteiro para um contexto de dispositivo.
+no Um ponteiro para um contexto de dispositivo.
 
 ### <a name="remarks"></a>Comentários
 
-Substitua este método em uma classe derivada se você quiser personalizar o desenho de um elemento de faixa de opções específicas.
+Substitua esse método em uma classe derivada se desejar personalizar o desenho de um elemento da faixa de particular específico.
 
 ##  <a name="ondrawkeytip"></a>  CMFCRibbonBaseElement::OnDrawKeyTip
 
-Chamado pelo framework para desenhar a dica de tecla para o elemento de faixa de opções.
+Chamado pelo Framework para desenhar o KeyTip para o elemento Ribbon.
 
 ```
 virtual void OnDrawKeyTip(
@@ -1698,19 +1698,19 @@ virtual void OnDrawKeyTip(
 ### <a name="parameters"></a>Parâmetros
 
 *pDC*<br/>
-[in] Ponteiro para um contexto de dispositivo.
+no Ponteiro para um contexto de dispositivo.
 
 *rect*<br/>
-[in] Retângulo de limite para a dica de tecla.
+no Retângulo de limite para o KeyTip.
 
 *bIsMenu*<br/>
-[in] TRUE se a dica de tecla é para um botão de menu pop-up; Caso contrário, FALSE.
+no TRUE se o KeyTip for para um botão de menu pop-up; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
 ##  <a name="ondrawmenuimage"></a>  CMFCRibbonBaseElement::OnDrawMenuImage
 
-Chamado pelo framework quando a imagem do menu para o elemento de faixa de opções é desenhada.
+Chamado pelo Framework quando a imagem de menu para o elemento Ribbon é desenhada.
 
 ```
 virtual BOOL OnDrawMenuImage(
@@ -1721,10 +1721,10 @@ virtual BOOL OnDrawMenuImage(
 ### <a name="parameters"></a>Parâmetros
 
 *pDC*<br/>
-[in] Ponteiro para um contexto de dispositivo.
+no Ponteiro para um contexto de dispositivo.
 
 *rect*<br/>
-[in] Retângulo da imagem de menu.
+no Retângulo da imagem do menu.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -1732,9 +1732,9 @@ Sempre retorna TRUE para indicar que a imagem foi desenhada.
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="ondrawonlist"></a>  CMFCRibbonBaseElement::OnDrawOnList
+##  <a name="ondrawonlist"></a>CMFCRibbonBaseElement::OnDrawOnList
 
-Chamado pelo framework para desenhar o elemento de faixa de opções em uma caixa de listagem de comandos.
+Chamado pelo Framework para desenhar o elemento da faixa de faixas em uma caixa de listagem de comandos.
 
 ```
 virtual void OnDrawOnList(
@@ -1749,30 +1749,30 @@ virtual void OnDrawOnList(
 ### <a name="parameters"></a>Parâmetros
 
 *pDC*<br/>
-[in] Ponteiro para um contexto de dispositivo para o elemento de faixa de opções.
+no Ponteiro para um contexto de dispositivo para o elemento Ribbon.
 
 *strText*<br/>
-[in] O texto de exibição.
+no O texto de exibição.
 
 *nTextOffset*<br/>
-[in] Distância, em pixels, do lado esquerdo da caixa de listagem para o texto de exibição.
+no Distância, em pixels, do lado esquerdo da caixa de listagem até o texto de exibição.
 
 *rect*<br/>
-[in] O retângulo de exibição para o elemento de faixa de opções.
+no O retângulo de exibição do elemento da faixa de faixas.
 
 *bIsSelected*<br/>
-[in] Esse parâmetro não é usado.
+no Esse parâmetro não é usado.
 
 *bHighlighted*<br/>
-[in] Esse parâmetro não é usado.
+no Esse parâmetro não é usado.
 
 ### <a name="remarks"></a>Comentários
 
-A caixa de lista de comandos exibe elementos de faixa de opções para permitir que usuários personalizem a barra de ferramentas de acesso rápido.
+A caixa de listagem comandos exibe os elementos da faixa de lista para permitir que os usuários personalizem a barra de ferramentas de acesso rápido.
 
-##  <a name="onkey"></a>  CMFCRibbonBaseElement::OnKey
+##  <a name="onkey"></a>CMFCRibbonBaseElement::OnKey
 
-Chamado pelo framework quando o usuário pressiona uma dica de tecla e o elemento de faixa de opções tem o foco.
+Chamado pelo Framework quando o usuário pressiona um KeyTip e o elemento Ribbon tem o foco.
 
 ```
 virtual BOOL OnKey(BOOL bIsMenuKey);
@@ -1781,17 +1781,17 @@ virtual BOOL OnKey(BOOL bIsMenuKey);
 ### <a name="parameters"></a>Parâmetros
 
 *bIsMenuKey*<br/>
-[in] TRUE se a dica de tecla exibe um menu pop-up. Caso contrário, FALSE.
+no TRUE se o KeyTip exibir um menu pop-up; caso contrário, FALSE.
 
 ### <a name="return-value"></a>Valor de retorno
 
-TRUE se o evento foi tratado; Caso contrário, FALSE.
+TRUE se o evento foi tratado; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="onmenukey"></a>  CMFCRibbonBaseElement::OnMenuKey
+##  <a name="onmenukey"></a>CMFCRibbonBaseElement::OnMenuKey
 
-Chamado pelo framework quando o usuário pressiona uma dica de tecla de menu no painel principal.
+Chamado pelo Framework quando o usuário pressiona um menu KeyTip no painel principal.
 
 ```
 virtual BOOL OnMenuKey(UINT nUpperChar);
@@ -1800,7 +1800,7 @@ virtual BOOL OnMenuKey(UINT nUpperChar);
 ### <a name="parameters"></a>Parâmetros
 
 *nUpperChar*<br/>
-[in] Esse parâmetro não é usado.
+no Esse parâmetro não é usado.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -1808,11 +1808,11 @@ Sempre retorna FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-Por padrão, esse método sempre retorna FALSE. Substitua este método para responder quando um usuário pressiona uma dica de tecla de menu no painel principal.
+Por padrão, esse método sempre retorna FALSE. Substitua esse método para responder quando um usuário pressionar um menu KeyTip no painel principal.
 
 ##  <a name="onprocesskey"></a>  CMFCRibbonBaseElement::OnProcessKey
 
-Chamado pelo framework quando o usuário pressiona uma tecla de atalho.
+Chamado pelo Framework quando o usuário pressiona uma tecla de atalho.
 
 ```
 virtual BOOL OnProcessKey(UINT nChar);
@@ -1821,7 +1821,7 @@ virtual BOOL OnProcessKey(UINT nChar);
 ### <a name="parameters"></a>Parâmetros
 
 *nChar*<br/>
-[in] Esse parâmetro não é usado.
+no Esse parâmetro não é usado.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -1829,11 +1829,11 @@ Sempre retorna FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-Substitua este método se você deseja que o elemento de faixa de opções para processar uma tecla de atalho.
+Substitua esse método se desejar que o elemento da faixa de faixas processe uma tecla de atalho.
 
-##  <a name="onrtlchanged"></a>  CMFCRibbonBaseElement::OnRTLChanged
+##  <a name="onrtlchanged"></a>CMFCRibbonBaseElement::OnRTLChanged
 
-Chamado pelo framework quando o layout muda de direção.
+Chamado pelo Framework quando o layout muda de direção.
 
 ```
 virtual void OnRTLChanged(BOOL bIsRTL);
@@ -1842,15 +1842,15 @@ virtual void OnRTLChanged(BOOL bIsRTL);
 ### <a name="parameters"></a>Parâmetros
 
 *bIsRTL*<br/>
-[in] Esse parâmetro não é usado.
+no Esse parâmetro não é usado.
 
 ### <a name="remarks"></a>Comentários
 
-Por padrão, esse método não fará nada. Substitua este método para ajustar o elemento de faixa de opções quando o layout muda de direção. A direção do layout padrão for da esquerda para direita.
+Por padrão, esse método não faz nada. Substitua esse método para ajustar o elemento da faixa de opção quando o layout alterar a direção. A direção do layout padrão é da esquerda para a direita.
 
 ##  <a name="onsetfocus"></a>  CMFCRibbonBaseElement::OnSetFocus
 
-Chamado pelo framework quando um elemento de faixa de opções recebe ou perde o foco de entrada.
+Chamado pelo Framework quando um elemento Ribbon recebe ou perde o foco de entrada.
 
 ```
 virtual void OnSetFocus(BOOL B);
@@ -1858,11 +1858,11 @@ virtual void OnSetFocus(BOOL B);
 
 ### <a name="remarks"></a>Comentários
 
-Substitua este método em uma classe derivada se você quiser que seu aplicativo para lidar com uma alteração no foco de um elemento de faixa de opções.
+Substitua esse método em uma classe derivada se desejar que seu aplicativo manipule uma alteração no foco de um elemento da faixa de uma.
 
 ##  <a name="onshow"></a>  CMFCRibbonBaseElement::OnShow
 
-Chamado pelo framework para mostrar ou ocultar o elemento de faixa de opções.
+Chamado pelo Framework para mostrar ou ocultar o elemento Ribbon.
 
 ```
 virtual void OnShow(BOOL bShow);
@@ -1871,15 +1871,15 @@ virtual void OnShow(BOOL bShow);
 ### <a name="parameters"></a>Parâmetros
 
 *bShow*<br/>
-[in] Esse parâmetro não é usado.
+no Esse parâmetro não é usado.
 
 ### <a name="remarks"></a>Comentários
 
-Por padrão, esse método não fará nada. Substitua este método para mostrar ou ocultar o elemento de faixa de opções.
+Por padrão, esse método não faz nada. Substitua esse método para mostrar ou ocultar o elemento Ribbon.
 
 ##  <a name="onshowpopupmenu"></a>  CMFCRibbonBaseElement::OnShowPopupMenu
 
-Chamado pelo framework antes que o elemento de faixa de opções mostra um menu pop-up.
+Chamado pelo Framework antes de o elemento Ribbon mostrar um menu pop-up.
 
 ```
 virtual void OnShowPopupMenu();
@@ -1887,11 +1887,11 @@ virtual void OnShowPopupMenu();
 
 ### <a name="remarks"></a>Comentários
 
-Este método notifica a janela pai da barra de faixa de opções que o elemento de faixa de opções mostrará um menu pop-up.
+Esse método notifica a janela pai da barra da faixa de que o elemento Ribbon mostrará um menu pop-up.
 
 ##  <a name="postmenucommand"></a>  CMFCRibbonBaseElement::PostMenuCommand
 
-Fecha um menu pop-up para o elemento de faixa de opções e envia uma mensagem de fechamento ao menu pai.
+Fecha o menu pop-up do elemento Ribbon e envia uma mensagem de fechamento para o menu pai.
 
 ```
 void PostMenuCommand(UINT uiCmdId);
@@ -1900,15 +1900,15 @@ void PostMenuCommand(UINT uiCmdId);
 ### <a name="parameters"></a>Parâmetros
 
 *uiCmdId*<br/>
-[in] O parâmetro não é usado.
+no O parâmetro não é usado.
 
 ### <a name="remarks"></a>Comentários
 
-A mensagem de fechamento é enviada somente se o elemento de faixa de opções está localizado em um menu pop-up.
+A mensagem de fechamento só será enviada se o elemento da faixa de faixas estiver localizado em um menu pop-up.
 
-##  <a name="redraw"></a>  CMFCRibbonBaseElement::Redraw
+##  <a name="redraw"></a>CMFCRibbonBaseElement:: redesenhar
 
-Atualiza a exibição para o elemento de faixa de opções.
+Atualiza a exibição para o elemento Ribbon.
 
 ```
 virtual void Redraw();
@@ -1916,11 +1916,11 @@ virtual void Redraw();
 
 ### <a name="remarks"></a>Comentários
 
-Esse método redesenha o retângulo de exibição para o elemento de faixa de opções chamando [CWnd::RedrawWindow](/windows/desktop/api/winuser/nf-winuser-redrawwindow) com os sinalizadores RDW_INVALIDATE, RDW_ERASE e RDW_UPDATENOW definido.
+Esse método redesenha o retângulo de exibição para o elemento Ribbon chamando [CWnd:: RedrawWindow](/windows/win32/api/winuser/nf-winuser-redrawwindow) com os sinalizadores RDW_INVALIDATE, RDW_ERASE e RDW_UPDATENOW definidos.
 
 ##  <a name="setaccdata"></a>  CMFCRibbonBaseElement::SetACCData
 
-Define os dados de acessibilidade para o elemento de faixa de opções.
+Define os dados de acessibilidade para o elemento Ribbon.
 
 ```
 virtual BOOL SetACCData(
@@ -1931,10 +1931,10 @@ virtual BOOL SetACCData(
 ### <a name="parameters"></a>Parâmetros
 
 *pParent*<br/>
-A janela pai para o elemento de faixa de opções.
+A janela pai do elemento Ribbon.
 
 *data*<br/>
-Os dados de acessibilidade para o elemento de faixa de opções.
+Os dados de acessibilidade para o elemento Ribbon.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -1942,11 +1942,11 @@ Sempre retorna TRUE.
 
 ### <a name="remarks"></a>Comentários
 
-Por padrão, esse método define os dados de acessibilidade para o elemento de faixa de opções e sempre retorna TRUE. Substitua este método para definir os dados de acessibilidade e retornar um valor que indica êxito ou falha.
+Por padrão, esse método define os dados de acessibilidade para o elemento Ribbon e sempre retorna TRUE. Substitua esse método para definir os dados de acessibilidade e retornar um valor que indique êxito ou falha.
 
-##  <a name="setcompactmode"></a>  CMFCRibbonBaseElement::SetCompactMode
+##  <a name="setcompactmode"></a>CMFCRibbonBaseElement:: setcompactmode
 
-Define o tamanho de exibição para o elemento de faixa de opções.
+Define o tamanho de exibição para o elemento Ribbon.
 
 ```
 virtual void SetCompactMode(BOOL bCompactMode = TRUE);
@@ -1955,22 +1955,22 @@ virtual void SetCompactMode(BOOL bCompactMode = TRUE);
 ### <a name="parameters"></a>Parâmetros
 
 *bCompactMode*<br/>
-[in] TRUE para reduzir o tamanho de exibição do elemento da faixa de opções; FALSE para aumentar o tamanho de exibição do elemento de faixa de opções.
+no TRUE para reduzir o tamanho de exibição do elemento da faixa de faixas; FALSE para aumentar o tamanho de exibição do elemento da faixa de faixas.
 
 ### <a name="remarks"></a>Comentários
 
-A tabela a seguir resume a lógica para este método.
+A tabela a seguir resume a lógica para esse método.
 
-|*bCompactMode*|Tamanho atual do elemento de faixa de opções|Novo tamanho do elemento de faixa de opções|
+|*bCompactMode*|Tamanho do elemento da faixa de tempo atual|Tamanho do novo elemento da faixa de faixas|
 |--------------------|---------------------------------|-----------------------------|
-|TRUE|Compactar|Nenhuma alteração.|
+|TRUE|Compactá|Nenhuma alteração.|
 |TRUE|Intermediários|Compacte se for possível.|
-|TRUE|Grande|Intermediárias se for possível.|
-|FALSE|Compactar|Intermediário se for possível; Caso contrário, grandes.|
+|TRUE|Grande|Intermediário se possível.|
+|FALSE|Compactá|Intermediário se for possível; do contrário, grande.|
 
 ##  <a name="setdata"></a>  CMFCRibbonBaseElement::SetData
 
-Associa um item de dados com o elemento de faixa de opções.
+Associa um item de dados com o elemento Ribbon.
 
 ```
 void SetData(DWORD_PTR dwData);
@@ -1979,11 +1979,11 @@ void SetData(DWORD_PTR dwData);
 ### <a name="parameters"></a>Parâmetros
 
 *dwData*<br/>
-[in] O valor de dados.
+no O valor dos dados.
 
 ##  <a name="setdefaultmenulook"></a>  CMFCRibbonBaseElement::SetDefaultMenuLook
 
-Define o elemento de faixa de opções sejam exibidos como um comando de pop-up.
+Define o elemento da faixa de faixas como um comando pop-up.
 
 ```
 void SetDefaultMenuLook(BOOL bIsDefaultMenuLook = TRUE);
@@ -1992,13 +1992,13 @@ void SetDefaultMenuLook(BOOL bIsDefaultMenuLook = TRUE);
 ### <a name="parameters"></a>Parâmetros
 
 *bIsDefaultMenuLook*<br/>
-[in] TRUE para definir o elemento de faixa de opções para aparecer como um comando de pop-up; Caso contrário, FALSE.
+no TRUE para definir que o elemento da faixa de faixas apareça como um comando pop-up; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
 ##  <a name="setdescription"></a>  CMFCRibbonBaseElement::SetDescription
 
-Define a descrição para o elemento de faixa de opções.
+Define a descrição para o elemento Ribbon.
 
 ```
 virtual void SetDescription(LPCTSTR lpszText);
@@ -2007,15 +2007,15 @@ virtual void SetDescription(LPCTSTR lpszText);
 ### <a name="parameters"></a>Parâmetros
 
 *lpszText*<br/>
-[in] A descrição para o elemento de faixa de opções.
+no A descrição do elemento da faixa de faixas.
 
 ### <a name="remarks"></a>Comentários
 
-O framework exibe a nova descrição na barra de status, ou na dica de ferramenta ou sob o botão de menu.
+A estrutura exibe a nova descrição na barra de status ou na dica de ferramenta ou sob o botão de menu.
 
 ##  <a name="setid"></a>  CMFCRibbonBaseElement::SetID
 
-Define a ID de comando do elemento da faixa de opções.
+Define a ID de comando do elemento Ribbon.
 
 ```
 virtual void SetID(UINT nID);
@@ -2024,11 +2024,11 @@ virtual void SetID(UINT nID);
 ### <a name="parameters"></a>Parâmetros
 
 *nID*<br/>
-[in] A ID de comando.
+no A ID do comando.
 
-##  <a name="setinitialmode"></a>  CMFCRibbonBaseElement::SetInitialMode
+##  <a name="setinitialmode"></a>CMFCRibbonBaseElement:: setinitializemode
 
-Define o tamanho de exibição inicial para o elemento de faixa de opções.
+Define o tamanho de exibição inicial para o elemento da faixa de faixas.
 
 ```
 virtual void SetInitialMode(BOOL bOneRow = FALSE);
@@ -2037,15 +2037,15 @@ virtual void SetInitialMode(BOOL bOneRow = FALSE);
 ### <a name="parameters"></a>Parâmetros
 
 *bOneRow*<br/>
-[in] True para limitar o tamanho de exibição para o elemento de faixa de opções para compact ou intermediário; Caso contrário, FALSE.
+no TRUE para limitar o tamanho de exibição do elemento da faixa de faixas para compactar ou intermediário; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-O tamanho da exibição de elementos de faixa de opções pode ser compact, intermediário ou grandes.
+O tamanho de exibição dos elementos da faixa de faixas pode ser compacto, intermediário ou grande.
 
 ##  <a name="setkeys"></a>  CMFCRibbonBaseElement::SetKeys
 
-Define as dicas de tecla para o elemento de faixa de opções.
+Define o KeyTips para o elemento Ribbon.
 
 ```
 virtual void SetKeys(
@@ -2056,14 +2056,14 @@ virtual void SetKeys(
 ### <a name="parameters"></a>Parâmetros
 
 *lpszKeys*<br/>
-[in] A dica de tecla para o elemento de faixa de opções.
+no O KeyTip para o elemento Ribbon.
 
 *lpszMenuKeys*<br/>
-[in] A dica de tecla do menu pop-up do elemento da faixa de opções.
+no O KeyTip para o menu pop-up do elemento Ribbon.
 
 ##  <a name="setoriginal"></a>  CMFCRibbonBaseElement::SetOriginal
 
-Define o elemento de faixa de opções original para o elemento de faixa de opções.
+Define o elemento da faixa de faixas original para o elemento Ribbon.
 
 ```
 virtual void SetOriginal(CMFCRibbonBaseElement* pOriginal);
@@ -2072,15 +2072,15 @@ virtual void SetOriginal(CMFCRibbonBaseElement* pOriginal);
 ### <a name="parameters"></a>Parâmetros
 
 *pOriginal*<br/>
-[in] Ponteiro para um elemento de faixa de opções.
+no Ponteiro para um elemento da faixa de faixas.
 
 ### <a name="remarks"></a>Comentários
 
-Elementos de faixa de opções que são copiados para outro contêiner retêm um ponteiro para o elemento de faixa de opções original.
+Os elementos da faixa de faixas que são copiados para outro contêiner retêm um ponteiro para o elemento Ribbon original.
 
 ##  <a name="setparentcategory"></a>  CMFCRibbonBaseElement::SetParentCategory
 
-Define a categoria pai para o elemento de faixa de opções.
+Define a categoria pai para o elemento Ribbon.
 
 ```
 virtual void SetParentCategory(CMFCRibbonCategory* pParent);
@@ -2089,15 +2089,15 @@ virtual void SetParentCategory(CMFCRibbonCategory* pParent);
 ### <a name="parameters"></a>Parâmetros
 
 *pParent*<br/>
-[in] Ponteiro para uma categoria de faixa de opções.
+no Ponteiro para uma categoria da faixa de faixas.
 
 ### <a name="remarks"></a>Comentários
 
-Os grupos com guias em controles de faixa de opções são chamados de categorias.
+Os grupos com guias nos controles da faixa são chamados de categorias.
 
 ##  <a name="setparentmenu"></a>  CMFCRibbonBaseElement::SetParentMenu
 
-Define o pai de contêiner para o elemento de faixa de opções do menu.
+Define o contêiner de menu pai para o elemento Ribbon.
 
 ```
 virtual void SetParentMenu(CMFCRibbonPanelMenuBar* pMenuBar);
@@ -2106,13 +2106,13 @@ virtual void SetParentMenu(CMFCRibbonPanelMenuBar* pMenuBar);
 ### <a name="parameters"></a>Parâmetros
 
 *pMenuBar*<br/>
-[in] Menu pai.
+no O menu pai.
 
 ### <a name="remarks"></a>Comentários
 
 ##  <a name="setparentribbonbar"></a>  CMFCRibbonBaseElement::SetParentRibbonBar
 
-Define a barra de faixa de opções do pai do elemento de faixa de opções.
+Define a barra de faixa de faixas pai para o elemento Ribbon.
 
 ```
 virtual void SetParentRibbonBar(CMFCRibbonBar* pRibbonBar);
@@ -2121,13 +2121,13 @@ virtual void SetParentRibbonBar(CMFCRibbonBar* pRibbonBar);
 ### <a name="parameters"></a>Parâmetros
 
 *pRibbonBar*<br/>
-[in] Ponteiro para a barra de faixa de opções do pai.
+no Ponteiro para a barra de faixa de faixas pai.
 
 ### <a name="remarks"></a>Comentários
 
 ##  <a name="setrect"></a>  CMFCRibbonBaseElement::SetRect
 
-Define as dimensões do retângulo de exibição para o elemento de faixa de opções.
+Define as dimensões do retângulo de exibição para o elemento Ribbon.
 
 ```
 void SetRect(CRect rect);
@@ -2136,13 +2136,13 @@ void SetRect(CRect rect);
 ### <a name="parameters"></a>Parâmetros
 
 *rect*<br/>
-[in] As dimensões do retângulo.
+no As dimensões do retângulo.
 
 ### <a name="remarks"></a>Comentários
 
 ##  <a name="settext"></a>  CMFCRibbonBaseElement::SetText
 
-Define o texto e a dica de tecla para o elemento de faixa de opções.
+Define o texto e KeyTip para o elemento Ribbon.
 
 ```
 virtual void SetText(LPCTSTR lpszText);
@@ -2151,11 +2151,11 @@ virtual void SetText(LPCTSTR lpszText);
 ### <a name="parameters"></a>Parâmetros
 
 *lpszText*<br/>
-[in] O texto e a dica de tecla para o elemento de faixa de opções.
+no O Text e KeyTip para o elemento Ribbon.
 
 ### <a name="remarks"></a>Comentários
 
-Para definir a dica de tecla para o elemento de faixa de opções, acrescentam a sequência de escape de nova linha seguida pelos caracteres de dica de tecla *lpszText*.
+Para definir o KeyTip para o elemento Ribbon, acrescente a seqüência de escape de nova linha seguida pelos caracteres KeyTip a *lpszText*.
 
 ### <a name="example"></a>Exemplo
 
@@ -2170,7 +2170,7 @@ SetText(_T("Line Numbers\nln"))
 
 ##  <a name="settextalwaysonright"></a>  CMFCRibbonBaseElement::SetTextAlwaysOnRight
 
-Define o texto para o elemento de faixa de opções para exibir no lado direito.
+Define o texto para o elemento da faixa de faixas a ser exibido à direita.
 
 ```
 virtual void SetTextAlwaysOnRight(BOOL bSet = TRUE);
@@ -2179,13 +2179,13 @@ virtual void SetTextAlwaysOnRight(BOOL bSet = TRUE);
 ### <a name="parameters"></a>Parâmetros
 
 *bSet*<br/>
-[in] TRUE para exibir o texto da direita; Caso contrário, FALSE.
+no TRUE para exibir o texto à direita; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
 ##  <a name="settooltiptext"></a>  CMFCRibbonBaseElement::SetToolTipText
 
-Define o texto de dica de ferramenta para o elemento de faixa de opções.
+Define o texto de dica de ferramenta para o elemento Ribbon.
 
 ```
 virtual void SetToolTipText(LPCTSTR lpszText);
@@ -2194,11 +2194,11 @@ virtual void SetToolTipText(LPCTSTR lpszText);
 ### <a name="parameters"></a>Parâmetros
 
 *lpszText*<br/>
-[in] O texto de dica de ferramenta.
+no O texto da dica de ferramenta.
 
 ##  <a name="setvisible"></a>  CMFCRibbonBaseElement::SetVisible
 
-Define a visibilidade do elemento da faixa de opções.
+Define a visibilidade do elemento Ribbon.
 
 ```
 void SetVisible(BOOL bIsVisible);
@@ -2207,13 +2207,13 @@ void SetVisible(BOOL bIsVisible);
 ### <a name="parameters"></a>Parâmetros
 
 *bIsVisible*<br/>
-[in] TRUE para exibir o elemento de faixa de opções; FALSO para ocultar o elemento de faixa de opções.
+no TRUE para exibir o elemento da faixa de faixas; FALSE para ocultar o elemento da faixa de faixas.
 
 ### <a name="remarks"></a>Comentários
 
 ##  <a name="stretchhorizontally"></a>  CMFCRibbonBaseElement::StretchHorizontally
 
-Aumente a largura do elemento da faixa de opções.
+Amplia a largura do elemento Ribbon.
 
 ```
 virtual void StretchHorizontally();
@@ -2221,11 +2221,11 @@ virtual void StretchHorizontally();
 
 ### <a name="remarks"></a>Comentários
 
-Por padrão, esse método gera uma falha de asserção em compilações de depuração e, portanto, não deve ser chamado. Substitua este método para alongar-se a largura do elemento da faixa de opções.
+Por padrão, esse método gera uma falha de asserção em compilações de depuração e, portanto, não deve ser chamado. Substitua esse método para alongar a largura do elemento da faixa de faixas.
 
 ##  <a name="stretchtowholerow"></a>  CMFCRibbonBaseElement::StretchToWholeRow
 
-Altera a altura de exibição do elemento de faixa de opções para a altura da linha especificada.
+Altera a altura de exibição do elemento da faixa de faixas para a altura da linha especificada.
 
 ```
 virtual BOOL StretchToWholeRow(
@@ -2236,22 +2236,22 @@ virtual BOOL StretchToWholeRow(
 ### <a name="parameters"></a>Parâmetros
 
 *pDC*<br/>
-[in] Esse parâmetro não é usado.
+no Esse parâmetro não é usado.
 
 *nHeight*<br/>
-[in] A altura da linha.
+no A altura da linha.
 
 ### <a name="return-value"></a>Valor de retorno
 
-TRUE se a altura de exibição tiver sido definida; Caso contrário, FALSE.
+TRUE se a altura de exibição tiver sido definida; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-Substitua este método para alterar a altura de exibição do elemento de faixa de opções para a altura da linha especificada.
+Substitua esse método para alterar a altura de exibição do elemento da faixa de faixas para a altura da linha especificada.
 
-##  <a name="updatetooltipinfo"></a>  CMFCRibbonBaseElement::UpdateTooltipInfo
+##  <a name="updatetooltipinfo"></a>CMFCRibbonBaseElement::UpdateTooltipInfo
 
-Atualiza o texto de dica de ferramenta usando o recurso de comando para o elemento de faixa de opções.
+Atualiza o texto da dica de ferramenta usando o recurso de comando para o elemento Ribbon.
 
 ```
 virtual void UpdateTooltipInfo();
@@ -2259,7 +2259,7 @@ virtual void UpdateTooltipInfo();
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="hasfocus"></a>  CMFCRibbonBaseElement::HasFocus
+##  <a name="hasfocus"></a>CMFCRibbonBaseElement::HasFocus
 
 Indica se o elemento pai tem o foco do teclado.
 
@@ -2269,7 +2269,7 @@ virtual BOOL HasFocus() const;
 
 ### <a name="return-value"></a>Valor de retorno
 
-TRUE se o elemento de faixa de opções for focalizado; Caso contrário, FALSE.
+TRUE se o elemento da faixa de faixas estiver focalizado; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 

@@ -2,18 +2,18 @@
 title: Aplicativos da área de C++trabalho (Visual)
 ms.date: 07/28/2019
 ms.assetid: a020b534-293c-44e2-aa48-516c43ddeb8f
-ms.openlocfilehash: a1e302a29e079545f6d12ad544eab4f43e2bd445
-ms.sourcegitcommit: 720b74dddb1cdf4e570d55103158304ee1df81f8
+ms.openlocfilehash: 355102d9d58a8d93d7fb6935528f8fb8c4b534b1
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68606515"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514759"
 ---
 # <a name="desktop-applications-visual-c"></a>Aplicativos da área de C++trabalho (Visual)
 
 Um *aplicativo* de área C++ de trabalho no é um aplicativo nativo que pode acessar o conjunto completo de APIs do Windows e é executado em uma janela ou no console do sistema. Os aplicativos de C++ área de trabalho no podem ser executados no Windows XP por meio do Windows 10 (embora o Windows XP não seja mais oficialmente suportado e existam muitas APIs do Windows que foram introduzidas desde então). 
 
-Um aplicativo de área de trabalho é diferente de um aplicativo UWP (Plataforma Universal do Windows), que pode ser executado em computadores que executam o Windows 10 e também no XBox, Windows Phone, Surface Hub e outros dispositivos. Para obter mais informações sobre a área de trabalho vs. Aplicativos UWP, consulte [escolher sua tecnologia](/windows/desktop/choose-your-technology).
+Um aplicativo de área de trabalho é diferente de um aplicativo UWP (Plataforma Universal do Windows), que pode ser executado em computadores que executam o Windows 10 e também no XBox, Windows Phone, Surface Hub e outros dispositivos. Para obter mais informações sobre a área de trabalho vs. Aplicativos UWP, consulte [escolher sua tecnologia](/windows/win32/choose-your-technology).
 
 ### <a name="desktop-bridge"></a>Ponte de desktop
 
@@ -23,15 +23,15 @@ No Visual Studio 2017 versão 15,4 e posterior, você pode criar um projeto de p
 
 ### <a name="terminology"></a>Terminologia
 
-- Um aplicativo *Win32* é um aplicativo de área de C++ trabalho do Windows no que pode usar APIs nativas do [Windows C e/ou APIs com](/windows/desktop/apiindex/windows-api-list) e APIs de biblioteca do CRT e Standard e bibliotecas de terceiros. Um aplicativo Win32 que é executado em uma janela requer que o desenvolvedor trabalhe explicitamente com mensagens do Windows dentro de uma função de procedimento do Windows. Apesar do nome, um aplicativo Win32 pode ser compilado como um binário de 32 bits (x86) ou 64 bits (x64). No IDE do Visual Studio, os termos x86 e Win32 são sinônimos.
+- Um aplicativo *Win32* é um aplicativo de área de C++ trabalho do Windows no que pode usar APIs nativas do [Windows C e/ou APIs com](/windows/win32/apiindex/windows-api-list) e APIs de biblioteca do CRT e Standard e bibliotecas de terceiros. Um aplicativo Win32 que é executado em uma janela requer que o desenvolvedor trabalhe explicitamente com mensagens do Windows dentro de uma função de procedimento do Windows. Apesar do nome, um aplicativo Win32 pode ser compilado como um binário de 32 bits (x86) ou 64 bits (x64). No IDE do Visual Studio, os termos x86 e Win32 são sinônimos.
 
-- O [com (Component Object Model)](/windows/desktop/com/the-component-object-model) é uma especificação que permite que programas escritos em linguagens diferentes se comuniquem uns com os outros. Muitos componentes do Windows são implementados como objetos COM e seguem regras COM padrão para a criação de objetos, descoberta de interface e destruição de objeto.  Usar objetos COM de C++ aplicativos de área de trabalho é relativamente simples, mas escrever seu próprio objeto com é mais avançado. O [Active Template Library (ATL)](../atl/atl-com-desktop-components.md) fornece macros e funções auxiliares que simplificam o desenvolvimento com.
+- O [com (Component Object Model)](/windows/win32/com/the-component-object-model) é uma especificação que permite que programas escritos em linguagens diferentes se comuniquem uns com os outros. Muitos componentes do Windows são implementados como objetos COM e seguem regras COM padrão para a criação de objetos, descoberta de interface e destruição de objeto.  Usar objetos COM de C++ aplicativos de área de trabalho é relativamente simples, mas escrever seu próprio objeto com é mais avançado. O [Active Template Library (ATL)](../atl/atl-com-desktop-components.md) fornece macros e funções auxiliares que simplificam o desenvolvimento com.
 
 - Um aplicativo MFC é um aplicativo de área de trabalho do Windows que usa o [MFC](../mfc/mfc-desktop-applications.md) para criar a interface do usuário. Um aplicativo MFC também pode usar componentes COM, bem como APIs CRT e de biblioteca padrão. O MFC fornece um C++ wrapper fino orientado a objeto sobre o loop de mensagem de janela e as APIs do Windows. O MFC é a opção padrão para aplicativos, especialmente aplicativos de tipo corporativo, que têm muitos controles de interface do usuário ou controles de usuário personalizados. O MFC fornece classes auxiliares convenientes para gerenciamento de janelas, serialização, manipulação de texto, impressão e elementos de interface do usuário modernos, como a faixa de faixas. Para ser eficaz com o MFC, você deve estar familiarizado com o Win32.
 
 - Um C++aplicativo ou componente/CLI usa extensões para C++ sintaxe (conforme permitido pelo C++ padrão) para habilitar a interação entre o .net e o código nativo C + +.  Um C++aplicativo/CLI pode ter partes que são executadas nativamente e partes que são executadas no .NET Framework com acesso à biblioteca de classes base do .net. C++/CLI é a opção preferida quando você tem código C++ nativo que precisa trabalhar com código escrito no C# ou Visual Basic. Ele é destinado ao uso em DLLs do .NET em vez de no código da interface do usuário. Saiba mais em [Programação do .NET C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md).
 
-Qualquer aplicativo de área C++ de trabalho no pode usar classes e funções de biblioteca padrão e do C Runtime (CRT), objetos com e funções públicas do Windows, que coletivamente são conhecidas como a API do Windows. Para obter uma introdução aos aplicativos de área C++de trabalho do Windows no, consulte Introdução [ao Win32 e C++ ](/windows/desktop/LearnWin32/learn-to-program-for-windows)ao.
+Qualquer aplicativo de área C++ de trabalho no pode usar classes e funções de biblioteca padrão e do C Runtime (CRT), objetos com e funções públicas do Windows, que coletivamente são conhecidas como a API do Windows. Para obter uma introdução aos aplicativos de área C++de trabalho do Windows no, consulte Introdução [ao Win32 e C++ ](/windows/win32/LearnWin32/learn-to-program-for-windows)ao.
 
 ## <a name="in-this-section"></a>Nesta seção
 
@@ -50,7 +50,7 @@ Qualquer aplicativo de área C++ de trabalho no pode usar classes e funções de
 
 |Título|Descrição|
 |-----------|-----------------|
-|[Desenvolvimento em Windows](/windows/desktop/index)|Contém informações sobre a API do Windows e COM. (Algumas APIs do Windows e DLLs de terceiros são implementadas como objetos COM.)|
+|[Desenvolvimento em Windows](/windows/win32/index)|Contém informações sobre a API do Windows e COM. (Algumas APIs do Windows e DLLs de terceiros são implementadas como objetos COM.)|
 |[Hilo Desenvolvendo C++ aplicativos para o Windows 7](https://msdn.microsoft.com/library/windows/desktop/ff708696.aspx)|Descreve como criar um aplicativo de área de trabalho do Windows Rich Client que usa animação do Windows e Direct2D para criar uma interface do usuário baseada em carrossel.  Este tutorial não foi atualizado desde o Windows 7, mas ainda fornece uma introdução completa à programação do Win32.|
 |[Visão geral da programação do Windows no C++](overview-of-windows-programming-in-cpp.md)|Descreve os principais recursos da programação da área C++de trabalho do Windows no.|
 

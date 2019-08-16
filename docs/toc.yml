@@ -1587,7 +1587,7 @@
     - name: 'Passo a passo: Criar aplicativos de Área de Trabalho do Windows'
       href: windows/walkthrough-creating-windows-desktop-applications-cpp.md
     - name: Assistente da Área de Trabalho do Windows
-      href: windows/win32-application-wizard.md
+      href: windows/windows-desktop-wizard.md
     - name: ATL (Active Template Library)
       href: atl/
     - name: MFC (Microsoft Foundation Classes)
@@ -1607,10 +1607,6 @@
               items:
                 - name: Visão geral de data e hora
                   href: atl-mfc-shared/date-and-time.md
-                - name: 'Data e hora: suporte a automação'
-                  href: atl-mfc-shared/date-and-time-automation-support.md
-                - name: 'Data e hora: suporte a banco de dados'
-                  href: atl-mfc-shared/date-and-time-database-support.md
                 - name: Tipo DATE
                   href: atl-mfc-shared/date-type.md
             - name: Cadeias de caracteres (ATL-MFC)
@@ -2888,6 +2884,8 @@
 - name: Referência
   expanded: false
   items:
+    - name: Linguagem C/C++ e Bibliotecas padrão
+      href: cpp/c-cpp-language-and-standard-libraries.md
     - name: Referência de linguagens
       expanded: false
       items:

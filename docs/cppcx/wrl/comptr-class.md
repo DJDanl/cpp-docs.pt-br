@@ -51,12 +51,12 @@ helpviewer_keywords:
 - Microsoft::WRL::ComPtr::Swap method
 - Microsoft::WRL::ComPtr::~ComPtr, destructor
 ms.assetid: a6551902-6819-478a-8df7-b6f312ab1fb0
-ms.openlocfilehash: 889b722c91fd56613c5902eb4ce6439763a49bd9
-ms.sourcegitcommit: 720b74dddb1cdf4e570d55103158304ee1df81f8
+ms.openlocfilehash: 1e20a991c8f32027aeea6a17df0534aa6e1c2c43
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68606492"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498408"
 ---
 # <a name="comptr-class"></a>Classe ComPtr
 
@@ -84,7 +84,7 @@ Uma classe à qual o atual `ComPtr` é um amigo. (O modelo que usa esse parâmet
 
 `ComPtr<>`declara um tipo que representa o ponteiro de interface subjacente. Use `ComPtr<>` para declarar uma variável e, em seguida, use a seta member-`->`Access Operator () para acessar uma função de membro de interface.
 
-Para obter mais informações sobre os apontadores inteligentes, consulte a subseção "ponteiros inteligentes COM" do tópico [práticas de codificação com](/windows/desktop/LearnWin32/com-coding-practices) na biblioteca MSDN.
+Para obter mais informações sobre os apontadores inteligentes, consulte a subseção "ponteiros inteligentes COM" do tópico [práticas de codificação com](/windows/win32/LearnWin32/com-coding-practices) na biblioteca MSDN.
 
 ## <a name="members"></a>Membros
 

@@ -35,12 +35,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlServiceModuleT class
 ms.assetid: 8fc753ce-4a50-402b-9b4a-0a4ce5dd496c
-ms.openlocfilehash: 095d909fefe0053b742368f260cf61937c2f5426
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 2854d0902700b268383eca094bed35843ea73272
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915864"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497732"
 ---
 # <a name="catlservicemodulet-class"></a>Classe CAtlServiceModuleT
 
@@ -244,7 +244,7 @@ Cadeias de caracteres extras opcionais a serem gravadas no log de eventos.
 
 ### <a name="remarks"></a>Comentários
 
-Esse método grava detalhes em um log de eventos, usando a função [ReportEvent](/windows/desktop/api/winbase/nf-winbase-reporteventa). Se nenhum serviço estiver em execução, a cadeia de caracteres será enviada ao console.
+Esse método grava detalhes em um log de eventos, usando a função [ReportEvent](/windows/win32/api/winbase/nf-winbase-reporteventw). Se nenhum serviço estiver em execução, a cadeia de caracteres será enviada ao console.
 
 ##  <a name="m_bservice"></a>  CAtlServiceModuleT::m_bService
 
@@ -280,7 +280,7 @@ SERVICE_STATUS_HANDLE m_hServiceStatus;
 
 ### <a name="remarks"></a>Comentários
 
-A estrutura [SERVICE_STATUS](/windows/desktop/api/winsvc/ns-winsvc-service_status) contém informações sobre um serviço.
+A estrutura [SERVICE_STATUS](/windows/win32/api/winsvc/ns-winsvc-service_status) contém informações sobre um serviço.
 
 ##  <a name="m_status"></a>  CAtlServiceModuleT::m_status
 
@@ -292,7 +292,7 @@ SERVICE_STATUS m_status;
 
 ### <a name="remarks"></a>Comentários
 
-A estrutura [SERVICE_STATUS](/windows/desktop/api/winsvc/ns-winsvc-service_status) contém informações sobre um serviço.
+A estrutura [SERVICE_STATUS](/windows/win32/api/winsvc/ns-winsvc-service_status) contém informações sobre um serviço.
 
 ##  <a name="m_szservicename"></a>  CAtlServiceModuleT::m_szServiceName
 
@@ -432,7 +432,7 @@ HRESULT Run(int nShowCmd = SW_HIDE) throw();
 ### <a name="parameters"></a>Parâmetros
 
 *nShowCmd*<br/>
-Especifica como a janela deve ser mostrada. Esse parâmetro pode ser um dos valores discutidos na seção [WinMain](/windows/desktop/api/winbase/nf-winbase-winmain) . O valor padrão é SW_HIDE.
+Especifica como a janela deve ser mostrada. Esse parâmetro pode ser um dos valores discutidos na seção [WinMain](/windows/win32/api/winbase/nf-winbase-winmain) . O valor padrão é SW_HIDE.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -475,7 +475,7 @@ void SetServiceStatus(DWORD dwState) throw();
 ### <a name="parameters"></a>Parâmetros
 
 *dwState*<br/>
-O novo status. Consulte [falha em SetServiceStatus](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus) para obter os valores possíveis.
+O novo status. Consulte [falha em SetServiceStatus](/windows/win32/api/winsvc/nf-winsvc-setservicestatus) para obter os valores possíveis.
 
 ### <a name="remarks"></a>Comentários
 
@@ -492,7 +492,7 @@ HRESULT Start(int nShowCmd) throw();
 ### <a name="parameters"></a>Parâmetros
 
 *nShowCmd*<br/>
-Especifica como a janela deve ser mostrada. Esse parâmetro pode ser um dos valores discutidos na seção [WinMain](/windows/desktop/api/winbase/nf-winbase-winmain) .
+Especifica como a janela deve ser mostrada. Esse parâmetro pode ser um dos valores discutidos na seção [WinMain](/windows/win32/api/winbase/nf-winbase-winmain) .
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -553,7 +553,7 @@ int WinMain(int nShowCmd) throw();
 ### <a name="parameters"></a>Parâmetros
 
 *nShowCmd*<br/>
-Especifica como a janela deve ser mostrada. Esse parâmetro pode ser um dos valores discutidos na seção [WinMain](/windows/desktop/api/winbase/nf-winbase-winmain) .
+Especifica como a janela deve ser mostrada. Esse parâmetro pode ser um dos valores discutidos na seção [WinMain](/windows/win32/api/winbase/nf-winbase-winmain) .
 
 ### <a name="return-value"></a>Valor de retorno
 
