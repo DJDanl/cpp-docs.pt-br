@@ -1,5 +1,5 @@
 ---
-title: padrão (C++ COM atributo)
+title: padrão (C++ atributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.default
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - attributes [C#], default attribute
 - defaults, default attribute
 ms.assetid: 0cdca716-1ba8-46d7-9399-167e55492870
-ms.openlocfilehash: c6448b00fef50a7654816a2c39af2943db12d314
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 291e16ad0967acd1869874fcc9fa6eb5529e4b44
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148075"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501690"
 ---
 # <a name="default-c"></a>default (C++)
 
-Indica que o personalizado ou dispinterface definido dentro de uma coclass representa a interface de programação padrão.
+Indica que a dispinterface ou personalizada definida em uma coclass representa a interface de programação padrão.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -28,22 +28,22 @@ Indica que o personalizado ou dispinterface definido dentro de uma coclass repre
 ### <a name="parameters"></a>Parâmetros
 
 *interface1*<br/>
-A interface padrão que será disponibilizada para os ambientes de script que cria um objeto com base na classe definida com o **padrão** atributo.
+A interface padrão que será disponibilizada para os ambientes de script que criam um objeto com base na classe definida com o atributo **padrão** .
 
-Se nenhuma interface padrão for especificado, a primeira ocorrência de uma interface nonsource é usada como o padrão.
+Se nenhuma interface padrão for especificada, a primeira ocorrência de uma interface não-de-fonte será usada como padrão.
 
 *interface2*<br/>
-(Opcional) A interface de origem padrão. Você também deve especificar essa interface com o [origem](source-cpp.md) atributo.
+Adicional A interface de origem padrão. Você também deve especificar essa interface com o atributo de [origem](source-cpp.md) .
 
-Se nenhuma interface de origem padrão for especificado, a primeira interface de origem é usada como o padrão.
+Se nenhuma interface de origem padrão for especificada, a primeira interface de origem será usada como padrão.
 
 ## <a name="remarks"></a>Comentários
 
-O **padrão** atributo C++ tem a mesma funcionalidade que o [padrão](/windows/desktop/Midl/default) atributo MIDL. O **padrão** atributo também é usado com o [caso](case-cpp.md) atributo.
+O atributo **padrão** C++ tem a mesma funcionalidade que o atributo MIDL [padrão](/windows/win32/Midl/default) . O atributo **padrão** também é usado com o atributo [Case](case-cpp.md) .
 
 ## <a name="example"></a>Exemplo
 
-O seguinte código mostra como **padrão** é usado na definição de uma coclass para especificar `ICustomDispatch` como a interface de programação padrão:
+O código a seguir mostra como o **padrão** é usado na definição de uma coclass para `ICustomDispatch` especificar como a interface de programação padrão:
 
 ```cpp
 // cpp_attr_ref_default.cpp
@@ -91,20 +91,20 @@ int main() {
 }
 ```
 
-O [fonte](source-cpp.md) atributo também tem um exemplo de como usar **padrão**.
+O atributo de [origem](source-cpp.md) também tem um exemplo de como usar o **padrão**.
 
 ## <a name="requirements"></a>Requisitos
 
-### <a name="attribute-context"></a>Atributo de contexto
+### <a name="attribute-context"></a>Contexto de atributo
 
 |||
 |-|-|
-|**Aplica-se a**|**classe**, **struct**, membro de dados|
+|**Aplica-se a**|**classe**, **estrutura**, membro de dados|
 |**Repetível**|Não|
-|**Atributos obrigatórios**|**coclass** (quando aplicado a **classe** ou **struct**)|
+|**Atributos necessários**|**coclass** (quando aplicado à **classe** ou **estrutura**)|
 |**Atributos inválidos**|Nenhum|
 
-Para obter mais informações, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
+Para obter mais informações, consulte contextos de [atributo](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Consulte também
 

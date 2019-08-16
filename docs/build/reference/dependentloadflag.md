@@ -1,6 +1,6 @@
 ---
-title: / DEPENDENTLOADFLAG (definir sinalizadores de carregamento dependente padrão)
-description: A opção /DEPENDENTLOADFLAG define sinalizadores padrão para DLLs carregadas usando LoadLibrary
+title: /DEPENDENTLOADFLAG (definir padrão de sinalizadores de carregamento dependente)
+description: A opção/DEPENDENTLOADFLAG define sinalizadores padrão para DLLs carregadas usando LoadLibrary
 ms.date: 05/18/2018
 f1_keywords:
 - dependentloadflag
@@ -10,43 +10,43 @@ helpviewer_keywords:
 - linker [C++], DEPENDENTLOADFLAG
 - DEPENDENTLOADFLAG linker option
 - /DEPENDENTLOADFLAG linker option
-ms.openlocfilehash: 94998e06f23a7e70524221d3cb75166b5d3f2c44
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 072fa1103d049c7d5c395ae88d268f3b47e20b4f
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62272081"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492948"
 ---
-# <a name="dependentloadflag-set-default-dependent-load-flags"></a>/ DEPENDENTLOADFLAG (definir sinalizadores de carregamento dependente padrão)
+# <a name="dependentloadflag-set-default-dependent-load-flags"></a>/DEPENDENTLOADFLAG (definir padrão de sinalizadores de carregamento dependente)
 
-Define os sinalizadores de carga padrão usado quando `LoadLibrary` é usado para carregar as DLLs.
+Define os sinalizadores de carga padrão usados `LoadLibrary` quando o é usado para carregar DLLs.
 
 ## <a name="syntax"></a>Sintaxe
 
-> **/DEPENDENTLOADFLAG**[**:**_loadflags_]
+> **/DEPENDENTLOADFLAG**[ **:** _loadflags_]
 
 ### <a name="arguments"></a>Arguments
 
 *loadflags*<br/>
-Um valor de inteiro de 16 bits de estilo "C" opcional em decimal, octal com um zero à esquerda ou hexadecimais com um líder `0x`, que especifica os sinalizadores de carregamento dependente para aplicar a todos [LoadLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibraryexa) chamadas. O valor padrão é 0.
+Um valor de inteiro de 16 bits com estilo "C" opcional em decimal, octal com um zero à esquerda ou hexadecimal com uma `0x`entrelinha, que especifica os sinalizadores de carga dependentes a serem aplicados a todas as chamadas de [LoadLibrary](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryexw) . O valor padrão é 0.
 
 ## <a name="remarks"></a>Comentários
 
-Essa opção é nova no Visual Studio 2017 e só se aplica a aplicativos em execução no Windows 10 RS1 e versões posteriores. Essa opção é ignorada por outros sistemas operacionais que executam o aplicativo.
+Essa opção é nova no Visual Studio 2017 e se aplica somente a aplicativos em execução no Windows 10 RS1 e versões posteriores. Essa opção é ignorada por outros sistemas operacionais que executam o aplicativo.
 
-Em sistemas operacionais com suporte, essa opção tem o efeito de alterar as chamadas para `LoadLibrary("dependent.dll")` equivalente a `LoadLibraryEx("dependent.dll", 0, loadflags)`. Chamadas para [LoadLibraryEx](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibraryexa) não são afetados. Essa opção não é aplicada recursivamente para DLLs carregadas pelo seu aplicativo.
+Em sistemas operacionais com suporte, essa opção tem o efeito de alterar chamadas `LoadLibrary("dependent.dll")` para para o equivalente `LoadLibraryEx("dependent.dll", 0, loadflags)`de. As chamadas para [LoadLibraryEx](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryexw) não são afetadas. Essa opção não se aplica recursivamente às DLLs carregadas pelo seu aplicativo.
 
-Este sinalizador pode ser usado para impedir que a DLL implantem ataques. Por exemplo, se um aplicativo usa `LoadLibrary` para carregar uma DLL dependente, um invasor poderia introduzir uma DLL com o mesmo nome no caminho de pesquisa usado pelo `LoadLibrary`, como o diretório atual, que pode ser verificado antes de diretórios do sistema se for de modo seguro de pesquisa DLL desabilitada. Modo de pesquisa DLL segurança coloca o diretório atual do usuário mais tarde na ordem de pesquisa e é habilitado por padrão no Windows XP SP2 e versões posteriores. Para obter mais informações, consulte [ordem de pesquisa de biblioteca de vínculo dinâmico](/windows/desktop/Dlls/dynamic-link-library-search-order).
+Esse sinalizador pode ser usado para evitar ataques de planta de DLL. Por exemplo, se um aplicativo usar `LoadLibrary` o para carregar uma DLL dependente, um invasor poderá implantar uma DLL com o mesmo nome no caminho de pesquisa usado pelo `LoadLibrary`, como o diretório atual, que pode ser verificado antes dos diretórios do sistema se o modo de pesquisa de dll seguro for desabilitado. O modo de pesquisa de DLL seguro coloca o diretório atual do usuário mais tarde na ordem de pesquisa e é habilitado por padrão no Windows XP SP2 e versões posteriores. Para obter mais informações, consulte [ordem de pesquisa da biblioteca de vínculo dinâmico](/windows/win32/Dlls/dynamic-link-library-search-order).
 
-Se você especificar a opção de link `/DEPENDENTLOADFLAG:0xA00` (o valor dos sinalizadores combinados `LOAD_LIBRARY_SEARCH_APPLICATION_DIR | LOAD_LIBRARY_SEARCH_SYSTEM32`), em seguida, mesmo se o modo de pesquisa DLL seguro está desabilitado no computador do usuário, o caminho de pesquisa DLL é limitado a diretórios protegidos que estão mais difícil para um invasor Altere. Para obter informações sobre os sinalizadores disponíveis e seus valores simbólicos e numéricos, consulte o *dwFlags* descrição do parâmetro na [LoadLibraryEx](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibraryexa).
+Se você especificar a opção `/DEPENDENTLOADFLAG:0xA00` de link (o valor dos sinalizadores `LOAD_LIBRARY_SEARCH_APPLICATION_DIR | LOAD_LIBRARY_SEARCH_SYSTEM32`combinados), mesmo que o modo de pesquisa de dll seguro esteja desabilitado no computador do usuário, o caminho de pesquisa da dll será limitado a diretórios protegidos que são mais difíceis de ser um invasor alteração. Para obter informações sobre os sinalizadores disponíveis e seus valores simbólicos e numéricos, consulte a descrição do parâmetro *dwFlags* em [LoadLibraryEx](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryexw).
 
 ### <a name="to-set-the-dependentloadflag-linker-option-in-the-visual-studio-development-environment"></a>Para definir a opção de vinculador DEPENDENTLOADFLAG no ambiente de desenvolvimento do Visual Studio
 
-1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [propriedades de compilador e de build definida C++ no Visual Studio](../working-with-project-properties.md).
+1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, confira [Definir as propriedades de build e do compilador do C++ no Visual Studio](../working-with-project-properties.md).
 
-1. Selecione o **propriedades de configuração** > **vinculador** > **linha de comando** página de propriedades.
+1. Selecione a página de propriedade da**linha de comando** do**vinculador** > de **Propriedades** > de configuração.
 
-1. Insira a opção no **opções adicionais**.
+1. Insira a opção em **Opções adicionais**.
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Para definir esta opção do vinculador por meio de programação
 
@@ -58,5 +58,5 @@ Se você especificar a opção de link `/DEPENDENTLOADFLAG:0xA00` (o valor dos s
 - [Opções de vinculador MSVC](linker-options.md)
 - [Vincular um executável a uma DLL](../linking-an-executable-to-a-dll.md#linking-implicitly)
 - [Vincular um executável a uma DLL](../linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)
-- [LoadLibraryEx](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibraryexa)
-- [Ordem de pesquisa de biblioteca de vínculo dinâmico](/windows/desktop/Dlls/dynamic-link-library-search-order)
+- [LoadLibraryEx](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryexw)
+- [Ordem de pesquisa da biblioteca de vínculo dinâmico](/windows/win32/Dlls/dynamic-link-library-search-order)

@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - RC4214
 ms.assetid: 79a8bf0d-8cc7-4159-a6a2-d0e543749069
-ms.openlocfilehash: 925e7268bcf087961fcefb67898e5705a4ec6bb5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cd0ae8603d896a77e984ab97a019dd39689b1536
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62346902"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69509853"
 ---
 # <a name="resource-compiler-warning-rc4214"></a>Aviso RC4214 (compilador de recurso)
 
-Página de código não é válida: ignorado
+Página de código inválida: ignorada
 
-O arquivo. rc continha um argumento de página de código e a página de código especificada é inválida. Ver [IsValidCodePage](/windows/desktop/api/winnls/nf-winnls-isvalidcodepage) para obter mais informações.
+O arquivo. rc continha um argumento codepage e a codepage especificada é inválida. Consulte [IsValidCodePage](/windows/win32/api/winnls/nf-winnls-isvalidcodepage) para obter mais informações.

@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - CTokenGroups class
 ms.assetid: 2ab08076-4b08-4487-bc70-ec6dee304190
-ms.openlocfilehash: 4e5d06ca01201bf415afedbe6f6e5bca096f68fa
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 88096747f45d4a81c873837cdd4975da9d8c24e2
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915584"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496290"
 ---
 # <a name="ctokengroups-class"></a>Classe CTokenGroups
 
@@ -67,11 +67,11 @@ class CTokenGroups
 
 ## <a name="remarks"></a>Comentários
 
-Um [token de acesso](/windows/desktop/SecAuthZ/access-tokens) é um objeto que descreve o contexto de segurança de um processo ou thread e é alocado para cada usuário conectado em um sistema Windows.
+Um [token de acesso](/windows/win32/SecAuthZ/access-tokens) é um objeto que descreve o contexto de segurança de um processo ou thread e é alocado para cada usuário conectado em um sistema Windows.
 
-A `CTokenGroups` classe é um wrapper para a estrutura [TOKEN_GROUPS](/windows/desktop/api/winnt/ns-winnt-token_groups) , que contém informações sobre os SIDs (identificadores de segurança) de grupo em um token de acesso.
+A `CTokenGroups` classe é um wrapper para a estrutura [TOKEN_GROUPS](/windows/win32/api/winnt/ns-winnt-token_groups) , que contém informações sobre os SIDs (identificadores de segurança) de grupo em um token de acesso.
 
-Para obter uma introdução ao modelo de controle de acesso no Windows, consulte [controle de acesso](/windows/desktop/SecAuthZ/access-control) no SDK do Windows.
+Para obter uma introdução ao modelo de controle de acesso no Windows, consulte [controle de acesso](/windows/win32/SecAuthZ/access-control) no SDK do Windows.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -95,7 +95,7 @@ Um objeto [CSid](../../atl/reference/csid-class.md) .
 Os atributos a serem associados `CSid` ao objeto.
 
 *rTokenGroups*<br/>
-Uma estrutura [TOKEN_GROUPS](/windows/desktop/api/winnt/ns-winnt-token_groups) .
+Uma estrutura [TOKEN_GROUPS](/windows/win32/api/winnt/ns-winnt-token_groups) .
 
 ### <a name="remarks"></a>Comentários
 
@@ -114,7 +114,7 @@ CTokenGroups(const TOKEN_GROUPS& rhs) throw(...);
 ### <a name="parameters"></a>Parâmetros
 
 *rhs*<br/>
-A `CTokenGroups` estrutura de objeto ou [TOKEN_GROUPS](/windows/desktop/api/winnt/ns-winnt-token_groups) com a qual construir `CTokenGroups` o objeto.
+A `CTokenGroups` estrutura de objeto ou [TOKEN_GROUPS](/windows/win32/api/winnt/ns-winnt-token_groups) com a qual construir `CTokenGroups` o objeto.
 
 ### <a name="remarks"></a>Comentários
 
@@ -191,7 +191,7 @@ const TOKEN_GROUPS* GetPTOKEN_GROUPS() const throw(...);
 
 ### <a name="return-value"></a>Valor de retorno
 
-Recupera um ponteiro para a estrutura [TOKEN_GROUPS](/windows/desktop/api/winnt/ns-winnt-token_groups) que pertence ao `CTokenGroups` objeto token de acesso.
+Recupera um ponteiro para a estrutura [TOKEN_GROUPS](/windows/win32/api/winnt/ns-winnt-token_groups) que pertence ao `CTokenGroups` objeto token de acesso.
 
 ##  <a name="getsidsandattributes"></a>  CTokenGroups::GetSidsAndAttributes
 
@@ -253,7 +253,7 @@ CTokenGroups& operator= (const CTokenGroups& rhs) throw(...);
 ### <a name="parameters"></a>Parâmetros
 
 *rhs*<br/>
-A `CTokenGroups` estrutura de objeto ou [TOKEN_GROUPS](/windows/desktop/api/winnt/ns-winnt-token_groups) `CTokenGroups` a ser atribuída ao objeto.
+A `CTokenGroups` estrutura de objeto ou [TOKEN_GROUPS](/windows/win32/api/winnt/ns-winnt-token_groups) `CTokenGroups` a ser atribuída ao objeto.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -269,7 +269,7 @@ operator const TOKEN_GROUPS *() const throw(...);
 
 ### <a name="remarks"></a>Comentários
 
-Converte um valor em um ponteiro para a estrutura [TOKEN_GROUPS](/windows/desktop/api/winnt/ns-winnt-token_groups) .
+Converte um valor em um ponteiro para a estrutura [TOKEN_GROUPS](/windows/win32/api/winnt/ns-winnt-token_groups) .
 
 ## <a name="see-also"></a>Consulte também
 

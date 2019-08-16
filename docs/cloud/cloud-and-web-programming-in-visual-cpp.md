@@ -2,12 +2,12 @@
 title: Nuvem e programação da Web no Visual C++
 ms.date: 05/14/2019
 ms.assetid: b63611f1-9723-44d0-ba7f-c3ebef341313
-ms.openlocfilehash: 677e9da18e8d171f523994d21bfbd0411270e3c8
-ms.sourcegitcommit: bc1b14f29a02685f97c7ef5c098d16db6eaf369f
+ms.openlocfilehash: 3f4786d8b17aed2d7faeddf1e2c32a825fd8d0e5
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65790356"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498863"
 ---
 # <a name="cloud-and-web-programming-in-visual-c"></a>Nuvem e programação da Web no Visual C++
 
@@ -48,11 +48,11 @@ No C++ há várias opções para conectar-se com a Web e com a nuvem.
 
   Uma classe de cliente HTTP do Windows Runtime modelada na classe .NET Framework do mesmo nome no namespace System.Web. `HttpClient` é completamente compatível com upload e download assíncronos por HTTP e com os filtros de pipeline que permitem a inserção de manipuladores HTTP personalizados no pipeline. O SDK do Windows inclui os filtros de exemplo para redes limitadas, autenticação OAuth e mais. Para aplicativos que direcionam apenas a Plataforma Universal do Windows, é recomendável que você use a classe `Windows::Web:HttpClient`.
 
-- [Interface IXMLHTTPRequest2](/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2)
+- [Interface IXMLHTTPRequest2](/windows/win32/api/msxml6/nn-msxml6-ixmlhttprequest2)
 
   Oferece uma internet COM nativa que pode ser usada em aplicativos do Windows Runtime ou de área de trabalho do Windows para se conectar à Internet por HTTP e emitir comandos GET, PUT e outros comandos HTTP. Para obter mais informações, confira [Passo a passo: como conectar usando tarefas e solicitações HTTP XML](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md).
 
-- [WinInet (Windows Internet)](/windows/desktop/WinInet/portal)
+- [WinInet (Windows Internet)](/windows/win32/WinInet/portal)
 
   A API do Windows que pode ser usada em aplicativos de área de trabalho do Windows para se conectar à Internet.
 

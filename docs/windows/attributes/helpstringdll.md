@@ -1,21 +1,21 @@
 ---
-title: helpstringdll (atributo de COM do C++)
+title: helpstringdll (C++ atributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.helpstringdll
 helpviewer_keywords:
 - helpstringdll attribute [C++]
 ms.assetid: 121271fa-f061-492b-b87f-bbfcf4b02e7b
-ms.openlocfilehash: 72f5926018e3ac7ec4770f83d7a2c3438b67d861
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8d6dddef666f074a57f54b8c9447847ff56d26fd
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409532"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501477"
 ---
 # <a name="helpstringdll"></a>helpstringdll
 
-Especifica o nome da DLL a usar para executar a pesquisa de cadeia de caracteres do documento (localização).
+Especifica o nome da DLL a ser usada para executar a pesquisa de cadeia de caracteres do documento (localização).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -26,11 +26,11 @@ Especifica o nome da DLL a usar para executar a pesquisa de cadeia de caracteres
 ### <a name="parameters"></a>Parâmetros
 
 *string*<br/>
-A DLL de usar para executar a pesquisa de cadeia de caracteres do documento.
+A DLL a ser usada para executar a pesquisa de cadeia de caracteres do documento.
 
 ## <a name="remarks"></a>Comentários
 
-O **helpstringdll** atributo C++ tem a mesma funcionalidade que o [helpstringdll](/windows/desktop/Midl/helpstringdll) atributo MIDL.
+O atributo **helpstringdll** C++ tem a mesma funcionalidade que o atributo MIDL [helpstringdll](/windows/win32/Midl/helpstringdll) .
 
 ## <a name="example"></a>Exemplo
 
@@ -49,16 +49,16 @@ __interface IMyI
 
 ## <a name="requirements"></a>Requisitos
 
-### <a name="attribute-context"></a>Atributo de contexto
+### <a name="attribute-context"></a>Contexto de atributo
 
 |||
 |-|-|
 |**Aplica-se a**|**classe**, **interface**, método de interface|
 |**Repetível**|Não|
-|**Atributos obrigatórios**|Nenhum|
+|**Atributos necessários**|Nenhum|
 |**Atributos inválidos**|Nenhum|
 
-Para obter mais informações, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
+Para obter mais informações, consulte contextos de [atributo](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Consulte também
 

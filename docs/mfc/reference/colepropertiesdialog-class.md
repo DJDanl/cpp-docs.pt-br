@@ -22,12 +22,12 @@ helpviewer_keywords:
 - COlePropertiesDialog [MFC], m_psh
 - COlePropertiesDialog [MFC], m_vp
 ms.assetid: a54dbc89-1447-4329-bd01-00e98ec9e935
-ms.openlocfilehash: bdae64ff4a7bcfef761eaf3dd70a85a54efc28b7
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: b819bc430868717a2df01a086b482dfe6d56cc0f
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916953"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69504173"
 ---
 # <a name="colepropertiesdialog-class"></a>Classe COlePropertiesDialog
 
@@ -152,11 +152,11 @@ virtual INT_PTR DoModal();
 
 IDOK ou IDCANCEL se for bem-sucedido; caso contrário, 0. IDOK e IDCANCEL são constantes que indicam se o usuário selecionou o botão OK ou cancelar.
 
-Se IDCANCEL for retornado, você poderá chamar a função [CommDlgExtendedError](/windows/desktop/api/commdlg/nf-commdlg-commdlgextendederror) do Windows para determinar se ocorreu um erro.
+Se IDCANCEL for retornado, você poderá chamar a função [CommDlgExtendedError](/windows/win32/api/commdlg/nf-commdlg-commdlgextendederror) do Windows para determinar se ocorreu um erro.
 
 ##  <a name="m_gp"></a>  COlePropertiesDialog::m_gp
 
-Uma estrutura do tipo [OLEUIGNRLPROPS](/windows/desktop/api/oledlg/ns-oledlg-tagoleuignrlpropsa), usada para inicializar a página Geral da caixa de diálogo Propriedades do objeto OLE.
+Uma estrutura do tipo [OLEUIGNRLPROPS](/windows/win32/api/oledlg/ns-oledlg-oleuignrlpropsw), usada para inicializar a página Geral da caixa de diálogo Propriedades do objeto OLE.
 
 ```
 OLEUIGNRLPROPS m_gp;
@@ -170,7 +170,7 @@ Para obter mais informações sobre `OLEUIGNRLPROPS` a estrutura, consulte a SDK
 
 ##  <a name="m_lp"></a>  COlePropertiesDialog::m_lp
 
-Uma estrutura do tipo [OLEUILINKPROPS](/windows/desktop/api/oledlg/ns-oledlg-tagoleuilinkpropsa), usada para inicializar a página de link da caixa de diálogo Propriedades do objeto OLE.
+Uma estrutura do tipo [OLEUILINKPROPS](/windows/win32/api/oledlg/ns-oledlg-oleuilinkpropsw), usada para inicializar a página de link da caixa de diálogo Propriedades do objeto OLE.
 
 ```
 OLEUILINKPROPS m_lp;
@@ -184,7 +184,7 @@ Para obter mais informações sobre `OLEUILINKPROPS` a estrutura, consulte a SDK
 
 ##  <a name="m_op"></a>  COlePropertiesDialog::m_op
 
-Uma estrutura do tipo [OLEUIOBJECTPROPS](/windows/desktop/api/oledlg/ns-oledlg-tagoleuiobjectpropsa), usada para inicializar a caixa de diálogo Propriedades comuns do objeto OLE.
+Uma estrutura do tipo [OLEUIOBJECTPROPS](/windows/win32/api/oledlg/ns-oledlg-oleuiobjectpropsw), usada para inicializar a caixa de diálogo Propriedades comuns do objeto OLE.
 
 ```
 OLEUIOBJECTPROPS m_op;
@@ -194,11 +194,11 @@ OLEUIOBJECTPROPS m_op;
 
 Essa estrutura contém membros usados para inicializar as páginas geral, link e exibição.
 
-Para obter mais informações, consulte as estruturas OLEUIOBJECTPROPS e [OLEUILINKPROPS](/windows/desktop/api/oledlg/ns-oledlg-tagoleuilinkpropsa) no SDK do Windows.
+Para obter mais informações, consulte as estruturas OLEUIOBJECTPROPS e [OLEUILINKPROPS](/windows/win32/api/oledlg/ns-oledlg-oleuilinkpropsw) no SDK do Windows.
 
 ##  <a name="m_psh"></a>  COlePropertiesDialog::m_psh
 
-Uma estrutura do tipo [PROPSHEETHEADER](/windows/desktop/api/prsht/ns-prsht-propsheetheadera_v2), cujos membros armazenam as características do objeto da caixa de diálogo.
+Uma estrutura do tipo [PROPSHEETHEADER](/windows/win32/api/prsht/ns-prsht-propsheetheadera_v2), cujos membros armazenam as características do objeto da caixa de diálogo.
 
 ```
 PROPSHEETHEADER m_psh;
@@ -214,7 +214,7 @@ Para obter mais informações sobre `PROPSHEETHEADER` a estrutura, consulte a SD
 
 ##  <a name="m_vp"></a>  COlePropertiesDialog::m_vp
 
-Uma estrutura do tipo [OLEUIVIEWPROPS](/windows/desktop/api/oledlg/ns-oledlg-tagoleuiviewpropsa), usada para inicializar a página de exibição da caixa de diálogo Propriedades do objeto OLE.
+Uma estrutura do tipo [OLEUIVIEWPROPS](/windows/win32/api/oledlg/ns-oledlg-oleuiviewpropsw), usada para inicializar a página de exibição da caixa de diálogo Propriedades do objeto OLE.
 
 ```
 OLEUIVIEWPROPS m_vp;

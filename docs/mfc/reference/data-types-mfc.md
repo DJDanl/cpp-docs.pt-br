@@ -24,24 +24,24 @@ helpviewer_keywords:
 - LPARAM data type [MFC]
 - LPCSTR [MFC]
 ms.assetid: 8954848b-2c01-4a4f-abf5-ee55f6a05eeb
-ms.openlocfilehash: dfafe7c3c7c7cd43dd2ac194f5ed96fa8ea265ba
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 37dd9b9d3f3905a923cd9c51856c1c39819cb162
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62323197"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502124"
 ---
 # <a name="data-types-mfc"></a>Tipos de dados (MFC)
 
-Este tópico lista os tipos de dados mais comumente usados na biblioteca Microsoft Foundation Class. A maioria dos tipos de dados é os mesmos no Platform Software Development Kit (SDK), enquanto outras são exclusivas ao MFC.
+Este tópico lista os tipos de dados mais comumente usados no biblioteca MFC. A maioria dos tipos de dados são os mesmos do SDK (Software Development Kit) da plataforma, enquanto outros são exclusivos do MFC.
 
-Para obter informações sobre os tipos de dados usados no SDK do Windows e no MFC, consulte [tipos de dados do Windows](/windows/desktop/WinProg/windows-data-types).
+Para obter informações sobre os tipos de dados usados no SDK do Windows e no MFC, consulte [tipos de dados do Windows](/windows/win32/WinProg/windows-data-types).
 
-Tipos de dados exclusivos para a biblioteca Microsoft Foundation Class incluem o seguinte:
+Os tipos de dados exclusivos do biblioteca MFC incluem o seguinte:
 
-- POSICIONAR um valor usado para indicar a posição de um elemento em uma coleção; usado pelas classes de coleção do MFC.
+- POSICIONAr um valor usado para denotar a posição de um elemento em uma coleção; usado pelas classes de coleção do MFC.
 
-- Ponteiro de 32 bits de LPCRECT como uma constante (não modificável) `RECT` estrutura.
+- LPCRECT um ponteiro de 32 bits para uma estrutura constante (não modificável `RECT` ).
 
 ## <a name="see-also"></a>Consulte também
 

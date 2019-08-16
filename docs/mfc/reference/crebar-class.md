@@ -12,16 +12,16 @@ helpviewer_keywords:
 - CReBar [MFC], Create
 - CReBar [MFC], GetReBarCtrl
 ms.assetid: c1ad2720-1d33-4106-8e4e-80aa84f93559
-ms.openlocfilehash: 5a87f70816e9342c7aa203a53d13699659cebb28
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 434232e8f99bf914b00379db53d4b4a37d24fe36
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62372346"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502789"
 ---
 # <a name="crebar-class"></a>Classe CReBar
 
-Uma barra de controle que fornece o layout, persistência e informações de estado para controles rebar.
+Uma barra de controle que fornece informações de layout, persistência e estado para controles Rebar.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -35,24 +35,24 @@ class CReBar : public CControlBar
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CReBar::AddBar](#addbar)|Adiciona uma faixa de um rebar.|
-|[CReBar::Create](#create)|Cria um controle rebar e anexa-o para o `CReBar` objeto.|
+|[CReBar::AddBar](#addbar)|Adiciona uma banda a um Rebar.|
+|[CReBar:: criar](#create)|Cria o controle rebar e o `CReBar` anexa ao objeto.|
 |[CReBar::GetReBarCtrl](#getrebarctrl)|Permite acesso direto ao controle comum subjacente.|
 
 ## <a name="remarks"></a>Comentários
 
-Um objeto de rebar pode conter uma variedade de janelas filho, geralmente outros controles, incluindo caixas de listagem, barras de ferramentas e caixas de edição. Um objeto de rebar pode exibir suas janelas filho ao longo de um bitmap especificado. Seu aplicativo pode redimensionar automaticamente o rebar, ou o usuário pode redimensionar manualmente o rebar clicando ou arrastando sua barra de garra.
+Um objeto rebar pode conter uma variedade de janelas filhas, geralmente outros controles, incluindo caixas de edição, barras de ferramentas e caixas de listagem. Um objeto rebar pode exibir suas janelas filhas em um bitmap especificado. Seu aplicativo pode redimensionar automaticamente o rebar ou o usuário pode redimensionar manualmente o rebar clicando ou arrastando sua barra de garra.
 
-![Exemplo de RebarMenu](../../mfc/reference/media/vc4sc61.gif "exemplo de RebarMenu")
+![Exemplo de RebarMenu](../../mfc/reference/media/vc4sc61.gif "Exemplo de RebarMenu")
 
 ## <a name="rebar-control"></a>Controle rebar
 
-Um objeto de rebar se comporta da mesma forma para um objeto de barra de ferramentas. Um rebar usa o mecanismo de clique e arraste para redimensionar suas faixas. Um controle rebar pode conter um ou mais faixas, com cada faixa ter qualquer combinação de uma barra de garra, um bitmap, um rótulo de texto e uma janela filho. No entanto, as faixas não podem conter mais de uma janela filho.
+Um objeto rebar se comporta de forma semelhante a um objeto Toolbar. Um rebar usa o mecanismo de clicar e arrastar para redimensionar suas faixas. Um controle rebar pode conter uma ou mais bandas, sendo que cada banda tem qualquer combinação de uma barra de garra, um bitmap, um rótulo de texto e uma janela filho. No entanto, as faixas não podem conter mais de uma janela filho.
 
-`CReBar` usa o [CReBarCtrl](../../mfc/reference/crebarctrl-class.md) classe para fornecer sua implementação. Você pode acessar o controle rebar por meio [GetReBarCtrl](#getrebarctrl) para tirar proveito das opções de personalização do controle. Para obter mais informações sobre controles rebar, consulte `CReBarCtrl`. Para obter mais informações sobre como usar controles rebar, consulte [usando CReBarCtrl](../../mfc/using-crebarctrl.md).
+`CReBar`usa a classe [CReBarCtrl](../../mfc/reference/crebarctrl-class.md) para fornecer sua implementação. Você pode acessar o controle rebar por meio do [GetReBarCtrl](#getrebarctrl) para aproveitar as opções de personalização do controle. Para obter mais informações sobre controles Rebar, `CReBarCtrl`consulte. Para obter mais informações sobre como usar controles Rebar, consulte [usando CReBarCtrl](../../mfc/using-crebarctrl.md).
 
 > [!CAUTION]
->  Rebar e objetos de controle rebar não oferecem suporte a controle MFC da barra de encaixe. Se `CRebar::EnableDocking` é chamado, declarará o seu aplicativo.
+>  Os objetos de controle rebar e rebar não dão suporte ao encaixe da barra de controle do MFC. Se `CRebar::EnableDocking` for chamado, seu aplicativo será declarado.
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -68,11 +68,11 @@ Um objeto de rebar se comporta da mesma forma para um objeto de barra de ferrame
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** afxext.h
+**Cabeçalho:** afxext. h
 
 ##  <a name="addbar"></a>  CReBar::AddBar
 
-Chame essa função de membro para adicionar uma faixa de rebar.
+Chame essa função de membro para adicionar uma banda ao Rebar.
 
 ```
 BOOL AddBar(
@@ -92,16 +92,16 @@ BOOL AddBar(
 ### <a name="parameters"></a>Parâmetros
 
 *pBar*<br/>
-Um ponteiro para um `CWnd` objeto que é a janela filho a ser inserido no rebar. O objeto referenciado deve ter um WS_CHILD.
+Um ponteiro para um `CWnd` objeto que é a janela filho a ser inserida no Rebar. O objeto referenciado deve ter um WS_CHILD.
 
 *lpszText*<br/>
-Um ponteiro para uma cadeia de caracteres que contém o texto para aparecer em rebar. NULL por padrão. O texto contido em *lpszText* não é parte da janela filho; ele está em rebar em si.
+Um ponteiro para uma cadeia de caracteres que contém o texto a ser exibido no Rebar. NULL por padrão. O texto contido em *lpszText* não faz parte da janela filho; Ele está no próprio próprio Rebar.
 
 *pbmp*<br/>
-Um ponteiro para um `CBitmap` objeto a ser exibido no plano de fundo de rebar. NULL por padrão.
+Um ponteiro para um `CBitmap` objeto a ser exibido no plano de fundo do rebar. NULL por padrão.
 
 *dwStyle*<br/>
-Um DWORD que contém o estilo para aplicar a rebar. Consulte a `fStyle` descrição na estrutura Win32 da função [REBARBANDINFO](/windows/desktop/api/commctrl/ns-commctrl-tagrebarbandinfoa) para obter uma lista completa dos estilos de banda.
+Um DWORD que contém o estilo a ser aplicado ao Rebar. Consulte a `fStyle` descrição da função no [REBARBANDINFO](/windows/win32/api/commctrl/ns-commctrl-rebarbandinfow) de estrutura do Win32 para obter uma lista completa de estilos de banda.
 
 *clrFore*<br/>
 Um valor COLORREF que representa a cor de primeiro plano do rebar.
@@ -111,7 +111,7 @@ Um valor COLORREF que representa a cor do plano de fundo do rebar.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Diferente de zero se bem-sucedido; Caso contrário, 0.
+Diferente de zero, se for bem-sucedido; caso contrário, 0.
 
 ### <a name="example"></a>Exemplo
 
@@ -119,7 +119,7 @@ Diferente de zero se bem-sucedido; Caso contrário, 0.
 
 ##  <a name="create"></a>  CReBar::Create
 
-Chame essa função de membro para criar um rebar.
+Chame essa função de membro para criar um Rebar.
 
 ```
 virtual BOOL Create(
@@ -135,25 +135,25 @@ virtual BOOL Create(
 Ponteiro para o `CWnd` objeto cuja janela do Windows é o pai da barra de status. Normalmente, a janela do quadro.
 
 *dwCtrlStyle*<br/>
-O estilo do controle rebar. Por padrão, RBS_BANDBORDERS, que exibe linhas estreitas para separar as faixas adjacentes dentro do controle rebar. Ver [estilos de controle Rebar](/windows/desktop/Controls/rebar-control-styles) no SDK do Windows para obter uma lista de estilos.
+O estilo de controle rebar. Por padrão, RBS_BANDBORDERS, que exibe linhas estreitas para separar as faixas adjacentes dentro do controle rebar. Consulte [estilos de controle rebar](/windows/win32/Controls/rebar-control-styles) no SDK do Windows para obter uma lista de estilos.
 
 *dwStyle*<br/>
-Os estilos de janela de rebar.
+Os estilos de janela do rebar.
 
 *nID*<br/>
-ID da janela filho. de rebar
+A ID da janela filho do rebar.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Diferente de zero se bem-sucedido; Caso contrário, 0.
+Diferente de zero, se for bem-sucedido; caso contrário, 0.
 
 ### <a name="example"></a>Exemplo
 
-  Veja o exemplo de [CReBar::AddBar](#addbar).
+  Consulte o exemplo de [CReBar:: AddBar](#addbar).
 
 ##  <a name="getrebarctrl"></a>  CReBar::GetReBarCtrl
 
-Essa função membro permite acesso direto ao controle comum subjacente.
+Essa função de membro permite o acesso direto ao controle comum subjacente.
 
 ```
 CReBarCtrl& GetReBarCtrl() const;
@@ -161,13 +161,13 @@ CReBarCtrl& GetReBarCtrl() const;
 
 ### <a name="return-value"></a>Valor de retorno
 
-Uma referência a um [CReBarCtrl](../../mfc/reference/crebarctrl-class.md) objeto.
+Uma referência a um objeto [CReBarCtrl](../../mfc/reference/crebarctrl-class.md) .
 
 ### <a name="remarks"></a>Comentários
 
-Chame essa função de membro para tirar proveito da funcionalidade do controle comum rebar Windows personalizar seu rebar. Quando você chama `GetReBarCtrl`, ele retorna um objeto de referência para o `CReBarCtrl` , você pode usar o conjunto de funções de membro de objeto.
+Chame essa função de membro para aproveitar a funcionalidade do controle comum do Windows rebar na personalização de seu rebar. Quando você chama `GetReBarCtrl`, ele retorna um objeto de referência para `CReBarCtrl` o objeto para que você possa usar qualquer conjunto de funções de membro.
 
-Para obter mais informações sobre como usar `CReBarCtrl` para personalizar seu rebar, consulte [usando CReBarCtrl](../../mfc/using-crebarctrl.md).
+Para obter mais informações sobre `CReBarCtrl` como usar o para personalizar seu rebar, consulte [usando o CReBarCtrl](../../mfc/using-crebarctrl.md).
 
 ### <a name="example"></a>Exemplo
 
@@ -175,6 +175,6 @@ Para obter mais informações sobre como usar `CReBarCtrl` para personalizar seu
 
 ## <a name="see-also"></a>Consulte também
 
-[Exemplo MFC MFCIE](../../overview/visual-cpp-samples.md)<br/>
+[Exemplo de MFCIE do MFC](../../overview/visual-cpp-samples.md)<br/>
 [Classe CControlBar](../../mfc/reference/ccontrolbar-class.md)<br/>
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)

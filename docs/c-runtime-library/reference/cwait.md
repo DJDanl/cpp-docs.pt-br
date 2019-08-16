@@ -22,14 +22,14 @@ helpviewer_keywords:
 - cwait function
 - _cwait function
 ms.assetid: d9b596b5-45f4-4e03-9896-3f383cb922b8
-ms.openlocfilehash: f7a49497ac71ec15261e1215bd2bbed2e49f42ab
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f356afc91f794753f12b5b673c609ef03fbaa5ec
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62288778"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499970"
 ---
-# <a name="cwait"></a>_cwait
+# <a name="_cwait"></a>_cwait
 
 Aguarda até outro processo terminar.
 
@@ -49,34 +49,34 @@ intptr_t _cwait(
 ### <a name="parameters"></a>Parâmetros
 
 *termstat*<br/>
-Ponteiro para um buffer em que o código de resultado do processo especificado será armazenado, ou **nulo**.
+Ponteiro para um buffer em que o código de resultado do processo especificado será armazenado ou **nulo**.
 
 *procHandle*<br/>
-O identificador para o processo para aguardar (ou seja, o processo que precisa terminar antes **cwait** pode retornar).
+O identificador para o processo aguardar (ou seja, o processo que deve ser encerrado antes que **_cwait** possa retornar).
 
-*action*<br/>
-NULL: Ignorado por aplicativos de sistema operacional Windows; para outros aplicativos: código de ação para executar em *procHandle*.
+*Action*<br/>
+NULO Ignorado por aplicativos do sistema operacional Windows; para outros aplicativos: código de ação a ser executado em *procHandle*.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Quando o processo especificado for concluída com êxito, retorna o identificador do processo especificado e define *termstat* para o código de resultado é retornado pelo processo especificado. Caso contrário, retornará -1 e definirá **errno** da seguinte maneira.
+Quando o processo especificado tiver sido concluído com êxito, retornará o identificador do processo especificado e definirá *termstat* para o código de resultado retornado pelo processo especificado. Caso contrário, retorna-1 e define **errno** da seguinte maneira.
 
 |Valor|Descrição|
 |-----------|-----------------|
-|**ECHILD**|Nenhum processo especificado existe, *procHandle* é inválido ou a chamada para o [GetExitCodeProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getexitcodeprocess) ou [WaitForSingleObject](/windows/desktop/api/synchapi/nf-synchapi-waitforsingleobject) API falhou.|
-|**EINVAL**|*ação* é inválido.|
+|**ECHILD**|Não existe um processo especificado, *procHandle* é inválido ou a chamada para a API [GetExitCodeProcess](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getexitcodeprocess) ou [WaitForSingleObject](/windows/win32/api/synchapi/nf-synchapi-waitforsingleobject) falhou.|
+|**EINVAL**|*ação* inválida.|
 
 Para obter mais informações sobre esses e outros códigos de retorno, consulte [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Comentários
 
-O **cwait** função aguarda o encerramento de ID do processo especificado que é fornecida pelo *procHandle*. O valor de *procHandle* que é passado para **cwait** deve ser o valor retornado pela chamada para o [spawn](../../c-runtime-library/spawn-wspawn-functions.md) função que criou o processo especificado. Se a ID do processo terminar antes **cwait** é chamado, **cwait** retorna imediatamente. **cwait** pode ser usado por qualquer processo para aguardar qualquer outro processo conhecido para o qual um identificador válido (*procHandle*) existe.
+A função **_cwait** aguarda o encerramento da ID de processo do processo especificado que é fornecido pelo *procHandle*. O valor de *procHandle* que é passado para **_cwait** deve ser o valor retornado pela chamada para a função [_spawn](../../c-runtime-library/spawn-wspawn-functions.md) que criou o processo especificado. Se a ID do processo for encerrada antes de **_cwait** ser chamada, **_cwait** retornará imediatamente. **_cwait** pode ser usado por qualquer processo para aguardar qualquer outro processo conhecido para o qual exista um identificador válido (*procHandle*).
 
-*termstat* aponta para um buffer em que o código de retorno do processo especificado será armazenado. O valor de *termstat* indica se o processo especificado terminou normalmente chamando o Windows [ExitProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-exitprocess) API. **ExitProcess** é chamado internamente se o processo especificado chamar **sair** ou **exit**, retorna da **principal**, ou atinge o final de **principal** . Para obter mais informações sobre o valor que é passado por meio *termstat*, consulte [GetExitCodeProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getexitcodeprocess). Se **cwait** é chamado usando uma **nulo** valor para *termstat*, o código de retorno do processo especificado não é armazenado.
+*termstat* aponta para um buffer em que o código de retorno do processo especificado será armazenado. O valor de *termstat* indica se o processo especificado terminou normalmente chamando a API [ExitProcess](/windows/win32/api/processthreadsapi/nf-processthreadsapi-exitprocess) do Windows. **ExitProcess** é chamado internamente se o processo especificado chama **Exit** ou **_exit**, retorna de **Main**ou atinge o final de **Main**. Para obter mais informações sobre o valor que é passado de volta por meio de *termstat*, consulte [GetExitCodeProcess](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getexitcodeprocess). Se **_cwait** for chamado usando um valor **nulo** para *termstat*, o código de retorno do processo especificado não será armazenado.
 
-O *ação* parâmetro é ignorado pelo sistema operacional Windows, porque as relações pai-filho não são implementadas nesses ambientes.
+O parâmetro *Action* é ignorado pelo sistema operacional Windows porque as relações pai-filho não são implementadas nesses ambientes.
 
-A menos que *procHandle* é -1 ou -2 (identificadores para o processo atual ou thread), o identificador será fechado. Portanto, nessa situação, não use o identificador retornado.
+A menos que *procHandle* seja-1 ou-2 (identificadores para o processo ou thread atual), o identificador será fechado. Portanto, nessa situação, não use o identificador retornado.
 
 ## <a name="requirements"></a>Requisitos
 

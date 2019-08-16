@@ -23,12 +23,12 @@ helpviewer_keywords:
 - wctob function
 - characters, converting
 ms.assetid: 46aec98b-c2f2-4e9d-9d89-7db99ba8a9a6
-ms.openlocfilehash: 1d9dca16ca905afbc94d912a8083017ba9cc84e6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9c977bc204f4c9428a4aae09300269b1ed82d53e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188526"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498961"
 ---
 # <a name="wctob"></a>wctob
 
@@ -49,13 +49,13 @@ A valor a ser movido.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Se **wctob** converte com êxito um caractere largo, ele retornará sua representação de caracteres multibyte somente se o caractere multibyte for exatamente um byte. Se **wctob** encontra um caractere largo que não é possível converter um caractere multibyte ou os caracteres multibyte não é exatamente um byte, ele retornará -1.
+Se **wctob** converter com êxito um caractere largo, ele retornará sua representação de caractere multibyte, somente se o caractere multibyte tiver exatamente um byte. Se **wctob** encontrar um caractere largo, ele não poderá converter para um caractere multibyte ou o caractere multibyte não será exatamente um byte, ele retornará um-1.
 
 ## <a name="remarks"></a>Comentários
 
-O **wctob** função converte um caractere largo contido no *wchar* no caractere multibyte correspondente passado pelo retorno **int** valor, se o multibyte caractere é exatamente um byte.
+A função **wctob** converte um caractere largo contido em *WCHAR* para o caractere multibyte correspondente passado pelo valor **int** de retorno, se o caractere multibyte for exatamente um byte.
 
-Se **wctob** não foi bem-sucedida e nenhum caractere multibyte correspondente foi encontrado, a função define **errno** para **EILSEQ** e retornará -1.
+Se **wctob** não tiver sido bem-sucedido e nenhum caractere multibyte correspondente for encontrado, a função definirá **errno** como **EILSEQ** e retornará-1.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -67,7 +67,7 @@ Para obter informações adicionais sobre compatibilidade, consulte [Compatibili
 
 ## <a name="example"></a>Exemplo
 
-Este programa ilustra o comportamento do **wcstombs** função.
+Este programa ilustra o comportamento da função **wcstombs** .
 
 ```C
 // crt_wctob.c
@@ -107,4 +107,4 @@ Determined the corresponding multibyte character to be "A".
 [mbstowcs, _mbstowcs_l](mbstowcs-mbstowcs-l.md)<br/>
 [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)<br/>
 [wctomb, _wctomb_l](wctomb-wctomb-l.md)<br/>
-[WideCharToMultiByte](/windows/desktop/api/stringapiset/nf-stringapiset-widechartomultibyte)<br/>
+[WideCharToMultiByte](/windows/win32/api/stringapiset/nf-stringapiset-widechartomultibyte)<br/>

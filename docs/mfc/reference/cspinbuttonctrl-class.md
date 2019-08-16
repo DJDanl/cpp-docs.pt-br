@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CSpinButtonCtrl [MFC], SetPos
 - CSpinButtonCtrl [MFC], SetRange
 ms.assetid: 509bfd76-1c5a-4af6-973f-e133c0b87734
-ms.openlocfilehash: da247524dae77627bbf041b83bc1534a75c3b073
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: c167745eed45b7081e62a2c3be225a33e7ee0520
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916698"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502435"
 ---
 # <a name="cspinbuttonctrl-class"></a>Classe CSpinButtonCtrl
 
@@ -117,7 +117,7 @@ virtual BOOL Create(
 ### <a name="parameters"></a>Parâmetros
 
 *dwStyle*<br/>
-Especifica o estilo do controle do botão de rotação. Aplique qualquer combinação de estilos de controle de botão de rotação ao controle. Esses estilos são descritos em [estilos de controle acima e abaixo](/windows/desktop/Controls/up-down-control-styles) na SDK do Windows.
+Especifica o estilo do controle do botão de rotação. Aplique qualquer combinação de estilos de controle de botão de rotação ao controle. Esses estilos são descritos em [estilos de controle acima e abaixo](/windows/win32/Controls/up-down-control-styles) na SDK do Windows.
 
 *rect*<br/>
 Especifica o tamanho e a posição do controle de botão de rotação. Pode ser um objeto [CRect](../../atl-mfc-shared/reference/crect-class.md) ou uma estrutura [Rect](/previous-versions/dd162897\(v=vs.85\))
@@ -154,10 +154,10 @@ virtual BOOL CreateEx(
 ### <a name="parameters"></a>Parâmetros
 
 *dwExStyle*<br/>
-Especifica o estilo estendido do controle que está sendo criado. Para obter uma lista de estilos estendidos do Windows, consulte o parâmetro *dwExStyle* para [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) no SDK do Windows.
+Especifica o estilo estendido do controle que está sendo criado. Para obter uma lista de estilos estendidos do Windows, consulte o parâmetro *dwExStyle* para [CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw) no SDK do Windows.
 
 *dwStyle*<br/>
-Especifica o estilo do controle do botão de rotação. Aplique qualquer combinação de estilos de controle de botão de rotação ao controle. Esses estilos são descritos em [estilos de controle acima e abaixo](/windows/desktop/Controls/up-down-control-styles) na SDK do Windows.
+Especifica o estilo do controle do botão de rotação. Aplique qualquer combinação de estilos de controle de botão de rotação ao controle. Esses estilos são descritos em [estilos de controle acima e abaixo](/windows/win32/Controls/up-down-control-styles) na SDK do Windows.
 
 *rect*<br/>
 Uma referência a uma estrutura [Rect](/previous-versions/dd162897\(v=vs.85\)) que descreve o tamanho e a posição da janela a ser criada, nas coordenadas de cliente de *pParentWnd*.
@@ -200,7 +200,7 @@ UINT GetAccel(
 Número de elementos na matriz especificada por *pAccel*.
 
 *pAccel*<br/>
-Ponteiro para uma matriz de estruturas [UDACCEL](/windows/desktop/api/commctrl/ns-commctrl-udaccel) que recebe informações de aceleração.
+Ponteiro para uma matriz de estruturas [UDACCEL](/windows/win32/api/commctrl/ns-commctrl-udaccel) que recebe informações de aceleração.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -298,7 +298,7 @@ BOOL SetAccel(
 ### <a name="parameters"></a>Parâmetros
 
 *nAccel*<br/>
-Número de estruturas [UDACCEL](/windows/desktop/api/commctrl/ns-commctrl-udaccel) especificadas por *pAccel*.
+Número de estruturas [UDACCEL](/windows/win32/api/commctrl/ns-commctrl-udaccel) especificadas por *pAccel*.
 
 *pAccel*<br/>
 Ponteiro para uma matriz de estruturas UDACCEL, que contêm informações de aceleração. Os `nSec` elementos devem ser classificados em ordem crescente com base no membro.

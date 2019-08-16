@@ -15,16 +15,16 @@ helpviewer_keywords:
 - cache, ATL cached tear-off objects
 - CComCachedTearOffObject class
 ms.assetid: ae19507d-a1de-4dbc-a988-da9f75a50c95
-ms.openlocfilehash: fb7821da03e1ca69c850fa1a295851faf4af4c5b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d993a349d38342bda30a83dfdbe25577953799b3
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62259671"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497543"
 ---
 # <a name="ccomcachedtearoffobject-class"></a>Classe CComCachedTearOffObject
 
-Essa classe implementa [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) para uma interface destacáveis.
+Essa classe implementa [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) para uma interface de divisão.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -39,8 +39,8 @@ public CComObjectRootEx<contained
 
 #### <a name="parameters"></a>Parâmetros
 
-*contained*<br/>
-Sua classe destacável, derivada de `CComTearOffObjectBase` e as interfaces que você deseja que o seu objeto destacáveis para dar suporte.
+*presente*<br/>
+Sua classe retirada, derivada de `CComTearOffObjectBase` e as interfaces às quais você deseja que o objeto destacável dê suporte.
 
 ## <a name="members"></a>Membros
 
@@ -56,24 +56,24 @@ Sua classe destacável, derivada de `CComTearOffObjectBase` e as interfaces que 
 |Nome|Descrição|
 |----------|-----------------|
 |[CComCachedTearOffObject::AddRef](#addref)|Incrementa a contagem de referência para um `CComCachedTearOffObject` objeto.|
-|[CComCachedTearOffObject::FinalConstruct](#finalconstruct)|Chamadas a `m_contained::FinalConstruct` (o destacáveis método classe).|
-|[CComCachedTearOffObject::FinalRelease](#finalrelease)|Chamadas a `m_contained::FinalRelease` (o destacáveis método classe).|
-|[CComCachedTearOffObject::QueryInterface](#queryinterface)|Retorna um ponteiro para o `IUnknown` do `CComCachedTearOffObject` objeto, ou para a interface solicitada em sua classe destacáveis (a classe `contained`).|
-|[CComCachedTearOffObject::Release](#release)|Diminui a contagem de referência para um `CComCachedTearOffObject` de objeto e destrói-se a contagem de referência é 0.|
+|[CComCachedTearOffObject::FinalConstruct](#finalconstruct)|Chama o `m_contained::FinalConstruct` (o método da classe destacável).|
+|[CComCachedTearOffObject::FinalRelease](#finalrelease)|Chama o `m_contained::FinalRelease` (o método da classe destacável).|
+|[CComCachedTearOffObject::QueryInterface](#queryinterface)|Retorna um ponteiro para o `IUnknown` `CComCachedTearOffObject` do objeto ou para a interface solicitada na sua classe destacável (a classe `contained`).|
+|[CComCachedTearOffObject::Release](#release)|Decrementa a contagem de referência para um `CComCachedTearOffObject` objeto e destrói-o se a contagem de referência for 0.|
 
 ### <a name="public-data-members"></a>Membros de Dados Públicos
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CComCachedTearOffObject::m_contained](#m_contained)|Um `CComContainedObject` objeto derivado da sua classe destacáveis (a classe `contained`).|
+|[CComCachedTearOffObject::m_contained](#m_contained)|Um `CComContainedObject` objeto derivado de sua classe destacável (a classe `contained`).|
 
 ## <a name="remarks"></a>Comentários
 
-`CComCachedTearOffObject` implementa [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) para uma interface destacáveis. Essa classe difere `CComTearOffObject` em que `CComCachedTearOffObject` tem seu próprio `IUnknown`separado do objeto proprietário `IUnknown` (o proprietário é o objeto para o qual o destacável está sendo criado). `CComCachedTearOffObject` mantém seu próprio contagem de referência em seu `IUnknown` e excluir a próprio quando sua contagem de referência é zero. No entanto, se você consultar para qualquer um dos seus destacáveis interfaces, a contagem de referência de objeto do proprietário `IUnknown` será incrementado.
+`CComCachedTearOffObject`implementa [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) para uma interface de divisão. Essa classe é diferente de `CComTearOffObject` no que `CComCachedTearOffObject` tem sua própria `IUnknown`, separada do objeto do `IUnknown` proprietário (o proprietário é o objeto para o qual a redivisão está sendo criada). `CComCachedTearOffObject`mantém sua própria contagem de referência em `IUnknown` seu e se exclui quando sua contagem de referência é zero. No entanto, se você consultar qualquer uma de suas interfaces retiradas, a contagem de referência do objeto `IUnknown` do proprietário será incrementada.
 
-Se o `CComCachedTearOffObject` implementar o destacáveis já é instanciado e a interface destacável é consultada para novamente, o mesmo objeto `CComCachedTearOffObject` objeto é reutilizado. Por outro lado, se uma interface destacáveis implementada por um `CComTearOffObject` será novamente consultada para, por meio do objeto proprietário, outro `CComTearOffObject` será instanciada.
+Se o `CComCachedTearOffObject` objeto que está implementando a remontagem já tiver sido instanciado e a interface de redistribuição for consultada novamente, o `CComCachedTearOffObject` mesmo objeto será reutilizado. Por outro lado, se uma interface retirada implementada `CComTearOffObject` por um for novamente consultado por meio do objeto proprietário `CComTearOffObject` , outra será instanciada.
 
-A classe de proprietário deve implementar `FinalRelease` e chame `Release` em cache no `IUnknown` para o `CComCachedTearOffObject`, que irá diminuir sua contagem de referência. Isso fará com que `CComCachedTearOffObject`do `FinalRelease` para ser chamado e excluir o destacáveis.
+A classe Owner deve implementar `FinalRelease` e chamar `Release` no cache `IUnknown` para o `CComCachedTearOffObject`, o que diminuirá sua contagem de referência. Isso fará com `CComCachedTearOffObject`que `FinalRelease` o seja chamado e exclua a redivisão.
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -87,11 +87,11 @@ A classe de proprietário deve implementar `FinalRelease` e chame `Release` em c
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** atlcom
+**Cabeçalho:** atlcom. h
 
 ##  <a name="addref"></a>  CComCachedTearOffObject::AddRef
 
-Incrementa a contagem de referência do `CComCachedTearOffObject` objeto por 1.
+Incrementa a contagem de referência do `CComCachedTearOffObject` objeto em 1.
 
 ```
 STDMETHOD_(ULONG, AddRef)();
@@ -99,7 +99,7 @@ STDMETHOD_(ULONG, AddRef)();
 
 ### <a name="return-value"></a>Valor de retorno
 
-Um valor que pode ser úteis para diagnóstico e teste.
+Um valor que pode ser útil para diagnóstico e teste.
 
 ##  <a name="ccomcachedtearoffobject"></a>  CComCachedTearOffObject::CComCachedTearOffObject
 
@@ -112,7 +112,7 @@ CComCachedTearOffObject(void* pv);
 ### <a name="parameters"></a>Parâmetros
 
 *pv*<br/>
-[in] Ponteiro para o `IUnknown` do `CComCachedTearOffObject`.
+no Ponteiro para o `IUnknown` `CComCachedTearOffObject`do.
 
 ### <a name="remarks"></a>Comentários
 
@@ -132,7 +132,7 @@ Libera todos os recursos alocados e chama [FinalRelease](#finalrelease).
 
 ##  <a name="finalconstruct"></a>  CComCachedTearOffObject::FinalConstruct
 
-Chamadas `m_contained::FinalConstruct` criem `m_contained`, o `CComContainedObject` <  `contained`> objeto usado para acessar a interface implementada por sua classe destacáveis.
+Chamadas `m_contained::FinalConstruct` para criar `m_contained`, o `CComContainedObject` objeto>usado`contained`para acessar a interface implementada por sua classe destacável. < 
 
 ```
 HRESULT FinalConstruct();
@@ -140,11 +140,11 @@ HRESULT FinalConstruct();
 
 ### <a name="return-value"></a>Valor de retorno
 
-Um valor padrão de HRESULT.
+Um valor HRESULT padrão.
 
 ##  <a name="finalrelease"></a>  CComCachedTearOffObject::FinalRelease
 
-Chamadas `m_contained::FinalRelease` liberar `m_contained`, o `CComContainedObject` <  `contained`> objeto.
+Chama `m_contained::FinalRelease` gratuitamente `m_contained`, o objeto>`CComContainedObject`. <  `contained`
 
 ```
 void FinalRelease();
@@ -152,7 +152,7 @@ void FinalRelease();
 
 ##  <a name="m_contained"></a>  CComCachedTearOffObject::m_contained
 
-Um [CComContainedObject](../../atl/reference/ccomcontainedobject-class.md) objeto derivado da sua classe destacáveis.
+Um objeto [CComContainedObject](../../atl/reference/ccomcontainedobject-class.md) derivado de sua classe destacável.
 
 ```
 CcomContainedObject <contained> m_contained;
@@ -160,12 +160,12 @@ CcomContainedObject <contained> m_contained;
 
 ### <a name="parameters"></a>Parâmetros
 
-*contained*<br/>
-[in] Sua classe destacável, derivada de `CComTearOffObjectBase` e as interfaces que você deseja que o seu objeto destacáveis para dar suporte.
+*presente*<br/>
+no Sua classe retirada, derivada de `CComTearOffObjectBase` e as interfaces às quais você deseja que o objeto destacável dê suporte.
 
 ### <a name="remarks"></a>Comentários
 
-Os métodos `m_contained` herda são usadas para acessar a interface destacáveis em sua classe destacáveis por meio do cache destacáveis do objeto `QueryInterface`, `FinalConstruct`, e `FinalRelease`.
+Os métodos `m_contained` herdados são usados para acessar a interface retirada em sua classe destacável por meio do `QueryInterface`objeto retirado em cache, `FinalConstruct`e `FinalRelease`.
 
 ##  <a name="queryinterface"></a>  CComCachedTearOffObject::QueryInterface
 
@@ -178,22 +178,22 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
 ### <a name="parameters"></a>Parâmetros
 
 *iid*<br/>
-[in] O GUID da interface que está sendo solicitado.
+no O GUID da interface que está sendo solicitada.
 
 *ppvObject*<br/>
-[out] Um ponteiro para o ponteiro de interface identificado pelo *iid*, ou nulo se a interface não foi encontrada.
+fora Um ponteiro para o ponteiro de interface identificado por *IID*ou NULL se a interface não for encontrada.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Um valor padrão de HRESULT.
+Um valor HRESULT padrão.
 
 ### <a name="remarks"></a>Comentários
 
-Se for a interface solicitada `IUnknown`, retorna um ponteiro para o `CComCachedTearOffObject`do próprio `IUnknown` e incrementa a contagem de referência. Caso contrário, a consulta para a interface na classe destacáveis usando o [InternalQueryInterface](ccomobjectrootex-class.md#internalqueryinterface) método herdado do `CComObjectRootEx`.
+Se a interface solicitada `IUnknown`for, retornará um ponteiro para `CComCachedTearOffObject`o próprio `IUnknown` e incrementará a contagem de referência. Caso contrário, o consulta a interface na sua classe destacável usando o método [InternalQueryInterface](ccomobjectrootex-class.md#internalqueryinterface) herdado `CComObjectRootEx`de.
 
 ##  <a name="release"></a>  CComCachedTearOffObject::Release
 
-Diminui a contagem de referência em 1 e, se a contagem de referência for 0, exclui o `CComCachedTearOffObject` objeto.
+Decrementa a contagem de referência em 1 e, se a contagem de referência for 0, excluirá o `CComCachedTearOffObject` objeto.
 
 ```
 STDMETHOD_(ULONG, Release)();
@@ -201,7 +201,7 @@ STDMETHOD_(ULONG, Release)();
 
 ### <a name="return-value"></a>Valor de retorno
 
-Em compilações sem depuração, sempre retorna 0. Em compilações de depuração, retorna um valor que pode ser úteis para diagnóstico ou teste.
+Em compilações não depuradas, sempre retorna 0. Em compilações de depuração, retorna um valor que pode ser útil para diagnóstico ou teste.
 
 ## <a name="see-also"></a>Consulte também
 

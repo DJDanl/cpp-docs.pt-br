@@ -1,5 +1,5 @@
 ---
-title: IEnumOnSTLImpl Class
+title: Classe IEnumOnSTLImpl
 ms.date: 11/04/2016
 f1_keywords:
 - IEnumOnSTLImpl
@@ -15,16 +15,16 @@ f1_keywords:
 helpviewer_keywords:
 - IEnumOnSTLImpl class
 ms.assetid: 1789e77b-88b8-447d-a490-806b918912ce
-ms.openlocfilehash: 8ff29522351b542d0b674bc173040d4468d00f1c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7cf777f3ff0d298f224157735a06bf57a2c10cf5
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62275263"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69495867"
 ---
-# <a name="ienumonstlimpl-class"></a>IEnumOnSTLImpl Class
+# <a name="ienumonstlimpl-class"></a>Classe IEnumOnSTLImpl
 
-Essa classe define uma interface de enumerador com base em uma coleção de biblioteca padrão C++.
+Essa classe define uma interface de enumerador com C++ base em uma coleção de bibliotecas padrão.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -36,8 +36,8 @@ class ATL_NO_VTABLE IEnumOnSTLImpl : public Base
 
 #### <a name="parameters"></a>Parâmetros
 
-*Base*<br/>
-Um enumerador de COM. Ver [IEnumString](/windows/desktop/api/objidl/nn-objidl-ienumstring) para obter um exemplo.
+*Polybase*<br/>
+Um enumerador COM. Consulte [IEnumString](/windows/win32/api/objidl/nn-objidl-ienumstring) para obter um exemplo.
 
 *piid*<br/>
 Um ponteiro para a ID de interface da interface do enumerador.
@@ -46,10 +46,10 @@ Um ponteiro para a ID de interface da interface do enumerador.
 O tipo de item exposto pela interface do enumerador.
 
 *Copiar*<br/>
-Um [copie a classe da diretiva](../../atl/atl-copy-policy-classes.md).
+Uma [classe de política de cópia](../../atl/atl-copy-policy-classes.md).
 
 *CollType*<br/>
-Uma classe de contêiner da biblioteca padrão C++.
+Uma C++ classe de contêiner de biblioteca padrão.
 
 ## <a name="members"></a>Membros
 
@@ -57,10 +57,10 @@ Uma classe de contêiner da biblioteca padrão C++.
 
 |Nome|Descrição|
 |----------|-----------------|
-|[IEnumOnSTLImpl::Clone](#clone)|A implementação de **Clone**.|
+|[IEnumOnSTLImpl::Clone](#clone)|A implementação do **clone**.|
 |[IEnumOnSTLImpl::Init](#init)|Inicializa o enumerador.|
-|[IEnumOnSTLImpl::Next](#next)|A implementação de **próxima**.|
-|[IEnumOnSTLImpl::Reset](#reset)|A implementação de **redefinir**.|
+|[IEnumOnSTLImpl::Next](#next)|A implementação de **Next**.|
+|[IEnumOnSTLImpl::Reset](#reset)|A implementação da **redefinição**.|
 |[IEnumOnSTLImpl::Skip](#skip)|A implementação de **Skip**.|
 
 ### <a name="public-data-members"></a>Membros de Dados Públicos
@@ -68,19 +68,19 @@ Uma classe de contêiner da biblioteca padrão C++.
 |Nome|Descrição|
 |----------|-----------------|
 |[IEnumOnSTLImpl::m_iter](#m_iter)|O iterador que representa a posição atual do enumerador dentro da coleção.|
-|[IEnumOnSTLImpl::m_pcollection](#m_pcollection)|Um ponteiro para o contêiner da biblioteca padrão C++ que contém os itens a serem enumerados.|
-|[IEnumOnSTLImpl::m_spUnk](#m_spunk)|O `IUnknown` ponteiro do objeto fornecendo a coleção.|
+|[IEnumOnSTLImpl::m_pcollection](#m_pcollection)|Um ponteiro para o C++ contêiner da biblioteca padrão que contém os itens a serem enumerados.|
+|[IEnumOnSTLImpl::m_spUnk](#m_spunk)|O `IUnknown` ponteiro do objeto que fornece a coleção.|
 
 ## <a name="remarks"></a>Comentários
 
-`IEnumOnSTLImpl` fornece a implementação de uma interface de enumerador COM onde os itens que estão sendo enumerados são armazenados em um contêiner de biblioteca padrão C++ compatível com. Essa classe é semelhante para o [CComEnumImpl](../../atl/reference/ccomenumimpl-class.md) classe, que fornece uma implementação de uma interface de enumerador com base em uma matriz.
+`IEnumOnSTLImpl`fornece a implementação para uma interface de enumerador COM em que os itens que estão sendo enumerados são armazenados em um C++ contêiner padrão compatível com biblioteca. Essa classe é análoga à classe [CComEnumImpl](../../atl/reference/ccomenumimpl-class.md) , que fornece uma implementação para uma interface de enumerador baseada em uma matriz.
 
 > [!NOTE]
->  Ver [CComEnumImpl::Init](../../atl/reference/ccomenumimpl-class.md#init) para obter detalhes sobre ainda mais as diferenças entre `CComEnumImpl` e `IEnumOnSTLImpl`.
+>  Consulte [CComEnumImpl:: init](../../atl/reference/ccomenumimpl-class.md#init) para obter detalhes sobre outras diferenças `CComEnumImpl` entre `IEnumOnSTLImpl`e.
 
-Normalmente, você irá *não* precisa criar sua própria classe de enumerador, derivando dessa implementação de interface. Se você quiser usar um enumerador fornecido pelo ATL com base em um contêiner de biblioteca padrão C++, é mais comum para criar uma instância do [CComEnumOnSTL](../../atl/reference/ccomenumonstl-class.md), ou para criar uma classe de coleção que retorna um enumerador derivando [ICollectionOnSTLImpl](../../atl/reference/icollectiononstlimpl-class.md).
+Normalmente, *não* será necessário criar sua própria classe de enumerador derivando dessa implementação de interface. Se você quiser usar um enumerador fornecido pela ATL com base em C++ um contêiner de biblioteca padrão, é mais comum criar uma instância de [CComEnumOnSTL](../../atl/reference/ccomenumonstl-class.md)ou criar uma classe de coleção que retorna um enumerador derivando de [ICollectionOnSTLImpl ](../../atl/reference/icollectiononstlimpl-class.md).
 
-No entanto, se você precisar fornecer um enumerador personalizado (por exemplo, um que expõe interfaces além da interface de enumerador), você pode derivar dessa classe. Nessa situação, é provável que você precisará substituir os [Clone](#clone) método para fornecer sua própria implementação.
+No entanto, se você precisar fornecer um enumerador personalizado (por exemplo, um que expõe interfaces além da interface do enumerador), poderá derivar dessa classe. Nessa situação, é provável que você precise substituir o método [clone](#clone) para fornecer sua própria implementação.
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -90,7 +90,7 @@ No entanto, se você precisar fornecer um enumerador personalizado (por exemplo,
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** atlcom
+**Cabeçalho:** atlcom. h
 
 ##  <a name="init"></a>  IEnumOnSTLImpl::Init
 
@@ -105,24 +105,24 @@ HRESULT Init(
 ### <a name="parameters"></a>Parâmetros
 
 *pUnkForRelease*<br/>
-[in] O `IUnknown` ponteiro de um objeto que deve ser mantido durante a vida útil do enumerador. Passe NULL se esse objeto não existe.
+no O `IUnknown` ponteiro de um objeto que deve ser mantido ativo durante o tempo de vida do enumerador. Passe NULL se esse objeto não existir.
 
 *collection*<br/>
-Uma referência para o contêiner de biblioteca padrão C++ que contém os itens a serem enumerados.
+Uma referência ao contêiner C++ da biblioteca padrão que contém os itens a serem enumerados.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Um valor padrão de HRESULT.
+Um valor HRESULT padrão.
 
 ### <a name="remarks"></a>Comentários
 
-Se você passar `Init` mantidos de uma referência a uma coleção em outro objeto, você pode usar o *pUnkForRelease* parâmetro para garantir que o objeto e a coleção que ele contém, está disponível para desde que o enumerador precise dele.
+Se você passar `Init` uma referência a uma coleção mantida em outro objeto, poderá usar o parâmetro *pUnkForRelease* para garantir que o objeto e a coleção que ele contém, estarão disponíveis por enquanto o enumerador precisar.
 
-Você deve chamar esse método antes de passar um ponteiro para a interface de enumerador para todos os clientes.
+Você deve chamar esse método antes de passar um ponteiro para a interface do enumerador de volta para qualquer cliente.
 
 ##  <a name="clone"></a>  IEnumOnSTLImpl::Clone
 
-Esse método fornece a implementação do **Clone** método com a criação de um objeto do tipo `CComEnumOnSTL`, inicializando-a com a mesma coleção e o iterador usado pelo objeto atual e retorna a interface no recentemente objeto criado.
+Esse método fornece a implementação do método **clone** criando um objeto do tipo `CComEnumOnSTL`, inicializando-o com a mesma coleção e iterador usados pelo objeto atual e retornando a interface no objeto recém-criado.
 
 ```
 STDMETHOD(Clone)(Base** ppEnum);
@@ -131,15 +131,15 @@ STDMETHOD(Clone)(Base** ppEnum);
 ### <a name="parameters"></a>Parâmetros
 
 *ppEnum*<br/>
-[out] A interface de enumerador em um objeto recém-criado clonado do enumerador atual.
+fora A interface do enumerador em um objeto recém-criado clonado do enumerador atual.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Um valor padrão de HRESULT.
+Um valor HRESULT padrão.
 
 ##  <a name="m_spunk"></a>  IEnumOnSTLImpl::m_spUnk
 
-O `IUnknown` ponteiro do objeto fornecendo a coleção.
+O `IUnknown` ponteiro do objeto que fornece a coleção.
 
 ```
 CComPtr<IUnknown> m_spUnk;
@@ -147,11 +147,11 @@ CComPtr<IUnknown> m_spUnk;
 
 ### <a name="remarks"></a>Comentários
 
-Ponteiro inteligente mantém uma referência no objeto passado para [IEnumOnSTLImpl::Init](#init), garantindo que ele permaneça ativo durante o tempo de vida do enumerador.
+Esse ponteiro inteligente mantém uma referência no objeto passado para [IEnumOnSTLImpl:: init](#init), garantindo que ele permaneça ativo durante o tempo de vida do enumerador.
 
 ##  <a name="m_pcollection"></a>  IEnumOnSTLImpl::m_pcollection
 
-Esse membro aponta para a coleção que fornece os dados impulsionando a implementação da interface do enumerador.
+Esse membro aponta para a coleção que fornece os dados que orientam a implementação da interface do enumerador.
 
 ```
 CollType* m_pcollection;
@@ -159,11 +159,11 @@ CollType* m_pcollection;
 
 ### <a name="remarks"></a>Comentários
 
-Esse membro é inicializado por uma chamada para [IEnumOnSTLImpl::Init](#init).
+Esse membro é inicializado por uma chamada para [IEnumOnSTLImpl:: init](#init).
 
 ##  <a name="m_iter"></a>  IEnumOnSTLImpl::m_iter
 
-Esse membro contém o iterador usado para marcar a posição atual dentro da coleção e navegar por elementos subsequentes.
+Esse membro contém o iterador usado para marcar a posição atual dentro da coleção e navegar para os elementos subsequentes.
 
 ```
 CollType::iterator m_iter;
@@ -171,7 +171,7 @@ CollType::iterator m_iter;
 
 ##  <a name="next"></a>  IEnumOnSTLImpl::Next
 
-Esse método fornece a implementação de **próxima** método.
+Esse método fornece a implementação do **próximo** método.
 
 ```
 STDMETHOD(Next)(
@@ -183,21 +183,21 @@ STDMETHOD(Next)(
 ### <a name="parameters"></a>Parâmetros
 
 *celt*<br/>
-[in] O número de elementos solicitados.
+no O número de elementos solicitados.
 
 *rgelt*<br/>
-[out] A matriz a ser preenchida com os elementos.
+fora A matriz a ser preenchida com os elementos.
 
 *pceltFetched*<br/>
-[out] O número de elementos realmente retornados na *rgelt*. Isso pode ser menor que *celt* se menos de *celt* elementos permanecem na lista.
+fora O número de elementos realmente retornados em *rgelt*. Isso pode ser menor que *celt* se menos de *celt* elementos permanecerem na lista.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Um valor padrão de HRESULT.
+Um valor HRESULT padrão.
 
 ##  <a name="reset"></a>  IEnumOnSTLImpl::Reset
 
-Esse método fornece a implementação de **redefinir** método.
+Esse método fornece a implementação do método **Reset** .
 
 ```
 STDMETHOD(Reset)(void);
@@ -205,11 +205,11 @@ STDMETHOD(Reset)(void);
 
 ### <a name="return-value"></a>Valor de retorno
 
-Um valor padrão de HRESULT.
+Um valor HRESULT padrão.
 
 ##  <a name="skip"></a>  IEnumOnSTLImpl::Skip
 
-Esse método fornece a implementação de **Skip** método.
+Esse método fornece a implementação do método **Skip** .
 
 ```
 STDMETHOD(Skip)(ULONG celt);
@@ -218,11 +218,11 @@ STDMETHOD(Skip)(ULONG celt);
 ### <a name="parameters"></a>Parâmetros
 
 *celt*<br/>
-[in] O número de elementos a serem ignorados.
+no O número de elementos a serem ignorados.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Um valor padrão de HRESULT.
+Um valor HRESULT padrão.
 
 ## <a name="see-also"></a>Consulte também
 

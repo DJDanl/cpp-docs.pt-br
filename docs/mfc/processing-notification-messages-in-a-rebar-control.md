@@ -7,38 +7,38 @@ helpviewer_keywords:
 - RBN_ notification messages [MFC]
 - notifications [MFC], CReBarCtrl
 ms.assetid: 40f43a60-0c18-4d8d-8fab-213a095624f9
-ms.openlocfilehash: 8ac225802bd1d0a0a4b0f30e017fa677f1072fd3
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 948990c8597c2ccdcec496252c6801c02a78cbf5
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64339635"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69507954"
 ---
 # <a name="processing-notification-messages-in-a-rebar-control"></a>Processando mensagens de notificação em um controle rebar
 
-Na classe pai do controle rebar, crie uma `OnChildNotify` função de manipulador com uma instrução switch para qualquer controle rebar (`CReBarCtrl`) mensagens de notificação que você deseja manipular. As notificações são enviadas para a janela pai quando o usuário arrasta objetos sobre o controle rebar, alterações de layout das bandas rebar, exclusões bandas do controle rebar e assim por diante.
+Na classe pai do controle rebar, crie uma `OnChildNotify` função de manipulador com uma instrução switch para qualquer mensagem de notificação de controle rebar (`CReBarCtrl`) que você deseja manipular. As notificações são enviadas para a janela pai quando o usuário arrasta objetos sobre o controle rebar, altera o layout das bandas de rebar, exclui as faixas do controle rebar e assim por diante.
 
 As seguintes mensagens de notificação podem ser enviadas pelo objeto de controle rebar:
 
 - RBN_AUTOSIZE enviado por um controle rebar (criado com o estilo RBS_AUTOSIZE) quando o rebar é redimensionado automaticamente.
 
-- RBN_BEGINDRAG enviado por um controle rebar quando o usuário começa a arrastar uma faixa.
+- RBN_BEGINDRAG enviado por um controle rebar quando o usuário começa a arrastar uma banda.
 
-- RBN_CHILDSIZE enviado por um controle rebar quando a janela filho da banda, um é redimensionada.
+- RBN_CHILDSIZE enviado por um controle rebar quando a janela filho de uma banda é redimensionada.
 
-- RBN_DELETEDBAND enviado por um controle rebar após a exclusão de uma faixa.
+- RBN_DELETEDBAND enviado por um controle rebar após a exclusão de uma banda.
 
-- RBN_DELETINGBAND enviado por um controle rebar quando uma banda está prestes a ser excluído.
+- RBN_DELETINGBAND enviado por um controle rebar quando uma banda está prestes a ser excluída.
 
-- RBN_ENDDRAG enviado por um controle rebar quando o usuário para de arrastar uma faixa.
+- RBN_ENDDRAG enviado por um controle rebar quando o usuário para de arrastar uma banda.
 
-- RBN_GETOBJECT enviado por um controle rebar (criado com o estilo RBS_REGISTERDROP) quando um objeto é arrastado sobre uma faixa no controle.
+- RBN_GETOBJECT enviado por um controle rebar (criado com o estilo RBS_REGISTERDROP) quando um objeto é arrastado sobre uma banda no controle.
 
-- RBN_HEIGHTCHANGE enviado por um controle rebar quando sua altura é alterado.
+- RBN_HEIGHTCHANGE enviado por um controle rebar quando sua altura é alterada.
 
-- RBN_LAYOUTCHANGED enviado por um controle rebar quando o usuário altera o layout das bandas do controle.
+- RBN_LAYOUTCHANGED enviado por um controle rebar quando o usuário altera o layout das faixas do controle.
 
-Para obter mais informações sobre essas notificações, consulte [referência de controle Rebar](/windows/desktop/controls/rebar-control-reference) no SDK do Windows.
+Para obter mais informações sobre essas notificações, consulte [referência de controle rebar](/windows/win32/controls/rebar-control-reference) no SDK do Windows.
 
 ## <a name="see-also"></a>Consulte também
 

@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCToolBarComboBoxEdit [MFC], CMFCToolBarComboBoxEdit
 ms.assetid: 4789c34a-ce58-48ba-a26f-38748b601352
-ms.openlocfilehash: 55a2cfef69ee215d63a859b0b7fbf3886bbf60b6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2a0ab1766f42d34c86339cffb86f876358c97a4a
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62218320"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69504876"
 ---
 # <a name="cmfctoolbarcomboboxedit-class"></a>Classe CMFCToolBarComboBoxEdit
 
@@ -38,11 +38,11 @@ class CMFCToolBarComboBoxEdit : public CEdit
 
 |Nome|Descrição|
 |----------|-----------------|
-|`CMFCToolBarComboBoxEdit::PreTranslateMessage`|Converte as mensagens da janela antes de serem expedidas para o [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) e [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) funções do Windows. (Substitui [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|
+|`CMFCToolBarComboBoxEdit::PreTranslateMessage`|Traduz mensagens de janela antes de serem expedidas para as funções do Windows [TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage) e [DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage) . (Substitui [CWnd::P retranslatemessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|
 
 ### <a name="remarks"></a>Comentários
 
-Derive uma classe do `CMFCToolBarComboBoxEdit` classe para personalizar suas operações de edição.
+Derive uma classe da `CMFCToolBarComboBoxEdit` classe para personalizar suas operações de edição.
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -58,9 +58,9 @@ Derive uma classe do `CMFCToolBarComboBoxEdit` classe para personalizar suas ope
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** afxtoolbarcomboboxbutton.h
+**Cabeçalho:** afxtoolbarcomboboxbutton. h
 
-##  <a name="cmfctoolbarcomboboxedit"></a>  CMFCToolBarComboBoxEdit::CMFCToolBarComboBoxEdit
+##  <a name="cmfctoolbarcomboboxedit"></a>CMFCToolBarComboBoxEdit::CMFCToolBarComboBoxEdit
 
 Constrói um objeto `CMFCToolBarComboBoxEdit`.
 
@@ -71,11 +71,11 @@ CMFCToolBarComboBoxEdit(CMFCToolBarComboBoxButton& combo);
 ### <a name="parameters"></a>Parâmetros
 
 *combo*<br/>
-[in] Uma referência a um [CMFCToolBarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md) objeto, que é um botão de barra de ferramentas que contém um controle de caixa de combinação.
+no Uma referência a um objeto [CMFCToolBarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md) , que é um botão da barra de ferramentas que contém um controle de caixa de combinação.
 
 ### <a name="example"></a>Exemplo
 
-O exemplo a seguir demonstra como construir um objeto do `CMFCToolBarComboBoxEdit` classe. Este trecho de código faz parte do [amostra de demonstração do IE](../../overview/visual-cpp-samples.md).
+O exemplo a seguir demonstra como construir um objeto da `CMFCToolBarComboBoxEdit` classe. Este trecho de código faz parte do [exemplo de demonstração do IE](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_IEDemo#5](../../mfc/reference/codesnippet/cpp/cmfctoolbarcomboboxedit-class_1.cpp)]
 

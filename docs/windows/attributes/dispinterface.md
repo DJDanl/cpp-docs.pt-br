@@ -1,17 +1,17 @@
 ---
-title: dispinterface (C++ COM atributo)
+title: dispinterface (C++ atributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.dispinterface
 helpviewer_keywords:
 - dispinterface attribute
 ms.assetid: 61c5a4a1-ae92-47e9-8ee4-f847be90172b
-ms.openlocfilehash: 6fd5010dc20d03c518206d81919e3beafbcaa9a9
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 6360c5e97eae19d7b2d74b3b43d4feae07d4b091
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64346296"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501619"
 ---
 # <a name="dispinterface"></a>dispinterface
 
@@ -25,35 +25,35 @@ Coloca uma interface no arquivo. idl como uma interface de expedição.
 
 ## <a name="remarks"></a>Comentários
 
-Quando o **dispinterface** atributo C++ precede uma interface, ele faz com que a interface a ser colocado dentro do bloco de biblioteca no arquivo. idl gerado.
+Quando o atributo **dispinterface** C++ precede uma interface, ele faz com que a interface seja colocada dentro do bloco de biblioteca no arquivo. idl gerado.
 
-A menos que você especifique uma classe base, uma interface de expedição será derivado `IDispatch`. Você deve especificar um [id](id.md) para os membros de uma interface de expedição.
+A menos que você especifique uma classe base, uma interface de expedição `IDispatch`será derivada de. Você deve especificar uma [ID](id.md) para os membros de uma interface de expedição.
 
-O exemplo de uso de [dispinterface](/windows/desktop/Midl/dispinterface) na documentação do MIDL:
+O exemplo de uso de [dispinterface](/windows/win32/Midl/dispinterface) na documentação de MIDL:
 
 ```cpp
 dispinterface helloPro
    { interface hello; };
 ```
 
-não é válido para o **dispinterface** atributo.
+Não é válido para o atributo **dispinterface** .
 
 ## <a name="example"></a>Exemplo
 
-Veja o exemplo de [associável](bindable.md) para obter um exemplo de como usar **dispinterface**.
+Consulte o exemplo de [ligável](bindable.md) para obter um exemplo de como usar **dispinterface**.
 
 ## <a name="requirements"></a>Requisitos
 
-### <a name="attribute-context"></a>Atributo de contexto
+### <a name="attribute-context"></a>Contexto de atributo
 
 |||
 |-|-|
 |**Aplica-se a**|**interface**|
 |**Repetível**|Não|
-|**Atributos obrigatórios**|Nenhum|
+|**Atributos necessários**|Nenhum|
 |**Atributos inválidos**|`dual`, `object`, `oleautomation`, `local`, `ms_union`|
 
-Para obter mais informações, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
+Para obter mais informações, consulte contextos de [atributo](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Consulte também
 

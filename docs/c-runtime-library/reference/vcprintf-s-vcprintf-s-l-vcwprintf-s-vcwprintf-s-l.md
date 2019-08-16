@@ -43,14 +43,14 @@ helpviewer_keywords:
 - vtcprintf_s function
 - formatted text [C++]
 ms.assetid: 5a46d45a-30db-45df-9850-455cbdac5636
-ms.openlocfilehash: e27018d02c8fb77b0e2a1c02164d3b6d112448ab
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ccd346141db9f4974ee5f9300792260bf2a8ec72
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62365327"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499323"
 ---
-# <a name="vcprintfs-vcprintfsl-vcwprintfs-vcwprintfsl"></a>_vcprintf_s, _vcprintf_s_l, _vcwprintf_s, _vcwprintf_s_l
+# <a name="_vcprintf_s-_vcprintf_s_l-_vcwprintf_s-_vcwprintf_s_l"></a>_vcprintf_s, _vcprintf_s_l, _vcwprintf_s, _vcwprintf_s_l
 
 Grava a saída formatada no console usando um ponteiro para uma lista de argumentos. Essas versões de [_vcprintf, _vcprintf_l, _vcwprintf, _vcwprintf_l](vcprintf-vcprintf-l-vcwprintf-vcwprintf-l.md) apresentam melhorias de segurança, conforme descrito em [Recursos de segurança no CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
@@ -97,16 +97,16 @@ Para obter mais informações, consulte [Sintaxe de especificação de formato: 
 
 O número de caracteres gravados ou um valor negativo se ocorrer erro de saída.
 
-Como as versões menos seguras dessas funções, se *formato* for um ponteiro nulo, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Além disso, ao contrário das versões menos seguras dessas funções, se *formato* não especifica um formato válido, será gerada uma exceção de parâmetro inválido. Se a execução puder continuar, essas funções retornarão um código de erro e definirão **errno** esse código de erro. O código de erro padrão é **EINVAL** se um valor mais específico não se aplica.
+Como as versões menos seguras dessas funções, se *Format* for um ponteiro NULL, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Além disso, ao contrário das versões menos seguras dessas funções, se *Format* não especificar um formato válido, uma exceção de parâmetro inválida será gerada. Se a execução tiver permissão para continuar, essas funções retornarão um código de erro e definirei **errno** para esse código de erro. O código de erro padrão será **EINVAL** se um valor mais específico não se aplicar.
 
 ## <a name="remarks"></a>Comentários
 
-Cada uma dessas funções usa um ponteiro para uma lista de argumentos e, em seguida, formata e grava os dados determinados no console. **vcwprintf_s** é a versão de caractere largo de **vcprintf_s**. Uma cadeia de caracteres largos é usada como argumento.
+Cada uma dessas funções usa um ponteiro para uma lista de argumentos e, em seguida, formata e grava os dados determinados no console. **_vcwprintf_s** é a versão de caractere largo do **_vcprintf_s**. Uma cadeia de caracteres largos é usada como argumento.
 
-As versões dessas funções que têm o **l** sufixo são idênticas, exceto por usarem o parâmetro de localidade passado em vez da localidade atual.
+As versões dessas funções que têm o sufixo **_L** são idênticas, exceto pelo fato de que usam o parâmetro Locale que é passado em vez da localidade atual.
 
 > [!IMPORTANT]
-> Verifique se *format* não é uma cadeia de caracteres definida pelo usuário. Para obter mais informações, consulte [Avoiding Buffer Overruns](/windows/desktop/SecBP/avoiding-buffer-overruns) (Evitando estouros de buffer).
+> Verifique se *format* não é uma cadeia de caracteres definida pelo usuário. Para obter mais informações, consulte [Avoiding Buffer Overruns](/windows/win32/SecBP/avoiding-buffer-overruns) (Evitando estouros de buffer).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 

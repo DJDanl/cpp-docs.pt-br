@@ -44,14 +44,14 @@ helpviewer_keywords:
 - _InterlockedExchange intrinsic
 - _InterlockedExchange8_nf
 ms.assetid: be2f232a-6301-462a-a92b-fcdeb8b0f209
-ms.openlocfilehash: 3945b8a7516962531050e999e96bdef31b179bbb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c96ce57854bfb3eea0e1b8bc6283984c7fce50f9
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396737"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69509393"
 ---
-# <a name="interlockedexchange-intrinsic-functions"></a>Funções intrínsecas _InterlockedExchange
+# <a name="_interlockedexchange-intrinsic-functions"></a>Funções intrínsecas _InterlockedExchange
 
 **Seção específica da Microsoft**
 
@@ -145,10 +145,10 @@ __int64 _InterlockedExchange64_rel(
 #### <a name="parameters"></a>Parâmetros
 
 *Target*<br/>
-[no, out] Ponteiro para o valor a ser trocado. A função define essa variável como `Value` e retorna seu valor anterior.
+[entrada, saída] Ponteiro para o valor a ser trocado. A função define essa variável como `Value` e retorna seu valor anterior.
 
 *Valor*<br/>
-[in] Valor a ser trocado com o valor apontado por `Target`.
+no Valor a ser trocado pelo valor apontado por `Target`.
 
 ## <a name="return-value"></a>Valor de retorno
 
@@ -164,7 +164,7 @@ Retorna o valor inicial apontado por `Target`.
 
 ## <a name="remarks"></a>Comentários
 
-`_InterlockedExchange` fornece suporte intrínseco ao compilador para o SDK do Windows Win32 [InterlockedExchange](/windows/desktop/api/winnt/nf-winnt-interlockedexchange) função.
+`_InterlockedExchange`fornece suporte intrínseco do compilador para a função [InterlockedExchange](/windows/win32/api/winnt/nf-winnt-interlockedexchange) do Win32 SDK do Windows.
 
 Há diversas variações em `_InterlockedExchange` que têm base no tipo de dados que envolvem e se a semântica acquire ou release é usada.
 
@@ -178,7 +178,7 @@ Essas rotinas somente estão disponíveis como intrínsecos.
 
 ## <a name="example"></a>Exemplo
 
-Para obter um exemplo de como usar `_InterlockedExchange`, consulte [interlockeddecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md).
+Para obter uma amostra de como usar `_InterlockedExchange`o, consulte [_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md).
 
 **Fim da seção específica da Microsoft**
 

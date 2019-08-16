@@ -1,21 +1,21 @@
 ---
-title: appobject (atributo de COM do C++)
+title: appobject (C++ atributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.appobject
 helpviewer_keywords:
 - appobject attribute
 ms.assetid: 8ce30b73-e945-403e-a755-6bc78078a695
-ms.openlocfilehash: 8219c8fdd1b1df93f92fc6c1d0324a2475d3384b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e02cedff70ac32f7edfdb92b240269c34befee7e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409701"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69490941"
 ---
 # <a name="appobject"></a>appobject
 
-Identifica a coclass como um objeto de aplicativo, que é associado a um aplicativo completo .exe e indica que as funções e propriedades da coclass estão globalmente disponíveis neste [biblioteca de tipos](../../mfc/automation-clients-using-type-libraries.md).
+Identifica a coclass como um objeto Application, que está associado a um aplicativo Full. exe e indica que as funções e as propriedades da coclass estão disponíveis globalmente nesta biblioteca de [tipos](../../mfc/automation-clients-using-type-libraries.md).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -25,7 +25,7 @@ Identifica a coclass como um objeto de aplicativo, que é associado a um aplicat
 
 ## <a name="remarks"></a>Comentários
 
-O **appobject** atributo C++ tem a mesma funcionalidade que o [appobject](/windows/desktop/Midl/appobject) atributo MIDL.
+O atributo **appobject** C++ tem a mesma funcionalidade que o atributo MIDL [appobject](/windows/win32/Midl/appobject) .
 
 ## <a name="example"></a>Exemplo
 
@@ -48,16 +48,16 @@ class A : public ICustom {
 
 ## <a name="requirements"></a>Requisitos
 
-### <a name="attribute-context"></a>Atributo de contexto
+### <a name="attribute-context"></a>Contexto de atributo
 
 |||
 |-|-|
-|**Aplica-se a**|**class**, **struct**|
+|**Aplica-se a**|**classe**, **struct**|
 |**Repetível**|Não|
-|**Atributos obrigatórios**|`coclass`|
+|**Atributos necessários**|`coclass`|
 |**Atributos inválidos**|Nenhum|
 
-Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
+Para obter mais informações sobre os contextos de atributo, consulte contextos de [atributo](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Consulte também
 

@@ -5,16 +5,16 @@ ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::InspectableClass
 ms.assetid: ff390b26-58cc-424f-87ac-1fe3cc692b59
-ms.openlocfilehash: 9d194f5a87ac4a142301bc896cb3ed172f119473
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ee2a76edb967923a03ce6720b4163baf1cc48c32
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398180"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500485"
 ---
 # <a name="inspectableclass-macro"></a>Macro InspectableClass
 
-Define o nível de confiança e o nome de classe do tempo de execução.
+Define o nome da classe de tempo de execução e o nível de confiança.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -27,14 +27,14 @@ InspectableClass(
 ### <a name="parameters"></a>Parâmetros
 
 *runtimeClassName*<br/>
-O nome textual completo da classe de tempo de execução.
+O nome textual completo da classe Runtime.
 
 *trustLevel*<br/>
-Um dos [TrustLevel](/windows/desktop/api/inspectable/ne-inspectable-trustlevel) valores enumerados.
+Um dos valores enumerados do [TrustLevel](/windows/win32/api/inspectable/ne-inspectable-trustlevel) .
 
 ## <a name="remarks"></a>Comentários
 
-O **InspectableClass** macro pode ser usada somente com tipos de tempo de execução do Windows.
+A macro **InspectableClass** pode ser usada somente com tipos de Windows Runtime.
 
 ## <a name="requirements"></a>Requisitos
 
