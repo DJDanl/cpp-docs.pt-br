@@ -17,16 +17,16 @@ f1_keywords:
 helpviewer_keywords:
 - CComPtrBase class
 ms.assetid: 6dbe9543-dee8-4a97-b02f-dd3a25f4a1a0
-ms.openlocfilehash: 5bb599b88671447e219421efacac7a2d8a5f7b06
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 689221ec77b21fc8bfaed2e929aee5402a4bc676
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62246225"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496981"
 ---
 # <a name="ccomptrbase-class"></a>Classe CComPtrBase
 
-Essa classe fornece uma base para classes de ponteiro inteligente usando memória COM base em rotinas.
+Essa classe fornece uma base para classes de ponteiro inteligente usando rotinas de memória com base em COM.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -46,51 +46,51 @@ O tipo de objeto a ser referenciado pelo ponteiro inteligente.
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CComPtrBase::~CComPtrBase](#dtor)|O destruidor.|
+|[CComPtrBase:: ~ CComPtrBase](#dtor)|O destruidor.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CComPtrBase::Advise](#advise)|Chame esse método para criar uma conexão entre o `CComPtrBase`do ponto de conexão e o coletor de um cliente.|
+|[CComPtrBase::Advise](#advise)|Chame esse método para criar uma conexão entre o `CComPtrBase`ponto de conexão do e o coletor de um cliente.|
 |[CComPtrBase::Attach](#attach)|Chame esse método para apropriar-se de um ponteiro existente.|
-|[CComPtrBase::CoCreateInstance](#cocreateinstance)|Chame esse método para criar um objeto da classe associada com uma ID de classe especificada ou a ID do programa.|
-|[CComPtrBase::CopyTo](#copyto)|Chame esse método para copiar o `CComPtrBase` ponteiro a outra variável de ponteiro.|
+|[CComPtrBase::CoCreateInstance](#cocreateinstance)|Chame esse método para criar um objeto da classe associada a uma ID de classe ou ID de programa especificada.|
+|[CComPtrBase::CopyTo](#copyto)|Chame esse método para copiar o `CComPtrBase` ponteiro para outra variável de ponteiro.|
 |[CComPtrBase::Detach](#detach)|Chame esse método para liberar a propriedade de um ponteiro.|
-|[CComPtrBase::IsEqualObject](#isequalobject)|Chame esse método para verificar se o especificado `IUnknown` aponta para o mesmo objeto associado com o `CComPtrBase` objeto.|
+|[CComPtrBase::IsEqualObject](#isequalobject)|Chame esse método para verificar se os pontos `IUnknown` especificados apontam para o mesmo objeto associado `CComPtrBase` ao objeto.|
 |[CComPtrBase::QueryInterface](#queryinterface)|Chame esse método para retornar um ponteiro para uma interface especificada.|
 |[CComPtrBase::Release](#release)|Chame esse método para liberar a interface.|
-|[CComPtrBase::SetSite](#setsite)|Chame esse método para definir o site da `CComPtrBase` do objeto para o `IUnknown` do objeto pai.|
+|[CComPtrBase::SetSite](#setsite)|Chame esse método para definir o site do `CComPtrBase` objeto como o `IUnknown` do objeto pai.|
 
 ### <a name="public-operators"></a>Operadores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CComPtrBase::operator T *](#operator_t_star)|O operador cast.|
-|[CComPtrBase::operator!](#operator_not)|O operador NOT.|
-|[CComPtrBase::operator &](#operator_amp)|A & operador.|
-|[CComPtrBase::operator *](#operator_star)|O operador \*.|
-|[CComPtrBase::operator <](#ccomptrbase__operator lt)|O menor-que o operador.|
-|[CComPtrBase::operator ==](#operator_eq_eq)|O operador de igualdade.|
-|[CComPtrBase::operator ->](#operator_ptr)|O operador de membros do ponteiro.|
+|[CComPtrBase:: Operator T *](#operator_t_star)|O operador cast.|
+|[CComPtrBase:: Operator!](#operator_not)|O operador NOT.|
+|[Operador CComPtrBase:: operator &](#operator_amp)|O operador de &.|
+|[CComPtrBase:: Operator *](#operator_star)|O operador \*.|
+|[Operador CComPtrBase:: Operator <](#ccomptrbase__operator lt)|O operador menor que.|
+|[CComPtrBase:: Operator = =](#operator_eq_eq)|O operador de igualdade.|
+|[CComPtrBase:: operator->](#operator_ptr)|O operador ponteiro-para-membros.|
 
 ### <a name="public-data-members"></a>Membros de Dados Públicos
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CComPtrBase::p](#p)|A variável de membro de dados de ponteiro.|
+|[CComPtrBase::p](#p)|A variável de membro de dados do ponteiro.|
 
 ## <a name="remarks"></a>Comentários
 
-Essa classe fornece a base para outros ponteiros inteligentes que usam as rotinas de gerenciamento de memória COM, como [CComQIPtr](../../atl/reference/ccomqiptr-class.md) e [CComPtr](../../atl/reference/ccomptr-class.md). As classes derivadas adicionar seus próprios operadores e construtores, mas contar com os métodos fornecidos pelo `CComPtrBase`.
+Essa classe fornece a base para outros apontadores inteligentes que usam rotinas de gerenciamento de memória COM, como [CComQIPtr](../../atl/reference/ccomqiptr-class.md) e [CComPtr](../../atl/reference/ccomptr-class.md). As classes derivadas adicionam seus próprios construtores e operadores, mas contam com os métodos fornecidos pelo `CComPtrBase`.
 
 ## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** atlcomcli. h
 
-##  <a name="advise"></a>  CComPtrBase::Advise
+##  <a name="advise"></a>CComPtrBase:: Advise
 
-Chame esse método para criar uma conexão entre o `CComPtrBase`do ponto de conexão e o coletor de um cliente.
+Chame esse método para criar uma conexão entre o `CComPtrBase`ponto de conexão do e o coletor de um cliente.
 
 ```
 HRESULT Advise(
@@ -102,7 +102,7 @@ HRESULT Advise(
 ### <a name="parameters"></a>Parâmetros
 
 *pUnk*<br/>
-Um ponteiro para o cliente `IUnknown`.
+Um ponteiro para o do `IUnknown`cliente.
 
 *iid*<br/>
 O GUID do ponto de conexão. Normalmente, isso é o mesmo que a interface de saída gerenciada pelo ponto de conexão.
@@ -112,13 +112,13 @@ Um ponteiro para o cookie que identifica exclusivamente a conexão.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Retorna S_OK no êxito ou um erro HRESULT em caso de falha.
+Retorna S_OK em caso de êxito ou um erro HRESULT em caso de falha.
 
 ### <a name="remarks"></a>Comentários
 
-Ver [AtlAdvise](connection-point-global-functions.md#atladvise) para obter mais informações.
+Consulte [AtlAdvise](connection-point-global-functions.md#atladvise) para obter mais informações.
 
-##  <a name="attach"></a>  CComPtrBase::Attach
+##  <a name="attach"></a>CComPtrBase:: Attach
 
 Chame esse método para apropriar-se de um ponteiro existente.
 
@@ -129,13 +129,13 @@ void Attach(T* p2) throw();
 ### <a name="parameters"></a>Parâmetros
 
 *p2*<br/>
-O `CComPtrBase` objeto assumirá a propriedade do ponteiro this.
+O `CComPtrBase` objeto assumirá a propriedade desse ponteiro.
 
 ### <a name="remarks"></a>Comentários
 
-`Attach` chamadas [CComPtrBase::Release](#release) existente [CComPtrBase::p](#p) variável de membro e, em seguida, atribui *p2* para `CComPtrBase::p`. Quando um `CComPtrBase` objeto assume a propriedade de um ponteiro, ele chamará automaticamente `Release` no ponteiro que excluirá o ponteiro e qualquer alocado dados se a contagem de referência no objeto chega a 0.
+`Attach`chama [CComPtrBase:: Release](#release) na variável de membro [CComPtrBase::p](#p) existente e, em seguida, atribui *P2* a `CComPtrBase::p`. Quando um `CComPtrBase` objeto apropria-se de um ponteiro, ele automaticamente chama `Release` o ponteiro que excluirá o ponteiro e todos os dados alocados se a contagem de referência no objeto chegar a 0.
 
-##  <a name="dtor"></a>  CComPtrBase::~CComPtrBase
+##  <a name="dtor"></a>CComPtrBase:: ~ CComPtrBase
 
 O destruidor.
 
@@ -145,11 +145,11 @@ O destruidor.
 
 ### <a name="remarks"></a>Comentários
 
-Libera a interface apontada pelo `CComPtrBase`.
+Libera a interface apontada por `CComPtrBase`.
 
 ##  <a name="cocreateinstance"></a>  CComPtrBase::CoCreateInstance
 
-Chame esse método para criar um objeto da classe associada com uma ID de classe especificada ou a ID do programa.
+Chame esse método para criar um objeto da classe associada a uma ID de classe ou ID de programa especificada.
 
 ```
 HRESULT CoCreateInstance(
@@ -169,27 +169,27 @@ HRESULT CoCreateInstance(
 Ponteiro para um ProgID, usado para recuperar o CLSID.
 
 *pUnkOuter*<br/>
-Se for NULL, indica que o objeto não está sendo criado como parte de uma agregação. Se não-nulo, é um ponteiro para o objeto agregado `IUnknown` interface (o controlando `IUnknown`).
+Se NULL, indica que o objeto não está sendo criado como parte de uma agregação. Se não for NULL, é um ponteiro para a interface do `IUnknown` objeto de agregação (o controle `IUnknown`).
 
 *dwClsContext*<br/>
 Contexto no qual o código que gerencia o objeto recém-criado será executado.
 
 *rclsid*<br/>
-CLSID associado a dados e o código que será usado para criar o objeto.
+CLSID associado aos dados e ao código que será usado para criar o objeto.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Retornará S_OK no êxito, ou REGDB_E_CLASSNOTREG, CLASS_E_NOAGGREGATION, CO_E_CLASSSTRING ou E_NOINTERFACE em caso de falha. Ver [CoCreateClassInstance](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance) e [CLSIDFromProgID](/windows/desktop/api/combaseapi/nf-combaseapi-clsidfromprogid) para obter uma descrição desses erros.
+Retorna S_OK em caso de êxito ou REGDB_E_CLASSNOTREG, CLASS_E_NOAGGREGATION, CO_E_CLASSSTRING ou E_NOINTERFACE em caso de falha. Consulte [CoCreateClassInstance](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance) e [CLSIDFromProgID](/windows/win32/api/combaseapi/nf-combaseapi-clsidfromprogid) para obter uma descrição desses erros.
 
 ### <a name="remarks"></a>Comentários
 
-Se o primeiro formulário do método for chamado, [CLSIDFromProgID](/windows/desktop/api/combaseapi/nf-combaseapi-clsidfromprogid) é usada para recuperar o CLSID. Em seguida, chame ambos os formatos [CoCreateClassInstance](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance).
+Se a primeira forma do método for chamada, [CLSIDFromProgID](/windows/win32/api/combaseapi/nf-combaseapi-clsidfromprogid) será usado para recuperar o CLSID. Em seguida, os dois formulários chamam [CoCreateClassInstance](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance).
 
-Em compilações de depuração, um erro de asserção ocorrerá se [CComPtrBase::p](#p) não é igual a NULL.
+Em compilações de depuração, ocorrerá um erro de asserção se [CComPtrBase::p](#p) não for igual a NULL.
 
 ##  <a name="copyto"></a>  CComPtrBase::CopyTo
 
-Chame esse método para copiar o `CComPtrBase` ponteiro a outra variável de ponteiro.
+Chame esse método para copiar o `CComPtrBase` ponteiro para outra variável de ponteiro.
 
 ```
 HRESULT CopyTo(T** ppT) throw();
@@ -202,13 +202,13 @@ Endereço da variável que receberá o `CComPtrBase` ponteiro.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Retornará S_OK no êxito, E_POINTER em caso de falha.
+Retorna S_OK em caso de sucesso, E_POINTER em caso de falha.
 
 ### <a name="remarks"></a>Comentários
 
-Copia o `CComPtrBase` ponteiro para *ppT*. A contagem de referência as [CComPtrBase::p](#p) variável de membro é incrementado.
+Copia o `CComPtrBase` ponteiro para o *ppt*. A contagem de referência na variável de membro [CComPtrBase::p](#p) é incrementada.
 
-Um erro HRESULT será retornado se *ppT* é igual a NULL. Em compilações de depuração, um erro de asserção ocorrerá se *ppT* é igual a NULL.
+Um erro HRESULT será retornado se o *ppt* for igual a NULL. Em compilações de depuração, ocorrerá um erro de asserção se o *ppt* for igual a nulo.
 
 ##  <a name="detach"></a>  CComPtrBase::Detach
 
@@ -224,11 +224,11 @@ Retorna uma cópia do ponteiro.
 
 ### <a name="remarks"></a>Comentários
 
-Libera a propriedade de um ponteiro, define o [CComPtrBase::p](#p) variável de membro de dados como NULL e retorna uma cópia do ponteiro.
+Libera a propriedade de um ponteiro, define a variável de membro de dados [CComPtrBase::p](#p) como NULL e retorna uma cópia do ponteiro.
 
 ##  <a name="isequalobject"></a>  CComPtrBase::IsEqualObject
 
-Chame esse método para verificar se o especificado `IUnknown` aponta para o mesmo objeto associado com o `CComPtrBase` objeto.
+Chame esse método para verificar se os pontos `IUnknown` especificados apontam para o mesmo objeto associado `CComPtrBase` ao objeto.
 
 ```
 bool IsEqualObject(IUnknown* pOther) throw();
@@ -241,9 +241,9 @@ O `IUnknown *` de comparação.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Retorna VERDADEIRO se os objetos forem idênticos, false caso contrário.
+Retornará true se os objetos forem idênticos; caso contrário, false.
 
-##  <a name="operator_not"></a>  CComPtrBase::operator!
+##  <a name="operator_not"></a>CComPtrBase:: Operator!
 
 O operador NOT.
 
@@ -253,11 +253,11 @@ bool operator!() const throw();
 
 ### <a name="return-value"></a>Valor de retorno
 
-Retornará true se o `CComHeapPtr` ponteiro é igual a NULL, false caso contrário.
+Retorna true se o `CComHeapPtr` ponteiro for igual a NULL; caso contrário, false.
 
-##  <a name="operator_amp"></a>  CComPtrBase::operator &amp;
+##  <a name="operator_amp"></a>Operador CComPtrBase::&amp;
 
-A & operador.
+O operador de &.
 
 ```
 T** operator&() throw();
@@ -267,7 +267,7 @@ T** operator&() throw();
 
 Retorna o endereço do objeto apontado pelo `CComPtrBase` objeto.
 
-##  <a name="operator_star"></a>  CComPtrBase::operator \*
+##  <a name="operator_star"></a>Operador CComPtrBase::\*
 
 O operador \*.
 
@@ -279,9 +279,9 @@ T& operator*() const throw();
 
 Retorna o valor de [CComPtrBase::p](#p); ou seja, um ponteiro para o objeto referenciado pelo `CComPtrBase` objeto.
 
-Se as compilações de depuração, um erro de asserção ocorrerá se [CComPtrBase::p](#p) não é igual a NULL.
+Se a depuração for compilada, ocorrerá um erro de asserção se [CComPtrBase::p](#p) não for igual a NULL.
 
-##  <a name="operator_eq_eq"></a>  CComPtrBase::operator = =
+##  <a name="operator_eq_eq"></a>CComPtrBase:: Operator = =
 
 O operador de igualdade.
 
@@ -296,11 +296,11 @@ Um ponteiro para um objeto.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Retornará true se `CComPtrBase` e *pT* apontam para o mesmo objeto, false caso contrário.
+Retorna true se `CComPtrBase` e *pt* apontam para o mesmo objeto; caso contrário, false.
 
-##  <a name="operator_ptr"></a>  CComPtrBase::operator-&gt;
+##  <a name="operator_ptr"></a>Operador CComPtrBase:: Operator&gt;
 
-O operador de ponteiro para membro.
+O operador ponteiro-para-membro.
 
 ```
 _NoAddRefReleaseOnCComPtr<T>* operator->() const throw();
@@ -308,15 +308,15 @@ _NoAddRefReleaseOnCComPtr<T>* operator->() const throw();
 
 ### <a name="return-value"></a>Valor de retorno
 
-Retorna o valor da [CComPtrBase::p](#p) variável de membro de dados.
+Retorna o valor da variável de membro de dados [CComPtrBase::p](#p) .
 
 ### <a name="remarks"></a>Comentários
 
-Use este operador para chamar um método em uma classe apontada pelo `CComPtrBase` objeto. Em compilações de depuração, uma falha de asserção ocorrerá se o `CComPtrBase` membro de dados aponta para NULL.
+Use este operador para chamar um método em uma classe apontada pelo `CComPtrBase` objeto. Em compilações de depuração, ocorrerá uma falha de `CComPtrBase` asserção se o membro de dados apontar para NULL.
 
-##  <a name="operator_lt"></a>  CComPtrBase::operator &lt;
+##  <a name="operator_lt"></a>Operador CComPtrBase::&lt;
 
-O menor-que o operador.
+O operador menor que.
 
 ```
 bool operator<(T* pT) const throw();
@@ -329,9 +329,9 @@ Um ponteiro para um objeto.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Retorna VERDADEIRO se o ponteiro gerenciado pelo objeto atual é menor que o ponteiro para o qual está sendo comparado.
+Retornará true se o ponteiro gerenciado pelo objeto atual for menor que o ponteiro ao qual ele está sendo comparado.
 
-##  <a name="operator_t_star"></a>  CComPtrBase::operator T\*
+##  <a name="operator_t_star"></a>Operador CComPtrBase:: Operator T\*
 
 O operador cast.
 
@@ -341,11 +341,11 @@ operator T*() const throw();
 
 ### <a name="remarks"></a>Comentários
 
-Retorna um ponteiro para o tipo de dados de objeto definido no modelo de classe.
+Retorna um ponteiro para o tipo de dados Object definido no modelo de classe.
 
 ##  <a name="p"></a>  CComPtrBase::p
 
-A variável de membro de dados de ponteiro.
+A variável de membro de dados do ponteiro.
 
 ```
 T* p;
@@ -353,7 +353,7 @@ T* p;
 
 ### <a name="remarks"></a>Comentários
 
-Essa variável de membro contém as informações de ponteiro.
+Essa variável de membro contém as informações do ponteiro.
 
 ##  <a name="queryinterface"></a>  CComPtrBase::QueryInterface
 
@@ -374,13 +374,13 @@ Endereço da variável de saída que recebe o ponteiro de interface solicitado.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Retornará S_OK no êxito ou E_NOINTERFACE em caso de falha.
+Retorna S_OK em caso de êxito ou E_NOINTERFACE em caso de falha.
 
 ### <a name="remarks"></a>Comentários
 
-Este método chama [IUnknown:: QueryInterface](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)).
+Este método chama [IUnknown:: QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)).
 
-Em compilações de depuração, um erro de asserção ocorrerá se *pp* não é igual a NULL.
+Em compilações de depuração, ocorrerá um erro de asserção se *PP* não for igual a NULL.
 
 ##  <a name="release"></a>  CComPtrBase::Release
 
@@ -392,11 +392,11 @@ void Release() throw();
 
 ### <a name="remarks"></a>Comentários
 
-A interface é liberada, e [CComPtrBase::p](#p) é definido como NULL.
+A interface é liberada e [CComPtrBase::p](#p) é definido como nulo.
 
 ##  <a name="setsite"></a>  CComPtrBase::SetSite
 
-Chame esse método para definir o site da `CComPtrBase` do objeto para o `IUnknown` do objeto pai.
+Chame esse método para definir o site do `CComPtrBase` objeto como o `IUnknown` do objeto pai.
 
 ```
 HRESULT SetSite(IUnknown* punkParent) throw();
@@ -405,15 +405,15 @@ HRESULT SetSite(IUnknown* punkParent) throw();
 ### <a name="parameters"></a>Parâmetros
 
 *punkParent*<br/>
-Um ponteiro para o `IUnknown` interface do pai.
+Um ponteiro para a `IUnknown` interface do pai.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Retorna S_OK no êxito ou um erro HRESULT em caso de falha.
+Retorna S_OK em caso de êxito ou um erro HRESULT em caso de falha.
 
 ### <a name="remarks"></a>Comentários
 
-Este método chama [AtlSetChildSite](composite-control-global-functions.md#atlsetchildsite).
+Esse método chama [AtlSetChildSite](composite-control-global-functions.md#atlsetchildsite).
 
 ## <a name="see-also"></a>Consulte também
 

@@ -1,19 +1,19 @@
 ---
-title: pragma (C++ COM atributo)
+title: pragma (C++ atributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.pragma
 helpviewer_keywords:
 - pragma attribute
 ms.assetid: 3f90d023-b8b5-4007-8311-008bb72cbea1
-ms.openlocfilehash: 159e1570c2bde07bb4df8fa904a519e8e0018a6a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5c3ee0d3f99bd27ca41d68b11c11522e92c8d40a
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407452"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514271"
 ---
-# <a name="pragma"></a>pragma
+# <a name="pragma"></a>(pragma)
 
 Emite a cadeia de caracteres especificada no arquivo. idl gerado sem o uso de aspas.
 
@@ -30,7 +30,7 @@ O pragma que você deseja ir para o arquivo. idl gerado.
 
 ## <a name="remarks"></a>Comentários
 
-O **pragma** atributo C++ tem a mesma funcionalidade que o [pragma](/windows/desktop/Midl/pragma) atributo MIDL.
+O atributo **pragma** C++ tem a mesma funcionalidade que o atributo de MIDL de [pragma](/windows/win32/Midl/pragma) .
 
 ## <a name="example"></a>Exemplo
 
@@ -50,16 +50,16 @@ __interface A
 
 ## <a name="requirements"></a>Requisitos
 
-### <a name="attribute-context"></a>Atributo de contexto
+### <a name="attribute-context"></a>Contexto de atributo
 
 |||
 |-|-|
-|**Aplica-se a**|Em qualquer lugar|
+|**Aplica-se a**|Lugares|
 |**Repetível**|Não|
-|**Atributos obrigatórios**|Nenhum|
+|**Atributos necessários**|Nenhum|
 |**Atributos inválidos**|Nenhum|
 
-Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
+Para obter mais informações sobre os contextos de atributo, consulte contextos de [atributo](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Consulte também
 

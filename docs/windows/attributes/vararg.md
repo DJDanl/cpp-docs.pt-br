@@ -1,17 +1,17 @@
 ---
-title: VARARG (C++ COM atributo)
+title: vararg (C++ atributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.vararg
 helpviewer_keywords:
 - vararg attribute
 ms.assetid: 20fc3244-18e9-411c-990e-d5b4fa29a570
-ms.openlocfilehash: a433522b78424c48c4afe754f7b8337e3952dc8e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d1c6b1a4e049bccfcf3e16bae4b5f9b285d11192
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407205"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514892"
 ---
 # <a name="vararg"></a>vararg
 
@@ -25,7 +25,7 @@ Especifica que a função usa um número variável de argumentos.
 
 ## <a name="remarks"></a>Comentários
 
-O **vararg** atributo C++ tem a mesma funcionalidade que o [vararg](/windows/desktop/Midl/vararg) atributo MIDL.
+O atributo **vararg** C++ tem a mesma funcionalidade que o atributo MIDL de [vararg](/windows/win32/Midl/vararg) .
 
 ## <a name="example"></a>Exemplo
 
@@ -47,16 +47,16 @@ __interface X : public IUnknown
 
 ## <a name="requirements"></a>Requisitos
 
-### <a name="attribute-context"></a>Atributo de contexto
+### <a name="attribute-context"></a>Contexto de atributo
 
 |||
 |-|-|
 |**Aplica-se a**|Método de interface|
 |**Repetível**|Não|
-|**Atributos obrigatórios**|Nenhum|
+|**Atributos necessários**|Nenhum|
 |**Atributos inválidos**|Nenhum|
 
-Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
+Para obter mais informações sobre os contextos de atributo, consulte contextos de [atributo](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Consulte também
 

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - deploying applications [C++]
 - application deployment [C++]
 ms.assetid: d4b4ffc0-d2bd-4e4a-84a6-62f1c26f6a09
-ms.openlocfilehash: 8dccf581cff88dc2e8c4a889bed8b47fc140eb7c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 67d5c7b0772eda55d1b653bd73f95ac93e31e644
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62345364"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514815"
 ---
 # <a name="deployment-in-visual-c"></a>Implantação no Visual C++
 
@@ -48,7 +48,7 @@ Além das bibliotecas de vínculo dinâmico, o Visual Studio fornece a maioria d
 
 ## <a name="troubleshooting-deployment-issues"></a>Solução de problemas de implantação
 
-A ordem de carregamento das bibliotecas do Visual C++ é dependente do sistema. Para diagnosticar problemas do carregador, use depends.exe ou where.exe. Para obter mais informações, confira [Ordem de pesquisa das bibliotecas de vínculo dinâmico (Windows)](/windows/desktop/Dlls/dynamic-link-library-search-order).
+A ordem de carregamento das bibliotecas do Visual C++ é dependente do sistema. Para diagnosticar problemas do carregador, use depends.exe ou where.exe. Para obter mais informações, confira [Ordem de pesquisa das bibliotecas de vínculo dinâmico (Windows)](/windows/win32/Dlls/dynamic-link-library-search-order).
 
 ## <a name="see-also"></a>Consulte também
 

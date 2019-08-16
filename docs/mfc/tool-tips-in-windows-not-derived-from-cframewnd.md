@@ -9,30 +9,30 @@ helpviewer_keywords:
 - controls [MFC], tool tips
 - handler functions [MFC], tool tips
 ms.assetid: cad5ef0f-02e3-4151-ad0d-3d42e6932b0e
-ms.openlocfilehash: 3d44f2c503b689360f040e6804d319c331d5c0ca
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1f68fb62335219ea498163e6124c8e91e49f2938
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62168018"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69511029"
 ---
 # <a name="tool-tips-in-windows-not-derived-from-cframewnd"></a>Dicas de ferramenta no Windows derivadas de CFrameWnd
 
-Família este artigo aborda habilitando dicas de ferramenta para controles contidos em uma janela que não é derivada de [CFrameWnd](../mfc/reference/cframewnd-class.md). O artigo [dicas de ferramenta de barras de ferramentas](../mfc/toolbar-tool-tips.md) fornece informações sobre dicas de ferramenta para controles em um `CFrameWnd`.
+Esta família de artigos aborda a habilitação de dicas de ferramenta para controles contidos em uma janela que não é derivada de [CFrameWnd](../mfc/reference/cframewnd-class.md). As barras de ferramentas do artigo [dicas de ferramenta](../mfc/toolbar-tool-tips.md) fornecem informações sobre dicas de ferramenta `CFrameWnd`para controles em um.
 
-Os tópicos abordados nesta família artigo incluem:
+Os tópicos abordados nesta família de artigos incluem:
 
 - [Habilitando dicas de ferramenta](../mfc/enabling-tool-tips.md)
 
 - [Tratando a notificação TTN_NEEDTEXT para dicas de ferramenta](../mfc/handling-ttn-needtext-notification-for-tool-tips.md)
 
-- [Estrutura TOOLTIPTEXT](../mfc/tooltiptext-structure.md)
+- [A estrutura TOOLTIPTEXT](../mfc/tooltiptext-structure.md)
 
-Dicas de ferramenta são exibidas automaticamente para os botões e outros controles contidos em uma janela pai derivado de `CFrameWnd`. Isso ocorre porque `CFrameWnd` tem um manipulador padrão para o [TTN_GETDISPINFO](/windows/desktop/Controls/ttn-getdispinfo) notificação, que manipula **TTN_NEEDTEXT** controles associados a controles de dica de notificações da ferramenta.
+Dicas de ferramenta são exibidas automaticamente para botões e outros controles contidos em uma janela pai derivada `CFrameWnd`de. Isso ocorre porque `CFrameWnd` o tem um manipulador padrão para a notificação [TTN_GETDISPINFO](/windows/win32/Controls/ttn-getdispinfo) , que manipula notificações **TTN_NEEDTEXT** de controles de dica de ferramenta associados a controles.
 
-No entanto, esse manipulador padrão não é chamado quando o **TTN_NEEDTEXT** notificação é enviada de um controle de dica de ferramenta associado ao controle em uma janela que não é um `CFrameWnd`, como um controle em uma caixa de diálogo ou uma exibição de formulário. Portanto, é necessário para fornecer uma função de manipulador para o **TTN_NEEDTEXT** mensagem de notificação para exibir dicas de ferramenta para controles filho.
+No entanto, esse manipulador padrão não é chamado quando a notificação **TTN_NEEDTEXT** é enviada de um controle de dica de ferramenta associado a um controle em uma janela `CFrameWnd`que não é um, como um controle em uma caixa de diálogo ou um modo de exibição de formulário. Portanto, é necessário fornecer uma função de manipulador para a mensagem de notificação **TTN_NEEDTEXT** a fim de exibir dicas de ferramenta para controles filho.
 
-As dicas de ferramenta padrão fornecidas para o windows por [CWnd::EnableToolTips](../mfc/reference/cwnd-class.md#enabletooltips) não tem texto associado a eles. Para recuperar o texto da dica de ferramenta a ser exibido, o **TTN_NEEDTEXT** notificação é enviada para a janela pai do controle de dica de ferramenta antes que a janela de dica de ferramenta é exibida. Se não houver nenhum manipulador para esta mensagem atribuir um valor para o *pszText* membro a **TOOLTIPTEXT** estrutura, não haverá nenhum texto exibido para a dica de ferramenta.
+As dicas de ferramenta padrão fornecidas para suas janelas de [CWnd:: EnableToolTips](../mfc/reference/cwnd-class.md#enabletooltips) não têm texto associado a elas. Para recuperar o texto da dica de ferramenta a ser exibida, a notificação **TTN_NEEDTEXT** é enviada para a janela pai do controle de dica de ferramenta logo antes de a janela de dica de ferramenta ser exibida. Se não houver nenhum manipulador para essa mensagem para atribuir algum valor ao membro *pszText* da estrutura **ToolTipText** , não haverá nenhum texto exibido para a dica de ferramenta.
 
 ## <a name="see-also"></a>Consulte também
 

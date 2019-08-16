@@ -1,21 +1,21 @@
 ---
-title: out (C++ COM atributo)
+title: out (C++ atributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.out
 helpviewer_keywords:
 - out attribute
 ms.assetid: 5051b1bf-4949-4bf1-b82f-35e14f0f244b
-ms.openlocfilehash: 7020bd6cfcf8bcdbfb773908e693c6364a29e343
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 11c8e4473f0b849fab7846a825b90da3ed9f036f
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407595"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514291"
 ---
 # <a name="out-c"></a>out (C++)
 
-Identifica os parâmetros de ponteiro que são retornados do procedimento chamado ao procedimento de chamada (do servidor para o cliente).
+Identifica os parâmetros de ponteiro que são retornados do procedimento chamado para o procedimento de chamada (do servidor para o cliente).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -25,24 +25,24 @@ Identifica os parâmetros de ponteiro que são retornados do procedimento chamad
 
 ## <a name="remarks"></a>Comentários
 
-O **horizontalmente** atributo C++ tem a mesma funcionalidade que o [out](/windows/desktop/Midl/out-idl) atributo MIDL.
+O atributo **out** C++ tem a mesma funcionalidade que o atributo MIDL de [saída](/windows/win32/Midl/out-idl) .
 
 ## <a name="example"></a>Exemplo
 
-Veja o exemplo de [associável](bindable.md) para uso do exemplo **out**.
+Consulte o exemplo de [ligável](bindable.md) para um exemplo de uso de **out**.
 
 ## <a name="requirements"></a>Requisitos
 
-### <a name="attribute-context"></a>Atributo de contexto
+### <a name="attribute-context"></a>Contexto de atributo
 
 |||
 |-|-|
 |**Aplica-se a**|Parâmetro de interface|
 |**Repetível**|Não|
-|**Atributos obrigatórios**|Nenhum|
+|**Atributos necessários**|Nenhum|
 |**Atributos inválidos**|Nenhum|
 
-Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
+Para obter mais informações sobre os contextos de atributo, consulte contextos de [atributo](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Consulte também
 

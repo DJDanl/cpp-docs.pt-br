@@ -6,20 +6,20 @@ helpviewer_keywords:
 - ATL, connection points
 - connection points [C++], about connection points
 ms.assetid: 17d76165-5f83-4f95-b36d-483821c247a1
-ms.openlocfilehash: 4d94396ef8839516d9bfee15a2611cce66baa6bd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: df69496a6d245702a9598d684b25122ca55b1e6d
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62252294"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69491806"
 ---
 # <a name="atl-connection-points"></a>Pontos de conexão ATL
 
 Um objeto conectável é aquele que oferece suporte a interfaces de saída. Uma interface de saída permite que o objeto se comunique com um cliente. Para cada interface de saída, o objeto conectável expõe um ponto de conexão. Cada interface de saída é implementada por um cliente em um objeto denominado de um coletor.
 
-![Pontos de Conexão](../atl/media/vc2zw31.gif "pontos de Conexão")
+![Pontos de conexão](../atl/media/vc2zw31.gif "Pontos de conexão")
 
-Cada ponto de conexão dá suporte a [IConnectionPoint](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpoint) interface. O objeto conectável expõe seus pontos de conexão para o cliente por meio de [IConnectionPointContainer](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpointcontainer) interface.
+Cada ponto de conexão dá suporte à interface [IConnectionPoint](/windows/win32/api/ocidl/nn-ocidl-iconnectionpoint) . O objeto conectável expõe seus pontos de conexão para o cliente por meio da interface [IConnectionPointContainer](/windows/win32/api/ocidl/nn-ocidl-iconnectionpointcontainer) .
 
 ## <a name="in-this-section"></a>Nesta seção
 

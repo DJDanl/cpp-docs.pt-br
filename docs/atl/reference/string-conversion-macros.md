@@ -11,12 +11,12 @@ f1_keywords:
 - atlconv/ATL::DEVMODEW2A
 - atlconv/ATL::TEXTMETRICW2A
 ms.assetid: 2ff7c0b6-2bde-45fe-897f-6128e18e0c27
-ms.openlocfilehash: 6a84424de81eba2e6ab1e1baf60f567ebf2739ee
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: f7d9548fc5710e8d3d5d668dff230a60e7a291a1
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915500"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69495188"
 ---
 # <a name="string-conversion-macros"></a>Macros de conversão de cadeia de caracteres
 
@@ -28,7 +28,7 @@ As macros de conversão de cadeia de caracteres discutidas neste documento são 
 
 ##  <a name="devmode_and_textmetric_string_conversion_macros"></a>Macros de conversão DEVMODE e TEXTMETRIC String
 
-Essas macros criam uma cópia de uma estrutura [DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea) ou [TEXTMETRIC](/windows/desktop/api/wingdi/ns-wingdi-tagtextmetrica) e convertem as cadeias de caracteres dentro da nova estrutura para um novo tipo de cadeia. As macros alocam memória na pilha para a nova estrutura e retornam um ponteiro para a nova estrutura.
+Essas macros criam uma cópia de uma estrutura [DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea) ou [TEXTMETRIC](/windows/win32/api/wingdi/ns-wingdi-textmetricw) e convertem as cadeias de caracteres dentro da nova estrutura para um novo tipo de cadeia. As macros alocam memória na pilha para a nova estrutura e retornam um ponteiro para a nova estrutura.
 
 ```cpp
 MACRONAME( address_of_structure )

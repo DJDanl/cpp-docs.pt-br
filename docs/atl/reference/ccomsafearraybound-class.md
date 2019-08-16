@@ -12,16 +12,16 @@ f1_keywords:
 helpviewer_keywords:
 - CComSafeArrayBound class
 ms.assetid: dd6299db-5f84-4630-bbf0-f5add5318437
-ms.openlocfilehash: 6d4650273661c0ce40558a37ef02bb2a3ff81809
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: bd77c2a788e769c74518d73b45c3c05ff27b3f58
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221144"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496907"
 ---
 # <a name="ccomsafearraybound-class"></a>Classe CComSafeArrayBound
 
-Essa classe é um wrapper para um [SAFEARRAYBOUND](/windows/desktop/api/oaidl/ns-oaidl-tagsafearraybound) estrutura.
+Essa classe é um wrapper para uma estrutura [SAFEARRAYBOUND](/windows/win32/api/oaidl/ns-oaidl-tagsafearraybound) .
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -46,11 +46,11 @@ class CComSafeArrayBound : public SAFEARRAYBOUND
 
 |||
 |-|-|
-|[operator =](#operator_eq)|Conjuntos de `CComSafeArrayBound` para um novo valor.|
+|[operator =](#operator_eq)|Define o `CComSafeArrayBound` para um novo valor.|
 
 ## <a name="remarks"></a>Comentários
 
-Essa classe é um wrapper para o `SAFEARRAYBOUND` estrutura usada pelo [CComSafeArray](../../atl/reference/ccomsafearray-class.md). Fornece métodos para consultar e configurar os limites superiores e inferiores de uma única dimensão de um `CComSafeArray` objeto e o número de elementos que ele contém. Um multidimensional `CComSafeArray` objeto usa uma matriz de `CComSafeArrayBound` objetos, um para cada dimensão. Portanto, ao usar métodos como [GetCount](#getcount), lembre-se de que esse método não retornará o número total de elementos em uma matriz multidimensional.
+Essa classe é um wrapper para a `SAFEARRAYBOUND` estrutura usada pelo [CComSafeArray](../../atl/reference/ccomsafearray-class.md). Ele fornece métodos para consultar e definir os limites superior e inferior de uma única dimensão de um `CComSafeArray` objeto e o número de elementos que ele contém. Um `CComSafeArray` objeto multidimensional usa uma matriz de `CComSafeArrayBound` objetos, um para cada dimensão. Portanto, ao usar métodos como [GetCount](#getcount), lembre-se de que esse método não retornará o número total de elementos em uma matriz multidimensional.
 
 **Cabeçalho:** atlsafe. h
 
@@ -76,7 +76,7 @@ O limite inferior do qual a matriz é numerada.
 
 ### <a name="remarks"></a>Comentários
 
-Se a matriz deve ser acessado de um C++ programa, é recomendável que o limite inferior ser definido como 0. Ele pode ser preferível usar um valor de limite inferior diferente se a matriz deve ser usado com outras linguagens, como Visual Basic.
+Se a matriz for ser acessada de C++ um programa, é recomendável que o limite inferior seja definido como 0. Pode ser preferível usar um valor de limite inferior diferente se a matriz for usada com outras linguagens, como Visual Basic.
 
 ##  <a name="getcount"></a>  CComSafeArrayBound::GetCount
 
@@ -92,7 +92,7 @@ Retorna o número de elementos.
 
 ### <a name="remarks"></a>Comentários
 
-Se associado `CComSafeArray` objeto representa uma matriz multidimensional, esse método retornará somente o número total de elementos na dimensão mais à direita. Use [CComSafeArray::GetCount](../../atl/reference/ccomsafearray-class.md#getcount) para obter o número total de elementos.
+Se o objeto `CComSafeArray` associado representar uma matriz multidimensional, esse método retornará apenas o número total de elementos na dimensão mais à direita. Use [CComSafeArray:: GetCount](../../atl/reference/ccomsafearray-class.md#getcount) para obter o número total de elementos.
 
 ##  <a name="getlowerbound"></a>  CComSafeArrayBound::GetLowerBound
 
@@ -120,11 +120,11 @@ Retorna o limite superior do `CComSafeArrayBound` objeto.
 
 ### <a name="remarks"></a>Comentários
 
-O limite superior depende do número de elementos e o valor de limite inferior. Por exemplo, se o limite inferior é 0 e o número de elementos é 10, o limite superior será definido automaticamente a 9.
+O limite superior depende do número de elementos e do valor limite inferior. Por exemplo, se o limite inferior for 0 e o número de elementos for 10, o limite superior será definido automaticamente como 9.
 
-##  <a name="operator_eq"></a>  CComSafeArrayBound::operator =
+##  <a name="operator_eq"></a>CComSafeArrayBound:: Operator =
 
-Conjuntos de `CComSafeArrayBound` para um novo valor.
+Define o `CComSafeArrayBound` para um novo valor.
 
 ```
 CComSafeArrayBound& operator= (const CComSafeArrayBound& bound) throw();
@@ -145,7 +145,7 @@ Retorna um ponteiro para o `CComSafeArrayBound` objeto.
 
 ### <a name="remarks"></a>Comentários
 
-O `CComSafeArrayBound` objeto pode ser atribuído usando uma existente `CComSafeArrayBound`, ou fornecendo o número de elementos, nesse caso o limite inferior é definido como 0 por padrão.
+O `CComSafeArrayBound` objeto pode ser atribuído usando um existente `CComSafeArrayBound`ou fornecendo o número de elementos; nesse caso, o limite inferior é definido como 0 por padrão.
 
 ##  <a name="setcount"></a>  CComSafeArrayBound::SetCount
 
@@ -183,9 +183,9 @@ Retorna o novo limite inferior do `CComSafeArrayBound` objeto.
 
 ### <a name="remarks"></a>Comentários
 
-Se a matriz deve ser acessado a partir de um programa do Visual C++, é recomendável que o limite inferior ser definido como 0. Ele pode ser preferível usar um valor de limite inferior diferente se a matriz deve ser usado com outras linguagens, como Visual Basic.
+Se a matriz for ser acessada a partir C++ de um programa Visual, é recomendável que o limite inferior seja definido como 0. Pode ser preferível usar um valor de limite inferior diferente se a matriz for usada com outras linguagens, como Visual Basic.
 
-O limite superior depende do número de elementos e o valor de limite inferior. Por exemplo, se o limite inferior é 0 e o número de elementos é 10, o limite superior será definido automaticamente a 9.
+O limite superior depende do número de elementos e do valor limite inferior. Por exemplo, se o limite inferior for 0 e o número de elementos for 10, o limite superior será definido automaticamente como 9.
 
 ## <a name="see-also"></a>Consulte também
 

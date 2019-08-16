@@ -18,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - CTokenPrivileges class
 ms.assetid: 89590105-f001-4014-870d-142926091231
-ms.openlocfilehash: 5f8379d20d8c8d525cd645e1d4aa0c751e16f531
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: f4ecc96ee53d6c688d17afa9957ccbf5060ca3fd
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915531"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496277"
 ---
 # <a name="ctokenprivileges-class"></a>Classe CTokenPrivileges
 
@@ -71,13 +71,13 @@ class CTokenPrivileges
 
 ## <a name="remarks"></a>Comentários
 
-Um [token de acesso](/windows/desktop/SecAuthZ/access-tokens) é um objeto que descreve o contexto de segurança de um processo ou thread e é alocado para cada usuário conectado em um sistema Windows.
+Um [token de acesso](/windows/win32/SecAuthZ/access-tokens) é um objeto que descreve o contexto de segurança de um processo ou thread e é alocado para cada usuário conectado em um sistema Windows.
 
-O token de acesso é usado para descrever os vários privilégios de segurança concedidos a cada usuário. Um privilégio consiste em um número de 64 bits chamado identificador local exclusivo ( [LUID](/windows/desktop/api/winnt/ns-winnt-luid)) e uma cadeia de caracteres de descritor.
+O token de acesso é usado para descrever os vários privilégios de segurança concedidos a cada usuário. Um privilégio consiste em um número de 64 bits chamado identificador local exclusivo ( [LUID](/windows/win32/api/winnt/ns-winnt-luid)) e uma cadeia de caracteres de descritor.
 
-A `CTokenPrivileges` classe é um wrapper para a estrutura [TOKEN_PRIVILEGES](/windows/desktop/api/winnt/ns-winnt-token_privileges) e contém 0 ou mais privilégios. Os privilégios podem ser adicionados, excluídos ou consultados usando os métodos de classe fornecidos.
+A `CTokenPrivileges` classe é um wrapper para a estrutura [TOKEN_PRIVILEGES](/windows/win32/api/winnt/ns-winnt-token_privileges) e contém 0 ou mais privilégios. Os privilégios podem ser adicionados, excluídos ou consultados usando os métodos de classe fornecidos.
 
-Para obter uma introdução ao modelo de controle de acesso no Windows, consulte [controle de acesso](/windows/desktop/SecAuthZ/access-control) no SDK do Windows.
+Para obter uma introdução ao modelo de controle de acesso no Windows, consulte [controle de acesso](/windows/win32/SecAuthZ/access-control) no SDK do Windows.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -101,7 +101,7 @@ Ponteiro para uma cadeia de caracteres terminada em nulo que especifica o nome d
 Se for true, o privilégio será habilitado. Se for false, o privilégio será desabilitado.
 
 *rPrivileges*<br/>
-Referência a uma estrutura [TOKEN_PRIVILEGES](/windows/desktop/api/winnt/ns-winnt-token_privileges) . Os privilégios e atributos são copiados dessa estrutura e adicionados ao `CTokenPrivileges` objeto.
+Referência a uma estrutura [TOKEN_PRIVILEGES](/windows/win32/api/winnt/ns-winnt-token_privileges) . Os privilégios e atributos são copiados dessa estrutura e adicionados ao `CTokenPrivileges` objeto.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -123,7 +123,7 @@ CTokenPrivileges(const TOKEN_PRIVILEGES& rPrivileges) throw(...);
 O `CTokenPrivileges` objeto a ser atribuído ao novo objeto.
 
 *rPrivileges*<br/>
-A estrutura [TOKEN_PRIVILEGES](/windows/desktop/api/winnt/ns-winnt-token_privileges) a ser atribuída ao novo `CTokenPrivileges` objeto.
+A estrutura [TOKEN_PRIVILEGES](/windows/win32/api/winnt/ns-winnt-token_privileges) a ser atribuída ao novo `CTokenPrivileges` objeto.
 
 ### <a name="remarks"></a>Comentários
 
@@ -230,7 +230,7 @@ void GetLuidsAndAttributes(
 ### <a name="parameters"></a>Parâmetros
 
 *pPrivileges*<br/>
-Ponteiro para uma matriz de objetos [LUID](/windows/desktop/api/winnt/ns-winnt-luid) . `CLUIDArray`é um typedef definido como `CAtlArray<LUID> CLUIDArray`.
+Ponteiro para uma matriz de objetos [LUID](/windows/win32/api/winnt/ns-winnt-luid) . `CLUIDArray`é um typedef definido como `CAtlArray<LUID> CLUIDArray`.
 
 *pAttributes*<br/>
 Ponteiro para uma matriz de objetos DWORD. Se esse parâmetro for omitido ou nulo, os atributos não serão recuperados. `CAttributes`é um typedef definido como `CAtlArray <DWORD> CAttributes`.
@@ -273,7 +273,7 @@ const TOKEN_PRIVILEGES* GetPTOKEN_PRIVILEGES() const throw(...);
 
 ### <a name="return-value"></a>Valor de retorno
 
-Retorna um ponteiro para a estrutura [TOKEN_PRIVILEGES](/windows/desktop/api/winnt/ns-winnt-token_privileges) .
+Retorna um ponteiro para a estrutura [TOKEN_PRIVILEGES](/windows/win32/api/winnt/ns-winnt-token_privileges) .
 
 ##  <a name="lookupprivilege"></a>CTokenPrivileges::LookupPrivilege
 
@@ -309,7 +309,7 @@ CTokenPrivileges& operator= (const CTokenPrivileges& rhs) throw(...);
 ### <a name="parameters"></a>Parâmetros
 
 *rPrivileges*<br/>
-A estrutura [TOKEN_PRIVILEGES](/windows/desktop/api/winnt/ns-winnt-token_privileges) a ser atribuída ao `CTokenPrivileges` objeto.
+A estrutura [TOKEN_PRIVILEGES](/windows/win32/api/winnt/ns-winnt-token_privileges) a ser atribuída ao `CTokenPrivileges` objeto.
 
 *rhs*<br/>
 O `CTokenPrivileges` objeto a ser atribuído ao objeto.
@@ -328,13 +328,13 @@ operator const TOKEN_PRIVILEGES *() const throw(...);
 
 ### <a name="remarks"></a>Comentários
 
-Converte um valor em um ponteiro para a estrutura [TOKEN_PRIVILEGES](/windows/desktop/api/winnt/ns-winnt-token_privileges) .
+Converte um valor em um ponteiro para a estrutura [TOKEN_PRIVILEGES](/windows/win32/api/winnt/ns-winnt-token_privileges) .
 
 ## <a name="see-also"></a>Consulte também
 
 [Exemplo de segurança](../../overview/visual-cpp-samples.md)<br/>
-[TOKEN_PRIVILEGES](/windows/desktop/api/winnt/ns-winnt-token_privileges)<br/>
-[LUID](/windows/desktop/api/winnt/ns-winnt-luid)<br/>
-[LUID_AND_ATTRIBUTES](/windows/desktop/api/winnt/ns-winnt-luid_and_attributes)<br/>
+[TOKEN_PRIVILEGES](/windows/win32/api/winnt/ns-winnt-token_privileges)<br/>
+[LUID](/windows/win32/api/winnt/ns-winnt-luid)<br/>
+[LUID_AND_ATTRIBUTES](/windows/win32/api/winnt/ns-winnt-luid_and_attributes)<br/>
 [Visão geral da classe](../../atl/atl-class-overview.md)<br/>
 [Funções globais de segurança](../../atl/reference/security-global-functions.md)

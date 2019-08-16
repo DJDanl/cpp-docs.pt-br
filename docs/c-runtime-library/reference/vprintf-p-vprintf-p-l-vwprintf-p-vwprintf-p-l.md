@@ -44,14 +44,14 @@ helpviewer_keywords:
 - vwprintf_p_l function
 - formatted text [C++]
 ms.assetid: 3f99bde3-c891-493d-908f-30559c421058
-ms.openlocfilehash: 266df8c033fc9d1c8459aff9f2b95771947d88d1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8b41c7307ccdbbec4cd16c662d1d123642c339f8
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62364695"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499193"
 ---
-# <a name="vprintfp-vprintfpl-vwprintfp-vwprintfpl"></a>_vprintf_p, _vprintf_p_l, _vwprintf_p, _vwprintf_p_l
+# <a name="_vprintf_p-_vprintf_p_l-_vwprintf_p-_vwprintf_p_l"></a>_vprintf_p, _vprintf_p_l, _vwprintf_p, _vwprintf_p_l
 
 Grava a saída formatada usando um ponteiro para uma lista de argumentos e permite a especificação da ordem na qual os argumentos são usados.
 
@@ -93,20 +93,20 @@ Para obter mais informações, consulte [Especificações de formato](../../c-ru
 
 ## <a name="return-value"></a>Valor de retorno
 
-**vprintf_p** e **vwprintf_p** retornar o número de caracteres gravados, não incluindo o caractere nulo de terminação ou um valor negativo se ocorrer um erro de saída.
+**_vprintf_p** e **_vwprintf_p** retornam o número de caracteres gravados, não incluindo o caractere nulo de terminação ou um valor negativo se ocorrer um erro de saída.
 
 ## <a name="remarks"></a>Comentários
 
-Cada uma dessas funções usa um ponteiro para uma lista de argumentos, em seguida, formata e grava os dados fornecidos no **stdout**. Essas funções diferem das **vprintf_s** e **vwprintf_s** somente em que eles oferecem suporte a capacidade de especificar a ordem na qual os argumentos são usados. Para obter mais informações, consulte [Parâmetros posicionais printf_p](../../c-runtime-library/printf-p-positional-parameters.md).
+Cada uma dessas funções usa um ponteiro para uma lista de argumentos e, em seguida, formata e grava os dados fornecidos para **stdout**. Essas funções diferem de **vprintf_s** e **vwprintf_s** somente no que dão suporte à capacidade de especificar a ordem na qual os argumentos são usados. Para obter mais informações, consulte [Parâmetros posicionais printf_p](../../c-runtime-library/printf-p-positional-parameters.md).
 
-**vwprintf_p** é a versão de caractere largo de **vprintf_p**; as duas funções terão comportamento idêntico se o fluxo for aberto no modo ANSI. **vprintf_p** atualmente, não suporta a saída em um fluxo UNICODE.
+**_vwprintf_p** é a versão de caractere largo do **_vprintf_p**; as duas funções se comportam de forma idêntica se o fluxo é aberto no modo ANSI. Atualmente, o **_vprintf_p** não dá suporte à saída em um fluxo Unicode.
 
-As versões dessas funções com o **l** sufixo são idênticas, exceto que eles usam o parâmetro de localidade passado em vez da localidade do thread atual.
+As versões dessas funções com o sufixo **_L** são idênticas, exceto pelo fato de que usam o parâmetro de localidade passado em vez da localidade do thread atual.
 
 > [!IMPORTANT]
-> Verifique se *format* não é uma cadeia de caracteres definida pelo usuário. Para obter mais informações, consulte [Avoiding Buffer Overruns](/windows/desktop/SecBP/avoiding-buffer-overruns) (Evitando estouros de buffer).
+> Verifique se *format* não é uma cadeia de caracteres definida pelo usuário. Para obter mais informações, consulte [Avoiding Buffer Overruns](/windows/win32/SecBP/avoiding-buffer-overruns) (Evitando estouros de buffer).
 
-Se *formato* for um ponteiro nulo ou se a cadeia de caracteres de formato contiver caracteres de formatação inválidos, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, as funções retornarão -1 e defina **errno** à **EINVAL**.
+Se o *formato* for um ponteiro nulo ou se a cadeia de caracteres de formato contiver caracteres de formatação inválidos, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, as funções retornam-1 e definem **errno** como **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -124,7 +124,7 @@ Se *formato* for um ponteiro nulo ou se a cadeia de caracteres de formato contiv
 
 \* Necessário para compatibilidade com UNIX V.
 
-Não há suporte para o console em aplicativos da plataforma Universal do Windows (UWP). Os identificadores de fluxo padrão que estão associados com o console **stdin**, **stdout**, e **stderr**, deverá ser redirecionado para funções de tempo de execução C possam ser usados em aplicativos UWP . Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Não há suporte para o console em aplicativos Plataforma Universal do Windows (UWP). Os identificadores de fluxo padrão associados ao console, **stdin**, **stdout**e **stderr**devem ser redirecionados antes que as funções de tempo de execução do C possam usá-los em aplicativos UWP. Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Consulte também
 

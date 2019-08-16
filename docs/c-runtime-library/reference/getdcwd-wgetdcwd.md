@@ -34,14 +34,14 @@ helpviewer_keywords:
 - current working directory
 - directories [C++], current working
 ms.assetid: 184152f5-c7b0-495b-918d-f9a6adc178bd
-ms.openlocfilehash: 464a254775d9a1d2488247d6dafb4b85cd763f10
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9f6ae99ae74bb21c9462abcb37e466d63b86f8af
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331825"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501022"
 ---
-# <a name="getdcwd-wgetdcwd"></a>_getdcwd, _wgetdcwd
+# <a name="_getdcwd-_wgetdcwd"></a>_getdcwd, _wgetdcwd
 
 Obtém o caminho completo do diretório de trabalho atual na unidade especificada.
 
@@ -65,35 +65,35 @@ wchar_t *_wgetdcwd(
 *drive*<br/>
 Um inteiro não negativo que especifica a unidade (0 = unidade padrão, 1 = A, 2 = B e assim por diante).
 
-Se a unidade especificada não estiver disponível, ou o tipo da unidade (por exemplo, removível, fixo, CD-ROM, disco RAM ou unidade de rede) não pode ser determinado, o manipulador de parâmetro inválido será invocado. Para saber mais, confira [Validação do parâmetro](../../c-runtime-library/parameter-validation.md).
+Se a unidade especificada não estiver disponível, ou se o tipo de unidade (por exemplo, removível, fixo, CD-ROM, disco RAM ou unidade de rede) não puder ser determinado, o manipulador de parâmetro inválido será invocado. Para saber mais, confira [Validação do parâmetro](../../c-runtime-library/parameter-validation.md).
 
 *buffer*<br/>
 Local de armazenamento para o caminho ou **NULL**.
 
-Se **nulo** for especificado, esta função alocará um buffer de pelo menos *maxlen* tamanho usando **malloc**e o valor de retorno **getdcwd**é um ponteiro para o buffer alocado. O buffer pode ser liberado chamando **livre** e passando-o ponteiro.
+Se **NULL** for especificado, essa função alocará um buffer de pelo menos o tamanho de *maxlen* usando **malloc**, e o valor de retorno de **_getdcwd** será um ponteiro para o buffer alocado. O buffer pode ser liberado chamando **gratuitamente** e passando o ponteiro.
 
 *maxlen*<br/>
-Um inteiro positivo diferente de zero que especifica o comprimento máximo do caminho, em caracteres: **char** para **getdcwd** e **wchar_t** para **wgetdcwd**.
+Um inteiro positivo diferente de zero que especifica o comprimento máximo do caminho, em caracteres: **Char** para **_getdcwd** e **wchar_t** para **_wgetdcwd**.
 
-Se *maxlen* é menor que ou igual a zero, o manipulador de parâmetro inválido será invocado. Para saber mais, confira [Validação do parâmetro](../../c-runtime-library/parameter-validation.md).
+Se *maxlen* for menor ou igual a zero, o manipulador de parâmetro inválido será invocado. Para saber mais, confira [Validação do parâmetro](../../c-runtime-library/parameter-validation.md).
 
 ## <a name="return-value"></a>Valor de retorno
 
-Ponteiro para uma cadeia de caracteres que representa o caminho completo do diretório de trabalho atual na unidade especificada, ou **nulo**, que indica um erro.
+Ponteiro para uma cadeia de caracteres que representa o caminho completo do diretório de trabalho atual na unidade especificada, ou **NULL**, que indica um erro.
 
-Se *buffer* é especificado como **nulo** e não há memória suficiente para alocar *maxlen* caracteres, ocorrerá um erro e **errno** é definido como **ENOMEM**. Se o comprimento do caminho incluindo o caractere nulo de terminação excede *maxlen*, ocorre um erro, e **errno** está definido como **ERANGE**. Para obter mais informações sobre esses códigos de erro, consulte [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Se *o buffer* for especificado como **nulo** e não houver memória suficiente para alocar caracteres *maxlen* , ocorrerá um erro e **errno** será definido como **ENOMEM**. Se o comprimento do caminho, incluindo o caractere nulo de terminação exceder *maxlen*, ocorre um erro e **errno** é definido como **ERANGE**. Para obter mais informações sobre esses códigos de erro, consulte [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Comentários
 
-O **getdcwd** função obtém o caminho completo do diretório de trabalho atual na unidade especificada e a armazena em *buffer*. Se o diretório de trabalho atual estiver definido como o raiz, a cadeia de caracteres terminará com uma barra invertida (\\). Se o diretório de trabalho atual estiver definido como um diretório que não seja o raiz, a cadeia de caracteres terminará com o nome do diretório e não com uma barra invertida.
+A função **_getdcwd** Obtém o caminho completo do diretório de trabalho atual na unidade especificada e o armazena no *buffer*. Se o diretório de trabalho atual estiver definido como o raiz, a cadeia de caracteres terminará com uma barra invertida (\\). Se o diretório de trabalho atual estiver definido como um diretório que não seja o raiz, a cadeia de caracteres terminará com o nome do diretório e não com uma barra invertida.
 
-**wgetdcwd** é uma versão de caractere largo de **getdcwd**e sua *buffer* parâmetro e valor retornado são cadeias de caracteres largos. Caso contrário, **wgetdcwd** e **getdcwd** se comportam de forma idêntica.
+**_wgetdcwd** é uma versão de caractere largo de **_getdcwd**, e seu parâmetro de *buffer* e o valor de retorno são cadeias de caracteres largos. Caso contrário, **_wgetdcwd** e **_getdcwd** se comportam de forma idêntica.
 
-Essa função é thread-safe, embora dependa de **GetFullPathName**, que não thread-safe. No entanto, você pode violar o acesso thread-safe se seu aplicativo multi-threaded chamar essa função e [GetFullPathNameA](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea).
+Essa função é thread-safe, embora dependa de **GetFullPathName**, que não thread-safe. No entanto, você pode violar o acesso thread-safe se seu aplicativo multi-threaded chamar essa função e [GetFullPathName](/windows/win32/api/fileapi/nf-fileapi-getfullpathnamew).
 
-A versão dessa função que tem o **NOLOCK** sufixo comporta-se identicamente para essa função, exceto que ele não é thread-safe e não protegido contra interferência de outros threads. Para obter mais informações, consulte [_getdcwd_nolock, _wgetdcwd_nolock](getdcwd-nolock-wgetdcwd-nolock.md).
+A versão dessa função que tem o sufixo **_nolock** se comporta de forma idêntica a essa função, exceto que ela não é thread-safe e não está protegida contra interferência por outros threads. Para obter mais informações, consulte [_getdcwd_nolock, _wgetdcwd_nolock](getdcwd-nolock-wgetdcwd-nolock.md).
 
-Quando **Debug** e **crtdbg_map_alloc** são definidos, chamadas para **getdcwd** e **wgetdcwd** são substituídos por chamadas para **getdcwd_dbg** e **wgetdcwd_dbg** para que você possa depurar alocações de memória. Para obter mais informações, consulte [_getdcwd_dbg, _wgetdcwd_dbg](getdcwd-dbg-wgetdcwd-dbg.md).
+Quando **_DEBUG** e **_CRTDBG_MAP_ALLOC** são definidos, chamadas para **_getdcwd** e **_wgetdcwd** são substituídas por chamadas para **_getdcwd_dbg** e **_wgetdcwd_dbg** para que você possa depurar alocações de memória. Para obter mais informações, consulte [_getdcwd_dbg, _wgetdcwd_dbg](getdcwd-dbg-wgetdcwd-dbg.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 

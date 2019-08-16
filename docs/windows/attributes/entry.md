@@ -1,21 +1,21 @@
 ---
-title: entrada (C++ COM atributo)
+title: entrada (C++ atributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.entry
 helpviewer_keywords:
 - entry attribute
 ms.assetid: ba4843e3-d7ad-4b86-9a15-0b4192f0f698
-ms.openlocfilehash: 703a55ee7c56b64a5b168016770508508bab09e0
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 71abf4f183255fa137b43ac9cabd88d15c3fc85d
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64346124"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69490898"
 ---
 # <a name="entry"></a>entry
 
-Especifica uma constante ou uma função exportada em um módulo, identificando o ponto de entrada na DLL.
+Especifica uma função ou constante exportada em um módulo identificando o ponto de entrada na DLL.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -30,24 +30,24 @@ A ID do ponto de entrada.
 
 ## <a name="remarks"></a>Comentários
 
-O **entrada** atributo C++ tem a mesma funcionalidade que o [entrada](/windows/desktop/Midl/entry) atributo MIDL.
+O atributo de **entrada** C++ tem a mesma funcionalidade que o atributo MIDL de [entrada](/windows/win32/Midl/entry) .
 
 ## <a name="example"></a>Exemplo
 
-Veja o exemplo de [idl_module](idl-module.md) para um exemplo de uso de **entrada**.
+Consulte o exemplo de [idl_module](idl-module.md) para obter um exemplo de uso de **entrada**.
 
 ## <a name="requirements"></a>Requisitos
 
-### <a name="attribute-context"></a>Atributo de contexto
+### <a name="attribute-context"></a>Contexto de atributo
 
 |||
 |-|-|
-|**Aplica-se a**|`idl_module` Atributo|
+|**Aplica-se a**|`idl_module`Attribute|
 |**Repetível**|Não|
-|**Atributos obrigatórios**|Nenhum|
+|**Atributos necessários**|Nenhum|
 |**Atributos inválidos**|Nenhum|
 
-Para obter mais informações, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
+Para obter mais informações, consulte contextos de [atributo](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Consulte também
 

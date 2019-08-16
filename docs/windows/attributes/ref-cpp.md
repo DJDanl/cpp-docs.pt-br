@@ -1,17 +1,17 @@
 ---
-title: REF (C++ COM atributo)
+title: ref (C++ atributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.ref
 helpviewer_keywords:
 - ref attribute
 ms.assetid: 67e82d3e-07d9-4ef8-bf2b-0a4491d12557
-ms.openlocfilehash: f051fe577087d81515ddf0b44dfb15ad0fb2c616
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e7dd927f385b039f1909a4bdf1998ea5a0b39264
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407413"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514118"
 ---
 # <a name="ref-c"></a>ref (C++)
 
@@ -25,11 +25,11 @@ Identifica um ponteiro de referência.
 
 ## <a name="remarks"></a>Comentários
 
-O **ref** atributo C++ tem a mesma funcionalidade que o [ref](/windows/desktop/Midl/ref) atributo MIDL.
+O atributo **ref** C++ tem a mesma funcionalidade que o atributo MIDL de [referência](/windows/win32/Midl/ref) .
 
 ## <a name="example"></a>Exemplo
 
-O código a seguir mostra como usar o **ref** atributo:
+O código a seguir mostra como usar o atributo **ref** :
 
 ```cpp
 // cpp_attr_ref_ref.cpp
@@ -45,16 +45,16 @@ __interface IFireTabCtrl
 
 ## <a name="requirements"></a>Requisitos
 
-### <a name="attribute-context"></a>Atributo de contexto
+### <a name="attribute-context"></a>Contexto de atributo
 
 |||
 |-|-|
-|**Aplica-se a**|**TypeDef**, a interface do parâmetro, o método de interface|
+|**Aplica-se a**|**typedef**, parâmetro de interface, método de interface|
 |**Repetível**|Não|
-|**Atributos obrigatórios**|Nenhum|
+|**Atributos necessários**|Nenhum|
 |**Atributos inválidos**|Nenhum|
 
-Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
+Para obter mais informações sobre os contextos de atributo, consulte contextos de [atributo](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Consulte também
 

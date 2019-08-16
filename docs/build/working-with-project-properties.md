@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Visual C++ projects, properties
 - projects [C++], properties
 ms.assetid: 9b0d6f8b-7d4e-4e61-aa75-7d14944816cd
-ms.openlocfilehash: 436c9c47d7e08176860144ce62cc874919351029
-ms.sourcegitcommit: 610751254a01cba6ad15fb1e1764ecb2e71f66bf
+ms.openlocfilehash: 57414bd56c72b951d3f1948e658243e9036f0179
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/18/2019
-ms.locfileid: "68313444"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498119"
 ---
 # <a name="set-compiler-and-build-properties"></a>Definir propriedades do compilador e de compilação
 
@@ -39,7 +39,7 @@ A ilustração a seguir mostra a mesma página de propriedades do projeto, mas a
 
 ## <a name="target-platforms"></a>Plataformas de destino
 
-*Plataforma de destino* refere-se ao tipo de dispositivo e/ou sistema operacional no qual o executável será executado. Você pode compilar um projeto para mais de uma plataforma. As plataformas de destino disponíveis para projetos do C++ dependem do tipo de projeto; elas incluem, entre outros, Win32, x64, ARM, Android e iOS.     A plataforma de destino **x86** que pode ser vista no **Configuration Manager** é idêntica ao **Win32** em projetos do C++ nativo. Win32 significa Windows de 32 bits e **x64** significa Windows de 64 bits. Para obter mais informações sobre essas duas plataformas, confira [Executando aplicativos de 32 bits](/windows/desktop/WinProg64/running-32-bit-applications).
+*Plataforma de destino* refere-se ao tipo de dispositivo e/ou sistema operacional no qual o executável será executado. Você pode compilar um projeto para mais de uma plataforma. As plataformas de destino disponíveis para projetos do C++ dependem do tipo de projeto; elas incluem, entre outros, Win32, x64, ARM, Android e iOS.     A plataforma de destino **x86** que pode ser vista no **Configuration Manager** é idêntica ao **Win32** em projetos do C++ nativo. Win32 significa Windows de 32 bits e **x64** significa Windows de 64 bits. Para obter mais informações sobre essas duas plataformas, confira [Executando aplicativos de 32 bits](/windows/win32/WinProg64/running-32-bit-applications).
 
 O valor de plataforma de destino **Qualquer CPU** que pode ser visto no **Configuration Manager** não tem nenhum efeito em projetos do C++ nativo; ele é relevante para o C++/CLI e outros tipos de projeto .NET. Para obter mais informações, consulte, [/CLRIMAGETYPE (Especificar Tipo de Imagem CLR)](reference/clrimagetype-specify-type-of-clr-image.md).
 
@@ -60,7 +60,7 @@ A caixa de diálogo **páginas de propriedades** mostra apenas as páginas de pr
 
 O MSBuild dá suporte ao uso de constantes de tempo de compilação chamadas "macros" para determinados valores de cadeia de caracteres, incluindo diretórios e caminhos. Elas são expostas nas páginas de propriedades, nas quais você pode consultá-las e modificá-las usando o [Editor de propriedades](#property_editor). 
 
-A ilustração a seguir mostra as páginas de propriedades de um C++ projeto do Visual Studio. No painel esquerdo, a **regra** *Diretórios do VC++* está selecionada e o painel direito lista as propriedades associadas a essa regra. Os `$(...)` valores são chamados de macros. Uma *macro* é uma constante em tempo de compilação que pode se referir a um valor definido pelo Visual Studio ou pelo sistema do MSBuild, ou a um valor definido pelo usuário. Usando macros em vez de valores embutidos em código, como caminhos de diretório, você pode compartilhar com mais facilidade as configurações de propriedade entre computadores e entre versões do Visual Studio, e pode garantir melhor que as configurações do projeto participem corretamente na [Propriedade herança](project-property-inheritance.md). 
+A ilustração a seguir mostra as páginas de propriedades de um C++ projeto do Visual Studio. No painel esquerdo, a **regra** *Diretórios do VC++* está selecionada e o painel direito lista as propriedades associadas a essa regra. Os `$(...)` valores são chamadosde macros. Uma *macro* é uma constante em tempo de compilação que pode se referir a um valor definido pelo Visual Studio ou pelo sistema do MSBuild, ou a um valor definido pelo usuário. Usando macros em vez de valores embutidos em código, como caminhos de diretório, você pode compartilhar com mais facilidade as configurações de propriedade entre computadores e entre versões do Visual Studio, e pode garantir melhor que as configurações do projeto participem corretamente na [Propriedade herança](project-property-inheritance.md). 
 
 ![Páginas de propriedades do projeto](media/project_property_pages_vc.png "Project_Property_Pages_VC")
 

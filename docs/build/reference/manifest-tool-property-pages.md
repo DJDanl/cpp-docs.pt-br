@@ -24,16 +24,16 @@ f1_keywords:
 - VC.Project.VCManifestTool.UpdateFileHashesSearchPath
 - vc.project.AdditionalOptionsPage
 ms.assetid: f33499c4-7733-42d9-80e3-8a5018786965
-ms.openlocfilehash: adc821370201eeb83b6c6b4b875e5e62b0fa523f
-ms.sourcegitcommit: 720b74dddb1cdf4e570d55103158304ee1df81f8
+ms.openlocfilehash: c8413a28024361db82ca74858453202393987e60
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68606432"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492695"
 ---
 # <a name="manifest-tool-property-pages"></a>Páginas de propriedades Ferramenta de Manifesto
 
-Use essas páginas para especificar opções gerais para [Mt. exe](https://msdn.microsoft.com/library/aa375649). Essas páginas são encontradas em**Propriedades** > do **projeto** > ferramentas de**configuração** > de**manifesto ferramenta**.
+Use essas páginas para especificar opções gerais para [Mt. exe](/windows/win32/sbscs/mt-exe). Essas páginas são encontradas em**Propriedades** > do **projeto** > ferramentas de**configuração** > de**manifesto ferramenta**.
 
 ## <a name="general-property-page"></a>Página de propriedades geral
 
@@ -105,7 +105,7 @@ Especifica se o aplicativo tem reconhecimento de DPI. Por padrão, a configuraç
 
 ## <a name="isolated-com-property-page"></a>Página de propriedades COM isolada
 
-Para obter mais informações sobre com isolado, consulte [aplicativos isolados](/windows/desktop/SbsCs/isolated-applications) e [como: Crie aplicativos isolados para consumir componentes](../how-to-build-isolated-applications-to-consume-com-components.md)com.
+Para obter mais informações sobre com isolado, consulte [aplicativos isolados](/windows/win32/SbsCs/isolated-applications) e [como: Crie aplicativos isolados para consumir componentes](../how-to-build-isolated-applications-to-consume-com-components.md)com.
 
 ###  <a name="type-library-file"></a>Arquivo de biblioteca de tipos
 

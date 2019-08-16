@@ -1,21 +1,21 @@
 ---
-title: restrita (atributo de COM C++)
+title: Restricted (C++ atributo com)
 ms.date: 10/03/2018
 f1_keywords:
 - vc-attr.restricted
 helpviewer_keywords:
 - restricted attribute
 ms.assetid: 504a96be-b904-4269-8be1-920feba201b4
-ms.openlocfilehash: 86f40fa49daf88668e37bef07f0db33d01cf1942
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 01dabcd15eb1a14734c16b9e54c0ab2e030d0479
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407348"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514067"
 ---
 # <a name="restricted"></a>restricted
 
-Especifica que um membro de um módulo, interface ou dispinterface não pode ser chamado arbitrariamente.
+Especifica que um membro de um módulo, interface ou Dispinterface não pode ser chamado arbitrariamente.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -28,15 +28,15 @@ Especifica que um membro de um módulo, interface ou dispinterface não pode ser
 ### <a name="parameters"></a>Parâmetros
 
 *interfaces*<br/>
-Uma ou mais interfaces que não podem ser chamadas arbitrariamente em um objeto COM. Esse parâmetro só é válido quando aplicado a uma classe.
+Uma ou mais interfaces que podem não ser chamadas arbitrariamente em um objeto COM. Esse parâmetro só é válido quando aplicado a uma classe.
 
 ## <a name="remarks"></a>Comentários
 
-O **restrito** atributo C++ tem a mesma funcionalidade que o [restrito](/windows/desktop/Midl/restricted) atributo MIDL.
+O atributo **restrito** C++ tem a mesma funcionalidade que o atributo MIDL [restrito](/windows/win32/Midl/restricted) .
 
 ## <a name="example"></a>Exemplo
 
-O código a seguir mostra como usar o **restrito** atributo:
+O código a seguir mostra como usar o atributo **restrito** :
 
 ```cpp
 // cpp_attr_ref_restricted.cpp
@@ -63,16 +63,16 @@ class c : public a, public b
 
 ## <a name="requirements"></a>Requisitos
 
-### <a name="attribute-context"></a>Atributo de contexto
+### <a name="attribute-context"></a>Contexto de atributo
 
 |||
 |-|-|
-|**Aplica-se a**|Método, de interface **interface**, **classe**, **struct**|
+|**Aplica-se a**|Método de interface, **interface**, **classe**, **struct**|
 |**Repetível**|Não|
-|**Atributos obrigatórios**|**coclass** (quando aplicado a **classe** ou **struct**)|
+|**Atributos necessários**|**coclass** (quando aplicado à **classe** ou **estrutura**)|
 |**Atributos inválidos**|Nenhum|
 
-Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
+Para obter mais informações sobre os contextos de atributo, consulte contextos de [atributo](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Consulte também
 

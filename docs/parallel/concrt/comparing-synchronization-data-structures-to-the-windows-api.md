@@ -5,46 +5,46 @@ helpviewer_keywords:
 - synchronization data structures, compared to Windows API
 - event class, example
 ms.assetid: 8b0b1a3a-ef80-408c-91fa-93e6af920b4e
-ms.openlocfilehash: 4fa0d3fbf3457bfafab731275584d206206161dd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 16d58431ae3f9859677302010f15a75b37ebedbf
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62414029"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69510597"
 ---
 # <a name="comparing-synchronization-data-structures-to-the-windows-api"></a>Comparando estruturas de dados com a API do Windows
 
-Este tópico compara o comportamento das estruturas de dados de sincronização que são fornecidos pelo tempo de execução de simultaneidade àquelas fornecidas pela API do Windows.
+Este tópico compara o comportamento das estruturas de dados de sincronização que são fornecidas pelo Tempo de Execução de Simultaneidade àquelas fornecidas pela API do Windows.
 
-Siga as estruturas de dados de sincronização que são fornecidas pelo tempo de execução de simultaneidade a *cooperativo de modelo de threading*. No modelo de threading cooperativo, primitivos de sincronização executado explicitamente seus recursos de processamento para outros threads. Isso difere de *preemptive de modelo de threading*, onde os recursos de processamento são transferidos para outros threads pelo Agendador de controle ou do sistema operacional.
+As estruturas de dados de sincronização fornecidas pelo Tempo de Execução de Simultaneidade seguem o *modelo de Threading*cooperativo. No modelo de Threading cooperativo, os primitivos de sincronização geram explicitamente seus recursos de processamento para outros threads. Isso difere do *modelo de Threading Preemptive*, em que os recursos de processamento são transferidos para outros threads pelo Agendador de controle ou pelo sistema operacional.
 
-## <a name="criticalsection"></a>critical_section
+## <a name="critical_section"></a>critical_section
 
-O [concurrency::critical_section](../../parallel/concrt/reference/critical-section-class.md) classe se parece com o Windows `CRITICAL_SECTION` porque ele pode ser usado somente por threads de um processo. Para obter mais informações sobre as seções críticas na API do Windows, consulte [objetos da seção crítica](/windows/desktop/Sync/critical-section-objects).
+A classe [Concurrency:: critical_section](../../parallel/concrt/reference/critical-section-class.md) é semelhante à estrutura `CRITICAL_SECTION` do Windows porque pode ser usada somente pelos threads de um processo. Para obter mais informações sobre seções críticas na API do Windows, consulte [objetos de seção crítica](/windows/win32/Sync/critical-section-objects).
 
-## <a name="readerwriterlock"></a>reader_writer_lock
+## <a name="reader_writer_lock"></a>reader_writer_lock
 
-O [concurrency::reader_writer_lock](../../parallel/concrt/reference/reader-writer-lock-class.md) bloqueios de leitor/gravador reduzido (SRW) do Windows é semelhante. A tabela a seguir explica as semelhanças e diferenças.
+A classe [Concurrency:: reader_writer_lock](../../parallel/concrt/reference/reader-writer-lock-class.md) é semelhante a bloqueios de SRW (leitor/gravador) do Windows. A tabela a seguir explica as semelhanças e diferenças.
 
 |Recurso|`reader_writer_lock`|Bloqueio de SRW|
 |-------------|--------------------------|--------------|
 |Não reentrante|Sim|Sim|
-|Pode promover um leitor para o gravador (suporte à atualização)|Não|Não|
-|Rebaixar um gravador de um leitor (suporte a downgrade)|Não|Não|
+|Pode promover um leitor para um gravador (suporte de atualização)|Não|Não|
+|Pode rebaixar um gravador para um leitor (suporte de downgrade)|Não|Não|
 |Bloqueio de preferência de gravação|Sim|Não|
-|Acesso PEPS para gravadores|Sim|Não|
+|Acesso de PEPS a gravadores|Sim|Não|
 
-Para obter mais informações sobre os bloqueios de SRW, consulte [bloqueios de leitor/gravador Slim (SRW)](https://msdn.microsoft.com/library/windows/desktop/aa904937) no SDK da plataforma.
+Para obter mais informações sobre bloqueios de SRW, consulte bloqueios de [SRW (Slim Reader/Writer)](/windows/win32/sync/slim-reader-writer--srw--locks) no SDK da plataforma.
 
 ## <a name="event"></a>evento
 
-O [concurrency::event](../../parallel/concrt/reference/event-class.md) classe é semelhante a um evento de redefinição manual do Windows sem nome. No entanto, um `event` objeto se comporta de forma cooperativa, enquanto que um evento do Windows se comporta de forma preventiva. Para obter mais informações sobre eventos do Windows, consulte [objetos de evento](/windows/desktop/Sync/event-objects).
+A classe [Concurrency:: Event](../../parallel/concrt/reference/event-class.md) é semelhante a um evento sem nome, de redefinição manual do Windows. No entanto `event` , um objeto se comporta de cooperativa, enquanto um evento do Windows se comporta preemptivamente. Para obter mais informações sobre eventos do Windows, consulte [objetos de evento](/windows/win32/Sync/event-objects).
 
 ## <a name="example"></a>Exemplo
 
 ### <a name="description"></a>Descrição
 
-Para entender melhor a diferença entre o `event` classe e eventos do Windows, considere o exemplo a seguir. Este exemplo permite que o Agendador criar no máximo duas tarefas simultâneas e, em seguida, chama semelhante duas funções que usam o `event` classe e um evento de redefinição manual do Windows. Cada função first cria várias tarefas que aguardam um evento compartilhado seja sinalizado. Cada função, em seguida, transfere para a execução de tarefas e, em seguida, sinaliza o evento. Cada função, em seguida, aguarda o evento sinalizado.
+Para entender melhor a diferença entre a `event` classe e os eventos do Windows, considere o exemplo a seguir. Este exemplo permite que o Agendador crie no máximo duas tarefas simultâneas e, em seguida, chama duas funções `event` semelhantes que usam a classe e um evento de redefinição manual do Windows. Cada função cria primeiro várias tarefas que esperam que um evento compartilhado se torne sinalizado. Cada função, em seguida, produz as tarefas em execução e, em seguida, sinaliza o evento. Em seguida, cada função aguarda o evento sinalizado.
 
 ### <a name="code"></a>Código
 
@@ -52,7 +52,7 @@ Para entender melhor a diferença entre o `event` classe e eventos do Windows, c
 
 ### <a name="comments"></a>Comentários
 
-Este exemplo produz a saída de exemplo a seguir:
+Este exemplo produz a seguinte saída de exemplo:
 
 ```Output
 Cooperative event:
@@ -81,7 +81,7 @@ Windows event:
     Context 13: received the event.
 ```
 
-Porque o `event` classe se comporta de forma cooperativa, o Agendador pode realocar recursos de processamento para outro contexto quando um evento está esperando para inserir o estado sinalizado. Portanto, mais trabalho é realizado pela versão que usa o `event` classe. A versão que usa eventos do Windows, cada tarefa em espera deve inserir o estado sinalizado antes que a próxima tarefa é iniciada.
+Como a `event` classe se comporta de cooperativa, o Agendador pode realocar recursos de processamento para outro contexto quando um evento está aguardando para entrar no estado sinalizado. Portanto, mais trabalho é realizado pela versão que usa a `event` classe. Na versão que usa eventos do Windows, cada tarefa em espera deve inserir o estado sinalizado antes que a próxima tarefa seja iniciada.
 
 Para obter mais informações sobre tarefas, consulte [paralelismo de tarefas](../../parallel/concrt/task-parallelism-concurrency-runtime.md).
 

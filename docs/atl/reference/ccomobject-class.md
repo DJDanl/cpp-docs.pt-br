@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComObject class
 ms.assetid: e2b6433b-6349-4749-b4bc-acbd7a22c8b0
-ms.openlocfilehash: 045292e4d06b1e86e991a755b267660b72a178da
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a2051932413d8658eb7cedb67ed0eab2077b599d
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62246333"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497142"
 ---
 # <a name="ccomobject-class"></a>Classe CComObject
 
@@ -32,8 +32,8 @@ class CComObject : public Base
 
 #### <a name="parameters"></a>Parâmetros
 
-*Base*<br/>
-Sua classe, derivada de [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) ou [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), como bem como de outras interfaces que você deseja oferecer suporte no objeto.
+*Polybase*<br/>
+Sua classe, derivada de [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) ou [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), bem como de quaisquer outras interfaces às quais você deseja dar suporte no objeto.
 
 ## <a name="members"></a>Membros
 
@@ -49,15 +49,15 @@ Sua classe, derivada de [CComObjectRoot](../../atl/reference/ccomobjectroot-clas
 |Nome|Descrição|
 |----------|-----------------|
 |[CComObject::AddRef](#addref)|Incrementa a contagem de referência no objeto.|
-|[CComObject::CreateInstance](#createinstance)|(Estático) Cria um novo `CComObject` objeto.|
+|[CComObject::CreateInstance](#createinstance)|Auto-estática Cria um novo `CComObject` objeto.|
 |[CComObject::QueryInterface](#queryinterface)|Recupera um ponteiro para a interface solicitada.|
-|[CComObject::Release](#release)|Diminui a contagem de referência no objeto.|
+|[CComObject::Release](#release)|Decrementa a contagem de referência no objeto.|
 
 ## <a name="remarks"></a>Comentários
 
-`CComObject` implementa [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) para um objeto não agregado. No entanto, chamadas para `QueryInterface`, `AddRef`, e `Release` são delegadas a `CComObjectRootEx`.
+`CComObject`implementa [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) para um objeto não agregado. No entanto, `QueryInterface`as `AddRef`chamadas para `Release` , e são delegadas para `CComObjectRootEx`.
 
-Para obter mais informações sobre como usar `CComObject`, consulte o artigo [conceitos básicos de objetos COM de ATL](../../atl/fundamentals-of-atl-com-objects.md).
+Para obter mais informações sobre `CComObject`como usar o, consulte o artigo [Fundamentals de objetos com ATL](../../atl/fundamentals-of-atl-com-objects.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -67,7 +67,7 @@ Para obter mais informações sobre como usar `CComObject`, consulte o artigo [c
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** atlcom
+**Cabeçalho:** atlcom. h
 
 ##  <a name="addref"></a>  CComObject::AddRef
 
@@ -79,11 +79,11 @@ STDMETHOD_(ULONG, AddRef)();
 
 ### <a name="return-value"></a>Valor de retorno
 
-Essa função retorna a nova contagem de referência incrementado no objeto. Esse valor pode ser útil para teste ou de diagnóstico.
+Essa função retorna a nova contagem de referência incrementada no objeto. Esse valor pode ser útil para diagnóstico ou teste.
 
 ##  <a name="ccomobject"></a>  CComObject::CComObject
 
-O construtor incrementa a contagem de bloqueios do módulo.
+O Construtor incrementa a contagem de bloqueios de módulo.
 
 ```
 CComObject(void* = NULL);
@@ -92,15 +92,15 @@ CComObject(void* = NULL);
 ### <a name="parameters"></a>Parâmetros
 
 <em>void\*</em><br/>
-[in] Esse parâmetro sem nome não é usado. Ele existe para obter simetria com outros `CComXXXObjectXXX` construtores.
+no Esse parâmetro sem nome não é usado. Ele existe para simetria com outros `CComXXXObjectXXX` construtores.
 
 ### <a name="remarks"></a>Comentários
 
-O destruidor decrementa-lo.
+O destruidor o decrementa.
 
-Se um `CComObject`-objeto derivado com êxito é construído usando o **nova** operador, a contagem de referência inicial é 0. Para definir a contagem de referência para o valor correto (1), fazer uma chamada para o [AddRef](#addref) função.
+Se um `CComObject`objeto derivado for construído com êxito usando o **novo** operador, a contagem de referência inicial será 0. Para definir a contagem de referência para o valor adequado (1), faça uma chamada para a função [AddRef](#addref) .
 
-##  <a name="dtor"></a>  CComObject::~CComObject
+##  <a name="dtor"></a>CComObject:: ~ CComObject
 
 O destruidor.
 
@@ -110,11 +110,11 @@ CComObject();
 
 ### <a name="remarks"></a>Comentários
 
-Libera todos os recursos alocados, chamadas [FinalRelease](ccomobjectrootex-class.md#finalrelease), e diminui a contagem de bloqueio de módulo.
+Libera todos os recursos alocados, chama [FinalRelease](ccomobjectrootex-class.md#finalrelease)e decrementa a contagem de bloqueios de módulo.
 
 ##  <a name="createinstance"></a>  CComObject::CreateInstance
 
-A função estática permite que você crie uma nova **CComObject <** `Base` **>** objeto, sem a sobrecarga de [CoCreateInstance](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance).
+Essa função estática permite que você crie um novo objeto de **<** `Base` **>** CComObject, sem a sobrecarga de [CoCreateInstance](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance).
 
 ```
 static HRESULT WINAPI CreateInstance(CComObject<Base>** pp);
@@ -123,17 +123,17 @@ static HRESULT WINAPI CreateInstance(CComObject<Base>** pp);
 ### <a name="parameters"></a>Parâmetros
 
 *pp*<br/>
-[out] Um ponteiro para um **CComObject <** `Base` **>** ponteiro. Se `CreateInstance` não for bem-sucedida, *pp* é definido como NULL.
+fora Um ponteiro para um ponteiro de **<** `Base` **>** CComObject. Se `CreateInstance` não for bem-sucedida, *PP* será definido como NULL.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Um valor padrão de HRESULT.
+Um valor HRESULT padrão.
 
 ### <a name="remarks"></a>Comentários
 
-O objeto retornado tem uma contagem de referência de zero, portanto, chame `AddRef` imediatamente, em seguida, use `Release` para liberar a referência no ponteiro de objeto quando você terminar.
+O objeto retornado tem uma contagem de referência igual a zero, `AddRef` portanto, chame imediatamente `Release` e, em seguida, use para liberar a referência no ponteiro do objeto quando terminar.
 
-Se você não precisa de acesso direto ao objeto, mas ainda quiser criar um novo objeto sem a sobrecarga de `CoCreateInstance`, use [CComCoClass::CreateInstance](../../atl/reference/ccomcoclass-class.md#createinstance) em vez disso.
+Se você não precisar de acesso direto ao objeto, mas ainda quiser criar um novo objeto sem a sobrecarga de `CoCreateInstance`, use [CComCoClass:: CreateInstance](../../atl/reference/ccomcoclass-class.md#createinstance) em vez disso.
 
 ### <a name="example"></a>Exemplo
 
@@ -154,21 +154,21 @@ HRESULT STDMETHODCALLTYPE QueryInterface(Q** pp);
 ### <a name="parameters"></a>Parâmetros
 
 *iid*<br/>
-[in] O identificador da interface que está sendo solicitado.
+no O identificador da interface que está sendo solicitada.
 
 *ppvObject*<br/>
-[out] Um ponteiro para o ponteiro de interface identificado pelo *iid*. Se o objeto não dá suporte a essa interface, *ppvObject* é definido como NULL.
+fora Um ponteiro para o ponteiro de interface identificado pelo *IID*. Se o objeto não oferecer suporte a essa interface, *ppvObject* será definido como NULL.
 
 *pp*<br/>
-[out] Um ponteiro para o ponteiro de interface identificado pelo tipo `Q`. Se o objeto não dá suporte a essa interface, *pp* é definido como NULL.
+fora Um ponteiro para o ponteiro de interface identificado pelo `Q`tipo. Se o objeto não oferecer suporte a essa interface, *PP* será definido como NULL.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Um valor padrão de HRESULT.
+Um valor HRESULT padrão.
 
-##  <a name="release"></a>  CComObject::Release
+##  <a name="release"></a>CComObject:: versão
 
-Diminui a contagem de referência no objeto.
+Decrementa a contagem de referência no objeto.
 
 ```
 STDMETHOD_(ULONG, Release)();
@@ -176,7 +176,7 @@ STDMETHOD_(ULONG, Release)();
 
 ### <a name="return-value"></a>Valor de retorno
 
-Essa função retorna a nova contagem de referência decrementado no objeto. Em compilações de depuração, o valor de retorno pode ser útil para diagnóstico ou teste. Em compilações sem depuração, `Release` sempre retorna 0.
+Essa função retorna a nova contagem de referência decrementada no objeto. Em compilações de depuração, o valor de retorno pode ser útil para diagnóstico ou teste. Em compilações não depuradas, `Release` sempre retorna 0.
 
 ## <a name="see-also"></a>Consulte também
 

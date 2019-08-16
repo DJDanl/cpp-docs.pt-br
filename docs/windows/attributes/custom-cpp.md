@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - custom attributes, defining
 ms.assetid: 3abac928-4d55-4ea6-8cf6-8427a4ad79f1
-ms.openlocfilehash: 227e67696e679452a9c6c0e18c04e3d918f7a93f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 19f28963a18abf42c6f629ac0f6491628387aa6d
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148166"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69491005"
 ---
 # <a name="custom-c"></a>custom (C++)
 
@@ -36,22 +36,22 @@ Um valor que pode ser colocado em uma variante.
 
 ## <a name="remarks"></a>Comentários
 
-O **personalizado** atributo C++ fará com que informações sejam colocados em biblioteca de tipos. Você precisará de uma ferramenta que lê o valor personalizado da biblioteca de tipos.
+O atributo **personalizado** C++ fará com que as informações sejam colocadas na biblioteca de tipos. Você precisará de uma ferramenta que leia o valor personalizado da biblioteca de tipos.
 
-O **personalizado** atributo tem a mesma funcionalidade que o [personalizado](/windows/desktop/Midl/custom) atributo MIDL.
+O atributo **personalizado** tem a mesma funcionalidade que o atributo MIDL [personalizado](/windows/win32/Midl/custom) .
 
 ## <a name="requirements"></a>Requisitos
 
-### <a name="attribute-context"></a>Atributo de contexto
+### <a name="attribute-context"></a>Contexto de atributo
 
 |||
 |-|-|
-|**Aplica-se a**|Não-COM **interface**, **classe**, **enum**s, `idl_module` métodos, os membros da interface, parâmetros de interface **typedef**s, **união**s, **struct**s|
+|**Aplica-se a**|**Interface**não com, **classe**, **enum**s, `idl_module` métodos, membros de interface, parâmetros de interface, **typedef**s, **Union**s, **struct**s|
 |**Repetível**|Sim|
-|**Atributos obrigatórios**|**coclass** (quando usado na classe)|
+|**Atributos necessários**|**coclass** (quando usado na classe)|
 |**Atributos inválidos**|Nenhum|
 
-Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
+Para obter mais informações sobre os contextos de atributo, consulte contextos de [atributo](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Consulte também
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /ALLOWISOLATION editbin option
 - ALLOWISOLATION editbin option
 ms.assetid: 91430344-f64f-491a-a5a5-7ea3b21cbe68
-ms.openlocfilehash: 02012e7561fe8462f5f25ae13d961c35561666ec
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 359a68d5ec0a8c7390b5f0343530864e880a057c
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62273138"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493124"
 ---
 # <a name="allowisolation"></a>/ALLOWISOLATION
 
@@ -28,16 +28,16 @@ Especifica o comportamento da pesquisa de manifesto.
 
 ## <a name="remarks"></a>Comentários
 
-**/ALLOWISOLATION** faz com que o sistema operacional de manifesto cargas e pesquisas.
+**/ALLOWISOLATION** faz com que o sistema operacional faça pesquisas e cargas de manifesto.
 
 **/ALLOWISOLATION** é o padrão.
 
-**/ALLOWISOLATION:no** indica que os executáveis sejam carregados como não se houvesse nenhum manifesto e causas [referência de EDITBIN](editbin-reference.md) para definir a `IMAGE_DLLCHARACTERISTICS_NO_ISOLATION` bit no cabeçalho opcional `DllCharacteristics` campo.
+**/ALLOWISOLATION: não** indica que os executáveis são carregados como se não houvesse nenhum manifesto e faz com que a [Referência EDITBIN](editbin-reference.md) defina o `IMAGE_DLLCHARACTERISTICS_NO_ISOLATION` bit no campo `DllCharacteristics` do cabeçalho opcional.
 
-Quando o isolamento é desabilitado por um executável, o carregador do Windows não tenta encontrar um manifesto de aplicativo para o processo recém-criado. O novo processo não tem um contexto de ativação padrão, mesmo se houver um manifesto no executável em si ou se não houver um manifesto que tem o nome *nome do executável*. manifest.
+Quando o isolamento está desabilitado para um executável, o carregador do Windows não tenta encontrar um manifesto do aplicativo para o processo recém-criado. O novo processo não tem um contexto de ativação padrão, mesmo se houver um manifesto no próprio executável ou se houver um manifesto com o nome *executável-Name*. exe. manifest.
 
 ## <a name="see-also"></a>Consulte também
 
 [Opções de EDITBIN](editbin-options.md)<br/>
 [/ALLOWISOLATION (pesquisa de manifesto)](allowisolation-manifest-lookup.md)<br/>
-[Referência de arquivos de manifesto](/windows/desktop/SbsCs/manifest-files-reference)
+[Referência de arquivos de manifesto](/windows/win32/SbsCs/manifest-files-reference)

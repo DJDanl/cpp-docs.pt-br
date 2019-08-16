@@ -1,5 +1,5 @@
 ---
-title: Conceitos básicos de objetos COM da ATL
+title: Conceitos básicos de objetos COM ATL
 ms.date: 11/19/2018
 helpviewer_keywords:
 - COM, and ATL
@@ -7,63 +7,63 @@ helpviewer_keywords:
 - ATL COM objects
 - COM objects, ATL
 ms.assetid: 0f9c9d98-cc28-45da-89ac-dc94cee422fe
-ms.openlocfilehash: cba26ede01b69e4a077f1e842982adc8c2127331
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ec83539b2d7101c534bbc1df33577df422e76152
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62198907"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492361"
 ---
-# <a name="fundamentals-of-atl-com-objects"></a>Conceitos básicos de objetos COM da ATL
+# <a name="fundamentals-of-atl-com-objects"></a>Conceitos básicos de objetos COM ATL
 
 A ilustração a seguir descreve a relação entre as classes e interfaces que são usadas para definir um objeto COM ATL.
 
-![Estrutura ATL](../atl/media/vc307y1.gif "estrutura ATL")
+![Estrutura de ATL](../atl/media/vc307y1.gif "Estrutura de ATL")
 
 > [!NOTE]
->  Este diagrama mostra que `CComObject` deriva `CYourClass` , enquanto `CComAggObject` e `CComPolyObject` incluem `CYourClass` como uma variável de membro.
+>  Este diagrama mostra que `CComObject` é derivado de `CYourClass` enquanto `CComAggObject` e `CComPolyObject` inclui `CYourClass` como uma variável de membro.
 
-Há três maneiras de definir um objeto COM ATL. A opção padrão é usar o `CComObject` classe que é derivada de `CYourClass`. A segunda opção é criar um objeto agregado usando o `CComAggObject` classe. A terceira opção é usar o `CComPolyObject` classe. `CComPolyObject` atua como um híbrido: ele pode funcionar como uma `CComObject` classe ou como um `CComAggObject` classe, dependendo de como ele é criado pela primeira vez. Para obter mais informações sobre como usar o `CComPolyObject` classe, consulte [classe CComPolyObject](../atl/reference/ccompolyobject-class.md).
+Há três maneiras de definir um objeto COM ATL. A opção padrão é usar a `CComObject` classe derivada de. `CYourClass` A segunda opção é criar um objeto agregado usando a `CComAggObject` classe. A terceira opção é usar a `CComPolyObject` classe. `CComPolyObject`atua como um híbrido: ele pode funcionar como uma `CComObject` classe ou como uma `CComAggObject` classe, dependendo de como ele é criado pela primeira vez. Para obter mais informações sobre como usar a `CComPolyObject` classe, consulte [classe CComPolyObject](../atl/reference/ccompolyobject-class.md).
 
-Quando você usa o padrão COM da ATL, é usar dois objetos: um objeto externo e um objeto interno. Clientes externos acessam a funcionalidade do objeto interno por meio de funções de invólucro são definidas no objeto externo. O objeto externo é do tipo `CComObject`.
+Ao usar COM ATL padrão, você usa dois objetos: um objeto externo e um objeto interno. Os clientes externos acessam a funcionalidade do objeto interno por meio das funções de wrapper definidas no objeto externo. O objeto externo é do tipo `CComObject`.
 
 Quando você usa um objeto agregado, o objeto externo não fornece wrappers para a funcionalidade do objeto interno. Em vez disso, o objeto externo fornece um ponteiro que é acessado diretamente por clientes externos. Nesse cenário, o objeto externo é do tipo `CComAggObject`. O objeto interno é uma variável de membro do objeto externo e é do tipo `CYourClass`.
 
-Porque o cliente não precisa passar o objeto externo para interagir com o objeto interno, os objetos agregados são geralmente mais eficientes. Além disso, o objeto externo não precisa conhecer a funcionalidade do objeto agregado, considerando que a interface do objeto agregado está diretamente disponível para o cliente. No entanto, nem todos os objetos podem ser agregados. Para um objeto a ser agregada, ele precisa ser projetado com a agregação em mente.
+Como o cliente não precisa passar pelo objeto externo para interagir com o objeto interno, os objetos agregados são geralmente mais eficientes. Além disso, o objeto externo não precisa saber a funcionalidade do objeto agregado, uma vez que a interface do objeto agregado está diretamente disponível para o cliente. No entanto, nem todos os objetos podem ser agregados. Para que um objeto seja agregado, ele precisa ser projetado com a agregação em mente.
 
-Implementa ATL [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) em duas fases:
+A ATL implementa [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) em duas fases:
 
-- [CComObject](../atl/reference/ccomobject-class.md), [CComAggObject](../atl/reference/ccomaggobject-class.md), ou [CComPolyObject](../atl/reference/ccompolyobject-class.md) implementa o `IUnknown` métodos.
+- [CComObject](../atl/reference/ccomobject-class.md), [CComAggObject](../atl/reference/ccomaggobject-class.md)ou [CComPolyObject](../atl/reference/ccompolyobject-class.md) implementa os `IUnknown` métodos.
 
-- [CComObjectRoot](../atl/reference/ccomobjectroot-class.md) ou [CComObjectRootEx](../atl/reference/ccomobjectrootex-class.md) gerencia a contagem de referência e ponteiros externos de `IUnknown`.
+- [CComObjectRoot](../atl/reference/ccomobjectroot-class.md) ou [CComObjectRootEx](../atl/reference/ccomobjectrootex-class.md) gerencia a contagem de referência e os ponteiros externos do `IUnknown`.
 
 Outros aspectos do seu objeto COM ATL são tratados por outras classes:
 
-- [CComCoClass](../atl/reference/ccomcoclass-class.md) define o modelo de fábrica e agregação de classe de padrão do objeto.
+- [CComCoClass](../atl/reference/ccomcoclass-class.md) define a fábrica de classes padrão do objeto e o modelo de agregação.
 
-- [IDispatchImpl](../atl/reference/idispatchimpl-class.md) fornece uma implementação padrão da `IDispatch Interface` parte de quaisquer interfaces duplas no objeto.
+- O [IDispatchImpl](../atl/reference/idispatchimpl-class.md) fornece uma implementação padrão da `IDispatch Interface` parte de qualquer interface dupla no objeto.
 
-- [ISupportErrorInfoImpl](../atl/reference/isupporterrorinfoimpl-class.md) implementa o `ISupportErrorInfo` interface que garante que as informações de erro pode ser propagado corretamente a cadeia de chamada.
+- O [ISupportErrorInfoImpl](../atl/reference/isupporterrorinfoimpl-class.md) implementa `ISupportErrorInfo` a interface que garante que as informações de erro possam ser propagadas corretamente na cadeia de chamadas.
 
 ## <a name="in-this-section"></a>Nesta seção
 
 [Implementando CComObjectRootEx](../atl/implementing-ccomobjectrootex.md)<br/>
-Mostrar as entradas de mapa de COM para a implementação de exemplo `CComObjectRootEx`.
+Mostrar exemplos de entradas de mapa COM `CComObjectRootEx`para implementação.
 
 [Implementando CComObject, CComAggObject e CComPolyObject](../atl/implementing-ccomobject-ccomaggobject-and-ccompolyobject.md)<br/>
-Discute como o **DECLARE_\*_AGGREGATABLE** macros afetam o uso do `CComObject`, `CComAggObject`, e `CComPolyObject`.
+Discute como as macros **DECLARE_\*_AGGREGATABLE** afetam o uso de `CComObject`, `CComAggObject`e `CComPolyObject`.
 
 [Suporte a IDispatch e IErrorInfo](../atl/supporting-idispatch-and-ierrorinfo.md)<br/>
-Lista as classes de implementação do ATL para usar para dar suporte à `IDispatch` e `IErrorInfo` interfaces.
+Lista as classes de implementação de ATL a serem usadas `IDispatch` para `IErrorInfo` dar suporte às interfaces e.
 
 [Suporte a IDispEventImpl](../atl/supporting-idispeventimpl.md)<br/>
-Discute as etapas para implementar um ponto de conexão para a sua classe.
+Discute as etapas para implementar um ponto de conexão para sua classe.
 
 [Alterando a fábrica de classes padrão e o modelo de agregação](../atl/changing-the-default-class-factory-and-aggregation-model.md)<br/>
-Mostre quais macros para usar para alterar o modelo de fábrica e agregação de classe padrão.
+Mostre as macros a serem usadas para alterar a fábrica de classes padrão e o modelo de agregação.
 
 [Criando um objeto agregado](../atl/creating-an-aggregated-object.md)<br/>
-Lista as etapas para a criação de um objeto agregado.
+Lista as etapas para criar um objeto agregado.
 
 ## <a name="related-sections"></a>Seções relacionadas
 

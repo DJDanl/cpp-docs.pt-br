@@ -31,14 +31,14 @@ helpviewer_keywords:
 - _waccess function
 - taccess function
 ms.assetid: ba34f745-85c3-49e5-a7d4-3590bd249dd3
-ms.openlocfilehash: 87ac912ab47483929b3afc2357331f8d97264b31
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 37c5760eb5231d17a8b17fe5d21f1459a865c067
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62341698"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500012"
 ---
-# <a name="access-waccess"></a>_access, _waccess
+# <a name="_access-_waccess"></a>_access, _waccess
 
 Determina se um arquivo é somente leitura ou não. Há versões mais seguras disponíveis, consulte [access_s, waccess_s](access-s-waccess-s.md).
 
@@ -65,7 +65,7 @@ Atributo de leitura/gravação.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Cada função retorna 0 se o arquivo tem o modo determinado. A função retornará -1 se o arquivo nomeado não existe ou não tem o modo determinado. Nesse caso, `errno` é definida conforme mostrado na tabela a seguir.
+Cada função retorna 0 se o arquivo tem o modo determinado. A função retornará-1 se o arquivo nomeado não existir ou não tiver o modo fornecido; Nesse caso, `errno` é definido como mostrado na tabela a seguir.
 
 |||
 |-|-|
@@ -77,20 +77,20 @@ Para obter mais informações sobre esses e outros códigos de retorno, consulte
 
 ## <a name="remarks"></a>Comentários
 
-Quando usado com arquivos, o **Access** função determina se o arquivo ou diretório especificado existe e tem os atributos especificados pelo valor de *modo*. Quando usado com diretórios **Access** determina apenas se o diretório especificado existe; no Windows 2000 e posterior sistemas operacionais, todos os diretórios leram e acesso de gravação.
+Quando usado com arquivos, a função **_access** determina se o arquivo ou diretório especificado existe e tem os atributos especificados pelo valor de *Mode*. Quando usado com diretórios, **_access** determina apenas se o diretório especificado existe; no Windows 2000 e sistemas operacionais posteriores, todos os diretórios têm acesso de leitura e gravação.
 
-|*modo* valor|Verifica o arquivo quanto a|
+|valor de *modo*|Verifica o arquivo quanto a|
 |------------------|---------------------|
 |00|Existência apenas|
 |02|Somente gravação|
 |04|Somente leitura|
 |06|Leitura e gravação|
 
-Essa função apenas verifica se os arquivos e diretórios são somente leitura ou não, ela não verifica as configurações de segurança do sistema de arquivos. Para isso você precisa de um token de acesso. Para obter mais informações sobre a segurança do sistema de arquivos, consulte [Access Tokens (Tokens de acesso)](/windows/desktop/SecAuthZ/access-tokens). Existe uma classe ATL para fornecer essa funcionalidade, consulte [Classe CAccessToken](../../atl/reference/caccesstoken-class.md).
+Essa função apenas verifica se os arquivos e diretórios são somente leitura ou não, ela não verifica as configurações de segurança do sistema de arquivos. Para isso você precisa de um token de acesso. Para obter mais informações sobre a segurança do sistema de arquivos, consulte [Access Tokens (Tokens de acesso)](/windows/win32/SecAuthZ/access-tokens). Existe uma classe ATL para fornecer essa funcionalidade, consulte [Classe CAccessToken](../../atl/reference/caccesstoken-class.md).
 
-**waccess** é uma versão de caractere largo de **Access**; o *caminho* argumento **waccess** é uma cadeia de caracteres largos. **waccess** e **Access** se comportam de forma idêntica caso contrário.
+**_waccess** é uma versão de caractere largo do **_access**; o argumento *path* para **_waccess** é uma cadeia de caracteres largos. **_waccess** e **_access** se comportam de outra forma.
 
-Essa função valida seus parâmetros. Se *caminho* for NULL ou *modo* não especifica um modo válido, o manipulador de parâmetro inválido será invocado, conforme descrito na [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, a função definirá `errno` como `EINVAL` e retornará –1.
+Essa função valida seus parâmetros. Se o *caminho* for nulo ou o *modo* não especificar um modo válido, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, a função definirá `errno` como `EINVAL` e retornará –1.
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -107,7 +107,7 @@ Essa função valida seus parâmetros. Se *caminho* for NULL ou *modo* não espe
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir usa **Access** para verificar o arquivo nomeado crt_ACCESS. C para ver se ele existe e se a gravação é permitida.
+O exemplo a seguir usa **_access** para verificar o arquivo chamado crt_ACCESS. C para ver se ele existe e se a gravação é permitida.
 
 ```C
 // crt_access.c

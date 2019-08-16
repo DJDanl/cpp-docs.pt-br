@@ -12,12 +12,12 @@ helpviewer_keywords:
 - static linking [C++]
 - libraries [C++], application deployment issues
 ms.assetid: fd8eb956-f4a0-4ffb-b401-328c73e66986
-ms.openlocfilehash: 5ca1f33a809bc81b7dcc090231e507ba66775205
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e2281effaa94c32454e88100c8b7020961f748d9
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407049"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514833"
 ---
 # <a name="choosing-a-deployment-method"></a>Escolhendo uma método de implantação
 
@@ -42,7 +42,7 @@ Em suas implantações, você pode redistribuir qualquer versão de uma bibliote
 
 Se uma implantação usar módulos de mesclagem redistribuíveis e uma instalação for executada por um usuário que não tem direitos administrativos, as DLLs do Visual C++ não serão instaladas e o aplicativo não será executado. Além disso, instaladores de aplicativos compilados com módulos de mesclagem que permitem a instalação por usuário instalam as bibliotecas em um local compartilhado que afeta todos os usuários do sistema. Use a implantação local para instalar as DLLs necessárias do Visual C++ no diretório do aplicativo de um usuário específico sem afetar outros usuários nem exigir direitos de administrador. Como isso pode criar problemas de capacidade de serviço, não recomendamos a implantação local de DLLs redistribuíveis do Visual C++.
 
-A implantação incorreta de bibliotecas do Visual C++ pode causar erros de tempo de execução durante a execução de um aplicativo que dependem delas. Quando o sistema operacional carrega o aplicativo, ele usa a ordem de pesquisa descrita em [LoadLibraryEx](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibraryexw).
+A implantação incorreta de bibliotecas do Visual C++ pode causar erros de tempo de execução durante a execução de um aplicativo que dependem delas. Quando o sistema operacional carrega o aplicativo, ele usa a ordem de pesquisa descrita em [LoadLibraryEx](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryexw).
 
 ## <a name="dynamic-linking-is-better-than-static-linking"></a>A vinculação dinâmica é melhor que a vinculação estática
 

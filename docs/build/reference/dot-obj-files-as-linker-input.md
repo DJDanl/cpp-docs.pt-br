@@ -9,26 +9,26 @@ helpviewer_keywords:
 - COFF files
 - OBJ files as linker input
 - .obj files as linker input
-ms.openlocfilehash: 36f41077fcba6b093865625d426b8009f6185e7b
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 3e02ccc09ae8c9c2f3df88bc1767ff0188baa1f4
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66450583"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492935"
 ---
 # <a name="obj-files-as-linker-input"></a>Arquivos .Obj como entrada de vinculador
 
-A ferramenta do vinculador (LINK. EXE) aceita arquivos. obj que estão em comum COFF Object File Format ().
+A ferramenta do vinculador (LINK. EXE) aceita arquivos. obj que estão no formato de arquivo de objeto comum (COFF).
 
 ## <a name="remarks"></a>Comentários
 
-A Microsoft fornece uma descrição completa do formato de arquivo comum do objeto. Para obter mais informações, consulte [formato PE](/windows/desktop/Debug/pe-format).
+A Microsoft fornece uma descrição completa do formato de arquivo de objeto comum. Para obter mais informações, consulte [formato PE](/windows/win32/Debug/pe-format).
 
 ## <a name="unicode-support"></a>Suporte para Unicode
 
-Começando com o Visual Studio 2005, o compilador MSVC Microsoft dá suporte a caracteres Unicode em identificadores, conforme definido pela ISO/IEC C e padrões C++. Versões anteriores do compilador suporte apenas caracteres ASCII em identificadores. Para dar suporte a Unicode nos nomes de funções, classes e estáticos, o compilador e vinculador usam a codificação Unicode UTF-8 para símbolos COFF nos arquivos. obj. A codificação UTF-8 é ele é compatível com codificação ASCII usado por versões anteriores do Visual Studio.
+A partir do Visual Studio 2005, o compilador Microsoft MSVC dá suporte a caracteres Unicode em identificadores, conforme definido pelos padrões ISO C++ /IEC C e. As versões anteriores do compilador suportavam apenas caracteres ASCII em identificadores. Para dar suporte a Unicode nos nomes de funções, classes e estáticas, o compilador e o vinculador usam a codificação Unicode UTF-8 para símbolos COFF nos arquivos. obj. A codificação UTF-8 é compatível de maneira retroativa com a codificação ASCII usada por versões anteriores do Visual Studio.
 
-Para obter mais informações sobre o compilador e vinculador, consulte [suporte a Unicode no compilador e vinculador](unicode-support-in-the-compiler-and-linker.md). Para obter mais informações sobre o padrão Unicode, consulte o [Unicode](https://www.unicode.org/) organização.
+Para obter mais informações sobre o compilador e o vinculador, consulte [suporte a Unicode no compilador e vinculador](unicode-support-in-the-compiler-and-linker.md). Para obter mais informações sobre o padrão Unicode, consulte a organização [Unicode](https://www.unicode.org/) .
 
 ## <a name="see-also"></a>Consulte também
 
@@ -37,4 +37,4 @@ Para obter mais informações sobre o compilador e vinculador, consulte [suporte
 [Suporte para Unicode](../../text/support-for-unicode.md)<br/>
 [Suporte Unicode no compilador e no vinculador](unicode-support-in-the-compiler-and-linker.md)<br/>
 [Padrão Unicode](https://www.unicode.org/)<br/>
-[Formato PE](/windows/desktop/Debug/pe-format)
+[Formato PE](/windows/win32/Debug/pe-format)
