@@ -16,19 +16,19 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlFileMappingBase class
 ms.assetid: be555723-2790-4f57-a8fb-be4d68460775
-ms.openlocfilehash: d31bc72e485fbb15ed595a7c777c3685a00865c4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3d9627c7a19cccc0cd3aec46d71b23c8a84711bf
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62260338"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497778"
 ---
 # <a name="catlfilemappingbase-class"></a>Classe CAtlFileMappingBase
 
-Essa classe representa um arquivo mapeado em memória.
+Essa classe representa um arquivo mapeado por memória.
 
 > [!IMPORTANT]
->  Essa classe e seus membros não podem ser usados em aplicativos executados no tempo de execução do Windows.
+>  Essa classe e seus membros não podem ser usados em aplicativos que são executados no Windows Runtime.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -54,25 +54,25 @@ class CAtlFileMappingBase
 |[CAtlFileMappingBase::GetHandle](#gethandle)|Chame esse método para retornar o identificador de arquivo.|
 |[CAtlFileMappingBase::GetMappingSize](#getmappingsize)|Chame esse método para obter o tamanho do mapeamento de um objeto de mapeamento de arquivo.|
 |[CAtlFileMappingBase::MapFile](#mapfile)|Chame esse método para criar um objeto de mapeamento de arquivo.|
-|[CAtlFileMappingBase::MapSharedMem](#mapsharedmem)|Chame esse método para criar um objeto de mapeamento de arquivo que permite acesso completo a todos os processos.|
+|[CAtlFileMappingBase::MapSharedMem](#mapsharedmem)|Chame esse método para criar um objeto de mapeamento de arquivo que permita acesso completo a todos os processos.|
 |[CAtlFileMappingBase::OpenMapping](#openmapping)|Chame esse método para retornar um identificador para o objeto de mapeamento de arquivo.|
-|[CAtlFileMappingBase::Unmap](#unmap)|Chame esse método para cancelar o mapeamento de um objeto de mapeamento de arquivo.|
+|[CAtlFileMappingBase::Unmap](#unmap)|Chame esse método para desmapear um objeto de mapeamento de arquivo.|
 
 ### <a name="public-operators"></a>Operadores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CAtlFileMappingBase::operator =](#operator_eq)|Define o objeto de mapeamento de arquivo atual em outro objeto de mapeamento de arquivo.|
+|[CAtlFileMappingBase::operator =](#operator_eq)|Define o objeto de mapeamento de arquivo atual para outro objeto de mapeamento de arquivo.|
 
 ## <a name="remarks"></a>Comentários
 
-Mapeamento de arquivo é a associação do conteúdo do arquivo com uma parte do espaço de endereço virtual de um processo. Essa classe fornece métodos para criar objetos de mapeamento de arquivo que permitir que os programas para acessar facilmente e compartilhar dados.
+O mapeamento de arquivo é a associação do conteúdo de um arquivo com uma parte do espaço de endereço virtual de um processo. Essa classe fornece métodos para criar objetos de mapeamento de arquivos que permitem que os programas acessem e compartilhem dados facilmente.
 
-Para obter mais informações, consulte [arquivo de mapeamento](/windows/desktop/Memory/file-mapping) no SDK do Windows.
+Para obter mais informações, consulte [mapeamento de arquivo](/windows/win32/Memory/file-mapping) no SDK do Windows.
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** atlfile.h
+**Cabeçalho:** atlfile. h
 
 ##  <a name="catlfilemappingbase"></a>  CAtlFileMappingBase::CAtlFileMappingBase
 
@@ -90,7 +90,7 @@ O objeto de mapeamento de arquivo original a ser copiado para criar o novo objet
 
 ### <a name="remarks"></a>Comentários
 
-Cria um novo objeto de mapeamento de arquivo, opcionalmente usando um objeto existente. Ainda é necessário chamar [CAtlFileMappingBase::MapFile](#mapfile) abrir ou criar o objeto de mapeamento de arquivo para um arquivo específico.
+Cria um novo objeto de mapeamento de arquivo, opcionalmente usando um objeto existente. Ainda é necessário chamar [CAtlFileMappingBase:: mapa](#mapfile) para abrir ou criar o objeto de mapeamento de arquivo para um arquivo específico.
 
 ### <a name="example"></a>Exemplo
 
@@ -106,7 +106,7 @@ O destruidor.
 
 ### <a name="remarks"></a>Comentários
 
-Libera os recursos alocados pela classe e chamadas a [CAtlFileMappingBase::Unmap](#unmap) método.
+Libera todos os recursos alocados pela classe e chama o método [CAtlFileMappingBase:: remapeamento](#unmap) .
 
 ##  <a name="copyfrom"></a>  CAtlFileMappingBase::CopyFrom
 
@@ -119,11 +119,11 @@ HRESULT CopyFrom(CAtlFileMappingBase& orig) throw();
 ### <a name="parameters"></a>Parâmetros
 
 *orig*<br/>
-O objeto de mapeamento de arquivo original para copiar de.
+O objeto de mapeamento de arquivo original do qual copiar.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Retorna S_OK no êxito ou um erro HRESULT em caso de falha.
+Retorna S_OK em caso de êxito ou um erro HRESULT em caso de falha.
 
 ##  <a name="getdata"></a>  CAtlFileMappingBase::GetData
 
@@ -163,7 +163,7 @@ Retorna o tamanho do mapeamento.
 
 ### <a name="example"></a>Exemplo
 
-Veja o exemplo de [CAtlFileMappingBase::CAtlFileMappingBase](#catlfilemappingbase).
+Consulte o exemplo de [CAtlFileMappingBase:: CAtlFileMappingBase](#catlfilemappingbase).
 
 ##  <a name="mapfile"></a>  CAtlFileMappingBase::MapFile
 
@@ -184,32 +184,32 @@ HRESULT MapFile(
 Identificador para o arquivo do qual criar um objeto de mapeamento. *hFile* deve ser válido e não pode ser definido como INVALID_HANDLE_VALUE.
 
 *nMappingSize*<br/>
-O tamanho do mapeamento. Se for 0, o tamanho máximo do objeto de mapeamento de arquivo é igual ao tamanho atual do arquivo identificado por *hFile.*
+O tamanho do mapeamento. Se 0, o tamanho máximo do objeto de mapeamento de arquivo é igual ao tamanho atual do arquivo identificado por *hFile.*
 
 *nOffset*<br/>
-O deslocamento de arquivo onde o mapeamento deve começar. O valor de deslocamento deve ser um múltiplo da granularidade de alocação de memória do sistema.
+O deslocamento do arquivo onde o mapeamento deve começar. O valor de deslocamento deve ser um múltiplo da granularidade de alocação de memória do sistema.
 
 *dwMappingProtection*<br/>
-A proteção desejada para o modo de exibição de arquivo quando o arquivo é mapeado. Ver *flProtect* na [CreateFileMapping](/windows/desktop/api/winbase/nf-winbase-createfilemappinga) no SDK do Windows.
+A proteção desejada para a exibição de arquivo quando o arquivo é mapeado. Consulte *flProtect* em [CreateFileMapping](/windows/win32/api/winbase/nf-winbase-createfilemappingw) na SDK do Windows.
 
 *dwViewDesiredAccess*<br/>
-Especifica o tipo de acesso para o modo de exibição de arquivo e, portanto, a proteção das páginas mapeado pelo arquivo. Ver *dwDesiredAccess* na [MapViewOfFileEx](/windows/desktop/api/memoryapi/nf-memoryapi-mapviewoffileex) no SDK do Windows.
+Especifica o tipo de acesso à exibição de arquivo e, portanto, a proteção das páginas mapeadas pelo arquivo. Consulte *dwDesiredAccess* em [MapViewOfFileEx](/windows/win32/api/memoryapi/nf-memoryapi-mapviewoffileex) na SDK do Windows.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Retorna S_OK no êxito ou um erro HRESULT em caso de falha.
+Retorna S_OK em caso de êxito ou um erro HRESULT em caso de falha.
 
 ### <a name="remarks"></a>Comentários
 
-Depois que um objeto de mapeamento de arquivos tiver sido criado, o tamanho do arquivo não deve exceder o tamanho do objeto de mapeamento de arquivo; Se isso acontecer, não todo o conteúdo do arquivo estará disponível para o compartilhamento. Para obter mais detalhes, consulte [CreateFileMapping](/windows/desktop/api/winbase/nf-winbase-createfilemappinga) e [MapViewOfFileEx](/windows/desktop/api/memoryapi/nf-memoryapi-mapviewoffileex) no SDK do Windows.
+Após a criação de um objeto de mapeamento de arquivo, o tamanho do arquivo não deve exceder o tamanho do objeto de mapeamento de arquivo; Se isso ocorrer, nem todo o conteúdo do arquivo estará disponível para compartilhamento. Para obter mais detalhes, consulte [CreateFileMapping](/windows/win32/api/winbase/nf-winbase-createfilemappingw) e [MapViewOfFileEx](/windows/win32/api/memoryapi/nf-memoryapi-mapviewoffileex) no SDK do Windows.
 
 ### <a name="example"></a>Exemplo
 
-Veja o exemplo de [CAtlFileMappingBase::CAtlFileMappingBase](#catlfilemappingbase).
+Consulte o exemplo de [CAtlFileMappingBase:: CAtlFileMappingBase](#catlfilemappingbase).
 
 ##  <a name="mapsharedmem"></a>  CAtlFileMappingBase::MapSharedMem
 
-Chame esse método para criar um objeto de mapeamento de arquivo que permite acesso completo a todos os processos.
+Chame esse método para criar um objeto de mapeamento de arquivo que permita acesso completo a todos os processos.
 
 ```
 HRESULT MapSharedMem(
@@ -224,30 +224,30 @@ HRESULT MapSharedMem(
 ### <a name="parameters"></a>Parâmetros
 
 *nMappingSize*<br/>
-O tamanho do mapeamento. Se for 0, o tamanho máximo do objeto de mapeamento de arquivo é igual ao tamanho atual do objeto de mapeamento do arquivo identificado por *szName*.
+O tamanho do mapeamento. Se 0, o tamanho máximo do objeto de mapeamento de arquivo é igual ao tamanho atual do objeto de mapeamento de arquivo identificado por *szName*.
 
 *szName*<br/>
 O nome do objeto de mapeamento.
 
 *pbAlreadyExisted*<br/>
-Aponta para um valor BOOLIANO que é definida como TRUE se o objeto de mapeamento já existia.
+Aponta para um valor BOOL definido como TRUE se o objeto de mapeamento já existia.
 
 *lpsa*<br/>
-O ponteiro para um `SECURITY_ATTRIBUTES` estrutura que determina se o identificador retornado pode ser herdado por processos filhos. Ver *lpAttributes* na [CreateFileMapping](/windows/desktop/api/winbase/nf-winbase-createfilemappinga) no SDK do Windows.
+O ponteiro para uma `SECURITY_ATTRIBUTES` estrutura que determina se o identificador retornado pode ser herdado por processos filho. Consulte *lpAttributes* em [CreateFileMapping](/windows/win32/api/winbase/nf-winbase-createfilemappingw) na SDK do Windows.
 
 *dwMappingProtection*<br/>
-A proteção desejada para o modo de exibição de arquivo, quando o arquivo é mapeado. Ver *flProtect* em `CreateFileMapping` no SDK do Windows.
+A proteção desejada para a exibição do arquivo, quando o arquivo é mapeado. Consulte *flProtect* no `CreateFileMapping` SDK do Windows.
 
 *dwViewDesiredAccess*<br/>
-Especifica o tipo de acesso para o modo de exibição de arquivo e, portanto, a proteção das páginas mapeado pelo arquivo. Ver *dwDesiredAccess* na [MapViewOfFileEx](/windows/desktop/api/memoryapi/nf-memoryapi-mapviewoffileex) no SDK do Windows.
+Especifica o tipo de acesso à exibição de arquivo e, portanto, a proteção das páginas mapeadas pelo arquivo. Consulte *dwDesiredAccess* em [MapViewOfFileEx](/windows/win32/api/memoryapi/nf-memoryapi-mapviewoffileex) na SDK do Windows.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Retorna S_OK no êxito ou um erro HRESULT em caso de falha.
+Retorna S_OK em caso de êxito ou um erro HRESULT em caso de falha.
 
 ### <a name="remarks"></a>Comentários
 
-`MapShareMem` permite que um objeto de mapeamento de arquivo existente, criado por [CreateFileMapping](/windows/desktop/api/winbase/nf-winbase-createfilemappinga), para ser compartilhado entre processos.
+`MapShareMem`permite que um objeto de mapeamento de arquivo existente, criado por [CreateFileMapping](/windows/win32/api/winbase/nf-winbase-createfilemappingw), seja compartilhado entre processos.
 
 ##  <a name="openmapping"></a>  CAtlFileMappingBase::OpenMapping
 
@@ -264,28 +264,28 @@ HRESULT OpenMapping(
 ### <a name="parameters"></a>Parâmetros
 
 *szName*<br/>
-O nome do objeto de mapeamento. Se houver um identificador aberto para um objeto de mapeamento de arquivo com este nome e o descritor de segurança no objeto de mapeamento não entra em conflito com o *dwViewDesiredAccess* bem-sucedida do parâmetro, a operação de abertura.
+O nome do objeto de mapeamento. Se houver um identificador aberto para um objeto de mapeamento de arquivo por esse nome e o descritor de segurança no objeto de mapeamento não entrar em conflito com o parâmetro *dwViewDesiredAccess* , a operação abrir terá sucesso.
 
 *nMappingSize*<br/>
-O tamanho do mapeamento. Se for 0, o tamanho máximo do objeto de mapeamento de arquivo é igual ao tamanho atual do objeto de mapeamento do arquivo identificado por *szName*.
+O tamanho do mapeamento. Se 0, o tamanho máximo do objeto de mapeamento de arquivo é igual ao tamanho atual do objeto de mapeamento de arquivo identificado por *szName*.
 
 *nOffset*<br/>
-O deslocamento de arquivo onde o mapeamento deve começar. O valor de deslocamento deve ser um múltiplo da granularidade de alocação de memória do sistema.
+O deslocamento do arquivo onde o mapeamento deve começar. O valor de deslocamento deve ser um múltiplo da granularidade de alocação de memória do sistema.
 
 *dwViewDesiredAccess*<br/>
-Especifica o tipo de acesso para o modo de exibição de arquivo e, portanto, a proteção das páginas mapeado pelo arquivo. Ver *dwDesiredAccess* na [MapViewOfFileEx](/windows/desktop/api/memoryapi/nf-memoryapi-mapviewoffileex) no SDK do Windows.
+Especifica o tipo de acesso à exibição de arquivo e, portanto, a proteção das páginas mapeadas pelo arquivo. Consulte *dwDesiredAccess* em [MapViewOfFileEx](/windows/win32/api/memoryapi/nf-memoryapi-mapviewoffileex) na SDK do Windows.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Retorna S_OK no êxito ou um erro HRESULT em caso de falha.
+Retorna S_OK em caso de êxito ou um erro HRESULT em caso de falha.
 
 ### <a name="remarks"></a>Comentários
 
-Em compilações de depuração, um erro de asserção ocorrerá se os parâmetros de entrada são inválidos.
+Em compilações de depuração, ocorrerá um erro de asserção se os parâmetros de entrada forem inválidos.
 
 ##  <a name="operator_eq"></a>  CAtlFileMappingBase::operator =
 
-Define o objeto de mapeamento de arquivo atual em outro objeto de mapeamento de arquivo.
+Define o objeto de mapeamento de arquivo atual para outro objeto de mapeamento de arquivo.
 
 ```
 CAtlFileMappingBase& operator=(CAtlFileMappingBase& orig);
@@ -302,7 +302,7 @@ Retorna uma referência ao objeto atual.
 
 ##  <a name="unmap"></a>  CAtlFileMappingBase::Unmap
 
-Chame esse método para cancelar o mapeamento de um objeto de mapeamento de arquivo.
+Chame esse método para desmapear um objeto de mapeamento de arquivo.
 
 ```
 HRESULT Unmap() throw();
@@ -310,11 +310,11 @@ HRESULT Unmap() throw();
 
 ### <a name="return-value"></a>Valor de retorno
 
-Retorna S_OK no êxito ou um erro HRESULT em caso de falha.
+Retorna S_OK em caso de êxito ou um erro HRESULT em caso de falha.
 
 ### <a name="remarks"></a>Comentários
 
-Ver [UnmapViewOfFile](/windows/desktop/api/memoryapi/nf-memoryapi-unmapviewoffile) no SDK do Windows para obter mais detalhes.
+Consulte [UnmapViewOfFile](/windows/win32/api/memoryapi/nf-memoryapi-unmapviewoffile) no SDK do Windows para obter mais detalhes.
 
 ## <a name="see-also"></a>Consulte também
 

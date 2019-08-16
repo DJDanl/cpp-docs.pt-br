@@ -8,32 +8,32 @@ helpviewer_keywords:
 - -SECTION linker option
 - section attributes
 - /SECTION linker option
-ms.openlocfilehash: 8fb73043c9c185adee0859bb81098eab022430c2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0a52e9c9dcd53b01f17dc36825732b34771c75bb
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62318557"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492622"
 ---
 # <a name="section-specify-section-attributes"></a>/SECTION (especificar atributos de seção)
 
-> **/SECTION:**_name_,[[**!**]{**DEKPRSW**}][**,ALIGN=**_number_]
+> **/Section:** _nome_, [[ **!** ] {**DEKPRSW**}] [ **, Align =** _Number_]
 
 ## <a name="remarks"></a>Comentários
 
-O **/seção** opção altera os atributos de uma seção, sobrescrevendo os atributos definidos quando o arquivo. obj para a seção foi compilado.
+A opção **/Section** altera os atributos de uma seção, substituindo os atributos definidos quando o arquivo. obj da seção foi compilado.
 
-Um *seção* em um arquivo executável portátil (PE) o arquivo é um bloco nomeado contíguo de memória que contém o código ou dados. Algumas seções contêm código ou dados que seu programa declarados e usa diretamente, enquanto outras seções de dados são criadas para você, o vinculador e o Gerenciador de biblioteca (lib.exe) e contêm informações vitais para o sistema operacional. Para obter mais informações, consulte [formato PE](/windows/desktop/Debug/pe-format).
+Uma *seção* em um arquivo executável portátil (PE) é um bloco de memória contíguo nomeado que contém o código ou os dados. Algumas seções contêm código ou dados que seu programa declarou e usa diretamente, enquanto outras seções de dados são criadas para você pelo vinculador e pelo Gerenciador de biblioteca (lib. exe) e contêm informações essenciais para o sistema operacional. Para obter mais informações, consulte [formato PE](/windows/win32/Debug/pe-format).
 
-Especifique um dois-pontos (:) e uma seção *nome*. O *nome* diferencia maiusculas de minúsculas.
+Especifique dois-pontos (:) e um *nome*de seção. O *nome* diferencia maiúsculas de minúsculas.
 
-Não use os seguintes nomes, pois eles entram em conflito com os nomes padrão. Por exemplo,. sdata é usado nas plataformas RISC:
+Não use os nomes a seguir, pois eles entram em conflito com nomes padrão. Por exemplo,. sdata é usado em plataformas RISC:
 
-- .arch
+- . Arch
 
-- BSS
+- . BSS
 
-- .data
+- . Data
 
 - .edata
 
@@ -43,11 +43,11 @@ Não use os seguintes nomes, pois eles entram em conflito com os nomes padrão. 
 
 - .rdata
 
-- .reloc
+- . realocação
 
-- .rsrc
+- . rsrc
 
-- .sbss
+- . seção sbss
 
 - .sdata
 
@@ -57,9 +57,9 @@ Não use os seguintes nomes, pois eles entram em conflito com os nomes padrão. 
 
 - .xdata
 
-Especifique um ou mais atributos para a seção. Os caracteres de atributo, listados abaixo, não diferenciam maiusculas de minúsculas. Você deve especificar todos os atributos que você deseja que a seção ter; um caractere de atributo omitido faz com que esse bit de atributo ser desligado. Se você não especificar a gravação de R, W ou E, a leitura existente, ou executável status permanece inalterado.
+Especifique um ou mais atributos para a seção. Os caracteres de atributo, listados abaixo, não diferenciam maiúsculas de minúsculas. Você deve especificar todos os atributos que deseja que a seção tenha; um caractere de atributo omitido faz com que esse bit de atributo seja desativado. Se você não especificar R, W ou E, o status de leitura, gravação ou executável existente permanecerá inalterado.
 
-Para negar a um atributo, preceda seu caractere com um ponto de exclamação (!). Os significados dos caracteres de atributo são mostrados nesta tabela:
+Para negar um atributo, preceda seu caractere com um ponto de exclamação (!). Os significados dos caracteres de atributo são mostrados nesta tabela:
 
 |Caractere|Atributo|Significado|
 |---------------|---------------|-------------|
@@ -67,23 +67,23 @@ Para negar a um atributo, preceda seu caractere com um ponto de exclamação (!)
 |R|Ler|Permite operações de leitura em dados|
 |W|Write|Permite operações de gravação em dados|
 |S|Compartilhado|Compartilha a seção entre todos os processos que carregam a imagem|
-|D|Descartável|Marca a seção como descartável|
-|M|Armazenáveis em cache|Marca a seção como não armazenável em cache|
+|D|Descartado|Marca a seção como descartada|
+|K|Armazenável em cache|Marca a seção como não armazenável em cache|
 |P|Paginável|Marca a seção como não paginável|
 
-K e P é incomuns em que os sinalizadores de seção que correspondem a eles são usados no sentido de negativo. Se você especifica um na seção de. Text usando o **/SECTION:.text, K** opção, não há nenhuma diferença nos sinalizadores de seção quando você executa [DUMPBIN](dumpbin-options.md) com o [/HEADERS](headers.md)opção; a seção já implicitamente foi armazenado em cache. Para remover o padrão, especifique **/SECTION:.text,! K** em vez disso. Opção DUMPBIN revela as características de seção, incluindo "Não armazenado em cache."
+K e P são incomuns, pois os sinalizadores de seção que correspondem a eles são usados no sentido negativo. Se você especificar um deles na seção. Text usando a opção **/Section:. Text, K** , não haverá nenhuma diferença nos sinalizadores de seção quando você executar [DUMPBIN](dumpbin-options.md) com a opção [/Headers](headers.md) ; a seção já estava armazenada em cache implicitamente. Para remover o padrão, especifique **/Section:. Text,!** Em vez disso. DUMPBIN revela características da seção, incluindo "não armazenado em cache".
 
-Uma seção no arquivo PE que não tenha E, R ou W definido é provavelmente inválida.
+Uma seção no arquivo PE que não tem o conjunto de E, R ou W é provavelmente inválida.
 
-O **ALIGN =**_número_ argumento permite que você especifique um valor de alinhamento para uma determinada seção. O _número_ argumento é em bytes e deve ser uma potência de dois. Ver [/ALINHAR](align-section-alignment.md) para obter mais informações.
+O argumento **align =** _Number_ permite especificar um valor de alinhamento para uma determinada seção. O argumento _Number_ está em bytes e deve ser uma potência de dois. Consulte [/align](align-section-alignment.md) para obter mais informações.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do vinculador no ambiente de desenvolvimento do Visual Studio
 
-1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [propriedades de compilador e de build definida C++ no Visual Studio](../working-with-project-properties.md).
+1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, confira [Definir as propriedades de build e do compilador do C++ no Visual Studio](../working-with-project-properties.md).
 
-1. Escolha o **propriedades de configuração** > **vinculador** > **linha de comando** página de propriedades.
+1. Escolha a página de propriedade da**linha de comando** do**vinculador** > de **Propriedades** > de configuração.
 
-1. Insira a opção na **opções adicionais** caixa. Escolher **Okey** ou **aplicar** para aplicar a alteração.
+1. Insira a opção na caixa **Opções adicionais** . Escolha **OK** ou **aplicar** para aplicar a alteração.
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Para definir esta opção do vinculador por meio de programação
 

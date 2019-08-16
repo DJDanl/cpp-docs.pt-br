@@ -64,12 +64,12 @@ helpviewer_keywords:
 - CHeaderCtrl [MFC], SetItem
 - CHeaderCtrl [MFC], SetOrderArray
 ms.assetid: b847ac90-5fae-4a87-88e0-ca45f77b8b3b
-ms.openlocfilehash: 5268a5ae336b0f96dfd6c0bd348a883e85ac32e6
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: 407ba2747ed4d6e56e56fe4ccb2ccb828240a732
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66503551"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69506716"
 ---
 # <a name="cheaderctrl-class"></a>Classe CHeaderCtrl
 
@@ -93,54 +93,54 @@ class CHeaderCtrl : public CWnd
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CHeaderCtrl::ClearAllFilters](#clearallfilters)|Limpa todos os filtros para um controle de cabeçalho.|
-|[CHeaderCtrl::ClearFilter](#clearfilter)|Limpa o filtro para um controle de cabeçalho.|
-|[CHeaderCtrl::Create](#create)|Cria um controle de cabeçalho e anexa-o para um `CHeaderCtrl` objeto.|
+|[CHeaderCtrl::ClearAllFilters](#clearallfilters)|Limpa todos os filtros de um controle de cabeçalho.|
+|[CHeaderCtrl::ClearFilter](#clearfilter)|Limpa o filtro de um controle de cabeçalho.|
+|[CHeaderCtrl::Create](#create)|Cria um controle de cabeçalho e o anexa a um `CHeaderCtrl` objeto.|
 |[CHeaderCtrl::CreateDragImage](#createdragimage)|Cria uma versão transparente da imagem de um item dentro de um controle de cabeçalho.|
-|[CHeaderCtrl::CreateEx](#createex)|Cria um controle de cabeçalho com os estilos estendidos do Windows especificados e anexa-o para um `CListCtrl` objeto.|
+|[CHeaderCtrl::CreateEx](#createex)|Cria um controle de cabeçalho com os estilos estendidos do Windows especificados e o anexa `CListCtrl` a um objeto.|
 |[CHeaderCtrl::DeleteItem](#deleteitem)|Exclui um item de um controle de cabeçalho.|
 |[CHeaderCtrl::DrawItem](#drawitem)|Desenha o item especificado de um controle de cabeçalho.|
-|[CHeaderCtrl::EditFilter](#editfilter)|Começa a editar o filtro especificado de um controle de cabeçalho.|
+|[CHeaderCtrl::EditFilter](#editfilter)|Inicia a edição do filtro especificado de um controle de cabeçalho.|
 |[CHeaderCtrl::GetBitmapMargin](#getbitmapmargin)|Recupera a largura da margem de um bitmap em um controle de cabeçalho.|
 |[CHeaderCtrl::GetFocusedItem](#getfocuseditem)|Obtém o identificador do item no controle de cabeçalho atual que tem o foco.|
-|[CHeaderCtrl::GetImageList](#getimagelist)|Recupera o identificador de uma lista de imagens usada para desenho itens de cabeçalho em um controle de cabeçalho.|
+|[CHeaderCtrl::GetImageList](#getimagelist)|Recupera o identificador de uma lista de imagens usada para desenhar itens de cabeçalho em um controle de cabeçalho.|
 |[CHeaderCtrl::GetItem](#getitem)|Recupera informações sobre um item em um controle de cabeçalho.|
 |[CHeaderCtrl::GetItemCount](#getitemcount)|Recupera uma contagem dos itens em um controle de cabeçalho.|
-|[CHeaderCtrl::GetItemDropDownRect](#getitemdropdownrect)|Obtém as informações do retângulo delimitador para o botão de menu especificado em um controle de cabeçalho.|
-|[CHeaderCtrl::GetItemRect](#getitemrect)|Recupera o retângulo delimitador para um determinado item em um controle de cabeçalho.|
-|[CHeaderCtrl::GetOrderArray](#getorderarray)|Recupera a ordem da esquerda para a direita dos itens em um controle de cabeçalho.|
+|[CHeaderCtrl::GetItemDropDownRect](#getitemdropdownrect)|Obtém as informações de retângulo delimitador para o botão suspenso especificado em um controle de cabeçalho.|
+|[CHeaderCtrl::GetItemRect](#getitemrect)|Recupera o retângulo delimitador de um determinado item em um controle de cabeçalho.|
+|[CHeaderCtrl::GetOrderArray](#getorderarray)|Recupera a ordem da esquerda para a direita de itens em um controle de cabeçalho.|
 |[CHeaderCtrl::GetOverflowRect](#getoverflowrect)|Obtém o retângulo delimitador do botão de estouro para o controle de cabeçalho atual.|
 |[CHeaderCtrl::HitTest](#hittest)|Determina qual item de cabeçalho, se houver, está localizado em um ponto especificado.|
 |[CHeaderCtrl::InsertItem](#insertitem)|Insere um novo item em um controle de cabeçalho.|
-|[CHeaderCtrl::Layout](#layout)|Recupera o tamanho e a posição de um controle de cabeçalho dentro de um retângulo determinado.|
-|[CHeaderCtrl::OrderToIndex](#ordertoindex)|Recupera o valor de índice para um item com base em sua ordem no controle de cabeçalho.|
+|[CHeaderCtrl::Layout](#layout)|Recupera o tamanho e a posição de um controle de cabeçalho em um determinado retângulo.|
+|[CHeaderCtrl::OrderToIndex](#ordertoindex)|Recupera o valor de índice de um item com base em sua ordem no controle de cabeçalho.|
 |[CHeaderCtrl::SetBitmapMargin](#setbitmapmargin)|Define a largura da margem de um bitmap em um controle de cabeçalho.|
-|[CHeaderCtrl::SetFilterChangeTimeout](#setfilterchangetimeout)|Define o intervalo de tempo limite entre a hora em que uma alteração é feita em atributos de filtro e o lançamento de um `HDN_FILTERCHANGE` notificação.|
+|[CHeaderCtrl::SetFilterChangeTimeout](#setfilterchangetimeout)|Define o intervalo de tempo limite entre a hora em que uma alteração ocorre nos atributos de filtro e o `HDN_FILTERCHANGE` lançamento de uma notificação.|
 |[CHeaderCtrl::SetFocusedItem](#setfocuseditem)|Define o foco para um item de cabeçalho especificado no controle de cabeçalho atual.|
-|[CHeaderCtrl::SetHotDivider](#sethotdivider)|Arraste o divisor entre itens de cabeçalho para indicar um manual de alterações e soltar de um item de cabeçalho.|
+|[CHeaderCtrl::SetHotDivider](#sethotdivider)|Altera o divisor entre itens de cabeçalho para indicar um arrastar e soltar manual de um item de cabeçalho.|
 |[CHeaderCtrl::SetImageList](#setimagelist)|Atribui uma lista de imagens a um controle de cabeçalho.|
 |[CHeaderCtrl::SetItem](#setitem)|Define os atributos do item especificado em um controle de cabeçalho.|
-|[CHeaderCtrl::SetOrderArray](#setorderarray)|Define a ordem da esquerda para a direita dos itens em um controle de cabeçalho.|
+|[CHeaderCtrl::SetOrderArray](#setorderarray)|Define a ordem da esquerda para a direita de itens em um controle de cabeçalho.|
 
 ## <a name="remarks"></a>Comentários
 
-Um controle de cabeçalho é uma janela que geralmente é posicionada acima de um conjunto de colunas de texto ou números. Ela contém um título para cada coluna, e ele pode ser dividido em partes. O usuário pode arrastar os divisores que separam as partes para definir a largura de cada coluna. Para obter uma ilustração de um controle de cabeçalho, consulte [controles de cabeçalho](/windows/desktop/Controls/header-controls).
+Um controle de cabeçalho é uma janela que geralmente está posicionada acima de um conjunto de colunas de texto ou números. Ele contém um título para cada coluna e pode ser dividido em partes. O usuário pode arrastar os divisores que separam as partes para definir a largura de cada coluna. Para obter uma ilustração de um controle de cabeçalho, consulte [controles de cabeçalho](/windows/win32/Controls/header-controls).
 
-Esse controle (e, portanto, o `CHeaderCtrl` classe) está disponível somente para programas que são executados na versão do Windows 95/98 e Windows NT 3.51 e posterior.
+Esse controle (e, portanto `CHeaderCtrl` , a classe) está disponível somente para programas executados no Windows 95/98 e no Windows NT versão 3,51 e posterior.
 
-Funcionalidade adicionada para controles comuns do Windows 95/Internet Explorer 4.0 inclui o seguinte:
+A funcionalidade adicionada para controles comuns do Windows 95/Internet Explorer 4,0 inclui o seguinte:
 
-- Cabeçalho personalizado ordenação de itens.
+- Ordenação personalizada de item de cabeçalho.
 
-- Item de cabeçalho arrastar e soltar, para a reordenação de itens de cabeçalho. Usar o estilo HDS_DRAGDROP quando você cria o `CHeaderCtrl` objeto.
+- Arrastar e soltar item de cabeçalho para reordenação de itens de cabeçalho. Use o estilo HDS_DRAGDROP ao criar o `CHeaderCtrl` objeto.
 
-- Texto da coluna de cabeçalho constantemente visível durante o redimensionamento de colunas. Usar o estilo HDS_FULLDRAG quando você cria um `CHeaderCtrl` objeto.
+- Texto da coluna de cabeçalho em constante visualização durante o redimensionamento de coluna. Use o estilo HDS_FULLDRAG ao criar um `CHeaderCtrl` objeto.
 
-- Cabeçalho rastreio importante, que destaca o item de cabeçalho quando o ponteiro está sobre ele. Usar o estilo HDS_HOTTRACK quando você cria o `CHeaderCtrl` objeto.
+- Rastreamento dinâmico de cabeçalho, que realça o item de cabeçalho quando o ponteiro passa sobre ele. Use o estilo HDS_HOTTRACK ao criar o `CHeaderCtrl` objeto.
 
-- Suporte à lista de imagem. Itens de cabeçalho podem conter imagens armazenadas em um `CImageList` objeto ou texto.
+- Suporte à lista de imagens. Os itens de cabeçalho podem conter imagens armazenadas `CImageList` em um objeto ou texto.
 
-Para obter mais informações sobre como usar `CHeaderCtrl`, consulte [controles](../../mfc/controls-mfc.md) e [usando CHeaderCtrl](../../mfc/using-cheaderctrl.md).
+Para obter mais informações sobre `CHeaderCtrl`como usar o, consulte [controles](../../mfc/controls-mfc.md) e [usando CHeaderCtrl](../../mfc/using-cheaderctrl.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -170,7 +170,7 @@ CHeaderCtrl();
 
 ##  <a name="clearallfilters"></a>  CHeaderCtrl::ClearAllFilters
 
-Limpa todos os filtros para um controle de cabeçalho.
+Limpa todos os filtros de um controle de cabeçalho.
 
 ```
 BOOL ClearAllFilters();
@@ -178,11 +178,11 @@ BOOL ClearAllFilters();
 
 ### <a name="return-value"></a>Valor de retorno
 
-TRUE se esse método for bem-sucedida; Caso contrário, FALSE.
+TRUE se esse método for bem-sucedido; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-Esse método implementa o comportamento da mensagem do Win32 [HDM_CLEARFILTER](/windows/desktop/Controls/hdm-clearfilter) com um valor de coluna de -1, conforme descrito no SDK do Windows.
+Esse método implementa o comportamento da mensagem Win32 [HDM_CLEARFILTER](/windows/win32/Controls/hdm-clearfilter) com um valor de coluna igual a-1, conforme descrito no SDK do Windows.
 
 ### <a name="example"></a>Exemplo
 
@@ -190,7 +190,7 @@ Esse método implementa o comportamento da mensagem do Win32 [HDM_CLEARFILTER](/
 
 ##  <a name="clearfilter"></a>  CHeaderCtrl::ClearFilter
 
-Limpa o filtro para um controle de cabeçalho.
+Limpa o filtro de um controle de cabeçalho.
 
 ```
 BOOL ClearFilter(int nColumn);
@@ -199,23 +199,23 @@ BOOL ClearFilter(int nColumn);
 ### <a name="parameters"></a>Parâmetros
 
 *nColumn*<br/>
-Valor de coluna que indica quais filtrar para limpar.
+Valor da coluna que indica qual filtro deve ser limpo.
 
 ### <a name="return-value"></a>Valor de retorno
 
-TRUE se esse método for bem-sucedida; Caso contrário, FALSE.
+TRUE se esse método for bem-sucedido; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-Esse método implementa o comportamento da mensagem do Win32 [HDM_CLEARFILTER](/windows/desktop/Controls/hdm-clearfilter), conforme descrito no SDK do Windows.
+Esse método implementa o comportamento da mensagem do Win32 [HDM_CLEARFILTER](/windows/win32/Controls/hdm-clearfilter), conforme descrito na SDK do Windows.
 
 ### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFC_CHeaderCtrl#3](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_3.cpp)]
 
-##  <a name="create"></a>  CHeaderCtrl::Create
+##  <a name="create"></a>CHeaderCtrl:: criar
 
-Cria um controle de cabeçalho e anexa-o para um `CHeaderCtrl` objeto.
+Cria um controle de cabeçalho e o anexa a um `CHeaderCtrl` objeto.
 
 ```
 virtual BOOL Create(
@@ -228,60 +228,60 @@ virtual BOOL Create(
 ### <a name="parameters"></a>Parâmetros
 
 *dwStyle*<br/>
-Especifica o estilo do controle de cabeçalho. Para obter uma descrição dos estilos de controle de cabeçalho, consulte [estilos de controle de cabeçalho](/windows/desktop/Controls/header-control-styles) no SDK do Windows.
+Especifica o estilo do controle de cabeçalho. Para obter uma descrição dos estilos de controle de cabeçalho, consulte [estilos de controle de cabeçalho](/windows/win32/Controls/header-control-styles) na SDK do Windows.
 
 *rect*<br/>
-Especifica o tamanho e a posição do controle de cabeçalho. Ela pode ser um [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto ou uma [RECT](/previous-versions/dd162897\(v=vs.85\)) estrutura.
+Especifica o tamanho e a posição do controle de cabeçalho. Pode ser um objeto [CRect](../../atl-mfc-shared/reference/crect-class.md) ou uma estrutura [Rect](/previous-versions/dd162897\(v=vs.85\)) .
 
 *pParentWnd*<br/>
-Especifica a janela do pai do controle de cabeçalho, geralmente um `CDialog`. Ele não deve ser NULL.
+Especifica a janela pai do controle de cabeçalho, geralmente `CDialog`um. Ele não deve ser nulo.
 
 *nID*<br/>
-Especifica a ID. do controle de cabeçalho
+Especifica a ID do controle de cabeçalho.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Diferente de zero se a inicialização foi bem-sucedida; Caso contrário, zero.
+Diferente de zero se a inicialização tiver sido bem-sucedida; caso contrário, zero.
 
 ### <a name="remarks"></a>Comentários
 
-Você constrói um `CHeaderCtrl` objeto em duas etapas. Primeiro, chame o construtor e, em seguida, chame `Create`, que cria o controle de cabeçalho e anexa-o para o `CHeaderCtrl` objeto.
+Você constrói um `CHeaderCtrl` objeto em duas etapas. Primeiro, chame o construtor e, em `Create`seguida, chame, que cria o controle de cabeçalho e o `CHeaderCtrl` anexa ao objeto.
 
-Além dos estilos de controle de cabeçalho, você pode usar os seguintes estilos de controle comuns para determinar como o controle de cabeçalho posiciona e redimensionada (consulte [estilos de controle comuns](/windows/desktop/Controls/common-control-styles) para obter mais informações):
+Além dos estilos de controle de cabeçalho, você pode usar os seguintes estilos de controle comuns para determinar como as posições de controle de cabeçalho e redimensionam-se (consulte os [estilos de controle comuns](/windows/win32/Controls/common-control-styles) para obter mais informações):
 
-- CCS_BOTTOM faz com que o controle se posicionar na parte inferior da área de cliente da janela pai e define a largura para ser o mesmo que o pai a largura da janela.
+- CCS_BOTTOM faz com que o controle se posicione na parte inferior da área do cliente da janela pai e define a largura como a mesma que a largura da janela pai.
 
-- CCS_NODIVIDER impede que um pixel de dois realce do que está sendo desenhado na parte superior do controle.
+- CCS_NODIVIDER impede que um realce de dois pixels seja desenhado na parte superior do controle.
 
-- CCS_NOMOVEY faz com que o controle redimensionar e mover em si horizontalmente, mas não na vertical, em resposta a uma mensagem WM_SIZE. Se o estilo CCS_NORESIZE for usado, esse estilo não se aplica. Por padrão, os controles de cabeçalho têm esse estilo.
+- CCS_NOMOVEY faz com que o controle redimensione e se mova horizontalmente, mas não verticalmente, em resposta a uma mensagem WM_SIZE. Se o estilo CCS_NORESIZE for usado, esse estilo não se aplicará. Os controles de cabeçalho têm esse estilo por padrão.
 
-- CCS_NOPARENTALIGN impede que o controle sejam movidos automaticamente para a parte superior ou inferior da janela pai. Em vez disso, o controle mantém sua posição dentro da janela pai, apesar das alterações para o tamanho da janela pai. Se o estilo CCS_TOP ou CCS_BOTTOM também é usado, a altura é ajustada para o padrão, mas a posição e a largura permanecem inalterados.
+- CCS_NOPARENTALIGN impede que o controle se mova automaticamente para a parte superior ou inferior da janela pai. Em vez disso, o controle mantém sua posição dentro da janela pai apesar das alterações no tamanho da janela pai. Se o estilo CCS_TOP ou CCS_BOTTOM também for usado, a altura será ajustada para o padrão, mas a posição e a largura permanecerão inalteradas.
 
-- CCS_NORESIZE impede que o controle usando a largura e altura padrão ao definir seu tamanho inicial ou um novo tamanho. Em vez disso, o controle usa a largura e altura especificada na solicitação para a criação ou dimensionamento.
+- CCS_NORESIZE impede que o controle use a largura e a altura padrão ao definir seu tamanho inicial ou um novo tamanho. Em vez disso, o controle usa a largura e a altura especificadas na solicitação de criação ou dimensionamento.
 
-- CCS_TOP faz com que o controle se posicionar na parte superior da área de cliente da janela pai e define a largura para ser o mesmo que o pai a largura da janela.
+- CCS_TOP faz com que o controle se posicione na parte superior da área do cliente da janela pai e define a largura como a mesma que a largura da janela pai.
 
-Você também pode aplicar os seguintes estilos de janela para um controle de cabeçalho (consulte [estilos de janela](../../mfc/reference/styles-used-by-mfc.md#window-styles) para obter mais informações):
+Você também pode aplicar os seguintes estilos de janela a um controle de cabeçalho (consulte os [estilos de janela](../../mfc/reference/styles-used-by-mfc.md#window-styles) para obter mais informações):
 
 - WS_CHILD cria uma janela filho. Não pode ser usado com o estilo WS_POPUP.
 
-- WS_VISIBLE cria uma janela que é visível inicialmente.
+- WS_VISIBLE cria uma janela que inicialmente é visível.
 
-- WS_DISABLED cria uma janela que é inicialmente desabilitada.
+- WS_DISABLED Cria uma janela que está inicialmente desabilitada.
 
-- WS_GROUP Especifica o primeiro controle de um grupo de controles em que o usuário pode mover de um controle para a próxima com as teclas de direção. Todos os controles definidos com o estilo WS_GROUP após o primeiro controle pertencem ao mesmo grupo. O próximo controle com o estilo WS_GROUP termina o grupo de estilo e inicia o próximo grupo (ou seja, um grupo termina onde o próximo começa).
+- WS_GROUP especifica o primeiro controle de um grupo de controles no qual o usuário pode passar de um controle para o próximo com as teclas de direção. Todos os controles definidos com o estilo WS_GROUP após o primeiro controle pertencem ao mesmo grupo. O próximo controle com o estilo WS_GROUP encerra o grupo de estilos e inicia o próximo grupo (ou seja, um grupo termina onde o próximo começa).
 
-- WS_TABSTOP Especifica um número de controles por meio do qual o usuário pode mover usando a tecla TAB. A tecla TAB move o usuário para o próximo controle especificado pelo estilo de WS_TABSTOP.
+- WS_TABSTOP especifica um dos vários controles pelos quais o usuário pode mover usando a tecla TAB. A tecla TAB move o usuário para o próximo controle especificado pelo estilo WS_TABSTOP.
 
-Se você quiser usar estilos estendidos do windows com o seu controle, chame [CreateEx](#createex) em vez de `Create`.
+Se você quiser usar estilos estendidos do Windows com seu controle, chame [CreateEx](#createex) em `Create`vez de.
 
 ### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFC_CHeaderCtrl#4](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_4.cpp)]
 
-##  <a name="createex"></a>  CHeaderCtrl::CreateEx
+##  <a name="createex"></a>CHeaderCtrl::CreateEx
 
-Cria um controle (uma janela filho) e associá-la com o `CHeaderCtrl` objeto.
+Cria um controle (uma janela filho) e o `CHeaderCtrl` associa ao objeto.
 
 ```
 virtual BOOL CreateEx(
@@ -295,27 +295,27 @@ virtual BOOL CreateEx(
 ### <a name="parameters"></a>Parâmetros
 
 *dwExStyle*<br/>
-Especifica o estilo estendido do controle que está sendo criado. Para obter uma lista dos estilos estendidos do Windows, consulte o *dwExStyle* parâmetro para [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) no SDK do Windows.
+Especifica o estilo estendido do controle que está sendo criado. Para obter uma lista de estilos estendidos do Windows, consulte o parâmetro *dwExStyle* para [CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw) no SDK do Windows.
 
 *dwStyle*<br/>
-Estilo do controle de cabeçalho. Para obter uma descrição dos estilos de controle de cabeçalho, consulte [estilos de controle de cabeçalho](/windows/desktop/Controls/header-control-styles) no SDK do Windows. Ver [criar](#create) para obter uma lista de estilos adicionais.
+O estilo do controle de cabeçalho. Para obter uma descrição dos estilos de controle de cabeçalho, consulte [estilos de controle de cabeçalho](/windows/win32/Controls/header-control-styles) na SDK do Windows. Consulte [criar](#create) para obter uma lista de estilos adicionais.
 
 *rect*<br/>
-Uma referência a um [RECT](/previous-versions/dd162897\(v=vs.85\)) estrutura que descreve o tamanho e posição da janela a ser criado, em coordenadas do cliente do *pParentWnd*.
+Uma referência a uma estrutura [Rect](/previous-versions/dd162897\(v=vs.85\)) que descreve o tamanho e a posição da janela a ser criada, nas coordenadas de cliente de *pParentWnd*.
 
 *pParentWnd*<br/>
 Um ponteiro para a janela que é o pai do controle.
 
 *nID*<br/>
-ID da janela filho. do controle
+A ID da janela filho do controle.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Diferente de zero se bem-sucedido; Caso contrário, 0.
+Diferente de zero, se for bem-sucedido; caso contrário, 0.
 
 ### <a name="remarks"></a>Comentários
 
-Use `CreateEx` em vez de `Create` para aplicar estilos estendidos do Windows, especificados pelo prefácio de estilo estendido do Windows **WS_EX_** .
+Use `CreateEx` em vez `Create` de para aplicar estilos estendidos do Windows, especificados pelo estilo estendido do Windows **WS_EX_** do prefácio.
 
 ##  <a name="createdragimage"></a>  CHeaderCtrl::CreateDragImage
 
@@ -328,17 +328,17 @@ CImageList* CreateDragImage(int nIndex);
 ### <a name="parameters"></a>Parâmetros
 
 *nIndex*<br/>
-O índice baseado em zero do item dentro do controle de cabeçalho. A imagem atribuída a este item é a base para a imagem transparente.
+O índice de base zero do item dentro do controle de cabeçalho. A imagem atribuída a esse item é a base para a imagem transparente.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Um ponteiro para um [CImageList](../../mfc/reference/cimagelist-class.md) objeto se for bem-sucedido; caso contrário, NULL. A lista retornada contém apenas uma imagem.
+Um ponteiro para um objeto [CImageList](../../mfc/reference/cimagelist-class.md) se for bem-sucedido; caso contrário, NULL. A lista retornada contém apenas uma imagem.
 
 ### <a name="remarks"></a>Comentários
 
-Essa função membro implementa o comportamento da mensagem do Win32 [HDM_CREATEDRAGIMAGE](/windows/desktop/Controls/hdm-createdragimage), conforme descrito no SDK do Windows. Ele é fornecido para dar suporte ao cabeçalho item arrastar e soltar.
+Essa função de membro implementa o comportamento da mensagem [HDM_CREATEDRAGIMAGE](/windows/win32/Controls/hdm-createdragimage)do Win32, conforme descrito na SDK do Windows. Ele é fornecido para dar suporte ao arrastar e soltar item de cabeçalho.
 
-O `CImageList` objeto ao qual o ponteiro retornado aponta é um objeto temporário e será excluído no próximo processamento de tempo ocioso.
+O `CImageList` objeto para o qual o ponteiro retornado aponta é um objeto temporário e é excluído no próximo processamento em tempo ocioso.
 
 ##  <a name="deleteitem"></a>  CHeaderCtrl::DeleteItem
 
@@ -351,19 +351,19 @@ BOOL DeleteItem(int nPos);
 ### <a name="parameters"></a>Parâmetros
 
 *nPos*<br/>
-Especifica o índice baseado em zero do item a ser excluído.
+Especifica o índice de base zero do item a ser excluído.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Diferente de zero se bem-sucedido; Caso contrário, 0.
+Diferente de zero, se for bem-sucedido; caso contrário, 0.
 
 ### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFC_CHeaderCtrl#5](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_5.cpp)]
 
-##  <a name="drawitem"></a>  CHeaderCtrl::DrawItem
+##  <a name="drawitem"></a>CHeaderCtrl::D rawItem
 
-Chamado pelo framework quando um aspecto visual de um alterações de controle de cabeçalho desenhados pelo proprietário.
+Chamado pelo Framework quando um aspecto visual de um controle de cabeçalho de desenho proprietário é alterado.
 
 ```
 virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
@@ -372,15 +372,15 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ### <a name="parameters"></a>Parâmetros
 
 *lpDrawItemStruct*<br/>
-Um ponteiro para um [DRAWITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct) estrutura que descreve o item a ser pintado.
+Um ponteiro para uma estrutura [DRAWITEMSTRUCT](/windows/win32/api/winuser/ns-winuser-drawitemstruct) que descreve o item a ser pintado.
 
 ### <a name="remarks"></a>Comentários
 
-O `itemAction` membro o `DRAWITEMSTRUCT` estrutura define a ação de desenho a ser executada.
+O `itemAction` membro`DRAWITEMSTRUCT` da estrutura define a ação de desenho a ser executada.
 
-Por padrão, essa função membro não faz nada. Substituir essa função de membro para implementar o desenho de um desenho proprietário `CHeaderCtrl` objeto.
+Por padrão, essa função de membro não faz nada. Substitua essa função de membro para implementar o desenho de um objeto `CHeaderCtrl` de desenho proprietário.
 
-O aplicativo deve restaurar todos os objetos de interface (GDI) do dispositivo gráficos selecionados para o contexto de exibição fornecido no *lpDrawItemStruct* antes desse membro função encerra.
+O aplicativo deve restaurar todos os objetos da interface de dispositivo de gráficos (GDI) selecionados para o contexto de exibição fornecido em *lpDrawItemStruct* antes que essa função de membro seja encerrada.
 
 ### <a name="example"></a>Exemplo
 
@@ -399,20 +399,20 @@ BOOL EditFilter(
 ### <a name="parameters"></a>Parâmetros
 
 *nColumn*<br/>
-A coluna para editar.
+A coluna a ser editada.
 
 *bDiscardChanges*<br/>
-Um valor que especifica como lidar com o usuário de edição de alterações se o usuário estiver no processo de edição do filtro quando o [HDM_EDITFILTER](/windows/desktop/Controls/hdm-editfilter) mensagem é enviada.
+Um valor que especifica como tratar as alterações de edição do usuário se o usuário estiver no processo de edição do filtro quando a mensagem [HDM_EDITFILTER](/windows/win32/Controls/hdm-editfilter) for enviada.
 
-Especifique verdadeiro para descartar as alterações feitas pelo usuário, ou falso para aceitar as alterações feitas pelo usuário.
+Especifique TRUE para descartar as alterações feitas pelo usuário ou FALSE para aceitar as alterações feitas pelo usuário.
 
 ### <a name="return-value"></a>Valor de retorno
 
-TRUE se esse método for bem-sucedida; Caso contrário, FALSE.
+TRUE se esse método for bem-sucedido; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-Esse método implementa o comportamento da mensagem do Win32 [HDM_EDITFILTER](/windows/desktop/Controls/hdm-editfilter), conforme descrito no SDK do Windows.
+Esse método implementa o comportamento da mensagem do Win32 [HDM_EDITFILTER](/windows/win32/Controls/hdm-editfilter), conforme descrito na SDK do Windows.
 
 ### <a name="example"></a>Exemplo
 
@@ -428,11 +428,11 @@ int GetBitmapMargin() const;
 
 ### <a name="return-value"></a>Valor de retorno
 
-A largura da margem de bitmap em pixels.
+A largura da margem do bitmap em pixels.
 
 ### <a name="remarks"></a>Comentários
 
-Essa função membro implementa o comportamento da mensagem do Win32 [HDM_GETBITMAPMARGIN](/windows/desktop/Controls/hdm-getbitmapmargin), conforme descrito no SDK do Windows.
+Essa função de membro implementa o comportamento da mensagem [HDM_GETBITMAPMARGIN](/windows/win32/Controls/hdm-getbitmapmargin)do Win32, conforme descrito na SDK do Windows.
 
 ### <a name="example"></a>Exemplo
 
@@ -448,27 +448,27 @@ int GetFocusedItem() const;
 
 ### <a name="return-value"></a>Valor de retorno
 
-O índice baseado em zero do item de cabeçalho que tem o foco.
+O índice de base zero do item de cabeçalho que tem o foco.
 
 ### <a name="remarks"></a>Comentários
 
-Esse método envia o [HDM_GETFOCUSEDITEM](/windows/desktop/Controls/hdm-getfocuseditem) mensagem, que é descrita no SDK do Windows.
+Esse método envia a mensagem [HDM_GETFOCUSEDITEM](/windows/win32/Controls/hdm-getfocuseditem) , que é descrita na SDK do Windows.
 
 ### <a name="example"></a>Exemplo
 
-O exemplo de código a seguir define a variável `m_headerCtrl`, que é usado para acessar o controle de cabeçalho atual. Essa variável é usada no exemplo a seguir.
+O exemplo de código a seguir define a `m_headerCtrl`variável,, que é usada para acessar o controle de cabeçalho atual. Essa variável é usada no exemplo a seguir.
 
 [!code-cpp[NVC_MFC_CHeaderCtrl_s4#6](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_9.h)]
 
 ### <a name="example"></a>Exemplo
 
-O exemplo de código a seguir demonstra a `SetFocusedItem` e `GetFocusedItem` métodos. Em uma seção anterior do código, criamos um controle de cabeçalho com cinco colunas. No entanto, você pode arrastar um separador de coluna para que a coluna não está visível. O exemplo a seguir define e, em seguida, confirma o último cabeçalho de coluna como o item de foco.
+O exemplo de código a seguir `SetFocusedItem` demonstra `GetFocusedItem` os métodos e. Em uma seção anterior do código, criamos um controle de cabeçalho com cinco colunas. No entanto, você pode arrastar um separador de coluna para que a coluna não fique visível. O exemplo a seguir define e confirma o último cabeçalho de coluna como o item de foco.
 
 [!code-cpp[NVC_MFC_CHeaderCtrl_s4#4](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_10.cpp)]
 
 ##  <a name="getimagelist"></a>  CHeaderCtrl::GetImageList
 
-Recupera o identificador de uma lista de imagens usada para desenho itens de cabeçalho em um controle de cabeçalho.
+Recupera o identificador de uma lista de imagens usada para desenhar itens de cabeçalho em um controle de cabeçalho.
 
 ```
 CImageList* GetImageList() const;
@@ -476,11 +476,11 @@ CImageList* GetImageList() const;
 
 ### <a name="return-value"></a>Valor de retorno
 
-Um ponteiro para um [CImageList](../../mfc/reference/cimagelist-class.md) objeto.
+Um ponteiro para um objeto [CImageList](../../mfc/reference/cimagelist-class.md) .
 
 ### <a name="remarks"></a>Comentários
 
-Essa função membro implementa o comportamento da mensagem do Win32 [HDM_GETIMAGELIST](/windows/desktop/Controls/hdm-getimagelist), conforme descrito no SDK do Windows. O `CImageList` objeto ao qual o ponteiro retornado aponta é um objeto temporário e será excluído no próximo processamento de tempo ocioso.
+Essa função de membro implementa o comportamento da mensagem [HDM_GETIMAGELIST](/windows/win32/Controls/hdm-getimagelist)do Win32, conforme descrito na SDK do Windows. O `CImageList` objeto para o qual o ponteiro retornado aponta é um objeto temporário e é excluído no próximo processamento em tempo ocioso.
 
 ### <a name="example"></a>Exemplo
 
@@ -499,14 +499,14 @@ BOOL GetItem(
 ### <a name="parameters"></a>Parâmetros
 
 *nPos*<br/>
-Especifica o índice baseado em zero do item a ser recuperado.
+Especifica o índice de base zero do item a ser recuperado.
 
 *pHeaderItem*<br/>
-Ponteiro para um [HDITEM](/windows/desktop/api/commctrl/ns-commctrl-_hd_itema) estrutura que recebe o novo item. Essa estrutura é usada com o `InsertItem` e `SetItem` funções de membro. Quaisquer sinalizadores definidos `mask` elemento Certifique-se de que valores nos elementos correspondentes são preenchidos corretamente após o retorno. Se o `mask` elemento é definido como zero, os valores em outros elementos de estrutura não fazem sentidos.
+Ponteiro para uma estrutura [HDITEM](/windows/win32/api/commctrl/ns-commctrl-_hd_itemw) que recebe o novo item. Essa estrutura é usada com as `InsertItem` funções `SetItem` de membro e. Todos os sinalizadores definidos no `mask` elemento garantem que os valores nos elementos correspondentes sejam preenchidos corretamente no retorno. Se o `mask` elemento for definido como zero, os valores nos outros elementos da estrutura não têm sentido.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Diferente de zero se bem-sucedido; Caso contrário, 0.
+Diferente de zero, se for bem-sucedido; caso contrário, 0.
 
 ### <a name="example"></a>Exemplo
 
@@ -522,15 +522,15 @@ int GetItemCount() const;
 
 ### <a name="return-value"></a>Valor de retorno
 
-Número de itens de controle de cabeçalho, se for bem-sucedido; Caso contrário, - 1.
+Número de itens de controle de cabeçalho se bem-sucedido; caso contrário,-1.
 
 ### <a name="example"></a>Exemplo
 
-  Veja o exemplo de [CHeaderCtrl::DeleteItem](#deleteitem).
+  Consulte o exemplo de [CHeaderCtrl::D eleteitem](#deleteitem).
 
 ##  <a name="getitemdropdownrect"></a>  CHeaderCtrl::GetItemDropDownRect
 
-Obtém o retângulo delimitador do botão de menu suspenso para um item de cabeçalho no controle de cabeçalho atual.
+Obtém o retângulo delimitador do botão suspenso para um item de cabeçalho no controle de cabeçalho atual.
 
 ```
 BOOL GetItemDropDownRect(
@@ -542,32 +542,32 @@ BOOL GetItemDropDownRect(
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|*iItem*|[in] Índice baseado em zero de um item de cabeçalho cujo estilo é HDF_SPLITBUTTON. Para obter mais informações, consulte o `fmt` membro a [HDITEM](/windows/desktop/api/commctrl/ns-commctrl-_hd_itema) estrutura.|
-|*lpRect*|[out] Ponteiro para um [RECT](/previous-versions/dd162897\(v=vs.85\)) estrutura que receberá as informações do retângulo delimitador.|
+|*iItem*|no Índice de base zero de um item de cabeçalho cujo estilo é HDF_SPLITBUTTON. Para obter mais informações, consulte `fmt` o membro da estrutura [HDITEM](/windows/win32/api/commctrl/ns-commctrl-_hd_itemw) .|
+|*lpRect*|fora Ponteiro para uma estrutura [Rect](/previous-versions/dd162897\(v=vs.85\)) para receber as informações de retângulo delimitador.|
 
 ### <a name="return-value"></a>Valor de retorno
 
-TRUE se essa função for bem-sucedida; Caso contrário, FALSE.
+TRUE se essa função for bem-sucedida; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-Esse método envia o [HDM_GETITEMDROPDOWNRECT](/windows/desktop/Controls/hdm-getitemdropdownrect) mensagem, que é descrita no SDK do Windows.
+Esse método envia a mensagem [HDM_GETITEMDROPDOWNRECT](/windows/win32/Controls/hdm-getitemdropdownrect) , que é descrita na SDK do Windows.
 
 ### <a name="example"></a>Exemplo
 
-O exemplo de código a seguir define a variável `m_headerCtrl`, que é usado para acessar o controle de cabeçalho atual. Essa variável é usada no exemplo a seguir.
+O exemplo de código a seguir define a `m_headerCtrl`variável,, que é usada para acessar o controle de cabeçalho atual. Essa variável é usada no exemplo a seguir.
 
 [!code-cpp[NVC_MFC_CHeaderCtrl_s4#6](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_9.h)]
 
 ### <a name="example"></a>Exemplo
 
-O exemplo de código a seguir demonstra o `GetItemDropDownRect` método. Em uma seção anterior do código, criamos um controle de cabeçalho com cinco colunas. O exemplo de código a seguir desenha um retângulo 3D em todo o local na primeira coluna que é reservada para o botão de lista suspensa de cabeçalho.
+O exemplo de código a seguir `GetItemDropDownRect` demonstra o método. Em uma seção anterior do código, criamos um controle de cabeçalho com cinco colunas. O exemplo de código a seguir desenha um retângulo 3D em volta do local na primeira coluna reservada para o botão suspenso de cabeçalho.
 
 [!code-cpp[NVC_MFC_CHeaderCtrl_s4#2](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_13.cpp)]
 
 ##  <a name="getitemrect"></a>  CHeaderCtrl::GetItemRect
 
-Recupera o retângulo delimitador para um determinado item em um controle de cabeçalho.
+Recupera o retângulo delimitador de um determinado item em um controle de cabeçalho.
 
 ```
 BOOL GetItemRect(
@@ -578,22 +578,22 @@ BOOL GetItemRect(
 ### <a name="parameters"></a>Parâmetros
 
 *nIndex*<br/>
-O índice baseado em zero do item de controle de cabeçalho.
+O índice de base zero do item de controle de cabeçalho.
 
 *lpRect*<br/>
-Um ponteiro para o endereço de uma [RECT](/previous-versions/dd162897\(v=vs.85\)) estrutura que recebe as informações do retângulo delimitador.
+Um ponteiro para o endereço de uma estrutura [Rect](/previous-versions/dd162897\(v=vs.85\)) que recebe as informações do retângulo delimitador.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Diferente de zero se bem-sucedido; Caso contrário, 0.
+Diferente de zero, se for bem-sucedido; caso contrário, 0.
 
 ### <a name="remarks"></a>Comentários
 
-Esse método implementa o comportamento da mensagem do Win32 [HDM_GETITEMRECT](/windows/desktop/Controls/hdm-getitemrect), conforme descrito no SDK do Windows.
+Esse método implementa o comportamento da mensagem do Win32 [HDM_GETITEMRECT](/windows/win32/Controls/hdm-getitemrect), conforme descrito na SDK do Windows.
 
 ##  <a name="getorderarray"></a>  CHeaderCtrl::GetOrderArray
 
-Recupera a ordem da esquerda para a direita dos itens em um controle de cabeçalho.
+Recupera a ordem da esquerda para a direita de itens em um controle de cabeçalho.
 
 ```
 BOOL GetOrderArray(
@@ -604,18 +604,18 @@ BOOL GetOrderArray(
 ### <a name="parameters"></a>Parâmetros
 
 *piArray*<br/>
-Um ponteiro para o endereço de um buffer que recebe os valores de índice dos itens no controle de cabeçalho, na ordem em que são exibidos da esquerda para a direita.
+Um ponteiro para o endereço de um buffer que recebe os valores de índice dos itens no controle de cabeçalho, na ordem em que aparecem da esquerda para a direita.
 
 *iCount*<br/>
 O número de itens de controle de cabeçalho. Deve ser não negativo.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Diferente de zero se bem-sucedido; Caso contrário, 0.
+Diferente de zero, se for bem-sucedido; caso contrário, 0.
 
 ### <a name="remarks"></a>Comentários
 
-Essa função membro implementa o comportamento da mensagem do Win32 [HDM_GETORDERARRAY](/windows/desktop/Controls/hdm-getorderarray), conforme descrito no SDK do Windows. Ele é fornecido para dar suporte a ordenação de item de cabeçalho.
+Essa função de membro implementa o comportamento da mensagem [HDM_GETORDERARRAY](/windows/win32/Controls/hdm-getorderarray)do Win32, conforme descrito na SDK do Windows. Ele é fornecido para dar suporte à ordenação do item de cabeçalho.
 
 ### <a name="example"></a>Exemplo
 
@@ -623,7 +623,7 @@ Essa função membro implementa o comportamento da mensagem do Win32 [HDM_GETORD
 
 ##  <a name="getoverflowrect"></a>  CHeaderCtrl::GetOverflowRect
 
-Obtém o retângulo delimitador do botão de estouro de controle de cabeçalho atual.
+Obtém o retângulo delimitador do botão de estouro do controle de cabeçalho atual.
 
 ```
 BOOL GetOverflowRect(LPRECT lpRect) const;
@@ -633,27 +633,27 @@ BOOL GetOverflowRect(LPRECT lpRect) const;
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|*lpRect*|[out] Ponteiro para um [RECT](/previous-versions/dd162897\(v=vs.85\)) estrutura que recebe as informações do retângulo delimitador.|
+|*lpRect*|fora Ponteiro para uma estrutura [Rect](/previous-versions/dd162897\(v=vs.85\)) que recebe as informações de retângulo delimitador.|
 
 ### <a name="return-value"></a>Valor de retorno
 
-TRUE se essa função for bem-sucedida; Caso contrário, FALSE.
+TRUE se essa função for bem-sucedida; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-Se o controle de cabeçalho contém mais itens que podem ser exibidos simultaneamente, o controle pode exibir um botão de estouro rola para itens que não estão visíveis. O controle de cabeçalho deve ter os estilos HDS_OVERFLOW e HDF_SPLITBUTTON para exibir o botão de estouro. O retângulo delimitador circunscreve o botão de estouro e existe somente quando o botão de estouro é exibido. Para obter mais informações, consulte [estilos de controle de cabeçalho](/windows/desktop/Controls/header-control-styles).
+Se o controle de cabeçalho contiver mais itens do que pode ser exibido simultaneamente, o controle poderá exibir um botão de estouro que rola para os itens que não estão visíveis. O controle de cabeçalho deve ter os estilos HDS_OVERFLOW e HDF_SPLITBUTTON para exibir o botão de estouro. O retângulo delimitador inclui o botão de estouro e existe somente quando o botão de estouro é exibido. Para obter mais informações, consulte [estilos de controle de cabeçalho](/windows/win32/Controls/header-control-styles).
 
-Esse método envia o [HDM_GETOVERFLOWRECT](/windows/desktop/Controls/hdm-getoverflowrect) mensagem, que é descrita no SDK do Windows.
+Esse método envia a mensagem [HDM_GETOVERFLOWRECT](/windows/win32/Controls/hdm-getoverflowrect) , que é descrita na SDK do Windows.
 
 ### <a name="example"></a>Exemplo
 
-O exemplo de código a seguir define a variável `m_headerCtrl`, que é usado para acessar o controle de cabeçalho atual. Essa variável é usada no exemplo a seguir.
+O exemplo de código a seguir define a `m_headerCtrl`variável,, que é usada para acessar o controle de cabeçalho atual. Essa variável é usada no exemplo a seguir.
 
 [!code-cpp[NVC_MFC_CHeaderCtrl_s4#6](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_9.h)]
 
 ### <a name="example"></a>Exemplo
 
-O exemplo de código a seguir demonstra o `GetOverflowRect` método. Em uma seção anterior do código, criamos um controle de cabeçalho com cinco colunas. No entanto, você pode arrastar um separador de coluna para que a coluna não está visível. Se algumas colunas não estiverem visíveis, o controle de cabeçalho desenha um botão de estouro. O exemplo de código a seguir desenha um retângulo 3D em todo o local do botão de estouro.
+O exemplo de código a seguir `GetOverflowRect` demonstra o método. Em uma seção anterior do código, criamos um controle de cabeçalho com cinco colunas. No entanto, você pode arrastar um separador de coluna para que a coluna não fique visível. Se algumas colunas não estiverem visíveis, o controle de cabeçalho desenha um botão de estouro. O exemplo de código a seguir desenha um retângulo 3D em volta do local do botão de estouro.
 
 [!code-cpp[NVC_MFC_CHeaderCtrl_s4#3](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_15.cpp)]
 
@@ -669,25 +669,25 @@ int HitTest(LPHDHITTESTINFO* phdhti);
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|*phdhti*|[no, out] Ponteiro para um [HDHITTESTINFO](/windows/desktop/api/commctrl/ns-commctrl-_hd_hittestinfo) estrutura que especifica o ponto a ser testado e recebe os resultados do teste.|
+|*phdhti*|[entrada, saída] Ponteiro para uma estrutura [HDHITTESTINFO](/windows/win32/api/commctrl/ns-commctrl-_hd_hittestinfo) que especifica o ponto para testar e receber os resultados do teste.|
 
 ### <a name="return-value"></a>Valor de retorno
 
-O índice baseado em zero do item de cabeçalho, se houver, na posição especificada; Caso contrário, -1.
+O índice de base zero do item de cabeçalho, se houver, na posição especificada; caso contrário,-1.
 
 ### <a name="remarks"></a>Comentários
 
-Esse método envia o [HDM_HITTEST](/windows/desktop/Controls/hdm-hittest) mensagem, que é descrita no SDK do Windows.
+Esse método envia a mensagem [HDM_HITTEST](/windows/win32/Controls/hdm-hittest) , que é descrita na SDK do Windows.
 
 ### <a name="example"></a>Exemplo
 
-O exemplo de código a seguir define a variável `m_headerCtrl`, que é usado para acessar o controle de cabeçalho atual. Essa variável é usada no exemplo a seguir.
+O exemplo de código a seguir define a `m_headerCtrl`variável,, que é usada para acessar o controle de cabeçalho atual. Essa variável é usada no exemplo a seguir.
 
 [!code-cpp[NVC_MFC_CHeaderCtrl_s4#6](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_9.h)]
 
 ### <a name="example"></a>Exemplo
 
-O exemplo de código a seguir demonstra o `HitTest` método. Em uma seção anterior deste exemplo de código, criamos um controle de cabeçalho com cinco colunas. No entanto, você pode arrastar um separador de coluna para que a coluna não está visível. Este exemplo relata o índice da coluna se ela estiver visível e -1 se a coluna não estiver visível.
+O exemplo de código a seguir `HitTest` demonstra o método. Em uma seção anterior deste exemplo de código, criamos um controle de cabeçalho com cinco colunas. No entanto, você pode arrastar um separador de coluna para que a coluna não fique visível. Este exemplo relata o índice da coluna se ela estiver visível e-1 se a coluna não estiver visível.
 
 [!code-cpp[NVC_MFC_CHeaderCtrl_s4#1](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_16.cpp)]
 
@@ -704,22 +704,22 @@ int InsertItem(
 ### <a name="parameters"></a>Parâmetros
 
 *nPos*<br/>
-O índice de base zero do item a ser inserido. Se o valor for zero, o item é inserido no início do controle de cabeçalho. Se o valor for maior que o valor máximo, o item é inserido no final do controle de cabeçalho.
+O índice de base zero do item a ser inserido. Se o valor for zero, o item será inserido no início do controle de cabeçalho. Se o valor for maior que o valor máximo, o item será inserido no final do controle de cabeçalho.
 
 *phdi*<br/>
-Ponteiro para um [HDITEM](/windows/desktop/api/commctrl/ns-commctrl-_hd_itema) estrutura que contém informações sobre o item a ser inserido.
+Ponteiro para uma estrutura [HDITEM](/windows/win32/api/commctrl/ns-commctrl-_hd_itemw) que contém informações sobre o item a ser inserido.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Índice do novo item, se for bem-sucedido; Caso contrário, - 1.
+Índice do novo item se for bem-sucedido; caso contrário,-1.
 
 ### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFC_CHeaderCtrl#12](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_17.cpp)]
 
-##  <a name="layout"></a>  CHeaderCtrl::Layout
+##  <a name="layout"></a>CHeaderCtrl:: layout
 
-Recupera o tamanho e a posição de um controle de cabeçalho dentro de um retângulo determinado.
+Recupera o tamanho e a posição de um controle de cabeçalho em um determinado retângulo.
 
 ```
 BOOL Layout(HDLAYOUT* pHeaderLayout);
@@ -728,23 +728,23 @@ BOOL Layout(HDLAYOUT* pHeaderLayout);
 ### <a name="parameters"></a>Parâmetros
 
 *pHeaderLayout*<br/>
-Ponteiro para um [HDLAYOUT](/windows/desktop/api/commctrl/ns-commctrl-_hd_layout) estrutura, que contém informações usadas para definir o tamanho e posição de um controle de cabeçalho.
+Ponteiro para uma estrutura [HDLAYOUT](/windows/win32/api/commctrl/ns-commctrl-_hd_layout) , que contém informações usadas para definir o tamanho e a posição de um controle de cabeçalho.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Diferente de zero se bem-sucedido; Caso contrário, 0.
+Diferente de zero, se for bem-sucedido; caso contrário, 0.
 
 ### <a name="remarks"></a>Comentários
 
-Essa função é usada para determinar as dimensões apropriadas para um novo controle de cabeçalho que deve ocupar o retângulo especificado.
+Essa função é usada para determinar as dimensões apropriadas para um novo controle de cabeçalho que deve ocupar o retângulo fornecido.
 
 ### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFC_CHeaderCtrl#13](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_18.cpp)]
 
-##  <a name="ordertoindex"></a>  CHeaderCtrl::OrderToIndex
+##  <a name="ordertoindex"></a>CHeaderCtrl::OrderToIndex
 
-Recupera o valor de índice para um item com base em sua ordem no controle de cabeçalho.
+Recupera o valor de índice de um item com base em sua ordem no controle de cabeçalho.
 
 ```
 int OrderToIndex(int nOrder) const;
@@ -753,15 +753,15 @@ int OrderToIndex(int nOrder) const;
 ### <a name="parameters"></a>Parâmetros
 
 *nOrder*<br/>
-A ordem com base em zero que o item é exibido no controle de cabeçalho, da esquerda para a direita.
+A ordem baseada em zero que o item aparece no controle de cabeçalho, da esquerda para a direita.
 
 ### <a name="return-value"></a>Valor de retorno
 
-O índice do item, com base em sua ordem no controle de cabeçalho. O índice de contagens da esquerda para a direita, começando com 0.
+O índice do item, com base em sua ordem no controle de cabeçalho. O índice conta da esquerda para a direita, começando com 0.
 
 ### <a name="remarks"></a>Comentários
 
-Essa função membro implementa o comportamento da macro do Win32 [HDM_ORDERTOINDEX](/windows/desktop/controls/hdm-ordertoindex), conforme descrito no SDK do Windows. Ele é fornecido para dar suporte a ordenação de item de cabeçalho.
+Essa função de membro implementa o comportamento da macro [HDM_ORDERTOINDEX](/windows/win32/controls/hdm-ordertoindex)do Win32, conforme descrito na SDK do Windows. Ele é fornecido para dar suporte à ordenação do item de cabeçalho.
 
 ##  <a name="setbitmapmargin"></a>  CHeaderCtrl::SetBitmapMargin
 
@@ -774,15 +774,15 @@ int SetBitmapMargin(int nWidth);
 ### <a name="parameters"></a>Parâmetros
 
 *nWidth*<br/>
-Largura, especificada em pixels, da margem ao redor de um bitmap dentro de um controle de cabeçalho existente.
+Largura, especificada em pixels, da margem que circunda um bitmap dentro de um controle de cabeçalho existente.
 
 ### <a name="return-value"></a>Valor de retorno
 
-A largura da margem de bitmap em pixels.
+A largura da margem do bitmap em pixels.
 
 ### <a name="remarks"></a>Comentários
 
-Essa função membro implementa o comportamento da mensagem do Win32 [HDM_SETBITMAPMARGIN](/windows/desktop/Controls/hdm-setbitmapmargin), conforme descrito no SDK do Windows.
+Essa função de membro implementa o comportamento da mensagem [HDM_SETBITMAPMARGIN](/windows/win32/Controls/hdm-setbitmapmargin)do Win32, conforme descrito na SDK do Windows.
 
 ### <a name="example"></a>Exemplo
 
@@ -790,7 +790,7 @@ Essa função membro implementa o comportamento da mensagem do Win32 [HDM_SETBIT
 
 ##  <a name="setfilterchangetimeout"></a>  CHeaderCtrl::SetFilterChangeTimeout
 
-Define o intervalo de tempo limite entre a hora em que uma alteração é feita em atributos de filtro e o lançamento de uma [HDN_FILTERCHANGE](/windows/desktop/Controls/hdn-filterchange) notificação.
+Define o intervalo de tempo limite entre a hora em que uma alteração ocorre nos atributos de filtro e o lançamento de uma notificação de [HDN_FILTERCHANGE](/windows/win32/Controls/hdn-filterchange) .
 
 ```
 int SetFilterChangeTimeout(DWORD dwTimeOut);
@@ -807,13 +807,13 @@ O índice do controle de filtro que está sendo modificado.
 
 ### <a name="remarks"></a>Comentários
 
-Essa função membro implementa o comportamento da mensagem do Win32 [HDM_SETFILTERCHANGETIMEOUT](/windows/desktop/Controls/hdm-setfilterchangetimeout), conforme descrito no SDK do Windows.
+Essa função de membro implementa o comportamento da mensagem [HDM_SETFILTERCHANGETIMEOUT](/windows/win32/Controls/hdm-setfilterchangetimeout)do Win32, conforme descrito na SDK do Windows.
 
 ### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFC_CHeaderCtrl#15](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_20.cpp)]
 
-##  <a name="setfocuseditem"></a>  CHeaderCtrl::SetFocusedItem
+##  <a name="setfocuseditem"></a>CHeaderCtrl::SetFocusedItem
 
 Define o foco para um item de cabeçalho especificado no controle de cabeçalho atual.
 
@@ -825,31 +825,31 @@ BOOL SetFocusedItem(int iItem);
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|*iItem*|[in] Índice baseado em zero de um item de cabeçalho.|
+|*iItem*|no Índice de base zero de um item de cabeçalho.|
 
 ### <a name="return-value"></a>Valor de retorno
 
-TRUE se esse método for bem-sucedida; Caso contrário, FALSE.
+TRUE se esse método for bem-sucedido; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-Esse método envia o [HDM_SETFOCUSEDITEM](/windows/desktop/Controls/hdm-setfocuseditem) mensagem, que é descrita no SDK do Windows.
+Esse método envia a mensagem [HDM_SETFOCUSEDITEM](/windows/win32/Controls/hdm-setfocuseditem) , que é descrita na SDK do Windows.
 
 ### <a name="example"></a>Exemplo
 
-O exemplo de código a seguir define a variável `m_headerCtrl`, que é usado para acessar o controle de cabeçalho atual. Essa variável é usada no exemplo a seguir.
+O exemplo de código a seguir define a `m_headerCtrl`variável,, que é usada para acessar o controle de cabeçalho atual. Essa variável é usada no exemplo a seguir.
 
 [!code-cpp[NVC_MFC_CHeaderCtrl_s4#6](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_9.h)]
 
 ### <a name="example"></a>Exemplo
 
-O exemplo de código a seguir demonstra a `SetFocusedItem` e `GetFocusedItem` métodos. Em uma seção anterior do código, criamos um controle de cabeçalho com cinco colunas. No entanto, você pode arrastar um separador de coluna para que a coluna não está visível. O exemplo a seguir define e, em seguida, confirma o último cabeçalho de coluna como o item de foco.
+O exemplo de código a seguir `SetFocusedItem` demonstra `GetFocusedItem` os métodos e. Em uma seção anterior do código, criamos um controle de cabeçalho com cinco colunas. No entanto, você pode arrastar um separador de coluna para que a coluna não fique visível. O exemplo a seguir define e confirma o último cabeçalho de coluna como o item de foco.
 
 [!code-cpp[NVC_MFC_CHeaderCtrl_s4#4](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_10.cpp)]
 
 ##  <a name="sethotdivider"></a>  CHeaderCtrl::SetHotDivider
 
-Arraste o divisor entre itens de cabeçalho para indicar um manual de alterações e soltar de um item de cabeçalho.
+Altera o divisor entre itens de cabeçalho para indicar um arrastar e soltar manual de um item de cabeçalho.
 
 ```
 int SetHotDivider(CPoint pt);
@@ -859,18 +859,18 @@ int SetHotDivider(int nIndex);
 ### <a name="parameters"></a>Parâmetros
 
 *pt*<br/>
-A posição do ponteiro. O controle de cabeçalho destaca o divisor apropriado com base na posição do ponteiro.
+A posição do ponteiro. O controle de cabeçalho realça o divisor apropriado com base na posição do ponteiro.
 
 *nIndex*<br/>
-O índice do divisor de realçado.
+O índice do divisor realçado.
 
 ### <a name="return-value"></a>Valor de retorno
 
-O índice do divisor de realçado.
+O índice do divisor realçado.
 
 ### <a name="remarks"></a>Comentários
 
-Essa função membro implementa o comportamento da mensagem do Win32 [HDM_SETHOTDIVIDER](/windows/desktop/Controls/hdm-sethotdivider), conforme descrito no SDK do Windows. Ele é fornecido para dar suporte ao cabeçalho item arrastar e soltar.
+Essa função de membro implementa o comportamento da mensagem [HDM_SETHOTDIVIDER](/windows/win32/Controls/hdm-sethotdivider)do Win32, conforme descrito na SDK do Windows. Ele é fornecido para dar suporte ao arrastar e soltar item de cabeçalho.
 
 ### <a name="example"></a>Exemplo
 
@@ -887,19 +887,19 @@ CImageList* SetImageList(CImageList* pImageList);
 ### <a name="parameters"></a>Parâmetros
 
 *pImageList*<br/>
-Um ponteiro para um `CImageList` objeto que contém a lista de imagens a ser atribuído ao controle de cabeçalho.
+Um ponteiro para um `CImageList` objeto que contém a lista de imagens a ser atribuída ao controle de cabeçalho.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Um ponteiro para o [CImageList](../../mfc/reference/cimagelist-class.md) anteriormente atribuído ao controle de cabeçalho do objeto.
+Um ponteiro para o objeto [CImageList](../../mfc/reference/cimagelist-class.md) atribuído anteriormente ao controle de cabeçalho.
 
 ### <a name="remarks"></a>Comentários
 
-Essa função membro implementa o comportamento da mensagem do Win32 [HDM_SETIMAGELIST](/windows/desktop/Controls/hdm-setimagelist), conforme descrito no SDK do Windows. O `CImageList` objeto ao qual o ponteiro retornado aponta é um objeto temporário e será excluído no próximo processamento de tempo ocioso.
+Essa função de membro implementa o comportamento da mensagem [HDM_SETIMAGELIST](/windows/win32/Controls/hdm-setimagelist)do Win32, conforme descrito na SDK do Windows. O `CImageList` objeto para o qual o ponteiro retornado aponta é um objeto temporário e é excluído no próximo processamento em tempo ocioso.
 
 ### <a name="example"></a>Exemplo
 
-  Veja o exemplo de [CHeaderCtrl::GetImageList](#getimagelist).
+  Consulte o exemplo de [CHeaderCtrl::](#getimagelist)GetImageList.
 
 ##  <a name="setitem"></a>  CHeaderCtrl::SetItem
 
@@ -914,22 +914,22 @@ BOOL SetItem(
 ### <a name="parameters"></a>Parâmetros
 
 *nPos*<br/>
-O índice baseado em zero do item a ser manipulado.
+O índice de base zero do item a ser manipulado.
 
 *pHeaderItem*<br/>
-Ponteiro para um [HDITEM](/windows/desktop/api/commctrl/ns-commctrl-_hd_itema) estrutura que contém informações sobre o novo item.
+Ponteiro para uma estrutura [HDITEM](/windows/win32/api/commctrl/ns-commctrl-_hd_itemw) que contém informações sobre o novo item.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Diferente de zero se bem-sucedido; Caso contrário, 0.
+Diferente de zero, se for bem-sucedido; caso contrário, 0.
 
 ### <a name="example"></a>Exemplo
 
-  Veja o exemplo de [CHeaderCtrl::GetItem](#getitem).
+  Consulte o exemplo de [CHeaderCtrl:: GetItem](#getitem).
 
 ##  <a name="setorderarray"></a>  CHeaderCtrl::SetOrderArray
 
-Define a ordem da esquerda para a direita dos itens em um controle de cabeçalho.
+Define a ordem da esquerda para a direita de itens em um controle de cabeçalho.
 
 ```
 BOOL SetOrderArray(
@@ -943,19 +943,19 @@ BOOL SetOrderArray(
 O número de itens de controle de cabeçalho.
 
 *piArray*<br/>
-Um ponteiro para o endereço de um buffer que recebe os valores de índice dos itens no controle de cabeçalho, na ordem em que são exibidos da esquerda para a direita.
+Um ponteiro para o endereço de um buffer que recebe os valores de índice dos itens no controle de cabeçalho, na ordem em que aparecem da esquerda para a direita.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Diferente de zero se bem-sucedido; Caso contrário, 0.
+Diferente de zero, se for bem-sucedido; caso contrário, 0.
 
 ### <a name="remarks"></a>Comentários
 
-Essa função membro implementa o comportamento da macro do Win32 [HDM_SETORDERARRAY](/windows/desktop/Controls/hdm-setorderarray), conforme descrito no SDK do Windows. Ele é fornecido para dar suporte a ordenação de item de cabeçalho.
+Essa função de membro implementa o comportamento da macro [HDM_SETORDERARRAY](/windows/win32/Controls/hdm-setorderarray)do Win32, conforme descrito na SDK do Windows. Ele é fornecido para dar suporte à ordenação do item de cabeçalho.
 
 ### <a name="example"></a>Exemplo
 
-  Veja o exemplo de [CHeaderCtrl::GetOrderArray](#getorderarray).
+  Consulte o exemplo de [CHeaderCtrl:: GetOrderArray](#getorderarray).
 
 ## <a name="see-also"></a>Consulte também
 

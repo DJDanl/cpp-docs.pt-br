@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CLinearTransitionFromSpeed [MFC], m_dblFinalValue
 - CLinearTransitionFromSpeed [MFC], m_dblSpeed
 ms.assetid: 8f159a1c-8893-4017-951e-09e5758aba7d
-ms.openlocfilehash: 1efa9806267958b4221ee112e56f242c7e25a8f0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 50c958a092478f4b9ec4e94f9e5e973a74c334c2
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392499"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69505720"
 ---
 # <a name="clineartransitionfromspeed-class"></a>Classe CLinearTransitionFromSpeed
 
@@ -37,13 +37,13 @@ class CLinearTransitionFromSpeed : public CBaseTransition;
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CLinearTransitionFromSpeed::CLinearTransitionFromSpeed](#clineartransitionfromspeed)|Constrói um objeto de transição de velocidade linear e o inicializa com velocidade e o valor final.|
+|[CLinearTransitionFromSpeed::CLinearTransitionFromSpeed](#clineartransitionfromspeed)|Constrói um objeto de transição de velocidade linear e o inicializa com a velocidade e o valor final.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CLinearTransitionFromSpeed::Create](#create)|Chama a biblioteca de transição para criar o objeto encapsulado transição COM. (Substitui [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|
+|[CLinearTransitionFromSpeed::Create](#create)|Chama a biblioteca de transição para criar objeto COM de transição encapsulada. (Substitui [CBaseTransition:: Create](../../mfc/reference/cbasetransition-class.md#create).)|
 
 ### <a name="public-data-members"></a>Membros de Dados Públicos
 
@@ -54,7 +54,7 @@ class CLinearTransitionFromSpeed : public CBaseTransition;
 
 ## <a name="remarks"></a>Comentários
 
-Durante uma transição de velocidade linear, o valor da variável de animação é alterado a uma taxa especificada. A duração da transição é determinada pela diferença entre o valor inicial e o valor final especificado. Como todas as transições são limpas automaticamente, é recomendável para alocado-los usando o operador novo. O objeto de IUIAnimationTransition COM encapsulado é criado pelo CAnimationController::AnimateGroup, até então é NULL. Alterando as variáveis de membro após a criação deste objeto COM não tem nenhum efeito.
+Durante uma transição de velocidade linear, o valor da variável de animação é alterado em uma taxa especificada. A duração da transição é determinada pela diferença entre o valor inicial e o valor final especificado. Como todas as transições são limpas automaticamente, é recomendável alocá-las usando o operador novo. O objeto COM encapsulado IUIAnimationTransition é criado por CAnimationController:: Animate, até que ele seja nulo. A alteração de variáveis de membro após a criação desse objeto COM não tem nenhum efeito.
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -66,11 +66,11 @@ Durante uma transição de velocidade linear, o valor da variável de animação
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** afxanimationcontroller.h
+**Cabeçalho:** afxanimationcontroller. h
 
 ##  <a name="clineartransitionfromspeed"></a>  CLinearTransitionFromSpeed::CLinearTransitionFromSpeed
 
-Constrói um objeto de transição de velocidade linear e o inicializa com velocidade e o valor final.
+Constrói um objeto de transição de velocidade linear e o inicializa com a velocidade e o valor final.
 
 ```
 CLinearTransitionFromSpeed(
@@ -88,7 +88,7 @@ O valor da variável de animação no final da transição.
 
 ##  <a name="create"></a>  CLinearTransitionFromSpeed::Create
 
-Chama a biblioteca de transição para criar o objeto encapsulado transição COM.
+Chama a biblioteca de transição para criar objeto COM de transição encapsulada.
 
 ```
 virtual BOOL Create(
@@ -99,11 +99,11 @@ virtual BOOL Create(
 ### <a name="parameters"></a>Parâmetros
 
 *pLibrary*<br/>
-Um ponteiro para um [IUIAnimationTransitionLibrary interface](/windows/desktop/api/uianimation/nn-uianimation-iuianimationtransitionlibrary), que define uma biblioteca de transições padrão.
+Um ponteiro para uma [interface IUIAnimationTransitionLibrary](/windows/win32/api/uianimation/nn-uianimation-iuianimationtransitionlibrary), que define uma biblioteca de transições padrão.
 
 ### <a name="return-value"></a>Valor de retorno
 
-TRUE se a transição é criada com êxito; Caso contrário, FALSE.
+TRUE se a transição for criada com êxito; caso contrário, FALSE.
 
 ##  <a name="m_dblfinalvalue"></a>  CLinearTransitionFromSpeed::m_dblFinalValue
 

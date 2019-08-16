@@ -1,56 +1,56 @@
 ---
-title: Opções, ATL Simple Object Wizard
+title: Opções, assistente de objeto simples do ATL
 ms.date: 11/04/2016
 f1_keywords:
 - vc.codewiz.class.atl.simple.options
 helpviewer_keywords:
 - ATL Simple Object Wizard, options
 ms.assetid: 125fe179-942d-4181-8b82-33e92e1fd779
-ms.openlocfilehash: 327c78b00cbe69fcce4f055b0ae63c4dc2e5a7d9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e92f4909907645fc317590fbcc3601887346c642
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62197293"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69495167"
 ---
-# <a name="options-atl-simple-object-wizard"></a>Opções, ATL Simple Object Wizard
+# <a name="options-atl-simple-object-wizard"></a>Opções, assistente de objeto simples do ATL
 
-Use esta página do ATL Simple Object Wizard para projetar para maior eficiência e o suporte para o objeto de erro.
+Use esta página do assistente de objeto simples do ATL para criar uma maior eficiência e suporte ao erro para o objeto.
 
-Para obter mais informações sobre projetos ATL e classes COM da ATL, consulte [componentes de área de trabalho COM ATL](../../atl/atl-com-desktop-components.md).
+Para saber mais sobre projetos da ATL e classes COM da ATL, confira [Componentes de Área de Trabalho COM da ATL](../../atl/atl-com-desktop-components.md).
 
-- **Modelo de Threading**
+- **Modelo de threading**
 
-   Indica o método para o gerenciamento de threads. Por padrão, o projeto utiliza **Apartment** threading.
+   Indica o método para gerenciar threads. Por padrão, o projeto usa Threading **Apartment** .
 
-   Ver [especificando o modelo de Threading do projeto](../../atl/specifying-the-threading-model-for-a-project-atl.md) para obter mais informações.
+   Confira mais informações em [Como especificar o modelo de threading para um projeto](../../atl/specifying-the-threading-model-for-a-project-atl.md).
 
    |Opção|Descrição|
    |------------|-----------------|
-   |**Simples**|Especifica que o objeto sempre é executado no thread COM primário. Ver [single-threaded Apartments](/windows/desktop/com/single-threaded-apartments) e [InprocServer32](/windows/desktop/com/inprocserver32) para obter mais informações.|
-   |**Apartment**|Especifica que o objeto usa apartamento de threading. Apartment equivalente a único thread. Cada objeto de um componente do apartment-threaded é atribuído um apartamento de thread, durante a vida útil do objeto; No entanto, vários threads podem ser usados para vários objetos. Cada compartimento estiver associado a um thread específico e tem uma bomba de mensagem do Windows (padrão).<br /><br /> Ver [single-threaded Apartments](/windows/desktop/com/single-threaded-apartments) para obter mais informações.|
-   |**Ambos**|Especifica que o objeto pode usar apartment ou threading livre, dependendo de qual tipo de um thread é criada.|
-   |**livre**|Especifica que o objeto usa threading livre. Threading livre é equivalente a um modelo de apartment com vários threads. Ver [multi-threaded Apartments](/windows/desktop/com/multithreaded-apartments) para obter mais informações.|
-   |**Neutral**|Especifica que o objeto segue as diretrizes para apartments de vários threads, mas ela pode ser executada em qualquer tipo de thread.|
+   |**Simples**|Especifica que o objeto sempre é executado no thread COM primário. Consulte Apartments e [InprocServer32](/windows/win32/com/inprocserver32) de [thread único](/windows/win32/com/single-threaded-apartments) para obter mais informações.|
+   |**Apartment**|Especifica que o objeto usa segmentação de apartamento. Equivalente a single thread apartment. Cada objeto de um componente Apartment-Threaded é atribuído a um apartamento para seu thread, durante a vida útil do objeto; no entanto, vários threads podem ser usados para vários objetos. Cada Apartment está vinculado a um thread específico e tem uma bomba de mensagem do Windows (padrão).<br /><br /> Consulte [Apartments de thread único](/windows/win32/com/single-threaded-apartments) para obter mais informações.|
+   |**Mesmo**|Especifica que o objeto pode usar o Apartment ou o Threading livre, dependendo de qual tipo de um thread é criado.|
+   |**Informações**|Especifica que o objeto usa Threading livre. O Threading gratuito é equivalente a um modelo de apartamento multithread. Consulte [Apartments multithread](/windows/win32/com/multithreaded-apartments) para obter mais informações.|
+   |**Neutral**|Especifica que o objeto segue as diretrizes para Apartments de vários threads, mas pode ser executado em qualquer tipo de thread.|
 
 - **Agregação**
 
-   Indica se o objeto usa [agregação](/windows/desktop/com/aggregation). O objeto agregado escolhe quais interfaces para expor para clientes e as interfaces são expostas como se o objeto agregado implementada-los. Os clientes do objeto agregado se comunicam somente com o objeto agregado.
+   Indica se o objeto usa [agregação](/windows/win32/com/aggregation). O objeto Aggregate escolhe quais interfaces serão expostas aos clientes e as interfaces serão expostas como se o objeto agregado os implementasse. Os clientes do objeto de agregação se comunicam somente com o objeto de agregação.
 
    |Opção|Descrição|
    |------------|-----------------|
-   |**Sim**|Especifica se o objeto pode ser agregado. O padrão.|
+   |**Sim**|Especifica que o objeto pode ser agregado. O padrão.|
    |**No**|Especifica que o objeto não é agregado.|
-   |**Only**|Especifica que o objeto deve ser agregado.|
+   |**Apenas**|Especifica que o objeto deve ser agregado.|
 
 - **Interface**
 
-   Indica o tipo de interface que o objeto dá suporte. Por padrão, o objeto dá suporte a uma interface dupla.
+   Indica o tipo de interface com a qual o objeto é compatível. Por padrão, o objeto é compatível com uma interface dupla.
 
    |Opção|Descrição|
    |------------|-----------------|
-   |**Dual**|Especifica que o objeto dá suporte a uma interface dupla (seu vtable tem funções de interface personalizados além de associação tardia `IDispatch` métodos). Permite que ambos os clientes COM e [controladores de automação](../../mfc/automation-clients.md) para acessar o objeto. O padrão.|
-   |**Personalizado**|Especifica que o objeto dá suporte a uma interface personalizada (seu vtable tem funções de interface personalizada). Uma interface personalizada pode ser mais rápida do que uma interface dupla, especialmente entre os limites do processo.<br /><br /> - **Automação compatível** controladores de automação permite acessar um objeto que tem o suporte de interface personalizada.|
+   |**Dupla**|Especifica que o objeto dá suporte a uma interface dupla (sua vtable tem funções de interface personalizada e `IDispatch` métodos de ligação tardia). Permite que clientes COM e [controladores de automação](../../mfc/automation-clients.md) acessem o objeto. O padrão.|
+   |**Personalizado**|Especifica que o objeto é compatível com uma interface personalizada (seu vtable tem funções de interface personalizada). Uma interface personalizada pode ser mais rápida do que uma interface dupla, principalmente entre limites de processo.<br /><br /> - **Compatível com automação** Permite que os controladores de automação acessem um objeto que tem o suporte à interface personalizada.|
 
 - **Suporte**
 
@@ -58,13 +58,13 @@ Para obter mais informações sobre projetos ATL e classes COM da ATL, consulte 
 
    |Opção|Descrição|
    |------------|-----------------|
-   |**ISupportErrorInfo**|Cria o suporte para o [ISupportErrorInfo](../../atl/reference/isupporterrorinfoimpl-class.md) de interface para que o objeto pode retornar informações de erro para o cliente.|
-   |**Pontos de Conexão**|Permite que os pontos de conexão para seu objeto, fazendo a classe do seu objeto derivam [IConnectionPointContainerImpl](../../atl/reference/iconnectionpointcontainerimpl-class.md).|
-   |**Marshaler de thread livre**|Cria um objeto livre de marshaler para marshaling de ponteiros de interface com eficiência entre os threads no mesmo processo. Disponível para o objeto especificando **ambos** como o modelo de threading.|
-   |**IObjectWithSite** (suporte de objeto do IE)|Implementa [IObjectWithSiteImpl](../../atl/reference/iobjectwithsiteimpl-class.md), que fornece uma maneira simple para permitir a comunicação entre um objeto e seu site em um contêiner.|
+   |**ISupportErrorInfo**|Cria suporte para a interface [ISupportErrorInfo](../../atl/reference/isupporterrorinfoimpl-class.md) para que o objeto possa retornar informações do erro para o cliente.|
+   |**Pontos de conexão**|Habilita pontos de conexão para o objeto, fazendo com que a classe do objeto derive de [IConnectionPointContainerImpl](../../atl/reference/iconnectionpointcontainerimpl-class.md).|
+   |**Marshaler com thread livre**|Cria um objeto de marshaler com thread livre para empacotar ponteiros de interface com eficiência entre threads no mesmo processo. Disponível para o objeto que especifica o modelo de Threading.|
+   |**IObjectWithSite** (Suporte a objeto do IE)|Implementa o [IObjectWithSiteImpl](../../atl/reference/iobjectwithsiteimpl-class.md), que fornece uma maneira simples de dar suporte à comunicação entre um objeto e seu site em um contêiner.|
 
 ## <a name="see-also"></a>Consulte também
 
 [Assistente de objeto simples da ATL](../../atl/reference/atl-simple-object-wizard.md)<br/>
 [Objeto ATL Simples](../../atl/reference/adding-an-atl-simple-object.md)<br/>
-[Problemas de Threading do servidor em processo](/windows/desktop/com/in-process-server-threading-issues)
+[Problemas de Threading do servidor em processo](/windows/win32/com/in-process-server-threading-issues)

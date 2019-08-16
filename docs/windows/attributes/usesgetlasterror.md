@@ -1,21 +1,21 @@
 ---
-title: usesgetlasterror (atributo de COM do C++)
+title: usesgetlasterror (C++ atributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.usesgetlasterror
 helpviewer_keywords:
 - usesgetlasterror attribute
 ms.assetid: d149e33d-35a7-46cb-9137-ae6883d86122
-ms.openlocfilehash: 9f050bbf69edf1ab8327a283299cb5e687ce5380
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b14316bd929f4b41b13a76c41e94b31b7534e9d8
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407062"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69513883"
 ---
 # <a name="usesgetlasterror"></a>usesgetlasterror
 
-Informa ao chamador que se houver um erro ao chamar essa função, em seguida, o chamador pode, em seguida, chamar `GetLastError` para recuperar o código de erro.
+Informa ao chamador que, se houver um erro ao chamar essa função, o chamador poderá então chamar `GetLastError` para recuperar o código de erro.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -25,24 +25,24 @@ Informa ao chamador que se houver um erro ao chamar essa função, em seguida, o
 
 ## <a name="remarks"></a>Comentários
 
-O **usesgetlasterror** atributo C++ tem a mesma funcionalidade que o [usesgetlasterror](/windows/desktop/Midl/usesgetlasterror) atributo MIDL.
+O atributo **usesgetlasterror** C++ tem a mesma funcionalidade que o atributo MIDL [usesgetlasterror](/windows/win32/Midl/usesgetlasterror) .
 
 ## <a name="example"></a>Exemplo
 
-Consulte a [idl_module](idl-module.md) exemplo para obter um exemplo de como usar **usesgetlasterror**.
+Consulte o exemplo de [idl_module](idl-module.md) para obter um exemplo de como usar o **usesgetlasterror**.
 
 ## <a name="requirements"></a>Requisitos
 
-### <a name="attribute-context"></a>Atributo de contexto
+### <a name="attribute-context"></a>Contexto de atributo
 
 |||
 |-|-|
-|**Aplica-se a**|**módulo** atributo|
+|**Aplica-se a**|atributo de **módulo**|
 |**Repetível**|Não|
-|**Atributos obrigatórios**|Nenhum|
+|**Atributos necessários**|Nenhum|
 |**Atributos inválidos**|Nenhum|
 
-Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
+Para obter mais informações sobre os contextos de atributo, consulte contextos de [atributo](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Consulte também
 

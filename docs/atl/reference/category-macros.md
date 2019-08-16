@@ -7,27 +7,27 @@ f1_keywords:
 - atlcom/ATL::IMPLEMENTED_CATEGORY
 - atlcom/ATL::REQUIRED_CATEGORY
 ms.assetid: 223578cb-6180-4787-a8d8-ba3787a5d3ee
-ms.openlocfilehash: 9c74b1e8e9fc101ed9b3acd842d38dcdb9eb48f3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 411e06cc795827eef356018ba427510fd9eb7c06
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62247391"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497848"
 ---
 # <a name="category-macros"></a>Macros de categoria
 
-Essas macros definem os mapas de categoria.
+Essas macros definem mapas de categorias.
 
 |||
 |-|-|
 |[BEGIN_CATEGORY_MAP](#begin_category_map)|Marca o início do mapa de categoria.|
-|[END_CATEGORY_MAP](#end_category_map)|Marca o fim do mapa de categoria.|
-|[IMPLEMENTED_CATEGORY](#implemented_category)|Indica as categorias que são implementadas pelo objeto COM.|
+|[END_CATEGORY_MAP](#end_category_map)|Marca o final do mapa de categoria.|
+|[IMPLEMENTED_CATEGORY](#implemented_category)|Indica as categorias implementadas pelo objeto COM.|
 |[REQUIRED_CATEGORY](#required_category)|Indica as categorias que são necessárias para o contêiner pelo objeto COM.|
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** atlcom
+**Cabeçalho:** atlcom. h
 
 ##  <a name="begin_category_map"></a>  BEGIN_CATEGORY_MAP
 
@@ -40,20 +40,20 @@ BEGIN_CATEGORY_MAP(theClass)
 ### <a name="parameters"></a>Parâmetros
 
 *theClass*<br/>
-[in] O nome da classe que contém o mapa de categoria.
+no O nome da classe que contém o mapa de categoria.
 
 ### <a name="remarks"></a>Comentários
 
-O mapa de categoria é usado para especificar quais categorias de componente que implementará a classe COM, além de quais categorias de seu contêiner.
+O mapa de categoria é usado para especificar quais categorias de componentes a classe COM implementará e quais categorias serão exigidas de seu contêiner.
 
-Adicionar um [IMPLEMENTED_CATEGORY](#implemented_category) entrada no mapa para cada categoria implementada pela classe COM. Adicionar um [REQUIRED_CATEGORY](#required_category) entrada no mapa para cada categoria que exige que seus clientes implementar a classe. Marcar o final do mapa com o [END_CATEGORY_MAP](#end_category_map) macro.
+Adicione uma entrada [IMPLEMENTED_CATEGORY](#implemented_category) ao mapa para cada categoria implementada pela classe com. Adicione uma entrada [REQUIRED_CATEGORY](#required_category) ao mapa para cada categoria que a classe exige que seus clientes implementem. Marque o final do mapa com a macro [END_CATEGORY_MAP](#end_category_map) .
 
-As categorias de componente listadas no mapa serão registradas automaticamente quando o módulo é registrado, se a classe tiver um associado [OBJECT_ENTRY_AUTO](../../atl/reference/object-map-macros.md#object_entry_auto) ou [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto) .
+As categorias de componentes listadas no mapa serão registradas automaticamente quando o módulo for registrado se a classe tiver um [OBJECT_ENTRY_AUTO](../../atl/reference/object-map-macros.md#object_entry_auto) ou [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto)associado.
 
 > [!NOTE]
->  ATL usa o Gerenciador de categorias de componentes padrão para registrar as categorias de componentes. Se o Gerenciador não está presente no sistema quando o módulo é registrado, o registro terá êxito, mas as categorias de componente não serão registradas para essa classe.
+>  A ATL usa o Gerenciador de categorias de componentes padrão para registrar categorias de componentes. Se o Gerenciador não estiver presente no sistema quando o módulo estiver registrado, o registro terá sucesso, mas as categorias de componentes não serão registradas para essa classe.
 
-Para obter mais informações sobre categorias de componentes, consulte [quais são as categorias de componentes e como elas funcionam](/windows/desktop/com/component-categories-and-how-they-work) no SDK do Windows.
+Para obter mais informações sobre categorias de componentes, consulte [o que são categorias de componentes e como elas funcionam](/windows/win32/com/component-categories-and-how-they-work) na SDK do Windows.
 
 ### <a name="example"></a>Exemplo
 
@@ -61,7 +61,7 @@ Para obter mais informações sobre categorias de componentes, consulte [quais s
 
 ##  <a name="end_category_map"></a>  END_CATEGORY_MAP
 
-Marca o fim do mapa de categoria.
+Marca o final do mapa de categoria.
 
 ```
 END_CATEGORY_MAP()
@@ -69,11 +69,11 @@ END_CATEGORY_MAP()
 
 ### <a name="example"></a>Exemplo
 
-Veja o exemplo de [BEGIN_CATEGORY_MAP](#begin_category_map).
+Consulte o exemplo de [BEGIN_CATEGORY_MAP](#begin_category_map).
 
-##  <a name="implemented_category"></a>  IMPLEMENTED_CATEGORY
+##  <a name="implemented_category"></a>IMPLEMENTED_CATEGORY
 
-Adicionar uma macro IMPLEMENTED_CATEGORY para o seu componente [mapa de categoria](#begin_category_map) para especificar que deve ser registrado como implementar a categoria identificada pela *catID* parâmetro.
+Adicione uma macro IMPLEMENTED_CATEGORY ao [mapa de categoria](#begin_category_map) do componente para especificar que ele deve ser registrado como implementando a categoria identificada pelo parâmetro *CATID* .
 
 ```
 IMPLEMENTED_CATEGORY(catID)
@@ -82,27 +82,27 @@ IMPLEMENTED_CATEGORY(catID)
 ### <a name="parameters"></a>Parâmetros
 
 *catID*<br/>
-[in] Uma constante CATID ou variável que contém o identificador global exclusivo (GUID) para a categoria de implementado. O endereço do *catID* serão tomadas e adicionada ao mapa. Consulte a tabela abaixo para uma seleção de categorias de estoque.
+no Uma constante de CATID ou variável que contém o GUID (identificador global exclusivo) da categoria implementada. O endereço do *CATID* será obtido e adicionado ao mapa. Consulte a tabela abaixo para obter uma seleção de categorias de estoque.
 
 ### <a name="remarks"></a>Comentários
 
-As categorias de componente listadas no mapa serão registradas automaticamente quando o módulo é registrado, se a classe tiver um associado [OBJECT_ENTRY_AUTO](../../atl/reference/object-map-macros.md#object_entry_auto) ou [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto) macro.
+As categorias de componentes listadas no mapa serão registradas automaticamente quando o módulo for registrado se a classe tiver uma macro [OBJECT_ENTRY_AUTO](../../atl/reference/object-map-macros.md#object_entry_auto) ou [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto) associada.
 
-Clientes podem usar as informações de categoria registradas para a classe para determinar seus requisitos e recursos sem ter de criar uma instância dele.
+Os clientes podem usar as informações de categoria registradas para a classe para determinar seus recursos e requisitos sem precisar criar uma instância dela.
 
-Para obter mais informações sobre categorias de componentes, consulte [quais são as categorias de componentes e como elas funcionam](/windows/desktop/com/component-categories-and-how-they-work) no SDK do Windows.
+Para obter mais informações sobre categorias de componentes, consulte [o que são categorias de componentes e como elas funcionam](/windows/win32/com/component-categories-and-how-they-work) na SDK do Windows.
 
 ### <a name="a-selection-of-stock-categories"></a>Uma seleção de categorias de estoque
 
-|Descrição|Símbolo|GUID de registro|
+|Descrição|Símbolo|GUID do registro|
 |-----------------|------------|-------------------|
-|Seguro para execução de scripts|CATID_SafeForScripting|{7DD95801-9882-11CF-9FA9-00AA006C42C4}|
+|Seguro para scripts|CATID_SafeForScripting|{7DD95801-9882-11CF-9FA9-00AA006C42C4}|
 |Seguro para inicialização|CATID_SafeForInitializing|{7DD95802-9882-11CF-9FA9-00AA006C42C4}|
-|Confinamento de Site do quadro simples|CATID_SimpleFrameControl|{157083E0-2368-11cf-87B9-00AA006C8166}|
-|Associação de dados simples|CATID_PropertyNotifyControl|{157083E1-2368-11cf-87B9-00AA006C8166}|
+|Confinamento de site de quadro simples|CATID_SimpleFrameControl|{157083E0-2368-11cf-87B9-00AA006C8166}|
+|Vinculação de dados simples|CATID_PropertyNotifyControl|{157083E1-2368-11cf-87B9-00AA006C8166}|
 |Ligação de dados avançada|CATID_VBDataBound|{157083E2-2368-11cf-87B9-00AA006C8166}|
 |Controles sem janelas|CATID_WindowlessObject|{1D06B600-3AE3-11cf-87B9-00AA006C8166}|
-|Objetos com suporte a Internet|Ver [objetos ciente da Internet](/windows/desktop/com/internet-aware-objects) no SDK do Windows para obter uma lista de exemplo.||
+|Objetos com reconhecimento de Internet|Consulte [objetos com reconhecimento da Internet](/windows/win32/com/internet-aware-objects) no SDK do Windows para obter uma lista de exemplos.||
 
 ### <a name="example"></a>Exemplo
 
@@ -110,7 +110,7 @@ Para obter mais informações sobre categorias de componentes, consulte [quais s
 
 ##  <a name="required_category"></a>  REQUIRED_CATEGORY
 
-Adicionar uma macro REQUIRED_CATEGORY para o seu componente [mapa de categoria](#begin_category_map) para especificar que deve ser registrado como exigindo a categoria identificada pela *catID* parâmetro.
+Adicione uma macro REQUIRED_CATEGORY ao [mapa de categoria](#begin_category_map) do componente para especificar que ele deve ser registrado como exigindo a categoria identificada pelo parâmetro *CATID* .
 
 ```
 REQUIRED_CATEGORY( catID )
@@ -119,27 +119,27 @@ REQUIRED_CATEGORY( catID )
 ### <a name="parameters"></a>Parâmetros
 
 *catID*<br/>
-[in] Uma constante CATID ou variável que contém o identificador global exclusivo (GUID) para a categoria desejada. O endereço do *catID* serão tomadas e adicionada ao mapa. Consulte a tabela abaixo para uma seleção de categorias de estoque.
+no Uma constante de CATID ou variável que contém o GUID (identificador global exclusivo) da categoria necessária. O endereço do *CATID* será obtido e adicionado ao mapa. Consulte a tabela abaixo para obter uma seleção de categorias de estoque.
 
 ### <a name="remarks"></a>Comentários
 
-As categorias de componente listadas no mapa serão registradas automaticamente quando o módulo é registrado, se a classe tiver um associado [OBJECT_ENTRY_AUTO](../../atl/reference/object-map-macros.md#object_entry_auto) ou [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto) macro.
+As categorias de componentes listadas no mapa serão registradas automaticamente quando o módulo for registrado se a classe tiver uma macro [OBJECT_ENTRY_AUTO](../../atl/reference/object-map-macros.md#object_entry_auto) ou [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto) associada.
 
-Clientes podem usar as informações de categoria registradas para a classe para determinar seus requisitos e recursos sem ter de criar uma instância dele. Por exemplo, um controle pode exigir que um contêiner dão suporte à vinculação de dados. O contêiner pode descobrir se ele tem os recursos necessários para hospedar o controle consultando o Gerenciador de categoria para as categorias necessários para esse controle. Se o contêiner não dá suporte a um recurso necessário, ele poderá recusar hospedar o objeto COM.
+Os clientes podem usar as informações de categoria registradas para a classe para determinar seus recursos e requisitos sem precisar criar uma instância dela. Por exemplo, um controle pode exigir que um contêiner dê suporte à associação de dados. O contêiner pode descobrir se ele tem os recursos necessários para hospedar o controle consultando o gerente de categoria para as categorias exigidas por esse controle. Se o contêiner não oferecer suporte a um recurso necessário, ele poderá se recusar a hospedar o objeto COM.
 
-Para obter mais informações sobre categorias de componentes, incluindo uma lista de exemplos, consulte [quais são as categorias de componentes e como elas funcionam](/windows/desktop/com/component-categories-and-how-they-work) no SDK do Windows.
+Para obter mais informações sobre categorias de componentes, incluindo uma lista de exemplo, consulte [o que são categorias de componentes e como elas funcionam](/windows/win32/com/component-categories-and-how-they-work) na SDK do Windows.
 
 ### <a name="a-selection-of-stock-categories"></a>Uma seleção de categorias de estoque
 
-|Descrição|Símbolo|GUID de registro|
+|Descrição|Símbolo|GUID do registro|
 |-----------------|------------|-------------------|
-|Seguro para execução de scripts|CATID_SafeForScripting|{7DD95801-9882-11CF-9FA9-00AA006C42C4}|
+|Seguro para scripts|CATID_SafeForScripting|{7DD95801-9882-11CF-9FA9-00AA006C42C4}|
 |Seguro para inicialização|CATID_SafeForInitializing|{7DD95802-9882-11CF-9FA9-00AA006C42C4}|
-|Confinamento de Site do quadro simples|CATID_SimpleFrameControl|{157083E0-2368-11cf-87B9-00AA006C8166}|
-|Associação de dados simples|CATID_PropertyNotifyControl|{157083E1-2368-11cf-87B9-00AA006C8166}|
+|Confinamento de site de quadro simples|CATID_SimpleFrameControl|{157083E0-2368-11cf-87B9-00AA006C8166}|
+|Vinculação de dados simples|CATID_PropertyNotifyControl|{157083E1-2368-11cf-87B9-00AA006C8166}|
 |Ligação de dados avançada|CATID_VBDataBound|{157083E2-2368-11cf-87B9-00AA006C8166}|
 |Controles sem janelas|CATID_WindowlessObject|{1D06B600-3AE3-11cf-87B9-00AA006C8166}|
-|Objetos com suporte a Internet|Ver [objetos ciente da Internet](/windows/desktop/com/internet-aware-objects) no SDK do Windows para obter uma lista de exemplo.||
+|Objetos com reconhecimento de Internet|Consulte [objetos com reconhecimento da Internet](/windows/win32/com/internet-aware-objects) no SDK do Windows para obter uma lista de exemplos.||
 
 ### <a name="example"></a>Exemplo
 

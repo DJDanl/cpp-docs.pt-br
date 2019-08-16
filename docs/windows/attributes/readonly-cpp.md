@@ -1,17 +1,17 @@
 ---
-title: ReadOnly (C++ COM atributo)
+title: ReadOnly (C++ atributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.readonly
 helpviewer_keywords:
 - readonly attribute
 ms.assetid: 1246cadd-5304-43a9-beea-51153d12704d
-ms.openlocfilehash: 7eea071b62130c65fbb46ebc8827fc2b428c4c0c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 93f7393f76596766e841dfc25f6d12e20e3db618
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407335"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514125"
 ---
 # <a name="readonly-c"></a>readonly (C++)
 
@@ -25,13 +25,13 @@ Proíbe a atribuição a um membro de dados.
 
 ## <a name="remarks"></a>Comentários
 
-O **readonly** atributo C++ tem a mesma funcionalidade que o [readonly](/windows/desktop/Midl/readonly) atributo MIDL.
+O atributo **ReadOnly** C++ tem a mesma funcionalidade que o atributo MIDL [ReadOnly](/windows/win32/Midl/readonly) .
 
-Se você quiser impedir a modificação de um parâmetro de método, em seguida, use o [em](in-cpp.md) atributo.
+Se você quiser proibir a modificação de um parâmetro de método, use o atributo [in](in-cpp.md) .
 
 ## <a name="example"></a>Exemplo
 
-O código a seguir mostra um uso do **readonly** atributo:
+O código a seguir mostra um uso do atributo **ReadOnly** :
 
 ```cpp
 // cpp_attr_ref_readonly.cpp
@@ -49,16 +49,16 @@ __interface IFireTabCtrl
 
 ## <a name="requirements"></a>Requisitos
 
-### <a name="attribute-context"></a>Atributo de contexto
+### <a name="attribute-context"></a>Contexto de atributo
 
 |||
 |-|-|
 |**Aplica-se a**|Método de interface|
 |**Repetível**|Não|
-|**Atributos obrigatórios**|Nenhum|
+|**Atributos necessários**|Nenhum|
 |**Atributos inválidos**|Nenhum|
 
-Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
+Para obter mais informações sobre os contextos de atributo, consulte contextos de [atributo](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Consulte também
 

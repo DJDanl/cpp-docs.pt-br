@@ -19,26 +19,26 @@ helpviewer_keywords:
 - TVS_HASBUTTONS [MFC]
 - tree controls [MFC], styles
 ms.assetid: f43faebd-a355-479e-888a-bf0673d5e1b4
-ms.openlocfilehash: d03961c1c905689af5894897a59262c8f00e73fa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f5f28025d0349e9bcd95aba50d4110d304fed376
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62181517"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69510945"
 ---
 # <a name="tree-control-styles"></a>Estilos de controle da árvore
 
-Controle de árvore ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) estilos controlam aspectos da aparência de um controle de árvore. Você definir os estilos inicias quando você cria o controle de árvore. Você pode recuperar e alterar os estilos depois de criar o controle de árvore usando o [GetWindowLong](/windows/desktop/api/winuser/nf-winuser-getwindowlonga) e [SetWindowLong](/windows/desktop/api/winuser/nf-winuser-setwindowlonga) funções do Windows, especificando **GWL_STYLE** para o *nIndex* parâmetro. Para obter uma lista completa de estilos, consulte [estilos de janela de controle de exibição de árvore](/windows/desktop/Controls/tree-view-control-window-styles) no SDK do Windows.
+Os estilos de controle de árvore ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) regem aspectos da aparência de um controle de árvore. Você define os estilos iniciais ao criar o controle de árvore. Você pode recuperar e alterar os estilos depois de criar o controle de árvore usando as funções do Windows [GetWindowLong](/windows/win32/api/winuser/nf-winuser-getwindowlongw) e [SetWindowLong](/windows/win32/api/winuser/nf-winuser-setwindowlongw) , especificando **GWL_STYLE** para o parâmetro *nIndex* . Para obter uma lista completa de estilos, consulte [estilos de janela de controle de exibição de árvore](/windows/win32/Controls/tree-view-control-window-styles) na SDK do Windows.
 
-O **TVS_HASLINES** estilo aprimora a representação gráfica da hierarquia de um controle de árvore, desenhar linhas que vinculam os itens filho para o item pai correspondente. Esse estilo não vincular itens na raiz da hierarquia. Para fazer isso, você precisará combinar as **TVS_HASLINES** e **TVS_LINESATROOT** estilos.
+O estilo **TVS_HASLINES** aprimora a representação gráfica da hierarquia de um controle de árvore por meio do desenho de linhas que vinculam itens filho ao item pai correspondente. Esse estilo não vincula itens na raiz da hierarquia. Para fazer isso, você precisa combinar os estilos **TVS_HASLINES** e **TVS_LINESATROOT** .
 
-O usuário pode expandir ou recolher a lista de um item pai dos itens filhos clicando duas vezes no item pai. Um controle de árvore que tem o **TVS_SINGLEEXPAND** estilo faz com que o item que está sendo selecionado para expandir e o item que está sendo desmarcada para recolher. Se o mouse é usado para o item selecionado com um único clique, e esse item for fechado, ela será expandida. Se o item selecionado é single-clicado quando ele é aberto, ele será recolhido.
+O usuário pode expandir ou recolher a lista de itens filho de um item pai clicando duas vezes no item pai. Um controle de árvore que tem o estilo **TVS_SINGLEEXPAND** faz com que o item seja selecionado para expandir e o item que está sendo desmarcado para recolher. Se o mouse for usado para clicar uma vez no item selecionado e esse item for fechado, ele será expandido. Se o item selecionado tiver um clique único quando estiver aberto, ele será recolhido.
 
-Um controle de árvore que tem o **TVS_HASBUTTONS** estilo adiciona um botão à esquerda de cada item pai. O usuário pode clicar no botão para expandir ou recolher os itens filho como uma alternativa ao clicar duas vezes o item pai. **TVS_HASBUTTONS** não adiciona botões de itens na raiz da hierarquia. Para fazer isso, você deve combinar **TVS_HASLINES**, **TVS_LINESATROOT**, e **TVS_HASBUTTONS**.
+Um controle de árvore que tem o estilo **TVS_HASBUTTONS** adiciona um botão ao lado esquerdo de cada item pai. O usuário pode clicar no botão para expandir ou recolher os itens filho como uma alternativa para clicar duas vezes no item pai. **TVS_HASBUTTONS** não Adiciona botões a itens na raiz da hierarquia. Para fazer isso, você deve combinar **TVS_HASLINES**, **TVS_LINESATROOT**e **TVS_HASBUTTONS**.
 
-O **TVS_EDITLABELS** estilo possibilita que o usuário edite os rótulos dos itens de controle de árvore. Para obter mais informações sobre como editar rótulos, consulte [edição de rótulos de controle de árvore](../mfc/tree-control-label-editing.md) mais adiante neste tópico.
+O estilo **TVS_EDITLABELS** possibilita que o usuário edite os rótulos dos itens de controle de árvore. Para obter mais informações sobre como editar rótulos, consulte [edição de rótulo de controle de árvore](../mfc/tree-control-label-editing.md) mais adiante neste tópico.
 
-O **TVS_NOTOOLTIPS** estilo desabilita o recurso de dica de ferramenta automática dos controles de exibição de árvore. Esse recurso exibe automaticamente uma dica de ferramenta, que contém o título do item sob o cursor do mouse, se o título inteiro não é visível no momento.
+O estilo **TVS_NOTOOLTIPS** desabilita o recurso dica de ferramenta automática de controles de exibição de árvore. Esse recurso exibe automaticamente uma dica de ferramenta, que contém o título do item sob o cursor do mouse, se o título inteiro não estiver visível no momento.
 
 ## <a name="see-also"></a>Consulte também
 

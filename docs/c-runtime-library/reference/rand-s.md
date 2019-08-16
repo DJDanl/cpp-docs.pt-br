@@ -27,16 +27,16 @@ helpviewer_keywords:
 - cryptographically secure random numbers
 - pseudorandom numbers
 - numbers, generating pseudorandom
-ms.openlocfilehash: d196a6f5d7483deb9a7e1b8d7fa929532b6197db
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7a2c57713d4b455971f24b64dc124862749e927a
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62358119"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499559"
 ---
-# <a name="rands"></a>rand_s
+# <a name="rand_s"></a>rand_s
 
-Gera um número pseudoaleatório. Esta é uma versão mais segura da função [rand](rand.md), com melhorias de segurança, conforme descrito em [recursos de segurança no CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Gera um número pseudoaleatório. Essa é uma versão mais segura da função [Rand](rand.md), com aprimoramentos de segurança, conforme descrito em [recursos de segurança no CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -47,24 +47,24 @@ errno_t rand_s(unsigned int* randomValue);
 ### <a name="parameters"></a>Parâmetros
 
 *randomValue*<br/>
-Um ponteiro para um inteiro para armazenar o valor gerado.
+Um ponteiro para um inteiro para manter o valor gerado.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Zero se for bem-sucedido; caso contrário, um código de erro. Se o ponteiro de entrada _randomValue_ for um ponteiro nulo, a função invocará um manipulador de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, a função retornará **EINVAL** e define **errno** para **EINVAL**. Se a função falhar por algum motivo, *_randomValue_ é definido como 0.
+Zero se for bem-sucedido; caso contrário, um código de erro. Se o ponteiro de entrada randomValue for um ponteiro NULL, a função invocará um manipulador de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, a função retornará **EINVAL** e definirá **errno** como **EINVAL**. Se a função falhar por qualquer outro motivo, *_randomValue_ será definido como 0.
 
 ## <a name="remarks"></a>Comentários
 
-O **rand_s** função grava um inteiro pseudoaleatório no intervalo de 0 a **UINT_MAX** para o ponteiro de entrada. O **rand_s** função usa o sistema operacional para gerar números aleatórios criptograficamente seguros. Não usa a semente gerada pela [srand](srand.md) função, nem afeta a sequência de número aleatória usada pelo [rand](rand.md).
+A função **rand_s** grava um número inteiro de pseudoaleatória no intervalo de 0 a **UINT_MAX** para o ponteiro de entrada. A função **rand_s** usa o sistema operacional para gerar números aleatórios criptograficamente seguros. Ele não usa a semente gerada pela função [srand](srand.md) , nem afeta a sequência numérica aleatória usada pelo [Rand](rand.md).
 
-O **rand_s** função exige que a constante **_CRT_RAND_S** seja definida antes da instrução de inclusão para a função a ser declarado, como no exemplo a seguir:
+A função **rand_s** requer que a constante **_CRT_RAND_S** seja definida antes da instrução de inclusão para que a função seja declarada, como no exemplo a seguir:
 
 ```C
 #define _CRT_RAND_S
 #include <stdlib.h>
 ```
 
-**rand_s** depende do [RtlGenRandom](/windows/desktop/api/ntsecapi/nf-ntsecapi-rtlgenrandom) API, que só está disponível no Windows XP e versões posteriores.
+o **rand_s** depende da API do [RtlGenRandom](/windows/win32/api/ntsecapi/nf-ntsecapi-rtlgenrandom) , que está disponível apenas no Windows XP e posterior.
 
 ## <a name="requirements"></a>Requisitos
 

@@ -1,21 +1,21 @@
 ---
-title: cadeia de caracteres (C++ COM atributo)
+title: Cadeia deC++ caracteres (atributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.string
 helpviewer_keywords:
 - string attribute
 ms.assetid: ddde900a-2e99-4fcd-86e8-57e1bdba7c93
-ms.openlocfilehash: e1b528fb922a15655de403c6099ee1d36e2fb3de
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 978f1f546c0df8de4ff167ddf5ddf724feb31b6e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407270"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514010"
 ---
 # <a name="string-c"></a>string (C++)
 
-Indica que o unidimensional **char**, **wchar_t**, `byte` (ou equivalente) matriz ou o ponteiro para essa matriz deve ser tratado como uma cadeia de caracteres.
+Indica que a matriz de **caractere**unidimensional, `byte` **wchar_t**, (ou equivalente) ou o ponteiro para tal matriz deve ser tratado como uma cadeia de caracteres.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -25,11 +25,11 @@ Indica que o unidimensional **char**, **wchar_t**, `byte` (ou equivalente) matri
 
 ## <a name="remarks"></a>Comentários
 
-O **cadeia de caracteres** atributo C++ tem a mesma funcionalidade que o [cadeia de caracteres](/windows/desktop/Midl/string) atributo MIDL.
+O atributo de **cadeia de caracteres** C++ tem a mesma funcionalidade que o atributo MIDL de [cadeia de caracteres](/windows/win32/Midl/string) .
 
 ## <a name="example"></a>Exemplo
 
-O código a seguir mostra como usar **cadeia de caracteres** em uma interface e em um typedef:
+O código a seguir mostra como usar a **cadeia de caracteres** em uma interface e em um typedef:
 
 ```cpp
 // cpp_attr_ref_string.cpp
@@ -46,16 +46,16 @@ __interface IFireTabCtrl
 
 ## <a name="requirements"></a>Requisitos
 
-### <a name="attribute-context"></a>Atributo de contexto
+### <a name="attribute-context"></a>Contexto de atributo
 
 |||
 |-|-|
-|**Aplica-se a**|Matriz ou ponteiro para uma matriz, o parâmetro de interface, o método de interface|
+|**Aplica-se a**|Matriz ou ponteiro para uma matriz, parâmetro de interface, método de interface|
 |**Repetível**|Não|
-|**Atributos obrigatórios**|Nenhum|
+|**Atributos necessários**|Nenhum|
 |**Atributos inválidos**|Nenhum|
 
-Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
+Para obter mais informações sobre os contextos de atributo, consulte contextos de [atributo](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Consulte também
 

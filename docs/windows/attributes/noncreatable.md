@@ -1,17 +1,17 @@
 ---
-title: não passível de criação (C++ COM atributo)
+title: Não-cri (C++ atributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.noncreatable
 helpviewer_keywords:
 - noncreatable attribute
 ms.assetid: 4d17937b-0bff-41af-ba57-53e18b7ab5a9
-ms.openlocfilehash: a10d93650c0ae564019a09b34c3a604d12327998
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e855497cb6f619ecdaa6aedf16a04f045a60faa7
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62305314"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514566"
 ---
 # <a name="noncreatable"></a>noncreatable
 
@@ -25,9 +25,9 @@ Define um objeto que não pode ser instanciado por si só.
 
 ## <a name="remarks"></a>Comentários
 
-O **noncreatable** atributo C++ tem a mesma funcionalidade que o [noncreatable](/windows/desktop/Midl/noncreatable) atributo MIDL e é passado para o gerado automaticamente. Arquivo IDL pelo compilador.
+O C++ atributo não-cri tem a mesma funcionalidade que o atributo MIDL não- [cri](/windows/win32/Midl/noncreatable) e é passado automaticamente para o gerado. Arquivo IDL pelo compilador.
 
-Quando esse atributo é usado dentro de um projeto que usa ATL, altera o comportamento do atributo. Além do comportamento acima, o atributo também injeta a [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto) macro. Essa macro indica ao ATL que o objeto não pode ser criado externamente.
+Quando esse atributo é usado em um projeto que usa ATL, o comportamento do atributo é alterado. Além do comportamento acima, o atributo também injeta a macro [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto) . Essa macro indica ao ATL que o objeto não pode ser criado externamente.
 
 ## <a name="example"></a>Exemplo
 
@@ -51,16 +51,16 @@ class CMyClass : public A
 
 ## <a name="requirements"></a>Requisitos
 
-### <a name="attribute-context"></a>Atributo de contexto
+### <a name="attribute-context"></a>Contexto de atributo
 
 |||
 |-|-|
-|**Aplica-se a**|**class**, **struct**|
+|**Aplica-se a**|**classe**, **struct**|
 |**Repetível**|Não|
-|**Atributos obrigatórios**|**coclass**|
+|**Atributos necessários**|**coclass**|
 |**Atributos inválidos**|Nenhum|
 
-Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
+Para obter mais informações sobre os contextos de atributo, consulte contextos de [atributo](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Consulte também
 

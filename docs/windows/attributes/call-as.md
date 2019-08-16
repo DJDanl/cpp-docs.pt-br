@@ -1,21 +1,21 @@
 ---
-title: call_as (C++ COM atributo)
+title: call_as (C++ atributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.call_as
 helpviewer_keywords:
 - call_as attribute
 ms.assetid: a09d7f1f-353b-4870-9b45-f0284161695d
-ms.openlocfilehash: a0051cdca6673800b37d5733c0b849da24010fcb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f36cf8d1be589cc614a6def583b00af00aabdb61
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148348"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501802"
 ---
-# <a name="callas"></a>call_as
+# <a name="call_as"></a>call_as
 
-Permite que um [local](local-cpp.md) função a ser mapeada para uma função remota para que quando a função remota é chamada, a função local é invocada.
+Permite que uma função [local](local-cpp.md) seja mapeada para uma função remota para que, quando a função remota for chamada, a função local seja invocada.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -26,15 +26,15 @@ Permite que um [local](local-cpp.md) função a ser mapeada para uma função re
 ### <a name="parameters"></a>Parâmetros
 
 *function*<br/>
-A função local que você deseja ser chamado quando uma função remota é invocada.
+A função local que você deseja que seja chamada quando uma função remota é invocada.
 
 ## <a name="remarks"></a>Comentários
 
-O **call_as** C++ atributo tem a mesma funcionalidade que o [call_as](/windows/desktop/Midl/call-as) atributo MIDL.
+O atributo **call_as** C++ tem a mesma funcionalidade que o atributo MIDL [call_as](/windows/win32/Midl/call-as) .
 
 ## <a name="example"></a>Exemplo
 
-O código a seguir mostra como você pode usar **call_as** para mapear uma função nonremotable (`f1`) para uma função remota (`Remf1`):
+O código a seguir mostra como você pode usar **call_as** para mapear uma função não remotable (`f1`) para uma função remota (`Remf1`):
 
 ```cpp
 // cpp_attr_ref_call_as.cpp
@@ -50,16 +50,16 @@ __interface IMInterface {
 
 ## <a name="requirements"></a>Requisitos
 
-### <a name="attribute-context"></a>Atributo de contexto
+### <a name="attribute-context"></a>Contexto de atributo
 
 |||
 |-|-|
 |**Aplica-se a**|Método de interface|
 |**Repetível**|Não|
-|**Atributos obrigatórios**|Nenhum|
+|**Atributos necessários**|Nenhum|
 |**Atributos inválidos**|Nenhum|
 
-Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
+Para obter mais informações sobre os contextos de atributo, consulte contextos de [atributo](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Consulte também
 

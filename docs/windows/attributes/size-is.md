@@ -1,21 +1,21 @@
 ---
-title: size_is (C++ COM atributo)
+title: size_is (C++ atributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.size_is
 helpviewer_keywords:
 - size_is attribute
 ms.assetid: 70192d09-f6c5-4d52-b3fe-303f8cb10aa5
-ms.openlocfilehash: a7b990a708bafba78c9dc4153315f8b7b20351ba
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 504f1bf72b8ffa15e8df50bb00c86ef909688f1e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407322"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514030"
 ---
-# <a name="sizeis"></a>size_is
+# <a name="size_is"></a>size_is
 
-Especifique o tamanho da memória alocada para ponteiros de tamanho, tamanho de ponteiros para ponteiros de tamanho e único ou matrizes multidimensionais.
+Especifique o tamanho da memória alocada para ponteiros de tamanho, ponteiros de tamanho para ponteiros de tamanho e matrizes de dimensão única ou multidimensional.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -25,29 +25,29 @@ Especifique o tamanho da memória alocada para ponteiros de tamanho, tamanho de 
 
 ### <a name="parameters"></a>Parâmetros
 
-*Expressão*<br/>
+*expression*<br/>
 O tamanho da memória alocada para ponteiros de tamanho.
 
 ## <a name="remarks"></a>Comentários
 
-O **size_is** C++ atributo tem a mesma funcionalidade que o [size_is](/windows/desktop/Midl/size-is) atributo MIDL.
+O atributo **size_is** C++ tem a mesma funcionalidade que o atributo MIDL de [size_is](/windows/win32/Midl/size-is) .
 
 ## <a name="example"></a>Exemplo
 
-Veja o exemplo de [first_is](first-is.md) para obter um exemplo de como especificar uma seção de uma matriz.
+Consulte o exemplo de [first_is](first-is.md) para obter um exemplo de como especificar uma seção de uma matriz.
 
 ## <a name="requirements"></a>Requisitos
 
-### <a name="attribute-context"></a>Atributo de contexto
+### <a name="attribute-context"></a>Contexto de atributo
 
 |||
 |-|-|
-|**Aplica-se a**|Campo do **struct** ou **união**, a interface do parâmetro, o método de interface|
+|**Aplica-se a**|Campo em **struct** ou **Union**, parâmetro de interface, método de interface|
 |**Repetível**|Não|
-|**Atributos obrigatórios**|Nenhum|
+|**Atributos necessários**|Nenhum|
 |**Atributos inválidos**|`max_is`|
 
-Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
+Para obter mais informações sobre os contextos de atributo, consulte contextos de [atributo](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Consulte também
 

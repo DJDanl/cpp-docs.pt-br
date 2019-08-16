@@ -1,17 +1,17 @@
 ---
-title: DefaultValue (C++ COM atributo)
+title: DefaultValue (C++ atributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.defaultvalue
 helpviewer_keywords:
 - defaultvalue attribute
 ms.assetid: efa5d050-b2cc-4d9e-9b8e-79954f218d3a
-ms.openlocfilehash: ff6924db6f4805bb5f2dbab69076a86020b2a075
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b2057658b5881efd0c3ff095d51e5ee88c9c533e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62147958"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69490927"
 ---
 # <a name="defaultvalue"></a>defaultvalue
 
@@ -30,11 +30,11 @@ O valor padrão do parâmetro.
 
 ## <a name="remarks"></a>Comentários
 
-O **defaultvalue** atributo C++ tem a mesma funcionalidade que o [defaultvalue](/windows/desktop/Midl/defaultvalue) atributo MIDL.
+O atributo **DefaultValue** C++ tem a mesma funcionalidade que o atributo MIDL de [DefaultValue](/windows/win32/Midl/defaultvalue) .
 
 ## <a name="example"></a>Exemplo
 
-O código a seguir mostra um método de interface usando o **defaultvalue** atributo:
+O código a seguir mostra um método de interface usando o atributo **DefaultValue** :
 
 ```cpp
 // cpp_attr_ref_defaultvalue.cpp
@@ -56,16 +56,16 @@ __interface IFireTabCtrl : IDispatch {
 
 ## <a name="requirements"></a>Requisitos
 
-### <a name="attribute-context"></a>Atributo de contexto
+### <a name="attribute-context"></a>Contexto de atributo
 
 |||
 |-|-|
 |**Aplica-se a**|Parâmetro de interface|
 |**Repetível**|Não|
-|**Atributos obrigatórios**|Nenhum|
+|**Atributos necessários**|Nenhum|
 |**Atributos inválidos**|Nenhum|
 
-Para obter mais informações, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
+Para obter mais informações, consulte contextos de [atributo](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Consulte também
 

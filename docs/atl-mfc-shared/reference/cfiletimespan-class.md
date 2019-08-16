@@ -11,16 +11,16 @@ helpviewer_keywords:
 - shared classes, CFileTimeSpan
 - CFileTimeSpan class
 ms.assetid: 5856fb39-9c82-4027-8ccf-8760890491ec
-ms.openlocfilehash: 001e6ddc78a41e118949e9b750b78609f3ff9e92
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f9bb42ba4c142f671a83dcfa7e99cff940fff047
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62235296"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69491287"
 ---
 # <a name="cfiletimespan-class"></a>Classe CFileTimeSpan
 
-Essa classe fornece métodos para gerenciamento de data relativa e valores de tempo associados com um arquivo.
+Essa classe fornece métodos para gerenciar valores de data e hora relativos associados a um arquivo.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -41,35 +41,35 @@ class CFileTimeSpan
 |Nome|Descrição|
 |----------|-----------------|
 |[CFileTimeSpan::GetTimeSpan](#gettimespan)|Chame esse método para recuperar o período de tempo do `CFileTimeSpan` objeto.|
-|[CFileTimeSpan::SetTimeSpan](#settimespan)|Chame esse método para definir o intervalo de tempo a `CFileTimeSpan` objeto.|
+|[CFileTimeSpan::SetTimeSpan](#settimespan)|Chame esse método para definir o período de tempo do `CFileTimeSpan` objeto.|
 
 ### <a name="public-operators"></a>Operadores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CFileTimeSpan::operator-](#operator_-)|Executa a subtração em um `CFileTimeSpan` objeto.|
-|[CFileTimeSpan::operator !=](#operator_neq)|Compara dois objetos `CFileTimeSpan` quanto à desigualdade.|
-|[CFileTimeSpan::operator +](#operator_add)|Executa a adição em um `CFileTimeSpan` objeto.|
-|[CFileTimeSpan::operator +=](#operator_add_eq)|Executa a adição em um `CFileTimeSpan` de objeto e atribuir o resultado para o objeto atual.|
-|[CFileTimeSpan::operator &lt;](#operator_lt)|Compara dois `CFileTimeSpan` objetos para determinar o menor.|
-|[CFileTimeSpan::operator &lt;=](#operator_lt_eq)|Compara dois `CFileTimeSpan` objetos para determinar igualdade ou o menor.|
-|[CFileTimeSpan::operator =](#operator_eq)|O operador de atribuição.|
-|[CFileTimeSpan::operator -=](#operator_-_eq)|Executa a subtração em um `CFileTimeSpan` de objeto e atribuir o resultado para o objeto atual.|
-|[CFileTimeSpan::operator ==](#operator_eq_eq)|Compara dois objetos `CFileTimeSpan` quanto à igualdade.|
-|[CFileTimeSpan::operator &gt;](#operator_gt)|Compara dois `CFileTimeSpan` objetos para determinar o maior.|
-|[CFileTimeSpan::operator &gt;=](#operator_gt_eq)|Compara dois `CFileTimeSpan` objetos para determinar igualdade ou maior.|
+|[Operador CFileTimeSpan:: Operator](#operator_-)|Executa a subtração em `CFileTimeSpan` um objeto.|
+|[CFileTimeSpan:: Operator! =](#operator_neq)|Compara dois objetos `CFileTimeSpan` quanto à desigualdade.|
+|[CFileTimeSpan:: Operator +](#operator_add)|Executa a adição em `CFileTimeSpan` um objeto.|
+|[CFileTimeSpan:: Operator + =](#operator_add_eq)|Executa a adição em `CFileTimeSpan` um objeto e atribui o resultado ao objeto atual.|
+|[Operador CFileTimeSpan::&lt;](#operator_lt)|Compara dois `CFileTimeSpan` objetos para determinar o menor.|
+|[Operador CFileTimeSpan::&lt;=](#operator_lt_eq)|Compara dois `CFileTimeSpan` objetos para determinar a igualdade ou o menor.|
+|[CFileTimeSpan:: Operator =](#operator_eq)|O operador de atribuição.|
+|[CFileTimeSpan:: Operator-=](#operator_-_eq)|Executa a subtração em `CFileTimeSpan` um objeto e atribui o resultado ao objeto atual.|
+|[CFileTimeSpan:: Operator = =](#operator_eq_eq)|Compara dois objetos `CFileTimeSpan` quanto à igualdade.|
+|[Operador CFileTimeSpan::&gt;](#operator_gt)|Compara dois `CFileTimeSpan` objetos para determinar o maior.|
+|[Operador CFileTimeSpan::&gt;=](#operator_gt_eq)|Compara dois `CFileTimeSpan` objetos para determinar a igualdade ou o maior.|
 
 ## <a name="remarks"></a>Comentários
 
-Essa classe fornece métodos para gerenciar relativos períodos de tempo costuma ser encontrado ao executar operações em relação a quando um arquivo foi criado, acessado pela última vez ou modificado pela última vez. Os métodos dessa classe são frequentemente usados em conjunto com [classe CFileTime](../../atl-mfc-shared/reference/cfiletime-class.md) objetos.
+Essa classe fornece métodos para gerenciar períodos de tempo relativos que geralmente foram encontrados ao executar operações relativas a quando um arquivo foi criado, acessado ou modificado pela última vez. Os métodos dessa classe são frequentemente usados em conjunto com objetos de [classe](../../atl-mfc-shared/reference/cfiletime-class.md) de testcfiletime.
 
 ## <a name="example"></a>Exemplo
 
-Veja o exemplo de [CFileTime::Millisecond](../../atl-mfc-shared/reference/cfiletime-class.md#millisecond).
+Consulte o exemplo de [Testcfiletime:: milissegundo](../../atl-mfc-shared/reference/cfiletime-class.md#millisecond).
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** atltime.h
+**Cabeçalho:** atltime. h
 
 ##  <a name="cfiletimespan"></a>  CFileTimeSpan::CFileTimeSpan
 
@@ -91,7 +91,7 @@ Um período de tempo em milissegundos.
 
 ### <a name="remarks"></a>Comentários
 
-O `CFileTimeSpan` objeto pode ser criado usando uma existente `CFileTimeSpan` de objeto ou expresso como um valor de 64 bits. O construtor padrão define o período de tempo como 0.
+O `CFileTimeSpan` objeto pode ser criado usando um objeto `CFileTimeSpan` existente ou expresso como um valor de 64 bits. O construtor padrão define o período de tempo como 0.
 
 ##  <a name="gettimespan"></a>  CFileTimeSpan::GetTimeSpan
 
@@ -107,7 +107,7 @@ Retorna o período de tempo em milissegundos.
 
 ##  <a name="operator_-"></a>  CFileTimeSpan::operator -
 
-Executa a subtração em um `CFileTimeSpan` objeto.
+Executa a subtração em `CFileTimeSpan` um objeto.
 
 ```
 CFileTimeSpan operator-(CFileTimeSpan span) const throw();
@@ -122,7 +122,7 @@ Um objeto `CFileTimeSpan`.
 
 Retorna um `CFileTimeSpan` objeto que representa o resultado da diferença entre dois intervalos de tempo.
 
-##  <a name="operator_neq"></a>  CFileTimeSpan::operator !=
+##  <a name="operator_neq"></a>CFileTimeSpan:: Operator! =
 
 Compara dois objetos `CFileTimeSpan` quanto à desigualdade.
 
@@ -137,11 +137,11 @@ O objeto `CFileTimeSpan` a ser comparado.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Retorna VERDADEIRO se o item que está sendo comparado não for igual ao `CFileTimeSpan` objeto; caso contrário, FALSE.
+Retornará true se o item que está sendo comparado não for igual `CFileTimeSpan` ao objeto; caso contrário, false.
 
-##  <a name="operator_add"></a>  CFileTimeSpan::operator +
+##  <a name="operator_add"></a>CFileTimeSpan:: Operator +
 
-Executa a adição em um `CFileTimeSpan` objeto.
+Executa a adição em `CFileTimeSpan` um objeto.
 
 ```
 CFileTimeSpan operator+(CFileTimeSpan span) const throw();
@@ -154,11 +154,11 @@ Um objeto `CFileTimeSpan`.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Retorna um `CFileTimeSpan` do objeto que contém a soma do tempo de dois abrange.
+Retorna um `CFileTimeSpan` objeto que contém a soma dos dois intervalos de tempo.
 
-##  <a name="operator_add_eq"></a>  CFileTimeSpan::operator +=
+##  <a name="operator_add_eq"></a>CFileTimeSpan:: Operator + =
 
-Executa a adição em um `CFileTimeSpan` do objeto e atribui o resultado ao objeto atual.
+Executa a adição em `CFileTimeSpan` um objeto e atribui o resultado ao objeto atual.
 
 ```
 CFileTimeSpan& operator+=(CFileTimeSpan span) throw();
@@ -171,9 +171,9 @@ Um objeto `CFileTimeSpan`.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Retorna o atualizada `CFileTimeSpan` do objeto que contém a soma do tempo de dois abrange.
+Retorna o objeto `CFileTimeSpan` atualizado que contém a soma dos dois intervalos de tempo.
 
-##  <a name="operator_lt"></a>  CFileTimeSpan::operator &lt;
+##  <a name="operator_lt"></a>Operador CFileTimeSpan::&lt;
 
 Compara dois `CFileTimeSpan` objetos para determinar o menor.
 
@@ -188,11 +188,11 @@ O objeto `CFileTimeSpan` a ser comparado.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Retorna VERDADEIRO se o primeiro objeto é menor (ou seja, representa um período de tempo menor) que a segunda, caso contrário, FALSE.
+Retornará TRUE se o primeiro objeto for menor (ou seja, representa um período de tempo menor) do que o segundo; caso contrário, FALSE.
 
-##  <a name="operator_lt_eq"></a>  CFileTimeSpan::operator &lt;=
+##  <a name="operator_lt_eq"></a>Operador CFileTimeSpan::&lt;=
 
-Compara dois `CFileTimeSpan` objetos para determinar igualdade ou o menor.
+Compara dois `CFileTimeSpan` objetos para determinar a igualdade ou o menor.
 
 ```
 bool operator<=(CFileTimeSpan span) const throw();
@@ -205,7 +205,7 @@ O objeto `CFileTimeSpan` a ser comparado.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Retorna TRUE se o primeiro objeto é menor que (ou seja, representa um período de tempo menor) ou igual à segunda, caso contrário, FALSE.
+Retornará TRUE se o primeiro objeto for menor que (ou seja, representa um período de tempo menor) ou igual ao segundo, caso contrário, FALSE.
 
 ##  <a name="operator_eq"></a>  CFileTimeSpan::operator =
 
@@ -222,11 +222,11 @@ Um objeto `CFileTimeSpan`.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Retorna o atualizada `CFileTimeSpan` objeto.
+Retorna o objeto `CFileTimeSpan` atualizado.
 
-##  <a name="operator_-_eq"></a>  CFileTimeSpan::operator -=
+##  <a name="operator_-_eq"></a>CFileTimeSpan:: Operator-=
 
-Executa a subtração em um `CFileTimeSpan` do objeto e atribui o resultado ao objeto atual.
+Executa a subtração em `CFileTimeSpan` um objeto e atribui o resultado ao objeto atual.
 
 ```
 CFileTimeSpan& operator-=(CFileTimeSpan span) throw();
@@ -239,9 +239,9 @@ Um objeto `CFileTimeSpan`.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Retorna o atualizada `CFileTimeSpan` objeto.
+Retorna o objeto `CFileTimeSpan` atualizado.
 
-##  <a name="operator_eq_eq"></a>  CFileTimeSpan::operator ==
+##  <a name="operator_eq_eq"></a>CFileTimeSpan:: Operator = =
 
 Compara dois objetos `CFileTimeSpan` quanto à igualdade.
 
@@ -256,9 +256,9 @@ O objeto `CFileTimeSpan` a ser comparado.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Retorna TRUE se os objetos forem iguais, caso contrário, FALSE.
+Retornará TRUE se os objetos forem iguais; caso contrário, FALSE.
 
-##  <a name="operator_gt"></a>  CFileTimeSpan::operator &gt;
+##  <a name="operator_gt"></a>Operador CFileTimeSpan::&gt;
 
 Compara dois `CFileTimeSpan` objetos para determinar o maior.
 
@@ -273,11 +273,11 @@ O objeto `CFileTimeSpan` a ser comparado.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Retorna VERDADEIRO se o primeiro objeto é maior que (ou seja, representa um período mais longo do tempo) que a segunda, caso contrário, FALSE.
+Retornará TRUE se o primeiro objeto for maior que (ou seja, representa um período de tempo maior) do que o segundo; caso contrário, FALSE.
 
-##  <a name="operator_gt_eq"></a>  CFileTimeSpan::operator &gt;=
+##  <a name="operator_gt_eq"></a>Operador CFileTimeSpan::&gt;=
 
-Compara dois `CFileTimeSpan` objetos para determinar igualdade ou maior.
+Compara dois `CFileTimeSpan` objetos para determinar a igualdade ou o maior.
 
 ```
 bool operator>=(CFileTimeSpan span) const throw();
@@ -290,11 +290,11 @@ O objeto `CFileTimeSpan` a ser comparado.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Retorna VERDADEIRO se o primeiro objeto é maior que (ou seja, representa um período de tempo mais longo) ou igual à segunda, caso contrário, FALSE.
+Retornará TRUE se o primeiro objeto for maior que (ou seja, representa um período de tempo maior) ou igual ao segundo, caso contrário, FALSE.
 
 ##  <a name="settimespan"></a>  CFileTimeSpan::SetTimeSpan
 
-Chame esse método para definir o intervalo de tempo a `CFileTimeSpan` objeto.
+Chame esse método para definir o período de tempo do `CFileTimeSpan` objeto.
 
 ```
 void SetTimeSpan(LONGLONG nSpan) throw();
@@ -307,7 +307,7 @@ O novo valor para o período de tempo em milissegundos.
 
 ## <a name="see-also"></a>Consulte também
 
-[FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime)<br/>
+[FILETIME](/windows/win32/api/minwinbase/ns-minwinbase-filetime)<br/>
 [Classe CFileTime](../../atl-mfc-shared/reference/cfiletime-class.md)<br/>
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
 [Classes compartilhadas ATL/MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)

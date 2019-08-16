@@ -8,44 +8,44 @@ helpviewer_keywords:
 - scroll bars [MFC], messages
 - scrolling views [MFC]
 ms.assetid: f98a3421-c336-407e-97ee-dbb2ffd76fbd
-ms.openlocfilehash: 7d26bc656dec3fdcbb8fc5ea4918ec7d59bc5afc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7064880c5ceef8e7dc3e35bb7ef5bc700b0842d2
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62308596"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69511221"
 ---
 # <a name="scrolling-and-scaling-views"></a>Rolando e colocando exibições em escala
 
-MFC dá suporte a modos de exibição que rolagem e exibições que são dimensionados automaticamente para o tamanho da janela do quadro que exibe-os. Classe `CScrollView` dá suporte a ambos os tipos de modos de exibição.
+O MFC dá suporte a exibições que rolam e exibições que são dimensionadas automaticamente para o tamanho da janela do quadro que as exibe. A `CScrollView` classe oferece suporte a ambos os tipos de modos de exibição.
 
-Para obter mais informações sobre a rolagem e o dimensionamento, consulte a classe [CScrollView](../mfc/reference/cscrollview-class.md) na *referência da MFC*. Para obter um exemplo de rolagem, consulte o [exemplo de Scribble](../overview/visual-cpp-samples.md).
+Para obter mais informações sobre a rolagem e o dimensionamento, consulte classe [CScrollView](../mfc/reference/cscrollview-class.md) na *referência do MFC*. Para obter um exemplo de rolagem, consulte o [exemplo de rabisco](../overview/visual-cpp-samples.md).
 
-## <a name="what-do-you-want-to-know-more-about"></a>O que você deseja saber mais sobre
+## <a name="what-do-you-want-to-know-more-about"></a>Do que você deseja saber mais sobre
 
-- Um modo de exibição de rolagem
+- Rolando uma exibição
 
-- Dimensionando um modo de exibição
+- Dimensionando uma exibição
 
-- [Coordenadas de exibição](/windows/desktop/gdi/window-coordinate-system)
+- [Exibir coordenadas](/windows/win32/gdi/window-coordinate-system)
 
-##  <a name="_core_scrolling_a_view"></a> Um modo de exibição de rolagem
+##  <a name="_core_scrolling_a_view"></a>Rolando uma exibição
 
-Com frequência, o tamanho de um documento é maior que o tamanho do que seu modo de exibição pode exibir. Isso pode ocorrer porque os dados do documento aumentam ou o usuário diminui a janela que o modo de exibição de quadros. Nesses casos, o modo de exibição deve oferecer suporte a rolagem.
+Frequentemente, o tamanho de um documento é maior do que o tamanho que sua exibição pode exibir. Isso pode ocorrer porque os dados do documento aumentam ou o usuário reduz a janela que moldura a exibição. Nesses casos, a exibição deve dar suporte à rolagem.
 
-Qualquer modo de exibição pode lidar com mensagens de barra de rolagem no seu `OnHScroll` e `OnVScroll` funções de membro. É possível que qualquer manipulação de mensagens de barra de rolagem de implementar nessas funções, fazendo todo o trabalho por conta própria, ou você pode usar o `CScrollView` classe para manipular a rolagem para você.
+Qualquer modo de exibição pode lidar com mensagens de barra `OnHScroll` de `OnVScroll` rolagem em suas funções e membro. Você pode implementar a manipulação de mensagens da barra de rolagem nessas funções, fazendo todo o trabalho por conta própria ou `CScrollView` pode usar a classe para lidar com a rolagem para você.
 
-`CScrollView` faz o seguinte:
+`CScrollView`o faz o seguinte:
 
-- Gerencia os tamanhos de janela e o visor e modos de mapeamento
+- Gerencia tamanhos de janela e visor e modos de mapeamento
 
-- Rola automaticamente em resposta às mensagens de barra de rolagem
+- Rola automaticamente em resposta a mensagens da barra de rolagem
 
-Você pode especificar quanto para rolar para uma "página" (quando o usuário clica em um eixo de barra de rolagem) e "linha" (quando o usuário clica em uma seta de rolagem). Planeje a esses valores de acordo com a natureza do modo de exibição. Por exemplo, você talvez queira Role em incrementos de 1 pixel para um modo de exibição de gráficos, mas em incrementos com base na altura da linha em documentos de texto.
+Você pode especificar quanto rolar para uma "página" (quando o usuário clica em um eixo da barra de rolagem) e uma "linha" (quando o usuário clica em uma seta de rolagem). Planeje esses valores para se adequar à natureza do seu modo de exibição. Por exemplo, você pode querer rolar em incrementos de 1 pixel para um modo de exibição de gráficos, mas em incrementos com base na altura da linha em documentos de texto.
 
-##  <a name="_core_scaling_a_view"></a> Dimensionando um modo de exibição
+##  <a name="_core_scaling_a_view"></a>Dimensionando uma exibição
 
-Quando você quiser que o modo de exibição para ajustar automaticamente o tamanho da sua janela de quadro, você pode usar `CScrollView` para dimensionamento, em vez de rolagem. O modo de exibição lógico é ampliado ou reduzido para ajustar a área de cliente da janela exatamente. Uma exibição em escala não tem nenhuma barra de rolagem.
+Quando desejar que a exibição se ajuste automaticamente ao tamanho da janela do quadro, você poderá usar `CScrollView` para dimensionamento em vez de rolar. A exibição lógica é ampliada ou reduzida para se ajustar exatamente à área do cliente da janela. Uma exibição dimensionada não tem barras de rolagem.
 
 ## <a name="see-also"></a>Consulte também
 

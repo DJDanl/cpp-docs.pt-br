@@ -2,12 +2,12 @@
 title: Visão geral de programação do Windows no C++
 ms.date: 07/28/2019
 ms.assetid: efc691d7-21f3-47ae-ae56-cab999ccf59d
-ms.openlocfilehash: f72e6320493027728a85741ba6d87025454c3b9e
-ms.sourcegitcommit: 720b74dddb1cdf4e570d55103158304ee1df81f8
+ms.openlocfilehash: 10ef9698e27099d5856c1ed5f8ed2f21cea72c24
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68607523"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514802"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>Visão geral de programação do Windows no C++
 
@@ -21,9 +21,9 @@ C++os aplicativos de console são executados na linha de comando em uma janela d
 
 ## <a name="native-desktop-client-applications"></a>Aplicativos cliente de desktop nativos
 
-Um *aplicativo cliente da área de trabalho nativa* é C++ um aplicativo com janela ou c que usa as APIs nativas originais do [Windows c ou as APIs de Component Object Model (com)](/windows/desktop/apiindex/windows-api-list) para acessar o sistema operacional. Essas APIs são escritas em grande parte em C. Há mais de uma maneira de criar um aplicativo de área de trabalho nativo: Você pode programar usando as APIs do Win32 diretamente, usando um loop de mensagem em estilo C que processa eventos do sistema operacional. Ou, você pode programar usando *MFC* (MFC), uma biblioteca orientada C++ por objeto levemente que encapsula o Win32. Nenhuma abordagem é considerada "moderna" em comparação com a Plataforma Universal do Windows (UWP), mas ambas ainda têm suporte total e têm milhões de linhas de código em execução no mundo hoje. Um aplicativo Win32 que é executado em uma janela requer que o desenvolvedor trabalhe explicitamente com mensagens do Windows dentro de uma função de procedimento do Windows. Apesar do nome, um aplicativo Win32 pode ser compilado como um binário de 32 bits (x86) ou 64 bits (x64). No IDE do Visual Studio, os termos x86 e Win32 são sinônimos.
+Um *aplicativo cliente da área de trabalho nativa* é C++ um aplicativo com janela ou c que usa as APIs nativas originais do [Windows c ou as APIs de Component Object Model (com)](/windows/win32/apiindex/windows-api-list) para acessar o sistema operacional. Essas APIs são escritas em grande parte em C. Há mais de uma maneira de criar um aplicativo de área de trabalho nativo: Você pode programar usando as APIs do Win32 diretamente, usando um loop de mensagem em estilo C que processa eventos do sistema operacional. Ou, você pode programar usando *MFC* (MFC), uma biblioteca orientada C++ por objeto levemente que encapsula o Win32. Nenhuma abordagem é considerada "moderna" em comparação com a Plataforma Universal do Windows (UWP), mas ambas ainda têm suporte total e têm milhões de linhas de código em execução no mundo hoje. Um aplicativo Win32 que é executado em uma janela requer que o desenvolvedor trabalhe explicitamente com mensagens do Windows dentro de uma função de procedimento do Windows. Apesar do nome, um aplicativo Win32 pode ser compilado como um binário de 32 bits (x86) ou 64 bits (x64). No IDE do Visual Studio, os termos x86 e Win32 são sinônimos.
 
-Para começar a usar a programação C++ tradicional do Windows, consulte Introdução [ao Win32 C++e ](/windows/desktop/LearnWin32/learn-to-program-for-windows)ao. Depois de obter alguma compreensão do Win32, será mais fácil aprender sobre [os aplicativos da área de trabalho do MFC](../mfc/mfc-desktop-applications.md). Para obter um exemplo de um C++ aplicativo de área de trabalho tradicional que usa [gráficos sofisticados, consulte Hilo: Desenvolvendo C++ aplicativos para o](https://msdn.microsoft.com/library/windows/desktop/ff708696.aspx)Windows.
+Para começar a usar a programação C++ tradicional do Windows, consulte Introdução [ao Win32 C++e ](/windows/win32/LearnWin32/learn-to-program-for-windows)ao. Depois de obter alguma compreensão do Win32, será mais fácil aprender sobre [os aplicativos da área de trabalho do MFC](../mfc/mfc-desktop-applications.md). Para obter um exemplo de um C++ aplicativo de área de trabalho tradicional que usa [gráficos sofisticados, consulte Hilo: Desenvolvendo C++ aplicativos para o](https://msdn.microsoft.com/library/windows/desktop/ff708696.aspx)Windows.
 
 ### <a name="c-or-net"></a>C++ou .NET?
 
@@ -39,7 +39,7 @@ Também é possível combinar o poder e a eficiência do C++ com programação .
 
 ## <a name="com-components"></a>Componentes COM
 
-O [com (Component Object Model)](/windows/desktop/com/the-component-object-model) é uma especificação que permite que programas escritos em linguagens diferentes se comuniquem uns com os outros. Muitos componentes do Windows são implementados como objetos COM e seguem regras COM padrão para criação de objetos, descoberta de interface e destruição de objeto.  Usar objetos COM de C++ aplicativos de área de trabalho é relativamente simples, mas escrever seu próprio objeto com é mais avançado. O [Active Template Library (ATL)](../atl/atl-com-desktop-components.md) fornece macros e funções auxiliares que simplificam o desenvolvimento com. Para obter mais informações, consulte [ATL com desktop Components](../atl/atl-com-desktop-components.md).
+O [com (Component Object Model)](/windows/win32/com/the-component-object-model) é uma especificação que permite que programas escritos em linguagens diferentes se comuniquem uns com os outros. Muitos componentes do Windows são implementados como objetos COM e seguem regras COM padrão para criação de objetos, descoberta de interface e destruição de objeto.  Usar objetos COM de C++ aplicativos de área de trabalho é relativamente simples, mas escrever seu próprio objeto com é mais avançado. O [Active Template Library (ATL)](../atl/atl-com-desktop-components.md) fornece macros e funções auxiliares que simplificam o desenvolvimento com. Para obter mais informações, consulte [ATL com desktop Components](../atl/atl-com-desktop-components.md).
 
 ## <a name="universal-windows-platform-apps"></a>Aplicativos da Plataforma Universal do Windows
 
@@ -55,7 +55,7 @@ O Visual Studio 2017 versão 15,4 e posterior permite que você crie um projeto 
 
 ## <a name="games"></a>Jogos
 
-Os jogos do DirectX podem ser executados no PC ou no Xbox. Para obter mais informações, consulte [elementos gráficos do DirectX e jogos](/windows/desktop/directx).
+Os jogos do DirectX podem ser executados no PC ou no Xbox. Para obter mais informações, consulte [elementos gráficos do DirectX e jogos](/windows/win32/directx).
 
 ## <a name="sql-server-database-clients"></a>Clientes de banco de dados SQL Server
 
@@ -67,7 +67,7 @@ Os drivers são componentes de nível baixo que tornam os dados de dispositivos 
 
 ## <a name="windows-services"></a>Serviços Windows
 
-Um *serviço* do Windows é um programa que pode ser executado em segundo plano com pouca ou nenhuma interação do usuário. Esses programas são chamados  de daemons em sistemas UNIX. Para obter mais informações, consulte [Serviços](/windows/desktop/services/services).
+Um *serviço* do Windows é um programa que pode ser executado em segundo plano com pouca ou nenhuma interação do usuário. Esses programas são chamados de daemons em sistemas UNIX. Para obter mais informações, consulte [Serviços](/windows/win32/services/services).
 
 ## <a name="sdks-libraries-and-header-files"></a>SDKs, bibliotecas e arquivos de cabeçalho
 

@@ -1,21 +1,21 @@
 ---
-title: propput (atributo de COM do C++)
+title: propput (C++ atributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.propput
 helpviewer_keywords:
 - propput attribute
 ms.assetid: 1f84dda9-9cce-4e16-aaf0-b2c5219827f2
-ms.openlocfilehash: c9853b38675abfa0a94a319ac752eb2ef61a48e0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5e10edba60832112a9023f796be56d88afd52042
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407517"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514199"
 ---
 # <a name="propput"></a>propput
 
-Especifica uma função de definição de propriedade.
+Especifica uma função de configuração de propriedade.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -25,24 +25,24 @@ Especifica uma função de definição de propriedade.
 
 ## <a name="remarks"></a>Comentários
 
-O **propput** atributo C++ tem a mesma funcionalidade que o [propput](/windows/desktop/Midl/propput) atributo MIDL.
+O atributo **propput** C++ tem a mesma funcionalidade que o atributo MIDL [propput](/windows/win32/Midl/propput) .
 
 ## <a name="example"></a>Exemplo
 
-Veja o exemplo de [associável](bindable.md) para uso do exemplo **propput**.
+Consulte o exemplo de [ligável](bindable.md) para obter um exemplo de uso de **propput**.
 
 ## <a name="requirements"></a>Requisitos
 
-### <a name="attribute-context"></a>Atributo de contexto
+### <a name="attribute-context"></a>Contexto de atributo
 
 |||
 |-|-|
 |**Aplica-se a**|Método|
 |**Repetível**|Não|
-|**Atributos obrigatórios**|Nenhum|
+|**Atributos necessários**|Nenhum|
 |**Atributos inválidos**|`propget`, `propputref`|
 
-Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
+Para obter mais informações sobre os contextos de atributo, consulte contextos de [atributo](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Consulte também
 

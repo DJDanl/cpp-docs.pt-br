@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - CPrivateObjectSecurityDesc class
 ms.assetid: 2c4bbb13-bf99-4833-912a-197f6815bb5d
-ms.openlocfilehash: c1ac15d4d8254107a66e577321edb3c40578f240
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 97ea2b8411b404caf9f833ad85f226d18aea1e73
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915801"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496578"
 ---
 # <a name="cprivateobjectsecuritydesc-class"></a>Classe CPrivateObjectSecurityDesc
 
@@ -57,7 +57,7 @@ class CPrivateObjectSecurityDesc : public CSecurityDesc
 
 Essa classe, derivada de [CSecurityDesc](../../atl/reference/csecuritydesc-class.md), fornece métodos para criar e gerenciar o descritor de segurança de um objeto particular.
 
-Para obter uma introdução ao modelo de controle de acesso no Windows, consulte [controle de acesso](/windows/desktop/SecAuthZ/access-control) no SDK do Windows.
+Para obter uma introdução ao modelo de controle de acesso no Windows, consulte [controle de acesso](/windows/win32/SecAuthZ/access-control) no SDK do Windows.
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -93,7 +93,7 @@ Ponteiro para uma `GUID` estrutura que identifica o tipo de objeto associado ao 
 Especifica se o novo objeto pode conter outros objetos. Um valor true indica que o novo objeto é um contêiner. Um valor false indica que o novo objeto não é um contêiner.
 
 *GenericMapping*<br/>
-Ponteiro para uma estrutura [GENERIC_MAPPING](/windows/desktop/api/winnt/ns-winnt-generic_mapping) que especifica o mapeamento de cada direito genérico para direitos específicos para o objeto.
+Ponteiro para uma estrutura [GENERIC_MAPPING](/windows/win32/api/winnt/ns-winnt-generic_mapping) que especifica o mapeamento de cada direito genérico para direitos específicos para o objeto.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -101,7 +101,7 @@ Retorna true em caso de êxito, false em caso de falha.
 
 ### <a name="remarks"></a>Comentários
 
-Esse método tenta determinar se as ACEs na lista de controle de acesso discricional (DACL) e na lista de controle de acesso do sistema (SACL) do descritor de segurança atual foram herdadas do descritor de segurança pai. Ele chama a função [ConvertToAutoInheritPrivateObjectSecurity](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-converttoautoinheritprivateobjectsecurity) .
+Esse método tenta determinar se as ACEs na lista de controle de acesso discricional (DACL) e na lista de controle de acesso do sistema (SACL) do descritor de segurança atual foram herdadas do descritor de segurança pai. Ele chama a função [ConvertToAutoInheritPrivateObjectSecurity](/windows/win32/api/securitybaseapi/nf-securitybaseapi-converttoautoinheritprivateobjectsecurity) .
 
 ##  <a name="cprivateobjectsecuritydesc"></a>  CPrivateObjectSecurityDesc::CPrivateObjectSecurityDesc
 
@@ -164,7 +164,7 @@ Especifica se o novo objeto pode conter outros objetos. Um valor true indica que
 Referência ao objeto [CAccessToken](../../atl/reference/caccesstoken-class.md) para o processo do cliente em cujo nome o objeto está sendo criado.
 
 *GenericMapping*<br/>
-Ponteiro para uma estrutura [GENERIC_MAPPING](/windows/desktop/api/winnt/ns-winnt-generic_mapping) que especifica o mapeamento de cada direito genérico para direitos específicos para o objeto.
+Ponteiro para uma estrutura [GENERIC_MAPPING](/windows/win32/api/winnt/ns-winnt-generic_mapping) que especifica o mapeamento de cada direito genérico para direitos específicos para o objeto.
 
 *ObjectType*<br/>
 Ponteiro para uma `GUID` estrutura que identifica o tipo de objeto associado ao objeto atual. Defina *objecttype* como NULL se o objeto não tiver um GUID.
@@ -173,7 +173,7 @@ Ponteiro para uma `GUID` estrutura que identifica o tipo de objeto associado ao 
 Especifica se o novo objeto pode conter outros objetos. Um valor true indica que o novo objeto é um contêiner. Um valor false indica que o novo objeto não é um contêiner.
 
 *AutoInheritFlags*<br/>
-Um conjunto de sinalizadores de bits que controlam como as ACEs (entradas de controle de acesso) são herdadas de *pParent*. Consulte [CreatePrivateObjectSecurityEx](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurityex) para obter mais detalhes.
+Um conjunto de sinalizadores de bits que controlam como as ACEs (entradas de controle de acesso) são herdadas de *pParent*. Consulte [CreatePrivateObjectSecurityEx](/windows/win32/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurityex) para obter mais detalhes.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -181,7 +181,7 @@ Retorna true em caso de êxito, false em caso de falha.
 
 ### <a name="remarks"></a>Comentários
 
-Esse método chama [CreatePrivateObjectSercurity](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurity) ou [CreatePrivateObjectSecurityEx](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurityex).
+Esse método chama [CreatePrivateObjectSercurity](/windows/win32/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurity) ou [CreatePrivateObjectSecurityEx](/windows/win32/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurityex).
 
 O segundo método permite especificar o GUID de tipo de objeto do novo objeto ou controlar como as ACEs são herdadas.
 
@@ -201,7 +201,7 @@ bool Get(
 ### <a name="parameters"></a>Parâmetros
 
 *si*<br/>
-Um conjunto de sinalizadores de bit que indicam as partes do descritor de segurança a serem recuperadas. Esse valor pode ser uma combinação dos sinalizadores de bit [SECURITY_INFORMATION](/windows/desktop/SecAuthZ/security-information) .
+Um conjunto de sinalizadores de bit que indicam as partes do descritor de segurança a serem recuperadas. Esse valor pode ser uma combinação dos sinalizadores de bit [SECURITY_INFORMATION](/windows/win32/SecAuthZ/security-information) .
 
 *pResult*<br/>
 Ponteiro para um objeto [CSecurityDesc](../../atl/reference/csecuritydesc-class.md) que recebe uma cópia das informações solicitadas do descritor de segurança especificado.
@@ -253,19 +253,19 @@ bool Set(
 ### <a name="parameters"></a>Parâmetros
 
 *si*<br/>
-Um conjunto de sinalizadores de bit que indicam as partes do descritor de segurança a serem definidas. Esse valor pode ser uma combinação dos sinalizadores de bit [SECURITY_INFORMATION](/windows/desktop/SecAuthZ/security-information) .
+Um conjunto de sinalizadores de bit que indicam as partes do descritor de segurança a serem definidas. Esse valor pode ser uma combinação dos sinalizadores de bit [SECURITY_INFORMATION](/windows/win32/SecAuthZ/security-information) .
 
 *Modificado*<br/>
 Ponteiro para um objeto [CSecurityDesc](../../atl/reference/csecuritydesc-class.md) . As partes desse descritor de segurança indicadas pelo parâmetro *si* são aplicadas ao descritor de segurança do objeto.
 
 *GenericMapping*<br/>
-Ponteiro para uma estrutura [GENERIC_MAPPING](/windows/desktop/api/winnt/ns-winnt-generic_mapping) que especifica o mapeamento de cada direito genérico para direitos específicos para o objeto.
+Ponteiro para uma estrutura [GENERIC_MAPPING](/windows/win32/api/winnt/ns-winnt-generic_mapping) que especifica o mapeamento de cada direito genérico para direitos específicos para o objeto.
 
 *Token*<br/>
 Referência ao objeto [CAccessToken](../../atl/reference/caccesstoken-class.md) para o processo do cliente em cujo nome o objeto está sendo criado.
 
 *AutoInheritFlags*<br/>
-Um conjunto de sinalizadores de bits que controlam como as ACEs (entradas de controle de acesso) são herdadas de *pParent*. Consulte [CreatePrivateObjectSecurityEx](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurityex) para obter mais detalhes.
+Um conjunto de sinalizadores de bits que controlam como as ACEs (entradas de controle de acesso) são herdadas de *pParent*. Consulte [CreatePrivateObjectSecurityEx](/windows/win32/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurityex) para obter mais detalhes.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -277,7 +277,7 @@ O segundo método permite especificar o GUID de tipo de objeto do objeto ou cont
 
 ## <a name="see-also"></a>Consulte também
 
-[SECURITY_DESCRIPTOR](/windows/desktop/api/winnt/ns-winnt-security_descriptor)<br/>
+[SECURITY_DESCRIPTOR](/windows/win32/api/winnt/ns-winnt-security_descriptor)<br/>
 [Visão geral da classe](../../atl/atl-class-overview.md)<br/>
 [Funções globais de segurança](../../atl/reference/security-global-functions.md)<br/>
 [Classe CSecurityDesc](../../atl/reference/csecuritydesc-class.md)

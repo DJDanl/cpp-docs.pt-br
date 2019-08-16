@@ -6,23 +6,23 @@ helpviewer_keywords:
 - application deployment [C++], ClickOnce
 - ClickOnce deployment [C++], C++ applications
 ms.assetid: 9988c546-0936-452c-932f-9c76daa42157
-ms.openlocfilehash: a7b738c2deb909d2a8f222bf7f62dc80cf8eeb8b
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: 4408db9d129c03ee5df9b006b03c6586df02afb1
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66504780"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69513758"
 ---
 # <a name="clickonce-deployment-for-visual-c-applications"></a>ClickOnce Implantação para aplicativos do Visual C++
 
-O Visual Studio fornece duas tecnologias diferentes para a implantação de aplicativos do Windows: Implantação do ClickOnce ou implantação do [Windows Installer](/windows/desktop/Msi/windows-installer-portal).
+O Visual Studio fornece duas tecnologias diferentes para a implantação de aplicativos do Windows: Implantação do ClickOnce ou implantação do [Windows Installer](/windows/win32/Msi/windows-installer-portal).
 
 ## <a name="clickonce-deployment-in-c"></a>Implantação do ClickOnce no C++
 
-O Visual C++ ambiente de desenvolvimento não oferece suporte diretamente a implantação do Visual Studio C++ projetos com o ClickOnce, mas as ferramentas estão disponíveis para usá-lo.
+O ambiente C++ de desenvolvimento Visual não oferece suporte direto à implantação de C++ projetos do Visual Studio com o ClickOnce, mas as ferramentas estão disponíveis para usá-lo.
 
 > [!NOTE]
->  O Visual Studio dá suporte ao ClickOnce nos ambientes de desenvolvimento do Visual C# e Visual Basic. Se o Visual Studio C++ projeto é uma dependência de um Visual C# projeto, você pode publicar o aplicativo (incluindo suas dependências) usando a implantação do ClickOnce do Visual C# ambiente de desenvolvimento.
+>  O Visual Studio dá suporte ao ClickOnce nos ambientes de desenvolvimento do Visual C# e Visual Basic. Se o seu projeto C++ do Visual Studio for uma dependência de C# um projeto Visual, você poderá publicar o aplicativo (incluindo suas dependências) usando a implantação C# do ClickOnce do ambiente de desenvolvimento Visual.
 
 Para implantar um aplicativo do Visual C++ usando o ClickOnce, primeiro, você precisa criar um [Manifesto do Aplicativo ClickOnce](/visualstudio/deployment/clickonce-application-manifest) e um [Manifesto de Implantação do ClickOnce](/visualstudio/deployment/clickonce-deployment-manifest) usando o [Mage.exe (Manifest Generation and Editing Tool)](/dotnet/framework/tools/mage-exe-manifest-generation-and-editing-tool) ou sua versão de interface gráfica do usuário [para obter informações, confira [MageUI.exe (Manifest Generation and Editing Tool, Cliente Gráfico)](/dotnet/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client)].
 
@@ -42,7 +42,7 @@ Para obter uma descrição mais detalhada da tecnologia, confira [Segurança e i
 
 [Mage.exe (Manifest Generation and Editing Tool)](/dotnet/framework/tools/mage-exe-manifest-generation-and-editing-tool)<br>
 [MageUI.exe (Manifest Generation and Editing Tool, cliente gráfico)](/dotnet/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client)<br>
-[Makecert.exe (Ferramenta de Criação de Certificado)](/windows/desktop/SecCrypto/makecert)<br>
+[Makecert.exe (Ferramenta de Criação de Certificado)](/windows/win32/SecCrypto/makecert)<br>
 [Implantando aplicativos da área de trabalho](deploying-native-desktop-applications-visual-cpp.md)<br>
 [Implantando aplicativos, serviços e componentes](/visualstudio/deployment/deploying-applications-services-and-components)<br>
 [Segurança e implantação do ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment)<br>

@@ -1,21 +1,21 @@
 ---
-title: helpstringcontext (atributo de COM do C++)
+title: helpstringcontext (C++ atributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.helpstringcontext
 helpviewer_keywords:
 - helpstringcontext attribute [C++]
 ms.assetid: d4cd135e-d91c-4aa3-9353-8aeb096f52cf
-ms.openlocfilehash: a6df5b63291fbc54d6c12a116fccd8372e8ced9a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ae48c6216b1f1d987b33eff50acf9d82dc551400
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409571"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501485"
 ---
 # <a name="helpstringcontext"></a>helpstringcontext
 
-Especifica a ID do tópico da Ajuda em um arquivo. hlp ou. chm.
+Especifica a ID de um tópico da ajuda em um arquivo. hlp ou. chm.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -26,11 +26,11 @@ Especifica a ID do tópico da Ajuda em um arquivo. hlp ou. chm.
 ### <a name="parameters"></a>Parâmetros
 
 *contextID*<br/>
-Um identificador de contexto de ajuda de 32 bits na **ajudar** arquivo.
+Um identificador de contexto de ajuda de 32 bits no arquivo de **ajuda** .
 
 ## <a name="remarks"></a>Comentários
 
-O **helpstringcontext** atributo C++ tem a mesma funcionalidade que o [helpstringcontext](/windows/desktop/Midl/helpstringcontext) atributo ODL.
+O atributo **helpstringcontext** C++ tem a mesma funcionalidade que o atributo [helpstringcontext](/windows/win32/Midl/helpstringcontext) ODL.
 
 ## <a name="example"></a>Exemplo
 
@@ -50,16 +50,16 @@ __interface IMyI
 
 ## <a name="requirements"></a>Requisitos
 
-### <a name="attribute-context"></a>Atributo de contexto
+### <a name="attribute-context"></a>Contexto de atributo
 
 |||
 |-|-|
 |**Aplica-se a**|**classe**, **interface**, método de interface|
 |**Repetível**|Não|
-|**Atributos obrigatórios**|Nenhum|
+|**Atributos necessários**|Nenhum|
 |**Atributos inválidos**|Nenhum|
 
-Para obter mais informações, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
+Para obter mais informações, consulte contextos de [atributo](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Consulte também
 

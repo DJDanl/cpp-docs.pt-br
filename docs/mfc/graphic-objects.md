@@ -41,21 +41,21 @@ helpviewer_keywords:
 - painting and device context [MFC]
 - CPalette class [MFC], HPALETTE handle type
 ms.assetid: 41963b25-34b7-4343-8446-34ba516b83ca
-ms.openlocfilehash: 3058bc5793a7766b0a6849ba77f0533f0bbbcef6
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: 4abc2764abd0f31b83253f37b8cb459be638ae5a
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66503812"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508534"
 ---
 # <a name="graphic-objects"></a>Objetos gráficos
 
-Windows fornece uma variedade de ferramentas a ser usado em contextos de dispositivo de desenho. Ele fornece canetas para desenhar linhas, pincéis interiores de preenchimento e fontes para desenhar o texto. O MFC fornece classes de objetos gráficos equivalentes a ferramentas de desenho no Windows. A tabela a seguir mostra as classes disponíveis e os gráficos do Windows equivalentes tipos de identificador de interface (GDI) do dispositivo.
+O Windows fornece uma variedade de ferramentas de desenho para usar em contextos de dispositivo. Ele fornece as canetas para desenhar linhas, pincéis para preencher interiores e fontes para desenhar texto. O MFC fornece classes de objeto gráfico equivalentes às ferramentas de desenho no Windows. A tabela a seguir mostra as classes disponíveis e os tipos de identificadores da interface de dispositivo gráfico do Windows (GDI) equivalentes.
 
 > [!NOTE]
->  Para obter mais informações, consulte o [documentação do SDK do GDI+](/windows/desktop/gdiplus/-gdiplus-gdi-start).
+>  Para obter mais informações, consulte a [documentação do SDK do GDI+](/windows/win32/gdiplus/-gdiplus-gdi-start).
 
-Este artigo explica o uso dessas classes de objeto de gráfico:
+Este artigo explica o uso dessas classes de objeto gráfico:
 
 ### <a name="classes-for-windows-gdi-objects"></a>Classes para objetos GDI do Windows
 
@@ -69,34 +69,34 @@ Este artigo explica o uso dessas classes de objeto de gráfico:
 |[CRgn](../mfc/reference/crgn-class.md)|**HRGN**|
 
 > [!NOTE]
->  A classe [CImage](../atl-mfc-shared/reference/cimage-class.md) fornece suporte de aprimorada de bitmaps.
+>  A classe [CImage](../atl-mfc-shared/reference/cimage-class.md) fornece suporte a bitmap aprimorado.
 
-Cada classe de objeto de gráfico na biblioteca de classes tem um construtor que permite que você crie objetos gráficos dessa classe, o que você deve, em seguida, ser inicializado com a função apropriada de criar, como `CreatePen`.
+Cada classe de objeto gráfico na biblioteca de classes tem um construtor que permite que você crie objetos gráficos dessa classe, que você deve então inicializar com a função de criação apropriada, como `CreatePen`.
 
-Cada classe de objeto de gráfico na biblioteca de classes tem um operador de conversão que irá converter um objeto MFC para o identificador do Windows associado. O identificador resultante é válido até que o objeto associado Desanexa a ele. Usar o objeto `Detach` função de membro para desanexar o identificador.
+Cada classe de objeto gráfico na biblioteca de classes tem um operador cast que irá converter um objeto MFC no identificador do Windows associado. O identificador resultante é válido até que o objeto associado o desanexe. Use a função de `Detach` membro do objeto para desanexar o identificador.
 
-O código a seguir converte um `CPen` objeto para um identificador do Windows:
+O código a seguir converte um `CPen` objeto em um identificador do Windows:
 
 [!code-cpp[NVC_MFCDocViewSDI#5](../mfc/codesnippet/cpp/graphic-objects_1.cpp)]
 
 #### <a name="to-create-a-graphic-object-in-a-device-context"></a>Para criar um objeto gráfico em um contexto de dispositivo
 
-1. Defina um objeto gráfico no quadro da pilha. Inicializar o objeto com a função de tipo específico de criar, tais como `CreatePen`. Como alternativa, inicialize o objeto no construtor. Consulte a discussão sobre [criação de um e dois estágios](../mfc/one-stage-and-two-stage-construction-of-objects.md), que fornece o código de exemplo.
+1. Defina um objeto gráfico no quadro de pilhas. Inicialize o objeto com a função de criação específica de tipo, `CreatePen`como. Como alternativa, inicialize o objeto no construtor. Consulte a discussão de [criação de um estágio e de dois estágios](../mfc/one-stage-and-two-stage-construction-of-objects.md), que fornece código de exemplo.
 
-1. [Selecione o objeto no contexto de dispositivo atual](../mfc/selecting-a-graphic-object-into-a-device-context.md), salvando o objeto de gráfico antigo que foi selecionado antes.
+1. [Selecione o objeto no contexto do dispositivo atual](../mfc/selecting-a-graphic-object-into-a-device-context.md), salvando o antigo objeto gráfico que foi selecionado antes.
 
-1. Quando terminar com o objeto de gráfico atual, selecione o objeto de gráfico antigo volta para o contexto de dispositivo para restaurar seu estado.
+1. Quando terminar com o objeto gráfico atual, selecione o objeto gráfico antigo novamente no contexto do dispositivo para restaurar seu estado.
 
-1. Permitir que o objeto de gráfico alocada pelo quadro a ser excluído automaticamente quando o escopo é fechado.
+1. Permitir que o objeto gráfico alocado por quadro seja excluído automaticamente quando o escopo for encerrado.
 
 > [!NOTE]
->  Se você estiver usando um objeto gráfico repetidamente, você pode alocá-lo uma vez e selecione-o em um contexto de dispositivo cada vez que é necessária. Certifique-se de excluir esse objeto quando você não precisa mais dela.
+>  Se você estiver usando um objeto gráfico repetidamente, poderá alocá-lo uma vez e selecioná-lo em um contexto de dispositivo toda vez que for necessário. Certifique-se de excluir esse objeto quando você não precisar mais dele.
 
-### <a name="what-do-you-want-to-know-more-about"></a>O que você deseja saber mais sobre
+### <a name="what-do-you-want-to-know-more-about"></a>Do que você deseja saber mais sobre
 
-- [Construção de um e dois estágios de objetos gráficos](../mfc/one-stage-and-two-stage-construction-of-objects.md)
+- [Construção de um estágio e de dois estágios de objetos gráficos](../mfc/one-stage-and-two-stage-construction-of-objects.md)
 
-- [Exemplo de como construir uma caneta em um e dois estágios](../mfc/one-stage-and-two-stage-construction-of-objects.md)
+- [Exemplo de construção de uma caneta em um e dois estágios](../mfc/one-stage-and-two-stage-construction-of-objects.md)
 
 - [Selecionando um objeto gráfico em um contexto de dispositivo](../mfc/selecting-a-graphic-object-into-a-device-context.md)
 

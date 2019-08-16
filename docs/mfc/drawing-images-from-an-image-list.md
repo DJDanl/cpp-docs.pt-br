@@ -7,12 +7,12 @@ helpviewer_keywords:
 - image lists [MFC], drawing images from
 - images [MFC], drawing
 ms.assetid: 2f6063fb-1c28-45f8-a333-008c064db11c
-ms.openlocfilehash: e4e60f0e6e4ee22712e4bbce344fd6437cf3db7e
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: fb307d5557c0e136c1c44c29f08af6062bb1c19d
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916419"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508604"
 ---
 # <a name="drawing-images-from-an-image-list"></a>Desenhando imagens a partir de uma lista de imagens
 
@@ -28,7 +28,7 @@ Os estilos **ILD_BLEND25** e **ILD_BLEND50** pontilham a imagem com a cor de rea
 
 Uma imagem não mascarada é copiada para o contexto do dispositivo de `SRCCOPY` destino usando a operação de varredura. As cores na imagem são iguais, independentemente da cor do plano de fundo do contexto do dispositivo. Os estilos de desenho especificados `Draw` em também não têm efeito sobre a aparência de uma imagem não mascarada.
 
-Além da função de membro Draw, outra função, [DrawIndirect](../mfc/reference/cimagelist-class.md#drawindirect), estende a capacidade de renderizar uma imagem. `DrawIndirect`usa, como um parâmetro, uma estrutura [IMAGELISTDRAWPARAMS](/windows/desktop/api/commctrl/ns-commctrl-imagelistdrawparams) . Essa estrutura pode ser usada para personalizar a renderização da imagem atual, incluindo o uso de códigos de operação de varredura (ROP). Para obter mais informações sobre códigos de ROP, consulte [rasterizar códigos de operação](/windows/desktop/gdi/raster-operation-codes) e bitmaps [como pincéis](/windows/desktop/gdi/bitmaps-as-brushes) na SDK do Windows.
+Além da função de membro Draw, outra função, [DrawIndirect](../mfc/reference/cimagelist-class.md#drawindirect), estende a capacidade de renderizar uma imagem. `DrawIndirect`usa, como um parâmetro, uma estrutura [IMAGELISTDRAWPARAMS](/windows/win32/api/commctrl/ns-commctrl-imagelistdrawparams) . Essa estrutura pode ser usada para personalizar a renderização da imagem atual, incluindo o uso de códigos de operação de varredura (ROP). Para obter mais informações sobre códigos de ROP, consulte [rasterizar códigos de operação](/windows/win32/gdi/raster-operation-codes) e bitmaps [como pincéis](/windows/win32/gdi/bitmaps-as-brushes) na SDK do Windows.
 
 ## <a name="see-also"></a>Consulte também
 

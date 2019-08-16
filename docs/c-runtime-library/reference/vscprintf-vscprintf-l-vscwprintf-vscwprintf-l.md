@@ -42,14 +42,14 @@ helpviewer_keywords:
 - vscprintf function
 - vscprintf_l function
 ms.assetid: 1bc67d3d-21d5-49c9-ac8d-69e26b16a3c3
-ms.openlocfilehash: 18b177114fe0e2984fee518b06a72bea72905ed1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 543b8d1024a355bbe92bf63684a7933ca177e3bb
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383471"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499097"
 ---
-# <a name="vscprintf-vscprintfl-vscwprintf-vscwprintfl"></a>_vscprintf, _vscprintf_l, _vscwprintf, _vscwprintf_l
+# <a name="_vscprintf-_vscprintf_l-_vscwprintf-_vscwprintf_l"></a>_vscprintf, _vscprintf_l, _vscwprintf, _vscwprintf_l
 
 Retorna o número de caracteres na cadeia de caracteres formatada usando um ponteiro para uma lista de argumentos.
 
@@ -91,18 +91,18 @@ Para obter mais informações, consulte [Especificações de formato](../../c-ru
 
 ## <a name="return-value"></a>Valor de retorno
 
-**vsnprintf** retorna o número de caracteres que será gerado se a cadeia de caracteres apontada pela lista de argumentos tiver sido impressa ou enviado para um arquivo ou códigos de buffer usando a formatação especificado. O valor retornado não inclui o caractere nulo de terminação. **vscwprintf** executa a mesma função para caracteres largos.
+**_vscprintf** retorna o número de caracteres que seriam gerados se a cadeia de caracteres apontada pela lista de argumentos foi impressa ou enviada para um arquivo ou buffer usando os códigos de formatação especificados. O valor retornado não inclui o caractere nulo de terminação. **_vscwprintf** executa a mesma função para caracteres largos.
 
-As versões dessas funções com o **l** sufixo são idênticas, exceto que eles usam o parâmetro de localidade passado em vez da localidade do thread atual.
+As versões dessas funções com o sufixo **_L** são idênticas, exceto pelo fato de que usam o parâmetro de localidade passado em vez da localidade do thread atual.
 
-Se *formato* for um ponteiro nulo, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, as funções retornarão -1 e defina **errno** à **EINVAL**.
+Se *Format* for um ponteiro NULL, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, as funções retornam-1 e definem **errno** como **EINVAL**.
 
 ## <a name="remarks"></a>Comentários
 
-Cada *argumento* (se houver) é convertido de acordo com a especificação de formato correspondente em *formato*. O formato consiste em caracteres comuns e tem o mesmo formato e função que o *formato* argumento para [printf](printf-printf-l-wprintf-wprintf-l.md).
+Cada *argumento* (se houver) é convertido de acordo com a especificação de formato correspondente no *formato*. O formato consiste em caracteres comuns e tem a mesma forma e função que o argumento de *formato* para [printf](printf-printf-l-wprintf-wprintf-l.md).
 
 > [!IMPORTANT]
-> Certifique-se de que, se *formato* é uma cadeia de caracteres definida pelo usuário, ele é finalizada com null e tem o número correto e o tipo de parâmetros. Para obter mais informações, consulte [Avoiding Buffer Overruns](/windows/desktop/SecBP/avoiding-buffer-overruns) (Evitando estouros de buffer).
+> Verifique se o *formato* é uma cadeia de caracteres definida pelo usuário, se ele é encerrado e tem o número e o tipo de parâmetros corretos. Para obter mais informações, consulte [Avoiding Buffer Overruns](/windows/win32/SecBP/avoiding-buffer-overruns) (Evitando estouros de buffer).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 

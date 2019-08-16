@@ -24,14 +24,14 @@ helpviewer_keywords:
 - _InterlockedCompareExchangePointer_nf intrinsic
 - _InterlockedCompareExchangePointer_np intrinsic
 ms.assetid: 97fde59d-2bf9-42aa-a0fe-a5b6befdd44b
-ms.openlocfilehash: 2db18c73f7765454d29e2dfdbd9408f62c51d32a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7b8ba4fe6224292d0160f859aeb630fc17c2d992
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348725"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69509433"
 ---
-# <a name="interlockedcompareexchangepointer-intrinsic-functions"></a>Funções intrínsecas _InterlockedCompareExchangePointer
+# <a name="_interlockedcompareexchangepointer-intrinsic-functions"></a>Funções intrínsecas _InterlockedCompareExchangePointer
 
 **Seção específica da Microsoft**
 
@@ -80,13 +80,13 @@ long _InterlockedCompareExchangePointer_rel (
 #### <a name="parameters"></a>Parâmetros
 
 *Destino*<br/>
-[no, out] Ponteiro para um ponteiro para o valor de destino. O sinal é ignorado.
+[entrada, saída] Ponteiro para um ponteiro para o valor de destino. O sinal é ignorado.
 
 *Exchange*<br/>
-[in] Ponteiro do Exchange. O sinal é ignorado.
+no Ponteiro do Exchange. O sinal é ignorado.
 
-*Termo de comparação*<br/>
-[in] Ponteiro para comparado ao destino. O sinal é ignorado.
+*Termo*<br/>
+no Ponteiro para comparar com o destino. O sinal é ignorado.
 
 ## <a name="return-value"></a>Valor de retorno
 
@@ -104,9 +104,9 @@ O valor de retorno é o valor inicial do destino.
 
 `_InterlockedCompareExchangePointer` realiza uma comparação atômica do endereço `Destination` com o endereço `Comparand`. Se o endereço `Destination` for igual ao endereço `Comparand`, o endereço `Exchange` será armazenado no endereço especificado pelo `Destination`. Caso contrário, nenhuma operação será executada.
 
-`_InterlockedCompareExchangePointer` fornece suporte intrínseco ao compilador para o SDK do Windows Win32 [interlockedcompareexchangepointer](https://msdn.microsoft.com/library/ff547863.aspx) função.
+`_InterlockedCompareExchangePointer`fornece suporte intrínseco do compilador para a função [InterlockedCompareExchangePointer](/windows-hardware/drivers/ddi/content/wdm/nf-wdm-interlockedcompareexchangepointer) do Win32 SDK do Windows.
 
-Para obter um exemplo de como usar `_InterlockedCompareExchangePointer`, consulte [interlockeddecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md).
+Para obter um exemplo de como usar `_InterlockedCompareExchangePointer`o, consulte [_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md).
 
 Em plataformas ARM, use intrínsecos com os sufixos `_acq` e `_rel` para semântica de aquisição e liberação, como no início e no final de uma seção crítica. Os intrínsecos de ARM com um sufixo `_nf` ("no fence") não funcionam como uma barreira de memória.
 

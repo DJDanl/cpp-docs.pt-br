@@ -6,23 +6,23 @@ helpviewer_keywords:
 - image lists [MFC], creating for CListCtrl
 - lists [MFC], image
 ms.assetid: c2768515-deba-49e8-a6f3-5be6482afb19
-ms.openlocfilehash: 844bfe71f7b03f299f57b0fd4558b7e9eacf67c2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6687b62b70103894d957a21019008e8781385feb
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62242231"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508787"
 ---
 # <a name="creating-the-image-lists"></a>Criando as listas de imagens
 
-Criando listas de imagens é o mesmo se você usar [CListView](../mfc/reference/clistview-class.md) ou [CListCtrl](../mfc/reference/clistctrl-class.md).
+A criação de listas de imagens é a mesma se você usa [CListView](../mfc/reference/clistview-class.md) ou [CListCtrl](../mfc/reference/clistctrl-class.md).
 
 > [!NOTE]
->  Você só precisa imagem listas se seu controle lista inclui o `LVS_ICON` estilo.
+>  Você só precisa de listas de imagens se o controle de `LVS_ICON` lista incluir o estilo.
 
-Use a classe `CImageList` para criar um ou mais listas de imagens (para os ícones em tamanho normal, ícones pequenos e estados). Ver [CImageList](../mfc/reference/cimagelist-class.md)e veja [listas de imagens do modo de exibição de lista](/windows/desktop/Controls/using-list-view-controls) no SDK do Windows.
+Use a `CImageList` classe para criar uma ou mais listas de imagens (para ícones de tamanho completo, ícones pequenos e Estados). Consulte [CImageList](../mfc/reference/cimagelist-class.md)e veja [lista de imagens de exibição](/windows/win32/Controls/using-list-view-controls) de listas no SDK do Windows.
 
-Chame [CListCtrl::SetImageList](../mfc/reference/clistctrl-class.md#setimagelist) para cada lista de imagem; passar um ponteiro para o apropriada `CImageList` objeto.
+Chamar [CListCtrl::](../mfc/reference/clistctrl-class.md#setimagelist) SetImageList para cada lista de imagens; Passe um ponteiro para o objeto `CImageList` apropriado.
 
 ## <a name="see-also"></a>Consulte também
 

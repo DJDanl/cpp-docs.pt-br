@@ -1,21 +1,21 @@
 ---
-title: odl (C++ COM atributo)
+title: ODL (C++ atributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.odl
 helpviewer_keywords:
 - odl attribute
 ms.assetid: 75dcb314-b50f-4a63-9180-507ac1bc78f3
-ms.openlocfilehash: 90f9f1df23542138b2fac0dcfe0e122f1993d805
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a4ae1aa7f27348e37c565b35e3dc0b2b1011c9cb
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407634"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514321"
 ---
 # <a name="odl"></a>odl
 
-Identifica uma interface como uma interface de linguagem de descrição do objeto (ODL). O compilador MIDL não requer o **odl** atributo; ele é reconhecido somente para compatibilidade com os arquivos. odl mais antigos.
+Identifica uma interface como uma interface de linguagem de descrição de objeto (ODL). O compilador MIDL não requer o atributo **ODL** ; Ele é reconhecido apenas por compatibilidade com arquivos. odl mais antigos.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -25,7 +25,7 @@ Identifica uma interface como uma interface de linguagem de descrição do objet
 
 ## <a name="remarks"></a>Comentários
 
-O **odl** atributo C++ tem a mesma funcionalidade que o [odl](/windows/desktop/Midl/odl) atributo MIDL.
+O atributo **ODL** C++ tem a mesma funcionalidade que o atributo MIDL [ODL](/windows/win32/Midl/odl) .
 
 ## <a name="example"></a>Exemplo
 
@@ -51,16 +51,16 @@ public:
 
 ## <a name="requirements"></a>Requisitos
 
-### <a name="attribute-context"></a>Atributo de contexto
+### <a name="attribute-context"></a>Contexto de atributo
 
 |||
 |-|-|
 |**Aplica-se a**|**interface**|
 |**Repetível**|Não|
-|**Atributos obrigatórios**|Nenhum|
+|**Atributos necessários**|Nenhum|
 |**Atributos inválidos**|Nenhum|
 
-Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
+Para obter mais informações sobre os contextos de atributo, consulte contextos de [atributo](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Consulte também
 
