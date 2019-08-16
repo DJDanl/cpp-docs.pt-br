@@ -28,16 +28,16 @@ helpviewer_keywords:
 - assert function
 - assert macro
 ms.assetid: a9ca031a-648b-47a6-bdf1-65fc7399dd40
-ms.openlocfilehash: 7ac299213ba3de878f7cf2dc99b44c45273bc3b2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a2cc780fbc93aa66bd7fd613c3e155cda27eb7f9
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62341360"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500330"
 ---
-# <a name="assert-macro-assert-wassert"></a>assert Macro, _assert, _wassert
+# <a name="assert-macro-_assert-_wassert"></a>assert Macro, _assert, _wassert
 
-Avalia uma expressão e, quando o resultado será **falsos**, imprime uma mensagem de diagnóstico e anula o programa.
+Avalia uma expressão e, quando o resultado é **false**, imprime uma mensagem de diagnóstico e anula o programa.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -59,8 +59,8 @@ void _wassert(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Expressão*<br/>
-Uma expressão escalar (incluindo expressões de ponteiro) avaliada como não zero (**verdadeira**) ou 0 (**falso**).
+*expression*<br/>
+Uma expressão escalar (incluindo expressões de ponteiro) que é avaliada como zero (**true**) ou 0 (**false**).
 
 *message*<br/>
 A mensagem a ser exibida.
@@ -68,26 +68,26 @@ A mensagem a ser exibida.
 *filename*<br/>
 O nome do arquivo de origem no qual a declaração falhou.
 
-*line*<br/>
+*descritos*<br/>
 O número de linha no arquivo de origem da declaração com falha.
 
 ## <a name="remarks"></a>Comentários
 
-O **assert** macro normalmente é usada para identificar erros de lógica durante o desenvolvimento do programa. Use-o para interromper a execução do programa quando ocorrerem condições inesperadas Implementando o *expressão* argumento a ser avaliada como **falso** somente quando o programa estiver funcionando incorretamente. Verificações de declaração podem ser desativadas no momento da compilação definindo a macro **NDEBUG**. Você pode desativar a **assert** macro sem modificar seus arquivos de origem usando uma **/DNDEBUG** opção de linha de comando. Você pode desativar a **assert** macro em seu código-fonte usando uma `#define NDEBUG` diretiva antes \<Assert > está incluído.
+A macro **Assert** normalmente é usada para identificar erros lógicos durante o desenvolvimento do programa. Use-o para interromper a execução do programa quando condições inesperadas ocorrerem implementando o argumento *expression* para avaliar como **false** somente quando o programa estiver operando incorretamente. As verificações de asserção podem ser desativadas no momento da compilação definindo a macro **NDEBUG**. Você pode desativar a macro **Assert** sem modificar os arquivos de origem usando uma opção de linha de comando **/DNDEBUG** . Você pode desativar a macro **Assert** em seu código-fonte usando uma diretiva `#define NDEBUG` antes \<de Assert. h > é incluída.
 
-O **assert** imprime macro uma mensagem de diagnóstico quando *expressão* for avaliada como **falso** (0) e chamadas [anular](abort.md) para encerrar o programa execução. Nenhuma ação é executada se *expressão* é **verdadeiro** (diferente de zero). A mensagem de diagnóstico inclui a expressão com falha, o nome do número de arquivo e o número de linha em que a declaração falhou.
+A macro **Assert** imprime uma mensagem de diagnóstico quando a *expressão* é avaliada como **false** (0) e chama [Abort](abort.md) para encerrar a execução do programa. Nenhuma ação será tomada se a *expressão* for **true** (diferente de zero). A mensagem de diagnóstico inclui a expressão com falha, o nome do número de arquivo e o número de linha em que a declaração falhou.
 
 A mensagem de diagnóstico é impressa em caracteres largos. Dessa forma, ela funcionará conforme o esperado, mesmo que haja caracteres Unicode na expressão.
 
-O destino da mensagem de diagnóstico depende do tipo de aplicativo que chamou a rotina. Aplicativos de console sempre recebem a mensagem por meio **stderr**. Em um aplicativo baseado em Windows, **assert** chama o Windows [MessageBox](/windows/desktop/api/winuser/nf-winuser-messagebox) função para criar uma caixa de mensagem para exibir a mensagem junto com um **Okey** botão. Quando o usuário clica em **OK**, o programa é anulado imediatamente.
+O destino da mensagem de diagnóstico depende do tipo de aplicativo que chamou a rotina. Os aplicativos de console sempre recebem a mensagem por meio de **stderr**. Em um aplicativo baseado no Windows, **Assert** chama a função [MessageBox](/windows/win32/api/winuser/nf-winuser-messagebox) do Windows para criar uma caixa de mensagem para exibir a mensagem junto com um botão **OK** . Quando o usuário clica em **OK**, o programa é anulado imediatamente.
 
-Quando o aplicativo estiver vinculado a uma versão de depuração das bibliotecas do tempo de execução, **assert** cria uma caixa de mensagem com três botões: **Anular**, **Repita**, e **ignorar**. Se o usuário clicar em **Anular**, o programa será anulado imediatamente. Se o usuário clicar em **Tentar Novamente**, o depurador será chamado e o usuário poderá depurar o programa se a depuração JIT (Just-In-Time) estiver habilitada. Se o usuário clica **Ignore**, **assert** continua com sua execução normal: Criando a caixa de mensagem com o **Okey** botão. Observe que clicar em **Ignorar** quando há uma condição de erro pode resultar em comportamento indefinido.
+Quando o aplicativo é vinculado a uma versão de depuração das bibliotecas de tempo de execução, **Assert** cria uma caixa de mensagem com três botões: **Anular**, **repetir**e **ignorar**. Se o usuário clicar em **Anular**, o programa será anulado imediatamente. Se o usuário clicar em **Tentar Novamente**, o depurador será chamado e o usuário poderá depurar o programa se a depuração JIT (Just-In-Time) estiver habilitada. Se o usuário clicar em **ignorar**, **Assert** continuará com sua execução normal: criando a caixa de mensagem com o botão **OK** . Observe que clicar em **Ignorar** quando há uma condição de erro pode resultar em comportamento indefinido.
 
 Para obter mais informações sobre depuração de CRT, consulte [Técnicas de Depuração CRT](/visualstudio/debugger/crt-debugging-techniques).
 
-O **macros Assert** e **wassert** funções são funções CRT internas. Elas ajudam a minimizar o código necessário em seus arquivos de objeto para dar suporte a declarações. Não recomendamos chamar essas funções diretamente.
+As funções **_assert** e **_WASSERT** são funções CRT internas. Elas ajudam a minimizar o código necessário em seus arquivos de objeto para dar suporte a declarações. Não recomendamos chamar essas funções diretamente.
 
-O **assert** macro está habilitada em ambas as versões de lançamento e de depuração das bibliotecas de tempo de execução C quando **NDEBUG** não está definido. Quando **NDEBUG** é definido, a macro está disponível, mas não avalia seu argumento e não tem nenhum efeito. Quando habilitada, o **assert** chamadas macro **wassert** para sua implementação. Outras macros de declaração, [_ASSERT](assert-asserte-assert-expr-macros.md), [_ASSERTE](assert-asserte-assert-expr-macros.md) e [_ASSERT_EXPR](assert-asserte-assert-expr-macros.md), também estão disponíveis, mas somente avaliam as expressões passadas a elas quando a macro [_DEBUG](../../c-runtime-library/debug.md) tiver sido definida e quando estiverem em código vinculado à versão de depuração das bibliotecas de tempo de execução C.
+A macro **Assert** é habilitada nas versões de lançamento e de depuração das bibliotecas de tempo de execução do C quando **NDEBUG** não está definido. Quando **NDEBUG** é definido, a macro está disponível, mas não avalia seu argumento e não tem nenhum efeito. Quando habilitada, a macro **Assert** chama **_wassert** para sua implementação. Outras macros de declaração, [_ASSERT](assert-asserte-assert-expr-macros.md), [_ASSERTE](assert-asserte-assert-expr-macros.md) e [_ASSERT_EXPR](assert-asserte-assert-expr-macros.md), também estão disponíveis, mas somente avaliam as expressões passadas a elas quando a macro [_DEBUG](../../c-runtime-library/debug.md) tiver sido definida e quando estiverem em código vinculado à versão de depuração das bibliotecas de tempo de execução C.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -95,11 +95,11 @@ O **assert** macro está habilitada em ambas as versões de lançamento e de dep
 |-------------|---------------------|
 |**assert**, **_wassert**|\<assert.h>|
 
-A assinatura do **macros Assert** função não está disponível em um arquivo de cabeçalho. A assinatura do **wassert** função está disponível apenas quando o **NDEBUG** macro não está definida.
+A assinatura da função **_assert** não está disponível em um arquivo de cabeçalho. A assinatura da função **_wassert** só estará disponível quando a macro **NDEBUG** não estiver definida.
 
 ## <a name="example"></a>Exemplo
 
-Neste programa, o **analyze_string** função usa o **assert** macro para testar várias condições relacionadas a cadeia de caracteres e comprimento. Se qualquer uma das condições falhar, o programa imprimirá uma mensagem indicando o que causou a falha.
+Neste programa, a função **analyze_string** usa a macro **Assert** para testar várias condições relacionadas à cadeia de caracteres e ao comprimento. Se qualquer uma das condições falhar, o programa imprimirá uma mensagem indicando o que causou a falha.
 
 ```C
 // crt_assert.c

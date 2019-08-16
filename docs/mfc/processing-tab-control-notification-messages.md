@@ -8,18 +8,18 @@ helpviewer_keywords:
 - processing notifications [MFC]
 - tab controls [MFC], processing notifications
 ms.assetid: 758ccb7a-9e73-48f8-9073-23f7cb09918c
-ms.openlocfilehash: 4be9074f3e7d7ce4321402d27fc26283a52436e9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 97abde8285a3baf307df79fd97d4f9a379c8f58f
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391381"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69507841"
 ---
 # <a name="processing-tab-control-notification-messages"></a>Processando mensagens de notificação do controle de guia
 
-Como os usuários clicam guias ou botões, o controle de guia ([CTabCtrl](../mfc/reference/ctabctrl-class.md)) envia mensagens de notificação à sua janela pai. Se você quiser fazer algo em resposta, lidar com essas mensagens. Por exemplo, quando o usuário clica em uma guia, você talvez queira predefinição de dados de controle na página antes de exibi-la.
+Como os usuários clicam em guias ou botões, o controle guia ([CTabCtrl](../mfc/reference/ctabctrl-class.md)) envia mensagens de notificação para sua janela pai. Manipule essas mensagens se desejar fazer algo em resposta. Por exemplo, quando o usuário clica em uma guia, talvez você queira predefinir os dados de controle na página antes de exibi-los.
 
-Processar mensagens WM_NOTIFY do controle guia na sua classe de exibição ou a caixa de diálogo. Use a janela Propriedades para criar uma [OnChildNotify](../mfc/reference/cwnd-class.md#onchildnotify) função de manipulador com uma instrução de comutação com base em qual mensagem de notificação está sendo manipulada. Para obter uma lista das notificações de um controle guia pode enviar para sua janela pai, consulte o **notificações** seção [referência de controle de guia](/windows/desktop/controls/tab-control-reference) no SDK do Windows.
+Processar mensagens WM_NOTIFY do controle guia na sua exibição ou classe de caixa de diálogo. Use o janela Propriedades para criar uma função de manipulador [OnChildNotify](../mfc/reference/cwnd-class.md#onchildnotify) com uma instrução switch com base na qual a mensagem de notificação está sendo manipulada. Para obter uma lista das notificações que um controle guia pode enviar para sua janela pai, consulte a seção **notificações** da [referência de controle de guia](/windows/win32/controls/tab-control-reference) no SDK do Windows.
 
 ## <a name="see-also"></a>Consulte também
 

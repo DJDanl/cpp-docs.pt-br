@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::COMException Class
 ms.assetid: 44fda4e5-574f-4d12-ab5f-4ff3f277448d
-ms.openlocfilehash: 5a74184a8cbc4126988da2ba0be61d9f5b2bb71c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eb6f3e0e4860687d0d47294e11b7741294abac20
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383341"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500541"
 ---
 # <a name="platformcomexception-class"></a>Classe Platform::COMException
 
@@ -73,15 +73,15 @@ As exceções predefinidas a seguir são derivadas de COMException. Elas diferem
 
 ### <a name="requirements"></a>Requisitos
 
-**Cliente com suporte mínimo:** Windows 8
+**Mínimo de cliente com suporte:** Windows 8
 
-**Servidor com suporte mínimo:** Windows Server 2012
+**Mínimo de servidor com suporte:** Windows Server 2012
 
 **Namespace:** Plataforma
 
 **Metadados:** platform.winmd
 
-## <a name="ctor"></a> Construtor COMException:: COMException
+## <a name="ctor"></a>Construtor COMException:: COMException
 
 Inicializa uma nova instância da classe COMException.
 
@@ -96,7 +96,7 @@ COMException( int hresult )
 *hresult*<br/>
 O erro HRESULT que é representado pela exceção.
 
-## <a name="hresult"></a> Propriedade COMException:: HRESULT
+## <a name="hresult"></a>Propriedade COMException:: HResult
 
 O HRESULT que corresponde à exceção.
 
@@ -113,9 +113,9 @@ Um valor HRESULT que especifica o erro.
 
 ### <a name="remarks"></a>Comentários
 
-Para obter mais informações sobre como interpretar o valor HRESULT, consulte [estrutura de códigos de erro COM](/windows/desktop/com/structure-of-com-error-codes).
+Para obter mais informações sobre como interpretar o valor HRESULT, consulte [estrutura de códigos de erro com](/windows/win32/com/structure-of-com-error-codes).
 
-## <a name="message"></a> Propriedade COMException:: Message
+## <a name="message"></a>Propriedade COMException:: Message
 
 Mensagem que descreve a exceção.
 

@@ -25,14 +25,14 @@ helpviewer_keywords:
 - _get_heap_handle function
 - get_heap_handle function
 ms.assetid: a4d05049-8528-494a-8281-a470d1e1115c
-ms.openlocfilehash: 82ea108a41bec1d0276e2c952b3f509f36bab8ab
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7e82686c4b33dc11f02f387a97966d3ff5a47085
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62332111"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499921"
 ---
-# <a name="getheaphandle"></a>_get_heap_handle
+# <a name="_get_heap_handle"></a>_get_heap_handle
 
 Retorna o identificador do heap usado pelo sistema de tempo de execução do C.
 
@@ -48,7 +48,7 @@ Retorna o identificador do heap do Win32 usado pelo sistema de tempo de execuç�
 
 ## <a name="remarks"></a>Comentários
 
-Use essa função se quiser chamar [HeapSetInformation](/windows/desktop/api/heapapi/nf-heapapi-heapsetinformation) e habilitar o Heap de baixa fragmentação no heap do CRT.
+Use essa função se quiser chamar [HeapSetInformation](/windows/win32/api/heapapi/nf-heapapi-heapsetinformation) e habilitar o Heap de baixa fragmentação no heap do CRT.
 
 ## <a name="requirements"></a>Requisitos
 

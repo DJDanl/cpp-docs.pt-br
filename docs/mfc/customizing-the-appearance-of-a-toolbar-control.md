@@ -11,46 +11,46 @@ helpviewer_keywords:
 - CToolBarCtrl class [MFC], object styles
 - toolbar controls [MFC], style
 ms.assetid: fd0a73db-7ad1-4fe4-889b-02c3980f49e8
-ms.openlocfilehash: 8a0db3299ebb54d226edc1434dedbc6a04eb9b00
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 590f0dce6c50ee6d0ca30c4c68e21787563bd686
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62241796"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508733"
 ---
 # <a name="customizing-the-appearance-of-a-toolbar-control"></a>Personalizando a aparência de um controle de barra de ferramentas
 
-Classe `CToolBarCtrl` fornece vários estilos que afetam a aparência (e, ocasionalmente, o comportamento) do objeto da barra de ferramentas. Modificar o objeto de barra de ferramentas, definindo o `dwCtrlStyle` parâmetro do `CToolBarCtrl::Create` (ou `CToolBar::CreateEx`) função membro, quando você cria o controle de barra de ferramentas.
+A `CToolBarCtrl` classe fornece muitos estilos que afetam a aparência (e, ocasionalmente, o comportamento) do objeto Toolbar. Modifique o objeto Toolbar definindo o `dwCtrlStyle` parâmetro `CToolBarCtrl::Create` da função membro (ou `CToolBar::CreateEx`), quando você criar o controle Toolbar pela primeira vez.
 
 Os estilos a seguir afetam o aspecto "3D" dos botões da barra de ferramentas e o posicionamento do texto do botão:
 
-- **TBSTYLE_FLAT** cria uma barra de ferramentas simples em que a barra de ferramentas e os botões são transparentes. Texto do botão aparece sob os bitmaps de botão. Quando esse estilo é usado, o botão embaixo do cursor será realçado automaticamente.
+- **TBSTYLE_FLAT** Cria uma barra de ferramentas simples onde a barra de ferramentas e os botões são transparentes. O texto do botão aparece em bitmaps de botão. Quando esse estilo é usado, o botão sob o cursor é realçado automaticamente.
 
-- **TBSTYLE_TRANSPARENT** cria uma barra de ferramentas transparente. Em uma barra de ferramentas transparente, a barra de ferramentas é transparente, mas os botões não são. Texto do botão aparece sob os bitmaps de botão.
+- **TBSTYLE_TRANSPARENT** Cria uma barra de ferramentas transparente. Em uma barra de ferramentas transparente, a barra de ferramentas é transparente, mas os botões não são. O texto do botão aparece em bitmaps de botão.
 
-- **TBSTYLE_LIST** locais de texto à direita do botão bitmaps de botão.
+- **TBSTYLE_LIST** Coloca o texto do botão à direita dos bitmaps de botão.
 
 > [!NOTE]
->  Para evitar problemas de repintura, o **TBSTYLE_FLAT** e **TBSTYLE_TRANSPARENT** estilos devem ser definidos antes do objeto de barra de ferramentas está visível.
+>  Para evitar problemas de repintura, os estilos **TBSTYLE_FLAT** e **TBSTYLE_TRANSPARENT** devem ser definidos antes de o objeto Toolbar ser visível.
 
-Os seguintes estilos de determinam se a barra de ferramentas permite que um usuário reposicionar botões individuais dentro de um objeto de barra de ferramentas usando arrastar e soltar:
+Os seguintes estilos determinam se a barra de ferramentas permite que um usuário reposicione botões individuais dentro de um objeto Toolbar usando arrastar e soltar:
 
-- **TBSTYLE_ALTDRAG** permite que os usuários alterar a posição de um botão barra de ferramentas, arrastando-o enquanto mantém pressionada a tecla ALT. Se esse estilo não for especificado, o usuário deve manter pressionada a tecla SHIFT enquanto arrasta um botão.
+- **TBSTYLE_ALTDRAG** Permite que os usuários alterem a posição de um botão da barra de ferramentas arrastando-o enquanto mantém pressionada a tecla ALT. Se esse estilo não for especificado, o usuário deverá manter a tecla SHIFT pressionada ao arrastar um botão.
 
     > [!NOTE]
-    >  O **CCS_ADJUSTABLE** estilo deve ser especificado para habilitar os botões de barra de ferramentas a ser arrastado.
+    >  O estilo **CCS_ADJUSTABLE** deve ser especificado para permitir que os botões da barra de ferramentas sejam arrastados.
 
-- **TBSTYLE_REGISTERDROP** gera **TBN_GETOBJECT** notificação mensagens para solicitar descartar objetos de destino quando o ponteiro do mouse passa sobre botões de barra de ferramentas.
+- **TBSTYLE_REGISTERDROP** Gera mensagens de notificação **TBN_GETOBJECT** para solicitar a remoção de objetos de destino quando o ponteiro do mouse passa sobre botões da barra de ferramentas.
 
-Os estilos restantes afetam os aspectos visuais e do objeto da barra de ferramentas:
+Os estilos restantes afetam os aspectos visuais e não visuais do objeto Toolbar:
 
-- **TBSTYLE_WRAPABLE** cria uma barra de ferramentas que pode ter várias linhas de botões. Botões da barra de ferramentas podem "encapsular" para a próxima linha quando a barra de ferramentas se torna muito estreita para incluir todos os botões na mesma linha. Quebra automática ocorre em limites nongroup e separação.
+- **TBSTYLE_WRAPABLE** Cria uma barra de ferramentas que pode ter várias linhas de botões. Os botões da barra de ferramentas podem "encapsular" na próxima linha quando a barra de ferramentas se tornar muito estreita para incluir todos os botões na mesma linha. A disposição ocorre em limites de separação e não de grupo.
 
-- **TBSTYLE_CUSTOMERASE** gera **NM_CUSTOMDRAW** quando ele processa as mensagens de notificação **WM_ERASEBKGND** mensagens.
+- **TBSTYLE_CUSTOMERASE** Gera mensagens de notificação **NM_CUSTOMDRAW** quando processa mensagens **WM_ERASEBKGND** .
 
-- **TBSTYLE_TOOLTIPS** cria um controle de dica de ferramenta que um aplicativo pode usar para exibir o texto descritivo para os botões na barra de ferramentas.
+- **TBSTYLE_TOOLTIPS** Cria um controle de dica de ferramenta que um aplicativo pode usar para exibir texto descritivo para os botões na barra de ferramentas.
 
-Para obter uma listagem completa dos estilos de barra de ferramentas e os estilos estendidos, consulte [estilos de botão e controle de barra de ferramentas](/windows/desktop/Controls/toolbar-control-and-button-styles) e [estilos estendidos da barra de ferramentas](/windows/desktop/Controls/toolbar-extended-styles) no SDK do Windows.
+Para obter uma lista completa de estilos de barra de ferramentas e estilos estendidos, consulte [controle da barra de ferramentas e](/windows/win32/Controls/toolbar-control-and-button-styles) estilos de botão e [estilos estendidos da barra de ferramentas](/windows/win32/Controls/toolbar-extended-styles) na SDK do Windows.
 
 ## <a name="see-also"></a>Consulte também
 

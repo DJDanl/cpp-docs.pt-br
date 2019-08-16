@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSecurityAttributes class
 ms.assetid: a094880c-52e1-4a28-97ff-752d5869908e
-ms.openlocfilehash: 2139c25cb6d941d9debe0655ba91ba458b1f8c09
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: ebffbea120101a77450a5e8da3cdb6e34723e7be
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915722"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496495"
 ---
 # <a name="csecurityattributes-class"></a>Classe CSecurityAttributes
 
@@ -45,9 +45,9 @@ class CSecurityAttributes : public SECURITY_ATTRIBUTES
 
 ## <a name="remarks"></a>Comentários
 
-A `SECURITY_ATTRIBUTES` estrutura contém um [descritor de segurança](/windows/desktop/api/winnt/ns-winnt-security_descriptor) usado para a criação de um objeto e especifica se o identificador recuperado por meio da especificação dessa estrutura é herdável.
+A `SECURITY_ATTRIBUTES` estrutura contém um [descritor de segurança](/windows/win32/api/winnt/ns-winnt-security_descriptor) usado para a criação de um objeto e especifica se o identificador recuperado por meio da especificação dessa estrutura é herdável.
 
-Para obter uma introdução ao modelo de controle de acesso no Windows, consulte [controle de acesso](/windows/desktop/SecAuthZ/access-control) no SDK do Windows.
+Para obter uma introdução ao modelo de controle de acesso no Windows, consulte [controle de acesso](/windows/win32/SecAuthZ/access-control) no SDK do Windows.
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -100,6 +100,6 @@ Esse método é usado pelo construtor para inicializar o `CSecurityAttributes` o
 
 [Exemplo de segurança](../../overview/visual-cpp-samples.md)<br/>
 [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\))<br/>
-[descritor de segurança](/windows/desktop/api/winnt/ns-winnt-security_descriptor)<br/>
+[descritor de segurança](/windows/win32/api/winnt/ns-winnt-security_descriptor)<br/>
 [Visão geral da classe](../../atl/atl-class-overview.md)<br/>
 [Funções globais de segurança](../../atl/reference/security-global-functions.md)

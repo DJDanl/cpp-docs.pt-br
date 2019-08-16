@@ -104,12 +104,12 @@ helpviewer_keywords:
 - CMFCTabCtrl [MFC], SynchronizeScrollBar
 - CMFCTabCtrl [MFC], m_bEnableActivate
 ms.assetid: d441385d-2c72-4203-96fa-deae2273da35
-ms.openlocfilehash: db2dcf7c60d164f9d04eb98f8eaac79ae14e3e73
-ms.sourcegitcommit: c3bf94210bdb73be80527166264d49e33784152c
+ms.openlocfilehash: 442860b1751591c5763a768f9bd9b6ba59f33fa5
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68821257"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69504882"
 ---
 # <a name="cmfctabctrl-class"></a>Classe CMFCTabCtrl
 
@@ -177,7 +177,7 @@ class CMFCTabCtrl : public CMFCBaseTabCtrl
 |[CMFCTabCtrl::OnDragEnter](#ondragenter)|Chamado pelo Framework quando o cursor é arrastado pela primeira vez para a janela de controle de guia.|
 |[CMFCTabCtrl::OnDragOver](#ondragover)|Chamado pelo Framework durante uma operação de arrastar quando o mouse é movido sobre a janela soltar destino. (Substitui [CMFCBaseTabCtrl:: OnDragOver](../../mfc/reference/cmfcbasetabctrl-class.md#ondragover).)|
 |[CMFCTabCtrl::OnShowTabDocumentsMenu](#onshowtabdocumentsmenu)|Exibe um menu pop-up de janelas com guias, aguarda até que o usuário selecione uma guia e torne a guia selecionada a guia ativa.|
-|`CMFCTabCtrl::PreTranslateMessage`|Traduz mensagens de janela antes de serem expedidas para as funções do Windows [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) e [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) . (Substitui [CMFCBaseTabCtrl::P retranslatemessage](../../mfc/reference/cmfcbasetabctrl-class.md#pretranslatemessage).)|
+|`CMFCTabCtrl::PreTranslateMessage`|Traduz mensagens de janela antes de serem expedidas para as funções do Windows [TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage) e [DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage) . (Substitui [CMFCBaseTabCtrl::P retranslatemessage](../../mfc/reference/cmfcbasetabctrl-class.md#pretranslatemessage).)|
 |`CMFCTabCtrl::RecalcLayout`|Recalcula o layout interno do controle guia. (Substitui [CMFCBaseTabCtrl:: RecalcLayout](../../mfc/reference/cmfcbasetabctrl-class.md#recalclayout).)|
 |[CMFCTabCtrl::SetActiveInMDITabGroup](#setactiveinmditabgroup)|Define a guia atual de um controle guia como a guia ativa em um grupo de guias de interface de vários documentos.|
 |[CMFCTabCtrl::SetActiveTab](#setactivetab)|Ativa uma guia. (Substitui [CMFCBaseTabCtrl:: SetActiveTab](../../mfc/reference/cmfcbasetabctrl-class.md#setactivetab).)|
@@ -874,7 +874,7 @@ virtual DROPEFFECT OnDragEnter(
 no Aponta para um objeto de dados que contém dados que o usuário arrasta.
 
 *dwKeyState*<br/>
-no Contém o estado das teclas modificadoras. Esse parâmetro é uma combinação bit-a-bit (ou) dos seguintes valores: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON e MK_RBUTTON. Para obter mais informações, consulte a seção de **parâmetros de mensagem** de [sobre a entrada do mouse](/windows/desktop/inputdev/about-mouse-input).
+no Contém o estado das teclas modificadoras. Esse parâmetro é uma combinação bit-a-bit (ou) dos seguintes valores: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON e MK_RBUTTON. Para obter mais informações, consulte a seção de **parâmetros de mensagem** de [sobre a entrada do mouse](/windows/win32/inputdev/about-mouse-input).
 
 *point*<br/>
 no Contém o local atual do cursor nas coordenadas do cliente.
@@ -906,7 +906,7 @@ virtual DROPEFFECT OnDragOver(
 no Ponteiro para um objeto [COleDataObject](../../mfc/reference/coledataobject-class.md) que está sendo arrastado sobre o destino de soltura.
 
 *dwKeyState*<br/>
-no O estado das chaves de modificador, que é uma combinação bit-a-bit (ou) de MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON e MK_RBUTTON. Para obter mais informações, consulte "parâmetros de mensagem" em [sobre a entrada do mouse](/windows/desktop/inputdev/about-mouse-input).
+no O estado das chaves de modificador, que é uma combinação bit-a-bit (ou) de MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON e MK_RBUTTON. Para obter mais informações, consulte "parâmetros de mensagem" em [sobre a entrada do mouse](/windows/win32/inputdev/about-mouse-input).
 
 *point*<br/>
 no A posição atual do mouse.

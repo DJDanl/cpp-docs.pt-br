@@ -7,16 +7,16 @@ helpviewer_keywords:
 - functions [MFC], callback
 - callback functions [MFC]
 ms.assetid: b2a6857c-fdd3-45ec-8fd8-2e71fac77582
-ms.openlocfilehash: 84581a4a1147a5b0b046e1bf2fbe412bffe9c662
-ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
+ms.openlocfilehash: 9e51774b2158a81fce05dc0bd27e296e4ad94faa
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65612252"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69507708"
 ---
 # <a name="callback-functions-used-by-mfc"></a>Funções de Retorno de Chamada Usadas pelo MFC
 
-Três funções de retorno de chamada aparecem na biblioteca de classes Microsoft Foundation. Essas funções de retorno de chamada são passadas para [CDC:: enumobjects](../../mfc/reference/cdc-class.md#enumobjects), [CDC:: graystring](../../mfc/reference/cdc-class.md#graystring), e [CDC:: SetAbortProc](../../mfc/reference/cdc-class.md#setabortproc). Observe que todas as funções de retorno de chamada devem interceptar exceções de MFC antes de retornar ao Windows, já que as exceções não podem ser geradas entre limites de retorno de chamada. Para obter mais informações sobre exceções, consulte o artigo [exceções](../../mfc/exception-handling-in-mfc.md).
+Três funções de retorno de chamada aparecem na biblioteca MFC. Essas funções de retorno de chamada são passadas para [CDC:: EnumObjects](../../mfc/reference/cdc-class.md#enumobjects), [CDC:: GrayString](../../mfc/reference/cdc-class.md#graystring)e [CDC:: SetAbortProc](../../mfc/reference/cdc-class.md#setabortproc). Observe que todas as funções de retorno de chamada devem interceptar exceções do MFC antes de retornar ao Windows, já que as exceções não podem ser lançadas em limites de retorno Para obter mais informações sobre exceções, consulte o artigo [exceções](../../mfc/exception-handling-in-mfc.md).
 
 |Nome||
 |----------|-----------------|
@@ -26,11 +26,11 @@ Três funções de retorno de chamada aparecem na biblioteca de classes Microsof
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** afxwin. h
+**Cabeçalho:** Afxwin. h
 
-## <a name="enum_objects"></a> Função de retorno de chamada para CDC:: enumobjects
+## <a name="enum_objects"></a>Função de retorno de chamada para CDC:: EnumObjects
 
-O *ObjectFunc* nome é um espaço reservado para o nome da função fornecida pelo aplicativo.
+O nome do ObjectFunc é um espaço reservado para o nome da função fornecida pelo aplicativo.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -43,22 +43,22 @@ int CALLBACK EXPORT ObjectFunc(
 ### <a name="parameters"></a>Parâmetros
 
 *lpszLogObject*<br/>
-Aponta para um [LOGPEN](/windows/desktop/api/Wingdi/ns-wingdi-taglogpen) ou [LOGBRUSH](/windows/desktop/api/wingdi/ns-wingdi-taglogbrush) estrutura de dados que contém informações sobre os atributos a lógicas do objeto.
+Aponta para uma estrutura de dados [LOGPEN](/windows/win32/api/Wingdi/ns-wingdi-logpen) ou [LOGBRUSH](/windows/win32/api/wingdi/ns-wingdi-logbrush) que contém informações sobre os atributos lógicos do objeto.
 
 *lpData*<br/>
-Pontos de dados fornecida pelo aplicativo passado para o `EnumObjects` função.
+Aponta para os dados fornecidos pelo aplicativo passados para a `EnumObjects` função.
 
 ### <a name="return-value"></a>Valor de retorno
 
-A função de retorno de chamada retorna um **int**. O valor deste retorno é definido pelo usuário. Se a função de retorno de chamada retornar 0, `EnumObjects` para no início de enumeração.
+A função de retorno de chamada retorna um **int**. O valor desse retorno é definido pelo usuário. Se a função de retorno de chamada `EnumObjects` retornar 0, interromperá a enumeração antecipadamente.
 
 ### <a name="remarks"></a>Comentários
 
 O nome real deve ser exportado.
 
-## <a name="graystring"></a>  Função de retorno de chamada para CDC:: graystring
+## <a name="graystring"></a>Função de retorno de chamada para CDC:: GrayString
 
-*OutputFunc* é um espaço reservado para o nome da função de retorno de chamada fornecida pelo aplicativo.
+*OutputFunc* é um espaço reservado para o nome da função de retorno de chamada fornecido pelo aplicativo.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -72,23 +72,23 @@ BOOL CALLBACK EXPORT OutputFunc(
 ### <a name="parameters"></a>Parâmetros
 
 *hDC*<br/>
-Identifica um contexto de dispositivo de memória com um bitmap pelo menos a largura e altura especificada por `nWidth` e `nHeight` para `GrayString`.
+Identifica um contexto de dispositivo de memória com um bitmap de pelo menos a largura e a `nWidth` altura `nHeight` especificadas `GrayString`por e para.
 
 *lpData*<br/>
 Aponta para a cadeia de caracteres a ser desenhada.
 
 *nCount*<br/>
-Especifica o número de caracteres de saída.
+Especifica o número de caracteres a serem gerados.
 
 ### <a name="return-value"></a>Valor de retorno
 
-O valor de retorno da função de retorno de chamada deve ser verdadeiro para indicar êxito; Caso contrário, ele será FALSE.
+O valor de retorno da função de retorno de chamada deve ser verdadeiro para indicar êxito; caso contrário, será FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-A função de retorno de chamada (*OutputFunc*) deve desenhar uma imagem em relação as coordenadas (0,0) em vez de (*x*, *y*).
+A função de retorno de chamada (*OutputFunc*) deve desenhar uma imagem em relação às coordenadas (0, 0) em vez de (*x*, *y*).
 
-## <a name="setabortproc"></a>  Função de retorno de chamada para CDC:: SetAbortProc
+## <a name="setabortproc"></a>Função de retorno de chamada para CDC:: SetAbortProc
 
 O nome *AbortFunc* é um espaço reservado para o nome da função fornecida pelo aplicativo.
 
@@ -103,22 +103,22 @@ BOOL CALLBACK EXPORT AbortFunc(
 ### <a name="parameters"></a>Parâmetros
 
 *hPr*<br/>
-Identifica o contexto de dispositivo.
+Identifica o contexto do dispositivo.
 
-*code*<br/>
-Especifica se ocorreu um erro. É 0 se nenhum erro tiver ocorrido. É SP_OUTOFDISK se o Gerenciador de impressão está sem espaço em disco e serão disponibilizados mais espaço em disco se o aplicativo espera. Se *código* é SP_OUTOFDISK, o aplicativo não precisa cancelar o trabalho de impressão. Se não existir, ela deverá produzir para o Gerenciador de impressão chamando o `PeekMessage` ou `GetMessage` função do Windows.
+*código*<br/>
+Especifica se ocorreu um erro. Será 0 se nenhum erro tiver ocorrido. É SP_OUTOFDISK se o Gerenciador de impressão estiver sem espaço em disco no momento e mais espaço em disco ficará disponível se o aplicativo aguardar. Se o *código* for SP_OUTOFDISK, o aplicativo não precisará abortar o trabalho de impressão. Caso contrário, ele deve produzir o Gerenciador de impressão chamando a função ou `PeekMessage` `GetMessage` do Windows.
 
 ### <a name="return-value"></a>Valor de retorno
 
-O valor de retorno da função de manipulador de anulação é diferente de zero se o trabalho de impressão é continuar e 0 se ele for cancelado.
+O valor de retorno da função de identificador de anulação será diferente de zero se o trabalho de impressão for para continuar e 0 se for cancelado.
 
 ### <a name="remarks"></a>Comentários
 
-O nome real deve ser exportado, conforme descrito na seção de comentários [CDC:: SetAbortProc](../../mfc/reference/cdc-class.md#setabortproc).
+O nome real deve ser exportado conforme descrito na seção comentários de [CDC:: SetAbortProc](../../mfc/reference/cdc-class.md#setabortproc).
 
 ## <a name="see-also"></a>Consulte também
 
 [Estruturas, estilos, retornos de chamada e mapas de mensagem](structures-styles-callbacks-and-message-maps.md)<br/>
-[CDC::EnumObjects](../../mfc/reference/cdc-class.md#enumobjects)<br/>
+[CDC:: EnumObjects](../../mfc/reference/cdc-class.md#enumobjects)<br/>
 [CDC::SetAbortProc](../../mfc/reference/cdc-class.md#setabortproc)<br/>
 [CDC::GrayString](../../mfc/reference/cdc-class.md#graystring)

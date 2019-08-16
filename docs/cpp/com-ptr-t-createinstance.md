@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - CreateInstance method [C++]
 ms.assetid: ab89b0e1-9da3-4784-a079-58b17340f111
-ms.openlocfilehash: c4f6cd54b90ab5fab69f91df67a8bf60b0b658f8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 82b180b3f40683495ed2cfa284bdae8e1afaef9e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399350"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498658"
 ---
-# <a name="comptrtcreateinstance"></a>_com_ptr_t::CreateInstance
+# <a name="_com_ptr_tcreateinstance"></a>_com_ptr_t::CreateInstance
 
 **Seção específica da Microsoft**
 
-Cria uma nova instância de um objeto, considerando um `CLSID` ou `ProgID`.
+Cria uma nova instância de um objeto dado a `CLSID` um `ProgID`ou.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -45,26 +45,26 @@ HRESULT CreateInstance(
 O `CLSID` de um objeto.
 
 *clsidString*<br/>
-Uma cadeia de caracteres Unicode que contém um `CLSID` (começando com " **{** ") ou um `ProgID`.
+Uma cadeia de caracteres Unicode que contém `CLSID` um (começando com " **{** ") ou `ProgID`um.
 
 *clsidStringA*<br/>
-Uma cadeia de caracteres multibyte, usando a página de código ANSI, que contém um `CLSID` (começando com " **{** ") ou um `ProgID`.
+Uma cadeia de caracteres multibyte, usando a página de código ANSI, que `CLSID` contém um (começando com " **{** ") `ProgID`ou um.
 
 *dwClsContext*<br/>
 Contexto para execução do código executável.
 
 *pOuter*<br/>
-O externo desconhecido para [agregação](../atl/aggregation.md).
+O desconhecido externo para [agregação](../atl/aggregation.md).
 
 ## <a name="remarks"></a>Comentários
 
-Essas funções membro chamam `CoCreateInstance` para criar um novo objeto COM e, em seguida, buscam o tipo de interface desse ponteiro inteligente. O ponteiro resultante é encapsulado nesse objeto `_com_ptr_t`. `Release` é chamado para diminuir a contagem de referência para o ponteiro anteriormente encapsulado. Essa rotina retorna o HRESULT para indicar êxito ou falha.
+Essas funções membro chamam `CoCreateInstance` para criar um novo objeto COM e, em seguida, buscam o tipo de interface desse ponteiro inteligente. O ponteiro resultante é encapsulado nesse objeto `_com_ptr_t`. `Release`é chamado para diminuir a contagem de referência para o ponteiro encapsulado anteriormente. Essa rotina retorna o HRESULT para indicar êxito ou falha.
 
-- **CreateInstance (** *rclsid* **,** *dwClsContext* **)** cria uma nova instância em execução de um objeto dado um `CLSID`.
+- **CreateInstance (** *rclsid* **,** *dwClsContext* **)** Cria uma nova instância em execução de um objeto dado `CLSID`um.
 
-- **CreateInstance (** *clsidString* **,** *dwClsContext* **)** cria uma nova instância em execução de um objeto dado um Cadeia de caracteres Unicode que contém um `CLSID` (começando com " **{** ") ou um `ProgID`.
+- **CreateInstance (** *clsidstring* **,** *dwClsContext* **)** Cria uma nova instância em execução de um objeto, considerando uma cadeia de caracteres Unicode `CLSID` que contém um (começando com " **{** " `ProgID`) ou um.
 
-- **CreateInstance (** *clsidStringA* **,** *dwClsContext* **)** cria uma nova instância em execução de um objeto dado um cadeia de caracteres multibyte que contém um `CLSID` (começando com " **{** ") ou um `ProgID`. Chamadas [MultiByteToWideChar](/windows/desktop/api/stringapiset/nf-stringapiset-multibytetowidechar), que presume que a cadeia de caracteres está em página de código ANSI em vez de uma página de código OEM.
+- **CreateInstance (** *clsidStringA* **,** *dwClsContext* **)** Cria uma nova instância em execução de um objeto, dado uma cadeia de caracteres multibyte que `CLSID` contém um (começando com " **{** ") `ProgID`ou um. Chama [MultiByteToWideChar](/windows/win32/api/stringapiset/nf-stringapiset-multibytetowidechar), que pressupõe que a cadeia de caracteres está na página de código ANSI em vez de uma página de código OEM.
 
 **Fim da seção específica da Microsoft**
 

@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - defaultcollelem attribute
 ms.assetid: 3dbbd293-8b83-4f70-a36b-64cc1d0b6713
-ms.openlocfilehash: be4ea7097bd811444fca050525338931867998d0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c8848562c1470198d3f2a1b6f285510bcbb43d7c
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148049"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501662"
 ---
 # <a name="defaultcollelem"></a>defaultcollelem
 
-Usada para otimização de código do Visual Basic.
+Usado para Visual Basic otimização de código.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -25,11 +25,11 @@ Usada para otimização de código do Visual Basic.
 
 ## <a name="remarks"></a>Comentários
 
-O **defaultcollelem** atributo C++ tem a mesma funcionalidade que o [defaultcollelem](/windows/desktop/Midl/defaultcollelem) atributo MIDL.
+O atributo **defaultcollelem** C++ tem a mesma funcionalidade que o atributo MIDL [defaultcollelem](/windows/win32/Midl/defaultcollelem) .
 
 ## <a name="example"></a>Exemplo
 
-O código a seguir mostra um método de interface usando o **defaultcollelem** atributo:
+O código a seguir mostra um método de interface usando o atributo **defaultcollelem** :
 
 ```cpp
 // cpp_attr_ref_defaultcollelem.cpp
@@ -46,16 +46,16 @@ __interface IMyForm
 
 ## <a name="requirements"></a>Requisitos
 
-### <a name="attribute-context"></a>Atributo de contexto
+### <a name="attribute-context"></a>Contexto de atributo
 
 |||
 |-|-|
 |**Aplica-se a**|Método de interface|
 |**Repetível**|Não|
-|**Atributos obrigatórios**|Nenhum|
+|**Atributos necessários**|Nenhum|
 |**Atributos inválidos**|Nenhum|
 
-Para obter mais informações, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
+Para obter mais informações, consulte contextos de [atributo](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Consulte também
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CLinearTransition [MFC], m_dblFinalValue
 - CLinearTransition [MFC], m_duration
 ms.assetid: 7fcb2dba-beb8-4933-9f5d-3b7fb1585ef0
-ms.openlocfilehash: 4aa2d9955d2bbf98d2d7829806c4bcbd76340847
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1a6348d1afd0117683bd31af61324b14e16f710c
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392525"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69505737"
 ---
 # <a name="clineartransition-class"></a>Classe CLinearTransition
 
@@ -37,13 +37,13 @@ class CLinearTransition : public CBaseTransition;
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CLinearTransition::CLinearTransition](#clineartransition)|Constrói um objeto de transição linear e o inicializa com duração e o valor final.|
+|[CLinearTransition::CLinearTransition](#clineartransition)|Constrói um objeto de transição linear e o inicializa com a duração e o valor final.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CLinearTransition::Create](#create)|Chama a biblioteca de transição para criar o objeto encapsulado transição COM. (Substitui [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|
+|[CLinearTransition::Create](#create)|Chama a biblioteca de transição para criar objeto COM de transição encapsulada. (Substitui [CBaseTransition:: Create](../../mfc/reference/cbasetransition-class.md#create).)|
 
 ### <a name="public-data-members"></a>Membros de Dados Públicos
 
@@ -54,7 +54,7 @@ class CLinearTransition : public CBaseTransition;
 
 ## <a name="remarks"></a>Comentários
 
-Durante uma transição linear, o valor da variável de animação faz a transição linearmente do seu valor inicial para um valor final especificado. Como todas as transições são limpas automaticamente, é recomendável para alocado-los usando o operador novo. O objeto de IUIAnimationTransition COM encapsulado é criado pelo CAnimationController::AnimateGroup, até então é NULL. Alterando as variáveis de membro após a criação deste objeto COM não tem nenhum efeito.
+Durante uma transição linear, o valor da variável de animação faz a transição linearmente de seu valor inicial para um valor final especificado. Como todas as transições são limpas automaticamente, é recomendável alocá-las usando o operador novo. O objeto COM encapsulado IUIAnimationTransition é criado por CAnimationController:: Animate, até que ele seja nulo. A alteração de variáveis de membro após a criação desse objeto COM não tem nenhum efeito.
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -66,11 +66,11 @@ Durante uma transição linear, o valor da variável de animação faz a transi�
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** afxanimationcontroller.h
+**Cabeçalho:** afxanimationcontroller. h
 
 ##  <a name="clineartransition"></a>  CLinearTransition::CLinearTransition
 
-Constrói um objeto de transição linear e o inicializa com duração e o valor final.
+Constrói um objeto de transição linear e o inicializa com a duração e o valor final.
 
 ```
 CLinearTransition(
@@ -80,7 +80,7 @@ CLinearTransition(
 
 ### <a name="parameters"></a>Parâmetros
 
-*duration*<br/>
+*permanência*<br/>
 A duração da transição.
 
 *dblFinalValue*<br/>
@@ -88,7 +88,7 @@ O valor da variável de animação no final da transição.
 
 ##  <a name="create"></a>  CLinearTransition::Create
 
-Chama a biblioteca de transição para criar o objeto encapsulado transição COM.
+Chama a biblioteca de transição para criar objeto COM de transição encapsulada.
 
 ```
 virtual BOOL Create(
@@ -99,11 +99,11 @@ virtual BOOL Create(
 ### <a name="parameters"></a>Parâmetros
 
 *pLibrary*<br/>
-Um ponteiro para um [IUIAnimationTransitionLibrary interface](/windows/desktop/api/uianimation/nn-uianimation-iuianimationtransitionlibrary), que define uma biblioteca de transições padrão.
+Um ponteiro para uma [interface IUIAnimationTransitionLibrary](/windows/win32/api/uianimation/nn-uianimation-iuianimationtransitionlibrary), que define uma biblioteca de transições padrão.
 
 ### <a name="return-value"></a>Valor de retorno
 
-TRUE se a transição é criada com êxito; Caso contrário, FALSE.
+TRUE se a transição for criada com êxito; caso contrário, FALSE.
 
 ##  <a name="m_dblfinalvalue"></a>  CLinearTransition::m_dblFinalValue
 

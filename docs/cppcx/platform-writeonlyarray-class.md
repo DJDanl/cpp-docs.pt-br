@@ -12,18 +12,18 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::WriteOnlyArray Class
 ms.assetid: 92d7dd56-ec58-4b8c-88ba-9c903668b687
-ms.openlocfilehash: fb582106fe2f18e939f11180048a125c683ca2f6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5652123d4866262515f804dba790af51610eb426
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182932"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500516"
 ---
 # <a name="platformwriteonlyarray-class"></a>Classe Platform::WriteOnlyArray
 
 Representa uma matriz unidimensional que é usada como parâmetro de entrada quando o chamador passa uma matriz para o método para preenchimento.
 
-Essa classe ref é declarada como particular em vccorlib.h; portanto, não é emitida nos metadados e é somente consumível em C++. Essa classe é destinada somente para uso como um parâmetro de entrada que recebe uma matriz alocada pelo chamador. Ela não pode ser construída a partir do código do usuário. Ela permite que um método C++ grave diretamente nessa matriz — um padrão que é conhecido como o padrão *FillArray* . Para obter mais informações, consulte [matriz e WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md).
+Essa classe ref é declarada como particular em vccorlib.h; portanto, não é emitida nos metadados e é somente consumível em C++. Essa classe é destinada somente para uso como um parâmetro de entrada que recebe uma matriz alocada pelo chamador. Ela não pode ser construída a partir do código do usuário. Ela permite que um método C++ grave diretamente nessa matriz — um padrão que é conhecido como o padrão *FillArray* . Para obter mais informações, consulte [array e WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -54,7 +54,7 @@ Esses métodos têm acessibilidade interna — ou seja, eles são acessíveis ap
 
 Opção do compilador: **/ZW**
 
-**Metadados:** Platform.winmd
+**Los** Platform.winmd
 
 **Namespace:** Plataforma
 
@@ -126,7 +126,7 @@ property bool FastPass{
 
 Um valor booliano que indica se a matriz é FastPass.
 
-## <a name="get"></a>  Método writeonlyarray:: Get
+## <a name="get"></a>Método WriteOnlyArray:: Get
 
 Retorna o elemento no índice especificado.
 
@@ -185,9 +185,9 @@ Uma referência ao elemento que acabou de ser definido.
 
 ### <a name="remarks"></a>Comentários
 
-Para obter mais informações sobre como interpretar o valor HRESULT, consulte [estrutura de códigos de erro COM](/windows/desktop/com/structure-of-com-error-codes).
+Para obter mais informações sobre como interpretar o valor HRESULT, consulte [estrutura de códigos de erro com](/windows/win32/com/structure-of-com-error-codes).
 
 ## <a name="see-also"></a>Consulte também
 
-[Namespace de plataforma](platform-namespace-c-cx.md)<br/>
-[Criando componentes de tempo de execução do Windows em C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)
+[Namespace da plataforma](platform-namespace-c-cx.md)<br/>
+[Criando componentes de Windows Runtime noC++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)

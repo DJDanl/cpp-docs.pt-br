@@ -22,14 +22,14 @@ helpviewer_keywords:
 - _memccpy function
 - memccpy function
 ms.assetid: 9a2337df-6e85-4eba-b247-dd0532f45ddb
-ms.openlocfilehash: 5cd037974d8580b6ee90b1af736e8f2c6897fe8b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 704aab84ea3e39c91def1d4ac8b6d2d9d3650759
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156597"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499682"
 ---
-# <a name="memccpy"></a>_memccpy
+# <a name="_memccpy"></a>_memccpy
 
 Copia caracteres de um buffer.
 
@@ -60,13 +60,13 @@ Número de caracteres.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Se o caractere *c* é copiado, **memccpy** retorna um ponteiro para char no *dest* imediatamente após o caractere. Se *c* não é copiado, ele retornará **nulo**.
+Se o caractere *c* for copiado, **_memccpy** retornará um ponteiro para o Char no *dest* que segue imediatamente o caractere. Se *c* não for copiado, ele retornará **NULL**.
 
 ## <a name="remarks"></a>Comentários
 
-O **memccpy** função copia 0 ou mais caracteres de *src* para *dest*, interrompendo quando o caractere *c* foi copiado ou quando *contagem* caracteres tiverem sido copiados, o que vier primeiro.
+A função **_memccpy** copia 0 ou mais caracteres de *src* para *dest*, interrompendo quando o caractere *c* foi copiado ou quando os caracteres de *contagem* foram copiados, o que ocorrer primeiro.
 
-**Observação de segurança** Certifique-se de que o buffer de destino seja do mesmo tamanho ou maior que o buffer de origem. Para obter mais informações, consulte [Avoiding Buffer Overruns](/windows/desktop/SecBP/avoiding-buffer-overruns) (Evitando estouros de buffer).
+**Observação de segurança** Certifique-se de que o buffer de destino seja do mesmo tamanho ou maior que o buffer de origem. Para obter mais informações, consulte [Avoiding Buffer Overruns](/windows/win32/SecBP/avoiding-buffer-overruns) (Evitando estouros de buffer).
 
 ## <a name="requirements"></a>Requisitos
 

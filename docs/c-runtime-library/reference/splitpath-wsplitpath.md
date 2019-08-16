@@ -33,14 +33,14 @@ helpviewer_keywords:
 - path names
 - _tsplitpath function
 ms.assetid: 32bd76b5-1385-4ee8-a64c-abcb541cd2e4
-ms.openlocfilehash: d079bd17912c0711a4e1fbadadf12430520f2c96
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d5aab68524c0833bff0e09927587c0362c5194f9
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62354997"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500989"
 ---
-# <a name="splitpath-wsplitpath"></a>_splitpath, _wsplitpath
+# <a name="_splitpath-_wsplitpath"></a>_splitpath, _wsplitpath
 
 Divida um nome de caminho em componentes. Versões mais seguras dessas funções estão disponíveis, consulte [_splitpath_s, _wsplitpath_s](splitpath-s-wsplitpath-s.md).
 
@@ -69,22 +69,22 @@ void _wsplitpath(
 Caminho completo.
 
 *drive*<br/>
-Letra da unidade, seguida por dois-pontos (**:**). Você pode passar **nulo** para esse parâmetro se você não precisa ter a letra da unidade.
+Letra da unidade, seguida por dois-pontos ( **:** ). Você pode passar **NULL** para esse parâmetro se não precisar da letra da unidade.
 
 *dir*<br/>
-Caminho do diretório, incluindo barra à direita. Barras ( **/** ), barras invertidas ( **\\** ), ou ambos podem ser usadas. Você pode passar **nulo** para esse parâmetro se você não precisa o caminho do diretório.
+Caminho do diretório, incluindo barra à direita. Barras invertidas **/** (), barras invertidas ( **\\** ) ou ambas podem ser usadas. Você pode passar **NULL** para esse parâmetro se não precisar do caminho do diretório.
 
 *fname*<br/>
-Nome de arquivo base (sem extensão). Você pode passar **nulo** para esse parâmetro se o nome do arquivo não é necessário.
+Nome de arquivo base (sem extensão). Você pode passar **NULL** para esse parâmetro se não precisar do nome de arquivo.
 
-*ext*<br/>
-Extensão de nome de arquivo, incluindo ponto à esquerda (**.**). Você pode passar **nulo** para esse parâmetro se a extensão de nome de arquivo não é necessária.
+*externa*<br/>
+Extensão de nome de arquivo, incluindo o ponto à esquerda ( **.** ). Você pode passar **NULL** para esse parâmetro se não precisar da extensão de nome de arquivo.
 
 ## <a name="remarks"></a>Comentários
 
-O **splitpath** função divide um caminho em seus quatro componentes. **splitpath** manipula automaticamente argumentos de cadeia de caracteres multibyte conforme apropriado, reconhecendo as sequências de caracteres multibyte de acordo com a página de código multibyte em uso no momento. **wsplitpath** é uma versão de caractere largo de **splitpath**; os argumentos a serem **wsplitpath** são cadeias de caracteres largos. Caso contrário, essas funções se comportam de forma idêntica.
+A função **_splitpath** quebra um caminho em seus quatro componentes. o **_splitpath** manipula automaticamente argumentos de cadeia de caracteres multibyte conforme apropriado, reconhecendo sequências de caracteres multibyte de acordo com a página de código multibyte em uso no momento. **_wsplitpath** é uma versão de caractere largo do **_splitpath**; os argumentos para **_wsplitpath** são cadeias de caracteres largos. Caso contrário, essas funções se comportam de forma idêntica.
 
-**Observação de segurança** Essas funções acarretam uma ameaça em potencial em relação a um problema de estouro de buffer. Os problemas de estouro de buffer são um método frequente de ataque ao sistema, resultando em uma elevação de privilégio sem garantia. Para obter mais informações, consulte [Avoiding Buffer Overruns](/windows/desktop/SecBP/avoiding-buffer-overruns) (Evitando estouros de buffer). Versões mais seguras dessas funções estão disponíveis; consulte [_splitpath_s, _wsplitpath_s](splitpath-s-wsplitpath-s.md).
+**Observação de segurança** Essas funções acarretam uma ameaça em potencial em relação a um problema de estouro de buffer. Os problemas de estouro de buffer são um método frequente de ataque ao sistema, resultando em uma elevação de privilégio sem garantia. Para obter mais informações, consulte [Avoiding Buffer Overruns](/windows/win32/SecBP/avoiding-buffer-overruns) (Evitando estouros de buffer). Versões mais seguras dessas funções estão disponíveis; consulte [_splitpath_s, _wsplitpath_s](splitpath-s-wsplitpath-s.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -92,7 +92,7 @@ O **splitpath** função divide um caminho em seus quatro componentes. **splitpa
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tsplitpath**|**_splitpath**|**_splitpath**|**_wsplitpath**|
 
-Cada componente do caminho completo é armazenado em um buffer separado; as constantes de manifesto **max_drive**, **max_dir**, **max_fname**, e **max_ext** (definida em STDLIB. H) especificam o tamanho máximo para cada componente de arquivo. Componentes de arquivo maiores do que as constantes de manifesto correspondentes causam corrupção de heap.
+Cada componente do caminho completo é armazenado em um buffer separado; as constantes de manifesto **_MAX_DRIVE**, **_MAX_DIR**, **_MAX_FNAME**e **_MAX_EXT** (definidas em STDLIB. H) especifique o tamanho máximo para cada componente de arquivo. Componentes de arquivo maiores do que as constantes de manifesto correspondentes causam corrupção de heap.
 
 Cada buffer deve ser tão grande quanto a constante de manifesto correspondente para evitar um possível estouro de buffer.
 
@@ -105,11 +105,11 @@ A tabela a seguir lista os valores das constantes do manifesto.
 |**_MAX_FNAME**|256|
 |**_MAX_EXT**|256|
 
-Se o caminho completo não contém um componente (por exemplo, um nome de arquivo), **splitpath** atribui vazio cadeias de caracteres aos buffers correspondentes.
+Se o caminho completo não contiver um componente (por exemplo, um nome de arquivo), o **_splitpath** atribuirá cadeias de caracteres vazias aos buffers correspondentes.
 
-Você pode passar **nulo** à **splitpath** para qualquer parâmetro diferente de *caminho* que você não precisa.
+Você pode passar **NULL** para **_splitpath** para qualquer parâmetro que não seja o *caminho* que não seja necessário.
 
-Se *caminho* é **nulo**, o manipulador de parâmetro inválido será invocado, conforme descrito na [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, **errno** é definido como **EINVAL** e a função retornará **EINVAL**.
+Se *Path* for **NULL**, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, **errno** será definido como **EINVAL** e a função retornará **EINVAL**.
 
 ## <a name="requirements"></a>Requisitos
 

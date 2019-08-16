@@ -40,14 +40,14 @@ helpviewer_keywords:
 - _vsnwprintf_s function
 - formatted text [C++]
 ms.assetid: 147ccfce-58c7-4681-a726-ef54ac1c604e
-ms.openlocfilehash: 255c3b760dec1495a4f9a82915878a5504844f24
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 50e38e3177462f17436727cf26d1e7dade9cb882
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188720"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499091"
 ---
-# <a name="vsnprintfs-vsnprintfs-vsnprintfsl-vsnwprintfs-vsnwprintfsl"></a>vsnprintf_s, _vsnprintf_s, _vsnprintf_s_l, _vsnwprintf_s, _vsnwprintf_s_l
+# <a name="vsnprintf_s-_vsnprintf_s-_vsnprintf_s_l-_vsnwprintf_s-_vsnwprintf_s_l"></a>vsnprintf_s, _vsnprintf_s, _vsnprintf_s_l, _vsnwprintf_s, _vsnwprintf_s_l
 
 Grave saída formatada usando um ponteiro para uma lista de argumentos. Essas são versões de [vsnprintf, _vsnprintf, _vsnprintf_l, _vsnwprintf, _vsnwprintf_l](vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md) com aprimoramentos de segurança, conforme descrito em [Recursos de segurança no CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
@@ -113,7 +113,7 @@ int _vsnwprintf_s(
 Local de armazenamento de saída.
 
 *sizeOfBuffer*<br/>
-O tamanho do *buffer* para saída, como o número de caracteres.
+O tamanho do *buffer* para saída, como a contagem de caracteres.
 
 *count*<br/>
 Número máximo de caracteres a gravar (não incluindo o nulo de terminação) ou [_TRUNCATE](../../c-runtime-library/truncate.md).
@@ -131,34 +131,34 @@ Para obter mais informações, consulte [Especificações de formato](../../c-ru
 
 ## <a name="return-value"></a>Valor de retorno
 
-**vsnprintf_s**, **vsnprintf_s** e **vsnwprintf_s** retornar o número de caracteres gravados, não incluindo o nulo de terminação ou um valor negativo se ocorrer um erro de saída. **vsnprintf_s** é idêntica à **vsnprintf_s**. **vsnprintf_s** é incluído para conformidade com o padrão ANSI. **_vnsprintf** é mantido para compatibilidade com versões anteriores.
+**vsnprintf_s**, **_vsnprintf_s** e **_vsnwprintf_s** retornam o número de caracteres gravados, sem incluir o nulo de terminação ou um valor negativo se ocorrer um erro de saída. **vsnprintf_s** é idêntico a **_vsnprintf_s**. o **vsnprintf_s** é incluído para conformidade com o padrão ANSI. **_vnsprintf** é retido para compatibilidade com versões anteriores.
 
-Se o armazenamento necessário para armazenar os dados e um nulo de terminação exceder *sizeOfBuffer*, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md), a menos que *contagem*  está [TRUNCATE](../../c-runtime-library/truncate.md), caso em que o máximo da cadeia de caracteres que se ajustará *buffer* é gravado e -1 retornado. Se a execução continua após o manipulador de parâmetro inválido, essas funções definirão *buffer* para uma cadeia de caracteres vazia, defina **errno** para **ERANGE**e retornarão -1.
+Se o armazenamento necessário para armazenar os dados e um nulo de terminação exceder *sizeOfBuffer*, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md), a menos que *Count* seja [_TRUNCATE](../../c-runtime-library/truncate.md), caso em que grande parte do a cadeia de caracteres como se ajustará ao *buffer* é gravada e-1 retornado. Se a execução continuar após o manipulador de parâmetros inválido, essas funções definirão o *buffer* como uma cadeia de caracteres vazia, definirá **errno** como **ERANGE**e retornará-1.
 
-Se *buffer* ou *formato* é um **nulo** ponteiro, ou se *contagem* é menor que ou igual a zero, o manipulador de parâmetro inválido será invocado. Se a execução puder continuar, essas funções definirão **errno** à **EINVAL** e retornarão -1.
+Se o *buffer* ou o *formato* for um ponteiro **nulo** , ou se *Count* for menor ou igual a zero, o manipulador de parâmetro inválido será invocado. Se a execução tiver permissão para continuar, essas funções definem **errno** como **EINVAL** e retornam-1.
 
 ### <a name="error-conditions"></a>Condições de Erro
 
-|**Condição**|Valor de|**errno**|
+|**Problema**|Valor de|**errno**|
 |-----------------|------------|-------------|
-|*buffer* é **nulo**|-1|**EINVAL**|
-|*formato* é **nulo**|-1|**EINVAL**|
-|*count* <= 0|-1|**EINVAL**|
-|*sizeOfBuffer* muito pequeno (e *contagem* ! = **TRUNCATE**)|-1 (e *buffer* definido como uma cadeia de caracteres vazia)|**ERANGE**|
+|o *buffer* é **nulo**|-1|**EINVAL**|
+|o *formato* é **nulo**|-1|**EINVAL**|
+|*contagem* < = 0|-1|**EINVAL**|
+|*sizeOfBuffer* muito pequeno (e *contagem* ! = **_TRUNCATE**)|-1 (e *buffer* definido como uma cadeia de caracteres vazia)|**ERANGE**|
 
 ## <a name="remarks"></a>Comentários
 
-Cada uma dessas funções usa um ponteiro para uma lista de argumentos, em seguida, formata e grava até *contagem* caracteres dos dados fornecidos para a memória apontada por *buffer* e acrescenta um nulo de terminação.
+Cada uma dessas funções usa um ponteiro para uma lista de argumentos e, em seguida, formata e grava até a *contagem* de caracteres dos dados especificados para a memória apontada pelo *buffer* e acrescenta um nulo de terminação.
 
-Se *contagem* é [TRUNCATE](../../c-runtime-library/truncate.md), em seguida, essas funções gravam o máximo da cadeia de caracteres que couber *buffer* , deixando espaço para um nulo de terminação. Se a cadeia de caracteres inteira (com nulo de terminação) couber na *buffer*, em seguida, essas funções retornam o número de caracteres gravados (não incluindo o nulo de terminação); caso contrário, essas funções retornarão -1 para indicar que o truncamento ocorreu.
+Se *Count* for [_TRUNCATE](../../c-runtime-library/truncate.md), essas funções gravarão a maior parte da cadeia de caracteres que caberá no *buffer* , deixando espaço para um nulo de encerramento. Se a cadeia de caracteres inteira (com terminação de NULL) couber no *buffer*, essas funções retornarão o número de caracteres gravados (sem incluir o nulo de terminação); caso contrário, essas funções retornam-1 para indicar que o truncamento ocorreu.
 
-As versões dessas funções com o **l** sufixo são idênticas, exceto que eles usam o parâmetro de localidade passado em vez da localidade do thread atual.
+As versões dessas funções com o sufixo **_L** são idênticas, exceto pelo fato de que usam o parâmetro de localidade passado em vez da localidade do thread atual.
 
 > [!IMPORTANT]
-> Verifique se *format* não é uma cadeia de caracteres definida pelo usuário. Para obter mais informações, consulte [Avoiding Buffer Overruns](/windows/desktop/SecBP/avoiding-buffer-overruns) (Evitando estouros de buffer).
+> Verifique se *format* não é uma cadeia de caracteres definida pelo usuário. Para obter mais informações, consulte [Avoiding Buffer Overruns](/windows/win32/SecBP/avoiding-buffer-overruns) (Evitando estouros de buffer).
 
 > [!NOTE]
-> Para garantir que haja espaço para o nulo de terminação, certifique-se de que *contagem* for estritamente menor que o tamanho do buffer ou use **TRUNCATE**.
+> Para garantir que haja espaço para o nulo de encerramento, verifique se a *contagem* é estritamente menor que o comprimento do buffer ou use **_TRUNCATE**.
 
 Em C++, o uso dessas funções é simplificado pelas sobrecargas de modelo; as sobrecargas podem inferir o tamanho do buffer automaticamente (eliminando a necessidade de especificar um argumento de tamanho) e podem substituir automaticamente funções mais antigas e não seguras por suas equivalentes mais recentes e seguras. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../../c-runtime-library/secure-template-overloads.md).
 

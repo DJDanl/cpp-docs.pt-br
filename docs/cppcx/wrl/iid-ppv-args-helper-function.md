@@ -7,19 +7,19 @@ f1_keywords:
 helpviewer_keywords:
 - IID_PPV_ARGS_Helper function
 ms.assetid: afee9b23-8df1-4575-903f-e9ba748418f0
-ms.openlocfilehash: 5ef4dd6c9db2d19e0c8a4143c5b4ed3f0ac75f6a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e7733ae6084b64c20dff5a2c35d7a31c614d6e44
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398258"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500500"
 ---
-# <a name="iidppvargshelper-function"></a>Função IID_PPV_ARGS_Helper
+# <a name="iid_ppv_args_helper-function"></a>Função IID_PPV_ARGS_Helper
 
-Verifica se o tipo do argumento especificado deriva o `IUnknown` interface.
+Verifica se o tipo do argumento especificado deriva da `IUnknown` interface.
 
 > [!IMPORTANT]
-> Essa especialização de modelo oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código. Use [IID_PPV_ARGS](/windows/desktop/api/combaseapi/nf-combaseapi-iid_ppv_args) em vez disso.
+> Esta especialização de modelo dá suporte à infraestrutura WRL e não se destina a ser usada diretamente do seu código. Use [IID_PPV_ARGS](/windows/win32/api/combaseapi/nf-combaseapi-iid_ppv_args) em vez disso.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -33,20 +33,20 @@ void** IID_PPV_ARGS_Helper(
 ### <a name="parameters"></a>Parâmetros
 
 *T*<br/>
-O tipo do argumento *pp*.
+O tipo de argumento *PP*.
 
 *pp*<br/>
-Um ponteiro duplamente indireta.
+Um ponteiro de indireto duplo.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Argumento *pp* convertido para um ponteiro-para-um-ponteiro à **void**.
+Argumento *PP* convertido para um ponteiro para ponteiro para **void**.
 
 ## <a name="remarks"></a>Comentários
 
-Um erro de tempo de compilação será gerado se o parâmetro de modelo *T* não deriva de `IUnknown`.
+Um erro de tempo de compilação será gerado se o parâmetro de modelo *T* não `IUnknown`derivar de.
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** client.h
+**Cabeçalho:** Client. h
 

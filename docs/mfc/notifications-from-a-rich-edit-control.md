@@ -7,12 +7,12 @@ helpviewer_keywords:
 - rich edit controls [MFC], notifications
 - notifications [MFC], from CRichEditCtrl
 ms.assetid: eb5304fe-f4f3-4557-9ebf-3095dea383c4
-ms.openlocfilehash: bc4c027ff26df89539b22c6d04f1d1dc95fc459a
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: d097996e61a3d461dacd3d30e13b9262c7d32434
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916395"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508045"
 ---
 # <a name="notifications-from-a-rich-edit-control"></a>Notificações de um controle de edição avançada
 
@@ -22,13 +22,13 @@ Para definir a máscara de evento para um controle de edição rico, use a funç
 
 Os parágrafos a seguir listam várias notificações específicas e seus usos:
 
-- EN_MSGFILTER manipular a notificação EN_MSGFILTER permite que uma classe, o controle de edição rico ou sua janela pai, filtre todas as entradas de teclado e mouse para o controle. O manipulador pode impedir que a mensagem de teclado ou mouse seja processada ou pode alterar a mensagem modificando a estrutura [MSGFILTER](/windows/desktop/api/richedit/ns-richedit-msgfilter) especificada.
+- EN_MSGFILTER manipular a notificação EN_MSGFILTER permite que uma classe, o controle de edição rico ou sua janela pai, filtre todas as entradas de teclado e mouse para o controle. O manipulador pode impedir que a mensagem de teclado ou mouse seja processada ou pode alterar a mensagem modificando a estrutura [MSGFILTER](/windows/win32/api/richedit/ns-richedit-msgfilter) especificada.
 
 - EN_PROTECTED manipule a mensagem de notificação EN_PROTECTED para detectar quando o usuário tenta modificar o texto protegido. Para marcar um intervalo de texto como protegido, você pode definir o efeito de caractere protegido. Para obter mais informações, consulte [formatação de caracteres em controles de edição avançados](../mfc/character-formatting-in-rich-edit-controls.md).
 
-- EN_DROPFILES você pode habilitar o usuário a soltar arquivos em um controle de edição rico processando a mensagem de notificação EN_DROPFILES. A estrutura [ENDROPFILES](/windows/desktop/api/richedit/ns-richedit-endropfiles) especificada contém informações sobre os arquivos que estão sendo removidos.
+- EN_DROPFILES você pode habilitar o usuário a soltar arquivos em um controle de edição rico processando a mensagem de notificação EN_DROPFILES. A estrutura [ENDROPFILES](/windows/win32/api/richedit/ns-richedit-endropfiles) especificada contém informações sobre os arquivos que estão sendo removidos.
 
-- EN_SELCHANGE um aplicativo pode detectar quando a seleção atual muda processando a mensagem de notificação EN_SELCHANGE. A mensagem de notificação especifica uma estrutura [SELCHANGE](/windows/desktop/api/richedit/ns-richedit-selchange) que contém informações sobre a nova seleção.
+- EN_SELCHANGE um aplicativo pode detectar quando a seleção atual muda processando a mensagem de notificação EN_SELCHANGE. A mensagem de notificação especifica uma estrutura [SELCHANGE](/windows/win32/api/richedit/ns-richedit-selchange) que contém informações sobre a nova seleção.
 
 ## <a name="see-also"></a>Consulte também
 

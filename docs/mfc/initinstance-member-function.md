@@ -9,33 +9,33 @@ helpviewer_keywords:
 - MFC, initializing
 - initializing MFC applications
 ms.assetid: 4ef09267-ff7f-4c39-91a0-57454a264f83
-ms.openlocfilehash: c96d009cf19981a475209233ee397af1cdcb352d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c1f83f794cc40fa7f4d290fa4a147fe9f7e074be
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62219511"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508365"
 ---
 # <a name="initinstance-member-function"></a>Função de membro InitInstance
 
-O sistema operacional Windows permite que você execute mais de uma cópia ou "instância" do mesmo aplicativo. `WinMain` chamadas [InitInstance](../mfc/reference/cwinapp-class.md#initinstance) sempre que uma nova instância do aplicativo é iniciado.
+O sistema operacional Windows permite executar mais de uma cópia, ou "instância", do mesmo aplicativo. `WinMain`chama [InitInstance](../mfc/reference/cwinapp-class.md#initinstance) toda vez que uma nova instância do aplicativo é iniciada.
 
-O padrão `InitInstance` implementação criada pelo Assistente de aplicativo MFC realiza as seguintes tarefas:
+A implementação `InitInstance` padrão criada pelo assistente de aplicativo MFC executa as seguintes tarefas:
 
-- Como sua ação central, cria os modelos de documento que por sua vez criem documentos, exibições e janelas de quadro. Para obter uma descrição desse processo, consulte [criação do modelo de documento](../mfc/document-template-creation.md).
+- Como sua ação central, o cria os modelos de documento que, por sua vez, criam documentos, exibições e janelas de quadros. Para obter uma descrição desse processo, consulte [criação de modelo de documento](../mfc/document-template-creation.md).
 
-- Carrega as opções de arquivo padrão de um arquivo. ini ou no registro do Windows, incluindo os nomes dos arquivos usados mais recentemente.
+- Carrega opções de arquivo padrão de um arquivo. ini ou do registro do Windows, incluindo os nomes dos arquivos usados mais recentemente.
 
 - Registra um ou mais modelos de documento.
 
-- Para um aplicativo MDI, cria uma janela de quadro principal.
+- Para um aplicativo MDI, o cria uma janela de quadro principal.
 
-- Processa a linha de comando para abrir um documento especificado na linha de comando ou abrir um documento novo e vazio.
+- Processa a linha de comando para abrir um documento especificado na linha de comando ou para abrir um documento novo e vazio.
 
 Você pode adicionar seu próprio código de inicialização ou modificar o código escrito pelo assistente.
 
 > [!NOTE]
->  Aplicativos MFC devem ser inicializados como um compartimento de único thread (STA). Se você chamar [CoInitializeEx](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializeex) em seu `InitInstance` substituir, especifique COINIT_APARTMENTTHREADED (em vez de COINIT_MULTITHREADED).
+>  Os aplicativos MFC devem ser inicializados como STA (single-threaded apartment). Se você chamar [CoInitializeEx](/windows/win32/api/combaseapi/nf-combaseapi-coinitializeex) em sua `InitInstance` substituição, especifique COINIT_APARTMENTTHREADED (em vez de COINIT_MULTITHREADED).
 
 ## <a name="see-also"></a>Consulte também
 

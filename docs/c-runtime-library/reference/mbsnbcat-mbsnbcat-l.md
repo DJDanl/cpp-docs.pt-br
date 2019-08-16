@@ -32,16 +32,16 @@ helpviewer_keywords:
 - _mbsnbcat function
 - tcsncat function
 ms.assetid: aa0f1d30-0ddd-48d1-88eb-c6884b20fd91
-ms.openlocfilehash: c1da330ee0faba922f1e5b193fa095b97d3f4745
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 476909858a8537fb96d56d3230fd48719d5564ed
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62285539"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499829"
 ---
-# <a name="mbsnbcat-mbsnbcatl"></a>_mbsnbcat, _mbsnbcat_l
+# <a name="_mbsnbcat-_mbsnbcat_l"></a>_mbsnbcat, _mbsnbcat_l
 
-Acrescenta, no máximo, os primeiros **n** bytes de uma cadeia de caracteres multibyte a outra. Estão disponíveis versões mais seguras dessas funções, consulte [_mbsnbcat_s, _mbsnbcat_s_l](mbsnbcat-s-mbsnbcat-s-l.md).
+Acrescenta, no máximo, os primeiros **n** bytes de uma cadeia de caracteres multibyte para outra. Estão disponíveis versões mais seguras dessas funções, consulte [_mbsnbcat_s, _mbsnbcat_s_l](mbsnbcat-s-mbsnbcat-s-l.md).
 
 > [!IMPORTANT]
 > Esta API não pode ser usada em aplicativos executados no Tempo de Execução do Windows. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
@@ -84,24 +84,24 @@ Cadeia de caracteres de destino de caractere multibyte terminada em nulo.
 Cadeia de caracteres de origem de caractere multibyte terminada em nulo.
 
 *count*<br/>
-Número de bytes do *src* para acrescentar ao *dest*.
+Número de bytes de *src* para anexar ao *dest*.
 
 *locale*<br/>
 Localidade a usar.
 
 ## <a name="return-value"></a>Valor de retorno
 
-**mbsnbcat** retorna um ponteiro para a cadeia de caracteres de destino. Nenhum valor retornado é reservado para indicar um erro.
+**_mbsnbcat** retorna um ponteiro para a cadeia de caracteres de destino. Nenhum valor retornado é reservado para indicar um erro.
 
 ## <a name="remarks"></a>Comentários
 
-O **mbsnbcat** função acrescenta, no máximo, os primeiros *contagem* bytes de *src* para *dest*. Se o byte imediatamente antes do caractere nulo em *dest* for um byte o byte inicial de *src* substituirá esse byte inicial. Caso contrário, o byte inicial de *src* substitui o caractere nulo de terminação de *dest*. Se aparecer um byte nulo no *src* antes de *contagem* bytes serem acrescentados, **mbsnbcat** acrescentará todos os bytes de *src*, até o caractere nulo. Se *contagem* é maior que o comprimento de *src*, o comprimento da *src* é usado no lugar de *contagem*. A cadeia de caracteres resultante é terminada com um caractere nulo. Se ocorrer cópia entre cadeias de caracteres que se sobrepõem, o comportamento será indefinido.
+A função **_mbsnbcat** acrescenta, no máximo, a primeira *contagem* de bytes de *src* para *dest*. Se o byte que precede imediatamente o caractere nulo no *dest* for um byte de Lead, o byte inicial da *src* substituirá esse byte de Lead. Caso contrário, o byte inicial de *src* substituirá o caractere nulo de terminação de *dest*. Se um byte nulo aparecer em *src* antes de os bytes de *contagem* serem acrescentados, **_mbsnbcat** acrescentará todos os bytes da *src*, até o caractere nulo. Se *Count* for maior que o comprimento de *src*, o comprimento de *src* será usado no lugar da *contagem*. A cadeia de caracteres resultante é terminada com um caractere nulo. Se ocorrer cópia entre cadeias de caracteres que se sobrepõem, o comportamento será indefinido.
 
-O valor de saída é afetado pela configuração da categoria **LC_CTYPE** da localidade. Consulte [setlocale](setlocale-wsetlocale.md) para obter mais informações. O **mbsnbcat** versão da função usa a localidade atual desse comportamento dependente da localidade; as **mbsnbcat_l** versão é idêntico, exceto que eles usam o parâmetro de localidade passado em seu lugar. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+O valor de saída é afetado pela configuração da categoria **LC_CTYPE** da localidade. Consulte [setlocale](setlocale-wsetlocale.md) para obter mais informações. A versão **_mbsnbcat** da função usa a localidade atual para esse comportamento dependente de localidade; a versão do **_mbsnbcat_l** é idêntica, exceto pelo fato de usar o parâmetro de localidade passado em seu lugar. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
-**Observação de Segurança** Use uma cadeia de caracteres terminada em nulo. A cadeia de caracteres terminada em nulo não deve exceder o tamanho do buffer de destino. Para obter mais informações, consulte [Avoiding Buffer Overruns](/windows/desktop/SecBP/avoiding-buffer-overruns) (Evitando estouros de buffer).
+**Observação de Segurança** Use uma cadeia de caracteres terminada em nulo. A cadeia de caracteres terminada em nulo não deve exceder o tamanho do buffer de destino. Para obter mais informações, consulte [Avoiding Buffer Overruns](/windows/win32/SecBP/avoiding-buffer-overruns) (Evitando estouros de buffer).
 
-Se *dest* ou *src* está **nulo**, a função gerará um erro de parâmetro inválido, conforme descrito na [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se o erro for tratado, a função retornará **EINVAL** e define **errno** para **EINVAL**.
+Se *dest* ou *src* for **NULL**, a função gerará um erro de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se o erro for tratado, a função retornará **EINVAL** e definirá **errno** como **EINVAL**.
 
 No C++, essas funções têm sobrecargas de modelo que invocam os equivalentes mais novos e seguros dessas funções. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../../c-runtime-library/secure-template-overloads.md).
 

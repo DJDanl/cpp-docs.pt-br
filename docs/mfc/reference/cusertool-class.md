@@ -30,16 +30,16 @@ helpviewer_keywords:
 - CUserTool [MFC], m_strInitialDirectory
 - CUserTool [MFC], m_strLabel
 ms.assetid: 7c287d3e-d012-488d-b4e1-aa0f83f294bb
-ms.openlocfilehash: 5bb0ae073b722c97e8e30158f8f7832fd88b2fbc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b73cb3d3c6e244a9aa41a91a3ee9ff1efa98d496
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62323418"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502239"
 ---
 # <a name="cusertool-class"></a>Classe CUserTool
 
-Uma ferramenta de usuário é um item de menu que executa um aplicativo externo. O **ferramentas** guia o **personalizar** caixa de diálogo ( [classe CMFCToolBarsCustomizeDialog](../../mfc/reference/cmfctoolbarscustomizedialog-class.md)) permite que o usuário adicione ferramentas de usuário e especifique o nome, o comando, argumentos, e diretório inicial para cada ferramenta de usuário.
+Uma ferramenta de usuário é um item de menu que executa um aplicativo externo. A guia **ferramentas** da caixa de diálogo **Personalizar** ( [Classe CMFCToolBarsCustomizeDialog](../../mfc/reference/cmfctoolbarscustomizedialog-class.md)) permite que o usuário adicione ferramentas de usuário e especifique o nome, o comando, os argumentos e o diretório inicial para cada ferramenta de usuário.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -54,13 +54,13 @@ class CUserTool : public CObject
 |Nome|Descrição|
 |----------|-----------------|
 |[CUserTool::CopyIconToClipboard](#copyicontoclipboard)||
-|[CUserTool::DrawToolIcon](#drawtoolicon)|Desenha o ícone de ferramenta do usuário em um retângulo especificado.|
-|[CUserTool::GetCommand](#getcommand)|Retorna uma cadeia de caracteres que contém o texto do comando associado com a ferramenta de usuário.|
+|[CUserTool::DrawToolIcon](#drawtoolicon)|Desenha o ícone da ferramenta do usuário em um retângulo especificado.|
+|[CUserTool::GetCommand](#getcommand)|Retorna uma cadeia de caracteres que contém o texto do comando associado à ferramenta do usuário.|
 |[CUserTool::GetCommandId](#getcommandid)|Retorna a ID de comando do item de menu da ferramenta de usuário.|
-|[CUserTool::Invoke](#invoke)|Executa o comando associado com a ferramenta de usuário.|
-|[CUserTool::Serialize](#serialize)|Lê ou grava este objeto de ou para um arquivo morto. (Substitui [CObject::Serialize](../../mfc/reference/cobject-class.md#serialize).)|
-|[CUserTool::SetCommand](#setcommand)|Define o comando associado com a ferramenta de usuário.|
-|[CUserTool::SetToolIcon](#settoolicon)|Carrega o ícone para a ferramenta de usuário do aplicativo associado com a ferramenta.|
+|[CUserTool::Invoke](#invoke)|Executa o comando associado à ferramenta do usuário.|
+|[CUserTool:: Serialize](#serialize)|Lê ou grava esse objeto de ou para um arquivo. (Substitui [CObject:: Serialize](../../mfc/reference/cobject-class.md#serialize).)|
+|[CUserTool::SetCommand](#setcommand)|Define o comando associado à ferramenta do usuário.|
+|[CUserTool::SetToolIcon](#settoolicon)|Carrega o ícone da ferramenta do usuário a partir do aplicativo associado à ferramenta.|
 
 ### <a name="protected-methods"></a>Métodos Protegidos
 
@@ -72,9 +72,9 @@ class CUserTool : public CObject
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CUserTool::m_strArguments](#m_strarguments)|Os argumentos de linha de comando para a ferramenta de usuário.|
+|[CUserTool::m_strArguments](#m_strarguments)|Os argumentos de linha de comando para a ferramenta do usuário.|
 |[CUserTool::m_strInitialDirectory](#m_strinitialdirectory)|O diretório inicial para a ferramenta de usuário.|
-|[CUserTool::m_strLabel](#m_strlabel)|O nome da ferramenta que é exibido no item de menu para a ferramenta.|
+|[CUserTool::m_strLabel](#m_strlabel)|O nome da ferramenta exibida no item de menu para a ferramenta.|
 
 ## <a name="remarks"></a>Comentários
 
@@ -82,7 +82,7 @@ Para obter mais informações sobre como habilitar as ferramentas de usuário em
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir demonstra como criar uma ferramenta de um `CUserToolsManager` do objeto, defina o `m_strLabel` variável de membro e defina o aplicativo que executa a ferramenta de usuário. Este trecho de código faz parte do [amostra de demonstração do Visual Studio](../../overview/visual-cpp-samples.md).
+O exemplo a seguir demonstra como criar uma ferramenta a partir `CUserToolsManager` de um objeto, `m_strLabel` definir a variável de membro e definir o aplicativo que a ferramenta do usuário executa. Este trecho de código faz parte do [exemplo de demonstração do Visual Studio](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#35](../../mfc/codesnippet/cpp/cusertool-class_1.cpp)]
 
@@ -94,11 +94,11 @@ O exemplo a seguir demonstra como criar uma ferramenta de um `CUserToolsManager`
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** afxusertool.h
+**Cabeçalho:** afxusertool. h
 
 ##  <a name="copyicontoclipboard"></a>  CUserTool::CopyIconToClipboard
 
-Para obter mais detalhes, consulte o código-fonte localizado na **VC\\atlmfc\\src\\mfc** pasta de instalação do Visual Studio.
+Para obter mais detalhes, consulte o código-fonte localizado na pasta **vc\\atlmfc\\src\\MFC** da instalação do Visual Studio.
 
 ```
 BOOL CopyIconToClipboard();
@@ -108,9 +108,9 @@ BOOL CopyIconToClipboard();
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="drawtoolicon"></a>  CUserTool::DrawToolIcon
+##  <a name="drawtoolicon"></a>CUserTool::D rawToolIcon
 
-Desenha o ícone de ferramenta do usuário no Centro de um retângulo especificado.
+Desenha o ícone da ferramenta do usuário no centro de um retângulo especificado.
 
 ```
 void DrawToolIcon(
@@ -121,14 +121,14 @@ void DrawToolIcon(
 ### <a name="parameters"></a>Parâmetros
 
 *pDC*<br/>
-[in] Um ponteiro para um contexto de dispositivo.
+no Um ponteiro para um contexto de dispositivo.
 
 *rectImage*<br/>
-[in] Especifica as coordenadas da área para exibir o ícone.
+no Especifica as coordenadas da área para exibir o ícone.
 
-##  <a name="getcommand"></a>  CUserTool::GetCommand
+##  <a name="getcommand"></a>CUserTool:: GetCommand
 
-Retorna uma cadeia de caracteres que contém o texto do comando associado com a ferramenta de usuário.
+Retorna uma cadeia de caracteres que contém o texto do comando associado à ferramenta do usuário.
 
 ```
 const CString& GetCommand() const;
@@ -136,7 +136,7 @@ const CString& GetCommand() const;
 
 ### <a name="return-value"></a>Valor de retorno
 
-Uma referência ao `CString` objeto que contém o texto do comando associado com a ferramenta de usuário.
+Uma referência ao `CString` objeto que contém o texto do comando associado à ferramenta do usuário.
 
 ##  <a name="getcommandid"></a>  CUserTool::GetCommandId
 
@@ -148,11 +148,11 @@ UINT GetCommandId() const;
 
 ### <a name="return-value"></a>Valor de retorno
 
-A ID de comando da ferramenta usuário.
+A ID de comando desta ferramenta de usuário.
 
 ##  <a name="invoke"></a>  CUserTool::Invoke
 
-Executa o comando associado com a ferramenta de usuário.
+Executa o comando associado à ferramenta do usuário.
 
 ```
 virtual BOOL Invoke();
@@ -160,11 +160,11 @@ virtual BOOL Invoke();
 
 ### <a name="return-value"></a>Valor de retorno
 
-Diferente de zero se o comando foi executado com êxito; Caso contrário, 0.
+Diferente de zero se o comando foi executado com êxito; caso contrário, 0.
 
 ### <a name="remarks"></a>Comentários
 
-Chamadas [ShellExecute](/windows/desktop/api/shellapi/nf-shellapi-shellexecutea) para executar um comando associado com a ferramenta de usuário. A função falhará se o comando está vazio ou se [ShellExecute](/windows/desktop/api/shellapi/nf-shellapi-shellexecutea) falhar.
+Chama [ShellExecute](/windows/win32/api/shellapi/nf-shellapi-shellexecutew) para executar um comando associado à ferramenta User. A função falhará se o comando estiver vazio ou se [ShellExecute](/windows/win32/api/shellapi/nf-shellapi-shellexecutew) falhar.
 
 ##  <a name="loaddefaulticon"></a>  CUserTool::LoadDefaultIcon
 
@@ -176,17 +176,17 @@ virtual HICON LoadDefaultIcon();
 
 ### <a name="return-value"></a>Valor de retorno
 
-Um identificador para o ícone carregado (HICON), ou nulo se o ícone padrão não pode ser carregado.
+Um identificador para o ícone carregado (HICON) ou nulo se o ícone padrão não puder ser carregado.
 
 ### <a name="remarks"></a>Comentários
 
-O framework chama esse método quando não é possível carregar um ícone para uma ferramenta definida pelo usuário a partir do arquivo executável da ferramenta.
+A estrutura chama esse método quando não é possível carregar um ícone para uma ferramenta definida pelo usuário do arquivo executável da ferramenta.
 
-Substitua este método para fornecer seu próprio ícone padrão da ferramenta.
+Substitua esse método para fornecer seu próprio ícone de ferramenta padrão.
 
-##  <a name="m_strarguments"></a>  CUserTool::m_strArguments
+##  <a name="m_strarguments"></a>CUserTool::m_strArguments
 
-Os argumentos de linha de comando para a ferramenta de usuário.
+Os argumentos de linha de comando para a ferramenta do usuário.
 
 ```
 CString m_strArguments;
@@ -194,9 +194,9 @@ CString m_strArguments;
 
 ### <a name="remarks"></a>Comentários
 
-Essa cadeia de caracteres é passada para a ferramenta quando você chama [CUserTool::Invoke](#invoke) ou quando um usuário clica o comando associado a essa ferramenta.
+Essa cadeia de caracteres é passada para a ferramenta quando você chama [CUserTool:: Invoke](#invoke) ou quando um usuário clica no comando associado a essa ferramenta.
 
-##  <a name="m_strinitialdirectory"></a>  CUserTool::m_strInitialDirectory
+##  <a name="m_strinitialdirectory"></a>CUserTool::m_strInitialDirectory
 
 Especifica o diretório inicial para a ferramenta de usuário.
 
@@ -206,7 +206,7 @@ CString m_strInitialDirectory;
 
 ### <a name="remarks"></a>Comentários
 
-Essa variável Especifica o diretório inicial que a ferramenta é executada quando você chamar [CUserTool::Invoke](#invoke) ou quando um usuário clica o comando associado a essa ferramenta.
+Essa variável especifica o diretório inicial que a ferramenta executa quando você chama [CUserTool:: Invoke](#invoke) ou quando um usuário clica no comando associado a essa ferramenta.
 
 ##  <a name="m_strlabel"></a>  CUserTool::m_strLabel
 
@@ -216,9 +216,9 @@ O rótulo que é exibido no item de menu para a ferramenta.
 CString m_strLabel;
 ```
 
-##  <a name="serialize"></a>  CUserTool::Serialize
+##  <a name="serialize"></a>CUserTool:: Serialize
 
-Para obter mais detalhes, consulte o código-fonte localizado na **VC\\atlmfc\\src\\mfc** pasta de instalação do Visual Studio.
+Para obter mais detalhes, consulte o código-fonte localizado na pasta **vc\\atlmfc\\src\\MFC** da instalação do Visual Studio.
 
 ```
 virtual void Serialize(CArchive& ar);
@@ -226,13 +226,13 @@ virtual void Serialize(CArchive& ar);
 
 ### <a name="parameters"></a>Parâmetros
 
-[in] *ar*<br/>
+no *ar*<br/>
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="setcommand"></a>  CUserTool::SetCommand
+##  <a name="setcommand"></a>CUserTool:: SetCommand
 
-Define o aplicativo que executa a ferramenta de usuário.
+Define o aplicativo que a ferramenta do usuário executa.
 
 ```
 void SetCommand(LPCTSTR lpszCmd);
@@ -241,15 +241,15 @@ void SetCommand(LPCTSTR lpszCmd);
 ### <a name="parameters"></a>Parâmetros
 
 *lpszCmd*<br/>
-[in] Especifica o novo aplicativo a ser associado com a ferramenta de usuário.
+no Especifica o novo aplicativo a ser associado à ferramenta do usuário.
 
 ### <a name="remarks"></a>Comentários
 
-Chame esse método para definir um novo aplicativo que executa a ferramenta de usuário. O método destrói o ícone antigo e carrega um novo ícone do aplicativo determinado. Se ele não é possível carregar um ícone do aplicativo, ele carrega o ícone padrão para uma ferramenta do usuário chamando [CUserTool::LoadDefaultIcon](#loaddefaulticon).
+Chame esse método para definir um novo aplicativo que a ferramenta do usuário executa. O método destrói o ícone antigo e carrega um novo ícone a partir do determinado aplicativo. Se não for possível carregar um ícone do aplicativo, ele carregará o ícone padrão para uma ferramenta de usuário chamando [CUserTool:: LoadDefaultIcon](#loaddefaulticon).
 
 ##  <a name="settoolicon"></a>  CUserTool::SetToolIcon
 
-Carrega o ícone para a ferramenta de usuário do aplicativo que usa a ferramenta.
+Carrega o ícone da ferramenta do usuário a partir do aplicativo usado pela ferramenta.
 
 ```
 virtual HICON SetToolIcon();
@@ -261,7 +261,7 @@ Um identificador para o ícone carregado.
 
 ### <a name="remarks"></a>Comentários
 
-Chame esse método para carregar o ícone a ser exibido no item de menu. Esse método pesquisará o ícone no arquivo executável que usa a ferramenta. Se ele não tem um ícone padrão, o ícone fornecido pelo [CUserTool::LoadDefaultIcon](#loaddefaulticon) é usado em vez disso.
+Chame esse método para carregar o ícone a ser exibido no item de menu. Esse método procura o ícone no arquivo executável usado pela ferramenta. Se não tiver um ícone padrão, o ícone fornecido por [CUserTool:: LoadDefaultIcon](#loaddefaulticon) será usado em vez disso.
 
 ## <a name="see-also"></a>Consulte também
 

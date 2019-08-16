@@ -1,17 +1,17 @@
 ---
-title: (C++ COM atributo oculto)
+title: Hidden (C++ atributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.hidden
 helpviewer_keywords:
 - hidden attribute
 ms.assetid: 199c96dd-fc07-46c7-af93-92020aebebe7
-ms.openlocfilehash: d1d87ea057b22984a0e0f8f5518899e36f7d0221
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 75b03877b1204d6e1c4770f5ba9c8c88338b3394
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409506"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501455"
 ---
 # <a name="hidden"></a>oculto
 
@@ -25,24 +25,24 @@ Indica que o item existe, mas não deve ser exibido em um navegador orientado ao
 
 ## <a name="remarks"></a>Comentários
 
-O **ocultos** atributo C++ tem a mesma funcionalidade que o [oculto](/windows/desktop/Midl/hidden) atributo MIDL.
+O atributo **Hidden** C++ tem a mesma funcionalidade que o atributo MIDL [oculto](/windows/win32/Midl/hidden) .
 
 ## <a name="example"></a>Exemplo
 
-Veja o exemplo de [associável](bindable.md) para obter um exemplo de como usar **oculto**.
+Consulte o exemplo de [ligável](bindable.md) para obter um exemplo de como usar **Hidden**.
 
 ## <a name="requirements"></a>Requisitos
 
-### <a name="attribute-context"></a>Atributo de contexto
+### <a name="attribute-context"></a>Contexto de atributo
 
 |||
 |-|-|
-|**Aplica-se a**|**interface**, **classe**, **struct**, método, propriedade|
+|**Aplica-se a**|**interface**, **classe**, **struct**, método, Propriedade|
 |**Repetível**|Não|
-|**Atributos obrigatórios**|**coclass** (quando aplicado a **classe** ou **struct**)|
+|**Atributos necessários**|**coclass** (quando aplicado à **classe** ou **estrutura**)|
 |**Atributos inválidos**|Nenhum|
 
-Para obter mais informações, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
+Para obter mais informações, consulte contextos de [atributo](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Consulte também
 

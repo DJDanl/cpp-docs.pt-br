@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - MFC Application Wizard, advanced features
 ms.assetid: 8a6681c5-6576-4b12-841a-6862beee76fa
-ms.openlocfilehash: 44d85e7614f6a82af2e58f03a6d65d5d7740ab9b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dc2b745bf97dff65a3612c29745c9d0e455a347d
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62338422"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69507801"
 ---
 # <a name="advanced-features-mfc-application-wizard"></a>Recursos avançados, Assistente de Aplicativo MFC
 
@@ -19,13 +19,13 @@ Este tópico lista as opções para recursos adicionais para seu aplicativo, com
 
 - **Ajuda contextual (HTML)**
 
-   Gera um conjunto de arquivos de ajuda para obter ajuda contextual, disponíveis usando F1 e um menu de Ajuda, ou clicando em um **ajudar** botão em uma caixa de diálogo. O suporte para ajuda requer o compilador de ajuda. Se você não tiver o compilador de ajuda, poderá instalá-lo executando novamente a instalação.
+   Gera um conjunto de arquivos de ajuda para a ajuda contextual, disponível usando F1 e um menu de ajuda, ou clicando em um botão **ajuda** em uma caixa de diálogo. O suporte para ajuda requer o compilador de ajuda. Se você não tiver o compilador de ajuda, poderá instalá-lo executando novamente a instalação.
 
-   Consulte [Ajuda em HTML: Ajuda contextual para programas Your](../../mfc/html-help-context-sensitive-help-for-your-programs.md) e [arquivos de Ajuda (Ajuda HTML)](../../build/reference/help-files-html-help.md) para obter mais informações.
+   Consulte [a ajuda em HTML: Ajuda contextual para seus programas](../../mfc/html-help-context-sensitive-help-for-your-programs.md) e arquivos de [ajuda (ajuda HTML)](../../build/reference/help-files-html-help.md) para obter mais informações.
 
 - **Impressão e visualização de impressão**
 
-   Gera o código para lidar com a impressão, configuração de impressão e comandos de visualização de impressão chamando funções de membro na [classe CView](../../mfc/reference/cview-class.md) da biblioteca do MFC. O assistente também adiciona comandos dessas funções ao menu do aplicativo. Suporte de impressão está disponível somente para aplicativos que especificam **suporte de arquitetura de documento/exibição** na [tipo de aplicativo, Assistente de aplicativo MFC](../../mfc/reference/application-type-mfc-application-wizard.md) página do assistente. Por padrão, os aplicativos de documento/exibição têm suporte para impressão.
+   Gera o código para lidar com os comandos Print e Print da visualização, chamando funções de membro na [classe cvisualização](../../mfc/reference/cview-class.md) da biblioteca do MFC. O assistente também adiciona comandos dessas funções ao menu do aplicativo. O suporte à impressão está disponível somente para aplicativos que especificam **suporte à arquitetura de documento/exibição** na página [tipo de aplicativo, assistente de aplicativo MFC](../../mfc/reference/application-type-mfc-application-wizard.md) do assistente. Por padrão, os aplicativos de documento/exibição têm suporte para impressão.
 
 - **Automação**
 
@@ -33,19 +33,19 @@ Este tópico lista as opções para recursos adicionais para seu aplicativo, com
 
 - **Controles ActiveX**
 
-   Oferece suporte para controles ActiveX (padrão). Se você não selecionar essa opção e depois quiser inserir controles ActiveX em seu projeto, você deve adicionar uma chamada para [AfxEnableControlContainer](ole-initialization.md#afxenablecontrolcontainer) em seu aplicativo [CWinApp::InitInstance](../../mfc/reference/cwinapp-class.md#initinstance) membro função.
+   Oferece suporte para controles ActiveX (padrão). Se você não selecionar essa opção e posteriormente quiser inserir controles ActiveX em seu projeto, deverá adicionar uma chamada para [AfxEnableControlContainer](ole-initialization.md#afxenablecontrolcontainer) na função membro [CWinApp:: InitInstance](../../mfc/reference/cwinapp-class.md#initinstance) do seu aplicativo.
 
 - **MAPI (API de mensagens)**
 
    Especifica que o aplicativo pode criar, manipular, transferir e armazenar mensagens de email.
 
-- **Soquetes do Windows**
+- **Windows Sockets**
 
    Oferece suporte ao Windows Sockets, que você pode usar para escrever aplicativos que se comuniquem por redes TCP/IP.
 
-- **Acessibilidade ativa**
+- **Acessibilidade Ativa**
 
-   Adiciona suporte para [IAccessible](/windows/desktop/api/oleacc/nn-oleacc-iaccessible) à [CWnd](../../mfc/reference/cwnd-class.md)-classes derivadas, que você pode usar para personalizar a interface do usuário para melhorar a interação com clientes de acessibilidade.
+   Adiciona suporte para [IAccessible](/windows/win32/api/oleacc/nn-oleacc-iaccessible) a classes derivadas de [CWnd](../../mfc/reference/cwnd-class.md), que você pode usar para personalizar a interface do usuário para melhor interação com clientes de acessibilidade.
 
 - **Manifesto de controle comum**
 
@@ -53,19 +53,19 @@ Este tópico lista as opções para recursos adicionais para seu aplicativo, com
 
    A versão 6 da DLL de Controle Comum não atualiza automaticamente a versão anterior dos Controles Comuns que seus aplicativos existentes usam. Para usar a versão 6 da DLL de Controle Comum, você deve criar um manifesto de aplicativo que direcione o aplicativo para carregar a DLL. Essa DLL de Controle Comum também oferece suporte aos temas do Windows XP.
 
-   Um manifesto de aplicativo também pode especificar outros DLLs e versões que seu aplicativo precisa. Para obter mais informações sobre manifestos de aplicativo, consulte [aplicativos isolados e Assemblies lado a lado](/windows/desktop/SbsCs/isolated-applications-and-side-by-side-assemblies-portal) no SDK do Windows.
+   Um manifesto de aplicativo também pode especificar outros DLLs e versões que seu aplicativo precisa. Para obter mais informações sobre manifestos de aplicativo, consulte [aplicativos isolados e assemblies](/windows/win32/SbsCs/isolated-applications-and-side-by-side-assemblies-portal) lado a lado no SDK do Windows.
 
-- **Suporte ao Gerenciador de reinicialização**
+- **Gerenciador de reinicialização de suporte**
 
-   Adiciona suporte para o [Gerenciador de reinicialização do Windows](/windows/desktop/RstMgr/using-restart-manager). Este vídeo mostra como usar o Gerenciador de reinicialização do MFC: [Como faço Usar o novo Gerenciador de reinicialização](/previous-versions/visualstudio/visual-studio-2010/dd831853(v%3dvs.100)).
+   Adiciona suporte para o [Gerenciador](/windows/win32/RstMgr/using-restart-manager)de reinicializações do Windows. Este vídeo mostra como usar o Gerenciador de reinicialização do MFC: [Como faço para: Use o novo Gerenciador](/previous-versions/visualstudio/visual-studio-2010/dd831853(v%3dvs.100))de reinicialização.
 
 - **Painéis de quadros avançados**
 
    |Opção|Descrição|
    |------------|-----------------|
-   |**Painel de encaixe do Explorer**|Cria um painel de encaixe que se parece com o Visual Studio **Gerenciador de soluções** à esquerda da janela principal do quadro.|
-   |**Quadro de encaixe saída**|Cria um painel de encaixe que se parece com o Visual Studio **saída** painel está localizado sob a janela do quadro principal.|
-   |**Painel de encaixe propriedades**|Cria um painel de encaixe que se parece com o Visual Studio **propriedades** painel à direita da janela principal do quadro.|
+   |**Painel de encaixe do Explorer**|Cria um painel de encaixe que se assemelha ao **Gerenciador de soluções** do Visual Studio à esquerda da janela do quadro principal.|
+   |**Quadro de encaixe de saída**|Cria um painel de encaixe que se assemelha ao painel de **saída** do Visual Studio localizado na janela do quadro principal.|
+   |**Painel de encaixe de propriedades**|Cria um painel de encaixe que se assemelha ao painel de **Propriedades** do Visual Studio à direita da janela do quadro principal.|
    |**Painel de navegação**|Cria um painel de encaixe semelhante ao da barra de navegação do Outlook e está localizado à esquerda da janela principal do quadro.|
    |**Barra de legenda**|Cria uma barra de legenda do estilo do Office acima da janela do quadro principal.|
 

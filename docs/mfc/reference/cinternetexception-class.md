@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CInternetException [MFC], m_dwContext
 - CInternetException [MFC], m_dwError
 ms.assetid: 44fb3cbe-523e-4754-8843-a77909990b14
-ms.openlocfilehash: dedf8926f02dd36dc8d6ac8ab5ff4056b60dfc91
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c4f4c7a5b7594270aff9dfbc224e9a66ba09be3f
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62345695"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69505915"
 ---
 # <a name="cinternetexception-class"></a>Classe CInternetException
 
@@ -46,9 +46,9 @@ class CInternetException : public CException
 
 ## <a name="remarks"></a>Comentários
 
-O `CInternetException` classe inclui dois membros de dados públicos: um contém o código de erro associado à exceção, e o outro contém o identificador de contexto do aplicativo da Internet associado com o erro.
+A `CInternetException` classe inclui dois membros de dados públicos: um contém o código de erro associado à exceção e o outro contém o identificador de contexto do aplicativo de Internet associado ao erro.
 
-Para obter mais informações sobre os identificadores de contexto para aplicativos da Internet, consulte o artigo [Internet Programando com WinInet](../../mfc/win32-internet-extensions-wininet.md).
+Para obter mais informações sobre identificadores de contexto para aplicativos da Internet, consulte o artigo [programação da Internet com WinInet](../../mfc/win32-internet-extensions-wininet.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -60,11 +60,11 @@ Para obter mais informações sobre os identificadores de contexto para aplicati
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** afxinet.h
+**Cabeçalho:** AFXINET. h
 
 ##  <a name="cinternetexception"></a>  CInternetException::CInternetException
 
-Essa função membro é chamada quando um `CInternetException` objeto é criado.
+Essa função de membro é chamada quando `CInternetException` um objeto é criado.
 
 ```
 CInternetException(DWORD dwError);
@@ -81,7 +81,7 @@ Para lançar um CInternetException, chame a função global do MFC [AfxThrowInte
 
 ##  <a name="m_dwcontext"></a>  CInternetException::m_dwContext
 
-O valor de contexto associado à operação da Internet relacionada.
+O valor de contexto associado à operação de Internet relacionada.
 
 ```
 DWORD_PTR m_dwContext;
@@ -89,7 +89,7 @@ DWORD_PTR m_dwContext;
 
 ### <a name="remarks"></a>Comentários
 
-O identificador de contexto é especificado originalmente no [CInternetSession](../../mfc/reference/cinternetsession-class.md) e passado pelo MFC para [CInternetConnection](../../mfc/reference/cinternetconnection-class.md)- e [CInternetFile](../../mfc/reference/cinternetfile-class.md)-as classes derivadas. Você pode substituir esse padrão e atribuir qualquer *dwContext* parâmetro um valor de sua escolha. *dwContext* está associado a qualquer operação do objeto especificado. *dwContext* identifica as informações de status da operação retornadas por [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback).
+O identificador de contexto é especificado originalmente em [CInternetSession](../../mfc/reference/cinternetsession-class.md) e passado por MFC para classes derivadas de [CInternetConnection](../../mfc/reference/cinternetconnection-class.md)e [CInternetFile](../../mfc/reference/cinternetfile-class.md). Você pode substituir esse padrão e atribuir a qualquer parâmetro *dwContext* um valor de sua escolha. *dwContext* está associado a qualquer operação do objeto fornecido. *dwContext* identifica as informações de status da operação retornadas por [CInternetSession:: OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback).
 
 ##  <a name="m_dwerror"></a>  CInternetException::m_dwError
 
@@ -101,9 +101,9 @@ DWORD m_dwError;
 
 ### <a name="remarks"></a>Comentários
 
-Esse valor de erro pode ser um sistema de código de erro, encontrado em WINERROR. H ou um valor de erro do WININET. H.
+Esse valor de erro pode ser um código de erro do sistema, encontrado no WINERROR. H ou um valor de erro do WININET. T.
 
-Para obter uma lista dos códigos de erro do Win32, consulte [códigos de erro](/windows/desktop/Debug/system-error-codes). Para obter uma lista das mensagens de erro específicas da Internet, consulte. Os dois tópicos são no SDK do Windows.
+Para obter uma lista de códigos de erro do Win32, consulte [códigos de erro](/windows/win32/Debug/system-error-codes). Para obter uma lista de mensagens de erro específicas da Internet, consulte. Os dois tópicos estão no SDK do Windows.
 
 ## <a name="see-also"></a>Consulte também
 

@@ -20,16 +20,16 @@ helpviewer_keywords:
 - CMFCPropertyGridToolTipCtrl [MFC], SetTextMargin
 - CMFCPropertyGridToolTipCtrl [MFC], Track
 ms.assetid: 84b436e5-6695-4da0-9569-1a875e087711
-ms.openlocfilehash: 6c14ed1f11a7a414332b34566a314459d76b911b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f1b6f626b5f9844c73cd2225a7d6311f5b2f7d4f
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62310468"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69505087"
 ---
 # <a name="cmfcpropertygridtooltipctrl-class"></a>Classe CMFCPropertyGridToolTipCtrl
 
-Implementa uma dica de ferramenta de controle que o [classe CMFCPropertyGridCtrl](../../mfc/reference/cmfcpropertygridctrl-class.md) usa para exibir dicas de ferramenta.
+Implementa um controle ToolTip que a [classe CMFCPropertyGridCtrl](../../mfc/reference/cmfcpropertygridctrl-class.md) usa para exibir dicas de ferramenta.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -52,23 +52,23 @@ class CMFCPropertyGridToolTipCtrl : public CWnd
 |||
 |-|-|
 |Nome|Descrição|
-|[CMFCPropertyGridToolTipCtrl::Create](#create)|Cria uma janela para o controle de dica de ferramenta.|
-|[CMFCPropertyGridToolTipCtrl::Deactivate](#deactivate)|Desativa e oculta o controle de dica de ferramenta.|
-|[CMFCPropertyGridToolTipCtrl::GetLastRect](#getlastrect)|Retorna as coordenadas da última posição do controle de dica de ferramenta.|
-|[CMFCPropertyGridToolTipCtrl::Hide](#hide)|Oculta o controle de dica de ferramenta.|
-|`CMFCPropertyGridToolTipCtrl::PreTranslateMessage`|Usado pela classe [CWinApp](../../mfc/reference/cwinapp-class.md) para converter as mensagens da janela antes de serem expedidas para o [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) e [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) funções do Windows. (Substitui [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|
-|[CMFCPropertyGridToolTipCtrl::SetTextMargin](#settextmargin)|Define o espaçamento entre o texto de dica de ferramenta e a borda da janela de dica de ferramenta.|
-|[CMFCPropertyGridToolTipCtrl::Track](#track)|Exibe o controle de dica de ferramenta.|
+|[CMFCPropertyGridToolTipCtrl:: criar](#create)|Cria uma janela para o controle ToolTip.|
+|[CMFCPropertyGridToolTipCtrl::D eactivate](#deactivate)|Desativa e oculta o controle ToolTip.|
+|[CMFCPropertyGridToolTipCtrl::GetLastRect](#getlastrect)|Retorna as coordenadas da última posição do controle ToolTip.|
+|[CMFCPropertyGridToolTipCtrl:: Hide](#hide)|Oculta o controle ToolTip.|
+|`CMFCPropertyGridToolTipCtrl::PreTranslateMessage`|Usado pela classe [CWinApp](../../mfc/reference/cwinapp-class.md) para traduzir as mensagens de janela antes que elas sejam expedidas para as funções [TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage) e [DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage) do Windows. (Substitui [CWnd::P retranslatemessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|
+|[CMFCPropertyGridToolTipCtrl::SetTextMargin](#settextmargin)|Define o espaçamento entre o texto da dica de ferramenta e a borda da janela de dica de ferramenta.|
+|[CMFCPropertyGridToolTipCtrl:: Track](#track)|Exibe o controle ToolTip.|
 
 ## <a name="remarks"></a>Comentários
 
-Dicas de ferramenta são exibidas quando o ponteiro permanece em um nome de propriedade. O [CMFCPropertyGridToolTipCtrl](../../mfc/reference/cmfcpropertygridtooltipctrl-class.md) classe exibe uma dica de ferramenta para que ele seja facilmente legível pelo usuário. Normalmente, a posição de uma dica de ferramenta é determinada pela posição do ponteiro. Ao usar essa classe, a dica de ferramenta aparece sobre o nome da propriedade e se parece com a extensão de propriedade natural, para que o nome da propriedade está completamente visível.
+Dicas de ferramenta são exibidas quando o ponteiro é colocado em um nome de propriedade. A classe [CMFCPropertyGridToolTipCtrl](../../mfc/reference/cmfcpropertygridtooltipctrl-class.md) exibe uma dica de ferramenta para que ela seja facilmente legível pelo usuário. Normalmente, a posição de uma dica de ferramenta é determinada pela posição do ponteiro. Usando essa classe, a dica de ferramenta é exibida sobre o nome da propriedade e é semelhante à extensão de propriedade natural, para que o nome da propriedade esteja totalmente visível.
 
-MFC cria esse controle e usa-o no automaticamente a [classe CMFCPropertyGridCtrl](../../mfc/reference/cmfcpropertygridctrl-class.md).
+O MFC cria automaticamente esse controle e o usa na [classe CMFCPropertyGridCtrl](../../mfc/reference/cmfcpropertygridctrl-class.md).
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir demonstra como construir um objeto do `CMFCPropertyGridToolTipCtrl` classe e como exibir o controle de dica de ferramenta.
+O exemplo a seguir demonstra como construir um objeto da `CMFCPropertyGridToolTipCtrl` classe e como exibir o controle ToolTip.
 
 [!code-cpp[NVC_MFC_RibbonApp#23](../../mfc/reference/codesnippet/cpp/cmfcpropertygridtooltipctrl-class_1.cpp)]
 
@@ -84,9 +84,9 @@ O exemplo a seguir demonstra como construir um objeto do `CMFCPropertyGridToolTi
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** afxpropertygridtooltipctrl.h
+**Cabeçalho:** afxpropertygridtooltipctrl. h
 
-##  <a name="cmfcpropertygridtooltipctrl"></a>  CMFCPropertyGridToolTipCtrl::CMFCPropertyGridToolTipCtrl
+##  <a name="cmfcpropertygridtooltipctrl"></a>CMFCPropertyGridToolTipCtrl::CMFCPropertyGridToolTipCtrl
 
 Constrói um objeto `CMFCPropertyGridToolTipCtrl`.
 
@@ -94,9 +94,9 @@ Constrói um objeto `CMFCPropertyGridToolTipCtrl`.
 CMFCPropertyGridToolTipCtrl::CMFCPropertyGridToolTipCtrl();
 ```
 
-##  <a name="create"></a>  CMFCPropertyGridToolTipCtrl::Create
+##  <a name="create"></a>CMFCPropertyGridToolTipCtrl:: criar
 
-Cria uma janela para o controle de dica de ferramenta.
+Cria uma janela para o controle ToolTip.
 
 ```
 BOOL Create(CWnd* pWndParent);
@@ -105,15 +105,15 @@ BOOL Create(CWnd* pWndParent);
 ### <a name="parameters"></a>Parâmetros
 
 *pWndParent*<br/>
-[in] Um ponteiro para a janela pai.
+no Um ponteiro para a janela pai.
 
 ### <a name="return-value"></a>Valor de retorno
 
-TRUE se a janela foi criada com êxito; Caso contrário, FALSE.
+TRUE se a janela foi criada com êxito; caso contrário, FALSE.
 
-##  <a name="deactivate"></a>  CMFCPropertyGridToolTipCtrl::Deactivate
+##  <a name="deactivate"></a>CMFCPropertyGridToolTipCtrl::D eactivate
 
-Desativa e oculta o controle de dica de ferramenta.
+Desativa e oculta o controle ToolTip.
 
 ```
 void Deactivate();
@@ -121,11 +121,11 @@ void Deactivate();
 
 ### <a name="remarks"></a>Comentários
 
-Esse método define a última posição e o texto para valores vazios, para que as futuras chamadas para [CMFCPropertyGridToolTipCtrl::Track](#track) exibir a dica de ferramenta.
+Esse método define a última posição e o texto como valores vazios, para que chamadas futuras para [CMFCPropertyGridToolTipCtrl:: Track](#track) exibam a dica de ferramenta.
 
-##  <a name="getlastrect"></a>  CMFCPropertyGridToolTipCtrl::GetLastRect
+##  <a name="getlastrect"></a>CMFCPropertyGridToolTipCtrl::GetLastRect
 
-Retorna as coordenadas da última posição do controle de dica de ferramenta.
+Retorna as coordenadas da última posição do controle ToolTip.
 
 ```
 void GetLastRect(CRect& rect) const;
@@ -134,19 +134,19 @@ void GetLastRect(CRect& rect) const;
 ### <a name="parameters"></a>Parâmetros
 
 *rect*<br/>
-[out] Contém a última posição do controle de dica de ferramenta.
+fora Contém a última posição do controle ToolTip.
 
-##  <a name="hide"></a>  CMFCPropertyGridToolTipCtrl::Hide
+##  <a name="hide"></a>CMFCPropertyGridToolTipCtrl:: Hide
 
-Oculta o controle de dica de ferramenta.
+Oculta o controle ToolTip.
 
 ```
 void Hide();
 ```
 
-##  <a name="settextmargin"></a>  CMFCPropertyGridToolTipCtrl::SetTextMargin
+##  <a name="settextmargin"></a>CMFCPropertyGridToolTipCtrl::SetTextMargin
 
-Define o espaçamento entre o texto de dica de ferramenta e a borda da janela de dica de ferramenta.
+Define o espaçamento entre o texto da dica de ferramenta e a borda da janela de dica de ferramenta.
 
 ```
 void SetTextMargin(int nTextMargin);
@@ -155,11 +155,11 @@ void SetTextMargin(int nTextMargin);
 ### <a name="parameters"></a>Parâmetros
 
 *nTextMargin*<br/>
-[in] Especifica o espaçamento entre o texto de dica de ferramenta de controle e a borda da janela de dica de ferramenta. O valor padrão é 10 pixels.
+no Especifica o espaçamento entre o texto de controle de dica de ferramenta e a borda da janela de dica de ferramenta. O valor padrão é 10 pixels.
 
-##  <a name="track"></a>  CMFCPropertyGridToolTipCtrl::Track
+##  <a name="track"></a>CMFCPropertyGridToolTipCtrl:: Track
 
-Exibe o controle de dica de ferramenta.
+Exibe o controle ToolTip.
 
 ```
 void Track(
@@ -170,14 +170,14 @@ void Track(
 ### <a name="parameters"></a>Parâmetros
 
 *rect*<br/>
-[in] Especifica a posição e o tamanho do controle de dica de ferramenta.
+no Especifica a posição e o tamanho do controle ToolTip.
 
 *strText*<br/>
-[in] Especifica o texto a ser mostrado na dica de ferramenta.
+no Especifica o texto a ser mostrado na dica de ferramenta.
 
 ### <a name="remarks"></a>Comentários
 
-Esse método exibe o controle de dica de ferramenta na posição e tamanho especificado pelo *rect*. Se a posição, tamanho e texto não foram alterados desde a última vez em que esse método foi chamado, esse método não terá efeito.
+Esse método exibe o controle ToolTip na posição e no tamanho especificados por *Rect*. Se a posição, o tamanho e o texto não forem alterados desde a última vez que esse método foi chamado, esse método não terá efeito.
 
 ## <a name="see-also"></a>Consulte também
 

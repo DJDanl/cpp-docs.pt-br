@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CSplitButton [MFC], SetDropDownMenu
 - CSplitButton [MFC], OnDropDown
 ms.assetid: 6844d0a9-6408-4e44-9b5f-57628ed8bad6
-ms.openlocfilehash: d493a2d4d1c531250abc1cd60d1d3d5b79dea1b7
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: a552334adb4963f45388a798eb0723e61c09ec85
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916767"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502845"
 ---
 # <a name="csplitbutton-class"></a>Classe CSplitButton
 
@@ -54,7 +54,7 @@ class CSplitButton : public CButton
 
 ## <a name="remarks"></a>Comentários
 
-A `CSplitButton` classe é derivada da classe [CButton](../../mfc/reference/cbutton-class.md) . O controle de botão de divisão é um controle de botão cujo estilo é BS_SPLITBUTTON. Ele exibe um menu personalizado quando um usuário clica na seta suspensa. Para obter mais informações, consulte os estilos BS_SPLITBUTTON e BS_DEFSPLITBUTTON em [estilos de botão](/windows/desktop/Controls/button-styles).
+A `CSplitButton` classe é derivada da classe [CButton](../../mfc/reference/cbutton-class.md) . O controle de botão de divisão é um controle de botão cujo estilo é BS_SPLITBUTTON. Ele exibe um menu personalizado quando um usuário clica na seta suspensa. Para obter mais informações, consulte os estilos BS_SPLITBUTTON e BS_DEFSPLITBUTTON em [estilos de botão](/windows/win32/Controls/button-styles).
 
 A figura a seguir descreve uma caixa de diálogo que contém um controle de pager e um controle de botão de divisão (1). A seta suspensa (2) já foi clicada e o submenu (3) é exibido.
 
@@ -144,8 +144,8 @@ afx_msg void OnDropDown(
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|*pNMHDR*|no Ponteiro para uma estrutura [NMHDR](/windows/desktop/api/richedit/ns-richedit-nmhdr) que contém informações sobre a notificação [BCN_DROPDOWN](/windows/desktop/Controls/bcn-dropdown) .|
-|*pResult*|fora (Não usado; nenhum valor é retornado.) Valor de retorno da notificação [BCN_DROPDOWN](/windows/desktop/Controls/bcn-dropdown) .|
+|*pNMHDR*|no Ponteiro para uma estrutura [NMHDR](/windows/win32/api/richedit/ns-richedit-nmhdr) que contém informações sobre a notificação [BCN_DROPDOWN](/windows/win32/Controls/bcn-dropdown) .|
+|*pResult*|fora (Não usado; nenhum valor é retornado.) Valor de retorno da notificação [BCN_DROPDOWN](/windows/win32/Controls/bcn-dropdown) .|
 
 ### <a name="remarks"></a>Comentários
 

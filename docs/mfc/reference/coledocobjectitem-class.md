@@ -24,12 +24,12 @@ helpviewer_keywords:
 - COleDocObjectItem [MFC], QueryCommand
 - COleDocObjectItem [MFC], Release
 ms.assetid: d150d306-8fd3-4831-b06d-afbe71d8fc9b
-ms.openlocfilehash: 454be491fe5875b1b1ac9b2b85fdebe2f1663ebc
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: c6e00bf42cf20b46c949c218efe1820cc7ce0f9b
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916973"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69504017"
 ---
 # <a name="coledocobjectitem-class"></a>Classe COleDocObjectItem
 
@@ -142,7 +142,7 @@ HRESULT ExecCommand(
 O identificador do comando a ser executado. Deve estar no grupo identificado por *pguidCmdGroup*.
 
 *nCmdExecOpt*<br/>
-Especifica opções de execução de comando. Por padrão, defina para executar o comando sem avisar o usuário. Consulte [OLECMDEXECOPT](/windows/desktop/api/docobj/ne-docobj-olecmdexecopt) para obter uma lista de valores.
+Especifica opções de execução de comando. Por padrão, defina para executar o comando sem avisar o usuário. Consulte [OLECMDEXECOPT](/windows/win32/api/docobj/ne-docobj-olecmdexecopt) para obter uma lista de valores.
 
 *pguidCmdGroup*<br/>
 Identificador exclusivo do grupo de comandos. Por padrão, NULL, que especifica o grupo padrão. O comando passado em *nCmdID* deve pertencer ao grupo.
@@ -176,7 +176,7 @@ LPOLEDOCUMENTVIEW GetActiveView() const;
 
 ### <a name="return-value"></a>Valor de retorno
 
-Um ponteiro para a interface [IOleDocumentView](/windows/desktop/api/docobj/nn-docobj-ioledocumentview) do modo de exibição atualmente ativo. Se não houver nenhuma exibição atual, ela retornará NULL.
+Um ponteiro para a interface [IOleDocumentView](/windows/win32/api/docobj/nn-docobj-ioledocumentview) do modo de exibição atualmente ativo. Se não houver nenhuma exibição atual, ela retornará NULL.
 
 ### <a name="remarks"></a>Comentários
 
@@ -270,21 +270,21 @@ HRESULT QueryCommand(
 identificador do comando que está sendo consultado.
 
 *pdwStatus*<br/>
-Um ponteiro para os sinalizadores retornados como resultado da consulta. Para obter uma lista de valores possíveis, consulte [OLECMDF](/windows/desktop/api/docobj/ne-docobj-olecmdf).
+Um ponteiro para os sinalizadores retornados como resultado da consulta. Para obter uma lista de valores possíveis, consulte [OLECMDF](/windows/win32/api/docobj/ne-docobj-olecmdf).
 
 *pCmdText*<br/>
-Ponteiro para uma estrutura [OLECMDTEXT](/windows/desktop/api/docobj/ns-docobj-olecmdtext) na qual retornar informações de nome e status de um único comando. Pode ser NULL para indicar que o chamador não precisa dessas informações.
+Ponteiro para uma estrutura [OLECMDTEXT](/windows/win32/api/docobj/ns-docobj-olecmdtext) na qual retornar informações de nome e status de um único comando. Pode ser NULL para indicar que o chamador não precisa dessas informações.
 
 *pguidCmdGroup*<br/>
 Identificador exclusivo do grupo de comandos; pode ser nulo para especificar o grupo padrão.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Para obter uma lista completa de valores de retorno, consulte [IOleCommandTarget:: QueryStatus](/windows/desktop/api/docobj/nf-docobj-iolecommandtarget-querystatus) no SDK do Windows.
+Para obter uma lista completa de valores de retorno, consulte [IOleCommandTarget:: QueryStatus](/windows/win32/api/docobj/nf-docobj-iolecommandtarget-querystatus) no SDK do Windows.
 
 ### <a name="remarks"></a>Comentários
 
-Essa função de membro emula a funcionalidade do método [IOleCommandTarget:: QueryStatus](/windows/desktop/api/docobj/nf-docobj-iolecommandtarget-querystatus) , conforme descrito no SDK do Windows.
+Essa função de membro emula a funcionalidade do método [IOleCommandTarget:: QueryStatus](/windows/win32/api/docobj/nf-docobj-iolecommandtarget-querystatus) , conforme descrito no SDK do Windows.
 
 ##  <a name="release"></a>  COleDocObjectItem::Release
 

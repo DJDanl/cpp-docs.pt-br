@@ -5,20 +5,20 @@ helpviewer_keywords:
 - processing notifications [MFC]
 - CListCtrl class [MFC], processing notifications
 ms.assetid: 1f0e296e-d2a3-48fc-ae38-51d7fb096f51
-ms.openlocfilehash: 2a7899c74bfcddcdc8d54f7d9eb894553115ad66
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e93e91a3219f81bf4027549fc84f1c85c8defb5b
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160179"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69507865"
 ---
 # <a name="processing-notification-messages-in-list-controls"></a>Processando mensagens de notificação em controles de lista
 
-Quando os usuários em cabeçalhos de coluna, arraste os ícones, editar rótulos e assim por diante, o controle de lista ([CListCtrl](../mfc/reference/clistctrl-class.md)) envia mensagens de notificação à sua janela pai. Se você quiser fazer algo em resposta, lidar com essas mensagens. Por exemplo, quando o usuário clica em um cabeçalho de coluna, você talvez queira classificar os itens com base no conteúdo da coluna clicada, como no Microsoft Outlook.
+Como os usuários clicam em cabeçalhos de coluna, arrastam ícones, editam rótulos e assim por diante, o controle de lista ([CListCtrl](../mfc/reference/clistctrl-class.md)) envia mensagens de notificação para sua janela pai. Manipule essas mensagens se desejar fazer algo em resposta. Por exemplo, quando o usuário clica em um cabeçalho de coluna, talvez você queira classificar os itens com base no conteúdo da coluna clicada, como no Microsoft Outlook.
 
-Processar mensagens WM_NOTIFY do controle de lista em sua classe de exibição ou a caixa de diálogo. Use a janela Propriedades para criar uma [OnChildNotify](../mfc/reference/cwnd-class.md#onchildnotify) função de manipulador com uma instrução de comutação com base em qual mensagem de notificação está sendo manipulada.
+Processar mensagens WM_NOTIFY do controle de lista em sua classe View ou Dialog. Use o janela Propriedades para criar uma função de manipulador [OnChildNotify](../mfc/reference/cwnd-class.md#onchildnotify) com uma instrução switch com base na qual a mensagem de notificação está sendo manipulada.
 
-Para obter uma lista das notificações de um controle de lista pode enviar para sua janela pai, consulte [referência de controle de exibição de lista](/windows/desktop/Controls/list-view-control-reference) no SDK do Windows.
+Para obter uma lista das notificações que um controle de lista pode enviar para sua janela pai, consulte [referência de controle de exibição de lista](/windows/win32/Controls/list-view-control-reference) no SDK do Windows.
 
 ## <a name="see-also"></a>Consulte também
 

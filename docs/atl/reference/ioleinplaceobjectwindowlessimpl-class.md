@@ -20,19 +20,19 @@ helpviewer_keywords:
 - controls [ATL], windowless
 - deactivating ATL
 ms.assetid: a2e0feb4-bc59-4adf-aab2-105457bbdbb4
-ms.openlocfilehash: df14c22f5cf4828b51bf03f6d0f0c4c20cf5a009
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fdd660daae109ac2a656519131dd9869ceaeaf4e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62197858"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69495742"
 ---
 # <a name="ioleinplaceobjectwindowlessimpl-class"></a>Classe IOleInPlaceObjectWindowlessImpl
 
-Essa classe implementa `IUnknown` e fornece métodos que permitem um controle sem janelas para receber mensagens de janela e participar de operações de arrastar e soltar.
+Essa classe implementa `IUnknown` e fornece métodos que permitem que um controle sem janela receba mensagens de janela e participe de operações de arrastar e soltar.
 
 > [!IMPORTANT]
->  Essa classe e seus membros não podem ser usados em aplicativos executados no tempo de execução do Windows.
+>  Essa classe e seus membros não podem ser usados em aplicativos que são executados no Windows Runtime.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -52,20 +52,20 @@ Sua classe, derivada de `IOleInPlaceObjectWindowlessImpl`.
 
 |Nome|Descrição|
 |----------|-----------------|
-|[IOleInPlaceObjectWindowlessImpl::ContextSensitiveHelp](#contextsensitivehelp)|Permite que a Ajuda contextual. A implementação de ATL retornará E_NOTIMPL.|
-|[IOleInPlaceObjectWindowlessImpl::GetDropTarget](#getdroptarget)|Fornece o `IDropTarget` interface para um objeto no local sem janelas, Active Directory que dá suporte a arrastar e soltar. A implementação de ATL retornará E_NOTIMPL.|
+|[IOleInPlaceObjectWindowlessImpl::ContextSensitiveHelp](#contextsensitivehelp)|Habilita a ajuda contextual. A implementação da ATL retorna E_NOTIMPL.|
+|[IOleInPlaceObjectWindowlessImpl::GetDropTarget](#getdroptarget)|Fornece a `IDropTarget` interface para um objeto ativo e sem janela no local que dá suporte a arrastar e soltar. A implementação da ATL retorna E_NOTIMPL.|
 |[IOleInPlaceObjectWindowlessImpl::GetWindow](#getwindow)|Obtém um identificador de janela.|
-|[IOleInPlaceObjectWindowlessImpl::InPlaceDeactivate](#inplacedeactivate)|Desativa um controle no local ativo.|
-|[IOleInPlaceObjectWindowlessImpl::OnWindowMessage](#onwindowmessage)|Envia uma mensagem de contêiner para um controle sem janelas que está ativo no local.|
-|[IOleInPlaceObjectWindowlessImpl::ReactivateAndUndo](#reactivateandundo)|Reativa um controle anteriormente desativado. A implementação de ATL retornará E_NOTIMPL.|
-|[IOleInPlaceObjectWindowlessImpl::SetObjectRects](#setobjectrects)|Indica qual parte do controle no local está visível.|
-|[IOleInPlaceObjectWindowlessImpl::UIDeactivate](#uideactivate)|Desativa e remove a interface do usuário que dá suporte à ativação no local.|
+|[IOleInPlaceObjectWindowlessImpl::InPlaceDeactivate](#inplacedeactivate)|Desativa um controle in-loco ativo.|
+|[IOleInPlaceObjectWindowlessImpl::OnWindowMessage](#onwindowmessage)|Despacha uma mensagem do contêiner para um controle sem janela que está ativo no local.|
+|[IOleInPlaceObjectWindowlessImpl::ReactivateAndUndo](#reactivateandundo)|Reativa um controle anteriormente desativado. A implementação da ATL retorna E_NOTIMPL.|
+|[IOleInPlaceObjectWindowlessImpl::SetObjectRects](#setobjectrects)|Indica que parte do controle in-loco está visível.|
+|[IOleInPlaceObjectWindowlessImpl::UIDeactivate](#uideactivate)|Desativa e remove a interface do usuário que dá suporte à ativação in-loco.|
 
 ## <a name="remarks"></a>Comentários
 
-O [IOleInPlaceObject](/windows/desktop/api/oleidl/nn-oleidl-ioleinplaceobject) interface gerencia a reativação e a desativação do in-loco controla e determina o quanto o controle deve estar visível. O [IOleInPlaceObjectWindowless](/windows/desktop/api/ocidl/nn-ocidl-ioleinplaceobjectwindowless) interface permite que um controle sem janelas para receber mensagens de janela e participar de operações de arrastar e soltar. Classe `IOleInPlaceObjectWindowlessImpl` fornece uma implementação padrão de `IOleInPlaceObject` e `IOleInPlaceObjectWindowless` e implementa `IUnknown` enviando informações para o despejo de compilações de dispositivo na depuração.
+A interface [IOleInPlaceObject](/windows/win32/api/oleidl/nn-oleidl-ioleinplaceobject) gerencia a reativação e a desativação de controles in-loco e determina a quantidade de controle que deve ser visível. A interface [IOleInPlaceObjectWindowless](/windows/win32/api/ocidl/nn-ocidl-ioleinplaceobjectwindowless) permite que um controle sem janela receba mensagens de janela e participe de operações de arrastar e soltar. Fornece uma implementação padrão de `IOleInPlaceObject` e `IOleInPlaceObjectWindowless` e implementa `IUnknown` enviando informações para o dispositivo de despejo em compilações de depuração. `IOleInPlaceObjectWindowlessImpl`
 
-**Artigos relacionados** [Tutorial da ATL](../../atl/active-template-library-atl-tutorial.md), [criando um projeto ATL](../../atl/reference/creating-an-atl-project.md)
+**Artigos relacionados** [Tutorial do ATL](../../atl/active-template-library-atl-tutorial.md), [criando um projeto ATL](../../atl/reference/creating-an-atl-project.md)
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -75,11 +75,11 @@ O [IOleInPlaceObject](/windows/desktop/api/oleidl/nn-oleidl-ioleinplaceobject) i
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** atlctl.h
+**Cabeçalho:** atlctl. h
 
 ##  <a name="contextsensitivehelp"></a>  IOleInPlaceObjectWindowlessImpl::ContextSensitiveHelp
 
-Returns E_NOTIMPL.
+Retorna E_NOTIMPL.
 
 ```
 HRESULT ContextSensitiveHelp(BOOL fEnterMode);
@@ -87,11 +87,11 @@ HRESULT ContextSensitiveHelp(BOOL fEnterMode);
 
 ### <a name="remarks"></a>Comentários
 
-Ver [IOleWindow::ContextSensitiveHelp](/windows/desktop/api/oleidl/nf-oleidl-iolewindow-contextsensitivehelp) no Windows SDK.
+Consulte [IOleWindow:: ContextSensitiveHelp](/windows/win32/api/oleidl/nf-oleidl-iolewindow-contextsensitivehelp) na SDK do Windows.
 
 ##  <a name="getdroptarget"></a>  IOleInPlaceObjectWindowlessImpl::GetDropTarget
 
-Returns E_NOTIMPL.
+Retorna E_NOTIMPL.
 
 ```
 HRESULT GetDropTarget(IDropTarget** ppDropTarget);
@@ -99,7 +99,7 @@ HRESULT GetDropTarget(IDropTarget** ppDropTarget);
 
 ### <a name="remarks"></a>Comentários
 
-Ver [IOleInPlaceObjectWindowless::GetDropTarget](/windows/desktop/api/ocidl/nf-ocidl-ioleinplaceobjectwindowless-getdroptarget) no Windows SDK.
+Consulte [IOleInPlaceObjectWindowless:: GetDropTarget](/windows/win32/api/ocidl/nf-ocidl-ioleinplaceobjectwindowless-getdroptarget) na SDK do Windows.
 
 ##  <a name="getwindow"></a>  IOleInPlaceObjectWindowlessImpl::GetWindow
 
@@ -111,13 +111,13 @@ HRESULT GetWindow(HWND* phwnd);
 
 ### <a name="remarks"></a>Comentários
 
-Alguns contêineres não funcionará com um controle que tenha sido sem janelas, mesmo se ele está atualmente em janelas. Na implementação da ATL, se o membro de dados da classe de controle `m_bWasOnceWindowless` for TRUE, a função retornará E_FAIL. Caso contrário, se *phwnd* não for nulo, `GetWindow` define \* *phwnd* ao membro de dados da classe de controle `m_hWnd` e retorna S_OK.
+Alguns contêineres não funcionarão com um controle que tenha sido sem janela, mesmo que esteja em janela no momento. Na implementação da ATL, se o membro `m_bWasOnceWindowless` de dados da classe de controle for true, a função retornará E_FAIL. Caso contrário, se *phwnd* não for nulo `GetWindow` , \* o definirá *phwnd* para o membro `m_hWnd` de dados da classe de controle e retornará S_OK.
 
-Ver [IOleWindow::GetWindow](/windows/desktop/api/oleidl/nf-oleidl-iolewindow-getwindow) no Windows SDK.
+Consulte [IOleWindow:: GetWindow](/windows/win32/api/oleidl/nf-oleidl-iolewindow-getwindow) no SDK do Windows.
 
 ##  <a name="inplacedeactivate"></a>  IOleInPlaceObjectWindowlessImpl::InPlaceDeactivate
 
-Chamado pelo contêiner para desativar um controle de Active Directory no local.
+Chamado pelo contêiner para desativar um controle ativo in-loco.
 
 ```
 HRESULT InPlaceDeactivate(HWND* phwnd);
@@ -125,13 +125,13 @@ HRESULT InPlaceDeactivate(HWND* phwnd);
 
 ### <a name="remarks"></a>Comentários
 
-Esse método executa uma desativação completa ou parcial, dependendo do estado do controle. Se necessário, interface do usuário do controle é desativado e a janela do controle, se houver, é destruída. O contêiner é notificado de que o controle não está mais ativo em vigor. O `IOleInPlaceUIWindow` interface usada pelo contêiner para negociar menus e espaço da borda é liberado.
+Esse método executa uma desativação completa ou parcial dependendo do estado do controle. Se necessário, a interface do usuário do controle é desativada e a janela do controle, se houver, é destruída. O contêiner é notificado de que o controle não está mais ativo no lugar. A `IOleInPlaceUIWindow` interface usada pelo contêiner para negociar menus e espaço de borda é liberada.
 
-Ver [IOleInPlaceObject::InPlaceDeactivate](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceobject-inplacedeactivate) no Windows SDK.
+Consulte [IOleInPlaceObject:: InPlaceDeactivate](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceobject-inplacedeactivate) na SDK do Windows.
 
 ##  <a name="onwindowmessage"></a>  IOleInPlaceObjectWindowlessImpl::OnWindowMessage
 
-Envia uma mensagem de um contêiner para um controle sem janelas que está ativo no local.
+Despacha uma mensagem de um contêiner para um controle sem janela que está ativo no local.
 
 ```
 HRESULT OnWindowMessage(
@@ -143,11 +143,11 @@ HRESULT OnWindowMessage(
 
 ### <a name="remarks"></a>Comentários
 
-Ver [IOleInPlaceObjectWindowless::OnWindowMessage](/windows/desktop/api/ocidl/nf-ocidl-ioleinplaceobjectwindowless-onwindowmessage) no Windows SDK.
+Consulte [IOleInPlaceObjectWindowless:: OnWindowMessage](/windows/win32/api/ocidl/nf-ocidl-ioleinplaceobjectwindowless-onwindowmessage) na SDK do Windows.
 
 ##  <a name="reactivateandundo"></a>  IOleInPlaceObjectWindowlessImpl::ReactivateAndUndo
 
-Returns E_NOTIMPL.
+Retorna E_NOTIMPL.
 
 ```
 HRESULT ReactivateAndUndo();
@@ -155,11 +155,11 @@ HRESULT ReactivateAndUndo();
 
 ### <a name="remarks"></a>Comentários
 
-Ver [IOleInPlaceObject::ReactivateAndUndo](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceobject-reactivateandundo) no Windows SDK.
+Consulte [IOleInPlaceObject:: ReactivateAndUndo](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceobject-reactivateandundo) na SDK do Windows.
 
 ##  <a name="setobjectrects"></a>  IOleInPlaceObjectWindowlessImpl::SetObjectRects
 
-Chamado pelo contêiner para informar o controle que seu tamanho e/ou posição foi alterado.
+Chamado pelo contêiner para informar o controle de que seu tamanho e/ou posição foi alterado.
 
 ```
 HRESULT SetObjectRects(LPCRECT prcPos, LPCRECT prcClip);
@@ -167,13 +167,13 @@ HRESULT SetObjectRects(LPCRECT prcPos, LPCRECT prcClip);
 
 ### <a name="remarks"></a>Comentários
 
-Atualiza o controle `m_rcPos` membro de dados e a exibição do controle. Somente a parte do controle que faz interseção com a região de recorte é exibida. Se a exibição de um controle anteriormente foi recortada, mas o recorte tiver sido removido, essa função pode ser chamada para redesenhar uma exibição completa do controle.
+Atualiza o membro de `m_rcPos` dados do controle e a exibição do controle. Somente a parte do controle que cruza a região do clipe é exibida. Se a exibição de um controle tiver sido recortada anteriormente, mas o recorte tiver sido removido, essa função poderá ser chamada para redesenhar uma exibição completa do controle.
 
-Ver [IOleInPlaceObject::SetObjectRects](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceobject-setobjectrects) no Windows SDK.
+Consulte [IOleInPlaceObject:: SetObjectRects](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceobject-setobjectrects) na SDK do Windows.
 
 ##  <a name="uideactivate"></a>  IOleInPlaceObjectWindowlessImpl::UIDeactivate
 
-Desativa e remove a interface do usuário do controle que dá suporte à ativação no local.
+Desativa e remove a interface do usuário do controle que dá suporte à ativação in-loco.
 
 ```
 HRESULT UIDeactivate();
@@ -181,9 +181,9 @@ HRESULT UIDeactivate();
 
 ### <a name="remarks"></a>Comentários
 
-Define o membro de dados da classe de controle `m_bUIActive` como FALSE. A implementação de ATL dessa função sempre retorna S_OK.
+Define o membro `m_bUIActive` de dados da classe de controle como false. A implementação da ATL dessa função sempre retorna S_OK.
 
-Ver [IOleInPlaceObject::UIDeactivate](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceobject-uideactivate) no Windows SDK.
+Consulte [IOleInPlaceObject:: UIDeactivate](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceobject-uideactivate) na SDK do Windows.
 
 ## <a name="see-also"></a>Consulte também
 

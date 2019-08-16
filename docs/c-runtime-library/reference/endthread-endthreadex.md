@@ -30,16 +30,16 @@ helpviewer_keywords:
 - _endthreadex function
 - threading [C++], terminating threads
 ms.assetid: 18a91f2f-659e-40b4-b266-ec12dcf2abf5
-ms.openlocfilehash: 2f54ca9c4cd5e863ca960f1d9c3634b85e7896dd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5afbc907356d4c5b14b749de5de0c8d36280891e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62288817"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499956"
 ---
-# <a name="endthread-endthreadex"></a>_endthread, _endthreadex
+# <a name="_endthread-_endthreadex"></a>_endthread, _endthreadex
 
-Termina um thread; **endthread** termina um thread criado pela **beginthread** e **endthreadex** termina um thread criado pelo **beginthreadex**.
+Finaliza um thread; **_endthread** encerra um thread que é criado por **_beginthread** e **_endthreadex** encerra um thread que é criado por **_beginthreadex**.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -57,17 +57,17 @@ Código de saída do thread.
 
 ## <a name="remarks"></a>Comentários
 
-Você pode chamar **endthread** ou **endthreadex** explicitamente para terminar um thread; no entanto, **endthread** ou **endthreadex** é chamado automaticamente quando o thread volta da rotina passado como um parâmetro para **beginthread** ou **beginthreadex**. Encerrar um thread com uma chamada para **endthread** ou **endthreadex** ajuda a garantir que a recuperação apropriada dos recursos alocados para o thread.
+Você pode chamar **_endthread** ou **_endthreadex** explicitamente para encerrar um thread; no entanto, **_endthread** ou **_endthreadex** é chamado automaticamente quando o thread retorna da rotina passada como um parâmetro para **_beginthread** ou **_beginthreadex**. Encerrar um thread com uma chamada para **endthread** ou **_endthreadex** ajuda a garantir uma recuperação adequada dos recursos alocados para o thread.
 
 > [!NOTE]
-> No caso de arquivos executáveis vinculados a Libcmt.lib, não chame a API [ExitThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-exitthread) do Win32. Isso impede que o sistema do tempo de execução recupere os recursos alocados. **endthread** e **endthreadex** recuperar os recursos alocados ao thread e, em seguida, chame **ExitThread**.
+> No caso de arquivos executáveis vinculados a Libcmt.lib, não chame a API [ExitThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-exitthread) do Win32. Isso impede que o sistema do tempo de execução recupere os recursos alocados. **_endthread** e **_endthreadex** recuperam recursos de thread alocados e, em seguida, chamam **ExitThread**.
 
-**endthread** fecha automaticamente o identificador de thread. (Esse comportamento difere do Win32 **ExitThread** API.) Portanto, quando você usa **beginthread** e **endthread**, não feche explicitamente o identificador de thread chamando Win32 [CloseHandle](/windows/desktop/api/handleapi/nf-handleapi-closehandle) API.
+**_endthread** fecha automaticamente o identificador de thread. (Esse comportamento difere da API **ExitThread** do Win32.) Portanto, quando você usa **_beginthread** e **_endthread**, não feche explicitamente o identificador de thread chamando a API [CloseHandle](/windows/win32/api/handleapi/nf-handleapi-closehandle) do Win32.
 
-Como o Win32 **ExitThread** API, **endthreadex** não fecha o identificador de thread. Portanto, quando você usa **beginthreadex** e **endthreadex**, você deve fechar o identificador de thread chamando Win32 **CloseHandle** API.
+Assim como a API **ExitThread** do Win32, o **_endthreadex** não fecha o identificador de thread. Portanto, ao usar **_beginthreadex** e **_endthreadex**, você deve fechar o identificador de thread chamando a API **CloseHandle** do Win32.
 
 > [!NOTE]
-> **endthread** e **endthreadex** causar C++ destruidores pendentes no thread não deve ser chamada.
+> **_endthread** e **_endthreadex** fazem C++ com que destruidores pendentes no thread não sejam chamados.
 
 ## <a name="requirements"></a>Requisitos
 

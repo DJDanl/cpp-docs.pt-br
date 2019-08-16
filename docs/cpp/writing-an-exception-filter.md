@@ -4,21 +4,21 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - exception handling [C++], filters
 ms.assetid: 47fc832b-a707-4422-b60a-aaefe14189e5
-ms.openlocfilehash: 2bc159247604877fb22ff6084e1fda36946561a1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f0234d36fb70c646e2d97540cbfa6ce5ae1e0ba9
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209371"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498454"
 ---
 # <a name="writing-an-exception-filter"></a>Escrevendo um filtro de exceção
 
-Você pode lidar com uma exceção indo diretamente ao nível do manipulador de exceção ou continuando a execução. Em vez de usar o código do manipulador de exceção para lidar com a exceção e queda, você pode usar *filtro* para limpar o problema e em seguida, ao retornar -1, retomar o fluxo normal sem limpar a pilha.
+Você pode lidar com uma exceção indo diretamente ao nível do manipulador de exceção ou continuando a execução. Em vez de usar o código do manipulador de exceção para lidar com a exceção e fazer a passagem, você pode usar o *filtro* para limpar o problema e, em seguida, retornar-1, retomar o fluxo normal sem limpar a pilha.
 
 > [!NOTE]
->  Algumas exceções não podem ser retomadas. Se *filtro* é avaliada como -1 para essa exceção, o sistema gerará uma nova exceção. Quando você chama [RaiseException](https://msdn.microsoft.com/library/windows/desktop/ms680552), você determina se a exceção continuará.
+>  Algumas exceções não podem ser retomadas. Se o *filtro* for avaliado como-1 para essa exceção, o sistema gerará uma nova exceção. Ao chamar [RaiseException](/windows/win32/api/errhandlingapi/nf-errhandlingapi-raiseexception), você determina se a exceção continuará.
 
-Por exemplo, o código a seguir usa uma chamada de função na *filtro* expressão: essa função tratará o problema e, em seguida, retorna -1 para retomar o fluxo de controle normal:
+Por exemplo, o código a seguir usa uma chamada de função na expressão de *filtro* : essa função manipula o problema e, em seguida, retorna-1 para retomar o fluxo de controle normal:
 
 ```cpp
 // exceptions_Writing_an_Exception_Filter.cpp
@@ -45,11 +45,11 @@ int Eval_Exception ( int n_except ) {
 }
 ```
 
-Ele é uma boa ideia usar uma chamada de função na *filtro* expressão sempre que *filtro* precisa fazer algo complexo. Avaliar a expressão causa a execução da função, nesse caso, `Eval_Exception`.
+É uma boa ideia usar uma chamada de função na expressão de *filtro* sempre que o *filtro* precisar fazer algo complexo. Avaliar a expressão causa a execução da função, nesse caso, `Eval_Exception`.
 
-Observe o uso de [GetExceptionCode](/windows/desktop/Debug/getexceptioncode) para determinar a exceção. Você deve chamar essa função dentro do próprio filtro. `Eval_Exception` não é possível chamar `GetExceptionCode`, mas ele deve ter o código de exceção passado para ele.
+Observe o uso de [GetExceptionCode](/windows/win32/Debug/getexceptioncode) para determinar a exceção. Você deve chamar essa função dentro do próprio filtro. `Eval_Exception`Não é `GetExceptionCode`possível chamar, mas ele deve ter o código de exceção passado para ele.
 
-Esse manipulador passa o controle para outro manipulador, a menos que a exceção seja um inteiro ou um estouro de ponto flutuante. Se for o caso, o manipulador chamará uma função (`ResetVars` é apenas um exemplo, não uma função de API) para redefinir alguns variáveis globais. *Instrução de bloco de 2*, que neste exemplo está vazio, nunca pode ser executado porque `Eval_Exception` nunca retorna EXCEPTION_EXECUTE_HANDLER (1).
+Esse manipulador passa o controle para outro manipulador, a menos que a exceção seja um inteiro ou um estouro de ponto flutuante. Se for o caso, o manipulador chamará uma função (`ResetVars` é apenas um exemplo, não uma função de API) para redefinir alguns variáveis globais. *Statement-Block-2*, que neste exemplo está vazio, nunca pode ser executado porque `Eval_Exception` nunca retorna EXCEPTION_EXECUTE_HANDLER (1).
 
 Usar uma chamada de função é uma boa técnica de uso geral para lidar com expressões de filtro complexas. Outros dois recursos da linguagem C úteis são:
 
@@ -57,7 +57,7 @@ Usar uma chamada de função é uma boa técnica de uso geral para lidar com exp
 
 - O operador vírgula
 
-O operador condicional geralmente é útil, pois pode ser usado para verificar se há um código de retorno específico e retornar um de dois valores diferentes. Por exemplo, o filtro no código a seguir confirma a exceção apenas se a exceção é STATUS_INTEGER_OVERFLOW:
+O operador condicional geralmente é útil, pois pode ser usado para verificar se há um código de retorno específico e retornar um de dois valores diferentes. Por exemplo, o filtro no código a seguir reconhecerá a exceção somente se a exceção for STATUS_INTEGER_OVERFLOW:
 
 ```cpp
 __except( GetExceptionCode() == STATUS_INTEGER_OVERFLOW ? 1 : 0 ) {
@@ -69,7 +69,7 @@ O propósito do operador condicional nesse caso é basicamente fornecer clareza,
 __except( GetExceptionCode() == STATUS_INTEGER_OVERFLOW ) {
 ```
 
-O operador condicional é mais útil em situações em que você desejaria o filtro avalie como -1, EXCEPTION_CONTINUE_EXECUTION.
+O operador condicional é mais útil em situações em que você talvez queira que o filtro seja avaliado como-1, EXCEPTION_CONTINUE_EXECUTION.
 
 O operador vírgula permite executar várias operações independentes dentro de uma única expressão. O efeito é basicamente o de executar várias instruções e depois retornar o valor da última expressão. Por exemplo, o código a seguir armazena o código de exceção em uma variável e o testa:
 

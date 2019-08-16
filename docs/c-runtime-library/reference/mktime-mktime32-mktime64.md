@@ -31,14 +31,14 @@ helpviewer_keywords:
 - _mktime64 function
 - time, converting
 ms.assetid: 284ed5d4-7064-48a2-bd50-15effdae32cf
-ms.openlocfilehash: 8e9524249d6c90323bdcfc0b92ecf2dad281c79b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c45b69f84a0aec159ed59a480e9358f27c8e85e2
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156480"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500993"
 ---
-# <a name="mktime-mktime32-mktime64"></a>mktime, _mktime32, _mktime64
+# <a name="mktime-_mktime32-_mktime64"></a>mktime, _mktime32, _mktime64
 
 Converta a hora local para um valor de calendário.
 
@@ -63,19 +63,19 @@ Ponteiro para a estrutura de hora, consulte [asctime](asctime-wasctime.md).
 
 ## <a name="return-value"></a>Valor de retorno
 
-**_mktime32** retorna o horário do calendário especificado decodificado como valor do tipo [time_t](../../c-runtime-library/standard-types.md). Se *timeptr* faz referência a uma data antes da meia-noite de 1º de janeiro de 1970, ou se o horário do calendário não puder ser representado, **_mktime32** retorna -1 convertido para o tipo **time_t**. Ao usar **_mktime32** e, se *timeptr* fizer referência a uma data posterior a 23:59:59 18 de janeiro de 2038, Tempo Universal Coordenado (UTC), ele retornará -1 convertido para o tipo **time_t**.
+**_mktime32** retorna o tempo de calendário especificado codificado como um valor do tipo [time_t](../../c-runtime-library/standard-types.md). Se *timeptr* fizer referência a uma data anterior à meia-noite, 1º de janeiro de 1970 ou se o horário do calendário não puder ser representado, **_mktime32** retornará-1 CAST para o tipo **time_t**. Ao usar **_mktime32** e se *timeptr* fizer referência a uma data após 23:59:59 de 18 de janeiro de 2038, UTC (tempo Universal Coordenado), ele retornará-1 CAST para o tipo **time_t**.
 
-**_mktime64** retornará -1 convertido para o tipo **__time64_t** se *timeptr* faz referência a uma data posterior a 23:59:59, 31 de dezembro de 3000, a UTC.
+**_mktime64** retornará-1 CAST para o tipo **__time64_t** se *timeptr* fizer referência a uma data após 23:59:59, 31 de dezembro de 3000, UTC.
 
 ## <a name="remarks"></a>Comentários
 
-O **mktime**, **_mktime32** e **_mktime64** funções convertem a estrutura de horário fornecida (possivelmente incompleta) apontada por *timeptr*em uma estrutura completamente definida com valores normalizados e, em seguida, convertê-lo para um **time_t** valor temporal de calendário. O horário convertido tem a mesma codificação dos valores retornados pela função [time](time-time32-time64.md). Os valores originais do **tm_wday** e **tm_yday** componentes do *timeptr* estrutura são ignorados e os valores originais dos outros componentes não estão restritos aos seus intervalos normais.
+As funções **mktime**, **_mktime32** e **_mktime64** convertem a estrutura de tempo fornecida (possivelmente incompleta) apontada por *timeptr* em uma estrutura totalmente definida com valores normalizados e, em seguida, converte-o em um **time_t** valor de hora do calendário. O horário convertido tem a mesma codificação dos valores retornados pela função [time](time-time32-time64.md). Os valores originais dos componentes **tm_wday** e **tm_yday** da estrutura *timeptr* são ignorados e os valores originais dos outros componentes não são restritos aos intervalos normais.
 
-**mktime** é uma função embutida que é equivalente a **_mktime64**, a menos que **_USE_32BIT_TIME_T** é definido, caso em que é equivalente a **_mktime32** .
+**mktime** é uma função embutida equivalente a **_mktime64**, a menos que **_USE_32BIT_TIME_T** seja definido; nesse caso, é equivalente a **_mktime32**.
 
-Após um ajuste para UTC, **_mktime32** lida com datas de meia-noite de 1º de janeiro de 1970 até 23:59:59 18 de janeiro de 2038, UTC. **_mktime64** lida com datas de meia-noite de 1º de janeiro de 1970 até 23:59:59 a 31 de dezembro de 3000. Esse ajuste pode fazer com que essas funções retornar -1 (convertido em **time_t**, **__time32_t** ou **__time64_t**) mesmo que a data especificada está dentro do intervalo. Por exemplo, se você estiver no Cairo, Egito, que está duas horas à frente do UTC, duas horas serão primeiramente subtraídas da data especificada em *timeptr*, isso agora pode deixar a data fora do intervalo.
+Após um ajuste para o UTC, o **_mktime32** lida com as datas da meia-noite, 1º de janeiro de 1970 a 23:59:59 de 18 de janeiro de 2038, UTC. o **_mktime64** lida com as datas da meia-noite, 1º de janeiro de 1970 a 23:59:59, 31 de dezembro de 3000. Esse ajuste pode fazer com que essas funções retornem-1 (CAST para **time_t**, **__time32_t** ou **__time64_t**), mesmo que a data especificada esteja dentro do intervalo. Por exemplo, se você estiver no Cairo, Egito, que está duas horas à frente do UTC, duas horas serão primeiramente subtraídas da data especificada em *timeptr*, isso agora pode deixar a data fora do intervalo.
 
-Essas funções podem ser usadas para validar e preencher uma estrutura de tm. Se for bem-sucedido, essas funções definirão os valores de **tm_wday** e **tm_yday** conforme apropriado e defina os outros componentes para representar o horário do calendário especificado, mas com seus valores impostos normal intervalos. O valor final da **tm_mday** não é definida até **tm_mon** e **tm_year** são determinados. Ao especificar uma **tm** horário de estrutura, defina as **tm_isdst** campo para:
+Essas funções podem ser usadas para validar e preencher uma estrutura de tm. Se for bem-sucedido, essas funções definirão os valores de **tm_wday** e **tm_yday** conforme apropriado e definirão os outros componentes para representar o tempo de calendário especificado, mas com seus valores forçados para os intervalos normais. O valor final de **tm_mday** não é definido até que **tm_mon** e **tm_year** sejam determinados. Ao especificar um tempo de estrutura de **TM** , defina o campo **tm_isdst** como:
 
 - Zero (0) para indicar que o horário padrão está em vigor.
 
@@ -83,11 +83,11 @@ Essas funções podem ser usadas para validar e preencher uma estrutura de tm. S
 
 - Um valor menor que zero para fazer que com o código da biblioteca de tempo de execução C calcule se o horário padrão, ou o horário de verão está em vigor.
 
-A biblioteca em tempo de execução C determinará o comportamento do horário de verão da variável de ambiente [TZ](tzset.md). Se **TZ** não for definido, a chamada à API do Win32 [GetTimeZoneInformation](/windows/desktop/api/timezoneapi/nf-timezoneapi-gettimezoneinformation) é usado para obter o verão informações de tempo do sistema operacional. Se isso falhar, a biblioteca assume que serão usadas as regras dos Estados Unidos para implantar o cálculo do horário de verão. **tm_isdst** é um campo obrigatório. Se não definidas, seu valor é indefinido e o valor retornado dessas funções é imprevisível. Se *timeptr* aponta para um **tm** estrutura retornada por uma chamada anterior a [asctime](asctime-wasctime.md), [gmtime](gmtime-gmtime32-gmtime64.md), ou [localtime](localtime-localtime32-localtime64.md) (ou variantes dessas funções), o **tm_isdst** campo contém o valor correto.
+A biblioteca em tempo de execução C determinará o comportamento do horário de verão da variável de ambiente [TZ](tzset.md). Se o **TZ** não estiver definido, a chamada de API do Win32 [GetTimeZoneInformation](/windows/win32/api/timezoneapi/nf-timezoneapi-gettimezoneinformation) será usada para obter as informações de horário de Verão do sistema operacional. Se isso falhar, a biblioteca assume que serão usadas as regras dos Estados Unidos para implantar o cálculo do horário de verão. **tm_isdst** é um campo obrigatório. Se não definidas, seu valor é indefinido e o valor retornado dessas funções é imprevisível. Se *timeptr* apontar para uma estrutura **TM** retornada por uma chamada anterior para [asctime](asctime-wasctime.md), [gmtime](gmtime-gmtime32-gmtime64.md)ou [localtime](localtime-localtime32-localtime64.md) (ou variantes dessas funções), o campo **tm_isdst** conterá o valor correto.
 
-Observe que **gmtime** e **localtime** (e **_gmtime32**, **_gmtime64**, **_localtime32**, e **_localtime64**) usam um único buffer por thread para a conversão. Se você fornecer desse buffer **mktime**, **_mktime32** ou **_mktime64**, os conteúdos anteriores serão destruídos.
+Observe que **gmtime** e **localtime** (e **_gmtime32**, **_gmtime64**, **_localtime32**e **_localtime64**) usam um único buffer por thread para a conversão. Se você fornecer esse buffer para **mktime**, **_mktime32** ou **_mktime64**, os conteúdos anteriores serão destruídos.
 
-Essas funções validam seus parâmetros. Se *timeptr* for um ponteiro nulo, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, as funções retornarão -1 e defina **errno** à **EINVAL**.
+Essas funções validam seus parâmetros. Se *timeptr* for um ponteiro nulo, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, as funções retornam-1 e definem **errno** como **EINVAL**.
 
 ## <a name="requirements"></a>Requisitos
 

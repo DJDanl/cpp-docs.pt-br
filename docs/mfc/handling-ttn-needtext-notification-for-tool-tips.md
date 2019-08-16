@@ -8,44 +8,44 @@ helpviewer_keywords:
 - notifications [MFC], tool tips
 - tool tips [MFC], notifications
 ms.assetid: d0370a65-21ba-4676-bcc5-8cf851bbb15c
-ms.openlocfilehash: 97db98322cd7c0d14e46f54a055bbc646c90d785
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a63154f3da539676f31709899568b6486dc6017e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62240376"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508525"
 ---
-# <a name="handling-ttnneedtext-notification-for-tool-tips"></a>Manipulando notificação TTN_NEEDTEXT para dicas de ferramenta
+# <a name="handling-ttn_needtext-notification-for-tool-tips"></a>Manipulando notificação TTN_NEEDTEXT para dicas de ferramenta
 
-Como parte da [habilitando dicas de ferramenta](../mfc/enabling-tool-tips.md), você lidar com as **TTN_NEEDTEXT** mensagem adicionando a seguinte entrada ao mapa de mensagem da janela do proprietário:
+Como parte da [habilitação das dicas de ferramenta](../mfc/enabling-tool-tips.md), você manipula a mensagem **TTN_NEEDTEXT** adicionando a seguinte entrada ao mapa de mensagens da sua janela do proprietário:
 
 [!code-cpp[NVC_MFCControlLadenDialog#40](../mfc/codesnippet/cpp/handling-ttn-needtext-notification-for-tool-tips_1.cpp)]
 
 *memberFxn*<br/>
-A função de membro a ser chamado quando o texto é necessário para que esse botão.
+A função de membro a ser chamada quando o texto for necessário para esse botão.
 
 Observe que a ID de uma dica de ferramenta é sempre 0.
 
-Declare a função de manipulador na definição de classe da seguinte maneira:
+Declare sua função de manipulador na definição de classe da seguinte maneira:
 
 [!code-cpp[NVC_MFCControlLadenDialog#53](../mfc/codesnippet/cpp/handling-ttn-needtext-notification-for-tool-tips_2.h)]
 
-onde estão os parâmetros em itálico:
+onde os parâmetros em itálico são:
 
 *id*<br/>
-Identificador do controle que enviou a notificação. Não usado. A id do controle é obtida dos **NMHDR** estrutura.
+Identificador do controle que enviou a notificação. Não usado. A ID de controle é obtida da estrutura **NMHDR** .
 
 *pNMHDR*<br/>
-Um ponteiro para o [NMTTDISPINFO](/windows/desktop/api/commctrl/ns-commctrl-tagnmttdispinfoa) estrutura. Essa estrutura também é discutida mais detalhadamente em [a estrutura TOOLTIPTEXT](../mfc/tooltiptext-structure.md).
+Um ponteiro para a estrutura [NMTTDISPINFO](/windows/win32/api/commctrl/ns-commctrl-nmttdispinfow) . Essa estrutura também é discutida mais detalhadamente na [estrutura TOOLTIPTEXT](../mfc/tooltiptext-structure.md).
 
 *pResult*<br/>
-Um ponteiro para o código de resultado que você pode definir antes de retornar. **TTN_NEEDTEXT** manipuladores podem ignorar o *pResult* parâmetro.
+Um ponteiro para o código de resultado que você pode definir antes de retornar. Os manipuladores **TTN_NEEDTEXT** podem ignorar o parâmetro *pResult* .
 
 Como um exemplo de um manipulador de notificação de exibição de formulário:
 
 [!code-cpp[NVC_MFCControlLadenDialog#54](../mfc/codesnippet/cpp/handling-ttn-needtext-notification-for-tool-tips_3.cpp)]
 
-Chame `EnableToolTips` (este fragmento tirado `OnInitDialog`):
+Chamada `EnableToolTips` (este fragmento tirado `OnInitDialog`de):
 
 [!code-cpp[NVC_MFCControlLadenDialog#55](../mfc/codesnippet/cpp/handling-ttn-needtext-notification-for-tool-tips_4.cpp)]
 

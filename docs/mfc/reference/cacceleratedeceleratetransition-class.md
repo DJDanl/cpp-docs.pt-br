@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - CAccelerateDecelerateTransition class [MFC]
 ms.assetid: b1f31ee8-bb11-4ccc-b124-365fb02b025c
-ms.openlocfilehash: dbebe794ba76ae4abd3d1e3ea6bc8ee31bc3007f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1e55e81b4d9b5c324f86bfd141b74d9faa362d94
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62151195"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69507737"
 ---
 # <a name="cacceleratedeceleratetransition-class"></a>Classe CAccelerateDecelerateTransition
 
-Implementa um accelerate-desacelerar a transição.
+Implementa uma transição aceleração e desaceleração.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -36,20 +36,20 @@ class CAccelerateDecelerateTransition : public CBaseTransition;
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CAccelerateDecelerateTransition::Create](#create)|Chama a biblioteca de transição para criar o objeto encapsulado transição COM. (Substitui [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|
+|[CAccelerateDecelerateTransition::Create](#create)|Chama a biblioteca de transição para criar objeto COM de transição encapsulada. (Substitui [CBaseTransition:: Create](../../mfc/reference/cbasetransition-class.md#create).)|
 
 ### <a name="public-data-members"></a>Membros de Dados Públicos
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CAccelerateDecelerateTransition::m_accelerationRatio](#m_accelerationratio)|A proporção de tempo gasto que acelera à duração.|
-|[CAccelerateDecelerateTransition::m_decelerationRatio](#m_decelerationratio)|A proporção de tempo gasto que desacelera à duração.|
+|[CAccelerateDecelerateTransition::m_accelerationRatio](#m_accelerationratio)|A proporção do tempo gasto acelerando até a duração.|
+|[CAccelerateDecelerateTransition::m_decelerationRatio](#m_decelerationratio)|A proporção do tempo gasto decelerating até a duração.|
 |[CAccelerateDecelerateTransition::m_duration](#m_duration)|A duração da transição.|
 |[CAccelerateDecelerateTransition::m_finalValue](#m_finalvalue)|O valor da variável de animação no final da transição.|
 
 ## <a name="remarks"></a>Comentários
 
-Durante um accelerate-desacelerar a transição, a variável de animação acelera e reduz a velocidade ao longo da duração da transição, terminando em um valor especificado. Você pode controlar o quão rapidamente a variável acelera e desacelerada independentemente, com a especificação de aceleração diferente e taxas de desaceleração. Quando a velocidade inicial for zero, a taxa de aceleração é a fração da duração da variável será gasto acelerando; da mesma forma com a taxa de desaceleração. Se a velocidade inicial for diferente de zero, é a fração do tempo entre a velocidade chegar a zero e o final da transição. A taxa de aceleração e a taxa de desaceleração devem somar um máximo de 1.0. Como todas as transições são limpas automaticamente, é recomendável para alocado-los usando o operador novo. O objeto de IUIAnimationTransition COM encapsulado é criado pelo CAnimationController::AnimateGroup, até então é NULL. Alterando as variáveis de membro após a criação deste objeto COM não tem nenhum efeito.
+Durante uma transição acelerar aceleração, a variável de animação acelera e reduz a duração da transição, terminando em um valor especificado. Você pode controlar a rapidez com que a variável é acelerada e desacelerada de forma independente, especificando taxas de aceleração e desaceleração diferentes. Quando a velocidade inicial é zero, a taxa de aceleração é a fração da duração que a variável gastará acelerando; da mesma forma, com a taxa de desaceleração. Se a velocidade inicial for diferente de zero, será a fração do tempo entre a velocidade de alcance zero e o fim da transição. A taxa de aceleração e a taxa de desaceleração devem somar no máximo 1,0. Como todas as transições são limpas automaticamente, é recomendável alocá-las usando o operador novo. O objeto COM encapsulado IUIAnimationTransition é criado por CAnimationController:: Animate, até que ele seja nulo. A alteração de variáveis de membro após a criação desse objeto COM não tem nenhum efeito.
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -61,7 +61,7 @@ Durante um accelerate-desacelerar a transição, a variável de animação acele
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** afxanimationcontroller.h
+**Cabeçalho:** afxanimationcontroller. h
 
 ##  <a name="cacceleratedeceleratetransition"></a>  CAccelerateDecelerateTransition::CAccelerateDecelerateTransition
 
@@ -77,21 +77,21 @@ CAccelerateDecelerateTransition(
 
 ### <a name="parameters"></a>Parâmetros
 
-*duration*<br/>
+*permanência*<br/>
 A duração da transição.
 
 *finalValue*<br/>
 O valor da variável de animação no final da transição.
 
 *accelerationRatio*<br/>
-A proporção de tempo gasto que acelera à duração.
+A proporção do tempo gasto acelerando até a duração.
 
 *decelerationRatio*<br/>
-A proporção de tempo gasto que desacelera à duração.
+A proporção do tempo gasto decelerating até a duração.
 
 ##  <a name="create"></a>  CAccelerateDecelerateTransition::Create
 
-Chama a biblioteca de transição para criar o objeto encapsulado transição COM.
+Chama a biblioteca de transição para criar objeto COM de transição encapsulada.
 
 ```
 virtual BOOL Create(
@@ -102,15 +102,15 @@ virtual BOOL Create(
 ### <a name="parameters"></a>Parâmetros
 
 *pLibrary*<br/>
-Um ponteiro para um [IUIAnimationTransitionLibrary interface](/windows/desktop/api/uianimation/nn-uianimation-iuianimationtransitionlibrary), que define uma biblioteca de transições padrão.
+Um ponteiro para uma [interface IUIAnimationTransitionLibrary](/windows/win32/api/uianimation/nn-uianimation-iuianimationtransitionlibrary), que define uma biblioteca de transições padrão.
 
 ### <a name="return-value"></a>Valor de retorno
 
-TRUE se a transição é criada com êxito; Caso contrário, FALSE.
+TRUE se a transição for criada com êxito; caso contrário, FALSE.
 
 ##  <a name="m_accelerationratio"></a>  CAccelerateDecelerateTransition::m_accelerationRatio
 
-A proporção de tempo gasto que acelera à duração.
+A proporção do tempo gasto acelerando até a duração.
 
 ```
 DOUBLE m_accelerationRatio;
@@ -118,7 +118,7 @@ DOUBLE m_accelerationRatio;
 
 ##  <a name="m_decelerationratio"></a>  CAccelerateDecelerateTransition::m_decelerationRatio
 
-A proporção de tempo gasto que desacelera à duração.
+A proporção do tempo gasto decelerating até a duração.
 
 ```
 DOUBLE m_decelerationRatio;
