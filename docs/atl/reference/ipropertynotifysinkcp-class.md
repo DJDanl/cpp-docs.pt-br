@@ -9,19 +9,19 @@ helpviewer_keywords:
 - sinks, notifying of changes
 - IPropertyNotifySinkCP class
 ms.assetid: 1b41445e-bc88-4fa6-bb62-d68aacec2bd5
-ms.openlocfilehash: b96e5345923d04de74dace173a80b8c4d3ee917f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9838a48b078cbc59a5ae86669ad9f26792d9816e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62197884"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69495635"
 ---
 # <a name="ipropertynotifysinkcp-class"></a>Classe IPropertyNotifySinkCP
 
-Essa classe expõe [IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink) interface como uma interface de saída em um objeto conectável.
+Essa classe expõe a interface [IPropertyNotifySink](/windows/win32/api/ocidl/nn-ocidl-ipropertynotifysink) como uma interface de saída em um objeto que pôde ser conectado.
 
 > [!IMPORTANT]
->  Essa classe e seus membros não podem ser usados em aplicativos executados no tempo de execução do Windows.
+>  Essa classe e seus membros não podem ser usados em aplicativos que são executados no Windows Runtime.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -41,17 +41,17 @@ Uma classe que gerencia as conexões entre um ponto de conexão e seus coletores
 
 ## <a name="remarks"></a>Comentários
 
-`IPropertyNotifySinkCP` herda todos os métodos por meio de sua classe base, [IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md).
+`IPropertyNotifySinkCP`herda todos os métodos por meio de sua classe base, [IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md).
 
-O [IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink) interface permite que um objeto de coletor para receber notificações sobre alterações de propriedade. Classe `IPropertyNotifySinkCP` expõe essa interface como uma interface de saída em um objeto conectável. O cliente deve implementar o `IPropertyNotifySink` métodos no coletor.
+A interface [IPropertyNotifySink](/windows/win32/api/ocidl/nn-ocidl-ipropertynotifysink) permite que um objeto de coletor receba notificações sobre alterações de propriedade. A `IPropertyNotifySinkCP` classe expõe essa interface como uma interface de saída em um objeto que pôde ser conectado. O cliente deve implementar os `IPropertyNotifySink` métodos no coletor.
 
-Derive sua classe de `IPropertyNotifySinkCP` quando você deseja criar um ponto de conexão que representa o `IPropertyNotifySink` interface.
+Derive sua classe `IPropertyNotifySinkCP` de quando desejar criar um ponto de conexão que represente `IPropertyNotifySink` a interface.
 
-Para obter mais informações sobre como usar pontos de conexão no ATL, consulte o artigo [pontos de Conexão](../../atl/atl-connection-points.md).
+Para obter mais informações sobre como usar pontos de conexão na ATL, consulte o artigo [pontos de conexão](../../atl/atl-connection-points.md).
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** atlctl.h
+**Cabeçalho:** atlctl. h
 
 ## <a name="see-also"></a>Consulte também
 
