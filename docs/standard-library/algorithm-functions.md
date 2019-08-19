@@ -200,12 +200,12 @@ helpviewer_keywords:
 - std::count_if [C++]
 - std::partition_copy [C++]
 - std::swap [C++]
-ms.openlocfilehash: cf6c1267b1dea86c2cad62708192a4c0a1970ed8
-ms.sourcegitcommit: 610751254a01cba6ad15fb1e1764ecb2e71f66bf
+ms.openlocfilehash: b08d45ac065fe63f6f51e3b63a49e8714a486988
+ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/18/2019
-ms.locfileid: "68313389"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68956976"
 ---
 # <a name="ltalgorithmgt-functions"></a>Funções &lt;algorithm&gt;
 
@@ -611,6 +611,14 @@ int main()
 }
 ```
 
+```Output
+List1 = ( 5 10 20 25 30 50 )
+There is an element in list List1 with a value equal to 10.
+There is an element in list List1 with a value greater than 10 under greater than.
+Ordered using mod_lesser, vector v1 = ( 0 -1 1 -2 2 3 4 )
+There is an element with a value equivalent to -3 under mod_lesser.
+```
+
 ## <a name="clamp"></a>fixe
 
 Compara um valor com um limite superior e inferior e retorna uma referência ao valor se estiver entre os limites, ou uma referência para o limite superior ou inferior se o valor estiver acima ou abaixo deles, respectivamente.
@@ -633,7 +641,7 @@ constexpr const Type& clamp(
 ### <a name="parameters"></a>Parâmetros
 
 *value*\
-O valor a ser comparado  com maiúsculas e *minúsculas*.
+O valor a ser comparado com maiúsculas e *minúsculas*.
 
 *canto*\
 O limite inferior dos valores para fixe *valor* .
@@ -650,7 +658,7 @@ Retorna uma referência para *diminuir* If `value < lower`ou uma referência par
 
 ### <a name="remarks"></a>Comentários
 
-O comportamento será indefinido se *Upper* for menor que *menor.*
+O comportamento será indefinido se *Upper* for menor quemenor.
 
 ## <a name="copy"></a>CopiarObjeto
 
@@ -845,6 +853,13 @@ int main() {
 }
 ```
 
+```Output
+v1 = ( 0 10 20 30 40 50 )
+v2 = ( 0 3 6 9 12 15 18 21 24 27 30 )
+v2 with v1 insert = ( 0 3 6 9 0 10 20 21 24 27 30 )
+v2 with shifted insert = ( 0 3 6 9 0 10 0 10 20 27 30 )
+```
+
 ## <a name="copy_if"></a>copy_if
 
 Em um intervalo de elementos, o copia os elementos que são **verdadeiros** para a condição especificada.
@@ -894,6 +909,61 @@ A função de modelo avalia
 `if (pred(*first + N)) * dest++ = *(first + N))`
 
 uma única vez para cada `N` no intervalo `[0, last - first)`, para aumentar estritamente os valores de `N`, começando com o valor mais baixo. Se *dest* e *primeiro* designar regiões de armazenamento, *dest* não deverá estar no intervalo `[ first, last )`.
+
+### <a name="example"></a>Exemplo
+
+```cpp
+// alg_copy_if.cpp
+// compile with: /EHsc
+#include <list>
+#include <algorithm>
+#include <iostream>
+
+void listlist(std::list<int> l)
+{
+    std::cout << "( ";
+    for (auto const& el : l)
+        std::cout << el << " ";
+    std::cout << ")" << std::endl;
+}
+
+int main()
+{
+    using namespace std;
+    list<int> li{ 46, 59, 88, 72, 79, 71, 60, 5, 40, 84 };
+    list<int> le(li.size()); // le = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+    list<int> lo(li.size()); // lo = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+
+    cout << "li = ";
+    listlist(li);
+
+    // is_even checks if the element is even.
+    auto is_even = [](int const elem) { return !(elem % 2); };
+    // use copy_if to select only even elements from li 
+    // and copy them to le, starting from le's begin position
+    auto ec = copy_if(li.begin(),li.end(), le.begin(), is_even);
+    le.resize(std::distance(le.begin(), ec));  // shrink le to new size
+
+    cout << "Even numbers are le = ";
+    listlist(le);
+
+    // is_odd checks if the element is odd.
+    auto is_odd = [](int const elem) { return (elem % 2); };
+    // use copy_if to select only odd elements from li
+    // and copy them to lo, starting from lo's begin position
+    auto oc = copy_if(li.begin(), li.end(), lo.begin(), is_odd);
+    lo.resize(std::distance(lo.begin(), oc));  // shrink lo to new size
+
+    cout << "Odd numbers are lo = ";
+    listlist(lo);
+}
+```
+
+```Output
+li = ( 46 59 88 72 79 71 60 5 40 84 )
+Even numbers are le = ( 46 88 72 60 40 84 )
+Odd numbers are lo = ( 59 79 71 5 )
+```
 
 ## <a name="copy_n"></a>copy_n
 
@@ -2975,7 +3045,7 @@ Retorna o *último* se o intervalo especificado forma um heap ou contém um ou m
 
 A primeira função de modelo retorna o último `next` iterador `[first, next)` em `[first, last)` onde é um heap ordenado pelo objeto `std::less<>`de função. Se a distância `last - first` for menor que 2, a função retornará *Last*.
 
-A segunda função de modelo se comporta da mesma forma que a primeira, exceto pelo fato de que  ela usa o `std::less<>` predicado Pred em vez de como a condição de ordenação de heap.
+A segunda função de modelo se comporta da mesma forma que a primeira, exceto pelo fato de que ela usa o `std::less<>` predicado Pred em vez de como a condição de ordenação de heap.
 
 ## <a name="is_partitioned"></a>is_partitioned
 
@@ -4396,7 +4466,7 @@ O menor entre os dois objetos, a menos que nenhum seja menor e, nesse caso, reto
 
 ### <a name="remarks"></a>Comentários
 
-O algoritmo `min` não costuma ter objetos passados como parâmetros. A maioria dos algoritmos da Biblioteca Padrão do C++ opera em um intervalo de elementos cujas posições são especificadas por iteradores passados como parâmetros. Se você precisar de uma função que use um intervalo de elementos, use [min_element](../standard-library/algorithm-functions.md#min_element). [](../cpp/constexpr-cpp.md) o`initializer_list` constexpr foi habilitado nas sobrecargas no Visual Studio 2017.
+O algoritmo `min` não costuma ter objetos passados como parâmetros. A maioria dos algoritmos da Biblioteca Padrão do C++ opera em um intervalo de elementos cujas posições são especificadas por iteradores passados como parâmetros. Se você precisar de uma função que use um intervalo de elementos, use [min_element](../standard-library/algorithm-functions.md#min_element). o [constexpr](../cpp/constexpr-cpp.md) foi habilitado nas sobrecargas `initializer_list` no Visual Studio 2017.
 
 ### <a name="example"></a>Exemplo
 
@@ -7576,7 +7646,7 @@ Um iterador de avanço que aborda a posição um após o elemento final do inter
 Objeto de função de predicado definido pelo usuário, que define a condição a ser atendida se dois elementos forem executados como equivalentes. Um predicado binário usa dois argumentos e retorna **true** quando é atendido e **false** quando não é atendido.
 
 *Searcher*\
-O pesquisador que encapsula o padrão a ser procurado e o algoritmo de pesquisa a ser usado.
+O pesquisador que encapsula o padrão a ser procurado e o algoritmo de pesquisa a ser usado. Para obter mais informações sobre os pesquisadores, consulte classe [default_searcher](default-searcher-class.md), [classe boyer_moore_horspool_searcher](boyer-moore-horspool-searcher-class.md)e [classe boyer_moore_searcher](boyer-moore-searcher-class.md).
 
 ### <a name="return-value"></a>Valor retornado
 
