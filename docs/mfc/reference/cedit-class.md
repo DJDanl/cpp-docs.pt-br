@@ -94,12 +94,12 @@ helpviewer_keywords:
 - CEdit [MFC], ShowBalloonTip
 - CEdit [MFC], Undo
 ms.assetid: b1533c30-7f10-4663-88d3-8b7f2c9f7024
-ms.openlocfilehash: ccf7445100977e1205bbcffe230e1919ac33adea
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
-ms.translationtype: HT
+ms.openlocfilehash: 5ad8784f3bff999eec046aa91f52b1cd164764e5
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916134"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69506799"
 ---
 # <a name="cedit-class"></a>Classe CEdit
 
@@ -213,7 +213,7 @@ Se você criar um `CEdit` objeto de um recurso de caixa de diálogo usando o edi
 
 Se você criar um `CEdit` objeto em uma janela, talvez também precise destruí-lo. Se você criar o `CEdit` objeto na pilha, ele será destruído automaticamente. Se você criar o `CEdit` objeto no heap usando a **nova** função, deverá chamar **delete** no objeto para destruí-lo quando o usuário encerrar o controle de edição do Windows. Se você alocar qualquer memória no `CEdit` objeto, substitua o `CEdit` destruidor para descartar as alocações.
 
-Para modificar determinados estilos em um controle de edição (como ES_READONLY), você deve enviar mensagens específicas para o controle em vez de usar [ModifyStyle](cwnd-class.md#modifystyle). Consulte [Editar estilos de controle](/windows/desktop/Controls/edit-control-styles) na SDK do Windows.
+Para modificar determinados estilos em um controle de edição (como ES_READONLY), você deve enviar mensagens específicas para o controle em vez de usar [ModifyStyle](cwnd-class.md#modifystyle). Consulte [Editar estilos de controle](/windows/win32/Controls/edit-control-styles) na SDK do Windows.
 
 Para obter mais informações `CEdit`sobre o, consulte [controles](../../mfc/controls-mfc.md).
 
@@ -245,7 +245,7 @@ Diferente de zero se a última operação de edição puder ser desfeita por uma
 
 ### <a name="remarks"></a>Comentários
 
-Para obter mais informações, consulte [EM_CANUNDO](/windows/desktop/Controls/em-canundo) no SDK do Windows.
+Para obter mais informações, consulte [EM_CANUNDO](/windows/win32/Controls/em-canundo) no SDK do Windows.
 
 ### <a name="example"></a>Exemplo
 
@@ -289,7 +289,7 @@ O índice de caracteres na palavra de ordem inferior e o índice de linha na pal
 > [!NOTE]
 >  Essa função de membro está disponível a partir do Windows 95 e do Windows NT 4,0.
 
-Para obter mais informações, consulte [EM_CHARFROMPOS](/windows/desktop/Controls/em-charfrompos) no SDK do Windows.
+Para obter mais informações, consulte [EM_CHARFROMPOS](/windows/win32/Controls/em-charfrompos) no SDK do Windows.
 
 ### <a name="example"></a>Exemplo
 
@@ -309,7 +309,7 @@ A exclusão realizada pelo `Clear` pode ser desfeita chamando a função de memb
 
 Para excluir a seleção atual e inserir o conteúdo excluído na área de transferência, chame a função de membro [Cut](#cut) .
 
-Para obter mais informações, consulte [WM_CLEAR](/windows/desktop/dataxchg/wm-clear) no SDK do Windows.
+Para obter mais informações, consulte [WM_CLEAR](/windows/win32/dataxchg/wm-clear) no SDK do Windows.
 
 ### <a name="example"></a>Exemplo
 
@@ -325,7 +325,7 @@ void Copy();
 
 ### <a name="remarks"></a>Comentários
 
-Para obter mais informações, consulte [WM_COPY](/windows/desktop/dataxchg/wm-copy) no SDK do Windows.
+Para obter mais informações, consulte [WM_COPY](/windows/win32/dataxchg/wm-copy) no SDK do Windows.
 
 ### <a name="example"></a>Exemplo
 
@@ -365,7 +365,7 @@ Diferente de zero se a inicialização for bem-sucedida; caso contrário, 0.
 
 Você constrói um `CEdit` objeto em duas etapas. Primeiro, chame o `CEdit` Construtor e, em `Create`seguida, chame, que cria o controle de edição do Windows e `CEdit` o anexa ao objeto.
 
-Quando `Create` o é executado, o Windows envia as mensagens [WM_NCCREATE](/windows/desktop/winmsg/wm-nccreate), [WM_NCCALCSIZE](/windows/desktop/winmsg/wm-nccalcsize), [WM_CREATE](/windows/desktop/winmsg/wm-create)e [WM_GETMINMAXINFO](/windows/desktop/winmsg/wm-getminmaxinfo) para o controle de edição.
+Quando `Create` o é executado, o Windows envia as mensagens [WM_NCCREATE](/windows/win32/winmsg/wm-nccreate), [WM_NCCALCSIZE](/windows/win32/winmsg/wm-nccalcsize), [WM_CREATE](/windows/win32/winmsg/wm-create)e [WM_GETMINMAXINFO](/windows/win32/winmsg/wm-getminmaxinfo) para o controle de edição.
 
 Essas mensagens são tratadas por padrão pelas funções de membro [OnNcCreate](cwnd-class.md#onnccreate), [OnNcCalcSize](cwnd-class.md#onnccalcsize), [OnCreate](cwnd-class.md#oncreate)e [OnGetMinMaxInfo](cwnd-class.md#ongetminmaxinfo) na `CWnd` classe base. Para estender a manipulação de mensagens padrão, derive uma `CEdit`classe de, adicione um mapa de mensagem à nova classe e substitua as funções de membro do manipulador de mensagens acima. Substitua `OnCreate`, por exemplo, para executar a inicialização necessária para a nova classe.
 
@@ -399,7 +399,7 @@ A exclusão realizada pelo `Cut` pode ser desfeita chamando a função de membro
 
 Para excluir a seleção atual sem colocar o texto excluído na área de transferência, chame a função de membro [Clear](#clear) .
 
-Para obter mais informações, consulte [WM_CUT](/windows/desktop/dataxchg/wm-cut) no SDK do Windows.
+Para obter mais informações, consulte [WM_CUT](/windows/win32/dataxchg/wm-cut) no SDK do Windows.
 
 ### <a name="example"></a>Exemplo
 
@@ -419,7 +419,7 @@ O controle de edição agora não será capaz de desfazer a última operação. 
 
 O sinalizador de desfazer é limpo automaticamente sempre que as funções de membro [SetWindowText](../../mfc/reference/cwnd-class.md#setwindowtext) ou [SetHandle](#sethandle) `CWnd` são chamadas.
 
-Para obter mais informações, consulte [EM_EMPTYUNDOBUFFER](/windows/desktop/Controls/em-emptyundobuffer) no SDK do Windows.
+Para obter mais informações, consulte [EM_EMPTYUNDOBUFFER](/windows/win32/Controls/em-emptyundobuffer) no SDK do Windows.
 
 ### <a name="example"></a>Exemplo
 
@@ -448,9 +448,9 @@ Uma quebra de linha suave consiste em dois retornos de carro e um feed de linha 
 
 O Windows só responderá se `CEdit` o objeto for um controle de edição de várias linhas.
 
-`FmtLines`afeta apenas o buffer retornado por [GetHandle](#gethandle) e o texto retornado por [WM_GETTEXT](/windows/desktop/winmsg/wm-gettext). Ele não tem impacto na exibição do texto dentro do controle de edição.
+`FmtLines`afeta apenas o buffer retornado por [GetHandle](#gethandle) e o texto retornado por [WM_GETTEXT](/windows/win32/winmsg/wm-gettext). Ele não tem impacto na exibição do texto dentro do controle de edição.
 
-Para obter mais informações, consulte [EM_FMTLINES](/windows/desktop/Controls/em-fmtlines) no SDK do Windows.
+Para obter mais informações, consulte [EM_FMTLINES](/windows/win32/Controls/em-fmtlines) no SDK do Windows.
 
 ### <a name="example"></a>Exemplo
 
@@ -484,7 +484,7 @@ Para a segunda sobrecarga, um [CString](../../atl-mfc-shared/using-cstring.md) q
 
 ### <a name="remarks"></a>Comentários
 
-Esse método envia a mensagem [EM_GETCUEBANNER](/windows/desktop/Controls/em-getcuebanner) , que é descrita na SDK do Windows. Para obter mais informações, consulte a macro [Edit_GetCueBannerText](/windows/desktop/api/commctrl/nf-commctrl-edit_getcuebannertext) .
+Esse método envia a mensagem [EM_GETCUEBANNER](/windows/win32/Controls/em-getcuebanner) , que é descrita na SDK do Windows. Para obter mais informações, consulte a macro [Edit_GetCueBannerText](/windows/win32/api/commctrl/nf-commctrl-edit_getcuebannertext) .
 
 ##  <a name="getfirstvisibleline"></a>  CEdit::GetFirstVisibleLine
 
@@ -500,7 +500,7 @@ O índice de base zero da linha visível superior. Para controles de edição de
 
 ### <a name="remarks"></a>Comentários
 
-Para obter mais informações, consulte [EM_GETFIRSTVISIBLELINE](/windows/desktop/Controls/em-getfirstvisibleline) no SDK do Windows.
+Para obter mais informações, consulte [EM_GETFIRSTVISIBLELINE](/windows/win32/Controls/em-getfirstvisibleline) no SDK do Windows.
 
 ### <a name="example"></a>Exemplo
 
@@ -529,7 +529,7 @@ Chame `GetHandle` um controle de edição de várias linhas em uma caixa de diá
 > [!NOTE]
 > `GetHandle`não funcionará com o Windows 95/98. Se você chamar `GetHandle` no Windows 95/98, retornará NULL. `GetHandle`funcionará conforme documentado no Windows NT, versões 3,51 e posteriores.
 
-Para obter mais informações, consulte [EM_GETHANDLE](/windows/desktop/Controls/em-gethandle) no SDK do Windows.
+Para obter mais informações, consulte [EM_GETHANDLE](/windows/win32/Controls/em-gethandle) no SDK do Windows.
 
 ### <a name="example"></a>Exemplo
 
@@ -558,7 +558,7 @@ TRUE se esse método for bem-sucedido; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-Esse método envia a mensagem [EM_GETHILITE](/windows/desktop/Controls/em-gethilite) , que é descrita na SDK do Windows. Ambos `SetHighlight` e`GetHighlight` estão atualmente habilitados para compilações Unicode somente.
+Esse método envia a mensagem [EM_GETHILITE](/windows/win32/Controls/em-gethilite) , que é descrita na SDK do Windows. Ambos `SetHighlight` e`GetHighlight` estão atualmente habilitados para compilações Unicode somente.
 
 ##  <a name="getlimittext"></a>  CEdit::GetLimitText
 
@@ -579,7 +579,7 @@ O limite de texto é a quantidade máxima de texto, em TCHARs, que o controle de
 > [!NOTE]
 >  Essa função de membro está disponível a partir do Windows 95 e do Windows NT 4,0.
 
-Para obter mais informações, consulte [EM_GETLIMITTEXT](/windows/desktop/Controls/em-getlimittext) no SDK do Windows.
+Para obter mais informações, consulte [EM_GETLIMITTEXT](/windows/win32/Controls/em-getlimittext) no SDK do Windows.
 
 ### <a name="example"></a>Exemplo
 
@@ -619,7 +619,7 @@ O número de caracteres realmente copiados. O valor de retorno será 0 se o núm
 
 A linha copiada não contém um caractere de terminação nula.
 
-Para obter mais informações, consulte [EM_GETLINE](/windows/desktop/Controls/em-getline) no SDK do Windows.
+Para obter mais informações, consulte [EM_GETLINE](/windows/win32/Controls/em-getline) no SDK do Windows.
 
 ### <a name="example"></a>Exemplo
 
@@ -641,7 +641,7 @@ Um inteiro que contém o número de linhas no controle de edição de várias li
 
 `GetLineCount`é processado somente por controles de edição de várias linhas.
 
-Para obter mais informações, consulte [EM_GETLINECOUNT](/windows/desktop/Controls/em-getlinecount) no SDK do Windows.
+Para obter mais informações, consulte [EM_GETLINECOUNT](/windows/win32/Controls/em-getlinecount) no SDK do Windows.
 
 ### <a name="example"></a>Exemplo
 
@@ -666,7 +666,7 @@ As margens são medidas em pixels.
 > [!NOTE]
 >  Essa função de membro está disponível a partir do Windows 95 e do Windows NT 4,0.
 
-Para obter mais informações, consulte [EM_GETMARGINS](/windows/desktop/Controls/em-getmargins) no SDK do Windows.
+Para obter mais informações, consulte [EM_GETMARGINS](/windows/win32/Controls/em-getmargins) no SDK do Windows.
 
 ### <a name="example"></a>Exemplo
 
@@ -688,7 +688,7 @@ Diferente de zero se o conteúdo do controle de edição tiver sido modificado; 
 
 O Windows mantém um sinalizador interno que indica se o conteúdo do controle de edição foi alterado. Esse sinalizador é limpo quando o controle de edição é criado pela primeira vez e também pode ser limpo chamando a função de membro [SetModify](#setmodify).
 
-Para obter mais informações, consulte [EM_GETMODIFY](/windows/desktop/Controls/em-getmodify) no SDK do Windows.
+Para obter mais informações, consulte [EM_GETMODIFY](/windows/win32/Controls/em-getmodify) no SDK do Windows.
 
 ### <a name="example"></a>Exemplo
 
@@ -708,9 +708,9 @@ Especifica o caractere a ser exibido em vez do caractere que o usuário digitou.
 
 ### <a name="remarks"></a>Comentários
 
-Se você criar o controle de edição com o estilo ES_PASSWORD, a DLL que dá suporte ao controle determinará o caractere de senha padrão. O manifesto ou o método [InitCommonControlsEx](/windows/desktop/api/commctrl/nf-commctrl-initcommoncontrolsex) determina qual DLL dá suporte ao controle de edição. Se user32. dll der suporte ao controle de edição, o caractere de senha padrão será asterisco (' * ', U + 002A). Se o Comctl32. dll versão 6 der suporte ao controle de edição, o caractere padrão será círculo preto (' ● ', U + 25CF). Para obter mais informações sobre qual DLL e versão dá suporte aos controles comuns, consulte [shell e versões de controles comuns](/previous-versions/windows/desktop/legacy/bb776779\(v=vs.85\)).
+Se você criar o controle de edição com o estilo ES_PASSWORD, a DLL que dá suporte ao controle determinará o caractere de senha padrão. O manifesto ou o método [InitCommonControlsEx](/windows/win32/api/commctrl/nf-commctrl-initcommoncontrolsex) determina qual DLL dá suporte ao controle de edição. Se user32. dll der suporte ao controle de edição, o caractere de senha padrão será asterisco (' * ', U + 002A). Se o Comctl32. dll versão 6 der suporte ao controle de edição, o caractere padrão será círculo preto (' ● ', U + 25CF). Para obter mais informações sobre qual DLL e versão dá suporte aos controles comuns, consulte [shell e versões de controles comuns](/previous-versions/windows/desktop/legacy/bb776779\(v=vs.85\)).
 
-Esse método envia a mensagem [EM_GETPASSWORDCHAR](/windows/desktop/Controls/em-getpasswordchar) , que é descrita na SDK do Windows.
+Esse método envia a mensagem [EM_GETPASSWORDCHAR](/windows/win32/Controls/em-getpasswordchar) , que é descrita na SDK do Windows.
 
 ### <a name="example"></a>Exemplo
 
@@ -735,7 +735,7 @@ O retângulo de formatação é o retângulo de limitação do texto, que é ind
 
 O retângulo de formatação de um controle de edição de várias linhas pode ser modificado pelas funções de membro [SetRect](#setrect) e [SetRectNP](#setrectnp) .
 
-Para obter mais informações, consulte [EM_GETRECT](/windows/desktop/Controls/em-getrect) no SDK do Windows.
+Para obter mais informações, consulte [EM_GETRECT](/windows/win32/Controls/em-getrect) no SDK do Windows.
 
 ### <a name="example"></a>Exemplo
 
@@ -767,7 +767,7 @@ A versão que retorna um DWORD retorna um valor que contém a posição inicial 
 
 ### <a name="remarks"></a>Comentários
 
-Para obter mais informações, consulte [EM_GETSEL](/windows/desktop/Controls/em-getsel) no SDK do Windows.
+Para obter mais informações, consulte [EM_GETSEL](/windows/win32/Controls/em-getsel) no SDK do Windows.
 
 ### <a name="example"></a>Exemplo
 
@@ -787,7 +787,7 @@ TRUE se esse método for bem-sucedido; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-Essa função envia a mensagem [EM_HIDEBALLOONTIP](/windows/desktop/Controls/em-hideballoontip) , que é descrita na SDK do Windows.
+Essa função envia a mensagem [EM_HIDEBALLOONTIP](/windows/win32/Controls/em-hideballoontip) , que é descrita na SDK do Windows.
 
 ##  <a name="limittext"></a>  CEdit::LimitText
 
@@ -804,12 +804,12 @@ Especifica o comprimento (em TCHARs) do texto que o usuário pode inserir. Se es
 
 ### <a name="remarks"></a>Comentários
 
-Alterar o limite de texto restringe apenas o texto que o usuário pode inserir. Ele não tem nenhum efeito em nenhum texto que já esteja no controle de edição, nem afeta o tamanho do texto copiado para o controle de edição [SetWindowText](cwnd-class.md#setwindowtext) pela função membro no `CWnd`. Se um aplicativo usar a `SetWindowText` função para posicionar mais texto em um controle de edição do que é especificado na `LimitText`chamada para, o usuário poderá excluir qualquer um dos textos dentro do controle de edição. No entanto, o limite de texto impedirá que o usuário substitua o texto existente por um novo texto, a menos que a exclusão da seleção atual faça com que o texto fique abaixo do limite de texto.
+Alterar o limite de texto restringe apenas o texto que o usuário pode inserir. Ele não tem nenhum efeito em nenhum texto que já esteja no controle de edição, nem afeta o tamanho do texto copiado para o controle de edição pela função membro [SetWindowText](cwnd-class.md#setwindowtext) no `CWnd`. Se um aplicativo usar a `SetWindowText` função para posicionar mais texto em um controle de edição do que é especificado na `LimitText`chamada para, o usuário poderá excluir qualquer um dos textos dentro do controle de edição. No entanto, o limite de texto impedirá que o usuário substitua o texto existente por um novo texto, a menos que a exclusão da seleção atual faça com que o texto fique abaixo do limite de texto.
 
 > [!NOTE]
 >  No Win32 (Windows NT e Windows 95/98), [SetLimitText](#setlimittext) substitui essa função.
 
-Para obter mais informações, consulte [EM_LIMITTEXT](/windows/desktop/Controls/em-limittext) no SDK do Windows.
+Para obter mais informações, consulte [EM_LIMITTEXT](/windows/win32/Controls/em-limittext) no SDK do Windows.
 
 ### <a name="example"></a>Exemplo
 
@@ -838,7 +838,7 @@ Um índice de caracteres é o número de caracteres do início do controle de ed
 
 Essa função de membro é usada apenas por controles de edição de várias linhas.
 
-Para obter mais informações, consulte [EM_LINEFROMCHAR](/windows/desktop/Controls/em-linefromchar) no SDK do Windows.
+Para obter mais informações, consulte [EM_LINEFROMCHAR](/windows/win32/Controls/em-linefromchar) no SDK do Windows.
 
 ### <a name="example"></a>Exemplo
 
@@ -867,7 +867,7 @@ O índice de caracteres é o número de caracteres desde o início do controle d
 
 Essa função de membro só é processada por controles de edição de várias linhas.
 
-Para obter mais informações, consulte [EM_LINEINDEX](/windows/desktop/controls/em-lineindex) no SDK do Windows.
+Para obter mais informações, consulte [EM_LINEINDEX](/windows/win32/controls/em-lineindex) no SDK do Windows.
 
 ### <a name="example"></a>Exemplo
 
@@ -896,11 +896,11 @@ Se o parâmetro *nLinha* for maior que o número de caracteres no controle, o va
 
 Se o parâmetro *nLinha* for-1, o valor de retorno será o número de caracteres não selecionados nas linhas que contêm os caracteres selecionados. Por exemplo, se a seleção se estender do quarto caractere de uma linha pelo oitavo caractere do final da linha seguinte, o valor de retorno será 10. Ou seja, três caracteres na primeira linha e sete no próximo.
 
-Para obter mais informações sobre o tipo TCHAR, consulte a linha TCHAR na tabela em [tipos de dados do Windows](/windows/desktop/WinProg/windows-data-types).
+Para obter mais informações sobre o tipo TCHAR, consulte a linha TCHAR na tabela em [tipos de dados do Windows](/windows/win32/WinProg/windows-data-types).
 
 ### <a name="remarks"></a>Comentários
 
-Esse método é suportado pela mensagem [EM_LINELENGTH](/windows/desktop/Controls/em-linelength) , que é descrita na SDK do Windows.
+Esse método é suportado pela mensagem [EM_LINELENGTH](/windows/win32/Controls/em-linelength) , que é descrita na SDK do Windows.
 
 ### <a name="example"></a>Exemplo
 
@@ -932,7 +932,7 @@ O controle de edição não rola verticalmente após a última linha de texto no
 
 `LineScroll`pode ser usado para rolar horizontalmente além do último caractere de qualquer linha.
 
-Para obter mais informações, consulte [EM_LINESCROLL](/windows/desktop/Controls/em-linescroll) no SDK do Windows.
+Para obter mais informações, consulte [EM_LINESCROLL](/windows/win32/Controls/em-linescroll) no SDK do Windows.
 
 ### <a name="example"></a>Exemplo
 
@@ -950,7 +950,7 @@ void Paste();
 
 Os dados só serão inseridos se a área de transferência contiver dados no formato CF_TEXT.
 
-Para obter mais informações, consulte [WM_PASTE](/windows/desktop/dataxchg/wm-paste) no SDK do Windows.
+Para obter mais informações, consulte [WM_PASTE](/windows/win32/dataxchg/wm-paste) no SDK do Windows.
 
 ### <a name="example"></a>Exemplo
 
@@ -980,7 +980,7 @@ O caractere é especificado fornecendo seu valor de índice baseado em zero. Se 
 > [!NOTE]
 >  Essa função de membro está disponível a partir do Windows 95 e do Windows NT 4,0.
 
-Para obter mais informações, consulte [EM_POSFROMCHAR](/windows/desktop/Controls/em-posfromchar) no SDK do Windows.
+Para obter mais informações, consulte [EM_POSFROMCHAR](/windows/win32/Controls/em-posfromchar) no SDK do Windows.
 
 ### <a name="example"></a>Exemplo
 
@@ -1008,7 +1008,7 @@ Substitui apenas uma parte do texto em um controle de edição. Se você quiser 
 
 Se não houver seleção atual, o texto de substituição será inserido no local do cursor atual.
 
-Para obter mais informações, consulte [EM_REPLACESEL](/windows/desktop/Controls/em-replacesel) no SDK do Windows.
+Para obter mais informações, consulte [EM_REPLACESEL](/windows/win32/Controls/em-replacesel) no SDK do Windows.
 
 ### <a name="example"></a>Exemplo
 
@@ -1044,7 +1044,7 @@ TRUE se o método for bem-sucedido; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-Esse método envia a mensagem [EM_SETCUEBANNER](/windows/desktop/Controls/em-setcuebanner) , que é descrita na SDK do Windows. Para obter mais informações, consulte a macro [Edit_SetCueBannerTextFocused](/windows/desktop/api/commctrl/nf-commctrl-edit_setcuebannertextfocused) .
+Esse método envia a mensagem [EM_SETCUEBANNER](/windows/win32/Controls/em-setcuebanner) , que é descrita na SDK do Windows. Para obter mais informações, consulte a macro [Edit_SetCueBannerTextFocused](/windows/win32/api/commctrl/nf-commctrl-edit_setcuebannertextfocused) .
 
 ### <a name="example"></a>Exemplo
 
@@ -1063,7 +1063,7 @@ void SetHandle(HLOCAL hBuffer);
 ### <a name="parameters"></a>Parâmetros
 
 *hBuffer*<br/>
-Contém um identificador para a memória local. Esse identificador deve ter sido criado por uma chamada anterior à função [LocalAlloc](/windows/desktop/api/winbase/nf-winbase-localalloc) do Windows usando o sinalizador LMEM_MOVEABLE. Pressupõe-se que a memória contenha uma cadeia de caracteres terminada em nulo. Se esse não for o caso, o primeiro byte da memória alocada deverá ser definido como 0.
+Contém um identificador para a memória local. Esse identificador deve ter sido criado por uma chamada anterior à função [LocalAlloc](/windows/win32/api/winbase/nf-winbase-localalloc) do Windows usando o sinalizador LMEM_MOVEABLE. Pressupõe-se que a memória contenha uma cadeia de caracteres terminada em nulo. Se esse não for o caso, o primeiro byte da memória alocada deverá ser definido como 0.
 
 ### <a name="remarks"></a>Comentários
 
@@ -1080,7 +1080,7 @@ Você poderá usar essa função de membro em um controle de edição de várias
 > [!NOTE]
 > `GetHandle`não funcionará com o Windows 95/98. Se você chamar `GetHandle` no Windows 95/98, retornará NULL. `GetHandle`funcionará conforme documentado no Windows NT, versões 3,51 e posteriores.
 
-Para obter mais informações, consulte [EM_SETHANDLE](/windows/desktop/Controls/em-sethandle), [LocalAlloc](/windows/desktop/api/winbase/nf-winbase-localalloc)e [LocalFree](/windows/desktop/api/winbase/nf-winbase-localfree) no SDK do Windows.
+Para obter mais informações, consulte [EM_SETHANDLE](/windows/win32/Controls/em-sethandle), [LocalAlloc](/windows/win32/api/winbase/nf-winbase-localalloc)e [LocalFree](/windows/win32/api/winbase/nf-winbase-localfree) no SDK do Windows.
 
 ### <a name="example"></a>Exemplo
 
@@ -1105,7 +1105,7 @@ void SetHighlight(
 
 ### <a name="remarks"></a>Comentários
 
-Esse método envia a mensagem [EM_SETHILITE](/windows/desktop/Controls/em-sethilite) , que é descrita na SDK do Windows.  Esse método envia a mensagem [EM_SETHILITE](/windows/desktop/Controls/em-sethilite) , que é descrita na SDK do Windows. Ambos `SetHighlight` e`GetHighlight` são habilitados apenas para compilações Unicode.
+Esse método envia a mensagem [EM_SETHILITE](/windows/win32/Controls/em-sethilite) , que é descrita na SDK do Windows.  Esse método envia a mensagem [EM_SETHILITE](/windows/win32/Controls/em-sethilite) , que é descrita na SDK do Windows. Ambos `SetHighlight` e`GetHighlight` são habilitados apenas para compilações Unicode.
 
 ##  <a name="setlimittext"></a>  CEdit::SetLimitText
 
@@ -1124,11 +1124,11 @@ O novo limite de texto, em caracteres.
 
 O limite de texto é a quantidade máxima de texto, em caracteres, que o controle de edição pode aceitar.
 
-Alterar o limite de texto restringe apenas o texto que o usuário pode inserir. Ele não tem nenhum efeito em nenhum texto que já esteja no controle de edição, nem afeta o tamanho do texto copiado para o controle de edição [SetWindowText](cwnd-class.md#setwindowtext) pela função membro no `CWnd`. Se um aplicativo usar a `SetWindowText` função para posicionar mais texto em um controle de edição do que é especificado na `LimitText`chamada para, o usuário poderá excluir qualquer um dos textos dentro do controle de edição. No entanto, o limite de texto impedirá que o usuário substitua o texto existente por um novo texto, a menos que a exclusão da seleção atual faça com que o texto fique abaixo do limite de texto.
+Alterar o limite de texto restringe apenas o texto que o usuário pode inserir. Ele não tem nenhum efeito em nenhum texto que já esteja no controle de edição, nem afeta o tamanho do texto copiado para o controle de edição pela função membro [SetWindowText](cwnd-class.md#setwindowtext) no `CWnd`. Se um aplicativo usar a `SetWindowText` função para posicionar mais texto em um controle de edição do que é especificado na `LimitText`chamada para, o usuário poderá excluir qualquer um dos textos dentro do controle de edição. No entanto, o limite de texto impedirá que o usuário substitua o texto existente por um novo texto, a menos que a exclusão da seleção atual faça com que o texto fique abaixo do limite de texto.
 
 Essa função substitui [LimitText](#limittext) no Win32.
 
-Para obter mais informações, consulte [EM_SETLIMITTEXT](/windows/desktop/Controls/em-setlimittext) no SDK do Windows.
+Para obter mais informações, consulte [EM_SETLIMITTEXT](/windows/win32/Controls/em-setlimittext) no SDK do Windows.
 
 ### <a name="example"></a>Exemplo
 
@@ -1157,7 +1157,7 @@ A largura da nova margem direita, em pixels.
 > [!NOTE]
 >  Essa função de membro está disponível a partir do Windows 95 e do Windows NT 4,0.
 
-Para obter mais informações, consulte [EM_SETMARGINS](/windows/desktop/Controls/em-setmargins) no SDK do Windows.
+Para obter mais informações, consulte [EM_SETMARGINS](/windows/win32/Controls/em-setmargins) no SDK do Windows.
 
 ### <a name="example"></a>Exemplo
 
@@ -1180,7 +1180,7 @@ Um valor TRUE indica que o texto foi modificado e um valor FALSE indica que ele 
 
 O sinalizador modificado indica se o texto dentro do controle de edição foi modificado ou não. Ele é definido automaticamente sempre que o usuário altera o texto. Seu valor pode ser recuperado com a função de membro [GetModify](#getmodify).
 
-Para obter mais informações, consulte [EM_SETMODIFY](/windows/desktop/Controls/em-setmodify) no SDK do Windows.
+Para obter mais informações, consulte [EM_SETMODIFY](/windows/win32/Controls/em-setmodify) no SDK do Windows.
 
 ### <a name="example"></a>Exemplo
 
@@ -1209,7 +1209,7 @@ Quando a `SetPasswordChar` função de membro for chamada `CEdit` , o redesenhar
 
 Se o controle de edição for criado com o estilo [ES_PASSWORD](styles-used-by-mfc.md#edit-styles) , o caractere de senha padrão será definido como um <strong>\*</strong>asterisco (). Esse estilo será removido se `SetPasswordChar` for chamado com *ch* definido como 0.
 
-Para obter mais informações, consulte [EM_SETPASSWORDCHAR](/windows/desktop/Controls/em-setpasswordchar) no SDK do Windows.
+Para obter mais informações, consulte [EM_SETPASSWORDCHAR](/windows/win32/Controls/em-setpasswordchar) no SDK do Windows.
 
 ### <a name="example"></a>Exemplo
 
@@ -1236,7 +1236,7 @@ Diferente de zero se a operação for bem-sucedida ou 0 se ocorrer um erro.
 
 A configuração atual pode ser encontrada testando o sinalizador [ES_READONLY](styles-used-by-mfc.md#edit-styles) no valor de retorno de [CWnd:: GetStyle](cwnd-class.md#getstyle).
 
-Para obter mais informações, consulte [EM_SETREADONLY](/windows/desktop/Controls/em-setreadonly) no SDK do Windows.
+Para obter mais informações, consulte [EM_SETREADONLY](/windows/win32/Controls/em-setreadonly) no SDK do Windows.
 
 ### <a name="example"></a>Exemplo
 
@@ -1265,7 +1265,7 @@ Se o controle de edição não tiver nenhuma barra de rolagem, o texto será rec
 
 Quando `SetRect` é chamado, o texto do controle de edição também é reformatado e exibido novamente.
 
-Para obter mais informações, consulte [EM_SETRECT](/windows/desktop/Controls/em-setrect) no SDK do Windows.
+Para obter mais informações, consulte [EM_SETRECT](/windows/win32/Controls/em-setrect) no SDK do Windows.
 
 ### <a name="example"></a>Exemplo
 
@@ -1296,7 +1296,7 @@ Se o controle de edição não tiver nenhuma barra de rolagem, o texto será rec
 
 Esse membro é processado somente por controles de edição de várias linhas.
 
-Para obter mais informações, consulte [EM_SETRECTNP](/windows/desktop/Controls/em-setrectnp) no SDK do Windows.
+Para obter mais informações, consulte [EM_SETRECTNP](/windows/win32/Controls/em-setrectnp) no SDK do Windows.
 
 ### <a name="example"></a>Exemplo
 
@@ -1333,7 +1333,7 @@ Especifica a posição final.
 
 ### <a name="remarks"></a>Comentários
 
-Para obter mais informações, consulte [EM_SETSEL](/windows/desktop/Controls/em-setsel) no SDK do Windows.
+Para obter mais informações, consulte [EM_SETSEL](/windows/win32/Controls/em-setsel) no SDK do Windows.
 
 ### <a name="example"></a>Exemplo
 
@@ -1377,7 +1377,7 @@ Essa função de membro só é processada por controles de edição de várias l
 
 `SetTabStops`Não redesenha automaticamente a janela de edição. Se você alterar as paradas de tabulação para texto que já está no controle de edição, chame [CWnd:: InvalidateRect](cwnd-class.md#invalidaterect) para redesenhar a janela de edição.
 
-Para obter mais informações, consulte [EM_SETTABSTOPS](/windows/desktop/Controls/em-settabstops) e [GetDialogBaseUnits](/windows/desktop/api/winuser/nf-winuser-getdialogbaseunits) no SDK do Windows.
+Para obter mais informações, consulte [EM_SETTABSTOPS](/windows/win32/Controls/em-settabstops) e [GetDialogBaseUnits](/windows/win32/api/winuser/nf-winuser-getdialogbaseunits) no SDK do Windows.
 
 ### <a name="example"></a>Exemplo
 
@@ -1400,10 +1400,10 @@ BOOL ShowBalloonTip(
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|*pEditBalloonTip*|no Ponteiro para uma estrutura [EDITBALLOONTIP](/windows/desktop/api/commctrl/ns-commctrl-editballoontip) que descreve a dica de balão.|
+|*pEditBalloonTip*|no Ponteiro para uma estrutura [EDITBALLOONTIP](/windows/win32/api/commctrl/ns-commctrl-editballoontip) que descreve a dica de balão.|
 |*lpszTitle*|no Ponteiro para uma cadeia de caracteres Unicode que contém o título da dica de balão.|
 |*lpszText*|no Ponteiro para uma cadeia de caracteres Unicode que contém o texto da dica de balão.|
-|*ttiIcon*|no Um **int** que especifica o tipo de ícone a ser associado à dica de balão. O valor padrão é TTI_NONE. Para obter mais informações, consulte `ttiIcon` o membro da estrutura [EDITBALLOONTIP](/windows/desktop/api/commctrl/ns-commctrl-editballoontip) .|
+|*ttiIcon*|no Um **int** que especifica o tipo de ícone a ser associado à dica de balão. O valor padrão é TTI_NONE. Para obter mais informações, consulte `ttiIcon` o membro da estrutura [EDITBALLOONTIP](/windows/win32/api/commctrl/ns-commctrl-editballoontip) .|
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -1411,7 +1411,7 @@ TRUE se esse método for bem-sucedido; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-Essa função envia a mensagem [EM_SHOWBALLOONTIP](/windows/desktop/Controls/em-showballoontip) , que é descrita na SDK do Windows. Para obter mais informações, consulte a macro [Edit_ShowBalloonTip](/windows/desktop/api/commctrl/nf-commctrl-edit_showballoontip) .
+Essa função envia a mensagem [EM_SHOWBALLOONTIP](/windows/win32/Controls/em-showballoontip) , que é descrita na SDK do Windows. Para obter mais informações, consulte a macro [Edit_ShowBalloonTip](/windows/win32/api/commctrl/nf-commctrl-edit_showballoontip) .
 
 ### <a name="example"></a>Exemplo
 
@@ -1441,7 +1441,7 @@ Para um controle de edição de linha única, o valor de retorno é sempre difer
 
 Uma operação de desfazer também pode ser desfeita. Por exemplo, você pode restaurar texto excluído com a primeira chamada para `Undo`. Desde que não haja nenhuma operação de edição intermediária, você pode remover o texto novamente com uma segunda chamada para `Undo`.
 
-Para obter mais informações, consulte [EM_UNDO](/windows/desktop/Controls/em-undo) no SDK do Windows.
+Para obter mais informações, consulte [EM_UNDO](/windows/win32/Controls/em-undo) no SDK do Windows.
 
 ### <a name="example"></a>Exemplo
 

@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CPrintDialog [MFC], PrintSelection
 - CPrintDialog [MFC], m_pd
 ms.assetid: 5bdb2424-adf8-433d-a97c-df11a83bc4e4
-ms.openlocfilehash: ab194b1c289f8347243b36354f4f314b7450a7aa
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
-ms.translationtype: HT
+ms.openlocfilehash: 1f4a4dbec9a1c79ac1e0cec925156ae7db4c293e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916907"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502897"
 ---
 # <a name="cprintdialog-class"></a>Classe CPrintDialog
 
@@ -104,7 +104,7 @@ Você pode contar com a estrutura para lidar com vários aspectos do processo de
 
 Se você quiser que seu aplicativo manipule a impressão sem o envolvimento da estrutura, você pode usar `CPrintDialog` a classe "no estado em que se encontra" com o construtor fornecido ou pode derivar sua `CPrintDialog` própria classe de caixa de diálogo de e escrever um construtor para atender às suas necessidades. Em ambos os casos, essas caixas de diálogo se comportarão como caixas de diálogo padrão do MFC `CCommonDialog`porque são derivadas da classe.
 
-Para usar um `CPrintDialog` objeto, primeiro crie o objeto usando o `CPrintDialog` Construtor. Depois que a caixa de diálogo tiver sido construída, você poderá definir ou modificar quaisquer valores na estrutura [m_pd](#m_pd) para inicializar os valores dos controles da caixa de diálogo. A `m_pd` estrutura é do tipo [PRINTDLG](/windows/desktop/api/commdlg/ns-commdlg-tagpda). Para obter mais informações sobre essa estrutura, consulte a SDK do Windows.
+Para usar um `CPrintDialog` objeto, primeiro crie o objeto usando o `CPrintDialog` Construtor. Depois que a caixa de diálogo tiver sido construída, você poderá definir ou modificar quaisquer valores na estrutura [m_pd](#m_pd) para inicializar os valores dos controles da caixa de diálogo. A `m_pd` estrutura é do tipo [PRINTDLG](/windows/win32/api/commdlg/ns-commdlg-pdw). Para obter mais informações sobre essa estrutura, consulte a SDK do Windows.
 
 Se você não `m_pd` fornecer seus próprios identificadores para os `hDevMode` Membros e `hDevNames` , certifique-se de chamar a função `GlobalFree` do Windows para esses identificadores quando terminar a caixa de diálogo. Ao usar a implementação da configuração de impressão da estrutura `CWinApp::OnFilePrintSetup`fornecida pelo, você não precisa liberar esses identificadores. Os identificadores são mantidos `CWinApp` pelo e são liberados no `CWinApp`destruidor. Só é necessário liberar esses identificadores ao usar `CPrintDialog` o autônomo.
 
@@ -159,7 +159,7 @@ CPrintDialog(
 Especifica se a caixa de diálogo de impressão padrão do Windows ou a caixa de diálogo configuração de impressão é exibida. Defina esse parâmetro como TRUE para exibir a caixa de diálogo padrão de configuração de impressão do Windows. Defina-a como FALSE para exibir a caixa de diálogo de impressão do Windows. Se *bPrintSetupOnly* for false, um botão de opção de configuração de impressão ainda será exibido na caixa de diálogo Imprimir.
 
 *dwFlags*<br/>
-Um ou mais sinalizadores que você pode usar para personalizar as configurações da caixa de diálogo, combinadas usando o operador OR Por exemplo, o sinalizador PD_ALLPAGES define o intervalo de impressão padrão para todas as páginas do documento. Consulte a estrutura [PRINTDLG](/windows/desktop/api/commdlg/ns-commdlg-tagpda) no SDK do Windows para obter mais informações sobre esses sinalizadores.
+Um ou mais sinalizadores que você pode usar para personalizar as configurações da caixa de diálogo, combinadas usando o operador OR Por exemplo, o sinalizador PD_ALLPAGES define o intervalo de impressão padrão para todas as páginas do documento. Consulte a estrutura [PRINTDLG](/windows/win32/api/commdlg/ns-commdlg-pdw) no SDK do Windows para obter mais informações sobre esses sinalizadores.
 
 *pParentWnd*<br/>
 Um ponteiro para a janela pai ou proprietário da caixa de diálogo.
@@ -168,7 +168,7 @@ Um ponteiro para a janela pai ou proprietário da caixa de diálogo.
 
 Essa função de membro apenas constrói o objeto. Use a `DoModal` função membro para exibir a caixa de diálogo.
 
-Observe que quando você chama o construtor com *bPrintSetupOnly* definido como false, o sinalizador PD_RETURNDC é usado automaticamente. Depois de `DoModal`chamar `GetDefaults`,, `GetPrinterDC`ou, um controlador de domínio de impressora `m_pd.hDC`será retornado em. Esse DC deve ser liberado com uma chamada para [DeleteDC](/windows/desktop/api/wingdi/nf-wingdi-deletedc) pelo chamador de `CPrintDialog`.
+Observe que quando você chama o construtor com *bPrintSetupOnly* definido como false, o sinalizador PD_RETURNDC é usado automaticamente. Depois de `DoModal`chamar `GetDefaults`,, `GetPrinterDC`ou, um controlador de domínio de impressora `m_pd.hDC`será retornado em. Esse DC deve ser liberado com uma chamada para [DeleteDC](/windows/win32/api/wingdi/nf-wingdi-deletedc) pelo chamador de `CPrintDialog`.
 
 ### <a name="example"></a>Exemplo
 
@@ -176,7 +176,7 @@ Observe que quando você chama o construtor com *bPrintSetupOnly* definido como 
 
 ##  <a name="createprinterdc"></a>  CPrintDialog::CreatePrinterDC
 
-Cria um DC (contexto de dispositivo de impressora) das estruturas [DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea) e [DEVNAMES](/windows/desktop/api/commdlg/ns-commdlg-tagdevnames) .
+Cria um DC (contexto de dispositivo de impressora) das estruturas [DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea) e [DEVNAMES](/windows/win32/api/commdlg/ns-commdlg-devnames) .
 
 ```
 HDC CreatePrinterDC();
@@ -204,7 +204,7 @@ virtual INT_PTR DoModal();
 
 ### <a name="return-value"></a>Valor de retorno
 
-IDOK ou IDCANCEL. Se IDCANCEL for retornado, chame a função [CommDlgExtendedError](/windows/desktop/api/commdlg/nf-commdlg-commdlgextendederror) do Windows para determinar se ocorreu um erro.
+IDOK ou IDCANCEL. Se IDCANCEL for retornado, chame a função [CommDlgExtendedError](/windows/win32/api/commdlg/nf-commdlg-commdlgextendederror) do Windows para determinar se ocorreu um erro.
 
 IDOK e IDCANCEL são constantes que indicam se o usuário selecionou o botão OK ou cancelar.
 
@@ -214,7 +214,7 @@ Se você quiser inicializar as várias opções da caixa de diálogo de impress�
 
 Depois de `DoModal`chamar, você pode chamar outras funções de membro para recuperar as configurações ou as informações inseridas pelo usuário na caixa de diálogo.
 
-Observe que quando você chama o construtor com *bPrintSetupOnly* definido como false, o sinalizador PD_RETURNDC é usado automaticamente. Depois de `DoModal`chamar `GetDefaults`,, `GetPrinterDC`ou, um controlador de domínio de impressora `m_pd.hDC`será retornado em. Esse DC deve ser liberado com uma chamada para [DeleteDC](/windows/desktop/api/wingdi/nf-wingdi-deletedc) pelo chamador de `CPrintDialog`.
+Observe que quando você chama o construtor com *bPrintSetupOnly* definido como false, o sinalizador PD_RETURNDC é usado automaticamente. Depois de `DoModal`chamar `GetDefaults`,, `GetPrinterDC`ou, um controlador de domínio de impressora `m_pd.hDC`será retornado em. Esse DC deve ser liberado com uma chamada para [DeleteDC](/windows/win32/api/wingdi/nf-wingdi-deletedc) pelo chamador de `CPrintDialog`.
 
 ### <a name="example"></a>Exemplo
 
@@ -258,7 +258,7 @@ Os valores recuperados são colocados na `m_pd` estrutura.
 
 Em alguns casos, uma chamada para essa função chamará o [Construtor](#cprintdialog) para `CPrintDialog` with *bPrintSetupOnly* definido como false. Nesses casos, um controlador de domínio de `hDevNames` impressora `hDevMode` e e (dois identificadores `m_pd` localizados no membro de dados) são alocados automaticamente.
 
-Se o construtor para `CPrintDialog` foi chamado com *bPrintSetupOnly* definido como false, essa função não retornará `hDevNames` e `hDevMode` será localizada em `m_pd.hDevNames` e `m_pd.hDevMode`) para o chamador, mas também retornará um controlador de domínio de impressora no `m_pd.hDC`. É responsabilidade do chamador excluir o controlador de domínio da impressora e chamar a função [GlobalFree](/windows/desktop/api/winbase/nf-winbase-globalfree) do Windows nos identificadores quando você terminar com o `CPrintDialog` objeto.
+Se o construtor para `CPrintDialog` foi chamado com *bPrintSetupOnly* definido como false, essa função não retornará `hDevNames` e `hDevMode` será localizada em `m_pd.hDevNames` e `m_pd.hDevMode`) para o chamador, mas também retornará um controlador de domínio de impressora no `m_pd.hDC`. É responsabilidade do chamador excluir o controlador de domínio da impressora e chamar a função [GlobalFree](/windows/win32/api/winbase/nf-winbase-globalfree) do Windows nos identificadores quando você terminar com o `CPrintDialog` objeto.
 
 ### <a name="example"></a>Exemplo
 
@@ -298,7 +298,7 @@ LPDEVMODE GetDevMode() const;
 
 ### <a name="return-value"></a>Valor de retorno
 
-A estrutura de dados [DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea) , que contém informações sobre a inicialização do dispositivo e o ambiente de um driver de impressão. Você deve desbloquear a memória usada por essa estrutura com a função [GlobalUnlock](/windows/desktop/api/winbase/nf-winbase-globalunlock) do Windows, que é descrita no SDK do Windows.
+A estrutura de dados [DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea) , que contém informações sobre a inicialização do dispositivo e o ambiente de um driver de impressão. Você deve desbloquear a memória usada por essa estrutura com a função [GlobalUnlock](/windows/win32/api/winbase/nf-winbase-globalunlock) do Windows, que é descrita no SDK do Windows.
 
 ### <a name="remarks"></a>Comentários
 
@@ -382,7 +382,7 @@ Um identificador para o contexto do dispositivo de impressora se for bem-sucedid
 
 ### <a name="remarks"></a>Comentários
 
-Se o parâmetro *bPrintSetupOnly* do `CPrintDialog` Construtor for falso (indicando que a caixa de diálogo Imprimir é `GetPrinterDC` exibida), o retornará um identificador para o contexto do dispositivo de impressora. Você deve chamar a função [DeleteDC](/windows/desktop/api/wingdi/nf-wingdi-deletedc) do Windows para excluir o contexto do dispositivo quando terminar de usá-lo.
+Se o parâmetro *bPrintSetupOnly* do `CPrintDialog` Construtor for falso (indicando que a caixa de diálogo Imprimir é `GetPrinterDC` exibida), o retornará um identificador para o contexto do dispositivo de impressora. Você deve chamar a função [DeleteDC](/windows/win32/api/wingdi/nf-wingdi-deletedc) do Windows para excluir o contexto do dispositivo quando terminar de usá-lo.
 
 ### <a name="example"></a>Exemplo
 
@@ -418,7 +418,7 @@ PRINTDLG& m_pd;
 
 ### <a name="remarks"></a>Comentários
 
-Depois de construir um `CPrintDialog` objeto, você pode usar `m_pd` para definir vários aspectos da caixa de diálogo antes de chamar a função de membro [DoModal](#domodal) . Para obter mais informações sobre `m_pd` a estrutura, consulte [PRINTDLG](/windows/desktop/api/commdlg/ns-commdlg-tagpda) no SDK do Windows.
+Depois de construir um `CPrintDialog` objeto, você pode usar `m_pd` para definir vários aspectos da caixa de diálogo antes de chamar a função de membro [DoModal](#domodal) . Para obter mais informações sobre `m_pd` a estrutura, consulte [PRINTDLG](/windows/win32/api/commdlg/ns-commdlg-pdw) no SDK do Windows.
 
 Se você modificar o `m_pd` membro de dados diretamente, substituirá qualquer comportamento padrão.
 

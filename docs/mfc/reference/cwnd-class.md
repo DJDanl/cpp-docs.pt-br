@@ -818,12 +818,12 @@ helpviewer_keywords:
 - CWnd [MFC], WindowProc
 - CWnd [MFC], m_hWnd
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
-ms.openlocfilehash: 91acc8255cd5f22092790f9dcf45558012caf7dc
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
-ms.translationtype: HT
+ms.openlocfilehash: 5e7a0b0d7f5c41c60fc10784518c4c075c13f778
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916790"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502135"
 ---
 # <a name="cwnd-class"></a>Classe CWnd
 
@@ -1021,7 +1021,7 @@ class CWnd : public CCmdTarget
 |[CWnd::OnHelpIndex](#onhelpindex)|Manipula o comando ID_HELP_INDEX e fornece um tópico de ajuda padrão.|
 |[CWnd::OnHelpUsing](#onhelpusing)|Manipula o comando ID_HELP_USING.|
 |[CWnd::OnToolHitTest](#ontoolhittest)|Determina se um ponto está no retângulo delimitador da ferramenta especificada e recupera informações sobre a ferramenta.|
-|[CWnd::OpenClipboard](#openclipboard)|Abre a área de transferência. Outros aplicativos não poderão modificar a área de transferência até que a função [CloseClipboard](/windows/desktop/api/winuser/nf-winuser-closeclipboard) do Windows seja chamada.|
+|[CWnd::OpenClipboard](#openclipboard)|Abre a área de transferência. Outros aplicativos não poderão modificar a área de transferência até que a função [CloseClipboard](/windows/win32/api/winuser/nf-winuser-closeclipboard) do Windows seja chamada.|
 |[CWnd::PaintWindowlessControls](#paintwindowlesscontrols)|Desenha controles sem janela no contêiner de controle.|
 |[CWnd::PostMessage](#postmessage)|Coloca uma mensagem na fila do aplicativo e, em seguida, retorna sem esperar que a janela processe a mensagem.|
 |[CWnd::PreCreateWindow](#precreatewindow)|Chamado antes da criação da janela do Windows anexada a `CWnd` este objeto.|
@@ -1122,7 +1122,7 @@ class CWnd : public CCmdTarget
 |[CWnd::OnDeadChar](#ondeadchar)|Chamado quando uma tecla se traduz em um caractere inativo não relacionado ao sistema (como caracteres de acentos).|
 |[CWnd::OnDeleteItem](#ondeleteitem)|Chamado quando uma caixa de listagem filho de desenho proprietário ou caixa de combinação é destruída ou quando os itens são removidos do controle.|
 |[CWnd::OnDestroy](#ondestroy)|Chamado quando `CWnd` está sendo destruído.|
-|[CWnd::OnDestroyClipboard](#ondestroyclipboard)|Chamado quando a área de transferência é esvaziada por meio de uma chamada para a função [EmptyClipboard](/windows/desktop/api/winuser/nf-winuser-emptyclipboard) do Windows.|
+|[CWnd::OnDestroyClipboard](#ondestroyclipboard)|Chamado quando a área de transferência é esvaziada por meio de uma chamada para a função [EmptyClipboard](/windows/win32/api/winuser/nf-winuser-emptyclipboard) do Windows.|
 |[CWnd::OnDeviceChange](#ondevicechange)|Notifica um aplicativo ou driver de dispositivo de uma alteração na configuração de hardware de um dispositivo ou computador.|
 |[CWnd::OnDevModeChange](#ondevmodechange)|Chamado para todas as janelas de nível superior quando o usuário altera as configurações de modo de dispositivo.|
 |[CWnd::OnDrawClipboard](#ondrawclipboard)|Chamado quando o conteúdo da área de transferência é alterado.|
@@ -1166,9 +1166,9 @@ class CWnd : public CCmdTarget
 |[CWnd::OnMenuRButtonUp](#onmenurbuttonup)|Chamado quando o usuário libera o botão direito do mouse enquanto o cursor está em um item de menu.|
 |[CWnd::OnMenuSelect](#onmenuselect)|Chamado quando o usuário seleciona um item de menu.|
 |[CWnd::OnMouseActivate](#onmouseactivate)|Chamado quando o cursor está em uma janela inativa e o usuário pressiona um botão do mouse.|
-|[CWnd::OnMouseHover](#onmousehover)|Chamado quando o cursor passa sobre a área do cliente da janela pelo período de tempo especificado em uma chamada anterior para [TrackMouseEvent](/windows/desktop/api/winuser/nf-winuser-trackmouseevent).|
+|[CWnd::OnMouseHover](#onmousehover)|Chamado quando o cursor passa sobre a área do cliente da janela pelo período de tempo especificado em uma chamada anterior para [TrackMouseEvent](/windows/win32/api/winuser/nf-winuser-trackmouseevent).|
 |[CWnd::OnMouseHWheel](#onmousehwheel)|Chamado quando a janela atual é composta pelo Gerenciador de Janelas da Área de Trabalho (DWM) e essa janela é maximizada.|
-|[CWnd::OnMouseLeave](#onmouseleave)|Chamado quando o cursor sai da área do cliente da janela especificada em uma chamada anterior para [TrackMouseEvent](/windows/desktop/api/winuser/nf-winuser-trackmouseevent).|
+|[CWnd::OnMouseLeave](#onmouseleave)|Chamado quando o cursor sai da área do cliente da janela especificada em uma chamada anterior para [TrackMouseEvent](/windows/win32/api/winuser/nf-winuser-trackmouseevent).|
 |[CWnd::OnMouseMove](#onmousemove)|Chamado quando o cursor do mouse se move.|
 |[CWnd::OnMouseWheel](#onmousewheel)|Chamado quando um usuário gira a roda do mouse. Usa a manipulação de mensagens do Windows NT 4,0.|
 |[CWnd::OnMove](#onmove)|Chamado depois que a posição de `CWnd` é alterada.|
@@ -1184,8 +1184,8 @@ class CWnd : public CCmdTarget
 |[CWnd::OnNcMButtonDblClk](#onncmbuttondblclk)|Chamado quando o usuário clica duas vezes no botão do meio do mouse enquanto o cursor está dentro de uma área que `CWnd`não é de cliente do.|
 |[CWnd::OnNcMButtonDown](#onncmbuttondown)|Chamado quando o usuário pressiona o botão do meio do mouse enquanto o cursor está dentro de uma área que não `CWnd`é de cliente do.|
 |[CWnd::OnNcMButtonUp](#onncmbuttonup)|Chamado quando o usuário libera o botão do meio do mouse enquanto o cursor está dentro de uma área que `CWnd`não é de cliente do.|
-|[CWnd::OnNcMouseHover](#onncmousehover)|Chamado quando o cursor passa sobre a área não-cliente da janela pelo período de tempo especificado em uma chamada anterior para [TrackMouseEvent](/windows/desktop/api/winuser/nf-winuser-trackmouseevent).|
-|[CWnd::OnNcMouseLeave](#onncmouseleave)|A estrutura chama essa função de membro quando o cursor sai da área não cliente da janela especificada em uma chamada anterior para [TrackMouseEvent](/windows/desktop/api/winuser/nf-winuser-trackmouseevent).|
+|[CWnd::OnNcMouseHover](#onncmousehover)|Chamado quando o cursor passa sobre a área não-cliente da janela pelo período de tempo especificado em uma chamada anterior para [TrackMouseEvent](/windows/win32/api/winuser/nf-winuser-trackmouseevent).|
+|[CWnd::OnNcMouseLeave](#onncmouseleave)|A estrutura chama essa função de membro quando o cursor sai da área não cliente da janela especificada em uma chamada anterior para [TrackMouseEvent](/windows/win32/api/winuser/nf-winuser-trackmouseevent).|
 |[CWnd::OnNcMouseMove](#onncmousemove)|Chamado quando o cursor é movido dentro de uma área que não é `CWnd`de cliente do.|
 |[CWnd::OnNcPaint](#onncpaint)|Chamado quando a área não cliente precisa de pintura.|
 |[CWnd::OnNcRButtonDblClk](#onncrbuttondblclk)|Chamado quando o usuário clica duas vezes com o botão direito do mouse enquanto o cursor está dentro de uma área que `CWnd`não é de cliente do.|
@@ -1224,8 +1224,8 @@ class CWnd : public CCmdTarget
 |[CWnd::OnSizeClipboard](#onsizeclipboard)|Chamado quando o tamanho da área do cliente da janela do Visualizador da área de transferência foi alterado.|
 |[CWnd::OnSizing](#onsizing)|Indica que o usuário está redimensionando o retângulo.|
 |[CWnd::OnSpoolerStatus](#onspoolerstatus)|Chamado do Gerenciador de impressão sempre que um trabalho é adicionado ou removido da fila do Gerenciador de impressão.|
-|[CWnd::OnStyleChanged](#onstylechanged)|Indica que a função [SetWindowLong](/windows/desktop/api/winuser/nf-winuser-setwindowlonga) do Windows alterou um ou mais dos estilos da janela.|
-|[CWnd::OnStyleChanging](#onstylechanging)|Indica que a função [SetWindowLong](/windows/desktop/api/winuser/nf-winuser-setwindowlonga) do Windows está prestes a alterar um ou mais dos estilos da janela.|
+|[CWnd::OnStyleChanged](#onstylechanged)|Indica que a função [SetWindowLong](/windows/win32/api/winuser/nf-winuser-setwindowlongw) do Windows alterou um ou mais dos estilos da janela.|
+|[CWnd::OnStyleChanging](#onstylechanging)|Indica que a função [SetWindowLong](/windows/win32/api/winuser/nf-winuser-setwindowlongw) do Windows está prestes a alterar um ou mais dos estilos da janela.|
 |[CWnd::OnSysChar](#onsyschar)|Chamado quando um pressionamento de tecla é convertido em um caractere do sistema.|
 |[CWnd::OnSysColorChange](#onsyscolorchange)|Chamado para todas as janelas de nível superior quando uma alteração é feita na configuração de cores do sistema.|
 |[CWnd::OnSysCommand](#onsyscommand)|Chamado quando o usuário seleciona um comando no menu de controle ou quando o usuário seleciona o botão Maximizar ou minimizar.|
@@ -1237,7 +1237,7 @@ class CWnd : public CCmdTarget
 |[CWnd::OnTimer](#ontimer)|Chamado após cada intervalo especificado em [SetTimer](#settimer).|
 |[CWnd::OnTouchInput](#ontouchinput)|Processar a entrada única do Windows Touch.|
 |[CWnd::OnTouchInputs](#ontouchinputs)|Processar entradas do Windows Touch.|
-|[CWnd::OnUniChar](#onunichar)|Chamado quando uma tecla é pressionada. Ou seja, a janela atual tem o foco do teclado e uma mensagem [WM_KEYDOWN](/windows/desktop/inputdev/wm-keydown) é convertida pela função [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) .|
+|[CWnd::OnUniChar](#onunichar)|Chamado quando uma tecla é pressionada. Ou seja, a janela atual tem o foco do teclado e uma mensagem [WM_KEYDOWN](/windows/win32/inputdev/wm-keydown) é convertida pela função [TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage) .|
 |[CWnd::OnUnInitMenuPopup](#onuninitmenupopup)|Chamado quando um menu suspenso ou submenu foi destruído.|
 |[CWnd::OnUpdateUIState](#onupdateuistate)|Chamado para alterar o estado da interface do usuário para a janela especificada e todas as suas janelas filhas.|
 |[CWnd::OnUserChanged](#onuserchanged)|Chamado depois que o usuário faz logon ou logoff.|
@@ -1314,13 +1314,13 @@ Especifica se a ação padrão a ser invocada é a do objeto ou um dos elementos
 
 ### <a name="return-value"></a>Valor de retorno
 
-Retorna S_OK em caso de êxito, um código de erro COM em caso de falha. Confira **valores de retorno** em [IAccessible:: accDoDefaultAction](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-accdodefaultaction) no SDK do Windows.
+Retorna S_OK em caso de êxito, um código de erro COM em caso de falha. Confira **valores de retorno** em [IAccessible:: accDoDefaultAction](/windows/win32/api/oleacc/nf-oleacc-iaccessible-accdodefaultaction) no SDK do Windows.
 
 ### <a name="remarks"></a>Comentários
 
-Essa função faz parte do suporte de [acessibilidade ativa](/windows/desktop/WinAuto/microsoft-active-accessibility) do MFC.
+Essa função faz parte do suporte de [acessibilidade ativa](/windows/win32/WinAuto/microsoft-active-accessibility) do MFC.
 
-Substitua essa função na `CWnd`classe derivada para executar a ação padrão do objeto. Para obter mais informações, consulte [IAccessible:: accDoDefaultAction](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-accdodefaultaction) no SDK do Windows.
+Substitua essa função na `CWnd`classe derivada para executar a ação padrão do objeto. Para obter mais informações, consulte [IAccessible:: accDoDefaultAction](/windows/win32/api/oleacc/nf-oleacc-iaccessible-accdodefaultaction) no SDK do Windows.
 
 ##  <a name="acchittest"></a>  CWnd::accHitTest
 
@@ -1342,7 +1342,7 @@ Coordenada X do ponto a ser testado (em unidades de tela).
 Coordenada Y do ponto a ser testado (em unidades de tela).
 
 *pvarChild*<br/>
-Recebe informações que identificam o objeto no ponto especificado por *xLeft* e *yTop*. Consulte *pvarID* em [IAccessible:: accHitTest](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-acchittest) na SDK do Windows.
+Recebe informações que identificam o objeto no ponto especificado por *xLeft* e *yTop*. Consulte *pvarID* em [IAccessible:: accHitTest](/windows/win32/api/oleacc/nf-oleacc-iaccessible-acchittest) na SDK do Windows.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -1350,11 +1350,11 @@ Retorna S_OK em caso de êxito, um código de erro COM em caso de falha. Confira
 
 ### <a name="remarks"></a>Comentários
 
-Essa função faz parte do suporte de [acessibilidade ativa](/windows/desktop/WinAuto/microsoft-active-accessibility) do MFC.
+Essa função faz parte do suporte de [acessibilidade ativa](/windows/win32/WinAuto/microsoft-active-accessibility) do MFC.
 
 Substitua essa função na sua `CWnd`classe derivada se você tiver elementos de interface do usuário sem janela (além de controles ActiveX sem janela, que o MFC manipula).
 
-Para obter mais informações, consulte [IAccessible:: accHitTest](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-acchittest) no SDK do Windows.
+Para obter mais informações, consulte [IAccessible:: accHitTest](/windows/win32/api/oleacc/nf-oleacc-iaccessible-acchittest) no SDK do Windows.
 
 ##  <a name="acclocation"></a>  CWnd::accLocation
 
@@ -1410,7 +1410,7 @@ virtual HRESULT accNavigate(
 ### <a name="parameters"></a>Parâmetros
 
 *navDir*<br/>
-Especifica a direção da navegação. Consulte *navdir* em [IAccessible:: accNavigate](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-accnavigate) na SDK do Windows.
+Especifica a direção da navegação. Consulte *navdir* em [IAccessible:: accNavigate](/windows/win32/api/oleacc/nf-oleacc-iaccessible-accnavigate) na SDK do Windows.
 
 *varStart*<br/>
 Especifica o objeto inicial. Consulte *varStart* no `IAccessible::accNavigate` SDK do Windows.
@@ -1424,11 +1424,11 @@ Retorna S_OK em caso de êxito, um código de erro COM em caso de falha. Confira
 
 ### <a name="remarks"></a>Comentários
 
-Essa função faz parte do suporte de [acessibilidade ativa](/windows/desktop/WinAuto/microsoft-active-accessibility) do MFC.
+Essa função faz parte do suporte de [acessibilidade ativa](/windows/win32/WinAuto/microsoft-active-accessibility) do MFC.
 
 Substitua essa função na sua `CWnd`classe derivada se você tiver elementos de interface do usuário sem janela (além de controles ActiveX sem janela, que o MFC manipula).
 
-Para obter mais informações, consulte [IAccessible:: accNavigate](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-accnavigate) no SDK do Windows.
+Para obter mais informações, consulte [IAccessible:: accNavigate](/windows/win32/api/oleacc/nf-oleacc-iaccessible-accnavigate) no SDK do Windows.
 
 ##  <a name="accselect"></a>  CWnd::accSelect
 
@@ -1443,7 +1443,7 @@ virtual HRESULT accSelect(
 ### <a name="parameters"></a>Parâmetros
 
 *flagsSelect*<br/>
-Especifica como alterar a seleção ou o foco atual. Consulte *flagsSelect* em [IAccessible:: accSelect](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-accselect) na SDK do Windows.
+Especifica como alterar a seleção ou o foco atual. Consulte *flagsSelect* em [IAccessible:: accSelect](/windows/win32/api/oleacc/nf-oleacc-iaccessible-accselect) na SDK do Windows.
 
 *varChild*<br/>
 Especifica o objeto a ser selecionado. Esse parâmetro pode ser CHILDID_SELF (para selecionar o próprio objeto) ou uma ID filho (para selecionar um dos filhos do objeto).
@@ -1454,11 +1454,11 @@ Retorna S_OK em caso de êxito, um código de erro COM em caso de falha. Confira
 
 ### <a name="remarks"></a>Comentários
 
-Essa função faz parte do suporte de [acessibilidade ativa](/windows/desktop/WinAuto/microsoft-active-accessibility) do MFC.
+Essa função faz parte do suporte de [acessibilidade ativa](/windows/win32/WinAuto/microsoft-active-accessibility) do MFC.
 
 Substitua essa função na sua `CWnd`classe derivada se você tiver elementos de interface do usuário sem janela (além de controles ActiveX sem janela, que o MFC manipula).
 
-Para obter mais informações, consulte [IAccessible:: accSelect](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-accselect) no SDK do Windows.
+Para obter mais informações, consulte [IAccessible:: accSelect](/windows/win32/api/oleacc/nf-oleacc-iaccessible-accselect) no SDK do Windows.
 
 ##  <a name="animatewindow"></a>  CWnd::AnimateWindow
 
@@ -1476,7 +1476,7 @@ BOOL AnimateWindow(
 Especifica quanto tempo leva para reproduzir a animação, em milissegundos. Normalmente, uma animação leva de 200 milissegundos para ser reproduzida.
 
 *dwFlags*<br/>
-Especifica o tipo de animação. Para obter uma lista completa de valores possíveis, consulte [AnimateWindow](/windows/desktop/api/winuser/nf-winuser-animatewindow).
+Especifica o tipo de animação. Para obter uma lista completa de valores possíveis, consulte [AnimateWindow](/windows/win32/api/winuser/nf-winuser-animatewindow).
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -1484,7 +1484,7 @@ Diferente de zero se a função tiver sucesso; caso contrário, 0.
 
 ### <a name="remarks"></a>Comentários
 
-Essa função de membro emula a funcionalidade da função [AnimateWindow](/windows/desktop/api/winuser/nf-winuser-animatewindow), conforme descrito na SDK do Windows.
+Essa função de membro emula a funcionalidade da função [AnimateWindow](/windows/win32/api/winuser/nf-winuser-animatewindow), conforme descrito na SDK do Windows.
 
 ##  <a name="arrangeiconicwindows"></a>  CWnd::ArrangeIconicWindows
 
@@ -1554,7 +1554,7 @@ CDC* BeginPaint(LPPAINTSTRUCT lpPaint);
 ### <a name="parameters"></a>Parâmetros
 
 *lpPaint*<br/>
-Aponta para a estrutura [PAINTSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagpaintstruct) que deve receber informações de pintura.
+Aponta para a estrutura [PAINTSTRUCT](/windows/win32/api/winuser/ns-winuser-paintstruct) que deve receber informações de pintura.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -1648,7 +1648,7 @@ void BringWindowToTop();
 
 Além disso, `BringWindowToTop` ativa janelas filho MDI, pop-up e de nível superior. A função membro `BringWindowToTop` deve ser usada para descobrir qualquer janela que esteja parcial ou completamente obscurecida por qualquer janela sobreposta.
 
-Essa função apenas chama a função [BringWindowToTop](/windows/desktop/api/winuser/nf-winuser-bringwindowtotop) do Win32. Chame a função [SetWindowPos](#setwindowpos) para alterar a posição de uma janela na ordem Z. A função `BringWindowToTop` não altera o estilo da janela para torná-la uma janela de nível superior. Para obter mais informações, consulte [qual é a diferença entre HWND_TOP e HWND_TOPMOST](https://devblogs.microsoft.com/oldnewthing/?p=33263)
+Essa função apenas chama a função [BringWindowToTop](/windows/win32/api/winuser/nf-winuser-bringwindowtotop) do Win32. Chame a função [SetWindowPos](#setwindowpos) para alterar a posição de uma janela na ordem Z. A função `BringWindowToTop` não altera o estilo da janela para torná-la uma janela de nível superior. Para obter mais informações, consulte [qual é a diferença entre HWND_TOP e HWND_TOPMOST](https://devblogs.microsoft.com/oldnewthing/?p=33263)
 
 ### <a name="example"></a>Exemplo
 
@@ -1676,7 +1676,7 @@ no Use `CWnd::adjustBorder` para calcular as coordenadas de janela sem o estilo 
 
 O tamanho do retângulo da janela calculada não inclui espaço para uma barra de menus.
 
-Para obter mais restrições de uso, consulte [AdjustWindowRectEx](/windows/desktop/api/winuser/nf-winuser-adjustwindowrectex).
+Para obter mais restrições de uso, consulte [AdjustWindowRectEx](/windows/win32/api/winuser/nf-winuser-adjustwindowrectex).
 
 ### <a name="example"></a>Exemplo
 
@@ -1762,7 +1762,7 @@ Especifica a ação a ser tomada. Se *nVerifique* for diferente de zero `CheckDl
 
 ### <a name="remarks"></a>Comentários
 
-A `CheckDlgButton` função envia uma mensagem [BM_SETCHECK](/windows/desktop/Controls/bm-setcheck) para o botão especificado.
+A `CheckDlgButton` função envia uma mensagem [BM_SETCHECK](/windows/win32/Controls/bm-setcheck) para o botão especificado.
 
 ### <a name="example"></a>Exemplo
 
@@ -1792,7 +1792,7 @@ Especifica o identificador inteiro do botão de opção a ser verificado.
 
 ### <a name="remarks"></a>Comentários
 
-A `CheckRadioButton` função envia uma mensagem [BM_SETCHECK](/windows/desktop/Controls/bm-setcheck) para o botão de opção especificado.
+A `CheckRadioButton` função envia uma mensagem [BM_SETCHECK](/windows/win32/Controls/bm-setcheck) para o botão de opção especificado.
 
 ### <a name="example"></a>Exemplo
 
@@ -1850,10 +1850,10 @@ void ClientToScreen(LPPOINT lpPoint) const;  void ClientToScreen(LPRECT lpRect) 
 ### <a name="parameters"></a>Parâmetros
 
 *lpPoint*<br/>
-Aponta para uma [estrutura](/windows/desktop/api/windef/ns-windef-tagpoint) de ponto `CPoint` ou objeto que contém as coordenadas do cliente a serem convertidas.
+Aponta para uma [estrutura](/windows/win32/api/windef/ns-windef-point) de ponto `CPoint` ou objeto que contém as coordenadas do cliente a serem convertidas.
 
 *lpRect*<br/>
-Aponta para uma [estrutura](/windows/desktop/api/windef/ns-windef-tagrect) ou `CRect` objeto Rect que contém as coordenadas do cliente a serem convertidas.
+Aponta para uma [estrutura](/windows/win32/api/windef/ns-windef-rect) ou `CRect` objeto Rect que contém as coordenadas do cliente a serem convertidas.
 
 ### <a name="remarks"></a>Comentários
 
@@ -1875,7 +1875,7 @@ void CloseWindow();
 
 ### <a name="remarks"></a>Comentários
 
-Essa função de membro emula a funcionalidade da função [CloseWindow](/windows/desktop/api/winuser/nf-winuser-closewindow), conforme descrito na SDK do Windows.
+Essa função de membro emula a funcionalidade da função [CloseWindow](/windows/win32/api/winuser/nf-winuser-closewindow), conforme descrito na SDK do Windows.
 
 ##  <a name="continuemodal"></a>  CWnd::ContinueModal
 
@@ -1995,7 +1995,7 @@ Identifica o bitmap que define a forma do cursor.
 
 ### <a name="remarks"></a>Comentários
 
-O bitmap deve ter sido criado anteriormente pela função membro [CBitmap:: CreateBitmap](../../mfc/reference/cbitmap-class.md#createbitmap) , pela função do Windows [CreateDIBitmap](/windows/desktop/api/wingdi/nf-wingdi-createdibitmap) ou pela função de membro [CBitmap:: LoadBitmap](../../mfc/reference/cbitmap-class.md#loadbitmap) .
+O bitmap deve ter sido criado anteriormente pela função membro [CBitmap:: CreateBitmap](../../mfc/reference/cbitmap-class.md#createbitmap) , pela função do Windows [CreateDIBitmap](/windows/win32/api/wingdi/nf-wingdi-createdibitmap) ou pela função de membro [CBitmap:: LoadBitmap](../../mfc/reference/cbitmap-class.md#loadbitmap) .
 
 `CreateCaret`destrói automaticamente a forma de cursor anterior, se houver, independentemente de qual janela possui o cursor. Depois de criado, o cursor fica inicialmente oculto. Para mostrar o cursor, a função de membro [de iscaret](#showcaret) deve ser chamada.
 
@@ -2057,13 +2057,13 @@ Um ponteiro para o texto a ser exibido no controle. Define o valor da legenda do
 Estilos do Windows. Os estilos disponíveis são listados em comentários.
 
 *rect*<br/>
-Especifica o tamanho e a posição do controle. Pode ser um objeto [CRect](../../atl-mfc-shared/reference/crect-class.md) ou uma [estrutura RECT](/windows/desktop/api/windef/ns-windef-tagrect).
+Especifica o tamanho e a posição do controle. Pode ser um objeto [CRect](../../atl-mfc-shared/reference/crect-class.md) ou uma [estrutura RECT](/windows/win32/api/windef/ns-windef-rect).
 
 *ppt*<br/>
-Aponta para uma [estrutura](/windows/desktop/api/windef/ns-windef-tagpoint) de ponto `CPoint` ou objeto que contém o canto superior esquerdo do controle.
+Aponta para uma [estrutura](/windows/win32/api/windef/ns-windef-point) de ponto `CPoint` ou objeto que contém o canto superior esquerdo do controle.
 
 *pSize*<br/>
-Aponta para uma estrutura de [tamanho](/windows/desktop/api/windef/ns-windef-tagsize)  ou objeto `CSize` que contém o tamanho do controle
+Aponta para uma estrutura de [tamanho](/windows/win32/api/windef/ns-windef-size)  ou objeto `CSize` que contém o tamanho do controle
 
 *pParentWnd*<br/>
 Especifica a janela pai do controle. Ele não deve ser nulo.
@@ -2227,7 +2227,7 @@ A forma do cursor pode ser uma linha ou um bloco.
 
 Os parâmetros *nWidth* e *nHeight* especificam a largura e a altura do cursor (em unidades lógicas); a largura e a altura exatas (em pixels) dependem do modo de mapeamento.
 
-A largura ou a altura da borda da janela do sistema pode ser recuperada pela função [GetSystemMetrics](/windows/desktop/api/winuser/nf-winuser-getsystemmetrics) do Windows com os índices SM_CXBORDER e SM_CYBORDER. Usar a largura ou altura da borda da janela garante que o cursor seja visível em uma exibição de alta resolução.
+A largura ou a altura da borda da janela do sistema pode ser recuperada pela função [GetSystemMetrics](/windows/win32/api/winuser/nf-winuser-getsystemmetrics) do Windows com os índices SM_CXBORDER e SM_CYBORDER. Usar a largura ou altura da borda da janela garante que o cursor seja visível em uma exibição de alta resolução.
 
 A `CreateGrayCaret` função de membro destrói automaticamente a forma de cursor anterior, se houver, independentemente de qual janela possui o cursor. Depois de criado, o cursor fica inicialmente oculto. Para mostrar o cursor, a função de membro [de iscaret](#showcaret) deve ser chamada.
 
@@ -2261,7 +2261,7 @@ A forma do cursor pode ser uma linha ou um bloco.
 
 Os parâmetros *nWidth* e *nHeight* especificam a largura e a altura do cursor (em unidades lógicas); a largura e a altura exatas (em pixels) dependem do modo de mapeamento.
 
-A largura ou a altura da borda da janela do sistema pode ser recuperada pela função [GetSystemMetrics](/windows/desktop/api/winuser/nf-winuser-getsystemmetrics) do Windows com os índices SM_CXBORDER e SM_CYBORDER. Usar a largura ou altura da borda da janela garante que o cursor seja visível em uma exibição de alta resolução.
+A largura ou a altura da borda da janela do sistema pode ser recuperada pela função [GetSystemMetrics](/windows/win32/api/winuser/nf-winuser-getsystemmetrics) do Windows com os índices SM_CXBORDER e SM_CYBORDER. Usar a largura ou altura da borda da janela garante que o cursor seja visível em uma exibição de alta resolução.
 
 A `CreateSolidCaret` função de membro destrói automaticamente a forma de cursor anterior, se houver, independentemente de qual janela possui o cursor. Depois de criado, o cursor fica inicialmente oculto. Para mostrar o cursor, a função de membro [de iscaret](#showcaret) deve ser chamada.
 
@@ -2445,7 +2445,7 @@ Diferente de zero se a função for bem-sucedida; caso contrário, 0.
 
 ### <a name="remarks"></a>Comentários
 
-`DlgDirList`envia mensagens [LB_RESETCONTENT](/windows/desktop/Controls/lb-resetcontent) e [LB_DIR](/windows/desktop/Controls/lb-dir) para a caixa de listagem. Ele preenche a caixa de listagem especificada por *nIDListBox* com os nomes de todos os arquivos que correspondem ao caminho fornecido pelo *lpPathSpec*.
+`DlgDirList`envia mensagens [LB_RESETCONTENT](/windows/win32/Controls/lb-resetcontent) e [LB_DIR](/windows/win32/Controls/lb-dir) para a caixa de listagem. Ele preenche a caixa de listagem especificada por *nIDListBox* com os nomes de todos os arquivos que correspondem ao caminho fornecido pelo *lpPathSpec*.
 
 O parâmetro *lpPathSpec* tem o seguinte formato:
 
@@ -2513,7 +2513,7 @@ Especifica o resultado da função. Ele será diferente de zero se uma listagem 
 
 ### <a name="remarks"></a>Comentários
 
-`DlgDirListComboBox`envia mensagens [CB_RESETCONTENT](/windows/desktop/Controls/cb-resetcontent) e [CB_DIR](/windows/desktop/Controls/cb-dir) para a caixa de combinação. Ele preenche a caixa de listagem da caixa de combinação especificada por *nIDComboBox* com os nomes de todos os arquivos que correspondem ao caminho fornecido por *lpPathSpec*.
+`DlgDirListComboBox`envia mensagens [CB_RESETCONTENT](/windows/win32/Controls/cb-resetcontent) e [CB_DIR](/windows/win32/Controls/cb-dir) para a caixa de combinação. Ele preenche a caixa de listagem da caixa de combinação especificada por *nIDComboBox* com os nomes de todos os arquivos que correspondem ao caminho fornecido por *lpPathSpec*.
 
 O parâmetro *lpPathSpec* tem o seguinte formato:
 
@@ -2559,7 +2559,7 @@ Ele pressupõe que a caixa de listagem foi preenchida pela função membro [DlgD
 
 A `DlgDirSelect` função de membro copia a seleção para o buffer fornecido por *LPSTR*. Se não houver seleção, a *LPSTR* não será alterada.
 
-`DlgDirSelect`envia mensagens [LB_GETCURSEL](/windows/desktop/Controls/lb-getcursel) e [LB_GETTEXT](/windows/desktop/Controls/lb-gettext) para a caixa de listagem.
+`DlgDirSelect`envia mensagens [LB_GETCURSEL](/windows/win32/Controls/lb-getcursel) e [LB_GETTEXT](/windows/win32/Controls/lb-gettext) para a caixa de listagem.
 
 Ele não permite que mais de um nome de arquivo seja retornado de uma caixa de listagem. A caixa de listagem não deve ser uma caixa de listagem de seleção múltipla.
 
@@ -2591,7 +2591,7 @@ Ele pressupõe que a caixa de listagem foi preenchida pela função membro [DlgD
 
 A `DlgDirSelectComboBox` função de membro copia a seleção para o buffer especificado. Se não houver nenhuma seleção, o conteúdo do buffer não será alterado.
 
-`DlgDirSelectComboBox`envia mensagens [CB_GETCURSEL](/windows/desktop/Controls/cb-getcursel) e [CB_GETLBTEXT](/windows/desktop/Controls/cb-getlbtext) para a caixa de combinação.
+`DlgDirSelectComboBox`envia mensagens [CB_GETCURSEL](/windows/win32/Controls/cb-getcursel) e [CB_GETLBTEXT](/windows/win32/Controls/cb-getlbtext) para a caixa de combinação.
 
 Ele não permite que mais de um nome de arquivo seja retornado de uma caixa de combinação.
 
@@ -2662,7 +2662,7 @@ Se o usuário não moveu o mouse para fora do retângulo de arrastar enquanto ma
 
 ### <a name="remarks"></a>Comentários
 
-Essa função de membro emula a funcionalidade da função [DragDetect](/windows/desktop/api/winuser/nf-winuser-dragdetect), conforme descrito na SDK do Windows.
+Essa função de membro emula a funcionalidade da função [DragDetect](/windows/win32/api/winuser/nf-winuser-dragdetect), conforme descrito na SDK do Windows.
 
 ##  <a name="drawanimatedrects"></a>  CWnd::DrawAnimatedRects
 
@@ -2692,7 +2692,7 @@ Diferente de zero se a função tiver sucesso; caso contrário, 0.
 
 ### <a name="remarks"></a>Comentários
 
-Essa função de membro emula a funcionalidade da função [DrawAnimatedRects](/windows/desktop/api/winuser/nf-winuser-drawanimatedrects), conforme descrito na SDK do Windows.
+Essa função de membro emula a funcionalidade da função [DrawAnimatedRects](/windows/win32/api/winuser/nf-winuser-drawanimatedrects), conforme descrito na SDK do Windows.
 
 ##  <a name="drawcaption"></a>  CWnd::DrawCaption
 
@@ -2714,7 +2714,7 @@ Um ponteiro para um contexto de dispositivo. A função desenha a legenda da jan
 Um ponteiro para uma estrutura RECT que especifica o retângulo delimitador para a legenda da janela.
 
 *uFlags*<br/>
-Especifica opções de desenho. Para obter uma lista completa de valores, consulte [DrawCaption](/windows/desktop/api/winuser/nf-winuser-drawcaption).
+Especifica opções de desenho. Para obter uma lista completa de valores, consulte [DrawCaption](/windows/win32/api/winuser/nf-winuser-drawcaption).
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -2722,7 +2722,7 @@ Diferente de zero se a função tiver sucesso; caso contrário, 0.
 
 ### <a name="remarks"></a>Comentários
 
-Essa função de membro emula a funcionalidade da função [DrawCaption](/windows/desktop/api/winuser/nf-winuser-drawcaption), conforme descrito na SDK do Windows.
+Essa função de membro emula a funcionalidade da função [DrawCaption](/windows/win32/api/winuser/nf-winuser-drawcaption), conforme descrito na SDK do Windows.
 
 ##  <a name="drawmenubar"></a>  CWnd::DrawMenuBar
 
@@ -2750,7 +2750,7 @@ void EnableActiveAccessibility();
 
 ### <a name="remarks"></a>Comentários
 
-O suporte de Acessibilidade Ativa padrão do MFC é suficiente para janelas padrão e controles, incluindo controles ActiveX; no entanto, `CWnd`se sua classe derivada contiver elementos de interface do usuário não-Window, o MFC não terá como saber sobre eles. Nesse caso, você deve substituir as funções de [membro de acessibilidade ativa](/windows/desktop/winauto/sdk-components) apropriadas em sua classe e deve chamar `EnableActiveAccessibility` no construtor da classe.
+O suporte de Acessibilidade Ativa padrão do MFC é suficiente para janelas padrão e controles, incluindo controles ActiveX; no entanto, `CWnd`se sua classe derivada contiver elementos de interface do usuário não-Window, o MFC não terá como saber sobre eles. Nesse caso, você deve substituir as funções de [membro de acessibilidade ativa](/windows/win32/winauto/sdk-components) apropriadas em sua classe e deve chamar `EnableActiveAccessibility` no construtor da classe.
 
 ##  <a name="enabledynamiclayout"></a>  CWnd::EnableDynamicLayout
 
@@ -2864,12 +2864,12 @@ TRUE se as dicas de ferramenta estiverem habilitadas; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-Substitua [OnToolHitTest](#ontoolhittest) para fornecer a estrutura de [TOOLINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtoolinfoa) ou structs para a janela.
+Substitua [OnToolHitTest](#ontoolhittest) para fornecer a estrutura de [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-toolinfow) ou structs para a janela.
 
 > [!NOTE]
 > Algumas janelas, como [CToolBar](../../mfc/reference/ctoolbar-class.md), fornecem uma implementação interna do [OnToolHitTest](#ontoolhittest).
 
-Consulte [TOOLINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtoolinfoa) na SDK do Windows para obter mais informações sobre esta estrutura.
+Consulte [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-toolinfow) na SDK do Windows para obter mais informações sobre esta estrutura.
 
 Simplesmente chamar `EnableToolTips` não é suficiente para exibir dicas de ferramentas para seus controles filho, a menos que a janela `CFrameWnd`pai seja derivada de. Isso ocorre porque `CFrameWnd` o fornece um manipulador padrão para a notificação TTN_NEEDTEXT. Se a sua janela pai não for derivada `CFrameWnd`de, ou seja, se for uma caixa de diálogo ou um modo de exibição de formulário, as dicas de ferramenta para seus controles filho não serão exibidas corretamente, a menos que você forneça um manipulador para a notificação de dica de ferramenta TTN_NEEDTEXT. Consulte [dicas de ferramenta](../../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md).
 
@@ -2973,7 +2973,7 @@ void EndPaint(LPPAINTSTRUCT lpPaint);
 ### <a name="parameters"></a>Parâmetros
 
 *lpPaint*<br/>
-Aponta para uma estrutura [PAINTSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagpaintstruct) que contém as informações de pintura recuperadas pela função membro [BeginPaint](#beginpaint) .
+Aponta para uma estrutura [PAINTSTRUCT](/windows/win32/api/winuser/ns-winuser-paintstruct) que contém as informações de pintura recuperadas pela função membro [BeginPaint](#beginpaint) .
 
 ### <a name="remarks"></a>Comentários
 
@@ -3082,7 +3082,7 @@ Identificador para a janela pai cujas janelas filhas devem ser pesquisadas.
 Identificador para uma janela filho. A pesquisa começa com a próxima janela filha na ordem Z. A janela filho deve ser uma janela filho direta de *hwndParent*, não apenas uma janela descendente.
 
 *lpszClass*<br/>
-Ponteiro para uma cadeia de caracteres terminada em nulo que especifica o nome da classe ou um átomo de classe criado por uma chamada anterior para o [registerClass](/windows/desktop/api/winuser/nf-winuser-registerclassa) ou [RegisterClassEx](/windows/desktop/api/winuser/nf-winuser-registerclassexa).
+Ponteiro para uma cadeia de caracteres terminada em nulo que especifica o nome da classe ou um átomo de classe criado por uma chamada anterior para o [registerClass](/windows/win32/api/winuser/nf-winuser-registerclassw) ou [RegisterClassEx](/windows/win32/api/winuser/nf-winuser-registerclassexw).
 
 *lpszWindow*<br/>
 Ponteiro para uma cadeia de caracteres terminada em nulo que especifica o nome da janela (o título da janela). Se esse parâmetro for NULL, todos os nomes de janela serão correspondentes.
@@ -3093,7 +3093,7 @@ Se a função for realizada com sucesso, o valor de retorno será um ponteiro pa
 
 ### <a name="remarks"></a>Comentários
 
-Essa função de membro emula a funcionalidade da função [FindWindowEx](/windows/desktop/api/winuser/nf-winuser-findwindowexa), conforme descrito na SDK do Windows.
+Essa função de membro emula a funcionalidade da função [FindWindowEx](/windows/win32/api/winuser/nf-winuser-findwindowexw), conforme descrito na SDK do Windows.
 
 ##  <a name="flashwindow"></a>  CWnd::FlashWindow
 
@@ -3140,7 +3140,7 @@ BOOL FlashWindowEx(
 ### <a name="parameters"></a>Parâmetros
 
 *dwFlags*<br/>
-Especifica o status do flash. Para obter uma lista completa de valores, consulte a estrutura [FLASHWINFO](/windows/desktop/api/winuser/ns-winuser-flashwinfo) .
+Especifica o status do flash. Para obter uma lista completa de valores, consulte a estrutura [FLASHWINFO](/windows/win32/api/winuser/ns-winuser-flashwinfo) .
 
 *uCount*<br/>
 Especifica o número de vezes para atualizar a janela.
@@ -3154,7 +3154,7 @@ O valor de retorno especifica o estado da janela antes da chamada para `FlashWin
 
 ### <a name="remarks"></a>Comentários
 
-Esse método emula a funcionalidade da função [FlashWindowEx](/windows/desktop/api/winuser/nf-winuser-flashwindowex), conforme descrito na SDK do Windows.
+Esse método emula a funcionalidade da função [FlashWindowEx](/windows/win32/api/winuser/nf-winuser-flashwindowex), conforme descrito na SDK do Windows.
 
 ##  <a name="fromhandle"></a>CWnd:: FromHandle
 
@@ -3218,15 +3218,15 @@ Recebe o endereço da `IDispatch` interface do objeto filho.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Retorna S_OK em caso de êxito, um código de erro COM em caso de falha. Confira **valores de retorno** em [IAccessible:: get_accChild](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-get_accchild) no SDK do Windows.
+Retorna S_OK em caso de êxito, um código de erro COM em caso de falha. Confira **valores de retorno** em [IAccessible:: get_accChild](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accchild) no SDK do Windows.
 
 ### <a name="remarks"></a>Comentários
 
-Essa função faz parte do suporte de [acessibilidade ativa](/windows/desktop/WinAuto/microsoft-active-accessibility) do MFC.
+Essa função faz parte do suporte de [acessibilidade ativa](/windows/win32/WinAuto/microsoft-active-accessibility) do MFC.
 
 Substitua essa função na sua `CWnd`classe derivada se você tiver elementos de interface do usuário sem janela (além de controles ActiveX sem janela, que o MFC manipula).
 
-Para obter mais informações, consulte [IAccessible:: get_accChild](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-get_accchild) no SDK do Windows.
+Para obter mais informações, consulte [IAccessible:: get_accChild](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accchild) no SDK do Windows.
 
 ##  <a name="get_accchildcount"></a>  CWnd::get_accChildCount
 
@@ -3243,15 +3243,15 @@ Recebe o número de filhos.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Retorna S_OK em caso de êxito, um código de erro COM em caso de falha. Confira **valores de retorno** em [IAccessible:: get_accChildCount](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-get_accchildcount) no SDK do Windows.
+Retorna S_OK em caso de êxito, um código de erro COM em caso de falha. Confira **valores de retorno** em [IAccessible:: get_accChildCount](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accchildcount) no SDK do Windows.
 
 ### <a name="remarks"></a>Comentários
 
-Essa função faz parte do suporte de [acessibilidade ativa](/windows/desktop/WinAuto/microsoft-active-accessibility) do MFC.
+Essa função faz parte do suporte de [acessibilidade ativa](/windows/win32/WinAuto/microsoft-active-accessibility) do MFC.
 
 Substitua essa função na sua `CWnd`classe derivada se você tiver elementos de interface do usuário sem janela (além de controles ActiveX sem janela, que o MFC manipula). Chame a versão da classe base e, em seguida, adicione os elementos filho não-janelas.
 
-Para obter mais informações, consulte [IAccessible:: get_accChildCount](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-get_accchildcount) no SDK do Windows.
+Para obter mais informações, consulte [IAccessible:: get_accChildCount](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accchildcount) no SDK do Windows.
 
 ##  <a name="get_accdefaultaction"></a>  CWnd::get_accDefaultAction
 
@@ -3273,15 +3273,15 @@ Endereço de um BSTR que recebe uma cadeia de caracteres localizada que descreve
 
 ### <a name="return-value"></a>Valor de retorno
 
-Retorna S_OK em caso de êxito, um código de erro COM em caso de falha. Confira **valores de retorno** em [IAccessible:: get_accDefaultAction](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-get_accdefaultaction) no SDK do Windows.
+Retorna S_OK em caso de êxito, um código de erro COM em caso de falha. Confira **valores de retorno** em [IAccessible:: get_accDefaultAction](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accdefaultaction) no SDK do Windows.
 
 ### <a name="remarks"></a>Comentários
 
-Essa função faz parte do suporte de [acessibilidade ativa](/windows/desktop/WinAuto/microsoft-active-accessibility) do MFC.
+Essa função faz parte do suporte de [acessibilidade ativa](/windows/win32/WinAuto/microsoft-active-accessibility) do MFC.
 
 Substitua essa função na `CWnd`classe derivada para descrever a ação padrão do seu objeto.
 
-Para obter mais informações, consulte [IAccessible:: get_accDefaultAction](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-get_accdefaultaction) no SDK do Windows.
+Para obter mais informações, consulte [IAccessible:: get_accDefaultAction](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accdefaultaction) no SDK do Windows.
 
 ##  <a name="get_accdescription"></a>  CWnd::get_accDescription
 
@@ -3303,15 +3303,15 @@ Endereço de um BSTR que recebe uma cadeia de caracteres localizada que descreve
 
 ### <a name="return-value"></a>Valor de retorno
 
-Retorna S_OK em caso de êxito, um código de erro COM em caso de falha. Confira **valores de retorno** em [IAccessible:: get_accDescription](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-get_accdescription) no SDK do Windows.
+Retorna S_OK em caso de êxito, um código de erro COM em caso de falha. Confira **valores de retorno** em [IAccessible:: get_accDescription](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accdescription) no SDK do Windows.
 
 ### <a name="remarks"></a>Comentários
 
-Essa função faz parte do suporte de [acessibilidade ativa](/windows/desktop/WinAuto/microsoft-active-accessibility) do MFC.
+Essa função faz parte do suporte de [acessibilidade ativa](/windows/win32/WinAuto/microsoft-active-accessibility) do MFC.
 
 Substitua essa função na `CWnd`classe derivada para descrever o objeto. Chame a versão da classe base e adicione sua descrição.
 
-Para obter mais informações, consulte [IAccessible:: get_accDescription](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-get_accdescription) no SDK do Windows.
+Para obter mais informações, consulte [IAccessible:: get_accDescription](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accdescription) no SDK do Windows.
 
 ##  <a name="get_accfocus"></a>  CWnd::get_accFocus
 
@@ -3324,7 +3324,7 @@ virtual HRESULT get_accFocus(VARIANT* pvarChild);
 ### <a name="parameters"></a>Parâmetros
 
 *pvarChild*<br/>
-Recebe informações sobre o objeto que tem o foco. Consulte *pvarID* em [IAccessible:: get_accFocus](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-get_accfocus) na SDK do Windows.
+Recebe informações sobre o objeto que tem o foco. Consulte *pvarID* em [IAccessible:: get_accFocus](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accfocus) na SDK do Windows.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -3332,11 +3332,11 @@ Retorna S_OK em caso de êxito, um código de erro COM em caso de falha. Confira
 
 ### <a name="remarks"></a>Comentários
 
-Essa função faz parte do suporte de [acessibilidade ativa](/windows/desktop/WinAuto/microsoft-active-accessibility) do MFC.
+Essa função faz parte do suporte de [acessibilidade ativa](/windows/win32/WinAuto/microsoft-active-accessibility) do MFC.
 
 Substitua essa função na sua `CWnd`classe derivada se você tiver elementos de interface do usuário sem janela (além de controles ActiveX sem janela, que o MFC manipula).
 
-Para obter mais informações, consulte [IAccessible:: get_accFocus](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-get_accfocus) no SDK do Windows.
+Para obter mais informações, consulte [IAccessible:: get_accFocus](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accfocus) no SDK do Windows.
 
 ##  <a name="get_acchelp"></a>  CWnd::get_accHelp
 
@@ -3358,15 +3358,15 @@ Endereço de um BSTR que recebe a cadeia de caracteres localizada contendo as in
 
 ### <a name="return-value"></a>Valor de retorno
 
-Retorna S_OK em caso de êxito, um código de erro COM em caso de falha. Confira **valores de retorno** em [IAccessible:: get_accHelp](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-get_acchelp) no SDK do Windows.
+Retorna S_OK em caso de êxito, um código de erro COM em caso de falha. Confira **valores de retorno** em [IAccessible:: get_accHelp](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_acchelp) no SDK do Windows.
 
 ### <a name="remarks"></a>Comentários
 
-Essa função faz parte do suporte de [acessibilidade ativa](/windows/desktop/WinAuto/microsoft-active-accessibility) do MFC.
+Essa função faz parte do suporte de [acessibilidade ativa](/windows/win32/WinAuto/microsoft-active-accessibility) do MFC.
 
 Substitua essa função na `CWnd`classe derivada para fornecer o texto de ajuda para seu objeto.
 
-Para obter mais informações, consulte [IAccessible:: get_accHelp](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-get_acchelp) no SDK do Windows.
+Para obter mais informações, consulte [IAccessible:: get_accHelp](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_acchelp) no SDK do Windows.
 
 ##  <a name="get_acchelptopic"></a>  CWnd::get_accHelpTopic
 
@@ -3388,7 +3388,7 @@ Endereço de um BSTR que recebe o caminho completo do `WinHelp` arquivo associad
 Especifica se o tópico da ajuda a ser recuperado é o do objeto ou um dos elementos filho do objeto. Esse parâmetro pode ser CHILDID_SELF (para obter um tópico de ajuda para o objeto) ou uma ID filho (para obter um tópico de ajuda para um dos elementos filho do objeto).
 
 *pidTopic*<br/>
-Identifica o tópico do arquivo de ajuda associado ao objeto especificado. Consulte *pidTopic* em [IAccessible:: get_accHelpTopic](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-get_acchelptopic) na SDK do Windows.
+Identifica o tópico do arquivo de ajuda associado ao objeto especificado. Consulte *pidTopic* em [IAccessible:: get_accHelpTopic](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_acchelptopic) na SDK do Windows.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -3396,11 +3396,11 @@ Retorna S_OK em caso de êxito, um código de erro COM em caso de falha. Confira
 
 ### <a name="remarks"></a>Comentários
 
-Essa função faz parte do suporte de [acessibilidade ativa](/windows/desktop/WinAuto/microsoft-active-accessibility) do MFC.
+Essa função faz parte do suporte de [acessibilidade ativa](/windows/win32/WinAuto/microsoft-active-accessibility) do MFC.
 
 Substitua essa função na `CWnd`classe derivada para fornecer informações de ajuda sobre o objeto.
 
-Para obter mais informações, consulte [IAccessible:: get_accHelpTopic](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-get_acchelptopic) no SDK do Windows.
+Para obter mais informações, consulte [IAccessible:: get_accHelpTopic](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_acchelptopic) no SDK do Windows.
 
 ##  <a name="get_acckeyboardshortcut"></a>  CWnd::get_accKeyboardShortcut
 
@@ -3422,15 +3422,15 @@ Endereço de um BSTR que recebe uma cadeia de caracteres localizada identificand
 
 ### <a name="return-value"></a>Valor de retorno
 
-Retorna S_OK em caso de êxito, um código de erro COM em caso de falha. Confira **valores de retorno** em [IAccessible:: get_accKeyboardShortcut](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-get_acckeyboardshortcut) no SDK do Windows.
+Retorna S_OK em caso de êxito, um código de erro COM em caso de falha. Confira **valores de retorno** em [IAccessible:: get_accKeyboardShortcut](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_acckeyboardshortcut) no SDK do Windows.
 
 ### <a name="remarks"></a>Comentários
 
-Essa função faz parte do suporte de [acessibilidade ativa](/windows/desktop/WinAuto/microsoft-active-accessibility) do MFC.
+Essa função faz parte do suporte de [acessibilidade ativa](/windows/win32/WinAuto/microsoft-active-accessibility) do MFC.
 
 Substitua essa função na `CWnd`classe derivada para identificar o atalho de teclado para seu objeto.
 
-Para obter mais informações, consulte [IAccessible:: get_accKeyboardShortcut](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-get_acckeyboardshortcut) no SDK do Windows.
+Para obter mais informações, consulte [IAccessible:: get_accKeyboardShortcut](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_acckeyboardshortcut) no SDK do Windows.
 
 ##  <a name="get_accname"></a>  CWnd::get_accName
 
@@ -3452,15 +3452,15 @@ Endereço de um BSTR que recebe uma cadeia de caracteres que contém o nome do o
 
 ### <a name="return-value"></a>Valor de retorno
 
-Retorna S_OK em caso de êxito, um código de erro COM em caso de falha. Confira **valores de retorno** em [IAccessible:: get_accName](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-get_accname) no SDK do Windows.
+Retorna S_OK em caso de êxito, um código de erro COM em caso de falha. Confira **valores de retorno** em [IAccessible:: get_accName](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accname) no SDK do Windows.
 
 ### <a name="remarks"></a>Comentários
 
-Essa função faz parte do suporte de [acessibilidade ativa](/windows/desktop/WinAuto/microsoft-active-accessibility) do MFC.
+Essa função faz parte do suporte de [acessibilidade ativa](/windows/win32/WinAuto/microsoft-active-accessibility) do MFC.
 
 Substitua essa função na `CWnd`classe derivada para retornar o nome do seu objeto.
 
-Para obter mais informações, consulte [IAccessible:: get_accName](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-get_accname) no SDK do Windows.
+Para obter mais informações, consulte [IAccessible:: get_accName](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accname) no SDK do Windows.
 
 ##  <a name="get_accparent"></a>  CWnd::get_accParent
 
@@ -3477,15 +3477,15 @@ Recebe o endereço da `IDispatch` interface do objeto pai. A variável será def
 
 ### <a name="return-value"></a>Valor de retorno
 
-Retorna S_OK em caso de êxito, um código de erro COM em caso de falha. Confira **valores de retorno** em [IAccessible:: get_accParent](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-get_accparent) no SDK do Windows.
+Retorna S_OK em caso de êxito, um código de erro COM em caso de falha. Confira **valores de retorno** em [IAccessible:: get_accParent](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accparent) no SDK do Windows.
 
 ### <a name="remarks"></a>Comentários
 
-Essa função faz parte do suporte de [acessibilidade ativa](/windows/desktop/WinAuto/microsoft-active-accessibility) do MFC.
+Essa função faz parte do suporte de [acessibilidade ativa](/windows/win32/WinAuto/microsoft-active-accessibility) do MFC.
 
 Na maioria dos casos, você não precisa substituir essa função.
 
-Para obter mais informações, consulte [IAccessible:: get_accParent](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-get_accparent) no SDK do Windows.
+Para obter mais informações, consulte [IAccessible:: get_accParent](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accparent) no SDK do Windows.
 
 ##  <a name="get_accrole"></a>  CWnd::get_accRole
 
@@ -3503,7 +3503,7 @@ virtual HRESULT get_accRole(
 Especifica se as informações de função a serem recuperadas são do objeto ou de um dos elementos filho do objeto. Esse parâmetro pode ser CHILDID_SELF (para obter informações sobre o objeto) ou uma ID filho (para obter informações sobre o elemento filho do objeto).
 
 *pvarRole*<br/>
-Recebe as informações de função. Consulte *pvarRole* em [IAccessible:: get_accRole](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-get_accrole) na SDK do Windows.
+Recebe as informações de função. Consulte *pvarRole* em [IAccessible:: get_accRole](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accrole) na SDK do Windows.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -3511,11 +3511,11 @@ Retorna S_OK em caso de êxito, um código de erro COM em caso de falha. Confira
 
 ### <a name="remarks"></a>Comentários
 
-Essa função faz parte do suporte de [acessibilidade ativa](/windows/desktop/WinAuto/microsoft-active-accessibility) do MFC.
+Essa função faz parte do suporte de [acessibilidade ativa](/windows/win32/WinAuto/microsoft-active-accessibility) do MFC.
 
 Substitua essa função na sua `CWnd`classe derivada se você tiver elementos de interface do usuário sem janela (além de controles ActiveX sem janela, que o MFC manipula).
 
-Para obter mais informações, consulte [IAccessible:: get_accRole](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-get_accrole) no SDK do Windows.
+Para obter mais informações, consulte [IAccessible:: get_accRole](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accrole) no SDK do Windows.
 
 ##  <a name="get_accselection"></a>  CWnd::get_accSelection
 
@@ -3528,7 +3528,7 @@ virtual HRESULT get_accSelection(VARIANT* pvarChildren);
 ### <a name="parameters"></a>Parâmetros
 
 *pvarChildren*<br/>
-Recebe informações sobre quais filhos são selecionados. Consulte *pvarChildren* em [IAccessible:: get_accSelection](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-get_accselection) na SDK do Windows.
+Recebe informações sobre quais filhos são selecionados. Consulte *pvarChildren* em [IAccessible:: get_accSelection](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accselection) na SDK do Windows.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -3536,11 +3536,11 @@ Retorna S_OK em caso de êxito, um código de erro COM em caso de falha. Confira
 
 ### <a name="remarks"></a>Comentários
 
-Essa função faz parte do suporte de [acessibilidade ativa](/windows/desktop/WinAuto/microsoft-active-accessibility) do MFC.
+Essa função faz parte do suporte de [acessibilidade ativa](/windows/win32/WinAuto/microsoft-active-accessibility) do MFC.
 
 Substitua essa função na sua `CWnd`classe derivada se você tiver elementos de interface do usuário sem janela (além de controles ActiveX sem janela, que o MFC manipula).
 
-Para obter mais informações, consulte [IAccessible:: get_accSelection](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-get_accselection) no SDK do Windows.
+Para obter mais informações, consulte [IAccessible:: get_accSelection](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accselection) no SDK do Windows.
 
 ##  <a name="get_accstate"></a>  CWnd::get_accState
 
@@ -3558,7 +3558,7 @@ virtual HRESULT get_accState(
 Especifica se as informações de estado a serem recuperadas são do objeto ou de um dos elementos filho do objeto. Esse parâmetro pode ser CHILDID_SELF (para obter informações sobre o objeto) ou uma ID filho (para obter informações sobre o elemento filho do objeto).
 
 *pvarState*<br/>
-Recebe informações sobre o estado do objeto. Consulte *pvarState* em [IAccessible:: get_accState](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-get_accstate) na SDK do Windows.
+Recebe informações sobre o estado do objeto. Consulte *pvarState* em [IAccessible:: get_accState](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accstate) na SDK do Windows.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -3566,11 +3566,11 @@ Retorna S_OK em caso de êxito, um código de erro COM em caso de falha. Confira
 
 ### <a name="remarks"></a>Comentários
 
-Essa função faz parte do suporte de [acessibilidade ativa](/windows/desktop/WinAuto/microsoft-active-accessibility) do MFC.
+Essa função faz parte do suporte de [acessibilidade ativa](/windows/win32/WinAuto/microsoft-active-accessibility) do MFC.
 
 Substitua essa função na sua `CWnd`classe derivada se você tiver elementos de interface do usuário sem janela (além de controles ActiveX sem janela, que o MFC manipula).
 
-Para obter mais informações, consulte [IAccessible:: get_accState](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-get_accstate) no SDK do Windows.
+Para obter mais informações, consulte [IAccessible:: get_accState](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accstate) no SDK do Windows.
 
 ##  <a name="get_accvalue"></a>  CWnd::get_accValue
 
@@ -3592,15 +3592,15 @@ Endereço do BSTR que recebe uma cadeia de caracteres localizada que contém o v
 
 ### <a name="return-value"></a>Valor de retorno
 
-Retorna S_OK em caso de êxito, um código de erro COM em caso de falha. Confira **valores de retorno** em [IAccessible:: get_accValue](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-get_accvalue) no SDK do Windows.
+Retorna S_OK em caso de êxito, um código de erro COM em caso de falha. Confira **valores de retorno** em [IAccessible:: get_accValue](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accvalue) no SDK do Windows.
 
 ### <a name="remarks"></a>Comentários
 
-Essa função faz parte do suporte de [acessibilidade ativa](/windows/desktop/WinAuto/microsoft-active-accessibility) do MFC.
+Essa função faz parte do suporte de [acessibilidade ativa](/windows/win32/WinAuto/microsoft-active-accessibility) do MFC.
 
 Substitua essa função na sua `CWnd`classe derivada se você tiver elementos de interface do usuário sem janela (além de controles ActiveX sem janela, que o MFC manipula).
 
-Para obter mais informações, consulte [IAccessible:: get_accValue](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-get_accvalue) no SDK do Windows.
+Para obter mais informações, consulte [IAccessible:: get_accValue](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accvalue) no SDK do Windows.
 
 ##  <a name="getactivewindow"></a>  CWnd::GetActiveWindow
 
@@ -3629,7 +3629,7 @@ CWnd* GetAncestor(UINT gaFlags) const;
 ### <a name="parameters"></a>Parâmetros
 
 *gaFlags*<br/>
-Especifica o ancestral a ser recuperado. Para obter uma lista completa de valores possíveis, consulte [GetAncestor](/windows/desktop/api/winuser/nf-winuser-getancestor).
+Especifica o ancestral a ser recuperado. Para obter uma lista completa de valores possíveis, consulte [GetAncestor](/windows/win32/api/winuser/nf-winuser-getancestor).
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -3637,7 +3637,7 @@ Se a função for realizada com sucesso, o valor de retorno será um ponteiro pa
 
 ### <a name="remarks"></a>Comentários
 
-Essa função de membro emula a funcionalidade da função [GetAncestor](/windows/desktop/api/winuser/nf-winuser-getancestor), conforme descrito no SDK do Windows.
+Essa função de membro emula a funcionalidade da função [GetAncestor](/windows/win32/api/winuser/nf-winuser-getancestor), conforme descrito no SDK do Windows.
 
 ##  <a name="getcapture"></a>  CWnd::GetCapture
 
@@ -3706,7 +3706,7 @@ void GetClientRect(LPRECT lpRect) const;
 ### <a name="parameters"></a>Parâmetros
 
 *lpRect*<br/>
-Aponta para uma [estrutura RECT](/windows/desktop/api/windef/ns-windef-tagrect) ou um `CRect` objeto para receber as coordenadas do cliente. Os `left` Membros `top` e serão 0. Os `right` Membros `bottom` e conterão a largura e a altura da janela.
+Aponta para uma [estrutura RECT](/windows/win32/api/windef/ns-windef-rect) ou um `CRect` objeto para receber as coordenadas do cliente. Os `left` Membros `top` e serão 0. Os `right` Membros `bottom` e conterão a largura e a altura da janela.
 
 ### <a name="remarks"></a>Comentários
 
@@ -3758,13 +3758,13 @@ LPUNKNOWN GetControlUnknown();
 
 ### <a name="return-value"></a>Valor de retorno
 
-Um ponteiro para a interface [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) do controle OLE representado por esse `CWnd` objeto. Se esse objeto não representar um controle OLE, o valor de retorno será NULL.
+Um ponteiro para a interface [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) do controle OLE representado por esse `CWnd` objeto. Se esse objeto não representar um controle OLE, o valor de retorno será NULL.
 
 ### <a name="remarks"></a>Comentários
 
 Você não deve liberar esse `IUnknown` ponteiro. Normalmente, você usaria para obter uma interface específica do controle.
 
-O ponteiro de interface retornado `GetControlUnknown` por não é uma referência-contada. Não chame [IUnknown:: Release](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release) no ponteiro, a menos que você tenha chamado [IUnknown:: AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref) anteriormente.
+O ponteiro de interface retornado `GetControlUnknown` por não é uma referência-contada. Não chame [IUnknown:: Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release) no ponteiro, a menos que você tenha chamado [IUnknown:: AddRef](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref) anteriormente.
 
 ### <a name="example"></a>Exemplo
 
@@ -3780,7 +3780,7 @@ static const MSG* PASCAL GetCurrentMessage();
 
 ### <a name="return-value"></a>Valor de retorno
 
-Retorna um ponteiro para a estrutura [msg](/windows/desktop/api/winuser/ns-winuser-tagmsg) que contém a mensagem que a janela está processando no momento. Só deve ser chamado quando estiver em um manipulador **on**<em>Message</em> .
+Retorna um ponteiro para a estrutura [msg](/windows/win32/api/winuser/ns-winuser-msg) que contém a mensagem que a janela está processando no momento. Só deve ser chamado quando estiver em um manipulador **on**<em>Message</em> .
 
 ### <a name="example"></a>Exemplo
 
@@ -3848,13 +3848,13 @@ O contexto do dispositivo para a janela especificada se a função for bem-suced
 
 O contexto do dispositivo pode ser usado em funções GDI subsequentes para desenhar na área do cliente.
 
-Essa função, que é uma extensão para a função [GetDC](/windows/desktop/api/winuser/nf-winuser-getdc) , dá a um aplicativo mais controle sobre como e se um contexto de dispositivo para uma janela é recortado.
+Essa função, que é uma extensão para a função [GetDC](/windows/win32/api/winuser/nf-winuser-getdc) , dá a um aplicativo mais controle sobre como e se um contexto de dispositivo para uma janela é recortado.
 
-A menos que o contexto do dispositivo pertença a uma classe de janela, a função [ReleaseDC](/windows/desktop/api/winuser/nf-winuser-releasedc) deve ser chamada para liberar o contexto após o desenho. Como apenas cinco contextos de dispositivo comuns estão disponíveis em um determinado momento, a falha na liberação de um contexto de dispositivo pode impedir que outros aplicativos obtenham acesso a um contexto de dispositivo.
+A menos que o contexto do dispositivo pertença a uma classe de janela, a função [ReleaseDC](/windows/win32/api/winuser/nf-winuser-releasedc) deve ser chamada para liberar o contexto após o desenho. Como apenas cinco contextos de dispositivo comuns estão disponíveis em um determinado momento, a falha na liberação de um contexto de dispositivo pode impedir que outros aplicativos obtenham acesso a um contexto de dispositivo.
 
-Para obter um contexto de dispositivo em cache, um aplicativo deve especificar [DCX_CACHE](/windows/desktop/api/winuser/nf-winuser-getdcex). Se DCX_CACHE não for especificado e a janela não for CS_OWNDC nem [CS_CLASSDC](/windows/desktop/api/winuser/ns-winuser-tagwndclassa), essa função retornará NULL.
+Para obter um contexto de dispositivo em cache, um aplicativo deve especificar [DCX_CACHE](/windows/win32/api/winuser/nf-winuser-getdcex). Se DCX_CACHE não for especificado e a janela não for CS_OWNDC nem [CS_CLASSDC](/windows/win32/api/winuser/ns-winuser-wndclassw), essa função retornará NULL.
 
-Um contexto de dispositivo com características especiais será retornado pela função [GetDCEx](/windows/desktop/api/winuser/nf-winuser-getdcex) se o estilo CS_CLASSDC, [CS_OWNDC](/windows/desktop/api/winuser/ns-winuser-tagwndclassa)ou [CS_PARENTDC](/windows/desktop/api/winuser/ns-winuser-tagwndclassa) tiver sido especificado na estrutura [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa) quando a classe foi registrada.
+Um contexto de dispositivo com características especiais será retornado pela função [GetDCEx](/windows/win32/api/winuser/nf-winuser-getdcex) se o estilo CS_CLASSDC, [CS_OWNDC](/windows/win32/api/winuser/ns-winuser-wndclassw)ou [CS_PARENTDC](/windows/win32/api/winuser/ns-winuser-wndclassw) tiver sido especificado na estrutura [WNDCLASS](/windows/win32/api/winuser/ns-winuser-wndclassw) quando a classe foi registrada.
 
 Para obter mais informações sobre essas características, consulte a descrição da `WNDCLASS` estrutura na SDK do Windows.
 
@@ -4004,7 +4004,7 @@ Ele converte o texto do controle especificado na caixa de diálogo especificada 
 
 Se *bSigned* for true, `GetDlgItemInt` o verificará um sinal de subtração (-) no início do texto e converterá o texto em um número assinado. Caso contrário, ele cria um valor não assinado.
 
-Ele envia uma mensagem [WM_GETTEXT](/windows/desktop/winmsg/wm-gettext) para o controle.
+Ele envia uma mensagem [WM_GETTEXT](/windows/win32/winmsg/wm-gettext) para o controle.
 
 ##  <a name="getdlgitemtext"></a>  CWnd::GetDlgItemText
 
@@ -4198,7 +4198,7 @@ Ponteiro para um valor de COLORREF que recebe a chave de cor de transparência a
 Ponteiro para um BYTE que recebe o valor alfa usado para descrever a opacidade da janela em camadas. Quando a variável referenciada por *pbAlpha* é 0, a janela é completamente transparente. Quando a variável referenciada por *pbAlpha* é 255, a janela é opaca. Isso pode ser nulo se o argumento não for necessário.
 
 *pdwFlags*<br/>
-Ponteiro para um DWORD que recebe um sinalizador de camadas. Isso pode ser nulo se o argumento não for necessário. Para obter uma lista completa de valores possíveis, consulte [GetLayeredWindowAttributes](/windows/desktop/api/winuser/nf-winuser-getlayeredwindowattributes).
+Ponteiro para um DWORD que recebe um sinalizador de camadas. Isso pode ser nulo se o argumento não for necessário. Para obter uma lista completa de valores possíveis, consulte [GetLayeredWindowAttributes](/windows/win32/api/winuser/nf-winuser-getlayeredwindowattributes).
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -4206,7 +4206,7 @@ Diferente de zero se a função tiver sucesso; caso contrário, 0.
 
 ### <a name="remarks"></a>Comentários
 
-Essa função de membro emula a funcionalidade da função [GetLayeredWindowAttributes](/windows/desktop/api/winuser/nf-winuser-getlayeredwindowattributes), conforme descrito na SDK do Windows.
+Essa função de membro emula a funcionalidade da função [GetLayeredWindowAttributes](/windows/win32/api/winuser/nf-winuser-getlayeredwindowattributes), conforme descrito na SDK do Windows.
 
 ##  <a name="getmenu"></a>  CWnd::GetMenu
 
@@ -4244,13 +4244,13 @@ BOOL GetMenuBarInfo(
 ### <a name="parameters"></a>Parâmetros
 
 *idObject*<br/>
-Especifica o objeto de menu. Para obter uma lista de valores possíveis, consulte [GetMenuBarInfo](/windows/desktop/api/winuser/nf-winuser-getmenubarinfo).
+Especifica o objeto de menu. Para obter uma lista de valores possíveis, consulte [GetMenuBarInfo](/windows/win32/api/winuser/nf-winuser-getmenubarinfo).
 
 *idItem*<br/>
 Especifica o item para o qual recuperar informações. Se esse parâmetro for zero, a função recuperará informações sobre o próprio menu. Se esse parâmetro for 1, a função recuperará informações sobre o primeiro item no menu e assim por diante.
 
 *pmbi*<br/>
-Ponteiro para uma estrutura [MENUBARINFO](/windows/desktop/api/winuser/ns-winuser-tagmenubarinfo) que recebe as informações.
+Ponteiro para uma estrutura [MENUBARINFO](/windows/win32/api/winuser/ns-winuser-menubarinfo) que recebe as informações.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -4258,7 +4258,7 @@ Diferente de zero se a função tiver sucesso; caso contrário, 0.
 
 ### <a name="remarks"></a>Comentários
 
-Essa função de membro emula a funcionalidade da função [GetMenuBarInfo](/windows/desktop/api/winuser/nf-winuser-getmenubarinfo), conforme descrito na SDK do Windows.
+Essa função de membro emula a funcionalidade da função [GetMenuBarInfo](/windows/win32/api/winuser/nf-winuser-getmenubarinfo), conforme descrito na SDK do Windows.
 
 ##  <a name="getnextdlggroupitem"></a>  CWnd::GetNextDlgGroupItem
 
@@ -4404,7 +4404,7 @@ Um ponteiro para um `CWnd` objeto.
 
 Se a janela não tiver proprietário, um ponteiro para o objeto da janela pai será retornado por padrão. Observe que a relação entre o proprietário e o de propriedade difere do aspecto pai-filho em vários aspectos importantes. Por exemplo, uma janela com um pai é confinada à área cliente da janela pai. Janelas de propriedade podem ser desenhadas em qualquer local na área de trabalho.
 
-O conceito de propriedade dessa função é diferente do conceito de propriedade de [GetWindow](/windows/desktop/api/winuser/nf-winuser-getwindow).
+O conceito de propriedade dessa função é diferente do conceito de propriedade de [GetWindow](/windows/win32/api/winuser/nf-winuser-getwindow).
 
 ##  <a name="getparent"></a>  CWnd::GetParent
 
@@ -4416,7 +4416,7 @@ CWnd* GetParent() const;
 
 ### <a name="return-value"></a>Valor de retorno
 
-Consulte a seção valores de retorno em [GetParent](/windows/desktop/api/winuser/nf-winuser-getparent) no SDK do Windows.
+Consulte a seção valores de retorno em [GetParent](/windows/win32/api/winuser/nf-winuser-getparent) no SDK do Windows.
 
 ### <a name="remarks"></a>Comentários
 
@@ -4582,10 +4582,10 @@ BOOL GetScrollBarInfo(
 ### <a name="parameters"></a>Parâmetros
 
 *idObject*<br/>
-Especifica o objeto de menu. Para obter uma lista de valores possíveis, consulte [GetScrollBarInfo](/windows/desktop/api/winuser/nf-winuser-getscrollbarinfo).
+Especifica o objeto de menu. Para obter uma lista de valores possíveis, consulte [GetScrollBarInfo](/windows/win32/api/winuser/nf-winuser-getscrollbarinfo).
 
 *psbi*<br/>
-Ponteiro para uma estrutura [SCROLLBARINFO](/windows/desktop/api/winuser/ns-winuser-tagscrollbarinfo) que recebe as informações.
+Ponteiro para uma estrutura [SCROLLBARINFO](/windows/win32/api/winuser/ns-winuser-scrollbarinfo) que recebe as informações.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -4593,7 +4593,7 @@ Diferente de zero se a função tiver sucesso; caso contrário, 0.
 
 ### <a name="remarks"></a>Comentários
 
-Essa função de membro emula a funcionalidade da função [GetScrollBarInfo](/windows/desktop/api/winuser/nf-winuser-getscrollbarinfo), conforme descrito na SDK do Windows.
+Essa função de membro emula a funcionalidade da função [GetScrollBarInfo](/windows/win32/api/winuser/nf-winuser-getscrollbarinfo), conforme descrito na SDK do Windows.
 
 ##  <a name="getscrollinfo"></a>  CWnd::GetScrollInfo
 
@@ -4769,11 +4769,11 @@ BOOL GetTitleBarInfo(PTITLEBARINFO pti) const;
 ### <a name="parameters"></a>Parâmetros
 
 *pti*<br/>
-Ponteiro para uma estrutura [TITLEBARINFO](/windows/desktop/api/winuser/ns-winuser-tagtitlebarinfo) que recebe as informações.
+Ponteiro para uma estrutura [TITLEBARINFO](/windows/win32/api/winuser/ns-winuser-titlebarinfo) que recebe as informações.
 
 ### <a name="remarks"></a>Comentários
 
-Essa função de membro emula a funcionalidade da função [GetTitleBarInfo](/windows/desktop/api/winuser/nf-winuser-gettitlebarinfo), conforme descrito na SDK do Windows.
+Essa função de membro emula a funcionalidade da função [GetTitleBarInfo](/windows/win32/api/winuser/nf-winuser-gettitlebarinfo), conforme descrito na SDK do Windows.
 
 ##  <a name="gettoplevelframe"></a>  CWnd::GetTopLevelFrame
 
@@ -4858,7 +4858,7 @@ BOOL GetUpdateRect(
 ### <a name="parameters"></a>Parâmetros
 
 *lpRect*<br/>
-Aponta para uma `CRect` estrutura Object ou [Rect](/windows/desktop/api/windef/ns-windef-tagrect) que deve receber as coordenadas do cliente da atualização que inclui a região de atualização.
+Aponta para uma `CRect` estrutura Object ou [Rect](/windows/win32/api/windef/ns-windef-rect) que deve receber as coordenadas do cliente da atualização que inclui a região de atualização.
 
 Defina esse parâmetro como NULL para determinar se existe uma região de atualização dentro `CWnd`do. Se *lpRect* for NULL, a `GetUpdateRect` função de membro retornará um valor diferente de zero se uma região de atualização existir e 0 se não houver. Isso fornece uma maneira de determinar se uma mensagem WM_PAINT resultou de uma área inválida. Não defina esse parâmetro como nulo no Windows versão 3,0 e anterior.
 
@@ -4992,7 +4992,7 @@ Atributos padrão são atribuídos ao contexto de exibição cada vez que ele re
 
 `GetWindowDC`destina-se a ser usado para efeitos especiais de pintura `CWnd` dentro da área não cliente. Não é recomendável pintar em áreas que não sejam clientes de nenhuma janela.
 
-A função [GetSystemMetrics](/windows/desktop/api/winuser/nf-winuser-getsystemmetrics) do Windows pode ser usada para recuperar as dimensões de várias partes da área não cliente, como a barra de legenda, o menu e as barras de rolagem.
+A função [GetSystemMetrics](/windows/win32/api/winuser/nf-winuser-getsystemmetrics) do Windows pode ser usada para recuperar as dimensões de várias partes da área não cliente, como a barra de legenda, o menu e as barras de rolagem.
 
 Após a conclusão da pintura, a função de membro [ReleaseDC](#releasedc) deve ser chamada para liberar o contexto de exibição. A falha ao liberar o contexto de exibição afetará seriamente a pintura solicitada pelos aplicativos devido a limitações no número de contextos de dispositivo que podem ser abertos ao mesmo tempo.
 
@@ -5007,11 +5007,11 @@ BOOL GetWindowInfo(PWINDOWINFO pwi) const;
 ### <a name="parameters"></a>Parâmetros
 
 *pwi*<br/>
-Um ponteiro para uma estrutura [WINDOWINFO](/windows/desktop/api/winuser/ns-winuser-tagwindowinfo) .
+Um ponteiro para uma estrutura [WINDOWINFO](/windows/win32/api/winuser/ns-winuser-windowinfo) .
 
 ### <a name="remarks"></a>Comentários
 
-Essa função de membro emula a funcionalidade da função [GetWindowInfo](/windows/desktop/api/winuser/nf-winuser-getwindowinfo), conforme descrito na SDK do Windows.
+Essa função de membro emula a funcionalidade da função [GetWindowInfo](/windows/win32/api/winuser/nf-winuser-getwindowinfo), conforme descrito na SDK do Windows.
 
 ##  <a name="getwindowlesschildcount"></a>  CWnd::GetWindowlessChildCount
 
@@ -5044,7 +5044,7 @@ Diferente de zero se a função for bem-sucedida; caso contrário, 0.
 
 ### <a name="remarks"></a>Comentários
 
-O `flags` membro da estrutura [WINDOWPLACEMENT](/windows/desktop/api/winuser/ns-winuser-tagwindowplacement) recuperada por essa função é sempre 0. Se `CWnd` for maximizado, o `showCmd` membro de `WINDOWPLACEMENT` será SW_SHOWMAXIMIZED. Se a janela for minimizada, será SW_SHOWMINIMIZED. Caso contrário, será SW_SHOWNORMAL.
+O `flags` membro da estrutura [WINDOWPLACEMENT](/windows/win32/api/winuser/ns-winuser-windowplacement) recuperada por essa função é sempre 0. Se `CWnd` for maximizado, o `showCmd` membro de `WINDOWPLACEMENT` será SW_SHOWMAXIMIZED. Se a janela for minimizada, será SW_SHOWMINIMIZED. Caso contrário, será SW_SHOWNORMAL.
 
 ##  <a name="getwindowrect"></a>  CWnd::GetWindowRect
 
@@ -5057,7 +5057,7 @@ void GetWindowRect(LPRECT lpRect) const;
 ### <a name="parameters"></a>Parâmetros
 
 *lpRect*<br/>
-Aponta para um `CRect` objeto ou uma [estrutura RECT](/windows/desktop/api/windef/ns-windef-tagrect) que receberá as coordenadas de tela dos cantos superior esquerdo e inferior direito.
+Aponta para um `CRect` objeto ou uma [estrutura RECT](/windows/win32/api/windef/ns-windef-rect) que receberá as coordenadas de tela dos cantos superior esquerdo e inferior direito.
 
 ### <a name="remarks"></a>Comentários
 
@@ -5128,7 +5128,7 @@ Especifica o comprimento, em caracteres, da cadeia de caracteres copiada, não i
 
 Se o `CWnd` objeto for um controle, a `GetWindowText` função de membro copiará o texto dentro do controle em vez de copiar a legenda.
 
-Essa função de membro faz com que a mensagem [WM_GETTEXT](/windows/desktop/winmsg/wm-gettext) seja enviada `CWnd` ao objeto.
+Essa função de membro faz com que a mensagem [WM_GETTEXT](/windows/win32/winmsg/wm-gettext) seja enviada `CWnd` ao objeto.
 
 ### <a name="example"></a>Exemplo
 
@@ -5150,7 +5150,7 @@ Especifica o comprimento do texto em caracteres, não incluindo qualquer caracte
 
 Se `CWnd` for um controle, a `GetWindowTextLength` função de membro retornará o comprimento do texto dentro do controle em vez da legenda.
 
-Essa função de membro faz com que a mensagem [WM_GETTEXTLENGTH](/windows/desktop/winmsg/wm-gettextlength) seja enviada `CWnd` ao objeto.
+Essa função de membro faz com que a mensagem [WM_GETTEXTLENGTH](/windows/win32/winmsg/wm-gettextlength) seja enviada `CWnd` ao objeto.
 
 ### <a name="example"></a>Exemplo
 
@@ -5280,7 +5280,7 @@ void InvalidateRect(
 ### <a name="parameters"></a>Parâmetros
 
 *lpRect*<br/>
-Aponta para um `CRect` objeto ou uma [estrutura RECT](/windows/desktop/api/windef/ns-windef-tagrect) que contém o retângulo (nas coordenadas do cliente) a ser adicionado à região de atualização. Se *lpRect* for NULL, toda a área do cliente será adicionada à região.
+Aponta para um `CRect` objeto ou uma [estrutura RECT](/windows/win32/api/windef/ns-windef-rect) que contém o retângulo (nas coordenadas do cliente) a ser adicionado à região de atualização. Se *lpRect* for NULL, toda a área do cliente será adicionada à região.
 
 *bErase*<br/>
 Especifica se o plano de fundo dentro da região de atualização deve ser apagado.
@@ -5410,7 +5410,7 @@ BOOL IsDialogMessage(LPMSG lpMsg);
 ### <a name="parameters"></a>Parâmetros
 
 *lpMsg*<br/>
-Aponta para uma estrutura de [msg](/windows/desktop/api/winuser/ns-winuser-tagmsg) que contém a mensagem a ser verificada.
+Aponta para uma estrutura de [msg](/windows/win32/api/winuser/ns-winuser-msg) que contém a mensagem a ser verificada.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -5422,7 +5422,7 @@ Especifica se a função de membro processou a mensagem determinada. Ele será d
 
 Quando a `IsDialogMessage` função processa uma mensagem, ela verifica as mensagens do teclado e as converte nos comandos de seleção da caixa de diálogo correspondente. Por exemplo, a tecla TAB seleciona o próximo controle ou grupo de controles e a tecla de seta para baixo seleciona o próximo controle em um grupo.
 
-Você não deve passar uma mensagem processada `IsDialogMessage` pelo para as funções do Windows [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) ou [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) , pois ela já foi processada.
+Você não deve passar uma mensagem processada `IsDialogMessage` pelo para as funções do Windows [TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage) ou [DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage) , pois ela já foi processada.
 
 ##  <a name="isdlgbuttonchecked"></a>  CWnd::IsDlgButtonChecked
 
@@ -5601,9 +5601,9 @@ Diferente de zero se a função for bem-sucedida. Será 0 se ocorrer uma falha o
 
 Uma janela bloqueada não pode ser movida. Somente uma janela pode ser bloqueada por vez. Para desbloquear uma janela bloqueada `LockWindowUpdate`com, chame [UnlockWindowUpdate](#unlockwindowupdate).
 
-Se um aplicativo com uma janela bloqueada (ou qualquer Windows filho bloqueado) chamar a função [GetDC,](/windows/desktop/api/winuser/nf-winuser-getdc) [GetDCEx](/windows/desktop/api/winuser/nf-winuser-getdcex) ou [BeginPaint](/windows/desktop/api/winuser/nf-winuser-beginpaint) do Windows, a função chamada retornará um contexto de dispositivo cuja região visível esteja vazia. Isso ocorrerá até que o aplicativo desbloqueie a janela chamando a função `UnlockWindowUpdate` de membro.
+Se um aplicativo com uma janela bloqueada (ou qualquer Windows filho bloqueado) chamar a função [GetDC,](/windows/win32/api/winuser/nf-winuser-getdc) [GetDCEx](/windows/win32/api/winuser/nf-winuser-getdcex) ou [BeginPaint](/windows/win32/api/winuser/nf-winuser-beginpaint) do Windows, a função chamada retornará um contexto de dispositivo cuja região visível esteja vazia. Isso ocorrerá até que o aplicativo desbloqueie a janela chamando a função `UnlockWindowUpdate` de membro.
 
-Enquanto as atualizações de janela são bloqueadas, o sistema mantém o controle do retângulo delimitador de quaisquer operações de desenho para contextos de dispositivo associados a uma janela bloqueada. Quando o desenho é reabilitado, esse retângulo delimitador é invalidado na janela bloqueada e suas janelas filhas para forçar uma mensagem [WM_PAINT](/windows/desktop/gdi/wm-paint) eventual para atualizar a tela. Se nenhum desenho tiver ocorrido enquanto as atualizações de janela foram bloqueadas, nenhuma área será invalidada.
+Enquanto as atualizações de janela são bloqueadas, o sistema mantém o controle do retângulo delimitador de quaisquer operações de desenho para contextos de dispositivo associados a uma janela bloqueada. Quando o desenho é reabilitado, esse retângulo delimitador é invalidado na janela bloqueada e suas janelas filhas para forçar uma mensagem [WM_PAINT](/windows/win32/gdi/wm-paint) eventual para atualizar a tela. Se nenhum desenho tiver ocorrido enquanto as atualizações de janela foram bloqueadas, nenhuma área será invalidada.
 
 A `LockWindowUpdate` função membro não torna a janela invisível e não limpa o bit do estilo [WS_VISIBLE](styles-used-by-mfc.md#window-styles) .
 
@@ -5643,7 +5643,7 @@ Identifica a janela para a qual os pontos são convertidos. Se esse parâmetro f
 Especifica o retângulo cujos pontos devem ser convertidos. A primeira versão dessa função está disponível apenas para o Windows 3,1 e posterior.
 
 *lpPoint*<br/>
-Um ponteiro para uma matriz de [estrutura de ponto](/windows/desktop/api/windef/ns-windef-tagpoint) que contém o conjunto de pontos a serem convertidos.
+Um ponteiro para uma matriz de [estrutura de ponto](/windows/win32/api/windef/ns-windef-point) que contém o conjunto de pontos a serem convertidos.
 
 *nCount*<br/>
 Especifica o número de `POINT` estruturas na matriz apontada por *lpPoint*.
@@ -5672,7 +5672,7 @@ Especifica o conteúdo e o comportamento da caixa de mensagem.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Esse método utiliza a função [MessageBox](/windows/desktop/api/winuser/nf-winuser-messagebox) , conforme definido no SDK do Windows. Esse método retorna o resultado da chamada dessa função.
+Esse método utiliza a função [MessageBox](/windows/win32/api/winuser/nf-winuser-messagebox) , conforme definido no SDK do Windows. Esse método retorna o resultado da chamada dessa função.
 
 ### <a name="remarks"></a>Comentários
 
@@ -5719,9 +5719,9 @@ Diferente de zero se o estilo tiver sido modificado com êxito; caso contrário,
 
 ### <a name="remarks"></a>Comentários
 
-Os estilos a serem adicionados ou removidos podem ser combinados usando-se o operador&#124;or (). Confira os tópicos de [janela estilos](/windows/desktop/winmsg/window-styles) e [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) na SDK do Windows para obter informações sobre os estilos de janela disponíveis.
+Os estilos a serem adicionados ou removidos podem ser combinados usando-se o operador&#124;or (). Confira os tópicos de [janela estilos](/windows/win32/winmsg/window-styles) e [CreateWindow](/windows/win32/api/winuser/nf-winuser-createwindoww) na SDK do Windows para obter informações sobre os estilos de janela disponíveis.
 
-Se *nFlags* for diferente de `ModifyStyle` zero, o chamará a função de API do Windows [SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos) e redesenhará a janela combinando *nFlags* com os quatro sinalizadores predefinidos a seguir:
+Se *nFlags* for diferente de `ModifyStyle` zero, o chamará a função de API do Windows [SetWindowPos](/windows/win32/api/winuser/nf-winuser-setwindowpos) e redesenhará a janela combinando *nFlags* com os quatro sinalizadores predefinidos a seguir:
 
 - SWP_NOSIZE Retém o tamanho atual.
 
@@ -5768,9 +5768,9 @@ Diferente de zero se o estilo tiver sido modificado com êxito; caso contrário,
 
 ### <a name="remarks"></a>Comentários
 
-Os estilos a serem adicionados ou removidos podem ser combinados usando-se o operador&#124;or (). Consulte os tópicos [estilos de janela estendidos](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) neste livro e [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) na SDK do Windows para obter informações sobre os estilos estendidos disponíveis
+Os estilos a serem adicionados ou removidos podem ser combinados usando-se o operador&#124;or (). Consulte os tópicos [estilos de janela estendidos](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) neste livro e [CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw) na SDK do Windows para obter informações sobre os estilos estendidos disponíveis
 
-Se *nFlags* for diferente de `ModifyStyleEx` zero, o chamará a função de API do Windows [SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos) e redesenhará a janela combinando *nFlags* com os quatro sinalizadores predefinidos a seguir:
+Se *nFlags* for diferente de `ModifyStyleEx` zero, o chamará a função de API do Windows [SetWindowPos](/windows/win32/api/winuser/nf-winuser-setwindowpos) e redesenhará a janela combinando *nFlags* com os quatro sinalizadores predefinidos a seguir:
 
 - SWP_NOSIZE Retém o tamanho atual.
 
@@ -5818,10 +5818,10 @@ Especifica a nova largura do `CWnd`.
 Especifica a nova altura do `CWnd`.
 
 *bRepaint*<br/>
-Especifica se `CWnd` deve ser redesenhado. Se for true, o  `CWnd` receberá uma mensagem [WM_PAINT](/windows/desktop/gdi/wm-paint) em seu manipulador de mensagens [OnPaint](#onpaint) como de costume. Se esse parâmetro for FALSE, não ocorrerá nenhuma repintura de nenhum tipo. Isso se aplica à área do cliente, à área não-cliente (incluindo as barras de título e de rolagem) e a qualquer parte da janela pai descoberto como resultado da `CWnd`movimentação. Quando esse parâmetro for false, o aplicativo deverá invalidar explicitamente ou redesenhar qualquer parte da `CWnd` janela pai que deva ser redesenhada.
+Especifica se `CWnd` deve ser redesenhado. Se for true, o  `CWnd` receberá uma mensagem [WM_PAINT](/windows/win32/gdi/wm-paint) em seu manipulador de mensagens [OnPaint](#onpaint) como de costume. Se esse parâmetro for FALSE, não ocorrerá nenhuma repintura de nenhum tipo. Isso se aplica à área do cliente, à área não-cliente (incluindo as barras de título e de rolagem) e a qualquer parte da janela pai descoberto como resultado da `CWnd`movimentação. Quando esse parâmetro for false, o aplicativo deverá invalidar explicitamente ou redesenhar qualquer parte da `CWnd` janela pai que deva ser redesenhada.
 
 *lpRect*<br/>
-A estrutura do objeto [CRect](../../atl-mfc-shared/reference/crect-class.md) ou [Rect](/windows/desktop/api/windef/ns-windef-tagrect) que especifica o novo tamanho e a posição.
+A estrutura do objeto [CRect](../../atl-mfc-shared/reference/crect-class.md) ou [Rect](/windows/win32/api/windef/ns-windef-rect) que especifica o novo tamanho e a posição.
 
 ### <a name="remarks"></a>Comentários
 
@@ -5847,17 +5847,17 @@ void NotifyWinEvent(
 ### <a name="parameters"></a>Parâmetros
 
 *event*<br/>
-Especifica o evento que ocorreu. Esse valor deve ser uma das [constantes de evento](/windows/desktop/WinAuto/event-constants).
+Especifica o evento que ocorreu. Esse valor deve ser uma das [constantes de evento](/windows/win32/WinAuto/event-constants).
 
 *idObjectType*<br/>
-Identifica o tipo de objeto que gerou o evento. Esse valor é um dos identificadores de [objeto](/windows/desktop/WinAuto/object-identifiers) predefinidos ou um valor de ID de objeto personalizado.
+Identifica o tipo de objeto que gerou o evento. Esse valor é um dos identificadores de [objeto](/windows/win32/WinAuto/object-identifiers) predefinidos ou um valor de ID de objeto personalizado.
 
 *idObject*<br/>
 Identifica se o evento foi gerado por um objeto ou um elemento filho do objeto. Se esse valor for CHILDID_SELF, o evento foi gerado pelo próprio objeto. Caso contrário, esse valor é a ID filho do elemento que gerou o evento.
 
 ### <a name="remarks"></a>Comentários
 
-Essa função de membro emula a funcionalidade da função [NotifyWinEvent](/windows/desktop/api/winuser/nf-winuser-notifywinevent), conforme descrito na SDK do Windows.
+Essa função de membro emula a funcionalidade da função [NotifyWinEvent](/windows/win32/api/winuser/nf-winuser-notifywinevent), conforme descrito na SDK do Windows.
 
 ##  <a name="onactivate"></a>  CWnd::OnActivate
 
@@ -5966,13 +5966,13 @@ afx_msg void OnAppCommand(
 |Parâmetro|Descrição|
 |---------------|-----------------|
 |*pWnd*|no Ponteiro para um `CWnd` objeto que representa a janela em que o usuário clicou no botão de comando ou pressionou a tecla de comando. Essa janela pode ser uma janela filho da janela que recebe a mensagem.|
-|*nCmd*|no Indica o comando do aplicativo. Para obter uma lista de valores possíveis, consulte os comandos na seção *cmd* do parâmetro *lParam* de [WM_APPCOMMAND](/windows/desktop/inputdev/wm-appcommand).|
-|*nDevice*|no O dispositivo de entrada que gerou o evento de entrada. Para obter uma lista de valores possíveis, consulte os dispositivos na seção *udevice* do parâmetro *lParam* de [WM_APPCOMMAND](/windows/desktop/inputdev/wm-appcommand).|
-|*nKey*|no Indica as chaves virtuais que estão inativas, como a tecla CTRL ou o botão esquerdo do mouse. Para obter uma lista de valores possíveis, consulte as chaves na seção *dwKeys* do parâmetro *lParam* de [WM_APPCOMMAND](/windows/desktop/inputdev/wm-appcommand). Para obter mais informações, consulte o subtítulo "parâmetros de mensagem" em [sobre a entrada do mouse](/windows/desktop/inputdev/about-mouse-input).|
+|*nCmd*|no Indica o comando do aplicativo. Para obter uma lista de valores possíveis, consulte os comandos na seção *cmd* do parâmetro *lParam* de [WM_APPCOMMAND](/windows/win32/inputdev/wm-appcommand).|
+|*nDevice*|no O dispositivo de entrada que gerou o evento de entrada. Para obter uma lista de valores possíveis, consulte os dispositivos na seção *udevice* do parâmetro *lParam* de [WM_APPCOMMAND](/windows/win32/inputdev/wm-appcommand).|
+|*nKey*|no Indica as chaves virtuais que estão inativas, como a tecla CTRL ou o botão esquerdo do mouse. Para obter uma lista de valores possíveis, consulte as chaves na seção *dwKeys* do parâmetro *lParam* de [WM_APPCOMMAND](/windows/win32/inputdev/wm-appcommand). Para obter mais informações, consulte o subtítulo "parâmetros de mensagem" em [sobre a entrada do mouse](/windows/win32/inputdev/about-mouse-input).|
 
 ### <a name="remarks"></a>Comentários
 
-Esse método recebe a notificação [WM_APPCOMMAND](/windows/desktop/inputdev/wm-appcommand) , que é descrita na SDK do Windows.
+Esse método recebe a notificação [WM_APPCOMMAND](/windows/win32/inputdev/wm-appcommand) , que é descrita na SDK do Windows.
 
 > [!NOTE]
 > Essa função de membro é chamada pelo Framework para permitir que seu aplicativo manipule uma mensagem do Windows. Os parâmetros passados para sua função refletem os parâmetros recebidos pela estrutura quando a mensagem foi recebida. Se você chamar a implementação da classe base dessa função, essa implementação usará os parâmetros originalmente passados com a mensagem e não os parâmetros fornecidos para a função.
@@ -6016,7 +6016,7 @@ afx_msg void OnCancelMode();
 
 Se o `CWnd` objeto tiver o foco, sua `OnCancelMode` função de membro será chamada quando uma caixa de diálogo ou caixa de mensagem for exibida. Isso dá a `CWnd` oportunidade de cancelar modos como a captura do mouse.
 
-A implementação padrão responde chamando a função do Windows [ReleaseCapture](/windows/desktop/api/winuser/nf-winuser-releasecapture) . Substitua essa função de membro em sua classe derivada para lidar com outros modos.
+A implementação padrão responde chamando a função do Windows [ReleaseCapture](/windows/win32/api/winuser/nf-winuser-releasecapture) . Substitua essa função de membro em sua classe derivada para lidar com outros modos.
 
 ##  <a name="oncapturechanged"></a>  CWnd::OnCaptureChanged
 
@@ -6033,7 +6033,7 @@ Um ponteiro para a janela para obter captura do mouse
 
 ### <a name="remarks"></a>Comentários
 
-Uma janela recebe essa mensagem, mesmo que chame o próprio [ReleaseCapture](/windows/desktop/api/winuser/nf-winuser-releasecapture) . Um aplicativo não deve tentar definir a captura do mouse em resposta a essa mensagem. Quando ele recebe essa mensagem, uma janela deve ser redesenhada, se necessário, para refletir o novo estado de captura do mouse.
+Uma janela recebe essa mensagem, mesmo que chame o próprio [ReleaseCapture](/windows/win32/api/winuser/nf-winuser-releasecapture) . Um aplicativo não deve tentar definir a captura do mouse em resposta a essa mensagem. Quando ele recebe essa mensagem, uma janela deve ser redesenhada, se necessário, para refletir o novo estado de captura do mouse.
 
 Consulte a SDK do Windows para obter informações sobre `ReleaseCapture` a função do Windows.
 
@@ -6060,7 +6060,7 @@ Especifica o identificador de janela que segue a janela que está sendo removida
 
 ### <a name="remarks"></a>Comentários
 
-Cada `CWnd` objeto que recebe uma `OnChangeCbChain` chamada deve usar a função [SendMessage](/windows/desktop/api/winuser/nf-winuser-sendmessage) do Windows para enviar a mensagem [WM_CHANGECBCHAIN](/windows/desktop/dataxchg/wm-changecbchain) para a próxima janela na cadeia de visualizador da área de transferência (o `SetClipboardViewer`identificador retornado por). Se *hWndRemove* for a próxima janela na cadeia, a janela especificada por *hWndAfter* se tornará a próxima janela e as mensagens da área de transferência serão passadas para ela.
+Cada `CWnd` objeto que recebe uma `OnChangeCbChain` chamada deve usar a função [SendMessage](/windows/win32/api/winuser/nf-winuser-sendmessage) do Windows para enviar a mensagem [WM_CHANGECBCHAIN](/windows/win32/dataxchg/wm-changecbchain) para a próxima janela na cadeia de visualizador da área de transferência (o `SetClipboardViewer`identificador retornado por). Se *hWndRemove* for a próxima janela na cadeia, a janela especificada por *hWndAfter* se tornará a próxima janela e as mensagens da área de transferência serão passadas para ela.
 
 > [!NOTE]
 > Essa função de membro é chamada pelo Framework para permitir que seu aplicativo manipule uma mensagem do Windows. Os parâmetros passados para sua função refletem os parâmetros recebidos pela estrutura quando a mensagem foi recebida. Se você chamar a implementação da classe base dessa função, essa implementação usará os parâmetros originalmente passados com a mensagem e não os parâmetros fornecidos para a função.
@@ -6082,7 +6082,7 @@ Especifica a ação a ser executada. Pode ser um dos seguintes valores:
 
 - UIS_CLEAR o elemento de estado da interface do usuário (especificado por *nUIElement*) deve estar oculto.
 
-- UIS_INITIALIZE o elemento de estado da interface do usuário (especificado por *nUIElement*) deve ser alterado com base no último evento de entrada. Para obter mais informações, consulte a seção **comentários** de [WM_CHANGEUISTATE](/windows/desktop/menurc/wm-changeuistate).
+- UIS_INITIALIZE o elemento de estado da interface do usuário (especificado por *nUIElement*) deve ser alterado com base no último evento de entrada. Para obter mais informações, consulte a seção **comentários** de [WM_CHANGEUISTATE](/windows/win32/menurc/wm-changeuistate).
 
 - UIS_SET o elemento de estado da interface do usuário (especificado por *nUIElement*) deve estar visível.
 
@@ -6097,7 +6097,7 @@ Especifica quais elementos de estado da interface do usuário são afetados ou o
 
 ### <a name="remarks"></a>Comentários
 
-Essa função de membro emula a funcionalidade da mensagem [WM_CHANGEUISTATE](/windows/desktop/menurc/wm-changeuistate) , conforme descrito na SDK do Windows.
+Essa função de membro emula a funcionalidade da mensagem [WM_CHANGEUISTATE](/windows/win32/menurc/wm-changeuistate) , conforme descrito na SDK do Windows.
 
 ##  <a name="onchar"></a>  CWnd::OnChar
 
@@ -6144,7 +6144,7 @@ Para teclados IBM Enhanced 101-and 102-Key, as chaves avançadas são as teclas 
 
 ##  <a name="onchartoitem"></a>  CWnd::OnCharToItem
 
-Chamado quando uma caixa de listagem com o estilo [LBS_WANTKEYBOARDINPUT](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) envia seu proprietário uma mensagem [WM_CHARTOITEM](/windows/desktop/Controls/wm-chartoitem) em resposta a uma mensagem [WM_CHAR](#onchar) .
+Chamado quando uma caixa de listagem com o estilo [LBS_WANTKEYBOARDINPUT](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) envia seu proprietário uma mensagem [WM_CHARTOITEM](/windows/win32/Controls/wm-chartoitem) em resposta a uma mensagem [WM_CHAR](#onchar) .
 
 ```
 afx_msg int OnCharToItem(
@@ -6258,7 +6258,7 @@ afx_msg void OnColorizationColorChanged(
 
 ### <a name="remarks"></a>Comentários
 
-Esse método recebe a mensagem de notificação [WM_DWMNCRENDERINGCHANGED](/windows/desktop/dwm/wm-dwmcolorizationcolorchanged) , que é descrita no SDK do Windows.
+Esse método recebe a mensagem de notificação [WM_DWMNCRENDERINGCHANGED](/windows/win32/dwm/wm-dwmcolorizationcolorchanged) , que é descrita no SDK do Windows.
 
 > [!NOTE]
 > Essa função de membro é chamada pelo Framework para permitir que seu aplicativo manipule uma mensagem do Windows. Os parâmetros passados para sua função refletem os parâmetros recebidos pela estrutura quando a mensagem foi recebida. Se você chamar a implementação da classe base dessa função, essa implementação usará os parâmetros originalmente passados com a mensagem e não os parâmetros fornecidos para a função.
@@ -6289,7 +6289,7 @@ Um aplicativo retornará zero se ele processar esta mensagem; caso contrário, 0
 
 `OnCommand`processa o mapa de mensagens para notificações de controle e entradas ON_COMMAND e chama a função de membro apropriada.
 
-Substitua essa função de membro em sua classe derivada para manipular a mensagem [WM_COMMAND](/windows/desktop/menurc/wm-command) . Uma substituição não processará o mapa da mensagem, a menos `OnCommand` que a classe base seja chamada.
+Substitua essa função de membro em sua classe derivada para manipular a mensagem [WM_COMMAND](/windows/win32/menurc/wm-command) . Uma substituição não processará o mapa da mensagem, a menos `OnCommand` que a classe base seja chamada.
 
 > [!NOTE]
 > Essa função de membro é chamada pelo Framework para permitir que seu aplicativo manipule uma mensagem do Windows. Os parâmetros passados para sua função refletem os parâmetros recebidos pela estrutura quando a mensagem foi recebida. Se você chamar a implementação da classe base dessa função, essa implementação usará os parâmetros originalmente passados com a mensagem e não os parâmetros fornecidos para a função.
@@ -6332,7 +6332,7 @@ afx_msg int OnCompareItem(
 O identificador do controle que enviou a mensagem WM_COMPAREITEM.
 
 *lpCompareItemStruct*<br/>
-Contém um ponteiro longo para uma estrutura de dados [COMPAREITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcompareitemstruct) que contém os identificadores e os dados fornecidos pelo aplicativo para dois itens na caixa de listagem ou combinação.
+Contém um ponteiro longo para uma estrutura de dados [COMPAREITEMSTRUCT](/windows/win32/api/winuser/ns-winuser-compareitemstruct) que contém os identificadores e os dados fornecidos pelo aplicativo para dois itens na caixa de listagem ou combinação.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -6365,7 +6365,7 @@ afx_msg void OnCompositionChanged();
 
 ### <a name="remarks"></a>Comentários
 
-Esse método recebe a notificação [WM_DWMCOMPOSITIONCHANGED](/windows/desktop/dwm/wm-dwmcompositionchanged) , que é descrita na SDK do Windows.
+Esse método recebe a notificação [WM_DWMCOMPOSITIONCHANGED](/windows/win32/dwm/wm-dwmcompositionchanged) , que é descrita na SDK do Windows.
 
 > [!NOTE]
 > Essa função de membro é chamada pelo Framework para permitir que seu aplicativo manipule uma mensagem do Windows. Os parâmetros passados para sua função refletem os parâmetros recebidos pela estrutura quando a mensagem foi recebida. Se você chamar a implementação da classe base dessa função, essa implementação usará os parâmetros originalmente passados com a mensagem e não os parâmetros fornecidos para a função.
@@ -6410,7 +6410,7 @@ afx_msg BOOL OnCopyData(
 Um ponteiro para um `CWnd` objeto que está enviando os dados.
 
 *pCopyDataStruct*<br/>
-Um ponteiro para uma estrutura [COPYDATASTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcopydatastruct) que contém os dados que estão sendo enviados.
+Um ponteiro para uma estrutura [COPYDATASTRUCT](/windows/win32/api/winuser/ns-winuser-copydatastruct) que contém os dados que estão sendo enviados.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -6440,7 +6440,7 @@ afx_msg int OnCreate(LPCREATESTRUCT lpCreateStruct);
 ### <a name="parameters"></a>Parâmetros
 
 *lpCreateStruct*<br/>
-Aponta para uma estrutura [CREATESTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcreatestructa) que contém informações sobre o objeto `CWnd` que está sendo criado.
+Aponta para uma estrutura [CREATESTRUCT](/windows/win32/api/winuser/ns-winuser-createstructw) que contém informações sobre o objeto `CWnd` que está sendo criado.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -6575,7 +6575,7 @@ afx_msg void OnDeleteItem(
 O identificador do controle que enviou a mensagem WM_DELETEITEM.
 
 *lpDeleteItemStruct*<br/>
-Especifica um ponteiro longo para uma estrutura de dados [DELETEITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdeleteitemstruct) que contém informações sobre o item da caixa de listagem excluído.
+Especifica um ponteiro longo para uma estrutura de dados [DELETEITEMSTRUCT](/windows/win32/api/winuser/ns-winuser-deleteitemstruct) que contém informações sobre o item da caixa de listagem excluído.
 
 ### <a name="remarks"></a>Comentários
 
@@ -6602,7 +6602,7 @@ Se o objeto `CWnd` que está sendo destruído fizer parte da cadeia do Visualiza
 
 ##  <a name="ondestroyclipboard"></a>  CWnd::OnDestroyClipboard
 
-A estrutura chama essa função de membro para o proprietário da área de transferência quando a área de transferência é esvaziada por meio de uma chamada para a função do Windows [EmptyClipboard](/windows/desktop/api/winuser/nf-winuser-emptyclipboard) .
+A estrutura chama essa função de membro para o proprietário da área de transferência quando a área de transferência é esvaziada por meio de uma chamada para a função do Windows [EmptyClipboard](/windows/win32/api/winuser/nf-winuser-emptyclipboard) .
 
 ```
 afx_msg void OnDestroyClipboard();
@@ -6634,19 +6634,19 @@ Se o sistema operacional for forçado a remover de um dispositivo, ele poderá n
 
 O parâmetro *nEvent* pode ser um destes valores:
 
-- [DBT_DEVICEARRIVAL](/windows/desktop/DevIO/dbt-devicearrival) Um dispositivo foi inserido e agora está disponível.
+- [DBT_DEVICEARRIVAL](/windows/win32/DevIO/dbt-devicearrival) Um dispositivo foi inserido e agora está disponível.
 
-- [DBT_DEVICEQUERYREMOVE](/windows/desktop/DevIO/dbt-devicequeryremove) A permissão para remover um dispositivo é solicitada. Qualquer aplicativo pode negar essa solicitação e cancelar a remoção.
+- [DBT_DEVICEQUERYREMOVE](/windows/win32/DevIO/dbt-devicequeryremove) A permissão para remover um dispositivo é solicitada. Qualquer aplicativo pode negar essa solicitação e cancelar a remoção.
 
-- [DBT_DEVICEQUERYREMOVEFAILED](/windows/desktop/DevIO/dbt-devicequeryremovefailed) A solicitação para remover um dispositivo foi cancelada.
+- [DBT_DEVICEQUERYREMOVEFAILED](/windows/win32/DevIO/dbt-devicequeryremovefailed) A solicitação para remover um dispositivo foi cancelada.
 
-- [DBT_DEVICEREMOVEPENDING](/windows/desktop/DevIO/dbt-deviceremovepending) O dispositivo está prestes a ser removido. Não pode ser negado.
+- [DBT_DEVICEREMOVEPENDING](/windows/win32/DevIO/dbt-deviceremovepending) O dispositivo está prestes a ser removido. Não pode ser negado.
 
-- [DBT_DEVICEREMOVECOMPLETE](/windows/desktop/DevIO/dbt-deviceremovecomplete) O dispositivo foi removido.
+- [DBT_DEVICEREMOVECOMPLETE](/windows/win32/DevIO/dbt-deviceremovecomplete) O dispositivo foi removido.
 
-- [DBT_DEVICETYPESPECIFIC](/windows/desktop/DevIO/dbt-devicetypespecific) Evento específico do dispositivo.
+- [DBT_DEVICETYPESPECIFIC](/windows/win32/DevIO/dbt-devicetypespecific) Evento específico do dispositivo.
 
-- [DBT_CONFIGCHANGED](/windows/desktop/DevIO/dbt-configchanged) A configuração atual foi alterada.
+- [DBT_CONFIGCHANGED](/windows/win32/DevIO/dbt-configchanged) A configuração atual foi alterada.
 
 - O nó do dispositivo DBT_DEVNODES_CHANGED foi alterado.
 
@@ -6687,7 +6687,7 @@ afx_msg void OnDrawClipboard();
 
 Somente os aplicativos que ingressaram na cadeia do Visualizador da área de transferência chamando a função de membro [SetClipboardViewer](#setclipboardviewer) precisam responder a essa chamada.
 
-Cada janela que recebe uma `OnDrawClipboard` chamada deve chamar a função [SendMessage](/windows/desktop/api/winuser/nf-winuser-sendmessage) do Windows para passar uma mensagem [WM_DRAWCLIPBOARD](/windows/desktop/dataxchg/wm-drawclipboard) para a próxima janela na cadeia do Visualizador da área de transferência. O identificador da próxima janela é retornado pela função membro [SetClipboardViewer](#setclipboardviewer) ; Ele pode ser modificado em resposta a uma chamada de função membro [OnChangeCbChain](#onchangecbchain) .
+Cada janela que recebe uma `OnDrawClipboard` chamada deve chamar a função [SendMessage](/windows/win32/api/winuser/nf-winuser-sendmessage) do Windows para passar uma mensagem [WM_DRAWCLIPBOARD](/windows/win32/dataxchg/wm-drawclipboard) para a próxima janela na cadeia do Visualizador da área de transferência. O identificador da próxima janela é retornado pela função membro [SetClipboardViewer](#setclipboardviewer) ; Ele pode ser modificado em resposta a uma chamada de função membro [OnChangeCbChain](#onchangecbchain) .
 
 ##  <a name="ondrawiconicthumbnailorlivepreview"></a>  CWnd::OnDrawIconicThumbnailOrLivePreview
 
@@ -6743,7 +6743,7 @@ Especifica um ponteiro longo para uma `DRAWITEMSTRUCT` estrutura de dados que co
 
 ### <a name="remarks"></a>Comentários
 
-O `itemAction` membro da estrutura [DRAWITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct) define a operação de desenho a ser executada. Os dados nesse membro permitem que o proprietário do controle determine qual ação de desenho é necessária.
+O `itemAction` membro da estrutura [DRAWITEMSTRUCT](/windows/win32/api/winuser/ns-winuser-drawitemstruct) define a operação de desenho a ser executada. Os dados nesse membro permitem que o proprietário do controle determine qual ação de desenho é necessária.
 
 Antes de retornar do processamento dessa mensagem, um aplicativo deve garantir que o contexto do dispositivo identificado pelo membro *HDC* da `DRAWITEMSTRUCT` estrutura seja restaurado para o estado padrão.
 
@@ -6811,7 +6811,7 @@ A `OnEndSession` chamada informa ao `CWnd` objeto se a sessão está realmente t
 
 Se a *curva* for verdadeira, o Windows poderá terminar a qualquer momento depois que todos os aplicativos forem retornados do processamento dessa chamada. Consequentemente, faça com que um aplicativo execute todas as tarefas `OnEndSession`necessárias para encerramento no.
 
-Você não precisa chamar a função membro [DestroyWindow](#destroywindow) ou a função [PostQuitMessage](/windows/desktop/api/winuser/nf-winuser-postquitmessage) do Windows quando a sessão está terminando.
+Você não precisa chamar a função membro [DestroyWindow](#destroywindow) ou a função [PostQuitMessage](/windows/win32/api/winuser/nf-winuser-postquitmessage) do Windows quando a sessão está terminando.
 
 > [!NOTE]
 > Essa função de membro é chamada pelo Framework para permitir que seu aplicativo manipule uma mensagem do Windows. Os parâmetros passados para sua função refletem os parâmetros recebidos pela estrutura quando a mensagem foi recebida. Se você chamar a implementação da classe base dessa função, essa implementação usará os parâmetros originalmente passados com a mensagem e não os parâmetros fornecidos para a função.
@@ -6873,9 +6873,9 @@ afx_msg void OnEnterSizeMove();
 
 ### <a name="remarks"></a>Comentários
 
-Esse método recebe a notificação [WM_ENTERSIZEMOVE](/windows/desktop/winmsg/wm-entersizemove) , que é descrita na SDK do Windows.
+Esse método recebe a notificação [WM_ENTERSIZEMOVE](/windows/win32/winmsg/wm-entersizemove) , que é descrita na SDK do Windows.
 
-Uma janela entra em um loop modal de dimensionamento ou movimentação quando o usuário clica na barra de título ou na borda de dimensionamento da janela ou quando a janela passa a mensagem [WM_SYSCOMMAND](/windows/desktop/menurc/wm-syscommand) para a função [CWnd::D efwindowproc](#defwindowproc) e o parâmetro *wParam* dessa mensagem Especifica SC_MOVE ou SC_SIZE.
+Uma janela entra em um loop modal de dimensionamento ou movimentação quando o usuário clica na barra de título ou na borda de dimensionamento da janela ou quando a janela passa a mensagem [WM_SYSCOMMAND](/windows/win32/menurc/wm-syscommand) para a função [CWnd::D efwindowproc](#defwindowproc) e o parâmetro *wParam* dessa mensagem Especifica SC_MOVE ou SC_SIZE.
 
 > [!NOTE]
 > Essa função de membro é chamada pelo Framework para permitir que seu aplicativo manipule uma mensagem do Windows. Os parâmetros passados para sua função refletem os parâmetros recebidos pela estrutura quando a mensagem foi recebida. Se você chamar a implementação da classe base dessa função, essa implementação usará os parâmetros originalmente passados com a mensagem e não os parâmetros fornecidos para a função.
@@ -6903,7 +6903,7 @@ Ele é chamado para preparar uma região invalidada para pintura.
 
 A implementação padrão apaga o plano de fundo usando o pincel de plano de fundo de `hbrBackground` classe de janela especificado pelo membro da estrutura de classe de janela.
 
-Se o `hbrBackground` membro for nulo, sua versão substituída `OnEraseBkgnd` do deverá apagar a cor do plano de fundo. Sua versão também deve alinhar a origem do pincel pretendido com as coordenadas `CWnd` primeiro chamando [unpercebeuobject](/windows/desktop/api/wingdi/nf-wingdi-unrealizeobject)para o pincel, e, em seguida, selecionando o pincel.
+Se o `hbrBackground` membro for nulo, sua versão substituída `OnEraseBkgnd` do deverá apagar a cor do plano de fundo. Sua versão também deve alinhar a origem do pincel pretendido com as coordenadas `CWnd` primeiro chamando [unpercebeuobject](/windows/win32/api/wingdi/nf-wingdi-unrealizeobject)para o pincel, e, em seguida, selecionando o pincel.
 
 Um substituído `OnEraseBkgnd` deve retornar zero em resposta a WM_ERASEBKGND se ele processar a mensagem e apagar o plano de fundo; isso indica que não é necessário apagar mais. Se ele retornar 0, a janela permanecerá marcada como precisa ser apagada. (Normalmente, isso significa que o `fErase` membro `PAINTSTRUCT` da estrutura será true.)
 
@@ -6940,9 +6940,9 @@ afx_msg void OnExitSizeMove();
 
 ### <a name="remarks"></a>Comentários
 
-Esse método recebe a notificação [WM_EXITSIZEMOVE](/windows/desktop/winmsg/wm-exitsizemove) , que é descrita na SDK do Windows.
+Esse método recebe a notificação [WM_EXITSIZEMOVE](/windows/win32/winmsg/wm-exitsizemove) , que é descrita na SDK do Windows.
 
-Uma janela entra em um loop modal de dimensionamento ou movimentação quando o usuário clica na barra de título ou na borda de dimensionamento da janela ou quando a janela passa a mensagem [WM_SYSCOMMAND](/windows/desktop/menurc/wm-syscommand) para a função [CWnd::D efwindowproc](#defwindowproc) e o parâmetro *wParam* dessa mensagem Especifica SC_MOVE ou SC_SIZE.
+Uma janela entra em um loop modal de dimensionamento ou movimentação quando o usuário clica na barra de título ou na borda de dimensionamento da janela ou quando a janela passa a mensagem [WM_SYSCOMMAND](/windows/win32/menurc/wm-syscommand) para a função [CWnd::D efwindowproc](#defwindowproc) e o parâmetro *wParam* dessa mensagem Especifica SC_MOVE ou SC_SIZE.
 
 > [!NOTE]
 > Essa função de membro é chamada pelo Framework para permitir que seu aplicativo manipule uma mensagem do Windows. Os parâmetros passados para sua função refletem os parâmetros recebidos pela estrutura quando a mensagem foi recebida. Se você chamar a implementação da classe base dessa função, essa implementação usará os parâmetros originalmente passados com a mensagem e não os parâmetros fornecidos para a função.
@@ -6957,9 +6957,9 @@ afx_msg void OnFontChange();
 
 ### <a name="remarks"></a>Comentários
 
-Um aplicativo que adiciona ou remove fontes do sistema (por exemplo, por meio da função [AddFontResource](/windows/desktop/api/wingdi/nf-wingdi-addfontresourcea) ou [RemoveFontResource](/windows/desktop/api/wingdi/nf-wingdi-removefontresourcea) do Windows) deve enviar a mensagem [WM_FONTCHANGE](/windows/desktop/gdi/wm-fontchange) para todas as janelas de nível superior.
+Um aplicativo que adiciona ou remove fontes do sistema (por exemplo, por meio da função [AddFontResource](/windows/win32/api/wingdi/nf-wingdi-addfontresourcew) ou [RemoveFontResource](/windows/win32/api/wingdi/nf-wingdi-removefontresourcew) do Windows) deve enviar a mensagem [WM_FONTCHANGE](/windows/win32/gdi/wm-fontchange) para todas as janelas de nível superior.
 
-Para enviar essa mensagem, use a função [SendMessage](/windows/desktop/api/winuser/nf-winuser-sendmessage) do Windows com o parâmetro *HWND* definido como HWND_BROADCAST.
+Para enviar essa mensagem, use a função [SendMessage](/windows/win32/api/winuser/nf-winuser-sendmessage) do Windows com o parâmetro *HWND* definido como HWND_BROADCAST.
 
 ##  <a name="ongetdlgcode"></a>  CWnd::OnGetDlgCode
 
@@ -7012,7 +7012,7 @@ afx_msg void OnGetMinMaxInfo(MINMAXINFO* lpMMI);
 ### <a name="parameters"></a>Parâmetros
 
 *lpMMI*<br/>
-Aponta para uma `MINMAXINFO` estrutura que contém informações sobre o tamanho e a posição maximizados de uma janela e seu tamanho de rastreamento mínimo e máximo. Para obter mais informações sobre essa estrutura, consulte a estrutura [MINMAXINFO](/windows/desktop/api/winuser/ns-winuser-tagminmaxinfo) .
+Aponta para uma `MINMAXINFO` estrutura que contém informações sobre o tamanho e a posição maximizados de uma janela e seu tamanho de rastreamento mínimo e máximo. Para obter mais informações sobre essa estrutura, consulte a estrutura [MINMAXINFO](/windows/win32/api/winuser/ns-winuser-minmaxinfo) .
 
 ### <a name="remarks"></a>Comentários
 
@@ -7070,7 +7070,7 @@ afx_msg BOOL OnHelpInfo(HELPINFO* lpHelpInfo);
 ### <a name="parameters"></a>Parâmetros
 
 *lpHelpInfo*<br/>
-Ponteiro para uma estrutura [HELPINFO](/windows/desktop/api/winuser/ns-winuser-taghelpinfo) que contém informações sobre o item de menu, controle, caixa de diálogo ou janela para a qual a ajuda é solicitada.
+Ponteiro para uma estrutura [HELPINFO](/windows/win32/api/winuser/ns-winuser-helpinfo) que contém informações sobre o item de menu, controle, caixa de diálogo ou janela para a qual a ajuda é solicitada.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -7113,7 +7113,7 @@ afx_msg void OnHotKey(
 
 ### <a name="remarks"></a>Comentários
 
-Esse método recebe a notificação [WM_HOTKEY](/windows/desktop/inputdev/wm-hotkey) , que é descrita na SDK do Windows. Essa mensagem é colocada na parte superior da fila de mensagens associada ao thread que registrou a tecla de acesso. Use a função [RegisterHotKey](/windows/desktop/api/winuser/nf-winuser-registerhotkey) para registrar uma tecla de acesso de todo o sistema.
+Esse método recebe a notificação [WM_HOTKEY](/windows/win32/inputdev/wm-hotkey) , que é descrita na SDK do Windows. Essa mensagem é colocada na parte superior da fila de mensagens associada ao thread que registrou a tecla de acesso. Use a função [RegisterHotKey](/windows/win32/api/winuser/nf-winuser-registerhotkey) para registrar uma tecla de acesso de todo o sistema.
 
 > [!NOTE]
 > Essa função de membro é chamada pelo Framework para permitir que seu aplicativo manipule uma mensagem do Windows. Os parâmetros passados para sua função refletem os parâmetros recebidos pela estrutura quando a mensagem foi recebida. Se você chamar a implementação da classe base dessa função, essa implementação usará os parâmetros originalmente passados com a mensagem e não os parâmetros fornecidos para a função.
@@ -7305,7 +7305,7 @@ afx_msg void OnInputDeviceChange(unsigned short uFlag);
 
 ### <a name="remarks"></a>Comentários
 
-Esse método recebe a notificação [WM_INPUT_DEVICE_CHANGE](/windows/desktop/inputdev/wm-input-device-change) , que é descrita na SDK do Windows. O é uma mensagem de dispositivo de entrada genérica.
+Esse método recebe a notificação [WM_INPUT_DEVICE_CHANGE](/windows/win32/inputdev/wm-input-device-change) , que é descrita na SDK do Windows. O é uma mensagem de dispositivo de entrada genérica.
 
 > [!NOTE]
 > Essa função de membro é chamada pelo Framework para permitir que seu aplicativo manipule uma mensagem do Windows. Os parâmetros passados para sua função refletem os parâmetros recebidos pela estrutura quando a mensagem foi recebida. Se você chamar a implementação da classe base dessa função, essa implementação usará os parâmetros originalmente passados com a mensagem e não os parâmetros fornecidos para a função.
@@ -7324,12 +7324,12 @@ afx_msg void OnInputLangChange(
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|*nCharSet*|no O conjunto de caracteres da nova localidade. Para obter mais informações, consulte o parâmetro *lfCharSet* da estrutura [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) .|
-|*nLocaleId*|no O identificador de localidade de entrada. Para obter mais informações, consulte [constantes e cadeias de caracteres de identificador de linguagem](/windows/desktop/Intl/language-identifier-constants-and-strings).|
+|*nCharSet*|no O conjunto de caracteres da nova localidade. Para obter mais informações, consulte o parâmetro *lfCharSet* da estrutura [LOGFONT](/windows/win32/api/wingdi/ns-wingdi-logfontw) .|
+|*nLocaleId*|no O identificador de localidade de entrada. Para obter mais informações, consulte [constantes e cadeias de caracteres de identificador de linguagem](/windows/win32/Intl/language-identifier-constants-and-strings).|
 
 ### <a name="remarks"></a>Comentários
 
-Esse método recebe a mensagem de notificação [WM_INPUTLANGCHANGE](/windows/desktop/winmsg/wm-inputlangchange) , que é descrita no SDK do Windows.
+Esse método recebe a mensagem de notificação [WM_INPUTLANGCHANGE](/windows/win32/winmsg/wm-inputlangchange) , que é descrita no SDK do Windows.
 
 > [!NOTE]
 > Essa função de membro é chamada pelo Framework para permitir que seu aplicativo manipule uma mensagem do Windows. Os parâmetros passados para sua função refletem os parâmetros recebidos pela estrutura quando a mensagem foi recebida. Se você chamar a implementação da classe base dessa função, essa implementação usará os parâmetros originalmente passados com a mensagem e não os parâmetros fornecidos para a função.
@@ -7349,11 +7349,11 @@ afx_msg void OnInputLangChangeRequest(
 |Parâmetro|Descrição|
 |---------------|-----------------|
 |*nFlags*|no Uma combinação de or (ou) de sinalizadores que indica que a nova localidade foi selecionada da localidade anterior ou da próxima na lista de localidades instaladas ou que o layout do teclado da nova localidade de entrada pode ser usado com o conjunto de caracteres do sistema.<br /><br /> Os valores possíveis são INPUTLANGCHANGE_BACKWARD, INPUTLANGCHANGE_FORWARD e INPUTLANGCHANGE_SYSCHARSET.|
-|*nLocaleId*|no O identificador de localidade de entrada. Para obter mais informações, consulte [constantes e cadeias de caracteres de identificador de linguagem](/windows/desktop/Intl/language-identifier-constants-and-strings).|
+|*nLocaleId*|no O identificador de localidade de entrada. Para obter mais informações, consulte [constantes e cadeias de caracteres de identificador de linguagem](/windows/win32/Intl/language-identifier-constants-and-strings).|
 
 ### <a name="remarks"></a>Comentários
 
-Esse método recebe a mensagem de notificação [WM_INPUTLANGCHANGEREQUEST](/windows/desktop/winmsg/wm-inputlangchangerequest) , que é descrita no SDK do Windows. Essa mensagem é postada quando o usuário escolhe um novo idioma de entrada com uma tecla de atalho especificada no aplicativo painel de controle do teclado ou do indicador na barra de tarefas do sistema.
+Esse método recebe a mensagem de notificação [WM_INPUTLANGCHANGEREQUEST](/windows/win32/winmsg/wm-inputlangchangerequest) , que é descrita no SDK do Windows. Essa mensagem é postada quando o usuário escolhe um novo idioma de entrada com uma tecla de atalho especificada no aplicativo painel de controle do teclado ou do indicador na barra de tarefas do sistema.
 
 > [!NOTE]
 > Essa função de membro é chamada pelo Framework para permitir que seu aplicativo manipule uma mensagem do Windows. Os parâmetros passados para sua função refletem os parâmetros recebidos pela estrutura quando a mensagem foi recebida. Se você chamar a implementação da classe base dessa função, essa implementação usará os parâmetros originalmente passados com a mensagem e não os parâmetros fornecidos para a função.
@@ -7496,7 +7496,7 @@ Especifica a coordenada x e y do cursor. Essas coordenadas são sempre relativas
 
 ### <a name="remarks"></a>Comentários
 
-Somente as janelas que têm o estilo CS_DBLCLKS [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa) receberão `OnLButtonDblClk` chamadas. Esse é o padrão para o Windows do Microsoft Foundation Class. O Windows `OnLButtonDblClk` chama quando o usuário pressiona, libera e pressiona o botão esquerdo do mouse novamente dentro do limite de tempo de clique duplo do sistema. O clique duas vezes com o botão esquerdo do mouse gera quatro eventos: [WM_LBUTTONDOWN](#onlbuttondown), [WM_LBUTTONUP](#onlbuttonup) messages, a chamada WM_LBUTTONDBLCLK e outra mensagem WM_LBUTTONUP quando o botão é liberado.
+Somente as janelas que têm o estilo CS_DBLCLKS [WNDCLASS](/windows/win32/api/winuser/ns-winuser-wndclassw) receberão `OnLButtonDblClk` chamadas. Esse é o padrão para o Windows do Microsoft Foundation Class. O Windows `OnLButtonDblClk` chama quando o usuário pressiona, libera e pressiona o botão esquerdo do mouse novamente dentro do limite de tempo de clique duplo do sistema. O clique duas vezes com o botão esquerdo do mouse gera quatro eventos: [WM_LBUTTONDOWN](#onlbuttondown), [WM_LBUTTONUP](#onlbuttonup) messages, a chamada WM_LBUTTONDBLCLK e outra mensagem WM_LBUTTONUP quando o botão é liberado.
 
 > [!NOTE]
 > Essa função de membro é chamada pelo Framework para permitir que seu aplicativo manipule uma mensagem do Windows. Os parâmetros passados para sua função refletem os parâmetros recebidos pela estrutura quando a mensagem foi recebida. Se você chamar a implementação da classe base dessa função, essa implementação usará os parâmetros originalmente passados com a mensagem e não os parâmetros fornecidos para a função.
@@ -7595,7 +7595,7 @@ Especifica a coordenada x e y do cursor. Essas coordenadas são sempre relativas
 
 ### <a name="remarks"></a>Comentários
 
-Somente as janelas que têm o estilo CS_DBLCLKS [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa) receberão `OnMButtonDblClk` chamadas. Esse é o padrão para todas as janelas do Microsoft Foundation Class. O Windows gera `OnMButtonDblClk` uma chamada quando o usuário pressiona, libera e pressiona o botão do meio do mouse novamente dentro do limite de tempo de clique duplo do sistema. Clicar duas vezes no botão do meio do mouse gera quatro eventos: Mensagens [WM_MBUTTONDOWN](#onmbuttondown) e [WM_MBUTTONUP](#onmbuttonup) , a chamada WM_MBUTTONDBLCLK e outra mensagem WM_MBUTTONUP.
+Somente as janelas que têm o estilo CS_DBLCLKS [WNDCLASS](/windows/win32/api/winuser/ns-winuser-wndclassw) receberão `OnMButtonDblClk` chamadas. Esse é o padrão para todas as janelas do Microsoft Foundation Class. O Windows gera `OnMButtonDblClk` uma chamada quando o usuário pressiona, libera e pressiona o botão do meio do mouse novamente dentro do limite de tempo de clique duplo do sistema. Clicar duas vezes no botão do meio do mouse gera quatro eventos: Mensagens [WM_MBUTTONDOWN](#onmbuttondown) e [WM_MBUTTONUP](#onmbuttonup) , a chamada WM_MBUTTONDBLCLK e outra mensagem WM_MBUTTONUP.
 
 > [!NOTE]
 > Essa função de membro é chamada pelo Framework para permitir que seu aplicativo manipule uma mensagem do Windows. Os parâmetros passados para sua função refletem os parâmetros recebidos pela estrutura quando a mensagem foi recebida. Se você chamar a implementação da classe base dessa função, essa implementação usará os parâmetros originalmente passados com a mensagem e não os parâmetros fornecidos para a função.
@@ -7708,7 +7708,7 @@ afx_msg void OnMeasureItem(
 A ID do controle.
 
 *lpMeasureItemStruct*<br/>
-Aponta para uma estrutura de dados [MEASUREITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagmeasureitemstruct) que contém as dimensões do controle de desenho proprietário.
+Aponta para uma estrutura de dados [MEASUREITEMSTRUCT](/windows/win32/api/winuser/ns-winuser-measureitemstruct) que contém as dimensões do controle de desenho proprietário.
 
 ### <a name="remarks"></a>Comentários
 
@@ -7716,11 +7716,11 @@ Substitua essa função de membro e preencha a `MEASUREITEMSTRUCT` estrutura de 
 
 Se uma caixa de listagem ou caixa de combinação for criada com o estilo [LBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) ou [CBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) , a estrutura chamará essa função para o proprietário de cada item no controle; caso contrário, essa função será chamada uma vez.
 
-O Windows inicia a chamada para `OnMeasureItem` para o proprietário de caixas de combinação e caixas de listagem criadas com o estilo OwnerDrawFixed antes de enviar a mensagem [WM_INITDIALOG](/windows/desktop/dlgbox/wm-initdialog) . Como resultado, quando o proprietário recebe essa chamada, o Windows ainda não determinou a altura e a largura da fonte usada no controle; as chamadas de função e os cálculos que exigem esses valores devem ocorrer na função principal do aplicativo ou da biblioteca.
+O Windows inicia a chamada para `OnMeasureItem` para o proprietário de caixas de combinação e caixas de listagem criadas com o estilo OwnerDrawFixed antes de enviar a mensagem [WM_INITDIALOG](/windows/win32/dlgbox/wm-initdialog) . Como resultado, quando o proprietário recebe essa chamada, o Windows ainda não determinou a altura e a largura da fonte usada no controle; as chamadas de função e os cálculos que exigem esses valores devem ocorrer na função principal do aplicativo ou da biblioteca.
 
 Se o item que está sendo medido `CListBox` for `CComboBox` um `CMenu`objeto, ou `MeasureItem` , a função virtual da classe apropriada será chamada. Substitua a `MeasureItem` função membro da classe do controle apropriado para calcular e definir o tamanho de cada item.
 
-`OnMeasureItem`será chamado somente se a classe do controle for criada em tempo de execução ou se for criada com o estilo LBS_OWNERDRAWVARIABLE ou CBS_OWNERDRAWVARIABLE. Se o controle for criado pelo editor de caixa de `OnMeasureItem` diálogo, não será chamado. Isso ocorre porque a mensagem [WM_MEASUREITEM](/windows/desktop/Controls/wm-measureitem) é enviada no início do processo de criação do controle. Se você criar uma subclasse usando `DDX_Control`, `SubclassDlgItem`ou `SubclassWindow`, a subclasse geralmente ocorrerá após o processo de criação. Portanto, não há como manipular a mensagem [WM_MEASUREITEM](/windows/desktop/Controls/wm-measureitem) na função do `OnChildNotify` controle, que é o mecanismo que o MFC usa para implementar o ON_WM_MEASUREITEM_REFLECT.
+`OnMeasureItem`será chamado somente se a classe do controle for criada em tempo de execução ou se for criada com o estilo LBS_OWNERDRAWVARIABLE ou CBS_OWNERDRAWVARIABLE. Se o controle for criado pelo editor de caixa de `OnMeasureItem` diálogo, não será chamado. Isso ocorre porque a mensagem [WM_MEASUREITEM](/windows/win32/Controls/wm-measureitem) é enviada no início do processo de criação do controle. Se você criar uma subclasse usando `DDX_Control`, `SubclassDlgItem`ou `SubclassWindow`, a subclasse geralmente ocorrerá após o processo de criação. Portanto, não há como manipular a mensagem [WM_MEASUREITEM](/windows/win32/Controls/wm-measureitem) na função do `OnChildNotify` controle, que é o mecanismo que o MFC usa para implementar o ON_WM_MEASUREITEM_REFLECT.
 
 > [!NOTE]
 > Essa função de membro é chamada pelo Framework para permitir que seu aplicativo manipule uma mensagem do Windows. Os parâmetros passados para sua função refletem os parâmetros recebidos pela estrutura quando a mensagem foi recebida. Se você chamar a implementação da classe base dessa função, essa implementação usará os parâmetros originalmente passados com a mensagem e não os parâmetros fornecidos para a função.
@@ -7792,7 +7792,7 @@ afx_msg UINT OnMenuDrag(
 
 ### <a name="remarks"></a>Comentários
 
-Esse método recebe a notificação [WM_MENUDRAG](/windows/desktop/menurc/wm-menudrag) , que é descrita na SDK do Windows.
+Esse método recebe a notificação [WM_MENUDRAG](/windows/win32/menurc/wm-menudrag) , que é descrita na SDK do Windows.
 
 > [!NOTE]
 > Essa função de membro é chamada pelo Framework para permitir que seu aplicativo manipule uma mensagem do Windows. Os parâmetros passados para sua função refletem os parâmetros recebidos pela estrutura quando a mensagem foi recebida. Se você chamar a implementação da classe base dessa função, essa implementação usará os parâmetros originalmente passados com a mensagem e não os parâmetros fornecidos para a função.
@@ -7809,18 +7809,18 @@ afx_msg UINT OnMenuGetObject(MENUGETOBJECTINFO* pMenuGetObjectInfo);
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|*pMenu*|no Ponteiro para uma estrutura [MENUGETOBJECTINFO](/windows/desktop/api/winuser/ns-winuser-tagmenugetobjectinfo) que contém informações sobre o menu arrastar e soltar do cursor do mouse.|
+|*pMenu*|no Ponteiro para uma estrutura [MENUGETOBJECTINFO](/windows/win32/api/winuser/ns-winuser-menugetobjectinfo) que contém informações sobre o menu arrastar e soltar do cursor do mouse.|
 
 ### <a name="return-value"></a>Valor de retorno
 
 |Valor de retorno|Significado|
 |------------------|-------------|
-|MNGO_NOERROR|Um ponteiro de interface que dá suporte a operações de arrastar e soltar é retornado `pvObj` no membro da estrutura [MENUGETOBJECTINFO](/windows/desktop/api/winuser/ns-winuser-tagmenugetobjectinfo) . Atualmente, há suporte apenas para a interface [IDropTarget](/windows/desktop/api/oleidl/nn-oleidl-idroptarget) .|
+|MNGO_NOERROR|Um ponteiro de interface que dá suporte a operações de arrastar e soltar é retornado `pvObj` no membro da estrutura [MENUGETOBJECTINFO](/windows/win32/api/winuser/ns-winuser-menugetobjectinfo) . Atualmente, há suporte apenas para a interface [IDropTarget](/windows/win32/api/oleidl/nn-oleidl-idroptarget) .|
 |MNGO_NOINTERFACE|Não há suporte para a interface de arrastar e soltar.|
 
 ### <a name="remarks"></a>Comentários
 
-Esse método recebe a notificação [WM_MENUGETOBJECT](/windows/desktop/menurc/wm-menugetobject) , que é descrita na SDK do Windows.
+Esse método recebe a notificação [WM_MENUGETOBJECT](/windows/win32/menurc/wm-menugetobject) , que é descrita na SDK do Windows.
 
 > [!NOTE]
 > Essa função de membro é chamada pelo Framework para permitir que seu aplicativo manipule uma mensagem do Windows. Os parâmetros passados para sua função refletem os parâmetros recebidos pela estrutura quando a mensagem foi recebida. Se você chamar a implementação da classe base dessa função, essa implementação usará os parâmetros originalmente passados com a mensagem e não os parâmetros fornecidos para a função.
@@ -7844,7 +7844,7 @@ afx_msg void OnMenuRButtonUp(
 
 ### <a name="remarks"></a>Comentários
 
-Esse método recebe a notificação [WM_MENURBUTTONUP](/windows/desktop/menurc/wm-menurbuttonup) , que é descrita na SDK do Windows. A mensagem [WM_MENURBUTTONUP](/windows/desktop/menurc/wm-menurbuttonup) permite que um aplicativo forneça um menu contextual para o item de menu especificado na mensagem.
+Esse método recebe a notificação [WM_MENURBUTTONUP](/windows/win32/menurc/wm-menurbuttonup) , que é descrita na SDK do Windows. A mensagem [WM_MENURBUTTONUP](/windows/win32/menurc/wm-menurbuttonup) permite que um aplicativo forneça um menu contextual para o item de menu especificado na mensagem.
 
 > [!NOTE]
 > Essa função de membro é chamada pelo Framework para permitir que seu aplicativo manipule uma mensagem do Windows. Os parâmetros passados para sua função refletem os parâmetros recebidos pela estrutura quando a mensagem foi recebida. Se você chamar a implementação da classe base dessa função, essa implementação usará os parâmetros originalmente passados com a mensagem e não os parâmetros fornecidos para a função.
@@ -7945,7 +7945,7 @@ Para obter uma descrição dos códigos de área de teste de clique individuais,
 
 ##  <a name="onmousehover"></a>  CWnd::OnMouseHover
 
-A estrutura chama essa função de membro quando o cursor passa sobre a área do cliente da janela pelo período de tempo especificado em uma chamada anterior para [TrackMouseEvent](/windows/desktop/api/winuser/nf-winuser-trackmouseevent).
+A estrutura chama essa função de membro quando o cursor passa sobre a área do cliente da janela pelo período de tempo especificado em uma chamada anterior para [TrackMouseEvent](/windows/win32/api/winuser/nf-winuser-trackmouseevent).
 
 ```
 afx_msg void OnMouseHover(
@@ -7962,9 +7962,9 @@ afx_msg void OnMouseHover(
 
 ### <a name="remarks"></a>Comentários
 
-Esse método recebe a notificação [WM_MOUSEHOVER](/windows/desktop/inputdev/wm-mousehover) , que é descrita na SDK do Windows.
+Esse método recebe a notificação [WM_MOUSEHOVER](/windows/win32/inputdev/wm-mousehover) , que é descrita na SDK do Windows.
 
-O parâmetro *nFlags* pode ser uma combinação de teclas modificadoras listadas na tabela a seguir. Para obter mais informações, consulte [sobre a entrada do mouse](/windows/desktop/inputdev/about-mouse-input).
+O parâmetro *nFlags* pode ser uma combinação de teclas modificadoras listadas na tabela a seguir. Para obter mais informações, consulte [sobre a entrada do mouse](/windows/win32/inputdev/about-mouse-input).
 
 |Tecla modificadora|Descrição|
 |------------------|-----------------|
@@ -7994,20 +7994,20 @@ afx_msg void OnMouseHWheel(
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|*nFlags*|no Uma combinação de bits (ou) de sinalizadores que indica quais teclas de modificador são pressionadas. Por exemplo, o sinalizador MK_CONTROL indica que a tecla CTRL é pressionada.<br /><br /> Para obter uma lista de sinalizadores, consulte o subtítulo "parâmetros de mensagem" em [sobre a entrada do mouse](/windows/desktop/inputdev/about-mouse-input).|
+|*nFlags*|no Uma combinação de bits (ou) de sinalizadores que indica quais teclas de modificador são pressionadas. Por exemplo, o sinalizador MK_CONTROL indica que a tecla CTRL é pressionada.<br /><br /> Para obter uma lista de sinalizadores, consulte o subtítulo "parâmetros de mensagem" em [sobre a entrada do mouse](/windows/win32/inputdev/about-mouse-input).|
 |*zDelta*|no Indica a distância em que a roda é girada, expressa em múltiplos ou divisões de WHEEL_DELTA, que é 120. Um valor positivo indica que a roda foi girada para a direita; um valor negativo indica que a roda foi girada para a esquerda.|
 |*pt*|no Um objeto [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) que especifica as coordenadas *x* e *y* do cursor em relação ao canto superior esquerdo da área do cliente.|
 
 ### <a name="remarks"></a>Comentários
 
-Esse método recebe a mensagem de notificação [WM_MOUSEHWHEEL](/windows/desktop/inputdev/wm-mousehwheel) , que é descrita no SDK do Windows. Essa mensagem é enviada para a janela que tem o foco quando a roda de rolagem horizontal do mouse está inclinada ou girada.
+Esse método recebe a mensagem de notificação [WM_MOUSEHWHEEL](/windows/win32/inputdev/wm-mousehwheel) , que é descrita no SDK do Windows. Essa mensagem é enviada para a janela que tem o foco quando a roda de rolagem horizontal do mouse está inclinada ou girada.
 
 > [!NOTE]
 > Essa função de membro é chamada pelo Framework para permitir que seu aplicativo manipule uma mensagem do Windows. Os parâmetros passados para sua função refletem os parâmetros recebidos pela estrutura quando a mensagem foi recebida. Se você chamar a implementação da classe base dessa função, essa implementação usará os parâmetros originalmente passados com a mensagem e não os parâmetros fornecidos para a função.
 
 ##  <a name="onmouseleave"></a>  CWnd::OnMouseLeave
 
-A estrutura chama essa função de membro quando o cursor sai da área do cliente da janela especificada em uma chamada anterior para [TrackMouseEvent](/windows/desktop/api/winuser/nf-winuser-trackmouseevent).
+A estrutura chama essa função de membro quando o cursor sai da área do cliente da janela especificada em uma chamada anterior para [TrackMouseEvent](/windows/win32/api/winuser/nf-winuser-trackmouseevent).
 
 ```
 afx_msg void OnMouseLeave();
@@ -8015,7 +8015,7 @@ afx_msg void OnMouseLeave();
 
 ### <a name="remarks"></a>Comentários
 
-Esse método recebe a notificação [WM_MOUSELEAVE](/windows/desktop/inputdev/wm-mouseleave) , que é descrita na SDK do Windows.
+Esse método recebe a notificação [WM_MOUSELEAVE](/windows/win32/inputdev/wm-mouseleave) , que é descrita na SDK do Windows.
 
 > [!NOTE]
 > Essa função de membro é chamada pelo Framework para permitir que seu aplicativo manipule uma mensagem do Windows. Os parâmetros passados para sua função refletem os parâmetros recebidos pela estrutura quando a mensagem foi recebida. Se você chamar a implementação da classe base dessa função, essa implementação usará os parâmetros originalmente passados com a mensagem e não os parâmetros fornecidos para a função.
@@ -8093,7 +8093,7 @@ Diferente de zero se a rolagem da roda do mouse estiver habilitada; caso contrá
 
 ### <a name="remarks"></a>Comentários
 
-A menos que `OnMouseWheel` seja substituído, chama o padrão de [WM_MOUSEWHEEL](/windows/desktop/inputdev/wm-mousewheel). O Windows roteia automaticamente a mensagem para o controle ou janela filho que tem o foco. A função do Win32 [DefWindowProc](/windows/desktop/api/winuser/nf-winuser-defwindowproca) propaga a mensagem para cima na cadeia pai até a janela que a processa.
+A menos que `OnMouseWheel` seja substituído, chama o padrão de [WM_MOUSEWHEEL](/windows/win32/inputdev/wm-mousewheel). O Windows roteia automaticamente a mensagem para o controle ou janela filho que tem o foco. A função do Win32 [DefWindowProc](/windows/win32/api/winuser/nf-winuser-defwindowprocw) propaga a mensagem para cima na cadeia pai até a janela que a processa.
 
 O parâmetro *zDelta* é um múltiplo de WHEEL_DELTA, que é definido em 120. Esse valor é o limite de uma ação a ser executada e uma ação desse tipo (por exemplo, rolagem para frente um entalhe) deve ocorrer para cada Delta.
 
@@ -8143,7 +8143,7 @@ afx_msg void OnMoving(
 A borda da janela a ser movida.
 
 *lpRect*<br/>
-Endereço da estrutura [CRect](../../atl-mfc-shared/reference/crect-class.md) ou [Rect](/windows/desktop/api/windef/ns-windef-tagrect) que conterá as coordenadas do item.
+Endereço da estrutura [CRect](../../atl-mfc-shared/reference/crect-class.md) ou [Rect](/windows/win32/api/windef/ns-windef-rect) que conterá as coordenadas do item.
 
 ### <a name="remarks"></a>Comentários
 
@@ -8190,7 +8190,7 @@ afx_msg void OnNcCalcSize(
 Especifica se o aplicativo deve especificar qual parte da área do cliente contém informações válidas. O Windows copiará as informações válidas para a área especificada dentro da nova área de cliente. Se esse parâmetro for TRUE, o aplicativo deverá especificar qual parte da área do cliente é válida.
 
 *lpncsp*<br/>
-Aponta para uma estrutura de dados [NCCALCSIZE_PARAMS](/windows/desktop/api/winuser/ns-winuser-tagnccalcsize_params) que contém informações que um aplicativo pode usar para calcular o novo tamanho e a `CWnd` posição do retângulo (incluindo área do cliente, bordas, legenda, barras de rolagem e assim por diante).
+Aponta para uma estrutura de dados [NCCALCSIZE_PARAMS](/windows/win32/api/winuser/ns-winuser-nccalcsize_params) que contém informações que um aplicativo pode usar para calcular o novo tamanho e a `CWnd` posição do retângulo (incluindo área do cliente, bordas, legenda, barras de rolagem e assim por diante).
 
 ### <a name="remarks"></a>Comentários
 
@@ -8216,7 +8216,7 @@ afx_msg BOOL OnNcCreate(LPCREATESTRUCT lpCreateStruct);
 ### <a name="parameters"></a>Parâmetros
 
 *lpCreateStruct*<br/>
-Aponta para a estrutura de dados [CREATESTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcreatestructa) para `CWnd`.
+Aponta para a estrutura de dados [CREATESTRUCT](/windows/win32/api/winuser/ns-winuser-createstructw) para `CWnd`.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -8256,7 +8256,7 @@ Contém as coordenadas x e y do cursor. Essas coordenadas são sempre coordenada
 
 ### <a name="return-value"></a>Valor de retorno
 
-Um dos valores enumerados de teste de clique do mouse. Consulte [WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest) para obter a lista de valores.
+Um dos valores enumerados de teste de clique do mouse. Consulte [WM_NCHITTEST](/windows/win32/inputdev/wm-nchittest) para obter a lista de valores.
 
 ### <a name="remarks"></a>Comentários
 
@@ -8276,7 +8276,7 @@ afx_msg void OnNcLButtonDblClk(
 ### <a name="parameters"></a>Parâmetros
 
 *nHitTest*<br/>
-Especifica o [código de teste de clique](#onnchittest). Um teste de clique é um teste que determina o local do cursor. Consulte [WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest) para obter a lista de valores.
+Especifica o [código de teste de clique](#onnchittest). Um teste de clique é um teste que determina o local do cursor. Consulte [WM_NCHITTEST](/windows/win32/inputdev/wm-nchittest) para obter a lista de valores.
 
 *point*<br/>
 Especifica um `CPoint` objeto que contém as coordenadas de tela x e y da posição do cursor. Essas coordenadas são sempre relativas ao canto superior esquerdo da tela.
@@ -8301,7 +8301,7 @@ afx_msg void OnNcLButtonDown(
 ### <a name="parameters"></a>Parâmetros
 
 *nHitTest*<br/>
-Especifica o [código de teste de clique](#onnchittest). Um teste de clique é um teste que determina o local do cursor. Consulte [WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest) para obter a lista de valores.
+Especifica o [código de teste de clique](#onnchittest). Um teste de clique é um teste que determina o local do cursor. Consulte [WM_NCHITTEST](/windows/win32/inputdev/wm-nchittest) para obter a lista de valores.
 
 *point*<br/>
 Especifica um `CPoint` objeto que contém as coordenadas de tela x e y da posição do cursor. Essas coordenadas são sempre relativas ao canto superior esquerdo da tela.
@@ -8326,7 +8326,7 @@ afx_msg void OnNcLButtonUp(
 ### <a name="parameters"></a>Parâmetros
 
 *nHitTest*<br/>
-Especifica o [código de teste de clique](#onnchittest). Um teste de clique é um teste que determina o local do cursor. Consulte [WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest) para obter a lista de valores.
+Especifica o [código de teste de clique](#onnchittest). Um teste de clique é um teste que determina o local do cursor. Consulte [WM_NCHITTEST](/windows/win32/inputdev/wm-nchittest) para obter a lista de valores.
 
 *point*<br/>
 Especifica um `CPoint` objeto que contém as coordenadas de tela x e y da posição do cursor. Essas coordenadas são sempre relativas ao canto superior esquerdo da tela.
@@ -8409,7 +8409,7 @@ Especifica um `CPoint` objeto que contém as coordenadas de tela x e y da posiç
 
 ##  <a name="onncmousehover"></a>  CWnd::OnNcMouseHover
 
-A estrutura chama essa função de membro quando o cursor passa sobre a área não cliente da janela pelo período de tempo especificado em uma chamada anterior para [TrackMouseEvent](/windows/desktop/api/winuser/nf-winuser-trackmouseevent).
+A estrutura chama essa função de membro quando o cursor passa sobre a área não cliente da janela pelo período de tempo especificado em uma chamada anterior para [TrackMouseEvent](/windows/win32/api/winuser/nf-winuser-trackmouseevent).
 
 ```
 afx_msg void OnNcMouseHover(
@@ -8421,19 +8421,19 @@ afx_msg void OnNcMouseHover(
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|*nHitTest*|no O valor de teste de clique retornado pela função [CWnd::D efwindowproc](#defwindowproc) como resultado do processamento da mensagem [WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest) .|
+|*nHitTest*|no O valor de teste de clique retornado pela função [CWnd::D efwindowproc](#defwindowproc) como resultado do processamento da mensagem [WM_NCHITTEST](/windows/win32/inputdev/wm-nchittest) .|
 |*point*|no Um objeto [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) que especifica as coordenadas *x* e *y* do cursor em relação ao canto superior esquerdo da tela.|
 
 ### <a name="remarks"></a>Comentários
 
-Esse método recebe a notificação [WM_NCMOUSEHOVER](/windows/desktop/inputdev/wm-ncmousehover) , que é descrita na SDK do Windows.
+Esse método recebe a notificação [WM_NCMOUSEHOVER](/windows/win32/inputdev/wm-ncmousehover) , que é descrita na SDK do Windows.
 
 > [!NOTE]
 > Essa função de membro é chamada pelo Framework para permitir que seu aplicativo manipule uma mensagem do Windows. Os parâmetros passados para sua função refletem os parâmetros recebidos pela estrutura quando a mensagem foi recebida. Se você chamar a implementação da classe base dessa função, essa implementação usará os parâmetros originalmente passados com a mensagem e não os parâmetros fornecidos para a função.
 
 ##  <a name="onncmouseleave"></a>  CWnd::OnNcMouseLeave
 
-A estrutura chama essa função de membro quando o cursor sai da área não cliente da janela especificada em uma chamada anterior para [TrackMouseEvent](/windows/desktop/api/winuser/nf-winuser-trackmouseevent).
+A estrutura chama essa função de membro quando o cursor sai da área não cliente da janela especificada em uma chamada anterior para [TrackMouseEvent](/windows/win32/api/winuser/nf-winuser-trackmouseevent).
 
 ```
 afx_msg void OnNcMouseLeave();
@@ -8441,7 +8441,7 @@ afx_msg void OnNcMouseLeave();
 
 ### <a name="remarks"></a>Comentários
 
-Esse método recebe a notificação [WM_NCMOUSELEAVE](/windows/desktop/inputdev/wm-ncmouseleave) , que é descrita na SDK do Windows.
+Esse método recebe a notificação [WM_NCMOUSELEAVE](/windows/win32/inputdev/wm-ncmouseleave) , que é descrita na SDK do Windows.
 
 > [!NOTE]
 > Essa função de membro é chamada pelo Framework para permitir que seu aplicativo manipule uma mensagem do Windows. Os parâmetros passados para sua função refletem os parâmetros recebidos pela estrutura quando a mensagem foi recebida. Se você chamar a implementação da classe base dessa função, essa implementação usará os parâmetros originalmente passados com a mensagem e não os parâmetros fornecidos para a função.
@@ -8570,7 +8570,7 @@ afx_msg void OnNcRenderingChanged(BOOL bIsRendering);
 
 ### <a name="remarks"></a>Comentários
 
-Esse método recebe a notificação [WM_DWMNCRENDERINGCHANGED](/windows/desktop/dwm/wm-dwmncrenderingchanged) , que é descrita na SDK do Windows.
+Esse método recebe a notificação [WM_DWMNCRENDERINGCHANGED](/windows/win32/dwm/wm-dwmncrenderingchanged) , que é descrita na SDK do Windows.
 
 > [!NOTE]
 > Essa função de membro é chamada pelo Framework para permitir que seu aplicativo manipule uma mensagem do Windows. Os parâmetros passados para sua função refletem os parâmetros recebidos pela estrutura quando a mensagem foi recebida. Se você chamar a implementação da classe base dessa função, essa implementação usará os parâmetros originalmente passados com a mensagem e não os parâmetros fornecidos para a função.
@@ -8590,13 +8590,13 @@ void OnNcXButtonDblClk(
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|*nHitTest*|no O valor de teste de clique retornado pela função [CWnd::D efwindowproc](#defwindowproc) como resultado do processamento da mensagem [WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest) .|
+|*nHitTest*|no O valor de teste de clique retornado pela função [CWnd::D efwindowproc](#defwindowproc) como resultado do processamento da mensagem [WM_NCHITTEST](/windows/win32/inputdev/wm-nchittest) .|
 |*nButton*|no Um valor de XBUTTON1 Se o primeiro botão do Microsoft IntelliMouse X for clicado duas vezes ou XBUTTON2 se o segundo botão X for clicado duas vezes.|
 |*point*|no Um objeto [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) que especifica as coordenadas *x* e *y* do cursor em relação ao canto superior esquerdo da área do cliente.|
 
 ### <a name="remarks"></a>Comentários
 
-Esse método recebe a notificação [WM_XBUTTONDBLCLK](/windows/desktop/inputdev/wm-xbuttondblclk) , que é descrita na SDK do Windows. Essa mensagem é postada na janela que contém o cursor. Se uma janela tiver capturado o mouse, essa mensagem não será postada.
+Esse método recebe a notificação [WM_XBUTTONDBLCLK](/windows/win32/inputdev/wm-xbuttondblclk) , que é descrita na SDK do Windows. Essa mensagem é postada na janela que contém o cursor. Se uma janela tiver capturado o mouse, essa mensagem não será postada.
 
 > [!NOTE]
 > Essa função de membro é chamada pelo Framework para permitir que seu aplicativo manipule uma mensagem do Windows. Os parâmetros passados para sua função refletem os parâmetros recebidos pela estrutura quando a mensagem foi recebida. Se você chamar a implementação da classe base dessa função, essa implementação usará os parâmetros originalmente passados com a mensagem e não os parâmetros fornecidos para a função.
@@ -8616,13 +8616,13 @@ afx_msg void OnNcXButtonDown(
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|*nHitTest*|no O valor de teste de clique retornado pela função [CWnd::D efwindowproc](#defwindowproc) como resultado do processamento da mensagem [WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest) .|
+|*nHitTest*|no O valor de teste de clique retornado pela função [CWnd::D efwindowproc](#defwindowproc) como resultado do processamento da mensagem [WM_NCHITTEST](/windows/win32/inputdev/wm-nchittest) .|
 |*nButton*|no Um valor de XBUTTON1 Se o primeiro botão do mouse X for pressionado ou XBUTTON2 se o segundo botão X for pressionado.|
 |*point*|no Um objeto [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) que especifica as coordenadas *x* e *y* do cursor em relação ao canto superior esquerdo da tela.|
 
 ### <a name="remarks"></a>Comentários
 
-Esse método recebe a notificação [WM_NCXBUTTONDOWN](/windows/desktop/inputdev/wm-ncxbuttondown) , que é descrita na SDK do Windows. Essa mensagem é postada na janela que contém o cursor. Se uma janela tiver capturado o mouse, essa mensagem não será postada.
+Esse método recebe a notificação [WM_NCXBUTTONDOWN](/windows/win32/inputdev/wm-ncxbuttondown) , que é descrita na SDK do Windows. Essa mensagem é postada na janela que contém o cursor. Se uma janela tiver capturado o mouse, essa mensagem não será postada.
 
 > [!NOTE]
 > Essa função de membro é chamada pelo Framework para permitir que seu aplicativo manipule uma mensagem do Windows. Os parâmetros passados para sua função refletem os parâmetros recebidos pela estrutura quando a mensagem foi recebida. Se você chamar a implementação da classe base dessa função, essa implementação usará os parâmetros originalmente passados com a mensagem e não os parâmetros fornecidos para a função.
@@ -8642,13 +8642,13 @@ afx_msg void OnNcXButtonUp(
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|*nHitTest*|no O valor de teste de clique retornado pela função [CWnd::D efwindowproc](#defwindowproc) como resultado do processamento da mensagem [WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest) .|
+|*nHitTest*|no O valor de teste de clique retornado pela função [CWnd::D efwindowproc](#defwindowproc) como resultado do processamento da mensagem [WM_NCHITTEST](/windows/win32/inputdev/wm-nchittest) .|
 |*nButton*|no Um valor de XBUTTON1 Se o primeiro botão do mouse X for liberado ou XBUTTON2 se o segundo botão X for liberado.|
 |*point*|no Um objeto [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) que especifica as coordenadas *x* e *y* do cursor em relação ao canto superior esquerdo da tela.|
 
 ### <a name="remarks"></a>Comentários
 
-Esse método recebe a notificação [WM_NCXBUTTONUP](/windows/desktop/inputdev/wm-ncxbuttonup) , que é descrita na SDK do Windows. Essa mensagem é postada na janela que contém o cursor. Se uma janela tiver capturado o mouse, essa mensagem não será postada.
+Esse método recebe a notificação [WM_NCXBUTTONUP](/windows/win32/inputdev/wm-ncxbuttonup) , que é descrita na SDK do Windows. Essa mensagem é postada na janela que contém o cursor. Se uma janela tiver capturado o mouse, essa mensagem não será postada.
 
 > [!NOTE]
 > Essa função de membro é chamada pelo Framework para permitir que seu aplicativo manipule uma mensagem do Windows. Os parâmetros passados para sua função refletem os parâmetros recebidos pela estrutura quando a mensagem foi recebida. Se você chamar a implementação da classe base dessa função, essa implementação usará os parâmetros originalmente passados com a mensagem e não os parâmetros fornecidos para a função.
@@ -8667,12 +8667,12 @@ afx_msg void OnNextMenu(
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|*nKey*|no Uma combinação de bits (ou) de sinalizadores que indica quais teclas de modificador são pressionadas. Por exemplo, o sinalizador MK_CONTROL indica que a tecla CTRL é pressionada.<br /><br /> Para obter uma lista de sinalizadores, consulte o subtítulo "parâmetros de mensagem" em [sobre a entrada do mouse](/windows/desktop/inputdev/about-mouse-input).|
-|*lpMdiNextMenu*|no Ponteiro para uma estrutura [MDINEXTMENU](/windows/desktop/api/winuser/ns-winuser-tagmdinextmenu) que contém informações sobre o menu a ser ativado.|
+|*nKey*|no Uma combinação de bits (ou) de sinalizadores que indica quais teclas de modificador são pressionadas. Por exemplo, o sinalizador MK_CONTROL indica que a tecla CTRL é pressionada.<br /><br /> Para obter uma lista de sinalizadores, consulte o subtítulo "parâmetros de mensagem" em [sobre a entrada do mouse](/windows/win32/inputdev/about-mouse-input).|
+|*lpMdiNextMenu*|no Ponteiro para uma estrutura [MDINEXTMENU](/windows/win32/api/winuser/ns-winuser-mdinextmenu) que contém informações sobre o menu a ser ativado.|
 
 ### <a name="remarks"></a>Comentários
 
-Esse método recebe a notificação [WM_UNINITMENUPOPUP](/windows/desktop/menurc/wm-uninitmenupopup) , que é descrita na SDK do Windows. Em resposta a essa mensagem, seu aplicativo pode definir o `hmenuNext` membro da estrutura [MDINEXTMENU](/windows/desktop/api/winuser/ns-winuser-tagmdinextmenu) para especificar o menu a ser alternado e o `hwndNext` membro para especificar a janela para receber mensagens de notificação de menu.
+Esse método recebe a notificação [WM_UNINITMENUPOPUP](/windows/win32/menurc/wm-uninitmenupopup) , que é descrita na SDK do Windows. Em resposta a essa mensagem, seu aplicativo pode definir o `hmenuNext` membro da estrutura [MDINEXTMENU](/windows/win32/api/winuser/ns-winuser-mdinextmenu) para especificar o menu a ser alternado e o `hwndNext` membro para especificar a janela para receber mensagens de notificação de menu.
 
 > [!NOTE]
 > Essa função de membro é chamada pelo Framework para permitir que seu aplicativo manipule uma mensagem do Windows. Os parâmetros passados para sua função refletem os parâmetros recebidos pela estrutura quando a mensagem foi recebida. Se você chamar a implementação da classe base dessa função, essa implementação usará os parâmetros originalmente passados com a mensagem e não os parâmetros fornecidos para a função.
@@ -8725,7 +8725,7 @@ afx_msg UINT OnNotifyFormat(
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|*pWnd*|no Um ponteiro para um `CWnd` objeto que representa a janela que envia a mensagem [WM_NOTIFY](/windows/desktop/controls/wm-notify) .<br /><br /> Esse parâmetro é o ponteiro para um controle se o parâmetro *ncomando* for NF_QUERY ou o ponteiro para a janela pai de um controle se *ncomando* for NF_REQUERY.|
+|*pWnd*|no Um ponteiro para um `CWnd` objeto que representa a janela que envia a mensagem [WM_NOTIFY](/windows/win32/controls/wm-notify) .<br /><br /> Esse parâmetro é o ponteiro para um controle se o parâmetro *ncomando* for NF_QUERY ou o ponteiro para a janela pai de um controle se *ncomando* for NF_REQUERY.|
 |*nCommand*|no Um valor de comando que especializa a mensagem WM_NOTIFY. Os valores possíveis são:<br /><br /> - NF_QUERY -<br />     A mensagem é uma consulta para determinar se as estruturas ANSI ou Unicode devem ser usadas em mensagens WM_NOTIFY. Essa mensagem é enviada de um controle para sua janela pai durante a criação de um controle e em resposta à forma NF_REQUERY dessa mensagem.<br />- NF_REQUERY -<br />     A mensagem é uma solicitação de um controle para enviar o formulário NF_QUERY dessa mensagem para sua janela pai. Essa solicitação é enviada da janela pai e solicita que o controle refaça a consulta do pai sobre o tipo de estrutura a ser usado em mensagens WM_NOTIFY. Se o parâmetro *ncomando* for NF_REQUERY, o valor de retorno será o resultado da operação de consulta.|
 
 ### <a name="return-value"></a>Valor de retorno
@@ -8738,7 +8738,7 @@ afx_msg UINT OnNotifyFormat(
 
 ### <a name="remarks"></a>Comentários
 
-Esse método recebe a notificação [WM_NOTIFYFORMAT](/windows/desktop/Controls/wm-notifyformat) , que é descrita na SDK do Windows. As mensagens WM_NOTIFY são enviadas de um controle comum para sua janela pai e da janela pai para o controle comum.
+Esse método recebe a notificação [WM_NOTIFYFORMAT](/windows/win32/Controls/wm-notifyformat) , que é descrita na SDK do Windows. As mensagens WM_NOTIFY são enviadas de um controle comum para sua janela pai e da janela pai para o controle comum.
 
 > [!NOTE]
 > Essa função de membro é chamada pelo Framework para permitir que seu aplicativo manipule uma mensagem do Windows. Os parâmetros passados para sua função refletem os parâmetros recebidos pela estrutura quando a mensagem foi recebida. Se você chamar a implementação da classe base dessa função, essa implementação usará os parâmetros originalmente passados com a mensagem e não os parâmetros fornecidos para a função.
@@ -8753,7 +8753,7 @@ afx_msg void OnPaint();
 
 ### <a name="remarks"></a>Comentários
 
-A mensagem [WM_PAINT](/windows/desktop/gdi/the-wm-paint-message) é enviada quando a função membro [UpdateWindow](#updatewindow) ou [RedrawWindow](#redrawwindow) é chamada.
+A mensagem [WM_PAINT](/windows/win32/gdi/the-wm-paint-message) é enviada quando a função membro [UpdateWindow](#updatewindow) ou [RedrawWindow](#redrawwindow) é chamada.
 
 Uma janela pode receber mensagens de pintura internas como resultado da chamada da `RedrawWindow` função de membro com o sinalizador RDW_INTERNALPAINT definido. Nesse caso, a janela pode não ter uma região de atualização. Um aplicativo deve chamar a função de membro [GetUpdateRect](#getupdaterect) para determinar se a janela tem uma região de atualização. Se `GetUpdateRect` retornar 0, o aplicativo não deverá chamar as funções de membro [BeginPaint](#beginpaint) e [EndPaint](#endpaint).
 
@@ -8765,9 +8765,9 @@ Para obter informações sobre como renderizar uma imagem em aplicativos de docu
 
 Para obter mais informações sobre `WM_Paint`como usar o, consulte os seguintes tópicos na SDK do Windows:
 
-- [A mensagem WM_PAINT](/windows/desktop/gdi/the-wm-paint-message)
+- [A mensagem WM_PAINT](/windows/win32/gdi/the-wm-paint-message)
 
-- [Usando a mensagem WM_PAINT](/windows/desktop/gdi/using-the-wm-paint-message)
+- [Usando a mensagem WM_PAINT](/windows/win32/gdi/using-the-wm-paint-message)
 
 ##  <a name="onpaintclipboard"></a>  CWnd::OnPaintClipboard
 
@@ -8785,13 +8785,13 @@ afx_msg void OnPaintClipboard(
 Especifica um ponteiro para a janela de aplicativo da área de transferência. O ponteiro pode ser temporário e não deve ser armazenado para uso posterior.
 
 *hPaintStruct*<br/>
-Identifica uma estrutura de dados [PAINTSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagpaintstruct) que define a parte da área do cliente a ser pintada.
+Identifica uma estrutura de dados [PAINTSTRUCT](/windows/win32/api/winuser/ns-winuser-paintstruct) que define a parte da área do cliente a ser pintada.
 
 ### <a name="remarks"></a>Comentários
 
 Para determinar se toda a área do cliente ou apenas uma parte dela precisa ser redesenhada, o proprietário da área de transferência deve comparar as dimensões das áreas de desenho fornecidas no membro `rcpaint` da estrutura `PAINTSTRUCT`  para as dimensões fornecidas no mais recente Chamada de função membro [OnSizeClipboard](#onsizeclipboard).
 
-`OnPaintClipboard`deve usar a função [GlobalLock](/windows/desktop/api/winbase/nf-winbase-globallock) do Windows para bloquear a memória que contém `PAINTSTRUCT` a estrutura de dados e desbloquear essa memória com a função [GlobalUnlock](/windows/desktop/api/winbase/nf-winbase-globalunlock) do Windows antes de sair.
+`OnPaintClipboard`deve usar a função [GlobalLock](/windows/win32/api/winbase/nf-winbase-globallock) do Windows para bloquear a memória que contém `PAINTSTRUCT` a estrutura de dados e desbloquear essa memória com a função [GlobalUnlock](/windows/win32/api/winbase/nf-winbase-globalunlock) do Windows antes de sair.
 
 > [!NOTE]
 > Essa função de membro é chamada pelo Framework para permitir que seu aplicativo manipule uma mensagem do Windows. Os parâmetros passados para sua função refletem os parâmetros recebidos pela estrutura quando a mensagem foi recebida. Se você chamar a implementação da classe base dessa função, essa implementação usará os parâmetros originalmente passados com a mensagem e não os parâmetros fornecidos para a função.
@@ -8899,9 +8899,9 @@ Se o evento for uma solicitação, retorne TRUE para conceder a solicitação ou
 
 ### <a name="remarks"></a>Comentários
 
-Esse método recebe a mensagem [WM_POWERBROADCAST](/windows/desktop/Power/wm-powerbroadcast) , que é descrita no SDK do Windows.
+Esse método recebe a mensagem [WM_POWERBROADCAST](/windows/win32/Power/wm-powerbroadcast) , que é descrita no SDK do Windows.
 
-O parâmetro *nPowerEvent* especifica que eventos como bateria está baixo, o status de energia foi alterado, a permissão para suspender operação é solicitada ou negada, uma operação é retomada automaticamente após um evento, o sistema está suspendendo a operação ou uma operação está sendo retomada após a suspensão. O parâmetro *nEventData* normalmente não é usado. Para obter mais informações, consulte os parâmetros *wParam* e *lParam* da mensagem [WM_POWERBROADCAST](/windows/desktop/Power/wm-powerbroadcast) .
+O parâmetro *nPowerEvent* especifica que eventos como bateria está baixo, o status de energia foi alterado, a permissão para suspender operação é solicitada ou negada, uma operação é retomada automaticamente após um evento, o sistema está suspendendo a operação ou uma operação está sendo retomada após a suspensão. O parâmetro *nEventData* normalmente não é usado. Para obter mais informações, consulte os parâmetros *wParam* e *lParam* da mensagem [WM_POWERBROADCAST](/windows/win32/Power/wm-powerbroadcast) .
 
 > [!NOTE]
 > Essa função de membro é chamada pelo Framework para permitir que seu aplicativo manipule uma mensagem do Windows. Os parâmetros passados para sua função refletem os parâmetros recebidos pela estrutura quando a mensagem foi recebida. Se você chamar a implementação da classe base dessa função, essa implementação usará os parâmetros originalmente passados com a mensagem e não os parâmetros fornecidos para a função.
@@ -8924,7 +8924,7 @@ O sistema faz essa chamada para obter o cursor a ser exibido enquanto o usuário
 
 ##  <a name="onqueryendsession"></a>  CWnd::OnQueryEndSession
 
-A estrutura chama essa função de membro quando o usuário opta por encerrar a sessão do Windows ou quando um aplicativo chama a função [ExitWindows](/windows/desktop/api/winuser/nf-winuser-exitwindows) do Windows.
+A estrutura chama essa função de membro quando o usuário opta por encerrar a sessão do Windows ou quando um aplicativo chama a função [ExitWindows](/windows/win32/api/winuser/nf-winuser-exitwindows) do Windows.
 
 ```
 afx_msg BOOL OnQueryEndSession();
@@ -8986,7 +8986,7 @@ O valor de retorno será nulo se os indicadores de foco e os aceleradores de tec
 
 ### <a name="remarks"></a>Comentários
 
-Essa função de membro emula a funcionalidade da mensagem [WM_QUERYUISTATE](/windows/desktop/menurc/wm-queryuistate) , conforme descrito na SDK do Windows.
+Essa função de membro emula a funcionalidade da mensagem [WM_QUERYUISTATE](/windows/win32/menurc/wm-queryuistate) , conforme descrito na SDK do Windows.
 
 ##  <a name="onrawinput"></a>  CWnd::OnRawInput
 
@@ -9003,11 +9003,11 @@ afx_msg void OnRawInput(
 |Parâmetro|Descrição|
 |---------------|-----------------|
 |*nInputCode*|no Código de entrada que indica se a entrada ocorreu enquanto o aplicativo estava em primeiro plano ou não. Em ambos os casos, o aplicativo deve chamar [CWnd::D efwindowproc](#defwindowproc) para que o sistema possa executar a limpeza.<br /><br /> Esse parâmetro pode ser um dos seguintes valores:<br /><br /> -RIM_INPUT-a entrada ocorreu enquanto o aplicativo estava em primeiro plano.<br />-RIM_INPUTSINK-a entrada ocorreu enquanto o aplicativo não estava em primeiro plano.|
-|*hRawInput*|no Identificador para uma estrutura [rawinput](/windows/desktop/api/winuser/ns-winuser-tagrawinput) que contém a entrada bruta do dispositivo.|
+|*hRawInput*|no Identificador para uma estrutura [rawinput](/windows/win32/api/winuser/ns-winuser-rawinput) que contém a entrada bruta do dispositivo.|
 
 ### <a name="remarks"></a>Comentários
 
-Esse método recebe a notificação [WM_INPUT](/windows/desktop/inputdev/wm-appcommand) , que é descrita na SDK do Windows.
+Esse método recebe a notificação [WM_INPUT](/windows/win32/inputdev/wm-appcommand) , que é descrita na SDK do Windows.
 
 > [!NOTE]
 > Essa função de membro é chamada pelo Framework para permitir que seu aplicativo manipule uma mensagem do Windows. Os parâmetros passados para sua função refletem os parâmetros recebidos pela estrutura quando a mensagem foi recebida. Se você chamar a implementação da classe base dessa função, essa implementação usará os parâmetros originalmente passados com a mensagem e não os parâmetros fornecidos para a função.
@@ -9042,7 +9042,7 @@ Especifica as coordenadas x e y do cursor. Essas coordenadas são sempre relativ
 
 ### <a name="remarks"></a>Comentários
 
-Somente janelas que têm o estilo CS_DBLCLKS [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa) podem receber `OnRButtonDblClk` chamadas. Esse é o padrão para janelas dentro do biblioteca MFC. O Windows `OnRButtonDblClk` chama quando o usuário pressiona, libera e, em seguida, pressiona o botão direito do mouse dentro do limite de tempo de clique duplo do sistema. O clique duas vezes com o botão direito do mouse gera quatro eventos: Mensagens [WM_RBUTTONDOWN](#onrbuttondown) e [WM_RBUTTONUP](#onrbuttonup) , a `OnRButtonDblClk` chamada e outra mensagem WM_RBUTTONUP quando o botão é liberado.
+Somente janelas que têm o estilo CS_DBLCLKS [WNDCLASS](/windows/win32/api/winuser/ns-winuser-wndclassw) podem receber `OnRButtonDblClk` chamadas. Esse é o padrão para janelas dentro do biblioteca MFC. O Windows `OnRButtonDblClk` chama quando o usuário pressiona, libera e, em seguida, pressiona o botão direito do mouse dentro do limite de tempo de clique duplo do sistema. O clique duas vezes com o botão direito do mouse gera quatro eventos: Mensagens [WM_RBUTTONDOWN](#onrbuttondown) e [WM_RBUTTONUP](#onrbuttonup) , a `OnRButtonDblClk` chamada e outra mensagem WM_RBUTTONUP quando o botão é liberado.
 
 > [!NOTE]
 > Essa função de membro é chamada pelo Framework para permitir que seu aplicativo manipule uma mensagem do Windows. Os parâmetros passados para sua função refletem os parâmetros recebidos pela estrutura quando a mensagem foi recebida. Se você chamar a implementação da classe base dessa função, essa implementação usará os parâmetros originalmente passados com a mensagem e não os parâmetros fornecidos para a função.
@@ -9133,7 +9133,7 @@ Insignificantes no momento. Sempre zero.
 
 ### <a name="remarks"></a>Comentários
 
-A menos que `OnRegisteredMouseWheel` seja substituído, o roteia a mensagem para a janela apropriada (a janela pai com foco) e chama o manipulador [WM_MOUSEWHEEL](/windows/desktop/inputdev/wm-mousewheel) para essa janela.
+A menos que `OnRegisteredMouseWheel` seja substituído, o roteia a mensagem para a janela apropriada (a janela pai com foco) e chama o manipulador [WM_MOUSEWHEEL](/windows/win32/inputdev/wm-mousewheel) para essa janela.
 
 Substitua essa função de membro para fornecer seu próprio roteamento de mensagens ou para alterar o comportamento de rolagem de roda do mouse.
 
@@ -9150,7 +9150,7 @@ afx_msg void OnRenderAllFormats();
 
 ### <a name="remarks"></a>Comentários
 
-O proprietário da área de transferência deve renderizar os dados em todos os formatos que é capaz de gerar e passar um identificador de dados para cada formato para a área de transferência chamando a função do Windows [SetClipboardData](/windows/desktop/api/winuser/nf-winuser-setclipboarddata) . Isso garante que a área de transferência contenha dados válidos, mesmo que o aplicativo que renderiza os dados seja destruído. O aplicativo deve chamar a função de membro [OpenClipboard](#openclipboard) antes de chamar a função do Windows [SetClipboardData](/windows/desktop/api/winuser/nf-winuser-setclipboarddata) e chamar a função [CloseClipboard](/windows/desktop/api/winuser/nf-winuser-closeclipboard) do Windows posteriormente.
+O proprietário da área de transferência deve renderizar os dados em todos os formatos que é capaz de gerar e passar um identificador de dados para cada formato para a área de transferência chamando a função do Windows [SetClipboardData](/windows/win32/api/winuser/nf-winuser-setclipboarddata) . Isso garante que a área de transferência contenha dados válidos, mesmo que o aplicativo que renderiza os dados seja destruído. O aplicativo deve chamar a função de membro [OpenClipboard](#openclipboard) antes de chamar a função do Windows [SetClipboardData](/windows/win32/api/winuser/nf-winuser-setclipboarddata) e chamar a função [CloseClipboard](/windows/win32/api/winuser/nf-winuser-closeclipboard) do Windows posteriormente.
 
 ##  <a name="onrenderformat"></a>  CWnd::OnRenderFormat
 
@@ -9167,7 +9167,7 @@ Especifica o formato da área de transferência.
 
 ### <a name="remarks"></a>Comentários
 
-O receptor deve renderizar os dados nesse formato e passá-los para a área de transferência chamando a função do Windows [SetClipboardData](/windows/desktop/api/winuser/nf-winuser-setclipboarddata) .
+O receptor deve renderizar os dados nesse formato e passá-los para a área de transferência chamando a função do Windows [SetClipboardData](/windows/win32/api/winuser/nf-winuser-setclipboarddata) .
 
 Não chame a `OpenClipboard` função de membro ou a `CloseClipboard` função do Windows de `OnRenderFormat`dentro do.
 
@@ -9193,9 +9193,9 @@ afx_msg void OnSessionChange(
 
 ### <a name="remarks"></a>Comentários
 
-Esse método recebe a notificação [WM_WTSSESSION_CHANGE](/windows/desktop/TermServ/wm-wtssession-change) , que é descrita na SDK do Windows.
+Esse método recebe a notificação [WM_WTSSESSION_CHANGE](/windows/win32/TermServ/wm-wtssession-change) , que é descrita na SDK do Windows.
 
-O parâmetro *nSessionState* especifica que uma sessão está conectada ou desconectada do console do ou de um terminal remoto, um usuário conectado ou desligado, uma sessão está bloqueada ou desbloqueada ou uma sessão foi alterada para o status controlado remotamente. Para obter mais informações, consulte o parâmetro *wParam* da mensagem [WM_WTSSESSION_CHANGE](/windows/desktop/TermServ/wm-wtssession-change) .
+O parâmetro *nSessionState* especifica que uma sessão está conectada ou desconectada do console do ou de um terminal remoto, um usuário conectado ou desligado, uma sessão está bloqueada ou desbloqueada ou uma sessão foi alterada para o status controlado remotamente. Para obter mais informações, consulte o parâmetro *wParam* da mensagem [WM_WTSSESSION_CHANGE](/windows/win32/TermServ/wm-wtssession-change) .
 
 > [!NOTE]
 > Essa função de membro é chamada pelo Framework para permitir que seu aplicativo manipule uma mensagem do Windows. Os parâmetros passados para sua função refletem os parâmetros recebidos pela estrutura quando a mensagem foi recebida. Se você chamar a implementação da classe base dessa função, essa implementação usará os parâmetros originalmente passados com a mensagem e não os parâmetros fornecidos para a função.
@@ -9272,7 +9272,7 @@ afx_msg void OnSettingChange(
 ### <a name="parameters"></a>Parâmetros
 
 *uFlags*<br/>
-Quando o sistema envia a mensagem como resultado de uma `SystemParametersInfo` chamada, esse parâmetro é um sinalizador que indica o parâmetro do sistema que foi alterado. Para obter uma lista de valores, consulte [SystemParametersInfo](/windows/desktop/api/winuser/nf-winuser-systemparametersinfoa) no SDK do Windows. Quando um aplicativo envia a mensagem, esse parâmetro deve ser 0.
+Quando o sistema envia a mensagem como resultado de uma `SystemParametersInfo` chamada, esse parâmetro é um sinalizador que indica o parâmetro do sistema que foi alterado. Para obter uma lista de valores, consulte [SystemParametersInfo](/windows/win32/api/winuser/nf-winuser-systemparametersinfow) no SDK do Windows. Quando um aplicativo envia a mensagem, esse parâmetro deve ser 0.
 
 *lpszSection*<br/>
 Aponta para uma cadeia de caracteres que especifica o nome da seção que foi alterada. (A cadeia de caracteres não inclui os colchetes que contêm o nome da seção.)
@@ -9383,7 +9383,7 @@ Identifica um objeto de memória global. O objeto Memory contém uma estrutura d
 
 A `OnSizeClipboard` função de membro é chamada com um retângulo nulo (0, 0, 0, 0) como o novo tamanho quando o aplicativo da área de transferência está prestes a ser destruído ou minimizado. Isso permite que o proprietário da área de transferência libere seus recursos de exibição.
 
-No `OnSizeClipboard`, um aplicativo deve usar a função [GlobalLock](/windows/desktop/api/winbase/nf-winbase-globallock) do Windows para bloquear a memória que contém a estrutura de dados RECT. Fazer com que o aplicativo desbloqueie essa memória com a função [GlobalUnlock](/windows/desktop/api/winbase/nf-winbase-globalunlock) do Windows antes de gerar ou retornar o controle.
+No `OnSizeClipboard`, um aplicativo deve usar a função [GlobalLock](/windows/win32/api/winbase/nf-winbase-globallock) do Windows para bloquear a memória que contém a estrutura de dados RECT. Fazer com que o aplicativo desbloqueie essa memória com a função [GlobalUnlock](/windows/win32/api/winbase/nf-winbase-globalunlock) do Windows antes de gerar ou retornar o controle.
 
 > [!NOTE]
 > Essa função de membro é chamada pelo Framework para permitir que seu aplicativo manipule uma mensagem do Windows. Os parâmetros passados para sua função refletem os parâmetros recebidos pela estrutura quando a mensagem foi recebida. Se você chamar a implementação da classe base dessa função, essa implementação usará os parâmetros originalmente passados com a mensagem e não os parâmetros fornecidos para a função.
@@ -9404,7 +9404,7 @@ afx_msg void OnSizing(
 A borda da janela a ser movida.
 
 *lpRect*<br/>
-Endereço da estrutura [CRect](../../atl-mfc-shared/reference/crect-class.md) ou [Rect](/windows/desktop/api/windef/ns-windef-tagrect) que conterá as coordenadas do item.
+Endereço da estrutura [CRect](../../atl-mfc-shared/reference/crect-class.md) ou [Rect](/windows/win32/api/windef/ns-windef-rect) que conterá as coordenadas do item.
 
 ### <a name="remarks"></a>Comentários
 
@@ -9444,7 +9444,7 @@ Essa chamada é apenas para fins informativos.
 
 ##  <a name="onstylechanged"></a>  CWnd::OnStyleChanged
 
-A estrutura chama essa função de membro depois que a função [SetWindowLong](/windows/desktop/api/winuser/nf-winuser-setwindowlonga) alterou um ou mais estilos da janela.
+A estrutura chama essa função de membro depois que a função [SetWindowLong](/windows/win32/api/winuser/nf-winuser-setwindowlongw) alterou um ou mais estilos da janela.
 
 ```
 afx_msg void OnStyleChanged(
@@ -9462,7 +9462,7 @@ Especifica se os estilos estendidos ou não estendidos da janela foram alterados
 - GWL_STYLE os estilos não estendidos da janela foram alterados.
 
 *lpStyleStruct*<br/>
-Aponta para uma estrutura [STYLESTRUCT](/windows/desktop/api/winuser/ns-winuser-stylestruct) que contém os novos estilos para a janela. Um aplicativo pode examinar os estilos, mas não pode alterá-los.
+Aponta para uma estrutura [STYLESTRUCT](/windows/win32/api/winuser/ns-winuser-stylestruct) que contém os novos estilos para a janela. Um aplicativo pode examinar os estilos, mas não pode alterá-los.
 
 ### <a name="remarks"></a>Comentários
 
@@ -9471,7 +9471,7 @@ Aponta para uma estrutura [STYLESTRUCT](/windows/desktop/api/winuser/ns-winuser-
 
 ##  <a name="onstylechanging"></a>  CWnd::OnStyleChanging
 
-A estrutura chama essa função de membro quando a função [SetWindowLong](/windows/desktop/api/winuser/nf-winuser-setwindowlonga) está prestes a alterar um ou mais dos estilos da janela.
+A estrutura chama essa função de membro quando a função [SetWindowLong](/windows/win32/api/winuser/nf-winuser-setwindowlongw) está prestes a alterar um ou mais dos estilos da janela.
 
 ```
 afx_msg void OnStyleChanging(
@@ -9489,7 +9489,7 @@ Especifica se os estilos estendidos ou não estendidos da janela foram alterados
 - GWL_STYLE os estilos não estendidos da janela foram alterados.
 
 *lpStyleStruct*<br/>
-Aponta para uma estrutura [STYLESTRUCT](/windows/desktop/api/winuser/ns-winuser-stylestruct) que contém os novos estilos para a janela. Um aplicativo pode examinar os estilos e alterá-los.
+Aponta para uma estrutura [STYLESTRUCT](/windows/win32/api/winuser/ns-winuser-stylestruct) que contém os novos estilos para a janela. Um aplicativo pode examinar os estilos e alterá-los.
 
 ### <a name="remarks"></a>Comentários
 
@@ -9532,7 +9532,7 @@ O parâmetro *nFlags* pode ter estes valores:
 
 Especifica o código de chave virtual da chave do menu de controle. (Para obter uma lista de códigos de chaves virtuais padrão, consulte WinUser. h)
 
-Quando o código de contexto for 0, WM_SYSCHAR poderá passar a mensagem [WM_SYSCHAR](/windows/desktop/menurc/wm-syschar) para a função [TranslateAccelerator](/windows/desktop/api/winuser/nf-winuser-translateacceleratora) do Windows, que o tratará como se fosse uma mensagem de chave normal em vez de uma chave de caractere do sistema. Isso permite que as teclas de aceleração sejam usadas com a janela ativa mesmo que a janela ativa não tenha o foco de entrada.
+Quando o código de contexto for 0, WM_SYSCHAR poderá passar a mensagem [WM_SYSCHAR](/windows/win32/menurc/wm-syschar) para a função [TranslateAccelerator](/windows/win32/api/winuser/nf-winuser-translateacceleratorw) do Windows, que o tratará como se fosse uma mensagem de chave normal em vez de uma chave de caractere do sistema. Isso permite que as teclas de aceleração sejam usadas com a janela ativa mesmo que a janela ativa não tenha o foco de entrada.
 
 Para teclados IBM Enhanced 101-and 102-Key, as chaves avançadas são as teclas ALT direita e CTRL direita na seção principal do teclado; as teclas INS, DEL, HOME, END, PAGE UP, PAGE DOWN e Arrow nos clusters à esquerda do teclado numérico; e a barra (/) e inserir chaves no teclado numérico. Alguns teclados podem dar suporte ao bit de chave estendida em *nFlags*.
 
@@ -9697,7 +9697,7 @@ Para `OnSysKeyDown` chamadas, o bit de transição de chave (bit 15) é 0. O bit
 
 Se nenhuma janela tiver atualmente o foco de entrada, a função de `OnSysKeyDown` membro da janela ativa será chamada. O `CWnd` objeto que recebe a mensagem pode distinguir entre esses dois contextos verificando o código de contexto `nFlags`em.
 
-Quando o código de contexto é 0, a mensagem WM_SYSKEYDOWN recebida `OnSysKeyDown` por pode ser passada para a função [TranslateAccelerator](/windows/desktop/api/winuser/nf-winuser-translateacceleratora) do Windows, que irá tratá-lo como se fosse uma mensagem de chave normal em vez de uma mensagem de chave do sistema. Isso permite que as teclas de aceleração sejam usadas com a janela ativa mesmo que a janela ativa não tenha o foco de entrada.
+Quando o código de contexto é 0, a mensagem WM_SYSKEYDOWN recebida `OnSysKeyDown` por pode ser passada para a função [TranslateAccelerator](/windows/win32/api/winuser/nf-winuser-translateacceleratorw) do Windows, que irá tratá-lo como se fosse uma mensagem de chave normal em vez de uma mensagem de chave do sistema. Isso permite que as teclas de aceleração sejam usadas com a janela ativa mesmo que a janela ativa não tenha o foco de entrada.
 
 Devido à repetição automática, mais de uma `OnSysKeyDown` chamada pode ocorrer antes que a mensagem [WM_SYSKEYUP](#onsyskeyup) seja recebida. O estado de chave anterior (bit 14) pode ser usado para determinar se `OnSysKeyDown` a chamada indica a primeira transição para baixo ou uma transição repetida.
 
@@ -9744,7 +9744,7 @@ Para `OnSysKeyUp` chamadas, o bit de transição de chave (bit 15) é 1. O bit d
 
 Se nenhuma janela tiver atualmente o foco de entrada, a função de `OnSysKeyUp` membro da janela ativa será chamada. O `CWnd` objeto que recebe a chamada pode distinguir entre esses dois contextos verificando o código de contexto em *nFlags*.
 
-Quando o código de contexto é 0, a mensagem WM_SYSKEYUP recebida `OnSysKeyUp` por pode ser passada para a função [TranslateAccelerator](/windows/desktop/api/winuser/nf-winuser-translateacceleratora) do Windows, que irá tratá-lo como se fosse uma mensagem de chave normal em vez de uma mensagem de chave do sistema. Isso permite que as chaves do acelerador (atalho) sejam usadas com a janela ativa mesmo que a janela ativa não tenha o foco de entrada.
+Quando o código de contexto é 0, a mensagem WM_SYSKEYUP recebida `OnSysKeyUp` por pode ser passada para a função [TranslateAccelerator](/windows/win32/api/winuser/nf-winuser-translateacceleratorw) do Windows, que irá tratá-lo como se fosse uma mensagem de chave normal em vez de uma mensagem de chave do sistema. Isso permite que as chaves do acelerador (atalho) sejam usadas com a janela ativa mesmo que a janela ativa não tenha o foco de entrada.
 
 Para teclados IBM Enhanced 101-and 102-Key, as chaves avançadas são as teclas ALT direita e CTRL direita na seção principal do teclado; as teclas INS, DEL, HOME, END, PAGE UP, PAGE DOWN e Arrow nos clusters à esquerda do teclado numérico; e a barra (/) e inserir chaves no teclado numérico. Alguns teclados podem dar suporte ao bit de chave estendida em *nFlags*.
 
@@ -9755,7 +9755,7 @@ Para não-U. S. Teclados avançados de 102 teclas, a tecla ALT direita é tratad
 |1.|[WM_KEYDOWN](#onkeydown)|VK_CONTROL|
 |2.|[WM_KEYDOWN](#onkeydown)|VK_MENU|
 |3.|[WM_KEYUP](#onkeyup)|VK_CONTROL|
-|4.|[WM_SYSKEYUP](/windows/desktop/inputdev/wm-syskeyup)|VK_MENU|
+|4.|[WM_SYSKEYUP](/windows/win32/inputdev/wm-syskeyup)|VK_MENU|
 
 > [!NOTE]
 > Essa função de membro é chamada pelo Framework para permitir que seu aplicativo manipule uma mensagem do Windows. Os parâmetros passados para sua função refletem os parâmetros recebidos pela estrutura quando a mensagem foi recebida. Se você chamar a implementação da classe base dessa função, essa implementação usará os parâmetros originalmente passados com a mensagem e não os parâmetros fornecidos para a função.
@@ -9816,7 +9816,7 @@ afx_msg void OnTimeChange();
 
 ### <a name="remarks"></a>Comentários
 
-Ter qualquer aplicativo que altere a hora do sistema enviar esta mensagem para todas as janelas de nível superior. Para enviar a mensagem WM_TIMECHANGE para todas as janelas de nível superior, um aplicativo pode usar a função [SendMessage](/windows/desktop/api/winuser/nf-winuser-sendmessage) do Windows com seu parâmetro *HWND* definido como HWND_BROADCAST.
+Ter qualquer aplicativo que altere a hora do sistema enviar esta mensagem para todas as janelas de nível superior. Para enviar a mensagem WM_TIMECHANGE para todas as janelas de nível superior, um aplicativo pode usar a função [SendMessage](/windows/win32/api/winuser/nf-winuser-sendmessage) do Windows com seu parâmetro *HWND* definido como HWND_BROADCAST.
 
 ##  <a name="ontimer"></a>  CWnd::OnTimer
 
@@ -9833,7 +9833,7 @@ Especifica o identificador do temporizador.
 
 ### <a name="remarks"></a>Comentários
 
-A função [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) do Windows envia uma mensagem [WM_TIMER](/windows/desktop/winmsg/wm-timer) quando nenhuma outra mensagem está na fila de mensagens do aplicativo.
+A função [DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage) do Windows envia uma mensagem [WM_TIMER](/windows/win32/winmsg/wm-timer) quando nenhuma outra mensagem está na fila de mensagens do aplicativo.
 
 > [!NOTE]
 > Essa função de membro é chamada pelo Framework para permitir que seu aplicativo manipule uma mensagem do Windows. Os parâmetros passados para sua função refletem os parâmetros recebidos pela estrutura quando a mensagem foi recebida. Se você chamar a implementação da classe base dessa função, essa implementação usará os parâmetros originalmente passados com a mensagem e não os parâmetros fornecidos para a função.
@@ -9858,7 +9858,7 @@ virtual INT_PTR OnToolHitTest(
 Especifica a coordenada x e y do cursor. Essas coordenadas são sempre relativas ao canto superior esquerdo da janela
 
 *pTI*<br/>
-Um ponteiro para uma estrutura [TOOLINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtoolinfoa) . Os seguintes valores de estrutura são definidos por padrão:
+Um ponteiro para uma estrutura [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-toolinfow) . Os seguintes valores de estrutura são definidos por padrão:
 
 - *identificador HWND*  =  paraumajanela`m_hWnd`
 
@@ -9880,7 +9880,7 @@ Se a área com a qual a dica de ferramenta está associada não for `OnToolHitTe
 
 Substitua `OnToolHitTest` para fornecer informações diferentes do que o padrão fornece.
 
-Consulte [TOOLINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtoolinfoa), na SDK do Windows, para obter mais informações sobre a estrutura.
+Consulte [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-toolinfow), na SDK do Windows, para obter mais informações sobre a estrutura.
 
 ##  <a name="ontouchinput"></a>  CWnd::OnTouchInput
 
@@ -9940,7 +9940,7 @@ TRUE se o aplicativo processar entradas de toque do Windows; caso contrário, FA
 
 ##  <a name="onunichar"></a>  CWnd::OnUniChar
 
-A estrutura chama essa função de membro quando uma tecla é pressionada. Ou seja, a janela atual tem o foco do teclado e uma mensagem [WM_KEYDOWN](/windows/desktop/inputdev/wm-keydown) é convertida pela função [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) .
+A estrutura chama essa função de membro quando uma tecla é pressionada. Ou seja, a janela atual tem o foco do teclado e uma mensagem [WM_KEYDOWN](/windows/win32/inputdev/wm-keydown) é convertida pela função [TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage) .
 
 ```
 afx_msg void OnUniChar(
@@ -9959,7 +9959,7 @@ afx_msg void OnUniChar(
 
 ### <a name="remarks"></a>Comentários
 
-Esse método recebe a notificação [WM_UNICHAR](/windows/desktop/inputdev/wm-unichar) , que é descrita na SDK do Windows. A mensagem [WM_UNICHAR](/windows/desktop/inputdev/wm-unichar) foi projetada para enviar ou postar caracteres Unicode para janelas ANSI. É equivalente à mensagem [WM_CHAR](/windows/desktop/inputdev/wm-char) , mas usa o formato de transformação Unicode-codificação 32 (UTF-32), enquanto a mensagem [WM_CHAR](/windows/desktop/inputdev/wm-char) usa UTF-16.
+Esse método recebe a notificação [WM_UNICHAR](/windows/win32/inputdev/wm-unichar) , que é descrita na SDK do Windows. A mensagem [WM_UNICHAR](/windows/win32/inputdev/wm-unichar) foi projetada para enviar ou postar caracteres Unicode para janelas ANSI. É equivalente à mensagem [WM_CHAR](/windows/win32/inputdev/wm-char) , mas usa o formato de transformação Unicode-codificação 32 (UTF-32), enquanto a mensagem [WM_CHAR](/windows/win32/inputdev/wm-char) usa UTF-16.
 
 > [!NOTE]
 > Essa função de membro é chamada pelo Framework para permitir que seu aplicativo manipule uma mensagem do Windows. Os parâmetros passados para sua função refletem os parâmetros recebidos pela estrutura quando a mensagem foi recebida. Se você chamar a implementação da classe base dessa função, essa implementação usará os parâmetros originalmente passados com a mensagem e não os parâmetros fornecidos para a função.
@@ -9983,7 +9983,7 @@ afx_msg void OnUnInitMenuPopup(
 
 ### <a name="remarks"></a>Comentários
 
-Esse método recebe a notificação [WM_UNINITMENUPOPUP](/windows/desktop/menurc/wm-uninitmenupopup) , que é descrita na SDK do Windows.
+Esse método recebe a notificação [WM_UNINITMENUPOPUP](/windows/win32/menurc/wm-uninitmenupopup) , que é descrita na SDK do Windows.
 
 > [!NOTE]
 > Essa função de membro é chamada pelo Framework para permitir que seu aplicativo manipule uma mensagem do Windows. Os parâmetros passados para sua função refletem os parâmetros recebidos pela estrutura quando a mensagem foi recebida. Se você chamar a implementação da classe base dessa função, essa implementação usará os parâmetros originalmente passados com a mensagem e não os parâmetros fornecidos para a função.
@@ -10005,7 +10005,7 @@ Especifica a ação a ser executada. Pode ser um dos seguintes valores:
 
 - UIS_CLEAR o elemento de estado da interface do usuário (especificado por *nUIElement*) deve estar oculto.
 
-- UIS_INITIALIZE o elemento de estado da interface do usuário (especificado por *nUIElement*) deve ser alterado com base no último evento de entrada. Para obter mais informações, consulte a seção **comentários** de [WM_UPDATEISTATE](/windows/desktop/menurc/wm-updateuistate).
+- UIS_INITIALIZE o elemento de estado da interface do usuário (especificado por *nUIElement*) deve ser alterado com base no último evento de entrada. Para obter mais informações, consulte a seção **comentários** de [WM_UPDATEISTATE](/windows/win32/menurc/wm-updateuistate).
 
 - UIS_SET o elemento de estado da interface do usuário (especificado por *nUIElement*) deve estar visível.
 
@@ -10020,7 +10020,7 @@ Especifica quais elementos de estado da interface do usuário são afetados ou o
 
 ### <a name="remarks"></a>Comentários
 
-Essa função de membro emula a funcionalidade da mensagem [WM_UPDATEUISTATE](/windows/desktop/menurc/wm-updateuistate) , conforme descrito na SDK do Windows.
+Essa função de membro emula a funcionalidade da mensagem [WM_UPDATEUISTATE](/windows/win32/menurc/wm-updateuistate) , conforme descrito na SDK do Windows.
 
 ##  <a name="onuserchanged"></a>  CWnd::OnUserChanged
 
@@ -10032,7 +10032,7 @@ afx_msg void OnUserChanged();
 
 ### <a name="remarks"></a>Comentários
 
-Esse método recebe a mensagem de notificação [WM_USERCHANGED](/windows/desktop/winmsg/wm-userchanged) , que é descrita no SDK do Windows. Quando o usuário faz logon ou logoff, o sistema operacional atualiza as configurações específicas do usuário. O sistema envia essa mensagem imediatamente após a atualização das configurações.
+Esse método recebe a mensagem de notificação [WM_USERCHANGED](/windows/win32/winmsg/wm-userchanged) , que é descrita no SDK do Windows. Quando o usuário faz logon ou logoff, o sistema operacional atualiza as configurações específicas do usuário. O sistema envia essa mensagem imediatamente após a atualização das configurações.
 
 > [!NOTE]
 > Essa função de membro é chamada pelo Framework para permitir que seu aplicativo manipule uma mensagem do Windows. Os parâmetros passados para sua função refletem os parâmetros recebidos pela estrutura quando a mensagem foi recebida. Se você chamar a implementação da classe base dessa função, essa implementação usará os parâmetros originalmente passados com a mensagem e não os parâmetros fornecidos para a função.
@@ -10180,14 +10180,14 @@ afx_msg void OnWindowMaximizedChanged(BOOL bIsMaximized);
 
 ### <a name="remarks"></a>Comentários
 
-Esse método recebe a mensagem de notificação [WM_DWMWINDOWMAXIMIZEDCHANGE](/windows/desktop/dwm/wm-dwmwindowmaximizedchange) , que é descrita no SDK do Windows.
+Esse método recebe a mensagem de notificação [WM_DWMWINDOWMAXIMIZEDCHANGE](/windows/win32/dwm/wm-dwmwindowmaximizedchange) , que é descrita no SDK do Windows.
 
 > [!NOTE]
 > Essa função de membro é chamada pelo Framework para permitir que seu aplicativo manipule uma mensagem do Windows. Os parâmetros passados para sua função refletem os parâmetros recebidos pela estrutura quando a mensagem foi recebida. Se você chamar a implementação da classe base dessa função, essa implementação usará os parâmetros originalmente passados com a mensagem e não os parâmetros fornecidos para a função.
 
 ##  <a name="onwindowposchanged"></a>  CWnd::OnWindowPosChanged
 
-A estrutura chama essa função de membro quando o tamanho, a posição ou a ordem Z mudou como resultado de uma chamada para a função membro [SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos) ou outra função de gerenciamento de janela.
+A estrutura chama essa função de membro quando o tamanho, a posição ou a ordem Z mudou como resultado de uma chamada para a função membro [SetWindowPos](/windows/win32/api/winuser/nf-winuser-setwindowpos) ou outra função de gerenciamento de janela.
 
 ```
 afx_msg void OnWindowPosChanged(WINDOWPOS* lpwndpos);
@@ -10196,18 +10196,18 @@ afx_msg void OnWindowPosChanged(WINDOWPOS* lpwndpos);
 ### <a name="parameters"></a>Parâmetros
 
 *lpwndpos*<br/>
-Aponta para uma estrutura de dados [WINDOWPOS](/windows/desktop/api/winuser/ns-winuser-tagwindowpos) que contém informações sobre o novo tamanho e a posição da janela.
+Aponta para uma estrutura de dados [WINDOWPOS](/windows/win32/api/winuser/ns-winuser-windowpos) que contém informações sobre o novo tamanho e a posição da janela.
 
 ### <a name="remarks"></a>Comentários
 
-A implementação padrão envia as mensagens [WM_SIZE](/windows/desktop/winmsg/wm-size) e [WM_MOVE](/windows/desktop/winmsg/wm-move) para a janela. Essas mensagens não serão enviadas se um aplicativo tratar a `OnWindowPosChanged` chamada sem chamar sua classe base. É mais eficiente executar qualquer processamento de alteração de movimentação ou de tamanho durante a chamada `OnWindowPosChanged` para sem chamar sua classe base.
+A implementação padrão envia as mensagens [WM_SIZE](/windows/win32/winmsg/wm-size) e [WM_MOVE](/windows/win32/winmsg/wm-move) para a janela. Essas mensagens não serão enviadas se um aplicativo tratar a `OnWindowPosChanged` chamada sem chamar sua classe base. É mais eficiente executar qualquer processamento de alteração de movimentação ou de tamanho durante a chamada `OnWindowPosChanged` para sem chamar sua classe base.
 
 > [!NOTE]
 > Essa função de membro é chamada pelo Framework para permitir que seu aplicativo manipule uma mensagem do Windows. Os parâmetros passados para sua função refletem os parâmetros recebidos pela estrutura quando a mensagem foi recebida. Se você chamar a implementação da classe base dessa função, essa implementação usará os parâmetros originalmente passados com a mensagem e não os parâmetros fornecidos para a função.
 
 ##  <a name="onwindowposchanging"></a>  CWnd::OnWindowPosChanging
 
-A estrutura chama essa função de membro quando o tamanho, a posição ou a ordem Z está prestes a ser alterada como resultado de uma chamada para a função membro [SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos) ou outra função de gerenciamento de janela.
+A estrutura chama essa função de membro quando o tamanho, a posição ou a ordem Z está prestes a ser alterada como resultado de uma chamada para a função membro [SetWindowPos](/windows/win32/api/winuser/nf-winuser-setwindowpos) ou outra função de gerenciamento de janela.
 
 ```
 afx_msg void OnWindowPosChanging(WINDOWPOS* lpwndpos);
@@ -10220,9 +10220,9 @@ Aponta para uma `WINDOWPOS` estrutura de dados que contém informações sobre o
 
 ### <a name="remarks"></a>Comentários
 
-Um aplicativo pode impedir alterações na janela definindo ou limpando os bits apropriados no membro **flags** da estrutura [WINDOWPOS](/windows/desktop/api/winuser/ns-winuser-tagwindowpos) .
+Um aplicativo pode impedir alterações na janela definindo ou limpando os bits apropriados no membro **flags** da estrutura [WINDOWPOS](/windows/win32/api/winuser/ns-winuser-windowpos) .
 
-Para uma janela com o estilo [WS_OVERLAPPED](styles-used-by-mfc.md#window-styles) ou [WS_THICKFRAME](styles-used-by-mfc.md#window-styles) , a implementação padrão envia uma mensagem [WM_GETMINMAXINFO](/windows/desktop/winmsg/wm-getminmaxinfo) para a janela. Isso é feito para validar o novo tamanho e a posição da janela e para impor os estilos de cliente CS_BYTEALIGNCLIENT e CS_BYTEALIGN. Um aplicativo pode substituir essa funcionalidade, não chamando sua classe base.
+Para uma janela com o estilo [WS_OVERLAPPED](styles-used-by-mfc.md#window-styles) ou [WS_THICKFRAME](styles-used-by-mfc.md#window-styles) , a implementação padrão envia uma mensagem [WM_GETMINMAXINFO](/windows/win32/winmsg/wm-getminmaxinfo) para a janela. Isso é feito para validar o novo tamanho e a posição da janela e para impor os estilos de cliente CS_BYTEALIGNCLIENT e CS_BYTEALIGN. Um aplicativo pode substituir essa funcionalidade, não chamando sua classe base.
 
 > [!NOTE]
 > Essa função de membro é chamada pelo Framework para permitir que seu aplicativo manipule uma mensagem do Windows. Os parâmetros passados para sua função refletem os parâmetros recebidos pela estrutura quando a mensagem foi recebida. Se você chamar a implementação da classe base dessa função, essa implementação usará os parâmetros originalmente passados com a mensagem e não os parâmetros fornecidos para a função.
@@ -10242,9 +10242,9 @@ Aponta para uma cadeia de caracteres que especifica o nome da seção que foi al
 
 ### <a name="remarks"></a>Comentários
 
-A função [SystemParametersInfo](/windows/desktop/api/winuser/nf-winuser-systemparametersinfoa) do Windows `OnWinIniChange` chama depois que um aplicativo usa a função para alterar uma configuração no Win. Arquivo INI.
+A função [SystemParametersInfo](/windows/win32/api/winuser/nf-winuser-systemparametersinfow) do Windows `OnWinIniChange` chama depois que um aplicativo usa a função para alterar uma configuração no Win. Arquivo INI.
 
-Para enviar a mensagem WM_WININICHANGE para todas as janelas de nível superior, um aplicativo pode usar a função [SendMessage](/windows/desktop/api/winuser/nf-winuser-sendmessage) do Windows com seu parâmetro *HWND* definido como HWND_BROADCAST.
+Para enviar a mensagem WM_WININICHANGE para todas as janelas de nível superior, um aplicativo pode usar a função [SendMessage](/windows/win32/api/winuser/nf-winuser-sendmessage) do Windows com seu parâmetro *HWND* definido como HWND_BROADCAST.
 
 Se um aplicativo alterar várias seções diferentes no WIN. INI ao mesmo tempo, o aplicativo deve enviar uma mensagem WM_WININICHANGE com *lpszSection* definido como NULL. Caso contrário, um aplicativo deve enviar WM_WININICHANGE cada vez que fizer uma alteração no WIN. Personalizado.
 
@@ -10310,9 +10310,9 @@ afx_msg void OnXButtonDblClk(
 
 ### <a name="remarks"></a>Comentários
 
-Esse método recebe a notificação [WM_XBUTTONDBLCLK](/windows/desktop/inputdev/wm-xbuttondblclk) , que é descrita na SDK do Windows. Se o mouse não for capturado, a mensagem será postada na janela abaixo do cursor. Caso contrário, a mensagem será postada na janela que capturou o mouse.
+Esse método recebe a notificação [WM_XBUTTONDBLCLK](/windows/win32/inputdev/wm-xbuttondblclk) , que é descrita na SDK do Windows. Se o mouse não for capturado, a mensagem será postada na janela abaixo do cursor. Caso contrário, a mensagem será postada na janela que capturou o mouse.
 
-O parâmetro *nFlags* pode ser uma combinação de teclas modificadoras listadas na tabela a seguir. Para obter mais informações, consulte [sobre a entrada do mouse](/windows/desktop/inputdev/about-mouse-input).
+O parâmetro *nFlags* pode ser uma combinação de teclas modificadoras listadas na tabela a seguir. Para obter mais informações, consulte [sobre a entrada do mouse](/windows/win32/inputdev/about-mouse-input).
 
 |Tecla modificadora|Descrição|
 |------------------|-----------------|
@@ -10348,9 +10348,9 @@ afx_msg void OnXButtonDown(
 
 ### <a name="remarks"></a>Comentários
 
-Esse método recebe a notificação [WM_XBUTTONDOWN](/windows/desktop/inputdev/wm-xbuttondown) , que é descrita na SDK do Windows. Se o mouse não for capturado, a mensagem será postada na janela abaixo do cursor. Caso contrário, a mensagem será postada na janela que capturou o mouse.
+Esse método recebe a notificação [WM_XBUTTONDOWN](/windows/win32/inputdev/wm-xbuttondown) , que é descrita na SDK do Windows. Se o mouse não for capturado, a mensagem será postada na janela abaixo do cursor. Caso contrário, a mensagem será postada na janela que capturou o mouse.
 
-O parâmetro *nFlags* pode ser uma combinação de teclas modificadoras listadas na tabela a seguir. Para obter mais informações, consulte [sobre a entrada do mouse](/windows/desktop/inputdev/about-mouse-input).
+O parâmetro *nFlags* pode ser uma combinação de teclas modificadoras listadas na tabela a seguir. Para obter mais informações, consulte [sobre a entrada do mouse](/windows/win32/inputdev/about-mouse-input).
 
 |Tecla modificadora|Descrição|
 |------------------|-----------------|
@@ -10386,9 +10386,9 @@ afx_msg void OnXButtonUp(
 
 ### <a name="remarks"></a>Comentários
 
-Esse método recebe a notificação [WM_XBUTTONUP](/windows/desktop/inputdev/wm-xbuttonup) , que é descrita na SDK do Windows. Se o mouse não for capturado, a mensagem será postada na janela abaixo do cursor. Caso contrário, a mensagem será postada na janela que capturou o mouse.
+Esse método recebe a notificação [WM_XBUTTONUP](/windows/win32/inputdev/wm-xbuttonup) , que é descrita na SDK do Windows. Se o mouse não for capturado, a mensagem será postada na janela abaixo do cursor. Caso contrário, a mensagem será postada na janela que capturou o mouse.
 
-O parâmetro *nFlags* pode ser uma combinação de teclas modificadoras listadas na tabela a seguir. Para obter mais informações, consulte [sobre a entrada do mouse](/windows/desktop/inputdev/about-mouse-input).
+O parâmetro *nFlags* pode ser uma combinação de teclas modificadoras listadas na tabela a seguir. Para obter mais informações, consulte [sobre a entrada do mouse](/windows/win32/inputdev/about-mouse-input).
 
 |Tecla modificadora|Descrição|
 |------------------|-----------------|
@@ -10417,9 +10417,9 @@ Diferente de zero se a área de `CWnd`transferência for aberta via, ou 0, se ou
 
 ### <a name="remarks"></a>Comentários
 
-Outros aplicativos não poderão modificar a área de transferência até que a função [CloseClipboard](/windows/desktop/api/winuser/nf-winuser-closeclipboard) do Windows seja chamada.
+Outros aplicativos não poderão modificar a área de transferência até que a função [CloseClipboard](/windows/win32/api/winuser/nf-winuser-closeclipboard) do Windows seja chamada.
 
-O objeto `CWnd` atual não se tornará o proprietário da área de transferência até que a função [EmptyClipboard](/windows/desktop/api/winuser/nf-winuser-emptyclipboard) do Windows seja chamada.
+O objeto `CWnd` atual não se tornará o proprietário da área de transferência até que a função [EmptyClipboard](/windows/win32/api/winuser/nf-winuser-emptyclipboard) do Windows seja chamada.
 
 ### <a name="example"></a>Exemplo
 
@@ -10512,9 +10512,9 @@ Diferente de zero se a mensagem for postada; caso contrário, 0.
 
 ### <a name="remarks"></a>Comentários
 
-As mensagens em uma fila de mensagens são recuperadas por chamadas para a função [GetMessage](/windows/desktop/api/winuser/nf-winuser-getmessage) ou [PeekMessage](/windows/desktop/api/winuser/nf-winuser-peekmessagea) do Windows.
+As mensagens em uma fila de mensagens são recuperadas por chamadas para a função [GetMessage](/windows/win32/api/winuser/nf-winuser-getmessage) ou [PeekMessage](/windows/win32/api/winuser/nf-winuser-peekmessagew) do Windows.
 
-A função do Windows [de ismessage](/windows/desktop/api/winuser/nf-winuser-postmessagea) pode ser usada para acessar outro aplicativo.
+A função do Windows [de ismessage](/windows/win32/api/winuser/nf-winuser-postmessagew) pode ser usada para acessar outro aplicativo.
 
 ### <a name="example"></a>Exemplo
 
@@ -10543,7 +10543,7 @@ virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
 ### <a name="parameters"></a>Parâmetros
 
 *cs*<br/>
-Uma estrutura [CREATESTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcreatestructa).
+Uma estrutura [CREATESTRUCT](/windows/win32/api/winuser/ns-winuser-createstructw).
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -10582,7 +10582,7 @@ Substituir essa função de membro permite a subclasse dinâmica de controles. �
 
 ##  <a name="pretranslatemessage"></a>  CWnd::PreTranslateMessage
 
-Usado pela classe [CWinApp](../../mfc/reference/cwinapp-class.md) para traduzir as mensagens de janela antes que elas sejam expedidas para as funções [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) e [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) do Windows.
+Usado pela classe [CWinApp](../../mfc/reference/cwinapp-class.md) para traduzir as mensagens de janela antes que elas sejam expedidas para as funções [TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage) e [DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage) do Windows.
 
 ```
 virtual BOOL PreTranslateMessage(MSG* pMsg);
@@ -10591,7 +10591,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ### <a name="parameters"></a>Parâmetros
 
 *pMsg*<br/>
-Aponta para uma estrutura [msg](/windows/desktop/api/winuser/ns-winuser-tagmsg) que contém a mensagem a ser processada.
+Aponta para uma estrutura [msg](/windows/win32/api/winuser/ns-winuser-msg) que contém a mensagem a ser processada.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -10635,11 +10635,11 @@ Especifica as opções de desenho. Esse parâmetro pode ser um ou mais destes si
 
 - Se PRF_NONCLIENT for especificado, desenhe a área não cliente no contexto de dispositivo fornecido.
 
-- Se PRF_ERASEBKGND for especificado, envie a janela uma mensagem [WM_ERASEBKGND](/windows/desktop/winmsg/wm-erasebkgnd) .
+- Se PRF_ERASEBKGND for especificado, envie a janela uma mensagem [WM_ERASEBKGND](/windows/win32/winmsg/wm-erasebkgnd) .
 
-- Se PRF_CLIENT for especificado, envie a janela uma mensagem [WM_PRINTCLIENT](/windows/desktop/gdi/wm-printclient) .
+- Se PRF_CLIENT for especificado, envie a janela uma mensagem [WM_PRINTCLIENT](/windows/win32/gdi/wm-printclient) .
 
-- Se PRF_CHILDREN for definido, envie a cada janela filho visível uma mensagem [WM_PRINT](/windows/desktop/gdi/wm-print) .
+- Se PRF_CHILDREN for definido, envie a cada janela filho visível uma mensagem [WM_PRINT](/windows/win32/gdi/wm-print) .
 
 - Se PRF_OWNED for definido, envie a cada janela de propriedade visível uma mensagem WM_PRINT.
 
@@ -10689,7 +10689,7 @@ BOOL PrintWindow(
 Um ponteiro para o contexto do dispositivo a ser impresso.
 
 *nFlags*<br/>
-Especifica as opções de desenho. Para obter uma lista de valores possíveis, consulte a [janela](/windows/desktop/api/winuser/nf-winuser-printwindow)do.
+Especifica as opções de desenho. Para obter uma lista de valores possíveis, consulte a [janela](/windows/win32/api/winuser/nf-winuser-printwindow)do.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -10697,7 +10697,7 @@ Diferente de zero se a função tiver sucesso; caso contrário, 0.
 
 ### <a name="remarks"></a>Comentários
 
-Essa função de membro emula a funcionalidade da [janela](/windows/desktop/api/winuser/nf-winuser-printwindow)de reentrada da função, conforme descrito no SDK do Windows.
+Essa função de membro emula a funcionalidade da [janela](/windows/win32/api/winuser/nf-winuser-printwindow)de reentrada da função, conforme descrito no SDK do Windows.
 
 ##  <a name="redrawwindow"></a>  CWnd::RedrawWindow
 
@@ -10713,7 +10713,7 @@ BOOL RedrawWindow(
 ### <a name="parameters"></a>Parâmetros
 
 *lpRectUpdate*<br/>
-Aponta para uma [estrutura RECT](/windows/desktop/api/windef/ns-windef-tagrect) que contém as coordenadas do retângulo de atualização. Esse parâmetro será ignorado se *prgnUpdate* contiver um identificador de região válido.
+Aponta para uma [estrutura RECT](/windows/win32/api/windef/ns-windef-rect) que contém as coordenadas do retângulo de atualização. Esse parâmetro será ignorado se *prgnUpdate* contiver um identificador de região válido.
 
 *prgnUpdate*<br/>
 Identifica a região de atualização. Se *prgnUpdate* e *lpRectUpdate* forem nulos, toda a área do cliente será adicionada à região de atualização.
@@ -10721,11 +10721,11 @@ Identifica a região de atualização. Se *prgnUpdate* e *lpRectUpdate* forem nu
 *flags*<br/>
 Os seguintes sinalizadores são usados para invalidar a janela:
 
-- RDW_ERASE faz com que a janela receba uma mensagem [WM_ERASEBKGND](/windows/desktop/winmsg/wm-erasebkgnd) quando a janela é redesenhada. O sinalizador RDW_INVALIDATE também deve ser especificado; caso contrário, RDW_ERASE não terá nenhum efeito.
+- RDW_ERASE faz com que a janela receba uma mensagem [WM_ERASEBKGND](/windows/win32/winmsg/wm-erasebkgnd) quando a janela é redesenhada. O sinalizador RDW_INVALIDATE também deve ser especificado; caso contrário, RDW_ERASE não terá nenhum efeito.
 
-- RDW_FRAME faz com que qualquer parte da área que não seja de cliente da janela que Intersecte a região de atualização receba uma mensagem [WM_NCPAINT](/windows/desktop/gdi/wm-ncpaint) . O sinalizador RDW_INVALIDATE também deve ser especificado; caso contrário, RDW_FRAME não terá nenhum efeito.
+- RDW_FRAME faz com que qualquer parte da área que não seja de cliente da janela que Intersecte a região de atualização receba uma mensagem [WM_NCPAINT](/windows/win32/gdi/wm-ncpaint) . O sinalizador RDW_INVALIDATE também deve ser especificado; caso contrário, RDW_FRAME não terá nenhum efeito.
 
-- RDW_INTERNALPAINT faz com que uma mensagem [WM_PAINT](/windows/desktop/gdi/wm-paint) seja postada na janela, independentemente de a janela conter uma região inválida.
+- RDW_INTERNALPAINT faz com que uma mensagem [WM_PAINT](/windows/win32/gdi/wm-paint) seja postada na janela, independentemente de a janela conter uma região inválida.
 
 - RDW_INVALIDATE invalidar *lpRectUpdate* ou *prgnUpdate* (apenas um pode não ser nulo). Se ambos forem nulos, a janela inteira será invalidada.
 
@@ -10757,7 +10757,7 @@ Diferente de zero se a janela foi redesenhada com êxito; caso contrário, 0.
 
 ### <a name="remarks"></a>Comentários
 
-Quando a `RedrawWindow` função de membro é usada para invalidar parte da janela da área de trabalho, essa janela não recebe uma mensagem [WM_PAINT](/windows/desktop/gdi/wm-paint) . Para redesenhar a área de trabalho, um aplicativo deve usar [CWnd:: ValidateRgn](#validatergn), [CWnd:: InvalidateRgn](#invalidatergn), [CWnd:: UpdateWindow](#updatewindow)ou [RedrawWindow](/windows/desktop/api/winuser/nf-winuser-redrawwindow)
+Quando a `RedrawWindow` função de membro é usada para invalidar parte da janela da área de trabalho, essa janela não recebe uma mensagem [WM_PAINT](/windows/win32/gdi/wm-paint) . Para redesenhar a área de trabalho, um aplicativo deve usar [CWnd:: ValidateRgn](#validatergn), [CWnd:: InvalidateRgn](#invalidatergn), [CWnd:: UpdateWindow](#updatewindow)ou [RedrawWindow](/windows/win32/api/winuser/nf-winuser-redrawwindow)
 
 ##  <a name="reflectchildnotify"></a>  CWnd::ReflectChildNotify
 
@@ -10883,10 +10883,10 @@ Pode ter um dos seguintes valores:
 - `CWnd::reposExtra`Adiciona os valores de *lpRectParam* à área do cliente de *nIDLast* e também executa o layout.
 
 *lpRectParam*<br/>
-Aponta para uma [estrutura RECT](/windows/desktop/api/windef/ns-windef-tagrect); o uso do que depende do valor de *nalização*.
+Aponta para uma [estrutura RECT](/windows/win32/api/windef/ns-windef-rect); o uso do que depende do valor de *nalização*.
 
 *lpRectClient*<br/>
-Aponta para uma [estrutura RECT](/windows/desktop/api/windef/ns-windef-tagrect) que contém a área do cliente disponível. Se for NULL, a área do cliente da janela será usada.
+Aponta para uma [estrutura RECT](/windows/win32/api/windef/ns-windef-rect) que contém a área do cliente disponível. Se for NULL, a área do cliente da janela será usada.
 
 *bStretch*<br/>
 Indica se a barra deve ser ampliada para o tamanho do quadro.
@@ -10908,7 +10908,7 @@ int RunModalLoop(DWORD dwFlags = 0);
 *dwFlags*<br/>
 Especifica a mensagem do Windows a ser enviada. Pode ser um dos seguintes valores:
 
-- MLF_NOIDLEMSG não envia mensagens [WM_ENTERIDLE](/windows/desktop/dlgbox/wm-enteridle) para o pai.
+- MLF_NOIDLEMSG não envia mensagens [WM_ENTERIDLE](/windows/win32/dlgbox/wm-enteridle) para o pai.
 
 - MLF_NOKICKIDLE não envie mensagens WM_KICKIDLE para a janela.
 
@@ -10933,10 +10933,10 @@ void ScreenToClient(LPPOINT lpPoint) const;  void ScreenToClient(LPRECT lpRect) 
 ### <a name="parameters"></a>Parâmetros
 
 *lpPoint*<br/>
-Aponta para um objeto [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) ou [estrutura de ponto](/windows/desktop/api/windef/ns-windef-tagpoint) que contém as coordenadas de tela a serem convertidas.
+Aponta para um objeto [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) ou [estrutura de ponto](/windows/win32/api/windef/ns-windef-point) que contém as coordenadas de tela a serem convertidas.
 
 *lpRect*<br/>
-Aponta para um objeto [CRect](../../atl-mfc-shared/reference/crect-class.md) ou [estrutura RECT](/windows/desktop/api/windef/ns-windef-tagrect) que contém as coordenadas de tela a serem convertidas.
+Aponta para um objeto [CRect](../../atl-mfc-shared/reference/crect-class.md) ou [estrutura RECT](/windows/win32/api/windef/ns-windef-rect) que contém as coordenadas de tela a serem convertidas.
 
 ### <a name="remarks"></a>Comentários
 
@@ -10967,7 +10967,7 @@ Especifica a quantidade, em unidades de dispositivo, de rolagem horizontal. Esse
 Especifica a quantidade, em unidades de dispositivo, de rolagem vertical. Esse parâmetro deve ser um valor negativo para rolar para cima.
 
 *lpRect*<br/>
-Aponta para um objeto [CRect](../../atl-mfc-shared/reference/crect-class.md) ou [estrutura RECT](/windows/desktop/api/windef/ns-windef-tagrect) que especifica a parte da área do cliente a ser rolada. Se *lpRect* for nulo, toda a área do cliente será rolada. O cursor será reposicionado se o retângulo do cursor Interseccionar o retângulo de rolagem.
+Aponta para um objeto [CRect](../../atl-mfc-shared/reference/crect-class.md) ou [estrutura RECT](/windows/win32/api/windef/ns-windef-rect) que especifica a parte da área do cliente a ser rolada. Se *lpRect* for nulo, toda a área do cliente será rolada. O cursor será reposicionado se o retângulo do cursor Interseccionar o retângulo de rolagem.
 
 *lpClipRect*<br/>
 Aponta para um `CRect` objeto ou `RECT` uma estrutura que especifica o retângulo de recorte a ser rolado. Somente os bits dentro deste retângulo são rolados. Os bits fora desse retângulo não são afetados mesmo se estiverem no retângulo *lpRect* . Se *lpClipRect* for nulo, nenhum recorte será executado no retângulo de rolagem.
@@ -10976,7 +10976,7 @@ Aponta para um `CRect` objeto ou `RECT` uma estrutura que especifica o retângul
 
 Se o cursor estiver `CWnd` sendo rolado, `ScrollWindow` o ocultará automaticamente o cursor para impedir que ele seja apagado e, em seguida, restaura o cursor após a conclusão da rolagem. A posição do cursor é ajustada de acordo.
 
-A área descoberta pela `ScrollWindow` função membro não é redesenhada, mas é combinada à região de atualização do objeto atual. `CWnd` Eventualmente, o aplicativo receberá uma mensagem [WM_PAINT](/windows/desktop/gdi/wm-paint) notificando que a região precisa de repintura. Para redesenhar a área descoberta ao mesmo tempo em que a rolagem é feita, chame a função de membro [UpdateWindow](#updatewindow) imediatamente após a chamada `ScrollWindow`.
+A área descoberta pela `ScrollWindow` função membro não é redesenhada, mas é combinada à região de atualização do objeto atual. `CWnd` Eventualmente, o aplicativo receberá uma mensagem [WM_PAINT](/windows/win32/gdi/wm-paint) notificando que a região precisa de repintura. Para redesenhar a área descoberta ao mesmo tempo em que a rolagem é feita, chame a função de membro [UpdateWindow](#updatewindow) imediatamente após a chamada `ScrollWindow`.
 
 Se *lpRect* for NULL, as posições das janelas filhas na janela serão compensadas pelo valor especificado por *xAmount* e *yAmount*, e quaisquer áreas inválidas (não pintadas) no `CWnd` também serão deslocadas. `ScrollWindow`é mais rápido quando *lpRect* é nulo.
 
@@ -11006,7 +11006,7 @@ Especifica a quantidade, em unidades de dispositivo, de rolagem horizontal. Esse
 Especifica a quantidade, em unidades de dispositivo, de rolagem vertical. Esse parâmetro deve ter um valor negativo para rolar para cima.
 
 *lpRectScroll*<br/>
-Aponta para uma [estrutura RECT](/windows/desktop/api/windef/ns-windef-tagrect) que especifica a parte da área do cliente a ser rolada. Se esse parâmetro for NULL, toda a área do cliente será rolada.
+Aponta para uma [estrutura RECT](/windows/win32/api/windef/ns-windef-rect) que especifica a parte da área do cliente a ser rolada. Se esse parâmetro for NULL, toda a área do cliente será rolada.
 
 *lpRectClip*<br/>
 Aponta para uma `RECT` estrutura que especifica o retângulo de recorte a ser rolado. Essa estrutura tem precedência sobre o retângulo apontado por *lpRectScroll*. Somente os bits dentro deste retângulo são rolados. Os bits fora desse retângulo não são afetados mesmo se estiverem no retângulo *lpRectScroll* . Se esse parâmetro for nulo, nenhum recorte será executado no retângulo de rolagem.
@@ -11020,11 +11020,11 @@ Aponta para uma `RECT` estrutura que receberá os limites do retângulo invalida
 *flags*<br/>
 Pode ter um dos seguintes valores:
 
-- SW_ERASE quando especificado com SW_INVALIDATE, apaga a região recém invalidada enviando uma mensagem [WM_ERASEBKGND](/windows/desktop/winmsg/wm-erasebkgnd) para a janela.
+- SW_ERASE quando especificado com SW_INVALIDATE, apaga a região recém invalidada enviando uma mensagem [WM_ERASEBKGND](/windows/win32/winmsg/wm-erasebkgnd) para a janela.
 
 - SW_INVALIDATE invalida a região identificada por *prgnUpdate* após a rolagem.
 
-- SW_SCROLLCHILDREN rola todas as janelas filhas que interseccionam o retângulo apontado por *lpRectScroll* pelo número de pixels especificado em *DX* e *DY*. O Windows envia uma mensagem [WM_MOVE](/windows/desktop/winmsg/wm-move) para todas as janelas filhas que interseccionam *lpRectScroll*, mesmo que elas não se movam. O cursor é reposicionado quando uma janela filho é rolada e o retângulo do cursor cruza o retângulo de rolagem.
+- SW_SCROLLCHILDREN rola todas as janelas filhas que interseccionam o retângulo apontado por *lpRectScroll* pelo número de pixels especificado em *DX* e *DY*. O Windows envia uma mensagem [WM_MOVE](/windows/win32/winmsg/wm-move) para todas as janelas filhas que interseccionam *lpRectScroll*, mesmo que elas não se movam. O cursor é reposicionado quando uma janela filho é rolada e o retângulo do cursor cruza o retângulo de rolagem.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -11032,15 +11032,15 @@ O valor de retorno é SIMPLEREGION (região invalidada retangular), COMPLEXREGIO
 
 ### <a name="remarks"></a>Comentários
 
-Essa função é semelhante à função [ScrollWindow](/windows/desktop/api/winuser/nf-winuser-scrollwindow) , com alguns recursos adicionais.
+Essa função é semelhante à função [ScrollWindow](/windows/win32/api/winuser/nf-winuser-scrollwindow) , com alguns recursos adicionais.
 
-Se [SW_INVALIDATE](/windows/desktop/api/winuser/nf-winuser-scrollwindowex) e [SW_ERASE](/windows/desktop/api/winuser/nf-winuser-scrollwindowex) não forem especificados, a `ScrollWindowEx` função de membro não invalidará a área que é rolada para fora de. Se um desses sinalizadores for definido, `ScrollWindowEx` o invalida essa área. A área não é atualizada até que o aplicativo chame a função de membro [UpdateWindow](/windows/desktop/api/winuser/nf-winuser-updatewindow) , chame a função membro [RedrawWindow](/windows/desktop/api/winuser/nf-winuser-redrawwindow) (especificando [RDW_UPDATENOW](/windows/desktop/api/winuser/nf-winuser-redrawwindow) ou [RDW_ERASENOW](/windows/desktop/api/winuser/nf-winuser-redrawwindow)) ou recupere a mensagem [WM_PAINT](/windows/desktop/gdi/wm-paint) de a fila do aplicativo.
+Se [SW_INVALIDATE](/windows/win32/api/winuser/nf-winuser-scrollwindowex) e [SW_ERASE](/windows/win32/api/winuser/nf-winuser-scrollwindowex) não forem especificados, a `ScrollWindowEx` função de membro não invalidará a área que é rolada para fora de. Se um desses sinalizadores for definido, `ScrollWindowEx` o invalida essa área. A área não é atualizada até que o aplicativo chame a função de membro [UpdateWindow](/windows/win32/api/winuser/nf-winuser-updatewindow) , chame a função membro [RedrawWindow](/windows/win32/api/winuser/nf-winuser-redrawwindow) (especificando [RDW_UPDATENOW](/windows/win32/api/winuser/nf-winuser-redrawwindow) ou [RDW_ERASENOW](/windows/win32/api/winuser/nf-winuser-redrawwindow)) ou recupere a mensagem [WM_PAINT](/windows/win32/gdi/wm-paint) de a fila do aplicativo.
 
-Se a janela tiver o estilo [WS_CLIPCHILDREN](/windows/desktop/api/winuser/nf-winuser-createwindowa) , as áreas retornadas especificadas por *prgnUpdate* e *lpRectUpdate* representarão a área total da janela rolada que deve ser atualizada, incluindo quaisquer áreas em janelas filhas que precisam de atualização.
+Se a janela tiver o estilo [WS_CLIPCHILDREN](/windows/win32/api/winuser/nf-winuser-createwindoww) , as áreas retornadas especificadas por *prgnUpdate* e *lpRectUpdate* representarão a área total da janela rolada que deve ser atualizada, incluindo quaisquer áreas em janelas filhas que precisam de atualização.
 
-Se o sinalizador [SW_SCROLLCHILDREN](/windows/desktop/api/winuser/nf-winuser-scrollwindowex) for especificado, o Windows não atualizará corretamente a tela se parte de uma janela filho for rolada. A parte da janela filho rolada que está fora do retângulo de origem não será apagada e não será redesenhada corretamente em seu novo destino. Use a função [DeferWindowPos](/windows/desktop/api/winuser/nf-winuser-deferwindowpos) do Windows para mover as janelas filhas que não se encontram completamente dentro do retângulo de *lpRectScroll* . O cursor será reposicionado se o sinalizador SW_SCROLLCHILDREN estiver definido e o retângulo do cursor Interseccionar o retângulo de rolagem.
+Se o sinalizador [SW_SCROLLCHILDREN](/windows/win32/api/winuser/nf-winuser-scrollwindowex) for especificado, o Windows não atualizará corretamente a tela se parte de uma janela filho for rolada. A parte da janela filho rolada que está fora do retângulo de origem não será apagada e não será redesenhada corretamente em seu novo destino. Use a função [DeferWindowPos](/windows/win32/api/winuser/nf-winuser-deferwindowpos) do Windows para mover as janelas filhas que não se encontram completamente dentro do retângulo de *lpRectScroll* . O cursor será reposicionado se o sinalizador SW_SCROLLCHILDREN estiver definido e o retângulo do cursor Interseccionar o retângulo de rolagem.
 
-Todas as coordenadas de entrada e saída (para *lpRectScroll*, *lpRectClip*, *lpRectUpdate*e *prgnUpdate*) são consideradas nas coordenadas do cliente, independentemente de a janela ter o estilo de classe CS_OWNDC ou CS_CLASSDC. Use as funções do Windows [LPtoDP](/windows/desktop/api/wingdi/nf-wingdi-lptodp) e [DPtoLP](/windows/desktop/api/wingdi/nf-wingdi-dptolp) para converter de e para coordenadas lógicas, se necessário.
+Todas as coordenadas de entrada e saída (para *lpRectScroll*, *lpRectClip*, *lpRectUpdate*e *prgnUpdate*) são consideradas nas coordenadas do cliente, independentemente de a janela ter o estilo de classe CS_OWNDC ou CS_CLASSDC. Use as funções do Windows [LPtoDP](/windows/win32/api/wingdi/nf-wingdi-lptodp) e [DPtoLP](/windows/win32/api/wingdi/nf-wingdi-dptolp) para converter de e para coordenadas lógicas, se necessário.
 
 ##  <a name="sendchildnotifylastmsg"></a>  CWnd::SendChildNotifyLastMsg
 
@@ -11241,7 +11241,7 @@ Um ponteiro para o objeto de janela que recebeu anteriormente todas as entradas 
 
 ### <a name="remarks"></a>Comentários
 
-Quando `CWnd` o não exige mais a entrada do mouse, o aplicativo deve chamar a função [ReleaseCapture](/windows/desktop/api/winuser/nf-winuser-releasecapture) para que outras janelas possam receber entradas do mouse.
+Quando `CWnd` o não exige mais a entrada do mouse, o aplicativo deve chamar a função [ReleaseCapture](/windows/win32/api/winuser/nf-winuser-releasecapture) para que outras janelas possam receber entradas do mouse.
 
 Enquanto a entrada do mouse é capturada, nenhuma mensagem WM_NCHITTEST ou WM_SETCURSOR é enviada para a janela ativa.
 
@@ -11333,7 +11333,7 @@ Especifica se o valor inteiro é assinado ou não assinado. Se esse parâmetro f
 
 ### <a name="remarks"></a>Comentários
 
-`SetDlgItemInt`envia uma mensagem [WM_SETTEXT](/windows/desktop/winmsg/wm-settext) para o controle fornecido.
+`SetDlgItemInt`envia uma mensagem [WM_SETTEXT](/windows/win32/winmsg/wm-settext) para o controle fornecido.
 
 ### <a name="example"></a>Exemplo
 
@@ -11359,7 +11359,7 @@ Aponta para um objeto [CString](../../atl-mfc-shared/reference/cstringt-class.md
 
 ### <a name="remarks"></a>Comentários
 
-`SetDlgItemText`envia uma mensagem [WM_SETTEXT](/windows/desktop/winmsg/wm-settext) para o controle fornecido.
+`SetDlgItemText`envia uma mensagem [WM_SETTEXT](/windows/win32/winmsg/wm-settext) para o controle fornecido.
 
 ### <a name="example"></a>Exemplo
 
@@ -11401,7 +11401,7 @@ Um ponteiro para o objeto Window que anteriormente tinha o foco de entrada. Ser�
 
 O foco de entrada direciona todas as entradas de teclado subsequentes para essa janela. Qualquer janela que anteriormente tinha o foco de entrada a perde.
 
-A `SetFocus` função membro envia uma mensagem [WM_KILLFOCUS](/windows/desktop/inputdev/wm-killfocus) para a janela que perde o foco de entrada e uma mensagem [WM_SETFOCUS](/windows/desktop/inputdev/wm-setfocus) para a janela que recebe o foco de entrada. Ele também ativa a janela ou seu pai.
+A `SetFocus` função membro envia uma mensagem [WM_KILLFOCUS](/windows/win32/inputdev/wm-killfocus) para a janela que perde o foco de entrada e uma mensagem [WM_SETFOCUS](/windows/win32/inputdev/wm-setfocus) para a janela que recebe o foco de entrada. Ele também ativa a janela ou seu pai.
 
 Se a janela atual estiver ativa, mas não tiver o foco (ou seja, nenhuma janela tem o foco), qualquer tecla pressionada produzirá as mensagens [WM_SYSCHAR](#onsyschar), [WM_SYSKEYDOWN](#onsyskeydown)ou [WM_SYSKEYUP](#onsyskeyup).
 
@@ -11474,10 +11474,10 @@ BOOL SetLayeredWindowAttributes(
 Ponteiro para um valor de COLORREF que especifica a chave de cor de transparência a ser usada ao compor a janela em camadas. Todos os pixels pintados pela janela nessa cor serão transparentes. Para gerar um COLORREF, use a macro RGB.
 
 *bAlpha*<br/>
-Valor alfa usado para descrever a opacidade da janela em camadas. Para obter mais informações, consulte `SourceConstantAlpha` o membro da estrutura [BLENDFUNCTION](/windows/desktop/api/wingdi/ns-wingdi-blendfunction) . Quando *bAlpha* é 0, a janela é completamente transparente. Quando *bAlpha* é 255, a janela é opaca.
+Valor alfa usado para descrever a opacidade da janela em camadas. Para obter mais informações, consulte `SourceConstantAlpha` o membro da estrutura [BLENDFUNCTION](/windows/win32/api/wingdi/ns-wingdi-blendfunction) . Quando *bAlpha* é 0, a janela é completamente transparente. Quando *bAlpha* é 255, a janela é opaca.
 
 *dwFlags*<br/>
-Especifica uma ação a ser tomada. Esse parâmetro pode ser um ou mais dos valores a seguir. Para obter uma lista de valores possíveis, consulte [SetLayeredWindowAttributes](/windows/desktop/api/winuser/nf-winuser-setlayeredwindowattributes).
+Especifica uma ação a ser tomada. Esse parâmetro pode ser um ou mais dos valores a seguir. Para obter uma lista de valores possíveis, consulte [SetLayeredWindowAttributes](/windows/win32/api/winuser/nf-winuser-setlayeredwindowattributes).
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -11485,7 +11485,7 @@ Diferente de zero se a função tiver sucesso; caso contrário, 0.
 
 ### <a name="remarks"></a>Comentários
 
-Essa função de membro emula a funcionalidade da função [SetLayeredWindowAttributes](/windows/desktop/api/winuser/nf-winuser-setlayeredwindowattributes), conforme descrito na SDK do Windows.
+Essa função de membro emula a funcionalidade da função [SetLayeredWindowAttributes](/windows/win32/api/winuser/nf-winuser-setlayeredwindowattributes), conforme descrito na SDK do Windows.
 
 ##  <a name="setmenu"></a>  CWnd::SetMenu
 
@@ -11533,7 +11533,7 @@ Esse proprietário pode receber mensagens de comando do objeto de janela atual. 
 
 Geralmente, é útil estabelecer conexões entre objetos de janela que não estão relacionados à hierarquia da janela. Por exemplo, [CToolBar](../../mfc/reference/ctoolbar-class.md) envia notificações para seu proprietário em vez de para seu pai. Isso permite que a barra de ferramentas se torne o filho de uma janela (como uma janela de aplicativo de contêiner OLE) enquanto envia notificações para outra janela (como a janela de quadro in-loco). Além disso, quando uma janela de servidor é desativada ou ativada durante a edição in-loco, qualquer janela pertencente à janela do quadro é oculta ou mostrada. Essa propriedade é definida explicitamente com uma chamada para `SetOwner`.
 
-O conceito de propriedade dessa função é diferente do conceito de propriedade de [GetWindow](/windows/desktop/api/winuser/nf-winuser-getwindow).
+O conceito de propriedade dessa função é diferente do conceito de propriedade de [GetWindow](/windows/win32/api/winuser/nf-winuser-getwindow).
 
 ##  <a name="setparent"></a>  CWnd::SetParent
 
@@ -11743,7 +11743,7 @@ Especifica um identificador de temporizador diferente de zero. Se o identificado
 Especifica o valor de tempo limite, ou intervalo, em milissegundos.
 
 *lpfnTimer*<br/>
-Especifica o endereço da função de retorno de `TimerProc` chamada fornecida pelo aplicativo que processa as mensagens [WM_TIMER](/windows/desktop/winmsg/wm-timer) . Se esse parâmetro for nulo, as mensagens WM_TIMER serão colocadas na fila de mensagens do aplicativo e manipuladas pelo `CWnd` objeto.
+Especifica o endereço da função de retorno de `TimerProc` chamada fornecida pelo aplicativo que processa as mensagens [WM_TIMER](/windows/win32/winmsg/wm-timer) . Se esse parâmetro for nulo, as mensagens WM_TIMER serão colocadas na fila de mensagens do aplicativo e manipuladas pelo `CWnd` objeto.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -11805,7 +11805,7 @@ BOOL SetWindowPlacement(const WINDOWPLACEMENT* lpwndpl);
 ### <a name="parameters"></a>Parâmetros
 
 *lpwndpl*<br/>
-Aponta para uma estrutura [WINDOWPLACEMENT](/windows/desktop/api/winuser/ns-winuser-tagwindowplacement) que especifica o novo estado e as posições da nova exibição.
+Aponta para uma estrutura [WINDOWPLACEMENT](/windows/win32/api/winuser/ns-winuser-windowplacement) que especifica o novo estado e as posições da nova exibição.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -11962,7 +11962,7 @@ Aponta para um objeto [CString](../../atl-mfc-shared/reference/cstringt-class.md
 
 Se a janela for um controle, o texto dentro do controle será definido.
 
-Essa função faz com que uma mensagem [WM_SETTEXT](/windows/desktop/winmsg/wm-settext) seja enviada para essa janela.
+Essa função faz com que uma mensagem [WM_SETTEXT](/windows/win32/winmsg/wm-settext) seja enviada para essa janela.
 
 ### <a name="example"></a>Exemplo
 
@@ -12152,7 +12152,7 @@ void UnlockWindowUpdate();
 
 ### <a name="remarks"></a>Comentários
 
-Somente uma janela por vez pode ser bloqueada usando `LockWindowUpdate`. Consulte [CWnd:: LockWindowUpdate](#lockwindowupdate) ou a função do Win32 [LockWindowUpdate](/windows/desktop/api/winuser/nf-winuser-lockwindowupdate) para obter mais informações sobre o bloqueio do Windows.
+Somente uma janela por vez pode ser bloqueada usando `LockWindowUpdate`. Consulte [CWnd:: LockWindowUpdate](#lockwindowupdate) ou a função do Win32 [LockWindowUpdate](/windows/win32/api/winuser/nf-winuser-lockwindowupdate) para obter mais informações sobre o bloqueio do Windows.
 
 ##  <a name="unsubclasswindow"></a>  CWnd::UnsubclassWindow
 
@@ -12258,10 +12258,10 @@ Se *pDCSrc* for nulo, *PPTSRC* deverá ser nulo.
 Ponteiro para um valor de COLORREF que especifica a chave de cor de transparência a ser usada ao compor a janela em camadas. Todos os pixels pintados pela janela nessa cor serão transparentes. Para gerar um COLORREF, use a macro RGB.
 
 *pblend*<br/>
-Ponteiro para uma estrutura [BLENDFUNCTION](/windows/desktop/api/wingdi/ns-wingdi-blendfunction) que especifica o valor de transparência a ser usado ao compor a janela em camadas.
+Ponteiro para uma estrutura [BLENDFUNCTION](/windows/win32/api/wingdi/ns-wingdi-blendfunction) que especifica o valor de transparência a ser usado ao compor a janela em camadas.
 
 *dwFlags*<br/>
-Especifica uma ação a ser tomada. Esse parâmetro pode ser um ou mais dos valores a seguir. Para obter uma lista de valores possíveis, consulte [UpdateLayeredWindow](/windows/desktop/api/winuser/nf-winuser-updatelayeredwindow).
+Especifica uma ação a ser tomada. Esse parâmetro pode ser um ou mais dos valores a seguir. Para obter uma lista de valores possíveis, consulte [UpdateLayeredWindow](/windows/win32/api/winuser/nf-winuser-updatelayeredwindow).
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -12269,11 +12269,11 @@ Diferente de zero se a função tiver sucesso; caso contrário, 0.
 
 ### <a name="remarks"></a>Comentários
 
-Essa função de membro emula a funcionalidade da função [UpdateLayeredWindow](/windows/desktop/api/winuser/nf-winuser-updatelayeredwindow), conforme descrito na SDK do Windows.
+Essa função de membro emula a funcionalidade da função [UpdateLayeredWindow](/windows/win32/api/winuser/nf-winuser-updatelayeredwindow), conforme descrito na SDK do Windows.
 
 ##  <a name="updatewindow"></a>  CWnd::UpdateWindow
 
-Atualiza a área do cliente enviando uma mensagem [WM_PAINT](/windows/desktop/gdi/wm-paint) se a região de atualização não estiver vazia.
+Atualiza a área do cliente enviando uma mensagem [WM_PAINT](/windows/win32/gdi/wm-paint) se a região de atualização não estiver vazia.
 
 ```
 void UpdateWindow();
@@ -12298,11 +12298,11 @@ void ValidateRect(LPCRECT lpRect);
 ### <a name="parameters"></a>Parâmetros
 
 *lpRect*<br/>
-Aponta para um objeto [CRect](../../atl-mfc-shared/reference/crect-class.md) ou [estrutura RECT](/windows/desktop/api/windef/ns-windef-tagrect) que contém coordenadas de cliente do retângulo a ser removido da região de atualização. Se *lpRect* for nulo, a janela inteira será validada.
+Aponta para um objeto [CRect](../../atl-mfc-shared/reference/crect-class.md) ou [estrutura RECT](/windows/win32/api/windef/ns-windef-rect) que contém coordenadas de cliente do retângulo a ser removido da região de atualização. Se *lpRect* for nulo, a janela inteira será validada.
 
 ### <a name="remarks"></a>Comentários
 
-A função de membro [BeginPaint](#beginpaint) valida automaticamente toda a área do cliente. Nem a `ValidateRect` função de membro nem a [ValidateRgn](#validatergn) deve ser chamada se uma parte da região de atualização precisar ser validada antes da próxima geração de [WM_PAINT](/windows/desktop/gdi/wm-paint) .
+A função de membro [BeginPaint](#beginpaint) valida automaticamente toda a área do cliente. Nem a `ValidateRect` função de membro nem a [ValidateRgn](#validatergn) deve ser chamada se uma parte da região de atualização precisar ser validada antes da próxima geração de [WM_PAINT](/windows/win32/gdi/wm-paint) .
 
 O Windows continua a gerar mensagens WM_PAINT até que a região de atualização atual seja validada.
 
@@ -12323,7 +12323,7 @@ Um ponteiro para um objeto [CRgn](../../mfc/reference/crgn-class.md) que identif
 
 A região fornecida deve ter sido criada anteriormente por uma função de região. As coordenadas de região são consideradas coordenadas do cliente.
 
-A função de membro [BeginPaint](#beginpaint) valida automaticamente toda a área do cliente. Nem o [ValidateRect](#validaterect) nem a `ValidateRgn` função de membro devem ser chamados se uma parte da região de atualização precisar ser validada antes que a próxima mensagem [WM_PAINT](/windows/desktop/gdi/wm-paint) seja gerada.
+A função de membro [BeginPaint](#beginpaint) valida automaticamente toda a área do cliente. Nem o [ValidateRect](#validaterect) nem a `ValidateRgn` função de membro devem ser chamados se uma parte da região de atualização precisar ser validada antes que a próxima mensagem [WM_PAINT](/windows/win32/gdi/wm-paint) seja gerada.
 
 ##  <a name="windowfrompoint"></a>  CWnd::WindowFromPoint
 
@@ -12336,7 +12336,7 @@ static CWnd* PASCAL WindowFromPoint(POINT point);
 ### <a name="parameters"></a>Parâmetros
 
 *point*<br/>
-Especifica um objeto [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) ou uma estrutura de dados de [ponto](/windows/desktop/api/windef/ns-windef-tagpoint) que define o ponto a ser verificado.
+Especifica um objeto [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) ou uma estrutura de dados de [ponto](/windows/win32/api/windef/ns-windef-point) que define o ponto a ser verificado.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -12392,7 +12392,7 @@ virtual void WinHelp(
 Especifica dados adicionais. O valor usado depende do valor do parâmetro *nCmd* .
 
 *nCmd*<br/>
-Especifica o tipo de ajuda solicitada. Para obter uma lista de valores possíveis e como eles afetam o parâmetro *dwData* , consulte a função [WinHelp](/windows/desktop/api/winuser/nf-winuser-winhelpa) Windows no SDK do Windows.
+Especifica o tipo de ajuda solicitada. Para obter uma lista de valores possíveis e como eles afetam o parâmetro *dwData* , consulte a função [WinHelp](/windows/win32/api/winuser/nf-winuser-winhelpw) Windows no SDK do Windows.
 
 ### <a name="remarks"></a>Comentários
 

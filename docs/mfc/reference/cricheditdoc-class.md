@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CRichEditDoc [MFC], GetView
 - CRichEditDoc [MFC], m_bRTF
 ms.assetid: c936ec18-d516-49d4-b7fb-c9aa0229eddc
-ms.openlocfilehash: d296185fe2ea2216f4abe17b191f71b6fa36e1f9
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
-ms.translationtype: HT
+ms.openlocfilehash: def0c55ff1faf12729226aa445c9614119c546c4
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916717"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502669"
 ---
 # <a name="cricheditdoc-class"></a>Classe CRichEditDoc
 
@@ -88,7 +88,7 @@ virtual CRichEditCntrItem* CreateClientItem(REOBJECT* preo = NULL) const = 0;
 ### <a name="parameters"></a>Parâmetros
 
 *preo*<br/>
-Ponteiro para uma estrutura [de reobjeto](/windows/desktop/api/richole/ns-richole-reobject) que descreve um item OLE. O novo `CRichEditCntrItem` objeto é construído com base neste item OLE. Se *preo* for nulo, o novo item de cliente estará vazio.
+Ponteiro para uma estrutura de [reobjeto](/windows/win32/api/richole/ns-richole-reobject) que descreve um item OLE. O novo `CRichEditCntrItem` objeto é construído com base neste item OLE. Se *preo* for nulo, o novo item de cliente estará vazio.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -98,7 +98,7 @@ Ponteiro para um novo objeto [CRichEditCntrItem](../../mfc/reference/cricheditcn
 
 Essa função não executa nenhuma inicialização OLE.
 
-Para obter mais informações, consulte a estrutura [de reobjeto](/windows/desktop/api/richole/ns-richole-reobject) no SDK do Windows.
+Para obter mais informações, consulte a estrutura [de reobjeto](/windows/win32/api/richole/ns-richole-reobject) no SDK do Windows.
 
 ##  <a name="getstreamformat"></a>  CRichEditDoc::GetStreamFormat
 
