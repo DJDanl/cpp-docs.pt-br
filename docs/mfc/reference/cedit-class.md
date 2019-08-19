@@ -94,12 +94,12 @@ helpviewer_keywords:
 - CEdit [MFC], ShowBalloonTip
 - CEdit [MFC], Undo
 ms.assetid: b1533c30-7f10-4663-88d3-8b7f2c9f7024
-ms.openlocfilehash: a66597f7a43e0730ae8b32369235ac860f51a0f1
-ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
-ms.translationtype: MT
+ms.openlocfilehash: ccf7445100977e1205bbcffe230e1919ac33adea
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68375847"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68916134"
 ---
 # <a name="cedit-class"></a>Classe CEdit
 
@@ -175,7 +175,7 @@ Você pode criar um controle de edição a partir de um modelo de caixa de diál
 
 A construção pode ser um processo de uma etapa em uma classe derivada `CEdit`de. Escreva um construtor para a classe derivada e chame `Create` de dentro do construtor.
 
-`CEdit`herda uma funcionalidade significativa `CWnd`do. Para definir e recuperar texto de um `CEdit` objeto, use as `CWnd` funções de membro [SetWindowText](cwnd-class.md#setwindowtext) e [GetWindowText](cwnd-class.md#getwindowtext), que definem ou obtêm todo o conteúdo de um controle de edição, mesmo que ele seja um controle de várias linhas. As linhas de texto em um controle de várias linhas são separadas por sequências de caracteres ' \r\n '. Além disso, se um controle de edição for Multiline, obter e definir parte do texto do controle chamando as `CEdit` funções de membro getline, [SetSel](#setsel), [GetSel](#getsel)e [ReplaceSel](#replacesel). [](#getline)
+`CEdit`herda uma funcionalidade significativa `CWnd`do. Para definir e recuperar texto de um `CEdit` objeto, use as `CWnd` funções de membro [SetWindowText](cwnd-class.md#setwindowtext) e [GetWindowText](cwnd-class.md#getwindowtext), que definem ou obtêm todo o conteúdo de um controle de edição, mesmo que ele seja um controle de várias linhas. As linhas de texto em um controle de várias linhas são separadas por sequências de caracteres ' \r\n '. Além disso, se um controle de edição for Multiline, obter e definir parte do texto do controle chamando as funções de membro `CEdit`[getline](#getline), [SetSel](#setsel), [GetSel](#getsel)e [ReplaceSel](#replacesel).
 
 Se você quiser manipular mensagens de notificação do Windows enviadas por um controle de edição para seu pai (geralmente uma classe `CDialog`derivada de), adicione uma entrada de mapa de mensagem e uma função de membro de manipulador de mensagens à classe pai para cada mensagem.
 
@@ -213,7 +213,7 @@ Se você criar um `CEdit` objeto de um recurso de caixa de diálogo usando o edi
 
 Se você criar um `CEdit` objeto em uma janela, talvez também precise destruí-lo. Se você criar o `CEdit` objeto na pilha, ele será destruído automaticamente. Se você criar o `CEdit` objeto no heap usando a **nova** função, deverá chamar **delete** no objeto para destruí-lo quando o usuário encerrar o controle de edição do Windows. Se você alocar qualquer memória no `CEdit` objeto, substitua o `CEdit` destruidor para descartar as alocações.
 
-Para modificar determinados estilos em um controle de edição (como ES_READONLY), você deve enviar mensagens específicas para o controle em vez [](cwnd-class.md#modifystyle)de usar ModifyStyle. Consulte [Editar estilos de controle](/windows/desktop/Controls/edit-control-styles) na SDK do Windows.
+Para modificar determinados estilos em um controle de edição (como ES_READONLY), você deve enviar mensagens específicas para o controle em vez de usar [ModifyStyle](cwnd-class.md#modifystyle). Consulte [Editar estilos de controle](/windows/desktop/Controls/edit-control-styles) na SDK do Windows.
 
 Para obter mais informações `CEdit`sobre o, consulte [controles](../../mfc/controls-mfc.md).
 
@@ -417,7 +417,7 @@ void EmptyUndoBuffer();
 
 O controle de edição agora não será capaz de desfazer a última operação. O sinalizador de desfazer é definido sempre que uma operação dentro do controle de edição pode ser desfeita.
 
-O sinalizador de desfazer é limpo automaticamente sempre que as [](#sethandle) `CWnd` funções de membro [SetWindowText](../../mfc/reference/cwnd-class.md#setwindowtext) ou SetHandle são chamadas.
+O sinalizador de desfazer é limpo automaticamente sempre que as funções de membro [SetWindowText](../../mfc/reference/cwnd-class.md#setwindowtext) ou [SetHandle](#sethandle) `CWnd` são chamadas.
 
 Para obter mais informações, consulte [EM_EMPTYUNDOBUFFER](/windows/desktop/Controls/em-emptyundobuffer) no SDK do Windows.
 
@@ -686,7 +686,7 @@ Diferente de zero se o conteúdo do controle de edição tiver sido modificado; 
 
 ### <a name="remarks"></a>Comentários
 
-O Windows mantém um sinalizador interno que indica se o conteúdo do controle de edição foi alterado. Esse sinalizador é limpo quando o controle de edição é criado pela primeira vez e também pode ser limpo [](#setmodify) chamando a função de membro SetModify.
+O Windows mantém um sinalizador interno que indica se o conteúdo do controle de edição foi alterado. Esse sinalizador é limpo quando o controle de edição é criado pela primeira vez e também pode ser limpo chamando a função de membro [SetModify](#setmodify).
 
 Para obter mais informações, consulte [EM_GETMODIFY](/windows/desktop/Controls/em-getmodify) no SDK do Windows.
 
@@ -733,7 +733,7 @@ Aponta para a `RECT` estrutura que recebe o retângulo de formatação.
 
 O retângulo de formatação é o retângulo de limitação do texto, que é independente do tamanho da janela de controle de edição.
 
-O retângulo de formatação de um controle de edição de várias linhas pode ser modificado [](#setrect) pelas funções de membro SetRect e [SetRectNP](#setrectnp) .
+O retângulo de formatação de um controle de edição de várias linhas pode ser modificado pelas funções de membro [SetRect](#setrect) e [SetRectNP](#setrectnp) .
 
 Para obter mais informações, consulte [EM_GETRECT](/windows/desktop/Controls/em-getrect) no SDK do Windows.
 
@@ -804,7 +804,7 @@ Especifica o comprimento (em TCHARs) do texto que o usuário pode inserir. Se es
 
 ### <a name="remarks"></a>Comentários
 
-Alterar o limite de texto restringe apenas o texto que o usuário pode inserir. Ele não tem nenhum efeito em nenhum texto que já esteja no controle de edição, nem afeta o tamanho do texto copiado para o controle de edição [](cwnd-class.md#setwindowtext) pela função membro SetWindowText `CWnd`no. Se um aplicativo usar a `SetWindowText` função para posicionar mais texto em um controle de edição do que é especificado na `LimitText`chamada para, o usuário poderá excluir qualquer um dos textos dentro do controle de edição. No entanto, o limite de texto impedirá que o usuário substitua o texto existente por um novo texto, a menos que a exclusão da seleção atual faça com que o texto fique abaixo do limite de texto.
+Alterar o limite de texto restringe apenas o texto que o usuário pode inserir. Ele não tem nenhum efeito em nenhum texto que já esteja no controle de edição, nem afeta o tamanho do texto copiado para o controle de edição [SetWindowText](cwnd-class.md#setwindowtext) pela função membro no `CWnd`. Se um aplicativo usar a `SetWindowText` função para posicionar mais texto em um controle de edição do que é especificado na `LimitText`chamada para, o usuário poderá excluir qualquer um dos textos dentro do controle de edição. No entanto, o limite de texto impedirá que o usuário substitua o texto existente por um novo texto, a menos que a exclusão da seleção atual faça com que o texto fique abaixo do limite de texto.
 
 > [!NOTE]
 >  No Win32 (Windows NT e Windows 95/98), [SetLimitText](#setlimittext) substitui essa função.
@@ -1071,9 +1071,9 @@ O controle de edição usará esse buffer para armazenar o texto atualmente exib
 
 Essa função de membro é processada apenas por controles de edição de várias linhas.
 
-Antes que um aplicativo defina um novo identificador de memória, ele deve [](#gethandle) usar a função de membro GetHandle para obter o identificador para o buffer de memória atual e liberar `LocalFree` essa memória usando a função do Windows.
+Antes que um aplicativo defina um novo identificador de memória, ele deve usar a função de membro [GetHandle](#gethandle) para obter o identificador para o buffer de memória atual e liberar essa memória usando a função do Windows `LocalFree`.
 
-`SetHandle`limpa o buffer de desfazer (a [função de membro](#canundo) cancelar e, em seguida, retorna 0) e o sinalizador [](#getmodify) de modificação interna (a função de membro GetModify, em seguida, retorna 0). A janela de controle de edição é redesenhada.
+`SetHandle`limpa o buffer de desfazer (a função de membro [cancelar](#canundo) e, em seguida,retorna 0) e o sinalizador de modificação interna (a função de membro [GetModify](#getmodify), em seguida, retorna 0). A janela de controle de edição é redesenhada.
 
 Você poderá usar essa função de membro em um controle de edição de várias linhas em uma caixa de diálogo somente se tiver criado a caixa de diálogo com o sinalizador de estilo DS_LOCALEDIT definido.
 
@@ -1124,7 +1124,7 @@ O novo limite de texto, em caracteres.
 
 O limite de texto é a quantidade máxima de texto, em caracteres, que o controle de edição pode aceitar.
 
-Alterar o limite de texto restringe apenas o texto que o usuário pode inserir. Ele não tem nenhum efeito em nenhum texto que já esteja no controle de edição, nem afeta o tamanho do texto copiado para o controle de edição [](cwnd-class.md#setwindowtext) pela função membro SetWindowText `CWnd`no. Se um aplicativo usar a `SetWindowText` função para posicionar mais texto em um controle de edição do que é especificado na `LimitText`chamada para, o usuário poderá excluir qualquer um dos textos dentro do controle de edição. No entanto, o limite de texto impedirá que o usuário substitua o texto existente por um novo texto, a menos que a exclusão da seleção atual faça com que o texto fique abaixo do limite de texto.
+Alterar o limite de texto restringe apenas o texto que o usuário pode inserir. Ele não tem nenhum efeito em nenhum texto que já esteja no controle de edição, nem afeta o tamanho do texto copiado para o controle de edição [SetWindowText](cwnd-class.md#setwindowtext) pela função membro no `CWnd`. Se um aplicativo usar a `SetWindowText` função para posicionar mais texto em um controle de edição do que é especificado na `LimitText`chamada para, o usuário poderá excluir qualquer um dos textos dentro do controle de edição. No entanto, o limite de texto impedirá que o usuário substitua o texto existente por um novo texto, a menos que a exclusão da seleção atual faça com que o texto fique abaixo do limite de texto.
 
 Essa função substitui [LimitText](#limittext) no Win32.
 
@@ -1178,7 +1178,7 @@ Um valor TRUE indica que o texto foi modificado e um valor FALSE indica que ele 
 
 ### <a name="remarks"></a>Comentários
 
-O sinalizador modificado indica se o texto dentro do controle de edição foi modificado ou não. Ele é definido automaticamente sempre que o usuário altera o texto. Seu valor pode ser recuperado com a [](#getmodify) função de membro GetModify.
+O sinalizador modificado indica se o texto dentro do controle de edição foi modificado ou não. Ele é definido automaticamente sempre que o usuário altera o texto. Seu valor pode ser recuperado com a função de membro [GetModify](#getmodify).
 
 Para obter mais informações, consulte [EM_SETMODIFY](/windows/desktop/Controls/em-setmodify) no SDK do Windows.
 
@@ -1400,10 +1400,10 @@ BOOL ShowBalloonTip(
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|*pEditBalloonTip*|no Ponteiro para uma estrutura [EDITBALLOONTIP](/windows/desktop/api/commctrl/ns-commctrl-_tageditballoontip) que descreve a dica de balão.|
+|*pEditBalloonTip*|no Ponteiro para uma estrutura [EDITBALLOONTIP](/windows/desktop/api/commctrl/ns-commctrl-editballoontip) que descreve a dica de balão.|
 |*lpszTitle*|no Ponteiro para uma cadeia de caracteres Unicode que contém o título da dica de balão.|
 |*lpszText*|no Ponteiro para uma cadeia de caracteres Unicode que contém o texto da dica de balão.|
-|*ttiIcon*|no Um **int** que especifica o tipo de ícone a ser associado à dica de balão. O valor padrão é TTI_NONE. Para obter mais informações, consulte `ttiIcon` o membro da estrutura [EDITBALLOONTIP](/windows/desktop/api/commctrl/ns-commctrl-_tageditballoontip) .|
+|*ttiIcon*|no Um **int** que especifica o tipo de ícone a ser associado à dica de balão. O valor padrão é TTI_NONE. Para obter mais informações, consulte `ttiIcon` o membro da estrutura [EDITBALLOONTIP](/windows/desktop/api/commctrl/ns-commctrl-editballoontip) .|
 
 ### <a name="return-value"></a>Valor de retorno
 
