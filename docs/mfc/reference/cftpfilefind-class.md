@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CFtpFileFind [MFC], FindNextFile
 - CFtpFileFind [MFC], GetFileURL
 ms.assetid: 9667cf01-657f-4b11-b9db-f11e5a7b4e4c
-ms.openlocfilehash: 9afe2bf563ffa80a3238548d75efa69178fa1f64
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
-ms.translationtype: HT
+ms.openlocfilehash: 2f4a394e29be135cac95edf6f504d8b066f53414
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916062"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69506243"
 ---
 # <a name="cftpfilefind-class"></a>Classe CFtpFileFind
 
@@ -121,7 +121,7 @@ Os sinalizadores que descrevem como tratar essa sessão. Esses sinalizadores pod
 
 - O INTERNET_FLAG_DONT_CACHE não armazena em cache os dados, seja localmente ou em qualquer gateway.
 
-- INTERNET_FLAG_RAW_DATA substituir o padrão para retornar os dados brutos (estruturas [WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-win32_find_dataa) para FTP).
+- INTERNET_FLAG_RAW_DATA substituir o padrão para retornar os dados brutos (estruturas [WIN32_FIND_DATA](/windows/win32/api/minwinbase/ns-minwinbase-win32_find_dataw) para FTP).
 
 - O INTERNET_FLAG_SECURE protege as transações na transmissão com protocolo SSL ou PCT. Esse sinalizador é aplicável somente a solicitações HTTP.
 
@@ -129,7 +129,7 @@ Os sinalizadores que descrevem como tratar essa sessão. Esses sinalizadores pod
 
 ### <a name="return-value"></a>Valor de retorno
 
-Diferente de zero, se for bem-sucedido; caso contrário, 0. Para obter informações de erro estendidas, chame a função [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) do Win32.
+Diferente de zero, se for bem-sucedido; caso contrário, 0. Para obter informações de erro estendidas, chame a função do Win32 [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror).
 
 ### <a name="remarks"></a>Comentários
 
@@ -149,13 +149,13 @@ virtual BOOL FindNextFile();
 
 ### <a name="return-value"></a>Valor de retorno
 
-Diferente de zero se houver mais arquivos; zero se o arquivo encontrado for o último no diretório ou se ocorreu um erro. Para obter informações de erro estendidas, chame a função [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) do Win32. Se o arquivo encontrado for o último arquivo no diretório ou se nenhum arquivo correspondente puder ser encontrado, a `GetLastError` função retornará ERROR_NO_MORE_FILES.
+Diferente de zero se houver mais arquivos; zero se o arquivo encontrado for o último no diretório ou se ocorreu um erro. Para obter informações de erro estendidas, chame a função do Win32 [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror). Se o arquivo encontrado for o último arquivo no diretório ou se nenhum arquivo correspondente puder ser encontrado, a `GetLastError` função retornará ERROR_NO_MORE_FILES.
 
 ### <a name="remarks"></a>Comentários
 
 Você deve chamar essa função pelo menos uma vez antes de chamar qualquer função de atributo (consulte [CFileFind:: FindNextFile](../../mfc/reference/cfilefind-class.md#findnextfile)).
 
-`FindNextFile`encapsula a função do Win32 [FindNextFile](/windows/desktop/api/fileapi/nf-fileapi-findnextfilea).
+`FindNextFile`encapsula a função do Win32 [FindNextFile](/windows/win32/api/fileapi/nf-fileapi-findnextfilew).
 
 ### <a name="example"></a>Exemplo
 

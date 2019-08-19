@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CHttpFile [MFC], SendRequest
 - CHttpFile [MFC], SendRequestEx
 ms.assetid: 399e7c68-bbce-4374-8c55-206e9c7baac6
-ms.openlocfilehash: ff050a89a10c68c639c141891dd51b1b2d58e105
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
-ms.translationtype: HT
+ms.openlocfilehash: 0c8c401b43361a5e1472e3470f5ea452c91b957f
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915993"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69505957"
 ---
 # <a name="chttpfile-class"></a>Classe CHttpFile
 
@@ -126,7 +126,7 @@ Uma referência a um objeto [CString](../../atl-mfc-shared/reference/cstringt-cl
 
 ### <a name="return-value"></a>Valor de retorno
 
-Diferente de zero, se for bem-sucedido; caso contrário, 0. Se a chamada falhar, a função do Win32 [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) poderá ser chamada para determinar a causa do erro.
+Diferente de zero, se for bem-sucedido; caso contrário, 0. Se a chamada falhar, a função do Win32 [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror) poderá ser chamada para determinar a causa do erro.
 
 ### <a name="remarks"></a>Comentários
 
@@ -198,10 +198,10 @@ BOOL EndRequest(
 ### <a name="parameters"></a>Parâmetros
 
 *dwFlags*<br/>
-Sinalizadores que descrevem a operação. Para obter uma lista dos sinalizadores apropriados, consulte [HttpEndRequest](/windows/desktop/api/wininet/nf-wininet-httpendrequesta) no SDK do Windows.
+Sinalizadores que descrevem a operação. Para obter uma lista dos sinalizadores apropriados, consulte [HttpEndRequest](/windows/win32/api/wininet/nf-wininet-httpendrequestw) no SDK do Windows.
 
 *lpBuffIn*<br/>
-Ponteiro para um [INTERNET_BUFFERS](/windows/desktop/api/wininet/ns-wininet-internet_buffersa) inicializado que descreve o buffer de entrada usado para a operação.
+Ponteiro para um [INTERNET_BUFFERS](/windows/win32/api/wininet/ns-wininet-internet_buffersw) inicializado que descreve o buffer de entrada usado para a operação.
 
 *dwContext*<br/>
 O identificador de contexto para `CHttpFile` a operação. Consulte comentários para obter mais informações sobre esse parâmetro.
@@ -293,7 +293,7 @@ Uma combinação do atributo a ser consultada e os seguintes sinalizadores que e
 
 - HTTP_QUERY_FLAG_REQUEST_HEADERS normalmente, o aplicativo consulta os cabeçalhos de resposta, mas um aplicativo também pode consultar cabeçalhos de solicitação usando esse sinalizador.
 
-- HTTP_QUERY_FLAG_SYSTEMTIME para os cabeçalhos cujo valor é uma cadeia de caracteres de data/hora, como "Last-Modified-Time", esse sinalizador retorna o valor do cabeçalho como uma estrutura padrão do Win32 [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) que não exige que o aplicativo analise os dados. Se você usar esse sinalizador, talvez queira usar a `SYSTEMTIME` substituição da função.
+- HTTP_QUERY_FLAG_SYSTEMTIME para os cabeçalhos cujo valor é uma cadeia de caracteres de data/hora, como "Last-Modified-Time", esse sinalizador retorna o valor do cabeçalho como uma estrutura padrão do Win32 [SYSTEMTIME](/windows/win32/api/minwinbase/ns-minwinbase-systemtime) que não exige que o aplicativo analise os dados. Se você usar esse sinalizador, talvez queira usar a `SYSTEMTIME` substituição da função.
 
 - HTTP_QUERY_FLAG_NUMBER para os cabeçalhos cujo valor é um número, como o código de status, esse sinalizador retorna os dados como um número de 32 bits.
 
@@ -315,11 +315,11 @@ Uma referência ao objeto [CString](../../atl-mfc-shared/reference/cstringt-clas
 Um valor de índice. Consulte *lpdwIndex*.
 
 *pSysTime*<br/>
-Um ponteiro para uma estrutura [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) do Win32.
+Um ponteiro para uma estrutura [SYSTEMTIME](/windows/win32/api/minwinbase/ns-minwinbase-systemtime) do Win32.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Diferente de zero, se for bem-sucedido; caso contrário, 0. Se a chamada falhar, a função do Win32 [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) poderá ser chamada para determinar a causa do erro.
+Diferente de zero, se for bem-sucedido; caso contrário, 0. Se a chamada falhar, a função do Win32 [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror) poderá ser chamada para determinar a causa do erro.
 
 ### <a name="remarks"></a>Comentários
 
@@ -398,7 +398,7 @@ Uma referência a um código de status. Os códigos de status indicam o êxito o
 
 ### <a name="return-value"></a>Valor de retorno
 
-Diferente de zero, se for bem-sucedido; caso contrário, 0. Se a chamada falhar, a função do Win32 [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) poderá ser chamada para determinar a causa do erro.
+Diferente de zero, se for bem-sucedido; caso contrário, 0. Se a chamada falhar, a função do Win32 [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror) poderá ser chamada para determinar a causa do erro.
 
 ### <a name="remarks"></a>Comentários
 
@@ -485,13 +485,13 @@ BOOL SendRequestEx(
 Número de bytes a serem enviados na solicitação.
 
 *dwFlags*<br/>
-Sinalizadores que descrevem a operação. Para obter uma lista de sinalizadores apropriados, consulte [HttpSendRequestEx](/windows/desktop/api/wininet/nf-wininet-httpsendrequestexa) no SDK do Windows.
+Sinalizadores que descrevem a operação. Para obter uma lista de sinalizadores apropriados, consulte [HttpSendRequestEx](/windows/win32/api/wininet/nf-wininet-httpsendrequestexw) no SDK do Windows.
 
 *dwContext*<br/>
 O identificador de contexto para `CHttpFile` a operação. Consulte comentários para obter mais informações sobre esse parâmetro.
 
 *lpBuffIn*<br/>
-Ponteiro para um [INTERNET_BUFFERS](/windows/desktop/api/wininet/ns-wininet-internet_buffersa) inicializado que descreve o buffer de entrada usado para a operação.
+Ponteiro para um [INTERNET_BUFFERS](/windows/win32/api/wininet/ns-wininet-internet_buffersw) inicializado que descreve o buffer de entrada usado para a operação.
 
 *lpBuffOut*<br/>
 Ponteiro para um INTERNET_BUFFERS inicializado que descreve o buffer de saída usado para a operação.

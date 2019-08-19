@@ -52,12 +52,12 @@ helpviewer_keywords:
 - CPropertySheet [MFC], SetWizardMode
 - CPropertySheet [MFC], m_psh
 ms.assetid: 8461ccff-d14f-46e0-a746-42ad642ef94e
-ms.openlocfilehash: edae0e3d4751461bc8a5eb6644f5fdc62b0a5e8a
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
-ms.translationtype: HT
+ms.openlocfilehash: 23d17aee2aacbc1484c0f3e181bc824546ab49a2
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916855"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502819"
 ---
 # <a name="cpropertysheet-class"></a>Classe CPropertySheet
 
@@ -107,13 +107,13 @@ class CPropertySheet : public CWnd
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CPropertySheet::m_psh](#m_psh)|A estrutura [PROPSHEETHEADER](/windows/desktop/api/prsht/ns-prsht-propsheetheadera_v2) do Windows. Fornece acesso aos parâmetros básicos da folha de propriedades.|
+|[CPropertySheet::m_psh](#m_psh)|A estrutura [PROPSHEETHEADER](/windows/win32/api/prsht/ns-prsht-propsheetheadera_v2) do Windows. Fornece acesso aos parâmetros básicos da folha de propriedades.|
 
 ## <a name="remarks"></a>Comentários
 
 Uma folha de propriedades consiste em `CPropertySheet` um objeto e um ou mais objetos [CPropertyPage](../../mfc/reference/cpropertypage-class.md) . A estrutura exibe uma folha de propriedades como uma janela com um conjunto de índices de tabulação e uma área que contém a página atualmente selecionada. O usuário navega para uma página específica usando a guia apropriada.
 
-`CPropertySheet`fornece suporte para a estrutura expandida do [PROPSHEETHEADER](/windows/desktop/api/prsht/ns-prsht-propsheetheadera_v2) introduzida no Windows 98 e no windows NT 2000. A estrutura contém sinalizadores e membros adicionais que dão suporte ao uso de um bitmap de plano de fundo "marca d' água".
+`CPropertySheet`fornece suporte para a estrutura expandida do [PROPSHEETHEADER](/windows/win32/api/prsht/ns-prsht-propsheetheadera_v2) introduzida no Windows 98 e no windows NT 2000. A estrutura contém sinalizadores e membros adicionais que dão suporte ao uso de um bitmap de plano de fundo "marca d' água".
 
 Para exibir essas novas imagens automaticamente em seu objeto de folha de propriedades, passe os valores válidos para as imagens de bitmap e paleta na chamada para [CPropertySheet:: Construct](#construct) ou [CPropertySheet:: CPropertySheet](#cpropertysheet).
 
@@ -584,7 +584,7 @@ Por exemplo, chame essa função de membro se desejar adicionar bitmaps a cada u
 
 ##  <a name="m_psh"></a>CPropertySheet::m_psh
 
-Uma estrutura cujos membros armazenam as características de [PROPSHEETHEADER](/windows/desktop/api/prsht/ns-prsht-propsheetheadera_v2).
+Uma estrutura cujos membros armazenam as características de [PROPSHEETHEADER](/windows/win32/api/prsht/ns-prsht-propsheetheadera_v2).
 
 ### <a name="remarks"></a>Comentários
 
@@ -613,7 +613,7 @@ Aponta para uma estrutura [Rect](/previous-versions/dd162897\(v=vs.85\)) ou um o
 
 As unidades da caixa de diálogo são indicadas em termos da unidade base da caixa de diálogo atual derivada da largura média e da altura dos caracteres na fonte usada para o texto da caixa de diálogo. Uma unidade horizontal é uma quarta da unidade de largura base da caixa de diálogo e uma unidade vertical é um oitavo da unidade de altura base da caixa de diálogo.
 
-A função [GetDialogBaseUnits](/windows/desktop/api/winuser/nf-winuser-getdialogbaseunits) do Windows retorna informações de tamanho para a fonte do sistema, mas você pode especificar uma fonte diferente para cada folha de propriedades se usar o estilo DS_SETFONT no arquivo de definição de recurso. A função [MapDialogRect](/windows/desktop/api/winuser/nf-winuser-mapdialogrect) do Windows, descrita na SDK do Windows, usa a fonte apropriada para essa caixa de diálogo.
+A função [GetDialogBaseUnits](/windows/win32/api/winuser/nf-winuser-getdialogbaseunits) do Windows retorna informações de tamanho para a fonte do sistema, mas você pode especificar uma fonte diferente para cada folha de propriedades se usar o estilo DS_SETFONT no arquivo de definição de recurso. A função [MapDialogRect](/windows/win32/api/winuser/nf-winuser-mapdialogrect) do Windows, descrita na SDK do Windows, usa a fonte apropriada para essa caixa de diálogo.
 
 A `MapDialogRect` função membro substitui as unidades da caixa de diálogo em *lpRect* por unidades de tela (pixels) para que o retângulo possa ser usado para criar uma caixa de diálogo ou posicionar um controle dentro de uma caixa.
 
@@ -666,9 +666,9 @@ Nnovo Identifica o botão a ser pressionado. Esse parâmetro pode ser um dos seg
 
 ### <a name="remarks"></a>Comentários
 
-Consulte [PSM_PRESSBUTTON](/windows/desktop/Controls/psm-pressbutton) para obter mais informações sobre a mensagem de PRESSBUTTON do SDK do Windows.
+Consulte [PSM_PRESSBUTTON](/windows/win32/Controls/psm-pressbutton) para obter mais informações sobre a mensagem de PRESSBUTTON do SDK do Windows.
 
-Uma chamada para `PressButton` não enviará a notificação [PSN_APPLY](/windows/desktop/Controls/psn-apply) de uma página de propriedades para a estrutura. Para enviar essa notificação, chame [CPropertyPage:: OnOK](../../mfc/reference/cpropertypage-class.md#onok).
+Uma chamada para `PressButton` não enviará a notificação [PSN_APPLY](/windows/win32/Controls/psn-apply) de uma página de propriedades para a estrutura. Para enviar essa notificação, chame [CPropertyPage:: OnOK](../../mfc/reference/cpropertypage-class.md#onok).
 
 ### <a name="example"></a>Exemplo
 

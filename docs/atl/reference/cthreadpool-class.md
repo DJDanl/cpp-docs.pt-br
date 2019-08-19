@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - CThreadPool class
 ms.assetid: 06683718-01b9-413c-9481-2dc1734ec70f
-ms.openlocfilehash: 07fd470a6aeab0575f2733d72650bd695b8e2752
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
-ms.translationtype: HT
+ms.openlocfilehash: f0b732efdce5cf04349f468363b8d86621d90204
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915683"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496301"
 ---
 # <a name="cthreadpool-class"></a>Classe CThreadPool
 
@@ -78,7 +78,7 @@ Os threads no pool são criados e destruídos quando o pool é inicializado, red
 
 Imediatamente após a criação de um thread, *Worker*:`Initialize` : será chamado no objeto associado a esse thread. Imediatamente antes da destruição de um thread, *Worker*:`Terminate` : será chamado. Ambos os métodos devem aceitar um argumento **void** <strong>\*</strong> . O valor desse argumento é passado para o pool de threads por meio do parâmetro *pvWorkerParam* de [CThreadPool:: Initialize](#initialize).
 
-Quando há itens de trabalho na fila e threads de trabalho disponíveis para trabalho, um thread de trabalho efetuará pull de um item da fila `Execute` e chamará o método do objeto de *trabalho* para esse thread. Três itens são passados para o método: o item da fila, `pvWorkerParam` o mesmo passado para *Worker*:: `Initialize` e *Worker*:: `Terminate`e um ponteiro para a estrutura [sobreposta](/windows/desktop/api/minwinbase/ns-minwinbase-overlapped) usada para a fila de portas de conclusão de e/s .
+Quando há itens de trabalho na fila e threads de trabalho disponíveis para trabalho, um thread de trabalho efetuará pull de um item da fila `Execute` e chamará o método do objeto de *trabalho* para esse thread. Três itens são passados para o método: o item da fila, `pvWorkerParam` o mesmo passado para *Worker*:: `Initialize` e *Worker*:: `Terminate`e um ponteiro para a estrutura [sobreposta](/windows/win32/api/minwinbase/ns-minwinbase-overlapped) usada para a fila de portas de conclusão de e/s .
 
 A classe *Worker* declara o tipo dos itens que serão enfileirados no pool de threads fornecendo um typedef, *Worker*:: `RequestType`. Esse tipo deve ser capaz de ser convertido de e para um ULONG_PTR.
 
@@ -344,7 +344,7 @@ O tempo máximo solicitado em milissegundos que o pool de threads aguardará at�
 
 ### <a name="remarks"></a>Comentários
 
-Esse método posta uma solicitação de desligamento para todos os threads no pool. Se o tempo limite expirar, esse método chamará [TerminateThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-terminatethread) em qualquer thread que não foi encerrado. Esse método é chamado automaticamente do destruidor da classe.
+Esse método posta uma solicitação de desligamento para todos os threads no pool. Se o tempo limite expirar, esse método chamará [TerminateThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-terminatethread) em qualquer thread que não foi encerrado. Esse método é chamado automaticamente do destruidor da classe.
 
 ## <a name="see-also"></a>Consulte também
 

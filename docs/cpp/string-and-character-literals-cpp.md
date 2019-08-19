@@ -14,12 +14,12 @@ helpviewer_keywords:
 - literal strings [C++]
 - string literals [C++]
 ms.assetid: 61de8f6f-2714-4e7b-86b6-a3f885d3b9df
-ms.openlocfilehash: df690bea81b9799b30ae91313ce7157400ef8413
-ms.sourcegitcommit: bd7ddc044f9083246614b602ef6a758775313214
-ms.translationtype: HT
+ms.openlocfilehash: e7f0d4291aeb2e3d8dc1eac4dd08ef3e961468ff
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68866089"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498524"
 ---
 # <a name="string-and-character-literals-c"></a>Cadeias de caracteres e literais de caracteres (C++)
 
@@ -216,7 +216,7 @@ char u5 = '\U00000041'; // \U UCN 'A'
 
 Os nomes de caracteres universais não podem codificar valores no intervalo de ponto de código substituto D800-DFFF. Para pares de substitutos Unicode, especifique o nome do caractere `\UNNNNNNNN`universal usando, em que NNNNNNNN é o ponto de código de oito dígitos para o caractere. O compilador gera um par substituto, se necessário.
 
-No C++ 03, a linguagem permitia apenas um subconjunto de caracteres a ser representado por seus nomes de caracteres universais e permitia alguns nomes de caracteres universais que realmente não representaram nenhum caractere Unicode válido. Esse erro foi corrigido no padrão C++ 11. No C++ 11, os literais de caractere e de cadeia de caracteres e os identificadores podem usar nomes de caracteres universais.  Para obter mais informações sobre nomes de caracteres universais, consulte [conjuntos de caracteres](../cpp/character-sets.md). Para obter mais informações sobre Unicode, consulte [Unicode](https://msdn.microsoft.com/library/dd374081). Para obter mais informações sobre pares substitutos, consulte [pares substitutos e caracteres suplementares](/windows/desktop/Intl/surrogates-and-supplementary-characters).
+No C++ 03, a linguagem permitia apenas um subconjunto de caracteres a ser representado por seus nomes de caracteres universais e permitia alguns nomes de caracteres universais que realmente não representaram nenhum caractere Unicode válido. Esse erro foi corrigido no padrão C++ 11. No C++ 11, os literais de caractere e de cadeia de caracteres e os identificadores podem usar nomes de caracteres universais.  Para obter mais informações sobre nomes de caracteres universais, consulte [conjuntos de caracteres](../cpp/character-sets.md). Para obter mais informações sobre Unicode, consulte [Unicode](/windows/win32/intl/unicode). Para obter mais informações sobre pares substitutos, consulte [pares substitutos e caracteres suplementares](/windows/win32/Intl/surrogates-and-supplementary-characters).
 
 ## <a name="string-literals"></a>Literais de cadeia de caracteres
 

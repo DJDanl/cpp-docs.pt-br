@@ -11,12 +11,12 @@ helpviewer_keywords:
 - MFC, exceptions
 - exceptions [MFC], MFC throwing functions
 ms.assetid: 26d4457c-8350-48f5-916e-78f919787c30
-ms.openlocfilehash: 337fe03ab09a6ed3da283f45dd4eb58aaaad5bc5
-ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
-ms.translationtype: HT
+ms.openlocfilehash: d33da7a9bc81f9733df840a87fbbbeca1e02cc04
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68957495"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502555"
 ---
 # <a name="exception-processing"></a>Processamento de exceção
 
@@ -380,7 +380,7 @@ void AfxThrowMemoryException();
 
 ### <a name="remarks"></a>Comentários
 
-Chame essa função se as chamadas para alocadores de memória do sistema subjacentes (como **malloc** e a função [GlobalAlloc](/windows/desktop/api/winbase/nf-winbase-globalalloc) do Windows) falharem. Você não precisa chamá-lo para **novo** porque **New** gerará uma exceção de memória automaticamente se a alocação de memória falhar.
+Chame essa função se as chamadas para alocadores de memória do sistema subjacentes (como **malloc** e a função [GlobalAlloc](/windows/win32/api/winbase/nf-winbase-globalalloc) do Windows) falharem. Você não precisa chamá-lo para **novo** porque **New** gerará uma exceção de memória automaticamente se a alocação de memória falhar.
 
 ### <a name="requirements"></a>Requisitos
 
@@ -491,7 +491,7 @@ Identificador para um código de resultado que indica o motivo da exceção.
 
 ### <a name="remarks"></a>Comentários
 
-A versão que recebe um HRESULT como um argumento converte esse código de resultado no SCODE correspondente. Para obter mais informações sobre HRESULT e SCODE, consulte [estrutura de códigos de erro com](/windows/desktop/com/structure-of-com-error-codes) no SDK do Windows.
+A versão que recebe um HRESULT como um argumento converte esse código de resultado no SCODE correspondente. Para obter mais informações sobre HRESULT e SCODE, consulte [estrutura de códigos de erro com](/windows/win32/com/structure-of-com-error-codes) no SDK do Windows.
 
 ### <a name="requirements"></a>Requisitos
 
