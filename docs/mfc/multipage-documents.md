@@ -25,12 +25,12 @@ helpviewer_keywords:
 - printing [MFC], pagination
 - documents [MFC], paginating
 ms.assetid: 69626b86-73ac-4b74-b126-9955034835ef
-ms.openlocfilehash: 81e03657977d31827c5c7c3d3272e3d4255a4a8b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7ef4267c311c1de516f75c3b54677adfbfaba5c9
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62238459"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68916435"
 ---
 # <a name="multipage-documents"></a>Documentos multipágina
 
@@ -38,86 +38,86 @@ Este artigo descreve o protocolo de impressão do Windows e explica como imprimi
 
 - [Protocolo de impressão](#_core_the_printing_protocol)
 
-- [Substituindo funções de exibição de classe](#_core_overriding_view_class_functions)
+- [Substituindo funções de classe de exibição](#_core_overriding_view_class_functions)
 
-- [Paginação](#_core_pagination)
+- [Pagina](#_core_pagination)
 
-- [Páginas de impressora vs. páginas do documento](#_core_printer_pages_vs.._document_pages)
+- [Páginas da impressora versus páginas do documento](#_core_printer_pages_vs.._document_pages)
 
 - [Paginação de tempo de impressão](#_core_print.2d.time_pagination)
 
-##  <a name="_core_the_printing_protocol"></a> O protocolo de impressão
+##  <a name="_core_the_printing_protocol"></a>O protocolo de impressão
 
-Para imprimir um documento de várias páginas, o framework e o modo de exibição interagem da seguinte maneira. Primeiro o framework exibe a **impressão** caixa de diálogo, cria um contexto de dispositivo para a impressora e chama o [StartDoc](../mfc/reference/cdc-class.md#startdoc) função de membro da [CDC](../mfc/reference/cdc-class.md) objeto. Em seguida, para cada página do documento, o framework chama o [StartPage](../mfc/reference/cdc-class.md#startpage) função de membro da `CDC` objeto, instrui o objeto de exibição para imprimir a página e chamadas a [EndPage](../mfc/reference/cdc-class.md#endpage) função de membro. Se o modo de impressora deve ser alterado antes de iniciar uma página específica, o modo de exibição chama [ResetDC](../mfc/reference/cdc-class.md#resetdc), quais atualizações a [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) estrutura que contém as novas informações de modo de impressora. Quando todo o documento tiver sido impresso, o framework chama o [EndDoc](../mfc/reference/cdc-class.md#enddoc) função de membro.
+Para imprimir um documento de multipáginas, a estrutura e a exibição interagem da seguinte maneira. Primeiro, a estrutura exibe a caixa de diálogo **Imprimir** , cria um contexto de dispositivo para a impressora e chama a função de membro [StartDoc](../mfc/reference/cdc-class.md#startdoc) do objeto [CDC](../mfc/reference/cdc-class.md) . Em seguida, para cada página do documento, a estrutura chama a função de membro [Startpage](../mfc/reference/cdc-class.md#startpage) do objeto `CDC`, instrui o objeto View para imprimir a página e chama a função de membro [EndPage](../mfc/reference/cdc-class.md#endpage). Se o modo de impressora precisar ser alterado antes de iniciar uma página específica, a exibição chamará [ResetDC](../mfc/reference/cdc-class.md#resetdc), que atualizará a estrutura [DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea) que contém as novas informações do modo de impressora. Quando todo o documento tiver sido impresso, a estrutura chamará a função de membro [EndDoc](../mfc/reference/cdc-class.md#enddoc) .
 
-##  <a name="_core_overriding_view_class_functions"></a> Substituindo funções de exibição de classe
+##  <a name="_core_overriding_view_class_functions"></a>Substituindo funções de classe de exibição
 
-O [CView](../mfc/reference/cview-class.md) classe define várias funções de membro que chamado pelo framework durante a impressão. Ao substituir essas funções em sua classe de exibição, você deve fornecer as conexões entre a lógica de impressão da estrutura e a lógica de impressão da sua classe de exibição. A tabela a seguir lista essas funções de membro.
+A classe [cvisualização](../mfc/reference/cview-class.md) define várias funções de membro que são chamadas pelo Framework durante a impressão. Ao substituir essas funções em sua classe View, você fornece as conexões entre a lógica de impressão da estrutura e a lógica de impressão da sua classe View. A tabela a seguir lista essas funções de membro.
 
-### <a name="cviews-overridable-functions-for-printing"></a>Funções de substituível do CView para impressão
+### <a name="cviews-overridable-functions-for-printing"></a>Funções substituíveis do Cvisualização para impressão
 
-|Nome|Motivo para substituição|
+|Nome|Motivo da substituição|
 |----------|---------------------------|
-|[OnPreparePrinting](../mfc/reference/cview-class.md#onprepareprinting)|Para inserir valores na caixa de diálogo Imprimir, especialmente o tamanho do documento|
+|[OnPreparePrinting](../mfc/reference/cview-class.md#onprepareprinting)|Para inserir valores na caixa de diálogo Imprimir, especialmente o comprimento do documento|
 |[OnBeginPrinting](../mfc/reference/cview-class.md#onbeginprinting)|Para alocar fontes ou outros recursos GDI|
-|[OnPrepareDC](../mfc/reference/cview-class.md#onpreparedc)|Para ajustar os atributos do contexto do dispositivo para uma determinada página, ou para fazer a paginação de tempo de impressão|
-|[OnPrint](../mfc/reference/cview-class.md#onprint)|Para uma determinada página de impressão|
+|[OnPrepareDC](../mfc/reference/cview-class.md#onpreparedc)|Para ajustar os atributos do contexto do dispositivo para uma determinada página ou para a paginação do tempo de impressão|
+|[OnPrint](../mfc/reference/cview-class.md#onprint)|Para imprimir uma determinada página|
 |[OnEndPrinting](../mfc/reference/cview-class.md#onendprinting)|Para desalocar recursos GDI|
 
-Você pode fazer o processamento relacionados à impressão em outras funções, bem, mas essas funções são aqueles que orientam o processo de impressão.
+Você pode fazer o processamento relacionado à impressão em outras funções também, mas essas funções são aquelas que orientam o processo de impressão.
 
-A figura a seguir ilustra as etapas envolvidas no processo de impressão e mostra onde cada um dos `CView`impressão do membro são chamadas de funções. O restante deste artigo explica a maioria dessas etapas mais detalhadamente. Outras partes do processo de impressão são descritas no artigo [alocar recursos de GDI](../mfc/allocating-gdi-resources.md).
+A figura a seguir ilustra as etapas envolvidas no processo de impressão e mostra onde cada `CView`uma das funções de membro de impressão são chamadas. O restante deste artigo explica a maioria dessas etapas mais detalhadamente. Partes adicionais do processo de impressão são descritas no artigo [alocando recursos GDI](../mfc/allocating-gdi-resources.md).
 
-![Imprimindo o processo de loop](../mfc/media/vc37c71.gif "processo de loop de impressão") <br/>
-O Loop de impressão
+![Processo de loop de impressão](../mfc/media/vc37c71.gif "Processo de loop de impressão") <br/>
+O loop de impressão
 
-##  <a name="_core_pagination"></a> Paginação
+##  <a name="_core_pagination"></a>Pagina
 
-O framework armazena grande parte das informações sobre um trabalho de impressão em um [CPrintInfo](../mfc/reference/cprintinfo-structure.md) estrutura. Muitos dos valores no `CPrintInfo` pertencem à paginação; esses valores são acessíveis como mostrado na tabela a seguir.
+A estrutura armazena grande parte das informações sobre um trabalho de impressão em uma estrutura [CPrintInfo](../mfc/reference/cprintinfo-structure.md) . Vários dos valores em `CPrintInfo` pertencem à paginação; esses valores são acessíveis como mostrado na tabela a seguir.
 
-### <a name="page-number-information-stored-in-cprintinfo"></a>Informações de número de páginas armazenadas em CPrintInfo
+### <a name="page-number-information-stored-in-cprintinfo"></a>Informações de número de página armazenadas no CPrintInfo
 
-|Variável de membro ou<br /><br /> nomes de função|Número da página referenciado|
+|Variável de membro ou<br /><br /> nome (s) da função|Número de página referenciado|
 |-----------------------------------------------|----------------------------|
 |`GetMinPage`/`SetMinPage`|Primeira página do documento|
 |`GetMaxPage`/`SetMaxPage`|Última página do documento|
 |`GetFromPage`|Primeira página a ser impressa|
 |`GetToPage`|Última página a ser impressa|
-|`m_nCurPage`|Página que está sendo impressa|
+|`m_nCurPage`|Página sendo impressa no momento|
 
-Início de números de página em 1, ou seja, a primeira página é numerada 1, não em 0. Para obter mais informações sobre esses e outros membros da [CPrintInfo](../mfc/reference/cprintinfo-structure.md), consulte o *referência da MFC*.
+Os números de página começam em 1, ou seja, a primeira página é numerada 1, não 0. Para obter mais informações sobre esses e outros membros de [CPrintInfo](../mfc/reference/cprintinfo-structure.md), consulte a *referência do MFC*.
 
-No início do processo de impressão, o framework chama o modo de exibição [OnPreparePrinting](../mfc/reference/cview-class.md#onprepareprinting) função de membro, passando um ponteiro para um `CPrintInfo` estrutura. O Assistente de aplicativo fornece uma implementação de `OnPreparePrinting` que chama [DoPreparePrinting](../mfc/reference/cview-class.md#doprepareprinting), outra função de membro de `CView`. `DoPreparePrinting` é a função que exibe a caixa de diálogo Imprimir e cria um contexto de dispositivo de impressora.
+No início do processo de impressão, a estrutura chama a função de membro [OnPreparePrinting](../mfc/reference/cview-class.md#onprepareprinting) da exibição, passando um ponteiro para uma `CPrintInfo` estrutura. O assistente de aplicativo fornece uma implementação `OnPreparePrinting` do que chama [DoPreparePrinting](../mfc/reference/cview-class.md#doprepareprinting), outra função membro `CView`de. `DoPreparePrinting`é a função que exibe a caixa de diálogo Imprimir e cria um contexto de dispositivo de impressora.
 
-Neste ponto, o aplicativo não sabe quantas páginas estão no documento. Ele usa os valores padrão 1 e 0xFFFF para os números da primeira e última página do documento. Se você souber quantas páginas possui seu documento, substituir `OnPreparePrinting` e chame [SetMaxPage]--brokenlink--(reference/cprintinfo-class.md#setmaxpage) para o `CPrintInfo` estrutura antes de enviá-lo para `DoPreparePrinting`. Isso lhe permite especificar o tamanho do documento.
+Neste ponto, o aplicativo não sabe quantas páginas estão no documento. Ele usa os valores padrão 1 e 0xFFFF para os números da primeira e da última página do documento. Se você souber quantas páginas seu documento tem, substitua `OnPreparePrinting` e chame [SetMaxPage]--brokenlink--(Reference/CPrintInfo-Class. MD # SetMaxPage) para a `CPrintInfo` estrutura antes de enviá-la `DoPreparePrinting`para. Isso permite que você especifique o tamanho do documento.
 
-`DoPreparePrinting` em seguida, exibe a caixa de diálogo de impressão. Ao retornar, o `CPrintInfo` estrutura contém os valores especificados pelo usuário. Se o usuário desejar imprimir apenas um intervalo selecionado de páginas, ele pode especificar o início e final de números de página na caixa de diálogo Imprimir. O framework recupera esses valores usando o `GetFromPage` e `GetToPage` funções de [CPrintInfo](../mfc/reference/cprintinfo-structure.md). Se o usuário não especificar um intervalo de páginas, o framework chama `GetMinPage` e `GetMaxPage` e usa os valores retornados para imprimir o documento inteiro.
+`DoPreparePrinting`em seguida, exibe a caixa de diálogo Imprimir. Quando retorna, a `CPrintInfo` estrutura contém os valores especificados pelo usuário. Se o usuário quiser imprimir apenas um intervalo de páginas selecionado, ele poderá especificar os números de página inicial e final na caixa de diálogo Imprimir. A estrutura recupera esses valores usando as `GetFromPage` funções `GetToPage` e do [CPrintInfo](../mfc/reference/cprintinfo-structure.md). Se o usuário não especificar um intervalo de páginas, a estrutura `GetMinPage` chamará e `GetMaxPage` usará os valores retornados para imprimir o documento inteiro.
 
-Para cada página de um documento a ser impresso, o framework chama duas funções de membro em sua classe de exibição [OnPrepareDC](../mfc/reference/cview-class.md#onpreparedc) e [OnPrint](../mfc/reference/cview-class.md#onprint)e passa cada função dois parâmetros: um ponteiro para um [ CDC](../mfc/reference/cdc-class.md) objeto e um ponteiro para um `CPrintInfo` estrutura. Cada vez que a estrutura chama `OnPrepareDC` e `OnPrint`, ele passa um valor diferente na *m_nCurPage* membro do `CPrintInfo` estrutura. Dessa forma a estrutura informa o modo de exibição ao qual página deve ser impresso.
+Para cada página de um documento a ser impresso, a estrutura chama duas funções de membro em sua classe View, [OnPrepareDC](../mfc/reference/cview-class.md#onpreparedc) e [OnPrint](../mfc/reference/cview-class.md#onprint), e passa cada função dois parâmetros: um ponteiro para um objeto [CDC](../mfc/reference/cdc-class.md) e um ponteiro para um estruturá`CPrintInfo`. Cada vez que a estrutura `OnPrepareDC` chama `OnPrint`e, ela passa um valor diferente no membro *m_nCurPage* da `CPrintInfo` estrutura. Dessa forma, a estrutura informa ao modo de exibição qual página deve ser impressa.
 
-O [OnPrepareDC](../mfc/reference/cview-class.md#onpreparedc) função de membro também é usada para exibição na tela. Ele faz ajustes ao contexto de dispositivo antes que ocorra de desenho. `OnPrepareDC` serve a uma função semelhante na impressão, mas há algumas diferenças: primeiro, o `CDC` objeto representa um contexto de dispositivo de impressora em vez de um contexto de dispositivo da tela e, segundo, um `CPrintInfo` objeto é passado como um segundo parâmetro. (Esse parâmetro é **nulo** quando `OnPrepareDC` é chamado para exibição na tela.) Substituir `OnPrepareDC` fazer ajustes para o contexto de dispositivo com base em qual página está sendo impresso. Por exemplo, você pode mover a origem do visor e a região de recorte para garantir que a parte apropriada do documento será impressa.
+A função de membro [OnPrepareDC](../mfc/reference/cview-class.md#onpreparedc) também é usada para exibição de tela. Ele faz ajustes no contexto do dispositivo antes que o desenho ocorra. `OnPrepareDC`o serve para uma função semelhante na impressão, mas há algumas diferenças: primeiro, o `CDC` objeto representa um contexto de dispositivo de impressora em vez de um contexto de dispositivo de tela e, segundo, um `CPrintInfo` objeto é passado como um segundo parâmetro. (Esse parâmetro é **nulo** quando `OnPrepareDC` é chamado para exibição de tela.) Substitua `OnPrepareDC` para fazer ajustes no contexto do dispositivo com base em qual página está sendo impressa. Por exemplo, você pode mover a origem do visor e a região de recorte para garantir que a parte apropriada do documento seja impressa.
 
-O [OnPrint](../mfc/reference/cview-class.md#onprint) executa a função de membro a impressão real da página. O artigo [como padrão impressão é feito](../mfc/how-default-printing-is-done.md) mostra como o framework chama [OnDraw](../mfc/reference/cview-class.md#ondraw) com um contexto de dispositivo de impressora para executar a impressão. Mais precisamente, a estrutura chama `OnPrint` com um `CPrintInfo` estrutura e um contexto de dispositivo, e `OnPrint` passa o contexto de dispositivo para `OnDraw`. Substituir `OnPrint` para executar qualquer processamento que deve ser feito somente durante a impressão e não para a exibição de tela. Por exemplo, para imprimir os cabeçalhos ou rodapés de páginas (consulte o artigo [cabeçalhos e rodapés](../mfc/headers-and-footers.md) para obter mais informações). Em seguida, chame `OnDraw` de substituição do `OnPrint` para fazer a renderização comum tanto a exibição de tela e impressão.
+A função de membro [OnPrint](../mfc/reference/cview-class.md#onprint) executa a impressão real da página. O artigo [como a impressão padrão é feita](../mfc/how-default-printing-is-done.md) mostra como a estrutura chama [OnDraw](../mfc/reference/cview-class.md#ondraw) com um contexto de dispositivo de impressora para executar a impressão. Mais precisamente, a estrutura chama `OnPrint` uma `CPrintInfo` estrutura e um contexto de dispositivo e `OnPrint` passa o contexto do dispositivo para `OnDraw`. Substitua `OnPrint` para executar qualquer renderização que deve ser feita somente durante a impressão e não para exibição de tela. Por exemplo, para imprimir cabeçalhos ou rodapés (consulte o artigo [cabeçalhos e rodapés](../mfc/headers-and-footers.md) para obter mais informações). Em seguida `OnDraw` , chame da substituição `OnPrint` de para fazer a renderização comum para exibição e impressão de tela.
 
-O fato de que `OnDraw` faz a renderização para ambos tela de exibição e impressão significa que seu aplicativo é WYSIWYG: "O que você vê o que você obterá." No entanto, suponha que você não estiver escrevendo um aplicativo WYSIWYG. Por exemplo, considere um texto de editor que usa uma fonte em negrito para impressão, mas exibe códigos de controle para indicar o texto em negrito na tela. Nessa situação, você deve usar `OnDraw` estritamente para exibição na tela. Quando você substitui `OnPrint`, substitua a chamada para `OnDraw` com uma chamada para uma função de desenho separada. Essa função desenha o documento a maneira como ele aparece no papel, usando os atributos que você não são exibidos na tela.
+O fato de `OnDraw` que a renderização para exibição de tela e impressão significa que seu aplicativo é WYSIWYG: "O que você vê é o que você obtém". No entanto, suponha que você não esteja escrevendo um aplicativo WYSIWYG. Por exemplo, considere um editor de texto que usa uma fonte em negrito para impressão, mas exibe códigos de controle para indicar texto em negrito na tela. Nessa situação, você usa `OnDraw` estritamente para exibição de tela. Quando você substituir `OnPrint`, substitua a chamada para `OnDraw` por uma chamada para uma função de desenho separada. Essa função desenha o documento da maneira que aparece no papel, usando os atributos que você não exibe na tela.
 
-##  <a name="_core_printer_pages_vs.._document_pages"></a> Vs de páginas de impressora. Páginas do documento
+##  <a name="_core_printer_pages_vs.._document_pages"></a>Páginas da impressora vs. Páginas do documento
 
-Quando você se referem aos números de página, às vezes, é necessário fazer a distinção entre o conceito da impressora de uma página e o conceito de um documento de uma página. Do ponto de vista da impressora, uma página é uma folha de papel. No entanto, uma folha de papel não necessariamente é igual a uma página do documento. Por exemplo, se você estiver imprimindo um boletim informativo, em que as folhas devem ser dobradas, uma folha de papel pode conter os dois as primeira e última páginas do documento, lado a lado. Da mesma forma, se você estiver imprimindo uma planilha, o documento não consistem em páginas em todos os. Em vez disso, uma folha de papel pode conter linhas de 1 a 20, colunas de 6 a 10.
+Quando você se refere a números de página, às vezes é necessário distinguir entre o conceito da impressora e o conceito de um documento de uma página. Do ponto de vista da impressora, uma página é uma folha de papel. No entanto, uma folha de papel não necessariamente é igual a uma página do documento. Por exemplo, se você estiver imprimindo um boletim informativo, onde as planilhas devem ser dobradas, uma folha de papel poderá conter a primeira e a última páginas do documento, lado a lado. Da mesma forma, se você estiver imprimindo uma planilha, o documento não consistirá em páginas. Em vez disso, uma folha de papel pode conter as linhas de 1 a 20, colunas 6 a 10.
 
-A página todos os números das [CPrintInfo](../mfc/reference/cprintinfo-structure.md) estrutura se referem às páginas de impressora. A estrutura chama `OnPrepareDC` e `OnPrint` uma vez para cada folha de papel que passará por meio da impressora. Quando você substitui o [OnPreparePrinting](../mfc/reference/cview-class.md#onprepareprinting) de função para especificar o tamanho do documento, você deve usar as páginas de impressora. Se não houver uma correspondência (ou seja, uma página da impressora é igual a uma página de documento), em seguida, isso é fácil. Se, por outro lado, as páginas de documento e páginas de impressora não correspondem diretamente, você deve converter entre eles. Por exemplo, considere a impressão de uma planilha. Ao substituir `OnPreparePrinting`, você deve calcular quantas folhas de papel será necessárias para imprimir toda a planilha e, em seguida, use esse valor ao chamar o `SetMaxPage` função de membro de `CPrintInfo`. Da mesma forma, ao substituir `OnPrepareDC`, você deve traduzir *m_nCurPage* dentro do intervalo de linhas e colunas que aparecerão nessa planilha específica e, em seguida, ajustar adequadamente a origem do visor.
+Todos os números de página na estrutura [CPrintInfo](../mfc/reference/cprintinfo-structure.md) se referem a páginas da impressora. A estrutura chama `OnPrepareDC` e `OnPrint` uma vez para cada folha de papel que passará pela impressora. Ao substituir a função [OnPreparePrinting](../mfc/reference/cview-class.md#onprepareprinting) para especificar o comprimento do documento, você deve usar as páginas da impressora. Se houver uma correspondência um-para-um (ou seja, uma página de impressora é igual a uma página de documento), isso é fácil. Se, por outro lado, as páginas de documentos e as páginas da impressora não corresponderem diretamente, você deverá fazer a conversão entre elas. Por exemplo, considere imprimir uma planilha. Ao substituir `OnPreparePrinting`, você deve calcular quantas folhas de papel serão necessárias para imprimir toda a planilha e, em seguida, usar esse valor ao `SetMaxPage` chamar a função `CPrintInfo`de membro do. Da mesma forma, `OnPrepareDC`ao substituir, você deve converter *m_nCurPage* no intervalo de linhas e colunas que serão exibidas nessa planilha específica e, em seguida, ajustar a origem do visor de acordo.
 
-##  <a name="_core_print.2d.time_pagination"></a> Paginação de tempo de impressão
+##  <a name="_core_print.2d.time_pagination"></a>Paginação de tempo de impressão
 
-Em algumas situações, sua classe de exibição pode não saber antecipadamente quanto tempo o documento é até que ele realmente foi impresso. Por exemplo, suponha que seu aplicativo não estiver WYSIWYG, portanto, comprimento de um documento na tela não corresponde ao seu tamanho quando impresso.
+Em algumas situações, a classe View pode não saber com antecedência por quanto tempo o documento é até que tenha sido realmente impresso. Por exemplo, suponha que seu aplicativo não seja WYSIWYG, portanto, o comprimento de um documento na tela não corresponde ao seu comprimento quando impresso.
 
-Isso faz com que um problema quando você substitui [OnPreparePrinting](../mfc/reference/cview-class.md#onprepareprinting) para a sua classe de exibição: você não pode passar um valor para o `SetMaxPage` função da [CPrintInfo](../mfc/reference/cprintinfo-structure.md) estrutura, porque você não sabe o tamanho de um documento. Se o usuário não especificar um número de página para parar em usando a caixa de diálogo Imprimir, o framework não sabe quando parar o loop de impressão. É a única maneira de determinar quando parar o loop de impressão imprimir o documento e ver quando ele termina. Sua classe de exibição deve verificar o final do documento enquanto ele está sendo impressa e, em seguida, informar a estrutura quando o final for atingido.
+Isso causa um problema quando você substitui [OnPreparePrinting](../mfc/reference/cview-class.md#onprepareprinting) para sua classe de exibição: não é possível passar um valor `SetMaxPage` para a função da estrutura [CPrintInfo](../mfc/reference/cprintinfo-structure.md) , pois você não sabe o comprimento de um documento. Se o usuário não especificar um número de página para parar usando a caixa de diálogo Imprimir, a estrutura não saberá quando parar o loop de impressão. A única maneira de determinar quando parar o loop de impressão é imprimir o documento e ver quando ele termina. Sua classe de exibição deve verificar o fim do documento enquanto ele está sendo impresso e informar a estrutura quando o final for atingido.
 
-A estrutura se baseia em sua classe de exibição [OnPrepareDC](../mfc/reference/cview-class.md#onpreparedc) função para informá-lo quando parar. Após cada chamada para `OnPrepareDC`, a estrutura verifica um membro do `CPrintInfo` estrutura chamada *m_bContinuePrinting*. Seu valor padrão é **TRUE.** Desde que ela permaneça assim, o framework continua o loop de impressão. Se ele for definido como **falsos**, as paradas de estrutura. Para realizar a paginação de tempo de impressão, substitua `OnPrepareDC` para verificar se o final do documento foi atingido e definirão *m_bContinuePrinting* ao **FALSE** quando ele tem.
+A estrutura depende da função [OnPrepareDC](../mfc/reference/cview-class.md#onpreparedc) da sua classe View para informar quando parar. Depois de cada chamada `OnPrepareDC`para, a estrutura verifica um membro `CPrintInfo` da estrutura chamada *m_bContinuePrinting*. Seu valor padrão é **true.** Desde que permaneça assim, a estrutura continuará o loop de impressão. Se estiver definido como **false**, o Framework será interrompido. Para executar a paginação de tempo `OnPrepareDC` de impressão, substitua para verificar se o fim do documento foi atingido e defina *m_bContinuePrinting* como **false** quando ele tiver.
 
-A implementação padrão de `OnPrepareDC` define *m_bContinuePrinting* à **falso** se a página atual é maior que 1. Isso significa que se o tamanho do documento não foi especificado, o framework pressupõe que o documento é uma página longa. Uma consequência disso é que você deve ter cuidado se você chamar a versão da classe base do `OnPrepareDC`. Não presuma que *m_bContinuePrinting* serão **verdadeiro** depois de chamar a versão da classe base.
+A implementação padrão de `OnPrepareDC` define *m_bContinuePrinting* como **false** se a página atual for maior que 1. Isso significa que, se o comprimento do documento não tiver sido especificado, a estrutura pressupõe que o documento é uma página longa. Uma consequência disso é que você deve ter cuidado se chamar a versão da classe base do `OnPrepareDC`. Não presuma que *m_bContinuePrinting* será **true** depois de chamar a versão da classe base.
 
-### <a name="what-do-you-want-to-know-more-about"></a>O que você deseja saber mais sobre
+### <a name="what-do-you-want-to-know-more-about"></a>Do que você deseja saber mais sobre
 
 - [Cabeçalhos e rodapés](../mfc/headers-and-footers.md)
 

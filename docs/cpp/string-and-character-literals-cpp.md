@@ -1,22 +1,29 @@
 ---
-title: Cadeia de caracteres e literais de caracteres (C++)
-ms.date: 05/07/2019
+title: Cadeias de caracteres e literais de caracteres (C++)
+description: Como declarar e definir cadeias de caracteres e literais C++de caracteres no.
+ms.date: 08/06/2019
 f1_keywords:
 - R
+- L
+- u
+- u8
+- LR
+- uR
+- u8R
 helpviewer_keywords:
 - literal strings [C++]
 - string literals [C++]
 ms.assetid: 61de8f6f-2714-4e7b-86b6-a3f885d3b9df
-ms.openlocfilehash: d3c85854256816d5553959a16526ad0d13cf14b4
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: df690bea81b9799b30ae91313ce7157400ef8413
+ms.sourcegitcommit: bd7ddc044f9083246614b602ef6a758775313214
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221979"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68866089"
 ---
-# <a name="string-and-character-literals--c"></a>Cadeia de caracteres e literais de caracteres (C++)
+# <a name="string-and-character-literals-c"></a>Cadeias de caracteres e literais de caracteres (C++)
 
-C++ oferece suporte a vários tipos de cadeia de caracteres e caracteres e fornece modos para expressar valores literais de cada um desses tipos. No seu código-fonte, é possível expressar o conteúdo de seu literais de caracteres e cadeia de caracteres usando um conjunto de caracteres. Nomes de caracteres universais e caracteres de escape permitem expressar qualquer cadeia de caracteres usando apenas o conjunto de caracteres de origem básicos. Uma cadeia de caracteres bruta literal permite que você evite usar caracteres de escape e pode ser usada para expressar todos os tipos de literais de cadeia de caracteres. Você também pode criar literais de std:: String sem ter que executar etapas de conversão ou extra construção.
+C++dá suporte a vários tipos de cadeia de caracteres e de caracteres e fornece maneiras de expressar valores literais de cada um desses tipos. No código-fonte, você expressa o conteúdo do seu caractere e os literais de cadeia de caracteres usando um conjunto de caracteres. Os nomes de caracteres universais e os caracteres de escape permitem expressar qualquer cadeia de caracteres usando apenas o conjunto de caracteres de origem básico. Um literal de cadeia de caracteres bruta permite evitar o uso de caracteres de escape e pode ser usado para expressar todos os tipos de literais de cadeia de caracteres. Você também pode criar `std::string` literais sem precisar executar etapas adicionais de construção ou conversão.
 
 ```cpp
 #include <string>
@@ -30,6 +37,9 @@ int main()
     auto c2 =  L'A'; // wchar_t
     auto c3 =  u'A'; // char16_t
     auto c4 =  U'A'; // char32_t
+
+    // Multicharacter literals
+    auto m0 = 'abcd'; // int, value 0x61626364
 
     // String literals
     auto s0 =   "hello"; // const char*
@@ -61,41 +71,41 @@ int main()
 }
 ```
 
-Literais de cadeia de caracteres não podem ter nenhum prefixo, ou `u8`, `L`, `u`, e `U` prefixos para denotar restringir caractere (byte único ou vários byte), o caractere UTF-8, largo (UCS-2 ou UTF-16), o UTF-16 e codificações UTF-32, respectivamente. Um literal de cadeia bruto pode ter `R`, `u8R`, `LR`, `uR` e `UR` prefixos para os equivalentes de versão bruta essas codificações.  Para criar valores temporários ou estático std:: String, você pode usar literais de cadeia de caracteres ou literais de cadeia de caracteres bruta com um `s` sufixo. Para obter mais informações, consulte a seção de literais de cadeia de caracteres abaixo. Para obter mais informações sobre o caractere de origem básicos definido, nomes de caracteres universais e uso de caracteres de páginas de código estendidas em seu código-fonte, consulte [conjuntos de caracteres](../cpp/character-sets.md).
+Literais de cadeia de caracteres não podem ter `u8`nenhum `L`prefixo `u`, ou `U` ,,, e prefixos para denotar caracteres estreitos (byte único ou múltiplos bytes), UTF-8, caracteres largos (UCS-2 ou UTF-16), codificações UTF-16 e UTF-32, respectivamente. Um literal de cadeia de caracteres `R`bruta `u8R`pode `LR`ter `uR`,, `UR` , e prefixos para os equivalentes de versão bruta dessas codificações.  Para criar valores temporários `std::string` ou estáticos, você pode usar literais de cadeia de caracteres ou literais de cadeia de caracteres brutos com um `s` sufixo. Para obter mais informações, consulte a seção literais de [cadeia de caracteres](#string-literals) abaixo. Para obter mais informações sobre o conjunto de caracteres de origem básico, os nomes de caracteres universais e o uso de caracteres de páginas de código estendidas em seu código-fonte, consulte [conjuntos de caracteres](../cpp/character-sets.md).
 
 ## <a name="character-literals"></a>Literais de caracteres
 
-Um *literal de caractere* é composto de uma constante de caractere. Ele é representado pelo caractere entre aspas simples. Há cinco tipos de literais de caracteres:
+Um *literal de caractere* é composto de um caractere constante. Ele é representado pelo caractere entre aspas simples. Há cinco tipos de literais de caracteres:
 
-- Literais de caractere comum do tipo **char**, por exemplo `'a'`
+- Literais de caracteres comuns do tipo **Char**, por exemplo`'a'`
 
-- Literais de caracteres UTF-8, do tipo **char**, por exemplo `u8'a'`
+- Literais de caracteres UTF-8 do tipo **Char** (**char8_t** em c++ 20), por exemplo`u8'a'`
 
 - Literais de caractere largo do tipo `wchar_t`, por exemplo `L'a'`
 
-- Literais de caractere UTF-16 do tipo `char16_t`, por exemplo `u'a'`
+- Literais de caracteres UTF-16 do `char16_t`tipo, por exemplo`u'a'`
 
-- Literais de caractere UTF-32 do tipo `char32_t`, por exemplo `U'a'`
+- Literais de caracteres UTF-32 do `char32_t`tipo, por exemplo`U'a'`
 
-O caractere usado para um literal de caractere pode ser qualquer caractere, exceto caracteres reservados barra invertida ('\\'), aspas simples (') ou nova linha. Caracteres reservados podem ser especificados usando uma sequência de escape. Caracteres podem ser especificados por meio de nomes de caractere universal, desde que o tipo é grande o suficiente para conter o caractere.
+O caractere usado para um literal de caractere pode ser qualquer caractere, com exceção da barra invertida de caracteres\\reservados (' '), aspa simples (') ou nova linha. Os caracteres reservados podem ser especificados usando uma sequência de escape. Os caracteres podem ser especificados usando nomes de caracteres universais, desde que o tipo seja grande o suficiente para conter o caractere.
 
 ### <a name="encoding"></a>Codificando
 
 Literais de caracteres são codificados de forma diferente com base em seu prefixo.
 
-- Um caractere literal sem um prefixo é um literal de caractere comum. Sequência de escape que contém um único caractere, o valor de um literal de caractere comum ou nome de caractere universal que pode ser representado no conjunto de caracteres de execução tem um valor igual ao valor numérico de sua codificação no conjunto de caracteres de execução. Um literal de caractere comum que contém mais de um caractere, a sequência de escape ou o nome de caractere universal é uma *literal de caractere múltiplo*. Um literal de multicaracteres ou um literal de caractere comum que não pode ser representado no conjunto de caracteres de execução é condicionalmente com suporte, tem o tipo int, e seu valor é definido pela implementação.
+- Um literal de caractere sem um prefixo é um literal de caractere comum. O valor de um literal de caractere comum contendo um único caractere, sequência de escape ou nome de caractere universal que pode ser representado no conjunto de caracteres de execução tem um valor igual ao valor numérico de sua codificação no conjunto de caracteres de execução. Um literal de caractere comum que contém mais de um caractere, sequência de escape ou nome de caractere universal é um *literal*de multicaractere. Um literal de multicaractere ou um literal de caractere comum que não pode ser representado no conjunto de caracteres de execução tem o tipo **int**e seu valor é definido pela implementação. Para MSVC, consulte a seção **específica da Microsoft** abaixo.
 
-- Um literal de caractere que começa com o prefixo L é um literal de caractere largo. O valor de um literal de caractere largo que contém um único caractere, uma sequência de escape ou um nome de caractere universal tem um valor igual ao valor numérico de sua codificação no execução wide-conjunto de caracteres, a menos que o literal de caractere não tem representação conjunto de caractere largo de execução, no caso, o valor é definido pela implementação. O valor de um literal de caractere largo que contém vários caracteres, sequências de escape ou nomes de caracteres universais é definido pela implementação.
+- Um literal de caractere que começa com `L` o prefixo é um literal de caractere largo. O valor de um literal de caractere largo contendo um único caractere, sequência de escape ou nome de caractere universal tem um valor igual ao valor numérico de sua codificação no conjunto de caracteres de execução largo, a menos que o literal de caractere não tenha nenhuma representação no execução de um conjunto de caracteres largo; nesse caso, o valor é definido pela implementação. O valor de um literal de caractere largo contendo vários caracteres, sequências de escape ou nomes de caracteres universais é definido pela implementação. Para MSVC, consulte a seção **específica da Microsoft** abaixo.
 
-- Um literal de caractere que começa com o prefixo u8 é um literal de caractere UTF-8. Sequência de escape que contém um único caractere, o valor de um literal de caractere UTF-8 ou o nome de caractere universal tem um valor igual a seu valor de ponto de código ISO 10646 se ele pode ser representado por uma única unidade de código UTF-8 (correspondentes aos controles C0 e Latim básico Bloco de Unicode). Se o valor não pode ser representado por uma única unidade de código UTF-8, o programa está mal formado. Um caractere UTF-8 literal contendo mais de um caractere, sequência de escape ou nome de caractere universal está mal formado.
+- Um literal de caractere que começa com `u8` o prefixo é um literal de caractere UTF-8. O valor de um literal de caractere UTF-8 contendo um único caractere, sequência de escape ou nome de caractere universal tem um valor igual ao seu valor de ponto de código ISO 10646 se ele puder ser representado por uma única unidade de código UTF-8 (correspondente aos controles C0 e ao latim básico Bloco Unicode). Se o valor não puder ser representado por uma única unidade de código UTF-8, o programa será mal formado. Um literal de caractere UTF-8 contendo mais de um caractere, sequência de escape ou nome de caractere universal é mal formado.
 
-- Um literal de caractere que começa com o prefixo de u é um literal de caractere UTF-16. Sequência de escape que contém um único caractere, o valor de um literal de caractere UTF-16 ou nome de caractere universal tem um valor igual a seu valor de ponto de código ISO 10646 se ele pode ser representado por uma única unidade de código UTF-16 (correspondente ao plano multilíngue básico ). Se o valor não pode ser representado por uma única unidade de código UTF-16, o programa está mal formado. Um caractere UTF-16 literal contendo mais de um caractere, sequência de escape ou nome de caractere universal está mal formado.
+- Um literal de caractere que começa com `u` o prefixo é um literal de caractere UTF-16. O valor de um literal de caractere UTF-16 contendo um único caractere, sequência de escape ou nome de caractere universal tem um valor igual ao seu valor de ponto de código ISO 10646 se ele puder ser representado por uma única unidade de código UTF-16 (correspondente ao plano multilíngue básico ). Se o valor não puder ser representado por uma única unidade de código UTF-16, o programa será mal formado. Um literal de caractere UTF-16 contendo mais de um caractere, sequência de escape ou nome de caractere universal é mal formado.
 
-- Um literal de caractere que começa com o prefixo de U é um literal de caractere UTF-32. Sequência de escape que contém um único caractere, o valor de um literal de caractere UTF-32 ou nome de caractere universal não tem um valor igual a seu valor de ponto de código ISO 10646. Um caractere UTF-8 literal contendo mais de um caractere, sequência de escape ou nome de caractere universal está mal formado.
+- Um literal de caractere que começa com `U` o prefixo é um literal de caractere UTF-32. O valor de um literal de caractere UTF-32 contendo um único caractere, sequência de escape ou nome de caractere universal tem um valor igual ao seu valor de ponto de código ISO 10646. Um literal de caractere UTF-32 contendo mais de um caractere, sequência de escape ou nome de caractere universal é mal formado.
 
-###  <a name="bkmk_Escape"></a> Sequências de escape
+###  <a name="bkmk_Escape"></a>Sequências de escape
 
-Há três tipos de sequências de escape: simples, octais e hexadecimais. As sequências de escape podem ser qualquer uma das seguintes:
+Há três tipos de sequências de escape: simples, octal e hexadecimal. As sequências de escape podem ser qualquer uma das seguintes:
 
 |Valor|Sequência de escape|
 |-----------|---------------------|
@@ -103,18 +113,22 @@ Há três tipos de sequências de escape: simples, octais e hexadecimais. As seq
 | barra invertida | \\\\ |
 | tabulação horizontal | \\t |
 | ponto de interrogação | ? ou \\? |
-| tabulação vertical | \\v |
+| tabulação vertical | \\l |
 | aspas simples | \\' |
 | backspace | \\b |
 | aspas duplas | \\" |
-| retorno de carro | \\r |
+| retorno de carro | \\d |
 | o caractere nulo | \\0 |
 | avanço de página | \\f |
-| octal | \\OOO |
-| alerta (sino) | \\a |
+| octal | \\ooo |
+| alerta (Bell) | \\um |
 | hexadecimal | \\xhhh |
 
-O código a seguir mostra alguns exemplos de caracteres de escape usando literais de caractere comum. A mesma sintaxe de sequência de escape é válida para os outros tipos de literal de caractere.
+Uma sequência de escape octal é uma barra invertida seguida por uma sequência de um a três dígitos octais. Uma sequência de escape octal termina no primeiro caractere que não seja um dígito octal, se encontrado antes do terceiro dígito. O maior valor octal possível é `\377`.
+
+Uma sequência de escape hexadecimal é uma barra invertida seguida pelo `x`caractere, seguida por uma sequência de um ou mais dígitos hexadecimais. Os zeros à esquerda são ignorados. Em um literal de caractere U8 ou comum, o valor hexadecimal mais alto é 0xFF. Em um literal de caractere com prefixado L ou u-prefixado, o valor hexadecimal mais alto é 0xFFFF. Em um literal de caractere largo de U-prefixado, o valor hexadecimal mais alto é 0xFFFFFFFF.
+
+Este código de exemplo mostra alguns exemplos de caracteres de escape usando literais de caractere comuns. A mesma sintaxe de sequência de escape é válida para os outros tipos de literal de caractere.
 
 ```cpp
 #include <iostream>
@@ -136,23 +150,26 @@ int main() {
 }
 ```
 
-**Seção específica da Microsoft**
+O caractere de barra invertida (\\) é um caractere de continuação de linha quando é colocado no final de uma linha. Se desejar que um caractere de barra invertida seja exibido como uma literal de caractere, você deve digitar duas barras invertidas em uma linha (`\\`). Para obter mais informações sobre o caractere de continuação de linha, consulte [fases de tradução](../preprocessor/phases-of-translation.md).
 
-Para criar um valor de um literal de caractere comum (aqueles sem um prefixo), o compilador converte o caractere ou cadeia de caracteres entre aspas em valores de 8 bits em um inteiro de 32 bits. Vários caracteres no literal preencher bytes correspondentes, conforme a necessidade de ordem superior de ordem inferior. Para criar uma **char** valor, o compilador usa o byte de ordem inferior. Para criar uma **wchar_t** ou `char16_t` valor, o compilador usa a palavra de ordem inferior. O compilador avisa que o resultado será truncado se todos os bits são definidos acima do byte atribuído ou word.
+**Específico da Microsoft**
+
+Para criar um valor a partir de um literal de multicaractere estreito, o compilador converte o caractere ou a sequência de caracteres entre aspas simples em valores de 8 bits dentro de um inteiro de 32 bits. Vários caracteres no literal preenchem bytes correspondentes conforme necessário de ordem superior para ordem baixa. Em seguida, o compilador converte o inteiro para o tipo de destino seguindo as regras usuais. Por exemplo, para criar um valor **Char** , o compilador usa o byte de ordem inferior. Para criar um **wchar_t** ou `char16_t` um valor, o compilador usa a palavra de ordem inferior. O compilador avisa que o resultado será truncado se algum bit estiver definido acima do byte ou palavra atribuída.
 
 ```cpp
 char c0    = 'abcd';    // C4305, C4309, truncates to 'd'
 wchar_t w0 = 'abcd';    // C4305, C4309, truncates to '\x6364'
+int i0     = 'abcd';    // 0x61626364
 ```
 
-Uma sequência de escape octal é uma barra invertida seguida por uma sequência de até 3 dígitos octais. O comportamento de uma sequência de escape octal que parece conter mais de três dígitos é tratado como uma sequência de 3 dígitos octa seguida por dígitos subsequentes como caracteres; Isso pode gerar resultados surpreendentes. Por exemplo:
+Uma sequência de escape octal que parece conter mais de três dígitos é tratada como uma sequência octal de 3 dígitos, seguida pelos dígitos subsequentes como caracteres em um literal de multicaractere, que pode fornecer resultados surpreendentes. Por exemplo:
 
 ```cpp
 char c1 = '\100';   // '@'
 char c2 = '\1000';  // C4305, C4309, truncates to '0'
 ```
 
-Sequências de escape que parecem conter caracteres não octais são avaliadas como uma octal sequência até o último caractere octal, seguido pelos caracteres restantes. Por exemplo:
+As sequências de escape que parecem conter caracteres não octais são avaliadas como uma sequência octal até o último caractere octal, seguidos pelos caracteres restantes como os caracteres subsequentes em um literal de caractere. Aviso C4125 será gerado se o primeiro caractere não octal for um dígito decimal. Por exemplo:
 
 ```cpp
 char c3 = '\009';   // '9'
@@ -160,14 +177,16 @@ char c4 = '\089';   // C4305, C4309, truncates to '9'
 char c5 = '\qrs';   // C4129, C4305, C4309, truncates to 's'
 ```
 
-Uma sequência de escape hexadecimal é uma barra invertida, seguida pelo caractere `x`, seguido por uma sequência de dígitos hexadecimais. Uma sequência de escape que não contém nenhum dígito hexadecimal causa o erro do compilador C2153: "literais hexadecimais devem possuir pelo menos um dígito hex". Zeros à esquerda são ignorados. Uma sequência de escape que parece ter caracteres hexadecimal e não hexadecimais é avaliada como uma sequência de escape hexadecimal até o último caractere hexadecimal, seguido pelos caracteres não hexadecimal.   Em um caractere comum ou o prefixo de u8 literal, o valor hexadecimal mais alto é 0xFF. Em um L-o prefixo ou o prefixo de u literal de caractere largo, o valor hexadecimal mais alto é 0xFFFF. Em um prefixado por U literal de caractere largo, o valor hexadecimal mais alto é 0xFFFFFFFF.
+Uma sequência de escape octal que tem um valor mais `\377` alto que causa o erro C2022: '*valor-em-decimal*': muito grande para o caractere.
+
+Uma sequência de escape que parece ter caracteres hexadecimais e não hexadecimais é avaliada como um literal de multicaractere que contém uma sequência de escape hexadecimal até o último caractere hexadecimal, seguido pelos caracteres não hexadecimais. Uma sequência de escape hexadecimal que não contém dígitos hexadecimais causa o erro do compilador C2153: "literais hexadecimais devem ter pelo menos um dígito hexadecimal".
 
 ```cpp
 char c6 = '\x0050'; // 'P'
 char c7 = '\x0pqr'; // C4305, C4309, truncates to 'r'
 ```
 
-Se um literal de caractere largo prefixadas com `L` contém mais de um caractere, o valor é obtido a partir do primeiro caractere. Os caracteres subsequentes são ignorados, ao contrário do comportamento do literal de caractere comum equivalente.
+Se um literal de caractere largo prefixado com `L` contém uma sequência de multicaractere, o valor será obtido do primeiro caractere e o compilador gerará o aviso C4066. Os caracteres subsequentes são ignorados, diferentemente do comportamento do literal multicaractere comum equivalente.
 
 ```cpp
 wchar_t w1 = L'\100';   // L'@'
@@ -179,13 +198,11 @@ wchar_t w6 = L'\x0050'; // L'P'
 wchar_t w7 = L'\x0pqr'; // C4066 L'\0', pqr ignored
 ```
 
-**Fim da seção específica da Microsoft**
+**Final específico da Microsoft**
 
-O caractere de barra invertida (\\) é um caractere de continuação de linha quando ele é colocado no final de uma linha. Se desejar que um caractere de barra invertida seja exibido como uma literal de caractere, você deve digitar duas barras invertidas em uma linha (`\\`). Para obter mais informações sobre o caractere de continuação de linha, consulte [fases de conversão](../preprocessor/phases-of-translation.md).
+###  <a name="bkmk_UCN"></a>Nomes de caracteres universais
 
-###  <a name="bkmk_UCN"></a> Nomes de caracteres universais
-
-Em literais de caracteres e literais de cadeia de caracteres nativo (não bruto), qualquer caractere pode ser representado por um nome de caractere universal.  Nomes de caracteres universais são formados por um prefixo que \u seguido por um ponto de código Unicode de oito dígitos, ou por um \u prefixo seguido por um ponto de código Unicode com quatro dígitos. Todos os quatro ou oito dígitos, respectivamente, devem estar presentes para fazer um nome de caractere universal bem formado.
+Em literais de caracteres e literais de cadeia de caracteres nativos (não brutos), qualquer caractere pode ser representado por um nome de caractere universal.  Os nomes de caracteres universais são `\U` formados por um prefixo seguido por um ponto de código Unicode de oito `\u` dígitos ou por um prefixo seguido por um ponto de código Unicode de quatro dígitos. Todos os oito ou quatro dígitos, respectivamente, devem estar presentes para criar um nome de caractere universal bem formado.
 
 ```cpp
 char u1 = 'A';          // 'A'
@@ -197,17 +214,17 @@ char u5 = '\U00000041'; // \U UCN 'A'
 
 #### <a name="surrogate-pairs"></a>Pares substitutos
 
-Nomes de caractere universal não é possível codificar valores no intervalo de ponto de código substituto u+D800 DFFF. Para pares substitutos de Unicode, especifique o nome de caractere universal usando `\UNNNNNNNN`, onde NNNNNNNN é o ponto de código de oito dígitos do caractere. O compilador gera um par substituto, se necessário.
+Os nomes de caracteres universais não podem codificar valores no intervalo de ponto de código substituto D800-DFFF. Para pares de substitutos Unicode, especifique o nome do caractere `\UNNNNNNNN`universal usando, em que NNNNNNNN é o ponto de código de oito dígitos para o caractere. O compilador gera um par substituto, se necessário.
 
-No c++03, a linguagem somente permitido a um subconjunto de caracteres a ser representado por seus nomes de caractere universal e permitidos alguns nomes de caractere universal que, na verdade, não representam caracteres Unicode válidos. Isso foi corrigido o padrão c++11. No c++11, identificadores e literais de caracteres e cadeia de caracteres podem usar nomes de caracteres universais.  Para obter mais informações sobre nomes de caracteres universais, consulte [conjuntos de caracteres](../cpp/character-sets.md). Para obter mais informações sobre Unicode, consulte [Unicode](https://msdn.microsoft.com/library/dd374081). Para obter mais informações sobre pares substitutos, consulte [pares substitutos e caracteres suplementares](/windows/desktop/Intl/surrogates-and-supplementary-characters).
+No C++ 03, a linguagem permitia apenas um subconjunto de caracteres a ser representado por seus nomes de caracteres universais e permitia alguns nomes de caracteres universais que realmente não representaram nenhum caractere Unicode válido. Esse erro foi corrigido no padrão C++ 11. No C++ 11, os literais de caractere e de cadeia de caracteres e os identificadores podem usar nomes de caracteres universais.  Para obter mais informações sobre nomes de caracteres universais, consulte [conjuntos de caracteres](../cpp/character-sets.md). Para obter mais informações sobre Unicode, consulte [Unicode](https://msdn.microsoft.com/library/dd374081). Para obter mais informações sobre pares substitutos, consulte [pares substitutos e caracteres suplementares](/windows/desktop/Intl/surrogates-and-supplementary-characters).
 
 ## <a name="string-literals"></a>Literais de cadeia de caracteres
 
 Uma literal de cadeia de caracteres representa uma sequência de caracteres que, juntos, formam uma cadeia de caracteres terminada em nulo. Os caracteres devem ser incluídos entre aspas duplas. Existem os seguintes tipos de literais de cadeias de caracteres:
 
-### <a name="narrow-string-literals"></a>Literais de cadeia de caracteres estreita
+### <a name="narrow-string-literals"></a>Literais de cadeia de caracteres estreitas
 
-Um literal de cadeia estreita é uma matriz de delimitado terminada em nulo, sem prefixo, aspas duplas de tipo `const char[n]`, onde n é o comprimento da matriz em bytes. Um literal de cadeia estreita pode conter qualquer caractere gráfico exceto as aspas duplas (`"`), barra invertida (`\`), ou caractere de nova linha. Um literal de cadeia estreita também pode conter os nomes de caracteres listados acima e universais de sequências de escape que se encaixam em um byte.
+Um literal de cadeia de caracteres estreito é uma matriz não prefixada, delimitada por aspas duplas e terminada em nulo do tipo `const char[n]`, em que n é o comprimento da matriz em bytes. Um literal de cadeia de caracteres estreito pode conter qualquer caractere gráfico, exceto aspas`"`duplas (),`\`barra invertida () ou caractere de nova linha. Um literal de cadeia de caracteres estreito também pode conter as sequências de escape listadas acima e os nomes de caracteres universais que se ajustam em um byte.
 
 ```cpp
 const char *narrow = "abcd";
@@ -216,9 +233,9 @@ const char *narrow = "abcd";
 const char *escaped = "yes\\no";
 ```
 
-#### <a name="utf-8-encoded-strings"></a>Cadeias de caracteres codificados em UTF-8
+#### <a name="utf-8-encoded-strings"></a>Cadeias de caracteres codificadas em UTF-8
 
-Uma cadeia de caracteres codificada em UTF-8 é uma matriz de delimitado terminada em nulo, prefixado por u8, aspas duplas de tipo `const char[n]`, onde n é o comprimento da matriz codificada em bytes. Um literal de cadeia prefixado por u8 pode conter qualquer caractere gráfico exceto as aspas duplas (`"`), barra invertida (`\`), ou caractere de nova linha. Uma cadeia de caracteres prefixadas por u8 literal também pode conter o escape sequências listadas acima e qualquer nome de caractere universal.
+Uma cadeia de caracteres codificada em UTF-8 é uma matriz de tipo `const char[n]`U8, delimitada por aspas duplas e com terminação de nulo, em que *n* é o comprimento da matriz codificada em bytes. Um literal de cadeia de caracteres prefixado U8 pode conter qualquer caractere gráfico, exceto aspas`"`duplas (),`\`barra invertida () ou caractere de nova linha. Um literal de cadeia de caracteres U8 também pode conter as sequências de escape listadas acima e qualquer nome de caractere universal.
 
 ```cpp
 const char* str1 = u8"Hello World";
@@ -227,25 +244,25 @@ const char* str2 = u8"\U0001F607 is O:-)";
 
 ### <a name="wide-string-literals"></a>Literais de cadeia de caracteres largos
 
-Uma cadeia de caracteres largo literal é uma matriz terminada em nulo da constante **wchar_t** que é prefixada pelo '`L`' e contém qualquer caractere gráfico exceto as aspas duplas ("), barra invertida (\\), ou caractere de nova linha. Uma cadeia de caracteres largo literal pode conter o escape sequências listadas acima e qualquer nome de caractere universal.
+Um literal de cadeia de caracteres largo é uma matriz com terminação nula de constante **wchar_t** que é`L`prefixada por ' ' e contém qualquer caractere gráfico, exceto aspas duplas ("\\), barra invertida () ou caractere de nova linha. Um literal de cadeia de caracteres largo pode conter as sequências de escape listadas acima e qualquer nome de caractere universal.
 
 ```cpp
 const wchar_t* wide = L"zyxw";
 const wchar_t* newline = L"hello\ngoodbye";
 ```
 
-#### <a name="char16t-and-char32t-c11"></a>char16_t e char32_t (c++11)
+#### <a name="char16_t-and-char32_t-c11"></a>char16_t e char32_t (C++ 11)
 
-C++11 introduz o portable `char16_t` (Unicode de 16 bits) e `char32_t` (Unicode de 32 bits) tipos de caracteres:
+O c++ 11 apresenta os `char16_t` tipos de caracteres portáteis (Unicode de `char32_t` 16 bits) e (Unicode de 32 bits):
 
 ```cpp
 auto s3 = u"hello"; // const char16_t*
 auto s4 = U"hello"; // const char32_t*
 ```
 
-### <a name="raw-string-literals-c11"></a>Literais de cadeia de caracteres bruta (c++11)
+### <a name="raw-string-literals-c11"></a>Literais de cadeia de caracteres brutas (C++ 11)
 
-Uma cadeia de caracteres bruta literal é uma matriz terminada em nulo — de qualquer tipo de caractere, que contém qualquer caractere gráfico, incluindo as aspas duplas ("), barra invertida (\\), ou caractere de nova linha. As literais de cadeias de caracteres brutas costumam ser usadas em expressões regulares que utilizam classes de caracteres, bem como em cadeias de caracteres HTML e XML. Para obter exemplos, consulte o artigo a seguir: [FAQ de Bjarne Stroustrup no c++11](http://www.stroustrup.com/C++11FAQ.html).
+Um literal de cadeia de caracteres bruta é uma matriz com terminação nula, de qualquer tipo de caractere, que contém qualquer caractere gráfico, incluindo aspas duplas (")\\, barra invertida () ou caractere de nova linha. As literais de cadeias de caracteres brutas costumam ser usadas em expressões regulares que utilizam classes de caracteres, bem como em cadeias de caracteres HTML e XML. Para obter exemplos, consulte o seguinte artigo: [Perguntas frequentes sobre o Bjarne Stroustrup no c++ 11](http://www.stroustrup.com/C++11FAQ.html).
 
 ```cpp
 // represents the string: An unescaped \ character
@@ -256,7 +273,7 @@ const char16_t* raw_utf16 = uR"(An unescaped \ character)";
 const char32_t* raw_utf32 = UR"(An unescaped \ character)";
 ```
 
-Um delimitador é uma sequência definida pelo usuário, com até 16 caracteres, que vem imediatamente antes do parêntese de abertura e imediatamente depois do parêntese de fechamento de uma literal de cadeia de caracteres bruta.  Por exemplo, na `R"abc(Hello"\()abc"` é a sequência de delimitador `abc` e o conteúdo de cadeia de caracteres é `Hello"\(`. Você pode usar um delimitador para desambiguizar cadeias de caracteres brutas que contêm aspas duplas e parênteses. Isso causa um erro do compilador:
+Um delimitador é uma sequência definida pelo usuário de até 16 caracteres que precede imediatamente o parêntese de abertura de um literal de cadeia de caracteres bruta e imediatamente segue o parêntese de fechamento.  Por exemplo, na `R"abc(Hello"\()abc"` sequência de delimitador é `abc` e o conteúdo `Hello"\(`da cadeia de caracteres é. Você pode usar um delimitador para eliminar a ambiguidade de cadeias de caracteres brutas que contenham aspas duplas e parênteses. Esse literal de cadeia de caracteres causa um erro de compilador:
 
 ```cpp
 // meant to represent the string: )"
@@ -269,7 +286,7 @@ Mas um delimitador resolve essa sintaxe:
 const char* good_parens = R"xyz()")xyz";
 ```
 
-Você pode construir uma literal de cadeia de caracteres bruta em que há uma nova linha (não o caractere de escape) na origem:
+Você pode construir um literal de cadeia de caracteres bruta que contenha uma nova linha (não o caractere de escape) na fonte:
 
 ```cpp
 // represents the string: hello
@@ -278,9 +295,9 @@ const wchar_t* newline = LR"(hello
 goodbye)";
 ```
 
-### <a name="stdstring-literals-c14"></a>std:: string literais (c++14)
+### <a name="stdstring-literals-c14"></a>literais std:: String (C++ 14)
 
-literais de std:: string são implementações da biblioteca padrão de definida pelo usuário literais (veja abaixo) que são representados como "xyx" s (com um `s` sufixo). Esse tipo de cadeia de caracteres literal produz um objeto temporário do tipo std:: String, std:: wstring, std::u32string ou std::u16string dependendo do prefixo especificado. Quando nenhum prefixo é usado, como acima, um std:: string é produzido. L "xyz" s produz um std:: wstring. u "xyz" s produz um [std::u16string](../standard-library/string-typedefs.md#u16string)e "xyz" U s gera um [std::u32string](../standard-library/string-typedefs.md#u32string).
+`std::string`literais são implementações de biblioteca padrão de literais definidos pelo usuário (veja abaixo) que são `"xyz"s` representadas como `s` (com um sufixo). Esse tipo de literal de cadeia de caracteres produz um objeto `std::string`temporário `std::wstring`do `std::u32string`tipo, `std::u16string`, ou, dependendo do prefixo especificado. Quando nenhum prefixo é usado, como acima, um `std::string` é produzido. `L"xyz"s`produz um `std::wstring`. `u"xyz"s`produz um [std:: u16string](../standard-library/string-typedefs.md#u16string)e `U"xyz"s` produz um [std:: u32string](../standard-library/string-typedefs.md#u32string).
 
 ```cpp
 //#include <string>
@@ -292,54 +309,54 @@ u16string str4{ u"hello"s };
 u32string str5{ U"hello"s };
 ```
 
-O sufixo s também pode ser usado em literais de cadeia de caracteres bruta:
+O `s` sufixo também pode ser usado em literais de cadeia de caracteres brutas:
 
 ```cpp
 u32string str6{ UR"(She said "hello.")"s };
 ```
 
-literais de std:: string são definidos no namespace `std::literals::string_literals` no \<cadeia de caracteres > arquivo de cabeçalho. Porque `std::literals::string_literals`, e `std::literals` são declarados como [namespaces embutidos](../cpp/namespaces-cpp.md), `std::literals::string_literals` é tratado automaticamente como se ele pertencesse diretamente no namespace `std`.
+`std::string`os literais são definidos no namespace `std::literals::string_literals` na cadeia \<de caracteres > arquivo de cabeçalho. Como `std::literals::string_literals`, e `std::literals` são declarados como [namespaces embutidos](../cpp/namespaces-cpp.md), `std::literals::string_literals` é automaticamente tratado como se ele pertencia diretamente no namespace `std`.
 
-### <a name="size-of-string-literals"></a>Tamanho das literais de cadeias de caracteres
+### <a name="size-of-string-literals"></a>Tamanho de literais de cadeia de caracteres
 
-Para o caractere ANSI\* cadeias de caracteres e outras codificações de byte único (não UTF-8), o tamanho (em bytes) de um literal de cadeia de caracteres é o número de caracteres mais 1 para o caractere nulo de terminação. Para todos os outros tipos de cadeia de caracteres, o tamanho não está estritamente relacionado ao número de caracteres. UTF-8 usa até quatro elementos de char para codificar alguns *unidades de código*e char16_t ou wchar_t, codificada como UTF-16 pode usar dois elementos (para um total de quatro bytes) para codificar uma única *unidade de código*.   Este exemplo mostra o tamanho de uma cadeia de caracteres largo literal em bytes:
+Para cadeias de caracteres ANSI `char*` e outras codificações de byte único (mas não UTF-8), o tamanho (em bytes) de um literal de cadeia de caracteres é o número de caracteres mais 1 para o caractere nulo de terminação. Para todos os outros tipos de cadeia de caracteres, o tamanho não está estritamente relacionado ao número de caracteres. O UTF-8 usa até quatro elementos **Char** para codificar algumas *unidades de código*e `char16_t` , `wchar_t` ou codificado como UTF-16, pode usar dois elementos (para um total de quatro bytes) para codificar uma única *unidade de código*. Este exemplo mostra o tamanho de um literal de cadeia de caracteres largo em bytes:
 
 ```cpp
 const wchar_t* str = L"Hello!";
 const size_t byteSize = (wcslen(str) + 1) * sizeof(wchar_t);
 ```
 
-Observe que `strlen()` e `wcslen()` não incluem o tamanho do caractere nulo de terminação, cujo tamanho é igual ao tamanho do elemento do tipo cadeia de caracteres: um byte em um char\* cadeia de caracteres, dois bytes em wchar_t\* ou char16_t\*cadeias de caracteres e quatro bytes no char32_t\* cadeias de caracteres.
+Observe que `strlen()` e `wcslen()` não incluem o tamanho do caractere nulo de terminação, cujo tamanho é igual ao tamanho do elemento do tipo de cadeia de caracteres: um `char*` byte em uma cadeia de `wchar_t*` caracteres `char16_t*` , dois bytes em ou cadeias e quatro bytes em `char32_t*` cadeias de caracteres.
 
-O comprimento máximo de uma literal de cadeia de caracteres é de 65535 bytes. Esse limite se aplica às literais de cadeias de caracteres estreitas e largas.
+O comprimento máximo de um literal de cadeia de caracteres é 65.535 bytes. Esse limite se aplica às literais de cadeias de caracteres estreitas e largas.
 
-### <a name="modifying-string-literals"></a>Modificando literais de cadeias de caracteres
+### <a name="modifying-string-literals"></a>Modificando literais de cadeia de caracteres
 
-Como os literais de cadeia de caracteres (não incluindo std:string literais) são constantes, tentar modificá-las — por exemplo, `str[2] = 'A'`— faz com que um erro do compilador.
+Como literais de cadeia de caracteres `std::string` (não incluindo literais) são constantes, tentar modificá-las — `str[2] = 'A'`por exemplo, — causa um erro do compilador.
 
-**Seção específica da Microsoft**
+**Específico da Microsoft**
 
-No Microsoft C++ você pode usar um literal de cadeia de caracteres para inicializar um ponteiro para não const **char** ou **wchar_t**. Isso é permitido no código C99, mas é preterido no c++98 e removido no c++11. Uma tentativa de modificar a cadeia de caracteres causa uma violação de acesso, como neste exemplo:
+Na Microsoft C++, você pode usar um literal de cadeia de caracteres para inicializar um ponteiro para **Char** não const ou **wchar_t**. Essa inicialização não const é permitida no código C99, mas é preterida no C++ 98 e removida no C++ 11. Uma tentativa de modificar a cadeia de caracteres causa uma violação de acesso, como neste exemplo:
 
 ```cpp
 wchar_t* str = L"hello";
 str[2] = L'a'; // run-time error: access violation
 ```
 
-Você pode fazer com que o compilador emita um erro quando um literal de cadeia de caracteres é convertida em um ponteiro de caractere non_const ao definir a [/ZC: strictstrings (desabilitar conversão de tipo literal de cadeia de caracteres)](../build/reference/zc-strictstrings-disable-string-literal-type-conversion.md) opção de compilador. É recomendável para código portátil compatível com os padrões. Também é uma boa prática usar a **automática** palavra-chave para declarar ponteiros inicializados por literais, a cadeia de caracteres porque ele resolve para o tipo correto (const). Por exemplo, este exemplo de código mostra uma tentativa de gravar em uma cadeia de caracteres literal no tempo de compilação:
+Você pode fazer com que o compilador emita um erro quando um literal de cadeia de caracteres é convertido em um ponteiro de caractere não const quando você define a opção de compilador [/Zc: strictStrings (desabilitar conversão de tipo literal de cadeia de caracteres)](../build/reference/zc-strictstrings-disable-string-literal-type-conversion.md) . É recomendável para código portátil compatível com padrões. Também é uma boa prática usar a palavra-chave **auto** para declarar ponteiros inicializados literais de cadeia de caracteres, pois ele resolve para o tipo correto (const). Por exemplo, este exemplo de código captura uma tentativa de gravar em um literal de cadeia de caracteres em tempo de compilação:
 
 ```cpp
 auto str = L"hello";
 str[2] = L'a'; // C3892: you cannot assign to a variable that is const.
 ```
 
-Em alguns casos, literais de cadeias de caracteres idênticas podem ser agrupadas para economizar espaço no arquivo executável. Em pools de literais de cadeias de caracteres, o compilador faz com que todas as referências a uma literal de cadeia de caracteres específica apontem para o mesmo local na memória, em vez de cada referência apontar para uma instância separada da literal. Para habilitar o pooling de cadeia de caracteres, use o [/GF](../build/reference/gf-eliminate-duplicate-strings.md) opção de compilador.
+Em alguns casos, literais de cadeias de caracteres idênticas podem ser agrupadas para economizar espaço no arquivo executável. Em pools de literais de cadeias de caracteres, o compilador faz com que todas as referências a uma literal de cadeia de caracteres específica apontem para o mesmo local na memória, em vez de cada referência apontar para uma instância separada da literal. Para habilitar o pool de cadeias de caracteres, use a opção de compilador [/GF](../build/reference/gf-eliminate-duplicate-strings.md) .
 
-**Fim da seção específica da Microsoft**
+**Final específico da Microsoft**
 
 ### <a name="concatenating-adjacent-string-literals"></a>Concatenando literais de cadeias de caracteres adjacentes
 
-Literais de cadeia de caracteres largos ou estreitos adjacentes são concatenados. Esta declaração:
+Literais de cadeia de caracteres adjacentes ou estreitos são concatenados. Esta declaração:
 
 ```cpp
 char str[] = "12" "34";
@@ -358,7 +375,7 @@ char atr[] =  "12\
 34";
 ```
 
-Usando os códigos de escape hexadecimais inseridos para especificar literais de cadeia de caracteres pode causar resultados inesperados. O exemplo a seguir visa criar uma literal de cadeia de caracteres que contenha o caractere ASCII 5, seguido pelos caracteres "f", "i", "v" e "e":
+O uso de códigos de escape hexadecimais incorporados para especificar literais de cadeia de caracteres pode causar resultados inesperados. O exemplo a seguir visa criar uma literal de cadeia de caracteres que contenha o caractere ASCII 5, seguido pelos caracteres "f", "i", "v" e "e":
 
 ```cpp
 "\x05five"
@@ -371,7 +388,7 @@ O resultado real é um 5F hexadecimal, que é o código ASCII de um sublinhado, 
 "\x05" "five"  // Use string splicing.
 ```
 
-literais de std:: String, porque eles são tipos de std:: String, podem ser concatenados com o operador está definido para + [basic_string](../standard-library/basic-string-class.md) tipos. Eles também podem ser concatenados da mesma forma como os literais de cadeia de caracteres adjacentes. Em ambos os casos, a codificação de cadeia de caracteres e o sufixo devem corresponder ao:
+`std::string`literais, porque são `std::string` tipos, podem ser concatenados com o `+` operador que é definido para tipos [basic_string](../standard-library/basic-string-class.md) . Eles também podem ser concatenados da mesma maneira que os literais de cadeia de caracteres adjacentes. Em ambos os casos, a codificação de cadeia de caracteres e o sufixo devem corresponder:
 
 ```cpp
 auto x1 = "hello" " " " world"; // OK
@@ -382,7 +399,7 @@ auto x4 = u8"hello" " "s u8"world"z; // C3688, disagree on suffixes
 
 ### <a name="string-literals-with-universal-character-names"></a>Literais de cadeia de caracteres com nomes de caracteres universais
 
-Literais de cadeia de caracteres nativo (não bruto) podem usar nomes de caracteres universais para representar qualquer caractere, desde que o nome de caractere universal pode ser codificado como um ou mais caracteres no tipo de cadeia de caracteres.  Por exemplo, um nome de caractere universal que representa um caractere estendido não pode ser codificado em uma cadeia de caracteres estreita usando a página de código ANSI, mas ela pode ser codificada em cadeias de caracteres estreitas em algumas páginas de código multibyte em cadeias de caracteres UTF-8 ou em uma cadeia de caracteres largo. No c++11, suporte a Unicode é estendido pelo char16_t\* e char32_t\* tipos de cadeia de caracteres:
+Literais de cadeia de caracteres nativos (não brutos) podem usar nomes de caracteres universais para representar qualquer caractere, desde que o nome do caractere universal possa ser codificado como um ou mais caracteres no tipo de cadeia de caracteres.  Por exemplo, um nome de caractere universal representando um caractere estendido não pode ser codificado em uma cadeia de caracteres estreita usando a página de código ANSI, mas pode ser codificado em cadeias estreitas em algumas páginas de código de vários bytes, ou em cadeias de caracteres UTF-8, ou em uma cadeia extensa. No c++ 11, o suporte a Unicode é estendido `char32_t*` pelos tipos de cadeia de `char16_t*` caracteres e:
 
 ```cpp
 // ASCII smiling face
@@ -403,6 +420,6 @@ const char32_t* s5 = U"😎 = \U0001F60E is B-)";
 
 ## <a name="see-also"></a>Consulte também
 
-[Conjuntos de caracteres](../cpp/character-sets.md)<br/>
-[Literais de ponteiro, numéricos e boolianos](../cpp/numeric-boolean-and-pointer-literals-cpp.md)<br/>
+[Conjuntos de caracteres](../cpp/character-sets.md)\
+[Literais numéricos, booleanos e de ponteiro](../cpp/numeric-boolean-and-pointer-literals-cpp.md)\
 [Literais definidos pelo usuário](../cpp/user-defined-literals-cpp.md)

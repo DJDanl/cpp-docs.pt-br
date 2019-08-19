@@ -9,20 +9,20 @@ helpviewer_keywords:
 - stream operations in CRichEditCtrl
 - stream storage and CRichEditCtrl
 ms.assetid: 110b4684-1e76-4ca6-9ef0-5bc8b2d93c78
-ms.openlocfilehash: 04cf0b06773937bf66defccbb0e5e880c06e8d88
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 04bf49371b3ab5eaaad2775b532d8d35bf990ce3
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62306675"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68915286"
 ---
 # <a name="stream-operations-in-rich-edit-controls"></a>Operações de fluxo em controles de edição avançada
 
-Você pode usar fluxos para transferir dados para dentro ou fora de um controle rich edit ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)). Um fluxo é definido por uma [EDITSTREAM](/windows/desktop/api/richedit/ns-richedit-_editstream) estrutura, que especifica um buffer e uma função de retorno de chamada definida pelo aplicativo.
+Você pode usar fluxos para transferir dados para dentro ou para fora de um controle de edição rico ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)). Um fluxo é definido por uma estrutura [EDITSTREAM](/windows/desktop/api/richedit/ns-richedit-editstream) , que especifica um buffer e uma função de retorno de chamada definida pelo aplicativo.
 
-Para ler dados em uma avançada de controle de edição (isto é, transmitir os dados em), use o [StreamIn](../mfc/reference/cricheditctrl-class.md#streamin) função de membro. O controle chama repetidamente a função de retorno de chamada definida pelo aplicativo, que transfere uma parte dos dados no buffer de cada vez.
+Para ler dados em um controle de edição rico (ou seja, transmitir os dados), use a função de membro de [fluxo](../mfc/reference/cricheditctrl-class.md#streamin) . O controle chama repetidamente a função de retorno de chamada definida pelo aplicativo, que transfere uma parte dos dados para o buffer a cada vez.
 
-Para salvar o conteúdo de uma sofisticada do controle de edição (isto é, transmitir os saída de dados), você pode usar o [StreamOut](../mfc/reference/cricheditctrl-class.md#streamout) função de membro. O controle repetidamente grava no buffer e, em seguida, chama a função de retorno de chamada definida pelo aplicativo. Para cada chamada, a função de retorno de chamada salva o conteúdo do buffer.
+Para salvar o conteúdo de um controle de edição rico (ou seja, transmitir os dados de saída), você pode usar a função de membro [StreamOut](../mfc/reference/cricheditctrl-class.md#streamout). O controle grava repetidamente no buffer e, em seguida, chama a função de retorno de chamada definida pelo aplicativo. Para cada chamada, a função de chamada de retorno salva o conteúdo do buffer.
 
 ## <a name="see-also"></a>Consulte também
 
