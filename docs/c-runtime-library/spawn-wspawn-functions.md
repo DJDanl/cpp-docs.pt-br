@@ -45,14 +45,14 @@ helpviewer_keywords:
 - tspawnlpe function
 - _tspawnle function
 ms.assetid: bb47c703-5216-4e09-8023-8cf25bbf2cf9
-ms.openlocfilehash: 044aaee376be02d0d3734ea8982a8c4db47f7d39
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 8ab368378775102b708635b551c046a326adfecb
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57748041"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498901"
 ---
-# <a name="spawn-wspawn-functions"></a>Funções _spawn, _wspawn
+# <a name="_spawn-_wspawn-functions"></a>Funções _spawn, _wspawn
 
 Cada uma das funções `_spawn` cria e executa um novo processo:
 
@@ -117,13 +117,13 @@ Para passar argumentos para o novo processo, forneça um ou mais ponteiros para 
 >  Os espaços inseridos nas cadeias de caracteres podem causar um comportamento inesperado. Por exemplo, passando `_spawn`, a cadeia de caracteres `"hi there"` resultará na obtenção de dois argumentos pelo processo, `"hi"` e `"there"`. Se a intenção for fazer o novo processo abrir um arquivo chamado "hi there", o processo falhará. É possível evitar isso colocando a cadeia de caracteres entre aspas: `"\"hi there\""`.
 
 > [!IMPORTANT]
->  Não passe a entrada do usuário para `_spawn` sem verificar explicitamente seu conteúdo. `_spawn` resultará em uma chamada para [CreateProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa), então tenha em mente que nomes de caminho desqualificados podem levar a possíveis vulnerabilidades de segurança.
+>  Não passe a entrada do usuário para `_spawn` sem verificar explicitamente seu conteúdo. `_spawn` resultará em uma chamada para [CreateProcess](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessw), então tenha em mente que nomes de caminho desqualificados podem levar a possíveis vulnerabilidades de segurança.
 
 Os ponteiros de argumento podem ser passados como argumentos separados (em `_spawnl`, `_spawnle`, `_spawnlp` e `_spawnlpe`) ou como uma matriz de ponteiros (em `_spawnv`, `_spawnve`, `_spawnvp` e `_spawnvpe`). Você deve passar pelo menos um argumento, `arg0` ou `argv`[0], para o processo gerado. Por convenção, este argumento é o nome do programa como você o digitaria na linha de comando. Um valor diferente não produz um erro.
 
 As chamadas `_spawnl`, `_spawnle`, `_spawnlp` e `_spawnlpe` costumam ser usadas nos casos em que o número de argumentos é conhecido de antemão. O argumento `arg0` costuma ser um ponteiro para `cmdname`. Os argumentos de `arg1` a `argn` são ponteiros para as cadeias de caracteres que formam a nova lista de argumentos. Após `argn`, deve haver um ponteiro **NULL** para marcar o fim da lista de argumentos.
 
-As chamadas `_spawnv`, `_spawnve`, `_spawnvp` e `_spawnvpe` são úteis quando há um número variável de argumentos para o novo processo. Os ponteiros para os parâmetros são passados como uma matriz, `argv`*.* O argumento `argv`[0] é geralmente um ponteiro para um caminho em modo real ou o nome do programa no modo protegido, enquanto `argv`[1] a `argv`[`n`] são ponteiros para as cadeias de caracteres que formam a nova lista de argumentos. O argumento `argv`[`n` +1] deve ser um ponteiro **NULL** para marcar o fim da lista de argumentos.
+As chamadas `_spawnv`, `_spawnve`, `_spawnvp` e `_spawnvpe` são úteis quando há um número variável de argumentos para o novo processo. Os ponteiros para os parâmetros são passados como uma matriz, `argv` *.* O argumento `argv`[0] é geralmente um ponteiro para um caminho em modo real ou o nome do programa no modo protegido, enquanto `argv`[1] a `argv`[`n`] são ponteiros para as cadeias de caracteres que formam a nova lista de argumentos. O argumento `argv`[`n` +1] deve ser um ponteiro **NULL** para marcar o fim da lista de argumentos.
 
 ## <a name="environment-of-the-spawned-process"></a>Ambiente do processo gerado
 
@@ -139,7 +139,7 @@ As configurações de sinal não são preservadas em novos processos criados por
 
 Se você estiver chamando `_spawn` de uma DLL ou um aplicativo GUI e desejar redirecionar a saída para um pipe, você terá duas opções:
 
-- Usar a API do Win32 para criar um pipe, depois chamar [AllocConsole](/windows/console/allocconsole), definir os valores de identificador na estrutura de inicialização e chamar [CreateProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa).
+- Usar a API do Win32 para criar um pipe, depois chamar [AllocConsole](/windows/console/allocconsole), definir os valores de identificador na estrutura de inicialização e chamar [CreateProcess](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessw).
 
 - Chamar [_popen, _wpopen](../c-runtime-library/reference/popen-wpopen.md), que criará um pipe e invocará o aplicativo usando **cmd.exe /c** (ou **command.exe /c**).
 

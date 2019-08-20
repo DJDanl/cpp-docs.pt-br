@@ -7,12 +7,12 @@ helpviewer_keywords:
 - interfaces, implementing
 - implement interface wizard [C++]
 ms.assetid: 72f8731b-7e36-45db-8b10-7ef211a773cd
-ms.openlocfilehash: 8e166f806d247cd93ff0f471360d749fa95e430b
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: bb1db35e269ef884f3ebdf4564d8f0a3e579db50
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51692895"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69509517"
 ---
 # <a name="implement-an-interface"></a>Implementar uma interface
 
@@ -50,13 +50,13 @@ Caso esteja adicionando uma nova interface, adicione-a manualmente ao arquivo .i
 
 Este assistente implementa uma interface para um objeto COM. As implementações de muitas interfaces estão incluídas nas bibliotecas COM disponíveis no Visual Studio e no Windows. Uma implementação de interface é associada a um objeto quando uma instância do objeto é criada. Ela também informa os serviços que o objeto oferece.
 
-Para ver uma discussão sobre interfaces e implementações, confira [Interfaces e implementações de interface](/windows/desktop/com/interfaces-and-interface-implementations) no SDK do Windows.
+Para ver uma discussão sobre interfaces e implementações, confira [Interfaces e implementações de interface](/windows/win32/com/interfaces-and-interface-implementations) no SDK do Windows.
 
 - **Implementar interface de**
 
   Especifica o local da biblioteca de tipos, com base na qual a interface é criada.
 
-  |Opção|Descrição|
+  |Opção|DESCRIÇÃO|
   |------------|-----------------|
   |**Projeto**|A biblioteca de tipos faz parte do projeto.|
   |**Registry**|A biblioteca de tipos é registrada no sistema. As bibliotecas de tipos registradas são listadas em **Bibliotecas de tipos disponíveis**.|
@@ -77,7 +77,7 @@ Para ver uma discussão sobre interfaces e implementações, confira [Interfaces
   > [!NOTE]
   > As interfaces que têm o mesmo nome daquelas já implementadas pelo objeto selecionado não são exibidas na caixa **Interfaces**.
 
-  |Botão de transferência|Descrição|
+  |Botão de transferência|DESCRIÇÃO|
   |---------------------|-----------------|
   |**>**|Adiciona à lista **Implementar interfaces** o nome da interface atualmente selecionado na lista **Interfaces**.|
   |**>>**|Adiciona à lista **Implementar interfaces** todos os nomes de interfaces disponíveis na lista **Interfaces**.|

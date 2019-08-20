@@ -15,12 +15,12 @@ helpviewer_keywords:
 - vprintf function
 - formatted text [C++]
 ms.assetid: 02ac7c51-eab1-4bf0-bf4c-77065e3fa744
-ms.openlocfilehash: c45197c9008c2d0b6a0519d947ca75f55a7960fd
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: eb8a2829540876936f6c57745fb56e7d19f16394
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57747840"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498882"
 ---
 # <a name="vprintf-functions"></a>Funções vprintf
 
@@ -81,7 +81,7 @@ As versões dessas funções com o **_p** sufixo fornecem a capacidade de especi
 Para **vsprintf**, `vswprintf`, `_vsnprintf` e `_vsnwprintf`, se ocorrer cópia entre cadeias de caracteres que se sobrepõem, o comportamento será indefinido.
 
 > [!IMPORTANT]
->  Verifique se *format* não é uma cadeia de caracteres definida pelo usuário. Para obter mais informações, consulte [Avoiding Buffer Overruns](/windows/desktop/SecBP/avoiding-buffer-overruns) (Evitando estouros de buffer). Se estiver usando as versões seguras dessas funções (os sufixos **_s** ou **_p**), uma cadeia de caracteres de formato fornecida pelo usuário poderia disparar uma exceção de parâmetro inválido caso a cadeia de caracteres fornecida pelo usuário contivesse caracteres de formatação inválidos.
+>  Verifique se *format* não é uma cadeia de caracteres definida pelo usuário. Para obter mais informações, consulte [Avoiding Buffer Overruns](/windows/win32/SecBP/avoiding-buffer-overruns) (Evitando estouros de buffer). Se estiver usando as versões seguras dessas funções (os sufixos **_s** ou **_p**), uma cadeia de caracteres de formato fornecida pelo usuário poderia disparar uma exceção de parâmetro inválido caso a cadeia de caracteres fornecida pelo usuário contivesse caracteres de formatação inválidos.
 
 ## <a name="see-also"></a>Consulte também
 

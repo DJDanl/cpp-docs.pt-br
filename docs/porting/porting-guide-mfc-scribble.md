@@ -2,12 +2,12 @@
 title: 'Guia de portabilidade: Scribble do MFC'
 ms.date: 11/19/2018
 ms.assetid: 8ddb517d-89ba-41a1-ab0d-4d2c6d9047e8
-ms.openlocfilehash: 0424b5e8c87c0103b4ebee65765244b40e8fa553
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: e808f67b1479653add27a54ddf91f6578c046734
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65448963"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69511538"
 ---
 # <a name="porting-guide-mfc-scribble"></a>Guia de portabilidade: Scribble do MFC
 
@@ -65,7 +65,7 @@ Agora compile a solução. Na janela de saída, o compilador nos diz que _WINNT3
 _WIN32_WINNT not defined. Defaulting to _WIN32_WINNT_MAXVER (see WinSDKVer.h)
 ```
 
-Isso é um aviso, não um erro, e é muito comum ao atualizar um projeto do Visual Studio C++. Essa é a macro que define qual é a menor versão do Windows em que o aplicativo será executado. Se ignorarmos o aviso, aceitamos o valor padrão, _WIN32_WINNT_MAXVER, que significa a versão atual do Windows. Para encontrar uma tabela dos valores possíveis, consulte [Using the Windows Headers](/windows/desktop/WinProg/using-the-windows-headers) (Usando os cabeçalhos do Windows). Por exemplo, podemos defini-lo para ser executado em qualquer versão do Vista em diante.
+Isso é um aviso, não um erro, e é muito comum ao atualizar um projeto do Visual Studio C++. Essa é a macro que define qual é a menor versão do Windows em que o aplicativo será executado. Se ignorarmos o aviso, aceitamos o valor padrão, _WIN32_WINNT_MAXVER, que significa a versão atual do Windows. Para encontrar uma tabela dos valores possíveis, consulte [Using the Windows Headers](/windows/win32/WinProg/using-the-windows-headers) (Usando os cabeçalhos do Windows). Por exemplo, podemos defini-lo para ser executado em qualquer versão do Vista em diante.
 
 ```cpp
 #define _WIN32_WINNT _WIN32_WINNT_VISTA
