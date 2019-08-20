@@ -12,12 +12,12 @@ helpviewer_keywords:
 - stock properties, about stock properties
 - stock properties
 ms.assetid: 37bd4db7-efd3-4faa-87ad-64902ed16a36
-ms.openlocfilehash: 79938cb5c762292c5e1802832477c3a568ae2fdb
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: 5c472b74fee690c0cf33f78eca9e2e8462930eb8
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66504470"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69509521"
 ---
 # <a name="add-a-property"></a>Adicionar uma propriedade
 
@@ -62,7 +62,7 @@ Use este assistente para adicionar uma propriedade a uma interface.
 
   Define o nome da propriedade. Para dispinterfaces MFC associadas a controles ActiveX, forneça seu próprio nome ou selecione um nome de propriedade de estoque na lista predefinida. Se você fornecer seu próprio nome de propriedade, o tipo de implementação **Estoque** não ficará disponível. Confira [propriedades de estoque](#stock-properties) para obter uma descrição das propriedades na lista.
 
-  |Tipo de interface|Descrição|
+  |Tipo de interface|DESCRIÇÃO|
   |--------------------|-----------------|
   |Interface dupla ATL, interface personalizada e interface personalizada local|Forneça um nome de propriedade.|
   |Dispinterface MFC, dispinterface MFC do controle ActiveX|Forneça um nome de propriedade ou selecione uma propriedade de estoque na lista. Se você selecionar uma propriedade na lista, o valor apropriado será exibido na caixa **Tipo de propriedade**. Você pode alterar esse tipo, dependendo da seleção em **Tipo de implementação**.|
@@ -91,7 +91,7 @@ Use este assistente para adicionar uma propriedade a uma interface.
 
   Somente dispinterfaces MFC. Especifica como implementar a propriedade que está sendo adicionada.
 
-  |Tipo de implementação|Descrição|
+  |Tipo de implementação|DESCRIÇÃO|
   |-------------------------|-----------------|
   |**Estoque**|Especifica uma implementação de estoque para a propriedade selecionada em **Nome da propriedade**. O padrão. Para obter mais informações, confira [Propriedades de estoque](#stock-properties).<br /><br /> Se você especificar **Estoque**, as opções **Tipo de propriedade**, **Tipo de parâmetro** e **Nome do parâmetro** ficarão esmaecidas.|
   |**Variável de membro**|Especifica que a propriedade é adicionada como uma variável de membro. Adicione propriedades personalizadas ou a maioria das propriedades de estoque como variáveis de membro. Não é possível especificar **Variável de membro** para as propriedades `Caption`, `hWnd` e `Text`.<br /><br /> Fornece nomes padrão em **Nome da variável** e **Função de notificação**. É possível editar esse nome.|
@@ -105,7 +105,7 @@ Use este assistente para adicionar uma propriedade a uma interface.
 
   Somente interfaces ATL. Define a propriedade gravável; ou seja, ela cria o método `Put` para definição, ou "colocação", dessa propriedade do objeto. Selecione **Get**, **Put** ou ambos. Se você selecionar essa opção, poderá escolher uma das duas seguintes maneiras de implementar o método:
 
-  |Opção|Descrição|
+  |Opção|DESCRIÇÃO|
   |------------|-----------------|
   |**PropPut**|A função [PropPut](../windows/propput.md) retorna uma cópia do objeto. Esse é o padrão e a maneira mais comum para tornar a propriedade gravável.|
   |**PropPutRef**|A função [PropPutRef](../windows/propputref.md) retorna uma referência ao objeto, em vez de retornar a cópia do objeto em si. Considere o uso dessa opção para objetos, como structs ou matrizes grandes, que podem ter a sobrecarga de inicialização.|
@@ -114,7 +114,7 @@ Use este assistente para adicionar uma propriedade a uma interface.
 
   Somente interfaces ATL. Define se o parâmetro especificado pelo **Nome do parâmetro** é `in`, `out`, ambos ou nenhum.
 
-  |Opção|Descrição|
+  |Opção|DESCRIÇÃO|
   |------------|-----------------|
   |`in`|Indica que o parâmetro é passado do procedimento de chamada para o procedimento chamado.|
   |`out`|Indica que o parâmetro de ponteiro é retornado do procedimento chamado para o procedimento de chamada (do servidor para o cliente).|
@@ -149,39 +149,39 @@ Use esta página do Assistente de Adição de Propriedade para especificar as co
 
 - `id`
 
-  Define a ID numérica que identifica a propriedade. Essa opção não está disponível para propriedades de interfaces personalizadas. Confira [id](/windows/desktop/Midl/id) na *Referência de MIDL*.
+  Define a ID numérica que identifica a propriedade. Essa opção não está disponível para propriedades de interfaces personalizadas. Confira [id](/windows/win32/Midl/id) na *Referência de MIDL*.
 
 - `helpcontext`
 
-  Especifica uma ID de contexto que permite ao usuário exibir informações sobre essa propriedade no arquivo de Ajuda. Confira [helpcontext](/windows/desktop/Midl/helpcontext) na *Referência de MIDL*.
+  Especifica uma ID de contexto que permite ao usuário exibir informações sobre essa propriedade no arquivo de Ajuda. Confira [helpcontext](/windows/win32/Midl/helpcontext) na *Referência de MIDL*.
 
 - `helpstring`
 
-  Especifica uma cadeia de caracteres que é usada para descrever o elemento ao qual ela se aplica. Por padrão, ele é definido como `property` &nbsp; *propriedade&nbsp;nome*. Confira [helpstring](/windows/desktop/Midl/helpstring) na *Referência de MIDL*.
+  Especifica uma cadeia de caracteres que é usada para descrever o elemento ao qual ela se aplica. Por padrão, ele é definido como `property` &nbsp; *propriedade&nbsp;nome*. Confira [helpstring](/windows/win32/Midl/helpstring) na *Referência de MIDL*.
 
 ### <a name="other-options"></a>Outras opções
 
 Nem todas as opções estão disponíveis para todos os tipos de propriedade.
 
-|Opção|Descrição|
+|Opção|DESCRIÇÃO|
 |------------|-----------------|
-|`bindable`|Indica que a propriedade dá suporte à associação de dados. Confira [bindable](/windows/desktop/Midl/bindable) na *Referência de MIDL*. Para a implementação de estoque da propriedade, essa opção está definida por padrão e não pode ser alterada.|
-|`defaultbind`|Indica que essa única propriedade associável melhor representa o objeto. Confira [defaultbind](/windows/desktop/Midl/defaultbind) na *Referência de MIDL*.|
-|`displaybind`|Indica que essa propriedade deve ser exibida para o usuário como associável. Confira [displaybind](/windows/desktop/Midl/displaybind) na *Referência de MIDL*.|
-|`immediatebind`|Indica que o banco de dados será notificado imediatamente de todas as alterações nessa propriedade de um objeto associado a dados. Confira [immediatebind](/windows/desktop/Midl/immediatebind) na *Referência de MIDL*.|
-|`defaultcollelem`|Indica que a propriedade é uma função de acessador para um elemento da coleção padrão. Confira [defaultcollelem](/windows/desktop/Midl/defaultcollelem) na *Referência de MIDL*.|
-|`nonbrowsable`|Marca um membro de interface ou de dispinterface que não deve ser exibido em um navegador de propriedades. Confira [nonbrowsable](/windows/desktop/Midl/nonbrowsable) na *Referência de MIDL*.|
-|`requestedit`|Indica que a propriedade dá suporte à notificação `OnRequestEdit`. Confira [requestedit](/windows/desktop/Midl/requestedit) na *Referência de MIDL*. Para a implementação de estoque da propriedade, essa opção está definida por padrão e não pode ser alterada.|
-|`source`|Indica que um membro da propriedade é uma origem de eventos. Confira [source](/windows/desktop/Midl/source) na *Referência de MIDL*.|
-|`hidden`|Indica que a propriedade existe, mas que não deveria ser exibida em um navegador orientado ao usuário. Confira [hidden](/windows/desktop/Midl/hidden) na *Referência de MIDL*.|
-|`restricted`|Especifica que a propriedade não pode ser chamada arbitrariamente. Confira [restricted](/windows/desktop/Midl/restricted) na *Referência de MIDL*.|
-|`local`|Especifica para o compilador MIDL que a propriedade não é remota. Confira [local](/windows/desktop/Midl/local) na *Referência de MIDL*.|
+|`bindable`|Indica que a propriedade dá suporte à associação de dados. Confira [bindable](/windows/win32/Midl/bindable) na *Referência de MIDL*. Para a implementação de estoque da propriedade, essa opção está definida por padrão e não pode ser alterada.|
+|`defaultbind`|Indica que essa única propriedade associável melhor representa o objeto. Confira [defaultbind](/windows/win32/Midl/defaultbind) na *Referência de MIDL*.|
+|`displaybind`|Indica que essa propriedade deve ser exibida para o usuário como associável. Confira [displaybind](/windows/win32/Midl/displaybind) na *Referência de MIDL*.|
+|`immediatebind`|Indica que o banco de dados será notificado imediatamente de todas as alterações nessa propriedade de um objeto associado a dados. Confira [immediatebind](/windows/win32/Midl/immediatebind) na *Referência de MIDL*.|
+|`defaultcollelem`|Indica que a propriedade é uma função de acessador para um elemento da coleção padrão. Confira [defaultcollelem](/windows/win32/Midl/defaultcollelem) na *Referência de MIDL*.|
+|`nonbrowsable`|Marca um membro de interface ou de dispinterface que não deve ser exibido em um navegador de propriedades. Confira [nonbrowsable](/windows/win32/Midl/nonbrowsable) na *Referência de MIDL*.|
+|`requestedit`|Indica que a propriedade dá suporte à notificação `OnRequestEdit`. Confira [requestedit](/windows/win32/Midl/requestedit) na *Referência de MIDL*. Para a implementação de estoque da propriedade, essa opção está definida por padrão e não pode ser alterada.|
+|`source`|Indica que um membro da propriedade é uma origem de eventos. Confira [source](/windows/win32/Midl/source) na *Referência de MIDL*.|
+|`hidden`|Indica que a propriedade existe, mas que não deveria ser exibida em um navegador orientado ao usuário. Confira [hidden](/windows/win32/Midl/hidden) na *Referência de MIDL*.|
+|`restricted`|Especifica que a propriedade não pode ser chamada arbitrariamente. Confira [restricted](/windows/win32/Midl/restricted) na *Referência de MIDL*.|
+|`local`|Especifica para o compilador MIDL que a propriedade não é remota. Confira [local](/windows/win32/Midl/local) na *Referência de MIDL*.|
 
 ## <a name="stock-properties"></a>Propriedades de estoque
 
 Caso esteja adicionando uma propriedade a uma dispinterface MFC usando o [assistente de adição de propriedade](#idl-attributes-add-property-wizard), escolha uma propriedade de estoque na lista **Nome da propriedade** da página [Nomes](../ide/names-add-property-wizard.md) do assistente. Estas são as seguintes propriedades:
 
-|Property name|Descrição|
+|Property name|DESCRIÇÃO|
 |-------------------|-----------------|
 |`Appearance`|Retorna ou define um valor que determina a aparência do controle. A propriedade `Appearance` do controle pode incluir ou omitir efeitos de exibição tridimensionais. Essa propriedade é uma propriedade de leitura/gravação de ambiente.|
 |`BackColor`|Retorna ou define a propriedade `BackColor` de ambiente do controle para uma cor da paleta (RGB) ou uma cor predefinida do sistema. Por padrão, seu valor corresponde à cor de primeiro plano do contêiner do controle. Essa propriedade é uma propriedade de leitura/gravação de ambiente.|

@@ -2,12 +2,12 @@
 title: 'Como: Usar o código C++ existente em um aplicativo da Plataforma Universal do Windows'
 ms.date: 04/08/2019
 ms.assetid: 87e5818c-3081-42f3-a30d-3dca2cf0645c
-ms.openlocfilehash: b46cbdc088908f59d6cbdc0ecd7cd6475da370d8
-ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
+ms.openlocfilehash: e587ae88fe8d38a22b351d87ae585efe82acf091
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67861126"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69510373"
 ---
 # <a name="how-to-use-existing-c-code-in-a-universal-windows-platform-app"></a>Como: Usar o código C++ existente em um aplicativo da Plataforma Universal do Windows
 
@@ -19,13 +19,13 @@ Os aplicativos da UWP são executados em um ambiente protegido e, como resultado
 
 Se o código-fonte estiver disponível para a biblioteca, você poderá eliminar as chamadas à API proibidas. Para obter detalhes, incluindo uma lista de APIs que são permitidas ou proibidas, confira [Win32 and COM APIs for UWP apps](/uwp/win32-and-com/win32-and-com-for-uwp-apps) (APIs Win32 e COM para aplicativos UWP) e [Funções de CRT sem suporte em aplicativos da Plataforma Universal do Windows](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md). Algumas alternativas podem ser encontradas em [Alternatives to Windows APIs in UWP apps](/uwp/win32-and-com/alternatives-to-windows-apis-uwp) (Alternativas para APIs do Windows em aplicativos UWP).
 
-Se você tentar adicionar uma referência de um Projeto Universal do Windows a uma biblioteca de área de trabalho clássica, você obterá uma mensagem de erro que diz que a biblioteca não é compatível. No caso de uma biblioteca estática, você pode vincular à sua biblioteca simplesmente adicionando a biblioteca (arquivo .lib) à sua entrada de vinculador, assim como faria em um aplicativo Win32 clássico. Para bibliotecas em que somente um binário estiver disponível, isso será a única opção. Uma biblioteca estática é vinculada ao executável do aplicativo, mas uma DLL Win32 que você consumirá em um aplicativo UWP deve ser empacotado em um aplicativo incluindo-a no projeto e marcando-o como Conteúdo. Para carregar uma DLL Win32 em um aplicativo UWP, você também precisa chamar [LoadPackagedLibrary](/windows/desktop/api/winbase/nf-winbase-loadpackagedlibrary) em vez de `LoadLibrary` ou `LoadLibraryEx`.
+Se você tentar adicionar uma referência de um Projeto Universal do Windows a uma biblioteca de área de trabalho clássica, você obterá uma mensagem de erro que diz que a biblioteca não é compatível. No caso de uma biblioteca estática, você pode vincular à sua biblioteca simplesmente adicionando a biblioteca (arquivo .lib) à sua entrada de vinculador, assim como faria em um aplicativo Win32 clássico. Para bibliotecas em que somente um binário estiver disponível, isso será a única opção. Uma biblioteca estática é vinculada ao executável do aplicativo, mas uma DLL Win32 que você consumirá em um aplicativo UWP deve ser empacotado em um aplicativo incluindo-a no projeto e marcando-o como Conteúdo. Para carregar uma DLL Win32 em um aplicativo UWP, você também precisa chamar [LoadPackagedLibrary](/windows/win32/api/winbase/nf-winbase-loadpackagedlibrary) em vez de `LoadLibrary` ou `LoadLibraryEx`.
 
 Se você tiver o código-fonte da DLL ou da biblioteca estática, poderá recompilar com `/ZW` como um projeto UWP. Ao fazer isso, você pode adicionar uma referência usando o **Gerenciador de Soluções** e usá-la em aplicativos UWP em C++. No caso de uma DLL, você deve vincular com a biblioteca de exportação.
 
 Para expor a funcionalidade para chamadores em outras linguagens, você pode converter a biblioteca em um Componente do Tempo de Execução do Windows. Os Componentes do Windows Runtime diferem de DLLs comuns na medida em que eles incluem metadados na forma de arquivos .winmd que descrevem os conteúdos de uma maneira que os consumidores .NET e JavaScript exigem. Para expor elementos de API para outras linguagens, você pode adicionar constructos C++/CX, como classes de referência e torná-los públicos ou use a [WRL (Biblioteca de Modelos C++ do Tempo de Execução do Windows)](../windows/windows-runtime-cpp-template-library-wrl.md).  No Windows 10 e posterior, você pode usar a [biblioteca C++/WinRT](https://github.com/microsoft/cppwinrt) em vez do C++/CX.
 
-A discussão anterior não se aplica ao caso de componentes COM, que devem ser tratados de maneira diferente. Se você tiver um servidor COM em um arquivo EXE ou DLL, poderá usá-lo em um Projeto Universal do Windows contanto que o empacote como um [componente COM sem registro](/windows/desktop/sbscs/creating-registration-free-com-objects), adicione-o ao projeto como um arquivo de conteúdo e crie uma instância dele usando [CoCreateInstanceFromApp](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstancefromapp). Para obter mais informações, confira [Using Free-COM DLL in Windows Store C++ Project](https://blogs.msdn.microsoft.com/win8devsupport/2013/05/19/using-free-com-dll-in-windows-store-c-project/) (Usando a DLL Free-COM no projeto C ++ da Windows Store).
+A discussão anterior não se aplica ao caso de componentes COM, que devem ser tratados de maneira diferente. Se você tiver um servidor COM em um arquivo EXE ou DLL, poderá usá-lo em um Projeto Universal do Windows contanto que o empacote como um [componente COM sem registro](/windows/win32/sbscs/creating-registration-free-com-objects), adicione-o ao projeto como um arquivo de conteúdo e crie uma instância dele usando [CoCreateInstanceFromApp](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstancefromapp). Para obter mais informações, confira [Using Free-COM DLL in Windows Store C++ Project](https://blogs.msdn.microsoft.com/win8devsupport/2013/05/19/using-free-com-dll-in-windows-store-c-project/) (Usando a DLL Free-COM no projeto C ++ da Windows Store).
 
 Se você desejar portar uma biblioteca COM existente para a UWP, talvez seja possível convertê-la em um componente do Tempo de Execução do Windows usando a [WRL (Biblioteca de Modelos C++ do Tempo de Execução do Windows)](../windows/windows-runtime-cpp-template-library-wrl.md). A WRL não dá suporte a todos os recursos da ATL e OLE, portanto, se tal transporte é viável depende de quanto seu código COM depende de quais recursos do COM, ATL e OLE seu componente requer.
 
