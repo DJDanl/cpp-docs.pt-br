@@ -3858,6 +3858,8 @@
           href: compiler-warnings/compiler-warning-level-1-c4581.md
         - name: Aviso do compilador (nível 1) C4584
           href: compiler-warnings/compiler-warning-level-1-c4584.md
+        - name: Aviso do compilador (nível 4) C4596
+          href: compiler-warnings/c4596.md
     - name: Avisos do compilador C4600 a C4799
       expanded: false
       items:
