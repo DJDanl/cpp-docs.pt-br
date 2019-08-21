@@ -23,7 +23,7 @@ No IDE, todas as informações necessárias para compilar um projeto são expost
 
 Quando você cria um projeto, o sistema atribui valores para várias propriedades. Os padrões variam um pouco dependendo do tipo de projeto e das opções escolhidas no assistente de aplicativo. Por exemplo, um projeto ATL tem propriedades relacionadas a arquivos MIDL, mas eles estão ausentes em um aplicativo de console básico. As propriedades padrão são mostradas no painel Geral nas Páginas de Propriedades:
 
-![&#43; &#43; ]Padrões do projeto Visual C padrões de(media/visual-c---project-defaults.png "projeto Visual C++ ")
+![&#43; &#43; ](media/visual-c---project-defaults.png "projeto Visual C++ ")
 
 ## <a name="applying-properties-to-build-configurations-and-target-platforms"></a>Aplicando Propriedades a configurações de compilação e plataformas de destino
 

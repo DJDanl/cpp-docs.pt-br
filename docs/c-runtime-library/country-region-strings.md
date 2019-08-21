@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - country/region strings
 ms.assetid: 5baf0ccf-0d9b-40dc-83bd-323705287930
-ms.openlocfilehash: 3a3bbe9d1278cf733bafbeb23efcb0a1ad577228
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 49eb6bc4473d9e54c06c3bf9290f8c3c96640415
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50463460"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500240"
 ---
 # <a name="countryregion-strings"></a>Cadeias de caracteres de país/região
 
-Cadeias de caracteres de país e região podem ser combinadas com uma cadeia de caracteres de idioma para criar uma especificação de localidade para as funções `setlocale`, `_wsetlocale`, `_create_locale` e `_wcreate_locale`. Para obter as listas de nomes de países e regiões compatíveis com várias versões do sistema operacional Windows, veja as colunas **Idioma**, **Localização** e **Marca de idioma** da tabela no [Apêndice A: comportamento de produto](https://msdn.microsoft.com/library/cc233982.aspx) no [MS-LCID]: referência do identificador de código de idioma (LCID) do Windows. Para obter um exemplo de código que enumera os nomes de localidades disponíveis e valores relacionados, veja [NLS: exemplo de APIs com base no nome](/windows/desktop/intl/nls--name-based-apis-sample).
+Cadeias de caracteres de país e região podem ser combinadas com uma cadeia de caracteres de idioma para criar uma especificação de localidade para as funções `setlocale`, `_wsetlocale`, `_create_locale` e `_wcreate_locale`. Para obter as listas de nomes de países e regiões compatíveis com várias versões do sistema operacional Windows, veja as colunas **Idioma**, **Localização** e **Marca de idioma** da tabela no [Apêndice A: Comportamento do produto](https://msdn.microsoft.com/library/cc233982.aspx) no [MS-LCID]: Referência do Windows Language Code Identifier (LCID). Para obter um exemplo de código que enumera os nomes de localidades disponíveis e valores relacionados, confira [NLS: exemplo de APIs com base no nome](/windows/win32/intl/nls--name-based-apis-sample).
 
 ## <a name="additional-supported-country-and-region-strings"></a>Cadeias de caracteres de país e região com suporte adicional
 
