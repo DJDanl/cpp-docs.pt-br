@@ -1,6 +1,6 @@
 ---
 title: Classe CImage
-ms.date: 02/01/2018
+ms.date: 08/19/2019
 f1_keywords:
 - CImage
 - ATLIMAGE/ATL::CImage
@@ -54,12 +54,12 @@ helpviewer_keywords:
 - CImage class
 - transparent color
 ms.assetid: 52861e3d-bf7e-481f-a240-90e88f76c490
-ms.openlocfilehash: 6c651f160fdab582b769cf1764add2cc482745bf
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 3b278f37bbcbe2ee879d9c3d2837267fe31e57e2
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69491325"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69630725"
 ---
 # <a name="cimage-class"></a>Classe CImage
 
@@ -193,9 +193,9 @@ Por `CImage`meio do, você tem acesso aos bits reais de uma seção DIB. Você p
 Você pode usar `CImage` a partir do MFC ou do ATL.
 
 > [!NOTE]
-> Ao criar um projeto usando `CImage`o, você deve definir `CString` antes de incluir. `atlimage.h` Se seu projeto usar ATL sem MFC, inclua `atlstr.h` antes de incluir `atlimage.h`. Se seu projeto usar MFC (ou se for um projeto ATL com suporte MFC), inclua `afxstr.h` antes de incluir. `atlimage.h`<br/>
+> Ao criar um projeto usando `CImage`o, você deve definir `CString` o antes de incluir *atlimage. h*. Se o seu projeto usar ATL sem MFC, inclua *atlstr. h* antes de incluir *atlimage. h*. Se seu projeto usar MFC (ou se for um projeto ATL com suporte MFC), inclua *afxstr. h* antes de incluir *atlimage. h*.<br/>
 > <br/>
-> Da mesma forma, você `atlimage.h` deve incluir antes `atlimpl.cpp`de incluir. Para fazer isso com facilidade, `atlimage.h` inclua em `stdafx.h`seu.
+> Da mesma forma, você deve incluir *atlimage. h* antes de incluir *Atlimpl. cpp*. Para fazer isso com facilidade, inclua *atlimage. h* em seu *PCH. h* (*stdafx. h* no Visual Studio 2017 e anterior).
 
 ## <a name="requirements"></a>Requisitos
 

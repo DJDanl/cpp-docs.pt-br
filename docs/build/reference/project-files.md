@@ -1,24 +1,38 @@
 ---
 title: Arquivo de projeto de exemplo
-ms.date: 10/09/2018
+ms.date: 08/19/2019
 helpviewer_keywords:
 - .vcxproj files
 - C++ projects, project file format
 ms.assetid: 5261cf45-3136-40a6-899e-dc1339551401
-ms.openlocfilehash: 306b6a7b39db758c3712b1d57460268fc6414726
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 0eb87c3f3ba8bd60f0944ad673d22f9b84e070a5
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65217735"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69630762"
 ---
 # <a name="project-files"></a>Os arquivos de projeto
 
-Um C++ arquivo de projeto no Visual Studio é um arquivo baseado em XML que tem a extensão de nome de arquivo. vcxproj e contém informações que é necessário para criar um C++ project. Observe que o arquivo de projeto importa vários arquivos de projeto que têm a extensão *.props* ou *.targets*. Esses arquivos contem informações de build adicionais e eles mesmos podem se referir a outros arquivos *.props* ou *.targets*. As macros no caminho do arquivo (por exemplo, `$(VCTargetsPath)`) dependem de sua instalação do Visual Studio. Para obter mais informações sobre essas macros e *. Props* e *. targets* arquivos, consulte [página de propriedade dos diretórios VC + +](vcpp-directories-property-page.md), [definido C++ compilador e build as propriedades no Visual Studio](../working-with-project-properties.md) e [macros comuns para compilar comandos e propriedades](common-macros-for-build-commands-and-properties.md).
+Um C++ arquivo de projeto no Visual Studio é um arquivo baseado em XML que tem a extensão de nome de arquivo. vcxproj e contém informações necessárias para criar C++ um projeto. Observe que o arquivo de projeto importa vários arquivos de projeto que têm a extensão ". props" ou ". targets". Esses arquivos contêm informações adicionais de compilação e podem se referir a outros arquivos ". props" ou ". targets". As macros no caminho do arquivo (por exemplo, `$(VCTargetsPath)`) dependem de sua instalação do Visual Studio. Para obter mais informações sobre essas macros e os arquivos ". props" e ". targets", consulte a [página de propriedades de diretórios do vc + +](vcpp-directories-property-page.md), [definir C++ Propriedades do compilador e de compilação no Visual Studio](../working-with-project-properties.md) e [macros comuns para comandos e propriedades de compilação](common-macros-for-build-commands-and-properties.md).
 
 ## <a name="example"></a>Exemplo
 
+::: moniker range=">=vs-2019"
+
+O arquivo. vcxproj de exemplo a seguir foi produzido com a escolha do **Assistente de área de trabalho do Windows** na caixa de diálogo **novo projeto** . Para processar um arquivo de projeto, use a ferramenta msbuild.exe na linha de comando ou o comando **Build** no IDE. (Essa amostra não pode ser processada porque os arquivos de origem e de cabeçalho necessários não foram fornecidos.) Para obter mais informações sobre os elementos XML em um arquivo de projeto, confira [Referência de esquema do arquivo de projeto](/visualstudio/msbuild/msbuild-project-file-schema-reference).
+
+::: moniker-end
+
+::: moniker range="<=vs-2017"
+
 O arquivo .vcxproj de exemplo a seguir foi produzido pela especificação de um **Aplicativo de Console Win32** na caixa de diálogo **Novo Projeto**. Para processar um arquivo de projeto, use a ferramenta msbuild.exe na linha de comando ou o comando **Build** no IDE. (Essa amostra não pode ser processada porque os arquivos de origem e de cabeçalho necessários não foram fornecidos.) Para obter mais informações sobre os elementos XML em um arquivo de projeto, confira [Referência de esquema do arquivo de projeto](/visualstudio/msbuild/msbuild-project-file-schema-reference).
+
+::: moniker-end
+
+
+>[!NOTE]
+> Para projetos no Visual Studio 2017 e anteriores, altere `pch.h` para `stdafx.h` e `pch.cpp` para `stdafx.cpp`.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -102,12 +116,12 @@ O arquivo .vcxproj de exemplo a seguir foi produzido pela especificação de um 
     <None Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="pch.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="SomeProjName.cpp" />
-    <ClCompile Include="stdafx.cpp">
+    <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
     </ClCompile>

@@ -6,28 +6,30 @@ f1_keywords:
 helpviewer_keywords:
 - C4687
 ms.assetid: 2f28e0b1-7358-4c88-bd70-aad8f0aa004c
-ms.openlocfilehash: 1978e1a35ba5b5d59b5961a21378d8af6921d145
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 83f5c535f9cf252783110838c181c88c8b0096ee
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62311302"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69631605"
 ---
 # <a name="compiler-warning-c4687"></a>Aviso do compilador C4687
 
-'class': uma classe sealed abstract não pode implementar uma interface 'interface'
+> '*Class*': uma classe sealed abstract não pode implementar uma interface '*interface*'
 
-Normalmente, um tipo abstrato, selado só é útil para manter funções de membro estático.
+## <a name="remarks"></a>Comentários
 
-Para obter mais informações, consulte [abstrata](../../extensions/abstract-cpp-component-extensions.md)e [lacrado](../../extensions/sealed-cpp-component-extensions.md).
+Um tipo lacrado e abstrato normalmente é útil apenas para manter funções membro estáticas.
 
-Por padrão, C4687 é emitido como um erro. Você pode suprimir C4687 com o [aviso](../../preprocessor/warning.md) pragma. Se você tiver certeza de que você deseja implementar uma interface em um tipo abstrato, selado, você pode suprimir C4687.
+Para obter mais informações, consulte [abstract](../../extensions/abstract-cpp-component-extensions.md) e [sealed](../../extensions/sealed-cpp-component-extensions.md).
+
+O C4687 é emitido como um erro por padrão. Você pode suprimir C4687 com o pragma de [aviso](../../preprocessor/warning.md) . Se você tiver certeza de que deseja implementar uma interface em um tipo lacrado e abstrato, poderá suprimir C4687.
 
 ## <a name="example"></a>Exemplo
 
 O exemplo a seguir gera C4687.
 
-```
+```cpp
 // C4687.cpp
 // compile with: /clr /c
 interface class A {};

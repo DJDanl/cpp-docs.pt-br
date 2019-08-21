@@ -1,6 +1,6 @@
 ---
 title: Classe CComModule
-ms.date: 11/04/2016
+ms.date: 08/19/2019
 f1_keywords:
 - CComModule
 - ATLBASE/ATL::CComModule
@@ -31,12 +31,12 @@ helpviewer_keywords:
 - CComModule class
 - DLL modules [C++], ATL
 ms.assetid: f5face2c-8fd8-40e6-9ec3-54ab74701769
-ms.openlocfilehash: 53138081a6d712f775a2cc8f1e6905c45d95d34d
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 482f29bae28841ab40ca8a8f80ab7f0df42ddc8b
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69497117"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69630653"
 ---
 # <a name="ccommodule-class"></a>Classe CComModule
 
@@ -681,7 +681,7 @@ Um valor HRESULT padrão.
 
 Semelhante a [UpdateRegistryFromResourceD](#updateregistryfromresourced) , `UpdateRegistryFromResourceS` exceto cria um link estático para o componente de registro do ATL (registrador).
 
-`UpdateRegistryFromResourceS`será invocado automaticamente quando o mapa do objeto for processado, desde que `#define _ATL_STATIC_REGISTRY` você adicione ao seu stdafx. h.
+`UpdateRegistryFromResourceS`será invocado automaticamente quando o mapa de objetos for processado, desde que `#define _ATL_STATIC_REGISTRY` você adicione ao *PCH. h* (*stdafx. h* no Visual Studio 2017 e anteriores).
 
 > [!NOTE]
 >  Para substituir valores de substituição em tempo de execução, não especifique a macro [DECLARE_REGISTRY_RESOURCE](registry-macros.md#declare_registry_resource) ou [DECLARE_REGISTRY_RESOURCEID](registry-macros.md#declare_registry_resourceid) . Em vez disso, crie uma `_ATL_REGMAP_ENTRIES` matriz de estruturas, em que cada entrada contém um espaço reservado variável emparelhado com um valor para substituir o espaço reservado em tempo de execução. Em seguida `UpdateRegistryFromResourceS`, chame, passando a matriz para o parâmetro *pMapEntries* . Isso adiciona todos os valores de substituição nas `_ATL_REGMAP_ENTRIES` estruturas ao mapa de substituição do registrador.

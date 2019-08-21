@@ -1,16 +1,16 @@
 ---
 title: 'Passo a passo: Removendo o trabalho de um thread de interface do usuário'
-ms.date: 04/25/2019
+ms.date: 08/19/2019
 helpviewer_keywords:
 - user-interface threads, removing work from [Concurrency Runtime]
 - removing work from user-interface threads [Concurrency Runtime]
 ms.assetid: a4a65cc2-b3bc-4216-8fa8-90529491de02
-ms.openlocfilehash: 214796777968c8aec7116a848e791aeef0d3af7b
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 2ee15d4660984c9afb77cb20f8ef0dab25a8b933
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69512257"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69631706"
 ---
 # <a name="walkthrough-removing-work-from-a-user-interface-thread"></a>Passo a passo: Removendo o trabalho de um thread de interface do usuário
 
@@ -70,7 +70,7 @@ Esta seção descreve como desenhar o fractal Mandelbrot. Essa versão desenha o
 
 #### <a name="to-implement-the-serial-version-of-the-mandelbrot-application"></a>Para implementar a versão serial do aplicativo Mandelbrot
 
-1. Em stdafx. h, adicione a seguinte `#include` diretiva:
+1. Em *PCH. h* (*stdafx. h* no Visual Studio 2017 e anterior), adicione a seguinte `#include` diretiva:
 
    [!code-cpp[concrt-mandelbrot#1](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_1.h)]
 
@@ -124,7 +124,7 @@ Este exemplo também usa um objeto [Concurrency:: unbounded_buffer](reference/un
 
 #### <a name="to-remove-the-drawing-work-from-the-ui-thread"></a>Para remover o trabalho de desenho do thread da interface do usuário
 
-1. Em stdafx. h, adicione as seguintes `#include` diretivas:
+1. Em *PCH. h* (*stdafx. h* no Visual Studio 2017 e anterior), adicione as seguintes `#include` diretivas:
 
    [!code-cpp[concrt-mandelbrot#101](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_9.h)]
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ACDUAL sample [MFC]
 - Automation servers [MFC], dual-interface support
 ms.assetid: b5c8ed09-2f7f-483c-80fc-2a47ad896063
-ms.openlocfilehash: afcbfd643d8b931e61b0f011b66482be5b2bcc82
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 1508b5219f7bb7fd2e9c9a56c42c30bb99686804
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69511004"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69630387"
 ---
 # <a name="tn065-dual-interface-support-for-ole-automation-servers"></a>TN065: Suporte de interface dual para servidores de automação OLE
 
@@ -267,7 +267,7 @@ Para modificar as configurações de Build de um projeto para que um arquivo de 
 
 Para adicionar as definições de **UUID** do arquivo de cabeçalho gerado pelo MkTypLib ao seu projeto:
 
-1. Inclua o arquivo de cabeçalho gerado pelo MkTypLib em seu arquivo de cabeçalho padrão include, STDAFX. T.
+1. Inclua o arquivo de cabeçalho gerado pelo MkTypLib em seu arquivo de cabeçalho padrão include, *stdafx. h*.
 
 2. Crie um novo arquivo, INITIIDS. CPP e adicione-o ao seu projeto. Nesse arquivo, inclua o arquivo de cabeçalho gerado pelo MkTypLib depois de incluir OLE2. H e INITGUID. T
 
