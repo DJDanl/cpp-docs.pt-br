@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - language strings
 ms.assetid: bbee63b1-af0b-4e44-9eaf-dd3e265c05fd
-ms.openlocfilehash: 143f06a0cf22265734d6d77f8fca4efd5ac3031b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a9e6eaa65516b5b49022526f24e220dec83b2c26
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620279"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500068"
 ---
 # <a name="language-strings"></a>Cadeias de caracteres de idioma
 
-As funções [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) e [_create_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md) podem usar idiomas com suporte pela API NLS do Windows em sistemas operacionais que não usam a página de código Unicode. Para obter uma lista dos idiomas com suporte por versão do sistema operacional, veja [Apêndice A: Comportamento de produto](https://msdn.microsoft.com/library/cc233982.aspx) no [MS-LCID]: referência do identificador de código de idioma (LCID) do Windows. A cadeia de caracteres de idioma pode ser qualquer um dos valores nas colunas **Idioma** e **Marcação do idioma** da lista de idiomas com suporte. Para obter um exemplo de código que enumera os nomes de localidades disponíveis e valores relacionados, veja [NLS: exemplo de APIs com base no nome](/windows/desktop/intl/nls--name-based-apis-sample).
+As funções [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) e [_create_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md) podem usar idiomas com suporte pela API NLS do Windows em sistemas operacionais que não usam a página de código Unicode. Para obter uma lista dos idiomas que tem suporte pela versão do sistema operacional, confira [Apêndice A: Comportamento do produto](https://msdn.microsoft.com/library/cc233982.aspx) no [MS-LCID]: Referência do Windows Language Code Identifier (LCID). A cadeia de caracteres de idioma pode ser qualquer um dos valores nas colunas **Idioma** e **Marcação do idioma** da lista de idiomas com suporte. Para obter um exemplo de código que enumera os nomes de localidades disponíveis e valores relacionados, confira [NLS: exemplo de APIs com base no nome](/windows/win32/intl/nls--name-based-apis-sample).
 
 ## <a name="additional-supported-language-strings"></a>Cadeias de caracteres de idioma com suporte adicional
 

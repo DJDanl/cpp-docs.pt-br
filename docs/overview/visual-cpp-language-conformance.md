@@ -1,16 +1,16 @@
 ---
 title: Tabela de conformidade com a linguagem Microsoft C++
-ms.date: 07/02/2019
+ms.date: 08/12/2019
 ms.technology: cpp-language
 ms.assetid: 475da6e9-0d78-4b4e-bd23-f41c406c4efe
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 2b5d7774734eae992935af9bd4abd408dd387d7d
-ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
+ms.openlocfilehash: 15226d41991d5a09d104d2edbfb3dbf2f7432b65
+ms.sourcegitcommit: db1ed91fa7451ade91c3fb76bc7a2b857f8a5eef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67552358"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68980522"
 ---
 # <a name="microsoft-c-language-conformance-table"></a>Tabela de conformidade com a linguagem Microsoft C++
 
@@ -23,7 +23,7 @@ Para obter detalhes sobre melhorias de conformidade e outras mudanças no Visual
 
 ## <a name="compiler-features"></a>Recursos do compilador
 
-|Área de recursos| |
+| | |
 |----|---|
 |__Principais recursos da linguagem C++03/11__|__Com suporte__|
 |&nbsp;&nbsp;O restante|VS 2015 <sup>[A](#note_A)</sup>|
@@ -83,10 +83,6 @@ Para obter detalhes sobre melhorias de conformidade e outras mudanças no Visual
 |&nbsp;&nbsp;[P0145R3 Refinando a ordem de avaliação de expressão](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0145r3.pdf)<br/>&nbsp;&nbsp;[P0400R0 Ordem de avaliação de argumentos de função](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0400r0.html)|VS 2017 15.7 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0195R2 Expansões de pacote em declarações using](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0195r2.html)|VS 2017 15.7 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0283R2 Ignorando atributos não reconhecidos](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0283r2.html)|VS 2015 <sup>[14](#note_14)</sup>|
-
-
-|Área de recursos| |
-|----|---|
 |__Principais recursos da linguagem C++17 (relatórios de defeito)__|__Com suporte__|
 |&nbsp;&nbsp;[P0702R1 Corrigindo dedução de argumento de modelo de classe para construtores de lista de inicializadores](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0702r1.html)|VS 2017 15.7 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0961R1 Como relaxar as regras de localização do ponto de personalização de associações estruturadas](http://open-std.org/JTC1/SC22/WG21/docs/papers/2018/p0961r1.html)|VS 2019 16.0 <sup>[17](#note_17)</sup>|
@@ -96,15 +92,11 @@ Para obter detalhes sobre melhorias de conformidade e outras mudanças no Visual
 |&nbsp;&nbsp;[P0929R2 Como verificar se há tipos de classe abstrata](https://wg21.link/P0929R2)|Não|
 |&nbsp;&nbsp;[P1009R2 Dedução de tamanho da matriz em expressões novas](https://wg21.link/P1009R2)|Não|
 |&nbsp;&nbsp;[P1286R2 Contra CWG DR1778](https://wg21.link/P1286R2)|Não|
-|Área de recursos| |
-|----|---|
 |__Principais recursos da linguagem C++20__|__Com suporte__|
 |&nbsp;&nbsp;[P0704R1 Corrigindo ponteiros qualificados por referência de construtores lvalue para membros](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0704r1.html)|VS 2015 <sup>[14](#note_14)</sup>|
 |&nbsp;&nbsp;[P1041R4 Transformar literais de cadeia de caracteres char16_t/char32_t em UTF-16/32](https://wg21.link/P1041R4)|VS 2015 <sup>[14](#note_14)</sup>|
 |&nbsp;&nbsp;[P1330R0 Alteração do membro ativo de uma união dentro de constexpr](https://wg21.link/P1330R0)|VS 2017 15.0 <sup>[14](#note_14)</sup>|
 |&nbsp;&nbsp;[P0972R0 noexcept para \<chrono> zero(), min(), max()](https://wg21.link/P0972R0)|VS 2017 15.7 <sup>[14](#note_14)</sup>|
-|&nbsp;&nbsp;[P0515R3 Comparação de três vias (espaçonave) <=>](https://wg21.link/P0515R3)|VS 2019 16.0 <sup>[20](#note_20)</sup>|
-|&nbsp;&nbsp;[P1008R1 Como proibir agregações com construtores declarados pelo usuário](https://wg21.link/P1008R1)|VS 2019 16.0 <sup>[20](#note_20)</sup>|
 |&nbsp;&nbsp;[P0329R4 Inicialização designada](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0329r4.pdf)|VS 2019 16.1 <sup>[20](#note_20)</sup>|
 |&nbsp;&nbsp;[P0409R2 Como permitir a captura de lambda \[=, this\]](http://open-std.org/JTC1/SC22/WG21/docs/papers/2017/p0409r2.html)|VS 2019 16.1 <sup>[20](#note_20)</sup>|
 |&nbsp;&nbsp;[P0515R3 Comparação de três vias (espaçonave) <=>](https://wg21.link/P0515R3)|VS 2019 16.0 <sup>[20](#note_20)</sup>|
@@ -114,7 +106,6 @@ Para obter detalhes sobre melhorias de conformidade e outras mudanças no Visual
 |&nbsp;&nbsp;[P0641R2 Incompatibilidade de const com o construtor de cópia padrão](https://wg21.link/P0641R2)|Parcial|
 |&nbsp;&nbsp;[P0306R4 Adição de \_\_VA_OPT\_\_ para omissão e exclusão de vírgulas](https://wg21.link/P0306R4)|Não|
 |&nbsp;&nbsp;[P0315R4 Como permitir lambdas em contextos não avaliados](https://wg21.link/P0315R4)|Não|
-|&nbsp;&nbsp;[P0409R2 Como permitir a captura de lambda \[=, this\]](https://wg21.link/P0409R2)|Não|
 |&nbsp;&nbsp;[P0428R2 Sintaxe familiar de modelo para lambdas genéricas](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0428r2.pdf)|Não|
 |&nbsp;&nbsp;[P0479R5 Atributos \[\[likely\]\] e \[\[unlikely\]\] ](https://wg21.link/P0479R5)|Não|
 |&nbsp;&nbsp;[P0542R5 Contratos](https://wg21.link/P0542R5)|Não|
@@ -151,11 +142,11 @@ Para obter detalhes sobre melhorias de conformidade e outras mudanças no Visual
 |&nbsp;&nbsp;[P1353R0 Macros de teste de recurso ausentes](https://wg21.link/P1353R0)|Não|
 |&nbsp;&nbsp;[P1381R1 Captura de referência de associações estruturadas](https://wg21.link/P1381R1)|Não|
 
-## <a name="standard-library-features"></a>Recursos de biblioteca padrão
+## <a name="standard-library-features"></a>Recursos da biblioteca padrão
 
-|Área de recursos| |
+| | |
 |---|---|
-|__Recursos da Biblioteca Padrão C++20__|__Com suporte__|
+|__Recursos da biblioteca padrão C++20__|__Com suporte__|
 |&nbsp;&nbsp;[P0809R0 Comparar contêineres desordenados](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0809r0.pdf)| VS 2010 <sup>[14](#note_14)</sup>|
 |&nbsp;&nbsp;[P0858R0 Requisitos de iterador constexpr](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0858r0.html)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0777R1 Como evitar o decaimento desnecessário](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0777r1.pdf)|VS 2017 15.7 <sup>[14](#note_14)</sup>|
@@ -220,7 +211,7 @@ Para obter detalhes sobre melhorias de conformidade e outras mudanças no Visual
 |&nbsp;&nbsp;[P1227R2 std::ssize() com sinal, span::size() sem sinal](https://wg21.link/P1227R2)|Não|
 |&nbsp;&nbsp;[P1285R0 Como melhorar requisitos de integridade para características de tipo](https://wg21.link/P1285R0)|Não|
 |&nbsp;&nbsp;[P1357R1 is_bounded_array, is_unbounded_array](https://wg21.link/P1357R1)|Não|
-|__Recursos da Biblioteca Padrão C++17__|__Com suporte__|
+|__Recursos da biblioteca padrão C++17__|__Com suporte__|
 |&nbsp;&nbsp;[LWG 2221 Operador de saída formatado para nullptr](https://cplusplus.github.io/LWG/issue2221)|VS 2019 16.1|
 |&nbsp;&nbsp;[N3911 void_t](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n3911.pdf)|VS 2015 <sup>[14](#note_14)</sup>|
 |&nbsp;&nbsp;[N4089 Conversões seguras em unique_ptr\<T[]>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4089.pdf)|VS 2015 <sup>[14](#note_14)</sup>|
@@ -303,7 +294,7 @@ Para obter detalhes sobre melhorias de conformidade e outras mudanças no Visual
 |&nbsp;&nbsp;[P0607R0 Variáveis embutidas para a Biblioteca Padrão](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0607r0.html)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0618R0 Substituição de \<codecvt>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0618r0.html)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0682R1 Reparação de conversões da cadeia de caracteres elementares](https://wg21.link/P0682R1)|VS 2015 15.7 <sup>[17](#note_17)</sup>|
-|__Recursos da Biblioteca Padrão C++14__|__Com suporte__|
+|__Recursos da biblioteca padrão C++14__|__Com suporte__|
 |&nbsp;&nbsp;[N3462 result_of amigável do SFINAE](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2012/n3462.html)|VS 2015.2|
 |&nbsp;&nbsp;[N3302 constexpr para \<complex>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2011/n3302.html)|VS 2015|
 |&nbsp;&nbsp;[N3469 constexpr para \<chrono>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2012/n3469.html)|VS 2015|
