@@ -1,6 +1,6 @@
 ---
-title: Especificação de otimização do compilador para um projeto ATL
-ms.date: 11/04/2016
+title: Especificando a otimização do compilador para um projeto ATL
+ms.date: 08/19/2019
 f1_keywords:
 - vc.appwiz.ATL.optimization
 - vc.appwiz.ATL.vtable
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - ATL projects, compiler optimization
 - ATL_NO_VTABLE macro
 ms.assetid: 7f379318-66d5-43dd-a53d-530758d3a228
-ms.openlocfilehash: 812245133b4b3b870c0c763eabcda0ec8d26e028
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: c3b00823cb33be952451c3cc9e370c99140acc3c
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221038"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69630607"
 ---
-# <a name="specifying-compiler-optimization-for-an-atl-project"></a>Especificação de otimização do compilador para um projeto ATL
+# <a name="specifying-compiler-optimization-for-an-atl-project"></a>Especificando a otimização do compilador para um projeto ATL
 
 Por padrão, o [Assistente de controle ATL](../../atl/reference/atl-control-wizard.md) gera novas classes com a macro ATL_NO_VTABLE, da seguinte maneira:
 
@@ -27,7 +27,7 @@ class ATL_NO_VTABLE CProjName
 };
 ```
 
-ATL, em seguida, define _ATL_NO_VTABLE da seguinte maneira:
+Em seguida, o ATL define _ATL_NO_VTABLE da seguinte maneira:
 
 ```
 #ifdef _ATL_DISABLE_NO_VTABLE
@@ -37,24 +37,24 @@ ATL, em seguida, define _ATL_NO_VTABLE da seguinte maneira:
 #endif
 ```
 
-Se você não definir _ATL_DISABLE_NO_VTABLE, a macro ATL_NO_VTABLE se expande para `declspec(novtable)`. Usando `declspec(novtable)`em uma classe declaração impede que o ponteiro vtable que está sendo inicializado no construtor de classe e do destruidor. Quando você compila seu projeto, o vinculador elimina vtable e todas as funções para o qual aponta vtable.
+Se você não definir _ATL_DISABLE_NO_VTABLE, a macro ATL_NO_VTABLE se expandirá para `declspec(novtable)`. Usar `declspec(novtable)`em uma declaração de classe impede que o ponteiro vtable seja inicializado no construtor de classe e no destruidor. Quando você cria seu projeto, o vinculador elimina as funções vtable e All às quais os pontos vtable.
 
-Você deve usar ATL_NO_VTABLE e, consequentemente, `declspec(novtable)`, com apenas classes base que não pode ser criadas diretamente. Você não deve usar `declspec(novtable)` com a classe mais derivada em seu projeto, porque essa classe (normalmente [CComObject](../../atl/reference/ccomobject-class.md), [CComAggObject](../../atl/reference/ccomaggobject-class.md), ou [CComPolyObject](../../atl/reference/ccompolyobject-class.md)) inicializa o ponteiro vtable para seu projeto.
+Você deve usar ATL_NO_VTABLE e consequentemente `declspec(novtable)`, com apenas classes base que não são diretamente creatable. Você não deve usar `declspec(novtable)` com a classe mais derivada em seu projeto, pois essa classe (geralmente [CComObject](../../atl/reference/ccomobject-class.md), [CComAggObject](../../atl/reference/ccomaggobject-class.md)ou [CComPolyObject](../../atl/reference/ccompolyobject-class.md)) inicializa o ponteiro vtable para seu projeto.
 
-Você não deve chamar funções virtuais do construtor de qualquer objeto que usa `declspec(novtable)`. Você deve mover essas chamadas para o [FinalConstruct](ccomobjectrootex-class.md#finalconstruct) método.
+Você não deve chamar funções virtuais do construtor de qualquer objeto que use `declspec(novtable)`o. Você deve mover essas chamadas para o método [FinalConstruct](ccomobjectrootex-class.md#finalconstruct) .
 
-Se você não tiver certeza se você deve usar o `declspec(novtable)` modificador, você pode remover a macro ATL_NO_VTABLE de qualquer definição de classe, ou você pode desabilitá-lo globalmente, especificando
+Se você não tiver certeza se deve usar o `declspec(novtable)` modificador, você pode remover a macro ATL_NO_VTABLE de qualquer definição de classe ou pode desabilitá-la globalmente especificando
 
 ```
 #define _ATL_DISABLE_NO_VTABLE
 ```
 
-em Stdafx. h, antes de todos os outra ATL arquivos de cabeçalho estão incluídos.
+em *PCH. h* (*stdafx. h* no Visual Studio 2017 e anterior), antes de todos os outros arquivos de cabeçalho ATL serem incluídos.
 
 ## <a name="see-also"></a>Consulte também
 
 [Assistente de Projeto da ATL](../../atl/reference/atl-project-wizard.md)<br/>
-[C++tipos de projeto no Visual Studio](../../build/reference/visual-cpp-project-types.md)<br/>
+[Tipos de projeto do C++ no Visual Studio](../../build/reference/visual-cpp-project-types.md)<br/>
 [Programando com código de tempo de execução C e da ATL](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
 [Princípios básicos de objetos COM da ATL](../../atl/fundamentals-of-atl-com-objects.md)<br/>
 [novtable](../../cpp/novtable.md)<br/>

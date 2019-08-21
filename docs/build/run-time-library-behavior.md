@@ -1,6 +1,6 @@
 ---
 title: Comportamento de DLLs C++ e da biblioteca de tempo de execução Visual
-ms.date: 05/06/2019
+ms.date: 08/19/2019
 f1_keywords:
 - _DllMainCRTStartup
 - CRT_INIT
@@ -15,12 +15,12 @@ helpviewer_keywords:
 - run-time [C++], DLL startup sequence
 - DLLs [C++], startup sequence
 ms.assetid: e06f24ab-6ca5-44ef-9857-aed0c6f049f2
-ms.openlocfilehash: d44f3bf7a8b06f567b1af221e17085d589e56aca
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 572a0ba70c1ba2d46d2d9fd6d8ac543a77bbbc01
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69492613"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69630363"
 ---
 # <a name="dlls-and-visual-c-run-time-library-behavior"></a>Comportamento de DLLs C++ e da biblioteca de tempo de execução Visual
 
@@ -30,7 +30,7 @@ Quando você cria uma DLL (biblioteca de vínculo dinâmico) usando o Visual Stu
 
 No Windows, todas as DLLs podem conter uma função de ponto de entrada opcional, `DllMain`geralmente chamada, que é chamada para inicialização e encerramento. Isso lhe dá a oportunidade de alocar ou liberar recursos adicionais, conforme necessário. O Windows chama a função de ponto de entrada em quatro situações: processo anexar, desanexar processo, anexar thread e desanexar thread. Quando uma DLL é carregada em um espaço de endereço de processo, quando um aplicativo que o usa é carregado ou quando o aplicativo solicita a DLL em tempo de execução, o sistema operacional cria uma cópia separada dos dados da DLL. Isso é chamado de *anexo de processo*. A anexação de *thread* ocorre quando o processo em que a dll é carregada cria um novo thread. A desanexação de *thread* ocorre quando o thread é encerrado e o *processo* de desanexação é quando a dll não é mais necessária e é liberada por um aplicativo. O sistema operacional faz uma chamada separada para o ponto de entrada de DLL para cada um desses eventos, passando um argumento de *motivo* para cada tipo de evento. Por exemplo, o sistema operacional `DLL_PROCESS_ATTACH` envia como o argumento de *motivo* para sinalizar a anexação de processo.
 
-A biblioteca VCRuntime fornece uma função de ponto de entrada `_DllMainCRTStartup` chamada para lidar com as operações de inicialização e término padrão. Na anexação de processo `_DllMainCRTStartup` , a função configura verificações de segurança de buffer, inicializa o CRT e outras bibliotecas, inicializa informações de tipo em tempo de execução, inicializa e chama construtores para dados estáticos e não locais, inicializa o armazenamento local de thread , incrementa um contador estático interno para cada anexo e, em seguida, chama um usuário ou uma biblioteca fornecida `DllMain`. Na desanexação do processo, a função passa por essas etapas na ordem inversa. Ele chama `DllMain`, Decrementa o contador interno, chama destruidores, chama funções de terminação CRT e `atexit` funções registradas e notifica quaisquer outras bibliotecas de encerramento. Quando o contador de anexos chega a zero, a função `FALSE` retorna para indicar ao Windows que a dll pode ser descarregada. A `_DllMainCRTStartup` função também é chamada durante anexação de thread e desanexação de thread. Nesses casos, o código VCRuntime não faz inicialização ou encerramento adicional por conta própria e apenas chamadas `DllMain` para passar a mensagem. Se `DllMain` o `FALSE` retornar da anexação do processo, a `_DllMainCRTStartup` falha de sinalização `DLL_PROCESS_DETACH` , as chamadas `DllMain` novamente e passa como o argumento de *motivo* , passa pelo restante do processo de encerramento.
+A biblioteca VCRuntime fornece uma função de ponto de entrada `_DllMainCRTStartup` chamada para lidar com as operações de inicialização e término padrão. Na anexação de processo `_DllMainCRTStartup` , a função configura verificações de segurança de buffer, inicializa o CRT e outras bibliotecas, inicializa informações de tipo em tempo de execução, inicializa e chama construtores para dados estáticos e não locais, inicializa o armazenamento local de thread , incrementa um contador estático interno para cada anexo e, em seguida, chama um usuário ou uma biblioteca fornecida `DllMain`. Na desanexação do processo, a função passa por essas etapas na ordem inversa. Ele chama `DllMain`, Decrementa o contador interno, chama destruidores, chama funções de terminação CRT e `atexit` funções registradas e notifica quaisquer outras bibliotecas de encerramento. Quando o contador de anexos chega a zero, a função `FALSE` retorna para indicar ao Windows que a dll pode ser descarregada. A `_DllMainCRTStartup` função também é chamada durante anexação de thread e desanexação de thread. Nesses casos, o código VCRuntime não faz inicialização ou encerramento adicional por conta própria e apenas chamadas `DllMain` para passar a mensagem. Se `DllMain` retornar `DllMain` `_DllMainCRTStartup` `DLL_PROCESS_DETACH` da anexação de processo, sinalizar falha, chamar novamente e passar como o argumento de motivo, passará pelo restante do processo de encerramento. `FALSE`
 
 Ao criar DLLs no Visual Studio, o ponto `_DllMainCRTStartup` de entrada padrão fornecido pelo VCRuntime é vinculado automaticamente. Você não precisa especificar uma função de ponto de entrada para sua DLL usando a opção de vinculador [/Entry (símbolo de ponto de entrada)](reference/entry-entry-point-symbol.md) .
 
@@ -125,7 +125,7 @@ Como as DLLs de extensão do MFC não `CWinApp`têm um objeto derivado (como as 
 O assistente fornece o código a seguir para DLLs de extensão do MFC. No código, `PROJNAME` é um espaço reservado para o nome do seu projeto.
 
 ```cpp
-#include "stdafx.h"
+#include "pch.h" // For Visual Studio 2017 and earlier, use "stdafx.h"
 #include <afxdllx.h>
 
 #ifdef _DEBUG
@@ -174,7 +174,7 @@ DLLs de extensão podem cuidar do multithreading manipulando os `DLL_THREAD_ATTA
 Observe que o arquivo de cabeçalho Afxdllx. h contém definições especiais para estruturas usadas em DLLs de extensão do MFC, como a `AFX_EXTENSION_MODULE` definição `CDynLinkLibrary`para e. Você deve incluir esse arquivo de cabeçalho em sua DLL de extensão do MFC.
 
 > [!NOTE]
->  É importante que você não defina nem desdefina nenhuma das `_AFX_NO_XXX` macros em stdafx. h. Essas macros existem somente com a finalidade de verificar se uma plataforma de destino específica dá suporte a esse recurso ou não. Você pode escrever seu programa para verificar essas macros (por exemplo `#ifndef _AFX_NO_OLE_SUPPORT`,), mas seu programa nunca deve definir ou não definir essas macros.
+>  É importante que você não defina nem desdefina nenhuma das `_AFX_NO_XXX` macros em *PCH. h* (*stdafx. h* no Visual Studio 2017 e anteriores). Essas macros existem somente com a finalidade de verificar se uma plataforma de destino específica dá suporte a esse recurso ou não. Você pode escrever seu programa para verificar essas macros (por exemplo `#ifndef _AFX_NO_OLE_SUPPORT`,), mas seu programa nunca deve definir ou não definir essas macros.
 
 Uma função de inicialização de exemplo que manipula multithreading está incluída no [uso do armazenamento local de thread em uma biblioteca de vínculo dinâmico](/windows/win32/Dlls/using-thread-local-storage-in-a-dynamic-link-library) no SDK do Windows. Observe que o exemplo contém uma função de ponto de entrada `LibMain`chamada, mas você deve nomear `DllMain` essa função para que ela funcione com as bibliotecas de tempo de execução do MFC e do C.
 
