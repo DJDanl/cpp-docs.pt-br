@@ -10,12 +10,12 @@ f1_keywords:
 - chrono/std::chrono::milliseconds
 - chrono/std::chrono::microseconds
 ms.assetid: 844de749-f306-482e-89bc-6f53c99c8324
-ms.openlocfilehash: f01b00a1469cdf82590a1bdfc742312ec96912c9
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: b3352110c2074b325ac345c05dbf899c0bdbd0ab
+ms.sourcegitcommit: ace42fa67e704d56d03c03745b0b17d2a5afeba4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68459456"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69975899"
 ---
 # <a name="ltchronogt"></a>&lt;chrono&gt;
 
@@ -76,7 +76,14 @@ A partir do Visual Studio 2015, a implementação `steady_clock` do foi alterada
 
 Para obter mais informações sobre tipos de índice usados nas seguintes typedefs, consulte [\<índice>](../standard-library/ratio.md).
 
-||| ||| | `typedef duration<long long, nano> nanoseconds;`| Sinônimo de um `duration` tipo que tem um período de tique de 1 nanossegundo. | |`typedef duration<long long, micro> microseconds;`| Sinônimo de um `duration` tipo que tem um período de tique de 1 microssegundo. | |`typedef duration<long long, milli> milliseconds;`| Sinônimo de um `duration` tipo que tem um período de tique de 1 milissegundo. |`typedef duration<long long> seconds;`| | Sinônimo de um `duration` tipo que tem um período de tique de 1 segundo. |`typedef duration<int, ratio<60> > minutes;`| | Sinônimo de um `duration` tipo que tem um período de tique de 1 minuto. |`typedef duration<int, ratio<3600> > hours;`| | Sinônimo de um `duration` tipo que tem um período de tique de 1 hora. |
+|||
+|-|-|
+|`typedef duration<long long, nano> nanoseconds;`|Sinônimo de um `duration` tipo que tem um período de tique de 1 nanossegundo.|
+|`typedef duration<long long, micro> microseconds;`|Sinônimo de um `duration` tipo que tem um período de tique de 1 microssegundo.|
+|`typedef duration<long long, milli> milliseconds;`|Sinônimo de um `duration` tipo que tem um período de tique de 1 milissegundo.|
+|`typedef duration<long long> seconds;`|Sinônimo de um `duration` tipo que tem um período de tique de 1 segundo.|
+|`typedef duration<int, ratio<60> > minutes;`|Sinônimo de um `duration` tipo que tem um período de tique de 1 minuto.|
+|`typedef duration<int, ratio<3600> > hours;`|Sinônimo de um `duration` tipo que tem um período de tique de 1 hora.|
 
 ### <a name="literals"></a>Literais
 

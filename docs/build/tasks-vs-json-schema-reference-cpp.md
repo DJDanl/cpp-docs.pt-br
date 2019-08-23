@@ -1,17 +1,139 @@
 ---
-title: Referência de esquema Tasks.vs.json (C++)
-ms.date: 02/11/2019
+title: referência de esquema de tarefas. vs.C++JSON ()
+ms.date: 08/20/2019
 helpviewer_keywords:
-- Open Folder Projects in Visual C++
+- tasks.vs.json file [C++]
 ms.assetid: abd1985e-3717-4338-9e80-869db5435175
-ms.openlocfilehash: d0f62f6cddf3701da391880532bd2f554cc19130
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1e533babafad554e8f7413d2bc1a88933a6eca42
+ms.sourcegitcommit: ace42fa67e704d56d03c03745b0b17d2a5afeba4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62315047"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69975918"
 ---
-# <a name="tasksvsjson-c"></a>Tasks.vs.json (C++)
+# <a name="tasksvsjson-schema-reference-c"></a>referência de esquema de tarefas. vs.C++JSON ()
 
-Um arquivo `tasks.vs.json` pode ser adicionado a um projeto Open Folder para definir qualquer tarefa arbitrária e então invocar o menu de contexto **Gerenciador de Soluções**. Projetos CMake normalmente não usam este arquivo porque todos os comandos de build são especificados em `CMakeLists.txt`. Para sistemas de build diferentes do CMake, esse é o local em que você pode especificar seus comandos de build e invocar scripts de build. Para obter informações gerais sobre como usar tasks.vs.json, confira [Personalizar o build e depurar tarefas para desenvolvimento "Open Folder"](/visualstudio/ide/customize-build-and-debug-tasks-in-visual-studio).
+Para informar ao Visual Studio como criar seu código-fonte em um projeto de pasta aberta, adicione um arquivo *Tasks. vs. JSON* . Você pode definir qualquer tarefa arbitrária aqui e, em seguida, chamá-la no menu de contexto **Gerenciador de soluções** . Os projetos CMake não usam esse arquivo porque todos os comandos de compilação são especificados em *CMakeLists. txt*. Para sistemas de compilação diferentes de CMake, *Tasks. vs. JSON* é onde você pode especificar comandos de compilação e invocar scripts de compilação. Para obter informações gerais sobre como usar *tarefas. vs. JSON*, consulte [Personalizar tarefas de compilação e depuração para desenvolvimento de "pasta aberta"](/visualstudio/ide/customize-build-and-debug-tasks-in-visual-studio).
 
+Uma tarefa tem uma `type` propriedade que pode ter um dos quatro valores: `default`, `launch` `remote`, ou `msbuild`. A maioria das tarefas `launch` deve usar a menos que uma conexão remota seja necessária.
+
+## <a name="default-properties"></a>Propriedades padrão
+
+As propriedades padrão estão disponíveis em todos os tipos de tarefas:
+
+||||
+|-|-|-|
+|**Property**|**Tipo**|**Descrição**|
+|`taskLabel`|cadeia de caracteres| (Obrigatório.) Especifica o rótulo da tarefa usada na interface do usuário.|
+|`appliesTo`|cadeia de caracteres| (Obrigatório.) Especifica em quais arquivos o comando pode ser executado. Há suporte para o uso de curingas, por exemplo: " *", "* . cpp", "/*. txt"|
+|`contextType`|cadeia de caracteres| Valores permitidos: "personalizado", "Compilar", "limpar", "recompilar". Determina onde o menu de contexto a tarefa será exibida. O padrão é "Custom".|
+|`output`|cadeia de caracteres| Especifica uma marca de saída para sua tarefa.|
+|`inheritEnvironments`|array| Especifica um conjunto de variáveis de ambiente herdadas de várias fontes. Você pode definir variáveis em arquivos como *CMakeSettings. JSON* ou *CppProperties. JSON* e torná-los disponíveis para o contexto da tarefa.|
+|`passEnvVars`|boolean| Especifica se deve ou não incluir variáveis de ambiente adicionais ao contexto da tarefa. Essas variáveis são diferentes das definidas usando a `envVars` propriedade. O padrão é "true".|
+
+## <a name="launch-properties"></a>Propriedades de inicialização
+
+Quando o tipo de tarefa `launch`é, essas propriedades estão disponíveis:
+
+||||
+|-|-|-|
+|**Property**|**Tipo**|**Descrição**|
+|`command`|cadeia de caracteres| Especifica o caminho completo do processo ou do script a ser iniciado.|
+|`args`|array| Especifica uma lista separada por vírgulas de argumentos passados para o comando.|
+|`launchOption`|cadeia de caracteres| Valores permitidos: "None", "ContinueOnError", "IgnoreError". Especifica como prosseguir com o comando quando houver erros.|
+|`workingDirectory`|cadeia de caracteres| Especifica o diretório no qual o comando será executado. O padrão é o diretório de trabalho atual do projeto.|
+|`customLaunchCommand`|cadeia de caracteres| Especifica uma personalização de escopo global a ser aplicada antes da execução do comando. Útil para definir variáveis de ambiente como% PATH%.|
+|`customLaunchCommandArgs`|cadeia de caracteres| Especifica os argumentos para customLaunchCommand. (Requer `customLaunchCommand`.)|
+ `env`| Especifica uma lista de valores-chave de variáveis de ambiente personalizadas. Por exemplo, "myEnv": "myVal"|
+|`commands`|array| Especifica uma lista de comandos a serem invocados na ordem.|
+
+### <a name="example"></a>Exemplo
+
+As tarefas a seguir invocam *make. exe* quando um makefile é fornecido na pasta e `Mingw64` o ambiente foi definido em *CppProperties. JSON*, conforme mostrado na [referência de esquema CppProperties. JSON](cppproperties-schema-reference.md#user_defined_environments):
+
+```json
+ {
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "taskLabel": "gcc make",
+      "appliesTo": "*.cpp",
+      "type": "launch",
+      "contextType": "custom",
+      "inheritEnvironments": [
+        "Mingw64"
+      ],
+      "command": "make"
+    },
+    {
+      "taskLabel": "gcc clean",
+      "appliesTo": "*.cpp",
+      "type": "launch",
+      "contextType": "custom",
+      "inheritEnvironments": [
+        "Mingw64"
+      ],
+      "command": "make",
+      "args": ["clean"]
+    }
+  ]
+}
+```
+
+Essas tarefas podem ser invocadas no menu de contexto quando você clica com o botão direito do mouse em um arquivo *. cpp* em **Gerenciador de soluções**.
+
+## <a name="remote-properties"></a>Propriedades remotas
+
+As tarefas remotas são habilitadas quando você instala o C++ desenvolvimento do Linux com carga de trabalho e adiciona uma conexão a um computador remoto usando o Gerenciador de conexões do Visual Studio. Uma tarefa remota executa comandos em um sistema remoto e também pode copiar arquivos nele.
+
+Quando o tipo de tarefa `remote`é, essas propriedades estão disponíveis:
+
+||||
+|-|-|-|
+|**Property**|**Tipo**|**Descrição**|
+|`remoteMachineName`|cadeia de caracteres|O nome do computador remoto. Deve corresponder a um nome de computador no **Gerenciador de conexões**.|
+|`command`|cadeia de caracteres|O comando a ser enviado para o computador remoto. Por padrão, os comandos são executados no diretório $HOME no sistema remoto.|
+|`remoteWorkingDirectory`|cadeia de caracteres|O diretório de trabalho atual no computador remoto.|
+|`localCopyDirectory`|cadeia de caracteres|O diretório local a ser copiado para o computador remoto. O padrão é o diretório de trabalho atual.|
+|`remoteCopyDirectory`|cadeia de caracteres|O diretório no computador remoto no qual `localCopyDirectory` é copiado.|
+|`remoteCopyMethod`|cadeia de caracteres| O método a ser usado para copiar. Valores permitidos: "None", "SFTP", "rsync". rsync é recomendado para projetos grandes.|
+|`remoteCopySourcesOutputVerbosity`|cadeia de caracteres| Valores permitidos: "Normal", "detalhado", "diagnóstico".|
+|`rsyncCommandArgs`|cadeia de caracteres|O padrão é "-t--delete".|
+|`remoteCopyExclusionList`|array|Lista separada por vírgulas de arquivos `localCopyDirectory` no para excluir das operações de cópia.|
+
+### <a name="example"></a>Exemplo
+
+A tarefa a seguir será exibida no menu de contexto quando você clicar com o botão direito do mouse em *Main. cpp* em **Gerenciador de soluções**. Depende de um computador remoto chamado `ubuntu` no Gerenciador de **conexões**. A tarefa copia a pasta aberta atual no Visual Studio para o `sample` diretório no computador remoto e, em seguida, invoca g + + para compilar o programa.
+
+```json
+{
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "taskLabel": "Build",
+      "appliesTo": "main.cpp",
+      "type": "remote",
+      "contextType": "build",
+      "command": "g++ main.cpp",
+      "remoteMachineName": "ubuntu",
+      "remoteCopyDirectory": "~/sample",
+      "remoteCopyMethod": "sftp",
+      "remoteWorkingDirectory": "~/sample/hello",
+      "remoteCopySourcesOutputVerbosity": "Verbose"
+    }
+  ]
+}
+```
+
+## <a name="msbuild-properties"></a>propriedades MSBuild
+
+Quando o tipo de tarefa `msbuild`é, essas propriedades estão disponíveis:
+
+||||
+|-|-|-|
+|**Property**|**Tipo**|**Descrição**|
+|`verbosity`|cadeia de caracteres| Especifica os valores de verbosityAllowed de saída de compilação do projeto do MSBuild: "Quiet", "mínimo", "normal", "detalhado", "diagnóstico".|
+|`toolsVersion`|cadeia de caracteres| Especifica a versão do conjunto de ferramentas para compilar o projeto, por exemplo "2,0", "3,5", "4,0", "atual". O padrão é "atual".|
+|`globalProperties`|objeto|Especifica uma lista de valores-chave das propriedades globais a serem passadas para o projeto, por exemplo, "configuração": "versão"|
+|`properties`|objeto| Especifica uma lista de valores-chave de propriedades adicionais do projeto.|
+|`targets`|array| Especifica a lista de destinos a serem invocados, em ordem, no projeto. O destino padrão do projeto será usado se nenhum for especificado.|
