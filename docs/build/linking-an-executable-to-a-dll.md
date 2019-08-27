@@ -1,6 +1,6 @@
 ---
 title: Vincular um executável a uma DLL
-ms.date: 11/04/2016
+ms.date: 08/22/2019
 helpviewer_keywords:
 - run time [C++], linking
 - dynamic load linking [C++]
@@ -11,26 +11,26 @@ helpviewer_keywords:
 - executable files [C++], linking to DLLs
 - loading DLLs [C++]
 ms.assetid: 7592e276-dd6e-4a74-90c8-e1ee35598ea3
-ms.openlocfilehash: c4f9ea7a3606612189e85401b75a0577896fd90e
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: fe0a4fc37291b4ccc904f889a9d38748fc38195c
+ms.sourcegitcommit: ec524d1f87bcce2b26b02e6d297f42c94b3db36e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69493219"
+ms.lasthandoff: 08/26/2019
+ms.locfileid: "70026001"
 ---
 # <a name="link-an-executable-to-a-dll"></a>Vincular um executável a uma DLL
 
 Um arquivo executável vincula (ou carrega) uma DLL de uma das duas maneiras:
 
-- *Vinculação implícita*, em que o sistema operacional carrega a dll quando o executável que a usa é carregado. O executável do cliente chama as funções exportadas da DLL da mesma forma como se as funções estivessem vinculadas estaticamente e estão contidas no executável. A vinculação implícita às vezes é chamada de *carga estática* ou *vinculação dinâmica de tempo de carregamento*.
+- *Vinculação implícita*, em que o sistema operacional carrega a dll ao mesmo tempo que o executável que a utiliza. O executável do cliente chama as funções exportadas da DLL da mesma forma como se as funções estivessem vinculadas estaticamente e estão contidas no executável. A vinculação implícita às vezes é chamada de *carga estática* ou *vinculação dinâmica de tempo de carregamento*.
 
-- *Vinculação explícita*, em que o sistema operacional carrega a dll sob demanda no tempo de execução. Um executável que usa uma DLL por vinculação explícita deve fazer chamadas de função para carregar e descarregar explicitamente a DLL e acessar as funções exportadas pela DLL. Ao contrário de chamadas para funções em uma biblioteca vinculada estaticamente, o executável do cliente deve chamar as funções exportadas em uma DLL por meio de um ponteiro de função. A vinculação explícita é, às vezes, chamada de *carregamento* dinâmico ou *vinculação dinâmica em tempo de execução*.
+- *Vinculação explícita*, em que o sistema operacional carrega a dll sob demanda no tempo de execução. Um executável que usa uma DLL por vinculação explícita deve carregar e descarregar a DLL explicitamente. Ele também deve configurar um ponteiro de função para acessar cada função que ele usa da DLL. Ao contrário de chamadas para funções em uma biblioteca vinculada estaticamente ou uma DLL vinculada implicitamente, o executável do cliente deve chamar as funções exportadas em uma DLL vinculada explicitamente por meio de ponteiros de função. A vinculação explícita é, às vezes, chamada de *carregamento* dinâmico ou *vinculação dinâmica em tempo de execução*.
 
-Um executável pode usar o método de vinculação para vincular ao mesmo DLL. Além disso, esses métodos não são mutuamente exclusivos; um executável pode vincular implicitamente a uma DLL e outra pode anexá-la explicitamente.
+Um executável pode usar o método de vinculação para vincular ao mesmo DLL. Além disso, esses métodos não são mutuamente exclusivos; um executável pode vincular implicitamente a uma DLL e outro pode se anexar explicitamente a ela.
 
 <a name="determining-which-linking-method-to-use"></a>
 
-## <a name="link-an-executable-to-a-dll"></a>Vincular um executável a uma DLL
+## <a name="determine-which-linking-method-to-use"></a>Determinar qual método de vinculação usar
 
 A possibilidade de usar vinculação implícita ou vinculação explícita é uma decisão arquitetônica que você deve fazer para seu aplicativo. Há vantagens e desvantagens em cada método.
 
@@ -46,7 +46,7 @@ Se qualquer uma das DLLs tiver uma função de ponto de entrada para o código `
 
 Por fim, o sistema modifica o código executável do processo para fornecer endereços iniciais para as funções de DLL.
 
-Como o restante do código de um programa, o código de DLL é mapeado para o espaço de endereço do processo quando o processo é iniciado e é carregado na memória somente quando necessário. Como resultado, os `PRELOAD` atributos de código e `LOADONCALL` usados por arquivos. def para controlar o carregamento em versões anteriores do Windows não têm mais significado.
+Como o restante do código de um programa, o carregador mapeia o código da DLL para o espaço de endereço do processo quando o processo é iniciado. O sistema operacional carrega-o na memória somente quando necessário. Como resultado, os `PRELOAD` atributos de código e `LOADONCALL` usados por arquivos. def para controlar o carregamento em versões anteriores do Windows não têm mais significado.
 
 ### <a name="explicit-linking"></a>Vinculação explícita
 
@@ -56,35 +56,35 @@ A maioria dos aplicativos usa vinculação implícita porque é o método de vin
 
 - Um processo que usa vinculação implícita é encerrado pelo sistema operacional se a DLL não for encontrada na inicialização do processo. Um processo que usa vinculação explícita não é encerrado nessa situação e pode tentar se recuperar do erro. Por exemplo, o processo poderia notificar o usuário sobre o erro e fazer com que o usuário especifique outro caminho para a DLL.
 
-- Um processo que usa vinculação implícita também será encerrado se qualquer uma das DLLs a que estiver vinculada `DllMain` tiver uma função que falha. Um processo que usa vinculação explícita não é encerrado nessa situação.
+- Um processo que usa vinculação implícita também será encerrado se qualquer uma das DLLs vinculadas tiver uma `DllMain` função que falhe. Um processo que usa vinculação explícita não é encerrado nessa situação.
 
-- Um aplicativo que implicitamente vincula a várias DLLs pode ser lento para iniciar porque o Windows carrega todas as DLLs quando o aplicativo é carregado. Para melhorar o desempenho de inicialização, um aplicativo pode vincular implicitamente apenas a essas DLLs necessárias imediatamente após o carregamento e aguardar até que outras DLLs sejam necessárias para vinculá-las explicitamente.
+- Um aplicativo que implicitamente vincula a várias DLLs pode ser lento para iniciar porque o Windows carrega todas as DLLs quando o aplicativo é carregado. Para melhorar o desempenho de inicialização, um aplicativo pode usar apenas a vinculação implícita para DLLs necessárias imediatamente após o carregamento. Ele pode usar vinculação explícita para carregar outras DLLs somente quando elas forem necessárias.
 
-- A vinculação explícita elimina a necessidade de vincular o aplicativo usando uma biblioteca de importação. Se as alterações na DLL fizerem a alteração dos ordinais de exportação, os aplicativos que usam vinculação explícita não precisarão vincular novamente se chamarem `GetProcAddress` usando o nome de uma função e não um valor ordinal, enquanto os aplicativos que usam vinculação implícita devem vincular novamente ao nova biblioteca de importação.
+- A vinculação explícita elimina a necessidade de vincular o aplicativo usando uma biblioteca de importação. Se as alterações na DLL fizerem a alteração dos ordinais de exportação, os aplicativos não precisarão ser revinculados se chamarem `GetProcAddress` usando o nome de uma função e não um valor ordinal. Os aplicativos que usam vinculação implícita ainda devem ser revinculados à biblioteca de importação alterada.
 
 Aqui estão dois perigos de vinculação explícita a serem cientes de:
 
-- Se a DLL tiver uma `DllMain` função de ponto de entrada, o sistema operacional chamará a função no contexto do thread que `LoadLibrary`chamou. A função de ponto de entrada não será chamada se a dll já estiver anexada ao processo devido a uma chamada anterior `LoadLibrary` a que não tinha nenhuma chamada correspondente `FreeLibrary` à função. A vinculação explícita pode causar problemas se a dll usar `DllMain` uma função para executar a inicialização para cada thread de um processo, pois os threads que `AfxLoadLibrary`já existem quando `LoadLibrary` (ou) são chamados não são inicializados.
+- Se a DLL tiver uma `DllMain` função de ponto de entrada, o sistema operacional chamará a função no contexto do thread que `LoadLibrary`chamou. A função de ponto de entrada não será chamada se a dll já estiver anexada ao processo devido a uma chamada `LoadLibrary` anterior a que não tinha nenhuma chamada correspondente `FreeLibrary` à função. A vinculação explícita pode causar problemas se a dll usa `DllMain` uma função para inicializar cada thread de um processo, porque qualquer thread que já existe `LoadLibrary` quando ( `AfxLoadLibrary`ou) é chamado não é inicializado.
 
-- Se uma DLL declarar dados de extensão estática como `__declspec(thread)`, ela poderá causar uma falha de proteção se vinculada explicitamente. Depois que a DLL for carregada por uma chamada `LoadLibrary`para, ela causará uma falha de proteção sempre que o código fizer referência a esses dados. (Os dados de extensão estática incluem itens estáticos globais e locais.) Portanto, ao criar uma DLL, você deve evitar usar o armazenamento local de thread ou informar aos usuários DLL sobre as possíveis armadilhas de carregar dinamicamente sua DLL. Para obter mais informações, consulte [usando o armazenamento local de thread em uma biblioteca de vínculo dinâmico (SDK do Windows)](/windows/win32/Dlls/using-thread-local-storage-in-a-dynamic-link-library).
+- Se uma DLL declarar dados de extensão estática como `__declspec(thread)`, ela poderá causar uma falha de proteção se vinculada explicitamente. Depois que a DLL for carregada por uma chamada `LoadLibrary`para, ela causará uma falha de proteção sempre que o código fizer referência a esses dados. (Os dados de extensão estática incluem itens estáticos globais e locais.) É por isso que, ao criar uma DLL, você deve evitar o uso do armazenamento local de thread. Se você não puder, informe os usuários de DLL sobre as possíveis armadilhas de carregar dinamicamente sua DLL. Para obter mais informações, consulte [usando o armazenamento local de thread em uma biblioteca de vínculo dinâmico (SDK do Windows)](/windows/win32/Dlls/using-thread-local-storage-in-a-dynamic-link-library).
 
 <a name="linking-implicitly"></a>
 
-## <a name="link-an-executable-to-a-dll"></a>Vincular um executável a uma DLL
+## <a name="how-to-use-implicit-linking"></a>Como usar a vinculação implícita
 
 Para usar uma DLL por vinculação implícita, os executáveis do cliente devem obter esses arquivos do provedor da DLL:
 
-- Um ou mais arquivos de cabeçalho (arquivos. h) que contêm as declarações dos dados exportados, funções e C++ /ou classes na dll. As classes, as funções e os dados exportados pela dll devem ser `__declspec(dllimport)` marcados no arquivo de cabeçalho. Para saber mais, confira [dllexport, dllimport](../cpp/dllexport-dllimport.md).
+- Um ou mais arquivos de cabeçalho (arquivos. h) que contêm as declarações dos dados exportados, funções C++ e classes na dll. As classes, as funções e os dados exportados pela dll devem ser `__declspec(dllimport)` marcados no arquivo de cabeçalho. Para saber mais, confira [dllexport, dllimport](../cpp/dllexport-dllimport.md).
 
-- Uma biblioteca de importação para vincular ao seu executável. O vinculador cria a biblioteca de importação quando a DLL é criada. Para obter mais informações, consulte [. Arquivos LIB](reference/dot-lib-files-as-linker-input.md).
+- Uma biblioteca de importação para vincular ao seu executável. O vinculador cria a biblioteca de importação quando a DLL é criada. Para obter mais informações, consulte [arquivos lib como entrada](reference/dot-lib-files-as-linker-input.md)do vinculador.
 
 - O arquivo DLL real.
 
-Para usar uma DLL por vinculação implícita, um executável deve incluir os arquivos de cabeçalho que declaram os dados C++ , as funções ou as classes exportadas pela dll em cada arquivo de origem que contém chamadas para os dados, funções e classes exportados. De uma perspectiva de codificação, as chamadas para as funções exportadas são assim como qualquer outra chamada de função.
+Para usar os dados, as funções e as classes em uma DLL por vinculação implícita, qualquer arquivo de origem do cliente deve incluir os arquivos de cabeçalho que os declaram. De uma perspectiva de codificação, as chamadas para as funções exportadas são assim como qualquer outra chamada de função.
 
-Para criar o arquivo executável de chamada, você deve vincular com a biblioteca de importação. Se você usar um makefile externo ou um sistema de compilação, especifique o nome do arquivo da biblioteca de importação no qual você listará outros arquivos de objeto (. obj) ou bibliotecas que você vincular.
+Para criar o arquivo executável do cliente, você deve vincular com a biblioteca de importação da DLL. Se você usar um makefile externo ou um sistema de compilação, especifique a biblioteca de importação junto com os outros arquivos de objeto ou bibliotecas que você vincular.
 
-O sistema operacional deve ser capaz de localizar o arquivo DLL ao carregar o executável de chamada. Isso significa que seu aplicativo deve implantar ou verificar a existência da DLL quando o aplicativo é instalado.
+O sistema operacional deve ser capaz de localizar o arquivo DLL ao carregar o executável de chamada. Isso significa que você deve implantar ou verificar a existência da DLL ao instalar o aplicativo.
 
 <a name="linking-explicitly"></a>
 
@@ -135,7 +135,7 @@ HRESULT LoadAndCallSomeFunction(DWORD dwParam1, UINT * puParam2)
 }
 ```
 
-Ao contrário deste exemplo, na maioria dos casos, você `LoadLibrary` deve `FreeLibrary` chamar e apenas uma vez em seu aplicativo para uma determinada dll, especialmente se você pretende chamar várias funções na DLL ou chamar dll de chamada repetidamente.
+Ao contrário desse exemplo, na maioria dos casos, `LoadLibrary` você `FreeLibrary` deve chamar e apenas uma vez em seu aplicativo para uma determinada dll. Isso é especialmente verdadeiro se você pretende chamar várias funções na DLL ou chamar as funções de DLL repetidamente.
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Que mais você deseja saber?
 
