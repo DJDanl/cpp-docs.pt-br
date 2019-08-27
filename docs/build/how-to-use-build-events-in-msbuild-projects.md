@@ -1,56 +1,56 @@
 ---
-title: 'Como: Usar eventos de Build em projetos do MSBuild'
+title: 'Como: Usar eventos de compilação em projetos do MSBuild'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - 'msbuild (c++), howto: use build events in projects'
 ms.assetid: 2a58dc9d-3d50-4e49-97c1-86c5a05ce218
-ms.openlocfilehash: 8f4ccea66f7346512df88fc4c6078752c624aaa9
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 3fe205223b6cf381bbf3e2872b1a84f9d81a3cb7
+ms.sourcegitcommit: 2da5c42928739ca8cd683a9002598f28d8ec5f8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221465"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70060062"
 ---
-# <a name="how-to-use-build-events-in-msbuild-projects"></a>Como: Usar eventos de Build em projetos do MSBuild
+# <a name="how-to-use-build-events-in-msbuild-projects"></a>Como: Usar eventos de compilação em projetos do MSBuild
 
-Um evento de compilação é um comando que o MSBuild executa em um estágio específico no processo de compilação. O *pré-build* evento ocorre antes do início do build; a *pré-vínculo* evento ocorre antes do início da etapa de link; e o *pós-compilação* evento ocorre após a compilação termina com êxito. Um evento de compilação ocorre apenas se a etapa de compilação associado ocorre. Por exemplo, o evento de pré-vínculo não ocorrer se a etapa de link não é executado.
+Um evento de compilação é um comando que o MSBuild executa em um estágio específico no processo de compilação. O evento de *pré-compilação* ocorre antes do início da compilação; o evento de *pré-vínculo* ocorre antes do início da etapa de link; e o evento de *pós-compilação* ocorre depois que a compilação é encerrada com êxito. Um evento de compilação ocorrerá somente se a etapa de compilação associada ocorrer. Por exemplo, o evento de pré-vínculo não ocorrerá se a etapa de vínculo não for executada.
 
-Cada um dos eventos de três build é representada por um elemento de comando em um grupo de definição de item (`<Command>`) que é executado e um elemento de mensagem (`<Message>`) que é exibido quando **MSBuild** executa o evento de compilação. Cada elemento é opcional e, se você especificar o mesmo elemento várias vezes, a última ocorrência terá precedência.
+Cada um dos três eventos de compilação é representado em um grupo de definição de item por um`<Command>`elemento Command () que é executado e um`<Message>`elemento Message () que é exibido quando o **MSBuild** executa o evento de compilação. Cada elemento é opcional e, se você especificar o mesmo elemento várias vezes, a última ocorrência terá precedência.
 
-Um recurso opcional *uso no build* elemento (`<`*evento de build*`UseInBuild>`) pode ser especificado em um grupo de propriedade para indicar se o evento de build é executado. O valor do conteúdo de um *uso no build* elemento seja **verdadeiro** ou **false**. Por padrão, um evento de compilação é executado, a menos que seu correspondente *uso no build* é definido como `false`.
+Um elemento *Use-in-Build* opcional (`<`*compilação-evento*`UseInBuild>`) pode ser especificado em um grupo de propriedades para indicar se o evento de compilação é executado. O valor do conteúdo de um elemento *Use-in-Build* é **true** ou **false**. Por padrão, um evento de compilação é executado, a menos que seu elemento *de uso no Build* correspondente `false`esteja definido como.
 
 A tabela a seguir lista cada elemento XML do evento de compilação:
 
 |Elemento XML|Descrição|
 |-----------------|-----------------|
 |`PreBuildEvent`|Esse evento é executado antes do início da compilação.|
-|`PreLinkEvent`|Esse evento é executado antes de começa a etapa de link.|
+|`PreLinkEvent`|Esse evento é executado antes do início da etapa de link.|
 |`PostBuildEvent`|Esse evento é executado após a conclusão da compilação.|
 
-A tabela a seguir lista cada *uso no build* elemento:
+A tabela a seguir lista cada elemento de *uso-in-Build* :
 
 |Elemento XML|Descrição|
 |-----------------|-----------------|
-|`PreBuildEventUseInBuild`|Especifica se deve executar o *pré-compilação* eventos.|
-|`PreLinkEventUseInBuild`|Especifica se deve executar o *pré-vínculo* eventos.|
-|`PostBuildEventUseInBuild`|Especifica se deve executar o *pós-compilação* eventos.|
+|`PreBuildEventUseInBuild`|Especifica se o evento de *pré-compilação* deve ser executado.|
+|`PreLinkEventUseInBuild`|Especifica se o evento de *pré-vínculo* deve ser executado.|
+|`PostBuildEventUseInBuild`|Especifica se o evento de *pós-compilação* deve ser executado.|
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir pode ser adicionado dentro do elemento de projeto do myproject. vcxproj arquivo criado no [passo a passo: Usando MSBuild para criar um C++ Project](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md). Um *pré-Build* evento faz uma cópia de cpp; um *pré-vínculo* evento faz uma cópia de Main; e um *pós-compilação* evento faz uma cópia do myproject.exe. Se o projeto é compilado usando uma configuração de versão, os eventos de build serão executados. Se o projeto é compilado usando uma configuração de depuração, os eventos de build não são executados.
+O exemplo a seguir pode ser adicionado dentro do elemento de projeto do arquivo myproject. vcxproj criado no [Walkthrough: Usando o MSBuild para criar C++ um](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)projeto. Um evento de *pré-compilação* faz uma cópia do Main. cpp; um evento de *pré-vínculo* faz uma cópia do Main. obj; e um evento de *pós-compilação* faz uma cópia de MyProject. exe. Se o projeto for criado usando uma configuração de versão, os eventos de compilação serão executados. Se o projeto for criado usando uma configuração de depuração, os eventos de compilação não serão executados.
 
-```
+``` xml
 <ItemDefinitionGroup>
   <PreBuildEvent>
     <Command>copy $(ProjectDir)main.cpp $(ProjectDir)copyOfMain.cpp</Command>
     <Message>Making a copy of main.cpp </Message>
   </PreBuildEvent>
   <PreLinkEvent>
-<Command>copy $(ProjectDir)$(Configuration)\main.obj $(ProjectDir)$(Configuration)\copyOfMain.obj</Command>
+    <Command>copy $(ProjectDir)$(Configuration)\main.obj $(ProjectDir)$(Configuration)\copyOfMain.obj</Command>
     <Message>Making a copy of main.obj</Message>
   </PreLinkEvent>
   <PostBuildEvent>
-<Command>copy $(ProjectDir)$(Configuration)\$(TargetFileName) $(ProjectDir)$(Configuration)\copyOfMyproject.exe</Command>
+    <Command>copy $(ProjectDir)$(Configuration)\$(TargetFileName) $(ProjectDir)$(Configuration)\copyOfMyproject.exe</Command>
     <Message>Making a copy of myproject.exe</Message>
   </PostBuildEvent>
 </ItemDefinitionGroup>
