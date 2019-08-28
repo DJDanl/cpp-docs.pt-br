@@ -5,12 +5,12 @@ ms.technology: cpp-language
 ms.assetid: 475da6e9-0d78-4b4e-bd23-f41c406c4efe
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 15226d41991d5a09d104d2edbfb3dbf2f7432b65
-ms.sourcegitcommit: db1ed91fa7451ade91c3fb76bc7a2b857f8a5eef
+ms.openlocfilehash: 17ed76551102653e2f05e9731834f4787198db49
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68980522"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69631639"
 ---
 # <a name="microsoft-c-language-conformance-table"></a>Tabela de conformidade com a linguagem Microsoft C++
 
@@ -348,7 +348,7 @@ A opção do compilador [/Zc:noexceptTypes](../build/reference/zc-noexcepttypes.
 
 <a name="note_C"></a>__C__ O suporte do compilador às regras do Pré-processador C99 está incompleto no Visual Studio 2017. Há suporte para macros variadic, mas existem diversos bugs no comportamento do pré-processador. Estamos revisando o pré-processador e enviaremos experimentalmente essas alterações com o modo [/ permissive-](../build/reference/permissive-standards-conformance.md) em breve.
 
-<a name="note_D"></a>__D__ Com suporte em [/std:c++14](../build/reference/std-specify-language-standard-version.md) com um aviso suprimível, C4984.
+<a name="note_D"></a>__D__ Com suporte em [/std:c++14](../build/reference/std-specify-language-standard-version.md) com um aviso suprimível, [C4984](../error-messages/compiler-warnings/compiler-warning-c4984.md).
 
 <a name="note_E"></a>__E__ Essa é uma implementação completamente nova, incompatível com a versão `std::experimental` anterior, que precisava de suporte a symlink, correções de bugs e alterações no comportamento exigido pelo padrão. Atualmente, a inclusão de \<filesystem> fornece o novo `std::filesystem` e o `std::experimental::filesystem` anterior, e a inclusão de \<experimental/filesystem> fornece somente a implementação antiga experimental. A implementação experimental será REMOVIDA na próxima versão ABI recente das bibliotecas.
 
