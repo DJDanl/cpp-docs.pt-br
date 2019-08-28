@@ -98,7 +98,7 @@ Adicione outros detalhes que puderem nos ajudar a diagnosticar o problema encont
 
 ### <a name="the-repro"></a>A reprodução
 
-Uma *reprodução* é um exemplo de código-fonte completo e independente. Ela demonstra o problema encontrado de forma reproduzível, por isso o nome. Precisamos de uma reprodução para que possamos reproduzir o erro em nossos computadores. O código deve ser suficiente por si só para criar um executável básico que compila e executa. Ou que *compilaria e executaria* caso você não encontrasse o problema. Uma reprodução não é um trecho de código. Ela deve ter classes e funções completas e conter todas as diretivas #include necessárias, mesmo para os cabeçalhos padrão.
+Uma *reprodução* é um exemplo de código-fonte completo e independente. Ela demonstra o problema encontrado de forma reproduzível, por isso o nome. Precisamos de uma reprodução para que possamos reproduzir o erro em nossos computadores. O código deve ser suficiente por si só para criar um executável básico que compila e executa. Ou que *compilaria e executaria* caso você não encontrasse o problema. Uma reprodução não é um snippet de código. Ela deve ter classes e funções completas e conter todas as diretivas #include necessárias, mesmo para os cabeçalhos padrão.
 
 #### <a name="what-makes-a-good-repro"></a>O que compõe uma boa reprodução
 

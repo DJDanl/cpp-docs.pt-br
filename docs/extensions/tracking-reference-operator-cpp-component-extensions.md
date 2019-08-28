@@ -37,7 +37,7 @@ Uma referência de acompanhamento possui as características a seguir.
 
 ## <a name="windows-runtime"></a>Tempo de Execução do Windows
 
-Uma referência de acompanhamento se comporta como uma referência padrão do C++, exceto pelo fato de que um % é contado por referência. O trecho de código a seguir mostra como converter entre os tipos % e ^:
+Uma referência de acompanhamento se comporta como uma referência padrão do C++, exceto pelo fato de que um % é contado por referência. O snippet a seguir mostra como converter entre os tipos % e ^:
 
 ```cpp
 Foo^ spFoo = ref new Foo();
