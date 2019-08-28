@@ -2,16 +2,16 @@
 title: Criar um projeto de aplicativo de console C++
 description: Criar um aplicativo de console Olá, Mundo e um aplicativo de calculadora no Visual C++
 ms.custom: mvc
-ms.date: 05/28/2019
+ms.date: 08/19/2019
 ms.topic: tutorial
 ms.devlang: cpp
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
-ms.openlocfilehash: 9fc5508b68c8e206e76ead08ddb8015dd5133256
-ms.sourcegitcommit: 18f535a6c4cfe58362ed56599b1a875ee71ff6aa
+ms.openlocfilehash: ff1b5295f9fefd681ea76d09349415b59ceac1f2
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66410762"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69631307"
 ---
 # <a name="create-a-c-console-app-project"></a>Criar um projeto de aplicativo de console C++
 
@@ -486,7 +486,7 @@ Agora vamos examinar o código neste modelo em um aplicativo de calculadora.
    > Noções básicas sobre o código:
    >
    > - As instruções `#include` permitem que você consulte a código localizado em outros arquivos. Às vezes, você poderá ver um nome de arquivo delimitado por colchetes angulares ( **\<\>** ); outras vezes, entre aspas ( **" "** ). Em geral, os colchetes angulares são usados ao fazer referência à biblioteca padrão C++, enquanto as aspas são usadas para outros arquivos.
-   > - A linha `#include "pch.h"` (ou em versões mais antigas do Visual Studio, `#include "stdafx.h"`) faz referência a algo conhecido como um cabeçalho pré-compilado. Isso costuma ser usado por programadores profissionais para melhorar os tempos de compilação, mas estão além do escopo deste tutorial.
+   > - A linha `#include "pch.h"` (ou, no Visual Studio 2017 e versões anteriores, `#include "stdafx.h"`) faz referência a algo conhecido como cabeçalho pré-compilado. Isso costuma ser usado por programadores profissionais para melhorar os tempos de compilação, mas estão além do escopo deste tutorial.
    > - A linha `using namespace std;` informa ao compilador para esperar que coisas da Biblioteca Padrão C++ sejam usadas nesse arquivo. Sem essa linha, cada palavra-chave da biblioteca precisaria ser precedida por um `std::` para indicar seu escopo. Por exemplo, sem essa linha, cada referência a `cout` precisaria ser escrito como `std::cout`. A instrução `using` é adicionada para fazer com que o código tenha uma aparência mais limpa.
    > - A palavra-chave `cout` é usada para imprimir a saída padrão em C++. O operador **\<\<** informa ao compilador para enviar o que estiver à direita para a saída padrão.
    > - A palavra-chave **endl** é como a tecla Enter; encerra a linha e move o cursor para a próxima linha. É uma melhor prática para colocar um `\n` dentro da cadeia de caracteres (contido por "") para fazer a mesma coisa, uma vez que `endl` sempre libera o buffer e pode prejudicar o desempenho do programa, mas já que esse é um aplicativo muito pequeno, `endl` é usado em vez disso para melhor legibilidade.

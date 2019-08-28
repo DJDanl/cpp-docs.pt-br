@@ -2,12 +2,12 @@
 title: 'Guia de portabilidade: Spy++'
 ms.date: 11/19/2018
 ms.assetid: e558f759-3017-48a7-95a9-b5b779d5e51d
-ms.openlocfilehash: 206698d35239f416d2f13891044aa54fe502500a
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 175f3fbba7e18f625dc3425c236162737689f068
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69511667"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69630454"
 ---
 # <a name="porting-guide-spy"></a>Guia de portabilidade: Spy++
 
@@ -67,7 +67,7 @@ A Microsoft não dá mais suporte ao Windows XP, portanto, mesmo que seja permit
 
 Para eliminar o erro, defina WINVER atualizando a configuração **Propriedades do Projeto** para a versão mais antiga do Windows que você deseja usar como destino no momento. Encontre uma tabela de valores para várias versões do Windows [aqui](/windows/win32/WinProg/using-the-windows-headers).
 
-O arquivo stdafx.h continha algumas dessas definições de macro.
+O arquivo *stdafx.h* continha algumas destas definições de macro.
 
 ```cpp
 #define WINVER       0x0500  // these defines are set so that we get the
@@ -502,7 +502,7 @@ O problema ocorre quando uma variável é primeiro declarada como **extern** e p
 
 ##  <a name="porting_to_unicode"></a> Etapa 11. Portabilidade de MBCS para Unicode
 
-Observe que, no mundo do Windows, quando dizemos Unicode, normalmente queremos dizer UTF-16. Outros sistemas operacionais como o Linux usam UTF-8, mas o Windows geralmente não. A versão MBCS do MFC foi preterida no Visual Studio 2013 e 2015, mas isso não ocorre mais no Visual Studio 2017. Se você estiver usando o Visual Studio 2013 ou 2015, antes de tomar a decisão de transferir o código MBCS para Unicode UTF-16, elimine temporariamente os avisos de que o MBCS foi preterido, para realizar outros trabalhos ou adiar a portabilidade até um momento conveniente. O código atual usa MBCS e para continuar com isso, precisamos instalar a versão ANSI / MBCS do MFC. A biblioteca do MFC, bastante grande, não faz parte da instalação padrão do Visual Studio **Desenvolvimento para desktop com C++** , portanto, deve ser selecionada por meio dos componentes opcionais no instalador. Veja o [Complemento de DLL do MBCS do MFC](../mfc/mfc-mbcs-dll-add-on.md). Depois de baixar isso e reiniciar o Visual Studio, compile e vincule com a versão MBCS do MFC, mas, para se livrar dos avisos sobre o MBCS, se você estiver usando Visual Studio 2013 ou 2015, adicione também NO_WARN_MBCS_MFC_DEPRECATION à lista de macros predefinidas na seção **Pré-processador** das propriedades do projeto ou ao início do arquivo de cabeçalho stdafx.h ou outro arquivo de cabeçalho comum.
+Observe que, no mundo do Windows, quando dizemos Unicode, normalmente queremos dizer UTF-16. Outros sistemas operacionais como o Linux usam UTF-8, mas o Windows geralmente não. A versão MBCS do MFC foi preterida no Visual Studio 2013 e 2015, mas isso não ocorre mais no Visual Studio 2017. Se você estiver usando o Visual Studio 2013 ou 2015, antes de tomar a decisão de transferir o código MBCS para Unicode UTF-16, elimine temporariamente os avisos de que o MBCS foi preterido, para realizar outros trabalhos ou adiar a portabilidade até um momento conveniente. O código atual usa MBCS e para continuar com isso, precisamos instalar a versão ANSI / MBCS do MFC. A biblioteca do MFC, bastante grande, não faz parte da instalação padrão do Visual Studio **Desenvolvimento para desktop com C++** , portanto, deve ser selecionada por meio dos componentes opcionais no instalador. Veja o [Complemento de DLL do MBCS do MFC](../mfc/mfc-mbcs-dll-add-on.md). Depois de baixar isso e reiniciar o Visual Studio, compile e vincule com a versão MBCS do MFC. No entanto, para se livrar dos avisos sobre o MBCS, se você estiver usando Visual Studio 2013 ou 2015, adicione também NO_WARN_MBCS_MFC_DEPRECATION à lista de macros predefinidas na seção **Pré-processador** das propriedades do projeto ou ao início do arquivo de cabeçalho *stdafx.h* ou outro arquivo de cabeçalho comum.
 
 Agora temos alguns erros de vinculador.
 

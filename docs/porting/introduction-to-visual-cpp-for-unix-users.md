@@ -4,12 +4,12 @@ ms.date: 09/01/2017
 helpviewer_keywords:
 - UNIX [C++]
 ms.assetid: 36108b31-e7fa-49a8-a1f7-7077fcbec873
-ms.openlocfilehash: 17f8082ac0442f65b9195b37da18b04f795d3d66
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 7f73e51e02eafe46c279a8f828803912d8cd190a
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65448973"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69631691"
 ---
 # <a name="introduction-to-visual-c-for-unix-users"></a>Introdução ao Visual C++ para usuários do UNIX
 
@@ -57,7 +57,7 @@ Você pode desabilitar todas as extensões específicas da Microsoft para C++ us
 
 Os compiladores C e C++ da Microsoft fornecem opções para pré-compilar qualquer código C ou C++, incluindo código embutido. Usando esse recurso de desempenho, é possível compilar um corpo de código estável, armazenar o estado compilado do código em um arquivo e, durante as compilações subsequentes, combinar o código pré-compilado com código que ainda está em desenvolvimento. Cada compilação subsequente é mais rápida, porque o código estável não precisa ser recompilado.
 
-Por padrão, todo código pré-compilado é especificado nos arquivos stdafx.h e stdafx.cpp. O assistente **Novo projeto** criará automaticamente esses arquivos para você, a menos que você desmarque a opção **Cabeçalho pré-compilado**. Para obter mais informações sobre cabeçalhos pré-compilados, consulte [Criando arquivos de cabeçalho pré-compilados](../build/creating-precompiled-header-files.md).
+Por padrão, todo código pré-compilado é especificado nos arquivos *pch.h* e *pch.cpp* (*stdafx.h* e *stdafx.cpp* no Visual Studio 2017 e versões anteriores). O assistente **Novo projeto** criará automaticamente esses arquivos para você, a menos que você desmarque a opção **Cabeçalho pré-compilado**. Para obter mais informações sobre cabeçalhos pré-compilados, consulte [Criando arquivos de cabeçalho pré-compilados](../build/creating-precompiled-header-files.md).
 
 ## <a name="related-sections"></a>Seções relacionadas
 

@@ -2,12 +2,12 @@
 title: 'Como: Usar o código C++ existente em um aplicativo da Plataforma Universal do Windows'
 ms.date: 04/08/2019
 ms.assetid: 87e5818c-3081-42f3-a30d-3dca2cf0645c
-ms.openlocfilehash: e587ae88fe8d38a22b351d87ae585efe82acf091
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 5050a9773eea55549958195efa624743f44ed031
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69510373"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69630434"
 ---
 # <a name="how-to-use-existing-c-code-in-a-universal-windows-platform-app"></a>Como: Usar o código C++ existente em um aplicativo da Plataforma Universal do Windows
 
@@ -151,7 +151,7 @@ O procedimento a seguir se aplica ao caso em que há uma DLL nativa que expõe f
 
    Agora, o **Gerenciador de Soluções** identifica o projeto como universal do Windows.
 
-5. Verifique se o nome do arquivo de cabeçalho pré-compilado está correto. Na seção **Cabeçalhos Pré-compilados**, altere **Arquivo de Cabeçalho Pré-compilado** de pch.h para stdafx.h. Se você não fizer isso, verá o seguinte erro.
+5. Verifique se o nome do arquivo de cabeçalho pré-compilado está correto. Na seção **Cabeçalhos Pré-compilados**, altere **Arquivo de Cabeçalho Pré-compilado** de *pch.h* para *stdafx.h*. Se você não fizer isso, verá o seguinte erro.
 
    > Erro C2857: a instrução '#include' especificada com a opção de linha de comando /Ycpch.h não foi encontrada no arquivo de origem
 
@@ -165,7 +165,7 @@ O procedimento a seguir se aplica ao caso em que há uma DLL nativa que expõe f
 
    Em **Projetos** > **Solução**, marque a caixa de seleção ao lado do projeto de DLL e selecione o botão **OK**.
 
-8. Inclua os arquivos de cabeçalho da biblioteca no arquivo pch.h do aplicativo UWP.
+8. Inclua os arquivos de cabeçalho da biblioteca no arquivo *pch.h* do aplicativo UWP.
 
     ```cpp
     #include "..\MyNativeDLL\giraffe.h"
@@ -195,7 +195,7 @@ No entanto, você pode usar uma biblioteca estática em uma UWP sem recompilá-l
 
 1. Nas propriedades do projeto para o projeto UWP, escolha **Propriedades de Configuração** > **Vinculador** > **Entrada** no painel esquerdo. No painel direito, adicione o caminho para a biblioteca na propriedade **Dependências Adicionais**. Por exemplo, para uma biblioteca no projeto que coloca a saída em *SolutionFolder*\Debug\MyNativeLibrary\MyNativeLibrary.lib, adicione o caminho relativo `Debug\MyNativeLibrary\MyNativeLibrary.lib`.
 
-2. Adicione uma instrução include para fazer referência ao arquivo de cabeçalho no seu arquivo pch.h (se presente), ou em qualquer arquivo .cpp, conforme necessário, e comece a adicionar o código que usa a biblioteca.
+2. Adicione uma instrução include para fazer referência ao arquivo de cabeçalho no arquivo *pch.h* (se presente) ou em qualquer arquivo .cpp, conforme necessário, e comece a adicionar o código que usa a biblioteca.
 
    ```cpp
    #include "..\MyNativeLibrary\giraffe.h"
@@ -219,7 +219,7 @@ Se desejar consumir APIs nativas em uma biblioteca estática de um aplicativo UW
 
 5. Selecione todos os arquivos a serem adicionados do projeto original e, em seguida, escolha **OK**. Repita se necessário para as subpastas.
 
-6. Agora você pode ter alguns códigos duplicados. Se você tiver mais de um cabeçalho pré-compilado (digamos stdafx.h e pch.h), escolha um para manter. Copie qualquer código necessário, como instruções include, no que você está mantendo. Em seguida, exclua o outro e, nas propriedades do projeto, em **Cabeçalhos Pré-compilados**, certifique-se de que o nome do arquivo de cabeçalho esteja correto.
+6. Agora você pode ter alguns códigos duplicados. Se você tiver mais de um cabeçalho pré-compilado (como *stdafx.h* e *pch.h*), escolha um para manter. Copie qualquer código necessário, como instruções include, no que você está mantendo. Em seguida, exclua o outro e, nas propriedades do projeto, em **Cabeçalhos Pré-compilados**, certifique-se de que o nome do arquivo de cabeçalho esteja correto.
 
    Se você alterou o arquivo a ser usado como o cabeçalho pré-compilado, certifique-se de que as opções de cabeçalho pré-compilado estejam corretas para cada arquivo. Selecione cada arquivo .cpp separadamente, abra sua janela Propriedades e certifique-se de que todos estejam definidos como **Usar (/Yu)** , exceto o cabeçalho pré-compilado desejado, que deve ser definido como **Criar (/Yc)** .
 
