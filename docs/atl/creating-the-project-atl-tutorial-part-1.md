@@ -3,19 +3,16 @@ title: Criando o projeto (Tutorial ATL, parte 1)
 ms.custom: get-started-article
 ms.date: 08/19/2019
 ms.assetid: f6b727d1-390a-4b27-b82f-daadcd9fc059
-ms.openlocfilehash: 9f7f62ec94d5ac6d6076763853aa19297cf310e6
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.openlocfilehash: 5bb4c6edffd13e13a451b203feea9a03461a9318
+ms.sourcegitcommit: bf1940a39029dbbd861f95480f55e5e8bd25cda0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69630697"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70108379"
 ---
 # <a name="creating-the-project-atl-tutorial-part-1"></a>Criando o projeto (Tutorial ATL, parte 1)
 
-Este tutorial orienta você passo a passo por meio de um projeto ATL não atributo que cria um objeto ActiveX que exibe um polígono. O objeto inclui opções para permitir que o usuário altere o número de lados que compõem o polígono e o código para atualizar a exibição.
-
-> [!NOTE]
-> A ATL e o MFC geralmente não têm suporte nas edições Express do Visual Studio.
+Este tutorial orienta você passo a passo por meio de um projeto ATL não atribuído que cria um objeto ActiveX que exibe um polígono. O objeto inclui opções para permitir que o usuário altere o número de lados que compõem o polígono e o código para atualizar a exibição.
 
 > [!NOTE]
 > Este tutorial cria o mesmo código-fonte do exemplo de polígono. Se você quiser evitar inserir o código-fonte manualmente, poderá baixá-lo do [Resumo de exemplo de polígono](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/Controls/Polygon). Em seguida, você pode consultar o código-fonte do polígono enquanto trabalha no tutorial ou usá-lo para verificar se há erros em seu próprio projeto.

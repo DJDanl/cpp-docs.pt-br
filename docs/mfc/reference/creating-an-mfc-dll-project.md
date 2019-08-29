@@ -1,6 +1,6 @@
 ---
 title: Criando um projeto DLL MFC
-ms.date: 11/04/2016
+ms.date: 08/19/2019
 f1_keywords:
 - vc.appwiz.mfcdll.project
 helpviewer_keywords:
@@ -9,38 +9,36 @@ helpviewer_keywords:
 - projects [MFC], creating
 - DLLs [MFC], creating
 ms.assetid: 05540b93-4781-4a90-aadf-55158313f5b2
-ms.openlocfilehash: cd1d7910d95fa7e412f9843da2cec7ae10a38ef6
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: 649a47abea23aedb9aa97bb4923e7a800348e27e
+ms.sourcegitcommit: bf1940a39029dbbd861f95480f55e5e8bd25cda0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65708219"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70108474"
 ---
 # <a name="creating-an-mfc-dll-project"></a>Criando um projeto DLL MFC
 
-Uma DLL MFC é um arquivo binário que atua como uma biblioteca compartilhada de funções que podem ser usados simultaneamente por vários aplicativos. A maneira mais fácil para criar um projeto de DLL do MFC é usar o Assistente de DLL do MFC.
+Uma DLL do MFC é um arquivo binário que atua como uma biblioteca compartilhada de funções que podem ser usadas simultaneamente por vários aplicativos. A maneira mais fácil de criar um projeto de DLL do MFC é usar o assistente de DLL do MFC.
 
 > [!NOTE]
->  A aparência dos recursos no IDE pode depender de suas configurações ativas ou edição e pode diferir dos descritos na Ajuda. Para alterar as configurações, escolha **Importar e Exportar Configurações** no menu **Ferramentas**. Para obter mais informações, confira [Personalizar o IDE do Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).
+>  A aparência dos recursos no IDE pode depender de suas configurações ativas ou edição e pode diferir das descritas na ajuda. Para alterar as configurações, escolha **Importar e Exportar Configurações** no menu **Ferramentas**. Para obter mais informações, confira [Personalizar o IDE do Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).
 
-### <a name="to-create-an-mfc-dll-project-using-the-mfc-dll-wizard"></a>Para criar um projeto de DLL do MFC usando o Assistente de DLL do MFC
+### <a name="to-create-an-mfc-dll-project-using-the-mfc-dll-wizard"></a>Para criar um projeto de DLL do MFC usando o assistente de DLL do MFC
 
-1. Siga as instruções no tópico da Ajuda [criar um projeto de aplicativo de console C++](../../get-started/tutorial-console-cpp.md).
+1. Siga as instruções no tópico da ajuda [criando um aplicativo MFC](creating-an-mfc-application.md) , mas escolha **biblioteca de vínculo dinâmico MFC** ou **dll MFC** na lista de modelos disponíveis.
 
-**Observação** no **novo projeto** caixa de diálogo, selecione o `MFC DLL` ícone no painel de modelos para abrir o Assistente de DLL do MFC.
-
-1. Definir as configurações do aplicativo usando o [configurações do aplicativo](../../mfc/reference/application-settings-mfc-dll-wizard.md) página do [Assistente de DLL MFC](../../mfc/reference/mfc-dll-wizard.md).
+1. Defina as configurações do aplicativo usando a página [configurações do aplicativo](../../mfc/reference/application-settings-mfc-dll-wizard.md) do assistente de [dll do MFC](../../mfc/reference/mfc-dll-wizard.md).
 
     > [!NOTE]
-    >  Ignore esta etapa para manter o Assistente de configurações padrão.
+    >  Ignore esta etapa para manter as configurações padrão do assistente.
 
-1. Clique em **terminar** para fechar o assistente e abrir seu novo projeto no **Gerenciador de soluções**.
+1. Clique em **concluir** para fechar o assistente e abrir o novo projeto no **Gerenciador de soluções**.
 
-Depois que o projeto é criado, você pode exibir os arquivos criados na **Gerenciador de soluções**. Para obter mais informações sobre os arquivos que o assistente cria para seu projeto, consulte o arquivo gerado pelo projeto Readme. txt. Para obter mais informações sobre os tipos de arquivo, consulte [tipos de arquivo criados para o Visual Studio C++ projetos](../../build/reference/file-types-created-for-visual-cpp-projects.md).
+Após a criação do seu projeto, será possível exibir os arquivos criados no **Gerenciador de Soluções**. Para saber mais sobre os arquivos que o assistente cria para seu projeto, veja o arquivo ReadMe.txt gerado pelo projeto. Para saber mais sobre os tipos de arquivo, confira [Tipos de arquivos criados para projetos do Visual Studio C++](../../build/reference/file-types-created-for-visual-cpp-projects.md).
 
 ## <a name="see-also"></a>Consulte também
 
-[C++tipos de projeto no Visual Studio](/visualstudio/debugger/debugging-preparation-visual-cpp-project-types)<br/>
+[Tipos de projeto do C++ no Visual Studio](/visualstudio/debugger/debugging-preparation-visual-cpp-project-types)<br/>
 [Adicionando funcionalidade com assistentes de código](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
 [Páginas de propriedade](../../build/reference/property-pages-visual-cpp.md)
 
