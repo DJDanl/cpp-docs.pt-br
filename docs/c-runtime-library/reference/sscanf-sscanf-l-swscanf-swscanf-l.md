@@ -1,6 +1,6 @@
 ---
 title: sscanf, _sscanf_l, swscanf, _swscanf_l
-ms.date: 11/04/2016
+ms.date: 08/29/2019
 apiname:
 - swscanf
 - sscanf
@@ -40,14 +40,14 @@ helpviewer_keywords:
 - sscanf_l function
 - stscanf_l function
 ms.assetid: c2dcf0d2-9798-499f-a4a8-06f7e2b9a80c
-ms.openlocfilehash: 60dbb8e89e531c3020c243d998a69370095424e5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ac8bc14fed554c2ea5cede7f37c1dc49f4740bf3
+ms.sourcegitcommit: e10a5feea193c249ddc5a6faba48e7c6d8784e73
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62354685"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70177426"
 ---
-# <a name="sscanf-sscanfl-swscanf-swscanfl"></a>sscanf, _sscanf_l, swscanf, _swscanf_l
+# <a name="sscanf-_sscanf_l-swscanf-_swscanf_l"></a>sscanf, _sscanf_l, swscanf, _swscanf_l
 
 Leia dados formatados de uma cadeia de caracteres. Versões mais seguras dessas funções estão disponíveis; consulte [sscanf_s, _sscanf_s_l, swscanf_s, _swscanf_s_l](sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md).
 
@@ -94,22 +94,24 @@ A localidade a ser usada
 
 ## <a name="return-value"></a>Valor de retorno
 
-Cada uma dessas funções retorna o número de campos convertidos e atribuídos com êxito; o valor retornado não inclui campos que foram lidos, mas não atribuídos. Um valor retornado igual a 0 indica que nenhum campo foi atribuído. O valor retornado será **EOF** para um erro ou se o final da cadeia de caracteres for atingido antes da primeira conversão.
+Cada uma dessas funções retorna o número de campos convertidos e atribuídos com êxito; o valor retornado não inclui campos que foram lidos, mas não atribuídos. Um valor retornado igual a 0 indica que nenhum campo foi atribuído. O valor de retorno é **EOF** para um erro ou se o final da cadeia de caracteres for atingido antes da primeira conversão.
 
-Se *buffer* ou *formato* é um **nulo** ponteiro, o manipulador de parâmetro inválido será invocado, conforme descrito no [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções retornarão -1 e defina **errno** à **EINVAL**.
+Se o *buffer* ou o *formato* for um ponteiro **NULL** , o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, essas funções retornam-1 e definem **errno** como **EINVAL**.
 
 Para obter informações sobre esses e outros códigos de erro, consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Comentários
 
-O **sscanf** função lê dados da *buffer* no local fornecido por cada *argumento*. Cada *argumento* deve ser um ponteiro para uma variável com um tipo que corresponde a um especificador de tipo em *formato*. O *formato* controles de argumento a interpretação da entrada campos e tem o mesmo formato e função que o *formato* argumento para o **scanf** função. Se ocorrer cópia entre cadeias de caracteres que se sobrepõem, o comportamento será indefinido.
+A função **sscanf** lê dados do *buffer* no local fornecido por cada *argumento*. Cada *argumento* deve ser um ponteiro para uma variável com um tipo que corresponde a um especificador de tipo no *formato*. O argumento *Format* controla a interpretação dos campos de entrada e tem a mesma forma e função que o argumento de *formato* para a função **scanf** . Se ocorrer cópia entre cadeias de caracteres que se sobrepõem, o comportamento será indefinido.
+
+Para obter informações sobre os caracteres de campo do tipo scanf, consulte [scanf Type Field Characters](../scanf-type-field-characters.md). Para obter informações sobre campos de especificação de formato scanf, consulte [Formatar campos de especificação](../format-specification-fields-scanf-and-wscanf-functions.md).
 
 > [!IMPORTANT]
-> Ao ler uma cadeia de caracteres com **sscanf**, especifique sempre uma largura para o **%s** formato (por exemplo, **"% 32s texto"** , em vez de **"%s"**); caso contrário, , entrada formatada incorretamente poderá facilmente causar um estouro de buffer.
+> Ao ler uma cadeia de caracteres com **sscanf**, sempre especifique uma largura para o formato **% s** (por exemplo, **"% 32s"** em vez de **"% s"** ); caso contrário, a entrada formatada incorretamente poderá facilmente causar uma saturação do buffer.
 
-**swscanf** é uma versão de caractere largo de **sscanf**; os argumentos a serem **swscanf** são cadeias de caracteres largos. **sscanf** não manipula caracteres hexadecimais multibyte. **swscanf** não manipula hexadecimal de largura total Unicode ou caracteres de "zona de compatibilidade". Caso contrário, **swscanf** e **sscanf** se comportam de forma idêntica.
+**swscanf** é uma versão de caractere largo do **sscanf**; os argumentos para **swscanf** são cadeias de caracteres largos. **sscanf** não manipula caracteres hexadecimais multibyte. **swscanf** não manipula caracteres hexadecimais Unicode de largura inteira ou "zona de compatibilidade". Caso contrário, **swscanf** e **sscanf** se comportam de forma idêntica.
 
-As versões dessas funções com o **l** sufixo são idênticas, exceto que eles usam o parâmetro de localidade passado em vez da localidade do thread atual.
+As versões dessas funções com o sufixo **_L** são idênticas, exceto pelo fato de que usam o parâmetro de localidade passado em vez da localidade do thread atual.
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
