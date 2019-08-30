@@ -1,6 +1,6 @@
 ---
 title: Página de propriedades Recursos Gerenciados
-ms.date: 11/04/2016
+ms.date: 08/28/2019
 f1_keywords:
 - VC.Project.VCManagedResourceCompilerTool.ResourceFileName
 - VC.Project.VCManagedResourceCompilerTool.OutputFileName
@@ -8,18 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - Managed Resources property page
 ms.assetid: 80b80384-ee55-494d-9f0e-907bb98cfc19
-ms.openlocfilehash: 97cf05f881949444879b0d48e3b3c2703a614985
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 14802996e63392bfb5fcc22096ef5f3d9db197c2
+ms.sourcegitcommit: e10a5feea193c249ddc5a6faba48e7c6d8784e73
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69498225"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70177531"
 ---
 # <a name="managed-resources-property-page"></a>Página de propriedades Recursos Gerenciados
 
-Habilita as configurações do compilador de recurso.
-
-A página de propriedades de **Recursos Gerenciados** contém as seguintes propriedades:
+A página de propriedades **recursos gerenciados** expõe as seguintes propriedades para o compilador de recurso gerenciado ResGen [. exe](/dotnet/framework/tools/resgen-exe-resource-file-generator) ao usar C++os recursos do .net em programas da/CLI:
 
 - **Nome Lógico de Recurso**
 
