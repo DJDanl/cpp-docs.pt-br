@@ -1,6 +1,6 @@
 ---
-title: float_control
-ms.date: 11/04/2016
+title: Pragma float_control
+ms.date: 08/29/2019
 f1_keywords:
 - vc-pragma.float_control
 - float_control_CPP
@@ -8,39 +8,41 @@ helpviewer_keywords:
 - float_control pragma
 - pragmas, float_control
 ms.assetid: 4f4ba5cf-3707-413e-927d-5ecdbc0a9a43
-ms.openlocfilehash: 8a7829252cebb726363c67c990a94d08b0d6467a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aa8cdc07953405175c1753791ab53214d73ba516
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389210"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70218571"
 ---
-# <a name="floatcontrol"></a>float_control
+# <a name="float_control-pragma"></a>Pragma float_control
 
 Especifica o comportamento de ponto flutuante para uma função.
 
 ## <a name="syntax"></a>Sintaxe
 
-> **#pragma float_control** [ **(** [ *value* **,** *setting* [ **, push** ] ] | [ **push** | **pop** ] **)** ]
+> **#pragma float_control**\
+> **#pragma float_control (** { **exato** | **estrito** |  **,** **exceto** }, { **on** | **off** } [ **, push** ] **)** \
+> **#pragma float_control (** { **Push** | **pop** } **)**
 
 ## <a name="options"></a>Opções
 
-*value*, *setting* [, **push**]<br/>
-Especifica o comportamento de ponto flutuante. *valor* pode ser **preciso**, **strict**, ou **exceto**. Para obter mais informações, consulte [/fp (especificar comportamento de ponto flutuante)](../build/reference/fp-specify-floating-point-behavior.md). O *configuração* pode ser **na** ou **off**.
+**exato** estrito, exceto, ativado,enviarporpush |  |  | \
+Especifica o comportamento de ponto flutuante, que pode ser **preciso**, **estrito**ou **Except**. Para obter mais informações, consulte [/fp (especificar comportamento de ponto flutuante)](../build/reference/fp-specify-floating-point-behavior.md). A configuração pode ser **ativada** ou desativada.
 
-Se *valor* é **estrito**, as configurações para ambos **estrito** e **exceto** são especificadas por *configuração* . **exceto** só pode ser definida como **na** quando **preciso** ou **estrito** também é definido como **em**.
+Quando **estrito**, as configurações de **Strict** e **Except** são especificadas pela configuração **on** ou **off** . **Except** só pode ser definido como **on** quando **preciso** ou **Strict** também é definido como **on**.
 
-Se o opcional **por push** token é adicionado, atual definindo para *valor* é empurrado na pilha interna do compilador.
+Se o token **Push** opcional for adicionado, a configuração atual para **float_control** será enviada para a pilha do compilador interno.
 
-**push**<br/>
-Enviar por push o atual **float_control** definindo na pilha interna do compilador
+**pressionado**\
+Enviar por push a configuração atual de **float_control** para a pilha interna do compilador
 
-**pop**<br/>
-Remove o **float_control** configuração da parte superior da pilha interna do compilador e faz com que a nova **float_control** configuração.
+**pop**\
+Remove a configuração **float_control** da parte superior da pilha interna do compilador e faz com que a nova configuração **float_control** .
 
 ## <a name="remarks"></a>Comentários
 
-Não é possível usar **float_control** transformar **preciso** quando **exceto** está em. Da mesma forma, **preciso** não pode ser desativado quando [fenv_access](../preprocessor/fenv-access.md) está em. Para ir do modelo estrito para um modelo rápido usando o **float_control** pragma, use o seguinte código:
+Não é possível usar **float_control** para desativar a **precisão** quando **Except** for on. Da mesma forma, a **precisão** não pode ser desativada quando [fenv_access](../preprocessor/fenv-access.md) está ativada. Para ir de um modelo estrito para um modelo rápido usando o pragma **float_control** , use o seguinte código:
 
 ```cpp
 #pragma float_control(except, off)
@@ -48,7 +50,7 @@ Não é possível usar **float_control** transformar **preciso** quando **exceto
 #pragma float_control(precise, off)
 ```
 
-Para ir do modelo rápido para um modelo estrito com o **float_control** pragma, use o seguinte código:
+Para ir de um modelo rápido para um modelo estrito com o pragma **float_control** , use o seguinte código:
 
 ```cpp
 #pragma float_control(precise, on)
@@ -56,7 +58,7 @@ Para ir do modelo rápido para um modelo estrito com o **float_control** pragma,
 #pragma float_control(except, on)
 ```
 
-Se nenhuma opção foi especificada, **float_control** não tem nenhum efeito.
+Se nenhuma opção for especificada, **float_control** não terá nenhum efeito.
 
 Outros pragmas de ponto flutuante incluem:
 
@@ -66,7 +68,7 @@ Outros pragmas de ponto flutuante incluem:
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir mostra como capturar uma exceção de ponto flutuante de estouro usando o pragma **float_control**.
+O exemplo a seguir mostra como capturar uma exceção de ponto flutuante de estouro usando pragma **float_control**.
 
 ```cpp
 // pragma_directive_float_control.cpp
@@ -108,4 +110,4 @@ Pass
 
 ## <a name="see-also"></a>Consulte também
 
-[Diretivas Pragma e a palavra-chave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Diretivas pragma e a palavra-chave __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

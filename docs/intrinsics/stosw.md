@@ -1,6 +1,6 @@
 ---
 title: __stosw
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __stosw
 helpviewer_keywords:
@@ -8,39 +8,39 @@ helpviewer_keywords:
 - __stosw intrinsic
 - rep stosw instruction
 ms.assetid: 7620fd1d-dba5-40e3-8e07-01aa68895133
-ms.openlocfilehash: c203973a79c2c3b1094ad8a5351db0999a56bf19
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5fd29bbf1aebba115670fc1bc35e0d8cbe29c7ad
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390289"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219931"
 ---
-# <a name="stosw"></a>__stosw
+# <a name="__stosw"></a>__stosw
 
 **Seção específica da Microsoft**
 
-Gera uma instrução de cadeia de caracteres de repositório (`rep stosw`).
+Gera uma instrução de cadeia de`rep stosw`caracteres de repositório ().
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```C
 void __stosw(
-   unsigned short* Dest,
+   unsigned short* Destination,
    unsigned short Data,
    size_t Count
 );
 ```
 
-#### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>Parâmetros
 
-*Dest*<br/>
-[out] O destino da operação.
+*Destino*\
+fora O destino da operação.
 
-*Dados*<br/>
-[in] Os dados serem armazenados.
+*Dado*\
+no Os dados a serem armazenados.
 
-*Contagem*<br/>
-[in] O tamanho do bloco de palavras para gravar.
+*Contar*\
+no O comprimento do bloco de palavras a ser gravado.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -48,17 +48,17 @@ void __stosw(
 |---------------|------------------|
 |`__stosw`|x86, x64|
 
-**Arquivo de cabeçalho** \<intrin. h >
+**Arquivo de cabeçalho** \<> intrin. h
 
 ## <a name="remarks"></a>Comentários
 
-O resultado é que a palavra `Data` é gravado em um bloco de `Count` palavras no `Dest` cadeia de caracteres.
+O resultado é que os *dados* da palavra são gravados em um bloco de palavras de *contagem* na cadeia de caracteres de *destino* .
 
 Essa rotina só está disponível como função intrínseca.
 
 ## <a name="example"></a>Exemplo
 
-```
+```C
 // stosw.c
 // processor: x86, x64
 #include <stdio.h>

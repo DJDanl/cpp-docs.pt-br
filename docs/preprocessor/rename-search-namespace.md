@@ -1,40 +1,38 @@
 ---
-title: rename_search_namespace
-ms.date: 10/18/2018
+title: atributo de importação de rename_search_namespace
+ms.date: 08/29/2019
 f1_keywords:
 - rename_search_namespace
 helpviewer_keywords:
 - rename_search_namespace attribute
 ms.assetid: 47c9d7fd-59dc-4c62-87a1-9011a0040167
-ms.openlocfilehash: ca5d24ca9cc12e9defaa395cf150bc3c04ee4439
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 42c6edb6aa34b441db8041dd2974728c138b2c82
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179770"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216626"
 ---
-# <a name="renamesearchnamespace"></a>rename_search_namespace
+# <a name="rename_search_namespace-import-attribute"></a>atributo de importação de rename_search_namespace
 
-**Específico do C++**
+**C++Determinados**
 
-Tem a mesma funcionalidade que o [rename_namespace](../preprocessor/rename-namespace.md) do atributo, mas é usado em bibliotecas de tipos que você usar o `#import` diretiva com o [auto_search](../preprocessor/auto-search.md) atributo.
+Tem a mesma funcionalidade que o atributo [rename_namespace](../preprocessor/rename-namespace.md) , mas é usado em bibliotecas de tipos em que você `#import` usa a diretiva junto com o atributo [auto_search](../preprocessor/auto-search.md) .
 
 ## <a name="syntax"></a>Sintaxe
 
-```
-rename_search_namespace("NewName")
-```
+> **#import** *biblioteca de tipos* **rename_search_namespace (** "*NewName*" **)**
 
 ### <a name="parameters"></a>Parâmetros
 
-*NewName*<br/>
+*NewName*\
 O nome do novo namespace.
 
 ## <a name="remarks"></a>Comentários
 
-**FIM de específico de C++**
+**FINAL C++ específico**
 
 ## <a name="see-also"></a>Consulte também
 
-[atributos de #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
+[atributos de #import](../preprocessor/hash-import-attributes-cpp.md)\
 [#import diretiva](../preprocessor/hash-import-directive-cpp.md)

@@ -1,46 +1,45 @@
 ---
 title: __svm_skinit
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __svm_skinit
 helpviewer_keywords:
 - SKINIT instruction
 - __svm_skinit intrinsic
 ms.assetid: 787ec781-4cf2-40a2-aa20-5192334b131a
-ms.openlocfilehash: 199cba2623f9d8e47c08be642ec485599b87976e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6657921d647a23bf027a5800702527951f7f6831
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390237"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219862"
 ---
-# <a name="svmskinit"></a>__svm_skinit
+# <a name="__svm_skinit"></a>__svm_skinit
 
 **Seção específica da Microsoft**
 
-Inicia o carregamento de software seguro verificável, como um monitor de máquina virtual.
+Inicia o carregamento de softwares seguros verificáveis, como um monitor de máquina virtual.
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```C
 void __svm_skinit(
-   int SLB
+   int block_address
 );
 ```
 
-#### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>Parâmetros
 
-|Parâmetro|Descrição|
-|---------------|-----------------|
-|`SLB`|O endereço físico de 32 bits de um byte de 64K bloco de carregador seguro (SLB).|
+*block_address*\
+O endereço físico de 32 bits de um SLB (bloco de carregador seguro) de 64K bytes.
 
 ## <a name="remarks"></a>Comentários
 
-O `__svm_skinit` função é equivalente ao `SKINIT` instruções de máquina. Essa função é parte de um sistema de segurança que usa o processador e um módulo de plataforma confiável (TPM) para verificar e carregar um software confiável chamado um kernel de segurança (SK). Um monitor de máquina virtual é um exemplo de um kernel de segurança. O sistema de segurança verifica os componentes de programa carregado durante o processo de inicialização e protege os componentes de violação por interrupções, acesso ao dispositivo ou outro programa, se o computador for um multiprocessador.
+A `__svm_skinit` função é equivalente à instrução `SKINIT` da máquina. Essa função faz parte de um sistema de segurança que usa o processador e um Trusted Platform Module (TPM), para verificar e carregar um software confiável, chamado de *kernel de segurança* (SK). Um monitor de máquina virtual é um exemplo de um kernel de segurança. O sistema de segurança verifica os componentes do programa carregados durante o processo de inicialização. Ele protege os componentes contra violação por interrupções, acesso ao dispositivo ou outro programa se o computador for um multiprocessador.
 
-O `SLB` parâmetro especifica o endereço físico de um bloco de 64K de memória chamada a *bloco de carregador seguro* (SLB). O SLB contém um programa chamado o carregador seguro que estabelece o ambiente operacional do computador e, subsequentemente, carrega o kernel de segurança.
+O parâmetro *block_address* especifica o endereço físico de um bloco de 64K de memória chamado de SLB ( *bloco de carregador seguro* ). O SLB contém um programa chamado *carregador seguro*. Ele estabelece o ambiente operacional para o computador e, em seguida, carrega o kernel de segurança.
 
-Essa função dá suporte a interação do monitor de máquina virtual do host com um sistema operacional e seus aplicativos de convidado. Para obter mais informações, pesquise o documento "Volume de Manual do programador da arquitetura AMD64 2: Sistema de programação,"documento número 24593, revisão 3.11, o [corporation AMD](https://developer.amd.com/resources/developer-guides-manuals/) site.
+Essa função dá suporte à interação do monitor de máquina virtual de um host com um sistema operacional convidado e seus aplicativos. Para obter mais informações, pesquise "volume manual do programador de arquitetura AMD64 2: Programação do sistema ", no site da [AMD Corporation](https://developer.amd.com/resources/developer-guides-manuals/) .
 
 ## <a name="requirements"></a>Requisitos
 
@@ -48,7 +47,7 @@ Essa função dá suporte a interação do monitor de máquina virtual do host c
 |---------------|------------------|
 |`__svm_skinit`|x86, x64|
 
-**Arquivo de cabeçalho** \<intrin. h >
+**Arquivo de cabeçalho** \<> intrin. h
 
 **Fim da seção específica da Microsoft**
 

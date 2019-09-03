@@ -1,19 +1,19 @@
 ---
 title: __shiftright128
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __shiftright128
 helpviewer_keywords:
 - __shiftright128 intrinsic
 ms.assetid: 5419a6c4-0de1-43fb-b314-4faa5b2d051f
-ms.openlocfilehash: b721abc9be22709fdc221951e2012300d6b96762
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a18a9958a51f291e4997c23e87ee48f739562416
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390328"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70220022"
 ---
-# <a name="shiftright128"></a>__shiftright128
+# <a name="__shiftright128"></a>__shiftright128
 
 **Seção específica da Microsoft**
 
@@ -21,7 +21,7 @@ Desloca uma quantidade de 128 bits, representada como duas quantidades de 64 bit
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```C
 unsigned __int64 __shiftright128(
    unsigned __int64 LowPart,
    unsigned __int64 HighPart,
@@ -29,18 +29,18 @@ unsigned __int64 __shiftright128(
 );
 ```
 
-#### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>Parâmetros
 
-*LowPart*<br/>
-[in] Os 64 bits baixos da quantidade de 128 bits a deslocar.
+*LowPart*\
+no Os poucos 64 bits da quantidade de 128 bits a serem deslocados.
 
-*HighPart*<br/>
-[in] Os 64 bits altos da quantidade de 128 bits a deslocar.
+*HighPart*\
+no Os bits de 64 altos da quantidade de 128 bits a serem deslocados.
 
-*Shift*<br/>
-[in] O número de bits a deslocar.
+*Alternância*\
+no O número de bits a ser deslocado.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 64 bits baixos do resultado.
 
@@ -50,7 +50,7 @@ unsigned __int64 __shiftright128(
 |---------------|------------------|
 |`__shiftright128`|X64|
 
-**Arquivo de cabeçalho** \<intrin. h >
+**Arquivo de cabeçalho** \<> intrin. h
 
 ## <a name="remarks"></a>Comentários
 
@@ -58,11 +58,11 @@ O valor `Shift` é sempre módulo 64 para que, por exemplo, se você chamar, `__
 
 ## <a name="example"></a>Exemplo
 
-Por exemplo, consulte [__shiftleft128](../intrinsics/shiftleft128.md).
+Para obter um exemplo, consulte [__shiftleft128](../intrinsics/shiftleft128.md).
 
 **Fim da seção específica da Microsoft**
 
 ## <a name="see-also"></a>Consulte também
 
-[__shiftleft128](../intrinsics/shiftleft128.md)<br/>
+[__shiftleft128](../intrinsics/shiftleft128.md)\
 [Intrínsecos do compilador](../intrinsics/compiler-intrinsics.md)

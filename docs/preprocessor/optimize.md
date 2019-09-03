@@ -1,6 +1,6 @@
 ---
-title: optimize
-ms.date: 11/04/2016
+title: Pragma optimize
+ms.date: 08/29/2019
 f1_keywords:
 - vc-pragma.optimize
 - optimize_CPP
@@ -8,57 +8,53 @@ helpviewer_keywords:
 - pragmas, optimize
 - optimize pragma
 ms.assetid: cb13c1cc-186a-45bc-bee7-95a8de7381cc
-ms.openlocfilehash: 9f5240fc59f59a71ddb3d18b67fadf3463a0d1ea
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6d7b99b7a72c133d56a209cf42fa9ef670a4a7f9
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62328166"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70220507"
 ---
-# <a name="optimize"></a>optimize
+# <a name="optimize-pragma"></a>Pragma optimize
 
-Especifica as otimizações a serem executadas em uma base de função por função.
+Especifica otimizações em uma base de função por função.
 
 ## <a name="syntax"></a>Sintaxe
 
-```
-#pragma optimize( "[optimization-list]", {on | off} )
-```
+> **#pragma otimizar ("** [ *Optimization-List* ] **",** { **on** | **off** } **)**
 
 ## <a name="remarks"></a>Comentários
 
-O **otimizar** pragma deve aparecer fora de uma função e entra em vigor na primeira função definida depois que o pragma é considerado. O *na* e *off* argumentos ativar as opções especificadas no *lista de otimização* ativada ou desativada.
+O pragma de **otimização** deve aparecer fora de uma função. Ela entra em vigor na primeira função definida após o pragma ser visto. Os argumentos **on** e **off** ativam opções especificadas na *lista de otimização* .
 
-O *lista de otimização* pode ser zero ou mais dos parâmetros mostrados na tabela a seguir.
+A *lista de otimização* pode ser zero ou mais parâmetros mostrados na tabela a seguir.
 
 ### <a name="parameters-of-the-optimize-pragma"></a>Parâmetros do pragma de otimização
 
-|Parâmetro(s)|Tipo de otimização|
+| Parâmetro(s) | Tipo de otimização |
 |--------------------|--------------------------|
-|*g*|Habilita as otimizações globais.|
-|*s* ou *t*|Especifica sequências curtas ou rápidas de código de máquina.|
-|*y*|Gera ponteiros de quadro na pilha de programa.|
+| **g** | Habilita as otimizações globais. |
+| **s** ou **t** | Especifica sequências curtas ou rápidas de código de máquina. |
+| **y** | Gera ponteiros de quadro na pilha de programa. |
 
-Essas são as mesmas letras usadas com o [/O](../build/reference/o-options-optimize-code.md) opções do compilador. Por exemplo, o pragma a seguir é equivalente à opção de compilador `/Os`:
+Esses parâmetros são as mesmas letras usadas com as opções de compilador [/o](../build/reference/o-options-optimize-code.md) . Por exemplo, o pragma a seguir é equivalente à opção de compilador `/Os`:
 
+```cpp
+#pragma optimize( "s", on )
 ```
-#pragma optimize( "ts", on )
-```
 
-Usando o **otimizar** pragma com a cadeia de caracteres vazia (**""**) é uma forma especial de política:
+Usar o pragma de **otimização** com a cadeia de caracteres vazia ( **""** ) é uma forma especial da diretiva:
 
-Quando você usa o *off* parâmetro, ele desativa as otimizações, *g*, *s*, *t*, e *y*, desativado.
+Quando você usa o parâmetro **off** , ele transforma todas as otimizações, **g**, **s**, **t**e **y**, off.
 
-Quando você usa o *na* parâmetro, ele redefine as otimizações que você especificou com o [/O](../build/reference/o-options-optimize-code.md) opção de compilador.
+Quando você usa o parâmetro **on** , ele redefine as otimizações para aquelas que você especificou usando a opção de compilador [/o](../build/reference/o-options-optimize-code.md) .
 
-```
+```cpp
 #pragma optimize( "", off )
-.
-.
-.
+/* unoptimized code section */
 #pragma optimize( "", on )
 ```
 
 ## <a name="see-also"></a>Consulte também
 
-[Diretivas Pragma e a palavra-chave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Diretivas pragma e a palavra-chave __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

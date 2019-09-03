@@ -1,6 +1,6 @@
 ---
 title: __faststorefence
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __faststorefence_cpp
 - __faststorefence
@@ -8,22 +8,22 @@ helpviewer_keywords:
 - __faststorefence intrinsic
 - sfence instruction
 ms.assetid: 6c6eb973-3cf0-4306-b3af-cfde9b0210a5
-ms.openlocfilehash: a0c8027f443a475b03521920e2e036e7ed4eaafb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d11a20666612fe1bca22f5d46b93e898dae375f6
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348998"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222183"
 ---
-# <a name="faststorefence"></a>__faststorefence
+# <a name="__faststorefence"></a>__faststorefence
 
 **Seção específica da Microsoft**
 
-Garantias de que cada referência anterior a memória, incluindo carregar e armazena referências de memória, é globalmente visível antes de qualquer referência de memória subsequente.
+Garante que cada referência de memória anterior, incluindo as referências de memória de carga e armazenamento, seja globalmente visível antes de qualquer referência de memória subsequente.
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```C
 void __faststorefence();
 ```
 
@@ -33,13 +33,13 @@ void __faststorefence();
 |---------------|------------------|
 |`__faststorefence`|X64|
 
-**Arquivo de cabeçalho** \<intrin. h >
+**Arquivo de cabeçalho** \<> intrin. h
 
 ## <a name="remarks"></a>Comentários
 
-Gera uma sequência de instruções de barreira total de memória que garantias de carregar e armazenam operações emitido antes de intrínseco são globalmente continua visível antes da execução. O efeito é comparável ao mas mais rápido do que o `_mm_mfence` intrínseco x64 todas as plataformas.
+Gera uma sequência de instrução de barreira de memória completa que garante que as operações de carregamento e armazenamento emitidas antes do intrínseco são visíveis globalmente antes de a execução continuar. O efeito é comparável a, mas mais rápido `_mm_mfence` do que o intrínseco em todas as plataformas x64.
 
-Na plataforma AMD64, essa rotina gera uma instrução que é um limite de armazenamento mais rápido do que o `sfence` instrução. Para o código crítico em termos de tempo, use intrínsecos, em vez de `_mm_sfence` somente nas plataformas AMD64. Em plataformas Intel x64, o `_mm_sfence` instrução é mais rápida.
+Na plataforma AMD64, essa rotina gera uma instrução que é um limite de armazenamento mais rápido do `sfence` que a instrução. Para código de tempo crítico, use essa intrínseca em vez `_mm_sfence` de apenas em plataformas AMD64. Em plataformas Intel x64, a `_mm_sfence` instrução é mais rápida.
 
 Essa rotina só está disponível como função intrínseca.
 

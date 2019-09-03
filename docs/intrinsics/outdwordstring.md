@@ -1,6 +1,6 @@
 ---
 title: __outdwordstring
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __outdwordstring
 helpviewer_keywords:
@@ -8,22 +8,22 @@ helpviewer_keywords:
 - __outdwordstring intrinsic
 - rep outsd instruction
 ms.assetid: 55b31a65-aab7-4b5c-b61d-d9e2fb0c497a
-ms.openlocfilehash: 51cb4a97d271d6d41d39d1025e3a5d34b273cdc4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 50908a65795af617f18a497c073cfefe009dfd80
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396581"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217153"
 ---
-# <a name="outdwordstring"></a>__outdwordstring
+# <a name="__outdwordstring"></a>__outdwordstring
 
 **Seção específica da Microsoft**
 
-Gera o `rep outsd` instrução, que envia `Count` palavras duplas começando `Buffer` para a porta de e/s especificada pelo `Port`.
+Gera a `rep outsd` instrução, que envia `Count` doublewords a partir `Buffer` da porta de e/s especificada por `Port`.
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```C
 void __outdwordstring(
    unsigned short Port,
    unsigned long* Buffer,
@@ -31,16 +31,16 @@ void __outdwordstring(
 );
 ```
 
-#### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>Parâmetros
 
-*Porta*<br/>
-[in] A porta para enviar os dados.
+*Porto*\
+no A porta para a qual enviar os dados.
 
-*buffer*<br/>
-[in] Um ponteiro para os dados a serem enviadas a porta especificada.
+*Completo*\
+no Um ponteiro para os dados a serem enviados para a porta especificada.
 
-*Contagem*<br/>
-[in] O número de palavras duplas para enviar.
+*Contar*\
+no O número de doublewords a ser enviado.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -48,7 +48,7 @@ void __outdwordstring(
 |---------------|------------------|
 |`__outdwordstring`|x86, x64|
 
-**Arquivo de cabeçalho** \<intrin. h >
+**Arquivo de cabeçalho** \<> intrin. h
 
 ## <a name="remarks"></a>Comentários
 

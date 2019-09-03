@@ -1,6 +1,6 @@
 ---
-title: include_alias
-ms.date: 12/16/2018
+title: Pragma include_alias
+ms.date: 08/29/2019
 f1_keywords:
 - vc-pragma.include_alias
 - include_alias_CPP
@@ -8,25 +8,26 @@ helpviewer_keywords:
 - pragmas, include_alias
 - include_alias pragma
 ms.assetid: 3256d589-12b3-4af0-a586-199e96eabacc
-ms.openlocfilehash: 187fa94f7c2a5457df655081b87a7f49d38adfa2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aa3714186e8f95d4044ba5a3b2bc2d5fcfb1fc9c
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384012"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70218896"
 ---
-# <a name="includealias"></a>include_alias
+# <a name="include_alias-pragma"></a>Pragma include_alias
 
-Especifica que, quando *alias_filename* for encontrado em um `#include` diretiva, o compilador substitui *actual_filename* em seu lugar.
+Especifica que quando *alias_filename* é encontrado em uma `#include` diretiva, o compilador substitui *actual_filename* em seu lugar.
 
 ## <a name="syntax"></a>Sintaxe
 
-> #<a name="pragma-includealiasaliasfilename-actualfilename"></a>pragma include_alias("*alias_filename*", "*actual_filename*")
-> #<a name="pragma-includealiasaliasfilename-actualfilename"></a>pragma include_alias (\<*alias_filename*>, \< *actual_filename*>)
+<!-- localization note - it's important to have the italic and bold characters immediately adjacent here. -->
+> **#pragma include_alias (** "*alias_filename*" **,** "*actual_filename*" **)** \
+> **#pragma include_alias (** \< *alias_filename*>  **,** *actual_filename*) \<> 
 
 ## <a name="remarks"></a>Comentários
 
-O **include_alias** diretiva de pragma permite a substituição de arquivos que têm nomes diferentes ou caminhos para os nomes dos arquivos incluídos por arquivos de origem. Por exemplo, alguns sistemas de arquivos permitem nomes de arquivo de cabeçalho mais do que o limite do sistema de arquivos FAT 8.3. O compilador não pode simplesmente truncar nomes mais longos para 8.3, pois os primeiros oito caracteres dos nomes de arquivos de cabeçalho mais longos podem não ser exclusivos. Sempre que o compilador encontra a *alias_filename* cadeia de caracteres, ele substitui *actual_filename*e procura o arquivo de cabeçalho *actual_filename* em vez disso. Esse pragma deve aparecer antes das políticas `#include` correspondentes. Por exemplo:
+A diretiva pragma **include_alias** permite substituir arquivos que têm nomes ou caminhos diferentes para os nomes de arquivo incluídos pelos arquivos de origem. Por exemplo, alguns sistemas de arquivos permitem nomes de arquivo de cabeçalho mais longos do que o limite do sistema de arquivos FAT 8,3. O compilador não pode apenas truncar os nomes mais longos para 8,3, pois os oito primeiros caracteres dos nomes de um dos cabeçalhos mais longos podem não ser exclusivos. Sempre que o compilador vê a cadeia de caracteres `#include` alias_filename em uma diretiva, ele substitui o nome *actual_filename* em vez disso. Em seguida, ele carrega o arquivo de cabeçalho *actual_filename* . Esse pragma deve aparecer antes das políticas `#include` correspondentes. Por exemplo:
 
 ```cpp
 // First eight characters of these two files not unique.
@@ -40,7 +41,7 @@ O **include_alias** diretiva de pragma permite a substituição de arquivos que 
 #include "GraphicsMenu.h"
 ```
 
-O alias que está sendo pesquisado deve corresponder exatamente a especificação, na ortografia e no uso de aspas duplas ou colchetes angulares. O **include_alias** pragma executa a correspondência de nomes de arquivo da cadeia de caracteres simple; nenhuma outra validação de nome de arquivo é executada. Por exemplo, dadas as seguintes políticas,
+O alias a ser pesquisado deve corresponder exatamente à especificação. O caso, a ortografia e o uso de aspas duplas ou colchetes angulares devem corresponder. O pragma **include_alias** faz a correspondência de cadeia de caracteres simples nos nomes de File. Nenhuma outra validação de nome de arquivo é executada. Por exemplo, dadas as seguintes políticas,
 
 ```cpp
 #pragma include_alias("mymath.h", "math.h")
@@ -48,7 +49,7 @@ O alias que está sendo pesquisado deve corresponder exatamente a especificaçã
 #include "sys/mymath.h"
 ```
 
-nenhuma criação de alias (substituição) é executada, pois as cadeias de caracteres do arquivo de cabeçalho não correspondem exatamente. Além disso, os nomes de cabeçalho usados como argumentos para o `/Yu` e `/Yc` opções do compilador, ou o `hdrstop` pragma, não são substituídos. Por exemplo, se o arquivo de origem contiver a seguinte política,
+nenhuma substituição de alias foi feita, pois as cadeias de caracteres do arquivo de cabeçalho não correspondem exatamente. Além disso, os `/Yu` `hdrstop` nomes de um cabeçalho usados como argumentos para `/Yc` as opções de compilador e, ou pragma, não são substituídos. Por exemplo, se o arquivo de origem contiver a seguinte política,
 
 ```cpp
 #include <AppleSystemHeaderStop.h>
@@ -56,9 +57,9 @@ nenhuma criação de alias (substituição) é executada, pois as cadeias de car
 
 a opção do compilador correspondente deve ser
 
-> /YcAppleSystemHeaderStop.h
+> **/YcAppleSystemHeaderStop.h**
 
-Você pode usar o **include_alias** pragma para mapear qualquer nome de arquivo de cabeçalho para outro. Por exemplo:
+Você pode usar o pragma **include_alias** para mapear qualquer nome de arquivo de cabeçalho para outro. Por exemplo:
 
 ```cpp
 #pragma include_alias( "api.h", "c:\version1.0\api.h" )
@@ -67,7 +68,7 @@ Você pode usar o **include_alias** pragma para mapear qualquer nome de arquivo 
 #include <stdio.h>
 ```
 
-Não misture nomes de arquivos incluídos entre aspas duplas com nomes de arquivos entre colchetes angulares. Por exemplo, considerando os dois acima `#pragma include_alias` diretivas, o compilador não executa nenhuma substituição nas seguintes `#include` diretivas:
+Não misture nomes de fileentre aspas duplas com nomes de fileentre colchetes angulares. Por exemplo, considerando as duas `#pragma include_alias` diretivas acima, o compilador não faz nenhuma substituição nas seguintes `#include` diretivas:
 
 ```cpp
 #include <api.h>
@@ -80,14 +81,14 @@ Além disso, a política a seguir gera um erro:
 #pragma include_alias(<header.h>, "header.h")  // Error
 ```
 
-Observe que o nome do arquivo relatado nas mensagens de erro ou como o valor do predefinido `__FILE__` macro, é o nome do arquivo após a substituição foi executada. Por exemplo, consulte a saída após as seguintes políticas:
+O nome de arquivo relatado em mensagens de erro ou como o valor da `__FILE__` macro predefinida é o nome do arquivo depois que a substituição é feita. Por exemplo, consulte a saída após as seguintes diretivas:
 
 ```cpp
 #pragma include_alias( "VERYLONGFILENAME.H", "myfile.h" )
 #include "VERYLONGFILENAME.H"
 ```
 
-Um erro em VERYLONGFILENAME. H produz a seguinte mensagem de erro:
+Erro em *VERYLONGFILENAME. H* produz a seguinte mensagem de erro:
 
 ```Output
 myfile.h(15) : error C2059 : syntax error
@@ -101,8 +102,8 @@ Observe também que a transitividade não tem suporte. Dadas as seguintes polít
 #include "one.h"
 ```
 
-o compilador procura pelo arquivo em vez de Three.
+o compilador pesquisa o arquivo *Two. h* em vez de *três. h*.
 
 ## <a name="see-also"></a>Consulte também
 
-[Diretivas Pragma e a palavra-chave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Diretivas pragma e a palavra-chave __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

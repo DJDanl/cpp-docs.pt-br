@@ -1,6 +1,6 @@
 ---
-title: deprecated (C/C++)
-ms.date: 11/04/2016
+title: pragma preterido
+ms.date: 08/29/2019
 f1_keywords:
 - vc-pragma.deprecated
 - deprecated_CPP
@@ -8,35 +8,33 @@ helpviewer_keywords:
 - deprecated pragma
 - pragmas, deprecated
 ms.assetid: 9c046f12-7875-499a-8d5d-12f8642fed2d
-ms.openlocfilehash: 262b23e6e4813a5e22bc3f4e7c9a18efb9988a7c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2e76d1c53cb900c108e2839a9aad17b330143a5d
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389288"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222408"
 ---
-# <a name="deprecated-cc"></a>deprecated (C/C++)
+# <a name="deprecated-pragma"></a>pragma preterido
 
-O **preterido** permite de pragma indicar que uma função, tipo ou qualquer outro identificador pode não ter suporte em uma futura versão ou não deve mais ser usado.
+O pragma preterido permite que você indique que uma função, tipo ou qualquer outro identificador pode não ter mais suporte em uma versão futura ou não deve mais ser usado.
 
 > [!NOTE]
-> Para obter informações sobre o c++14 `[[deprecated]]` atributo e orientação sobre quando usá-lo atributo vs, a Microsoft declspec ou o pragma, consulte [atributos padrão do C++](../cpp/attributes.md) atributo.
+> Para obter informações sobre o atributo `[[deprecated]]` c++ 14 e orientação sobre quando usar esse atributo em vez do modificador `__declspec(deprecated)` da Microsoft ou o pragma preterido, consulte [atributos em C++ ](../cpp/attributes.md).
 
 ## <a name="syntax"></a>Sintaxe
 
-```
-#pragma deprecated( identifier1 [,identifier2, ...] )
-```
+> **#pragma preterido (** *identifier1* [ **,** *identifier2* ...] **)**
 
 ## <a name="remarks"></a>Comentários
 
-Quando o compilador encontra um identificador especificado por um **preterido** pragma, ele emite aviso do compilador [C4995](../error-messages/compiler-warnings/compiler-warning-level-3-c4995.md).
+Quando o compilador encontra um identificador especificado por um pragma **substituído** , ele emite o aviso do compilador [C4995](../error-messages/compiler-warnings/compiler-warning-level-3-c4995.md).
 
 Você pode preterir nomes de macro. Coloque o nome da macro entre aspas. Caso contrário, haverá uma expansão na macro.
 
-Porque o **preterido** pragma funciona em todos os identificadores correspondentes e não consideram assinaturas, não é a melhor opção para a substituição de versões específicas de funções sobrecarregadas. Qualquer nome de função correspondente que é colocado no escopo dispara o aviso.
+Como o pragma preterido funciona em todos os identificadores correspondentes e não leva em conta as assinaturas, não é a melhor opção para a substituição de versões específicas de funções sobrecarregadas. Qualquer nome de função correspondente que é colocado no escopo dispara o aviso.
 
-É recomendável que você use o c++14 `[[deprecated]]` de atributo, quando possível, em vez do **preterido** pragma. Específicos da Microsoft [__declspec(deprecated)](../cpp/deprecated-cpp.md) modificador de declaração também é uma escolha melhor em muitos casos que o **preterida** pragma. O `[[deprecated]]` atributo e `__declspec(deprecated)` modificador permitem que você especificar o status preterido de formatos específicos de funções sobrecarregadas. O diagnóstico aviso aparece apenas sobre referências à função sobrecarregada específica o atributo ou modificador aplica-se a.
+Recomendamos que você use o atributo `[[deprecated]]` c++ 14, quando possível, em vez do pragma preterido. O modificador de Declaração [_ declspec (preterido)](../cpp/deprecated-cpp.md) específico da Microsoft também é uma opção melhor em muitos casos do que o pragma preterido. O `[[deprecated]]` atributo e `__declspec(deprecated)` o modificador permitem que você especifique o status preterido para formulários específicos de funções sobrecarregadas. O aviso de diagnóstico só aparece em referências à função sobrecarregada específica à qual o atributo ou o modificador se aplica.
 
 ## <a name="example"></a>Exemplo
 
@@ -77,4 +75,4 @@ int main() {
 
 ## <a name="see-also"></a>Consulte também
 
-[Diretivas Pragma e a palavra-chave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Diretivas pragma e a palavra-chave __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

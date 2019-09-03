@@ -1,6 +1,6 @@
 ---
 title: __incfsbyte, __incfsword, __incfsdword
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __incfsword
 - __incfsbyte_cpp
@@ -13,22 +13,22 @@ helpviewer_keywords:
 - __incfsdword intrinsic
 - __incfsbyte intrinsic
 ms.assetid: 820457fb-e35e-42d3-bcb6-725da3281c64
-ms.openlocfilehash: 9e1e2630f8c0a66b681be2aa550f9c9255c92173
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 43824829043304f5762d049b5c75a72b57e2102c
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62349540"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222131"
 ---
-# <a name="incfsbyte-incfsword-incfsdword"></a>__incfsbyte, __incfsword, __incfsdword
+# <a name="__incfsbyte-__incfsword-__incfsdword"></a>__incfsbyte, __incfsword, __incfsdword
 
 **Seção específica da Microsoft**
 
-Adicione um para o valor em um local de memória especificado por um deslocamento em relação ao início do `FS` segmento.
+Adicione um ao valor em um local de memória especificado por um deslocamento relativo ao início do `FS` segmento.
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```C
 void __incfsbyte(
    unsigned long Offset
 );
@@ -40,10 +40,10 @@ void __incfsdword(
 );
 ```
 
-#### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>Parâmetros
 
-*Offset*<br/>
-[in] O deslocamento do início do `FS`.
+*Desvio*\
+no O deslocamento do início de `FS`.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -53,15 +53,17 @@ void __incfsdword(
 |`__incfsword`|x86|
 |`__incfsdword`|x86|
 
+**Arquivo de cabeçalho** \<> intrin. h
+
 ## <a name="remarks"></a>Comentários
 
-Esses intrínsecos só estão disponíveis no modo kernel, e as rotinas somente estão disponíveis como intrínsecos.
+Esses intrínsecos só estão disponíveis no modo kernel, e as rotinas só estão disponíveis como intrínsecas.
 
 **Fim da seção específica da Microsoft**
 
 ## <a name="see-also"></a>Consulte também
 
-[__addfsbyte, \__addfsword, \__addfsdword](../intrinsics/addfsbyte-addfsword-addfsdword.md)<br/>
-[__readfsbyte, \__readfsdword, \__readfsqword, \__readfsword](../intrinsics/readfsbyte-readfsdword-readfsqword-readfsword.md)<br/>
-[__writefsbyte, \__writefsdword, \__writefsqword, \__writefsword](../intrinsics/writefsbyte-writefsdword-writefsqword-writefsword.md)<br/>
+[\__addfsbyte, \__addfsword, \__addfsdword](../intrinsics/addfsbyte-addfsword-addfsdword.md)\
+[\__readfsbyte, \__readfsdword, \__readfsqword, \__readfsword](../intrinsics/readfsbyte-readfsdword-readfsqword-readfsword.md)\
+[\__writefsbyte, \__writefsdword, \__writefsqword, \__writefsword](../intrinsics/writefsbyte-writefsdword-writefsqword-writefsword.md)\
 [Intrínsecos do compilador](../intrinsics/compiler-intrinsics.md)

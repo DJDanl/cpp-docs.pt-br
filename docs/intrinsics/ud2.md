@@ -1,20 +1,20 @@
 ---
 title: __ud2
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __ud2
 helpviewer_keywords:
 - UD2 instruction
 - __ud2 intrinsic
 ms.assetid: 0831cd5a-8b65-402e-bb57-11e1d5d7ffd2
-ms.openlocfilehash: a36ab5c25ac9138b2a4d6810cc2a339e534f1695
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b5aa20804099af4d75dcc62a5e62ccc0d4a09566
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390172"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219759"
 ---
-# <a name="ud2"></a>__ud2
+# <a name="__ud2"></a>__ud2
 
 **Seção específica da Microsoft**
 
@@ -22,15 +22,15 @@ Gera uma instrução indefinida.
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```C
 void __ud2();
 ```
 
 ## <a name="remarks"></a>Comentários
 
-O processador gerará uma exceção de opcode inválido, se você executar uma instrução indefinida.
+O processador gerará uma exceção opcode inválida se você executar uma instrução indefinida.
 
-O `__ud2` função é equivalente ao `UD2` instruções de máquina e está disponível apenas no modo kernel. Para obter mais informações, pesquise o documento, "Manual do desenvolvedor de Software de arquitetura Intel, Volume 2: Instrução definir Reference"na [Intel Corporation](https://software.intel.com/articles/intel-sdm) site.
+A `__ud2` função é equivalente à instrução `UD2` da máquina e está disponível somente no modo kernel. Para obter mais informações, pesquise o documento "manual do desenvolvedor de software de arquitetura Intel, volume 2: Referência de conjunto de instruções ", no site da [Intel Corporation](https://software.intel.com/articles/intel-sdm) .
 
 ## <a name="requirements"></a>Requisitos
 
@@ -38,15 +38,15 @@ O `__ud2` função é equivalente ao `UD2` instruções de máquina e está disp
 |---------------|------------------|
 |`__ud2`|x86, x64|
 
-**Arquivo de cabeçalho** \<intrin. h >
+**Arquivo de cabeçalho** \<> intrin. h
 
 **Fim da seção específica da Microsoft**
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir executa uma instrução indefinida, o que gera uma exceção. O manipulador de exceção, em seguida, altera o código de retorno de zero a um.
+O exemplo a seguir executa uma instrução indefinida, que gera uma exceção. Em seguida, o manipulador de exceção altera o código de retorno de zero para um.
 
-```
+```cpp
 // __ud2_intrinsic.cpp
 #include <stdio.h>
 #include <intrin.h>

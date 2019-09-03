@@ -1,38 +1,37 @@
 ---
-title: no_namespace
-ms.date: 11/04/2016
+title: atributo de importação de no_namespace
+ms.date: 08/29/2019
 f1_keywords:
 - no_namespace
 helpviewer_keywords:
 - no_namespace attribute
 ms.assetid: 5d81b741-a558-451b-b493-1f3b18967337
-ms.openlocfilehash: f6bd60de02bf0166d5cf0b0cd1bc1de56ceda5bf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ba52aed69cdbb46c135e6de5078d718e93f99c87
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62326554"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70220728"
 ---
-# <a name="nonamespace"></a>no_namespace
-**Específico do C++**
+# <a name="no_namespace-import-attribute"></a>atributo de importação de no_namespace
 
-Especifica que o nome do namespace não é gerado pelo compilador.
+**C++Determinados**
+
+Especifica que o compilador não gera um nome de namespace.
 
 ## <a name="syntax"></a>Sintaxe
 
-```
-no_namespace
-```
+> **#import** *biblioteca de tipos* **no_namespace**
 
 ## <a name="remarks"></a>Comentários
 
-O conteúdo da biblioteca de tipos no arquivo de cabeçalho de `#import` normalmente é definido em um namespace. O nome do namespace é especificado no `library` instrução do arquivo IDL original. Se o **no_namespace** atributo for especificado, esse namespace não é gerado pelo compilador.
+O conteúdo da biblioteca de tipos no arquivo de cabeçalho de `#import` normalmente é definido em um namespace. O nome do namespace é especificado na `library` instrução do arquivo IDL original. Se o atributo **no_namespace** for especificado, esse namespace não será gerado pelo compilador.
 
-Se você quiser usar um nome de namespace diferentes, em seguida, use o [rename_namespace](../preprocessor/rename-namespace.md) atributo em vez disso.
+Se você quiser usar um nome de namespace diferente, use o atributo [rename_namespace](../preprocessor/rename-namespace.md) em vez disso.
 
-**FIM de específico de C++**
+**FINAL C++ específico**
 
 ## <a name="see-also"></a>Consulte também
 
-[atributos de #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
+[atributos de #import](../preprocessor/hash-import-attributes-cpp.md)\
 [#import diretiva](../preprocessor/hash-import-directive-cpp.md)

@@ -1,45 +1,45 @@
 ---
 title: __ull_rshift
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __ull_rshift
 helpviewer_keywords:
 - ull_rshift intrinsic
 - __ull_rshift intrinsic
 ms.assetid: b7ff5254-3540-4e6e-b57c-a6c4beb7dca2
-ms.openlocfilehash: 5d62ec1526aff595c14a53e9eca43a7a3118c8fa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e914a019877482058c6b2842d3138cda02f1e228
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390120"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219713"
 ---
-# <a name="ullrshift"></a>__ull_rshift
+# <a name="__ull_rshift"></a>__ull_rshift
 
 **Seção específica da Microsoft**
 
-no x64, desloca um valor de 64 bits especificado pelo primeiro parâmetro para a direita em um número de bits especificado pelo segundo parâmetro.
+em x64, desloca um valor de 64 bits especificado pelo primeiro parâmetro para a direita por um número de bits especificado pelo segundo parâmetro.
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```C
 unsigned __int64 __ull_rshift(
    unsigned __int64 mask, 
    int nBit
 );
 ```
 
-#### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>Parâmetros
 
-*mask*<br/>
-[in] O valor de inteiro de 64 bits a deslocar para a direita.
+*mascara*\
+no O valor inteiro de 64 bits a ser deslocado para a direita.
 
-*nBit*<br/>
-[in] O número de bits a deslocar, 32 em x86 de módulo e módulo 64 em x64.
+*nBit*\
+no O número de bits a serem deslocados, o módulo 32 em x86 e o módulo 64 em x64.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
-A máscara deslocados em `nBit` bits.
+A máscara mudada por `nBit` bits.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -47,15 +47,15 @@ A máscara deslocados em `nBit` bits.
 |---------------|------------------|
 |`__ull_rshift`|x86, x64|
 
-**Arquivo de cabeçalho** \<intrin. h >
+**Arquivo de cabeçalho** \<> intrin. h
 
 ## <a name="remarks"></a>Comentários
 
-Se o segundo parâmetro é maior que 31 em x86 (63 em x64), esse número é tirado de módulo 32 (64 em x64) para determinar o número de bits a deslocar. O `ull` o nome indica `unsigned long long (unsigned __int64)`.
+Se o segundo parâmetro for maior que 31 no x86 (63 em x64), esse número será tirado do módulo 32 (64 em x64) para determinar o número de bits a serem deslocados. O `ull` no nome indica `unsigned long long (unsigned __int64)`.
 
 ## <a name="example"></a>Exemplo
 
-```
+```cpp
 // ull_rshift.cpp
 // compile with: /EHsc
 // processor: x86, x64
@@ -74,9 +74,7 @@ int main()
 }
 ```
 
-## <a name="output"></a>Saída
-
-```
+```Output
 1
 ```
 
@@ -84,6 +82,6 @@ int main()
 
 ## <a name="see-also"></a>Consulte também
 
-[__ll_lshift](../intrinsics/ll-lshift.md)<br/>
-[__ll_rshift](../intrinsics/ll-rshift.md)<br/>
+[__ll_lshift](../intrinsics/ll-lshift.md)\
+[__ll_rshift](../intrinsics/ll-rshift.md)\
 [Intrínsecos do compilador](../intrinsics/compiler-intrinsics.md)

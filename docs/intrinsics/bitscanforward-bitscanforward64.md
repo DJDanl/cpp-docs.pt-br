@@ -1,6 +1,6 @@
 ---
 title: _BitScanForward, _BitScanForward64
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _BitScanForward
 - _BitScanForward_cpp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - bsf instruction
 - BitScanForward intrinsic
 ms.assetid: 405e60fb-0815-42a7-9b02-6fc035122203
-ms.openlocfilehash: 8b09aeee485611ddd20d51b4c1e36ec98c03c26e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 91f43d19259419b78d1910a00a154d2d4f0adfc7
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62264205"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222220"
 ---
-# <a name="bitscanforward-bitscanforward64"></a>_BitScanForward, _BitScanForward64
+# <a name="_bitscanforward-_bitscanforward64"></a>_BitScanForward, _BitScanForward64
 
 **Seção específica da Microsoft**
 
@@ -26,7 +26,7 @@ Pesquise os dados de máscara do bit menos significativo (LSB) para o bit mais s
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```C
 unsigned char _BitScanForward(
    unsigned long * Index,
    unsigned long Mask
@@ -37,15 +37,15 @@ unsigned char _BitScanForward64(
 );
 ```
 
-#### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>Parâmetros
 
-*Índice*<br/>
-[out] Carregado com a posição de bit do primeiro bit definido (1) encontrada.
+*Index*\
+fora Carregado com a posição de bits do primeiro bit definido (1) encontrado.
 
-*Máscara*<br/>
-[in] O valor de 32 bits ou 64 bits a pesquisar.
+*Mascara*\
+no O valor de 32 bits ou 64 bits a ser pesquisado.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 0 se a máscara for zero. diferente de zero, caso contrário.
 
@@ -57,14 +57,14 @@ Se bit definido for encontrado, a posição de bit do primeiro bit definido enco
 
 |Intrínseco|Arquitetura|
 |---------------|------------------|
-|`_BitScanForward`|x86, ARM, x64|
-|`_BitScanForward64`|ARM, x64|
+|`_BitScanForward`|x86, ARM, x64, ARM64|
+|`_BitScanForward64`|ARM64, x64|
 
-**Arquivo de cabeçalho** \<intrin. h >
+**Arquivo de cabeçalho** \<> intrin. h
 
 ## <a name="example"></a>Exemplo
 
-```
+```cpp
 // BitScanForward.cpp
 // compile with: /EHsc
 #include <iostream>
@@ -93,15 +93,11 @@ int main()
 }
 ```
 
-## <a name="input"></a>Entrada
-
-```
+```Input
 12
 ```
 
-## <a name="sample-output"></a>Saída de Exemplo
-
-```
+```Output
 Enter a positive integer as the mask:
 Mask: 12 Index: 2
 ```

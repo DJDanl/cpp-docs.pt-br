@@ -1,42 +1,42 @@
 ---
 title: __mulh
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __mulh
 helpviewer_keywords:
 - __mulh intrinsic
 ms.assetid: cd2ab093-9ef6-404d-ac34-0bee033882f3
-ms.openlocfilehash: 122d7ff28a01c0b95c16c6a0f4cd20e883744d2e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c3a421cdda1c62620d4c933436fd0b5bab589c0e
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62263068"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221687"
 ---
-# <a name="mulh"></a>__mulh
+# <a name="__mulh"></a>__mulh
 
 **Seção específica da Microsoft**
 
-Retorna os 64 bits altos do produto de dois inteiros com sinal de 64 bits.
+Retorna os bits de 64 altos do produto de inteiros com sinal de 2 64 bits.
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```C
 __int64 __mulh(
    __int64 a,
    __int64 b
 );
 ```
 
-#### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>Parâmetros
 
-*a*<br/>
-[in] O primeiro número a multiplicar.
+*um*\
+[in] O primeiro número para multiplicar.
 
-*b*<br/>
-[in] O segundo número a multiplicar.
+*b*\
+[in] O segundo número para multiplicar.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 Os 64 bits altos do resultado da multiplicação de 128 bits.
 
@@ -46,7 +46,7 @@ Os 64 bits altos do resultado da multiplicação de 128 bits.
 |---------------|------------------|
 |`__mulh`|X64|
 
-**Arquivo de cabeçalho** \<intrin. h >
+**Arquivo de cabeçalho** \<> intrin. h
 
 ## <a name="remarks"></a>Comentários
 
@@ -54,7 +54,7 @@ Essa rotina só está disponível como função intrínseca.
 
 ## <a name="example"></a>Exemplo
 
-```
+```cpp
 // mulh.cpp
 // processor: x64
 #include <stdio.h>

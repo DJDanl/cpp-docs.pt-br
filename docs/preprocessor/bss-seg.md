@@ -1,6 +1,6 @@
 ---
-title: bss_seg
-ms.date: 10/22/2018
+title: bss_seg pragma
+ms.date: 08/29/2019
 f1_keywords:
 - vc-pragma.bss_seg
 - bss_seg_CPP
@@ -8,51 +8,52 @@ helpviewer_keywords:
 - pragmas, bss_seg
 - bss_seg pragma
 ms.assetid: 755f0154-de51-4778-97d3-c9b24e445079
-ms.openlocfilehash: 489ced11bb6024fdf9818872c07ab7feebfeabf3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a343fb45b4bbe4789f38b7a1102572cf4241ec53
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62212406"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70218553"
 ---
-# <a name="bssseg"></a>bss_seg
+# <a name="bss_seg-pragma"></a>bss_seg pragma
 
-Especifica o segmento em que as variáveis não inicializadas são armazenadas no arquivo .obj.
+Especifica a seção (segmento) em que as variáveis não inicializadas são armazenadas no arquivo de objeto (. obj).
 
 ## <a name="syntax"></a>Sintaxe
 
-```
-#pragma bss_seg( [ [ { push | pop }, ] [ identifier, ] ] [ "segment-name" [, "segment-class" ] )
-```
+> **#pragma bss_seg (** ["*nome da seção*" [ **,** "*seção-classe*"]] **)** \
+> **#pragma bss_seg (** { **Push** | **pop** } [ **,** *Identifier* ] [ **,** "*nome da seção*" [ **,** "*seção-Class*"]] **)**
 
 ### <a name="parameters"></a>Parâmetros
 
-**push**<br/>
-(Opcional) Coloca um registro na pilha interna do compilador. Um *pu*sh * pode ter um *identificador* e *nome do segmento*.
+**pressionado**\
+Adicional Coloca um registro na pilha interna do compilador. Um **Push** pode ter um *identificador* e um *nome de seção*.
 
-**pop**<br/>
-(Opcional) Remove um registro do topo da pilha interna do compilador.
+**pop**\
+Adicional Remove um registro da parte superior da pilha interna do compilador. Um **pop** pode ter um *identificador* e um *nome de seção*. Você pode exibir vários registros usando apenas um comando **pop** usando o *identificador*. O *nome da seção* torna-se o nome da seção BSS ativa após o pop.
 
-*identifier*<br/>
-(Opcional) Quando usado com **push**, atribui um nome ao registro na pilha interna do compilador. *identificador* habilita vários registros a serem exibidos com uma única **pop-up** comando. Quando usado com **pop-up**, a diretiva elimina registros da pilha interna até *identificador* for removido; se *identificador* não for encontrado na pilha interna, nada é ser exibido.
+*ID*\
+Adicional Quando usado com **Push**, o atribui um nome ao registro na pilha do compilador interno. Quando usado com **pop**, a diretiva exibe registros fora da pilha interna até que o *identificador* seja removido. Se o *identificador* não for encontrado na pilha interna, nada será exibido.
 
-*"segment-name"*<br/>
-(Opcional) O nome de um segmento. Quando usado com **pop-up**, a pilha é exibida e *nome do segmento* se torna o nome do segmento ativo.
+*"nome da seção"* \
+Adicional O nome de uma seção. Quando usado com **pop**, a pilha é exibida e o *nome da seção* se torna o nome da seção BSS ativa.
 
-*"segment-class"*<br/>
-(Opcional) Incluído para compatibilidade com o C++ antes da versão 2.0. É ignorado.
+*"classe-de-seção"* \
+Adicional Ignorado, mas incluído para compatibilidade com versões do Microsoft C++ anteriores à versão 2,0.
 
 ## <a name="remarks"></a>Comentários
 
-. Arquivos obj podem ser exibidos com o [dumpbin](../build/reference/dumpbin-command-line.md) aplicativo. O segmento padrão no arquivo .obj para os dados não inicializados é .bss. Em alguns casos de uso de **bss_seg** pode acelerar tempos de carregamento, agrupando dados não inicializados em uma seção.
+Uma *seção* em um arquivo de objeto é um bloco nomeado de dados que é carregado na memória como uma unidade. Uma *seção de BSS* é uma seção que contém dados não inicializados. Neste artigo, os termos de *segmento* e *seção* têm o mesmo significado.
 
-**bss_seg** sem parâmetros redefine o segmento BSS.
+A diretiva pragma **bss_seg** informa ao compilador para colocar todos os itens de dados não inicializados da unidade de tradução em uma seção de BSS denominada *Section-Name*. Em alguns casos, o uso de **bss_seg** pode acelerar os tempos de carregamento agrupando dados não inicializados em uma única seção. Por padrão, a seção BSS usada para dados não inicializados em um arquivo de objeto é `.bss`denominada. Uma diretiva de pragma **bss_seg** sem um parâmetro *de nome de seção* redefine o nome da seção BSS para os itens de dados não `.bss`inicializados subsequentes para.
 
-Dados alocados usando o **bss_seg** pragma não retêm nenhuma informação sobre o respectivo local.
+Os dados alocados usando o pragma **bss_seg** não retêm nenhuma informação sobre seu local.
 
-Você também pode especificar seções para dados inicializados ([data_seg](../preprocessor/data-seg.md)), funções ([code_seg](../preprocessor/code-seg.md)) e variáveis constantes ([const_seg](../preprocessor/const-seg.md)).
+Para obter uma lista de nomes que não devem ser usados para criar uma seção, consulte [/Section](../build/reference/section-specify-section-attributes.md).
 
-Ver [/seção](../build/reference/section-specify-section-attributes.md) para obter uma lista de nomes que você não deve usar ao criar uma seção.
+Você também pode especificar seções para dados inicializados ([data_seg](../preprocessor/data-seg.md)), Functions ([code_seg](../preprocessor/code-seg.md)) e variáveis const ([const_seg](../preprocessor/const-seg.md)).
+
+Você pode usar o [DUMPBIN. Aplicativo EXE](../build/reference/dumpbin-command-line.md) para exibir arquivos de objeto. As versões do DUMPBIN para cada arquitetura de destino com suporte estão incluídas no Visual Studio.
 
 ## <a name="example"></a>Exemplo
 
@@ -74,4 +75,4 @@ int main() {
 
 ## <a name="see-also"></a>Consulte também
 
-[Diretivas Pragma e a palavra-chave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Diretivas pragma e a palavra-chave __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

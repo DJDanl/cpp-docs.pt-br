@@ -1,6 +1,6 @@
 ---
 title: _mm_extract_si64, _mm_extracti_si64
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _mm_extracti_si64
 - _mm_extract_si64
@@ -9,22 +9,22 @@ helpviewer_keywords:
 - _mm_extracti_si64 intrinsic
 - _mm_extract_si64 intrinsic
 ms.assetid: 459fdd72-cc54-4ee5-bbd5-d2c6067a88e7
-ms.openlocfilehash: e77ca5589ed50a4199921603afec1d9888c6cca5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cfd7029966c29f876f0e4f671830e20e2eacc940
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62263692"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217405"
 ---
-# <a name="mmextractsi64-mmextractisi64"></a>_mm_extract_si64, _mm_extracti_si64
+# <a name="_mm_extract_si64-_mm_extracti_si64"></a>_mm_extract_si64, _mm_extracti_si64
 
 **Seção específica da Microsoft**
 
-Gera o `extrq` instruções para extrair seu de 64 bits baixos do seu primeiro argumento especificado do bits.
+Gera a `extrq` instrução para extrair os bits especificados dos baixos 64 bits de seu primeiro argumento.
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```C
 __m128i _mm_extract_si64(
    __m128i Source,
    __m128i Descriptor
@@ -36,21 +36,21 @@ __m128i _mm_extracti_si64(
 );
 ```
 
-#### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>Parâmetros
 
-*Source*<br/>
-[in] Um campo de 128 bits com dados de entrada em seus 64 bits inferiores.
+*Source*\
+no Um campo de 128 bits com dados de entrada em seus bits inferiores de 64.
 
-*Descritor*<br/>
-[in] Um campo de 128 bits que descreve o campo de bits para extrair.
+*Descritor*\
+no Um campo de 128 bits que descreve o campo de bits a ser extraído.
 
-*Comprimento*<br/>
-[in] Um inteiro que especifica o comprimento do campo para extrair.
+*Muito*\
+no Um inteiro que especifica o comprimento do campo a ser extraído.
 
-*Índice*<br/>
-[in] Um inteiro que especifica o índice do campo para extrair
+*Index*\
+no Um inteiro que especifica o índice do campo a ser extraído
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 Um campo de 128 bits com o campo extraído em seus bits menos significativos.
 
@@ -61,21 +61,21 @@ Um campo de 128 bits com o campo extraído em seus bits menos significativos.
 |`_mm_extract_si64`|SSE4a|
 |`_mm_extracti_si64`|SSE4a|
 
-**Arquivo de cabeçalho** \<intrin. h >
+**Arquivo de cabeçalho** \<> intrin. h
 
 ## <a name="remarks"></a>Comentários
 
-Esse intrínseco gera o `extrq` instruções para extrair os bits do `Source`. Há duas versões desse intrínseco: `_mm_extracti_si64` é a versão de imediata, e `_mm_extract_si64` é aquele não imediato.  Cada versão extrai `Source` um campo de bits definido por seu tamanho e o índice do bit menos significativo. Os valores do comprimento e índice serão levados mod 64, portanto, -1 e 127 são interpretados como 63. Se a soma do tamanho do campo (reduzidos) e índice (reduzidos) for maior que 64, os resultados são indefinidos. Um valor de zero para o tamanho do campo é interpretado como 64. Se o índice de comprimento e o bit de campo é os dois 63:0 zero, bits de `Source` são extraídos. Se o tamanho do campo for zero, mas o índice de bit é diferente de zero, os resultados são indefinidos.
+Esses intrínsecos geram `extrq` a instrução para extrair bits da *origem*. Há duas versões: `_mm_extracti_si64` é a versão imediata e `_mm_extract_si64` é a que não é imediata. Cada versão extrai da *fonte* um campo de bits definido por seu comprimento e o índice de seu bit menos significativo. Os valores do comprimento e do índice são obtidos em mod 64, portanto, ambos-1 e 127 são interpretados como 63. Se a soma do índice (reduzido) e o comprimento do campo (reduzido) for maior que 64, os resultados serão indefinidos. Um valor de zero para o tamanho do campo é interpretado como 64. Se o comprimento do campo e o índice de bits forem zero, o bits 63:0 da *origem* será extraído. Se o tamanho do campo for zero, mas o índice de bits for diferente de zero, os resultados serão indefinidos.
 
-Em uma chamada para _mm_extract_si64, o `Descriptor` contém o índice em 13:8 bits e o tamanho do campo de dados a ser extraído em 5 de bits: 0...
+Em uma chamada para `_mm_extract_si64`, o *descritor* contém o índice em bits 13:8 e o tamanho do campo dos dados a serem extraídos em bits 5:0.
 
-Se você chamar `_mm_extracti_si64` com argumentos que o compilador não pode determinar ser constantes de inteiro, o compilador gera código para empacotar esses valores em um registro de registros de MMX (`Descriptor`) e chamar `_mm_extract_si64`.
+Se você chamar `_mm_extracti_si64` com argumentos que o compilador não pode determinar para ser constantes de inteiro, o compilador gerará código para empacotar esses valores emum XMM (registro) `_mm_extract_si64`e chamar.
 
-Para determinar o suporte de hardware para o `extrq` instrução, a chamada a `__cpuid` intrínseco com `InfoType=0x80000001` e marque 6 bits de `CPUInfo[2] (ECX)`. Esse bit será 1 se a instrução for compatível e 0 caso contrário. Se você executar o código que usa este hardware intrínseco que não oferece suporte a `extrq` instrução, os resultados serão imprevisíveis.
+Para determinar o suporte de hardware `extrq` para a instrução, `__cpuid` chame o `InfoType=0x80000001` intrínseco e verifique o bit `CPUInfo[2] (ECX)`6 de. Esse bit será 1 se a instrução tiver suporte e 0 caso contrário. Se você executar o código que usa esse hardware intrínseco que não dá `extrq` suporte à instrução, os resultados são imprevisíveis.
 
 ## <a name="example"></a>Exemplo
 
-```
+```cpp
 // Compile this sample with: /EHsc
 #include <iostream>
 #include <intrin.h>
@@ -110,9 +110,9 @@ result3 = 0x30eca86
 
 **Fim da seção específica da Microsoft**
 
-Copyright 2007 por dispositivos Micro avançada, Inc. Todos os direitos reservados. Reproduzido com a permissão do Advanced Micro dispositivos, Inc.
+Partes de Copyright 2007 da Advanced Micro Devices, Inc. Todos os direitos reservados. Reproduzida com a permissão da Advanced Micro Devices, Inc.
 
 ## <a name="see-also"></a>Consulte também
 
-[_mm_insert_si64, _mm_inserti_si64](../intrinsics/mm-insert-si64-mm-inserti-si64.md)<br/>
+[_mm_insert_si64, _mm_inserti_si64](../intrinsics/mm-insert-si64-mm-inserti-si64.md)\
 [Intrínsecos do compilador](../intrinsics/compiler-intrinsics.md)

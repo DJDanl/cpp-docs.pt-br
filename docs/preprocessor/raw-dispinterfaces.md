@@ -1,36 +1,35 @@
 ---
-title: raw_dispinterfaces
-ms.date: 11/04/2016
+title: atributo de importação de raw_dispinterfaces
+ms.date: 08/29/2019
 f1_keywords:
 - raw_dispinterfaces
 helpviewer_keywords:
 - raw_dispinterfaces attribute
 ms.assetid: f762864d-29bf-445b-825a-ba7b29a95409
-ms.openlocfilehash: ef8ed3992c77df0f1d551e923ddc90c2d1bb9b0b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 73c58b72b27de8dcf96e8ab9464d0fb6bce12b66
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179835"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216219"
 ---
-# <a name="rawdispinterfaces"></a>raw_dispinterfaces
-**Específico do C++**
+# <a name="raw_dispinterfaces-import-attribute"></a>atributo de importação de raw_dispinterfaces
 
-Instrui o compilador a gerar funções wrapper de nível baixo para dispinterface métodos e propriedades que chamam `IDispatch::Invoke` e retornar o código de erro HRESULT.
+**C++Determinados**
+
+Informa ao compilador para gerar funções de wrapper de baixo nível para métodos de dispinterface e para propriedades que `IDispatch::Invoke` chamam e retornam o código de erro HRESULT.
 
 ## <a name="syntax"></a>Sintaxe
 
-```
-raw_dispinterfaces
-```
+> **#import** *biblioteca de tipos* **raw_dispinterfaces**
 
 ## <a name="remarks"></a>Comentários
 
-Se esse atributo não for especificado, apenas os wrappers de alto nível serão gerados, que lançam exceções de C++ em caso de falha.
+Se esse atributo não for especificado, somente os wrappers de alto nível serão gerados, C++ o que gerará exceções em caso de falha.
 
-**FIM de específico de C++**
+**FINAL C++ específico**
 
 ## <a name="see-also"></a>Consulte também
 
-[atributos de #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
+[atributos de #import](../preprocessor/hash-import-attributes-cpp.md)\
 [#import diretiva](../preprocessor/hash-import-directive-cpp.md)

@@ -1,42 +1,41 @@
 ---
 title: __svm_vmload
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __svm_vmload
 helpviewer_keywords:
 - __svm_vmload intrinsic
 - VMLOAD instruction
 ms.assetid: b46a5592-db76-4ffc-8694-2f3494e28bed
-ms.openlocfilehash: 282f1c005c7eb59b2c590c70b38233c88c664e07
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: da6ca9786b9c7e5041b9a8ca908d567b16176436
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390224"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219814"
 ---
-# <a name="svmvmload"></a>__svm_vmload
+# <a name="__svm_vmload"></a>__svm_vmload
 
 **Seção específica da Microsoft**
 
-Carrega um subconjunto de estado do processador do bloco de controle de máquina virtual especificada (VMCB).
+Carrega um subconjunto do estado do processador do VMCB (bloco de controle de máquina virtual) especificado.
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```C
 void __svm_vmload(
    size_t VmcbPhysicalAddress
 );
 ```
 
-#### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>Parâmetros
 
-|Parâmetro|Descrição|
-|---------------|-----------------|
-|*VmcbPhysicalAddress*|[in] O endereço físico do VMCB.|
+*VmcbPhysicalAddress*\
+no O endereço físico do VMCB.
 
 ## <a name="remarks"></a>Comentários
 
-O `__svm_vmload` função é equivalente ao `VMLOAD` instruções de máquina. Essa função dá suporte a interação do monitor de máquina virtual do host com um sistema operacional e seus aplicativos de convidado. Para obter mais informações, pesquise o documento "Volume de Manual do programador da arquitetura AMD64 2: Sistema de programação,"documento número 24593, revisão 3.11, o [corporation AMD](https://developer.amd.com/resources/developer-guides-manuals/) site.
+A `__svm_vmload` função é equivalente à instrução `VMLOAD` da máquina. Essa função dá suporte à interação do monitor de máquina virtual de um host com um sistema operacional convidado e seus aplicativos. Para obter mais informações, pesquise o documento "o volume manual do programador de arquitetura AMD64 2: Programação do sistema, "número do documento 24593, revisão 3,11, no site da [AMD Corporation](https://developer.amd.com/resources/developer-guides-manuals/) .
 
 ## <a name="requirements"></a>Requisitos
 
@@ -44,12 +43,12 @@ O `__svm_vmload` função é equivalente ao `VMLOAD` instruções de máquina. E
 |---------------|------------------|
 |`__svm_vmload`|x86, x64|
 
-**Arquivo de cabeçalho** \<intrin. h >
+**Arquivo de cabeçalho** \<> intrin. h
 
 **Fim da seção específica da Microsoft**
 
 ## <a name="see-also"></a>Consulte também
 
-[Intrínsecos do compilador](../intrinsics/compiler-intrinsics.md)<br/>
-[__svm_vmrun](../intrinsics/svm-vmrun.md)<br/>
+[Intrínsecos do compilador](../intrinsics/compiler-intrinsics.md)\
+[__svm_vmrun](../intrinsics/svm-vmrun.md)\
 [__svm_vmsave](../intrinsics/svm-vmsave.md)

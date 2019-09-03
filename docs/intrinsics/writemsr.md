@@ -1,6 +1,6 @@
 ---
 title: __writemsr
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __writemsr
 helpviewer_keywords:
@@ -8,35 +8,35 @@ helpviewer_keywords:
 - wrmsr instruction
 - __writemsr intrinsic
 ms.assetid: 938b1553-51a8-4822-a818-6bed79b0fde5
-ms.openlocfilehash: ac57bac1d132c581ee12048b89d13ed1d1fdb7da
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7819477edb8d4e6b18a1213a73ba67065ea7ff57
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389704"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219141"
 ---
-# <a name="writemsr"></a>__writemsr
+# <a name="__writemsr"></a>__writemsr
 
 **Seção específica da Microsoft**
 
-Gera a gravação para registrar específicos do modelo (`wrmsr`) instrução.
+Gera a instrução Write to Model específico Register`wrmsr`().
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```C
 void __writemsr(
    unsigned long Register,
    unsigned __int64 Value
 );
 ```
 
-#### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>Parâmetros
 
-*Registro*<br/>
-[in] O registro de modelo específico.
+*Registr*\
+no O registro específico do modelo.
 
-*Valor*<br/>
-[in] O valor a ser gravado.
+*Valor*\
+no O valor a ser gravado.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -44,11 +44,11 @@ void __writemsr(
 |---------------|------------------|
 |`__writemsr`|x86, x64|
 
-**Arquivo de cabeçalho** \<intrin. h >
+**Arquivo de cabeçalho** \<> intrin. h
 
 ## <a name="remarks"></a>Comentários
 
-Essa função só pode ser usada no modo kernel, e essa rotina só está disponível como um intrínseco.
+Essa função só pode ser usada no modo kernel, e essa rotina só está disponível como intrínseca.
 
 **Fim da seção específica da Microsoft**
 

@@ -1,6 +1,6 @@
 ---
 title: _disable
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _disable_cpp
 - _disable
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - rsm instruction
 - disable intrinsic
 ms.assetid: 52da3df9-815c-4524-9839-6d1742cff5c6
-ms.openlocfilehash: 93db063c6b53f0bec739ba134728b83379a21f53
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 94be850e1d494ff62df84922b46f28481be68314
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62264160"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216823"
 ---
-# <a name="disable"></a>_disable
+# <a name="_disable"></a>_disable
 
 **Seção específica da Microsoft**
 
@@ -24,7 +24,7 @@ Desabilita interrupções.
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```C
 void _disable(void);
 ```
 
@@ -32,9 +32,9 @@ void _disable(void);
 
 |Intrínseco|Arquitetura|
 |---------------|------------------|
-|`_disable`|x86, ARM, x64|
+|`_disable`|x86, ARM, x64, ARM64|
 
-**Arquivo de cabeçalho** \<intrin. h >
+**Arquivo de cabeçalho** \<> intrin. h
 
 ## <a name="remarks"></a>Comentários
 
@@ -42,7 +42,7 @@ void _disable(void);
 
 Essa função só está disponível no modo de kernel. Se usado no modo de usuário, uma exceção de instrução privilegiada será gerada em tempo de execução.
 
-Em plataformas ARM, essa rotina só está disponível como um intrínseco.
+Em plataformas ARM e ARM64, essa rotina só está disponível como intrínseca.
 
 **Fim da seção específica da Microsoft**
 

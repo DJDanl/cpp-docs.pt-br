@@ -1,26 +1,26 @@
 ---
-title: Macros variadic
-ms.date: 11/04/2016
+title: Variadic macros
+ms.date: 08/29/2019
 helpviewer_keywords:
 - variadic macros [C++]
 - __VA_ARGS__ variadic macro specifier
 ms.assetid: 51e757dc-0134-4bb2-bb74-64ea5ad75134
-ms.openlocfilehash: da159ef979ccc38845064debebae55356bc9e9bd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 171ea797adc1e407a8b7ef0592508653f758df64
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179563"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216526"
 ---
-# <a name="variadic-macros"></a>Macros variadic
+# <a name="variadic-macros"></a>Variadic macros
 
 Macros variadic são macros do tipo função que contêm um número variável de argumentos.
 
 ## <a name="remarks"></a>Comentários
 
-Para usar macros variadic, as reticências podem ser especificadas como o argumento formal final em uma definição de macro e o identificador de substituição `__VA_ARGS__` pode ser usado na definição de para inserir os argumentos extras.  `__VA_ARGS__` é substituído por todos os argumentos que correspondem às reticências, inclusive vírgulas entre elas.
+Para usar Macros Variadic, as reticências podem ser especificadas como o argumento formal final em uma definição de macro, e `__VA_ARGS__` o identificador de substituição pode ser usado na definição para inserir os argumentos extras.  `__VA_ARGS__`é substituído por todos os argumentos que correspondem às reticências, incluindo vírgulas entre eles.
 
-O padrão C especifica que pelo menos um argumento deve ser passado às reticências, para assegurar que a macro não seja resolvida em uma expressão com uma vírgula à direita.  A implementação do Visual C++ suprimirá uma vírgula à direita se nenhum argumento for passado às reticências.
+O padrão C especifica que pelo menos um argumento deve ser passado para as reticências, para garantir que a macro não seja resolvida para uma expressão com uma vírgula à direita. A implementação tradicional C++ da Microsoft suprime uma vírgula à direita se nenhum argumento for passado para as reticências.
 
 ## <a name="example"></a>Exemplo
 

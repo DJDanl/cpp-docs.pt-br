@@ -1,35 +1,33 @@
 ---
-title: auto_search
-ms.date: 11/04/2016
+title: atributo de importação de auto_search
+ms.date: 08/29/2019
 f1_keywords:
 - auto_search
 helpviewer_keywords:
 - auto_search attribute
 ms.assetid: 0fee2503-cd28-4d8c-b4d5-15ca0a91d2d2
-ms.openlocfilehash: 29638afbe42a5c5f1894bc7047d10e05363f494e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 36c30b9a1c560659d117203c3146806ef3a1ad4a
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403549"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216292"
 ---
-# <a name="autosearch"></a>auto_search
+# <a name="auto_search-import-attribute"></a>atributo de importação de auto_search
 
-**Específico do C++**
+**C++Determinados**
 
-Especifica que, quando uma biblioteca de tipos é referenciada com `#import` e ela mesma referencia outra biblioteca de tipos, o compilador pode fazer implícito `#import` da biblioteca de tipos.
+Especifica que, quando uma biblioteca de tipos é referenciada `#import` e ela própria faz referência a outra biblioteca de tipos, o compilador pode fazer um implícito `#import` para a outra biblioteca de tipos.
 
 ## <a name="syntax"></a>Sintaxe
 
-```
-auto_search
-```
+> **#import** *biblioteca de tipos* **auto_search**
 
 ## <a name="remarks"></a>Comentários
 
-**FIM de específico de C++**
+**FINAL C++ específico**
 
 ## <a name="see-also"></a>Consulte também
 
-[atributos de #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
+[atributos de #import](../preprocessor/hash-import-attributes-cpp.md)\
 [#import diretiva](../preprocessor/hash-import-directive-cpp.md)

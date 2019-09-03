@@ -1,6 +1,6 @@
 ---
-title: fenv_access
-ms.date: 03/12/2018
+title: Pragma fenv_access
+ms.date: 08/29/2019
 f1_keywords:
 - vc-pragma.fenv_access
 - fenv_access_CPP
@@ -8,15 +8,16 @@ helpviewer_keywords:
 - pragmas, fenv_access
 - fenv_access pragma
 ms.assetid: 2ccea292-0ae4-42ce-9c67-cc189299857b
-ms.openlocfilehash: 507e78dd9f9571cc9ce44d7fd91e78b1c955ba73
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c8e66881bde12df28bf24e18230471cb4caca792
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389249"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70218599"
 ---
-# <a name="fenvaccess"></a>fenv_access
-Desabilita (**na**) ou habilita (**off**) otimizações que poderiam alterar o ambiente de ponto flutuante sinalizador testes e alterações de modo.
+# <a name="fenv_access-pragma"></a>Pragma fenv_access
+
+Desabilita (**ativa**) ou habilita (**desativa**) otimizações que podem alterar testes de sinalizador de ambiente de ponto flutuante e alterações de modo.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -24,11 +25,11 @@ Desabilita (**na**) ou habilita (**off**) otimizações que poderiam alterar o a
 
 ## <a name="remarks"></a>Comentários
 
-Por padrão, **fenv_access** é **off**. Se o compilador não pode presumir que seu código não acessar ou manipular o ambiente de ponto flutuante, em seguida, ele pode executar muitas otimizações de código de ponto flutuante. Definir **fenv_access** à **em** para informar ao compilador que seu código acessa o ambiente de ponto flutuante para testar sinalizadores de status, exceções, ou para definir sinalizadores de modo de controle. O compilador desabilita essas otimizações para que seu código possa acessar o ambiente de ponto flutuante consistentemente.
+Por padrão, **fenv_access** é **off**. Se o compilador puder assumir que seu código não acessa ou manipula o ambiente de ponto flutuante, ele poderá executar muitas otimizações de código de ponto flutuante. Defina **fenv_access** como **on** para informar ao compilador que seu código acessa o ambiente de ponto flutuante para testar sinalizadores de status, exceções ou para definir sinalizadores de modo de controle. O compilador desabilita essas otimizações para que seu código possa acessar o ambiente de ponto flutuante de forma consistente.
 
-Para obter mais informações sobre o comportamento de ponto flutuante, consulte [/fp (Especificar comportamento de ponto flutuante)](../build/reference/fp-specify-floating-point-behavior.md).
+Para obter mais informações sobre o comportamento de ponto flutuante, consulte [/FP (especificar comportamento de ponto flutuante)](../build/reference/fp-specify-floating-point-behavior.md).
 
-Os tipos de otimizações que estão sujeitos aos **fenv_access** são:
+Os tipos de otimizações que estão sujeitos a **fenv_access** são:
 
 - Eliminação de subexpressão comum global
 
@@ -44,11 +45,11 @@ Outros pragmas de ponto flutuante incluem:
 
 ## <a name="examples"></a>Exemplos
 
-Este exemplo define **fenv_access** à **em** para definir o registro de controle de ponto flutuante de precisão de 24 bits:
+Este exemplo define **fenv_access** como **on** para definir o registro de controle de ponto flutuante para precisão de 24 bits:
 
 ```cpp
 // pragma_directive_fenv_access_x86.cpp
-// compile with: /O2
+// compile with: /O2 /arch:IA32
 // processor: x86
 #include <stdio.h>
 #include <float.h>
@@ -71,14 +72,14 @@ int main() {
 ```
 
 ```Output
-out=9.999999776482582e-003
+out=9.999999776482582e-03
 ```
 
-Se você comentar `#pragma fenv_access (on)` do exemplo anterior, observe que a saída é diferente porque o compilador faz a avaliação do tempo de compilação, que não usa o modo de controle.
+Se você comentar `#pragma fenv_access (on)` a partir do exemplo anterior, observe que a saída é diferente porque o compilador faz a avaliação de tempo de compilação, que não usa o modo de controle.
 
 ```cpp
 // pragma_directive_fenv_access_2.cpp
-// compile with: /O2
+// compile with: /O2 /arch:IA32
 #include <stdio.h>
 #include <float.h>
 
@@ -98,9 +99,9 @@ int main() {
 ```
 
 ```Output
-out=1.000000000000000e-002
+out=1.000000000000000e-02
 ```
 
 ## <a name="see-also"></a>Consulte também
 
-[Diretivas Pragma e a palavra-chave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Diretivas pragma e a palavra-chave __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

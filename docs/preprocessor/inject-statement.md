@@ -1,42 +1,40 @@
 ---
-title: inject_statement
-ms.date: 10/18/2018
+title: atributo de importação de inject_statement
+ms.date: 08/29/2019
 f1_keywords:
 - inject_statement
 helpviewer_keywords:
 - inject_statement attribute
 ms.assetid: 07d6f0f4-d9fb-4e18-aa62-f235f142ff5e
-ms.openlocfilehash: 237ca796028aad7aff55442eb2806fe400330a29
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 25dee621ff8af2c9a39e605b9da2c29d80f9570a
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383718"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221000"
 ---
-# <a name="injectstatement"></a>inject_statement
+# <a name="inject_statement-import-attribute"></a>atributo de importação de inject_statement
 
-**Específico do C++**
+**C++Determinados**
 
 Insere seu argumento como texto de origem no cabeçalho da biblioteca de tipos.
 
 ## <a name="syntax"></a>Sintaxe
 
-```
-inject_statement("source_text")
-```
+> **#import** *biblioteca de tipos* **inject_statement (** "*origem-texto*" **)**
 
 ### <a name="parameters"></a>Parâmetros
 
-*source_text*<br/>
+*origem-texto*\
 Texto de origem a ser inserido no arquivo de cabeçalho da biblioteca de tipos.
 
 ## <a name="remarks"></a>Comentários
 
-O texto é colocado no início da declaração do namespace que envolve o conteúdo da biblioteca de tipos no arquivo de cabeçalho.
+O texto é colocado no início da declaração do namespace que encapsula o conteúdo da *biblioteca de tipos* no arquivo de cabeçalho.
 
-**FIM de específico de C++**
+**FINAL C++ específico**
 
 ## <a name="see-also"></a>Consulte também
 
-[atributos de #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
+[atributos de #import](../preprocessor/hash-import-attributes-cpp.md)\
 [#import diretiva](../preprocessor/hash-import-directive-cpp.md)

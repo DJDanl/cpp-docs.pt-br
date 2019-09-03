@@ -1,6 +1,6 @@
 ---
 title: __outdword
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __outdword
 helpviewer_keywords:
@@ -8,35 +8,35 @@ helpviewer_keywords:
 - outdword instruction
 - __outdword intrinsic
 ms.assetid: ed1e4994-a84b-4759-8bf9-cd48fb073f4d
-ms.openlocfilehash: 236c4812f62cb092876b400051248425ee1b13e7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ce1358e7cef0136ccf7d314038d06d271916e0bc
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62263003"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221658"
 ---
-# <a name="outdword"></a>__outdword
+# <a name="__outdword"></a>__outdword
 
 **Seção específica da Microsoft**
 
-Gera o `out` instrução para enviar uma palavras duplas `Data` a porta de saída `Port`.
+Gera a `out` instrução para enviar um doubleword de *dados* da *porta*de porta.
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```C
 void __outdword(
    unsigned short Port,
    unsigned long Data
 );
 ```
 
-#### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>Parâmetros
 
-*Porta*<br/>
-[in] A porta para enviar os dados.
+*Porto*\
+no A porta para a qual enviar os dados.
 
-*Dados*<br/>
-[in] As palavras duplas a serem enviados.
+*Dado*\
+no O doubleword a ser enviado.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -44,7 +44,7 @@ void __outdword(
 |---------------|------------------|
 |`__outdword`|x86, x64|
 
-**Arquivo de cabeçalho** \<intrin. h >
+**Arquivo de cabeçalho** \<> intrin. h
 
 ## <a name="remarks"></a>Comentários
 

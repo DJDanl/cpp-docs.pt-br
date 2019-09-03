@@ -1,41 +1,42 @@
 ---
 title: __svm_invlpga
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __svm_invlpga
 helpviewer_keywords:
 - __svm_invlpga intrinsic
 - INVLPGA instruction
 ms.assetid: aa6578ce-8278-464b-8815-a0fc45330915
-ms.openlocfilehash: 5e470fc12ad47aa156c513b293543fa356398d5e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e0f8ef02efdb64f70bb65f6f017449fcc03beca1
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390263"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219891"
 ---
-# <a name="svminvlpga"></a>__svm_invlpga
+# <a name="__svm_invlpga"></a>__svm_invlpga
 
 **Seção específica da Microsoft**
 
-Invalida a entrada de mapeamento de endereço no buffer de à parte de translação do computador. Os parâmetros especificam o endereço virtual e o identificador de espaço de endereço da página a ser invalidada.
+Invalida a entrada de mapeamento de endereço no buffer de procura de tradução do computador. Parâmetros especifique o endereço virtual e o identificador de espaço de endereço da página a ser invalidada.
 
 ## <a name="syntax"></a>Sintaxe
 
-```
-void __svm_invlpga(void *Va, int ASID);
+```C
+void __svm_invlpga(void *Vaddr, int as_id);
 ```
 
-#### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>Parâmetros
 
-|Parâmetro|Descrição|
-|---------------|-----------------|
-|*Va*|[in] O endereço virtual da página ser invalidada.|
-|*ASID*|[in] O identificador do espaço de endereço (ASID) da página ser invalidada.|
+*Vaddr*\
+no O endereço virtual da página a ser invalidada.
+
+*as_id*\
+no O identificador de espaço de endereço (ASID) da página a ser invalidado.
 
 ## <a name="remarks"></a>Comentários
 
-O `__svm_invlpga` função é equivalente ao `INVLPGA` instruções de máquina. Essa função dá suporte a interação do monitor de máquina virtual do host com um sistema operacional e seus aplicativos de convidado. Para obter mais informações, pesquise o documento "Volume de Manual do programador da arquitetura AMD64 2: Sistema de programação,"documento número 24593, revisão 3.11, o [corporation AMD](https://developer.amd.com/resources/developer-guides-manuals/) site.
+A `__svm_invlpga` função é equivalente à instrução `INVLPGA` da máquina. Essa função dá suporte à interação do monitor de máquina virtual de um host com um sistema operacional convidado e seus aplicativos. Para obter mais informações, pesquise o documento "o volume manual do programador de arquitetura AMD64 2: Programação do sistema, "número do documento 24593, revisão 3,11, no site da [AMD Corporation](https://developer.amd.com/resources/developer-guides-manuals/) .
 
 ## <a name="requirements"></a>Requisitos
 
@@ -43,7 +44,7 @@ O `__svm_invlpga` função é equivalente ao `INVLPGA` instruções de máquina.
 |---------------|------------------|
 |`__svm_invlpga`|x86, x64|
 
-**Arquivo de cabeçalho** \<intrin. h >
+**Arquivo de cabeçalho** \<> intrin. h
 
 **Fim da seção específica da Microsoft**
 

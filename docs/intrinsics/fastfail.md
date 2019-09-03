@@ -1,15 +1,15 @@
 ---
 title: __fastfail
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 ms.assetid: 9cd32639-e395-4c75-9f3a-ac3ba7f49921
-ms.openlocfilehash: a9f75cbf3c572401ef26fb16ced221eb24d35534
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 34198409c6a57eb494bfe819b367b71405a84e64
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62263874"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222191"
 ---
-# <a name="fastfail"></a>__fastfail
+# <a name="__fastfail"></a>__fastfail
 
 **Seção específica da Microsoft**
 
@@ -17,39 +17,39 @@ Encerra imediatamente o processo de chamada com sobrecarga mínima.
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```C
 void __fastfail(unsigned int code);
 ```
 
-#### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>Parâmetros
 
-*code*<br/>
-[in] Um `FAST_FAIL_<description>` constante simbólica de Winnt. h ou WDM. h indica o motivo do término do processo.
+*auto-completar*\
+no Uma `FAST_FAIL_<description>` constante simbólica de Winnt. h ou WDM. h que indica o motivo da finalização do processo.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 O intrínseco `__fastfail` não retorna.
 
 ## <a name="remarks"></a>Comentários
 
-O `__fastfail` intrínseco que fornece um mecanismo para um *rápida fail* solicitação — uma maneira para um processo potencialmente corrompido de terminação imediata do processo de solicitação. Falhas críticas que podem ter corrompido o estado de programa e pilha além da recuperação não podem ser tratadas pela recurso de manipulação de exceção regular. Use `__fastfail` para finalizar o processo usando uma sobrecarga mínima.
+O `__fastfail` intrínseco fornece um mecanismo para uma solicitação de *falha rápida* – uma maneira de um processo potencialmente corrompido solicitar o encerramento imediato do processo. Falhas críticas que podem ter corrompido o estado de programa e pilha além da recuperação não podem ser tratadas pela recurso de manipulação de exceção regular. Use `__fastfail` para finalizar o processo usando uma sobrecarga mínima.
 
 Internamente, `__fastfail` é implementado usando diversos mecanismos de arquitetura:
 
 |Arquitetura|Instrução|Local do argumento de código|
 |------------------|-----------------|-------------------------------|
-|x86|int 0x29|ecx|
-|X64|int 0x29|rcx|
-|ARM|Opcode 0xDEFB|r0|
-|ARM64|OpCode 0xF003|x0|
+|x86|int 0x29|`ecx`|
+|X64|int 0x29|`rcx`|
+|ARM|Opcode 0xDEFB|`r0`|
+|ARM64|Opcode 0xF003|`x0`|
 
-Uma solicitação de falha rápida é independente e normalmente exige apenas dois instruções para executar. Após a execução de uma solicitação de falha rápida, o kernel executa a ação apropriada. No código do modo de usuário, não há nenhuma dependência de memória além do ponteiro de instruções quando um evento de falha rápida é gerado. Isso aumenta sua confiabilidade, mesmo se houver corrupção de memória grave.
+Uma solicitação de falha rápida é independente e normalmente exige apenas dois instruções para executar. Depois que uma solicitação de falha rápida for executada, o kernel executará a ação apropriada. No código do modo de usuário, não há nenhuma dependência de memória além do ponteiro de instruções quando um evento de falha rápida é gerado. Isso maximiza sua confiabilidade, mesmo em casos de corrupção de memória grave.
 
-O argumento `code`, uma das constantes simbólicas `FAST_FAIL_<description>` de winnt.h or wdm.h, descreve o tipo de condição de falha e é incorporados em relatórios de falha de uma maneira específica ao ambiente.
+O `code` argumento, uma `FAST_FAIL_<description>` das constantes simbólicas de Winnt. h ou WDM. h, descreve o tipo de condição de falha. Ele é incorporado aos relatórios de falha de maneira específica do ambiente.
 
-Solicitações de falha rápida do modo de usuário são exibidas como uma segunda chance de exceção não continuada, com o código de exceção 0xC0000409 e pelo menos um parâmetro de exceção. O primeiro parâmetro de exceção é o valor `code`. Esse código de exceção indica ao WER (Relatório de Erros do Windows) e à infraestrutura de depuração que o processo está corrompido e que as ações mínimas no processo devem ser consideradas em resposta à falha. Solicitações de falha rápida do modo kernel são implementadas usando um código de verificação de bugs dedicado `KERNEL_SECURITY_CHECK_FAILURE` (0x139). Em ambos os casos, nenhum manipuladores de exceção é chamado porque o programa deve ser em um estado corrompido. Se um depurador estiver presente, terá a oportunidade de examinar o estado do programa antes do término.
+As solicitações de falha rápida do modo de usuário aparecem como uma exceção não continuável de segunda chance com o código de exceção 0xC0000409 e com pelo menos um parâmetro de exceção. O primeiro parâmetro de exceção é o valor `code`. Esse código de exceção indica ao Relatório de Erros do Windows (WER) e à infraestrutura de depuração que o processo está corrompido e que ações mínimas em processo devem ser executadas em resposta à falha. Solicitações de falha rápida do modo kernel são implementadas usando um código de verificação de bugs dedicado `KERNEL_SECURITY_CHECK_FAILURE` (0x139). Em ambos os casos, nenhum manipuladores de exceção é chamado porque o programa deve ser em um estado corrompido. Se um depurador estiver presente, será dada a oportunidade de examinar o estado do programa antes do encerramento.
 
-Suporte para o mecanismo de falha rápida nativa iniciado no Windows 8. Sistemas operacionais Windows que não dão suporte a instrução de falha rápida nativamente tratarão normalmente uma solicitação falha rápida como uma violação de acesso ou como uma verificação de bugs `UNEXPECTED_KERNEL_MODE_TRAP`. Nesses casos, o programa é ainda encerrado, mas não necessariamente mais rápido.
+Suporte para o mecanismo de falha rápida nativa iniciado no Windows 8. Os sistemas operacionais Windows que não dão suporte à instrução de falha rápida normalmente tratarão uma solicitação de falha rápida como violação de acesso ou como `UNEXPECTED_KERNEL_MODE_TRAP` uma verificação de bugs. Nesses casos, o programa é ainda encerrado, mas não necessariamente mais rápido.
 
 `__fastfail` só está disponível como um intrínseco.
 
@@ -59,7 +59,7 @@ Suporte para o mecanismo de falha rápida nativa iniciado no Windows 8. Sistemas
 |---------------|------------------|
 |`__fastfail`|x86, x64, ARM, ARM64|
 
-**Arquivo de cabeçalho** \<intrin. h >
+**Arquivo de cabeçalho** \<> intrin. h
 
 **Fim da seção específica da Microsoft**
 

@@ -1,37 +1,35 @@
 ---
-title: auto_rename
-ms.date: 11/04/2016
+title: atributo de importação de auto_rename
+ms.date: 08/29/2019
 f1_keywords:
 - auto_rename
 helpviewer_keywords:
 - auto_rename attribute
 ms.assetid: 1075f3ab-f6fc-4e04-8e22-ebe02695a567
-ms.openlocfilehash: ba07b8532ba64c99f835e59d7c71aac8e3f2b03d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b43773741701997b48c321cb01ebeba3fed1fb7b
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62336680"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70215952"
 ---
-# <a name="autorename"></a>auto_rename
+# <a name="auto_rename-import-attribute"></a>atributo de importação de auto_rename
 
-**Específico do C++**
+**C++Determinados**
 
 Renomeia palavras reservadas C++ com dois sublinhados (__) para o nome da variável para resolver possíveis conflitos de nome.
 
 ## <a name="syntax"></a>Sintaxe
 
-```
-auto_rename
-```
+> **#import** *biblioteca de tipos* **auto_rename**
 
 ## <a name="remarks"></a>Comentários
 
 Esse atributo é usado para importar uma biblioteca de tipos que usa uma ou mais palavras reservadas C++ (palavras-chave ou macros) como nomes de variáveis.
 
-**FIM de específico de C++**
+**FINAL C++ específico**
 
 ## <a name="see-also"></a>Consulte também
 
-[atributos de #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
+[atributos de #import](../preprocessor/hash-import-attributes-cpp.md)\
 [#import diretiva](../preprocessor/hash-import-directive-cpp.md)

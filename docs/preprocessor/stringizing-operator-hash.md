@@ -1,6 +1,6 @@
 ---
 title: Operador stringizing (#)
-ms.date: 11/04/2016
+ms.date: 08/29/2019
 f1_keywords:
 - '#'
 helpviewer_keywords:
@@ -12,29 +12,29 @@ helpviewer_keywords:
 - macros [C++], converting parameters to strings
 - '# preprocessor operator'
 ms.assetid: 1175dd19-4538-43b3-ad97-a008ab80e7b1
-ms.openlocfilehash: d90d07c8f3cce6c443be0eb994db494746c00fcc
-ms.sourcegitcommit: 40ffe764244784c715b086c79626ac390b855d47
+ms.openlocfilehash: 5a1b43198e59bc1e69cdf1b56db56be75719fe46
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68711149"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216544"
 ---
 # <a name="stringizing-operator-"></a>Operador stringizing (#)
 
-O operador número-sinal ou "cadeia de caracteres" **#** () converte parâmetros de macro em literais de cadeia de caracteres sem expandir a definição de parâmetro. É usado apenas com macros que aceitam argumentos. Se ele preceder um parâmetro formal na definição da macro, o argumento real passado por invocação de macro é colocado entre em aspas e tratado como literal de cadeia de caracteres. O literal da cadeia de caracteres substitui cada ocorrência de uma combinação do operador stringizing e do parâmetro formal na definição da macro.
+O operador número-sinal ou "cadeia de caracteres" **#** () converte parâmetros de macro em literais de cadeia de caracteres sem expandir a definição de parâmetro. Ele é usado somente com macros que usam argumentos. Se ele preceder um parâmetro formal na definição da macro, o argumento real passado por invocação de macro é colocado entre em aspas e tratado como literal de cadeia de caracteres. O literal da cadeia de caracteres substitui cada ocorrência de uma combinação do operador stringizing e do parâmetro formal na definição da macro.
 
 > [!NOTE]
 > A extensão do Microsoft C (versões 6.0 e anteriores) para o padrão ANSI C, que anteriormente expandia os argumentos formais de macro que apareciam em literais de cadeias de caracteres e constantes de caracteres, não tem mais suporte. O código que dependa dessa extensão deve ser reescrito usando o operador de cadeia **#** de caracteres ().
 
-O espaço em branco que precede o primeiro token do argumento real e depois do último token do argumento real é ignorado. Todo o espaço em branco entre os tokens no argumento real é reduzido a um único espaço em branco no literal de cadeia de caracteres resultante. Assim, se um comentário ocorrer entre dois tokens no argumento real, ele será reduzido a um único espaço em branco. O literal de cadeia de caracteres resultante é concatenada automaticamente com os literais de cadeia de caracteres adjacentes dos quais ele esteja separado apenas por espaço em branco.
+O espaço em branco que precede o primeiro token e segue o último token do argumento real é ignorado. Todo o espaço em branco entre os tokens no argumento real é reduzido a um único espaço em branco no literal de cadeia de caracteres resultante. Portanto, se ocorrer um comentário entre dois tokens no argumento real, ele será reduzido para um único espaço em branco. O literal de cadeia de caracteres resultante é concatenado automaticamente com quaisquer literais de cadeia de caracteres adjacentes que são separados somente por espaços em branco.
 
-Além disso, se um caractere contido no argumento geralmente exigir uma sequência de escape quando usado em um literal de cadeia de caracteres (por exemplo, aspas ( **"** ) ou caractere **\\** de barra invertida ()), a barra invertida de escape necessária será inserida automaticamente antes do caractere.
+Além disso, se um caractere contido no argumento geralmente exigir uma sequência de escape quando usado em um literal de cadeia de caracteres, por exemplo,`"`o caractere de aspas (`\`) ou de barra invertida (), a barra invertida de escape necessária será automaticamente inserido antes do caractere.
 
-O operador C++ de cadeia de caracteres Visual não se comporta corretamente quando é usado com cadeias de caracteres que incluem sequências de escape. Nessa situação, o compilador gera o [erro do compilador C2017](../error-messages/compiler-errors-1/compiler-error-c2017.md).
+O operador C++ de cadeia de caracteres da Microsoft não se comporta corretamente quando é usado com cadeias de caracteres que incluem sequências de escape. Nessa situação, o compilador gera o [erro do compilador C2017](../error-messages/compiler-errors-1/compiler-error-c2017.md).
 
 ## <a name="examples"></a>Exemplos
 
-O exemplo a seguir mostra uma definição macro que inclui o operador stringizing e uma função main que invoca a macro:
+O exemplo a seguir mostra uma definição de macro que inclui o operador de cadeia de caracteres e uma função principal que invoca a macro:
 
 ```cpp
 // stringizer.cpp
