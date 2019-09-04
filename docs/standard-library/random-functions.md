@@ -1,26 +1,23 @@
 ---
 title: Funções &lt;random&gt;
-ms.date: 11/04/2016
+ms.date: 09/04/2019
 f1_keywords:
 - random/std::generate_canonical
 ms.assetid: 2ac9ec59-619b-4b85-a425-f729277c1bc8
 helpviewer_keywords:
 - std::generate_canonical
-ms.openlocfilehash: 87b640d4f3aa3fbfa23ad5603d84102301e71ea4
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 3d94f607fc6b7bdf22d7f573f590b451dbaa718d
+ms.sourcegitcommit: fd0f8839da5c6a3663798a47c6b0bb6e63b518bd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240384"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70273834"
 ---
 # <a name="ltrandomgt-functions"></a>Funções &lt;random&gt;
 
-## <a name="generate_canonical"></a> generate_canonical
+## <a name="generate_canonical"></a>generate_canonical
 
 Retorna um valor de ponto flutuante de uma sequência aleatória.
-
-> [!NOTE]
-> O Padrão ISO C++ determina que essa função deve retornar valores no intervalo [ `0`, `1`). O Visual Studio ainda não é compatível com essa restrição. Como solução alternativa para gerar valores nesse intervalo, use [uniform_real_distribution](../standard-library/uniform-real-distribution-class.md).
 
 ```cpp
 template <class RealType, size_t Bits, class Generator>
@@ -33,11 +30,14 @@ RealType generate_canonical(Generator& Gen);
 O tipo integral de ponto flutuante. Para encontrar os tipos possíveis, consulte [\<random>](../standard-library/random.md).
 
 *Bits*\
-O gerador de número aleatório.
+O número de bits de aleatoriedade a ser usado.
 
-*Gen*\
-O gerador de número aleatório.
+*Gerador*\
+Uma classe de gerador de número aleatório.
+
+*Geral*\
+Uma referência a uma instância de um gerador de número aleatório do tipo *gerador*.
 
 ### <a name="remarks"></a>Comentários
 
-As chamadas de função de modelo `operator()` dos *Gen* repetidamente e empacota os valores retornados para um valor de ponto flutuante `x` do tipo *RealType* até coletar o número especificado de bits mantissa em `x`. O número especificado é o menor dos *Bits* (que deve ser diferente de zero) e o número total de bits mantissa em *RealType*. A primeira chamada fornece os bits de ordem inferior. A função retorna `x`.
+A função de modelo `operator()` chama a *Gen* repetidamente e empacota os valores retornados em um valor `x` de ponto flutuante do tipo *RealType* até que ele tenha coletado o número especificado de `x`bits mantissa em. O número especificado é o menor de *bits* (que deve ser diferente de zero) e o número total de bitsmantissa em RealType. A primeira chamada fornece os bits de ordem inferior. A função retorna `x`.

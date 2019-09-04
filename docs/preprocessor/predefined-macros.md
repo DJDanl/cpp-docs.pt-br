@@ -143,12 +143,12 @@ helpviewer_keywords:
 - _WINRT_DLL macro
 - __func__ identifier
 ms.assetid: 1cc5f70a-a225-469c-aed0-fe766238e23f
-ms.openlocfilehash: ab478cd8ac51b5cb88cec38f80541df8a7be2789
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 15b70b0292f671d99b320c8d23598e68b47adb0d
+ms.sourcegitcommit: fd0f8839da5c6a3663798a47c6b0bb6e63b518bd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70222289"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70273815"
 ---
 # <a name="predefined-macros"></a>Macros predefinidas
 
@@ -402,6 +402,16 @@ O MSVC dá suporte a essas macros predefinidas adicionais.
 - **&#95;MSVC&#95;Lang** definido como um literal inteiro que especifica o C++ padrão de idioma direcionado pelo compilador. Ele é definido somente no código compilado como C++. A macro é o valor literal inteiro 201402L por padrão ou quando a opção de compilador [/std: c++ 14](../build/reference/std-specify-language-standard-version.md) é especificada. A macro será definida como 201703L se a opção de compilador [/std: c++ 17](../build/reference/std-specify-language-standard-version.md) for especificada. Ele é definido como um valor superior, não especificado quando a opção [/std: c + + mais recente](../build/reference/std-specify-language-standard-version.md) é especificada. Caso contrário, a macro será indefinida. As opções de  **&#95;compilador MSVC&#95;Lang** macro e [/STD (especificar versão padrão da linguagem)](../build/reference/std-specify-language-standard-version.md) estão disponíveis a partir do Visual Studio 2015 atualização 3.
 
 - **&#95;&#95;As&#95;verificações&#95;de tempo de execução MSVC** são definidas como 1 quando uma das opções do compilador [/RTC](../build/reference/rtc-run-time-error-checks.md) é definida. Caso contrário, indefinido.
+
+- **&#95;MSVC&#95;tradicional** definido como 0 quando o modo de conformidade do pré-processador [/experimental:](../build/reference/rtc-run-time-error-checks.md) opção de compilador de pré-processador está definida. Definido como 1 por padrão, ou quando a opção [/experimental: pré-processador-](../build/reference/rtc-run-time-error-checks.md) Compiler é definida, para indicar que o pré-processador tradicional está em uso. A  **&#95;opção&#95;** de compilador MSVC macro tradicional e [/experimental: pré-processador (habilitar modo de conformidade do pré-processador)](../build/reference/experimental-preprocessor.md) está disponível a partir do Visual Studio 2017 versão 15,8.
+
+   ```cpp
+   #if defined(_MSVC_TRADITIONAL) && _MSVC_TRADITIONAL
+   // Logic using the traditional preprocessor
+   #else
+   // Logic using cross-platform compatible preprocessor
+   #endif
+   ```
 
 - **&#95;MT** Definido como 1 quando [/MD ou/MDD](../build/reference/md-mt-ld-use-run-time-library.md) (DLL multi-threaded) ou [/MT ou/MTD](../build/reference/md-mt-ld-use-run-time-library.md) (multi-threaded) é especificado. Caso contrário, indefinido.
 

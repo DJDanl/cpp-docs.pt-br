@@ -6,22 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2760
 ms.assetid: 585757fd-d519-43f3-94e5-50316ac8b90b
-ms.openlocfilehash: 24c33d90c0f91aa3c4b01142902afc4333c1c732
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5680de2fe0364d7cdc5e7ef017bd298423ea4c21
+ms.sourcegitcommit: fd0f8839da5c6a3663798a47c6b0bb6e63b518bd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62257784"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70273661"
 ---
 # <a name="compiler-error-c2760"></a>Erro do compilador C2760
 
-Erro de sintaxe: esperado 'Nome1' não 'nome2'
+> erro de sintaxe: '*Nome1*' esperado não '*nome2*'
 
-Um operador de conversão é usado com um operador inválido.
+## <a name="remarks"></a>Comentários
 
-O exemplo a seguir gera C2760:
+Há várias maneiras de causar esse erro. Normalmente, ela é causada por uma sequência de token que o compilador não pode fazer sentido.
 
-```
+## <a name="example"></a>Exemplo
+
+Neste exemplo, um operador de conversão é usado com um operador inválido.
+
+```cpp
 // C2760.cpp
 class B {};
 class D : public B {};
